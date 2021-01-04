@@ -1,6 +1,6 @@
 import pygame
 import pathlib
-from math import cos, sin, asin, pi, radians, degrees
+from math import cos, sin, asin, acos, pi, radians, degrees
 from statistics import median
 
 # noinspection SpellCheckingInspection
@@ -28,6 +28,24 @@ RESOLUTIONS = {"NONE": (0, 0),
                "WSXGA+": (1680, 1050),
                "HD 1080": (1920, 1080), }
 
+class Point(pygame.sprite.Sprite):
+    def __init__(self, x, y):
+        pygame.sprite.Sprite.__init__(self)
+
+        self.image = pygame.Surface((10, 10))
+        self.rect = self.image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
+
+class Card(pygame.sprite.Sprite):
+    def __init__(self, image: pygame.Surface):
+        pygame.sprite.Sprite.__init__(self)
+
+        self.original = image
+        self.image = image
+        self.mask = image.get_masks()
+        self.rect = self.image.get_rect()
+
 
 class Game:
 
@@ -49,7 +67,7 @@ class Game:
         self.background = self._rescale(self.background)
 
         self.deck = []
-        self.hand = []
+        self.hand = pygame.sprite.Group()
         self.count = 5
 
     def _rescale(self, surface: pygame.Surface) -> pygame.Surface:
@@ -63,48 +81,67 @@ class Game:
     def load_deck(self, path: str):
         path = pathlib.Path(path)
         for card in path.glob("**/*"):
-            self.deck.append(pygame.image.load(card).convert_alpha())
+            image = self._rescale(pygame.image.load(card).convert_alpha())
+            self.deck.append(Card(image))
 
-    def show_hand(self, cards: list):
-        if not cards:
+    def show_hand(self):
+        if not self.hand:
             return
 
         radius = self.screen.get_width() * 0.85
-        cen_x = self.screen.get_width() // 2
-        cen_y = self.screen.get_height() + radius * 0.90
+        center_x = self.screen.get_width() // 2
+        center_y = self.screen.get_height() + radius * 0.90
         max_angle = 90 - degrees(asin(1 / radius * radius * 0.9))
         area_to_work_with = radians(max_angle * 2) * radius
 
-        dist = self._rescale(cards[0]).get_width() * 0.75
-        needed = dist * (len(cards) - 1)
+        dist = next(iter(self.hand)).rect.width * 0.5
+        needed = dist * (len(self.hand) - 1)
         if needed > area_to_work_with:
-            dist = area_to_work_with / (len(cards) - 1)
+            dist = area_to_work_with / (len(self.hand) - 1)
         angle = dist / (2 * radius * pi) * 360
 
-        a = [angle * i for i in range(len(cards))]
+        a = [angle * i for i in range(len(self.hand))]
         angles_median = median(a)
         a = [angle - angles_median for angle in a]
 
-        for i in range(len(cards)):
-            card = pygame.transform.rotate(self._rescale(self.deck[i]), -a[i])
-            x = cen_x - radius * cos(radians(90 + a[i])) - card.get_width() / 2
-            y = cen_y - radius * sin(radians(90 + a[i])) - card.get_height() / 2
-            self.screen.blit(card, (round(x), round(y)))
+        for index, card in enumerate(self.hand):
+            card.image = pygame.transform.rotate(card.original, -a[index])
+            card.mask = card.image.get_masks()
+            card.rect = card.image.get_rect()
+            card.rect.x = center_x - radius * cos(radians(90 + a[index])) \
+                - card.image.get_rect().width / 2
+            card.rect.y = center_y - radius * sin(radians(90 + a[index])) \
+                - card.image.get_rect().height / 2
+
+        self.hand.draw(self.screen)
+        mouse_pos = pygame.mouse.get_pos()
+        s = pygame.sprite.spritecollide(Point(*mouse_pos), self.hand, False)
+        if s:
+            new_x = round(s[-1].rect.width * 1.5)
+            new_y = round(s[-1].rect.height * 1.5)
+            new_image = pygame.transform.scale(s[-1].image, (new_x, new_y))
+            rect_x = (s[-1].rect.x - center_x + s[-1].rect.width / 2) \
+                     * 1.05 - new_x / 2 + center_x
+            rect_y = (s[-1].rect.y - center_y + s[-1].rect.height / 2) \
+                     * 1.05 - new_y / 2 + center_y
+
+            self.screen.blit(new_image, (rect_x, rect_y))
 
     def init(self) -> None:
-        hand = []
-
         running = True
+        self._background()
+
         while running:
+            self._background()
+
             for event in pygame.event.get():
                 if event.type == pygame.QUIT:
                     running = False
 
                 if event.type == pygame.MOUSEBUTTONUP:
-                    hand.append(self.deck.pop(0))
+                    self.hand.add(self.deck.pop(0))
 
-            self._background()
-            self.show_hand(hand)
-            pygame.display.update()
+            self.show_hand()
+            pygame.display.flip()
 
         pygame.quit()
