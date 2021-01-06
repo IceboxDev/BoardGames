@@ -111,7 +111,6 @@ class Game:
 
         random.shuffle(self.deck)
 
-    def draw_card(self, count: ):
     def show_hand(self):
         if not self.hand:
             return
