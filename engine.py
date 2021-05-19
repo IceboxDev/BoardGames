@@ -1,8 +1,8 @@
-import pygame
-import pathlib
 from math import cos, sin, asin, pi, radians, degrees
+from random import shuffle
+from pathlib import Path
 from statistics import median
-import random
+import pygame
 
 # noinspection SpellCheckingInspection
 RESOLUTIONS = {"NONE": (0, 0),
@@ -31,35 +31,42 @@ RESOLUTIONS = {"NONE": (0, 0),
 
 
 class GameSprite(pygame.sprite.Sprite):
-    def __init__(self, image: pygame.Surface):
-        pygame.sprite.Sprite.__init__(self)
+    def __init__(self, sprite_id: str, x: int, y: int, image: pygame.Surface):
+        super().__init__()
 
+        self.id = sprite_id
         self.original = image
         self.image = image
+
         self.rect = image.get_rect()
+        self.rect.x = x
+        self.rect.y = y
         self.mask = image.get_masks()
 
     def rotate(self, angle: float = 0.0, scale: float = 1.0) -> None:
         self.image = pygame.transform.rotozoom(self.original, angle, scale)
         self.rect = self.image.get_rect()
 
-    def update(self) -> None:
-        pass
+    def update(self, left, top, width, height) -> None:
+        self.rect.update(left, top, width, height)
 
 
-class Card(GameSprite):
-    def __init__(self, image: pygame.Surface):
-        GameSprite.__init__(self, image)
-
-
-class Point(pygame.sprite.Sprite):
+class Pointer(pygame.sprite.Sprite):
     def __init__(self, x, y):
-        pygame.sprite.Sprite.__init__(self)
+        super().__init__()
 
         self.image = pygame.Surface((10, 10))
         self.rect = self.image.get_rect()
         self.rect.x = x
         self.rect.y = y
+
+
+class Card(GameSprite):
+    def __init__(self, image: pygame.Surface, card_id, **kwargs) -> None:
+        super().__init__(card_id, -1, -1, image)
+
+        for name, value in kwargs.items():
+            setattr(self, name, value)
 
 
 class Game:
@@ -78,18 +85,25 @@ class Game:
             self.screen = pygame.display.set_mode(
                 RESOLUTIONS["NONE"], pygame.FULLSCREEN)
             self.factor = 1
+
         else:
             self.screen = pygame.display.set_mode(Game.WINDOWED)
             self.factor = Game.WINDOWED[1] / Game.RESOLUTION[1]
             self.bg = pygame.transform.scale(self.bg, Game.WINDOWED)
 
+        # Sprite scaling
         self.scale_factor_w = self.screen.get_width() / Game.RESOLUTION[0]
         self.scale_factor_h = self.screen.get_height() / Game.RESOLUTION[1]
 
+        # Sprite containers
+        self.background_groups = []
+        self.foreground_groups = []
+
+        # Card Tools
         self.cards = []
         self.decks = {}
+        self.hand_visible = False
         self.hand = pygame.sprite.Group()
-        self.count = 5
 
     def _rescale(self, surface: pygame.Surface) -> pygame.Surface:
         new_width = round(surface.get_width() * self.scale_factor_w)
@@ -99,19 +113,7 @@ class Game:
     def _background(self) -> pygame.rect:
         return self.screen.blit(self.bg, (0, 0))
 
-    @staticmethod
-    def quit() -> None:
-        pygame.quit()
-
-    def load_cards(self, path: str):
-        path = pathlib.Path(path)
-        for card in path.glob("**/*"):
-            image = self._rescale(pygame.image.load(card).convert_alpha())
-            self.cards.append(Card(image))
-
-        random.shuffle(self.deck)
-
-    def show_hand(self):
+    def _show_hand(self) -> None:
         if not self.hand:
             return
 
@@ -140,7 +142,7 @@ class Game:
 
         self.hand.draw(self.screen)
         mouse_pos = pygame.mouse.get_pos()
-        s = pygame.sprite.spritecollide(Point(*mouse_pos), self.hand, False)
+        s = pygame.sprite.spritecollide(Pointer(*mouse_pos), self.hand, False)
         if s:
             new_x = round(s[-1].rect.width * 1.5)
             new_y = round(s[-1].rect.height * 1.5)
@@ -152,7 +154,40 @@ class Game:
 
             self.screen.blit(new_image, (rect_x, rect_y))
 
-    def step(self) -> list:
+    @staticmethod
+    def quit() -> None:
+        pygame.quit()
+
+    def add_background_group(self, group: pygame.sprite.Group) -> None:
+        self.background_groups.append(group)
+
+    def add_foreground_group(self, group: pygame.sprite.Group) -> None:
+        self.foreground_groups.append(group)
+
+    def show_hand(self) -> None:
+        self.hand_visible = True
+
+    def hide_hand(self) -> None:
+        self.hand_visible = False
+
+    def load_cards(self, path: str):
+        path = Path(path)
+        for card in path.glob("**/*"):
+            image = self._rescale(pygame.image.load(card).convert_alpha())
+            self.cards.append(Card(image, ))
+
+    def step(self, ) -> list:
         dt = self.clock.tick(Game.FPS)
+
+        self._background()
+
+        for group in self.background_groups:
+            group.draw(self.screen)
+
+        for group in self.foreground_groups:
+            group.draw(self.screen)
+
+        if self.hand_visible:
+            self._show_hand()
 
 
