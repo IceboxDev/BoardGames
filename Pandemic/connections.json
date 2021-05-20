@@ -1,374 +1,653 @@
 [
-  [
-    "SanFrancisco",
-    "LosAngeles"
-  ],
-  [
-    "SanFrancisco",
-    "Chicago"
-  ],
-  [
-    "SanFrancisco",
-    "Tokyo"
-  ],
-  [
-    "SanFrancisco",
-    "Manila"
-  ],
-  [
-    "Chicago",
-    "LosAngeles"
-  ],
-  [
-    "Chicago",
-    "MexicoCity"
-  ],
-  [
-    "Chicago",
-    "Atlanta"
-  ],
-  [
-    "Chicago",
-    "Montreal"
-  ],
-  [
-    "Montreal",
-    "Washington"
-  ],
-  [
-    "Montreal",
-    "NewYork"
-  ],
-  [
-    "NewYork",
-    "Washington"
-  ],
-  [
-    "NewYork",
-    "London"
-  ],
-  [
-    "NewYork",
-    "Madrid"
-  ],
-  [
-    "Atlanta",
-    "Washington"
-  ],
-  [
-    "Atlanta",
-    "Miami"
-  ],
-  [
-    "Washington",
-    "Miami"
-  ],
-  [
-    "London",
-    "Madrid"
-  ],
-  [
-    "London",
-    "Paris"
-  ],
-  [
-    "London",
-    "Essen"
-  ],
-  [
-    "Madrid",
-    "Paris"
-  ],
-  [
-    "Madrid",
-    "Algiers"
-  ],
-  [
-    "Madrid",
-    "SaoPaulo"
-  ],
-  [
-    "Paris",
-    "Essen"
-  ],
-  [
-    "Paris",
-    "Milan"
-  ],
-  [
-    "Paris",
-    "Algiers"
-  ],
-  [
-    "Essen",
-    "Milan"
-  ],
-  [
-    "Essen",
-    "StPetersburg"
-  ],
-  [
-    "Milan",
-    "Istanbul"
-  ],
-  [
-    "StPetersburg",
-    "Moscow"
-  ],
-  [
-    "StPetersburg",
-    "Istanbul"
-  ],
-  [
-    "LosAngeles",
-    "MexicoCity"
-  ],
-  [
-    "LosAngeles",
-    "Sydney"
-  ],
-  [
-    "MexicoCity",
-    "Miami"
-  ],
-  [
-    "MexicoCity",
-    "Bogota"
-  ],
-  [
-    "MexicoCity",
-    "Lima"
-  ],
-  [
-    "Miami",
-    "Bogota"
-  ],
-  [
-    "Bogota",
-    "Lima"
-  ],
-  [
-    "Bogota",
-    "BuenosAires"
-  ],
-  [
-    "Bogota",
-    "SaoPaulo"
-  ],
-  [
-    "Lima",
-    "Santiago"
-  ],
-  [
-    "BuenosAires",
-    "SaoPaulo"
-  ],
-  [
-    "SaoPaulo",
-    "Lagos"
-  ],
-  [
-    "Lagos",
-    "Kinshasa"
-  ],
-  [
-    "Lagos",
-    "Khartoum"
-  ],
-  [
-    "Khartoum",
-    "Cairo"
-  ],
-  [
-    "Khartoum",
-    "Kinshasa"
-  ],
-  [
-    "Khartoum",
-    "Johannesburg"
-  ],
-  [
-    "Kinshasa",
-    "Johannesburg"
-  ],
-  [
-    "Algiers",
-    "Cairo"
-  ],
-  [
-    "Algiers",
-    "Istanbul"
-  ],
-  [
-    "Cairo",
-    "Riyadh"
-  ],
-  [
-    "Cairo",
-    "Istanbul"
-  ],
-  [
-    "Cairo",
-    "Baghdad"
-  ],
-  [
-    "Istanbul",
-    "Moscow"
-  ],
-  [
-    "Istanbul",
-    "Baghdad"
-  ],
-  [
-    "Moscow",
-    "Tehran"
-  ],
-  [
-    "Tehran",
-    "Baghdad"
-  ],
-  [
-    "Tehran",
-    "Karachi"
-  ],
-  [
-    "Tehran",
-    "Delhi"
-  ],
-  [
-    "Baghdad",
-    "Karachi"
-  ],
-  [
-    "Baghdad",
-    "Riyadh"
-  ],
-  [
-    "Riyadh",
-    "Karachi"
-  ],
-  [
-    "Mumbai",
-    "Karachi"
-  ],
-  [
-    "Mumbai",
-    "Chennai"
-  ],
-  [
-    "Mumbai",
-    "Delhi"
-  ],
-  [
-    "Karachi",
-    "Delhi"
-  ],
-  [
-    "Delhi",
-    "Chennai"
-  ],
-  [
-    "Delhi",
-    "Kolkata"
-  ],
-  [
-    "Chennai",
-    "Jakarta"
-  ],
-  [
-    "Chennai",
-    "Bangkok"
-  ],
-  [
-    "Chennai",
-    "Kolkata"
-  ],
-  [
-    "Kolkata",
-    "Bangkok"
-  ],
-  [
-    "Kolkata",
-    "HongKong"
-  ],
-  [
-    "Bangkok",
-    "Jakarta"
-  ],
-  [
-    "Bangkok",
-    "HoChiMinhCity"
-  ],
-  [
-    "Bangkok",
-    "HongKong"
-  ],
-  [
-    "Jakarta",
-    "HoChiMinhCity"
-  ],
-  [
-    "Jakarta",
-    "Sydney"
-  ],
-  [
-    "HoChiMinhCity",
-    "HongKong"
-  ],
-  [
-    "HoChiMinhCity",
-    "Manila"
-  ],
-  [
-    "HongKong",
-    "Manila"
-  ],
-  [
-    "HongKong",
-    "Shanghai"
-  ],
-  [
-    "HongKong",
-    "Taipei"
-  ],
-  [
-    "Shanghai",
-    "Taipei"
-  ],
-  [
-    "Shanghai",
-    "Tokyo"
-  ],
-  [
-    "Shanghai",
-    "Seoul"
-  ],
-  [
-    "Shanghai",
-    "Beijing"
-  ],
-  [
-    "Beijing",
-    "Seoul"
-  ],
-  [
-    "Seoul",
-    "Tokyo"
-  ],
-  [
-    "Tokyo",
-    "Osaka"
-  ],
-  [
-    "Osaka",
-    "Taipei"
-  ],
-  [
-    "Taipei",
-    "Manila"
-  ],
-  [
-    "Manila",
-    "Sydney"
-  ]
+  {
+    "connection": [
+      "SanFrancisco",
+      "LosAngeles"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "SanFrancisco",
+      "Chicago"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "SanFrancisco",
+      "Tokyo"
+    ],
+    "loop": true
+  },
+  {
+    "connection": [
+      "SanFrancisco",
+      "Manila"
+    ],
+    "loop": true
+  },
+  {
+    "connection": [
+      "Chicago",
+      "LosAngeles"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Chicago",
+      "MexicoCity"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Chicago",
+      "Atlanta"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Chicago",
+      "Montreal"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Montreal",
+      "Washington"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Montreal",
+      "NewYork"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "NewYork",
+      "Washington"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "NewYork",
+      "London"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "NewYork",
+      "Madrid"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Atlanta",
+      "Washington"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Atlanta",
+      "Miami"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Washington",
+      "Miami"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "London",
+      "Madrid"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "London",
+      "Paris"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "London",
+      "Essen"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Madrid",
+      "Paris"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Madrid",
+      "Algiers"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Madrid",
+      "SaoPaulo"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Paris",
+      "Essen"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Paris",
+      "Milan"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Paris",
+      "Algiers"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Essen",
+      "Milan"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Essen",
+      "StPetersburg"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Milan",
+      "Istanbul"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "StPetersburg",
+      "Moscow"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "StPetersburg",
+      "Istanbul"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "LosAngeles",
+      "MexicoCity"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "LosAngeles",
+      "Sydney"
+    ],
+    "loop": true
+  },
+  {
+    "connection": [
+      "MexicoCity",
+      "Miami"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "MexicoCity",
+      "Bogota"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "MexicoCity",
+      "Lima"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Miami",
+      "Bogota"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Bogota",
+      "Lima"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Bogota",
+      "BuenosAires"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Bogota",
+      "SaoPaulo"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Lima",
+      "Santiago"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "BuenosAires",
+      "SaoPaulo"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "SaoPaulo",
+      "Lagos"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Lagos",
+      "Kinshasa"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Lagos",
+      "Khartoum"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Khartoum",
+      "Cairo"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Khartoum",
+      "Kinshasa"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Khartoum",
+      "Johannesburg"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Kinshasa",
+      "Johannesburg"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Algiers",
+      "Cairo"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Algiers",
+      "Istanbul"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Cairo",
+      "Riyadh"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Cairo",
+      "Istanbul"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Cairo",
+      "Baghdad"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Istanbul",
+      "Moscow"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Istanbul",
+      "Baghdad"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Moscow",
+      "Tehran"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Tehran",
+      "Baghdad"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Tehran",
+      "Karachi"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Tehran",
+      "Delhi"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Baghdad",
+      "Karachi"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Baghdad",
+      "Riyadh"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Riyadh",
+      "Karachi"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Mumbai",
+      "Karachi"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Mumbai",
+      "Chennai"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Mumbai",
+      "Delhi"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Karachi",
+      "Delhi"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Delhi",
+      "Chennai"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Delhi",
+      "Kolkata"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Chennai",
+      "Jakarta"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Chennai",
+      "Bangkok"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Chennai",
+      "Kolkata"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Kolkata",
+      "Bangkok"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Kolkata",
+      "HongKong"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Bangkok",
+      "Jakarta"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Bangkok",
+      "HoChiMinhCity"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Bangkok",
+      "HongKong"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Jakarta",
+      "HoChiMinhCity"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Jakarta",
+      "Sydney"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "HoChiMinhCity",
+      "HongKong"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "HoChiMinhCity",
+      "Manila"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "HongKong",
+      "Manila"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "HongKong",
+      "Shanghai"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "HongKong",
+      "Taipei"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Shanghai",
+      "Taipei"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Shanghai",
+      "Tokyo"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Shanghai",
+      "Seoul"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Shanghai",
+      "Beijing"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Beijing",
+      "Seoul"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Seoul",
+      "Tokyo"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Tokyo",
+      "Osaka"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Osaka",
+      "Taipei"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Taipei",
+      "Manila"
+    ],
+    "loop": false
+  },
+  {
+    "connection": [
+      "Manila",
+      "Sydney"
+    ],
+    "loop": false
+  }
 ]
