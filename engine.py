@@ -1,7 +1,10 @@
-from math import cos, sin, asin, pi, radians, degrees
-from random import shuffle
-from pathlib import Path
+from math import cos, sin, asin, pi, radians, degrees, sqrt
+from numpy.linalg import norm
+from collections import namedtuple
 from statistics import median
+from pathlib import Path
+from typing import Any
+from numpy import asarray
 import pygame
 
 # noinspection SpellCheckingInspection
@@ -29,9 +32,21 @@ RESOLUTIONS = {"NONE": (0, 0),
                "WSXGA+": (1680, 1050),
                "HD 1080": (1920, 1080), }
 
+Point = namedtuple("Point", ["x", "y"])
+Color = namedtuple("Color", ["r", "g", "b"])
+
 
 class GameSprite(pygame.sprite.Sprite):
-    def __init__(self, sprite_id: str, x: int, y: int, image: pygame.Surface):
+    """@DynamicAttrs"""
+
+    def __init__(
+        self: 'GameSprite',
+        sprite_id: str,
+        position: Point,
+        image: pygame.Surface,
+        **kwargs: Any
+    ) -> None:
+
         super().__init__()
 
         self.id = sprite_id
@@ -39,9 +54,11 @@ class GameSprite(pygame.sprite.Sprite):
         self.image = image
 
         self.rect = image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
+        self.rect.topleft = position
         self.mask = image.get_masks()
+
+        for name, value in kwargs.items():
+            setattr(self, name, value)
 
     def rotate(self, angle: float = 0.0, scale: float = 1.0) -> None:
         self.image = pygame.transform.rotozoom(self.original, angle, scale)
@@ -52,21 +69,17 @@ class GameSprite(pygame.sprite.Sprite):
 
 
 class Pointer(pygame.sprite.Sprite):
-    def __init__(self, x, y):
+    def __init__(self, position: Point):
         super().__init__()
 
         self.image = pygame.Surface((10, 10))
         self.rect = self.image.get_rect()
-        self.rect.x = x
-        self.rect.y = y
+        self.rect.topleft = position
 
 
 class Card(GameSprite):
     def __init__(self, image: pygame.Surface, card_id, **kwargs) -> None:
-        super().__init__(card_id, -1, -1, image)
-
-        for name, value in kwargs.items():
-            setattr(self, name, value)
+        super().__init__(card_id, Point(-1, -1), image, **kwargs)
 
 
 class Game:
@@ -96,8 +109,7 @@ class Game:
         self.scale_factor_h = self.screen.get_height() / Game.RESOLUTION[1]
 
         # Sprite containers
-        self.background_groups = []
-        self.foreground_groups = []
+        self.sprite_groups = []
 
         # Card Tools
         self.cards = []
@@ -158,11 +170,8 @@ class Game:
     def quit() -> None:
         pygame.quit()
 
-    def add_background_group(self, group: pygame.sprite.Group) -> None:
-        self.background_groups.append(group)
-
-    def add_foreground_group(self, group: pygame.sprite.Group) -> None:
-        self.foreground_groups.append(group)
+    def add_sprite_group(self, group: pygame.sprite.Group, index) -> None:
+        self.sprite_groups.insert(index, group)
 
     def show_hand(self) -> None:
         self.hand_visible = True
@@ -181,13 +190,58 @@ class Game:
 
         self._background()
 
-        for group in self.background_groups:
-            group.draw(self.screen)
-
-        for group in self.foreground_groups:
+        for group in self.sprite_groups:
             group.draw(self.screen)
 
         if self.hand_visible:
             self._show_hand()
 
+        pygame.display.update()
+
+    # noinspection DuplicatedCode
+    def generate_line_sprite(
+            self: 'Game',
+            sprite_id: str,
+            color: Color,
+            point_a: Point,
+            point_b: Point,
+            width: int,
+            **kwargs: Any
+    ) -> GameSprite:
+
+        vector_a = asarray(point_a)
+        vector_b = asarray(point_b)
+        line_vector = vector_a - vector_b
+        perpendicular = asarray([-1, line_vector[0] / line_vector[1]])
+        perpendicular = width / (norm(perpendicular) * 2) * perpendicular
+
+        corner_1 = vector_a + perpendicular
+        corner_2 = vector_a - perpendicular
+        corner_3 = vector_b + perpendicular
+        corner_4 = vector_b - perpendicular
+        corners = (corner_1, corner_2, corner_4, corner_3)
+
+        max_x = max(corners, key=lambda corner: corner[0])[0]
+        min_x = min(corners, key=lambda corner: corner[0])[0]
+        max_y = max(corners, key=lambda corner: corner[1])[1]
+        min_y = min(corners, key=lambda corner: corner[1])[1]
+        dx, dy = max_x - min_x, max_y - min_y
+        corners = tuple(corner - [min_x, min_y] for corner in corners)
+
+        surface = pygame.Surface((dx + 1, dy + 1), pygame.SRCALPHA)
+        pygame.draw.polygon(surface, color, corners)
+
+        flip_x = kwargs.get("flip_left", False) or \
+            kwargs.get("flip_right", False)
+        flip_y = kwargs.get("flip_up", False) or \
+            kwargs.get("flip_down", False)
+
+        surface = pygame.transform.flip(surface, flip_x, flip_y)
+        position = Point(
+            min_x - dx * kwargs.get("flip_left", 0) +
+            dx * kwargs.get("flip_right", 0),
+            min_y - dy * kwargs.get("flip_up", 0) +
+            dy * kwargs.get("flip_down", 0))
+
+        return GameSprite(sprite_id, position, surface)
 
