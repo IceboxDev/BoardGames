@@ -1,0 +1,69 @@
+---
+description: Conventions for Exploding Kittens game engine, AI, and component development
+globs: src/games/exploding-kittens/**/*.ts,src/games/exploding-kittens/**/*.tsx
+alwaysApply: false
+---
+
+# Exploding Kittens Conventions
+
+## Architecture layers
+
+1. **Logic layer** (`logic/`): Pure functional. No React, no DOM, no side effects. Fully serializable state.
+2. **Component layer** (`components/`): Presentational React components. Receive state + callbacks. Never import `game-engine.ts` directly. May import `rules.ts` for legality display.
+3. **AI layer** (`logic/ai*.ts`, `logic/mcts/`): Web Worker based. Strategies are self-contained. MCTS engine is shared infrastructure.
+4. **Orchestrator** (`ExplodingKittens.tsx`): The ONLY file that imports both `game-engine.ts` and `ai.ts`. Owns game state. Wires everything together.
+
+## Engine rules
+
+- `game-engine.ts` is pure functional: `applyAction(state, action) => GameState`. No side effects, no randomness except where game rules require it (shuffle, random steal).
+- All actions go through `applyAction`. No direct state mutation.
+- `rules.ts` is the single source of truth for legal actions via `getLegalActions(state)`.
+- `getActiveDecider(state)` returns the player index who must act next.
+- Every game phase maps to a specific set of legal actions. The state machine is explicit.
+
+## Engine vs AI Model separation
+
+The MCTS **engine** (`mcts/ismcts.ts`, `mcts/fast-game.ts`, `mcts/determinize.ts`, `mcts/rollout.ts`, `mcts/types.ts`) is shared infrastructure. Each AI **strategy** (`random`, `heuristic-v1`, `ismcts-v1`, ...) is self-contained in `ai-strategies.ts` with its own `pickAction` function and optional `mctsConfig`.
+
+## Change rules
+
+- **Engine bugfix**: fix for all strategies — no strategy-specific workarounds.
+- **Engine new feature**: implement in the engine even if only the newest strategy uses it.
+- **Engine API-breaking change**: rewrite all AI strategies to match the new API. No backwards compatibility shims.
+
+## Adding a new AI strategy
+
+1. Write `pickStrategyVN` in `ai-strategies.ts`.
+2. Define `STRATEGY_VN` with id, label, description, `pickAction`, and optional `mctsConfig`.
+3. Prepend to `ALL_STRATEGIES` (newest first).
+4. Add the new id to the `AIStrategyId` union in `types.ts`.
+5. Add label and description to `AI_STRATEGY_LABELS` and `AI_STRATEGY_DESCRIPTIONS`.
+6. Run the tournament grid to verify improvement over previous versions.
+
+## N-player design
+
+- The engine supports 2-5 players. Player 0 is always human. Players 1+ are AI.
+- `PlayerState.index` is the canonical player identity. Never use names or string IDs.
+- `nextAlivePlayerIndex` handles player elimination and wraparound.
+- Attack stacking: `nextPlayerTurns = (currentRemaining - 1) + 2` (modern rules).
+
+## Nope window mechanics
+
+- After an action card or combo is played, the engine enters `nope-window` phase.
+- Players are polled sequentially (clockwise from the action player).
+- Each player can play Nope (adding to the chain) or Pass.
+- When all non-chain players pass: odd chain length = action cancelled, even = action resolves.
+- If no player has a Nope card, the nope window is skipped entirely.
+
+## Combo rules
+
+- **Pair** (2 matching type): steal random card from target. ALL card types except Exploding Kitten can participate.
+- **Triple** (3 matching type): name a card type, steal from target if they have it.
+- **Five-different** (5 distinct types): take any card from the discard pile.
+- Combos go through the Nope window like action cards.
+
+## Testing strategy
+
+- Game engine can be tested purely via `createInitialState` + repeated `applyAction` calls.
+- `getLegalActions` + `applyAction` form the complete API needed for any automated player.
+- Tournament mode runs headless games via `FastState` for speed.
