@@ -1,0 +1,24 @@
+{
+  "name": "@boardgames/server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --include ../core/src src/index.ts",
+    "build": "tsup src/index.ts src/tournament/game-worker.ts --format esm --dts",
+    "typecheck": "tsc -b --noEmit"
+  },
+  "dependencies": {
+    "@boardgames/core": "workspace:*",
+    "@hono/node-server": "^1.0.0",
+    "@hono/node-ws": "^1.0.0",
+    "better-sqlite3": "^11.0.0",
+    "hono": "^4.0.0",
+    "xstate": "^5.28.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.0.0",
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.0",
+    "tsx": "^4.19.0"
+  }
+}

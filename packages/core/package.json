@@ -1,0 +1,20 @@
+{
+  "name": "@boardgames/core",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./games/lost-cities/*": "./src/games/lost-cities/*.ts",
+    "./games/exploding-kittens/*": "./src/games/exploding-kittens/*.ts",
+    "./games/pandemic/*": "./src/games/pandemic/*.ts",
+    "./games/set/*": "./src/games/set/*.ts",
+    "./machines/*": "./src/machines/*.ts",
+    "./protocol/*": "./src/protocol/*.ts",
+    "./tournament/*": "./src/tournament/*.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc -b --noEmit"
+  },
+  "dependencies": {
+    "xstate": "^5.28.0"
+  }
+}

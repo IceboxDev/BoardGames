@@ -5,4 +5,4 @@ pre-commit:
       glob: "*.{ts,tsx,js,jsx,json,css}"
       run: npx @biomejs/biome check --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
     typecheck:
-      run: npx tsc -b --noEmit
+      run: pnpm -r typecheck

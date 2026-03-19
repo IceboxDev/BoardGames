@@ -15,6 +15,7 @@ The MCTS **engine** (ismcts.ts, fast-game.ts, determinize.ts, rollout.ts, types.
 - **Engine bugfix**: fix for all models — no model-specific workarounds.
 - **Engine new feature**: implement in the engine even if only the newest model uses it. Older models ignore it naturally.
 - **Engine API-breaking change**: rewrite all AI models to match the new API. Do NOT maintain backwards compatibility shims.
+- **AI heuristic changes**: always create a new encapsulated model (vN+1); never modify an existing model in place.
 
 ## Adding a new AI model
 
