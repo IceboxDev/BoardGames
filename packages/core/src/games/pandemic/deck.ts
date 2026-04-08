@@ -12,6 +12,7 @@ export function shuffle<T>(arr: readonly T[]): T[] {
 
 export function buildCityCards(): CityCard[] {
   return ALL_CITY_IDS.map((id) => {
+    // biome-ignore lint/style/noNonNullAssertion: ALL_CITY_IDS is derived from CITY_DATA keys
     const city = CITY_DATA.get(id)!;
     return { kind: "city" as const, cityId: id, color: city.color };
   });
@@ -29,6 +30,7 @@ export function buildEventCards(): EventCard[] {
 
 export function buildInfectionDeck(): InfectionCard[] {
   const cards: InfectionCard[] = ALL_CITY_IDS.map((id) => {
+    // biome-ignore lint/style/noNonNullAssertion: ALL_CITY_IDS is derived from CITY_DATA keys
     const city = CITY_DATA.get(id)!;
     return { cityId: id, color: city.color };
   });

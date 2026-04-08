@@ -2,7 +2,7 @@ import type { Viewport } from "./renderer";
 
 export interface HitRegion {
   id: string;
-  type: "city" | "card" | "button" | "cube" | "station" | "discard";
+  type: "city" | "button" | "cube" | "station" | "discard";
   bounds: { x: number; y: number; w: number; h: number };
   data: unknown;
   cursor?: string;

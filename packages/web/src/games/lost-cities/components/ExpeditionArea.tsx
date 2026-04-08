@@ -19,7 +19,7 @@ export default function ExpeditionArea({
   const score = scorePlayer(expeditions);
 
   return (
-    <div className="flex flex-col items-center gap-1">
+    <div className="flex flex-col items-center gap-1 shrink-0 min-h-0">
       <div className="flex items-center gap-2 w-full px-2">
         <span className="text-xs font-semibold text-gray-400">{label}</span>
         <span className="text-xs font-bold text-white ml-auto tabular-nums">{score.total}</span>

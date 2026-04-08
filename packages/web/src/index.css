@@ -230,3 +230,38 @@ body {
 .animate-ai-think {
   animation: ai-think-pulse 1s ease-in-out infinite;
 }
+
+/* ── Sushi Go bamboo mat texture ────────────────── */
+
+.bamboo-mat {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 7px,
+      rgba(139, 90, 43, 0.04) 7px,
+      rgba(139, 90, 43, 0.04) 8px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 23px,
+      rgba(139, 90, 43, 0.03) 23px,
+      rgba(139, 90, 43, 0.03) 24px
+    );
+}
+
+/* ── Ghost card breathing animation ─────────────── */
+
+@keyframes breathe {
+  0%,
+  100% {
+    opacity: 0.15;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+.animate-breathe {
+  animation: breathe 2.5s ease-in-out infinite;
+}

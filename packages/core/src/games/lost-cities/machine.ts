@@ -29,6 +29,7 @@ import { EXPEDITION_COLORS } from "./types";
 export interface LostCitiesContext {
   gameState: GameState;
   aiEngine: AIEngine;
+  humanPlayers: number[];
   lastAiStats: MCTSStats | null;
   pendingAiDraw: DrawAction | null;
   actionLog: ActionLogEntry[];
@@ -36,7 +37,7 @@ export interface LostCitiesContext {
 }
 
 export type LostCitiesEvent =
-  | { type: "START"; aiEngine: AIEngine }
+  | { type: "START"; aiEngine: AIEngine; humanPlayers?: number[] }
   | { type: "PLAY_TO_EXPEDITION"; cardId: number }
   | { type: "DISCARD"; cardId: number }
   | { type: "DRAW_FROM_PILE" }
@@ -110,7 +111,7 @@ export const lostCitiesMachine = setup({
 
   guards: {
     isGameOver: ({ context }) => context.gameState.phase === "game-over",
-    isAiTurn: ({ context }) => context.gameState.currentPlayer === 1,
+    isAiTurn: ({ context }) => !context.humanPlayers.includes(context.gameState.currentPlayer),
   },
 
   actions: {
@@ -120,6 +121,7 @@ export const lostCitiesMachine = setup({
       return {
         gameState: gs,
         aiEngine: event.aiEngine,
+        humanPlayers: event.humanPlayers ?? [0],
         lastAiStats: null,
         pendingAiDraw: null,
         actionLog: [] as ActionLogEntry[],
@@ -136,14 +138,15 @@ export const lostCitiesMachine = setup({
 
     applyPlayerPlay: assign(({ context, event }) => {
       if (event.type !== "PLAY_TO_EXPEDITION" && event.type !== "DISCARD") return {};
-      const card = findCard(context.gameState.hands[0], event.cardId);
+      const cp = context.gameState.currentPlayer;
+      const card = findCard(context.gameState.hands[cp], event.cardId);
       const action: PlayAction =
         event.type === "PLAY_TO_EXPEDITION"
           ? { kind: "expedition", card }
           : { kind: "discard", card };
       const entry: ActionLogEntry = {
         turn: context.gameState.turnCount,
-        player: 0,
+        player: cp,
         action: action.kind === "expedition" ? "play-expedition" : "play-discard",
         card,
       };
@@ -151,7 +154,7 @@ export const lostCitiesMachine = setup({
       const step: ReplayStepV2 = {
         turn: context.replaySteps.length,
         phase: "play",
-        player: 0,
+        player: cp,
         state: gameStateToSnapshot(newGs),
         action: {
           cardId: card.id,
@@ -168,6 +171,7 @@ export const lostCitiesMachine = setup({
 
     applyPlayerDraw: assign(({ context, event }) => {
       const gs = context.gameState;
+      const cp = gs.currentPlayer;
       const action: DrawAction =
         event.type === "DRAW_FROM_DISCARD"
           ? { kind: "discard-pile", color: event.color }
@@ -178,7 +182,7 @@ export const lostCitiesMachine = setup({
           : gs.discardPiles[action.color][gs.discardPiles[action.color].length - 1];
       const entry: ActionLogEntry = {
         turn: gs.turnCount,
-        player: 0,
+        player: cp,
         action: action.kind === "draw-pile" ? "draw-pile" : "draw-discard",
         card: drawnCard,
         color: action.kind === "discard-pile" ? action.color : undefined,
@@ -187,7 +191,7 @@ export const lostCitiesMachine = setup({
       const step: ReplayStepV2 = {
         turn: context.replaySteps.length,
         phase: "draw",
-        player: 0,
+        player: cp,
         state: gameStateToSnapshot(newGs),
         action: {
           cardId: drawnCard.id,
@@ -219,7 +223,7 @@ export const lostCitiesMachine = setup({
         cardId: a.cardId,
         kind: a.kind,
         visits: a.visits,
-        winRate: a.winRate,
+        meanNormalizedReward: a.meanNormalizedReward,
         chosen: a.key === stats.chosenPlayKey,
       }));
       const step: ReplayStepV2 = {
@@ -247,7 +251,8 @@ export const lostCitiesMachine = setup({
 
     applyAiDraw: assign(({ context }) => {
       const gs = context.gameState;
-      const draw = context.pendingAiDraw!;
+      const draw = context.pendingAiDraw;
+      if (!draw) throw new Error("applyAiDraw called without pendingAiDraw");
       const hiddenCard: Card = { id: -1, color: "yellow", type: "number", value: 0 };
       const discardCard =
         draw.kind === "discard-pile"
@@ -271,8 +276,8 @@ export const lostCitiesMachine = setup({
             kind: a.kind,
             color: a.color,
             visits: a.visits,
-            winRate: a.winRate,
-            chosen: a.key === context.lastAiStats!.chosenDrawKey,
+            meanNormalizedReward: a.meanNormalizedReward,
+            chosen: a.key === context.lastAiStats?.chosenDrawKey,
           }))
         : [];
       const step: ReplayStepV2 = {
@@ -301,6 +306,7 @@ export const lostCitiesMachine = setup({
   context: {
     gameState: PLACEHOLDER_STATE,
     aiEngine: "ismcts-v4" as AIEngine,
+    humanPlayers: [0] as number[],
     lastAiStats: null,
     pendingAiDraw: null,
     actionLog: [] as ActionLogEntry[],
@@ -392,33 +398,40 @@ export const lostCitiesMachine = setup({
 // Projection functions
 // ---------------------------------------------------------------------------
 
-function buildPlayerView(ctx: LostCitiesContext, _player: number): LostCitiesPlayerView {
+function buildPlayerView(ctx: LostCitiesContext, player: number): LostCitiesPlayerView {
   const gs = ctx.gameState;
+  const opp = 1 - player;
   const scores = scoreGame(gs);
   return {
-    playerHand: gs.hands[0],
-    playerExpeditions: gs.expeditions[0],
-    opponentExpeditions: gs.expeditions[1],
+    playerHand: gs.hands[player],
+    playerExpeditions: gs.expeditions[player],
+    opponentExpeditions: gs.expeditions[opp],
     discardPiles: gs.discardPiles,
     drawPileCount: gs.drawPile.length,
-    opponentHandCount: gs.hands[1].length,
-    currentPlayer: gs.currentPlayer,
+    opponentHandCount: gs.hands[opp].length,
+    currentPlayer: (gs.currentPlayer === player ? 0 : 1) as PlayerIndex,
     turnPhase: gs.turnPhase,
     phase: gs.phase,
     turnCount: gs.turnCount,
-    playerScore: scores[0],
-    opponentScore: scores[1],
+    playerScore: scores[player],
+    opponentScore: scores[opp],
     lastDiscardedColor: gs.lastDiscardedColor,
-    actionLog: ctx.actionLog,
+    actionLog:
+      player === 0
+        ? ctx.actionLog
+        : ctx.actionLog.map((e) => ({
+            ...e,
+            player: (e.player === player ? 0 : 1) as PlayerIndex,
+          })),
   };
 }
 
 function buildLegalActions(ctx: LostCitiesContext, player: number): LostCitiesLegalAction[] {
   const gs = ctx.gameState;
-  if (player !== 0 || gs.currentPlayer !== 0) return [];
+  if (player !== gs.currentPlayer) return [];
 
   if (gs.turnPhase === "play") {
-    return getLegalPlays(gs.hands[0], gs.expeditions[0]).map((a) => ({
+    return getLegalPlays(gs.hands[player], gs.expeditions[player]).map((a) => ({
       phase: "play" as const,
       action: a,
     }));

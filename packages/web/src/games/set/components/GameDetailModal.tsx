@@ -2,6 +2,7 @@ import {
   computeCareerStats,
   computePercentile,
   computeSkillProfile,
+  type NumericKey,
 } from "@boardgames/core/games/set/analytics";
 import { formatTime } from "@boardgames/core/games/set/metrics";
 import type { GameRecord } from "@boardgames/core/games/set/types";
@@ -140,7 +141,7 @@ export default function GameDetailModal({ record, history, onClose }: GameDetail
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
           {metrics.map((m) => {
             const numVal = record[m.key] as number;
-            const pct = computePercentile(history, numVal, m.key as any, m.lowerIsBetter);
+            const pct = computePercentile(history, numVal, m.key as NumericKey, m.lowerIsBetter);
             const avg = career[
               m.key === "rating"
                 ? "avgRating"

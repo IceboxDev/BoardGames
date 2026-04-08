@@ -118,8 +118,10 @@ function heuristicNopeDecision(
   legalActions: Action[],
   playerIndex: number,
 ): Action {
-  const nw = state.nopeWindow!;
-  const pass = legalActions.find((a) => a.type === "pass-nope")!;
+  const nw = state.nopeWindow;
+  if (!nw) throw new Error("nopeWindow must exist in nope-window phase");
+  const pass = legalActions.find((a) => a.type === "pass-nope");
+  if (!pass) throw new Error("pass-nope must be a legal action in nope-window phase");
   const nope = legalActions.find((a) => a.type === "nope");
 
   if (!nope) return pass;

@@ -11,25 +11,30 @@ export default function GameRouter() {
   const GameComponent = game.component;
 
   return (
-    <>
+    <div className="relative flex h-full min-h-0 flex-1 flex-col">
       {game.backgroundImage && (
-        <div className="fixed inset-0 z-0 animate-bg-fade-in" aria-hidden="true">
+        <div
+          className="pointer-events-none fixed inset-0 z-0 animate-bg-fade-in"
+          aria-hidden="true"
+        >
           <img src={game.backgroundImage} alt="" className="h-full w-full object-cover" />
-          <div className="absolute inset-0 bg-surface-950/50" />
-          <div className="absolute inset-0 bg-gradient-to-t from-surface-950 via-surface-950/30 to-surface-950/70" />
+          <div className="absolute inset-0 bg-surface-950/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-surface-950/45 via-surface-950/15 to-surface-950/50" />
         </div>
       )}
-      <div className="relative z-10">
+      <div className="relative z-10 flex min-h-0 w-full flex-1 flex-col">
         <Suspense
           fallback={
-            <div className="flex h-[60vh] items-center justify-center text-gray-400">
+            <div className="flex min-h-0 flex-1 items-center justify-center text-gray-400">
               Loading...
             </div>
           }
         >
-          <GameComponent />
+          <div className="flex min-h-0 w-full flex-1 flex-col">
+            <GameComponent />
+          </div>
         </Suspense>
       </div>
-    </>
+    </div>
   );
 }

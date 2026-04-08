@@ -27,7 +27,8 @@ export async function loadSpritesheet(
   const canvas = document.createElement("canvas");
   canvas.width = img.width;
   canvas.height = img.height;
-  const ctx = canvas.getContext("2d")!;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) throw new Error("Failed to get 2d context");
   ctx.drawImage(img, 0, 0);
 
   const result: SpriteMap = {};
@@ -39,14 +40,16 @@ export async function loadSpritesheet(
     if (entry.rotate) {
       spriteCanvas.width = h;
       spriteCanvas.height = w;
-      const sctx = spriteCanvas.getContext("2d")!;
+      const sctx = spriteCanvas.getContext("2d");
+      if (!sctx) throw new Error("Failed to get 2d context");
       sctx.translate(h / 2, w / 2);
       sctx.rotate(Math.PI / 2);
       sctx.drawImage(canvas, x, y, w, h, -w / 2, -h / 2, w, h);
     } else {
       spriteCanvas.width = w;
       spriteCanvas.height = h;
-      const sctx = spriteCanvas.getContext("2d")!;
+      const sctx = spriteCanvas.getContext("2d");
+      if (!sctx) throw new Error("Failed to get 2d context");
       sctx.drawImage(canvas, x, y, w, h, 0, 0, w, h);
     }
 

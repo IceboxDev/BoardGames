@@ -1,3 +1,5 @@
+import { ALL_STRATEGIES } from "@boardgames/core/games/lost-cities/ai-strategies";
+import { tournamentGameLogToHumanReadable } from "@boardgames/core/games/lost-cities/human-export";
 import type {
   LostCitiesEvent,
   LostCitiesPlayerView,
@@ -10,19 +12,24 @@ import type {
   ExpeditionColor,
   GameState,
 } from "@boardgames/core/games/lost-cities/types";
-import { emptyDiscardPiles, emptyExpeditions } from "@boardgames/core/games/lost-cities/types";
-import { useCallback, useState } from "react";
-import useDocumentTitle from "../../hooks/useDocumentTitle";
-import { useRemoteGame } from "../../hooks/useRemoteGame";
+import {
+  AI_ENGINE_LABELS,
+  emptyDiscardPiles,
+  emptyExpeditions,
+} from "@boardgames/core/games/lost-cities/types";
+import { useCallback, useEffect, useState } from "react";
+import { HistorySidebar } from "../../components/action-log";
+import { MpGameOverScreen } from "../../components/game-over";
+import { MatchHistory } from "../../components/match-history";
+import { TournamentGrid, TournamentMatchHistory } from "../../components/tournament";
+import { WaitingIndicator } from "../../components/ui";
+import { useGameShell } from "../../hooks/useGameShell";
 import { apiClient } from "../../lib/api-client";
 import ActionLog from "./components/ActionLog";
-import AISelect from "./components/AISelect";
 import GameBoard from "./components/GameBoard";
 import GameOverScreen from "./components/GameOverScreen";
 import GameReplay from "./components/GameReplay";
-import MatchHistory from "./components/MatchHistory";
-import TournamentGrid from "./components/TournamentGrid";
-import TournamentMatchHistory from "./components/TournamentMatchHistory";
+import SetupScreen from "./components/SetupScreen";
 
 function viewToGameState(view: LostCitiesPlayerView): GameState {
   return {
@@ -43,15 +50,11 @@ function viewToGameState(view: LostCitiesPlayerView): GameState {
 }
 
 export default function LostCities() {
-  useDocumentTitle("Lost Cities - Board Games");
-
-  const game = useRemoteGame<LostCitiesPlayerView, LostCitiesEvent, LostCitiesResult>(
+  const shell = useGameShell<LostCitiesPlayerView, LostCitiesEvent, LostCitiesResult>(
     "lost-cities",
   );
 
   const [selectedCardId, setSelectedCardId] = useState<number | null>(null);
-  const [showTournament, setShowTournament] = useState(false);
-  const [showMatchHistory, setShowMatchHistory] = useState(false);
   const [matchHistoryPair, setMatchHistoryPair] = useState<{
     aId: string;
     bId: string;
@@ -60,71 +63,114 @@ export default function LostCities() {
   const [replayGame, setReplayGame] = useState<TournamentGameLog | null>(null);
   const [lastEngine, setLastEngine] = useState<AIEngine>("ismcts-v4");
 
+  // Back overrides for game-specific sub-navigation
+  useEffect(() => {
+    if (replayGame) {
+      shell.setBackOverride(() => setReplayGame(null));
+      return () => shell.setBackOverride(null);
+    }
+    if (shell.mode === "match-history") {
+      shell.setBackOverride(() => shell.goToMenu());
+      return () => shell.setBackOverride(null);
+    }
+    if (matchHistoryPair) {
+      shell.setBackOverride(() => setMatchHistoryPair(null));
+      return () => shell.setBackOverride(null);
+    }
+    if (shell.mode === "tournament") {
+      shell.setBackOverride(() => shell.goToMenu());
+      return () => shell.setBackOverride(null);
+    }
+    if (shell.mode === "solo") {
+      shell.setBackOverride(() => shell.goToMenu());
+      return () => shell.setBackOverride(null);
+    }
+    if (shell.mode === "mp-playing") {
+      shell.setBackOverride(() => shell.goToMenu());
+      return () => shell.setBackOverride(null);
+    }
+    shell.setBackOverride(null);
+    return undefined;
+  }, [replayGame, matchHistoryPair, shell.mode, shell.setBackOverride, shell.goToMenu]);
+
   const startGame = useCallback(
     (engine: AIEngine) => {
       setLastEngine(engine);
       setSelectedCardId(null);
-      game.start({ aiEngine: engine });
+      shell.game.start({ aiEngine: engine });
     },
-    [game.start],
+    [shell.game.start],
   );
 
   const handleSelectCard = useCallback((card: Card) => {
     setSelectedCardId((prev) => (prev === card.id ? null : card.id));
   }, []);
 
+  // Shared action handlers — work for both solo and multiplayer
+  const activeGame = shell.mode === "mp-playing" ? shell.mp : shell.game;
+
   const handlePlayToExpedition = useCallback(() => {
-    if (!game.view || selectedCardId == null) return;
-    game.send({ type: "PLAY_TO_EXPEDITION", cardId: selectedCardId });
+    if (!activeGame.view || selectedCardId == null) return;
+    activeGame.send({ type: "PLAY_TO_EXPEDITION", cardId: selectedCardId });
     setSelectedCardId(null);
-  }, [game.view, game.send, selectedCardId]);
+  }, [activeGame.view, activeGame.send, selectedCardId]);
 
   const handleDiscard = useCallback(() => {
-    if (!game.view || selectedCardId == null) return;
-    game.send({ type: "DISCARD", cardId: selectedCardId });
+    if (!activeGame.view || selectedCardId == null) return;
+    activeGame.send({ type: "DISCARD", cardId: selectedCardId });
     setSelectedCardId(null);
-  }, [game.view, game.send, selectedCardId]);
+  }, [activeGame.view, activeGame.send, selectedCardId]);
 
   const handleDrawFromPile = useCallback(() => {
-    game.send({ type: "DRAW_FROM_PILE" });
-  }, [game.send]);
+    activeGame.send({ type: "DRAW_FROM_PILE" });
+  }, [activeGame.send]);
 
   const handleDrawFromDiscard = useCallback(
     (color: ExpeditionColor) => {
-      game.send({ type: "DRAW_FROM_DISCARD", color });
+      activeGame.send({ type: "DRAW_FROM_DISCARD", color });
     },
-    [game.send],
+    [activeGame.send],
   );
 
+  // --- Shell-handled screens (menu, mp-join, mp-lobby) ---
+
+  if (shell.screen) return shell.screen;
+
+  // --- Subscreen routing ---
+
   if (replayGame) {
-    return <GameReplay game={replayGame} onBack={() => setReplayGame(null)} />;
+    return <GameReplay game={replayGame} />;
   }
 
-  if (showMatchHistory) {
+  if (shell.mode === "match-history") {
     return (
       <MatchHistory
-        onBack={() => setShowMatchHistory(false)}
-        onSelectGame={(g) => setReplayGame(g)}
+        gameSlug="lost-cities"
+        labelResolver={(e) => AI_ENGINE_LABELS[e as AIEngine] ?? e}
+        onBack={() => shell.goToMenu()}
+        onSelectGame={(g) => setReplayGame(g as TournamentGameLog)}
       />
     );
   }
 
-  if (matchHistoryPair) {
-    return (
-      <TournamentMatchHistory
-        strategyAId={matchHistoryPair.aId}
-        strategyBId={matchHistoryPair.bId}
-        tournamentId={matchHistoryPair.tournamentId}
-        onBack={() => setMatchHistoryPair(null)}
-        onSelectGame={(g) => setReplayGame(g)}
-      />
-    );
-  }
-
-  if (showTournament) {
+  if (shell.mode === "tournament") {
+    if (matchHistoryPair) {
+      return (
+        <TournamentMatchHistory
+          strategies={ALL_STRATEGIES.map((s) => ({ id: s.id, label: s.label }))}
+          strategyAId={matchHistoryPair.aId}
+          strategyBId={matchHistoryPair.bId}
+          tournamentId={matchHistoryPair.tournamentId}
+          onBack={() => setMatchHistoryPair(null)}
+          onSelectGame={(g) => setReplayGame(g as TournamentGameLog)}
+          exportLogFn={(g) => tournamentGameLogToHumanReadable(g as TournamentGameLog)}
+        />
+      );
+    }
     return (
       <TournamentGrid
-        onBack={() => setShowTournament(false)}
+        gameSlug="lost-cities"
+        strategies={ALL_STRATEGIES.map((s) => ({ id: s.id, label: s.label }))}
         onViewMatchHistory={(aId, bId, tournamentId) =>
           setMatchHistoryPair({ aId, bId, tournamentId })
         }
@@ -132,48 +178,81 @@ export default function LostCities() {
     );
   }
 
-  if (!game.view) {
+  // --- Solo: setup ---
+
+  if (shell.mode === "solo" && !shell.game.view) {
+    return <SetupScreen onSelect={startGame} />;
+  }
+
+  // --- Game over (solo) ---
+
+  if (shell.mode === "solo" && shell.game.result) {
     return (
-      <AISelect
-        onSelect={startGame}
-        onViewTournament={() => setShowTournament(true)}
-        onViewMatchHistory={() => setShowMatchHistory(true)}
+      <GameOverScreen
+        scores={shell.game.result.scores}
+        aiEngine={lastEngine}
+        onPlayAgain={() => startGame(lastEngine)}
+        onChangeAI={() => {
+          shell.game.reset();
+        }}
+        onViewReplay={
+          shell.game.replayId
+            ? () => {
+                const id = shell.game.replayId;
+                if (!id) return;
+                apiClient.getGameReplay("lost-cities", id).then((log) => {
+                  setReplayGame(log as TournamentGameLog);
+                });
+              }
+            : undefined
+        }
       />
     );
   }
 
-  if (game.result) {
+  // --- Game over (multiplayer) ---
+
+  if (shell.mode === "mp-playing" && shell.mp.result) {
+    const isWinner =
+      shell.mp.result.winner === "draw" ? null : shell.mp.result.winner === shell.mp.playerIndex;
     return (
-      <div className="mx-auto max-w-3xl px-6">
-        <GameOverScreen
-          scores={game.result.scores}
-          aiEngine={lastEngine}
-          onPlayAgain={() => startGame(lastEngine)}
-          onChangeAI={() => game.reset()}
-          onViewReplay={
-            game.replayId
-              ? () => {
-                  apiClient.getGameReplay("lost-cities", game.replayId!).then((log) => {
-                    setReplayGame(log as TournamentGameLog);
-                  });
-                }
-              : undefined
-          }
-        />
-      </div>
+      <MpGameOverScreen
+        headline={isWinner === null ? "Draw!" : isWinner ? "You Win!" : "You Lose!"}
+        headlineColor={isWinner === null ? "draw" : isWinner ? "win" : "lose"}
+        subtitle={`${shell.mp.result.scores[0].total} — ${shell.mp.result.scores[1].total}`}
+        onBackToMenu={() => shell.goToMenu()}
+      />
     );
   }
 
-  const displayState = viewToGameState(game.view);
+  // --- Active game board ---
+
+  const view = shell.mode === "mp-playing" ? shell.mp.view : shell.game.view;
+  if (!view) return null;
+
+  const displayState = viewToGameState(view);
+  const isMyTurn = shell.mode === "mp-playing" ? shell.mp.isMyTurn : shell.game.isMyTurn;
+  const logPlayerNames: [string, string] | undefined =
+    shell.mode === "mp-playing" && shell.mp.roomState
+      ? (() => {
+          const myIdx = shell.mp.playerIndex;
+          const oppIdx = 1 - myIdx;
+          const oppName = shell.mp.roomState.slots[oppIdx]?.playerName ?? "Opponent";
+          return ["You", oppName];
+        })()
+      : undefined;
 
   return (
-    <div className="w-full h-[calc(100vh-3.5rem)] overflow-hidden px-4 py-2 flex items-start">
-      <div className="hidden xl:block w-56 shrink-0" />
-
-      <div className="flex-1 min-w-0 max-w-2xl mx-auto h-full">
+    <HistorySidebar
+      contentClassName="gap-2"
+      sidebar={<ActionLog entries={view.actionLog ?? []} playerNames={logPlayerNames} />}
+    >
+      {shell.mode === "mp-playing" && !isMyTurn && <WaitingIndicator />}
+      <div className="min-h-0 flex-1">
         <GameBoard
           state={displayState}
-          selectedCardId={selectedCardId}
+          selectedCardId={isMyTurn ? selectedCardId : null}
+          isMultiplayer={shell.mode === "mp-playing"}
           onSelectCard={handleSelectCard}
           onPlayToExpedition={handlePlayToExpedition}
           onDiscard={handleDiscard}
@@ -181,10 +260,6 @@ export default function LostCities() {
           onDrawFromDiscard={handleDrawFromDiscard}
         />
       </div>
-
-      <aside className="hidden xl:flex w-56 shrink-0 ml-4 h-full rounded-lg border border-gray-800 bg-gray-900/70 backdrop-blur-sm flex-col overflow-hidden">
-        <ActionLog entries={game.view?.actionLog ?? []} />
-      </aside>
-    </div>
+    </HistorySidebar>
   );
 }

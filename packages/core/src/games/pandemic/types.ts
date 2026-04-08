@@ -140,6 +140,7 @@ export interface GameState {
   result: GameResult | null;
   turnNumber: number;
   log: LogEntry[];
+  actionLog: ActionLogEntry[];
 }
 
 // ---------------------------------------------------------------------------
@@ -237,4 +238,32 @@ export interface CityData {
   position: [number, number];
   neighbors: string[];
   population: number;
+}
+
+// ---------------------------------------------------------------------------
+// Action Log
+// ---------------------------------------------------------------------------
+
+export type PandemicLogAction =
+  | "drive"
+  | "direct-flight"
+  | "charter-flight"
+  | "shuttle-flight"
+  | "build-station"
+  | "treat"
+  | "share"
+  | "cure"
+  | "infect"
+  | "epidemic"
+  | "outbreak"
+  | "draw-card"
+  | "discard";
+
+export interface ActionLogEntry {
+  turn: number;
+  playerIndex: number;
+  action: PandemicLogAction;
+  city?: string;
+  disease?: DiseaseColor;
+  detail?: string;
 }

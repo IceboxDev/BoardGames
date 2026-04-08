@@ -89,6 +89,13 @@ function resolveOutbreakInPlace(
     player: s.currentPlayerIndex,
     message: `Outbreak in ${cityName}! (${color}) — Outbreak count: ${s.outbreakCount}`,
   });
+  s.actionLog.push({
+    turn: s.turnNumber,
+    playerIndex: s.currentPlayerIndex,
+    action: "outbreak",
+    city: cityName,
+    disease: color,
+  });
 
   if (s.outbreakCount >= MAX_OUTBREAKS) {
     s.result = "loss_outbreaks";

@@ -8,7 +8,15 @@ import {
   shuffle,
   sortHand,
 } from "./deck";
-import type { DiseaseColor, GameState, LogEntry, PlayerState, Role, SetupConfig } from "./types";
+import type {
+  ActionLogEntry,
+  DiseaseColor,
+  GameState,
+  LogEntry,
+  PlayerState,
+  Role,
+  SetupConfig,
+} from "./types";
 import { ACTIONS_PER_TURN, emptyCubeCounts, MAX_CUBES_PER_COLOR } from "./types";
 
 const ALL_ROLES: Role[] = [
@@ -67,18 +75,29 @@ export function createGame(config: SetupConfig): GameState {
 
   // 8. Initial infection: draw 9 cards
   const log: LogEntry[] = [];
+  const actionLog: ActionLogEntry[] = [];
   const cubeAmounts = [3, 3, 3, 2, 2, 2, 1, 1, 1];
 
   for (let i = 0; i < 9; i++) {
-    const card = infectionDeck.shift()!;
+    const card = infectionDeck.shift();
+    if (!card) throw new Error("Infection deck exhausted during setup");
     const count = cubeAmounts[i];
     cityCubes[card.cityId][card.color] += count;
     diseaseCubeSupply[card.color] -= count;
     infectionDiscard.push(card);
+    const cityName = CITY_DATA.get(card.cityId)?.name ?? card.cityId;
     log.push({
       turn: 0,
       player: -1,
-      message: `Setup: ${CITY_DATA.get(card.cityId)?.name ?? card.cityId} infected with ${count} ${card.color} cube${count > 1 ? "s" : ""}`,
+      message: `Setup: ${cityName} infected with ${count} ${card.color} cube${count > 1 ? "s" : ""}`,
+    });
+    actionLog.push({
+      turn: 0,
+      playerIndex: -1,
+      action: "infect",
+      city: cityName,
+      disease: card.color,
+      detail: `${count} cube${count > 1 ? "s" : ""}`,
     });
   }
 
@@ -138,5 +157,6 @@ export function createGame(config: SetupConfig): GameState {
     result: null,
     turnNumber: 1,
     log,
+    actionLog,
   };
 }

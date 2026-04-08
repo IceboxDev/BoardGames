@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useCallback, useEffect, useRef, useState } from "react";
 import CardPreview from "./CardPreview";
 import type { CardFanProps } from "./types";
@@ -117,47 +117,50 @@ export default function CardFan<T>({
         style={{ clipPath: "inset(-200px -200px 0px -200px)" }}
       >
         <div className="relative mx-auto" style={{ width: fanWidth, height: 240 }}>
-          {cards.map((card, i) => {
-            const pos = layout[i];
-            if (!pos) return null;
-            const id = getCardId(card);
-            const isHovered = hoveredIndex === i;
-            const isDragging = draggingIndex === i;
+          <AnimatePresence mode="popLayout">
+            {cards.map((card, i) => {
+              const pos = layout[i];
+              if (!pos) return null;
+              const id = getCardId(card);
+              const isHovered = hoveredIndex === i;
+              const isDragging = draggingIndex === i;
 
-            return (
-              <motion.div
-                key={id}
-                className="absolute bottom-0 cursor-grab active:cursor-grabbing"
-                style={{
-                  left: pos.x,
-                  width: 160,
-                  transformOrigin: "bottom center",
-                  willChange: "transform",
-                }}
-                animate={{
-                  x: pos.hoverX,
-                  y: pos.y,
-                  rotate: pos.rotation,
-                  scale: pos.scale,
-                  zIndex: pos.zIndex,
-                }}
-                transition={SPRING}
-                onPointerDown={handlePointerDown}
-                onPointerEnter={() => handlePointerEnter(i)}
-                onPointerLeave={handlePointerLeave}
-                onClick={() => handleClick(i)}
-                drag={!disabled}
-                dragSnapToOrigin
-                dragMomentum={false}
-                whileDrag={{ scale: 1.1, zIndex: 100, rotate: 0 }}
-                onDragStart={() => handleDragStart(i)}
-                onDrag={handleDrag}
-                onDragEnd={(_, info) => handleDragEnd(i, info.point)}
-              >
-                {renderCard(card, { isHovered, isDragging })}
-              </motion.div>
-            );
-          })}
+              return (
+                <motion.div
+                  key={id}
+                  className="absolute bottom-0 cursor-grab active:cursor-grabbing"
+                  style={{
+                    left: pos.x,
+                    width: 160,
+                    transformOrigin: "bottom center",
+                    willChange: "transform",
+                  }}
+                  animate={{
+                    x: pos.hoverX,
+                    y: pos.y,
+                    rotate: pos.rotation,
+                    scale: pos.scale,
+                    zIndex: pos.zIndex,
+                  }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={SPRING}
+                  onPointerDown={handlePointerDown}
+                  onPointerEnter={() => handlePointerEnter(i)}
+                  onPointerLeave={handlePointerLeave}
+                  onClick={() => handleClick(i)}
+                  drag={!disabled}
+                  dragSnapToOrigin
+                  dragMomentum={false}
+                  whileDrag={{ scale: 1.1, zIndex: 100, rotate: 0 }}
+                  onDragStart={() => handleDragStart(i)}
+                  onDrag={handleDrag}
+                  onDragEnd={(_, info) => handleDragEnd(i, info.point)}
+                >
+                  {renderCard(card, { isHovered, isDragging })}
+                </motion.div>
+              );
+            })}
+          </AnimatePresence>
         </div>
       </div>
 

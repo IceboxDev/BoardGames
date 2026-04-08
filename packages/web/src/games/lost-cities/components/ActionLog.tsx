@@ -1,169 +1,181 @@
-import type { ActionLogEntry, PlayerIndex } from "@boardgames/core/games/lost-cities/types";
+import type {
+  ActionLogEntry,
+  Card,
+  ExpeditionColor,
+  PlayerIndex,
+} from "@boardgames/core/games/lost-cities/types";
 import { COLOR_HEX, COLOR_LABELS } from "@boardgames/core/games/lost-cities/types";
-import { useEffect, useMemo, useRef } from "react";
+import type { ReactNode } from "react";
+import type { LogEntry, LogVariant, TurnGroup } from "../../../components/action-log";
+import { ActionLog, CardTag } from "../../../components/action-log";
 
-interface TurnGroup {
-  turn: number;
-  player: PlayerIndex;
-  entries: ActionLogEntry[];
+// ---------------------------------------------------------------------------
+// Card image URL helper (mirrors Card.tsx logic)
+// ---------------------------------------------------------------------------
+
+const cardImages = import.meta.glob<{ default: string }>("../assets/cards/**/*.png", {
+  eager: true,
+});
+
+function getCardImageUrl(card: Card): string {
+  const localIdx = card.id % 12;
+  const filename = localIdx < 3 ? `wager-${localIdx + 1}` : `${card.value}`;
+  const key = `../assets/cards/${card.color}/${filename}.png`;
+  return cardImages[key]?.default ?? "";
 }
 
-function groupByTurn(entries: ActionLogEntry[]): TurnGroup[] {
-  const groups: TurnGroup[] = [];
-  let current: TurnGroup | null = null;
+// ---------------------------------------------------------------------------
+// Variant / icon mappings
+// ---------------------------------------------------------------------------
+
+type LCAction = ActionLogEntry["action"];
+
+const VARIANT_MAP: Record<LCAction, LogVariant> = {
+  "play-expedition": "action",
+  "play-discard": "neutral",
+  "draw-pile": "info",
+  "draw-discard": "info",
+};
+
+const ICON_MAP: Record<LCAction, string> = {
+  "play-expedition": "\uD83C\uDFD4\uFE0F",
+  "play-discard": "\uD83D\uDDD1\uFE0F",
+  "draw-pile": "\uD83C\uDCCF",
+  "draw-discard": "\u267B\uFE0F",
+};
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
+
+function cardFallback(card: Card): ReactNode {
+  const hex = COLOR_HEX[card.color];
+  const value = card.type === "wager" ? "W" : String(card.value);
+  return (
+    <div
+      className="flex h-[220px] w-full flex-col items-center justify-center rounded-lg"
+      style={{ backgroundColor: hex }}
+    >
+      <span className="text-4xl font-bold text-white drop-shadow-lg">{value}</span>
+      <span className="mt-1 text-xs font-medium text-white/80">{COLOR_LABELS[card.color]}</span>
+    </div>
+  );
+}
+
+function cardTag(card: Card): ReactNode {
+  if (card.id === -1) return null;
+  const value = card.type === "wager" ? "W" : String(card.value);
+  const label = `${COLOR_LABELS[card.color]} ${value}`;
+  const imageUrl = getCardImageUrl(card);
+  return (
+    <CardTag
+      label={label}
+      imageUrl={imageUrl || undefined}
+      tooltipContent={imageUrl ? undefined : cardFallback(card)}
+    />
+  );
+}
+
+function colorBadge(color: ExpeditionColor): ReactNode {
+  return (
+    <span
+      className="inline-block h-2 w-2 rounded-full align-middle"
+      style={{ backgroundColor: COLOR_HEX[color] }}
+    />
+  );
+}
+
+function describeAction(entry: ActionLogEntry, playerNames: [string, string]): ReactNode {
+  const actor = (
+    <span className={`font-semibold ${entry.player === 0 ? "text-sky-300" : "text-orange-300"}`}>
+      {playerNames[entry.player]}
+    </span>
+  );
+  const card = entry.card.id !== -1 ? cardTag(entry.card) : null;
+
+  switch (entry.action) {
+    case "play-expedition":
+      return (
+        <span>
+          {actor} played {card} {colorBadge(entry.card.color)} to expedition
+        </span>
+      );
+    case "play-discard":
+      return (
+        <span>
+          {actor} discarded {card} {colorBadge(entry.card.color)}
+        </span>
+      );
+    case "draw-pile":
+      return (
+        <span>
+          {actor} drew {card ?? "a card"} from draw pile
+        </span>
+      );
+    case "draw-discard":
+      return (
+        <span>
+          {actor} drew {card ?? "a card"} from{" "}
+          {entry.color !== undefined && (
+            <>
+              {colorBadge(entry.color)} {COLOR_LABELS[entry.color]}{" "}
+            </>
+          )}
+          discard
+        </span>
+      );
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Group entries into TurnGroups for the shared ActionLog
+// ---------------------------------------------------------------------------
+
+function buildGroups(entries: ActionLogEntry[], playerNames: [string, string]): TurnGroup[] {
+  const grouped = new Map<
+    string,
+    { turn: number; player: PlayerIndex; entries: ActionLogEntry[] }
+  >();
 
   for (const entry of entries) {
-    if (!current || current.turn !== entry.turn || current.player !== entry.player) {
-      current = { turn: entry.turn, player: entry.player, entries: [] };
-      groups.push(current);
+    const key = `${entry.turn}-${entry.player}`;
+    const group = grouped.get(key);
+    if (group) {
+      group.entries.push(entry);
+    } else {
+      grouped.set(key, { turn: entry.turn, player: entry.player, entries: [entry] });
     }
-    current.entries.push(entry);
+  }
+
+  const groups: TurnGroup[] = [];
+  for (const [key, group] of grouped) {
+    const logEntries: LogEntry[] = group.entries.map((entry, i) => ({
+      key: `${key}-${i}`,
+      icon: ICON_MAP[entry.action],
+      content: describeAction(entry, playerNames),
+      variant: VARIANT_MAP[entry.action],
+    }));
+    groups.push({
+      key,
+      label: `Turn ${group.turn} — ${playerNames[group.player]}`,
+      entries: logEntries,
+    });
   }
 
   return groups;
 }
 
-function cardStr(entry: ActionLogEntry): string | null {
-  if (entry.card.id === -1) return null;
-  const value = entry.card.type === "wager" ? "W" : String(entry.card.value);
-  return `${COLOR_LABELS[entry.card.color]} ${value}`;
-}
+// ---------------------------------------------------------------------------
+// Component
+// ---------------------------------------------------------------------------
 
-interface ActionLogProps {
+interface LCActionLogProps {
   entries: ActionLogEntry[];
+  playerNames?: [string, string];
 }
 
-export default function ActionLog({ entries }: ActionLogProps) {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const groups = useMemo(() => groupByTurn(entries), [entries]);
-
-  useEffect(() => {
-    const el = scrollRef.current;
-    if (el) el.scrollTop = el.scrollHeight;
-  }, [entries.length]);
-
-  return (
-    <div className="flex flex-col h-full min-h-0">
-      <div className="px-3 py-2 border-b border-gray-800/80 shrink-0">
-        <span className="text-[0.65rem] font-semibold uppercase tracking-widest text-gray-500">
-          History
-        </span>
-      </div>
-
-      <div
-        ref={scrollRef}
-        className="flex-1 min-h-0 overflow-y-auto px-2 py-2 space-y-1 scrollbar-thin"
-      >
-        {groups.length === 0 && (
-          <p className="text-[0.7rem] text-gray-600 text-center py-4 italic">No actions yet</p>
-        )}
-
-        {groups.map((group, gi) => {
-          const isAI = group.player === 1;
-
-          return (
-            <div
-              // biome-ignore lint/suspicious/noArrayIndexKey: static list / chart data points don't reorder
-              key={`${group.turn}-${group.player}-${gi}`}
-              className="relative rounded-md pl-2.5 pr-2 py-1.5"
-              style={{
-                backgroundColor: isAI ? "rgba(255,255,255,0.02)" : "rgba(255,255,255,0.04)",
-              }}
-            >
-              <div className="flex items-baseline gap-1.5">
-                <span className="text-[0.6rem] tabular-nums text-gray-600 font-medium w-3.5 shrink-0 text-right">
-                  {group.turn}
-                </span>
-                <span
-                  className={[
-                    "text-[0.65rem] font-semibold uppercase tracking-wide",
-                    isAI ? "text-gray-500" : "text-indigo-400",
-                  ].join(" ")}
-                >
-                  {isAI ? "AI" : "You"}
-                </span>
-              </div>
-
-              <div className="ml-5 mt-0.5 space-y-0.5">
-                {group.entries.map((entry, ei) => {
-                  const hidden = entry.card.id === -1;
-                  const hex = hidden ? undefined : COLOR_HEX[entry.card.color];
-                  const isPlay =
-                    entry.action === "play-expedition" || entry.action === "play-discard";
-                  let label: string;
-
-                  const name = cardStr(entry);
-
-                  switch (entry.action) {
-                    case "play-expedition":
-                      label = `Played ${name} to expedition`;
-                      break;
-                    case "play-discard":
-                      label = `Discarded ${name}`;
-                      break;
-                    case "draw-pile":
-                      label = name ? `Drew ${name} from draw pile` : "Drew from draw pile";
-                      break;
-                    case "draw-discard":
-                      label = `Drew ${name ?? "?"} from ${COLOR_LABELS[entry.color!]} discard`;
-                      break;
-                  }
-
-                  return (
-                    <div
-                      // biome-ignore lint/suspicious/noArrayIndexKey: static list / chart data points don't reorder
-                      key={ei}
-                      className="flex items-start gap-1"
-                    >
-                      {hex ? (
-                        <span
-                          className="w-1.5 h-1.5 rounded-full shrink-0 mt-[3px]"
-                          style={{
-                            backgroundColor: hex,
-                            opacity: isPlay ? (isAI ? 0.5 : 0.8) : isAI ? 0.3 : 0.4,
-                          }}
-                        />
-                      ) : (
-                        <span className="w-1.5 h-1.5 rounded-full shrink-0 mt-[3px] bg-gray-700" />
-                      )}
-                      <span
-                        className={[
-                          "leading-snug",
-                          isPlay ? "text-[0.7rem]" : "text-[0.65rem]",
-                          isAI
-                            ? isPlay
-                              ? "text-gray-400"
-                              : "text-gray-500"
-                            : isPlay
-                              ? "text-gray-200"
-                              : "text-gray-400",
-                        ].join(" ")}
-                      >
-                        {label}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {group.entries.length > 0 &&
-                (() => {
-                  const playEntry = group.entries.find(
-                    (e) => e.action === "play-expedition" || e.action === "play-discard",
-                  );
-                  if (!playEntry) return null;
-                  const hex = COLOR_HEX[playEntry.card.color];
-                  return (
-                    <div
-                      className="absolute left-0 top-1.5 bottom-1.5 w-[3px] rounded-full"
-                      style={{ backgroundColor: hex, opacity: isAI ? 0.35 : 0.7 }}
-                    />
-                  );
-                })()}
-            </div>
-          );
-        })}
-      </div>
-    </div>
-  );
+export default function LCActionLog({ entries, playerNames }: LCActionLogProps) {
+  const names: [string, string] = playerNames ?? ["You", "Opponent"];
+  const groups = buildGroups(entries, names);
+  return <ActionLog groups={groups} emptyMessage="No actions yet" />;
 }

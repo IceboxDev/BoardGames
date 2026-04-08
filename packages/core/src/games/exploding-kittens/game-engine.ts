@@ -253,6 +253,7 @@ function handleEndActionPhase(state: GameState): void {
     return;
   }
 
+  // biome-ignore lint/style/noNonNullAssertion: drawPile.length checked above — shift always returns a card
   const drawn = state.drawPile.shift()!;
 
   if (drawn.type === "exploding-kitten") {
@@ -321,7 +322,8 @@ function enterNopeWindow(
 }
 
 function handleNope(state: GameState, cardId: number): void {
-  const nw = state.nopeWindow!;
+  if (!state.nopeWindow) throw new Error("nopeWindow must exist when handling nope");
+  const nw = state.nopeWindow;
   const noper = nw.currentPollingIndex;
   const player = state.players[noper];
   const cardIdx = player.hand.findIndex((c) => c.id === cardId);
@@ -362,7 +364,8 @@ function handleNope(state: GameState, cardId: number): void {
 }
 
 function handlePassNope(state: GameState): void {
-  const nw = state.nopeWindow!;
+  if (!state.nopeWindow) throw new Error("nopeWindow must exist when handling pass-nope");
+  const nw = state.nopeWindow;
   nw.passedPlayerIndices.push(nw.currentPollingIndex);
 
   const lastNoper =
@@ -593,7 +596,8 @@ function handleSelectTarget(state: GameState, targetIndex: number): void {
 // ── Give Card (Favor) ───────────────────────────────────────────────────────
 
 function handleGiveCard(state: GameState, cardId: number): void {
-  const fc = state.favorContext!;
+  if (!state.favorContext) throw new Error("favorContext must exist when handling give-card");
+  const fc = state.favorContext;
   const target = state.players[fc.targetPlayer];
   const cardIdx = target.hand.findIndex((c) => c.id === cardId);
   if (cardIdx < 0) return;
@@ -617,8 +621,11 @@ function handleGiveCard(state: GameState, cardId: number): void {
 // ── Name Card Type (Triple Steal) ───────────────────────────────────────────
 
 function handleNameCardType(state: GameState, cardType: CardType): void {
-  const sc = state.stealContext!;
-  const target = state.players[sc.targetPlayer!];
+  if (!state.stealContext) throw new Error("stealContext must exist when handling name-card-type");
+  const sc = state.stealContext;
+  if (sc.targetPlayer === null) throw new Error("targetPlayer must be set when naming card type");
+  const targetPlayerIndex = sc.targetPlayer;
+  const target = state.players[targetPlayerIndex];
   const foundIdx = target.hand.findIndex((c) => c.type === cardType);
 
   if (foundIdx >= 0) {
@@ -631,7 +638,7 @@ function handleNameCardType(state: GameState, cardType: CardType): void {
     turn: state.turnCount,
     playerIndex: sc.fromPlayer,
     action: "steal",
-    targetPlayerIndex: sc.targetPlayer!,
+    targetPlayerIndex: targetPlayerIndex,
     cardType,
     detail: foundIdx >= 0 ? "named-success" : "named-miss",
   });
@@ -643,7 +650,9 @@ function handleNameCardType(state: GameState, cardType: CardType): void {
 // ── Select Discard Card (Five-Different Combo) ──────────────────────────────
 
 function handleSelectDiscardCard(state: GameState, cardId: number): void {
-  const dc = state.discardPickContext!;
+  if (!state.discardPickContext)
+    throw new Error("discardPickContext must exist when handling select-discard-card");
+  const dc = state.discardPickContext;
   const cardIdx = state.discardPile.findIndex((c) => c.id === cardId);
   if (cardIdx < 0) return;
 
@@ -672,7 +681,9 @@ function handleAcknowledgePeek(state: GameState): void {
 // ── Explosion / Defuse ──────────────────────────────────────────────────────
 
 function handlePlayDefuse(state: GameState, cardId: number): void {
-  const ec = state.explosionContext!;
+  if (!state.explosionContext)
+    throw new Error("explosionContext must exist when handling play-defuse");
+  const ec = state.explosionContext;
   const player = state.players[ec.playerIndex];
   const cardIdx = player.hand.findIndex((c) => c.id === cardId);
   if (cardIdx < 0) return;
@@ -692,7 +703,9 @@ function handlePlayDefuse(state: GameState, cardId: number): void {
 }
 
 function handleReinsertKitten(state: GameState, position: number): void {
-  const ec = state.explosionContext!;
+  if (!state.explosionContext)
+    throw new Error("explosionContext must exist when handling reinsert-kitten");
+  const ec = state.explosionContext;
   state.drawPile.splice(position, 0, ec.kittenCard);
 
   state.actionLog?.push({
@@ -706,7 +719,9 @@ function handleReinsertKitten(state: GameState, position: number): void {
 }
 
 function handleSkipDefuse(state: GameState): void {
-  const ec = state.explosionContext!;
+  if (!state.explosionContext)
+    throw new Error("explosionContext must exist when handling skip-defuse");
+  const ec = state.explosionContext;
   const player = state.players[ec.playerIndex];
 
   state.actionLog?.push({

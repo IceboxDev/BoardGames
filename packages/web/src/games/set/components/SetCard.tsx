@@ -61,6 +61,8 @@ function ShapeSVG({
   );
 }
 
+export type SelectionColor = "yellow" | "blue" | "emerald";
+
 interface SetCardProps {
   card: SetCardData;
   selected: boolean;
@@ -68,7 +70,14 @@ interface SetCardProps {
   disabled?: boolean;
   animate?: boolean;
   hinted?: boolean;
+  selectionColor?: SelectionColor;
 }
+
+const SELECTION_STYLES: Record<SelectionColor, string> = {
+  yellow: "border-yellow-400 ring-2 ring-yellow-400 scale-[1.03]",
+  blue: "border-blue-400 ring-2 ring-blue-400 scale-[1.03]",
+  emerald: "border-emerald-400 ring-2 ring-emerald-400 scale-[1.03]",
+};
 
 export default function SetCard({
   card,
@@ -77,9 +86,10 @@ export default function SetCard({
   disabled = false,
   animate = false,
   hinted = false,
+  selectionColor = "yellow",
 }: SetCardProps) {
   const borderClass = selected
-    ? "border-yellow-400 ring-2 ring-yellow-400 scale-[1.03]"
+    ? SELECTION_STYLES[selectionColor]
     : hinted
       ? "border-blue-400 ring-2 ring-blue-400 shadow-[0_0_12px_rgba(96,165,250,0.5)]"
       : "border-gray-200";

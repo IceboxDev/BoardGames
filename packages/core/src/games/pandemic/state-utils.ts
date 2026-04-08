@@ -13,5 +13,6 @@ export function cloneGameState(state: GameState): GameState {
     infectionDeck: [...state.infectionDeck],
     infectionDiscard: [...state.infectionDiscard],
     log: [...state.log],
+    actionLog: [...state.actionLog],
   };
 }

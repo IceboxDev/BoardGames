@@ -79,6 +79,12 @@ export function applyAction(state: GameState, action: GameAction): GameState {
   switch (action.kind) {
     case "drive_ferry":
       s = movePlayer(state, pId, action.to);
+      s.actionLog.push({
+        turn: s.turnNumber,
+        playerIndex: pId,
+        action: "drive",
+        city: CITY_DATA.get(action.to)?.name ?? action.to,
+      });
       break;
 
     case "direct_flight": {
@@ -87,6 +93,12 @@ export function applyAction(state: GameState, action: GameAction): GameState {
       s.players[pId].hand.splice(action.cardIdx, 1);
       s.playerDiscard.push(card);
       s = movePlayer(s, pId, card.cityId);
+      s.actionLog.push({
+        turn: s.turnNumber,
+        playerIndex: pId,
+        action: "direct-flight",
+        city: CITY_DATA.get(card.cityId)?.name ?? card.cityId,
+      });
       break;
     }
 
@@ -100,11 +112,23 @@ export function applyAction(state: GameState, action: GameAction): GameState {
         s.playerDiscard.push(card);
       }
       s = movePlayer(s, pId, action.to);
+      s.actionLog.push({
+        turn: s.turnNumber,
+        playerIndex: pId,
+        action: "charter-flight",
+        city: CITY_DATA.get(action.to)?.name ?? action.to,
+      });
       break;
     }
 
     case "shuttle_flight":
       s = movePlayer(state, pId, action.to);
+      s.actionLog.push({
+        turn: s.turnNumber,
+        playerIndex: pId,
+        action: "shuttle-flight",
+        city: CITY_DATA.get(action.to)?.name ?? action.to,
+      });
       break;
 
     case "build_station":
@@ -132,12 +156,26 @@ export function applyAction(state: GameState, action: GameAction): GameState {
       s.players[pId].hand.splice(action.cardIdx, 1);
       s.players[pId].usedOpsExpertMove = true;
       s = movePlayer(s, pId, action.to);
+      s.actionLog.push({
+        turn: s.turnNumber,
+        playerIndex: pId,
+        action: "drive",
+        city: CITY_DATA.get(action.to)?.name ?? action.to,
+        detail: "Operations Expert special move",
+      });
       break;
     }
 
     case "dispatcher_move_to_pawn": {
       const toPawn = state.players[action.toPlayerId];
       s = movePlayer(state, action.targetId, toPawn.location);
+      s.actionLog.push({
+        turn: s.turnNumber,
+        playerIndex: pId,
+        action: "drive",
+        city: CITY_DATA.get(toPawn.location)?.name ?? toPawn.location,
+        detail: `Dispatcher moved player ${action.targetId}`,
+      });
       break;
     }
 
@@ -146,14 +184,17 @@ export function applyAction(state: GameState, action: GameAction): GameState {
       const targetLoc = state.players[action.targetId].location;
       s = cloneGameState(state);
 
+      let destCity: string;
       if (ma.kind === "drive_ferry") {
         s = movePlayer(s, action.targetId, ma.to);
+        destCity = ma.to;
       } else if (ma.kind === "direct_flight") {
         // Dispatcher uses own hand for direct/charter
         const card = s.players[pId].hand[ma.cardIdx] as CityCard;
         s.players[pId].hand.splice(ma.cardIdx, 1);
         s.playerDiscard.push(card);
         s = movePlayer(s, action.targetId, card.cityId);
+        destCity = card.cityId;
       } else if (ma.kind === "charter_flight") {
         // Card must match the target pawn's city
         const matchIdx = s.players[pId].hand.findIndex(
@@ -164,9 +205,27 @@ export function applyAction(state: GameState, action: GameAction): GameState {
           s.playerDiscard.push(card);
         }
         s = movePlayer(s, action.targetId, ma.to);
+        destCity = ma.to;
       } else if (ma.kind === "shuttle_flight") {
         s = movePlayer(s, action.targetId, ma.to);
+        destCity = ma.to;
+      } else {
+        destCity = targetLoc;
       }
+      s.actionLog.push({
+        turn: s.turnNumber,
+        playerIndex: pId,
+        action:
+          ma.kind === "drive_ferry"
+            ? "drive"
+            : ma.kind === "direct_flight"
+              ? "direct-flight"
+              : ma.kind === "charter_flight"
+                ? "charter-flight"
+                : "shuttle-flight",
+        city: CITY_DATA.get(destCity)?.name ?? destCity,
+        detail: `Dispatcher moved player ${action.targetId}`,
+      });
       break;
     }
 
@@ -265,6 +324,12 @@ function applyBuildStation(state: GameState, pId: number, relocateFrom?: string)
     player: pId,
     message: `Built research station in ${cityName}`,
   });
+  s.actionLog.push({
+    turn: s.turnNumber,
+    playerIndex: pId,
+    action: "build-station",
+    city: cityName,
+  });
 
   return s;
 }
@@ -290,6 +355,14 @@ function applyTreatDisease(state: GameState, pId: number, color: DiseaseColor): 
     player: pId,
     message: `Treated ${color} disease in ${cityName} (removed ${removed} cube${removed > 1 ? "s" : ""})`,
   });
+  s.actionLog.push({
+    turn: s.turnNumber,
+    playerIndex: pId,
+    action: "treat",
+    city: cityName,
+    disease: color,
+    detail: `removed ${removed} cube${removed > 1 ? "s" : ""}`,
+  });
 
   return checkEradication(s, color);
 }
@@ -310,6 +383,14 @@ function applyShareGive(
     player: giverId,
     message: `Shared knowledge: gave card to player ${receiverId}`,
   });
+  const giveCardName =
+    card.kind === "city" ? (CITY_DATA.get(card.cityId)?.name ?? card.cityId) : "";
+  s.actionLog.push({
+    turn: s.turnNumber,
+    playerIndex: giverId,
+    action: "share",
+    detail: `gave ${giveCardName} to player ${receiverId}`,
+  });
 
   return s;
 }
@@ -329,6 +410,14 @@ function applyShareTake(
     turn: s.turnNumber,
     player: takerId,
     message: `Shared knowledge: took card from player ${fromId}`,
+  });
+  const takeCardName =
+    card.kind === "city" ? (CITY_DATA.get(card.cityId)?.name ?? card.cityId) : "";
+  s.actionLog.push({
+    turn: s.turnNumber,
+    playerIndex: takerId,
+    action: "share",
+    detail: `took ${takeCardName} from player ${fromId}`,
   });
 
   return s;
@@ -356,6 +445,12 @@ function applyDiscoverCure(
     player: pId,
     message: `Discovered cure for ${color} disease!`,
   });
+  s.actionLog.push({
+    turn: s.turnNumber,
+    playerIndex: pId,
+    action: "cure",
+    disease: color,
+  });
 
   return checkEradication(s, color);
 }
@@ -371,6 +466,19 @@ function applyDiscard(state: GameState, cardIdx: number): GameState {
   if (cardIdx < 0 || cardIdx >= player.hand.length) return state;
   const [card] = player.hand.splice(cardIdx, 1);
   s.playerDiscard.push(card);
+
+  const discardDetail =
+    card.kind === "city"
+      ? (CITY_DATA.get(card.cityId)?.name ?? card.cityId)
+      : card.kind === "event"
+        ? card.event
+        : "a card";
+  s.actionLog.push({
+    turn: s.turnNumber,
+    playerIndex: playerIdx,
+    action: "discard",
+    detail: discardDetail,
+  });
 
   if (player.hand.length <= HAND_LIMIT) {
     s.phase = s.preDiscardPhase ?? "infect";
@@ -402,7 +510,9 @@ export function applyDrawPhase(state: GameState): GameState {
   }
 
   const drawn: PlayerCard[] = [];
+  // biome-ignore lint/style/noNonNullAssertion: length >= 2 verified above
   drawn.push(s.playerDeck.shift()!);
+  // biome-ignore lint/style/noNonNullAssertion: length >= 2 verified above
   drawn.push(s.playerDeck.shift()!);
 
   let epidemicCount = 0;
@@ -423,6 +533,25 @@ export function applyDrawPhase(state: GameState): GameState {
     player: s.currentPlayerIndex,
     message: `Drew ${drawn.length} cards${epidemicCount > 0 ? ` (${epidemicCount} epidemic${epidemicCount > 1 ? "s" : ""})` : ""}`,
   });
+
+  for (const card of drawn) {
+    if (card.kind === "epidemic") {
+      // Epidemic cards are logged separately in resolveEpidemic
+      continue;
+    }
+    const drawDetail =
+      card.kind === "city"
+        ? (CITY_DATA.get(card.cityId)?.name ?? card.cityId)
+        : card.kind === "event"
+          ? card.event
+          : undefined;
+    s.actionLog.push({
+      turn: s.turnNumber,
+      playerIndex: s.currentPlayerIndex,
+      action: "draw-card",
+      detail: drawDetail,
+    });
+  }
 
   if (epidemicCount > 0) {
     s.pendingEpidemics = epidemicCount;
@@ -460,12 +589,21 @@ export function resolveEpidemic(state: GameState): GameState {
 
   // 2. Infect: draw bottom card from infection deck
   if (s.infectionDeck.length > 0) {
+    // biome-ignore lint/style/noNonNullAssertion: length > 0 verified on the line above
     const bottomCard = s.infectionDeck.pop()!;
     const cityName = CITY_DATA.get(bottomCard.cityId)?.name ?? bottomCard.cityId;
     s.log.push({
       turn: s.turnNumber,
       player: s.currentPlayerIndex,
       message: `Epidemic infection: ${cityName} (${bottomCard.color})`,
+    });
+
+    s.actionLog.push({
+      turn: s.turnNumber,
+      playerIndex: s.currentPlayerIndex,
+      action: "epidemic",
+      city: cityName,
+      disease: bottomCard.color,
     });
 
     s = infectCity(s, bottomCard.cityId, bottomCard.color, 3);
@@ -525,12 +663,20 @@ export function applyInfectPhase(state: GameState): GameState {
     if (s.result) break;
     if (s.infectionDeck.length === 0) break;
 
+    // biome-ignore lint/style/noNonNullAssertion: length > 0 verified on the line above
     const card = s.infectionDeck.shift()!;
     const cityName = CITY_DATA.get(card.cityId)?.name ?? card.cityId;
     s.log.push({
       turn: s.turnNumber,
       player: s.currentPlayerIndex,
       message: `Infection: ${cityName} (${card.color})`,
+    });
+    s.actionLog.push({
+      turn: s.turnNumber,
+      playerIndex: s.currentPlayerIndex,
+      action: "infect",
+      city: cityName,
+      disease: card.color,
     });
 
     s = infectCity(s, card.cityId, card.color, 1);

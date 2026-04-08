@@ -89,7 +89,8 @@ function getActionPhaseActions(state: GameState): Action[] {
 }
 
 function getNopeWindowActions(state: GameState): Action[] {
-  const nw = state.nopeWindow!;
+  if (!state.nopeWindow) throw new Error("nopeWindow must exist in nope-window phase");
+  const nw = state.nopeWindow;
   const player = state.players[nw.currentPollingIndex];
   const actions: Action[] = [{ type: "pass-nope" }];
 

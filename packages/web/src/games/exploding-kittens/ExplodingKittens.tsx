@@ -9,9 +9,11 @@ import type {
   Card,
   GameState,
 } from "@boardgames/core/games/exploding-kittens/types";
-import { useCallback, useState } from "react";
-import useDocumentTitle from "../../hooks/useDocumentTitle";
-import { useRemoteGame } from "../../hooks/useRemoteGame";
+import { AI_STRATEGY_LABELS } from "@boardgames/core/games/exploding-kittens/types";
+import { useCallback, useEffect, useState } from "react";
+import { MpGameOverScreen } from "../../components/game-over";
+import { MatchHistory } from "../../components/match-history";
+import { useGameShell } from "../../hooks/useGameShell";
 import GameBoard from "./components/GameBoard";
 import GameOverScreen from "./components/GameOverScreen";
 import SetupScreen from "./components/SetupScreen";
@@ -25,9 +27,8 @@ function placeholderCards(count: number): Card[] {
   }));
 }
 
-function viewToGameState(view: EKPlayerView): GameState {
+function viewToGameState(view: EKPlayerView, myPlayerIndex: number): GameState {
   nextPlaceholderId = -1;
-  const humanIndex = view.players.findIndex((pp) => pp.type === "human");
   return {
     phase: view.phase,
     drawPile: placeholderCards(view.drawPileCount),
@@ -35,7 +36,7 @@ function viewToGameState(view: EKPlayerView): GameState {
     players: view.players.map((p) => ({
       index: p.index,
       type: p.type,
-      hand: p.index === humanIndex ? view.hand : placeholderCards(p.handCount),
+      hand: p.index === myPlayerIndex ? view.hand : placeholderCards(p.handCount),
       alive: p.alive,
       aiStrategy: p.aiStrategy,
     })),
@@ -54,72 +55,107 @@ function viewToGameState(view: EKPlayerView): GameState {
 }
 
 export default function ExplodingKittens() {
-  useDocumentTitle("Exploding Kittens - Board Games");
+  const shell = useGameShell<EKPlayerView, EKEvent, EKResult>("exploding-kittens");
 
-  const game = useRemoteGame<EKPlayerView, EKEvent, EKResult>("exploding-kittens");
-
-  const [showTournament, setShowTournament] = useState(false);
   const [lastSetup, setLastSetup] = useState<{
     playerCount: number;
     strategies: (AIStrategyId | null)[];
   } | null>(null);
 
+  // Back overrides for game-managed modes
+  useEffect(() => {
+    if (
+      shell.mode === "solo" ||
+      shell.mode === "mp-playing" ||
+      shell.mode === "match-history" ||
+      shell.mode === "tournament"
+    ) {
+      shell.setBackOverride(shell.goToMenu);
+      return () => shell.setBackOverride(null);
+    }
+    return undefined;
+  }, [shell.mode, shell.goToMenu, shell.setBackOverride]);
+
   const startGame = useCallback(
     (playerCount: number, strategies: (AIStrategyId | null)[]) => {
       setLastSetup({ playerCount, strategies });
-      game.start({ playerCount, strategies });
+      shell.game.start({ playerCount, strategies });
     },
-    [game.start],
+    [shell.game.start],
   );
 
   const handleAction = useCallback(
     (action: Action) => {
-      game.send({ type: "PLAYER_ACTION", action } as EKEvent);
+      if (shell.mode === "mp-playing") {
+        shell.mp.send({ type: "PLAYER_ACTION", action } as EKEvent);
+      } else {
+        shell.game.send({ type: "PLAYER_ACTION", action } as EKEvent);
+      }
     },
-    [game.send],
+    [shell.game.send, shell.mp.send, shell.mode],
   );
 
   const handlePlayAgain = useCallback(() => {
     if (lastSetup) {
-      game.start({ playerCount: lastSetup.playerCount, strategies: lastSetup.strategies });
+      shell.game.start({
+        playerCount: lastSetup.playerCount,
+        strategies: lastSetup.strategies,
+      });
     }
-  }, [lastSetup, game.start]);
+  }, [lastSetup, shell.game.start]);
 
-  if (showTournament) {
-    return <TournamentGrid onBack={() => setShowTournament(false)} />;
-  }
+  if (shell.screen) return shell.screen;
 
-  if (!game.view) {
-    return <SetupScreen onStart={startGame} onTournament={() => setShowTournament(true)} />;
-  }
-
-  const displayState = viewToGameState(game.view);
-
-  if (game.result) {
+  if (shell.mode === "match-history") {
     return (
-      <div className="mx-auto max-w-5xl px-6 py-8">
-        <GameOverScreen
-          state={displayState}
-          onPlayAgain={handlePlayAgain}
-          onChangeSetup={() => game.reset()}
-        />
-      </div>
+      <MatchHistory
+        gameSlug="exploding-kittens"
+        labelResolver={(e) => AI_STRATEGY_LABELS[e as AIStrategyId] ?? e}
+        onBack={shell.goToMenu}
+      />
     );
   }
 
-  return (
-    <div className="mx-auto max-w-5xl px-6 py-8">
-      <div className="mb-4 flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-white">Exploding Kittens</h2>
-        <button
-          type="button"
-          onClick={() => game.reset()}
-          className="rounded-lg bg-gray-700 px-4 py-2 text-sm text-white transition hover:bg-gray-600"
-        >
-          Quit Game
-        </button>
-      </div>
-      <GameBoard state={displayState} onAction={handleAction} />
-    </div>
-  );
+  if (shell.mode === "tournament") {
+    return <TournamentGrid onBack={shell.goToMenu} />;
+  }
+
+  // Solo setup
+  if (shell.mode === "solo" && !shell.game.view) {
+    return <SetupScreen onStart={startGame} />;
+  }
+
+  // Game playing
+  const activeView = shell.mode === "mp-playing" ? shell.mp.view : shell.game.view;
+  const activeResult = shell.mode === "mp-playing" ? shell.mp.result : shell.game.result;
+  const activePlayerIndex =
+    shell.mode === "mp-playing" ? shell.mp.playerIndex : shell.game.playerIndex;
+
+  if (!activeView) return null;
+
+  const displayState = viewToGameState(activeView, activePlayerIndex);
+
+  if (activeResult) {
+    if (shell.mode === "mp-playing") {
+      const isWinner = activeResult.winner === activePlayerIndex;
+      return (
+        <MpGameOverScreen
+          headline={isWinner ? "You Win!" : "You Lose!"}
+          headlineColor={isWinner ? "win" : "lose"}
+          subtitle={`Game lasted ${activeResult.turnCount} turns`}
+          onBackToMenu={shell.goToMenu}
+        />
+      );
+    }
+
+    return (
+      <GameOverScreen
+        state={displayState}
+        onPlayAgain={handlePlayAgain}
+        onChangeSetup={() => shell.game.reset()}
+      />
+    );
+  }
+
+  return <GameBoard state={displayState} onAction={handleAction} />;
 }

@@ -54,7 +54,10 @@ function selectOrExpand(
     }
   }
 
-  return { node: bestChild!, action: bestAction! };
+  if (!bestChild || !bestAction) {
+    throw new Error("UCB1 selection found no matching child — tree is inconsistent");
+  }
+  return { node: bestChild, action: bestAction };
 }
 
 // ── Core IS-MCTS ────────────────────────────────────────────────────────────

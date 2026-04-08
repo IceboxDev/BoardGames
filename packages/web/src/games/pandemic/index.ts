@@ -1,12 +1,14 @@
 import { lazy } from "react";
 import type { GameDefinition } from "../types";
 import backgroundImage from "./assets/img/background.png";
+import rulesUrl from "./assets/img/rules.pdf";
 import thumbnail from "./assets/img/thumbnail.png";
 
 export default {
   slug: "pandemic",
   title: "Pandemic",
   description: "Cooperative strategy optimization against stochastic disease spread",
+  subtitle: "Work together to stop four deadly diseases from spreading",
   thumbnail,
   backgroundImage,
   accentColor: {
@@ -17,4 +19,6 @@ export default {
   },
   component: lazy(() => import("./Pandemic")),
   mode: "remote",
+  soloLabel: "Solo",
+  rulesUrl,
 } satisfies GameDefinition;

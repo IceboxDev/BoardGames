@@ -6,52 +6,66 @@ import type {
 } from "@boardgames/core/games/exploding-kittens/types";
 import { CARD_EMOJI, CARD_LABELS } from "@boardgames/core/games/exploding-kittens/types";
 import type { ReactNode } from "react";
-import { useEffect, useRef, useState } from "react";
-import CardTooltip from "./CardTooltip";
+import type { LogEntry, LogVariant, TurnGroup } from "../../../components/action-log";
+import { ActionLog, CardTag } from "../../../components/action-log";
+import { getCardImageUrl, getSkinsForType } from "../assets/card-art";
 
-interface ActionLogProps {
-  entries: ActionLogEntry[];
-  players: GameState["players"];
-}
+// ---------------------------------------------------------------------------
+// Variant / icon mappings
+// ---------------------------------------------------------------------------
 
-const ACTION_ICONS: Record<ActionLogAction, string> = {
-  "play-card": "🃏",
-  "play-combo": "🃏🃏",
-  draw: "📥",
-  nope: "✋",
-  defuse: "🔧",
-  exploded: "💥",
-  reinsert: "💣",
-  "favor-give": "🙏",
-  steal: "🫳",
-  peek: "🔮",
-  "skip-turn": "🚫",
-  attack: "⚔️",
-  shuffle: "🔀",
-  "discard-pick": "♻️",
+const VARIANT_MAP: Record<ActionLogAction, LogVariant> = {
+  "play-card": "action",
+  "play-combo": "special",
+  draw: "info",
+  nope: "warning",
+  defuse: "success",
+  exploded: "danger",
+  reinsert: "warning",
+  "favor-give": "warning",
+  steal: "action",
+  peek: "special",
+  "skip-turn": "neutral",
+  attack: "danger",
+  shuffle: "info",
+  "discard-pick": "action",
 };
 
-const ACTION_STYLES: Record<ActionLogAction, { bg: string; text: string; border: string }> = {
-  "play-card": { bg: "bg-blue-950/40", text: "text-blue-200", border: "border-blue-800/40" },
-  "play-combo": { bg: "bg-purple-950/40", text: "text-purple-200", border: "border-purple-800/40" },
-  draw: { bg: "bg-gray-800/40", text: "text-gray-300", border: "border-gray-700/40" },
-  nope: { bg: "bg-yellow-950/40", text: "text-yellow-200", border: "border-yellow-800/40" },
-  defuse: { bg: "bg-emerald-950/40", text: "text-emerald-200", border: "border-emerald-800/40" },
-  exploded: { bg: "bg-red-950/50", text: "text-red-200", border: "border-red-700/50" },
-  reinsert: { bg: "bg-orange-950/40", text: "text-orange-200", border: "border-orange-800/40" },
-  "favor-give": { bg: "bg-amber-950/40", text: "text-amber-200", border: "border-amber-800/40" },
-  steal: { bg: "bg-pink-950/40", text: "text-pink-200", border: "border-pink-800/40" },
-  peek: { bg: "bg-violet-950/40", text: "text-violet-200", border: "border-violet-800/40" },
-  "skip-turn": { bg: "bg-slate-800/40", text: "text-slate-300", border: "border-slate-700/40" },
-  attack: { bg: "bg-red-950/40", text: "text-red-300", border: "border-red-800/40" },
-  shuffle: { bg: "bg-green-950/40", text: "text-green-200", border: "border-green-800/40" },
-  "discard-pick": { bg: "bg-teal-950/40", text: "text-teal-200", border: "border-teal-800/40" },
+const ICON_MAP: Record<ActionLogAction, string> = {
+  "play-card": "\uD83C\uDCCF",
+  "play-combo": "\uD83C\uDCCF\uD83C\uDCCF",
+  draw: "\uD83D\uDCE5",
+  nope: "\u270B",
+  defuse: "\uD83D\uDD27",
+  exploded: "\uD83D\uDCA5",
+  reinsert: "\uD83D\uDCA3",
+  "favor-give": "\uD83D\uDE4F",
+  steal: "\uD83E\uDEF3",
+  peek: "\uD83D\uDD2E",
+  "skip-turn": "\uD83D\uDEAB",
+  attack: "\u2694\uFE0F",
+  shuffle: "\uD83D\uDD00",
+  "discard-pick": "\u267B\uFE0F",
 };
+
+// ---------------------------------------------------------------------------
+// Helpers
+// ---------------------------------------------------------------------------
 
 function playerName(players: GameState["players"], index: number): string {
   const p = players[index];
   if (!p) return `Player ${index}`;
-  return p.type === "human" ? "You" : `AI ${index}`;
+  if (p.type === "human") return "You";
+  const opponents = players.filter((pl) => pl.type !== "human");
+  if (opponents.length === 1) return "Opponent";
+  let num = 0;
+  for (const pl of players) {
+    if (pl.type !== "human") {
+      num++;
+      if (pl === p) return `Opponent ${num}`;
+    }
+  }
+  return "Opponent";
 }
 
 function playerTag(players: GameState["players"], index: number): ReactNode {
@@ -64,16 +78,16 @@ function playerTag(players: GameState["players"], index: number): ReactNode {
   );
 }
 
+function cardImageForType(cardType: CardType): string | undefined {
+  const skins = getSkinsForType(cardType);
+  if (skins.length === 0) return undefined;
+  return getCardImageUrl(skins[0].file);
+}
+
 function cardTag(cardType: CardType): ReactNode {
   const emoji = CARD_EMOJI[cardType] ?? "";
   const label = CARD_LABELS[cardType] ?? cardType;
-  return (
-    <CardTooltip cardType={cardType}>
-      <span className="inline-flex cursor-help items-center gap-1 rounded bg-white/10 px-1.5 py-0.5 text-[11px] font-medium text-white/90 transition hover:bg-white/20">
-        {emoji} {label}
-      </span>
-    </CardTooltip>
-  );
+  return <CardTag emoji={emoji} label={label} imageUrl={cardImageForType(cardType)} />;
 }
 
 function describeAction(entry: ActionLogEntry, players: GameState["players"]): ReactNode {
@@ -160,7 +174,7 @@ function describeAction(entry: ActionLogEntry, players: GameState["players"]): R
         return (
           <span>
             {actor} named {cardTag(entry.cardType)} and stole it from {target}{" "}
-            <span className="font-medium text-green-400">✓ hit</span>
+            <span className="font-medium text-green-400">{"\u2713"} hit</span>
           </span>
         );
       }
@@ -168,7 +182,7 @@ function describeAction(entry: ActionLogEntry, players: GameState["players"]): R
         return (
           <span>
             {actor} named {cardTag(entry.cardType)} but {target} didn't have it{" "}
-            <span className="font-medium text-red-400">✗ miss</span>
+            <span className="font-medium text-red-400">{"\u2717"} miss</span>
           </span>
         );
       }
@@ -202,81 +216,49 @@ function describeAction(entry: ActionLogEntry, players: GameState["players"]): R
   }
 }
 
-interface TurnGroup {
-  turn: number;
-  entries: ActionLogEntry[];
-}
+// ---------------------------------------------------------------------------
+// Group entries into TurnGroups for the shared ActionLog
+// ---------------------------------------------------------------------------
 
-function groupByTurn(entries: ActionLogEntry[]): TurnGroup[] {
-  const groups: TurnGroup[] = [];
+function buildGroups(entries: ActionLogEntry[], players: GameState["players"]): TurnGroup[] {
+  const grouped = new Map<number, ActionLogEntry[]>();
   for (const entry of entries) {
-    const last = groups[groups.length - 1];
-    if (last && last.turn === entry.turn) {
-      last.entries.push(entry);
+    const list = grouped.get(entry.turn);
+    if (list) {
+      list.push(entry);
     } else {
-      groups.push({ turn: entry.turn, entries: [entry] });
+      grouped.set(entry.turn, [entry]);
     }
   }
+
+  const groups: TurnGroup[] = [];
+  for (const [turn, turnEntries] of grouped) {
+    const logEntries: LogEntry[] = turnEntries.map((entry, i) => ({
+      key: `${turn}-${i}`,
+      icon: ICON_MAP[entry.action],
+      content: describeAction(entry, players),
+      variant: VARIANT_MAP[entry.action],
+    }));
+    groups.push({
+      key: turn,
+      label: `Turn ${turn}`,
+      entries: logEntries,
+    });
+  }
+
   return groups;
 }
 
-export default function ActionLog({ entries, players }: ActionLogProps) {
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const [prevCount, setPrevCount] = useState(entries.length);
+// ---------------------------------------------------------------------------
+// Component
+// ---------------------------------------------------------------------------
 
-  useEffect(() => {
-    if (scrollRef.current) {
-      scrollRef.current.scrollTo({
-        top: scrollRef.current.scrollHeight,
-        behavior: entries.length - prevCount <= 3 ? "smooth" : "instant",
-      });
-    }
-    setPrevCount(entries.length);
-  }, [entries.length, prevCount]);
+interface EKActionLogProps {
+  entries: ActionLogEntry[];
+  players: GameState["players"];
+}
 
-  if (entries.length === 0) {
-    return (
-      <div className="flex h-32 items-center justify-center rounded-lg border border-dashed border-gray-700 text-sm text-gray-500">
-        Game log will appear here...
-      </div>
-    );
-  }
-
-  const groups = groupByTurn(entries);
-
-  return (
-    <div
-      ref={scrollRef}
-      className="flex flex-col gap-3 overflow-y-auto overscroll-contain pr-1"
-      style={{ maxHeight: "calc(100vh - 12rem)" }}
-    >
-      {groups.map((group) => (
-        <div key={group.turn}>
-          <div className="sticky top-0 z-10 mb-1 flex items-center gap-2 bg-surface-950/80 py-1 backdrop-blur-sm">
-            <span className="rounded bg-gray-700/60 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider text-gray-400">
-              Turn {group.turn}
-            </span>
-            <div className="h-px flex-1 bg-gray-700/40" />
-          </div>
-          <div className="flex flex-col gap-1">
-            {group.entries.map((entry) => {
-              const style = ACTION_STYLES[entry.action];
-              const icon = ACTION_ICONS[entry.action];
-              const globalIdx = entries.indexOf(entry);
-              const isNew = globalIdx >= prevCount - 1;
-              return (
-                <div
-                  key={globalIdx}
-                  className={`flex items-start gap-2 rounded-lg border px-2.5 py-2 text-[13px] leading-snug transition-colors ${style.bg} ${style.text} ${style.border} ${isNew ? "ring-1 ring-white/10" : ""}`}
-                >
-                  <span className="mt-0.5 shrink-0 text-sm">{icon}</span>
-                  <span className="min-w-0">{describeAction(entry, players)}</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+export default function EKActionLog({ entries, players }: EKActionLogProps) {
+  const groups = buildGroups(entries, players);
+  return <ActionLog groups={groups} emptyMessage="Game log will appear here..." />;
 }

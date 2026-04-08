@@ -160,7 +160,11 @@ export const setGameMachine = setup({
       if (event.type !== "SELECT_CARD") return false;
       const ids = [...context.selected, event.cardId];
       if (ids.length !== 3) return false;
-      const cards = ids.map((id) => context.slots.find((s) => s !== null && s.id === id)!);
+      const cards = ids.map((id) => {
+        const card = context.slots.find((s) => s !== null && s.id === id);
+        if (!card) throw new Error(`Card with id ${id} not found in slots`);
+        return card;
+      });
       return checkValidSet(cards[0], cards[1], cards[2]);
     },
 

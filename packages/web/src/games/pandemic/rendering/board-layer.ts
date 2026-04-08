@@ -15,7 +15,8 @@ export function createBoardLayer(assets: GameAssets): RenderLayer {
 
   function renderToCache(): void {
     cachedCanvas = new OffscreenCanvas(REFERENCE_WIDTH, REFERENCE_HEIGHT);
-    const ctx = cachedCanvas.getContext("2d")!;
+    const ctx = cachedCanvas.getContext("2d");
+    if (!ctx) return;
 
     // Background
     ctx.drawImage(assets.bgImage, 0, 0, REFERENCE_WIDTH, REFERENCE_HEIGHT);
@@ -109,7 +110,7 @@ export function createBoardLayer(assets: GameAssets): RenderLayer {
       ctx.save();
       ctx.translate(viewport.offsetX, viewport.offsetY);
       ctx.scale(viewport.scale, viewport.scale);
-      ctx.drawImage(cachedCanvas!, 0, 0);
+      if (cachedCanvas) ctx.drawImage(cachedCanvas, 0, 0);
       ctx.restore();
     },
   };

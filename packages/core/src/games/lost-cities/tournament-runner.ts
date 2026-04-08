@@ -45,7 +45,7 @@ export function simulateGame(
       cardId: a.cardId,
       kind: a.kind,
       visits: a.visits,
-      winRate: a.winRate,
+      meanNormalizedReward: a.meanNormalizedReward,
       chosen: a.key === stats.chosenPlayKey,
     }));
 
@@ -81,7 +81,7 @@ export function simulateGame(
       kind: a.kind,
       color: a.color,
       visits: a.visits,
-      winRate: a.winRate,
+      meanNormalizedReward: a.meanNormalizedReward,
       chosen: a.key === stats.chosenDrawKey,
     }));
 

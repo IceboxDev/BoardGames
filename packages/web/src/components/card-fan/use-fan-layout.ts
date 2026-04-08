@@ -51,7 +51,7 @@ export function computeFanLayout(
     const rotation = t * angleStep;
     const arcY = t * t * ARC_FACTOR;
     const x = i * actualSpacing;
-    const baseZ = cardCount - Math.abs(Math.round(t));
+    const baseZ = i;
 
     let hoverX = 0;
     let liftY = 0;

@@ -17,8 +17,21 @@ import { CARD_INFO, NUM_COLORS } from "./types";
 const MAX_SCORE_DIFF = 200;
 
 export interface MCTSStats {
-  playActions: { key: string; cardId: number; kind: number; visits: number; winRate: number }[];
-  drawActions: { key: string; kind: number; color: number; visits: number; winRate: number }[];
+  playActions: {
+    key: string;
+    cardId: number;
+    kind: number;
+    visits: number;
+    /** Mean UCB backup reward in [0,1] after normalizing score differential — not P(win). */
+    meanNormalizedReward: number;
+  }[];
+  drawActions: {
+    key: string;
+    kind: number;
+    color: number;
+    visits: number;
+    meanNormalizedReward: number;
+  }[];
   chosenPlayKey: string;
   chosenDrawKey: string;
 }
@@ -82,7 +95,8 @@ function selectOrExpand<A extends { key: string }>(
     return { node: child, action: sampledUntried };
   }
 
-  return { node: bestChild!, action: bestAction! };
+  if (!bestChild || !bestAction) throw new Error("No legal actions available for selection");
+  return { node: bestChild, action: bestAction };
 }
 
 function filterPlayableDiscards(s: FastState, plays: PlayActionFast[]): PlayActionFast[] {
@@ -176,7 +190,10 @@ function runMCTSCoreWithStats(
 
     applyDrawFast(simState, chosenDraw);
 
-    const rawReward = rollout(simState, player, strategy.pickPlay, strategy.pickDraw);
+    const rawReward = rollout(simState, player, strategy.pickPlay, strategy.pickDraw, {
+      terminalUnplayedPenaltyPerCard: strategy.mctsConfig.terminalUnplayedPenaltyPerCard,
+      terminalStrandedPenaltyPerCard: strategy.mctsConfig.terminalStrandedPenaltyPerCard,
+    });
     const reward = normalizeReward(rawReward);
 
     let n: MCTSNode | null = drawNode;
@@ -218,30 +235,37 @@ function runMCTSCoreWithStats(
   const finalDraws = getLegalDraws(drawState);
   const bestDraw = finalDraws.find((a) => a.key === bestDrawKey) ?? finalDraws[0];
 
-  // Build MCTS stats for replay logging
-  const playActions = finalPlays.map((a) => {
-    const child = root.children.get(a.key);
-    const visits = child?.visits ?? 0;
-    const winRate = visits > 0 ? child!.totalReward / visits : 0;
-    return {
-      key: a.key,
-      cardId: a.cardId,
-      kind: a.kind,
-      visits,
-      winRate,
-    };
-  });
+  // Build MCTS stats for replay logging (one row per semantic key — duplicate cardIds share tree stats)
+  const seenPlayKeys = new Set<string>();
+  const playActions = finalPlays
+    .filter((a) => {
+      if (seenPlayKeys.has(a.key)) return false;
+      seenPlayKeys.add(a.key);
+      return true;
+    })
+    .map((a) => {
+      const child = root.children.get(a.key);
+      const visits = child?.visits ?? 0;
+      const meanNormalizedReward = visits > 0 ? (child?.totalReward ?? 0) / visits : 0;
+      return {
+        key: a.key,
+        cardId: a.cardId,
+        kind: a.kind,
+        visits,
+        meanNormalizedReward,
+      };
+    });
 
   const drawActions = finalDraws.map((a) => {
     const child = bestPlayNode?.children.get(a.key);
     const visits = child?.visits ?? 0;
-    const winRate = visits > 0 ? child!.totalReward / visits : 0;
+    const meanNormalizedReward = visits > 0 ? (child?.totalReward ?? 0) / visits : 0;
     return {
       key: a.key,
       kind: a.kind,
       color: a.kind === 0 ? -1 : a.color,
       visits,
-      winRate,
+      meanNormalizedReward,
     };
   });
 
@@ -297,7 +321,8 @@ function fastPlayToAction(
   gameState: GameState,
   player: PlayerIndex,
 ): PlayAction {
-  const card = gameState.hands[player].find((c) => c.id === fast.cardId)!;
+  const card = gameState.hands[player].find((c) => c.id === fast.cardId);
+  if (!card) throw new Error(`Card id=${fast.cardId} not found in player ${player}'s hand`);
   if (fast.kind === 0) {
     return { kind: "expedition", card };
   }

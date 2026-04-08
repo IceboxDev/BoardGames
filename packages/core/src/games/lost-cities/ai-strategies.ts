@@ -1,4 +1,9 @@
-import { canPlayToExpedition } from "./mcts/fast-game";
+import {
+  canPlayToExpedition,
+  countCardsOfColorRemainingInPlay,
+  countUnseenLowerNumbersInColorForPlayer,
+  isDiscardDeadToBoth,
+} from "./mcts/fast-game";
 import {
   CARD_INFO,
   type DrawActionFast,
@@ -402,167 +407,398 @@ function countStartedExpeditions(s: FastState, expOffset: number): number {
   return count;
 }
 
+function v5ExpeditionPlayScore(
+  s: FastState,
+  player: number,
+  play: PlayActionFast,
+  progress: number,
+  startedCount: number,
+): number {
+  const expOffset = player * NUM_COLORS;
+  const info = CARD_INFO[play.cardId];
+  let score = 0;
+  const exp = s.expeditions[expOffset + info.color];
+
+  if (exp.length > 0) {
+    score = 25 + info.value * 2;
+    if (exp.length >= 5) score += 8;
+    if (exp.length >= 7) score += 15;
+
+    if (info.type === 1) {
+      let minPlayable = 11;
+      for (const c of s.hands[player]) {
+        const ci = CARD_INFO[c];
+        if (ci.color === info.color && ci.type === 1 && canPlayToExpedition(c, exp)) {
+          if (ci.value < minPlayable) minPlayable = ci.value;
+        }
+      }
+      if (info.value === minPlayable) {
+        score += 10;
+      } else {
+        score -= 25;
+      }
+    } else {
+      const d = handColorDetail(s, player, info.color);
+      const estimatedValue = (d.valueSum - EXPEDITION_COST) * (exp.length + 1);
+      if (estimatedValue < -30) score -= 15;
+    }
+
+    if (progress > 0.5 && exp.length >= 6) score += 10;
+  } else {
+    const d = handColorDetail(s, player, info.color);
+    const latePenalty = progress > 0.6 ? -15 * progress : 0;
+    const startPenalty = -6 * Math.max(0, startedCount - 2);
+
+    if (info.type === 0) {
+      const estimatedFinal = (d.valueSum - EXPEDITION_COST) * (1 + d.wagerCount);
+      if (d.numberCount >= 3 && d.valueSum >= 15 && estimatedFinal > -10) {
+        score = 12 + d.numberCount * 2;
+      } else if (d.numberCount >= 2 && d.valueSum >= 12) {
+        score = 4;
+      } else {
+        score = -30;
+      }
+      score += startPenalty + latePenalty;
+    } else {
+      if (d.wagerCount > 0 && d.numberCount >= 3 && d.valueSum >= 20) {
+        score = -20;
+      } else if (d.numberCount >= 3 && d.valueSum >= 18) {
+        score = 6 + info.value;
+      } else if (d.numberCount >= 3 && d.valueSum >= 15) {
+        score = 3 + info.value;
+      } else if (d.numberCount >= 2 && d.hasHighCard) {
+        score = 1;
+      } else {
+        score = -12;
+      }
+
+      let playableSum = 0;
+      for (const c of s.hands[player]) {
+        const ci = CARD_INFO[c];
+        if (ci.color === info.color && ci.type === 1 && ci.value >= info.value) {
+          playableSum += ci.value;
+        }
+      }
+      if (playableSum < EXPEDITION_COST) {
+        score -= (EXPEDITION_COST - playableSum) * 3;
+      }
+
+      let minNumber = 11;
+      for (const c of s.hands[player]) {
+        const ci = CARD_INFO[c];
+        if (ci.color === info.color && ci.type === 1) {
+          if (ci.value < minNumber) minNumber = ci.value;
+        }
+      }
+      if (info.value === minNumber && info.value <= 5) score += 4;
+
+      score += startPenalty + latePenalty;
+    }
+  }
+  return score;
+}
+
+function v5DiscardPlayScore(s: FastState, player: number, play: PlayActionFast): number {
+  const expOffset = player * NUM_COLORS;
+  const oppOffset = (1 - player) * NUM_COLORS;
+  const info = CARD_INFO[play.cardId];
+  let score = 0;
+  const myExp = s.expeditions[expOffset + info.color];
+  const oppExp = s.expeditions[oppOffset + info.color];
+
+  if (myExp.length > 0 && canPlayToExpedition(play.cardId, myExp)) {
+    score = -40;
+  } else if (myExp.length > 0) {
+    score = -12;
+  } else {
+    if (info.type === 0) {
+      const d = handColorDetail(s, player, info.color);
+      score = d.numberCount >= 2 ? -5 : 8;
+    } else {
+      score = 4 - info.value * 0.7;
+
+      let minVal = 11;
+      let higherCount = 0;
+      for (const c of s.hands[player]) {
+        const ci = CARD_INFO[c];
+        if (ci.color === info.color && ci.type === 1) {
+          if (ci.value < minVal) minVal = ci.value;
+          if (ci.value > info.value) higherCount++;
+        }
+      }
+      if (higherCount >= 1 && info.value === minVal) {
+        const d = handColorDetail(s, player, info.color);
+        if (d.numberCount >= 2 && d.valueSum >= 12) {
+          score -= 6 + higherCount * 2;
+        }
+      }
+    }
+  }
+
+  if (oppExp.length > 0) {
+    let oppWagers = 0;
+    for (const c of oppExp) {
+      if (CARD_INFO[c].type === 0) oppWagers++;
+    }
+    const oppMult = 1 + oppWagers;
+
+    if (canPlayToExpedition(play.cardId, oppExp)) {
+      score -= (20 + info.value) * oppMult;
+    } else {
+      score -= 12 + info.value * 0.6;
+    }
+    if (oppExp.length >= 2 && info.type === 1 && info.value >= 7) score -= 8 * oppMult;
+  }
+
+  if (info.color === s.lastDiscardedColor) score += 4;
+
+  if (myExp.length === 0 && oppExp.length === 0) score += 2;
+  return score;
+}
+
+/** V6 ablation B: latent opponent pickup risk when neither side has started the color (full `FastState`). */
+function v6DiscardPlayScoreWithLatentOpp(
+  s: FastState,
+  player: number,
+  play: PlayActionFast,
+): number {
+  let score = v5DiscardPlayScore(s, player, play);
+  const expOffset = player * NUM_COLORS;
+  const oppOffset = (1 - player) * NUM_COLORS;
+  const info = CARD_INFO[play.cardId];
+  const myExp = s.expeditions[expOffset + info.color];
+  const oppExp = s.expeditions[oppOffset + info.color];
+
+  if (myExp.length > 0 || oppExp.length > 0) {
+    return score;
+  }
+
+  const progress = gameProgress(s);
+  const rem = countCardsOfColorRemainingInPlay(s, info.color) / 12;
+  let latent = 0;
+  if (info.type === 0) {
+    latent = (16 + 12 * progress) * rem;
+  } else {
+    latent = (10 + info.value * 0.5) * (0.55 + 0.45 * progress) * rem;
+  }
+  score -= latent;
+  if (latent > 4) {
+    score -= 2;
+  }
+  return score;
+}
+
+/** Penalty magnitude for opening with a number that strands lowers / blocks wagers (subtracted from expedition score). */
+function antiSelfLockStartPenalty(
+  s: FastState,
+  player: number,
+  play: PlayActionFast,
+  openerValue: number,
+  color: number,
+): number {
+  let pen = 0;
+  for (const c of s.hands[player]) {
+    if (c === play.cardId) continue;
+    const ci = CARD_INFO[c];
+    if (ci.color !== color || ci.type !== 1) continue;
+    if (ci.value < openerValue) {
+      pen += 7 + (openerValue - ci.value) * 1.2;
+    }
+  }
+  const d = handColorDetail(s, player, color);
+  if (d.wagerCount > 0) {
+    pen += d.wagerCount * (11 + openerValue * 0.45);
+  }
+  const unseenLower = countUnseenLowerNumbersInColorForPlayer(s, player, color, openerValue);
+  const progress = gameProgress(s);
+  pen += unseenLower * (2 + 2.5 * progress);
+  return pen;
+}
+
+function v6ExpeditionPlayScoreWithAntiSelfLock(
+  s: FastState,
+  player: number,
+  play: PlayActionFast,
+  progress: number,
+  startedCount: number,
+): number {
+  const expOffset = player * NUM_COLORS;
+  const info = CARD_INFO[play.cardId];
+  const exp = s.expeditions[expOffset + info.color];
+  let score = v5ExpeditionPlayScore(s, player, play, progress, startedCount);
+  if (play.kind === 0 && exp.length === 0 && info.type === 1) {
+    score -= antiSelfLockStartPenalty(s, player, play, info.value, info.color);
+  }
+  return score;
+}
+
+function handHasPlayableToOwnExpedition(s: FastState, player: number): boolean {
+  const expOffset = player * NUM_COLORS;
+  for (const cardId of s.hands[player]) {
+    const c = CARD_INFO[cardId].color;
+    if (canPlayToExpedition(cardId, s.expeditions[expOffset + c])) {
+      return true;
+    }
+  }
+  return false;
+}
+
 function pickPlayV5(s: FastState, plays: PlayActionFast[], count: number): PlayActionFast {
   let bestScore = -Infinity;
   let best = plays[0];
 
   const player = s.currentPlayer;
-  const expOffset = player * NUM_COLORS;
-  const oppOffset = (1 - player) * NUM_COLORS;
   const progress = gameProgress(s);
-  const startedCount = countStartedExpeditions(s, expOffset);
+  const startedCount = countStartedExpeditions(s, player * NUM_COLORS);
 
   for (let i = 0; i < count; i++) {
     const play = plays[i];
-    const info = CARD_INFO[play.cardId];
-    let score = 0;
+    const score =
+      play.kind === 0
+        ? v5ExpeditionPlayScore(s, player, play, progress, startedCount)
+        : v5DiscardPlayScore(s, player, play);
 
+    if (score > bestScore) {
+      bestScore = score;
+      best = play;
+    }
+  }
+
+  return best;
+}
+
+// V6: V5 + dead-to-both discard bonus (capped vs best expedition when own hand has playable extends)
+const V6_DEAD_BOTH_DISCARD_BONUS = 35;
+
+function pickPlayV6(s: FastState, plays: PlayActionFast[], count: number): PlayActionFast {
+  let bestScore = -Infinity;
+  let best = plays[0];
+
+  const player = s.currentPlayer;
+  const progress = gameProgress(s);
+  const startedCount = countStartedExpeditions(s, player * NUM_COLORS);
+
+  let maxExpScore = -Infinity;
+  for (let i = 0; i < count; i++) {
+    if (plays[i].kind === 0) {
+      maxExpScore = Math.max(
+        maxExpScore,
+        v5ExpeditionPlayScore(s, player, plays[i], progress, startedCount),
+      );
+    }
+  }
+
+  const hasOwnPlayable = handHasPlayableToOwnExpedition(s, player);
+
+  for (let i = 0; i < count; i++) {
+    const play = plays[i];
+    let score: number;
     if (play.kind === 0) {
-      // --- Play to expedition ---
-      const exp = s.expeditions[expOffset + info.color];
-
-      if (exp.length > 0) {
-        // Extending an existing expedition
-        score = 25 + info.value * 2;
-        if (exp.length >= 5) score += 8;
-        if (exp.length >= 7) score += 15;
-
-        if (info.type === 1) {
-          let minPlayable = 11;
-          for (const c of s.hands[player]) {
-            const ci = CARD_INFO[c];
-            if (ci.color === info.color && ci.type === 1 && canPlayToExpedition(c, exp)) {
-              if (ci.value < minPlayable) minPlayable = ci.value;
-            }
-          }
-          if (info.value === minPlayable) {
-            score += 10;
-          } else {
-            score -= 25;
-          }
-        } else {
-          // Wager on existing all-wager expedition: model the extra -20 multiplier cost
-          const d = handColorDetail(s, player, info.color);
-          const estimatedValue = (d.valueSum - EXPEDITION_COST) * (exp.length + 1);
-          if (estimatedValue < -30) score -= 15;
-        }
-
-        // Late-game bonus for approaching length bonus
-        if (progress > 0.5 && exp.length >= 6) score += 10;
-      } else {
-        // Starting a new expedition
-        const d = handColorDetail(s, player, info.color);
-
-        // Late-game penalty: new expeditions unlikely to become profitable
-        const latePenalty = progress > 0.6 ? -15 * progress : 0;
-        // Expedition count penalty: applies to both wagers and numbers
-        const startPenalty = -6 * Math.max(0, startedCount - 2);
-
-        if (info.type === 0) {
-          // Wager start: estimate final value with all support in hand
-          const estimatedFinal = (d.valueSum - EXPEDITION_COST) * (1 + d.wagerCount);
-          if (d.numberCount >= 3 && d.valueSum >= 15 && estimatedFinal > -10) {
-            score = 12 + d.numberCount * 2;
-          } else if (d.numberCount >= 2 && d.valueSum >= 12) {
-            score = 4;
-          } else {
-            score = -30;
-          }
-          score += startPenalty + latePenalty;
-        } else {
-          // Number start
-          if (d.wagerCount > 0 && d.numberCount >= 3 && d.valueSum >= 20) {
-            // Strong support with wagers: defer to wager-first
-            score = -20;
-          } else if (d.numberCount >= 3 && d.valueSum >= 18) {
-            score = 6 + info.value;
-          } else if (d.numberCount >= 3 && d.valueSum >= 15) {
-            score = 3 + info.value;
-          } else if (d.numberCount >= 2 && d.hasHighCard) {
-            score = 1;
-          } else {
-            score = -12;
-          }
-
-          // Profitability gate: penalize if hand cards alone can't cover expedition cost
-          let playableSum = 0;
-          for (const c of s.hands[player]) {
-            const ci = CARD_INFO[c];
-            if (ci.color === info.color && ci.type === 1 && ci.value >= info.value) {
-              playableSum += ci.value;
-            }
-          }
-          if (playableSum < EXPEDITION_COST) {
-            score -= (EXPEDITION_COST - playableSum) * 3;
-          }
-
-          // Low-first bonus for new expedition starts
-          let minNumber = 11;
-          for (const c of s.hands[player]) {
-            const ci = CARD_INFO[c];
-            if (ci.color === info.color && ci.type === 1) {
-              if (ci.value < minNumber) minNumber = ci.value;
-            }
-          }
-          if (info.value === minNumber && info.value <= 5) score += 4;
-
-          score += startPenalty + latePenalty;
-        }
-      }
+      score = v5ExpeditionPlayScore(s, player, play, progress, startedCount);
     } else {
-      // --- Discard ---
-      const myExp = s.expeditions[expOffset + info.color];
-      const oppExp = s.expeditions[oppOffset + info.color];
-
-      if (myExp.length > 0 && canPlayToExpedition(play.cardId, myExp)) {
-        score = -40;
-      } else if (myExp.length > 0) {
-        score = -12;
-      } else {
-        if (info.type === 0) {
-          const d = handColorDetail(s, player, info.color);
-          score = d.numberCount >= 2 ? -5 : 8;
-        } else {
-          score = 4 - info.value * 0.7;
-
-          let minVal = 11;
-          let higherCount = 0;
-          for (const c of s.hands[player]) {
-            const ci = CARD_INFO[c];
-            if (ci.color === info.color && ci.type === 1) {
-              if (ci.value < minVal) minVal = ci.value;
-              if (ci.value > info.value) higherCount++;
-            }
-          }
-          if (higherCount >= 1 && info.value === minVal) {
-            const d = handColorDetail(s, player, info.color);
-            if (d.numberCount >= 2 && d.valueSum >= 12) {
-              score -= 6 + higherCount * 2;
-            }
-          }
+      score = v5DiscardPlayScore(s, player, play);
+      if (isDiscardDeadToBoth(s, player, play.cardId)) {
+        score += V6_DEAD_BOTH_DISCARD_BONUS;
+        if (hasOwnPlayable && maxExpScore > -Infinity) {
+          score = Math.min(score, maxExpScore - 1);
         }
       }
+    }
 
-      // Opponent-aware discard penalties (scaled by opponent wager multiplier)
-      if (oppExp.length > 0) {
-        let oppWagers = 0;
-        for (const c of oppExp) {
-          if (CARD_INFO[c].type === 0) oppWagers++;
-        }
-        const oppMult = 1 + oppWagers;
+    if (score > bestScore) {
+      bestScore = score;
+      best = play;
+    }
+  }
 
-        if (canPlayToExpedition(play.cardId, oppExp)) {
-          score -= (20 + info.value) * oppMult;
-        } else {
-          score -= 12 + info.value * 0.6;
+  return best;
+}
+
+function pickPlayV6LatentOppDiscardRisk(
+  s: FastState,
+  plays: PlayActionFast[],
+  count: number,
+): PlayActionFast {
+  let bestScore = -Infinity;
+  let best = plays[0];
+
+  const player = s.currentPlayer;
+  const progress = gameProgress(s);
+  const startedCount = countStartedExpeditions(s, player * NUM_COLORS);
+
+  let maxExpScore = -Infinity;
+  for (let i = 0; i < count; i++) {
+    if (plays[i].kind === 0) {
+      maxExpScore = Math.max(
+        maxExpScore,
+        v5ExpeditionPlayScore(s, player, plays[i], progress, startedCount),
+      );
+    }
+  }
+
+  const hasOwnPlayable = handHasPlayableToOwnExpedition(s, player);
+
+  for (let i = 0; i < count; i++) {
+    const play = plays[i];
+    let score: number;
+    if (play.kind === 0) {
+      score = v5ExpeditionPlayScore(s, player, play, progress, startedCount);
+    } else {
+      score = v6DiscardPlayScoreWithLatentOpp(s, player, play);
+      if (isDiscardDeadToBoth(s, player, play.cardId)) {
+        score += V6_DEAD_BOTH_DISCARD_BONUS;
+        if (hasOwnPlayable && maxExpScore > -Infinity) {
+          score = Math.min(score, maxExpScore - 1);
         }
-        if (oppExp.length >= 2 && info.type === 1 && info.value >= 7) score -= 8 * oppMult;
       }
+    }
 
-      // Safety: discarding on lastDiscardedColor is safer (opponent can't draw it)
-      if (info.color === s.lastDiscardedColor) score += 4;
+    if (score > bestScore) {
+      bestScore = score;
+      best = play;
+    }
+  }
 
-      if (myExp.length === 0 && oppExp.length === 0) score += 2;
+  return best;
+}
+
+function pickPlayV6AntiSelfLockStarts(
+  s: FastState,
+  plays: PlayActionFast[],
+  count: number,
+): PlayActionFast {
+  let bestScore = -Infinity;
+  let best = plays[0];
+
+  const player = s.currentPlayer;
+  const progress = gameProgress(s);
+  const startedCount = countStartedExpeditions(s, player * NUM_COLORS);
+
+  let maxExpScore = -Infinity;
+  for (let i = 0; i < count; i++) {
+    if (plays[i].kind === 0) {
+      maxExpScore = Math.max(
+        maxExpScore,
+        v6ExpeditionPlayScoreWithAntiSelfLock(s, player, plays[i], progress, startedCount),
+      );
+    }
+  }
+
+  const hasOwnPlayable = handHasPlayableToOwnExpedition(s, player);
+
+  for (let i = 0; i < count; i++) {
+    const play = plays[i];
+    let score: number;
+    if (play.kind === 0) {
+      score = v6ExpeditionPlayScoreWithAntiSelfLock(s, player, play, progress, startedCount);
+    } else {
+      score = v5DiscardPlayScore(s, player, play);
+      if (isDiscardDeadToBoth(s, player, play.cardId)) {
+        score += V6_DEAD_BOTH_DISCARD_BONUS;
+        if (hasOwnPlayable && maxExpScore > -Infinity) {
+          score = Math.min(score, maxExpScore - 1);
+        }
+      }
     }
 
     if (score > bestScore) {
@@ -677,7 +913,76 @@ export const STRATEGY_V5: AIStrategy = {
   mctsConfig: { iterations: 16000, explorationConstant: 0.7, useSoftDrawFilter: true },
 };
 
-export const ALL_STRATEGIES: AIStrategy[] = [STRATEGY_V5, STRATEGY_V4, STRATEGY_V3, STRATEGY_V1];
+export const STRATEGY_V6: AIStrategy = {
+  id: "ismcts-v6",
+  label: "Adaptive+",
+  description:
+    "V5 rollout + dead-to-both discard bias (capped vs expedition) and terminal penalty for unplayed cards still legal on own expeditions. 16k iterations.",
+  pickPlay: pickPlayV6,
+  pickDraw: pickDrawV5,
+  mctsConfig: {
+    iterations: 16000,
+    explorationConstant: 0.7,
+    useSoftDrawFilter: true,
+    terminalUnplayedPenaltyPerCard: 10,
+  },
+};
+
+const V6_MCTS_BASE = {
+  iterations: 16000,
+  explorationConstant: 0.7,
+  useSoftDrawFilter: true,
+  terminalUnplayedPenaltyPerCard: 10,
+} as const;
+
+/** Ablation: V6 + latent opponent pickup risk on discards in unopened colors. */
+export const STRATEGY_V6_LATENT_OPP_DISCARD_RISK: AIStrategy = {
+  id: "ismcts-v6-latent-opp-discard",
+  label: "Adaptive+ (latent opp discard)",
+  description:
+    "V6 rollout + extra discard penalty when neither player has started the color (scaled by game stage and remaining cards). 16k iterations.",
+  pickPlay: pickPlayV6LatentOppDiscardRisk,
+  pickDraw: pickDrawV5,
+  mctsConfig: { ...V6_MCTS_BASE },
+};
+
+/** Ablation: V6 + anti-self-lock penalties on expedition starts with numbers. */
+export const STRATEGY_V6_ANTI_SELF_LOCK_STARTS: AIStrategy = {
+  id: "ismcts-v6-anti-self-lock-starts",
+  label: "Adaptive+ (anti self-lock starts)",
+  description:
+    "V6 rollout + penalties for high unsupported starts that strand lowers or block wagers. 16k iterations.",
+  pickPlay: pickPlayV6AntiSelfLockStarts,
+  pickDraw: pickDrawV5,
+  mctsConfig: { ...V6_MCTS_BASE },
+};
+
+/** Ablation: V6 + lighter terminal penalty for stranded (unplayable) cards in hand. */
+export const STRATEGY_V6_BLOCKED_CARD_TERMINAL_EVAL: AIStrategy = {
+  id: "ismcts-v6-blocked-card-terminal-eval",
+  label: "Adaptive+ (stranded terminal)",
+  description:
+    "V6 rollout + small terminal penalty for cards stranded by own expedition ordering (kept lighter than unplayed-legal penalty). 16k iterations.",
+  pickPlay: pickPlayV6,
+  pickDraw: pickDrawV5,
+  mctsConfig: {
+    iterations: 16000,
+    explorationConstant: 0.7,
+    useSoftDrawFilter: true,
+    terminalUnplayedPenaltyPerCard: 10,
+    terminalStrandedPenaltyPerCard: 4,
+  },
+};
+
+export const ALL_STRATEGIES: AIStrategy[] = [
+  STRATEGY_V6,
+  STRATEGY_V6_LATENT_OPP_DISCARD_RISK,
+  STRATEGY_V6_ANTI_SELF_LOCK_STARTS,
+  STRATEGY_V6_BLOCKED_CARD_TERMINAL_EVAL,
+  STRATEGY_V5,
+  STRATEGY_V4,
+  STRATEGY_V1,
+];
 
 export function getStrategy(id: string): AIStrategy {
   const found = ALL_STRATEGIES.find((s) => s.id === id);

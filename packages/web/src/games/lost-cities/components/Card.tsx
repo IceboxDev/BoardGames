@@ -55,25 +55,25 @@ function ExpeditionIcon({ color, size }: { color: ExpeditionColor; size: string 
 
   const paths: Record<ExpeditionColor, React.ReactNode> = {
     white: (
-      <svg viewBox="0 0 24 24" className={dim} fill={hex}>
+      <svg viewBox="0 0 24 24" className={dim} fill={hex} aria-hidden="true">
         <path d="M12 2L2 22h20L12 2zm0 5l6.5 13h-13L12 7z" />
         <path d="M12 2l5 10h-10L12 2z" />
       </svg>
     ),
     blue: (
-      <svg viewBox="0 0 24 24" className={dim} fill={hex}>
+      <svg viewBox="0 0 24 24" className={dim} fill={hex} aria-hidden="true">
         <path d="M12 2L9 9H3l5 4-2 7 6-4 6 4-2-7 5-4h-6L12 2z" />
       </svg>
     ),
     green: (
-      <svg viewBox="0 0 24 24" className={dim} fill={hex}>
+      <svg viewBox="0 0 24 24" className={dim} fill={hex} aria-hidden="true">
         <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66C7.72 17.12 9.45 13 17 11V8z" />
         <path d="M17 2c-3 0-6 2-8 5 2-1 4-1.5 6-1.5V2z" />
         <path d="M17 8c-3.5 0-6.5 2.5-8.5 6 2-.5 4-.5 6-.5V8z" />
       </svg>
     ),
     yellow: (
-      <svg viewBox="0 0 24 24" className={dim} fill={hex}>
+      <svg viewBox="0 0 24 24" className={dim} fill={hex} aria-hidden="true">
         <circle cx="12" cy="12" r="5" />
         <path
           d="M12 1v3M12 20v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M1 12h3M20 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"
@@ -84,7 +84,7 @@ function ExpeditionIcon({ color, size }: { color: ExpeditionColor; size: string 
       </svg>
     ),
     red: (
-      <svg viewBox="0 0 24 24" className={dim} fill={hex}>
+      <svg viewBox="0 0 24 24" className={dim} fill={hex} aria-hidden="true">
         <path d="M12 23c-1 0-8-5.5-8-12.8C4 5.7 7.6 1 12 1s8 4.7 8 9.2C20 17.5 13 23 12 23zm0-19c-3 0-5.5 3.5-5.5 7.2 0 5 4 8.8 5.5 9.8 1.5-1 5.5-4.8 5.5-9.8C17.5 7.5 15 4 12 4z" />
         <circle cx="12" cy="11" r="3" />
       </svg>

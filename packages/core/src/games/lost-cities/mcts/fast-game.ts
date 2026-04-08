@@ -1,5 +1,6 @@
 import {
   CARD_INFO,
+  CARDS_PER_COLOR,
   DISCARD_KEYS,
   DRAW_DISCARD_KEYS,
   DRAW_PILE_KEY,
@@ -37,6 +38,77 @@ export function canPlayToExpedition(cardId: number, expedition: number[]): boole
   const lastInfo = CARD_INFO[expedition[expedition.length - 1]];
   if (info.type === 0) return lastInfo.type === 0; // wager only before numbers
   return info.value > lastInfo.value;
+}
+
+/** True if this card cannot be played to either player's expedition in its color (current state). */
+export function isDiscardDeadToBoth(s: FastState, player: number, cardId: number): boolean {
+  const info = CARD_INFO[cardId];
+  const c = info.color;
+  const expOffset = player * NUM_COLORS;
+  const oppOffset = (1 - player) * NUM_COLORS;
+  const myExp = s.expeditions[expOffset + c];
+  const oppExp = s.expeditions[oppOffset + c];
+  return !canPlayToExpedition(cardId, myExp) && !canPlayToExpedition(cardId, oppExp);
+}
+
+/** Count hand cards still legally playable on that player's own expeditions (terminal rollout shaping). */
+export function countUnplayedPlayableToOwnExpeditions(s: FastState, player: number): number {
+  const expOffset = player * NUM_COLORS;
+  let n = 0;
+  for (const cardId of s.hands[player]) {
+    const c = CARD_INFO[cardId].color;
+    if (canPlayToExpedition(cardId, s.expeditions[expOffset + c])) {
+      n++;
+    }
+  }
+  return n;
+}
+
+/** Cards in hand that cannot be played to own expedition in that color (ordering deadlock). Empty expedition accepts any card. */
+export function countStrandedUnplayableToOwnExpeditions(s: FastState, player: number): number {
+  const expOffset = player * NUM_COLORS;
+  let n = 0;
+  for (const cardId of s.hands[player]) {
+    const c = CARD_INFO[cardId].color;
+    const exp = s.expeditions[expOffset + c];
+    if (exp.length > 0 && !canPlayToExpedition(cardId, exp)) {
+      n++;
+    }
+  }
+  return n;
+}
+
+/** Cards of `color` still in draw pile, hands, and discard piles (full determinized rollout state). */
+export function countCardsOfColorRemainingInPlay(s: FastState, color: number): number {
+  let onExp = 0;
+  for (let p = 0; p < 2; p++) {
+    onExp += s.expeditions[p * NUM_COLORS + color].length;
+  }
+  return CARDS_PER_COLOR - onExp;
+}
+
+/** Number cards of `color` with value strictly below `maxValue` in draw pile and opponent hand (IS-MCTS rollout: full state). */
+export function countUnseenLowerNumbersInColorForPlayer(
+  s: FastState,
+  player: number,
+  color: number,
+  maxValue: number,
+): number {
+  const opp = 1 - player;
+  let n = 0;
+  for (const id of s.drawPile) {
+    const inf = CARD_INFO[id];
+    if (inf.color === color && inf.type === 1 && inf.value < maxValue) {
+      n++;
+    }
+  }
+  for (const id of s.hands[opp]) {
+    const inf = CARD_INFO[id];
+    if (inf.color === color && inf.type === 1 && inf.value < maxValue) {
+      n++;
+    }
+  }
+  return n;
 }
 
 // --- Legal actions ---
@@ -101,13 +173,17 @@ export function applyDrawFast(s: FastState, action: DrawActionFast): void {
 
   if (action.kind === 0) {
     // draw pile
-    drawnCard = s.drawPile.pop()!;
+    const popped = s.drawPile.pop();
+    if (popped === undefined) throw new Error("Draw pile is empty");
+    drawnCard = popped;
     if (s.drawPile.length === 0) {
       s.gameOver = true;
     }
   } else {
     // discard pile
-    drawnCard = s.discardPiles[action.color].pop()!;
+    const popped = s.discardPiles[action.color].pop();
+    if (popped === undefined) throw new Error("Discard pile is empty");
+    drawnCard = popped;
   }
 
   s.hands[s.currentPlayer].push(drawnCard);

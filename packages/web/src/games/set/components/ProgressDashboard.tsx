@@ -5,6 +5,7 @@ import {
   computeTrend,
   generateInsights,
   type Insight,
+  type NumericKey,
   type TrendDirection,
 } from "@boardgames/core/games/set/analytics";
 import { formatTime } from "@boardgames/core/games/set/metrics";
@@ -112,7 +113,7 @@ export default function ProgressDashboard({ history }: ProgressDashboardProps) {
     () =>
       TREND_CONFIGS.map((cfg) => ({
         ...cfg,
-        trend: computeTrend(history, cfg.key as any, 5, cfg.higherIsBetter),
+        trend: computeTrend(history, cfg.key as NumericKey, 5, cfg.higherIsBetter),
         sparkData: sorted.slice(-20).map((r) => r[cfg.key as keyof GameRecord] as number),
       })),
     [history, sorted],
@@ -129,7 +130,7 @@ export default function ProgressDashboard({ history }: ProgressDashboardProps) {
     [sorted, activeChart.key],
   );
   const rollingAvg = useMemo(() => {
-    const raw = computeRollingAverages(history, activeChart.key as any, 5);
+    const raw = computeRollingAverages(history, activeChart.key as NumericKey, 5);
     return raw.map((p) => ({ x: p.gameIndex, y: p.value }));
   }, [history, activeChart.key]);
 

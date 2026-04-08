@@ -67,5 +67,7 @@ export const ROLE_DEFS: RoleDef[] = [
 ];
 
 export function getRoleDef(role: Role): RoleDef {
-  return ROLE_DEFS.find((r) => r.id === role)!;
+  const def = ROLE_DEFS.find((r) => r.id === role);
+  if (!def) throw new Error(`Unknown role: ${role}`);
+  return def;
 }

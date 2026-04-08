@@ -39,7 +39,7 @@ export interface CareerStats {
   totalHints: number;
 }
 
-type NumericKey = {
+export type NumericKey = {
   [K in keyof GameRecord]: GameRecord[K] extends number ? K : never;
 }[keyof GameRecord];
 

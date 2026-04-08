@@ -1,5 +1,6 @@
 import type { AIStrategyId, GameState } from "@boardgames/core/games/exploding-kittens/types";
 import { AI_STRATEGY_LABELS } from "@boardgames/core/games/exploding-kittens/types";
+import { GameOverLayout } from "../../../components/game-over";
 
 interface GameOverScreenProps {
   state: GameState;
@@ -9,7 +10,6 @@ interface GameOverScreenProps {
 
 export default function GameOverScreen({ state, onPlayAgain, onChangeSetup }: GameOverScreenProps) {
   const winner = state.winner !== null ? state.players[state.winner] : null;
-
   const isHumanWin = winner?.type === "human";
 
   const eliminatedPlayers = (state.actionLog ?? [])
@@ -17,21 +17,21 @@ export default function GameOverScreen({ state, onPlayAgain, onChangeSetup }: Ga
     .map((e) => e.playerIndex);
 
   return (
-    <div className="mx-auto max-w-lg space-y-6 text-center">
-      <div>
-        <span className="text-5xl">{isHumanWin ? "🎉" : "💀"}</span>
-        <h3 className="mt-3 text-2xl font-bold text-white">
-          {isHumanWin ? "You Win!" : `AI ${state.winner} Wins!`}
-        </h3>
-        {winner && !isHumanWin && winner.aiStrategy && (
-          <p className="mt-1 text-sm text-gray-400">
-            Strategy: {AI_STRATEGY_LABELS[winner.aiStrategy as AIStrategyId]}
-          </p>
-        )}
-        <p className="mt-1 text-sm text-gray-500">Game lasted {state.turnCount} turns</p>
-      </div>
-
-      <div className="rounded-xl bg-gray-800/60 p-4 text-left">
+    <GameOverLayout
+      emoji={isHumanWin ? "🎉" : "💀"}
+      headline={isHumanWin ? "You Win!" : `AI ${state.winner} Wins!`}
+      headlineColor={isHumanWin ? "win" : "lose"}
+      subtitle={`Game lasted ${state.turnCount} turns${
+        winner && !isHumanWin && winner.aiStrategy
+          ? ` · Strategy: ${AI_STRATEGY_LABELS[winner.aiStrategy as AIStrategyId]}`
+          : ""
+      }`}
+      actions={[
+        { label: "Play Again", variant: "primary", onClick: onPlayAgain },
+        { label: "Change Setup", variant: "secondary", onClick: onChangeSetup },
+      ]}
+    >
+      <div className="rounded-xl border border-gray-700/50 bg-surface-800 p-4 text-left">
         <p className="mb-2 text-sm font-medium text-gray-300">Elimination Order</p>
         <div className="space-y-1">
           {eliminatedPlayers.map((pi, i) => {
@@ -59,23 +59,6 @@ export default function GameOverScreen({ state, onPlayAgain, onChangeSetup }: Ga
           )}
         </div>
       </div>
-
-      <div className="flex gap-3 justify-center">
-        <button
-          type="button"
-          onClick={onPlayAgain}
-          className="rounded-lg bg-indigo-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-500"
-        >
-          Play Again
-        </button>
-        <button
-          type="button"
-          onClick={onChangeSetup}
-          className="rounded-lg bg-gray-700 px-6 py-2.5 text-sm text-white transition hover:bg-gray-600"
-        >
-          Change Setup
-        </button>
-      </div>
-    </div>
+    </GameOverLayout>
   );
 }

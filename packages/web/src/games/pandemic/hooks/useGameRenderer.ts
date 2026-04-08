@@ -3,12 +3,10 @@ import { useCallback, useEffect, useRef } from "react";
 import useGameLoop from "../../../engine/useGameLoop";
 import { createActionPanelLayer } from "../rendering/action-panel-layer";
 import { createBoardLayer } from "../rendering/board-layer";
-import { fitToContainer } from "../rendering/camera";
+import { fitToCityBounds } from "../rendering/camera";
 import { createGameStateLayer } from "../rendering/game-state-layer";
-import { createHandLayer, type HandState } from "../rendering/hand-layer";
 import { createHighlightLayer, type HighlightState } from "../rendering/highlight-layer";
 import { createInfoLayer } from "../rendering/info-layer";
-import { createLogLayer } from "../rendering/log-layer";
 import type { Viewport } from "../rendering/renderer";
 import { GameRenderer } from "../rendering/renderer";
 import type { GameAssets } from "../rendering/sprites";
@@ -18,7 +16,6 @@ import { createTrackLayer } from "../rendering/track-layer";
 export interface RendererRefs {
   stateRef: React.MutableRefObject<GameState | null>;
   highlightRef: React.MutableRefObject<HighlightState>;
-  handStateRef: React.MutableRefObject<HandState>;
   hoveredButtonRef: React.MutableRefObject<string | null>;
 }
 
@@ -46,10 +43,8 @@ export function useGameRenderer(
     renderer.addLayer(createGameStateLayer(refs.stateRef));
     renderer.addLayer(createTrackLayer(refs.stateRef));
     renderer.addLayer(createHighlightLayer(refs.highlightRef));
-    renderer.addLayer(createHandLayer(refs.stateRef, refs.handStateRef));
     renderer.addLayer(createActionPanelLayer(refs.stateRef, refs.hoveredButtonRef));
     renderer.addLayer(createInfoLayer(refs.stateRef, assets.rolePortraits, assets.roleCards));
-    renderer.addLayer(createLogLayer(refs.stateRef));
     renderer.addLayer(createTooltipLayer(refs.stateRef, refs.highlightRef));
 
     rendererRef.current = renderer;
@@ -57,7 +52,7 @@ export function useGameRenderer(
     return () => {
       rendererRef.current = null;
     };
-  }, [assets, refs.handStateRef, refs.highlightRef, refs.hoveredButtonRef, refs.stateRef]);
+  }, [assets, refs.highlightRef, refs.hoveredButtonRef, refs.stateRef]);
 
   // Resize handling
   const updateViewport = useCallback(() => {
@@ -70,7 +65,7 @@ export function useGameRenderer(
     const containerW = parent.clientWidth;
     const containerH = parent.clientHeight;
 
-    viewportRef.current = fitToContainer(containerW, containerH);
+    viewportRef.current = fitToCityBounds(containerW, containerH);
 
     const dpr = window.devicePixelRatio || 1;
     canvas.width = containerW * dpr;

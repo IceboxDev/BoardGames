@@ -1,5 +1,6 @@
 import type { SetCardData } from "@boardgames/core/games/set/types";
 import { useMemo } from "react";
+import type { SelectionColor } from "./SetCard";
 import SetCard from "./SetCard";
 
 interface CardGridProps {
@@ -8,6 +9,7 @@ interface CardGridProps {
   onToggle: (id: number) => void;
   disabled: boolean;
   hintedCardId: number | null;
+  selectionColor?: SelectionColor;
 }
 
 export default function CardGrid({
@@ -16,6 +18,7 @@ export default function CardGrid({
   onToggle,
   disabled,
   hintedCardId,
+  selectionColor,
 }: CardGridProps) {
   const rows = useMemo(() => Math.ceil(slots.length / 3), [slots.length]);
 
@@ -36,6 +39,7 @@ export default function CardGrid({
               disabled={disabled}
               animate
               hinted={slot.id === hintedCardId}
+              selectionColor={selectionColor}
             />
           ) : (
             <div className="h-full w-full rounded-xl border-2 border-dashed border-gray-700/30" />

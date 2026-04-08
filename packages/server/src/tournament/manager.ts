@@ -56,6 +56,20 @@ function buildPartial(entry: TournamentEntry): Record<string, unknown> {
     };
   }
 
+  if (entry.gameSlug === "sushi-go") {
+    const cfg = entry.config as { strategyAId: string; strategyBId: string };
+    return {
+      strategyA: cfg.strategyAId,
+      strategyB: cfg.strategyBId,
+      gamesPlayed: entry.gamesCompleted,
+      aWins: entry.aWins,
+      bWins: entry.bWins,
+      draws: entry.draws,
+      totalScoreA: entry.totalScoreA,
+      totalScoreB: entry.totalScoreB,
+    };
+  }
+
   if (entry.gameSlug === "exploding-kittens") {
     return {
       strategies: (entry.config as { strategies: string[] }).strategies,
@@ -69,6 +83,20 @@ function buildPartial(entry: TournamentEntry): Record<string, unknown> {
 
 function buildFinalResult(entry: TournamentEntry): Record<string, unknown> {
   if (entry.gameSlug === "lost-cities") {
+    const cfg = entry.config as { strategyAId: string; strategyBId: string };
+    return {
+      strategyA: cfg.strategyAId,
+      strategyB: cfg.strategyBId,
+      gamesPlayed: entry.gamesCompleted,
+      aWins: entry.aWins,
+      bWins: entry.bWins,
+      draws: entry.draws,
+      totalScoreA: entry.totalScoreA,
+      totalScoreB: entry.totalScoreB,
+    };
+  }
+
+  if (entry.gameSlug === "sushi-go") {
     const cfg = entry.config as { strategyAId: string; strategyBId: string };
     return {
       strategyA: cfg.strategyAId,
@@ -177,6 +205,19 @@ export function startTournament(gameSlug: string, config: Record<string, unknown
           entry.totalScoreB += msg.scoreB as number;
           if ((msg.scoreA as number) > (msg.scoreB as number)) entry.aWins++;
           else if ((msg.scoreB as number) > (msg.scoreA as number)) entry.bWins++;
+          else entry.draws++;
+        } else if (gameSlug === "sushi-go") {
+          const scoreA = msg.scoreA as number;
+          const scoreB = msg.scoreB as number;
+          insertGame.run(
+            id,
+            msg.gameIndex,
+            JSON.stringify({ scoreA, scoreB, aPlaysFirst: msg.aPlaysFirst }),
+          );
+          entry.totalScoreA += scoreA;
+          entry.totalScoreB += scoreB;
+          if (scoreA > scoreB) entry.aWins++;
+          else if (scoreB > scoreA) entry.bWins++;
           else entry.draws++;
         } else if (gameSlug === "exploding-kittens") {
           const strategies = (config as { strategies: string[] }).strategies;

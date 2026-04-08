@@ -3,7 +3,6 @@ import { getLegalActions } from "@boardgames/core/games/pandemic/rules";
 import type { DiseaseColor, GameState } from "@boardgames/core/games/pandemic/types";
 import { DISEASE_COLORS } from "@boardgames/core/games/pandemic/types";
 import { useCallback, useEffect, useRef } from "react";
-import type { HandState } from "../rendering/hand-layer";
 import type { HighlightState } from "../rendering/highlight-layer";
 import { testHit } from "../rendering/hit-test";
 import type { GameRenderer, Viewport } from "../rendering/renderer";
@@ -24,8 +23,9 @@ export function useInteraction(
   viewportRef: React.MutableRefObject<Viewport>,
   stateRef: React.MutableRefObject<GameState | null>,
   highlightRef: React.MutableRefObject<HighlightState>,
-  handStateRef: React.MutableRefObject<HandState>,
   hoveredButtonRef: React.MutableRefObject<string | null>,
+  selectedCardIdxRef: React.MutableRefObject<number | null>,
+  onClearSelection: () => void,
   dispatch: GameDispatch,
 ) {
   const modeRef = useRef<InteractionMode>({ type: "normal" });
@@ -63,7 +63,7 @@ export function useInteraction(
 
       if (!hit) {
         // Click on empty space — deselect
-        handStateRef.current = { selectedCardIdx: null };
+        onClearSelection();
         modeRef.current = { type: "normal" };
         highlightRef.current = {
           ...highlightRef.current,
@@ -87,7 +87,7 @@ export function useInteraction(
             });
           }
           modeRef.current = { type: "normal" };
-          handStateRef.current = { selectedCardIdx: null };
+          onClearSelection();
           highlightRef.current = {
             ...highlightRef.current,
             validDestinations: new Set(),
@@ -95,13 +95,6 @@ export function useInteraction(
           };
           return;
         }
-      }
-
-      // Handle discard mode
-      if (state.phase === "discard" && hit.type === "card") {
-        const cardIdx = hit.data as number;
-        dispatch({ kind: "discard_card", cardIdx });
-        return;
       }
 
       // Normal click handling
@@ -144,26 +137,18 @@ export function useInteraction(
         }
       }
 
-      if (hit.type === "card") {
-        const cardIdx = hit.data as number;
-        if (handStateRef.current.selectedCardIdx === cardIdx) {
-          handStateRef.current = { selectedCardIdx: null };
-        } else {
-          handStateRef.current = { selectedCardIdx: cardIdx };
-        }
-      }
-
       if (hit.type === "button" && state.phase === "actions") {
         const actionKind = hit.data as string;
-        handleButtonClick(actionKind, state, dispatch, modeRef, highlightRef, handStateRef);
+        handleButtonClick(actionKind, state, dispatch, modeRef, highlightRef, selectedCardIdxRef);
       }
     },
     [
       canvasRef,
       dispatch,
-      handStateRef,
       highlightRef,
+      onClearSelection,
       rendererRef.current,
+      selectedCardIdxRef,
       stateRef.current,
       viewportRef.current,
     ],
@@ -261,7 +246,7 @@ function handleButtonClick(
   dispatch: GameDispatch,
   modeRef: React.MutableRefObject<InteractionMode>,
   highlightRef: React.MutableRefObject<HighlightState>,
-  handStateRef: React.MutableRefObject<HandState>,
+  selectedCardIdxRef: React.MutableRefObject<number | null>,
 ): void {
   const legal = getLegalActions(state);
 
@@ -323,7 +308,7 @@ function handleButtonClick(
     }
 
     case "ops_move": {
-      const selectedIdx = handStateRef.current.selectedCardIdx;
+      const selectedIdx = selectedCardIdxRef.current;
       if (selectedIdx !== null) {
         modeRef.current = {
           type: "select_destination",

@@ -8,7 +8,7 @@ const { gameSlug, gameIndices } = config;
 
 function send(msg: unknown): void {
   try {
-    process.send!(msg);
+    process.send?.(msg);
   } catch {
     process.exit(0);
   }
@@ -53,6 +53,26 @@ if (gameSlug === "lost-cities") {
       kind: "game",
       gameIndex: i,
       winner,
+    });
+  }
+} else if (gameSlug === "sushi-go") {
+  const { simulateGame } = await import("@boardgames/core/games/sushi-go/tournament-runner");
+  type StrategyId = import("@boardgames/core/games/sushi-go/ai/strategy").StrategyId;
+
+  const { strategyAId, strategyBId } = config.config as {
+    strategyAId: StrategyId;
+    strategyBId: StrategyId;
+  };
+
+  for (const i of gameIndices) {
+    const aPlaysFirst = i % 2 === 0;
+    const result = simulateGame(strategyAId, strategyBId, aPlaysFirst, i);
+    send({
+      kind: "game",
+      gameIndex: i,
+      scoreA: result.scoreA,
+      scoreB: result.scoreB,
+      aPlaysFirst,
     });
   }
 } else {

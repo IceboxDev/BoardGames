@@ -2,18 +2,27 @@ import type { Viewport } from "./renderer";
 
 const REFERENCE_WIDTH = 1920;
 const REFERENCE_HEIGHT = 1080;
-const MIN_ZOOM = 0.5;
+const MIN_ZOOM = 0.4;
 const MAX_ZOOM = 2.0;
 
-export function fitToContainer(containerW: number, containerH: number): Viewport {
-  const scale = Math.min(containerW / REFERENCE_WIDTH, containerH / REFERENCE_HEIGHT);
+// Bounding box of all cities with margin for sprites, labels, cubes, and stations
+const CITY_BOUNDS = {
+  left: 150,
+  right: 1890,
+  top: 200,
+  bottom: 1000,
+};
 
-  const drawW = REFERENCE_WIDTH * scale;
-  const drawH = REFERENCE_HEIGHT * scale;
+export function fitToCityBounds(containerW: number, containerH: number): Viewport {
+  const contentW = CITY_BOUNDS.right - CITY_BOUNDS.left;
+  const contentH = CITY_BOUNDS.bottom - CITY_BOUNDS.top;
+  const scale = Math.min(containerW / contentW, containerH / contentH);
+  const drawW = contentW * scale;
+  const drawH = contentH * scale;
 
   return {
-    offsetX: (containerW - drawW) / 2,
-    offsetY: (containerH - drawH) / 2,
+    offsetX: (containerW - drawW) / 2 - CITY_BOUNDS.left * scale,
+    offsetY: (containerH - drawH) / 2 - CITY_BOUNDS.top * scale,
     scale,
     width: containerW,
     height: containerH,

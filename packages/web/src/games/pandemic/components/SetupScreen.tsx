@@ -116,6 +116,7 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
                               viewBox="0 0 20 20"
                               fill={n <= d.stars ? d.accent : "currentColor"}
                               className={`h-3 w-3 ${n <= d.stars ? "" : "text-gray-700"}`}
+                              aria-hidden="true"
                             >
                               <path
                                 fillRule="evenodd"
@@ -140,7 +141,7 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
           <button
             type="button"
             onClick={handleStart}
-            className="w-full rounded-xl bg-green-700 py-3 font-semibold text-white transition hover:bg-green-600"
+            className="rounded-xl bg-emerald-600 px-8 py-3 font-semibold text-white transition hover:bg-emerald-500"
           >
             Start Game
           </button>

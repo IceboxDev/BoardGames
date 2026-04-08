@@ -328,4 +328,15 @@ export const explodingKittensSpec: GameMachineSpec<
   isGameOver(snapshot) {
     return snapshot.matches("gameOver");
   },
+
+  getReplayLog(snapshot) {
+    const gs = snapshot.context.gameState;
+    if (gs.phase !== "game-over") return null;
+    return {
+      scoreA: gs.winner === 0 ? 1 : 0,
+      scoreB: gs.winner === 1 ? 1 : 0,
+      winner: gs.winner,
+      turnCount: gs.turnCount,
+    };
+  },
 };

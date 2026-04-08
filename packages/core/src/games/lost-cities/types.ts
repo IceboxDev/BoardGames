@@ -1,6 +1,6 @@
 export type ExpeditionColor = "yellow" | "blue" | "white" | "green" | "red";
 export type CardType = "wager" | "number";
-export type AIEngine = "ismcts-v1" | "ismcts-v3" | "ismcts-v4" | "ismcts-v5";
+export type AIEngine = "ismcts-v1" | "ismcts-v4" | "ismcts-v5" | "ismcts-v6";
 export type PlayerIndex = 0 | 1;
 
 export function opponent(p: PlayerIndex): PlayerIndex {
@@ -112,19 +112,19 @@ export interface ActionLogEntry {
 
 export const AI_ENGINE_LABELS: Record<AIEngine, string> = {
   "ismcts-v1": "Baseline",
-  "ismcts-v3": "Wager-First",
   "ismcts-v4": "Strict",
   "ismcts-v5": "Adaptive",
+  "ismcts-v6": "Adaptive+",
 };
 
 export const AI_ENGINE_DESCRIPTIONS: Record<AIEngine, string> = {
   "ismcts-v1": "Baseline MCTS with weak rollout heuristic. 4k iterations.",
-  "ismcts-v3":
-    "Wager-first priority, value-scaled discards, zero-tolerance for unplayable draws. 8k iterations.",
   "ismcts-v4":
     "Strict tree filters, wager-first, low-first ordering, tighter expedition starts, opponent-aware discards. 8k iterations.",
   "ismcts-v5":
     "Game-stage aware rollout, conservative starts, opponent-aware discards, known-card pinning. 16k iterations.",
+  "ismcts-v6":
+    "Adaptive rollout plus dead-to-both discard shaping and terminal penalty for stranded playable cards. 16k iterations.",
 };
 
 export const EXPEDITION_COLORS: ExpeditionColor[] = ["yellow", "blue", "white", "green", "red"];

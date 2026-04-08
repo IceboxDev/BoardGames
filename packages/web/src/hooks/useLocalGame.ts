@@ -9,6 +9,7 @@ export interface LocalGameState<TMachine extends AnyStateMachine> {
 export function useLocalGame<TMachine extends AnyStateMachine>(
   machine: TMachine,
 ): LocalGameState<TMachine> {
+  // biome-ignore lint/suspicious/noExplicitAny: xstate generic inference requires cast
   const [snapshot, send] = useMachine(machine as any);
 
   return {

@@ -1,218 +1,131 @@
-import { setGameMachine } from "@boardgames/core/games/set/machine";
-import { formatTime } from "@boardgames/core/games/set/metrics";
-import type { GamePhase } from "@boardgames/core/games/set/types";
-import { useEffect, useRef, useState } from "react";
-import type { SnapshotFrom } from "xstate";
-import useDocumentTitle from "../../hooks/useDocumentTitle";
-import { useLocalGame } from "../../hooks/useLocalGame";
-import CardGrid from "./components/CardGrid";
-import GameOverScreen from "./components/GameOverScreen";
+import type { PvpGameEvent, SetPvpPlayerView } from "@boardgames/core/games/set/pvp-machine";
+import type { PvpGameResult } from "@boardgames/core/games/set/pvp-types";
+import { useCallback, useEffect, useState } from "react";
+import { MatchHistory } from "../../components/match-history";
+import { useGameShell } from "../../hooks/useGameShell";
 import HighScores from "./components/HighScores";
-import LiveMetrics from "./components/LiveMetrics";
-import SetupScreen from "./components/SetupScreen";
+import PvpGameBoard from "./components/PvpGameBoard";
+import PvpGameOverScreen from "./components/PvpGameOverScreen";
+import TrainerGame from "./components/TrainerGame";
 import { useSetHistory } from "./hooks/useSetHistory";
 
-function toGamePhase(state: SnapshotFrom<typeof setGameMachine>): GamePhase {
-  if (state.matches("idle")) return "idle";
-  if (state.matches("dealing")) return "dealing";
-  if (state.matches("playing")) return "playing";
-  if (state.matches("selecting")) return "selecting";
-  if (state.matches("gameOver")) return "game-over";
-  return "idle";
-}
-
-function useElapsedTime(phase: GamePhase, startTime: number) {
-  const [elapsed, setElapsed] = useState(0);
-  useEffect(() => {
-    if (phase === "idle" || phase === "game-over" || startTime === 0) return;
-    const tick = () => setElapsed(Date.now() - startTime);
-    tick();
-    const id = setInterval(tick, 100);
-    return () => clearInterval(id);
-  }, [phase, startTime]);
-  return elapsed;
-}
+type HistoryTab = "trainer" | "pvp";
 
 export default function SetGame() {
-  useDocumentTitle("Set - Board Games");
+  const shell = useGameShell<SetPvpPlayerView, PvpGameEvent, PvpGameResult | null>("set");
 
-  const { snapshot: state, send } = useLocalGame(setGameMachine);
-  const ctx = state.context;
-  const phase = toGamePhase(state);
-  const elapsed = useElapsedTime(phase, ctx.gameStartTime);
+  const [showHistory, setShowHistory] = useState(false);
+  const [historyTab, setHistoryTab] = useState<HistoryTab>("trainer");
+  const { history: trainerHistory, clear: clearTrainer } = useSetHistory();
 
-  const { history, save, clear } = useSetHistory();
-  const savedRef = useRef(new Set<string>());
+  const goBackFromHistory = useCallback(() => setShowHistory(false), []);
 
-  const [showHighScores, setShowHighScores] = useState(false);
-
-  const canCallSet = state.matches({ dealing: "active" }) || state.matches("playing");
-  const isActive = !state.matches("idle") && !state.matches("gameOver");
-
+  // Back overrides for game-managed modes
   useEffect(() => {
-    if (state.matches("gameOver") && ctx.gameRecord && !savedRef.current.has(ctx.gameRecord.id)) {
-      savedRef.current.add(ctx.gameRecord.id);
-      save(ctx.gameRecord);
+    if (showHistory) {
+      shell.setBackOverride(goBackFromHistory);
+      return () => shell.setBackOverride(null);
     }
-  }, [state.matches, ctx.gameRecord, save]);
+    if (shell.mode === "solo" || shell.mode === "mp-playing" || shell.mode === "match-history") {
+      shell.setBackOverride(shell.goToMenu);
+      return () => shell.setBackOverride(null);
+    }
+    return undefined;
+  }, [showHistory, shell.mode, shell.goToMenu, shell.setBackOverride, goBackFromHistory]);
 
-  useEffect(() => {
-    const handler = (e: KeyboardEvent) => {
-      if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
-      if ((e.key === " " || e.key === "s" || e.key === "S") && canCallSet) {
-        e.preventDefault();
-        send({ type: "CALL_SET" });
-      }
-    };
-    window.addEventListener("keydown", handler);
-    return () => window.removeEventListener("keydown", handler);
-  }, [canCallSet, send]);
+  // Shell screens (menu, join room, lobby)
+  if (shell.screen) return shell.screen;
 
-  useEffect(() => {
-    if (!isActive) return;
-    const html = document.documentElement;
-    const body = document.body;
-    html.style.overflow = "hidden";
-    body.style.overflow = "hidden";
-    return () => {
-      html.style.overflow = "";
-      body.style.overflow = "";
-    };
-  }, [isActive]);
+  // --- Match History (from trainer "View History" or from mode picker) ---
 
-  if (showHighScores) {
+  if (showHistory || shell.mode === "match-history") {
+    const onBack = showHistory ? goBackFromHistory : shell.goToMenu;
     return (
-      <div className="mx-auto max-w-3xl px-6">
-        <HighScores history={history} onClear={clear} onBack={() => setShowHighScores(false)} />
+      <div className="mx-auto max-w-4xl px-6 py-8">
+        <div className="mb-6 flex items-center justify-between">
+          <h2 className="text-2xl font-bold text-white">Match History</h2>
+          <button
+            type="button"
+            onClick={onBack}
+            className="rounded-lg bg-gray-700 px-4 py-2 text-sm text-white transition hover:bg-gray-600"
+          >
+            Back
+          </button>
+        </div>
+
+        <div className="mb-6 flex gap-1 border-b border-gray-800 pb-px">
+          <button
+            type="button"
+            onClick={() => setHistoryTab("trainer")}
+            className={`px-4 py-2 text-sm font-medium border-b-2 transition ${
+              historyTab === "trainer"
+                ? "border-indigo-500 text-white"
+                : "border-transparent text-gray-500 hover:text-gray-300"
+            }`}
+          >
+            Trainer
+          </button>
+          <button
+            type="button"
+            onClick={() => setHistoryTab("pvp")}
+            className={`px-4 py-2 text-sm font-medium border-b-2 transition ${
+              historyTab === "pvp"
+                ? "border-indigo-500 text-white"
+                : "border-transparent text-gray-500 hover:text-gray-300"
+            }`}
+          >
+            PvP
+          </button>
+        </div>
+
+        {historyTab === "trainer" ? (
+          <HighScores history={trainerHistory} onClear={clearTrainer} onBack={onBack} />
+        ) : (
+          <MatchHistory gameSlug="set" labelResolver={() => "Human"} onBack={onBack} />
+        )}
       </div>
     );
   }
 
-  if (state.matches("idle")) {
+  // --- Trainer (solo mode) — fully client-side ---
+
+  if (shell.mode === "solo") {
+    return <TrainerGame onViewHistory={() => setShowHistory(true)} />;
+  }
+
+  // --- Multiplayer: Game over ---
+
+  if (shell.mode === "mp-playing" && shell.mp.result) {
+    const opponentIdx = 1 - shell.mp.playerIndex;
+    const opponentName =
+      shell.mp.roomState?.slots[opponentIdx]?.playerName ?? `Player ${opponentIdx + 1}`;
+
     return (
-      <SetupScreen
-        onStart={() => send({ type: "START_GAME" })}
-        onViewHighScores={() => setShowHighScores(true)}
+      <PvpGameOverScreen
+        result={shell.mp.result}
+        playerIndex={shell.mp.playerIndex}
+        opponentName={opponentName}
+        onBackToMenu={shell.goToMenu}
       />
     );
   }
 
-  if (state.matches("gameOver") && ctx.gameRecord) {
+  // --- Multiplayer: Active game ---
+
+  if (shell.mode === "mp-playing" && shell.mp.view) {
+    const opponentIdx = 1 - shell.mp.playerIndex;
+    const opponentName =
+      shell.mp.roomState?.slots[opponentIdx]?.playerName ?? `Player ${opponentIdx + 1}`;
+
     return (
-      <div className="mx-auto max-w-3xl px-6">
-        <GameOverScreen
-          record={ctx.gameRecord}
-          history={history}
-          onPlayAgain={() => send({ type: "START_GAME" })}
-          onViewHighScores={() => setShowHighScores(true)}
-        />
-      </div>
+      <PvpGameBoard
+        view={shell.mp.view}
+        playerIndex={shell.mp.playerIndex}
+        opponentName={opponentName}
+        send={shell.mp.send}
+      />
     );
   }
 
-  const message = ctx.message;
-  const isSelecting = state.matches("selecting");
-
-  return (
-    <div className="flex h-[calc(100dvh-45px)] overflow-hidden">
-      {/* Center — card grid */}
-      <div className="flex-1 min-h-0 min-w-0 p-2">
-        <CardGrid
-          slots={ctx.slots}
-          selected={ctx.selected}
-          onToggle={(id) => send({ type: "SELECT_CARD", cardId: id })}
-          disabled={state.matches("dealing")}
-          hintedCardId={ctx.hintedCardId}
-        />
-      </div>
-
-      {/* Right sidebar — stats, actions & metrics */}
-      <div className="flex flex-col gap-3 px-5 py-4 shrink-0 w-44 border-l border-gray-800">
-        <StatRow label="Time" value={formatTime(elapsed)} mono />
-        <StatRow label="SETs" value={String(ctx.score)} color="text-green-400" />
-        <StatRow label="Penalties" value={String(ctx.penalties)} color="text-red-400" />
-        <StatRow label="Net" value={String(ctx.score - ctx.penalties)} />
-        <StatRow label="Deck" value={String(ctx.deck.length)} color="text-gray-500" />
-
-        {(isSelecting || message) && (
-          <div className="pt-3 border-t border-gray-800">
-            {isSelecting ? (
-              <p className="text-xs text-yellow-300 font-semibold leading-snug">Select 3 cards</p>
-            ) : message ? (
-              <p
-                className={`text-xs font-semibold leading-snug ${
-                  message.startsWith("Valid")
-                    ? "text-green-400"
-                    : message.startsWith("Hint")
-                      ? "text-amber-400"
-                      : "text-red-400"
-                }`}
-              >
-                {message}
-              </p>
-            ) : null}
-          </div>
-        )}
-
-        <div className="flex-1" />
-
-        {isActive && ctx.perSetRecords.length > 0 && (
-          <LiveMetrics
-            perSetRecords={ctx.perSetRecords}
-            gameStartTime={ctx.gameStartTime}
-            score={ctx.score}
-            earlyCallCount={ctx.perSetRecords.filter((r) => r.calledDuringDeal).length}
-          />
-        )}
-
-        <div className="flex flex-col gap-2 pt-3 border-t border-gray-800">
-          <button
-            type="button"
-            onClick={() => send({ type: "PLUS_THREE" })}
-            disabled={!(state.matches("playing") && ctx.deck.length >= 3)}
-            className="rounded-lg bg-gray-700 px-3 py-2 text-xs text-white transition hover:bg-gray-600 disabled:opacity-40 w-full text-center"
-          >
-            +3 Cards
-          </button>
-          <button
-            type="button"
-            onClick={() => send({ type: "USE_HINT" })}
-            disabled={!state.matches("playing")}
-            className="rounded-lg bg-amber-700 px-3 py-2 text-xs text-white transition hover:bg-amber-600 disabled:opacity-40 w-full text-center"
-            title="Highlights one card from a valid SET (costs 3 penalties)"
-          >
-            Hint
-          </button>
-          <button
-            type="button"
-            onClick={() => send({ type: "START_GAME" })}
-            className="rounded-lg bg-gray-700 px-3 py-2 text-xs text-white transition hover:bg-gray-600 w-full text-center"
-          >
-            New Game
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function StatRow({
-  label,
-  value,
-  color = "text-white",
-  mono,
-}: {
-  label: string;
-  value: string;
-  color?: string;
-  mono?: boolean;
-}) {
-  return (
-    <div className="flex items-baseline justify-between gap-2">
-      <span className="text-xs text-gray-500 uppercase tracking-wide">{label}</span>
-      <span className={`text-base font-bold tabular-nums ${color} ${mono ? "font-mono" : ""}`}>
-        {value}
-      </span>
-    </div>
-  );
+  return null;
 }

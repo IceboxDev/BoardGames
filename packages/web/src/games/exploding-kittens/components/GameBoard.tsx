@@ -1,5 +1,7 @@
 import { getActiveDecider } from "@boardgames/core/games/exploding-kittens/rules";
 import type { Action, GameState } from "@boardgames/core/games/exploding-kittens/types";
+import { HistorySidebar } from "../../../components/action-log";
+import { AiThinkingIndicator } from "../../../components/ui";
 import ActionLog from "./ActionLog";
 import DefuseDialog, { ReinsertDialog } from "./DefuseDialog";
 import DiscardPile from "./DiscardPile";
@@ -40,8 +42,11 @@ export default function GameBoard({ state, onAction }: GameBoardProps) {
   const isActionPhaseForHuman = state.phase === "action-phase" && isHumanTurn;
 
   return (
-    <div className="flex gap-6">
-      <div className="flex-1 space-y-6">
+    <HistorySidebar
+      contentClassName="gap-2"
+      sidebar={<ActionLog entries={state.actionLog ?? []} players={state.players} />}
+    >
+      <div className="min-h-0 flex-1 space-y-6 overflow-y-auto">
         <PlayerStatus state={state} />
 
         <div className="flex gap-6 items-start">
@@ -72,22 +77,21 @@ export default function GameBoard({ state, onAction }: GameBoardProps) {
         {showPeek && <PeekOverlay state={state} onAction={onAction} />}
 
         {!isHumanTurn && state.phase !== "game-over" && (
-          <div className="rounded-lg bg-gray-800/50 py-3 text-center text-sm text-gray-400">
-            {state.phase === "nope-window"
-              ? `AI ${activeDecider} is deciding about Nope...`
-              : `AI ${activeDecider}'s turn...`}
-          </div>
+          <AiThinkingIndicator
+            message={
+              state.phase === "nope-window"
+                ? `AI ${activeDecider} is deciding about Nope...`
+                : `AI ${activeDecider}'s turn...`
+            }
+          />
         )}
+      </div>
 
-        {humanIndex >= 0 && (
+      {humanIndex >= 0 && (
+        <div className="shrink-0">
           <PlayerHand state={state} onAction={onAction} disabled={!isActionPhaseForHuman} />
-        )}
-      </div>
-
-      <div className="w-72 shrink-0">
-        <p className="mb-2 text-sm font-semibold text-gray-300">Action History</p>
-        <ActionLog entries={state.actionLog ?? []} players={state.players} />
-      </div>
-    </div>
+        </div>
+      )}
+    </HistorySidebar>
   );
 }

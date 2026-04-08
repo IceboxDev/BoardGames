@@ -6,6 +6,8 @@ export interface RemoteGameState<TView, TAction, TResult> {
   legalActions: TAction[];
   phase: string;
   activePlayer: number;
+  playerIndex: number;
+  isMyTurn: boolean;
   result: TResult | null;
   replayId: number | null;
   isConnected: boolean;
@@ -40,6 +42,8 @@ export function useRemoteGame<TView = unknown, TAction = unknown, TResult = unkn
     legalActions: session.legalActions,
     phase: started ? "active" : "idle",
     activePlayer: session.activePlayer,
+    playerIndex: session.playerIndex,
+    isMyTurn: session.activePlayer === session.playerIndex,
     result: session.result,
     replayId: session.replayId,
     isConnected: session.status === "connected",

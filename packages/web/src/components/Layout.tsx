@@ -1,12 +1,15 @@
 import { Link, Outlet, useLocation } from "react-router-dom";
+import { GameBackOverrideProvider } from "../contexts/GameBackOverrideProvider";
+import { useGameBackOverride } from "../hooks/useGameBackOverride";
 
-export default function Layout() {
+function LayoutInner() {
   const { pathname } = useLocation();
+  const { overrideRef } = useGameBackOverride();
   const isHome = pathname === "/";
 
   return (
-    <div className="min-h-screen">
-      <nav className="sticky top-0 z-50 border-b nav-border bg-surface-950/90 backdrop-blur-xl">
+    <div className="flex h-dvh min-h-0 flex-col overflow-hidden">
+      <nav className="sticky top-0 z-50 shrink-0 border-b nav-border bg-surface-950/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
           <Link to="/" className="flex items-center gap-2.5 group">
             <svg
@@ -28,6 +31,12 @@ export default function Layout() {
 
           <Link
             to="/"
+            onClick={(e) => {
+              if (overrideRef.current) {
+                e.preventDefault();
+                overrideRef.current();
+              }
+            }}
             className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-gray-500 transition hover:bg-surface-800 hover:text-gray-300 ${isHome ? "invisible" : ""}`}
             tabIndex={isHome ? -1 : undefined}
           >
@@ -43,9 +52,17 @@ export default function Layout() {
         </div>
       </nav>
 
-      <main>
+      <main className="flex min-h-0 flex-1 flex-col overflow-hidden">
         <Outlet />
       </main>
     </div>
+  );
+}
+
+export default function Layout() {
+  return (
+    <GameBackOverrideProvider>
+      <LayoutInner />
+    </GameBackOverrideProvider>
   );
 }
