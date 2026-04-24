@@ -1,5 +1,4 @@
 import type { StrategyId } from "@boardgames/core/games/sushi-go/ai/strategy";
-import { ALL_STRATEGIES } from "@boardgames/core/games/sushi-go/ai/strategy";
 import type {
   SushiGoEvent,
   SushiGoPlayerView,
@@ -7,7 +6,6 @@ import type {
 } from "@boardgames/core/games/sushi-go/machine";
 import type { SushiGoAction } from "@boardgames/core/games/sushi-go/types";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { TournamentGrid, TournamentMatchHistory } from "../../components/tournament";
 import { useGameShell } from "../../hooks/useGameShell";
 import GameBoard from "./components/GameBoard";
 import GameOverScreen from "./components/GameOverScreen";
@@ -19,11 +17,6 @@ export default function SushiGo() {
   const [lastPlayerCount, setLastPlayerCount] = useState(3);
   const [lastStrategyId, setLastStrategyId] = useState<StrategyId>("nash");
   const [showResults, setShowResults] = useState(false);
-  const [matchHistoryPair, setMatchHistoryPair] = useState<{
-    aId: string;
-    bId: string;
-    tournamentId: string;
-  } | null>(null);
   const lastViewRef = useRef<SushiGoPlayerView | null>(null);
 
   // Keep a snapshot of the last view for showing board state after game-over
@@ -32,14 +25,6 @@ export default function SushiGo() {
 
   // Back overrides for game-managed modes
   useEffect(() => {
-    if (shell.mode === "tournament") {
-      if (matchHistoryPair) {
-        shell.setBackOverride(() => setMatchHistoryPair(null));
-      } else {
-        shell.setBackOverride(shell.goToMenu);
-      }
-      return () => shell.setBackOverride(null);
-    }
     if (shell.mode === "solo") {
       shell.setBackOverride(() => {
         setShowResults(false);
@@ -55,7 +40,7 @@ export default function SushiGo() {
       return () => shell.setBackOverride(null);
     }
     return undefined;
-  }, [shell.mode, matchHistoryPair, shell.goToMenu, shell.setBackOverride]);
+  }, [shell.mode, shell.goToMenu, shell.setBackOverride]);
 
   const handleSoloStart = useCallback(
     (playerCount: number, strategyId: StrategyId) => {
@@ -83,33 +68,6 @@ export default function SushiGo() {
   // --- Shell-handled screens (menu, mp-join, mp-lobby) ---
 
   if (shell.screen) return shell.screen;
-
-  // --- Tournament ---
-
-  if (shell.mode === "tournament") {
-    if (matchHistoryPair) {
-      return (
-        <TournamentMatchHistory
-          strategies={ALL_STRATEGIES.map((s) => ({ id: s.id, label: s.label }))}
-          strategyAId={matchHistoryPair.aId}
-          strategyBId={matchHistoryPair.bId}
-          tournamentId={matchHistoryPair.tournamentId}
-          onBack={() => setMatchHistoryPair(null)}
-        />
-      );
-    }
-    return (
-      <div className="flex min-h-full flex-col p-4">
-        <TournamentGrid
-          gameSlug="sushi-go"
-          strategies={ALL_STRATEGIES.map((s) => ({ id: s.id, label: s.label }))}
-          onViewMatchHistory={(aId, bId, tournamentId) =>
-            setMatchHistoryPair({ aId, bId, tournamentId })
-          }
-        />
-      </div>
-    );
-  }
 
   // --- Solo setup ---
 
@@ -155,14 +113,7 @@ export default function SushiGo() {
   // --- Solo playing ---
 
   if (shell.mode === "solo" && shell.game.view) {
-    return (
-      <GameBoard
-        view={shell.game.view}
-        myIndex={0}
-        onAction={handleSoloAction}
-        isAiThinking={shell.game.isAiThinking}
-      />
-    );
+    return <GameBoard view={shell.game.view} myIndex={0} onAction={handleSoloAction} />;
   }
 
   // --- Multiplayer game over ---

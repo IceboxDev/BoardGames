@@ -1,7 +1,6 @@
 import {
   applyDrawFast,
   applyPlayFast,
-  countStrandedUnplayableToOwnExpeditions,
   countUnplayedPlayableToOwnExpeditions,
   getLegalDrawsInto,
   getLegalPlaysInto,
@@ -14,7 +13,6 @@ export type PickDrawBufFn = (s: FastState, buf: DrawActionFast[], count: number)
 
 export interface RolloutOptions {
   terminalUnplayedPenaltyPerCard?: number;
-  terminalStrandedPenaltyPerCard?: number;
 }
 
 export function rollout(
@@ -41,11 +39,6 @@ export function rollout(
   if (pen !== undefined && pen > 0) {
     raw -= pen * countUnplayedPlayableToOwnExpeditions(s, aiPlayer);
     raw += pen * countUnplayedPlayableToOwnExpeditions(s, 1 - aiPlayer);
-  }
-  const strandedPen = options?.terminalStrandedPenaltyPerCard;
-  if (strandedPen !== undefined && strandedPen > 0) {
-    raw -= strandedPen * countStrandedUnplayableToOwnExpeditions(s, aiPlayer);
-    raw += strandedPen * countStrandedUnplayableToOwnExpeditions(s, 1 - aiPlayer);
   }
   return raw;
 }

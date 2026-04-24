@@ -21,5 +21,10 @@ export default {
   mode: "remote",
   hasMatchHistory: true,
   hasTournament: true,
+  tournamentStrategies: [
+    { id: "random", label: "Random" },
+    { id: "heuristic-v1", label: "Heuristic v1" },
+  ],
+  tournamentShowScoreDiff: false,
   rulesUrl,
 } satisfies GameDefinition;

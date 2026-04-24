@@ -73,7 +73,7 @@ const adapter: GameSessionAdapter<
 
     return getLegalDraws(
       state.game.discardPiles,
-      state.game.drawPile,
+      state.game.drawPile.length,
       state.game.lastDiscardedColor,
     ).map((a) => ({
       phase: "draw" as const,

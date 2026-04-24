@@ -2,6 +2,7 @@ import { CITY_DATA } from "./city-graph";
 import { shuffle, sortHand } from "./deck";
 import { applyEvent, applyForecastReorder } from "./events";
 import { applyMedicAutoRemove, checkEradication, infectCity } from "./infection";
+import type { Rng } from "./rng";
 import { cloneGameState } from "./state-utils";
 import type { CityCard, DiseaseColor, EventCard, GameAction, GameState, PlayerCard } from "./types";
 import {
@@ -11,6 +12,7 @@ import {
   INFECTION_RATE_TRACK,
   MAX_RESEARCH_STATIONS,
 } from "./types";
+import { validateAction } from "./validation";
 
 // ---------------------------------------------------------------------------
 // Win / loss checks
@@ -52,8 +54,32 @@ function movePlayer(state: GameState, playerId: number, to: string): GameState {
 // Apply a single game action during the "actions" phase
 // ---------------------------------------------------------------------------
 
+/**
+ * Thrown by `applyAction` when the validator rejects an action. The UI is
+ * expected to only dispatch actions derived from `getLegalActions`, so hitting
+ * this path indicates a bug (stale UI state, race, or missing guard). We
+ * throw rather than silently returning state so the failure is loud and
+ * traceable — the state machine can catch it at the action boundary.
+ */
+export class InvalidActionError extends Error {
+  readonly action: GameAction;
+  readonly reason: string;
+  constructor(action: GameAction, reason: string) {
+    super(`[pandemic] rejected ${action.kind}: ${reason}`);
+    this.name = "InvalidActionError";
+    this.action = action;
+    this.reason = reason;
+  }
+}
+
 export function applyAction(state: GameState, action: GameAction): GameState {
-  if (state.result) return state;
+  // All actions go through the validator first. On failure we throw — the
+  // engine never silently half-applies an action, never mutates on an
+  // illegal input, and never trusts the caller.
+  const v = validateAction(state, action);
+  if (!v.ok) {
+    throw new InvalidActionError(action, v.reason);
+  }
 
   // Event cards don't consume an action and can be played in many phases
   if (action.kind === "play_event") {
@@ -69,9 +95,6 @@ export function applyAction(state: GameState, action: GameAction): GameState {
   if (action.kind === "discard_card") {
     return applyDiscard(state, action.cardIdx);
   }
-
-  // Actions phase
-  if (state.phase !== "actions" || state.actionsRemaining <= 0) return state;
 
   let s: GameState;
   const pId = state.currentPlayerIndex;
@@ -251,8 +274,13 @@ export function applyAction(state: GameState, action: GameAction): GameState {
       });
       break;
 
-    default:
-      return state;
+    default: {
+      // Exhaustiveness — play_event/forecast_reorder/discard_card are
+      // handled above; everything else is covered by the cases. The
+      // validator rejects unknown kinds, so reaching here is impossible.
+      const _never: never = action;
+      throw new Error(`Unhandled action kind: ${JSON.stringify(_never)}`);
+    }
   }
 
   // Decrement actions (pass already set to 0)
@@ -339,7 +367,7 @@ function applyTreatDisease(state: GameState, pId: number, color: DiseaseColor): 
   const player = s.players[pId];
   const loc = player.location;
   const cubes = s.cityCubes[loc][color];
-  if (cubes <= 0) return state;
+  // Validator already guarantees cubes > 0 at this city.
 
   const isMedic = player.role === "medic";
   const isCured = s.diseaseStatus[color] !== "active";
@@ -463,7 +491,7 @@ function applyDiscard(state: GameState, cardIdx: number): GameState {
   const s = cloneGameState(state);
   const playerIdx = s.discardingPlayerIndex ?? s.currentPlayerIndex;
   const player = s.players[playerIdx];
-  if (cardIdx < 0 || cardIdx >= player.hand.length) return state;
+  // Validator already bounds-checks cardIdx.
   const [card] = player.hand.splice(cardIdx, 1);
   s.playerDiscard.push(card);
 
@@ -571,7 +599,7 @@ export function applyDrawPhase(state: GameState): GameState {
 // Epidemic resolution
 // ---------------------------------------------------------------------------
 
-export function resolveEpidemic(state: GameState): GameState {
+export function resolveEpidemic(state: GameState, rng: Rng): GameState {
   if (state.result) return state;
 
   let s = cloneGameState(state);
@@ -613,7 +641,7 @@ export function resolveEpidemic(state: GameState): GameState {
   if (s.result) return s;
 
   // 3. Intensify: shuffle infection discard, place on top
-  const reshuffled = shuffle(s.infectionDiscard);
+  const reshuffled = shuffle(s.infectionDiscard, rng);
   s.infectionDeck = [...reshuffled, ...s.infectionDeck];
   s.infectionDiscard = [];
 

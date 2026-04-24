@@ -78,6 +78,14 @@ function buildPartial(entry: TournamentEntry): Record<string, unknown> {
     };
   }
 
+  if (entry.gameSlug === "durak") {
+    return {
+      strategies: (entry.config as { strategies: string[] }).strategies,
+      gamesPlayed: entry.gamesCompleted,
+      losses: { ...entry.ekWins },
+    };
+  }
+
   return {};
 }
 
@@ -115,6 +123,14 @@ function buildFinalResult(entry: TournamentEntry): Record<string, unknown> {
       strategies: (entry.config as { strategies: string[] }).strategies,
       gamesPlayed: entry.gamesCompleted,
       wins: { ...entry.ekWins },
+    };
+  }
+
+  if (entry.gameSlug === "durak") {
+    return {
+      strategies: (entry.config as { strategies: string[] }).strategies,
+      gamesPlayed: entry.gamesCompleted,
+      losses: { ...entry.ekWins },
     };
   }
 
@@ -224,6 +240,13 @@ export function startTournament(gameSlug: string, config: Record<string, unknown
           const winner = msg.winner as number;
           if (winner >= 0 && winner < strategies.length) {
             const sid = strategies[winner];
+            entry.ekWins[sid] = (entry.ekWins[sid] ?? 0) + 1;
+          }
+        } else if (gameSlug === "durak") {
+          const strategies = (config as { strategies: string[] }).strategies;
+          const durak = msg.durak as number;
+          if (durak >= 0 && durak < strategies.length) {
+            const sid = strategies[durak];
             entry.ekWins[sid] = (entry.ekWins[sid] ?? 0) + 1;
           }
         }

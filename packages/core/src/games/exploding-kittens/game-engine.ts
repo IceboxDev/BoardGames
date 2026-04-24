@@ -1,4 +1,5 @@
 import { dealGame, shuffleInPlace } from "./deck";
+import type { Rng } from "./rng";
 import type {
   Action,
   AIStrategyId,
@@ -9,13 +10,18 @@ import type {
   PlayerType,
 } from "./types";
 
+// Module-scoped active RNG — set by applyAction, used by internal helpers.
+// Safe in single-threaded JS; avoids threading rng through ~7 internal signatures.
+let activeRng: Rng = Math.random;
+
 // ── State Creation ──────────────────────────────────────────────────────────
 
 export function createInitialState(
   playerCount: number,
   strategies: (AIStrategyId | null)[],
+  rng: Rng = Math.random,
 ): GameState {
-  const deal = dealGame(playerCount);
+  const deal = dealGame(playerCount, rng);
 
   const players: PlayerState[] = deal.players.map((p, i) => ({
     index: i,
@@ -122,7 +128,8 @@ export function actionKey(action: Action): string {
 
 // ── Main Dispatch (Mutable) ─────────────────────────────────────────────────
 
-export function applyAction(state: GameState, action: Action): void {
+export function applyAction(state: GameState, action: Action, rng: Rng = Math.random): void {
+  activeRng = rng;
   switch (action.type) {
     case "play-card":
       handlePlayCard(state, action.cardId);
@@ -140,7 +147,7 @@ export function applyAction(state: GameState, action: Action): void {
       handlePassNope(state);
       break;
     case "select-target":
-      handleSelectTarget(state, action.targetIndex);
+      handleSelectTarget(state, action.targetIndex, rng);
       break;
     case "give-card":
       handleGiveCard(state, action.cardId);
@@ -167,9 +174,13 @@ export function applyAction(state: GameState, action: Action): void {
 }
 
 /** Immutable convenience wrapper — clones first, then applies. */
-export function applyActionPure(state: GameState, action: Action): GameState {
+export function applyActionPure(
+  state: GameState,
+  action: Action,
+  rng: Rng = Math.random,
+): GameState {
   const clone = cloneGameState(state);
-  applyAction(clone, action);
+  applyAction(clone, action, rng);
   return clone;
 }
 
@@ -499,7 +510,7 @@ function resolveShuffle(state: GameState): void {
     action: "shuffle",
   });
 
-  shuffleInPlace(state.drawPile);
+  shuffleInPlace(state.drawPile, activeRng);
   state.phase = "action-phase";
   state.nopeWindow = null;
 }
@@ -551,7 +562,7 @@ function resolveFiveDifferent(state: GameState, sourcePlayer: number): void {
 
 // ── Target Selection ────────────────────────────────────────────────────────
 
-function handleSelectTarget(state: GameState, targetIndex: number): void {
+function handleSelectTarget(state: GameState, targetIndex: number, rng: Rng): void {
   if (state.favorContext && state.favorContext.targetPlayer === -1) {
     state.phase = "resolving-favor";
     state.favorContext.targetPlayer = targetIndex;
@@ -574,7 +585,7 @@ function handleSelectTarget(state: GameState, targetIndex: number): void {
       return;
     }
 
-    const randomIdx = Math.floor(Math.random() * target.hand.length);
+    const randomIdx = Math.floor(rng() * target.hand.length);
     const stolenCard = target.hand[randomIdx];
     target.hand.splice(randomIdx, 1);
     state.players[sc.fromPlayer].hand.push(stolenCard);
@@ -754,8 +765,10 @@ function handleSkipDefuse(state: GameState): void {
 
 function advanceTurn(state: GameState): void {
   state.turnsRemaining -= 1;
+  state.turnCount += 1;
 
   if (state.turnsRemaining > 0) {
+    // Forced extra turn (e.g. from Attack) — same player, new turn number
     state.phase = "action-phase";
     return;
   }
@@ -763,7 +776,6 @@ function advanceTurn(state: GameState): void {
   state.phase = "action-phase";
   state.currentPlayerIndex = nextAlivePlayerIndex(state.players, state.currentPlayerIndex);
   state.turnsRemaining = 1;
-  state.turnCount += 1;
 }
 
 // ── Utilities ───────────────────────────────────────────────────────────────

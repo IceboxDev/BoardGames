@@ -63,18 +63,18 @@ export const CARD_LABELS: Record<CardType, string> = {
 };
 
 export const CARD_COLORS: Record<CardType, string> = {
-  tempura: "#d97706",
-  sashimi: "#059669",
-  dumpling: "#ca8a04",
-  "maki-1": "#dc2626",
-  "maki-2": "#dc2626",
-  "maki-3": "#dc2626",
-  "salmon-nigiri": "#e11d48",
-  "squid-nigiri": "#7c3aed",
-  "egg-nigiri": "#d97706",
-  pudding: "#ec4899",
-  wasabi: "#16a34a",
-  chopsticks: "#6b7280",
+  tempura: "#f5a623",
+  sashimi: "#2ecc71",
+  dumpling: "#f7dc6f",
+  "maki-1": "#e74c3c",
+  "maki-2": "#e74c3c",
+  "maki-3": "#e74c3c",
+  "salmon-nigiri": "#f1948a",
+  "squid-nigiri": "#bb8fce",
+  "egg-nigiri": "#f9e79f",
+  pudding: "#f5b7b1",
+  wasabi: "#58d68d",
+  chopsticks: "#aeb6bf",
 };
 
 export const CARD_EMOJI: Record<CardType, string> = {

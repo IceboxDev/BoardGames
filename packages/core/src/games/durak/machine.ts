@@ -180,6 +180,7 @@ function buildPlayerView(ctx: DurakContext, player: number): DurakPlayerView {
     table: gs.table,
     drawPileCount: gs.drawPile.length,
     discardPileCount: gs.discardPile.length,
+    topDiscardCard: gs.discardPile.length > 0 ? gs.discardPile[gs.discardPile.length - 1] : null,
     players: gs.players.map((p) => ({
       index: p.index,
       type: p.type,
@@ -236,11 +237,16 @@ export const durakSpec: GameMachineSpec<typeof durakMachine, DurakPlayerView, Ac
       const gs = snapshot.context.gameState;
       if (gs.phase !== "game-over") return null;
       const durak = gs.durak;
+      const scores = gs.players.map((_, i) => (durak === i ? 1 : 0));
       return {
-        scoreA: durak === 1 ? 1 : durak === null ? 0 : 0,
-        scoreB: durak === 0 ? 1 : durak === null ? 0 : 0,
+        // Legacy 2-player fields (backward compat with existing replay rows)
+        scoreA: scores[1] ?? 0,
+        scoreB: scores[0] ?? 0,
+        // N-player fields
+        scores,
         durak,
         turnCount: gs.turnCount,
+        playerCount: gs.players.length,
       };
     },
   };

@@ -79,4 +79,14 @@ function migrate(db: Database.Database): void {
         ON game_results(game_slug, client_id);
     `);
   }
+
+  const replayColumns = db.prepare("PRAGMA table_info(session_replays)").all() as {
+    name: string;
+  }[];
+  if (!replayColumns.some((c) => c.name === "scores_json")) {
+    db.exec(`
+      ALTER TABLE session_replays ADD COLUMN scores_json TEXT;
+      ALTER TABLE session_replays ADD COLUMN player_count INTEGER;
+    `);
+  }
 }

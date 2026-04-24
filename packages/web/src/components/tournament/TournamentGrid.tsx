@@ -236,34 +236,18 @@ export default function TournamentGrid({
   }, [results, strategies]);
 
   return (
-    <div className="mx-auto flex w-full max-w-3xl flex-col items-center gap-6 px-4 py-6">
-      <div className="text-center">
+    <div className="mx-auto flex min-h-0 w-full max-w-6xl flex-1 flex-col px-4 py-6">
+      {/* Header */}
+      <div className="shrink-0 text-center">
         <h2 className="text-3xl font-extrabold text-white">AI Tournament</h2>
         <p className="mt-2 text-sm text-gray-400">
           {gamesPerMatchup} games per matchup &middot; alternating first player
         </p>
       </div>
 
-      {results.length > 0 && (
-        <div className="w-full max-w-2xl rounded-xl bg-gray-800/60 px-4 py-3">
-          <h3 className="mb-2 text-xs font-semibold uppercase tracking-wider text-gray-500">
-            ELO ratings
-          </h3>
-          <div className="flex flex-wrap gap-x-6 gap-y-1">
-            {strategies.map((s) => (
-              <span key={s.id} className="text-sm">
-                <span className="text-gray-400">{s.label}:</span>{" "}
-                <span className="tabular-nums font-semibold text-white">
-                  {Math.round(eloRatings.get(s.id) ?? 1500)}
-                </span>
-              </span>
-            ))}
-          </div>
-        </div>
-      )}
-
+      {/* Progress bar (when running) */}
       {running && (
-        <div className="w-full max-w-md">
+        <div className="mx-auto mt-4 w-full max-w-md shrink-0">
           <div className="mb-1 text-center text-xs text-gray-400">
             {strategies.find((s) => s.id === running.aId)?.label} vs{" "}
             {strategies.find((s) => s.id === running.bId)?.label}
@@ -299,38 +283,70 @@ export default function TournamentGrid({
         </div>
       )}
 
-      <div className="w-full overflow-x-auto">
-        <table className="w-full border-collapse text-sm">
-          <thead>
-            <tr>
-              <th className="border-b border-gray-800 p-3 text-left text-xs font-medium uppercase tracking-wider text-gray-500">
-                Row vs Col
-              </th>
-              {strategies.map((col) => (
-                <th
-                  key={col.id}
-                  className="border-b border-gray-800 p-3 text-center text-xs font-medium uppercase tracking-wider text-gray-500"
-                >
-                  {col.label}
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody>
-            {strategies.map((row) => (
-              <tr key={row.id}>
-                <td className="whitespace-nowrap border-b border-gray-800/50 p-3 font-semibold text-white">
-                  {row.label}
-                </td>
+      {/* Grid — fills remaining space, no scroll */}
+      <div className="mt-6 flex w-full flex-1 flex-col text-sm">
+        {/* Header row */}
+        <div
+          className="grid h-10 shrink-0 items-center border-b border-gray-800"
+          style={{
+            gridTemplateColumns: `3.5rem 10rem repeat(${strategies.length}, 1fr)`,
+          }}
+        >
+          <div className="px-1 text-center text-[8px] font-semibold uppercase tracking-wider text-gray-500">
+            ELO
+          </div>
+          <div className="px-2 text-left text-[8px] font-semibold uppercase tracking-wider text-gray-500">
+            Row vs Col
+          </div>
+          {strategies.map((col) => (
+            <div
+              key={col.id}
+              className="px-1 text-center text-[8px] font-semibold uppercase leading-snug tracking-wide text-gray-500"
+            >
+              <span className="line-clamp-2">{col.label}</span>
+            </div>
+          ))}
+        </div>
+        {/* Data rows — equal height via CSS grid 1fr */}
+        <div
+          className="grid min-h-0 flex-1"
+          style={{ gridTemplateRows: `repeat(${strategies.length}, 1fr)` }}
+        >
+          {strategies.map((row) => {
+            const elo = Math.round(eloRatings.get(row.id) ?? 1500);
+            const hasResults = results.length > 0;
+            return (
+              <div
+                key={row.id}
+                className="grid min-h-0 items-stretch"
+                style={{
+                  gridTemplateColumns: `3.5rem 10rem repeat(${strategies.length}, 1fr)`,
+                }}
+              >
+                <div className="flex items-center justify-center border-b border-gray-800/50 px-1">
+                  {hasResults ? (
+                    <span className="tabular-nums text-xs font-semibold text-white">{elo}</span>
+                  ) : (
+                    <span className="text-gray-700">—</span>
+                  )}
+                </div>
+                <div className="flex min-w-0 items-center border-b border-gray-800/50 px-2">
+                  <span
+                    className="line-clamp-2 text-sm font-semibold leading-snug text-white"
+                    title={row.label}
+                  >
+                    {row.label}
+                  </span>
+                </div>
                 {strategies.map((col) => {
                   if (row.id === col.id) {
                     return (
-                      <td
+                      <div
                         key={col.id}
-                        className="border-b border-gray-800/50 p-3 text-center text-gray-600"
+                        className="flex items-center justify-center border-b border-gray-800/50 text-gray-600"
                       >
                         —
-                      </td>
+                      </div>
                     );
                   }
 
@@ -364,32 +380,38 @@ export default function TournamentGrid({
                   const matchup = direct ?? inverse;
 
                   return (
-                    <td key={col.id} className="border-b border-gray-800/50 p-3 text-center">
+                    <div key={col.id} className="border-b border-gray-800/50 p-0.5">
                       {winRate !== null && tournamentId && matchup ? (
                         <button
                           type="button"
-                          className="flex w-full cursor-pointer flex-col gap-0.5 rounded-md px-1 py-0.5 text-left transition-colors hover:bg-gray-800/60"
+                          className="flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-lg transition-colors hover:bg-gray-800/60"
                           onClick={() =>
                             onViewMatchHistory?.(matchup.strategyA, matchup.strategyB, tournamentId)
                           }
                         >
                           <span
-                            className={`text-base font-bold ${
+                            className={`text-sm font-bold tabular-nums leading-snug ${
                               winRate >= 50 ? "text-green-400" : "text-red-400"
                             }`}
                           >
                             {winRate.toFixed(1)}%
                           </span>
                           {showScoreDiff && (
-                            <span className="text-xs text-gray-500">
+                            <span className="text-[10px] tabular-nums leading-snug text-gray-500">
                               avg {(avgDiff ?? 0) > 0 ? "+" : ""}
                               {avgDiff}
                             </span>
                           )}
-                          <span className="text-[10px] text-gray-600">{gamesPlayed} games</span>
+                          <span className="text-[9px] leading-snug text-gray-600">
+                            {gamesPlayed} games
+                          </span>
                         </button>
                       ) : isRunning ? (
-                        <span className="animate-pulse text-xs text-indigo-400">Running...</span>
+                        <div className="flex h-full w-full items-center justify-center">
+                          <span className="animate-pulse text-[10px] text-indigo-400">
+                            Running...
+                          </span>
+                        </div>
                       ) : (
                         <button
                           type="button"
@@ -399,21 +421,22 @@ export default function TournamentGrid({
                             runPair(aId, bId);
                           }}
                           disabled={!!running}
-                          className="text-xs text-gray-500 transition-colors hover:text-indigo-400 disabled:opacity-30"
+                          className="flex h-full w-full items-center justify-center rounded-lg text-xs text-gray-500 transition-colors hover:text-indigo-400 disabled:opacity-30"
                         >
                           Run
                         </button>
                       )}
-                    </td>
+                    </div>
                   );
                 })}
-              </tr>
-            ))}
-          </tbody>
-        </table>
+              </div>
+            );
+          })}
+        </div>
       </div>
 
-      <div className="mt-2 flex flex-wrap items-center gap-4">
+      {/* Bottom actions */}
+      <div className="mt-4 flex shrink-0 flex-wrap items-center justify-center gap-4">
         <button
           type="button"
           onClick={runAll}

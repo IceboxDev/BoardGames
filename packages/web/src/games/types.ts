@@ -13,7 +13,7 @@ export interface GameDefinition {
   description: string;
   /** Short subtitle for the mode-picker screen (must fit one line). Falls back to `description`. */
   subtitle?: string;
-  thumbnail: string;
+  thumbnail?: string;
   backgroundImage?: string;
   accentColor: AccentColor;
   component: LazyExoticComponent<ComponentType>;
@@ -24,6 +24,10 @@ export interface GameDefinition {
   hasMatchHistory?: boolean;
   /** Whether the game has a tournament screen accessible from the mode-picker. */
   hasTournament?: boolean;
+  /** AI strategies for the tournament grid. Required when `hasTournament` is true. */
+  tournamentStrategies?: { id: string; label: string }[];
+  /** Whether to show average score diff in tournament grid cells (default true). */
+  tournamentShowScoreDiff?: boolean;
   /** URL to a PDF file with the game rules, shown from the mode-picker. */
   rulesUrl?: string;
 }

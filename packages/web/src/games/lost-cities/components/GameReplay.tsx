@@ -6,13 +6,39 @@ import type {
 } from "@boardgames/core/games/lost-cities/tournament-log";
 import {
   getReplaySteps,
-  replayStepToGameState,
   stepToReplayState,
 } from "@boardgames/core/games/lost-cities/tournament-log";
+import type {
+  Card,
+  DiscardPiles,
+  Expeditions,
+  PlayerIndex,
+} from "@boardgames/core/games/lost-cities/types";
 import { EXPEDITION_COLORS } from "@boardgames/core/games/lost-cities/types";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import useDocumentTitle from "../../../hooks/useDocumentTitle";
+import type { BoardState } from "./GameBoard";
 import GameBoard from "./GameBoard";
+
+function expeditionsFromColorArrays(cols: Card[][]): Expeditions {
+  return {
+    yellow: cols[0] ?? [],
+    blue: cols[1] ?? [],
+    white: cols[2] ?? [],
+    green: cols[3] ?? [],
+    red: cols[4] ?? [],
+  };
+}
+
+function discardPilesFromArrays(piles: Card[][]): DiscardPiles {
+  return {
+    yellow: piles[0] ?? [],
+    blue: piles[1] ?? [],
+    white: piles[2] ?? [],
+    green: piles[3] ?? [],
+    red: piles[4] ?? [],
+  };
+}
 
 interface GameReplayProps {
   game: TournamentGameLog;
@@ -125,9 +151,25 @@ export default function GameReplay({ game }: GameReplayProps) {
     `Replay #${game.gameIndex + 1} · ${labelA} vs ${labelB} · ${game.scoreA}–${game.scoreB} · Lost Cities`,
   );
 
-  const boardState = useMemo(() => replayStepToGameState(steps[stepIndex]), [steps, stepIndex]);
   const rs = replayStates[stepIndex];
   const currentStep = steps[stepIndex];
+
+  const boardState = useMemo<BoardState>(() => {
+    const gameOver = rs.hands[0].length === 0 && rs.hands[1].length === 0 && rs.drawPileCount === 0;
+    return {
+      expeditions: [
+        expeditionsFromColorArrays(rs.expeditions[0]),
+        expeditionsFromColorArrays(rs.expeditions[1]),
+      ],
+      discardPiles: discardPilesFromArrays(rs.discardPiles),
+      drawPileCount: rs.drawPileCount,
+      currentPlayer: rs.currentPlayer as PlayerIndex,
+      turnPhase: rs.turnPhase === 0 ? "play" : "draw",
+      phase: gameOver ? "game-over" : "playing",
+      lastDiscardedColor: null,
+      turnCount: currentStep.turn,
+    };
+  }, [rs, currentStep]);
 
   const highlightCardId = rs.lastAction?.cardId;
 

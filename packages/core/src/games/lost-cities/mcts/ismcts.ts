@@ -192,7 +192,6 @@ function runMCTSCoreWithStats(
 
     const rawReward = rollout(simState, player, strategy.pickPlay, strategy.pickDraw, {
       terminalUnplayedPenaltyPerCard: strategy.mctsConfig.terminalUnplayedPenaltyPerCard,
-      terminalStrandedPenaltyPerCard: strategy.mctsConfig.terminalStrandedPenaltyPerCard,
     });
     const reward = normalizeReward(rawReward);
 

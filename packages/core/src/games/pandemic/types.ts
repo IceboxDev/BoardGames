@@ -185,6 +185,53 @@ export type GameAction =
   | { kind: "forecast_reorder"; newOrder: number[] };
 
 // ---------------------------------------------------------------------------
+// Legal actions
+// ---------------------------------------------------------------------------
+//
+// `LegalAction` describes "actions that *could* be taken right now".  Some
+// actions (drive, direct flight, share knowledge...) are fully concrete —
+// their shape matches `GameAction` exactly and they can be dispatched
+// directly.  Others are *open*: one or more parameters are not yet chosen
+// (charter destination, cards to burn for a cure, event parameters, forecast
+// ordering).  Open variants carry the metadata the UI needs to prompt for
+// the missing parameters.  Callers must resolve open actions into a
+// `GameAction` before dispatching.
+//
+// Separating these two concerns eliminates sentinel strings like "__any__"
+// and gives the UI + AI a type-safe contract for what is and is not already
+// a ready-to-dispatch action.
+
+export type LegalAction =
+  // --- Concrete (shape identical to the matching GameAction variant) ---
+  | { kind: "drive_ferry"; to: string }
+  | { kind: "direct_flight"; cardIdx: number }
+  | { kind: "shuttle_flight"; to: string }
+  | { kind: "build_station"; relocateFrom?: string }
+  | { kind: "treat_disease"; color: DiseaseColor }
+  | { kind: "share_give"; targetId: number; cardIdx: number }
+  | { kind: "share_take"; fromId: number; cardIdx: number }
+  | { kind: "dispatcher_move_to_pawn"; targetId: number; toPlayerId: number }
+  | { kind: "dispatcher_move_as"; targetId: number; moveAction: MovementAction }
+  | { kind: "contingency_take"; discardIdx: number }
+  | { kind: "pass" }
+  | { kind: "discard_card"; cardIdx: number }
+  // --- Open (caller must supply remaining parameters before dispatching) ---
+  | { kind: "charter_flight"; destinations: string[] }
+  | { kind: "ops_move"; cardIdx: number; destinations: string[] }
+  | {
+      kind: "discover_cure";
+      color: DiseaseColor;
+      availableCardIndices: number[];
+      needed: number;
+    }
+  | {
+      kind: "play_event";
+      event: EventType;
+      source: "hand" | "contingency";
+    }
+  | { kind: "forecast_reorder" };
+
+// ---------------------------------------------------------------------------
 // Event params
 // ---------------------------------------------------------------------------
 
@@ -220,12 +267,15 @@ export type EventParams =
 export interface SetupConfig {
   numPlayers: 2 | 3 | 4;
   difficulty: 4 | 5 | 6;
+  /**
+   * Deterministic RNG seed. If omitted, the machine will pick a random
+   * seed via `randomSeed()` and record it so the game is reproducible
+   * from the replay log.
+   */
+  seed?: number;
 }
 
-export type MetaAction =
-  | { kind: "start_game"; config: SetupConfig }
-  | { kind: "animate_complete" }
-  | { kind: "reset" };
+export type MetaAction = { kind: "start_game"; config: SetupConfig } | { kind: "reset" };
 
 // ---------------------------------------------------------------------------
 // City data (used by city-graph)

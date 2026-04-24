@@ -2,6 +2,7 @@ import { gameRoomConfigs } from "@boardgames/core/protocol/room-config";
 import type { ReactNode } from "react";
 import { useCallback, useEffect, useState } from "react";
 import { JoinRoom, Lobby, ModeSelect } from "../components/multiplayer";
+import { TournamentGrid, TournamentMatchHistory } from "../components/tournament";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
 import useDocumentTitle from "./useDocumentTitle";
@@ -38,6 +39,10 @@ interface GameShellOptions<TView, TAction, TResult> {
   renderLobbyContent?: (mp: MultiplayerRoomState<TView, TAction, TResult>) => ReactNode;
   /** Config object passed to mp.startRoom() when the host starts from the lobby. */
   getLobbyStartConfig?: () => unknown;
+  /** Optional callback for exporting tournament game logs (e.g. Lost Cities human-readable format). */
+  tournamentExportLogFn?: (game: unknown) => unknown;
+  /** Optional callback when a tournament game is selected (e.g. for replay). */
+  tournamentOnSelectGame?: (game: unknown) => void;
 }
 
 export function useGameShell<TView = unknown, TAction = unknown, TResult = unknown>(
@@ -52,6 +57,13 @@ export function useGameShell<TView = unknown, TAction = unknown, TResult = unkno
   const mp = useMultiplayerRoom<TView, TAction, TResult>(slug);
   const [mode, setMode] = useState<ShellMode>("menu");
   const { setBackOverride } = useGameBackOverride();
+
+  // Tournament sub-navigation state
+  const [tournamentMatchPair, setTournamentMatchPair] = useState<{
+    aId: string;
+    bId: string;
+    tournamentId: string;
+  } | null>(null);
 
   // Track multiplayer phase transitions
   useEffect(() => {
@@ -72,12 +84,24 @@ export function useGameShell<TView = unknown, TAction = unknown, TResult = unkno
       });
       return () => setBackOverride(null);
     }
+    if (mode === "tournament") {
+      if (tournamentMatchPair) {
+        setBackOverride(() => setTournamentMatchPair(null));
+      } else {
+        setBackOverride(() => {
+          setTournamentMatchPair(null);
+          setMode("menu");
+        });
+      }
+      return () => setBackOverride(null);
+    }
     return undefined;
-  }, [mode, setBackOverride, mp.leaveRoom]);
+  }, [mode, tournamentMatchPair, setBackOverride, mp.leaveRoom]);
 
   const goToMenu = useCallback(() => {
     game.reset();
     mp.reset();
+    setTournamentMatchPair(null);
     setMode("menu");
   }, [game.reset, mp.reset]);
 
@@ -127,6 +151,31 @@ export function useGameShell<TView = unknown, TAction = unknown, TResult = unkno
         {options?.renderLobbyContent?.(mp)}
       </Lobby>
     );
+  } else if (mode === "tournament" && def.tournamentStrategies) {
+    if (tournamentMatchPair) {
+      screen = (
+        <TournamentMatchHistory
+          strategies={def.tournamentStrategies}
+          strategyAId={tournamentMatchPair.aId}
+          strategyBId={tournamentMatchPair.bId}
+          tournamentId={tournamentMatchPair.tournamentId}
+          onBack={() => setTournamentMatchPair(null)}
+          onSelectGame={options?.tournamentOnSelectGame}
+          exportLogFn={options?.tournamentExportLogFn}
+        />
+      );
+    } else {
+      screen = (
+        <TournamentGrid
+          gameSlug={slug}
+          strategies={def.tournamentStrategies}
+          showScoreDiff={def.tournamentShowScoreDiff}
+          onViewMatchHistory={(aId, bId, tournamentId) =>
+            setTournamentMatchPair({ aId, bId, tournamentId })
+          }
+        />
+      );
+    }
   }
 
   return { mode, def, game, mp, screen, goToMenu, setBackOverride };

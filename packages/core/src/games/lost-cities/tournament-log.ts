@@ -1,14 +1,6 @@
 import { CARD_INFO, NUM_COLORS } from "./mcts/types";
 import { scoreGame } from "./scoring";
-import type {
-  Card,
-  DiscardPiles,
-  ExpeditionColor,
-  Expeditions,
-  GameState,
-  PlayerIndex,
-  TurnPhase,
-} from "./types";
+import type { Card, ExpeditionColor, GameState } from "./types";
 import { EXPEDITION_COLORS } from "./types";
 
 export const REPLAY_FORMAT_VERSION = 2;
@@ -201,57 +193,6 @@ export function stepsToActionLogEntriesThroughStep(
   if (throughIndex < 0 || steps.length === 0) return [];
   const end = Math.min(throughIndex + 1, steps.length);
   return stepsToActionLogEntries(steps.slice(0, end));
-}
-
-function expeditionsFromColorArrays(cols: Card[][]): Expeditions {
-  const out: Expeditions = {
-    yellow: [],
-    blue: [],
-    white: [],
-    green: [],
-    red: [],
-  };
-  for (let i = 0; i < EXPEDITION_COLORS.length; i++) {
-    const color = EXPEDITION_COLORS[i] as ExpeditionColor;
-    out[color] = cols[i] ?? [];
-  }
-  return out;
-}
-
-function discardPilesFromArrays(piles: Card[][]): DiscardPiles {
-  const out: DiscardPiles = {
-    yellow: [],
-    blue: [],
-    white: [],
-    green: [],
-    red: [],
-  };
-  for (let i = 0; i < EXPEDITION_COLORS.length; i++) {
-    const color = EXPEDITION_COLORS[i] as ExpeditionColor;
-    out[color] = piles[i] ?? [];
-  }
-  return out;
-}
-
-/** Full {@link GameState} for the same UI components as live play (replay / read-only). */
-export function replayStepToGameState(step: ReplayStepV2): GameState {
-  const rs = stepToReplayState(step);
-  const gameOver = rs.hands[0].length === 0 && rs.hands[1].length === 0 && rs.drawPileCount === 0;
-  return {
-    drawPile: new Array(rs.drawPileCount).fill(null) as unknown as Card[],
-    discardPiles: discardPilesFromArrays(rs.discardPiles),
-    expeditions: [
-      expeditionsFromColorArrays(rs.expeditions[0]),
-      expeditionsFromColorArrays(rs.expeditions[1]),
-    ],
-    hands: rs.hands,
-    currentPlayer: rs.currentPlayer as PlayerIndex,
-    turnPhase: (rs.turnPhase === 0 ? "play" : "draw") as TurnPhase,
-    phase: gameOver ? "game-over" : "playing",
-    lastDiscardedColor: null,
-    turnCount: step.turn,
-    knownOpponentCards: [[], []],
-  };
 }
 
 /** Convert ReplayStepV2 to ReplayState for UI consumption */

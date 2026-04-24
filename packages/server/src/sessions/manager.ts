@@ -75,14 +75,29 @@ function subscribeSession(active: ActiveSession): void {
           const log = active.spec.getReplayLog(snapshot) as {
             scoreA?: number;
             scoreB?: number;
+            scores?: number[];
+            playerCount?: number;
+            durak?: number | null;
           } | null;
           if (log) {
-            const result = active.spec.getResult(snapshot) as { winner?: unknown } | null;
-            const winner = result?.winner === 0 ? "p0" : result?.winner === 1 ? "p1" : "draw";
+            const result = active.spec.getResult(snapshot) as {
+              winner?: unknown;
+              durak?: unknown;
+            } | null;
+            let winner: string;
+            if (log.durak !== undefined && log.durak !== null) {
+              winner = `p${log.durak}`;
+            } else if (result?.winner === 0) {
+              winner = "p0";
+            } else if (result?.winner === 1) {
+              winner = "p1";
+            } else {
+              winner = "draw";
+            }
             const db = getDb();
             const info = db
               .prepare(
-                "INSERT INTO session_replays (game_slug, ai_engine, replay_json, score_p0, score_p1, winner) VALUES (?, ?, ?, ?, ?, ?)",
+                "INSERT INTO session_replays (game_slug, ai_engine, replay_json, score_p0, score_p1, winner, scores_json, player_count) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
               )
               .run(
                 active.gameSlug,
@@ -95,6 +110,8 @@ function subscribeSession(active: ActiveSession): void {
                 log.scoreA ?? null,
                 log.scoreB ?? null,
                 winner,
+                log.scores ? JSON.stringify(log.scores) : null,
+                log.playerCount ?? null,
               );
             replayId = Number(info.lastInsertRowid);
           }

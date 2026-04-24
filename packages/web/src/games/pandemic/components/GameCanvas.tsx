@@ -1,12 +1,15 @@
-import type { GameState } from "@boardgames/core/games/pandemic/types";
+import type { DiseaseColor, GameState } from "@boardgames/core/games/pandemic/types";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { HistorySidebar } from "../../../components/action-log";
+import { ActionLog } from "../../../components/action-log";
+import { GameScreen } from "../../../components/game-layout";
 import { useGameRenderer } from "../hooks/useGameRenderer";
 import type { GameDispatch } from "../hooks/useGameState";
+import type { DiscoverCureOption } from "../hooks/useInteraction";
 import { useInteraction } from "../hooks/useInteraction";
+import { mapPandemicLog } from "../log-mapper";
 import type { HighlightState } from "../rendering/highlight-layer";
 import type { GameAssets } from "../rendering/sprites";
-import PandemicActionLog from "./ActionLog";
+import CureCardSelectionModal from "./CureCardSelectionModal";
 import PlayerHandOverlay from "./PlayerHandOverlay";
 
 interface GameCanvasProps {
@@ -35,6 +38,27 @@ export default function GameCanvas({ state, dispatch, assets }: GameCanvasProps)
 
   const clearSelection = useCallback(() => setSelectedCardIdx(null), []);
 
+  // Modal state for cure-card selection. Lifted here so the canvas hook can
+  // remain side-effect-free — useInteraction just fires the callback and
+  // this component owns the React tree.
+  const [cureOptions, setCureOptions] = useState<DiscoverCureOption[] | null>(null);
+
+  const handleRequestCureSelection = useCallback((options: DiscoverCureOption[]) => {
+    setCureOptions(options);
+  }, []);
+
+  const handleCureConfirm = useCallback(
+    (color: DiseaseColor, cardIndices: number[]) => {
+      dispatch({ kind: "discover_cure", color, cardIndices });
+      setCureOptions(null);
+    },
+    [dispatch],
+  );
+
+  const handleCureCancel = useCallback(() => {
+    setCureOptions(null);
+  }, []);
+
   // Keep stateRef in sync
   useEffect(() => {
     stateRef.current = state;
@@ -56,15 +80,16 @@ export default function GameCanvas({ state, dispatch, assets }: GameCanvasProps)
     selectedCardIdxRef,
     clearSelection,
     dispatch,
+    handleRequestCureSelection,
   );
 
   const roles = useMemo(() => state.players.map((p) => p.role), [state.players]);
 
   return (
-    <HistorySidebar
-      className="bg-black"
+    <GameScreen
+      background="bg-black"
       noPadding
-      sidebar={<PandemicActionLog actionLog={state.actionLog} roles={roles} />}
+      sidebar={<ActionLog blocks={mapPandemicLog(state.actionLog, roles)} />}
     >
       <div className="relative h-full w-full">
         <canvas ref={canvasRef} className="block h-full w-full" />
@@ -74,7 +99,15 @@ export default function GameCanvas({ state, dispatch, assets }: GameCanvasProps)
           selectedCardIdx={selectedCardIdx}
           onSelectCard={setSelectedCardIdx}
         />
+        {cureOptions && (
+          <CureCardSelectionModal
+            state={state}
+            options={cureOptions}
+            onConfirm={handleCureConfirm}
+            onCancel={handleCureCancel}
+          />
+        )}
       </div>
-    </HistorySidebar>
+    </GameScreen>
   );
 }

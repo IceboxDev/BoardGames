@@ -11,7 +11,6 @@ import { buildGameLog, gameStateToSnapshot } from "./tournament-log";
 import type {
   ActionLogEntry,
   AIEngine,
-  AIMove,
   Card,
   DrawAction,
   ExpeditionColor,
@@ -88,8 +87,6 @@ function findCard(hand: Card[], cardId: number): Card {
 // Machine
 // ---------------------------------------------------------------------------
 
-const PLACEHOLDER_STATE = null as unknown as GameState;
-
 export const lostCitiesMachine = setup({
   types: {} as {
     context: LostCitiesContext;
@@ -103,6 +100,10 @@ export const lostCitiesMachine = setup({
   actors: {
     computeAiMove: fromPromise(
       async ({ input }: { input: { state: GameState; engine: AIEngine } }) => {
+        // Yield a macrotask so React paints the human's last action before MCTS
+        // blocks the main thread. Without this the UI sits on the pre-action
+        // state for the entire MCTS budget (hundreds of ms).
+        await new Promise((resolve) => setTimeout(resolve, 0));
         const strategy = getStrategy(input.engine);
         return runISMCTSWithStats(input.state, 1, strategy);
       },
@@ -208,47 +209,6 @@ export const lostCitiesMachine = setup({
       };
     }),
 
-    applyAiPlay: assign(({ context, event }) => {
-      const { move, stats } = (event as unknown as { output: { move: AIMove; stats: MCTSStats } })
-        .output;
-      const entry: ActionLogEntry = {
-        turn: context.gameState.turnCount,
-        player: 1,
-        action: move.play.kind === "expedition" ? "play-expedition" : "play-discard",
-        card: move.play.card,
-      };
-      const newGs = applyPlay(context.gameState, move.play);
-      const playMcts: MCTSActionStats[] = stats.playActions.map((a) => ({
-        key: a.key,
-        cardId: a.cardId,
-        kind: a.kind,
-        visits: a.visits,
-        meanNormalizedReward: a.meanNormalizedReward,
-        chosen: a.key === stats.chosenPlayKey,
-      }));
-      const step: ReplayStepV2 = {
-        turn: context.replaySteps.length,
-        phase: "play",
-        player: 1,
-        state: gameStateToSnapshot(newGs),
-        action: {
-          cardId: move.play.card.id,
-          kind: move.play.kind === "expedition" ? 0 : 1,
-          ...(move.play.kind === "discard"
-            ? { color: EXPEDITION_COLORS.indexOf(move.play.card.color) }
-            : {}),
-        },
-        mcts: { play: { actions: playMcts } },
-      };
-      return {
-        gameState: newGs,
-        lastAiStats: stats,
-        pendingAiDraw: move.draw,
-        actionLog: [...context.actionLog, entry],
-        replaySteps: [...context.replaySteps, step],
-      };
-    }),
-
     applyAiDraw: assign(({ context }) => {
       const gs = context.gameState;
       const draw = context.pendingAiDraw;
@@ -303,15 +263,15 @@ export const lostCitiesMachine = setup({
 }).createMachine({
   id: "lostCities",
   initial: "idle",
-  context: {
-    gameState: PLACEHOLDER_STATE,
+  context: () => ({
+    gameState: createInitialState(),
     aiEngine: "ismcts-v4" as AIEngine,
     humanPlayers: [0] as number[],
-    lastAiStats: null,
-    pendingAiDraw: null,
+    lastAiStats: null as MCTSStats | null,
+    pendingAiDraw: null as DrawAction | null,
     actionLog: [] as ActionLogEntry[],
     replaySteps: [] as ReplayStepV2[],
-  },
+  }),
 
   states: {
     idle: {
@@ -361,7 +321,48 @@ export const lostCitiesMachine = setup({
                   state: context.gameState,
                   engine: context.aiEngine,
                 }),
-                onDone: { target: "playApplied", actions: "applyAiPlay" },
+                onDone: {
+                  target: "playApplied",
+                  actions: assign(({ context, event }) => {
+                    const { move, stats } = event.output;
+                    const entry: ActionLogEntry = {
+                      turn: context.gameState.turnCount,
+                      player: 1,
+                      action: move.play.kind === "expedition" ? "play-expedition" : "play-discard",
+                      card: move.play.card,
+                    };
+                    const newGs = applyPlay(context.gameState, move.play);
+                    const playMcts: MCTSActionStats[] = stats.playActions.map((a) => ({
+                      key: a.key,
+                      cardId: a.cardId,
+                      kind: a.kind,
+                      visits: a.visits,
+                      meanNormalizedReward: a.meanNormalizedReward,
+                      chosen: a.key === stats.chosenPlayKey,
+                    }));
+                    const step: ReplayStepV2 = {
+                      turn: context.replaySteps.length,
+                      phase: "play",
+                      player: 1,
+                      state: gameStateToSnapshot(newGs),
+                      action: {
+                        cardId: move.play.card.id,
+                        kind: move.play.kind === "expedition" ? 0 : 1,
+                        ...(move.play.kind === "discard"
+                          ? { color: EXPEDITION_COLORS.indexOf(move.play.card.color) }
+                          : {}),
+                      },
+                      mcts: { play: { actions: playMcts } },
+                    };
+                    return {
+                      gameState: newGs,
+                      lastAiStats: stats,
+                      pendingAiDraw: move.draw,
+                      actionLog: [...context.actionLog, entry],
+                      replaySteps: [...context.replaySteps, step],
+                    };
+                  }),
+                },
                 onError: { target: "#lostCities.active.routing" },
               },
             },
@@ -437,7 +438,7 @@ function buildLegalActions(ctx: LostCitiesContext, player: number): LostCitiesLe
     }));
   }
 
-  return getLegalDraws(gs.discardPiles, gs.drawPile, gs.lastDiscardedColor).map((a) => ({
+  return getLegalDraws(gs.discardPiles, gs.drawPile.length, gs.lastDiscardedColor).map((a) => ({
     phase: "draw" as const,
     action: a,
   }));

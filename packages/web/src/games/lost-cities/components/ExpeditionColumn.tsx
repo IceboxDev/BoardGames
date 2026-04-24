@@ -1,6 +1,5 @@
-import { scoreExpedition } from "@boardgames/core/games/lost-cities/scoring";
 import type { Card as CardData, ExpeditionColor } from "@boardgames/core/games/lost-cities/types";
-import { COLOR_HEX, COLOR_LABELS } from "@boardgames/core/games/lost-cities/types";
+import { COLOR_LABELS } from "@boardgames/core/games/lost-cities/types";
 import Card, { CardPlaceholder } from "./Card";
 
 interface ExpeditionColumnProps {
@@ -18,21 +17,10 @@ export default function ExpeditionColumn({
   onClick,
   glowing = false,
 }: ExpeditionColumnProps) {
-  const hex = COLOR_HEX[color];
-  const score = scoreExpedition(color, cards);
   const displayCards = isPlayer ? cards : [...cards].reverse();
 
   return (
-    <div className="flex flex-col items-center gap-1 min-w-14">
-      {!isPlayer && (
-        <span
-          className="text-[0.6rem] font-bold tabular-nums"
-          style={{ color: score.started ? hex : "rgb(107 114 128)" }}
-        >
-          {score.started ? score.total : "—"}
-        </span>
-      )}
-
+    <div className="flex flex-col items-center min-w-14">
       <div
         className={["relative flex flex-col items-center", isPlayer ? "" : "flex-col-reverse"].join(
           " ",
@@ -67,15 +55,6 @@ export default function ExpeditionColumn({
           ))
         )}
       </div>
-
-      {isPlayer && (
-        <span
-          className="text-[0.6rem] font-bold tabular-nums"
-          style={{ color: score.started ? hex : "rgb(107 114 128)" }}
-        >
-          {score.started ? score.total : "—"}
-        </span>
-      )}
     </div>
   );
 }

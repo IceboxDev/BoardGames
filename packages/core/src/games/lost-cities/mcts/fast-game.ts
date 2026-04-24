@@ -1,6 +1,5 @@
 import {
   CARD_INFO,
-  CARDS_PER_COLOR,
   DISCARD_KEYS,
   DRAW_DISCARD_KEYS,
   DRAW_PILE_KEY,
@@ -58,53 +57,6 @@ export function countUnplayedPlayableToOwnExpeditions(s: FastState, player: numb
   for (const cardId of s.hands[player]) {
     const c = CARD_INFO[cardId].color;
     if (canPlayToExpedition(cardId, s.expeditions[expOffset + c])) {
-      n++;
-    }
-  }
-  return n;
-}
-
-/** Cards in hand that cannot be played to own expedition in that color (ordering deadlock). Empty expedition accepts any card. */
-export function countStrandedUnplayableToOwnExpeditions(s: FastState, player: number): number {
-  const expOffset = player * NUM_COLORS;
-  let n = 0;
-  for (const cardId of s.hands[player]) {
-    const c = CARD_INFO[cardId].color;
-    const exp = s.expeditions[expOffset + c];
-    if (exp.length > 0 && !canPlayToExpedition(cardId, exp)) {
-      n++;
-    }
-  }
-  return n;
-}
-
-/** Cards of `color` still in draw pile, hands, and discard piles (full determinized rollout state). */
-export function countCardsOfColorRemainingInPlay(s: FastState, color: number): number {
-  let onExp = 0;
-  for (let p = 0; p < 2; p++) {
-    onExp += s.expeditions[p * NUM_COLORS + color].length;
-  }
-  return CARDS_PER_COLOR - onExp;
-}
-
-/** Number cards of `color` with value strictly below `maxValue` in draw pile and opponent hand (IS-MCTS rollout: full state). */
-export function countUnseenLowerNumbersInColorForPlayer(
-  s: FastState,
-  player: number,
-  color: number,
-  maxValue: number,
-): number {
-  const opp = 1 - player;
-  let n = 0;
-  for (const id of s.drawPile) {
-    const inf = CARD_INFO[id];
-    if (inf.color === color && inf.type === 1 && inf.value < maxValue) {
-      n++;
-    }
-  }
-  for (const id of s.hands[opp]) {
-    const inf = CARD_INFO[id];
-    if (inf.color === color && inf.type === 1 && inf.value < maxValue) {
       n++;
     }
   }

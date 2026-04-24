@@ -1,13 +1,21 @@
 import { applyAction } from "@boardgames/core/games/pandemic/game-engine";
+import { getPublicView } from "@boardgames/core/games/pandemic/player-view";
+import { createRng, randomSeed } from "@boardgames/core/games/pandemic/rng";
 import { getLegalActions } from "@boardgames/core/games/pandemic/rules";
 import { createGame } from "@boardgames/core/games/pandemic/setup";
-import type { GameAction, GameResult, GameState } from "@boardgames/core/games/pandemic/types";
+import type {
+  GameAction,
+  GameResult,
+  GameState,
+  LegalAction,
+} from "@boardgames/core/games/pandemic/types";
 import { registerAdapter } from "../adapter-registry.ts";
 import type { GameSessionAdapter } from "../types.ts";
 
 interface PandemicConfig {
   numPlayers: 2 | 3 | 4;
   difficulty: 4 | 5 | 6;
+  seed?: number;
 }
 
 const adapter: GameSessionAdapter<
@@ -15,11 +23,12 @@ const adapter: GameSessionAdapter<
   GameAction,
   PandemicConfig,
   GameState,
-  GameAction,
+  LegalAction,
   GameResult | null
 > = {
   createInitialState(config) {
-    return createGame(config);
+    const seed = config.seed ?? randomSeed();
+    return createGame({ ...config, seed }, createRng(seed));
   },
 
   getActivePlayer(state) {
@@ -42,8 +51,8 @@ const adapter: GameSessionAdapter<
     return state.result;
   },
 
-  getPlayerView(state, _player) {
-    return state;
+  getPlayerView(state, player) {
+    return getPublicView(state, player);
   },
 };
 

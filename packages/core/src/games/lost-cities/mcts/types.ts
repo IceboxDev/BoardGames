@@ -59,8 +59,6 @@ export interface MCTSConfig {
   useSoftDrawFilter?: boolean; // when true, only filter unplayable draws with no color support
   /** MCTS-only: per card in hand still playable on own expeditions at game end (rollout terminal shaping). */
   terminalUnplayedPenaltyPerCard?: number;
-  /** MCTS-only: softer penalty for cards stranded (unplayable) on own expeditions at game end. Keep lighter than unplayed if both are set. */
-  terminalStrandedPenaltyPerCard?: number;
 }
 
 export const DEFAULT_CONFIG: MCTSConfig = {

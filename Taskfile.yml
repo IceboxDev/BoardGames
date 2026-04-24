@@ -1,0 +1,74 @@
+version: "3"
+
+tasks:
+  default:
+    desc: List available tasks
+    cmds:
+      - task --list
+
+  install:
+    desc: Install dependencies
+    cmds:
+      - pnpm install
+
+  dev:
+    desc: Run web frontend (Vite at http://localhost:5173)
+    cmds:
+      - pnpm dev
+
+  dev:server:
+    desc: Run only the Hono server
+    cmds:
+      - pnpm --filter @boardgames/server dev
+
+  dev:web:
+    desc: Run only the Vite web frontend
+    cmds:
+      - pnpm --filter @boardgames/web dev
+
+  dev:all:
+    desc: Run server and web concurrently
+    cmds:
+      - pnpm dev:all
+
+  build:
+    desc: Build all packages
+    cmds:
+      - pnpm build
+
+  preview:
+    desc: Build then preview the web bundle
+    deps: [build]
+    cmds:
+      - pnpm --filter @boardgames/web preview
+
+  lint:
+    desc: Biome check (lint + format)
+    cmds:
+      - pnpm lint
+
+  lint:fix:
+    desc: Biome auto-fix
+    cmds:
+      - pnpm lint:fix
+
+  format:
+    desc: Biome format write
+    cmds:
+      - pnpm format
+
+  typecheck:
+    desc: Typecheck all packages
+    cmds:
+      - pnpm typecheck
+
+  check:
+    desc: Lint + typecheck (pre-commit parity)
+    cmds:
+      - task: lint
+      - task: typecheck
+
+  clean:
+    desc: Remove build artefacts and node_modules
+    cmds:
+      - rm -rf node_modules packages/*/node_modules packages/*/dist

@@ -21,5 +21,10 @@ export default {
   mode: "remote",
   hasMatchHistory: true,
   hasTournament: true,
+  tournamentStrategies: [
+    { id: "ismcts-v1", label: "IS-MCTS v1" },
+    { id: "heuristic-v1", label: "Heuristic v1" },
+    { id: "random", label: "Random" },
+  ],
   rulesUrl,
 } satisfies GameDefinition;

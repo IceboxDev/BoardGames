@@ -3,6 +3,15 @@ import type { GameMachineSpec } from "../../machines/types";
 import { getStrategy } from "./ai-strategies";
 import { applyActionPure, createInitialState } from "./game-engine";
 import { runISMCTS } from "./mcts/ismcts";
+import type { EKGameReplayLog, EKReplayStep } from "./replay-log";
+import {
+  actionToReplayAction,
+  buildGameLog,
+  describeAction,
+  gameStateToSnapshot,
+} from "./replay-log";
+import type { Rng } from "./rng";
+import { createRng, randomSeed } from "./rng";
 import { getActiveDecider, getLegalActions } from "./rules";
 import type { Action, ActionLogEntry, AIStrategyId, Card, GamePhase, GameState } from "./types";
 
@@ -12,6 +21,9 @@ import type { Action, ActionLogEntry, AIStrategyId, Card, GamePhase, GameState }
 
 export interface EKContext {
   gameState: GameState;
+  seed: number;
+  rng: Rng;
+  replaySteps: EKReplayStep[];
 }
 
 export type EKEvent =
@@ -83,7 +95,8 @@ function computeAiAction(gs: GameState): Action {
 // Machine
 // ---------------------------------------------------------------------------
 
-const PLACEHOLDER = null as unknown as GameState;
+const PLACEHOLDER_STATE = null as unknown as GameState;
+const PLACEHOLDER_RNG: Rng = Math.random;
 
 export const explodingKittensMachine = setup({
   types: {} as {
@@ -120,25 +133,63 @@ export const explodingKittensMachine = setup({
   actions: {
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
-      return {
-        gameState: createInitialState(event.playerCount, event.strategies),
+      const seed = randomSeed();
+      const rng = createRng(seed);
+      const gs = createInitialState(event.playerCount, event.strategies, rng);
+      const step0: EKReplayStep = {
+        stepIndex: 0,
+        player: gs.currentPlayerIndex,
+        state: gameStateToSnapshot(gs),
+        description: "Game started",
       };
+      return { gameState: gs, seed, rng, replaySteps: [step0] };
     }),
 
     applyPlayerAction: assign(({ context, event }) => {
       if (event.type !== "PLAYER_ACTION") return {};
-      return { gameState: applyActionPure(context.gameState, event.action) };
+      const decider = getActiveDecider(context.gameState);
+      const desc = describeAction(event.action, context.gameState);
+      const newGs = applyActionPure(context.gameState, event.action, context.rng);
+      const step: EKReplayStep = {
+        stepIndex: context.replaySteps.length,
+        player: decider,
+        state: gameStateToSnapshot(newGs),
+        action: actionToReplayAction(event.action),
+        description: desc,
+      };
+      return {
+        gameState: newGs,
+        replaySteps: [...context.replaySteps, step],
+      };
     }),
 
     applyAiAction: assign(({ context, event }) => {
       const action = (event as unknown as { output: Action }).output;
-      return { gameState: applyActionPure(context.gameState, action) };
+      const decider = getActiveDecider(context.gameState);
+      const desc = describeAction(action, context.gameState);
+      const newGs = applyActionPure(context.gameState, action, context.rng);
+      const step: EKReplayStep = {
+        stepIndex: context.replaySteps.length,
+        player: decider,
+        state: gameStateToSnapshot(newGs),
+        action: actionToReplayAction(action),
+        description: desc,
+      };
+      return {
+        gameState: newGs,
+        replaySteps: [...context.replaySteps, step],
+      };
     }),
   },
 }).createMachine({
   id: "ek",
   initial: "idle",
-  context: { gameState: PLACEHOLDER },
+  context: {
+    gameState: PLACEHOLDER_STATE,
+    seed: 0,
+    rng: PLACEHOLDER_RNG,
+    replaySteps: [],
+  },
 
   states: {
     idle: {
@@ -329,14 +380,18 @@ export const explodingKittensSpec: GameMachineSpec<
     return snapshot.matches("gameOver");
   },
 
-  getReplayLog(snapshot) {
-    const gs = snapshot.context.gameState;
+  getReplayLog(snapshot): EKGameReplayLog | null {
+    const ctx = snapshot.context;
+    const gs = ctx.gameState;
     if (gs.phase !== "game-over") return null;
-    return {
-      scoreA: gs.winner === 0 ? 1 : 0,
-      scoreB: gs.winner === 1 ? 1 : 0,
+    return buildGameLog({
+      seed: ctx.seed,
+      playerCount: gs.players.length,
+      strategies: gs.players.map((p) => p.aiStrategy ?? null),
+      steps: ctx.replaySteps,
+      actionLog: gs.actionLog ?? [],
       winner: gs.winner,
       turnCount: gs.turnCount,
-    };
+    });
   },
 };

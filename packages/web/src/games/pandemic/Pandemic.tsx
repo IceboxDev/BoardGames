@@ -93,13 +93,7 @@ export default function Pandemic() {
   }, [lastConfig, shell.game.start]);
 
   const dispatch = useCallback(
-    (
-      action:
-        | GameAction
-        | { kind: "start_game"; config: SetupConfig }
-        | { kind: "reset" }
-        | { kind: "animate_complete" },
-    ) => {
+    (action: GameAction | { kind: "start_game"; config: SetupConfig } | { kind: "reset" }) => {
       if (action.kind === "start_game") {
         setLastConfig(action.config);
         shell.game.start({ config: action.config });
@@ -107,9 +101,6 @@ export default function Pandemic() {
       }
       if (action.kind === "reset") {
         shell.goToMenu();
-        return;
-      }
-      if (action.kind === "animate_complete") {
         return;
       }
       if (shell.mode === "mp-playing") {

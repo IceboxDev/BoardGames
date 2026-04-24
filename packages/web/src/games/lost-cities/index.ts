@@ -21,5 +21,11 @@ export default {
   mode: "remote",
   hasMatchHistory: true,
   hasTournament: true,
+  tournamentStrategies: [
+    { id: "ismcts-v6", label: "Adaptive+" },
+    { id: "ismcts-v5", label: "Adaptive" },
+    { id: "ismcts-v4", label: "Strict" },
+    { id: "ismcts-v1", label: "Baseline" },
+  ],
   rulesUrl,
 } satisfies GameDefinition;

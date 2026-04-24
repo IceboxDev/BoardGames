@@ -75,6 +75,20 @@ if (gameSlug === "lost-cities") {
       aPlaysFirst,
     });
   }
+} else if (gameSlug === "durak") {
+  const { simulateGame } = await import("@boardgames/core/games/durak/tournament-runner");
+  type AIStrategyId = import("@boardgames/core/games/durak/types").AIStrategyId;
+
+  const { strategies } = config.config as { strategies: AIStrategyId[] };
+
+  for (const i of gameIndices) {
+    const durak = simulateGame(strategies, i);
+    send({
+      kind: "game",
+      gameIndex: i,
+      durak,
+    });
+  }
 } else {
   send({ kind: "error", message: `Unknown game: ${gameSlug}` });
 }

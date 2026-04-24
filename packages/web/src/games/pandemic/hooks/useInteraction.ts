@@ -1,6 +1,5 @@
-import { CITY_DATA } from "@boardgames/core/games/pandemic/city-graph";
 import { getLegalActions } from "@boardgames/core/games/pandemic/rules";
-import type { DiseaseColor, GameState } from "@boardgames/core/games/pandemic/types";
+import type { DiseaseColor, GameState, LegalAction } from "@boardgames/core/games/pandemic/types";
 import { DISEASE_COLORS } from "@boardgames/core/games/pandemic/types";
 import { useCallback, useEffect, useRef } from "react";
 import type { HighlightState } from "../rendering/highlight-layer";
@@ -8,13 +7,20 @@ import { testHit } from "../rendering/hit-test";
 import type { GameRenderer, Viewport } from "../rendering/renderer";
 import type { GameDispatch } from "./useGameState";
 
+export type DiscoverCureOption = Extract<LegalAction, { kind: "discover_cure" }>;
+
+/**
+ * Called when the user clicks "Discover Cure" — we can't construct the
+ * GameAction up-front because the player has to pick which cards to burn.
+ * The host component opens a modal, lets the player choose, then dispatches
+ * `discover_cure` with the chosen indices.
+ */
+export type OnRequestCureSelection = (options: DiscoverCureOption[]) => void;
+
 export interface InteractionMode {
-  type: "normal" | "select_destination" | "select_discard" | "select_cure_cards";
-  actionKind?: string;
+  type: "normal" | "select_destination";
+  actionKind?: "charter_flight" | "ops_move";
   selectedCardIdx?: number;
-  color?: DiseaseColor;
-  requiredCards?: number;
-  selectedCureCards?: number[];
 }
 
 export function useInteraction(
@@ -27,24 +33,13 @@ export function useInteraction(
   selectedCardIdxRef: React.MutableRefObject<number | null>,
   onClearSelection: () => void,
   dispatch: GameDispatch,
+  onRequestCureSelection: OnRequestCureSelection,
 ) {
   const modeRef = useRef<InteractionMode>({ type: "normal" });
-
-  // Auto-advance automated phases
+  const onRequestCureSelectionRef = useRef(onRequestCureSelection);
   useEffect(() => {
-    const state = stateRef.current;
-    if (!state || state.result) return;
-
-    if (state.phase === "draw" || state.phase === "epidemic" || state.phase === "infect") {
-      const timer = setTimeout(
-        () => {
-          dispatch({ kind: "animate_complete" });
-        },
-        state.phase === "epidemic" ? 800 : 400,
-      );
-      return () => clearTimeout(timer);
-    }
-  });
+    onRequestCureSelectionRef.current = onRequestCureSelection;
+  }, [onRequestCureSelection]);
 
   const handleClick = useCallback(
     (e: MouseEvent) => {
@@ -101,9 +96,13 @@ export function useInteraction(
       if (hit.type === "city" && state.phase === "actions") {
         const cityId = hit.data as string;
         const legal = getLegalActions(state);
+        const hand = state.players[state.currentPlayerIndex].hand;
 
         // Try drive/ferry first
-        const drive = legal.find((a) => a.kind === "drive_ferry" && a.to === cityId);
+        const drive = legal.find(
+          (a): a is Extract<LegalAction, { kind: "drive_ferry" }> =>
+            a.kind === "drive_ferry" && a.to === cityId,
+        );
         if (drive) {
           dispatch(drive);
           modeRef.current = { type: "normal" };
@@ -111,7 +110,10 @@ export function useInteraction(
         }
 
         // Try shuttle flight
-        const shuttle = legal.find((a) => a.kind === "shuttle_flight" && a.to === cityId);
+        const shuttle = legal.find(
+          (a): a is Extract<LegalAction, { kind: "shuttle_flight" }> =>
+            a.kind === "shuttle_flight" && a.to === cityId,
+        );
         if (shuttle) {
           dispatch(shuttle);
           modeRef.current = { type: "normal" };
@@ -120,15 +122,11 @@ export function useInteraction(
 
         // Try direct flight (if we have the card)
         const directFlight = legal.find(
-          (a) =>
-            a.kind === "direct_flight" &&
-            state.players[state.currentPlayerIndex].hand[(a as { cardIdx: number }).cardIdx]
-              ?.kind === "city" &&
-            (
-              state.players[state.currentPlayerIndex].hand[(a as { cardIdx: number }).cardIdx] as {
-                cityId: string;
-              }
-            ).cityId === cityId,
+          (a): a is Extract<LegalAction, { kind: "direct_flight" }> => {
+            if (a.kind !== "direct_flight") return false;
+            const card = hand[a.cardIdx];
+            return card?.kind === "city" && card.cityId === cityId;
+          },
         );
         if (directFlight) {
           dispatch(directFlight);
@@ -139,7 +137,15 @@ export function useInteraction(
 
       if (hit.type === "button" && state.phase === "actions") {
         const actionKind = hit.data as string;
-        handleButtonClick(actionKind, state, dispatch, modeRef, highlightRef, selectedCardIdxRef);
+        handleButtonClick(
+          actionKind,
+          state,
+          dispatch,
+          modeRef,
+          highlightRef,
+          selectedCardIdxRef,
+          onRequestCureSelectionRef.current,
+        );
       }
     },
     [
@@ -223,12 +229,13 @@ export function useInteraction(
 
     const legal = getLegalActions(state);
     const destinations = new Set<string>();
+    const hand = state.players[state.currentPlayerIndex].hand;
 
     for (const action of legal) {
       if (action.kind === "drive_ferry") destinations.add(action.to);
       if (action.kind === "shuttle_flight") destinations.add(action.to);
       if (action.kind === "direct_flight") {
-        const card = state.players[state.currentPlayerIndex].hand[action.cardIdx];
+        const card = hand[action.cardIdx];
         if (card?.kind === "city") destinations.add(card.cityId);
       }
     }
@@ -247,6 +254,7 @@ function handleButtonClick(
   modeRef: React.MutableRefObject<InteractionMode>,
   highlightRef: React.MutableRefObject<HighlightState>,
   selectedCardIdxRef: React.MutableRefObject<number | null>,
+  onRequestCureSelection: OnRequestCureSelection,
 ): void {
   const legal = getLegalActions(state);
 
@@ -256,13 +264,17 @@ function handleButtonClick(
       break;
 
     case "build_station": {
-      const action = legal.find((a) => a.kind === "build_station");
+      const action = legal.find(
+        (a): a is Extract<LegalAction, { kind: "build_station" }> => a.kind === "build_station",
+      );
       if (action) dispatch(action);
       break;
     }
 
     case "treat_disease": {
-      const treatActions = legal.filter((a) => a.kind === "treat_disease");
+      const treatActions = legal.filter(
+        (a): a is Extract<LegalAction, { kind: "treat_disease" }> => a.kind === "treat_disease",
+      );
       if (treatActions.length === 1) {
         dispatch(treatActions[0]);
       } else if (treatActions.length > 1) {
@@ -282,44 +294,59 @@ function handleButtonClick(
     }
 
     case "discover_cure": {
-      const action = legal.find((a) => a.kind === "discover_cure");
-      if (action) dispatch(action);
+      // Open the card-selection modal — the player picks exactly `needed`
+      // cards (and the color, if multiple cures are simultaneously ready).
+      const options = legal.filter((a): a is DiscoverCureOption => a.kind === "discover_cure");
+      if (options.length > 0) {
+        onRequestCureSelection(options);
+      }
       break;
     }
 
     case "share_give":
     case "share_take": {
-      const shareAction = legal.find((a) => a.kind === "share_give" || a.kind === "share_take");
+      const shareAction = legal.find(
+        (
+          a,
+        ): a is
+          | Extract<LegalAction, { kind: "share_give" }>
+          | Extract<LegalAction, { kind: "share_take" }> =>
+          a.kind === "share_give" || a.kind === "share_take",
+      );
       if (shareAction) dispatch(shareAction);
       break;
     }
 
     case "charter_flight": {
-      // Need destination selection
-      modeRef.current = { type: "select_destination", actionKind: "charter_flight" };
-      // All cities are valid destinations
-      const allCities = new Set(Array.from(CITY_DATA.keys()));
-      allCities.delete(state.players[state.currentPlayerIndex].location);
-      highlightRef.current = {
-        ...highlightRef.current,
-        validDestinations: allCities,
-      };
+      const charter = legal.find(
+        (a): a is Extract<LegalAction, { kind: "charter_flight" }> => a.kind === "charter_flight",
+      );
+      if (charter) {
+        modeRef.current = { type: "select_destination", actionKind: "charter_flight" };
+        highlightRef.current = {
+          ...highlightRef.current,
+          validDestinations: new Set(charter.destinations),
+        };
+      }
       break;
     }
 
     case "ops_move": {
       const selectedIdx = selectedCardIdxRef.current;
-      if (selectedIdx !== null) {
+      if (selectedIdx === null) break;
+      const opsMove = legal.find(
+        (a): a is Extract<LegalAction, { kind: "ops_move" }> =>
+          a.kind === "ops_move" && a.cardIdx === selectedIdx,
+      );
+      if (opsMove) {
         modeRef.current = {
           type: "select_destination",
           actionKind: "ops_move",
           selectedCardIdx: selectedIdx,
         };
-        const allCities = new Set(Array.from(CITY_DATA.keys()));
-        allCities.delete(state.players[state.currentPlayerIndex].location);
         highlightRef.current = {
           ...highlightRef.current,
-          validDestinations: allCities,
+          validDestinations: new Set(opsMove.destinations),
         };
       }
       break;
@@ -332,34 +359,39 @@ function handleButtonClick(
       break;
 
     case "dispatcher_move_to_pawn": {
-      const action = legal.find((a) => a.kind === "dispatcher_move_to_pawn");
+      const action = legal.find(
+        (a): a is Extract<LegalAction, { kind: "dispatcher_move_to_pawn" }> =>
+          a.kind === "dispatcher_move_to_pawn",
+      );
       if (action) dispatch(action);
       break;
     }
 
     case "contingency_take": {
-      const action = legal.find((a) => a.kind === "contingency_take");
+      const action = legal.find(
+        (a): a is Extract<LegalAction, { kind: "contingency_take" }> =>
+          a.kind === "contingency_take",
+      );
       if (action) dispatch(action);
       break;
     }
 
     case "play_event": {
-      // Find first event card in hand and play it
+      // MVP: only one_quiet_night (no params) dispatches from the button.
+      // Other events require a dedicated parameter picker UI (airlift target,
+      // government_grant destination, resilient_population discard pick,
+      // forecast reorder). Those are enumerated in legal actions but need
+      // per-event modals to resolve — tracked separately.
       const player = state.players[state.currentPlayerIndex];
-      const eventIdx = player.hand.findIndex((c) => c.kind === "event");
+      const eventIdx = player.hand.findIndex(
+        (c) => c.kind === "event" && c.event === "one_quiet_night",
+      );
       if (eventIdx >= 0) {
-        const card = player.hand[eventIdx];
-        if (card.kind === "event") {
-          if (card.event === "one_quiet_night") {
-            dispatch({
-              kind: "play_event",
-              event: card.event,
-              params: {},
-            });
-          }
-          // Other events need parameter selection — for now dispatch with defaults
-          // A full UI would show a modal for parameter selection
-        }
+        dispatch({
+          kind: "play_event",
+          event: "one_quiet_night",
+          params: {},
+        });
       }
       break;
     }

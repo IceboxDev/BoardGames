@@ -30,10 +30,13 @@ export function toMiniMaxState(gs: GameState, aiIndex: number): MiniMaxState {
     return { hand, tableau, unusedWasabi: p.unusedWasabi, boostedNigiri, puddings: p.puddings };
   };
 
+  const priorScoreDiff = (gs.totalScores[aiIndex] ?? 0) - (gs.totalScores[oppIndex] ?? 0);
+
   return {
     players: [toCompact(aiIndex), toCompact(oppIndex)],
     turn: gs.turn,
     round: gs.round,
+    priorScoreDiff,
   };
 }
 

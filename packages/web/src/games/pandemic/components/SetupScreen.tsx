@@ -1,4 +1,5 @@
 import { shuffle } from "@boardgames/core/games/pandemic/deck";
+import { createRng, randomSeed } from "@boardgames/core/games/pandemic/rng";
 import { ROLE_DEFS } from "@boardgames/core/games/pandemic/roles";
 import type { SetupConfig } from "@boardgames/core/games/pandemic/types";
 import { useCallback, useState } from "react";
@@ -10,6 +11,12 @@ interface SetupScreenProps {
 }
 
 const ALL_ROLE_IDS = ROLE_DEFS.map((r) => r.id);
+
+// Preview-only shuffle: role cards shown on the setup screen are decorative,
+// not game state, so a throwaway rng per call is fine.
+function previewShuffle<T>(arr: readonly T[]): T[] {
+  return shuffle(arr, createRng(randomSeed()));
+}
 
 const PLAYER_OPTIONS = [2, 3, 4].map((n) => ({
   value: n as 2 | 3 | 4,
@@ -37,15 +44,15 @@ const DIFFICULTY_META = [
 export default function SetupScreen({ onStart }: SetupScreenProps) {
   const [numPlayers, setNumPlayers] = useState<2 | 3 | 4>(2);
   const [difficulty, setDifficulty] = useState<4 | 5 | 6>(4);
-  const [previewRoles, setPreviewRoles] = useState(() => shuffle(ALL_ROLE_IDS).slice(0, 2));
+  const [previewRoles, setPreviewRoles] = useState(() => previewShuffle(ALL_ROLE_IDS).slice(0, 2));
 
   const handlePlayerChange = useCallback((n: 2 | 3 | 4) => {
     setNumPlayers(n);
-    setPreviewRoles(shuffle(ALL_ROLE_IDS).slice(0, n));
+    setPreviewRoles(previewShuffle(ALL_ROLE_IDS).slice(0, n));
   }, []);
 
   const handleShuffle = useCallback(() => {
-    setPreviewRoles(shuffle(ALL_ROLE_IDS).slice(0, numPlayers));
+    setPreviewRoles(previewShuffle(ALL_ROLE_IDS).slice(0, numPlayers));
   }, [numPlayers]);
 
   const handleStart = useCallback(() => {

@@ -1,27 +1,6 @@
-import type { Card as CardData, Rank, Suit } from "@boardgames/core/games/durak/types";
+import type { Card as CardData, Suit } from "@boardgames/core/games/durak/types";
 import { RANK_LABELS } from "@boardgames/core/games/durak/types";
-
-const svgModules = import.meta.glob<string>("../../../assets/playing-cards/*.svg", {
-  eager: true,
-  import: "default",
-});
-
-const RANK_FILE_NAMES: Record<Rank, string> = {
-  6: "6",
-  7: "7",
-  8: "8",
-  9: "9",
-  10: "10",
-  11: "jack",
-  12: "queen",
-  13: "king",
-  14: "ace",
-};
-
-function getCardSvg(rank: Rank, suit: Suit): string {
-  const key = `../../../assets/playing-cards/${RANK_FILE_NAMES[rank]}_of_${suit}.svg`;
-  return svgModules[key] ?? "";
-}
+import { getCardSvg } from "../card-svg";
 
 interface CardProps {
   card: CardData;

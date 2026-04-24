@@ -70,34 +70,38 @@ Each game follows a consistent split:
 
 ### Game board layout structure
 
-Every game with a history sidebar uses `HistorySidebar` from `web/src/components/action-log/`. This component owns all shared layout — games must NOT add their own outer wrappers.
+Every game board uses `GameScreen` from `web/src/components/game-layout/`. This component owns all shared layout — games must NOT add their own outer wrappers.
 
-**DOM structure (enforced by HistorySidebar):**
+**Props:**
+- `background` — class on root container (e.g. `"bg-black"`)
+- `contentClassName` — extra classes on content area (e.g. `"mx-auto max-w-2xl"`). Gap-2 and padding are built-in.
+- `sidebar` — history log content. GameScreen provides the sidebar chrome (aside, heading, scroll).
+- `fan` — card hand component (CardFan, PlayerHand). Pinned to bottom.
+- `fanActions` — controls above the card fan (Confirm, Pass/Take, status). Spaced with gap-2.
+- `noPadding` — skip padding and flex-col (for canvas games)
+
+**DOM structure (enforced by GameScreen):**
 ```
-HistorySidebar outer    flex min-h-0 flex-1 [+ className]
-├── Content wrapper     flex min-h-0 min-w-0 flex-1 flex-col px-2 pt-2 sm:px-4 sm:pt-4 [+ contentClassName]
-│   └── {children}      game sections directly — NO wrapping div
-└── <aside>             w-72 shrink-0 rounded-xl my-2 mr-2
+GameScreen outer        flex min-h-0 flex-1 [+ background]
+├── Content wrapper     flex min-h-0 min-w-0 flex-1 flex-col gap-2 px-2 pt-2 sm:px-4 sm:pt-4 [+ contentClassName]
+│   ├── Board area      flex min-h-0 flex-1 flex-col gap-2     ← only when fan is set
+│   │   └── {children}
+│   └── Fan area        shrink-0 flex flex-col gap-2            ← only when fan is set
+│       ├── {fanActions}
+│       └── {fan}
+└── <aside>             w-72 shrink-0 rounded-xl my-2 mr-2     ← only when sidebar is set
 ```
+
+When `fan` is omitted, children go directly into the content wrapper (no board/fan split).
 
 **Rules:**
-- The top-level game component (e.g. `Durak.tsx`) returns `<GameBoard>` directly — no wrapper div, no extra padding, no extra chrome around it.
-- `GameBoard` renders `<HistorySidebar>` as its root element. Game-specific classes go in `contentClassName` (e.g. `"gap-2 mx-auto max-w-2xl"`).
-- No bottom padding — the content wrapper uses `pt-2 px-2` / `sm:pt-4 sm:px-4` so the card fan sits flush at the bottom.
+- `GameBoard` renders `<GameScreen>` as its root element. Games must NOT add outer wrappers, spacing, or padding — `GameScreen` owns all of it.
+- `fan` is ONLY the card hand component. Controls (buttons, status) go in `fanActions`.
 - For canvas games (Pandemic), pass `noPadding` to skip padding and flex-col.
-
-**Card game inner layout pattern (children of HistorySidebar):**
-```
-[header / info bar]       — shrink-0
-[board middle]            — flex-1 min-h-0 overflow-y-auto or overflow-hidden
-[player hand / card fan]  — shrink-0, always at very bottom
-```
-
-The hand MUST use `shrink-0` (not `mt-auto`). The board middle MUST use `flex-1 min-h-0` with an overflow strategy. This ensures viewport-fitting without page scrolling.
 
 ### Adding a new game
 
 1. Create `packages/web/src/games/<slug>/index.ts` exporting a `GameDefinition`
 2. If the game has non-trivial logic, put it in `packages/core/src/games/<slug>/` and add exports to core's `package.json`
 3. No routing changes needed — auto-discovered by the registry
-4. If the game has a history sidebar, use `HistorySidebar` — see "Game board layout structure" above
+4. Use `GameScreen` for the board layout — see "Game board layout structure" above

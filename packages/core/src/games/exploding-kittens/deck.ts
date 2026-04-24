@@ -1,16 +1,17 @@
+import type { Rng } from "./rng";
 import type { Card, CardType } from "./types";
 import { DECK_COMPOSITION } from "./types";
 
-export function shuffleInPlace<T>(arr: T[]): void {
+export function shuffleInPlace<T>(arr: T[], rng: Rng = Math.random): void {
   for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(rng() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
 }
 
-export function shuffle<T>(arr: T[]): T[] {
+export function shuffle<T>(arr: T[], rng: Rng = Math.random): T[] {
   const a = [...arr];
-  shuffleInPlace(a);
+  shuffleInPlace(a, rng);
   return a;
 }
 
@@ -35,7 +36,10 @@ export function buildFullDeck(): Card[] {
  * 6. For 2-3 players, extra Defuse cards go back into the deck.
  * 7. Shuffle the final deck.
  */
-export function dealGame(playerCount: number): {
+export function dealGame(
+  playerCount: number,
+  rng: Rng = Math.random,
+): {
   players: { hand: Card[] }[];
   drawPile: Card[];
 } {
@@ -49,7 +53,7 @@ export function dealGame(playerCount: number): {
   const defuses = allCards.filter((c) => c.type === "defuse");
   const rest = allCards.filter((c) => c.type !== "exploding-kitten" && c.type !== "defuse");
 
-  const shuffledRest = shuffle(rest);
+  const shuffledRest = shuffle(rest, rng);
 
   const players: { hand: Card[] }[] = [];
   let dealIndex = 0;
@@ -66,7 +70,7 @@ export function dealGame(playerCount: number): {
   const extraDefuses = defuses.slice(playerCount);
   const kittensToInsert = kittens.slice(0, playerCount - 1);
 
-  const drawPile = shuffle([...remaining, ...extraDefuses, ...kittensToInsert]);
+  const drawPile = shuffle([...remaining, ...extraDefuses, ...kittensToInsert], rng);
 
   return { players, drawPile };
 }

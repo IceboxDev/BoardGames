@@ -1,5 +1,5 @@
 import { buildDeck, findFirstAttacker, shuffleInPlace } from "./deck";
-import { getTableRanks } from "./rules";
+import { canBeat, getMaxBoutCards, getTableRanks } from "./rules";
 import type { Action, AIStrategyId, Card, GameState, Player } from "./types";
 import { HAND_SIZE } from "./types";
 
@@ -105,6 +105,12 @@ export function applyAction(state: GameState, action: Action): void {
 // Action handlers
 // ---------------------------------------------------------------------------
 
+function findCardInHand(player: Player, cardId: number): Card {
+  const card = player.hand.find((c) => c.id === cardId);
+  if (!card) throw new Error(`Card ${cardId} not in player ${player.index}'s hand`);
+  return card;
+}
+
 function removeCardFromHand(player: Player, cardId: number): Card {
   const idx = player.hand.findIndex((c) => c.id === cardId);
   if (idx === -1) throw new Error(`Card ${cardId} not in player ${player.index}'s hand`);
@@ -113,7 +119,23 @@ function removeCardFromHand(player: Player, cardId: number): Card {
 
 function handleAttack(state: GameState, cardId: number): void {
   const attacker = state.players[state.attackerIndex];
-  const card = removeCardFromHand(attacker, cardId);
+  const card = findCardInHand(attacker, cardId);
+
+  if (state.table.length > 0) {
+    if (!state.table.every((p) => p.defense !== null)) {
+      throw new Error("Cannot attack while there are undefended cards on the table");
+    }
+    const maxCards = getMaxBoutCards(state);
+    if (state.table.length >= maxCards) {
+      throw new Error("Table card limit reached — cannot play more attack cards");
+    }
+    const ranks = getTableRanks(state.table);
+    if (!ranks.has(card.rank)) {
+      throw new Error(`Card rank ${card.rank} does not match any rank on the table`);
+    }
+  }
+
+  removeCardFromHand(attacker, cardId);
   state.table.push({ attack: card, defense: null });
   state.actionLog.push({
     turn: state.turnCount,
@@ -125,22 +147,35 @@ function handleAttack(state: GameState, cardId: number): void {
 }
 
 function handleDefend(state: GameState, attackIndex: number, cardId: number): void {
+  if (attackIndex < 0 || attackIndex >= state.table.length) {
+    throw new Error(`Invalid attack index ${attackIndex}`);
+  }
+  const pair = state.table[attackIndex];
+  if (pair.defense !== null) {
+    throw new Error(`Attack at index ${attackIndex} is already defended`);
+  }
+
   const defender = state.players[state.defenderIndex];
-  const card = removeCardFromHand(defender, cardId);
+  const card = findCardInHand(defender, cardId);
+  if (!canBeat(pair.attack, card, state.trumpSuit)) {
+    throw new Error(`Card ${cardId} cannot beat the attack card at index ${attackIndex}`);
+  }
+
+  removeCardFromHand(defender, cardId);
   state.actionLog.push({
     turn: state.turnCount,
     playerIndex: state.defenderIndex,
     action: "defend",
     card,
-    attackCard: state.table[attackIndex].attack,
+    attackCard: pair.attack,
   });
-  state.table[attackIndex].defense = card;
+  pair.defense = card;
 
   // Check if all pairs are now defended
   if (state.table.every((p) => p.defense !== null)) {
     // Attacker can throw in more or pass
     // But first check if attacker CAN throw in (has matching ranks and limit not reached)
-    const maxCards = Math.min(HAND_SIZE, state.defenderStartHandSize);
+    const maxCards = getMaxBoutCards(state);
     if (state.table.length >= maxCards) {
       // Limit reached — auto-resolve successful defense
       resolveBout(state, true);
@@ -170,7 +205,7 @@ function handleTake(state: GameState): void {
   });
   // Defender gives up — switch to throwing-in so attacker can add more cards
   const attacker = state.players[state.attackerIndex];
-  const maxCards = Math.min(HAND_SIZE, state.defenderStartHandSize);
+  const maxCards = getMaxBoutCards(state);
   const ranks = getTableRanks(state.table);
   const canThrowIn =
     attacker.hand.length > 0 &&
@@ -187,7 +222,17 @@ function handleTake(state: GameState): void {
 
 function handleThrowIn(state: GameState, cardId: number): void {
   const attacker = state.players[state.attackerIndex];
-  const card = removeCardFromHand(attacker, cardId);
+  const maxCards = getMaxBoutCards(state);
+  if (state.table.length >= maxCards) {
+    throw new Error("Table card limit reached — cannot throw in more cards");
+  }
+  const card = findCardInHand(attacker, cardId);
+  const ranks = getTableRanks(state.table);
+  if (!ranks.has(card.rank)) {
+    throw new Error(`Card rank ${card.rank} does not match any rank on the table`);
+  }
+
+  removeCardFromHand(attacker, cardId);
   state.table.push({ attack: card, defense: null });
   state.actionLog.push({
     turn: state.turnCount,
@@ -197,7 +242,6 @@ function handleThrowIn(state: GameState, cardId: number): void {
   });
 
   // Check if limit is now reached — auto-resolve if so
-  const maxCards = Math.min(HAND_SIZE, state.defenderStartHandSize);
   if (state.table.length >= maxCards || attacker.hand.length === 0) {
     resolveBout(state, false);
   }
@@ -205,6 +249,10 @@ function handleThrowIn(state: GameState, cardId: number): void {
 }
 
 function handlePass(state: GameState): void {
+  if (state.phase === "attacking" && state.table.length === 0) {
+    throw new Error("Cannot pass without playing at least one attack card");
+  }
+
   state.actionLog.push({
     turn: state.turnCount,
     playerIndex: state.attackerIndex,

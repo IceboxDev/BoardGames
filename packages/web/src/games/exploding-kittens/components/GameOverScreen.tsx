@@ -6,9 +6,15 @@ interface GameOverScreenProps {
   state: GameState;
   onPlayAgain: () => void;
   onChangeSetup: () => void;
+  onViewReplay?: () => void;
 }
 
-export default function GameOverScreen({ state, onPlayAgain, onChangeSetup }: GameOverScreenProps) {
+export default function GameOverScreen({
+  state,
+  onPlayAgain,
+  onChangeSetup,
+  onViewReplay,
+}: GameOverScreenProps) {
   const winner = state.winner !== null ? state.players[state.winner] : null;
   const isHumanWin = winner?.type === "human";
 
@@ -28,6 +34,9 @@ export default function GameOverScreen({ state, onPlayAgain, onChangeSetup }: Ga
       }`}
       actions={[
         { label: "Play Again", variant: "primary", onClick: onPlayAgain },
+        ...(onViewReplay
+          ? [{ label: "View Replay", variant: "secondary" as const, onClick: onViewReplay }]
+          : []),
         { label: "Change Setup", variant: "secondary", onClick: onChangeSetup },
       ]}
     >

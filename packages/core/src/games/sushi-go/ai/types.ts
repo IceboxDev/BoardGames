@@ -71,6 +71,8 @@ export interface MiniMaxState {
   players: [MiniMaxPlayerState, MiniMaxPlayerState];
   turn: number; // 2..10 within round
   round: number;
+  /** Score difference (AI minus opponent) from prior completed rounds. */
+  priorScoreDiff: number;
 }
 
 // ── Actions & tree nodes ────────────────────────────────────────────────

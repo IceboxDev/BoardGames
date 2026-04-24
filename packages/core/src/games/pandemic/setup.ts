@@ -8,6 +8,7 @@ import {
   shuffle,
   sortHand,
 } from "./deck";
+import type { Rng } from "./rng";
 import type {
   ActionLogEntry,
   DiseaseColor,
@@ -29,7 +30,7 @@ const ALL_ROLES: Role[] = [
   "researcher",
 ];
 
-export function createGame(config: SetupConfig): GameState {
+export function createGame(config: SetupConfig, rng: Rng): GameState {
   const { numPlayers, difficulty } = config;
 
   // 1. Initialize city cubes
@@ -58,7 +59,7 @@ export function createGame(config: SetupConfig): GameState {
   };
 
   // 5. Assign roles
-  const roles = shuffle(ALL_ROLES).slice(0, numPlayers);
+  const roles = shuffle(ALL_ROLES, rng).slice(0, numPlayers);
 
   // 6. Create players in Atlanta
   const players: PlayerState[] = roles.map((role, i) => ({
@@ -70,7 +71,7 @@ export function createGame(config: SetupConfig): GameState {
   }));
 
   // 7. Build infection deck
-  const infectionDeck = buildInfectionDeck();
+  const infectionDeck = buildInfectionDeck(rng);
   const infectionDiscard: typeof infectionDeck = [];
 
   // 8. Initial infection: draw 9 cards
@@ -109,7 +110,7 @@ export function createGame(config: SetupConfig): GameState {
     players[i].hand = sortHand(hands[i]);
   }
 
-  const playerDeck = buildPlayerDeck(remaining, difficulty);
+  const playerDeck = buildPlayerDeck(remaining, difficulty, rng);
 
   // 10. Determine first player (highest population city card)
   let firstPlayer = 0;

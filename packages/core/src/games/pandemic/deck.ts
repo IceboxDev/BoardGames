@@ -1,10 +1,16 @@
 import { ALL_CITY_IDS, CITY_DATA } from "./city-graph";
+import type { Rng } from "./rng";
 import type { CityCard, DiseaseColor, EventCard, InfectionCard, PlayerCard } from "./types";
 
-export function shuffle<T>(arr: readonly T[]): T[] {
+/**
+ * Fisher–Yates shuffle driven by a caller-supplied PRNG. Callers must pass
+ * a deterministic Rng (see ./rng.ts) — `Math.random` is no longer accepted
+ * so that every shuffle the engine performs is reproducible from the seed.
+ */
+export function shuffle<T>(arr: readonly T[], rng: Rng): T[] {
   const a = [...arr];
   for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    const j = Math.floor(rng() * (i + 1));
     [a[i], a[j]] = [a[j], a[i]];
   }
   return a;
@@ -28,13 +34,13 @@ export function buildEventCards(): EventCard[] {
   ];
 }
 
-export function buildInfectionDeck(): InfectionCard[] {
+export function buildInfectionDeck(rng: Rng): InfectionCard[] {
   const cards: InfectionCard[] = ALL_CITY_IDS.map((id) => {
     // biome-ignore lint/style/noNonNullAssertion: ALL_CITY_IDS is derived from CITY_DATA keys
     const city = CITY_DATA.get(id)!;
     return { cityId: id, color: city.color };
   });
-  return shuffle(cards);
+  return shuffle(cards, rng);
 }
 
 /**
@@ -44,8 +50,12 @@ export function buildInfectionDeck(): InfectionCard[] {
  * 3. Shuffle 1 epidemic card into each pile
  * 4. Stack piles (smaller piles on bottom)
  */
-export function buildPlayerDeck(remainingCards: PlayerCard[], difficulty: 4 | 5 | 6): PlayerCard[] {
-  const shuffled = shuffle(remainingCards);
+export function buildPlayerDeck(
+  remainingCards: PlayerCard[],
+  difficulty: 4 | 5 | 6,
+  rng: Rng,
+): PlayerCard[] {
+  const shuffled = shuffle(remainingCards, rng);
 
   const pileCount = difficulty;
   const piles: PlayerCard[][] = Array.from({ length: pileCount }, () => []);
@@ -54,13 +64,9 @@ export function buildPlayerDeck(remainingCards: PlayerCard[], difficulty: 4 | 5 
     piles[i % pileCount].push(shuffled[i]);
   }
 
-  for (const pile of piles) {
-    pile.push({ kind: "epidemic" });
-    const n = pile.length;
-    for (let i = n - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [pile[i], pile[j]] = [pile[j], pile[i]];
-    }
+  for (let p = 0; p < piles.length; p++) {
+    piles[p].push({ kind: "epidemic" });
+    piles[p] = shuffle(piles[p], rng);
   }
 
   // Stack: smaller piles on bottom (drawn last) per rulebook

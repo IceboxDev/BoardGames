@@ -2,10 +2,11 @@ import type { SushiGoPlayerView } from "@boardgames/core/games/sushi-go/machine"
 import type { ActionLogEntry, Card, SushiGoAction } from "@boardgames/core/games/sushi-go/types";
 import { HAND_SIZES } from "@boardgames/core/games/sushi-go/types";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { HistorySidebar } from "../../../components/action-log";
+import { ActionLog } from "../../../components/action-log";
 import { CardFan } from "../../../components/card-fan";
+import { GameScreen } from "../../../components/game-layout";
 import { AiThinkingIndicator } from "../../../components/ui";
-import ActionLog from "./ActionLog";
+import { mapSushiGoLog } from "../log-mapper";
 import CardFace, { CardFaceHand } from "./CardFace";
 import NashMatrixModal from "./NashMatrixModal";
 import PlayerTableau from "./PlayerTableau";
@@ -17,7 +18,6 @@ interface GameBoardProps {
   onAction: (action: SushiGoAction) => void;
   isGameOver?: boolean;
   onShowResults?: () => void;
-  isAiThinking?: boolean;
 }
 
 export default function GameBoard({
@@ -26,7 +26,6 @@ export default function GameBoard({
   onAction,
   isGameOver,
   onShowResults,
-  isAiThinking,
 }: GameBoardProps) {
   const [selectedCardId, setSelectedCardId] = useState<number | null>(null);
   const [secondCardId, setSecondCardId] = useState<number | null>(null);
@@ -69,6 +68,7 @@ export default function GameBoard({
 
   const canAct = view.phase === "selecting" && !view.hasSelected;
   const hasChopsticks = view.players[myIndex]?.tableau.some((c) => c.type === "chopsticks");
+  const readyToConfirm = selectedCardId !== null && (!useChopsticks || secondCardId !== null);
   const handSize = HAND_SIZES[view.playerCount];
   const selectedCount = view.players.filter((p) => p.hasSelected).length;
 
@@ -120,16 +120,123 @@ export default function GameBoard({
   const otherPlayers = view.players.filter((_, i) => i !== myIndex);
   const myPlayer = view.players[myIndex];
 
+  // AI waiting indicator: shown whenever the human has committed their selection
+  // and we're still in the selecting phase. The AI computes its pick in parallel
+  // with the human's thinking time, so by the time the user clicks Confirm the
+  // AI is usually done and this flashes briefly or not at all. `waitingForAi`
+  // covers the network round-trip between click and server echo. We deliberately
+  // do NOT use the server's `isAiThinking` signal here — in the parallel flow it
+  // can flip true while the actor finishes *during* the user's thinking time,
+  // which would confusingly render the indicator before the user has even acted.
   const aiWaiting =
-    !isGameOver &&
-    (waitingForAi || isAiThinking || (view.hasSelected && view.phase === "selecting"));
+    !isGameOver && (waitingForAi || (view.hasSelected && view.phase === "selecting"));
 
   return (
     <>
-      <HistorySidebar
-        contentClassName="gap-2"
-        sidebar={
-          <ActionLog entries={view.actionLog} myIndex={myIndex} playerCount={view.playerCount} />
+      <GameScreen
+        sidebar={<ActionLog blocks={mapSushiGoLog(view.actionLog, myIndex, view.playerCount)} />}
+        fan={
+          view.hand.length > 0 ? (
+            <CardFan
+              cards={view.hand}
+              getCardId={(c) => c.id}
+              renderCard={(card) => (
+                <CardFaceHand
+                  type={card.type}
+                  selected={card.id === selectedCardId || card.id === secondCardId}
+                  disabled={!canAct}
+                />
+              )}
+              renderPreview={(card) => <CardFaceHand type={card.type} />}
+              onCardClick={(card) => handleCardClick(card)}
+              disabled={!canAct}
+            />
+          ) : undefined
+        }
+        fanActions={
+          <>
+            {isGameOver && !roundEndEntry && onShowResults && (
+              <div className="flex items-center justify-center">
+                <button
+                  type="button"
+                  onClick={onShowResults}
+                  className="rounded-lg border border-orange-500/50 bg-orange-500/15 px-8 py-2.5 text-sm font-semibold text-orange-300 transition-colors hover:bg-orange-500/25"
+                >
+                  View Final Results
+                </button>
+              </div>
+            )}
+            {!isGameOver && canAct && readyToConfirm && (
+              <div className="flex items-center justify-center gap-2">
+                {hasChopsticks && (
+                  <button
+                    type="button"
+                    onClick={handleToggleChopsticks}
+                    className={`rounded-lg border px-4 py-1.5 text-xs font-medium transition-colors ${
+                      useChopsticks
+                        ? "border-green-500/50 bg-green-500/15 text-green-300"
+                        : "border-gray-600 bg-gray-700/60 text-gray-400 hover:bg-gray-600"
+                    }`}
+                  >
+                    🥢 Chopsticks{useChopsticks ? " (ON)" : ""}
+                  </button>
+                )}
+                <button
+                  type="button"
+                  onClick={handleConfirm}
+                  className="rounded-lg border border-orange-500/50 bg-orange-500/15 px-4 py-1.5 text-xs font-medium text-orange-300 transition-colors hover:bg-orange-500/25"
+                >
+                  Confirm
+                </button>
+              </div>
+            )}
+            {!isGameOver && canAct && !readyToConfirm && (
+              <div className="flex items-center gap-2">
+                {hasChopsticks && (
+                  <button
+                    type="button"
+                    onClick={handleToggleChopsticks}
+                    className={`rounded-lg border px-4 py-1.5 text-xs font-medium transition-colors ${
+                      useChopsticks
+                        ? "border-green-500/50 bg-green-500/15 text-green-300"
+                        : "border-gray-600 bg-gray-700/60 text-gray-400 hover:bg-gray-600"
+                    }`}
+                  >
+                    🥢 Chopsticks{useChopsticks ? " (ON)" : ""}
+                  </button>
+                )}
+                <span className="text-xs font-semibold text-cyan-400">Your turn</span>
+                <span className="text-gray-500">&middot;</span>
+                <span className="text-xs text-gray-400">
+                  {useChopsticks
+                    ? selectedCardId !== null
+                      ? "Select one more card"
+                      : "Select two cards to play"
+                    : "Select a card to play"}
+                </span>
+              </div>
+            )}
+            {!isGameOver && !canAct && !aiWaiting && (
+              <div className="flex items-center gap-2">
+                <span className="text-xs text-gray-400">
+                  {view.phase === "revealing" ? "Revealing cards..." : "Waiting..."}
+                </span>
+              </div>
+            )}
+            {aiWaiting && (
+              <AiThinkingIndicator
+                message={
+                  view.playerCount !== 2
+                    ? "AI bots choosing cards randomly"
+                    : view.turn <= 1
+                      ? "AI evaluating opening heuristics"
+                      : "AI solving Nash equilibrium game tree"
+                }
+                showTimer
+                startTime={waitStart}
+              />
+            )}
+          </>
         }
       >
         {/* Header — shrink-0 */}
@@ -215,81 +322,7 @@ export default function GameBoard({
             />
           )}
         </div>
-
-        {/* Bottom — shrink-0, pinned at bottom */}
-        <div className="shrink-0">
-          {/* Game over — show results button */}
-          {isGameOver && !roundEndEntry && onShowResults && (
-            <div className="flex items-center justify-center py-3">
-              <button
-                type="button"
-                onClick={onShowResults}
-                className="rounded-lg bg-orange-600 px-8 py-2.5 text-sm font-semibold text-white shadow-lg transition-colors hover:bg-orange-500"
-              >
-                View Final Results
-              </button>
-            </div>
-          )}
-
-          {/* Action bar — above cards */}
-          {!isGameOver && canAct && (
-            <div className="mb-2 flex items-center justify-center gap-2">
-              {hasChopsticks && (
-                <button
-                  type="button"
-                  onClick={handleToggleChopsticks}
-                  className={`rounded-lg border px-3 py-1.5 text-xs font-medium transition-colors ${
-                    useChopsticks
-                      ? "border-green-500/50 bg-green-500/10 text-green-400"
-                      : "border-gray-700 bg-gray-800/50 text-gray-400 hover:border-gray-600"
-                  }`}
-                >
-                  🥢 Use Chopsticks{useChopsticks ? " (ON)" : ""}
-                </button>
-              )}
-              <button
-                type="button"
-                onClick={handleConfirm}
-                disabled={selectedCardId === null || (useChopsticks && secondCardId === null)}
-                className="rounded-lg bg-orange-600 px-4 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-orange-500 disabled:opacity-40 disabled:hover:bg-orange-600"
-              >
-                Confirm
-              </button>
-            </div>
-          )}
-
-          {aiWaiting && (
-            <AiThinkingIndicator
-              message={
-                view.playerCount !== 2
-                  ? "AI bots choosing cards randomly"
-                  : view.turn <= 1
-                    ? "AI evaluating opening heuristics"
-                    : "AI solving Nash equilibrium game tree"
-              }
-              showTimer
-              startTime={waitStart}
-            />
-          )}
-
-          {view.hand.length > 0 && (
-            <CardFan
-              cards={view.hand}
-              getCardId={(c) => c.id}
-              renderCard={(card) => (
-                <CardFaceHand
-                  type={card.type}
-                  selected={card.id === selectedCardId || card.id === secondCardId}
-                  disabled={!canAct}
-                />
-              )}
-              renderPreview={(card) => <CardFaceHand type={card.type} />}
-              onCardClick={(card) => handleCardClick(card)}
-              disabled={!canAct}
-            />
-          )}
-        </div>
-      </HistorySidebar>
+      </GameScreen>
 
       {/* Round-end scoring overlay */}
       {roundEndEntry && (

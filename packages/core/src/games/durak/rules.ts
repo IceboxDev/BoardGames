@@ -2,6 +2,15 @@ import type { Action, BoutPair, Card, GameState, Rank, Suit } from "./types";
 import { HAND_SIZE } from "./types";
 
 // ---------------------------------------------------------------------------
+// Bout limits
+// ---------------------------------------------------------------------------
+
+/** Max cards that can be on the table in a single bout. */
+export function getMaxBoutCards(state: GameState): number {
+  return Math.min(HAND_SIZE, state.defenderStartHandSize);
+}
+
+// ---------------------------------------------------------------------------
 // Card comparison
 // ---------------------------------------------------------------------------
 
@@ -60,7 +69,7 @@ export function getLegalActions(state: GameState): Action[] {
 
 function getAttackActions(state: GameState): Action[] {
   const attacker = state.players[state.attackerIndex];
-  const maxCards = Math.min(HAND_SIZE, state.defenderStartHandSize);
+  const maxCards = getMaxBoutCards(state);
   const actions: Action[] = [];
 
   if (state.table.length === 0) {
@@ -105,7 +114,7 @@ function getDefendActions(state: GameState): Action[] {
 
 function getThrowInActions(state: GameState): Action[] {
   const attacker = state.players[state.attackerIndex];
-  const maxCards = Math.min(HAND_SIZE, state.defenderStartHandSize);
+  const maxCards = getMaxBoutCards(state);
   const actions: Action[] = [];
 
   if (state.table.length < maxCards) {

@@ -1,4 +1,3 @@
-import { ALL_STRATEGIES } from "@boardgames/core/games/durak/ai-strategies";
 import type { DurakEvent } from "@boardgames/core/games/durak/machine";
 import type {
   Action,
@@ -10,7 +9,6 @@ import { AI_STRATEGY_LABELS } from "@boardgames/core/games/durak/types";
 import { useCallback, useEffect, useState } from "react";
 import { MpGameOverScreen } from "../../components/game-over";
 import { MatchHistory } from "../../components/match-history";
-import { TournamentGrid, TournamentMatchHistory } from "../../components/tournament";
 import { useGameShell } from "../../hooks/useGameShell";
 import GameBoard from "./components/GameBoard";
 import GameOverScreen from "./components/GameOverScreen";
@@ -20,24 +18,12 @@ export default function Durak() {
   const shell = useGameShell<DurakPlayerView, DurakEvent, DurakResult>("durak");
 
   const [lastStrategy, setLastStrategy] = useState<AIStrategyId>("heuristic-v1");
-  const [matchHistoryPair, setMatchHistoryPair] = useState<{
-    aId: string;
-    bId: string;
-    tournamentId: string;
-  } | null>(null);
+  const [lastPlayerCount, setLastPlayerCount] = useState(2);
 
   // Back overrides for game-managed modes
   useEffect(() => {
     if (shell.mode === "match-history") {
       shell.setBackOverride(() => shell.goToMenu());
-      return () => shell.setBackOverride(null);
-    }
-    if (shell.mode === "tournament") {
-      if (matchHistoryPair) {
-        shell.setBackOverride(() => setMatchHistoryPair(null));
-      } else {
-        shell.setBackOverride(() => shell.goToMenu());
-      }
       return () => shell.setBackOverride(null);
     }
     if (shell.mode === "solo") {
@@ -53,19 +39,15 @@ export default function Durak() {
       return () => shell.setBackOverride(null);
     }
     return undefined;
-  }, [
-    shell.mode,
-    matchHistoryPair,
-    shell.game.view,
-    shell.setBackOverride,
-    shell.goToMenu,
-    shell.game.reset,
-  ]);
+  }, [shell.mode, shell.game.view, shell.setBackOverride, shell.goToMenu, shell.game.reset]);
 
   const startGame = useCallback(
-    (strategy: AIStrategyId) => {
+    (playerCount: number, strategy: AIStrategyId) => {
+      setLastPlayerCount(playerCount);
       setLastStrategy(strategy);
-      shell.game.start({ playerCount: 2, strategies: [null, strategy] });
+      const strategies: (AIStrategyId | null)[] = [null];
+      for (let i = 1; i < playerCount; i++) strategies.push(strategy);
+      shell.game.start({ playerCount, strategies });
     },
     [shell.game.start],
   );
@@ -82,8 +64,10 @@ export default function Durak() {
   );
 
   const handlePlayAgain = useCallback(() => {
-    shell.game.start({ playerCount: 2, strategies: [null, lastStrategy] });
-  }, [lastStrategy, shell.game.start]);
+    const strategies: (AIStrategyId | null)[] = [null];
+    for (let i = 1; i < lastPlayerCount; i++) strategies.push(lastStrategy);
+    shell.game.start({ playerCount: lastPlayerCount, strategies });
+  }, [lastPlayerCount, lastStrategy, shell.game.start]);
 
   // --- Shell screens (mode select, join room, lobby) ---
 
@@ -101,36 +85,10 @@ export default function Durak() {
     );
   }
 
-  // --- Tournament ---
-
-  if (shell.mode === "tournament") {
-    if (matchHistoryPair) {
-      return (
-        <TournamentMatchHistory
-          strategies={ALL_STRATEGIES}
-          strategyAId={matchHistoryPair.aId}
-          strategyBId={matchHistoryPair.bId}
-          tournamentId={matchHistoryPair.tournamentId}
-          onBack={() => setMatchHistoryPair(null)}
-        />
-      );
-    }
-    return (
-      <TournamentGrid
-        gameSlug="durak"
-        strategies={ALL_STRATEGIES}
-        showScoreDiff={false}
-        onViewMatchHistory={(aId, bId, tournamentId) =>
-          setMatchHistoryPair({ aId, bId, tournamentId })
-        }
-      />
-    );
-  }
-
   // --- Solo setup ---
 
   if (shell.mode === "solo" && !shell.game.view) {
-    return <SetupScreen onSelect={startGame} />;
+    return <SetupScreen onStart={startGame} />;
   }
 
   // --- Active game (solo or MP) ---

@@ -24,6 +24,7 @@ export default function BoardMiddleFit({
       const H = outer.clientHeight;
       inner.style.transform = "scale(1)";
       inner.style.transformOrigin = "top center";
+      inner.style.top = "0px";
       void inner.offsetHeight;
       const N = inner.scrollHeight;
       if (H <= 0 || N <= 0) {
@@ -31,8 +32,10 @@ export default function BoardMiddleFit({
         return;
       }
       const s = Math.min(1, H / N);
+      const offsetY = (H - N * s) / 2;
       inner.style.transform = `scale(${s})`;
       inner.style.transformOrigin = "top center";
+      inner.style.top = `${offsetY}px`;
     };
 
     const ro = new ResizeObserver(apply);
@@ -43,7 +46,7 @@ export default function BoardMiddleFit({
 
   return (
     <div ref={outerRef} className="flex-1 min-h-0 overflow-hidden relative w-full">
-      <div ref={innerRef} className="absolute top-0 left-0 right-0 w-full">
+      <div ref={innerRef} className="absolute left-0 right-0 w-full">
         {children}
       </div>
     </div>

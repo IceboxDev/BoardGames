@@ -7,7 +7,7 @@ export function opponent(p: PlayerIndex): PlayerIndex {
   return (1 - p) as PlayerIndex;
 }
 export type TurnPhase = "play" | "draw";
-export type GamePhase = "idle" | "playing" | "animating" | "game-over";
+export type GamePhase = "idle" | "playing" | "game-over";
 
 export interface Card {
   id: number;

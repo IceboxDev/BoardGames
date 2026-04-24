@@ -90,7 +90,7 @@ persistenceRoutes.get("/:slug/replays", (c) => {
 
   const rows = db
     .prepare(
-      "SELECT id, ai_engine, score_p0, score_p1, winner, created_at FROM session_replays WHERE game_slug = ? ORDER BY created_at DESC LIMIT ?",
+      "SELECT id, ai_engine, score_p0, score_p1, winner, created_at, scores_json, player_count FROM session_replays WHERE game_slug = ? ORDER BY created_at DESC LIMIT ?",
     )
     .all(slug, limit) as {
     id: number;
@@ -99,6 +99,8 @@ persistenceRoutes.get("/:slug/replays", (c) => {
     score_p1: number | null;
     winner: string | null;
     created_at: string;
+    scores_json: string | null;
+    player_count: number | null;
   }[];
 
   return c.json(
@@ -109,6 +111,8 @@ persistenceRoutes.get("/:slug/replays", (c) => {
       scoreP1: r.score_p1,
       winner: r.winner,
       createdAt: r.created_at,
+      scores: r.scores_json ? JSON.parse(r.scores_json) : null,
+      playerCount: r.player_count,
     })),
   );
 });

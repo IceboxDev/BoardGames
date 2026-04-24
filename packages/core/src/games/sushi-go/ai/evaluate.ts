@@ -85,7 +85,7 @@ function addMakiScores2P(scores: [PlayerScoreResult, PlayerScoreResult]): void {
 
 // ── Evaluate terminal state (round end) ─────────────────────────────────
 
-export function evaluateRound(state: MiniMaxState): number {
+export function evaluateRound(state: MiniMaxState, round?: number): number {
   const scores: [PlayerScoreResult, PlayerScoreResult] = [
     scorePlayerTableau(state.players[0]),
     scorePlayerTableau(state.players[1]),
@@ -99,17 +99,25 @@ export function evaluateRound(state: MiniMaxState): number {
 
   let diff = scores[0].total - scores[1].total;
 
-  // Pudding scoring: treat as if game ends now (accumulated + this round's tableau)
-  // 2-player rules: +6 for most puddings, NO penalty for fewest
+  // Pudding scoring: +6 for having more puddings (2-player: no penalty for fewest).
+  // Rounds 1-2 add a per-pudding margin tiebreaker; round 3 is exact (lead only).
+  //
+  // Hyperparams (candidates for future optimizer, see HYPERPARAMS.md):
+  //   Round 1-2: leadBonus=6, perPuddingBonus=0.3
+  //   Round 3:   leadBonus=6, perPuddingBonus=0 (exact game scoring)
   const p0Puddings = state.players[0].puddings + state.players[0].tableau[T_PUDDING];
   const p1Puddings = state.players[1].puddings + state.players[1].tableau[T_PUDDING];
   const puddingDiff = p0Puddings - p1Puddings;
+  const r = round ?? state.round;
 
   if (puddingDiff > 0) diff += 6;
   else if (puddingDiff < 0) diff -= 6;
 
-  // Tiebreaker: larger pudding margin is more robust across rounds.
-  diff += puddingDiff * 0.3;
+  // In rounds 1-2, add a margin bonus so the AI prefers a larger pudding lead
+  // (more robust against future rounds). In round 3 the lead is definitive — no bonus.
+  if (r < 3) {
+    diff += puddingDiff * 0.3;
+  }
 
   return diff;
 }

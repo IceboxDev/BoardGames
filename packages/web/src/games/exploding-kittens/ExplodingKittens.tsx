@@ -3,6 +3,7 @@ import type {
   EKPlayerView,
   EKResult,
 } from "@boardgames/core/games/exploding-kittens/machine";
+import type { EKGameReplayLog } from "@boardgames/core/games/exploding-kittens/replay-log";
 import type {
   Action,
   AIStrategyId,
@@ -14,10 +15,11 @@ import { useCallback, useEffect, useState } from "react";
 import { MpGameOverScreen } from "../../components/game-over";
 import { MatchHistory } from "../../components/match-history";
 import { useGameShell } from "../../hooks/useGameShell";
+import { apiClient } from "../../lib/api-client";
 import GameBoard from "./components/GameBoard";
 import GameOverScreen from "./components/GameOverScreen";
+import GameReplay from "./components/GameReplay";
 import SetupScreen from "./components/SetupScreen";
-import TournamentGrid from "./components/TournamentGrid";
 
 let nextPlaceholderId = -1;
 function placeholderCards(count: number): Card[] {
@@ -62,19 +64,20 @@ export default function ExplodingKittens() {
     strategies: (AIStrategyId | null)[];
   } | null>(null);
 
+  const [replayGame, setReplayGame] = useState<EKGameReplayLog | null>(null);
+
   // Back overrides for game-managed modes
   useEffect(() => {
-    if (
-      shell.mode === "solo" ||
-      shell.mode === "mp-playing" ||
-      shell.mode === "match-history" ||
-      shell.mode === "tournament"
-    ) {
+    if (replayGame) {
+      shell.setBackOverride(() => setReplayGame(null));
+      return () => shell.setBackOverride(null);
+    }
+    if (shell.mode === "solo" || shell.mode === "mp-playing" || shell.mode === "match-history") {
       shell.setBackOverride(shell.goToMenu);
       return () => shell.setBackOverride(null);
     }
     return undefined;
-  }, [shell.mode, shell.goToMenu, shell.setBackOverride]);
+  }, [shell.mode, shell.goToMenu, shell.setBackOverride, replayGame]);
 
   const startGame = useCallback(
     (playerCount: number, strategies: (AIStrategyId | null)[]) => {
@@ -106,18 +109,19 @@ export default function ExplodingKittens() {
 
   if (shell.screen) return shell.screen;
 
+  if (replayGame) {
+    return <GameReplay game={replayGame} />;
+  }
+
   if (shell.mode === "match-history") {
     return (
       <MatchHistory
         gameSlug="exploding-kittens"
         labelResolver={(e) => AI_STRATEGY_LABELS[e as AIStrategyId] ?? e}
         onBack={shell.goToMenu}
+        onSelectGame={(g) => setReplayGame(g as EKGameReplayLog)}
       />
     );
-  }
-
-  if (shell.mode === "tournament") {
-    return <TournamentGrid onBack={shell.goToMenu} />;
   }
 
   // Solo setup
@@ -153,6 +157,17 @@ export default function ExplodingKittens() {
         state={displayState}
         onPlayAgain={handlePlayAgain}
         onChangeSetup={() => shell.game.reset()}
+        onViewReplay={
+          shell.game.replayId
+            ? () => {
+                const id = shell.game.replayId;
+                if (!id) return;
+                apiClient.getGameReplay("exploding-kittens", id).then((log) => {
+                  setReplayGame(log as EKGameReplayLog);
+                });
+              }
+            : undefined
+        }
       />
     );
   }

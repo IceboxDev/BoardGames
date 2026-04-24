@@ -20,5 +20,10 @@ export default {
   component: lazy(() => import("./SushiGo")),
   mode: "remote",
   hasTournament: true,
+  tournamentStrategies: [
+    { id: "nash", label: "Nash Equilibrium" },
+    { id: "minimax", label: "Minimax" },
+    { id: "random", label: "Random" },
+  ],
   rulesUrl,
 } satisfies GameDefinition;

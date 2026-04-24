@@ -2,6 +2,7 @@ import { durakSpec } from "@boardgames/core/games/durak/machine";
 import { explodingKittensSpec } from "@boardgames/core/games/exploding-kittens/machine";
 import { lostCitiesSpec } from "@boardgames/core/games/lost-cities/machine";
 import { pandemicSpec } from "@boardgames/core/games/pandemic/machine";
+import { parksSpec } from "@boardgames/core/games/parks/machine";
 import { setPvpSpec } from "@boardgames/core/games/set/pvp-machine";
 import { sushiGoSpec } from "@boardgames/core/games/sushi-go/machine";
 import type { GameMachineSpec } from "@boardgames/core/machines/types";
@@ -14,6 +15,7 @@ registry.set("exploding-kittens", explodingKittensSpec);
 registry.set("pandemic", pandemicSpec);
 registry.set("set", setPvpSpec);
 registry.set("sushi-go", sushiGoSpec);
+registry.set("parks", parksSpec);
 
 export function getMachineSpec(
   slug: string,

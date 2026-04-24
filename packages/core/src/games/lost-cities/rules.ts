@@ -38,12 +38,12 @@ export function getLegalPlays(hand: Card[], expeditions: Expeditions): PlayActio
 
 export function getLegalDraws(
   discardPiles: DiscardPiles,
-  drawPile: Card[],
+  drawPileCount: number,
   lastDiscardedColor: ExpeditionColor | null,
 ): DrawAction[] {
   const actions: DrawAction[] = [];
 
-  if (drawPile.length > 0) {
+  if (drawPileCount > 0) {
     actions.push({ kind: "draw-pile" });
   }
 

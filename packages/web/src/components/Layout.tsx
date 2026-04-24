@@ -52,7 +52,8 @@ function LayoutInner() {
         </div>
       </nav>
 
-      <main className="flex min-h-0 flex-1 flex-col overflow-hidden">
+      {/* biome-ignore lint/correctness/useUniqueElementIds: singleton — only one Layout is mounted, used as a portal target by game overlays */}
+      <main id="app-main" className="relative flex min-h-0 flex-1 flex-col overflow-hidden">
         <Outlet />
       </main>
     </div>

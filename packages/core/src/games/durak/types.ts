@@ -95,6 +95,7 @@ export interface DurakPlayerView {
   table: BoutPair[];
   drawPileCount: number;
   discardPileCount: number;
+  topDiscardCard: Card | null;
   players: {
     index: number;
     type: PlayerType;
