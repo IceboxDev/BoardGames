@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "tsx watch --include ../core/src src/index.ts",
-    "build": "tsup src/index.ts src/tournament/game-worker.ts --format esm",
+    "build": "tsup",
     "typecheck": "tsc -b --noEmit"
   },
   "dependencies": {
