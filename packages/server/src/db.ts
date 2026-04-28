@@ -37,65 +37,71 @@ export async function initDb(): Promise<Client> {
 }
 
 async function migrate(db: Client): Promise<void> {
-  await db.executeMultiple(`
-    CREATE TABLE IF NOT EXISTS tournaments (
-      id TEXT PRIMARY KEY,
-      game_slug TEXT NOT NULL,
-      config_json TEXT NOT NULL,
-      status TEXT NOT NULL DEFAULT 'pending',
-      result_json TEXT,
-      progress_completed INTEGER DEFAULT 0,
-      progress_total INTEGER DEFAULT 0,
-      created_at TEXT NOT NULL DEFAULT (datetime('now')),
-      completed_at TEXT
-    );
-
-    CREATE TABLE IF NOT EXISTS tournament_games (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      tournament_id TEXT NOT NULL REFERENCES tournaments(id) ON DELETE CASCADE,
-      game_index INTEGER NOT NULL,
-      log_json TEXT NOT NULL
-    );
-
-    CREATE TABLE IF NOT EXISTS game_results (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      game_slug TEXT NOT NULL,
-      result_json TEXT NOT NULL,
-      created_at TEXT NOT NULL DEFAULT (datetime('now'))
-    );
-
-    CREATE TABLE IF NOT EXISTS session_replays (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
-      game_slug TEXT NOT NULL,
-      ai_engine TEXT,
-      replay_json TEXT NOT NULL,
-      score_p0 INTEGER,
-      score_p1 INTEGER,
-      winner TEXT,
-      created_at TEXT NOT NULL DEFAULT (datetime('now'))
-    );
-
-    CREATE INDEX IF NOT EXISTS idx_tournaments_slug ON tournaments(game_slug);
-    CREATE INDEX IF NOT EXISTS idx_tournaments_status ON tournaments(status);
-    CREATE INDEX IF NOT EXISTS idx_tournament_games_tid ON tournament_games(tournament_id, game_index);
-    CREATE INDEX IF NOT EXISTS idx_game_results_slug ON game_results(game_slug);
-    CREATE INDEX IF NOT EXISTS idx_session_replays_slug ON session_replays(game_slug, created_at DESC);
-  `);
+  // Use db.batch (single-statement-per-entry) instead of db.executeMultiple —
+  // the latter doesn't work reliably over Turso's HTTP wire and returns 400.
+  await db.batch(
+    [
+      `CREATE TABLE IF NOT EXISTS tournaments (
+        id TEXT PRIMARY KEY,
+        game_slug TEXT NOT NULL,
+        config_json TEXT NOT NULL,
+        status TEXT NOT NULL DEFAULT 'pending',
+        result_json TEXT,
+        progress_completed INTEGER DEFAULT 0,
+        progress_total INTEGER DEFAULT 0,
+        created_at TEXT NOT NULL DEFAULT (datetime('now')),
+        completed_at TEXT
+      )`,
+      `CREATE TABLE IF NOT EXISTS tournament_games (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        tournament_id TEXT NOT NULL REFERENCES tournaments(id) ON DELETE CASCADE,
+        game_index INTEGER NOT NULL,
+        log_json TEXT NOT NULL
+      )`,
+      `CREATE TABLE IF NOT EXISTS game_results (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        game_slug TEXT NOT NULL,
+        result_json TEXT NOT NULL,
+        created_at TEXT NOT NULL DEFAULT (datetime('now'))
+      )`,
+      `CREATE TABLE IF NOT EXISTS session_replays (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        game_slug TEXT NOT NULL,
+        ai_engine TEXT,
+        replay_json TEXT NOT NULL,
+        score_p0 INTEGER,
+        score_p1 INTEGER,
+        winner TEXT,
+        created_at TEXT NOT NULL DEFAULT (datetime('now'))
+      )`,
+      `CREATE INDEX IF NOT EXISTS idx_tournaments_slug ON tournaments(game_slug)`,
+      `CREATE INDEX IF NOT EXISTS idx_tournaments_status ON tournaments(status)`,
+      `CREATE INDEX IF NOT EXISTS idx_tournament_games_tid ON tournament_games(tournament_id, game_index)`,
+      `CREATE INDEX IF NOT EXISTS idx_game_results_slug ON game_results(game_slug)`,
+      `CREATE INDEX IF NOT EXISTS idx_session_replays_slug ON session_replays(game_slug, created_at DESC)`,
+    ],
+    "write",
+  );
 
   const grCols = await db.execute("PRAGMA table_info(game_results)");
   if (!grCols.rows.some((r) => r.name === "client_id")) {
-    await db.executeMultiple(`
-      ALTER TABLE game_results ADD COLUMN client_id TEXT;
-      CREATE UNIQUE INDEX IF NOT EXISTS idx_game_results_client_id
-        ON game_results(game_slug, client_id);
-    `);
+    await db.batch(
+      [
+        `ALTER TABLE game_results ADD COLUMN client_id TEXT`,
+        `CREATE UNIQUE INDEX IF NOT EXISTS idx_game_results_client_id ON game_results(game_slug, client_id)`,
+      ],
+      "write",
+    );
   }
 
   const srCols = await db.execute("PRAGMA table_info(session_replays)");
   if (!srCols.rows.some((r) => r.name === "scores_json")) {
-    await db.executeMultiple(`
-      ALTER TABLE session_replays ADD COLUMN scores_json TEXT;
-      ALTER TABLE session_replays ADD COLUMN player_count INTEGER;
-    `);
+    await db.batch(
+      [
+        `ALTER TABLE session_replays ADD COLUMN scores_json TEXT`,
+        `ALTER TABLE session_replays ADD COLUMN player_count INTEGER`,
+      ],
+      "write",
+    );
   }
 }

@@ -19,9 +19,13 @@ const isProduction = process.env.NODE_ENV === "production";
 const { url: dbUrl, authToken: dbAuthToken } = getDbConnectionConfig();
 const dialect = new LibsqlDialect({ url: dbUrl, authToken: dbAuthToken });
 
+const baseURL = process.env.BETTER_AUTH_URL
+  ? normalizeOrigin(process.env.BETTER_AUTH_URL)
+  : "http://localhost:3001";
+
 export const auth = betterAuth({
   database: { dialect, type: "sqlite" },
-  baseURL: process.env.BETTER_AUTH_URL ?? "http://localhost:3001",
+  baseURL,
   secret: process.env.BETTER_AUTH_SECRET,
   emailAndPassword: {
     enabled: true,
