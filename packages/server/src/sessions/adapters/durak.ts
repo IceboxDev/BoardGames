@@ -63,6 +63,8 @@ const adapter: GameSessionAdapter<
       table: state.table,
       drawPileCount: state.drawPile.length,
       discardPileCount: state.discardPile.length,
+      topDiscardCard:
+        state.discardPile.length > 0 ? state.discardPile[state.discardPile.length - 1] : null,
       players: state.players.map((p) => ({
         index: p.index,
         type: p.type,
