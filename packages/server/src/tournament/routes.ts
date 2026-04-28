@@ -17,7 +17,7 @@ tournamentRoutes.post("/", async (c) => {
   const body = await c.req.json<{ gameSlug: string; config: Record<string, unknown> }>();
 
   try {
-    const { id } = startTournament(body.gameSlug, body.config);
+    const { id } = await startTournament(body.gameSlug, body.config);
     return c.json({ id }, 201);
   } catch (err) {
     const message = err instanceof Error ? err.message : "Failed to start tournament";
@@ -25,7 +25,7 @@ tournamentRoutes.post("/", async (c) => {
   }
 });
 
-tournamentRoutes.get("/", (c) => {
+tournamentRoutes.get("/", async (c) => {
   const db = getDb();
   const gameSlug = c.req.query("gameSlug");
   const status = c.req.query("status");
@@ -33,15 +33,15 @@ tournamentRoutes.get("/", (c) => {
   let sql =
     "SELECT id, game_slug, config_json, status, result_json, progress_completed, progress_total, created_at, completed_at FROM tournaments";
   const conditions: string[] = [];
-  const params: unknown[] = [];
+  const args: unknown[] = [];
 
   if (gameSlug) {
     conditions.push("game_slug = ?");
-    params.push(gameSlug);
+    args.push(gameSlug);
   }
   if (status) {
     conditions.push("status = ?");
-    params.push(status);
+    args.push(status);
   }
 
   if (conditions.length > 0) {
@@ -49,60 +49,43 @@ tournamentRoutes.get("/", (c) => {
   }
   sql += " ORDER BY created_at DESC LIMIT 100";
 
-  const rows = db.prepare(sql).all(...params) as {
-    id: string;
-    game_slug: string;
-    config_json: string;
-    status: string;
-    result_json: string | null;
-    progress_completed: number;
-    progress_total: number;
-    created_at: string;
-    completed_at: string | null;
-  }[];
+  const { rows } = await db.execute({ sql, args: args as (string | number)[] });
 
   return c.json(
     rows.map((r) => ({
-      id: r.id,
-      game_slug: r.game_slug,
-      config: JSON.parse(r.config_json),
-      status: r.status,
-      result: r.result_json ? JSON.parse(r.result_json) : null,
-      progress_completed: r.progress_completed,
-      progress_total: r.progress_total,
-      created_at: r.created_at,
-      completed_at: r.completed_at,
+      id: r.id as string,
+      game_slug: r.game_slug as string,
+      config: JSON.parse(r.config_json as string),
+      status: r.status as string,
+      result: r.result_json ? JSON.parse(r.result_json as string) : null,
+      progress_completed: r.progress_completed as number,
+      progress_total: r.progress_total as number,
+      created_at: r.created_at as string,
+      completed_at: r.completed_at as string | null,
     })),
   );
 });
 
-tournamentRoutes.get("/by-matchup", (c) => {
+tournamentRoutes.get("/by-matchup", async (c) => {
   const gameSlug = c.req.query("gameSlug");
   const strategyA = c.req.query("strategyA");
   const strategyB = c.req.query("strategyB");
   if (!gameSlug || !strategyA || !strategyB) return c.json({ error: "Missing params" }, 400);
 
   const db = getDb();
-  const rows = db
-    .prepare(
-      `SELECT id, config_json, status, result_json, progress_completed, progress_total, created_at, completed_at
+  const { rows } = await db.execute({
+    sql: `SELECT id, config_json, status, result_json, progress_completed, progress_total, created_at, completed_at
      FROM tournaments
      WHERE game_slug = ? AND status = 'completed'
      ORDER BY completed_at DESC`,
-    )
-    .all(gameSlug) as {
-    id: string;
-    config_json: string;
-    status: string;
-    result_json: string | null;
-    progress_completed: number;
-    progress_total: number;
-    created_at: string;
-    completed_at: string | null;
-  }[];
+    args: [gameSlug],
+  });
 
   const match = rows.find((r) => {
-    const cfg = JSON.parse(r.config_json) as { strategyAId: string; strategyBId: string };
+    const cfg = JSON.parse(r.config_json as string) as {
+      strategyAId: string;
+      strategyBId: string;
+    };
     return (
       (cfg.strategyAId === strategyA && cfg.strategyBId === strategyB) ||
       (cfg.strategyAId === strategyB && cfg.strategyBId === strategyA)
@@ -111,27 +94,27 @@ tournamentRoutes.get("/by-matchup", (c) => {
 
   if (!match) return c.json(null);
   return c.json({
-    id: match.id,
-    config: JSON.parse(match.config_json),
-    status: match.status,
-    result: match.result_json ? JSON.parse(match.result_json) : null,
-    progress_completed: match.progress_completed,
-    progress_total: match.progress_total,
-    created_at: match.created_at,
-    completed_at: match.completed_at,
+    id: match.id as string,
+    config: JSON.parse(match.config_json as string),
+    status: match.status as string,
+    result: match.result_json ? JSON.parse(match.result_json as string) : null,
+    progress_completed: match.progress_completed as number,
+    progress_total: match.progress_total as number,
+    created_at: match.created_at as string,
+    completed_at: match.completed_at as string | null,
   });
 });
 
-tournamentRoutes.get("/:id", (c) => {
+tournamentRoutes.get("/:id", async (c) => {
   const id = c.req.param("id");
   const db = getDb();
-  const row = db
-    .prepare(
-      "SELECT id, game_slug, config_json, status, result_json, progress_completed, progress_total, created_at, completed_at FROM tournaments WHERE id = ?",
-    )
-    .get(id) as Record<string, unknown> | undefined;
+  const { rows } = await db.execute({
+    sql: "SELECT id, game_slug, config_json, status, result_json, progress_completed, progress_total, created_at, completed_at FROM tournaments WHERE id = ?",
+    args: [id],
+  });
 
-  if (!row) return c.json({ error: "Not found" }, 404);
+  if (rows.length === 0) return c.json({ error: "Not found" }, 404);
+  const row = rows[0];
 
   return c.json({
     ...row,
@@ -152,9 +135,11 @@ tournamentRoutes.get("/:id/stream", (c) => {
     });
 
     const db = getDb();
-    const row = db
-      .prepare("SELECT status, progress_completed, progress_total FROM tournaments WHERE id = ?")
-      .get(id) as
+    const { rows } = await db.execute({
+      sql: "SELECT status, progress_completed, progress_total FROM tournaments WHERE id = ?",
+      args: [id],
+    });
+    const row = rows[0] as unknown as
       | { status: string; progress_completed: number; progress_total: number }
       | undefined;
 
@@ -172,38 +157,38 @@ tournamentRoutes.get("/:id/stream", (c) => {
   });
 });
 
-tournamentRoutes.delete("/:id", (c) => {
+tournamentRoutes.delete("/:id", async (c) => {
   const id = c.req.param("id");
-  const ok = abortTournament(id);
+  const ok = await abortTournament(id);
   if (!ok) return c.json({ error: "Tournament not running" }, 404);
   return c.json({ ok: true });
 });
 
-tournamentRoutes.get("/:id/games", (c) => {
+tournamentRoutes.get("/:id/games", async (c) => {
   const id = c.req.param("id");
   const db = getDb();
-  const rows = db
-    .prepare(
-      "SELECT game_index, log_json FROM tournament_games WHERE tournament_id = ? ORDER BY game_index",
-    )
-    .all(id) as { game_index: number; log_json: string }[];
+  const { rows } = await db.execute({
+    sql: "SELECT game_index, log_json FROM tournament_games WHERE tournament_id = ? ORDER BY game_index",
+    args: [id],
+  });
 
   return c.json(
     rows.map((r) => ({
-      gameIndex: r.game_index,
-      ...JSON.parse(r.log_json),
+      gameIndex: r.game_index as number,
+      ...JSON.parse(r.log_json as string),
     })),
   );
 });
 
-tournamentRoutes.get("/:id/games/:n", (c) => {
+tournamentRoutes.get("/:id/games/:n", async (c) => {
   const id = c.req.param("id");
   const n = Number(c.req.param("n"));
   const db = getDb();
-  const row = db
-    .prepare("SELECT log_json FROM tournament_games WHERE tournament_id = ? AND game_index = ?")
-    .get(id, n) as { log_json: string } | undefined;
+  const { rows } = await db.execute({
+    sql: "SELECT log_json FROM tournament_games WHERE tournament_id = ? AND game_index = ?",
+    args: [id, n],
+  });
 
-  if (!row) return c.json({ error: "Not found" }, 404);
-  return c.json(JSON.parse(row.log_json));
+  if (rows.length === 0) return c.json({ error: "Not found" }, 404);
+  return c.json(JSON.parse(rows[0].log_json as string));
 });

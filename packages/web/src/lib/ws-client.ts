@@ -78,9 +78,10 @@ export interface GameSession<TPlayerView, TAction, TResult> {
 }
 
 const WS_URL =
-  typeof window !== "undefined"
+  (import.meta.env.VITE_WS_URL as string | undefined) ??
+  (typeof window !== "undefined"
     ? `${window.location.protocol === "https:" ? "wss:" : "ws:"}//${window.location.host}/ws`
-    : "ws://localhost:3001/ws";
+    : "ws://localhost:3001/ws");
 
 const RECONNECT_DELAYS = [1000, 2000, 4000, 8000, 16000];
 

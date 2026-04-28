@@ -1,32 +1,43 @@
 import { existsSync, mkdirSync } from "node:fs";
 import { dirname } from "node:path";
-import Database from "better-sqlite3";
+import { type Client, createClient } from "@libsql/client";
 
-let db: Database.Database;
+let db: Client | null = null;
 
-export function getDb(): Database.Database {
+export function getDb(): Client {
   if (!db) {
     throw new Error("Database not initialized. Call initDb() first.");
   }
   return db;
 }
 
-export function initDb(dbPath: string): Database.Database {
-  const dir = dirname(dbPath);
-  if (!existsSync(dir)) {
-    mkdirSync(dir, { recursive: true });
+export function getDbConnectionConfig(): { url: string; authToken: string | undefined } {
+  const url = process.env.TURSO_DATABASE_URL ?? "file:./data/boardgames.db";
+  const authToken = process.env.TURSO_AUTH_TOKEN;
+  return { url, authToken };
+}
+
+export async function initDb(): Promise<Client> {
+  const { url, authToken } = getDbConnectionConfig();
+
+  if (url.startsWith("file:")) {
+    const filePath = url.slice("file:".length);
+    const dir = dirname(filePath);
+    if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
   }
 
-  db = new Database(dbPath);
-  db.pragma("journal_mode = WAL");
-  db.pragma("foreign_keys = ON");
+  db = createClient({ url, authToken });
 
-  migrate(db);
+  if (url.startsWith("file:")) {
+    await db.execute("PRAGMA foreign_keys = ON");
+  }
+
+  await migrate(db);
   return db;
 }
 
-function migrate(db: Database.Database): void {
-  db.exec(`
+async function migrate(db: Client): Promise<void> {
+  await db.executeMultiple(`
     CREATE TABLE IF NOT EXISTS tournaments (
       id TEXT PRIMARY KEY,
       game_slug TEXT NOT NULL,
@@ -71,20 +82,18 @@ function migrate(db: Database.Database): void {
     CREATE INDEX IF NOT EXISTS idx_session_replays_slug ON session_replays(game_slug, created_at DESC);
   `);
 
-  const columns = db.prepare("PRAGMA table_info(game_results)").all() as { name: string }[];
-  if (!columns.some((c) => c.name === "client_id")) {
-    db.exec(`
+  const grCols = await db.execute("PRAGMA table_info(game_results)");
+  if (!grCols.rows.some((r) => r.name === "client_id")) {
+    await db.executeMultiple(`
       ALTER TABLE game_results ADD COLUMN client_id TEXT;
       CREATE UNIQUE INDEX IF NOT EXISTS idx_game_results_client_id
         ON game_results(game_slug, client_id);
     `);
   }
 
-  const replayColumns = db.prepare("PRAGMA table_info(session_replays)").all() as {
-    name: string;
-  }[];
-  if (!replayColumns.some((c) => c.name === "scores_json")) {
-    db.exec(`
+  const srCols = await db.execute("PRAGMA table_info(session_replays)");
+  if (!srCols.rows.some((r) => r.name === "scores_json")) {
+    await db.executeMultiple(`
       ALTER TABLE session_replays ADD COLUMN scores_json TEXT;
       ALTER TABLE session_replays ADD COLUMN player_count INTEGER;
     `);

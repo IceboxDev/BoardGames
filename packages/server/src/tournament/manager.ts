@@ -1,9 +1,22 @@
 import { type ChildProcess, fork } from "node:child_process";
 import { randomUUID } from "node:crypto";
+import { existsSync } from "node:fs";
 import { availableParallelism } from "node:os";
-import { fileURLToPath } from "node:url";
+import { join } from "node:path";
 import { getDb } from "../db.ts";
 import { tournamentRegistry } from "./game-registry.ts";
+
+function resolveWorker(): { path: string; isDev: boolean } {
+  // Dev (tsx): this module lives in src/tournament/, sibling to game-worker.ts.
+  // Prod (tsup bundle): this module is inlined into dist/index.js, and the
+  // worker is emitted at dist/tournament/game-worker.js.
+  const sibling = join(import.meta.dirname, "game-worker.ts");
+  if (existsSync(sibling)) return { path: sibling, isDev: true };
+  return {
+    path: join(import.meta.dirname, "tournament", "game-worker.js"),
+    isDev: false,
+  };
+}
 
 interface TournamentEntry {
   id: string;
@@ -137,14 +150,14 @@ function buildFinalResult(entry: TournamentEntry): Record<string, unknown> {
   return {};
 }
 
-function handleWorkerFailure(entry: TournamentEntry, error: Error | string): void {
+async function handleWorkerFailure(entry: TournamentEntry, error: Error | string): Promise<void> {
   if (!running.has(entry.id)) return;
   for (const child of entry.children) child.kill();
 
-  const db = getDb();
-  db.prepare(
-    `UPDATE tournaments SET status = 'aborted', completed_at = datetime('now') WHERE id = ?`,
-  ).run(entry.id);
+  await getDb().execute({
+    sql: `UPDATE tournaments SET status = 'aborted', completed_at = datetime('now') WHERE id = ?`,
+    args: [entry.id],
+  });
 
   console.error(`Tournament ${entry.id} worker error:`, error);
   const event = JSON.stringify({ kind: "error", message: String(error) });
@@ -155,7 +168,10 @@ function handleWorkerFailure(entry: TournamentEntry, error: Error | string): voi
   running.delete(entry.id);
 }
 
-export function startTournament(gameSlug: string, config: Record<string, unknown>): { id: string } {
+export async function startTournament(
+  gameSlug: string,
+  config: Record<string, unknown>,
+): Promise<{ id: string }> {
   if (!tournamentRegistry[gameSlug]) {
     throw new Error(`No tournament support for game: ${gameSlug}`);
   }
@@ -164,13 +180,14 @@ export function startTournament(gameSlug: string, config: Record<string, unknown
   const db = getDb();
   const numGames = (config.numGames as number) ?? 100;
 
-  db.prepare(
-    `INSERT INTO tournaments (id, game_slug, config_json, status, progress_total) VALUES (?, ?, ?, 'running', ?)`,
-  ).run(id, gameSlug, JSON.stringify(config), numGames);
+  await db.execute({
+    sql: `INSERT INTO tournaments (id, game_slug, config_json, status, progress_total) VALUES (?, ?, ?, 'running', ?)`,
+    args: [id, gameSlug, JSON.stringify(config), numGames],
+  });
 
   const workerCount = computeWorkerCount(numGames);
   const batches = distributeGameIndices(numGames, workerCount);
-  const workerPath = fileURLToPath(new URL("./game-worker.ts", import.meta.url));
+  const { path: workerPath, isDev } = resolveWorker();
 
   const entry: TournamentEntry = {
     id,
@@ -192,10 +209,6 @@ export function startTournament(gameSlug: string, config: Record<string, unknown
 
   running.set(id, entry);
 
-  const insertGame = db.prepare(
-    "INSERT INTO tournament_games (tournament_id, game_index, log_json) VALUES (?, ?, ?)",
-  );
-
   for (let w = 0; w < workerCount; w++) {
     const workerConfig = JSON.stringify({
       gameSlug,
@@ -204,7 +217,7 @@ export function startTournament(gameSlug: string, config: Record<string, unknown
     });
 
     const child = fork(workerPath, [workerConfig], {
-      execArgv: ["--import", "tsx"],
+      execArgv: isDev ? ["--import", "tsx"] : [],
       serialization: "advanced",
       stdio: ["ignore", "inherit", "inherit", "ipc"],
     });
@@ -212,90 +225,18 @@ export function startTournament(gameSlug: string, config: Record<string, unknown
     entry.children.push(child);
 
     child.on("message", (msg: { kind: string; [key: string]: unknown }) => {
-      if (!running.has(id)) return;
-
-      if (msg.kind === "game") {
-        if (gameSlug === "lost-cities") {
-          insertGame.run(id, msg.gameIndex, JSON.stringify(msg.log));
-          entry.totalScoreA += msg.scoreA as number;
-          entry.totalScoreB += msg.scoreB as number;
-          if ((msg.scoreA as number) > (msg.scoreB as number)) entry.aWins++;
-          else if ((msg.scoreB as number) > (msg.scoreA as number)) entry.bWins++;
-          else entry.draws++;
-        } else if (gameSlug === "sushi-go") {
-          const scoreA = msg.scoreA as number;
-          const scoreB = msg.scoreB as number;
-          insertGame.run(
-            id,
-            msg.gameIndex,
-            JSON.stringify({ scoreA, scoreB, aPlaysFirst: msg.aPlaysFirst }),
-          );
-          entry.totalScoreA += scoreA;
-          entry.totalScoreB += scoreB;
-          if (scoreA > scoreB) entry.aWins++;
-          else if (scoreB > scoreA) entry.bWins++;
-          else entry.draws++;
-        } else if (gameSlug === "exploding-kittens") {
-          const strategies = (config as { strategies: string[] }).strategies;
-          const winner = msg.winner as number;
-          if (winner >= 0 && winner < strategies.length) {
-            const sid = strategies[winner];
-            entry.ekWins[sid] = (entry.ekWins[sid] ?? 0) + 1;
-          }
-        } else if (gameSlug === "durak") {
-          const strategies = (config as { strategies: string[] }).strategies;
-          const durak = msg.durak as number;
-          if (durak >= 0 && durak < strategies.length) {
-            const sid = strategies[durak];
-            entry.ekWins[sid] = (entry.ekWins[sid] ?? 0) + 1;
-          }
-        }
-
-        entry.gamesCompleted++;
-
-        db.prepare("UPDATE tournaments SET progress_completed = ? WHERE id = ?").run(
-          entry.gamesCompleted,
-          id,
-        );
-
-        const event = JSON.stringify({
-          kind: "progress",
-          completed: entry.gamesCompleted,
-          total: entry.total,
-          partial: buildPartial(entry),
-        });
-        for (const send of entry.sseClients) {
-          send(event);
-        }
-      } else if (msg.kind === "done") {
-        entry.workersFinished++;
-
-        if (entry.workersFinished === entry.workerCount) {
-          const result = buildFinalResult(entry);
-
-          db.prepare(
-            `UPDATE tournaments SET status = 'completed', result_json = ?, completed_at = datetime('now') WHERE id = ?`,
-          ).run(JSON.stringify(result), id);
-
-          const event = JSON.stringify({ kind: "complete", result });
-          for (const send of entry.sseClients) {
-            send(event);
-          }
-
-          running.delete(id);
-        }
-      } else if (msg.kind === "error") {
-        handleWorkerFailure(entry, msg.message as string);
-      }
+      void handleWorkerMessage(entry, id, msg).catch((err) => {
+        console.error(`Tournament ${id} message handler error:`, err);
+      });
     });
 
     child.on("error", (err) => {
-      handleWorkerFailure(entry, err);
+      void handleWorkerFailure(entry, err);
     });
 
     child.on("exit", (code) => {
       if (running.has(id) && code !== 0) {
-        handleWorkerFailure(entry, `Worker exited with code ${code}`);
+        void handleWorkerFailure(entry, `Worker exited with code ${code}`);
       }
     });
   }
@@ -303,7 +244,99 @@ export function startTournament(gameSlug: string, config: Record<string, unknown
   return { id };
 }
 
-export function abortTournament(id: string): boolean {
+async function handleWorkerMessage(
+  entry: TournamentEntry,
+  id: string,
+  msg: { kind: string; [key: string]: unknown },
+): Promise<void> {
+  if (!running.has(id)) return;
+  const db = getDb();
+  const config = entry.config;
+  const gameSlug = entry.gameSlug;
+
+  if (msg.kind === "game") {
+    if (gameSlug === "lost-cities") {
+      await db.execute({
+        sql: "INSERT INTO tournament_games (tournament_id, game_index, log_json) VALUES (?, ?, ?)",
+        args: [id, msg.gameIndex as number, JSON.stringify(msg.log)],
+      });
+      entry.totalScoreA += msg.scoreA as number;
+      entry.totalScoreB += msg.scoreB as number;
+      if ((msg.scoreA as number) > (msg.scoreB as number)) entry.aWins++;
+      else if ((msg.scoreB as number) > (msg.scoreA as number)) entry.bWins++;
+      else entry.draws++;
+    } else if (gameSlug === "sushi-go") {
+      const scoreA = msg.scoreA as number;
+      const scoreB = msg.scoreB as number;
+      await db.execute({
+        sql: "INSERT INTO tournament_games (tournament_id, game_index, log_json) VALUES (?, ?, ?)",
+        args: [
+          id,
+          msg.gameIndex as number,
+          JSON.stringify({ scoreA, scoreB, aPlaysFirst: msg.aPlaysFirst }),
+        ],
+      });
+      entry.totalScoreA += scoreA;
+      entry.totalScoreB += scoreB;
+      if (scoreA > scoreB) entry.aWins++;
+      else if (scoreB > scoreA) entry.bWins++;
+      else entry.draws++;
+    } else if (gameSlug === "exploding-kittens") {
+      const strategies = (config as { strategies: string[] }).strategies;
+      const winner = msg.winner as number;
+      if (winner >= 0 && winner < strategies.length) {
+        const sid = strategies[winner];
+        entry.ekWins[sid] = (entry.ekWins[sid] ?? 0) + 1;
+      }
+    } else if (gameSlug === "durak") {
+      const strategies = (config as { strategies: string[] }).strategies;
+      const durak = msg.durak as number;
+      if (durak >= 0 && durak < strategies.length) {
+        const sid = strategies[durak];
+        entry.ekWins[sid] = (entry.ekWins[sid] ?? 0) + 1;
+      }
+    }
+
+    entry.gamesCompleted++;
+
+    await db.execute({
+      sql: "UPDATE tournaments SET progress_completed = ? WHERE id = ?",
+      args: [entry.gamesCompleted, id],
+    });
+
+    const event = JSON.stringify({
+      kind: "progress",
+      completed: entry.gamesCompleted,
+      total: entry.total,
+      partial: buildPartial(entry),
+    });
+    for (const send of entry.sseClients) {
+      send(event);
+    }
+  } else if (msg.kind === "done") {
+    entry.workersFinished++;
+
+    if (entry.workersFinished === entry.workerCount) {
+      const result = buildFinalResult(entry);
+
+      await db.execute({
+        sql: `UPDATE tournaments SET status = 'completed', result_json = ?, completed_at = datetime('now') WHERE id = ?`,
+        args: [JSON.stringify(result), id],
+      });
+
+      const event = JSON.stringify({ kind: "complete", result });
+      for (const send of entry.sseClients) {
+        send(event);
+      }
+
+      running.delete(id);
+    }
+  } else if (msg.kind === "error") {
+    await handleWorkerFailure(entry, msg.message as string);
+  }
+}
+
+export async function abortTournament(id: string): Promise<boolean> {
   const entry = running.get(id);
   if (!entry) return false;
 
@@ -311,10 +344,10 @@ export function abortTournament(id: string): boolean {
     child.kill();
   }
 
-  const db = getDb();
-  db.prepare(
-    `UPDATE tournaments SET status = 'aborted', completed_at = datetime('now') WHERE id = ?`,
-  ).run(id);
+  await getDb().execute({
+    sql: `UPDATE tournaments SET status = 'aborted', completed_at = datetime('now') WHERE id = ?`,
+    args: [id],
+  });
 
   const event = JSON.stringify({ kind: "error", message: "Tournament aborted" });
   for (const send of entry.sseClients) {
@@ -335,9 +368,8 @@ export function subscribeSse(id: string, send: (data: string) => void): () => vo
   };
 }
 
-export function markStaleRunning(): void {
-  const db = getDb();
-  db.prepare(
+export async function markStaleRunning(): Promise<void> {
+  await getDb().execute(
     `UPDATE tournaments SET status = 'aborted', completed_at = datetime('now') WHERE status = 'running'`,
-  ).run();
+  );
 }

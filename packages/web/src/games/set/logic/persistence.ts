@@ -1,7 +1,10 @@
 import type { GameRecord } from "@boardgames/core/games/set/types";
+import { apiUrl } from "../../../lib/api-base";
 
 const STORAGE_KEY = "set-game-history-v3";
-const API_BASE = "/api/games/set";
+const API_PATH = "/api/games/set";
+const url = (suffix: string) => apiUrl(`${API_PATH}${suffix}`);
+const credOpts: RequestInit = { credentials: "include" };
 
 // ---------------------------------------------------------------------------
 // localStorage
@@ -37,7 +40,8 @@ export function clearHistory(): void {
 
 export async function postGameRecordToServer(record: GameRecord): Promise<boolean> {
   try {
-    const res = await fetch(`${API_BASE}/results`, {
+    const res = await fetch(url("/results"), {
+      ...credOpts,
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(record),
@@ -53,7 +57,8 @@ export async function postBulkRecordsToServer(
 ): Promise<{ inserted: number; skipped: number } | null> {
   if (records.length === 0) return { inserted: 0, skipped: 0 };
   try {
-    const res = await fetch(`${API_BASE}/results/bulk`, {
+    const res = await fetch(url("/results/bulk"), {
+      ...credOpts,
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ records }),
@@ -67,7 +72,7 @@ export async function postBulkRecordsToServer(
 
 export async function fetchServerHistory(): Promise<GameRecord[]> {
   try {
-    const res = await fetch(`${API_BASE}/results?limit=10000`);
+    const res = await fetch(url("/results?limit=10000"), credOpts);
     if (!res.ok) return [];
     return (await res.json()) as GameRecord[];
   } catch {
@@ -77,7 +82,7 @@ export async function fetchServerHistory(): Promise<GameRecord[]> {
 
 export async function clearServerHistory(): Promise<boolean> {
   try {
-    const res = await fetch(`${API_BASE}/results`, { method: "DELETE" });
+    const res = await fetch(url("/results"), { ...credOpts, method: "DELETE" });
     return res.ok;
   } catch {
     return false;

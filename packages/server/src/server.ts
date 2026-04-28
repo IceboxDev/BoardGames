@@ -1,6 +1,8 @@
 import { createNodeWebSocket } from "@hono/node-ws";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
+import { auth } from "./auth.ts";
+import { adminOnlineRoutes } from "./auth-routes/admin-online.ts";
 import { persistenceRoutes } from "./persistence/routes.ts";
 import { getRegisteredSlugs } from "./sessions/machine-registry.ts";
 import { handleWsClose, handleWsMessage } from "./sessions/manager.ts";
@@ -20,10 +22,33 @@ const app = new Hono();
 
 const { injectWebSocket, upgradeWebSocket } = createNodeWebSocket({ app });
 
-app.use("/api/*", cors());
+const webOrigin = process.env.WEB_ORIGIN;
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:3001",
+  "http://127.0.0.1:5173",
+  ...(webOrigin ? [webOrigin] : []),
+];
+
+app.use(
+  "/api/*",
+  cors({
+    origin: allowedOrigins,
+    credentials: true,
+    allowHeaders: ["Content-Type", "Authorization"],
+    allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  }),
+);
+
+app.on(["GET", "POST"], "/api/auth/*", (c) => auth.handler(c.req.raw));
+
+app.get("/api/auth-config", (c) =>
+  c.json({ googleEnabled: Boolean(process.env.GOOGLE_CLIENT_ID) }),
+);
 
 app.get("/api/health", (c) => c.json({ ok: true, games: getRegisteredSlugs() }));
 
+app.route("/api/admin/users", adminOnlineRoutes);
 app.route("/api/tournaments", tournamentRoutes);
 app.route("/api/games", persistenceRoutes);
 

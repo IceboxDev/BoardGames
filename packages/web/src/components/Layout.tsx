@@ -5,13 +5,13 @@ import { useGameBackOverride } from "../hooks/useGameBackOverride";
 function LayoutInner() {
   const { pathname } = useLocation();
   const { overrideRef } = useGameBackOverride();
-  const isHome = pathname === "/";
+  const isHome = pathname === "/games";
 
   return (
     <div className="flex h-dvh min-h-0 flex-col overflow-hidden">
       <nav className="sticky top-0 z-50 shrink-0 border-b nav-border bg-surface-950/90 backdrop-blur-xl">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
-          <Link to="/" className="flex items-center gap-2.5 group">
+          <Link to="/games" className="flex items-center gap-2.5 group">
             <svg
               aria-hidden="true"
               viewBox="0 0 24 24"
@@ -30,7 +30,7 @@ function LayoutInner() {
           </Link>
 
           <Link
-            to="/"
+            to="/games"
             onClick={(e) => {
               if (overrideRef.current) {
                 e.preventDefault();

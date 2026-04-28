@@ -55,6 +55,61 @@ function sendToAllPlayers(
 }
 
 // ---------------------------------------------------------------------------
+// Replay persistence
+// ---------------------------------------------------------------------------
+
+async function persistReplay(
+  active: ActiveSession,
+  snapshot: ReturnType<ActiveSession["actor"]["getSnapshot"]>,
+): Promise<number | undefined> {
+  if (!active.spec.getReplayLog) return undefined;
+  const log = active.spec.getReplayLog(snapshot) as {
+    scoreA?: number;
+    scoreB?: number;
+    scores?: number[];
+    playerCount?: number;
+    durak?: number | null;
+  } | null;
+  if (!log) return undefined;
+
+  const result = active.spec.getResult(snapshot) as {
+    winner?: unknown;
+    durak?: unknown;
+  } | null;
+
+  let winner: string;
+  if (log.durak !== undefined && log.durak !== null) {
+    winner = `p${log.durak}`;
+  } else if (result?.winner === 0) {
+    winner = "p0";
+  } else if (result?.winner === 1) {
+    winner = "p1";
+  } else {
+    winner = "draw";
+  }
+
+  const aiEngine =
+    (active.config.aiEngine as string | undefined) ??
+    (active.config.strategies as (string | null)[] | undefined)?.find((s) => s !== null) ??
+    null;
+
+  const info = await getDb().execute({
+    sql: "INSERT INTO session_replays (game_slug, ai_engine, replay_json, score_p0, score_p1, winner, scores_json, player_count) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+    args: [
+      active.gameSlug,
+      aiEngine,
+      JSON.stringify(log),
+      log.scoreA ?? null,
+      log.scoreB ?? null,
+      winner,
+      log.scores ? JSON.stringify(log.scores) : null,
+      log.playerCount ?? null,
+    ],
+  });
+  return Number(info.lastInsertRowid);
+}
+
+// ---------------------------------------------------------------------------
 // Session subscription — fan out state updates to all connected players
 // ---------------------------------------------------------------------------
 
@@ -68,66 +123,24 @@ function subscribeSession(active: ActiveSession): void {
     if (phase === "idle") return;
 
     if (active.spec.isGameOver(snapshot)) {
-      let replayId: number | undefined;
-
-      if (active.spec.getReplayLog) {
-        try {
-          const log = active.spec.getReplayLog(snapshot) as {
-            scoreA?: number;
-            scoreB?: number;
-            scores?: number[];
-            playerCount?: number;
-            durak?: number | null;
-          } | null;
-          if (log) {
-            const result = active.spec.getResult(snapshot) as {
-              winner?: unknown;
-              durak?: unknown;
-            } | null;
-            let winner: string;
-            if (log.durak !== undefined && log.durak !== null) {
-              winner = `p${log.durak}`;
-            } else if (result?.winner === 0) {
-              winner = "p0";
-            } else if (result?.winner === 1) {
-              winner = "p1";
-            } else {
-              winner = "draw";
-            }
-            const db = getDb();
-            const info = db
-              .prepare(
-                "INSERT INTO session_replays (game_slug, ai_engine, replay_json, score_p0, score_p1, winner, scores_json, player_count) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-              )
-              .run(
-                active.gameSlug,
-                (active.config.aiEngine as string) ??
-                  (active.config.strategies as (string | null)[] | undefined)?.find(
-                    (s) => s !== null,
-                  ) ??
-                  null,
-                JSON.stringify(log),
-                log.scoreA ?? null,
-                log.scoreB ?? null,
-                winner,
-                log.scores ? JSON.stringify(log.scores) : null,
-                log.playerCount ?? null,
-              );
-            replayId = Number(info.lastInsertRowid);
+      void (async () => {
+        let replayId: number | undefined;
+        if (active.spec.getReplayLog) {
+          try {
+            replayId = await persistReplay(active, snapshot);
+          } catch (err) {
+            console.error("Failed to persist replay:", err);
           }
-        } catch (err) {
-          console.error("Failed to persist replay:", err);
         }
-      }
-
-      sendToAllPlayers(active, (p) => ({
-        type: "game-over",
-        sessionId: active.id,
-        result: active.spec.getResult(snapshot),
-        playerView: active.spec.getPlayerView(snapshot, p.playerIndex),
-        playerIndex: p.playerIndex,
-        replayId,
-      }));
+        sendToAllPlayers(active, (p) => ({
+          type: "game-over",
+          sessionId: active.id,
+          result: active.spec.getResult(snapshot),
+          playerView: active.spec.getPlayerView(snapshot, p.playerIndex),
+          playerIndex: p.playerIndex,
+          replayId,
+        }));
+      })();
       return;
     }
 

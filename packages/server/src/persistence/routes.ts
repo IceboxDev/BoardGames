@@ -10,20 +10,20 @@ persistenceRoutes.post("/:slug/results", async (c) => {
   const clientId: string | undefined = body.id;
 
   if (clientId) {
-    const stmt = db.prepare(
-      "INSERT OR IGNORE INTO game_results (game_slug, client_id, result_json) VALUES (?, ?, ?)",
-    );
-    const result = stmt.run(slug, clientId, JSON.stringify(body));
-    if (result.changes === 0) {
+    const result = await db.execute({
+      sql: "INSERT OR IGNORE INTO game_results (game_slug, client_id, result_json) VALUES (?, ?, ?)",
+      args: [slug, clientId, JSON.stringify(body)],
+    });
+    if (result.rowsAffected === 0) {
       return c.json({ ok: true, existed: true }, 200);
     }
     return c.json({ ok: true }, 201);
   }
 
-  db.prepare("INSERT INTO game_results (game_slug, result_json) VALUES (?, ?)").run(
-    slug,
-    JSON.stringify(body),
-  );
+  await db.execute({
+    sql: "INSERT INTO game_results (game_slug, result_json) VALUES (?, ?)",
+    args: [slug, JSON.stringify(body)],
+  });
 
   return c.json({ ok: true }, 201);
 });
@@ -37,93 +37,85 @@ persistenceRoutes.post("/:slug/results/bulk", async (c) => {
   }
 
   const db = getDb();
-  const stmt = db.prepare(
-    "INSERT OR IGNORE INTO game_results (game_slug, client_id, result_json) VALUES (?, ?, ?)",
-  );
+  const statements = records.map((record) => {
+    const clientId = (record as { id?: string }).id;
+    return {
+      sql: "INSERT OR IGNORE INTO game_results (game_slug, client_id, result_json) VALUES (?, ?, ?)",
+      args: [slug, clientId ?? null, JSON.stringify(record)] as (string | null)[],
+    };
+  });
 
+  const results = await db.batch(statements, "write");
   let inserted = 0;
   let skipped = 0;
-
-  const tx = db.transaction(() => {
-    for (const record of records) {
-      const clientId = (record as { id?: string }).id;
-      const result = stmt.run(slug, clientId ?? null, JSON.stringify(record));
-      if (result.changes > 0) inserted++;
-      else skipped++;
-    }
-  });
-  tx();
+  for (const r of results) {
+    if (r.rowsAffected > 0) inserted++;
+    else skipped++;
+  }
 
   return c.json({ ok: true, inserted, skipped }, 201);
 });
 
-persistenceRoutes.get("/:slug/results", (c) => {
+persistenceRoutes.get("/:slug/results", async (c) => {
   const slug = c.req.param("slug");
   const db = getDb();
   const limit = Number(c.req.query("limit") ?? 10000);
 
-  const rows = db
-    .prepare(
-      "SELECT result_json, created_at FROM game_results WHERE game_slug = ? ORDER BY created_at DESC LIMIT ?",
-    )
-    .all(slug, limit) as { result_json: string; created_at: string }[];
+  const { rows } = await db.execute({
+    sql: "SELECT result_json, created_at FROM game_results WHERE game_slug = ? ORDER BY created_at DESC LIMIT ?",
+    args: [slug, limit],
+  });
 
   return c.json(
     rows.map((r) => ({
-      createdAt: r.created_at,
-      ...JSON.parse(r.result_json),
+      createdAt: r.created_at as string,
+      ...JSON.parse(r.result_json as string),
     })),
   );
 });
 
-persistenceRoutes.delete("/:slug/results", (c) => {
+persistenceRoutes.delete("/:slug/results", async (c) => {
   const slug = c.req.param("slug");
   const db = getDb();
-  db.prepare("DELETE FROM game_results WHERE game_slug = ?").run(slug);
+  await db.execute({
+    sql: "DELETE FROM game_results WHERE game_slug = ?",
+    args: [slug],
+  });
   return c.json({ ok: true });
 });
 
-persistenceRoutes.get("/:slug/replays", (c) => {
+persistenceRoutes.get("/:slug/replays", async (c) => {
   const slug = c.req.param("slug");
   const db = getDb();
   const limit = Number(c.req.query("limit") ?? 50);
 
-  const rows = db
-    .prepare(
-      "SELECT id, ai_engine, score_p0, score_p1, winner, created_at, scores_json, player_count FROM session_replays WHERE game_slug = ? ORDER BY created_at DESC LIMIT ?",
-    )
-    .all(slug, limit) as {
-    id: number;
-    ai_engine: string | null;
-    score_p0: number | null;
-    score_p1: number | null;
-    winner: string | null;
-    created_at: string;
-    scores_json: string | null;
-    player_count: number | null;
-  }[];
+  const { rows } = await db.execute({
+    sql: "SELECT id, ai_engine, score_p0, score_p1, winner, created_at, scores_json, player_count FROM session_replays WHERE game_slug = ? ORDER BY created_at DESC LIMIT ?",
+    args: [slug, limit],
+  });
 
   return c.json(
     rows.map((r) => ({
-      id: r.id,
-      aiEngine: r.ai_engine,
-      scoreP0: r.score_p0,
-      scoreP1: r.score_p1,
-      winner: r.winner,
-      createdAt: r.created_at,
-      scores: r.scores_json ? JSON.parse(r.scores_json) : null,
-      playerCount: r.player_count,
+      id: r.id as number,
+      aiEngine: r.ai_engine as string | null,
+      scoreP0: r.score_p0 as number | null,
+      scoreP1: r.score_p1 as number | null,
+      winner: r.winner as string | null,
+      createdAt: r.created_at as string,
+      scores: r.scores_json ? JSON.parse(r.scores_json as string) : null,
+      playerCount: r.player_count as number | null,
     })),
   );
 });
 
-persistenceRoutes.get("/:slug/replays/:id", (c) => {
+persistenceRoutes.get("/:slug/replays/:id", async (c) => {
   const id = Number(c.req.param("id"));
   const db = getDb();
-  const row = db.prepare("SELECT replay_json FROM session_replays WHERE id = ?").get(id) as
-    | { replay_json: string }
-    | undefined;
+  const { rows } = await db.execute({
+    sql: "SELECT replay_json FROM session_replays WHERE id = ?",
+    args: [id],
+  });
 
-  if (!row) return c.json({ error: "Not found" }, 404);
-  return c.json(JSON.parse(row.replay_json));
+  if (rows.length === 0) return c.json({ error: "Not found" }, 404);
+  return c.json(JSON.parse(rows[0].replay_json as string));
 });
