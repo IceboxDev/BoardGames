@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "pnpm --filter @boardgames/web build",
-  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "pnpm --filter @boardgames/web... build",
+  "installCommand": "pnpm install --frozen-lockfile --filter @boardgames/web...",
   "outputDirectory": "packages/web/dist",
   "framework": null
 }
