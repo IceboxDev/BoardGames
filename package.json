@@ -1,5 +1,9 @@
 {
   "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "packageManager": "pnpm@10.33.2",
   "scripts": {
     "dev": "pnpm --filter @boardgames/web dev",
     "dev:all": "concurrently --names server,web --prefix-colors blue,green \"pnpm --filter @boardgames/server dev\" \"pnpm --filter @boardgames/web dev\"",
