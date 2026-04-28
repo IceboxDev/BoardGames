@@ -22,12 +22,20 @@ const app = new Hono();
 
 const { injectWebSocket, upgradeWebSocket } = createNodeWebSocket({ app });
 
-const webOrigin = process.env.WEB_ORIGIN;
+function normalizeOrigin(raw: string): string {
+  const trimmed = raw.trim().replace(/\/+$/, "");
+  if (!trimmed) return "";
+  if (/^https?:\/\//.test(trimmed)) return trimmed;
+  return `https://${trimmed}`;
+}
+
+const webOrigins = (process.env.WEB_ORIGIN ?? "").split(",").map(normalizeOrigin).filter(Boolean);
+
 const allowedOrigins = [
   "http://localhost:5173",
   "http://localhost:3001",
   "http://127.0.0.1:5173",
-  ...(webOrigin ? [webOrigin] : []),
+  ...webOrigins,
 ];
 
 app.use(

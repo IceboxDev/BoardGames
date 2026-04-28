@@ -3,10 +3,17 @@ import { betterAuth } from "better-auth";
 import { admin } from "better-auth/plugins";
 import { getDbConnectionConfig } from "./db.ts";
 
+function normalizeOrigin(raw: string): string {
+  const trimmed = raw.trim().replace(/\/+$/, "");
+  if (!trimmed) return "";
+  if (/^https?:\/\//.test(trimmed)) return trimmed;
+  return `https://${trimmed}`;
+}
+
 const adminEmail = (process.env.ADMIN_EMAIL ?? "mantas_kandratavicius@yahoo.com").toLowerCase();
 const googleClientId = process.env.GOOGLE_CLIENT_ID;
 const googleClientSecret = process.env.GOOGLE_CLIENT_SECRET;
-const webOrigin = process.env.WEB_ORIGIN;
+const webOrigins = (process.env.WEB_ORIGIN ?? "").split(",").map(normalizeOrigin).filter(Boolean);
 const isProduction = process.env.NODE_ENV === "production";
 
 const { url: dbUrl, authToken: dbAuthToken } = getDbConnectionConfig();
@@ -61,7 +68,7 @@ export const auth = betterAuth({
     "http://localhost:5173",
     "http://localhost:3001",
     "http://127.0.0.1:5173",
-    ...(webOrigin ? [webOrigin] : []),
+    ...webOrigins,
   ],
   advanced: {
     defaultCookieAttributes: isProduction
