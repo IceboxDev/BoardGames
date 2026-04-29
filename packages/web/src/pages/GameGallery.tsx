@@ -79,7 +79,7 @@ export default function GameGallery() {
         ) : (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {owned.map((game, i) => (
-              <GameCard key={game.slug} game={game} index={i} />
+              <GameCard key={game.slug} game={game} index={i} showComingSoon={false} />
             ))}
           </div>
         )}

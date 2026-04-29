@@ -68,3 +68,15 @@ export function mapsEqual(a: AvailabilityMap, b: AvailabilityMap): boolean {
   for (const k of ak) if (a[k] !== b[k]) return false;
   return true;
 }
+
+export async function adminFetchAvailability(userId: string): Promise<AvailabilityMap> {
+  const res = await fetch(apiUrl(`/api/admin/users/${userId}/availability`), {
+    credentials: "include",
+  });
+  if (!res.ok) throw new Error(`Failed to fetch availability (${res.status})`);
+  const data = (await res.json()) as unknown;
+  if (data && typeof data === "object" && !Array.isArray(data)) {
+    return data as AvailabilityMap;
+  }
+  return {};
+}

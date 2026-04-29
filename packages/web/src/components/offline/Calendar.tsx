@@ -10,6 +10,8 @@ type Props = {
   onChange?: (key: string, value: Availability | undefined) => void;
   readonlyBefore?: Date;
   interactive?: boolean;
+  /** Tighter typography + padding for narrow containers (e.g. side drawers). */
+  compact?: boolean;
 };
 
 export default function Calendar({
@@ -18,6 +20,7 @@ export default function Calendar({
   onChange,
   readonlyBefore,
   interactive = false,
+  compact = false,
 }: Props) {
   const todayKey = dateKey(new Date());
   const cutoffKey = readonlyBefore ? dateKey(readonlyBefore) : null;
@@ -30,19 +33,23 @@ export default function Calendar({
     return undefined;
   }
 
+  const gridGap = compact ? "gap-1" : "gap-1.5 sm:gap-2 md:gap-3";
+  const wrapperGrowth = compact ? "" : "min-h-0 flex-1";
+  const gridGrowth = compact ? "" : "min-h-0 flex-1";
+
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-2 sm:gap-3">
-      <div className="grid shrink-0 grid-cols-7 gap-1.5 sm:gap-2 md:gap-3">
+    <div className={`flex flex-col ${wrapperGrowth} ${compact ? "gap-1.5" : "gap-2 sm:gap-3"}`}>
+      <div className={`grid shrink-0 grid-cols-7 ${gridGap}`}>
         {DAY_NAMES.map((n) => (
           <div
             key={n}
-            className="text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-400"
+            className={`text-center font-semibold uppercase tracking-[0.2em] text-gray-400 ${compact ? "text-[8px]" : "text-[10px]"}`}
           >
             {n}
           </div>
         ))}
       </div>
-      <div className="grid min-h-0 flex-1 grid-cols-7 grid-rows-6 gap-1.5 sm:gap-2 md:gap-3">
+      <div className={`grid grid-cols-7 grid-rows-6 ${gridGap} ${gridGrowth}`}>
         {days.map((date, i) => {
           const key = dateKey(date);
           const value = availability[key];
@@ -61,6 +68,7 @@ export default function Calendar({
               isToday={isToday}
               isPast={isPast}
               interactive={interactive}
+              compact={compact}
               onClick={() => onChange?.(key, cycle(value))}
             />
           );
@@ -78,6 +86,7 @@ type DayCellProps = {
   isToday: boolean;
   isPast: boolean;
   interactive: boolean;
+  compact: boolean;
   onClick: () => void;
 };
 
@@ -89,6 +98,7 @@ function DayCell({
   isToday,
   isPast,
   interactive,
+  compact,
   onClick,
 }: DayCellProps) {
   const stateClass =
@@ -113,6 +123,18 @@ function DayCell({
       ? "hover:scale-[1.015] active:scale-[0.985]"
       : "pointer-events-none";
 
+  const padding = compact ? "p-1 sm:p-1.5" : "p-2 sm:p-3";
+  const dayTextSize = compact
+    ? "text-sm sm:text-base"
+    : "text-xl sm:text-2xl md:text-3xl xl:text-4xl";
+  const monthLabelPos = compact ? "left-1 top-1" : "left-1.5 top-1.5";
+  const monthLabelSize = compact ? "text-[7px]" : "text-[8px] sm:text-[9px]";
+  const todayDotPos = compact ? "right-1 top-1" : "right-2 top-2";
+  const valueLabelSize = compact ? "text-[7px]" : "text-[9px] sm:text-[11px]";
+
+  const aspectClass = compact ? "aspect-square" : "";
+  const layoutClass = compact ? "items-center justify-center" : "justify-between";
+
   return (
     <button
       type="button"
@@ -120,7 +142,7 @@ function DayCell({
       disabled={!interactive || isPast}
       aria-label={`${day}${value ? ` — ${value}` : ""}`}
       aria-pressed={value !== undefined}
-      className={`group relative flex flex-col justify-between overflow-hidden rounded-xl border p-2 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 sm:p-3 ${baseBgClass} ${borderClass} ${baseHover} ${lockedClass}`}
+      className={`group relative flex flex-col overflow-hidden rounded-xl border transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${layoutClass} ${aspectClass} ${padding} ${baseBgClass} ${borderClass} ${baseHover} ${lockedClass}`}
     >
       <span
         className={`pointer-events-none absolute inset-0 ${monthTintClass(monthBucket)}`}
@@ -131,7 +153,7 @@ function DayCell({
       )}
       {monthLabel && (
         <span
-          className="pointer-events-none absolute left-1.5 top-1.5 text-[8px] font-bold uppercase tracking-[0.18em] text-white/40 sm:text-[9px]"
+          className={`pointer-events-none absolute font-bold uppercase tracking-[0.18em] text-white/40 ${monthLabelPos} ${monthLabelSize}`}
           aria-hidden="true"
         >
           {monthLabel}
@@ -139,20 +161,20 @@ function DayCell({
       )}
       {isToday && (
         <span
-          className="pointer-events-none absolute right-2 top-2 h-1.5 w-1.5 animate-pulse rounded-full bg-neon-cyan shadow-[0_0_10px_2px_rgba(34,211,238,0.7)]"
+          className={`pointer-events-none absolute h-1.5 w-1.5 animate-pulse rounded-full bg-neon-cyan shadow-[0_0_10px_2px_rgba(34,211,238,0.7)] ${todayDotPos}`}
           aria-hidden="true"
         />
       )}
       <span
-        className={`relative text-xl font-bold leading-none sm:text-2xl md:text-3xl xl:text-4xl ${
+        className={`relative font-bold leading-none ${dayTextSize} ${
           value ? "text-white" : "text-gray-200"
         }`}
       >
         {day}
       </span>
-      {value && (
+      {value && !compact && (
         <span
-          className={`relative self-end text-[9px] font-bold uppercase tracking-[0.18em] sm:text-[11px] ${
+          className={`relative self-end font-bold uppercase tracking-[0.18em] ${valueLabelSize} ${
             value === "can" ? "text-accent-200" : "text-amber-200"
           }`}
         >

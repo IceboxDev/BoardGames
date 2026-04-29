@@ -6,9 +6,11 @@ type Props = {
   game: GameDefinition;
   href?: string;
   index?: number;
+  /** Whether to render the "Coming soon" badge for catalog-only games. Default true. */
+  showComingSoon?: boolean;
 };
 
-export default function GameCard({ game, href, index = 0 }: Props) {
+export default function GameCard({ game, href, index = 0, showComingSoon = true }: Props) {
   const summary = compactSummary(game.bgg);
   const description = game.bgg.description;
   const style: CSSProperties = {
@@ -31,7 +33,7 @@ export default function GameCard({ game, href, index = 0 }: Props) {
           className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-surface-900 via-surface-900/20 to-transparent" />
-        {!game.component && (
+        {showComingSoon && !game.component && (
           <span className="absolute right-2 top-2 rounded-full bg-black/65 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.2em] text-white/75 backdrop-blur-sm">
             Coming soon
           </span>
