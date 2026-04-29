@@ -6,6 +6,8 @@ function LayoutInner() {
   const { pathname } = useLocation();
   const { overrideRef } = useGameBackOverride();
   const isHome = pathname === "/games";
+  const backHref = isHome ? "/" : "/games";
+  const backLabel = isHome ? "Dashboard" : "Back";
 
   return (
     <div className="flex h-dvh min-h-0 flex-col overflow-hidden">
@@ -30,15 +32,14 @@ function LayoutInner() {
           </Link>
 
           <Link
-            to="/games"
+            to={backHref}
             onClick={(e) => {
               if (overrideRef.current) {
                 e.preventDefault();
                 overrideRef.current();
               }
             }}
-            className={`flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-gray-500 transition hover:bg-surface-800 hover:text-gray-300 ${isHome ? "invisible" : ""}`}
-            tabIndex={isHome ? -1 : undefined}
+            className="flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-gray-500 transition hover:bg-surface-800 hover:text-gray-300"
           >
             <svg aria-hidden="true" viewBox="0 0 20 20" className="h-3.5 w-3.5" fill="currentColor">
               <path
@@ -47,7 +48,7 @@ function LayoutInner() {
                 clipRule="evenodd"
               />
             </svg>
-            Back
+            {backLabel}
           </Link>
         </div>
       </nav>
