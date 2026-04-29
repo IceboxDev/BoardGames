@@ -3,5 +3,11 @@
   "buildCommand": "pnpm --filter @boardgames/web... build",
   "installCommand": "pnpm install --frozen-lockfile --filter @boardgames/web... --ignore-scripts",
   "outputDirectory": "packages/web/dist",
-  "framework": null
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://boardgamesserver-production.up.railway.app/api/:path*"
+    }
+  ]
 }
