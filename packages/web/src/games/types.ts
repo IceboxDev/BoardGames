@@ -1,24 +1,50 @@
 import type { ComponentType, LazyExoticComponent } from "react";
 
-export interface AccentColor {
-  border: string;
-  hoverBg: string;
-  arrow: string;
-  gradient: string;
-}
+/**
+ * BoardGameGeek metadata baked in at dev time via `pnpm fetch-bgg`. Each game
+ * folder ships a `bgg.json` matching this shape; the registry imports it so
+ * the runtime never hits BGG.
+ */
+export type BggGame = {
+  id: number;
+  name: string;
+  description: string;
+  yearPublished: number | null;
+  minPlayers: number | null;
+  maxPlayers: number | null;
+  playingTime: number | null;
+  minPlayTime: number | null;
+  maxPlayTime: number | null;
+  minAge: number | null;
+  categories: string[];
+  mechanics: string[];
+  designers: string[];
+  artists: string[];
+  publishers: string[];
+  averageRating: number | null;
+  averageWeight: number | null;
+  numRatings: number | null;
+};
 
 export interface GameDefinition {
   slug: string;
+  /** User-supplied display name. */
   title: string;
-  description: string;
-  /** Short subtitle for the mode-picker screen (must fit one line). Falls back to `description`. */
-  subtitle?: string;
-  thumbnail?: string;
+  /** BoardGameGeek XML API2 ID — the catalog primary key. */
+  bggId: number;
+  /** BGG metadata bundled in at dev time. */
+  bgg: BggGame;
+  /** Imported thumbnail asset URL. */
+  thumbnail: string;
+  /** Dominant accent color extracted at build time from the thumbnail. */
+  accentHex: string;
+  /** Optional full-page backdrop for the game's own screens. */
   backgroundImage?: string;
-  accentColor: AccentColor;
-  component: LazyExoticComponent<ComponentType>;
-  mode: "remote" | "local";
-  /** Label for the solo/AI button on the mode-picker (e.g. "Play vs AI", "Solo", "Trainer"). */
+  /** Online-playable component. Omit for catalog-only games. */
+  component?: LazyExoticComponent<ComponentType>;
+  /** Multiplayer architecture for the playable component. */
+  mode?: "remote" | "local";
+  /** Label for the solo/AI button on the mode-picker (e.g. "Play vs AI", "Trainer"). */
   soloLabel?: string;
   /** Whether the game has a match history screen accessible from the mode-picker. */
   hasMatchHistory?: boolean;

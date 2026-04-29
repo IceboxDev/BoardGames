@@ -1,6 +1,10 @@
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/Button";
+import { games } from "../games/registry";
+import type { GameDefinition } from "../games/types";
 import { authClient, useSession } from "../lib/auth-client";
+import { fetchMyInventory } from "../lib/inventory";
 
 export default function ProfilePage() {
   const navigate = useNavigate();
@@ -11,6 +15,22 @@ export default function ProfilePage() {
 
   const onlineUnlocked = Boolean(user?.onlineEnabled);
   const isAdmin = user?.role === "admin";
+
+  const [ownedSlugs, setOwnedSlugs] = useState<string[] | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    fetchMyInventory()
+      .then((slugs) => {
+        if (!cancelled) setOwnedSlugs(slugs);
+      })
+      .catch(() => {
+        if (!cancelled) setOwnedSlugs([]);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   async function handleSignOut() {
     await authClient.signOut();
@@ -64,6 +84,8 @@ export default function ProfilePage() {
           />
         </div>
 
+        <GalleryPreview ownedSlugs={ownedSlugs} onClick={() => navigate("/gallery")} />
+
         {!onlineUnlocked && (
           <p className="mt-8 text-center text-xs text-gray-500">
             Your account is signed in but online play hasn't been unlocked for you yet. The
@@ -99,6 +121,93 @@ function ModeButton({ title, subtitle, locked, accent, onClick }: ModeButtonProp
       </span>
       <span className="text-xs font-normal opacity-70">{subtitle}</span>
     </Button>
+  );
+}
+
+type GalleryPreviewProps = {
+  ownedSlugs: string[] | null;
+  onClick: () => void;
+};
+
+const PREVIEW_THUMBS = 6;
+
+function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
+  const isLoading = ownedSlugs === null;
+  const owned: GameDefinition[] = ownedSlugs
+    ? ownedSlugs
+        .map((s) => games.find((g) => g.slug === s))
+        .filter((g): g is GameDefinition => Boolean(g))
+    : [];
+
+  const previewGames = owned.slice(0, PREVIEW_THUMBS);
+  const overflow = owned.length - previewGames.length;
+  const empty = !isLoading && owned.length === 0;
+
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className="group mt-6 flex items-center gap-4 rounded-2xl border border-white/[0.06] bg-surface-900/60 px-5 py-3.5 text-left transition-all duration-300 hover:border-white/15 hover:bg-surface-900 sm:px-6 sm:py-4"
+    >
+      <div className="flex shrink-0 items-center gap-2 text-gray-300 transition-colors group-hover:text-white">
+        <GalleryIcon />
+        <span className="text-xs font-semibold uppercase tracking-[0.2em]">Gallery</span>
+      </div>
+
+      <div className="flex min-w-0 flex-1 items-center gap-2.5">
+        {isLoading ? (
+          <span className="text-xs text-gray-500">Loading…</span>
+        ) : empty ? (
+          <span className="text-xs text-gray-500">No games yet — ask an admin to add some</span>
+        ) : (
+          <>
+            <div className="flex gap-1.5">
+              {previewGames.map((g) => (
+                <span
+                  key={g.slug}
+                  className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg bg-surface-800 ring-1 ring-[var(--accent)]/45"
+                  style={{ "--accent": g.accentHex } as React.CSSProperties}
+                >
+                  <img src={g.thumbnail} alt="" className="h-full w-full object-cover" />
+                </span>
+              ))}
+              {overflow > 0 && (
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-800/80 text-[10px] font-semibold text-gray-400 ring-1 ring-white/10">
+                  +{overflow}
+                </span>
+              )}
+            </div>
+            <span className="truncate text-xs text-gray-500">
+              {owned.length} {owned.length === 1 ? "game" : "games"}
+            </span>
+          </>
+        )}
+      </div>
+
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        className="h-4 w-4 shrink-0 text-gray-500 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-accent-300"
+      >
+        <path
+          fillRule="evenodd"
+          d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+          clipRule="evenodd"
+        />
+      </svg>
+    </button>
+  );
+}
+
+function GalleryIcon() {
+  return (
+    <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden="true">
+      <rect x="3" y="3" width="6" height="6" rx="1.25" />
+      <rect x="11" y="3" width="6" height="6" rx="1.25" />
+      <rect x="3" y="11" width="6" height="6" rx="1.25" />
+      <rect x="11" y="11" width="6" height="6" rx="1.25" />
+    </svg>
   );
 }
 

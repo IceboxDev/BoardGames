@@ -7,7 +7,7 @@ const RulesViewer = lazy(() =>
 
 interface ModeSelectProps {
   title: string;
-  subtitle: string;
+  subtitle?: string;
   soloLabel?: string;
   rulesUrl?: string;
   onSolo?: () => void;

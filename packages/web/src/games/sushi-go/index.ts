@@ -1,22 +1,19 @@
 import { lazy } from "react";
 import type { GameDefinition } from "../types";
+import accent from "./accent.json";
 import backgroundImage from "./assets/background.png";
 import rulesUrl from "./assets/rules.pdf";
 import thumbnail from "./assets/thumbnail.png";
+import bgg from "./bgg.json";
 
 export default {
   slug: "sushi-go",
   title: "Sushi Go!",
-  description: "Pick and pass cards to build the best sushi meal",
-  subtitle: "Pick and pass cards to build the best sushi meal",
+  bggId: 133473,
+  bgg,
   thumbnail,
+  accentHex: accent.hex,
   backgroundImage,
-  accentColor: {
-    border: "hover:border-orange-500/30",
-    hoverBg: "group-hover:bg-orange-500/5",
-    arrow: "group-hover:text-orange-400",
-    gradient: "from-orange-950/80 to-amber-950/80",
-  },
   component: lazy(() => import("./SushiGo")),
   mode: "remote",
   hasTournament: true,

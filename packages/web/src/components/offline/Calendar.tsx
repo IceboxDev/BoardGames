@@ -1,28 +1,28 @@
 import type { Availability, AvailabilityMap } from "../../lib/offline-availability";
 import { dateKey } from "../../lib/offline-availability";
+import { build42Days } from "../../lib/offline-week";
 
 const DAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
 type Props = {
-  monthDate: Date;
+  weekStart: Date;
   availability: AvailabilityMap;
-  onChange: (key: string, value: Availability | undefined) => void;
+  onChange?: (key: string, value: Availability | undefined) => void;
   readonlyBefore?: Date;
+  interactive?: boolean;
 };
 
-export default function Calendar({ monthDate, availability, onChange, readonlyBefore }: Props) {
-  const year = monthDate.getFullYear();
-  const month = monthDate.getMonth();
-  const firstWeekday = (new Date(year, month, 1).getDay() + 6) % 7;
-
+export default function Calendar({
+  weekStart,
+  availability,
+  onChange,
+  readonlyBefore,
+  interactive = false,
+}: Props) {
   const todayKey = dateKey(new Date());
   const cutoffKey = readonlyBefore ? dateKey(readonlyBefore) : null;
 
-  const cells: { date: Date; key: string; inMonth: boolean }[] = [];
-  for (let i = 0; i < 42; i++) {
-    const d = new Date(year, month, i + 1 - firstWeekday);
-    cells.push({ date: d, key: dateKey(d), inMonth: d.getMonth() === month });
-  }
+  const days = build42Days(weekStart);
 
   function cycle(current: Availability | undefined): Availability | undefined {
     if (current === undefined) return "can";
@@ -36,30 +36,32 @@ export default function Calendar({ monthDate, availability, onChange, readonlyBe
         {DAY_NAMES.map((n) => (
           <div
             key={n}
-            className="text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-500"
+            className="text-center text-[10px] font-semibold uppercase tracking-[0.2em] text-gray-400"
           >
             {n}
           </div>
         ))}
       </div>
       <div className="grid min-h-0 flex-1 grid-cols-7 grid-rows-6 gap-1.5 sm:gap-2 md:gap-3">
-        {cells.map((cell) => {
-          if (!cell.inMonth) {
-            return (
-              <div key={cell.key} aria-hidden="true" className="rounded-xl bg-white/[0.015]" />
-            );
-          }
-          const value = availability[cell.key];
-          const isToday = cell.key === todayKey;
-          const isPast = cutoffKey ? cell.key < cutoffKey : false;
+        {days.map((date, i) => {
+          const key = dateKey(date);
+          const value = availability[key];
+          const isToday = key === todayKey;
+          const isPast = cutoffKey ? key < cutoffKey : false;
+          const showMonthLabel = i === 0 || date.getDate() === 1;
           return (
             <DayCell
-              key={cell.key}
-              day={cell.date.getDate()}
+              key={key}
+              day={date.getDate()}
+              monthBucket={(date.getMonth() % 3) as 0 | 1 | 2}
+              monthLabel={
+                showMonthLabel ? date.toLocaleString(undefined, { month: "short" }) : null
+              }
               value={value}
               isToday={isToday}
               isPast={isPast}
-              onClick={() => onChange(cell.key, cycle(value))}
+              interactive={interactive}
+              onClick={() => onChange?.(key, cycle(value))}
             />
           );
         })}
@@ -70,41 +72,79 @@ export default function Calendar({ monthDate, availability, onChange, readonlyBe
 
 type DayCellProps = {
   day: number;
+  monthBucket: 0 | 1 | 2;
+  monthLabel: string | null;
   value: Availability | undefined;
   isToday: boolean;
   isPast: boolean;
+  interactive: boolean;
   onClick: () => void;
 };
 
-function DayCell({ day, value, isToday, isPast, onClick }: DayCellProps) {
+function DayCell({
+  day,
+  monthBucket,
+  monthLabel,
+  value,
+  isToday,
+  isPast,
+  interactive,
+  onClick,
+}: DayCellProps) {
   const stateClass =
     value === "can"
-      ? "bg-gradient-to-br from-accent-500/40 via-accent-500/20 to-neon-cyan/15 border-accent-400/70 shadow-[0_0_30px_-5px_rgba(99,102,241,0.45)]"
+      ? "bg-gradient-to-br from-accent-500/40 via-accent-500/20 to-neon-cyan/15 shadow-[0_0_30px_-5px_rgba(99,102,241,0.45)]"
       : value === "maybe"
-        ? "bg-gradient-to-br from-amber-500/30 via-orange-500/20 to-amber-400/10 border-amber-400/55 shadow-[0_0_24px_-6px_rgba(245,158,11,0.4)]"
-        : "bg-surface-800/55 border-white/[0.06] hover:border-white/20 hover:bg-surface-800";
+        ? "bg-gradient-to-br from-amber-500/30 via-orange-500/20 to-amber-400/10 shadow-[0_0_24px_-6px_rgba(245,158,11,0.4)]"
+        : "";
 
-  const interactiveClass = isPast
+  const borderClass =
+    value === "can"
+      ? "border-accent-400/70"
+      : value === "maybe"
+        ? "border-amber-400/55"
+        : "border-white/10 hover:border-white/25";
+
+  const baseBgClass = !value ? "bg-surface-800/55" : "";
+  const baseHover = !value && interactive ? "hover:bg-surface-800/80" : "";
+  const lockedClass = isPast
     ? "pointer-events-none opacity-30"
-    : "hover:scale-[1.015] active:scale-[0.985]";
+    : interactive
+      ? "hover:scale-[1.015] active:scale-[0.985]"
+      : "pointer-events-none";
 
   return (
     <button
       type="button"
       onClick={onClick}
-      disabled={isPast}
+      disabled={!interactive || isPast}
       aria-label={`${day}${value ? ` — ${value}` : ""}`}
       aria-pressed={value !== undefined}
-      className={`group relative flex flex-col justify-between overflow-hidden rounded-xl border p-2 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 sm:p-3 ${stateClass} ${interactiveClass}`}
+      className={`group relative flex flex-col justify-between overflow-hidden rounded-xl border p-2 transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 sm:p-3 ${baseBgClass} ${borderClass} ${baseHover} ${lockedClass}`}
     >
+      <span
+        className={`pointer-events-none absolute inset-0 ${monthTintClass(monthBucket)}`}
+        aria-hidden="true"
+      />
+      {stateClass && (
+        <span className={`pointer-events-none absolute inset-0 ${stateClass}`} aria-hidden="true" />
+      )}
+      {monthLabel && (
+        <span
+          className="pointer-events-none absolute left-1.5 top-1.5 text-[8px] font-bold uppercase tracking-[0.18em] text-white/40 sm:text-[9px]"
+          aria-hidden="true"
+        >
+          {monthLabel}
+        </span>
+      )}
       {isToday && (
         <span
-          className="absolute right-2 top-2 h-1.5 w-1.5 animate-pulse rounded-full bg-neon-cyan shadow-[0_0_10px_2px_rgba(34,211,238,0.7)]"
+          className="pointer-events-none absolute right-2 top-2 h-1.5 w-1.5 animate-pulse rounded-full bg-neon-cyan shadow-[0_0_10px_2px_rgba(34,211,238,0.7)]"
           aria-hidden="true"
         />
       )}
       <span
-        className={`text-xl font-bold leading-none sm:text-2xl md:text-3xl xl:text-4xl ${
+        className={`relative text-xl font-bold leading-none sm:text-2xl md:text-3xl xl:text-4xl ${
           value ? "text-white" : "text-gray-200"
         }`}
       >
@@ -112,7 +152,7 @@ function DayCell({ day, value, isToday, isPast, onClick }: DayCellProps) {
       </span>
       {value && (
         <span
-          className={`self-end text-[9px] font-bold uppercase tracking-[0.18em] sm:text-[11px] ${
+          className={`relative self-end text-[9px] font-bold uppercase tracking-[0.18em] sm:text-[11px] ${
             value === "can" ? "text-accent-200" : "text-amber-200"
           }`}
         >
@@ -121,4 +161,10 @@ function DayCell({ day, value, isToday, isPast, onClick }: DayCellProps) {
       )}
     </button>
   );
+}
+
+function monthTintClass(bucket: 0 | 1 | 2): string {
+  if (bucket === 0) return "bg-accent-500/[0.06]";
+  if (bucket === 1) return "bg-neon-cyan/[0.06]";
+  return "bg-neon-purple/[0.06]";
 }

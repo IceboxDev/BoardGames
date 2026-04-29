@@ -6,7 +6,7 @@ export default function GameRouter() {
   const { slug } = useParams<{ slug: string }>();
   const game = games.find((g) => g.slug === slug);
 
-  if (!game) return <Navigate to="/games" replace />;
+  if (!game || !game.component) return <Navigate to="/games" replace />;
 
   const GameComponent = game.component;
 

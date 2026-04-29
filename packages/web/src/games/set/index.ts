@@ -1,22 +1,19 @@
 import { lazy } from "react";
 import type { GameDefinition } from "../types";
+import accent from "./accent.json";
 import backgroundImage from "./assets/background.png";
 import rulesUrl from "./assets/rules.pdf";
 import thumbnail from "./assets/thumbnail.png";
+import bgg from "./bgg.json";
 
 export default {
   slug: "set",
   title: "Set",
-  description: "Combinatorial pattern recognition across shape, color, count, and fill",
-  subtitle: "Find groups of three cards with matching or differing attributes",
+  bggId: 1198,
+  bgg,
   thumbnail,
+  accentHex: accent.hex,
   backgroundImage,
-  accentColor: {
-    border: "hover:border-emerald-500/30",
-    hoverBg: "group-hover:bg-emerald-500/5",
-    arrow: "group-hover:text-emerald-400",
-    gradient: "from-emerald-950/80 to-teal-950/80",
-  },
   component: lazy(() => import("./SetGame")),
   mode: "remote",
   soloLabel: "Trainer",

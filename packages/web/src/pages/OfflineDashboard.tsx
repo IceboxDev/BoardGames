@@ -1,51 +1,95 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
+import { AvailabilityActionBar } from "../components/offline/AvailabilityActionBar";
 import Calendar from "../components/offline/Calendar";
 import { useSession } from "../lib/auth-client";
 import {
   type Availability,
   type AvailabilityMap,
+  fetchAvailability,
   loadAvailability,
+  mapsEqual,
+  pushAvailability,
   saveAvailability,
 } from "../lib/offline-availability";
+import { startOfWeekMonday } from "../lib/offline-week";
 
-type Tab = "play" | "plan";
+type Mode = "view" | "edit";
 
 export default function OfflineDashboard() {
   const { data } = useSession();
-  const userId = data?.user?.id ?? null;
-
-  const [tab, setTab] = useState<Tab>("play");
-  const [availability, setAvailability] = useState<AvailabilityMap>({});
+  const userId = data?.user?.id;
 
   const today = useMemo(() => new Date(), []);
-  const playMonth = useMemo(() => new Date(today.getFullYear(), today.getMonth(), 1), [today]);
-  const planMonth = useMemo(() => new Date(today.getFullYear(), today.getMonth() + 1, 1), [today]);
+  const weekStart = useMemo(() => startOfWeekMonday(today), [today]);
+
+  const [mode, setMode] = useState<Mode>("view");
+  const [committed, setCommitted] = useState<AvailabilityMap>({});
+  const [draft, setDraft] = useState<AvailabilityMap>({});
+  const [saving, setSaving] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     if (!userId) return;
-    setAvailability(loadAvailability(userId));
+    const cached = loadAvailability(userId);
+    setCommitted(cached);
+
+    let cancelled = false;
+    fetchAvailability()
+      .then((server) => {
+        if (cancelled) return;
+        if (!mapsEqual(server, cached)) {
+          setCommitted(server);
+          saveAvailability(userId, server);
+        }
+      })
+      .catch(() => {
+        // keep cached state; surface errors only on Save
+      });
+
+    return () => {
+      cancelled = true;
+    };
   }, [userId]);
 
-  function handleChange(key: string, value: Availability | undefined) {
+  function enterEdit() {
+    setDraft(committed);
+    setError(null);
+    setMode("edit");
+  }
+
+  function cancel() {
+    setError(null);
+    setMode("view");
+  }
+
+  async function save() {
     if (!userId) return;
-    setAvailability((prev) => {
+    setSaving(true);
+    setError(null);
+    try {
+      await pushAvailability(draft);
+      saveAvailability(userId, draft);
+      setCommitted(draft);
+      setMode("view");
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Could not save. Try again.");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  function handleChange(key: string, value: Availability | undefined) {
+    setDraft((prev) => {
       const next = { ...prev };
-      if (value === undefined) {
-        delete next[key];
-      } else {
-        next[key] = value;
-      }
-      saveAvailability(userId, next);
+      if (value === undefined) delete next[key];
+      else next[key] = value;
       return next;
     });
   }
 
-  const monthForTab = tab === "play" ? playMonth : planMonth;
-  const fullLabel = monthForTab.toLocaleDateString(undefined, {
-    month: "long",
-    year: "numeric",
-  });
+  const visible = mode === "edit" ? draft : committed;
+  const markedCount = Object.keys(visible).length;
 
   return (
     <div className="flex min-h-dvh flex-col bg-surface-950 bg-grid">
@@ -70,72 +114,38 @@ export default function OfflineDashboard() {
       </header>
 
       <div className="flex min-h-0 flex-1 flex-col gap-3 px-3 py-3 sm:gap-5 sm:px-6 sm:py-5">
-        <div className="flex shrink-0 flex-col items-center gap-2">
-          <div className="inline-flex rounded-2xl border border-white/10 bg-surface-900/70 p-1 shadow-lg shadow-black/30 backdrop-blur">
-            <TabButton active={tab === "play"} onClick={() => setTab("play")}>
-              <TabLabel kind="Play" month={playMonth} />
-            </TabButton>
-            <TabButton active={tab === "plan"} onClick={() => setTab("plan")}>
-              <TabLabel kind="Plan" month={planMonth} />
-            </TabButton>
-          </div>
-          <p className="text-[11px] text-gray-500">
-            <span className="hidden sm:inline">Tap a day to cycle: </span>
-            <span className="text-accent-300">Can</span>
-            <span className="mx-1 opacity-50">→</span>
-            <span className="text-amber-300">Maybe</span>
-            <span className="mx-1 opacity-50">→</span>
-            <span className="opacity-60">clear</span>
-          </p>
-        </div>
-
-        <div className="sr-only" aria-live="polite">
-          {fullLabel}
-        </div>
+        <p
+          className={`shrink-0 text-center text-[11px] text-gray-400 ${
+            mode === "edit" ? "" : "invisible"
+          }`}
+          aria-hidden={mode !== "edit"}
+        >
+          <span className="hidden sm:inline">Tap a day to cycle: </span>
+          <span className="text-accent-300">Can</span>
+          <span className="mx-1 opacity-50">→</span>
+          <span className="text-amber-300">Maybe</span>
+          <span className="mx-1 opacity-50">→</span>
+          <span className="opacity-60">clear</span>
+        </p>
 
         <Calendar
-          key={tab}
-          monthDate={monthForTab}
-          availability={availability}
+          weekStart={weekStart}
+          availability={visible}
           onChange={handleChange}
-          readonlyBefore={tab === "play" ? today : undefined}
+          readonlyBefore={today}
+          interactive={mode === "edit"}
+        />
+
+        <AvailabilityActionBar
+          mode={mode}
+          markedCount={markedCount}
+          saving={saving}
+          error={error}
+          onEdit={enterEdit}
+          onCancel={cancel}
+          onSave={save}
         />
       </div>
     </div>
-  );
-}
-
-type TabButtonProps = {
-  active: boolean;
-  onClick: () => void;
-  children: React.ReactNode;
-};
-
-function TabButton({ active, onClick, children }: TabButtonProps) {
-  return (
-    <button
-      type="button"
-      onClick={onClick}
-      aria-pressed={active}
-      className={`relative rounded-xl px-5 py-2 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 sm:px-7 sm:py-2.5 ${
-        active
-          ? "bg-gradient-to-br from-accent-500/30 via-accent-500/15 to-transparent text-white shadow-inner"
-          : "text-gray-400 hover:text-gray-100"
-      }`}
-    >
-      {children}
-    </button>
-  );
-}
-
-function TabLabel({ kind, month }: { kind: "Play" | "Plan"; month: Date }) {
-  const label = month.toLocaleDateString(undefined, { month: "long" });
-  return (
-    <span className="flex flex-col items-center leading-tight">
-      <span className="text-[10px] font-semibold uppercase tracking-[0.25em] opacity-70">
-        {kind}
-      </span>
-      <span className="text-sm font-semibold sm:text-base">{label}</span>
-    </span>
   );
 }

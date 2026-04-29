@@ -60,6 +60,46 @@ Every prompt includes the same style directive so the four images form a visuall
 
 ---
 
+## 7. Parks
+
+**File:** `packages/web/src/games/parks/assets/thumbnail.png`
+
+> A top-down view of a wooden cabin desk lit by golden afternoon sunlight slanting in from one side. A row of stylized trail-tiles painted in 59-Parks-Print poster aesthetic curves across the desk — forested ridges, alpine streams, sun-drenched meadows — with a small carved wooden hiker meeple standing on one of them. A fan of park cards spreads from the bottom edge, each card a miniature WPA-style poster of an iconic American national park (Yosemite's Half Dome, Yellowstone's geyser, Zion's red cliffs). Scattered around: translucent gem-shaped resource tokens (sun, water, mountain, forest) glinting like polished glass, a vintage brass canteen catching the light, a pressed wildflower, a worn leather field journal with a feather quill across it, a small compass with its needle pointing north. The background fades into a soft-focus painted vista of distant peaks and a hazy treeline beyond a window. The mood is contemplative and nostalgic, warm amber sunlight against deep forest green. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 8. Trivial Pursuit
+
+**File:** `packages/web/src/games/trivial-pursuit/assets/thumbnail.png`
+
+> A top-down view of a polished mahogany table in a wood-paneled study, lit by a warm brass desk lamp. The hexagonal Trivial Pursuit board dominates the center, its colored category-wedge spaces (blue, pink, yellow, brown, green, orange) catching tungsten light around the iconic six-spoked spiral. A small black plastic pie-disc playing token sits in the foreground, four colored wedges already locked in its slots and two empty places waiting. A fan of category cards spreads beside it from the bottom edge — color-backed cards with one flipped face-up showing a partially obscured trivia question. A pair of dice rests at the rim of the board. Scattered around: a half-empty crystal tumbler of amber whiskey, a leather-bound encyclopedia volume with a ribbon bookmark, a vintage pocket watch on a chain, and a curl of pipe smoke catching the lamp's halo. The background fades into rows of blurred bookshelves and the dim glow of a hearth. The mood is warm and cleverly competitive, golden tungsten tones against deep oxblood and walnut. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 9. UNO
+
+**File:** `packages/web/src/games/uno/assets/thumbnail.png`
+
+> A top-down view of a warm wood-grain kitchen table at night, lit by a single pendant lamp casting a pool of amber light. The center holds a discard pile topped by a freshly slammed Wild Draw +4 card — its rainbow-quadrant emblem radiating chromatic shockwaves of red, yellow, green, and blue light streaks across the surface. A bright fan of UNO cards spreads from the bottom edge — vivid red 7s, yellow Skips, green Reverses, blue numbers, and a single black Wild card with its rainbow circle peeking at one end. To the side of the discard, a stack of four face-down cards spills mid-arc through the air, frozen mid-deal. Scattered around: a half-empty soda can, a chipped coffee mug with cold dregs, a single popcorn kernel, a few cards spilled face-down across the periphery, and an iPhone face-down at the table's edge. The background fades into the dim blur of chair-backs and a fridge with magnets. The mood is high-stakes and electric, bold primary colors popping against deep warm wood. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 10. Rummikub
+
+**File:** `packages/web/src/games/rummikub/assets/thumbnail.png`
+
+> A top-down view of a stone terrace table at golden hour, covered in a worn green wool felt mat. Tiles arranged in glorious sequence cover the felt: a long red run "5-6-7-8-9" stretching across the upper third, a tight group of four matching "11"s clustered in red, blue, orange, and black, a partial blue run with the smiling joker tile glowing softly as its keystone, and a few elegant melds spreading outward like a flowing calligraphic puzzle. Two ivory-cream wooden tile racks angle in from the left and right edges, each holding a row of mixed-color numbered tiles facing inward. Scattered around: two small Turkish coffee cups on saucers (one with grounds settled at the bottom), a brass scoring pad with pencil tally marks, a ceramic dish of pomegranate seeds and pistachios, a sprig of dried lavender, and a tarnished oil-rubbed brass ashtray. The background fades into soft warm string-lights blurred against terracotta tile and pink bougainvillea petals catching wind. The mood is unhurried and generational, golden-hour amber against deep felt green. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 11. Upwords
+
+**File:** `packages/web/src/games/upwords/assets/thumbnail.png`
+
+> A top-down view of a cream-colored 10×10 Upwords board on a worn wooden coffee table, lit by warm afternoon light. Crossing words spelled in chunky cream-and-ivory plastic letter tiles lie flat across the grid in straight horizontal and vertical lines, Scrabble-style. At three or four cells, small stacks of 2–4 tiles rise in place — each stack sits exactly inside one grid cell of an existing word, perfectly axis-aligned with the rest of that word's row or column (never offset diagonally), the topmost tile carrying the new letter that now belongs to the word. Letters appear only on the top face of each tile; tile sides are smooth blank cream plastic. To one side, a wooden tile rack of waiting letters faces inward. Scattered around: a steaming mug of black tea, an open dictionary, a fountain pen on a notebook, a crocheted throw at the frame edge, and a small brass lamp casting a warm pool. The background fades into a blurred bookshelf. The mood is cozy and contemplative, warm amber light against muted cream and deep walnut. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
 # Background Image Prompts
 
 All backgrounds were generated with **ChatGPT (image generation)** on March 18, 2026.

@@ -1,13 +1,16 @@
 {
   "private": true,
   "engines": {
-    "node": "24.x"
+    "node": ">=24"
   },
   "packageManager": "pnpm@10.33.2",
   "scripts": {
     "dev": "pnpm --filter @boardgames/web dev",
     "dev:all": "concurrently --names server,web --prefix-colors blue,green \"pnpm --filter @boardgames/server dev\" \"pnpm --filter @boardgames/web dev\"",
     "build": "pnpm -r build",
+    "extract-accents": "node scripts/extract-accents.mjs",
+    "fetch-bgg": "node scripts/fetch-bgg.mjs",
+    "prebuild": "pnpm extract-accents",
     "lint": "biome check packages/",
     "lint:fix": "biome check --write packages/",
     "format": "biome format --write packages/",
@@ -16,7 +19,10 @@
   "devDependencies": {
     "@biomejs/biome": "2.4.8",
     "concurrently": "^9.0.0",
+    "fast-xml-parser": "^5.7.2",
     "lefthook": "^2.1.4",
+    "node-vibrant": "^4.0.4",
+    "sharp": "^0.34.5",
     "tsx": "^4.21.0",
     "typescript": "~5.7.0"
   },
@@ -24,7 +30,8 @@
     "onlyBuiltDependencies": [
       "better-sqlite3",
       "esbuild",
-      "lefthook"
+      "lefthook",
+      "sharp"
     ]
   }
 }

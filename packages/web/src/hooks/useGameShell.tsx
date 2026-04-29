@@ -112,7 +112,7 @@ export function useGameShell<TView = unknown, TAction = unknown, TResult = unkno
     screen = (
       <ModeSelect
         title={def.title}
-        subtitle={def.subtitle ?? def.description}
+        subtitle={undefined}
         soloLabel={def.soloLabel}
         rulesUrl={def.rulesUrl}
         onSolo={() => setMode("solo")}
