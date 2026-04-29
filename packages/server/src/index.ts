@@ -12,8 +12,12 @@ const PORT = Number(process.env.PORT ?? 3001);
 await initDb();
 await markStaleRunning();
 
-const server = serve({ fetch: app.fetch, port: PORT, hostname: "0.0.0.0" }, (info) => {
-  console.log(`@boardgames/server listening on http://${info.address}:${info.port}`);
+// Bind to IPv6 wildcard so Railway's IPv6-first internal network can reach
+// the container; Linux dual-stack also accepts IPv4 connections on this socket.
+const server = serve({ fetch: app.fetch, port: PORT, hostname: "::" }, (info) => {
+  console.log(
+    `@boardgames/server listening on port ${info.port} (${info.address}, ${info.family})`,
+  );
 });
 
 injectWebSocket(server);
