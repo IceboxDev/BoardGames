@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
 import Calendar from "../components/offline/Calendar";
+import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
 import { games } from "../games/registry";
 import { apiUrl } from "../lib/api-base";
@@ -90,15 +90,9 @@ export default function AdminPage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-surface-950 bg-grid">
-      <header className="flex items-center justify-between border-b border-white/5 px-6 py-4">
-        <Link
-          to="/"
-          className="text-sm font-semibold tracking-tight text-gray-200 hover:text-white"
-        >
-          ← Board Game Lab
-        </Link>
-        <span className="text-xs uppercase tracking-wider text-accent-400">Admin</span>
-      </header>
+      <TopNav>
+        <TopNavBackButton to="/" label="Dashboard" />
+      </TopNav>
 
       <main className="mx-auto w-full max-w-4xl flex-1 px-6 py-10">
         <div className="mb-8">

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { TopNav, TopNavLink } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
@@ -39,26 +40,10 @@ export default function ProfilePage() {
 
   return (
     <div className="flex min-h-screen flex-col bg-surface-950 bg-grid">
-      <header className="flex items-center justify-between border-b border-white/5 px-6 py-4">
-        <h1 className="text-sm font-semibold tracking-tight text-gray-200">Board Game Lab</h1>
-        <div className="flex items-center gap-3 text-sm">
-          {isAdmin && (
-            <Link
-              to="/admin"
-              className="rounded-md px-3 py-1.5 text-gray-400 hover:bg-white/5 hover:text-white"
-            >
-              Admin
-            </Link>
-          )}
-          <button
-            type="button"
-            onClick={handleSignOut}
-            className="rounded-md px-3 py-1.5 text-gray-400 hover:bg-white/5 hover:text-white"
-          >
-            Sign out
-          </button>
-        </div>
-      </header>
+      <TopNav>
+        {isAdmin && <TopNavLink to="/admin">Admin</TopNavLink>}
+        <TopNavLink onClick={handleSignOut}>Sign out</TopNavLink>
+      </TopNav>
 
       <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-center px-6 py-12">
         <div className="mb-12 text-center">
