@@ -95,6 +95,14 @@ async function migrate(db: Client): Promise<void> {
         locked_at TEXT NOT NULL DEFAULT (datetime('now')),
         expected_user_ids_json TEXT NOT NULL DEFAULT '[]'
       )`,
+      `CREATE TABLE IF NOT EXISTS rsvps (
+        date_key TEXT NOT NULL,
+        user_id TEXT NOT NULL,
+        status TEXT NOT NULL CHECK (status IN ('yes', 'no')),
+        rsvped_at TEXT NOT NULL DEFAULT (datetime('now')),
+        PRIMARY KEY (date_key, user_id)
+      )`,
+      `CREATE INDEX IF NOT EXISTS idx_rsvps_date ON rsvps(date_key)`,
       `CREATE INDEX IF NOT EXISTS idx_tournaments_slug ON tournaments(game_slug)`,
       `CREATE INDEX IF NOT EXISTS idx_tournaments_status ON tournaments(status)`,
       `CREATE INDEX IF NOT EXISTS idx_tournament_games_tid ON tournament_games(tournament_id, game_index)`,

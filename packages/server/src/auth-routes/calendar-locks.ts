@@ -6,16 +6,112 @@ const DATE_KEY_RE = /^\d{4}-\d{2}-\d{2}$/;
 
 export const calendarLocksRoutes = new Hono();
 
+calendarLocksRoutes.get("/games", async (c) => {
+  const session = await auth.api.getSession({ headers: c.req.raw.headers });
+  if (!session?.user) return c.json({ error: "unauthorized" }, 401);
+
+  const date = c.req.query("date");
+  if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
+    return c.json({ error: "invalid date" }, 400);
+  }
+
+  const lockedRow = await getDb().execute({
+    sql: "SELECT 1 FROM locked_dates WHERE date_key = ? LIMIT 1",
+    args: [date],
+  });
+  if (lockedRow.rows.length === 0) {
+    return c.json({ error: "date is not locked" }, 400);
+  }
+
+  // Compute participant set:
+  //   (users with availability "can" for this date) ∪ (users with rsvp "yes")
+  //   minus (users with rsvp "no")
+  const [availabilityResult, rsvpResult] = await Promise.all([
+    getDb().execute("SELECT user_id, availability_json FROM user_availability"),
+    getDb().execute({
+      sql: "SELECT user_id, status FROM rsvps WHERE date_key = ?",
+      args: [date],
+    }),
+  ]);
+
+  const canSet = new Set<string>();
+  for (const row of availabilityResult.rows) {
+    let parsed: unknown;
+    try {
+      parsed = JSON.parse(row.availability_json as string);
+    } catch {
+      continue;
+    }
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) continue;
+    const v = (parsed as Record<string, unknown>)[date];
+    if (v === "can") canSet.add(row.user_id as string);
+  }
+
+  const rsvpYes = new Set<string>();
+  const rsvpNo = new Set<string>();
+  for (const row of rsvpResult.rows) {
+    const userId = row.user_id as string;
+    const status = row.status as string;
+    if (status === "yes") rsvpYes.add(userId);
+    else if (status === "no") rsvpNo.add(userId);
+  }
+
+  const participantIds = [...new Set([...canSet, ...rsvpYes])].filter((id) => !rsvpNo.has(id));
+
+  let ownedSlugs: string[] = [];
+  if (participantIds.length > 0) {
+    const placeholders = participantIds.map(() => "?").join(",");
+    const inventoryResult = await getDb().execute({
+      sql: `SELECT game_slugs_json FROM user_inventory WHERE user_id IN (${placeholders})`,
+      args: participantIds,
+    });
+
+    // Union: any one participant owning a game means the group can play it
+    // (whoever owns it brings it to the night).
+    const union = new Set<string>();
+    for (const row of inventoryResult.rows) {
+      let parsed: unknown;
+      try {
+        parsed = JSON.parse(row.game_slugs_json as string);
+      } catch {
+        continue;
+      }
+      if (!Array.isArray(parsed)) continue;
+      for (const slug of parsed) {
+        if (typeof slug === "string") union.add(slug);
+      }
+    }
+    ownedSlugs = [...union].sort();
+  }
+
+  return c.json({
+    ownedSlugs,
+    participantCount: participantIds.length,
+    participantIds,
+  });
+});
+
 calendarLocksRoutes.get("/locks", async (c) => {
   const session = await auth.api.getSession({ headers: c.req.raw.headers });
   if (!session?.user) return c.json({ error: "unauthorized" }, 401);
 
-  const { rows } = await getDb().execute(
-    "SELECT date_key, locked_by, locked_at, expected_user_ids_json FROM locked_dates",
-  );
+  const [locksResult, rsvpsResult] = await Promise.all([
+    getDb().execute(
+      "SELECT date_key, locked_by, locked_at, expected_user_ids_json FROM locked_dates",
+    ),
+    getDb().execute("SELECT date_key, user_id, status FROM rsvps"),
+  ]);
 
-  const out: Record<string, { lockedBy: string; lockedAt: string; expectedUserIds: string[] }> = {};
-  for (const row of rows) {
+  const out: Record<
+    string,
+    {
+      lockedBy: string;
+      lockedAt: string;
+      expectedUserIds: string[];
+      rsvps: Record<string, "yes" | "no">;
+    }
+  > = {};
+  for (const row of locksResult.rows) {
     let expected: unknown;
     try {
       expected = JSON.parse(row.expected_user_ids_json as string);
@@ -26,7 +122,15 @@ calendarLocksRoutes.get("/locks", async (c) => {
       lockedBy: row.locked_by as string,
       lockedAt: row.locked_at as string,
       expectedUserIds: Array.isArray(expected) ? (expected as string[]) : [],
+      rsvps: {},
     };
+  }
+  for (const row of rsvpsResult.rows) {
+    const dateKey = row.date_key as string;
+    const status = row.status as "yes" | "no";
+    const userId = row.user_id as string;
+    const entry = out[dateKey];
+    if (entry) entry.rsvps[userId] = status;
   }
 
   return c.json(out);

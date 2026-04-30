@@ -12,8 +12,13 @@ import {
   adminSaveInventory,
   adminSavePendingInventory,
 } from "../lib/inventory";
-import { adminFetchAvailability } from "../lib/offline-availability";
-import { startOfWeekMonday } from "../lib/offline-week";
+import {
+  type AggregateAvailabilityMap,
+  adminFetchAllAvailability,
+  adminFetchAvailability,
+  dateKey,
+} from "../lib/offline-availability";
+import { build42Days, startOfWeekMonday } from "../lib/offline-week";
 import { qk } from "../lib/query-keys";
 
 type AdminUser = {
@@ -45,8 +50,24 @@ export default function AdminPage() {
     },
   });
 
+  const aggregateQuery = useQuery({
+    queryKey: qk.adminAggregateAvailability(),
+    queryFn: ({ signal }) => adminFetchAllAvailability(signal),
+  });
+
+  // Editable window = the 42-day grid the dashboard exposes, minus past days.
+  const editableDateKeys = useMemo(() => {
+    const today = new Date();
+    const todayKey = dateKey(today);
+    const weekStart = startOfWeekMonday(today);
+    return build42Days(weekStart)
+      .map((d) => dateKey(d))
+      .filter((key) => key >= todayKey);
+  }, []);
+
   const users = usersQuery.data ?? [];
   const loading = usersQuery.isPending;
+  const aggregate: AggregateAvailabilityMap = aggregateQuery.data ?? {};
 
   const toggleOnlineMutation = useMutation({
     mutationFn: (user: AdminUser) => adminSetOnline(user.id, !user.onlineEnabled),
@@ -136,8 +157,8 @@ export default function AdminPage() {
         <TopNavBackButton to="/" label="Dashboard" />
       </TopNav>
 
-      <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-10">
-        <div className="mb-8 flex items-start justify-between gap-6">
+      <main className="mx-auto w-full max-w-7xl flex-1 px-6 py-10">
+        <div className="mb-8 flex min-h-24 items-start justify-between gap-6">
           <div className="min-w-0 flex-1">
             <h1 className="text-2xl font-bold tracking-tight text-white">Users</h1>
             {deleteMode ? (
@@ -187,20 +208,22 @@ export default function AdminPage() {
           </div>
         ) : (
           <div className="overflow-hidden rounded-xl border border-white/10 bg-surface-900">
-            <table className="w-full text-sm">
+            <table className="w-full table-fixed text-sm">
               <thead className="bg-surface-800 text-xs uppercase tracking-wider text-gray-500">
                 <tr>
-                  <th className="px-5 py-3 text-left font-medium">Name</th>
+                  <th className="w-24 pl-5 pr-3 py-3 text-left font-medium" aria-label="Coverage" />
+                  <th className="w-64 px-5 py-3 text-left font-medium">Name</th>
                   <th className="px-5 py-3 text-left font-medium">Email</th>
-                  <th className="px-5 py-3 text-left font-medium">Role</th>
-                  <th className="px-5 py-3 text-center font-medium">Calendar</th>
-                  <th className="px-5 py-3 text-center font-medium">Inventory</th>
-                  <th className="px-5 py-3 text-center font-medium">Online</th>
-                  {deleteMode && (
-                    <th className="w-32 px-5 py-3 pr-6 text-center font-medium text-rose-300">
-                      Delete
-                    </th>
-                  )}
+                  <th className="w-24 px-5 py-3 text-center font-medium">Role</th>
+                  <th className="w-32 px-5 py-3 text-center font-medium">Calendar</th>
+                  <th className="w-32 px-5 py-3 text-center font-medium">Inventory</th>
+                  <th
+                    className={`w-32 px-5 py-3 text-center font-medium ${
+                      deleteMode ? "text-rose-300" : ""
+                    }`}
+                  >
+                    {deleteMode ? "Delete" : "Online"}
+                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
@@ -210,6 +233,7 @@ export default function AdminPage() {
                   const isSelf = u.id === currentUserId;
                   const deletingThisUser =
                     deleteMutation.isPending && deleteMutation.variables === u.id;
+                  const coverage = computeCoverage(aggregate, u.id, editableDateKeys);
                   return (
                     <UserRow
                       key={u.id}
@@ -228,6 +252,7 @@ export default function AdminPage() {
                       onCancelDelete={cancelDelete}
                       onCommitDelete={() => commitDelete(u)}
                       deleting={deletingThisUser}
+                      coverage={coverage}
                     />
                   );
                 })}
@@ -332,6 +357,8 @@ function AvailabilityDrawer({ user, onClose }: AvailabilityDrawerProps) {
   );
 }
 
+type Coverage = { can: number; maybe: number; total: number };
+
 type UserRowProps = {
   user: AdminUser;
   expanded: boolean;
@@ -348,6 +375,7 @@ type UserRowProps = {
   onCancelDelete: () => void;
   onCommitDelete: () => void;
   deleting: boolean;
+  coverage: Coverage;
 };
 
 function UserRow({
@@ -366,15 +394,19 @@ function UserRow({
   onCancelDelete,
   onCommitDelete,
   deleting,
+  coverage,
 }: UserRowProps) {
-  const columnCount = deleteMode ? 7 : 6;
+  const columnCount = 7;
   const confirmReady = confirmEmail.trim().toLowerCase() === user.email.toLowerCase();
   return (
     <>
-      <tr className="text-gray-200">
+      <tr className="h-12 text-gray-200">
+        <td className="pl-5 pr-3 py-3">
+          <CoverageCell coverage={coverage} />
+        </td>
         <td className="px-5 py-3 font-medium">{user.name || "—"}</td>
         <td className="px-5 py-3 text-gray-400">{user.email}</td>
-        <td className="px-5 py-3">
+        <td className="px-5 py-3 text-center">
           <span
             className={`rounded-full px-2 py-0.5 text-xs ${
               user.role === "admin"
@@ -408,45 +440,48 @@ function UserRow({
           </button>
         </td>
         <td className="px-5 py-3 text-center">
-          <button
-            type="button"
-            onClick={onToggleOnline}
-            disabled={pending}
-            className={`relative inline-flex h-6 w-11 items-center rounded-full transition ${
-              user.onlineEnabled ? "bg-accent-500" : "bg-surface-700"
-            } ${pending ? "opacity-50" : ""}`}
-            aria-pressed={Boolean(user.onlineEnabled)}
-            aria-label={`Toggle online for ${user.email}`}
-          >
-            <span
-              className={`inline-block h-4 w-4 transform rounded-full bg-white transition ${
-                user.onlineEnabled ? "translate-x-6" : "translate-x-1"
-              }`}
-            />
-          </button>
-        </td>
-        {deleteMode && (
-          <td className="w-32 px-5 py-3 pr-6 text-center">
-            {isSelf ? (
-              <span
-                className="inline-flex items-center rounded-md border border-white/5 bg-white/5 px-2.5 py-1 text-xs italic text-gray-500"
-                title="You cannot delete yourself"
-              >
-                you
-              </span>
-            ) : confirmingDelete ? (
-              <span className="inline-flex items-center text-xs text-rose-300">Confirm below…</span>
+          <div className="flex h-6 items-center justify-center">
+            {deleteMode ? (
+              isSelf ? (
+                <span
+                  className="inline-flex h-6 items-center rounded-md border border-white/5 bg-white/5 px-2.5 text-xs italic text-gray-500"
+                  title="You cannot delete yourself"
+                >
+                  you
+                </span>
+              ) : confirmingDelete ? (
+                <span className="inline-flex h-6 items-center text-xs text-rose-300">
+                  Confirm below…
+                </span>
+              ) : (
+                <button
+                  type="button"
+                  onClick={onStartDelete}
+                  className="inline-flex h-6 items-center rounded-md bg-rose-500/20 px-2.5 text-xs font-medium text-rose-200 transition hover:bg-rose-500/30"
+                >
+                  Delete
+                </button>
+              )
             ) : (
               <button
                 type="button"
-                onClick={onStartDelete}
-                className="rounded-md bg-rose-500/20 px-2.5 py-1 text-xs font-medium text-rose-200 transition hover:bg-rose-500/30"
+                onClick={onToggleOnline}
+                disabled={pending}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition ${
+                  user.onlineEnabled ? "bg-accent-500" : "bg-surface-700"
+                } ${pending ? "opacity-50" : ""}`}
+                aria-pressed={Boolean(user.onlineEnabled)}
+                aria-label={`Toggle online for ${user.email}`}
               >
-                Delete
+                <span
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition ${
+                    user.onlineEnabled ? "translate-x-6" : "translate-x-1"
+                  }`}
+                />
               </button>
             )}
-          </td>
-        )}
+          </div>
+        </td>
       </tr>
       {expanded && (
         <tr>
@@ -783,5 +818,52 @@ function PreRegisterCard() {
         </div>
       )}
     </div>
+  );
+}
+
+function computeCoverage(
+  aggregate: AggregateAvailabilityMap,
+  userId: string,
+  editableDateKeys: string[],
+): Coverage {
+  let can = 0;
+  let maybe = 0;
+  for (const key of editableDateKeys) {
+    const entries = aggregate[key];
+    if (!entries) continue;
+    const entry = entries.find((e) => e.userId === userId);
+    if (entry?.status === "can") can += 1;
+    else if (entry?.status === "maybe") maybe += 1;
+  }
+  return { can, maybe, total: editableDateKeys.length };
+}
+
+function CoverageCell({ coverage }: { coverage: Coverage }) {
+  const { can, maybe, total } = coverage;
+  const canPct = total > 0 ? (can / total) * 100 : 0;
+  const maybePct = total > 0 ? (maybe / total) * 100 : 0;
+  const canEnd = canPct;
+  const maybeEnd = canPct + maybePct;
+  const coverPct = Math.round(canPct + maybePct);
+  // accent-400 / amber-400 / a low-key gray for unmarked.
+  const accent = "#818cf8";
+  const amber = "#fbbf24";
+  const rest = "#374151";
+  const title =
+    total === 0
+      ? "No editable days"
+      : `${can} can · ${maybe} maybe · ${total - can - maybe} unmarked of ${total} editable days`;
+  return (
+    <span className="inline-flex items-center gap-2">
+      <span
+        aria-hidden="true"
+        title={title}
+        className="h-3.5 w-3.5 shrink-0 rounded-full ring-1 ring-white/10"
+        style={{
+          background: `conic-gradient(${accent} 0 ${canEnd}%, ${amber} ${canEnd}% ${maybeEnd}%, ${rest} ${maybeEnd}% 100%)`,
+        }}
+      />
+      <span className="text-xs tabular-nums text-gray-400">{coverPct}%</span>
+    </span>
   );
 }

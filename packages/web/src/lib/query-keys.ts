@@ -6,6 +6,7 @@ export const qk = {
   availability: (userId: string | null | undefined) => ["availability", userId] as const,
   availabilityCounts: () => ["availability", "counts"] as const,
   calendarLocks: () => ["calendar", "locks"] as const,
+  availableGames: (date: string | null) => ["calendar", "games", date] as const,
   adminUserAvailability: (targetUserId: string) =>
     ["admin", "user-availability", targetUserId] as const,
   adminAggregateAvailability: () => ["admin", "availability", "all"] as const,

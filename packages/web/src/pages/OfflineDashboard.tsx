@@ -2,6 +2,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { AvailabilityActionBar } from "../components/offline/AvailabilityActionBar";
 import Calendar from "../components/offline/Calendar";
+import RsvpModal from "../components/offline/RsvpModal";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { useSession } from "../lib/auth-client";
 import {
@@ -10,6 +11,7 @@ import {
   type CalendarLocks,
   fetchCalendarLocks,
 } from "../lib/calendar-locks";
+import type { RsvpStatus } from "../lib/calendar-rsvps";
 import {
   type Availability,
   type AvailabilityMap,
@@ -64,6 +66,16 @@ export default function OfflineDashboard() {
 
   const [mode, setMode] = useState<Mode>("view");
   const [draft, setDraft] = useState<AvailabilityMap>({});
+  const [rsvpDate, setRsvpDate] = useState<string | null>(null);
+
+  const viewerRsvpByDate = useMemo<Record<string, RsvpStatus | undefined>>(() => {
+    if (!locks || !userId) return {};
+    const out: Record<string, RsvpStatus | undefined> = {};
+    for (const [d, lock] of Object.entries(locks)) {
+      out[d] = lock.rsvps[userId];
+    }
+    return out;
+  }, [locks, userId]);
 
   const saveMutation = useMutation({
     mutationFn: (next: AvailabilityMap) => pushAvailability(next),
@@ -102,6 +114,7 @@ export default function OfflineDashboard() {
             lockedBy: userId ?? "",
             lockedAt: new Date().toISOString(),
             expectedUserIds: [],
+            rsvps: {},
           };
         }
         return next;
@@ -224,6 +237,8 @@ export default function OfflineDashboard() {
           locks={locks}
           lockMode={mode === "lock"}
           onLockToggle={handleLockToggle}
+          onLockedClick={mode === "lock" ? undefined : (date) => setRsvpDate(date)}
+          viewerRsvpByDate={viewerRsvpByDate}
         />
 
         <AvailabilityActionBar
@@ -239,6 +254,15 @@ export default function OfflineDashboard() {
           onExitLockMode={exitLockMode}
         />
       </div>
+
+      {rsvpDate && (
+        <RsvpModal
+          date={rsvpDate}
+          locks={locks}
+          counts={counts}
+          onClose={() => setRsvpDate(null)}
+        />
+      )}
     </div>
   );
 }

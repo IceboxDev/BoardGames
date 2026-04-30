@@ -353,6 +353,20 @@ body {
   animation: fire-breathe 4s ease-in-out infinite;
 }
 
+/* Soft 2.2s opacity pulse for attention-seeking pills (RSVP, etc). */
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.animate-pulse-soft {
+  animation: pulse-soft 2.2s ease-in-out infinite;
+}
+
 /* Diagonal light pass for "locked in" wax-seal cells. Idle most of the cycle, sweeps once every ~8s. */
 @keyframes seal-shimmer {
   0%,

@@ -1,4 +1,5 @@
 import type { CalendarLocks } from "../../lib/calendar-locks";
+import type { RsvpStatus } from "../../lib/calendar-rsvps";
 import type {
   AggregateAvailabilityMap,
   Availability,
@@ -27,6 +28,10 @@ type Props = {
   /** When true, cells route clicks to onLockToggle instead of cycling availability. Admin-only. */
   lockMode?: boolean;
   onLockToggle?: (key: string, currentlyLocked: boolean) => void;
+  /** Click handler for locked cells (in non-lock mode). Routes user to RSVP modal. */
+  onLockedClick?: (key: string) => void;
+  /** Map of date → current viewer's RSVP status, for the locked-cell pill. */
+  viewerRsvpByDate?: Record<string, RsvpStatus | undefined>;
 };
 
 export default function Calendar({
@@ -41,6 +46,8 @@ export default function Calendar({
   locks,
   lockMode = false,
   onLockToggle,
+  onLockedClick,
+  viewerRsvpByDate,
 }: Props) {
   const todayKey = dateKey(new Date());
   const cutoffKey = readonlyBefore ? dateKey(readonlyBefore) : null;
@@ -80,10 +87,16 @@ export default function Calendar({
           const dayCounts = counts?.[key];
           const heat = deriveHeat(dayCounts);
           const lock = locks?.[key];
-          const cellInteractive = lockMode ? !isPast : interactive;
+          const lockedAndClickable = !!lock && !isPast && !!onLockedClick;
+          const cellInteractive = lockMode
+            ? !isPast
+            : !isPast && (lock ? lockedAndClickable : interactive);
           const handleClick = lockMode
             ? () => onLockToggle?.(key, !!lock)
-            : () => onChange?.(key, cycle(value));
+            : lock
+              ? () => onLockedClick?.(key)
+              : () => onChange?.(key, cycle(value));
+          const viewerRsvp = lock ? viewerRsvpByDate?.[key] : undefined;
           return (
             <DayCell
               key={key}
@@ -101,6 +114,7 @@ export default function Calendar({
               heat={heat}
               locked={!!lock}
               lockMode={lockMode}
+              viewerRsvp={viewerRsvp}
               cellSeed={i}
               onClick={handleClick}
             />
@@ -136,6 +150,7 @@ type DayCellProps = {
   heat: Heat;
   locked: boolean;
   lockMode: boolean;
+  viewerRsvp?: RsvpStatus;
   cellSeed: number;
   onClick: () => void;
 };
@@ -153,6 +168,7 @@ function DayCell({
   heat,
   locked,
   lockMode,
+  viewerRsvp,
   cellSeed,
   onClick,
 }: DayCellProps) {
@@ -239,7 +255,7 @@ function DayCell({
       )}
       {showHeatLayer && heat.kind === "warming" && <WarmingLayer compact={compact} />}
       {showHeatLayer && heat.kind === "fire" && <FireLayer compact={compact} cellSeed={cellSeed} />}
-      {locked && <LockedLayer compact={compact} />}
+      {locked && <LockedLayer compact={compact} viewerRsvp={viewerRsvp} />}
       {monthLabel && (
         <span
           className={`pointer-events-none absolute font-bold uppercase tracking-[0.18em] text-white/40 ${monthLabelPos} ${monthLabelSize}`}
@@ -412,7 +428,7 @@ function FireLayer({ compact, cellSeed }: { compact: boolean; cellSeed: number }
   );
 }
 
-function LockedLayer({ compact }: { compact: boolean }) {
+function LockedLayer({ compact, viewerRsvp }: { compact: boolean; viewerRsvp?: RsvpStatus }) {
   return (
     <>
       {/* Deep regal base — feels weighty. No animation on the bg itself. */}
@@ -430,11 +446,11 @@ function LockedLayer({ compact }: { compact: boolean }) {
         aria-hidden="true"
         className="pointer-events-none absolute inset-y-0 -left-1/4 w-1/3 bg-gradient-to-r from-transparent via-amber-200/25 to-transparent motion-safe:animate-seal-shimmer"
       />
-      {/* Wax-seal medallion at top-center, half-overlapping the top edge. */}
+      {/* Wax-seal medallion in top-right corner — out of the way of the day number (top-left). */}
       {!compact && (
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-0 z-10 flex h-6 w-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-700 shadow-[0_2px_8px_rgba(0,0,0,0.5),inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3)]"
+          className="pointer-events-none absolute right-1.5 top-1.5 z-10 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-700 shadow-[0_2px_8px_rgba(0,0,0,0.5),inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3)]"
         >
           <LockGlyph />
         </span>
@@ -448,16 +464,75 @@ function LockedLayer({ compact }: { compact: boolean }) {
           <LockGlyph small />
         </span>
       )}
-      {/* "LOCKED" pill bottom-center — temporary until slice 4 swaps for RSVP-needed/RSVPed. */}
-      {!compact && (
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-2 bottom-1.5 z-10 rounded-md border border-amber-300/30 bg-amber-300/[0.06] px-1 py-0.5 text-center text-[8px] font-bold uppercase tracking-[0.22em] text-amber-200/90 backdrop-blur-sm"
-        >
-          Locked
-        </span>
-      )}
+      {/* RSVP-aware pill: invitation by default; flips to GOING / PASS once viewer commits. */}
+      {!compact && <LockedPill viewerRsvp={viewerRsvp} />}
     </>
+  );
+}
+
+function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
+  if (viewerRsvp === "yes") {
+    return (
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-2 bottom-1.5 z-10 inline-flex items-center justify-center gap-1 rounded-md border border-emerald-300/45 bg-emerald-400/15 px-1 py-0.5 text-[8px] font-bold uppercase tracking-[0.22em] text-emerald-100 backdrop-blur-sm motion-safe:animate-pulse-soft"
+      >
+        <CheckGlyphSmall />
+        Going
+      </span>
+    );
+  }
+  if (viewerRsvp === "no") {
+    return (
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-2 bottom-1.5 z-10 inline-flex items-center justify-center gap-1 rounded-md border border-white/10 bg-white/[0.04] px-1 py-0.5 text-[8px] font-bold uppercase tracking-[0.22em] text-gray-400 backdrop-blur-sm"
+      >
+        <CrossGlyphSmall />
+        Pass
+      </span>
+    );
+  }
+  return (
+    <span
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-x-2 bottom-1.5 z-10 rounded-md border border-amber-300/45 bg-amber-300/10 px-1 py-0.5 text-center text-[8px] font-bold uppercase tracking-[0.22em] text-amber-200 backdrop-blur-sm motion-safe:animate-pulse-soft"
+    >
+      RSVP
+    </span>
+  );
+}
+
+function CheckGlyphSmall() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className="h-2.5 w-2.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={3}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M3 8.5l3 3 7-7" />
+    </svg>
+  );
+}
+
+function CrossGlyphSmall() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className="h-2.5 w-2.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2.5}
+      strokeLinecap="round"
+      aria-hidden="true"
+    >
+      <path d="M4 4l8 8M12 4l-8 8" />
+    </svg>
   );
 }
 
