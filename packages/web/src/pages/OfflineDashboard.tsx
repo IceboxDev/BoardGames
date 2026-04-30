@@ -1,107 +1,86 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useMemo, useState } from "react";
 import { AvailabilityActionBar } from "../components/offline/AvailabilityActionBar";
 import Calendar from "../components/offline/Calendar";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { useSession } from "../lib/auth-client";
 import {
-  type AggregateAvailabilityMap,
   type Availability,
   type AvailabilityMap,
   adminFetchAllAvailability,
   fetchAvailability,
-  getCachedAggregateAvailability,
-  loadAvailability,
-  mapsEqual,
   pushAvailability,
-  saveAvailability,
 } from "../lib/offline-availability";
 import { startOfWeekMonday } from "../lib/offline-week";
+import { qk } from "../lib/query-keys";
 
 type Mode = "view" | "edit";
 
 export default function OfflineDashboard() {
   const { data } = useSession();
-  const userId = data?.user?.id;
+  const userId = data?.user?.id ?? null;
   const isAdmin = (data?.user as { role?: string } | undefined)?.role === "admin";
 
   const today = useMemo(() => new Date(), []);
   const weekStart = useMemo(() => startOfWeekMonday(today), [today]);
 
+  const queryClient = useQueryClient();
+
+  const availabilityQuery = useQuery({
+    queryKey: qk.availability(userId),
+    queryFn: ({ signal }) => fetchAvailability(signal),
+    enabled: !!userId,
+  });
+
+  const aggregateQuery = useQuery({
+    queryKey: qk.adminAggregateAvailability(),
+    queryFn: ({ signal }) => adminFetchAllAvailability(signal),
+    enabled: isAdmin,
+  });
+
+  const committed: AvailabilityMap = availabilityQuery.data ?? {};
+  const allAvailability = aggregateQuery.data ?? null;
+
   const [mode, setMode] = useState<Mode>("view");
-  const [committed, setCommitted] = useState<AvailabilityMap>({});
   const [draft, setDraft] = useState<AvailabilityMap>({});
-  const [saving, setSaving] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [allAvailability, setAllAvailability] = useState<AggregateAvailabilityMap | null>(() =>
-    getCachedAggregateAvailability(),
-  );
 
-  useEffect(() => {
-    if (!userId) return;
-    const cached = loadAvailability(userId);
-    setCommitted(cached);
-
-    let cancelled = false;
-    fetchAvailability()
-      .then((server) => {
-        if (cancelled) return;
-        if (!mapsEqual(server, cached)) {
-          setCommitted(server);
-          saveAvailability(userId, server);
-        }
-      })
-      .catch(() => {
-        // keep cached state; surface errors only on Save
-      });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [userId]);
-
-  useEffect(() => {
-    if (!isAdmin) return;
-    let cancelled = false;
-    adminFetchAllAvailability()
-      .then((map) => {
-        if (cancelled) return;
-        setAllAvailability((prev) => {
-          if (prev && JSON.stringify(prev) === JSON.stringify(map)) return prev;
-          return map;
-        });
-      })
-      .catch(() => {
-        if (!cancelled) setAllAvailability((prev) => prev ?? {});
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [isAdmin]);
+  const saveMutation = useMutation({
+    mutationFn: (next: AvailabilityMap) => pushAvailability(next),
+    onMutate: async (next) => {
+      await queryClient.cancelQueries({ queryKey: qk.availability(userId) });
+      const previous = queryClient.getQueryData<AvailabilityMap>(qk.availability(userId));
+      queryClient.setQueryData(qk.availability(userId), next);
+      return { previous };
+    },
+    onError: (_e, _next, ctx) => {
+      if (ctx && ctx.previous !== undefined) {
+        queryClient.setQueryData(qk.availability(userId), ctx.previous);
+      }
+    },
+    onSettled: () => {
+      void queryClient.invalidateQueries({ queryKey: qk.availability(userId) });
+      void queryClient.invalidateQueries({ queryKey: qk.adminAggregateAvailability() });
+    },
+  });
 
   function enterEdit() {
     setDraft(committed);
-    setError(null);
+    saveMutation.reset();
     setMode("edit");
   }
 
   function cancel() {
-    setError(null);
+    saveMutation.reset();
     setMode("view");
   }
 
   async function save() {
     if (!userId) return;
-    setSaving(true);
-    setError(null);
     try {
-      await pushAvailability(draft);
-      saveAvailability(userId, draft);
-      setCommitted(draft);
+      await saveMutation.mutateAsync(draft);
       setMode("view");
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Could not save. Try again.");
-    } finally {
-      setSaving(false);
+    } catch {
+      // error surfaces via saveMutation.error; stay in edit mode
     }
   }
 
@@ -116,6 +95,11 @@ export default function OfflineDashboard() {
 
   const visible = mode === "edit" ? draft : committed;
   const markedCount = Object.keys(visible).length;
+  const errorMessage = saveMutation.error
+    ? saveMutation.error instanceof Error
+      ? saveMutation.error.message
+      : "Could not save. Try again."
+    : null;
 
   return (
     <div className="flex min-h-dvh flex-col bg-surface-950 bg-grid">
@@ -150,8 +134,8 @@ export default function OfflineDashboard() {
         <AvailabilityActionBar
           mode={mode}
           markedCount={markedCount}
-          saving={saving}
-          error={error}
+          saving={saveMutation.isPending}
+          error={errorMessage}
           onEdit={enterEdit}
           onCancel={cancel}
           onSave={save}

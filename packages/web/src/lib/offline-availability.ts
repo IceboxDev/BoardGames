@@ -3,33 +3,10 @@ import { apiUrl } from "./api-base";
 export type Availability = "can" | "maybe";
 export type AvailabilityMap = Record<string, Availability>;
 
-const PREFIX = "boardgames:offline:availability:v1:";
 const ENDPOINT = "/api/user/availability";
 
 export function dateKey(d: Date): string {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
-}
-
-export function loadAvailability(userId: string): AvailabilityMap {
-  if (typeof localStorage === "undefined") return {};
-  try {
-    const raw = localStorage.getItem(PREFIX + userId);
-    if (!raw) return {};
-    const parsed = JSON.parse(raw) as unknown;
-    if (parsed && typeof parsed === "object") return parsed as AvailabilityMap;
-    return {};
-  } catch {
-    return {};
-  }
-}
-
-export function saveAvailability(userId: string, data: AvailabilityMap): void {
-  if (typeof localStorage === "undefined") return;
-  try {
-    localStorage.setItem(PREFIX + userId, JSON.stringify(data));
-  } catch {
-    // quota or privacy mode — silently ignore
-  }
 }
 
 export function cycleAvailability(current: Availability | undefined): Availability | undefined {
@@ -38,8 +15,8 @@ export function cycleAvailability(current: Availability | undefined): Availabili
   return undefined;
 }
 
-export async function fetchAvailability(): Promise<AvailabilityMap> {
-  const res = await fetch(apiUrl(ENDPOINT), { credentials: "include" });
+export async function fetchAvailability(signal?: AbortSignal): Promise<AvailabilityMap> {
+  const res = await fetch(apiUrl(ENDPOINT), { credentials: "include", signal });
   if (res.status === 401) return {};
   if (!res.ok) throw new Error(`Failed to fetch availability (${res.status})`);
   const data = (await res.json()) as unknown;
@@ -69,9 +46,13 @@ export function mapsEqual(a: AvailabilityMap, b: AvailabilityMap): boolean {
   return true;
 }
 
-export async function adminFetchAvailability(userId: string): Promise<AvailabilityMap> {
+export async function adminFetchAvailability(
+  userId: string,
+  signal?: AbortSignal,
+): Promise<AvailabilityMap> {
   const res = await fetch(apiUrl(`/api/admin/users/${userId}/availability`), {
     credentials: "include",
+    signal,
   });
   if (!res.ok) throw new Error(`Failed to fetch availability (${res.status})`);
   const data = (await res.json()) as unknown;
@@ -84,28 +65,17 @@ export async function adminFetchAvailability(userId: string): Promise<Availabili
 export type AvailabilityEntry = { userId: string; name: string; status: Availability };
 export type AggregateAvailabilityMap = Record<string, AvailabilityEntry[]>;
 
-let aggregateCache: AggregateAvailabilityMap | null = null;
-let aggregateInFlight: Promise<AggregateAvailabilityMap> | null = null;
-
-export function getCachedAggregateAvailability(): AggregateAvailabilityMap | null {
-  return aggregateCache;
-}
-
-export async function adminFetchAllAvailability(): Promise<AggregateAvailabilityMap> {
-  if (aggregateInFlight) return aggregateInFlight;
-  aggregateInFlight = (async () => {
-    try {
-      const res = await fetch(apiUrl("/api/admin/availability/all"), { credentials: "include" });
-      if (!res.ok) throw new Error(`Failed to fetch aggregate availability (${res.status})`);
-      const data = (await res.json()) as unknown;
-      aggregateCache =
-        data && typeof data === "object" && !Array.isArray(data)
-          ? (data as AggregateAvailabilityMap)
-          : {};
-      return aggregateCache;
-    } finally {
-      aggregateInFlight = null;
-    }
-  })();
-  return aggregateInFlight;
+export async function adminFetchAllAvailability(
+  signal?: AbortSignal,
+): Promise<AggregateAvailabilityMap> {
+  const res = await fetch(apiUrl("/api/admin/availability/all"), {
+    credentials: "include",
+    signal,
+  });
+  if (!res.ok) throw new Error(`Failed to fetch aggregate availability (${res.status})`);
+  const data = (await res.json()) as unknown;
+  if (data && typeof data === "object" && !Array.isArray(data)) {
+    return data as AggregateAvailabilityMap;
+  }
+  return {};
 }

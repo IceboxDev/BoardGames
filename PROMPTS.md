@@ -188,6 +188,70 @@ Every prompt includes the same style directive so the four images form a visuall
 
 ---
 
+## 23. Skip-Bo
+
+**File:** `packages/web/src/games/skip-bo/assets/thumbnail.png`
+
+> A top-down view of a 1980s den game-table at family game night, lit by a warm pendant overhead. A fan of vibrant Skip-Bo cards spreads from the bottom edge — bright cyan, pink, yellow, and green numbered cards (1 through 12) plus a few black "Skip-Bo" wild cards in classic chunky retro typography peeking through. In the center, four shared building piles ascend in tidy stacks (one already at "9", one fresh at "1"), each casting a small shadow on the felt. To either side, a face-up stockpile sits beside a player's discard row of four columns. A wild card hovers mid-air just above one pile, frozen mid-play. Scattered around: a chipped mug of cocoa, a half-empty glass of root beer, a wooden TV tray with a magazine open underneath, a knitted afghan throw catching the lamplight, and a bowl of pretzels. The mood is nostalgic and casual — family-game-night warmth in cyan and amber against deep walnut. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 24. Hitster
+
+**File:** `packages/web/src/games/hitster/assets/thumbnail.png`
+
+> A top-down view of a vinyl-record-strewn dance floor at midnight, lit by the swirling rainbow of a disco ball spinning above. A timeline of Hitster cards arcs across the polished floor like a chronological river, each card showing a song year on its face — "1979", "1995", "2007", "1983", "2014" — with QR codes peeking from upturned backs. A single fresh card hovers mid-air above an empty slot in the timeline, illuminated by a beam of cold blue light from a smartphone floating beside it. Around the timeline, vinyl LPs spin weightlessly above an autonomous turntable in one corner, neon equalizer bars pulse along the floor's edge, strobe-lit smoke curls through the disco beams, and sequins and confetti rain through the bokeh as ribbons of bass-line color trail across the periphery. The mood is electric and joyful — a dance-floor history of pop music. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 25. Dorfromantik
+
+**File:** `packages/web/src/games/dorfromantik/assets/thumbnail.png`
+
+> A top-down view of a quiet wooden table at a sun-warmed cottage window, where Dorfromantik hex tiles knit themselves into a serene patchwork landscape — pine forests, rolling wheat fields, winding rivers, half-timbered villages with red-tile roofs, and grazing meadows all rendered in the game's storybook illustration style. Tiny tree, river-flag, and grain-stalk quest markers stand on completed groups, with little smiling village houses huddled around their churches. A fresh tile hovers mid-air above the empty edge of the landscape, about to be placed where its forest seam aligns. A fan of unrevealed tiles fans face-down from the bottom edge. Around the growing world, the table dissolves into a soft-focus painted continuation — a real meadow stretching beyond the wood grain, distant church bells implied by the curl of mist over a faraway hill, a lone watercolor sparrow gliding through the bokeh. The mood is contemplative and gentle — cozy afternoon countryside building itself one tile at a time. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 26. Betrayal at House on the Hill
+
+**File:** `packages/web/src/games/betrayal-at-house-on-the-hill/assets/thumbnail.png`
+
+> A top-down view of an unfolding modular Betrayal mansion floor plan sprawling across a moonlit oak table — square house tiles snap together to form a dread-filled labyrinth: a creaking foyer, a cobweb-wrapped library, a flickering kitchen, a dark coal cellar, a chapel with toppled candles, and a tower with a curtain billowing toward the void. Six explorer pawns stand in scattered rooms, each beside a tiny character card showing a 1950s-archetype face (the priest, the medium, the soldier, the heiress, the boy, the professor). A fan of event, item, and omen cards spreads from the bottom edge, with one omen flipped face-up showing a snarling skull. A pair of black dice tumbles weightlessly above one room, just rolled. Around the mansion's edges, the table itself dissolves into pitch black where lurking silhouettes peer in, gaslight flickering at the periphery, and a single rusted door key hangs suspended in mid-air. The mood is dread-soaked and cinematic — Lovecraftian house holding its breath. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 27. The Crew: Mission Deep Sea
+
+**File:** `packages/web/src/games/the-crew-mission-deep-sea/assets/thumbnail.png`
+
+> A top-down view of a brass-bound submarine command desk lit by the cold cyan glow of a sonar screen and the warm amber of a single chart-lamp, where The Crew's vivid trick-taking cards are arranged across a nautical chart. A fan of player hands spreads from the bottom edge — bold blue, green, pink, and yellow numbered cards plus the powerful black submarine trump cards — and in the center a single trick is laid: four cards already played around a small, glowing task token engraved with a target symbol. A logbook beside the chart shows a row of communication tokens — one orange "highest", one green "lowest", one yellow "only" — used silently between players. Around the chart, the brass rim of a periscope catches lamplight, a tiny diving compass needle spins, and the teakwood desk dissolves into deep ocean blue at the edges where coral, jellyfish silhouettes, and the slow-moving fin of a passing submarine glide through the bokeh. The mood is hushed and tense — a coordinated descent into the depths. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 28. Sensō: Battle for Japan
+
+**File:** `packages/web/src/games/senso-battle-for-japan/assets/thumbnail.png`
+
+> A top-down view of an inked silk map of feudal Japan unrolled across a polished tatami-mat floor at twilight, lit by paper lanterns whose warm light catches the gold-leaf coastlines. The Sensō board glows with painted provinces — Kyushu, Honshu, Shikoku — divided by inked borders and dotted with sakura-pink mountain icons. Wooden samurai pieces in red, blue, white, and black armies cluster in their occupied provinces, with miniature daimyō banners staked at strategic citadels. A fan of clan cards spreads from the bottom edge, each crisply illustrated with a heraldic mon, and a pair of bone dice tumbles weightlessly above one contested province, freshly rolled. Around the map's edges, the tatami dissolves into ink-wash painted bamboo groves and a single distant Mount Fuji rising through morning mist. A katana hilt and a porcelain sake cup rest at one corner of the chamber. The mood is ceremonious and tense — Sengoku-era ambition pressed onto silk. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 29. Quiztopia
+
+**File:** `packages/web/src/games/quiztopia/assets/thumbnail.png`
+
+> A top-down view of the colorful Quiztopia board sprawled across a pub-quiz table at neon-lit night, its illustrated continent of trivia regions glowing — pop culture, history, science, sport, geography — each painted as a whimsical land with quirky landmarks (a giant question-mark mountain, a beaker volcano, a film-strip river, a microscope lighthouse). Two team pawns in red and blue stand at scattered regions, mid-conquest. A fan of question cards spreads from the bottom edge, one flipped face-up showing a partially obscured question. A pair of dice tumbles above one region, freshly rolled. A small wooden timer hourglass leans on its side mid-flip beside a stack of unused team-tokens. Around the board, the table dissolves into a softly blurred pub of clinking glasses and dim string-lights, with a chalkboard scoreboard glowing in the haze. The mood is festively brain-strained — pub-quiz electricity charged across continents of facts. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 30. A Game of Thrones: The Card Game
+
+**File:** `packages/web/src/games/a-game-of-thrones-the-card-game/assets/thumbnail.png`
+
+> A top-down view of an oak war-council table strewn with the iconic factions of A Game of Thrones LCG, lit by an iron candelabra above. A fan of cards from House Stark, Lannister, Targaryen, and Baratheon spreads across the war-table — characters in evocative illustrations (a brooding northern lord in furs, a golden lioness with a sneer, a silver-haired dragon-rider with violet eyes, a stag-helmed knight), location cards depicting Winterfell snowing and Casterly Rock looming, attachment cards with weapons and armor, and event cards inked in heraldic crimson and gold. In the center, a single dramatic challenge is resolved: two character cards face off across an open plot card, with power and gold tokens stacked beside the contested faction. A pile of unrevealed plot cards lies face-down at the upper edge, the topmost just being flipped. Around the table's edge, the wood grain dissolves into a faint Westeros map etched into the surface — the Wall to the north, the Dothraki Sea to the east — with a small pewter direwolf token resting on one card and a cracked Targaryen dragon-egg ornament catching the candleglow. The mood is intrigue-soaked and martial — politics and steel pressed into card stock. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
 # Background Image Prompts
 
 All backgrounds were generated with **ChatGPT (image generation)** on March 18, 2026.

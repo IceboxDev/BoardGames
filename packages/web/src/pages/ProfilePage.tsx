@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { useNavigate } from "react-router-dom";
 import { TopNav, TopNavLink } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
 import { authClient, useSession } from "../lib/auth-client";
-import { fetchMyInventory, getCachedInventory } from "../lib/inventory";
+import { fetchMyInventory } from "../lib/inventory";
+import { qk } from "../lib/query-keys";
 
 export default function ProfilePage() {
   const navigate = useNavigate();
@@ -13,31 +14,16 @@ export default function ProfilePage() {
   const user = data?.user as
     | { name?: string; email?: string; role?: string; onlineEnabled?: boolean }
     | undefined;
+  const userId = data?.user?.id ?? null;
 
   const onlineUnlocked = Boolean(user?.onlineEnabled);
   const isAdmin = user?.role === "admin";
 
-  const [ownedSlugs, setOwnedSlugs] = useState<string[] | null>(() => getCachedInventory());
-
-  useEffect(() => {
-    let cancelled = false;
-    fetchMyInventory()
-      .then((slugs) => {
-        if (cancelled) return;
-        setOwnedSlugs((prev) => {
-          if (prev && prev.length === slugs.length && prev.every((v, i) => v === slugs[i])) {
-            return prev;
-          }
-          return slugs;
-        });
-      })
-      .catch(() => {
-        if (!cancelled) setOwnedSlugs((prev) => prev ?? []);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+  const { data: ownedSlugs = null } = useQuery({
+    queryKey: qk.inventory(userId),
+    queryFn: ({ signal }) => fetchMyInventory(signal),
+    enabled: !!userId,
+  });
 
   async function handleSignOut() {
     await authClient.signOut();

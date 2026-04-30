@@ -1,18 +1,20 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useEffect, useMemo, useState } from "react";
 import Calendar from "../components/offline/Calendar";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
 import { games } from "../games/registry";
-import { apiUrl } from "../lib/api-base";
-import { authClient } from "../lib/auth-client";
+import { adminSetOnline } from "../lib/admin";
+import { authClient, useSession } from "../lib/auth-client";
 import {
   adminFetchInventory,
   adminFetchPendingInventory,
   adminSaveInventory,
   adminSavePendingInventory,
 } from "../lib/inventory";
-import { type AvailabilityMap, adminFetchAvailability } from "../lib/offline-availability";
+import { adminFetchAvailability } from "../lib/offline-availability";
 import { startOfWeekMonday } from "../lib/offline-week";
+import { qk } from "../lib/query-keys";
 
 type AdminUser = {
   id: string;
@@ -24,52 +26,87 @@ type AdminUser = {
 };
 
 export default function AdminPage() {
-  const [users, setUsers] = useState<AdminUser[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-  const [pendingId, setPendingId] = useState<string | null>(null);
+  const queryClient = useQueryClient();
+  const { data: sessionData } = useSession();
+  const currentUserId = sessionData?.user?.id ?? null;
+
   const [expandedUserId, setExpandedUserId] = useState<string | null>(null);
   const [calendarUser, setCalendarUser] = useState<AdminUser | null>(null);
+  const [deleteMode, setDeleteMode] = useState(false);
+  const [confirmDeleteUserId, setConfirmDeleteUserId] = useState<string | null>(null);
+  const [confirmEmail, setConfirmEmail] = useState("");
 
-  const load = useCallback(async () => {
-    setLoading(true);
-    setError(null);
-    const { data, error: err } = await authClient.admin.listUsers({
-      query: { limit: 100 },
-    });
-    if (err) {
-      setError(err.message ?? "Failed to load users");
-    } else if (data) {
-      setUsers(data.users as unknown as AdminUser[]);
-    }
-    setLoading(false);
-  }, []);
+  const usersQuery = useQuery({
+    queryKey: qk.adminUsers(),
+    queryFn: async () => {
+      const { data, error } = await authClient.admin.listUsers({ query: { limit: 100 } });
+      if (error) throw new Error(error.message ?? "Failed to load users");
+      return (data?.users ?? []) as unknown as AdminUser[];
+    },
+  });
 
-  useEffect(() => {
-    void load();
-  }, [load]);
+  const users = usersQuery.data ?? [];
+  const loading = usersQuery.isPending;
 
-  async function toggleOnline(user: AdminUser) {
-    setPendingId(user.id);
-    try {
-      const res = await fetch(apiUrl(`/api/admin/users/${user.id}/online`), {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        credentials: "include",
-        body: JSON.stringify({ onlineEnabled: !user.onlineEnabled }),
-      });
-      if (!res.ok) {
-        const body = (await res.json().catch(() => ({}))) as { error?: string };
-        throw new Error(body.error ?? `Request failed (${res.status})`);
-      }
-      setUsers((prev) =>
-        prev.map((u) => (u.id === user.id ? { ...u, onlineEnabled: !user.onlineEnabled } : u)),
-      );
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Update failed");
-    } finally {
-      setPendingId(null);
-    }
+  const toggleOnlineMutation = useMutation({
+    mutationFn: (user: AdminUser) => adminSetOnline(user.id, !user.onlineEnabled),
+    onSuccess: () => {
+      void queryClient.invalidateQueries({ queryKey: qk.adminUsers() });
+    },
+  });
+
+  const deleteMutation = useMutation({
+    mutationFn: async (userId: string) => {
+      const { error } = await authClient.admin.removeUser({ userId });
+      if (error) throw new Error(error.message ?? "Failed to delete user");
+    },
+    onSuccess: (_data, userId) => {
+      queryClient.removeQueries({ queryKey: qk.inventory(userId) });
+      queryClient.removeQueries({ queryKey: qk.availability(userId) });
+      queryClient.removeQueries({ queryKey: qk.adminUserInventory(userId) });
+      queryClient.removeQueries({ queryKey: qk.adminUserAvailability(userId) });
+      void queryClient.invalidateQueries({ queryKey: qk.adminUsers() });
+      setConfirmDeleteUserId(null);
+      setConfirmEmail("");
+    },
+  });
+
+  const errorMessage = usersQuery.error
+    ? usersQuery.error instanceof Error
+      ? usersQuery.error.message
+      : "Failed to load users"
+    : toggleOnlineMutation.error
+      ? toggleOnlineMutation.error instanceof Error
+        ? toggleOnlineMutation.error.message
+        : "Update failed"
+      : deleteMutation.error
+        ? deleteMutation.error instanceof Error
+          ? deleteMutation.error.message
+          : "Delete failed"
+        : null;
+
+  function toggleDeleteMode() {
+    setDeleteMode((m) => !m);
+    setConfirmDeleteUserId(null);
+    setConfirmEmail("");
+    deleteMutation.reset();
+  }
+
+  function startDelete(user: AdminUser) {
+    setConfirmDeleteUserId(user.id);
+    setConfirmEmail("");
+    deleteMutation.reset();
+  }
+
+  function cancelDelete() {
+    setConfirmDeleteUserId(null);
+    setConfirmEmail("");
+    deleteMutation.reset();
+  }
+
+  function commitDelete(user: AdminUser) {
+    if (confirmEmail.trim().toLowerCase() !== user.email.toLowerCase()) return;
+    deleteMutation.mutate(user.id);
   }
 
   function toggleInventoryPanel(userId: string) {
@@ -99,23 +136,44 @@ export default function AdminPage() {
         <TopNavBackButton to="/" label="Dashboard" />
       </TopNav>
 
-      <main className="mx-auto w-full max-w-4xl flex-1 px-6 py-10">
-        <div className="mb-8">
-          <h1 className="text-2xl font-bold tracking-tight text-white">Users</h1>
-          <p className="mt-1 text-sm text-gray-500">
-            Toggle <span className="font-medium text-gray-300">online</span> to grant a user access
-            to multiplayer. Use <span className="font-medium text-gray-300">Inventory</span> to set
-            which games each user owns. Click{" "}
-            <span className="font-medium text-gray-300">Calendar</span> to preview a user's offline
-            availability.
-          </p>
+      <main className="mx-auto w-full max-w-5xl flex-1 px-6 py-10">
+        <div className="mb-8 flex items-start justify-between gap-6">
+          <div className="min-w-0 flex-1">
+            <h1 className="text-2xl font-bold tracking-tight text-white">Users</h1>
+            {deleteMode ? (
+              <p className="mt-1 text-sm text-rose-300">
+                <span className="font-semibold">Delete mode is on.</span> Click{" "}
+                <span className="font-semibold">Delete</span> on a row, then type the user's email
+                to confirm. Deletion is permanent and wipes their inventory and availability.
+              </p>
+            ) : (
+              <p className="mt-1 text-sm text-gray-500">
+                Toggle <span className="font-medium text-gray-300">online</span> to grant a user
+                access to multiplayer. Use{" "}
+                <span className="font-medium text-gray-300">Inventory</span> to set which games each
+                user owns. Click <span className="font-medium text-gray-300">Calendar</span> to
+                preview a user's offline availability.
+              </p>
+            )}
+          </div>
+          <button
+            type="button"
+            onClick={toggleDeleteMode}
+            className={`shrink-0 rounded-md border px-3 py-1.5 text-xs font-medium transition ${
+              deleteMode
+                ? "border-rose-500/60 bg-rose-500/20 text-rose-200 hover:bg-rose-500/30"
+                : "border-rose-500/30 bg-transparent text-rose-300 hover:bg-rose-500/10"
+            }`}
+          >
+            {deleteMode ? "Exit delete mode" : "Delete mode"}
+          </button>
         </div>
 
         <PreRegisterCard />
 
-        {error && (
+        {errorMessage && (
           <div className="mb-4 rounded-md border border-red-500/30 bg-red-500/10 px-3 py-2 text-sm text-red-300">
-            {error}
+            {errorMessage}
           </div>
         )}
 
@@ -132,26 +190,47 @@ export default function AdminPage() {
             <table className="w-full text-sm">
               <thead className="bg-surface-800 text-xs uppercase tracking-wider text-gray-500">
                 <tr>
-                  <th className="px-4 py-3 text-left font-medium">Name</th>
-                  <th className="px-4 py-3 text-left font-medium">Email</th>
-                  <th className="px-4 py-3 text-left font-medium">Role</th>
-                  <th className="px-4 py-3 text-right font-medium">Calendar</th>
-                  <th className="px-4 py-3 text-right font-medium">Inventory</th>
-                  <th className="px-4 py-3 text-right font-medium">Online</th>
+                  <th className="px-5 py-3 text-left font-medium">Name</th>
+                  <th className="px-5 py-3 text-left font-medium">Email</th>
+                  <th className="px-5 py-3 text-left font-medium">Role</th>
+                  <th className="px-5 py-3 text-center font-medium">Calendar</th>
+                  <th className="px-5 py-3 text-center font-medium">Inventory</th>
+                  <th className="px-5 py-3 text-center font-medium">Online</th>
+                  {deleteMode && (
+                    <th className="w-32 px-5 py-3 pr-6 text-center font-medium text-rose-300">
+                      Delete
+                    </th>
+                  )}
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/5">
-                {users.map((u) => (
-                  <UserRow
-                    key={u.id}
-                    user={u}
-                    expanded={expandedUserId === u.id}
-                    onToggleInventory={() => toggleInventoryPanel(u.id)}
-                    onToggleOnline={() => toggleOnline(u)}
-                    onOpenCalendar={() => openCalendar(u)}
-                    pending={pendingId === u.id}
-                  />
-                ))}
+                {users.map((u) => {
+                  const togglingThisUser =
+                    toggleOnlineMutation.isPending && toggleOnlineMutation.variables?.id === u.id;
+                  const isSelf = u.id === currentUserId;
+                  const deletingThisUser =
+                    deleteMutation.isPending && deleteMutation.variables === u.id;
+                  return (
+                    <UserRow
+                      key={u.id}
+                      user={u}
+                      expanded={expandedUserId === u.id}
+                      onToggleInventory={() => toggleInventoryPanel(u.id)}
+                      onToggleOnline={() => toggleOnlineMutation.mutate(u)}
+                      onOpenCalendar={() => openCalendar(u)}
+                      pending={togglingThisUser}
+                      deleteMode={deleteMode}
+                      isSelf={isSelf}
+                      onStartDelete={() => startDelete(u)}
+                      confirmingDelete={confirmDeleteUserId === u.id}
+                      confirmEmail={confirmEmail}
+                      onConfirmEmailChange={setConfirmEmail}
+                      onCancelDelete={cancelDelete}
+                      onCommitDelete={() => commitDelete(u)}
+                      deleting={deletingThisUser}
+                    />
+                  );
+                })}
               </tbody>
             </table>
           </div>
@@ -171,27 +250,19 @@ type AvailabilityDrawerProps = {
 function AvailabilityDrawer({ user, onClose }: AvailabilityDrawerProps) {
   const today = useMemo(() => new Date(), []);
   const weekStart = useMemo(() => startOfWeekMonday(today), [today]);
-  const [availability, setAvailability] = useState<AvailabilityMap | null>(null);
-  const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    let cancelled = false;
-    setAvailability(null);
-    setError(null);
-    adminFetchAvailability(user.id)
-      .then((map) => {
-        if (!cancelled) setAvailability(map);
-      })
-      .catch((e) => {
-        if (cancelled) return;
-        setError(e instanceof Error ? e.message : "Failed to load availability");
-        setAvailability({});
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [user.id]);
+  const availabilityQuery = useQuery({
+    queryKey: qk.adminUserAvailability(user.id),
+    queryFn: ({ signal }) => adminFetchAvailability(user.id, signal),
+  });
 
+  const availability = availabilityQuery.data ?? null;
+  const isLoading = availabilityQuery.isPending;
+  const error = availabilityQuery.error
+    ? availabilityQuery.error instanceof Error
+      ? availabilityQuery.error.message
+      : "Failed to load availability"
+    : null;
   const markedCount = availability ? Object.keys(availability).length : 0;
 
   return (
@@ -231,7 +302,7 @@ function AvailabilityDrawer({ user, onClose }: AvailabilityDrawerProps) {
           <span className="opacity-60">unmarked</span>
         </p>
 
-        {availability === null ? (
+        {isLoading || availability === null ? (
           <p className="text-center text-xs text-gray-500">Loading…</p>
         ) : (
           <Calendar
@@ -250,7 +321,7 @@ function AvailabilityDrawer({ user, onClose }: AvailabilityDrawerProps) {
         )}
 
         <p className="shrink-0 text-center text-[11px] text-gray-500">
-          {availability === null
+          {isLoading || availability === null
             ? ""
             : markedCount === 0
               ? "No availability set"
@@ -268,6 +339,15 @@ type UserRowProps = {
   onToggleOnline: () => void;
   onOpenCalendar: () => void;
   pending: boolean;
+  deleteMode: boolean;
+  isSelf: boolean;
+  onStartDelete: () => void;
+  confirmingDelete: boolean;
+  confirmEmail: string;
+  onConfirmEmailChange: (next: string) => void;
+  onCancelDelete: () => void;
+  onCommitDelete: () => void;
+  deleting: boolean;
 };
 
 function UserRow({
@@ -277,13 +357,24 @@ function UserRow({
   onToggleOnline,
   onOpenCalendar,
   pending,
+  deleteMode,
+  isSelf,
+  onStartDelete,
+  confirmingDelete,
+  confirmEmail,
+  onConfirmEmailChange,
+  onCancelDelete,
+  onCommitDelete,
+  deleting,
 }: UserRowProps) {
+  const columnCount = deleteMode ? 7 : 6;
+  const confirmReady = confirmEmail.trim().toLowerCase() === user.email.toLowerCase();
   return (
     <>
       <tr className="text-gray-200">
-        <td className="px-4 py-3 font-medium">{user.name || "—"}</td>
-        <td className="px-4 py-3 text-gray-400">{user.email}</td>
-        <td className="px-4 py-3">
+        <td className="px-5 py-3 font-medium">{user.name || "—"}</td>
+        <td className="px-5 py-3 text-gray-400">{user.email}</td>
+        <td className="px-5 py-3">
           <span
             className={`rounded-full px-2 py-0.5 text-xs ${
               user.role === "admin"
@@ -294,7 +385,7 @@ function UserRow({
             {user.role ?? "user"}
           </span>
         </td>
-        <td className="px-4 py-3 text-right">
+        <td className="px-5 py-3 text-center">
           <button
             type="button"
             onClick={onOpenCalendar}
@@ -303,7 +394,7 @@ function UserRow({
             View
           </button>
         </td>
-        <td className="px-4 py-3 text-right">
+        <td className="px-5 py-3 text-center">
           <button
             type="button"
             onClick={onToggleInventory}
@@ -316,7 +407,7 @@ function UserRow({
             {expanded ? "Close" : "Manage"}
           </button>
         </td>
-        <td className="px-4 py-3 text-right">
+        <td className="px-5 py-3 text-center">
           <button
             type="button"
             onClick={onToggleOnline}
@@ -334,11 +425,78 @@ function UserRow({
             />
           </button>
         </td>
+        {deleteMode && (
+          <td className="w-32 px-5 py-3 pr-6 text-center">
+            {isSelf ? (
+              <span
+                className="inline-flex items-center rounded-md border border-white/5 bg-white/5 px-2.5 py-1 text-xs italic text-gray-500"
+                title="You cannot delete yourself"
+              >
+                you
+              </span>
+            ) : confirmingDelete ? (
+              <span className="inline-flex items-center text-xs text-rose-300">Confirm below…</span>
+            ) : (
+              <button
+                type="button"
+                onClick={onStartDelete}
+                className="rounded-md bg-rose-500/20 px-2.5 py-1 text-xs font-medium text-rose-200 transition hover:bg-rose-500/30"
+              >
+                Delete
+              </button>
+            )}
+          </td>
+        )}
       </tr>
       {expanded && (
         <tr>
-          <td colSpan={6} className="bg-surface-950/50 px-4 py-4">
+          <td colSpan={columnCount} className="bg-surface-950/50 px-4 py-4">
             <InventoryPanel userId={user.id} />
+          </td>
+        </tr>
+      )}
+      {confirmingDelete && (
+        <tr>
+          <td
+            colSpan={columnCount}
+            className="border-t border-rose-500/30 bg-rose-950/40 px-4 py-4"
+          >
+            <div className="space-y-3">
+              <p className="text-sm text-rose-100">
+                Type{" "}
+                <span className="rounded bg-rose-500/20 px-1.5 py-0.5 font-mono text-xs text-rose-100">
+                  {user.email}
+                </span>{" "}
+                to confirm permanent deletion.
+              </p>
+              <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
+                <input
+                  type="text"
+                  // biome-ignore lint/a11y/noAutofocus: focus on the active confirmation input
+                  autoFocus
+                  value={confirmEmail}
+                  onChange={(e) => onConfirmEmailChange(e.target.value)}
+                  placeholder={user.email}
+                  disabled={deleting}
+                  spellCheck={false}
+                  autoComplete="off"
+                  className="w-full flex-1 rounded-md border border-rose-500/30 bg-surface-950 px-3 py-1.5 text-sm text-white placeholder:text-gray-600 focus:border-rose-400 focus:outline-none disabled:opacity-50"
+                />
+                <div className="flex items-center justify-end gap-2">
+                  <Button variant="ghost" size="sm" onClick={onCancelDelete} disabled={deleting}>
+                    Cancel
+                  </Button>
+                  <button
+                    type="button"
+                    onClick={onCommitDelete}
+                    disabled={!confirmReady || deleting}
+                    className="rounded-md bg-rose-500 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-rose-400 disabled:cursor-not-allowed disabled:bg-rose-500/30 disabled:text-rose-200"
+                  >
+                    {deleting ? "Deleting…" : "Delete user"}
+                  </button>
+                </div>
+              </div>
+            </div>
           </td>
         </tr>
       )}
@@ -347,56 +505,55 @@ function UserRow({
 }
 
 function InventoryPanel({ userId }: { userId: string }) {
-  const [draft, setDraft] = useState<string[]>([]);
-  const [committed, setCommitted] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [saving, setSaving] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const queryClient = useQueryClient();
+  const [draft, setDraft] = useState<string[] | null>(null);
 
+  const inventoryQuery = useQuery({
+    queryKey: qk.adminUserInventory(userId),
+    queryFn: ({ signal }) => adminFetchInventory(userId, signal),
+  });
+
+  const committed = inventoryQuery.data ?? [];
+
+  // Initialize/reset draft whenever the committed slug list changes.
   useEffect(() => {
-    let cancelled = false;
-    setLoading(true);
-    setError(null);
-    adminFetchInventory(userId)
-      .then((slugs) => {
-        if (cancelled) return;
-        setCommitted(slugs);
-        setDraft(slugs);
-      })
-      .catch((e) => {
-        if (cancelled) return;
-        setError(e instanceof Error ? e.message : "Failed to load");
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [userId]);
+    if (inventoryQuery.data) setDraft(inventoryQuery.data);
+  }, [inventoryQuery.data]);
 
-  function toggle(slug: string) {
-    setDraft((prev) => (prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]));
+  const saveMutation = useMutation({
+    mutationFn: (slugs: string[]) => adminSaveInventory(userId, slugs),
+    onSuccess: (_data, slugs) => {
+      queryClient.setQueryData(qk.adminUserInventory(userId), slugs);
+      void queryClient.invalidateQueries({ queryKey: qk.inventory(userId) });
+    },
+  });
+
+  const error = inventoryQuery.error
+    ? inventoryQuery.error instanceof Error
+      ? inventoryQuery.error.message
+      : "Failed to load"
+    : saveMutation.error
+      ? saveMutation.error instanceof Error
+        ? saveMutation.error.message
+        : "Save failed"
+      : null;
+
+  if (inventoryQuery.isPending || draft === null) {
+    return <p className="text-xs text-gray-500">Loading inventory…</p>;
   }
 
-  async function save() {
-    setSaving(true);
-    setError(null);
-    try {
-      await adminSaveInventory(userId, draft);
-      setCommitted(draft);
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Save failed");
-    } finally {
-      setSaving(false);
-    }
+  function toggle(slug: string) {
+    setDraft((prev) =>
+      prev === null ? prev : prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug],
+    );
+  }
+
+  function save() {
+    if (draft === null) return;
+    saveMutation.mutate(draft);
   }
 
   const dirty = draft.length !== committed.length || draft.some((s) => !committed.includes(s));
-
-  if (loading) {
-    return <p className="text-xs text-gray-500">Loading inventory…</p>;
-  }
 
   return (
     <div className="space-y-3">
@@ -450,7 +607,13 @@ function InventoryPanel({ userId }: { userId: string }) {
         <span className="text-xs text-gray-500">
           {draft.length} of {games.length} selected
         </span>
-        <Button variant="primary" size="sm" onClick={save} loading={saving} disabled={!dirty}>
+        <Button
+          variant="primary"
+          size="sm"
+          onClick={save}
+          loading={saveMutation.isPending}
+          disabled={!dirty}
+        >
           Save inventory
         </Button>
       </div>
@@ -459,67 +622,59 @@ function InventoryPanel({ userId }: { userId: string }) {
 }
 
 function PreRegisterCard() {
-  const [draft, setDraft] = useState<string[]>([]);
-  const [committed, setCommitted] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [saving, setSaving] = useState(false);
+  const queryClient = useQueryClient();
+  const [draft, setDraft] = useState<string[] | null>(null);
   const [expanded, setExpanded] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+
+  const pendingQuery = useQuery({
+    queryKey: qk.adminPendingInventory(),
+    queryFn: ({ signal }) => adminFetchPendingInventory(signal),
+  });
+
+  const committed = pendingQuery.data ?? [];
 
   useEffect(() => {
-    let cancelled = false;
-    setLoading(true);
-    setError(null);
-    adminFetchPendingInventory()
-      .then((slugs) => {
-        if (cancelled) return;
-        setCommitted(slugs);
-        setDraft(slugs);
-      })
-      .catch((e) => {
-        if (cancelled) return;
-        setError(e instanceof Error ? e.message : "Failed to load");
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
+    if (pendingQuery.data) setDraft(pendingQuery.data);
+  }, [pendingQuery.data]);
+
+  const saveMutation = useMutation({
+    mutationFn: (slugs: string[]) => adminSavePendingInventory(slugs),
+    onSuccess: (_data, slugs) => {
+      queryClient.setQueryData(qk.adminPendingInventory(), slugs);
+    },
+  });
+
+  const error = pendingQuery.error
+    ? pendingQuery.error instanceof Error
+      ? pendingQuery.error.message
+      : "Failed to load"
+    : saveMutation.error
+      ? saveMutation.error instanceof Error
+        ? saveMutation.error.message
+        : "Save failed"
+      : null;
 
   function toggle(slug: string) {
-    setDraft((prev) => (prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]));
+    setDraft((prev) =>
+      prev === null ? prev : prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug],
+    );
   }
 
-  async function save() {
-    setSaving(true);
-    setError(null);
-    try {
-      await adminSavePendingInventory(draft);
-      setCommitted(draft);
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Save failed");
-    } finally {
-      setSaving(false);
-    }
+  function save() {
+    if (draft === null) return;
+    saveMutation.mutate(draft);
   }
 
-  async function clearQueue() {
-    setSaving(true);
-    setError(null);
-    try {
-      await adminSavePendingInventory([]);
-      setCommitted([]);
-      setDraft([]);
-    } catch (e) {
-      setError(e instanceof Error ? e.message : "Clear failed");
-    } finally {
-      setSaving(false);
-    }
+  function clearQueue() {
+    saveMutation.mutate([]);
+    setDraft([]);
   }
 
-  const dirty = draft.length !== committed.length || draft.some((s) => !committed.includes(s));
+  const loading = pendingQuery.isPending;
+  const saving = saveMutation.isPending;
+  const dirty =
+    draft !== null &&
+    (draft.length !== committed.length || draft.some((s) => !committed.includes(s)));
   const queued = committed.length;
 
   return (
@@ -550,7 +705,7 @@ function PreRegisterCard() {
           {expanded ? "Close" : "Manage"}
         </button>
       </div>
-      {expanded && !loading && (
+      {expanded && !loading && draft !== null && (
         <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
           {error && <p className="text-xs text-rose-400">{error}</p>}
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">

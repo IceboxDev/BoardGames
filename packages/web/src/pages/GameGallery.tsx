@@ -1,35 +1,25 @@
-import { useEffect, useMemo, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { useMemo } from "react";
 import GameCard from "../components/GameCard";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
-import { fetchMyInventory, getCachedInventory } from "../lib/inventory";
+import { useSession } from "../lib/auth-client";
+import { fetchMyInventory } from "../lib/inventory";
+import { qk } from "../lib/query-keys";
 
 export default function GameGallery() {
-  const initial = getCachedInventory();
-  const [slugs, setSlugs] = useState<string[]>(initial ?? []);
-  const [loading, setLoading] = useState(initial === null);
+  const { data } = useSession();
+  const userId = data?.user?.id ?? null;
 
-  useEffect(() => {
-    let cancelled = false;
-    fetchMyInventory()
-      .then((s) => {
-        if (cancelled) return;
-        setSlugs((prev) => {
-          if (prev.length === s.length && prev.every((v, i) => v === s[i])) return prev;
-          return s;
-        });
-      })
-      .catch(() => {
-        if (!cancelled && initial === null) setSlugs([]);
-      })
-      .finally(() => {
-        if (!cancelled) setLoading(false);
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [initial]);
+  const inventoryQuery = useQuery({
+    queryKey: qk.inventory(userId),
+    queryFn: ({ signal }) => fetchMyInventory(signal),
+    enabled: !!userId,
+  });
+
+  const slugs = inventoryQuery.data ?? [];
+  const loading = inventoryQuery.isPending;
 
   const owned = useMemo<GameDefinition[]>(
     () =>

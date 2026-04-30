@@ -1,37 +1,20 @@
 import { apiUrl } from "./api-base";
 
-let cached: string[] | null = null;
-let inFlight: Promise<string[]> | null = null;
-
-export function getCachedInventory(): string[] | null {
-  return cached;
+export async function fetchMyInventory(signal?: AbortSignal): Promise<string[]> {
+  const res = await fetch(apiUrl("/api/user/inventory"), {
+    credentials: "include",
+    signal,
+  });
+  if (res.status === 401) return [];
+  if (!res.ok) throw new Error(`Failed to fetch inventory (${res.status})`);
+  const data = (await res.json()) as unknown;
+  return Array.isArray(data) ? (data as string[]) : [];
 }
 
-export async function fetchMyInventory(): Promise<string[]> {
-  if (inFlight) return inFlight;
-  inFlight = (async () => {
-    try {
-      const res = await fetch(apiUrl("/api/user/inventory"), {
-        credentials: "include",
-      });
-      if (res.status === 401) {
-        cached = [];
-        return cached;
-      }
-      if (!res.ok) throw new Error(`Failed to fetch inventory (${res.status})`);
-      const data = (await res.json()) as unknown;
-      cached = Array.isArray(data) ? (data as string[]) : [];
-      return cached;
-    } finally {
-      inFlight = null;
-    }
-  })();
-  return inFlight;
-}
-
-export async function adminFetchInventory(userId: string): Promise<string[]> {
+export async function adminFetchInventory(userId: string, signal?: AbortSignal): Promise<string[]> {
   const res = await fetch(apiUrl(`/api/admin/users/${userId}/inventory`), {
     credentials: "include",
+    signal,
   });
   if (!res.ok) throw new Error(`Failed to fetch inventory (${res.status})`);
   const data = (await res.json()) as unknown;
@@ -51,9 +34,10 @@ export async function adminSaveInventory(userId: string, slugs: string[]): Promi
   }
 }
 
-export async function adminFetchPendingInventory(): Promise<string[]> {
+export async function adminFetchPendingInventory(signal?: AbortSignal): Promise<string[]> {
   const res = await fetch(apiUrl("/api/admin/pending-inventory"), {
     credentials: "include",
+    signal,
   });
   if (!res.ok) throw new Error(`Failed to fetch pending inventory (${res.status})`);
   const data = (await res.json()) as unknown;
