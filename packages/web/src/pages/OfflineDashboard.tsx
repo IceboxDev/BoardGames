@@ -9,6 +9,7 @@ import {
   type AvailabilityMap,
   adminFetchAllAvailability,
   fetchAvailability,
+  getCachedAggregateAvailability,
   loadAvailability,
   mapsEqual,
   pushAvailability,
@@ -31,7 +32,9 @@ export default function OfflineDashboard() {
   const [draft, setDraft] = useState<AvailabilityMap>({});
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [allAvailability, setAllAvailability] = useState<AggregateAvailabilityMap | null>(null);
+  const [allAvailability, setAllAvailability] = useState<AggregateAvailabilityMap | null>(() =>
+    getCachedAggregateAvailability(),
+  );
 
   useEffect(() => {
     if (!userId) return;
@@ -61,10 +64,14 @@ export default function OfflineDashboard() {
     let cancelled = false;
     adminFetchAllAvailability()
       .then((map) => {
-        if (!cancelled) setAllAvailability(map);
+        if (cancelled) return;
+        setAllAvailability((prev) => {
+          if (prev && JSON.stringify(prev) === JSON.stringify(map)) return prev;
+          return map;
+        });
       })
       .catch(() => {
-        if (!cancelled) setAllAvailability({});
+        if (!cancelled) setAllAvailability((prev) => prev ?? {});
       });
     return () => {
       cancelled = true;

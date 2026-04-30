@@ -84,12 +84,28 @@ export async function adminFetchAvailability(userId: string): Promise<Availabili
 export type AvailabilityEntry = { userId: string; name: string; status: Availability };
 export type AggregateAvailabilityMap = Record<string, AvailabilityEntry[]>;
 
+let aggregateCache: AggregateAvailabilityMap | null = null;
+let aggregateInFlight: Promise<AggregateAvailabilityMap> | null = null;
+
+export function getCachedAggregateAvailability(): AggregateAvailabilityMap | null {
+  return aggregateCache;
+}
+
 export async function adminFetchAllAvailability(): Promise<AggregateAvailabilityMap> {
-  const res = await fetch(apiUrl("/api/admin/availability/all"), { credentials: "include" });
-  if (!res.ok) throw new Error(`Failed to fetch aggregate availability (${res.status})`);
-  const data = (await res.json()) as unknown;
-  if (data && typeof data === "object" && !Array.isArray(data)) {
-    return data as AggregateAvailabilityMap;
-  }
-  return {};
+  if (aggregateInFlight) return aggregateInFlight;
+  aggregateInFlight = (async () => {
+    try {
+      const res = await fetch(apiUrl("/api/admin/availability/all"), { credentials: "include" });
+      if (!res.ok) throw new Error(`Failed to fetch aggregate availability (${res.status})`);
+      const data = (await res.json()) as unknown;
+      aggregateCache =
+        data && typeof data === "object" && !Array.isArray(data)
+          ? (data as AggregateAvailabilityMap)
+          : {};
+      return aggregateCache;
+    } finally {
+      aggregateInFlight = null;
+    }
+  })();
+  return aggregateInFlight;
 }

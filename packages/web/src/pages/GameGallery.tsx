@@ -11,14 +11,17 @@ export default function GameGallery() {
   const [loading, setLoading] = useState(initial === null);
 
   useEffect(() => {
-    if (getCachedInventory() !== null) return;
     let cancelled = false;
     fetchMyInventory()
       .then((s) => {
-        if (!cancelled) setSlugs(s);
+        if (cancelled) return;
+        setSlugs((prev) => {
+          if (prev.length === s.length && prev.every((v, i) => v === s[i])) return prev;
+          return s;
+        });
       })
       .catch(() => {
-        if (!cancelled) setSlugs([]);
+        if (!cancelled && initial === null) setSlugs([]);
       })
       .finally(() => {
         if (!cancelled) setLoading(false);
@@ -26,7 +29,7 @@ export default function GameGallery() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [initial]);
 
   const owned = useMemo<GameDefinition[]>(
     () =>

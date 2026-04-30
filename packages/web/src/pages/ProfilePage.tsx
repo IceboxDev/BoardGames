@@ -20,19 +20,24 @@ export default function ProfilePage() {
   const [ownedSlugs, setOwnedSlugs] = useState<string[] | null>(() => getCachedInventory());
 
   useEffect(() => {
-    if (ownedSlugs !== null) return;
     let cancelled = false;
     fetchMyInventory()
       .then((slugs) => {
-        if (!cancelled) setOwnedSlugs(slugs);
+        if (cancelled) return;
+        setOwnedSlugs((prev) => {
+          if (prev && prev.length === slugs.length && prev.every((v, i) => v === slugs[i])) {
+            return prev;
+          }
+          return slugs;
+        });
       })
       .catch(() => {
-        if (!cancelled) setOwnedSlugs([]);
+        if (!cancelled) setOwnedSlugs((prev) => prev ?? []);
       });
     return () => {
       cancelled = true;
     };
-  }, [ownedSlugs]);
+  }, []);
 
   async function handleSignOut() {
     await authClient.signOut();

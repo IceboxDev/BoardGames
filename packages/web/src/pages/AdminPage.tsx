@@ -5,7 +5,12 @@ import { Button } from "../components/ui/Button";
 import { games } from "../games/registry";
 import { apiUrl } from "../lib/api-base";
 import { authClient } from "../lib/auth-client";
-import { adminFetchInventory, adminSaveInventory } from "../lib/inventory";
+import {
+  adminFetchInventory,
+  adminFetchPendingInventory,
+  adminSaveInventory,
+  adminSavePendingInventory,
+} from "../lib/inventory";
 import { type AvailabilityMap, adminFetchAvailability } from "../lib/offline-availability";
 import { startOfWeekMonday } from "../lib/offline-week";
 
@@ -105,6 +110,8 @@ export default function AdminPage() {
             availability.
           </p>
         </div>
+
+        <PreRegisterCard />
 
         {error && (
           <div className="mb-4 rounded-md border border-red-500/30 bg-red-500/10 px-3 py-2 text-sm text-red-300">
@@ -447,6 +454,179 @@ function InventoryPanel({ userId }: { userId: string }) {
           Save inventory
         </Button>
       </div>
+    </div>
+  );
+}
+
+function PreRegisterCard() {
+  const [draft, setDraft] = useState<string[]>([]);
+  const [committed, setCommitted] = useState<string[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
+  const [expanded, setExpanded] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    setLoading(true);
+    setError(null);
+    adminFetchPendingInventory()
+      .then((slugs) => {
+        if (cancelled) return;
+        setCommitted(slugs);
+        setDraft(slugs);
+      })
+      .catch((e) => {
+        if (cancelled) return;
+        setError(e instanceof Error ? e.message : "Failed to load");
+      })
+      .finally(() => {
+        if (!cancelled) setLoading(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  function toggle(slug: string) {
+    setDraft((prev) => (prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug]));
+  }
+
+  async function save() {
+    setSaving(true);
+    setError(null);
+    try {
+      await adminSavePendingInventory(draft);
+      setCommitted(draft);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Save failed");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  async function clearQueue() {
+    setSaving(true);
+    setError(null);
+    try {
+      await adminSavePendingInventory([]);
+      setCommitted([]);
+      setDraft([]);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Clear failed");
+    } finally {
+      setSaving(false);
+    }
+  }
+
+  const dirty = draft.length !== committed.length || draft.some((s) => !committed.includes(s));
+  const queued = committed.length;
+
+  return (
+    <div className="mb-6 overflow-hidden rounded-xl border border-accent-500/20 bg-surface-900">
+      <div className="flex items-center justify-between gap-3 px-4 py-3">
+        <div className="min-w-0">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-accent-400">
+            Pre-register
+          </p>
+          <p className="mt-1 text-sm text-gray-300">
+            {loading
+              ? "Loading…"
+              : queued === 0
+                ? "No collection queued — the next signup will start with no games."
+                : `${queued} ${queued === 1 ? "game" : "games"} queued — assigned to the next user who registers.`}
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={() => setExpanded((v) => !v)}
+          disabled={loading}
+          className={`shrink-0 rounded-md px-2.5 py-1 text-xs transition ${
+            expanded
+              ? "bg-accent-500/20 text-accent-200"
+              : "bg-white/5 text-gray-300 hover:bg-white/10"
+          } ${loading ? "opacity-50" : ""}`}
+        >
+          {expanded ? "Close" : "Manage"}
+        </button>
+      </div>
+      {expanded && !loading && (
+        <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
+          {error && <p className="text-xs text-rose-400">{error}</p>}
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+            {games.map((game) => {
+              const checked = draft.includes(game.slug);
+              return (
+                <label
+                  key={game.slug}
+                  className={`flex cursor-pointer items-center gap-3 rounded-lg border p-2 transition ${
+                    checked
+                      ? "border-accent-400/50 bg-accent-500/10"
+                      : "border-white/10 bg-surface-800/50 hover:border-white/20"
+                  }`}
+                >
+                  <input
+                    type="checkbox"
+                    checked={checked}
+                    onChange={() => toggle(game.slug)}
+                    className="sr-only"
+                  />
+                  <img
+                    src={game.thumbnail}
+                    alt=""
+                    className="h-10 w-10 shrink-0 rounded object-cover"
+                  />
+                  <span className="min-w-0 flex-1 text-xs">
+                    <span className="block truncate font-semibold text-gray-200">{game.title}</span>
+                    <span className="block truncate text-[10px] text-gray-500">{game.slug}</span>
+                  </span>
+                  {checked && (
+                    <svg
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="h-4 w-4 shrink-0 text-accent-300"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        d="M16.704 5.29a1 1 0 010 1.42l-7.5 7.5a1 1 0 01-1.41 0l-3.5-3.5a1 1 0 011.41-1.42L8.5 12.08l6.79-6.79a1 1 0 011.414 0z"
+                        clipRule="evenodd"
+                      />
+                    </svg>
+                  )}
+                </label>
+              );
+            })}
+          </div>
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-xs text-gray-500">
+              {draft.length} of {games.length} selected
+            </span>
+            <div className="flex items-center gap-2">
+              {queued > 0 && (
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={clearQueue}
+                  loading={saving}
+                  disabled={saving}
+                >
+                  Clear queue
+                </Button>
+              )}
+              <Button
+                variant="primary"
+                size="sm"
+                onClick={save}
+                loading={saving}
+                disabled={!dirty || saving}
+              >
+                Save queue
+              </Button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -84,6 +84,11 @@ async function migrate(db: Client): Promise<void> {
         game_slugs_json TEXT NOT NULL,
         updated_at TEXT NOT NULL DEFAULT (datetime('now'))
       )`,
+      `CREATE TABLE IF NOT EXISTS pending_inventory (
+        id INTEGER PRIMARY KEY CHECK (id = 1),
+        game_slugs_json TEXT NOT NULL,
+        updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+      )`,
       `CREATE INDEX IF NOT EXISTS idx_tournaments_slug ON tournaments(game_slug)`,
       `CREATE INDEX IF NOT EXISTS idx_tournaments_status ON tournaments(status)`,
       `CREATE INDEX IF NOT EXISTS idx_tournament_games_tid ON tournament_games(tournament_id, game_index)`,

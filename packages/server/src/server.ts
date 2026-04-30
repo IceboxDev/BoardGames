@@ -8,6 +8,7 @@ import {
 } from "./auth-routes/admin-availability.ts";
 import { adminInventoryRoutes } from "./auth-routes/admin-inventory.ts";
 import { adminOnlineRoutes } from "./auth-routes/admin-online.ts";
+import { adminPendingInventoryRoutes } from "./auth-routes/admin-pending-inventory.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
 import { persistenceRoutes } from "./persistence/routes.ts";
@@ -67,6 +68,7 @@ app.route("/api/admin/users", adminOnlineRoutes);
 app.route("/api/admin/users", adminInventoryRoutes);
 app.route("/api/admin/users", adminAvailabilityRoutes);
 app.route("/api/admin", adminAvailabilityAllRoutes);
+app.route("/api/admin", adminPendingInventoryRoutes);
 app.route("/api/user", userAvailabilityRoutes);
 app.route("/api/user", userInventoryRoutes);
 app.route("/api/tournaments", tournamentRoutes);

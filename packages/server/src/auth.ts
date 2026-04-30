@@ -1,7 +1,7 @@
 import { LibsqlDialect } from "@libsql/kysely-libsql";
 import { betterAuth } from "better-auth";
 import { admin } from "better-auth/plugins";
-import { getDbConnectionConfig } from "./db.ts";
+import { getDb, getDbConnectionConfig } from "./db.ts";
 
 function normalizeOrigin(raw: string): string {
   const trimmed = raw.trim().replace(/\/+$/, "");
@@ -64,6 +64,28 @@ export const auth = betterAuth({
               onlineEnabled: isAdmin,
             },
           };
+        },
+        after: async (user) => {
+          if (user.email.toLowerCase() === adminEmail) return;
+          try {
+            const db = getDb();
+            const { rows } = await db.execute(
+              "SELECT game_slugs_json FROM pending_inventory WHERE id = 1",
+            );
+            if (rows.length === 0) return;
+            const json = rows[0].game_slugs_json as string;
+            await db.execute({
+              sql: `INSERT INTO user_inventory (user_id, game_slugs_json, updated_at)
+                    VALUES (?, ?, datetime('now'))
+                    ON CONFLICT(user_id) DO UPDATE SET
+                      game_slugs_json = excluded.game_slugs_json,
+                      updated_at = excluded.updated_at`,
+              args: [user.id, json],
+            });
+            await db.execute("DELETE FROM pending_inventory WHERE id = 1");
+          } catch (err) {
+            console.error("[auth] failed to transfer pending inventory:", err);
+          }
         },
       },
     },
