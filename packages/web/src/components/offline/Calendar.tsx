@@ -1,4 +1,8 @@
-import type { Availability, AvailabilityMap } from "../../lib/offline-availability";
+import type {
+  AggregateAvailabilityMap,
+  Availability,
+  AvailabilityMap,
+} from "../../lib/offline-availability";
 import { dateKey } from "../../lib/offline-availability";
 import { build42Days } from "../../lib/offline-week";
 
@@ -12,6 +16,8 @@ type Props = {
   interactive?: boolean;
   /** Tighter typography + padding for narrow containers (e.g. side drawers). */
   compact?: boolean;
+  /** Per-date roster of who marked availability — admin-only overlay. */
+  dayLabels?: AggregateAvailabilityMap;
 };
 
 export default function Calendar({
@@ -21,6 +27,7 @@ export default function Calendar({
   readonlyBefore,
   interactive = false,
   compact = false,
+  dayLabels,
 }: Props) {
   const todayKey = dateKey(new Date());
   const cutoffKey = readonlyBefore ? dateKey(readonlyBefore) : null;
@@ -69,6 +76,7 @@ export default function Calendar({
               isPast={isPast}
               interactive={interactive}
               compact={compact}
+              labels={dayLabels?.[key]}
               onClick={() => onChange?.(key, cycle(value))}
             />
           );
@@ -87,6 +95,7 @@ type DayCellProps = {
   isPast: boolean;
   interactive: boolean;
   compact: boolean;
+  labels?: import("../../lib/offline-availability").AvailabilityEntry[];
   onClick: () => void;
 };
 
@@ -99,6 +108,7 @@ function DayCell({
   isPast,
   interactive,
   compact,
+  labels,
   onClick,
 }: DayCellProps) {
   const stateClass =
@@ -172,6 +182,7 @@ function DayCell({
       >
         {day}
       </span>
+      {labels && labels.length > 0 && !compact && <DayLabels entries={labels} />}
       {value && !compact && (
         <span
           className={`relative self-end font-bold uppercase tracking-[0.18em] ${valueLabelSize} ${
@@ -183,6 +194,50 @@ function DayCell({
       )}
     </button>
   );
+}
+
+const MAX_VISIBLE_LABELS = 4;
+
+function DayLabels({
+  entries,
+}: {
+  entries: import("../../lib/offline-availability").AvailabilityEntry[];
+}) {
+  const visible = entries.slice(0, MAX_VISIBLE_LABELS);
+  const overflow = entries.length - visible.length;
+  return (
+    <div className="relative mt-1 flex min-h-0 flex-1 flex-col gap-px overflow-hidden">
+      {visible.map((e) => (
+        <span
+          key={e.userId}
+          title={`${e.name} — ${e.status}`}
+          className={`truncate text-left text-[9px] font-semibold leading-tight ${
+            e.status === "can" ? "text-accent-200" : "text-amber-200"
+          }`}
+        >
+          <span
+            aria-hidden="true"
+            className={`mr-1 inline-block h-1 w-1 rounded-full align-middle ${
+              e.status === "can" ? "bg-accent-300" : "bg-amber-300"
+            }`}
+          />
+          {firstName(e.name)}
+        </span>
+      ))}
+      {overflow > 0 && (
+        <span className="truncate text-left text-[9px] font-semibold leading-tight text-gray-400">
+          +{overflow} more
+        </span>
+      )}
+    </div>
+  );
+}
+
+function firstName(full: string): string {
+  const trimmed = full.trim();
+  if (!trimmed) return "—";
+  const space = trimmed.indexOf(" ");
+  return space === -1 ? trimmed : trimmed.slice(0, space);
 }
 
 function monthTintClass(bucket: 0 | 1 | 2): string {

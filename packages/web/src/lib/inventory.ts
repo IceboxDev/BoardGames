@@ -1,13 +1,33 @@
 import { apiUrl } from "./api-base";
 
+let cached: string[] | null = null;
+let inFlight: Promise<string[]> | null = null;
+
+export function getCachedInventory(): string[] | null {
+  return cached;
+}
+
 export async function fetchMyInventory(): Promise<string[]> {
-  const res = await fetch(apiUrl("/api/user/inventory"), {
-    credentials: "include",
-  });
-  if (res.status === 401) return [];
-  if (!res.ok) throw new Error(`Failed to fetch inventory (${res.status})`);
-  const data = (await res.json()) as unknown;
-  return Array.isArray(data) ? (data as string[]) : [];
+  if (cached) return cached;
+  if (inFlight) return inFlight;
+  inFlight = (async () => {
+    try {
+      const res = await fetch(apiUrl("/api/user/inventory"), {
+        credentials: "include",
+      });
+      if (res.status === 401) {
+        cached = [];
+        return cached;
+      }
+      if (!res.ok) throw new Error(`Failed to fetch inventory (${res.status})`);
+      const data = (await res.json()) as unknown;
+      cached = Array.isArray(data) ? (data as string[]) : [];
+      return cached;
+    } finally {
+      inFlight = null;
+    }
+  })();
+  return inFlight;
 }
 
 export async function adminFetchInventory(userId: string): Promise<string[]> {

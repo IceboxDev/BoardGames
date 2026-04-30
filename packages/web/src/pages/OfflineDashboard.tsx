@@ -4,8 +4,10 @@ import Calendar from "../components/offline/Calendar";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { useSession } from "../lib/auth-client";
 import {
+  type AggregateAvailabilityMap,
   type Availability,
   type AvailabilityMap,
+  adminFetchAllAvailability,
   fetchAvailability,
   loadAvailability,
   mapsEqual,
@@ -19,6 +21,7 @@ type Mode = "view" | "edit";
 export default function OfflineDashboard() {
   const { data } = useSession();
   const userId = data?.user?.id;
+  const isAdmin = (data?.user as { role?: string } | undefined)?.role === "admin";
 
   const today = useMemo(() => new Date(), []);
   const weekStart = useMemo(() => startOfWeekMonday(today), [today]);
@@ -28,6 +31,7 @@ export default function OfflineDashboard() {
   const [draft, setDraft] = useState<AvailabilityMap>({});
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [allAvailability, setAllAvailability] = useState<AggregateAvailabilityMap | null>(null);
 
   useEffect(() => {
     if (!userId) return;
@@ -51,6 +55,21 @@ export default function OfflineDashboard() {
       cancelled = true;
     };
   }, [userId]);
+
+  useEffect(() => {
+    if (!isAdmin) return;
+    let cancelled = false;
+    adminFetchAllAvailability()
+      .then((map) => {
+        if (!cancelled) setAllAvailability(map);
+      })
+      .catch(() => {
+        if (!cancelled) setAllAvailability({});
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [isAdmin]);
 
   function enterEdit() {
     setDraft(committed);
@@ -118,6 +137,7 @@ export default function OfflineDashboard() {
           onChange={handleChange}
           readonlyBefore={today}
           interactive={mode === "edit"}
+          dayLabels={isAdmin ? (allAvailability ?? undefined) : undefined}
         />
 
         <AvailabilityActionBar

@@ -5,7 +5,7 @@ import { Button } from "../components/ui/Button";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
 import { authClient, useSession } from "../lib/auth-client";
-import { fetchMyInventory } from "../lib/inventory";
+import { fetchMyInventory, getCachedInventory } from "../lib/inventory";
 
 export default function ProfilePage() {
   const navigate = useNavigate();
@@ -17,9 +17,10 @@ export default function ProfilePage() {
   const onlineUnlocked = Boolean(user?.onlineEnabled);
   const isAdmin = user?.role === "admin";
 
-  const [ownedSlugs, setOwnedSlugs] = useState<string[] | null>(null);
+  const [ownedSlugs, setOwnedSlugs] = useState<string[] | null>(() => getCachedInventory());
 
   useEffect(() => {
+    if (ownedSlugs !== null) return;
     let cancelled = false;
     fetchMyInventory()
       .then((slugs) => {
@@ -31,7 +32,7 @@ export default function ProfilePage() {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [ownedSlugs]);
 
   async function handleSignOut() {
     await authClient.signOut();
@@ -139,9 +140,17 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
         <span className="text-xs font-semibold uppercase tracking-[0.2em]">Gallery</span>
       </div>
 
-      <div className="flex min-w-0 flex-1 items-center gap-2.5">
+      <div className="flex min-h-10 min-w-0 flex-1 items-center gap-2.5">
         {isLoading ? (
-          <span className="text-xs text-gray-500">Loading…</span>
+          <div className="flex gap-1.5" aria-hidden="true">
+            {Array.from({ length: PREVIEW_THUMBS }).map((_, i) => (
+              <span
+                // biome-ignore lint/suspicious/noArrayIndexKey: static skeleton placeholders
+                key={i}
+                className="h-10 w-10 shrink-0 animate-pulse rounded-lg bg-surface-800"
+              />
+            ))}
+          </div>
         ) : empty ? (
           <span className="text-xs text-gray-500">No games yet — ask an admin to add some</span>
         ) : (

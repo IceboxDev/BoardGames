@@ -3,13 +3,15 @@ import GameCard from "../components/GameCard";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
-import { fetchMyInventory } from "../lib/inventory";
+import { fetchMyInventory, getCachedInventory } from "../lib/inventory";
 
 export default function GameGallery() {
-  const [slugs, setSlugs] = useState<string[]>([]);
-  const [loading, setLoading] = useState(true);
+  const initial = getCachedInventory();
+  const [slugs, setSlugs] = useState<string[]>(initial ?? []);
+  const [loading, setLoading] = useState(initial === null);
 
   useEffect(() => {
+    if (getCachedInventory() !== null) return;
     let cancelled = false;
     fetchMyInventory()
       .then((s) => {

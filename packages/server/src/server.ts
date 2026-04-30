@@ -2,7 +2,10 @@ import { createNodeWebSocket } from "@hono/node-ws";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { auth } from "./auth.ts";
-import { adminAvailabilityRoutes } from "./auth-routes/admin-availability.ts";
+import {
+  adminAvailabilityAllRoutes,
+  adminAvailabilityRoutes,
+} from "./auth-routes/admin-availability.ts";
 import { adminInventoryRoutes } from "./auth-routes/admin-inventory.ts";
 import { adminOnlineRoutes } from "./auth-routes/admin-online.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
@@ -63,6 +66,7 @@ app.get("/api/health", (c) => c.json({ ok: true, games: getRegisteredSlugs() }))
 app.route("/api/admin/users", adminOnlineRoutes);
 app.route("/api/admin/users", adminInventoryRoutes);
 app.route("/api/admin/users", adminAvailabilityRoutes);
+app.route("/api/admin", adminAvailabilityAllRoutes);
 app.route("/api/user", userAvailabilityRoutes);
 app.route("/api/user", userInventoryRoutes);
 app.route("/api/tournaments", tournamentRoutes);

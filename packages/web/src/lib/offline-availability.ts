@@ -80,3 +80,16 @@ export async function adminFetchAvailability(userId: string): Promise<Availabili
   }
   return {};
 }
+
+export type AvailabilityEntry = { userId: string; name: string; status: Availability };
+export type AggregateAvailabilityMap = Record<string, AvailabilityEntry[]>;
+
+export async function adminFetchAllAvailability(): Promise<AggregateAvailabilityMap> {
+  const res = await fetch(apiUrl("/api/admin/availability/all"), { credentials: "include" });
+  if (!res.ok) throw new Error(`Failed to fetch aggregate availability (${res.status})`);
+  const data = (await res.json()) as unknown;
+  if (data && typeof data === "object" && !Array.isArray(data)) {
+    return data as AggregateAvailabilityMap;
+  }
+  return {};
+}
