@@ -65,6 +65,22 @@ export async function adminFetchAvailability(
 export type AvailabilityEntry = { userId: string; name: string; status: Availability };
 export type AggregateAvailabilityMap = Record<string, AvailabilityEntry[]>;
 
+export type AvailabilityCounts = Record<string, { can: number; maybe: number }>;
+
+export async function fetchAvailabilityCounts(signal?: AbortSignal): Promise<AvailabilityCounts> {
+  const res = await fetch(apiUrl("/api/availability/counts"), {
+    credentials: "include",
+    signal,
+  });
+  if (res.status === 401) return {};
+  if (!res.ok) throw new Error(`Failed to fetch availability counts (${res.status})`);
+  const data = (await res.json()) as unknown;
+  if (data && typeof data === "object" && !Array.isArray(data)) {
+    return data as AvailabilityCounts;
+  }
+  return {};
+}
+
 export async function adminFetchAllAvailability(
   signal?: AbortSignal,
 ): Promise<AggregateAvailabilityMap> {

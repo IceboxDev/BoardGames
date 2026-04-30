@@ -1,9 +1,8 @@
 import { lazy } from "react";
-import type { GameDefinition } from "../types";
+import type { GameModule } from "../types";
 import accent from "./accent.json";
 import backgroundImage from "./assets/background.png";
 import rulesUrl from "./assets/rules.pdf";
-import thumbnail from "./assets/thumbnail.png";
 import bgg from "./bgg.json";
 
 export default {
@@ -11,7 +10,6 @@ export default {
   title: "Exploding Kittens",
   bggId: 172225,
   bgg,
-  thumbnail,
   accentHex: accent.hex,
   backgroundImage,
   component: lazy(() => import("./ExplodingKittens")),
@@ -24,4 +22,4 @@ export default {
     { id: "random", label: "Random" },
   ],
   rulesUrl,
-} satisfies GameDefinition;
+} satisfies GameModule;

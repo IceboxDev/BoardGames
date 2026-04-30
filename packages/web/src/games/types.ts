@@ -34,7 +34,11 @@ export interface GameDefinition {
   bggId: number;
   /** BGG metadata bundled in at dev time. */
   bgg: BggGame;
-  /** Imported thumbnail asset URL. */
+  /**
+   * Imported thumbnail asset URL. Attached by the registry from the game's
+   * `assets/thumbnail.png` when present, or a shared placeholder when absent —
+   * never imported directly from a game's `index.ts`.
+   */
   thumbnail: string;
   /** Dominant accent color extracted at build time from the thumbnail. */
   accentHex: string;
@@ -57,3 +61,11 @@ export interface GameDefinition {
   /** URL to a PDF file with the game rules, shown from the mode-picker. */
   rulesUrl?: string;
 }
+
+/**
+ * Shape exported by each game's `index.ts`. The registry attaches `thumbnail`
+ * by globbing each folder's `assets/thumbnail.png`, so individual games never
+ * statically import their own thumbnail — that way a missing PNG cannot break
+ * the build.
+ */
+export type GameModule = Omit<GameDefinition, "thumbnail">;

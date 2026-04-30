@@ -273,3 +273,103 @@ body {
 .animate-breathe {
   animation: breathe 2.5s ease-in-out infinite;
 }
+
+/* ── Calendar fire / ember effects ──────────────── */
+
+/* Single ember particle drifting upward and fading. Position via --x; cycle via --dur; phase via --delay. */
+.ember {
+  position: absolute;
+  bottom: 8%;
+  left: var(--x, 50%);
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #fde68a 0%, #f97316 60%, transparent 100%);
+  filter: blur(0.4px);
+  opacity: 0;
+  pointer-events: none;
+  animation: ember-rise var(--dur, 3.2s) ease-out infinite;
+  animation-delay: var(--delay, 0s);
+}
+@keyframes ember-rise {
+  0% {
+    opacity: 0;
+    transform: translate(0, 0) scale(1);
+  }
+  18% {
+    opacity: 0.95;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--drift, 0px), -120%) scale(0.4);
+  }
+}
+
+/* Slow inset glow + faint halo pulse for "warming up" cells. */
+@keyframes ember-ring {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 0 rgba(251, 191, 36, 0),
+      inset 0 0 14px -8px rgba(251, 146, 60, 0.5);
+  }
+  50% {
+    box-shadow:
+      0 0 0 2px rgba(251, 191, 36, 0.18),
+      inset 0 0 18px -6px rgba(251, 146, 60, 0.7);
+  }
+}
+.animate-ember-ring {
+  animation: ember-ring 3.2s ease-in-out infinite;
+}
+
+/* Heat shimmer on the date number for "on fire" cells. */
+@keyframes heat-haze {
+  0%,
+  100% {
+    text-shadow: 0 0 12px rgba(251, 146, 60, 0.4);
+  }
+  50% {
+    text-shadow:
+      0 0 18px rgba(251, 146, 60, 0.7),
+      0 1px 0 rgba(220, 38, 38, 0.3);
+  }
+}
+.animate-heat-haze {
+  animation: heat-haze 2.4s ease-in-out infinite;
+}
+
+/* Cell-level breathing for "on fire" cells. Tiny scale, stays inside grid gaps. */
+@keyframes fire-breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.012);
+  }
+}
+.animate-fire-breathe {
+  animation: fire-breathe 4s ease-in-out infinite;
+}
+
+/* Diagonal light pass for "locked in" wax-seal cells. Idle most of the cycle, sweeps once every ~8s. */
+@keyframes seal-shimmer {
+  0%,
+  88%,
+  100% {
+    transform: translateX(-160%) skewX(-14deg);
+    opacity: 0;
+  }
+  92% {
+    transform: translateX(0%) skewX(-14deg);
+    opacity: 0.4;
+  }
+  98% {
+    transform: translateX(160%) skewX(-14deg);
+    opacity: 0;
+  }
+}
+.animate-seal-shimmer {
+  animation: seal-shimmer 8s ease-in-out infinite;
+}

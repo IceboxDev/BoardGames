@@ -4,6 +4,8 @@ export const qk = {
   adminUserInventory: (targetUserId: string) => ["admin", "user-inventory", targetUserId] as const,
   adminPendingInventory: () => ["admin", "pending-inventory"] as const,
   availability: (userId: string | null | undefined) => ["availability", userId] as const,
+  availabilityCounts: () => ["availability", "counts"] as const,
+  calendarLocks: () => ["calendar", "locks"] as const,
   adminUserAvailability: (targetUserId: string) =>
     ["admin", "user-availability", targetUserId] as const,
   adminAggregateAvailability: () => ["admin", "availability", "all"] as const,

@@ -5,16 +5,23 @@ import Calendar from "../components/offline/Calendar";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { useSession } from "../lib/auth-client";
 import {
+  adminSetCalendarLock,
+  adminUnsetCalendarLock,
+  type CalendarLocks,
+  fetchCalendarLocks,
+} from "../lib/calendar-locks";
+import {
   type Availability,
   type AvailabilityMap,
   adminFetchAllAvailability,
   fetchAvailability,
+  fetchAvailabilityCounts,
   pushAvailability,
 } from "../lib/offline-availability";
 import { startOfWeekMonday } from "../lib/offline-week";
 import { qk } from "../lib/query-keys";
 
-type Mode = "view" | "edit";
+type Mode = "view" | "edit" | "lock";
 
 export default function OfflineDashboard() {
   const { data } = useSession();
@@ -38,8 +45,22 @@ export default function OfflineDashboard() {
     enabled: isAdmin,
   });
 
+  const countsQuery = useQuery({
+    queryKey: qk.availabilityCounts(),
+    queryFn: ({ signal }) => fetchAvailabilityCounts(signal),
+    enabled: !!userId,
+  });
+
+  const locksQuery = useQuery({
+    queryKey: qk.calendarLocks(),
+    queryFn: ({ signal }) => fetchCalendarLocks(signal),
+    enabled: !!userId,
+  });
+
   const committed: AvailabilityMap = availabilityQuery.data ?? {};
   const allAvailability = aggregateQuery.data ?? null;
+  const counts = countsQuery.data ?? undefined;
+  const locks = locksQuery.data ?? undefined;
 
   const [mode, setMode] = useState<Mode>("view");
   const [draft, setDraft] = useState<AvailabilityMap>({});
@@ -60,6 +81,40 @@ export default function OfflineDashboard() {
     onSettled: () => {
       void queryClient.invalidateQueries({ queryKey: qk.availability(userId) });
       void queryClient.invalidateQueries({ queryKey: qk.adminAggregateAvailability() });
+      void queryClient.invalidateQueries({ queryKey: qk.availabilityCounts() });
+    },
+  });
+
+  const lockMutation = useMutation({
+    mutationFn: async ({ date, currentlyLocked }: { date: string; currentlyLocked: boolean }) => {
+      if (currentlyLocked) await adminUnsetCalendarLock(date);
+      else await adminSetCalendarLock(date);
+    },
+    onMutate: async ({ date, currentlyLocked }) => {
+      await queryClient.cancelQueries({ queryKey: qk.calendarLocks() });
+      const previous = queryClient.getQueryData<CalendarLocks>(qk.calendarLocks());
+      queryClient.setQueryData<CalendarLocks>(qk.calendarLocks(), (prev) => {
+        const next: CalendarLocks = { ...(prev ?? {}) };
+        if (currentlyLocked) {
+          delete next[date];
+        } else {
+          next[date] = {
+            lockedBy: userId ?? "",
+            lockedAt: new Date().toISOString(),
+            expectedUserIds: [],
+          };
+        }
+        return next;
+      });
+      return { previous };
+    },
+    onError: (_e, _vars, ctx) => {
+      if (ctx?.previous !== undefined) {
+        queryClient.setQueryData(qk.calendarLocks(), ctx.previous);
+      }
+    },
+    onSettled: () => {
+      void queryClient.invalidateQueries({ queryKey: qk.calendarLocks() });
     },
   });
 
@@ -84,6 +139,17 @@ export default function OfflineDashboard() {
     }
   }
 
+  function enterLockMode() {
+    saveMutation.reset();
+    lockMutation.reset();
+    setMode("lock");
+  }
+
+  function exitLockMode() {
+    lockMutation.reset();
+    setMode("view");
+  }
+
   function handleChange(key: string, value: Availability | undefined) {
     setDraft((prev) => {
       const next = { ...prev };
@@ -93,13 +159,23 @@ export default function OfflineDashboard() {
     });
   }
 
+  function handleLockToggle(date: string, currentlyLocked: boolean) {
+    lockMutation.mutate({ date, currentlyLocked });
+  }
+
   const visible = mode === "edit" ? draft : committed;
   const markedCount = Object.keys(visible).length;
-  const errorMessage = saveMutation.error
+  const saveError = saveMutation.error
     ? saveMutation.error instanceof Error
       ? saveMutation.error.message
       : "Could not save. Try again."
     : null;
+  const lockError = lockMutation.error
+    ? lockMutation.error instanceof Error
+      ? lockMutation.error.message
+      : "Could not lock/unlock. Try again."
+    : null;
+  const errorMessage = mode === "lock" ? lockError : saveError;
 
   return (
     <div className="flex min-h-dvh flex-col bg-surface-950 bg-grid">
@@ -109,17 +185,32 @@ export default function OfflineDashboard() {
 
       <div className="flex min-h-0 flex-1 flex-col gap-3 px-3 py-3 sm:gap-5 sm:px-6 sm:py-5">
         <p
-          className={`shrink-0 text-center text-[11px] text-gray-400 ${
-            mode === "edit" ? "" : "invisible"
+          className={`shrink-0 text-center text-[11px] ${
+            mode === "edit"
+              ? "text-gray-400"
+              : mode === "lock"
+                ? "text-amber-300"
+                : "invisible text-gray-400"
           }`}
-          aria-hidden={mode !== "edit"}
+          aria-hidden={mode === "view"}
         >
-          <span className="hidden sm:inline">Tap a day to cycle: </span>
-          <span className="text-accent-300">Can</span>
-          <span className="mx-1 opacity-50">→</span>
-          <span className="text-amber-300">Maybe</span>
-          <span className="mx-1 opacity-50">→</span>
-          <span className="opacity-60">clear</span>
+          {mode === "edit" && (
+            <>
+              <span className="hidden sm:inline">Tap a day to cycle: </span>
+              <span className="text-accent-300">Can</span>
+              <span className="mx-1 opacity-50">→</span>
+              <span className="text-amber-300">Maybe</span>
+              <span className="mx-1 opacity-50">→</span>
+              <span className="opacity-60">clear</span>
+            </>
+          )}
+          {mode === "lock" && (
+            <>
+              <span className="font-semibold">Lock mode.</span>
+              <span className="mx-2 opacity-60">·</span>
+              Tap a day to lock or unlock for game night.
+            </>
+          )}
         </p>
 
         <Calendar
@@ -129,6 +220,10 @@ export default function OfflineDashboard() {
           readonlyBefore={today}
           interactive={mode === "edit"}
           dayLabels={isAdmin ? (allAvailability ?? undefined) : undefined}
+          counts={counts}
+          locks={locks}
+          lockMode={mode === "lock"}
+          onLockToggle={handleLockToggle}
         />
 
         <AvailabilityActionBar
@@ -136,9 +231,12 @@ export default function OfflineDashboard() {
           markedCount={markedCount}
           saving={saveMutation.isPending}
           error={errorMessage}
+          isAdmin={isAdmin}
           onEdit={enterEdit}
           onCancel={cancel}
           onSave={save}
+          onEnterLockMode={enterLockMode}
+          onExitLockMode={exitLockMode}
         />
       </div>
     </div>

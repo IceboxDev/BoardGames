@@ -252,6 +252,190 @@ Every prompt includes the same style directive so the four images form a visuall
 
 ---
 
+## 31. Just One
+
+**File:** `packages/web/src/games/just-one/assets/thumbnail.png`
+
+> A top-down view of a cozy living-room coffee table at game night, lit by warm string-lights overhead. A fan of Just One word-cards spreads from the bottom edge — each card stamped with a single mystery word, one card flipped face-up showing a partial obscured target. Around the central card, five small wooden marker-boards radiate outward like spokes, each bearing a hand-written clue word in chunky black dry-erase marker (some smudged mid-erase, two bearing red strikethroughs marking duplicates). A pair of black dry-erase markers sits at the table's edge with caps off, and a soft eraser cloth rests beside them. Scattered around: half-empty wine glasses catching the lights, a bowl of chips, a candle in a glass jar, a folded throw blanket, and a snoozing house cat curled at the frame's edge. The mood is warm and collaborative — friends-around-a-table party-game glow. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 32. Dungeon Mayhem
+
+**File:** `packages/web/src/games/dungeon-mayhem/assets/thumbnail.png`
+
+> A top-down view of a dungeon banquet table carved from ancient stone, lit by torchlight from iron sconces beyond the frame. Four character decks fan out around a central battlefield in classic D&D class colors — the Barbarian's blood-red hand thick with axe-strike cards, the Wizard's purple-spangled cards crackling with arcane bolts, the Paladin's golden-yellow holy-shield deck radiating light, the Rogue's smoky-gray dagger-thrown cards layered with shadow. In the center, four heart-counter dials carved like dragon shields tick down — one nearly empty, glowing crimson; one full, glowing emerald. A dramatic spell card hovers mid-air above the battlefield, frozen mid-cast with chromatic sparks scattering outward. Scattered around the stone slab: a goblet of mead reflecting torchlight, a scattering of glittering gems, a crumpled treasure map, and a single bone die rolled to "20". The mood is gleefully chaotic and pulpy-fantasy — tavern-arena dungeon brawl. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 33. Connect 4
+
+**File:** `packages/web/src/games/connect-4/assets/thumbnail.png`
+
+> A top-down view of a kitchen tabletop where the iconic Connect 4 frame stands upright in its blue plastic glory, the gameplay surface visible head-on through the frame's apertures. Red and yellow discs alternate down the columns, with a vivid red disc captured mid-drop sliding into a column, casting a tiny shadow against the yellow plastic. A near-victory diagonal of three yellow discs gleams in one corner, with a single red disc poised to block. Beside the frame, the slide-out tray holds a stack of unused discs in two color rows. Scattered around: a half-empty glass of orange juice, a coloring book turned upside-down, a few crayons rolling at the periphery, and a wall calendar's edge catching late-afternoon sun. The mood is bright and unhurried — '70s after-school nostalgia in red, blue, and yellow. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 34. Tellstones: King's Gambit
+
+**File:** `packages/web/src/games/tellstones-kings-gambit/assets/thumbnail.png`
+
+> A top-down view of an ornate Demacian war-table at a candlelit chamber in Riot's League of Legends universe, where the long Tellstones board lies — a slender oak strip with five carved hollows, runic edges glowing softly with cyan magic. Bone-carved tiles bearing the iconic glyphs (sword, scroll, shield, crown, eye) stand face-down in their hollows, with one tile flipped face-up mid-bluff revealing a glowing crown sigil. A pair of player markers — a gilded Demacian falcon and a curved Noxian crow — perch at opposite ends, each having stalked partway across the board. A handful of player tokens fans from the bottom edge, marking captured points. Around the board, the table dissolves into the dim grandeur of a stone hall — a banner of Demacia's golden trim catches torchlight, an iron candelabra flickers at the periphery, and a wax-sealed scroll hangs at one corner. The mood is regal and cunning — a duel of wits at the throne's foot. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 35. Codenames
+
+**File:** `packages/web/src/games/codenames/assets/thumbnail.png`
+
+> A top-down view of a wood-paneled spy-bureau briefing-room table, lit by a single hooded green-shaded lamp. The Codenames 5x5 grid of word cards sprawls across the felt, each card showing a single mysterious word — a few drape with translucent red and blue agent-cover cards face-up (revealed picks), with one black assassin-cover card chillingly placed near a corner. A spymaster's key card stands at one edge of the grid, its tinted overlay showing the secret pattern of red and blue squares. A fan of unused agent-cover cards spreads at the bottom edge in red and blue. Scattered around: a mug of cooling coffee with grounds at the bottom, a fedora with a bullet hole in its brim, a folded city map with red pins, a typewriter with a half-typed page, a fountain pen, and a dog-eared briefing folder marked CONFIDENTIAL. The mood is hushed and conspiratorial — Cold War code-room intrigue. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 36. Codenames: Duet
+
+**File:** `packages/web/src/games/codenames-duet/assets/thumbnail.png`
+
+> A top-down view of an attic safehouse table at midnight, lit by a single dim incandescent bulb on a frayed cord. The Codenames: Duet 5x5 grid of word cards sprawls across worn linoleum, with translucent green agent-cover cards already placed on a handful of squares, a single innocent-bystander cover, and one ominous black assassin-cover lurking. Two key cards (one for each cooperating spy) sit at opposite edges of the grid, their tinted overlays showing partial overlapping green patterns and the dreaded shared assassin square. A fan of unused green covers spreads at the bottom. Scattered around: two enamel mugs of cold tea, a folded blueprint, a small turn-counter card with worn edges, a pair of small brass shells, a rumpled scarf, and a single cigarette stubbed out in a saucer. The mood is tense and trusting — partners-in-espionage tucked in a hiding place. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 37. One Night Ultimate Werewolf
+
+**File:** `packages/web/src/games/one-night-ultimate-werewolf/assets/thumbnail.png`
+
+> A top-down view of a moonlit village green at midnight, where the One Night Ultimate Werewolf role cards lie face-up arranged in a small clearing — Werewolf, Seer, Villager, Robber, Drunk, Insomniac, each illustrated with a stylized character portrait against deep indigo. Three additional cards lie face-down in the center as the "middle" cards. Around the clearing, the cobblestones dissolve into a dark forest at the periphery — silhouettes of shaggy wolf-shapes prowl between birch trunks, eyes glowing yellow at the frame's edges. A wax candle on a tarnished holder catches a single Seer's tarot-style flipped card mid-reveal, casting an amber pool. A handful of village-cottage shadows huddle in the distance, windows lit warm. Tiny tokens scatter at the periphery: a bone-carved seer's coin, a wooden mug, a smoke-shaped insomniac feather. The mood is dread-soaked and cinematic — full-moon night before the village wakes. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 38. Jaipur
+
+**File:** `packages/web/src/games/jaipur/assets/thumbnail.png`
+
+> A top-down view of a sun-drenched market stall in Jaipur at high noon, where a long brass tray displays the Jaipur game cards spread between two merchants' positions — silk, leather, spice, gold, silver, gem, and the dusty cream camel cards — each card crisply illustrated with its commodity. A fan of player hands spreads inward from each end, with a freshly drafted set of three "spice" cards being arranged into a meld for sale. Stacks of glittering rupee tokens climb at one edge in graduated values. Scattered around the brass tray: small clay bowls of saffron and turmeric, a balance scale tipping under a heap of silver coins, a curl of incense smoke rising from a brass burner, a folded parchment trade ledger, a tiny embroidered cushion, and the swaying tassels of a market awning catching the wind at the frame's edge. The mood is bustling and aromatic — Rajasthan spice-market trade at its golden hour. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 39. Not Enough Mana
+
+**File:** `packages/web/src/games/not-enough-mana/assets/thumbnail.png`
+
+> A top-down view of a wizard's planar sanctum at twilight, where the Not Enough Mana cards spread across an obsidian sigil-circle inscribed on basalt — each card crisply illustrated with bright cartoon fantasy spells and creatures in five mana colors (white plains, blue islands, black swamps, red mountains, green forests). A fan of player hands spreads from the bottom edge, with one creature card slammed mid-summon, casting a chromatic shockwave outward. Mana token gems in five colors orbit the central card like tiny planets, glowing faintly. Scattered around the sigil: a leather-bound spellbook open mid-page, a quill spilling ink in glowing rivulets, a familiar's empty perch with feathers drifting, an emptied chalice, and faint runes glowing along the basalt edges as the obsidian dissolves into starlit void. The mood is gleefully arcane — parody-mage's sanctum brimming with too many spells. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 40. The Fox in the Forest
+
+**File:** `packages/web/src/games/the-fox-in-the-forest/assets/thumbnail.png`
+
+> A top-down view of a moonlit fairy-tale forest clearing where The Fox in the Forest's ornate cards spread across moss and fallen leaves — each card painted in storybook style with three suits (bell, key, moon) and trump-rank characters (the Fox, the Witch, the Woodcutter, the Treasure). In the center of the clearing, two played trick-cards face off: a Witch trump card glows softly while a Treasure card lies beside it. A fan of player hands spreads from the bottom edge of the moss carpet, with one card poised mid-play. A small heap of captured tricks rests to one side, neatly stacked face-down. Around the clearing, the forest's birch trunks dissolve into deep blue shadow, fireflies drifting at the periphery, and a tiny wisp of fox-tail silhouette darts between trees in the bokeh, eyes glinting. A scattering of acorns, a glowing mushroom cluster, and a forgotten silver bell complete the storybook scene. The mood is enchanted and gently competitive — twilight wood where the trickster runs free. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 41. The Resistance
+
+**File:** `packages/web/src/games/the-resistance/assets/thumbnail.png`
+
+> A top-down view of a clandestine basement war-table at dusk, lit by a single bare bulb swinging on a cord. The Resistance role cards lie face-down arranged in a circle around the table's center — five face-down cards with subtle insignia hint at hidden allegiances. In the middle of the circle, a stack of mission cards waits beside three completed mission tracks — two stamped with "SUCCESS" in green ink, one with "FAIL" in dripping crimson. A fan of voting tokens (blue "yes" / red "no") spreads from the bottom edge, with one player's vote freshly slammed face-up showing a defiant red. The leader-token (a tarnished brass crown insignia) sits at one player's spot. Scattered around the table: blueprint scraps with red X's, a half-finished cigarette in a tin tray, a shattered mug, a coiled communication wire, and a single crumpled photograph face-down at the periphery. The mood is paranoid and electric — basement insurgency at the breaking point. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 42. Azul
+
+**File:** `packages/web/src/games/azul/assets/thumbnail.png`
+
+> A top-down view of a Portuguese palace courtyard at golden hour where the Azul tile-mosaic comes to life — a personal player-board lies in the foreground with rows of brilliant blue-and-white azulejo tiles already placed in tight 5x5 grid patterns: pomegranate motifs, geometric curves, floral cobalt arabesques. Around the central board, three circular factory displays radiate outward, each holding a small constellation of differently colored tiles (cobalt, turquoise, ochre, crimson, ebony) arranged in groups of four. A first-player marker (a small carved enamel tile) sits at the central pile. A fan of just-drafted tiles fans from the player's position at the bottom edge. Around the playing area, the courtyard floor dissolves into a softly painted continuation — distant azulejo walls glow under a fading sun, a fountain trickles at the frame's edge, citrus blossoms drift through warm air. The mood is contemplative and Iberian — Renaissance tilework being patiently composed. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 43. The Crew: The Quest for Planet Nine
+
+**File:** `packages/web/src/games/the-crew-quest-for-planet-nine/assets/thumbnail.png`
+
+> A top-down view of an interstellar starship command bridge, where The Crew's vivid trick-taking cards are arranged across a transparent navigation chart of the outer solar system. A fan of player hands spreads from the bottom edge — bold blue, green, pink, and yellow numbered cards plus the powerful black rocket trump cards — and in the center a single trick is laid: four cards already played around a small, glowing task token engraved with a planet-marker. A logbook beside the chart shows a row of communication tokens — one green "highest", one blue "lowest", one yellow "only" — used silently between crew. Around the chart, the brass rim of an astrolabe catches console light, a tiny gyroscope spins, and the chart itself dissolves into deep starlit space at the edges where Pluto, Saturn's rings, and the silhouette of a distant blue gas-giant (Planet Nine) drift through the bokeh. The mood is hushed and tense — a coordinated mission to the unknown edge of the system. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 44. 7 Wonders
+
+**File:** `packages/web/src/games/7-wonders/assets/thumbnail.png`
+
+> A top-down view of an ancient world tabletop where the Seven Wonders of Antiquity lie etched on weathered parchment-toned player-boards — the Pyramids of Giza, the Hanging Gardens, the Lighthouse of Alexandria, the Statue of Zeus, the Colossus of Rhodes, the Mausoleum, the Temple of Artemis — each board carrying its own miniature construction-stages where stone-tile pieces are slotted partway up. A fan of civilization cards spreads from the bottom edge — gray quarry, gold marketplace, blue science observatory, red barracks, green forum, yellow caravan — with one card flipped face-up mid-draft. Around the central wonder-boards, the surface dissolves into a softly painted ancient world: a Mediterranean coastline glints with sails, a hieroglyph-carved obelisk casts a long shadow, a goblet of wine catches lamplight at one corner, a brass scale weighs gold coins, and a scattered handful of wood-cube and stone-disc resource tokens rests at the periphery. The mood is grand and civilizational — antiquity's wonders raised on a single table. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 45. Aeon's End
+
+**File:** `packages/web/src/games/aeons-end/assets/thumbnail.png`
+
+> A top-down view of a refugee mage's underground sanctum at night, where the Aeon's End spell cards spread across a cracked obsidian altar inscribed with breaches — four breach-tokens carved into the stone glow faintly, two with prepared spells slotted into their sockets ready to cast. A fan of mage hands spreads from the bottom edge — gem cards in deep amethyst, spell cards crackling with arcane fire, relic cards glowing with ancient power. In the center, a shadowy Nemesis deck looms beside a half-revealed minion card with crimson eyes and a power-bar ticking down. The cracked-pillar life-tracker beside the altar sits at twelve life remaining, its etched numerals glowing faintly. Around the altar, the cavern dissolves into deep void where lurking tendrils of nameless evil writhe at the periphery, a single torch's amber flame flickers at one corner, runes on the floor glow with leaking magic, and a scattering of charred bones and a discarded acolyte's medallion lie underfoot. The mood is doomed and embattled — last-stand sanctum holding back the void. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 46. Chess for Three
+
+**File:** `packages/web/src/games/chess-for-three/assets/thumbnail.png`
+
+> A top-down view of an ornate three-player chess board carved from polished walnut and maple, its hexagonally-divided playing surface forming a vast circle with three sectors of light and dark squares meeting at the center. Three armies of pieces — ivory, ebony, and crimson-stained boxwood — face off across the circular battlefield, with several captured pieces lined up neatly along the edges. A bishop arcs mid-move from one sector toward another, frozen mid-air above the board. Around the circular surface, the polished wood dissolves into a softly blurred Victorian study — leather chairs, a brass clock, three crystal tumblers each at a different player's seat, a cigar smouldering in a tray, and a chandelier's amber light spilling over the scene. The mood is heady and intellectually gladiatorial — three minds locked in ancient ritual. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 47. Gloomhaven: Jaws of the Lion
+
+**File:** `packages/web/src/games/gloomhaven-jaws-of-the-lion/assets/thumbnail.png`
+
+> A top-down view of a dungeon-crawl scenario unfolding across modular Gloomhaven map-tiles slotted together on a basalt table, lit by torch sconces along the walls. Four character minis (Hatchet the Quatryl, Voidwarden the Aesther, Demolitionist the Inox, Red Guard the Valrath) stand on hex spaces at various corridors and chambers, their painted detail caught by torchlight. A scattering of monster minis — vermlings, bones, archers — flank them in opposing rooms with health-trackers ticking. A fan of ability cards spreads from the bottom edge, two cards face-up showing an attack and a movement combo, with initiative tokens stacked. Treasure tokens, trap markers, and door tiles dot the dungeon floor, with one chest open and gold spilling from it. Around the dungeon's edge, the map-tiles dissolve into the cavernous gloom of unlit caverns — distant glowing eyes, dripping stalactites, and a half-collapsed door promising deeper rooms beyond. The mood is grim and adventurous — a torchlit company carving through the dark. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 48. Chess
+
+**File:** `packages/web/src/games/chess/assets/thumbnail.png`
+
+> A top-down view of an antique chess set on a polished mahogany table in a wood-paneled study, lit by a single brass desk lamp casting a warm amber pool. The 8x8 board's ivory and ebony squares glow with a slight worn patina, and weighted boxwood pieces stand mid-game in classic Staunton form — pawns advanced into the center, knights flanking developed bishops, the white queen poised mid-attack on the queen's file, the black king tucked behind a pawn shield. Two captured pieces (a black rook, a white knight) rest neatly along the board's edge. A wooden chess clock sits at one corner with its analog hands paused. Around the table, the study dissolves into a softly blurred haze of leather-bound bookshelves, a half-empty crystal tumbler of brandy, a folded broadsheet open to the chess column, a fountain pen on a leather blotter, and the dim warm glow of a hearth catching the panel-walls. The mood is quietly cerebral and timeless — silent duel beneath a reading lamp. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 49. Frosthaven
+
+**File:** `packages/web/src/games/frosthaven/assets/thumbnail.png`
+
+> A top-down view of a frostbitten dungeon-crawl scenario unfolding across modular Frosthaven map-tiles slotted together on a frozen stone table, lit by lanterns whose blue-tinged flames hiss against the chill. Four character minis (Banner Spear, Drifter, Geminate, Blink Blade) stand on hex spaces at various ice-encrusted corridors, painted in winter-gear detail caught by lantern-glow. A scattering of monster minis — frost demons, iron giants, spirit-bears — flank them in opposing rooms with health-trackers crusted in tiny rime. A fan of ability cards spreads from the bottom edge, two face-up showing combo synergies, initiative tokens stacked beside them. Treasure tokens, trap markers (frost spikes, snow drifts), and door tiles dot the dungeon. Beyond the map-tiles, the table itself dissolves into a softly painted Frosthaven outpost — snow-mounded wooden ramparts, a small smoking forge, a campfire ring, and the silhouette of a great horned beast gliding through the blizzard at the periphery. The mood is grim and elemental — adventurers braving the frozen north. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 50. Poker
+
+**File:** `packages/web/src/games/poker/assets/thumbnail.png`
+
+> A top-down view of a dimly lit poker den's green-felt table at 2 AM, with a single hanging bulb casting a hard pool of light over the betting circle. Five community cards lie face-up in the center — a tense flop-turn-river of mixed suits with a pair of red kings prominent. A scatter of pocket cards lies face-down at four player positions around the felt, with two cards just folded and pushed into the muck pile. A pile of multi-colored poker chips sits in the center pot, with another stack pushed forward in a fresh raise — chips spilling slightly as if just nudged. Two blue-backed face-down cards peek from one player position, half-lifted as if checked-and-replaced. Scattered around: a half-empty rocks-glass of bourbon catching amber light, an ashtray with a curl of cigar smoke rising, a folded leather wallet, a stack of unopened deck-boxes, and a brass dealer-button engraved "D" sitting beside a player slot. The mood is hushed and high-stakes — late-night card-room tension distilled. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 51. Wizard
+
+**File:** `packages/web/src/games/wizard/assets/thumbnail.png`
+
+> A top-down view of a tower-top wizard's study at dusk, where a single floating candle's violet flame catches the velvet runner of an oak desk. At the center, a single Wizard card — marked with a bold "Z" and a hooded elder mage's portrait — has just been slammed face-up onto a played trick of three commoner suit-cards (a peasant herb-seller barely visible on one), its trumping radiance casting a starburst of arcane light across the velvet. At the trick's edge, the corner of a Jester card peeks out, motley-capped fool grinning beneath a chunky "N". Around the runner, the chamber dissolves into deep purple gloom — a brass armillary slowly orbiting in the soft bokeh, a familiar's empty perch with a single dropped feather, and a curl of quill-ink drifting through candle-warm air. The mood is cleverly mystical — one perfect trump beneath the candle. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 52. Magic: The Gathering
+
+**File:** `packages/web/src/games/magic-the-gathering/assets/thumbnail.png`
+
+> A top-down view of an arcane planeswalker's battle-table strewn with the iconic Magic: The Gathering cards, lit by a chandelier of floating mana-orbs in five colors above. Two opposing battlefields face off across the table — one player's side bristling with white knights and angels, the other's seething with black zombies and shadowy demons — each backed by tapped lands of plains, swamps, mountains, islands, and forests. A fan of player hands spreads from the bottom edge, with one mythic-rare creature card slammed mid-summon and a lightning-bolt instant card spinning in the air mid-cast, chromatic sparks scattering outward. Mana symbols (white sun, blue water-drop, black skull, red fireball, green tree) glow as floating glyphs along the table's edges, and a planeswalker card with loyalty counters leans at one corner. Scattered around: a deckbox stamped with a guild watermark, a stack of basic lands, a single rare card slipped into a sleeve, a soft cloth, dice marking +1/+1 counters, and a half-eaten apple at the periphery. The mood is spell-soaked and rivalrous — duelists summoning whole worlds onto card stock. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 53. Dungeons & Dragons
+
+**File:** `packages/web/src/games/dungeons-and-dragons/assets/thumbnail.png`
+
+> A top-down view of a dungeon master's table at a candle-lit basement game night, where a dragon-emblazoned DM screen stands tall along one edge, hiding inscrutable notes. In front of the screen, a hand-drawn battle-map sprawls — a torchlit dungeon corridor with hex-grid squares, doors, and chests sketched in marker. Four painted character miniatures (a sword-bearing fighter, a robed sorcerer trailing arcane runes, a shadowy half-elf rogue, a mighty halfling cleric) stand on the grid, paused mid-encounter. A scatter of polyhedral dice (d4, d6, d8, d10, d12, d20) rests in a small leather rolling-tray, with a freshly-rolled d20 showing a critical "20". A fan of character sheets spreads from the bottom edge, dotted with hand-written stats and ink-smudged spell lists. A leather-bound Player's Handbook lies open beside the screen, an antique compass weighting the page, and a brass pewter dragon figurine perches at one corner. Scattered around: a half-empty mug of root beer, a bag of cheese popcorn, a scribbled note passed between players, and the curling end of a snack-wrapper at the frame's edge. The mood is brimming with story and possibility — an epic campaign mid-session. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
 # Background Image Prompts
 
 All backgrounds were generated with **ChatGPT (image generation)** on March 18, 2026.
