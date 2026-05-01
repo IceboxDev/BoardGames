@@ -1,6 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import Calendar from "../components/offline/Calendar";
+import RsvpModal from "../components/offline/RsvpModal";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
 import { games } from "../games/registry";
@@ -40,6 +41,7 @@ export default function AdminPage() {
   const [deleteMode, setDeleteMode] = useState(false);
   const [confirmDeleteUserId, setConfirmDeleteUserId] = useState<string | null>(null);
   const [confirmEmail, setConfirmEmail] = useState("");
+  const [previewOverlay, setPreviewOverlay] = useState(false);
 
   const usersQuery = useQuery({
     queryKey: qk.adminUsers(),
@@ -177,17 +179,26 @@ export default function AdminPage() {
               </p>
             )}
           </div>
-          <button
-            type="button"
-            onClick={toggleDeleteMode}
-            className={`shrink-0 rounded-md border px-3 py-1.5 text-xs font-medium transition ${
-              deleteMode
-                ? "border-rose-500/60 bg-rose-500/20 text-rose-200 hover:bg-rose-500/30"
-                : "border-rose-500/30 bg-transparent text-rose-300 hover:bg-rose-500/10"
-            }`}
-          >
-            {deleteMode ? "Exit delete mode" : "Delete mode"}
-          </button>
+          <div className="flex shrink-0 items-center gap-2">
+            <button
+              type="button"
+              onClick={() => setPreviewOverlay(true)}
+              className="rounded-md border border-amber-400/30 bg-transparent px-3 py-1.5 text-xs font-medium text-amber-200 transition hover:border-amber-300/60 hover:bg-amber-400/10"
+            >
+              Preview game-night overlay
+            </button>
+            <button
+              type="button"
+              onClick={toggleDeleteMode}
+              className={`rounded-md border px-3 py-1.5 text-xs font-medium transition ${
+                deleteMode
+                  ? "border-rose-500/60 bg-rose-500/20 text-rose-200 hover:bg-rose-500/30"
+                  : "border-rose-500/30 bg-transparent text-rose-300 hover:bg-rose-500/10"
+              }`}
+            >
+              {deleteMode ? "Exit delete mode" : "Delete mode"}
+            </button>
+          </div>
         </div>
 
         <PreRegisterCard />
@@ -263,6 +274,16 @@ export default function AdminPage() {
       </main>
 
       {calendarUser && <AvailabilityDrawer user={calendarUser} onClose={closeCalendar} />}
+
+      {previewOverlay && (
+        <RsvpModal
+          date="preview"
+          locks={undefined}
+          counts={undefined}
+          onClose={() => setPreviewOverlay(false)}
+          preview
+        />
+      )}
     </div>
   );
 }

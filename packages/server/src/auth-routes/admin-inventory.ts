@@ -1,8 +1,7 @@
-import { Hono } from "hono";
-import { auth } from "../auth.ts";
+import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 
-export const adminInventoryRoutes = new Hono();
+export const adminInventoryRoutes = adminApp();
 
 const SLUG_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;
 
@@ -15,19 +14,7 @@ function isValidSlugList(x: unknown): x is string[] {
   return true;
 }
 
-async function requireAdmin(headers: Headers) {
-  const session = await auth.api.getSession({ headers });
-  if (!session?.user) return { error: "unauthorized" as const, status: 401 as const };
-  if ((session.user as { role?: string }).role !== "admin") {
-    return { error: "forbidden" as const, status: 403 as const };
-  }
-  return { session };
-}
-
 adminInventoryRoutes.get("/:id/inventory", async (c) => {
-  const guard = await requireAdmin(c.req.raw.headers);
-  if ("error" in guard) return c.json({ error: guard.error }, guard.status);
-
   const userId = c.req.param("id");
   const { rows } = await getDb().execute({
     sql: "SELECT game_slugs_json FROM user_inventory WHERE user_id = ?",
@@ -40,16 +27,12 @@ adminInventoryRoutes.get("/:id/inventory", async (c) => {
 });
 
 adminInventoryRoutes.put("/:id/inventory", async (c) => {
-  const guard = await requireAdmin(c.req.raw.headers);
-  if ("error" in guard) return c.json({ error: guard.error }, guard.status);
-
   const userId = c.req.param("id");
   const body = (await c.req.json()) as { slugs?: unknown };
   if (!isValidSlugList(body.slugs)) {
     return c.json({ error: "slugs must be an array of kebab-case strings (max 200)" }, 400);
   }
 
-  // Deduplicate while preserving order.
   const unique = Array.from(new Set(body.slugs));
 
   await getDb().execute({

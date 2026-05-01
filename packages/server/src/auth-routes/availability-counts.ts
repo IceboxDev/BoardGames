@@ -1,13 +1,9 @@
-import { Hono } from "hono";
-import { auth } from "../auth.ts";
+import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 
-export const availabilityCountsRoutes = new Hono();
+export const availabilityCountsRoutes = authedApp();
 
 availabilityCountsRoutes.get("/counts", async (c) => {
-  const session = await auth.api.getSession({ headers: c.req.raw.headers });
-  if (!session?.user) return c.json({ error: "unauthorized" }, 401);
-
   const { rows } = await getDb().execute("SELECT availability_json FROM user_availability");
 
   const counts: Record<string, { can: number; maybe: number }> = {};

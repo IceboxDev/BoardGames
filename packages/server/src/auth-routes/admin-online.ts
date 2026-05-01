@@ -1,18 +1,9 @@
-import { Hono } from "hono";
-import { auth } from "../auth.ts";
+import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 
-export const adminOnlineRoutes = new Hono();
+export const adminOnlineRoutes = adminApp();
 
 adminOnlineRoutes.post("/:id/online", async (c) => {
-  const session = await auth.api.getSession({ headers: c.req.raw.headers });
-  if (!session?.user) {
-    return c.json({ error: "unauthorized" }, 401);
-  }
-  if ((session.user as { role?: string }).role !== "admin") {
-    return c.json({ error: "forbidden" }, 403);
-  }
-
   const userId = c.req.param("id");
   const body = (await c.req.json()) as { onlineEnabled?: unknown };
   if (typeof body.onlineEnabled !== "boolean") {

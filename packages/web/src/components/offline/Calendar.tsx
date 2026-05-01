@@ -208,9 +208,7 @@ function DayCell({
       : "pointer-events-none";
 
   const padding = compact ? "p-1 sm:p-1.5" : "p-2 sm:p-3";
-  const dayTextSize = compact
-    ? "text-sm sm:text-base"
-    : "text-xl sm:text-2xl md:text-3xl xl:text-4xl";
+  const dayTextSize = compact ? "text-sm sm:text-base" : "text-lg sm:text-xl md:text-2xl";
   const monthLabelPos = compact ? "left-1 top-1" : "left-1.5 top-1.5";
   const monthLabelSize = compact ? "text-[7px]" : "text-[8px] sm:text-[9px]";
   const todayDotPos = compact ? "right-1 top-1" : "right-2 top-2";
@@ -237,7 +235,7 @@ function DayCell({
       type="button"
       onClick={onClick}
       disabled={!interactive || isPast}
-      aria-label={`${day}${value ? ` — ${value}` : ""}${locked ? " — locked" : ""}${
+      aria-label={`${day}${value ? ` — ${value}` : ""}${locked ? " — locked in" : ""}${
         !locked && heat.kind === "warming" ? ` — warming up, ${heat.can} confirmed` : ""
       }${!locked && heat.kind === "fire" ? ` — on fire, ${heat.can} confirmed` : ""}`}
       aria-pressed={value !== undefined}
@@ -277,9 +275,9 @@ function DayCell({
       >
         {day}
       </span>
-      {labels && labels.length > 0 && !compact && <DayLabels entries={labels} />}
+      {labels && labels.length > 0 && !compact && !locked && <DayLabels entries={labels} />}
       {!compact && showHeatLayer && <HeatBadge heat={heat} />}
-      {value && !compact && (showHeatLayer || locked) && <PersonalMarkChip value={value} />}
+      {value && !compact && showHeatLayer && <PersonalMarkChip value={value} />}
       {value && !compact && !heated && !locked && (
         <span
           className={`relative self-end font-bold uppercase tracking-[0.18em] ${valueLabelSize} ${

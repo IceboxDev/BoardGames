@@ -7,11 +7,21 @@ type Props = {
   participantCount: number;
 };
 
-const CARD_WIDTH = 320;
-const CARD_HEIGHT = 480;
-const X_STEP = 240;
-const ROTATE_STEP = 30;
-const Z_STEP = 160;
+const CARD_WIDTH = 380;
+const CARD_HEIGHT = 560;
+// All four axes use the same tanh asymptote so cards bunch coherently. ROTATE
+// must stay under 90° or backface-hidden cards vanish. K controls softness
+// (higher = more linear); MAX caps the asymptote.
+const SPREAD_K = 2.5;
+const SPREAD_MAX = 520;
+const ROTATE_MAX = 65;
+const Z_MAX = 380;
+const SCALE_MIN = 0.55;
+const OPACITY_MIN = 0.45;
+
+function asymptote(offset: number, max: number): number {
+  return Math.sign(offset) * max * Math.tanh(Math.abs(offset) / SPREAD_K);
+}
 
 export default function GameCarousel3D({ games, participantCount }: Props) {
   const [center, setCenter] = useState(0);
@@ -24,7 +34,6 @@ export default function GameCarousel3D({ games, participantCount }: Props) {
     setCenter((c) => Math.min(games.length - 1, c + 1));
   }, [games.length]);
 
-  // Arrow-key navigation while the carousel (or anything in the modal) has focus.
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
       if (e.key === "ArrowLeft") {
@@ -51,15 +60,15 @@ export default function GameCarousel3D({ games, participantCount }: Props) {
 
   return (
     <div
-      className="relative flex w-full items-center justify-center"
-      style={{ perspective: "1400px" }}
+      className="relative flex w-full items-center justify-center overflow-hidden"
+      style={{ perspective: "1600px" }}
     >
       <button
         type="button"
         onClick={goPrev}
         disabled={center === 0}
         aria-label="Previous game"
-        className="absolute left-2 top-1/2 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/80 text-white backdrop-blur-sm transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:left-4"
+        className="absolute left-2 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/80 text-white backdrop-blur-sm transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:left-4"
       >
         <ChevronGlyph direction="left" />
       </button>
@@ -92,7 +101,7 @@ export default function GameCarousel3D({ games, participantCount }: Props) {
         onClick={goNext}
         disabled={center >= games.length - 1}
         aria-label="Next game"
-        className="absolute right-2 top-1/2 z-30 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/80 text-white backdrop-blur-sm transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:right-4"
+        className="absolute right-2 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/80 text-white backdrop-blur-sm transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:right-4"
       >
         <ChevronGlyph direction="right" />
       </button>
@@ -109,7 +118,7 @@ type CardProps = {
 
 function CarouselCard({ game, offset, participantCount, onClick }: CardProps) {
   const absOff = Math.abs(offset);
-  const hidden = absOff > 4;
+  const hidden = absOff > 5;
   const isCenter = offset === 0;
 
   return (
@@ -132,17 +141,19 @@ function CarouselCard({ game, offset, participantCount, onClick }: CardProps) {
         } as React.CSSProperties
       }
       animate={{
-        x: offset * X_STEP,
-        z: -absOff * Z_STEP,
-        rotateY: -offset * ROTATE_STEP,
-        scale: Math.max(0.45, 1 - absOff * 0.12),
-        opacity: hidden ? 0 : Math.max(0.2, 1 - absOff * 0.22),
+        x: asymptote(offset, SPREAD_MAX),
+        z: -Math.abs(asymptote(offset, Z_MAX)),
+        rotateY: -asymptote(offset, ROTATE_MAX),
+        scale: Math.max(SCALE_MIN, 1 - Math.abs(asymptote(offset, 1 - SCALE_MIN))),
+        opacity: hidden
+          ? 0
+          : Math.max(OPACITY_MIN, 1 - Math.abs(asymptote(offset, 1 - OPACITY_MIN))),
         pointerEvents: hidden ? "none" : "auto",
       }}
       transition={{ type: "spring", stiffness: 220, damping: 28 }}
     >
-      {/* Thumbnail — top half */}
-      <div className="relative h-[230px] w-full overflow-hidden">
+      {/* Thumbnail */}
+      <div className="relative h-[270px] w-full overflow-hidden">
         <img
           src={game.thumbnail}
           alt=""
@@ -172,13 +183,13 @@ function CarouselCard({ game, offset, participantCount, onClick }: CardProps) {
       </div>
 
       {/* Body */}
-      <div className="flex h-[250px] flex-col gap-2.5 px-5 py-4">
+      <div className="flex h-[290px] flex-col gap-2.5 px-5 py-4">
         <span
           className="block h-0.5 w-12 rounded-full"
           style={{ backgroundColor: game.accentHex }}
           aria-hidden="true"
         />
-        <h3 className="line-clamp-2 text-lg font-bold leading-tight text-white">{game.title}</h3>
+        <h3 className="truncate text-xl font-bold leading-tight text-white">{game.title}</h3>
         <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400">
           {playerRange(game.bgg)} · {playTime(game.bgg)}
           {game.bgg.minAge ? ` · ${game.bgg.minAge}+` : ""}
@@ -187,22 +198,9 @@ function CarouselCard({ game, offset, participantCount, onClick }: CardProps) {
         <BggInline bgg={game.bgg} />
 
         {game.bgg.description && (
-          <p className="line-clamp-3 text-[11px] leading-relaxed text-gray-400">
+          <p className="min-h-0 flex-1 overflow-hidden text-[11px] leading-relaxed text-gray-400">
             {stripBggHtml(game.bgg.description)}
           </p>
-        )}
-
-        {game.bgg.categories.length > 0 && (
-          <div className="mt-auto flex flex-wrap gap-1">
-            {game.bgg.categories.slice(0, 3).map((cat) => (
-              <span
-                key={cat}
-                className="rounded-full border border-white/10 bg-white/[0.03] px-2 py-0.5 text-[9px] uppercase tracking-[0.12em] text-gray-400"
-              >
-                {cat}
-              </span>
-            ))}
-          </div>
         )}
       </div>
     </motion.button>
@@ -292,7 +290,6 @@ function formatCount(n: number): string {
   return String(n);
 }
 
-// BGG descriptions arrive with HTML entities (&#10;, &mdash; etc) and stray tags. Strip rough.
 function stripBggHtml(html: string): string {
   return html
     .replace(/<[^>]+>/g, "")
@@ -312,7 +309,7 @@ function ChevronGlyph({ direction }: { direction: "left" | "right" }) {
   return (
     <svg
       viewBox="0 0 16 16"
-      className="h-4 w-4"
+      className="h-5 w-5"
       fill="none"
       stroke="currentColor"
       strokeWidth={2}

@@ -1,10 +1,9 @@
-import { Hono } from "hono";
-import { auth } from "../auth.ts";
+import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 
 const DATE_KEY_RE = /^\d{4}-\d{2}-\d{2}$/;
 
-export const calendarRsvpsRoutes = new Hono();
+export const calendarRsvpsRoutes = authedApp();
 
 async function isLocked(date: string): Promise<boolean> {
   const { rows } = await getDb().execute({
@@ -15,9 +14,7 @@ async function isLocked(date: string): Promise<boolean> {
 }
 
 calendarRsvpsRoutes.post("/rsvp", async (c) => {
-  const session = await auth.api.getSession({ headers: c.req.raw.headers });
-  if (!session?.user) return c.json({ error: "unauthorized" }, 401);
-
+  const user = c.get("user");
   const body = (await c.req.json().catch(() => ({}))) as {
     date?: unknown;
     status?: unknown;
@@ -40,16 +37,14 @@ calendarRsvpsRoutes.post("/rsvp", async (c) => {
           ON CONFLICT(date_key, user_id) DO UPDATE SET
             status = excluded.status,
             rsvped_at = excluded.rsvped_at`,
-    args: [date, session.user.id, status],
+    args: [date, user.id, status],
   });
 
   return c.json({ ok: true });
 });
 
 calendarRsvpsRoutes.delete("/rsvp", async (c) => {
-  const session = await auth.api.getSession({ headers: c.req.raw.headers });
-  if (!session?.user) return c.json({ error: "unauthorized" }, 401);
-
+  const user = c.get("user");
   const body = (await c.req.json().catch(() => ({}))) as { date?: unknown };
   const date = body.date;
   if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
@@ -58,7 +53,7 @@ calendarRsvpsRoutes.delete("/rsvp", async (c) => {
 
   await getDb().execute({
     sql: "DELETE FROM rsvps WHERE date_key = ? AND user_id = ?",
-    args: [date, session.user.id],
+    args: [date, user.id],
   });
 
   return c.json({ ok: true });

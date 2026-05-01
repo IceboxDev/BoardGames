@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import { useGameSession } from "../lib/ws-client";
+import type { GameSession } from "../lib/ws-client";
 
 export interface RemoteGameState<TView, TAction, TResult> {
   view: TView | null;
@@ -18,10 +18,15 @@ export interface RemoteGameState<TView, TAction, TResult> {
   reset: () => void;
 }
 
+/**
+ * Projection over a shared {@link GameSession} for solo (vs-AI / single-player)
+ * gameplay. The session itself is owned by {@link useGameShell} so a single
+ * WebSocket backs both this projection and {@link useMultiplayerRoom}.
+ */
 export function useRemoteGame<TView = unknown, TAction = unknown, TResult = unknown>(
   gameSlug: string,
+  session: GameSession<TView, TAction, TResult>,
 ): RemoteGameState<TView, TAction, TResult> {
-  const session = useGameSession<TView, TAction, TResult>();
   const [started, setStarted] = useState(false);
 
   const start = useCallback(

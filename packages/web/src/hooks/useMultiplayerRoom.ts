@@ -1,6 +1,6 @@
 import type { RoomSlot, RoomState } from "@boardgames/core/protocol/messages";
 import { useCallback, useMemo } from "react";
-import { useGameSession } from "../lib/ws-client";
+import type { GameSession } from "../lib/ws-client";
 
 export interface MultiplayerRoomState<TView, TAction, TResult> {
   // Connection
@@ -36,11 +36,15 @@ export interface MultiplayerRoomState<TView, TAction, TResult> {
   reset: () => void;
 }
 
+/**
+ * Projection over a shared {@link GameSession} for multiplayer (lobby + room)
+ * gameplay. The session itself is owned by {@link useGameShell} so a single
+ * WebSocket backs both this projection and {@link useRemoteGame}.
+ */
 export function useMultiplayerRoom<TView = unknown, TAction = unknown, TResult = unknown>(
   gameSlug: string,
+  session: GameSession<TView, TAction, TResult>,
 ): MultiplayerRoomState<TView, TAction, TResult> {
-  const session = useGameSession<TView, TAction, TResult>();
-
   const phase = useMemo(() => {
     if (session.sessionId && session.playerView) return "playing" as const;
     if (session.roomCode) return "lobby" as const;

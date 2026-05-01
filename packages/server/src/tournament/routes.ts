@@ -1,10 +1,10 @@
-import { Hono } from "hono";
 import { streamSSE } from "hono/streaming";
+import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { tournamentRegistry } from "./game-registry.ts";
 import { abortTournament, startTournament, subscribeSse } from "./manager.ts";
 
-export const tournamentRoutes = new Hono();
+export const tournamentRoutes = authedApp();
 
 tournamentRoutes.get("/strategies/:slug", (c) => {
   const slug = c.req.param("slug");

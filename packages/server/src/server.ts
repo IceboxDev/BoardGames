@@ -1,7 +1,7 @@
 import { createNodeWebSocket } from "@hono/node-ws";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
-import { auth } from "./auth.ts";
+import { auth, requireAdmin, requireAuth } from "./auth/index.ts";
 import {
   adminAvailabilityAllRoutes,
   adminAvailabilityRoutes,
@@ -16,7 +16,7 @@ import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
 import { persistenceRoutes } from "./persistence/routes.ts";
 import { getRegisteredSlugs } from "./sessions/machine-registry.ts";
-import { handleWsClose, handleWsMessage } from "./sessions/manager.ts";
+import { handleWsClose, handleWsMessage, wsAuth } from "./sessions/manager.ts";
 import {
   handleConfigureRoom,
   handleCreateRoom,
@@ -67,18 +67,31 @@ app.get("/api/auth-config", (c) =>
 
 app.get("/api/health", (c) => c.json({ ok: true, games: getRegisteredSlugs() }));
 
+// --- Protected: admin only ---
+app.use("/api/admin/*", requireAdmin);
 app.route("/api/admin/users", adminOnlineRoutes);
 app.route("/api/admin/users", adminInventoryRoutes);
 app.route("/api/admin/users", adminAvailabilityRoutes);
 app.route("/api/admin", adminAvailabilityAllRoutes);
 app.route("/api/admin", adminPendingInventoryRoutes);
+app.route("/api/admin/calendar", adminCalendarLocksRoutes);
+
+// --- Protected: any logged-in user ---
+app.use("/api/user/*", requireAuth);
 app.route("/api/user", userAvailabilityRoutes);
 app.route("/api/user", userInventoryRoutes);
+
+app.use("/api/availability/*", requireAuth);
 app.route("/api/availability", availabilityCountsRoutes);
+
+app.use("/api/calendar/*", requireAuth);
 app.route("/api/calendar", calendarLocksRoutes);
 app.route("/api/calendar", calendarRsvpsRoutes);
-app.route("/api/admin/calendar", adminCalendarLocksRoutes);
+
+app.use("/api/tournaments/*", requireAuth);
 app.route("/api/tournaments", tournamentRoutes);
+
+app.use("/api/games/*", requireAuth);
 app.route("/api/games", persistenceRoutes);
 
 function handleRoomMessage(ws: import("hono/ws").WSContext, msg: ClientToServerMessage): boolean {
@@ -109,26 +122,34 @@ function handleRoomMessage(ws: import("hono/ws").WSContext, msg: ClientToServerM
   }
 }
 
+app.use("/ws", requireAuth);
 app.get(
   "/ws",
-  upgradeWebSocket(() => ({
-    onMessage(event, ws) {
-      const data = typeof event.data === "string" ? event.data : "";
+  upgradeWebSocket((c) => {
+    const userId = c.get("user").id;
+    return {
+      onOpen(_event, ws) {
+        wsAuth.set(ws, userId);
+      },
+      onMessage(event, ws) {
+        const data = typeof event.data === "string" ? event.data : "";
 
-      // Try room messages first
-      try {
-        const msg = JSON.parse(data) as ClientToServerMessage;
-        if (handleRoomMessage(ws, msg)) return;
-      } catch {
-        // Fall through to session handler for error reporting
-      }
+        // Try room messages first
+        try {
+          const msg = JSON.parse(data) as ClientToServerMessage;
+          if (handleRoomMessage(ws, msg)) return;
+        } catch {
+          // Fall through to session handler for error reporting
+        }
 
-      handleWsMessage(ws, data);
-    },
-    onClose(_event, ws) {
-      handleWsClose(ws);
-    },
-  })),
+        handleWsMessage(ws, data);
+      },
+      onClose(_event, ws) {
+        wsAuth.delete(ws);
+        handleWsClose(ws);
+      },
+    };
+  }),
 );
 
 export { app, injectWebSocket };

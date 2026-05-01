@@ -1,15 +1,11 @@
-import { Hono } from "hono";
-import { auth } from "../auth.ts";
+import { adminApp, authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 
 const DATE_KEY_RE = /^\d{4}-\d{2}-\d{2}$/;
 
-export const calendarLocksRoutes = new Hono();
+export const calendarLocksRoutes = authedApp();
 
 calendarLocksRoutes.get("/games", async (c) => {
-  const session = await auth.api.getSession({ headers: c.req.raw.headers });
-  if (!session?.user) return c.json({ error: "unauthorized" }, 401);
-
   const date = c.req.query("date");
   if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
     return c.json({ error: "invalid date" }, 400);
@@ -92,9 +88,6 @@ calendarLocksRoutes.get("/games", async (c) => {
 });
 
 calendarLocksRoutes.get("/locks", async (c) => {
-  const session = await auth.api.getSession({ headers: c.req.raw.headers });
-  if (!session?.user) return c.json({ error: "unauthorized" }, 401);
-
   const [locksResult, rsvpsResult] = await Promise.all([
     getDb().execute(
       "SELECT date_key, locked_by, locked_at, expected_user_ids_json FROM locked_dates",
@@ -136,15 +129,10 @@ calendarLocksRoutes.get("/locks", async (c) => {
   return c.json(out);
 });
 
-export const adminCalendarLocksRoutes = new Hono();
+export const adminCalendarLocksRoutes = adminApp();
 
 adminCalendarLocksRoutes.post("/lock", async (c) => {
-  const session = await auth.api.getSession({ headers: c.req.raw.headers });
-  if (!session?.user) return c.json({ error: "unauthorized" }, 401);
-  if ((session.user as { role?: string }).role !== "admin") {
-    return c.json({ error: "forbidden" }, 403);
-  }
-
+  const user = c.get("user");
   const body = (await c.req.json().catch(() => ({}))) as { date?: unknown };
   const date = body.date;
   if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
@@ -178,29 +166,27 @@ adminCalendarLocksRoutes.post("/lock", async (c) => {
             locked_by = excluded.locked_by,
             locked_at = excluded.locked_at,
             expected_user_ids_json = excluded.expected_user_ids_json`,
-    args: [date, session.user.id, JSON.stringify(expected)],
+    args: [date, user.id, JSON.stringify(expected)],
   });
 
   return c.json({ ok: true, expectedUserIds: expected });
 });
 
 adminCalendarLocksRoutes.delete("/lock", async (c) => {
-  const session = await auth.api.getSession({ headers: c.req.raw.headers });
-  if (!session?.user) return c.json({ error: "unauthorized" }, 401);
-  if ((session.user as { role?: string }).role !== "admin") {
-    return c.json({ error: "forbidden" }, 403);
-  }
-
   const body = (await c.req.json().catch(() => ({}))) as { date?: unknown };
   const date = body.date;
   if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
     return c.json({ error: "invalid date" }, 400);
   }
 
-  await getDb().execute({
-    sql: "DELETE FROM locked_dates WHERE date_key = ?",
-    args: [date],
-  });
+  // Cascade-delete RSVPs so they don't resurface if this date is later re-locked.
+  await getDb().batch(
+    [
+      { sql: "DELETE FROM locked_dates WHERE date_key = ?", args: [date] },
+      { sql: "DELETE FROM rsvps WHERE date_key = ?", args: [date] },
+    ],
+    "write",
+  );
 
   return c.json({ ok: true });
 });

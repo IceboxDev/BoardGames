@@ -7,6 +7,22 @@ import { getMachineSpec } from "./machine-registry.ts";
 import { handleRoomWsClose } from "./room-manager.ts";
 import type { ClientToServerMessage, ServerToClientMessage } from "./types.ts";
 
+// Side-table populated at WS upgrade time after requireAuth runs.
+// Future work (e.g. reconnection by user id, per-session ownership checks)
+// reads from here. Today nothing in the protocol layer consumes it yet.
+const wsUserIds = new Map<WSContext, string>();
+export const wsAuth = {
+  set(ws: WSContext, userId: string): void {
+    wsUserIds.set(ws, userId);
+  },
+  delete(ws: WSContext): void {
+    wsUserIds.delete(ws);
+  },
+  get(ws: WSContext): string | undefined {
+    return wsUserIds.get(ws);
+  },
+};
+
 let nextId = 1;
 
 function generateId(): string {

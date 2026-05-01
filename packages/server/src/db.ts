@@ -1,5 +1,3 @@
-import { existsSync, mkdirSync } from "node:fs";
-import { dirname } from "node:path";
 import { type Client, createClient } from "@libsql/client";
 
 let db: Client | null = null;
@@ -12,26 +10,17 @@ export function getDb(): Client {
 }
 
 export function getDbConnectionConfig(): { url: string; authToken: string | undefined } {
-  const url = process.env.TURSO_DATABASE_URL ?? "file:./data/boardgames.db";
+  const url = process.env.TURSO_DATABASE_URL;
+  if (!url) {
+    throw new Error("TURSO_DATABASE_URL is required. Set it in packages/server/.env");
+  }
   const authToken = process.env.TURSO_AUTH_TOKEN;
   return { url, authToken };
 }
 
 export async function initDb(): Promise<Client> {
   const { url, authToken } = getDbConnectionConfig();
-
-  if (url.startsWith("file:")) {
-    const filePath = url.slice("file:".length);
-    const dir = dirname(filePath);
-    if (!existsSync(dir)) mkdirSync(dir, { recursive: true });
-  }
-
   db = createClient({ url, authToken });
-
-  if (url.startsWith("file:")) {
-    await db.execute("PRAGMA foreign_keys = ON");
-  }
-
   await migrate(db);
   return db;
 }

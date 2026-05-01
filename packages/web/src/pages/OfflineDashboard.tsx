@@ -186,44 +186,27 @@ export default function OfflineDashboard() {
   const lockError = lockMutation.error
     ? lockMutation.error instanceof Error
       ? lockMutation.error.message
-      : "Could not lock/unlock. Try again."
+      : "Could not update lock-in. Try again."
     : null;
   const errorMessage = mode === "lock" ? lockError : saveError;
 
   return (
-    <div className="flex min-h-dvh flex-col bg-surface-950 bg-grid">
+    <div className="flex h-dvh flex-col overflow-hidden bg-surface-950 bg-grid">
       <TopNav>
         <TopNavBackButton to="/" label="Dashboard" />
       </TopNav>
 
-      <div className="flex min-h-0 flex-1 flex-col gap-3 px-3 py-3 sm:gap-5 sm:px-6 sm:py-5">
+      <div className="flex min-h-0 flex-1 flex-col gap-2 px-3 py-2 sm:px-6">
         <p
-          className={`shrink-0 text-center text-[11px] ${
-            mode === "edit"
-              ? "text-gray-400"
-              : mode === "lock"
-                ? "text-amber-300"
-                : "invisible text-gray-400"
-          }`}
-          aria-hidden={mode === "view"}
+          className={`shrink-0 text-center text-[11px] text-gray-400 ${mode === "edit" ? "" : "invisible"}`}
+          aria-hidden={mode !== "edit"}
         >
-          {mode === "edit" && (
-            <>
-              <span className="hidden sm:inline">Tap a day to cycle: </span>
-              <span className="text-accent-300">Can</span>
-              <span className="mx-1 opacity-50">→</span>
-              <span className="text-amber-300">Maybe</span>
-              <span className="mx-1 opacity-50">→</span>
-              <span className="opacity-60">clear</span>
-            </>
-          )}
-          {mode === "lock" && (
-            <>
-              <span className="font-semibold">Lock mode.</span>
-              <span className="mx-2 opacity-60">·</span>
-              Tap a day to lock or unlock for game night.
-            </>
-          )}
+          <span className="hidden sm:inline">Tap a day to cycle: </span>
+          <span className="text-accent-300">Can</span>
+          <span className="mx-1 opacity-50">→</span>
+          <span className="text-amber-300">Maybe</span>
+          <span className="mx-1 opacity-50">→</span>
+          <span className="opacity-60">clear</span>
         </p>
 
         <Calendar
@@ -246,7 +229,7 @@ export default function OfflineDashboard() {
           markedCount={markedCount}
           saving={saveMutation.isPending}
           error={errorMessage}
-          isAdmin={isAdmin}
+          showLockInButton={isAdmin && mode === "view"}
           onEdit={enterEdit}
           onCancel={cancel}
           onSave={save}

@@ -5,6 +5,7 @@ import { JoinRoom, Lobby, ModeSelect } from "../components/multiplayer";
 import { TournamentGrid, TournamentMatchHistory } from "../components/tournament";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
+import { useGameSession } from "../lib/ws-client";
 import useDocumentTitle from "./useDocumentTitle";
 import { useGameBackOverride } from "./useGameBackOverride";
 import type { MultiplayerRoomState } from "./useMultiplayerRoom";
@@ -53,8 +54,13 @@ export function useGameShell<TView = unknown, TAction = unknown, TResult = unkno
 
   useDocumentTitle(`${def.title} - Board Games`);
 
-  const game = useRemoteGame<TView, TAction, TResult>(slug);
-  const mp = useMultiplayerRoom<TView, TAction, TResult>(slug);
+  // ONE WebSocket per game shell. Both projections read from this shared session
+  // so solo and multiplayer state never go out of sync, and there's never more
+  // than one open connection per route. Previously each projection opened its
+  // own WS, doubling reconnect storms and creating split state.
+  const session = useGameSession<TView, TAction, TResult>();
+  const game = useRemoteGame<TView, TAction, TResult>(slug, session);
+  const mp = useMultiplayerRoom<TView, TAction, TResult>(slug, session);
   const [mode, setMode] = useState<ShellMode>("menu");
   const { setBackOverride } = useGameBackOverride();
 

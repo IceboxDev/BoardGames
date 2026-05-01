@@ -48,7 +48,7 @@ export async function adminSetCalendarLock(date: string): Promise<void> {
   });
   if (!res.ok) {
     const body = (await res.json().catch(() => ({}))) as { error?: string };
-    throw new Error(body.error ?? `Failed to lock date (${res.status})`);
+    throw new Error(body.error ?? `Failed to lock-in date (${res.status})`);
   }
 }
 
@@ -61,6 +61,6 @@ export async function adminUnsetCalendarLock(date: string): Promise<void> {
   });
   if (!res.ok) {
     const body = (await res.json().catch(() => ({}))) as { error?: string };
-    throw new Error(body.error ?? `Failed to unlock date (${res.status})`);
+    throw new Error(body.error ?? `Failed to remove lock-in (${res.status})`);
   }
 }

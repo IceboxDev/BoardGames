@@ -1,7 +1,7 @@
-import { Hono } from "hono";
+import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 
-export const persistenceRoutes = new Hono();
+export const persistenceRoutes = authedApp();
 
 persistenceRoutes.post("/:slug/results", async (c) => {
   const slug = c.req.param("slug");
