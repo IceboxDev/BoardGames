@@ -1,7 +1,7 @@
 import { LibsqlDialect } from "@libsql/kysely-libsql";
 import { betterAuth } from "better-auth";
 import { admin } from "better-auth/plugins";
-import { getDb, getDbConnectionConfig } from "./db.ts";
+import { getDb, getDbConnectionConfig } from "../db.ts";
 
 function normalizeOrigin(raw: string): string {
   const trimmed = raw.trim().replace(/\/+$/, "");
