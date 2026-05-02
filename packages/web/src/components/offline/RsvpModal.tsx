@@ -8,20 +8,19 @@ import { useSession } from "../../lib/auth-client";
 import { fetchAvailableGames } from "../../lib/calendar-games";
 import type { CalendarLocks } from "../../lib/calendar-locks";
 import { clearRsvp, type RsvpStatus, setRsvp } from "../../lib/calendar-rsvps";
-import type { AvailabilityCounts } from "../../lib/offline-availability";
 import { qk } from "../../lib/query-keys";
 import GameCarousel3D from "./GameCarousel3D";
+import RankedGameList from "./RankedGameList";
 
 type Props = {
   date: string;
   locks: CalendarLocks | undefined;
-  counts: AvailabilityCounts | undefined;
   onClose: () => void;
   /** Preview mode: skip fetching games, use the full registry, hide RSVP. */
   preview?: boolean;
 };
 
-export default function RsvpModal({ date, locks, counts, onClose, preview = false }: Props) {
+export default function RsvpModal({ date, locks, onClose, preview = false }: Props) {
   const { data: session } = useSession();
   const userId = session?.user?.id ?? null;
   const queryClient = useQueryClient();
@@ -69,21 +68,38 @@ export default function RsvpModal({ date, locks, counts, onClose, preview = fals
     });
   }, [date]);
 
+  const definiteCount = preview ? 0 : (gamesQuery.data?.definiteCount ?? 0);
+  const tentativeCount = preview ? 0 : (gamesQuery.data?.tentativeCount ?? 0);
+  const reactions = preview ? {} : (gamesQuery.data?.reactions ?? {});
+
   const availableGames = useMemo<GameDefinition[]>(() => {
     if (preview) return gameRegistry;
     const data = gamesQuery.data;
     if (!data || data.ownedSlugs.length === 0) return [];
     const ownedSet = new Set(data.ownedSlugs);
+    const lo = data.definiteCount;
+    const hi = data.definiteCount + data.tentativeCount;
     return gameRegistry.filter((g) => {
       if (!ownedSet.has(g.slug)) return false;
       const min = g.bgg.minPlayers ?? 0;
       const max = g.bgg.maxPlayers ?? Number.POSITIVE_INFINITY;
-      return data.participantCount >= min && data.participantCount <= max;
+      return min <= hi && max >= lo;
     });
   }, [gamesQuery.data, preview]);
 
-  const goingCount = preview ? 0 : (gamesQuery.data?.participantCount ?? 0);
-  const maybeCount = preview ? 0 : (counts?.[date]?.maybe ?? 0);
+  const fullyRsvpd = useMemo(() => {
+    if (preview || !lock) return false;
+    if (lock.expectedUserIds.length === 0) return false;
+    return lock.expectedUserIds.every((id) => Boolean(lock.rsvps[id]));
+  }, [lock, preview]);
+
+  const hypedCount = useMemo(
+    () => availableGames.filter((g) => (reactions[g.slug]?.hype ?? 0) > 0).length,
+    [availableGames, reactions],
+  );
+
+  const showRanked = fullyRsvpd && hypedCount > 0;
+
   const error =
     setRsvpMutation.error || clearRsvpMutation.error ? "Couldn't update RSVP. Try again." : null;
   const busy = setRsvpMutation.isPending || clearRsvpMutation.isPending;
@@ -140,11 +156,11 @@ export default function RsvpModal({ date, locks, counts, onClose, preview = fals
               </h2>
               {!preview && (
                 <p className="text-xs text-gray-400">
-                  <span className="font-semibold text-emerald-300">{goingCount}</span> going
-                  {maybeCount > 0 && (
+                  <span className="font-semibold text-emerald-300">{definiteCount}</span> going
+                  {tentativeCount > 0 && (
                     <>
                       {" · "}
-                      <span className="font-semibold text-amber-300">{maybeCount}</span> maybe
+                      <span className="font-semibold text-amber-300">{tentativeCount}</span> maybe
                     </>
                   )}
                 </p>
@@ -209,8 +225,16 @@ export default function RsvpModal({ date, locks, counts, onClose, preview = fals
                   Either nobody owns the same game, or no game fits the group size.
                 </p>
               </div>
+            ) : showRanked ? (
+              <RankedGameList date={date} games={availableGames} reactions={reactions} />
             ) : (
-              <GameCarousel3D games={availableGames} participantCount={goingCount} />
+              <GameCarousel3D
+                games={availableGames}
+                minPlayers={definiteCount}
+                maxPlayers={definiteCount + tentativeCount}
+                date={preview ? "" : date}
+                reactions={reactions}
+              />
             )}
           </div>
         </motion.div>

@@ -67,6 +67,8 @@ export default function OfflineDashboard() {
   const [mode, setMode] = useState<Mode>("view");
   const [draft, setDraft] = useState<AvailabilityMap>({});
   const [rsvpDate, setRsvpDate] = useState<string | null>(null);
+  const [debugAsPlayer, setDebugAsPlayer] = useState(false);
+  const inAdminView = isAdmin && !debugAsPlayer;
 
   const viewerRsvpByDate = useMemo<Record<string, RsvpStatus | undefined>>(() => {
     if (!locks || !userId) return {};
@@ -215,7 +217,7 @@ export default function OfflineDashboard() {
           onChange={handleChange}
           readonlyBefore={today}
           interactive={mode === "edit"}
-          dayLabels={isAdmin ? (allAvailability ?? undefined) : undefined}
+          dayLabels={inAdminView ? (allAvailability ?? undefined) : undefined}
           counts={counts}
           locks={locks}
           lockMode={mode === "lock"}
@@ -229,7 +231,10 @@ export default function OfflineDashboard() {
           markedCount={markedCount}
           saving={saveMutation.isPending}
           error={errorMessage}
-          showLockInButton={isAdmin && mode === "view"}
+          showLockInButton={inAdminView && mode === "view"}
+          showAdminToggle={isAdmin && mode === "view"}
+          adminViewActive={inAdminView}
+          onToggleAdminView={() => setDebugAsPlayer((prev) => !prev)}
           onEdit={enterEdit}
           onCancel={cancel}
           onSave={save}
@@ -238,14 +243,7 @@ export default function OfflineDashboard() {
         />
       </div>
 
-      {rsvpDate && (
-        <RsvpModal
-          date={rsvpDate}
-          locks={locks}
-          counts={counts}
-          onClose={() => setRsvpDate(null)}
-        />
-      )}
+      {rsvpDate && <RsvpModal date={rsvpDate} locks={locks} onClose={() => setRsvpDate(null)} />}
     </div>
   );
 }

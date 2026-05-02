@@ -8,6 +8,10 @@ type Props = {
   saving: boolean;
   error: string | null;
   showLockInButton: boolean;
+  /** Admin-only debug toggle: render the calendar as if the user were a regular player. */
+  showAdminToggle: boolean;
+  adminViewActive: boolean;
+  onToggleAdminView: () => void;
   onEdit: () => void;
   onCancel: () => void;
   onSave: () => void;
@@ -21,6 +25,9 @@ export function AvailabilityActionBar({
   saving,
   error,
   showLockInButton,
+  showAdminToggle,
+  adminViewActive,
+  onToggleAdminView,
   onEdit,
   onCancel,
   onSave,
@@ -68,6 +75,34 @@ export function AvailabilityActionBar({
             Exit lock-in mode
           </Button>
         </div>
+      )}
+      {showAdminToggle && (
+        <button
+          type="button"
+          onClick={onToggleAdminView}
+          aria-label={`${adminViewActive ? "Disable" : "Enable"} admin view`}
+          aria-pressed={adminViewActive}
+          className={`absolute left-3 top-1/2 -translate-y-1/2 inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] transition ${
+            adminViewActive
+              ? "border-accent-400/60 bg-accent-500/15 text-accent-300 hover:bg-accent-500/25"
+              : "border-white/15 text-gray-400 hover:border-white/30 hover:bg-white/5"
+          }`}
+        >
+          <svg
+            viewBox="0 0 24 24"
+            className="h-3.5 w-3.5"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2.2}
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+            <circle cx="12" cy="12" r="3" />
+          </svg>
+          <span className="hidden sm:inline">{adminViewActive ? "Admin" : "Player"}</span>
+        </button>
       )}
       {showLockInButton && (
         <button

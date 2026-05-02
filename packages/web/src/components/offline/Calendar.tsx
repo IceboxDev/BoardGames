@@ -111,6 +111,7 @@ export default function Calendar({
               interactive={cellInteractive}
               compact={compact}
               labels={dayLabels?.[key]}
+              isAdminView={!!dayLabels}
               heat={heat}
               locked={!!lock}
               lockMode={lockMode}
@@ -147,6 +148,8 @@ type DayCellProps = {
   interactive: boolean;
   compact: boolean;
   labels?: import("../../lib/offline-availability").AvailabilityEntry[];
+  /** True when admin overlay is active for the whole calendar (drives label vs personal-status priority). */
+  isAdminView: boolean;
   heat: Heat;
   locked: boolean;
   lockMode: boolean;
@@ -165,6 +168,7 @@ function DayCell({
   interactive,
   compact,
   labels,
+  isAdminView,
   heat,
   locked,
   lockMode,
@@ -275,8 +279,10 @@ function DayCell({
       >
         {day}
       </span>
-      {labels && labels.length > 0 && !compact && !locked && <DayLabels entries={labels} />}
-      {!compact && !locked && (value || heated) && (
+      {labels && labels.length > 0 && !compact && !locked && (
+        <DayLabels entries={labels} heated={heated} />
+      )}
+      {!compact && !locked && !isAdminView && (value || heated) && (
         <div className="relative z-10 mt-auto flex items-end justify-between gap-1">
           <div className="min-w-0">{value && heated && <PersonalMarkChip value={value} />}</div>
           <div className="min-w-0">
@@ -286,7 +292,7 @@ function DayCell({
               value && (
                 <span
                   className={`font-bold uppercase tracking-[0.18em] ${valueLabelSize} ${
-                    value === "can" ? "text-accent-200" : "text-amber-200"
+                    value === "can" ? "text-accent-300" : "text-amber-300"
                   }`}
                 >
                   {value}
@@ -566,10 +572,10 @@ function PersonalMarkChip({ value }: { value: Availability }) {
   return (
     <span
       aria-hidden="true"
-      className={`pointer-events-none inline-flex items-center gap-1 rounded-full bg-surface-950/85 px-1.5 py-0.5 text-[8px] font-extrabold uppercase tracking-[0.15em] ring-1 ${
+      className={`pointer-events-none inline-flex items-center gap-1 rounded-full bg-surface-950/85 px-1.5 py-0.5 text-[8px] font-extrabold uppercase tracking-[0.15em] text-white ring-1 ${
         isCan
-          ? "text-accent-100 ring-accent-300/70 shadow-[0_0_8px_rgba(129,140,248,0.45)]"
-          : "text-amber-100 ring-amber-300/70 shadow-[0_0_8px_rgba(252,211,77,0.4)]"
+          ? "ring-accent-300/70 shadow-[0_0_8px_rgba(129,140,248,0.45)]"
+          : "ring-amber-300/70 shadow-[0_0_8px_rgba(252,211,77,0.4)]"
       }`}
     >
       <span
@@ -636,36 +642,43 @@ function SharedFireFilter() {
   );
 }
 
-const MAX_VISIBLE_LABELS = 5;
+const MAX_VISIBLE_LABELS = 6;
 
 function DayLabels({
   entries,
+  heated,
 }: {
   entries: import("../../lib/offline-availability").AvailabilityEntry[];
+  heated: boolean;
 }) {
   const visible = entries.slice(0, MAX_VISIBLE_LABELS);
   const overflow = entries.length - visible.length;
+  const textShadow = heated ? { textShadow: "0 1px 2px rgba(0,0,0,0.85)" } : undefined;
   return (
-    <div className="relative z-10 mt-1 flex shrink-0 flex-nowrap items-center gap-1 overflow-hidden">
+    <div className="relative z-10 mt-1 flex min-h-0 flex-1 flex-wrap content-start items-start gap-x-1.5 gap-y-px overflow-hidden">
       {visible.map((e) => {
         const isCan = e.status === "can";
-        const initial = (firstName(e.name)[0] ?? "?").toUpperCase();
         return (
           <span
             key={e.userId}
             title={`${e.name} — ${e.status}`}
-            className={`inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full text-[9px] font-bold leading-none text-white ring-1 ring-inset ring-black/40 ${
-              isCan ? "bg-accent-500" : "bg-amber-500"
-            }`}
+            style={textShadow}
+            className="inline-flex max-w-full items-center gap-1 truncate text-[10px] font-semibold leading-tight text-white sm:text-[11px]"
           >
-            {initial}
+            <span
+              aria-hidden="true"
+              className={`inline-block h-1.5 w-1.5 shrink-0 rounded-full ${
+                isCan ? "bg-accent-300" : "bg-amber-300"
+              }`}
+            />
+            <span className="truncate">{firstName(e.name)}</span>
           </span>
         );
       })}
       {overflow > 0 && (
         <span
-          className="ml-0.5 shrink-0 text-[9px] font-bold leading-none text-white"
-          style={{ textShadow: "0 1px 2px rgba(0,0,0,0.85)" }}
+          style={textShadow}
+          className="inline-flex shrink-0 items-center text-[10px] font-semibold leading-tight text-gray-300 sm:text-[11px]"
         >
           +{overflow}
         </span>

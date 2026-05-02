@@ -2,10 +2,12 @@ import { adminApp, authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 
 const DATE_KEY_RE = /^\d{4}-\d{2}-\d{2}$/;
+const REACTION_KINDS = new Set(["hype", "teach", "learn"]);
 
 export const calendarLocksRoutes = authedApp();
 
 calendarLocksRoutes.get("/games", async (c) => {
+  const user = c.get("user");
   const date = c.req.query("date");
   if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
     return c.json({ error: "invalid date" }, 400);
@@ -20,17 +22,25 @@ calendarLocksRoutes.get("/games", async (c) => {
   }
 
   // Compute participant set:
-  //   (users with availability "can" for this date) ∪ (users with rsvp "yes")
-  //   minus (users with rsvp "no")
-  const [availabilityResult, rsvpResult] = await Promise.all([
+  //   definite = (availability "can" ∪ rsvp "yes") − rsvp "no"
+  //   tentative = (availability "maybe") − can − rsvp:yes − rsvp:no
+  // Only `definite` people contribute their inventory — we can't count on
+  // a "maybe" actually showing up with the box. Tentative only widens the
+  // headcount upper bound for player-count filtering.
+  const [availabilityResult, rsvpResult, reactionResult] = await Promise.all([
     getDb().execute("SELECT user_id, availability_json FROM user_availability"),
     getDb().execute({
       sql: "SELECT user_id, status FROM rsvps WHERE date_key = ?",
       args: [date],
     }),
+    getDb().execute({
+      sql: "SELECT user_id, game_slug, reaction FROM game_requests WHERE date_key = ?",
+      args: [date],
+    }),
   ]);
 
   const canSet = new Set<string>();
+  const maybeSet = new Set<string>();
   for (const row of availabilityResult.rows) {
     let parsed: unknown;
     try {
@@ -40,7 +50,9 @@ calendarLocksRoutes.get("/games", async (c) => {
     }
     if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) continue;
     const v = (parsed as Record<string, unknown>)[date];
-    if (v === "can") canSet.add(row.user_id as string);
+    const userId = row.user_id as string;
+    if (v === "can") canSet.add(userId);
+    else if (v === "maybe") maybeSet.add(userId);
   }
 
   const rsvpYes = new Set<string>();
@@ -52,18 +64,21 @@ calendarLocksRoutes.get("/games", async (c) => {
     else if (status === "no") rsvpNo.add(userId);
   }
 
-  const participantIds = [...new Set([...canSet, ...rsvpYes])].filter((id) => !rsvpNo.has(id));
+  const definiteIds = [...new Set([...canSet, ...rsvpYes])].filter((id) => !rsvpNo.has(id));
+  const tentativeIds = [...maybeSet].filter(
+    (id) => !canSet.has(id) && !rsvpYes.has(id) && !rsvpNo.has(id),
+  );
 
   let ownedSlugs: string[] = [];
-  if (participantIds.length > 0) {
-    const placeholders = participantIds.map(() => "?").join(",");
+  if (definiteIds.length > 0) {
+    const placeholders = definiteIds.map(() => "?").join(",");
     const inventoryResult = await getDb().execute({
       sql: `SELECT game_slugs_json FROM user_inventory WHERE user_id IN (${placeholders})`,
-      args: participantIds,
+      args: definiteIds,
     });
 
-    // Union: any one participant owning a game means the group can play it
-    // (whoever owns it brings it to the night).
+    // Union: any one confirmed attendee owning a game means the group can
+    // play it (whoever owns it brings it to the night).
     const union = new Set<string>();
     for (const row of inventoryResult.rows) {
       let parsed: unknown;
@@ -80,11 +95,80 @@ calendarLocksRoutes.get("/games", async (c) => {
     ownedSlugs = [...union].sort();
   }
 
+  type ReactionAggregate = {
+    hype: number;
+    teach: number;
+    learn: number;
+    viewer: ("hype" | "teach" | "learn")[];
+  };
+  const reactions: Record<string, ReactionAggregate> = {};
+  for (const row of reactionResult.rows) {
+    const slug = row.game_slug as string;
+    const kind = row.reaction as "hype" | "teach" | "learn";
+    let agg = reactions[slug];
+    if (!agg) {
+      agg = { hype: 0, teach: 0, learn: 0, viewer: [] };
+      reactions[slug] = agg;
+    }
+    agg[kind] += 1;
+    if ((row.user_id as string) === user.id) agg.viewer.push(kind);
+  }
+
   return c.json({
     ownedSlugs,
-    participantCount: participantIds.length,
-    participantIds,
+    definiteCount: definiteIds.length,
+    tentativeCount: tentativeIds.length,
+    participantIds: definiteIds,
+    reactions,
   });
+});
+
+calendarLocksRoutes.post("/games/reaction", async (c) => {
+  const user = c.get("user");
+  const body = (await c.req.json().catch(() => ({}))) as {
+    date?: unknown;
+    slug?: unknown;
+    reaction?: unknown;
+    on?: unknown;
+  };
+
+  const { date, slug, reaction, on } = body;
+  if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
+    return c.json({ error: "invalid date" }, 400);
+  }
+  if (typeof slug !== "string" || slug.length === 0) {
+    return c.json({ error: "invalid slug" }, 400);
+  }
+  if (typeof reaction !== "string" || !REACTION_KINDS.has(reaction)) {
+    return c.json({ error: "invalid reaction" }, 400);
+  }
+  if (typeof on !== "boolean") {
+    return c.json({ error: "invalid on" }, 400);
+  }
+
+  const lockedRow = await getDb().execute({
+    sql: "SELECT 1 FROM locked_dates WHERE date_key = ? LIMIT 1",
+    args: [date],
+  });
+  if (lockedRow.rows.length === 0) {
+    return c.json({ error: "date is not locked" }, 400);
+  }
+
+  if (on) {
+    await getDb().execute({
+      sql: `INSERT OR IGNORE INTO game_requests (date_key, user_id, game_slug, reaction)
+            VALUES (?, ?, ?, ?)`,
+      args: [date, user.id, slug, reaction],
+    });
+  } else {
+    await getDb().execute({
+      sql: `DELETE FROM game_requests
+            WHERE date_key = ? AND user_id = ? AND game_slug = ? AND reaction = ?`,
+      args: [date, user.id, slug, reaction],
+    });
+  }
+
+  return c.json({ ok: true });
 });
 
 calendarLocksRoutes.get("/locks", async (c) => {
@@ -179,11 +263,13 @@ adminCalendarLocksRoutes.delete("/lock", async (c) => {
     return c.json({ error: "invalid date" }, 400);
   }
 
-  // Cascade-delete RSVPs so they don't resurface if this date is later re-locked.
+  // Cascade-delete RSVPs and reactions so they don't resurface if this date
+  // is later re-locked.
   await getDb().batch(
     [
       { sql: "DELETE FROM locked_dates WHERE date_key = ?", args: [date] },
       { sql: "DELETE FROM rsvps WHERE date_key = ?", args: [date] },
+      { sql: "DELETE FROM game_requests WHERE date_key = ?", args: [date] },
     ],
     "write",
   );

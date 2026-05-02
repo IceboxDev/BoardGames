@@ -279,7 +279,6 @@ export default function AdminPage() {
         <RsvpModal
           date="preview"
           locks={undefined}
-          counts={undefined}
           onClose={() => setPreviewOverlay(false)}
           preview
         />

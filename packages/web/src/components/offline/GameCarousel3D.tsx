@@ -1,10 +1,18 @@
 import { motion, type PanInfo } from "framer-motion";
 import { useCallback, useEffect, useState } from "react";
 import type { BggGame, GameDefinition } from "../../games/types";
+import type { ReactionAggregate } from "../../lib/calendar-games";
+import GameReactions from "./GameReactions";
 
 type Props = {
   games: GameDefinition[];
-  participantCount: number;
+  /** Confirmed-attendee count (lower bound of the player-count range). */
+  minPlayers: number;
+  /** Confirmed + tentative count (upper bound of the player-count range). */
+  maxPlayers: number;
+  /** Date key — used as the scope for reactions. Empty string = no reactions UI. */
+  date: string;
+  reactions: Record<string, ReactionAggregate>;
 };
 
 const CARD_WIDTH = 380;
@@ -23,7 +31,7 @@ function asymptote(offset: number, max: number): number {
   return Math.sign(offset) * max * Math.tanh(Math.abs(offset) / SPREAD_K);
 }
 
-export default function GameCarousel3D({ games, participantCount }: Props) {
+export default function GameCarousel3D({ games, minPlayers, maxPlayers, date, reactions }: Props) {
   const [center, setCenter] = useState(0);
 
   const goPrev = useCallback(() => {
@@ -90,7 +98,10 @@ export default function GameCarousel3D({ games, participantCount }: Props) {
             key={game.slug}
             game={game}
             offset={i - center}
-            participantCount={participantCount}
+            minPlayers={minPlayers}
+            maxPlayers={maxPlayers}
+            date={date}
+            aggregate={reactions[game.slug]}
             onClick={() => setCenter(i)}
           />
         ))}
@@ -112,14 +123,26 @@ export default function GameCarousel3D({ games, participantCount }: Props) {
 type CardProps = {
   game: GameDefinition;
   offset: number;
-  participantCount: number;
+  minPlayers: number;
+  maxPlayers: number;
+  date: string;
+  aggregate: ReactionAggregate | undefined;
   onClick: () => void;
 };
 
-function CarouselCard({ game, offset, participantCount, onClick }: CardProps) {
+function CarouselCard({
+  game,
+  offset,
+  minPlayers,
+  maxPlayers,
+  date,
+  aggregate,
+  onClick,
+}: CardProps) {
   const absOff = Math.abs(offset);
   const hidden = absOff > 5;
   const isCenter = offset === 0;
+  const fits = fitsRange(game, minPlayers, maxPlayers);
 
   return (
     <motion.button
@@ -174,10 +197,10 @@ function CarouselCard({ game, offset, participantCount, onClick }: CardProps) {
             {game.bgg.yearPublished}
           </span>
         )}
-        {participantCount > 0 && fitsCount(game, participantCount) && (
+        {fits && (minPlayers > 0 || maxPlayers > 0) && (
           <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-emerald-500/30 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.15em] text-emerald-100 backdrop-blur-sm">
             <CheckIcon />
-            Fits {participantCount}
+            Fits {fitsLabel(minPlayers, maxPlayers)}
           </span>
         )}
       </div>
@@ -201,6 +224,19 @@ function CarouselCard({ game, offset, participantCount, onClick }: CardProps) {
           <p className="min-h-0 flex-1 overflow-hidden text-[11px] leading-relaxed text-gray-400">
             {stripBggHtml(game.bgg.description)}
           </p>
+        )}
+
+        {date && (
+          <div className="mt-1 shrink-0">
+            <GameReactions
+              date={date}
+              slug={game.slug}
+              accentHex={game.accentHex}
+              aggregate={aggregate ?? { hype: 0, teach: 0, learn: 0, viewer: [] }}
+              size="md"
+              disabled={!isCenter}
+            />
+          </div>
         )}
       </div>
     </motion.button>
@@ -254,10 +290,15 @@ function BggInline({ bgg }: { bgg: BggGame }) {
   );
 }
 
-function fitsCount(game: GameDefinition, n: number): boolean {
+function fitsRange(game: GameDefinition, lo: number, hi: number): boolean {
   const min = game.bgg.minPlayers ?? 0;
   const max = game.bgg.maxPlayers ?? Number.POSITIVE_INFINITY;
-  return n >= min && n <= max;
+  return min <= hi && max >= lo;
+}
+
+function fitsLabel(lo: number, hi: number): string {
+  if (lo === hi) return String(lo);
+  return `${lo}–${hi}`;
 }
 
 function playerRange(bgg: BggGame): string {

@@ -92,6 +92,18 @@ async function migrate(db: Client): Promise<void> {
         PRIMARY KEY (date_key, user_id)
       )`,
       `CREATE INDEX IF NOT EXISTS idx_rsvps_date ON rsvps(date_key)`,
+      // PK includes `reaction` so a single user can hold multiple reactions
+      // on the same game (e.g. hype + teach). All reactions are positive
+      // signals; absence of a row implies "no opinion / skip".
+      `CREATE TABLE IF NOT EXISTS game_requests (
+        date_key TEXT NOT NULL,
+        user_id TEXT NOT NULL,
+        game_slug TEXT NOT NULL,
+        reaction TEXT NOT NULL CHECK (reaction IN ('hype', 'teach', 'learn')),
+        created_at TEXT NOT NULL DEFAULT (datetime('now')),
+        PRIMARY KEY (date_key, user_id, game_slug, reaction)
+      )`,
+      `CREATE INDEX IF NOT EXISTS idx_game_requests_date ON game_requests(date_key)`,
       `CREATE INDEX IF NOT EXISTS idx_tournaments_slug ON tournaments(game_slug)`,
       `CREATE INDEX IF NOT EXISTS idx_tournaments_status ON tournaments(status)`,
       `CREATE INDEX IF NOT EXISTS idx_tournament_games_tid ON tournament_games(tournament_id, game_index)`,
