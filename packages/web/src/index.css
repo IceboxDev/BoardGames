@@ -353,6 +353,47 @@ body {
   animation: fire-breathe 4s ease-in-out infinite;
 }
 
+/* Rapid irregular flicker for the flame layers — the actual "fire" feel. */
+@keyframes fire-flicker {
+  0%,
+  100% {
+    opacity: 0.92;
+    transform: scaleY(1);
+  }
+  18% {
+    opacity: 0.74;
+    transform: scaleY(0.96);
+  }
+  37% {
+    opacity: 0.98;
+    transform: scaleY(1.04);
+  }
+  58% {
+    opacity: 0.8;
+    transform: scaleY(0.99);
+  }
+  79% {
+    opacity: 0.94;
+    transform: scaleY(1.02);
+  }
+}
+.animate-fire-flicker {
+  animation: fire-flicker 0.55s ease-in-out infinite;
+  transform-origin: bottom center;
+}
+
+/* Radial hot core — bright white-yellow at the base of a fire cell, fading through orange to dark red. */
+.fire-core {
+  background: radial-gradient(
+    ellipse at 50% 100%,
+    rgba(254, 240, 138, 0.9) 0%,
+    rgba(251, 146, 60, 0.7) 22%,
+    rgba(220, 38, 38, 0.45) 48%,
+    rgba(127, 29, 29, 0.15) 72%,
+    transparent 100%
+  );
+}
+
 /* Soft 2.2s opacity pulse for attention-seeking pills (RSVP, etc). */
 @keyframes pulse-soft {
   0%,

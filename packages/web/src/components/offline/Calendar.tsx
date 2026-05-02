@@ -182,23 +182,24 @@ function DayCell({
   const showPersonalGradient = !locked && !heated && value;
 
   // Personal-mark gradient layer — render only when no aggregate heat or lock overrides it.
+  // "maybe" stays in yellow tones so it never reads as the orange/red of warming or fire.
   const personalStateClass =
     showPersonalGradient && value === "can"
       ? "bg-gradient-to-br from-accent-500/40 via-accent-500/20 to-neon-cyan/15 shadow-[0_0_30px_-5px_rgba(99,102,241,0.45)]"
       : showPersonalGradient && value === "maybe"
-        ? "bg-gradient-to-br from-amber-500/30 via-orange-500/20 to-amber-400/10 shadow-[0_0_24px_-6px_rgba(245,158,11,0.4)]"
+        ? "bg-gradient-to-br from-yellow-400/35 via-yellow-300/22 to-yellow-200/10 shadow-[0_0_24px_-6px_rgba(234,179,8,0.4)]"
         : "";
 
   const borderClass = locked
     ? "border-amber-300/40"
     : heat.kind === "fire"
-      ? "border-orange-400/70"
+      ? "border-red-500/80"
       : heat.kind === "warming"
-        ? "border-amber-400/55"
+        ? "border-orange-400/65"
         : value === "can"
           ? "border-accent-400/70"
           : value === "maybe"
-            ? "border-amber-400/55"
+            ? "border-yellow-400/60"
             : lockMode
               ? "border-amber-200/30 hover:border-amber-200/60"
               : "border-white/10 hover:border-white/25";
@@ -311,7 +312,7 @@ function WarmingLayer({ compact }: { compact: boolean }) {
     <>
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-orange-700/40 via-amber-500/30 to-amber-300/20 shadow-[inset_0_-12px_18px_-12px_rgba(251,146,60,0.4)]"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-orange-700/45 via-orange-500/30 to-orange-400/15 shadow-[inset_0_-12px_18px_-12px_rgba(251,146,60,0.5)]"
       />
       {!compact && (
         <>
@@ -359,21 +360,29 @@ function FireLayer({ compact, cellSeed }: { compact: boolean; cellSeed: number }
   const phase = (cellSeed * 0.17) % 2.4;
   return (
     <>
+      {/* Dark molten base — pulls the cell into a deep red bottom that fades up to orange. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-rose-600/55 via-orange-500/45 to-amber-300/35 shadow-[inset_0_-16px_22px_-14px_rgba(251,146,60,0.55)]"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-red-800/75 via-orange-600/45 to-orange-400/15 shadow-[inset_0_-18px_24px_-14px_rgba(220,38,38,0.6)]"
       />
-      {/* Distorted flame layer — anchored at the bottom, ~55% height. */}
+      {/* Hot radial core — bright white-yellow heart at the bottom-center, flickers. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none fire-core absolute inset-x-0 bottom-0 h-[78%] motion-safe:animate-fire-flicker"
+      />
+      {/* Distorted flame tongues — turbulence-displaced gradient. White-yellow fuel base, red top. */}
       <svg
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-[55%] w-full opacity-80"
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-[80%] w-full motion-safe:animate-fire-flicker"
         filter="url(#cal-fire-turbulence)"
       >
         <defs>
           <linearGradient id={`flame-grad-${cellSeed}`} x1="0" x2="0" y1="1" y2="0">
-            <stop offset="0%" stopColor="#fbbf24" stopOpacity="0.7" />
-            <stop offset="50%" stopColor="#f97316" stopOpacity="0.55" />
-            <stop offset="100%" stopColor="#dc2626" stopOpacity="0" />
+            <stop offset="0%" stopColor="#fef9c3" stopOpacity="0.95" />
+            <stop offset="22%" stopColor="#fde047" stopOpacity="0.88" />
+            <stop offset="50%" stopColor="#fb923c" stopOpacity="0.72" />
+            <stop offset="78%" stopColor="#dc2626" stopOpacity="0.32" />
+            <stop offset="100%" stopColor="#7f1d1d" stopOpacity="0" />
           </linearGradient>
         </defs>
         <rect width="100%" height="100%" fill={`url(#flame-grad-${cellSeed})`} />
@@ -626,16 +635,16 @@ function SharedFireFilter() {
       <title>cal-fire-defs</title>
       <defs>
         {/* biome-ignore lint/correctness/useUniqueElementIds: shared filter ref'd by all DayCell fire layers; Calendar mounts at most once per page */}
-        <filter id="cal-fire-turbulence" x="-20%" y="-20%" width="140%" height="140%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.018 0.06" numOctaves={2} seed={3}>
+        <filter id="cal-fire-turbulence" x="-30%" y="-30%" width="160%" height="160%">
+          <feTurbulence type="fractalNoise" baseFrequency="0.025 0.08" numOctaves={3} seed={3}>
             <animate
               attributeName="baseFrequency"
-              dur="6s"
-              values="0.018 0.06;0.022 0.07;0.018 0.06"
+              dur="2.8s"
+              values="0.025 0.08;0.038 0.13;0.028 0.10;0.025 0.08"
               repeatCount="indefinite"
             />
           </feTurbulence>
-          <feDisplacementMap in="SourceGraphic" scale={6} />
+          <feDisplacementMap in="SourceGraphic" scale={16} />
         </filter>
       </defs>
     </svg>

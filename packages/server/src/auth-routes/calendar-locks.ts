@@ -174,7 +174,7 @@ calendarLocksRoutes.post("/games/reaction", async (c) => {
 calendarLocksRoutes.get("/locks", async (c) => {
   const [locksResult, rsvpsResult] = await Promise.all([
     getDb().execute(
-      "SELECT date_key, locked_by, locked_at, expected_user_ids_json FROM locked_dates",
+      "SELECT date_key, locked_by, locked_at, expected_user_ids_json, host_user_id, host_name, event_time, address FROM locked_dates",
     ),
     getDb().execute("SELECT date_key, user_id, status FROM rsvps"),
   ]);
@@ -186,6 +186,9 @@ calendarLocksRoutes.get("/locks", async (c) => {
       lockedAt: string;
       expectedUserIds: string[];
       rsvps: Record<string, "yes" | "no">;
+      host: { userId: string; name: string } | null;
+      eventTime: string | null;
+      address: string | null;
     }
   > = {};
   for (const row of locksResult.rows) {
@@ -195,11 +198,16 @@ calendarLocksRoutes.get("/locks", async (c) => {
     } catch {
       expected = [];
     }
+    const hostUserId = row.host_user_id as string | null;
+    const hostName = row.host_name as string | null;
     out[row.date_key as string] = {
       lockedBy: row.locked_by as string,
       lockedAt: row.locked_at as string,
       expectedUserIds: Array.isArray(expected) ? (expected as string[]) : [],
       rsvps: {},
+      host: hostUserId ? { userId: hostUserId, name: hostName ?? "" } : null,
+      eventTime: (row.event_time as string | null) ?? null,
+      address: (row.address as string | null) ?? null,
     };
   }
   for (const row of rsvpsResult.rows) {
@@ -215,20 +223,41 @@ calendarLocksRoutes.get("/locks", async (c) => {
 
 export const adminCalendarLocksRoutes = adminApp();
 
+const TIME_RE = /^\d{2}:\d{2}$/;
+
+function asOptionalString(v: unknown, max = 500): string | null {
+  if (v === null || v === undefined || v === "") return null;
+  if (typeof v !== "string") return null;
+  return v.length > max ? v.slice(0, max) : v;
+}
+
 adminCalendarLocksRoutes.post("/lock", async (c) => {
   const user = c.get("user");
-  const body = (await c.req.json().catch(() => ({}))) as { date?: unknown };
+  const body = (await c.req.json().catch(() => ({}))) as {
+    date?: unknown;
+    hostUserId?: unknown;
+    hostName?: unknown;
+    eventTime?: unknown;
+    address?: unknown;
+  };
   const date = body.date;
   if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
     return c.json({ error: "invalid date" }, 400);
   }
+  const hostUserId = asOptionalString(body.hostUserId, 100);
+  const hostName = asOptionalString(body.hostName, 200);
+  const eventTimeRaw = asOptionalString(body.eventTime, 5);
+  const eventTime = eventTimeRaw && TIME_RE.test(eventTimeRaw) ? eventTimeRaw : null;
+  const address = asOptionalString(body.address, 500);
 
-  // Snapshot the set of users who marked can/maybe at lock time so slice 4
-  // can decide "fully RSVPed" against a frozen baseline.
+  // Snapshot the set of users who marked can/maybe at lock time so we can
+  // decide "fully RSVPed" against a frozen baseline. Track cans separately
+  // so we can auto-confirm them as RSVP "yes".
   const { rows } = await getDb().execute(
     "SELECT user_id, availability_json FROM user_availability",
   );
   const expected: string[] = [];
+  const cans: string[] = [];
   for (const row of rows) {
     let parsed: unknown;
     try {
@@ -238,20 +267,44 @@ adminCalendarLocksRoutes.post("/lock", async (c) => {
     }
     if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) continue;
     const v = (parsed as Record<string, unknown>)[date];
-    if (v === "can" || v === "maybe") {
-      expected.push(row.user_id as string);
+    const userId = row.user_id as string;
+    if (v === "can") {
+      expected.push(userId);
+      cans.push(userId);
+    } else if (v === "maybe") {
+      expected.push(userId);
     }
   }
 
-  await getDb().execute({
-    sql: `INSERT INTO locked_dates (date_key, locked_by, locked_at, expected_user_ids_json)
-          VALUES (?, ?, datetime('now'), ?)
-          ON CONFLICT(date_key) DO UPDATE SET
-            locked_by = excluded.locked_by,
-            locked_at = excluded.locked_at,
-            expected_user_ids_json = excluded.expected_user_ids_json`,
-    args: [date, user.id, JSON.stringify(expected)],
-  });
+  // Auto-RSVP "yes" for every can. They've already committed via availability
+  // — the lock just confirms the date — so no separate click is required.
+  // OR IGNORE preserves any explicit choice (e.g. a can who later flipped to
+  // "no" survives a re-lock).
+  const stmts: { sql: string; args: (string | null)[] }[] = [
+    {
+      sql: `INSERT INTO locked_dates
+              (date_key, locked_by, locked_at, expected_user_ids_json,
+               host_user_id, host_name, event_time, address)
+            VALUES (?, ?, datetime('now'), ?, ?, ?, ?, ?)
+            ON CONFLICT(date_key) DO UPDATE SET
+              locked_by = excluded.locked_by,
+              locked_at = excluded.locked_at,
+              expected_user_ids_json = excluded.expected_user_ids_json,
+              host_user_id = excluded.host_user_id,
+              host_name = excluded.host_name,
+              event_time = excluded.event_time,
+              address = excluded.address`,
+      args: [date, user.id, JSON.stringify(expected), hostUserId, hostName, eventTime, address],
+    },
+  ];
+  for (const id of cans) {
+    stmts.push({
+      sql: `INSERT OR IGNORE INTO rsvps (date_key, user_id, status, rsvped_at)
+            VALUES (?, ?, 'yes', datetime('now'))`,
+      args: [date, id],
+    });
+  }
+  await getDb().batch(stmts, "write");
 
   return c.json({ ok: true, expectedUserIds: expected });
 });

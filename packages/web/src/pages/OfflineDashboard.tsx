@@ -2,6 +2,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { AvailabilityActionBar } from "../components/offline/AvailabilityActionBar";
 import Calendar from "../components/offline/Calendar";
+import LockInModal from "../components/offline/LockInModal";
 import RsvpModal from "../components/offline/RsvpModal";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { useSession } from "../lib/auth-client";
@@ -10,6 +11,8 @@ import {
   adminUnsetCalendarLock,
   type CalendarLocks,
   fetchCalendarLocks,
+  type LockHost,
+  type LockInForm,
 } from "../lib/calendar-locks";
 import type { RsvpStatus } from "../lib/calendar-rsvps";
 import {
@@ -67,6 +70,7 @@ export default function OfflineDashboard() {
   const [mode, setMode] = useState<Mode>("view");
   const [draft, setDraft] = useState<AvailabilityMap>({});
   const [rsvpDate, setRsvpDate] = useState<string | null>(null);
+  const [lockingDate, setLockingDate] = useState<string | null>(null);
   const [debugAsPlayer, setDebugAsPlayer] = useState(false);
   const inAdminView = isAdmin && !debugAsPlayer;
 
@@ -100,25 +104,46 @@ export default function OfflineDashboard() {
   });
 
   const lockMutation = useMutation({
-    mutationFn: async ({ date, currentlyLocked }: { date: string; currentlyLocked: boolean }) => {
-      if (currentlyLocked) await adminUnsetCalendarLock(date);
-      else await adminSetCalendarLock(date);
-    },
-    onMutate: async ({ date, currentlyLocked }) => {
+    mutationFn: ({ date, form }: { date: string; form: LockInForm }) =>
+      adminSetCalendarLock(date, form),
+    onMutate: async ({ date, form }) => {
       await queryClient.cancelQueries({ queryKey: qk.calendarLocks() });
       const previous = queryClient.getQueryData<CalendarLocks>(qk.calendarLocks());
       queryClient.setQueryData<CalendarLocks>(qk.calendarLocks(), (prev) => {
         const next: CalendarLocks = { ...(prev ?? {}) };
-        if (currentlyLocked) {
-          delete next[date];
-        } else {
-          next[date] = {
-            lockedBy: userId ?? "",
-            lockedAt: new Date().toISOString(),
-            expectedUserIds: [],
-            rsvps: {},
-          };
-        }
+        const existing = next[date];
+        next[date] = {
+          lockedBy: existing?.lockedBy ?? userId ?? "",
+          lockedAt: new Date().toISOString(),
+          expectedUserIds: existing?.expectedUserIds ?? [],
+          rsvps: existing?.rsvps ?? {},
+          host: form.hostUserId ? { userId: form.hostUserId, name: form.hostName ?? "" } : null,
+          eventTime: form.eventTime ?? null,
+          address: form.address ?? null,
+        };
+        return next;
+      });
+      return { previous };
+    },
+    onError: (_e, _vars, ctx) => {
+      if (ctx?.previous !== undefined) {
+        queryClient.setQueryData(qk.calendarLocks(), ctx.previous);
+      }
+    },
+    onSettled: () => {
+      void queryClient.invalidateQueries({ queryKey: qk.calendarLocks() });
+    },
+  });
+
+  const unlockMutation = useMutation({
+    mutationFn: (date: string) => adminUnsetCalendarLock(date),
+    onMutate: async (date) => {
+      await queryClient.cancelQueries({ queryKey: qk.calendarLocks() });
+      const previous = queryClient.getQueryData<CalendarLocks>(qk.calendarLocks());
+      queryClient.setQueryData<CalendarLocks>(qk.calendarLocks(), (prev) => {
+        if (!prev) return prev;
+        const next: CalendarLocks = { ...prev };
+        delete next[date];
         return next;
       });
       return { previous };
@@ -157,11 +182,13 @@ export default function OfflineDashboard() {
   function enterLockMode() {
     saveMutation.reset();
     lockMutation.reset();
+    unlockMutation.reset();
     setMode("lock");
   }
 
   function exitLockMode() {
     lockMutation.reset();
+    unlockMutation.reset();
     setMode("view");
   }
 
@@ -174,9 +201,52 @@ export default function OfflineDashboard() {
     });
   }
 
-  function handleLockToggle(date: string, currentlyLocked: boolean) {
-    lockMutation.mutate({ date, currentlyLocked });
+  function handleLockToggle(date: string, _currentlyLocked: boolean) {
+    lockMutation.reset();
+    unlockMutation.reset();
+    setLockingDate(date);
   }
+
+  async function submitLock(form: LockInForm) {
+    if (!lockingDate) return;
+    try {
+      await lockMutation.mutateAsync({ date: lockingDate, form });
+      setLockingDate(null);
+    } catch {
+      // error surfaces via lockMutation.error; modal stays open
+    }
+  }
+
+  async function removeLock() {
+    if (!lockingDate) return;
+    try {
+      await unlockMutation.mutateAsync(lockingDate);
+      setLockingDate(null);
+    } catch {
+      // error surfaces via unlockMutation.error; modal stays open
+    }
+  }
+
+  const hostCandidates = useMemo<LockHost[]>(() => {
+    if (!lockingDate) return [];
+    const out: LockHost[] = [];
+    const seen = new Set<string>();
+    const selfId = data?.user?.id;
+    const selfName = (data?.user as { name?: string } | undefined)?.name;
+    if (selfId && selfName) {
+      out.push({ userId: selfId, name: `${selfName} (you)` });
+      seen.add(selfId);
+    }
+    const entries = allAvailability?.[lockingDate];
+    if (entries) {
+      for (const e of entries) {
+        if (seen.has(e.userId)) continue;
+        seen.add(e.userId);
+        out.push({ userId: e.userId, name: e.name });
+      }
+    }
+    return out;
+  }, [lockingDate, data, allAvailability]);
 
   const visible = mode === "edit" ? draft : committed;
   const markedCount = Object.keys(visible).length;
@@ -185,12 +255,19 @@ export default function OfflineDashboard() {
       ? saveMutation.error.message
       : "Could not save. Try again."
     : null;
-  const lockError = lockMutation.error
-    ? lockMutation.error instanceof Error
+  const lockMutationError =
+    lockMutation.error instanceof Error
       ? lockMutation.error.message
-      : "Could not update lock-in. Try again."
-    : null;
-  const errorMessage = mode === "lock" ? lockError : saveError;
+      : lockMutation.error
+        ? "Could not update lock-in. Try again."
+        : null;
+  const unlockMutationError =
+    unlockMutation.error instanceof Error
+      ? unlockMutation.error.message
+      : unlockMutation.error
+        ? "Could not remove lock-in. Try again."
+        : null;
+  const errorMessage = mode === "lock" ? (lockMutationError ?? unlockMutationError) : saveError;
 
   return (
     <div className="flex h-dvh flex-col overflow-hidden bg-surface-950 bg-grid">
@@ -244,6 +321,19 @@ export default function OfflineDashboard() {
       </div>
 
       {rsvpDate && <RsvpModal date={rsvpDate} locks={locks} onClose={() => setRsvpDate(null)} />}
+
+      {lockingDate && (
+        <LockInModal
+          date={lockingDate}
+          initialLock={locks?.[lockingDate] ?? null}
+          candidates={hostCandidates}
+          busy={lockMutation.isPending || unlockMutation.isPending}
+          error={lockMutationError ?? unlockMutationError}
+          onSubmit={submitLock}
+          onRemove={locks?.[lockingDate] ? removeLock : undefined}
+          onClose={() => setLockingDate(null)}
+        />
+      )}
     </div>
   );
 }

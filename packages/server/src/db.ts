@@ -134,4 +134,17 @@ async function migrate(db: Client): Promise<void> {
       "write",
     );
   }
+
+  const ldCols = await db.execute("PRAGMA table_info(locked_dates)");
+  if (!ldCols.rows.some((r) => r.name === "host_user_id")) {
+    await db.batch(
+      [
+        `ALTER TABLE locked_dates ADD COLUMN host_user_id TEXT`,
+        `ALTER TABLE locked_dates ADD COLUMN host_name TEXT`,
+        `ALTER TABLE locked_dates ADD COLUMN event_time TEXT`,
+        `ALTER TABLE locked_dates ADD COLUMN address TEXT`,
+      ],
+      "write",
+    );
+  }
 }

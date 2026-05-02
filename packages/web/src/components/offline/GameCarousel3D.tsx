@@ -203,6 +203,19 @@ function CarouselCard({
             Fits {fitsLabel(minPlayers, maxPlayers)}
           </span>
         )}
+
+        {date && (
+          <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2">
+            <GameReactions
+              date={date}
+              slug={game.slug}
+              accentHex={game.accentHex}
+              aggregate={aggregate ?? { hype: 0, teach: 0, learn: 0, viewer: [] }}
+              size="md"
+              disabled={!isCenter}
+            />
+          </div>
+        )}
       </div>
 
       {/* Body */}
@@ -224,19 +237,6 @@ function CarouselCard({
           <p className="min-h-0 flex-1 overflow-hidden text-[11px] leading-relaxed text-gray-400">
             {stripBggHtml(game.bgg.description)}
           </p>
-        )}
-
-        {date && (
-          <div className="mt-1 shrink-0">
-            <GameReactions
-              date={date}
-              slug={game.slug}
-              accentHex={game.accentHex}
-              aggregate={aggregate ?? { hype: 0, teach: 0, learn: 0, viewer: [] }}
-              size="md"
-              disabled={!isCenter}
-            />
-          </div>
         )}
       </div>
     </motion.button>

@@ -1,13 +1,13 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useMemo } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { createPortal } from "react-dom";
 import { games as gameRegistry } from "../../games/registry";
 import type { GameDefinition } from "../../games/types";
 import { useSession } from "../../lib/auth-client";
 import { fetchAvailableGames } from "../../lib/calendar-games";
 import type { CalendarLocks } from "../../lib/calendar-locks";
-import { clearRsvp, type RsvpStatus, setRsvp } from "../../lib/calendar-rsvps";
+import { type RsvpStatus, setRsvp } from "../../lib/calendar-rsvps";
 import { qk } from "../../lib/query-keys";
 import GameCarousel3D from "./GameCarousel3D";
 import RankedGameList from "./RankedGameList";
@@ -42,13 +42,18 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
     },
   });
 
-  const clearRsvpMutation = useMutation({
-    mutationFn: () => clearRsvp(date),
-    onSettled: () => {
-      void queryClient.invalidateQueries({ queryKey: qk.calendarLocks() });
-      void queryClient.invalidateQueries({ queryKey: qk.availableGames(date) });
-    },
-  });
+  // Auto-confirm "yes" the first time a viewer opens the modal without an
+  // existing RSVP — opening the overlay is itself the commitment. Existing
+  // "yes" or "no" choices are preserved on subsequent re-opens.
+  const autoRsvpRef = useRef(false);
+  useEffect(() => {
+    if (preview) return;
+    if (!lock || !userId) return;
+    if (viewerRsvp !== undefined) return;
+    if (autoRsvpRef.current) return;
+    autoRsvpRef.current = true;
+    setRsvpMutation.mutate({ status: "yes" });
+  }, [preview, lock, userId, viewerRsvp, setRsvpMutation.mutate]);
 
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
@@ -100,9 +105,12 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
 
   const showRanked = fullyRsvpd && hypedCount > 0;
 
-  const error =
-    setRsvpMutation.error || clearRsvpMutation.error ? "Couldn't update RSVP. Try again." : null;
-  const busy = setRsvpMutation.isPending || clearRsvpMutation.isPending;
+  // While the auto-yes mutation is in flight on first open, render "Going"
+  // optimistically so the header doesn't flicker through an empty state.
+  const effectiveRsvp: RsvpStatus = viewerRsvp ?? "yes";
+
+  const error = setRsvpMutation.error ? "Couldn't update RSVP. Try again." : null;
+  const busy = setRsvpMutation.isPending;
 
   const overlay = (
     <AnimatePresence>
@@ -165,49 +173,39 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
                   )}
                 </p>
               )}
+              {!preview && lock && (lock.host || lock.eventTime || lock.address) && (
+                <EventDetails
+                  host={lock.host?.name ?? null}
+                  eventTime={lock.eventTime}
+                  address={lock.address}
+                />
+              )}
             </div>
 
             {!preview && (
               <div className="flex flex-wrap items-center justify-end gap-2">
-                {viewerRsvp === "yes" ? (
+                {effectiveRsvp === "yes" ? (
                   <button
                     type="button"
-                    onClick={() => clearRsvpMutation.mutate()}
+                    onClick={() => setRsvpMutation.mutate({ status: "no" })}
                     disabled={busy}
+                    aria-label="Going — tap to switch to not going"
                     className="inline-flex items-center gap-2 rounded-full border border-emerald-300/60 bg-emerald-400/15 px-5 py-2 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-400/25 disabled:opacity-50"
                   >
                     <span aria-hidden="true">✓</span>
-                    Going · tap to undo
-                  </button>
-                ) : viewerRsvp === "no" ? (
-                  <button
-                    type="button"
-                    onClick={() => clearRsvpMutation.mutate()}
-                    disabled={busy}
-                    className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2 text-sm font-semibold text-gray-300 transition hover:bg-white/10 disabled:opacity-50"
-                  >
-                    <span aria-hidden="true">✗</span>
-                    Not going · tap to undo
+                    Going
                   </button>
                 ) : (
-                  <>
-                    <button
-                      type="button"
-                      onClick={() => setRsvpMutation.mutate({ status: "yes" })}
-                      disabled={busy}
-                      className="rounded-full border border-emerald-400/60 bg-emerald-500/20 px-6 py-2 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-500/30 disabled:opacity-50"
-                    >
-                      I'm in
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setRsvpMutation.mutate({ status: "no" })}
-                      disabled={busy}
-                      className="rounded-full border border-white/15 bg-white/5 px-6 py-2 text-sm font-semibold text-gray-300 transition hover:bg-white/10 disabled:opacity-50"
-                    >
-                      I'll pass
-                    </button>
-                  </>
+                  <button
+                    type="button"
+                    onClick={() => setRsvpMutation.mutate({ status: "yes" })}
+                    disabled={busy}
+                    aria-label="Not going — tap to switch to going"
+                    className="inline-flex items-center gap-2 rounded-full border border-rose-400/60 bg-rose-500/20 px-5 py-2 text-sm font-semibold text-rose-100 transition hover:bg-rose-500/30 disabled:opacity-50"
+                  >
+                    <span aria-hidden="true">✗</span>
+                    Not going
+                  </button>
                 )}
               </div>
             )}
@@ -244,4 +242,102 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
 
   if (typeof document === "undefined") return null;
   return createPortal(overlay, document.body);
+}
+
+function EventDetails({
+  host,
+  eventTime,
+  address,
+}: {
+  host: string | null;
+  eventTime: string | null;
+  address: string | null;
+}) {
+  const mapHref = address
+    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
+    : null;
+  return (
+    <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-300">
+      {host && (
+        <span className="inline-flex items-center gap-1.5">
+          <HostIcon />
+          <span>
+            <span className="text-gray-500">Host </span>
+            <span className="font-semibold text-white">{host}</span>
+          </span>
+        </span>
+      )}
+      {eventTime && (
+        <span className="inline-flex items-center gap-1.5">
+          <ClockIcon />
+          <span className="font-semibold tabular-nums text-white">{eventTime}</span>
+        </span>
+      )}
+      {address && mapHref && (
+        <a
+          href={mapHref}
+          target="_blank"
+          rel="noreferrer noopener"
+          className="inline-flex max-w-full items-center gap-1.5 truncate text-emerald-300 underline-offset-2 hover:text-emerald-200 hover:underline"
+        >
+          <PinIcon />
+          <span className="truncate">{address}</span>
+        </a>
+      )}
+    </div>
+  );
+}
+
+function HostIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className="h-3.5 w-3.5 shrink-0 text-gray-400"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.6}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M2 14l6-11 6 11" />
+      <path d="M5 14V9h6v5" />
+    </svg>
+  );
+}
+
+function ClockIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className="h-3.5 w-3.5 shrink-0 text-gray-400"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.6}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="8" cy="8" r="6" />
+      <path d="M8 5v3l2 1.5" />
+    </svg>
+  );
+}
+
+function PinIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className="h-3.5 w-3.5 shrink-0"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.6}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M8 14s5-4.5 5-8.5A5 5 0 0 0 3 5.5C3 9.5 8 14 8 14z" />
+      <circle cx="8" cy="6" r="1.6" />
+    </svg>
+  );
 }
