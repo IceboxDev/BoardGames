@@ -215,7 +215,7 @@ function DayCell({
   const valueLabelSize = compact ? "text-[7px]" : "text-[9px] sm:text-[11px]";
 
   const aspectClass = compact ? "aspect-square" : "";
-  const layoutClass = compact ? "items-center justify-center" : "justify-between";
+  const layoutClass = compact ? "items-center justify-center" : "";
 
   // Ring/animation per heat state. Lock disables heat animations. Past days never animate.
   const heatAnim =
@@ -276,16 +276,25 @@ function DayCell({
         {day}
       </span>
       {labels && labels.length > 0 && !compact && !locked && <DayLabels entries={labels} />}
-      {!compact && showHeatLayer && <HeatBadge heat={heat} />}
-      {value && !compact && showHeatLayer && <PersonalMarkChip value={value} />}
-      {value && !compact && !heated && !locked && (
-        <span
-          className={`relative self-end font-bold uppercase tracking-[0.18em] ${valueLabelSize} ${
-            value === "can" ? "text-accent-200" : "text-amber-200"
-          }`}
-        >
-          {value}
-        </span>
+      {!compact && !locked && (value || heated) && (
+        <div className="relative z-10 mt-auto flex items-end justify-between gap-1">
+          <div className="min-w-0">{value && heated && <PersonalMarkChip value={value} />}</div>
+          <div className="min-w-0">
+            {heated ? (
+              <HeatBadge heat={heat} />
+            ) : (
+              value && (
+                <span
+                  className={`font-bold uppercase tracking-[0.18em] ${valueLabelSize} ${
+                    value === "can" ? "text-accent-200" : "text-amber-200"
+                  }`}
+                >
+                  {value}
+                </span>
+              )
+            )}
+          </div>
+        </div>
       )}
     </button>
   );
@@ -557,14 +566,14 @@ function PersonalMarkChip({ value }: { value: Availability }) {
   return (
     <span
       aria-hidden="true"
-      className={`pointer-events-none absolute bottom-1.5 left-1.5 z-10 inline-flex items-center gap-1 rounded-full px-1.5 py-0.5 text-[8px] font-extrabold uppercase tracking-[0.15em] backdrop-blur-sm ring-1 ${
+      className={`pointer-events-none inline-flex items-center gap-1 rounded-full bg-surface-950/85 px-1.5 py-0.5 text-[8px] font-extrabold uppercase tracking-[0.15em] ring-1 ${
         isCan
-          ? "bg-accent-500/35 text-accent-50 ring-accent-300/60 shadow-[0_0_8px_rgba(129,140,248,0.45)]"
-          : "bg-amber-500/30 text-amber-50 ring-amber-300/60 shadow-[0_0_8px_rgba(252,211,77,0.4)]"
+          ? "text-accent-100 ring-accent-300/70 shadow-[0_0_8px_rgba(129,140,248,0.45)]"
+          : "text-amber-100 ring-amber-300/70 shadow-[0_0_8px_rgba(252,211,77,0.4)]"
       }`}
     >
       <span
-        className={`inline-block h-1.5 w-1.5 rounded-full ${isCan ? "bg-accent-200" : "bg-amber-200"}`}
+        className={`inline-block h-1.5 w-1.5 rounded-full ${isCan ? "bg-accent-300" : "bg-amber-300"}`}
       />
       {value}
     </span>
@@ -576,10 +585,10 @@ function HeatBadge({ heat }: { heat: Heat }) {
   const isFire = heat.kind === "fire";
   return (
     <span
-      className={`pointer-events-none absolute bottom-1.5 right-1.5 z-10 inline-flex items-center gap-0.5 rounded-full px-1.5 py-0.5 text-[9px] font-extrabold backdrop-blur-sm ${
+      className={`pointer-events-none inline-flex items-center gap-0.5 rounded-full bg-surface-950/85 px-1.5 py-0.5 text-[9px] font-extrabold ring-1 ${
         isFire
-          ? "bg-orange-500/40 text-white shadow-[0_0_10px_rgba(249,115,22,0.6)]"
-          : "bg-amber-500/25 text-amber-50"
+          ? "text-orange-200 ring-orange-300/70 shadow-[0_0_10px_rgba(249,115,22,0.55)]"
+          : "text-amber-200 ring-amber-300/70"
       }`}
       aria-hidden="true"
     >
@@ -627,7 +636,7 @@ function SharedFireFilter() {
   );
 }
 
-const MAX_VISIBLE_LABELS = 4;
+const MAX_VISIBLE_LABELS = 5;
 
 function DayLabels({
   entries,
@@ -637,27 +646,28 @@ function DayLabels({
   const visible = entries.slice(0, MAX_VISIBLE_LABELS);
   const overflow = entries.length - visible.length;
   return (
-    <div className="relative mt-1 flex min-h-0 flex-1 flex-col gap-px overflow-hidden">
-      {visible.map((e) => (
-        <span
-          key={e.userId}
-          title={`${e.name} — ${e.status}`}
-          className={`truncate text-left text-[9px] font-semibold leading-tight ${
-            e.status === "can" ? "text-accent-200" : "text-amber-200"
-          }`}
-        >
+    <div className="relative z-10 mt-1 flex shrink-0 flex-nowrap items-center gap-1 overflow-hidden">
+      {visible.map((e) => {
+        const isCan = e.status === "can";
+        const initial = (firstName(e.name)[0] ?? "?").toUpperCase();
+        return (
           <span
-            aria-hidden="true"
-            className={`mr-1 inline-block h-1 w-1 rounded-full align-middle ${
-              e.status === "can" ? "bg-accent-300" : "bg-amber-300"
+            key={e.userId}
+            title={`${e.name} — ${e.status}`}
+            className={`inline-flex h-3.5 w-3.5 shrink-0 items-center justify-center rounded-full text-[9px] font-bold leading-none text-white ring-1 ring-inset ring-black/40 ${
+              isCan ? "bg-accent-500" : "bg-amber-500"
             }`}
-          />
-          {firstName(e.name)}
-        </span>
-      ))}
+          >
+            {initial}
+          </span>
+        );
+      })}
       {overflow > 0 && (
-        <span className="truncate text-left text-[9px] font-semibold leading-tight text-gray-400">
-          +{overflow} more
+        <span
+          className="ml-0.5 shrink-0 text-[9px] font-bold leading-none text-white"
+          style={{ textShadow: "0 1px 2px rgba(0,0,0,0.85)" }}
+        >
+          +{overflow}
         </span>
       )}
     </div>
