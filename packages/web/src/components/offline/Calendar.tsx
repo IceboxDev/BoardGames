@@ -660,38 +660,61 @@ function DayLabels({
   entries: import("../../lib/offline-availability").AvailabilityEntry[];
   heated: boolean;
 }) {
-  const visible = entries.slice(0, MAX_VISIBLE_LABELS);
+  // Cans always come first so the can row is on top, maybes underneath.
+  const sorted = [...entries].sort((a, b) => {
+    if (a.status === b.status) return 0;
+    return a.status === "can" ? -1 : 1;
+  });
+  const visible = sorted.slice(0, MAX_VISIBLE_LABELS);
   const overflow = entries.length - visible.length;
+  const cans = visible.filter((e) => e.status === "can");
+  const maybes = visible.filter((e) => e.status === "maybe");
   const textShadow = heated ? { textShadow: "0 1px 2px rgba(0,0,0,0.85)" } : undefined;
   return (
-    <div className="relative z-10 mt-1 flex min-h-0 flex-1 flex-wrap content-start items-start gap-x-1.5 gap-y-px overflow-hidden">
-      {visible.map((e) => {
-        const isCan = e.status === "can";
-        return (
-          <span
-            key={e.userId}
-            title={`${e.name} — ${e.status}`}
-            style={textShadow}
-            className="inline-flex max-w-full items-center gap-1 truncate text-[10px] font-semibold leading-tight text-white sm:text-[11px]"
-          >
-            <span
-              aria-hidden="true"
-              className={`inline-block h-1.5 w-1.5 shrink-0 rounded-full ${
-                isCan ? "bg-accent-300" : "bg-amber-300"
-              }`}
-            />
-            <span className="truncate">{firstName(e.name)}</span>
-          </span>
-        );
-      })}
+    <div className="relative z-10 mt-0.5 flex min-h-0 flex-1 flex-col overflow-hidden">
+      {cans.length > 0 && (
+        <NameRow entries={cans} dotColor="bg-accent-300" textShadow={textShadow} />
+      )}
+      {maybes.length > 0 && (
+        <NameRow entries={maybes} dotColor="bg-yellow-400" textShadow={textShadow} />
+      )}
       {overflow > 0 && (
         <span
           style={textShadow}
-          className="inline-flex shrink-0 items-center text-[10px] font-semibold leading-tight text-gray-300 sm:text-[11px]"
+          className="text-[7px] font-medium leading-none text-gray-400 sm:text-[8px]"
         >
           +{overflow}
         </span>
       )}
+    </div>
+  );
+}
+
+function NameRow({
+  entries,
+  dotColor,
+  textShadow,
+}: {
+  entries: import("../../lib/offline-availability").AvailabilityEntry[];
+  dotColor: string;
+  textShadow: React.CSSProperties | undefined;
+}) {
+  return (
+    <div className="flex flex-wrap items-center gap-x-1">
+      {entries.map((e) => (
+        <span
+          key={e.userId}
+          title={`${e.name} — ${e.status}`}
+          style={textShadow}
+          className="inline-flex max-w-full items-center gap-0.5 truncate text-[8px] font-medium leading-none text-white sm:text-[9px]"
+        >
+          <span
+            aria-hidden="true"
+            className={`inline-block h-1 w-1 shrink-0 rounded-full ${dotColor}`}
+          />
+          <span className="truncate">{firstName(e.name)}</span>
+        </span>
+      ))}
     </div>
   );
 }

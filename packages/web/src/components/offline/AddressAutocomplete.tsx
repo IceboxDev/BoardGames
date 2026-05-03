@@ -21,7 +21,11 @@ type PlacesAutocomplete = {
   addListener(event: string, cb: () => void): { remove(): void };
   getPlace(): { formatted_address?: string; name?: string };
 };
-type GoogleGlobal = { maps?: { places?: PlacesNamespace } };
+type MapsApi = {
+  places?: PlacesNamespace;
+  importLibrary?: (name: string) => Promise<unknown>;
+};
+type GoogleGlobal = { maps?: MapsApi };
 
 const API_KEY = (import.meta.env.VITE_GOOGLE_MAPS_API_KEY as string | undefined) ?? "";
 
@@ -36,27 +40,43 @@ function getGoogle(): GoogleGlobal | undefined {
 
 function loadPlaces(apiKey: string): Promise<PlacesNamespace> {
   if (placesPromise) return placesPromise;
-  placesPromise = new Promise((resolve, reject) => {
-    if (typeof window === "undefined") {
-      reject(new Error("No window"));
-      return;
+  placesPromise = (async () => {
+    if (typeof window === "undefined") throw new Error("No window");
+
+    // Already fully loaded by another caller.
+    const ready = getGoogle()?.maps?.places;
+    if (ready?.Autocomplete) return ready;
+
+    // Inject the bootstrap loader once. With `loading=async` the actual
+    // libraries import lazily — wait via `importLibrary`.
+    if (!document.querySelector("script[data-google-maps-loader]")) {
+      await new Promise<void>((resolve, reject) => {
+        const script = document.createElement("script");
+        script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&libraries=places&loading=async&v=weekly`;
+        script.async = true;
+        script.defer = true;
+        script.dataset.googleMapsLoader = "1";
+        script.onload = () => resolve();
+        script.onerror = () => reject(new Error("Failed to load Google Maps loader"));
+        document.head.appendChild(script);
+      });
     }
-    const existing = getGoogle()?.maps?.places;
-    if (existing) {
-      resolve(existing);
-      return;
+
+    // Wait for the bootstrap to expose `importLibrary` then ask for places.
+    const start = Date.now();
+    while (!getGoogle()?.maps?.importLibrary) {
+      if (Date.now() - start > 8000) throw new Error("Google Maps loader did not initialize");
+      await new Promise((r) => setTimeout(r, 50));
     }
-    const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${encodeURIComponent(apiKey)}&libraries=places&loading=async`;
-    script.async = true;
-    script.defer = true;
-    script.onerror = () => reject(new Error("Failed to load Google Places"));
-    script.onload = () => {
-      const places = getGoogle()?.maps?.places;
-      if (places) resolve(places);
-      else reject(new Error("Google Places unavailable after load"));
-    };
-    document.head.appendChild(script);
+    const importLibrary = getGoogle()?.maps?.importLibrary;
+    if (!importLibrary) throw new Error("importLibrary missing");
+    const places = (await importLibrary("places")) as PlacesNamespace;
+    if (!places?.Autocomplete) throw new Error("Places.Autocomplete missing");
+    return places;
+  })();
+  // Reset the singleton on failure so a retry is possible.
+  placesPromise.catch(() => {
+    placesPromise = null;
   });
   return placesPromise;
 }
@@ -128,10 +148,11 @@ export default function AddressAutocomplete({
           onChangeRef.current(address);
         });
       })
-      .catch(() => {
+      .catch((err) => {
         // Fall back to plain text input — no autocomplete but still usable.
-        // Silent failure: the developer can inspect Network for the script
-        // request if autocomplete isn't appearing.
+        // Surface the reason so the developer can diagnose env / restriction
+        // issues.
+        console.warn("[AddressAutocomplete]", err);
       });
 
     return () => {
