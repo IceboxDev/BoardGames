@@ -153,7 +153,13 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
                   className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg bg-surface-800 ring-1 ring-[var(--accent)]/45"
                   style={{ "--accent": g.accentHex } as React.CSSProperties}
                 >
-                  <img src={g.thumbnail} alt="" className="h-full w-full object-cover" />
+                  <img
+                    src={g.thumbnail}
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover"
+                  />
                 </span>
               ))}
               {overflow > 0 && (

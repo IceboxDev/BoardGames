@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { AnimatePresence, motion } from "framer-motion";
-import { useEffect, useMemo, useRef } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { games as gameRegistry } from "../../games/registry";
 import type { GameDefinition } from "../../games/types";
@@ -103,7 +103,13 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
     [availableGames, reactions],
   );
 
-  const showRanked = fullyRsvpd && hypedCount > 0;
+  // Auto-default: results once everyone RSVPd and at least one game is hyped.
+  // The user can override either way via the Pick / Results toggle below.
+  const [viewOverride, setViewOverride] = useState<"pick" | "results" | null>(null);
+  const canShowResults = hypedCount > 0;
+  const autoShowRanked = fullyRsvpd && canShowResults;
+  const showRanked = viewOverride ? viewOverride === "results" : autoShowRanked;
+  const showViewToggle = !preview && canShowResults;
 
   // While the auto-yes mutation is in flight on first open, render "Going"
   // optimistically so the header doesn't flicker through an empty state.
@@ -184,6 +190,40 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
 
             {!preview && (
               <div className="flex flex-wrap items-center justify-end gap-2">
+                {showViewToggle && (
+                  <div
+                    role="tablist"
+                    aria-label="View mode"
+                    className="inline-flex items-center gap-0.5 rounded-full border border-white/10 bg-surface-950/60 p-0.5 text-xs font-semibold"
+                  >
+                    <button
+                      type="button"
+                      role="tab"
+                      aria-selected={!showRanked}
+                      onClick={() => setViewOverride("pick")}
+                      className={`rounded-full px-3 py-1.5 transition ${
+                        !showRanked
+                          ? "bg-accent-500/20 text-accent-300"
+                          : "text-gray-400 hover:text-white"
+                      }`}
+                    >
+                      Pick games
+                    </button>
+                    <button
+                      type="button"
+                      role="tab"
+                      aria-selected={showRanked}
+                      onClick={() => setViewOverride("results")}
+                      className={`rounded-full px-3 py-1.5 transition ${
+                        showRanked
+                          ? "bg-amber-400/20 text-amber-200"
+                          : "text-gray-400 hover:text-white"
+                      }`}
+                    >
+                      Results
+                    </button>
+                  </div>
+                )}
                 {effectiveRsvp === "yes" ? (
                   <button
                     type="button"

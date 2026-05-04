@@ -4,8 +4,6 @@ import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthGuard } from "./components/AuthGuard";
 import { AuthInvalidator } from "./components/AuthInvalidator";
-import GameMenu from "./components/GameMenu";
-import GameRouter from "./components/GameRouter";
 import Layout from "./components/Layout";
 import { queryClient } from "./lib/query-client";
 
@@ -15,6 +13,12 @@ const AdminPage = lazy(() => import("./pages/AdminPage"));
 const OfflineDashboard = lazy(() => import("./pages/OfflineDashboard"));
 const GameGallery = lazy(() => import("./pages/GameGallery"));
 const DeckPreview = lazy(() => import("./pages/DeckPreview"));
+// `GameMenu` and `GameRouter` are the only paths that pull the games registry
+// into the bundle. Lazy-loading them keeps the registry's 81 game modules
+// (bgg.json, accent.json, thumbnail urls, lazy component wrappers) out of
+// the entry chunk, so dashboard / login / profile cold loads stay snappy.
+const GameMenu = lazy(() => import("./components/GameMenu"));
+const GameRouter = lazy(() => import("./components/GameRouter"));
 
 export default function App() {
   return (

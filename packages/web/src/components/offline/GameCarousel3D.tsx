@@ -182,6 +182,8 @@ function CarouselCard({
           alt=""
           className="h-full w-full object-cover"
           loading="lazy"
+          decoding="async"
+          fetchPriority={isCenter ? "high" : "low"}
           draggable={false}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-surface-900 via-surface-900/30 to-transparent" />

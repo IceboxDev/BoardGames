@@ -634,6 +634,8 @@ function InventoryPanel({ userId }: { userId: string }) {
               <img
                 src={game.thumbnail}
                 alt=""
+                loading="lazy"
+                decoding="async"
                 className="h-10 w-10 shrink-0 rounded object-cover"
               />
               <span className="min-w-0 flex-1 text-xs">
@@ -784,6 +786,8 @@ function PreRegisterCard() {
                   <img
                     src={game.thumbnail}
                     alt=""
+                    loading="lazy"
+                    decoding="async"
                     className="h-10 w-10 shrink-0 rounded object-cover"
                   />
                   <span className="min-w-0 flex-1 text-xs">
