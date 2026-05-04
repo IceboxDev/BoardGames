@@ -21,12 +21,11 @@ calendarLocksRoutes.get("/games", async (c) => {
     return c.json({ error: "date is not locked" }, 400);
   }
 
-  // Compute participant set:
-  //   definite = (availability "can" ∪ rsvp "yes") − rsvp "no"
-  //   tentative = (availability "maybe") − can − rsvp:yes − rsvp:no
-  // Only `definite` people contribute their inventory — we can't count on
-  // a "maybe" actually showing up with the box. Tentative only widens the
-  // headcount upper bound for player-count filtering.
+  // Compute participant set. `rsvp:no` is an explicit decline — it overrides
+  // any availability marker, including an earlier `rsvp:yes`. Only people who
+  // are actually coming contribute to the inventory union or to the headcount;
+  // a "maybe" who hasn't declined widens the headcount upper bound but never
+  // contributes inventory (we can't count on them showing up with the box).
   const [availabilityResult, rsvpResult, reactionResult] = await Promise.all([
     getDb().execute("SELECT user_id, availability_json FROM user_availability"),
     getDb().execute({
@@ -64,10 +63,12 @@ calendarLocksRoutes.get("/games", async (c) => {
     else if (status === "no") rsvpNo.add(userId);
   }
 
-  const definiteIds = [...new Set([...canSet, ...rsvpYes])].filter((id) => !rsvpNo.has(id));
-  const tentativeIds = [...maybeSet].filter(
-    (id) => !canSet.has(id) && !rsvpYes.has(id) && !rsvpNo.has(id),
-  );
+  // Explicit "no" wins over everything else.
+  const comingIds = new Set<string>();
+  for (const id of canSet) if (!rsvpNo.has(id)) comingIds.add(id);
+  for (const id of rsvpYes) if (!rsvpNo.has(id)) comingIds.add(id);
+  const definiteIds = [...comingIds];
+  const tentativeIds = [...maybeSet].filter((id) => !comingIds.has(id) && !rsvpNo.has(id));
 
   let ownedSlugs: string[] = [];
   if (definiteIds.length > 0) {
@@ -316,16 +317,14 @@ adminCalendarLocksRoutes.delete("/lock", async (c) => {
     return c.json({ error: "invalid date" }, 400);
   }
 
-  // Cascade-delete RSVPs and reactions so they don't resurface if this date
-  // is later re-locked.
-  await getDb().batch(
-    [
-      { sql: "DELETE FROM locked_dates WHERE date_key = ?", args: [date] },
-      { sql: "DELETE FROM rsvps WHERE date_key = ?", args: [date] },
-      { sql: "DELETE FROM game_requests WHERE date_key = ?", args: [date] },
-    ],
-    "write",
-  );
+  // Drop only the lock row. RSVPs and reactions stay so an explicit "no" (or
+  // a hyped game) survives an unlock + re-lock cycle — otherwise the lock
+  // handler's auto-RSVP-yes-for-cans flips a "no" voter back to "yes" without
+  // them clicking anything, and their inventory re-enters the games list.
+  await getDb().execute({
+    sql: "DELETE FROM locked_dates WHERE date_key = ?",
+    args: [date],
+  });
 
   return c.json({ ok: true });
 });
