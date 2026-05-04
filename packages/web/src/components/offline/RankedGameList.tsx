@@ -31,7 +31,7 @@ export default function RankedGameList({ date, games, reactions }: Props) {
   if (ranked.length === 0) return null;
 
   return (
-    <div className="flex h-full w-full max-w-3xl flex-col gap-2 overflow-y-auto px-1 py-2">
+    <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col gap-2 overflow-y-auto px-1 py-2">
       <p className="px-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-300">
         Tonight's picks
       </p>

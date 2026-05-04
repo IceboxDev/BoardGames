@@ -104,6 +104,7 @@ calendarLocksRoutes.get("/games", async (c) => {
   };
   const reactions: Record<string, ReactionAggregate> = {};
   for (const row of reactionResult.rows) {
+    const userId = row.user_id as string;
     const slug = row.game_slug as string;
     const kind = row.reaction as "hype" | "teach" | "learn";
     let agg = reactions[slug];
@@ -111,8 +112,12 @@ calendarLocksRoutes.get("/games", async (c) => {
       agg = { hype: 0, teach: 0, learn: 0, viewer: [] };
       reactions[slug] = agg;
     }
-    agg[kind] += 1;
-    if ((row.user_id as string) === user.id) agg.viewer.push(kind);
+    // Only people who are actually attending influence the leaderboard order.
+    // A user who RSVPs "no" after hyping must not still tilt the pick.
+    if (comingIds.has(userId)) agg[kind] += 1;
+    // The viewer's own reactions stay visible on their buttons either way —
+    // local UI state, not a vote.
+    if (userId === user.id) agg.viewer.push(kind);
   }
 
   return c.json({
