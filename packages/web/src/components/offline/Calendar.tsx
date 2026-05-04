@@ -66,7 +66,6 @@ export default function Calendar({
 
   return (
     <div className={`flex flex-col ${wrapperGrowth} ${compact ? "gap-1.5" : "gap-2 sm:gap-3"}`}>
-      <SharedFireFilter />
       <div className={`grid shrink-0 grid-cols-7 ${gridGap}`}>
         {DAY_NAMES.map((n) => (
           <div
@@ -356,47 +355,56 @@ function WarmingLayer({ compact }: { compact: boolean }) {
 }
 
 function FireLayer({ compact, cellSeed }: { compact: boolean; cellSeed: number }) {
-  // Phase the embers off each other so the grid never pulses in lockstep.
-  const phase = (cellSeed * 0.17) % 2.4;
+  // Independent phase offsets per layer (seeded by cell) so neighboring cells
+  // never pulse in lockstep AND layers within one cell drift relative to each
+  // other. Negative `animation-delay` starts the layer mid-cycle.
+  const phaseBloom = (cellSeed * 0.37) % 3.4;
+  const phaseLeft = (cellSeed * 0.71) % 2.1;
+  const phaseRight = (cellSeed * 0.53) % 2.7;
+  const phaseGlow = (cellSeed * 0.91) % 4.3;
+  const phaseEmber = (cellSeed * 0.17) % 3.6;
+
   return (
     <>
-      {/* Dark molten base — pulls the cell into a deep red bottom that fades up to orange. */}
+      {/* Molten base — warm static gradient, fades to transparent at the top so
+          there's no hard horizon line. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-red-800/75 via-orange-600/45 to-orange-400/15 shadow-[inset_0_-18px_24px_-14px_rgba(220,38,38,0.6)]"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-red-900/85 via-orange-700/40 to-transparent"
       />
-      {/* Hot radial core — bright white-yellow heart at the bottom-center, flickers. */}
+      {/* Heart of the fire — soft radial dome at the bottom, breathes. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none fire-core absolute inset-x-0 bottom-0 h-[78%] motion-safe:animate-fire-flicker"
+        className="pointer-events-none fire-bloom absolute inset-0 motion-safe:animate-fire-bloom"
+        style={{ animationDelay: `-${phaseBloom}s` } as React.CSSProperties}
       />
-      {/* Distorted flame tongues — turbulence-displaced gradient. White-yellow fuel base, red top. */}
-      <svg
+      {/* Asymmetric flame petals — left and right blobs on different periods. */}
+      <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-0 h-[80%] w-full motion-safe:animate-fire-flicker"
-        filter="url(#cal-fire-turbulence)"
-      >
-        <defs>
-          <linearGradient id={`flame-grad-${cellSeed}`} x1="0" x2="0" y1="1" y2="0">
-            <stop offset="0%" stopColor="#fef9c3" stopOpacity="0.95" />
-            <stop offset="22%" stopColor="#fde047" stopOpacity="0.88" />
-            <stop offset="50%" stopColor="#fb923c" stopOpacity="0.72" />
-            <stop offset="78%" stopColor="#dc2626" stopOpacity="0.32" />
-            <stop offset="100%" stopColor="#7f1d1d" stopOpacity="0" />
-          </linearGradient>
-        </defs>
-        <rect width="100%" height="100%" fill={`url(#flame-grad-${cellSeed})`} />
-      </svg>
+        className="pointer-events-none fire-petal-left absolute inset-0 motion-safe:animate-fire-petal-left"
+        style={{ animationDelay: `-${phaseLeft}s` } as React.CSSProperties}
+      />
+      <span
+        aria-hidden="true"
+        className="pointer-events-none fire-petal-right absolute inset-0 motion-safe:animate-fire-petal-right"
+        style={{ animationDelay: `-${phaseRight}s` } as React.CSSProperties}
+      />
+      {/* Outer rim glow — soft inset shadows, slow breathe. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 motion-safe:animate-fire-glow shadow-[inset_0_-22px_28px_-12px_rgba(251,146,60,0.55),inset_0_0_22px_-10px_rgba(220,38,38,0.5)]"
+        style={{ animationDelay: `-${phaseGlow}s` } as React.CSSProperties}
+      />
       {!compact && (
         <>
           <span
             className="ember"
             style={
               {
-                "--x": "12%",
-                "--delay": `${phase}s`,
-                "--dur": "1.9s",
-                "--drift": "-3px",
+                "--x": "22%",
+                "--delay": `-${phaseEmber}s`,
+                "--dur": "3.4s",
+                "--drift": "-4px",
               } as React.CSSProperties
             }
           />
@@ -404,9 +412,9 @@ function FireLayer({ compact, cellSeed }: { compact: boolean; cellSeed: number }
             className="ember"
             style={
               {
-                "--x": "30%",
-                "--delay": `${phase + 0.4}s`,
-                "--dur": "2.1s",
+                "--x": "55%",
+                "--delay": `-${(phaseEmber + 1.3) % 3.6}s`,
+                "--dur": "3.8s",
                 "--drift": "2px",
               } as React.CSSProperties
             }
@@ -415,31 +423,9 @@ function FireLayer({ compact, cellSeed }: { compact: boolean; cellSeed: number }
             className="ember"
             style={
               {
-                "--x": "50%",
-                "--delay": `${phase + 0.8}s`,
-                "--dur": "1.7s",
-                "--drift": "-1px",
-              } as React.CSSProperties
-            }
-          />
-          <span
-            className="ember"
-            style={
-              {
-                "--x": "68%",
-                "--delay": `${phase + 1.2}s`,
-                "--dur": "2.0s",
-                "--drift": "3px",
-              } as React.CSSProperties
-            }
-          />
-          <span
-            className="ember"
-            style={
-              {
-                "--x": "85%",
-                "--delay": `${phase + 1.6}s`,
-                "--dur": "2.3s",
+                "--x": "78%",
+                "--delay": `-${(phaseEmber + 2.4) % 3.6}s`,
+                "--dur": "3.1s",
                 "--drift": "-2px",
               } as React.CSSProperties
             }
@@ -625,28 +611,6 @@ function FlameGlyph({ filled }: { filled: boolean }) {
       aria-hidden="true"
     >
       <path d="M8 1.5c0 2.5-3 3.2-3 6 0 1.4 1 2.7 2.2 3.1-.5-.5-.7-1.1-.7-1.7 0-1.6 1.6-2.1 1.6-3.7 1.3 1.4 2.4 2.4 2.4 4.1 0 1.7-1.4 3.2-3.5 3.2C5 12.5 3 10.7 3 8.3 3 4.8 8 4 8 1.5z" />
-    </svg>
-  );
-}
-
-function SharedFireFilter() {
-  return (
-    <svg className="pointer-events-none absolute h-0 w-0" aria-hidden="true">
-      <title>cal-fire-defs</title>
-      <defs>
-        {/* biome-ignore lint/correctness/useUniqueElementIds: shared filter ref'd by all DayCell fire layers; Calendar mounts at most once per page */}
-        <filter id="cal-fire-turbulence" x="-30%" y="-30%" width="160%" height="160%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.025 0.08" numOctaves={3} seed={3}>
-            <animate
-              attributeName="baseFrequency"
-              dur="2.8s"
-              values="0.025 0.08;0.038 0.13;0.028 0.10;0.025 0.08"
-              repeatCount="indefinite"
-            />
-          </feTurbulence>
-          <feDisplacementMap in="SourceGraphic" scale={16} />
-        </filter>
-      </defs>
     </svg>
   );
 }

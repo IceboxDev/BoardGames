@@ -353,45 +353,113 @@ body {
   animation: fire-breathe 4s ease-in-out infinite;
 }
 
-/* Rapid irregular flicker for the flame layers — the actual "fire" feel. */
-@keyframes fire-flicker {
+/* "On fire" cell — layered radial gradients that breathe on independent
+   periods. No SVG turbulence (that produces hard rectangle edges); no shared
+   keyframes across cells (that produces lockstep). Each layer uses
+   mix-blend-mode: screen so brights add up the way real fire compositing does. */
+
+/* Layer 1 — molten dome at bottom-center. The "heart" of the fire. */
+.fire-bloom {
+  background: radial-gradient(
+    ellipse 75% 85% at 50% 108%,
+    rgba(254, 240, 138, 0.95) 0%,
+    rgba(251, 146, 60, 0.7) 20%,
+    rgba(234, 88, 12, 0.45) 42%,
+    rgba(127, 29, 29, 0.18) 68%,
+    transparent 92%
+  );
+  mix-blend-mode: screen;
+  transform-origin: 50% 100%;
+}
+@keyframes fire-bloom {
   0%,
   100% {
-    opacity: 0.92;
-    transform: scaleY(1);
+    transform: scale(1, 0.96);
+    opacity: 0.86;
   }
-  18% {
-    opacity: 0.74;
-    transform: scaleY(0.96);
-  }
-  37% {
-    opacity: 0.98;
-    transform: scaleY(1.04);
-  }
-  58% {
-    opacity: 0.8;
-    transform: scaleY(0.99);
-  }
-  79% {
-    opacity: 0.94;
-    transform: scaleY(1.02);
+  50% {
+    transform: scale(1.04, 1.08);
+    opacity: 1;
   }
 }
-.animate-fire-flicker {
-  animation: fire-flicker 0.55s ease-in-out infinite;
-  transform-origin: bottom center;
+.animate-fire-bloom {
+  animation: fire-bloom 3.4s ease-in-out infinite;
 }
 
-/* Radial hot core — bright white-yellow at the base of a fire cell, fading through orange to dark red. */
-.fire-core {
+/* Layer 2 — left flame petal. Asymmetric, drifts and breathes. */
+.fire-petal-left {
   background: radial-gradient(
-    ellipse at 50% 100%,
-    rgba(254, 240, 138, 0.9) 0%,
-    rgba(251, 146, 60, 0.7) 22%,
-    rgba(220, 38, 38, 0.45) 48%,
-    rgba(127, 29, 29, 0.15) 72%,
-    transparent 100%
+    ellipse 42% 58% at 28% 96%,
+    rgba(252, 211, 77, 0.65) 0%,
+    rgba(249, 115, 22, 0.42) 35%,
+    transparent 78%
   );
+  mix-blend-mode: screen;
+  transform-origin: 28% 100%;
+}
+@keyframes fire-petal-left {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1, 1);
+    opacity: 0.7;
+  }
+  35% {
+    transform: translate(-2px, -3px) scale(1.05, 1.12);
+    opacity: 0.95;
+  }
+  70% {
+    transform: translate(1px, -1px) scale(0.96, 0.95);
+    opacity: 0.55;
+  }
+}
+.animate-fire-petal-left {
+  animation: fire-petal-left 2.1s ease-in-out infinite;
+}
+
+/* Layer 3 — right flame petal. Different period (2.7s vs 2.1s) so the two
+   petals never sync, and the whole cell never repeats on a clean cycle. */
+.fire-petal-right {
+  background: radial-gradient(
+    ellipse 38% 52% at 72% 98%,
+    rgba(254, 215, 170, 0.6) 0%,
+    rgba(220, 38, 38, 0.4) 38%,
+    transparent 80%
+  );
+  mix-blend-mode: screen;
+  transform-origin: 72% 100%;
+}
+@keyframes fire-petal-right {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1, 1);
+    opacity: 0.62;
+  }
+  42% {
+    transform: translate(2px, -4px) scale(1.06, 1.14);
+    opacity: 0.92;
+  }
+  76% {
+    transform: translate(-1px, -2px) scale(0.97, 0.96);
+    opacity: 0.5;
+  }
+}
+.animate-fire-petal-right {
+  animation: fire-petal-right 2.7s ease-in-out infinite;
+}
+
+/* Layer 4 — outer rim glow. Slow opacity breathe (4.3s) so the cell as a whole
+   doesn't lock to the petals' faster cycles. */
+@keyframes fire-glow {
+  0%,
+  100% {
+    opacity: 0.82;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.animate-fire-glow {
+  animation: fire-glow 4.3s ease-in-out infinite;
 }
 
 /* Soft 2.2s opacity pulse for attention-seeking pills (RSVP, etc). */
