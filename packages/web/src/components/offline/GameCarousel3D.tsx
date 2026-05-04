@@ -13,6 +13,14 @@ type Props = {
   /** Date key — used as the scope for reactions. Empty string = no reactions UI. */
   date: string;
   reactions: Record<string, ReactionAggregate>;
+  /**
+   * Fires when the user navigates past the rightmost card (right-arrow key,
+   * right chevron click, or swipe-left at the end). When provided, the
+   * carousel does not clamp at the last card — it hands off to the caller,
+   * which lets `RsvpModal` use this as the natural way to flip into the
+   * results view.
+   */
+  onPastEnd?: () => void;
 };
 
 const CARD_WIDTH = 380;
@@ -31,16 +39,30 @@ function asymptote(offset: number, max: number): number {
   return Math.sign(offset) * max * Math.tanh(Math.abs(offset) / SPREAD_K);
 }
 
-export default function GameCarousel3D({ games, minPlayers, maxPlayers, date, reactions }: Props) {
+export default function GameCarousel3D({
+  games,
+  minPlayers,
+  maxPlayers,
+  date,
+  reactions,
+  onPastEnd,
+}: Props) {
   const [center, setCenter] = useState(0);
+  const atEnd = center >= games.length - 1;
 
   const goPrev = useCallback(() => {
     setCenter((c) => Math.max(0, c - 1));
   }, []);
 
   const goNext = useCallback(() => {
-    setCenter((c) => Math.min(games.length - 1, c + 1));
-  }, [games.length]);
+    setCenter((c) => {
+      if (c >= games.length - 1) {
+        if (onPastEnd) onPastEnd();
+        return c;
+      }
+      return c + 1;
+    });
+  }, [games.length, onPastEnd]);
 
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
@@ -110,9 +132,14 @@ export default function GameCarousel3D({ games, minPlayers, maxPlayers, date, re
       <button
         type="button"
         onClick={goNext}
-        disabled={center >= games.length - 1}
-        aria-label="Next game"
+        disabled={atEnd && !onPastEnd}
+        aria-label={atEnd && onPastEnd ? "Switch to results" : "Next game"}
         className="absolute right-2 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/80 text-white backdrop-blur-sm transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:right-4"
+        style={
+          atEnd && onPastEnd
+            ? { borderColor: "rgb(251 191 36 / 0.6)", color: "rgb(253 230 138)" }
+            : undefined
+        }
       >
         <ChevronGlyph direction="right" />
       </button>

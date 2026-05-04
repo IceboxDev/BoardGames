@@ -92,23 +92,16 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
     });
   }, [gamesQuery.data, preview]);
 
-  const fullyRsvpd = useMemo(() => {
-    if (preview || !lock) return false;
-    if (lock.expectedUserIds.length === 0) return false;
-    return lock.expectedUserIds.every((id) => Boolean(lock.rsvps[id]));
-  }, [lock, preview]);
-
   const hypedCount = useMemo(
     () => availableGames.filter((g) => (reactions[g.slug]?.hype ?? 0) > 0).length,
     [availableGames, reactions],
   );
 
-  // Auto-default: results once everyone RSVPd and at least one game is hyped.
-  // The user can override either way via the Pick / Results toggle below.
-  const [viewOverride, setViewOverride] = useState<"pick" | "results" | null>(null);
+  // Always default to "pick games"; the user can switch to results via the
+  // Pick / Results toggle below, or by navigating past the rightmost card.
+  const [view, setView] = useState<"pick" | "results">("pick");
   const canShowResults = hypedCount > 0;
-  const autoShowRanked = fullyRsvpd && canShowResults;
-  const showRanked = viewOverride ? viewOverride === "results" : autoShowRanked;
+  const showRanked = view === "results" && canShowResults;
   const showViewToggle = !preview && canShowResults;
 
   // While the auto-yes mutation is in flight on first open, render "Going"
@@ -200,7 +193,7 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
                       type="button"
                       role="tab"
                       aria-selected={!showRanked}
-                      onClick={() => setViewOverride("pick")}
+                      onClick={() => setView("pick")}
                       className={`rounded-full px-3 py-1.5 transition ${
                         !showRanked
                           ? "bg-accent-500/20 text-accent-300"
@@ -213,7 +206,7 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
                       type="button"
                       role="tab"
                       aria-selected={showRanked}
-                      onClick={() => setViewOverride("results")}
+                      onClick={() => setView("results")}
                       className={`rounded-full px-3 py-1.5 transition ${
                         showRanked
                           ? "bg-amber-400/20 text-amber-200"
@@ -272,6 +265,7 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
                 maxPlayers={definiteCount + tentativeCount}
                 date={preview ? "" : date}
                 reactions={reactions}
+                onPastEnd={canShowResults ? () => setView("results") : undefined}
               />
             )}
           </div>
