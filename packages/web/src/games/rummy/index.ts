@@ -8,4 +8,5 @@ export default {
   bggId: 15878,
   bgg,
   accentHex: accent.hex,
+  family: { id: "card-games", canonical: true, name: "Card Games", variant: "Rummy" },
 } satisfies GameModule;

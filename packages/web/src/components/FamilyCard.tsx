@@ -45,7 +45,7 @@ export default function FamilyCard({
       style={style}
       className={className}
       aria-expanded={expanded}
-      aria-label={`${canonical.title} — ${ringMembers} variants. ${
+      aria-label={`${family.displayName} — ${ringMembers} variants. ${
         expanded ? "Collapse" : "Expand"
       }.`}
     >
@@ -115,7 +115,7 @@ export default function FamilyCard({
       <div className="relative flex flex-1 flex-col gap-2 px-6 py-5">
         <div className="flex items-baseline justify-between gap-2">
           <h3 className="text-lg font-semibold text-gray-200 transition-colors group-hover:text-white">
-            {canonical.title}
+            {family.displayName}
           </h3>
           <ChevronGlyph expanded={expanded} />
         </div>

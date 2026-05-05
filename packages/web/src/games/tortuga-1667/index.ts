@@ -8,4 +8,5 @@ export default {
   bggId: 218530,
   bgg,
   accentHex: accent.hex,
+  family: { id: "dark-cities", variant: "Tortuga 1667" },
 } satisfies GameModule;

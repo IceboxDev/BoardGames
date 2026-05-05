@@ -22,4 +22,5 @@ export default {
   ],
   tournamentShowScoreDiff: false,
   rulesUrl,
+  family: { id: "card-games", variant: "Durak" },
 } satisfies GameModule;

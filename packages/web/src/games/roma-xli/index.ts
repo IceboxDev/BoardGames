@@ -8,4 +8,5 @@ export default {
   bggId: 457060,
   bgg,
   accentHex: accent.hex,
+  family: { id: "dark-cities", variant: "Roma XLI" },
 } satisfies GameModule;

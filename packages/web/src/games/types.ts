@@ -42,6 +42,11 @@ export type GameFamily = {
   /** Marks the canonical (representative) member. Exactly one per family
    * should set this; if none does, the first member by registry order wins. */
   canonical?: boolean;
+  /** Optional family display name. Set on the canonical member when the
+   * family's name should differ from the canonical's title (e.g. canonical
+   * "Brass: Birmingham" → family "Brass"). When omitted, the family is
+   * displayed as the canonical's title. */
+  name?: string;
   /** Human-readable variant label, e.g. "Classic", "Flip", "Jaws of the Lion".
    * Used for chip labels in the carousel and inventory headers. */
   variant: string;

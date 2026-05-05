@@ -91,8 +91,8 @@ export default function FamilyCarouselCard({
       aria-hidden={hidden}
       aria-label={
         isCenter
-          ? `${active.title} (${family.canonical.title} family), current selection`
-          : `Show ${family.canonical.title}`
+          ? `${active.title} (${family.displayName} family), current selection`
+          : `Show ${family.displayName}`
       }
       className="absolute left-1/2 top-1/2 origin-center cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-surface-900 text-left shadow-2xl shadow-black/40 transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
       style={

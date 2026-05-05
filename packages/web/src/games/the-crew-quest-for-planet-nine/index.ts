@@ -8,5 +8,5 @@ export default {
   bggId: 284083,
   bgg,
   accentHex: accent.hex,
-  family: { id: "the-crew", canonical: true, variant: "Quest for Planet Nine" },
+  family: { id: "the-crew", canonical: true, name: "The Crew", variant: "Quest for Planet Nine" },
 } satisfies GameModule;

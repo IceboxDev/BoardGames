@@ -8,4 +8,5 @@ export default {
   bggId: 370621,
   bgg,
   accentHex: accent.hex,
+  family: { id: "dark-cities", variant: "Hollywood 1947" },
 } satisfies GameModule;

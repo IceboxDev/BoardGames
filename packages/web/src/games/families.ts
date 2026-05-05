@@ -14,6 +14,10 @@ export type FamilyInfo = {
   id: string;
   canonical: GameDefinition;
   members: GameDefinition[];
+  /** Display name for the family. Reads `canonical.family.name` if set,
+   * falling back to `canonical.title`. Used by every UI that labels a
+   * family (gallery card, carousel badge, inventory cell secondary line). */
+  displayName: string;
 };
 
 /**
@@ -34,7 +38,12 @@ for (const g of games) {
   slugToFamilyId.set(g.slug, g.family.id);
   let info = familyMap.get(g.family.id);
   if (!info) {
-    info = { id: g.family.id, canonical: g, members: [g] };
+    info = {
+      id: g.family.id,
+      canonical: g,
+      members: [g],
+      displayName: g.family.name ?? g.title,
+    };
     familyMap.set(g.family.id, info);
     continue;
   }
@@ -48,6 +57,7 @@ for (const g of games) {
       );
     } else {
       info.canonical = g;
+      info.displayName = g.family.name ?? g.title;
     }
   }
 }

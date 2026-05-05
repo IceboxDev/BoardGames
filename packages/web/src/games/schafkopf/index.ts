@@ -8,4 +8,5 @@ export default {
   bggId: 6817,
   bgg,
   accentHex: accent.hex,
+  family: { id: "card-games", variant: "Schafkopf" },
 } satisfies GameModule;

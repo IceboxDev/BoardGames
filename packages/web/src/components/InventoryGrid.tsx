@@ -14,82 +14,69 @@ type Props = {
 };
 
 /**
- * Inventory toggle grid with family grouping. Singletons render as today;
- * families render as a header block with the variant cells indented beneath
- * (each variant remains independently checkable). Same checkbox semantics
- * as before — server payload is unchanged.
+ * Inventory toggle grid. Family sections at the top (one section per family
+ * with its display name as a header), then a single shared grid for every
+ * singleton at the bottom. Cells use neutral chrome with the global accent
+ * for checked state — family identity is communicated by the section
+ * header, not by per-cell color.
  */
 export default function InventoryGrid({ selected, onToggle, games: input = games }: Props) {
   const selectedSet = useMemo(() => new Set(selected), [selected]);
-  const units = useMemo(() => groupForPresentation(input), [input]);
+
+  const { familyGroups, singletons } = useMemo(() => {
+    const units = groupForPresentation(input);
+    const fGroups: { family: FamilyInfo; members: GameDefinition[] }[] = [];
+    const single: GameDefinition[] = [];
+    for (const unit of units) {
+      if (unit.kind === "family") {
+        fGroups.push({ family: unit.family, members: unit.visibleMembers });
+      } else {
+        single.push(unit.game);
+      }
+    }
+    return { familyGroups: fGroups, singletons: single };
+  }, [input]);
 
   return (
-    <div className="space-y-4">
-      {units.map((unit) => {
-        if (unit.kind === "single") {
-          return (
-            <div
-              key={unit.game.slug}
-              className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4"
-            >
-              <InventoryCell
-                game={unit.game}
-                checked={selectedSet.has(unit.game.slug)}
-                onToggle={() => onToggle(unit.game.slug)}
-              />
-            </div>
-          );
-        }
+    <div className="space-y-5">
+      {familyGroups.map(({ family, members }) => {
+        const owned = members.filter((m) => selectedSet.has(m.slug)).length;
         return (
-          <FamilyBlock
-            key={unit.family.id}
-            family={unit.family}
-            visibleMembers={unit.visibleMembers}
-            selectedSet={selectedSet}
-            onToggle={onToggle}
-          />
+          <section key={family.id}>
+            <h3 className="mb-2 flex items-baseline gap-2 px-1 text-[11px] font-bold uppercase tracking-[0.18em] text-gray-400">
+              <span>{family.displayName}</span>
+              <span className="text-[10px] font-normal tracking-[0.14em] text-gray-500">
+                {owned} / {members.length} owned
+              </span>
+            </h3>
+            <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+              {members.map((g) => (
+                <InventoryCell
+                  key={g.slug}
+                  game={g}
+                  checked={selectedSet.has(g.slug)}
+                  onToggle={() => onToggle(g.slug)}
+                />
+              ))}
+            </div>
+          </section>
         );
       })}
-    </div>
-  );
-}
 
-function FamilyBlock({
-  family,
-  visibleMembers,
-  selectedSet,
-  onToggle,
-}: {
-  family: FamilyInfo;
-  visibleMembers: GameDefinition[];
-  selectedSet: Set<string>;
-  onToggle: (slug: string) => void;
-}) {
-  const ownedCount = visibleMembers.filter((m) => selectedSet.has(m.slug)).length;
-  return (
-    <div
-      className="rounded-xl border border-[var(--accent)]/20 bg-[color-mix(in_srgb,var(--accent)_3%,var(--color-surface-900))] p-2"
-      style={{ "--accent": family.canonical.accentHex } as React.CSSProperties}
-    >
-      <div className="mb-2 flex items-center justify-between gap-2 px-1">
-        <span className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--accent)]">
-          {family.canonical.title}
-        </span>
-        <span className="text-[10px] uppercase tracking-[0.16em] text-gray-500">
-          {ownedCount} / {visibleMembers.length} owned
-        </span>
-      </div>
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
-        {visibleMembers.map((member) => (
-          <InventoryCell
-            key={member.slug}
-            game={member}
-            checked={selectedSet.has(member.slug)}
-            onToggle={() => onToggle(member.slug)}
-            variantLabel={member.family?.variant}
-          />
-        ))}
-      </div>
+      {singletons.length > 0 && (
+        <section>
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
+            {singletons.map((g) => (
+              <InventoryCell
+                key={g.slug}
+                game={g}
+                checked={selectedSet.has(g.slug)}
+                onToggle={() => onToggle(g.slug)}
+              />
+            ))}
+          </div>
+        </section>
+      )}
     </div>
   );
 }
@@ -98,13 +85,10 @@ function InventoryCell({
   game,
   checked,
   onToggle,
-  variantLabel,
 }: {
   game: GameDefinition;
   checked: boolean;
   onToggle: () => void;
-  /** When set, shown as the secondary line in place of the slug. */
-  variantLabel?: string;
 }) {
   return (
     <label
@@ -123,12 +107,8 @@ function InventoryCell({
         className="h-10 w-10 shrink-0 rounded object-cover"
       />
       <span className="min-w-0 flex-1 text-xs">
-        <span className="block truncate font-semibold text-gray-200">
-          {variantLabel ?? game.title}
-        </span>
-        <span className="block truncate text-[10px] text-gray-500">
-          {variantLabel ? game.title : game.slug}
-        </span>
+        <span className="block truncate font-semibold text-gray-200">{game.title}</span>
+        <span className="block truncate text-[10px] text-gray-500">{game.slug}</span>
       </span>
       {checked && (
         <svg
