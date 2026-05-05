@@ -1,7 +1,11 @@
+import {
+  ClearRsvpBodySchema,
+  OkResponseSchema,
+  SetRsvpBodySchema,
+} from "@boardgames/core/protocol";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
-
-const DATE_KEY_RE = /^\d{4}-\d{2}-\d{2}$/;
+import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 
 export const calendarRsvpsRoutes = authedApp();
 
@@ -29,55 +33,47 @@ async function loadLockState(date: string): Promise<{
   };
 }
 
-calendarRsvpsRoutes.post("/rsvp", async (c) => {
+calendarRsvpsRoutes.post("/rsvp", zJsonBody(SetRsvpBodySchema), async (c) => {
   const user = c.get("user");
-  const body = (await c.req.json().catch(() => ({}))) as {
-    date?: unknown;
-    status?: unknown;
-  };
-  const date = body.date;
-  const status = body.status;
-  if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
-    return c.json({ error: "invalid date" }, 400);
-  }
-  if (status !== "yes" && status !== "no") {
-    return c.json({ error: "status must be 'yes' or 'no'" }, 400);
-  }
+  const { date, status, auto } = c.req.valid("json");
+  const autoFlag = auto ? 1 : 0;
+
   const lockState = await loadLockState(date);
   if (!lockState || !lockState.locked) {
-    return c.json({ error: "date is not locked" }, 400);
+    return errorResponse(c, 400, "date is not locked");
   }
   // When picks are locked, only users who were in the expected snapshot at
   // lock-in time may RSVP — late arrivals can't sneak in over a finalized
   // guest list. Existing attendees can still flip yes ↔ no.
   if (lockState.picksLocked && !lockState.expected.has(user.id)) {
-    return c.json({ error: "guest list is locked" }, 403);
+    return errorResponse(c, 403, "guest list is locked", "GUEST_LIST_LOCKED");
   }
 
+  // The auto flag tracks whether this came from a real button click
+  // (auto=0) vs an automated mechanism (auto=1). Important: a manual click
+  // that overwrites a prior auto row must reset auto to 0 so the attendees
+  // view stops showing "Hasn't RSVP'd yet" for that user.
   await getDb().execute({
-    sql: `INSERT INTO rsvps (date_key, user_id, status, rsvped_at)
-          VALUES (?, ?, ?, datetime('now'))
+    sql: `INSERT INTO rsvps (date_key, user_id, status, rsvped_at, auto)
+          VALUES (?, ?, ?, datetime('now'), ?)
           ON CONFLICT(date_key, user_id) DO UPDATE SET
             status = excluded.status,
-            rsvped_at = excluded.rsvped_at`,
-    args: [date, user.id, status],
+            rsvped_at = excluded.rsvped_at,
+            auto = excluded.auto`,
+    args: [date, user.id, status, autoFlag],
   });
 
-  return c.json({ ok: true });
+  return c.json(OkResponseSchema.parse({ ok: true }));
 });
 
-calendarRsvpsRoutes.delete("/rsvp", async (c) => {
+calendarRsvpsRoutes.delete("/rsvp", zJsonBody(ClearRsvpBodySchema), async (c) => {
   const user = c.get("user");
-  const body = (await c.req.json().catch(() => ({}))) as { date?: unknown };
-  const date = body.date;
-  if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
-    return c.json({ error: "invalid date" }, 400);
-  }
+  const { date } = c.req.valid("json");
 
   await getDb().execute({
     sql: "DELETE FROM rsvps WHERE date_key = ? AND user_id = ?",
     args: [date, user.id],
   });
 
-  return c.json({ ok: true });
+  return c.json(OkResponseSchema.parse({ ok: true }));
 });

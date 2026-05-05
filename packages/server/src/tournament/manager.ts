@@ -3,8 +3,18 @@ import { randomUUID } from "node:crypto";
 import { existsSync } from "node:fs";
 import { availableParallelism } from "node:os";
 import { join } from "node:path";
+import { TournamentStreamEventSchema } from "@boardgames/core/protocol";
 import { getDb } from "../db.ts";
 import { tournamentRegistry } from "./game-registry.ts";
+
+/**
+ * Build an SSE event JSON string after running it through
+ * {@link TournamentStreamEventSchema}. Drift between server and client
+ * surfaces as a thrown error here, not a silent skew on the consumer.
+ */
+function encodeSseEvent(event: unknown): string {
+  return JSON.stringify(TournamentStreamEventSchema.parse(event));
+}
 
 function resolveWorker(): { path: string; isDev: boolean } {
   // Dev (tsx): this module lives in src/tournament/, sibling to game-worker.ts.
@@ -160,7 +170,7 @@ async function handleWorkerFailure(entry: TournamentEntry, error: Error | string
   });
 
   console.error(`Tournament ${entry.id} worker error:`, error);
-  const event = JSON.stringify({ kind: "error", message: String(error) });
+  const event = encodeSseEvent({ kind: "error", version: 1, message: String(error) });
   for (const send of entry.sseClients) {
     send(event);
   }
@@ -304,8 +314,9 @@ async function handleWorkerMessage(
       args: [entry.gamesCompleted, id],
     });
 
-    const event = JSON.stringify({
+    const event = encodeSseEvent({
       kind: "progress",
+      version: 1,
       completed: entry.gamesCompleted,
       total: entry.total,
       partial: buildPartial(entry),
@@ -324,7 +335,7 @@ async function handleWorkerMessage(
         args: [JSON.stringify(result), id],
       });
 
-      const event = JSON.stringify({ kind: "complete", result });
+      const event = encodeSseEvent({ kind: "complete", version: 1, result });
       for (const send of entry.sseClients) {
         send(event);
       }
@@ -349,7 +360,7 @@ export async function abortTournament(id: string): Promise<boolean> {
     args: [id],
   });
 
-  const event = JSON.stringify({ kind: "error", message: "Tournament aborted" });
+  const event = encodeSseEvent({ kind: "error", version: 1, message: "Tournament aborted" });
   for (const send of entry.sseClients) {
     send(event);
   }

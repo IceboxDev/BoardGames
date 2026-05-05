@@ -13,12 +13,13 @@ pnpm lint                     # biome check (lint + format check)
 pnpm lint:fix                 # biome check --write (auto-fix)
 pnpm format                   # biome format --write
 pnpm typecheck                # typecheck all packages
+pnpm test                     # run vitest across packages (currently core-only)
 pnpm -r --filter @boardgames/web typecheck   # typecheck single package
 ```
 
 Scripts in individual packages can be run with `pnpm --filter <pkg> <script>`, e.g. `pnpm --filter @boardgames/server dev`.
 
-Pre-commit hook (lefthook): runs `biome check` on staged files and `pnpm -r typecheck` in parallel.
+Pre-commit hook (lefthook): runs `biome check` on staged files, `pnpm -r typecheck`, and `pnpm test` in parallel.
 
 ## Code Style
 
@@ -27,6 +28,35 @@ Biome enforces formatting and linting. Key settings:
 - Double quotes, trailing commas, semicolons
 - `useImportType: "error"` — use `import type` for type-only imports
 - `noUnusedImports: "error"`
+- `noExplicitAny: "error"` — never `any`. Use `unknown` and narrow with a schema.
+
+## Wire protocol & schema validation
+
+All HTTP, WebSocket, and SSE messages exchanged between `packages/web` and `packages/server` are defined as Zod 4 schemas in `@boardgames/core/protocol/*` and shared as the **single source of truth**. Hand-rolled defensive parsers and `as TheirShape` casts at the wire boundary are forbidden.
+
+**Schema layout:**
+- `packages/core/src/protocol/common.ts` — `ErrorResponseSchema`, branded `DateKey`/`IsoTimestamp`/`TimeOfDay`/`GameSlug`.
+- `packages/core/src/protocol/http/*.ts` — request/response schemas grouped by feature (`calendar`, `availability`, `inventory`, `tournament`, `games`, `auth`).
+- `packages/core/src/protocol/ws/*.ts` — `ServerMessageSchema` and `ClientMessageSchema` (discriminated unions on `type`), `RoomStateSchema`/`RoomSlotSchema`. Per-game `playerView`/`legalActions`/`result` payloads stay `z.unknown()` at the envelope; per-game schemas are a follow-up.
+- Each schema file has an adjacent `*.test.ts` (good payload parses; bad payload throws with the expected issue path).
+- Types are derived via `z.infer` (or `z.input` for raw form shapes), never re-declared as TS interfaces.
+
+**Helper APIs (web):**
+- `packages/web/src/lib/api-fetch.ts:apiFetch(path, { request?, response, body?, method?, signal? })` — every HTTP call site goes through this. Throws `ApiError` for non-2xx (with the server's `ErrorResponseSchema` envelope) and `SchemaError` for shape mismatch.
+- `packages/web/src/lib/typed-query.ts:jsonQuery` / `jsonMutation` — React Query factories.
+- `packages/web/src/lib/ws-client.ts:parseServerMessage(raw)` — typed WS envelope parser (throws `SchemaError`).
+
+**Helper APIs (server):**
+- `packages/server/src/lib/error-response.ts:zJsonBody(schema)` / `zQuery(schema)` / `errorResponse(c, status, msg, code?)` — wraps `@hono/zod-validator` with the shared error envelope.
+- `packages/server/src/sessions/parse-client-message.ts:parseClientMessage(raw)` — typed inbound WS envelope parser.
+
+**When adding a new endpoint:**
+1. Define its request and response schemas in `core/protocol/http/<group>.ts` (or `ws/*.ts` for WS messages).
+2. Add an adjacent `*.test.ts` covering one happy-path and 2–3 error cases.
+3. Server route uses `zJsonBody`/`zQuery` for inputs and `Schema.parse(payload)` before `c.json(...)` for outputs.
+4. Client uses `apiFetch(path, { response: ... })` (or the React Query factories). No raw `fetch` and no `as` casts at the boundary.
+
+**Helper API signatures accept `StandardSchemaV1<unknown, T>`** (from `@standard-schema/spec`), not `z.ZodSchema`. The Zod implementation in `@boardgames/core` is swappable later; consumer call sites stay stable.
 
 ## Architecture
 

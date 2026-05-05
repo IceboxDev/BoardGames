@@ -3,8 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { games as gameRegistry } from "../../games/registry";
-import type { GameDefinition } from "../../games/types";
-import { useSession } from "../../lib/auth-client";
+import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import { fetchAvailableGames } from "../../lib/calendar-games";
 import { type CalendarLocks, togglePicksLock } from "../../lib/calendar-locks";
 import { type RsvpStatus, setRsvp } from "../../lib/calendar-rsvps";
@@ -17,13 +16,11 @@ type Props = {
   date: string;
   locks: CalendarLocks | undefined;
   onClose: () => void;
-  /** Preview mode: skip fetching games, use the full registry, hide RSVP. */
-  preview?: boolean;
 };
 
-export default function RsvpModal({ date, locks, onClose, preview = false }: Props) {
-  const { data: session } = useSession();
-  const userId = session?.user?.id ?? null;
+export default function RsvpModal({ date, locks, onClose }: Props) {
+  const { user, isAdmin } = useCurrentUser();
+  const userId = user?.id ?? null;
   const queryClient = useQueryClient();
 
   const lock = locks?.[date];
@@ -32,11 +29,12 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
   const gamesQuery = useQuery({
     queryKey: qk.availableGames(date),
     queryFn: ({ signal }) => fetchAvailableGames(date, signal),
-    enabled: !!lock && !preview,
+    enabled: !!lock,
   });
 
   const setRsvpMutation = useMutation({
-    mutationFn: ({ status }: { status: RsvpStatus }) => setRsvp(date, status),
+    mutationFn: ({ status, auto }: { status: RsvpStatus; auto?: boolean }) =>
+      setRsvp(date, status, auto ?? false),
     onSettled: () => {
       void queryClient.invalidateQueries({ queryKey: qk.calendarLocks() });
       void queryClient.invalidateQueries({ queryKey: qk.availableGames(date) });
@@ -51,26 +49,27 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
     },
   });
 
-  const isAdmin = (session?.user as { role?: string } | undefined)?.role === "admin";
   const isHost = !!lock?.host && lock.host.userId === userId;
-  const canTogglePicksLock = !preview && !!lock && (isAdmin || isHost);
+  const canTogglePicksLock = !!lock && (isAdmin || isHost);
   const picksLocked = !!lock?.picksLockedAt;
 
-  // Auto-confirm "yes" the first time a viewer opens the modal without an
-  // existing RSVP — opening the overlay is itself the commitment. Existing
-  // "yes" or "no" choices are preserved on subsequent re-opens.
+  // Opening the card is the physical interaction we care about (the user
+  // has now seen the location, time, and game picks), so we promote the
+  // RSVP to a manual yes — both for first-time openers (no row yet) and
+  // for users who were lock-batch auto-yes'd (auto=1 row → re-write as
+  // auto=0 to clear the "Hasn't RSVP'd yet" pill). Explicit "no" survives
+  // — we don't override a deliberate decline.
   const autoRsvpRef = useRef(false);
   useEffect(() => {
-    if (preview) return;
     if (!lock || !userId) return;
-    if (viewerRsvp !== undefined) return;
+    if (viewerRsvp === "no") return;
     if (autoRsvpRef.current) return;
     // If the guest list is sealed and the viewer wasn't on it, never
     // auto-RSVP — server would reject and we'd show a confusing error.
     if (picksLocked && !lock.expectedUserIds.includes(userId) && !isAdmin && !isHost) return;
     autoRsvpRef.current = true;
     setRsvpMutation.mutate({ status: "yes" });
-  }, [preview, lock, userId, viewerRsvp, setRsvpMutation.mutate, picksLocked, isAdmin, isHost]);
+  }, [lock, userId, viewerRsvp, setRsvpMutation.mutate, picksLocked, isAdmin, isHost]);
 
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
@@ -90,18 +89,17 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
     });
   }, [date]);
 
-  const definiteCount = preview ? 0 : (gamesQuery.data?.definiteCount ?? 0);
-  const tentativeCount = preview ? 0 : (gamesQuery.data?.tentativeCount ?? 0);
-  const reactions = preview ? {} : (gamesQuery.data?.reactions ?? {});
-  const topSlugs = preview ? [] : (gamesQuery.data?.topSlugs ?? []);
-  const attendees = preview ? [] : (gamesQuery.data?.attendees ?? []);
+  const definiteCount = gamesQuery.data?.definiteCount ?? 0;
+  const tentativeCount = gamesQuery.data?.tentativeCount ?? 0;
+  const reactions = gamesQuery.data?.reactions ?? {};
+  const topSlugs = gamesQuery.data?.topSlugs ?? [];
+  const attendees = gamesQuery.data?.attendees ?? [];
 
   // When picks are locked, the modal contents are inaccessible to anyone who
   // wasn't in the expected (RSVP yes / maybe) snapshot at lock-in time. The
   // host and admin can still see everything regardless. Past attendees who
   // RSVPed "no" are still in expectedUserIds and retain access.
   const lockedOut =
-    !preview &&
     picksLocked &&
     !!lock &&
     !!userId &&
@@ -109,8 +107,7 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
     !isHost &&
     !lock.expectedUserIds.includes(userId);
 
-  const availableGames = useMemo<GameDefinition[]>(() => {
-    if (preview) return gameRegistry;
+  const availableGames = useMemo(() => {
     const data = gamesQuery.data;
     if (!data || data.ownedSlugs.length === 0) return [];
     const ownedSet = new Set(data.ownedSlugs);
@@ -122,7 +119,7 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
       const max = g.bgg.maxPlayers ?? Number.POSITIVE_INFINITY;
       return min <= hi && max >= lo;
     });
-  }, [gamesQuery.data, preview]);
+  }, [gamesQuery.data]);
 
   const hypedCount = useMemo(
     () => availableGames.filter((g) => (reactions[g.slug]?.hype ?? 0) > 0).length,
@@ -133,8 +130,8 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
   // navigating past the rightmost card.
   const [view, setView] = useState<"pick" | "results" | "attendees">("pick");
   const canShowResults = hypedCount > 0;
-  const canShowAttendees = !preview && attendees.length > 0;
-  const showViewToggle = !preview && (canShowResults || canShowAttendees);
+  const canShowAttendees = attendees.length > 0;
+  const showViewToggle = canShowResults || canShowAttendees;
   // Guard against a stale view selection if the underlying availability
   // disappeared (e.g. the only hyped game was un-hyped and we're still on
   // the results tab). Fall back to "pick" silently.
@@ -217,23 +214,21 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
 
           <header className="flex min-w-0 flex-col items-start gap-1 pr-20">
             <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-300">
-              {preview ? "Preview · all games" : "Game night"}
+              Game night
             </p>
             <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
-              {preview ? `${availableGames.length} games in library` : headingDate}
+              {headingDate}
             </h2>
-            {!preview && (
-              <p className="text-xs text-gray-400">
-                <span className="font-semibold text-emerald-300">{definiteCount}</span> going
-                {tentativeCount > 0 && (
-                  <>
-                    {" · "}
-                    <span className="font-semibold text-amber-300">{tentativeCount}</span> maybe
-                  </>
-                )}
-              </p>
-            )}
-            {!preview && lock && (lock.host || lock.eventTime || lock.address) && (
+            <p className="text-xs text-gray-400">
+              <span className="font-semibold text-emerald-300">{definiteCount}</span> going
+              {tentativeCount > 0 && (
+                <>
+                  {" · "}
+                  <span className="font-semibold text-amber-300">{tentativeCount}</span> maybe
+                </>
+              )}
+            </p>
+            {lock && (lock.host || lock.eventTime || lock.address) && (
               <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-300">
                 {lock.host && <HostLine name={lock.host.name} />}
                 {lock.eventTime && <TimeLine value={lock.eventTime} />}
@@ -259,9 +254,9 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
             </div>
           )}
 
-          {!preview && !lockedOut && (
+          {!lockedOut && (
             <div className="flex flex-wrap items-center justify-between gap-2">
-              {showViewToggle ? (
+              {showViewToggle && viewerRsvp !== "no" ? (
                 <div
                   role="tablist"
                   aria-label="View mode"
@@ -314,35 +309,34 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
               ) : (
                 <span aria-hidden="true" />
               )}
-              {effectiveRsvp === "yes" ? (
-                <button
-                  type="button"
-                  onClick={() => setRsvpMutation.mutate({ status: "no" })}
-                  disabled={busy}
-                  aria-label="Going — tap to switch to not going"
-                  className="inline-flex items-center gap-2 rounded-full border border-emerald-300/60 bg-emerald-400/15 px-5 py-2 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-400/25 disabled:opacity-50"
-                >
-                  <span aria-hidden="true">✓</span>
-                  Going
-                </button>
-              ) : (
-                <button
-                  type="button"
-                  onClick={() => setRsvpMutation.mutate({ status: "yes" })}
-                  disabled={busy}
-                  aria-label="Not going — tap to switch to going"
-                  className="inline-flex items-center gap-2 rounded-full border border-rose-400/60 bg-rose-500/20 px-5 py-2 text-sm font-semibold text-rose-100 transition hover:bg-rose-500/30 disabled:opacity-50"
-                >
-                  <span aria-hidden="true">✗</span>
-                  Not going
-                </button>
-              )}
+              <RsvpSwitch
+                value={effectiveRsvp}
+                busy={busy}
+                onChange={(status) => {
+                  if (status !== effectiveRsvp) {
+                    setRsvpMutation.mutate({ status });
+                  }
+                }}
+              />
             </div>
           )}
 
           {!lockedOut && (
             <div className="flex min-h-0 flex-1 items-center justify-center">
-              {!preview && gamesQuery.isPending ? (
+              {viewerRsvp === "no" ? (
+                <div className="max-w-md rounded-2xl border border-rose-400/25 bg-rose-500/[0.06] px-6 py-8 text-center">
+                  <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-rose-500/20 text-rose-200">
+                    <span aria-hidden="true" className="text-lg font-bold">
+                      ✗
+                    </span>
+                  </div>
+                  <p className="text-sm font-semibold text-rose-100">You're sitting this one out</p>
+                  <p className="mt-2 text-xs leading-relaxed text-rose-200/70">
+                    Skipping the picks and votes since you're not coming. Flip the switch back to
+                    Going if you change your mind.
+                  </p>
+                </div>
+              ) : gamesQuery.isPending ? (
                 <p className="text-sm text-gray-500">Finding games…</p>
               ) : effectiveView === "attendees" ? (
                 <AttendeesView attendees={attendees} topSlugs={topSlugs} />
@@ -365,7 +359,7 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
                   games={availableGames}
                   minPlayers={definiteCount}
                   maxPlayers={definiteCount + tentativeCount}
-                  date={preview ? "" : date}
+                  date={date}
                   reactions={reactions}
                   onPastEnd={canShowResults ? () => setView("results") : undefined}
                 />
@@ -379,6 +373,57 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
 
   if (typeof document === "undefined") return null;
   return createPortal(overlay, document.body);
+}
+
+function RsvpSwitch({
+  value,
+  busy,
+  onChange,
+}: {
+  value: RsvpStatus;
+  busy: boolean;
+  onChange: (next: RsvpStatus) => void;
+}) {
+  // Segmented switch: both states are always visible so it's obvious the
+  // pill is interactive (click to flip), not just a status indicator.
+  // The active half is filled with semantic color; the inactive half is a
+  // muted ghost the user clicks to switch to that state. Implemented with
+  // aria-pressed toggle buttons — the equivalent semantics without the
+  // form-control implications of role=radio.
+  return (
+    <div className="inline-flex shrink-0 items-center rounded-full border border-white/10 bg-surface-950/60 p-0.5 text-sm font-semibold">
+      <button
+        type="button"
+        aria-pressed={value === "yes"}
+        aria-label="Going"
+        onClick={() => onChange("yes")}
+        disabled={busy}
+        className={`inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 transition disabled:opacity-50 ${
+          value === "yes"
+            ? "bg-emerald-400/20 text-emerald-100 ring-1 ring-emerald-300/60 shadow-[0_0_12px_-4px_rgba(16,185,129,0.5)]"
+            : "text-gray-500 hover:text-emerald-200"
+        }`}
+      >
+        <span aria-hidden="true">✓</span>
+        Going
+      </button>
+      <button
+        type="button"
+        aria-pressed={value === "no"}
+        aria-label="Not going"
+        onClick={() => onChange("no")}
+        disabled={busy}
+        className={`inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 transition disabled:opacity-50 ${
+          value === "no"
+            ? "bg-rose-500/20 text-rose-100 ring-1 ring-rose-300/60 shadow-[0_0_12px_-4px_rgba(244,63,94,0.5)]"
+            : "text-gray-500 hover:text-rose-200"
+        }`}
+      >
+        <span aria-hidden="true">✗</span>
+        Not going
+      </button>
+    </div>
+  );
 }
 
 function HostLine({ name }: { name: string }) {

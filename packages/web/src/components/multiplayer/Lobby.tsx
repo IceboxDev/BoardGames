@@ -1,4 +1,4 @@
-import type { RoomSlot, RoomState } from "@boardgames/core/protocol/messages";
+import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
 import type { GameRoomConfig } from "@boardgames/core/protocol/room-config";
 import { SetupLayout } from "../setup";
 

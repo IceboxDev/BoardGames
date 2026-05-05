@@ -1,18 +1,13 @@
+import {
+  InventoryWriteResponseSchema,
+  SetInventoryBodySchema,
+  SlugListSchema,
+} from "@boardgames/core/protocol";
 import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { zJsonBody } from "../lib/error-response.ts";
 
 export const adminInventoryRoutes = adminApp();
-
-const SLUG_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;
-
-function isValidSlugList(x: unknown): x is string[] {
-  if (!Array.isArray(x)) return false;
-  if (x.length > 200) return false;
-  for (const s of x) {
-    if (typeof s !== "string" || !SLUG_RE.test(s)) return false;
-  }
-  return true;
-}
 
 adminInventoryRoutes.get("/:id/inventory", async (c) => {
   const userId = c.req.param("id");
@@ -20,20 +15,16 @@ adminInventoryRoutes.get("/:id/inventory", async (c) => {
     sql: "SELECT game_slugs_json FROM user_inventory WHERE user_id = ?",
     args: [userId],
   });
-  if (rows.length === 0) return c.json([] as string[]);
+  if (rows.length === 0) return c.json(SlugListSchema.parse([]));
   const parsed = JSON.parse(rows[0].game_slugs_json as string) as unknown;
-  if (!Array.isArray(parsed)) return c.json([] as string[]);
-  return c.json(parsed.filter((s) => typeof s === "string"));
+  const list = Array.isArray(parsed) ? parsed.filter((s) => typeof s === "string") : [];
+  return c.json(SlugListSchema.parse(list));
 });
 
-adminInventoryRoutes.put("/:id/inventory", async (c) => {
+adminInventoryRoutes.put("/:id/inventory", zJsonBody(SetInventoryBodySchema), async (c) => {
   const userId = c.req.param("id");
-  const body = (await c.req.json()) as { slugs?: unknown };
-  if (!isValidSlugList(body.slugs)) {
-    return c.json({ error: "slugs must be an array of kebab-case strings (max 200)" }, 400);
-  }
-
-  const unique = Array.from(new Set(body.slugs));
+  const { slugs } = c.req.valid("json");
+  const unique = Array.from(new Set(slugs));
 
   await getDb().execute({
     sql: `INSERT INTO user_inventory (user_id, game_slugs_json, updated_at)
@@ -44,5 +35,5 @@ adminInventoryRoutes.put("/:id/inventory", async (c) => {
     args: [userId, JSON.stringify(unique)],
   });
 
-  return c.json({ ok: true, slugs: unique });
+  return c.json(InventoryWriteResponseSchema.parse({ ok: true, slugs: unique }));
 });

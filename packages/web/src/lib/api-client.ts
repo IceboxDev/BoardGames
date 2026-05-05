@@ -1,113 +1,143 @@
-import { apiUrl } from "./api-base";
+// Tournament + game-result endpoints. All `Record<string, unknown>` returns
+// from the legacy version of this file have been replaced by typed schemas
+// from `@boardgames/core/protocol`.
 
-const BASE_PATH = "/api";
-const url = (path: string) => apiUrl(`${BASE_PATH}${path}`);
-const opts: RequestInit = { credentials: "include" };
+import {
+  BulkSaveResultsBodySchema,
+  BulkSaveResultsResponseSchema,
+  GameResultListSchema,
+  OkResponseSchema,
+  ReplayLogSchema,
+  ReplaySummaryListSchema,
+  SaveResultResponseSchema,
+  StartTournamentBodySchema,
+  StartTournamentResponseSchema,
+  StrategyListSchema,
+  TournamentDetailSchema,
+  TournamentGameLogListSchema,
+  TournamentGameSingleSchema,
+  TournamentSummaryListSchema,
+} from "@boardgames/core/protocol";
+import { apiUrl } from "./api-base.ts";
+import { apiFetch } from "./api-fetch.ts";
 
-export interface TournamentSummary {
-  id: string;
-  game_slug: string;
-  config: Record<string, unknown>;
-  status: string;
-  result: Record<string, unknown> | null;
-  progress_completed: number;
-  progress_total: number;
-  created_at: string;
-  completed_at: string | null;
-}
+export type {
+  BulkSaveResultsResponse,
+  GameResult,
+  ReplaySummary,
+  StrategyInfo,
+  TournamentDetail,
+  TournamentGameLog,
+  TournamentSummary,
+} from "@boardgames/core/protocol";
 
-export interface TournamentDetail extends TournamentSummary {}
-
-export interface ReplaySummary {
-  id: number;
-  aiEngine: string | null;
-  scoreP0: number | null;
-  scoreP1: number | null;
-  winner: string | null;
-  createdAt: string;
-}
+const BASE = "/api";
 
 export const apiClient = {
   async healthy(): Promise<boolean> {
-    const res = await fetch(url("/health"), opts);
+    const res = await fetch(apiUrl(`${BASE}/health`), { credentials: "include" });
     return res.ok;
   },
 
-  async startTournament(
-    gameSlug: string,
-    config: Record<string, unknown>,
-  ): Promise<{ id: string }> {
-    const res = await fetch(url("/tournaments"), {
-      ...opts,
+  async startTournament(gameSlug: string, config: Record<string, unknown>) {
+    return apiFetch(`${BASE}/tournaments`, {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ gameSlug, config }),
+      body: { gameSlug, config },
+      request: StartTournamentBodySchema,
+      response: StartTournamentResponseSchema,
     });
-    return res.json();
   },
 
-  async getTournament(id: string): Promise<TournamentDetail> {
-    const res = await fetch(url(`/tournaments/${id}`), opts);
-    return res.json();
+  async getTournament(id: string) {
+    return apiFetch(`${BASE}/tournaments/${id}`, { response: TournamentDetailSchema });
   },
 
-  async listTournaments(gameSlug?: string, status?: string): Promise<TournamentSummary[]> {
+  async listTournaments(gameSlug?: string, status?: string) {
     const params = new URLSearchParams();
     if (gameSlug) params.set("gameSlug", gameSlug);
     if (status) params.set("status", status);
-    const res = await fetch(url(`/tournaments?${params}`), opts);
-    return res.json();
-  },
-
-  streamProgress(id: string): EventSource {
-    return new EventSource(url(`/tournaments/${id}/stream`), { withCredentials: true });
-  },
-
-  async abortTournament(id: string): Promise<void> {
-    await fetch(url(`/tournaments/${id}`), { ...opts, method: "DELETE" });
-  },
-
-  async getTournamentGames(id: string): Promise<unknown[]> {
-    const res = await fetch(url(`/tournaments/${id}/games`), opts);
-    return res.json();
-  },
-
-  async getTournamentGame(tournamentId: string, gameIndex: number): Promise<unknown> {
-    const res = await fetch(url(`/tournaments/${tournamentId}/games/${gameIndex}`), opts);
-    return res.json();
-  },
-
-  async getStrategies(gameSlug: string): Promise<{ id: string; label: string }[]> {
-    const res = await fetch(url(`/tournaments/strategies/${gameSlug}`), opts);
-    return res.json();
-  },
-
-  async saveGameResult(gameSlug: string, result: unknown): Promise<void> {
-    await fetch(url(`/games/${gameSlug}/results`), {
-      ...opts,
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(result),
+    const qs = params.toString();
+    return apiFetch(`${BASE}/tournaments${qs ? `?${qs}` : ""}`, {
+      response: TournamentSummaryListSchema,
     });
   },
 
-  async getGameResults(gameSlug: string, limit?: number): Promise<unknown[]> {
+  /**
+   * EventSource — caller is responsible for parsing each event through
+   * `TournamentStreamEventSchema` from `@boardgames/core/protocol`.
+   * (Wrapping EventSource itself with schema parse lives in the consumer.)
+   */
+  streamProgress(id: string): EventSource {
+    return new EventSource(apiUrl(`${BASE}/tournaments/${id}/stream`), {
+      withCredentials: true,
+    });
+  },
+
+  async abortTournament(id: string) {
+    return apiFetch(`${BASE}/tournaments/${id}`, {
+      method: "DELETE",
+      response: OkResponseSchema,
+    });
+  },
+
+  async getTournamentGames(id: string) {
+    return apiFetch(`${BASE}/tournaments/${id}/games`, {
+      response: TournamentGameLogListSchema,
+    });
+  },
+
+  async getTournamentGame(tournamentId: string, gameIndex: number) {
+    return apiFetch(`${BASE}/tournaments/${tournamentId}/games/${gameIndex}`, {
+      response: TournamentGameSingleSchema,
+    });
+  },
+
+  async getStrategies(gameSlug: string) {
+    return apiFetch(`${BASE}/tournaments/strategies/${gameSlug}`, {
+      response: StrategyListSchema,
+    });
+  },
+
+  async saveGameResult(gameSlug: string, result: unknown) {
+    return apiFetch(`${BASE}/games/${gameSlug}/results`, {
+      method: "POST",
+      body: result as Record<string, unknown>,
+      response: SaveResultResponseSchema,
+    });
+  },
+
+  async saveGameResultsBulk(gameSlug: string, records: unknown[]) {
+    return apiFetch(`${BASE}/games/${gameSlug}/results/bulk`, {
+      method: "POST",
+      body: { records },
+      request: BulkSaveResultsBodySchema,
+      response: BulkSaveResultsResponseSchema,
+    });
+  },
+
+  async getGameResults(gameSlug: string, limit?: number) {
     const params = limit ? `?limit=${limit}` : "";
-    const res = await fetch(url(`/games/${gameSlug}/results${params}`), opts);
-    return res.json();
+    return apiFetch(`${BASE}/games/${gameSlug}/results${params}`, {
+      response: GameResultListSchema,
+    });
   },
 
-  async clearGameResults(gameSlug: string): Promise<void> {
-    await fetch(url(`/games/${gameSlug}/results`), { ...opts, method: "DELETE" });
+  async clearGameResults(gameSlug: string) {
+    return apiFetch(`${BASE}/games/${gameSlug}/results`, {
+      method: "DELETE",
+      response: OkResponseSchema,
+    });
   },
 
-  async getGameReplays(gameSlug: string): Promise<ReplaySummary[]> {
-    const res = await fetch(url(`/games/${gameSlug}/replays`), opts);
-    return res.json();
+  async getGameReplays(gameSlug: string) {
+    return apiFetch(`${BASE}/games/${gameSlug}/replays`, {
+      response: ReplaySummaryListSchema,
+    });
   },
 
-  async getGameReplay(gameSlug: string, id: number): Promise<unknown> {
-    const res = await fetch(url(`/games/${gameSlug}/replays/${id}`), opts);
-    return res.json();
+  async getGameReplay(gameSlug: string, id: number) {
+    return apiFetch(`${BASE}/games/${gameSlug}/replays/${id}`, {
+      response: ReplayLogSchema,
+    });
   },
 };

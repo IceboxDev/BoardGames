@@ -1,3 +1,4 @@
+import { SlugListSchema } from "@boardgames/core/protocol";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 
@@ -9,8 +10,8 @@ userInventoryRoutes.get("/inventory", async (c) => {
     sql: "SELECT game_slugs_json FROM user_inventory WHERE user_id = ?",
     args: [user.id],
   });
-  if (rows.length === 0) return c.json([] as string[]);
+  if (rows.length === 0) return c.json(SlugListSchema.parse([]));
   const parsed = JSON.parse(rows[0].game_slugs_json as string) as unknown;
-  if (!Array.isArray(parsed)) return c.json([] as string[]);
-  return c.json(parsed.filter((s) => typeof s === "string"));
+  const list = Array.isArray(parsed) ? parsed.filter((s) => typeof s === "string") : [];
+  return c.json(SlugListSchema.parse(list));
 });

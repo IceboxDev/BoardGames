@@ -224,8 +224,6 @@ function DayCell({
   const monthLabelPos = compact ? "left-1 top-1" : "left-1.5 top-1.5";
   const monthLabelSize = compact ? "text-[7px]" : "text-[8px] sm:text-[9px]";
   const todayDotPos = compact ? "right-1 top-1" : "right-2 top-2";
-  const valueLabelSize = compact ? "text-[7px]" : "text-[9px] sm:text-[11px]";
-
   const aspectClass = compact ? "aspect-square" : "";
   const layoutClass = compact ? "items-center justify-center" : "";
 
@@ -268,6 +266,20 @@ function DayCell({
       {locked && (
         <LockedLayer compact={compact} viewerRsvp={viewerRsvp} showMedallion={picksLocked} />
       )}
+      {/* Personal availability stripe — guarantees the user's own can/maybe
+          mark stays visible against any background (fire, warming, locked
+          gradients all override the cell's base color, so we draw a slim
+          color stripe on the leading edge that the heat layers can't drown). */}
+      {value && !locked && !isAdminView && (
+        <span
+          aria-hidden="true"
+          className={`pointer-events-none absolute inset-y-0 left-0 z-[5] w-1 sm:w-1.5 ${
+            value === "can"
+              ? "bg-accent-400 shadow-[0_0_8px_rgba(99,102,241,0.6)]"
+              : "bg-yellow-400 shadow-[0_0_8px_rgba(234,179,8,0.55)]"
+          }`}
+        />
+      )}
       {monthLabel && (
         <span
           className={`pointer-events-none absolute font-bold uppercase tracking-[0.18em] text-white/40 ${monthLabelPos} ${monthLabelSize}`}
@@ -283,31 +295,21 @@ function DayCell({
         />
       )}
       {picksLocked && attendance ? (
-        // Picks-locked cell: replace the day number with a big centered
-        // "definite / definite+tentative" headcount — visible to everyone.
-        // The day number shrinks into the corner so the date is still
-        // readable. N1 = RSVP-yes (coming for sure), N2 = N1 plus maybes.
-        <>
+        // Picks-locked cell: the day number is dropped — the cell's position
+        // in the calendar grid already tells you which date it is. The big
+        // centered "definite / definite+tentative" headcount takes over.
+        // N1 = RSVP-yes (coming for sure), N2 = N1 plus maybes.
+        <span className="relative flex flex-1 items-center justify-center">
           <span
-            className={`pointer-events-none absolute font-semibold uppercase tracking-[0.18em] text-amber-200/80 ${
-              compact ? "left-1 bottom-0.5 text-[7px]" : "left-1.5 bottom-1 text-[9px]"
+            className={`flex items-baseline gap-1 font-extrabold leading-none text-amber-100 drop-shadow ${
+              compact ? "text-base" : "text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
             }`}
-            aria-hidden="true"
           >
-            {day}
+            <span className="tabular-nums">{attendance.definite}</span>
+            <span className="text-amber-200/60">/</span>
+            <span className="tabular-nums">{attendance.definite + attendance.tentative}</span>
           </span>
-          <span className="relative flex flex-1 items-center justify-center">
-            <span
-              className={`flex items-baseline gap-1 font-extrabold leading-none text-amber-100 drop-shadow ${
-                compact ? "text-base" : "text-2xl sm:text-3xl md:text-4xl"
-              }`}
-            >
-              <span className="tabular-nums">{attendance.definite}</span>
-              <span className="text-amber-200/60">/</span>
-              <span className="tabular-nums">{attendance.definite + attendance.tentative}</span>
-            </span>
-          </span>
-        </>
+        </span>
       ) : (
         <span
           className={`relative font-bold leading-none ${dayTextSize} ${dayNumberClass} ${
@@ -321,24 +323,27 @@ function DayCell({
         <DayLabels entries={labels} heated={heated} />
       )}
       {!compact && !locked && !isAdminView && (value || heated) && (
-        <div className="relative z-10 mt-auto flex items-end justify-between gap-1">
-          <div className="min-w-0">{value && heated && <PersonalMarkChip value={value} />}</div>
-          <div className="min-w-0">
-            {heated ? (
-              <HeatBadge heat={heat} />
-            ) : (
-              value && (
-                <span
-                  className={`font-bold uppercase tracking-[0.18em] ${valueLabelSize} ${
-                    value === "can" ? "text-accent-300" : "text-amber-300"
-                  }`}
-                >
-                  {value}
-                </span>
-              )
-            )}
-          </div>
+        // Mobile: stack the badges vertically and centred so neither overlaps
+        // in a thin cell.
+        // sm+: two fixed slots — personal mark on the left, heat info on the
+        // right. Using a 2-column grid (rather than flex justify-between)
+        // keeps the slots stable when only one badge is present, so the
+        // info doesn't wander left/right depending on whether you've marked
+        // your availability.
+        <div className="relative z-10 mt-auto flex flex-col items-center gap-0.5 sm:grid sm:grid-cols-2 sm:items-end sm:gap-1">
+          <span className="sm:justify-self-start">
+            {value && <PersonalMarkChip value={value} />}
+          </span>
+          <span className="sm:justify-self-end">{heated && <HeatBadge heat={heat} />}</span>
         </div>
+      )}
+      {/* Admin overlay shows the names panel and hides the personal footer —
+          surface the viewer's own mark as a small chip so admins can still
+          see what they marked without dropping back to player view. */}
+      {!compact && !locked && isAdminView && value && (
+        <span className="pointer-events-none absolute right-1.5 bottom-1.5 z-10">
+          <PersonalMarkChip value={value} />
+        </span>
       )}
     </button>
   );
@@ -504,11 +509,12 @@ function LockedLayer({
       />
       {/* Wax-seal medallion + compact lock pip — visible only when picks are
           locked, communicating "guest list is sealed" rather than the date
-          itself being chosen. */}
+          itself being chosen. Centered along the top edge so the medallion
+          sits symmetrically above the headcount on both phone and desktop. */}
       {showMedallion && !compact && (
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute right-1.5 top-1.5 z-10 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-700 shadow-[0_2px_8px_rgba(0,0,0,0.5),inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3)]"
+          className="pointer-events-none absolute left-1/2 top-1.5 z-10 flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-700 shadow-[0_2px_8px_rgba(0,0,0,0.5),inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3)]"
         >
           <LockGlyph />
         </span>
@@ -516,7 +522,7 @@ function LockedLayer({
       {showMedallion && compact && (
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute right-0.5 top-0.5 z-10 flex h-3 w-3 items-center justify-center rounded-full bg-amber-400 shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
+          className="pointer-events-none absolute left-1/2 top-0.5 z-10 flex h-3 w-3 -translate-x-1/2 items-center justify-center rounded-full bg-amber-400 shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
         >
           <LockGlyph small />
         </span>
@@ -616,14 +622,14 @@ function PersonalMarkChip({ value }: { value: Availability }) {
   return (
     <span
       aria-hidden="true"
-      className={`pointer-events-none inline-flex items-center gap-1 rounded-full bg-surface-950/85 px-1.5 py-0.5 text-[8px] font-extrabold uppercase tracking-[0.15em] text-white ring-1 ${
+      className={`pointer-events-none inline-flex items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-[7px] font-extrabold uppercase tracking-[0.1em] text-white ring-1 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-[10px] sm:tracking-[0.15em] md:text-xs ${
         isCan
-          ? "ring-accent-300/70 shadow-[0_0_8px_rgba(129,140,248,0.45)]"
-          : "ring-amber-300/70 shadow-[0_0_8px_rgba(252,211,77,0.4)]"
+          ? "ring-accent-300 shadow-[0_0_10px_rgba(129,140,248,0.6)]"
+          : "ring-amber-300 shadow-[0_0_10px_rgba(252,211,77,0.55)]"
       }`}
     >
       <span
-        className={`inline-block h-1.5 w-1.5 rounded-full ${isCan ? "bg-accent-300" : "bg-amber-300"}`}
+        className={`inline-block h-1 w-1 shrink-0 rounded-full sm:h-1.5 sm:w-1.5 ${isCan ? "bg-accent-300" : "bg-amber-300"}`}
       />
       {value}
     </span>
@@ -633,12 +639,15 @@ function PersonalMarkChip({ value }: { value: Availability }) {
 function HeatBadge({ heat }: { heat: Heat }) {
   if (heat.kind === "neutral") return null;
   const isFire = heat.kind === "fire";
+  // Sizing intentionally mirrors PersonalMarkChip so the two badges read as
+  // a matched pair when both are present and don't change weight when only
+  // one is shown.
   return (
     <span
-      className={`pointer-events-none inline-flex items-center gap-0.5 rounded-full bg-surface-950/85 px-1.5 py-0.5 text-[9px] font-extrabold ring-1 ${
+      className={`pointer-events-none inline-flex items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-[7px] font-extrabold ring-1 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-[10px] md:text-xs ${
         isFire
           ? "text-orange-200 ring-orange-300/70 shadow-[0_0_10px_rgba(249,115,22,0.55)]"
-          : "text-amber-200 ring-amber-300/70"
+          : "text-amber-200 ring-amber-300/70 shadow-[0_0_10px_rgba(252,211,77,0.4)]"
       }`}
       aria-hidden="true"
     >
@@ -664,8 +673,6 @@ function FlameGlyph({ filled }: { filled: boolean }) {
   );
 }
 
-const MAX_VISIBLE_LABELS = 6;
-
 function DayLabels({
   entries,
   heated,
@@ -674,14 +681,12 @@ function DayLabels({
   heated: boolean;
 }) {
   // Cans always come first so the can row is on top, maybes underneath.
-  const sorted = [...entries].sort((a, b) => {
-    if (a.status === b.status) return 0;
-    return a.status === "can" ? -1 : 1;
-  });
-  const visible = sorted.slice(0, MAX_VISIBLE_LABELS);
-  const overflow = entries.length - visible.length;
-  const cans = visible.filter((e) => e.status === "can");
-  const maybes = visible.filter((e) => e.status === "maybe");
+  // No explicit cap: with the responsive font scale the cell can carry every
+  // name in the friend group, and the wrapper's `overflow-hidden` is the
+  // safety net for the rare oversized case — we don't render a ragged
+  // "+N" pill any more.
+  const cans = entries.filter((e) => e.status === "can");
+  const maybes = entries.filter((e) => e.status === "maybe");
   const textShadow = heated ? { textShadow: "0 1px 2px rgba(0,0,0,0.85)" } : undefined;
   return (
     <div className="relative z-10 mt-0.5 flex min-h-0 flex-1 flex-col overflow-hidden">
@@ -690,14 +695,6 @@ function DayLabels({
       )}
       {maybes.length > 0 && (
         <NameRow entries={maybes} dotColor="bg-yellow-400" textShadow={textShadow} />
-      )}
-      {overflow > 0 && (
-        <span
-          style={textShadow}
-          className="text-[7px] font-medium leading-none text-gray-400 sm:text-[8px]"
-        >
-          +{overflow}
-        </span>
       )}
     </div>
   );
@@ -713,17 +710,17 @@ function NameRow({
   textShadow: React.CSSProperties | undefined;
 }) {
   return (
-    <div className="flex flex-wrap items-center gap-x-1">
+    <div className="flex flex-wrap items-center gap-x-1 gap-y-0.5">
       {entries.map((e) => (
         <span
           key={e.userId}
           title={`${e.name} — ${e.status}`}
           style={textShadow}
-          className="inline-flex max-w-full items-center gap-0.5 truncate text-[8px] font-medium leading-none text-white sm:text-[9px]"
+          className="inline-flex max-w-full items-center gap-0.5 truncate text-[7px] font-medium leading-none text-white sm:text-[10px] sm:gap-1 md:text-xs lg:text-sm"
         >
           <span
             aria-hidden="true"
-            className={`inline-block h-1 w-1 shrink-0 rounded-full ${dotColor}`}
+            className={`inline-block h-1 w-1 shrink-0 rounded-full sm:h-1.5 sm:w-1.5 md:h-2 md:w-2 ${dotColor}`}
           />
           <span className="truncate">{firstName(e.name)}</span>
         </span>

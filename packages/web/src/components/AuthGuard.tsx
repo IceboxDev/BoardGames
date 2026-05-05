@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import { useSession } from "../lib/auth-client";
+import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 
 type Mode = "auth" | "unauth" | "online" | "admin";
 
@@ -10,18 +10,16 @@ type Props = {
 };
 
 export function AuthGuard({ mode, children }: Props) {
-  const { data, isPending } = useSession();
+  const { user, isLoading, isAdmin } = useCurrentUser();
   const location = useLocation();
 
-  if (isPending) {
+  if (isLoading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-surface-950">
         <div className="text-sm text-gray-500">Loading…</div>
       </div>
     );
   }
-
-  const user = data?.user as { role?: string; onlineEnabled?: boolean } | undefined;
 
   if (mode === "unauth") {
     if (user) return <Navigate to="/" replace />;
@@ -36,7 +34,7 @@ export function AuthGuard({ mode, children }: Props) {
     return <Navigate to="/" replace />;
   }
 
-  if (mode === "admin" && user.role !== "admin") {
+  if (mode === "admin" && !isAdmin) {
     return <Navigate to="/" replace />;
   }
 

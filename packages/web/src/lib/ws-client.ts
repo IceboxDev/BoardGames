@@ -1,44 +1,37 @@
-import type { RoomSlot, RoomState } from "@boardgames/core/protocol/messages";
+import {
+  type RoomSlot,
+  type RoomState,
+  type ServerMessage,
+  ServerMessageSchema,
+} from "@boardgames/core/protocol";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { SchemaError } from "./api-fetch.ts";
 
-type ServerMessage =
-  // Session messages
-  | { type: "session-created"; sessionId: string; playerView: unknown; legalActions: unknown[] }
-  | {
-      type: "state-update";
-      sessionId: string;
-      playerView: unknown;
-      legalActions: unknown[];
-      activePlayer: number;
-      playerIndex?: number;
-    }
-  | { type: "ai-thinking"; sessionId: string }
-  | {
-      type: "game-over";
-      sessionId: string;
-      result: unknown;
-      playerView: unknown;
-      playerIndex?: number;
-      replayId?: number;
-    }
-  | { type: "error"; sessionId?: string; message: string }
-  // Room / lobby messages
-  | { type: "room-created"; roomCode: string; roomState: RoomState }
-  | { type: "room-joined"; roomCode: string; roomState: RoomState; yourSlot: number }
-  | { type: "room-updated"; roomCode: string; roomState: RoomState }
-  | { type: "room-closed"; roomCode: string; reason: string }
-  | {
-      type: "game-started";
-      roomCode: string;
-      sessionId: string;
-      playerIndex: number;
-      activePlayer: number;
-      playerView: unknown;
-      legalActions: unknown[];
-      phase: string;
-    }
-  | { type: "player-disconnected"; sessionId: string; playerIndex: number; playerName: string }
-  | { type: "player-reconnected"; sessionId: string; playerIndex: number; playerName: string };
+/**
+ * Parse a raw WebSocket message string into a typed {@link ServerMessage}.
+ * Throws a {@link SchemaError} on shape mismatch (Phase 3 added this check
+ * so a server-side regression surfaces as a typed exception, not a silent
+ * `as ServerMessage` cast that crashes downstream).
+ */
+export function parseServerMessage(raw: string): ServerMessage {
+  let json: unknown;
+  try {
+    json = JSON.parse(raw);
+  } catch {
+    throw new SchemaError([{ message: "WS message was not valid JSON", path: [] }], "response");
+  }
+  const result = ServerMessageSchema.safeParse(json);
+  if (!result.success) {
+    throw new SchemaError(
+      result.error.issues.map((i) => ({
+        message: i.message,
+        path: i.path as readonly PropertyKey[],
+      })),
+      "response",
+    );
+  }
+  return result.data;
+}
 
 export type ConnectionStatus = "connecting" | "connected" | "disconnected" | "error";
 
@@ -133,7 +126,15 @@ export function useGameSession<
     };
 
     ws.onmessage = (event) => {
-      const msg = JSON.parse(event.data) as ServerMessage;
+      let msg: ServerMessage;
+      try {
+        msg = parseServerMessage(event.data);
+      } catch (err) {
+        if (err instanceof SchemaError) {
+          console.warn("Bad WS message shape:", err.issues);
+        }
+        return;
+      }
 
       switch (msg.type) {
         // --- Solo session messages ---

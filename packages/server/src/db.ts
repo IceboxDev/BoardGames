@@ -155,4 +155,26 @@ async function migrate(db: Client): Promise<void> {
   if (!ldCols2.rows.some((r) => r.name === "picks_locked_at")) {
     await db.execute(`ALTER TABLE locked_dates ADD COLUMN picks_locked_at TEXT`);
   }
+
+  // `auto = 1` flags rows that were created by an automated mechanism (the
+  // lock-time cans-snapshot batch, or the RSVP modal's first-open useEffect)
+  // rather than by an explicit "Going" / "Not going" button click. The
+  // attendees view uses this to render a "Hasn't RSVP'd yet" pill so the
+  // host knows who still needs a real-life ping.
+  const rsvpCols = await db.execute("PRAGMA table_info(rsvps)");
+  if (!rsvpCols.rows.some((r) => r.name === "auto")) {
+    await db.execute(`ALTER TABLE rsvps ADD COLUMN auto INTEGER NOT NULL DEFAULT 0`);
+  }
+  // Idempotent backfill: rows whose `rsvped_at` lands within a few seconds
+  // of their lock's `locked_at` were almost certainly written by the
+  // cans-snapshot batch (or its retries). Flag them auto so the attendees
+  // view stops claiming they manually clicked. Re-running this is a no-op
+  // for rows already at auto=1, so we don't gate it on the column-add.
+  await db.execute(
+    `UPDATE rsvps SET auto = 1 WHERE status = 'yes' AND auto = 0 AND EXISTS (
+      SELECT 1 FROM locked_dates l
+      WHERE l.date_key = rsvps.date_key
+        AND ABS(strftime('%s', l.locked_at) - strftime('%s', rsvps.rsvped_at)) <= 2
+    )`,
+  );
 }

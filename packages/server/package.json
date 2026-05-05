@@ -5,18 +5,21 @@
   "scripts": {
     "dev": "tsx watch --include ../core/src src/index.ts",
     "build": "tsup",
-    "typecheck": "tsc -b --noEmit"
+    "typecheck": "tsc -b --noEmit",
+    "test": "echo 'no tests'"
   },
   "dependencies": {
     "@boardgames/core": "workspace:*",
     "@hono/node-server": "^1.0.0",
     "@hono/node-ws": "^1.0.0",
+    "@hono/zod-validator": "^0.7.6",
     "@libsql/client": "^0.17.3",
     "@libsql/kysely-libsql": "^0.4.1",
     "better-auth": "^1.6.9",
     "dotenv": "^17.4.2",
     "hono": "^4.0.0",
-    "xstate": "^5.28.0"
+    "xstate": "^5.28.0",
+    "zod": "^4.3.6"
   },
   "devDependencies": {
     "@types/node": "^22.0.0",

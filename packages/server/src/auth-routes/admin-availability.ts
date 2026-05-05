@@ -1,3 +1,4 @@
+import { AggregateAvailabilityMapSchema, AvailabilityMapSchema } from "@boardgames/core/protocol";
 import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 
@@ -9,12 +10,12 @@ adminAvailabilityRoutes.get("/:id/availability", async (c) => {
     sql: "SELECT availability_json FROM user_availability WHERE user_id = ?",
     args: [userId],
   });
-  if (rows.length === 0) return c.json({});
+  if (rows.length === 0) return c.json(AvailabilityMapSchema.parse({}));
   const parsed = JSON.parse(rows[0].availability_json as string) as unknown;
   if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
-    return c.json(parsed);
+    return c.json(AvailabilityMapSchema.parse(parsed));
   }
-  return c.json({});
+  return c.json(AvailabilityMapSchema.parse({}));
 });
 
 export const adminAvailabilityAllRoutes = adminApp();
@@ -53,5 +54,5 @@ adminAvailabilityAllRoutes.get("/availability/all", async (c) => {
     list.sort((a, b) => a.name.localeCompare(b.name));
   }
 
-  return c.json(aggregate);
+  return c.json(AggregateAvailabilityMapSchema.parse(aggregate));
 });

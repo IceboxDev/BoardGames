@@ -1,4 +1,4 @@
-import type { RoomSlot, RoomState } from "@boardgames/core/protocol/messages";
+import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
 import { gameRoomConfigs } from "@boardgames/core/protocol/room-config";
 import type { WSContext } from "hono/ws";
 import { getMachineSpec } from "./machine-registry.ts";

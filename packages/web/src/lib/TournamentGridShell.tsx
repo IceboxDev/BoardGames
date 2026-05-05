@@ -1,3 +1,4 @@
+import { TournamentStreamEventSchema } from "@boardgames/core/protocol";
 import type { ReactNode } from "react";
 import { useCallback, useRef, useState } from "react";
 import { apiClient } from "./api-client";
@@ -68,7 +69,12 @@ export function TournamentGridShell<TResult>({
       return new Promise<void>((resolve) => {
         const es = apiClient.streamProgress(id);
         es.onmessage = (event) => {
-          const data = JSON.parse(event.data);
+          const parsed = TournamentStreamEventSchema.safeParse(JSON.parse(event.data));
+          if (!parsed.success) {
+            console.warn("Bad SSE event shape:", parsed.error.issues);
+            return;
+          }
+          const data = parsed.data;
           if (data.kind === "progress") {
             setProgress({ completed: data.completed, total: data.total });
           } else if (data.kind === "complete") {

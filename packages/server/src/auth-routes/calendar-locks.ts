@@ -1,24 +1,30 @@
+import {
+  AvailableGamesQuerySchema,
+  AvailableGamesSchema,
+  CalendarLocksSchema,
+  GameReactionBodySchema,
+  LockInRequestBodySchema,
+  LockInResponseSchema,
+  OkResponseSchema,
+  PicksLockBodySchema,
+  UnlockBodySchema,
+} from "@boardgames/core/protocol";
 import { adminApp, authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
-
-const DATE_KEY_RE = /^\d{4}-\d{2}-\d{2}$/;
-const REACTION_KINDS = new Set(["hype", "teach", "learn"]);
+import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 
 export const calendarLocksRoutes = authedApp();
 
-calendarLocksRoutes.get("/games", async (c) => {
+calendarLocksRoutes.get("/games", zQuery(AvailableGamesQuerySchema), async (c) => {
   const user = c.get("user");
-  const date = c.req.query("date");
-  if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
-    return c.json({ error: "invalid date" }, 400);
-  }
+  const { date } = c.req.valid("query");
 
   const lockedRow = await getDb().execute({
     sql: "SELECT host_user_id, picks_locked_at FROM locked_dates WHERE date_key = ? LIMIT 1",
     args: [date],
   });
   if (lockedRow.rows.length === 0) {
-    return c.json({ error: "date is not locked" }, 400);
+    return errorResponse(c, 400, "date is not locked");
   }
   const hostUserId = (lockedRow.rows[0].host_user_id as string | null) ?? null;
   const picksLockedAt = (lockedRow.rows[0].picks_locked_at as string | null) ?? null;
@@ -31,7 +37,7 @@ calendarLocksRoutes.get("/games", async (c) => {
   const [availabilityResult, rsvpResult, reactionResult] = await Promise.all([
     getDb().execute("SELECT user_id, availability_json FROM user_availability"),
     getDb().execute({
-      sql: "SELECT user_id, status FROM rsvps WHERE date_key = ?",
+      sql: "SELECT user_id, status, auto FROM rsvps WHERE date_key = ?",
       args: [date],
     }),
     getDb().execute({
@@ -58,11 +64,20 @@ calendarLocksRoutes.get("/games", async (c) => {
 
   const rsvpYes = new Set<string>();
   const rsvpNo = new Set<string>();
+  // `manuallyRsvpedYes` is the subset of `rsvpYes` that came from a real
+  // "Going" button click (auto=0), not the lock-time batch or the modal's
+  // first-open useEffect. Drives the "Hasn't RSVP'd yet" pill.
+  const manuallyRsvpedYes = new Set<string>();
   for (const row of rsvpResult.rows) {
     const userId = row.user_id as string;
     const status = row.status as string;
-    if (status === "yes") rsvpYes.add(userId);
-    else if (status === "no") rsvpNo.add(userId);
+    const auto = row.auto as number | null;
+    if (status === "yes") {
+      rsvpYes.add(userId);
+      if (!auto) manuallyRsvpedYes.add(userId);
+    } else if (status === "no") {
+      rsvpNo.add(userId);
+    }
   }
 
   // Explicit "no" wins over everything else.
@@ -222,11 +237,15 @@ calendarLocksRoutes.get("/games", async (c) => {
   // Build the attendees array (definite first, then tentative). The host
   // always lists every top-5 game they own (their whole collection is at
   // the venue); non-hosts list only the games they were assigned to bring.
+  // `hasRsvped` records whether the user has an explicit yes RSVP — false
+  // means they're in the list purely from availability and the host should
+  // ping them in real life.
   type AttendeeOut = {
     userId: string;
     name: string;
     isHost: boolean;
     status: "definite" | "tentative";
+    hasRsvped: boolean;
     votes: { hype: number; teach: number; learn: number };
     bringing: string[];
   };
@@ -240,6 +259,7 @@ calendarLocksRoutes.get("/games", async (c) => {
       name: userNames.get(id) ?? "—",
       isHost,
       status: "definite",
+      hasRsvped: manuallyRsvpedYes.has(id),
       votes: votesByUser.get(id) ?? { hype: 0, teach: 0, learn: 0 },
       bringing: list,
     });
@@ -250,6 +270,7 @@ calendarLocksRoutes.get("/games", async (c) => {
       name: userNames.get(id) ?? "—",
       isHost: id === hostUserId,
       status: "tentative",
+      hasRsvped: manuallyRsvpedYes.has(id),
       votes: votesByUser.get(id) ?? { hype: 0, teach: 0, learn: 0 },
       bringing: [],
     });
@@ -263,16 +284,18 @@ calendarLocksRoutes.get("/games", async (c) => {
     return a.name.localeCompare(b.name);
   });
 
-  return c.json({
-    ownedSlugs,
-    definiteCount: definiteIds.length,
-    tentativeCount: tentativeIds.length,
-    participantIds: definiteIds,
-    reactions,
-    topSlugs,
-    attendees,
-    picksLockedAt,
-  });
+  return c.json(
+    AvailableGamesSchema.parse({
+      ownedSlugs,
+      definiteCount: definiteIds.length,
+      tentativeCount: tentativeIds.length,
+      participantIds: definiteIds,
+      reactions,
+      topSlugs,
+      attendees,
+      picksLockedAt,
+    }),
+  );
 });
 
 /**
@@ -281,32 +304,22 @@ calendarLocksRoutes.get("/games", async (c) => {
  * are rejected — preventing last-second crashers from joining via the
  * calendar after the host has finalized the guest list.
  */
-calendarLocksRoutes.post("/lock-picks", async (c) => {
+calendarLocksRoutes.post("/lock-picks", zJsonBody(PicksLockBodySchema), async (c) => {
   const user = c.get("user");
-  const body = (await c.req.json().catch(() => ({}))) as {
-    date?: unknown;
-    on?: unknown;
-  };
-  const { date, on } = body;
-  if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
-    return c.json({ error: "invalid date" }, 400);
-  }
-  if (typeof on !== "boolean") {
-    return c.json({ error: "invalid on" }, 400);
-  }
+  const { date, on } = c.req.valid("json");
 
   const lockedRow = await getDb().execute({
     sql: "SELECT host_user_id FROM locked_dates WHERE date_key = ? LIMIT 1",
     args: [date],
   });
   if (lockedRow.rows.length === 0) {
-    return c.json({ error: "date is not locked" }, 400);
+    return errorResponse(c, 400, "date is not locked");
   }
   const hostUserId = (lockedRow.rows[0].host_user_id as string | null) ?? null;
   const isAdmin = (user as { role?: string }).role === "admin";
   const isHost = hostUserId !== null && hostUserId === user.id;
   if (!isAdmin && !isHost) {
-    return c.json({ error: "only admin or host can toggle picks-lock" }, 403);
+    return errorResponse(c, 403, "only admin or host can toggle picks-lock", "FORBIDDEN");
   }
 
   await getDb().execute({
@@ -315,38 +328,19 @@ calendarLocksRoutes.post("/lock-picks", async (c) => {
       : "UPDATE locked_dates SET picks_locked_at = NULL WHERE date_key = ?",
     args: [date],
   });
-  return c.json({ ok: true });
+  return c.json(OkResponseSchema.parse({ ok: true }));
 });
 
-calendarLocksRoutes.post("/games/reaction", async (c) => {
+calendarLocksRoutes.post("/games/reaction", zJsonBody(GameReactionBodySchema), async (c) => {
   const user = c.get("user");
-  const body = (await c.req.json().catch(() => ({}))) as {
-    date?: unknown;
-    slug?: unknown;
-    reaction?: unknown;
-    on?: unknown;
-  };
-
-  const { date, slug, reaction, on } = body;
-  if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
-    return c.json({ error: "invalid date" }, 400);
-  }
-  if (typeof slug !== "string" || slug.length === 0) {
-    return c.json({ error: "invalid slug" }, 400);
-  }
-  if (typeof reaction !== "string" || !REACTION_KINDS.has(reaction)) {
-    return c.json({ error: "invalid reaction" }, 400);
-  }
-  if (typeof on !== "boolean") {
-    return c.json({ error: "invalid on" }, 400);
-  }
+  const { date, slug, reaction, on } = c.req.valid("json");
 
   const lockedRow = await getDb().execute({
     sql: "SELECT 1 FROM locked_dates WHERE date_key = ? LIMIT 1",
     args: [date],
   });
   if (lockedRow.rows.length === 0) {
-    return c.json({ error: "date is not locked" }, 400);
+    return errorResponse(c, 400, "date is not locked");
   }
 
   if (on) {
@@ -363,7 +357,7 @@ calendarLocksRoutes.post("/games/reaction", async (c) => {
     });
   }
 
-  return c.json({ ok: true });
+  return c.json(OkResponseSchema.parse({ ok: true }));
 });
 
 calendarLocksRoutes.get("/locks", async (c) => {
@@ -485,37 +479,19 @@ calendarLocksRoutes.get("/locks", async (c) => {
     if (entry) entry.rsvps[userId] = status;
   }
 
-  return c.json(out);
+  return c.json(CalendarLocksSchema.parse(out));
 });
 
 export const adminCalendarLocksRoutes = adminApp();
 
-const TIME_RE = /^\d{2}:\d{2}$/;
-
-function asOptionalString(v: unknown, max = 500): string | null {
-  if (v === null || v === undefined || v === "") return null;
-  if (typeof v !== "string") return null;
-  return v.length > max ? v.slice(0, max) : v;
-}
-
-adminCalendarLocksRoutes.post("/lock", async (c) => {
+adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async (c) => {
   const user = c.get("user");
-  const body = (await c.req.json().catch(() => ({}))) as {
-    date?: unknown;
-    hostUserId?: unknown;
-    hostName?: unknown;
-    eventTime?: unknown;
-    address?: unknown;
-  };
+  const body = c.req.valid("json");
   const date = body.date;
-  if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
-    return c.json({ error: "invalid date" }, 400);
-  }
-  const hostUserId = asOptionalString(body.hostUserId, 100);
-  const hostName = asOptionalString(body.hostName, 200);
-  const eventTimeRaw = asOptionalString(body.eventTime, 5);
-  const eventTime = eventTimeRaw && TIME_RE.test(eventTimeRaw) ? eventTimeRaw : null;
-  const address = asOptionalString(body.address, 500);
+  const hostUserId = body.hostUserId ?? null;
+  const hostName = body.hostName ?? null;
+  const eventTime = body.eventTime ?? null;
+  const address = body.address ?? null;
 
   // Snapshot the set of users who marked can/maybe at lock time so we can
   // decide "fully RSVPed" against a frozen baseline. Track cans separately
@@ -544,10 +520,13 @@ adminCalendarLocksRoutes.post("/lock", async (c) => {
   }
 
   // Auto-RSVP "yes" for every can. They've already committed via availability
-  // — the lock just confirms the date — so no separate click is required.
+  // — the lock just confirms the date — so no separate click is required for
+  // the headcount math. The `auto = 1` flag distinguishes these from real
+  // button clicks; the attendees view surfaces a "Hasn't RSVP'd yet" pill
+  // for auto rows so the host can ping them in real life.
   // OR IGNORE preserves any explicit choice (e.g. a can who later flipped to
   // "no" survives a re-lock).
-  const stmts: { sql: string; args: (string | null)[] }[] = [
+  const stmts: { sql: string; args: (string | number | null)[] }[] = [
     {
       sql: `INSERT INTO locked_dates
               (date_key, locked_by, locked_at, expected_user_ids_json,
@@ -566,22 +545,18 @@ adminCalendarLocksRoutes.post("/lock", async (c) => {
   ];
   for (const id of cans) {
     stmts.push({
-      sql: `INSERT OR IGNORE INTO rsvps (date_key, user_id, status, rsvped_at)
-            VALUES (?, ?, 'yes', datetime('now'))`,
+      sql: `INSERT OR IGNORE INTO rsvps (date_key, user_id, status, rsvped_at, auto)
+            VALUES (?, ?, 'yes', datetime('now'), 1)`,
       args: [date, id],
     });
   }
   await getDb().batch(stmts, "write");
 
-  return c.json({ ok: true, expectedUserIds: expected });
+  return c.json(LockInResponseSchema.parse({ ok: true, expectedUserIds: expected }));
 });
 
-adminCalendarLocksRoutes.delete("/lock", async (c) => {
-  const body = (await c.req.json().catch(() => ({}))) as { date?: unknown };
-  const date = body.date;
-  if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
-    return c.json({ error: "invalid date" }, 400);
-  }
+adminCalendarLocksRoutes.delete("/lock", zJsonBody(UnlockBodySchema), async (c) => {
+  const { date } = c.req.valid("json");
 
   // Drop only the lock row. RSVPs and reactions stay so an explicit "no" (or
   // a hyped game) survives an unlock + re-lock cycle — otherwise the lock
@@ -592,5 +567,5 @@ adminCalendarLocksRoutes.delete("/lock", async (c) => {
     args: [date],
   });
 
-  return c.json({ ok: true });
+  return c.json(OkResponseSchema.parse({ ok: true }));
 });

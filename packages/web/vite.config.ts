@@ -1,9 +1,17 @@
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
+import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    // Bundle analyzer; emits dist/stats.html on build when ANALYZE=1.
+    process.env.ANALYZE
+      ? visualizer({ filename: "dist/stats.html", gzipSize: true, brotliSize: true })
+      : null,
+  ],
   server: {
     host: true,
     allowedHosts: true,

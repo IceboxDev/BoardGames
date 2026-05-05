@@ -11,13 +11,17 @@
     "./games/set/*": "./src/games/set/*.ts",
     "./games/parks/*": "./src/games/parks/*.ts",
     "./machines/*": "./src/machines/*.ts",
+    "./protocol": "./src/protocol/index.ts",
     "./protocol/*": "./src/protocol/*.ts",
     "./tournament/*": "./src/tournament/*.ts"
   },
   "scripts": {
-    "typecheck": "tsc -b --noEmit"
+    "typecheck": "tsc -b --noEmit",
+    "test": "vitest run"
   },
   "dependencies": {
-    "xstate": "^5.28.0"
+    "@standard-schema/spec": "^1.1.0",
+    "xstate": "^5.28.0",
+    "zod": "^4.3.6"
   }
 }

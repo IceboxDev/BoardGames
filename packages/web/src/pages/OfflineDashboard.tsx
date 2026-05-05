@@ -1,3 +1,4 @@
+import { mkOptimisticLock } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { AvailabilityActionBar } from "../components/offline/AvailabilityActionBar";
@@ -5,7 +6,7 @@ import Calendar from "../components/offline/Calendar";
 import LockInModal from "../components/offline/LockInModal";
 import RsvpModal from "../components/offline/RsvpModal";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
-import { useSession } from "../lib/auth-client";
+import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import {
   adminSetCalendarLock,
   adminUnsetCalendarLock,
@@ -29,9 +30,8 @@ import { qk } from "../lib/query-keys";
 type Mode = "view" | "edit" | "lock";
 
 export default function OfflineDashboard() {
-  const { data } = useSession();
-  const userId = data?.user?.id ?? null;
-  const isAdmin = (data?.user as { role?: string } | undefined)?.role === "admin";
+  const { user, isAdmin } = useCurrentUser();
+  const userId = user?.id ?? null;
 
   const today = useMemo(() => new Date(), []);
   const weekStart = useMemo(() => startOfWeekMonday(today), [today]);
@@ -111,18 +111,7 @@ export default function OfflineDashboard() {
       const previous = queryClient.getQueryData<CalendarLocks>(qk.calendarLocks());
       queryClient.setQueryData<CalendarLocks>(qk.calendarLocks(), (prev) => {
         const next: CalendarLocks = { ...(prev ?? {}) };
-        const existing = next[date];
-        next[date] = {
-          lockedBy: existing?.lockedBy ?? userId ?? "",
-          lockedAt: new Date().toISOString(),
-          expectedUserIds: existing?.expectedUserIds ?? [],
-          rsvps: existing?.rsvps ?? {},
-          host: form.hostUserId ? { userId: form.hostUserId, name: form.hostName ?? "" } : null,
-          eventTime: form.eventTime ?? null,
-          address: form.address ?? null,
-          picksLockedAt: existing?.picksLockedAt ?? null,
-          attendance: existing?.attendance ?? { definite: 0, tentative: 0 },
-        };
+        next[date] = mkOptimisticLock(form, next[date], userId ?? "");
         return next;
       });
       return { previous };
@@ -233,11 +222,9 @@ export default function OfflineDashboard() {
     if (!lockingDate) return [];
     const out: LockHost[] = [];
     const seen = new Set<string>();
-    const selfId = data?.user?.id;
-    const selfName = (data?.user as { name?: string } | undefined)?.name;
-    if (selfId && selfName) {
-      out.push({ userId: selfId, name: `${selfName} (you)` });
-      seen.add(selfId);
+    if (user?.id && user.name) {
+      out.push({ userId: user.id, name: `${user.name} (you)` });
+      seen.add(user.id);
     }
     const entries = allAvailability?.[lockingDate];
     if (entries) {
@@ -248,7 +235,7 @@ export default function OfflineDashboard() {
       }
     }
     return out;
-  }, [lockingDate, data, allAvailability]);
+  }, [lockingDate, user, allAvailability]);
 
   const visible = mode === "edit" ? draft : committed;
   const markedCount = Object.keys(visible).length;

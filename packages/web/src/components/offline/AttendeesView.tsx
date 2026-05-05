@@ -97,6 +97,14 @@ function AttendeeRow({
               Maybe
             </span>
           )}
+          {!attendee.hasRsvped && (
+            <span
+              title="Marked availability but never opened the RSVP modal — ping them in real life."
+              className="shrink-0 rounded-full bg-sky-400/15 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.18em] text-sky-200 ring-1 ring-sky-400/40"
+            >
+              Hasn't RSVP'd yet
+            </span>
+          )}
         </div>
 
         <div className="flex flex-wrap items-center gap-1.5 text-[11px] text-gray-400">

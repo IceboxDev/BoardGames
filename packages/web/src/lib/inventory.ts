@@ -1,58 +1,45 @@
-import { apiUrl } from "./api-base";
+import {
+  InventoryWriteResponseSchema,
+  SetInventoryBodySchema,
+  SlugListSchema,
+} from "@boardgames/core/protocol";
+import { apiFetch } from "./api-fetch.ts";
 
-export async function fetchMyInventory(signal?: AbortSignal): Promise<string[]> {
-  const res = await fetch(apiUrl("/api/user/inventory"), {
-    credentials: "include",
+export async function fetchMyInventory(signal?: AbortSignal) {
+  return apiFetch("/api/user/inventory", {
+    response: SlugListSchema,
     signal,
   });
-  if (res.status === 401) return [];
-  if (!res.ok) throw new Error(`Failed to fetch inventory (${res.status})`);
-  const data = (await res.json()) as unknown;
-  return Array.isArray(data) ? (data as string[]) : [];
 }
 
-export async function adminFetchInventory(userId: string, signal?: AbortSignal): Promise<string[]> {
-  const res = await fetch(apiUrl(`/api/admin/users/${userId}/inventory`), {
-    credentials: "include",
+export async function adminFetchInventory(userId: string, signal?: AbortSignal) {
+  return apiFetch(`/api/admin/users/${userId}/inventory`, {
+    response: SlugListSchema,
     signal,
   });
-  if (!res.ok) throw new Error(`Failed to fetch inventory (${res.status})`);
-  const data = (await res.json()) as unknown;
-  return Array.isArray(data) ? (data as string[]) : [];
 }
 
-export async function adminSaveInventory(userId: string, slugs: string[]): Promise<void> {
-  const res = await fetch(apiUrl(`/api/admin/users/${userId}/inventory`), {
-    credentials: "include",
+export async function adminSaveInventory(userId: string, slugs: string[]) {
+  await apiFetch(`/api/admin/users/${userId}/inventory`, {
     method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ slugs }),
+    body: { slugs },
+    request: SetInventoryBodySchema,
+    response: InventoryWriteResponseSchema,
   });
-  if (!res.ok) {
-    const body = (await res.json().catch(() => ({}))) as { error?: string };
-    throw new Error(body.error ?? `Failed to save (${res.status})`);
-  }
 }
 
-export async function adminFetchPendingInventory(signal?: AbortSignal): Promise<string[]> {
-  const res = await fetch(apiUrl("/api/admin/pending-inventory"), {
-    credentials: "include",
+export async function adminFetchPendingInventory(signal?: AbortSignal) {
+  return apiFetch("/api/admin/pending-inventory", {
+    response: SlugListSchema,
     signal,
   });
-  if (!res.ok) throw new Error(`Failed to fetch pending inventory (${res.status})`);
-  const data = (await res.json()) as unknown;
-  return Array.isArray(data) ? (data as string[]) : [];
 }
 
-export async function adminSavePendingInventory(slugs: string[]): Promise<void> {
-  const res = await fetch(apiUrl("/api/admin/pending-inventory"), {
-    credentials: "include",
+export async function adminSavePendingInventory(slugs: string[]) {
+  await apiFetch("/api/admin/pending-inventory", {
     method: "PUT",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ slugs }),
+    body: { slugs },
+    request: SetInventoryBodySchema,
+    response: InventoryWriteResponseSchema,
   });
-  if (!res.ok) {
-    const body = (await res.json().catch(() => ({}))) as { error?: string };
-    throw new Error(body.error ?? `Failed to save (${res.status})`);
-  }
 }

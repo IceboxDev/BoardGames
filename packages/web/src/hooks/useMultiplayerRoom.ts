@@ -1,4 +1,4 @@
-import type { RoomSlot, RoomState } from "@boardgames/core/protocol/messages";
+import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
 import { useCallback, useMemo } from "react";
 import type { GameSession } from "../lib/ws-client";
 

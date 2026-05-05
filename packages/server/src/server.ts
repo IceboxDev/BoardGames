@@ -1,3 +1,4 @@
+import { AuthConfigSchema } from "@boardgames/core/protocol";
 import { createNodeWebSocket } from "@hono/node-ws";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
@@ -17,6 +18,7 @@ import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
 import { persistenceRoutes } from "./persistence/routes.ts";
 import { getRegisteredSlugs } from "./sessions/machine-registry.ts";
 import { handleWsClose, handleWsMessage, wsAuth } from "./sessions/manager.ts";
+import { ClientMessageParseError, parseClientMessage } from "./sessions/parse-client-message.ts";
 import {
   handleConfigureRoom,
   handleCreateRoom,
@@ -62,7 +64,7 @@ app.use(
 app.on(["GET", "POST"], "/api/auth/*", (c) => auth.handler(c.req.raw));
 
 app.get("/api/auth-config", (c) =>
-  c.json({ googleEnabled: Boolean(process.env.GOOGLE_CLIENT_ID) }),
+  c.json(AuthConfigSchema.parse({ googleEnabled: Boolean(process.env.GOOGLE_CLIENT_ID) })),
 );
 
 app.get("/api/health", (c) => c.json({ ok: true, games: getRegisteredSlugs() }));
@@ -134,15 +136,22 @@ app.get(
       onMessage(event, ws) {
         const data = typeof event.data === "string" ? event.data : "";
 
-        // Try room messages first
+        // Validate the envelope once. On shape mismatch, send a typed error
+        // back rather than letting downstream handlers see the raw payload.
+        let msg: ClientToServerMessage;
         try {
-          const msg = JSON.parse(data) as ClientToServerMessage;
-          if (handleRoomMessage(ws, msg)) return;
-        } catch {
-          // Fall through to session handler for error reporting
+          msg = parseClientMessage(data);
+        } catch (err) {
+          const message =
+            err instanceof ClientMessageParseError
+              ? `Malformed message: ${JSON.stringify(err.issues)}`
+              : "Malformed message";
+          ws.send(JSON.stringify({ type: "error", message }));
+          return;
         }
 
-        handleWsMessage(ws, data);
+        if (handleRoomMessage(ws, msg)) return;
+        handleWsMessage(ws, msg);
       },
       onClose(_event, ws) {
         wsAuth.delete(ws);

@@ -1,13 +1,23 @@
+import {
+  BulkSaveResultsBodySchema,
+  BulkSaveResultsResponseSchema,
+  GameResultListSchema,
+  OkResponseSchema,
+  ReplayLogSchema,
+  ReplaySummaryListSchema,
+  SaveResultResponseSchema,
+} from "@boardgames/core/protocol";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 
 export const persistenceRoutes = authedApp();
 
 persistenceRoutes.post("/:slug/results", async (c) => {
   const slug = c.req.param("slug");
-  const body = await c.req.json();
+  const body = (await c.req.json()) as Record<string, unknown>;
   const db = getDb();
-  const clientId: string | undefined = body.id;
+  const clientId = typeof body.id === "string" ? body.id : undefined;
 
   if (clientId) {
     const result = await db.execute({
@@ -15,9 +25,9 @@ persistenceRoutes.post("/:slug/results", async (c) => {
       args: [slug, clientId, JSON.stringify(body)],
     });
     if (result.rowsAffected === 0) {
-      return c.json({ ok: true, existed: true }, 200);
+      return c.json(SaveResultResponseSchema.parse({ ok: true, existed: true }), 200);
     }
-    return c.json({ ok: true }, 201);
+    return c.json(SaveResultResponseSchema.parse({ ok: true }), 201);
   }
 
   await db.execute({
@@ -25,16 +35,12 @@ persistenceRoutes.post("/:slug/results", async (c) => {
     args: [slug, JSON.stringify(body)],
   });
 
-  return c.json({ ok: true }, 201);
+  return c.json(SaveResultResponseSchema.parse({ ok: true }), 201);
 });
 
-persistenceRoutes.post("/:slug/results/bulk", async (c) => {
+persistenceRoutes.post("/:slug/results/bulk", zJsonBody(BulkSaveResultsBodySchema), async (c) => {
   const slug = c.req.param("slug");
-  const { records } = (await c.req.json()) as { records: unknown[] };
-
-  if (!Array.isArray(records)) {
-    return c.json({ error: "records must be an array" }, 400);
-  }
+  const { records } = c.req.valid("json");
 
   const db = getDb();
   const statements = records.map((record) => {
@@ -53,7 +59,7 @@ persistenceRoutes.post("/:slug/results/bulk", async (c) => {
     else skipped++;
   }
 
-  return c.json({ ok: true, inserted, skipped }, 201);
+  return c.json(BulkSaveResultsResponseSchema.parse({ ok: true, inserted, skipped }), 201);
 });
 
 persistenceRoutes.get("/:slug/results", async (c) => {
@@ -67,10 +73,12 @@ persistenceRoutes.get("/:slug/results", async (c) => {
   });
 
   return c.json(
-    rows.map((r) => ({
-      createdAt: r.created_at as string,
-      ...JSON.parse(r.result_json as string),
-    })),
+    GameResultListSchema.parse(
+      rows.map((r) => ({
+        createdAt: r.created_at as string,
+        ...JSON.parse(r.result_json as string),
+      })),
+    ),
   );
 });
 
@@ -81,7 +89,7 @@ persistenceRoutes.delete("/:slug/results", async (c) => {
     sql: "DELETE FROM game_results WHERE game_slug = ?",
     args: [slug],
   });
-  return c.json({ ok: true });
+  return c.json(OkResponseSchema.parse({ ok: true }));
 });
 
 persistenceRoutes.get("/:slug/replays", async (c) => {
@@ -95,16 +103,18 @@ persistenceRoutes.get("/:slug/replays", async (c) => {
   });
 
   return c.json(
-    rows.map((r) => ({
-      id: r.id as number,
-      aiEngine: r.ai_engine as string | null,
-      scoreP0: r.score_p0 as number | null,
-      scoreP1: r.score_p1 as number | null,
-      winner: r.winner as string | null,
-      createdAt: r.created_at as string,
-      scores: r.scores_json ? JSON.parse(r.scores_json as string) : null,
-      playerCount: r.player_count as number | null,
-    })),
+    ReplaySummaryListSchema.parse(
+      rows.map((r) => ({
+        id: r.id as number,
+        aiEngine: r.ai_engine as string | null,
+        scoreP0: r.score_p0 as number | null,
+        scoreP1: r.score_p1 as number | null,
+        winner: r.winner as string | null,
+        createdAt: r.created_at as string,
+        scores: r.scores_json ? JSON.parse(r.scores_json as string) : null,
+        playerCount: r.player_count as number | null,
+      })),
+    ),
   );
 });
 
@@ -116,6 +126,6 @@ persistenceRoutes.get("/:slug/replays/:id", async (c) => {
     args: [id],
   });
 
-  if (rows.length === 0) return c.json({ error: "Not found" }, 404);
-  return c.json(JSON.parse(rows[0].replay_json as string));
+  if (rows.length === 0) return errorResponse(c, 404, "Not found");
+  return c.json(ReplayLogSchema.parse(JSON.parse(rows[0].replay_json as string)));
 });

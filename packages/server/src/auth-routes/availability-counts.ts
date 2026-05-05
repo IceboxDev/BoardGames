@@ -1,3 +1,4 @@
+import { AvailabilityCountsSchema } from "@boardgames/core/protocol";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 
@@ -27,5 +28,5 @@ availabilityCountsRoutes.get("/counts", async (c) => {
     }
   }
 
-  return c.json(counts);
+  return c.json(AvailabilityCountsSchema.parse(counts));
 });

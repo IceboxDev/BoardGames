@@ -422,15 +422,8 @@ function handleLeaveSession(
 // Message routing
 // ---------------------------------------------------------------------------
 
-export function handleWsMessage(ws: WSContext, raw: string): void {
-  let msg: ClientToServerMessage;
-  try {
-    msg = JSON.parse(raw) as ClientToServerMessage;
-  } catch {
-    send(ws, { type: "error", message: "Invalid JSON" });
-    return;
-  }
-
+export function handleWsMessage(ws: WSContext, msg: ClientToServerMessage): void {
+  // Caller is responsible for envelope validation (see server.ts → parseClientMessage).
   switch (msg.type) {
     case "create-session":
       handleCreateSession(ws, msg);

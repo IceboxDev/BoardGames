@@ -1,14 +1,11 @@
-import { apiUrl } from "./api-base";
+import { OkResponseSchema, SetOnlineBodySchema } from "@boardgames/core/protocol";
+import { apiFetch } from "./api-fetch.ts";
 
-export async function adminSetOnline(userId: string, onlineEnabled: boolean): Promise<void> {
-  const res = await fetch(apiUrl(`/api/admin/users/${userId}/online`), {
+export async function adminSetOnline(userId: string, onlineEnabled: boolean) {
+  await apiFetch(`/api/admin/users/${userId}/online`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
-    credentials: "include",
-    body: JSON.stringify({ onlineEnabled }),
+    body: { onlineEnabled },
+    request: SetOnlineBodySchema,
+    response: OkResponseSchema,
   });
-  if (!res.ok) {
-    const body = (await res.json().catch(() => ({}))) as { error?: string };
-    throw new Error(body.error ?? `Request failed (${res.status})`);
-  }
 }

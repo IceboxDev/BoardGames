@@ -1,9 +1,10 @@
+import { AuthConfigSchema } from "@boardgames/core/protocol";
 import { useEffect, useId, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { Field } from "../components/ui/Field";
 import { Input } from "../components/ui/Input";
-import { apiUrl } from "../lib/api-base";
+import { apiFetch } from "../lib/api-fetch";
 import { authClient } from "../lib/auth-client";
 
 type Mode = "signin" | "signup";
@@ -22,9 +23,8 @@ export default function LoginPage() {
   const [googleEnabled, setGoogleEnabled] = useState(false);
 
   useEffect(() => {
-    fetch(apiUrl("/api/auth-config"), { credentials: "include" })
-      .then((r) => r.json())
-      .then((cfg: { googleEnabled?: boolean }) => setGoogleEnabled(Boolean(cfg.googleEnabled)))
+    apiFetch("/api/auth-config", { response: AuthConfigSchema })
+      .then((cfg) => setGoogleEnabled(cfg.googleEnabled))
       .catch(() => setGoogleEnabled(false));
   }, []);
 

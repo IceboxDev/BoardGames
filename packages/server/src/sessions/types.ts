@@ -1,4 +1,10 @@
-import type { RoomSlot, RoomState } from "@boardgames/core/protocol/messages";
+// Wire-protocol shapes live in `@boardgames/core/protocol` so that server
+// and web cannot drift. The local aliases keep the existing call-site names
+// (ClientToServerMessage / ServerToClientMessage) stable.
+export type {
+  ClientMessage as ClientToServerMessage,
+  ServerMessage as ServerToClientMessage,
+} from "@boardgames/core/protocol";
 
 export interface GameSessionAdapter<
   TState = unknown,
@@ -25,63 +31,3 @@ export interface SessionState {
   config: unknown;
   createdAt: number;
 }
-
-export type ClientToServerMessage =
-  // Solo session messages
-  | { type: "create-session"; gameSlug: string; config: unknown }
-  | { type: "action"; sessionId: string; action: unknown }
-  | { type: "leave-session"; sessionId: string }
-  // Room / lobby messages
-  | { type: "create-room"; gameSlug: string; playerName: string }
-  | { type: "join-room"; roomCode: string; playerName: string }
-  | { type: "leave-room"; roomCode: string }
-  | { type: "configure-room"; roomCode: string; slots: RoomSlot[] }
-  | { type: "start-room"; roomCode: string; config: unknown }
-  | { type: "kick-player"; roomCode: string; slotIndex: number }
-  | { type: "toggle-ready"; roomCode: string };
-
-export type ServerToClientMessage =
-  // Session messages
-  | {
-      type: "session-created";
-      sessionId: string;
-      playerView: unknown;
-      legalActions: unknown[];
-      phase: string;
-    }
-  | {
-      type: "state-update";
-      sessionId: string;
-      playerView: unknown;
-      legalActions: unknown[];
-      activePlayer: number;
-      playerIndex?: number;
-      phase: string;
-    }
-  | { type: "ai-thinking"; sessionId: string }
-  | {
-      type: "game-over";
-      sessionId: string;
-      result: unknown;
-      playerView: unknown;
-      playerIndex?: number;
-      replayId?: number;
-    }
-  | { type: "error"; sessionId?: string; message: string }
-  // Room / lobby messages
-  | { type: "room-created"; roomCode: string; roomState: RoomState }
-  | { type: "room-joined"; roomCode: string; roomState: RoomState; yourSlot: number }
-  | { type: "room-updated"; roomCode: string; roomState: RoomState }
-  | { type: "room-closed"; roomCode: string; reason: string }
-  | {
-      type: "game-started";
-      roomCode: string;
-      sessionId: string;
-      playerIndex: number;
-      activePlayer: number;
-      playerView: unknown;
-      legalActions: unknown[];
-      phase: string;
-    }
-  | { type: "player-disconnected"; sessionId: string; playerIndex: number; playerName: string }
-  | { type: "player-reconnected"; sessionId: string; playerIndex: number; playerName: string };

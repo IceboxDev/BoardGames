@@ -1,29 +1,33 @@
-import { apiUrl } from "./api-base";
+import {
+  ClearRsvpBodySchema,
+  OkResponseSchema,
+  type RsvpStatus,
+  SetRsvpBodySchema,
+} from "@boardgames/core/protocol";
+import { apiFetch } from "./api-fetch.ts";
 
-export type RsvpStatus = "yes" | "no";
+export type { RsvpStatus } from "@boardgames/core/protocol";
 
-export async function setRsvp(date: string, status: RsvpStatus): Promise<void> {
-  const res = await fetch(apiUrl("/api/calendar/rsvp"), {
+/**
+ * Record an RSVP. Pass `auto: true` when the call originates from an
+ * automated mechanism (e.g. the modal's first-open useEffect) so the
+ * server can flag the row and the attendees view keeps showing
+ * "Hasn't RSVP'd yet" until the user actually clicks the button.
+ */
+export async function setRsvp(date: string, status: RsvpStatus, auto = false) {
+  return apiFetch("/api/calendar/rsvp", {
     method: "POST",
-    credentials: "include",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ date, status }),
+    body: { date, status, auto },
+    request: SetRsvpBodySchema,
+    response: OkResponseSchema,
   });
-  if (!res.ok) {
-    const body = (await res.json().catch(() => ({}))) as { error?: string };
-    throw new Error(body.error ?? `Failed to RSVP (${res.status})`);
-  }
 }
 
-export async function clearRsvp(date: string): Promise<void> {
-  const res = await fetch(apiUrl("/api/calendar/rsvp"), {
+export async function clearRsvp(date: string) {
+  return apiFetch("/api/calendar/rsvp", {
     method: "DELETE",
-    credentials: "include",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ date }),
+    body: { date },
+    request: ClearRsvpBodySchema,
+    response: OkResponseSchema,
   });
-  if (!res.ok) {
-    const body = (await res.json().catch(() => ({}))) as { error?: string };
-    throw new Error(body.error ?? `Failed to clear RSVP (${res.status})`);
-  }
 }

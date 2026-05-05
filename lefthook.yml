@@ -6,3 +6,5 @@ pre-commit:
       run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" npx @biomejs/biome check --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
     typecheck:
       run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" pnpm -r typecheck
+    test:
+      run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" pnpm test
