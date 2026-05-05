@@ -113,11 +113,18 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
     const ownedSet = new Set(data.ownedSlugs);
     const lo = data.definiteCount;
     const hi = data.definiteCount + data.tentativeCount;
+    // Only suggest games that fit *every* headcount in the [definite,
+    // definite+tentative] window — i.e. game.minPlayers ≤ definite AND
+    // game.maxPlayers ≥ definite+tentative. A game that caps at
+    // `definite` is no use if a maybe shows up; one that needs more than
+    // `definite+tentative` can't be played at all. Previously this used
+    // overlap (min ≤ hi && max ≥ lo), which let games like Azul (max 4)
+    // through on a 4-going / 3-maybe night.
     return gameRegistry.filter((g) => {
       if (!ownedSet.has(g.slug)) return false;
       const min = g.bgg.minPlayers ?? 0;
       const max = g.bgg.maxPlayers ?? Number.POSITIVE_INFINITY;
-      return min <= hi && max >= lo;
+      return min <= lo && max >= hi;
     });
   }, [gamesQuery.data]);
 
@@ -260,14 +267,14 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
                 <div
                   role="tablist"
                   aria-label="View mode"
-                  className="inline-flex items-center gap-0.5 rounded-full border border-white/10 bg-surface-950/60 p-0.5 text-xs font-semibold"
+                  className="inline-flex items-center gap-0.5 rounded-full border border-white/10 bg-surface-950/60 p-0.5 text-[11px] font-semibold sm:text-xs"
                 >
                   <button
                     type="button"
                     role="tab"
                     aria-selected={effectiveView === "pick"}
                     onClick={() => setView("pick")}
-                    className={`rounded-full px-3 py-1.5 transition ${
+                    className={`rounded-full px-2 py-1 transition sm:px-3 sm:py-1.5 ${
                       effectiveView === "pick"
                         ? "bg-accent-500/20 text-accent-300"
                         : "text-gray-400 hover:text-white"
@@ -281,7 +288,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
                       role="tab"
                       aria-selected={effectiveView === "results"}
                       onClick={() => setView("results")}
-                      className={`rounded-full px-3 py-1.5 transition ${
+                      className={`rounded-full px-2 py-1 transition sm:px-3 sm:py-1.5 ${
                         effectiveView === "results"
                           ? "bg-amber-400/20 text-amber-200"
                           : "text-gray-400 hover:text-white"
@@ -296,7 +303,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
                       role="tab"
                       aria-selected={effectiveView === "attendees"}
                       onClick={() => setView("attendees")}
-                      className={`rounded-full px-3 py-1.5 transition ${
+                      className={`rounded-full px-2 py-1 transition sm:px-3 sm:py-1.5 ${
                         effectiveView === "attendees"
                           ? "bg-sky-400/20 text-sky-200"
                           : "text-gray-400 hover:text-white"
@@ -390,15 +397,18 @@ function RsvpSwitch({
   // muted ghost the user clicks to switch to that state. Implemented with
   // aria-pressed toggle buttons — the equivalent semantics without the
   // form-control implications of role=radio.
+  // Sizing intentionally matches the View-mode tab strip just to its left so
+  // both segmented controls fit on the same line on phone and read as a
+  // matched pair on PC.
   return (
-    <div className="inline-flex shrink-0 items-center rounded-full border border-white/10 bg-surface-950/60 p-0.5 text-sm font-semibold">
+    <div className="inline-flex shrink-0 items-center rounded-full border border-white/10 bg-surface-950/60 p-0.5 text-[11px] font-semibold sm:text-xs">
       <button
         type="button"
         aria-pressed={value === "yes"}
         aria-label="Going"
         onClick={() => onChange("yes")}
         disabled={busy}
-        className={`inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 transition disabled:opacity-50 ${
+        className={`inline-flex items-center gap-1 rounded-full px-2 py-1 transition disabled:opacity-50 sm:px-3 sm:py-1.5 ${
           value === "yes"
             ? "bg-emerald-400/20 text-emerald-100 ring-1 ring-emerald-300/60 shadow-[0_0_12px_-4px_rgba(16,185,129,0.5)]"
             : "text-gray-500 hover:text-emerald-200"
@@ -413,7 +423,7 @@ function RsvpSwitch({
         aria-label="Not going"
         onClick={() => onChange("no")}
         disabled={busy}
-        className={`inline-flex items-center gap-1.5 rounded-full px-4 py-1.5 transition disabled:opacity-50 ${
+        className={`inline-flex items-center gap-1 rounded-full px-2 py-1 transition disabled:opacity-50 sm:px-3 sm:py-1.5 ${
           value === "no"
             ? "bg-rose-500/20 text-rose-100 ring-1 ring-rose-300/60 shadow-[0_0_12px_-4px_rgba(244,63,94,0.5)]"
             : "text-gray-500 hover:text-rose-200"

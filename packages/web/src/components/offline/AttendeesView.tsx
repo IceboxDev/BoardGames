@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { games as gameRegistry } from "../../games/registry";
 import type { GameDefinition } from "../../games/types";
+import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { Attendee } from "../../lib/calendar-games";
 
 type Props = {
@@ -9,6 +10,9 @@ type Props = {
 };
 
 export default function AttendeesView({ attendees, topSlugs }: Props) {
+  const { user } = useCurrentUser();
+  const viewerId = user?.id ?? null;
+
   const slugToGame = useMemo(() => {
     const m = new Map<string, GameDefinition>();
     for (const g of gameRegistry) m.set(g.slug, g);
@@ -47,7 +51,7 @@ export default function AttendeesView({ attendees, topSlugs }: Props) {
       <ul className="flex flex-col gap-2">
         {attendees.map((a) => (
           <li key={a.userId}>
-            <AttendeeRow attendee={a} slugToGame={slugToGame} />
+            <AttendeeRow attendee={a} slugToGame={slugToGame} isViewer={a.userId === viewerId} />
           </li>
         ))}
       </ul>
@@ -66,9 +70,11 @@ export default function AttendeesView({ attendees, topSlugs }: Props) {
 function AttendeeRow({
   attendee,
   slugToGame,
+  isViewer,
 }: {
   attendee: Attendee;
   slugToGame: Map<string, GameDefinition>;
+  isViewer: boolean;
 }) {
   const initial = attendee.name[0]?.toUpperCase() ?? "?";
   return (
@@ -97,7 +103,11 @@ function AttendeeRow({
               Maybe
             </span>
           )}
-          {!attendee.hasRsvped && (
+          {!attendee.hasRsvped && !isViewer && (
+            // Don't pin the badge on the viewer themselves: they're literally
+            // looking at the modal right now, so they obviously opened the
+            // card. Server data may take a moment to refresh after the
+            // modal-open mutation, so we hide it client-side too.
             <span
               title="Marked availability but never opened the RSVP modal — ping them in real life."
               className="shrink-0 rounded-full bg-sky-400/15 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.18em] text-sky-200 ring-1 ring-sky-400/40"

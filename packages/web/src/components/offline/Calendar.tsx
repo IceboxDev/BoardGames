@@ -534,11 +534,18 @@ function LockedLayer({
 }
 
 function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
+  // Phone cells are ~50px wide. The pill sits at the bottom with a small
+  // horizontal inset; the inline-flex BG would otherwise be capped at that
+  // width and the wider tracking would push the label out of the green
+  // outline. Tighter tracking + smaller mobile font keeps "GOING" / "PASS"
+  // / "RSVP" inside the pill on every device.
+  const pillBase =
+    "pointer-events-none absolute inset-x-1 bottom-1 z-10 inline-flex items-center justify-center gap-0.5 rounded-md px-0.5 py-0 text-[7px] font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-[8px] sm:tracking-[0.18em]";
   if (viewerRsvp === "yes") {
     return (
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-2 bottom-1.5 z-10 inline-flex items-center justify-center gap-1 rounded-md border border-emerald-300/45 bg-emerald-400/15 px-1 py-0.5 text-[8px] font-bold uppercase tracking-[0.22em] text-emerald-100 backdrop-blur-sm motion-safe:animate-pulse-soft"
+        className={`${pillBase} border border-emerald-300/45 bg-emerald-400/15 text-emerald-100 motion-safe:animate-pulse-soft`}
       >
         <CheckGlyphSmall />
         Going
@@ -549,7 +556,7 @@ function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
     return (
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-2 bottom-1.5 z-10 inline-flex items-center justify-center gap-1 rounded-md border border-white/10 bg-white/[0.04] px-1 py-0.5 text-[8px] font-bold uppercase tracking-[0.22em] text-gray-400 backdrop-blur-sm"
+        className={`${pillBase} border border-white/10 bg-white/[0.04] text-gray-400`}
       >
         <CrossGlyphSmall />
         Pass
@@ -559,7 +566,7 @@ function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
   return (
     <span
       aria-hidden="true"
-      className="pointer-events-none absolute inset-x-2 bottom-1.5 z-10 rounded-md border border-amber-300/45 bg-amber-300/10 px-1 py-0.5 text-center text-[8px] font-bold uppercase tracking-[0.22em] text-amber-200 backdrop-blur-sm motion-safe:animate-pulse-soft"
+      className={`${pillBase} border border-amber-300/45 bg-amber-300/10 text-center text-amber-200 motion-safe:animate-pulse-soft`}
     >
       RSVP
     </span>
@@ -710,17 +717,17 @@ function NameRow({
   textShadow: React.CSSProperties | undefined;
 }) {
   return (
-    <div className="flex flex-wrap items-center gap-x-1 gap-y-0.5">
+    <div className="flex flex-wrap items-center gap-x-0.5 gap-y-0 sm:gap-x-1 sm:gap-y-0.5">
       {entries.map((e) => (
         <span
           key={e.userId}
           title={`${e.name} — ${e.status}`}
           style={textShadow}
-          className="inline-flex max-w-full items-center gap-0.5 truncate text-[7px] font-medium leading-none text-white sm:text-[10px] sm:gap-1 md:text-xs lg:text-sm"
+          className="inline-flex max-w-full items-center gap-0 truncate text-[6px] font-medium leading-tight text-white sm:gap-1 sm:text-[10px] sm:leading-none md:text-xs lg:text-sm"
         >
           <span
             aria-hidden="true"
-            className={`inline-block h-1 w-1 shrink-0 rounded-full sm:h-1.5 sm:w-1.5 md:h-2 md:w-2 ${dotColor}`}
+            className={`inline-block h-0.5 w-0.5 shrink-0 rounded-full sm:h-1.5 sm:w-1.5 md:h-2 md:w-2 ${dotColor}`}
           />
           <span className="truncate">{firstName(e.name)}</span>
         </span>
