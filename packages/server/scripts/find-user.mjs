@@ -7,7 +7,9 @@ const needle = (process.argv[2] ?? "paul").toLowerCase();
 const url = process.env.TURSO_DATABASE_URL;
 const authToken = process.env.TURSO_AUTH_TOKEN;
 if (!url) {
-  console.error("TURSO_DATABASE_URL missing — run with `node --env-file=.env scripts/find-user.mjs <name>`");
+  console.error(
+    "TURSO_DATABASE_URL missing — run with `node --env-file=.env scripts/find-user.mjs <name>`",
+  );
   process.exit(1);
 }
 
