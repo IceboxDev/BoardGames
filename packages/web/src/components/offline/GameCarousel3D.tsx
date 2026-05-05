@@ -1,5 +1,5 @@
 import { motion, type PanInfo } from "framer-motion";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import type { BggGame, GameDefinition } from "../../games/types";
 import type { ReactionAggregate } from "../../lib/calendar-games";
 import GameReactions from "./GameReactions";
@@ -23,17 +23,28 @@ type Props = {
   onPastEnd?: () => void;
 };
 
-const CARD_WIDTH = 380;
-const CARD_HEIGHT = 560;
+// Reference card dimensions — the design was tuned at 380×560. All scaled
+// constants below are derived as ratios of these so the visual relationships
+// (spread, depth, perspective) stay coherent at any card size.
+const REF_CARD_W = 380;
+const REF_CARD_H = 560;
+const ASPECT = REF_CARD_H / REF_CARD_W;
+
+const MIN_CARD_W = 240; // legible on a 320–375px phone
+const MAX_CARD_W = 520; // sensible cap on 4K
+
 // All four axes use the same tanh asymptote so cards bunch coherently. ROTATE
 // must stay under 90° or backface-hidden cards vanish. K controls softness
 // (higher = more linear); MAX caps the asymptote.
 const SPREAD_K = 2.5;
-const SPREAD_MAX = 520;
-const ROTATE_MAX = 65;
-const Z_MAX = 380;
-const SCALE_MIN = 0.55;
-const OPACITY_MIN = 0.45;
+const ROTATE_MAX = 65; // dimensionless angle
+const SCALE_MIN = 0.55; // dimensionless ratio
+const OPACITY_MIN = 0.45; // dimensionless ratio
+
+// Defensive floor — only triggers on extremely tight slots. With the 0.92
+// width factor a typical phone produces a ≥320px card, so description stays
+// visible. Drops description + weight bar below this width.
+const COMPACT_THRESHOLD = 230;
 
 function asymptote(offset: number, max: number): number {
   return Math.sign(offset) * max * Math.tanh(Math.abs(offset) / SPREAD_K);
@@ -49,6 +60,20 @@ export default function GameCarousel3D({
 }: Props) {
   const [center, setCenter] = useState(0);
   const atEnd = center >= games.length - 1;
+  const rootRef = useRef<HTMLDivElement>(null);
+  const [size, setSize] = useState({ w: 0, h: 0 });
+
+  useEffect(() => {
+    const el = rootRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(([entry]) => {
+      if (!entry) return;
+      const { width, height } = entry.contentRect;
+      setSize({ w: width, h: height });
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
 
   const goPrev = useCallback(() => {
     setCenter((c) => Math.max(0, c - 1));
@@ -88,17 +113,38 @@ export default function GameCarousel3D({
 
   if (games.length === 0) return null;
 
+  // Derive card dimensions from measured container size with clamps. On phones
+  // the card is width-bounded; on desktop the MAX cap or height/ASPECT bounds
+  // it (so the 0.92 factor only matters when width is the binding constraint —
+  // i.e. portrait phones — where we want the card as large as legibility allows
+  // and accept that the rotated side cards mostly clip behind overflow-hidden.
+  const measured = size.w > 0 && size.h > 0;
+  const cardW = measured
+    ? Math.max(MIN_CARD_W, Math.min(MAX_CARD_W, size.w * 0.92, size.h / ASPECT))
+    : REF_CARD_W;
+  const cardH = cardW * ASPECT;
+  const compact = cardW < COMPACT_THRESHOLD;
+
+  // 3D constants scale with cardW so the spread/depth stay visually coherent.
+  const spreadMax = cardW * (520 / REF_CARD_W);
+  const zMax = cardW * (380 / REF_CARD_W);
+  const perspective = cardW * (1600 / REF_CARD_W);
+
   return (
     <div
-      className="relative flex w-full items-center justify-center overflow-hidden"
-      style={{ perspective: "1600px" }}
+      ref={rootRef}
+      className="relative flex h-full w-full items-center justify-center overflow-hidden"
+      style={{
+        perspective: `${perspective}px`,
+        opacity: measured ? 1 : 0,
+      }}
     >
       <button
         type="button"
         onClick={goPrev}
         disabled={center === 0}
         aria-label="Previous game"
-        className="absolute left-2 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/80 text-white backdrop-blur-sm transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:left-4"
+        className="absolute left-2 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/80 text-white backdrop-blur-sm transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:left-4 sm:h-12 sm:w-12"
       >
         <ChevronGlyph direction="left" />
       </button>
@@ -106,8 +152,8 @@ export default function GameCarousel3D({
       <motion.div
         className="relative mx-auto"
         style={{
-          width: CARD_WIDTH,
-          height: CARD_HEIGHT,
+          width: cardW,
+          height: cardH,
           transformStyle: "preserve-3d",
         }}
         drag="x"
@@ -125,6 +171,11 @@ export default function GameCarousel3D({
             date={date}
             aggregate={reactions[game.slug]}
             onClick={() => setCenter(i)}
+            cardW={cardW}
+            cardH={cardH}
+            spreadMax={spreadMax}
+            zMax={zMax}
+            compact={compact}
           />
         ))}
       </motion.div>
@@ -134,7 +185,7 @@ export default function GameCarousel3D({
         onClick={goNext}
         disabled={atEnd && !onPastEnd}
         aria-label={atEnd && onPastEnd ? "Switch to results" : "Next game"}
-        className="absolute right-2 top-1/2 z-30 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/80 text-white backdrop-blur-sm transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:right-4"
+        className="absolute right-2 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/80 text-white backdrop-blur-sm transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:right-4 sm:h-12 sm:w-12"
         style={
           atEnd && onPastEnd
             ? { borderColor: "rgb(251 191 36 / 0.6)", color: "rgb(253 230 138)" }
@@ -155,6 +206,11 @@ type CardProps = {
   date: string;
   aggregate: ReactionAggregate | undefined;
   onClick: () => void;
+  cardW: number;
+  cardH: number;
+  spreadMax: number;
+  zMax: number;
+  compact: boolean;
 };
 
 function CarouselCard({
@@ -165,34 +221,53 @@ function CarouselCard({
   date,
   aggregate,
   onClick,
+  cardW,
+  cardH,
+  spreadMax,
+  zMax,
+  compact,
 }: CardProps) {
   const absOff = Math.abs(offset);
   const hidden = absOff > 5;
   const isCenter = offset === 0;
   const fits = fitsRange(game, minPlayers, maxPlayers);
 
+  // Inner heights preserve the original 270:290 split inside a 560-tall card.
+  const thumbH = cardH * (270 / REF_CARD_H);
+  const bodyH = cardH * (290 / REF_CARD_H);
+
+  // Use motion.div with role="button" rather than motion.button — the card
+  // contains <GameReactions> which renders <button> elements, and HTML doesn't
+  // allow nested buttons (the browser auto-closes the outer button before the
+  // inner one, breaking the layout).
   return (
-    <motion.button
-      type="button"
+    <motion.div
+      role="button"
       onClick={onClick}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          onClick();
+        }
+      }}
       tabIndex={hidden ? -1 : 0}
       aria-hidden={hidden}
       aria-label={isCenter ? `${game.title}, current selection` : `Show ${game.title}`}
       className="absolute left-1/2 top-1/2 origin-center cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-surface-900 text-left shadow-2xl shadow-black/40 transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
       style={
         {
-          width: CARD_WIDTH,
-          height: CARD_HEIGHT,
-          marginLeft: -CARD_WIDTH / 2,
-          marginTop: -CARD_HEIGHT / 2,
+          width: cardW,
+          height: cardH,
+          marginLeft: -cardW / 2,
+          marginTop: -cardH / 2,
           backfaceVisibility: "hidden",
           zIndex: 100 - absOff,
           "--accent": game.accentHex,
         } as React.CSSProperties
       }
       animate={{
-        x: asymptote(offset, SPREAD_MAX),
-        z: -Math.abs(asymptote(offset, Z_MAX)),
+        x: asymptote(offset, spreadMax),
+        z: -Math.abs(asymptote(offset, zMax)),
         rotateY: -asymptote(offset, ROTATE_MAX),
         scale: Math.max(SCALE_MIN, 1 - Math.abs(asymptote(offset, 1 - SCALE_MIN))),
         opacity: hidden
@@ -203,7 +278,7 @@ function CarouselCard({
       transition={{ type: "spring", stiffness: 220, damping: 28 }}
     >
       {/* Thumbnail */}
-      <div className="relative h-[270px] w-full overflow-hidden">
+      <div className="relative w-full overflow-hidden" style={{ height: thumbH }}>
         <img
           src={game.thumbnail}
           alt=""
@@ -240,7 +315,7 @@ function CarouselCard({
               slug={game.slug}
               accentHex={game.accentHex}
               aggregate={aggregate ?? { hype: 0, teach: 0, learn: 0, viewer: [] }}
-              size="md"
+              size={compact ? "sm" : "md"}
               disabled={!isCenter}
             />
           </div>
@@ -248,33 +323,40 @@ function CarouselCard({
       </div>
 
       {/* Body */}
-      <div className="flex h-[290px] flex-col gap-2.5 px-5 py-4">
+      <div
+        className={`flex flex-col ${compact ? "gap-1.5 px-3 py-3" : "gap-2.5 px-5 py-4"}`}
+        style={{ height: bodyH }}
+      >
         <span
           className="block h-0.5 w-12 rounded-full"
           style={{ backgroundColor: game.accentHex }}
           aria-hidden="true"
         />
-        <h3 className="truncate text-xl font-bold leading-tight text-white">{game.title}</h3>
+        <h3
+          className={`truncate font-bold leading-tight text-white ${compact ? "text-lg" : "text-xl"}`}
+        >
+          {game.title}
+        </h3>
         <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400">
           {playerRange(game.bgg)} · {playTime(game.bgg)}
           {game.bgg.minAge ? ` · ${game.bgg.minAge}+` : ""}
         </p>
 
-        <BggInline bgg={game.bgg} />
+        <BggInline bgg={game.bgg} compact={compact} />
 
-        {game.bgg.description && (
+        {!compact && game.bgg.description && (
           <p className="min-h-0 flex-1 overflow-hidden text-[11px] leading-relaxed text-gray-400">
             {stripBggHtml(game.bgg.description)}
           </p>
         )}
       </div>
-    </motion.button>
+    </motion.div>
   );
 }
 
-function BggInline({ bgg }: { bgg: BggGame }) {
+function BggInline({ bgg, compact }: { bgg: BggGame; compact: boolean }) {
   const hasRating = bgg.averageRating !== null;
-  const hasWeight = bgg.averageWeight !== null && bgg.averageWeight > 0;
+  const hasWeight = !compact && bgg.averageWeight !== null && bgg.averageWeight > 0;
   if (!hasRating && !hasWeight) return null;
 
   return (

@@ -115,7 +115,7 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
     <AnimatePresence>
       <motion.div
         key="rsvp-modal"
-        className="fixed inset-0 z-[200] flex items-center justify-center px-4 py-4 sm:py-6"
+        className="fixed inset-0 z-[200] flex items-center justify-center px-2 py-2 sm:px-4 sm:py-6"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -129,7 +129,7 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
         />
 
         <motion.div
-          className="relative z-10 flex h-full w-full max-w-[80rem] flex-col gap-4 rounded-3xl border border-white/10 bg-surface-900/95 p-5 shadow-2xl shadow-black/60 sm:p-7"
+          className="relative z-10 flex h-full w-full max-w-[80rem] flex-col gap-2 rounded-3xl border border-white/10 bg-surface-900/95 p-3 shadow-2xl shadow-black/60 sm:gap-4 sm:p-7 xl:max-w-[92rem] 2xl:max-w-[110rem]"
           initial={{ y: 16, scale: 0.96, opacity: 0 }}
           animate={{ y: 0, scale: 1, opacity: 1 }}
           exit={{ y: 16, scale: 0.96, opacity: 0 }}

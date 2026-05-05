@@ -1,6 +1,7 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useEffect, useRef } from "react";
 import { useSession } from "../lib/auth-client";
+import { queryPersister } from "../lib/query-persister";
 
 export function AuthInvalidator() {
   const qc = useQueryClient();
@@ -19,6 +20,10 @@ export function AuthInvalidator() {
     if (lastUserId.current === userId) return;
     void qc.cancelQueries();
     qc.clear();
+    // Also wipe the persisted snapshot so the previous user's data can't
+    // hydrate on the next page load before AuthInvalidator has a chance to
+    // run.
+    void queryPersister?.removeClient();
     lastUserId.current = userId;
   }, [userId, isPending, qc]);
 

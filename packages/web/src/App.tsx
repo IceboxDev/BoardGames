@@ -1,11 +1,12 @@
-import { QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import { lazy, Suspense } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthGuard } from "./components/AuthGuard";
 import { AuthInvalidator } from "./components/AuthInvalidator";
 import Layout from "./components/Layout";
 import { queryClient } from "./lib/query-client";
+import { queryPersistBuster, queryPersister } from "./lib/query-persister";
 
 const LoginPage = lazy(() => import("./pages/LoginPage"));
 const ProfilePage = lazy(() => import("./pages/ProfilePage"));
@@ -21,8 +22,21 @@ const GameMenu = lazy(() => import("./components/GameMenu"));
 const GameRouter = lazy(() => import("./components/GameRouter"));
 
 export default function App() {
+  // Persist the entire query cache to localStorage so that locks, availability,
+  // inventory, etc. hydrate from disk on first paint. Background refetch still
+  // runs after hydration; UI only flashes if the data actually changed.
+  if (!queryPersister) {
+    return null;
+  }
   return (
-    <QueryClientProvider client={queryClient}>
+    <PersistQueryClientProvider
+      client={queryClient}
+      persistOptions={{
+        persister: queryPersister,
+        maxAge: 24 * 60 * 60 * 1000,
+        buster: queryPersistBuster,
+      }}
+    >
       <BrowserRouter>
         <AuthInvalidator />
         <Suspense fallback={null}>
@@ -88,6 +102,6 @@ export default function App() {
         </Suspense>
       </BrowserRouter>
       {import.meta.env.DEV && <ReactQueryDevtools buttonPosition="bottom-left" />}
-    </QueryClientProvider>
+    </PersistQueryClientProvider>
   );
 }
