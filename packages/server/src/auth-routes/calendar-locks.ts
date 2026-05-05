@@ -14,12 +14,13 @@ calendarLocksRoutes.get("/games", async (c) => {
   }
 
   const lockedRow = await getDb().execute({
-    sql: "SELECT 1 FROM locked_dates WHERE date_key = ? LIMIT 1",
+    sql: "SELECT host_user_id FROM locked_dates WHERE date_key = ? LIMIT 1",
     args: [date],
   });
   if (lockedRow.rows.length === 0) {
     return c.json({ error: "date is not locked" }, 400);
   }
+  const hostUserId = (lockedRow.rows[0].host_user_id as string | null) ?? null;
 
   // Compute participant set. `rsvp:no` is an explicit decline — it overrides
   // any availability marker, including an earlier `rsvp:yes`. Only people who
@@ -70,18 +71,19 @@ calendarLocksRoutes.get("/games", async (c) => {
   const definiteIds = [...comingIds];
   const tentativeIds = [...maybeSet].filter((id) => !comingIds.has(id) && !rsvpNo.has(id));
 
-  let ownedSlugs: string[] = [];
+  // Per-user inventory map for definite attendees. Used both for the union
+  // (ownedSlugs) and for the bringing assignment downstream.
+  const inventoryByUser = new Map<string, Set<string>>();
+  const ownedUnion = new Set<string>();
   if (definiteIds.length > 0) {
     const placeholders = definiteIds.map(() => "?").join(",");
     const inventoryResult = await getDb().execute({
-      sql: `SELECT game_slugs_json FROM user_inventory WHERE user_id IN (${placeholders})`,
+      sql: `SELECT user_id, game_slugs_json FROM user_inventory WHERE user_id IN (${placeholders})`,
       args: definiteIds,
     });
 
-    // Union: any one confirmed attendee owning a game means the group can
-    // play it (whoever owns it brings it to the night).
-    const union = new Set<string>();
     for (const row of inventoryResult.rows) {
+      const userId = row.user_id as string;
       let parsed: unknown;
       try {
         parsed = JSON.parse(row.game_slugs_json as string);
@@ -89,12 +91,17 @@ calendarLocksRoutes.get("/games", async (c) => {
         continue;
       }
       if (!Array.isArray(parsed)) continue;
+      const set = new Set<string>();
       for (const slug of parsed) {
-        if (typeof slug === "string") union.add(slug);
+        if (typeof slug === "string") {
+          set.add(slug);
+          ownedUnion.add(slug);
+        }
       }
+      inventoryByUser.set(userId, set);
     }
-    ownedSlugs = [...union].sort();
   }
+  const ownedSlugs = [...ownedUnion].sort();
 
   type ReactionAggregate = {
     hype: number;
@@ -103,6 +110,9 @@ calendarLocksRoutes.get("/games", async (c) => {
     viewer: ("hype" | "teach" | "learn")[];
   };
   const reactions: Record<string, ReactionAggregate> = {};
+  // Per-user vote counts used by the Attendees view. Includes definite and
+  // tentative voters — a maybe's votes still describe them.
+  const votesByUser = new Map<string, { hype: number; teach: number; learn: number }>();
   for (const row of reactionResult.rows) {
     const userId = row.user_id as string;
     const slug = row.game_slug as string;
@@ -118,7 +128,139 @@ calendarLocksRoutes.get("/games", async (c) => {
     // The viewer's own reactions stay visible on their buttons either way —
     // local UI state, not a vote.
     if (userId === user.id) agg.viewer.push(kind);
+    // Track per-user vote counts (definite + tentative).
+    if (comingIds.has(userId) || maybeSet.has(userId)) {
+      let v = votesByUser.get(userId);
+      if (!v) {
+        v = { hype: 0, teach: 0, learn: 0 };
+        votesByUser.set(userId, v);
+      }
+      v[kind] += 1;
+    }
   }
+
+  // Top-5 selection. Mirrors RankedGameList's tie-break chain, with a bonus
+  // rule: "learn" votes only contribute to the support score when at least one
+  // person wants to teach the game. A learner with no teacher is wishful, not
+  // actionable, so the game shouldn't gain rank from learn-only votes.
+  const ranked = Object.entries(reactions)
+    .filter(([, agg]) => agg.hype > 0)
+    .sort((a, b) => {
+      const aAgg = a[1];
+      const bAgg = b[1];
+      if (bAgg.hype !== aAgg.hype) return bAgg.hype - aAgg.hype;
+      const aLearn = aAgg.teach > 0 ? aAgg.learn : 0;
+      const bLearn = bAgg.teach > 0 ? bAgg.learn : 0;
+      const aSupport = aAgg.teach + aLearn;
+      const bSupport = bAgg.teach + bLearn;
+      if (bSupport !== aSupport) return bSupport - aSupport;
+      return a[0].localeCompare(b[0]);
+    });
+  const topSlugs = ranked.slice(0, 5).map(([slug]) => slug);
+
+  // Look up names for everyone in the attendee set (definite + tentative).
+  const allAttendeeIds = [...new Set([...definiteIds, ...tentativeIds])];
+  const userNames = new Map<string, string>();
+  if (allAttendeeIds.length > 0) {
+    const placeholders = allAttendeeIds.map(() => "?").join(",");
+    const userResult = await getDb().execute({
+      sql: `SELECT id, name, email FROM user WHERE id IN (${placeholders})`,
+      args: allAttendeeIds,
+    });
+    for (const row of userResult.rows) {
+      const id = row.id as string;
+      const raw =
+        ((row.name as string | null) || (row.email as string | null) || "—").trim() || "—";
+      userNames.set(id, raw);
+    }
+  }
+
+  // Bringing assignment. Greedy with rarity-first ordering: process the
+  // top-5 game with the fewest definite-owners first so we don't orphan it
+  // by spending an owner's slot on a more-common game. Host has no per-user
+  // limit (they bring everything they own that's in the top 5).
+  const PER_NONHOST_LIMIT = 3;
+  type DefiniteAttendee = { userId: string; isHost: boolean };
+  const definiteAttendees: DefiniteAttendee[] = definiteIds.map((id) => ({
+    userId: id,
+    isHost: id === hostUserId,
+  }));
+  const bringing = new Map<string, string[]>();
+  for (const a of definiteAttendees) bringing.set(a.userId, []);
+
+  const rarity = (slug: string) =>
+    definiteAttendees.filter((a) => inventoryByUser.get(a.userId)?.has(slug)).length;
+  const orderedTop = [...topSlugs].sort((a, b) => rarity(a) - rarity(b));
+
+  for (const slug of orderedTop) {
+    const owners = definiteAttendees.filter((a) => inventoryByUser.get(a.userId)?.has(slug));
+    if (owners.length === 0) continue;
+    const hostOwner = owners.find((o) => o.isHost);
+    if (hostOwner) {
+      // Host owns it — they bring it from their collection. No slot consumed.
+      bringing.get(hostOwner.userId)?.push(slug);
+      continue;
+    }
+    const eligible = owners.filter(
+      (o) => (bringing.get(o.userId)?.length ?? 0) < PER_NONHOST_LIMIT,
+    );
+    if (eligible.length === 0) continue;
+    eligible.sort((a, b) => {
+      const aFree = PER_NONHOST_LIMIT - (bringing.get(a.userId)?.length ?? 0);
+      const bFree = PER_NONHOST_LIMIT - (bringing.get(b.userId)?.length ?? 0);
+      if (aFree !== bFree) return bFree - aFree;
+      // Tie: prefer the owner with fewer top-5 alternatives — picking a
+      // less-versatile owner here frees a more-versatile one for later games.
+      const aAlts = topSlugs.filter((s) => inventoryByUser.get(a.userId)?.has(s)).length;
+      const bAlts = topSlugs.filter((s) => inventoryByUser.get(b.userId)?.has(s)).length;
+      return aAlts - bAlts;
+    });
+    bringing.get(eligible[0].userId)?.push(slug);
+  }
+
+  // Build the attendees array (definite first, then tentative). The host
+  // always lists every top-5 game they own (their whole collection is at
+  // the venue); non-hosts list only the games they were assigned to bring.
+  type AttendeeOut = {
+    userId: string;
+    name: string;
+    isHost: boolean;
+    status: "definite" | "tentative";
+    votes: { hype: number; teach: number; learn: number };
+    bringing: string[];
+  };
+  const attendees: AttendeeOut[] = [];
+  for (const id of definiteIds) {
+    const isHost = id === hostUserId;
+    const inv = inventoryByUser.get(id);
+    const list = isHost ? topSlugs.filter((s) => inv?.has(s)) : (bringing.get(id) ?? []);
+    attendees.push({
+      userId: id,
+      name: userNames.get(id) ?? "—",
+      isHost,
+      status: "definite",
+      votes: votesByUser.get(id) ?? { hype: 0, teach: 0, learn: 0 },
+      bringing: list,
+    });
+  }
+  for (const id of tentativeIds) {
+    attendees.push({
+      userId: id,
+      name: userNames.get(id) ?? "—",
+      isHost: id === hostUserId,
+      status: "tentative",
+      votes: votesByUser.get(id) ?? { hype: 0, teach: 0, learn: 0 },
+      bringing: [],
+    });
+  }
+  attendees.sort((a, b) => {
+    if (a.isHost !== b.isHost) return a.isHost ? -1 : 1;
+    if (a.status !== b.status) return a.status === "definite" ? -1 : 1;
+    const aTotal = a.votes.hype + a.votes.teach + a.votes.learn;
+    const bTotal = b.votes.hype + b.votes.teach + b.votes.learn;
+    if (bTotal !== aTotal) return bTotal - aTotal;
+    return a.name.localeCompare(b.name);
+  });
 
   return c.json({
     ownedSlugs,
@@ -126,6 +268,8 @@ calendarLocksRoutes.get("/games", async (c) => {
     tentativeCount: tentativeIds.length,
     participantIds: definiteIds,
     reactions,
+    topSlugs,
+    attendees,
   });
 });
 

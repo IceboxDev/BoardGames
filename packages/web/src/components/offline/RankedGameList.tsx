@@ -7,26 +7,49 @@ type Props = {
   date: string;
   games: GameDefinition[];
   reactions: Record<string, ReactionAggregate>;
+  /** Server-computed ordered top-5 slugs. When provided, the list renders
+   * exactly these in order — avoiding any drift between server and client
+   * tie-break logic. When absent, falls back to local ranking (kept so the
+   * component stays usable for any future caller that doesn't have the
+   * server payload yet). */
+  topSlugs?: string[];
 };
 
 const EMPTY: ReactionAggregate = { hype: 0, teach: 0, learn: 0, viewer: [] };
+const RESULT_CAP = 5;
 
-export default function RankedGameList({ date, games, reactions }: Props) {
+export default function RankedGameList({ date, games, reactions, topSlugs }: Props) {
   const ranked = useMemo(() => {
+    if (topSlugs && topSlugs.length > 0) {
+      const bySlug = new Map(games.map((g) => [g.slug, g]));
+      const out: { game: GameDefinition; agg: ReactionAggregate }[] = [];
+      for (const slug of topSlugs.slice(0, RESULT_CAP)) {
+        const g = bySlug.get(slug);
+        if (!g) continue;
+        out.push({ game: g, agg: reactions[slug] ?? EMPTY });
+      }
+      return out;
+    }
     return games
       .filter((g) => (reactions[g.slug]?.hype ?? 0) > 0)
       .map((g) => ({ game: g, agg: reactions[g.slug] ?? EMPTY }))
       .sort((a, b) => {
         if (b.agg.hype !== a.agg.hype) return b.agg.hype - a.agg.hype;
-        const aSupport = a.agg.teach + a.agg.learn;
-        const bSupport = b.agg.teach + b.agg.learn;
+        // Bonus tiebreaker: "learn" votes only count toward support if at
+        // least one teach is present. A learner with no teacher is wishful,
+        // not actionable, so the game shouldn't gain rank from it.
+        const aLearn = a.agg.teach > 0 ? a.agg.learn : 0;
+        const bLearn = b.agg.teach > 0 ? b.agg.learn : 0;
+        const aSupport = a.agg.teach + aLearn;
+        const bSupport = b.agg.teach + bLearn;
         if (bSupport !== aSupport) return bSupport - aSupport;
         const aRating = a.game.bgg.averageRating ?? 0;
         const bRating = b.game.bgg.averageRating ?? 0;
         if (bRating !== aRating) return bRating - aRating;
         return a.game.title.localeCompare(b.game.title);
-      });
-  }, [games, reactions]);
+      })
+      .slice(0, RESULT_CAP);
+  }, [games, reactions, topSlugs]);
 
   if (ranked.length === 0) return null;
 

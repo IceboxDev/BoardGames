@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TopNav, TopNavLink } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
@@ -31,7 +32,7 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="flex min-h-screen flex-col bg-surface-950 bg-grid">
+    <div className="flex min-h-dvh flex-col bg-surface-950 bg-grid">
       <TopNav>
         {isAdmin && <TopNavLink to="/admin">Admin</TopNavLink>}
         <TopNavLink onClick={handleSignOut}>Sign out</TopNavLink>
@@ -107,6 +108,10 @@ type GalleryPreviewProps = {
 };
 
 const PREVIEW_THUMBS = 6;
+const THUMB_W = 40; // h-10 w-10
+const THUMB_GAP = 6; // gap-1.5
+const BADGE_W = 40; // overflow badge same size as thumbs
+const SLOT_RESERVE = 8; // safety margin so we never partially overflow
 
 function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
   const isLoading = ownedSlugs === null;
@@ -116,9 +121,34 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
         .filter((g): g is GameDefinition => Boolean(g))
     : [];
 
-  const previewGames = owned.slice(0, PREVIEW_THUMBS);
-  const overflow = owned.length - previewGames.length;
-  const empty = !isLoading && owned.length === 0;
+  // Measure the thumb-row slot so we can render only as many thumbnails as
+  // actually fit. Pre-measurement we render PREVIEW_THUMBS; the row is
+  // overflow-hidden so any sliver clip during the first frame doesn't escape
+  // the parent.
+  const rowRef = useRef<HTMLDivElement>(null);
+  const [slotW, setSlotW] = useState(0);
+  useEffect(() => {
+    const el = rowRef.current;
+    if (!el) return;
+    const ro = new ResizeObserver(([entry]) => {
+      if (entry) setSlotW(entry.contentRect.width);
+    });
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  const total = owned.length;
+  // Reserve room for the +N badge, then floor on (slot − badge) / (thumb +
+  // gap). Capped at PREVIEW_THUMBS, floored at 1 so we always show at least
+  // one thumb when inventory is non-empty.
+  const maxByWidth =
+    slotW > 0
+      ? Math.max(1, Math.floor((slotW - BADGE_W - SLOT_RESERVE) / (THUMB_W + THUMB_GAP)))
+      : PREVIEW_THUMBS;
+  const visibleCount = Math.min(total, Math.min(PREVIEW_THUMBS, maxByWidth));
+  const previewGames = owned.slice(0, visibleCount);
+  const overflow = total - visibleCount;
+  const empty = !isLoading && total === 0;
 
   return (
     <button
@@ -131,9 +161,9 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
         <span className="text-xs font-semibold uppercase tracking-[0.2em]">Gallery</span>
       </div>
 
-      <div className="flex min-h-10 min-w-0 flex-1 items-center gap-2.5">
+      <div ref={rowRef} className="flex min-h-10 min-w-0 flex-1 items-center gap-2.5">
         {isLoading ? (
-          <div className="flex gap-1.5" aria-hidden="true">
+          <div className="flex gap-1.5 overflow-hidden" aria-hidden="true">
             {Array.from({ length: PREVIEW_THUMBS }).map((_, i) => (
               <span
                 // biome-ignore lint/suspicious/noArrayIndexKey: static skeleton placeholders
@@ -146,7 +176,7 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
           <span className="text-xs text-gray-500">No games yet — ask an admin to add some</span>
         ) : (
           <>
-            <div className="flex gap-1.5">
+            <div className="flex gap-1.5 overflow-hidden">
               {previewGames.map((g) => (
                 <span
                   key={g.slug}
@@ -168,8 +198,8 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
                 </span>
               )}
             </div>
-            <span className="truncate text-xs text-gray-500">
-              {owned.length} {owned.length === 1 ? "game" : "games"}
+            <span className="hidden truncate text-xs text-gray-500 sm:inline">
+              {total} {total === 1 ? "game" : "games"}
             </span>
           </>
         )}

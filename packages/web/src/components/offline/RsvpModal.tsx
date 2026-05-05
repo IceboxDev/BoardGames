@@ -9,6 +9,7 @@ import { fetchAvailableGames } from "../../lib/calendar-games";
 import type { CalendarLocks } from "../../lib/calendar-locks";
 import { type RsvpStatus, setRsvp } from "../../lib/calendar-rsvps";
 import { qk } from "../../lib/query-keys";
+import AttendeesView from "./AttendeesView";
 import GameCarousel3D from "./GameCarousel3D";
 import RankedGameList from "./RankedGameList";
 
@@ -76,6 +77,8 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
   const definiteCount = preview ? 0 : (gamesQuery.data?.definiteCount ?? 0);
   const tentativeCount = preview ? 0 : (gamesQuery.data?.tentativeCount ?? 0);
   const reactions = preview ? {} : (gamesQuery.data?.reactions ?? {});
+  const topSlugs = preview ? [] : (gamesQuery.data?.topSlugs ?? []);
+  const attendees = preview ? [] : (gamesQuery.data?.attendees ?? []);
 
   const availableGames = useMemo<GameDefinition[]>(() => {
     if (preview) return gameRegistry;
@@ -97,12 +100,21 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
     [availableGames, reactions],
   );
 
-  // Always default to "pick games"; the user can switch to results via the
-  // Pick / Results toggle below, or by navigating past the rightmost card.
-  const [view, setView] = useState<"pick" | "results">("pick");
+  // Default to "pick games"; the user switches via the toggle below or by
+  // navigating past the rightmost card.
+  const [view, setView] = useState<"pick" | "results" | "attendees">("pick");
   const canShowResults = hypedCount > 0;
-  const showRanked = view === "results" && canShowResults;
-  const showViewToggle = !preview && canShowResults;
+  const canShowAttendees = !preview && attendees.length > 0;
+  const showViewToggle = !preview && (canShowResults || canShowAttendees);
+  // Guard against a stale view selection if the underlying availability
+  // disappeared (e.g. the only hyped game was un-hyped and we're still on
+  // the results tab). Fall back to "pick" silently.
+  const effectiveView: "pick" | "results" | "attendees" =
+    view === "results" && !canShowResults
+      ? "pick"
+      : view === "attendees" && !canShowAttendees
+        ? "pick"
+        : view;
 
   // While the auto-yes mutation is in flight on first open, render "Going"
   // optimistically so the header doesn't flicker through an empty state.
@@ -153,12 +165,12 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
             </svg>
           </button>
 
-          <header className="flex flex-wrap items-end justify-between gap-4 pr-10">
+          <header className="flex items-start justify-between gap-3 pr-10">
             <div className="flex min-w-0 flex-col items-start gap-1">
               <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-300">
                 {preview ? "Preview · all games" : "Game night"}
               </p>
-              <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              <h2 className="text-xl font-bold tracking-tight text-white sm:text-3xl">
                 {preview ? `${availableGames.length} games in library` : headingDate}
               </h2>
               {!preview && (
@@ -172,83 +184,105 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
                   )}
                 </p>
               )}
-              {!preview && lock && (lock.host || lock.eventTime || lock.address) && (
-                <EventDetails
-                  host={lock.host?.name ?? null}
-                  eventTime={lock.eventTime}
-                  address={lock.address}
-                />
-              )}
             </div>
 
-            {!preview && (
-              <div className="flex flex-wrap items-center justify-end gap-2">
-                {showViewToggle && (
-                  <div
-                    role="tablist"
-                    aria-label="View mode"
-                    className="inline-flex items-center gap-0.5 rounded-full border border-white/10 bg-surface-950/60 p-0.5 text-xs font-semibold"
-                  >
-                    <button
-                      type="button"
-                      role="tab"
-                      aria-selected={!showRanked}
-                      onClick={() => setView("pick")}
-                      className={`rounded-full px-3 py-1.5 transition ${
-                        !showRanked
-                          ? "bg-accent-500/20 text-accent-300"
-                          : "text-gray-400 hover:text-white"
-                      }`}
-                    >
-                      Pick games
-                    </button>
-                    <button
-                      type="button"
-                      role="tab"
-                      aria-selected={showRanked}
-                      onClick={() => setView("results")}
-                      className={`rounded-full px-3 py-1.5 transition ${
-                        showRanked
-                          ? "bg-amber-400/20 text-amber-200"
-                          : "text-gray-400 hover:text-white"
-                      }`}
-                    >
-                      Results
-                    </button>
-                  </div>
-                )}
-                {effectiveRsvp === "yes" ? (
-                  <button
-                    type="button"
-                    onClick={() => setRsvpMutation.mutate({ status: "no" })}
-                    disabled={busy}
-                    aria-label="Going — tap to switch to not going"
-                    className="inline-flex items-center gap-2 rounded-full border border-emerald-300/60 bg-emerald-400/15 px-5 py-2 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-400/25 disabled:opacity-50"
-                  >
-                    <span aria-hidden="true">✓</span>
-                    Going
-                  </button>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={() => setRsvpMutation.mutate({ status: "yes" })}
-                    disabled={busy}
-                    aria-label="Not going — tap to switch to going"
-                    className="inline-flex items-center gap-2 rounded-full border border-rose-400/60 bg-rose-500/20 px-5 py-2 text-sm font-semibold text-rose-100 transition hover:bg-rose-500/30 disabled:opacity-50"
-                  >
-                    <span aria-hidden="true">✗</span>
-                    Not going
-                  </button>
-                )}
+            {!preview && lock && (lock.host || lock.eventTime || lock.address) && (
+              <div className="flex shrink-0 flex-col items-end gap-1 text-right text-[11px] text-gray-300">
+                {lock.host && <HostLine name={lock.host.name} />}
+                {lock.eventTime && <TimeLine value={lock.eventTime} />}
+                {lock.address && <AddressLink address={lock.address} />}
               </div>
             )}
           </header>
 
           {error && <p className="text-center text-xs text-rose-400">{error}</p>}
 
+          {!preview && (
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              {showViewToggle ? (
+                <div
+                  role="tablist"
+                  aria-label="View mode"
+                  className="inline-flex items-center gap-0.5 rounded-full border border-white/10 bg-surface-950/60 p-0.5 text-xs font-semibold"
+                >
+                  <button
+                    type="button"
+                    role="tab"
+                    aria-selected={effectiveView === "pick"}
+                    onClick={() => setView("pick")}
+                    className={`rounded-full px-3 py-1.5 transition ${
+                      effectiveView === "pick"
+                        ? "bg-accent-500/20 text-accent-300"
+                        : "text-gray-400 hover:text-white"
+                    }`}
+                  >
+                    Pick
+                  </button>
+                  {canShowResults && (
+                    <button
+                      type="button"
+                      role="tab"
+                      aria-selected={effectiveView === "results"}
+                      onClick={() => setView("results")}
+                      className={`rounded-full px-3 py-1.5 transition ${
+                        effectiveView === "results"
+                          ? "bg-amber-400/20 text-amber-200"
+                          : "text-gray-400 hover:text-white"
+                      }`}
+                    >
+                      Results
+                    </button>
+                  )}
+                  {canShowAttendees && (
+                    <button
+                      type="button"
+                      role="tab"
+                      aria-selected={effectiveView === "attendees"}
+                      onClick={() => setView("attendees")}
+                      className={`rounded-full px-3 py-1.5 transition ${
+                        effectiveView === "attendees"
+                          ? "bg-sky-400/20 text-sky-200"
+                          : "text-gray-400 hover:text-white"
+                      }`}
+                    >
+                      Attendees
+                    </button>
+                  )}
+                </div>
+              ) : (
+                <span aria-hidden="true" />
+              )}
+              {effectiveRsvp === "yes" ? (
+                <button
+                  type="button"
+                  onClick={() => setRsvpMutation.mutate({ status: "no" })}
+                  disabled={busy}
+                  aria-label="Going — tap to switch to not going"
+                  className="inline-flex items-center gap-2 rounded-full border border-emerald-300/60 bg-emerald-400/15 px-5 py-2 text-sm font-semibold text-emerald-100 transition hover:bg-emerald-400/25 disabled:opacity-50"
+                >
+                  <span aria-hidden="true">✓</span>
+                  Going
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  onClick={() => setRsvpMutation.mutate({ status: "yes" })}
+                  disabled={busy}
+                  aria-label="Not going — tap to switch to going"
+                  className="inline-flex items-center gap-2 rounded-full border border-rose-400/60 bg-rose-500/20 px-5 py-2 text-sm font-semibold text-rose-100 transition hover:bg-rose-500/30 disabled:opacity-50"
+                >
+                  <span aria-hidden="true">✗</span>
+                  Not going
+                </button>
+              )}
+            </div>
+          )}
+
           <div className="flex min-h-0 flex-1 items-center justify-center">
             {!preview && gamesQuery.isPending ? (
               <p className="text-sm text-gray-500">Finding games…</p>
+            ) : effectiveView === "attendees" ? (
+              <AttendeesView attendees={attendees} topSlugs={topSlugs} />
             ) : availableGames.length === 0 ? (
               <div className="rounded-2xl border border-dashed border-white/10 px-8 py-10 text-center">
                 <p className="text-sm font-medium text-gray-300">No games match.</p>
@@ -256,8 +290,13 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
                   Either nobody owns the same game, or no game fits the group size.
                 </p>
               </div>
-            ) : showRanked ? (
-              <RankedGameList date={date} games={availableGames} reactions={reactions} />
+            ) : effectiveView === "results" ? (
+              <RankedGameList
+                date={date}
+                games={availableGames}
+                reactions={reactions}
+                topSlugs={topSlugs}
+              />
             ) : (
               <GameCarousel3D
                 games={availableGames}
@@ -278,47 +317,39 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
   return createPortal(overlay, document.body);
 }
 
-function EventDetails({
-  host,
-  eventTime,
-  address,
-}: {
-  host: string | null;
-  eventTime: string | null;
-  address: string | null;
-}) {
-  const mapHref = address
-    ? `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
-    : null;
+function HostLine({ name }: { name: string }) {
   return (
-    <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-300">
-      {host && (
-        <span className="inline-flex items-center gap-1.5">
-          <HostIcon />
-          <span>
-            <span className="text-gray-500">Host </span>
-            <span className="font-semibold text-white">{host}</span>
-          </span>
-        </span>
-      )}
-      {eventTime && (
-        <span className="inline-flex items-center gap-1.5">
-          <ClockIcon />
-          <span className="font-semibold tabular-nums text-white">{eventTime}</span>
-        </span>
-      )}
-      {address && mapHref && (
-        <a
-          href={mapHref}
-          target="_blank"
-          rel="noreferrer noopener"
-          className="inline-flex max-w-full items-center gap-1.5 truncate text-emerald-300 underline-offset-2 hover:text-emerald-200 hover:underline"
-        >
-          <PinIcon />
-          <span className="truncate">{address}</span>
-        </a>
-      )}
-    </div>
+    <span className="inline-flex items-center gap-1.5">
+      <HostIcon />
+      <span>
+        <span className="text-gray-500">Host </span>
+        <span className="font-semibold text-white">{name}</span>
+      </span>
+    </span>
+  );
+}
+
+function TimeLine({ value }: { value: string }) {
+  return (
+    <span className="inline-flex items-center gap-1.5">
+      <ClockIcon />
+      <span className="font-semibold tabular-nums text-white">{value}</span>
+    </span>
+  );
+}
+
+function AddressLink({ address }: { address: string }) {
+  const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
+  return (
+    <a
+      href={mapHref}
+      target="_blank"
+      rel="noreferrer noopener"
+      className="inline-flex max-w-[60vw] items-center gap-1.5 truncate text-emerald-300 underline-offset-2 hover:text-emerald-200 hover:underline sm:max-w-[18rem]"
+    >
+      <PinIcon />
+      <span className="truncate">{address}</span>
+    </a>
   );
 }
 

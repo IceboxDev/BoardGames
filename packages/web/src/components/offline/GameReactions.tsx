@@ -16,6 +16,10 @@ type Props = {
   aggregate: ReactionAggregate;
   size?: Size;
   disabled?: boolean;
+  /** Hide the numeric count badge. The viewer's own active state still
+   * shows via icon color. Used in the carousel to prevent meta-voting —
+   * users shouldn't see how many others voted while they're still picking. */
+  hideCount?: boolean;
 };
 
 type IconProps = { filled: boolean };
@@ -54,6 +58,7 @@ export default function GameReactions({
   aggregate,
   size = "md",
   disabled = false,
+  hideCount = false,
 }: Props) {
   const queryClient = useQueryClient();
 
@@ -148,7 +153,7 @@ export default function GameReactions({
             <span className={`${iconSize} flex items-center justify-center`}>
               <Icon filled={active} />
             </span>
-            {count > 0 && (
+            {!hideCount && count > 0 && (
               <span
                 className={`pointer-events-none absolute -right-1 -top-1 inline-flex items-center justify-center rounded-full bg-white px-1 font-bold tabular-nums leading-none text-black ${badgeSize}`}
               >

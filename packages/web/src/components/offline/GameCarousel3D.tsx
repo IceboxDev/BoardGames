@@ -317,6 +317,7 @@ function CarouselCard({
               aggregate={aggregate ?? { hype: 0, teach: 0, learn: 0, viewer: [] }}
               size={compact ? "sm" : "md"}
               disabled={!isCenter}
+              hideCount
             />
           </div>
         )}
