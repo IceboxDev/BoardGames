@@ -14,13 +14,14 @@ calendarLocksRoutes.get("/games", async (c) => {
   }
 
   const lockedRow = await getDb().execute({
-    sql: "SELECT host_user_id FROM locked_dates WHERE date_key = ? LIMIT 1",
+    sql: "SELECT host_user_id, picks_locked_at FROM locked_dates WHERE date_key = ? LIMIT 1",
     args: [date],
   });
   if (lockedRow.rows.length === 0) {
     return c.json({ error: "date is not locked" }, 400);
   }
   const hostUserId = (lockedRow.rows[0].host_user_id as string | null) ?? null;
+  const picksLockedAt = (lockedRow.rows[0].picks_locked_at as string | null) ?? null;
 
   // Compute participant set. `rsvp:no` is an explicit decline — it overrides
   // any availability marker, including an earlier `rsvp:yes`. Only people who
@@ -270,7 +271,51 @@ calendarLocksRoutes.get("/games", async (c) => {
     reactions,
     topSlugs,
     attendees,
+    picksLockedAt,
   });
+});
+
+/**
+ * Toggle the picks-lock on a locked date. Visible to admin AND host. When
+ * locked, RSVPs from users not in the original `expected_user_ids` snapshot
+ * are rejected — preventing last-second crashers from joining via the
+ * calendar after the host has finalized the guest list.
+ */
+calendarLocksRoutes.post("/lock-picks", async (c) => {
+  const user = c.get("user");
+  const body = (await c.req.json().catch(() => ({}))) as {
+    date?: unknown;
+    on?: unknown;
+  };
+  const { date, on } = body;
+  if (typeof date !== "string" || !DATE_KEY_RE.test(date)) {
+    return c.json({ error: "invalid date" }, 400);
+  }
+  if (typeof on !== "boolean") {
+    return c.json({ error: "invalid on" }, 400);
+  }
+
+  const lockedRow = await getDb().execute({
+    sql: "SELECT host_user_id FROM locked_dates WHERE date_key = ? LIMIT 1",
+    args: [date],
+  });
+  if (lockedRow.rows.length === 0) {
+    return c.json({ error: "date is not locked" }, 400);
+  }
+  const hostUserId = (lockedRow.rows[0].host_user_id as string | null) ?? null;
+  const isAdmin = (user as { role?: string }).role === "admin";
+  const isHost = hostUserId !== null && hostUserId === user.id;
+  if (!isAdmin && !isHost) {
+    return c.json({ error: "only admin or host can toggle picks-lock" }, 403);
+  }
+
+  await getDb().execute({
+    sql: on
+      ? "UPDATE locked_dates SET picks_locked_at = datetime('now') WHERE date_key = ?"
+      : "UPDATE locked_dates SET picks_locked_at = NULL WHERE date_key = ?",
+    args: [date],
+  });
+  return c.json({ ok: true });
 });
 
 calendarLocksRoutes.post("/games/reaction", async (c) => {
@@ -322,12 +367,63 @@ calendarLocksRoutes.post("/games/reaction", async (c) => {
 });
 
 calendarLocksRoutes.get("/locks", async (c) => {
-  const [locksResult, rsvpsResult] = await Promise.all([
+  const [locksResult, rsvpsResult, availabilityResult] = await Promise.all([
     getDb().execute(
-      "SELECT date_key, locked_by, locked_at, expected_user_ids_json, host_user_id, host_name, event_time, address FROM locked_dates",
+      "SELECT date_key, locked_by, locked_at, expected_user_ids_json, host_user_id, host_name, event_time, address, picks_locked_at FROM locked_dates",
     ),
     getDb().execute("SELECT date_key, user_id, status FROM rsvps"),
+    getDb().execute("SELECT user_id, availability_json FROM user_availability"),
   ]);
+
+  // Build per-date sets we need to derive headcounts:
+  //   canByDate / maybeByDate — declared availability
+  //   yesByDate / noByDate    — explicit RSVP overrides
+  // The N/N badge shown on the calendar cell is "RSVP yes / yes+maybe":
+  //   N1 = definite attendees, N2 = definite + tentative.
+  const canByDate = new Map<string, Set<string>>();
+  const maybeByDate = new Map<string, Set<string>>();
+  for (const row of availabilityResult.rows) {
+    const userId = row.user_id as string;
+    let parsed: unknown;
+    try {
+      parsed = JSON.parse(row.availability_json as string);
+    } catch {
+      continue;
+    }
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) continue;
+    for (const [date, v] of Object.entries(parsed as Record<string, unknown>)) {
+      if (v === "can") {
+        let s = canByDate.get(date);
+        if (!s) {
+          s = new Set();
+          canByDate.set(date, s);
+        }
+        s.add(userId);
+      } else if (v === "maybe") {
+        let s = maybeByDate.get(date);
+        if (!s) {
+          s = new Set();
+          maybeByDate.set(date, s);
+        }
+        s.add(userId);
+      }
+    }
+  }
+  const yesByDate = new Map<string, Set<string>>();
+  const noByDate = new Map<string, Set<string>>();
+  for (const row of rsvpsResult.rows) {
+    const date = row.date_key as string;
+    const userId = row.user_id as string;
+    const status = row.status as string;
+    const map = status === "yes" ? yesByDate : status === "no" ? noByDate : null;
+    if (!map) continue;
+    let s = map.get(date);
+    if (!s) {
+      s = new Set();
+      map.set(date, s);
+    }
+    s.add(userId);
+  }
 
   const out: Record<
     string,
@@ -339,9 +435,12 @@ calendarLocksRoutes.get("/locks", async (c) => {
       host: { userId: string; name: string } | null;
       eventTime: string | null;
       address: string | null;
+      picksLockedAt: string | null;
+      attendance: { definite: number; tentative: number };
     }
   > = {};
   for (const row of locksResult.rows) {
+    const date = row.date_key as string;
     let expected: unknown;
     try {
       expected = JSON.parse(row.expected_user_ids_json as string);
@@ -350,14 +449,32 @@ calendarLocksRoutes.get("/locks", async (c) => {
     }
     const hostUserId = row.host_user_id as string | null;
     const hostName = row.host_name as string | null;
-    out[row.date_key as string] = {
+    const picksLockedAt = (row.picks_locked_at as string | null) ?? null;
+
+    const cans = canByDate.get(date) ?? new Set<string>();
+    const maybes = maybeByDate.get(date) ?? new Set<string>();
+    const yes = yesByDate.get(date) ?? new Set<string>();
+    const no = noByDate.get(date) ?? new Set<string>();
+    // definite = (cans ∪ rsvpYes) − rsvpNo
+    const definite = new Set<string>();
+    for (const id of cans) if (!no.has(id)) definite.add(id);
+    for (const id of yes) if (!no.has(id)) definite.add(id);
+    // tentative = maybes − definite − rsvpNo
+    let tentativeCount = 0;
+    for (const id of maybes) {
+      if (!definite.has(id) && !no.has(id)) tentativeCount++;
+    }
+
+    out[date] = {
       lockedBy: row.locked_by as string,
       lockedAt: row.locked_at as string,
       expectedUserIds: Array.isArray(expected) ? (expected as string[]) : [],
       rsvps: {},
       host: hostUserId ? { userId: hostUserId, name: hostName ?? "" } : null,
+      picksLockedAt,
       eventTime: (row.event_time as string | null) ?? null,
       address: (row.address as string | null) ?? null,
+      attendance: { definite: definite.size, tentative: tentativeCount },
     };
   }
   for (const row of rsvpsResult.rows) {

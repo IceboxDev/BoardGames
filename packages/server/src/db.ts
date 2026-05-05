@@ -147,4 +147,12 @@ async function migrate(db: Client): Promise<void> {
       "write",
     );
   }
+
+  // Re-read columns after the host migration may have run, so we don't miss
+  // adding the picks-lock column on a fresh DB that already had host_user_id
+  // present in this same `migrate()` invocation.
+  const ldCols2 = await db.execute("PRAGMA table_info(locked_dates)");
+  if (!ldCols2.rows.some((r) => r.name === "picks_locked_at")) {
+    await db.execute(`ALTER TABLE locked_dates ADD COLUMN picks_locked_at TEXT`);
+  }
 }

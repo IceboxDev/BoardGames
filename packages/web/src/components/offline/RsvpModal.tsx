@@ -6,7 +6,7 @@ import { games as gameRegistry } from "../../games/registry";
 import type { GameDefinition } from "../../games/types";
 import { useSession } from "../../lib/auth-client";
 import { fetchAvailableGames } from "../../lib/calendar-games";
-import type { CalendarLocks } from "../../lib/calendar-locks";
+import { type CalendarLocks, togglePicksLock } from "../../lib/calendar-locks";
 import { type RsvpStatus, setRsvp } from "../../lib/calendar-rsvps";
 import { qk } from "../../lib/query-keys";
 import AttendeesView from "./AttendeesView";
@@ -43,6 +43,19 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
     },
   });
 
+  const togglePicksLockMutation = useMutation({
+    mutationFn: ({ on }: { on: boolean }) => togglePicksLock(date, on),
+    onSettled: () => {
+      void queryClient.invalidateQueries({ queryKey: qk.calendarLocks() });
+      void queryClient.invalidateQueries({ queryKey: qk.availableGames(date) });
+    },
+  });
+
+  const isAdmin = (session?.user as { role?: string } | undefined)?.role === "admin";
+  const isHost = !!lock?.host && lock.host.userId === userId;
+  const canTogglePicksLock = !preview && !!lock && (isAdmin || isHost);
+  const picksLocked = !!lock?.picksLockedAt;
+
   // Auto-confirm "yes" the first time a viewer opens the modal without an
   // existing RSVP — opening the overlay is itself the commitment. Existing
   // "yes" or "no" choices are preserved on subsequent re-opens.
@@ -52,9 +65,12 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
     if (!lock || !userId) return;
     if (viewerRsvp !== undefined) return;
     if (autoRsvpRef.current) return;
+    // If the guest list is sealed and the viewer wasn't on it, never
+    // auto-RSVP — server would reject and we'd show a confusing error.
+    if (picksLocked && !lock.expectedUserIds.includes(userId) && !isAdmin && !isHost) return;
     autoRsvpRef.current = true;
     setRsvpMutation.mutate({ status: "yes" });
-  }, [preview, lock, userId, viewerRsvp, setRsvpMutation.mutate]);
+  }, [preview, lock, userId, viewerRsvp, setRsvpMutation.mutate, picksLocked, isAdmin, isHost]);
 
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
@@ -79,6 +95,19 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
   const reactions = preview ? {} : (gamesQuery.data?.reactions ?? {});
   const topSlugs = preview ? [] : (gamesQuery.data?.topSlugs ?? []);
   const attendees = preview ? [] : (gamesQuery.data?.attendees ?? []);
+
+  // When picks are locked, the modal contents are inaccessible to anyone who
+  // wasn't in the expected (RSVP yes / maybe) snapshot at lock-in time. The
+  // host and admin can still see everything regardless. Past attendees who
+  // RSVPed "no" are still in expectedUserIds and retain access.
+  const lockedOut =
+    !preview &&
+    picksLocked &&
+    !!lock &&
+    !!userId &&
+    !isAdmin &&
+    !isHost &&
+    !lock.expectedUserIds.includes(userId);
 
   const availableGames = useMemo<GameDefinition[]>(() => {
     if (preview) return gameRegistry;
@@ -147,6 +176,27 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
           exit={{ y: 16, scale: 0.96, opacity: 0 }}
           transition={{ type: "spring", stiffness: 220, damping: 26 }}
         >
+          {canTogglePicksLock && (
+            <button
+              type="button"
+              onClick={() => togglePicksLockMutation.mutate({ on: !picksLocked })}
+              disabled={togglePicksLockMutation.isPending}
+              aria-label={picksLocked ? "Unlock guest list" : "Lock guest list"}
+              title={
+                picksLocked
+                  ? "Guest list is sealed — click to unlock"
+                  : "Lock the guest list — no more last-second RSVPs"
+              }
+              className={`absolute right-12 top-4 z-20 rounded-md p-1.5 transition disabled:opacity-50 ${
+                picksLocked
+                  ? "bg-amber-400/15 text-amber-200 hover:bg-amber-400/25"
+                  : "text-gray-400 hover:bg-white/5 hover:text-white"
+              }`}
+            >
+              <PadlockGlyph closed={picksLocked} />
+            </button>
+          )}
+
           <button
             type="button"
             onClick={onClose}
@@ -165,7 +215,7 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
             </svg>
           </button>
 
-          <header className="flex min-w-0 flex-col items-start gap-1 pr-10">
+          <header className="flex min-w-0 flex-col items-start gap-1 pr-20">
             <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-300">
               {preview ? "Preview · all games" : "Game night"}
             </p>
@@ -194,7 +244,22 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
 
           {error && <p className="text-center text-xs text-rose-400">{error}</p>}
 
-          {!preview && (
+          {lockedOut && (
+            <div className="flex min-h-0 flex-1 items-center justify-center px-4">
+              <div className="max-w-md rounded-2xl border border-amber-300/30 bg-amber-400/[0.06] px-6 py-8 text-center">
+                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-amber-400/20 text-amber-200">
+                  <PadlockGlyph closed />
+                </div>
+                <p className="text-sm font-semibold text-amber-100">Guest list is locked</p>
+                <p className="mt-2 text-xs leading-relaxed text-amber-200/70">
+                  The host sealed the night before you marked yourself available, so this game night
+                  is no longer accepting RSVPs. Catch the next one!
+                </p>
+              </div>
+            </div>
+          )}
+
+          {!preview && !lockedOut && (
             <div className="flex flex-wrap items-center justify-between gap-2">
               {showViewToggle ? (
                 <div
@@ -275,36 +340,38 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
             </div>
           )}
 
-          <div className="flex min-h-0 flex-1 items-center justify-center">
-            {!preview && gamesQuery.isPending ? (
-              <p className="text-sm text-gray-500">Finding games…</p>
-            ) : effectiveView === "attendees" ? (
-              <AttendeesView attendees={attendees} topSlugs={topSlugs} />
-            ) : availableGames.length === 0 ? (
-              <div className="rounded-2xl border border-dashed border-white/10 px-8 py-10 text-center">
-                <p className="text-sm font-medium text-gray-300">No games match.</p>
-                <p className="mt-1 text-xs text-gray-500">
-                  Either nobody owns the same game, or no game fits the group size.
-                </p>
-              </div>
-            ) : effectiveView === "results" ? (
-              <RankedGameList
-                date={date}
-                games={availableGames}
-                reactions={reactions}
-                topSlugs={topSlugs}
-              />
-            ) : (
-              <GameCarousel3D
-                games={availableGames}
-                minPlayers={definiteCount}
-                maxPlayers={definiteCount + tentativeCount}
-                date={preview ? "" : date}
-                reactions={reactions}
-                onPastEnd={canShowResults ? () => setView("results") : undefined}
-              />
-            )}
-          </div>
+          {!lockedOut && (
+            <div className="flex min-h-0 flex-1 items-center justify-center">
+              {!preview && gamesQuery.isPending ? (
+                <p className="text-sm text-gray-500">Finding games…</p>
+              ) : effectiveView === "attendees" ? (
+                <AttendeesView attendees={attendees} topSlugs={topSlugs} />
+              ) : availableGames.length === 0 ? (
+                <div className="rounded-2xl border border-dashed border-white/10 px-8 py-10 text-center">
+                  <p className="text-sm font-medium text-gray-300">No games match.</p>
+                  <p className="mt-1 text-xs text-gray-500">
+                    Either nobody owns the same game, or no game fits the group size.
+                  </p>
+                </div>
+              ) : effectiveView === "results" ? (
+                <RankedGameList
+                  date={date}
+                  games={availableGames}
+                  reactions={reactions}
+                  topSlugs={topSlugs}
+                />
+              ) : (
+                <GameCarousel3D
+                  games={availableGames}
+                  minPlayers={definiteCount}
+                  maxPlayers={definiteCount + tentativeCount}
+                  date={preview ? "" : date}
+                  reactions={reactions}
+                  onPastEnd={canShowResults ? () => setView("results") : undefined}
+                />
+              )}
+            </div>
+          )}
         </motion.div>
       </motion.div>
     </AnimatePresence>
@@ -400,6 +467,30 @@ function PinIcon() {
     >
       <path d="M8 14s5-4.5 5-8.5A5 5 0 0 0 3 5.5C3 9.5 8 14 8 14z" />
       <circle cx="8" cy="6" r="1.6" />
+    </svg>
+  );
+}
+
+function PadlockGlyph({ closed }: { closed: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className="h-4 w-4 shrink-0"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.7}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect x="3" y="7" width="10" height="7" rx="1.5" />
+      {closed ? (
+        // Closed: full shackle attached on both sides
+        <path d="M5.5 7V4.5a2.5 2.5 0 015 0V7" />
+      ) : (
+        // Open: shackle swung up and to the right
+        <path d="M5.5 7V4.5a2.5 2.5 0 014.5-1.5" />
+      )}
     </svg>
   );
 }

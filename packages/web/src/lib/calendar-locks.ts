@@ -12,6 +12,14 @@ export type LockedDate = {
   /** Time of day in "HH:MM" format. */
   eventTime: string | null;
   address: string | null;
+  /** ISO timestamp set by the host or admin when the guest list was sealed.
+   * When non-null, no user outside `expectedUserIds` may RSVP. */
+  picksLockedAt: string | null;
+  /** Per-date headcount used for the N/N badge on a picks-locked cell.
+   * `definite` = RSVP-yes (cans ∪ rsvpYes − rsvpNo).
+   * `tentative` = maybes who haven't been overridden by a yes or no.
+   * The badge shows "definite / definite+tentative". */
+  attendance: { definite: number; tentative: number };
 };
 
 export type CalendarLocks = Record<string, LockedDate>;
@@ -57,6 +65,18 @@ export async function fetchCalendarLocks(signal?: AbortSignal): Promise<Calendar
         host,
         eventTime: typeof r.eventTime === "string" ? r.eventTime : null,
         address: typeof r.address === "string" ? r.address : null,
+        picksLockedAt: typeof r.picksLockedAt === "string" ? r.picksLockedAt : null,
+        attendance:
+          r.attendance &&
+          typeof r.attendance === "object" &&
+          !Array.isArray(r.attendance) &&
+          typeof (r.attendance as { definite?: unknown }).definite === "number" &&
+          typeof (r.attendance as { tentative?: unknown }).tentative === "number"
+            ? {
+                definite: (r.attendance as { definite: number }).definite,
+                tentative: (r.attendance as { tentative: number }).tentative,
+              }
+            : { definite: 0, tentative: 0 },
       };
     }
     return out;
@@ -93,5 +113,23 @@ export async function adminUnsetCalendarLock(date: string): Promise<void> {
   if (!res.ok) {
     const body = (await res.json().catch(() => ({}))) as { error?: string };
     throw new Error(body.error ?? `Failed to remove lock-in (${res.status})`);
+  }
+}
+
+/**
+ * Seal or unseal the guest list. Server permits the call only when the
+ * caller is an admin OR the host of that date. While sealed, no one outside
+ * the original expected_user_ids may RSVP.
+ */
+export async function togglePicksLock(date: string, on: boolean): Promise<void> {
+  const res = await fetch(apiUrl("/api/calendar/lock-picks"), {
+    method: "POST",
+    credentials: "include",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ date, on }),
+  });
+  if (!res.ok) {
+    const body = (await res.json().catch(() => ({}))) as { error?: string };
+    throw new Error(body.error ?? `Failed to toggle picks-lock (${res.status})`);
   }
 }

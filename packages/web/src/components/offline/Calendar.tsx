@@ -96,6 +96,8 @@ export default function Calendar({
               ? () => onLockedClick?.(key)
               : () => onChange?.(key, cycle(value));
           const viewerRsvp = lock ? viewerRsvpByDate?.[key] : undefined;
+          const picksLocked = !!lock?.picksLockedAt;
+          const attendance = lock?.attendance ?? null;
           return (
             <DayCell
               key={key}
@@ -113,6 +115,8 @@ export default function Calendar({
               isAdminView={!!dayLabels}
               heat={heat}
               locked={!!lock}
+              picksLocked={picksLocked}
+              attendance={attendance}
               lockMode={lockMode}
               viewerRsvp={viewerRsvp}
               cellSeed={i}
@@ -151,6 +155,8 @@ type DayCellProps = {
   isAdminView: boolean;
   heat: Heat;
   locked: boolean;
+  picksLocked: boolean;
+  attendance: { definite: number; tentative: number } | null;
   lockMode: boolean;
   viewerRsvp?: RsvpStatus;
   cellSeed: number;
@@ -170,6 +176,8 @@ function DayCell({
   isAdminView,
   heat,
   locked,
+  picksLocked,
+  attendance,
   lockMode,
   viewerRsvp,
   cellSeed,
@@ -257,7 +265,9 @@ function DayCell({
       )}
       {showHeatLayer && heat.kind === "warming" && <WarmingLayer compact={compact} />}
       {showHeatLayer && heat.kind === "fire" && <FireLayer compact={compact} cellSeed={cellSeed} />}
-      {locked && <LockedLayer compact={compact} viewerRsvp={viewerRsvp} />}
+      {locked && (
+        <LockedLayer compact={compact} viewerRsvp={viewerRsvp} showMedallion={picksLocked} />
+      )}
       {monthLabel && (
         <span
           className={`pointer-events-none absolute font-bold uppercase tracking-[0.18em] text-white/40 ${monthLabelPos} ${monthLabelSize}`}
@@ -272,13 +282,41 @@ function DayCell({
           aria-hidden="true"
         />
       )}
-      <span
-        className={`relative font-bold leading-none ${dayTextSize} ${dayNumberClass} ${
-          value || heated ? "text-white" : "text-gray-200"
-        }`}
-      >
-        {day}
-      </span>
+      {picksLocked && attendance ? (
+        // Picks-locked cell: replace the day number with a big centered
+        // "definite / definite+tentative" headcount — visible to everyone.
+        // The day number shrinks into the corner so the date is still
+        // readable. N1 = RSVP-yes (coming for sure), N2 = N1 plus maybes.
+        <>
+          <span
+            className={`pointer-events-none absolute font-semibold uppercase tracking-[0.18em] text-amber-200/80 ${
+              compact ? "left-1 bottom-0.5 text-[7px]" : "left-1.5 bottom-1 text-[9px]"
+            }`}
+            aria-hidden="true"
+          >
+            {day}
+          </span>
+          <span className="relative flex flex-1 items-center justify-center">
+            <span
+              className={`flex items-baseline gap-1 font-extrabold leading-none text-amber-100 drop-shadow ${
+                compact ? "text-base" : "text-2xl sm:text-3xl md:text-4xl"
+              }`}
+            >
+              <span className="tabular-nums">{attendance.definite}</span>
+              <span className="text-amber-200/60">/</span>
+              <span className="tabular-nums">{attendance.definite + attendance.tentative}</span>
+            </span>
+          </span>
+        </>
+      ) : (
+        <span
+          className={`relative font-bold leading-none ${dayTextSize} ${dayNumberClass} ${
+            value || heated ? "text-white" : "text-gray-200"
+          }`}
+        >
+          {day}
+        </span>
+      )}
       {labels && labels.length > 0 && !compact && !locked && (
         <DayLabels entries={labels} heated={heated} />
       )}
@@ -436,7 +474,17 @@ function FireLayer({ compact, cellSeed }: { compact: boolean; cellSeed: number }
   );
 }
 
-function LockedLayer({ compact, viewerRsvp }: { compact: boolean; viewerRsvp?: RsvpStatus }) {
+function LockedLayer({
+  compact,
+  viewerRsvp,
+  showMedallion,
+}: {
+  compact: boolean;
+  viewerRsvp?: RsvpStatus;
+  /** Wax-seal medallion now signals "guest list is sealed" specifically —
+   * shown only when picks are locked, not just when the date is locked-in. */
+  showMedallion: boolean;
+}) {
   return (
     <>
       {/* Deep regal base — feels weighty. No animation on the bg itself. */}
@@ -454,8 +502,10 @@ function LockedLayer({ compact, viewerRsvp }: { compact: boolean; viewerRsvp?: R
         aria-hidden="true"
         className="pointer-events-none absolute inset-y-0 -left-1/4 w-1/3 bg-gradient-to-r from-transparent via-amber-200/25 to-transparent motion-safe:animate-seal-shimmer"
       />
-      {/* Wax-seal medallion in top-right corner — out of the way of the day number (top-left). */}
-      {!compact && (
+      {/* Wax-seal medallion + compact lock pip — visible only when picks are
+          locked, communicating "guest list is sealed" rather than the date
+          itself being chosen. */}
+      {showMedallion && !compact && (
         <span
           aria-hidden="true"
           className="pointer-events-none absolute right-1.5 top-1.5 z-10 flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-700 shadow-[0_2px_8px_rgba(0,0,0,0.5),inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3)]"
@@ -463,8 +513,7 @@ function LockedLayer({ compact, viewerRsvp }: { compact: boolean; viewerRsvp?: R
           <LockGlyph />
         </span>
       )}
-      {/* Compact (drawer) variant: tiny lock badge tucked into the corner instead of a medallion. */}
-      {compact && (
+      {showMedallion && compact && (
         <span
           aria-hidden="true"
           className="pointer-events-none absolute right-0.5 top-0.5 z-10 flex h-3 w-3 items-center justify-center rounded-full bg-amber-400 shadow-[0_1px_2px_rgba(0,0,0,0.5)]"

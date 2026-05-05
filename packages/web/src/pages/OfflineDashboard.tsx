@@ -120,6 +120,8 @@ export default function OfflineDashboard() {
           host: form.hostUserId ? { userId: form.hostUserId, name: form.hostName ?? "" } : null,
           eventTime: form.eventTime ?? null,
           address: form.address ?? null,
+          picksLockedAt: existing?.picksLockedAt ?? null,
+          attendance: existing?.attendance ?? { definite: 0, tentative: 0 },
         };
         return next;
       });
