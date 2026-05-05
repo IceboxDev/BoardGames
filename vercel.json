@@ -1,6 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "buildCommand": "git lfs install --local && git lfs pull && pnpm --filter @boardgames/web... build",
+  "buildCommand": "git remote set-url origin https://github.com/IceboxDev/BoardGames.git && git lfs install --local && git lfs pull && pnpm --filter @boardgames/web... build",
   "installCommand": "pnpm install --frozen-lockfile --filter @boardgames/web... --ignore-scripts",
   "outputDirectory": "packages/web/dist",
   "framework": null,
