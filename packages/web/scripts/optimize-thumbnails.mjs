@@ -5,8 +5,9 @@
 //
 // Why: the source thumbnails are 1536×1024 / 1672×941 PNGs at ~2.7 MB each,
 // but the carousel renders them at ~270 px tall and the ranked list at
-// 80×80 px. Shipping 2× the largest display size as WebP cuts each file
-// by ~95% — from ~185 MB total to ~6–10 MB.
+// 80×80 px. Shipping ~2× the largest display size at high quality keeps
+// retina screens crisp while keeping each file in the 60–120 KB range
+// (vs the original ~2.7 MB).
 
 import { promises as fs } from "node:fs";
 import path from "node:path";
@@ -21,8 +22,8 @@ const TARGETS = [
   { glob: "thumbnail.png", subdir: path.join("assets", "img") },
 ];
 
-const MAX_WIDTH = 640;
-const WEBP_QUALITY = 78;
+const MAX_WIDTH = 1024;
+const WEBP_QUALITY = 88;
 
 async function findThumbnails() {
   const slugs = await fs.readdir(gamesDir, { withFileTypes: true });
