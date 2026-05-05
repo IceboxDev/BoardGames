@@ -8,4 +8,5 @@ export default {
   bggId: 171,
   bgg,
   accentHex: accent.hex,
+  family: { id: "chess", canonical: true, variant: "Classical" },
 } satisfies GameModule;

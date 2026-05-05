@@ -1,5 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
+import InventoryGrid from "../components/InventoryGrid";
 import Calendar from "../components/offline/Calendar";
 import RsvpModal from "../components/offline/RsvpModal";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
@@ -613,53 +614,7 @@ function InventoryPanel({ userId }: { userId: string }) {
   return (
     <div className="space-y-3">
       {error && <p className="text-xs text-rose-400">{error}</p>}
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
-        {games.map((game) => {
-          const checked = draft.includes(game.slug);
-          return (
-            <label
-              key={game.slug}
-              className={`flex cursor-pointer items-center gap-3 rounded-lg border p-2 transition ${
-                checked
-                  ? "border-accent-400/50 bg-accent-500/10"
-                  : "border-white/10 bg-surface-800/50 hover:border-white/20"
-              }`}
-            >
-              <input
-                type="checkbox"
-                checked={checked}
-                onChange={() => toggle(game.slug)}
-                className="sr-only"
-              />
-              <img
-                src={game.thumbnail}
-                alt=""
-                loading="lazy"
-                decoding="async"
-                className="h-10 w-10 shrink-0 rounded object-cover"
-              />
-              <span className="min-w-0 flex-1 text-xs">
-                <span className="block truncate font-semibold text-gray-200">{game.title}</span>
-                <span className="block truncate text-[10px] text-gray-500">{game.slug}</span>
-              </span>
-              {checked && (
-                <svg
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="h-4 w-4 shrink-0 text-accent-300"
-                  aria-hidden="true"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M16.704 5.29a1 1 0 010 1.42l-7.5 7.5a1 1 0 01-1.41 0l-3.5-3.5a1 1 0 011.41-1.42L8.5 12.08l6.79-6.79a1 1 0 011.414 0z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              )}
-            </label>
-          );
-        })}
-      </div>
+      <InventoryGrid selected={draft} onToggle={toggle} />
       <div className="flex items-center justify-end gap-2">
         <span className="text-xs text-gray-500">
           {draft.length} of {games.length} selected
@@ -765,53 +720,7 @@ function PreRegisterCard() {
       {expanded && !loading && draft !== null && (
         <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
           {error && <p className="text-xs text-rose-400">{error}</p>}
-          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 lg:grid-cols-4">
-            {games.map((game) => {
-              const checked = draft.includes(game.slug);
-              return (
-                <label
-                  key={game.slug}
-                  className={`flex cursor-pointer items-center gap-3 rounded-lg border p-2 transition ${
-                    checked
-                      ? "border-accent-400/50 bg-accent-500/10"
-                      : "border-white/10 bg-surface-800/50 hover:border-white/20"
-                  }`}
-                >
-                  <input
-                    type="checkbox"
-                    checked={checked}
-                    onChange={() => toggle(game.slug)}
-                    className="sr-only"
-                  />
-                  <img
-                    src={game.thumbnail}
-                    alt=""
-                    loading="lazy"
-                    decoding="async"
-                    className="h-10 w-10 shrink-0 rounded object-cover"
-                  />
-                  <span className="min-w-0 flex-1 text-xs">
-                    <span className="block truncate font-semibold text-gray-200">{game.title}</span>
-                    <span className="block truncate text-[10px] text-gray-500">{game.slug}</span>
-                  </span>
-                  {checked && (
-                    <svg
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                      className="h-4 w-4 shrink-0 text-accent-300"
-                      aria-hidden="true"
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M16.704 5.29a1 1 0 010 1.42l-7.5 7.5a1 1 0 01-1.41 0l-3.5-3.5a1 1 0 011.41-1.42L8.5 12.08l6.79-6.79a1 1 0 011.414 0z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  )}
-                </label>
-              );
-            })}
-          </div>
+          <InventoryGrid selected={draft} onToggle={toggle} />
           <div className="flex items-center justify-between gap-2">
             <span className="text-xs text-gray-500">
               {draft.length} of {games.length} selected

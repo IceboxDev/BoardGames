@@ -1,7 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
+import FamilyCard from "../components/FamilyCard";
 import GameCard from "../components/GameCard";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
+import { groupForPresentation } from "../games/families";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
 import { useSession } from "../lib/auth-client";
@@ -28,6 +30,18 @@ export default function GameGallery() {
         .filter((g): g is GameDefinition => Boolean(g)),
     [slugs],
   );
+
+  const units = useMemo(() => groupForPresentation(owned), [owned]);
+  const [expanded, setExpanded] = useState<Set<string>>(() => new Set());
+
+  function toggleFamily(id: string) {
+    setExpanded((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
 
   return (
     <div className="flex min-h-dvh flex-col bg-surface-950 bg-grid">
@@ -57,9 +71,61 @@ export default function GameGallery() {
           </div>
         ) : (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-            {owned.map((game, i) => (
-              <GameCard key={game.slug} game={game} index={i} showComingSoon={false} />
-            ))}
+            {units.map((unit, i) => {
+              if (unit.kind === "single") {
+                return (
+                  <GameCard
+                    key={unit.game.slug}
+                    game={unit.game}
+                    index={i}
+                    showComingSoon={false}
+                  />
+                );
+              }
+              const isOpen = expanded.has(unit.family.id);
+              return (
+                <div key={unit.family.id} className={isOpen ? "col-span-full" : "contents"}>
+                  {isOpen ? (
+                    <div className="flex flex-col gap-4">
+                      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+                        <FamilyCard
+                          family={unit.family}
+                          visibleMembers={unit.visibleMembers}
+                          expanded
+                          onToggle={() => toggleFamily(unit.family.id)}
+                          index={i}
+                        />
+                      </div>
+                      <div
+                        className="grid gap-4 rounded-2xl border border-[var(--accent)]/15 bg-[color-mix(in_srgb,var(--accent)_4%,var(--color-surface-900))] p-4 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
+                        style={
+                          {
+                            "--accent": unit.family.canonical.accentHex,
+                          } as React.CSSProperties
+                        }
+                      >
+                        {unit.visibleMembers.map((member, j) => (
+                          <GameCard
+                            key={member.slug}
+                            game={member}
+                            index={j}
+                            showComingSoon={false}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <FamilyCard
+                      family={unit.family}
+                      visibleMembers={unit.visibleMembers}
+                      expanded={false}
+                      onToggle={() => toggleFamily(unit.family.id)}
+                      index={i}
+                    />
+                  )}
+                </div>
+              );
+            })}
           </div>
         )}
       </main>

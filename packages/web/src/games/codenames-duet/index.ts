@@ -8,4 +8,5 @@ export default {
   bggId: 224037,
   bgg,
   accentHex: accent.hex,
+  family: { id: "codenames", variant: "Duet" },
 } satisfies GameModule;

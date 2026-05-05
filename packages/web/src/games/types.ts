@@ -26,6 +26,27 @@ export type BggGame = {
   numRatings: number | null;
 };
 
+/**
+ * Membership in a "family" of related games — different editions, reskins,
+ * or close-cousin sequels (UNO Classic / Flip / Show 'Em No Mercy; Brass:
+ * Birmingham / Lancashire / Pittsburgh; Gloomhaven / Frosthaven / JotL).
+ *
+ * Grouping is purely a presentation concern: the gallery, inventory grid, and
+ * RSVP carousel collapse families into one tile to reduce visual clutter,
+ * while every server-bound payload (votes, RSVPs, bringing assignments,
+ * top-5) remains keyed by individual slug.
+ */
+export type GameFamily = {
+  /** Shared id — same string for every member of one family. */
+  id: string;
+  /** Marks the canonical (representative) member. Exactly one per family
+   * should set this; if none does, the first member by registry order wins. */
+  canonical?: boolean;
+  /** Human-readable variant label, e.g. "Classic", "Flip", "Jaws of the Lion".
+   * Used for chip labels in the carousel and inventory headers. */
+  variant: string;
+};
+
 export interface GameDefinition {
   slug: string;
   /** User-supplied display name. */
@@ -60,6 +81,8 @@ export interface GameDefinition {
   tournamentShowScoreDiff?: boolean;
   /** URL to a PDF file with the game rules, shown from the mode-picker. */
   rulesUrl?: string;
+  /** Optional family membership for visual grouping in browse views. */
+  family?: GameFamily;
 }
 
 /**

@@ -8,4 +8,5 @@ export default {
   bggId: 295770,
   bgg,
   accentHex: accent.hex,
+  family: { id: "gloomhaven", variant: "Frosthaven" },
 } satisfies GameModule;

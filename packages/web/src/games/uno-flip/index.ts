@@ -3,10 +3,10 @@ import accent from "./accent.json";
 import bgg from "./bgg.json";
 
 export default {
-  slug: "brass-pittsburgh",
-  title: "Brass: Pittsburgh",
-  bggId: 452264,
+  slug: "uno-flip",
+  title: "UNO Flip!",
+  bggId: 271460,
   bgg,
   accentHex: accent.hex,
-  family: { id: "brass", variant: "Pittsburgh" },
+  family: { id: "uno", variant: "Flip" },
 } satisfies GameModule;

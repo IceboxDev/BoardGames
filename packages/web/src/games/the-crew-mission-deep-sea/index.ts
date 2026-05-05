@@ -8,4 +8,5 @@ export default {
   bggId: 324856,
   bgg,
   accentHex: accent.hex,
+  family: { id: "the-crew", variant: "Mission Deep Sea" },
 } satisfies GameModule;

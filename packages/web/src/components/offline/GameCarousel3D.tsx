@@ -1,7 +1,9 @@
 import { motion, type PanInfo } from "framer-motion";
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { groupForPresentation, type PresentationUnit } from "../../games/families";
 import type { BggGame, GameDefinition } from "../../games/types";
 import type { ReactionAggregate } from "../../lib/calendar-games";
+import FamilyCarouselCard from "./FamilyCarouselCard";
 import GameReactions from "./GameReactions";
 
 type Props = {
@@ -58,8 +60,15 @@ export default function GameCarousel3D({
   reactions,
   onPastEnd,
 }: Props) {
+  // Project games into presentation units — families collapse to one card,
+  // singletons stay as-is. The carousel navigates over UNITS, not games.
+  const units = useMemo<PresentationUnit[]>(() => groupForPresentation(games), [games]);
+
   const [center, setCenter] = useState(0);
-  const atEnd = center >= games.length - 1;
+  const atEnd = center >= units.length - 1;
+  // Per-family active member, persisted across center changes so the user's
+  // last variant pick survives swiping away and back.
+  const [activeByFamily, setActiveByFamily] = useState<Map<string, string>>(() => new Map());
   const rootRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
 
@@ -81,13 +90,13 @@ export default function GameCarousel3D({
 
   const goNext = useCallback(() => {
     setCenter((c) => {
-      if (c >= games.length - 1) {
+      if (c >= units.length - 1) {
         if (onPastEnd) onPastEnd();
         return c;
       }
       return c + 1;
     });
-  }, [games.length, onPastEnd]);
+  }, [units.length, onPastEnd]);
 
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
@@ -111,7 +120,15 @@ export default function GameCarousel3D({
     else if (offset < -threshold || velocity < -400) goNext();
   }
 
-  if (games.length === 0) return null;
+  if (units.length === 0) return null;
+
+  function setActiveForFamily(familyId: string, slug: string) {
+    setActiveByFamily((prev) => {
+      const next = new Map(prev);
+      next.set(familyId, slug);
+      return next;
+    });
+  }
 
   // Derive card dimensions from measured container size with clamps. On phones
   // the card is width-bounded; on desktop the MAX cap or height/ASPECT bounds
@@ -161,23 +178,57 @@ export default function GameCarousel3D({
         dragElastic={0.15}
         onDragEnd={handleDragEnd}
       >
-        {games.map((game, i) => (
-          <CarouselCard
-            key={game.slug}
-            game={game}
-            offset={i - center}
-            minPlayers={minPlayers}
-            maxPlayers={maxPlayers}
-            date={date}
-            aggregate={reactions[game.slug]}
-            onClick={() => setCenter(i)}
-            cardW={cardW}
-            cardH={cardH}
-            spreadMax={spreadMax}
-            zMax={zMax}
-            compact={compact}
-          />
-        ))}
+        {units.map((unit, i) => {
+          if (unit.kind === "single") {
+            return (
+              <CarouselCard
+                key={unit.game.slug}
+                game={unit.game}
+                offset={i - center}
+                minPlayers={minPlayers}
+                maxPlayers={maxPlayers}
+                date={date}
+                aggregate={reactions[unit.game.slug]}
+                onClick={() => setCenter(i)}
+                cardW={cardW}
+                cardH={cardH}
+                spreadMax={spreadMax}
+                zMax={zMax}
+                compact={compact}
+              />
+            );
+          }
+          const activeSlug =
+            activeByFamily.get(unit.family.id) ??
+            unit.visibleMembers.find((m) => m === unit.family.canonical)?.slug ??
+            unit.visibleMembers[0]?.slug ??
+            unit.family.canonical.slug;
+          return (
+            <FamilyCarouselCard
+              key={`family:${unit.family.id}`}
+              family={unit.family}
+              visibleMembers={unit.visibleMembers}
+              activeSlug={activeSlug}
+              onSetActive={(slug) => setActiveForFamily(unit.family.id, slug)}
+              offset={i - center}
+              minPlayers={minPlayers}
+              maxPlayers={maxPlayers}
+              date={date}
+              reactions={reactions}
+              onClick={() => setCenter(i)}
+              cardW={cardW}
+              cardH={cardH}
+              spreadMax={spreadMax}
+              zMax={zMax}
+              compact={compact}
+              asymptote={asymptote}
+              ROTATE_MAX={ROTATE_MAX}
+              SCALE_MIN={SCALE_MIN}
+              OPACITY_MIN={OPACITY_MIN}
+              REF_CARD_H={REF_CARD_H}
+            />
+          );
+        })}
       </motion.div>
 
       <button

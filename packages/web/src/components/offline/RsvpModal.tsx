@@ -165,29 +165,26 @@ export default function RsvpModal({ date, locks, onClose, preview = false }: Pro
             </svg>
           </button>
 
-          <header className="flex items-start justify-between gap-3 pr-10">
-            <div className="flex min-w-0 flex-col items-start gap-1">
-              <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-300">
-                {preview ? "Preview · all games" : "Game night"}
+          <header className="flex min-w-0 flex-col items-start gap-1 pr-10">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-300">
+              {preview ? "Preview · all games" : "Game night"}
+            </p>
+            <h2 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              {preview ? `${availableGames.length} games in library` : headingDate}
+            </h2>
+            {!preview && (
+              <p className="text-xs text-gray-400">
+                <span className="font-semibold text-emerald-300">{definiteCount}</span> going
+                {tentativeCount > 0 && (
+                  <>
+                    {" · "}
+                    <span className="font-semibold text-amber-300">{tentativeCount}</span> maybe
+                  </>
+                )}
               </p>
-              <h2 className="text-xl font-bold tracking-tight text-white sm:text-3xl">
-                {preview ? `${availableGames.length} games in library` : headingDate}
-              </h2>
-              {!preview && (
-                <p className="text-xs text-gray-400">
-                  <span className="font-semibold text-emerald-300">{definiteCount}</span> going
-                  {tentativeCount > 0 && (
-                    <>
-                      {" · "}
-                      <span className="font-semibold text-amber-300">{tentativeCount}</span> maybe
-                    </>
-                  )}
-                </p>
-              )}
-            </div>
-
+            )}
             {!preview && lock && (lock.host || lock.eventTime || lock.address) && (
-              <div className="flex shrink-0 flex-col items-end gap-1 text-right text-[11px] text-gray-300">
+              <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-300">
                 {lock.host && <HostLine name={lock.host.name} />}
                 {lock.eventTime && <TimeLine value={lock.eventTime} />}
                 {lock.address && <AddressLink address={lock.address} />}
@@ -345,7 +342,7 @@ function AddressLink({ address }: { address: string }) {
       href={mapHref}
       target="_blank"
       rel="noreferrer noopener"
-      className="inline-flex max-w-[60vw] items-center gap-1.5 truncate text-emerald-300 underline-offset-2 hover:text-emerald-200 hover:underline sm:max-w-[18rem]"
+      className="inline-flex max-w-full items-center gap-1.5 truncate text-emerald-300 underline-offset-2 hover:text-emerald-200 hover:underline"
     >
       <PinIcon />
       <span className="truncate">{address}</span>
