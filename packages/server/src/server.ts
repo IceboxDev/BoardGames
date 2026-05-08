@@ -8,11 +8,13 @@ import {
   adminAvailabilityRoutes,
 } from "./auth-routes/admin-availability.ts";
 import { adminInventoryRoutes } from "./auth-routes/admin-inventory.ts";
+import { adminMatchHistoryRoutes } from "./auth-routes/admin-match-history.ts";
 import { adminOnlineRoutes } from "./auth-routes/admin-online.ts";
 import { adminPendingInventoryRoutes } from "./auth-routes/admin-pending-inventory.ts";
 import { availabilityCountsRoutes } from "./auth-routes/availability-counts.ts";
 import { adminCalendarLocksRoutes, calendarLocksRoutes } from "./auth-routes/calendar-locks.ts";
 import { calendarRsvpsRoutes } from "./auth-routes/calendar-rsvps.ts";
+import { matchHistoryRoutes } from "./auth-routes/match-history.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
 import { persistenceRoutes } from "./persistence/routes.ts";
@@ -77,6 +79,7 @@ app.route("/api/admin/users", adminAvailabilityRoutes);
 app.route("/api/admin", adminAvailabilityAllRoutes);
 app.route("/api/admin", adminPendingInventoryRoutes);
 app.route("/api/admin/calendar", adminCalendarLocksRoutes);
+app.route("/api/admin/history", adminMatchHistoryRoutes);
 
 // --- Protected: any logged-in user ---
 app.use("/api/user/*", requireAuth);
@@ -89,6 +92,9 @@ app.route("/api/availability", availabilityCountsRoutes);
 app.use("/api/calendar/*", requireAuth);
 app.route("/api/calendar", calendarLocksRoutes);
 app.route("/api/calendar", calendarRsvpsRoutes);
+
+app.use("/api/history/*", requireAuth);
+app.route("/api/history", matchHistoryRoutes);
 
 app.use("/api/tournaments/*", requireAuth);
 app.route("/api/tournaments", tournamentRoutes);

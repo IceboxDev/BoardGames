@@ -5,7 +5,7 @@ import { AvailabilityActionBar } from "../components/offline/AvailabilityActionB
 import Calendar from "../components/offline/Calendar";
 import LockInModal from "../components/offline/LockInModal";
 import RsvpModal from "../components/offline/RsvpModal";
-import { TopNav, TopNavBackButton } from "../components/TopNav";
+import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import {
   adminSetCalendarLock,
@@ -261,6 +261,7 @@ export default function OfflineDashboard() {
   return (
     <div className="flex h-dvh flex-col overflow-hidden bg-surface-950 bg-grid">
       <TopNav>
+        <TopNavLink to="/history">History</TopNavLink>
         <TopNavBackButton to="/" label="Dashboard" />
       </TopNav>
 

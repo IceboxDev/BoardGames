@@ -104,6 +104,21 @@ async function migrate(db: Client): Promise<void> {
         PRIMARY KEY (date_key, user_id, game_slug, reaction)
       )`,
       `CREATE INDEX IF NOT EXISTS idx_game_requests_date ON game_requests(date_key)`,
+      `CREATE TABLE IF NOT EXISTS match_results (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        date_key TEXT,
+        played_at TEXT NOT NULL DEFAULT (datetime('now')),
+        game_slug TEXT,
+        game_title TEXT NOT NULL,
+        outcome_json TEXT NOT NULL,
+        notes TEXT,
+        recorded_by TEXT NOT NULL,
+        recorded_at TEXT NOT NULL DEFAULT (datetime('now')),
+        updated_at TEXT
+      )`,
+      `CREATE INDEX IF NOT EXISTS idx_match_results_played_at ON match_results(played_at DESC)`,
+      `CREATE INDEX IF NOT EXISTS idx_match_results_date_key ON match_results(date_key)`,
+      `CREATE INDEX IF NOT EXISTS idx_match_results_game_slug ON match_results(game_slug)`,
       `CREATE INDEX IF NOT EXISTS idx_tournaments_slug ON tournaments(game_slug)`,
       `CREATE INDEX IF NOT EXISTS idx_tournaments_status ON tournaments(status)`,
       `CREATE INDEX IF NOT EXISTS idx_tournament_games_tid ON tournament_games(tournament_id, game_index)`,

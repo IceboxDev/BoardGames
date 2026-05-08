@@ -1,0 +1,73 @@
+import type { MatchOutcomeCoop, Participant } from "@boardgames/core/history/types";
+import { useId } from "react";
+import { Field } from "../../ui/Field";
+import { Input } from "../../ui/Input";
+import { ParticipantPicker } from "../ParticipantPicker";
+
+type User = { id: string; name: string };
+
+type Props = {
+  users: User[];
+  value: MatchOutcomeCoop;
+  onChange: (next: MatchOutcomeCoop) => void;
+};
+
+export function CoopForm({ users, value, onChange }: Props) {
+  const difficultyId = useId();
+  const detailsId = useId();
+  const selectedIds = value.participants.map((p) => p.userId);
+
+  function setParticipants(participants: Participant[]) {
+    onChange({ ...value, participants });
+  }
+
+  return (
+    <div className="flex flex-col gap-3">
+      <Field label="Players" htmlFor="coop-players">
+        <ParticipantPicker users={users} selectedIds={selectedIds} onChange={setParticipants} />
+      </Field>
+      <Field label="Outcome" htmlFor="coop-outcome">
+        <div className="flex gap-2">
+          <button
+            type="button"
+            onClick={() => onChange({ ...value, outcome: "win" })}
+            className={`flex-1 rounded-md px-3 py-2 text-sm font-medium transition ${
+              value.outcome === "win"
+                ? "bg-emerald-500/20 text-emerald-200 ring-1 ring-emerald-400/40"
+                : "bg-surface-800 text-gray-400 hover:bg-surface-700"
+            }`}
+          >
+            Won together
+          </button>
+          <button
+            type="button"
+            onClick={() => onChange({ ...value, outcome: "loss" })}
+            className={`flex-1 rounded-md px-3 py-2 text-sm font-medium transition ${
+              value.outcome === "loss"
+                ? "bg-rose-500/20 text-rose-200 ring-1 ring-rose-400/40"
+                : "bg-surface-800 text-gray-400 hover:bg-surface-700"
+            }`}
+          >
+            Lost
+          </button>
+        </div>
+      </Field>
+      <Field label="Difficulty" htmlFor={difficultyId} hint="Optional, free text">
+        <Input
+          id={difficultyId}
+          value={value.difficulty ?? ""}
+          onChange={(e) => onChange({ ...value, difficulty: e.target.value || undefined })}
+          placeholder="e.g. Heroic, 5 epidemics"
+        />
+      </Field>
+      <Field label="Details" htmlFor={detailsId} hint="Optional notes about how it went">
+        <Input
+          id={detailsId}
+          value={value.details ?? ""}
+          onChange={(e) => onChange({ ...value, details: e.target.value || undefined })}
+          placeholder="e.g. lost to outbreak chain in Asia"
+        />
+      </Field>
+    </div>
+  );
+}

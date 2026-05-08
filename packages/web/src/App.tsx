@@ -12,6 +12,7 @@ const LoginPage = lazy(() => import("./pages/LoginPage"));
 const ProfilePage = lazy(() => import("./pages/ProfilePage"));
 const AdminPage = lazy(() => import("./pages/AdminPage"));
 const OfflineDashboard = lazy(() => import("./pages/OfflineDashboard"));
+const HistoryPage = lazy(() => import("./pages/HistoryPage"));
 const GameGallery = lazy(() => import("./pages/GameGallery"));
 const DeckPreview = lazy(() => import("./pages/DeckPreview"));
 // `GameMenu` and `GameRouter` are the only paths that pull the games registry
@@ -73,6 +74,15 @@ export default function App() {
               element={
                 <AuthGuard mode="auth">
                   <OfflineDashboard />
+                </AuthGuard>
+              }
+            />
+
+            <Route
+              path="/history"
+              element={
+                <AuthGuard mode="auth">
+                  <HistoryPage />
                 </AuthGuard>
               }
             />
