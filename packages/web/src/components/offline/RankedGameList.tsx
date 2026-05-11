@@ -148,7 +148,8 @@ function formatMeta(game: GameDefinition): string {
   const minP = bgg.minPlayers;
   const maxP = bgg.maxPlayers;
   if (minP && maxP) {
-    parts.push(minP === maxP ? `${minP}p` : `${minP}–${maxP}p`);
+    const maxLabel = maxP === "infinity" ? "∞" : String(maxP);
+    parts.push(minP === maxP ? `${minP}p` : `${minP}–${maxLabel}p`);
   }
   const t = bgg.playingTime ?? bgg.minPlayTime ?? bgg.maxPlayTime;
   if (t) parts.push(`${t} min`);

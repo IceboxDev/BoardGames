@@ -104,7 +104,7 @@ export default function CardTag({ label, color, imageUrl, tooltipContent }: Card
         !showFullPreview &&
         createPortal(
           <div
-            className="pointer-events-none fixed z-[9999]"
+            className="pointer-events-none fixed z-tooltip"
             style={{ left: tooltipPos.left, top: tooltipPos.top }}
           >
             <div className="flex w-[150px] flex-col items-center gap-1 rounded-xl bg-gray-900 p-1.5 shadow-2xl ring-1 ring-white/20">
@@ -125,7 +125,7 @@ export default function CardTag({ label, color, imageUrl, tooltipContent }: Card
       {/* Full-screen preview on prolonged hover */}
       {showFullPreview &&
         createPortal(
-          <div className="pointer-events-none fixed inset-0 z-[9999] flex items-center justify-center bg-black/70">
+          <div className="pointer-events-none fixed inset-0 z-tooltip flex items-center justify-center bg-black/70">
             <div className="w-80">
               {tooltipContent ?? (
                 <img

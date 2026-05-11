@@ -15,10 +15,17 @@ export type TeamGameConfig = {
   memberRoles?: string[];
 };
 
+// Codenames Original and Codenames Pictures use the exact same Spymaster/
+// Operative team structure — only the clue medium differs. Define once,
+// share between both slugs so a match recorded against one variant can be
+// edited as the other without role chips disappearing.
+const CODENAMES_TEAM_CONFIG: TeamGameConfig = {
+  memberRoles: ["Spymaster", "Operative"],
+};
+
 export const TEAM_GAME_CONFIG: Record<string, TeamGameConfig> = {
-  codenames: {
-    memberRoles: ["Spymaster", "Operative"],
-  },
+  codenames: CODENAMES_TEAM_CONFIG,
+  "codenames-pictures": CODENAMES_TEAM_CONFIG,
   "captain-sonar": {
     memberRoles: ["Captain", "First Mate", "Engineer", "Radio Operator"],
   },

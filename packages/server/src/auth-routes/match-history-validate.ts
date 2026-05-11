@@ -286,7 +286,9 @@ export function refreshDisplayNames(
         ...outcome,
         teams: outcome.teams.map((t) => ({
           ...t,
-          members: t.members.map(fresh),
+          // Spread the original member first so per-member fields like `role`
+          // survive; then overlay fresh userId/displayName from the user table.
+          members: t.members.map((m) => ({ ...m, ...fresh(m) })),
         })),
       };
     case "last-standing":

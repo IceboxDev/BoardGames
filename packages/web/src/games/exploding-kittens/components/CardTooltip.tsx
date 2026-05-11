@@ -63,7 +63,7 @@ export default function CardTooltip({ cardType, children }: CardTooltipProps) {
       {pos &&
         createPortal(
           <div
-            className="pointer-events-none fixed z-[9999]"
+            className="pointer-events-none fixed z-tooltip"
             style={{ left: pos.left, top: pos.top }}
           >
             <div className="flex w-[150px] flex-col items-center gap-1 rounded-xl bg-gray-900 p-1.5 shadow-2xl ring-1 ring-white/20">

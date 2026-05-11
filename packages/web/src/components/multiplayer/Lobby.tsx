@@ -1,6 +1,7 @@
 import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
 import type { GameRoomConfig } from "@boardgames/core/protocol/room-config";
 import { SetupLayout } from "../setup";
+import { Button } from "../ui/Button";
 
 interface LobbyProps {
   roomCode: string;
@@ -94,29 +95,20 @@ export function Lobby({
       {/* Actions */}
       <div className="mx-auto flex w-full max-w-md flex-col gap-3">
         {isHost ? (
-          <button
-            type="button"
-            disabled={!canStart}
-            onClick={onStart}
-            className="rounded-lg bg-emerald-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-emerald-500 disabled:opacity-40 disabled:hover:bg-emerald-600"
-          >
+          <Button variant="primary" size="lg" disabled={!canStart} onClick={onStart}>
             Start Game
             {!canStart && humanCount < roomConfig.minPlayers
               ? ` (need ${roomConfig.minPlayers} players)`
               : ""}
-          </button>
+          </Button>
         ) : (
-          <button
-            type="button"
+          <Button
+            variant={roomState.slots[mySlot]?.ready ? "secondary" : "primary"}
+            size="lg"
             onClick={onToggleReady}
-            className={`rounded-lg px-6 py-3 text-sm font-semibold text-white transition-colors ${
-              roomState.slots[mySlot]?.ready
-                ? "bg-amber-600 hover:bg-amber-500"
-                : "bg-emerald-600 hover:bg-emerald-500"
-            }`}
           >
             {roomState.slots[mySlot]?.ready ? "Not Ready" : "Ready"}
-          </button>
+          </Button>
         )}
 
         <button

@@ -1,30 +1,7 @@
+import type { BggGame } from "@boardgames/core/bgg";
 import type { ComponentType, LazyExoticComponent } from "react";
 
-/**
- * BoardGameGeek metadata baked in at dev time via `pnpm fetch-bgg`. Each game
- * folder ships a `bgg.json` matching this shape; the registry imports it so
- * the runtime never hits BGG.
- */
-export type BggGame = {
-  id: number;
-  name: string;
-  description: string;
-  yearPublished: number | null;
-  minPlayers: number | null;
-  maxPlayers: number | null;
-  playingTime: number | null;
-  minPlayTime: number | null;
-  maxPlayTime: number | null;
-  minAge: number | null;
-  categories: string[];
-  mechanics: string[];
-  designers: string[];
-  artists: string[];
-  publishers: string[];
-  averageRating: number | null;
-  averageWeight: number | null;
-  numRatings: number | null;
-};
+export type { BggGame };
 
 /**
  * Membership in a "family" of related games — different editions, reskins,
@@ -54,11 +31,18 @@ export type GameFamily = {
 
 export interface GameDefinition {
   slug: string;
-  /** User-supplied display name. */
+  /**
+   * Resolved display name. Comes from the game's `displayTitle` override if
+   * set, otherwise from `bgg.name`. Hydrated by the registry — never declared
+   * by individual games.
+   */
   title: string;
-  /** BoardGameGeek XML API2 ID — the catalog primary key. */
+  /** BoardGameGeek XML API2 ID — the catalog primary key. `0` for homebrew. */
   bggId: number;
-  /** BGG metadata bundled in at dev time. */
+  /**
+   * BGG metadata. Hydrated by the registry from
+   * `@boardgames/core/bgg`'s bundled snapshot — never imported per game.
+   */
   bgg: BggGame;
   /**
    * Imported thumbnail asset URL. Attached by the registry from the game's
@@ -91,9 +75,33 @@ export interface GameDefinition {
 }
 
 /**
- * Shape exported by each game's `index.ts`. The registry attaches `thumbnail`
- * by globbing each folder's `assets/thumbnail.png`, so individual games never
- * statically import their own thumbnail — that way a missing PNG cannot break
- * the build.
+ * Shape exported by each game's `index.ts`. The registry attaches:
+ *   - `thumbnail`: from `assets/thumbnail.webp` (so a missing image can't
+ *     break the build).
+ *   - `bgg`: from the bundled BGG snapshot (`@boardgames/core/bgg`), keyed
+ *     by slug.
+ *   - `title`: resolved as `displayTitle ?? bgg.name`.
+ *
+ * Per-game files therefore declare only `slug`, `bggId`, `accentHex`, and
+ * the optional override / behavior fields below.
  */
-export type GameModule = Omit<GameDefinition, "thumbnail">;
+export type GameModule = Omit<GameDefinition, "thumbnail" | "bgg" | "title"> & {
+  /**
+   * Optional title override. Set this when BGG's name is wrong, awkward, or
+   * too verbose for the UI (e.g. "7 Wonders" instead of
+   * "7 Wonders (Second Edition)"). Otherwise the registry uses `bgg.name`.
+   */
+  displayTitle?: string;
+  /**
+   * Per-field overrides on top of the BGG snapshot. Use this to fix BGG
+   * inaccuracies or fill in missing data. The registry shallow-merges these
+   * over `bggSnapshot[slug]` at build time, so consumers always see the
+   * patched values via `game.bgg.*`.
+   *
+   * Example — BGG says "Best with 4" but our group always plays 5-player
+   * variant rules well: `bggOverrides: { bestPlayerCount: 5 }`.
+   *
+   * Nested objects are replaced wholesale, not deep-merged.
+   */
+  bggOverrides?: Partial<BggGame>;
+};

@@ -34,7 +34,7 @@ export class SchemaError extends Error {
 
 // ── apiFetch ───────────────────────────────────────────────────────────
 
-type HttpMethod = "GET" | "POST" | "PUT" | "DELETE";
+type HttpMethod = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
 
 export interface ApiFetchOptions<TBody, TResp> {
   method?: HttpMethod;

@@ -6,6 +6,7 @@ import Calendar from "../components/offline/Calendar";
 import LockInModal from "../components/offline/LockInModal";
 import RsvpModal from "../components/offline/RsvpModal";
 import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
+import { PageMain, PageShell } from "../components/ui/PageShell";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import {
   adminSetCalendarLock,
@@ -259,13 +260,16 @@ export default function OfflineDashboard() {
   const errorMessage = mode === "lock" ? (lockMutationError ?? unlockMutationError) : saveError;
 
   return (
-    <div className="flex h-dvh flex-col overflow-hidden bg-surface-950 bg-grid">
-      <TopNav>
-        <TopNavLink to="/history">History</TopNavLink>
-        <TopNavBackButton to="/" label="Dashboard" />
-      </TopNav>
-
-      <div className="flex min-h-0 flex-1 flex-col gap-2 px-3 py-2 sm:px-6">
+    <PageShell
+      layout="fixed"
+      topNav={
+        <TopNav>
+          <TopNavLink to="/history">History</TopNavLink>
+          <TopNavBackButton to="/" label="Dashboard" />
+        </TopNav>
+      }
+    >
+      <PageMain width="full" padding="tight" fillHeight className="gap-2">
         <p
           className={`shrink-0 text-center text-[11px] text-gray-400 ${mode === "edit" ? "" : "invisible"}`}
           aria-hidden={mode !== "edit"}
@@ -308,7 +312,7 @@ export default function OfflineDashboard() {
           onEnterLockMode={enterLockMode}
           onExitLockMode={exitLockMode}
         />
-      </div>
+      </PageMain>
 
       {rsvpDate && <RsvpModal date={rsvpDate} locks={locks} onClose={() => setRsvpDate(null)} />}
 
@@ -324,6 +328,6 @@ export default function OfflineDashboard() {
           onClose={() => setLockingDate(null)}
         />
       )}
-    </div>
+    </PageShell>
   );
 }

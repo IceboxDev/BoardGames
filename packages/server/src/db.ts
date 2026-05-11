@@ -26,6 +26,15 @@ export async function initDb(): Promise<Client> {
 }
 
 async function migrate(db: Client): Promise<void> {
+  // Pre-batch: an earlier iteration of `bgg_cache` had a different shape
+  // (PK on bgg_id; columns: bgg_id, data_json, fetched_at). The current
+  // shape is keyed by slug. Drop the legacy table so the CREATE in the
+  // batch below recreates it correctly. Safe — table is just a cache.
+  const bggCacheCols = await db.execute("PRAGMA table_info(bgg_cache)");
+  if (bggCacheCols.rows.length > 0 && !bggCacheCols.rows.some((r) => r.name === "slug")) {
+    await db.execute("DROP TABLE bgg_cache");
+  }
+
   // Use db.batch (single-statement-per-entry) instead of db.executeMultiple —
   // the latter doesn't work reliably over Turso's HTTP wire and returns 400.
   await db.batch(
@@ -119,6 +128,15 @@ async function migrate(db: Client): Promise<void> {
       `CREATE INDEX IF NOT EXISTS idx_match_results_played_at ON match_results(played_at DESC)`,
       `CREATE INDEX IF NOT EXISTS idx_match_results_date_key ON match_results(date_key)`,
       `CREATE INDEX IF NOT EXISTS idx_match_results_game_slug ON match_results(game_slug)`,
+      `CREATE TABLE IF NOT EXISTS bgg_cache (
+        slug TEXT PRIMARY KEY,
+        bgg_id INTEGER NOT NULL,
+        name TEXT NOT NULL,
+        metadata_json TEXT NOT NULL,
+        fetched_at TEXT NOT NULL DEFAULT (datetime('now')),
+        updated_at TEXT
+      )`,
+      `CREATE INDEX IF NOT EXISTS idx_bgg_cache_bgg_id ON bgg_cache(bgg_id)`,
       `CREATE INDEX IF NOT EXISTS idx_tournaments_slug ON tournaments(game_slug)`,
       `CREATE INDEX IF NOT EXISTS idx_tournaments_status ON tournaments(status)`,
       `CREATE INDEX IF NOT EXISTS idx_tournament_games_tid ON tournament_games(tournament_id, game_index)`,

@@ -19,6 +19,7 @@ import { qk } from "../../lib/query-keys";
 import { Button } from "../ui/Button";
 import { Field } from "../ui/Field";
 import { Input } from "../ui/Input";
+import { Modal } from "../ui/Modal";
 import { CoopForm } from "./forms/CoopForm";
 import { FreeForAllForm } from "./forms/FreeForAllForm";
 import { LastStandingForm } from "./forms/LastStandingForm";
@@ -232,173 +233,151 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
   });
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
-      <button
-        type="button"
-        aria-label="Close"
-        onClick={onClose}
-        className="absolute inset-0 cursor-default bg-black/70"
-      />
-      <div className="relative z-10 flex max-h-[90vh] w-full max-w-2xl flex-col overflow-hidden rounded-2xl border border-white/10 bg-surface-950">
-        <header className="flex items-center justify-between border-b border-white/10 px-5 py-3">
-          <h2 className="text-base font-semibold text-gray-100">
-            {state.mode === "edit" ? "Edit match" : "Record a match"}
-          </h2>
-          <button
-            type="button"
-            onClick={onClose}
-            className="rounded-md px-2 py-1 text-xs text-gray-400 hover:bg-surface-800 hover:text-gray-200"
+    <Modal
+      onClose={onClose}
+      panelClassName="max-w-2xl max-h-[90vh]"
+      eyebrow="History"
+      title={state.mode === "edit" ? "Edit match" : "Record a match"}
+    >
+      <div className="-mr-2 flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto pr-2">
+        <Field label="Game" htmlFor="rmm-game">
+          <GamePicker
+            slug={gameSlug}
+            title={gameTitle}
+            onChange={({ slug, title }) => {
+              setGameSlug(slug);
+              setGameTitle(title);
+            }}
+          />
+        </Field>
+
+        <Field
+          label="Game night"
+          htmlFor={dateKeyId}
+          hint={
+            dateKey
+              ? "Time taken from the night's calendar entry"
+              : "Pick a locked night, or leave standalone for a one-off"
+          }
+        >
+          <select
+            id={dateKeyId}
+            value={dateKey ?? ""}
+            onChange={(e) => setDateKey(e.target.value || null)}
+            className="w-full rounded-lg border border-white/10 bg-surface-900 px-3 py-2 text-sm text-gray-100"
           >
-            Close
-          </button>
-        </header>
+            <option value="">Standalone (no calendar lock)</option>
+            {sortLockKeys(Object.keys(locksQuery.data ?? {})).map((d) => (
+              <option key={d} value={d}>
+                {d}
+                {locksQuery.data?.[d]?.host?.name ? ` — ${locksQuery.data[d].host?.name}` : ""}
+              </option>
+            ))}
+          </select>
+        </Field>
 
-        <div className="flex-1 overflow-y-auto px-5 py-4">
-          <div className="flex flex-col gap-3">
-            <Field label="Game" htmlFor="rmm-game">
-              <GamePicker
-                slug={gameSlug}
-                title={gameTitle}
-                onChange={({ slug, title }) => {
-                  setGameSlug(slug);
-                  setGameTitle(title);
-                }}
-              />
-            </Field>
+        {!dateKey && (
+          <Field label="Played at" htmlFor={playedAtId}>
+            <Input
+              id={playedAtId}
+              type="datetime-local"
+              value={isoToLocalInput(playedAt)}
+              onChange={(e) => setPlayedAt(localInputToIso(e.target.value))}
+            />
+          </Field>
+        )}
 
-            <Field
-              label="Game night"
-              htmlFor={dateKeyId}
-              hint={
-                dateKey
-                  ? "Time taken from the night's calendar entry"
-                  : "Pick a locked night, or leave standalone for a one-off"
-              }
-            >
-              <select
-                id={dateKeyId}
-                value={dateKey ?? ""}
-                onChange={(e) => setDateKey(e.target.value || null)}
-                className="w-full rounded-lg border border-white/10 bg-surface-900 px-3 py-2 text-sm text-gray-100"
+        <Field label="Match type" htmlFor="rmm-kind">
+          <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
+            {KIND_OPTIONS.map((opt) => (
+              <button
+                key={opt.kind}
+                type="button"
+                onClick={() => changeKind(opt.kind)}
+                title={opt.hint}
+                className={`rounded-md px-2 py-1.5 text-xs font-medium transition ${
+                  kind === opt.kind
+                    ? "bg-accent-500/20 text-accent-100 ring-1 ring-accent-400/40"
+                    : "bg-surface-800 text-gray-400 hover:bg-surface-700"
+                }`}
               >
-                <option value="">Standalone (no calendar lock)</option>
-                {sortLockKeys(Object.keys(locksQuery.data ?? {})).map((d) => (
-                  <option key={d} value={d}>
-                    {d}
-                    {locksQuery.data?.[d]?.host?.name ? ` — ${locksQuery.data[d].host?.name}` : ""}
-                  </option>
-                ))}
-              </select>
-            </Field>
-
-            {!dateKey && (
-              <Field label="Played at" htmlFor={playedAtId}>
-                <Input
-                  id={playedAtId}
-                  type="datetime-local"
-                  value={isoToLocalInput(playedAt)}
-                  onChange={(e) => setPlayedAt(localInputToIso(e.target.value))}
-                />
-              </Field>
-            )}
-
-            <Field label="Match type" htmlFor="rmm-kind">
-              <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
-                {KIND_OPTIONS.map((opt) => (
-                  <button
-                    key={opt.kind}
-                    type="button"
-                    onClick={() => changeKind(opt.kind)}
-                    title={opt.hint}
-                    className={`rounded-md px-2 py-1.5 text-xs font-medium transition ${
-                      kind === opt.kind
-                        ? "bg-accent-500/20 text-accent-100 ring-1 ring-accent-400/40"
-                        : "bg-surface-800 text-gray-400 hover:bg-surface-700"
-                    }`}
-                  >
-                    {opt.label}
-                  </button>
-                ))}
-              </div>
-            </Field>
-
-            <div className="rounded-xl border border-white/5 bg-surface-900/40 p-3">
-              {kind === "free-for-all" && (
-                <FreeForAllForm
-                  users={allUsers}
-                  value={outcome as MatchOutcomeFreeForAll}
-                  onChange={setOutcome}
-                  gameSlug={gameSlug}
-                />
-              )}
-              {kind === "teams" && (
-                <TeamsForm
-                  users={allUsers}
-                  value={outcome as MatchOutcomeTeams}
-                  onChange={setOutcome}
-                  gameSlug={gameSlug}
-                />
-              )}
-              {kind === "last-standing" && (
-                <LastStandingForm
-                  users={allUsers}
-                  value={outcome as MatchOutcomeLastStanding}
-                  onChange={setOutcome}
-                />
-              )}
-              {kind === "coop" && (
-                <CoopForm
-                  users={allUsers}
-                  value={outcome as MatchOutcomeCoop}
-                  onChange={setOutcome}
-                />
-              )}
-              {kind === "one-vs-many" && (
-                <OneVsManyForm
-                  users={allUsers}
-                  value={outcome as MatchOutcomeOneVsMany}
-                  onChange={setOutcome}
-                />
-              )}
-            </div>
-
-            <Field label="Notes" htmlFor={notesId} hint="Optional, max 2000 chars">
-              <textarea
-                id={notesId}
-                value={notes}
-                onChange={(e) => setNotes(e.target.value.slice(0, 2000))}
-                rows={3}
-                className="w-full rounded-lg border border-white/10 bg-surface-900 px-3 py-2 text-sm text-gray-100 placeholder:text-gray-500 focus:border-accent-400/60 focus:outline-none focus:ring-2 focus:ring-accent-400/30"
-                placeholder="Anything memorable…"
-              />
-            </Field>
+                {opt.label}
+              </button>
+            ))}
           </div>
+        </Field>
+
+        <div className="rounded-xl border border-white/5 bg-surface-900/40 p-3">
+          {kind === "free-for-all" && (
+            <FreeForAllForm
+              users={allUsers}
+              value={outcome as MatchOutcomeFreeForAll}
+              onChange={setOutcome}
+              gameSlug={gameSlug}
+            />
+          )}
+          {kind === "teams" && (
+            <TeamsForm
+              users={allUsers}
+              value={outcome as MatchOutcomeTeams}
+              onChange={setOutcome}
+              gameSlug={gameSlug}
+            />
+          )}
+          {kind === "last-standing" && (
+            <LastStandingForm
+              users={allUsers}
+              value={outcome as MatchOutcomeLastStanding}
+              onChange={setOutcome}
+            />
+          )}
+          {kind === "coop" && (
+            <CoopForm users={allUsers} value={outcome as MatchOutcomeCoop} onChange={setOutcome} />
+          )}
+          {kind === "one-vs-many" && (
+            <OneVsManyForm
+              users={allUsers}
+              value={outcome as MatchOutcomeOneVsMany}
+              onChange={setOutcome}
+            />
+          )}
         </div>
 
-        <footer className="flex items-center justify-between border-t border-white/10 px-5 py-3">
-          {error ? (
-            <span className="text-xs text-rose-400">{error}</span>
-          ) : (
-            <span className="text-xs text-gray-500">
-              {usersQuery.isLoading ? "Loading users…" : `${allUsers.length} known players`}
-            </span>
-          )}
-          <div className="flex items-center gap-2">
-            <Button variant="ghost" size="sm" onClick={onClose}>
-              Cancel
-            </Button>
-            <Button
-              variant="primary"
-              size="sm"
-              loading={saveMutation.isPending}
-              onClick={() => saveMutation.mutate()}
-            >
-              {state.mode === "edit" ? "Save" : "Record"}
-            </Button>
-          </div>
-        </footer>
+        <Field label="Notes" htmlFor={notesId} hint="Optional, max 2000 chars">
+          <textarea
+            id={notesId}
+            value={notes}
+            onChange={(e) => setNotes(e.target.value.slice(0, 2000))}
+            rows={3}
+            className="w-full rounded-lg border border-white/10 bg-surface-900 px-3 py-2 text-sm text-gray-100 placeholder:text-gray-500 focus:border-accent-400/60 focus:outline-none focus:ring-2 focus:ring-accent-400/30"
+            placeholder="Anything memorable…"
+          />
+        </Field>
       </div>
-    </div>
+
+      <footer className="flex shrink-0 items-center justify-between gap-2 border-t border-white/10 pt-3">
+        {error ? (
+          <span className="text-xs text-rose-400">{error}</span>
+        ) : (
+          <span className="text-xs text-gray-500">
+            {usersQuery.isLoading ? "Loading users…" : `${allUsers.length} known players`}
+          </span>
+        )}
+        <div className="flex items-center gap-2">
+          <Button variant="ghost" size="sm" onClick={onClose}>
+            Cancel
+          </Button>
+          <Button
+            variant="primary"
+            size="sm"
+            loading={saveMutation.isPending}
+            onClick={() => saveMutation.mutate()}
+          >
+            {state.mode === "edit" ? "Save" : "Record"}
+          </Button>
+        </div>
+      </footer>
+    </Modal>
   );
 }
 

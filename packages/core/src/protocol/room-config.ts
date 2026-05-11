@@ -12,4 +12,5 @@ export const gameRoomConfigs: Record<string, GameRoomConfig> = {
   set: { minPlayers: 2, maxPlayers: 2, supportsAI: false },
   "sushi-go": { minPlayers: 2, maxPlayers: 5, supportsAI: false },
   parks: { minPlayers: 2, maxPlayers: 2, supportsAI: true },
+  "sky-team": { minPlayers: 2, maxPlayers: 2, supportsAI: true },
 };

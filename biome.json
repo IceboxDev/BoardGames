@@ -1,7 +1,13 @@
 {
   "$schema": "https://biomejs.dev/schemas/2.4.8/schema.json",
   "files": {
-    "includes": ["packages/**", "!**/dist/**", "!**/.vite/**", "!**/node_modules/**"]
+    "includes": [
+      "packages/**",
+      "!**/dist/**",
+      "!**/.vite/**",
+      "!**/node_modules/**",
+      "!packages/core/src/bgg/snapshot.json"
+    ]
   },
   "formatter": {
     "indentStyle": "space",

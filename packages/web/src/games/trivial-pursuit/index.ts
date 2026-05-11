@@ -1,11 +1,9 @@
 import type { GameModule } from "../types";
 import accent from "./accent.json";
-import bgg from "./bgg.json";
 
 export default {
   slug: "trivial-pursuit",
-  title: "Trivial Pursuit",
+  displayTitle: "Trivial Pursuit",
   bggId: 2952,
-  bgg,
   accentHex: accent.hex,
 } satisfies GameModule;

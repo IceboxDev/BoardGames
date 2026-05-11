@@ -12,6 +12,7 @@ import { adminMatchHistoryRoutes } from "./auth-routes/admin-match-history.ts";
 import { adminOnlineRoutes } from "./auth-routes/admin-online.ts";
 import { adminPendingInventoryRoutes } from "./auth-routes/admin-pending-inventory.ts";
 import { availabilityCountsRoutes } from "./auth-routes/availability-counts.ts";
+import { bggRoutes } from "./auth-routes/bgg.ts";
 import { adminCalendarLocksRoutes, calendarLocksRoutes } from "./auth-routes/calendar-locks.ts";
 import { calendarRsvpsRoutes } from "./auth-routes/calendar-rsvps.ts";
 import { matchHistoryRoutes } from "./auth-routes/match-history.ts";
@@ -95,6 +96,9 @@ app.route("/api/calendar", calendarRsvpsRoutes);
 
 app.use("/api/history/*", requireAuth);
 app.route("/api/history", matchHistoryRoutes);
+
+app.use("/api/bgg/*", requireAuth);
+app.route("/api/bgg", bggRoutes);
 
 app.use("/api/tournaments/*", requireAuth);
 app.route("/api/tournaments", tournamentRoutes);

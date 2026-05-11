@@ -50,7 +50,13 @@ async function isUpToDate(srcPng, destWebp) {
   }
 }
 
-async function optimize(src) {
+/**
+ * Optimize one PNG thumbnail to WebP next to it. Returns byte counts so a
+ * caller can aggregate. Idempotent — skips when the WebP is newer than the
+ * PNG. Exported so `scripts/bgg-sync.mjs --add` can run it on a single image
+ * during new-game scaffolding.
+ */
+export async function optimizeOne(src) {
   const dest = src.replace(/\.png$/i, ".webp");
   if (await isUpToDate(src, dest)) {
     process.stdout.write(`skip  ${path.relative(gamesDir, src)}\n`);
@@ -69,16 +75,19 @@ async function optimize(src) {
   return { srcBytes, destBytes, skipped: false };
 }
 
-const files = await findThumbnails();
-let totalSrc = 0;
-let totalDest = 0;
-for (const f of files) {
-  const r = await optimize(f);
-  if (!r.skipped) {
-    totalSrc += r.srcBytes;
-    totalDest += r.destBytes;
+// CLI entrypoint — only runs when invoked directly, not on import.
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const files = await findThumbnails();
+  let totalSrc = 0;
+  let totalDest = 0;
+  for (const f of files) {
+    const r = await optimizeOne(f);
+    if (!r.skipped) {
+      totalSrc += r.srcBytes;
+      totalDest += r.destBytes;
+    }
   }
+  console.log(
+    `\n${(totalSrc / 1048576).toFixed(1)} MB → ${(totalDest / 1048576).toFixed(1)} MB across ${files.length} thumbnails`,
+  );
 }
-console.log(
-  `\n${(totalSrc / 1048576).toFixed(1)} MB → ${(totalDest / 1048576).toFixed(1)} MB across ${files.length} thumbnails`,
-);

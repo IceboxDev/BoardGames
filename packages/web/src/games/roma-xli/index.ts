@@ -1,12 +1,12 @@
 import type { GameModule } from "../types";
 import accent from "./accent.json";
-import bgg from "./bgg.json";
 
 export default {
   slug: "roma-xli",
-  title: "Roma XLI",
   bggId: 457060,
-  bgg,
   accentHex: accent.hex,
+  // Unranked on BGG (only 6 ratings). Override with (mean − 1σ) of
+  // averageRating across our 2025–2027 peer cohort.
+  bggOverrides: { averageRating: 7.32 },
   family: { id: "dark-cities", variant: "Roma XLI" },
 } satisfies GameModule;

@@ -5,6 +5,7 @@ import type {
   LegalAction,
 } from "@boardgames/core/games/pandemic/types";
 import { useMemo, useState } from "react";
+import { Button } from "../../../components/ui/Button";
 import PandemicCard from "./PandemicCard";
 
 export type DiscoverCureOption = Extract<LegalAction, { kind: "discover_cure" }>;
@@ -147,21 +148,12 @@ export default function CureCardSelectionModal({
         </div>
 
         <div className="flex justify-end gap-2 pt-1">
-          <button
-            type="button"
-            onClick={onCancel}
-            className="rounded-lg bg-neutral-700 px-4 py-2 text-sm hover:bg-neutral-600"
-          >
+          <Button variant="ghost" size="md" onClick={onCancel}>
             Cancel
-          </button>
-          <button
-            type="button"
-            onClick={handleConfirm}
-            disabled={!isComplete}
-            className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold hover:bg-emerald-500 disabled:cursor-not-allowed disabled:bg-neutral-700 disabled:text-white/40"
-          >
+          </Button>
+          <Button variant="primary" size="md" onClick={handleConfirm} disabled={!isComplete}>
             Discover Cure
-          </button>
+          </Button>
         </div>
       </div>
     </div>

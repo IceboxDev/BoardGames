@@ -5,6 +5,7 @@ import { NightCard } from "../components/history/NightCard";
 import { RecordMatchModal } from "../components/history/RecordMatchModal";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
+import { PageMain, PageShell } from "../components/ui/PageShell";
 import { useSession } from "../lib/auth-client";
 import { fetchCalendarLocks, type LockedDate } from "../lib/calendar-locks";
 import { deleteMatch, fetchHistory } from "../lib/match-history";
@@ -117,12 +118,14 @@ export default function HistoryPage() {
   }
 
   return (
-    <div className="flex min-h-dvh flex-col bg-surface-950 bg-grid">
-      <TopNav>
-        <TopNavBackButton to="/offline" label="Calendar" />
-      </TopNav>
-
-      <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-6">
+    <PageShell
+      topNav={
+        <TopNav>
+          <TopNavBackButton to="/offline" label="Calendar" />
+        </TopNav>
+      }
+    >
+      <PageMain width="3xl">
         <header className="mb-6 flex items-center justify-between gap-4">
           <div>
             <h1 className="text-xl font-semibold text-gray-100">Board game history</h1>
@@ -185,7 +188,7 @@ export default function HistoryPage() {
             )}
           </div>
         )}
-      </main>
+      </PageMain>
 
       {recording && (
         <RecordMatchModal
@@ -197,6 +200,6 @@ export default function HistoryPage() {
           }}
         />
       )}
-    </div>
+    </PageShell>
   );
 }

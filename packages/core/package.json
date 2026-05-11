@@ -3,6 +3,8 @@
   "private": true,
   "type": "module",
   "exports": {
+    "./bgg": "./src/bgg/index.ts",
+    "./bgg/*": "./src/bgg/*.ts",
     "./games/lost-cities/*": "./src/games/lost-cities/*.ts",
     "./games/exploding-kittens/*": "./src/games/exploding-kittens/*.ts",
     "./games/pandemic/*": "./src/games/pandemic/*.ts",
@@ -10,6 +12,7 @@
     "./games/sushi-go/*": "./src/games/sushi-go/*.ts",
     "./games/set/*": "./src/games/set/*.ts",
     "./games/parks/*": "./src/games/parks/*.ts",
+    "./games/sky-team/*": "./src/games/sky-team/*.ts",
     "./history/*": "./src/history/*.ts",
     "./machines/*": "./src/machines/*.ts",
     "./protocol": "./src/protocol/index.ts",

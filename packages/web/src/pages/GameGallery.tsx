@@ -3,6 +3,7 @@ import { useMemo, useState } from "react";
 import FamilyCard from "../components/FamilyCard";
 import GameCard from "../components/GameCard";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
+import { PageMain, PageShell } from "../components/ui/PageShell";
 import { groupForPresentation } from "../games/families";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
@@ -44,12 +45,14 @@ export default function GameGallery() {
   }
 
   return (
-    <div className="flex min-h-dvh flex-col bg-surface-950 bg-grid">
-      <TopNav>
-        <TopNavBackButton to="/" label="Dashboard" />
-      </TopNav>
-
-      <main className="flex min-h-0 flex-1 flex-col gap-6 px-4 py-6 sm:px-8 sm:py-8 lg:px-12">
+    <PageShell
+      topNav={
+        <TopNav>
+          <TopNavBackButton to="/" label="Dashboard" />
+        </TopNav>
+      }
+    >
+      <PageMain width="full" padding="spacious" fillHeight className="gap-6">
         <div className="shrink-0">
           <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">My Gallery</h1>
           <p className="mt-1.5 text-sm text-gray-500">
@@ -128,7 +131,7 @@ export default function GameGallery() {
             })}
           </div>
         )}
-      </main>
-    </div>
+      </PageMain>
+    </PageShell>
   );
 }

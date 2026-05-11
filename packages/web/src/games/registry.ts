@@ -1,3 +1,4 @@
+import { bggSnapshot } from "@boardgames/core/bgg";
 import placeholderThumbnail from "./_placeholder-thumbnail.svg?url";
 import type { GameDefinition, GameModule } from "./types";
 
@@ -21,8 +22,39 @@ for (const [path, url] of Object.entries(thumbnailModules)) {
 }
 
 export const games: GameDefinition[] = Object.values(modules)
-  .map((m) => ({
-    ...m.default,
-    thumbnail: thumbnailBySlug[m.default.slug] ?? placeholderThumbnail,
-  }))
+  .map((m): GameDefinition => {
+    const slug = m.default.slug;
+    const snapshotEntry = bggSnapshot[slug];
+    if (!snapshotEntry) {
+      throw new Error(
+        `[registry] No BGG snapshot entry for slug "${slug}". ` +
+          `Run \`pnpm bgg-sync\` to refresh packages/core/src/bgg/snapshot.json.`,
+      );
+    }
+    // Shallow-merge per-game overrides on top of the BGG snapshot. This is
+    // how each game patches BGG inaccuracies (wrong player count, missing
+    // suggested age, etc.) without re-fetching from BGG.
+    const bgg = m.default.bggOverrides
+      ? { ...snapshotEntry, ...m.default.bggOverrides }
+      : snapshotEntry;
+    return {
+      ...m.default,
+      bgg,
+      title: m.default.displayTitle ?? bgg.name,
+      thumbnail: thumbnailBySlug[slug] ?? placeholderThumbnail,
+    };
+  })
   .sort((a, b) => a.title.localeCompare(b.title));
+
+/**
+ * Min/max `averageWeight` across the registry — used by `BggInline` to
+ * normalize the complexity bar so the lightest game in the catalog reads as
+ * empty and the heaviest reads as full. Recomputed once at module load.
+ */
+export const weightStats: { min: number; max: number } = (() => {
+  const weights = games
+    .map((g) => g.bgg.averageWeight)
+    .filter((w): w is number => w !== null && w > 0);
+  if (weights.length === 0) return { min: 1, max: 5 };
+  return { min: Math.min(...weights), max: Math.max(...weights) };
+})();

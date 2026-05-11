@@ -20,6 +20,7 @@ import { CardDeck } from "../../../components/CardDeck";
 import { GameScreen } from "../../../components/game-layout";
 import { type PlayerEntry, PlayerListPanel } from "../../../components/SidePanel";
 import { AiThinkingIndicator } from "../../../components/ui";
+import { DEBUG_LAYOUT } from "../../../lib/debug";
 import { getCardImageUrl, getCardSkin } from "../assets/card-art";
 import cardBackUrl from "../assets/card-back.png";
 import { mapEKLog } from "../log-mapper";
@@ -211,7 +212,9 @@ export default function GameBoard({
     >
       <div className="flex min-h-0 flex-1 gap-3">
         {/* Left stats column */}
-        <div className="hidden w-36 shrink-0 flex-col border-2 border-dashed border-blue-400/40 lg:flex">
+        <div
+          className={`hidden w-36 shrink-0 flex-col lg:flex${DEBUG_LAYOUT ? " border-2 border-dashed border-blue-400/40" : ""}`}
+        >
           <PlayerListPanel
             turnCount={state.turnCount}
             players={state.players.map(
@@ -234,7 +237,9 @@ export default function GameBoard({
         </div>
 
         {/* Main content */}
-        <div className="min-h-0 flex-1 space-y-6 overflow-y-auto border-2 border-dashed border-orange-400/40">
+        <div
+          className={`min-h-0 flex-1 space-y-6 overflow-y-auto${DEBUG_LAYOUT ? " border-2 border-dashed border-orange-400/40" : ""}`}
+        >
           {showDiscardPick && (
             <DiscardPile
               cards={state.discardPile}
@@ -293,7 +298,9 @@ export default function GameBoard({
         </div>
 
         {/* Deck column */}
-        <div className="flex w-36 shrink-0 flex-col items-center justify-center gap-6 border-2 border-dashed border-purple-400/40">
+        <div
+          className={`flex w-36 shrink-0 flex-col items-center justify-center gap-6${DEBUG_LAYOUT ? " border-2 border-dashed border-purple-400/40" : ""}`}
+        >
           <div className="flex flex-col items-center gap-1">
             <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
               Draw

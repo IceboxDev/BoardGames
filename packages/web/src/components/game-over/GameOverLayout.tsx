@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Button } from "../ui/Button";
 
 interface GameOverAction {
   label: string;
@@ -53,27 +54,11 @@ export function GameOverLayout({
       {/* Actions */}
       {actions.length > 0 && (
         <div className="flex flex-wrap justify-center gap-3">
-          {actions.map((action) =>
-            action.variant === "primary" ? (
-              <button
-                key={action.label}
-                type="button"
-                onClick={action.onClick}
-                className="rounded-xl bg-emerald-600 px-6 py-2.5 text-sm font-semibold text-white transition hover:bg-emerald-500"
-              >
-                {action.label}
-              </button>
-            ) : (
-              <button
-                key={action.label}
-                type="button"
-                onClick={action.onClick}
-                className="rounded-xl border border-gray-700 bg-surface-800 px-6 py-2.5 text-sm font-semibold text-gray-300 transition hover:bg-surface-700"
-              >
-                {action.label}
-              </button>
-            ),
-          )}
+          {actions.map((action) => (
+            <Button key={action.label} variant={action.variant} size="lg" onClick={action.onClick}>
+              {action.label}
+            </Button>
+          ))}
         </div>
       )}
     </div>

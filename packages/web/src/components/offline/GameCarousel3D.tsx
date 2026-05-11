@@ -1,8 +1,12 @@
+import { maxPlayersAsNumber } from "@boardgames/core/bgg";
 import { motion, type PanInfo } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { groupForPresentation, type PresentationUnit } from "../../games/families";
 import type { BggGame, GameDefinition } from "../../games/types";
 import type { ReactionAggregate } from "../../lib/calendar-games";
+import { CheckIcon, ChevronLeftIcon, ChevronRightIcon, FlameIcon } from "../icons";
+import { BggInline } from "./BggInline";
+import { stripBggHtml } from "./bgg-helpers";
 import FamilyCarouselCard from "./FamilyCarouselCard";
 import GameReactions from "./GameReactions";
 
@@ -163,7 +167,7 @@ export default function GameCarousel3D({
         aria-label="Previous game"
         className="absolute left-2 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/80 text-white backdrop-blur-sm transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:left-4 sm:h-12 sm:w-12"
       >
-        <ChevronGlyph direction="left" />
+        <ChevronLeftIcon />
       </button>
 
       <motion.div
@@ -243,7 +247,7 @@ export default function GameCarousel3D({
             : undefined
         }
       >
-        <ChevronGlyph direction="right" />
+        <ChevronRightIcon />
       </button>
     </div>
   );
@@ -282,6 +286,10 @@ function CarouselCard({
   const hidden = absOff > 5;
   const isCenter = offset === 0;
   const fits = fitsRange(game, minPlayers, maxPlayers);
+  // BGG community-voted "best at N" matches the confirmed RSVP-yes count —
+  // the strongest game-fit signal we have. Triggers the amber/fire treatment.
+  const isBestForHeadcount =
+    game.bgg.bestPlayerCount !== null && minPlayers > 0 && game.bgg.bestPlayerCount === minPlayers;
 
   // Inner heights preserve the original 270:290 split inside a 560-tall card.
   const thumbH = cardH * (270 / REF_CARD_H);
@@ -304,7 +312,11 @@ function CarouselCard({
       tabIndex={hidden ? -1 : 0}
       aria-hidden={hidden}
       aria-label={isCenter ? `${game.title}, current selection` : `Show ${game.title}`}
-      className="absolute left-1/2 top-1/2 origin-center cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-surface-900 text-left shadow-2xl shadow-black/40 transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+      className={`absolute left-1/2 top-1/2 origin-center cursor-pointer overflow-hidden rounded-2xl bg-surface-900 text-left transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${
+        isBestForHeadcount
+          ? "border-2 border-amber-400/80 shadow-2xl shadow-amber-500/40"
+          : "border border-white/10 shadow-2xl shadow-black/40"
+      }`}
       style={
         {
           width: cardW,
@@ -352,11 +364,19 @@ function CarouselCard({
             {game.bgg.yearPublished}
           </span>
         )}
-        {fits && (minPlayers > 0 || maxPlayers > 0) && (
-          <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-emerald-500/30 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.15em] text-emerald-100 backdrop-blur-sm">
-            <CheckIcon />
-            Fits {fitsLabel(minPlayers, maxPlayers)}
+        {isBestForHeadcount ? (
+          <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.15em] text-white shadow-md shadow-amber-500/40 backdrop-blur-sm">
+            <FlameIcon className="h-3 w-3" />
+            Best at {minPlayers}
           </span>
+        ) : (
+          fits &&
+          (minPlayers > 0 || maxPlayers > 0) && (
+            <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-emerald-500/30 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.15em] text-emerald-100 backdrop-blur-sm">
+              <CheckIcon className="h-3 w-3" />
+              Fits {fitsLabel(minPlayers, maxPlayers)}
+            </span>
+          )
         )}
 
         {date && (
@@ -390,14 +410,19 @@ function CarouselCard({
           {game.title}
         </h3>
         <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400">
-          {playerRange(game.bgg)} · {playTime(game.bgg)}
+          <span className={isBestForHeadcount ? "text-amber-300" : undefined}>
+            {playerRange(game.bgg)}
+            {isBestForHeadcount && ` · best at ${minPlayers}`}
+          </span>
+          {" · "}
+          {playTime(game.bgg)}
           {game.bgg.minAge ? ` · ${game.bgg.minAge}+` : ""}
         </p>
 
         <BggInline bgg={game.bgg} compact={compact} />
 
         {!compact && game.bgg.description && (
-          <p className="min-h-0 flex-1 overflow-hidden text-[11px] leading-relaxed text-gray-400">
+          <p className="min-h-0 flex-1 overflow-hidden text-[10px] leading-snug text-gray-400">
             {stripBggHtml(game.bgg.description)}
           </p>
         )}
@@ -406,56 +431,9 @@ function CarouselCard({
   );
 }
 
-function BggInline({ bgg, compact }: { bgg: BggGame; compact: boolean }) {
-  const hasRating = bgg.averageRating !== null;
-  const hasWeight = !compact && bgg.averageWeight !== null && bgg.averageWeight > 0;
-  if (!hasRating && !hasWeight) return null;
-
-  return (
-    <div className="flex flex-col gap-1.5 border-y border-white/[0.05] py-2 text-[11px] text-gray-400">
-      {hasRating && bgg.averageRating !== null && (
-        <div className="flex items-center gap-2">
-          <StarIcon />
-          <span className="font-semibold text-gray-200 tabular-nums">
-            {bgg.averageRating.toFixed(1)}
-          </span>
-          <span className="text-gray-500">/ 10</span>
-          {bgg.numRatings ? (
-            <span className="ml-auto text-[10px] text-gray-500">
-              {formatCount(bgg.numRatings)} ratings
-            </span>
-          ) : null}
-        </div>
-      )}
-      {hasWeight && bgg.averageWeight !== null && (
-        <div className="flex items-center gap-2">
-          <span className="shrink-0 text-[10px] uppercase tracking-[0.18em] text-gray-500">
-            Weight
-          </span>
-          <div className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-white/[0.06]">
-            <div
-              className="absolute inset-y-0 left-0 rounded-full"
-              style={{
-                width: `${Math.min(100, (bgg.averageWeight / 5) * 100)}%`,
-                backgroundColor: "var(--accent)",
-              }}
-            />
-          </div>
-          <span className="shrink-0 font-semibold text-gray-200 tabular-nums">
-            {bgg.averageWeight.toFixed(1)}
-          </span>
-          <span className="shrink-0 text-[10px] uppercase tracking-[0.14em] text-gray-500">
-            {weightLabel(bgg.averageWeight)}
-          </span>
-        </div>
-      )}
-    </div>
-  );
-}
-
 function fitsRange(game: GameDefinition, lo: number, hi: number): boolean {
   const min = game.bgg.minPlayers ?? 0;
-  const max = game.bgg.maxPlayers ?? Number.POSITIVE_INFINITY;
+  const max = maxPlayersAsNumber(game.bgg.maxPlayers);
   return min <= hi && max >= lo;
 }
 
@@ -469,7 +447,8 @@ function playerRange(bgg: BggGame): string {
   const max = bgg.maxPlayers;
   if (min == null && max == null) return "— players";
   if (min === max) return `${min} player${min === 1 ? "" : "s"}`;
-  return `${min ?? "?"}–${max ?? "?"} players`;
+  const maxLabel = max === "infinity" ? "∞" : (max ?? "?");
+  return `${min ?? "?"}–${maxLabel} players`;
 }
 
 function playTime(bgg: BggGame): string {
@@ -479,79 +458,4 @@ function playTime(bgg: BggGame): string {
   const t = bgg.playingTime ?? minT ?? maxT;
   if (!t) return "— min";
   return `${t} min`;
-}
-
-function weightLabel(w: number): string {
-  if (w < 2) return "Light";
-  if (w < 3) return "Medium-light";
-  if (w < 3.5) return "Medium";
-  if (w < 4) return "Medium-heavy";
-  return "Heavy";
-}
-
-function formatCount(n: number): string {
-  if (n >= 1000) return `${(n / 1000).toFixed(n >= 10000 ? 0 : 1)}k`;
-  return String(n);
-}
-
-function stripBggHtml(html: string): string {
-  return html
-    .replace(/<[^>]+>/g, "")
-    .replace(/&#10;/g, " ")
-    .replace(/&mdash;/g, "—")
-    .replace(/&ndash;/g, "–")
-    .replace(/&quot;/g, '"')
-    .replace(/&amp;/g, "&")
-    .replace(/&#39;/g, "'")
-    .replace(/&rsquo;/g, "'")
-    .replace(/&lsquo;/g, "'")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
-function ChevronGlyph({ direction }: { direction: "left" | "right" }) {
-  return (
-    <svg
-      viewBox="0 0 16 16"
-      className="h-5 w-5"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      {direction === "left" ? <path d="M10 3l-5 5 5 5" /> : <path d="M6 3l5 5-5 5" />}
-    </svg>
-  );
-}
-
-function CheckIcon() {
-  return (
-    <svg
-      viewBox="0 0 16 16"
-      className="h-3 w-3"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2.5}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M3 8.5l3 3 7-7" />
-    </svg>
-  );
-}
-
-function StarIcon() {
-  return (
-    <svg
-      viewBox="0 0 20 20"
-      fill="currentColor"
-      className="h-3.5 w-3.5 text-amber-400"
-      aria-hidden="true"
-    >
-      <path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.78L10 14.77l-5.2 2.73.99-5.78L1.58 7.62l5.82-.85L10 1.5z" />
-    </svg>
-  );
 }

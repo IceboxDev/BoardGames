@@ -90,11 +90,12 @@ function boostHex(hex) {
   return rgbToHex(hslToRgb([h, newS, newL]));
 }
 
-const dirents = await readdir(ROOT, { withFileTypes: true });
-const slugs = dirents.filter((d) => d.isDirectory()).map((d) => d.name);
-
-let written = 0;
-for (const slug of slugs) {
+/**
+ * Run the accent pipeline for one slug and write its `accent.json`. Returns
+ * the chosen hex (or null if there was no thumbnail). Exported so
+ * `scripts/bgg-sync.mjs --add` can invoke it for a single new game.
+ */
+export async function extractOne(slug) {
   const candidates = [
     join(ROOT, slug, "assets/thumbnail.png"),
     join(ROOT, slug, "assets/img/thumbnail.png"),
@@ -102,7 +103,7 @@ for (const slug of slugs) {
   const thumb = candidates.find((p) => existsSync(p));
   if (!thumb) {
     console.warn(`[extract-accents] no thumbnail for ${slug}, skipping`);
-    continue;
+    return null;
   }
 
   const cropped = await centerCrop(thumb);
@@ -117,7 +118,19 @@ for (const slug of slugs) {
 
   await writeFile(join(ROOT, slug, "accent.json"), `${JSON.stringify({ hex }, null, 2)}\n`);
   console.log(`[extract-accents] ${slug} → ${hex}  (raw ${raw}, top ${top?.name})`);
-  written++;
+  return hex;
 }
 
-console.log(`[extract-accents] wrote ${written} files`);
+// CLI entrypoint — only runs when invoked directly, not on import.
+if (import.meta.url === `file://${process.argv[1]}`) {
+  const dirents = await readdir(ROOT, { withFileTypes: true });
+  const slugs = dirents.filter((d) => d.isDirectory()).map((d) => d.name);
+
+  let written = 0;
+  for (const slug of slugs) {
+    const hex = await extractOne(slug);
+    if (hex !== null) written++;
+  }
+
+  console.log(`[extract-accents] wrote ${written} files`);
+}

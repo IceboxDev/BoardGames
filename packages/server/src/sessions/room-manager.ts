@@ -421,6 +421,19 @@ function buildGameConfig(room: Room, extra: Record<string, unknown>): Record<str
       return { playerCount: humanCount, ...extra };
     }
 
+    case "sky-team": {
+      const humanIndices = room.slots
+        .map((s, i) => (s.kind === "human" ? i : -1))
+        .filter((i) => i >= 0);
+      const aiSlot = room.slots.find((s) => s.kind === "ai");
+      return {
+        scenarioId: (extra.scenarioId as string | undefined) ?? "yul-montreal",
+        humanPlayers: humanIndices,
+        aiStrategy: aiSlot?.aiStrategy ?? "heuristic-v1",
+        ...extra,
+      };
+    }
+
     default:
       return extra;
   }

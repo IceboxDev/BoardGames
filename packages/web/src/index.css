@@ -9,12 +9,26 @@
   --color-accent-500: #6366f1;
   --color-accent-400: #818cf8;
   --color-accent-300: #a5b4fc;
+  --color-accent-200: #c7d2fe;
+  --color-accent-100: #e0e7ff;
   --color-neon-cyan: #22d3ee;
   --color-neon-purple: #a855f7;
   --color-neon-pink: #ec4899;
   --font-display: "Inter Variable", "Inter", sans-serif;
   --font-body: "Inter Variable", "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+  /* Stacking layers. Keep this list as the single source of truth. */
+  --z-modal: 200;
+  --z-tooltip: 300;
+}
+
+/* Stacking utilities — Tailwind v4 doesn't auto-derive `z-*` from theme. */
+@utility z-modal {
+  z-index: var(--z-modal);
+}
+
+@utility z-tooltip {
+  z-index: var(--z-tooltip);
 }
 
 /* ── Base ────────────────────────────────────────── */

@@ -16,9 +16,10 @@ const HistoryPage = lazy(() => import("./pages/HistoryPage"));
 const GameGallery = lazy(() => import("./pages/GameGallery"));
 const DeckPreview = lazy(() => import("./pages/DeckPreview"));
 // `GameMenu` and `GameRouter` are the only paths that pull the games registry
-// into the bundle. Lazy-loading them keeps the registry's 81 game modules
-// (bgg.json, accent.json, thumbnail urls, lazy component wrappers) out of
-// the entry chunk, so dashboard / login / profile cold loads stay snappy.
+// into the bundle. Lazy-loading them keeps the registry's per-game modules
+// (accent.json, thumbnail urls, lazy component wrappers) and the BGG
+// snapshot out of the entry chunk, so dashboard / login / profile cold
+// loads stay snappy.
 const GameMenu = lazy(() => import("./components/GameMenu"));
 const GameRouter = lazy(() => import("./components/GameRouter"));
 

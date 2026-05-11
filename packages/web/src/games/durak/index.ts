@@ -3,13 +3,10 @@ import type { GameModule } from "../types";
 import accent from "./accent.json";
 import backgroundImage from "./assets/background.png";
 import rulesUrl from "./assets/rules.pdf";
-import bgg from "./bgg.json";
 
 export default {
   slug: "durak",
-  title: "Durak",
-  bggId: 17329,
-  bgg,
+  bggId: 0,
   accentHex: accent.hex,
   backgroundImage,
   component: lazy(() => import("./Durak")),

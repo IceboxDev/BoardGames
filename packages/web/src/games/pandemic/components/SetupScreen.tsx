@@ -3,7 +3,9 @@ import { createRng, randomSeed } from "@boardgames/core/games/pandemic/rng";
 import { ROLE_DEFS } from "@boardgames/core/games/pandemic/roles";
 import type { SetupConfig } from "@boardgames/core/games/pandemic/types";
 import { useCallback, useState } from "react";
-import { SectionLabel, SetupHeader, SetupLayout, ToggleGroup } from "../../../components/setup";
+import { SectionLabel, SetupHeader, SetupLayout } from "../../../components/setup";
+import { Button } from "../../../components/ui/Button";
+import { SegmentedControl } from "../../../components/ui/SegmentedControl";
 import RoleCard from "./RoleCard";
 
 interface SetupScreenProps {
@@ -71,11 +73,13 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
         <div className="space-y-6">
           <div>
             <SectionLabel>Players</SectionLabel>
-            <ToggleGroup
+            <SegmentedControl
+              shape="rect"
+              selectionMode="toggle"
+              aria-label="Number of players"
               options={PLAYER_OPTIONS}
               value={numPlayers}
               onChange={handlePlayerChange}
-              accentClass="bg-blue-600 text-white"
             />
           </div>
 
@@ -145,13 +149,9 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
             </div>
           </div>
 
-          <button
-            type="button"
-            onClick={handleStart}
-            className="rounded-xl bg-emerald-600 px-8 py-3 font-semibold text-white transition hover:bg-emerald-500"
-          >
+          <Button variant="primary" size="lg" onClick={handleStart}>
             Start Game
-          </button>
+          </Button>
         </div>
 
         {/* Right: role cards — fixed width so it doesn't shift with player count */}

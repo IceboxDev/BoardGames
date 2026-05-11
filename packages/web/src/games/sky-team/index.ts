@@ -1,11 +1,13 @@
+import { lazy } from "react";
 import type { GameModule } from "../types";
 import accent from "./accent.json";
-import bgg from "./bgg.json";
 
 export default {
   slug: "sky-team",
-  title: "Sky Team",
   bggId: 373106,
-  bgg,
   accentHex: accent.hex,
+  component: lazy(() => import("./SkyTeam")),
+  mode: "remote",
+  soloLabel: "Solo vs Co-pilot AI",
+  hasMatchHistory: false,
 } satisfies GameModule;

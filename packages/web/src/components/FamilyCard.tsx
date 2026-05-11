@@ -178,11 +178,16 @@ export default function FamilyCard({
 function formatPlayerRange(members: GameDefinition[]): string {
   let lo = Number.POSITIVE_INFINITY;
   let hi = 0;
+  let unbounded = false;
   for (const m of members) {
     if (m.bgg.minPlayers !== null && m.bgg.minPlayers < lo) lo = m.bgg.minPlayers;
-    if (m.bgg.maxPlayers !== null && m.bgg.maxPlayers > hi) hi = m.bgg.maxPlayers;
+    const max = m.bgg.maxPlayers;
+    if (max === "infinity") unbounded = true;
+    else if (max !== null && max > hi) hi = max;
   }
-  if (lo === Number.POSITIVE_INFINITY || hi === 0) return "";
+  if (lo === Number.POSITIVE_INFINITY) return "";
+  if (unbounded) return `${lo}–∞ players`;
+  if (hi === 0) return "";
   if (lo === hi) return `${lo} players`;
   return `${lo}–${hi} players`;
 }

@@ -1,11 +1,8 @@
 import type { GameModule } from "../types";
 import accent from "./accent.json";
-import bgg from "./bgg.json";
 
 export default {
   slug: "upwords",
-  title: "Upwords",
   bggId: 1515,
-  bgg,
   accentHex: accent.hex,
 } satisfies GameModule;

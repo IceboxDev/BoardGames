@@ -1,7 +1,11 @@
+import { maxPlayersAsNumber } from "@boardgames/core/bgg";
 import { motion } from "framer-motion";
 import type { FamilyInfo } from "../../games/families";
 import type { BggGame, GameDefinition } from "../../games/types";
 import type { ReactionAggregate } from "../../lib/calendar-games";
+import { CheckIcon, FlameIcon } from "../icons";
+import { BggInline } from "./BggInline";
+import { stripBggHtml } from "./bgg-helpers";
 import GameReactions from "./GameReactions";
 
 /**
@@ -72,6 +76,10 @@ export default function FamilyCarouselCard({
   const active =
     visibleMembers.find((m) => m.slug === activeSlug) ?? visibleMembers[0] ?? family.canonical;
   const fits = fitsRange(active, minPlayers, maxPlayers);
+  const isBestForHeadcount =
+    active.bgg.bestPlayerCount !== null &&
+    minPlayers > 0 &&
+    active.bgg.bestPlayerCount === minPlayers;
   const aggregate = reactions[active.slug];
 
   const thumbH = cardH * (270 / REF_CARD_H);
@@ -94,7 +102,7 @@ export default function FamilyCarouselCard({
           ? `${active.title} (${family.displayName} family), current selection`
           : `Show ${family.displayName}`
       }
-      className="absolute left-1/2 top-1/2 origin-center cursor-pointer overflow-hidden rounded-2xl border border-white/10 bg-surface-900 text-left shadow-2xl shadow-black/40 transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+      className="absolute left-1/2 top-1/2 origin-center cursor-pointer text-left focus:outline-none"
       style={
         {
           width: cardW,
@@ -118,90 +126,123 @@ export default function FamilyCarouselCard({
       }}
       transition={{ type: "spring", stiffness: 220, damping: 28 }}
     >
-      {/* Thumbnail */}
-      <div className="relative w-full overflow-hidden" style={{ height: thumbH }}>
-        <img
-          src={active.thumbnail}
-          alt=""
-          className="h-full w-full object-cover"
-          loading="lazy"
-          decoding="async"
-          fetchPriority={isCenter ? "high" : "low"}
-          draggable={false}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-surface-900 via-surface-900/30 to-transparent" />
-        {isCenter && (
-          <span
-            aria-hidden="true"
-            className="absolute inset-0"
-            style={{ boxShadow: `inset 0 0 36px ${active.accentHex}55` }}
+      {/* Visible card frame — overflow-hidden lives here (not on motion.div)
+          so the variant rim buttons can straddle the left border. */}
+      <div
+        className={`relative h-full w-full overflow-hidden rounded-2xl bg-surface-900 transition-shadow ${
+          isBestForHeadcount
+            ? "border-2 border-amber-400/80 shadow-2xl shadow-amber-500/40"
+            : "border border-white/10 shadow-2xl shadow-black/40"
+        }`}
+      >
+        {/* Thumbnail */}
+        <div className="relative w-full overflow-hidden" style={{ height: thumbH }}>
+          <img
+            src={active.thumbnail}
+            alt=""
+            className="h-full w-full object-cover"
+            loading="lazy"
+            decoding="async"
+            fetchPriority={isCenter ? "high" : "low"}
+            draggable={false}
           />
-        )}
-        {/* Family badge top-right (replaces the year badge — variant-aware) */}
-        <span
-          className="absolute right-2 top-2 inline-flex items-center gap-1 rounded-full bg-black/65 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] backdrop-blur-sm"
-          style={{ color: family.canonical.accentHex }}
-        >
-          <StackIcon />
-          {visibleMembers.length} variants
-        </span>
-        {fits && (minPlayers > 0 || maxPlayers > 0) && (
-          <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-emerald-500/30 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.15em] text-emerald-100 backdrop-blur-sm">
-            <CheckIcon />
-            Fits {fitsLabel(minPlayers, maxPlayers)}
-          </span>
-        )}
-
-        {date && (
-          <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2">
-            <GameReactions
-              date={date}
-              slug={active.slug}
-              accentHex={active.accentHex}
-              aggregate={aggregate ?? { hype: 0, teach: 0, learn: 0, viewer: [] }}
-              size={compact ? "sm" : "md"}
-              disabled={!isCenter}
-              hideCount
+          <div className="absolute inset-0 bg-gradient-to-t from-surface-900 via-surface-900/30 to-transparent" />
+          {isCenter && (
+            <span
+              aria-hidden="true"
+              className="absolute inset-0"
+              style={{ boxShadow: `inset 0 0 36px ${active.accentHex}55` }}
             />
-          </div>
-        )}
+          )}
+          {/* Family badge top-right (replaces the year badge — variant-aware) */}
+          <span
+            className="absolute right-2 top-2 inline-flex items-center gap-1 rounded-full bg-black/65 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] backdrop-blur-sm"
+            style={{ color: family.canonical.accentHex }}
+          >
+            <StackIcon />
+            {visibleMembers.length} variants
+          </span>
+          {isBestForHeadcount ? (
+            <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.15em] text-white shadow-md shadow-amber-500/40 backdrop-blur-sm">
+              <FlameIcon className="h-3 w-3" />
+              Best at {minPlayers}
+            </span>
+          ) : (
+            fits &&
+            (minPlayers > 0 || maxPlayers > 0) && (
+              <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-emerald-500/30 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.15em] text-emerald-100 backdrop-blur-sm">
+                <CheckIcon className="h-3 w-3" />
+                Fits {fitsLabel(minPlayers, maxPlayers)}
+              </span>
+            )
+          )}
+
+          {date && (
+            <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2">
+              <GameReactions
+                date={date}
+                slug={active.slug}
+                accentHex={active.accentHex}
+                aggregate={aggregate ?? { hype: 0, teach: 0, learn: 0, viewer: [] }}
+                size={compact ? "sm" : "md"}
+                disabled={!isCenter}
+                hideCount
+              />
+            </div>
+          )}
+        </div>
+
+        {/* Body */}
+        <div
+          className={`flex flex-col ${compact ? "gap-1.5 px-3 py-2.5" : "gap-2 px-5 py-3"}`}
+          style={{ height: bodyH }}
+        >
+          <span
+            className="block h-0.5 w-12 rounded-full"
+            style={{ backgroundColor: active.accentHex }}
+            aria-hidden="true"
+          />
+          <h3
+            className={`truncate font-bold leading-tight text-white ${compact ? "text-lg" : "text-xl"}`}
+          >
+            {active.title}
+          </h3>
+          <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400">
+            <span className={isBestForHeadcount ? "text-amber-300" : undefined}>
+              {playerRange(active.bgg)}
+              {isBestForHeadcount && ` · best at ${minPlayers}`}
+            </span>
+            {" · "}
+            {playTime(active.bgg)}
+            {active.bgg.minAge ? ` · ${active.bgg.minAge}+` : ""}
+          </p>
+
+          <BggInline bgg={active.bgg} compact={compact} />
+
+          {!compact && active.bgg.description && (
+            <p className="min-h-0 flex-1 overflow-hidden text-[10px] leading-snug text-gray-400">
+              {stripBggHtml(active.bgg.description)}
+            </p>
+          )}
+        </div>
       </div>
 
-      {/* Body */}
-      <div
-        className={`flex flex-col ${compact ? "gap-1.5 px-3 py-2.5" : "gap-2 px-5 py-3"}`}
-        style={{ height: bodyH }}
-      >
-        {/* Variant chip strip — interactive only at center, decorative elsewhere */}
-        <VariantChipStrip
-          members={visibleMembers}
-          activeSlug={active.slug}
-          interactive={isCenter}
-          onPick={onSetActive}
-          minPlayers={minPlayers}
-          maxPlayers={maxPlayers}
-        />
-
-        <span
-          className="block h-0.5 w-12 rounded-full"
-          style={{ backgroundColor: active.accentHex }}
-          aria-hidden="true"
-        />
-        <h3
-          className={`truncate font-bold leading-tight text-white ${compact ? "text-lg" : "text-xl"}`}
-        >
-          {active.title}
-        </h3>
-        <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400">
-          {playerRange(active.bgg)} · {playTime(active.bgg)}
-          {active.bgg.minAge ? ` · ${active.bgg.minAge}+` : ""}
-        </p>
-
-        {!compact && active.bgg.description && (
-          <p className="min-h-0 flex-1 overflow-hidden text-[11px] leading-relaxed text-gray-400">
-            {stripBggHtml(active.bgg.description)}
-          </p>
-        )}
+      {/* Variant rim buttons — straddling the LEFT BORDER of the card, half
+          inside / half outside, vertically centered on the thumbnail. Sits
+          OUTSIDE the overflow-hidden frame so the chips' protrusion is
+          visible — that's the whole point: peeking out makes it obvious the
+          family has variants. */}
+      <div className="pointer-events-none absolute z-20" style={{ top: thumbH / 2, left: -14 }}>
+        <div className="-translate-y-1/2 pointer-events-auto">
+          <VariantChipStrip
+            members={visibleMembers}
+            activeSlug={active.slug}
+            interactive={isCenter}
+            onPick={onSetActive}
+            minPlayers={minPlayers}
+            maxPlayers={maxPlayers}
+          />
+        </div>
       </div>
     </motion.div>
   );
@@ -223,22 +264,20 @@ function VariantChipStrip({
   maxPlayers: number;
 }) {
   return (
-    <div
-      className="scrollbar-hide -mx-1 flex shrink-0 items-center gap-1 overflow-x-auto px-1 pb-1"
-      role="radiogroup"
-      aria-label="Variant"
-    >
+    <div className="flex flex-col gap-1.5" role="radiogroup" aria-label="Variant">
       {members.map((m) => {
         const active = m.slug === activeSlug;
         const fits = fitsRange(m, minPlayers, maxPlayers);
+        const variantLabel = m.family?.variant ?? m.title;
         return (
-          // biome-ignore lint/a11y/useSemanticElements: visually a button, semantically a radio — using <input> would drop the thumbnail+label chip layout
+          // biome-ignore lint/a11y/useSemanticElements: visually a button, semantically a radio — keeps the thumbnail-disc layout
           <button
             key={m.slug}
             type="button"
             role="radio"
             aria-checked={active}
             aria-label={`Show variant ${m.title}`}
+            title={variantLabel}
             disabled={!interactive}
             onClick={(e) => {
               e.stopPropagation();
@@ -246,30 +285,28 @@ function VariantChipStrip({
             }}
             onPointerDown={(e) => e.stopPropagation()}
             onMouseDown={(e) => e.stopPropagation()}
-            className={`relative inline-flex shrink-0 items-center gap-1.5 rounded-full px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] transition ${
-              active
-                ? "text-white"
-                : "border border-white/10 bg-surface-800/60 text-gray-300 hover:border-white/20 hover:text-white"
+            className={`relative h-7 w-7 shrink-0 overflow-hidden rounded-full transition-transform ${
+              active ? "scale-110" : "hover:scale-105"
             } ${interactive ? "" : "opacity-90"}`}
-            style={
-              active
-                ? {
-                    backgroundColor: m.accentHex,
-                    boxShadow: `0 0 0 1px ${m.accentHex}`,
-                  }
-                : undefined
-            }
+            style={{
+              boxShadow: active
+                ? `0 0 0 2px ${m.accentHex}, 0 0 10px ${m.accentHex}99`
+                : "0 0 0 1px rgba(255,255,255,0.35), 0 0 6px rgba(0,0,0,0.6)",
+              opacity: active ? 1 : interactive ? 0.85 : 0.9,
+            }}
           >
             <img
               src={m.thumbnail}
               alt=""
               loading="lazy"
               decoding="async"
-              className="h-3.5 w-3.5 shrink-0 rounded-sm object-cover"
+              className="h-full w-full object-cover"
             />
-            <span className="truncate">{m.family?.variant ?? m.title}</span>
             {!fits && interactive && (
-              <span aria-hidden="true" className="text-[9px] opacity-60">
+              <span
+                aria-hidden="true"
+                className="absolute inset-0 flex items-center justify-center bg-black/55 text-[9px] font-bold text-white/80"
+              >
                 ✕
               </span>
             )}
@@ -286,7 +323,7 @@ function VariantChipStrip({
 
 function fitsRange(game: GameDefinition, lo: number, hi: number): boolean {
   const min = game.bgg.minPlayers ?? 0;
-  const max = game.bgg.maxPlayers ?? Number.POSITIVE_INFINITY;
+  const max = maxPlayersAsNumber(game.bgg.maxPlayers);
   return min <= hi && max >= lo;
 }
 
@@ -300,7 +337,8 @@ function playerRange(bgg: BggGame): string {
   const max = bgg.maxPlayers;
   if (min == null && max == null) return "— players";
   if (min === max) return `${min} player${min === 1 ? "" : "s"}`;
-  return `${min ?? "?"}–${max ?? "?"} players`;
+  const maxLabel = max === "infinity" ? "∞" : (max ?? "?");
+  return `${min ?? "?"}–${maxLabel} players`;
 }
 
 function playTime(bgg: BggGame): string {
@@ -310,21 +348,6 @@ function playTime(bgg: BggGame): string {
   const t = bgg.playingTime ?? minT ?? maxT;
   if (!t) return "— min";
   return `${t} min`;
-}
-
-function stripBggHtml(html: string): string {
-  return html
-    .replace(/<[^>]+>/g, "")
-    .replace(/&#10;/g, " ")
-    .replace(/&mdash;/g, "—")
-    .replace(/&ndash;/g, "–")
-    .replace(/&quot;/g, '"')
-    .replace(/&amp;/g, "&")
-    .replace(/&#39;/g, "'")
-    .replace(/&rsquo;/g, "'")
-    .replace(/&lsquo;/g, "'")
-    .replace(/\s+/g, " ")
-    .trim();
 }
 
 function StackIcon() {
@@ -341,23 +364,6 @@ function StackIcon() {
     >
       <rect x="3" y="6" width="10" height="7" rx="1" />
       <path d="M5 6V4.5h8V11" />
-    </svg>
-  );
-}
-
-function CheckIcon() {
-  return (
-    <svg
-      viewBox="0 0 16 16"
-      className="h-3 w-3"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={2.5}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <path d="M3 8.5l3 3 7-7" />
     </svg>
   );
 }

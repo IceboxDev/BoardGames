@@ -20,6 +20,7 @@ import { CardDeck } from "../../../components/CardDeck";
 import { GameScreen } from "../../../components/game-layout";
 import { type ExpeditionScoreEntry, ScoreGridPanel } from "../../../components/SidePanel";
 import { AiThinkingIndicator, WaitingIndicator } from "../../../components/ui";
+import { DEBUG_LAYOUT } from "../../../lib/debug";
 import cardBackUrl from "../assets/card-back.png";
 import BoardMiddleFit from "./BoardMiddleFit";
 import DiscardArea from "./DiscardArea";
@@ -136,7 +137,9 @@ export default function GameBoard(props: GameBoardProps) {
     return (
       <div className="flex h-full min-h-0 gap-3">
         {/* Left stats column */}
-        <div className="hidden w-36 shrink-0 flex-col border-2 border-dashed border-blue-400/40 lg:flex">
+        <div
+          className={`hidden w-36 shrink-0 flex-col lg:flex${DEBUG_LAYOUT ? " border-2 border-dashed border-blue-400/40" : ""}`}
+        >
           <ScoreGridPanel
             turnCount={state.turnCount + 1}
             playerName={p0}
@@ -148,7 +151,7 @@ export default function GameBoard(props: GameBoardProps) {
         </div>
 
         <div
-          className={`flex min-h-0 flex-1 flex-col border-2 border-dashed border-orange-400/40 ${g}`}
+          className={`flex min-h-0 flex-1 flex-col ${g}${DEBUG_LAYOUT ? " border-2 border-dashed border-orange-400/40" : ""}`}
         >
           <FlatPlayerHand {...replayTopHand} compact={replayCompact} />
 
@@ -185,7 +188,9 @@ export default function GameBoard(props: GameBoardProps) {
         </div>
 
         {/* Deck column */}
-        <div className="flex w-36 shrink-0 flex-col items-center justify-center border-2 border-dashed border-purple-400/40">
+        <div
+          className={`flex w-36 shrink-0 flex-col items-center justify-center${DEBUG_LAYOUT ? " border-2 border-dashed border-purple-400/40" : ""}`}
+        >
           <CardDeck count={state.drawPileCount} size="lg" renderBack={lostCitiesCardBack} />
         </div>
       </div>
@@ -293,11 +298,15 @@ export default function GameBoard(props: GameBoardProps) {
       {isWaiting && <WaitingIndicator />}
       <div className="flex min-h-0 flex-1 gap-3">
         {/* Left stats column */}
-        <div className="hidden w-36 shrink-0 flex-col border-2 border-dashed border-blue-400/40 lg:flex">
+        <div
+          className={`hidden w-36 shrink-0 flex-col lg:flex${DEBUG_LAYOUT ? " border-2 border-dashed border-blue-400/40" : ""}`}
+        >
           <ScoreGridPanel turnCount={state.turnCount + 1} {...buildScoreData(state)} />
         </div>
 
-        <div className="flex min-h-0 flex-1 flex-col overflow-hidden border-2 border-dashed border-orange-400/40">
+        <div
+          className={`flex min-h-0 flex-1 flex-col overflow-hidden${DEBUG_LAYOUT ? " border-2 border-dashed border-orange-400/40" : ""}`}
+        >
           <BoardMiddleFit measureKey={middleMeasureKey}>
             <div className="flex flex-1 flex-col">
               <div className="shrink-0">
@@ -320,7 +329,9 @@ export default function GameBoard(props: GameBoardProps) {
         </div>
 
         {/* Deck column */}
-        <div className="flex w-36 shrink-0 flex-col items-center justify-center border-2 border-dashed border-purple-400/40">
+        <div
+          className={`flex w-36 shrink-0 flex-col items-center justify-center${DEBUG_LAYOUT ? " border-2 border-dashed border-purple-400/40" : ""}`}
+        >
           <CardDeck
             count={state.drawPileCount}
             size="lg"

@@ -1,0 +1,191 @@
+import { describe, expect, it } from "vitest";
+import {
+  HistoryListQuerySchema,
+  HistoryListResponseSchema,
+  MatchCreateInputSchema,
+  MatchOutcomeSchema,
+  MatchRecordSchema,
+} from "./history.ts";
+
+const sampleParticipant = (id: string, name: string) => ({
+  userId: id,
+  displayName: name,
+});
+
+const sampleFreeForAll = {
+  kind: "free-for-all",
+  players: [
+    { ...sampleParticipant("u1", "Alice"), score: 42 },
+    { ...sampleParticipant("u2", "Bob"), score: 30, rank: 2 },
+  ],
+} as const;
+
+const sampleTeams = {
+  kind: "teams",
+  teams: [
+    { members: [sampleParticipant("u1", "Alice")], score: 5 },
+    { members: [sampleParticipant("u2", "Bob"), sampleParticipant("u3", "Carol")], score: 3 },
+  ],
+  winnerTeamIndices: [0],
+} as const;
+
+const sampleLastStanding = {
+  kind: "last-standing",
+  players: [
+    { ...sampleParticipant("u1", "Alice") },
+    { ...sampleParticipant("u2", "Bob"), eliminationOrder: 0 },
+  ],
+} as const;
+
+const sampleCoop = {
+  kind: "coop",
+  participants: [sampleParticipant("u1", "Alice"), sampleParticipant("u2", "Bob")],
+  outcome: "win",
+} as const;
+
+const sampleOneVsMany = {
+  kind: "one-vs-many",
+  solo: { ...sampleParticipant("u1", "Alice"), roleLabel: "Hunter" },
+  team: { members: [sampleParticipant("u2", "Bob")], roleLabel: "Hunted" },
+  winnerSide: "solo",
+} as const;
+
+describe("MatchOutcomeSchema", () => {
+  it("accepts every valid outcome variant", () => {
+    expect(() => MatchOutcomeSchema.parse(sampleFreeForAll)).not.toThrow();
+    expect(() => MatchOutcomeSchema.parse(sampleTeams)).not.toThrow();
+    expect(() => MatchOutcomeSchema.parse(sampleLastStanding)).not.toThrow();
+    expect(() => MatchOutcomeSchema.parse(sampleCoop)).not.toThrow();
+    expect(() => MatchOutcomeSchema.parse(sampleOneVsMany)).not.toThrow();
+  });
+
+  it("rejects an unknown discriminator", () => {
+    expect(() => MatchOutcomeSchema.parse({ kind: "duel", players: [] })).toThrow();
+  });
+
+  it("rejects free-for-all with a single player", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        kind: "free-for-all",
+        players: [{ ...sampleParticipant("u1", "Alice"), score: 1 }],
+      }),
+    ).toThrow();
+  });
+
+  it("rejects teams with a winner index out of range", () => {
+    expect(() => MatchOutcomeSchema.parse({ ...sampleTeams, winnerTeamIndices: [5] })).toThrow(
+      /out of range/,
+    );
+  });
+
+  it("rejects last-standing with no survivor", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        kind: "last-standing",
+        players: [
+          { ...sampleParticipant("u1", "Alice"), eliminationOrder: 0 },
+          { ...sampleParticipant("u2", "Bob"), eliminationOrder: 1 },
+        ],
+      }),
+    ).toThrow(/at least one player must survive/);
+  });
+
+  it("rejects coop with an unknown outcome", () => {
+    expect(() => MatchOutcomeSchema.parse({ ...sampleCoop, outcome: "draw" })).toThrow();
+  });
+});
+
+describe("MatchRecordSchema", () => {
+  const sampleRecord = {
+    id: 17,
+    dateKey: "2026-05-10",
+    playedAt: "2026-05-10T19:30:00.000Z",
+    gameSlug: "lost-cities",
+    gameTitle: "Lost Cities",
+    outcome: sampleFreeForAll,
+    notes: null,
+    recordedBy: "user-1",
+    recordedAt: "2026-05-10 19:35:01",
+    updatedAt: null,
+  };
+
+  it("accepts a fully-populated record", () => {
+    expect(() => MatchRecordSchema.parse(sampleRecord)).not.toThrow();
+  });
+
+  it("accepts a record with null dateKey and gameSlug", () => {
+    expect(() =>
+      MatchRecordSchema.parse({ ...sampleRecord, dateKey: null, gameSlug: null }),
+    ).not.toThrow();
+  });
+
+  it("accepts the looser playedAt formats the form may produce", () => {
+    expect(() =>
+      MatchRecordSchema.parse({ ...sampleRecord, playedAt: "2026-05-10T19:30Z" }),
+    ).not.toThrow();
+    expect(() =>
+      MatchRecordSchema.parse({ ...sampleRecord, playedAt: "2026-05-10T19:30:00+02:00" }),
+    ).not.toThrow();
+  });
+
+  it("rejects a non-ISO playedAt", () => {
+    expect(() => MatchRecordSchema.parse({ ...sampleRecord, playedAt: "May 10 7pm" })).toThrow();
+  });
+
+  it("rejects a malformed dateKey", () => {
+    expect(() => MatchRecordSchema.parse({ ...sampleRecord, dateKey: "May 10" })).toThrow();
+  });
+
+  it("rejects a malformed gameSlug", () => {
+    expect(() => MatchRecordSchema.parse({ ...sampleRecord, gameSlug: "Lost Cities" })).toThrow();
+  });
+});
+
+describe("MatchCreateInputSchema", () => {
+  it("accepts a minimal create payload", () => {
+    expect(() =>
+      MatchCreateInputSchema.parse({
+        dateKey: null,
+        playedAt: "2026-05-10T19:30Z",
+        gameSlug: null,
+        gameTitle: "Casual party game",
+        outcome: sampleCoop,
+        notes: null,
+      }),
+    ).not.toThrow();
+  });
+
+  it("rejects an empty gameTitle", () => {
+    expect(() =>
+      MatchCreateInputSchema.parse({
+        dateKey: null,
+        playedAt: "2026-05-10T19:30Z",
+        gameSlug: null,
+        gameTitle: "",
+        outcome: sampleCoop,
+        notes: null,
+      }),
+    ).toThrow();
+  });
+});
+
+describe("HistoryListResponseSchema", () => {
+  it("accepts an empty list with null cursor", () => {
+    expect(() => HistoryListResponseSchema.parse({ matches: [], nextBefore: null })).not.toThrow();
+  });
+
+  it("rejects a missing nextBefore field", () => {
+    expect(() => HistoryListResponseSchema.parse({ matches: [] })).toThrow();
+  });
+});
+
+describe("HistoryListQuerySchema", () => {
+  it("coerces the limit query string to a number", () => {
+    const parsed = HistoryListQuerySchema.parse({ limit: "25" });
+    expect(parsed.limit).toBe(25);
+  });
+
+  it("rejects a negative limit", () => {
+    expect(() => HistoryListQuerySchema.parse({ limit: "-1" })).toThrow();
+  });
+});

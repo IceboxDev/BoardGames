@@ -1,7 +1,7 @@
 import type { ButtonHTMLAttributes } from "react";
 import { forwardRef } from "react";
 
-type Variant = "primary" | "secondary" | "ghost";
+type Variant = "primary" | "secondary" | "ghost" | "danger";
 type Size = "sm" | "md" | "lg";
 
 type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -19,6 +19,10 @@ const variants: Record<Variant, string> = {
   secondary:
     "bg-surface-800 text-gray-100 border border-white/10 hover:bg-surface-700 hover:border-white/20",
   ghost: "text-gray-300 hover:bg-white/5 hover:text-white",
+  // Subtle, tinted destructive — for "Remove" / "Delete row" style actions
+  // that aren't immediate destruction. Use this, not raw rose-500.
+  danger:
+    "bg-rose-500/15 text-rose-200 border border-rose-400/40 hover:bg-rose-500/25 hover:border-rose-400/60",
 };
 
 const sizes: Record<Size, string> = {

@@ -1,4 +1,5 @@
 import { useCallback, useMemo, useState } from "react";
+import { Button } from "../ui/Button";
 import { OptionCard } from "./OptionCard";
 import { SectionLabel } from "./SectionLabel";
 import { SetupHeader } from "./SetupHeader";
@@ -211,13 +212,9 @@ export function PvAISetupScreen({
       </div>
 
       <div className="flex justify-center pt-2">
-        <button
-          type="button"
-          onClick={handleStart}
-          className="rounded-xl bg-emerald-600 px-8 py-3 font-semibold text-white transition hover:bg-emerald-500"
-        >
+        <Button variant="primary" size="lg" onClick={handleStart}>
           Start Game
-        </button>
+        </Button>
       </div>
     </SetupLayout>
   );

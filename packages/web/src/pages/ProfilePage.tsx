@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { TopNav, TopNavLink } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
+import { PageShell } from "../components/ui/PageShell";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
 import { authClient, useSession } from "../lib/auth-client";
@@ -32,13 +33,16 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="flex min-h-dvh flex-col bg-surface-950 bg-grid">
-      <TopNav>
-        {isAdmin && <TopNavLink to="/admin">Admin</TopNavLink>}
-        <TopNavLink onClick={handleSignOut}>Sign out</TopNavLink>
-      </TopNav>
-
-      <main className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-center px-6 py-12">
+    <PageShell
+      layout="centered"
+      topNav={
+        <TopNav>
+          {isAdmin && <TopNavLink to="/admin">Admin</TopNavLink>}
+          <TopNavLink onClick={handleSignOut}>Sign out</TopNavLink>
+        </TopNav>
+      }
+    >
+      <div className="w-full max-w-3xl">
         <div className="mb-12 text-center">
           <p className="text-xs uppercase tracking-widest text-accent-400">Welcome</p>
           <h2 className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
@@ -70,8 +74,8 @@ export default function ProfilePage() {
             administrator can grant access from the admin panel.
           </p>
         )}
-      </main>
-    </div>
+      </div>
+    </PageShell>
   );
 }
 

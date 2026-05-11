@@ -4,6 +4,8 @@ import { useNavigate } from "react-router-dom";
 import { Button } from "../components/ui/Button";
 import { Field } from "../components/ui/Field";
 import { Input } from "../components/ui/Input";
+import { PageShell } from "../components/ui/PageShell";
+import { SegmentedControl } from "../components/ui/SegmentedControl";
 import { apiFetch } from "../lib/api-fetch";
 import { authClient } from "../lib/auth-client";
 
@@ -64,7 +66,7 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-surface-950 bg-grid px-4">
+    <PageShell layout="centered">
       <div className="w-full max-w-md space-y-6 rounded-2xl border border-white/10 bg-surface-900/80 p-8 shadow-2xl backdrop-blur">
         <div className="text-center">
           <h1 className="gradient-text text-3xl font-bold tracking-tight">Board Game Lab</h1>
@@ -75,30 +77,16 @@ export default function LoginPage() {
           </p>
         </div>
 
-        <div className="flex rounded-lg border border-white/10 bg-surface-800 p-1">
-          <button
-            type="button"
-            onClick={() => setMode("signin")}
-            className={`flex-1 rounded-md px-3 py-1.5 text-sm font-medium transition ${
-              mode === "signin"
-                ? "bg-accent-500/20 text-white"
-                : "text-gray-400 hover:text-gray-200"
-            }`}
-          >
-            Sign in
-          </button>
-          <button
-            type="button"
-            onClick={() => setMode("signup")}
-            className={`flex-1 rounded-md px-3 py-1.5 text-sm font-medium transition ${
-              mode === "signup"
-                ? "bg-accent-500/20 text-white"
-                : "text-gray-400 hover:text-gray-200"
-            }`}
-          >
-            Create account
-          </button>
-        </div>
+        <SegmentedControl<Mode>
+          shape="rect"
+          aria-label="Sign in or create an account"
+          value={mode}
+          onChange={setMode}
+          options={[
+            { value: "signin", label: "Sign in" },
+            { value: "signup", label: "Create account" },
+          ]}
+        />
 
         <form onSubmit={handleSubmit} className="space-y-4">
           {mode === "signup" && (
@@ -172,7 +160,7 @@ export default function LoginPage() {
           </>
         )}
       </div>
-    </div>
+    </PageShell>
   );
 }
 

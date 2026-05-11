@@ -1,6 +1,7 @@
 import type { CSSProperties } from "react";
 import { Link } from "react-router-dom";
 import type { BggGame, GameDefinition } from "../games/types";
+import { StarIcon } from "./icons";
 
 type Props = {
   game: GameDefinition;
@@ -36,7 +37,7 @@ export default function GameCard({ game, href, index = 0, showComingSoon = true 
         />
         <div className="absolute inset-0 bg-gradient-to-t from-surface-900 via-surface-900/20 to-transparent" />
         {showComingSoon && !game.component && (
-          <span className="absolute right-2 top-2 rounded-full bg-black/65 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.2em] text-white/75 backdrop-blur-sm">
+          <span className="absolute left-2 top-2 rounded-full bg-black/65 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.2em] text-white/75 backdrop-blur-sm">
             Coming soon
           </span>
         )}
@@ -89,10 +90,11 @@ function compactSummary(bgg: BggGame): string {
   const parts: string[] = [];
   if (bgg.yearPublished) parts.push(String(bgg.yearPublished));
   if (bgg.minPlayers && bgg.maxPlayers) {
+    const maxLabel = bgg.maxPlayers === "infinity" ? "∞" : String(bgg.maxPlayers);
     parts.push(
       bgg.minPlayers === bgg.maxPlayers
         ? `${bgg.minPlayers} players`
-        : `${bgg.minPlayers}–${bgg.maxPlayers} players`,
+        : `${bgg.minPlayers}–${maxLabel} players`,
     );
   }
   if (bgg.playingTime) parts.push(`${bgg.playingTime} min`);
@@ -117,7 +119,7 @@ function BggMeta({ bgg }: { bgg: BggGame }) {
       {hasRating && bgg.averageRating !== null && (
         <div className="flex items-center justify-between gap-3">
           <span className="flex items-center gap-1.5">
-            <StarIcon />
+            <StarIcon className="h-3.5 w-3.5 text-amber-400" />
             <span className="font-semibold text-gray-200">{bgg.averageRating.toFixed(1)}</span>
             <span className="text-gray-500">/ 10</span>
           </span>
@@ -152,17 +154,4 @@ function BggMeta({ bgg }: { bgg: BggGame }) {
 function formatCount(n: number): string {
   if (n >= 1000) return `${(n / 1000).toFixed(n >= 10000 ? 0 : 1)}k`;
   return String(n);
-}
-
-function StarIcon() {
-  return (
-    <svg
-      viewBox="0 0 20 20"
-      fill="currentColor"
-      className="h-3.5 w-3.5 text-amber-400"
-      aria-hidden="true"
-    >
-      <path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.78L10 14.77l-5.2 2.73.99-5.78L1.58 7.62l5.82-.85L10 1.5z" />
-    </svg>
-  );
 }

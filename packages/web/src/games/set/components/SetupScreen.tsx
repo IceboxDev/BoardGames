@@ -1,4 +1,5 @@
 import { SetupHeader, SetupLayout } from "../../../components/setup";
+import { Button } from "../../../components/ui/Button";
 
 interface SetupScreenProps {
   onStart: () => void;
@@ -19,13 +20,9 @@ export default function SetupScreen({ onStart, onViewHighScores }: SetupScreenPr
         or the SET! button anytime you spot one — even mid-deal.
       </p>
 
-      <button
-        type="button"
-        onClick={onStart}
-        className="rounded-xl bg-emerald-600 px-8 py-3 font-semibold text-white transition hover:bg-emerald-500 mb-4"
-      >
+      <Button variant="primary" size="lg" onClick={onStart} className="mb-4">
         Start Game
-      </button>
+      </Button>
 
       {onViewHighScores && (
         <button

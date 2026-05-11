@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
+import { PageShell } from "./ui/PageShell";
 
 type Mode = "auth" | "unauth" | "online" | "admin";
 
@@ -15,9 +16,9 @@ export function AuthGuard({ mode, children }: Props) {
 
   if (isLoading) {
     return (
-      <div className="flex min-h-screen items-center justify-center bg-surface-950">
-        <div className="text-sm text-gray-500">Loading…</div>
-      </div>
+      <PageShell layout="centered" background="plain">
+        <span className="text-sm text-gray-500">Loading…</span>
+      </PageShell>
     );
   }
 

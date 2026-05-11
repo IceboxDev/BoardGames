@@ -1,9 +1,11 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import InventoryGrid from "../components/InventoryGrid";
+import { XIcon } from "../components/icons";
 import Calendar from "../components/offline/Calendar";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
+import { PageMain, PageShell } from "../components/ui/PageShell";
 import { games } from "../games/registry";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { adminSetOnline } from "../lib/admin";
@@ -154,12 +156,14 @@ export default function AdminPage() {
   }, [calendarUser]);
 
   return (
-    <div className="flex min-h-screen flex-col bg-surface-950 bg-grid">
-      <TopNav>
-        <TopNavBackButton to="/" label="Dashboard" />
-      </TopNav>
-
-      <main className="mx-auto w-full max-w-7xl flex-1 px-6 py-10">
+    <PageShell
+      topNav={
+        <TopNav>
+          <TopNavBackButton to="/" label="Dashboard" />
+        </TopNav>
+      }
+    >
+      <PageMain width="7xl" padding="none" className="px-6 py-10">
         <div className="mb-8 flex min-h-24 items-start justify-between gap-6">
           <div className="min-w-0 flex-1">
             <h1 className="text-2xl font-bold tracking-tight text-white">Users</h1>
@@ -262,10 +266,10 @@ export default function AdminPage() {
             </table>
           </div>
         )}
-      </main>
+      </PageMain>
 
       {calendarUser && <AvailabilityDrawer user={calendarUser} onClose={closeCalendar} />}
-    </div>
+    </PageShell>
   );
 }
 
@@ -310,13 +314,7 @@ function AvailabilityDrawer({ user, onClose }: AvailabilityDrawerProps) {
           className="shrink-0 rounded-md p-1.5 text-gray-400 transition hover:bg-white/5 hover:text-white"
           aria-label="Close"
         >
-          <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden="true">
-            <path
-              fillRule="evenodd"
-              d="M4.3 4.3a1 1 0 011.4 0L10 8.59l4.3-4.3a1 1 0 011.4 1.41L11.41 10l4.3 4.3a1 1 0 01-1.41 1.4L10 11.41l-4.3 4.3a1 1 0 01-1.4-1.41L8.59 10 4.3 5.7a1 1 0 010-1.4z"
-              clipRule="evenodd"
-            />
-          </svg>
+          <XIcon />
         </button>
       </header>
 

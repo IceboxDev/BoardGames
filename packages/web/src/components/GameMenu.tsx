@@ -1,7 +1,17 @@
+import { useMemo } from "react";
+import { groupForPresentation } from "../games/families";
 import { games } from "../games/registry";
+import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import GameCard from "./GameCard";
+import OnlineFamilyCard from "./OnlineFamilyCard";
 
 export default function GameMenu() {
+  const { isAdmin } = useCurrentUser();
+  const units = useMemo(
+    () => groupForPresentation(isAdmin ? games : games.filter((g) => g.component)),
+    [isAdmin],
+  );
+
   return (
     <div className="flex h-full flex-col bg-grid">
       <div className="shrink-0 px-4 py-6 sm:px-8 sm:py-8 lg:px-12">
@@ -23,14 +33,23 @@ export default function GameMenu() {
           </div>
         ) : (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
-            {games.map((game, i) => (
-              <GameCard
-                key={game.slug}
-                game={game}
-                href={game.component ? `/play/${game.slug}` : undefined}
-                index={i}
-              />
-            ))}
+            {units.map((unit, i) =>
+              unit.kind === "single" ? (
+                <GameCard
+                  key={unit.game.slug}
+                  game={unit.game}
+                  href={unit.game.component ? `/play/${unit.game.slug}` : undefined}
+                  index={i}
+                />
+              ) : (
+                <OnlineFamilyCard
+                  key={unit.family.id}
+                  family={unit.family}
+                  visibleMembers={unit.visibleMembers}
+                  index={i}
+                />
+              ),
+            )}
           </div>
         )}
       </div>

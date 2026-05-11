@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { DEBUG_LAYOUT } from "../../lib/debug";
 
 interface GameScreenProps {
   /** Background class applied to the root container (e.g. "bg-black"). */
@@ -36,14 +37,20 @@ export default function GameScreen({
         >
           {fan != null ? (
             <>
-              <div className="flex min-h-0 flex-1 flex-col gap-2 border-2 border-green-400 bg-green-400/10">
+              <div
+                className={`flex min-h-0 flex-1 flex-col gap-2${DEBUG_LAYOUT ? " border-2 border-green-400 bg-green-400/10" : ""}`}
+              >
                 {children}
               </div>
               <div className="flex shrink-0 flex-col gap-2">
-                <div className="flex h-9 items-center justify-center border-2 border-yellow-400 bg-yellow-400/10">
+                <div
+                  className={`flex h-9 items-center justify-center${DEBUG_LAYOUT ? " border-2 border-yellow-400 bg-yellow-400/10" : ""}`}
+                >
                   {fanActions}
                 </div>
-                <div className="border-2 border-pink-400 bg-pink-400/10">{fan}</div>
+                <div className={DEBUG_LAYOUT ? "border-2 border-pink-400 bg-pink-400/10" : ""}>
+                  {fan}
+                </div>
               </div>
             </>
           ) : (
@@ -52,7 +59,9 @@ export default function GameScreen({
         </div>
       )}
       {sidebar && (
-        <aside className="my-2 mr-2 hidden w-72 shrink-0 flex-col overflow-y-auto rounded-xl bg-gray-900/60 p-4 lg:flex border-2 border-cyan-400 bg-cyan-400/10">
+        <aside
+          className={`my-2 mr-2 hidden w-72 shrink-0 flex-col overflow-y-auto rounded-xl bg-gray-900/60 p-4 lg:flex${DEBUG_LAYOUT ? " border-2 border-cyan-400 bg-cyan-400/10" : ""}`}
+        >
           <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-gray-500">History</h3>
           {sidebar}
         </aside>

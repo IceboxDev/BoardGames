@@ -4,6 +4,7 @@ import { ActionLog } from "../../../components/action-log";
 import { CardDeck } from "../../../components/CardDeck";
 import { GameScreen } from "../../../components/game-layout";
 import { type PlayerEntry, PlayerListPanel } from "../../../components/SidePanel";
+import { DEBUG_LAYOUT } from "../../../lib/debug";
 import cardBackUrl from "../assets/card-back.png";
 import { getCardSvg } from "../card-svg";
 import { mapDurakLog } from "../log-mapper";
@@ -208,7 +209,9 @@ export default function GameBoard({
     >
       <div className="flex min-h-0 flex-1 gap-3">
         {/* Left stats column */}
-        <div className="hidden w-36 shrink-0 flex-col border-2 border-dashed border-blue-400/40 lg:flex">
+        <div
+          className={`hidden w-36 shrink-0 flex-col lg:flex${DEBUG_LAYOUT ? " border-2 border-dashed border-blue-400/40" : ""}`}
+        >
           <PlayerListPanel
             turnCount={view.turnCount + 1}
             players={view.players.map((p): PlayerEntry => {
@@ -231,7 +234,9 @@ export default function GameBoard({
         </div>
 
         {/* Main board column */}
-        <div className="flex min-h-0 flex-1 flex-col gap-2 border-2 border-dashed border-orange-400/40">
+        <div
+          className={`flex min-h-0 flex-1 flex-col gap-2${DEBUG_LAYOUT ? " border-2 border-dashed border-orange-400/40" : ""}`}
+        >
           {/* Table — fills available space */}
           <div className="flex min-h-0 flex-1 items-center justify-center">
             <Table
@@ -248,7 +253,9 @@ export default function GameBoard({
         </div>
 
         {/* Deck column */}
-        <div className="flex w-36 shrink-0 flex-col items-center justify-center gap-6 border-2 border-dashed border-purple-400/40">
+        <div
+          className={`flex w-36 shrink-0 flex-col items-center justify-center gap-6${DEBUG_LAYOUT ? " border-2 border-dashed border-purple-400/40" : ""}`}
+        >
           <div className="flex flex-col items-center gap-1">
             <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
               Draw

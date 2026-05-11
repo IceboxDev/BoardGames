@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { SetupHeader, SetupLayout } from "../setup";
+import { Button } from "../ui/Button";
 
 const PLAYER_NAME_KEY = "boardgames-player-name";
 
@@ -69,21 +70,12 @@ export function JoinRoom({ title, onCreateRoom, onJoinRoom, onBack, error }: Joi
 
       {mode === "choose" ? (
         <div className="mx-auto flex w-full max-w-sm flex-col gap-3">
-          <button
-            type="button"
-            disabled={!canCreate}
-            onClick={handleCreate}
-            className="rounded-lg bg-emerald-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-emerald-500 disabled:opacity-40 disabled:hover:bg-emerald-600"
-          >
+          <Button variant="primary" size="lg" disabled={!canCreate} onClick={handleCreate}>
             Create Room
-          </button>
-          <button
-            type="button"
-            onClick={() => setMode("join")}
-            className="rounded-lg border border-gray-700 bg-gray-800/40 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-gray-600 hover:bg-gray-800/60"
-          >
+          </Button>
+          <Button variant="secondary" size="lg" onClick={() => setMode("join")}>
             Join Room
-          </button>
+          </Button>
           <button
             type="button"
             onClick={onBack}
@@ -111,14 +103,9 @@ export function JoinRoom({ title, onCreateRoom, onJoinRoom, onBack, error }: Joi
               className="w-full rounded-lg border border-gray-700 bg-gray-800/60 px-4 py-3 text-center text-2xl font-bold uppercase tracking-[0.3em] text-white placeholder-gray-600 outline-none transition-colors focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30"
             />
           </label>
-          <button
-            type="button"
-            disabled={!canJoin}
-            onClick={handleJoin}
-            className="rounded-lg bg-emerald-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-emerald-500 disabled:opacity-40 disabled:hover:bg-emerald-600"
-          >
+          <Button variant="primary" size="lg" disabled={!canJoin} onClick={handleJoin}>
             Join
-          </button>
+          </Button>
           <button
             type="button"
             onClick={() => setMode("choose")}

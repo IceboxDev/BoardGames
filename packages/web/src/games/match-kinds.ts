@@ -23,6 +23,7 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
 
   // Teams — two or more sides with collective scores
   codenames: "teams",
+  "codenames-pictures": "teams",
   decrypto: "teams",
   "the-resistance": "teams",
   wavelength: "teams",
