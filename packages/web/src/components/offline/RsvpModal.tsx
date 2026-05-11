@@ -184,32 +184,48 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
     </button>
   ) : null;
 
-  const subheader = (
-    <>
-      <p className="text-xs text-gray-400">
-        <span className="font-semibold text-emerald-300">{definiteCount}</span> going
-        {tentativeCount > 0 && (
-          <>
-            {" · "}
-            <span className="font-semibold text-amber-300">{tentativeCount}</span> maybe
-          </>
-        )}
-      </p>
-      {lock && (lock.host || lock.eventTime || lock.address) && (
-        <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-300">
-          {lock.host && <HostLine name={lock.host.name} />}
-          {lock.eventTime && <TimeLine value={lock.eventTime} />}
-          {lock.address && <AddressLink address={lock.address} />}
-        </div>
+  // Collapse what used to be its own "X going · Y maybe" row into the
+  // eyebrow strip — saves a full line of header height on every device.
+  // The numeric counts use `normal-case` + reset tracking so they don't
+  // inherit the eyebrow's uppercase / wide-letter-spacing rules.
+  const eyebrow = (
+    <span className="inline-flex flex-wrap items-baseline gap-x-2">
+      <span>Game night</span>
+      {(definiteCount > 0 || tentativeCount > 0) && (
+        <span className="inline-flex items-baseline gap-1 tracking-normal normal-case">
+          <span aria-hidden="true" className="text-white/30">
+            ·
+          </span>
+          <span className="font-bold text-emerald-300 tabular-nums">{definiteCount}</span>
+          <span className="text-gray-400">going</span>
+          {tentativeCount > 0 && (
+            <>
+              <span aria-hidden="true" className="text-white/30">
+                +
+              </span>
+              <span className="font-bold text-amber-300 tabular-nums">{tentativeCount}</span>
+              <span className="text-gray-400">maybe</span>
+            </>
+          )}
+        </span>
       )}
-    </>
+    </span>
   );
+
+  const subheader =
+    lock && (lock.host || lock.eventTime || lock.address) ? (
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-300">
+        {lock.host && <HostLine name={lock.host.name} />}
+        {lock.eventTime && <TimeLine value={lock.eventTime} />}
+        {lock.address && <AddressLink address={lock.address} />}
+      </div>
+    ) : null;
 
   return (
     <Modal
       onClose={onClose}
       panelClassName="h-full max-w-[80rem] gap-2 sm:gap-4 sm:p-7 xl:max-w-[92rem] 2xl:max-w-[110rem]"
-      eyebrow="Game night"
+      eyebrow={eyebrow}
       title={headingDate}
       titleClassName="text-2xl font-bold tracking-tight text-white sm:text-3xl"
       subheader={subheader}

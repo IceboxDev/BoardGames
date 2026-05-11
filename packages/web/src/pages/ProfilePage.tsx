@@ -158,16 +158,16 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
     <button
       type="button"
       onClick={onClick}
-      className="group mt-6 flex items-center gap-4 rounded-2xl border border-white/[0.06] bg-surface-900/60 px-5 py-3.5 text-left transition-all duration-300 hover:border-white/15 hover:bg-surface-900 sm:px-6 sm:py-4"
+      className="group mt-6 flex w-full items-center gap-4 rounded-2xl border border-white/[0.06] bg-surface-900/60 px-5 py-4 text-left transition-all duration-300 hover:border-white/15 hover:bg-surface-900 sm:px-6 sm:py-5"
     >
       <div className="flex shrink-0 items-center gap-2 text-gray-300 transition-colors group-hover:text-white">
         <GalleryIcon />
         <span className="text-xs font-semibold uppercase tracking-[0.2em]">Gallery</span>
       </div>
 
-      <div ref={rowRef} className="flex min-h-10 min-w-0 flex-1 items-center gap-2.5">
+      <div ref={rowRef} className="flex min-h-11 min-w-0 flex-1 items-center gap-2.5">
         {isLoading ? (
-          <div className="flex gap-1.5 overflow-hidden" aria-hidden="true">
+          <div className="flex gap-1.5 overflow-x-hidden py-0.5" aria-hidden="true">
             {Array.from({ length: PREVIEW_THUMBS }).map((_, i) => (
               <span
                 // biome-ignore lint/suspicious/noArrayIndexKey: static skeleton placeholders
@@ -180,7 +180,7 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
           <span className="text-xs text-gray-500">No games yet — ask an admin to add some</span>
         ) : (
           <>
-            <div className="flex gap-1.5 overflow-hidden">
+            <div className="flex gap-1.5 overflow-x-hidden py-0.5">
               {previewGames.map((g) => (
                 <span
                   key={g.slug}

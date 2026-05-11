@@ -72,7 +72,9 @@ const OPTION_SHAPE: Record<"pill" | "rect", string> = {
 };
 
 const OPTION_SIZE: Record<"sm" | "md", string> = {
-  sm: "px-3 py-1.5 text-xs font-semibold",
+  // sm starts tight on phone so view-tabs + a sibling switch (e.g. RSVP
+  // Going/Not going) fit on one row at ~360px, then relaxes at sm:.
+  sm: "px-2 py-1 text-[11px] font-semibold sm:px-3 sm:py-1.5 sm:text-xs",
   md: "px-3 py-1.5 text-sm font-medium",
 };
 

@@ -37,7 +37,8 @@ const REF_CARD_H = 560;
 const ASPECT = REF_CARD_H / REF_CARD_W;
 
 const MIN_CARD_W = 240; // legible on a 320–375px phone
-const MAX_CARD_W = 520; // sensible cap on 4K
+const MAX_CARD_W = 640; // sensible cap on 4K — bumped from 520 so the
+// description font has room to breathe at 14-15px on a 4K monitor
 
 // All four axes use the same tanh asymptote so cards bunch coherently. ROTATE
 // must stay under 90° or backface-hidden cards vanish. K controls softness
@@ -154,7 +155,7 @@ export default function GameCarousel3D({
   return (
     <div
       ref={rootRef}
-      className="relative flex h-full w-full items-center justify-center overflow-hidden"
+      className="relative flex h-full w-full items-center justify-center"
       style={{
         perspective: `${perspective}px`,
         opacity: measured ? 1 : 0,
@@ -170,70 +171,85 @@ export default function GameCarousel3D({
         <ChevronLeftIcon />
       </button>
 
-      <motion.div
-        className="relative mx-auto"
+      {/* Cards are clipped by their own container with a horizontal soft-edge
+          mask so the amber "best at" glow and family-variant rim bubbles
+          don't get sliced by a hard overflow line when they sit near the
+          carousel edge. Chevrons stay outside the mask so they render at
+          full opacity. */}
+      <div
+        className="relative flex h-full w-full items-center justify-center overflow-hidden"
         style={{
-          width: cardW,
-          height: cardH,
-          transformStyle: "preserve-3d",
+          WebkitMaskImage:
+            "linear-gradient(to right, transparent 0, black 56px, black calc(100% - 56px), transparent 100%)",
+          maskImage:
+            "linear-gradient(to right, transparent 0, black 56px, black calc(100% - 56px), transparent 100%)",
         }}
-        drag="x"
-        dragConstraints={{ left: 0, right: 0 }}
-        dragElastic={0.15}
-        onDragEnd={handleDragEnd}
       >
-        {units.map((unit, i) => {
-          if (unit.kind === "single") {
+        <motion.div
+          className="relative mx-auto"
+          style={{
+            width: cardW,
+            height: cardH,
+            transformStyle: "preserve-3d",
+          }}
+          drag="x"
+          dragConstraints={{ left: 0, right: 0 }}
+          dragElastic={0.15}
+          onDragEnd={handleDragEnd}
+        >
+          {units.map((unit, i) => {
+            if (unit.kind === "single") {
+              return (
+                <CarouselCard
+                  key={unit.game.slug}
+                  game={unit.game}
+                  offset={i - center}
+                  minPlayers={minPlayers}
+                  maxPlayers={maxPlayers}
+                  date={date}
+                  aggregate={reactions[unit.game.slug]}
+                  onClick={() => setCenter(i)}
+                  cardW={cardW}
+                  cardH={cardH}
+                  spreadMax={spreadMax}
+                  zMax={zMax}
+                  compact={compact}
+                />
+              );
+            }
+            const activeSlug =
+              activeByFamily.get(unit.family.id) ??
+              unit.visibleMembers.find((m) => m === unit.family.canonical)?.slug ??
+              unit.visibleMembers[0]?.slug ??
+              unit.family.canonical.slug;
             return (
-              <CarouselCard
-                key={unit.game.slug}
-                game={unit.game}
+              <FamilyCarouselCard
+                key={`family:${unit.family.id}`}
+                family={unit.family}
+                visibleMembers={unit.visibleMembers}
+                activeSlug={activeSlug}
+                onSetActive={(slug) => setActiveForFamily(unit.family.id, slug)}
                 offset={i - center}
                 minPlayers={minPlayers}
                 maxPlayers={maxPlayers}
                 date={date}
-                aggregate={reactions[unit.game.slug]}
+                reactions={reactions}
                 onClick={() => setCenter(i)}
                 cardW={cardW}
                 cardH={cardH}
                 spreadMax={spreadMax}
                 zMax={zMax}
                 compact={compact}
+                asymptote={asymptote}
+                ROTATE_MAX={ROTATE_MAX}
+                SCALE_MIN={SCALE_MIN}
+                OPACITY_MIN={OPACITY_MIN}
+                REF_CARD_H={REF_CARD_H}
               />
             );
-          }
-          const activeSlug =
-            activeByFamily.get(unit.family.id) ??
-            unit.visibleMembers.find((m) => m === unit.family.canonical)?.slug ??
-            unit.visibleMembers[0]?.slug ??
-            unit.family.canonical.slug;
-          return (
-            <FamilyCarouselCard
-              key={`family:${unit.family.id}`}
-              family={unit.family}
-              visibleMembers={unit.visibleMembers}
-              activeSlug={activeSlug}
-              onSetActive={(slug) => setActiveForFamily(unit.family.id, slug)}
-              offset={i - center}
-              minPlayers={minPlayers}
-              maxPlayers={maxPlayers}
-              date={date}
-              reactions={reactions}
-              onClick={() => setCenter(i)}
-              cardW={cardW}
-              cardH={cardH}
-              spreadMax={spreadMax}
-              zMax={zMax}
-              compact={compact}
-              asymptote={asymptote}
-              ROTATE_MAX={ROTATE_MAX}
-              SCALE_MIN={SCALE_MIN}
-              OPACITY_MIN={OPACITY_MIN}
-              REF_CARD_H={REF_CARD_H}
-            />
-          );
-        })}
-      </motion.div>
+          })}
+        </motion.div>
+      </div>
 
       <button
         type="button"
@@ -409,20 +425,19 @@ function CarouselCard({
         >
           {game.title}
         </h3>
-        <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400">
+        <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400 sm:text-[11px] xl:text-xs">
           <span className={isBestForHeadcount ? "text-amber-300" : undefined}>
             {playerRange(game.bgg)}
             {isBestForHeadcount && ` · best at ${minPlayers}`}
           </span>
           {" · "}
           {playTime(game.bgg)}
-          {game.bgg.minAge ? ` · ${game.bgg.minAge}+` : ""}
         </p>
 
         <BggInline bgg={game.bgg} compact={compact} />
 
         {!compact && game.bgg.description && (
-          <p className="min-h-0 flex-1 overflow-hidden text-[10px] leading-snug text-gray-400">
+          <p className="min-h-0 flex-1 overflow-hidden text-[10px] leading-snug text-gray-400 sm:text-[11px] sm:leading-relaxed xl:text-xs 2xl:text-sm 2xl:leading-relaxed">
             {stripBggHtml(game.bgg.description)}
           </p>
         )}

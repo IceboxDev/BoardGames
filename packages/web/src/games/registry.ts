@@ -1,4 +1,4 @@
-import { bggSnapshot } from "@boardgames/core/bgg";
+import { bggSnapshot, descriptionOverrides } from "@boardgames/core/bgg";
 import placeholderThumbnail from "./_placeholder-thumbnail.svg?url";
 import type { GameDefinition, GameModule } from "./types";
 
@@ -31,12 +31,18 @@ export const games: GameDefinition[] = Object.values(modules)
           `Run \`pnpm bgg-sync\` to refresh packages/core/src/bgg/snapshot.json.`,
       );
     }
-    // Shallow-merge per-game overrides on top of the BGG snapshot. This is
-    // how each game patches BGG inaccuracies (wrong player count, missing
-    // suggested age, etc.) without re-fetching from BGG.
-    const bgg = m.default.bggOverrides
-      ? { ...snapshotEntry, ...m.default.bggOverrides }
-      : snapshotEntry;
+    // Shallow-merge per-game overrides on top of the BGG snapshot. Order:
+    //   snapshot ← central description override ← per-game bggOverrides
+    // so a game's own `bggOverrides.description` (rarely used) still wins
+    // over the catalog-wide override file. This is how each game patches
+    // BGG inaccuracies (wrong player count, missing suggested age, etc.)
+    // without re-fetching from BGG.
+    const centralDescription = descriptionOverrides[slug];
+    const bgg = {
+      ...snapshotEntry,
+      ...(centralDescription !== undefined ? { description: centralDescription } : {}),
+      ...(m.default.bggOverrides ?? {}),
+    };
     return {
       ...m.default,
       bgg,

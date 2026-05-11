@@ -323,14 +323,18 @@ function DayCell({
         <DayLabels entries={labels} heated={heated} />
       )}
       {!compact && !locked && !isAdminView && (value || heated) && (
+        // Pinned to the bottom edge with absolute positioning so the heat/
+        // personal badges line up at the same vertical offset as the locked
+        // cell's RSVP pill — otherwise the heat row would sit higher (cell
+        // padding) than the locked pill (absolute bottom-1) and adjacent
+        // cells looked staggered.
+        //
         // Mobile: stack the badges vertically and centred so neither overlaps
         // in a thin cell.
         // sm+: two fixed slots — personal mark on the left, heat info on the
         // right. Using a 2-column grid (rather than flex justify-between)
-        // keeps the slots stable when only one badge is present, so the
-        // info doesn't wander left/right depending on whether you've marked
-        // your availability.
-        <div className="relative z-10 mt-auto flex flex-col items-center gap-0.5 sm:grid sm:grid-cols-2 sm:items-end sm:gap-1">
+        // keeps the slots stable when only one badge is present.
+        <div className="pointer-events-none absolute inset-x-1 bottom-1 z-10 flex flex-col items-center gap-0.5 sm:inset-x-2 sm:bottom-1.5 sm:grid sm:grid-cols-2 sm:items-end sm:gap-1">
           <span className="sm:justify-self-start">
             {value && <PersonalMarkChip value={value} />}
           </span>
@@ -723,7 +727,7 @@ function NameRow({
           key={e.userId}
           title={`${e.name} — ${e.status}`}
           style={textShadow}
-          className="inline-flex max-w-full items-center gap-0 truncate text-[6px] font-medium leading-tight text-white sm:gap-1 sm:text-[10px] sm:leading-none md:text-xs lg:text-sm"
+          className="inline-flex max-w-full items-center gap-0 truncate text-[6px] font-medium leading-tight text-white sm:gap-1 sm:text-[10px] sm:leading-none md:text-[11px] lg:text-xs 2xl:text-sm"
         >
           <span
             aria-hidden="true"

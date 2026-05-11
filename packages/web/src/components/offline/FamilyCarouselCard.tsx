@@ -207,20 +207,19 @@ export default function FamilyCarouselCard({
           >
             {active.title}
           </h3>
-          <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400">
+          <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400 sm:text-[11px] xl:text-xs">
             <span className={isBestForHeadcount ? "text-amber-300" : undefined}>
               {playerRange(active.bgg)}
               {isBestForHeadcount && ` · best at ${minPlayers}`}
             </span>
             {" · "}
             {playTime(active.bgg)}
-            {active.bgg.minAge ? ` · ${active.bgg.minAge}+` : ""}
           </p>
 
           <BggInline bgg={active.bgg} compact={compact} />
 
           {!compact && active.bgg.description && (
-            <p className="min-h-0 flex-1 overflow-hidden text-[10px] leading-snug text-gray-400">
+            <p className="min-h-0 flex-1 overflow-hidden text-[10px] leading-snug text-gray-400 sm:text-[11px] sm:leading-relaxed xl:text-xs 2xl:text-sm 2xl:leading-relaxed">
               {stripBggHtml(active.bgg.description)}
             </p>
           )}
