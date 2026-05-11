@@ -22,9 +22,9 @@ type Props = {
   family: FamilyInfo;
   visibleMembers: GameDefinition[];
   /** Current active member's slug, owned by the parent so it persists across
-   * center changes. */
+   * center changes. The parent also owns the picker that mutates it (the
+   * lifted variant chip strip rendered by `GameCarousel3D`). */
   activeSlug: string;
-  onSetActive: (slug: string) => void;
 
   offset: number;
   minPlayers: number;
@@ -51,7 +51,6 @@ export default function FamilyCarouselCard({
   family,
   visibleMembers,
   activeSlug,
-  onSetActive,
   offset,
   minPlayers,
   maxPlayers,
@@ -226,32 +225,12 @@ export default function FamilyCarouselCard({
         </div>
       </div>
 
-      {/* Variant rim buttons — straddling the LEFT BORDER of the card, half
-          inside / half outside, vertically centered on the thumbnail. Sits
-          OUTSIDE the overflow-hidden frame so the chips' protrusion is
-          visible — that's the whole point: peeking out makes it obvious the
-          family has variants.
-
-          The CENTER card's strip is lifted up to `GameCarousel3D` (outside
-          the carousel's fade mask) so the chips render fully unfaded on
-          phones where the center card almost fills the viewport. Off-center
-          cards still draw their own strip here — those cards live inside
-          the mask anyway and are otherwise scaled/rotated so the fade
-          matches them visually. */}
-      {!isCenter && (
-        <div className="pointer-events-none absolute z-20" style={{ top: thumbH / 2, left: -14 }}>
-          <div className="-translate-y-1/2 pointer-events-auto">
-            <VariantChipStrip
-              members={visibleMembers}
-              activeSlug={active.slug}
-              interactive={false}
-              onPick={onSetActive}
-              minPlayers={minPlayers}
-              maxPlayers={maxPlayers}
-            />
-          </div>
-        </div>
-      )}
+      {/* Variant chip strips live OUTSIDE this card — `GameCarousel3D`
+          renders one shadow motion.div per family unit at the carousel-
+          root level (outside the fade mask) and mirrors this card's
+          transforms so the chips visually attach to the card while staying
+          unmasked. Don't render an in-card copy here or the two would
+          overdraw on every card. */}
     </motion.div>
   );
 }

@@ -322,23 +322,31 @@ function DayCell({
       {labels && labels.length > 0 && !compact && !locked && (
         <DayLabels entries={labels} heated={heated} />
       )}
-      {/* Each badge is its own absolute element pinned to the bottom corner
-          of the cell, mirroring how `LockedPill` is rendered (absolute
-          bottom-1). The previous wrapper + 2-slot grid put empty wrapper
-          spans next to the visible chip on personal-only/heat-only cells —
-          the gap between them pushed the visible chip 2px above the
-          intended bottom, so adjacent locked vs. unlocked cells looked
-          staggered. With each chip rendered independently, the *single*
+      {/* Mobile: stacked centered, conditional render means there is never
+          an empty wrapper span below the visible chip — the empty span's
+          flex-gap was previously pushing single-present chips 2px above
+          the intended bottom, so personal-only cells looked taller than
+          adjacent locked cells. With conditional render, the *only*
           present chip lands at exactly the same y-offset as the locked
-          pill. When both are present (a heated date the viewer has marked),
-          they live in opposite corners. */}
+          pill (both anchored at bottom-1). All three badges share the
+          same `min-h-3` so element heights match across cell types — the
+          chip's `ring-1` glow doesn't ride below the cell border anymore
+          because the pill chrome itself extends down to match. */}
+      {!compact && !locked && !isAdminView && (value || heated) && (
+        <div className="pointer-events-none absolute inset-x-1 bottom-1 z-10 flex flex-col items-center gap-0.5 sm:hidden">
+          {value && <PersonalMarkChip value={value} />}
+          {heated && <HeatBadge heat={heat} />}
+        </div>
+      )}
+      {/* sm+: pinned to opposite corners, stable slots regardless of which
+          badge is present. */}
       {!compact && !locked && !isAdminView && value && (
-        <span className="pointer-events-none absolute bottom-1 left-1 z-10 sm:bottom-1.5 sm:left-2">
+        <span className="pointer-events-none absolute z-10 hidden sm:bottom-1.5 sm:left-2 sm:inline-flex">
           <PersonalMarkChip value={value} />
         </span>
       )}
       {!compact && !locked && !isAdminView && heated && (
-        <span className="pointer-events-none absolute right-1 bottom-1 z-10 sm:right-2 sm:bottom-1.5">
+        <span className="pointer-events-none absolute z-10 hidden sm:right-2 sm:bottom-1.5 sm:inline-flex">
           <HeatBadge heat={heat} />
         </span>
       )}
@@ -544,8 +552,13 @@ function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
   // width and the wider tracking would push the label out of the green
   // outline. Tighter tracking + smaller mobile font keeps "GOING" / "PASS"
   // / "RSVP" inside the pill on every device.
+  //
+  // `min-h-3 sm:min-h-5` matches the heights of PersonalMarkChip and
+  // HeatBadge, so locked vs. unlocked cells render at the same vertical
+  // mass — otherwise the chips' default leading + ring made them taller
+  // than the locked pill and adjacent cells looked staggered.
   const pillBase =
-    "pointer-events-none absolute inset-x-1 bottom-1 z-10 inline-flex items-center justify-center gap-0.5 rounded-md px-0.5 py-0 text-[7px] font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-[8px] sm:tracking-[0.18em]";
+    "pointer-events-none absolute inset-x-1 bottom-1 z-10 inline-flex min-h-3 items-center justify-center gap-0.5 rounded-md px-0.5 py-0 text-[7px] font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:min-h-5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-[8px] sm:tracking-[0.18em]";
   if (viewerRsvp === "yes") {
     return (
       <span
@@ -634,7 +647,7 @@ function PersonalMarkChip({ value }: { value: Availability }) {
   return (
     <span
       aria-hidden="true"
-      className={`pointer-events-none inline-flex items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-[7px] font-extrabold uppercase tracking-[0.1em] text-white ring-1 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-[10px] sm:tracking-[0.15em] md:text-xs ${
+      className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-[7px] font-extrabold uppercase leading-none tracking-[0.1em] text-white ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-[10px] sm:tracking-[0.15em] md:text-xs ${
         isCan
           ? "ring-accent-300 shadow-[0_0_10px_rgba(129,140,248,0.6)]"
           : "ring-amber-300 shadow-[0_0_10px_rgba(252,211,77,0.55)]"
@@ -656,7 +669,7 @@ function HeatBadge({ heat }: { heat: Heat }) {
   // one is shown.
   return (
     <span
-      className={`pointer-events-none inline-flex items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-[7px] font-extrabold ring-1 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-[10px] md:text-xs ${
+      className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-[7px] font-extrabold leading-none ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-[10px] md:text-xs ${
         isFire
           ? "text-orange-200 ring-orange-300/70 shadow-[0_0_10px_rgba(249,115,22,0.55)]"
           : "text-amber-200 ring-amber-300/70 shadow-[0_0_10px_rgba(252,211,77,0.4)]"

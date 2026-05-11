@@ -153,19 +153,6 @@ export default function GameCarousel3D({
   const zMax = cardW * (380 / REF_CARD_W);
   const perspective = cardW * (1600 / REF_CARD_W);
 
-  // Variant chip strip for the centered family card is rendered outside the
-  // carousel's fade mask so the chips don't get clipped on phones where the
-  // center card almost fills the viewport. Derive the active member here so
-  // we can hand it to the lifted strip.
-  const centerUnit = units[center];
-  const centerFamily = centerUnit?.kind === "family" ? centerUnit : null;
-  const centerActiveSlug = centerFamily
-    ? (activeByFamily.get(centerFamily.family.id) ??
-      centerFamily.visibleMembers.find((m) => m === centerFamily.family.canonical)?.slug ??
-      centerFamily.visibleMembers[0]?.slug ??
-      centerFamily.family.canonical.slug)
-    : null;
-
   return (
     <div
       ref={rootRef}
@@ -185,18 +172,23 @@ export default function GameCarousel3D({
         <ChevronLeftIcon />
       </button>
 
-      {/* Cards are clipped by their own container with a horizontal soft-edge
-          mask so the amber "best at" glow and family-variant rim bubbles
-          don't get sliced by a hard overflow line when they sit near the
-          carousel edge. Chevrons stay outside the mask so they render at
-          full opacity. */}
+      {/* Cards are clipped by their own container with a soft-edge mask on
+          all four sides so the amber "best at" glow doesn't get sliced by
+          a hard overflow line. Two linear gradients (horizontal +
+          vertical) combined with `mask-composite: intersect` (a.k.a.
+          WebKit `source-in`) produce a rectangular vignette: the central
+          region is fully opaque, all four edges fade to transparent over
+          the same 56px ramp. Chevrons and the lifted variant chip strips
+          stay outside the mask so they render at full opacity. */}
       <div
         className="relative flex h-full w-full items-center justify-center overflow-hidden"
         style={{
           WebkitMaskImage:
-            "linear-gradient(to right, transparent 0, black 56px, black calc(100% - 56px), transparent 100%)",
+            "linear-gradient(to right, transparent 0, black 56px, black calc(100% - 56px), transparent 100%), linear-gradient(to bottom, transparent 0, black 56px, black calc(100% - 56px), transparent 100%)",
+          WebkitMaskComposite: "source-in",
           maskImage:
-            "linear-gradient(to right, transparent 0, black 56px, black calc(100% - 56px), transparent 100%)",
+            "linear-gradient(to right, transparent 0, black 56px, black calc(100% - 56px), transparent 100%), linear-gradient(to bottom, transparent 0, black 56px, black calc(100% - 56px), transparent 100%)",
+          maskComposite: "intersect",
         }}
       >
         <motion.div
@@ -242,7 +234,6 @@ export default function GameCarousel3D({
                 family={unit.family}
                 visibleMembers={unit.visibleMembers}
                 activeSlug={activeSlug}
-                onSetActive={(slug) => setActiveForFamily(unit.family.id, slug)}
                 offset={i - center}
                 minPlayers={minPlayers}
                 maxPlayers={maxPlayers}
@@ -265,35 +256,69 @@ export default function GameCarousel3D({
         </motion.div>
       </div>
 
-      {/* Variant chip strip for the centered family card — rendered OUTSIDE
-          the masked wrapper above so the chips render at full opacity even
-          on phones where the center card sits flush against the carousel's
-          fade edges. Positioned via calc() so it tracks the card's geometry
-          (left edge of the card minus the same 14px peek the in-card chips
-          used). The card is statically centered (we don't animate this
-          element with the card transforms) — that's fine because we only
-          ever render this for the currently centered family. */}
-      {centerFamily && centerActiveSlug && measured && (
-        <div
-          className="pointer-events-none absolute z-30"
-          style={{
-            left: `calc(50% - ${cardW / 2 + 14}px)`,
-            top: `calc(50% - ${(cardH - thumbH) / 2}px)`,
-            transform: "translateY(-50%)",
-          }}
-        >
-          <div className="pointer-events-auto">
-            <VariantChipStrip
-              members={centerFamily.visibleMembers}
-              activeSlug={centerActiveSlug}
-              interactive
-              onPick={(slug) => setActiveForFamily(centerFamily.family.id, slug)}
-              minPlayers={minPlayers}
-              maxPlayers={maxPlayers}
-            />
-          </div>
-        </div>
-      )}
+      {/* Lifted variant chip strips — one motion.div per family unit,
+          rendered OUTSIDE the masked wrapper above so chips render at full
+          opacity even when their card sits flush against the carousel
+          fade. Each shadow motion.div is a card-sized container at the
+          card's static position and animates with the *exact same*
+          transforms (x, z, rotateY, scale, opacity) and spring as its
+          actual card, so the chips visually attach to the card during
+          transitions instead of popping into existence at the static
+          center after the card finishes moving. Only the centered family's
+          chips are visible (others animate to opacity 0); chips are
+          interactive only when isCenter. */}
+      {measured &&
+        units.map((unit, i) => {
+          if (unit.kind !== "family") return null;
+          const offset = i - center;
+          const absOff = Math.abs(offset);
+          const hidden = absOff > 5;
+          const isCenter = offset === 0;
+          const activeSlug =
+            activeByFamily.get(unit.family.id) ??
+            unit.visibleMembers.find((m) => m === unit.family.canonical)?.slug ??
+            unit.visibleMembers[0]?.slug ??
+            unit.family.canonical.slug;
+          return (
+            <motion.div
+              key={`chips:${unit.family.id}`}
+              className="pointer-events-none absolute z-30 origin-center"
+              style={{
+                width: cardW,
+                height: cardH,
+                left: "50%",
+                top: "50%",
+                marginLeft: -cardW / 2,
+                marginTop: -cardH / 2,
+                transformStyle: "preserve-3d",
+              }}
+              animate={{
+                x: asymptote(offset, spreadMax),
+                z: -Math.abs(asymptote(offset, zMax)),
+                rotateY: -asymptote(offset, ROTATE_MAX),
+                scale: Math.max(SCALE_MIN, 1 - Math.abs(asymptote(offset, 1 - SCALE_MIN))),
+                opacity: hidden ? 0 : isCenter ? 1 : 0,
+              }}
+              transition={{ type: "spring", stiffness: 220, damping: 28 }}
+            >
+              <div
+                className={`absolute ${isCenter ? "pointer-events-auto" : "pointer-events-none"}`}
+                style={{ top: thumbH / 2, left: -14 }}
+              >
+                <div className="-translate-y-1/2">
+                  <VariantChipStrip
+                    members={unit.visibleMembers}
+                    activeSlug={activeSlug}
+                    interactive={isCenter}
+                    onPick={(slug) => setActiveForFamily(unit.family.id, slug)}
+                    minPlayers={minPlayers}
+                    maxPlayers={maxPlayers}
+                  />
+                </div>
+              </div>
+            </motion.div>
+          );
+        })}
 
       <button
         type="button"
