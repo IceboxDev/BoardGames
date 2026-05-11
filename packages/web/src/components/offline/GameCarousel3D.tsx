@@ -7,7 +7,7 @@ import type { ReactionAggregate } from "../../lib/calendar-games";
 import { CheckIcon, ChevronLeftIcon, ChevronRightIcon, FlameIcon } from "../icons";
 import { BggInline } from "./BggInline";
 import { stripBggHtml } from "./bgg-helpers";
-import FamilyCarouselCard from "./FamilyCarouselCard";
+import FamilyCarouselCard, { VariantChipStrip } from "./FamilyCarouselCard";
 import GameReactions from "./GameReactions";
 
 type Props = {
@@ -145,12 +145,26 @@ export default function GameCarousel3D({
     ? Math.max(MIN_CARD_W, Math.min(MAX_CARD_W, size.w * 0.92, size.h / ASPECT))
     : REF_CARD_W;
   const cardH = cardW * ASPECT;
+  const thumbH = cardH * (270 / REF_CARD_H);
   const compact = cardW < COMPACT_THRESHOLD;
 
   // 3D constants scale with cardW so the spread/depth stay visually coherent.
   const spreadMax = cardW * (520 / REF_CARD_W);
   const zMax = cardW * (380 / REF_CARD_W);
   const perspective = cardW * (1600 / REF_CARD_W);
+
+  // Variant chip strip for the centered family card is rendered outside the
+  // carousel's fade mask so the chips don't get clipped on phones where the
+  // center card almost fills the viewport. Derive the active member here so
+  // we can hand it to the lifted strip.
+  const centerUnit = units[center];
+  const centerFamily = centerUnit?.kind === "family" ? centerUnit : null;
+  const centerActiveSlug = centerFamily
+    ? (activeByFamily.get(centerFamily.family.id) ??
+      centerFamily.visibleMembers.find((m) => m === centerFamily.family.canonical)?.slug ??
+      centerFamily.visibleMembers[0]?.slug ??
+      centerFamily.family.canonical.slug)
+    : null;
 
   return (
     <div
@@ -250,6 +264,36 @@ export default function GameCarousel3D({
           })}
         </motion.div>
       </div>
+
+      {/* Variant chip strip for the centered family card — rendered OUTSIDE
+          the masked wrapper above so the chips render at full opacity even
+          on phones where the center card sits flush against the carousel's
+          fade edges. Positioned via calc() so it tracks the card's geometry
+          (left edge of the card minus the same 14px peek the in-card chips
+          used). The card is statically centered (we don't animate this
+          element with the card transforms) — that's fine because we only
+          ever render this for the currently centered family. */}
+      {centerFamily && centerActiveSlug && measured && (
+        <div
+          className="pointer-events-none absolute z-30"
+          style={{
+            left: `calc(50% - ${cardW / 2 + 14}px)`,
+            top: `calc(50% - ${(cardH - thumbH) / 2}px)`,
+            transform: "translateY(-50%)",
+          }}
+        >
+          <div className="pointer-events-auto">
+            <VariantChipStrip
+              members={centerFamily.visibleMembers}
+              activeSlug={centerActiveSlug}
+              interactive
+              onPick={(slug) => setActiveForFamily(centerFamily.family.id, slug)}
+              minPlayers={minPlayers}
+              maxPlayers={maxPlayers}
+            />
+          </div>
+        </div>
+      )}
 
       <button
         type="button"
@@ -437,7 +481,7 @@ function CarouselCard({
         <BggInline bgg={game.bgg} compact={compact} />
 
         {!compact && game.bgg.description && (
-          <p className="min-h-0 flex-1 overflow-hidden text-[10px] leading-snug text-gray-400 sm:text-[11px] sm:leading-relaxed xl:text-xs 2xl:text-sm 2xl:leading-relaxed">
+          <p className="min-h-0 flex-1 overflow-hidden text-[9px] leading-snug text-gray-400 sm:text-[10px] xl:text-[11px] xl:leading-relaxed 3xl:text-sm 3xl:leading-relaxed">
             {stripBggHtml(game.bgg.description)}
           </p>
         )}

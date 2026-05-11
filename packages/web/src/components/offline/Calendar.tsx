@@ -322,24 +322,25 @@ function DayCell({
       {labels && labels.length > 0 && !compact && !locked && (
         <DayLabels entries={labels} heated={heated} />
       )}
-      {!compact && !locked && !isAdminView && (value || heated) && (
-        // Pinned to the bottom edge with absolute positioning so the heat/
-        // personal badges line up at the same vertical offset as the locked
-        // cell's RSVP pill — otherwise the heat row would sit higher (cell
-        // padding) than the locked pill (absolute bottom-1) and adjacent
-        // cells looked staggered.
-        //
-        // Mobile: stack the badges vertically and centred so neither overlaps
-        // in a thin cell.
-        // sm+: two fixed slots — personal mark on the left, heat info on the
-        // right. Using a 2-column grid (rather than flex justify-between)
-        // keeps the slots stable when only one badge is present.
-        <div className="pointer-events-none absolute inset-x-1 bottom-1 z-10 flex flex-col items-center gap-0.5 sm:inset-x-2 sm:bottom-1.5 sm:grid sm:grid-cols-2 sm:items-end sm:gap-1">
-          <span className="sm:justify-self-start">
-            {value && <PersonalMarkChip value={value} />}
-          </span>
-          <span className="sm:justify-self-end">{heated && <HeatBadge heat={heat} />}</span>
-        </div>
+      {/* Each badge is its own absolute element pinned to the bottom corner
+          of the cell, mirroring how `LockedPill` is rendered (absolute
+          bottom-1). The previous wrapper + 2-slot grid put empty wrapper
+          spans next to the visible chip on personal-only/heat-only cells —
+          the gap between them pushed the visible chip 2px above the
+          intended bottom, so adjacent locked vs. unlocked cells looked
+          staggered. With each chip rendered independently, the *single*
+          present chip lands at exactly the same y-offset as the locked
+          pill. When both are present (a heated date the viewer has marked),
+          they live in opposite corners. */}
+      {!compact && !locked && !isAdminView && value && (
+        <span className="pointer-events-none absolute bottom-1 left-1 z-10 sm:bottom-1.5 sm:left-2">
+          <PersonalMarkChip value={value} />
+        </span>
+      )}
+      {!compact && !locked && !isAdminView && heated && (
+        <span className="pointer-events-none absolute right-1 bottom-1 z-10 sm:right-2 sm:bottom-1.5">
+          <HeatBadge heat={heat} />
+        </span>
       )}
       {/* Admin overlay shows the names panel and hides the personal footer —
           surface the viewer's own mark as a small chip so admins can still
@@ -727,7 +728,7 @@ function NameRow({
           key={e.userId}
           title={`${e.name} — ${e.status}`}
           style={textShadow}
-          className="inline-flex max-w-full items-center gap-0 truncate text-[6px] font-medium leading-tight text-white sm:gap-1 sm:text-[10px] sm:leading-none md:text-[11px] lg:text-xs 2xl:text-sm"
+          className="inline-flex max-w-full items-center gap-0 truncate text-[6px] font-medium leading-tight text-white sm:gap-1 sm:text-[10px] sm:leading-none md:text-[11px] lg:text-xs 3xl:text-sm"
         >
           <span
             aria-hidden="true"

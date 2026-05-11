@@ -167,7 +167,7 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
 
       <div ref={rowRef} className="flex min-h-11 min-w-0 flex-1 items-center gap-2.5">
         {isLoading ? (
-          <div className="flex gap-1.5 overflow-x-hidden py-0.5" aria-hidden="true">
+          <div className="flex gap-1.5 overflow-x-hidden px-0.5 py-0.5" aria-hidden="true">
             {Array.from({ length: PREVIEW_THUMBS }).map((_, i) => (
               <span
                 // biome-ignore lint/suspicious/noArrayIndexKey: static skeleton placeholders
@@ -180,7 +180,10 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
           <span className="text-xs text-gray-500">No games yet — ask an admin to add some</span>
         ) : (
           <>
-            <div className="flex gap-1.5 overflow-x-hidden py-0.5">
+            {/* px-0.5 gives the 1px accent ring on the leading and trailing
+                thumbs room to render — without it the overflow-x-hidden
+                container clipped a hairline off the outer edges. */}
+            <div className="flex gap-1.5 overflow-x-hidden px-0.5 py-0.5">
               {previewGames.map((g) => (
                 <span
                   key={g.slug}

@@ -1,6 +1,11 @@
 @import "tailwindcss";
 
 @theme {
+  /* Tailwind's default 2xl is 1536px — exactly the laptop viewport at 200%
+     scale — so adding a 3xl above it lets us scale type up for genuinely
+     huge displays (4K monitors at 150% scale weigh in around 2560px) while
+     laptop and below stay at the 2xl rules. */
+  --breakpoint-3xl: 1920px;
   --color-surface-950: #08090d;
   --color-surface-900: #0f1117;
   --color-surface-800: #171923;

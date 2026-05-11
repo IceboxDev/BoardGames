@@ -164,29 +164,16 @@ export default function AdminPage() {
       }
     >
       <PageMain width="7xl" padding="none" className="px-6 py-10">
-        <div className="mb-8 flex min-h-24 items-start justify-between gap-6">
-          <div className="min-w-0 flex-1">
-            <h1 className="text-2xl font-bold tracking-tight text-white">Users</h1>
-            {deleteMode ? (
-              <p className="mt-1 text-sm text-rose-300">
-                <span className="font-semibold">Delete mode is on.</span> Click{" "}
-                <span className="font-semibold">Delete</span> on a row, then type the user's email
-                to confirm. Deletion is permanent and wipes their inventory and availability.
-              </p>
-            ) : (
-              <p className="mt-1 text-sm text-gray-500">
-                Toggle <span className="font-medium text-gray-300">online</span> to grant a user
-                access to multiplayer. Use{" "}
-                <span className="font-medium text-gray-300">Inventory</span> to set which games each
-                user owns. Click <span className="font-medium text-gray-300">Calendar</span> to
-                preview a user's offline availability.
-              </p>
-            )}
-          </div>
+        {/* Grid layout so the description paragraph spans both columns on
+            row 2 — otherwise the Delete-mode button (in flex-row land) was
+            reserving a vertical slot empty under itself and constraining the
+            paragraph's horizontal span on phone. */}
+        <div className="mb-8 grid grid-cols-[1fr_auto] items-start gap-x-4 gap-y-2 sm:gap-x-6">
+          <h1 className="text-2xl font-bold tracking-tight text-white">Users</h1>
           <button
             type="button"
             onClick={toggleDeleteMode}
-            className={`shrink-0 rounded-md border px-3 py-1.5 text-xs font-medium transition ${
+            className={`justify-self-end rounded-md border px-3 py-1.5 text-xs font-medium transition ${
               deleteMode
                 ? "border-rose-500/60 bg-rose-500/20 text-rose-200 hover:bg-rose-500/30"
                 : "border-rose-500/30 bg-transparent text-rose-300 hover:bg-rose-500/10"
@@ -194,6 +181,21 @@ export default function AdminPage() {
           >
             {deleteMode ? "Exit delete mode" : "Delete mode"}
           </button>
+          {deleteMode ? (
+            <p className="col-span-2 text-sm text-rose-300">
+              <span className="font-semibold">Delete mode is on.</span> Click{" "}
+              <span className="font-semibold">Delete</span> on a row, then type the user's email to
+              confirm. Deletion is permanent and wipes their inventory and availability.
+            </p>
+          ) : (
+            <p className="col-span-2 text-sm text-gray-500">
+              Toggle <span className="font-medium text-gray-300">online</span> to grant a user
+              access to multiplayer. Use{" "}
+              <span className="font-medium text-gray-300">Inventory</span> to set which games each
+              user owns. Click <span className="font-medium text-gray-300">Calendar</span> to
+              preview a user's offline availability.
+            </p>
+          )}
         </div>
 
         <PreRegisterCard />
