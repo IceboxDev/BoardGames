@@ -40,6 +40,19 @@ const MIN_CARD_W = 240; // legible on a 320–375px phone
 const MAX_CARD_W = 640; // sensible cap on 4K — bumped from 520 so the
 // description font has room to breathe at 14-15px on a 4K monitor
 
+// Vertical breathing room (total px subtracted from the height budget before
+// dividing by ASPECT). Without this, height-bound viewports (1366×768,
+// 1440×900, 13" laptops with browser chrome, etc.) produce cards that exactly
+// fill the masked wrapper — and the wrapper's `overflow-hidden` then clips
+// the amber "best at" shadow at the bottom AND lets the 20px vertical fade
+// ramp eat into the card's own top/bottom edges. The 4K case never hits this
+// because `MAX_CARD_W` caps `cardW` first; the laptop case currently fills
+// exactly and is barely affected. 32px (16 each side) is enough margin that
+// the fade ramp completely clears the card and the shadow has somewhere to
+// extend into, while staying small enough that the laptop anchor's visible
+// card size shifts by ~4% — imperceptible in practice.
+const VERTICAL_BREATHING = 32;
+
 // All four axes use the same tanh asymptote so cards bunch coherently. ROTATE
 // must stay under 90° or backface-hidden cards vanish. K controls softness
 // (higher = more linear); MAX caps the asymptote.
@@ -140,9 +153,16 @@ export default function GameCarousel3D({
   // it (so the 0.92 factor only matters when width is the binding constraint —
   // i.e. portrait phones — where we want the card as large as legibility allows
   // and accept that the rotated side cards mostly clip behind overflow-hidden.
+  //
+  // Height budget subtracts VERTICAL_BREATHING so the card never sits flush
+  // against the masked wrapper's hard-clip edges. Without it, intermediate
+  // height-bound viewports (1366×768, 1440×900, laptops with browser chrome
+  // taking a chunk of vertical space) crop the amber "best at" shadow at the
+  // bottom and pull the 20px fade ramp into the card's own top/bottom edges.
   const measured = size.w > 0 && size.h > 0;
+  const heightBudget = Math.max(0, size.h - VERTICAL_BREATHING);
   const cardW = measured
-    ? Math.max(MIN_CARD_W, Math.min(MAX_CARD_W, size.w * 0.92, size.h / ASPECT))
+    ? Math.max(MIN_CARD_W, Math.min(MAX_CARD_W, size.w * 0.92, heightBudget / ASPECT))
     : REF_CARD_W;
   const cardH = cardW * ASPECT;
   const thumbH = cardH * (270 / REF_CARD_H);
