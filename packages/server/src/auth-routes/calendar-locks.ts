@@ -48,12 +48,48 @@ calendarLocksRoutes.post("/lock-picks", zJsonBody(PicksLockBodySchema), async (c
     return errorResponse(c, 403, "only admin or host can toggle picks-lock", "FORBIDDEN");
   }
 
-  await getDb().execute({
-    sql: on
-      ? "UPDATE locked_dates SET picks_locked_at = datetime('now') WHERE date_key = ?"
-      : "UPDATE locked_dates SET picks_locked_at = NULL WHERE date_key = ?",
-    args: [date],
-  });
+  if (on) {
+    // Snapshot the guest list at picks-lock time. The date-lock snapshot was
+    // taken when the host first locked the date and only sees users who had
+    // marked availability by then — anyone who RSVPed yes later (e.g. via
+    // the modal without ever touching the availability calendar) was getting
+    // shut out of the modal once picks were locked. Union the original
+    // snapshot with every current `yes` RSVP so the guest list at picks-lock
+    // time actually reflects who has committed to the night.
+    const [{ rows: lockRows }, { rows: yesRows }] = await Promise.all([
+      getDb().execute({
+        sql: "SELECT expected_user_ids_json FROM locked_dates WHERE date_key = ?",
+        args: [date],
+      }),
+      getDb().execute({
+        sql: "SELECT user_id FROM rsvps WHERE date_key = ? AND status = 'yes'",
+        args: [date],
+      }),
+    ]);
+    let originalExpected: unknown = [];
+    try {
+      originalExpected = JSON.parse((lockRows[0]?.expected_user_ids_json as string) ?? "[]");
+    } catch {
+      originalExpected = [];
+    }
+    const expected = new Set<string>(
+      Array.isArray(originalExpected) ? (originalExpected as string[]) : [],
+    );
+    for (const r of yesRows) expected.add(r.user_id as string);
+
+    await getDb().execute({
+      sql: `UPDATE locked_dates
+              SET picks_locked_at = datetime('now'),
+                  expected_user_ids_json = ?
+            WHERE date_key = ?`,
+      args: [JSON.stringify([...expected]), date],
+    });
+  } else {
+    await getDb().execute({
+      sql: "UPDATE locked_dates SET picks_locked_at = NULL WHERE date_key = ?",
+      args: [date],
+    });
+  }
   return c.json(OkResponseSchema.parse({ ok: true }));
 });
 
