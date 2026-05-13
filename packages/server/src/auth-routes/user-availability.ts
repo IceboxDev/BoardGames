@@ -6,6 +6,8 @@ import {
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import {
+  applyRsvpNoToAvailability,
+  fetchRsvpNoDatesForUser,
   fetchRsvpYesDatesForUser,
   mergeRsvpYesIntoAvailability,
   parseAvailabilityJson,
@@ -16,15 +18,17 @@ export const userAvailabilityRoutes = authedApp();
 
 userAvailabilityRoutes.get("/availability", async (c) => {
   const user = c.get("user");
-  const [{ rows }, rsvpYesDates] = await Promise.all([
+  const [{ rows }, rsvpYesDates, rsvpNoDates] = await Promise.all([
     getDb().execute({
       sql: "SELECT availability_json FROM user_availability WHERE user_id = ?",
       args: [user.id],
     }),
     fetchRsvpYesDatesForUser(getDb(), user.id),
+    fetchRsvpNoDatesForUser(getDb(), user.id),
   ]);
   const stored = parseAvailabilityJson(rows[0]?.availability_json as string | undefined);
-  const merged = mergeRsvpYesIntoAvailability(stored, rsvpYesDates);
+  const withYes = mergeRsvpYesIntoAvailability(stored, rsvpYesDates);
+  const merged = applyRsvpNoToAvailability(withYes, rsvpNoDates);
   return c.json(AvailabilityMapSchema.parse(merged));
 });
 

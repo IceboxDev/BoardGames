@@ -1,14 +1,19 @@
 import { AvailabilityCountsSchema } from "@boardgames/core/protocol";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
-import { fetchAllRsvpYesByUser, parseAvailabilityJson } from "../lib/availability-merge.ts";
+import {
+  fetchAllRsvpNoByUser,
+  fetchAllRsvpYesByUser,
+  parseAvailabilityJson,
+} from "../lib/availability-merge.ts";
 
 export const availabilityCountsRoutes = authedApp();
 
 availabilityCountsRoutes.get("/counts", async (c) => {
-  const [availabilityResult, rsvpYesByUser] = await Promise.all([
+  const [availabilityResult, rsvpYesByUser, rsvpNoByUser] = await Promise.all([
     getDb().execute("SELECT user_id, availability_json FROM user_availability"),
     fetchAllRsvpYesByUser(getDb()),
+    fetchAllRsvpNoByUser(getDb()),
   ]);
 
   // Build per-date sets of distinct user ids so the same user never tallies
@@ -37,6 +42,15 @@ availabilityCountsRoutes.get("/counts", async (c) => {
   for (const [userId, dates] of rsvpYesByUser) {
     for (const date of dates) {
       addTo(canByDate, date, userId);
+      maybeByDate.get(date)?.delete(userId);
+    }
+  }
+  // RSVP-no removes the user from both sets — they've explicitly said
+  // they aren't coming, so their standing "can"/"maybe" mark must not
+  // keep counting toward heat or pie totals for that date.
+  for (const [userId, dates] of rsvpNoByUser) {
+    for (const date of dates) {
+      canByDate.get(date)?.delete(userId);
       maybeByDate.get(date)?.delete(userId);
     }
   }

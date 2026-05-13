@@ -22,6 +22,7 @@ import {
   type Availability,
   type AvailabilityMap,
   adminFetchAllAvailability,
+  dateKey,
   fetchAvailability,
   fetchAvailabilityCounts,
   pushAvailability,
@@ -275,7 +276,12 @@ export default function OfflineDashboard() {
   }, [lockingDate, user, allAvailability]);
 
   const visible = mode === "edit" ? draft : committed;
-  const markedCount = Object.keys(visible).length;
+  // Only count today + future marks. Past dates linger in the availability
+  // map (the user once marked them, the server kept them) but they are
+  // read-only and off-screen, so counting them in the save button label
+  // would surface a phantom "extra" that the user can't see or change.
+  const todayKey = dateKey(today);
+  const markedCount = Object.keys(visible).filter((k) => k >= todayKey).length;
   const saveError = saveMutation.error
     ? saveMutation.error instanceof Error
       ? saveMutation.error.message
