@@ -39,6 +39,9 @@ describe("buildIcs — VCALENDAR envelope", () => {
     expect(lines).toContain("METHOD:PUBLISH");
     expect(lines).toContain("X-WR-CALNAME:Game Nights");
     expect(lines).toContain("X-WR-TIMEZONE:Europe/Berlin");
+    // Polling hints — RFC 7986 standard property + Microsoft convention.
+    expect(lines).toContain("REFRESH-INTERVAL;VALUE=DURATION:PT1H");
+    expect(lines).toContain("X-PUBLISHED-TTL:PT1H");
     // Last non-empty line is END:VCALENDAR (trailing CRLF makes split() emit "").
     expect(lines.filter((l) => l !== "").pop()).toBe("END:VCALENDAR");
   });

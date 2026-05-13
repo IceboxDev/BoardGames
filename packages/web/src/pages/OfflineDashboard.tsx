@@ -1,6 +1,7 @@
 import { mkOptimisticLock } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { AvailabilityActionBar } from "../components/offline/AvailabilityActionBar";
 import Calendar from "../components/offline/Calendar";
 import LockInModal from "../components/offline/LockInModal";
@@ -84,6 +85,26 @@ export default function OfflineDashboard() {
   const [lockingDate, setLockingDate] = useState<string | null>(null);
   const [debugAsPlayer, setDebugAsPlayer] = useState(false);
   const inAdminView = isAdmin && !debugAsPlayer;
+
+  // Deep link from the iCalendar feed (URL property on the VEVENT) points
+  // here as `/offline?date=YYYY-MM-DD`. When the page mounts with that
+  // param AND the corresponding lock resolves, open the RSVP modal for
+  // that date and strip the param from the URL so a refresh doesn't keep
+  // re-opening it. Guarded on locks being loaded so the YYYY-MM-DD has to
+  // be a real game night — not just any date string in the query.
+  const [searchParams, setSearchParams] = useSearchParams();
+  useEffect(() => {
+    const dateParam = searchParams.get("date");
+    if (!dateParam) return;
+    if (!locks) return;
+    if (locks[dateParam]) {
+      setRsvpDate(dateParam);
+    }
+    // Strip the param either way — invalid date in URL shouldn't linger.
+    const next = new URLSearchParams(searchParams);
+    next.delete("date");
+    setSearchParams(next, { replace: true });
+  }, [locks, searchParams, setSearchParams]);
 
   const viewerRsvpByDate = useMemo<Record<string, RsvpStatus | undefined>>(() => {
     if (!locks || !userId) return {};

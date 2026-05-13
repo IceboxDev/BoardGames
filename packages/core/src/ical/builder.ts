@@ -69,6 +69,14 @@ export function buildIcs(opts: BuildIcsOptions): string {
   lines.push(...wrap("X-WR-CALNAME", opts.calName));
   if (opts.calDesc) lines.push(...wrap("X-WR-CALDESC", opts.calDesc));
   lines.push(`X-WR-TIMEZONE:${opts.tzid}`);
+  // Polling hints. Google ignores these (its refresh schedule is opaque and
+  // typically every several hours), but Apple Calendar, Outlook, and
+  // Thunderbird honor at least one of them. PT1H = poll every hour.
+  // REFRESH-INTERVAL is the RFC 7986 standard; X-PUBLISHED-TTL is the
+  // older Microsoft convention that Outlook and some Apple builds still
+  // prefer. We emit both so the most aggressive interpretation wins.
+  lines.push("REFRESH-INTERVAL;VALUE=DURATION:PT1H");
+  lines.push("X-PUBLISHED-TTL:PT1H");
   lines.push(...emitVtimezone(opts.tzid));
   for (const ev of opts.events) lines.push(...emitVevent(ev));
   lines.push("END:VCALENDAR");

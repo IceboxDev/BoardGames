@@ -210,10 +210,12 @@ function buildDescription(opts: {
   dateKey: string;
 }): string {
   const { view, topPickTitles, bringingTitles, dateKey } = opts;
+  // Address and time are intentionally NOT repeated here — they already ride
+  // on dedicated ICS properties (LOCATION and DTSTART;TZID), which every
+  // calendar client renders in its own UI slots. Repeating them in the body
+  // is just visual duplication in apps that show description + location +
+  // time stacked together.
   const lines: string[] = [];
-  if (view.lock.address) lines.push(view.lock.address);
-  if (view.lock.eventTime) lines.push(`${view.lock.eventTime} Berlin time`);
-  if (lines.length > 0) lines.push("");
 
   if (topPickTitles.length > 0) {
     const head = topPickTitles.slice(0, 3).join(", ");
