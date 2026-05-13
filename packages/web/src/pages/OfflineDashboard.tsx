@@ -68,6 +68,16 @@ export default function OfflineDashboard() {
   const counts = countsQuery.data ?? undefined;
   const locks = locksQuery.data ?? undefined;
 
+  // Locked cells hide the people list and heat ring, so the three overlays
+  // are mutually exclusive per cell. The `/api/calendar/locks` route is the
+  // slowest (three SELECTs + per-date set math); on a cold cache the others
+  // win the race and paint "X people in" on a date the lock response is
+  // about to reseal — that's the one-second flash. Gate dayLabels + counts
+  // on locks having resolved so the three pop in together. Warm cache
+  // (`PersistQueryClientProvider`) hydrates all three in the same tick, so
+  // this is a no-op there.
+  const overlaysReady = locksQuery.data !== undefined;
+
   const [mode, setMode] = useState<Mode>("view");
   const [draft, setDraft] = useState<AvailabilityMap>({});
   const [rsvpDate, setRsvpDate] = useState<string | null>(null);
@@ -289,12 +299,17 @@ export default function OfflineDashboard() {
 
         <Calendar
           weekStart={weekStart}
-          availability={visible}
+          // Personal stripe + mark chip are also hidden under the locked
+          // layer, so gate the user's own marks in view mode too — otherwise
+          // a marked date that turns out to be locked flashes the stripe on
+          // and then off when locks lands. Edit mode keeps `visible` so the
+          // user always sees the draft they're typing into.
+          availability={mode === "view" && !overlaysReady ? {} : visible}
           onChange={handleChange}
           readonlyBefore={today}
           interactive={mode === "edit"}
-          dayLabels={inAdminView ? (allAvailability ?? undefined) : undefined}
-          counts={counts}
+          dayLabels={inAdminView && overlaysReady ? (allAvailability ?? undefined) : undefined}
+          counts={overlaysReady ? counts : undefined}
           locks={locks}
           lockMode={mode === "lock"}
           onLockToggle={handleLockToggle}

@@ -172,22 +172,29 @@ export default function GameCarousel3D({
         <ChevronLeftIcon />
       </button>
 
-      {/* Cards are clipped by their own container with a soft-edge mask on
-          all four sides so the amber "best at" glow doesn't get sliced by
-          a hard overflow line. Two linear gradients (horizontal +
-          vertical) combined with `mask-composite: intersect` (a.k.a.
-          WebKit `source-in`) produce a rectangular vignette: the central
-          region is fully opaque, all four edges fade to transparent over
-          the same 56px ramp. Chevrons and the lifted variant chip strips
-          stay outside the mask so they render at full opacity. */}
+      {/* Cards are clipped by their own container with a soft-edge mask
+          composed of two linear gradients combined via `mask-composite:
+          intersect` (WebKit `source-in`).
+          - Horizontal ramp is the wider 56px — side cards bunch at high
+            rotation angles and the wider ramp dissolves them gracefully.
+          - Vertical ramp is shorter (20px). It exists only to soften the
+            amber "best at" glow that extends a few px past the top/bottom
+            edges of the centered card. At intermediate viewport heights
+            (e.g. 1440×900) where the card sizes up to exactly fill the
+            container, a wider vertical ramp would visually clip the card's
+            own thumbnail at the top and the reaction row at the bottom.
+            20px is enough headroom for the glow and short enough that the
+            card content stays intact at any height in our target range.
+          Chevrons and the lifted variant chip strips stay outside this
+          masked wrapper so they render at full opacity. */}
       <div
         className="relative flex h-full w-full items-center justify-center overflow-hidden"
         style={{
           WebkitMaskImage:
-            "linear-gradient(to right, transparent 0, black 56px, black calc(100% - 56px), transparent 100%), linear-gradient(to bottom, transparent 0, black 56px, black calc(100% - 56px), transparent 100%)",
+            "linear-gradient(to right, transparent 0, black 56px, black calc(100% - 56px), transparent 100%), linear-gradient(to bottom, transparent 0, black 20px, black calc(100% - 20px), transparent 100%)",
           WebkitMaskComposite: "source-in",
           maskImage:
-            "linear-gradient(to right, transparent 0, black 56px, black calc(100% - 56px), transparent 100%), linear-gradient(to bottom, transparent 0, black 56px, black calc(100% - 56px), transparent 100%)",
+            "linear-gradient(to right, transparent 0, black 56px, black calc(100% - 56px), transparent 100%), linear-gradient(to bottom, transparent 0, black 20px, black calc(100% - 20px), transparent 100%)",
           maskComposite: "intersect",
         }}
       >
