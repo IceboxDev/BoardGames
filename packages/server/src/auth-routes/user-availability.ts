@@ -5,19 +5,27 @@ import {
 } from "@boardgames/core/protocol";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import {
+  fetchRsvpYesDatesForUser,
+  mergeRsvpYesIntoAvailability,
+  parseAvailabilityJson,
+} from "../lib/availability-merge.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 
 export const userAvailabilityRoutes = authedApp();
 
 userAvailabilityRoutes.get("/availability", async (c) => {
   const user = c.get("user");
-  const { rows } = await getDb().execute({
-    sql: "SELECT availability_json FROM user_availability WHERE user_id = ?",
-    args: [user.id],
-  });
-  if (rows.length === 0) return c.json(AvailabilityMapSchema.parse({}));
-  const raw = JSON.parse(rows[0].availability_json as string);
-  return c.json(AvailabilityMapSchema.parse(raw));
+  const [{ rows }, rsvpYesDates] = await Promise.all([
+    getDb().execute({
+      sql: "SELECT availability_json FROM user_availability WHERE user_id = ?",
+      args: [user.id],
+    }),
+    fetchRsvpYesDatesForUser(getDb(), user.id),
+  ]);
+  const stored = parseAvailabilityJson(rows[0]?.availability_json as string | undefined);
+  const merged = mergeRsvpYesIntoAvailability(stored, rsvpYesDates);
+  return c.json(AvailabilityMapSchema.parse(merged));
 });
 
 userAvailabilityRoutes.put("/availability", zJsonBody(PushAvailabilityBodySchema), async (c) => {

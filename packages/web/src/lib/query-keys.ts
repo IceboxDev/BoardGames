@@ -12,4 +12,5 @@ export const qk = {
   adminAggregateAvailability: () => ["admin", "availability", "all"] as const,
   history: () => ["history"] as const,
   historyByNight: (dateKey: string) => ["history", "by-night", dateKey] as const,
+  calendarFeed: () => ["calendar", "feed"] as const,
 } as const;

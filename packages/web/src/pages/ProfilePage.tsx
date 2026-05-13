@@ -1,6 +1,8 @@
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import CalendarSyncCard from "../components/profile/CalendarSyncCard";
+import CalendarSyncModal from "../components/profile/CalendarSyncModal";
 import { TopNav, TopNavLink } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
 import { PageShell } from "../components/ui/PageShell";
@@ -17,6 +19,7 @@ export default function ProfilePage() {
     | { name?: string; email?: string; role?: string; onlineEnabled?: boolean }
     | undefined;
   const userId = data?.user?.id ?? null;
+  const [syncModalOpen, setSyncModalOpen] = useState(false);
 
   const onlineUnlocked = Boolean(user?.onlineEnabled);
   const isAdmin = user?.role === "admin";
@@ -68,6 +71,8 @@ export default function ProfilePage() {
 
         <GalleryPreview ownedSlugs={ownedSlugs} onClick={() => navigate("/gallery")} />
 
+        <CalendarSyncCard onClick={() => setSyncModalOpen(true)} />
+
         {!onlineUnlocked && (
           <p className="mt-8 text-center text-xs text-gray-500">
             Your account is signed in but online play hasn't been unlocked for you yet. The
@@ -75,6 +80,8 @@ export default function ProfilePage() {
           </p>
         )}
       </div>
+
+      {syncModalOpen && <CalendarSyncModal onClose={() => setSyncModalOpen(false)} />}
     </PageShell>
   );
 }

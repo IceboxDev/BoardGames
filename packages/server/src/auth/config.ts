@@ -49,6 +49,12 @@ export const auth = betterAuth({
         defaultValue: false,
         input: false,
       },
+      internal: {
+        type: "boolean",
+        required: false,
+        defaultValue: false,
+        input: false,
+      },
     },
   },
   plugins: [admin()],
@@ -56,17 +62,24 @@ export const auth = betterAuth({
     user: {
       create: {
         before: async (user) => {
-          const isAdmin = user.email.toLowerCase() === adminEmail;
+          const email = user.email.toLowerCase();
+          const isAdmin = email === adminEmail;
+          // Gmail "+internal" alias auto-flags QA/test accounts so they
+          // never appear in the admin user list.
+          const isInternal = /\+internal(?:[+.][^@]*)?@/.test(email);
           return {
             data: {
               ...user,
               role: isAdmin ? "admin" : "user",
               onlineEnabled: isAdmin,
+              internal: isInternal,
             },
           };
         },
         after: async (user) => {
-          if (user.email.toLowerCase() === adminEmail) return;
+          const email = user.email.toLowerCase();
+          if (email === adminEmail) return;
+          if (/\+internal(?:[+.][^@]*)?@/.test(email)) return;
           try {
             const db = getDb();
             const { rows } = await db.execute(

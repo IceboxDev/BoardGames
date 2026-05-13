@@ -142,6 +142,47 @@ async function migrate(db: Client): Promise<void> {
       `CREATE INDEX IF NOT EXISTS idx_tournament_games_tid ON tournament_games(tournament_id, game_index)`,
       `CREATE INDEX IF NOT EXISTS idx_game_results_slug ON game_results(game_slug)`,
       `CREATE INDEX IF NOT EXISTS idx_session_replays_slug ON session_replays(game_slug, created_at DESC)`,
+      // Personal iCalendar (ICS) subscription support. The raw token is shown
+      // to the user once at generation and never persisted — we store only
+      // `sha256(raw)` hex so an offline DB dump can't be used to subscribe.
+      // ON DELETE CASCADE is omitted intentionally: better-auth manages the
+      // user table separately and SQLite doesn't enforce FKs by default; we
+      // rely on application-layer cleanup.
+      `CREATE TABLE IF NOT EXISTS calendar_feed_tokens (
+        user_id TEXT PRIMARY KEY,
+        token_hash TEXT NOT NULL,
+        created_at TEXT NOT NULL DEFAULT (datetime('now')),
+        last_accessed_at TEXT,
+        last_user_agent TEXT
+      )`,
+      `CREATE UNIQUE INDEX IF NOT EXISTS idx_calendar_feed_tokens_hash
+        ON calendar_feed_tokens(token_hash)`,
+      // Per-(user, date) SEQUENCE version table for the iCalendar feed.
+      // RFC 5545 requires SEQUENCE to monotonically increase whenever a
+      // VEVENT's material state changes (Outlook silently ignores updates
+      // that don't bump it). We canonicalize the state into a sha256 digest;
+      // on every feed render we compare-and-bump.
+      `CREATE TABLE IF NOT EXISTS calendar_feed_event_versions (
+        user_id TEXT NOT NULL,
+        date_key TEXT NOT NULL,
+        state_digest TEXT NOT NULL,
+        sequence INTEGER NOT NULL,
+        updated_at TEXT NOT NULL DEFAULT (datetime('now')),
+        PRIMARY KEY (user_id, date_key)
+      )`,
+      // Tombstones for nights an admin unlocked. Without these, a subscriber
+      // whose calendar already saw the event has no way to know it was
+      // unlocked — calendars only act on what they see. We keep a tombstone
+      // row for 30 days so the next poll emits STATUS:CANCELLED.
+      `CREATE TABLE IF NOT EXISTS calendar_unlocked_tombstones (
+        date_key TEXT PRIMARY KEY,
+        expected_user_ids_json TEXT NOT NULL DEFAULT '[]',
+        host_user_id TEXT,
+        host_name TEXT,
+        event_time TEXT,
+        address TEXT,
+        unlocked_at TEXT NOT NULL DEFAULT (datetime('now'))
+      )`,
     ],
     "write",
   );
@@ -210,4 +251,12 @@ async function migrate(db: Client): Promise<void> {
         AND ABS(strftime('%s', l.locked_at) - strftime('%s', rsvps.rsvped_at)) <= 2
     )`,
   );
+
+  // `internal = 1` flags accounts used for development/QA so they're hidden
+  // from the admin user list. Set automatically for emails containing
+  // `+internal` (Gmail alias trick) in the auth before-create hook.
+  const userCols = await db.execute("PRAGMA table_info(user)");
+  if (userCols.rows.length > 0 && !userCols.rows.some((r) => r.name === "internal")) {
+    await db.execute(`ALTER TABLE user ADD COLUMN internal INTEGER NOT NULL DEFAULT 0`);
+  }
 }

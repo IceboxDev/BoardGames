@@ -18,6 +18,7 @@ import {
 } from "../lib/inventory";
 import {
   type AggregateAvailabilityMap,
+  type AvailabilityMap,
   adminFetchAllAvailability,
   adminFetchAvailability,
   dateKey,
@@ -31,6 +32,7 @@ type AdminUser = {
   email: string;
   role?: string | null;
   onlineEnabled?: boolean | null;
+  internal?: boolean | null;
   createdAt: string | Date;
 };
 
@@ -69,9 +71,27 @@ export default function AdminPage() {
       .filter((key) => key >= todayKey);
   }, []);
 
-  const users = usersQuery.data ?? [];
+  const rawUsers = usersQuery.data ?? [];
   const loading = usersQuery.isPending;
   const aggregate: AggregateAvailabilityMap = aggregateQuery.data ?? {};
+
+  // Hide internal QA accounts, then sort: admins first, then by coverage %
+  // (can+maybe / editable days) descending, then alphabetical on name as a
+  // stable tiebreaker.
+  const users = useMemo(() => {
+    const visible = rawUsers.filter((u) => !u.internal);
+    return [...visible].sort((a, b) => {
+      const aAdmin = a.role === "admin" ? 1 : 0;
+      const bAdmin = b.role === "admin" ? 1 : 0;
+      if (aAdmin !== bAdmin) return bAdmin - aAdmin;
+      const ca = computeCoverage(aggregate, a.id, editableDateKeys);
+      const cb = computeCoverage(aggregate, b.id, editableDateKeys);
+      const aPct = ca.total > 0 ? (ca.can + ca.maybe) / ca.total : 0;
+      const bPct = cb.total > 0 ? (cb.can + cb.maybe) / cb.total : 0;
+      if (aPct !== bPct) return bPct - aPct;
+      return (a.name || a.email).localeCompare(b.name || b.email);
+    });
+  }, [rawUsers, aggregate, editableDateKeys]);
 
   const toggleOnlineMutation = useMutation({
     mutationFn: (user: AdminUser) => adminSetOnline(user.id, !user.onlineEnabled),
@@ -296,7 +316,14 @@ function AvailabilityDrawer({ user, onClose }: AvailabilityDrawerProps) {
       ? availabilityQuery.error.message
       : "Failed to load availability"
     : null;
-  const markedCount = availability ? Object.keys(availability).length : 0;
+  // "Across the next 6 weeks" should not include marks from prior weeks (the
+  // raw map persists them indefinitely until the user changes them) — count
+  // only the editable window from today onward, the same range CoverageCell
+  // uses.
+  const markedCount = useMemo(
+    () => countMarkedInWindow(availability, today, weekStart),
+    [availability, today, weekStart],
+  );
 
   return (
     <aside className="fixed inset-y-0 right-0 z-50 flex w-full max-w-md flex-col border-l border-white/10 bg-surface-950 shadow-2xl shadow-black/50 sm:w-[28rem]">
@@ -733,6 +760,23 @@ function PreRegisterCard() {
       )}
     </div>
   );
+}
+
+function countMarkedInWindow(
+  availability: AvailabilityMap | null,
+  today: Date,
+  weekStart: Date,
+): number {
+  if (!availability) return 0;
+  const todayKey = dateKey(today);
+  let count = 0;
+  for (const d of build42Days(weekStart)) {
+    const key = dateKey(d);
+    if (key < todayKey) continue;
+    const status = availability[key];
+    if (status === "can" || status === "maybe") count += 1;
+  }
+  return count;
 }
 
 function computeCoverage(

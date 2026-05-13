@@ -13,6 +13,8 @@ import { adminOnlineRoutes } from "./auth-routes/admin-online.ts";
 import { adminPendingInventoryRoutes } from "./auth-routes/admin-pending-inventory.ts";
 import { availabilityCountsRoutes } from "./auth-routes/availability-counts.ts";
 import { bggRoutes } from "./auth-routes/bgg.ts";
+import { calendarFeedRoutes } from "./auth-routes/calendar-feed.ts";
+import { calendarFeedPublicRoutes } from "./auth-routes/calendar-feed-public.ts";
 import { adminCalendarLocksRoutes, calendarLocksRoutes } from "./auth-routes/calendar-locks.ts";
 import { calendarRsvpsRoutes } from "./auth-routes/calendar-rsvps.ts";
 import { matchHistoryRoutes } from "./auth-routes/match-history.ts";
@@ -72,6 +74,13 @@ app.get("/api/auth-config", (c) =>
 
 app.get("/api/health", (c) => c.json({ ok: true, games: getRegisteredSlugs() }));
 
+// Public iCalendar feed. Path-token authentication (see auth/feed-token.ts),
+// no session cookie required — calendar clients are external. Mounted on
+// its own prefix so the `/api/calendar/*` requireAuth umbrella does NOT
+// intercept it; the existing `/api/*` CORS rule applies but is harmless for
+// the non-browser fetchers that hit this endpoint.
+app.route("/api/ical", calendarFeedPublicRoutes);
+
 // --- Protected: admin only ---
 app.use("/api/admin/*", requireAdmin);
 app.route("/api/admin/users", adminOnlineRoutes);
@@ -93,6 +102,7 @@ app.route("/api/availability", availabilityCountsRoutes);
 app.use("/api/calendar/*", requireAuth);
 app.route("/api/calendar", calendarLocksRoutes);
 app.route("/api/calendar", calendarRsvpsRoutes);
+app.route("/api/calendar", calendarFeedRoutes);
 
 app.use("/api/history/*", requireAuth);
 app.route("/api/history", matchHistoryRoutes);

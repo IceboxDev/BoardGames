@@ -8,6 +8,7 @@ export * from "./http/auth.ts";
 export * from "./http/availability.ts";
 export * from "./http/bgg.ts";
 export * from "./http/calendar.ts";
+export * from "./http/calendar-feed.ts";
 export * from "./http/games.ts";
 export * from "./http/history.ts";
 export * from "./http/inventory.ts";

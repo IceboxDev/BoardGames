@@ -11,6 +11,7 @@ import {
 } from "@boardgames/core/protocol";
 import { adminApp, authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { computeAvailableGamesPayload } from "../lib/available-games.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 
 export const calendarLocksRoutes = authedApp();
@@ -18,284 +19,9 @@ export const calendarLocksRoutes = authedApp();
 calendarLocksRoutes.get("/games", zQuery(AvailableGamesQuerySchema), async (c) => {
   const user = c.get("user");
   const { date } = c.req.valid("query");
-
-  const lockedRow = await getDb().execute({
-    sql: "SELECT host_user_id, picks_locked_at FROM locked_dates WHERE date_key = ? LIMIT 1",
-    args: [date],
-  });
-  if (lockedRow.rows.length === 0) {
-    return errorResponse(c, 400, "date is not locked");
-  }
-  const hostUserId = (lockedRow.rows[0].host_user_id as string | null) ?? null;
-  const picksLockedAt = (lockedRow.rows[0].picks_locked_at as string | null) ?? null;
-
-  // Compute participant set. `rsvp:no` is an explicit decline — it overrides
-  // any availability marker, including an earlier `rsvp:yes`. Only people who
-  // are actually coming contribute to the inventory union or to the headcount;
-  // a "maybe" who hasn't declined widens the headcount upper bound but never
-  // contributes inventory (we can't count on them showing up with the box).
-  const [availabilityResult, rsvpResult, reactionResult] = await Promise.all([
-    getDb().execute("SELECT user_id, availability_json FROM user_availability"),
-    getDb().execute({
-      sql: "SELECT user_id, status, auto FROM rsvps WHERE date_key = ?",
-      args: [date],
-    }),
-    getDb().execute({
-      sql: "SELECT user_id, game_slug, reaction FROM game_requests WHERE date_key = ?",
-      args: [date],
-    }),
-  ]);
-
-  const canSet = new Set<string>();
-  const maybeSet = new Set<string>();
-  for (const row of availabilityResult.rows) {
-    let parsed: unknown;
-    try {
-      parsed = JSON.parse(row.availability_json as string);
-    } catch {
-      continue;
-    }
-    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) continue;
-    const v = (parsed as Record<string, unknown>)[date];
-    const userId = row.user_id as string;
-    if (v === "can") canSet.add(userId);
-    else if (v === "maybe") maybeSet.add(userId);
-  }
-
-  const rsvpYes = new Set<string>();
-  const rsvpNo = new Set<string>();
-  // `manuallyRsvpedYes` is the subset of `rsvpYes` that came from a real
-  // "Going" button click (auto=0), not the lock-time batch or the modal's
-  // first-open useEffect. Drives the "Hasn't RSVP'd yet" pill.
-  const manuallyRsvpedYes = new Set<string>();
-  for (const row of rsvpResult.rows) {
-    const userId = row.user_id as string;
-    const status = row.status as string;
-    const auto = row.auto as number | null;
-    if (status === "yes") {
-      rsvpYes.add(userId);
-      if (!auto) manuallyRsvpedYes.add(userId);
-    } else if (status === "no") {
-      rsvpNo.add(userId);
-    }
-  }
-
-  // Explicit "no" wins over everything else.
-  const comingIds = new Set<string>();
-  for (const id of canSet) if (!rsvpNo.has(id)) comingIds.add(id);
-  for (const id of rsvpYes) if (!rsvpNo.has(id)) comingIds.add(id);
-  const definiteIds = [...comingIds];
-  const tentativeIds = [...maybeSet].filter((id) => !comingIds.has(id) && !rsvpNo.has(id));
-
-  // Per-user inventory map for definite attendees. Used both for the union
-  // (ownedSlugs) and for the bringing assignment downstream.
-  const inventoryByUser = new Map<string, Set<string>>();
-  const ownedUnion = new Set<string>();
-  if (definiteIds.length > 0) {
-    const placeholders = definiteIds.map(() => "?").join(",");
-    const inventoryResult = await getDb().execute({
-      sql: `SELECT user_id, game_slugs_json FROM user_inventory WHERE user_id IN (${placeholders})`,
-      args: definiteIds,
-    });
-
-    for (const row of inventoryResult.rows) {
-      const userId = row.user_id as string;
-      let parsed: unknown;
-      try {
-        parsed = JSON.parse(row.game_slugs_json as string);
-      } catch {
-        continue;
-      }
-      if (!Array.isArray(parsed)) continue;
-      const set = new Set<string>();
-      for (const slug of parsed) {
-        if (typeof slug === "string") {
-          set.add(slug);
-          ownedUnion.add(slug);
-        }
-      }
-      inventoryByUser.set(userId, set);
-    }
-  }
-  const ownedSlugs = [...ownedUnion].sort();
-
-  type ReactionAggregate = {
-    hype: number;
-    teach: number;
-    learn: number;
-    viewer: ("hype" | "teach" | "learn")[];
-  };
-  const reactions: Record<string, ReactionAggregate> = {};
-  // Per-user vote counts used by the Attendees view. Includes definite and
-  // tentative voters — a maybe's votes still describe them.
-  const votesByUser = new Map<string, { hype: number; teach: number; learn: number }>();
-  for (const row of reactionResult.rows) {
-    const userId = row.user_id as string;
-    const slug = row.game_slug as string;
-    const kind = row.reaction as "hype" | "teach" | "learn";
-    let agg = reactions[slug];
-    if (!agg) {
-      agg = { hype: 0, teach: 0, learn: 0, viewer: [] };
-      reactions[slug] = agg;
-    }
-    // Only people who are actually attending influence the leaderboard order.
-    // A user who RSVPs "no" after hyping must not still tilt the pick.
-    if (comingIds.has(userId)) agg[kind] += 1;
-    // The viewer's own reactions stay visible on their buttons either way —
-    // local UI state, not a vote.
-    if (userId === user.id) agg.viewer.push(kind);
-    // Track per-user vote counts (definite + tentative).
-    if (comingIds.has(userId) || maybeSet.has(userId)) {
-      let v = votesByUser.get(userId);
-      if (!v) {
-        v = { hype: 0, teach: 0, learn: 0 };
-        votesByUser.set(userId, v);
-      }
-      v[kind] += 1;
-    }
-  }
-
-  // Top-5 selection. Mirrors RankedGameList's tie-break chain, with a bonus
-  // rule: "learn" votes only contribute to the support score when at least one
-  // person wants to teach the game. A learner with no teacher is wishful, not
-  // actionable, so the game shouldn't gain rank from learn-only votes.
-  const ranked = Object.entries(reactions)
-    .filter(([, agg]) => agg.hype > 0)
-    .sort((a, b) => {
-      const aAgg = a[1];
-      const bAgg = b[1];
-      if (bAgg.hype !== aAgg.hype) return bAgg.hype - aAgg.hype;
-      const aLearn = aAgg.teach > 0 ? aAgg.learn : 0;
-      const bLearn = bAgg.teach > 0 ? bAgg.learn : 0;
-      const aSupport = aAgg.teach + aLearn;
-      const bSupport = bAgg.teach + bLearn;
-      if (bSupport !== aSupport) return bSupport - aSupport;
-      return a[0].localeCompare(b[0]);
-    });
-  const topSlugs = ranked.slice(0, 5).map(([slug]) => slug);
-
-  // Look up names for everyone in the attendee set (definite + tentative).
-  const allAttendeeIds = [...new Set([...definiteIds, ...tentativeIds])];
-  const userNames = new Map<string, string>();
-  if (allAttendeeIds.length > 0) {
-    const placeholders = allAttendeeIds.map(() => "?").join(",");
-    const userResult = await getDb().execute({
-      sql: `SELECT id, name, email FROM user WHERE id IN (${placeholders})`,
-      args: allAttendeeIds,
-    });
-    for (const row of userResult.rows) {
-      const id = row.id as string;
-      const raw =
-        ((row.name as string | null) || (row.email as string | null) || "—").trim() || "—";
-      userNames.set(id, raw);
-    }
-  }
-
-  // Bringing assignment. Greedy with rarity-first ordering: process the
-  // top-5 game with the fewest definite-owners first so we don't orphan it
-  // by spending an owner's slot on a more-common game. Host has no per-user
-  // limit (they bring everything they own that's in the top 5).
-  const PER_NONHOST_LIMIT = 3;
-  type DefiniteAttendee = { userId: string; isHost: boolean };
-  const definiteAttendees: DefiniteAttendee[] = definiteIds.map((id) => ({
-    userId: id,
-    isHost: id === hostUserId,
-  }));
-  const bringing = new Map<string, string[]>();
-  for (const a of definiteAttendees) bringing.set(a.userId, []);
-
-  const rarity = (slug: string) =>
-    definiteAttendees.filter((a) => inventoryByUser.get(a.userId)?.has(slug)).length;
-  const orderedTop = [...topSlugs].sort((a, b) => rarity(a) - rarity(b));
-
-  for (const slug of orderedTop) {
-    const owners = definiteAttendees.filter((a) => inventoryByUser.get(a.userId)?.has(slug));
-    if (owners.length === 0) continue;
-    const hostOwner = owners.find((o) => o.isHost);
-    if (hostOwner) {
-      // Host owns it — they bring it from their collection. No slot consumed.
-      bringing.get(hostOwner.userId)?.push(slug);
-      continue;
-    }
-    const eligible = owners.filter(
-      (o) => (bringing.get(o.userId)?.length ?? 0) < PER_NONHOST_LIMIT,
-    );
-    if (eligible.length === 0) continue;
-    eligible.sort((a, b) => {
-      const aFree = PER_NONHOST_LIMIT - (bringing.get(a.userId)?.length ?? 0);
-      const bFree = PER_NONHOST_LIMIT - (bringing.get(b.userId)?.length ?? 0);
-      if (aFree !== bFree) return bFree - aFree;
-      // Tie: prefer the owner with fewer top-5 alternatives — picking a
-      // less-versatile owner here frees a more-versatile one for later games.
-      const aAlts = topSlugs.filter((s) => inventoryByUser.get(a.userId)?.has(s)).length;
-      const bAlts = topSlugs.filter((s) => inventoryByUser.get(b.userId)?.has(s)).length;
-      return aAlts - bAlts;
-    });
-    bringing.get(eligible[0].userId)?.push(slug);
-  }
-
-  // Build the attendees array (definite first, then tentative). The host
-  // always lists every top-5 game they own (their whole collection is at
-  // the venue); non-hosts list only the games they were assigned to bring.
-  // `hasRsvped` records whether the user has an explicit yes RSVP — false
-  // means they're in the list purely from availability and the host should
-  // ping them in real life.
-  type AttendeeOut = {
-    userId: string;
-    name: string;
-    isHost: boolean;
-    status: "definite" | "tentative";
-    hasRsvped: boolean;
-    votes: { hype: number; teach: number; learn: number };
-    bringing: string[];
-  };
-  const attendees: AttendeeOut[] = [];
-  for (const id of definiteIds) {
-    const isHost = id === hostUserId;
-    const inv = inventoryByUser.get(id);
-    const list = isHost ? topSlugs.filter((s) => inv?.has(s)) : (bringing.get(id) ?? []);
-    attendees.push({
-      userId: id,
-      name: userNames.get(id) ?? "—",
-      isHost,
-      status: "definite",
-      hasRsvped: manuallyRsvpedYes.has(id),
-      votes: votesByUser.get(id) ?? { hype: 0, teach: 0, learn: 0 },
-      bringing: list,
-    });
-  }
-  for (const id of tentativeIds) {
-    attendees.push({
-      userId: id,
-      name: userNames.get(id) ?? "—",
-      isHost: id === hostUserId,
-      status: "tentative",
-      hasRsvped: manuallyRsvpedYes.has(id),
-      votes: votesByUser.get(id) ?? { hype: 0, teach: 0, learn: 0 },
-      bringing: [],
-    });
-  }
-  attendees.sort((a, b) => {
-    if (a.isHost !== b.isHost) return a.isHost ? -1 : 1;
-    if (a.status !== b.status) return a.status === "definite" ? -1 : 1;
-    const aTotal = a.votes.hype + a.votes.teach + a.votes.learn;
-    const bTotal = b.votes.hype + b.votes.teach + b.votes.learn;
-    if (bTotal !== aTotal) return bTotal - aTotal;
-    return a.name.localeCompare(b.name);
-  });
-
-  return c.json(
-    AvailableGamesSchema.parse({
-      ownedSlugs,
-      definiteCount: definiteIds.length,
-      tentativeCount: tentativeIds.length,
-      participantIds: definiteIds,
-      reactions,
-      topSlugs,
-      attendees,
-      picksLockedAt,
-    }),
-  );
+  const view = await computeAvailableGamesPayload({ db: getDb(), date, viewerId: user.id });
+  if (!view) return errorResponse(c, 400, "date is not locked");
+  return c.json(AvailableGamesSchema.parse(view.wire));
 });
 
 /**
@@ -542,6 +268,10 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
               address = excluded.address`,
       args: [date, user.id, JSON.stringify(expected), hostUserId, hostName, eventTime, address],
     },
+    // Re-locking the same date invalidates any tombstone — the night is
+    // back on, so iCalendar subscribers should see a CONFIRMED event with
+    // a bumped SEQUENCE rather than a lingering CANCELLED.
+    { sql: "DELETE FROM calendar_unlocked_tombstones WHERE date_key = ?", args: [date] },
   ];
   for (const id of cans) {
     stmts.push({
@@ -558,14 +288,34 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
 adminCalendarLocksRoutes.delete("/lock", zJsonBody(UnlockBodySchema), async (c) => {
   const { date } = c.req.valid("json");
 
-  // Drop only the lock row. RSVPs and reactions stay so an explicit "no" (or
-  // a hyped game) survives an unlock + re-lock cycle — otherwise the lock
-  // handler's auto-RSVP-yes-for-cans flips a "no" voter back to "yes" without
-  // them clicking anything, and their inventory re-enters the games list.
-  await getDb().execute({
-    sql: "DELETE FROM locked_dates WHERE date_key = ?",
-    args: [date],
-  });
+  // Cascade: drop the lock row, its RSVPs, and any game reactions for the
+  // date. We used to keep RSVPs and reactions across unlock so an explicit
+  // "no" (or hype vote) survived an unlock+re-lock cycle, but that left
+  // orphans pointing at no game night — and once the availability views
+  // started honoring `rsvp.yes` as an implicit "can", those orphans turned
+  // into ghost availability that snapped back over the user's edits.
+  //
+  // Before the delete, copy the lock metadata into a tombstone row so the
+  // iCalendar feed can emit STATUS:CANCELLED for ~30 days. Without this,
+  // calendars that already saw the event would keep it forever — clients
+  // only act on what they see; absence doesn't trigger cleanup.
+  await getDb().batch(
+    [
+      {
+        sql: `INSERT OR REPLACE INTO calendar_unlocked_tombstones
+                (date_key, expected_user_ids_json, host_user_id, host_name,
+                 event_time, address, unlocked_at)
+              SELECT date_key, expected_user_ids_json, host_user_id, host_name,
+                     event_time, address, datetime('now')
+              FROM locked_dates WHERE date_key = ?`,
+        args: [date],
+      },
+      { sql: "DELETE FROM rsvps WHERE date_key = ?", args: [date] },
+      { sql: "DELETE FROM game_requests WHERE date_key = ?", args: [date] },
+      { sql: "DELETE FROM locked_dates WHERE date_key = ?", args: [date] },
+    ],
+    "write",
+  );
 
   return c.json(OkResponseSchema.parse({ ok: true }));
 });

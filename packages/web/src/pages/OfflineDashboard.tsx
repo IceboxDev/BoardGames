@@ -219,12 +219,17 @@ export default function OfflineDashboard() {
     }
   }
 
+  // Host candidate names must stay clean: the `(you)` suffix is a viewer-
+  // relative dropdown hint and gets attached at render time in LockInModal.
+  // Baking it into the name field here would persist it through to
+  // `locked_dates.host_name`, so every viewer would later see "Mantas (you)"
+  // regardless of who they actually are.
   const hostCandidates = useMemo<LockHost[]>(() => {
     if (!lockingDate) return [];
     const out: LockHost[] = [];
     const seen = new Set<string>();
     if (user?.id && user.name) {
-      out.push({ userId: user.id, name: `${user.name} (you)` });
+      out.push({ userId: user.id, name: user.name });
       seen.add(user.id);
     }
     const entries = allAvailability?.[lockingDate];

@@ -1,4 +1,5 @@
 import { useId, useMemo, useState } from "react";
+import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { LockedDate, LockHost, LockInForm } from "../../lib/calendar-locks";
 import { Button } from "../ui/Button";
 import { Field } from "../ui/Field";
@@ -30,6 +31,7 @@ export default function LockInModal({
   const hostId = useId();
   const timeId = useId();
   const addressId = useId();
+  const { user: viewer } = useCurrentUser();
 
   const [hostUserId, setHostUserId] = useState<string>(initialLock?.host?.userId ?? "");
   const [eventTime, setEventTime] = useState<string>(initialLock?.eventTime ?? "");
@@ -90,7 +92,7 @@ export default function LockInModal({
               <option value="">No host yet</option>
               {uniqueCandidates.map((c) => (
                 <option key={c.userId} value={c.userId}>
-                  {c.name}
+                  {c.userId === viewer?.id ? `${c.name} (you)` : c.name}
                 </option>
               ))}
             </select>

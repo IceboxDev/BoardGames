@@ -24,3 +24,14 @@ export type AdminEnv = {
 export type PublicEnv = {
   Variables: Record<string, never>;
 };
+
+/**
+ * Env for routes mounted under `/api/ical/*`. Authenticated via a path-token
+ * (no session). The middleware looks up `calendar_feed_tokens` by sha256
+ * hash and exposes the matched user id here.
+ */
+export type FeedEnv = {
+  Variables: {
+    feedUserId: string;
+  };
+};
