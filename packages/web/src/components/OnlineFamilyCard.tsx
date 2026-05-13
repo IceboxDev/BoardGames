@@ -31,7 +31,9 @@ export default function OnlineFamilyCard({
   const active = visibleMembers.find((m) => m.slug === activeSlug) ?? visibleMembers[0];
 
   const summary = compactSummary(active.bgg);
-  const description = active.bgg.description;
+  // Catalog-grid surface — same variant choice as GameCard.tsx. `loose` is
+  // sized to fully fill `line-clamp-6 text-sm`.
+  const description = active.descriptions.loose;
   const href = active.component ? `/play/${active.slug}` : undefined;
   const style: CSSProperties = {
     "--accent": active.accentHex,
