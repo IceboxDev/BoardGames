@@ -9,21 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Each draw turns the deck into a loaded trap, and hand management decides who can dodge, redirect, or delay the kitten.",
+    "Light push-your-luck party card game where players play skips, attacks, and peeks before drawing from a danger deck.",
   default:
-    "A silly cat deck turns every routine draw into tablewide dread as the pile thins. Hand management drives the game through Defuse, Skip, Attack, Shuffle, See the Future, and Nope cards. The last player not blasted by an Exploding Kitten wins.",
+    "Light push-your-luck party card game about avoiding the knockout cards in the draw pile. On a turn, play any action cards you want, then usually draw one card. Draw an Exploding Kitten without a Defuse, and you are out; the last survivor wins.",
   loose:
-    "A silly cat deck turns every routine draw into tablewide dread as the pile thins. Hand management drives the game: Defuse, Skip, Attack, Shuffle, See the Future, and Nope cards bend the next draw. The last player not blasted by a kitten wins, often after someone secretly plants danger for the next player. The rules’ signature panic turn is peek, Attack, get Noped, Shuffle, then draw and hope.",
+    "Light push-your-luck party card game where everyone tries to dodge the knockout cards in the draw pile. On a turn, a player may skip drawing, peek at the top cards, shuffle the deck, steal with Favor, or hit the next player with Attack, then usually draws one card. A Defuse saves a player from an Exploding Kitten and hides it back in the deck; without one, that player is out, and the last survivor wins. The 56-card deck uses Matthew Inman’s Oatmeal art, so the table talk is mostly jokes, accusations, and groans when a Nope cancels a rescue play.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:34:54.185Z",
+  generatedAt: "2026-05-13T20:19:27.214Z",
   model: "gpt-5.5",
-  durationMs: 24587,
+  durationMs: 22498,
   sources: [
     "https://www.explodingkittens.com/products/exploding-kittens-original-edition?variant=33359892643979",
-    "https://cdn.shopify.com/s/files/1/0345/9180/1483/files/ekoe-instructions-english.pdf?v=1743802429",
-    "https://www.chitag.com/single-post/2015/07/15/elan-lee-on-exploding-kittens-and-more",
-    "https://gamesbeat.com/exploring-the-lessons-of-the-exploding-kittens-8m-crowdfunding-campaign/",
+    "https://www.geekyhobbies.com/exploding-kittens-card-game-review-and-rules/",
   ],
 } as const;

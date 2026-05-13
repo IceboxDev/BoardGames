@@ -9,19 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A hidden target turns every clue into a public argument over vibes, using clue giving on a sliding spectrum.",
+    "Social party guessing game where a clue-giver hints at a hidden dial position and teammates argue where to point the needle.",
   default:
-    "A hidden bullseye turns simple opposites into loud arguments about exactly how hot coffee feels. The core mechanic is clue giving: one psychic offers a concept, then the team rotates a dial. Nearer the center scores more, while rivals can guess left or right.",
+    "Social party guessing game about finding a hidden target on a spectrum. Each round, one clue-giver sees the target, gives a clue between two opposite ideas, and teammates debate where to set the red dial. First team to reach 10 points wins.",
   loose:
-    "A hidden bullseye turns simple opposites into loud arguments about exactly how hot coffee feels. The core mechanic is clue giving: one psychic sees the target, offers a concept, and the team rotates a dial. Nearer the center scores more, while rivals can steal a point by calling left or right. The chunky plastic device stays in the box, with a screen hiding the target until the reveal.",
+    "Social party guessing game about placing a red dial on a hidden target along a spectrum. Each round, one clue-giver sees the target, chooses a card like Hot/Cold, gives one clue, then stays silent while teammates debate and set the dial. Reveal scores 2 to 4 points for closeness, and first team to reach 10 points wins. The plastic device sits in the box with a sliding screen, rotating wheel, red dial, and score markers.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:42:45.837Z",
+  generatedAt: "2026-05-13T20:23:47.726Z",
   model: "gpt-5.5",
-  durationMs: 28439,
+  durationMs: 31133,
   sources: [
     "https://www.cmyk.games/products/wavelength",
-    "https://www.northstreetgames.com/images/Rulebooks/Wavelength-Rulebook.pdf",
+    "https://news.lincc.org/sites/default/files/lot-manuals/Wavelength%20rules.pdf",
+    "https://www.reddit.com/r/boardgames/comments/ekx7vx/wavelength_is_an_amazing_party_game/",
   ],
 } as const;

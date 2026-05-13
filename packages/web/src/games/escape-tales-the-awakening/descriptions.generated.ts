@@ -9,21 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A father’s occult rescue turns every room search into a moral gamble, with exploration driven by dwindling action tokens.",
+    "Cooperative escape-room card game where players spend action tokens on map spots, solve code puzzles, and chase a better ending.",
   default:
-    "A father’s occult rescue turns an escape-room box into a grim tale of memory and grief. Exploration drives play through action-token searches on card-grid rooms. Finding Lizzy is the goal, but choices and Doom cards steer Samuel toward several endings.",
+    "Cooperative, story-heavy escape-room card game with no countdown clock. Each turn, players spend action tokens on map spots, read storybook entries, draw item or puzzle cards, and enter codes in the web app. The game ends in one of several story endings, with the best result tied to finding Lizzy and avoiding too many doom cards.",
   loose:
-    "A father’s occult rescue turns an escape-room box into a grim tale of grief and bad bargains. Exploration drives play: action tokens buy searches on card-grid rooms, and a web app checks puzzle answers. Finding Lizzy is the goal, but choices and Doom cards steer Samuel toward several endings. Each location card is a six-square map, so one wrong corner can burn a vital token.",
+    "Cooperative, story-heavy escape-room card game built around exploration, puzzles, and moral choices instead of a countdown clock. Each scene lays location cards on a board; players spend action tokens to inspect grid spots, read numbered storybook paragraphs, collect item and puzzle cards, and enter codes in the web app. The game ends at one of several storybook endings, with the best outcome tied to finding Lizzy and avoiding too many doom cards. The table feel is closer to a dark choose-your-path puzzle novel than a timed escape race.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:35:07.582Z",
+  generatedAt: "2026-05-13T20:19:15.769Z",
   model: "gpt-5.5",
-  durationMs: 40717,
+  durationMs: 20894,
   sources: [
     "https://boardanddice.com/product/escape-tales-the-awakening/",
-    "https://escapethereview.co.uk/escape-tales-the-awakening/",
-    "https://www.thegamingreview.com/11808/2019/05/15/board-game-review-escape-tales-the-awakening/",
+    "https://escape-tales.com/awakening",
+    "https://www.meeplemountain.com/reviews/escape-tales-the-awakening/",
     "https://cdn.1j1ju.com/medias/c6/1f/3f-escape-tales-the-awakening-rulebook.pdf",
   ],
 } as const;

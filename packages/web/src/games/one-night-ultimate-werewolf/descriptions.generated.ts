@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A single night turns hidden roles into shaky alibis, with social deduction driven by swapped cards and sudden accusations.",
+    "Fast social-deduction party game of secret roles, night powers, accusations, and one final vote to kill a werewolf.",
   default:
-    "Every accusation rests on a role card that may have changed during the night. Social deduction drives the table through claims, bluffs, and peeks. A final vote must expose at least one werewolf, unless another role has warped the target.",
+    "Social-deduction party game where villagers hunt hidden werewolves after one secret night. Each round, role cards peek, swap, or lie while the table argues over broken alibis. The village wins by voting out a werewolf; werewolves win if they survive.",
   loose:
-    "Every accusation rests on a role card that may have changed during the night. Social deduction drives the table as the Seer peeks, the Robber steals, and the Troublemaker swaps cards. A final vote kills one suspect; the village wins by hitting a werewolf, while roles like the Tanner may want a different outcome. Thick role tiles make midnight card swaps easier to grab without bending paper.",
+    "Social-deduction party game where villagers hunt hidden werewolves after one secret night. Each round, everyone gets a role card, closes their eyes while the app calls roles to peek, swap, or learn cards, then argues over whose story no longer fits. The village wins if the final vote kills a werewolf; the werewolves win if no werewolf is killed. The phone narration runs the night phase, so no moderator sits out.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:37:57.546Z",
+  generatedAt: "2026-05-13T20:20:35.441Z",
   model: "gpt-5.5",
-  durationMs: 48552,
+  durationMs: 18307,
   sources: [
     "https://beziergames.com/collections/hot-items/products/one-night-ultimate-werewolf",
-    "https://cdn.shopify.com/s/files/1/0740/4855/files/ONUW_rules-updated_for_BGG.pdf?337=",
-    "https://www.theboardgamefamily.com/2014/05/one-night-ultimate-werewolf-game-review/",
-    "https://www.theologyofgames.com/blog/2014/03/19/one-night-ultimate-werewolf-a-double-take-review",
+    "https://www.ultraboardgames.com/one-night-ultimate-werewolf/game-rules.php",
+    "https://www.wargamer.com/one-night-ultimate-werewolf/review",
   ],
 } as const;

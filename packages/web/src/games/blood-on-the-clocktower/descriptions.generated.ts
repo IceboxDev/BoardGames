@@ -9,23 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A dead Storyteller runs a village of whispering liars, using social deduction where corpses still argue and every claim can poison the case.",
+    "Social deduction party game where secret roles trade claims by day, wake for powers by night, and vote to execute suspects.",
   default:
-    "A murder village turns every whisper into evidence, since even the dead keep talking. It is social deduction, with a Storyteller managing secret roles, night powers, false information, and public executions from a hidden Grimoire. Good wins by killing the Demon; evil wins by lasting until only two-l",
+    "Social deduction party game about a good village hunting a hidden Demon. Each day, players share claims, whisper privately, nominate a suspect, and vote on an execution. Good wins if the Demon dies; evil wins if the town is cut down to two living players.",
   loose:
-    "A murder village turns every whisper into evidence, since even the dead keep talking. It is social deduction, with a Storyteller managing secret roles, night powers, false information, and public executions from a hidden Grimoire. Good wins by killing the Demon; evil wins by lasting until only two living players remain. Each dead player keeps one ghost vote, so a corpse can still swing the final execution.",
+    "Social deduction party game about a good village trying to find the hidden Demon while evil players lie with cover roles. Each day, players talk openly or whisper in pairs, nominate a suspect, and vote; each night, the Storyteller wakes roles to give clues, poison, or kill. Good wins by executing the Demon, while evil wins by reducing the town to two living players. Dead players still talk and each keeps one ghost vote, so early kills stay in the argument.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:33:26.490Z",
+  generatedAt: "2026-05-13T20:17:34.937Z",
   model: "gpt-5.5",
-  durationMs: 46529,
+  durationMs: 16177,
   sources: [
     "https://bloodontheclocktower.com/",
-    "https://bloodontheclocktower.com/pages/buy",
-    "https://bloodontheclocktower.com/products/blood-on-the-clocktower-the-game",
-    "https://wiki.bloodontheclocktower.com/Setup",
-    "https://wiki.bloodontheclocktower.com/States",
+    "https://boardgamegeek.com/boardgame/240980/blood-on-the-clocktower",
     "https://www.wargamer.com/blood-on-the-clocktower/review",
   ],
 } as const;

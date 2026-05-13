@@ -9,20 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A five-card market makes every camel grab a gamble, and hand management drives brisk trades of leather, spice, silver, gold, and gems.",
+    "Head-to-head trading card game where players draft goods and camels from a market, then sell sets for rupee tokens.",
   default:
-    "The five-card market turns Jaipur into a duel of timing, with early sales racing against richer set bonuses. Hand management drives each turn through taking, swapping, herding camels, or selling one good type. Two Seals of Excellence win the Maharaja’s favor.",
+    "Light head-to-head trading card game about timing market grabs and set sales for rupees. On a turn, take one goods card, take all camels, swap several cards with the market, or sell one goods type. Highest rupee total takes a seal each round, and two seals win.",
   loose:
-    "The five-card market makes timing sharp, as early sales pay rupees while bigger sets tempt a delay. Hand management drives each turn: take one good, swap cards with camels, gather all camels, or sell one type. The richer trader wins the round, and two Seals of Excellence earn the Maharaja’s court. A camel sweep fuels later trades but may flip fresh diamonds or gold for the rival.",
+    "Light head-to-head trading card game about timing market grabs and set sales for rupees. On a turn, take one goods card, scoop all camels, exchange several cards with the five-card market, or sell one goods type for tokens. A round ends when token piles run out or the deck cannot refill the market; highest rupee total takes a seal, and two seals win. The signature squeeze is selling early for high-value tokens or waiting for a larger sale bonus.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:36:10.539Z",
+  generatedAt: "2026-05-13T20:19:51.319Z",
   model: "gpt-5.5",
-  durationMs: 36526,
+  durationMs: 14444,
   sources: [
-    "https://www.spacecowboys-games.com/game/jaipur/",
-    "https://cdn.1j1ju.com/medias/04/3f/df-jaipur-rulebook.pdf",
+    "https://hobbygames.ru/download/rules/jaipur-rules.pdf",
     "https://www.wargamer.com/jaipur/board-game-review",
     "https://www.gamesradar.com/tabletop-gaming/jaipur-review/",
   ],

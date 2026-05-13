@@ -9,20 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A calm rack of numbers turns volatile as tile-rummy set collection lets every legal run and group on the table be rebuilt.",
+    "Light tile-rummy game where players empty racks by laying numbered tiles into same-color runs and same-number groups.",
   default:
-    "Every meld can unlock the whole table, turning a quiet rack of numbered tiles into a shared puzzle. Set collection drives each turn through colored runs and matching-number groups. The round ends when one player empties a rack, while leftovers become penalties.",
+    "Light tile-rummy game where players race to empty a rack of numbered tiles. On a turn, a player lays a 30-point opening meld, adds tiles to table sets, rearranges runs and groups, or draws one tile. The first empty rack wins, and leftover tiles count against everyone else.",
   loose:
-    "Every new meld can unlock the whole table, turning a quiet rack of numbered tiles into a shared puzzle. Set collection drives each turn: make runs of one color or groups of matching numbers. The round ends when one player empties a rack, while leftovers become penalties. A 30-point initial meld gates entry, then later turns can split runs, move tiles, and free jokers if every tile finishes in a legal set.",
+    "Light tile-rummy game where players try to empty a rack of numbered tiles by making same-color runs and same-number groups. On a turn, a player lays an opening meld, adds tiles to existing sets, rearranges the whole table into legal sets, or draws one tile. The first empty rack wins the round, while leftover tiles on other racks count as penalties. Jokers are wild, but rescuing one usually forces an immediate new play.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:38:39.894Z",
+  generatedAt: "2026-05-13T20:21:16.821Z",
   model: "gpt-5.5",
-  durationMs: 42347,
+  durationMs: 26184,
   sources: [
-    "https://www.rummikub.org/gameplay",
-    "https://www.rummikub.org/history",
     "https://www.rummikub.org/rules",
+    "https://www.pagat.com/rummy/rummikub.html",
+    "https://familygameshelf.com/2021/05/11/rummikub/",
   ],
 } as const;

@@ -9,20 +9,22 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Secret spies turn every mission roster into an accusation, with social deduction driven by votes, alibis, and one hidden sabotage card.",
+    "Hidden-role party game where a leader proposes mission teams, everyone votes, and spies secretly sabotage approved teams.",
   default:
-    "Secret spies make every mission roster feel like a public trial. Social deduction drives leader nominations, majority votes, and face-down mission cards. Resistance wins with three clean missions, while spies win by forcing three failures.",
+    "Hidden-role social deduction party game where rebels try to spot spies before missions are sabotaged. Each round, a leader proposes a mission team, the table votes approve or reject, and approved members secretly play success or fail cards. Three successful missions win for the rebels; three failed missions win for the spies.",
   loose:
-    "Secret spies turn each proposed mission team into a public trial, where a yes vote can look as guilty as a no. Social deduction drives the table through leader nominations, majority approval votes, and face-down mission cards. The Resistance needs three clean missions, while spies need three failures or five rejected teams in one round. Don Eskridge has said his love of improv and strange human communication fed the design.",
+    "Hidden-role social deduction party game where rebels argue over mission teams while spies lie from inside the group. Each round, the leader assigns team cards, everyone votes approve or reject, and an approved team secretly plays success or fail cards. Three successful missions win for the rebels; three failed missions, or five rejected teams in one round, win for the spies. No one is eliminated, so every accusation, vote pattern, and revealed fail card stays in play.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:31:49.135Z",
+  generatedAt: "2026-05-13T20:25:00.656Z",
   model: "gpt-5.5",
-  durationMs: 44438,
+  durationMs: 19628,
   sources: [
-    "https://indieboardsandcards.com/our-games/the-resistance/",
+    "https://boardgamegeek.com/boardgame/41114/the-resistance",
     "https://www.ultraboardgames.com/the-resistance/game-rules.php",
-    "https://pocketmags.com/us/tabletop-gaming-magazine/april-2018-17/articles/how-we-made",
+    "https://desktopgames.com.ua/games/642/resistance_rules_en.pdf",
+    "https://mechanicsofmagic.com/2022/04/07/critical-play-the-resistance/",
+    "https://coopboardgames.com/cooperative-board-game-reviews/the-resistance/",
   ],
 } as const;

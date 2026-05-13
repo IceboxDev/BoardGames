@@ -9,20 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Duplicate clues vanish before the guesser opens their eyes, turning cooperative clue-giving into a quiet fight for originality.",
+    "Cooperative word-party game where clue-givers write single-word hints, duplicate clues vanish, and the guesser names the card.",
   default:
-    "Obvious clues become dangerous because matching words disappear before the guesser sees them. Clue-giving drives each round as teammates write one-word hints in secret. The group scores by solving as many of 13 mystery cards as possible, while a wrong guess burns an extra card.",
+    "Cooperative word-party game about helping one guesser identify a mystery word. Each round, everyone else writes one-word clues on easels, cancels matching clues, then shows only the survivors. The team scores for correct guesses and counts successes when the deck runs out.",
   loose:
-    "Every clue is a gamble because the obvious words cancel each other out before the guesser sees them. Clue-giving drives each round as hidden teammates write one-word hints, compare them, and discard duplicates. The group wins by banking as many of 13 mystery cards as possible, with a wrong guess costing an extra card. The plastic easels make the table look like a tiny gallery of bad handwriting and sudden groans.",
+    "Cooperative word-party game about helping one guesser identify a mystery word from a few surviving hints. Each round, the guesser picks a numbered word on a card while everyone else secretly writes one-word clues, compares them, and removes any matches. A correct guess scores the card, a skip loses that card, and a wrong guess also burns the next card; when the deck empties, the team counts successes toward 13. The dry-erase easels double as card stands, and matching “clever” clues get flipped facedown before the guesser sees them.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:36:24.458Z",
+  generatedAt: "2026-05-13T20:19:53.888Z",
   model: "gpt-5.5",
-  durationMs: 48614,
+  durationMs: 15942,
   sources: [
-    "https://www.rprod.com/en/games/just-one",
-    "https://x.boardgamearena.net/data/rules/justone/JO_EN_Rules.pdf",
-    "https://boardgamegeek.com/boardgame/254640/just-one",
+    "https://www.rprod.com/en/press/just-one",
+    "https://cdn.svc.asmodee.net/production-rprod/storage/downloads/games/justone/jo-en01-rules-1612262916hCy2w.pdf",
+    "https://coopboardgames.com/cooperative-board-game-reviews/just-one-review",
   ],
 } as const;

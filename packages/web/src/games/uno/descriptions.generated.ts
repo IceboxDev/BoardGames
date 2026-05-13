@@ -9,20 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "One matching card can save a hand from a Draw Two pileup in this quick hand management classic of colors, numbers, and wilds.",
+    "Light hand-shedding card game where players match color or number, fire off action cards, and race to empty their hands.",
   default:
-    "Every near-empty hand sits one missed shout from punishment, while Skip, Reverse, and Draw cards wreck the table’s rhythm. Hand management drives each turn. Rounds end when one player sheds the last card, with leftovers feeding the score toward 500.",
+    "Light family hand-shedding card game where players race to dump a hand by matching the top discard’s color, number, or symbol. On a turn, a player lays one matching card or a wild, or draws from the deck if stuck. A round ends when one hand is empty; score cards left in other hands, and first to 500 points wins.",
   loose:
-    "Every near-empty hand sits one missed shout from punishment, while Skip, Reverse, and Draw cards wreck the table’s rhythm. Hand management drives each turn: play a card that matches the discard pile by color, number, or action, or draw. Rounds end when one player sheds the last card, with leftovers feeding the score toward 500. Current decks add color symbols and blank Wild Cards for house rules.",
+    "Light family hand-shedding card game where players race to dump a hand by matching the top discard’s color, number, or symbol. On a turn, a player lays one matching card or a wild, or draws from the deck if stuck. Emptying a hand ends the round; score cards left in other hands, and first to 500 points wins. The loud table moment is the one-card warning: miss it and get caught, then draw two penalty cards.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:42:17.398Z",
+  generatedAt: "2026-05-13T20:23:16.592Z",
   model: "gpt-5.5",
-  durationMs: 28504,
+  durationMs: 28783,
   sources: [
-    "https://shop.mattel.com/products/uno-card-game-42003",
-    "https://service.mattel.com/instruction_sheets/B0001-Eng.pdf",
-    "https://mattel.iprsoftware.com/news/unoR-celebrates-50-years-of-bringing-people-together",
+    "https://shop.mattel.com/products/uno-card-game-42003?bvstate=pg%3A2%2Fct%3Ar&psrid=337165450",
+    "https://m.service.mattel.com/us/Technical/productDetail?prodno=42003",
+    "https://m.service.mattel.com/us/Technical/productDetail?prodno=W2085",
+    "https://service.mattel.com//instruction_sheets/W2085-Eng.pdf",
   ],
 } as const;

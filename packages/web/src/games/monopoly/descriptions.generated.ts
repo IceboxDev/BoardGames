@@ -9,20 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A lap around Atlantic City turns lucky dice into rent traps, using roll-and-move to feed auctions, trades, and hostile development.",
+    "Family-weight roll-and-move property trading game where players buy streets, auction deeds, charge rent, and cut deals.",
   default:
-    "Atlantic City real estate becomes a slow squeeze, as cheap deeds turn into rent traps after one completed color group. Roll-and-move sets the tempo: dice choose the space, then auctions and trades decide who can build. Victory means staying solvent while every rival goes bankrupt.",
+    "Family-weight roll-and-move property trading game about buying streets and squeezing rent from rivals. A turn is a dice roll around the board, then a purchase, auction, rent payment, card draw, tax, or jail space. The last solvent player wins after everyone else goes bankrupt.",
   loose:
-    "Atlantic City real estate becomes a slow squeeze, as cheap deeds turn into rent traps after one completed color group. Roll-and-move sets the tempo: dice choose the space, then buying, auctions, mortgages, and deals decide who can build. Victory means staying solvent while every rival goes bankrupt. The 1904 ancestor, Lizzie Magie’s Landlord’s Game, was meant to expose landlord power.",
+    "Family-weight roll-and-move property trading game about buying streets and squeezing rent from rivals. A turn is a dice roll around the board, then a purchase, auction, rent payment, Chance or Community Chest card, tax, or jail space. Owning a full color set allows houses and hotels, and the last solvent player wins after everyone else goes bankrupt. The table fills with title deed cards, paper cash, green houses, red hotels, and little tokens circling Go.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:37:44.122Z",
+  generatedAt: "2026-05-13T20:20:23.701Z",
   model: "gpt-5.5",
-  durationMs: 61139,
+  durationMs: 16068,
   sources: [
-    "https://instructions.hasbro.com/en-us/instruction/monopoly-game",
-    "https://www.britannica.com/sports/Monopoly-board-game",
-    "https://www.museumofplay.org/toys/monopoly/",
+    "https://instructions.hasbro.com/en-my/instruction/monopoly-classic-game",
+    "https://www.hasbro.com/common/instruct/Monopoly_Vintage.pdf",
+    "https://en.wikipedia.org/wiki/Monopoly_%28game%29",
   ],
 } as const;

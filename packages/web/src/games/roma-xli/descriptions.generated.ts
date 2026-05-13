@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "After Caesar’s murder, face-down exile votes turn hand management into a Roman knife fight of allies, legions, and betrayals.",
+    "Social deduction card game where senators play secret exile votes, public actions, and legion shields while cutting deals.",
   default:
-    "After Caesar’s murder, every alliance points toward the next exile. Hand management drives each turn through hidden votes, protective legions, open actions, and permanent boosts. The last contender left on the map claims Rome.",
+    "Social deduction party-strategy game about surviving secret votes and shifting alliances. On a turn, play one card face down as an exile vote or legion shield, or face up for an action or boost, then roll the die. When the exile track hits red, votes flip; the final un-exiled contender wins.",
   loose:
-    "After Caesar’s murder, every ally can become the next name on the exile slate. Hand management drives each turn, with cards hidden as votes or legions, or exposed for actions and lasting boosts. The last contender on the map claims Rome, but exiles can bargain, claw back influence, and re-enter the knife fight. All nine Roman leaders begin in play, and unchosen rivals still take automated turns.",
+    "Social deduction party-strategy game about outlasting rival Roman power brokers with secret votes, alliances, and betrayals. On a turn, play one card face down as an exile vote or legion shield, or face up for an action or boost, then refill and roll for track movement or gold. When the exile track hits red, hidden votes flip and the most-voted unprotected character is exiled; the last contender on the map wins. Empty seats run as automated Ghosts, and exiled players can still bargain for a comeback.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:40:03.578Z",
+  generatedAt: "2026-05-13T20:21:10.790Z",
   model: "gpt-5.5",
-  durationMs: 129332,
+  durationMs: 24253,
   sources: [
-    "https://facadegames.com/",
     "https://www.wargamer.com/board-games/roma-xli",
-    "https://www.reddit.com/r/boardgames/comments/1s3cf6z/im_the_designer_of_the_dark_cities_series_salem/",
-    "https://www.kicktraq.com/projects/facadegames/roma-xli-game/",
+    "https://www.thegamesteward.com/products/roma-xli-everything-new-pledge-kickstarter-edition-board-game",
+    "https://frogames.it/en/products/roma-xli",
   ],
 } as const;

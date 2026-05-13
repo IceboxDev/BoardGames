@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Fairy-tale card powers turn a two-player trick-taking duel into a knife-edge contest of timing, trump shifts, and restraint.",
+    "Head-to-head trick-taking card game where each suit-following duel matters, but taking too many tricks scores nothing.",
   default:
-    "Fairy-tale card powers make every small lead dangerous, because a clean sweep can become a punishment. Its core is trick-taking. Rounds score toward 21 points, but taking too many tricks earns nothing.",
+    "Head-to-head trick-taking card game about winning the right number of tricks, not simply the most. Each trick, one card leads, the other must follow suit if able, and trump or highest lead suit wins. First to 21 points wins after round scores punish greedy sweeps.",
   loose:
-    "Fairy-tale card powers make every small lead feel dangerous, because a clean sweep can become a punishment. Its core is trick-taking. Rounds score toward 21 points, but taking ten or more of the thirteen tricks earns nothing while a humble 0–3 tricks pays richly. A Fox can swap the decree card and change trump before the trick resolves; a Swan lets the loser lead next.",
+    "Head-to-head trick-taking card game about winning the right number of tricks, not simply the most. Each trick, one card leads, the other must follow suit if able, and trump or highest lead suit wins. Rounds score best for seven to nine tricks or for staying humble at three or fewer; first to 21 points wins. The small deck uses bells, keys, and moons, with odd cards like Fox and Swan bending trump and turn order.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:41:32.928Z",
+  generatedAt: "2026-05-13T20:22:41.699Z",
   model: "gpt-5.5",
-  durationMs: 33444,
+  durationMs: 16528,
   sources: [
     "https://renegadegamestudios.com/content/File%20Storage%20for%20site/Rulebooks/Fox%20in%20the%20Forest/FitFDeluxe%20Rulebook_WEB.pdf",
-    "https://opinionatedgamers.com/2017/09/13/the-fox-in-the-forest-game-review-by-chris-wray/",
-    "https://renegadegamestudios.com/blog/the-fox-in-the-forest-deluxe-is-available-now/",
-    "https://en.boardgamearena.com/gamepanel?game=thefoxintheforest",
+    "https://tabletopbellhop.com/game-reviews/review-fox-in-the-forest/",
+    "https://www.tabletopgaming.co.uk/reviews/the-fox-in-the-forest-review/",
   ],
 } as const;

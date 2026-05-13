@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A narrowing national-park trail turns each stop into a small denial puzzle, with worker placement sending two hikers down one-way paths.",
+    "Gentle worker-placement game where hikers move one way along a trail, gather tokens, take photos, and spend supplies to visit parks.",
   default:
-    "Serene park art hides a tight race down a one-way trail. Worker placement sends two hikers to gather resources, photos, wildlife, gear, and canteens across three seasons. The final score rewards visited parks, photos, and personal goals.",
+    "Family-weight worker-placement game about hiking U.S. national parks and collecting supplies from a one-way trail. On a turn, move one of your two hikers forward to a site, take its action, and use a campfire if the site is occupied. After the fourth season, most points from visited parks, photos, year bonus, and first-hiker marker wins.",
   loose:
-    "Serene park art hides a tight race along a one-way trail, where each hiker can block a coveted stop. Worker placement sends two hikers to collect resources, photos, wildlife, gear, canteens, campsites, and passion bonuses across three seasons. The final score rewards visited parks, photos, and personal goals, not distance traveled. This edition adds all 63 parks with new art by Josh Emrich and Lisk Feng.",
+    "Family-weight worker-placement and resource collection game about hiking U.S. national parks and choosing scarce trail sites before other hikers block them. On a turn, move one of your two hikers only forward to a site, then gain forest, mountain, sun, water, photos, canteen actions, campsites, or gear. At trail end, reserve a park, buy gear, or pay the shown tokens to visit a park; after the fourth season, most points wins. This edition folds in camping and wildlife ideas, includes all 63 park cards, and uses new Josh Emrich and Lisk Feng art.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:37:49.532Z",
+  generatedAt: "2026-05-13T20:20:56.370Z",
   model: "gpt-5.5",
-  durationMs: 33904,
+  durationMs: 25502,
   sources: [
     "https://keymaster.fun/products/parks-2nd-edition",
-    "https://dicetower.com/board-game/437306",
-    "https://hanhangames.com/products/parks-second-edition",
-    "https://www.boardgamevideo.com/videos/parks-2nd-edition-playthru-wOObTj08Dv4",
+    "https://board-game-rules.com/wp-content/uploads/2025/01/parks_Official-Rules.pdf",
+    "https://www.gamenerdz.com/parks-2nd-edition-standard-edition",
   ],
 } as const;

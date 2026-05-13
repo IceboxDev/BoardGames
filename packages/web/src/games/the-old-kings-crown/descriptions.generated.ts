@@ -9,21 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Rival heirs telegraph claims with Heralds, then hide armies in face-down clashes driven by hand management.",
+    "Thinky card-driven area-control game where players bluff facedown cards into regions, add supporters, and win influence.",
   default:
-    "Rival heirs stake visible claims with Heralds, then spring hidden cards into three simultaneous clashes. The core is hand management. Influence crowns the claimant who can win locations without draining the hand that fuels every bluff.",
+    "Thinky card-driven area-control game where rival factions bluff cards into three regions and fight for influence. Each round, players bid, place a Herald, assign facedown cards, then reveal clashes with supporters and powers. Highest influence after the final round wins.",
   loose:
-    "Rival heirs stake visible claims with Heralds, then spring hidden cards into three simultaneous clashes across a ruined kingdom. The core is hand management. Influence crowns the claimant who can win locations without draining the hand that fuels every bluff. Each round follows Spring, Summer, Autumn, and Winter, so a card can fight, govern in council, or vanish on a Journey before cleanup.",
+    "Thinky card-driven area-control game where rival factions bluff cards into three regions and fight for influence. Each round, players bid for kingdom cards, place a Herald, seed facedown cards, then reveal clashes and add supporters and powers. Won clashes claim location rewards: influence, council seats, lore for new cards, or card recovery; highest influence after the final round wins. The seasonal track is the table cue for when tactics, faction cards, and favor powers can fire.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:41:48.893Z",
+  generatedAt: "2026-05-13T20:23:06.536Z",
   model: "gpt-5.5",
-  durationMs: 25983,
+  durationMs: 38886,
   sources: [
+    "https://boardgamegeek.com/boardgame/357873/the-old-kings-crown",
+    "https://www.eerieidolgames.com/",
     "https://www.wargamer.com/the-old-kings-crown/board-game-review",
     "https://www.meeplemountain.com/reviews/the-old-kings-crown/",
-    "https://www.nopunincluded.com/npi/theoldkingscrown",
-    "https://zatu.com/products/the-old-kings-crown",
   ],
 } as const;

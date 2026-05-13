@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A Red Scare studio turns every film into evidence, with hidden roles deciding who can be trusted near the final cut.",
+    "Hidden-role social deduction game where studio jobs, dice, and secret propaganda cards steer each movie toward a team.",
   default:
-    "A Red Scare studio turns genre posters, dice, and table talk into evidence against friends. The core mechanic is hidden roles: Patriots and Communists lie while studio jobs shape each film. Win by tinting four films for one side, unless the Rising Star keeps the finale razor-close.",
+    "Hidden-role social deduction game about a film studio split between Patriots, Communists, and maybe a Rising Star. Each round, everyone uses a job power or rerolls dice, then star-side dice add secret propaganda cards to the movie. Four films for one faction wins, unless the Rising Star keeps the score nearly tied.",
   loose:
-    "A Red Scare movie studio turns production notes, genre posters, and table talk into evidence against friends. The core mechanic is hidden roles: Patriots, Communists, and sometimes a Rising Star lie about their loyalties while studio jobs shape each round. Patriots or Communists win by tinting four films their way; the Rising Star wants a late near-tie. Custom eight-sided dice blacklist half the table each round.",
+    "Hidden-role social deduction game about a film studio where Patriots and Communists steer each movie’s message. Each round, everyone uses a job power or rerolls dice, then star-side dice let those players secretly add propaganda cards to the poster. Four Patriot films or four Communist films wins for that team; a Rising Star can steal it if the sides stay nearly tied. The faux book box, filmstrip overlays, genre posters, and custom dice make the table look like a studio archive.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:35:43.151Z",
+  generatedAt: "2026-05-13T20:19:53.297Z",
   model: "gpt-5.5",
-  durationMs: 22956,
+  durationMs: 21340,
   sources: [
     "https://facadegames.com/products/hollywood-1947",
-    "https://www.tabletopgaming.co.uk/Reviews/hollywood-1947-game-review/",
     "https://www.boardseyeview.net/post/hollywood-1947",
-    "https://gamers-hq.de/media/pdf/68/2d/dc/Hollywood_1947_Rulebook.pdf",
+    "https://www.tabletopgaming.co.uk/Reviews/hollywood-1947-game-review/",
   ],
 } as const;

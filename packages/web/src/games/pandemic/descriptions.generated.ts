@@ -9,20 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Old hotspots return when Epidemic cards recycle the infection deck, turning hand management into urgent triage.",
+    "Cooperative crisis-management game where the team spends actions flying between cities, clearing disease cubes, and building cure sets.",
   default:
-    "Old hotspots keep coming back, so yesterday’s cleanup can become tomorrow’s outbreak. Hand management drives the race, as city cards fuel travel, research, and cures. The team wins by curing all four diseases before the deck, cubes, or outbreak track collapse.",
+    "Cooperative crisis-management game about stopping four diseases on a world map. Each turn, a specialist takes four actions to move, treat cubes, trade city cards, or build research stations. Discover all four cures to win before outbreaks, empty decks, or cube shortages end the game.",
   loose:
-    "Old hotspots keep coming back, so yesterday’s cleanup can become tomorrow’s outbreak. Hand management drives the race, as city cards fuel travel, research, and cures. The team wins by curing all four diseases before outbreaks, cube shortages, or an empty deck ends the game. Each Epidemic infects from the bottom, then stacks the shuffled discard pile on top.",
+    "Cooperative crisis-management game about stopping four diseases on a world map before the decks and outbreak track crush the team. Each turn, a specialist spends four actions to move between city nodes, remove cubes, trade city cards, or build a research station. Then cards spread new cubes, and epidemic cards recycle infected cities back onto the top of the infection deck. Discover all four cures to win; lose to too many outbreaks, an empty player deck, or a cube supply running out.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:37:54.246Z",
+  generatedAt: "2026-05-13T20:20:46.537Z",
   model: "gpt-5.5",
-  durationMs: 39501,
+  durationMs: 22835,
   sources: [
     "https://www.zmangames.com/game/pandemic/",
     "https://cdn.svc.asmodee.net/production-zman/uploads/2024/09/Pandemic_Rulebook.pdf",
-    "https://www.thinkglobalhealth.org/article/pandemic-game-gone-viral",
+    "https://www.wargamer.com/pandemic/review",
   ],
 } as const;

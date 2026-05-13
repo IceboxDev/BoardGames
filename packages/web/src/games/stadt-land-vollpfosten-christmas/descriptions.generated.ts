@@ -9,19 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Christmas prompts turn family word recall into a speed duel, using hand management as letter cards hit the table before better answers arrive.",
+    "Fast party word game where players race to play starting-letter cards for Christmas-flavored categories.",
   default:
-    "Christmas categories turn Stadt-Land-Fluss recall into a noisy race where fast answers beat perfect ones. Hand management drives each round as players shed letter cards by naming matching words. Emptying a hand wins, but action cards and counters can refill it.",
+    "Fast party word card game in the Stadt-Land-Fluss mold. Each round, a category is read, everyone races to play a matching starting-letter card and say a valid word. The fastest correct answer discards; empty a hand first to win the round, usually racing to three round wins.",
   loose:
-    "Christmas categories turn Stadt-Land-Fluss recall into a noisy race where a perfect answer matters less than saying it first. Hand management drives each round, as players shed letter cards by naming words that match the revealed prompt. A round ends when one hand is empty, unless counters and penalties refill it. The Vollpfosten card works as both joker and ambush, punishing a rival who thought “Affe” was safe.",
+    "Fast party word card game in the Stadt-Land-Fluss mold, with Christmas categories and a race to shed letter cards. Each round, a category card is read, everyone slaps down a matching starting-letter card and says a valid word, and the fastest correct answer discards. A wrong word draws a penalty card, and the first hand emptied wins the round. Wild cards can stand in for any letter or counter another answer, while action cards pass hands around the table.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:40:47.952Z",
+  generatedAt: "2026-05-13T20:22:13.404Z",
   model: "gpt-5.5",
-  durationMs: 44374,
+  durationMs: 22475,
   sources: [
     "https://www.denkriesen.com/products/stadt-land-vollpfosten-das-kartenspiel-christmas-edition",
     "https://www.brettspielversand.de/mediafiles/spieleanleitungen/denkriesen/254-0015_StadtLandVollpfosten_Classic_Anleitung.pdf",
+    "https://www.roterdorn.de/spiel/stadt-land-vollpfosten-das-kartenspiel-rotlicht-edition/",
   ],
 } as const;

@@ -9,20 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A shared market of bright tiles turns every tidy mosaic plan into a trap-laced drafting puzzle.",
+    "Abstract tile-drafting puzzle where players take one color from shared factory discs and fit tiles into rows for mosaic points.",
   default:
-    "A shared market of bright tiles turns an orderly mosaic into a timing puzzle. Drafting drives each round as players take all tiles of one color from a factory or the center. Overflow tiles crash onto the floor for penalties.",
+    "Abstract tile-drafting strategy game about building a personal mosaic from a shared market. Each turn, take every tile of one color from a factory disc or the center and place them in one pattern row. Completed rows move tiles to the wall for adjacency points; after a horizontal row is complete, highest score wins.",
   loose:
-    "A shared market of candy-bright tiles turns an orderly mosaic into a knife-edge timing puzzle. Drafting drives each round: take every tile of one color from a factory or the center, then fit them into one pattern row. The highest score comes from linked wall placements and endgame rows, columns, and color sets, while overflow crashes onto the floor for penalties. The resin tiles clack into a cloth bag between rounds.",
+    "Abstract tile-drafting strategy game about building a personal mosaic from a shared market of colored tiles. Each turn, a player takes every tile of one color from a factory disc or the table center, slots them into one pattern row, and sends overflow to a penalty floor. Full rows move one tile onto the wall, scoring adjacent chains; after any horizontal wall row is complete, highest score wins with end bonuses for rows, columns, and colors. The chunky resin tiles and small factory coasters make every draft easy to read across the table.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:28:39.632Z",
+  generatedAt: "2026-05-13T20:17:18.759Z",
   model: "gpt-5.5",
-  durationMs: 32350,
+  durationMs: 18418,
   sources: [
-    "https://www.gamesradar.com/azul-board-game-review/",
-    "https://cdn.svc.asmodee.net/production-nextmove/uploads/sites/4/2024/06/EN-Azul-CB-Rules_2024_compressed.pdf",
-    "https://boardgamegeek.com/boardgame/230802/azul",
+    "https://www.nextmove-games.com/en/azul/azul-game/",
+    "https://cdn.svc.asmodee.net/production-nextmove/uploads/sites/4/2024/06/EN-Azul-Rules-Next-Move-web.pdf",
+    "https://www.wargamer.com/azul/review",
   ],
 } as const;

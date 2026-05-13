@@ -9,20 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Face-down Liar's cards turn familiar color matching into bluffing, with every claim inviting a callout from the table.",
+    "Bluffing card-shedding game where players match colors or numbers, then play Liar cards face down and dare the table to challenge.",
   default:
-    "Face-down Liar's cards make ordinary UNO turns feel suspicious. Bluffing drives each turn as hidden cards are announced, challenged, and sometimes exposed. The first player to empty their hand wins, but a caught final lie keeps the round alive.",
+    "Bluffing card-shedding game where the goal is still to empty your hand. On a turn, play a matching card face up, or place a Liar card face down and claim what it is; anyone may challenge before play moves on. False claims make the liar draw, true claims punish the challenger, and the first empty hand wins.",
   loose:
-    "Face-down Liar's cards turn familiar UNO tempo into shaky claims and sudden callouts. Bluffing drives each turn: a hidden card may match the pile, or only sound legal. The first player to shed every card wins, unless a final facedown lie gets exposed. The 112-card deck pairs each colored number with a regular card and a Liar's version; action cards feed the same suspicion engine.",
+    "Bluffing card-shedding game where the goal is still to empty your hand, but many cards can be played face down with a claimed color, number, or symbol. On a turn, play a matching card face up, or drop a Liar card face down and announce what it supposedly is; anyone may challenge before play moves on. If the claim was false, the liar takes the card back and draws; if it was true, the challenger draws, and the first empty hand wins. The memorable beat is the staredown over a face-down card, followed by the same old shout when a hand drops to one card.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:36:45.719Z",
+  generatedAt: "2026-05-13T20:20:07.632Z",
   model: "gpt-5.5",
-  durationMs: 38684,
+  durationMs: 16312,
   sources: [
-    "https://shop.mattel.com/products/liars-uno-card-game-jlh43",
     "https://service.mattel.com/instruction_sheets/JLH43%20English.pdf",
+    "https://shop.mattel.com/fr-ca/products/liars-uno-jeu-de-cartes-jlh43-fr-ca",
     "https://www.geekyhobbies.com/liars-uno-rules/",
+    "https://officialgamerules.org/game-rules/liars-uno-rules/",
   ],
 } as const;

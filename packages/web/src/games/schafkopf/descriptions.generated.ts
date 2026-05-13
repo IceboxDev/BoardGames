@@ -9,19 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A called Ace can hide an ally across the table in a Bavarian trick-taking game of Obers, Unters, and costly solos.",
+    "Hidden-partner point-trick card game where bidders call an Ace or go solo, then follow suit to capture high-value tricks.",
   default:
-    "A called Ace can turn a quiet opponent into a secret ally across the table. The core mechanic is trick-taking. The declarer’s side needs 61 of the deck’s 120 card points, unless a soloist rejects help and faces all three defenders.",
+    "Traditional Bavarian point-trick card game with bidding, fixed trumps, and a hidden partner in the called-Ace contract. After the deal, someone passes, calls an Ace, or announces a Solo or Wenz. The declarer’s side wins with at least 61 of 120 card points; defenders win on 60 or more.",
   loose:
-    "A called Ace can turn a quiet opponent into a secret ally across the table. The core mechanic is trick-taking. The declarer’s side needs 61 of the deck’s 120 card points, unless a soloist rejects help and faces all three defenders. A 32-card Bavarian or Franconian pack gives the game its texture, with Acorns, Leaves, Hearts, Bells, and the high-ranking Obers and Unters.",
+    "Traditional Bavarian point-trick card game with bidding, fixed trump ranks, and a hidden partner in the common called-Ace contract. After the deal, someone passes, calls an Ace, or announces a Solo or Wenz; each trick starts with a led suit, everyone follows suit if able, and the highest trump or led-suit card takes it. The declarer’s side wins by collecting at least 61 of the 120 card points; the defense wins on 60 or more, with solos paying more. The called Ace reveal is the signature moment: the partner may stay unknown until that suit is finally led.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:39:10.769Z",
+  generatedAt: "2026-05-13T20:21:27.036Z",
   model: "gpt-5.5",
-  durationMs: 32897,
+  durationMs: 21539,
   sources: [
     "https://www.pagat.com/schafkopf/bavarian.html",
-    "https://www.schafkopfschule.de/regeln.html?file=files%2Finhalte%2Fdokumente%2FSpielen%2FRegeln%2FSchafkopfregeln-Archiv-29.3.2007-English.pdf",
+    "https://www.sauspiel.de/hilfe/schafkopf-regeln",
+    "https://schafkopfschule.de/spielanleitungen.html",
   ],
 } as const;

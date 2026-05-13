@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Silent astronauts turn every card into a clue in cooperative trick-taking with rockets as trump and table talk rationed to one signal.",
+    "Cooperative trick-taker where players silently steer tricks so assigned task cards land with the right hands.",
   default:
-    "Shared silence makes familiar card play feel like a pressure test for trust and inference. It uses trick-taking with rockets as trump and table talk sharply limited. The crew succeeds only when each player wins the exact task cards assigned for that mission.",
+    "Cooperative trick-taking card game where the team clears mission goals under strict table-talk limits. Each trick, a leader plays a suit, others follow if able, and the highest led card or rocket trump wins the pile. A mission succeeds only when every assigned card lands with the right player.",
   loose:
-    "Shared silence makes familiar card play feel like a pressure test for trust and inference. It uses trick-taking: follow suit when possible, let rockets trump, and read intent from every discard. The crew succeeds only when each player wins the exact task cards assigned for that mission. A radio token can mark one card as highest, lowest, or only in its suit, turning a tiny clue into a table-wide argument conducted in stares.",
+    "Cooperative trick-taker where the team clears mission goals under strict table-talk limits. Each trick, a leader plays a suit, others follow if able, and the highest led card or rocket trump wins the pile. A mission succeeds only when every assigned card lands with the right player, sometimes in order; one wrong capture fails it. One communication token can mark a card as highest, lowest, or only in its suit, and the logbook runs through 50 missions.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:41:49.840Z",
+  generatedAt: "2026-05-13T20:22:47.809Z",
   model: "gpt-5.5",
-  durationMs: 52484,
+  durationMs: 24843,
   sources: [
-    "https://store.thamesandkosmos.com/collections/board-games/products/the-crew",
-    "https://thamesandkosmos.com/manuals/full/691868_Crew_Manual.pdf",
-    "https://www.geeksundergrace.com/tabletop/reviews-tabletop/review-the-crew-the-quest-for-planet-nine/",
-    "https://coopboardgames.com/cooperative-board-game-reviews/the-crew-the-quest-for-planet-nine/",
+    "https://www.rulespal.com/the-crew/rulebook",
+    "https://whatsericplaying.com/2020/03/16/the-crew/",
+    "https://tabletopbellhop.com/game-reviews/the-crew/",
   ],
 } as const;

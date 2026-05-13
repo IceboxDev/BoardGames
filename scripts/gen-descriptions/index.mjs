@@ -90,14 +90,12 @@ function pickSlugs(flags, snapshot) {
     if (!snapshot[flags.slug]) die(`slug "${flags.slug}" not in snapshot`);
     return [flags.slug];
   }
-  if (flags.all) {
-    // BGG-listed games only — homebrew (bggId: 0) doesn't have research material
-    // and would burn a call returning generic Wikipedia-tier prose.
-    return allSlugs.filter((s) => (snapshot[s]?.id ?? 0) > 0);
-  }
+  // bggId=0 entries (D&D, Chess variants, etc.) are still in the snapshot
+  // with a name and (often) a description. The model can web_search and
+  // produce real content for these; we no longer filter them out.
+  if (flags.all) return allSlugs;
   if (flags.missing) {
     return allSlugs.filter((s) => {
-      if ((snapshot[s]?.id ?? 0) === 0) return false;
       const target = join(GAMES_ROOT, s, "descriptions.generated.ts");
       return !existsSync(target);
     });

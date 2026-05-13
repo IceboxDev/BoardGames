@@ -9,20 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Exact prediction turns each trick into a liability, with Wizards, Jesters, and rising hands sharpening a trick-taking frame.",
+    "Exact-bid trick-taker where each hand grows by one card, then players call their trick count before playing trump, Wizards, and Jesters.",
   default:
-    "Exact prediction turns every trick into a liability, because one extra win can wreck a round. Trick-taking drives the game as hands grow, trump changes, Wizards beat everything, and Jesters usually lose. Players score by matching their bid, and the highest total after the final all-cards round wins.",
+    "Exact-bid trick-taking card game about calling exactly how many tricks a hand will take. Each hand grows by one card, trump is revealed, everyone bids a number, then plays tricks while following suit when possible. Correct bids score bonuses, missed bids lose points, and the highest final score wins.",
   loose:
-    "Exact prediction turns every trick into a liability, because one extra win can wreck a round. Trick-taking drives the game as hands grow, trump changes, Wizards beat everything, and Jesters usually lose. Players score by matching their bid, and the highest total after the final all-cards round wins. Ken Fisher conceived it at a Haliburton cottage, then self-published 10,000 copies in 1986.",
+    "Exact-bid trick-taking card game about predicting your own haul before the cards hit the table. Each hand grows by one card, trump is revealed, everyone bids a trick total, then plays cards while following suit when possible. Hit the bid exactly to score bonuses; miss high or low and lose points, with the highest final score winning. The custom deck adds four always-winning Wizards and four usually-losing Jesters.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:42:54.628Z",
+  generatedAt: "2026-05-13T20:23:45.000Z",
   model: "gpt-5.5",
-  durationMs: 23854,
+  durationMs: 13442,
   sources: [
-    "https://www.usgamesinc.com/Original-Wizard-R-Card-Game/",
-    "https://www.usgamesinc.com/The-Development-of-Wizard-Card-Game.html",
-    "https://www.usgamesinc.com/cart.php?action=download&id=14217&storage=XLite%5CModule%5CCDev%5CFileAttachments%5CModel%5CProduct%5CAttachment%5CStorage&target=storage",
+    "https://www.usgamesinc.com/files/attachments/850/2025_FAQ_wizard.pdf",
+    "https://officialgamerules.org/game-rules/wizard-card-game-rules/",
   ],
 } as const;

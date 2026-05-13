@@ -9,20 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Dungeon combat becomes a shrinking hand of mercenary choices, with hand management driving each desperate room.",
+    "Cooperative campaign dungeon-crawler where mercenaries pick two action cards, move on hex maps, and kill monsters.",
   default:
-    "Every dungeon fight is a rationing problem, where powerful attacks burn the same cards that keep mercenaries alive. Hand management drives each round of combat. The campaign advances by clearing scenario objectives before exhaustion empties the party's decks.",
+    "Cooperative campaign dungeon-crawler about tactical fights in linked city scenarios. Each round, players choose two ability cards, reveal initiative, then use one top action and one bottom action. The party wins a scenario by completing its objective before too many cards are lost.",
   loose:
-    "Every fight turns a fantasy dungeon crawl into a rationing problem, where big attacks burn the same cards needed to stay alive. Hand management drives combat, with two chosen cards setting initiative and actions each round. The campaign advances by clearing scenario objectives before exhaustion empties the party's decks. The book opens flat as the map, so rooms appear on printed hexes instead of loose tiles.",
+    "Cooperative campaign dungeon-crawler about tactical fights in linked city scenarios. Each round, players secretly choose two ability cards, reveal initiative, then use one top action and one bottom action to move, attack, heal, loot, or push monsters around a hex map. The party wins a scenario by completing its printed objective before hands run dry, then spends gold and experience between chapters. Instead of loose room tiles, the map is the spiral scenario book opened flat on the table.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:36:25.132Z",
+  generatedAt: "2026-05-13T20:19:31.957Z",
   model: "gpt-5.5",
-  durationMs: 96736,
+  durationMs: 17344,
   sources: [
-    "https://cephalofair.com/products/gloomhaven-jaws-of-the-lion",
     "https://boardgamegeek.com/boardgame/291457/gloomhaven-jaws-of-the-lion",
-    "https://cs.uwaterloo.ca/~dtompkin/archive/dtlib/base/Gloomhaven%20-%20Jaws%20of%20the%20Lion.pdf",
+    "https://cephalofair.com/",
+    "https://gamesnightguru.com/games/gloomhaven-jaws-lion/",
+    "https://www.gamesradar.com/tabletop-gaming/gloomhaven-jaws-of-the-lion-review-all-the-greatness-condensed/",
   ],
 } as const;

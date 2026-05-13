@@ -9,19 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Every expedition starts in debt, and hand management turns each discard into a gift, a threat, or a delay tactic.",
+    "Head-to-head hand-management card game where players start risky expeditions, lay rising-number cards, and manage discard piles.",
   default:
-    "Every expedition begins as a liability, so ambition feels dangerous from the first card. Hand management drives play through rising color columns and shared discard piles. The highest total after three rounds wins, unless wagers multiply a bad dig into a crater.",
+    "Head-to-head hand-management card game about funding expeditions in colored suits. On a turn, play one card to a rising-number expedition or discard it, then draw from the deck or a visible discard. Highest total after expedition costs and wagers wins.",
   loose:
-    "Every expedition begins as a liability, so ambition feels dangerous from the first card. Hand management drives play as players build rising color columns, discard to shared piles, and decide when a card is too useful to release. The highest total after three rounds wins, but wager cards can multiply a triumph or deepen a failed dig. A bare wager with no follow-up scores -40, a tiny warning sign in Knizia’s math.",
+    "Head-to-head hand-management card game about funding archaeological expeditions in colored suits. On a turn, play one card to an expedition in rising order or discard it to that color’s pile, then draw from the deck or a visible discard. Started expeditions cost 20 points before card values, wager cards multiply gains or losses, and the highest total after the final round wins. Much of the sting comes from discarding a card your rival can immediately grab.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:37:08.994Z",
+  generatedAt: "2026-05-13T20:20:30.868Z",
   model: "gpt-5.5",
-  durationMs: 58455,
+  durationMs: 37571,
   sources: [
-    "https://www.thamesandkosmos.com/manuals/full/691821_LC_Card_Game.pdf",
-    "https://www.gamespot.com/reviews/lost-cities-review/1900-6190397/",
+    "https://www.thamesandkosmos.com/manuals/full/691820_lostcities2p_manual.pdf",
+    "https://www.miniaturemarket.com/blog/lost-cities-the-original-card-game-review",
+    "https://www.kosmos.de/de/lost-cities-das-duell_1694135_4002051694135",
   ],
 } as const;

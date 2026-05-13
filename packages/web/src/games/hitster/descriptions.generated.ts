@@ -9,20 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Half-remembered choruses turn release years into table-wide arguments through set collection with QR-scanned songs.",
+    "Music party trivia game where players scan song cards, hear the track, and slot each card into a personal release-year timeline.",
   default:
-    "Familiar songs become risky bets about what came first. Set collection drives each turn as a scanned QR code plays a track, then the card is placed in a growing timeline. The first timeline with ten correctly ordered songs wins.",
+    "Music party trivia game about building a timeline of hit songs by release year. Each turn, the DJ scans a QR code, a song plays, and the guesser places the card before, after, or between dated cards. First timeline with 10 correctly placed songs wins.",
   loose:
-    "Familiar songs become risky bets about what came first. Set collection drives each turn as a scanned QR code plays a track, then the card is placed in a growing timeline. The first timeline with ten correctly ordered songs wins. Tokens sharpen the party noise: name the artist and title to earn one, or spend one to challenge a rival’s placement and steal the card.",
+    "Music party trivia game about building a timeline of hit songs by release year. Each turn, the DJ scans a QR code, a song plays, and the guesser places the card before, after, or between dated cards. First timeline with 10 correctly placed songs wins. Tokens let rivals shout a challenge before the reveal and steal the card if they point to the correct slot.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:35:34.013Z",
+  generatedAt: "2026-05-13T20:19:37.945Z",
   model: "gpt-5.5",
-  durationMs: 26431,
+  durationMs: 10731,
   sources: [
-    "https://hitstergame.com/en-nz/how-to-play-v3/",
+    "https://hitstergame.com/en-us/how-to-play/",
     "https://www.whatboardgame.com/post/hitster-party-game-review",
-    "https://nordics.hitstergame.com/wp-content/uploads/2021/06/HITSTER-Print-and-Play.pdf",
+    "https://www.hitster4all.com/rules/",
   ],
 } as const;

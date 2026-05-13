@@ -9,20 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A single clue can rescue a team or doom it, as word association turns a 5x5 grid into shared logic and dread.",
+    "Team word-association party game where spymasters give one-word-plus-number clues and teammates pick cards from a 5x5 grid.",
   default:
-    "A one-word clue can save three agents or point straight at the assassin. Word association drives each turn, with teammates debating which cards the spymaster meant. A team wins by finding all its agents first, unless one fatal guess ends the game.",
+    "Team word-association party game about reading clues across a grid of spy codenames. Each round, a spymaster says one word and a number, then teammates discuss and touch matching word cards. Reveal all friendly agents to win, but touching the assassin loses immediately.",
   loose:
-    "Every clue is a gamble, because one word must steer teammates toward the right cards and away from disaster. Word association drives the play. A team wins by finding all its agents first, unless a guess hits the assassin and ends everything at once. Chvátil’s prototype was hand-torn paper in a grid, already close to the finished game.",
+    "Team word-association party game about reading clues and arguing over a grid of spy codenames. Each round, a spymaster gives one word and a number, then teammates discuss and touch word cards, revealing allies, bystanders, enemy agents, or the assassin. The first team to reveal all its agents wins; touching the assassin loses immediately. The signature table moment is a risky clue that links three or four words while skirting one deadly card.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:28:07.028Z",
+  generatedAt: "2026-05-13T20:18:32.955Z",
   model: "gpt-5.5",
-  durationMs: 41688,
+  durationMs: 25618,
   sources: [
     "https://www.czechgames.com/games/codenames",
-    "https://filemanager.czechgames.com/storage/files/codenames/rules/codenames-rules-en.pdf",
-    "https://www.theguardian.com/culture/2024/sep/26/vlaada-chvatil-codenames-board-game-market-czech-phone",
+    "https://www.gamesradar.com/tabletop-gaming/codenames-review/",
   ],
 } as const;

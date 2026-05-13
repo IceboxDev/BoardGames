@@ -9,21 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Rival apple carts flee plague-struck Bristol with social deduction, as shared dice make rats, apples, and suspicion move together.",
+    "Chaotic social-deduction race where players reroll cart dice, swap seats, and shove suspected plague carriers off apple carts.",
   default:
-    "Plague escape becomes a trust problem, because every apple-cart passenger may be hiding a fatal cough. The core mechanic is social deduction. Healthy riders win by leaving town in the first clean cart; infected riders try to ruin every escape.",
+    "Chaotic social-deduction race about escaping town in apple carts before plague spreads. Each round, players reroll cart dice, draw Remedy cards, move between carts, or push suspected infected riders backward. The first cart to cross with only healthy riders wins together; a cart with any plague carrier dies and play continues.",
   loose:
-    "Plague escape becomes a trust problem, because every apple-cart passenger may be hiding a fatal cough. The core mechanic is social deduction: players change seats, tweak shared dice, and keep symptom cards secret. A healthy group wins by riding the first clean cart out; infected players try to spoil every escape. Travis Hancock said it began as Roman chariot racing, then clicked when people shared carts.",
+    "Chaotic social-deduction race about escaping town in apple carts while hidden Symptom cards may mark riders as infected. Each round, players reroll shared dice, draw Remedy cards, elbow forward, dash to another cart, or push suspected plague carriers backward. Rat results trigger Mingles, where cartmates shuffle Symptom cards and may secretly catch the plague. The first cart to cross with only healthy riders wins together; infected carts die and play continues.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:33:30.686Z",
+  generatedAt: "2026-05-13T20:17:52.415Z",
   model: "gpt-5.5",
-  durationMs: 20575,
+  durationMs: 18225,
   sources: [
     "https://facadegames.com/products/bristol-1350",
-    "https://boardgamegeek.com/boardgame/308989/bristol-1350",
-    "https://www.reddit.com/r/boardgames/comments/1cru5he/im_travis_hancock_founder_of_facade_games_and/",
     "https://fgbradleys.com/wp-content/uploads/Bristol-1350-Rulebook.pdf",
+    "https://tabletopping.games/2021/09/10/bristol-1350/",
+    "https://therewillbe.games/articles-boardgame-reviews/8497-bristol-1350-bring-out-your-dead",
   ],
 } as const;

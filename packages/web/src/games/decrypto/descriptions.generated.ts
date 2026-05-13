@@ -9,21 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Fragile clues must guide allies while feeding rivals a growing pattern in this tense deduction game of numbered secret words.",
+    "Team word-deduction party game where clue givers encode three numbered words while rivals build a note sheet to intercept them.",
   default:
-    "A clue that saves a team now can expose its code three rounds later. Deduction drives each round as one encryptor links three public clues to four hidden numbered words. A team wins by intercepting two opposing codes, while two botched home-team decodes lose the game.",
+    "Team word-deduction party game about sending three-digit codes through clues while the other side listens and takes notes. Each round, an encryptor draws a code card, writes three public clues, and both teams guess the number order. Two interceptions win; two miscommunications lose.",
   loose:
-    "A clue that saves a team now can expose its code three rounds later. Deduction drives each round as one encryptor links three public clues to four hidden numbered words. A team wins by intercepting two opposing codes, while two botched home-team decodes lose the game. The screens slot 110 keyword cards into numbered windows, turning a party table into a paper trail.",
+    "Team word-deduction party game about sending three-digit codes through clues while the other side listens and takes notes. Each round, one encryptor draws a code card, writes three public clues for the matching hidden keywords, and both teams guess the number order. Two interception tokens win the game, while two miscommunication tokens lose it. Each team has a numbered screen holding four secret keyword cards, so old clues pile up into a visible trail for opponents.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:34:26.864Z",
+  generatedAt: "2026-05-13T20:18:52.042Z",
   model: "gpt-5.5",
-  durationMs: 26705,
+  durationMs: 22853,
   sources: [
-    "https://www.hachetteboardgames.com/products/decrypto",
-    "https://shop.scorpionmasque.com/fr/products/decrypto",
-    "https://ryanboardgames.com/reviews/decrypto-review",
-    "https://www.reddit.com/r/boardgames/comments/txh13f/game_of_the_week_decrypto/",
+    "https://shop.scorpionmasque.com/products/decrypto",
+    "https://www.scorpionmasque.com/sites/scorpionmasque.com/files/decrypto_en_rules_20sep2019_1.pdf",
+    "https://www.play-board-games.com/decrypto-board-game-review/",
+    "https://www.meeplemountain.com/reviews/decrypto/",
   ],
 } as const;

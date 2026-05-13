@@ -9,20 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Industrial ambition becomes a shared supply trap where every coal cube or beer barrel taken helps a rival through hand management.",
+    "Heavy economic network game where industrialists spend cards and cash to build mills, mines, breweries, canals, and rail links.",
   default:
-    "Shared coal and beer make every rival useful and dangerous in a smoky West Midlands economy. Hand management drives turns, with cards spent to build, connect, sell, develop, or borrow. Victory comes from flipped industries and scored links across two eras.",
+    "Heavy economic strategy game about building a shared industrial network across the English Midlands. On a turn, spend two actions to play cards, place industry tiles, lay canal or rail links, sell goods, develop, scout, or take loans. After the canal era and rail era, flipped industries and links score points; highest total wins.",
   loose:
-    "Shared coal and beer make every rival useful and dangerous in a smoky West Midlands economy. Hand management drives turns, with cards spent to build industries, lay links, develop, sell, or take loans. Victory comes from flipped industries and canal or rail links scored after each era, after the rail reset sweeps away early networks. Beer is the signature bottleneck, unlocking sales and double-rail turns.",
+    "Heavy economic strategy game about building a shared industrial network across the English Midlands. On a turn, spend two actions to play a city or industry card, place an industry tile, lay a canal or rail link, sell goods, develop better tiles, scout, or take a loan. Scoring happens after the canal era and again after the rail era; flipped industries and links score points, and the highest total wins. Coal, iron, and beer often come from rivals’ tiles, so helping another factory flip can be the cheapest way to finish a plan.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:33:10.110Z",
+  generatedAt: "2026-05-13T20:17:34.189Z",
   model: "gpt-5.5",
-  durationMs: 27422,
+  durationMs: 15157,
   sources: [
     "https://roxley.com/products/brass-birmingham",
-    "https://boardgamegeek.com/wiki/page/thing%3A224517%3Amoreinfo",
     "https://www.gamesradar.com/games/board-games/brass-birmingham-review/",
   ],
 } as const;

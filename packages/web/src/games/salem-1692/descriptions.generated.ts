@@ -9,20 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A witch hunt turns neighbors into liabilities, using hidden roles and accusation cards to make every face-down Tryal card suspect.",
+    "Hidden-role party card game where players draw accusation cards, pile them on suspects, and expose Tryal cards to find witches.",
   default:
-    "A Salem witch hunt turns table talk brittle because guilt can hide under any face-down Tryal card. Hidden roles drive the game as accusation cards expose players and Night lets witches strike. Townsfolk win by revealing every Witch card, but Conspiracy can create new witches.",
+    "Hidden-role social deduction game where townsfolk hunt secret witches with accusation cards. On a turn, draw two cards or play accusation and effect cards onto other players; seven accusations flip one Tryal card. Town wins by revealing every Witch Tryal card, while witches win once every living player has held a Witch card.",
   loose:
-    "A witch hunt turns table talk brittle because any unrevealed Tryal card can hide guilt. Hidden roles drive the game, with accusation cards forcing players to expose one another while Night lets witches strike in secret. Townsfolk win by revealing every Witch card, but Conspiracy can pass a Witch card to a new player and convert them. The faux book box is more than shelf dressing; Facade built the series around that disguised volume.",
+    "Hidden-role party card game where townsfolk argue over face-down Tryal cards while secret witches hide. On a turn, a player either draws two cards or plays accusation and effect cards onto other players; seven accusations flip one Tryal card. The town wins by revealing every Witch Tryal card, while witches win once every living player has held a Witch card. The Conspiracy card passes Tryal cards around, so a trusted neighbor can quietly join the witches midgame.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:38:59.262Z",
+  generatedAt: "2026-05-13T20:21:28.995Z",
   model: "gpt-5.5",
-  durationMs: 28460,
+  durationMs: 23853,
   sources: [
     "https://facadegames.com/collections/the-dark-cities-series/products/salem-1692",
     "https://www.ultraboardgames.com/salem/game-rules.php",
-    "https://www.reddit.com/r/boardgames/comments/112zxeu/im_the_founder_of_facade_games_and_the_inventor/",
+    "https://www.board-game.co.uk/salem-1692-review/",
+    "https://www.boardseyeview.net/post/2017/10/01/salem-1692",
   ],
 } as const;

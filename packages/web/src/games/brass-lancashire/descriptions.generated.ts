@@ -9,20 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "An industrial map turns other players’ coal and rails into temptation in a hand-management fight over Lancashire’s canal and rail eras.",
+    "Heavy economic network game where players spend cards and cash to build industries, sell cotton, and lay canals or rails.",
   default:
-    "Lancashire’s mills, mines, and ports tempt rivals to use the very infrastructure that feeds their scores. Hand management drives each turn as cards constrain builds. Most points after the canal and rail eras wins.",
+    "Heavy economic network strategy about building mills, mines, ports, and links across Lancashire. Each turn, spend cards and cash for two actions: build, develop, sell cotton, take a loan, or lay canal or rail. Most points from flipped industries and owned links after both eras wins.",
   loose:
-    "Lancashire’s mills, mines, and ports tempt rivals to use the very infrastructure that feeds their scores. Hand management drives each turn, with cards narrowing where industries can appear as canals give way to rails. The winner has the most points after both eras from flipped industries and links. The least spender acts first next round, making thrift a weapon for back-to-back turns.",
+    "Heavy economic network strategy about building mills, mines, iron works, ports, shipyards, and transport links across Lancashire. Each turn, spend cards and cash for two actions: build, lay canal or rail, develop better tiles, sell cotton, or take a loan. Score after the canal era and again after the rail era; most points from flipped industries and owned links wins. Turn order follows last round’s spending, so a cheap turn can set up a rare back-to-back move.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:33:16.091Z",
+  generatedAt: "2026-05-13T20:17:50.425Z",
   model: "gpt-5.5",
-  durationMs: 27843,
+  durationMs: 21688,
   sources: [
     "https://roxley.com/products/brass-lancashire",
-    "https://www.pevans.co.uk/Reviews/Brass.pdf",
-    "https://gamesnightguru.com/game/brass/",
+    "https://files.roxley.com/Brass-Lancashire-Rulebook-2018.11.20-highlights.pdf",
+    "https://www.board-game.co.uk/brass-lancashire-review/",
   ],
 } as const;

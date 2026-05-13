@@ -9,21 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A solitary roguelike becomes a shared climb, with deck-building turns that turn tiny card upgrades into life-or-death plans.",
+    "Cooperative roguelike deck-builder where players spend energy on cards, kill hallway monsters, draft rewards, and push toward bosses.",
   default:
-    "The digital roguelike’s nervous math becomes a cooperative climb where one bad room can wreck a run. Deck-building drives each fight as heroes trim weak cards, add rewards, and spend energy. The party wins by beating the chosen act boss before any hero dies.",
+    "Cooperative roguelike deck-builder where the group climbs branching acts and fights monsters. Each combat, players draw hands, spend energy on attacks, blocks, powers, potions, and relic triggers. The party wins by defeating the chosen final boss; if any hero hits 0 HP, the run is lost.",
   loose:
-    "The digital roguelike’s nervous math becomes a cooperative climb where one bad room can wreck a run. Deck-building drives each fight as heroes trim weak cards, choose rewards, and spend energy in shared plans. The party wins by beating the chosen act boss before any hero dies, or the run collapses to the start. A single die sets enemy patterns and relic triggers, turning hidden video-game bookkeeping into a table ritual.",
+    "Cooperative roguelike deck-builder where the table climbs branching acts, fights monsters, and tunes character decks after each encounter. In combat, each player draws a hand, spends energy on attacks, blocks, powers, potions, and relic triggers, then enemies strike back. The party wins by defeating the chosen final boss; if any hero drops to 0 HP, the run ends in a loss. The box leans into physical card play with hundreds of sleeved, double-sided upgrade cards.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:40:57.356Z",
+  generatedAt: "2026-05-13T20:22:10.354Z",
   model: "gpt-5.5",
-  durationMs: 55033,
+  durationMs: 20186,
   sources: [
-    "https://contentiongames.com/games/slay/",
-    "https://contentiongames.myshopify.com/products/slay-the-spire-board-game-retail-edition",
-    "https://www.pcgamer.com/games/board-games/the-slay-the-spire-board-game-might-be-a-little-too-faithful-to-the-videogame-but-its-co-op-mode-offers-a-whole-new-perspective-on-the-iconic-roguelike/",
-    "https://www.meeplemountain.com/reviews/slay-the-spire-the-board-game/",
+    "https://www.gamesradar.com/tabletop-gaming/slay-the-spire-the-board-game-review-a-pitch-perfect-tabletop-adaptation/",
+    "https://coopboardgames.com/cooperative-board-game-reviews/slay-the-spire/",
   ],
 } as const;

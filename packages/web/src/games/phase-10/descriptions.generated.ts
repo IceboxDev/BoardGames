@@ -9,21 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Ten escalating rummy contracts turn set collection into a traffic jam of almost-finished hands, wild rescues, and spiteful skips.",
+    "Contract-rummy card game where players draw and discard to finish numbered meld phases before rivals move ahead.",
   default:
-    "One missed contract can strand a hand while the table advances to harder rummy chores. Set collection drives each round: draw, discard, lay down required sets, runs, or one-color groups, then shed leftovers. Complete phase ten first, with low penalty points breaking ties.",
+    "Contract-rummy card game about climbing through ten required melds. On a turn, draw from the deck or discard pile, lay the current phase when complete, hit extra cards onto face-up phases, then discard. First to complete Phase 10 wins, with low penalty points breaking ties.",
   loose:
-    "One missed contract can strand a hand while the table advances to harder rummy chores. Set collection drives each round: draw, discard, lay down required sets, runs, or one-color groups, then shed leftovers onto open phases. The first player to complete phase ten wins, with low penalty points breaking ties. The 108-card deck includes eight Wilds and four Skips, enough for rescues and petty delays.",
+    "Contract-rummy card game about climbing through ten required melds: sets, runs, and one-color hands. On a turn, draw from the deck or discard pile, lay the current phase only when complete, hit extra cards onto face-up phases, then discard. After each hand, finishers advance, unmade phases repeat, and the first to complete Phase 10 wins, with low penalty points breaking ties. Wild cards plug holes in runs or colors, while Skip cards steal a turn.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:38:37.872Z",
+  generatedAt: "2026-05-13T20:21:05.141Z",
   model: "gpt-5.5",
-  durationMs: 65023,
+  durationMs: 34136,
   sources: [
-    "https://service.mattel.com/instruction_sheets/W4729-Eng.pdf",
     "https://www.phase10games.com/wp-content/uploads/2017/01/PHASE-10-Card-Game-Instructions.pdf",
-    "https://shop.mattel.com/products/phase-10-card-game-w4729?bvstate=pg%3A2%2Fct%3Ar&currency=USD&variant=41330749702309",
-    "https://www.museumofplay.org/press-release/2024-toy-hall-inductees-revealed/",
+    "https://retrochronicle.com/card-game-review-phase-10-1982-mattel/",
   ],
 } as const;

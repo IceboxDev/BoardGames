@@ -9,20 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A 12-card grid becomes a real-time logic race as pattern recognition rewards the first eye to spot three traits in perfect agreement or contrast.",
+    "Real-time pattern-recognition card game where everyone scans a shared grid and grabs trios whose four traits all match or differ.",
   default:
-    "Every layout is a silent sprint, with twelve abstract cards daring the table to see order first. Pattern recognition drives the play. Correct calls claim cards, and the largest pile at the emptied deck wins.",
+    "Real-time pattern-recognition card game where everyone studies the same face-up grid, with no turns, looking for legal trios. A trio is legal when color, shape, count, and shading each either all match or all differ. When the deck and remaining matches run out, the biggest collected pile wins.",
   loose:
-    "Every layout is a silent sprint, with twelve abstract cards daring the table to see order before anyone else does. Pattern recognition drives the play as everyone searches for trios whose four traits are each all matching or all different. Correct calls claim cards, and the largest pile at the emptied deck wins. The 81-card deck grew from Marsha Falco’s genetics notes on German Shepherd data.",
+    "Real-time pattern-recognition card game where everyone studies the same face-up grid, with no turns, looking for legal trios. A trio is legal when color, shape, count, and shading each either all match or all differ, so two matching traits and one odd trait spoil it. Claim a trio, take those three cards, and refill the grid; when the deck and remaining matches run out, the biggest collected pile wins. The deck has every combination of the four traits exactly once, creating a silent-scan-then-sudden-grab table rhythm.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:39:44.109Z",
+  generatedAt: "2026-05-13T20:21:50.928Z",
   model: "gpt-5.5",
-  durationMs: 24510,
+  durationMs: 23892,
   sources: [
-    "https://www.playmonster.com/product/set/?bvstate=pg%3A2%2Fct%3Ar&pr_current_page=1",
-    "https://www.playmonster.com/set-marsha-falco/",
-    "https://www.playmonster.com/wp-content/uploads/2019/10/set.pdf",
+    "https://www.setgame.com/sites/default/files/teacherscorner/SETPROOF.pdf",
+    "https://www.brettspielwelt.de/Hilfe/Anleitungen/Set/?nation=en",
+    "https://officialgamerules.org/game-rules/set/",
+    "https://www.geekyhobbies.com/set-card-game-review/",
   ],
 } as const;

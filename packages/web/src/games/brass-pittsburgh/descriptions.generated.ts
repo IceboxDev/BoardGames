@@ -9,21 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Gilded Age Pittsburgh turns Brass into taut route-building, where rails, pipelines, steel, and oil feed a shared industrial machine.",
+    "Heavy economic network game where players play cards to build mills, rails, pipelines, and sell goods for victory points.",
   default:
-    "America’s Steel Belt gives Brass a harsher industrial map of railways, pipelines, steel mills, and oil fields. Route-building drives the game through cards, cash, and shared resources. Winning means flipping industries and links at the moment rivals need them most.",
+    "Heavy economic network game about building industries and transport links across a shared Steel Belt map. Each turn, a player spends cards, cash, and resources to build tiles, lay rails or pipelines, take loans, develop, or sell goods. Highest victory point total after final scoring wins.",
   loose:
-    "The Steel Belt turns Brass into a denser web of railways, pipelines, steel, oil, and hungry cities. Route-building drives the game: cards, cash, coal, coke, and oil turn city spaces into shared supply lines. Profit rises when industries flip, but victory comes from timing flips, loans, links, and network points better than rivals. Heavy trains can survive the midgame reset, so an early rail plan can become a long bet.",
+    "Heavy economic strategy game about competing industrial empires on a shared Steel Belt map. Each turn, a player spends cards, cash, coal, iron, steel, oil, or coke to build industry tiles, lay rails or pipelines, develop better tiles, take loans, or sell goods to connected cities. Industries flip when their goods or resources are used, and the highest victory point total after final scoring wins. Oil fields feed pipelines before rail, so another player’s refinery can pay the pipeline owner.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:33:19.468Z",
+  generatedAt: "2026-05-13T20:18:28.086Z",
   model: "gpt-5.5",
-  durationMs: 28569,
+  durationMs: 59289,
   sources: [
     "https://roxley.com/products/brass-pittsburgh",
-    "https://roxley.com/blogs/news/join-us-on-the-road-to-pittsburgh",
     "https://www.gamesradar.com/games/board-games/brass-pittsburgh-features-the-most-innovative-mechanisms-and-dynamics-its-designer-could-imagine/",
-    "https://boardgamewire.com/index.php/2026/04/27/deluxe-editions-have-become-sort-of-an-arms-race-we-often-do-the-opposite-roxley-ceo-gavan-brown-on-the-stellar-success-of-brass-pittsburghs-9-1m-crowdfund/",
+    "https://gamingtrend.com/news/brass-pittsburgh-trades-scouting-for-whiskey/",
+    "https://gamingtrend.com/news/steel-and-oil-play-a-big-part-in-brass-pittsburgh/",
   ],
 } as const;

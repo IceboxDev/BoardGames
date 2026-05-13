@@ -9,19 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A silent duel over a shifting desert grid turns worker placement into a knife fight for rows, columns, and blocked action spaces.",
+    "Thinky worker-placement Euro where border meeples claim actions and crossing lines grab resource or tribe cards.",
   default:
-    "Every placement gives ground and steals ground, because a border action also claims a crossing in the center grid. Worker placement drives the duel through edge figures, intersections, and denial. The higher-scoring tribe display wins.",
+    "Thinky worker-placement Euro about collecting goods and buying tribe cards for a personal tableau. Each round, place meeples on border actions, mark the center cards where their rows and columns cross, then take resources or pay to add cards. Highest score wins after a full tableau or the robber’s final raid.",
   loose:
-    "Every placement gives ground and steals ground, because a border action also claims a crossing in the center grid. Worker placement drives the duel: three Targi figures mark edge spaces, then tribe markers take the cards where those rows and columns meet. Victory comes from a 12-card tribal display, with points for cards and row bonuses. The robber circles the 16-card border as a visible countdown.",
+    "Thinky worker-placement Euro about collecting dates, salt, pepper, and gold to buy tribe cards for a personal tableau. Each round, place meeples on border actions, then mark the center cards where their rows and columns cross and resolve those spaces in any order. Highest score wins after a full tableau or the robber’s final raid, counting card points, tokens, and row bonuses. The signature puzzle is blocking a border space while also denying the card opposite it.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:41:22.909Z",
+  generatedAt: "2026-05-13T20:22:22.966Z",
   model: "gpt-5.5",
-  durationMs: 34957,
+  durationMs: 16823,
   sources: [
-    "https://www.kosmos.de/de/targi_1691479_4002051691479",
-    "https://thamesandkosmos.com/manuals/full/691479_Targi%20Manual.pdf",
+    "https://www.thamesandkosmos.com/manuals/full/691479_Targi%20Manual.pdf",
+    "https://bumblingthroughdungeons.com/targi-review/",
+    "https://boardgameguys.com/targi/",
   ],
 } as const;

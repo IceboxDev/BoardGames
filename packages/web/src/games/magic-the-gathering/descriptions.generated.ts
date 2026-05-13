@@ -9,22 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A custom deck can reveal a perfect answer or a dead draw, with deck-building turning every spell into a wager on mana and timing.",
+    "Collectible dueling card game where players play lands for mana, cast creatures and spells, and attack life totals.",
   default:
-    "The first modern trading card game turns a shuffled deck into both arsenal and identity. Deck-building drives the duel as lands make mana, mana casts threats, and every draw tests choices made before play. Victory usually means cutting an opponent from 20 life to zero.",
+    "Collectible dueling card game where custom decks fight through lands, creatures, artifacts, and spells. On a turn you untap, draw, play a land, spend mana on cards from hand, and attack with creatures while opponents block or respond. Reduce every opponent to zero life, make them unable to draw, or satisfy a card’s win condition to win.",
   loose:
-    "The first modern trading card game turns a shuffled deck into both arsenal and identity. Deck-building is the core mechanic: lands make mana, mana casts creatures and spells, and each draw tests the deck built before play. Victory usually means cutting an opponent from 20 life to zero, though cards can rewrite that goal. Garfield traced its ancestry to Cosmic Encounter, especially the thrill of wild powers colliding.",
+    "Collectible dueling card game where custom decks fight through lands, creatures, artifacts, and spells. On a turn you untap, draw, play a land, spend mana on cards from hand, and attack with creatures while opponents block or respond. Reduce every opponent to zero life, make them unable to draw, or satisfy a card’s win condition to win. The five mana colors give decks distinct table personalities, from blue counterspells to red burn.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:37:14.744Z",
+  generatedAt: "2026-05-13T20:20:10.739Z",
   model: "gpt-5.5",
-  durationMs: 49611,
+  durationMs: 14370,
   sources: [
     "https://magic.wizards.com/en/how-to-play",
-    "https://magic.wizards.com/en/news/making-magic/creation-magic-gathering-2013-03-12",
     "https://magic.wizards.com/en/news/feature/original-magic-rulebook-2004-12-25",
-    "https://www.museumofplay.org/toys/magic-the-gathering/",
-    "https://www.guinnessworldrecords.com/world-records/first-modern-trading-card-game",
   ],
 } as const;

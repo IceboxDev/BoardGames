@@ -8,21 +8,20 @@
 import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
-  tight: "Facedown cards make every pot a contest of nerve and probability, driven by betting.",
+  tight:
+    "Bluffing card game where players bet chips on hidden hands, fold to pressure, or win pots with the best shown cards.",
   default:
-    "Facedown cards turn a five-card hand into a test of nerve. Betting drives the game as players call, raise, or fold. The pot goes to the strongest shown hand, unless pressure makes every rival fold first.",
+    "Classic bluffing card game built around hidden information, chip bets, and ranked five-card hands. On a deal, players check, bet, call, raise, or fold as cards are dealt or exchanged. Each pot goes to the last player left or the best hand at showdown; most chips at the end wins.",
   loose:
-    "Facedown cards make every pot a contest between math, nerve, and lies. Betting drives the game as players call, raise, or fold around the table. A hand wins by showing the strongest five-card combination, or by making every rival fold first. Parlett traces the early Mississippi game from 20 cards to 52 as draw poker and larger tables took hold.",
+    "Classic bluffing card game built around hidden information, chip bets, and ranked five-card hands. On a deal, players receive private cards, then check, bet, call, raise, or fold as cards appear or are exchanged under the chosen variant. Each pot goes to the last player left after folds or to the best shown hand; the session winner has the biggest chip stack when play stops. The signature moment is a quiet raise with bad cards, daring better hands to throw themselves away.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:38:13.457Z",
+  generatedAt: "2026-05-13T20:20:50.636Z",
   model: "gpt-5.5",
-  durationMs: 29335,
+  durationMs: 18887,
   sources: [
-    "https://www.pagat.com/poker/rules/",
     "https://www.britannica.com/topic/poker-card-game",
-    "https://bicyclecards.com/how-to-play/basics-of-poker",
-    "https://www.pagat.com/poker/history.html",
+    "https://www.britannica.com/topic/poker-card-game/Skillful-play",
   ],
 } as const;

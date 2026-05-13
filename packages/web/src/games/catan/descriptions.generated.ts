@@ -9,20 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A hex island turns every dice roll into public pressure, with trading driving roads, settlements, and grudges over sheep.",
+    "Gateway trading strategy game where dice produce resources, players barter, and roads, settlements, and cities score points.",
   default:
-    "A modular hex island makes scarcity visible, so every roll changes who has leverage. Trading drives roads, settlements, and cities. The first player to reach 10 victory points wins through building, cards, and bonuses.",
+    "Gateway trading strategy game about building across a hex island with resource cards. On a turn, roll two dice, collect matching terrain resources, trade with rivals or ports, then spend cards on roads, settlements, cities, or development cards. First to 10 victory points wins.",
   loose:
-    "A modular hex island makes scarcity visible, so every roll reshapes the table’s mood. Trading is the core mechanic: brick, lumber, wool, grain, and ore move between players to fund roads, settlements, and cities. The first player to reach 10 victory points wins through buildings, cards, and bonuses. The robber turns a 7 into a blockade and a theft, making one rich hex everyone’s problem.",
+    "Gateway trading strategy game about building across a hex island with resource cards. On a turn, roll two dice, collect matching terrain resources, trade with rivals or ports, then spend cards on roads, settlements, cities, or development cards. First to 10 victory points wins, counting settlements, cities, bonuses, and hidden cards. A 7 moves the robber, blocks one hex, and lets the roller steal a card.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:26:20.907Z",
+  generatedAt: "2026-05-13T20:18:07.336Z",
   model: "gpt-5.5",
-  durationMs: 21384,
+  durationMs: 16911,
   sources: [
     "https://www.catan.com/catan",
-    "https://www.newyorker.com/business/currency/the-man-who-built-catan",
-    "https://apnews.com/article/catan-cookbook-board-game-food-b14710bf57b5019f7490909684286a09",
+    "https://catanboard.com/en/rules/turnOverview",
+    "https://catanboard.com/en/rules/gettingStarted",
   ],
 } as const;

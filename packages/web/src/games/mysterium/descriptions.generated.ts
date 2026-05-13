@@ -9,20 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A silent ghost feeds surreal vision cards to arguing mediums, turning deduction into a séance of misread colors and symbols.",
+    "Cooperative deduction party game where a silent ghost gives surreal image cards and mediums debate suspect, place, and object clues.",
   default:
-    "A murder case becomes a séance because the only witness is a mute ghost holding dreamlike art. Deduction drives play as mediums interpret vision cards for suspects, locations, and objects. The group wins by naming the true culprit before dawn.",
+    "Cooperative image-clue deduction game about solving a murder with one silent ghost and a table of debating mediums. Each round, the ghost gives surreal vision cards, and mediums choose suspect, location, or object cards. Find every set, then vote on the final killer’s set to win together.",
   loose:
-    "A murder case becomes a séance because the only witness is a mute ghost holding dreamlike art. Deduction drives play as the ghost assigns each medium a private suspect, location, and object, then hints with vision cards. The group wins only if every medium clears a personal set before dawn and the table names the true culprit. The ghost's tall screen hides the answers while every wrong theory must be endured in silence.",
+    "Cooperative image-clue deduction game about solving a murder with one silent ghost and a table of debating mediums. Each round, the ghost gives surreal vision cards, and mediums choose suspect, location, or object cards. Find every personal set before dawn, then vote on the final killer’s set to win together. The huge ghost screen hides the answer grid like a séance prop.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:37:15.627Z",
+  generatedAt: "2026-05-13T20:20:31.749Z",
   model: "gpt-5.5",
-  durationMs: 29907,
+  durationMs: 22871,
   sources: [
     "https://www.libellud.com/en/our-games/mysterium/",
-    "https://www.libellud.com/en/resources/mysterium/",
+    "https://cdn.svc.asmodee.net/production-libellud/uploads/2025/11/MYST_REFRESH_RULES_EN-1.pdf",
     "https://www.gamesradar.com/games/board-games/mysterium-review/",
+    "https://www.theboardgamefamily.com/2017/03/mysterium-board-game-review/",
   ],
 } as const;

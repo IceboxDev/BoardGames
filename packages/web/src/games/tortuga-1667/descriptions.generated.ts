@@ -9,21 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Pirate crews raid one prize ship while secret loyalties turn every vote for attacks, mutinies, and brawls into social deduction.",
+    "Social-deduction pirate game where secret loyalists move pawns, vote on attacks or mutinies, and stash treasure for their side.",
   default:
-    "A Spanish galleon feeds two pirate crews, but every helpful vote can hide sabotage. Social deduction drives face-down loyalties, shared vote cards, and offices like captain or governor. The richest French or British side wins when the Spanish Armada appears, unless the lone Dutch pirate steals a tie",
+    "Social-deduction pirate game where secret British and French loyalists fight over stolen treasure. On a turn, move by rowboat, peek at or reveal an event card, or use a role action to attack, mutiny, or brawl. When the Spanish Armada appears, the side with more treasure wins.",
   loose:
-    "One Spanish galleon feeds two pirate crews, and every helpful cannon vote may be sabotage in disguise. Social deduction drives face-down loyalties, shared vote cards, and offices like captain, first mate, and governor. When the Spanish Armada appears, the French or British side with more treasure wins, unless the lone Dutch pirate steals a tie. The faux book box opens onto a rubber map and wood treasure tokens.",
+    "Social-deduction pirate game where secret British and French loyalists shift treasure between ship holds while lying about their flag. Each turn, move by rowboat, peek at or reveal an event card, or trigger a role action: captain attack, first mate mutiny, or island governor brawl. When the Spanish Armada event appears, the side with more treasure wins; the Dutch loner wins tied loot. The fake-book box, cloth map, and chunky treasure tokens make the table look like a pirate prop chest.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:42:08.937Z",
+  generatedAt: "2026-05-13T20:23:09.476Z",
   model: "gpt-5.5",
-  durationMs: 36009,
+  durationMs: 27777,
   sources: [
     "https://facadegames.com/products/tortuga-1667",
-    "https://cdn.shopify.com/s/files/1/0028/2964/7961/files/Tortuga_1667_P_P_Rules.pdf?15163670277584322649=",
     "https://www.geeksundergrace.com/tabletop/reviews-tabletop/review-tortuga-1667/",
-    "https://www.reddit.com/r/boardgames/comments/1cru5he/im_travis_hancock_founder_of_facade_games_and/",
+    "https://www.ultraboardgames.com/tortuga-1667/game-rules.php",
+    "https://www.polyhedroncollider.com/2017/11/tortuga-1667-review.html",
   ],
 } as const;

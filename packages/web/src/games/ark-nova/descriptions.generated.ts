@@ -9,22 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A modern zoo becomes a timing puzzle where every enclosure, animal, and sponsor waits for the right action-selection slot.",
+    "Heavy euro zoo-builder where sliding action cards drive drawing animals, placing enclosures, playing sponsors, and funding conservation.",
   default:
-    "A zoo plan becomes a pressure map of habitats, money, icons, and species that rarely arrive in the ideal order. Action selection drives the game through five cards that gain strength as they shift. Victory comes from making appeal and conservation tracks cross.",
+    "Heavy euro zoo-building game about balancing visitor appeal with conservation work. Each turn, choose one of five sliding action cards to draw cards, build enclosures, add animals, play sponsors, or send association workers. When appeal and conservation markers cross, finish the round; highest final score wins.",
   loose:
-    "A zoo plan turns into a pressure map of habitats, money, icons, and species that never arrive in the ideal order. Action selection drives the game, with five cards growing stronger as they drift across the bottom of the player board. The scoring tracks run toward each other: appeal funds growth while conservation closes the race. A cheap animal now can cost the chance to build a stronger enclosure later.",
+    "Heavy euro zoo-building game about growing visitor appeal while funding conservation projects. Each turn, choose one of five sliding action cards to draw zoo cards, place enclosure tiles, add animals, play sponsors, or send association workers. When appeal and conservation markers cross, everyone gets a final turn; highest final score after end-game cards wins. The table feel is mostly heads-down planning, with a huge animal-and-sponsor deck and some fights over the shared card row.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:32:50.899Z",
+  generatedAt: "2026-05-13T20:17:28.797Z",
   model: "gpt-5.5",
-  durationMs: 37430,
+  durationMs: 28456,
   sources: [
-    "https://capstone-games.com/board-games/ark-nova/",
     "https://www.feuerland-spiele.de/spiele/arche-nova/",
-    "https://thinkygames.com/features/an-interview-with-ark-nova-designer-mathias-wigge/",
-    "https://gamesnightguru.com/game/ark-nova/",
-    "https://boardgamegeek.com/boardgame/342942/ark-nova",
+    "https://www.wargamer.com/ark-nova/review",
+    "https://en.doc.boardgamearena.com/Gamehelparknova",
+    "https://frontlinegaming.org/2025/09/17/board-game-review-ark-nova/",
   ],
 } as const;

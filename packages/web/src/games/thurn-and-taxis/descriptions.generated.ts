@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A fragile postal route can collapse on one missing city card in this lean route-building game across southern Germany.",
+    "Light route-building Euro where players draft city cards, extend postal routes, then place houses on a map for bonuses.",
   default:
-    "Each postal line feels provisional, since one missing city can dump a whole route into the discard. Route-building drives each turn. Win by upgrading carriages, completing regions, and wasting fewer houses.",
+    "Light route-building Euro about building postal networks across a map of Central Europe. Each turn, a player drafts a city card, adds one card to either end of their current route, and may score a route of at least three linked cities. Most points wins after someone claims the top carriage or places their last house.",
   loose:
-    "Each postal line feels provisional, since one missing city can dump a whole route into the discard. Route-building drives each turn: draw a city card, add one adjacent city to the line, then choose when to score. Points come from carriage upgrades, region bonuses, and penalties for houses left in hand. Four postal officials bend one rule per turn, including a cartwright who can grant a carriage from a short route.",
+    "Light route-building Euro about building postal networks across a map of Central Europe. Each turn, a player drafts a city card, adds one card to either end of their current route, and may score a route of at least three linked cities. Most points wins after someone claims the top carriage or places their last house, counting carriage cards, region bonuses, route bonuses, and unplaced-house penalties. The key placement choice is either one house in each province on the route or every routed city in one province.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:42:18.531Z",
+  generatedAt: "2026-05-13T20:22:44.711Z",
   model: "gpt-5.5",
-  durationMs: 54178,
+  durationMs: 12484,
   sources: [
-    "https://paperzz.com/doc/7320284/thurn-and-taxis---rio-grande-games",
-    "https://gamesnightguru.com/game/thurn-taxis/",
-    "https://www.hans-im-glueck.de/en/our-story/",
-    "https://www.reddit.com/r/boardgames/comments/1fm6tbb/whats_wrong_with_thurn_and_taxis/",
+    "https://fgbradleys.com/wp-content/uploads/rules/Thurn%20and%20Taxis%20-%20rules.pdf?srsltid=AfmBOoobnLuhoAY3nKUfdR4qlL2SyEE3GKxH7t2BEdYOOXAHK8-eo_uQ",
+    "https://mikkosgameblog.com/2006/04/thurn-und-taxis/",
+    "https://www.pevans.co.uk/Reviews/ThurnTaxis.pdf",
   ],
 } as const;

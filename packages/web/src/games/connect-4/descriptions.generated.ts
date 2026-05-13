@@ -9,20 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Gravity turns tic-tac-toe into a trap fight, with pattern-building in a seven-column vertical grid.",
+    "Abstract connection game where rivals drop colored discs into columns, blocking threats while trying to line up four.",
   default:
-    "Gravity turns a tiny grid into a fight over timing, threats, and forced blocks. Pattern-building drives each turn as discs fall to the lowest open space. Four in a row wins, but every block may build the next threat.",
+    "Abstract connection game played on a vertical grid, with each side trying to build a line of matching discs. On a turn, a player chooses an open column and drops one disc; gravity slides it to the lowest empty slot. The first side with four discs in a horizontal, vertical, or diagonal row wins.",
   loose:
-    "Gravity turns a tiny grid into a fight over timing, threats, and forced blocks. Pattern-building drives each turn as discs fall to the lowest open space in a chosen column. Victory comes from making four in a row before the grid fills. Victor Allis proved in 1988 that perfect play makes the first player win.",
+    "Abstract connection game played on a vertical grid, with each side trying to build a line of matching discs. On a turn, a player chooses an open column and drops one disc; gravity slides it to the lowest empty slot, often creating blocks or stacked threats. The first side with four discs in a horizontal, vertical, or diagonal row wins; a full grid with no four is a draw. The release bar at the bottom dumps every disc out for an instant reset.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:34:14.274Z",
+  generatedAt: "2026-05-13T20:18:42.411Z",
   model: "gpt-5.5",
-  durationMs: 28235,
+  durationMs: 15426,
   sources: [
     "https://instructions.hasbro.com/en-gb/instruction/the-classic-game-of-connect-4",
-    "https://journals.sagepub.com/doi/10.3233/ICG-1988-11410",
-    "https://mathworld.wolfram.com/Connect-Four.html",
+    "https://playabstractgames.com/en/connect-four/rules/",
   ],
 } as const;

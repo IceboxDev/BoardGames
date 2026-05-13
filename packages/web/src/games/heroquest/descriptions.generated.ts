@@ -9,21 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A dungeon appears room by room as Zargon follows a hidden map against four fragile heroes, with grid movement driving every risky door.",
+    "Gateway dungeon-crawl adventure where heroes explore a gridded maze, roll dice, fight monsters, and loot rooms.",
   default:
-    "One player knows the dungeon first, turning each opened door into a reveal of monsters, furniture, and traps. Grid movement carries the heroes through corridors as Zargon consults a hidden quest map. The heroes win by completing the scenario and escaping before Zargon breaks the party.",
+    "Fantasy dungeon-crawl adventure with an overlord reading a quest map while the hero team explores a room-by-room maze. On a hero turn, roll movement dice, move, then attack, cast a spell, or search for traps, secret doors, or treasure. Heroes win by finishing the quest goal and escaping; the overlord wins if they fail.",
   loose:
-    'One player knows the dungeon first, so each opened door becomes a reveal of monsters, furniture, and traps. Grid movement carries heroes through corridors while Zargon reads a hidden quest map and rolls combat dice. The heroes win by finishing the scenario and escaping, while Zargon wins by stopping the objective. Stephen Baker called the design "roleplaying in a box," with fantasy laid out in 3D.',
+    "Fantasy dungeon-crawl adventure with an overlord reading a hidden quest map while the hero team explores a room-by-room maze. On a hero turn, roll movement dice, move, then attack with combat dice, cast a spell, or search for traps, secret doors, or treasure. Heroes win by completing the quest objective and getting out alive; the overlord wins if the party dies or misses the goal. Plastic doors, furniture, and monster miniatures appear on the board only when heroes open rooms.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:36:42.983Z",
+  generatedAt: "2026-05-13T20:19:42.890Z",
   model: "gpt-5.5",
-  durationMs: 108797,
+  durationMs: 16220,
   sources: [
+    "https://www.boardgamequest.com/heroquest-review/",
     "https://boardgamegeek.com/boardgame/699/heroquest",
-    "https://instructions.hasbro.com/en-us/instruction/heroquest-game-instructions-rulebook",
-    "https://elvyler.com/2022/08/interview-with-the-designers-of-heroquest/",
-    "https://www.meeplemountain.com/reviews/heroquest/",
+    "https://heroquest.fandom.com/wiki/Guide%3ARules",
+    "https://merchantsofplay.com/howtoplay/heroquest/",
   ],
 } as const;

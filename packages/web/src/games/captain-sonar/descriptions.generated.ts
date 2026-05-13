@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Rival submarine crews turn a quiet grid into panic, with real-time orders, repairs, and tracking racing across both sides of the table.",
+    "Real-time team hidden-movement submarine duel where crews shout courses, trace enemy routes, charge systems, and fire weapons.",
   default:
-    "A quiet grid becomes a shouting match as two crews hunt each other through unseen water. The core mechanic is real-time play. Crews win by finding the rival sub and landing enough hits before their own hull fails.",
+    "Real-time team hidden-movement game about rival submarine crews hunting each other behind screens. Captains call compass moves while crewmates trace the enemy path, ready sonar, torpedoes, and mines, and manage breakdowns. The first crew to deal four damage sinks the enemy and wins.",
   loose:
-    "A quiet grid becomes a shouting match as two crews hunt each other through unseen water. The core mechanic is real-time play: captains call headings while teammates charge weapons, mark damage, and track the rival course. Victory goes to the crew that finds the enemy sub and sinks it first. Radio operators write on transparent sheets, turning shouted compass points into a shrinking suspect area.",
+    "Real-time team hidden-movement game about rival submarine crews hunting each other behind screens. Captains call north, south, east, or west while crewmates trace the enemy path, ready sonar, torpedoes, and mines, and mark system breakdowns. The first crew to deal four damage sinks the enemy and wins. Dry-erase role sheets and a transparent radio-operator overlay make the table feel like two command rooms yelling over a sonar screen.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:33:46.038Z",
+  generatedAt: "2026-05-13T20:17:58.913Z",
   model: "gpt-5.5",
-  durationMs: 29946,
+  durationMs: 23976,
   sources: [
-    "https://www.matagot.com/fr/strategy-games/133-captain-sonar.html",
-    "https://www.northstreetgames.com/images/Rulebooks/Captain-Sonar-Rules-v5.pdf",
-    "https://store.asmodee.com/products/captain-sonar",
-    "https://boardgamegeek.com/wiki/page/thing%3A171131",
+    "https://www.matagot.com/en/strategy-games/133-captain-sonar.html",
+    "https://fgbradleys.com/wp-content/uploads/rules/Captain%20Sonar%20-%20rules.pdf?srsltid=AfmBOorXW2sKViCJuskEhZYIhWkE6r8lKmO9Z6kn8f_Y3f1D4ibd3WZZ",
+    "https://www.play-board-games.com/captain-sonar-review/",
   ],
 } as const;

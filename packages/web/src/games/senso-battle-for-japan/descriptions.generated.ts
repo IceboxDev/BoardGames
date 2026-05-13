@@ -9,21 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Sengoku clans turn won hands into pressure on central Japan in a lean trick-taking fight over shifting provinces.",
+    "Light trick-taking area-control wargame where won tricks move clan cubes across Sengoku Japan’s province map.",
   default:
-    "Captured tricks do not just score cards; they send clans pushing across a small map of Japan. Trick-taking drives the game as won hands move, add, or remove clan cubes. After eight rounds, control of the richest provinces decides the throne.",
+    "Light trick-taking area-control wargame set on a small Sengoku Japan map. Each round, players play a full hand with one favored clan as trump, then spend won tricks to move armies, add cubes, or remove enemy cubes. After eight rounds, controlled provinces score points, and the highest total wins.",
   loose:
-    "Familiar card-play turns sharp because every captured trick becomes pressure on the map. Trick-taking drives the game: hands won become orders to shift clan cubes across central Japan. After eight rounds, the strongest holdings across the map decide the claimant to the throne. Its full 54-card deck has Raben White’s hand-painted courts for Oda, Takeda, Uesugi, and Mōri.",
+    "Light trick-taking area-control wargame set on a small Sengoku Japan map. Each round, players play every card in hand like Whist, with one favored clan as trump, then spend won tricks to move armies, add cubes, or remove enemy cubes from provinces. After eight rounds, provinces score for the clans controlling them, and the highest victory-point total wins. The Emperor role has no armies and instead pushes rival clans around to keep the daimyo divided.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:40:02.323Z",
+  generatedAt: "2026-05-13T20:21:44.087Z",
   model: "gpt-5.5",
-  durationMs: 51554,
+  durationMs: 27266,
   sources: [
-    "https://www.stoneswordgames.com/senso",
     "https://www.stoneswordgames.com/product-page/senso-battle-for-japan",
+    "https://senjutsu.backerkit.com/hosted_preorders/project_updates?page=10",
+    "https://whitespider1066.com/floating-in-the-air-like-a-dandelion-seed/",
     "https://www.philibertnet.com/en/stone-sword-games/105794-senso-battle-for-japan-5060756780057.html",
-    "https://www.nobleknight.com/P/2148118046/Senso-Battle-for-Japan",
   ],
 } as const;

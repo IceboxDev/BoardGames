@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A fugitive vanishes into London’s transit web while detectives read ticket trails in a lean hidden movement chase.",
+    "Asymmetric chase game where detectives spend transit tickets around London while hidden Mr. X logs secret taxi, bus, and tube moves.",
   default:
-    "London becomes a logic trap as one fugitive leaves only ticket colors behind. Hidden movement drives the chase across taxi, bus, and Underground lines. Detectives win by landing on Mr. X’s station before he survives the dragnet.",
+    "Asymmetric chase-and-deduction game where one hidden fugitive crosses London while detectives try to box him in. Each round, Mr. X logs a secret move and shows only the ticket used; detectives spend matching tickets to move visible pawns. Detectives win by landing on Mr. X or trapping him, while Mr. X wins by lasting through the chase.",
   loose:
-    "London becomes a logic trap as one fugitive leaves only the color of each taxi, bus, or Underground ticket behind. The core is hidden movement: Mr. X records secret stations while the detectives coordinate visible moves across the map. The detectives win by landing on his station, while Mr. X wins by surviving the chase. The visor is not just theater; it keeps Mr. X’s eyes from giving away which corner of London matters.",
+    "Asymmetric chase-and-deduction game where one hidden fugitive crosses London while detectives try to box him in. Each round, Mr. X logs a secret station and covers it with a taxi, bus, underground, or black ticket; detectives spend matching tickets to move visible pawns. Detectives win by landing on Mr. X or leaving him no legal move; Mr. X wins by lasting through the chase. The travel log gives transport clues every turn, with location reveals only at marked turns.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:40:34.238Z",
+  generatedAt: "2026-05-13T20:22:06.142Z",
   model: "gpt-5.5",
-  durationMs: 114344,
+  durationMs: 55352,
   sources: [
-    "https://www.ravensburger.us/en-US/products/games/board-games/scotland-yard-27514",
-    "https://www.ultraboardgames.com/scotland-yard/game-rules.php",
-    "https://www.reddit.com/r/boardgames/comments/1ibkys/review_scotland_yard/",
-    "https://scotland-yard.sourceforge.net/rules/help5.html",
+    "https://en.wikipedia.org/wiki/Scotland_Yard_%28board_game%29",
+    "https://www.hasbro.com/common/instruct/ScotlandYard.PDF",
+    "https://boingboing.net/2015/08/18/game-review-detectives-hunt-f.html",
   ],
 } as const;

@@ -9,21 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Final approach becomes a silent cockpit puzzle, with dice placement turning every roll into pitch, speed, radio, gear, and nerve.",
+    "Cooperative limited-communication dice-placement game where pilots silently slot cockpit dice to balance, slow, and land an airliner.",
   default:
-    "Two pilots share a tense final approach under a no-talking rule after the roll. Dice placement drives the cockpit, from axis and engines to radios, flaps, gear, brakes, and coffee. Landing means reaching the runway with clear traffic, level wings, safe speed, and every system ready.",
+    "Cooperative limited-communication dice-placement game about landing an airliner through a shared cockpit board. Each round starts with a plan, then dice go silently onto axis, engines, radio, flaps, gear, brakes, or coffee. Win by touching down level, clear, configured, and slow enough to stop.",
   loose:
-    "Two pilots face the final minutes of an airliner landing, where silence turns every die into a signal. Dice placement drives the cockpit, assigning rolls to axis, engines, radios, flaps, gear, brakes, and coffee. A landing succeeds only if the runway arrives with clear traffic, level wings, safe speed, and prepared systems. One promo scenario recreates Commander Robert Piché’s 2001 TS-236 glide to Lajes.",
+    "Cooperative limited-communication dice-placement game about landing an airliner through a shared cockpit board. Each round starts with a brief plan, then both roles roll behind screens and silently place dice on axis, engines, radio, flaps, landing gear, brakes, or coffee. The team wins if the final approach clears traffic, lines up with the runway, deploys gear and flaps, stays level, and stops under brake power. Airport scenarios add wind, fuel, leaks, traffic, ice, and turbulence.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:40:59.483Z",
+  generatedAt: "2026-05-13T20:22:30.248Z",
   model: "gpt-5.5",
-  durationMs: 70105,
+  durationMs: 46160,
   sources: [
-    "https://www.hachetteboardgames.com/products/sky-team",
-    "https://www.scorpionmasque.com/fr/sky-team",
+    "https://www.scorpionmasque.com/en/sky-team",
     "https://www.scorpionmasque.com/sites/scorpionmasque.com/files/st_rules01_en_06jun2023.pdf",
-    "https://www.philibertnet.com/fr/blog/articles/interview-sky-team-ne-pas-faire-un-simulateur-de-vol-etait-un-gros-defi",
   ],
 } as const;

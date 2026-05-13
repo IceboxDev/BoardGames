@@ -9,19 +9,22 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Spell duels turn liquid courage into spell fuel, with hand management deciding when to blast, curse, equip, or drink for mana.",
+    "Wizard drinking card game where players spend mana crystals to cast attack cards, then drink potion shots to refuel.",
   default:
-    "Mana comes from potions in a wizard duel where every spell risks another gulp. Hand management drives turns of casting, cursing, equipping, and exchanging cards. The last wizard standing wins after rivals lose health or hit Too Much Mana.",
+    "Adult drinking card game about wizard duels, with hand management and take-that attacks. Each turn, the active wizard refills their hand, then plays, discards, or exchanges spells, curses, and artifacts by spending mana. Last wizard standing wins after rivals hit zero health or tap out from Too Much Mana.",
   loose:
-    "Wizard duels become a drinking-risk brawl, because mana comes from potions rather than a tidy resource track. Hand management drives each turn: draw to a limit, cast spells, lay curses, equip artifacts, or exchange cards. The last wizard standing wins after rivals lose health or hit Too Much Mana. The rules even suggest swapping potions for sausages or press-ups.",
+    "Adult drinking card game about wizard duels, with hand management, take-that attacks, and potion shots as the resource system. Each turn, the active wizard refills their hand, resolves any event, then plays, discards, or exchanges spell, curse, and artifact cards by paying mana crystals. Wizards drop out at zero health or Too Much Mana, and the last wizard standing wins. Spell cards print incantations, so casting often means saying ridiculous words aloud before naming a target.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:37:32.849Z",
+  generatedAt: "2026-05-13T20:20:31.004Z",
   model: "gpt-5.5",
-  durationMs: 28893,
+  durationMs: 20265,
   sources: [
     "https://notenoughmana.com/",
-    "https://buy.notenoughmana.com/wp-content/uploads/2023/10/Not-Enough-Mana-Maleficus-Praecepta-WEB-EN.pdf",
+    "https://buy.notenoughmana.com/wp-content/uploads/2024/10/Not-Enough-Mana-Maleficus-Praecepta-WEB-EN.pdf",
+    "https://www.gamenerdz.com/not-enough-mana",
+    "https://www.reddit.com/r/boardgames/comments/yvvft5/giveaway_5_copies_of_my_potion_drinking_card_game/",
+    "https://www.reddit.com/r/boardgames/comments/1grj83h/playing_not_enough_mana_without_alcohol/",
   ],
 } as const;

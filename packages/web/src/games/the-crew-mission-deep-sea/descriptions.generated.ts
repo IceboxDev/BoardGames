@@ -9,20 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Silent trick-taking turns every won card into shared risk, as submarine trumps and shifting task cards squeeze the table.",
+    "Cooperative trick-taker where each hand asks the table to win exact task cards while communication stays mostly silent.",
   default:
-    "A quiet hand of cards becomes a pressure gauge, with every trick either solving the mission or wrecking it. The core mechanic is trick-taking, with submarine trumps and one-card sonar clues. The crew wins by completing all assigned tasks before any task becomes impossible.",
+    "Cooperative trick-taking card game about clearing mission tasks with almost no table talk. Each round, task cards are claimed, then players follow suit into tricks, with submarines as trump. The crew wins the mission once every task condition is safely met; any broken task means a retry.",
   loose:
-    "A quiet hand of cards becomes a pressure gauge, with every trick either solving the mission or wrecking it. The core mechanic is trick-taking, with submarine trumps and one-card sonar clues. The crew wins by completing all assigned tasks before any task becomes impossible. The 96-card task deck can ask for odd-only tricks, exact color counts, or a final-trick 2, so the same mission number rarely feels identical.",
+    "Cooperative trick-taking card game about clearing mission tasks with almost no table talk. Each round, task cards are claimed, then players follow suit into tricks; highest led suit wins unless a submarine trump appears. The crew wins a mission once every task condition is safely met, and any impossible or broken task means a retry. The task deck is the signature piece: 96 cards ask for feats like winning no early tricks, taking consecutive tricks, or capturing only even cards.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:41:24.353Z",
+  generatedAt: "2026-05-13T20:22:32.226Z",
   model: "gpt-5.5",
-  durationMs: 31857,
+  durationMs: 18822,
   sources: [
-    "https://www.thamesandkosmos.com/manuals/full/691869_Crew_Deep%20Sea_Manual.pdf",
     "https://boardgamegeek.com/boardgame/324856/the-crew-mission-deep-sea",
+    "https://www.thamesandkosmos.com/manuals/full/691869_Crew_Deep%20Sea_Manual.pdf",
+    "https://rolltoreview.com/the-crew-mission-deep-sea-review/",
     "https://geekdad.com/2021/11/return-to-cooperative-trick-taking-with-the-crew-mission-deep-sea/",
   ],
 } as const;

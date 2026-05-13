@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A visible discard pile turns every throwaway into bait in a hand-management game of runs, sets, and nervous timing.",
+    "Classic meld-scoring card game where players draw from stock or visible discards, lay sets and suited runs, then discard.",
   default:
-    "Every discard gives away a clue, and useful cards can become traps. Hand management drives the play: draw, meld runs and sets, lay off matching cards, then discard. A hand ends when one player empties their hand, leaving opponents' deadwood to score.",
+    "Classic meld-scoring card game about emptying a hand while banking points in sets and suited runs. On a turn, a player draws from the stock or visible discard pile, lays melds or adds cards to existing melds, then discards. Each hand scores played cards minus cards left in hand, and the highest score after someone reaches 500 wins.",
   loose:
-    "Every discard advertises too much, turning a simple card table into a watchful trap. Hand management drives the play: draw, meld runs and sets, lay off matching cards, then discard. A hand ends when one player empties their hand, and opponents' deadwood becomes the score across deals. In 500 Rummy, a buried discard can be claimed, but every card above it comes along too.",
+    "Classic meld-scoring card game about emptying a hand while banking points in sets and suited runs. On a turn, a player draws from the stock or takes a useful card from the visible discard pile, lays new melds or adds cards to existing melds, then discards. Each hand scores played cards minus cards left in hand, and the highest score after someone reaches 500 wins. The fanned discard pile is the hook: taking a buried card also drags every card above it into hand.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:39:19.599Z",
+  generatedAt: "2026-05-13T20:21:12.718Z",
   model: "gpt-5.5",
-  durationMs: 66142,
+  durationMs: 16348,
   sources: [
-    "https://www.britannica.com/topic/rummy",
-    "https://www.pagat.com/rummy/",
-    "https://www.pagat.com/rummy/rummy.html",
     "https://www.pagat.com/rummy/500rum.html",
+    "https://www.rummy500.com/rules",
+    "https://rummyrulebook.com/pages/rummy-500/",
   ],
 } as const;

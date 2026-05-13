@@ -9,19 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Surreal picture cards turn one-word clues into risky leaps of word association across a silent team grid.",
+    "Team party deduction game where spymasters give one-word, numbered clues so teammates choose the right picture cards.",
   default:
-    "Surreal picture cards make every clue a gamble between clever links and deadly overreach. Word association drives play as spymasters give one word and a number. A team wins by finding all its agents first, unless someone hits the assassin.",
+    "Team party deduction game about reading visual associations from a grid of odd picture cards. Each turn, a spymaster says one word and a number, then teammates discuss and touch cards one at a time. First team to cover all its agents wins, but picking the assassin loses instantly.",
   loose:
-    "Surreal picture cards make each clue a gamble, because one image can point to a whale, a moon, or a trapdoor. Word association drives play: a spymaster gives one word and a number, then sits silent while the team chooses cards. A team wins by finding all its agents first, unless a guess hits the assassin. The picture version uses a 5×4 grid, so fewer cards create stranger visual overlaps.",
+    "Team party deduction game about reading visual associations from a grid of odd picture cards. Each turn, a spymaster says one word and a number, then teammates argue over which images match and touch cards one at a time. Correct picks get covered with friendly agent tiles, while enemy agents and bystanders end the turn; the first team to find all its agents wins, and the assassin loses instantly. The key card secretly maps the grid into agents, bystanders, and the assassin.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:34:48.396Z",
+  generatedAt: "2026-05-13T20:18:34.182Z",
   model: "gpt-5.5",
-  durationMs: 67893,
+  durationMs: 13142,
   sources: [
-    "https://www.czechgames.com/games/codenames-pictures/",
-    "https://tabletoptogether.com/2017/08/21/review-codenames-pictures/",
+    "https://www.codenamesgame.com/boardgames/codenames-pictures",
+    "https://www.czechgames.com/files/rules/codenames-pictures-rules-en.pdf",
+    "https://www.tabletopgaming.co.uk/features//codenames-pictures-review",
   ],
 } as const;

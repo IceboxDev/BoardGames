@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A calm countryside puzzle hides pressure in every hex, using tile placement to balance village tasks, rivers, rails, and loose terrain.",
+    "Cooperative tile-laying puzzle where the table places hexes into shared countryside to complete tasks and chase a high score.",
   default:
-    "A calm countryside puzzle hides pressure in every hex as the shared map keeps asking for just one cleaner edge. The core mechanic is tile placement, with task tiles, landscape tiles, rivers, and rails shaping one growing countryside. The group wins against its own score, then unlocks new material to",
+    "Cooperative tile-laying puzzle about one shared countryside map. On a turn, draw a task or landscape hex, rotate it into place, connect rivers and rails cleanly, and fill numbered terrain tasks. When the stacks run out, total the score and try to beat the campaign high score.",
   loose:
-    "A calm countryside puzzle hides pressure in every hex as the shared map keeps asking for just one cleaner edge. The core mechanic is tile placement: each revealed hex extends one shared map, with streams and rails forced to match while fields, forests, and villages can sprawl. The group wins against its own score, collecting points from completed tasks, long river and rail lines, and flags sealed inside closed regions. A campaign sheet turns scores into",
+    "Cooperative tile-laying puzzle about building one shared countryside map and scoring it as a group. On a turn, draw a task or landscape hex, rotate it into the map, connect rivers and rails cleanly, and aim at numbered terrain tasks. When the stacks run out, total tasks, enclosed flags, longest river, and longest rail; success means beating the campaign high score. The campaign pad opens sealed boxes with new tiles and small scoring rules.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:34:29.597Z",
+  generatedAt: "2026-05-13T20:18:54.737Z",
   model: "gpt-5.5",
-  durationMs: 28879,
+  durationMs: 21782,
   sources: [
-    "https://pegasusna.com/Dorfromantik-The-Boardgame/PNA51240.USA",
-    "https://www.rulespal.com/dorfromantik/rulebook",
-    "https://www.connexxion24.com/downloads/anleitungen/dorfromantik-spielregeln-auf-englisch-2.pdf",
-    "https://www.wargamer.com/dorfromantik-board-game/review",
+    "https://coopboardgames.com/cooperative-board-game-reviews/dorfromantik-review/",
+    "https://news.pegasus.de/en/interview-dorfromantik-the-board-game-authors-and-toukana-interactive/",
+    "https://weeklygeek.net/video-games/dorfromantik-the-board-game-review/",
   ],
 } as const;

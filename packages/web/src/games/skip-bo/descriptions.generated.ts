@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A race to shed a buried stockpile turns simple counting into tense hand management across four shared ascending piles.",
+    "Sequencing card game where players draw to five, build shared 1-to-12 piles, and manage discards to empty a stockpile.",
   default:
-    "A race to shed a face-up stockpile turns every useful play into a favor for rivals. Hand management drives five-card hands, personal discards, and shared piles from 1 to 12. The first empty stockpile wins, with Skip-Bo wild cards breaking the sequence.",
+    "Light sequencing card game about racing through a personal stockpile while feeding shared center piles. Each turn, a player refills to five cards, plays legal numbers from hand, stockpile, or exposed discard tops, then discards one card. First to empty the stockpile wins.",
   loose:
-    "A race to shed a face-up stockpile turns every useful play into a favor that may open the table for rivals. Hand management drives the game, as cards move from a five-card hand, four personal discards, and shared piles climbing from 1 to 12. The first empty stockpile wins, while Skip-Bo wild cards bridge gaps or start piles. Minnie Hazel Skip Bowman boxed her Spite and Malice variant in Texas in 1967.",
+    "Light sequencing card game about racing through a personal stockpile while feeding shared center piles. Each turn, a player refills to five cards, plays legal numbers from hand, stockpile, or exposed discard tops, then parks one card on a personal discard pile. First to empty the stockpile wins, with optional match scoring for cards left in opposing stockpiles. The key table puzzle is four personal discard columns, because only the top card of each can be used later.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:40:52.496Z",
+  generatedAt: "2026-05-13T20:21:50.167Z",
   model: "gpt-5.5",
-  durationMs: 68387,
+  durationMs: 21171,
   sources: [
-    "https://service.mattel.com/instruction_sheets/42050-Skip-Bo.pdf",
-    "https://service.mattel.com/us/productDetail.aspx?prodno=42050&siteid=27",
-    "https://boardgameguys.com/skip-bo/",
-    "https://www.diabolicalplots.com/tabletop-game-review-skip-bo/",
+    "https://m.service.mattel.com/us/Technical/productDetail?prodno=42050&siteid=27",
+    "https://service.mattel.com/instruction_sheets/N7808.pdf",
+    "https://boardgamegeek.com/wiki/page/thing%3A1269",
   ],
 } as const;

@@ -9,22 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Four hidden cards turn every swap into a bluff, and memory drives each draw, steal, and risky table slap.",
+    "Light bluff-and-memory card game where players manage hidden grids, draw cards, swap unknowns, and race to dump matches.",
   default:
-    "Four hidden cards make every steal and swap feel like a small heist. Memory drives the game through draws, peeks, powers, and scrambled grids. The lowest total wins, but a bad Bandit call adds a penalty.",
+    "Light party-style bluff-and-memory card game about driving a hidden card grid to the lowest total. On a turn, draw from the deck or discard pile, use a power, swap it into a face-down slot, or throw it away. A round ends when someone calls out and everyone takes one last turn; at 100 points, low score wins.",
   loose:
-    "Four hidden cards make every steal and swap feel like a heist, because only part of each grid is known. Memory drives the game: draw, replace, peek, or trigger a card power while rivals scramble the layout. Rounds end when someone calls Bandit, and the lowest total wins unless the call was reckless. A matching discard can be slapped from the table at any time, turning a quiet count into a race.",
+    "Light party-style bluff-and-memory card game about driving a hidden card grid to the lowest total. On a turn, draw from the deck or discard pile, use a power, swap it into a face-down slot, or throw it away while tracking which numbers sit where. A round ends when someone calls out, everyone gets one last turn, and at 100 points the lowest score wins. Matching the top discard lets any player slap a card down, with misses adding penalty cards.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:32:48.248Z",
+  generatedAt: "2026-05-13T20:17:28.736Z",
   model: "gpt-5.5",
-  durationMs: 34779,
+  durationMs: 19214,
   sources: [
-    "https://bandit.cards/?lang=en",
-    "https://www.bandit.cards/rules",
-    "https://bandit.cards/play",
-    "https://bandit.cards/video",
-    "https://boardgamegeek.com/wiki/page/thing%3A450261",
+    "https://www.bandit.cards/de",
+    "https://www.analog.games/games/70a3e645-64a8-4c31-9af1-a63fb1cf77bd/bandit?lang=en",
+    "https://boardgamegeek.com/wiki/page/weblink%3A367518",
   ],
 } as const;

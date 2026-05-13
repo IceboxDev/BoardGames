@@ -9,19 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A rigged parliament turns every vote into an accusation in this social deduction game of elections, policy tiles, and concealed loyalties.",
+    "Hidden-role social deduction game where elected presidents and chancellors pass policies while everyone argues who lied.",
   default:
-    "A rigged parliament turns every vote into evidence as hidden fascists exploit a liberal majority. Social deduction drives elections, policy choices, and arguments over who lied. Liberals win by passing five liberal policies or killing Hitler; fascists can win by electing him chancellor after the law",
+    "Hidden-role social deduction party game where liberals hunt fascists and Hitler. A president names a chancellor, all vote Ja or Nein, and the pair filters three policy cards down to one law. Liberals win with five liberal laws or dead Hitler; fascists win with six fascist laws or Hitler as late chancellor.",
   loose:
-    "A rigged parliament turns every vote into evidence as hidden fascists exploit a liberal majority. Social deduction drives elections, policy choices, and arguments over who lied. Liberals win by passing five liberal policies or killing Hitler; fascists win with six fascist policies or by electing Hitler chancellor after the third. Separate role and party cards let investigations reveal allegiance without exposing Hitler.",
+    "Hidden-role social deduction party game where liberals try to identify fascists and keep Hitler out of power. Each round, a president nominates a chancellor, the table votes Ja or Nein, and an approved pair secretly discards policy cards before one law hits the board. Liberals win by passing five liberal laws or executing Hitler; fascists win by passing six fascist laws or electing Hitler chancellor after three fascist laws. The memorable prop is the Ja/Nein vote, followed by loud claims about who threw away which policy.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:39:49.377Z",
+  generatedAt: "2026-05-13T20:22:02.468Z",
   model: "gpt-5.5",
-  durationMs: 50115,
+  durationMs: 49750,
   sources: [
-    "https://www.secrethitler.com/?ICID=ref_fark",
     "https://www.secrethitler.com/assets/Secret_Hitler_Rules.pdf",
+    "https://secrethitler.io/rules",
   ],
 } as const;

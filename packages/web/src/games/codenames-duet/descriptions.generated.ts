@@ -9,20 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A shared key turns every familiar word into a risk, driven by cooperative word association across a 5-by-5 grid.",
+    "Cooperative word-clue game where partners trade one-word clues and numbers to find agents on a shared grid.",
   default:
-    "A double-sided key makes each clue feel risky, since neither partner sees the whole map. Cooperative word association drives the game. The team wins by finding all 15 agents before the timer runs out, but one assassin ends everything.",
+    "Cooperative word game about reading a partner’s associations on a grid of word cards. Each turn, one side gives a one-word clue plus a number, and the other points to matching words while dodging bystanders and assassins. Find all agents before the timer tokens run out to win.",
   loose:
-    "Double-sided key cards make the table feel unstable, since a safe clue on one side can point toward danger on the other. Cooperative word association drives play: partners alternate one-word clues and numbered guesses across a 5-by-5 grid. The team wins by finding all 15 agents before timer tokens run out, and loses immediately to an assassin. One visible assassin may be an agent for the partner.",
+    "Cooperative word game about reading a partner’s associations on a 5×5 grid of word cards. Each turn, one side gives a one-word clue plus a number, and the other points to matching words while avoiding bystanders and assassins. Find all 15 agents before the timer tokens run out to win; hit an assassin and the mission fails. The mission map adds preset challenges that reward safer clues or bigger multi-word leaps.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:34:00.159Z",
+  generatedAt: "2026-05-13T20:18:26.984Z",
   model: "gpt-5.5",
-  durationMs: 21216,
+  durationMs: 13602,
   sources: [
-    "https://www.czechgames.com/games/codenames-duet",
-    "https://filemanager.czechgames.com/storage/files/codenames-duet/rules/codenames-duet-rules-en.pdf",
-    "https://www.thegamingreview.com/10732/2017/09/20/board-game-review-codenames-duet/",
+    "https://www.codenamesgame.com/boardgames/codenames-duet",
+    "https://www.tabletopgaming.co.uk/reviews/codenames-duet-review/",
   ],
 } as const;

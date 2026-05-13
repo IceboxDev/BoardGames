@@ -9,22 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A rigged infernal casino turns Texas Hold’em into cooperative poker, with Favor cards buying illegal outs at a rising cost.",
+    "Cooperative Texas Hold’em card game where everyone builds a poker hand, spends chips to cheat, and tries to beat hellish bosses.",
   default:
-    "The house cheats first, so every hand at the Last Resort Casino feels like poker on a trapdoor. Betting drives the game as players build hands against bosses while guarding shared Souls and Temptation. Beat four bosses to reach the Devil, then win the final hand before the contract closes.",
+    "Cooperative poker survival game where each player builds a Texas Hold’em hand against a cheating boss. Each hand deals three private cards, reveals flop-turn-river cards, then players bet chips, earn Souls, and use Favor cards to cheat. Beat the Devil at the Big Table before Souls run out or Temptation claims the team.",
   loose:
-    "The house cheats first, so every hand at the Last Resort Casino feels like poker on a trapdoor. Betting drives the game as players build hands against bosses while guarding shared Souls and Temptation. Beat four bosses to reach the Devil, then win the final hand before Temptation or empty coffers seal the contract. Everyone gets a third Hold’em card up the sleeve, and the central neoprene mat sprawls 28 by 20 inches.",
+    "Cooperative poker survival game where each player builds a Texas Hold’em hand against a cheating boss. Each hand deals three private cards, reveals flop-turn-river community cards, then players bet chips, earn Souls, and use Favor cards to cheat. Clear the boss run and beat the Devil at the Big Table before Souls run out or Temptation claims the team. The box includes a large neoprene casino mat, custom poker chips, Boss cards, and rule-breaking Favor cards.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:35:35.844Z",
+  generatedAt: "2026-05-13T20:20:08.877Z",
   model: "gpt-5.5",
-  durationMs: 41707,
+  durationMs: 53108,
   sources: [
+    "https://www.gamenerdz.com/hell-of-a-deal-preorder",
+    "https://gamingtrend.com/six-ways-hell-of-a-deal-is-actually-like-poker/",
     "https://gamingtrend.com/cashless-co-operative-poker/",
-    "https://frogames.it/en/products/hell-of-a-deal",
-    "https://www.reddit.com/r/boardgames/comments/1s3lolt/hell_of_a_deal_a_cooperative_poker_experience/",
-    "https://www.kicktraq.com/projects/smirkanddagger/hell-of-a-deal/",
-    "https://www.cardhaus.com/hell-of-a-deal/",
+    "https://hell-of-a-deal.backerkit.com/faq",
   ],
 } as const;

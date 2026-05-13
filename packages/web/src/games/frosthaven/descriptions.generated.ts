@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A starving northern outpost turns every dungeon crawl into triage, with hand management powering brutal card tactics.",
+    "Cooperative campaign dungeon-crawler where heroes pick paired action cards, fight standees on map tiles, and build the outpost.",
   default:
-    "A starving northern outpost makes each mission feel like triage: loot pays for gear, walls, and buildings, not just sharper swords. Hand management drives the combat. The campaign ends by pushing branching scenario chains toward a final narrative while the town keeps changing.",
+    "Cooperative campaign dungeon-crawler with card-driven tactical combat and town building between missions. Each round, heroes choose two cards, use one top action and one bottom action, then act by initiative while monster decks reveal attacks. The party wins a scenario by completing its objective before cards or hit points run out.",
   loose:
-    "A starving northern outpost makes each mission feel like triage: loot pays for gear, walls, and buildings, not just sharper swords. Hand management drives the combat, as mercenaries burn cards for big turns and risk exhaustion. The campaign wins by pushing branching scenario chains toward a final narrative, while the town keeps changing afterward. Each outpost phase marks a week; ten weeks flip the season and event deck.",
+    "Cooperative campaign dungeon-crawler with thinky, card-driven tactical combat and a between-missions town-building layer. Each round, every hero secretly chooses two cards, uses one top action and one bottom action, then acts by initiative while monster decks reveal attacks. The party wins a scenario by completing its printed objective before too many cards or hit points run out, unlocking new branches toward the campaign finale. After missions, loot turns into crafted items, upgraded buildings, map stickers, event cards, and sealed character boxes.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:34:54.137Z",
+  generatedAt: "2026-05-13T20:19:26.669Z",
   model: "gpt-5.5",
-  durationMs: 23576,
+  durationMs: 16599,
   sources: [
-    "https://cephalofair.com/collections/board-games/products/frosthaven-bundles",
-    "https://cephalofair.com/pages/frosthaven",
+    "https://cephalofair.com/products/frosthaven-bundles",
     "https://pikdonker.github.io/frosthaven-rule-book/",
-    "https://www.nopunincluded.com/npi/frosthaven",
+    "https://www.boardgamequest.com/frosthaven-review/",
   ],
 } as const;

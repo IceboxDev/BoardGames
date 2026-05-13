@@ -9,20 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Every pick fuses a Pacific Northwest habitat hex with an animal token, turning tile-laying into a double puzzle.",
+    "Relaxed tile-and-token drafting puzzle where each turn picks a paired hex and animal token to grow a scoring habitat.",
   default:
-    "The perfect forest hex may be paired with the wrong elk, while the needed salmon may drag along awkward terrain. Drafting drives each turn as one tile-token pair joins a growing ecosystem. Points reward wildlife patterns and connected habitat corridors.",
+    "Light spatial puzzle where players draft paired habitat hexes and animal tokens for private nature maps. A turn takes one display pair, places the hex, then puts the animal on a matching icon. Highest score wins from wildlife patterns, connected habitats, bonuses, and leftover nature tokens.",
   loose:
-    "The tension comes from one shared market: the perfect forest hex may be paired with the wrong elk, while the needed salmon may drag along awkward terrain. Drafting drives each turn as one tile-token pair joins a growing personal ecosystem. Points reward wildlife patterns and the largest connected habitat corridors. Bears prefer tight pairs, salmon form runs, and hawks want space.",
+    "Light spatial puzzle where players draft paired hex tiles and animal tokens to build private Pacific Northwest habitats. A turn picks one display pair, adds the hex to the map, then places the animal on a matching icon if a legal space exists. At the end, highest score wins from wildlife cards, connected habitat regions, majority bonuses, and unused nature tokens. Pine-cone tokens can refresh bad animal draws or split a pair, so the market rarely feels punishing.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:33:40.503Z",
+  generatedAt: "2026-05-13T20:18:07.091Z",
   model: "gpt-5.5",
-  durationMs: 21034,
+  durationMs: 28561,
   sources: [
-    "https://www.flatout.games/",
-    "https://www.alderac.com/wp-content/uploads/2025/04/Cascadia_BaseGame_Rulebook_Optimized.pdf",
-    "https://www.thefandomentals.com/cascadia-interview/",
+    "https://www.flatout.games/cascadia",
+    "https://merchantsofplay.com/howtoplay/cascadia/",
+    "https://www.geekyhobbies.com/cascadia-rules/",
+    "https://www.reddit.com/r/boardgames/comments/q2kw7b/cascadia_review_american_animal_npi/",
   ],
 } as const;

@@ -9,21 +9,22 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Classic color-matching turns meaner through hand management, with stackable draw cards, hand swaps, and penalties that swell a single turn.",
+    "Take-that shedding card game where players match color, number, or symbol while stacking draw penalties onto rivals.",
   default:
-    "A familiar discard race becomes a grudge machine where one stacked penalty can bury a hand. Its core is hand management: match color, number, or symbol, then time draw cards, 7 swaps, and 0 passes. Victory comes by emptying a hand or surviving the 25-card Mercy rule.",
+    "Mean take-that shedding card game where players race to empty a hand while dumping huge draw penalties on each other. On a turn, play one card matching color, number, or symbol; without a match, draw until one appears. Playing the last card wins, or the last survivor wins after rivals hit the 25-card Mercy Rule.",
   loose:
-    "A familiar discard race becomes a grudge machine where one stacked penalty can bury a hand. Its core is hand management: match color, number, or symbol, then time draw cards, 7 swaps, and 0 passes. Victory comes by emptying a hand or surviving the 25-card Mercy rule. The 168-card deck adds Wild Draw 10 and Wild Color Roulette, a color call that draws until the color appears.",
+    "Mean take-that shedding card game where players race to empty a hand while dumping huge draw penalties on each other. On a turn, a player plays one card matching color, number, or symbol; without a match, they draw until one appears. Playing the last card wins, or the last survivor wins after rivals hit the 25-card Mercy Rule. The 168-card deck adds Wild Draw 6, Wild Draw 10, Skip Everyone, Discard All, stacking, 7s hand swaps, and 0s hand passes.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:42:30.774Z",
+  generatedAt: "2026-05-13T20:23:33.722Z",
   model: "gpt-5.5",
-  durationMs: 29524,
+  durationMs: 32063,
   sources: [
-    "https://service.mattel.com/us/productPopup.aspx?prodno=HWV18&siteid=27",
-    "https://service.mattel.com/instruction_sheets/HVW18-Eng.pdf",
-    "https://www.64ouncegames.com/pages/uno-no-mercy-rules",
-    "https://cardgameuno.fandom.com/wiki/UNO_Show_%27Em_No_Mercy",
+    "https://shop.mattel.com/en-ca/products/uno-show-em-no-mercy-hwv18-en-ca",
+    "https://m.service.mattel.com/us/Technical/productDetail?prodno=HWV18",
+    "https://service.mattel.com//instruction_sheets/HVW18-Eng.pdf",
+    "https://www.unorules.com/uno-show-em-no-mercy-rules/",
+    "https://www.reddit.com/r/unocardgame/comments/1bnhw4m/uno_no_mercy/",
   ],
 } as const;

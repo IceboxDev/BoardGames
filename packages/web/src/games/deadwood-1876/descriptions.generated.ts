@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A gold-rush alliance curdles into a last-gun duel, with hand management driving robberies, safes, and nervous partnerships.",
+    "Semi-cooperative bluffing card game where crews play gun cards and special actions to steal hidden safes, then turn on allies.",
   default:
-    "Alliances in Deadwood last only until enough gold hits the table. Hand management drives each robbery as cards become weapons or one-shot items. The richest team reaches the Final Showdown, then partners shoot each other until one outlaw remains.",
+    "Semi-cooperative social deduction card game about stealing hidden safes for a crew. On a turn, play one card as an item, or as a gun to rob a safe or duel over positions while dice settle fights. The crew with the most gold reaches the Final Showdown, and the last survivor wins.",
   loose:
-    "Alliances in Deadwood last only until enough gold hits the table. Hand management drives each robbery, as cards become weapons or one-shot items while safes hide gold, badges, or guns. The richest team reaches the Final Showdown, then its partners shoot each other until one outlaw remains. The faux book box holds wooden star pawns, engraved dice, and characters based on real Deadwood figures.",
+    "Semi-cooperative social deduction card game about uneasy crews stealing hidden safes of gold, badges, and showdown guns. On a turn, play one card as a special item, or as a gun to rob a safe or duel over positions while defenders answer with guns and both sides roll matching dice. After badge bonus turns, the establishment with the most gold reaches the Final Showdown, where the last survivor keeps the gold and wins. The faux book box holds wooden saloon platforms, star pawns, and chunky weapon dice.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:34:30.561Z",
+  generatedAt: "2026-05-13T20:19:04.716Z",
   model: "gpt-5.5",
-  durationMs: 39457,
+  durationMs: 36630,
   sources: [
     "https://facadegames.com/products/deadwood-1876",
     "https://cdn.shopify.com/s/files/1/0028/2964/7961/files/Deadwood_1876_Rules_English.pdf?4346553514003986582=",
-    "https://www.reddit.com/r/boardgames/comments/112zxeu/im_the_founder_of_facade_games_and_the_inventor/",
-    "https://www.boardgameoracle.com/en-GB/boardgame/price/Ly8bIdfd0Y/deadwood-1876",
+    "https://zatu.com/blogs/reviews/deadwood-1876-review",
   ],
 } as const;

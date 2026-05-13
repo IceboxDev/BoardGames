@@ -9,20 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Familiar crossword play turns vertical through tile placement, as old words become new words under rising stacks.",
+    "Family word game where players build crossword lines, stack letters over old words, and count every tile in the scored stacks.",
   default:
-    "Familiar crossword play turns vertical as letters climb over earlier words. Tile placement drives each turn: letters go across, down, or onto existing tiles to change a word. Highest score wins, and stacked words count every tile in the column.",
+    "Family word game about building a shared crossword grid with letter tiles. On a turn, play tiles from your rack in one line, connect to existing words, or stack over old letters to alter the top word. Highest score wins when someone empties a rack with no draw pile left, or all players pass because no words fit.",
   loose:
-    "Familiar crossword play turns vertical as letters climb over earlier words and turn MOOD into WOOD, then WOOL. Tile placement drives each turn: letters go across, down, or onto existing tiles to change a word. Highest score wins, with flat words paying double while stacked words count every tile in the column. Stacks cap at five tiles, and at least one old letter must remain uncovered.",
+    "Family word game about building a shared crossword grid with plastic letter tiles. On a turn, play tiles from your rack in one straight line, connect to existing words, or stack letters over old letters to alter the top word. Words without stacks score two points per letter; stacked words count every tile in the word, and the highest final score wins. Five-high stacks, the Qu bonus, and the all-seven-tiles bonus shape the late score chase.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:42:32.894Z",
+  generatedAt: "2026-05-13T20:23:33.660Z",
   model: "gpt-5.5",
-  durationMs: 23957,
+  durationMs: 27123,
   sources: [
     "https://instructions.hasbro.com/en-us/instruction/upwords-game",
-    "https://winning-moves.com/images/UPWORDS_rulesv2.pdf",
-    "https://www.ultraboardgames.com/upwords/game-rules.php",
+    "https://instructions.hasbro.com/api/download/14577_en-us_upwords-game.pdf",
+    "https://www.boardgameswizard.com/word-board-games/upwords/",
+    "https://gambiter.com/word/Upwords.html",
   ],
 } as const;

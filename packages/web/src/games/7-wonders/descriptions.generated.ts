@@ -9,20 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Ancient cities rise through three brisk ages, as drafting turns every card into growth for one city and denial for a neighbor.",
+    "Civilization card-drafting game where players pick one building card, pass the hand, and grow resource, science, war, and point engines.",
   default:
-    "Ancient cities rise side by side, and every hand of cards makes progress feel like theft from the neighbors. Drafting drives each age: choose one card, pass the hand, then reveal builds at the same time. After the third age, the highest score wins.",
+    "Civilization card-drafting game about building an ancient city tableau over three Ages. Each turn, players secretly choose one card, then build it, tuck it under their wonder board, or discard it for coins. After the final Age, highest total score wins.",
   loose:
-    "Ancient cities rise side by side, and every hand of cards makes progress feel like theft from the neighbors. Drafting drives each age: choose one card, pass the hand, then reveal builds at the same time. After the third age, the high score across buildings, wonder stages, wars, science, guilds, and coins wins. The second edition redraws the cards and wonder boards with clearer iconography built from a decade of play.",
+    "Civilization card-drafting game about building an ancient city tableau over three Ages. Each turn, players choose one card from a hand at the same time, then pay resources to build it, tuck it under their wonder board, or discard it for coins. After each Age, neighboring armies compare strength, and after the final Age the highest victory-point total wins. The second edition uses larger wonder boards and clearer card icons for the different building colors.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:30:26.388Z",
+  generatedAt: "2026-05-13T20:17:17.591Z",
   model: "gpt-5.5",
-  durationMs: 23174,
+  durationMs: 17251,
   sources: [
-    "https://www.rprod.com/en/games/7-wonders",
     "https://www.rprod.com/en/press/7-wonders",
-    "https://cdn.svc.asmodee.net/production-rprod/storage/downloads/games/7wonders/en/sev-en02-rules-1716388903zBEZx.pdf",
+    "https://www.rprod.com/en/games/7-wonders",
+    "https://rollsinthefamily.com/reviewed-games/7-wonders-review",
   ],
 } as const;

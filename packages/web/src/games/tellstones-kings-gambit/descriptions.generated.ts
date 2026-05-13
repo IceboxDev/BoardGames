@@ -9,21 +9,22 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Seven stones turn perfect information into a memory duel, using bluffing to make a known line feel dangerous.",
+    "Memory-bluffing abstract where players place, hide, swap, peek at, and challenge symbol stones in a shared line.",
   default:
-    "Seven Demacian stones turn public memory into a staring contest. It is bluffing: players place, hide, swap, peek, challenge, and boast while rattling recall. Three points win, unless a Boast names every hidden stone for an instant finish.",
+    "Memory-bluffing abstract where players track seven symbol stones in a shared line. Each turn, a player places, hides, swaps, peeks, challenges a guess, or boasts. Three points wins, or a boast wins at once if every hidden stone is named correctly.",
   loose:
-    "Seven Demacian stones turn public memory into a staring contest, since every hidden symbol was once visible. It is bluffing: players place, hide, swap, peek, challenge, and boast while rattling recall. Three points win, but a Boast can end the game instantly if all facedown stones are named, or lose it on one miss. The tin holds seven engraved stones, a cloth mat, score counters, and Cithria's father's letter.",
+    "Memory-bluffing abstract where players track seven symbol stones as they move along a shared line. On a turn, a player orders an opponent to place a face-up stone, hide one, swap two stones, peek at one hidden stone, challenge a guess, or boast. A correct challenge scores for the guesser, a wrong one scores for the challenger, and three points wins. A boast can end the game at once if the boaster, or the opponent who steals it, names every hidden stone correctly.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:41:37.165Z",
+  generatedAt: "2026-05-13T20:22:27.650Z",
   model: "gpt-5.5",
-  durationMs: 45048,
+  durationMs: 17295,
   sources: [
     "https://merch.riotgames.com/en-us/product/tellstones-board-game-english/",
-    "https://nastol.io/storage/games/files/tellstones_kings_gambit/662719/tellstones-en.pdf",
-    "https://www.shelfside.co/reviews2020/tellstones-review",
-    "https://gamingtrend.com/reviews/a-battle-of-minds-tellstones-kings-gambit-review/",
+    "https://tesera.ru/images/items/1741639/tellstones-en.pdf",
+    "https://www.espn.com/gaming/story/_/id/29897910/how-riot-games-board-game-tellstones-weaponizes-memory",
+    "https://www.oneesports.gg/gaming/how-to-play-riots-new-board-game-tellstones-kings-gambit/",
+    "https://www.strangeassembly.com/2020/review-tellstones-kings-gambit",
   ],
 } as const;

@@ -9,19 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A sushi conveyor belt becomes a knife-edge race for combos as hands circle the table in brisk card drafting.",
+    "Light card-drafting set-collection game where everyone keeps one sushi card, passes the hand, and scores combo plates.",
   default:
-    "The sushi-train theme turns every passing hand into a gift and a threat. Card drafting drives the game as players keep one card, reveal it, and pass the rest. The best score comes from reading which combos to chase, block, or abandon.",
+    "Light card-drafting and set-collection game about building the best sushi meal from passing hands. Each pick, everyone keeps one card, reveals it, then passes the shrinking hand left. After three rounds, highest score wins, with pudding saved for the final swing.",
   loose:
-    "The sushi-train theme makes every passing hand feel like a gift and a threat. Card drafting drives the game: each player keeps one card, reveals it, then passes the shrinking hand along. Points come from fragile combos, majorities, and endgame pudding, so a harmless dessert can decide the final score. Walker-Harding said the theme clicked because sushi plates already feel like cards moving around a table.",
+    "Light card-drafting and set-collection game about building the best sushi meal from passing hands of cards. Each pick, everyone secretly keeps one card, reveals it, then passes the shrinking hand left while chasing tempura pairs, sashimi triples, maki majorities, dumpling runs, and nigiri. After three rounds, highest total score wins, with pudding cards saved for the final bonus or penalty. Wasabi sits empty until the next nigiri lands on it, making squid worth nine points instead of three.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:40:52.117Z",
+  generatedAt: "2026-05-13T20:22:25.171Z",
   model: "gpt-5.5",
-  durationMs: 17878,
+  durationMs: 22694,
   sources: [
-    "https://www.gamewright.com/product/Sushi-Go",
-    "https://www.mojo-nation.com/sushi-go-creator-phil-walker-harding-accessibility-creativity-future-sushi-series/",
+    "https://gamewright.com/product/Sushi-Go",
+    "https://fgbradleys.com/wp-content/uploads/rules/SushiGo-rules.pdf",
+    "https://gameinformer.com/column/2019/06/26/top-of-the-table-sushi-roll",
+    "https://en.wikipedia.org/wiki/Sushi_Go%21",
   ],
 } as const;

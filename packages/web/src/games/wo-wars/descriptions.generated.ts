@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A red plastic dragon turns a thief’s trail into bleats, bells, and birdsong in a children’s deduction race across a gridded kingdom.",
+    "Electronic children’s sound-deduction game where players follow noises, move pawns on a grid, and try to catch a thief.",
   default:
-    "A red dragon reports a hidden thief’s route through animal calls, bells, and other place sounds. Deduction drives the chase as players match each noise to repeated board images. Most dragon chips after the timed rounds wins.",
+    "Electronic children’s sound-deduction race about tracking a thief by sound. Each round, the dragon plays noises tied to board spaces, then players move their pawns toward the suspected square. Catch the thief to earn a dragon coin; first to three coins wins.",
   loose:
-    "An electronic red dragon turns a hidden thief’s path into a trail of bleats, bells, birds, and other place sounds. Deduction drives the chase as players match each sound to repeated board images and move toward the likely final square. Most dragon chips after the timed rounds wins. Roberto Fraga said the idea came from Sneakers, where a blindfolded captive remembers a route by its sounds.",
+    "Electronic children’s sound-deduction game about following a thief across a picture grid. Each round, the dragon rock plays a trail of noises, such as animals, bells, or other board icons, and players use the clues to move their pawns toward the likely hiding place. When the round ends, the device reveals coordinates; a pawn on that square earns a dragon coin, and first to three coins wins. The big red dragon and battery-powered rock are the table centerpiece.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:43:10.830Z",
+  generatedAt: "2026-05-13T20:24:23.457Z",
   model: "gpt-5.5",
-  durationMs: 37936,
+  durationMs: 49797,
   sources: [
     "https://www.spielregeln.de/wo-wars.html",
     "https://www.hall9000.de/html/spiel/wo_wars",
-    "https://www.reich-der-spiele.de/specials/fraga-wo-wars",
-    "https://www.cliquenabend.de/spiele/914000-Wo-war-s.html",
+    "https://fragames.com/en/game/wo-wars-mini/",
   ],
 } as const;

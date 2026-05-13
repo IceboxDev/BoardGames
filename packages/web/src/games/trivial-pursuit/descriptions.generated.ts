@@ -9,20 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Colored wedges turn bar-room facts into a public trial of memory, with roll-and-move steering each player toward favored categories.",
+    "Classic trivia party game where players roll around a wheel board, answer category questions, and collect pie wedges.",
   default:
-    "Colored wedges turn stray facts into a public trial of memory, where one missed answer can end a hot streak. The core mechanic is roll-and-move. A player wins by filling all six category wedges, reaching the center, and answering an opponent-chosen category.",
+    "Classic trivia party game about general-knowledge questions in six color-coded categories. On a turn, a player rolls, moves along the wheel-and-spoke board, and answers the category they land on. Fill all six pie wedges, reach the center, and answer the final question to win.",
   loose:
-    "Colored wedges turn stray facts into a public trial of memory, where one missed answer can end a hot streak. The core mechanic is roll-and-move. A player wins by filling all six category wedges, reaching the center hub, and answering a final opponent-chosen category. The original Genus set covered Geography, Entertainment, History, Arts & Literature, Science & Nature, and Sports & Leisure.",
+    "Classic trivia party game about general-knowledge questions in six color-coded categories. On a turn, a player rolls a die, moves around the wheel-and-spoke board, and answers the color category they land on. Correct answers keep the turn going, and correct answers on headquarters spaces earn matching pie wedges. Fill all six wedges, reach the center, and answer the opponents’ chosen final category to win.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:42:01.250Z",
+  generatedAt: "2026-05-13T20:23:01.658Z",
   model: "gpt-5.5",
-  durationMs: 24084,
+  durationMs: 16946,
   sources: [
-    "https://www.hasbro.com/common/instruct/46015.pdf",
-    "https://www.britannica.com/topic/Trivial-Pursuit",
-    "https://www.thehenryford.org/collections/explore/artifact/303713",
+    "https://www.hasbro.com/common/instruct/TrivialPursuitGenusIV.PDF",
+    "https://www.pocketgamer.com/real-arcade-trivial-pursuit-genus-edition/review/",
+    "https://en.wikipedia.org/wiki/Trivial_Pursuit",
+    "https://dicetower.com/board-game/2952",
   ],
 } as const;

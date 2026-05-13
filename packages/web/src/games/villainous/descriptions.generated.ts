@@ -9,20 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Disney villains race across separate storyboards, using hand management to build schemes while rivals unleash movie heroes.",
+    "Asymmetric take-that strategy card game where each villain moves on a personal board, plays cards, and fates rivals.",
   default:
-    "Six Disney villains work through separate schemes, each with a deck, realm, and objective. Hand management drives the turn as cards fuel plans and Fate cards drop heroes onto rivals. The first villain to finish a private story goal wins.",
+    "Asymmetric strategy card game where each villain races toward a different movie objective. Each turn, a player moves to a new board space, takes its action icons, plays cards, and may fate a rival with heroes. First to meet their printed villain goal wins.",
   loose:
-    "Six classic Disney villains run on separate storyboards, so every scheme feels like a different problem under the same rules. Hand management drives each turn as cards fuel plans, gather power, and trigger Fate against rivals. Victory goes to the first villain to complete a private story goal, from hoarding Prince John’s gold to cursing Maleficent’s realm. The Queen of Hearts turns card guards into wickets, then tries to take the shot.",
+    "Asymmetric strategy card game where every villain races toward a different movie-specific objective. On a turn, a player moves a sculpted mover to a new board space, takes its action icons, plays cards, then refills to four cards. First to meet their printed goal wins, such as hoarding power, defeating Peter Pan, or claiming the Trident and Crown. Fate actions let rivals drop heroes onto a board, covering actions with Ariel, Robin Hood, or Aladdin.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:42:40.528Z",
+  generatedAt: "2026-05-13T20:23:31.558Z",
   model: "gpt-5.5",
-  durationMs: 28880,
+  durationMs: 22081,
   sources: [
     "https://www.ravensburger.us/en-US/products/games/family-games/disney-villainous-the-worst-takes-it-all-60001739",
-    "https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/26295%20anl%202050897.pdf?ossl=pds_text_Spielanleitung",
-    "https://www.geeksundergrace.com/tabletop/review-disney-villainous/",
+    "https://www.gamesradar.com/disney-villainous-board-game-review/",
+    "https://boardgamegeek.com/boardgame/256382/disney-villainous-the-worst-takes-it-all",
   ],
 } as const;

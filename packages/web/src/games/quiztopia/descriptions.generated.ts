@@ -9,22 +9,22 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Trivia answers tug a city between color and darkness, with cooperative play turning every blank stare into tablewide crisis.",
+    "Cooperative quiz game where the table picks building-category cards, answers trivia, and uses clue cards to save enough buildings.",
   default:
-    "Each answer pulls one of twelve city buildings toward color or darkness. Cooperative play drives the quiz as the table manages categories, help cards, and risk. The team wins by claiming enough buildings within 24 questions before too many fall.",
+    "Cooperative quiz game with a party edge, about saving building cards that double as trivia categories. Each turn, one player chooses a building, hears the matching question, and may get table help. Correct answers claim or brighten buildings; wrong answers darken or lose them. Win by claiming the target before the question deck or loss.",
   loose:
-    "Each answer pulls one of twelve city buildings toward color or darkness, so a missed category can vanish from the table. Cooperative play drives the quiz, with one player choosing a building while the table weighs knowledge, risk, and help cards. The team wins by claiming enough buildings within 24 questions before too many fall. Expert rules ration help into one-word clues, pantomime, humming, and noises.",
+    "Cooperative quiz game with a party edge, about saving building cards that double as trivia categories. On a turn, the active player chooses a building, another player reads its matching question, and the table may discuss or spend help for one-word clues, pantomime, humming, or noises. Correct answers claim or brighten buildings; wrong answers darken or lose them, and the team wins by claiming the target before the question deck or loss limit runs out. The card holder hides answers while feeding a fixed deck of question cards.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:38:30.802Z",
+  generatedAt: "2026-05-13T20:21:05.497Z",
   model: "gpt-5.5",
-  durationMs: 41269,
+  durationMs: 30056,
   sources: [
-    "https://quiztopia.de/",
-    "https://quiztopia.de/download/quiztopia-spielregeln_2.0.pdf",
     "https://www.kosmos.de/de/quiztopia_1694296_4002051694296",
+    "https://cms.kosmos.de/game-instructions/4002051694296_Quiztopia_Manual_220420_web.pdf",
     "https://www.brettspielabend.net/2019/08/18/quiztopia/",
+    "https://www.reich-der-spiele.de/kritiken/Quiztopia",
     "https://www.krimimaster.de/2019/08/03/quiztopia-die-welt-ist-nicht-genug/",
   ],
 } as const;

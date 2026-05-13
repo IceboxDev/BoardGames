@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A talking treasure chest turns a children’s mystery into a ticking castle scramble of deduction and animal bribes.",
+    "Cooperative family deduction game where players roam a castle, question animals, collect food, and narrow down a thief.",
   default:
-    "The electronic chest makes a children’s whodunit feel like a castle listening to every move. Deduction drives the group through rooms, animal clues, and crossed-off suspects. The team wins by finding the thief before the wizard reaches the gate.",
+    "Cooperative family deduction game about searching a castle for the thief who stole the king’s ring. On a turn, roll to move, press the matching room button on the electronic chest, then search, talk, feed an animal, use magic, or try a chest. The team wins by identifying the thief and opening the right chest before time runs out.",
   loose:
-    "A talking treasure chest makes this children’s whodunit feel like a castle listening to every move. Deduction drives the group as pawns search rooms, feed animals, and turn clues into crossed-off suspects. The team wins only by naming the thief and opening the right chest before the wizard reaches the gate. The chest voices the animals, advances the clock toward 6 o’clock, and can send a ghost through the rooms.",
+    "Cooperative family deduction game about searching a castle for the thief who stole the king’s ring. On a turn, roll to move through rooms, press the matching animal button on the electronic chest, then search, talk, feed an animal, use magic, or try a suspect’s chest. The team wins by ruling out suspects, reaching the right room with a key, and opening the thief’s chest before time runs out. The plastic chest speaks clues and events, while the ghost can shove pawns back to the nursery.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:42:43.365Z",
+  generatedAt: "2026-05-13T20:23:36.959Z",
   model: "gpt-5.5",
-  durationMs: 24834,
+  durationMs: 20296,
   sources: [
     "https://www.ravensburger.org/spielanleitungen/ecm/Spielanleitungen/22094%20Whoowasit_GB_72dpi.pdf",
-    "https://crowscastle.com/board-games/147-whoowasit.html",
     "https://idleremorse.com/2019/02/24/review-whoowasit/",
-    "https://www.meeplemountain.com/articles/the-reiner-knizia-alphabet-the-letter-w/",
+    "https://www.ultraboardgames.com/whoowasit/game-rules.php",
   ],
 } as const;

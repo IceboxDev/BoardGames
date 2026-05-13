@@ -9,20 +9,16 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Perfect information turns every tempo into pressure through grid movement across sixty-four squares.",
+    "Abstract strategy game on an 8x8 board where alternating moves develop pieces, capture, and hunt the king.",
   default:
-    "Perfect information makes each pawn push a public wager, with no dice or hidden cards to blame. The core mechanic is grid movement across an eight-by-eight board. Victory comes by checkmate, not by taking the king.",
+    "Abstract strategy game of perfect information, focused on spatial calculation, threats, and trades across an 8x8 grid. Each turn, a player moves one piece by its rule, captures by landing on an enemy square, and must never leave the king in check. Checkmate wins; resignation concedes; stalemate or dead positions draw.",
   loose:
-    "Perfect information makes each pawn push a public wager, with no dice or hidden cards to blame. The core mechanic is grid movement: pieces follow distinct lines, leaps, or steps across an eight-by-eight board. Victory comes by checkmate, while stalemate and dead positions can turn domination into a draw. After 1475, the queen’s expanded range helped give modern chess its sharper attacking shape.",
+    "Abstract strategy game of perfect information, focused on spatial calculation, threats, and trades across an 8x8 grid. Each turn, a player moves one piece by its rule, captures by landing on an enemy square, and must never leave the king in check. Checkmate wins by attacking the king with no legal escape; resignation also ends it, while stalemate or dead positions draw. Staunton pieces start in fixed ranks, with pawns shielding the back row.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:33:51.103Z",
+  generatedAt: "2026-05-13T20:18:13.381Z",
   model: "gpt-5.5",
-  durationMs: 24612,
-  sources: [
-    "https://handbook.fide.com/chapter/E012023",
-    "https://www.britannica.com/topic/chess",
-    "https://www.britannica.com/topic/queen-chess",
-  ],
+  durationMs: 20966,
+  sources: ["https://handbook.fide.com/chapter/e012023", "https://rcc.fide.com/article1/"],
 } as const;

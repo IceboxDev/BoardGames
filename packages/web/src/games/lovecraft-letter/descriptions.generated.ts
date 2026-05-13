@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Forbidden powers tempt every draw-one, play-one decision, turning Love Letter’s hand management into a sanity check with teeth.",
+    "Light deduction card game where players draw one, play one, and risk insanity checks for stronger card effects.",
   default:
-    "Forbidden powers make every Love Letter decision a bargain with collapse. Hand management drives each round: draw one card, play one card, and risk insanity effects for stronger plays. Two sane tokens, three insane tokens, or Cthulhu’s insane effect can end the game.",
+    "Light deduction and push-your-luck card game using the Love Letter draw-one, play-one engine. On a turn, a player may check sanity, then draws a card and plays one for a guess, comparison, protection, swap, or knockout. Two sane tokens or three insane tokens win, unless Cthulhu triggers an instant win.",
   loose:
-    "Cosmic powers make every familiar Love Letter choice a bargain with collapse. Hand management drives each round: draw one card, play one card, and decide whether an insanity effect is worth the sanity check it triggers later. Two sane tokens, three insane tokens, or Cthulhu’s insane effect can end the game. The 25-card deck keeps eliminations sharp while tarot cards, sleeves, and heavy poker chips give the tiny system weight.",
+    "Light deduction and push-your-luck card game using the Love Letter draw-one, play-one engine. On a turn, a player with insane cards first flips cards for a sanity check, then draws a card and plays one for a guess, comparison, protection, swap, or knockout. Two sane round tokens or three insane round tokens win the game, unless Cthulhu triggers an instant win. The deluxe set uses tarot-sized sleeved cards, chunky sanity poker chips, and a magnetic book-style box.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:37:03.956Z",
+  generatedAt: "2026-05-13T20:20:17.133Z",
   model: "gpt-5.5",
-  durationMs: 39497,
+  durationMs: 23245,
   sources: [
-    "https://www.arkhamhorror.com/games/lovecraft-letter/",
-    "https://www.ultraboardgames.com/lovecraft-letter/game-rules.php",
-    "https://www.tabletopgaming.co.uk/reviews/lovecraft-letter-review/",
-    "https://rolltoreview.com/lovecraft-letter-review/",
+    "https://www.tabletopgaming.co.uk/Reviews/lovecraft-letter-review/",
+    "https://geekdad.com/2017/06/going-crazy-for-lovecraft-letter/",
+    "https://www.boardseyeview.net/post/2017/11/03/lovecraft-letter",
   ],
 } as const;

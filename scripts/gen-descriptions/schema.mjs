@@ -10,16 +10,35 @@
 
 import { z } from "zod";
 
-// Upper bounds are deliberately ~15% above the prompt's "target" so the model
-// has buffer to complete its final sentence cleanly. Without that buffer the
-// API silently truncates strings at exactly maxLength, leaving mid-word cut
-// endings in the committed source. The carousel/catalog renderers gate
-// visible length via `line-clamp-N` anyway, so a slightly longer string only
-// affects the file's appearance in git diff, not the user-facing layout.
+// Upper bounds are generous to give the model real sentence-completion
+// buffer. The API's strict-mode `maxLength` is a HARD server-side cap: when
+// generation exceeds it, the string is silently truncated mid-word. So we
+// set maxLength well above the prompt's target (~50% margin) and rely on the
+// prompt to actually steer length. The carousel uses `line-clamp-7` as a
+// safety; at the smallest non-compact card width (cardW=280, desc width
+// ~240px, text-[10px] ≈ 5px/char → ~48 chars/line) the visible budget is
+// ~336 chars, so a `default` near 320 still renders cleanly.
+//
+// `loose` renders in the catalog grid with `line-clamp-6 text-sm` and is
+// expected to ellipsize on the 6th line, so its cap is the most generous.
+// Sentence-completion guard: every variant must end with terminal punctuation
+// (`.`, `?`, `!`) optionally followed by a closing quote. The API's strict
+// maxLength is a hard server-side cap; when the model wants to write more,
+// it cuts mid-word and the unfinished string sneaks past simple min/max
+// validators. This regex catches those cases so the existing schema-failure
+// retry in openai-call.mjs runs a second attempt with a reminder.
+const endsWithSentenceTerminator = /[.?!][")”’]?$/u;
+const completeSentence = (label) =>
+  z
+    .string()
+    .refine((s) => endsWithSentenceTerminator.test(s.trim()), {
+      message: `${label} must end with a sentence terminator (., ?, !) — yours appears to have been cut off mid-sentence`,
+    });
+
 export const GeneratedDescriptionsSchema = z.object({
-  tight: z.string().min(80).max(200),
-  default: z.string().min(160).max(300),
-  loose: z.string().min(260).max(460),
+  tight: completeSentence("tight").pipe(z.string().min(80).max(220)),
+  default: completeSentence("default").pipe(z.string().min(160).max(340)),
+  loose: completeSentence("loose").pipe(z.string().min(280).max(560)),
   sources: z.array(z.string().url()).min(1).max(8),
 });
 
@@ -35,23 +54,23 @@ export const RESPONSE_JSON_SCHEMA = {
     tight: {
       type: "string",
       minLength: 80,
-      maxLength: 200,
+      maxLength: 220,
       description:
-        "One complete sentence ending in a period. Target ~140 chars. Hook + core mechanic compressed. No win condition.",
+        "One complete sentence ending in a period. Target ~130 chars; do not write more than ~160. Genre + how-you-play compressed.",
     },
     default: {
       type: "string",
       minLength: 160,
-      maxLength: 300,
+      maxLength: 340,
       description:
-        "Three complete sentences. Target ~240 chars. Hook, mechanic, win/twist. Carousel-sized.",
+        "Three complete sentences ending with a period. Target ~220 chars; do not write more than ~280. Sentence 1: genre + core loop. Sentence 2: a turn or round. Sentence 3: win condition.",
     },
     loose: {
       type: "string",
-      minLength: 260,
-      maxLength: 460,
+      minLength: 280,
+      maxLength: 560,
       description:
-        "Four complete sentences ending in a period. Target ~360 chars. Adds one concrete telling detail. Catalog-grid-sized.",
+        "Four complete sentences ending with a period. Target ~380 chars; do not write more than ~460. Adds one concrete telling detail (component, signature moment, designer fact, expansion etc).",
     },
     sources: {
       type: "array",

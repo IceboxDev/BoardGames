@@ -9,21 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Every new doorway redraws the mansion, and hidden roles turn a shared horror crawl into a knife fight after the haunt breaks.",
+    "Hidden-traitor horror adventure where explorers add room tiles, draw creepy cards, then split into heroes and traitor.",
   default:
-    "Every door changes the house, and every omen can trigger a new horror scenario. Hidden roles take over when the haunt starts. Heroes race to solve that haunt before the traitor finishes a secret goal.",
+    "Hidden-traitor horror adventure about exploring a modular haunted mansion before the haunt hits. On a turn, move an explorer, add a room tile if entering a new doorway, and resolve an item, event, or omen card. After the haunt, the first side to complete its secret scenario goal wins.",
   loose:
-    "Every door changes the house, and every omen can push the table toward a new horror scenario. Hidden roles take over when the haunt starts, turning one explorer against the rest with secret rules. Victory depends on the haunt: heroes might escape, kill a monster, or stop a ritual while the traitor pursues a private goal. Two haunt books, Traitor's Tome and Secrets of Survival, let each side read rules the other cannot see.",
+    "Hidden-traitor horror adventure about exploring a modular haunted mansion before the haunt hits. On a turn, move an explorer, add a room tile if entering a new doorway, and resolve an item, event, or omen card. After enough omens, heroes and traitor read separate booklets; the first side to complete its scenario goal wins. The box includes 50 haunts, so one game might be a monster hunt and the next an escape ritual.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:33:38.942Z",
+  generatedAt: "2026-05-13T20:17:38.529Z",
   model: "gpt-5.5",
-  durationMs: 85473,
+  durationMs: 20937,
   sources: [
     "https://consumercare.hasbro.com/en-us/product/avalon-hill-betrayal-at-house-on-the-hill-second-edition-cooperative-board-game-for-ages-12-and-up-for-3-6-players/8450F69A-05BE-4BB2-8146-EBCE86E4C868",
-    "https://instructions.hasbro.com/en-ca/instruction/avalon-hill-betrayal-at-house-on-the-hill-second-edition-cooperative-board-game-for-ages-12-and-up-for-3-6-players",
-    "https://boardgamegeek.com/boardgame/10547/betrayal-at-house-on-the-hill",
-    "https://www.gamesradar.com/betrayal-at-house-on-the-hill-2nd-edition-review/",
+    "https://www.shelfside.co/reviews2020/betrayal-review",
+    "https://www.bigredbarrel.com/2015/02/22/review-betrayal-at-house-on-the-hill/",
   ],
 } as const;

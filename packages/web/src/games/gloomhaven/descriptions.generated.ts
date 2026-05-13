@@ -9,22 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A dungeon crawl becomes a stamina puzzle through hand management, where every swing, sprint, and spell spends a shrinking hand of cards.",
+    "Cooperative tactical dungeon-crawler where mercenaries pick two cards each round to move, attack, and outlast the scenario.",
   default:
-    "Every dungeon is a stamina puzzle, because attacks, movement, and rest all drain the same hand of cards. Hand management drives play: each round, a mercenary plays two ability cards and uses the top of one with the bottom of the other. Scenarios end when the party meets its objective or exhausts.",
+    "Cooperative tactical dungeon-crawler with card-driven combat across a branching campaign. Each round, every mercenary chooses two cards; one sets initiative, then the top power from one and bottom power from the other are used. The group wins by completing the scenario objective before exhaustion or defeat.",
   loose:
-    "Every dungeon is a stamina puzzle, because attacks, movement, and rest all drain the same hand of cards. Hand management drives play: each round, a mercenary plays two ability cards and uses the top of one with the bottom of the other. Scenarios end when the party meets its objective or exhausts, while the campaign unlocks maps, classes, and retirements. Stickers turn the city map into a record of the group's choices.",
+    "Cooperative tactical dungeon-crawler with a campaign map, character decks, and automated monsters in each scenario. Each round, every mercenary chooses two ability cards; one sets initiative, then the top power from one and the bottom power from the other are used to move, attack, heal, loot, or burn a big effect. The group wins a scenario by meeting its printed objective before characters run out of cards or hit points. Lost cards are both stamina and power, so a flashy attack can leave a hero exhausted at the final door.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:35:20.194Z",
+  generatedAt: "2026-05-13T20:19:36.875Z",
   model: "gpt-5.5",
-  durationMs: 46625,
+  durationMs: 23620,
   sources: [
+    "https://cephalofair.com/pages/backup-of-original-gloomhaven-page",
     "https://cephalofair.com/pages/games",
-    "https://cephalofair.com/pages/gloomhaven",
-    "https://cephalofair.com/pages/about",
-    "https://www.tabletopgaming.co.uk/Reviews/gloomhaven-review/",
-    "https://www.gameinformer.com/b/features/archive/2017/12/15/top-of-the-table-gloomhaven.aspx",
   ],
 } as const;

@@ -9,20 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "Westeros politics turn each round into knives-out hand management, with plots setting income, initiative, and the pain of each challenge.",
+    "Thinky Living Card Game where each round reveals a plot, marshals characters, and attacks through military, intrigue, and power challenges.",
   default:
-    "Power in Westeros changes hands through military, intrigue, and power challenges. Hand management drives custom House decks and seven-card plot decks. The first House to hold 15 power wins, unless table politics cuts that lead apart.",
+    "Thinky competitive Living Card Game built around custom House decks and a separate plot deck. Each round, players reveal plots, spend gold on characters and locations, then kneel characters into military, intrigue, and power challenges. First player to collect 15 power wins.",
   loose:
-    "Power in Westeros changes hands through military, intrigue, and power challenges, so every attack threatens bodies, cards, or points. Hand management drives custom House decks and seven-card plot decks. The first House to hold 15 power wins, but multiplayer titles create temporary alliances. The core box included Stark, Lannister, Baratheon, and Targaryen decks.",
+    "Thinky competitive Living Card Game built around custom House decks and a separate plot deck. Each round, players reveal plots, spend gold on characters and locations, then kneel characters into military, intrigue, and power challenges. Military kills characters, intrigue discards cards, power steals tokens, and the first player to collect 15 power wins. The LCG format used fixed card packs instead of random boosters.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:32:42.687Z",
+  generatedAt: "2026-05-13T20:17:09.522Z",
   model: "gpt-5.5",
-  durationMs: 29219,
+  durationMs: 9181,
   sources: [
     "https://www.fantasyflightgames.com/en/products/a-game-of-thrones-lcg/",
-    "https://www.fantasyflightgames.com/en/news/2014/11/5/a-new-road-forward/",
-    "https://www.scribd.com/document/58682079/AGOT-Coreset-Rules",
+    "https://www.polyhedroncollider.com/2014/05/a-game-of-thrones-card-game-review.html",
+    "https://en.wikipedia.org/wiki/A_Game_of_Thrones_%28card_game%29",
   ],
 } as const;

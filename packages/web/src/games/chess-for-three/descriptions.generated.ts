@@ -9,20 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A circular chessboard turns familiar pieces into a three-front knife fight, with grid movement bent through ranks, moats, and a hollow center.",
+    "Abstract strategy chess variant on a circular board where each turn moves one familiar piece across rings, arcs, or the center void.",
   default:
-    "Three chess armies share one circular battlefield, where every attack exposes a flank to the third mind at the table. Grid movement keeps the familiar pieces but bends lines around the board. The last army with a live king wins.",
+    "Abstract strategy chess variant played on a circular board, with familiar pieces aimed at two rival kings. On a turn, a player moves one piece across rings, curved diagonals, or the center void. Checkmate or capture a king to eliminate that army; the last active army wins.",
   loose:
-    "Three chess armies share one circular battlefield, so every attack opens a flank for the third mind at the table. Grid movement keeps the familiar pieces but bends files, ranks, and diagonals around the board. A player wins by surviving until the other two kings are checkmated or captured. The center is a void that pieces may cross but never occupy, and green moats stop instant border raids.",
+    "Abstract strategy chess variant played on a circular board, with familiar pieces aimed at two rival kings. On a turn, a player moves one piece: rooks sweep around a ring, bishops follow curved guide lines through the center, and no piece stops in the central void. Checkmate or capture a king to eliminate that army; the last active army wins. Green moats and creeks block early border attacks until moats are bridged or pawns push past the fourth rank.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:34:00.718Z",
+  generatedAt: "2026-05-13T20:18:29.189Z",
   model: "gpt-5.5",
-  durationMs: 30032,
+  durationMs: 22097,
   sources: [
-    "https://3manchess.com/rules/",
-    "https://3manchess.com/tutorial/",
+    "https://images1.vat19.com/manuals/3-man-chess.pdf",
+    "https://www.vat19.com/item/three-man-chess/_escaped_fragment_/",
     "https://www.slashgear.com/3-man-chess-runs-rings-around-the-classic-game-27198169/",
   ],
 } as const;

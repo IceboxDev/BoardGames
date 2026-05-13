@@ -9,20 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A besieged city turns deck-building into a boss fight, with fixed discard order making every purchased gem and spell a future plan.",
+    "Cooperative fantasy deck-builder where mages buy gems and spells, prep them in breaches, and race to kill a boss.",
   default:
-    "A besieged city turns deck-building into a boss fight against a different nemesis each session. Deck-building drives the action, but decks are flipped rather than shuffled. The mages win by killing the nemesis or outlasting its deck before Gravehold falls.",
+    "Cooperative fantasy deck-builder about mages defending a city from one giant nemesis. On a turn, spend aether to buy gems, relics, and spells, open breaches, and prep or cast spells. The team wins by killing the nemesis or surviving its deck; the city falling or all mages collapsing loses.",
   loose:
-    "A besieged city turns deck-building into a boss fight where chaos comes from the enemy, not the player deck. Deck-building drives the action, but decks are flipped rather than shuffled, so discard order becomes a weapon. The mages win by killing the nemesis or emptying its deck before Gravehold or every mage falls. The turn deck can hand the nemesis two brutal turns in a row.",
+    "Cooperative fantasy deck-builder about mages defending a city from one giant nemesis. A turn-order card names a mage or the nemesis; mage turns spend aether on gems, relics, and spells, open breaches, then prep or cast spells, while nemesis turns resolve minions and attacks. The team wins by reducing the nemesis to zero life or emptying its deck with no threats in play; Gravehold falling or every mage exhausted loses. Player decks are never shuffled, so the order of each discard pile matters.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:32:39.960Z",
+  generatedAt: "2026-05-13T20:17:19.032Z",
   model: "gpt-5.5",
-  durationMs: 26491,
+  durationMs: 18691,
   sources: [
-    "https://www.handelabra.com/aeonsend",
+    "https://indieboardsandcards.com/our-games/aeons-end/",
     "https://coopboardgames.com/cooperative-board-game-reviews/aeons-end-review/",
-    "https://aeonsend.fandom.com/wiki/Aeon%27s_End_%28Core_Set%29",
   ],
 } as const;

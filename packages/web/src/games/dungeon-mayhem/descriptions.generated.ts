@@ -9,19 +9,21 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A dungeon party settles loot disputes with slapstick spells and axes in a brisk hand-management brawl.",
+    "Light take-that card brawl where each adventurer draws, plays attacks or shields, and tries to knock everyone else out.",
   default:
-    "A dungeon party turns treasure sharing into a cartoon fight of shields, spells, and sudden healing. Hand management drives each turn through quick draws and icon-heavy attacks. The last adventurer with hit points wins.",
+    "Light take-that card brawl about fantasy adventurers blasting each other down. On a turn, draw a card, play at least one card, then attack, heal, shield, draw, or chain extra plays. The last adventurer with hit points wins.",
   loose:
-    "A dungeon party turns treasure sharing into a cartoon knife fight of shields, spells, and sudden healing. Hand management drives each turn, with a card played after a draw and icons handling damage, shields, extra plays, and healing. The survivor who keeps any hit points after the other adventurers drop to zero wins. Each class has its own deck, so Sutha hits hard while Azzan banks tricks that can swing a table in one turn.",
+    "Light take-that card brawl about fantasy adventurers blasting each other down, closer to a chaotic filler than a strategy duel. On a turn, draw one card and play at least one card for damage, healing, defense, card draw, or extra plays. Hit points start at 10; knocked-out adventurers leave, and the last one still standing wins. Each class has its own small deck, with Kyle Ferrin art and swingy powers like Fireball hitting the whole room.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:34:33.569Z",
+  generatedAt: "2026-05-13T20:18:54.875Z",
   model: "gpt-5.5",
-  durationMs: 19295,
+  durationMs: 20693,
   sources: [
-    "https://wpn.wizards.com/en/products/dungeon-mayhem",
-    "https://droplowest.com/2018/11/15/review-dungeon-mayhem/",
+    "https://dnd-support.wizards.com/hc/en-us/articles/360039309571-Dungeon-Mayhem",
+    "https://www.ultraboardgames.com/dungeon-mayhem/game-rules.php",
+    "https://www.tabletopgaming.co.uk/Reviews/dungeon-mayhem-review/",
+    "https://www.strangeassembly.com/2019/review-dungeon-mayhem",
   ],
 } as const;

@@ -9,19 +9,19 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "An early card locks each stone path into rising or falling numbers, and hand management turns every discard into an opening.",
+    "Light family hand-management game where players play numbered color cards in order to push pawns along scoring paths.",
   default:
-    "Every stone path begins in debt, so Keltis turns the first step into a wager. Hand management drives the game as each color climbs or falls in order. Winning means reaching positive spaces, collecting wishing stones, and avoiding half-started paths.",
+    "Light family hand-management game about committing cards to colored stone paths. Each turn, a player plays or discards one card, moves a matching pawn if played, then draws from the deck or a discard pile. Highest score wins after the deck empties or enough pawns reach the goal area.",
   loose:
-    "Every stone path begins in debt, so Keltis turns the first step into a wager. Hand management drives the game: each color must climb or fall in number order as pieces advance along matching paths. The score belongs to the player whose stones reach positive spaces, collect wishing stones, and avoid half-started paths. Clover tiles can chain extra movement, and the one large figure doubles its final gain or loss.",
+    "Light family hand-management game about committing numbered cards to colored stone paths. Each turn, a player plays or discards one card, moves a matching pawn if played, resolves any bonus tile reached, then draws from the deck or a discard pile. When the deck empties or enough pawns reach the goal area, pawns score by distance traveled and the highest total wins. Wishing stones matter because too few cost points at final scoring.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:36:07.034Z",
+  generatedAt: "2026-05-13T20:19:56.368Z",
   model: "gpt-5.5",
-  durationMs: 23883,
+  durationMs: 13477,
   sources: [
-    "https://www.spiel-des-jahres.de/spiele/keltis/",
-    "https://cdn.1j1ju.com/medias/65/4c/4b-keltis-rulebook.pdf",
+    "https://www.ultraboardgames.com/keltis/game-rules.php",
+    "https://www.meeplemountain.com/reviews/keltis/",
   ],
 } as const;

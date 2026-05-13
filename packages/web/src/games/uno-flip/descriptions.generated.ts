@@ -9,20 +9,20 @@ import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
   tight:
-    "A familiar race to empty hands turns mean when Flip cards expose the harsher backs of every card; hand management drives each turn.",
+    "Light family shedding card game where turns match a hand card by color, number, or symbol, with Flip cards swapping the whole deck side.",
   default:
-    "A familiar race to empty hands turns mean when Flip cards expose the harsher backs of every card. Hand management drives each turn through color, number, and symbol matches. Rounds end when one player sheds the last card and scores the cards left in others’ hands.",
+    "Light family shedding card game about emptying a hand by matching the discard pile’s color, number, or symbol. On a turn, play one matching card or draw; action cards reverse order, skip turns, force draws, or set a new color. First out scores the cards left in other hands, and the first to 500 points wins.",
   loose:
-    "A familiar race to empty hands turns mean when Flip cards expose the harsher backs of every card. Hand management drives play as each card must match the current color, number, or symbol. Rounds end when one player sheds the last card, and scores come from cards trapped in rivals’ hands. A single Flip turns hands, draw pile, and discard pile over, bringing Draw Five, Skip Everyone, and Wild Draw Color into view.",
+    "Light family shedding card game about emptying a hand by matching the discard pile’s color, number, or symbol. On a turn, play one matching card or draw; action cards reverse order, skip turns, force draws, or set a new color. Playing a Flip card makes every hand, draw pile, and discard pile use the opposite side, and the first to 500 points wins. The dark side hits harder with Draw Five, Skip Everyone, and Wild Draw Color cards.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T16:42:11.647Z",
+  generatedAt: "2026-05-13T20:23:16.663Z",
   model: "gpt-5.5",
-  durationMs: 21806,
+  durationMs: 17301,
   sources: [
-    "https://unogamerules.com/wp-content/uploads/2022/02/Uno-Flip-Rules.pdf",
+    "https://service.mattel.com/instruction_sheets/GDR44-English.pdf",
     "https://www.geekyhobbies.com/uno-flip-2019-card-game-review-and-rules/",
-    "https://www.unorules.com/uno-flip-rules/",
+    "https://www.manuals.co.uk/mattel/uno-flip/manual",
   ],
 } as const;
