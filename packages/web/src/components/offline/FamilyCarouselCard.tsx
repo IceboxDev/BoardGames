@@ -217,9 +217,12 @@ export default function FamilyCarouselCard({
 
           <BggInline bgg={active.bgg} compact={compact} />
 
-          {!compact && active.bgg.description && (
-            <p className="min-h-0 flex-1 overflow-hidden text-[9px] leading-snug text-gray-400 sm:text-[10px] xl:text-[11px] xl:leading-relaxed 3xl:text-sm 3xl:leading-relaxed">
-              {stripBggHtml(active.bgg.description)}
+          {!compact && active.descriptions.default && (
+            // Same pinned layout as the single-game card in GameCarousel3D —
+            // see the comment there for why line-clamp-7 + pinned leading is
+            // the deterministic truncation strategy.
+            <p className="line-clamp-7 text-[10px] leading-snug text-gray-400 sm:text-[11px] xl:text-xs 3xl:text-sm">
+              {stripBggHtml(active.descriptions.default)}
             </p>
           )}
         </div>

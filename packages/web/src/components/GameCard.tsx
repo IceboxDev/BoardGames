@@ -13,7 +13,10 @@ type Props = {
 
 export default function GameCard({ game, href, index = 0, showComingSoon = true }: Props) {
   const summary = compactSummary(game.bgg);
-  const description = game.bgg.description;
+  // Catalog grid uses `loose` (~360 chars) — sized to overflow the
+  // `line-clamp-6` ceiling at text-sm so the description always fills the
+  // card. See GameDescriptions docs for variant mapping.
+  const description = game.descriptions.loose;
   const style: CSSProperties = {
     "--accent": game.accentHex,
     animationDelay: `${index * 80}ms`,

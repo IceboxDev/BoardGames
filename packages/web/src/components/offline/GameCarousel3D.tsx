@@ -36,7 +36,13 @@ const REF_CARD_W = 380;
 const REF_CARD_H = 560;
 const ASPECT = REF_CARD_H / REF_CARD_W;
 
-const MIN_CARD_W = 240; // legible on a 320–375px phone
+// Bumped from 240 → 280 so the description's `line-clamp-7` always has room to
+// render 5–6 lines after the title + player-range + BggInline rows take their
+// share of `bodyH`. At cardW=240 the leftover body slot was only ~60–80px,
+// which truncated the description below its char budget; cardW=280 buys ~25%
+// more body height for ~17% more card width. Still legible on a 320–375px
+// phone — the 0.92 width factor in the cardW formula keeps phones comfortable.
+const MIN_CARD_W = 280;
 const MAX_CARD_W = 640; // sensible cap on 4K — bumped from 520 so the
 // description font has room to breathe at 14-15px on a 4K monitor
 
@@ -532,9 +538,17 @@ function CarouselCard({
 
         <BggInline bgg={game.bgg} compact={compact} />
 
-        {!compact && game.bgg.description && (
-          <p className="min-h-0 flex-1 overflow-hidden text-[9px] leading-snug text-gray-400 sm:text-[10px] xl:text-[11px] xl:leading-relaxed 3xl:text-sm 3xl:leading-relaxed">
-            {stripBggHtml(game.bgg.description)}
+        {!compact && game.descriptions.default && (
+          // Pinned layout: line-clamp-7 is the deterministic truncation
+          // boundary across every viewport. Font sizes still scale with
+          // breakpoint for readability on big screens, but `leading-snug` is
+          // pinned so line-height stays predictable, and `flex-1` /
+          // `overflow-hidden` are dropped — `line-clamp-7` handles both
+          // height-capping and overflow itself. The generated `default`
+          // variant is char-budgeted (~240 chars) to fit within 7 lines even
+          // at the smallest cardW + biggest text combination.
+          <p className="line-clamp-7 text-[10px] leading-snug text-gray-400 sm:text-[11px] xl:text-xs 3xl:text-sm">
+            {stripBggHtml(game.descriptions.default)}
           </p>
         )}
       </div>
