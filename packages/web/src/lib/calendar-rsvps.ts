@@ -1,5 +1,6 @@
 import {
   ClearRsvpBodySchema,
+  KickRsvpBodySchema,
   OkResponseSchema,
   type RsvpStatus,
   SetRsvpBodySchema,
@@ -28,6 +29,20 @@ export async function clearRsvp(date: string) {
     method: "DELETE",
     body: { date },
     request: ClearRsvpBodySchema,
+    response: OkResponseSchema,
+  });
+}
+
+/**
+ * Host/admin-only: force another user's RSVP for `date` to "no". Backs the X
+ * button in the attendees view when someone bows out by text rather than
+ * in-app.
+ */
+export async function kickRsvp(date: string, userId: string) {
+  return apiFetch("/api/calendar/rsvp/kick", {
+    method: "POST",
+    body: { date, userId },
+    request: KickRsvpBodySchema,
     response: OkResponseSchema,
   });
 }

@@ -125,7 +125,7 @@ calendarLocksRoutes.post("/games/reaction", zJsonBody(GameReactionBodySchema), a
 calendarLocksRoutes.get("/locks", async (c) => {
   const [locksResult, rsvpsResult, availabilityResult] = await Promise.all([
     getDb().execute(
-      "SELECT date_key, locked_by, locked_at, expected_user_ids_json, host_user_id, host_name, event_time, address, picks_locked_at FROM locked_dates",
+      "SELECT date_key, locked_by, locked_at, expected_user_ids_json, host_user_id, host_name, event_time, address, picks_locked_at, host_at_home FROM locked_dates",
     ),
     getDb().execute("SELECT date_key, user_id, status FROM rsvps"),
     getDb().execute("SELECT user_id, availability_json FROM user_availability"),
@@ -192,6 +192,7 @@ calendarLocksRoutes.get("/locks", async (c) => {
       eventTime: string | null;
       address: string | null;
       picksLockedAt: string | null;
+      hostAtHome: boolean;
       attendance: { definite: number; tentative: number };
     }
   > = {};
@@ -206,6 +207,8 @@ calendarLocksRoutes.get("/locks", async (c) => {
     const hostUserId = row.host_user_id as string | null;
     const hostName = row.host_name as string | null;
     const picksLockedAt = (row.picks_locked_at as string | null) ?? null;
+    const hostAtHomeRaw = row.host_at_home as number | null;
+    const hostAtHome = hostAtHomeRaw === null ? true : hostAtHomeRaw !== 0;
 
     const cans = canByDate.get(date) ?? new Set<string>();
     const maybes = maybeByDate.get(date) ?? new Set<string>();
@@ -228,6 +231,7 @@ calendarLocksRoutes.get("/locks", async (c) => {
       rsvps: {},
       host: hostUserId ? { userId: hostUserId, name: hostName ?? "" } : null,
       picksLockedAt,
+      hostAtHome,
       eventTime: (row.event_time as string | null) ?? null,
       address: (row.address as string | null) ?? null,
       attendance: { definite: definite.size, tentative: tentativeCount },
@@ -254,6 +258,11 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
   const hostName = body.hostName ?? null;
   const eventTime = body.eventTime ?? null;
   const address = body.address ?? null;
+  // Persist as 0/1/NULL. Undefined/null on the form means "no opinion" → NULL,
+  // which the read path normalizes to `true` (legacy behavior). Explicit
+  // false is the only way to land in the capped-host branch.
+  const hostAtHomeFlag: number | null =
+    body.hostAtHome === true ? 1 : body.hostAtHome === false ? 0 : null;
 
   // Snapshot the set of users who marked can/maybe at lock time so we can
   // decide "fully RSVPed" against a frozen baseline. Track cans separately
@@ -292,8 +301,8 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
     {
       sql: `INSERT INTO locked_dates
               (date_key, locked_by, locked_at, expected_user_ids_json,
-               host_user_id, host_name, event_time, address)
-            VALUES (?, ?, datetime('now'), ?, ?, ?, ?, ?)
+               host_user_id, host_name, event_time, address, host_at_home)
+            VALUES (?, ?, datetime('now'), ?, ?, ?, ?, ?, ?)
             ON CONFLICT(date_key) DO UPDATE SET
               locked_by = excluded.locked_by,
               locked_at = excluded.locked_at,
@@ -301,8 +310,18 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
               host_user_id = excluded.host_user_id,
               host_name = excluded.host_name,
               event_time = excluded.event_time,
-              address = excluded.address`,
-      args: [date, user.id, JSON.stringify(expected), hostUserId, hostName, eventTime, address],
+              address = excluded.address,
+              host_at_home = COALESCE(excluded.host_at_home, locked_dates.host_at_home)`,
+      args: [
+        date,
+        user.id,
+        JSON.stringify(expected),
+        hostUserId,
+        hostName,
+        eventTime,
+        address,
+        hostAtHomeFlag,
+      ],
     },
     // Re-locking the same date invalidates any tombstone — the night is
     // back on, so iCalendar subscribers should see a CONFIRMED event with

@@ -230,6 +230,15 @@ async function migrate(db: Client): Promise<void> {
     await db.execute(`ALTER TABLE locked_dates ADD COLUMN picks_locked_at TEXT`);
   }
 
+  // `host_at_home` flags whether the host's game collection is on-site. NULL
+  // is the legacy state and is treated as `1` (uncapped host) by the read
+  // path so historical lock-ins keep their existing behavior. New lock-ins
+  // emit an explicit 0/1.
+  const ldCols3 = await db.execute("PRAGMA table_info(locked_dates)");
+  if (!ldCols3.rows.some((r) => r.name === "host_at_home")) {
+    await db.execute(`ALTER TABLE locked_dates ADD COLUMN host_at_home INTEGER`);
+  }
+
   // `auto = 1` flags rows that were created by an automated mechanism (the
   // lock-time cans-snapshot batch, or the RSVP modal's first-open useEffect)
   // rather than by an explicit "Going" / "Not going" button click. The

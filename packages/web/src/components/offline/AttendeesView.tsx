@@ -7,9 +7,28 @@ import type { Attendee } from "../../lib/calendar-games";
 type Props = {
   attendees: Attendee[];
   topSlugs: string[];
+  /**
+   * Union of every confirmed attendee's inventory (server's `wire.ownedSlugs`).
+   * The coverage footer uses this to tell apart "nobody owns X" from "someone
+   * owns X but the 3-game bring cap pushed it out".
+   */
+  ownedSlugs?: string[];
+  /** Viewer is admin or the night's host — gates the row-level X (kick) button. */
+  canKick?: boolean;
+  /** Called with the target userId when the host/admin clicks X. */
+  onKick?: (userId: string) => void;
+  /** While a kick mutation is in flight, the targeted row shows a spinner instead of the X. */
+  kickingUserId?: string | null;
 };
 
-export default function AttendeesView({ attendees, topSlugs }: Props) {
+export default function AttendeesView({
+  attendees,
+  topSlugs,
+  ownedSlugs = [],
+  canKick = false,
+  onKick,
+  kickingUserId = null,
+}: Props) {
   const { user } = useCurrentUser();
   const viewerId = user?.id ?? null;
 
@@ -27,10 +46,21 @@ export default function AttendeesView({ attendees, topSlugs }: Props) {
     return counts;
   }, [attendees]);
 
-  const missing = useMemo(
-    () => topSlugs.filter((s) => (bringerCount.get(s) ?? 0) === 0),
-    [topSlugs, bringerCount],
-  );
+  // Split top-5 slugs that nobody is bringing into two buckets:
+  //   - unowned:    no attendee has it in inventory at all
+  //   - capLimited: someone owns it but the 3-game bring cap shoved it out
+  //                 (or the night is external and the host ran out of slots)
+  const { unowned, capLimited } = useMemo(() => {
+    const ownedSet = new Set(ownedSlugs);
+    const unownedOut: string[] = [];
+    const capLimitedOut: string[] = [];
+    for (const slug of topSlugs) {
+      if ((bringerCount.get(slug) ?? 0) > 0) continue;
+      if (ownedSet.has(slug)) capLimitedOut.push(slug);
+      else unownedOut.push(slug);
+    }
+    return { unowned: unownedOut, capLimited: capLimitedOut };
+  }, [topSlugs, bringerCount, ownedSlugs]);
 
   if (attendees.length === 0) {
     return (
@@ -51,15 +81,23 @@ export default function AttendeesView({ attendees, topSlugs }: Props) {
       <ul className="flex flex-col gap-2">
         {attendees.map((a) => (
           <li key={a.userId}>
-            <AttendeeRow attendee={a} slugToGame={slugToGame} isViewer={a.userId === viewerId} />
+            <AttendeeRow
+              attendee={a}
+              slugToGame={slugToGame}
+              isViewer={a.userId === viewerId}
+              canKick={canKick && a.userId !== viewerId}
+              onKick={onKick}
+              isKicking={kickingUserId === a.userId}
+            />
           </li>
         ))}
       </ul>
       {topSlugs.length > 0 && (
         <CoverageFooter
-          covered={topSlugs.length - missing.length}
+          covered={topSlugs.length - unowned.length - capLimited.length}
           total={topSlugs.length}
-          missing={missing}
+          unowned={unowned}
+          capLimited={capLimited}
           slugToGame={slugToGame}
         />
       )}
@@ -71,12 +109,25 @@ function AttendeeRow({
   attendee,
   slugToGame,
   isViewer,
+  canKick,
+  onKick,
+  isKicking,
 }: {
   attendee: Attendee;
   slugToGame: Map<string, GameDefinition>;
   isViewer: boolean;
+  canKick: boolean;
+  onKick?: (userId: string) => void;
+  isKicking: boolean;
 }) {
   const initial = attendee.name[0]?.toUpperCase() ?? "?";
+  const handleKick = () => {
+    if (!onKick || isKicking) return;
+    const ok = window.confirm(
+      `Remove ${attendee.name} from this game night? Their RSVP will be set to "Not going".`,
+    );
+    if (ok) onKick(attendee.userId);
+  };
   return (
     <div className="flex items-start gap-3 rounded-2xl border border-white/[0.06] bg-surface-900/80 px-3 py-3 sm:px-4">
       <span
@@ -125,6 +176,37 @@ function AttendeeRow({
 
         <BringingList attendee={attendee} slugToGame={slugToGame} />
       </div>
+
+      {canKick && (
+        <button
+          type="button"
+          onClick={handleKick}
+          disabled={isKicking}
+          aria-label={`Remove ${attendee.name} from this game night`}
+          title={`Remove ${attendee.name} — sets their RSVP to "Not going"`}
+          className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-white/[0.04] text-gray-400 transition hover:bg-rose-500/20 hover:text-rose-200 disabled:opacity-50"
+        >
+          {isKicking ? (
+            <span
+              aria-hidden="true"
+              className="h-3 w-3 animate-spin rounded-full border border-current border-t-transparent"
+            />
+          ) : (
+            <svg
+              aria-hidden="true"
+              viewBox="0 0 16 16"
+              className="h-3.5 w-3.5"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M4 4l8 8M12 4l-8 8" />
+            </svg>
+          )}
+        </button>
+      )}
     </div>
   );
 }
@@ -205,16 +287,22 @@ function VoteChip({ kind, count }: { kind: "hype" | "teach" | "learn"; count: nu
 function CoverageFooter({
   covered,
   total,
-  missing,
+  unowned,
+  capLimited,
   slugToGame,
 }: {
   covered: number;
   total: number;
-  missing: string[];
+  /** Top-5 slugs that no confirmed attendee owns. Genuine coverage gap. */
+  unowned: string[];
+  /** Top-5 slugs an attendee owns, but the 3-game bring cap kept them off the list. */
+  capLimited: string[];
   slugToGame: Map<string, GameDefinition>;
 }) {
   if (total === 0) return null;
-  const allCovered = missing.length === 0;
+  const allCovered = unowned.length === 0 && capLimited.length === 0;
+  const titles = (slugs: string[]) =>
+    slugs.map((slug) => slugToGame.get(slug)?.title ?? slug).join(", ");
   return (
     <div
       className={`mt-1 rounded-2xl border px-3 py-2.5 text-[11px] sm:px-4 ${
@@ -226,10 +314,14 @@ function CoverageFooter({
       <p className="font-semibold">
         Top-5 coverage: {covered}/{total}
       </p>
-      {!allCovered && (
+      {unowned.length > 0 && (
         <p className="mt-1 text-[11px] text-amber-200/80">
-          Nobody attending owns:{" "}
-          {missing.map((slug) => slugToGame.get(slug)?.title ?? slug).join(", ")}
+          Nobody attending owns: {titles(unowned)}
+        </p>
+      )}
+      {capLimited.length > 0 && (
+        <p className="mt-1 text-[11px] text-amber-200/80">
+          Owned but won't be brought (per-person 3-game cap): {titles(capLimited)}
         </p>
       )}
     </div>

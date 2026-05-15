@@ -38,6 +38,12 @@ export type AvailableGamesLockMeta = {
   expectedUserIds: string[];
   /** SQLite "YYYY-MM-DD HH:MM:SS" — the lock row's `locked_at`. */
   lockedAt: string;
+  /**
+   * Whether the host's collection is on-site. NULL in the DB (legacy rows) is
+   * normalized to `true` here so historical nights keep their uncapped-host
+   * bringing behavior. New nights store an explicit 0/1.
+   */
+  hostAtHome: boolean;
 };
 
 export type AvailableGamesView = {
@@ -67,7 +73,7 @@ export async function computeAvailableGamesPayload(opts: {
 
   const lockedRow = await db.execute({
     sql: `SELECT host_user_id, host_name, event_time, address, picks_locked_at,
-                 expected_user_ids_json, locked_at
+                 expected_user_ids_json, locked_at, host_at_home
           FROM locked_dates WHERE date_key = ? LIMIT 1`,
     args: [date],
   });
@@ -81,6 +87,9 @@ export async function computeAvailableGamesPayload(opts: {
   const picksLockedAt = (lockRow.picks_locked_at as string | null) ?? null;
   const expectedUserIds = parseStringArray(lockRow.expected_user_ids_json as string);
   const lockedAt = (lockRow.locked_at as string | null) ?? "1970-01-01 00:00:00";
+  // NULL → legacy → treat as at-home (uncapped host bring list, current behavior).
+  const hostAtHomeRaw = lockRow.host_at_home as number | null;
+  const hostAtHome = hostAtHomeRaw === null ? true : hostAtHomeRaw !== 0;
 
   // Pull every input the headcount math needs in parallel. We also fetch the
   // MAX(rsvped_at) and MAX(created_at) for this date so the ICS feed can
@@ -265,7 +274,10 @@ export async function computeAvailableGamesPayload(opts: {
   for (const slug of orderedTop) {
     const owners = definiteAttendees.filter((a) => inventoryByUser.get(a.userId)?.has(slug));
     if (owners.length === 0) continue;
-    const hostOwner = owners.find((o) => o.isHost);
+    // Host fast-path applies only when the host's collection is on-site. If
+    // the night is being hosted externally, the host is just another owner
+    // and gets the same 3-game cap as everyone else.
+    const hostOwner = hostAtHome ? owners.find((o) => o.isHost) : undefined;
     if (hostOwner) {
       bringing.get(hostOwner.userId)?.push(slug);
       continue;
@@ -299,7 +311,10 @@ export async function computeAvailableGamesPayload(opts: {
   for (const id of definiteIds) {
     const isHost = id === hostUserId;
     const inv = inventoryByUser.get(id);
-    const list = isHost ? topSlugs.filter((s) => inv?.has(s)) : (bringing.get(id) ?? []);
+    // External-host nights bypass the "host shows up with everything" shortcut
+    // — they get whatever the capped greedy pass assigned them.
+    const list =
+      isHost && hostAtHome ? topSlugs.filter((s) => inv?.has(s)) : (bringing.get(id) ?? []);
     attendees.push({
       userId: id,
       name: userNames.get(id) ?? "—",
@@ -334,7 +349,7 @@ export async function computeAvailableGamesPayload(opts: {
   const viewerBringingSlugs: string[] = (() => {
     if (!comingIds.has(viewerId)) return [];
     const inv = inventoryByUser.get(viewerId);
-    return viewerId === hostUserId
+    return viewerId === hostUserId && hostAtHome
       ? topSlugs.filter((s) => inv?.has(s))
       : (bringing.get(viewerId) ?? []);
   })();
@@ -365,6 +380,7 @@ export async function computeAvailableGamesPayload(opts: {
       picksLockedAt,
       expectedUserIds,
       lockedAt,
+      hostAtHome,
     },
     latestActivityAt,
   };

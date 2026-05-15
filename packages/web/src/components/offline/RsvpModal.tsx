@@ -5,7 +5,7 @@ import { games as gameRegistry } from "../../games/registry";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import { fetchAvailableGames } from "../../lib/calendar-games";
 import { type CalendarLocks, togglePicksLock } from "../../lib/calendar-locks";
-import { type RsvpStatus, setRsvp } from "../../lib/calendar-rsvps";
+import { kickRsvp, type RsvpStatus, setRsvp } from "../../lib/calendar-rsvps";
 import { qk } from "../../lib/query-keys";
 import { ClockIcon, HostIcon, PadlockIcon, PinIcon } from "../icons";
 import { Modal } from "../ui/Modal";
@@ -51,6 +51,14 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
     },
   });
 
+  const kickMutation = useMutation({
+    mutationFn: ({ userId }: { userId: string }) => kickRsvp(date, userId),
+    onSettled: () => {
+      void queryClient.invalidateQueries({ queryKey: qk.calendarLocks() });
+      void queryClient.invalidateQueries({ queryKey: qk.availableGames(date) });
+    },
+  });
+
   const isHost = !!lock?.host && lock.host.userId === userId;
   const canTogglePicksLock = !!lock && (isAdmin || isHost);
   const picksLocked = !!lock?.picksLockedAt;
@@ -88,6 +96,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   const reactions = gamesQuery.data?.reactions ?? {};
   const topSlugs = gamesQuery.data?.topSlugs ?? [];
   const attendees = gamesQuery.data?.attendees ?? [];
+  const ownedSlugs = gamesQuery.data?.ownedSlugs ?? [];
 
   // When picks are locked, the modal contents are inaccessible to anyone who
   // wasn't in the expected (RSVP yes / maybe) snapshot at lock-in time. The
@@ -292,7 +301,16 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
           ) : gamesQuery.isPending ? (
             <p className="text-sm text-gray-500">Finding games…</p>
           ) : effectiveView === "attendees" ? (
-            <AttendeesView attendees={attendees} topSlugs={topSlugs} />
+            <AttendeesView
+              attendees={attendees}
+              topSlugs={topSlugs}
+              ownedSlugs={ownedSlugs}
+              canKick={isAdmin || isHost}
+              onKick={(userId) => kickMutation.mutate({ userId })}
+              kickingUserId={
+                kickMutation.isPending ? (kickMutation.variables?.userId ?? null) : null
+              }
+            />
           ) : availableGames.length === 0 ? (
             <div className="rounded-2xl border border-dashed border-white/10 px-8 py-10 text-center">
               <p className="text-sm font-medium text-gray-300">No games match.</p>

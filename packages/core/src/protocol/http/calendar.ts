@@ -25,6 +25,16 @@ export const LockedDateSchema = z.object({
   eventTime: TimeOfDaySchema.nullable(),
   address: z.string().nullable(),
   picksLockedAt: z.string().nullable(),
+  /**
+   * True when the host is hosting at the same location as their game
+   * collection — the host then has no per-person bringing cap (they show up
+   * with everything). False when the night is at a different location; the
+   * host falls back to the regular 3-game cap like anyone else. Defaults to
+   * true on the wire so legacy rows without the column preserve historical
+   * behavior. Older cached payloads (pre-flag) parse cleanly via the
+   * default.
+   */
+  hostAtHome: z.boolean().default(true),
   attendance: z.object({
     definite: z.number().int().min(0),
     tentative: z.number().int().min(0),
@@ -46,6 +56,13 @@ export const LockInRequestBodySchema = z.object({
   hostName: z.string().nullable().optional(),
   eventTime: TimeOfDaySchema.nullable().optional(),
   address: z.string().max(500).nullable().optional(),
+  /**
+   * Whether the host is hosting at the same location as their game
+   * collection. Omit (or send null) to leave the flag unset on the server —
+   * the read path treats unset as `true` for backwards compat with rows
+   * locked before this flag existed.
+   */
+  hostAtHome: z.boolean().nullable().optional(),
 });
 export type LockInRequestBody = z.input<typeof LockInRequestBodySchema>;
 
@@ -82,6 +99,17 @@ export type SetRsvpBody = z.input<typeof SetRsvpBodySchema>;
 
 export const ClearRsvpBodySchema = z.object({ date: DateKeySchema });
 export type ClearRsvpBody = z.infer<typeof ClearRsvpBodySchema>;
+
+/**
+ * Host/admin-only: force another user's RSVP for `date` to "no". Used by the
+ * attendees view's X button to remove someone from the guest list when they
+ * back out by text/voice rather than touching the app themselves.
+ */
+export const KickRsvpBodySchema = z.object({
+  date: DateKeySchema,
+  userId: z.string().min(1),
+});
+export type KickRsvpBody = z.infer<typeof KickRsvpBodySchema>;
 
 // ── Available games (per-date pick screen) ─────────────────────────────
 
@@ -184,6 +212,13 @@ export function mkOptimisticLock(
   // branded field stays sound. Optimistic write only — no validation cost
   // beyond the regex check.
   const eventTime = form.eventTime ?? null;
+  // hostAtHome precedence: explicit form value (incl. false) > existing > true.
+  // The form's `null` means "no opinion" — fall through to the existing row's
+  // value, or the historical default of true if nothing's there yet.
+  const hostAtHome =
+    form.hostAtHome === true || form.hostAtHome === false
+      ? form.hostAtHome
+      : (existing?.hostAtHome ?? true);
   return {
     lockedBy: existing?.lockedBy ?? fallbackLockedBy,
     lockedAt: new Date().toISOString(),
@@ -193,6 +228,7 @@ export function mkOptimisticLock(
     eventTime: eventTime ? TimeOfDaySchema.parse(eventTime) : null,
     address: form.address ?? null,
     picksLockedAt: existing?.picksLockedAt ?? null,
+    hostAtHome,
     attendance: existing?.attendance ?? { definite: 0, tentative: 0 },
   };
 }

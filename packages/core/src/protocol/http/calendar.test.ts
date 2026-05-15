@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   CalendarLocksSchema,
+  KickRsvpBodySchema,
   LockedDateSchema,
   LockInFormSchema,
   LockInRequestBodySchema,
@@ -18,6 +19,7 @@ const sampleLocked = {
   eventTime: "19:00",
   address: "123 Main St",
   picksLockedAt: null,
+  hostAtHome: true,
   attendance: { definite: 1, tentative: 0 },
 };
 
@@ -29,6 +31,18 @@ describe("LockedDateSchema", () => {
   it("accepts the lock without host or address", () => {
     const minimal = { ...sampleLocked, host: null, eventTime: null, address: null };
     expect(() => LockedDateSchema.parse(minimal)).not.toThrow();
+  });
+
+  it("defaults hostAtHome to true when missing (legacy payload)", () => {
+    const { hostAtHome: _omit, ...withoutFlag } = sampleLocked;
+    void _omit;
+    const parsed = LockedDateSchema.parse(withoutFlag);
+    expect(parsed.hostAtHome).toBe(true);
+  });
+
+  it("preserves hostAtHome=false on the wire", () => {
+    const parsed = LockedDateSchema.parse({ ...sampleLocked, hostAtHome: false });
+    expect(parsed.hostAtHome).toBe(false);
   });
 
   it("rejects rsvps with invalid status", () => {
@@ -111,6 +125,24 @@ describe("SetRsvpBodySchema", () => {
   });
 });
 
+describe("KickRsvpBodySchema", () => {
+  it("accepts a valid kick body", () => {
+    expect(() => KickRsvpBodySchema.parse({ date: "2026-05-05", userId: "user-2" })).not.toThrow();
+  });
+
+  it("rejects missing userId", () => {
+    expect(() => KickRsvpBodySchema.parse({ date: "2026-05-05" })).toThrow();
+  });
+
+  it("rejects empty userId", () => {
+    expect(() => KickRsvpBodySchema.parse({ date: "2026-05-05", userId: "" })).toThrow();
+  });
+
+  it("rejects malformed date", () => {
+    expect(() => KickRsvpBodySchema.parse({ date: "May 5", userId: "user-2" })).toThrow();
+  });
+});
+
 describe("mkOptimisticLock", () => {
   it("preserves existing fields and only overwrites form-driven ones", () => {
     const form = LockInFormSchema.parse({
@@ -135,5 +167,24 @@ describe("mkOptimisticLock", () => {
     expect(lock.lockedBy).toBe("self");
     expect(lock.expectedUserIds).toEqual([]);
     expect(lock.host).toBeNull();
+  });
+
+  it("defaults hostAtHome to true when neither form nor existing supplies it", () => {
+    const form = LockInFormSchema.parse({});
+    const lock = mkOptimisticLock(form, undefined, "self");
+    expect(lock.hostAtHome).toBe(true);
+  });
+
+  it("honors an explicit hostAtHome=false from the form", () => {
+    const form = LockInFormSchema.parse({ hostAtHome: false });
+    const lock = mkOptimisticLock(form, undefined, "self");
+    expect(lock.hostAtHome).toBe(false);
+  });
+
+  it("inherits hostAtHome from the existing row when the form is silent", () => {
+    const existing = LockedDateSchema.parse({ ...sampleLocked, hostAtHome: false });
+    const form = LockInFormSchema.parse({ eventTime: "20:00" });
+    const lock = mkOptimisticLock(form, existing, "self");
+    expect(lock.hostAtHome).toBe(false);
   });
 });

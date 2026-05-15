@@ -36,6 +36,12 @@ export default function LockInModal({
   const [hostUserId, setHostUserId] = useState<string>(initialLock?.host?.userId ?? "");
   const [eventTime, setEventTime] = useState<string>(initialLock?.eventTime ?? "");
   const [address, setAddress] = useState<string>(initialLock?.address ?? "");
+  // Default true — most nights are at the host's place, which is the
+  // historical implicit assumption. Uncheck to apply the regular 3-game cap
+  // to the host (used when the night is at a venue, someone else's place,
+  // a holiday rental, etc).
+  const [hostAtHome, setHostAtHome] = useState<boolean>(initialLock?.hostAtHome ?? true);
+  const hostAtHomeId = useId();
 
   // Dedupe candidates by userId; preserve the first occurrence so the admin
   // appears in the list with the label they were given by the caller.
@@ -69,6 +75,9 @@ export default function LockInModal({
       hostName: host ? host.name : null,
       eventTime: eventTime || null,
       address: address.trim() || null,
+      // Only persist the flag when there's actually a host — without one, the
+      // bringing rules don't branch on it anyway.
+      hostAtHome: host ? hostAtHome : null,
     });
   }
 
@@ -118,6 +127,30 @@ export default function LockInModal({
               placeholder="Start typing an address…"
             />
           </Field>
+
+          {hostUserId && (
+            <label
+              htmlFor={hostAtHomeId}
+              className="flex cursor-pointer items-start gap-3 rounded-xl border border-white/10 bg-surface-900 px-3 py-2.5 text-sm text-white"
+            >
+              <input
+                id={hostAtHomeId}
+                type="checkbox"
+                checked={hostAtHome}
+                onChange={(e) => setHostAtHome(e.target.checked)}
+                disabled={busy}
+                className="mt-0.5 h-4 w-4 cursor-pointer accent-emerald-500 disabled:cursor-not-allowed disabled:opacity-50"
+              />
+              <span className="flex flex-1 flex-col gap-0.5">
+                <span className="font-medium">Hosting at home</span>
+                <span className="text-[11px] leading-snug text-gray-400">
+                  Host's game collection is on-site. Uncheck for off-site nights (someone else's
+                  place, a venue, a rental) — the host then gets the same 3-game bring cap as
+                  everyone else.
+                </span>
+              </span>
+            </label>
+          )}
         </div>
 
         {error && <p className="text-center text-xs text-rose-400">{error}</p>}
