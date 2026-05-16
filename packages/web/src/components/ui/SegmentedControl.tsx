@@ -73,8 +73,10 @@ const OPTION_SHAPE: Record<"pill" | "rect", string> = {
 
 const OPTION_SIZE: Record<"sm" | "md", string> = {
   // sm starts tight on phone so view-tabs + a sibling switch (e.g. RSVP
-  // Going/Not going) fit on one row at ~360px, then relaxes at sm:.
-  sm: "px-2 py-1 text-[11px] font-semibold sm:px-3 sm:py-1.5 sm:text-xs",
+  // Going/Not going) fit on one row even on a ~330px CSS viewport (Galaxy
+  // A13 with slight zoom). Two breakpoints: ultra-tight default, mid at
+  // 420px, full padding at sm:.
+  sm: "px-1.5 py-1 text-[11px] font-semibold min-[420px]:px-2 sm:px-3 sm:py-1.5 sm:text-xs",
   md: "px-3 py-1.5 text-sm font-medium",
 };
 

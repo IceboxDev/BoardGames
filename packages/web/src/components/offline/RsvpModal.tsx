@@ -258,7 +258,13 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
       )}
 
       {!lockedOut && (
-        <div className="flex flex-wrap items-center justify-between gap-2">
+        // No flex-wrap on purpose: this row MUST stay single-line on every
+        // phone, even Galaxy-A13-with-slight-zoom (~330px CSS viewport).
+        // Otherwise the game card below loses vertical space. Sizing of the
+        // children is tuned so the worst case (3-tab view toggle + Going/Not
+        // going) fits at ~250px of content width — see `RsvpSwitch` and the
+        // tightened sm padding in SegmentedControl.
+        <div className="flex items-center justify-between gap-2">
           {showViewToggle && viewerRsvp !== "no" ? (
             <SegmentedControl
               shape="pill"
@@ -267,6 +273,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
               value={effectiveView}
               onChange={setView}
               options={buildViewOptions(canShowResults, canShowAttendees)}
+              className="min-w-0"
             />
           ) : (
             <span aria-hidden="true" />
@@ -346,9 +353,28 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
 // read as a matched pair on PC. `emphasizeActive` adds the colored ring +
 // glow that makes the active state read as "committed" rather than a passive
 // status indicator.
+//
+// The label text is rendered `sr-only` below 420px viewport and visible from
+// there up. That width matches the cutoff where a 3-tab view toggle + full
+// "Going / Not going" labels would otherwise spill onto a second line on a
+// p-6 modal panel. Title attribute + sr-only span keep the button
+// accessible to screen readers and tooltip-on-hover when the visible label
+// is hidden.
 const RSVP_OPTIONS: SegmentedOption<RsvpStatus>[] = [
-  { value: "yes", label: "Going", icon: <span aria-hidden="true">✓</span>, tone: "emerald" },
-  { value: "no", label: "Not going", icon: <span aria-hidden="true">✗</span>, tone: "rose" },
+  {
+    value: "yes",
+    label: <span className="sr-only min-[420px]:not-sr-only">Going</span>,
+    icon: <span aria-hidden="true">✓</span>,
+    tone: "emerald",
+    title: "Going",
+  },
+  {
+    value: "no",
+    label: <span className="sr-only min-[420px]:not-sr-only">Not going</span>,
+    icon: <span aria-hidden="true">✗</span>,
+    tone: "rose",
+    title: "Not going",
+  },
 ];
 
 function RsvpSwitch({
