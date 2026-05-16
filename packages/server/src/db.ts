@@ -264,8 +264,14 @@ async function migrate(db: Client): Promise<void> {
   // `internal = 1` flags accounts used for development/QA so they're hidden
   // from the admin user list. Set automatically for emails containing
   // `+internal` (Gmail alias trick) in the auth before-create hook.
+  // `guest = 1` flags admin-created stubs (first/last name only) that exist
+  // so match-history can credit a player who never signed up. Set
+  // automatically for `@guest.local` synthetic emails in the same hook.
   const userCols = await db.execute("PRAGMA table_info(user)");
   if (userCols.rows.length > 0 && !userCols.rows.some((r) => r.name === "internal")) {
     await db.execute(`ALTER TABLE user ADD COLUMN internal INTEGER NOT NULL DEFAULT 0`);
+  }
+  if (userCols.rows.length > 0 && !userCols.rows.some((r) => r.name === "guest")) {
+    await db.execute(`ALTER TABLE user ADD COLUMN guest INTEGER NOT NULL DEFAULT 0`);
   }
 }

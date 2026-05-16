@@ -78,6 +78,21 @@ describe("MatchOutcomeSchema", () => {
     );
   });
 
+  it("accepts teams with an optional moderator (Storyteller / Fabled)", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        ...sampleTeams,
+        moderator: { ...sampleParticipant("u9", "Storyteller Sam"), role: "Angel" },
+      }),
+    ).not.toThrow();
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        ...sampleTeams,
+        moderator: sampleParticipant("u9", "Storyteller Sam"),
+      }),
+    ).not.toThrow();
+  });
+
   it("rejects last-standing with no survivor", () => {
     expect(() =>
       MatchOutcomeSchema.parse({

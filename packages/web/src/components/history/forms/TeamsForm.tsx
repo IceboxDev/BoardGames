@@ -18,10 +18,28 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
   const config = teamConfigForSlug(gameSlug);
   const showScores = config.hasScores === true;
   const memberRoles = config.memberRoles ?? [];
+  const leadRole = config.leadRole;
+  const autoWinner = config.autoWinner;
+  const showRoles = memberRoles.length > 0;
+  const showManualWinner = !autoWinner;
+
+  /**
+   * Single mutation entry point. When `autoWinner` is configured, we
+   * recompute `winnerTeamIndices` from the scores on every change so the
+   * admin never has to flip a Winner toggle by hand — same UX as
+   * free-for-all's implicit winner.
+   */
+  function commit(next: MatchOutcomeTeams): void {
+    if (!autoWinner) {
+      onChange(next);
+      return;
+    }
+    onChange({ ...next, winnerTeamIndices: computeAutoWinner(next.teams, autoWinner) });
+  }
 
   function updateTeam(idx: number, patch: Partial<MatchOutcomeTeams["teams"][number]>) {
     const teams = value.teams.map((t, i) => (i === idx ? { ...t, ...patch } : t));
-    onChange({ ...value, teams });
+    commit({ ...value, teams });
   }
 
   function setMembers(idx: number, participants: Participant[]) {
@@ -43,18 +61,28 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
 
   function setMemberRole(teamIdx: number, userId: string, role: string | undefined) {
     const team = value.teams[teamIdx];
-    const members: TeamMember[] = team.members.map((m) =>
-      m.userId === userId
-        ? role && role.trim().length > 0
-          ? { userId: m.userId, displayName: m.displayName, role: role.trim() }
-          : { userId: m.userId, displayName: m.displayName }
-        : m,
-    );
+    const trimmed = role?.trim();
+    const newRole = trimmed && trimmed.length > 0 ? trimmed : undefined;
+    // Codenames-style: assigning the lead role (Spymaster) implies the rest of
+    // the team is in the fallback seat (Operative). This matches how the game
+    // is actually played and saves several extra clicks.
+    const fillFallback = leadRole && newRole === leadRole.primary;
+    const members: TeamMember[] = team.members.map((m) => {
+      if (m.userId === userId) {
+        return newRole
+          ? { userId: m.userId, displayName: m.displayName, role: newRole }
+          : { userId: m.userId, displayName: m.displayName };
+      }
+      if (fillFallback) {
+        return { userId: m.userId, displayName: m.displayName, role: leadRole.fallback };
+      }
+      return m;
+    });
     updateTeam(teamIdx, { members });
   }
 
   function addTeam() {
-    onChange({ ...value, teams: [...value.teams, { members: [] }] });
+    commit({ ...value, teams: [...value.teams, { members: [] }] });
   }
 
   function removeTeam(idx: number) {
@@ -63,7 +91,7 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
     const winnerTeamIndices = value.winnerTeamIndices
       .filter((i) => i !== idx)
       .map((i) => (i > idx ? i - 1 : i));
-    onChange({ ...value, teams, winnerTeamIndices });
+    commit({ ...value, teams, winnerTeamIndices });
   }
 
   function toggleWinner(idx: number) {
@@ -101,17 +129,28 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
                     className="!w-24 text-right"
                   />
                 )}
-                <button
-                  type="button"
-                  onClick={() => toggleWinner(idx)}
-                  className={`rounded-md px-2 py-1 text-xs font-medium transition ${
-                    isWinner
-                      ? "bg-amber-500/20 text-amber-200 ring-1 ring-amber-400/40"
-                      : "bg-surface-800 text-gray-400 hover:bg-surface-700"
-                  }`}
-                >
-                  Winner
-                </button>
+                {showManualWinner ? (
+                  <button
+                    type="button"
+                    onClick={() => toggleWinner(idx)}
+                    className={`rounded-md px-2 py-1 text-xs font-medium transition ${
+                      isWinner
+                        ? "bg-amber-500/20 text-amber-200 ring-1 ring-amber-400/40"
+                        : "bg-surface-800 text-gray-400 hover:bg-surface-700"
+                    }`}
+                  >
+                    Winner
+                  </button>
+                ) : (
+                  isWinner && (
+                    <span
+                      className="rounded-md bg-amber-500/15 px-2 py-1 text-xs font-medium text-amber-200 ring-1 ring-amber-400/30"
+                      title="Auto-detected from the highest score"
+                    >
+                      Leading
+                    </span>
+                  )
+                )}
                 {value.teams.length > 2 && (
                   <button
                     type="button"
@@ -127,7 +166,7 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
                 selectedIds={team.members.map((m) => m.userId)}
                 onChange={(participants) => setMembers(idx, participants)}
               />
-              {team.members.length > 0 && (
+              {showRoles && team.members.length > 0 && (
                 <div className="flex flex-col gap-1.5 pt-1">
                   {team.members.map((m) => (
                     <MemberRoleRow
@@ -155,6 +194,8 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
   );
 }
 
+// Rendered only when the game config defines `memberRoles` — games without
+// named seats (Wavelength, Resistance, etc.) don't render this row at all.
 function MemberRoleRow({
   member,
   roleOptions,
@@ -168,34 +209,40 @@ function MemberRoleRow({
   return (
     <div className="flex items-center gap-2">
       <span className="flex-1 truncate text-sm text-gray-200">{member.displayName}</span>
-      {roleOptions.length > 0 ? (
-        <div className="flex flex-wrap gap-1">
-          {roleOptions.map((opt) => {
-            const active = role === opt;
-            return (
-              <button
-                key={opt}
-                type="button"
-                onClick={() => onRoleChange(active ? undefined : opt)}
-                className={`rounded-md px-2 py-0.5 text-[11px] font-medium transition ${
-                  active
-                    ? "bg-accent-500/20 text-accent-100 ring-1 ring-accent-400/40"
-                    : "bg-surface-800 text-gray-400 hover:bg-surface-700"
-                }`}
-              >
-                {opt}
-              </button>
-            );
-          })}
-        </div>
-      ) : (
-        <Input
-          value={role}
-          onChange={(e) => onRoleChange(e.target.value || undefined)}
-          placeholder="Role (optional)"
-          className="!w-44 text-xs"
-        />
-      )}
+      <div className="flex flex-wrap gap-1">
+        {roleOptions.map((opt) => {
+          const active = role === opt;
+          return (
+            <button
+              key={opt}
+              type="button"
+              onClick={() => onRoleChange(active ? undefined : opt)}
+              className={`rounded-md px-2 py-0.5 text-[11px] font-medium transition ${
+                active
+                  ? "bg-accent-500/20 text-accent-100 ring-1 ring-accent-400/40"
+                  : "bg-surface-800 text-gray-400 hover:bg-surface-700"
+              }`}
+            >
+              {opt}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
+}
+
+/**
+ * Pick the indices of the teams that lead on score. Ties intentionally produce
+ * multiple winners — Wavelength can absolutely end 10/10 on a final guess and
+ * the schema allows multi-winner team rows.
+ */
+function computeAutoWinner(
+  teams: MatchOutcomeTeams["teams"],
+  mode: "highest" | "lowest",
+): number[] {
+  const scores = teams.map((t) => t.score ?? 0);
+  if (scores.length === 0) return [];
+  const target = mode === "highest" ? Math.max(...scores) : Math.min(...scores);
+  return scores.flatMap((s, i) => (s === target ? [i] : []));
 }

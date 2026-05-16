@@ -55,6 +55,16 @@ export const auth = betterAuth({
         defaultValue: false,
         input: false,
       },
+      // Guest players are admin-created stubs (no password account, never sign
+      // in). They exist so match-history can credit a player who never made an
+      // account. Hidden from the main user table and skipped by the pending-
+      // inventory transfer in the `after` hook below.
+      guest: {
+        type: "boolean",
+        required: false,
+        defaultValue: false,
+        input: false,
+      },
     },
   },
   plugins: [admin()],
@@ -67,12 +77,16 @@ export const auth = betterAuth({
           // Gmail "+internal" alias auto-flags QA/test accounts so they
           // never appear in the admin user list.
           const isInternal = /\+internal(?:[+.][^@]*)?@/.test(email);
+          // Guest players use a synthetic `@guest.local` email so the admin UI
+          // can recognize them without an extra round-trip.
+          const isGuest = email.endsWith("@guest.local");
           return {
             data: {
               ...user,
               role: isAdmin ? "admin" : "user",
               onlineEnabled: isAdmin,
               internal: isInternal,
+              guest: isGuest,
             },
           };
         },
@@ -80,6 +94,7 @@ export const auth = betterAuth({
           const email = user.email.toLowerCase();
           if (email === adminEmail) return;
           if (/\+internal(?:[+.][^@]*)?@/.test(email)) return;
+          if (email.endsWith("@guest.local")) return;
           try {
             const db = getDb();
             const { rows } = await db.execute(

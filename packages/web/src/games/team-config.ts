@@ -11,8 +11,23 @@ export type TeamGameConfig = {
    *  / Resistance decide the win without points. */
   hasScores?: boolean;
   /** Suggested member-role chips. The form lets the admin pick from these for
-   *  each team member; free-text is always allowed. */
+   *  each team member. When unset (or empty), no role UI is rendered — many
+   *  team games simply don't have named seats. */
   memberRoles?: string[];
+  /**
+   * Designates one role as the team's "lead" seat. Assigning the lead role to
+   * a member auto-fills every other team member with the fallback role, so the
+   * form matches the real seating rule. Codenames is the motivating case: one
+   * Spymaster per team, everybody else is an Operative.
+   */
+  leadRole?: { primary: string; fallback: string };
+  /**
+   * When set, the form derives the winning team(s) from the scores instead of
+   * letting the admin toggle them manually — same idea as the implicit winner
+   * in free-for-all. Use "highest" for first-to-X games (Wavelength). Teams
+   * sharing the top score all win, which handles natural ties.
+   */
+  autoWinner?: "highest" | "lowest";
 };
 
 // Codenames Original and Codenames Pictures use the exact same Spymaster/
@@ -21,6 +36,7 @@ export type TeamGameConfig = {
 // edited as the other without role chips disappearing.
 const CODENAMES_TEAM_CONFIG: TeamGameConfig = {
   memberRoles: ["Spymaster", "Operative"],
+  leadRole: { primary: "Spymaster", fallback: "Operative" },
 };
 
 export const TEAM_GAME_CONFIG: Record<string, TeamGameConfig> = {
@@ -34,6 +50,7 @@ export const TEAM_GAME_CONFIG: Record<string, TeamGameConfig> = {
   },
   wavelength: {
     hasScores: true,
+    autoWinner: "highest",
   },
   // The Resistance, wer-wars, wo-wars: no scores, no member roles by default.
 };

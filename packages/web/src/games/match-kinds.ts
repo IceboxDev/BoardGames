@@ -22,6 +22,7 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   "the-crew-quest-for-planet-nine": "coop",
 
   // Teams — two or more sides with collective scores
+  "blood-on-the-clocktower": "teams",
   codenames: "teams",
   "codenames-pictures": "teams",
   decrypto: "teams",
@@ -42,7 +43,6 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
 
   // One-vs-many — asymmetric, one side vs the rest
   "betrayal-at-house-on-the-hill": "one-vs-many",
-  "blood-on-the-clocktower": "one-vs-many",
   "deadwood-1876": "one-vs-many",
   "hollywood-1947": "one-vs-many",
   "one-night-ultimate-werewolf": "one-vs-many",

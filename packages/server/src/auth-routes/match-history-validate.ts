@@ -123,12 +123,25 @@ function parseTeams(v: Record<string, unknown>): ParseResult<MatchOutcomeTeams> 
     }
     winnerTeamIndices.push(idx);
   }
+  // Optional moderator (Blood on the Clocktower's Storyteller, etc.) — sits
+  // outside the teams, doesn't win or lose, may carry a role label (Fabled).
+  let moderator: MatchOutcomeTeams["moderator"];
+  if (v.moderator !== undefined && v.moderator !== null) {
+    const m = parseParticipant(v.moderator, "moderator");
+    if (!m.ok) return m;
+    const role =
+      isPlainObject(v.moderator) && v.moderator.role !== undefined
+        ? asOptionalString(v.moderator.role, 64)
+        : undefined;
+    moderator = { ...m.value, ...(role !== undefined ? { role } : {}) };
+  }
   return {
     ok: true,
     value: {
       kind: "teams",
       teams,
       winnerTeamIndices,
+      ...(moderator ? { moderator } : {}),
     },
   };
 }
@@ -255,6 +268,7 @@ export function collectUserIds(outcome: MatchOutcome): Set<string> {
       break;
     case "teams":
       for (const t of outcome.teams) for (const m of t.members) ids.add(m.userId);
+      if (outcome.moderator) ids.add(outcome.moderator.userId);
       break;
     case "coop":
       for (const p of outcome.participants) ids.add(p.userId);
@@ -290,6 +304,9 @@ export function refreshDisplayNames(
           // survive; then overlay fresh userId/displayName from the user table.
           members: t.members.map((m) => ({ ...m, ...fresh(m) })),
         })),
+        ...(outcome.moderator
+          ? { moderator: { ...outcome.moderator, ...fresh(outcome.moderator) } }
+          : {}),
       };
     case "last-standing":
       return {

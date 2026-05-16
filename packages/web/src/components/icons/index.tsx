@@ -132,6 +132,21 @@ export function HostIcon({ className = "h-3.5 w-3.5" }: IconProps) {
   );
 }
 
+export function BookIcon({ className = "h-3.5 w-3.5" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className={className}
+      strokeWidth={1.6}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M3 2.5h7.5A1.5 1.5 0 0 1 12 4v9.5H4.5A1.5 1.5 0 0 1 3 12V2.5z" />
+      <path d="M3 12a1.5 1.5 0 0 1 1.5-1.5H12" />
+    </svg>
+  );
+}
+
 export function PadlockIcon({
   closed = true,
   className = "h-4 w-4",

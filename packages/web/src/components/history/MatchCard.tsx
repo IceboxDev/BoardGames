@@ -9,6 +9,7 @@ import type {
 } from "@boardgames/core/history/types";
 import { games } from "../../games/registry";
 import { lowScoreWinsForSlug } from "../../games/score-config";
+import { BookIcon } from "../icons";
 import { AvatarBubble } from "./AvatarBubble";
 
 type Props = {
@@ -164,7 +165,33 @@ function TeamsInline({ outcome }: { outcome: MatchOutcomeTeams }) {
           </span>
         );
       })}
+      {outcome.moderator && <Storyteller moderator={outcome.moderator} />}
     </div>
+  );
+}
+
+function Storyteller({ moderator }: { moderator: NonNullable<MatchOutcomeTeams["moderator"]> }) {
+  const title = moderator.role
+    ? `${moderator.displayName} — Storyteller (${moderator.role})`
+    : `${moderator.displayName} — Storyteller`;
+  return (
+    <span className="inline-flex items-center gap-1 border-l border-white/5 pl-2" title={title}>
+      <span className="relative inline-flex">
+        <AvatarBubble name={moderator.displayName} tone="muted" title={title} />
+        {/* Book icon overlay so the Storyteller reads as "runs the game", not
+            as just another loser-toned player. Pinned to the bottom-right of
+            the avatar with a small ring matching the row background. */}
+        <span
+          aria-hidden="true"
+          className="absolute -bottom-1 -right-1 inline-grid h-3.5 w-3.5 place-items-center rounded-full bg-surface-900 text-indigo-300 ring-1 ring-white/10"
+        >
+          <BookIcon className="h-2.5 w-2.5" />
+        </span>
+      </span>
+      {moderator.role && (
+        <span className="text-[10px] uppercase tracking-wider text-gray-500">{moderator.role}</span>
+      )}
+    </span>
   );
 }
 

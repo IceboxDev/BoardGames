@@ -20,6 +20,7 @@ import { Button } from "../ui/Button";
 import { Field } from "../ui/Field";
 import { Input } from "../ui/Input";
 import { Modal } from "../ui/Modal";
+import { ClocktowerForm } from "./forms/ClocktowerForm";
 import { CoopForm } from "./forms/CoopForm";
 import { FreeForAllForm } from "./forms/FreeForAllForm";
 import { LastStandingForm } from "./forms/LastStandingForm";
@@ -215,6 +216,8 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
     mutationFn: async () => {
       const trimmedTitle = gameTitle.trim();
       if (!trimmedTitle) throw new Error("Game title is required");
+      const outcomeError = describeOutcomeError(outcome, gameSlug);
+      if (outcomeError) throw new Error(outcomeError);
       const input = toCreateInput({
         dateKey,
         playedAt,
@@ -316,14 +319,21 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
               gameSlug={gameSlug}
             />
           )}
-          {kind === "teams" && (
-            <TeamsForm
-              users={allUsers}
-              value={outcome as MatchOutcomeTeams}
-              onChange={setOutcome}
-              gameSlug={gameSlug}
-            />
-          )}
+          {kind === "teams" &&
+            (gameSlug === "blood-on-the-clocktower" ? (
+              <ClocktowerForm
+                users={allUsers}
+                value={outcome as MatchOutcomeTeams}
+                onChange={setOutcome}
+              />
+            ) : (
+              <TeamsForm
+                users={allUsers}
+                value={outcome as MatchOutcomeTeams}
+                onChange={setOutcome}
+                gameSlug={gameSlug}
+              />
+            ))}
           {kind === "last-standing" && (
             <LastStandingForm
               users={allUsers}
@@ -411,6 +421,55 @@ function localInputToIso(local: string): string {
   const d = new Date(local);
   if (Number.isNaN(d.getTime())) return new Date().toISOString();
   return d.toISOString();
+}
+
+/**
+ * Pre-flight check run before we hit the wire schema. The Zod request schema
+ * is correct but the errors it surfaces ("Invalid input" at
+ * `outcome.winnerTeamIndices`) are useless to a human. Catch the empty/missing
+ * cases here so the admin gets actionable feedback instead.
+ */
+function describeOutcomeError(outcome: MatchOutcome, gameSlug: string | null): string | null {
+  switch (outcome.kind) {
+    case "free-for-all":
+      if (outcome.players.length < 2) return "Add at least two players";
+      return null;
+    case "teams":
+      return gameSlug === "blood-on-the-clocktower"
+        ? describeClocktowerError(outcome)
+        : describeGenericTeamsError(outcome);
+    case "last-standing":
+      if (outcome.players.length < 2) return "Add at least two players";
+      if (outcome.players.every((p) => p.eliminationOrder !== undefined))
+        return "At least one player must survive";
+      return null;
+    case "coop":
+      if (outcome.participants.length < 1) return "Add at least one participant";
+      return null;
+    case "one-vs-many":
+      if (!outcome.solo.userId) return "Pick the solo player";
+      if (outcome.team.members.length < 1) return "Add at least one team player";
+      return null;
+  }
+}
+
+function describeGenericTeamsError(outcome: MatchOutcomeTeams): string | null {
+  const empty = outcome.teams.findIndex((t) => t.members.length === 0);
+  if (empty !== -1) return `Team ${empty + 1} needs at least one player`;
+  if (outcome.winnerTeamIndices.length === 0) return "Pick at least one winning team";
+  return null;
+}
+
+function describeClocktowerError(outcome: MatchOutcomeTeams): string | null {
+  const allMembers = outcome.teams.flatMap((t) => t.members);
+  if (allMembers.length === 0) return "Add players";
+  const unassigned = allMembers.find((m) => !m.role);
+  if (unassigned) return `Pick a character for ${unassigned.displayName}`;
+  const [good, evil] = outcome.teams;
+  if (!good || good.members.length === 0) return "At least one good player is required";
+  if (!evil || evil.members.length === 0) return "At least one evil player is required";
+  if (outcome.winnerTeamIndices.length === 0) return "Pick the winning side";
+  return null;
 }
 
 /**

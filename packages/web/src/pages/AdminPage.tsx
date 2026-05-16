@@ -33,6 +33,7 @@ type AdminUser = {
   role?: string | null;
   onlineEnabled?: boolean | null;
   internal?: boolean | null;
+  guest?: boolean | null;
   createdAt: string | Date;
 };
 
@@ -75,11 +76,16 @@ export default function AdminPage() {
   const loading = usersQuery.isPending;
   const aggregate: AggregateAvailabilityMap = aggregateQuery.data ?? {};
 
-  // Hide internal QA accounts, then sort: admins first, then by coverage %
-  // (can+maybe / editable days) descending, then alphabetical on name as a
-  // stable tiebreaker.
+  // Guest players belong to their own card below — they have no email, no
+  // calendar, no inventory, no online toggle. Internal QA accounts stay
+  // hidden everywhere.
+  const guests = useMemo(() => rawUsers.filter((u) => u.guest && !u.internal), [rawUsers]);
+
+  // Hide internal QA accounts and guests, then sort: admins first, then by
+  // coverage % (can+maybe / editable days) descending, then alphabetical on
+  // name as a stable tiebreaker.
   const users = useMemo(() => {
-    const visible = rawUsers.filter((u) => !u.internal);
+    const visible = rawUsers.filter((u) => !u.internal && !u.guest);
     return [...visible].sort((a, b) => {
       const aAdmin = a.role === "admin" ? 1 : 0;
       const bAdmin = b.role === "admin" ? 1 : 0;
@@ -219,6 +225,10 @@ export default function AdminPage() {
         </div>
 
         <PreRegisterCard />
+        <GuestPlayersCard
+          guests={guests}
+          onChanged={() => queryClient.invalidateQueries({ queryKey: qk.adminUsers() })}
+        />
 
         {errorMessage && (
           <div className="mb-4 rounded-md border border-red-500/30 bg-red-500/10 px-3 py-2 text-sm text-red-300">
@@ -760,6 +770,189 @@ function PreRegisterCard() {
       )}
     </div>
   );
+}
+
+/**
+ * Lets the admin create lightweight player stubs (first + last name only) so
+ * the match-history picker can credit someone who never signed up. Guests are
+ * real Better-Auth users with a synthetic `@guest.local` email and no
+ * credential account — they can't sign in, but they do persist alongside
+ * regular users so existing match-history endpoints accept their `userId`.
+ */
+function GuestPlayersCard({ guests, onChanged }: { guests: AdminUser[]; onChanged: () => void }) {
+  const [expanded, setExpanded] = useState(false);
+  const [first, setFirst] = useState("");
+  const [last, setLast] = useState("");
+  const [error, setError] = useState<string | null>(null);
+  const [busy, setBusy] = useState(false);
+  const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
+
+  async function addGuest(e: React.FormEvent) {
+    e.preventDefault();
+    setError(null);
+    const f = first.trim();
+    const l = last.trim();
+    if (!f || !l) {
+      setError("Both first and last name are required");
+      return;
+    }
+    const name = `${f} ${l}`;
+    // Synthetic non-routable email. Slug + crypto-grade suffix keeps the email
+    // unique even when two guests share a name. Better Auth lowercases on its
+    // own; we lowercase the slug here to keep the suffix readable in logs.
+    const slug = `${f}.${l}`
+      .toLowerCase()
+      .replace(/[^a-z0-9.]+/g, "-")
+      .replace(/^-|-$/g, "");
+    const suffix = crypto.randomUUID().slice(0, 8);
+    const email = `guest.${slug || "player"}.${suffix}@guest.local`;
+    setBusy(true);
+    try {
+      const { error: apiError } = await authClient.admin.createUser({ email, name });
+      if (apiError) {
+        setError(formatAuthError(apiError, "Failed to add guest"));
+        return;
+      }
+      setFirst("");
+      setLast("");
+      onChanged();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to add guest");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  async function removeGuest(id: string) {
+    setError(null);
+    setBusy(true);
+    try {
+      const { error: apiError } = await authClient.admin.removeUser({ userId: id });
+      if (apiError) {
+        setError(formatAuthError(apiError, "Failed to delete guest"));
+        return;
+      }
+      setPendingDeleteId(null);
+      onChanged();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Failed to delete guest");
+    } finally {
+      setBusy(false);
+    }
+  }
+
+  return (
+    <div className="mb-6 overflow-hidden rounded-xl border border-amber-500/20 bg-surface-900">
+      <div className="flex items-center justify-between gap-3 px-4 py-3">
+        <div className="min-w-0">
+          <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-amber-400">
+            Guest players
+          </p>
+          <p className="mt-1 text-sm text-gray-300">
+            {guests.length === 0
+              ? "No guests yet — add stub accounts for people who never signed up."
+              : `${guests.length} guest${guests.length === 1 ? "" : "s"} — pickable in match history.`}
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={() => setExpanded((v) => !v)}
+          className={`shrink-0 rounded-md px-2.5 py-1 text-xs transition ${
+            expanded
+              ? "bg-amber-500/20 text-amber-200"
+              : "bg-white/5 text-gray-300 hover:bg-white/10"
+          }`}
+        >
+          {expanded ? "Close" : "Manage"}
+        </button>
+      </div>
+      {expanded && (
+        <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
+          {error && <p className="text-xs text-rose-400">{error}</p>}
+          <form onSubmit={addGuest} className="flex flex-wrap items-end gap-2">
+            <label className="flex flex-col gap-1 text-xs text-gray-400">
+              First name
+              <input
+                value={first}
+                onChange={(e) => setFirst(e.target.value)}
+                disabled={busy}
+                className="w-40 rounded-md border border-white/10 bg-surface-900 px-2 py-1 text-sm text-gray-100 focus:border-amber-400/60 focus:outline-none"
+              />
+            </label>
+            <label className="flex flex-col gap-1 text-xs text-gray-400">
+              Last name
+              <input
+                value={last}
+                onChange={(e) => setLast(e.target.value)}
+                disabled={busy}
+                className="w-40 rounded-md border border-white/10 bg-surface-900 px-2 py-1 text-sm text-gray-100 focus:border-amber-400/60 focus:outline-none"
+              />
+            </label>
+            <Button type="submit" variant="primary" size="sm" loading={busy} disabled={busy}>
+              Add guest
+            </Button>
+          </form>
+          {guests.length > 0 && (
+            <ul className="flex flex-col gap-1 pt-1">
+              {guests.map((g) => (
+                <li
+                  key={g.id}
+                  className="flex items-center gap-2 rounded-md bg-surface-900/60 px-2.5 py-1.5"
+                >
+                  <span className="flex-1 truncate text-sm text-gray-200">{g.name}</span>
+                  {pendingDeleteId === g.id ? (
+                    <>
+                      <span className="text-xs text-rose-300">Delete?</span>
+                      <button
+                        type="button"
+                        onClick={() => removeGuest(g.id)}
+                        disabled={busy}
+                        className="rounded-md bg-rose-500/20 px-2 py-0.5 text-xs text-rose-200 hover:bg-rose-500/30"
+                      >
+                        Yes
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setPendingDeleteId(null)}
+                        disabled={busy}
+                        className="rounded-md bg-surface-800 px-2 py-0.5 text-xs text-gray-300 hover:bg-surface-700"
+                      >
+                        No
+                      </button>
+                    </>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => setPendingDeleteId(g.id)}
+                      className="rounded-md px-2 py-0.5 text-xs text-rose-400 hover:bg-rose-500/10"
+                    >
+                      Delete
+                    </button>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
+    </div>
+  );
+}
+
+/**
+ * Better Auth's client returns `{ error }` with a sometimes-sparse envelope —
+ * `message` may be empty while `code` and `statusText` carry the actual cause.
+ * Pick the most useful string available so admin-side failures don't surface
+ * as a generic fallback.
+ */
+function formatAuthError(err: unknown, fallback: string): string {
+  if (!err || typeof err !== "object") return fallback;
+  const e = err as { message?: unknown; code?: unknown; statusText?: unknown; status?: unknown };
+  const message = typeof e.message === "string" && e.message.trim() ? e.message : null;
+  const code = typeof e.code === "string" && e.code ? e.code : null;
+  const statusText = typeof e.statusText === "string" && e.statusText ? e.statusText : null;
+  const status = typeof e.status === "number" ? e.status : null;
+  return message ?? code ?? statusText ?? (status ? `${fallback} (${status})` : fallback);
 }
 
 function countMarkedInWindow(

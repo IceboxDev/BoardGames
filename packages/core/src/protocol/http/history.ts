@@ -54,10 +54,18 @@ const TeamSchema = z.object({
   rank: z.number().int().optional(),
 });
 
+// Optional non-competing slot — Blood on the Clocktower's Storyteller is the
+// motivating case (host runs the game, never wins/loses, may take a Fabled
+// "character"). Generic enough to fit other moderator-led games later.
+const ModeratorSchema = ParticipantSchema.extend({
+  role: z.string().max(64).optional(),
+});
+
 const MatchOutcomeTeamsSchema = z.object({
   kind: z.literal("teams"),
   teams: z.array(TeamSchema).min(2).max(8),
   winnerTeamIndices: z.array(z.number().int().min(0)).min(1),
+  moderator: ModeratorSchema.optional(),
 });
 export type MatchOutcomeTeams = z.infer<typeof MatchOutcomeTeamsSchema>;
 
