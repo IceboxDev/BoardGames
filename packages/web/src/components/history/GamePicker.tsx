@@ -19,8 +19,8 @@ export function GamePicker({ slug, title, onChange }: Props) {
 
   const matches = useMemo(() => {
     const q = query.toLowerCase();
-    if (!q) return options.slice(0, 8);
-    return options.filter((o) => o.title.toLowerCase().includes(q)).slice(0, 8);
+    if (!q) return options;
+    return options.filter((o) => o.title.toLowerCase().includes(q));
   }, [options, query]);
 
   function pick(slugVal: string | null, titleVal: string) {
@@ -68,9 +68,6 @@ export function GamePicker({ slug, title, onChange }: Props) {
                 className="w-full px-3 py-2 text-left text-sm text-gray-200 hover:bg-surface-800"
               >
                 {m.title}
-                <span className="ml-2 text-[10px] uppercase tracking-wider text-gray-500">
-                  {m.slug}
-                </span>
               </button>
             </li>
           ))}

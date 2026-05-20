@@ -48,6 +48,7 @@ function dateKeyLabel(dateKey: string): string {
 export default function HistoryPage() {
   const { data: session } = useSession();
   const isAdmin = (session?.user as { role?: string } | undefined)?.role === "admin";
+  const currentUserId = session?.user?.id ?? null;
   const queryClient = useQueryClient();
 
   const historyQuery = useInfiniteQuery({
@@ -165,6 +166,7 @@ export default function HistoryPage() {
                 lock={g.lock}
                 matches={g.matches}
                 isAdmin={isAdmin}
+                currentUserId={currentUserId}
                 onAddMatch={
                   isAdmin && g.dateKey
                     ? () => setRecording({ mode: "create", dateKey: g.dateKey })

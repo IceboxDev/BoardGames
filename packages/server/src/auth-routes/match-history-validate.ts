@@ -69,11 +69,13 @@ function parseFreeForAll(v: Record<string, unknown>): ParseResult<MatchOutcomeFr
   }
   // No explicit winnerUserIds — the player(s) with the highest score are
   // implicit co-winners.
+  const scenario = asOptionalString(v.scenario, 64);
   return {
     ok: true,
     value: {
       kind: "free-for-all",
       players,
+      ...(scenario !== undefined ? { scenario } : {}),
     },
   };
 }
@@ -97,7 +99,13 @@ function parseTeams(v: Record<string, unknown>): ParseResult<MatchOutcomeTeams> 
       if (!p.ok) return p;
       const role =
         isPlainObject(raw) && raw.role !== undefined ? asOptionalString(raw.role, 64) : undefined;
-      members.push({ ...p.value, ...(role !== undefined ? { role } : {}) });
+      const eliminated =
+        isPlainObject(raw) && typeof raw.eliminated === "boolean" ? raw.eliminated : undefined;
+      members.push({
+        ...p.value,
+        ...(role !== undefined ? { role } : {}),
+        ...(eliminated !== undefined ? { eliminated } : {}),
+      });
     }
     let score: number | undefined;
     if (t.score !== undefined && t.score !== null) {
@@ -135,6 +143,7 @@ function parseTeams(v: Record<string, unknown>): ParseResult<MatchOutcomeTeams> 
         : undefined;
     moderator = { ...m.value, ...(role !== undefined ? { role } : {}) };
   }
+  const scenario = asOptionalString(v.scenario, 64);
   return {
     ok: true,
     value: {
@@ -142,6 +151,7 @@ function parseTeams(v: Record<string, unknown>): ParseResult<MatchOutcomeTeams> 
       teams,
       winnerTeamIndices,
       ...(moderator ? { moderator } : {}),
+      ...(scenario !== undefined ? { scenario } : {}),
     },
   };
 }
@@ -171,7 +181,15 @@ function parseLastStanding(v: Record<string, unknown>): ParseResult<MatchOutcome
   if (players.every((p) => p.eliminationOrder !== undefined)) {
     return { ok: false, error: "last-standing: at least one player must survive" };
   }
-  return { ok: true, value: { kind: "last-standing", players } };
+  const scenario = asOptionalString(v.scenario, 64);
+  return {
+    ok: true,
+    value: {
+      kind: "last-standing",
+      players,
+      ...(scenario !== undefined ? { scenario } : {}),
+    },
+  };
 }
 
 function parseCoop(v: Record<string, unknown>): ParseResult<MatchOutcomeCoop> {
@@ -190,6 +208,7 @@ function parseCoop(v: Record<string, unknown>): ParseResult<MatchOutcomeCoop> {
   }
   const difficulty = asOptionalString(v.difficulty, 64);
   const details = asOptionalString(v.details, 1000);
+  const scenario = asOptionalString(v.scenario, 64);
   return {
     ok: true,
     value: {
@@ -198,6 +217,7 @@ function parseCoop(v: Record<string, unknown>): ParseResult<MatchOutcomeCoop> {
       outcome: v.outcome,
       ...(difficulty !== undefined ? { difficulty } : {}),
       ...(details !== undefined ? { details } : {}),
+      ...(scenario !== undefined ? { scenario } : {}),
     },
   };
 }

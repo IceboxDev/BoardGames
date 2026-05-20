@@ -1,5 +1,4 @@
-import type { ButtonHTMLAttributes } from "react";
-import { forwardRef } from "react";
+import type { ButtonHTMLAttributes, Ref } from "react";
 
 type Variant = "primary" | "secondary" | "ghost" | "danger";
 type Size = "sm" | "md" | "lg";
@@ -8,6 +7,7 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: Variant;
   size?: Size;
   loading?: boolean;
+  ref?: Ref<HTMLButtonElement>;
 };
 
 const base =
@@ -31,18 +31,16 @@ const sizes: Record<Size, string> = {
   lg: "px-5 py-3 text-base",
 };
 
-export const Button = forwardRef<HTMLButtonElement, Props>(function Button(
-  {
-    variant = "primary",
-    size = "md",
-    loading = false,
-    className = "",
-    children,
-    disabled,
-    ...rest
-  },
+export function Button({
+  variant = "primary",
+  size = "md",
+  loading = false,
+  className = "",
+  children,
+  disabled,
   ref,
-) {
+  ...rest
+}: Props) {
   return (
     <button
       ref={ref}
@@ -53,4 +51,4 @@ export const Button = forwardRef<HTMLButtonElement, Props>(function Button(
       {loading ? <span className="animate-pulse">…</span> : children}
     </button>
   );
-});
+}

@@ -2,7 +2,7 @@ import { simulateGame } from "./tournament-runner";
 
 declare const process: {
   argv: string[];
-  stdout: { write: (s: string) => boolean | void };
+  stdout: { write: (s: string) => boolean | undefined };
 };
 
 const N = parseInt(process.argv[2] || "200", 10);

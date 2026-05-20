@@ -41,11 +41,19 @@ const FreeForAllPlayerSchema = ParticipantSchema.extend({
 const MatchOutcomeFreeForAllSchema = z.object({
   kind: z.literal("free-for-all"),
   players: z.array(FreeForAllPlayerSchema).min(2).max(20),
+  // Optional per-game variant tag (e.g. 7 Wonders expansions). Same shape and
+  // intent as the `scenario` field on teams matches.
+  scenario: z.string().max(64).optional(),
 });
 export type MatchOutcomeFreeForAll = z.infer<typeof MatchOutcomeFreeForAllSchema>;
 
 const TeamMemberSchema = ParticipantSchema.extend({
   role: z.string().max(64).optional(),
+  // Marker for team games where individual members can be killed/voted out
+  // mid-game (One Night Werewolf, Werewolf-style games). Optional and purely
+  // descriptive — the team's win/loss is still expressed via
+  // `winnerTeamIndices`.
+  eliminated: z.boolean().optional(),
 });
 
 const TeamSchema = z.object({
@@ -66,6 +74,10 @@ const MatchOutcomeTeamsSchema = z.object({
   teams: z.array(TeamSchema).min(2).max(8),
   winnerTeamIndices: z.array(z.number().int().min(0)).min(1),
   moderator: ModeratorSchema.optional(),
+  // Optional display tag — Clocktower edition label ("Trouble Brewing"),
+  // Werewolf scenario label ("Moonstruck"), etc. Free-text so games can use
+  // it however they need; capped at 64 chars for the same reason `role` is.
+  scenario: z.string().max(64).optional(),
 });
 export type MatchOutcomeTeams = z.infer<typeof MatchOutcomeTeamsSchema>;
 
@@ -76,6 +88,8 @@ const LastStandingPlayerSchema = ParticipantSchema.extend({
 const MatchOutcomeLastStandingSchema = z.object({
   kind: z.literal("last-standing"),
   players: z.array(LastStandingPlayerSchema).min(2).max(20),
+  // Optional per-game variant tag (e.g. Exploding Kittens death/revival modes).
+  scenario: z.string().max(64).optional(),
 });
 export type MatchOutcomeLastStanding = z.infer<typeof MatchOutcomeLastStandingSchema>;
 
@@ -85,6 +99,8 @@ const MatchOutcomeCoopSchema = z.object({
   outcome: z.enum(["win", "loss"]),
   difficulty: z.string().max(64).optional(),
   details: z.string().max(1000).optional(),
+  // Optional per-game variant tag (e.g. Codenames Duet language).
+  scenario: z.string().max(64).optional(),
 });
 export type MatchOutcomeCoop = z.infer<typeof MatchOutcomeCoopSchema>;
 

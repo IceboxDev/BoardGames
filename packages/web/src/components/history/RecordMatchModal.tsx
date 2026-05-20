@@ -12,6 +12,7 @@ import type {
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { defaultKindForSlug } from "../../games/match-kinds";
+import { variantConfigForSlug } from "../../games/match-variants";
 import { authClient } from "../../lib/auth-client";
 import { fetchCalendarLocks } from "../../lib/calendar-locks";
 import { recordMatch, updateMatch } from "../../lib/match-history";
@@ -26,7 +27,9 @@ import { FreeForAllForm } from "./forms/FreeForAllForm";
 import { LastStandingForm } from "./forms/LastStandingForm";
 import { OneVsManyForm } from "./forms/OneVsManyForm";
 import { TeamsForm } from "./forms/TeamsForm";
+import { WerewolfForm } from "./forms/WerewolfForm";
 import { GamePicker } from "./GamePicker";
+import { GameVariantPicker } from "./GameVariantPicker";
 
 type User = { id: string; name: string };
 
@@ -58,9 +61,13 @@ function emptyOutcome(kind: MatchKind, prefill: Participant[]): MatchOutcome {
         players: prefill.map((p) => ({ ...p, score: 0 })),
       };
     case "teams":
+      // Drop the whole pre-filled roster into team 0 so the admin can split it
+      // into actual teams from there. For ClocktowerForm / WerewolfForm — which
+      // read every team's members as a single roster — this puts them all in
+      // the per-player role picker immediately.
       return {
         kind,
-        teams: [{ members: [] }, { members: [] }],
+        teams: [{ members: prefill.map((p) => ({ ...p })) }, { members: [] }],
         winnerTeamIndices: [],
       };
     case "last-standing":
@@ -310,6 +317,10 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
           </div>
         </Field>
 
+        {variantConfigForSlug(gameSlug) && (
+          <GameVariantPicker gameSlug={gameSlug} outcome={outcome} onChange={setOutcome} />
+        )}
+
         <div className="rounded-xl border border-white/5 bg-surface-900/40 p-3">
           {kind === "free-for-all" && (
             <FreeForAllForm
@@ -322,6 +333,12 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
           {kind === "teams" &&
             (gameSlug === "blood-on-the-clocktower" ? (
               <ClocktowerForm
+                users={allUsers}
+                value={outcome as MatchOutcomeTeams}
+                onChange={setOutcome}
+              />
+            ) : gameSlug === "one-night-ultimate-werewolf" ? (
+              <WerewolfForm
                 users={allUsers}
                 value={outcome as MatchOutcomeTeams}
                 onChange={setOutcome}
@@ -392,20 +409,13 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
 }
 
 /**
- * Sort the game-night dropdown so the most-likely target is at the top:
- * today and past nights first (newest → oldest), then any future locks below
- * (soonest → latest). The common case is logging matches for tonight's session
- * — today should be on top, not buried under future planned dates.
+ * Sort the game-night dropdown: today and past nights only (newest → oldest).
+ * Future-dated locks are filtered out — you can't record a match for a game
+ * night that hasn't happened yet.
  */
 function sortLockKeys(keys: string[]): string[] {
   const today = new Date().toISOString().slice(0, 10);
-  return [...keys].sort((a, b) => {
-    const aPast = a <= today;
-    const bPast = b <= today;
-    if (aPast !== bPast) return aPast ? -1 : 1;
-    if (aPast) return b.localeCompare(a);
-    return a.localeCompare(b);
-  });
+  return keys.filter((k) => k <= today).sort((a, b) => b.localeCompare(a));
 }
 
 function isoToLocalInput(iso: string): string {
@@ -435,9 +445,9 @@ function describeOutcomeError(outcome: MatchOutcome, gameSlug: string | null): s
       if (outcome.players.length < 2) return "Add at least two players";
       return null;
     case "teams":
-      return gameSlug === "blood-on-the-clocktower"
-        ? describeClocktowerError(outcome)
-        : describeGenericTeamsError(outcome);
+      if (gameSlug === "blood-on-the-clocktower") return describeClocktowerError(outcome);
+      if (gameSlug === "one-night-ultimate-werewolf") return describeWerewolfError(outcome);
+      return describeGenericTeamsError(outcome);
     case "last-standing":
       if (outcome.players.length < 2) return "Add at least two players";
       if (outcome.players.every((p) => p.eliminationOrder !== undefined))
@@ -457,6 +467,18 @@ function describeGenericTeamsError(outcome: MatchOutcomeTeams): string | null {
   const empty = outcome.teams.findIndex((t) => t.members.length === 0);
   if (empty !== -1) return `Team ${empty + 1} needs at least one player`;
   if (outcome.winnerTeamIndices.length === 0) return "Pick at least one winning team";
+  return null;
+}
+
+function describeWerewolfError(outcome: MatchOutcomeTeams): string | null {
+  const allMembers = outcome.teams.flatMap((t) => t.members);
+  if (allMembers.length === 0) return "Add players";
+  const unassigned = allMembers.find((m) => !m.role);
+  if (unassigned) return `Pick a role for ${unassigned.displayName}`;
+  if (outcome.teams.length < 2)
+    return "Match needs at least one Werewolf, Minion, or Tanner besides Village";
+  if (outcome.winnerTeamIndices.length === 0)
+    return "No winning team — adjust roles or vote-outs so a side wins";
   return null;
 }
 
@@ -532,7 +554,27 @@ function applyParticipants(
     }
     case "coop":
       return { ...(base as MatchOutcomeCoop), participants };
-    case "teams":
+    case "teams": {
+      // Re-load the picked-night's roster into team 0 (or team 1 if the form
+      // already has team-1 members alongside an empty team 0 — preserves edits
+      // the admin already made). Roles get carried over when the same userId
+      // re-appears so we don't wipe a partially-assigned Clocktower/Werewolf
+      // form on a re-prefill.
+      const teamsBase = base as MatchOutcomeTeams;
+      const existingByUserId = new Map(
+        teamsBase.teams.flatMap((t) => t.members.map((m) => [m.userId, m] as const)),
+      );
+      const dumpInto =
+        teamsBase.teams[0].members.length === 0 && teamsBase.teams[1]?.members.length ? 1 : 0;
+      const teams = teamsBase.teams.map((t, i) => {
+        if (i !== dumpInto) return t;
+        return {
+          ...t,
+          members: participants.map((p) => existingByUserId.get(p.userId) ?? p),
+        };
+      });
+      return { ...teamsBase, teams };
+    }
     case "one-vs-many":
       return base;
   }

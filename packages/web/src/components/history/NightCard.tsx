@@ -10,6 +10,8 @@ type Props = {
   lock: LockedDate | null;
   matches: MatchRecord[];
   isAdmin: boolean;
+  /** Logged-in user id — passed down so each match row can highlight you. */
+  currentUserId: string | null;
   onAddMatch?: () => void;
   onEditMatch?: (m: MatchRecord) => void;
   onDeleteMatch?: (m: MatchRecord) => void;
@@ -21,6 +23,7 @@ export function NightCard({
   lock,
   matches,
   isAdmin,
+  currentUserId,
   onAddMatch,
   onEditMatch,
   onDeleteMatch,
@@ -59,6 +62,7 @@ export function NightCard({
             key={m.id}
             match={m}
             isAdmin={isAdmin}
+            currentUserId={currentUserId}
             onEdit={onEditMatch}
             onDelete={onDeleteMatch}
           />

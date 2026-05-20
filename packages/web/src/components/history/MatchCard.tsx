@@ -7,6 +7,10 @@ import type {
   MatchOutcomeTeams,
   MatchRecord,
 } from "@boardgames/core/history/types";
+import {
+  CLOCKTOWER_EDITIONS,
+  detectClocktowerEdition,
+} from "../../games/blood-on-the-clocktower/characters";
 import { games } from "../../games/registry";
 import { lowScoreWinsForSlug } from "../../games/score-config";
 import { BookIcon } from "../icons";
@@ -15,14 +19,17 @@ import { AvatarBubble } from "./AvatarBubble";
 type Props = {
   match: MatchRecord;
   isAdmin: boolean;
+  /** Logged-in user id — that player's avatar gets a highlight ring. */
+  currentUserId: string | null;
   onEdit?: (m: MatchRecord) => void;
   onDelete?: (m: MatchRecord) => void;
 };
 
 const THUMB_BY_SLUG = new Map(games.map((g) => [g.slug, g.thumbnail] as const));
 
-export function MatchCard({ match, isAdmin, onEdit, onDelete }: Props) {
+export function MatchCard({ match, isAdmin, currentUserId, onEdit, onDelete }: Props) {
   const thumb = match.gameSlug ? THUMB_BY_SLUG.get(match.gameSlug) : undefined;
+  const subtitle = deriveTitleSubtitle(match.outcome, match.gameSlug);
   return (
     <article className="group flex items-center gap-3 rounded-lg bg-surface-900/40 px-2.5 py-1.5 text-sm transition hover:bg-surface-900/70">
       {thumb ? (
@@ -39,12 +46,21 @@ export function MatchCard({ match, isAdmin, onEdit, onDelete }: Props) {
         </div>
       )}
 
-      <div className="w-32 shrink-0 truncate text-sm font-medium text-gray-100 sm:w-44">
-        {match.gameTitle}
+      {/* Title column is wider than before so long names like "One Night
+          Ultimate Werewolf" stop truncating; a small italic subtitle line
+          appears underneath when the game has a meaningful edition/scenario
+          tag (BotC edition, Werewolf scenario). */}
+      <div className="w-40 shrink-0 sm:w-56">
+        <div className="truncate text-sm font-medium text-gray-100">{match.gameTitle}</div>
+        {subtitle && <div className="truncate text-[10px] italic text-gray-500">{subtitle}</div>}
       </div>
 
       <div className="min-w-0 flex-1">
-        <CompactOutcome outcome={match.outcome} gameSlug={match.gameSlug} />
+        <CompactOutcome
+          outcome={match.outcome}
+          gameSlug={match.gameSlug}
+          currentUserId={currentUserId}
+        />
       </div>
 
       {isAdmin && (onEdit || onDelete) && (
@@ -97,27 +113,76 @@ export function MatchCard({ match, isAdmin, onEdit, onDelete }: Props) {
   );
 }
 
-function CompactOutcome({ outcome, gameSlug }: { outcome: MatchOutcome; gameSlug: string | null }) {
+// ── Subtitle (italic) under the game title ────────────────────────────
+
+function deriveTitleSubtitle(outcome: MatchOutcome, gameSlug: string | null): string | null {
+  // Persisted scenario tag — used by Werewolf, Codenames, Wavelength,
+  // 7 Wonders, Exploding Kittens, etc. Each match kind carries its own optional
+  // `scenario` field on the wire.
+  if (outcome.kind !== "one-vs-many" && outcome.scenario) return outcome.scenario;
+  // BotC also derives the edition from assigned characters as a fallback for
+  // legacy records that didn't persist `scenario`.
+  if (outcome.kind === "teams" && gameSlug === "blood-on-the-clocktower") {
+    const roles = outcome.teams.flatMap((t) => t.members.map((m) => m.role));
+    const edition = detectClocktowerEdition(roles);
+    if (!edition) return null;
+    return CLOCKTOWER_EDITIONS.find((e) => e.id === edition)?.label ?? null;
+  }
+  return null;
+}
+
+// ── Team-color (initials) helpers ─────────────────────────────────────
+
+type Accent = "good" | "evil" | "village" | "wolf" | "tanner" | "neutral";
+
+function teamAccents(outcome: MatchOutcomeTeams, gameSlug: string | null): Accent[] {
+  if (gameSlug === "blood-on-the-clocktower") {
+    return outcome.teams.map((_, i) => (i === 0 ? "good" : i === 1 ? "evil" : "neutral"));
+  }
+  if (gameSlug === "one-night-ultimate-werewolf") {
+    return outcome.teams.map((t) => {
+      const first = (t.members[0]?.role ?? "").toLowerCase();
+      if (first === "werewolf" || first === "werewolves") return "wolf";
+      if (first === "tanner") return "tanner";
+      return "village";
+    });
+  }
+  return outcome.teams.map(() => "neutral");
+}
+
+// ── Outcome variants ──────────────────────────────────────────────────
+
+type OutcomeProps = {
+  outcome: MatchOutcome;
+  gameSlug: string | null;
+  currentUserId: string | null;
+};
+
+function CompactOutcome({ outcome, gameSlug, currentUserId }: OutcomeProps) {
   switch (outcome.kind) {
     case "free-for-all":
-      return <FreeForAllInline outcome={outcome} gameSlug={gameSlug} />;
+      return (
+        <FreeForAllInline outcome={outcome} gameSlug={gameSlug} currentUserId={currentUserId} />
+      );
     case "teams":
-      return <TeamsInline outcome={outcome} />;
+      return <TeamsInline outcome={outcome} gameSlug={gameSlug} currentUserId={currentUserId} />;
     case "last-standing":
-      return <LastStandingInline outcome={outcome} />;
+      return <LastStandingInline outcome={outcome} currentUserId={currentUserId} />;
     case "coop":
-      return <CoopInline outcome={outcome} />;
+      return <CoopInline outcome={outcome} currentUserId={currentUserId} />;
     case "one-vs-many":
-      return <OneVsManyInline outcome={outcome} />;
+      return <OneVsManyInline outcome={outcome} currentUserId={currentUserId} />;
   }
 }
 
 function FreeForAllInline({
   outcome,
   gameSlug,
+  currentUserId,
 }: {
   outcome: MatchOutcomeFreeForAll;
   gameSlug: string | null;
+  currentUserId: string | null;
 }) {
   const lowestWins = lowScoreWinsForSlug(gameSlug);
   const sorted = [...outcome.players].sort((a, b) =>
@@ -128,7 +193,11 @@ function FreeForAllInline({
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
       {sorted.map((p) => (
         <span key={p.userId} className="inline-flex items-center gap-1">
-          <AvatarBubble name={p.displayName} tone={p.score === winningScore ? "winner" : "loser"} />
+          <AvatarBubble
+            name={p.displayName}
+            tone={p.score === winningScore ? "winner" : "loser"}
+            isMe={p.userId === currentUserId}
+          />
           <span className="text-xs tabular-nums text-gray-500">{p.score}</span>
         </span>
       ))}
@@ -136,13 +205,24 @@ function FreeForAllInline({
   );
 }
 
-function TeamsInline({ outcome }: { outcome: MatchOutcomeTeams }) {
+function TeamsInline({
+  outcome,
+  gameSlug,
+  currentUserId,
+}: {
+  outcome: MatchOutcomeTeams;
+  gameSlug: string | null;
+  currentUserId: string | null;
+}) {
   const winners = new Set(outcome.winnerTeamIndices);
   const hasScore = outcome.teams.some((t) => typeof t.score === "number");
+  const accents = teamAccents(outcome, gameSlug);
+
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
       {outcome.teams.map((t, i) => {
         const isWinner = winners.has(i);
+        const accent = accents[i];
         return (
           // biome-ignore lint/suspicious/noArrayIndexKey: teams have no stable id; not reorderable.
           <span key={i} className="inline-flex items-center gap-1">
@@ -152,6 +232,8 @@ function TeamsInline({ outcome }: { outcome: MatchOutcomeTeams }) {
                   key={m.userId}
                   name={m.displayName}
                   tone={isWinner ? "winner" : "loser"}
+                  accent={accent}
+                  isMe={m.userId === currentUserId}
                   title={m.role ? `${m.displayName} — ${m.role}` : m.displayName}
                 />
               ))}
@@ -160,24 +242,37 @@ function TeamsInline({ outcome }: { outcome: MatchOutcomeTeams }) {
               <span className="text-xs tabular-nums text-gray-500">{t.score}</span>
             )}
             {i < outcome.teams.length - 1 && (
-              <span className="ml-1 text-[10px] uppercase tracking-wider text-gray-600">vs</span>
+              <span className="text-[10px] uppercase tracking-wider text-gray-600">vs</span>
             )}
           </span>
         );
       })}
-      {outcome.moderator && <Storyteller moderator={outcome.moderator} />}
+      {outcome.moderator && (
+        <Storyteller moderator={outcome.moderator} currentUserId={currentUserId} />
+      )}
     </div>
   );
 }
 
-function Storyteller({ moderator }: { moderator: NonNullable<MatchOutcomeTeams["moderator"]> }) {
+function Storyteller({
+  moderator,
+  currentUserId,
+}: {
+  moderator: NonNullable<MatchOutcomeTeams["moderator"]>;
+  currentUserId: string | null;
+}) {
   const title = moderator.role
     ? `${moderator.displayName} — Storyteller (${moderator.role})`
     : `${moderator.displayName} — Storyteller`;
   return (
     <span className="inline-flex items-center gap-1 border-l border-white/5 pl-2" title={title}>
       <span className="relative inline-flex">
-        <AvatarBubble name={moderator.displayName} tone="muted" title={title} />
+        <AvatarBubble
+          name={moderator.displayName}
+          tone="muted"
+          title={title}
+          isMe={moderator.userId === currentUserId}
+        />
         {/* Book icon overlay so the Storyteller reads as "runs the game", not
             as just another loser-toned player. Pinned to the bottom-right of
             the avatar with a small ring matching the row background. */}
@@ -195,7 +290,13 @@ function Storyteller({ moderator }: { moderator: NonNullable<MatchOutcomeTeams["
   );
 }
 
-function LastStandingInline({ outcome }: { outcome: MatchOutcomeLastStanding }) {
+function LastStandingInline({
+  outcome,
+  currentUserId,
+}: {
+  outcome: MatchOutcomeLastStanding;
+  currentUserId: string | null;
+}) {
   const survivors = outcome.players.filter((p) => p.eliminationOrder === undefined);
   const eliminated = outcome.players
     .filter((p) => p.eliminationOrder !== undefined)
@@ -204,7 +305,12 @@ function LastStandingInline({ outcome }: { outcome: MatchOutcomeLastStanding }) 
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
       <span className="inline-flex -space-x-1.5">
         {survivors.map((p) => (
-          <AvatarBubble key={p.userId} name={p.displayName} tone="winner" />
+          <AvatarBubble
+            key={p.userId}
+            name={p.displayName}
+            tone="winner"
+            isMe={p.userId === currentUserId}
+          />
         ))}
       </span>
       {eliminated.length > 0 && (
@@ -212,7 +318,12 @@ function LastStandingInline({ outcome }: { outcome: MatchOutcomeLastStanding }) 
           <span className="text-gray-700">·</span>
           <span className="inline-flex -space-x-1.5">
             {eliminated.map((p) => (
-              <AvatarBubble key={p.userId} name={p.displayName} tone="muted" />
+              <AvatarBubble
+                key={p.userId}
+                name={p.displayName}
+                tone="muted"
+                isMe={p.userId === currentUserId}
+              />
             ))}
           </span>
         </>
@@ -221,7 +332,13 @@ function LastStandingInline({ outcome }: { outcome: MatchOutcomeLastStanding }) 
   );
 }
 
-function CoopInline({ outcome }: { outcome: MatchOutcomeCoop }) {
+function CoopInline({
+  outcome,
+  currentUserId,
+}: {
+  outcome: MatchOutcomeCoop;
+  currentUserId: string | null;
+}) {
   const won = outcome.outcome === "win";
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
@@ -234,14 +351,25 @@ function CoopInline({ outcome }: { outcome: MatchOutcomeCoop }) {
       </span>
       <span className="inline-flex -space-x-1.5">
         {outcome.participants.map((p) => (
-          <AvatarBubble key={p.userId} name={p.displayName} tone={won ? "winner" : "loser"} />
+          <AvatarBubble
+            key={p.userId}
+            name={p.displayName}
+            tone={won ? "winner" : "loser"}
+            isMe={p.userId === currentUserId}
+          />
         ))}
       </span>
     </div>
   );
 }
 
-function OneVsManyInline({ outcome }: { outcome: MatchOutcomeOneVsMany }) {
+function OneVsManyInline({
+  outcome,
+  currentUserId,
+}: {
+  outcome: MatchOutcomeOneVsMany;
+  currentUserId: string | null;
+}) {
   const soloWon = outcome.winnerSide === "solo";
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
@@ -249,6 +377,7 @@ function OneVsManyInline({ outcome }: { outcome: MatchOutcomeOneVsMany }) {
         <AvatarBubble
           name={outcome.solo.displayName}
           tone={soloWon ? "winner" : "loser"}
+          isMe={outcome.solo.userId === currentUserId}
           title={
             outcome.solo.roleLabel
               ? `${outcome.solo.displayName} — ${outcome.solo.roleLabel}`
@@ -269,6 +398,7 @@ function OneVsManyInline({ outcome }: { outcome: MatchOutcomeOneVsMany }) {
               key={m.userId}
               name={m.displayName}
               tone={!soloWon ? "winner" : "loser"}
+              isMe={m.userId === currentUserId}
             />
           ))}
         </span>

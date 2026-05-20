@@ -1,14 +1,11 @@
-import type { InputHTMLAttributes } from "react";
-import { forwardRef } from "react";
+import type { InputHTMLAttributes, Ref } from "react";
 
 type Props = InputHTMLAttributes<HTMLInputElement> & {
   invalid?: boolean;
+  ref?: Ref<HTMLInputElement>;
 };
 
-export const Input = forwardRef<HTMLInputElement, Props>(function Input(
-  { invalid = false, className = "", ...rest },
-  ref,
-) {
+export function Input({ invalid = false, className = "", ref, ...rest }: Props) {
   return (
     <input
       ref={ref}
@@ -20,4 +17,4 @@ export const Input = forwardRef<HTMLInputElement, Props>(function Input(
       {...rest}
     />
   );
-});
+}
