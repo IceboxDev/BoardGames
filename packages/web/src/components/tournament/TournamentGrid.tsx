@@ -1,6 +1,7 @@
 import { computeElo } from "@boardgames/core/tournament/elo";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { apiClient } from "../../lib/api-client";
+import { Button } from "../ui/Button";
 
 interface TournamentResult {
   id: string;
@@ -262,23 +263,21 @@ export default function TournamentGrid({
           </div>
           <div className="mt-2 flex gap-2">
             {running.completed > 0 && onViewMatchHistory && (
-              <button
-                type="button"
+              <Button
+                variant="secondary"
+                size="sm"
+                block
                 onClick={() => {
                   onViewMatchHistory(running.aId, running.bId, running.tournamentId);
                 }}
-                className="flex-1 rounded-lg border border-gray-600 px-4 py-2 text-sm font-medium text-gray-300 transition hover:border-indigo-500 hover:text-indigo-400"
+                className="flex-1"
               >
                 View {running.completed} game{running.completed !== 1 ? "s" : ""} so far
-              </button>
+              </Button>
             )}
-            <button
-              type="button"
-              onClick={handleStop}
-              className="flex-1 rounded-lg border border-red-700 px-4 py-2 text-sm font-semibold text-red-400 transition hover:bg-red-900/30"
-            >
+            <Button variant="danger" size="sm" block onClick={handleStop} className="flex-1">
               Stop (save partial)
-            </button>
+            </Button>
           </div>
         </div>
       )}
@@ -382,12 +381,13 @@ export default function TournamentGrid({
                   return (
                     <div key={col.id} className="border-b border-gray-800/50 p-0.5">
                       {winRate !== null && tournamentId && matchup ? (
-                        <button
-                          type="button"
-                          className="flex h-full w-full cursor-pointer flex-col items-center justify-center rounded-lg transition-colors hover:bg-gray-800/60"
+                        <Button
+                          variant="ghost"
+                          size="xs"
                           onClick={() =>
                             onViewMatchHistory?.(matchup.strategyA, matchup.strategyB, tournamentId)
                           }
+                          className="!flex !h-full !w-full !flex-col !items-center !justify-center !p-0 !gap-0 hover:bg-gray-800/60"
                         >
                           <span
                             className={`text-sm font-bold tabular-nums leading-snug ${
@@ -405,7 +405,7 @@ export default function TournamentGrid({
                           <span className="text-[9px] leading-snug text-gray-600">
                             {gamesPlayed} games
                           </span>
-                        </button>
+                        </Button>
                       ) : isRunning ? (
                         <div className="flex h-full w-full items-center justify-center">
                           <span className="animate-pulse text-[10px] text-indigo-400">
@@ -413,18 +413,19 @@ export default function TournamentGrid({
                           </span>
                         </div>
                       ) : (
-                        <button
-                          type="button"
+                        <Button
+                          variant="ghost"
+                          size="xs"
                           onClick={() => {
                             const aId = row.id < col.id ? row.id : col.id;
                             const bId = row.id < col.id ? col.id : row.id;
                             runPair(aId, bId);
                           }}
                           disabled={!!running}
-                          className="flex h-full w-full items-center justify-center rounded-lg text-xs text-gray-500 transition-colors hover:text-indigo-400 disabled:opacity-30"
+                          className="!flex !h-full !w-full !items-center !justify-center !p-0 text-gray-500 hover:text-indigo-400"
                         >
                           Run
-                        </button>
+                        </Button>
                       )}
                     </div>
                   );
@@ -437,22 +438,12 @@ export default function TournamentGrid({
 
       {/* Bottom actions */}
       <div className="mt-4 flex shrink-0 flex-wrap items-center justify-center gap-4">
-        <button
-          type="button"
-          onClick={runAll}
-          disabled={!!running}
-          className="rounded-lg bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-500 disabled:opacity-40"
-        >
+        <Button variant="primary" size="md" onClick={runAll} disabled={!!running}>
           {running ? "Running..." : "Run All Matchups"}
-        </button>
-        <button
-          type="button"
-          onClick={handleClear}
-          disabled={!!running}
-          className="rounded-lg border border-gray-700 px-5 py-2.5 text-sm font-semibold text-gray-400 transition hover:border-red-500 hover:text-red-400 disabled:opacity-40"
-        >
+        </Button>
+        <Button variant="secondary" size="md" onClick={handleClear} disabled={!!running}>
           Clear Results
-        </button>
+        </Button>
       </div>
     </div>
   );

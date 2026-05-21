@@ -83,6 +83,7 @@ export default function PlayerHandOverlay({
             const isViewing = viewingPlayerIdx === idx;
             const isCurrent = idx === state.currentPlayerIndex;
             return (
+              // biome-ignore lint/correctness/noRestrictedElements: game-piece (player pawn avatar) clickable surface
               <button
                 key={role.id}
                 type="button"
@@ -103,7 +104,8 @@ export default function PlayerHandOverlay({
           })}
         </div>
 
-        {/* Eye toggle */}
+        {/* Eye toggle \u2014 bespoke chrome (rounded pill + backdrop-blur) on the floating hand overlay. */}
+        {/* biome-ignore lint/correctness/noRestrictedElements: bespoke floating pill toggle */}
         <button
           type="button"
           onClick={() => setHandVisible((v) => !v)}

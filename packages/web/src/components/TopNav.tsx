@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
+import { Button } from "./ui/Button";
 
 type TopNavProps = {
   /** Where the "Board Game Lab" logo links to. Defaults to "/". */
@@ -85,9 +86,12 @@ export function TopNavLink({
       </Link>
     );
   }
+  // Pure-text top-nav action — uses Button's `link` variant for color +
+  // hover behavior, but composes nav-specific padding/radius on top so it
+  // sits exactly aligned with the sibling Link variant above.
   return (
-    <button type="button" onClick={onClick} className={className}>
+    <Button variant="link" onClick={onClick} className={className}>
       {children}
-    </button>
+    </Button>
   );
 }

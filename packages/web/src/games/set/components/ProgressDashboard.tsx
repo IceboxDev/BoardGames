@@ -11,6 +11,7 @@ import {
 import { formatTime } from "@boardgames/core/games/set/metrics";
 import type { GameRecord } from "@boardgames/core/games/set/types";
 import { useMemo, useState } from "react";
+import { Chip } from "../../../components/ui/Chip";
 import LineChart from "./charts/LineChart";
 import RadarChart from "./charts/RadarChart";
 import Sparkline from "./charts/Sparkline";
@@ -223,18 +224,16 @@ export default function ProgressDashboard({ history }: ProgressDashboardProps) {
         <h3 className="text-sm font-semibold text-gray-300 mb-2">Progression</h3>
         <div className="flex gap-1 mb-3">
           {CHART_TABS.map((tab) => (
-            <button
-              type="button"
+            <Chip
               key={tab.key}
+              pressed={chartTab === tab.key}
+              tone="accent"
+              size="sm"
+              ring={false}
               onClick={() => setChartTab(tab.key)}
-              className={`rounded-md px-3 py-1 text-xs font-medium transition ${
-                chartTab === tab.key
-                  ? "bg-indigo-600 text-white"
-                  : "bg-gray-800 text-gray-400 hover:bg-gray-700"
-              }`}
             >
               {tab.label}
-            </button>
+            </Chip>
           ))}
         </div>
         <div className="rounded-xl bg-gray-800/60 p-4 overflow-x-auto">

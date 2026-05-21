@@ -87,6 +87,8 @@ export default function PassionPickOverlay({ options, onPick }: PassionPickOverl
       </AnimatePresence>
       {/* Sibling of the overlay inside the same portal, with a higher z-index
           so it always sits above the backdrop. */}
+      {/* Floating peek toggle — bespoke gradient/glow chrome over the portal layer. */}
+      {/* biome-ignore lint/correctness/noRestrictedElements: bespoke floating overlay toggle with portal/z-index chrome */}
       <button
         type="button"
         onClick={() => setHidden((h) => !h)}

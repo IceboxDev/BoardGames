@@ -1,5 +1,6 @@
 import type { MatchOutcomeCoop, Participant } from "@boardgames/core/history/types";
 import { useId } from "react";
+import { Chip } from "../../ui/Chip";
 import { Field } from "../../ui/Field";
 import { Input } from "../../ui/Input";
 import { ParticipantPicker } from "../ParticipantPicker";
@@ -28,28 +29,24 @@ export function CoopForm({ users, value, onChange }: Props) {
       </Field>
       <Field label="Outcome" htmlFor="coop-outcome">
         <div className="flex gap-2">
-          <button
-            type="button"
+          <Chip
+            pressed={value.outcome === "win"}
+            tone="emerald"
+            size="md"
+            block
             onClick={() => onChange({ ...value, outcome: "win" })}
-            className={`flex-1 rounded-md px-3 py-2 text-sm font-medium transition ${
-              value.outcome === "win"
-                ? "bg-emerald-500/20 text-emerald-200 ring-1 ring-emerald-400/40"
-                : "bg-surface-800 text-gray-400 hover:bg-surface-700"
-            }`}
           >
             Won together
-          </button>
-          <button
-            type="button"
+          </Chip>
+          <Chip
+            pressed={value.outcome === "loss"}
+            tone="rose"
+            size="md"
+            block
             onClick={() => onChange({ ...value, outcome: "loss" })}
-            className={`flex-1 rounded-md px-3 py-2 text-sm font-medium transition ${
-              value.outcome === "loss"
-                ? "bg-rose-500/20 text-rose-200 ring-1 ring-rose-400/40"
-                : "bg-surface-800 text-gray-400 hover:bg-surface-700"
-            }`}
           >
             Lost
-          </button>
+          </Chip>
         </div>
       </Field>
       <Field label="Difficulty" htmlFor={difficultyId} hint="Optional, free text">

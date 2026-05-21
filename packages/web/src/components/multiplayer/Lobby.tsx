@@ -2,6 +2,7 @@ import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
 import type { GameRoomConfig } from "@boardgames/core/protocol/room-config";
 import { SetupLayout } from "../setup";
 import { Button } from "../ui/Button";
+import { Chip } from "../ui/Chip";
 
 interface LobbyProps {
   roomCode: string;
@@ -111,13 +112,9 @@ export function Lobby({
           </Button>
         )}
 
-        <button
-          type="button"
-          onClick={onLeave}
-          className="text-xs text-gray-500 transition-colors hover:text-gray-300"
-        >
+        <Button variant="link" onClick={onLeave}>
           Leave Room
-        </button>
+        </Button>
       </div>
     </SetupLayout>
   );
@@ -201,24 +198,22 @@ function SlotRow({
 
       {/* Toggle AI/Open (host only, non-self slots) */}
       {canToggle && slot.kind !== "human" && (
-        <button
-          type="button"
+        <Chip
+          pressed={false}
+          tone="accent"
+          size="xs"
           onClick={onToggle}
-          className="shrink-0 rounded px-2 py-1 text-[10px] font-medium text-gray-400 transition-colors hover:bg-gray-700/50 hover:text-white"
+          className="shrink-0 uppercase"
         >
           {slot.kind === "ai" ? "Remove AI" : "Add AI"}
-        </button>
+        </Chip>
       )}
 
       {/* Kick (host only) */}
       {canKick && (
-        <button
-          type="button"
-          onClick={onKick}
-          className="shrink-0 rounded px-2 py-1 text-[10px] font-medium text-red-400 transition-colors hover:bg-red-500/10"
-        >
+        <Button variant="danger" size="xs" onClick={onKick} className="shrink-0 uppercase">
           Kick
-        </button>
+        </Button>
       )}
     </div>
   );

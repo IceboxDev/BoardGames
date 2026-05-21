@@ -1,13 +1,29 @@
-import { maxPlayersAsNumber } from "@boardgames/core/bgg";
 import { motion, type PanInfo } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { groupForPresentation, type PresentationUnit } from "../../games/families";
-import type { BggGame, GameDefinition } from "../../games/types";
+import type { GameDefinition } from "../../games/types";
+import { fitsLabel, fitsRange } from "../../lib/bgg-format";
 import type { ReactionAggregate } from "../../lib/calendar-games";
-import { CheckIcon, ChevronLeftIcon, ChevronRightIcon, FlameIcon } from "../icons";
-import { BggInline } from "./BggInline";
-import { stripBggHtml } from "./bgg-helpers";
-import FamilyCarouselCard, { VariantChipStrip } from "./FamilyCarouselCard";
+import {
+  ASPECT,
+  BestForHeadcountBadge,
+  CAROUSEL_TRANSITION,
+  CarouselBody,
+  CarouselCardChrome,
+  CarouselThumb,
+  COMPACT_THRESHOLD,
+  carouselAnimate,
+  FitsBadge,
+  MAX_CARD_W,
+  MIN_CARD_W,
+  REF_CARD_H,
+  REF_CARD_W,
+  VariantStrip,
+  VERTICAL_BREATHING,
+  YearBadge,
+} from "../game";
+import { ChevronLeftIcon, ChevronRightIcon } from "../icons";
+import FamilyCarouselCard from "./FamilyCarouselCard";
 import GameReactions from "./GameReactions";
 
 type Props = {
@@ -20,61 +36,14 @@ type Props = {
   date: string;
   reactions: Record<string, ReactionAggregate>;
   /**
-   * Fires when the user navigates past the rightmost card (right-arrow key,
-   * right chevron click, or swipe-left at the end). When provided, the
-   * carousel does not clamp at the last card — it hands off to the caller,
-   * which lets `RsvpModal` use this as the natural way to flip into the
-   * results view.
+   * Fires when the user navigates past the rightmost card (right-arrow
+   * key, right chevron click, or swipe-left at the end). When provided,
+   * the carousel does not clamp at the last card — it hands off to the
+   * caller, which lets `RsvpModal` use this as the natural way to flip
+   * into the results view.
    */
   onPastEnd?: () => void;
 };
-
-// Reference card dimensions — the design was tuned at 380×560. All scaled
-// constants below are derived as ratios of these so the visual relationships
-// (spread, depth, perspective) stay coherent at any card size.
-const REF_CARD_W = 380;
-const REF_CARD_H = 560;
-const ASPECT = REF_CARD_H / REF_CARD_W;
-
-// Bumped from 240 → 280 so the description's `line-clamp-7` always has room to
-// render 5–6 lines after the title + player-range + BggInline rows take their
-// share of `bodyH`. At cardW=240 the leftover body slot was only ~60–80px,
-// which truncated the description below its char budget; cardW=280 buys ~25%
-// more body height for ~17% more card width. Still legible on a 320–375px
-// phone — the 0.92 width factor in the cardW formula keeps phones comfortable.
-const MIN_CARD_W = 280;
-const MAX_CARD_W = 640; // sensible cap on 4K — bumped from 520 so the
-// description font has room to breathe at 14-15px on a 4K monitor
-
-// Vertical breathing room (total px subtracted from the height budget before
-// dividing by ASPECT). Without this, height-bound viewports (1366×768,
-// 1440×900, 13" laptops with browser chrome, etc.) produce cards that exactly
-// fill the masked wrapper — and the wrapper's `overflow-hidden` then clips
-// the amber "best at" shadow at the bottom AND lets the 20px vertical fade
-// ramp eat into the card's own top/bottom edges. The 4K case never hits this
-// because `MAX_CARD_W` caps `cardW` first; the laptop case currently fills
-// exactly and is barely affected. 32px (16 each side) is enough margin that
-// the fade ramp completely clears the card and the shadow has somewhere to
-// extend into, while staying small enough that the laptop anchor's visible
-// card size shifts by ~4% — imperceptible in practice.
-const VERTICAL_BREATHING = 32;
-
-// All four axes use the same tanh asymptote so cards bunch coherently. ROTATE
-// must stay under 90° or backface-hidden cards vanish. K controls softness
-// (higher = more linear); MAX caps the asymptote.
-const SPREAD_K = 2.5;
-const ROTATE_MAX = 65; // dimensionless angle
-const SCALE_MIN = 0.55; // dimensionless ratio
-const OPACITY_MIN = 0.45; // dimensionless ratio
-
-// Defensive floor — only triggers on extremely tight slots. With the 0.92
-// width factor a typical phone produces a ≥320px card, so description stays
-// visible. Drops description + weight bar below this width.
-const COMPACT_THRESHOLD = 230;
-
-function asymptote(offset: number, max: number): number {
-  return Math.sign(offset) * max * Math.tanh(Math.abs(offset) / SPREAD_K);
-}
 
 export default function GameCarousel3D({
   games,
@@ -84,14 +53,15 @@ export default function GameCarousel3D({
   reactions,
   onPastEnd,
 }: Props) {
-  // Project games into presentation units — families collapse to one card,
-  // singletons stay as-is. The carousel navigates over UNITS, not games.
+  // Project games into presentation units — families collapse to one
+  // card, singletons stay as-is. The carousel navigates over UNITS, not
+  // games.
   const units = useMemo<PresentationUnit[]>(() => groupForPresentation(games), [games]);
 
   const [center, setCenter] = useState(0);
   const atEnd = center >= units.length - 1;
-  // Per-family active member, persisted across center changes so the user's
-  // last variant pick survives swiping away and back.
+  // Per-family active member, persisted across center changes so the
+  // user's last variant pick survives swiping away and back.
   const [activeByFamily, setActiveByFamily] = useState<Map<string, string>>(() => new Map());
   const rootRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
@@ -154,17 +124,19 @@ export default function GameCarousel3D({
     });
   }
 
-  // Derive card dimensions from measured container size with clamps. On phones
-  // the card is width-bounded; on desktop the MAX cap or height/ASPECT bounds
-  // it (so the 0.92 factor only matters when width is the binding constraint —
-  // i.e. portrait phones — where we want the card as large as legibility allows
-  // and accept that the rotated side cards mostly clip behind overflow-hidden.
+  // Derive card dimensions from measured container size with clamps. On
+  // phones the card is width-bounded; on desktop the MAX cap or
+  // height/ASPECT bounds it (so the 0.92 factor only matters when width
+  // is the binding constraint — i.e. portrait phones — where we want the
+  // card as large as legibility allows and accept that the rotated side
+  // cards mostly clip behind overflow-hidden).
   //
-  // Height budget subtracts VERTICAL_BREATHING so the card never sits flush
-  // against the masked wrapper's hard-clip edges. Without it, intermediate
-  // height-bound viewports (1366×768, 1440×900, laptops with browser chrome
-  // taking a chunk of vertical space) crop the amber "best at" shadow at the
-  // bottom and pull the 20px fade ramp into the card's own top/bottom edges.
+  // Height budget subtracts VERTICAL_BREATHING so the card never sits
+  // flush against the masked wrapper's hard-clip edges. Without it,
+  // intermediate height-bound viewports (1366×768, 1440×900, laptops
+  // with browser chrome taking a chunk of vertical space) crop the amber
+  // "best at" shadow at the bottom and pull the 20px fade ramp into the
+  // card's own top/bottom edges.
   const measured = size.w > 0 && size.h > 0;
   const heightBudget = Math.max(0, size.h - VERTICAL_BREATHING);
   const cardW = measured
@@ -172,9 +144,11 @@ export default function GameCarousel3D({
     : REF_CARD_W;
   const cardH = cardW * ASPECT;
   const thumbH = cardH * (270 / REF_CARD_H);
+  const bodyH = cardH * (290 / REF_CARD_H);
   const compact = cardW < COMPACT_THRESHOLD;
 
-  // 3D constants scale with cardW so the spread/depth stay visually coherent.
+  // 3D constants scale with cardW so the spread/depth stay visually
+  // coherent.
   const spreadMax = cardW * (520 / REF_CARD_W);
   const zMax = cardW * (380 / REF_CARD_W);
   const perspective = cardW * (1600 / REF_CARD_W);
@@ -183,10 +157,7 @@ export default function GameCarousel3D({
     <div
       ref={rootRef}
       className="relative flex h-full w-full items-center justify-center"
-      style={{
-        perspective: `${perspective}px`,
-        opacity: measured ? 1 : 0,
-      }}
+      style={{ perspective: `${perspective}px`, opacity: measured ? 1 : 0 }}
     >
       <button
         type="button"
@@ -226,11 +197,7 @@ export default function GameCarousel3D({
       >
         <motion.div
           className="relative mx-auto"
-          style={{
-            width: cardW,
-            height: cardH,
-            transformStyle: "preserve-3d",
-          }}
+          style={{ width: cardW, height: cardH, transformStyle: "preserve-3d" }}
           drag="x"
           dragConstraints={{ left: 0, right: 0 }}
           dragElastic={0.15}
@@ -239,7 +206,7 @@ export default function GameCarousel3D({
           {units.map((unit, i) => {
             if (unit.kind === "single") {
               return (
-                <CarouselCard
+                <SingleCarouselCard
                   key={unit.game.slug}
                   game={unit.game}
                   offset={i - center}
@@ -250,6 +217,8 @@ export default function GameCarousel3D({
                   onClick={() => setCenter(i)}
                   cardW={cardW}
                   cardH={cardH}
+                  thumbHeight={thumbH}
+                  bodyHeight={bodyH}
                   spreadMax={spreadMax}
                   zMax={zMax}
                   compact={compact}
@@ -275,14 +244,11 @@ export default function GameCarousel3D({
                 onClick={() => setCenter(i)}
                 cardW={cardW}
                 cardH={cardH}
+                thumbHeight={thumbH}
+                bodyHeight={bodyH}
                 spreadMax={spreadMax}
                 zMax={zMax}
                 compact={compact}
-                asymptote={asymptote}
-                ROTATE_MAX={ROTATE_MAX}
-                SCALE_MIN={SCALE_MIN}
-                OPACITY_MIN={OPACITY_MIN}
-                REF_CARD_H={REF_CARD_H}
               />
             );
           })}
@@ -290,16 +256,16 @@ export default function GameCarousel3D({
       </div>
 
       {/* Lifted variant chip strips — one motion.div per family unit,
-          rendered OUTSIDE the masked wrapper above so chips render at full
-          opacity even when their card sits flush against the carousel
-          fade. Each shadow motion.div is a card-sized container at the
-          card's static position and animates with the *exact same*
+          rendered OUTSIDE the masked wrapper above so chips render at
+          full opacity even when their card sits flush against the
+          carousel fade. Each shadow motion.div is a card-sized container
+          at the card's static position and animates with the *exact same*
           transforms (x, z, rotateY, scale, opacity) and spring as its
           actual card, so the chips visually attach to the card during
           transitions instead of popping into existence at the static
-          center after the card finishes moving. Only the centered family's
-          chips are visible (others animate to opacity 0); chips are
-          interactive only when isCenter. */}
+          center after the card finishes moving. Only the centered
+          family's chips are visible (others animate to opacity 0); chips
+          are interactive only when isCenter. */}
       {measured &&
         units.map((unit, i) => {
           if (unit.kind !== "family") return null;
@@ -325,27 +291,26 @@ export default function GameCarousel3D({
                 marginTop: -cardH / 2,
                 transformStyle: "preserve-3d",
               }}
-              animate={{
-                x: asymptote(offset, spreadMax),
-                z: -Math.abs(asymptote(offset, zMax)),
-                rotateY: -asymptote(offset, ROTATE_MAX),
-                scale: Math.max(SCALE_MIN, 1 - Math.abs(asymptote(offset, 1 - SCALE_MIN))),
-                opacity: hidden ? 0 : isCenter ? 1 : 0,
-              }}
-              transition={{ type: "spring", stiffness: 220, damping: 28 }}
+              animate={carouselAnimate({
+                offset,
+                spreadMax,
+                zMax,
+                hidden,
+                forceHidden: !isCenter,
+              })}
+              transition={CAROUSEL_TRANSITION}
             >
               <div
                 className={`absolute ${isCenter ? "pointer-events-auto" : "pointer-events-none"}`}
                 style={{ top: thumbH / 2, left: -14 }}
               >
                 <div className="-translate-y-1/2">
-                  <VariantChipStrip
+                  <VariantStrip
                     members={unit.visibleMembers}
                     activeSlug={activeSlug}
                     interactive={isCenter}
                     onPick={(slug) => setActiveForFamily(unit.family.id, slug)}
-                    minPlayers={minPlayers}
-                    maxPlayers={maxPlayers}
+                    fitWindow={{ lo: minPlayers, hi: maxPlayers }}
                   />
                 </div>
               </div>
@@ -371,7 +336,9 @@ export default function GameCarousel3D({
   );
 }
 
-type CardProps = {
+// ── Single-game card ────────────────────────────────────────────────────
+
+type SingleCardProps = {
   game: GameDefinition;
   offset: number;
   minPlayers: number;
@@ -381,12 +348,14 @@ type CardProps = {
   onClick: () => void;
   cardW: number;
   cardH: number;
+  thumbHeight: number;
+  bodyHeight: number;
   spreadMax: number;
   zMax: number;
   compact: boolean;
 };
 
-function CarouselCard({
+function SingleCarouselCard({
   game,
   offset,
   minPlayers,
@@ -396,109 +365,53 @@ function CarouselCard({
   onClick,
   cardW,
   cardH,
+  thumbHeight,
+  bodyHeight,
   spreadMax,
   zMax,
   compact,
-}: CardProps) {
+}: SingleCardProps) {
   const absOff = Math.abs(offset);
   const hidden = absOff > 5;
   const isCenter = offset === 0;
   const fits = fitsRange(game, minPlayers, maxPlayers);
-  // BGG community-voted "best at N" matches the confirmed RSVP-yes count —
-  // the strongest game-fit signal we have. Triggers the amber/fire treatment.
+  // BGG community-voted "best at N" matches the confirmed RSVP-yes count
+  // — the strongest game-fit signal we have. Triggers the amber/fire
+  // treatment.
   const isBestForHeadcount =
     game.bgg.bestPlayerCount !== null && minPlayers > 0 && game.bgg.bestPlayerCount === minPlayers;
 
-  // Inner heights preserve the original 270:290 split inside a 560-tall card.
-  const thumbH = cardH * (270 / REF_CARD_H);
-  const bodyH = cardH * (290 / REF_CARD_H);
-
-  // Use motion.div with role="button" rather than motion.button — the card
-  // contains <GameReactions> which renders <button> elements, and HTML doesn't
-  // allow nested buttons (the browser auto-closes the outer button before the
-  // inner one, breaking the layout).
   return (
-    <motion.div
-      role="button"
+    <CarouselCardChrome
+      cardW={cardW}
+      cardH={cardH}
+      offset={offset}
+      hidden={hidden}
+      isCenter={isCenter}
+      accentHex={game.accentHex}
+      isBestForHeadcount={isBestForHeadcount}
+      ariaLabel={isCenter ? `${game.title}, current selection` : `Show ${game.title}`}
       onClick={onClick}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          onClick();
-        }
-      }}
-      tabIndex={hidden ? -1 : 0}
-      aria-hidden={hidden}
-      aria-label={isCenter ? `${game.title}, current selection` : `Show ${game.title}`}
-      className={`absolute left-1/2 top-1/2 origin-center cursor-pointer overflow-hidden rounded-2xl bg-surface-900 text-left transition-shadow focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${
-        isBestForHeadcount
-          ? "border-2 border-amber-400/80 shadow-2xl shadow-amber-500/40"
-          : "border border-white/10 shadow-2xl shadow-black/40"
-      }`}
-      style={
-        {
-          width: cardW,
-          height: cardH,
-          marginLeft: -cardW / 2,
-          marginTop: -cardH / 2,
-          backfaceVisibility: "hidden",
-          zIndex: 100 - absOff,
-          "--accent": game.accentHex,
-        } as React.CSSProperties
-      }
-      animate={{
-        x: asymptote(offset, spreadMax),
-        z: -Math.abs(asymptote(offset, zMax)),
-        rotateY: -asymptote(offset, ROTATE_MAX),
-        scale: Math.max(SCALE_MIN, 1 - Math.abs(asymptote(offset, 1 - SCALE_MIN))),
-        opacity: hidden
-          ? 0
-          : Math.max(OPACITY_MIN, 1 - Math.abs(asymptote(offset, 1 - OPACITY_MIN))),
-        pointerEvents: hidden ? "none" : "auto",
-      }}
-      transition={{ type: "spring", stiffness: 220, damping: 28 }}
+      spreadMax={spreadMax}
+      zMax={zMax}
     >
-      {/* Thumbnail */}
-      <div className="relative w-full overflow-hidden" style={{ height: thumbH }}>
-        <img
-          src={game.thumbnail}
-          alt=""
-          className="h-full w-full object-cover"
-          loading="lazy"
-          decoding="async"
-          fetchPriority={isCenter ? "high" : "low"}
-          draggable={false}
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-surface-900 via-surface-900/30 to-transparent" />
-        {isCenter && (
-          <span
-            aria-hidden="true"
-            className="absolute inset-0"
-            style={{ boxShadow: `inset 0 0 36px ${game.accentHex}55` }}
-          />
-        )}
-        {game.bgg.yearPublished && (
-          <span className="absolute right-2 top-2 rounded-full bg-black/55 px-2 py-0.5 text-[10px] font-semibold text-white/85 backdrop-blur-sm">
-            {game.bgg.yearPublished}
-          </span>
-        )}
-        {isBestForHeadcount ? (
-          <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-amber-500 to-orange-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.15em] text-white shadow-md shadow-amber-500/40 backdrop-blur-sm">
-            <FlameIcon className="h-3 w-3" />
-            Best at {minPlayers}
-          </span>
-        ) : (
-          fits &&
-          (minPlayers > 0 || maxPlayers > 0) && (
-            <span className="absolute left-2 top-2 inline-flex items-center gap-1 rounded-full bg-emerald-500/30 px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.15em] text-emerald-100 backdrop-blur-sm">
-              <CheckIcon className="h-3 w-3" />
-              Fits {fitsLabel(minPlayers, maxPlayers)}
-            </span>
-          )
-        )}
-
-        {date && (
-          <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2">
+      <CarouselThumb
+        src={game.thumbnail}
+        thumbHeight={thumbHeight}
+        accentHex={game.accentHex}
+        isCenter={isCenter}
+        badgeTopRight={
+          game.bgg.yearPublished ? <YearBadge year={game.bgg.yearPublished} /> : undefined
+        }
+        badgeTopLeft={
+          isBestForHeadcount ? (
+            <BestForHeadcountBadge count={minPlayers} />
+          ) : fits && (minPlayers > 0 || maxPlayers > 0) ? (
+            <FitsBadge label={fitsLabel(minPlayers, maxPlayers)} />
+          ) : undefined
+        }
+        overlay={
+          date ? (
             <GameReactions
               date={date}
               slug={game.slug}
@@ -508,79 +421,18 @@ function CarouselCard({
               disabled={!isCenter}
               hideCount
             />
-          </div>
-        )}
-      </div>
-
-      {/* Body */}
-      <div
-        className={`flex flex-col ${compact ? "gap-1.5 px-3 py-3" : "gap-2.5 px-5 py-4"}`}
-        style={{ height: bodyH }}
-      >
-        <span
-          className="block h-0.5 w-12 rounded-full"
-          style={{ backgroundColor: game.accentHex }}
-          aria-hidden="true"
-        />
-        <h3
-          className={`truncate font-bold leading-tight text-white ${compact ? "text-lg" : "text-xl"}`}
-        >
-          {game.title}
-        </h3>
-        <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400 sm:text-[11px] xl:text-xs">
-          <span className={isBestForHeadcount ? "text-amber-300" : undefined}>
-            {playerRange(game.bgg)}
-            {isBestForHeadcount && ` · best at ${minPlayers}`}
-          </span>
-          {" · "}
-          {playTime(game.bgg)}
-        </p>
-
-        <BggInline bgg={game.bgg} compact={compact} />
-
-        {!compact && game.descriptions.default && (
-          // Pinned layout: line-clamp-7 is the deterministic truncation
-          // boundary across every viewport. Font sizes still scale with
-          // breakpoint for readability on big screens, but `leading-snug` is
-          // pinned so line-height stays predictable, and `flex-1` /
-          // `overflow-hidden` are dropped — `line-clamp-7` handles both
-          // height-capping and overflow itself. The generated `default`
-          // variant is char-budgeted (~240 chars) to fit within 7 lines even
-          // at the smallest cardW + biggest text combination.
-          <p className="line-clamp-7 text-[10px] leading-snug text-gray-400 sm:text-[11px] xl:text-xs 3xl:text-sm">
-            {stripBggHtml(game.descriptions.default)}
-          </p>
-        )}
-      </div>
-    </motion.div>
+          ) : undefined
+        }
+      />
+      <CarouselBody
+        bodyHeight={bodyHeight}
+        accentHex={game.accentHex}
+        title={game.title}
+        bgg={game.bgg}
+        bestForHeadcount={isBestForHeadcount ? minPlayers : null}
+        description={game.descriptions.default}
+        compact={compact}
+      />
+    </CarouselCardChrome>
   );
-}
-
-function fitsRange(game: GameDefinition, lo: number, hi: number): boolean {
-  const min = game.bgg.minPlayers ?? 0;
-  const max = maxPlayersAsNumber(game.bgg.maxPlayers);
-  return min <= hi && max >= lo;
-}
-
-function fitsLabel(lo: number, hi: number): string {
-  if (lo === hi) return String(lo);
-  return `${lo}–${hi}`;
-}
-
-function playerRange(bgg: BggGame): string {
-  const min = bgg.minPlayers;
-  const max = bgg.maxPlayers;
-  if (min == null && max == null) return "— players";
-  if (min === max) return `${min} player${min === 1 ? "" : "s"}`;
-  const maxLabel = max === "infinity" ? "∞" : (max ?? "?");
-  return `${min ?? "?"}–${maxLabel} players`;
-}
-
-function playTime(bgg: BggGame): string {
-  const minT = bgg.minPlayTime;
-  const maxT = bgg.maxPlayTime;
-  if (minT && maxT && minT !== maxT) return `${minT}–${maxT} min`;
-  const t = bgg.playingTime ?? minT ?? maxT;
-  if (!t) return "— min";
-  return `${t} min`;
 }

@@ -8,6 +8,10 @@ import { Button } from "../../../components/ui/Button";
 import { SegmentedControl } from "../../../components/ui/SegmentedControl";
 import RoleCard from "./RoleCard";
 
+// The difficulty cards below are card-shaped clickable surfaces: a row
+// card with a number badge, label, star rating, and description. The
+// Shuffle text-button is migrated to <Button variant="link">.
+
 interface SetupScreenProps {
   onStart: (config: SetupConfig) => void;
 }
@@ -89,6 +93,7 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
               {DIFFICULTY_META.map((d) => {
                 const active = difficulty === d.value;
                 return (
+                  // biome-ignore lint/correctness/noRestrictedElements: card-shaped difficulty option (icon-badge + label + stars + description)
                   <button
                     type="button"
                     key={d.value}
@@ -158,13 +163,13 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
         <div className="w-[676px]">
           <div className="flex items-center justify-between mb-4">
             <SectionLabel>Assigned roles</SectionLabel>
-            <button
-              type="button"
+            <Button
+              variant="link"
               onClick={handleShuffle}
-              className="text-xs font-medium text-blue-400 hover:text-blue-300 transition-colors"
+              className="!text-blue-400 hover:!text-blue-300"
             >
               Shuffle
-            </button>
+            </Button>
           </div>
           <div className="flex justify-center gap-3">
             {previewRoles.map((roleId, i) => {

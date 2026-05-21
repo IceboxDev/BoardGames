@@ -6,6 +6,8 @@ import { ActionLog } from "../../../components/action-log";
 import { CardFan } from "../../../components/card-fan";
 import { GameScreen } from "../../../components/game-layout";
 import { AiThinkingIndicator } from "../../../components/ui";
+import { Button } from "../../../components/ui/Button";
+import { Chip } from "../../../components/ui/Chip";
 import { mapSushiGoLog } from "../log-mapper";
 import CardFace, { CardFaceHand } from "./CardFace";
 import NashMatrixModal from "./NashMatrixModal";
@@ -157,53 +159,51 @@ export default function GameBoard({
           <>
             {isGameOver && !roundEndEntry && onShowResults && (
               <div className="flex items-center justify-center">
-                <button
-                  type="button"
+                <Button
+                  variant="secondary"
+                  size="md"
                   onClick={onShowResults}
-                  className="rounded-lg border border-orange-500/50 bg-orange-500/15 px-8 py-2.5 text-sm font-semibold text-orange-300 transition-colors hover:bg-orange-500/25"
+                  className="!border-orange-500/50 !bg-orange-500/15 !text-orange-300 hover:!bg-orange-500/25 !px-8"
                 >
                   View Final Results
-                </button>
+                </Button>
               </div>
             )}
             {!isGameOver && canAct && readyToConfirm && (
               <div className="flex items-center justify-center gap-2">
                 {hasChopsticks && (
-                  <button
-                    type="button"
+                  <Chip
+                    pressed={useChopsticks}
+                    tone="emerald"
+                    variant="outlined"
+                    size="sm"
                     onClick={handleToggleChopsticks}
-                    className={`rounded-lg border px-4 py-1.5 text-xs font-medium transition-colors ${
-                      useChopsticks
-                        ? "border-green-500/50 bg-green-500/15 text-green-300"
-                        : "border-gray-600 bg-gray-700/60 text-gray-400 hover:bg-gray-600"
-                    }`}
                   >
                     🥢 Chopsticks{useChopsticks ? " (ON)" : ""}
-                  </button>
+                  </Chip>
                 )}
-                <button
-                  type="button"
+                <Button
+                  variant="secondary"
+                  size="xs"
                   onClick={handleConfirm}
-                  className="rounded-lg border border-orange-500/50 bg-orange-500/15 px-4 py-1.5 text-xs font-medium text-orange-300 transition-colors hover:bg-orange-500/25"
+                  className="!border-orange-500/50 !bg-orange-500/15 !text-orange-300 hover:!bg-orange-500/25"
                 >
                   Confirm
-                </button>
+                </Button>
               </div>
             )}
             {!isGameOver && canAct && !readyToConfirm && (
               <div className="flex items-center gap-2">
                 {hasChopsticks && (
-                  <button
-                    type="button"
+                  <Chip
+                    pressed={useChopsticks}
+                    tone="emerald"
+                    variant="outlined"
+                    size="sm"
                     onClick={handleToggleChopsticks}
-                    className={`rounded-lg border px-4 py-1.5 text-xs font-medium transition-colors ${
-                      useChopsticks
-                        ? "border-green-500/50 bg-green-500/15 text-green-300"
-                        : "border-gray-600 bg-gray-700/60 text-gray-400 hover:bg-gray-600"
-                    }`}
                   >
                     🥢 Chopsticks{useChopsticks ? " (ON)" : ""}
-                  </button>
+                  </Chip>
                 )}
                 <span className="text-xs font-semibold text-cyan-400">Your turn</span>
                 <span className="text-gray-500">&middot;</span>
@@ -248,13 +248,14 @@ export default function GameBoard({
           </div>
           <div className="flex items-center gap-3 text-xs text-gray-500">
             {hasNashAnalysis && (
-              <button
-                type="button"
+              <Button
+                variant="secondary"
+                size="xs"
                 onClick={() => setShowNashMatrix(true)}
-                className="rounded-md border border-purple-500/30 bg-purple-500/10 px-2 py-0.5 text-[11px] font-medium text-purple-400 transition-colors hover:border-purple-500/50 hover:bg-purple-500/20"
+                className="!border-purple-500/30 !bg-purple-500/10 !text-purple-400 hover:!border-purple-500/50 hover:!bg-purple-500/20"
               >
                 Nash Matrix
-              </button>
+              </Button>
             )}
             {isGameOver
               ? ""

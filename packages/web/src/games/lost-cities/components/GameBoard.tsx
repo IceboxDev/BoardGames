@@ -20,6 +20,7 @@ import { CardDeck } from "../../../components/CardDeck";
 import { GameScreen } from "../../../components/game-layout";
 import { type ExpeditionScoreEntry, ScoreGridPanel } from "../../../components/SidePanel";
 import { AiThinkingIndicator, WaitingIndicator } from "../../../components/ui";
+import { Button } from "../../../components/ui/Button";
 import { DEBUG_LAYOUT } from "../../../lib/debug";
 import cardBackUrl from "../assets/card-back.png";
 import BoardMiddleFit from "./BoardMiddleFit";
@@ -251,21 +252,18 @@ export default function GameBoard(props: GameBoardProps) {
         isPlayPhase && selectedCard ? (
           <div className="flex items-center justify-center gap-2">
             {canPlay && (
-              <button
-                type="button"
+              <Button
+                variant="secondary"
+                size="xs"
                 onClick={onPlayToExpedition}
-                className="rounded-lg border border-emerald-500/50 bg-emerald-500/15 px-4 py-1.5 text-xs font-medium text-emerald-300 transition hover:bg-emerald-500/25"
+                className="!border-emerald-500/50 !bg-emerald-500/15 !text-emerald-300 hover:!bg-emerald-500/25"
               >
                 Play to Expedition
-              </button>
+              </Button>
             )}
-            <button
-              type="button"
-              onClick={onDiscard}
-              className="rounded-lg border border-gray-600 bg-gray-700/60 px-4 py-1.5 text-xs font-medium text-white transition hover:bg-gray-600"
-            >
+            <Button variant="secondary" size="xs" onClick={onDiscard}>
               Discard
-            </button>
+            </Button>
           </div>
         ) : isHumanTurn && state.phase !== "game-over" ? (
           <div className="flex items-center gap-2">

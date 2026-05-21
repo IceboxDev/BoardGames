@@ -1,4 +1,5 @@
 import type { SkyTeamResult } from "@boardgames/core/games/sky-team/types";
+import { Button } from "../../../components/ui/Button";
 
 interface Props {
   result: SkyTeamResult;
@@ -111,21 +112,18 @@ export default function GameOverScreen({ result, onPlayAgain, onBackToMenu }: Pr
 
       <div className="flex gap-2">
         {onPlayAgain ? (
-          <button
-            type="button"
+          <Button
+            variant="primary"
+            size="md"
             onClick={onPlayAgain}
-            className="rounded bg-emerald-600 px-4 py-2 text-sm font-bold text-white shadow hover:bg-emerald-500"
+            className="!bg-emerald-600 hover:!bg-emerald-500 !shadow-emerald-500/20"
           >
             Play again
-          </button>
+          </Button>
         ) : null}
-        <button
-          type="button"
-          onClick={onBackToMenu}
-          className="rounded bg-slate-700 px-4 py-2 text-sm font-bold text-white shadow hover:bg-slate-600"
-        >
+        <Button variant="secondary" size="md" onClick={onBackToMenu}>
           Back to menu
-        </button>
+        </Button>
       </div>
     </div>
   );

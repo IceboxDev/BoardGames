@@ -20,6 +20,7 @@ import { CardDeck } from "../../../components/CardDeck";
 import { GameScreen } from "../../../components/game-layout";
 import { type PlayerEntry, PlayerListPanel } from "../../../components/SidePanel";
 import { AiThinkingIndicator } from "../../../components/ui";
+import { Button } from "../../../components/ui/Button";
 import { DEBUG_LAYOUT } from "../../../lib/debug";
 import { getCardImageUrl, getCardSkin } from "../assets/card-art";
 import cardBackUrl from "../assets/card-back.png";
@@ -159,19 +160,21 @@ export default function GameBoard({
         ) : isActionPhaseForHuman ? (
           <div className="flex items-center justify-center gap-2">
             {singleSelected && (
-              <button
-                type="button"
+              <Button
+                variant="secondary"
+                size="xs"
                 onClick={handlePlaySingle}
-                className="rounded-lg border border-emerald-500/50 bg-emerald-500/15 px-4 py-1.5 text-xs font-medium text-emerald-300 transition hover:bg-emerald-500/25"
+                className="!border-emerald-500/50 !bg-emerald-500/15 !text-emerald-300 hover:!bg-emerald-500/25"
               >
                 Play Card
-              </button>
+              </Button>
             )}
             {selectedCombo && (
-              <button
-                type="button"
+              <Button
+                variant="secondary"
+                size="xs"
                 onClick={handlePlayCombo}
-                className="rounded-lg border border-purple-500/50 bg-purple-500/15 px-4 py-1.5 text-xs font-medium text-purple-300 transition hover:bg-purple-500/25"
+                className="!border-purple-500/50 !bg-purple-500/15 !text-purple-300 hover:!bg-purple-500/25"
               >
                 Play{" "}
                 {selectedCombo.comboType === "pair"
@@ -180,16 +183,12 @@ export default function GameBoard({
                     ? "Triple"
                     : "5-Different"}{" "}
                 Combo
-              </button>
+              </Button>
             )}
             {canDraw && (
-              <button
-                type="button"
-                onClick={handleDraw}
-                className="rounded-lg border border-gray-600 bg-gray-700/60 px-4 py-1.5 text-xs font-medium text-white transition hover:bg-gray-600"
-              >
+              <Button variant="secondary" size="xs" onClick={handleDraw}>
                 Draw Card
-              </button>
+              </Button>
             )}
           </div>
         ) : (

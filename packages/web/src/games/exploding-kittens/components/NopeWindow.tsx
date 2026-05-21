@@ -1,6 +1,7 @@
 import { getLegalActions } from "@boardgames/core/games/exploding-kittens/rules";
 import type { Action, CardType, GameState } from "@boardgames/core/games/exploding-kittens/types";
 import { CARD_LABELS } from "@boardgames/core/games/exploding-kittens/types";
+import { Button } from "../../../components/ui/Button";
 import { getCardImageUrl, getSkinsForType } from "../assets/card-art";
 
 interface NopeWindowProps {
@@ -85,21 +86,13 @@ export default function NopeWindow({ state, onAction }: NopeWindowProps) {
 
       <div className="flex justify-center gap-3">
         {canNope && nopeAction && (
-          <button
-            type="button"
-            onClick={() => onAction(nopeAction)}
-            className="rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white transition hover:bg-red-500"
-          >
+          <Button variant="danger" size="md" onClick={() => onAction(nopeAction)}>
             Play Nope!
-          </button>
+          </Button>
         )}
-        <button
-          type="button"
-          onClick={() => onAction({ type: "pass-nope" })}
-          className="rounded-lg bg-gray-700 px-4 py-2 text-sm font-medium text-white transition hover:bg-gray-600"
-        >
+        <Button variant="secondary" size="md" onClick={() => onAction({ type: "pass-nope" })}>
           Pass
-        </button>
+        </Button>
       </div>
     </div>
   );

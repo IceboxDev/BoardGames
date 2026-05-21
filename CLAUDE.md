@@ -129,6 +129,10 @@ When `fan` is omitted, children go directly into the content wrapper (no board/f
 - `fan` is ONLY the card hand component. Controls (buttons, status) go in `fanActions`.
 - For canvas games (Pandemic), pass `noPadding` to skip padding and flex-col.
 
+### Intricate-board rendering standard
+
+Games with non-card-style spatial layouts (maps, instrument panels, hex grids, dungeons) use **declarative SVG + React + framer-motion** via the primitives in `packages/web/src/components/board/` (`BoardSurface`, `BoardLayer`, `BoardSlot`, `BoardArc`, `BoardOverlay`). Sky Team is the reference port — see `packages/web/src/games/sky-team/components/board/`. Pandemic's Canvas 2D engine in `packages/web/src/games/pandemic/rendering/` and `packages/web/src/engine/` is frozen — no new games adopt it. Full decision record and escape-hatch criterion: [`docs/intricate-board-rendering.md`](docs/intricate-board-rendering.md). Card-style games keep using plain React DOM.
+
 ### Adding a new game
 
 1. Create `packages/web/src/games/<slug>/index.ts` exporting a `GameDefinition`

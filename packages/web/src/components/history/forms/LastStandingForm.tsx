@@ -1,4 +1,5 @@
 import type { MatchOutcomeLastStanding, Participant } from "@boardgames/core/history/types";
+import { Button } from "../../ui/Button";
 import { Field } from "../../ui/Field";
 import { ParticipantPicker } from "../ParticipantPicker";
 
@@ -74,13 +75,9 @@ export function LastStandingForm({ users, value, onChange }: Props) {
                     Surviving
                   </span>
                 )}
-                <button
-                  type="button"
-                  onClick={() => toggleEliminated(p.userId)}
-                  className="rounded-md bg-surface-800 px-2 py-1 text-xs text-gray-300 hover:bg-surface-700"
-                >
+                <Button variant="secondary" size="xs" onClick={() => toggleEliminated(p.userId)}>
                   {eliminated ? "Revive" : "Eliminate"}
-                </button>
+                </Button>
               </div>
             );
           })}

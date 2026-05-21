@@ -6,6 +6,7 @@ import type {
   SetupConfig,
 } from "@boardgames/core/games/pandemic/types";
 import { useCallback, useEffect, useState } from "react";
+import { Chip } from "../../components/ui/Chip";
 import { useGameShell } from "../../hooks/useGameShell";
 import GameCanvas from "./components/GameCanvas";
 import GameOverScreen from "./components/GameOverScreen";
@@ -24,18 +25,18 @@ export default function Pandemic() {
           </div>
           <div className="flex gap-2">
             {([4, 5, 6] as const).map((d) => (
-              <button
+              <Chip
                 key={d}
-                type="button"
+                pressed={mpDifficulty === d}
+                tone="emerald"
+                variant="outlined"
+                size="md"
+                block
                 onClick={() => setMpDifficulty(d)}
-                className={`flex-1 rounded-lg border px-3 py-2 text-sm font-medium transition-colors ${
-                  mpDifficulty === d
-                    ? "border-emerald-500/50 bg-emerald-500/10 text-emerald-400"
-                    : "border-gray-700/60 bg-gray-800/30 text-gray-400 hover:border-gray-600"
-                }`}
+                className="flex-1"
               >
                 {d === 4 ? "Intro" : d === 5 ? "Standard" : "Heroic"}
-              </button>
+              </Chip>
             ))}
           </div>
         </div>

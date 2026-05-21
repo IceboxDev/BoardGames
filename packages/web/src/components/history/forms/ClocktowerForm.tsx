@@ -9,6 +9,7 @@ import {
   fabledByGroup,
   findClocktowerCharacter,
 } from "../../../games/blood-on-the-clocktower/characters";
+import { Chip } from "../../ui/Chip";
 import { ParticipantPicker } from "../ParticipantPicker";
 
 type User = { id: string; name: string };
@@ -264,23 +265,18 @@ function EditionPicker({
     <div>
       <Label>Edition</Label>
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
-        {CLOCKTOWER_EDITIONS.map((opt) => {
-          const active = edition === opt.id;
-          return (
-            <button
-              key={opt.id}
-              type="button"
-              onClick={() => onChange(opt.id)}
-              className={`rounded-md px-2 py-1.5 text-xs font-medium transition ${
-                active
-                  ? "bg-accent-500/20 text-accent-100 ring-1 ring-accent-400/40"
-                  : "bg-surface-800 text-gray-400 hover:bg-surface-700"
-              }`}
-            >
-              {opt.label}
-            </button>
-          );
-        })}
+        {CLOCKTOWER_EDITIONS.map((opt) => (
+          <Chip
+            key={opt.id}
+            pressed={edition === opt.id}
+            tone="accent"
+            size="sm"
+            block
+            onClick={() => onChange(opt.id)}
+          >
+            {opt.label}
+          </Chip>
+        ))}
       </div>
     </div>
   );
@@ -353,22 +349,17 @@ function WinnerButton({
   onClick: () => void;
   children: React.ReactNode;
 }) {
-  const palette =
-    tone === "good"
-      ? active
-        ? "bg-emerald-500/20 text-emerald-100 ring-1 ring-emerald-400/40"
-        : "bg-surface-800 text-gray-400 hover:bg-surface-700"
-      : active
-        ? "bg-rose-500/20 text-rose-100 ring-1 ring-rose-400/40"
-        : "bg-surface-800 text-gray-400 hover:bg-surface-700";
   return (
-    <button
-      type="button"
+    <Chip
+      pressed={active}
+      tone={tone === "good" ? "emerald" : "rose"}
+      size="md"
+      block
       onClick={onClick}
-      className={`flex-1 rounded-md px-3 py-2 text-sm font-medium transition ${palette}`}
+      className="flex-1"
     >
       {children}
-    </button>
+    </Chip>
   );
 }
 

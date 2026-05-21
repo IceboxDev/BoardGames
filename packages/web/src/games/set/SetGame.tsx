@@ -2,6 +2,7 @@ import type { PvpGameEvent, SetPvpPlayerView } from "@boardgames/core/games/set/
 import type { PvpGameResult } from "@boardgames/core/games/set/pvp-types";
 import { useCallback, useEffect, useState } from "react";
 import { MatchHistory } from "../../components/match-history";
+import { Button } from "../../components/ui/Button";
 import { useGameShell } from "../../hooks/useGameShell";
 import HighScores from "./components/HighScores";
 import PvpGameBoard from "./components/PvpGameBoard";
@@ -44,38 +45,36 @@ export default function SetGame() {
       <div className="mx-auto max-w-4xl px-6 py-8">
         <div className="mb-6 flex items-center justify-between">
           <h2 className="text-2xl font-bold text-white">Match History</h2>
-          <button
-            type="button"
-            onClick={onBack}
-            className="rounded-lg bg-gray-700 px-4 py-2 text-sm text-white transition hover:bg-gray-600"
-          >
+          <Button variant="secondary" size="md" onClick={onBack}>
             Back
-          </button>
+          </Button>
         </div>
 
         <div className="mb-6 flex gap-1 border-b border-gray-800 pb-px">
-          <button
-            type="button"
+          <Button
+            variant="ghost"
+            size="md"
             onClick={() => setHistoryTab("trainer")}
-            className={`px-4 py-2 text-sm font-medium border-b-2 transition ${
+            className={`!rounded-none border-b-2 ${
               historyTab === "trainer"
-                ? "border-indigo-500 text-white"
-                : "border-transparent text-gray-500 hover:text-gray-300"
+                ? "!border-indigo-500 !text-white"
+                : "!border-transparent !text-gray-500 hover:!text-gray-300"
             }`}
           >
             Trainer
-          </button>
-          <button
-            type="button"
+          </Button>
+          <Button
+            variant="ghost"
+            size="md"
             onClick={() => setHistoryTab("pvp")}
-            className={`px-4 py-2 text-sm font-medium border-b-2 transition ${
+            className={`!rounded-none border-b-2 ${
               historyTab === "pvp"
-                ? "border-indigo-500 text-white"
-                : "border-transparent text-gray-500 hover:text-gray-300"
+                ? "!border-indigo-500 !text-white"
+                : "!border-transparent !text-gray-500 hover:!text-gray-300"
             }`}
           >
             PvP
-          </button>
+          </Button>
         </div>
 
         {historyTab === "trainer" ? (

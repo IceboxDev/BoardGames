@@ -1,5 +1,6 @@
 import { lazy, type ReactNode, Suspense, useState } from "react";
 import { SetupHeader, SetupLayout } from "../setup";
+import { Button } from "../ui/Button";
 
 const RulesViewer = lazy(() =>
   import("../rules/RulesViewer").then((m) => ({ default: m.RulesViewer })),
@@ -106,16 +107,18 @@ export function ModeSelect({
 
       {/* Rules button — integrated below subtitle */}
       {rulesUrl && (
-        <button
-          type="button"
+        <Button
+          variant="secondary"
+          size="xs"
+          shape="pill"
           onClick={() => setShowRules(true)}
-          className="animate-card-fade-up -mt-6 mb-8 inline-flex items-center gap-1.5 rounded-full border border-gray-700/40 bg-gray-800/30 px-4 py-1.5 text-xs font-medium text-gray-400 transition-all duration-200 hover:border-amber-500/40 hover:bg-amber-500/5 hover:text-amber-400"
+          className="animate-card-fade-up -mt-6 mb-8 border-gray-700/40 bg-gray-800/30 text-gray-400 hover:border-amber-500/40 hover:bg-amber-500/5 hover:text-amber-400"
         >
           <svg viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" aria-hidden="true">
             <path d="M10.75 16.82A7.462 7.462 0 0115 15.5c.71 0 1.396.098 2.046.282A.75.75 0 0018 15.06V3.56a.75.75 0 00-.546-.722A9.006 9.006 0 0015 2.5a9.006 9.006 0 00-4.25 1.065v13.255zM9.25 4.565A9.006 9.006 0 005 2.5a9.006 9.006 0 00-2.454.338A.75.75 0 002 3.56v11.5a.75.75 0 00.954.722A7.462 7.462 0 015 15.5a7.462 7.462 0 014.25 1.32V4.565z" />
           </svg>
           How to Play
-        </button>
+        </Button>
       )}
 
       {/* Primary actions — generous spacing */}
@@ -123,6 +126,10 @@ export function ModeSelect({
         className={`mx-auto grid w-full max-w-xl grid-cols-1 gap-5 ${onSolo ? "sm:grid-cols-2" : "max-w-xs"}`}
       >
         {onSolo && (
+          // Mode-card clickable surface — icon-over-title-over-description
+          // layout; the entire card is the click target. Exempt as a
+          // card-shaped clickable surface (see biome.json comment).
+          // biome-ignore lint/correctness/noRestrictedElements: card-shaped mode-select clickable surface
           <button
             type="button"
             onClick={onSolo}
@@ -144,6 +151,7 @@ export function ModeSelect({
           </button>
         )}
 
+        {/* biome-ignore lint/correctness/noRestrictedElements: card-shaped mode-select clickable surface */}
         <button
           type="button"
           onClick={onMultiplayer}
@@ -176,6 +184,7 @@ export function ModeSelect({
             className={`grid w-full grid-cols-1 gap-3 ${onMatchHistory && onTournament ? "sm:grid-cols-2" : ""}`}
           >
             {onMatchHistory && (
+              // biome-ignore lint/correctness/noRestrictedElements: card-shaped row clickable surface
               <button
                 type="button"
                 onClick={onMatchHistory}
@@ -218,6 +227,7 @@ export function ModeSelect({
             )}
 
             {onTournament && (
+              // biome-ignore lint/correctness/noRestrictedElements: card-shaped row clickable surface
               <button
                 type="button"
                 onClick={onTournament}

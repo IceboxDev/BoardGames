@@ -1,6 +1,7 @@
 import { TournamentStreamEventSchema } from "@boardgames/core/protocol";
 import type { ReactNode } from "react";
 import { useCallback, useRef, useState } from "react";
+import { Button } from "../components/ui/Button";
 import { apiClient } from "./api-client";
 
 export interface StrategyInfo {
@@ -138,13 +139,9 @@ export function TournamentGridShell<TResult>({
   return (
     <div className="p-4 max-w-6xl mx-auto">
       <div className="flex items-center gap-3 mb-4">
-        <button
-          type="button"
-          onClick={onBack}
-          className="px-3 py-1 text-sm bg-gray-700 hover:bg-gray-600 rounded text-white"
-        >
+        <Button variant="secondary" size="sm" onClick={onBack}>
           ← Back
-        </button>
+        </Button>
         <h2 className="text-xl font-bold text-white">Tournament Grid</h2>
       </div>
 
@@ -157,7 +154,7 @@ export function TournamentGridShell<TResult>({
             type="number"
             value={numGames}
             onChange={(e) => onNumGamesChange?.(Number(e.target.value))}
-            className="ml-2 w-20 px-2 py-1 bg-gray-800 text-white rounded border border-gray-600"
+            className="ml-2 w-20 px-2 py-1 bg-surface-800 text-white rounded border border-white/10"
             min={1}
             max={10000}
             disabled={runState !== "idle"}
@@ -166,30 +163,17 @@ export function TournamentGridShell<TResult>({
 
         {runState === "idle" ? (
           <>
-            <button
-              type="button"
-              onClick={runAll}
-              className="px-3 py-1 text-sm bg-blue-600 hover:bg-blue-500 rounded text-white"
-            >
+            <Button variant="primary" size="sm" onClick={runAll}>
               Run All
-            </button>
-            <button
-              type="button"
-              onClick={onClear}
-              className="px-3 py-1 text-sm bg-red-700 hover:bg-red-600 rounded text-white"
-            >
+            </Button>
+            <Button variant="danger" size="sm" onClick={onClear}>
               Clear
-            </button>
+            </Button>
           </>
         ) : (
-          <button
-            type="button"
-            onClick={stop}
-            disabled={runState === "stopping"}
-            className="px-3 py-1 text-sm bg-yellow-600 hover:bg-yellow-500 rounded text-white disabled:opacity-50"
-          >
+          <Button variant="warning" size="sm" onClick={stop} disabled={runState === "stopping"}>
             {runState === "stopping" ? "Stopping…" : "Stop"}
-          </button>
+          </Button>
         )}
       </div>
 
@@ -233,17 +217,19 @@ export function TournamentGridShell<TResult>({
                       <div className="min-w-[120px]">
                         {renderCell(a.id, b.id, results.get(`${a.id}--${b.id}`))}
                         {!results.has(`${a.id}--${b.id}`) && runState === "idle" && (
-                          <button
-                            type="button"
+                          <Button
+                            variant="secondary"
+                            size="xs"
+                            block
                             onClick={() => {
                               stoppedRef.current = false;
                               setRunState("running");
                               runPair(a.id, b.id).then(() => setRunState("idle"));
                             }}
-                            className="mt-1 w-full text-xs px-2 py-1 bg-gray-700 hover:bg-gray-600 rounded text-gray-300"
+                            className="mt-1"
                           >
                             Run
-                          </button>
+                          </Button>
                         )}
                       </div>
                     )}

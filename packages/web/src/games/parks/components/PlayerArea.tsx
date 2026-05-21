@@ -73,6 +73,8 @@ function MiniParkBadge({
   const title = `${reserved ? "Reserved · " : ""}${park.name} (${park.pt} PT)${interactive ? " — click to buy" : ""}`;
   if (interactive) {
     return (
+      // Park-pill clickable surface \u2014 bespoke game-piece chrome
+      // biome-ignore lint/correctness/noRestrictedElements: game-piece (park pill) clickable surface
       <button type="button" onClick={onClick} className={className} title={title}>
         <span className="mr-0.5 text-amber-400">{"\uD83D\uDD16"}</span>
         {park.name} <span className="text-yellow-300">{park.pt}</span>
@@ -106,6 +108,7 @@ function GearChip({
       ? "cursor-pointer border-amber-400 bg-amber-700/40 text-amber-50 ring-1 ring-emerald-400/40 hover:bg-amber-600/50"
       : "border-stone-700 bg-stone-900/60 text-stone-300";
   return (
+    // biome-ignore lint/correctness/noRestrictedElements: game-piece (gear chip) clickable surface
     <button
       type="button"
       onClick={activatable ? onClick : undefined}
@@ -154,6 +157,7 @@ function CanteenSlot({
           ? "border-violet-500/60 bg-violet-900/60 text-violet-100"
           : "border-stone-700 bg-stone-900/40 text-stone-400";
   return (
+    // biome-ignore lint/correctness/noRestrictedElements: game-piece (canteen slot) clickable surface
     <button
       type="button"
       onClick={selectable ? onClick : undefined}

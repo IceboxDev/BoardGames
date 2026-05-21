@@ -1,13 +1,14 @@
-import { maxPlayersAsNumber } from "@boardgames/core/bgg";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { games as gameRegistry } from "../../games/registry";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
+import { coversWindow } from "../../lib/bgg-format";
 import { fetchAvailableGames } from "../../lib/calendar-games";
 import { type CalendarLocks, togglePicksLock } from "../../lib/calendar-locks";
 import { kickRsvp, type RsvpStatus, setRsvp } from "../../lib/calendar-rsvps";
 import { qk } from "../../lib/query-keys";
 import { ClockIcon, HostIcon, PadlockIcon, PinIcon } from "../icons";
+import { IconButton } from "../ui/IconButton";
 import { Modal } from "../ui/Modal";
 import { SegmentedControl, type SegmentedOption } from "../ui/SegmentedControl";
 import AttendeesView from "./AttendeesView";
@@ -117,18 +118,11 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
     const lo = data.definiteCount;
     const hi = data.definiteCount + data.tentativeCount;
     // Only suggest games that fit *every* headcount in the [definite,
-    // definite+tentative] window — i.e. game.minPlayers ≤ definite AND
-    // game.maxPlayers ≥ definite+tentative. A game that caps at
-    // `definite` is no use if a maybe shows up; one that needs more than
-    // `definite+tentative` can't be played at all. Previously this used
-    // overlap (min ≤ hi && max ≥ lo), which let games like Azul (max 4)
-    // through on a 4-going / 3-maybe night.
-    const filtered = gameRegistry.filter((g) => {
-      if (!ownedSet.has(g.slug)) return false;
-      const min = g.bgg.minPlayers ?? 0;
-      const max = maxPlayersAsNumber(g.bgg.maxPlayers);
-      return min <= lo && max >= hi;
-    });
+    // definite+tentative] window — see `coversWindow` doc. A max-4 game
+    // on a 4-going/3-maybe night would lock out the maybes if it became
+    // the pick, so it's filtered out here even though `fitsRange` would
+    // have allowed it (carousel cards use the looser overlap test).
+    const filtered = gameRegistry.filter((g) => ownedSet.has(g.slug) && coversWindow(g, lo, hi));
     // Sort precedence:
     //   1. "Best at N" cohort (BGG poll matches the confirmed headcount) wins.
     //   2. Within each cohort, higher averageRating wins.
@@ -173,24 +167,20 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   const busy = setRsvpMutation.isPending;
 
   const picksLockToggle = canTogglePicksLock ? (
-    <button
-      type="button"
-      onClick={() => togglePicksLockMutation.mutate({ on: !picksLocked })}
-      disabled={togglePicksLockMutation.isPending}
+    <IconButton
+      variant={picksLocked ? "warning" : "ghost"}
+      size="sm"
+      pressed={picksLocked}
       aria-label={picksLocked ? "Unlock guest list" : "Lock guest list"}
       title={
         picksLocked
           ? "Guest list is sealed — click to unlock"
           : "Lock the guest list — no more last-second RSVPs"
       }
-      className={`rounded-md p-1.5 transition disabled:opacity-50 ${
-        picksLocked
-          ? "bg-amber-400/15 text-amber-200 hover:bg-amber-400/25"
-          : "text-gray-400 hover:bg-white/5 hover:text-white"
-      }`}
-    >
-      <PadlockIcon closed={picksLocked} />
-    </button>
+      disabled={togglePicksLockMutation.isPending}
+      onClick={() => togglePicksLockMutation.mutate({ on: !picksLocked })}
+      icon={<PadlockIcon closed={picksLocked} />}
+    />
   ) : null;
 
   // Collapse what used to be its own "X going · Y maybe" row into the

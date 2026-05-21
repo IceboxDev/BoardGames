@@ -1,10 +1,12 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import InventoryGrid from "../components/InventoryGrid";
-import { XIcon } from "../components/icons";
+import { TrashIcon, XIcon } from "../components/icons";
 import Calendar from "../components/offline/Calendar";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
+import { Chip } from "../components/ui/Chip";
+import { IconButton } from "../components/ui/IconButton";
 import { PageMain, PageShell } from "../components/ui/PageShell";
 import { games } from "../games/registry";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
@@ -196,17 +198,16 @@ export default function AdminPage() {
             paragraph's horizontal span on phone. */}
         <div className="mb-8 grid grid-cols-[1fr_auto] items-start gap-x-4 gap-y-2 sm:gap-x-6">
           <h1 className="text-2xl font-bold tracking-tight text-white">Users</h1>
-          <button
-            type="button"
+          <Chip
+            pressed={deleteMode}
+            tone="rose"
+            variant="outlined"
+            size="sm"
             onClick={toggleDeleteMode}
-            className={`justify-self-end rounded-md border px-3 py-1.5 text-xs font-medium transition ${
-              deleteMode
-                ? "border-rose-500/60 bg-rose-500/20 text-rose-200 hover:bg-rose-500/30"
-                : "border-rose-500/30 bg-transparent text-rose-300 hover:bg-rose-500/10"
-            }`}
+            className="justify-self-end"
           >
             {deleteMode ? "Exit delete mode" : "Delete mode"}
-          </button>
+          </Chip>
           {deleteMode ? (
             <p className="col-span-2 text-sm text-rose-300">
               <span className="font-semibold">Delete mode is on.</span> Click{" "}
@@ -347,14 +348,13 @@ function AvailabilityDrawer({ user, onClose }: AvailabilityDrawerProps) {
           </h2>
           <p className="mt-0.5 truncate text-xs text-gray-500">{user.email}</p>
         </div>
-        <button
-          type="button"
-          onClick={onClose}
-          className="shrink-0 rounded-md p-1.5 text-gray-400 transition hover:bg-white/5 hover:text-white"
+        <IconButton
+          variant="ghost"
+          size="sm"
           aria-label="Close"
-        >
-          <XIcon />
-        </button>
+          onClick={onClose}
+          icon={<XIcon />}
+        />
       </header>
 
       <div className="flex min-h-0 flex-1 flex-col gap-3 px-4 py-4 sm:px-5">
@@ -457,26 +457,14 @@ function UserRow({
           </span>
         </td>
         <td className="px-5 py-3 text-center">
-          <button
-            type="button"
-            onClick={onOpenCalendar}
-            className="rounded-md bg-white/5 px-2.5 py-1 text-xs text-gray-300 transition hover:bg-white/10"
-          >
+          <Button variant="secondary" size="xs" onClick={onOpenCalendar}>
             View
-          </button>
+          </Button>
         </td>
         <td className="px-5 py-3 text-center">
-          <button
-            type="button"
-            onClick={onToggleInventory}
-            className={`rounded-md px-2.5 py-1 text-xs transition ${
-              expanded
-                ? "bg-accent-500/20 text-accent-200"
-                : "bg-white/5 text-gray-300 hover:bg-white/10"
-            }`}
-          >
+          <Chip pressed={expanded} tone="accent" size="xs" onClick={onToggleInventory}>
             {expanded ? "Close" : "Manage"}
-          </button>
+          </Chip>
         </td>
         <td className="px-5 py-3 text-center">
           <div className="flex h-6 items-center justify-center">
@@ -493,15 +481,16 @@ function UserRow({
                   Confirm below…
                 </span>
               ) : (
-                <button
-                  type="button"
-                  onClick={onStartDelete}
-                  className="inline-flex h-6 items-center rounded-md bg-rose-500/20 px-2.5 text-xs font-medium text-rose-200 transition hover:bg-rose-500/30"
-                >
+                <Chip pressed tone="rose" size="xs" ring={false} onClick={onStartDelete}>
                   Delete
-                </button>
+                </Chip>
               )
             ) : (
+              // The "online" toggle is a custom track-and-thumb switch
+              // (~iOS-style). The track + thumb are intentionally not a
+              // text/icon button — exempted from the noRestrictedElements
+              // rule by file-level override in biome.json.
+              // biome-ignore lint/correctness/noRestrictedElements: track+thumb toggle widget, not a labeled button
               <button
                 type="button"
                 onClick={onToggleOnline}
@@ -560,14 +549,15 @@ function UserRow({
                   <Button variant="ghost" size="sm" onClick={onCancelDelete} disabled={deleting}>
                     Cancel
                   </Button>
-                  <button
-                    type="button"
+                  <Button
+                    variant="danger"
+                    size="sm"
                     onClick={onCommitDelete}
                     disabled={!confirmReady || deleting}
-                    className="rounded-md bg-rose-500 px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-rose-400 disabled:cursor-not-allowed disabled:bg-rose-500/30 disabled:text-rose-200"
+                    loading={deleting}
                   >
-                    {deleting ? "Deleting…" : "Delete user"}
-                  </button>
+                    Delete user
+                  </Button>
                 </div>
               </div>
             </div>
@@ -722,18 +712,16 @@ function PreRegisterCard() {
                 : `${queued} ${queued === 1 ? "game" : "games"} queued — assigned to the next user who registers.`}
           </p>
         </div>
-        <button
-          type="button"
-          onClick={() => setExpanded((v) => !v)}
+        <Chip
+          pressed={expanded}
+          tone="accent"
+          size="xs"
           disabled={loading}
-          className={`shrink-0 rounded-md px-2.5 py-1 text-xs transition ${
-            expanded
-              ? "bg-accent-500/20 text-accent-200"
-              : "bg-white/5 text-gray-300 hover:bg-white/10"
-          } ${loading ? "opacity-50" : ""}`}
+          onClick={() => setExpanded((v) => !v)}
+          className="shrink-0"
         >
           {expanded ? "Close" : "Manage"}
-        </button>
+        </Chip>
       </div>
       {expanded && !loading && draft !== null && (
         <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
@@ -854,17 +842,15 @@ function GuestPlayersCard({ guests, onChanged }: { guests: AdminUser[]; onChange
               : `${guests.length} guest${guests.length === 1 ? "" : "s"} — pickable in match history.`}
           </p>
         </div>
-        <button
-          type="button"
+        <Chip
+          pressed={expanded}
+          tone="amber"
+          size="xs"
           onClick={() => setExpanded((v) => !v)}
-          className={`shrink-0 rounded-md px-2.5 py-1 text-xs transition ${
-            expanded
-              ? "bg-amber-500/20 text-amber-200"
-              : "bg-white/5 text-gray-300 hover:bg-white/10"
-          }`}
+          className="shrink-0"
         >
           {expanded ? "Close" : "Manage"}
-        </button>
+        </Chip>
       </div>
       {expanded && (
         <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
@@ -903,31 +889,31 @@ function GuestPlayersCard({ guests, onChanged }: { guests: AdminUser[]; onChange
                   {pendingDeleteId === g.id ? (
                     <>
                       <span className="text-xs text-rose-300">Delete?</span>
-                      <button
-                        type="button"
+                      <Button
+                        variant="danger"
+                        size="xs"
                         onClick={() => removeGuest(g.id)}
                         disabled={busy}
-                        className="rounded-md bg-rose-500/20 px-2 py-0.5 text-xs text-rose-200 hover:bg-rose-500/30"
                       >
                         Yes
-                      </button>
-                      <button
-                        type="button"
+                      </Button>
+                      <Button
+                        variant="secondary"
+                        size="xs"
                         onClick={() => setPendingDeleteId(null)}
                         disabled={busy}
-                        className="rounded-md bg-surface-800 px-2 py-0.5 text-xs text-gray-300 hover:bg-surface-700"
                       >
                         No
-                      </button>
+                      </Button>
                     </>
                   ) : (
-                    <button
-                      type="button"
+                    <IconButton
+                      variant="danger"
+                      size="xs"
+                      aria-label={`Delete guest ${g.name}`}
                       onClick={() => setPendingDeleteId(g.id)}
-                      className="rounded-md px-2 py-0.5 text-xs text-rose-400 hover:bg-rose-500/10"
-                    >
-                      Delete
-                    </button>
+                      icon={<TrashIcon className="h-3.5 w-3.5" />}
+                    />
                   )}
                 </li>
               ))}

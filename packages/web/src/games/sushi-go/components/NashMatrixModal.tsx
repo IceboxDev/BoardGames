@@ -1,6 +1,7 @@
 import type { NashActionLabel, NashAnalysis } from "@boardgames/core/games/sushi-go/ai/nash";
 import { CARD_COLORS } from "@boardgames/core/games/sushi-go/types";
 import { useCallback } from "react";
+import { Button } from "../../../components/ui/Button";
 
 interface NashMatrixModalProps {
   matrix: NashAnalysis;
@@ -46,13 +47,9 @@ export default function NashMatrixModal({ matrix, turn, onClose }: NashMatrixMod
               </span>
             </p>
           </div>
-          <button
-            type="button"
-            onClick={onClose}
-            className="rounded-lg border border-gray-700 px-3 py-1 text-xs text-gray-400 transition-colors hover:border-gray-600 hover:text-gray-300"
-          >
+          <Button variant="secondary" size="xs" onClick={onClose}>
             Close
-          </button>
+          </Button>
         </div>
 
         {/* Matrix table */}

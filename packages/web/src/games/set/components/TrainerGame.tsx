@@ -3,6 +3,7 @@ import { formatTime } from "@boardgames/core/games/set/metrics";
 import type { GamePhase } from "@boardgames/core/games/set/types";
 import { useEffect, useRef, useState } from "react";
 import type { SnapshotFrom } from "xstate";
+import { Button } from "../../../components/ui/Button";
 import { useLocalGame } from "../../../hooks/useLocalGame";
 import { useSetHistory } from "../hooks/useSetHistory";
 import CardGrid from "./CardGrid";
@@ -153,30 +154,28 @@ export default function TrainerGame({ onViewHistory }: TrainerGameProps) {
         )}
 
         <div className="flex flex-col gap-2 pt-3 border-t border-gray-800">
-          <button
-            type="button"
+          <Button
+            variant="secondary"
+            size="xs"
+            block
             onClick={() => send({ type: "PLUS_THREE" })}
             disabled={!(state.matches("playing") && ctx.deck.length >= 3)}
-            className="rounded-lg bg-gray-700 px-3 py-2 text-xs text-white transition hover:bg-gray-600 disabled:opacity-40 w-full text-center"
           >
             +3 Cards
-          </button>
-          <button
-            type="button"
+          </Button>
+          <Button
+            variant="warning"
+            size="xs"
+            block
             onClick={() => send({ type: "USE_HINT" })}
             disabled={!state.matches("playing")}
-            className="rounded-lg bg-amber-700 px-3 py-2 text-xs text-white transition hover:bg-amber-600 disabled:opacity-40 w-full text-center"
             title="Highlights one card from a valid SET (costs 3 penalties)"
           >
             Hint
-          </button>
-          <button
-            type="button"
-            onClick={() => send({ type: "START_GAME" })}
-            className="rounded-lg bg-gray-700 px-3 py-2 text-xs text-white transition hover:bg-gray-600 w-full text-center"
-          >
+          </Button>
+          <Button variant="secondary" size="xs" block onClick={() => send({ type: "START_GAME" })}>
             New Game
-          </button>
+          </Button>
         </div>
       </div>
     </div>

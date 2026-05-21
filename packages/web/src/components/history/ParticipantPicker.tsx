@@ -1,4 +1,5 @@
 import type { Participant } from "@boardgames/core/history/types";
+import { Chip } from "../ui/Chip";
 
 type User = { id: string; name: string };
 
@@ -42,24 +43,18 @@ export function ParticipantPicker({ users, selectedIds, onChange, max, disabled 
 
   return (
     <div className="flex flex-wrap gap-1.5">
-      {users.map((u) => {
-        const isSelected = selected.has(u.id);
-        return (
-          <button
-            key={u.id}
-            type="button"
-            disabled={disabled}
-            onClick={() => toggle(u)}
-            className={`rounded-md px-2.5 py-1 text-xs font-medium transition disabled:cursor-not-allowed disabled:opacity-50 ${
-              isSelected
-                ? "bg-accent-500/20 text-accent-100 ring-1 ring-accent-400/50"
-                : "bg-surface-800 text-gray-400 hover:bg-surface-700 hover:text-gray-200"
-            }`}
-          >
-            {u.name}
-          </button>
-        );
-      })}
+      {users.map((u) => (
+        <Chip
+          key={u.id}
+          pressed={selected.has(u.id)}
+          tone="accent"
+          size="sm"
+          disabled={disabled}
+          onClick={() => toggle(u)}
+        >
+          {u.name}
+        </Chip>
+      ))}
     </div>
   );
 }

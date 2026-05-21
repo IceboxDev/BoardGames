@@ -13,7 +13,8 @@ import {
 } from "../../games/blood-on-the-clocktower/characters";
 import { games } from "../../games/registry";
 import { lowScoreWinsForSlug } from "../../games/score-config";
-import { BookIcon } from "../icons";
+import { BookIcon, EditIcon, XIcon } from "../icons";
+import { IconButton } from "../ui/IconButton";
 import { AvatarBubble } from "./AvatarBubble";
 
 type Props = {
@@ -66,46 +67,22 @@ export function MatchCard({ match, isAdmin, currentUserId, onEdit, onDelete }: P
       {isAdmin && (onEdit || onDelete) && (
         <div className="flex shrink-0 items-center gap-0.5 opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100">
           {onEdit && (
-            <button
-              type="button"
-              onClick={() => onEdit(match)}
+            <IconButton
+              variant="subtle"
+              size="xs"
               aria-label="Edit"
-              className="rounded p-1 text-gray-400 hover:bg-surface-800 hover:text-gray-100"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                className="h-3.5 w-3.5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                aria-hidden="true"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M16.862 4.487l1.687 1.688a1.875 1.875 0 010 2.652L7.575 19.8a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L14.21 4.487a1.875 1.875 0 012.652 0z"
-                />
-              </svg>
-            </button>
+              onClick={() => onEdit(match)}
+              icon={<EditIcon className="h-3.5 w-3.5" />}
+            />
           )}
           {onDelete && (
-            <button
-              type="button"
-              onClick={() => onDelete(match)}
+            <IconButton
+              variant="danger"
+              size="xs"
               aria-label="Delete"
-              className="rounded p-1 text-rose-400 hover:bg-rose-500/10"
-            >
-              <svg
-                viewBox="0 0 24 24"
-                className="h-3.5 w-3.5"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                aria-hidden="true"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
+              onClick={() => onDelete(match)}
+              icon={<XIcon className="h-3.5 w-3.5" />}
+            />
           )}
         </div>
       )}

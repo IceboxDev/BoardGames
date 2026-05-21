@@ -5,6 +5,7 @@ import {
   CARD_EMOJI,
   CARD_LABELS,
 } from "@boardgames/core/games/exploding-kittens/types";
+import { Button } from "../../../components/ui/Button";
 import { getCardImageUrl, getSkinsForType } from "../assets/card-art";
 
 interface StealDialogProps {
@@ -17,6 +18,8 @@ function CardButton({ cardType, onClick }: { cardType: CardType; onClick: () => 
   const skin = skins.length > 0 ? skins[0] : null;
 
   return (
+    // Card-shaped clickable surface — picks a card-type by image+label.
+    // biome-ignore lint/correctness/noRestrictedElements: card-shaped clickable card-type picker
     <button
       type="button"
       onClick={onClick}
@@ -72,17 +75,18 @@ export default function StealDialog({ state, onAction }: StealDialogProps) {
           {targets.map((t) => {
             const player = state.players[t.targetIndex];
             return (
-              <button
-                type="button"
+              <Button
                 key={t.targetIndex}
+                variant="secondary"
+                size="md"
                 onClick={() => onAction(t)}
-                className="rounded-lg bg-purple-800/60 px-4 py-3 text-sm text-white transition hover:bg-purple-700"
+                className="!flex-col !items-start !bg-purple-800/60 !border-purple-700/60 hover:!bg-purple-700"
               >
                 <div className="font-medium">
                   {player.type === "human" ? "You" : `AI ${t.targetIndex}`}
                 </div>
                 <div className="text-xs text-gray-400">{player.hand.length} cards</div>
-              </button>
+              </Button>
             );
           })}
         </div>

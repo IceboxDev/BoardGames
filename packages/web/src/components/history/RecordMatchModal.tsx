@@ -18,6 +18,7 @@ import { fetchCalendarLocks } from "../../lib/calendar-locks";
 import { recordMatch, updateMatch } from "../../lib/match-history";
 import { qk } from "../../lib/query-keys";
 import { Button } from "../ui/Button";
+import { Chip } from "../ui/Chip";
 import { Field } from "../ui/Field";
 import { Input } from "../ui/Input";
 import { Modal } from "../ui/Modal";
@@ -300,19 +301,17 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
         <Field label="Match type" htmlFor="rmm-kind">
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
             {KIND_OPTIONS.map((opt) => (
-              <button
+              <Chip
                 key={opt.kind}
-                type="button"
-                onClick={() => changeKind(opt.kind)}
+                pressed={kind === opt.kind}
+                tone="accent"
+                size="sm"
+                block
                 title={opt.hint}
-                className={`rounded-md px-2 py-1.5 text-xs font-medium transition ${
-                  kind === opt.kind
-                    ? "bg-accent-500/20 text-accent-100 ring-1 ring-accent-400/40"
-                    : "bg-surface-800 text-gray-400 hover:bg-surface-700"
-                }`}
+                onClick={() => changeKind(opt.kind)}
               >
                 {opt.label}
-              </button>
+              </Chip>
             ))}
           </div>
         </Field>

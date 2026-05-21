@@ -168,3 +168,169 @@ export function PadlockIcon({
     </svg>
   );
 }
+
+export function StackIcon({ className = "h-3 w-3" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className={className}
+      strokeWidth={2}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <rect x="3" y="6" width="10" height="7" rx="1" />
+      <path d="M5 6V4.5h8V11" />
+    </svg>
+  );
+}
+
+export function LockIcon({ className = "h-4 w-4 opacity-70" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={2}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <rect x="3" y="11" width="18" height="11" rx="2" />
+      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+    </svg>
+  );
+}
+
+export function GalleryIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="currentColor" aria-hidden="true">
+      <rect x="3" y="3" width="6" height="6" rx="1.25" />
+      <rect x="11" y="3" width="6" height="6" rx="1.25" />
+      <rect x="3" y="11" width="6" height="6" rx="1.25" />
+      <rect x="11" y="11" width="6" height="6" rx="1.25" />
+    </svg>
+  );
+}
+
+/**
+ * Right-pointing arrow used as the title-row affordance on catalog/gallery
+ * cards. Inherits color and lives in the same currentColor family as the
+ * other icons; callers compose hover translate/color animations on the
+ * surrounding link.
+ */
+export function ArrowRightIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="currentColor" aria-hidden="true">
+      <path
+        fillRule="evenodd"
+        d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
+
+/**
+ * Down-chevron used as expand/collapse affordance on the family card title
+ * row. Toggles its rotation via a `rotate-180` class from the caller.
+ */
+export function ChevronDownIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="currentColor" aria-hidden="true">
+      <path
+        fillRule="evenodd"
+        d="M5.23 7.21a.75.75 0 011.06.02L10 11.06l3.71-3.83a.75.75 0 011.08 1.04l-4.25 4.39a.75.75 0 01-1.08 0L5.21 8.27a.75.75 0 01.02-1.06z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
+
+/** Pencil edit icon used by row-level inline-edit `<IconButton>` actions. */
+export function EditIcon({ className = "h-3.5 w-3.5" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={2}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M16.862 4.487l1.687 1.688a1.875 1.875 0 010 2.652L7.575 19.8a4.5 4.5 0 01-1.897 1.13l-2.685.8.8-2.685a4.5 4.5 0 011.13-1.897L14.21 4.487a1.875 1.875 0 012.652 0z" />
+    </svg>
+  );
+}
+
+/** Trash / delete icon used by row-level destructive inline actions. */
+export function TrashIcon({ className = "h-3.5 w-3.5" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={2}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M4 7h16M9 7V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v2m2 0v12a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V7" />
+    </svg>
+  );
+}
+
+/** Plus glyph for stepper "+ Add" buttons and increment controls. */
+export function PlusIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="currentColor" aria-hidden="true">
+      <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
+    </svg>
+  );
+}
+
+/** Minus glyph for stepper decrement controls. */
+export function MinusIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="currentColor" aria-hidden="true">
+      <path
+        fillRule="evenodd"
+        d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z"
+        clipRule="evenodd"
+      />
+    </svg>
+  );
+}
+
+/** Eye icon — admin "view as player" toggle. */
+export function EyeIcon({ className = "h-3.5 w-3.5" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={2.2}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
+      <circle cx="12" cy="12" r="3" />
+    </svg>
+  );
+}
+
+/**
+ * Shuffle icon used by setup screens to randomize role / opponent previews.
+ * Different from the bigger PadlockIcon already in this file.
+ */
+export function ShuffleIcon({ className = "h-3.5 w-3.5" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={2}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M16 3h5v5" />
+      <path d="M21 3l-7 7" />
+      <path d="M3 21l7-7" />
+      <path d="M16 21h5v-5" />
+      <path d="M3 3l5.5 5.5" />
+      <path d="M21 16L14.5 9.5" />
+    </svg>
+  );
+}

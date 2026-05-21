@@ -1,5 +1,6 @@
 import type { MatchRecord } from "@boardgames/core/history/types";
 import type { LockedDate } from "../../lib/calendar-locks";
+import { Button } from "../ui/Button";
 import { MatchCard } from "./MatchCard";
 
 type Props = {
@@ -47,13 +48,14 @@ export function NightCard({
           )}
         </div>
         {isAdmin && onAddMatch && (
-          <button
-            type="button"
+          <Button
+            variant="ghost"
+            size="xs"
             onClick={onAddMatch}
-            className="shrink-0 rounded px-2 py-0.5 text-[11px] font-medium text-accent-300 transition hover:bg-accent-500/10"
+            className="shrink-0 text-accent-300 hover:bg-accent-500/10"
           >
             + Match
-          </button>
+          </Button>
         )}
       </header>
       <div className="flex flex-col gap-1">

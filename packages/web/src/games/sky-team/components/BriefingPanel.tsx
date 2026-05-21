@@ -1,4 +1,5 @@
 import type { SkyTeamPlayerView } from "@boardgames/core/games/sky-team/types";
+import { Button } from "../../../components/ui/Button";
 
 interface Props {
   view: SkyTeamPlayerView;
@@ -42,14 +43,15 @@ export default function BriefingPanel({ view, onReady }: Props) {
           </span>
         </div>
       </div>
-      <button
-        type="button"
+      <Button
+        variant="primary"
+        size="md"
         disabled={myReady}
         onClick={onReady}
-        className="rounded-md bg-emerald-600 px-6 py-2 font-bold text-white shadow disabled:bg-slate-700 disabled:text-slate-400"
+        className="!bg-emerald-600 hover:!bg-emerald-500 !shadow-emerald-500/20"
       >
         {myReady ? (oppReady ? "Rolling…" : "Waiting for partner") : "Ready to roll"}
-      </button>
+      </Button>
     </div>
   );
 }

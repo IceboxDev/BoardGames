@@ -4,6 +4,7 @@ import { ActionLog } from "../../../components/action-log";
 import { CardDeck } from "../../../components/CardDeck";
 import { GameScreen } from "../../../components/game-layout";
 import { type PlayerEntry, PlayerListPanel } from "../../../components/SidePanel";
+import { Button } from "../../../components/ui/Button";
 import { DEBUG_LAYOUT } from "../../../lib/debug";
 import cardBackUrl from "../assets/card-back.png";
 import { getCardSvg } from "../card-svg";
@@ -130,51 +131,52 @@ export default function GameBoard({
       fanActions={
         canPlaySelected ? (
           <div className="flex items-center justify-center gap-2">
-            <button
-              type="button"
+            <Button
+              variant="secondary"
+              size="xs"
               onClick={handleConfirmPlay}
-              className="rounded-lg border border-emerald-500/50 bg-emerald-500/15 px-4 py-1.5 text-xs font-medium text-emerald-300 transition hover:bg-emerald-500/25"
+              className="!border-emerald-500/50 !bg-emerald-500/15 !text-emerald-300 hover:!bg-emerald-500/25"
             >
               {view.phase === "throwing-in" ? "Throw In" : "Attack"}
-            </button>
+            </Button>
             {canPass && (
-              <button
-                type="button"
+              <Button
+                variant="secondary"
+                size="xs"
                 onClick={() => {
                   onAction({ type: "pass" });
                   setSelectedCardId(null);
                 }}
-                className="rounded-lg border border-gray-600 bg-gray-700/60 px-4 py-1.5 text-xs font-medium text-white transition hover:bg-gray-600"
               >
                 {view.phase === "throwing-in" ? "Done" : "Pass"}
-              </button>
+              </Button>
             )}
           </div>
         ) : isMyTurn && (canPass || canTake) ? (
           <div className="flex items-center justify-center gap-2">
             {canPass && (
-              <button
-                type="button"
+              <Button
+                variant="secondary"
+                size="xs"
                 onClick={() => {
                   onAction({ type: "pass" });
                   setSelectedCardId(null);
                 }}
-                className="rounded-lg border border-gray-600 bg-gray-700/60 px-4 py-1.5 text-xs font-medium text-white transition hover:bg-gray-600"
               >
                 {view.phase === "throwing-in" ? "Done" : "Pass"}
-              </button>
+              </Button>
             )}
             {canTake && (
-              <button
-                type="button"
+              <Button
+                variant="danger"
+                size="xs"
                 onClick={() => {
                   onAction({ type: "take" });
                   setSelectedCardId(null);
                 }}
-                className="rounded-lg border border-red-700/50 bg-red-900/30 px-4 py-1.5 text-xs font-medium text-red-300 transition hover:bg-red-900/50"
               >
                 Take Cards
-              </button>
+              </Button>
             )}
           </div>
         ) : (

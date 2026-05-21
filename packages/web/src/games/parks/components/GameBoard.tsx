@@ -3,6 +3,7 @@ import { SEASON_LABELS, TRAIL_PARKS_INDEX } from "@boardgames/core/games/parks/t
 import { useCallback, useMemo, useState } from "react";
 import { ActionLog } from "../../../components/action-log";
 import { GameScreen } from "../../../components/game-layout";
+import { Chip } from "../../../components/ui/Chip";
 import { mapParksLog } from "../log-mapper";
 import ActionPanel from "./ActionPanel";
 import CanteenDisplay from "./CanteenDisplay";
@@ -190,18 +191,16 @@ export default function GameBoard({
           <div className="flex items-center gap-1 text-[10px]">
             <span className="text-stone-400">Hiker:</span>
             {([0, 1] as (0 | 1)[]).map((id) => (
-              <button
+              <Chip
                 key={id}
-                type="button"
+                pressed={effectiveSelectedHiker === id}
+                tone="emerald"
+                variant="outlined"
+                size="xs"
                 onClick={() => setSelectedHikerId(id)}
-                className={`rounded-md border px-2 py-0.5 font-bold transition ${
-                  effectiveSelectedHiker === id
-                    ? "border-emerald-400 bg-emerald-500/30 text-white"
-                    : "border-stone-600 bg-stone-800 text-stone-300 hover:bg-stone-700"
-                }`}
               >
                 {id + 1}
-              </button>
+              </Chip>
             ))}
           </div>
         )}

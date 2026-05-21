@@ -5,6 +5,7 @@ import {
   parseMultiVariant,
   variantConfigForSlug,
 } from "../../games/match-variants";
+import { Chip } from "../ui/Chip";
 
 type Props = {
   gameSlug: string | null;
@@ -66,24 +67,23 @@ function SinglePicker({
       {config.options.map((opt) => {
         const active = value === opt.value;
         return (
-          <button
+          <Chip
             key={opt.value}
-            type="button"
+            pressed={active}
+            tone="accent"
+            variant="outlined"
+            size="sm"
             onClick={() => onChange(active ? undefined : opt.value)}
-            aria-pressed={active}
-            className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 text-xs font-medium transition ${
-              active
-                ? "border-accent-400/50 bg-accent-500/15 text-accent-100"
-                : "border-white/10 bg-surface-900 text-gray-400 hover:border-white/20 hover:text-gray-200"
-            }`}
+            icon={
+              opt.icon ? (
+                <span aria-hidden="true" className="text-sm leading-none">
+                  {opt.icon}
+                </span>
+              ) : undefined
+            }
           >
-            {opt.icon && (
-              <span aria-hidden="true" className="text-sm leading-none">
-                {opt.icon}
-              </span>
-            )}
-            <span>{opt.label}</span>
-          </button>
+            {opt.label}
+          </Chip>
         );
       })}
     </div>
@@ -111,24 +111,23 @@ function MultiPicker({
       {config.options.map((opt) => {
         const active = selected.has(opt.value);
         return (
-          <button
+          <Chip
             key={opt.value}
-            type="button"
+            pressed={active}
+            tone="accent"
+            variant="outlined"
+            size="sm"
             onClick={() => toggle(opt.value)}
-            aria-pressed={active}
-            className={`inline-flex items-center gap-1.5 rounded-md border px-2.5 py-1 text-xs font-medium transition ${
-              active
-                ? "border-accent-400/50 bg-accent-500/15 text-accent-100"
-                : "border-white/10 bg-surface-900 text-gray-400 hover:border-white/20 hover:text-gray-200"
-            }`}
+            icon={
+              opt.icon ? (
+                <span aria-hidden="true" className="text-sm leading-none">
+                  {opt.icon}
+                </span>
+              ) : undefined
+            }
           >
-            {opt.icon && (
-              <span aria-hidden="true" className="text-sm leading-none">
-                {opt.icon}
-              </span>
-            )}
-            <span>{opt.label}</span>
-          </button>
+            {opt.label}
+          </Chip>
         );
       })}
     </div>

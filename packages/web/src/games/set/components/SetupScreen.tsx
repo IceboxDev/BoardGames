@@ -25,6 +25,7 @@ export default function SetupScreen({ onStart, onViewHighScores }: SetupScreenPr
       </Button>
 
       {onViewHighScores && (
+        // biome-ignore lint/correctness/noRestrictedElements: card-shaped icon+text clickable surface
         <button
           type="button"
           onClick={onViewHighScores}

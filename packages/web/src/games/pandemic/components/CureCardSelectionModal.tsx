@@ -110,6 +110,8 @@ export default function CureCardSelectionModal({
             {options.map((opt) => {
               const isActive = opt.color === pick.color;
               return (
+                // Disease-color tab — bespoke chrome that paints with the per-color hex.
+                // biome-ignore lint/correctness/noRestrictedElements: bespoke disease-color tab with dynamic per-color border/background
                 <button
                   key={opt.color}
                   type="button"
@@ -133,6 +135,8 @@ export default function CureCardSelectionModal({
             const isSelected = pick.selected.has(idx);
             const atCap = !isSelected && pick.selected.size >= needed;
             return (
+              // Card-shaped clickable game piece (selectable city card).
+              // biome-ignore lint/correctness/noRestrictedElements: game-piece (cure card) clickable surface
               <button
                 key={idx}
                 type="button"

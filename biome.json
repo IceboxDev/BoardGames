@@ -35,7 +35,15 @@
       "recommended": true,
       "correctness": {
         "useExhaustiveDependencies": "warn",
-        "noUnusedImports": "error"
+        "noUnusedImports": "error",
+        "noRestrictedElements": {
+          "level": "error",
+          "options": {
+            "elements": {
+              "button": "Use <Button>, <IconButton>, or <Chip> from components/ui instead. Raw <button> is permitted only in: ui/Button.tsx (the primitive itself), ui/Modal.tsx (portal-internal close-X + backdrop), ui/Overlay.tsx (backdrop), ui/SegmentedControl.tsx (segmented options), game/GameCardChrome.tsx (clickable card surface), game/VariantStrip.tsx (radio thumb-discs), offline/Calendar.tsx (day cells), offline/GameCarousel3D.tsx (chevrons), and the game-piece files in games/*/components/ (Card / Slot / Die / DrawPile / Table / piece trays). For any other intentional bespoke control, add a `biome-ignore lint/correctness/noRestrictedElements` comment with a one-line reason."
+            }
+          }
+        }
       },
       "style": {
         "useImportType": "error",
@@ -46,6 +54,54 @@
       }
     }
   },
+  "overrides": [
+    {
+      "includes": [
+        "packages/web/src/components/ui/Button.tsx",
+        "packages/web/src/components/ui/Chip.tsx",
+        "packages/web/src/components/ui/IconButton.tsx",
+        "packages/web/src/components/ui/Modal.tsx",
+        "packages/web/src/components/ui/Overlay.tsx",
+        "packages/web/src/components/ui/SegmentedControl.tsx",
+        "packages/web/src/components/game/GameCardChrome.tsx",
+        "packages/web/src/components/game/VariantStrip.tsx",
+        "packages/web/src/components/offline/Calendar.tsx",
+        "packages/web/src/components/offline/GameCarousel3D.tsx"
+      ],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noRestrictedElements": "off"
+          }
+        }
+      }
+    },
+    {
+      "includes": [
+        "packages/web/src/games/*/components/Card.tsx",
+        "packages/web/src/games/*/components/SetCard.tsx",
+        "packages/web/src/games/*/components/CardFace.tsx",
+        "packages/web/src/games/*/components/Slot.tsx",
+        "packages/web/src/games/*/components/Die.tsx",
+        "packages/web/src/games/*/components/DrawPile.tsx",
+        "packages/web/src/games/*/components/Table.tsx",
+        "packages/web/src/games/*/components/ParkCard.tsx",
+        "packages/web/src/games/*/components/TrailDisplay.tsx",
+        "packages/web/src/games/*/components/CanteenDisplay.tsx",
+        "packages/web/src/games/*/components/GearMarketDisplay.tsx",
+        "packages/web/src/games/*/components/PlayerDiceTray.tsx",
+        "packages/web/src/games/*/components/SetCallButton.tsx",
+        "packages/web/src/games/*/components/PvpGameBoard.tsx"
+      ],
+      "linter": {
+        "rules": {
+          "correctness": {
+            "noRestrictedElements": "off"
+          }
+        }
+      }
+    }
+  ],
   "assist": {
     "actions": {
       "source": {

@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import { useGameBackOverride } from "../../hooks/useGameBackOverride";
+import { XIcon } from "../icons";
+import { IconButton } from "../ui/IconButton";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -82,15 +84,13 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
               </span>
             )}
           </div>
-          <button
-            type="button"
+          <IconButton
+            variant="ghost"
+            size="sm"
+            aria-label="Close rules"
             onClick={handleClose}
-            className="flex h-8 w-8 items-center justify-center rounded-lg text-gray-400 transition-colors hover:bg-white/[0.06] hover:text-white"
-          >
-            <svg viewBox="0 0 20 20" fill="currentColor" className="h-5 w-5" aria-hidden="true">
-              <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
-            </svg>
-          </button>
+            icon={<XIcon className="h-5 w-5" />}
+          />
         </div>
 
         {/* Scrollable PDF area */}

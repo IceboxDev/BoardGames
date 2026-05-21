@@ -1,0 +1,762 @@
+/* ==================================================================
+   Sky Team — Board Lab
+   Iteration playground. No build, no React. Edit and refresh.
+
+   Layout strategy
+   ---------------
+   The board is a single fixed-aspect frame. Inside it, an absolutely
+   positioned grid lays out four logical regions:
+
+     ┌─ top HUD ─────────────────────────────┐
+     │                                       │
+     │  L-strip │   center cluster   │ R-strip
+     │                                       │
+     ├─ bottom panel ────────────────────────┤
+
+   Each region is its own block with its own internal layout. Avoid
+   absolute positioning inside regions — keep that to the region
+   placement itself.
+   ================================================================= */
+
+/* ---------- tokens ---------- */
+
+:root {
+  /* board frame */
+  --board-w: 720px;
+  --board-aspect: 720 / 1000;   /* taller than the reference sketch to use more vertical room */
+  --board-radius: 20px;
+
+  /* zone sizing (percent of board height) — tune these to reflow */
+  --top-hud-h: 8.8%;
+  --side-strip-w: 19%;
+
+  /* palette */
+  --sky: #08aeea;
+  --panel-top: #c0d1cf;
+  --panel-mid: #a7bbbb;
+  --panel-bot: #c7d5d1;
+  --seam: rgba(255, 255, 255, .28);
+  --frame-line: rgba(57, 70, 69, .25);
+
+  --pilot-dark: #14267a;
+  --pilot-light: #3a55d8;
+  --pilot-ink: #8df0d0;
+
+  --copilot-dark: #8d3019;
+  --copilot-light: #ed7a23;
+  --copilot-ink: #ffd83a;
+
+  --instrument-ink: #15191d;
+  --instrument-bezel: #485151;
+
+  /* effects */
+  --tile-shadow: 0 5px 10px rgba(0, 0, 0, .28);
+  --tile-inset: inset 0 2px 5px rgba(255, 255, 255, .18);
+  --soft-shadow: 0 2px 5px rgba(0, 0, 0, .22);
+}
+
+/* ---------- page chrome ---------- */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: var(--sky);
+  color: white;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ---------- board frame ---------- */
+
+.board {
+  width: min(var(--board-w), 96vw);
+  aspect-ratio: var(--board-aspect);
+  max-height: 96vh;
+  position: relative;
+  border-radius: var(--board-radius);
+  border: 3px solid rgba(39, 51, 51, .35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, .38);
+  background:
+    linear-gradient(var(--panel-top), var(--panel-mid) 52%, var(--panel-bot));
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* center seam line (decorative — the two-seat split) */
+.board::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 2px;
+  transform: translateX(-1px);
+  background: var(--seam);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* "U" play-area outline. Now an SVG covering the whole board so the
+   stroke can trace a custom path that detours around the cabin polygon.
+   The path lives inline in index.html (board-coord units, 720×1000). */
+.play-area {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.play-area path {
+  fill: none;
+  stroke: var(--frame-line);
+  stroke-width: 3;
+  stroke-linejoin: round;
+  /* Keep the stroke crisp at 3px regardless of how the board scales — the
+     viewBox stretches with the element but the stroke shouldn't. */
+  vector-effect: non-scaling-stroke;
+}
+
+/* ---------- top HUD ---------- */
+
+.top-hud {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--top-hud-h);
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  align-items: end;
+  padding: 0 2.5%;
+  gap: 16px;
+  z-index: 3;
+}
+
+.reroll {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 5px solid #2b5869;
+  background:
+    radial-gradient(circle at 33% 39%, #35abdb 0 8px, transparent 9px),
+    radial-gradient(circle at 68% 36%, #eab52d 0 9px, transparent 10px),
+    radial-gradient(circle at 61% 70%, #2a4ea2 0 10px, transparent 11px),
+    conic-gradient(#2c60c0 0 32%, #eeb52e 32% 58%, #28439b 58% 100%);
+  box-shadow: var(--tile-shadow);
+  position: relative;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  justify-self: start;
+  align-self: end;
+  transform: translateY(20%);
+}
+
+.reroll__glyph {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, .85);
+  font-size: 26px;
+  font-weight: 900;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .35);
+}
+
+.hud {
+  height: calc(var(--top-hud-h) - 6px);
+  border-radius: 0 0 10px 10px;
+  background: #163757;
+  color: #e6eff2;
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  letter-spacing: 3px;
+  box-shadow: var(--tile-shadow);
+  font-size: clamp(14px, 1.6vw, 20px);
+}
+
+.weather {
+  justify-self: end;
+  width: 170px;
+  display: grid;
+  grid-template-rows: auto auto;
+  align-content: center;
+  gap: 2px;
+  line-height: 1;
+  padding: 4px 12px;
+}
+
+.weather__icons { font-size: 1.1em; }
+.weather__dice  { letter-spacing: 6px; font-size: 1em; }
+
+.altitude {
+  justify-self: start;
+  width: 180px;
+  position: relative;
+  border: 2px solid #10324d;
+  padding: 0 12px;
+}
+
+/* Altitude bracket lines removed. */
+
+/* ---------- side strips ---------- */
+
+.strip {
+  position: absolute;
+  top: var(--top-hud-h);
+  bottom: 2%;
+  width: var(--side-strip-w);
+  padding: 2.5% 0;
+  z-index: 2;
+}
+
+.strip-left  { left: 0;  border-right: 1px solid var(--frame-line); }
+.strip-right { right: 0; border-left:  1px solid var(--frame-line); }
+
+/* Five-row grid on both strips:
+     row 1 — top spacer (small fr) that pushes the column downward
+     rows 2-5 — actual tile rows
+   Right strip fills rows 2-5 with R1-R4. Left strip fills rows 2-4 with
+   L1-L3 and keeps row 5 as an empty filler. L1-L3 line up with R1-R3 row
+   for row; R4 sits in row 5 with the cabin panel covering the symmetric
+   filler on the left. Tweak the leading `0.45fr` to push tiles further
+   down (bigger) or pull them up (smaller). */
+.strip__stack {
+  height: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: 2fr repeat(4, 1fr);
+  align-items: center;
+}
+
+.strip-left  .strip__stack { justify-items: start; padding-left: 4px; }
+.strip-right .strip__stack { justify-items: end;   padding-right: 4px; }
+
+.strip__filler { list-style: none; }
+
+/* ---------- generic tile + slider primitives ---------- */
+
+.tile {
+  --tile-size: 64px;
+  width: var(--tile-size);
+  height: var(--tile-size);
+  border-radius: 9px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  /* Inline children so the `1<small>/</small>2` content stays on one row.
+     `display: grid; place-items: center` was promoting each text node into
+     its own grid item, stacking 1, /, 2 vertically. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  font-size: calc(var(--tile-size) * 0.42);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+  box-shadow: var(--tile-inset), var(--tile-shadow);
+}
+
+.tile small {
+  font-size: 0.58em;
+  opacity: 0.85;
+  margin: 0 0.05em;
+  font-weight: 700;
+}
+
+.tile--pilot {
+  background: linear-gradient(150deg, var(--pilot-dark), var(--pilot-light));
+  color: var(--pilot-ink);
+}
+
+.tile--copilot {
+  background: linear-gradient(150deg, var(--copilot-dark), var(--copilot-light));
+  color: var(--copilot-ink);
+}
+
+.tile--engine {
+  --tile-size: 70px;
+}
+
+.tile--mixed {
+  /* Match the brake row's tile width (64×64) so the 3 concentration cubes
+     sit at the exact same x positions as the 2/4/6 blue squares above. */
+  width: 64px;
+  height: 64px;
+  border-radius: 9px;
+  /* SOLID pilot-light base; the right half gets overlaid by the ::before
+     pseudo. No CSS gradient means no possibility of sub-pixel/anti-alias
+     bleed between the two halves — the colour transition is a hard pixel
+     edge enforced by the pseudo's position:50%/width:50%. */
+  background: var(--pilot-light);
+  border: 0;
+  box-shadow: var(--tile-inset), var(--tile-shadow);
+  position: relative;
+  overflow: hidden;       /* clip the ::before to the tile's border-radius */
+}
+
+/* Right half = copilot-light, painted as a solid rectangle starting at
+   exactly x=50% with the same border-radius corners as the parent. */
+.tile--mixed::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  background: var(--copilot-light);
+  pointer-events: none;
+}
+
+/* Coffee-cup SVG (from sky-team-lab/coffee-icon.svg) sits on top of both
+   halves (z-index 1 puts it above the ::before overlay). The viewBox is
+   96.59 × 122.88 — taller than wide — so we constrain to ~60% of the tile
+   and centre it both ways with translate(-50%, -50%). The path's fill is
+   driven by an SVG linearGradient with a hard 50% stop split so the icon
+   reads neon on the left half, gold on the right. */
+.tile--mixed > svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  height: 60%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.slider {
+  width: 78px;
+  height: 30px;
+  position: relative;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  width: 44px;
+  height: 18px;
+  border-radius: 5px;
+  background: #15181c;
+  box-shadow: var(--soft-shadow);
+}
+
+.slider::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  border: 2px solid #dad4c8;
+  background:
+    radial-gradient(circle at 25% 25%, #999 2px, transparent 3px),
+    radial-gradient(circle at 50% 25%, #999 2px, transparent 3px),
+    radial-gradient(circle at 75% 25%, #999 2px, transparent 3px),
+    radial-gradient(circle at 25% 50%, #999 2px, transparent 3px),
+    radial-gradient(circle at 50% 50%, #999 2px, transparent 3px),
+    radial-gradient(circle at 75% 50%, #999 2px, transparent 3px),
+    radial-gradient(circle at 25% 75%, #999 2px, transparent 3px),
+    radial-gradient(circle at 50% 75%, #999 2px, transparent 3px),
+    radial-gradient(circle at 75% 75%, #999 2px, transparent 3px),
+    #f4eee2;
+  box-shadow: var(--soft-shadow);
+}
+
+.control {
+  display: grid;
+  gap: 4px;
+  /* Centre the (narrower) tile over the (wider) slider so the tile doesn't
+     look flush-left while the slider's lock-knob sticks out to the right. */
+  justify-items: center;
+}
+
+/* ---------- center cluster ---------- */
+
+.center {
+  position: absolute;
+  top: var(--top-hud-h);
+  /* Sits just above the cabin panel's tall left section (panel top is at
+     2% + 12.5% = 14.5% from the bottom of the board). 2% breathing room. */
+  bottom: 16.5%;
+  left: var(--side-strip-w);
+  right: var(--side-strip-w);
+  display: grid;
+  grid-template-rows:
+    minmax(0, 4.4fr)   /* horizon (with axis arc overlaid) */
+    minmax(0, 1.3fr)   /* engine row */
+    minmax(0, 1.6fr)   /* brake arc */
+    minmax(0, 1.3fr); /* brake row */
+  justify-items: center;
+  align-items: center;
+  padding-top: 2%;
+  gap: 4px;
+  z-index: 2;
+}
+
+/* artificial horizon */
+.horizon {
+  position: relative;
+  width: min(78%, 360px);
+  aspect-ratio: 1;
+  align-self: end;
+}
+
+.horizon__bezel {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  /* Dark bezel arc: 170° centred at 12 o'clock — i.e. 85° to the left of
+     the top and 85° to the right. CSS conic-gradient angles start at 12
+     o'clock and progress clockwise, so `from 275deg` puts position-0 at
+     85° CCW from the top; the dark fills the next 170° clockwise, ending
+     at 85° CW of the top. The remaining 190° (the bottom half plus the
+     two side gaps) is transparent. */
+  background:
+    conic-gradient(
+      from 275deg,
+      var(--instrument-ink) 0 170deg,
+      transparent 170deg 360deg
+    );
+  -webkit-mask: radial-gradient(circle, transparent 0 calc(50% - 18px), #000 calc(50% - 16px) 50%, transparent 100%);
+          mask: radial-gradient(circle, transparent 0 calc(50% - 18px), #000 calc(50% - 16px) 50%, transparent 100%);
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, .28));
+}
+
+.horizon__face {
+  position: absolute;
+  inset: 12%;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 8px solid var(--instrument-bezel);
+  background: linear-gradient(#24b7e7 0 48%, #f3eee1 48% 51%, #8b633e 51% 100%);
+  box-shadow: inset 0 8px 18px rgba(0, 0, 0, .3), var(--soft-shadow);
+}
+
+.horizon__pitch-ladder {
+  position: absolute;
+  left: 20%;
+  right: 20%;
+  top: 18%;
+  height: 1.5px;
+  background: rgba(255, 255, 255, .65);
+  box-shadow:
+    0 22% rgba(255, 255, 255, .50),
+    0 44% rgba(255, 255, 255, .40),
+    0 66% rgba(255, 255, 255, .30);
+}
+
+.horizon__plane {
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  width: 50%;
+  height: 22%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 3px 2px rgba(0, 0, 0, .28));
+}
+
+.horizon__plane::before {
+  /* fuselage line */
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 35%;
+  height: 8%;
+  border-radius: 999px;
+  background: white;
+}
+
+.horizon__plane::after {
+  /* vertical stabilizer triangle */
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 0.6em solid transparent;
+  border-right: 0.6em solid transparent;
+  border-bottom: 1.6em solid white;
+  font-size: clamp(10px, 2.4vw, 26px);
+}
+
+/* axis arc 2..12 — overlays the horizon's lower half. Now ELLIPTICAL
+   (rx=232 ry=85 inside a 500×200 viewBox) so the arc reads as a shallow
+   ellipse with ends far apart, not a deep half-circle. The element is
+   stretched to 110% of .center via negative side-margins so the chord
+   extends ~5% into each side strip — z-index 4 keeps it on top of the
+   strips (z=2). */
+.axis-arc {
+  grid-row: 1;
+  align-self: end;
+  width: 110%;
+  margin-left: -5%;
+  margin-right: -5%;
+  aspect-ratio: 500 / 200;
+  margin-bottom: -28%;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.axis-arc__band {
+  fill: none;
+  stroke: var(--instrument-ink);
+  /* Back to the original slim stroke — the arc is now "wider" via a
+     longer chord, not a thicker band. */
+  stroke-width: 36;
+  stroke-linecap: butt;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, .3));
+}
+
+.axis-arc__num {
+  fill: white;
+  font-size: 18px;
+  font-weight: 900;
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: rgba(0, 0, 0, .55);
+  stroke-width: 3;
+}
+
+/* engine row */
+.engine-row {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 24px;
+  align-items: center;
+  justify-content: center;
+}
+
+.axis-marker {
+  color: rgba(255, 255, 255, .85);
+  font-size: 36px;
+  font-weight: 900;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, .35);
+}
+
+/* brake arc 2..6 */
+.brake-arc {
+  width: min(64%, 300px);
+  aspect-ratio: 320 / 130;
+  pointer-events: none;
+}
+
+.brake-arc__band {
+  fill: none;
+  stroke: var(--instrument-ink);
+  stroke-width: 38;
+  stroke-linecap: butt;
+  filter: drop-shadow(0 3px 4px rgba(0, 0, 0, .28));
+}
+
+.brake-arc__num {
+  fill: white;
+  font-size: 20px;
+  font-weight: 900;
+  text-anchor: middle;
+  paint-order: stroke;
+  stroke: rgba(0, 0, 0, .6);
+  stroke-width: 3;
+}
+
+/* brake row */
+.brake-row {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  /* Explicit 12px gap so the brake tile-center spacing is a known 90px
+     (slider 78 + gap 12). Concentration row pairs with this via gap:26px
+     so its 64px tiles end up at the same x-positions. */
+  gap: 12px;
+  justify-content: center;
+  align-items: start;
+  /* Shift the 2/4/6 row + their sliders down a bit, into the space
+     between .center's bottom and the cabin panel's top. */
+  transform: translateY(18px);
+}
+
+/* ---------- cabin panel (bottom-left + center) ----------
+
+   One continuous mixed-colour panel running from the left edge across to
+   where the right strip begins. Shape:
+
+       +-------+
+       |       |\
+       | mugs  | \____________
+       |       |              |
+       | (M M  | concentration |
+       |  M)   |              |
+       +-------+--------------+
+                ^ diagonal taper
+
+   Left chunk is full panel height (the "tall" leftmost section). A diagonal
+   cut drops the top edge down to ~30% of panel height, after which the right
+   side stays at that lower top all the way across — that's the "thinner"
+   middle/right area. The BOTTOM is one straight line at the panel's bottom.
+
+   The 4th flap (R4) sits OUTSIDE this panel, in the right strip. */
+.cabin-panel {
+  position: absolute;
+  /* Small breathing-room inset from the board's left edge. Halfway back
+     from the previous 5% — the 5% was too much, 0% touched the border. */
+  left: 2.5%;
+  bottom: 2%;
+  right: var(--side-strip-w);
+  height: 12.5%;
+  z-index: 3;
+  /* Original darker-top → lighter-bottom gradient (the recessed-compartment
+     look). Light is implied to come from below / bounce, hitting the floor
+     of the recess. */
+  background: linear-gradient(
+    180deg,
+    #7e928e 0%,
+    #8da19b 45%,
+    #9bafa8 100%
+  );
+  /* clip-path polygon — coords are (x%, y%) of the panel's bounding box.
+     Tall section ends a touch earlier (10% instead of 13%) — the mug
+     column doesn't need much room at the top because only one mug sits
+     in row 1 of the right-triangle; the wider bottom row of two mugs
+     lives BELOW the slope where the polygon is full-width anyway. */
+  clip-path: polygon(
+    0% 0%,
+    10% 0%,
+    12.5% 22%,
+    100% 22%,
+    100% 100%,
+    0% 100%
+  );
+  /* Recessed-compartment shadows — back to the original inset stack:
+       - heavy "rim overhang" at the top
+       - shallow side walls
+       - sliver of bounce-light highlight along the floor */
+  box-shadow:
+    inset 0 4px 10px rgba(0, 0, 0, 0.45),
+    inset 3px 0 6px rgba(0, 0, 0, 0.18),
+    inset -3px 0 6px rgba(0, 0, 0, 0.14),
+    inset 0 -2px 0 rgba(255, 255, 255, 0.18);
+  /* Mug-column padding halfway back from the previous 22px — net effect:
+     mug-block left edge sits at ~5% of board (between the original 1.9%
+     and the previous 8.1%). */
+  padding: 10px 14px 6px 18px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  /* Content sits at the bottom of the panel — diagonal cut at the top
+     never crops a mug or a concentration tile. */
+  align-items: end;
+  gap: 24px;
+}
+
+/* Pinned to the thin section's actual top edge so the rim-overhang darkening
+   carries across the WHOLE recessed panel, not just the tall left chunk.
+   Vertical-only linear-gradient (no inset box-shadow → no left-side bleed)
+   with a horizontal mask fading the band in from the slope side so the
+   joint between the slope and the flat thin-section top is invisible. */
+.cabin-panel::after {
+  content: "";
+  position: absolute;
+  left: 12.5%;
+  right: 0;
+  top: 22%;
+  bottom: 0;
+  pointer-events: none;
+  background: linear-gradient(180deg,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.10) 30%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask: linear-gradient(90deg, transparent 0%, black 8%);
+          mask: linear-gradient(90deg, transparent 0%, black 8%);
+}
+
+.cabin-panel__mugs {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 10px;
+  /* Nudge the mug stack up off the panel floor — purely visual breathing room. */
+  margin-bottom: 4px;
+}
+
+.mug-block__row {
+  display: flex;
+  gap: 14px;
+}
+
+/* Simple flat black coffee-mug silhouette. Narrow body (taller than wide,
+   like a real mug) with a small C-shaped handle on the right. */
+.mug {
+  width: 26px;
+  height: 32px;
+  border-radius: 3px 3px 7px 7px;
+  background: #28252c;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 10px;
+  font-weight: 900;
+  position: relative;
+  box-shadow: var(--soft-shadow);
+}
+
+.mug::after {
+  content: "";
+  position: absolute;
+  right: -7px;
+  top: 8px;
+  width: 7px;
+  height: 14px;
+  border: 2.5px solid #28252c;
+  border-left: 0;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Concentration row sits in the cabin panel. Positioned absolutely with its
+   centre at board x = 50% so its tiles line up with the brake row.
+
+   Important: the brake row's tile-center spacing is NOT (tile + gap) but
+   (slider + gap), because each brake `.control` is sized by its widest
+   child (the slider, 78px). The tile is centred inside that 78px column,
+   so brake tile centres are 90px apart (78 + 12 gap).
+
+   The concentration row has no sliders — just tiles — so to get the same
+   90px centre-to-centre spacing with 64px tiles we need gap = 90 - 64 =
+   26px.
+
+   For horizontal centring at board x=50% from inside the cabin panel
+   (which now spans board x = 2.5..81% — width 78.5% of board), board x=50%
+   is at (50-2.5)/78.5 = 60.51% of the panel's width. Combine
+   `left: 60.51%` with `translateX(-50%)` to centre the row at that point. */
+.concentration-row {
+  position: absolute;
+  left: 60.51%;
+  transform: translateX(-50%);
+  bottom: 6px;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 26px;
+  align-items: center;
+}
+
+/* ---------- debug overlay (press G) ---------- */
+
+.debug-grid .board::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 99;
+  background-image:
+    linear-gradient(to right, rgba(255, 0, 128, .25) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 0, 128, .25) 1px, transparent 1px);
+  background-size: 5% 5%;
+}

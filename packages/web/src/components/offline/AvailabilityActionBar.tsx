@@ -1,4 +1,6 @@
+import { EyeIcon, PadlockIcon } from "../icons";
 import { Button } from "../ui/Button";
+import { Chip } from "../ui/Chip";
 
 type Mode = "view" | "edit" | "lock";
 
@@ -118,35 +120,21 @@ function AdminToggleButton({
 }) {
   const positionClass =
     variant === "floating"
-      ? "absolute left-3 top-1/2 hidden -translate-y-1/2 sm:inline-flex"
-      : "inline-flex sm:hidden";
+      ? "absolute left-3 top-1/2 hidden -translate-y-1/2 sm:flex"
+      : "flex sm:hidden";
   return (
-    <button
-      type="button"
+    <Chip
+      pressed={active}
+      tone="accent"
+      variant="outlined"
+      size="sm"
       onClick={onClick}
       aria-label={`${active ? "Disable" : "Enable"} admin view`}
-      aria-pressed={active}
-      className={`${positionClass} shrink-0 items-center gap-1.5 rounded-md border px-2 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] transition sm:px-2.5 ${
-        active
-          ? "border-accent-400/60 bg-accent-500/15 text-accent-300 hover:bg-accent-500/25"
-          : "border-white/15 text-gray-400 hover:border-white/30 hover:bg-white/5"
-      }`}
+      icon={<EyeIcon className="h-3.5 w-3.5" />}
+      className={`${positionClass} shrink-0 uppercase tracking-[0.16em]`}
     >
-      <svg
-        viewBox="0 0 24 24"
-        className="h-3.5 w-3.5"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2.2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z" />
-        <circle cx="12" cy="12" r="3" />
-      </svg>
       <span className="hidden sm:inline">{active ? "Admin" : "Player"}</span>
-    </button>
+    </Chip>
   );
 }
 
@@ -159,30 +147,22 @@ function LockInButton({
 }) {
   const positionClass =
     variant === "floating"
-      ? "absolute right-3 top-1/2 hidden -translate-y-1/2 sm:inline-flex"
-      : "inline-flex sm:hidden";
+      ? "absolute right-3 top-1/2 hidden -translate-y-1/2 sm:flex"
+      : "flex sm:hidden";
   return (
-    <button
-      type="button"
+    <Chip
+      pressed
+      tone="amber"
+      variant="outlined"
+      size="sm"
+      ring={false}
       onClick={onClick}
       aria-label="Enter lock-in mode"
-      className={`${positionClass} shrink-0 items-center gap-1.5 rounded-md border border-amber-400/30 px-2 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-amber-200 transition hover:border-amber-300/60 hover:bg-amber-400/10 sm:px-2.5`}
+      icon={<PadlockIcon closed className="h-3.5 w-3.5" />}
+      className={`${positionClass} shrink-0 uppercase tracking-[0.16em]`}
     >
-      <svg
-        viewBox="0 0 24 24"
-        className="h-3.5 w-3.5"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2.2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        aria-hidden="true"
-      >
-        <rect x="5" y="11" width="14" height="9" rx="1.5" />
-        <path d="M8 11V7a4 4 0 0 1 8 0v4" />
-      </svg>
       <span className="hidden sm:inline">Lock-in</span>
-    </button>
+    </Chip>
   );
 }
 

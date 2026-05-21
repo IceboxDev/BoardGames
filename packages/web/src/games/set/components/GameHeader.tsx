@@ -1,6 +1,7 @@
 import { formatTime } from "@boardgames/core/games/set/metrics";
 import type { GamePhase } from "@boardgames/core/games/set/types";
 import { useEffect, useState } from "react";
+import { Button } from "../../../components/ui/Button";
 
 interface GameHeaderProps {
   phase: GamePhase;
@@ -53,6 +54,8 @@ export default function GameHeader({
 
   return (
     <div className="flex items-center gap-3 px-3 py-2 shrink-0">
+      {/* Game-defining action button — bespoke pulse-glow when callable, dim when not. */}
+      {/* biome-ignore lint/correctness/noRestrictedElements: bespoke game-piece action button with animated pulse */}
       <button
         type="button"
         onClick={onCallSet}
@@ -84,30 +87,21 @@ export default function GameHeader({
       </div>
 
       <div className="flex gap-2 shrink-0">
-        <button
-          type="button"
-          onClick={onPlusThree}
-          disabled={!plusThreeEnabled}
-          className="rounded-lg bg-gray-700 px-3 py-1.5 text-xs text-white transition hover:bg-gray-600 disabled:opacity-40"
-        >
+        <Button variant="secondary" size="xs" onClick={onPlusThree} disabled={!plusThreeEnabled}>
           +3
-        </button>
-        <button
-          type="button"
+        </Button>
+        <Button
+          variant="warning"
+          size="xs"
           onClick={onHint}
           disabled={!hintEnabled}
-          className="rounded-lg bg-amber-700 px-3 py-1.5 text-xs text-white transition hover:bg-amber-600 disabled:opacity-40"
           title="Highlights one card from a valid SET (costs 3 penalties)"
         >
           Hint
-        </button>
-        <button
-          type="button"
-          onClick={onNewGame}
-          className="rounded-lg bg-gray-700 px-3 py-1.5 text-xs text-white transition hover:bg-gray-600"
-        >
+        </Button>
+        <Button variant="secondary" size="xs" onClick={onNewGame}>
           New
-        </button>
+        </Button>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import type { ActionLogEntry } from "@boardgames/core/games/sushi-go/types";
 import { AnimatePresence, motion } from "framer-motion";
+import { Button } from "../../../components/ui/Button";
 
 interface RoundEndOverlayProps {
   entry: ActionLogEntry;
@@ -102,13 +103,14 @@ export default function RoundEndOverlay({
           )}
 
           <div className="mt-4 flex justify-center">
-            <button
-              type="button"
+            <Button
+              variant="primary"
+              size="md"
               onClick={onContinue}
-              className="rounded-lg bg-orange-600 px-6 py-2 text-sm font-semibold text-white transition-colors hover:bg-orange-500"
+              className="!bg-orange-600 hover:!bg-orange-500 !shadow-orange-500/20"
             >
               {entry.round >= 3 ? "See Final Results" : `Start Round ${entry.round + 1}`}
-            </button>
+            </Button>
           </div>
         </motion.div>
       </motion.div>

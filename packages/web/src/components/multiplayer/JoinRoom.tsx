@@ -76,13 +76,9 @@ export function JoinRoom({ title, onCreateRoom, onJoinRoom, onBack, error }: Joi
           <Button variant="secondary" size="lg" onClick={() => setMode("join")}>
             Join Room
           </Button>
-          <button
-            type="button"
-            onClick={onBack}
-            className="mt-2 text-xs text-gray-500 transition-colors hover:text-gray-300"
-          >
+          <Button variant="link" onClick={onBack} className="mt-2">
             Back
-          </button>
+          </Button>
         </div>
       ) : (
         <div className="mx-auto flex w-full max-w-sm flex-col gap-3">
@@ -106,13 +102,9 @@ export function JoinRoom({ title, onCreateRoom, onJoinRoom, onBack, error }: Joi
           <Button variant="primary" size="lg" disabled={!canJoin} onClick={handleJoin}>
             Join
           </Button>
-          <button
-            type="button"
-            onClick={() => setMode("choose")}
-            className="mt-1 text-xs text-gray-500 transition-colors hover:text-gray-300"
-          >
+          <Button variant="link" onClick={() => setMode("choose")} className="mt-1">
             Back
-          </button>
+          </Button>
         </div>
       )}
     </SetupLayout>

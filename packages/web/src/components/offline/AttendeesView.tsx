@@ -3,6 +3,8 @@ import { games as gameRegistry } from "../../games/registry";
 import type { GameDefinition } from "../../games/types";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { Attendee } from "../../lib/calendar-games";
+import { XIcon } from "../icons";
+import { IconButton } from "../ui/IconButton";
 
 type Props = {
   attendees: Attendee[];
@@ -178,34 +180,26 @@ function AttendeeRow({
       </div>
 
       {canKick && (
-        <button
-          type="button"
-          onClick={handleKick}
-          disabled={isKicking}
+        <IconButton
+          variant="danger"
+          shape="circle"
+          size="xs"
           aria-label={`Remove ${attendee.name} from this game night`}
           title={`Remove ${attendee.name} — sets their RSVP to "Not going"`}
-          className="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-white/[0.04] text-gray-400 transition hover:bg-rose-500/20 hover:text-rose-200 disabled:opacity-50"
-        >
-          {isKicking ? (
-            <span
-              aria-hidden="true"
-              className="h-3 w-3 animate-spin rounded-full border border-current border-t-transparent"
-            />
-          ) : (
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 16 16"
-              className="h-3.5 w-3.5"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="M4 4l8 8M12 4l-8 8" />
-            </svg>
-          )}
-        </button>
+          disabled={isKicking}
+          onClick={handleKick}
+          className="h-7 w-7 bg-white/[0.04]"
+          icon={
+            isKicking ? (
+              <span
+                aria-hidden="true"
+                className="h-3 w-3 animate-spin rounded-full border border-current border-t-transparent"
+              />
+            ) : (
+              <XIcon className="h-3.5 w-3.5" />
+            )
+          }
+        />
       )}
     </div>
   );

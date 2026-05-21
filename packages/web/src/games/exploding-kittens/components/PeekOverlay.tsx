@@ -1,4 +1,5 @@
 import type { Action, GameState } from "@boardgames/core/games/exploding-kittens/types";
+import { Button } from "../../../components/ui/Button";
 import Card from "./Card";
 
 interface PeekOverlayProps {
@@ -28,13 +29,14 @@ export default function PeekOverlay({ state, onAction }: PeekOverlayProps) {
         ))}
       </div>
 
-      <button
-        type="button"
+      <Button
+        variant="primary"
+        size="md"
         onClick={() => onAction({ type: "acknowledge-peek" })}
-        className="rounded-lg bg-purple-600 px-6 py-2 text-sm font-medium text-white transition hover:bg-purple-500"
+        className="!bg-purple-600 !shadow-purple-500/20 hover:!bg-purple-500"
       >
         Got it
-      </button>
+      </Button>
     </div>
   );
 }

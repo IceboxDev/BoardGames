@@ -1,6 +1,7 @@
 import { getLegalActions } from "@boardgames/core/games/exploding-kittens/rules";
 import type { Action, GameState } from "@boardgames/core/games/exploding-kittens/types";
 import { useState } from "react";
+import { Button } from "../../../components/ui/Button";
 
 interface DefuseDialogProps {
   state: GameState;
@@ -32,23 +33,20 @@ export default function DefuseDialog({ state, onAction }: DefuseDialogProps) {
 
         <div className="mt-4 flex justify-center gap-3">
           {defuseActions.map((a) => (
-            <button
-              type="button"
+            <Button
               key={a.cardId}
+              variant="primary"
+              size="md"
               onClick={() => onAction(a)}
-              className="rounded-lg bg-emerald-600 px-6 py-2.5 text-sm font-bold text-white transition hover:bg-emerald-500"
+              className="!bg-emerald-600 !shadow-emerald-500/20 hover:!bg-emerald-500"
             >
               🔧 Defuse!
-            </button>
+            </Button>
           ))}
           {canDie && (
-            <button
-              type="button"
-              onClick={() => onAction({ type: "skip-defuse" })}
-              className="rounded-lg bg-gray-700 px-4 py-2.5 text-sm text-gray-300 transition hover:bg-gray-600"
-            >
+            <Button variant="secondary" size="md" onClick={() => onAction({ type: "skip-defuse" })}>
               Accept fate 💀
-            </button>
+            </Button>
           )}
         </div>
       </div>
@@ -92,13 +90,14 @@ export function ReinsertDialog({
           Position: {position} of {deckSize} (
           {position === 0 ? "top" : position === deckSize ? "bottom" : `${position} from top`})
         </p>
-        <button
-          type="button"
+        <Button
+          variant="primary"
+          size="md"
           onClick={() => onAction({ type: "reinsert-kitten", position })}
-          className="rounded-lg bg-emerald-600 px-6 py-2 text-sm font-medium text-white transition hover:bg-emerald-500"
+          className="!bg-emerald-600 !shadow-emerald-500/20 hover:!bg-emerald-500"
         >
           Place Kitten Here
-        </button>
+        </Button>
       </div>
     </div>
   );

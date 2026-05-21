@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { apiClient, type ReplaySummary } from "../../lib/api-client";
+import { Button } from "../ui/Button";
 
 interface MatchHistoryProps {
   gameSlug: string;
@@ -135,13 +136,9 @@ export default function MatchHistory({
         </div>
       ) : null}
 
-      <button
-        type="button"
-        onClick={onBack}
-        className="mt-2 text-sm text-gray-500 transition-colors hover:text-gray-300"
-      >
+      <Button variant="link" onClick={onBack} className="mt-2 text-sm">
         Back
-      </button>
+      </Button>
     </div>
   );
 }

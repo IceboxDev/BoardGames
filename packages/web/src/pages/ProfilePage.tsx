@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { ArrowRightIcon, GalleryIcon, LockIcon } from "../components/icons";
 import CalendarSyncCard from "../components/profile/CalendarSyncCard";
 import CalendarSyncModal from "../components/profile/CalendarSyncModal";
 import { TopNav, TopNavLink } from "../components/TopNav";
@@ -162,6 +163,10 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
   const empty = !isLoading && total === 0;
 
   return (
+    // Card-shaped clickable surface — entire gallery preview row is the
+    // click target (icon + thumb strip + count + arrow). Exempt as
+    // card-shaped, mirroring CalendarSyncCard.
+    // biome-ignore lint/correctness/noRestrictedElements: card-shaped clickable surface
     <button
       type="button"
       onClick={onClick}
@@ -219,47 +224,7 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
         )}
       </div>
 
-      <svg
-        aria-hidden="true"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-        className="h-4 w-4 shrink-0 text-gray-500 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-accent-300"
-      >
-        <path
-          fillRule="evenodd"
-          d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z"
-          clipRule="evenodd"
-        />
-      </svg>
+      <ArrowRightIcon className="h-4 w-4 shrink-0 text-gray-500 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-accent-300" />
     </button>
-  );
-}
-
-function GalleryIcon() {
-  return (
-    <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden="true">
-      <rect x="3" y="3" width="6" height="6" rx="1.25" />
-      <rect x="11" y="3" width="6" height="6" rx="1.25" />
-      <rect x="3" y="11" width="6" height="6" rx="1.25" />
-      <rect x="11" y="11" width="6" height="6" rx="1.25" />
-    </svg>
-  );
-}
-
-function LockIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className="h-4 w-4 opacity-70"
-      aria-hidden="true"
-    >
-      <rect x="3" y="11" width="18" height="11" rx="2" />
-      <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-    </svg>
   );
 }

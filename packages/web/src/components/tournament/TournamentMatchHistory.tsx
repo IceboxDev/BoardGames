@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { apiClient } from "../../lib/api-client";
+import { Button } from "../ui/Button";
 
 interface TournamentMatchHistoryProps {
   strategies: { id: string; label: string }[];
@@ -182,21 +183,13 @@ export default function TournamentMatchHistory({
 
       <div className="mt-2 flex gap-4">
         {exportLogFn && rawGames.length > 0 && (
-          <button
-            type="button"
-            onClick={handleDownload}
-            className="rounded-lg border border-gray-700 px-5 py-2.5 text-sm font-semibold text-gray-400 transition hover:border-indigo-500 hover:text-indigo-400"
-          >
+          <Button variant="secondary" size="md" onClick={handleDownload}>
             Download all logs (ZIP)
-          </button>
+          </Button>
         )}
-        <button
-          type="button"
-          onClick={onBack}
-          className="text-sm text-gray-500 transition-colors hover:text-gray-300"
-        >
+        <Button variant="link" onClick={onBack} className="text-sm">
           Back to Tournament
-        </button>
+        </Button>
       </div>
     </div>
   );

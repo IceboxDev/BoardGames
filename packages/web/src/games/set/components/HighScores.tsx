@@ -1,6 +1,7 @@
 import { formatTime } from "@boardgames/core/games/set/metrics";
 import type { GameRecord } from "@boardgames/core/games/set/types";
 import { useMemo, useState } from "react";
+import { Button } from "../../../components/ui/Button";
 import Sparkline from "./charts/Sparkline";
 import GameDetailModal from "./GameDetailModal";
 import ProgressDashboard from "./ProgressDashboard";
@@ -94,47 +95,41 @@ export default function HighScores({ history, onClear, onBack }: HighScoresProps
       <div className="mb-6 flex items-center justify-between">
         <h2 className="text-2xl font-bold text-white">High Scores</h2>
         <div className="flex gap-3">
-          <button
-            type="button"
-            onClick={handleClear}
-            className="rounded-lg bg-red-900/50 px-4 py-2 text-sm text-red-300 transition hover:bg-red-900"
-          >
+          <Button variant="danger" size="md" onClick={handleClear}>
             {confirmClear ? "Confirm Clear?" : "Clear History"}
-          </button>
-          <button
-            type="button"
-            onClick={onBack}
-            className="rounded-lg bg-gray-700 px-4 py-2 text-sm text-white transition hover:bg-gray-600"
-          >
+          </Button>
+          <Button variant="secondary" size="md" onClick={onBack}>
             Back
-          </button>
+          </Button>
         </div>
       </div>
 
       {/* Tabs */}
       <div className="mb-6 flex gap-1 border-b border-gray-800 pb-px">
-        <button
-          type="button"
+        <Button
+          variant="ghost"
+          size="md"
           onClick={() => setTab("history")}
-          className={`px-4 py-2 text-sm font-medium border-b-2 transition ${
+          className={`!rounded-none border-b-2 ${
             tab === "history"
-              ? "border-indigo-500 text-white"
-              : "border-transparent text-gray-500 hover:text-gray-300"
+              ? "!border-indigo-500 !text-white"
+              : "!border-transparent !text-gray-500 hover:!text-gray-300"
           }`}
         >
           History
-        </button>
-        <button
-          type="button"
+        </Button>
+        <Button
+          variant="ghost"
+          size="md"
           onClick={() => setTab("progress")}
-          className={`px-4 py-2 text-sm font-medium border-b-2 transition ${
+          className={`!rounded-none border-b-2 ${
             tab === "progress"
-              ? "border-indigo-500 text-white"
-              : "border-transparent text-gray-500 hover:text-gray-300"
+              ? "!border-indigo-500 !text-white"
+              : "!border-transparent !text-gray-500 hover:!text-gray-300"
           }`}
         >
           Progress
-        </button>
+        </Button>
       </div>
 
       {tab === "progress" ? (

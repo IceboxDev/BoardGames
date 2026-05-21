@@ -1,5 +1,8 @@
 import type { MatchOutcomeTeams, Participant } from "@boardgames/core/history/types";
 import { teamConfigForSlug } from "../../../games/team-config";
+import { Button } from "../../ui/Button";
+import { Chip } from "../../ui/Chip";
+import { IconButton } from "../../ui/IconButton";
 import { Input } from "../../ui/Input";
 import { ParticipantPicker } from "../ParticipantPicker";
 
@@ -130,35 +133,30 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
                   />
                 )}
                 {showManualWinner ? (
-                  <button
-                    type="button"
-                    onClick={() => toggleWinner(idx)}
-                    className={`rounded-md px-2 py-1 text-xs font-medium transition ${
-                      isWinner
-                        ? "bg-amber-500/20 text-amber-200 ring-1 ring-amber-400/40"
-                        : "bg-surface-800 text-gray-400 hover:bg-surface-700"
-                    }`}
-                  >
+                  <Chip pressed={isWinner} tone="amber" size="sm" onClick={() => toggleWinner(idx)}>
                     Winner
-                  </button>
+                  </Chip>
                 ) : (
                   isWinner && (
-                    <span
-                      className="rounded-md bg-amber-500/15 px-2 py-1 text-xs font-medium text-amber-200 ring-1 ring-amber-400/30"
+                    <Chip
+                      pressed
+                      tone="amber"
+                      size="sm"
+                      asStatic
                       title="Auto-detected from the highest score"
                     >
                       Leading
-                    </span>
+                    </Chip>
                   )
                 )}
                 {value.teams.length > 2 && (
-                  <button
-                    type="button"
+                  <IconButton
+                    variant="danger"
+                    size="xs"
+                    aria-label={`Remove team ${idx + 1}`}
                     onClick={() => removeTeam(idx)}
-                    className="rounded-md px-2 py-1 text-xs text-rose-400 hover:bg-rose-500/10"
-                  >
-                    ✕
-                  </button>
+                    icon={<span aria-hidden="true">✕</span>}
+                  />
                 )}
               </div>
               <ParticipantPicker
@@ -182,14 +180,15 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
           );
         })}
       </div>
-      <button
-        type="button"
+      <Button
+        variant="secondary"
+        size="sm"
         onClick={addTeam}
         disabled={value.teams.length >= 8}
-        className="self-start rounded-md border border-white/10 px-3 py-1.5 text-xs text-gray-300 hover:bg-surface-800 disabled:opacity-50"
+        className="self-start"
       >
         + Add team
-      </button>
+      </Button>
     </div>
   );
 }
@@ -213,18 +212,15 @@ function MemberRoleRow({
         {roleOptions.map((opt) => {
           const active = role === opt;
           return (
-            <button
+            <Chip
               key={opt}
-              type="button"
+              pressed={active}
+              tone="accent"
+              size="xs"
               onClick={() => onRoleChange(active ? undefined : opt)}
-              className={`rounded-md px-2 py-0.5 text-[11px] font-medium transition ${
-                active
-                  ? "bg-accent-500/20 text-accent-100 ring-1 ring-accent-400/40"
-                  : "bg-surface-800 text-gray-400 hover:bg-surface-700"
-              }`}
             >
               {opt}
-            </button>
+            </Chip>
           );
         })}
       </div>

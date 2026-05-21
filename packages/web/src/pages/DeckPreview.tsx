@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CardDeck } from "../components/CardDeck";
+import { Chip } from "../components/ui/Chip";
 import { PageShell } from "../components/ui/PageShell";
 
 // ---------------------------------------------------------------------------
@@ -105,18 +106,16 @@ export default function DeckPreview() {
               {/* Quick presets */}
               <div className="mt-2 flex flex-wrap gap-1.5">
                 {[0, 1, 2, 3, 4, 5, 10, 24, 36].map((n) => (
-                  <button
+                  <Chip
                     key={n}
-                    type="button"
+                    pressed={count === n}
+                    tone="accent"
+                    size="xs"
+                    ring={false}
                     onClick={() => setCount(n)}
-                    className={`rounded px-2 py-0.5 text-xs font-medium transition ${
-                      count === n
-                        ? "bg-indigo-600 text-white"
-                        : "bg-gray-800 text-gray-400 hover:bg-gray-700"
-                    }`}
                   >
                     {n}
-                  </button>
+                  </Chip>
                 ))}
               </div>
             </div>
@@ -126,17 +125,15 @@ export default function DeckPreview() {
               <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-400">
                 Trump card
               </span>
-              <button
-                type="button"
+              <Chip
+                pressed={showTrump}
+                tone="accent"
+                size="md"
+                ring={false}
                 onClick={() => setShowTrump(!showTrump)}
-                className={`rounded-lg px-4 py-2 text-sm font-medium transition ${
-                  showTrump
-                    ? "bg-indigo-600 text-white"
-                    : "bg-gray-800 text-gray-400 hover:bg-gray-700"
-                }`}
               >
                 {showTrump ? "Showing" : "Hidden"}
-              </button>
+              </Chip>
             </div>
 
             {/* Glow toggle */}
@@ -144,17 +141,15 @@ export default function DeckPreview() {
               <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-400">
                 Glow (selected)
               </span>
-              <button
-                type="button"
+              <Chip
+                pressed={isGlowing}
+                tone="amber"
+                size="md"
+                ring={false}
                 onClick={() => setIsGlowing(!isGlowing)}
-                className={`rounded-lg px-4 py-2 text-sm font-medium transition ${
-                  isGlowing
-                    ? "bg-amber-600 text-white"
-                    : "bg-gray-800 text-gray-400 hover:bg-gray-700"
-                }`}
               >
                 {isGlowing ? "Glowing" : "Off"}
-              </button>
+              </Chip>
             </div>
 
             {/* Back style */}
@@ -164,18 +159,16 @@ export default function DeckPreview() {
               </span>
               <div className="flex gap-2">
                 {BACKS.map((b, i) => (
-                  <button
+                  <Chip
                     key={b.name}
-                    type="button"
+                    pressed={backIndex === i}
+                    tone="accent"
+                    size="sm"
+                    ring={false}
                     onClick={() => setBackIndex(i)}
-                    className={`rounded-lg px-3 py-1.5 text-xs font-medium transition ${
-                      backIndex === i
-                        ? "bg-indigo-600 text-white"
-                        : "bg-gray-800 text-gray-400 hover:bg-gray-700"
-                    }`}
                   >
                     {b.name}
-                  </button>
+                  </Chip>
                 ))}
               </div>
             </div>

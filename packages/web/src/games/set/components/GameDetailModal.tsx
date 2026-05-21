@@ -6,6 +6,9 @@ import {
 } from "@boardgames/core/games/set/analytics";
 import { formatTime } from "@boardgames/core/games/set/metrics";
 import type { GameRecord } from "@boardgames/core/games/set/types";
+import { XIcon } from "../../../components/icons";
+import { Button } from "../../../components/ui/Button";
+import { IconButton } from "../../../components/ui/IconButton";
 import BarChartH from "./charts/BarChartH";
 import RadarChart from "./charts/RadarChart";
 
@@ -120,13 +123,14 @@ export default function GameDetailModal({ record, history, onClose }: GameDetail
       aria-label="Close modal"
     >
       <div className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-gray-900 p-6 shadow-2xl">
-        <button
-          type="button"
+        <IconButton
+          variant="ghost"
+          size="sm"
+          aria-label="Close detail"
           onClick={onClose}
-          className="absolute right-4 top-4 text-gray-500 hover:text-white text-xl leading-none"
-        >
-          ×
-        </button>
+          icon={<XIcon className="h-4 w-4" />}
+          className="absolute right-4 top-4"
+        />
 
         <div className="mb-4 text-center">
           <p className="text-xs text-gray-500 uppercase tracking-widest">
@@ -288,13 +292,9 @@ export default function GameDetailModal({ record, history, onClose }: GameDetail
         </div>
 
         <div className="flex justify-center">
-          <button
-            type="button"
-            onClick={onClose}
-            className="rounded-lg bg-gray-700 px-6 py-2 text-sm font-semibold text-white hover:bg-gray-600 transition"
-          >
+          <Button variant="secondary" size="md" onClick={onClose}>
             Close
-          </button>
+          </Button>
         </div>
       </div>
     </div>

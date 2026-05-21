@@ -16,6 +16,7 @@ import type {
 } from "@boardgames/core/games/lost-cities/types";
 import { EXPEDITION_COLORS } from "@boardgames/core/games/lost-cities/types";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Button } from "../../../components/ui/Button";
 import useDocumentTitle from "../../../hooks/useDocumentTitle";
 import type { BoardState } from "./GameBoard";
 import GameBoard from "./GameBoard";
@@ -286,60 +287,61 @@ export default function GameReplay({ game }: GameReplayProps) {
           {rs.lastActionDescription}
         </p>
         <div className="flex items-center gap-2 flex-wrap">
-          <button
-            type="button"
+          <Button
+            variant="ghost"
+            size="xs"
             onClick={() => goTo(0)}
             disabled={stepIndex === 0}
-            className="px-2 py-1 text-xs text-gray-400 hover:text-white disabled:opacity-30 transition-colors"
             title="First"
           >
             ⟨⟨
-          </button>
-          <button
-            type="button"
+          </Button>
+          <Button
+            variant="secondary"
+            size="sm"
             onClick={() => goTo(stepIndex - 1)}
             disabled={stepIndex === 0}
-            className="px-3 py-1.5 rounded-md border border-gray-700 text-sm text-gray-300 hover:bg-gray-800 disabled:opacity-30 transition-colors"
           >
             Prev
-          </button>
+          </Button>
 
           {playing ? (
-            <button
-              type="button"
+            <Button
+              variant="primary"
+              size="sm"
               onClick={stop}
-              className="px-4 py-1.5 rounded-md bg-red-600/80 text-sm text-white hover:bg-red-600 transition-colors"
+              className="!bg-red-600/80 hover:!bg-red-600 !shadow-rose-500/20"
             >
               Pause
-            </button>
+            </Button>
           ) : (
-            <button
-              type="button"
+            <Button
+              variant="primary"
+              size="sm"
               onClick={play}
               disabled={stepIndex >= steps.length - 1}
-              className="px-4 py-1.5 rounded-md bg-indigo-600 text-sm text-white hover:bg-indigo-500 disabled:opacity-30 transition-colors"
             >
               Play
-            </button>
+            </Button>
           )}
 
-          <button
-            type="button"
+          <Button
+            variant="secondary"
+            size="sm"
             onClick={() => goTo(stepIndex + 1)}
             disabled={stepIndex >= steps.length - 1}
-            className="px-3 py-1.5 rounded-md border border-gray-700 text-sm text-gray-300 hover:bg-gray-800 disabled:opacity-30 transition-colors"
           >
             Next
-          </button>
-          <button
-            type="button"
+          </Button>
+          <Button
+            variant="ghost"
+            size="xs"
             onClick={() => goTo(steps.length - 1)}
             disabled={stepIndex >= steps.length - 1}
-            className="px-2 py-1 text-xs text-gray-400 hover:text-white disabled:opacity-30 transition-colors"
             title="Last"
           >
             ⟩⟩
-          </button>
+          </Button>
 
           <input
             type="range"

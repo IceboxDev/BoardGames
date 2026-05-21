@@ -1,3 +1,4 @@
+import type { SkyTeamMachineEvent } from "@boardgames/core/games/sky-team/machine";
 import type {
   PlayerIndex,
   SkyTeamAction,
@@ -11,7 +12,7 @@ import GameScreen from "../../components/game-layout/GameScreen";
 import { MpGameOverScreen } from "../../components/game-over";
 import { useGameShell } from "../../hooks/useGameShell";
 import BriefingPanel from "./components/BriefingPanel";
-import Cockpit from "./components/Cockpit";
+import Cockpit from "./components/board/Cockpit";
 import GameOverScreen from "./components/GameOverScreen";
 import PhaseBanner from "./components/PhaseBanner";
 import PlayerDiceTray from "./components/PlayerDiceTray";
@@ -19,7 +20,7 @@ import SetupScreen, { type SkyTeamStartConfig } from "./components/SetupScreen";
 import { mapSkyTeamLog } from "./log-mapper";
 
 export default function SkyTeam() {
-  const shell = useGameShell<SkyTeamPlayerView, SkyTeamAction, SkyTeamResult>("sky-team", {
+  const shell = useGameShell<SkyTeamPlayerView, SkyTeamMachineEvent, SkyTeamResult>("sky-team", {
     getLobbyStartConfig: () => ({ scenarioId: "yul-montreal" }),
   });
 
@@ -57,19 +58,31 @@ export default function SkyTeam() {
   const activeGame = shell.mode === "mp-playing" ? shell.mp : shell.game;
   const view = activeGame.view;
 
+  const sendAction = useCallback(
+    (action: SkyTeamAction) => {
+      if (!view) return;
+      activeGame.send({
+        type: "PLAYER_ACTION",
+        player: view.viewerIndex as PlayerIndex,
+        action,
+      });
+    },
+    [activeGame.send, view],
+  );
+
   const handleSelectSlot = useCallback(
     (slot: SlotId) => {
       if (selectedDieId == null) return;
-      activeGame.send({
+      sendAction({
         kind: "place-die",
         dieId: selectedDieId,
         slot,
         coffeeAdjust,
-      } as SkyTeamAction);
+      });
       setSelectedDieId(null);
       setCoffeeAdjust(0);
     },
-    [selectedDieId, coffeeAdjust, activeGame.send],
+    [selectedDieId, coffeeAdjust, sendAction],
   );
 
   const handleSelectDie = useCallback((id: number) => {
@@ -82,23 +95,22 @@ export default function SkyTeam() {
   }, []);
 
   const handleReady = useCallback(() => {
-    activeGame.send({ kind: "ready-to-roll" } as SkyTeamAction);
-  }, [activeGame.send]);
+    sendAction({ kind: "ready-to-roll" });
+  }, [sendAction]);
 
   const handleSpendReroll = useCallback(
     (ids: number[]) => {
       if (!view) return;
       const myIdx = view.viewerIndex as PlayerIndex;
-      const action: SkyTeamAction = {
+      sendAction({
         kind: "spend-reroll",
         pilotDieIds: myIdx === 0 ? ids : [],
         copilotDieIds: myIdx === 1 ? ids : [],
-      };
-      activeGame.send(action);
+      });
       setRerollMode(false);
       setRerollSelection(new Set());
     },
-    [activeGame.send, view],
+    [sendAction, view],
   );
 
   const toggleRerollMode = useCallback(() => {

@@ -1,13 +1,17 @@
-import { weightStats } from "../../games/registry";
 import type { BggGame } from "../../games/types";
+import { formatCount, normalizeWeight, weightLabel } from "../../lib/bgg-format";
 import { StarIcon } from "../icons";
-import { formatCount, weightLabel } from "./bgg-helpers";
 
-/**
- * Compact rating + complexity strip rendered inside a game card. Shared by
- * `GameCarousel3D` (single-game cards) and `FamilyCarouselCard` (family
- * cards) so both surface the same BGG signal block.
- */
+// Compact rating + complexity strip used inside carousel cards. Renders
+// tighter than `BggMeta` (no top border, no extra padding) and uses the
+// `normalizeWeight` formatter so the narrow bar uses its full visible
+// range across the catalog instead of compressing 1..5 into the leftmost
+// 20% of the bar.
+//
+// `compact` further drops the complexity row entirely; carousel cards in
+// their `compact` size (tiny phones) keep only the rating row to preserve
+// vertical space for the description line-clamp.
+
 export function BggInline({ bgg, compact }: { bgg: BggGame; compact: boolean }) {
   const hasRating = bgg.averageRating !== null;
   const hasWeight = !compact && bgg.averageWeight !== null && bgg.averageWeight > 0;
@@ -38,8 +42,6 @@ export function BggInline({ bgg, compact }: { bgg: BggGame; compact: boolean }) 
             <div
               className="absolute inset-y-0 left-0 rounded-full"
               style={{
-                // Normalize against the registry's lightest/heaviest game so
-                // the bar uses its full range across the catalog.
                 width: `${normalizeWeight(bgg.averageWeight)}%`,
                 backgroundColor: "var(--accent)",
               }}
@@ -55,11 +57,4 @@ export function BggInline({ bgg, compact }: { bgg: BggGame; compact: boolean }) 
       )}
     </div>
   );
-}
-
-function normalizeWeight(w: number): number {
-  const { min, max } = weightStats;
-  if (max <= min) return 50; // degenerate single-weight catalog
-  const ratio = (w - min) / (max - min);
-  return Math.max(0, Math.min(100, ratio * 100));
 }

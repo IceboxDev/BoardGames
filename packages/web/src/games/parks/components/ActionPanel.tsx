@@ -14,6 +14,7 @@ import {
 } from "@boardgames/core/games/parks/types";
 import type { ReactNode } from "react";
 import { AiThinkingIndicator } from "../../../components/ui";
+import { Button } from "../../../components/ui/Button";
 
 const GEAR_EFFECT_DESCRIPTIONS: Record<PassionId, string> = {
   adventure: "Each Instant-Action park you visit also rolls the Trail Die.",
@@ -83,14 +84,15 @@ function PrimaryButton({
   disabled?: boolean;
 }) {
   return (
-    <button
-      type="button"
+    <Button
+      variant="secondary"
+      size="xs"
       onClick={onClick}
       disabled={disabled}
-      className="rounded-lg border border-emerald-500/50 bg-emerald-500/15 px-4 py-1.5 text-xs font-medium text-emerald-300 transition hover:bg-emerald-500/25 disabled:cursor-default disabled:opacity-40"
+      className="!border-emerald-500/50 !bg-emerald-500/15 !text-emerald-300 hover:!bg-emerald-500/25"
     >
       {children}
-    </button>
+    </Button>
   );
 }
 
@@ -104,14 +106,9 @@ function SecondaryButton({
   disabled?: boolean;
 }) {
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      disabled={disabled}
-      className="rounded-lg border border-gray-600 bg-gray-700/60 px-4 py-1.5 text-xs font-medium text-white transition hover:bg-gray-600 disabled:cursor-default disabled:opacity-40"
-    >
+    <Button variant="secondary" size="xs" onClick={onClick} disabled={disabled}>
       {children}
-    </button>
+    </Button>
   );
 }
 
@@ -145,26 +142,28 @@ export default function ActionPanel({
           message={`${PASSION_LABELS[pid]} — pick ONE reward (locked for the rest of the game)`}
         />
         <div className="flex flex-wrap justify-center gap-2">
-          <button
-            type="button"
+          <Button
+            variant="secondary"
+            size="sm"
             onClick={() => onAction({ type: "passion-mode-choice", mode: "gear" })}
-            className="flex max-w-xs flex-col items-start gap-0.5 rounded-lg border border-emerald-500/50 bg-emerald-500/15 px-3 py-1.5 text-left text-emerald-300 transition hover:bg-emerald-500/25"
+            className="!flex-col !items-start !gap-0.5 max-w-xs !text-left !border-emerald-500/50 !bg-emerald-500/15 !text-emerald-300 hover:!bg-emerald-500/25"
           >
             <span className="text-xs font-semibold">Gear Effect (ongoing)</span>
             <span className="text-[10px] leading-tight text-emerald-200/70">
               {GEAR_EFFECT_DESCRIPTIONS[pid]}
             </span>
-          </button>
-          <button
-            type="button"
+          </Button>
+          <Button
+            variant="secondary"
+            size="sm"
             onClick={() => onAction({ type: "passion-mode-choice", mode: "end-bonus" })}
-            className="flex max-w-xs flex-col items-start gap-0.5 rounded-lg border border-violet-500/50 bg-violet-500/15 px-3 py-1.5 text-left text-violet-300 transition hover:bg-violet-500/25"
+            className="!flex-col !items-start !gap-0.5 max-w-xs !text-left !border-violet-500/50 !bg-violet-500/15 !text-violet-300 hover:!bg-violet-500/25"
           >
             <span className="text-xs font-semibold">End-Game Bonus</span>
             <span className="text-[10px] leading-tight text-violet-200/70">
               {END_BONUS_DESCRIPTIONS[pid]}
             </span>
-          </button>
+          </Button>
         </div>
       </div>
     );

@@ -133,6 +133,12 @@ export default function GameReactions({
             }
           : undefined;
         return (
+          // Bespoke reaction widget — circular icon-toggle with a count
+          // badge overlay and a per-game `accentHex` (not one of the
+          // fixed Chip/IconButton tones). Documented exemption to the
+          // <Button>/<IconButton> mandate because the dynamic accent
+          // chrome doesn't fit either primitive cleanly.
+          // biome-ignore lint/correctness/noRestrictedElements: bespoke icon-toggle with dynamic per-game accent
           <button
             key={kind}
             type="button"

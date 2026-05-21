@@ -1,5 +1,7 @@
 import { useCallback, useMemo, useState } from "react";
+import { MinusIcon, PlusIcon } from "../icons";
 import { Button } from "../ui/Button";
+import { IconButton } from "../ui/IconButton";
 import { OptionCard } from "./OptionCard";
 import { SectionLabel } from "./SectionLabel";
 import { SetupHeader } from "./SetupHeader";
@@ -68,20 +70,16 @@ function PlayerCountStepper({
   return (
     <div className="flex flex-col items-center gap-3">
       <div className="flex items-center gap-1">
-        <button
-          type="button"
+        <IconButton
+          variant="bordered"
+          shape="circle"
+          size="md"
+          aria-label="Decrease player count"
           disabled={!canDecrement}
           onClick={() => onChange(value - 1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-700 bg-gray-800/80 text-lg text-gray-300 transition hover:border-gray-500 hover:bg-gray-700 hover:text-white disabled:pointer-events-none disabled:opacity-30"
-        >
-          <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden="true">
-            <path
-              fillRule="evenodd"
-              d="M4 10a.75.75 0 01.75-.75h10.5a.75.75 0 010 1.5H4.75A.75.75 0 014 10z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </button>
+          icon={<MinusIcon className="h-4 w-4" />}
+          className="h-10 w-10"
+        />
 
         <div className="flex w-20 flex-col items-center justify-center">
           <span className="text-3xl font-extrabold tabular-nums tracking-tight text-white">
@@ -89,16 +87,16 @@ function PlayerCountStepper({
           </span>
         </div>
 
-        <button
-          type="button"
+        <IconButton
+          variant="bordered"
+          shape="circle"
+          size="md"
+          aria-label="Increase player count"
           disabled={!canIncrement}
           onClick={() => onChange(value + 1)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-700 bg-gray-800/80 text-lg text-gray-300 transition hover:border-gray-500 hover:bg-gray-700 hover:text-white disabled:pointer-events-none disabled:opacity-30"
-        >
-          <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden="true">
-            <path d="M10.75 4.75a.75.75 0 00-1.5 0v4.5h-4.5a.75.75 0 000 1.5h4.5v4.5a.75.75 0 001.5 0v-4.5h4.5a.75.75 0 000-1.5h-4.5v-4.5z" />
-          </svg>
-        </button>
+          icon={<PlusIcon className="h-4 w-4" />}
+          className="h-10 w-10"
+        />
       </div>
 
       <p className="text-xs text-gray-500">

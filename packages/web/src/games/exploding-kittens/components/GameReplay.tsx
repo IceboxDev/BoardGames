@@ -2,6 +2,7 @@ import type { EKGameReplayLog } from "@boardgames/core/games/exploding-kittens/r
 import { snapshotToGameState } from "@boardgames/core/games/exploding-kittens/replay-log";
 import type { ActionLogEntry, GameState } from "@boardgames/core/games/exploding-kittens/types";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Button } from "../../../components/ui/Button";
 import GameBoard from "./GameBoard";
 
 interface GameReplayProps {
@@ -107,62 +108,63 @@ export default function GameReplay({ game }: GameReplayProps) {
         </p>
 
         <div className="flex items-center justify-center gap-2 flex-wrap">
-          <button
-            type="button"
+          <Button
+            variant="ghost"
+            size="xs"
             onClick={() => goTo(0)}
             disabled={stepIndex === 0}
-            className="px-2 py-1 text-xs text-gray-400 hover:text-white disabled:opacity-30 transition-colors"
             title="First"
           >
             {"<<"}
-          </button>
+          </Button>
 
-          <button
-            type="button"
+          <Button
+            variant="secondary"
+            size="sm"
             onClick={() => goTo(stepIndex - 1)}
             disabled={stepIndex === 0}
-            className="rounded-md border border-gray-700 px-3 py-1.5 text-sm text-gray-300 transition-colors hover:bg-gray-800 disabled:opacity-30"
           >
             Prev
-          </button>
+          </Button>
 
           {playing ? (
-            <button
-              type="button"
+            <Button
+              variant="primary"
+              size="sm"
               onClick={stop}
-              className="rounded-md bg-red-600/80 px-4 py-1.5 text-sm text-white transition-colors hover:bg-red-600"
+              className="!bg-red-600/80 hover:!bg-red-600 !shadow-rose-500/20"
             >
               Pause
-            </button>
+            </Button>
           ) : (
-            <button
-              type="button"
+            <Button
+              variant="primary"
+              size="sm"
               onClick={play}
               disabled={stepIndex >= steps.length - 1}
-              className="rounded-md bg-indigo-600 px-4 py-1.5 text-sm text-white transition-colors hover:bg-indigo-500 disabled:opacity-30"
             >
               Play
-            </button>
+            </Button>
           )}
 
-          <button
-            type="button"
+          <Button
+            variant="secondary"
+            size="sm"
             onClick={() => goTo(stepIndex + 1)}
             disabled={stepIndex >= steps.length - 1}
-            className="rounded-md border border-gray-700 px-3 py-1.5 text-sm text-gray-300 transition-colors hover:bg-gray-800 disabled:opacity-30"
           >
             Next
-          </button>
+          </Button>
 
-          <button
-            type="button"
+          <Button
+            variant="ghost"
+            size="xs"
             onClick={() => goTo(steps.length - 1)}
             disabled={stepIndex >= steps.length - 1}
-            className="px-2 py-1 text-xs text-gray-400 hover:text-white disabled:opacity-30 transition-colors"
             title="Last"
           >
             {">>"}
-          </button>
+          </Button>
 
           <input
             type="range"

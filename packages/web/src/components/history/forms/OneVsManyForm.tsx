@@ -1,5 +1,6 @@
 import type { MatchOutcomeOneVsMany, Participant } from "@boardgames/core/history/types";
 import { useId } from "react";
+import { Chip } from "../../ui/Chip";
 import { Field } from "../../ui/Field";
 import { Input } from "../../ui/Input";
 import { ParticipantPicker } from "../ParticipantPicker";
@@ -91,30 +92,26 @@ export function OneVsManyForm({ users, value, onChange }: Props) {
       </Field>
       <Field label="Winner side" htmlFor="ovm-winner">
         <div className="flex gap-2">
-          <button
-            type="button"
-            onClick={() => onChange({ ...value, winnerSide: "solo" })}
+          <Chip
+            pressed={value.winnerSide === "solo"}
+            tone="amber"
+            size="md"
+            block
             disabled={soloEmpty}
-            className={`flex-1 rounded-md px-3 py-2 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-40 ${
-              value.winnerSide === "solo"
-                ? "bg-amber-500/20 text-amber-200 ring-1 ring-amber-400/40"
-                : "bg-surface-800 text-gray-400 hover:bg-surface-700"
-            }`}
+            onClick={() => onChange({ ...value, winnerSide: "solo" })}
           >
             {value.solo.roleLabel ?? "Solo"} won
-          </button>
-          <button
-            type="button"
-            onClick={() => onChange({ ...value, winnerSide: "team" })}
+          </Chip>
+          <Chip
+            pressed={value.winnerSide === "team"}
+            tone="amber"
+            size="md"
+            block
             disabled={value.team.members.length === 0}
-            className={`flex-1 rounded-md px-3 py-2 text-sm font-medium transition disabled:cursor-not-allowed disabled:opacity-40 ${
-              value.winnerSide === "team"
-                ? "bg-amber-500/20 text-amber-200 ring-1 ring-amber-400/40"
-                : "bg-surface-800 text-gray-400 hover:bg-surface-700"
-            }`}
+            onClick={() => onChange({ ...value, winnerSide: "team" })}
           >
             {value.team.roleLabel ?? "Team"} won
-          </button>
+          </Chip>
         </div>
       </Field>
     </div>
