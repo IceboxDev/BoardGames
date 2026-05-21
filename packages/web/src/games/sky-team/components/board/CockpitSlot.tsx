@@ -1,100 +1,96 @@
-import { BASE_SLOT_DEFS } from "@boardgames/core/games/sky-team/scenarios";
+import {
+  BASE_SLOT_DEFS,
+  BRAKES_ORDER,
+  CONCENTRATION_SLOTS,
+  FLAPS_ORDER,
+  LANDING_GEAR_SLOTS,
+} from "@boardgames/core/games/sky-team/scenarios";
 import type { SkyTeamPlayerView, SlotId } from "@boardgames/core/games/sky-team/types";
-import type { BoardSlotVariant } from "../../../../components/board";
-import { BoardSlot } from "../../../../components/board";
+import { BoardOverlay } from "../../../../components/board";
+import CockpitSlider from "./CockpitSlider";
+import CoffeeCup from "./CoffeeCup";
 import { SLOT_GEOMETRY } from "./geometry";
-import PlayerCockpitDie from "./PlayerCockpitDie";
+import SkyTeamTile, { type TileVariant, tileValueLabel } from "./SkyTeamTile";
 
-interface Props {
-  view: SkyTeamPlayerView;
-  slot: SlotId;
-  label: string;
-  /** Selectability predicate from the parent <Cockpit>. */
-  canPlace: (slot: SlotId) => boolean;
-  onSelect: (slot: SlotId) => void;
-}
-
-const VARIANT_BY_ELIGIBILITY: Record<"pilot" | "copilot" | "both", BoardSlotVariant> = {
+const VARIANT_BY_ELIGIBILITY: Record<"pilot" | "copilot" | "both", TileVariant> = {
   pilot: "pilot",
   copilot: "copilot",
   both: "mixed",
 };
 
-function constraintLabel(slot: SlotId): string | undefined {
-  const allowed = BASE_SLOT_DEFS[slot].allowedValues;
-  return allowed ? allowed.join("/") : undefined;
+const SLIDER_SLOTS: ReadonlySet<SlotId> = new Set<SlotId>([
+  ...LANDING_GEAR_SLOTS,
+  ...FLAPS_ORDER,
+  ...BRAKES_ORDER,
+]);
+
+const CONCENTRATION_SET: ReadonlySet<SlotId> = new Set<SlotId>(CONCENTRATION_SLOTS);
+
+const SLIDER_W = 78;
+const SLIDER_H = 30;
+const TILE_TO_SLIDER_GAP = 4;
+
+interface Props {
+  view: SkyTeamPlayerView;
+  slot: SlotId;
+  label: string;
+  canPlace: (slot: SlotId) => boolean;
+  onSelect: (slot: SlotId) => void;
 }
 
 /**
- * Cockpit-specific wrapper around <BoardSlot>. Reads the slot's state from
- * `view`, picks the variant from `BASE_SLOT_DEFS`, draws the label + value
- * constraint + placed die in viewBox coords.
- *
- * One <CockpitSlot> per logical slot id; geometry comes from SLOT_GEOMETRY.
+ * One cockpit control slot — an interactive HTML tile, optionally with a
+ * hardware-mock slider beneath. Positioned via two `<BoardOverlay>`s so each
+ * primitive sits in its own container-query shell.
  */
 export default function CockpitSlot({ view, slot, label, canPlace, onSelect }: Props) {
   const bounds = SLOT_GEOMETRY[slot];
   const def = BASE_SLOT_DEFS[slot];
   const state = view.slots[slot];
-  const constraint = constraintLabel(slot);
+  const allowed = def.allowedValues;
   const variant = VARIANT_BY_ELIGIBILITY[def.eligibility];
   const selectable = canPlace(slot);
-  const filled = state.die != null;
+  const hasDie = state.die != null;
+  const hasSlider = SLIDER_SLOTS.has(slot);
+  const isConcentration = CONCENTRATION_SET.has(slot);
+  const constraintText = allowed ? allowed.join("/") : undefined;
+  // Concentration tiles render only the coffee-cup icon — no text label inside.
+  const tileLabel = allowed ? tileValueLabel(allowed) : isConcentration ? undefined : label;
 
-  const cx = bounds.x + bounds.w / 2;
-  const cy = bounds.y + bounds.h / 2;
-  // Slots with an allowedValues constraint (gears, flaps, brakes) show the
-  // constraint as their visible label — that's the actionable info. The
-  // descriptive label ("Gear 1") still ships in aria-label for screen readers.
-  const showAsConstraint = constraint != null;
-  const visibleText = showAsConstraint ? constraint : label;
-  const textSize = showAsConstraint
-    ? Math.min(bounds.w, bounds.h) * 0.36
-    : Math.min(bounds.w, bounds.h) * 0.2;
+  const sliderX = bounds.x + bounds.w / 2 - SLIDER_W / 2;
+  const sliderY = bounds.y + bounds.h + TILE_TO_SLIDER_GAP;
 
   return (
-    <BoardSlot
-      bounds={bounds}
-      variant={variant}
-      selectable={selectable}
-      selected={filled}
-      aria-label={`${label}${constraint ? ` (${constraint})` : ""}${filled ? ` — die ${state.die?.value}` : ""}`}
-      onSelect={selectable ? () => onSelect(slot) : undefined}
-    >
-      {filled && state.die ? (
-        <PlayerCockpitDie
-          die={state.die}
-          cx={cx}
-          cy={cy + (state.switchOn != null ? -4 : 0)}
-          size={Math.min(bounds.w, bounds.h) * 0.62}
-        />
-      ) : (
-        <text
-          x={cx}
-          y={cy + (state.switchOn != null ? -4 : 2)}
-          textAnchor="middle"
-          dominantBaseline="central"
-          fontSize={textSize}
-          fontWeight={900}
-          letterSpacing={showAsConstraint ? 0 : 1}
-          fill={showAsConstraint ? "rgb(248 250 252 / 0.95)" : "rgb(226 232 240 / 0.92)"}
-          style={showAsConstraint ? undefined : { textTransform: "uppercase" }}
-          pointerEvents="none"
+    <>
+      <BoardOverlay
+        className="cockpit-tile-shell"
+        at={{ x: bounds.x, y: bounds.y }}
+        anchor="top-left"
+        width={bounds.w}
+        height={bounds.h}
+      >
+        <SkyTeamTile
+          variant={variant}
+          label={tileLabel}
+          placedDie={null}
+          selectable={selectable && !hasDie}
+          onSelect={selectable ? () => onSelect(slot) : undefined}
+          aria-label={`${label}${constraintText ? ` (${constraintText})` : ""}${hasDie ? ` — die ${state.die?.value}` : ""}`}
         >
-          {visibleText}
-        </text>
-      )}
-      {state.switchOn != null ? (
-        <circle
-          cx={cx}
-          cy={bounds.y + bounds.h - 8}
-          r={4}
-          fill={state.switchOn ? "rgb(74 222 128)" : "rgb(30 41 59)"}
-          stroke={state.switchOn ? "rgb(134 239 172)" : "rgb(71 85 105)"}
-          strokeWidth={1.5}
-          pointerEvents="none"
-        />
+          {isConcentration ? <CoffeeCup /> : null}
+        </SkyTeamTile>
+      </BoardOverlay>
+      {hasSlider ? (
+        <BoardOverlay
+          className="cockpit-slider-shell"
+          at={{ x: sliderX, y: sliderY }}
+          anchor="top-left"
+          width={SLIDER_W}
+          height={SLIDER_H}
+        >
+          <CockpitSlider />
+        </BoardOverlay>
       ) : null}
-    </BoardSlot>
+    </>
   );
 }

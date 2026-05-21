@@ -28,13 +28,14 @@ export const BASE_SLOT_DEFS: Record<SlotId, SlotDef> = {
   "flaps-1": { id: "flaps-1", eligibility: "copilot", allowedValues: [1, 2], ordered: true },
   "flaps-2": { id: "flaps-2", eligibility: "copilot", allowedValues: [2, 3], ordered: true },
   "flaps-3": { id: "flaps-3", eligibility: "copilot", allowedValues: [3, 4], ordered: true },
+  "flaps-4": { id: "flaps-4", eligibility: "copilot", allowedValues: [5, 6], ordered: true },
   "brakes-2": { id: "brakes-2", eligibility: "pilot", allowedValues: [2], ordered: true },
   "brakes-4": { id: "brakes-4", eligibility: "pilot", allowedValues: [4], ordered: true },
   "brakes-6": { id: "brakes-6", eligibility: "pilot", allowedValues: [6], ordered: true },
 };
 
 /** The flaps chain order (top → bottom). */
-export const FLAPS_ORDER: readonly SlotId[] = ["flaps-1", "flaps-2", "flaps-3"];
+export const FLAPS_ORDER: readonly SlotId[] = ["flaps-1", "flaps-2", "flaps-3", "flaps-4"];
 
 /** The brakes chain order. */
 export const BRAKES_ORDER: readonly SlotId[] = ["brakes-2", "brakes-4", "brakes-6"];

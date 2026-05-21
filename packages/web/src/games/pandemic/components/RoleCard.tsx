@@ -1,5 +1,5 @@
 import type { RoleDef } from "@boardgames/core/games/pandemic/roles";
-import { PORTRAIT_URLS } from "../rendering/role-portraits";
+import { PORTRAIT_URLS } from "../board-assets";
 
 interface RoleCardProps {
   role: RoleDef;

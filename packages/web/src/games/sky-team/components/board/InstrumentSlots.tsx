@@ -1,5 +1,4 @@
 import type { SkyTeamPlayerView, SlotId } from "@boardgames/core/games/sky-team/types";
-import { BoardLayer } from "../../../../components/board";
 import CockpitSlot from "./CockpitSlot";
 
 interface Props {
@@ -16,14 +15,10 @@ const SLOTS_AND_LABELS: ReadonlyArray<readonly [SlotId, string]> = [
   ["copilot-axis", "Axis"],
 ];
 
-/**
- * Axis + Radio slots that sit around the artificial-horizon dial. The axis
- * slots flank the horizon; the radio slots sit just above it. Drawn as one
- * layer so the z-order is consistent.
- */
+/** Axis + Radio slots around the artificial-horizon dial. HTML overlays. */
 export default function InstrumentSlots({ view, canPlace, onSelect }: Props) {
   return (
-    <BoardLayer name="instrument-slots" z={4}>
+    <>
       {SLOTS_AND_LABELS.map(([slot, label]) => (
         <CockpitSlot
           key={slot}
@@ -34,6 +29,6 @@ export default function InstrumentSlots({ view, canPlace, onSelect }: Props) {
           onSelect={onSelect}
         />
       ))}
-    </BoardLayer>
+    </>
   );
 }

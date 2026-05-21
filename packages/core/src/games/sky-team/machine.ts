@@ -293,7 +293,7 @@ function toResult(gs: SkyTeamGameState): SkyTeamResult {
   const gearGreen = (["landing-gear-1", "landing-gear-2", "landing-gear-3"] as const).every(
     (id) => gs.slots[id].switchOn === true,
   );
-  const flapsGreen = (["flaps-1", "flaps-2", "flaps-3"] as const).every(
+  const flapsGreen = (["flaps-1", "flaps-2", "flaps-3", "flaps-4"] as const).every(
     (id) => gs.slots[id].switchOn === true,
   );
   const brakesDeployed = (["brakes-2", "brakes-4", "brakes-6"] as const).filter(

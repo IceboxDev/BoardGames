@@ -1,44 +1,38 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useEffect, useMemo, useState } from "react";
-import InventoryGrid from "../components/InventoryGrid";
-import { TrashIcon, XIcon } from "../components/icons";
-import Calendar from "../components/offline/Calendar";
+import { useMemo, useState } from "react";
+import {
+  type AdminUser,
+  AvailabilityDrawer,
+  GuestPlayersCard,
+  PreRegisterCard,
+  UserRow,
+  UsersTable,
+} from "../components/admin";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
-import { Button } from "../components/ui/Button";
 import { Chip } from "../components/ui/Chip";
-import { IconButton } from "../components/ui/IconButton";
 import { PageMain, PageShell } from "../components/ui/PageShell";
-import { games } from "../games/registry";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { adminSetOnline } from "../lib/admin";
 import { authClient } from "../lib/auth-client";
-import {
-  adminFetchInventory,
-  adminFetchPendingInventory,
-  adminSaveInventory,
-  adminSavePendingInventory,
-} from "../lib/inventory";
+import { errorMessageOf } from "../lib/error-message";
 import {
   type AggregateAvailabilityMap,
-  type AvailabilityMap,
   adminFetchAllAvailability,
-  adminFetchAvailability,
   dateKey,
 } from "../lib/offline-availability";
 import { build42Days, startOfWeekMonday } from "../lib/offline-week";
 import { qk } from "../lib/query-keys";
+import { computeCoverage } from "./admin-coverage";
 
-type AdminUser = {
-  id: string;
-  name: string;
-  email: string;
-  role?: string | null;
-  onlineEnabled?: boolean | null;
-  internal?: boolean | null;
-  guest?: boolean | null;
-  createdAt: string | Date;
-};
-
+/**
+ * The admin dashboard — users table + pre-register queue + guest-players
+ * editor + per-user availability drawer.
+ *
+ * Coordinates the queries / mutations and threads handlers through to the
+ * sub-components in `components/admin/`. The page itself stays a thin shell:
+ * everything that does its own work (drawers, panels, table rows) lives in
+ * its own file.
+ */
 export default function AdminPage() {
   const queryClient = useQueryClient();
   const { user: currentUser } = useCurrentUser();
@@ -75,17 +69,16 @@ export default function AdminPage() {
   }, []);
 
   const rawUsers = usersQuery.data ?? [];
-  const loading = usersQuery.isPending;
   const aggregate: AggregateAvailabilityMap = aggregateQuery.data ?? {};
 
-  // Guest players belong to their own card below — they have no email, no
-  // calendar, no inventory, no online toggle. Internal QA accounts stay
-  // hidden everywhere.
+  // Guest players belong to their own card below — no email, no calendar,
+  // no inventory, no online toggle. Internal QA accounts stay hidden
+  // everywhere.
   const guests = useMemo(() => rawUsers.filter((u) => u.guest && !u.internal), [rawUsers]);
 
-  // Hide internal QA accounts and guests, then sort: admins first, then by
-  // coverage % (can+maybe / editable days) descending, then alphabetical on
-  // name as a stable tiebreaker.
+  // Visible users in the main table: hide internal + guest accounts, sort
+  // admins first, then by coverage % descending, then alphabetical on name
+  // for a stable tiebreaker.
   const users = useMemo(() => {
     const visible = rawUsers.filter((u) => !u.internal && !u.guest);
     return [...visible].sort((a, b) => {
@@ -102,7 +95,7 @@ export default function AdminPage() {
   }, [rawUsers, aggregate, editableDateKeys]);
 
   const toggleOnlineMutation = useMutation({
-    mutationFn: (user: AdminUser) => adminSetOnline(user.id, !user.onlineEnabled),
+    mutationFn: (u: AdminUser) => adminSetOnline(u.id, !u.onlineEnabled),
     onSuccess: () => {
       void queryClient.invalidateQueries({ queryKey: qk.adminUsers() });
     },
@@ -124,19 +117,10 @@ export default function AdminPage() {
     },
   });
 
-  const errorMessage = usersQuery.error
-    ? usersQuery.error instanceof Error
-      ? usersQuery.error.message
-      : "Failed to load users"
-    : toggleOnlineMutation.error
-      ? toggleOnlineMutation.error instanceof Error
-        ? toggleOnlineMutation.error.message
-        : "Update failed"
-      : deleteMutation.error
-        ? deleteMutation.error instanceof Error
-          ? deleteMutation.error.message
-          : "Delete failed"
-        : null;
+  const errorMessage =
+    errorMessageOf(usersQuery.error, "Failed to load users") ??
+    errorMessageOf(toggleOnlineMutation.error, "Update failed") ??
+    errorMessageOf(deleteMutation.error, "Delete failed");
 
   function toggleDeleteMode() {
     setDeleteMode((m) => !m);
@@ -145,10 +129,9 @@ export default function AdminPage() {
     deleteMutation.reset();
   }
 
-  function startDelete(user: AdminUser) {
-    setConfirmDeleteUserId(user.id);
-    setConfirmEmail("");
-    deleteMutation.reset();
+  function commitDelete(u: AdminUser) {
+    if (confirmEmail.trim().toLowerCase() !== u.email.toLowerCase()) return;
+    deleteMutation.mutate(u.id);
   }
 
   function cancelDelete() {
@@ -156,32 +139,6 @@ export default function AdminPage() {
     setConfirmEmail("");
     deleteMutation.reset();
   }
-
-  function commitDelete(user: AdminUser) {
-    if (confirmEmail.trim().toLowerCase() !== user.email.toLowerCase()) return;
-    deleteMutation.mutate(user.id);
-  }
-
-  function toggleInventoryPanel(userId: string) {
-    setExpandedUserId((prev) => (prev === userId ? null : userId));
-  }
-
-  function openCalendar(user: AdminUser) {
-    setCalendarUser(user);
-  }
-
-  function closeCalendar() {
-    setCalendarUser(null);
-  }
-
-  useEffect(() => {
-    if (!calendarUser) return;
-    function handleKey(e: KeyboardEvent) {
-      if (e.key === "Escape") setCalendarUser(null);
-    }
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  }, [calendarUser]);
 
   return (
     <PageShell
@@ -192,10 +149,8 @@ export default function AdminPage() {
       }
     >
       <PageMain width="7xl" padding="none" className="px-6 py-10">
-        {/* Grid layout so the description paragraph spans both columns on
-            row 2 — otherwise the Delete-mode button (in flex-row land) was
-            reserving a vertical slot empty under itself and constraining the
-            paragraph's horizontal span on phone. */}
+        {/* Header grid: title + delete-mode chip side-by-side, descriptive
+            paragraph spans both columns on row 2. */}
         <div className="mb-8 grid grid-cols-[1fr_auto] items-start gap-x-4 gap-y-2 sm:gap-x-6">
           <h1 className="text-2xl font-bold tracking-tight text-white">Users</h1>
           <Chip
@@ -237,770 +192,44 @@ export default function AdminPage() {
           </div>
         )}
 
-        {loading ? (
-          <div className="rounded-xl border border-white/10 bg-surface-900 px-6 py-10 text-center text-sm text-gray-500">
-            Loading…
-          </div>
-        ) : users.length === 0 ? (
-          <div className="rounded-xl border border-dashed border-white/10 px-6 py-10 text-center text-sm text-gray-500">
-            No users yet.
-          </div>
-        ) : (
-          <div className="overflow-hidden rounded-xl border border-white/10 bg-surface-900">
-            <table className="w-full table-fixed text-sm">
-              <thead className="bg-surface-800 text-xs uppercase tracking-wider text-gray-500">
-                <tr>
-                  <th className="w-24 pl-5 pr-3 py-3 text-left font-medium" aria-label="Coverage" />
-                  <th className="w-64 px-5 py-3 text-left font-medium">Name</th>
-                  <th className="px-5 py-3 text-left font-medium">Email</th>
-                  <th className="w-24 px-5 py-3 text-center font-medium">Role</th>
-                  <th className="w-32 px-5 py-3 text-center font-medium">Calendar</th>
-                  <th className="w-32 px-5 py-3 text-center font-medium">Inventory</th>
-                  <th
-                    className={`w-32 px-5 py-3 text-center font-medium ${
-                      deleteMode ? "text-rose-300" : ""
-                    }`}
-                  >
-                    {deleteMode ? "Delete" : "Online"}
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-white/5">
-                {users.map((u) => {
-                  const togglingThisUser =
-                    toggleOnlineMutation.isPending && toggleOnlineMutation.variables?.id === u.id;
-                  const isSelf = u.id === currentUserId;
-                  const deletingThisUser =
-                    deleteMutation.isPending && deleteMutation.variables === u.id;
-                  const coverage = computeCoverage(aggregate, u.id, editableDateKeys);
-                  return (
-                    <UserRow
-                      key={u.id}
-                      user={u}
-                      expanded={expandedUserId === u.id}
-                      onToggleInventory={() => toggleInventoryPanel(u.id)}
-                      onToggleOnline={() => toggleOnlineMutation.mutate(u)}
-                      onOpenCalendar={() => openCalendar(u)}
-                      pending={togglingThisUser}
-                      deleteMode={deleteMode}
-                      isSelf={isSelf}
-                      onStartDelete={() => startDelete(u)}
-                      confirmingDelete={confirmDeleteUserId === u.id}
-                      confirmEmail={confirmEmail}
-                      onConfirmEmailChange={setConfirmEmail}
-                      onCancelDelete={cancelDelete}
-                      onCommitDelete={() => commitDelete(u)}
-                      deleting={deletingThisUser}
-                      coverage={coverage}
-                    />
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
-        )}
+        <UsersTable
+          loading={usersQuery.isPending}
+          empty={users.length === 0}
+          deleteMode={deleteMode}
+        >
+          {users.map((u) => (
+            <UserRow
+              key={u.id}
+              user={u}
+              coverage={computeCoverage(aggregate, u.id, editableDateKeys)}
+              expanded={expandedUserId === u.id}
+              onToggleInventory={() => setExpandedUserId((prev) => (prev === u.id ? null : u.id))}
+              onToggleOnline={() => toggleOnlineMutation.mutate(u)}
+              pending={
+                toggleOnlineMutation.isPending && toggleOnlineMutation.variables?.id === u.id
+              }
+              onOpenCalendar={() => setCalendarUser(u)}
+              deleteMode={deleteMode}
+              isSelf={u.id === currentUserId}
+              confirmingDelete={confirmDeleteUserId === u.id}
+              confirmEmail={confirmEmail}
+              onConfirmEmailChange={setConfirmEmail}
+              onStartDelete={() => {
+                setConfirmDeleteUserId(u.id);
+                setConfirmEmail("");
+                deleteMutation.reset();
+              }}
+              onCancelDelete={cancelDelete}
+              onCommitDelete={() => commitDelete(u)}
+              deleting={deleteMutation.isPending && deleteMutation.variables === u.id}
+            />
+          ))}
+        </UsersTable>
       </PageMain>
 
-      {calendarUser && <AvailabilityDrawer user={calendarUser} onClose={closeCalendar} />}
+      {calendarUser && (
+        <AvailabilityDrawer user={calendarUser} onClose={() => setCalendarUser(null)} />
+      )}
     </PageShell>
-  );
-}
-
-type AvailabilityDrawerProps = {
-  user: AdminUser;
-  onClose: () => void;
-};
-
-function AvailabilityDrawer({ user, onClose }: AvailabilityDrawerProps) {
-  const today = useMemo(() => new Date(), []);
-  const weekStart = useMemo(() => startOfWeekMonday(today), [today]);
-
-  const availabilityQuery = useQuery({
-    queryKey: qk.adminUserAvailability(user.id),
-    queryFn: ({ signal }) => adminFetchAvailability(user.id, signal),
-  });
-
-  const availability = availabilityQuery.data ?? null;
-  const isLoading = availabilityQuery.isPending;
-  const error = availabilityQuery.error
-    ? availabilityQuery.error instanceof Error
-      ? availabilityQuery.error.message
-      : "Failed to load availability"
-    : null;
-  // "Across the next 6 weeks" should not include marks from prior weeks (the
-  // raw map persists them indefinitely until the user changes them) — count
-  // only the editable window from today onward, the same range CoverageCell
-  // uses.
-  const markedCount = useMemo(
-    () => countMarkedInWindow(availability, today, weekStart),
-    [availability, today, weekStart],
-  );
-
-  return (
-    <aside className="fixed inset-y-0 right-0 z-50 flex w-full max-w-md flex-col border-l border-white/10 bg-surface-950 shadow-2xl shadow-black/50 sm:w-[28rem]">
-      <header className="flex shrink-0 items-start justify-between gap-3 border-b border-white/5 px-5 py-4">
-        <div className="min-w-0">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-accent-400">
-            Availability
-          </p>
-          <h2 className="mt-1 truncate text-base font-semibold text-white">
-            {user.name || user.email}
-          </h2>
-          <p className="mt-0.5 truncate text-xs text-gray-500">{user.email}</p>
-        </div>
-        <IconButton
-          variant="ghost"
-          size="sm"
-          aria-label="Close"
-          onClick={onClose}
-          icon={<XIcon />}
-        />
-      </header>
-
-      <div className="flex min-h-0 flex-1 flex-col gap-3 px-4 py-4 sm:px-5">
-        <p className="shrink-0 text-center text-[11px] text-gray-400">
-          <span className="text-accent-300">Can</span>
-          <span className="mx-1 opacity-50">·</span>
-          <span className="text-amber-300">Maybe</span>
-          <span className="mx-1 opacity-50">·</span>
-          <span className="opacity-60">unmarked</span>
-        </p>
-
-        {isLoading || availability === null ? (
-          <p className="text-center text-xs text-gray-500">Loading…</p>
-        ) : (
-          <Calendar
-            weekStart={weekStart}
-            availability={availability}
-            readonlyBefore={today}
-            interactive={false}
-            compact
-          />
-        )}
-
-        {error && (
-          <p className="shrink-0 rounded-md border border-rose-500/30 bg-rose-500/10 px-3 py-2 text-xs text-rose-300">
-            {error}
-          </p>
-        )}
-
-        <p className="shrink-0 text-center text-[11px] text-gray-500">
-          {isLoading || availability === null
-            ? ""
-            : markedCount === 0
-              ? "No availability set"
-              : `${markedCount} ${markedCount === 1 ? "day" : "days"} marked across the next 6 weeks`}
-        </p>
-      </div>
-    </aside>
-  );
-}
-
-type Coverage = { can: number; maybe: number; total: number };
-
-type UserRowProps = {
-  user: AdminUser;
-  expanded: boolean;
-  onToggleInventory: () => void;
-  onToggleOnline: () => void;
-  onOpenCalendar: () => void;
-  pending: boolean;
-  deleteMode: boolean;
-  isSelf: boolean;
-  onStartDelete: () => void;
-  confirmingDelete: boolean;
-  confirmEmail: string;
-  onConfirmEmailChange: (next: string) => void;
-  onCancelDelete: () => void;
-  onCommitDelete: () => void;
-  deleting: boolean;
-  coverage: Coverage;
-};
-
-function UserRow({
-  user,
-  expanded,
-  onToggleInventory,
-  onToggleOnline,
-  onOpenCalendar,
-  pending,
-  deleteMode,
-  isSelf,
-  onStartDelete,
-  confirmingDelete,
-  confirmEmail,
-  onConfirmEmailChange,
-  onCancelDelete,
-  onCommitDelete,
-  deleting,
-  coverage,
-}: UserRowProps) {
-  const columnCount = 7;
-  const confirmReady = confirmEmail.trim().toLowerCase() === user.email.toLowerCase();
-  return (
-    <>
-      <tr className="h-12 text-gray-200">
-        <td className="pl-5 pr-3 py-3">
-          <CoverageCell coverage={coverage} />
-        </td>
-        <td className="px-5 py-3 font-medium">{user.name || "—"}</td>
-        <td className="px-5 py-3 text-gray-400">{user.email}</td>
-        <td className="px-5 py-3 text-center">
-          <span
-            className={`rounded-full px-2 py-0.5 text-xs ${
-              user.role === "admin"
-                ? "bg-accent-500/20 text-accent-300"
-                : "bg-white/5 text-gray-400"
-            }`}
-          >
-            {user.role ?? "user"}
-          </span>
-        </td>
-        <td className="px-5 py-3 text-center">
-          <Button variant="secondary" size="xs" onClick={onOpenCalendar}>
-            View
-          </Button>
-        </td>
-        <td className="px-5 py-3 text-center">
-          <Chip pressed={expanded} tone="accent" size="xs" onClick={onToggleInventory}>
-            {expanded ? "Close" : "Manage"}
-          </Chip>
-        </td>
-        <td className="px-5 py-3 text-center">
-          <div className="flex h-6 items-center justify-center">
-            {deleteMode ? (
-              isSelf ? (
-                <span
-                  className="inline-flex h-6 items-center rounded-md border border-white/5 bg-white/5 px-2.5 text-xs italic text-gray-500"
-                  title="You cannot delete yourself"
-                >
-                  you
-                </span>
-              ) : confirmingDelete ? (
-                <span className="inline-flex h-6 items-center text-xs text-rose-300">
-                  Confirm below…
-                </span>
-              ) : (
-                <Chip pressed tone="rose" size="xs" ring={false} onClick={onStartDelete}>
-                  Delete
-                </Chip>
-              )
-            ) : (
-              // The "online" toggle is a custom track-and-thumb switch
-              // (~iOS-style). The track + thumb are intentionally not a
-              // text/icon button — exempted from the noRestrictedElements
-              // rule by file-level override in biome.json.
-              // biome-ignore lint/correctness/noRestrictedElements: track+thumb toggle widget, not a labeled button
-              <button
-                type="button"
-                onClick={onToggleOnline}
-                disabled={pending}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition ${
-                  user.onlineEnabled ? "bg-accent-500" : "bg-surface-700"
-                } ${pending ? "opacity-50" : ""}`}
-                aria-pressed={Boolean(user.onlineEnabled)}
-                aria-label={`Toggle online for ${user.email}`}
-              >
-                <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition ${
-                    user.onlineEnabled ? "translate-x-6" : "translate-x-1"
-                  }`}
-                />
-              </button>
-            )}
-          </div>
-        </td>
-      </tr>
-      {expanded && (
-        <tr>
-          <td colSpan={columnCount} className="bg-surface-950/50 px-4 py-4">
-            <InventoryPanel userId={user.id} />
-          </td>
-        </tr>
-      )}
-      {confirmingDelete && (
-        <tr>
-          <td
-            colSpan={columnCount}
-            className="border-t border-rose-500/30 bg-rose-950/40 px-4 py-4"
-          >
-            <div className="space-y-3">
-              <p className="text-sm text-rose-100">
-                Type{" "}
-                <span className="rounded bg-rose-500/20 px-1.5 py-0.5 font-mono text-xs text-rose-100">
-                  {user.email}
-                </span>{" "}
-                to confirm permanent deletion.
-              </p>
-              <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-                <input
-                  type="text"
-                  // biome-ignore lint/a11y/noAutofocus: focus on the active confirmation input
-                  autoFocus
-                  value={confirmEmail}
-                  onChange={(e) => onConfirmEmailChange(e.target.value)}
-                  placeholder={user.email}
-                  disabled={deleting}
-                  spellCheck={false}
-                  autoComplete="off"
-                  className="w-full flex-1 rounded-md border border-rose-500/30 bg-surface-950 px-3 py-1.5 text-sm text-white placeholder:text-gray-600 focus:border-rose-400 focus:outline-none disabled:opacity-50"
-                />
-                <div className="flex items-center justify-end gap-2">
-                  <Button variant="ghost" size="sm" onClick={onCancelDelete} disabled={deleting}>
-                    Cancel
-                  </Button>
-                  <Button
-                    variant="danger"
-                    size="sm"
-                    onClick={onCommitDelete}
-                    disabled={!confirmReady || deleting}
-                    loading={deleting}
-                  >
-                    Delete user
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </td>
-        </tr>
-      )}
-    </>
-  );
-}
-
-function InventoryPanel({ userId }: { userId: string }) {
-  const queryClient = useQueryClient();
-  const [draft, setDraft] = useState<string[] | null>(null);
-
-  const inventoryQuery = useQuery({
-    queryKey: qk.adminUserInventory(userId),
-    queryFn: ({ signal }) => adminFetchInventory(userId, signal),
-  });
-
-  const committed = inventoryQuery.data ?? [];
-
-  // Initialize/reset draft whenever the committed slug list changes.
-  useEffect(() => {
-    if (inventoryQuery.data) setDraft(inventoryQuery.data);
-  }, [inventoryQuery.data]);
-
-  const saveMutation = useMutation({
-    mutationFn: (slugs: string[]) => adminSaveInventory(userId, slugs),
-    onSuccess: (_data, slugs) => {
-      queryClient.setQueryData(qk.adminUserInventory(userId), slugs);
-      void queryClient.invalidateQueries({ queryKey: qk.inventory(userId) });
-    },
-  });
-
-  const error = inventoryQuery.error
-    ? inventoryQuery.error instanceof Error
-      ? inventoryQuery.error.message
-      : "Failed to load"
-    : saveMutation.error
-      ? saveMutation.error instanceof Error
-        ? saveMutation.error.message
-        : "Save failed"
-      : null;
-
-  if (inventoryQuery.isPending || draft === null) {
-    return <p className="text-xs text-gray-500">Loading inventory…</p>;
-  }
-
-  function toggle(slug: string) {
-    setDraft((prev) =>
-      prev === null ? prev : prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug],
-    );
-  }
-
-  function save() {
-    if (draft === null) return;
-    saveMutation.mutate(draft);
-  }
-
-  const dirty = draft.length !== committed.length || draft.some((s) => !committed.includes(s));
-
-  return (
-    <div className="space-y-3">
-      {error && <p className="text-xs text-rose-400">{error}</p>}
-      <InventoryGrid selected={draft} onToggle={toggle} />
-      <div className="flex items-center justify-end gap-2">
-        <span className="text-xs text-gray-500">
-          {draft.length} of {games.length} selected
-        </span>
-        <Button
-          variant="primary"
-          size="sm"
-          onClick={save}
-          loading={saveMutation.isPending}
-          disabled={!dirty}
-        >
-          Save inventory
-        </Button>
-      </div>
-    </div>
-  );
-}
-
-function PreRegisterCard() {
-  const queryClient = useQueryClient();
-  const [draft, setDraft] = useState<string[] | null>(null);
-  const [expanded, setExpanded] = useState(false);
-
-  const pendingQuery = useQuery({
-    queryKey: qk.adminPendingInventory(),
-    queryFn: ({ signal }) => adminFetchPendingInventory(signal),
-  });
-
-  const committed = pendingQuery.data ?? [];
-
-  useEffect(() => {
-    if (pendingQuery.data) setDraft(pendingQuery.data);
-  }, [pendingQuery.data]);
-
-  const saveMutation = useMutation({
-    mutationFn: (slugs: string[]) => adminSavePendingInventory(slugs),
-    onSuccess: (_data, slugs) => {
-      queryClient.setQueryData(qk.adminPendingInventory(), slugs);
-    },
-  });
-
-  const error = pendingQuery.error
-    ? pendingQuery.error instanceof Error
-      ? pendingQuery.error.message
-      : "Failed to load"
-    : saveMutation.error
-      ? saveMutation.error instanceof Error
-        ? saveMutation.error.message
-        : "Save failed"
-      : null;
-
-  function toggle(slug: string) {
-    setDraft((prev) =>
-      prev === null ? prev : prev.includes(slug) ? prev.filter((s) => s !== slug) : [...prev, slug],
-    );
-  }
-
-  function save() {
-    if (draft === null) return;
-    saveMutation.mutate(draft);
-  }
-
-  function clearQueue() {
-    saveMutation.mutate([]);
-    setDraft([]);
-  }
-
-  const loading = pendingQuery.isPending;
-  const saving = saveMutation.isPending;
-  const dirty =
-    draft !== null &&
-    (draft.length !== committed.length || draft.some((s) => !committed.includes(s)));
-  const queued = committed.length;
-
-  return (
-    <div className="mb-6 overflow-hidden rounded-xl border border-accent-500/20 bg-surface-900">
-      <div className="flex items-center justify-between gap-3 px-4 py-3">
-        <div className="min-w-0">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-accent-400">
-            Pre-register
-          </p>
-          <p className="mt-1 text-sm text-gray-300">
-            {loading
-              ? "Loading…"
-              : queued === 0
-                ? "No collection queued — the next signup will start with no games."
-                : `${queued} ${queued === 1 ? "game" : "games"} queued — assigned to the next user who registers.`}
-          </p>
-        </div>
-        <Chip
-          pressed={expanded}
-          tone="accent"
-          size="xs"
-          disabled={loading}
-          onClick={() => setExpanded((v) => !v)}
-          className="shrink-0"
-        >
-          {expanded ? "Close" : "Manage"}
-        </Chip>
-      </div>
-      {expanded && !loading && draft !== null && (
-        <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
-          {error && <p className="text-xs text-rose-400">{error}</p>}
-          <InventoryGrid selected={draft} onToggle={toggle} />
-          <div className="flex items-center justify-between gap-2">
-            <span className="text-xs text-gray-500">
-              {draft.length} of {games.length} selected
-            </span>
-            <div className="flex items-center gap-2">
-              {queued > 0 && (
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  onClick={clearQueue}
-                  loading={saving}
-                  disabled={saving}
-                >
-                  Clear queue
-                </Button>
-              )}
-              <Button
-                variant="primary"
-                size="sm"
-                onClick={save}
-                loading={saving}
-                disabled={!dirty || saving}
-              >
-                Save queue
-              </Button>
-            </div>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-}
-
-/**
- * Lets the admin create lightweight player stubs (first + last name only) so
- * the match-history picker can credit someone who never signed up. Guests are
- * real Better-Auth users with a synthetic `@guest.local` email and no
- * credential account — they can't sign in, but they do persist alongside
- * regular users so existing match-history endpoints accept their `userId`.
- */
-function GuestPlayersCard({ guests, onChanged }: { guests: AdminUser[]; onChanged: () => void }) {
-  const [expanded, setExpanded] = useState(false);
-  const [first, setFirst] = useState("");
-  const [last, setLast] = useState("");
-  const [error, setError] = useState<string | null>(null);
-  const [busy, setBusy] = useState(false);
-  const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
-
-  async function addGuest(e: React.FormEvent) {
-    e.preventDefault();
-    setError(null);
-    const f = first.trim();
-    const l = last.trim();
-    if (!f || !l) {
-      setError("Both first and last name are required");
-      return;
-    }
-    const name = `${f} ${l}`;
-    // Synthetic non-routable email. Slug + crypto-grade suffix keeps the email
-    // unique even when two guests share a name. Better Auth lowercases on its
-    // own; we lowercase the slug here to keep the suffix readable in logs.
-    const slug = `${f}.${l}`
-      .toLowerCase()
-      .replace(/[^a-z0-9.]+/g, "-")
-      .replace(/^-|-$/g, "");
-    const suffix = crypto.randomUUID().slice(0, 8);
-    const email = `guest.${slug || "player"}.${suffix}@guest.local`;
-    setBusy(true);
-    try {
-      const { error: apiError } = await authClient.admin.createUser({ email, name });
-      if (apiError) {
-        setError(formatAuthError(apiError, "Failed to add guest"));
-        return;
-      }
-      setFirst("");
-      setLast("");
-      onChanged();
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to add guest");
-    } finally {
-      setBusy(false);
-    }
-  }
-
-  async function removeGuest(id: string) {
-    setError(null);
-    setBusy(true);
-    try {
-      const { error: apiError } = await authClient.admin.removeUser({ userId: id });
-      if (apiError) {
-        setError(formatAuthError(apiError, "Failed to delete guest"));
-        return;
-      }
-      setPendingDeleteId(null);
-      onChanged();
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to delete guest");
-    } finally {
-      setBusy(false);
-    }
-  }
-
-  return (
-    <div className="mb-6 overflow-hidden rounded-xl border border-amber-500/20 bg-surface-900">
-      <div className="flex items-center justify-between gap-3 px-4 py-3">
-        <div className="min-w-0">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-amber-400">
-            Guest players
-          </p>
-          <p className="mt-1 text-sm text-gray-300">
-            {guests.length === 0
-              ? "No guests yet — add stub accounts for people who never signed up."
-              : `${guests.length} guest${guests.length === 1 ? "" : "s"} — pickable in match history.`}
-          </p>
-        </div>
-        <Chip
-          pressed={expanded}
-          tone="amber"
-          size="xs"
-          onClick={() => setExpanded((v) => !v)}
-          className="shrink-0"
-        >
-          {expanded ? "Close" : "Manage"}
-        </Chip>
-      </div>
-      {expanded && (
-        <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
-          {error && <p className="text-xs text-rose-400">{error}</p>}
-          <form onSubmit={addGuest} className="flex flex-wrap items-end gap-2">
-            <label className="flex flex-col gap-1 text-xs text-gray-400">
-              First name
-              <input
-                value={first}
-                onChange={(e) => setFirst(e.target.value)}
-                disabled={busy}
-                className="w-40 rounded-md border border-white/10 bg-surface-900 px-2 py-1 text-sm text-gray-100 focus:border-amber-400/60 focus:outline-none"
-              />
-            </label>
-            <label className="flex flex-col gap-1 text-xs text-gray-400">
-              Last name
-              <input
-                value={last}
-                onChange={(e) => setLast(e.target.value)}
-                disabled={busy}
-                className="w-40 rounded-md border border-white/10 bg-surface-900 px-2 py-1 text-sm text-gray-100 focus:border-amber-400/60 focus:outline-none"
-              />
-            </label>
-            <Button type="submit" variant="primary" size="sm" loading={busy} disabled={busy}>
-              Add guest
-            </Button>
-          </form>
-          {guests.length > 0 && (
-            <ul className="flex flex-col gap-1 pt-1">
-              {guests.map((g) => (
-                <li
-                  key={g.id}
-                  className="flex items-center gap-2 rounded-md bg-surface-900/60 px-2.5 py-1.5"
-                >
-                  <span className="flex-1 truncate text-sm text-gray-200">{g.name}</span>
-                  {pendingDeleteId === g.id ? (
-                    <>
-                      <span className="text-xs text-rose-300">Delete?</span>
-                      <Button
-                        variant="danger"
-                        size="xs"
-                        onClick={() => removeGuest(g.id)}
-                        disabled={busy}
-                      >
-                        Yes
-                      </Button>
-                      <Button
-                        variant="secondary"
-                        size="xs"
-                        onClick={() => setPendingDeleteId(null)}
-                        disabled={busy}
-                      >
-                        No
-                      </Button>
-                    </>
-                  ) : (
-                    <IconButton
-                      variant="danger"
-                      size="xs"
-                      aria-label={`Delete guest ${g.name}`}
-                      onClick={() => setPendingDeleteId(g.id)}
-                      icon={<TrashIcon className="h-3.5 w-3.5" />}
-                    />
-                  )}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      )}
-    </div>
-  );
-}
-
-/**
- * Better Auth's client returns `{ error }` with a sometimes-sparse envelope —
- * `message` may be empty while `code` and `statusText` carry the actual cause.
- * Pick the most useful string available so admin-side failures don't surface
- * as a generic fallback.
- */
-function formatAuthError(err: unknown, fallback: string): string {
-  if (!err || typeof err !== "object") return fallback;
-  const e = err as { message?: unknown; code?: unknown; statusText?: unknown; status?: unknown };
-  const message = typeof e.message === "string" && e.message.trim() ? e.message : null;
-  const code = typeof e.code === "string" && e.code ? e.code : null;
-  const statusText = typeof e.statusText === "string" && e.statusText ? e.statusText : null;
-  const status = typeof e.status === "number" ? e.status : null;
-  return message ?? code ?? statusText ?? (status ? `${fallback} (${status})` : fallback);
-}
-
-function countMarkedInWindow(
-  availability: AvailabilityMap | null,
-  today: Date,
-  weekStart: Date,
-): number {
-  if (!availability) return 0;
-  const todayKey = dateKey(today);
-  let count = 0;
-  for (const d of build42Days(weekStart)) {
-    const key = dateKey(d);
-    if (key < todayKey) continue;
-    const status = availability[key];
-    if (status === "can" || status === "maybe") count += 1;
-  }
-  return count;
-}
-
-function computeCoverage(
-  aggregate: AggregateAvailabilityMap,
-  userId: string,
-  editableDateKeys: string[],
-): Coverage {
-  let can = 0;
-  let maybe = 0;
-  for (const key of editableDateKeys) {
-    const entries = aggregate[key];
-    if (!entries) continue;
-    const entry = entries.find((e) => e.userId === userId);
-    if (entry?.status === "can") can += 1;
-    else if (entry?.status === "maybe") maybe += 1;
-  }
-  return { can, maybe, total: editableDateKeys.length };
-}
-
-function CoverageCell({ coverage }: { coverage: Coverage }) {
-  const { can, maybe, total } = coverage;
-  const canPct = total > 0 ? (can / total) * 100 : 0;
-  const maybePct = total > 0 ? (maybe / total) * 100 : 0;
-  const canEnd = canPct;
-  const maybeEnd = canPct + maybePct;
-  const coverPct = Math.round(canPct + maybePct);
-  // accent-400 / amber-400 / a low-key gray for unmarked.
-  const accent = "#818cf8";
-  const amber = "#fbbf24";
-  const rest = "#374151";
-  const title =
-    total === 0
-      ? "No editable days"
-      : `${can} can · ${maybe} maybe · ${total - can - maybe} unmarked of ${total} editable days`;
-  return (
-    <span className="inline-flex items-center gap-2">
-      <span
-        aria-hidden="true"
-        title={title}
-        className="h-3.5 w-3.5 shrink-0 rounded-full ring-1 ring-white/10"
-        style={{
-          background: `conic-gradient(${accent} 0 ${canEnd}%, ${amber} ${canEnd}% ${maybeEnd}%, ${rest} ${maybeEnd}% 100%)`,
-        }}
-      />
-      <span className="text-xs tabular-nums text-gray-400">{coverPct}%</span>
-    </span>
   );
 }

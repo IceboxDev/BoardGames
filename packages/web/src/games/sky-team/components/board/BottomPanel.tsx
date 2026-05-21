@@ -1,8 +1,9 @@
 import { CONCENTRATION_SLOTS } from "@boardgames/core/games/sky-team/scenarios";
 import type { SkyTeamPlayerView, SlotId } from "@boardgames/core/games/sky-team/types";
-import { BoardLayer, BoardOverlay } from "../../../../components/board";
+import { BoardOverlay } from "../../../../components/board";
 import CockpitSlot from "./CockpitSlot";
-import { BOTTOM_PANEL } from "./geometry";
+import { CABIN_PANEL } from "./geometry";
+import MugBlock from "./MugBlock";
 
 interface SlotProps {
   view: SkyTeamPlayerView;
@@ -10,30 +11,44 @@ interface SlotProps {
   onSelect: (slot: SlotId) => void;
 }
 
-const LABELS = {
-  "concentration-1": "C1",
-  "concentration-2": "C2",
-  "concentration-3": "C3",
-} as const;
+const LABELS: Record<SlotId, string> = {
+  "pilot-axis": "Axis",
+  "pilot-engine": "Engine",
+  "pilot-radio": "Radio",
+  "copilot-axis": "Axis",
+  "copilot-engine": "Engine",
+  "copilot-radio-1": "Radio 1",
+  "copilot-radio-2": "Radio 2",
+  "concentration-1": "Concentration 1",
+  "concentration-2": "Concentration 2",
+  "concentration-3": "Concentration 3",
+  "landing-gear-1": "Gear 1",
+  "landing-gear-2": "Gear 2",
+  "landing-gear-3": "Gear 3",
+  "flaps-1": "Flap 1",
+  "flaps-2": "Flap 2",
+  "flaps-3": "Flap 3",
+  "flaps-4": "Flap 4",
+  "brakes-2": "Brake 2",
+  "brakes-4": "Brake 4",
+  "brakes-6": "Brake 6",
+};
 
-/**
- * SVG portion of the bottom panel: the three concentration slots. Rendered
- * inside the <BoardSurface> as a layer.
- */
+/** The three concentration (coffee) tiles inside the cabin panel — HTML overlays. */
 export function ConcentrationSlots({ view, canPlace, onSelect }: SlotProps) {
   return (
-    <BoardLayer name="concentration-slots" z={5}>
+    <>
       {CONCENTRATION_SLOTS.map((slot) => (
         <CockpitSlot
           key={slot}
           view={view}
           slot={slot}
-          label={LABELS[slot as keyof typeof LABELS]}
+          label={LABELS[slot]}
           canPlace={canPlace}
           onSelect={onSelect}
         />
       ))}
-    </BoardLayer>
+    </>
   );
 }
 
@@ -42,50 +57,26 @@ interface ChromeProps {
 }
 
 /**
- * HTML portion of the bottom panel: cabin chrome with coffee tokens and
- * reroll counter. Rendered as a <BoardOverlay> sibling of the <svg>.
+ * Cabin panel — the polygon-clipped recessed compartment running across the
+ * bottom of the board. Holds the right-triangle mug stack (coffee tokens)
+ * on its tall-left section. Concentration tiles sit on top via separate
+ * overlays so the clip-path doesn't crop them.
+ *
+ * Matches `sky-team-lab/index.html:206-264` + the `.cabin-panel` CSS rules
+ * verbatim (clip-path polygon, recessed-compartment shadow stack).
  */
 export function BottomPanelChrome({ view }: ChromeProps) {
   return (
     <BoardOverlay
-      at={{ x: BOTTOM_PANEL.x + BOTTOM_PANEL.w / 2, y: BOTTOM_PANEL.y + BOTTOM_PANEL.h / 2 }}
-      anchor="center"
-      width={BOTTOM_PANEL.w}
-      height={BOTTOM_PANEL.h}
+      className="cockpit-cabin-shell"
+      at={{ x: CABIN_PANEL.x, y: CABIN_PANEL.y }}
+      anchor="top-left"
+      width={CABIN_PANEL.w}
+      height={CABIN_PANEL.h}
     >
-      <div className="flex h-full w-full items-center justify-between rounded-xl border-2 border-slate-700/40 bg-slate-300/40 px-4 backdrop-blur-sm">
-        <div className="flex items-center gap-2">
-          <span className="text-[10px] font-bold uppercase tracking-wider text-slate-700">
-            Coffee
-          </span>
-          <div className="flex gap-2">
-            {[0, 1, 2].map((i) => {
-              const filled = i < view.coffeeTokens;
-              return (
-                <div
-                  key={`mug-slot-${i}`}
-                  className={[
-                    "relative h-7 w-9 rounded-sm rounded-b-md transition-colors",
-                    filled ? "bg-slate-800 text-white" : "bg-slate-200 text-slate-400",
-                  ].join(" ")}
-                >
-                  <span
-                    className={[
-                      "absolute -right-2 top-1 h-4 w-3 rounded-r-md border-2 border-l-0",
-                      filled ? "border-slate-800" : "border-slate-200",
-                    ].join(" ")}
-                  />
-                  <span className="absolute inset-0 grid place-items-center text-[10px] font-extrabold">
-                    {filled ? "+1" : ""}
-                  </span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-        <div className="text-[10px] uppercase tracking-wider text-slate-700">
-          Rerolls <span className="font-mono text-emerald-700">{view.rerollTokens}</span>
-        </div>
+      <div className="cockpit-cabin" role="img" aria-label="Cabin">
+        <MugBlock count={view.coffeeTokens} />
+        <div />
       </div>
     </BoardOverlay>
   );

@@ -1,6 +1,5 @@
 import { BRAKES_ORDER } from "@boardgames/core/games/sky-team/scenarios";
 import type { SkyTeamPlayerView, SlotId } from "@boardgames/core/games/sky-team/types";
-import { BoardLayer } from "../../../../components/board";
 import CockpitSlot from "./CockpitSlot";
 
 interface Props {
@@ -15,13 +14,10 @@ const LABELS = {
   "brakes-6": "Brake 6",
 } as const;
 
-/**
- * Three ordered brake slots (2 / 4 / 6) sitting below the brake arc. Pilot-
- * only; each can only be activated once the prior one is green.
- */
+/** Three ordered pilot brake tiles (2/4/6) below the brake arc. HTML overlays. */
 export default function BrakeRow({ view, canPlace, onSelect }: Props) {
   return (
-    <BoardLayer name="brake-row" z={5}>
+    <>
       {BRAKES_ORDER.map((slot) => (
         <CockpitSlot
           key={slot}
@@ -32,6 +28,6 @@ export default function BrakeRow({ view, canPlace, onSelect }: Props) {
           onSelect={onSelect}
         />
       ))}
-    </BoardLayer>
+    </>
   );
 }

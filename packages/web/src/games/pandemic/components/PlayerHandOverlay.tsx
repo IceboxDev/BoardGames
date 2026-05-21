@@ -2,7 +2,7 @@ import { getRoleDef } from "@boardgames/core/games/pandemic/roles";
 import type { GameState, PlayerCard } from "@boardgames/core/games/pandemic/types";
 import { useEffect, useState } from "react";
 import CardFan from "../../../components/card-fan/CardFan";
-import type { GameDispatch } from "../hooks/useGameState";
+import type { GameDispatch } from "../interaction";
 import PandemicCard from "./PandemicCard";
 
 interface PlayerHandOverlayProps {

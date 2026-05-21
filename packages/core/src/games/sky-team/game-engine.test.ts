@@ -606,6 +606,7 @@ describe("final-round victory check", () => {
         "flaps-1": { ...s.slots["flaps-1"], switchOn: true },
         "flaps-2": { ...s.slots["flaps-2"], switchOn: true },
         "flaps-3": { ...s.slots["flaps-3"], switchOn: true },
+        "flaps-4": { ...s.slots["flaps-4"], switchOn: true },
       },
       ...overrides,
     };

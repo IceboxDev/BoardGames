@@ -8,10 +8,9 @@ import type {
 import { useCallback, useEffect, useState } from "react";
 import { Chip } from "../../components/ui/Chip";
 import { useGameShell } from "../../hooks/useGameShell";
-import GameCanvas from "./components/GameCanvas";
+import GameBoard from "./components/GameBoard";
 import GameOverScreen from "./components/GameOverScreen";
 import SetupScreen from "./components/SetupScreen";
-import { type GameAssets, loadGameAssets } from "./rendering/sprites";
 
 export default function Pandemic() {
   const [mpDifficulty, setMpDifficulty] = useState<4 | 5 | 6>(4);
@@ -44,31 +43,11 @@ export default function Pandemic() {
     getLobbyStartConfig: () => ({ difficulty: mpDifficulty }),
   });
 
-  // --- Asset loading ---
-
-  const [assets, setAssets] = useState<GameAssets | null>(null);
-  const [loadError, setLoadError] = useState<string | null>(null);
-
-  useEffect(() => {
-    let cancelled = false;
-    loadGameAssets()
-      .then((a) => {
-        if (!cancelled) setAssets(a);
-      })
-      .catch((e) => {
-        if (!cancelled) setLoadError(e.message ?? "Failed to load assets");
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, []);
-
-  // --- Game-specific state ---
-
   const [lastConfig, setLastConfig] = useState<SetupConfig | null>(null);
 
-  // --- Back overrides for solo & mp-playing ---
-
+  // Back-button override while the game is in play. Goes to the mode-select
+  // shell screen rather than out of the route, so the user can rejoin or
+  // start a new game without losing their place in the app.
   useEffect(() => {
     if (shell.mode === "solo" || shell.mode === "mp-playing") {
       shell.setBackOverride(shell.goToMenu);
@@ -76,8 +55,6 @@ export default function Pandemic() {
     }
     return undefined;
   }, [shell.mode, shell.goToMenu, shell.setBackOverride]);
-
-  // --- Callbacks ---
 
   const handleStart = useCallback(
     (config: SetupConfig) => {
@@ -88,11 +65,12 @@ export default function Pandemic() {
   );
 
   const handleRestart = useCallback(() => {
-    if (lastConfig) {
-      shell.game.start({ config: lastConfig });
-    }
+    if (lastConfig) shell.game.start({ config: lastConfig });
   }, [lastConfig, shell.game.start]);
 
+  // Dispatch contract is unchanged from the canvas era — `start_game` /
+  // `reset` are meta actions routed back into the shell, everything else
+  // is forwarded to the active session (solo or mp).
   const dispatch = useCallback(
     (action: GameAction | { kind: "start_game"; config: SetupConfig } | { kind: "reset" }) => {
       if (action.kind === "start_game") {
@@ -113,54 +91,28 @@ export default function Pandemic() {
     [shell.game.start, shell.game.send, shell.mp.send, shell.mode, shell.goToMenu],
   );
 
-  // --- Rendering ---
-
-  // Shell screens (menu, join, lobby) don't need assets
   if (shell.screen) return shell.screen;
 
-  // Solo setup doesn't need assets either
   if (shell.mode === "solo" && !shell.game.view) {
     return <SetupScreen onStart={handleStart} />;
   }
 
-  // From here on, we need assets loaded
-  if (loadError) {
-    return (
-      <div className="flex h-[calc(100vh-64px)] items-center justify-center text-red-400">
-        <div className="text-center">
-          <div className="mb-2 text-lg font-bold">Failed to load game assets</div>
-          <div className="text-sm">{loadError}</div>
-        </div>
-      </div>
-    );
-  }
-
-  if (!assets) {
-    return (
-      <div className="flex h-[calc(100vh-64px)] items-center justify-center text-gray-400">
-        Loading board...
-      </div>
-    );
-  }
-
-  // Solo playing
   if (shell.mode === "solo" && shell.game.view) {
     if (shell.game.view.phase === "game_over") {
       return (
         <GameOverScreen state={shell.game.view} onRestart={handleRestart} onMenu={shell.goToMenu} />
       );
     }
-    return <GameCanvas state={shell.game.view} dispatch={dispatch} assets={assets} />;
+    return <GameBoard state={shell.game.view} dispatch={dispatch} />;
   }
 
-  // Multiplayer playing
   if (shell.mode === "mp-playing" && shell.mp.view) {
     if (shell.mp.view.phase === "game_over") {
       return (
         <GameOverScreen state={shell.mp.view} onRestart={shell.goToMenu} onMenu={shell.goToMenu} />
       );
     }
-    return <GameCanvas state={shell.mp.view} dispatch={dispatch} assets={assets} />;
+    return <GameBoard state={shell.mp.view} dispatch={dispatch} />;
   }
 
   return null;

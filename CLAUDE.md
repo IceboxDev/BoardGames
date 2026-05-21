@@ -108,7 +108,7 @@ Every game board uses `GameScreen` from `web/src/components/game-layout/`. This 
 - `sidebar` — history log content. GameScreen provides the sidebar chrome (aside, heading, scroll).
 - `fan` — card hand component (CardFan, PlayerHand). Pinned to bottom.
 - `fanActions` — controls above the card fan (Confirm, Pass/Take, status). Spaced with gap-2.
-- `noPadding` — skip padding and flex-col (for canvas games)
+- `noPadding` — skip padding and flex-col (for edge-to-edge SVG boards)
 
 **DOM structure (enforced by GameScreen):**
 ```
@@ -127,11 +127,11 @@ When `fan` is omitted, children go directly into the content wrapper (no board/f
 **Rules:**
 - `GameBoard` renders `<GameScreen>` as its root element. Games must NOT add outer wrappers, spacing, or padding — `GameScreen` owns all of it.
 - `fan` is ONLY the card hand component. Controls (buttons, status) go in `fanActions`.
-- For canvas games (Pandemic), pass `noPadding` to skip padding and flex-col.
+- For edge-to-edge SVG boards (Pandemic, Sky Team), pass `noPadding` to skip padding and flex-col so the board fills the content area.
 
 ### Intricate-board rendering standard
 
-Games with non-card-style spatial layouts (maps, instrument panels, hex grids, dungeons) use **declarative SVG + React + framer-motion** via the primitives in `packages/web/src/components/board/` (`BoardSurface`, `BoardLayer`, `BoardSlot`, `BoardArc`, `BoardOverlay`). Sky Team is the reference port — see `packages/web/src/games/sky-team/components/board/`. Pandemic's Canvas 2D engine in `packages/web/src/games/pandemic/rendering/` and `packages/web/src/engine/` is frozen — no new games adopt it. Full decision record and escape-hatch criterion: [`docs/intricate-board-rendering.md`](docs/intricate-board-rendering.md). Card-style games keep using plain React DOM.
+Games with non-card-style spatial layouts (maps, instrument panels, hex grids, dungeons) use **declarative SVG + React + framer-motion** via the primitives in `packages/web/src/components/board/` (`BoardSurface`, `BoardLayer`, `BoardSlot`, `BoardArc`, `BoardOverlay`). Sky Team and Pandemic are the two reference ports — see `packages/web/src/games/sky-team/components/board/` and `packages/web/src/games/pandemic/components/board/`. Full decision record and escape-hatch criterion: [`docs/intricate-board-rendering.md`](docs/intricate-board-rendering.md). Card-style games keep using plain React DOM.
 
 ### Adding a new game
 

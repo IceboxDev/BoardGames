@@ -31,6 +31,17 @@ import { TeamsForm } from "./forms/TeamsForm";
 import { WerewolfForm } from "./forms/WerewolfForm";
 import { GamePicker } from "./GamePicker";
 import { GameVariantPicker } from "./GameVariantPicker";
+import {
+  applyParticipants,
+  carryOverParticipants,
+  describeOutcomeError,
+  emptyOutcome,
+  isoNow,
+  isoToLocalInput,
+  localInputToIso,
+  sortLockKeys,
+  toCreateInput,
+} from "./outcome";
 
 type User = { id: string; name: string };
 
@@ -49,59 +60,6 @@ type Props = {
   onClose: () => void;
   onSaved: () => void;
 };
-
-function isoNow(): string {
-  return new Date().toISOString();
-}
-
-function emptyOutcome(kind: MatchKind, prefill: Participant[]): MatchOutcome {
-  switch (kind) {
-    case "free-for-all":
-      return {
-        kind,
-        players: prefill.map((p) => ({ ...p, score: 0 })),
-      };
-    case "teams":
-      // Drop the whole pre-filled roster into team 0 so the admin can split it
-      // into actual teams from there. For ClocktowerForm / WerewolfForm — which
-      // read every team's members as a single roster — this puts them all in
-      // the per-player role picker immediately.
-      return {
-        kind,
-        teams: [{ members: prefill.map((p) => ({ ...p })) }, { members: [] }],
-        winnerTeamIndices: [],
-      };
-    case "last-standing":
-      return { kind, players: prefill.map((p) => ({ ...p })) };
-    case "coop":
-      return { kind, participants: prefill.map((p) => ({ ...p })), outcome: "win" };
-    case "one-vs-many":
-      return {
-        kind,
-        solo: { userId: "", displayName: "" },
-        team: { members: [] },
-        winnerSide: "team",
-      };
-  }
-}
-
-function toCreateInput(state: {
-  dateKey: string | null;
-  playedAt: string;
-  gameSlug: string | null;
-  gameTitle: string;
-  outcome: MatchOutcome;
-  notes: string;
-}) {
-  return {
-    dateKey: state.dateKey,
-    playedAt: state.playedAt,
-    gameSlug: state.gameSlug,
-    gameTitle: state.gameTitle,
-    outcome: state.outcome,
-    notes: state.notes.trim() ? state.notes.trim() : null,
-  };
-}
 
 export function RecordMatchModal({ state, onClose, onSaved }: Props) {
   const usersQuery = useQuery({
@@ -405,176 +363,4 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
       </footer>
     </Modal>
   );
-}
-
-/**
- * Sort the game-night dropdown: today and past nights only (newest → oldest).
- * Future-dated locks are filtered out — you can't record a match for a game
- * night that hasn't happened yet.
- */
-function sortLockKeys(keys: string[]): string[] {
-  const today = new Date().toISOString().slice(0, 10);
-  return keys.filter((k) => k <= today).sort((a, b) => b.localeCompare(a));
-}
-
-function isoToLocalInput(iso: string): string {
-  const d = new Date(iso);
-  if (Number.isNaN(d.getTime())) return "";
-  const tz = d.getTimezoneOffset();
-  const local = new Date(d.getTime() - tz * 60_000);
-  return local.toISOString().slice(0, 16);
-}
-
-function localInputToIso(local: string): string {
-  if (!local) return new Date().toISOString();
-  const d = new Date(local);
-  if (Number.isNaN(d.getTime())) return new Date().toISOString();
-  return d.toISOString();
-}
-
-/**
- * Pre-flight check run before we hit the wire schema. The Zod request schema
- * is correct but the errors it surfaces ("Invalid input" at
- * `outcome.winnerTeamIndices`) are useless to a human. Catch the empty/missing
- * cases here so the admin gets actionable feedback instead.
- */
-function describeOutcomeError(outcome: MatchOutcome, gameSlug: string | null): string | null {
-  switch (outcome.kind) {
-    case "free-for-all":
-      if (outcome.players.length < 2) return "Add at least two players";
-      return null;
-    case "teams":
-      if (gameSlug === "blood-on-the-clocktower") return describeClocktowerError(outcome);
-      if (gameSlug === "one-night-ultimate-werewolf") return describeWerewolfError(outcome);
-      return describeGenericTeamsError(outcome);
-    case "last-standing":
-      if (outcome.players.length < 2) return "Add at least two players";
-      if (outcome.players.every((p) => p.eliminationOrder !== undefined))
-        return "At least one player must survive";
-      return null;
-    case "coop":
-      if (outcome.participants.length < 1) return "Add at least one participant";
-      return null;
-    case "one-vs-many":
-      if (!outcome.solo.userId) return "Pick the solo player";
-      if (outcome.team.members.length < 1) return "Add at least one team player";
-      return null;
-  }
-}
-
-function describeGenericTeamsError(outcome: MatchOutcomeTeams): string | null {
-  const empty = outcome.teams.findIndex((t) => t.members.length === 0);
-  if (empty !== -1) return `Team ${empty + 1} needs at least one player`;
-  if (outcome.winnerTeamIndices.length === 0) return "Pick at least one winning team";
-  return null;
-}
-
-function describeWerewolfError(outcome: MatchOutcomeTeams): string | null {
-  const allMembers = outcome.teams.flatMap((t) => t.members);
-  if (allMembers.length === 0) return "Add players";
-  const unassigned = allMembers.find((m) => !m.role);
-  if (unassigned) return `Pick a role for ${unassigned.displayName}`;
-  if (outcome.teams.length < 2)
-    return "Match needs at least one Werewolf, Minion, or Tanner besides Village";
-  if (outcome.winnerTeamIndices.length === 0)
-    return "No winning team — adjust roles or vote-outs so a side wins";
-  return null;
-}
-
-function describeClocktowerError(outcome: MatchOutcomeTeams): string | null {
-  const allMembers = outcome.teams.flatMap((t) => t.members);
-  if (allMembers.length === 0) return "Add players";
-  const unassigned = allMembers.find((m) => !m.role);
-  if (unassigned) return `Pick a character for ${unassigned.displayName}`;
-  const [good, evil] = outcome.teams;
-  if (!good || good.members.length === 0) return "At least one good player is required";
-  if (!evil || evil.members.length === 0) return "At least one evil player is required";
-  if (outcome.winnerTeamIndices.length === 0) return "Pick the winning side";
-  return null;
-}
-
-/**
- * Pull whatever participants the user has already selected into the new kind's
- * shape so we don't lose work when they flip the type. Only safe across kinds
- * that operate on a flat list of players (free-for-all, last-standing, coop).
- * Teams and one-vs-many start fresh because their slots are structurally
- * different.
- */
-function carryOverParticipants(nextKind: MatchKind, prev: MatchOutcome): MatchOutcome {
-  const flat = flatParticipants(prev);
-  return applyParticipants(nextKind, emptyOutcome(nextKind, flat), flat);
-}
-
-function flatParticipants(outcome: MatchOutcome): Participant[] {
-  switch (outcome.kind) {
-    case "free-for-all":
-    case "last-standing":
-      return outcome.players.map((p) => ({ userId: p.userId, displayName: p.displayName }));
-    case "teams":
-      return outcome.teams.flatMap((t) => t.members);
-    case "coop":
-      return outcome.participants;
-    case "one-vs-many":
-      return [
-        ...(outcome.solo.userId
-          ? [{ userId: outcome.solo.userId, displayName: outcome.solo.displayName }]
-          : []),
-        ...outcome.team.members,
-      ];
-  }
-}
-
-function applyParticipants(
-  kind: MatchKind,
-  base: MatchOutcome,
-  participants: Participant[],
-): MatchOutcome {
-  switch (kind) {
-    case "free-for-all": {
-      const ffa = base as MatchOutcomeFreeForAll;
-      const scoreById = new Map(ffa.players.map((p) => [p.userId, p.score]));
-      return {
-        ...ffa,
-        players: participants.map((p) => ({ ...p, score: scoreById.get(p.userId) ?? 0 })),
-      };
-    }
-    case "last-standing": {
-      const ls = base as MatchOutcomeLastStanding;
-      const elimById = new Map(ls.players.map((p) => [p.userId, p.eliminationOrder]));
-      return {
-        ...ls,
-        players: participants.map((p) => ({
-          ...p,
-          ...(elimById.get(p.userId) !== undefined
-            ? { eliminationOrder: elimById.get(p.userId) }
-            : {}),
-        })),
-      };
-    }
-    case "coop":
-      return { ...(base as MatchOutcomeCoop), participants };
-    case "teams": {
-      // Re-load the picked-night's roster into team 0 (or team 1 if the form
-      // already has team-1 members alongside an empty team 0 — preserves edits
-      // the admin already made). Roles get carried over when the same userId
-      // re-appears so we don't wipe a partially-assigned Clocktower/Werewolf
-      // form on a re-prefill.
-      const teamsBase = base as MatchOutcomeTeams;
-      const existingByUserId = new Map(
-        teamsBase.teams.flatMap((t) => t.members.map((m) => [m.userId, m] as const)),
-      );
-      const dumpInto =
-        teamsBase.teams[0].members.length === 0 && teamsBase.teams[1]?.members.length ? 1 : 0;
-      const teams = teamsBase.teams.map((t, i) => {
-        if (i !== dumpInto) return t;
-        return {
-          ...t,
-          members: participants.map((p) => existingByUserId.get(p.userId) ?? p),
-        };
-      });
-      return { ...teamsBase, teams };
-    }
-    case "one-vs-many":
-      return base;
-  }
 }

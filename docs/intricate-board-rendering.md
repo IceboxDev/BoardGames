@@ -25,21 +25,22 @@ extra ceremony.
 
 ## Why not …
 
-### Canvas 2D (Pandemic's approach)
+### Canvas 2D (Pandemic's original approach, since removed)
 
-Pandemic is the only canvas game in the repo today and it carries about
-1,475 LOC of rendering plumbing in `packages/web/src/games/pandemic/rendering/`:
-a custom `GameRenderer`, layer system, camera, hit-test, AnimationQueue (dead
-code — never wired), and ad-hoc sprite atlas loading. Coordinates are
-hard-coded pixels in a 1920×1080 reference plane. The canvas surface is
-opaque to screen readers and keyboard navigation.
+Pandemic originally shipped on Canvas 2D and carried about 1,700 LOC of
+rendering plumbing — a custom `GameRenderer`, layer system, camera,
+hit-test, AnimationQueue (dead code — never wired), and ad-hoc sprite
+atlas loading. Coordinates were hard-coded pixels in a 1920×1080
+reference plane. The canvas surface was opaque to screen readers and
+keyboard navigation.
 
 A canvas approach made sense in 2014 when SVG performance was unreliable;
-in 2026 it isn't competitive on developer ergonomics. Replicating that
-amount of code for every future intricate-board game would be a long-term
-liability.
-
-**Pandemic stays on canvas in this PR — see "exceptions" below.**
+in 2026 it isn't competitive on developer ergonomics. Pandemic has now
+been ported to the SVG + React primitives this document recommends — see
+`packages/web/src/games/pandemic/components/board/`. The canvas-era
+`engine/` directory and `pandemic/rendering/` folder were removed in the
+same change. Future canvas reintroduction requires the escape-hatch
+criteria below.
 
 ### react-three-fiber / WebGL
 
@@ -71,36 +72,43 @@ You may keep or introduce canvas rendering **only** if:
 2. You've benchmarked SVG and confirmed the bottleneck.
 3. You've filed a tracking issue documenting the call.
 
-Pandemic's existing `packages/web/src/games/pandemic/rendering/*` and the
-shared `packages/web/src/engine/` are **frozen** under this exception — no
-new games are allowed to adopt them. A follow-up port of Pandemic to SVG is
-recommended but out of this PR's scope; track it as a separate item once
-Sky Team's primitives have been in production for ~2 weeks.
+No game in the repo currently uses canvas — the previous Pandemic
+exception was retired when Pandemic was ported to SVG.
 
-## Sky Team is the reference port
+## Reference ports
 
-The first intricate-board game ported to SVG is Sky Team, in
-`packages/web/src/games/sky-team/components/board/`. Look there for:
+Two games are now built on the SVG primitives:
+
+**Sky Team** — `packages/web/src/games/sky-team/components/board/`. The
+original port; demonstrates instrument-panel-style spatial layouts
+(dials, arcs, asymmetric per-role slots).
+
+**Pandemic** — `packages/web/src/games/pandemic/components/board/`.
+Demonstrates network-style spatial layouts (cities, connections,
+wrap-around routes, per-city stacks of cubes / pawns / stations) on a
+1920×1080 reference plane.
+
+Look at either for:
 
 - A complete tree of `<BoardSurface>` + layers + overlays.
 - `geometry.ts` — the only file with numeric coordinates.
 - `CockpitSlot.tsx` — the per-game wrapper around `<BoardSlot>`.
 
-The visual source of truth lives in `sky-team-lab/` (a build-free HTML+CSS
-sketch). The React port must visually track the lab; iterate the lab first
-when designing new regions, then mirror in React.
+A standalone iteration view lives at `packages/web/src/labs/sky-team/Lab.tsx`,
+mounted at `/dev/sky-team-lab`. It renders the production `<Cockpit>` against
+a mock `SkyTeamPlayerView`, so the lab and the live game share `geometry.ts`
+by construction — no parallel coordinate system, no drift.
 
 ## Verification workflow for intricate-board games
 
 When porting or building a new intricate-board game:
 
-1. Sketch the look in a build-free HTML+CSS chamber at `<game-slug>-lab/`
-   first if the layout is novel.
-2. Transcribe coordinates into `games/<slug>/components/board/geometry.ts`.
+1. Add a lab route at `packages/web/src/labs/<slug>/Lab.tsx` that mounts the
+   game's board component against a mock player view. Iterate there.
+2. Put all numeric coordinates in `games/<slug>/components/board/geometry.ts`.
+   Components import from it; never inline coordinates.
 3. Use the primitives from `components/board/` to build region components.
 4. Run `pnpm typecheck` / `pnpm lint` / `pnpm test` after each region.
 5. Manually click-through the game end-to-end after the port is complete:
    the existing `core/` test suite covers game logic and is unaffected by
    the UI change.
-6. Eyeball the React render side-by-side with the lab chamber at matching
-   viewport widths. Tighten geometry constants until they match.

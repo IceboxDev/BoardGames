@@ -1,6 +1,5 @@
 import { LANDING_GEAR_SLOTS } from "@boardgames/core/games/sky-team/scenarios";
 import type { SkyTeamPlayerView, SlotId } from "@boardgames/core/games/sky-team/types";
-import { BoardLayer } from "../../../../components/board";
 import CockpitSlot from "./CockpitSlot";
 
 interface Props {
@@ -15,10 +14,12 @@ const LABELS = {
   "landing-gear-3": "Gear 3",
 } as const;
 
-/** Left side strip — pilot landing-gear slots stacked vertically. */
+/** Left strip — pilot landing-gear slots stacked in the lower half. Rendered
+ *  as HTML overlays; the parent `<Cockpit>` mounts this inside `<BoardSurface>`
+ *  `overlays`. */
 export default function LandingGearStrip({ view, canPlace, onSelect }: Props) {
   return (
-    <BoardLayer name="landing-gear-strip" z={5} aria-label="Landing gear">
+    <>
       {LANDING_GEAR_SLOTS.map((slot) => (
         <CockpitSlot
           key={slot}
@@ -29,6 +30,6 @@ export default function LandingGearStrip({ view, canPlace, onSelect }: Props) {
           onSelect={onSelect}
         />
       ))}
-    </BoardLayer>
+    </>
   );
 }

@@ -5,14 +5,14 @@ import {
 } from "@boardgames/core/games/sky-team/scenarios";
 import type { PlayerIndex, SkyTeamPlayerView, SlotId } from "@boardgames/core/games/sky-team/types";
 import { BoardSurface } from "../../../../components/board";
-import ApproachRibbon from "./ApproachRibbon";
 import ArtificialHorizon from "./ArtificialHorizon";
 import AxisArc from "./AxisArc";
 import { BottomPanelChrome, ConcentrationSlots } from "./BottomPanel";
 import BrakeArc from "./BrakeArc";
 import BrakeRow from "./BrakeRow";
+import "./cockpit.css";
 import CockpitBackground from "./CockpitBackground";
-import EngineRow from "./EngineRow";
+import EngineRow, { EngineAxisMarker } from "./EngineRow";
 import FlapsStrip from "./FlapsStrip";
 import { COCKPIT_VIEWBOX } from "./geometry";
 import InstrumentSlots from "./InstrumentSlots";
@@ -28,13 +28,9 @@ interface Props {
 }
 
 /**
- * SVG-based Sky Team cockpit. Composes the regional sub-components on top of
- * a single <BoardSurface>; HTML overlays for HUD + bottom panel render as
- * absolute-positioned siblings inside the same wrapper.
- *
- * State (`selectedDieId`, `coffeeAdjust`, ...) lives in `SkyTeam.tsx`; this
- * component is purely presentational. The `canPlace` predicate is lifted
- * verbatim from the legacy Cockpit.tsx so legality rules stay in one place.
+ * Sky Team cockpit. Composes the SVG decorative layers (background, horizon,
+ * arcs, approach, speed gauge) underneath a fan of HTML overlay tiles that
+ * carry the lab's chrome (gradients, sliders, mugs, coffee cups).
  */
 export default function Cockpit({ view, selectedDieId, coffeeAdjust, onSelectSlot }: Props) {
   const canPlace = (slot: SlotId): boolean => {
@@ -68,8 +64,9 @@ export default function Cockpit({ view, selectedDieId, coffeeAdjust, onSelectSlo
   return (
     <div
       className={[
-        "relative mx-auto w-full max-w-[720px] aspect-[720/1000] transition-shadow",
-        myTurn ? "ring-2 ring-yellow-400/30 rounded-2xl" : "",
+        "cockpit-root cockpit-frame relative mx-auto w-full max-w-[720px]",
+        "aspect-[720/1000] transition-shadow",
+        myTurn ? "ring-2 ring-yellow-400/40" : "",
       ].join(" ")}
     >
       <BoardSurface
@@ -79,21 +76,21 @@ export default function Cockpit({ view, selectedDieId, coffeeAdjust, onSelectSlo
           <>
             <TopHud view={view} />
             <BottomPanelChrome view={view} />
+            <LandingGearStrip view={view} canPlace={canPlace} onSelect={onSelectSlot} />
+            <FlapsStrip view={view} canPlace={canPlace} onSelect={onSelectSlot} />
+            <BrakeRow view={view} canPlace={canPlace} onSelect={onSelectSlot} />
+            <EngineRow view={view} canPlace={canPlace} onSelect={onSelectSlot} />
+            <InstrumentSlots view={view} canPlace={canPlace} onSelect={onSelectSlot} />
+            <ConcentrationSlots view={view} canPlace={canPlace} onSelect={onSelectSlot} />
           </>
         }
       >
         <CockpitBackground />
-        <ApproachRibbon view={view} />
         <SpeedGauge view={view} />
         <ArtificialHorizon view={view} />
         <AxisArc view={view} />
-        <InstrumentSlots view={view} canPlace={canPlace} onSelect={onSelectSlot} />
-        <EngineRow view={view} canPlace={canPlace} onSelect={onSelectSlot} />
         <BrakeArc view={view} />
-        <BrakeRow view={view} canPlace={canPlace} onSelect={onSelectSlot} />
-        <LandingGearStrip view={view} canPlace={canPlace} onSelect={onSelectSlot} />
-        <FlapsStrip view={view} canPlace={canPlace} onSelect={onSelectSlot} />
-        <ConcentrationSlots view={view} canPlace={canPlace} onSelect={onSelectSlot} />
+        <EngineAxisMarker />
       </BoardSurface>
     </div>
   );

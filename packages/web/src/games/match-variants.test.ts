@@ -1,0 +1,68 @@
+import { describe, expect, it } from "vitest";
+import { joinMultiVariant, parseMultiVariant, variantConfigForSlug } from "./match-variants";
+
+describe("variantConfigForSlug", () => {
+  it("returns null for null or unknown slug", () => {
+    expect(variantConfigForSlug(null)).toBeNull();
+    expect(variantConfigForSlug("not-a-real-game")).toBeNull();
+  });
+
+  it("returns the Codenames language config (single-select, English/German)", () => {
+    const config = variantConfigForSlug("codenames");
+    expect(config?.label).toBe("Language");
+    expect(config?.mode).toBe("single");
+    expect(config?.options.map((o) => o.value)).toEqual(["English", "German"]);
+  });
+
+  it("returns the 7 Wonders edition config (multi-select)", () => {
+    const config = variantConfigForSlug("7-wonders");
+    expect(config?.mode).toBe("multi");
+    expect(config?.options.length).toBeGreaterThanOrEqual(2);
+  });
+
+  it("returns the Phase 10 ruleset config (single, five variants)", () => {
+    const config = variantConfigForSlug("phase-10");
+    expect(config?.mode).toBe("single");
+    expect(config?.options.length).toBe(5);
+  });
+});
+
+describe("parseMultiVariant", () => {
+  it("returns [] for undefined or empty string", () => {
+    expect(parseMultiVariant(undefined)).toEqual([]);
+    expect(parseMultiVariant("")).toEqual([]);
+  });
+
+  it('splits on " + " and trims surrounding whitespace', () => {
+    expect(parseMultiVariant("Base + Leaders + Cities")).toEqual(["Base", "Leaders", "Cities"]);
+    expect(parseMultiVariant(" Base   +   Leaders ")).toEqual(["Base", "Leaders"]);
+  });
+
+  it("drops empty fragments from accidental double-joins", () => {
+    expect(parseMultiVariant("Base +  + Cities")).toEqual(["Base", "Cities"]);
+  });
+});
+
+describe("joinMultiVariant", () => {
+  const options = variantConfigForSlug("7-wonders");
+  if (!options) throw new Error("7-wonders config missing");
+  const opts = options.options;
+
+  it("returns undefined when nothing is selected", () => {
+    expect(joinMultiVariant([], opts)).toBeUndefined();
+  });
+
+  it("emits selected values in catalog order regardless of input order", () => {
+    expect(joinMultiVariant(["Cities", "Base", "Leaders"], opts)).toBe("Base + Leaders + Cities");
+  });
+
+  it("silently drops selected values that are not in the catalog", () => {
+    expect(joinMultiVariant(["Base", "Made-Up-Expansion"], opts)).toBe("Base");
+  });
+
+  it("is the inverse of parseMultiVariant for catalog values", () => {
+    const stored = joinMultiVariant(["Base", "Leaders"], opts);
+    expect(stored).toBeDefined();
+    expect(parseMultiVariant(stored)).toEqual(["Base", "Leaders"]);
+  });
+});

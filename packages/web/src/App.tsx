@@ -15,6 +15,7 @@ const OfflineDashboard = lazy(() => import("./pages/OfflineDashboard"));
 const HistoryPage = lazy(() => import("./pages/HistoryPage"));
 const GameGallery = lazy(() => import("./pages/GameGallery"));
 const DeckPreview = lazy(() => import("./pages/DeckPreview"));
+const SkyTeamLab = lazy(() => import("./labs/sky-team/Lab"));
 // `GameMenu` and `GameRouter` are the only paths that pull the games registry
 // into the bundle. Lazy-loading them keeps the registry's per-game modules
 // (accent.json, thumbnail urls, lazy component wrappers) and the BGG
@@ -109,6 +110,7 @@ export default function App() {
             </Route>
 
             <Route path="dev/deck-preview" element={<DeckPreview />} />
+            <Route path="dev/sky-team-lab" element={<SkyTeamLab />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

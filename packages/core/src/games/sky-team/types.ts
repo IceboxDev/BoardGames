@@ -36,6 +36,7 @@ export const SLOT_IDS = [
   "flaps-1",
   "flaps-2",
   "flaps-3",
+  "flaps-4",
   "brakes-2",
   "brakes-4",
   "brakes-6",
