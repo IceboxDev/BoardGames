@@ -6,7 +6,7 @@ import { RecordMatchModal } from "../components/history/RecordMatchModal";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
 import { PageMain, PageShell } from "../components/ui/PageShell";
-import { useSession } from "../lib/auth-client";
+import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { fetchCalendarLocks, type LockedDate } from "../lib/calendar-locks";
 import { deleteMatch, fetchHistory } from "../lib/match-history";
 import { qk } from "../lib/query-keys";
@@ -46,9 +46,8 @@ function dateKeyLabel(dateKey: string): string {
 }
 
 export default function HistoryPage() {
-  const { data: session } = useSession();
-  const isAdmin = (session?.user as { role?: string } | undefined)?.role === "admin";
-  const currentUserId = session?.user?.id ?? null;
+  const { user, isAdmin } = useCurrentUser();
+  const currentUserId = user?.id ?? null;
   const queryClient = useQueryClient();
 
   const historyQuery = useInfiniteQuery({

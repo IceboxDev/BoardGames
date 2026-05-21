@@ -23,5 +23,5 @@ export default function MugBlock({ count }: Props) {
 }
 
 function Mug({ filled }: { filled: boolean }) {
-  return <span className={`cockpit-mug${filled ? "" : " cockpit-mug--off"}`}>+1</span>;
+  return <span className={`cockpit-mug${filled ? "" : " cockpit-mug--off"}`}>±1</span>;
 }

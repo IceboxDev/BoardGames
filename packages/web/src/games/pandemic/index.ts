@@ -13,4 +13,6 @@ export default {
   mode: "remote",
   soloLabel: "Solo",
   rulesUrl,
+  lobbyConfigComponent: lazy(() => import("./PandemicLobbyConfig")),
+  defaultMpConfig: { difficulty: 4 },
 } satisfies GameModule;

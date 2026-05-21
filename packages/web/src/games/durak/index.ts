@@ -1,3 +1,4 @@
+import { AI_STRATEGY_LABELS } from "@boardgames/core/games/durak/types";
 import { lazy } from "react";
 import type { GameModule } from "../types";
 import accent from "./accent.json";
@@ -20,4 +21,6 @@ export default {
   tournamentShowScoreDiff: false,
   rulesUrl,
   family: { id: "card-games", variant: "Durak" },
+  matchHistoryLabelResolver: (id) =>
+    AI_STRATEGY_LABELS[id as keyof typeof AI_STRATEGY_LABELS] ?? id,
 } satisfies GameModule;

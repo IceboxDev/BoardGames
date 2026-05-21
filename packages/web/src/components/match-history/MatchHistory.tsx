@@ -6,18 +6,24 @@ interface MatchHistoryProps {
   gameSlug: string;
   labelResolver: (engine: string) => string;
   onBack: () => void;
-  onSelectGame?: (game: unknown) => void;
+  /**
+   * Called with the row's stable replay id when the user picks a game.
+   * The caller — `<MatchHistoryRoute>` in production — uses the id to
+   * navigate to `/play/:slug/match-history/:replayId`, which then fetches
+   * and renders the replay. Keeps this table free of the actual log
+   * payload and lets refresh / share / bookmark survive.
+   */
+  onSelectReplay?: (replayId: number) => void;
 }
 
 export default function MatchHistory({
   gameSlug,
   labelResolver,
   onBack,
-  onSelectGame,
+  onSelectReplay,
 }: MatchHistoryProps) {
   const [replays, setReplays] = useState<ReplaySummary[]>([]);
   const [loading, setLoading] = useState(true);
-  const [loadingId, setLoadingId] = useState<number | null>(null);
 
   useEffect(() => {
     apiClient
@@ -28,18 +34,6 @@ export default function MatchHistory({
       })
       .catch(() => setLoading(false));
   }, [gameSlug]);
-
-  function handleSelect(replay: ReplaySummary) {
-    if (!onSelectGame) return;
-    setLoadingId(replay.id);
-    apiClient
-      .getGameReplay(gameSlug, replay.id)
-      .then((log) => {
-        setLoadingId(null);
-        onSelectGame(log);
-      })
-      .catch(() => setLoadingId(null));
-  }
 
   const wins = replays.filter((r) => r.winner === "p0").length;
   const losses = replays.filter((r) => r.winner === "p1").length;
@@ -89,10 +83,10 @@ export default function MatchHistory({
                 return (
                   <tr
                     key={r.id}
-                    onClick={() => handleSelect(r)}
+                    onClick={() => onSelectReplay?.(r.id)}
                     className={`border-b border-gray-800/40 transition-colors ${
-                      onSelectGame ? "cursor-pointer hover:bg-gray-800/50" : ""
-                    } ${loadingId === r.id ? "opacity-50" : ""}`}
+                      onSelectReplay ? "cursor-pointer hover:bg-gray-800/50" : ""
+                    }`}
                   >
                     <td className="p-2.5 tabular-nums text-gray-400">{i + 1}</td>
                     <td className="p-2.5 text-xs text-gray-300">

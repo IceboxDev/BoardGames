@@ -6,11 +6,13 @@ import type {
   SkyTeamResult,
   SlotId,
 } from "@boardgames/core/games/sky-team/types";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { ActionLog } from "../../components/action-log";
 import GameScreen from "../../components/game-layout/GameScreen";
 import { MpGameOverScreen } from "../../components/game-over";
 import { useGameShell } from "../../hooks/useGameShell";
+import type { GameComponentProps } from "../types";
 import BriefingPanel from "./components/BriefingPanel";
 import Cockpit from "./components/board/Cockpit";
 import GameOverScreen from "./components/GameOverScreen";
@@ -19,10 +21,9 @@ import PlayerDiceTray from "./components/PlayerDiceTray";
 import SetupScreen, { type SkyTeamStartConfig } from "./components/SetupScreen";
 import { mapSkyTeamLog } from "./log-mapper";
 
-export default function SkyTeam() {
-  const shell = useGameShell<SkyTeamPlayerView, SkyTeamMachineEvent, SkyTeamResult>("sky-team", {
-    getLobbyStartConfig: () => ({ scenarioId: "yul-montreal" }),
-  });
+export default function SkyTeam({ source }: GameComponentProps) {
+  const navigate = useNavigate();
+  const { def, game, mp } = useGameShell<SkyTeamPlayerView, SkyTeamMachineEvent, SkyTeamResult>();
 
   const [selectedDieId, setSelectedDieId] = useState<number | null>(null);
   const [coffeeAdjust, setCoffeeAdjust] = useState(0);
@@ -30,18 +31,11 @@ export default function SkyTeam() {
   const [rerollSelection, setRerollSelection] = useState<Set<number>>(new Set());
   const [lastConfig, setLastConfig] = useState<SkyTeamStartConfig | null>(null);
 
-  useEffect(() => {
-    if (shell.mode === "solo") {
-      shell.setBackOverride(() => shell.goToMenu());
-      return () => shell.setBackOverride(null);
-    }
-    if (shell.mode === "mp-playing") {
-      shell.setBackOverride(() => shell.goToMenu());
-      return () => shell.setBackOverride(null);
-    }
-    shell.setBackOverride(null);
-    return undefined;
-  }, [shell.mode, shell.setBackOverride, shell.goToMenu]);
+  const backToMenu = useCallback(() => {
+    if (source === "mp") mp.reset();
+    else game.reset();
+    navigate(`/play/${def.slug}`);
+  }, [source, mp.reset, game.reset, def.slug, navigate]);
 
   const startSolo = useCallback(
     (config: SkyTeamStartConfig) => {
@@ -50,24 +44,24 @@ export default function SkyTeam() {
       setCoffeeAdjust(0);
       setRerollMode(false);
       setRerollSelection(new Set());
-      shell.game.start(config);
+      game.start(config);
     },
-    [shell.game.start],
+    [game.start],
   );
 
-  const activeGame = shell.mode === "mp-playing" ? shell.mp : shell.game;
-  const view = activeGame.view;
+  const active = source === "mp" ? mp : game;
+  const view = active.view;
 
   const sendAction = useCallback(
     (action: SkyTeamAction) => {
       if (!view) return;
-      activeGame.send({
+      active.send({
         type: "PLAYER_ACTION",
         player: view.viewerIndex as PlayerIndex,
         action,
       });
     },
-    [activeGame.send, view],
+    [active.send, view],
   );
 
   const handleSelectSlot = useCallback(
@@ -129,31 +123,29 @@ export default function SkyTeam() {
     });
   }, []);
 
-  if (shell.screen) return shell.screen;
-
-  if (shell.mode === "solo" && !shell.game.view && !shell.game.result) {
+  if (source === "solo" && !game.view && !game.result) {
     return <SetupScreen onStart={startSolo} />;
   }
 
-  if (shell.mode === "solo" && shell.game.result) {
+  if (source === "solo" && game.result) {
     return (
       <GameOverScreen
-        result={shell.game.result}
+        result={game.result}
         onPlayAgain={lastConfig ? () => startSolo(lastConfig) : undefined}
-        onBackToMenu={() => shell.goToMenu()}
+        onBackToMenu={backToMenu}
       />
     );
   }
 
-  if (shell.mode === "mp-playing" && shell.mp.result) {
-    const r = shell.mp.result;
+  if (source === "mp" && mp.result) {
+    const r = mp.result;
     const isWin = r.outcome === "win";
     return (
       <MpGameOverScreen
         headline={isWin ? "Smooth landing!" : "Crash!"}
         headlineColor={isWin ? "win" : "lose"}
         subtitle={r.outcome}
-        onBackToMenu={() => shell.goToMenu()}
+        onBackToMenu={backToMenu}
       />
     );
   }
@@ -161,10 +153,10 @@ export default function SkyTeam() {
   if (!view) return null;
 
   const playerNames: [string, string] | undefined =
-    shell.mode === "mp-playing" && shell.mp.roomState
+    source === "mp" && mp.roomState
       ? [
-          shell.mp.roomState.slots[0]?.playerName ?? "Pilot",
-          shell.mp.roomState.slots[1]?.playerName ?? "Co-Pilot",
+          mp.roomState.slots[0]?.playerName ?? "Pilot",
+          mp.roomState.slots[1]?.playerName ?? "Co-Pilot",
         ]
       : undefined;
 
@@ -188,7 +180,7 @@ export default function SkyTeam() {
           />
         ) : undefined
       }
-      fanActions={<PhaseBanner view={view} isAiThinking={activeGame.isAiThinking} />}
+      fanActions={<PhaseBanner view={view} isAiThinking={active.isAiThinking} />}
     >
       {view.phase === "briefing" ? (
         <BriefingPanel view={view} onReady={handleReady} />

@@ -9,21 +9,22 @@ import { Button } from "../components/ui/Button";
 import { PageShell } from "../components/ui/PageShell";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
-import { authClient, useSession } from "../lib/auth-client";
+import { useCurrentUser } from "../hooks/useCurrentUser.ts";
+import { authClient } from "../lib/auth-client";
 import { fetchMyInventory } from "../lib/inventory";
 import { qk } from "../lib/query-keys";
 
 export default function ProfilePage() {
   const navigate = useNavigate();
-  const { data } = useSession();
-  const user = data?.user as
-    | { name?: string; email?: string; role?: string; onlineEnabled?: boolean }
-    | undefined;
-  const userId = data?.user?.id ?? null;
+  // `useCurrentUser` is the only sanctioned read of session state — it
+  // narrows the untyped better-auth payload through `SessionUserSchema`
+  // so the fields we touch here (`name`, `onlineEnabled`, `isAdmin`) are
+  // guaranteed to match the wire-protocol contract.
+  const { user, isAdmin } = useCurrentUser();
+  const userId = user?.id ?? null;
   const [syncModalOpen, setSyncModalOpen] = useState(false);
 
   const onlineUnlocked = Boolean(user?.onlineEnabled);
-  const isAdmin = user?.role === "admin";
 
   const { data: ownedSlugs = null } = useQuery({
     queryKey: qk.inventory(userId),

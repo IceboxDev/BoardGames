@@ -6,64 +6,59 @@ import type {
   ParksResult,
 } from "@boardgames/core/games/parks/types";
 import { useCallback, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { MpGameOverScreen } from "../../components/game-over";
 import { useGameShell } from "../../hooks/useGameShell";
+import type { GameComponentProps } from "../types";
 import GameBoard from "./components/GameBoard";
 import GameOverScreen from "./components/GameOverScreen";
 
-export default function Parks() {
-  const shell = useGameShell<ParksPlayerView, ParksEvent, ParksResult>("parks");
+export default function Parks({ source }: GameComponentProps) {
+  const navigate = useNavigate();
+  const { def, game, mp } = useGameShell<ParksPlayerView, ParksEvent, ParksResult>();
 
-  // Back overrides for game-managed modes — always exit to menu (no setup screen).
-  useEffect(() => {
-    if (shell.mode === "solo" || shell.mode === "mp-playing") {
-      shell.setBackOverride(shell.goToMenu);
-      return () => shell.setBackOverride(null);
-    }
-    return undefined;
-  }, [shell.mode, shell.setBackOverride, shell.goToMenu]);
+  const backToMenu = useCallback(() => {
+    if (source === "mp") mp.reset();
+    else game.reset();
+    navigate(`/play/${def.slug}`);
+  }, [source, mp.reset, game.reset, def.slug, navigate]);
 
-  // Auto-start solo on first entry (no setup screen — random AI is the only option).
-  // We only kick off when there's no view yet AND no result; back-to-menu unmounts
-  // the component so this won't loop.
+  // Auto-start solo on first entry — random AI is the only option, so
+  // there's no setup screen to show. Mount → start → render board.
+  // Back-to-menu unmounts the component so this won't loop.
   useEffect(() => {
-    if (shell.mode === "solo" && !shell.game.view && !shell.game.result) {
-      shell.game.start({ strategies: [null, "random" as AIStrategyId] });
+    if (source === "solo" && !game.view && !game.result) {
+      game.start({ strategies: [null, "random" as AIStrategyId] });
     }
-  }, [shell.mode, shell.game.view, shell.game.result, shell.game.start]);
+  }, [source, game.view, game.result, game.start]);
 
   const handleAction = useCallback(
     (action: Action) => {
-      if (shell.mode === "mp-playing") {
-        shell.mp.send({ type: "PLAYER_ACTION", action } as ParksEvent);
+      if (source === "mp") {
+        mp.send({ type: "PLAYER_ACTION", action } as ParksEvent);
       } else {
-        shell.game.send({ type: "PLAYER_ACTION", action } as ParksEvent);
+        game.send({ type: "PLAYER_ACTION", action } as ParksEvent);
       }
     },
-    [shell.game.send, shell.mp.send, shell.mode],
+    [source, game.send, mp.send],
   );
 
   const handlePlayAgain = useCallback(() => {
-    shell.game.start({ strategies: [null, "random" as AIStrategyId] });
-  }, [shell.game.start]);
+    game.start({ strategies: [null, "random" as AIStrategyId] });
+  }, [game.start]);
 
-  // Shell screens (mode select, join room, lobby)
-  if (shell.screen) return shell.screen;
-
-  // Active game
-  const activeView = shell.mode === "mp-playing" ? shell.mp.view : shell.game.view;
-  const activeResult = shell.mode === "mp-playing" ? shell.mp.result : shell.game.result;
-  const activePlayerIndex =
-    shell.mode === "mp-playing" ? shell.mp.playerIndex : shell.game.playerIndex;
-  const activeLegalActions =
-    shell.mode === "mp-playing" ? shell.mp.legalActions : shell.game.legalActions;
-  const activeIsMyTurn = shell.mode === "mp-playing" ? shell.mp.isMyTurn : shell.game.isMyTurn;
-  const activeIsAiThinking = shell.mode === "mp-playing" ? false : shell.game.isAiThinking;
+  const active = source === "mp" ? mp : game;
+  const activeView = active.view;
+  const activeResult = active.result;
+  const activePlayerIndex = active.playerIndex;
+  const activeLegalActions = active.legalActions;
+  const activeIsMyTurn = active.isMyTurn;
+  const activeIsAiThinking = source === "mp" ? false : game.isAiThinking;
 
   if (!activeView) return null;
 
   if (activeResult) {
-    if (shell.mode === "mp-playing") {
+    if (source === "mp") {
       const isDraw = activeResult.isDraw;
       const isWinner = activeResult.winner === activePlayerIndex && !isDraw;
       return (
@@ -71,7 +66,7 @@ export default function Parks() {
           headline={isDraw ? "Draw!" : isWinner ? "You Win!" : "You Lose"}
           headlineColor={isDraw ? "draw" : isWinner ? "win" : "lose"}
           subtitle={`Final scores: ${activeResult.scores.join(" vs ")}`}
-          onBackToMenu={shell.goToMenu}
+          onBackToMenu={backToMenu}
         />
       );
     }
@@ -81,7 +76,7 @@ export default function Parks() {
         result={activeResult}
         playerIndex={activePlayerIndex}
         onPlayAgain={handlePlayAgain}
-        onBackToMenu={shell.goToMenu}
+        onBackToMenu={backToMenu}
       />
     );
   }

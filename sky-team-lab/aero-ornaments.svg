@@ -1,0 +1,292 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 400"
+     fill="none" stroke="currentColor" stroke-width="2"
+     stroke-linecap="round" stroke-linejoin="round"
+     color="#0f172a">
+
+  <style>
+    .cell-frame { fill: rgba(15, 23, 42, 0.04); stroke: rgba(15, 23, 42, 0.18); stroke-width: 0.75; }
+    .label { fill: rgba(15, 23, 42, 0.55); stroke: none; font-size: 7.5px; text-anchor: middle; font-weight: 500; font-family: system-ui, sans-serif; }
+    .accent { fill: currentColor; stroke: none; }
+    .thin { stroke-width: 1; }
+  </style>
+
+  <!-- ============ Row 1 ============ -->
+
+  <!-- 1. Concentric rings -->
+  <rect class="cell-frame" x="0" y="0" width="100" height="100" rx="6" />
+  <g id="concentric-rings" transform="translate(10, 8)">
+    <circle cx="40" cy="36" r="28" />
+    <circle cx="40" cy="36" r="20" opacity="0.7" />
+    <circle cx="40" cy="36" r="12" opacity="0.45" />
+    <circle class="accent" cx="40" cy="36" r="3" />
+  </g>
+  <text class="label" x="50" y="94">Concentric Rings</text>
+
+  <!-- 2. Sunburst rays -->
+  <rect class="cell-frame" x="100" y="0" width="100" height="100" rx="6" />
+  <g id="sunburst" transform="translate(110, 8)">
+    <g stroke-width="2">
+      <line x1="40" y1="36" x2="40" y2="6" />
+      <line x1="40" y1="36" x2="55" y2="9" />
+      <line x1="40" y1="36" x2="66" y2="21" />
+      <line x1="40" y1="36" x2="70" y2="36" />
+      <line x1="40" y1="36" x2="66" y2="51" />
+      <line x1="40" y1="36" x2="55" y2="63" />
+      <line x1="40" y1="36" x2="40" y2="66" />
+      <line x1="40" y1="36" x2="25" y2="63" />
+      <line x1="40" y1="36" x2="14" y2="51" />
+      <line x1="40" y1="36" x2="10" y2="36" />
+      <line x1="40" y1="36" x2="14" y2="21" />
+      <line x1="40" y1="36" x2="25" y2="9" />
+    </g>
+    <circle cx="40" cy="36" r="8" fill="#fff" stroke-width="1.5" />
+    <circle class="accent" cx="40" cy="36" r="3" />
+  </g>
+  <text class="label" x="150" y="94">Sunburst</text>
+
+  <!-- 3. HUD corner brackets -->
+  <rect class="cell-frame" x="200" y="0" width="100" height="100" rx="6" />
+  <g id="hud-brackets" transform="translate(210, 8)">
+    <path d="M 8 18 L 8 8 L 18 8" stroke-width="2.5" />
+    <path d="M 62 8 L 72 8 L 72 18" stroke-width="2.5" />
+    <path d="M 72 54 L 72 64 L 62 64" stroke-width="2.5" />
+    <path d="M 18 64 L 8 64 L 8 54" stroke-width="2.5" />
+    <line x1="36" y1="36" x2="44" y2="36" class="thin" />
+    <line x1="40" y1="32" x2="40" y2="40" class="thin" />
+  </g>
+  <text class="label" x="250" y="94">Corner Brackets</text>
+
+  <!-- 4. Plus reticle -->
+  <rect class="cell-frame" x="300" y="0" width="100" height="100" rx="6" />
+  <g id="plus-reticle" transform="translate(310, 8)">
+    <circle cx="40" cy="36" r="22" stroke-width="1" opacity="0.35" />
+    <circle cx="40" cy="36" r="14" stroke-width="1" opacity="0.55" />
+    <line x1="40" y1="6" x2="40" y2="22" />
+    <line x1="40" y1="50" x2="40" y2="66" />
+    <line x1="10" y1="36" x2="26" y2="36" />
+    <line x1="54" y1="36" x2="70" y2="36" />
+    <circle class="accent" cx="40" cy="36" r="2" />
+  </g>
+  <text class="label" x="350" y="94">Plus Reticle</text>
+
+  <!-- 5. Geometric star (8-point) -->
+  <rect class="cell-frame" x="400" y="0" width="100" height="100" rx="6" />
+  <g id="star-8pt" transform="translate(410, 8)">
+    <polygon class="accent" points="40,8 46,30 64,30 50,42 56,64 40,50 24,64 30,42 16,30 34,30" opacity="0.92" />
+    <polygon points="40,18 44,32 58,32 47,40 51,54 40,46 29,54 33,40 22,32 36,32" stroke="rgba(255,255,255,0.55)" stroke-width="0.75" fill="none" />
+  </g>
+  <text class="label" x="450" y="94">8-Pt Star</text>
+
+  <!-- ============ Row 2 ============ -->
+
+  <!-- 6. Single hex cell -->
+  <rect class="cell-frame" x="0" y="100" width="100" height="100" rx="6" />
+  <g id="hex-cell" transform="translate(10, 108)">
+    <polygon points="40,6 64,20 64,52 40,66 16,52 16,20" stroke-width="2.5" />
+    <polygon points="40,18 54,26 54,46 40,54 26,46 26,26" stroke-width="1" opacity="0.5" />
+    <circle class="accent" cx="40" cy="36" r="2" />
+  </g>
+  <text class="label" x="50" y="194">Hex Cell</text>
+
+  <!-- 7. Honeycomb cluster -->
+  <rect class="cell-frame" x="100" y="100" width="100" height="100" rx="6" />
+  <g id="honeycomb" transform="translate(110, 108)" stroke-width="1.5">
+    <!-- Center hex -->
+    <polygon points="40,28 50,33 50,43 40,48 30,43 30,33" />
+    <!-- Top -->
+    <polygon points="40,8 50,13 50,23 40,28 30,23 30,13" />
+    <!-- Bottom -->
+    <polygon points="40,48 50,53 50,63 40,68 30,63 30,53" />
+    <!-- Upper-left, Upper-right, Lower-left, Lower-right -->
+    <polygon points="22,18 30,23 30,33 22,38 14,33 14,23" />
+    <polygon points="58,18 66,23 66,33 58,38 50,33 50,23" />
+    <polygon points="22,38 30,43 30,53 22,58 14,53 14,43" />
+    <polygon points="58,38 66,43 66,53 58,58 50,53 50,43" />
+  </g>
+  <text class="label" x="150" y="194">Honeycomb</text>
+
+  <!-- 8. Sine pulse -->
+  <rect class="cell-frame" x="200" y="100" width="100" height="100" rx="6" />
+  <g id="sine-pulse" transform="translate(210, 108)">
+    <line x1="4" y1="36" x2="76" y2="36" class="thin" opacity="0.35" stroke-dasharray="2 3" />
+    <path d="M 4 36 Q 14 16 24 36 T 44 36 T 64 36 T 76 36" stroke-width="2.5" />
+    <circle class="accent" cx="14" cy="22" r="2" />
+    <circle class="accent" cx="34" cy="50" r="2" />
+    <circle class="accent" cx="54" cy="22" r="2" />
+  </g>
+  <text class="label" x="250" y="194">Sine Pulse</text>
+
+  <!-- 9. Triangle wave -->
+  <rect class="cell-frame" x="300" y="100" width="100" height="100" rx="6" />
+  <g id="tri-wave" transform="translate(310, 108)">
+    <polyline points="4,36 14,18 24,54 34,18 44,54 54,18 64,54 74,36" stroke-width="2.5" />
+    <circle class="accent" cx="14" cy="18" r="1.5" />
+    <circle class="accent" cx="34" cy="18" r="1.5" />
+    <circle class="accent" cx="54" cy="18" r="1.5" />
+  </g>
+  <text class="label" x="350" y="194">Triangle Wave</text>
+
+  <!-- 10. Diamond cluster -->
+  <rect class="cell-frame" x="400" y="100" width="100" height="100" rx="6" />
+  <g id="diamond-cluster" transform="translate(410, 108)">
+    <polygon class="accent" points="40,12 48,36 40,60 32,36" opacity="0.92" />
+    <polygon class="accent" points="14,36 32,28 32,44" opacity="0.6" />
+    <polygon class="accent" points="66,36 48,28 48,44" opacity="0.6" />
+    <polygon points="40,4 44,36 40,68 36,36" stroke="rgba(15,23,42,0.4)" stroke-width="0.5" fill="none" />
+  </g>
+  <text class="label" x="450" y="194">Diamond Cluster</text>
+
+  <!-- ============ Row 3 ============ -->
+
+  <!-- 11. Spiral -->
+  <rect class="cell-frame" x="0" y="200" width="100" height="100" rx="6" />
+  <g id="spiral" transform="translate(10, 208)">
+    <path d="M 40 36 m 0 0
+             a 4 4 0 1 1 4 -4
+             a 10 10 0 1 1 -14 4
+             a 16 16 0 1 1 24 -10
+             a 22 22 0 1 1 -34 14" stroke-width="2" />
+    <circle class="accent" cx="40" cy="36" r="2" />
+  </g>
+  <text class="label" x="50" y="294">Spiral</text>
+
+  <!-- 12. Dot grid 5x5 -->
+  <rect class="cell-frame" x="100" y="200" width="100" height="100" rx="6" />
+  <g id="dot-grid" transform="translate(110, 208)">
+    <g class="accent">
+      <circle cx="12" cy="14" r="1.7" /><circle cx="26" cy="14" r="1.7" /><circle cx="40" cy="14" r="1.7" /><circle cx="54" cy="14" r="1.7" /><circle cx="68" cy="14" r="1.7" />
+      <circle cx="12" cy="25" r="1.7" /><circle cx="26" cy="25" r="1.7" /><circle cx="40" cy="25" r="1.7" /><circle cx="54" cy="25" r="1.7" /><circle cx="68" cy="25" r="1.7" />
+      <circle cx="12" cy="36" r="1.7" /><circle cx="26" cy="36" r="1.7" /><circle cx="40" cy="36" r="3.2" /><circle cx="54" cy="36" r="1.7" /><circle cx="68" cy="36" r="1.7" />
+      <circle cx="12" cy="47" r="1.7" /><circle cx="26" cy="47" r="1.7" /><circle cx="40" cy="47" r="1.7" /><circle cx="54" cy="47" r="1.7" /><circle cx="68" cy="47" r="1.7" />
+      <circle cx="12" cy="58" r="1.7" /><circle cx="26" cy="58" r="1.7" /><circle cx="40" cy="58" r="1.7" /><circle cx="54" cy="58" r="1.7" /><circle cx="68" cy="58" r="1.7" />
+    </g>
+  </g>
+  <text class="label" x="150" y="294">Dot Grid</text>
+
+  <!-- 13. Chevron stack -->
+  <rect class="cell-frame" x="200" y="200" width="100" height="100" rx="6" />
+  <g id="chevron-stack" transform="translate(210, 208)">
+    <polyline points="14,16 40,36 66,16" stroke-width="3" opacity="0.4" fill="none" />
+    <polyline points="14,30 40,50 66,30" stroke-width="3" opacity="0.7" fill="none" />
+    <polyline points="14,44 40,64 66,44" stroke-width="3" fill="none" />
+  </g>
+  <text class="label" x="250" y="294">Chevron Stack</text>
+
+  <!-- 14. Octagonal frame -->
+  <rect class="cell-frame" x="300" y="200" width="100" height="100" rx="6" />
+  <g id="octagon-frame" transform="translate(310, 208)">
+    <polygon points="24,8 56,8 72,24 72,48 56,64 24,64 8,48 8,24" stroke-width="2.5" />
+    <polygon points="28,16 52,16 64,28 64,44 52,56 28,56 16,44 16,28" stroke-width="1" opacity="0.45" />
+    <line x1="40" y1="28" x2="40" y2="44" class="thin" />
+    <line x1="32" y1="36" x2="48" y2="36" class="thin" />
+  </g>
+  <text class="label" x="350" y="294">Octagon Frame</text>
+
+  <!-- 15. Diagonal hatch -->
+  <rect class="cell-frame" x="400" y="200" width="100" height="100" rx="6" />
+  <g id="hatch-square" transform="translate(410, 208)">
+    <rect x="8" y="8" width="64" height="56" stroke-width="2" />
+    <g class="thin" opacity="0.7">
+      <line x1="8" y1="20" x2="20" y2="8" />
+      <line x1="8" y1="32" x2="32" y2="8" />
+      <line x1="8" y1="44" x2="44" y2="8" />
+      <line x1="8" y1="56" x2="56" y2="8" />
+      <line x1="8" y1="64" x2="64" y2="8" />
+      <line x1="20" y1="64" x2="72" y2="12" />
+      <line x1="32" y1="64" x2="72" y2="24" />
+      <line x1="44" y1="64" x2="72" y2="36" />
+      <line x1="56" y1="64" x2="72" y2="48" />
+      <line x1="68" y1="64" x2="72" y2="60" />
+    </g>
+  </g>
+  <text class="label" x="450" y="294">Hatched Square</text>
+
+  <!-- ============ Row 4 ============ -->
+
+  <!-- 16. Compass star with rays -->
+  <rect class="cell-frame" x="0" y="300" width="100" height="100" rx="6" />
+  <g id="compass-star" transform="translate(10, 308)">
+    <g class="accent">
+      <polygon points="40,4 44,36 40,32 36,36" />
+      <polygon points="40,68 44,36 40,40 36,36" opacity="0.85" />
+      <polygon points="4,36 36,40 32,36 36,32" opacity="0.85" />
+      <polygon points="76,36 44,40 48,36 44,32" opacity="0.85" />
+    </g>
+    <g opacity="0.55">
+      <polygon points="16,12 40,36 36,32 32,36" />
+      <polygon points="64,12 40,36 44,32 48,36" />
+      <polygon points="16,60 40,36 36,40 32,36" />
+      <polygon points="64,60 40,36 44,40 48,36" />
+    </g>
+    <circle cx="40" cy="36" r="3.5" />
+  </g>
+  <text class="label" x="50" y="394">Compass Star</text>
+
+  <!-- 17. Ribbon flourish -->
+  <rect class="cell-frame" x="100" y="300" width="100" height="100" rx="6" />
+  <g id="ribbon-flourish" transform="translate(110, 308)">
+    <path d="M 6 36 Q 22 12 40 36 T 74 36" stroke-width="3" />
+    <path d="M 6 36 Q 22 60 40 36 T 74 36" stroke-width="3" opacity="0.5" />
+    <circle class="accent" cx="6" cy="36" r="2.5" />
+    <circle class="accent" cx="74" cy="36" r="2.5" />
+    <circle cx="40" cy="36" r="4" fill="#fff" stroke-width="1.5" />
+  </g>
+  <text class="label" x="150" y="394">Ribbon Flourish</text>
+
+  <!-- 18. Burst dots -->
+  <rect class="cell-frame" x="200" y="300" width="100" height="100" rx="6" />
+  <g id="burst-dots" transform="translate(210, 308)">
+    <g class="accent">
+      <circle cx="40" cy="36" r="3.5" />
+      <circle cx="40" cy="14" r="2.2" />
+      <circle cx="40" cy="58" r="2.2" />
+      <circle cx="18" cy="36" r="2.2" />
+      <circle cx="62" cy="36" r="2.2" />
+      <circle cx="24" cy="20" r="1.5" opacity="0.7" />
+      <circle cx="56" cy="20" r="1.5" opacity="0.7" />
+      <circle cx="24" cy="52" r="1.5" opacity="0.7" />
+      <circle cx="56" cy="52" r="1.5" opacity="0.7" />
+      <circle cx="40" cy="4" r="1.2" opacity="0.45" />
+      <circle cx="40" cy="68" r="1.2" opacity="0.45" />
+      <circle cx="8" cy="36" r="1.2" opacity="0.45" />
+      <circle cx="72" cy="36" r="1.2" opacity="0.45" />
+    </g>
+  </g>
+  <text class="label" x="250" y="394">Burst Dots</text>
+
+  <!-- 19. Nested polygons -->
+  <rect class="cell-frame" x="300" y="300" width="100" height="100" rx="6" />
+  <g id="nested-polygons" transform="translate(310, 308)">
+    <polygon points="40,4 72,22 72,50 40,68 8,50 8,22" stroke-width="2" />
+    <polygon points="40,12 64,24 64,48 40,60 16,48 16,24" stroke-width="1" opacity="0.65" />
+    <polygon points="40,20 56,28 56,44 40,52 24,44 24,28" stroke-width="1" opacity="0.5" />
+    <polygon class="accent" points="40,30 48,34 48,42 40,46 32,42 32,34" opacity="0.85" />
+  </g>
+  <text class="label" x="350" y="394">Nested Polygons</text>
+
+  <!-- 20. Mandala spokes -->
+  <rect class="cell-frame" x="400" y="300" width="100" height="100" rx="6" />
+  <g id="mandala-spokes" transform="translate(410, 308)">
+    <circle cx="40" cy="36" r="28" stroke-width="1" opacity="0.45" />
+    <circle cx="40" cy="36" r="18" stroke-width="1" opacity="0.65" />
+    <g stroke-width="1.5">
+      <line x1="40" y1="8" x2="40" y2="64" />
+      <line x1="12" y1="36" x2="68" y2="36" />
+      <line x1="20" y1="16" x2="60" y2="56" />
+      <line x1="60" y1="16" x2="20" y2="56" />
+    </g>
+    <g class="accent">
+      <circle cx="40" cy="8" r="2" />
+      <circle cx="40" cy="64" r="2" />
+      <circle cx="12" cy="36" r="2" />
+      <circle cx="68" cy="36" r="2" />
+      <circle cx="20" cy="16" r="1.5" opacity="0.7" />
+      <circle cx="60" cy="16" r="1.5" opacity="0.7" />
+      <circle cx="20" cy="56" r="1.5" opacity="0.7" />
+      <circle cx="60" cy="56" r="1.5" opacity="0.7" />
+      <circle cx="40" cy="36" r="3.5" />
+    </g>
+  </g>
+  <text class="label" x="450" y="394">Mandala Spokes</text>
+
+</svg>

@@ -1,17 +1,20 @@
 import { useQueryClient } from "@tanstack/react-query";
 import { useEffect, useRef } from "react";
-import { useSession } from "../lib/auth-client";
+import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { queryPersister } from "../lib/query-persister";
 
 export function AuthInvalidator() {
   const qc = useQueryClient();
-  const { data, isPending } = useSession();
-  const userId = data?.user?.id ?? null;
+  // Route through `useCurrentUser` so we never see an un-narrowed session
+  // shape — the hook returns `null` when the session is missing or fails
+  // schema validation, and the only thing we read here is the user id.
+  const { user, isLoading } = useCurrentUser();
+  const userId = user?.id ?? null;
   const lastUserId = useRef<string | null>(null);
   const initialized = useRef(false);
 
   useEffect(() => {
-    if (isPending) return;
+    if (isLoading) return;
     if (!initialized.current) {
       lastUserId.current = userId;
       initialized.current = true;
@@ -25,7 +28,7 @@ export function AuthInvalidator() {
     // run.
     void queryPersister?.removeClient();
     lastUserId.current = userId;
-  }, [userId, isPending, qc]);
+  }, [userId, isLoading, qc]);
 
   return null;
 }

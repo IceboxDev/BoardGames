@@ -1,18 +1,11 @@
 /**
- * Shape returned by `authClient.admin.listUsers()` after the call-site cast.
- * Lives here so every admin sub-component imports it from one place — the
- * Better-Auth client doesn't expose this row shape in its inferred types
- * (the custom-fields plugin omits `role` / `onlineEnabled` / `internal` /
- * `guest`), so we narrow at the boundary in AdminPage and use this type from
- * there down.
+ * Row shape returned by `authClient.admin.listUsers()`. Defined as a Zod
+ * schema in `@boardgames/core/protocol` so the entire admin tree imports a
+ * single, validated type — and so {@link AdminPage} can parse the SDK
+ * response through `AdminUserListSchema` instead of `as unknown as`-casting.
+ *
+ * Re-exported from here for backwards-compat with the prior hand-rolled
+ * type; existing call sites continue importing from
+ * `components/admin/types` and `components/admin` with no churn.
  */
-export type AdminUser = {
-  id: string;
-  name: string;
-  email: string;
-  role?: string | null;
-  onlineEnabled?: boolean | null;
-  internal?: boolean | null;
-  guest?: boolean | null;
-  createdAt: string | Date;
-};
+export type { AdminUser } from "@boardgames/core/protocol";

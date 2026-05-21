@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" fill="none" stroke="currentColor" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Signal waves emanating from the antenna tip -->
+  <path d="M 230 175 Q 300 110 370 175" />
+  <path d="M 170 225 Q 300 65 430 225" />
+  <path d="M 110 275 Q 300 20 490 275" />
+
+  <!-- Antenna tip -->
+  <circle cx="300" cy="155" r="22" fill="currentColor" stroke="none" />
+
+  <!-- Mast between tip and the tower top -->
+  <line x1="300" y1="180" x2="300" y2="245" />
+
+  <!-- Tower legs (left + right), splaying outward -->
+  <line x1="300" y1="245" x2="195" y2="560" />
+  <line x1="300" y1="245" x2="405" y2="560" />
+
+  <!-- Horizontal cross-beams -->
+  <line x1="262" y1="355" x2="338" y2="355" />
+  <line x1="237" y1="430" x2="363" y2="430" />
+  <line x1="212" y1="500" x2="388" y2="500" />
+
+  <!-- X-bracing between consecutive beams -->
+  <line x1="262" y1="355" x2="338" y2="430" />
+  <line x1="338" y1="355" x2="262" y2="430" />
+  <line x1="237" y1="430" x2="363" y2="500" />
+  <line x1="363" y1="430" x2="237" y2="500" />
+  <line x1="212" y1="500" x2="388" y2="560" />
+  <line x1="388" y1="500" x2="212" y2="560" />
+
+  <!-- Ground line -->
+  <line x1="170" y1="565" x2="430" y2="565" />
+</svg>

@@ -35,8 +35,11 @@ export const HUD_REROLL: { center: BoardPoint; radius: number } = {
   radius: 32,
 };
 
-export const HUD_WEATHER: BoardRect = { x: 222, y: 6, w: 170, h: 82 };
-export const HUD_ALTITUDE: BoardRect = { x: 408, y: 6, w: 180, h: 82 };
+// HUD panels — left edge of weather aligns with pilot-axis left wall (x=105);
+// right edge of altitude aligns with copilot-axis right wall (x=615). Centred
+// gap of 30 between them; panels fill the full HUD height (y=0..88).
+export const HUD_WEATHER: BoardRect = { x: 105, y: 0, w: 240, h: 88 };
+export const HUD_ALTITUDE: BoardRect = { x: 375, y: 0, w: 240, h: 88 };
 
 // ---------- side strips ----------
 
@@ -81,31 +84,31 @@ export const ARTIFICIAL_HORIZON: {
 };
 
 // Axis arc — TRUE 180° half-circle. Chord length 456 = diameter, so radius =
-// 228; sagitta also = 228, putting arc bottom at y=574. The engine row + brake
-// arc + brake row sit BELOW the half-circle (engine row top at y=600).
+// 228; sagitta = 228. Chord at y=300 (nudged a bit further down from y=253).
+// Arc bottom y=528, still clear of the engine row at y=600.
 export const AXIS_ARC: {
   chord: { left: BoardPoint; right: BoardPoint };
   rx: number;
   ry: number;
   thickness: number;
 } = {
-  chord: { left: { x: 132, y: 346 }, right: { x: 588, y: 346 } },
+  chord: { left: { x: 132, y: 300 }, right: { x: 588, y: 300 } },
   rx: 228,
   ry: 228,
   thickness: 36,
 };
 
-// Brake arc — quadratic-bezier U-curve. Sits between the engine row (bottom
-// y=670) and the brake row (top y=778). Path lab-depth 91 preserved.
+// Brake arc — quadratic-bezier U-curve. Same shape as before; moved up 30
+// (y 705 → 675, control y 795 → 765) for breathing room above the brake row.
 export const BRAKE_ARC: {
   start: BoardPoint;
   control: BoardPoint;
   end: BoardPoint;
   thickness: number;
 } = {
-  start: { x: 249.6, y: 695 },
-  control: { x: 360, y: 786 },
-  end: { x: 470.4, y: 695 },
+  start: { x: 214, y: 675 },
+  control: { x: 360, y: 765 },
+  end: { x: 506, y: 675 },
   thickness: 38,
 };
 
@@ -113,11 +116,14 @@ export const BRAKE_ARC: {
 
 const ENGINE_SLOT_W = 70;
 const ENGINE_SLOT_H = 70;
-const ENGINE_ROW_Y = 600; // shifted down to clear the half-circle axis arc (band bottom y=592)
-const ENGINE_PILOT_X = 248;
-const ENGINE_COPILOT_X = 402;
+const ENGINE_ROW_Y = 570; // moved up from 600 (still clears the axis arc band)
+// Pilot engine centred at x=250 (matches brake-2 tile centre), copilot at
+// x=470 (matches brake-6 tile centre). With tile width 70, top-left x is
+// centre − 35.
+const ENGINE_PILOT_X = 215;
+const ENGINE_COPILOT_X = 435;
 
-export const ENGINE_ROW_AXIS_MARKER: BoardPoint = { x: 360, y: 635 };
+export const ENGINE_ROW_AXIS_MARKER: BoardPoint = { x: 360, y: 605 };
 
 // Brake tile bounds — also tile-only (64×64). Slider positioned below.
 const BRAKE_TILE_W = 64;
@@ -133,21 +139,21 @@ export const SLOT_GEOMETRY: Record<SlotId, BoardRect> = {
   "pilot-engine": { x: ENGINE_PILOT_X, y: ENGINE_ROW_Y, w: ENGINE_SLOT_W, h: ENGINE_SLOT_H },
   "copilot-engine": { x: ENGINE_COPILOT_X, y: ENGINE_ROW_Y, w: ENGINE_SLOT_W, h: ENGINE_SLOT_H },
 
-  // Axis (where dice land for the artificial-horizon roll). Lab doesn't sketch
-  // these — kept at current positions just below the dial; revisit when lab adds
-  // the region.
-  "pilot-axis": { x: 200, y: 460, w: 64, h: 64 },
-  "copilot-axis": { x: 456, y: 460, w: 64, h: 64 },
+  // Axis slots — inset from the rim, moved up further from y=200.
+  "pilot-axis": { x: 105, y: 140, w: 64, h: 64 },
+  "copilot-axis": { x: 551, y: 140, w: 64, h: 64 },
 
-  // Radio (not in lab — placed above the horizon dial; revisit alongside axis).
-  "pilot-radio": { x: 270, y: 165, w: 56, h: 56 },
-  "copilot-radio-1": { x: 394, y: 165, w: 56, h: 56 },
-  "copilot-radio-2": { x: 394, y: 235, w: 56, h: 56 },
+  // Radio slots — rim-aligned at the upper outer corners. Pilot has one; the
+  // copilot's two stack vertically with breathing room (radio-2 well above
+  // radio-1, not tight).
+  "pilot-radio": { x: 11, y: 160, w: 64, h: 64 },
+  "copilot-radio-1": { x: 645, y: 160, w: 64, h: 64 },
+  "copilot-radio-2": { x: 645, y: 56, w: 64, h: 64 },
 
   // Concentration tiles — centred on board x=50% inside the cabin polygon.
-  // Centres at 270 / 360 / 450 (90px apart, matching the brake row).
+  // Centres at 250 / 360 / 470 (110 apart — widened from 90 for breathing).
   "concentration-1": {
-    x: 270 - CONCENTRATION_W / 2,
+    x: 250 - CONCENTRATION_W / 2,
     y: CONCENTRATION_Y,
     w: CONCENTRATION_W,
     h: CONCENTRATION_H,
@@ -159,7 +165,7 @@ export const SLOT_GEOMETRY: Record<SlotId, BoardRect> = {
     h: CONCENTRATION_H,
   },
   "concentration-3": {
-    x: 450 - CONCENTRATION_W / 2,
+    x: 470 - CONCENTRATION_W / 2,
     y: CONCENTRATION_Y,
     w: CONCENTRATION_W,
     h: CONCENTRATION_H,
@@ -177,10 +183,11 @@ export const SLOT_GEOMETRY: Record<SlotId, BoardRect> = {
   "flaps-3": { x: STRIP_X_RIGHT, y: STRIP_Y_ROW_3, w: STRIP_TILE_W, h: STRIP_TILE_H },
   "flaps-4": { x: STRIP_X_RIGHT, y: STRIP_Y_ROW_4, w: STRIP_TILE_W, h: STRIP_TILE_H },
 
-  // Brakes — pilot row below the brake arc, centres at 270 / 360 / 450.
-  "brakes-2": { x: 270 - BRAKE_TILE_W / 2, y: BRAKE_ROW_Y, w: BRAKE_TILE_W, h: BRAKE_TILE_H },
+  // Brakes — pilot row below the brake arc, centres at 250 / 360 / 470
+  // (110 apart, mirrors the concentration row).
+  "brakes-2": { x: 250 - BRAKE_TILE_W / 2, y: BRAKE_ROW_Y, w: BRAKE_TILE_W, h: BRAKE_TILE_H },
   "brakes-4": { x: 360 - BRAKE_TILE_W / 2, y: BRAKE_ROW_Y, w: BRAKE_TILE_W, h: BRAKE_TILE_H },
-  "brakes-6": { x: 450 - BRAKE_TILE_W / 2, y: BRAKE_ROW_Y, w: BRAKE_TILE_W, h: BRAKE_TILE_H },
+  "brakes-6": { x: 470 - BRAKE_TILE_W / 2, y: BRAKE_ROW_Y, w: BRAKE_TILE_W, h: BRAKE_TILE_H },
 };
 
 // ---------- cabin panel (HTML polygon overlay) ----------

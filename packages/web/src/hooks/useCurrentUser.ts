@@ -1,6 +1,6 @@
 import { type SessionUser, SessionUserSchema } from "@boardgames/core/protocol";
 import { useMemo } from "react";
-import { useSession } from "../lib/auth-client.ts";
+import { authClient } from "../lib/auth-client.ts";
 
 export type { SessionUser } from "@boardgames/core/protocol";
 
@@ -11,17 +11,20 @@ interface UseCurrentUserResult {
 }
 
 /**
- * Single source of truth for the current user. Replaces the four ad-hoc
- * `(session?.user as { role?: string })` casts that used to live at
- * AuthGuard, RsvpModal, OfflineDashboard, and AdminPage.
+ * Single source of truth for the current user. Every consumer in the app
+ * (route guards, profile / admin / history pages, RSVP modal, …) reads
+ * from here so the four ad-hoc `(session?.user as { role?: string })`
+ * casts that used to live around the codebase are eliminated.
  *
  * Better-auth's session shape is opaque to TypeScript (its custom-fields
- * plugin doesn't expose `role`/`onlineEnabled` in the inferred types), so we
- * narrow it once with `SessionUserSchema.safeParse` and let downstream code
- * trust the result.
+ * plugin doesn't expose `role`/`onlineEnabled` in the inferred types), so
+ * we narrow it once with `SessionUserSchema.safeParse` and let downstream
+ * code trust the result. This module is the only file outside
+ * `lib/auth-client.ts` that may pull from Better-Auth directly — the
+ * biome `noRestrictedImports` rule keeps that contract honest.
  */
 export function useCurrentUser(): UseCurrentUserResult {
-  const { data, isPending } = useSession();
+  const { data, isPending } = authClient.useSession();
   return useMemo<UseCurrentUserResult>(() => {
     if (isPending) return { user: null, isLoading: true, isAdmin: false };
     const raw = data?.user;

@@ -11,6 +11,7 @@ import {
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Chip } from "../components/ui/Chip";
 import { PageMain, PageShell } from "../components/ui/PageShell";
+import { useAdminUsers } from "../hooks/useAdminUsers.ts";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { adminSetOnline } from "../lib/admin";
 import { authClient } from "../lib/auth-client";
@@ -44,14 +45,9 @@ export default function AdminPage() {
   const [confirmDeleteUserId, setConfirmDeleteUserId] = useState<string | null>(null);
   const [confirmEmail, setConfirmEmail] = useState("");
 
-  const usersQuery = useQuery({
-    queryKey: qk.adminUsers(),
-    queryFn: async () => {
-      const { data, error } = await authClient.admin.listUsers({ query: { limit: 100 } });
-      if (error) throw new Error(error.message ?? "Failed to load users");
-      return (data?.users ?? []) as unknown as AdminUser[];
-    },
-  });
+  // Shared with RecordMatchModal's participant picker via the qk.adminUsers()
+  // cache key; the hook owns the limit + schema-validation contract.
+  const usersQuery = useAdminUsers();
 
   const aggregateQuery = useQuery({
     queryKey: qk.adminAggregateAvailability(),

@@ -14,4 +14,8 @@ export default {
   soloLabel: "Trainer",
   hasMatchHistory: true,
   rulesUrl,
+  // Custom dual-tab (Trainer + PvP) match-history view — generic
+  // `<MatchHistory>` only knows about server-stored matches; trainer
+  // runs live in localStorage and need their own table.
+  matchHistoryComponent: lazy(() => import("./components/SetMatchHistory")),
 } satisfies GameModule;

@@ -1,15 +1,39 @@
 import { Outlet, useLocation } from "react-router-dom";
-import { GameBackOverrideProvider } from "../contexts/GameBackOverrideProvider";
-import { useGameBackOverride } from "../hooks/useGameBackOverride";
 import { TopNav, TopNavBackButton } from "./TopNav";
 import { PageMain, PageShell } from "./ui/PageShell";
 
-function LayoutInner() {
+/**
+ * Compute the back destination from the current pathname. Walks one
+ * segment up the route tree until it hits a special anchor:
+ *
+ *   - `/games` → `/` (dashboard)
+ *   - `/play/:slug` → `/games`
+ *   - `/play/:slug/<anything-else>` → `/play/:slug` (mode select)
+ *
+ * Replaces the previous `useGameBackOverride` mechanism, which existed
+ * only because shell state lived in component state instead of the URL.
+ * Now that every screen has a URL, the back destination is a pure
+ * function of the pathname — no override registry, no ref passing.
+ */
+function backTarget(pathname: string): { href: string; label: string } {
+  if (pathname === "/games" || pathname === "/games/") {
+    return { href: "/", label: "Dashboard" };
+  }
+  // `/play/:slug` (no further segments) → top-level catalog.
+  const playSegments = pathname.replace(/^\/+|\/+$/g, "").split("/");
+  if (playSegments[0] === "play" && playSegments.length === 2) {
+    return { href: "/games", label: "Back" };
+  }
+  // `/play/:slug/<screen>` (any sub-route) → mode select.
+  if (playSegments[0] === "play" && playSegments.length > 2) {
+    return { href: `/play/${playSegments[1]}`, label: "Back" };
+  }
+  return { href: "/games", label: "Back" };
+}
+
+export default function Layout() {
   const { pathname } = useLocation();
-  const { overrideRef } = useGameBackOverride();
-  const isHome = pathname === "/games";
-  const backHref = isHome ? "/" : "/games";
-  const backLabel = isHome ? "Dashboard" : "Back";
+  const { href, label } = backTarget(pathname);
 
   return (
     <PageShell
@@ -17,16 +41,7 @@ function LayoutInner() {
       background="none"
       topNav={
         <TopNav homeHref="/games">
-          <TopNavBackButton
-            to={backHref}
-            label={backLabel}
-            onClick={(e) => {
-              if (overrideRef.current) {
-                e.preventDefault();
-                overrideRef.current();
-              }
-            }}
-          />
+          <TopNavBackButton to={href} label={label} />
         </TopNav>
       }
     >
@@ -49,10 +64,6 @@ function LayoutInner() {
   );
 }
 
-export default function Layout() {
-  return (
-    <GameBackOverrideProvider>
-      <LayoutInner />
-    </GameBackOverrideProvider>
-  );
-}
+// Exported only for unit tests; not part of the public component API.
+// biome-ignore lint/style/useComponentExportOnlyModules: tiny pure helper, exported for unit-test pinning of the parent-route resolver
+export { backTarget };

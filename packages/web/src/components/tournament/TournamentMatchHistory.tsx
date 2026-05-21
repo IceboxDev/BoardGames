@@ -8,7 +8,16 @@ interface TournamentMatchHistoryProps {
   strategyBId: string;
   tournamentId: string;
   onBack: () => void;
-  onSelectGame?: (game: unknown) => void;
+  /**
+   * Called with the row's `gameIndex` when the user picks a game. The
+   * caller — `<TournamentMatchHistoryRoute>` in production — uses the
+   * index to navigate to
+   * `/play/:slug/tournament/:a/:b/:t/:gameIndex`, where the replay
+   * route fetches the single game log and renders the game's replay
+   * component. Keeps this table free of the log payload and lets the
+   * replay survive a refresh.
+   */
+  onSelectGameIndex?: (gameIndex: number) => void;
   exportLogFn?: (game: unknown) => unknown;
 }
 
@@ -25,7 +34,7 @@ export default function TournamentMatchHistory({
   strategyBId,
   tournamentId,
   onBack,
-  onSelectGame,
+  onSelectGameIndex,
   exportLogFn,
 }: TournamentMatchHistoryProps) {
   const labelA = strategies.find((s) => s.id === strategyAId)?.label ?? strategyAId;
@@ -132,14 +141,19 @@ export default function TournamentMatchHistory({
                 const diff = game.scoreA - game.scoreB;
                 const aWon = diff > 0;
                 const bWon = diff < 0;
+                // Each tournament row carries its own `gameIndex` from the
+                // server; we prefer that over the table position so the
+                // index in the replay URL points at the exact game even
+                // when the table is filtered or partially loaded.
+                const idx = game.gameIndex ?? i;
 
                 return (
                   <tr
                     // biome-ignore lint/suspicious/noArrayIndexKey: static tournament game list
                     key={i}
-                    onClick={() => onSelectGame?.(rawGames[i])}
+                    onClick={() => onSelectGameIndex?.(idx)}
                     className={`border-b border-gray-800/40 transition-colors ${
-                      onSelectGame ? "cursor-pointer hover:bg-gray-800/50" : ""
+                      onSelectGameIndex ? "cursor-pointer hover:bg-gray-800/50" : ""
                     }`}
                   >
                     <td className="p-2.5 tabular-nums text-gray-400">{i + 1}</td>

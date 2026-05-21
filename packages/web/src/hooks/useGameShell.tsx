@@ -1,188 +1,140 @@
-import { gameRoomConfigs } from "@boardgames/core/protocol/room-config";
-import type { ReactNode } from "react";
-import { useCallback, useEffect, useState } from "react";
-import { JoinRoom, Lobby, ModeSelect } from "../components/multiplayer";
-import { TournamentGrid, TournamentMatchHistory } from "../components/tournament";
+import { createContext, type ReactNode, useContext, useMemo } from "react";
+import { Navigate, Outlet, useParams } from "react-router-dom";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
-import { useGameSession } from "../lib/ws-client";
+import { type GameSession, useGameSession } from "../lib/ws-client";
 import useDocumentTitle from "./useDocumentTitle";
-import { useGameBackOverride } from "./useGameBackOverride";
-import type { MultiplayerRoomState } from "./useMultiplayerRoom";
-import { useMultiplayerRoom } from "./useMultiplayerRoom";
-import type { RemoteGameState } from "./useRemoteGame";
-import { useRemoteGame } from "./useRemoteGame";
+import { type MultiplayerRoomState, useMultiplayerRoom } from "./useMultiplayerRoom";
+import { type RemoteGameState, useRemoteGame } from "./useRemoteGame";
+import { useRoomLeaveGuard } from "./useRoomLeaveGuard";
 
-export type ShellMode =
-  | "menu"
-  | "solo"
-  | "mp-join"
-  | "mp-lobby"
-  | "mp-playing"
-  | "match-history"
-  | "tournament";
+// ── Source ────────────────────────────────────────────────────────────────
+//
+// Whether the current sub-route reads from the solo session (`game`) or
+// the multiplayer room (`mp`). Game components accept this as a prop —
+// `<LostCities source="solo" />` vs `<LostCities source="mp" />` — so the
+// SAME chunk renders both routes and the per-game logic stays in one
+// file. The route element wrappers in `App.tsx` set the prop based on the
+// URL.
 
-export interface GameShellResult<TView, TAction, TResult> {
-  mode: ShellMode;
+export type GameSource = "solo" | "mp";
+
+// ── Context shape ─────────────────────────────────────────────────────────
+//
+// Owned by `<GameShellLayout>` (one mount per `/play/:slug` route), read
+// by every child route. Each layout mounts ONE WebSocket via
+// `useGameSession`; both projections (`game` for solo, `mp` for room
+// gameplay) read from that single session, so solo and multiplayer never
+// race for state and there is never more than one connection per slug.
+//
+// Per-game payload types are generic at the call site: callers do
+// `useGameShell<MyView, MyAction, MyResult>()` and receive a typed
+// projection. The context itself stores `unknown`; the hook does a
+// single cast at the boundary.
+
+export interface GameShellValue<TView, TAction, TResult> {
+  /** Game registry entry. Always defined inside a layout. */
   def: GameDefinition;
+  /** Shared raw session (WebSocket + state). Prefer `game` / `mp` projections. */
+  session: GameSession<TView, TAction, TResult>;
+  /** Solo (vs-AI) projection. */
   game: RemoteGameState<TView, TAction, TResult>;
+  /** Multiplayer-room projection. */
   mp: MultiplayerRoomState<TView, TAction, TResult>;
-  /** Shell-rendered screen (mode select, join room, lobby), or null when the game should render. */
-  screen: ReactNode | null;
-  /** Navigate back to mode selection, resetting game & mp state. */
-  goToMenu: () => void;
-  /** Pass-through for game-level back overrides. */
-  setBackOverride: (fn: (() => void) | null) => void;
 }
 
-interface GameShellOptions<TView, TAction, TResult> {
-  /** Custom children rendered inside the Lobby (e.g. difficulty selector). */
-  renderLobbyContent?: (mp: MultiplayerRoomState<TView, TAction, TResult>) => ReactNode;
-  /** Config object passed to mp.startRoom() when the host starts from the lobby. */
-  getLobbyStartConfig?: () => unknown;
-  /** Optional callback for exporting tournament game logs (e.g. Lost Cities human-readable format). */
-  tournamentExportLogFn?: (game: unknown) => unknown;
-  /** Optional callback when a tournament game is selected (e.g. for replay). */
-  tournamentOnSelectGame?: (game: unknown) => void;
+const GameShellContext = createContext<GameShellValue<unknown, unknown, unknown> | null>(null);
+
+/**
+ * Hook used by every game's component and every screen sub-route to read
+ * the shared shell state.
+ *
+ * Generics let the caller name the per-game payload types so consumer
+ * code stays type-safe even though the context stores `unknown`. We do
+ * exactly one cast here at the boundary; downstream sees a fully typed
+ * `RemoteGameState<MyView, ...>` / `MultiplayerRoomState<...>` triple.
+ *
+ * Throws if used outside `<GameShellLayout>` — that error is loud on
+ * purpose so a misplaced component is caught at first render rather than
+ * silently rendering with `undefined` state.
+ */
+// biome-ignore lint/style/useComponentExportOnlyModules: paired with <GameShellLayout> so games can import both via a single source file
+export function useGameShell<
+  TView = unknown,
+  TAction = unknown,
+  TResult = unknown,
+>(): GameShellValue<TView, TAction, TResult> {
+  const ctx = useContext(GameShellContext);
+  if (!ctx) {
+    throw new Error(
+      "useGameShell must be used inside <GameShellLayout> (mounted at /play/:slug/*)",
+    );
+  }
+  return ctx as unknown as GameShellValue<TView, TAction, TResult>;
 }
 
-export function useGameShell<TView = unknown, TAction = unknown, TResult = unknown>(
-  slug: string,
-  options?: GameShellOptions<TView, TAction, TResult>,
-): GameShellResult<TView, TAction, TResult> {
-  const def = games.find((g) => g.slug === slug) as GameDefinition;
+// ── Layout (route element) ────────────────────────────────────────────────
+//
+// Mount at `/play/:slug/*`. Looks up the GameDefinition by slug; redirects
+// to `/games` if the slug is unknown or the game has no playable
+// component. Once mounted, owns the single WebSocket for the lifetime of
+// the /play/:slug visit — child routes mount and unmount within this
+// without disturbing the session.
 
+/**
+ * Inner layout. Wraps the actual session/projection wiring so that the
+ * outer `<GameShellLayout>` can do the slug→def lookup AND the unknown-
+ * slug redirect before we ever instantiate `useGameSession`. That order
+ * matters: opening a WebSocket on an invalid /play/:slug would leak a
+ * connection on every typo.
+ */
+function GameShellLayoutInner({ def, children }: { def: GameDefinition; children?: ReactNode }) {
   useDocumentTitle(`${def.title} - Board Games`);
 
-  // ONE WebSocket per game shell. Both projections read from this shared session
-  // so solo and multiplayer state never go out of sync, and there's never more
-  // than one open connection per route. Previously each projection opened its
-  // own WS, doubling reconnect storms and creating split state.
-  const session = useGameSession<TView, TAction, TResult>();
-  const game = useRemoteGame<TView, TAction, TResult>(slug, session);
-  const mp = useMultiplayerRoom<TView, TAction, TResult>(slug, session);
-  const [mode, setMode] = useState<ShellMode>("menu");
-  const { setBackOverride } = useGameBackOverride();
+  // Single session per /play/:slug mount. Both `useRemoteGame` (solo
+  // projection) and `useMultiplayerRoom` (room projection) read from it.
+  const session = useGameSession<unknown, unknown, unknown>();
+  const game = useRemoteGame<unknown, unknown, unknown>(def.slug, session);
+  const mp = useMultiplayerRoom<unknown, unknown, unknown>(def.slug, session);
 
-  // Tournament sub-navigation state
-  const [tournamentMatchPair, setTournamentMatchPair] = useState<{
-    aId: string;
-    bId: string;
-    tournamentId: string;
-  } | null>(null);
+  const value = useMemo<GameShellValue<unknown, unknown, unknown>>(
+    () => ({ def, session, game, mp }),
+    [def, session, game, mp],
+  );
 
-  // Track multiplayer phase transitions
-  useEffect(() => {
-    if (mp.phase === "lobby" && mode === "mp-join") setMode("mp-lobby");
-    if (mp.phase === "playing" && mode !== "mp-playing") setMode("mp-playing");
-  }, [mp.phase, mode]);
+  return (
+    <GameShellContext.Provider value={value}>
+      <RoomLeaveGuardMount />
+      {children ?? <Outlet />}
+    </GameShellContext.Provider>
+  );
+}
 
-  // Back overrides for shell-owned screens
-  useEffect(() => {
-    if (mode === "mp-join") {
-      setBackOverride(() => setMode("menu"));
-      return () => setBackOverride(null);
-    }
-    if (mode === "mp-lobby") {
-      setBackOverride(() => {
-        mp.leaveRoom();
-        setMode("menu");
-      });
-      return () => setBackOverride(null);
-    }
-    if (mode === "tournament") {
-      if (tournamentMatchPair) {
-        setBackOverride(() => setTournamentMatchPair(null));
-      } else {
-        setBackOverride(() => {
-          setTournamentMatchPair(null);
-          setMode("menu");
-        });
-      }
-      return () => setBackOverride(null);
-    }
-    return undefined;
-  }, [mode, tournamentMatchPair, setBackOverride, mp.leaveRoom]);
+/**
+ * Minimal mount-point for {@link useRoomLeaveGuard}. The guard hook
+ * reads from `useGameShell()`, which requires it to live BENEATH the
+ * `<GameShellContext.Provider>`. Kept as a zero-render component so
+ * the cost is just two extra fiber nodes per shell mount.
+ */
+function RoomLeaveGuardMount() {
+  useRoomLeaveGuard();
+  return null;
+}
 
-  const goToMenu = useCallback(() => {
-    game.reset();
-    mp.reset();
-    setTournamentMatchPair(null);
-    setMode("menu");
-  }, [game.reset, mp.reset]);
-
-  // Compute shell screen
-  let screen: ReactNode | null = null;
-
-  if (mode === "menu") {
-    screen = (
-      <ModeSelect
-        title={def.title}
-        subtitle={undefined}
-        soloLabel={def.soloLabel}
-        rulesUrl={def.rulesUrl}
-        onSolo={() => setMode("solo")}
-        onMultiplayer={() => setMode("mp-join")}
-        onMatchHistory={def.hasMatchHistory ? () => setMode("match-history") : undefined}
-        onTournament={def.hasTournament ? () => setMode("tournament") : undefined}
-      />
-    );
-  } else if (mode === "mp-join") {
-    screen = (
-      <JoinRoom
-        title={def.title}
-        onCreateRoom={(name) => mp.createRoom(name)}
-        onJoinRoom={(code, name) => mp.joinRoom(code, name)}
-        onBack={() => setMode("menu")}
-        error={mp.error}
-      />
-    );
-  } else if (mode === "mp-lobby" && mp.roomCode && mp.roomState) {
-    screen = (
-      <Lobby
-        roomCode={mp.roomCode}
-        roomState={mp.roomState}
-        mySlot={mp.mySlot ?? 0}
-        isHost={mp.isHost}
-        roomConfig={gameRoomConfigs[slug]}
-        onStart={() => mp.startRoom(options?.getLobbyStartConfig?.() ?? {})}
-        onLeave={() => {
-          mp.leaveRoom();
-          setMode("menu");
-        }}
-        onKick={(i) => mp.kickPlayer(i)}
-        onToggleReady={() => mp.toggleReady()}
-        error={mp.error}
-      >
-        {options?.renderLobbyContent?.(mp)}
-      </Lobby>
-    );
-  } else if (mode === "tournament" && def.tournamentStrategies) {
-    if (tournamentMatchPair) {
-      screen = (
-        <TournamentMatchHistory
-          strategies={def.tournamentStrategies}
-          strategyAId={tournamentMatchPair.aId}
-          strategyBId={tournamentMatchPair.bId}
-          tournamentId={tournamentMatchPair.tournamentId}
-          onBack={() => setTournamentMatchPair(null)}
-          onSelectGame={options?.tournamentOnSelectGame}
-          exportLogFn={options?.tournamentExportLogFn}
-        />
-      );
-    } else {
-      screen = (
-        <TournamentGrid
-          gameSlug={slug}
-          strategies={def.tournamentStrategies}
-          showScoreDiff={def.tournamentShowScoreDiff}
-          onViewMatchHistory={(aId, bId, tournamentId) =>
-            setTournamentMatchPair({ aId, bId, tournamentId })
-          }
-        />
-      );
-    }
+/**
+ * `/play/:slug/*` route element. Resolve the slug or bail out — every
+ * deeper route can rely on `useGameShell()` returning a defined `def`
+ * without re-checking.
+ *
+ * The redirect targets `/games` (the menu) on bad slugs, which is the
+ * same place the previous `<GameRouter>` sent the user. Keep that
+ * destination stable so existing bookmarks degrade gracefully.
+ */
+export function GameShellLayout({ children }: { children?: ReactNode }) {
+  const { slug } = useParams<{ slug: string }>();
+  const def = slug ? games.find((g) => g.slug === slug) : undefined;
+  if (!def || !def.component) {
+    return <Navigate to="/games" replace />;
   }
-
-  return { mode, def, game, mp, screen, goToMenu, setBackOverride };
+  return <GameShellLayoutInner def={def}>{children}</GameShellLayoutInner>;
 }

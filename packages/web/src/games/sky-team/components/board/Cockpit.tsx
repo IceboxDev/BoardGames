@@ -10,6 +10,7 @@ import AxisArc from "./AxisArc";
 import { BottomPanelChrome, ConcentrationSlots } from "./BottomPanel";
 import BrakeArc from "./BrakeArc";
 import BrakeRow from "./BrakeRow";
+import ChainArrows from "./ChainArrows";
 import "./cockpit.css";
 import CockpitBackground from "./CockpitBackground";
 import EngineRow, { EngineAxisMarker } from "./EngineRow";
@@ -17,7 +18,6 @@ import FlapsStrip from "./FlapsStrip";
 import { COCKPIT_VIEWBOX } from "./geometry";
 import InstrumentSlots from "./InstrumentSlots";
 import LandingGearStrip from "./LandingGearStrip";
-import SpeedGauge from "./SpeedGauge";
 import TopHud from "./TopHud";
 
 interface Props {
@@ -86,10 +86,10 @@ export default function Cockpit({ view, selectedDieId, coffeeAdjust, onSelectSlo
         }
       >
         <CockpitBackground />
-        <SpeedGauge view={view} />
         <ArtificialHorizon view={view} />
         <AxisArc view={view} />
         <BrakeArc view={view} />
+        <ChainArrows />
         <EngineAxisMarker />
       </BoardSurface>
     </div>

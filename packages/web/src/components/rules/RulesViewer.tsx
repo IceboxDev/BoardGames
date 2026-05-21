@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
-import { useGameBackOverride } from "../../hooks/useGameBackOverride";
 import { XIcon } from "../icons";
 import { IconButton } from "../ui/IconButton";
 
@@ -11,18 +10,19 @@ interface RulesViewerProps {
   onClose: () => void;
 }
 
+// The viewer is a modal-like overlay rendered inside the mode-select
+// route; closing it is handled by three explicit affordances: the X
+// button, the Escape key, and a backdrop click. The previous code also
+// re-routed the global top-nav back button into `onClose` via the
+// `useGameBackOverride` mechanism — that hook was deleted along with
+// the URL-driven shell refactor, since top-nav back is now a pure
+// pathname-based navigation. The user keeps three ways to close.
+
 export function RulesViewer({ url, onClose }: RulesViewerProps) {
   const [numPages, setNumPages] = useState<number>(0);
   const [pageWidth, setPageWidth] = useState(600);
   const containerRef = useRef<HTMLDivElement>(null);
   const [closing, setClosing] = useState(false);
-  const { setBackOverride } = useGameBackOverride();
-
-  // Override navbar back button to close the viewer
-  useEffect(() => {
-    setBackOverride(() => onClose());
-    return () => setBackOverride(null);
-  }, [setBackOverride, onClose]);
 
   // Responsive page width
   useEffect(() => {

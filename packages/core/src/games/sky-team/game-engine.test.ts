@@ -403,8 +403,8 @@ describe("radio effect", () => {
 describe("landing gear effect", () => {
   it("turns switch on, advances blue marker", () => {
     const { state, rng } = readyAndRoll();
-    let s = setHand(state, 0, [3, 1, 1, 1]);
-    s = place(s, 0, "landing-gear-1", 3, rng);
+    let s = setHand(state, 0, [1, 3, 3, 3]);
+    s = place(s, 0, "landing-gear-1", 1, rng);
     expect(s.slots["landing-gear-1"].switchOn).toBe(true);
     expect(s.speedGauge.bluePos).toBe(5);
   });

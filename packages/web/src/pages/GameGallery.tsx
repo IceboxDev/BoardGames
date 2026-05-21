@@ -7,13 +7,13 @@ import { PageMain, PageShell } from "../components/ui/PageShell";
 import { groupForPresentation } from "../games/families";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
-import { useSession } from "../lib/auth-client";
+import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { fetchMyInventory } from "../lib/inventory";
 import { qk } from "../lib/query-keys";
 
 export default function GameGallery() {
-  const { data } = useSession();
-  const userId = data?.user?.id ?? null;
+  const { user } = useCurrentUser();
+  const userId = user?.id ?? null;
 
   const inventoryQuery = useQuery({
     queryKey: qk.inventory(userId),

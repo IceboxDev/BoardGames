@@ -26,6 +26,17 @@ const SLIDER_SLOTS: ReadonlySet<SlotId> = new Set<SlotId>([
 
 const CONCENTRATION_SET: ReadonlySet<SlotId> = new Set<SlotId>(CONCENTRATION_SLOTS);
 
+// Slots that render no text label — icons / svgs will land here later.
+const NO_LABEL_SLOTS: ReadonlySet<SlotId> = new Set<SlotId>([
+  "pilot-engine",
+  "copilot-engine",
+  "pilot-axis",
+  "copilot-axis",
+  "pilot-radio",
+  "copilot-radio-1",
+  "copilot-radio-2",
+]);
+
 const SLIDER_W = 78;
 const SLIDER_H = 30;
 const TILE_TO_SLIDER_GAP = 4;
@@ -54,8 +65,13 @@ export default function CockpitSlot({ view, slot, label, canPlace, onSelect }: P
   const hasSlider = SLIDER_SLOTS.has(slot);
   const isConcentration = CONCENTRATION_SET.has(slot);
   const constraintText = allowed ? allowed.join("/") : undefined;
-  // Concentration tiles render only the coffee-cup icon — no text label inside.
-  const tileLabel = allowed ? tileValueLabel(allowed) : isConcentration ? undefined : label;
+  // Concentration tiles render only the coffee-cup icon. Engine + axis slots
+  // render blank until their svgs land.
+  const tileLabel = allowed
+    ? tileValueLabel(allowed)
+    : isConcentration || NO_LABEL_SLOTS.has(slot)
+      ? undefined
+      : label;
 
   const sliderX = bounds.x + bounds.w / 2 - SLIDER_W / 2;
   const sliderY = bounds.y + bounds.h + TILE_TO_SLIDER_GAP;

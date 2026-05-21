@@ -13,7 +13,7 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { defaultKindForSlug } from "../../games/match-kinds";
 import { variantConfigForSlug } from "../../games/match-variants";
-import { authClient } from "../../lib/auth-client";
+import { useAdminUsers } from "../../hooks/useAdminUsers.ts";
 import { fetchCalendarLocks } from "../../lib/calendar-locks";
 import { recordMatch, updateMatch } from "../../lib/match-history";
 import { qk } from "../../lib/query-keys";
@@ -62,14 +62,10 @@ type Props = {
 };
 
 export function RecordMatchModal({ state, onClose, onSaved }: Props) {
-  const usersQuery = useQuery({
-    queryKey: qk.adminUsers(),
-    queryFn: async () => {
-      const { data, error } = await authClient.admin.listUsers({ query: { limit: 200 } });
-      if (error) throw new Error(error.message ?? "Failed to load users");
-      return (data?.users ?? []) as unknown as Array<{ id: string; name: string }>;
-    },
-  });
+  // Shared with the AdminPage user table — both consume the validated
+  // rows from the same qk.adminUsers() cache entry, so opening the modal
+  // while the admin page is open does not re-fetch.
+  const usersQuery = useAdminUsers();
 
   const locksQuery = useQuery({
     queryKey: qk.calendarLocks(),
