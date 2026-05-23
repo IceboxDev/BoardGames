@@ -1,7 +1,6 @@
 import { AI_STRATEGY_LABELS } from "@boardgames/core/games/exploding-kittens/types";
 import { type ComponentType, type LazyExoticComponent, lazy } from "react";
-import type { GameModule, ReplayProps } from "../types";
-import accent from "./accent.json";
+import type { PlayableModule, ReplayProps } from "../types";
 import backgroundImage from "./assets/background.png";
 import rulesUrl from "./assets/rules.pdf";
 
@@ -10,9 +9,6 @@ const replayComponent = lazy(() => import("./components/GameReplay")) as LazyExo
 >;
 
 export default {
-  slug: "exploding-kittens",
-  bggId: 172225,
-  accentHex: accent.hex,
   backgroundImage,
   component: lazy(() => import("./ExplodingKittens")),
   mode: "remote",
@@ -24,8 +20,7 @@ export default {
     { id: "random", label: "Random" },
   ],
   rulesUrl,
-  bggOverrides: { maxPlayers: "infinity" },
   replayComponent,
-  matchHistoryLabelResolver: (id) =>
+  matchHistoryLabelResolver: (id: string) =>
     AI_STRATEGY_LABELS[id as keyof typeof AI_STRATEGY_LABELS] ?? id,
-} satisfies GameModule;
+} satisfies PlayableModule;

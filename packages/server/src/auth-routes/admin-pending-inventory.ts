@@ -3,20 +3,26 @@ import {
   SetInventoryBodySchema,
   SlugListSchema,
 } from "@boardgames/core/protocol";
+import { z } from "zod";
 import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { jsonColumn, parseRow } from "../lib/db-rows.ts";
 import { zJsonBody } from "../lib/error-response.ts";
 
 export const adminPendingInventoryRoutes = adminApp();
+
+/** Row projection for `SELECT game_slugs_json FROM pending_inventory`. */
+const InventoryRowSchema = z.object({
+  game_slugs_json: jsonColumn(SlugListSchema),
+});
 
 adminPendingInventoryRoutes.get("/pending-inventory", async (c) => {
   const { rows } = await getDb().execute(
     "SELECT game_slugs_json FROM pending_inventory WHERE id = 1",
   );
   if (rows.length === 0) return c.json(SlugListSchema.parse([]));
-  const parsed = JSON.parse(rows[0].game_slugs_json as string) as unknown;
-  const list = Array.isArray(parsed) ? parsed.filter((s) => typeof s === "string") : [];
-  return c.json(SlugListSchema.parse(list));
+  const { game_slugs_json } = parseRow(InventoryRowSchema, rows[0], "pending_inventory");
+  return c.json(game_slugs_json);
 });
 
 adminPendingInventoryRoutes.put(

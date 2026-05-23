@@ -23,7 +23,7 @@ export type GameComponentProps = { source: GameSource };
  * its own UI state and reports the current config via `onChange`; the
  * lobby route holds that value and passes it to `mp.startRoom(config)`
  * when the host hits Start. Initial value comes from `defaultMpConfig`
- * on the same `GameDefinition`.
+ * on the same `PlayableGame`.
  *
  * Example — Pandemic's difficulty picker is a `LobbyConfigProps`
  * component that renders three Chip buttons and calls
@@ -60,10 +60,10 @@ export type ReplayProps = {
  *      smallest non-compact card width).
  *   - `loose`  → catalog grid card with `line-clamp-6 text-sm` (~360 chars).
  *
- * If a game has `bggOverrides.description` set in its `index.ts`, that string
- * replaces all three variants — manual edit wins over generated content.
- * Games without a generated file fall back to repeating `bgg.description`
- * across all three slots.
+ * If a catalog entry has `bggOverrides.description` set, that string replaces
+ * all three variants — manual edit wins over generated content. Games without
+ * a generated file fall back to repeating `bgg.description` across all three
+ * slots.
  */
 export type GameDescriptions = {
   tight: string;
@@ -97,43 +97,78 @@ export type GameFamily = {
   variant: string;
 };
 
-export interface GameDefinition {
+// ── Resolved (registry-output) shape ──────────────────────────────────
+//
+// `GameDefinition` is a discriminated union on `kind`:
+//   - `"catalog"`  — entry exists only in `catalog.json`. Browse-only;
+//                    no playable component. UI surfaces a "coming soon"
+//                    affordance and the `/play/:slug` route 404s.
+//   - `"playable"` — entry in `catalog.json` *and* a matching
+//                    `<slug>/index.ts` exporting a `PlayableModule`.
+//                    Component is guaranteed non-null once narrowed.
+//
+// All resolved fields below are hydrated by `registry.ts` — never
+// declared per-game. The registry merges:
+//   1. Per-slug catalog entry (slug, bggId, accentHex, family,
+//      displayTitle, bggOverrides)
+//   2. BGG snapshot bundled in `@boardgames/core/bgg`
+//   3. Per-slug `descriptions.generated.ts` when present
+//   4. Per-slug `assets/thumbnail.webp` (or placeholder)
+//   5. For playable slugs: the `<slug>/index.ts` module
+
+/** Fields shared by every entry, regardless of kind. */
+interface GameBase {
   slug: string;
   /**
-   * Resolved display name. Comes from the game's `displayTitle` override if
-   * set, otherwise from `bgg.name`. Hydrated by the registry — never declared
-   * by individual games.
+   * Resolved display name. Comes from the catalog entry's `displayTitle`
+   * override if set, otherwise from `bgg.name`. Hydrated by the registry.
    */
   title: string;
   /** BoardGameGeek XML API2 ID — the catalog primary key. `0` for homebrew. */
   bggId: number;
   /**
-   * BGG metadata. Hydrated by the registry from
-   * `@boardgames/core/bgg`'s bundled snapshot — never imported per game.
+   * BGG metadata. Hydrated by the registry from `@boardgames/core/bgg`'s
+   * bundled snapshot and shallow-merged with the catalog's `bggOverrides`.
    */
   bgg: BggGame;
-  /**
-   * Three-length description set. Hydrated by the registry from the per-game
-   * `descriptions.generated.ts` file when present, otherwise filled with
-   * `bgg.description` repeated across all three slots, or `bggOverrides.description`
-   * applied uniformly if the per-game escape hatch is set. Never declared by
-   * individual games directly.
-   */
+  /** Three-length description set. Hydrated by the registry. */
   descriptions: GameDescriptions;
   /**
    * Imported thumbnail asset URL. Attached by the registry from the game's
-   * `assets/thumbnail.png` when present, or a shared placeholder when absent —
-   * never imported directly from a game's `index.ts`.
+   * `assets/thumbnail.webp` when present, or a shared placeholder when absent.
    */
   thumbnail: string;
   /** Dominant accent color extracted at build time from the thumbnail. */
   accentHex: string;
+  /** Optional family membership for visual grouping in browse views. */
+  family?: GameFamily;
+  /**
+   * Recently-added flag. Drives the "New" highlighter (cyan-fiery-blue
+   * border + badge) on the game-night carousel, which takes precedence
+   * over the "Best at N" headcount treatment. Set per-entry in
+   * `catalog.json`; clear it once the game stops being a fresh arrival.
+   */
+  isNew?: boolean;
+}
+
+/** A browse-only catalog entry — no playable surface. */
+export interface CatalogGame extends GameBase {
+  kind: "catalog";
+}
+
+/**
+ * A playable game — `kind === "playable"` narrows TypeScript so that
+ * `component`, `mode`, and the playable extras are all reachable without
+ * optional chaining or non-null assertions.
+ */
+export interface PlayableGame extends GameBase {
+  kind: "playable";
+  /** Online-playable component. */
+  component: LazyExoticComponent<ComponentType<GameComponentProps>>;
+  /** Multiplayer architecture for the playable component. */
+  mode: "remote" | "local";
   /** Optional full-page backdrop for the game's own screens. */
   backgroundImage?: string;
-  /** Online-playable component. Omit for catalog-only games. */
-  component?: LazyExoticComponent<ComponentType<GameComponentProps>>;
-  /** Multiplayer architecture for the playable component. */
-  mode?: "remote" | "local";
   /** Label for the solo/AI button on the mode-picker (e.g. "Play vs AI", "Trainer"). */
   soloLabel?: string;
   /** Whether the game has a match history screen accessible from the mode-picker. */
@@ -146,8 +181,6 @@ export interface GameDefinition {
   tournamentShowScoreDiff?: boolean;
   /** URL to a PDF file with the game rules, shown from the mode-picker. */
   rulesUrl?: string;
-  /** Optional family membership for visual grouping in browse views. */
-  family?: GameFamily;
   /**
    * Optional game-specific replay component, used by the match-history
    * and tournament-detail routes to render a single game log inline.
@@ -191,18 +224,47 @@ export interface GameDefinition {
   matchHistoryComponent?: LazyExoticComponent<ComponentType<{ onBack: () => void }>>;
 }
 
+export type GameDefinition = CatalogGame | PlayableGame;
+
 /**
- * Shape exported by each game's `index.ts`. The registry attaches:
- *   - `thumbnail`: from `assets/thumbnail.webp` (so a missing image can't
- *     break the build).
- *   - `bgg`: from the bundled BGG snapshot (`@boardgames/core/bgg`), keyed
- *     by slug.
- *   - `title`: resolved as `displayTitle ?? bgg.name`.
+ * Convenience predicate — narrows a `GameDefinition` to `PlayableGame`.
+ * Most call sites can compare `def.kind === "playable"` inline (which
+ * TypeScript narrows for free), but using the predicate inside `.filter`
+ * gives correctly typed results without a second pass.
  *
- * Per-game files therefore declare only `slug`, `bggId`, `accentHex`, and
- * the optional override / behavior fields below.
+ * @example
+ * const playable: PlayableGame[] = games.filter(isPlayable);
  */
-export type GameModule = Omit<GameDefinition, "thumbnail" | "bgg" | "title" | "descriptions"> & {
+export function isPlayable(def: GameDefinition): def is PlayableGame {
+  return def.kind === "playable";
+}
+
+// ── Source shapes (what lives on disk) ───────────────────────────────
+
+/**
+ * Raw shape of a single entry in `catalog.json`. The catalog is the
+ * single source of truth for browse-only metadata: every game in the
+ * registry (catalog AND playable) has an entry here. Playable games
+ * additionally export a `PlayableModule` from `<slug>/index.ts`.
+ *
+ * The catalog is loaded eagerly at registry bootstrap. To keep the file
+ * diff-friendly, entries are sorted alphabetically by slug.
+ */
+export type CatalogEntry = {
+  /** Folder name under `packages/web/src/games/`. Lowercase-kebab. */
+  slug: string;
+  /** BoardGameGeek XML API2 ID — the catalog primary key. `0` for homebrew. */
+  bggId: number;
+  /** Dominant accent color extracted by `pnpm extract-accents`. */
+  accentHex: string;
+  /** Optional family membership for visual grouping in browse views. */
+  family?: GameFamily;
+  /**
+   * Recently-added flag. When true the game-night carousel renders the
+   * "New" highlighter (cyan-fiery-blue border + badge) and it takes
+   * precedence over the "Best at N" headcount treatment.
+   */
+  isNew?: boolean;
   /**
    * Optional title override. Set this when BGG's name is wrong, awkward, or
    * too verbose for the UI (e.g. "7 Wonders" instead of
@@ -212,13 +274,22 @@ export type GameModule = Omit<GameDefinition, "thumbnail" | "bgg" | "title" | "d
   /**
    * Per-field overrides on top of the BGG snapshot. Use this to fix BGG
    * inaccuracies or fill in missing data. The registry shallow-merges these
-   * over `bggSnapshot[slug]` at build time, so consumers always see the
-   * patched values via `game.bgg.*`.
+   * over `bggSnapshot[slug]` at registry-build time so consumers always see
+   * the patched values via `game.bgg.*`.
    *
-   * Example — BGG says "Best with 4" but our group always plays 5-player
-   * variant rules well: `bggOverrides: { bestPlayerCount: 5 }`.
+   * `bggOverrides.description` is special-cased downstream: when set, it
+   * replaces all three `GameDescriptions` variants uniformly.
    *
    * Nested objects are replaced wholesale, not deep-merged.
    */
   bggOverrides?: Partial<BggGame>;
 };
+
+/**
+ * Shape exported by a playable game's `<slug>/index.ts`. Only the
+ * playable-specific extras — base catalog fields live in `catalog.json`.
+ *
+ * The folder name *is* the slug; no need to repeat it here. Registry
+ * looks up the matching catalog entry by folder path.
+ */
+export type PlayableModule = Omit<PlayableGame, "kind" | keyof GameBase>;

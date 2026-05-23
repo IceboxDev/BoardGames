@@ -37,7 +37,41 @@ export default function BrakeArc(_props: Props) {
   const pathId = useId();
   const { start, control, end, thickness } = BRAKE_ARC;
 
+  // Hidden centerline path — kept for <textPath> label positioning.
   const arcPath = `M ${start.x} ${start.y} Q ${control.x} ${control.y} ${end.x} ${end.y}`;
+
+  // Closed band path with rounded corners. Offsets the start/end perpendicular
+  // to the local tangent and the control along the vertical (a good
+  // approximation for our shallow curve). The four corners get chamfered by
+  // `stroke-linejoin="round"` on a same-colour stroke; the ends stay flat.
+  const halfT = thickness / 2;
+  // Tangent at start = (control - start) direction; outward normal is the
+  // 90°-CW rotation in screen y-down — pointing toward the curve apex below.
+  const tSx = control.x - start.x;
+  const tSy = control.y - start.y;
+  const mS = Math.sqrt(tSx * tSx + tSy * tSy);
+  const nSx = -tSy / mS;
+  const nSy = tSx / mS;
+  // Tangent at end = (end - control) direction; outward normal same convention.
+  const tEx = end.x - control.x;
+  const tEy = end.y - control.y;
+  const mE = Math.sqrt(tEx * tEx + tEy * tEy);
+  const nEx = -tEy / mE;
+  const nEy = tEx / mE;
+  // At the control point the tangent is parallel to (end-start) which is
+  // horizontal for our brake arc, so outward normal is straight down.
+  const outerStart = { x: start.x + halfT * nSx, y: start.y + halfT * nSy };
+  const innerStart = { x: start.x - halfT * nSx, y: start.y - halfT * nSy };
+  const outerEnd = { x: end.x + halfT * nEx, y: end.y + halfT * nEy };
+  const innerEnd = { x: end.x - halfT * nEx, y: end.y - halfT * nEy };
+  const outerControl = { x: control.x, y: control.y + halfT };
+  const innerControl = { x: control.x, y: control.y - halfT };
+  const bandPath =
+    `M ${outerStart.x} ${outerStart.y}` +
+    ` Q ${outerControl.x} ${outerControl.y} ${outerEnd.x} ${outerEnd.y}` +
+    ` L ${innerEnd.x} ${innerEnd.y}` +
+    ` Q ${innerControl.x} ${innerControl.y} ${innerStart.x} ${innerStart.y}` +
+    " Z";
 
   // Sample the quadratic Bezier at parameter t — point + tangent angle.
   // dP/dt = 2(1-t)(control-start) + 2t(end-control).
@@ -56,12 +90,12 @@ export default function BrakeArc(_props: Props) {
       <defs>
         <path id={pathId} d={arcPath} fill="none" />
       </defs>
-      <use
-        href={`#${pathId}`}
+      <path
+        d={bandPath}
+        fill="#15191d"
         stroke="#15191d"
-        strokeWidth={thickness}
-        strokeLinecap="butt"
-        fill="none"
+        strokeWidth={12}
+        strokeLinejoin="round"
         style={{ filter: "drop-shadow(0 3px 4px rgba(0,0,0,0.28))" }}
       />
       {LABELS.map((text, i) => (

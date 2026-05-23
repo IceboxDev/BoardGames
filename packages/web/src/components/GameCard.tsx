@@ -33,7 +33,7 @@ export default function GameCard({ game, href, index = 0, showComingSoon = true 
     >
       <GameCardThumb
         src={game.thumbnail}
-        badgeTopLeft={showComingSoon && !game.component ? <ComingSoonBadge /> : undefined}
+        badgeTopLeft={showComingSoon && game.kind === "catalog" ? <ComingSoonBadge /> : undefined}
       />
       <GameCardBody title={game.title} affordance={href ? "arrow" : null}>
         {summary && <GameCardMeta>{summary}</GameCardMeta>}

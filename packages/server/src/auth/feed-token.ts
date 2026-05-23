@@ -16,8 +16,13 @@
 import { hashFeedToken, redactToken } from "@boardgames/core/ical/token";
 import { CalendarFeedTokenSchema } from "@boardgames/core/protocol";
 import type { MiddlewareHandler } from "hono";
+import { z } from "zod";
 import { getDb } from "../db.ts";
+import { parseRow } from "../lib/db-rows.ts";
 import type { FeedEnv } from "./types.ts";
+
+/** `SELECT user_id FROM calendar_feed_tokens WHERE token_hash = ?`. */
+const FeedTokenRowSchema = z.object({ user_id: z.string() });
 
 export const requireFeedToken: MiddlewareHandler<FeedEnv> = async (c, next) => {
   const raw = c.req.param("token");
@@ -37,7 +42,7 @@ export const requireFeedToken: MiddlewareHandler<FeedEnv> = async (c, next) => {
   const row = rows[0];
   if (!row) return c.text("Not found.", 404);
 
-  const feedUserId = row.user_id as string;
+  const { user_id: feedUserId } = parseRow(FeedTokenRowSchema, row, "calendar_feed_tokens");
   c.set("feedUserId", feedUserId);
 
   // Fire-and-forget access telemetry. Truncating UA to 200 chars caps

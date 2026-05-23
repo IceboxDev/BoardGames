@@ -7,20 +7,38 @@
 // dollar signs, and embedded quotes can never break the resulting TS file.
 
 import { existsSync } from "node:fs";
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 
 const GAMES_ROOT = "packages/web/src/games";
+const CATALOG_PATH = join(GAMES_ROOT, "catalog.json");
+
+let _catalogSlugCache = null;
+async function getCatalogSlugs() {
+  if (_catalogSlugCache !== null) return _catalogSlugCache;
+  if (!existsSync(CATALOG_PATH)) {
+    throw new Error(
+      `[gen-descriptions] ${CATALOG_PATH} not found — every game must have a catalog entry`,
+    );
+  }
+  const raw = await readFile(CATALOG_PATH, "utf8");
+  const catalog = JSON.parse(raw);
+  _catalogSlugCache = new Set(catalog.map((c) => c.slug));
+  return _catalogSlugCache;
+}
 
 export async function writeGameDescriptions({ slug, data, meta }) {
   const filePath = join(GAMES_ROOT, slug, "descriptions.generated.ts");
 
-  // Sanity: don't write into a slug that doesn't have an index.ts. The
-  // registry won't pick it up anyway, but emitting orphan files makes git
-  // status noisy.
-  const indexPath = join(GAMES_ROOT, slug, "index.ts");
-  if (!existsSync(indexPath)) {
-    throw new Error(`[gen-descriptions] No index.ts for slug "${slug}" — refusing to write orphan descriptions file.`);
+  // Sanity: don't write into a slug that isn't registered in catalog.json.
+  // The registry won't pick the orphan file up anyway, and writing it would
+  // make git status noisy. Catalog-only games no longer have an index.ts
+  // (Fix-5 refactor), so we authenticate against catalog.json instead.
+  const slugs = await getCatalogSlugs();
+  if (!slugs.has(slug)) {
+    throw new Error(
+      `[gen-descriptions] slug "${slug}" not found in ${CATALOG_PATH} — add the catalog entry first.`,
+    );
   }
 
   const body = renderFile({ data, meta });
@@ -34,8 +52,9 @@ function renderFile({ data, meta }) {
 // Edit by re-running the script for this slug:
 //   pnpm gen-descriptions --slug ${jsonOrEmpty(meta.slug)}
 //
-// To override one description by hand, set \`bggOverrides.description\` in
-// this game's index.ts — it will replace all three variants uniformly.
+// To override one description by hand, set \`bggOverrides.description\` on
+// this game's entry in \`packages/web/src/games/catalog.json\` — it will
+// replace all three variants uniformly.
 
 import type { GameDescriptions } from "../types";
 

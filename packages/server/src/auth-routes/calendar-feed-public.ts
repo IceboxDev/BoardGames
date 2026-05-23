@@ -12,6 +12,7 @@ import { buildIcs, type IcsEvent } from "@boardgames/core/ical/builder";
 import { buildSummary, deriveSummaryPrefix } from "@boardgames/core/ical/personalization";
 import { redactToken } from "@boardgames/core/ical/token";
 import { Hono } from "hono";
+import { z } from "zod";
 import { requireFeedToken } from "../auth/feed-token.ts";
 import type { FeedEnv } from "../auth/types.ts";
 import { getDb } from "../db.ts";
@@ -23,6 +24,13 @@ import {
   maxSqliteDatetime,
   type TombstoneRow,
 } from "../lib/available-games.ts";
+import { parseRow } from "../lib/db-rows.ts";
+
+/** `SELECT state_digest, sequence FROM calendar_feed_event_versions`. */
+const FeedEventVersionRowSchema = z.object({
+  state_digest: z.string(),
+  sequence: z.number(),
+});
 
 const TZID = process.env.ICAL_TZID ?? "Europe/Berlin";
 const UID_DOMAIN = process.env.ICAL_UID_DOMAIN ?? "boardgames.local";
@@ -312,11 +320,13 @@ async function bumpSequence(
     sql: "SELECT state_digest, sequence FROM calendar_feed_event_versions WHERE user_id = ? AND date_key = ?",
     args: [viewerId, dateKey],
   });
-  const row = rows[0];
+  const row = rows[0]
+    ? parseRow(FeedEventVersionRowSchema, rows[0], "calendar_feed_event_versions")
+    : null;
   if (row && row.state_digest === digest) {
-    return row.sequence as number;
+    return row.sequence;
   }
-  const nextSequence = ((row?.sequence as number | undefined) ?? -1) + 1;
+  const nextSequence = (row?.sequence ?? -1) + 1;
   await getDb().execute({
     sql: `INSERT INTO calendar_feed_event_versions
             (user_id, date_key, state_digest, sequence, updated_at)

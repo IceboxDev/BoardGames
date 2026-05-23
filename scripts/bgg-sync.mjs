@@ -28,6 +28,7 @@ import { optimizeOne } from "../packages/web/scripts/optimize-thumbnails.mjs";
 import { parseBggThings } from "./bgg-parse.mjs";
 
 const GAMES_ROOT = "packages/web/src/games";
+const CATALOG_PATH = join(GAMES_ROOT, "catalog.json");
 const SNAPSHOT_PATH = "packages/core/src/bgg/snapshot.json";
 const NEW_GAMES_PATH = "scripts/bgg-new-games.json";
 const SLUG_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;
@@ -65,22 +66,39 @@ function parseFlags() {
   return { all, slug, dryRun, add };
 }
 
+/**
+ * Read every (slug, bggId) pair the registry will surface. The
+ * authority is catalog.json — folders without a catalog entry are
+ * stale and ignored (they'd be invisible to the registry anyway).
+ */
 async function readGameSlugs() {
-  const dirents = await readdir(GAMES_ROOT, { withFileTypes: true });
-  const out = [];
-  for (const d of dirents) {
-    if (!d.isDirectory()) continue;
-    const indexPath = join(GAMES_ROOT, d.name, "index.ts");
-    if (!existsSync(indexPath)) continue;
-    const content = await readFile(indexPath, "utf8");
-    const m = content.match(/bggId\s*:\s*(\d+)/);
-    if (!m) {
-      console.warn(`[bgg-sync] ${d.name}: no bggId in index.ts, skipping`);
-      continue;
-    }
-    out.push({ slug: d.name, bggId: Number(m[1]) });
+  if (!existsSync(CATALOG_PATH)) {
+    die(`${CATALOG_PATH} not found — run \`pnpm tsx scripts/migrate-catalog.mts\` first`);
   }
-  return out;
+  const raw = await readFile(CATALOG_PATH, "utf8");
+  const catalog = JSON.parse(raw);
+  if (!Array.isArray(catalog)) die(`${CATALOG_PATH} must be a JSON array`);
+  return catalog.map((c) => ({ slug: c.slug, bggId: c.bggId }));
+}
+
+/**
+ * Read catalog.json into memory. Returned as the full array (not the
+ * `(slug,bggId)` projection above) so callers that need to mutate
+ * entries — `pnpm bgg-sync --add` for scaffolding new entries — can
+ * splice into the same array we then write back.
+ */
+async function readCatalog() {
+  const raw = await readFile(CATALOG_PATH, "utf8");
+  return JSON.parse(raw);
+}
+
+/**
+ * Persist catalog.json with the same format the migration produced:
+ * sorted alphabetically by slug, 2-space indent, trailing newline.
+ */
+async function writeCatalog(entries) {
+  const sorted = [...entries].sort((a, b) => a.slug.localeCompare(b.slug));
+  await writeFile(CATALOG_PATH, `${JSON.stringify(sorted, null, 2)}\n`);
 }
 
 async function readCurrentSnapshot() {
@@ -186,27 +204,23 @@ async function downloadFile(url, destPath) {
   await pipeline(Readable.fromWeb(res.body), createWriteStream(destPath));
 }
 
-function indexTsTemplate(slug, bggId, displayTitle) {
-  const titleLine = displayTitle ? `  displayTitle: ${JSON.stringify(displayTitle)},\n` : "";
-  return (
-    `import type { GameModule } from "../types";\n` +
-    `import accent from "./accent.json";\n` +
-    `\n` +
-    `export default {\n` +
-    `  slug: ${JSON.stringify(slug)},\n` +
-    titleLine +
-    `  bggId: ${bggId},\n` +
-    `  accentHex: accent.hex,\n` +
-    `} satisfies GameModule;\n`
-  );
-}
-
+/**
+ * Scaffold a new catalog entry: download the thumbnail, optimize it,
+ * compute an accent hex, and return a new catalog.json entry ready to
+ * splice into the array.
+ *
+ * The entry is *catalog* by default — playable games still need their
+ * own `<slug>/index.ts` and a follow-up commit. Returning the entry
+ * (vs writing catalog.json here) keeps every scaffold in a run write
+ * the file exactly once at the end.
+ */
 async function scaffoldSlug({ slug, bggId, displayTitle }, parsed) {
   const dir = join(GAMES_ROOT, slug);
   const assetsDir = join(dir, "assets");
   await mkdir(assetsDir, { recursive: true });
 
   // 1. Download BGG image (prefer full-res `image`; fall back to `thumbnail`).
+  let accentHex = "#888888";
   const imageUrl = parsed.image ?? parsed.thumbnail;
   if (!imageUrl) {
     console.warn(`[bgg-sync] ${slug}: BGG has no image for id ${bggId}; skipping thumbnail`);
@@ -217,17 +231,13 @@ async function scaffoldSlug({ slug, bggId, displayTitle }, parsed) {
     // 2. Optimize PNG → WebP next to it.
     await optimizeOne(pngPath);
     // 3. Extract accent color from the optimized image.
-    await extractOne(slug);
+    const hex = await extractOne(slug);
+    if (hex !== null) accentHex = hex;
   }
 
-  // 4. Write index.ts (only if it doesn't already exist — never clobber).
-  const indexPath = join(dir, "index.ts");
-  if (existsSync(indexPath)) {
-    console.warn(`[bgg-sync] ${slug}: index.ts already exists, leaving it alone`);
-  } else {
-    await writeFile(indexPath, indexTsTemplate(slug, bggId, displayTitle));
-    console.log(`[bgg-sync] ${slug}: wrote ${indexPath}`);
-  }
+  const entry = { slug, bggId, accentHex };
+  if (displayTitle) entry.displayTitle = displayTitle;
+  return entry;
 }
 
 function sortKeysAlphabetically(obj) {
@@ -350,13 +360,25 @@ async function main() {
   }
 
   // Scaffold any new games BEFORE the registry build at next dev/build time.
+  // We collect the new entries here and splice them into catalog.json in
+  // one batched write at the end.
+  const newCatalogEntries = [];
   for (const t of scaffoldTargets) {
     const parsed = fetched[t.bggId];
     if (!parsed) {
       console.warn(`[bgg-sync] ${t.slug}: BGG returned no data for id ${t.bggId}; cannot scaffold`);
       continue;
     }
-    await scaffoldSlug(t, parsed);
+    const entry = await scaffoldSlug(t, parsed);
+    newCatalogEntries.push(entry);
+  }
+  if (newCatalogEntries.length > 0) {
+    const catalog = await readCatalog();
+    catalog.push(...newCatalogEntries);
+    await writeCatalog(catalog);
+    console.log(
+      `[bgg-sync] added ${newCatalogEntries.length} entry/entries to ${CATALOG_PATH}: ${newCatalogEntries.map((e) => e.slug).join(", ")}`,
+    );
   }
 
   let written = 0;

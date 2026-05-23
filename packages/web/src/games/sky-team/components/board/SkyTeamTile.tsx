@@ -17,6 +17,8 @@ interface Props {
   onSelect?: () => void;
   /** Optional SVG/icon to render inside the tile (used by mixed-coffee tiles). */
   children?: ReactNode;
+  /** Extra class(es) appended to the tile (e.g. a thick-border modifier). */
+  className?: string;
   "aria-label"?: string;
 }
 
@@ -36,6 +38,7 @@ export default function SkyTeamTile({
   selectable,
   onSelect,
   children,
+  className,
   "aria-label": ariaLabel,
 }: Props) {
   const classes = [
@@ -43,6 +46,7 @@ export default function SkyTeamTile({
     `cockpit-tile--${variant}`,
     onSelect ? "cockpit-tile--interactive" : "",
     selectable ? "cockpit-tile--selectable" : "",
+    className ?? "",
   ]
     .filter(Boolean)
     .join(" ");

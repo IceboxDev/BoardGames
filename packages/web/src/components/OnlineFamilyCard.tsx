@@ -39,7 +39,7 @@ export default function OnlineFamilyCard({
     visibleMembers.find((m) => m === family.canonical)?.slug ?? visibleMembers[0]?.slug;
   const [activeSlug, setActiveSlug] = useState<string>(initialSlug);
   const active = visibleMembers.find((m) => m.slug === activeSlug) ?? visibleMembers[0];
-  const href = active.component ? `/play/${active.slug}` : undefined;
+  const href = active.kind === "playable" ? `/play/${active.slug}` : undefined;
   // Catalog-grid surface — same description variant as GameCard. `loose`
   // is sized to fully fill `line-clamp-6 text-sm`.
   const description = active.descriptions.loose;
@@ -71,7 +71,7 @@ export default function OnlineFamilyCard({
     >
       <GameCardThumb
         src={active.thumbnail}
-        badgeTopLeft={showComingSoon && !active.component ? <ComingSoonBadge /> : undefined}
+        badgeTopLeft={showComingSoon && active.kind === "catalog" ? <ComingSoonBadge /> : undefined}
         badgeTopRight={
           <VariantsBadge
             count={visibleMembers.length}

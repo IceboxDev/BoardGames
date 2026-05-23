@@ -1,4 +1,4 @@
-import { CheckIcon, FlameIcon, StackIcon } from "../icons";
+import { CheckIcon, FlameIcon, StackIcon, StarIcon } from "../icons";
 
 // Pill-style badges placed inside the `badgeTopLeft` / `badgeTopRight`
 // slots of `GameCardThumb` or `CarouselCardChrome`. All share the same
@@ -82,6 +82,23 @@ export function FitsBadge({ label }: { label: string }) {
     >
       <CheckIcon className="h-3 w-3" />
       Fits {label}
+    </span>
+  );
+}
+
+/**
+ * "New" cyan→blue gradient pill — surfaced by carousel cards for
+ * freshly-added games (catalog `isNew`). Takes precedence over the
+ * "Best at N" badge, matching the card's cyan-fiery-blue border.
+ */
+export function NewBadge() {
+  return (
+    <span
+      className={`${BADGE_BASE_TIGHT} bg-gradient-to-r from-cyan-400 to-blue-600 text-white shadow-md shadow-cyan-500/50`}
+      style={{ letterSpacing: "0.18em" }}
+    >
+      <StarIcon className="h-3 w-3" />
+      New
     </span>
   );
 }

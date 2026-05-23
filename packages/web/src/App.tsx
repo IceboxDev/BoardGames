@@ -22,7 +22,6 @@ const OfflineDashboard = lazy(() => import("./pages/OfflineDashboard"));
 const HistoryPage = lazy(() => import("./pages/HistoryPage"));
 const GameGallery = lazy(() => import("./pages/GameGallery"));
 const DeckPreview = lazy(() => import("./pages/DeckPreview"));
-const SkyTeamLab = lazy(() => import("./labs/sky-team/Lab"));
 
 // `GameMenu` is the dashboard's entry point into the games catalog.
 // `GameShellLayout` mounts under `/play/:slug` and pulls in the games
@@ -184,7 +183,6 @@ const router = createBrowserRouter(
       </Route>
 
       <Route path="dev/deck-preview" element={<DeckPreview />} />
-      <Route path="dev/sky-team-lab" element={<SkyTeamLab />} />
     </Route>,
   ),
 );

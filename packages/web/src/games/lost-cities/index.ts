@@ -2,8 +2,7 @@ import { tournamentGameLogToHumanReadable } from "@boardgames/core/games/lost-ci
 import type { TournamentGameLog } from "@boardgames/core/games/lost-cities/tournament-log";
 import { AI_ENGINE_LABELS } from "@boardgames/core/games/lost-cities/types";
 import { type ComponentType, type LazyExoticComponent, lazy } from "react";
-import type { GameModule, ReplayProps } from "../types";
-import accent from "./accent.json";
+import type { PlayableModule, ReplayProps } from "../types";
 import backgroundImage from "./assets/background.png";
 import rulesUrl from "./assets/rules.pdf";
 
@@ -18,9 +17,6 @@ const replayComponent = lazy(() => import("./components/GameReplay")) as LazyExo
 >;
 
 export default {
-  slug: "lost-cities",
-  bggId: 50,
-  accentHex: accent.hex,
   backgroundImage,
   component: lazy(() => import("./LostCities")),
   mode: "remote",
@@ -34,6 +30,7 @@ export default {
   ],
   rulesUrl,
   replayComponent,
-  matchHistoryLabelResolver: (id) => AI_ENGINE_LABELS[id as keyof typeof AI_ENGINE_LABELS] ?? id,
-  tournamentExportLogFn: (g) => tournamentGameLogToHumanReadable(g as TournamentGameLog),
-} satisfies GameModule;
+  matchHistoryLabelResolver: (id: string) =>
+    AI_ENGINE_LABELS[id as keyof typeof AI_ENGINE_LABELS] ?? id,
+  tournamentExportLogFn: (g: unknown) => tournamentGameLogToHumanReadable(g as TournamentGameLog),
+} satisfies PlayableModule;

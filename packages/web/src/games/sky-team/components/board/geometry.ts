@@ -30,10 +30,21 @@ export const PLAY_AREA: BoardRect = {
 
 // ---------- top HUD (lab grid: auto reroll | 1fr weather | 1fr altitude) ----------
 
+// Centred on the left slot column (pilot-radio / landing-gear at x=11, w=64 →
+// centre x=43). The token (Ø64) then spans exactly the slots' x-range (11..75).
 export const HUD_REROLL: { center: BoardPoint; radius: number } = {
-  center: { x: 50, y: 69 },
+  center: { x: 43, y: 52 },
   radius: 32,
 };
+
+// Reroll well — a recessed compartment shaped like a flat top + semicircular
+// bottom (a "bowl" carved into the board, mirroring the cabin panel's recessed
+// styling). Cradles the reroll token (r=32, centred at HUD_REROLL x=43, y=52).
+// Width 72 → bottom-corner radius 36 (= half width) makes a true semicircle,
+// leaving only ~4 units of wall around the token. Bowl centre at y=52 (the
+// token centre); bottom at y=88 — level with the weather/altitude HUD rects.
+// Height 82 leaves a 46-tall flat top reaching up to y=6.
+export const HUD_REROLL_WELL: BoardRect = { x: 7, y: 6, w: 72, h: 82 };
 
 // HUD panels — left edge of weather aligns with pilot-axis left wall (x=105);
 // right edge of altitude aligns with copilot-axis right wall (x=615). Centred
@@ -80,13 +91,18 @@ export const ARTIFICIAL_HORIZON: {
   center: { x: 360, y: 296 },
   outerRadius: 174,
   faceRadius: 153,
-  bezelThickness: 18,
+  // Path-band thickness for the bezel. Rounded-corner stroke is now 8 (extends
+  // 4 viewBox units each way). With bezelThickness = 15 the path band sits at
+  // 159..174 → visible 155..178 → 2-unit clear gap between the bezel inner
+  // edge and the dial face (faceRadius = 153).
+  bezelThickness: 15,
 };
 
-// Axis arc — TRUE 180° half-circle. Chord length 456 = diameter, so radius =
-// 228; sagitta = 228. Chord at y=300 (nudged a bit further down from y=253).
-// Arc bottom y=528, still clear of the engine row at y=600.
-export const AXIS_ARC: {
+// Speed arc — the large 180° half-circle with the 2..12 dice-value scale,
+// sitting below the horizon dial. Chord length 456 = diameter, so radius =
+// 228; sagitta = 228. Chord at y=300; arc bottom y=528, clear of engine row
+// at y=600. (NB: the AXIS arc lives on the horizon bezel — see AxisArc.tsx.)
+export const SPEED_ARC: {
   chord: { left: BoardPoint; right: BoardPoint };
   rx: number;
   ry: number;
@@ -95,7 +111,10 @@ export const AXIS_ARC: {
   chord: { left: { x: 132, y: 300 }, right: { x: 588, y: 300 } },
   rx: 228,
   ry: 228,
-  thickness: 36,
+  // Path band thickness — stroked +12 in `SpeedArc.tsx` for visible width of
+  // 40 and corner radius of 6 (was thickness 40 / stroke 8 → visible 48 with
+  // weak ~4-unit corners; user asked to de-thicken + fix the rounding).
+  thickness: 28,
 };
 
 // Brake arc — quadratic-bezier U-curve. Same shape as before; moved up 30
@@ -109,21 +128,35 @@ export const BRAKE_ARC: {
   start: { x: 214, y: 675 },
   control: { x: 360, y: 765 },
   end: { x: 506, y: 675 },
-  thickness: 38,
+  // Path band thickness — stroked +12 in `BrakeArc.tsx` for visible width of
+  // 42 and corner radius of 6.
+  thickness: 30,
 };
 
 // ---------- slot geometry ----------
 
 const ENGINE_SLOT_W = 70;
 const ENGINE_SLOT_H = 70;
-const ENGINE_ROW_Y = 570; // moved up from 600 (still clears the axis arc band)
+const ENGINE_ROW_Y = 558; // nudged up a touch from 570 (still clears the speed arc band)
 // Pilot engine centred at x=250 (matches brake-2 tile centre), copilot at
 // x=470 (matches brake-6 tile centre). With tile width 70, top-left x is
 // centre − 35.
 const ENGINE_PILOT_X = 215;
 const ENGINE_COPILOT_X = 435;
 
-export const ENGINE_ROW_AXIS_MARKER: BoardPoint = { x: 360, y: 605 };
+export const ENGINE_ROW_AXIS_MARKER: BoardPoint = { x: 360, y: 593 };
+
+// Flashing yellow warning lights — two below the axis slots (centred under
+// each: axis centres x=137 / 583, slot bottom+outline ≈ 213), two on the
+// OUTSIDE flank of the engine slots (engine centres x=250 / 470 at y=593;
+// pilot's outside is left, copilot's outside is right).
+export const WARNING_LIGHT_SIZE = 23;
+export const WARNING_LIGHTS: ReadonlyArray<BoardPoint> = [
+  { x: 137, y: 233 }, // below pilot-axis
+  { x: 583, y: 233 }, // below copilot-axis
+  { x: 185, y: 593 }, // outside (left of) pilot-engine
+  { x: 535, y: 593 }, // outside (right of) copilot-engine
+];
 
 // Brake tile bounds — also tile-only (64×64). Slider positioned below.
 const BRAKE_TILE_W = 64;

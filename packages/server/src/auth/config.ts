@@ -1,7 +1,15 @@
+import { SlugListSchema } from "@boardgames/core/protocol";
 import { LibsqlDialect } from "@libsql/kysely-libsql";
 import { betterAuth } from "better-auth";
 import { admin } from "better-auth/plugins";
+import { z } from "zod";
 import { getDb, getDbConnectionConfig } from "../db.ts";
+import { jsonColumn, parseRow } from "../lib/db-rows.ts";
+
+/** Row projection for `SELECT game_slugs_json FROM pending_inventory`. */
+const PendingInventoryRowSchema = z.object({
+  game_slugs_json: jsonColumn(SlugListSchema),
+});
 
 function normalizeOrigin(raw: string): string {
   const trimmed = raw.trim().replace(/\/+$/, "");
@@ -101,14 +109,21 @@ export const auth = betterAuth({
               "SELECT game_slugs_json FROM pending_inventory WHERE id = 1",
             );
             if (rows.length === 0) return;
-            const json = rows[0].game_slugs_json as string;
+            // Round-trip the blob through SlugListSchema so a corrupt
+            // pending-inventory cell fails the transfer here rather than
+            // propagating into the new user's inventory.
+            const { game_slugs_json } = parseRow(
+              PendingInventoryRowSchema,
+              rows[0],
+              "pending_inventory",
+            );
             await db.execute({
               sql: `INSERT INTO user_inventory (user_id, game_slugs_json, updated_at)
                     VALUES (?, ?, datetime('now'))
                     ON CONFLICT(user_id) DO UPDATE SET
                       game_slugs_json = excluded.game_slugs_json,
                       updated_at = excluded.updated_at`,
-              args: [user.id, json],
+              args: [user.id, JSON.stringify(game_slugs_json)],
             });
             await db.execute("DELETE FROM pending_inventory WHERE id = 1");
           } catch (err) {

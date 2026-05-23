@@ -1,4 +1,5 @@
 import { AggregateAvailabilityMapSchema, AvailabilityMapSchema } from "@boardgames/core/protocol";
+import { z } from "zod";
 import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import {
@@ -10,8 +11,33 @@ import {
   mergeRsvpYesIntoAvailability,
   parseAvailabilityJson,
 } from "../lib/availability-merge.ts";
+import { parseRow, parseRows } from "../lib/db-rows.ts";
 
 export const adminAvailabilityRoutes = adminApp();
+
+// ── Row projections ───────────────────────────────────────────────────
+//
+// `availability_json` is read as a raw string and handed to
+// `parseAvailabilityJson` so per-entry leniency is preserved (a single
+// stray status value doesn't blank a user's whole calendar).
+
+const AvailabilityJsonOnlyRowSchema = z.object({
+  availability_json: z.string(),
+});
+
+const UserAvailabilityJoinedRowSchema = z.object({
+  user_id: z.string(),
+  availability_json: z.string(),
+  name: z.string().nullable(),
+  email: z.string().nullable(),
+});
+
+const UserNameEmailRowSchema = z.object({
+  name: z.string().nullable(),
+  email: z.string().nullable(),
+});
+
+// ── Routes ────────────────────────────────────────────────────────────
 
 adminAvailabilityRoutes.get("/:id/availability", async (c) => {
   const userId = c.req.param("id");
@@ -23,7 +49,10 @@ adminAvailabilityRoutes.get("/:id/availability", async (c) => {
     fetchRsvpYesDatesForUser(getDb(), userId),
     fetchRsvpNoDatesForUser(getDb(), userId),
   ]);
-  const stored = parseAvailabilityJson(rows[0]?.availability_json as string | undefined);
+  const firstRow = rows[0]
+    ? parseRow(AvailabilityJsonOnlyRowSchema, rows[0], "user_availability")
+    : null;
+  const stored = parseAvailabilityJson(firstRow?.availability_json);
   const withYes = mergeRsvpYesIntoAvailability(stored, rsvpYesDates);
   const merged = applyRsvpNoToAvailability(withYes, rsvpNoDates);
   return c.json(AvailabilityMapSchema.parse(merged));
@@ -51,13 +80,12 @@ adminAvailabilityAllRoutes.get("/availability/all", async (c) => {
     string,
     { userId: string; name: string; statuses: Map<string, Status> }
   >();
-  for (const row of rows) {
-    const userId = row.user_id as string;
-    const name = ((row.name as string | null) || (row.email as string | null) || "—").trim() || "—";
+  for (const row of parseRows(UserAvailabilityJoinedRowSchema, rows, "user_availability+user")) {
+    const name = ((row.name ?? "") || (row.email ?? "") || "—").trim() || "—";
     const statuses = new Map<string, Status>();
-    const map = parseAvailabilityJson(row.availability_json as string);
+    const map = parseAvailabilityJson(row.availability_json);
     for (const [date, status] of Object.entries(map)) statuses.set(date, status);
-    perUser.set(userId, { userId, name, statuses });
+    perUser.set(row.user_id, { userId: row.user_id, name, statuses });
   }
   for (const [userId, dates] of rsvpYesByUser) {
     let entry = perUser.get(userId);
@@ -68,8 +96,10 @@ adminAvailabilityAllRoutes.get("/availability/all", async (c) => {
         sql: "SELECT name, email FROM user WHERE id = ?",
         args: [userId],
       });
-      const r = userResult.rows[0];
-      const name = ((r?.name as string | null) || (r?.email as string | null) || "—").trim() || "—";
+      const r = userResult.rows[0]
+        ? parseRow(UserNameEmailRowSchema, userResult.rows[0], "user")
+        : null;
+      const name = ((r?.name ?? "") || (r?.email ?? "") || "—").trim() || "—";
       entry = { userId, name, statuses: new Map() };
       perUser.set(userId, entry);
     }

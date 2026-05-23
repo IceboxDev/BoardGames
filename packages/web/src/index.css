@@ -514,3 +514,44 @@ body {
 .animate-seal-shimmer {
   animation: seal-shimmer 8s ease-in-out infinite;
 }
+
+/* ── "New" game highlighter — cyan-fiery-blue ─────── */
+
+/* Carousel card frame treatment for freshly-added games. A pulsing
+   cyan→blue glow that reads as "fiery" without the warm-tone fire
+   palette. Takes precedence over the amber "Best at N" border. The
+   animation drives both border-color (cyan ↔ sky) and a layered
+   box-shadow (tight cyan rim → wider blue bloom → base depth shadow). */
+@keyframes new-fiery-glow {
+  0%,
+  100% {
+    border-color: rgba(34, 211, 238, 0.85);
+    box-shadow:
+      0 0 0 1px rgba(34, 211, 238, 0.45),
+      0 0 18px -3px rgba(34, 211, 238, 0.6),
+      0 0 44px -10px rgba(59, 130, 246, 0.5),
+      0 18px 40px -12px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    border-color: rgba(125, 211, 252, 1);
+    box-shadow:
+      0 0 0 1px rgba(56, 189, 248, 0.7),
+      0 0 28px 0 rgba(34, 211, 238, 0.9),
+      0 0 66px -6px rgba(59, 130, 246, 0.7),
+      0 18px 40px -12px rgba(0, 0, 0, 0.5);
+  }
+}
+.card-frame-new {
+  border-color: rgba(34, 211, 238, 0.85);
+  animation: new-fiery-glow 2.4s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .card-frame-new {
+    animation: none;
+    box-shadow:
+      0 0 0 1px rgba(34, 211, 238, 0.5),
+      0 0 22px -4px rgba(34, 211, 238, 0.7),
+      0 0 52px -10px rgba(59, 130, 246, 0.55),
+      0 18px 40px -12px rgba(0, 0, 0, 0.5);
+  }
+}

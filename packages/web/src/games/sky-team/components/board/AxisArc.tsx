@@ -1,140 +1,103 @@
 import type { SkyTeamPlayerView } from "@boardgames/core/games/sky-team/types";
-import { useId } from "react";
 import { BoardLayer } from "../../../../components/board";
-import { AXIS_ARC } from "./geometry";
+import { ARTIFICIAL_HORIZON } from "./geometry";
 
 interface Props {
   view: SkyTeamPlayerView;
 }
 
-const LABELS = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"] as const;
-// Labels shifted left vs the lab — last position at 92% (was 98) so the
-// orange "after 12" marker has room past it.
-const LABEL_OFFSETS_PCT = [2, 11, 20, 30, 40, 47, 55, 64, 73, 83, 92] as const;
+// Axis arc — markers laid on the horizon bezel (the top half of the dial
+// window). 5 down-pointing isoceles triangles at 0%, ±25%, ±50%; 2 red X
+// warnings at ±75%. All rotated radially so their apex points toward the
+// dial centre.
+//
+// Position convention: offsetPct is the percentage along the half-arc from
+// the centre (0% = top of bezel, ±100% would be the bezel ends). The bezel
+// spans ±85° from the top, so the math angle of a marker is:
+//     theta_math = 90 - (offsetPct / 100) * 85
+// Positive offsetPct goes to the right side of the dial.
 
-const BLUE_COLOR = "#3b82f6"; // blue-500
-const ORANGE_COLOR = "#f97316"; // orange-500
-
-// Blue play marker — solid at "between 4 and 5", outlines at the next three
-// label-pairs (5-6, 6-7, 7-8). t shifted left to track the new label offsets.
-const BLUE_MARKERS: ReadonlyArray<{ t: number; filled: boolean }> = [
-  { t: 0.25, filled: true }, // 4-5
-  { t: 0.35, filled: false }, // 5-6
-  { t: 0.435, filled: false }, // 6-7
-  { t: 0.51, filled: false }, // 7-8
+const TRIANGLE_MARKERS: ReadonlyArray<{ offsetPct: number; filled: boolean }> = [
+  { offsetPct: -58, filled: true },
+  { offsetPct: -29, filled: true },
+  { offsetPct: 0, filled: false },
+  { offsetPct: 29, filled: true },
+  { offsetPct: 58, filled: true },
 ];
 
-// Orange fast-forward marker — solid at "between 8 and 9", outlines at the
-// next four (9-10, 10-11, 11-12, past-12).
-const ORANGE_MARKERS: ReadonlyArray<{ t: number; filled: boolean }> = [
-  { t: 0.595, filled: true }, // 8-9
-  { t: 0.685, filled: false }, // 9-10
-  { t: 0.78, filled: false }, // 10-11
-  { t: 0.875, filled: false }, // 11-12
-  { t: 0.97, filled: false }, // past 12
-];
+const X_MARKERS: ReadonlyArray<{ offsetPct: number }> = [{ offsetPct: -87 }, { offsetPct: 87 }];
+
+const BEZEL_HALF_ANGLE = 85; // degrees from top (bezel spans ±85°)
+
+const MARKER_COLOR = "white";
+const X_COLOR = "#ef4444";
+
+// Triangle: base 8 wide, height 11 → sides ≈ 11.7 (~1.5× base). Squatter
+// still than the previous 1.8× version. Apex at local (0, 0); base above
+// at (±4, -11).
+const TRIANGLE_HEIGHT = 11;
+const TRIANGLE_POINTS = `-4,${-TRIANGLE_HEIGHT} 4,${-TRIANGLE_HEIGHT} 0,0`;
 
 /**
- * Half-circle axis arc with number labels and two rows of icon markers.
- * The solid marker is the current state; outlined markers are future spots.
- * Active marker stands out via full opacity + drop shadow; inactives drop to
- * 0.35 opacity with a slimmer stroke.
+ * Axis arc — overlays the horizon bezel with position markers. The bezel
+ * itself is drawn inside `ArtificialHorizon.tsx`; this component just adds
+ * the indicators on top.
  */
 export default function AxisArc(_props: Props) {
-  const pathId = useId();
-  const { chord, rx, ry, thickness } = AXIS_ARC;
-  const cx = (chord.left.x + chord.right.x) / 2;
-  const cy = chord.left.y;
-  const arcPath = `M ${chord.left.x} ${chord.left.y} A ${rx} ${ry} 0 0 0 ${chord.right.x} ${chord.right.y}`;
+  const { center, outerRadius, bezelThickness } = ARTIFICIAL_HORIZON;
 
-  // Sample point + tangent angle on the half-circle.
-  const sample = (t: number) => {
-    const phi = t * Math.PI;
-    const x = cx - rx * Math.cos(phi);
-    const y = cy + ry * Math.sin(phi);
-    const dx = rx * Math.sin(phi);
-    const dy = ry * Math.cos(phi);
-    const angle = (Math.atan2(dy, dx) * 180) / Math.PI;
-    return { x, y, angle };
+  // Place markers across the bezel band. Triangles float in the VERTICAL
+  // MIDDLE of the band: apex at `centerLine − halfHeight`, base at
+  // `centerLine + halfHeight`. X marks centre on the band centerline.
+  const innerR = outerRadius - bezelThickness;
+  const bezelCenterR = (outerRadius + innerR) / 2;
+  const triangleApexR = bezelCenterR - TRIANGLE_HEIGHT / 2;
+
+  // Convert (offsetPct, radius) → SVG (x, y) + rotation angle in degrees.
+  // Math angle: theta = 90 - (offsetPct/100)*85.
+  // SVG position: (cx + r·cos(θ), cy − r·sin(θ)).
+  // Rotation (so apex points inward): rot = 90 − θ.
+  const placeMarker = (offsetPct: number, r: number) => {
+    const theta = 90 - (offsetPct / 100) * BEZEL_HALF_ANGLE;
+    const thetaRad = (theta * Math.PI) / 180;
+    return {
+      x: center.x + r * Math.cos(thetaRad),
+      y: center.y - r * Math.sin(thetaRad),
+      rotation: 90 - theta,
+    };
   };
 
   return (
-    <BoardLayer name="axis-arc" z={3}>
-      <defs>
-        <path id={pathId} d={arcPath} fill="none" />
-      </defs>
-      <use
-        href={`#${pathId}`}
-        stroke="#15191d"
-        strokeWidth={thickness}
-        strokeLinecap="butt"
-        fill="none"
-        style={{ filter: "drop-shadow(0 3px 4px rgba(0,0,0,0.3))" }}
-      />
-      {LABELS.map((text, i) => (
-        <text
-          // biome-ignore lint/suspicious/noArrayIndexKey: axis labels are stable indexed positions
-          key={`axis-${i}`}
-          fill="white"
-          fontSize={18}
-          fontWeight={900}
-          textAnchor="middle"
-          dominantBaseline="central"
-          paintOrder="stroke"
-          stroke="rgba(0,0,0,0.55)"
-          strokeWidth={3}
-        >
-          <textPath href={`#${pathId}`} startOffset={`${LABEL_OFFSETS_PCT[i]}%`}>
-            {text}
-          </textPath>
-        </text>
-      ))}
-
-      {BLUE_MARKERS.map(({ t, filled }, i) => {
-        const { x, y, angle } = sample(t);
+    <BoardLayer name="axis-arc" z={4}>
+      {TRIANGLE_MARKERS.map(({ offsetPct, filled }) => {
+        const { x, y, rotation } = placeMarker(offsetPct, triangleApexR);
         return (
-          <g
-            // biome-ignore lint/suspicious/noArrayIndexKey: stable indexed blue marker positions
-            key={`blue-${i}`}
-            transform={`translate(${x}, ${y}) rotate(${angle})`}
-            opacity={filled ? 1 : 0.35}
-            style={filled ? { filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.45))" } : undefined}
-          >
-            <polygon
-              points="-7,-8 -7,8 8,0"
-              fill={filled ? BLUE_COLOR : "transparent"}
-              stroke={BLUE_COLOR}
-              strokeWidth={filled ? 1 : 1.4}
-              strokeLinejoin="round"
-            />
-          </g>
+          <polygon
+            key={`tri-${offsetPct}`}
+            points={TRIANGLE_POINTS}
+            transform={`translate(${x}, ${y}) rotate(${rotation})`}
+            fill={filled ? MARKER_COLOR : "transparent"}
+            stroke={MARKER_COLOR}
+            strokeWidth={1.8}
+            strokeLinejoin="round"
+            style={{ filter: "drop-shadow(0 1px 1.5px rgba(0,0,0,0.5))" }}
+          />
         );
       })}
 
-      {ORANGE_MARKERS.map(({ t, filled }, i) => {
-        const { x, y, angle } = sample(t);
+      {X_MARKERS.map(({ offsetPct }) => {
+        const { x, y, rotation } = placeMarker(offsetPct, bezelCenterR);
         return (
           <g
-            // biome-ignore lint/suspicious/noArrayIndexKey: stable indexed orange marker positions
-            key={`orange-${i}`}
-            transform={`translate(${x}, ${y}) rotate(${angle})`}
-            opacity={filled ? 1 : 0.35}
-            style={filled ? { filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.45))" } : undefined}
+            key={`x-${offsetPct}`}
+            transform={`translate(${x}, ${y}) rotate(${rotation})`}
+            stroke={X_COLOR}
+            strokeWidth={2.8}
+            strokeLinecap="round"
+            style={{ filter: "drop-shadow(0 1px 1.5px rgba(0,0,0,0.5))" }}
           >
-            <polygon
-              points="-10,-7 -10,7 -2,0"
-              fill={filled ? ORANGE_COLOR : "transparent"}
-              stroke={ORANGE_COLOR}
-              strokeWidth={filled ? 1 : 1.4}
-              strokeLinejoin="round"
-            />
-            <polygon
-              points="-2,-7 -2,7 8,0"
-              fill={filled ? ORANGE_COLOR : "transparent"}
-              stroke={ORANGE_COLOR}
-              strokeWidth={filled ? 1 : 1.4}
-              strokeLinejoin="round"
-            />
+            <line x1={-7} y1={-7} x2={7} y2={7} />
+            <line x1={-7} y1={7} x2={7} y2={-7} />
           </g>
         );
       })}

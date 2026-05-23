@@ -1,13 +1,15 @@
 import type { MatchOutcome, MatchRecord } from "@boardgames/core/history/types";
+import { z } from "zod";
 import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { parseRow, parseRows } from "../lib/db-rows.ts";
+import { MatchResultRowSchema, rowToMatchRecord } from "./match-history.ts";
 import {
   collectUserIds,
   isValidDateKey,
   isValidGameSlug,
   isValidIsoDateTime,
   parseOutcome,
-  refreshDisplayNames,
 } from "./match-history-validate.ts";
 
 export const adminMatchHistoryRoutes = adminApp();
@@ -21,6 +23,10 @@ type ParsedInput = {
   notes: string | null;
 };
 
+/** Projection used for the bulk userId existence check + name lookup. */
+const UserIdRowSchema = z.object({ id: z.string() });
+const UserIdNameRowSchema = z.object({ id: z.string(), name: z.string() });
+
 async function verifyUserIdsExist(
   ids: Set<string>,
 ): Promise<{ ok: true } | { ok: false; missing: string[] }> {
@@ -31,7 +37,7 @@ async function verifyUserIdsExist(
     sql: `SELECT id FROM user WHERE id IN (${placeholders})`,
     args: list,
   });
-  const found = new Set(rows.map((r) => r.id as string));
+  const found = new Set(parseRows(UserIdRowSchema, rows, "user.id").map((r) => r.id));
   const missing = list.filter((id) => !found.has(id));
   return missing.length === 0 ? { ok: true } : { ok: false, missing };
 }
@@ -91,6 +97,11 @@ function parseInput(
   };
 }
 
+/**
+ * Re-fetch a single match row by id and shape it into the wire `MatchRecord`,
+ * resolving the latest display names for every referenced user. Returns
+ * null when the row no longer exists (e.g. a concurrent delete).
+ */
 async function fetchAndShape(id: number): Promise<MatchRecord | null> {
   const db = getDb();
   const { rows } = await db.execute({
@@ -100,14 +111,9 @@ async function fetchAndShape(id: number): Promise<MatchRecord | null> {
     args: [id],
   });
   if (rows.length === 0) return null;
-  const row = rows[0];
-  let outcome: MatchOutcome;
-  try {
-    outcome = JSON.parse(row.outcome_json as string) as MatchOutcome;
-  } catch {
-    return null;
-  }
-  const ids = collectUserIds(outcome);
+
+  const parsed = parseRow(MatchResultRowSchema, rows[0], "match_results");
+  const ids = collectUserIds(parsed.outcome_json);
   const nameById = new Map<string, string>();
   if (ids.size > 0) {
     const list = [...ids];
@@ -116,20 +122,11 @@ async function fetchAndShape(id: number): Promise<MatchRecord | null> {
       sql: `SELECT id, name FROM user WHERE id IN (${placeholders})`,
       args: list,
     });
-    for (const r of userRes.rows) nameById.set(r.id as string, r.name as string);
+    for (const r of parseRows(UserIdNameRowSchema, userRes.rows, "user.id-name")) {
+      nameById.set(r.id, r.name);
+    }
   }
-  return {
-    id: row.id as number,
-    dateKey: (row.date_key as string | null) ?? null,
-    playedAt: row.played_at as string,
-    gameSlug: (row.game_slug as string | null) ?? null,
-    gameTitle: row.game_title as string,
-    outcome: refreshDisplayNames(outcome, nameById),
-    notes: (row.notes as string | null) ?? null,
-    recordedBy: row.recorded_by as string,
-    recordedAt: row.recorded_at as string,
-    updatedAt: (row.updated_at as string | null) ?? null,
-  };
+  return rowToMatchRecord(parsed, nameById);
 }
 
 adminMatchHistoryRoutes.post("/", async (c) => {
@@ -151,8 +148,12 @@ adminMatchHistoryRoutes.post("/", async (c) => {
           RETURNING id`,
     args: [dateKey, playedAt, gameSlug, gameTitle, JSON.stringify(outcome), notes, user.id],
   });
-  const id = result.rows[0].id as number;
-  const record = await fetchAndShape(id);
+  const insertedId = parseRow(
+    z.object({ id: z.number() }),
+    result.rows[0],
+    "match_results.RETURNING",
+  ).id;
+  const record = await fetchAndShape(insertedId);
   return c.json(record);
 });
 

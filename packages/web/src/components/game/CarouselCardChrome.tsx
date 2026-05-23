@@ -28,6 +28,11 @@ type Props = {
   isCenter: boolean;
   /** Per-card accent color, exposed as the `--accent` CSS variable to children. */
   accentHex: string;
+  /**
+   * Bumps the frame to a cyan-fiery-blue glowing border. Takes precedence
+   * over `isBestForHeadcount` — a freshly-added game reads as "new" first.
+   */
+  isNew: boolean;
   /** Bumps the frame to a brighter amber border + shadow. */
   isBestForHeadcount: boolean;
   /** Accessible label for the role=button motion.div. */
@@ -49,6 +54,7 @@ export function CarouselCardChrome({
   hidden,
   isCenter,
   accentHex,
+  isNew,
   isBestForHeadcount,
   ariaLabel,
   onClick,
@@ -91,7 +97,7 @@ export function CarouselCardChrome({
       animate={carouselAnimate({ offset, spreadMax, zMax, hidden })}
       transition={CAROUSEL_TRANSITION}
     >
-      <CarouselCardFrame isCenter={isCenter} isBestForHeadcount={isBestForHeadcount}>
+      <CarouselCardFrame isCenter={isCenter} isNew={isNew} isBestForHeadcount={isBestForHeadcount}>
         {children}
       </CarouselCardFrame>
     </motion.div>
@@ -113,19 +119,25 @@ export function CarouselCardChrome({
  */
 export function CarouselCardFrame({
   isCenter,
+  isNew,
   isBestForHeadcount,
   children,
 }: {
   isCenter: boolean;
+  isNew: boolean;
   isBestForHeadcount: boolean;
   children: ReactNode;
 }) {
   // The center-card subtle inner-glow lives at the thumb level (where
   // the accent stripe paints the inside of the thumbnail). Here we only
-  // pick the border + shadow chrome.
-  const cls = isBestForHeadcount
-    ? "border-2 border-amber-400/80 shadow-2xl shadow-amber-500/40"
-    : "border border-white/10 shadow-2xl shadow-black/40";
+  // pick the border + shadow chrome. Precedence: New (cyan-fiery-blue)
+  // beats Best-at-N (amber) beats the neutral default — a fresh arrival
+  // is the loudest signal we surface.
+  const cls = isNew
+    ? "border-2 card-frame-new"
+    : isBestForHeadcount
+      ? "border-2 border-amber-400/80 shadow-2xl shadow-amber-500/40"
+      : "border border-white/10 shadow-2xl shadow-black/40";
   // `isCenter` reserved for future per-state chrome — currently unused
   // because the accent inner-glow lives on the thumb, not the frame.
   void isCenter;

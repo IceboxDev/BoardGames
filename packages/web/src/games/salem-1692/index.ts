@@ -1,9 +1,0 @@
-import type { GameModule } from "../types";
-import accent from "./accent.json";
-
-export default {
-  slug: "salem-1692",
-  bggId: 175549,
-  accentHex: accent.hex,
-  family: { id: "dark-cities", canonical: true, name: "Dark Cities", variant: "Salem 1692" },
-} satisfies GameModule;

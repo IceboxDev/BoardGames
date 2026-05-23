@@ -1,7 +1,7 @@
 import { createContext, type ReactNode, useContext, useMemo } from "react";
 import { Navigate, Outlet, useParams } from "react-router-dom";
 import { games } from "../games/registry";
-import type { GameDefinition } from "../games/types";
+import type { PlayableGame } from "../games/types";
 import { type GameSession, useGameSession } from "../lib/ws-client";
 import useDocumentTitle from "./useDocumentTitle";
 import { type MultiplayerRoomState, useMultiplayerRoom } from "./useMultiplayerRoom";
@@ -33,8 +33,14 @@ export type GameSource = "solo" | "mp";
 // single cast at the boundary.
 
 export interface GameShellValue<TView, TAction, TResult> {
-  /** Game registry entry. Always defined inside a layout. */
-  def: GameDefinition;
+  /**
+   * Game registry entry. Always defined inside a layout — and always a
+   * `PlayableGame` because `<GameShellLayout>` redirects to `/games`
+   * when the slug resolves to a catalog-only entry. Children can read
+   * `def.component`, `def.tournamentStrategies`, etc. without further
+   * narrowing.
+   */
+  def: PlayableGame;
   /** Shared raw session (WebSocket + state). Prefer `game` / `mp` projections. */
   session: GameSession<TView, TAction, TResult>;
   /** Solo (vs-AI) projection. */
@@ -88,7 +94,7 @@ export function useGameShell<
  * matters: opening a WebSocket on an invalid /play/:slug would leak a
  * connection on every typo.
  */
-function GameShellLayoutInner({ def, children }: { def: GameDefinition; children?: ReactNode }) {
+function GameShellLayoutInner({ def, children }: { def: PlayableGame; children?: ReactNode }) {
   useDocumentTitle(`${def.title} - Board Games`);
 
   // Single session per /play/:slug mount. Both `useRemoteGame` (solo
@@ -133,7 +139,7 @@ function RoomLeaveGuardMount() {
 export function GameShellLayout({ children }: { children?: ReactNode }) {
   const { slug } = useParams<{ slug: string }>();
   const def = slug ? games.find((g) => g.slug === slug) : undefined;
-  if (!def || !def.component) {
+  if (!def || def.kind !== "playable") {
     return <Navigate to="/games" replace />;
   }
   return <GameShellLayoutInner def={def}>{children}</GameShellLayoutInner>;

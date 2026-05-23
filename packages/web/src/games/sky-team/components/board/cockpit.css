@@ -25,7 +25,13 @@
   border-radius: 20px;
   border: 3px solid rgba(39, 51, 51, 0.35);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.38);
-  background: linear-gradient(180deg, #c0d1cf 0%, #a7bbbb 52%, #c7d5d1 100%);
+  /* Dark "military" chassis (the area OUTSIDE the play-area outline): a
+     diagonal cross-hatch mesh over a darker grey-green base. The brighter
+     brushed-metal play area is painted on top via the SVG background layer. */
+  background:
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 7px),
+    repeating-linear-gradient(-45deg, rgba(0, 0, 0, 0.08) 0 1px, transparent 1px 7px),
+    linear-gradient(180deg, #5d6a63 0%, #4b5650 52%, #5d6a63 100%);
   overflow: hidden;
   isolation: isolate;
 }
@@ -39,10 +45,49 @@
 .cockpit-cabin-shell,
 .cockpit-mug-shell,
 .cockpit-reroll-shell,
+.cockpit-reroll-well-shell,
+.cockpit-warning-shell,
 .cockpit-hud-shell {
   container-type: inline-size;
   width: 100%;
   height: 100%;
+}
+
+/* ---------- warning lamps ----------
+   Bare amber warning-triangle glyphs (no housing) that flash on/off with a
+   synced amber glow. */
+.cockpit-warning {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.cockpit-warning > svg {
+  width: 100%;
+  height: 100%;
+  /* Steady lit glow (also what shows under prefers-reduced-motion). */
+  filter: drop-shadow(0 0 6cqi rgba(255, 210, 26, 0.4));
+  animation: cockpit-warning-lens 1.5s ease-in-out infinite;
+}
+
+@keyframes cockpit-warning-lens {
+  0%,
+  46% {
+    filter: drop-shadow(0 0 9cqi rgba(255, 210, 26, 0.55)) brightness(1.05);
+    opacity: 1;
+  }
+  54%,
+  96% {
+    filter: drop-shadow(0 0 3cqi rgba(255, 210, 26, 0.15)) brightness(0.75);
+    opacity: 0.45;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cockpit-warning > svg {
+    animation: none;
+  }
 }
 
 /* ---------- tile ----------
@@ -83,11 +128,21 @@
 .cockpit-tile--pilot {
   background: linear-gradient(150deg, var(--pilot-dark), var(--pilot-light));
   color: var(--pilot-ink);
+  /* Ink-colored neon halo on top of the dark drop shadow so digits and "1/2"
+     style labels glow against the navy tile. */
+  text-shadow:
+    0 0 5cqi var(--pilot-ink),
+    0 0 10cqi rgba(141, 240, 208, 0.55),
+    0 1.5cqi 3cqi rgba(0, 0, 0, 0.4);
 }
 
 .cockpit-tile--copilot {
   background: linear-gradient(150deg, var(--copilot-dark), var(--copilot-light));
   color: var(--copilot-ink);
+  text-shadow:
+    0 0 5cqi var(--copilot-ink),
+    0 0 10cqi rgba(255, 216, 58, 0.55),
+    0 1.5cqi 3cqi rgba(0, 0, 0, 0.4);
 }
 
 .cockpit-tile--mixed {
@@ -115,17 +170,56 @@
   box-shadow: inset 0 3cqi 8cqi rgba(255, 255, 255, 0.18);
 }
 
-.cockpit-tile--mixed > svg {
+/* SVG icon centred inside any tile (radio headset, coffee cup, future SVGs). */
+.cockpit-tile > svg {
   position: absolute;
-  /* Optical-centering nudge: 2% up + 1% right (right was halved from 2 → 1
-     because 2 was too far). */
-  top: 48%;
-  left: 51%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   width: 60%;
   height: 60%;
   z-index: 1;
   pointer-events: none;
+}
+
+/* Plane icons (axis slots) — the silhouette is thin and rotated 45°, so the
+   default 60% box reads tiny. Blow it up so the plane spans the slot. */
+.cockpit-tile > svg.cockpit-tile__plane {
+  width: 135%;
+  height: 135%;
+}
+
+/* Jet-engine icons (engine slots) — a touch bigger than the default 60%. */
+.cockpit-tile > svg.cockpit-tile__engine {
+  width: 78%;
+  height: 78%;
+}
+
+/* Thick navy frame for the axis + engine slots. Uses `outline` (drawn OUTSIDE
+   the box) instead of `border` so the slot's interior keeps its full size. */
+.cockpit-tile--framed {
+  outline: 14cqi solid #0b1c52;
+  outline-offset: 0;
+}
+
+/* Optical-centering nudge for the coffee cup specifically — 2% up + 1% right. */
+.cockpit-tile--mixed > svg {
+  top: 48%;
+  left: 51%;
+}
+
+/* Ink-colored glow for icons inside pilot / copilot tiles. */
+.cockpit-tile--pilot > svg {
+  filter: drop-shadow(0 0 3.5cqi var(--pilot-ink)) drop-shadow(0 0 8cqi rgba(141, 240, 208, 0.45));
+}
+
+.cockpit-tile--copilot > svg {
+  filter: drop-shadow(0 0 3.5cqi var(--copilot-ink)) drop-shadow(0 0 8cqi rgba(255, 216, 58, 0.45));
+}
+
+/* Coffee cup on mixed tiles — layered halos in both inks. */
+.cockpit-tile--mixed > svg {
+  filter: drop-shadow(0 0 3cqi var(--pilot-ink)) drop-shadow(0 0 3cqi var(--copilot-ink));
 }
 
 .cockpit-tile--interactive {
@@ -354,6 +448,24 @@
   font-size: 1em;
 }
 
+/* ---------- reroll well ----------
+   Recessed compartment carved into the board: a flat top with a semicircular
+   bottom (bottom corners = 50cqi = half the well's width → a true semicircle).
+   Mirrors the cabin panel's recessed look (darker gradient + inset top shadow
+   + bottom rim highlight). The reroll token nests inside it. */
+.cockpit-reroll-well {
+  width: 100%;
+  height: 100%;
+  /* top corners softly rounded (10cqi); bottom is a full semicircle (50cqi). */
+  border-radius: 10cqi 10cqi 50cqi 50cqi;
+  background: linear-gradient(180deg, #6d807c 0%, #7e928e 55%, #8da19b 100%);
+  box-shadow:
+    inset 0 1cqi 2.4cqi rgba(0, 0, 0, 0.5),
+    inset 0.6cqi 0 1.2cqi rgba(0, 0, 0, 0.2),
+    inset -0.6cqi 0 1.2cqi rgba(0, 0, 0, 0.16),
+    inset 0 -0.45cqi 0 rgba(255, 255, 255, 0.18);
+}
+
 /* ---------- reroll medallion ---------- */
 
 .cockpit-reroll {
@@ -362,44 +474,25 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  border: 7.8cqi solid #2b5869; /* 5/64 */
-  background:
-    radial-gradient(circle at 33% 39%, #35abdb 0 11cqi, transparent 13cqi),
-    radial-gradient(circle at 68% 36%, #eab52d 0 13cqi, transparent 15cqi),
-    radial-gradient(circle at 61% 70%, #2a4ea2 0 14cqi, transparent 16cqi),
-    conic-gradient(#2c60c0 0 32%, #eeb52e 32% 58%, #28439b 58% 100%);
-  box-shadow: 0 7.8cqi 15.6cqi rgba(0, 0, 0, 0.28);
+  /* Completely navy dark-blue disc with a domed 3D shade: lighter navy at the
+     top-left (light source), darkening to a super-dark navy at the rim. The
+     inset highlight + inner shadow bevel the edge; the drop shadow lifts the
+     token out of the recessed well. */
+  border: 2.5cqi solid #04081a;
+  background: radial-gradient(circle at 42% 30%, #1d3360 0%, #0d1a40 55%, #060e26 100%);
+  box-shadow:
+    inset 0 5cqi 11cqi rgba(120, 160, 255, 0.2),
+    inset 0 -7cqi 14cqi rgba(0, 0, 0, 0.6),
+    0 6cqi 12cqi rgba(0, 0, 0, 0.45);
   padding: 0;
   margin: 0;
   cursor: pointer;
   font-family: inherit;
 }
 
-.cockpit-reroll__glyph {
+.cockpit-reroll__icon {
   position: absolute;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 40cqi;
-  font-weight: 900;
-  text-shadow: 0 1.5cqi 3cqi rgba(0, 0, 0, 0.35);
+  inset: 4%;
   pointer-events: none;
-}
-
-.cockpit-reroll__count {
-  position: absolute;
-  right: -3cqi;
-  bottom: -3cqi;
-  min-width: 35cqi;
-  height: 35cqi;
-  border-radius: 50%;
-  background: #1f2937;
-  color: #fde047;
-  border: 3cqi solid #fde047;
-  display: grid;
-  place-items: center;
-  font-size: 19cqi;
-  font-weight: 900;
-  padding: 0 6cqi;
+  object-fit: contain;
 }

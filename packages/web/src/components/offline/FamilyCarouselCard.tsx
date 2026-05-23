@@ -8,6 +8,7 @@ import {
   CarouselCardChrome,
   CarouselThumb,
   FitsBadge,
+  NewBadge,
   VariantsBadge,
 } from "../game";
 import GameReactions from "./GameReactions";
@@ -78,6 +79,10 @@ export default function FamilyCarouselCard({
     active.bgg.bestPlayerCount !== null &&
     minPlayers > 0 &&
     active.bgg.bestPlayerCount === minPlayers;
+  // Per-variant: the "New" highlighter shows only when the active member
+  // is the freshly-added one (e.g. switching to "Introduction to Evil"
+  // within the Villainous family). Takes precedence over best-for-headcount.
+  const isNew = active.isNew === true;
   const aggregate = reactions[active.slug];
 
   return (
@@ -88,6 +93,7 @@ export default function FamilyCarouselCard({
       hidden={hidden}
       isCenter={isCenter}
       accentHex={active.accentHex}
+      isNew={isNew}
       isBestForHeadcount={isBestForHeadcount}
       ariaLabel={
         isCenter
@@ -111,7 +117,9 @@ export default function FamilyCarouselCard({
           />
         }
         badgeTopLeft={
-          isBestForHeadcount ? (
+          isNew ? (
+            <NewBadge />
+          ) : isBestForHeadcount ? (
             <BestForHeadcountBadge count={minPlayers} />
           ) : fits && (minPlayers > 0 || maxPlayers > 0) ? (
             <FitsBadge label={fitsLabel(minPlayers, maxPlayers)} />

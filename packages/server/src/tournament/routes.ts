@@ -12,13 +12,84 @@ import {
   TournamentSummaryListSchema,
 } from "@boardgames/core/protocol";
 import { streamSSE } from "hono/streaming";
+import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { jsonColumn, parseRow, parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 import { tournamentRegistry } from "./game-registry.ts";
 import { abortTournament, startTournament, subscribeSse } from "./manager.ts";
 
 export const tournamentRoutes = authedApp();
+
+// ── Row projections ───────────────────────────────────────────────────
+//
+// `config_json` and `result_json` shapes are intentionally per-game (each
+// game stores its strategy IDs / scores / wins-by-strategy etc). We keep
+// them as opaque records here and let the wire-side
+// `TournamentSummary/Detail/GameLog` schemas do tighter validation
+// downstream.
+
+const TournamentConfigSchema = z.record(z.string(), z.unknown());
+const TournamentResultSchema = z.record(z.string(), z.unknown());
+
+/**
+ * Narrowing schema for the head-to-head matchup config shape. Tournament
+ * configs are per-game (each game stores its own strategy ID fields), but
+ * the `/by-matchup` query only needs `strategyAId` / `strategyBId`, so we
+ * safe-parse against this minimal subset.
+ */
+const MatchupConfigShapeSchema = z.object({
+  strategyAId: z.string().optional(),
+  strategyBId: z.string().optional(),
+});
+
+const TournamentFullRowSchema = z.object({
+  id: z.string(),
+  game_slug: z.string(),
+  config_json: jsonColumn(TournamentConfigSchema),
+  status: z.string(),
+  result_json: jsonColumn(TournamentResultSchema).nullable(),
+  progress_completed: z.number(),
+  progress_total: z.number(),
+  created_at: z.string(),
+  completed_at: z.string().nullable(),
+});
+type TournamentFullRow = z.infer<typeof TournamentFullRowSchema>;
+
+/** Status + progress projection used by the SSE warm-up. */
+const TournamentProgressRowSchema = z.object({
+  status: z.string(),
+  progress_completed: z.number(),
+  progress_total: z.number(),
+});
+
+/** Game log projection — `log_json` is per-game so it stays loose. */
+const TournamentGameLogRowSchema = z.object({
+  game_index: z.number(),
+  log_json: jsonColumn(z.record(z.string(), z.unknown())),
+});
+
+/** Single-log projection (no `game_index`). */
+const TournamentLogOnlyRowSchema = z.object({
+  log_json: jsonColumn(z.record(z.string(), z.unknown())),
+});
+
+function rowToSummaryShape(row: TournamentFullRow): Record<string, unknown> {
+  return {
+    id: row.id,
+    game_slug: row.game_slug,
+    config: row.config_json,
+    status: row.status,
+    result: row.result_json,
+    progress_completed: row.progress_completed,
+    progress_total: row.progress_total,
+    created_at: row.created_at,
+    completed_at: row.completed_at,
+  };
+}
+
+// ── Routes ────────────────────────────────────────────────────────────
 
 tournamentRoutes.get("/strategies/:slug", (c) => {
   const slug = c.req.param("slug");
@@ -63,22 +134,9 @@ tournamentRoutes.get("/", zQuery(TournamentListQuerySchema), async (c) => {
   sql += " ORDER BY created_at DESC LIMIT 100";
 
   const { rows } = await db.execute({ sql, args: args as (string | number)[] });
+  const parsed = parseRows(TournamentFullRowSchema, rows, "tournaments");
 
-  return c.json(
-    TournamentSummaryListSchema.parse(
-      rows.map((r) => ({
-        id: r.id as string,
-        game_slug: r.game_slug as string,
-        config: JSON.parse(r.config_json as string),
-        status: r.status as string,
-        result: r.result_json ? JSON.parse(r.result_json as string) : null,
-        progress_completed: r.progress_completed as number,
-        progress_total: r.progress_total as number,
-        created_at: r.created_at as string,
-        completed_at: r.completed_at as string | null,
-      })),
-    ),
-  );
+  return c.json(TournamentSummaryListSchema.parse(parsed.map(rowToSummaryShape)));
 });
 
 tournamentRoutes.get("/by-matchup", zQuery(TournamentByMatchupQuerySchema), async (c) => {
@@ -92,32 +150,20 @@ tournamentRoutes.get("/by-matchup", zQuery(TournamentByMatchupQuerySchema), asyn
      ORDER BY completed_at DESC`,
     args: [gameSlug],
   });
+  const parsed = parseRows(TournamentFullRowSchema, rows, "tournaments");
 
-  const match = rows.find((r) => {
-    const cfg = JSON.parse(r.config_json as string) as {
-      strategyAId: string;
-      strategyBId: string;
-    };
+  const match = parsed.find((r) => {
+    const cfg = MatchupConfigShapeSchema.safeParse(r.config_json);
+    if (!cfg.success) return false;
+    const { strategyAId, strategyBId } = cfg.data;
     return (
-      (cfg.strategyAId === strategyA && cfg.strategyBId === strategyB) ||
-      (cfg.strategyAId === strategyB && cfg.strategyBId === strategyA)
+      (strategyAId === strategyA && strategyBId === strategyB) ||
+      (strategyAId === strategyB && strategyBId === strategyA)
     );
   });
 
   if (!match) return c.json(null);
-  return c.json(
-    TournamentDetailSchema.parse({
-      id: match.id as string,
-      game_slug: match.game_slug as string,
-      config: JSON.parse(match.config_json as string),
-      status: match.status as string,
-      result: match.result_json ? JSON.parse(match.result_json as string) : null,
-      progress_completed: match.progress_completed as number,
-      progress_total: match.progress_total as number,
-      created_at: match.created_at as string,
-      completed_at: match.completed_at as string | null,
-    }),
-  );
+  return c.json(TournamentDetailSchema.parse(rowToSummaryShape(match)));
 });
 
 tournamentRoutes.get("/:id", async (c) => {
@@ -129,21 +175,8 @@ tournamentRoutes.get("/:id", async (c) => {
   });
 
   if (rows.length === 0) return errorResponse(c, 404, "Not found");
-  const row = rows[0];
-
-  return c.json(
-    TournamentDetailSchema.parse({
-      id: row.id as string,
-      game_slug: row.game_slug as string,
-      config: JSON.parse(row.config_json as string),
-      status: row.status as string,
-      result: row.result_json ? JSON.parse(row.result_json as string) : null,
-      progress_completed: row.progress_completed as number,
-      progress_total: row.progress_total as number,
-      created_at: row.created_at as string,
-      completed_at: row.completed_at as string | null,
-    }),
-  );
+  const row = parseRow(TournamentFullRowSchema, rows[0], "tournaments");
+  return c.json(TournamentDetailSchema.parse(rowToSummaryShape(row)));
 });
 
 tournamentRoutes.get("/:id/stream", (c) => {
@@ -165,9 +198,7 @@ tournamentRoutes.get("/:id/stream", (c) => {
       sql: "SELECT status, progress_completed, progress_total FROM tournaments WHERE id = ?",
       args: [id],
     });
-    const row = rows[0] as unknown as
-      | { status: string; progress_completed: number; progress_total: number }
-      | undefined;
+    const row = rows[0] ? parseRow(TournamentProgressRowSchema, rows[0], "tournaments") : null;
 
     if (row && row.status === "running") {
       const event = TournamentStreamEventSchema.parse({
@@ -197,13 +228,11 @@ tournamentRoutes.get("/:id/games", async (c) => {
     sql: "SELECT game_index, log_json FROM tournament_games WHERE tournament_id = ? ORDER BY game_index",
     args: [id],
   });
+  const parsed = parseRows(TournamentGameLogRowSchema, rows, "tournament_games");
 
   return c.json(
     TournamentGameLogListSchema.parse(
-      rows.map((r) => ({
-        gameIndex: r.game_index as number,
-        ...JSON.parse(r.log_json as string),
-      })),
+      parsed.map((r) => ({ gameIndex: r.game_index, ...r.log_json })),
     ),
   );
 });
@@ -218,5 +247,6 @@ tournamentRoutes.get("/:id/games/:n", async (c) => {
   });
 
   if (rows.length === 0) return errorResponse(c, 404, "Not found");
-  return c.json(TournamentGameSingleSchema.parse(JSON.parse(rows[0].log_json as string)));
+  const { log_json } = parseRow(TournamentLogOnlyRowSchema, rows[0], "tournament_games");
+  return c.json(TournamentGameSingleSchema.parse(log_json));
 });

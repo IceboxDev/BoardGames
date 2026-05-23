@@ -87,7 +87,12 @@ Each game follows a consistent split:
 
 - **`GameMachineSpec`** (`core/src/machines/types.ts`) — generic interface that all game machines implement: provides player views, legal actions, active player, game result, and game-over detection.
 - **`GameDefinition`** (`web/src/games/types.ts`) — registry entry for each game with metadata and a lazy-loaded component. Games have a `mode` of `"remote"` (server-backed via WebSocket) or `"local"` (client-only).
-- **Game registry** (`web/src/games/registry.ts`) — auto-discovers games via `import.meta.glob("./*/index.ts")`.
+- **Game registry** (`web/src/games/registry.ts`) — merges three sources:
+  1. `web/src/games/catalog.json` — Zod-validated browse-only metadata for *every* game (slug, bggId, accentHex, family, displayTitle, bggOverrides).
+  2. `import.meta.glob("./*/index.ts")` — playable extras (component, mode, tournament strategies, …). Only playable games have an `index.ts`; catalog-only games live entirely in `catalog.json`.
+  3. The bundled BGG snapshot + per-game `descriptions.generated.ts` + thumbnail webp.
+
+  Resolved entries are discriminated on `kind: "catalog" | "playable"` — TS narrows playable fields automatically inside `def.kind === "playable"` branches.
 
 ### Current games
 
@@ -135,7 +140,15 @@ Games with non-card-style spatial layouts (maps, instrument panels, hex grids, d
 
 ### Adding a new game
 
-1. Create `packages/web/src/games/<slug>/index.ts` exporting a `GameDefinition`
-2. If the game has non-trivial logic, put it in `packages/core/src/games/<slug>/` and add exports to core's `package.json`
-3. No routing changes needed — auto-discovered by the registry
-4. Use `GameScreen` for the board layout — see "Game board layout structure" above
+**For a catalog-only entry** (browse + RSVP voting, no playable surface — covers most additions):
+
+1. Run `pnpm bgg-sync --add` after adding `{ slug, bggId, displayTitle? }` to `scripts/bgg-new-games.json`. The script downloads the thumbnail, optimizes it, computes the accent hex, and appends a new entry to `packages/web/src/games/catalog.json`.
+2. Optional: run `pnpm gen-descriptions --slug <slug>` to populate `packages/web/src/games/<slug>/descriptions.generated.ts`. Catalog entries without this file fall back to BGG's raw description.
+3. No code changes needed — the registry picks it up.
+
+**For a playable game**: do the catalog-entry steps above, then:
+
+1. Create `packages/web/src/games/<slug>/index.ts` exporting `satisfies PlayableModule` (component, mode, tournament strategies, etc. — see `types.ts` for the full shape). No base fields (`slug`, `bggId`, `accentHex`, `family`, `displayTitle`, `bggOverrides`) here — those live in `catalog.json` only.
+2. If the game has non-trivial logic, put it in `packages/core/src/games/<slug>/` and add exports to core's `package.json`.
+3. Register the server-side state machine in `packages/server/src/sessions/machine-registry.ts` and the multiplayer config in `packages/core/src/protocol/room-config.ts` (remote-mode only).
+4. Use `GameScreen` for the board layout — see "Game board layout structure" above.

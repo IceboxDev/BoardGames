@@ -13,9 +13,20 @@ import {
   CalendarFeedTokenResponseSchema,
   OkResponseSchema,
 } from "@boardgames/core/protocol";
+import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { generateRawToken } from "../lib/calendar-feed-token.ts";
+import { parseRow } from "../lib/db-rows.ts";
+
+/** `SELECT created_at FROM calendar_feed_tokens`. */
+const CreatedAtRowSchema = z.object({ created_at: z.string() });
+
+/** `SELECT created_at, last_accessed_at FROM calendar_feed_tokens`. */
+const TokenStatusRowSchema = z.object({
+  created_at: z.string(),
+  last_accessed_at: z.string().nullable(),
+});
 
 export const calendarFeedRoutes = authedApp();
 
@@ -75,7 +86,9 @@ calendarFeedRoutes.post("/feed/token", async (c) => {
     sql: "SELECT created_at FROM calendar_feed_tokens WHERE user_id = ? LIMIT 1",
     args: [user.id],
   });
-  const createdAt = (readback.rows[0]?.created_at as string | undefined) ?? "";
+  const createdAt = readback.rows[0]
+    ? parseRow(CreatedAtRowSchema, readback.rows[0], "calendar_feed_tokens").created_at
+    : "";
 
   const { subscribeUrl, webcalUrl } = buildSubscribeUrls(rawToken);
   return c.json(
@@ -114,12 +127,12 @@ calendarFeedRoutes.get("/feed/status", async (c) => {
           WHERE user_id = ? LIMIT 1`,
     args: [user.id],
   });
-  const row = rows[0];
+  const row = rows[0] ? parseRow(TokenStatusRowSchema, rows[0], "calendar_feed_tokens") : null;
   return c.json(
     CalendarFeedStatusSchema.parse({
-      connected: Boolean(row),
-      createdAt: (row?.created_at as string | null) ?? null,
-      lastAccessedAt: (row?.last_accessed_at as string | null) ?? null,
+      connected: row !== null,
+      createdAt: row?.created_at ?? null,
+      lastAccessedAt: row?.last_accessed_at ?? null,
     }),
   );
 });

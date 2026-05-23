@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { groupForPresentation } from "../games/families";
 import { games } from "../games/registry";
+import { isPlayable } from "../games/types";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import GameCard from "./GameCard";
 import OnlineFamilyCard from "./OnlineFamilyCard";
@@ -8,7 +9,7 @@ import OnlineFamilyCard from "./OnlineFamilyCard";
 export default function GameMenu() {
   const { isAdmin } = useCurrentUser();
   const units = useMemo(
-    () => groupForPresentation(isAdmin ? games : games.filter((g) => g.component)),
+    () => groupForPresentation(isAdmin ? games : games.filter(isPlayable)),
     [isAdmin],
   );
 
@@ -38,7 +39,7 @@ export default function GameMenu() {
                 <GameCard
                   key={unit.game.slug}
                   game={unit.game}
-                  href={unit.game.component ? `/play/${unit.game.slug}` : undefined}
+                  href={unit.game.kind === "playable" ? `/play/${unit.game.slug}` : undefined}
                   index={i}
                 />
               ) : (

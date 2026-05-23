@@ -4,12 +4,16 @@ import {
   CONCENTRATION_SLOTS,
   FLAPS_ORDER,
   LANDING_GEAR_SLOTS,
+  RADIO_SLOTS,
 } from "@boardgames/core/games/sky-team/scenarios";
 import type { SkyTeamPlayerView, SlotId } from "@boardgames/core/games/sky-team/types";
 import { BoardOverlay } from "../../../../components/board";
+import AtcHeadset from "./AtcHeadset";
 import CockpitSlider from "./CockpitSlider";
 import CoffeeCup from "./CoffeeCup";
 import { SLOT_GEOMETRY } from "./geometry";
+import JetEngine from "./JetEngine";
+import Plane from "./Plane";
 import SkyTeamTile, { type TileVariant, tileValueLabel } from "./SkyTeamTile";
 
 const VARIANT_BY_ELIGIBILITY: Record<"pilot" | "copilot" | "both", TileVariant> = {
@@ -25,6 +29,7 @@ const SLIDER_SLOTS: ReadonlySet<SlotId> = new Set<SlotId>([
 ]);
 
 const CONCENTRATION_SET: ReadonlySet<SlotId> = new Set<SlotId>(CONCENTRATION_SLOTS);
+const RADIO_SET: ReadonlySet<SlotId> = new Set<SlotId>(RADIO_SLOTS);
 
 // Slots that render no text label — icons / svgs will land here later.
 const NO_LABEL_SLOTS: ReadonlySet<SlotId> = new Set<SlotId>([
@@ -64,6 +69,10 @@ export default function CockpitSlot({ view, slot, label, canPlace, onSelect }: P
   const hasDie = state.die != null;
   const hasSlider = SLIDER_SLOTS.has(slot);
   const isConcentration = CONCENTRATION_SET.has(slot);
+  const isRadio = RADIO_SET.has(slot);
+  const isPilotAxis = slot === "pilot-axis";
+  const isCopilotAxis = slot === "copilot-axis";
+  const isEngine = slot === "pilot-engine" || slot === "copilot-engine";
   const constraintText = allowed ? allowed.join("/") : undefined;
   // Concentration tiles render only the coffee-cup icon. Engine + axis slots
   // render blank until their svgs land.
@@ -91,9 +100,20 @@ export default function CockpitSlot({ view, slot, label, canPlace, onSelect }: P
           placedDie={null}
           selectable={selectable && !hasDie}
           onSelect={selectable ? () => onSelect(slot) : undefined}
+          className={isPilotAxis || isCopilotAxis || isEngine ? "cockpit-tile--framed" : undefined}
           aria-label={`${label}${constraintText ? ` (${constraintText})` : ""}${hasDie ? ` — die ${state.die?.value}` : ""}`}
         >
-          {isConcentration ? <CoffeeCup /> : null}
+          {isConcentration ? (
+            <CoffeeCup />
+          ) : isRadio ? (
+            <AtcHeadset />
+          ) : isPilotAxis ? (
+            <Plane rotate={-45} color="#8df0d0" className="cockpit-tile__plane" />
+          ) : isCopilotAxis ? (
+            <Plane rotate={45} color="#ffd83a" className="cockpit-tile__plane" />
+          ) : isEngine ? (
+            <JetEngine className="cockpit-tile__engine" />
+          ) : null}
         </SkyTeamTile>
       </BoardOverlay>
       {hasSlider ? (

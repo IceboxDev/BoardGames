@@ -12,8 +12,98 @@
 // fields) without leaking them into the public JSON.
 
 import { getBggBySlug, maxPlayersAsNumber } from "@boardgames/core/bgg";
-import type { AvailableGames } from "@boardgames/core/protocol";
+import {
+  type Availability,
+  AvailabilityMapSchema,
+  type AvailableGames,
+  SlugListSchema,
+} from "@boardgames/core/protocol";
 import type { Client } from "@libsql/client";
+import { z } from "zod";
+import { jsonColumn, parseRow, parseRows, RowParseError } from "./db-rows.ts";
+
+// ── Row projections ───────────────────────────────────────────────────
+//
+// One schema per `SELECT` projection. Column order mirrors the SQL so a
+// rename in db.ts surfaces as a diff in this file's PR.
+
+const ExpectedUserIdsSchema = z.array(z.string());
+
+/**
+ * `SELECT host_user_id, host_name, event_time, address, picks_locked_at,
+ *  expected_user_ids_json, locked_at, host_at_home FROM locked_dates`.
+ */
+const LockedDateFullRowSchema = z.object({
+  host_user_id: z.string().nullable(),
+  host_name: z.string().nullable(),
+  event_time: z.string().nullable(),
+  address: z.string().nullable(),
+  picks_locked_at: z.string().nullable(),
+  expected_user_ids_json: jsonColumn(ExpectedUserIdsSchema),
+  locked_at: z.string().nullable(),
+  host_at_home: z.number().nullable(),
+});
+
+/** `SELECT user_id, availability_json FROM user_availability`. */
+const UserAvailabilityRowSchema = z.object({
+  user_id: z.string(),
+  availability_json: jsonColumn(AvailabilityMapSchema),
+});
+
+/** `SELECT user_id, status, auto FROM rsvps WHERE date_key = ?`. */
+const RsvpForDateRowSchema = z.object({
+  user_id: z.string(),
+  status: z.enum(["yes", "no"]),
+  auto: z.number().nullable(),
+});
+
+/** `SELECT user_id, game_slug, reaction FROM game_requests WHERE date_key = ?`. */
+const ReactionRowSchema = z.object({
+  user_id: z.string(),
+  game_slug: z.string(),
+  reaction: z.enum(["hype", "teach", "learn"]),
+});
+
+/**
+ * `SELECT (MAX(rsvped_at)) AS latest_rsvp, (MAX(created_at)) AS latest_reaction`.
+ * Both are nullable because either table can be empty for the date.
+ */
+const FreshnessRowSchema = z.object({
+  latest_rsvp: z.string().nullable(),
+  latest_reaction: z.string().nullable(),
+});
+
+/** `SELECT user_id, game_slugs_json FROM user_inventory WHERE user_id IN (...)`. */
+const UserInventoryRowSchema = z.object({
+  user_id: z.string(),
+  game_slugs_json: jsonColumn(SlugListSchema),
+});
+
+/** `SELECT id, name, email FROM user WHERE id IN (...)`. */
+const UserDisplayRowSchema = z.object({
+  id: z.string(),
+  name: z.string().nullable(),
+  email: z.string().nullable(),
+});
+
+/** Single-column `SELECT date_key FROM …` projection. */
+const DateKeyOnlyRowSchema = z.object({ date_key: z.string() });
+
+/**
+ * `SELECT date_key, host_user_id, host_name, event_time, address,
+ *  expected_user_ids_json, unlocked_at FROM calendar_unlocked_tombstones`.
+ */
+const TombstoneFullRowSchema = z.object({
+  date_key: z.string(),
+  host_user_id: z.string().nullable(),
+  host_name: z.string().nullable(),
+  event_time: z.string().nullable(),
+  address: z.string().nullable(),
+  expected_user_ids_json: jsonColumn(ExpectedUserIdsSchema),
+  unlocked_at: z.string(),
+});
+
+// ── Types ─────────────────────────────────────────────────────────────
 
 export type AvailableGamesViewerExtras = {
   /** Viewer is in locked_dates.expected_user_ids_json. */
@@ -78,18 +168,16 @@ export async function computeAvailableGamesPayload(opts: {
     args: [date],
   });
   if (lockedRow.rows.length === 0) return null;
-  const lockRow = lockedRow.rows[0];
-  if (!lockRow) return null;
-  const hostUserId = (lockRow.host_user_id as string | null) ?? null;
-  const hostName = (lockRow.host_name as string | null) ?? null;
-  const eventTime = (lockRow.event_time as string | null) ?? null;
-  const address = (lockRow.address as string | null) ?? null;
-  const picksLockedAt = (lockRow.picks_locked_at as string | null) ?? null;
-  const expectedUserIds = parseStringArray(lockRow.expected_user_ids_json as string);
-  const lockedAt = (lockRow.locked_at as string | null) ?? "1970-01-01 00:00:00";
+  const lock = parseRow(LockedDateFullRowSchema, lockedRow.rows[0], "locked_dates");
+  const hostUserId = lock.host_user_id;
+  const hostName = lock.host_name;
+  const eventTime = lock.event_time;
+  const address = lock.address;
+  const picksLockedAt = lock.picks_locked_at;
+  const expectedUserIds = lock.expected_user_ids_json;
+  const lockedAt = lock.locked_at ?? "1970-01-01 00:00:00";
   // NULL → legacy → treat as at-home (uncapped host bring list, current behavior).
-  const hostAtHomeRaw = lockRow.host_at_home as number | null;
-  const hostAtHome = hostAtHomeRaw === null ? true : hostAtHomeRaw !== 0;
+  const hostAtHome = lock.host_at_home === null ? true : lock.host_at_home !== 0;
 
   // Pull every input the headcount math needs in parallel. We also fetch the
   // MAX(rsvped_at) and MAX(created_at) for this date so the ICS feed can
@@ -111,18 +199,31 @@ export async function computeAvailableGamesPayload(opts: {
       args: [date, date],
     }),
   ]);
-  const freshness = freshnessResult.rows[0];
-  const latestRsvp = (freshness?.latest_rsvp as string | null) ?? null;
-  const latestReaction = (freshness?.latest_reaction as string | null) ?? null;
-  const latestActivityAt = maxSqliteDatetime([lockedAt, picksLockedAt, latestRsvp, latestReaction]);
+  const freshness = freshnessResult.rows[0]
+    ? parseRow(FreshnessRowSchema, freshnessResult.rows[0], "rsvps+game_requests.max")
+    : { latest_rsvp: null, latest_reaction: null };
+  const latestActivityAt = maxSqliteDatetime([
+    lockedAt,
+    picksLockedAt,
+    freshness.latest_rsvp,
+    freshness.latest_reaction,
+  ]);
 
   const canSet = new Set<string>();
   const maybeSet = new Set<string>();
   for (const row of availabilityResult.rows) {
-    const userId = row.user_id as string;
-    const map = parseAvailabilityForDate(row.availability_json as string, date);
-    if (map === "can") canSet.add(userId);
-    else if (map === "maybe") maybeSet.add(userId);
+    // Per-row tolerance: one corrupted availability blob shouldn't poison
+    // the whole game-night view. Drop and continue.
+    let avail: { user_id: string; availability_json: Record<string, Availability> };
+    try {
+      avail = parseRow(UserAvailabilityRowSchema, row, "user_availability");
+    } catch (err) {
+      if (!(err instanceof RowParseError)) throw err;
+      continue;
+    }
+    const v = avail.availability_json[date];
+    if (v === "can") canSet.add(avail.user_id);
+    else if (v === "maybe") maybeSet.add(avail.user_id);
   }
 
   const rsvpYes = new Set<string>();
@@ -132,20 +233,17 @@ export async function computeAvailableGamesPayload(opts: {
   const manuallyRsvpedYes = new Set<string>();
   let viewerRsvp: "yes" | "no" | undefined;
   let viewerRsvpManual = false;
-  for (const row of rsvpResult.rows) {
-    const userId = row.user_id as string;
-    const status = row.status as string;
-    const auto = row.auto as number | null;
-    if (status === "yes") {
-      rsvpYes.add(userId);
-      if (!auto) manuallyRsvpedYes.add(userId);
-      if (userId === viewerId) {
+  for (const r of parseRows(RsvpForDateRowSchema, rsvpResult.rows, "rsvps")) {
+    if (r.status === "yes") {
+      rsvpYes.add(r.user_id);
+      if (!r.auto) manuallyRsvpedYes.add(r.user_id);
+      if (r.user_id === viewerId) {
         viewerRsvp = "yes";
-        viewerRsvpManual = !auto;
+        viewerRsvpManual = !r.auto;
       }
-    } else if (status === "no") {
-      rsvpNo.add(userId);
-      if (userId === viewerId) {
+    } else {
+      rsvpNo.add(r.user_id);
+      if (r.user_id === viewerId) {
         viewerRsvp = "no";
         viewerRsvpManual = true; // a "no" is always a deliberate click
       }
@@ -169,10 +267,18 @@ export async function computeAvailableGamesPayload(opts: {
       args: definiteIds,
     });
     for (const row of inventoryResult.rows) {
-      const userId = row.user_id as string;
-      const set = parseInventorySet(row.game_slugs_json as string);
+      // Per-row tolerance: one user's corrupt inventory doesn't break the
+      // whole night's "what's owned" math.
+      let inv: { user_id: string; game_slugs_json: string[] };
+      try {
+        inv = parseRow(UserInventoryRowSchema, row, "user_inventory");
+      } catch (err) {
+        if (!(err instanceof RowParseError)) throw err;
+        continue;
+      }
+      const set = new Set(inv.game_slugs_json);
       for (const slug of set) ownedUnion.add(slug);
-      inventoryByUser.set(userId, set);
+      inventoryByUser.set(inv.user_id, set);
     }
   }
   const ownedSlugs = [...ownedUnion].sort();
@@ -197,27 +303,24 @@ export async function computeAvailableGamesPayload(opts: {
   const reactions: Record<string, ReactionAggregate> = {};
   const votesByUser = new Map<string, { hype: number; teach: number; learn: number }>();
   let viewerHyped = false;
-  for (const row of reactionResult.rows) {
-    const userId = row.user_id as string;
-    const slug = row.game_slug as string;
-    const kind = row.reaction as "hype" | "teach" | "learn";
-    let agg = reactions[slug];
+  for (const r of parseRows(ReactionRowSchema, reactionResult.rows, "game_requests")) {
+    let agg = reactions[r.game_slug];
     if (!agg) {
       agg = { hype: 0, teach: 0, learn: 0, viewer: [] };
-      reactions[slug] = agg;
+      reactions[r.game_slug] = agg;
     }
-    if (comingIds.has(userId)) agg[kind] += 1;
-    if (userId === viewerId) {
-      agg.viewer.push(kind);
-      if (kind === "hype") viewerHyped = true;
+    if (comingIds.has(r.user_id)) agg[r.reaction] += 1;
+    if (r.user_id === viewerId) {
+      agg.viewer.push(r.reaction);
+      if (r.reaction === "hype") viewerHyped = true;
     }
-    if ((comingIds.has(userId) || maybeSet.has(userId)) && playableSlugs.has(slug)) {
-      let v = votesByUser.get(userId);
+    if ((comingIds.has(r.user_id) || maybeSet.has(r.user_id)) && playableSlugs.has(r.game_slug)) {
+      let v = votesByUser.get(r.user_id);
       if (!v) {
         v = { hype: 0, teach: 0, learn: 0 };
-        votesByUser.set(userId, v);
+        votesByUser.set(r.user_id, v);
       }
-      v[kind] += 1;
+      v[r.reaction] += 1;
     }
   }
 
@@ -249,11 +352,9 @@ export async function computeAvailableGamesPayload(opts: {
       sql: `SELECT id, name, email FROM user WHERE id IN (${placeholders})`,
       args: allAttendeeIds,
     });
-    for (const row of userResult.rows) {
-      const id = row.id as string;
-      const raw =
-        ((row.name as string | null) || (row.email as string | null) || "—").trim() || "—";
-      userNames.set(id, raw);
+    for (const u of parseRows(UserDisplayRowSchema, userResult.rows, "user")) {
+      const raw = ((u.name ?? "") || (u.email ?? "") || "—").trim() || "—";
+      userNames.set(u.id, raw);
     }
   }
 
@@ -434,11 +535,15 @@ export async function listLockedDatesForViewer(opts: {
   });
 
   const out: ViewerDateRef[] = [];
-  for (const row of lockedRows.rows) {
-    out.push({ dateKey: row.date_key as string, source: "locked" });
+  for (const r of parseRows(DateKeyOnlyRowSchema, lockedRows.rows, "locked_dates")) {
+    out.push({ dateKey: r.date_key, source: "locked" });
   }
-  for (const row of tombstoneRows.rows) {
-    out.push({ dateKey: row.date_key as string, source: "tombstone" });
+  for (const r of parseRows(
+    DateKeyOnlyRowSchema,
+    tombstoneRows.rows,
+    "calendar_unlocked_tombstones",
+  )) {
+    out.push({ dateKey: r.date_key, source: "tombstone" });
   }
   return out;
 }
@@ -463,41 +568,16 @@ export async function getTombstone(db: Client, dateKey: string): Promise<Tombsto
   });
   const row = rows[0];
   if (!row) return null;
+  const t = parseRow(TombstoneFullRowSchema, row, "calendar_unlocked_tombstones");
   return {
-    dateKey: row.date_key as string,
-    hostUserId: (row.host_user_id as string | null) ?? null,
-    hostName: (row.host_name as string | null) ?? null,
-    eventTime: (row.event_time as string | null) ?? null,
-    address: (row.address as string | null) ?? null,
-    expectedUserIds: parseStringArray(row.expected_user_ids_json as string),
-    unlockedAt: row.unlocked_at as string,
+    dateKey: t.date_key,
+    hostUserId: t.host_user_id,
+    hostName: t.host_name,
+    eventTime: t.event_time,
+    address: t.address,
+    expectedUserIds: t.expected_user_ids_json,
+    unlockedAt: t.unlocked_at,
   };
-}
-
-// ── Internal helpers ───────────────────────────────────────────────────
-
-function parseStringArray(json: string | null | undefined): string[] {
-  if (!json) return [];
-  try {
-    const parsed = JSON.parse(json);
-    if (!Array.isArray(parsed)) return [];
-    return parsed.filter((s): s is string => typeof s === "string");
-  } catch {
-    return [];
-  }
-}
-
-function parseInventorySet(json: string | null | undefined): Set<string> {
-  if (!json) return new Set();
-  try {
-    const parsed = JSON.parse(json);
-    if (!Array.isArray(parsed)) return new Set();
-    const out = new Set<string>();
-    for (const s of parsed) if (typeof s === "string") out.add(s);
-    return out;
-  } catch {
-    return new Set();
-  }
 }
 
 /** Lexicographic max of SQLite "YYYY-MM-DD HH:MM:SS" timestamps; nulls
@@ -510,20 +590,4 @@ export function maxSqliteDatetime(stamps: (string | null | undefined)[]): string
     if (s > max) max = s;
   }
   return max;
-}
-
-function parseAvailabilityForDate(
-  json: string | null | undefined,
-  date: string,
-): "can" | "maybe" | undefined {
-  if (!json) return undefined;
-  try {
-    const parsed = JSON.parse(json) as unknown;
-    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return undefined;
-    const v = (parsed as Record<string, unknown>)[date];
-    if (v === "can" || v === "maybe") return v;
-    return undefined;
-  } catch {
-    return undefined;
-  }
 }

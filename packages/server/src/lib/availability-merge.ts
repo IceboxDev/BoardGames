@@ -20,11 +20,24 @@
 // once the night is unlocked, while still honoring active RSVPs for the
 // heat / pie / personal mark on dates that ARE locked.
 
+import { AvailabilitySchema } from "@boardgames/core/protocol";
 import type { Client } from "@libsql/client";
+import { z } from "zod";
+import { parseRows } from "./db-rows.ts";
 
 export type AvailabilityStatus = "can" | "maybe";
 export type AvailabilityRecord = Record<string, AvailabilityStatus>;
 
+/**
+ * Parse a stored `availability_json` blob into a typed map, dropping any
+ * entries whose status isn't a valid `AvailabilitySchema` member.
+ *
+ * Per-entry leniency is preserved on purpose: an old/garbled status value
+ * for one date shouldn't prevent the user's other dates from rendering.
+ * Strict whole-blob validation would also break legacy rows on schema
+ * extensions — using per-entry safeParse lets new statuses roll out
+ * without retroactively invalidating stored data.
+ */
 export function parseAvailabilityJson(json: string | null | undefined): AvailabilityRecord {
   if (!json) return {};
   let parsed: unknown;
@@ -35,8 +48,9 @@ export function parseAvailabilityJson(json: string | null | undefined): Availabi
   }
   if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return {};
   const out: AvailabilityRecord = {};
-  for (const [date, status] of Object.entries(parsed as Record<string, unknown>)) {
-    if (status === "can" || status === "maybe") out[date] = status;
+  for (const [date, raw] of Object.entries(parsed as Record<string, unknown>)) {
+    const status = AvailabilitySchema.safeParse(raw);
+    if (status.success) out[date] = status.data;
   }
   return out;
 }
@@ -59,6 +73,16 @@ export function applyRsvpNoToAvailability(
   return merged;
 }
 
+// ── Row projections ───────────────────────────────────────────────────
+
+/** `SELECT date_key FROM rsvps WHERE user_id = ? AND status = ?`. */
+const DateKeyRowSchema = z.object({ date_key: z.string() });
+
+/** `SELECT user_id, date_key FROM rsvps WHERE status = ?`. */
+const UserDateRowSchema = z.object({ user_id: z.string(), date_key: z.string() });
+
+// ── Queries ───────────────────────────────────────────────────────────
+
 export async function fetchRsvpYesDatesForUser(db: Client, userId: string): Promise<string[]> {
   return fetchRsvpDatesForUser(db, userId, "yes");
 }
@@ -78,7 +102,7 @@ async function fetchRsvpDatesForUser(
             AND EXISTS (SELECT 1 FROM locked_dates l WHERE l.date_key = r.date_key)`,
     args: [userId, status],
   });
-  return rows.map((r) => r.date_key as string);
+  return parseRows(DateKeyRowSchema, rows, "rsvps").map((r) => r.date_key);
 }
 
 /** Build a (userId → Set<dateKey>) index of `yes` RSVPs on currently-locked
@@ -106,15 +130,13 @@ async function fetchAllRsvpByUser(
     args: [status],
   });
   const out = new Map<string, Set<string>>();
-  for (const row of rows) {
-    const userId = row.user_id as string;
-    const date = row.date_key as string;
-    let set = out.get(userId);
+  for (const r of parseRows(UserDateRowSchema, rows, "rsvps")) {
+    let set = out.get(r.user_id);
     if (!set) {
       set = new Set();
-      out.set(userId, set);
+      out.set(r.user_id, set);
     }
-    set.add(date);
+    set.add(r.date_key);
   }
   return out;
 }

@@ -1,4 +1,5 @@
 import { AvailabilityCountsSchema } from "@boardgames/core/protocol";
+import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import {
@@ -6,8 +7,18 @@ import {
   fetchAllRsvpYesByUser,
   parseAvailabilityJson,
 } from "../lib/availability-merge.ts";
+import { parseRows } from "../lib/db-rows.ts";
 
 export const availabilityCountsRoutes = authedApp();
+
+/**
+ * `SELECT user_id, availability_json FROM user_availability` — raw blob
+ * handed to `parseAvailabilityJson` for per-entry leniency.
+ */
+const UserAvailabilityRowSchema = z.object({
+  user_id: z.string(),
+  availability_json: z.string(),
+});
 
 availabilityCountsRoutes.get("/counts", async (c) => {
   const [availabilityResult, rsvpYesByUser, rsvpNoByUser] = await Promise.all([
@@ -30,12 +41,15 @@ availabilityCountsRoutes.get("/counts", async (c) => {
     set.add(userId);
   };
 
-  for (const row of availabilityResult.rows) {
-    const userId = row.user_id as string;
-    const map = parseAvailabilityJson(row.availability_json as string);
+  for (const row of parseRows(
+    UserAvailabilityRowSchema,
+    availabilityResult.rows,
+    "user_availability",
+  )) {
+    const map = parseAvailabilityJson(row.availability_json);
     for (const [date, status] of Object.entries(map)) {
-      if (status === "can") addTo(canByDate, date, userId);
-      else if (status === "maybe") addTo(maybeByDate, date, userId);
+      if (status === "can") addTo(canByDate, date, row.user_id);
+      else if (status === "maybe") addTo(maybeByDate, date, row.user_id);
     }
   }
 

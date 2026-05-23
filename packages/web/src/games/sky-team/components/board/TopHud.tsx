@@ -1,6 +1,7 @@
 import type { SkyTeamPlayerView } from "@boardgames/core/games/sky-team/types";
 import { BoardOverlay } from "../../../../components/board";
-import { HUD_ALTITUDE, HUD_REROLL, HUD_WEATHER } from "./geometry";
+import rerollDiceUrl from "../../assets/reroll-dice.svg";
+import { HUD_ALTITUDE, HUD_REROLL, HUD_REROLL_WELL, HUD_WEATHER } from "./geometry";
 
 interface Props {
   view: SkyTeamPlayerView;
@@ -17,6 +18,17 @@ export default function TopHud({ view }: Props) {
   const rerollSize = HUD_REROLL.radius * 2;
   return (
     <>
+      {/* Recessed well behind the reroll token — flat top, semicircular bottom. */}
+      <BoardOverlay
+        className="cockpit-reroll-well-shell"
+        at={{ x: HUD_REROLL_WELL.x, y: HUD_REROLL_WELL.y }}
+        anchor="top-left"
+        width={HUD_REROLL_WELL.w}
+        height={HUD_REROLL_WELL.h}
+      >
+        <div className="cockpit-reroll-well" aria-hidden="true" />
+      </BoardOverlay>
+
       <BoardOverlay
         className="cockpit-reroll-shell"
         at={HUD_REROLL.center}
@@ -24,20 +36,13 @@ export default function TopHud({ view }: Props) {
         width={rerollSize}
         height={rerollSize}
       >
-        {/* biome-ignore lint/correctness/noRestrictedElements: medallion carries the lab's conic/radial gradient stack and a custom badge; <Button> would override it. */}
+        {/* biome-ignore lint/correctness/noRestrictedElements: medallion carries a custom navy 3D disc + dice icon; <Button> would override it. */}
         <button
           type="button"
           className="cockpit-reroll"
           aria-label={`Reroll tokens: ${view.rerollTokens}`}
         >
-          <span aria-hidden="true" className="cockpit-reroll__glyph">
-            ↻
-          </span>
-          {view.rerollTokens > 0 ? (
-            <span aria-hidden="true" className="cockpit-reroll__count">
-              {view.rerollTokens}
-            </span>
-          ) : null}
+          <img src={rerollDiceUrl} alt="" className="cockpit-reroll__icon" />
         </button>
       </BoardOverlay>
 

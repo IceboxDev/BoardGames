@@ -11,6 +11,7 @@ import { BottomPanelChrome, ConcentrationSlots } from "./BottomPanel";
 import BrakeArc from "./BrakeArc";
 import BrakeRow from "./BrakeRow";
 import ChainArrows from "./ChainArrows";
+import SpeedArc from "./SpeedArc";
 import "./cockpit.css";
 import CockpitBackground from "./CockpitBackground";
 import EngineRow, { EngineAxisMarker } from "./EngineRow";
@@ -19,6 +20,8 @@ import { COCKPIT_VIEWBOX } from "./geometry";
 import InstrumentSlots from "./InstrumentSlots";
 import LandingGearStrip from "./LandingGearStrip";
 import TopHud from "./TopHud";
+import WarningLights from "./WarningLights";
+import Wiring from "./Wiring";
 
 interface Props {
   view: SkyTeamPlayerView;
@@ -82,12 +85,15 @@ export default function Cockpit({ view, selectedDieId, coffeeAdjust, onSelectSlo
             <EngineRow view={view} canPlace={canPlace} onSelect={onSelectSlot} />
             <InstrumentSlots view={view} canPlace={canPlace} onSelect={onSelectSlot} />
             <ConcentrationSlots view={view} canPlace={canPlace} onSelect={onSelectSlot} />
+            <WarningLights />
           </>
         }
       >
         <CockpitBackground />
+        <Wiring />
         <ArtificialHorizon view={view} />
         <AxisArc view={view} />
+        <SpeedArc view={view} />
         <BrakeArc view={view} />
         <ChainArrows />
         <EngineAxisMarker />

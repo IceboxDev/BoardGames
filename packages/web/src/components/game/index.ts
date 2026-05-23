@@ -4,6 +4,7 @@ export {
   BestForHeadcountBadge,
   ComingSoonBadge,
   FitsBadge,
+  NewBadge,
   VariantsBadge,
   YearBadge,
 } from "./badges";

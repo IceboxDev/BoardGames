@@ -1,13 +1,9 @@
 import { lazy } from "react";
-import type { GameModule } from "../types";
-import accent from "./accent.json";
+import type { PlayableModule } from "../types";
 import backgroundImage from "./assets/background.png";
 import rulesUrl from "./assets/rules.pdf";
 
 export default {
-  slug: "sushi-go",
-  bggId: 133473,
-  accentHex: accent.hex,
   backgroundImage,
   component: lazy(() => import("./SushiGo")),
   mode: "remote",
@@ -18,4 +14,4 @@ export default {
     { id: "random", label: "Random" },
   ],
   rulesUrl,
-} satisfies GameModule;
+} satisfies PlayableModule;

@@ -4,11 +4,28 @@ import {
   OkResponseSchema,
   SetRsvpBodySchema,
 } from "@boardgames/core/protocol";
+import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { jsonColumn, parseRow, RowParseError } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 
 export const calendarRsvpsRoutes = authedApp();
+
+const ExpectedUserIdsSchema = z.array(z.string());
+
+/**
+ * `SELECT expected_user_ids_json, picks_locked_at FROM locked_dates`.
+ * Both columns are non-null per schema, except `picks_locked_at` which is
+ * nullable (the picks-lock is off until the host toggles it).
+ */
+const LockStateRowSchema = z.object({
+  expected_user_ids_json: jsonColumn(ExpectedUserIdsSchema),
+  picks_locked_at: z.string().nullable(),
+});
+
+/** `SELECT host_user_id FROM locked_dates`. */
+const HostUserIdRowSchema = z.object({ host_user_id: z.string().nullable() });
 
 async function loadLockState(date: string): Promise<{
   locked: boolean;
@@ -20,17 +37,25 @@ async function loadLockState(date: string): Promise<{
     args: [date],
   });
   if (rows.length === 0) return { locked: false, picksLocked: false, expected: new Set() };
-  const row = rows[0];
-  let expected: unknown;
+
+  // A malformed expected_user_ids snapshot shouldn't lock everyone out of
+  // a date that's otherwise valid — degrade to an empty set so the
+  // picks-lock check below treats the day as "guest list not constrained
+  // yet" rather than "no one allowed".
+  let expected: string[] = [];
+  let picksLockedAt: string | null = null;
   try {
-    expected = JSON.parse((row.expected_user_ids_json as string) ?? "[]");
-  } catch {
-    expected = [];
+    const parsed = parseRow(LockStateRowSchema, rows[0], "locked_dates");
+    expected = parsed.expected_user_ids_json;
+    picksLockedAt = parsed.picks_locked_at;
+  } catch (err) {
+    if (!(err instanceof RowParseError)) throw err;
   }
+
   return {
     locked: true,
-    picksLocked: (row.picks_locked_at as string | null) !== null,
-    expected: new Set(Array.isArray(expected) ? (expected as string[]) : []),
+    picksLocked: picksLockedAt !== null,
+    expected: new Set(expected),
   };
 }
 
@@ -84,7 +109,11 @@ calendarRsvpsRoutes.post("/rsvp/kick", zJsonBody(KickRsvpBodySchema), async (c) 
   if (lockedRow.rows.length === 0) {
     return errorResponse(c, 400, "date is not locked");
   }
-  const hostUserId = (lockedRow.rows[0].host_user_id as string | null) ?? null;
+  const { host_user_id: hostUserId } = parseRow(
+    HostUserIdRowSchema,
+    lockedRow.rows[0],
+    "locked_dates",
+  );
   const isAdmin = (user as { role?: string }).role === "admin";
   const isHost = hostUserId !== null && hostUserId === user.id;
   if (!isAdmin && !isHost) {

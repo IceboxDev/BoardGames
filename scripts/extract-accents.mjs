@@ -1,20 +1,29 @@
-// Extracts the dominant accent color from each game's thumbnail and writes
-// `accent.json` (one per game folder). Run via `pnpm extract-accents`.
+// Extracts the dominant accent color from each game's thumbnail and
+// updates the corresponding `accentHex` field in
+// `packages/web/src/games/catalog.json`. Run via `pnpm extract-accents`.
 //
-// Pipeline:
+// Pipeline (per slug):
 // 1. Center-crop the thumbnail to 70% to skip vignettes / dark borders.
 // 2. Run Vibrant.js, get 6 categorized swatches with population counts.
 // 3. Pick the swatch with the highest population (most pixel coverage).
 // 4. Boost saturation/lightness so muted source colors still register as
 //    accents on a near-black UI surface.
+//
+// The CLI mode iterates every entry in catalog.json, computes a fresh
+// hex per slug, and writes the catalog back in one batched update so a
+// run produces a single diff. Callers that need the hex for one slug
+// (e.g. `scripts/bgg-sync.mjs --add`) use `extractOne(slug)` which
+// returns the hex without touching catalog.json — they're responsible
+// for splicing it into the catalog entry themselves.
 
 import { existsSync } from "node:fs";
-import { readdir, writeFile } from "node:fs/promises";
+import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { Vibrant } from "node-vibrant/node";
 import sharp from "sharp";
 
-const ROOT = "packages/web/src/games";
+const GAMES_ROOT = "packages/web/src/games";
+const CATALOG_PATH = join(GAMES_ROOT, "catalog.json");
 const CENTER_CROP = 0.7;
 
 // Saturation floor + lightness window (HSL space). 65% saturation makes hues
@@ -91,14 +100,15 @@ function boostHex(hex) {
 }
 
 /**
- * Run the accent pipeline for one slug and write its `accent.json`. Returns
- * the chosen hex (or null if there was no thumbnail). Exported so
- * `scripts/bgg-sync.mjs --add` can invoke it for a single new game.
+ * Compute the accent hex for one slug's thumbnail. Does NOT write to
+ * catalog.json — callers that want to persist the result must do so
+ * explicitly (CLI mode below batches every slug into one write).
+ * Returns null when the slug has no thumbnail.
  */
 export async function extractOne(slug) {
   const candidates = [
-    join(ROOT, slug, "assets/thumbnail.png"),
-    join(ROOT, slug, "assets/img/thumbnail.png"),
+    join(GAMES_ROOT, slug, "assets/thumbnail.png"),
+    join(GAMES_ROOT, slug, "assets/img/thumbnail.png"),
   ];
   const thumb = candidates.find((p) => existsSync(p));
   if (!thumb) {
@@ -116,21 +126,42 @@ export async function extractOne(slug) {
   const raw = top?.hex ?? "#888888";
   const hex = boostHex(raw);
 
-  await writeFile(join(ROOT, slug, "accent.json"), `${JSON.stringify({ hex }, null, 2)}\n`);
   console.log(`[extract-accents] ${slug} → ${hex}  (raw ${raw}, top ${top?.name})`);
   return hex;
 }
 
+/**
+ * Load catalog.json, returning the parsed array.
+ */
+async function loadCatalog() {
+  const raw = await readFile(CATALOG_PATH, "utf8");
+  return JSON.parse(raw);
+}
+
+/**
+ * Persist catalog.json with the same format the migration produced:
+ * 2-space indent, trailing newline. Keeps diffs minimal between runs.
+ */
+async function writeCatalog(entries) {
+  await writeFile(CATALOG_PATH, `${JSON.stringify(entries, null, 2)}\n`);
+}
+
 // CLI entrypoint — only runs when invoked directly, not on import.
 if (import.meta.url === `file://${process.argv[1]}`) {
-  const dirents = await readdir(ROOT, { withFileTypes: true });
-  const slugs = dirents.filter((d) => d.isDirectory()).map((d) => d.name);
-
-  let written = 0;
-  for (const slug of slugs) {
-    const hex = await extractOne(slug);
-    if (hex !== null) written++;
+  const catalog = await loadCatalog();
+  let changed = 0;
+  for (const entry of catalog) {
+    const hex = await extractOne(entry.slug);
+    if (hex === null) continue;
+    if (entry.accentHex !== hex) {
+      entry.accentHex = hex;
+      changed++;
+    }
   }
-
-  console.log(`[extract-accents] wrote ${written} files`);
+  if (changed > 0) {
+    await writeCatalog(catalog);
+    console.log(`[extract-accents] updated ${changed} entries in ${CATALOG_PATH}`);
+  } else {
+    console.log("[extract-accents] all accent hexes already up to date");
+  }
 }

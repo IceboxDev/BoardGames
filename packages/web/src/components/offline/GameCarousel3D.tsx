@@ -16,6 +16,7 @@ import {
   FitsBadge,
   MAX_CARD_W,
   MIN_CARD_W,
+  NewBadge,
   REF_CARD_H,
   REF_CARD_W,
   VariantStrip,
@@ -380,6 +381,8 @@ function SingleCarouselCard({
   // treatment.
   const isBestForHeadcount =
     game.bgg.bestPlayerCount !== null && minPlayers > 0 && game.bgg.bestPlayerCount === minPlayers;
+  // Freshly-added games take precedence over the headcount treatment.
+  const isNew = game.isNew === true;
 
   return (
     <CarouselCardChrome
@@ -389,6 +392,7 @@ function SingleCarouselCard({
       hidden={hidden}
       isCenter={isCenter}
       accentHex={game.accentHex}
+      isNew={isNew}
       isBestForHeadcount={isBestForHeadcount}
       ariaLabel={isCenter ? `${game.title}, current selection` : `Show ${game.title}`}
       onClick={onClick}
@@ -404,7 +408,9 @@ function SingleCarouselCard({
           game.bgg.yearPublished ? <YearBadge year={game.bgg.yearPublished} /> : undefined
         }
         badgeTopLeft={
-          isBestForHeadcount ? (
+          isNew ? (
+            <NewBadge />
+          ) : isBestForHeadcount ? (
             <BestForHeadcountBadge count={minPlayers} />
           ) : fits && (minPlayers > 0 || maxPlayers > 0) ? (
             <FitsBadge label={fitsLabel(minPlayers, maxPlayers)} />
