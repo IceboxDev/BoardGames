@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useBlocker } from "react-router-dom";
 import { useGameShell } from "./useGameShell";
 
@@ -53,12 +53,24 @@ export function useRoomLeaveGuard() {
     return true;
   });
 
-  // Drive the blocker state machine. When blocked, ask once; act on
-  // the answer. The blocker object is stable per state transition; we
-  // depend only on `state` to avoid firing the prompt every re-render
-  // while still in the "blocked" state (the confirm itself is sync,
-  // but the effect re-fires if React schedules another render before
-  // we proceed/reset — depending on a primitive keeps it idempotent).
+  // Keep the leave actions in refs so the confirm effect can depend on the
+  // `blocker` alone. `session.leaveRoom` / `session.leaveSession` are
+  // `useCallback`d on `roomCode` / `sessionId` (see ws-client.ts), so the
+  // moment we call `leaveRoom()` it flips `roomCode` to null and a fresh
+  // callback identity is handed back on the next render. If those callbacks
+  // were in the effect's dep array, that identity churn would re-run the
+  // effect while the blocker is still "blocked" — popping a SECOND confirm
+  // dialog. Refs decouple "call the latest function" from "re-run the
+  // effect", so the prompt shows exactly once per blocked navigation.
+  const leaveRoomRef = useRef(session.leaveRoom);
+  leaveRoomRef.current = session.leaveRoom;
+  const leaveSessionRef = useRef(session.leaveSession);
+  leaveSessionRef.current = session.leaveSession;
+
+  // Drive the blocker state machine. The blocker object is stable per
+  // state transition, so this runs once per transition: unblocked→blocked
+  // (ask), then blocked→proceeding/unblocked (early-return). When blocked,
+  // ask once and act on the answer.
   useEffect(() => {
     if (blocker.state !== "blocked") return;
     const ok = window.confirm(CONFIRM_MESSAGE);
@@ -66,13 +78,13 @@ export function useRoomLeaveGuard() {
       // Clean up both projections — leaveRoom is a no-op without a
       // room, leaveSession a no-op without a sessionId, so the order
       // doesn't matter and double-firing is safe.
-      session.leaveRoom();
-      session.leaveSession();
+      leaveRoomRef.current();
+      leaveSessionRef.current();
       blocker.proceed();
     } else {
       blocker.reset();
     }
-  }, [blocker, session.leaveRoom, session.leaveSession]);
+  }, [blocker]);
 
   useEffect(() => {
     if (!isActive) return;

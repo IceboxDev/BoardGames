@@ -83,3 +83,19 @@ export type AdminUser = z.infer<typeof AdminUserSchema>;
 
 export const AdminUserListSchema = z.array(AdminUserSchema);
 export type AdminUserList = z.infer<typeof AdminUserListSchema>;
+
+// ── WebSocket ticket ────────────────────────────────────────────────────
+
+/**
+ * Short-lived ticket the client appends to the `/ws` URL as a `?ticket=`
+ * query param. The WebSocket connects cross-origin to the API server in
+ * prod, where the session cookie (scoped to the web origin via the Vercel
+ * `/api` proxy) can't ride the upgrade handshake. The client fetches this
+ * ticket over the cookie-authed HTTP path and the server validates it on
+ * upgrade. The token is an opaque server-signed string — only its presence
+ * is part of the wire contract.
+ */
+export const WsTicketResponseSchema = z.object({
+  ticket: z.string().min(1),
+});
+export type WsTicketResponse = z.infer<typeof WsTicketResponseSchema>;

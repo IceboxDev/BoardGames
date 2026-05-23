@@ -73,13 +73,47 @@ function aiPlayerForCurrentInput(ctx: SkyTeamContext): PlayerIndex | null {
   return null;
 }
 
+/**
+ * `spend-reroll` is advertised as a legal action with empty die lists (the UI
+ * fills them in), but applying it with no dice selected throws. An AI must
+ * therefore never emit it — that exact action would be rejected by the engine,
+ * leaving the state unchanged and the machine re-entering `aiThinking` forever.
+ */
+function isApplicableAiAction(action: SkyTeamAction): boolean {
+  if (action.kind !== "spend-reroll") return true;
+  return action.pilotDieIds.length + action.copilotDieIds.length > 0;
+}
+
 function pickAiAction(ctx: SkyTeamContext, player: PlayerIndex): SkyTeamAction {
   const gs = ctx.gameState;
   if (!gs) throw new Error("pickAiAction called with null gameState");
   const view = buildPlayerView(gs, player);
   const legal = getLegalActionsForPlayer(gs, player);
   const strategy = getStrategy(ctx.aiStrategy ?? "stub");
-  return strategy.pickAction(view, legal, player);
+
+  // A guaranteed-applicable fallback so a strategy bug can never wedge the game:
+  // prefer a placement, then any other applicable action.
+  const fallback =
+    legal.find((a) => a.kind === "place-die") ?? legal.find(isApplicableAiAction) ?? null;
+
+  let chosen: SkyTeamAction;
+  try {
+    chosen = strategy.pickAction(view, legal, player);
+  } catch (err) {
+    if (typeof console !== "undefined") {
+      console.error("[sky-team] AI strategy threw; using fallback action:", err);
+    }
+    if (fallback) return fallback;
+    throw err; // genuinely no applicable action — let the caller surface it
+  }
+
+  if (!isApplicableAiAction(chosen) && fallback) {
+    if (typeof console !== "undefined") {
+      console.error("[sky-team] AI chose an inapplicable action; using fallback:", chosen);
+    }
+    return fallback;
+  }
+  return chosen;
 }
 
 export const skyTeamMachine = setup({

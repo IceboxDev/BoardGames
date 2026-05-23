@@ -3,9 +3,11 @@ import {
   type RoomState,
   type ServerMessage,
   ServerMessageSchema,
+  WsTicketResponseSchema,
 } from "@boardgames/core/protocol";
 import { useCallback, useEffect, useRef, useState } from "react";
-import { SchemaError } from "./api-fetch.ts";
+import { apiFetch, SchemaError } from "./api-fetch.ts";
+import { gameLog } from "./game-log.ts";
 
 /**
  * Parse a raw WebSocket message string into a typed {@link ServerMessage}.
@@ -110,134 +112,155 @@ export function useGameSession<
     if (wsRef.current?.readyState === WebSocket.OPEN) return;
 
     setStatus("connecting");
-    const ws = new WebSocket(WS_URL);
-    wsRef.current = ws;
 
-    ws.onopen = () => {
-      setStatus("connected");
-      setError(null);
-      reconnectAttemptRef.current = 0;
+    const openWith = (url: string) => {
+      // A socket may have opened while we awaited the ticket.
+      if (wsRef.current?.readyState === WebSocket.OPEN) return;
 
-      // Auto-rejoin room on reconnect
-      if (pendingRejoinRef.current) {
-        const { roomCode: code, playerName } = pendingRejoinRef.current;
-        ws.send(JSON.stringify({ type: "join-room", roomCode: code, playerName }));
-      }
-    };
+      const ws = new WebSocket(url);
+      wsRef.current = ws;
 
-    ws.onmessage = (event) => {
-      let msg: ServerMessage;
-      try {
-        msg = parseServerMessage(event.data);
-      } catch (err) {
-        if (err instanceof SchemaError) {
-          console.warn("Bad WS message shape:", err.issues);
+      ws.onopen = () => {
+        setStatus("connected");
+        setError(null);
+        reconnectAttemptRef.current = 0;
+
+        // Auto-rejoin room on reconnect
+        if (pendingRejoinRef.current) {
+          const { roomCode: code, playerName } = pendingRejoinRef.current;
+          ws.send(JSON.stringify({ type: "join-room", roomCode: code, playerName }));
         }
-        return;
-      }
+      };
 
-      switch (msg.type) {
-        // --- Solo session messages ---
-        case "session-created":
-          setSessionId(msg.sessionId);
-          setPlayerView(msg.playerView as TPlayerView);
-          setLegalActions(msg.legalActions as TAction[]);
-          setAiThinking(false);
-          setResult(null);
-          setError(null);
-          break;
+      ws.onmessage = (event) => {
+        let msg: ServerMessage;
+        try {
+          msg = parseServerMessage(event.data);
+        } catch (err) {
+          if (err instanceof SchemaError) {
+            console.warn("Bad WS message shape:", err.issues);
+          }
+          return;
+        }
 
-        case "state-update":
-          setPlayerView(msg.playerView as TPlayerView);
-          setLegalActions(msg.legalActions as TAction[]);
-          setActivePlayer(msg.activePlayer);
-          if (msg.playerIndex !== undefined) setPlayerIndex(msg.playerIndex);
-          setAiThinking(false);
-          break;
+        gameLog(`recv ${msg.type}`, msg);
 
-        case "ai-thinking":
-          setAiThinking(true);
-          break;
+        switch (msg.type) {
+          // --- Solo session messages ---
+          case "session-created":
+            setSessionId(msg.sessionId);
+            setPlayerView(msg.playerView as TPlayerView);
+            setLegalActions(msg.legalActions as TAction[]);
+            setAiThinking(false);
+            setResult(null);
+            setError(null);
+            break;
 
-        case "game-over":
-          setPlayerView(msg.playerView as TPlayerView);
-          setResult(msg.result as TResult);
-          setReplayId(msg.replayId ?? null);
-          if (msg.playerIndex !== undefined) setPlayerIndex(msg.playerIndex);
-          setLegalActions([]);
-          setAiThinking(false);
-          break;
+          case "state-update":
+            setPlayerView(msg.playerView as TPlayerView);
+            setLegalActions(msg.legalActions as TAction[]);
+            setActivePlayer(msg.activePlayer);
+            if (msg.playerIndex !== undefined) setPlayerIndex(msg.playerIndex);
+            setAiThinking(false);
+            break;
 
-        case "error":
-          setError(msg.message);
-          setAiThinking(false);
-          break;
+          case "ai-thinking":
+            setAiThinking(true);
+            break;
 
-        // --- Room / lobby messages ---
-        case "room-created":
-          setRoomCode(msg.roomCode);
-          setRoomState(msg.roomState);
-          setMySlot(0);
-          setError(null);
-          pendingRejoinRef.current = {
-            roomCode: msg.roomCode,
-            playerName: playerNameRef.current,
-          };
-          break;
+          case "game-over":
+            setPlayerView(msg.playerView as TPlayerView);
+            setResult(msg.result as TResult);
+            setReplayId(msg.replayId ?? null);
+            if (msg.playerIndex !== undefined) setPlayerIndex(msg.playerIndex);
+            setLegalActions([]);
+            setAiThinking(false);
+            break;
 
-        case "room-joined":
-          setRoomCode(msg.roomCode);
-          setRoomState(msg.roomState);
-          setMySlot(msg.yourSlot);
-          setError(null);
-          break;
+          case "error":
+            setError(msg.message);
+            setAiThinking(false);
+            break;
 
-        case "room-updated":
-          setRoomState(msg.roomState);
-          break;
+          // --- Room / lobby messages ---
+          case "room-created":
+            setRoomCode(msg.roomCode);
+            setRoomState(msg.roomState);
+            setMySlot(0);
+            setError(null);
+            pendingRejoinRef.current = {
+              roomCode: msg.roomCode,
+              playerName: playerNameRef.current,
+            };
+            break;
 
-        case "room-closed":
-          setRoomCode(null);
-          setRoomState(null);
-          setMySlot(null);
-          pendingRejoinRef.current = null;
-          setError(msg.reason);
-          break;
+          case "room-joined":
+            setRoomCode(msg.roomCode);
+            setRoomState(msg.roomState);
+            setMySlot(msg.yourSlot);
+            setError(null);
+            break;
 
-        case "game-started":
-          setSessionId(msg.sessionId);
-          setPlayerIndex(msg.playerIndex);
-          setActivePlayer(msg.activePlayer);
-          setPlayerView(msg.playerView as TPlayerView);
-          setLegalActions(msg.legalActions as TAction[]);
-          setResult(null);
-          setAiThinking(false);
-          setError(null);
-          break;
+          case "room-updated":
+            setRoomState(msg.roomState);
+            break;
 
-        case "player-disconnected":
-        case "player-reconnected":
-          // These could drive UI notifications in the future
-          break;
-      }
+          case "room-closed":
+            setRoomCode(null);
+            setRoomState(null);
+            setMySlot(null);
+            pendingRejoinRef.current = null;
+            setError(msg.reason);
+            break;
+
+          case "game-started":
+            setSessionId(msg.sessionId);
+            setPlayerIndex(msg.playerIndex);
+            setActivePlayer(msg.activePlayer);
+            setPlayerView(msg.playerView as TPlayerView);
+            setLegalActions(msg.legalActions as TAction[]);
+            setResult(null);
+            setAiThinking(false);
+            setError(null);
+            break;
+
+          case "player-disconnected":
+          case "player-reconnected":
+            // These could drive UI notifications in the future
+            break;
+        }
+      };
+
+      ws.onclose = () => {
+        setStatus("disconnected");
+        wsRef.current = null;
+
+        const attempt = reconnectAttemptRef.current;
+        if (attempt < RECONNECT_DELAYS.length) {
+          reconnectTimerRef.current = setTimeout(() => {
+            reconnectAttemptRef.current++;
+            connect();
+          }, RECONNECT_DELAYS[attempt]);
+        }
+      };
+
+      ws.onerror = () => {
+        setStatus("error");
+      };
     };
 
-    ws.onclose = () => {
-      setStatus("disconnected");
-      wsRef.current = null;
-
-      const attempt = reconnectAttemptRef.current;
-      if (attempt < RECONNECT_DELAYS.length) {
-        reconnectTimerRef.current = setTimeout(() => {
-          reconnectAttemptRef.current++;
-          connect();
-        }, RECONNECT_DELAYS[attempt]);
-      }
-    };
-
-    ws.onerror = () => {
-      setStatus("error");
-    };
+    // The WS connects cross-origin to the API server in prod, where the
+    // session cookie (scoped to the web origin via the `/api` proxy) can't
+    // ride the upgrade handshake. Fetch a short-lived ticket over the
+    // cookie-authed HTTP path and pass it as a query param. On failure,
+    // connect without one — same-origin dev falls back to the cookie, and
+    // cross-origin prod will 401 so onclose schedules a retry.
+    void apiFetch("/api/ws-ticket", { response: WsTicketResponseSchema })
+      .then(({ ticket }) => {
+        const sep = WS_URL.includes("?") ? "&" : "?";
+        openWith(`${WS_URL}${sep}ticket=${encodeURIComponent(ticket)}`);
+      })
+      .catch(() => openWith(WS_URL));
   }, []);
 
   useEffect(() => {
@@ -250,7 +273,13 @@ export function useGameSession<
 
   const sendMessage = useCallback((msg: unknown) => {
     const ws = wsRef.current;
-    if (!ws || ws.readyState !== WebSocket.OPEN) return;
+    const type = (msg as { type?: string }).type ?? "?";
+    if (!ws || ws.readyState !== WebSocket.OPEN) {
+      // A dropped send (socket not open) silently strands the game — log it.
+      gameLog(`send DROPPED (socket not open): ${type}`, msg);
+      return;
+    }
+    gameLog(`send ${type}`, msg);
     ws.send(JSON.stringify(msg));
   }, []);
 

@@ -1,5 +1,6 @@
 import type { DieValue, PlayerIndex } from "@boardgames/core/games/sky-team/types";
 import type { ReactNode } from "react";
+import DieFace from "./DieFace";
 
 export type TileVariant = "pilot" | "copilot" | "mixed";
 
@@ -55,12 +56,12 @@ export default function SkyTeamTile({
     <>
       {placedDie ? (
         <span className={`cockpit-placed-die cockpit-placed-die--${placedDie.color}`}>
-          {placedDie.value}
+          <DieFace color={placedDie.color} value={placedDie.value} />
         </span>
       ) : (
         label
       )}
-      {children}
+      {placedDie ? null : children}
     </>
   );
 

@@ -1,4 +1,4 @@
-import { BASE_SLOT_DEFS, BRAKES_ORDER, FLAPS_ORDER, LANDING_GEAR_SLOTS } from "./scenarios";
+import { BRAKES_ORDER, FLAPS_ORDER, LANDING_GEAR_SLOTS } from "./scenarios";
 import type { DieValue, PlayerIndex, SkyTeamAction, SkyTeamPlayerView, SlotId } from "./types";
 
 export interface SkyTeamAIStrategy {
@@ -26,6 +26,17 @@ export const STUB_AI: SkyTeamAIStrategy = {
 
 type PlaceDieAction = Extract<SkyTeamAction, { kind: "place-die" }>;
 
+// Axis + engine MUST be filled by their player every round, or the round ends
+// in `loss-mandatory`. Each player owns exactly two.
+const MANDATORY_BY_PLAYER: Record<PlayerIndex, readonly SlotId[]> = {
+  0: ["pilot-axis", "pilot-engine"],
+  1: ["copilot-axis", "copilot-engine"],
+};
+
+function emptyMandatoryForPlayer(view: SkyTeamPlayerView, player: PlayerIndex): SlotId[] {
+  return MANDATORY_BY_PLAYER[player].filter((s) => view.slots[s].die == null);
+}
+
 interface ScoredCandidate {
   action: PlaceDieAction;
   risk: number;
@@ -38,6 +49,23 @@ function effectiveValueAt(view: SkyTeamPlayerView, slot: SlotId): DieValue | nul
   return view.slots[slot].die?.value ?? null;
 }
 
+// Rounds of descent remaining: the game forces a landing when altitude hits 0,
+// so altitude — not `totalRounds` — is the real clock for approach pacing.
+function descentRoundsLeft(view: SkyTeamPlayerView): number {
+  return Math.max(1, Math.round(view.altitude.feet / view.scenario.altitudeStep));
+}
+
+// How eager to deploy gear/flaps right now. They're mandatory-green for landing
+// but each deployment narrows the speed gauge, so defer while still advancing.
+function gearFlapsPriority(view: SkyTeamPlayerView): number {
+  const roundsLeft = descentRoundsLeft(view);
+  const spacesLeft = view.approach.airportIndex - view.approach.current;
+  if (roundsLeft <= 2) return 42; // must finish deploying before the landing
+  if (spacesLeft <= 1) return 28; // at/near the airport — safe to deploy
+  if (spacesLeft <= roundsLeft) return 14; // ahead of pace — some slack
+  return 4; // behind on approach — keep dice for the engines
+}
+
 function scoreSlot(
   view: SkyTeamPlayerView,
   player: PlayerIndex,
@@ -46,9 +74,6 @@ function scoreSlot(
 ): { risk: number; progress: number } {
   let risk = 0;
   let progress = 0;
-
-  const totalRoundsLeft = view.scenario.totalRounds - view.round + 1;
-  const turnsThisRoundForMe = view.myDice.length;
 
   switch (slot) {
     case "pilot-axis":
@@ -59,10 +84,16 @@ function scoreSlot(
         const delta = slot === "pilot-axis" ? value - other : other - value;
         const nextAxis = view.axis.position + delta;
         if (Math.abs(nextAxis) >= view.axis.spinAt) risk += 1000;
-        else progress += 60 - Math.abs(nextAxis) * 12;
+        else {
+          progress += 90 - Math.abs(nextAxis) * 30; // strongly drive toward level
+          if (nextAxis === 0) progress += 25;
+        }
+        // The final round only lands if the axis ends exactly level.
+        if (view.isFinalRound && nextAxis !== 0) risk += 1000;
       } else {
-        const desired = -view.axis.position;
-        progress += 30 - Math.abs(value - clampToDie(desired + 3.5));
+        // First placer: a moderate value leaves the partner the most room to
+        // bring the axis back to level on their matching die.
+        progress += 18 - Math.abs(value - 4) * 3;
       }
       break;
     }
@@ -72,31 +103,46 @@ function scoreSlot(
       const otherSlot: SlotId = slot === "pilot-engine" ? "copilot-engine" : "pilot-engine";
       const other = effectiveValueAt(view, otherSlot);
       if (view.isFinalRound) {
+        // Land slow: total speed must stay UNDER brakeTrack + offset.
+        const threshold = view.brakeTrack.pos + view.scenario.brakeThresholdOffset;
         if (other != null) {
           const speed = value + other;
-          const threshold = view.brakeTrack.pos + view.scenario.brakeThresholdOffset;
           if (speed >= threshold) risk += 1000;
-          else progress += 40 - Math.abs(threshold - 1 - speed) * 5;
+          else progress += 50 - Math.abs(threshold - 1 - speed) * 6;
         } else {
-          progress += 30 - Math.abs(value - 1) * 4;
+          // Partner unknown: keep our half low so the pair lands under threshold.
+          const wantHalf = clampToDie(Math.floor((threshold - 1) / 2));
+          progress += 26 - Math.abs(value - wantHalf) * 6;
         }
       } else {
+        const blueT = view.speedGauge.bluePos + 1;
+        const orangeT = view.speedGauge.orangePos + 1;
+        const computeAdvance = (s: number) => (s < blueT ? 0 : s <= orangeT ? 1 : 2);
+        const spacesLeft = view.approach.airportIndex - view.approach.current;
+        // Advancing is clamped at the airport (no overshoot unless we advance
+        // while already there), so bank progress: push the max advance until we
+        // arrive, then idle. This avoids the slow-drip undershoot loss.
+        const targetAdvance = spacesLeft <= 0 ? 0 : 2;
         if (other != null) {
           const speed = value + other;
-          const blueT = view.speedGauge.bluePos + 1;
-          const orangeT = view.speedGauge.orangePos + 1;
-          const advance = speed < blueT ? 0 : speed <= orangeT ? 1 : 2;
+          const advance = computeAdvance(speed);
           if (advance > 0) {
-            const here = view.approach.airliners[view.approach.current] ?? 0;
-            const atAirport = view.approach.current === view.approach.airportIndex;
-            if (here > 0) risk += 1000;
-            if (atAirport) risk += 1000;
+            // Engine resolution collides if an airliner sits on the CURRENT
+            // space, and overshoots if already at the airport.
+            if (view.approach.current === view.approach.airportIndex) risk += 1000;
+            if ((view.approach.airliners[view.approach.current] ?? 0) > 0) risk += 1000;
           }
-          const spacesLeft = view.approach.airportIndex - view.approach.current;
-          const needPerRound = spacesLeft / totalRoundsLeft;
-          progress += 25 - Math.abs(advance - needPerRound) * 10;
+          // Falling short of the needed pace is what loses by undershoot, so
+          // punish a deficit hard; mild penalty for overshooting the target.
+          const deficit = Math.max(0, targetAdvance - advance);
+          const surplus = Math.max(0, advance - targetAdvance);
+          progress += 60 - deficit * 34 - surplus * 6;
         } else {
-          progress += 12 - Math.abs(value - 4);
+          // Partner unknown: pick our half to enable the target advance,
+          // leaning high so the pair can actually clear the advance-2 band.
+          const needSpeed = targetAdvance === 2 ? orangeT + 2 : blueT - 1;
+          const wantHalf = clampToDie(Math.ceil(needSpeed / 2));
+          progress += 26 - Math.abs(value - wantHalf) * 5;
         }
       }
       break;
@@ -106,9 +152,16 @@ function scoreSlot(
     case "copilot-radio-1":
     case "copilot-radio-2": {
       const target = view.approach.current + value - 1;
-      const airliners = view.approach.airliners[target] ?? 0;
-      if (airliners > 0) progress += 70 - (target - view.approach.current) * 3;
-      else progress -= 5;
+      const airliners = view.approach.airliners;
+      if (target < 0 || target >= airliners.length || target > view.approach.airportIndex) {
+        progress -= 8; // radio aimed past the board / airport — wasted
+      } else if ((airliners[target] ?? 0) > 0) {
+        // Clearing the space we're sitting on unblocks advancing — top priority.
+        if (target === view.approach.current) progress += 90;
+        else progress += 55 - (target - view.approach.current) * 4;
+      } else {
+        progress -= 6;
+      }
       break;
     }
 
@@ -116,17 +169,18 @@ function scoreSlot(
     case "landing-gear-2":
     case "landing-gear-3": {
       const greenCount = LANDING_GEAR_SLOTS.filter((id) => view.slots[id].switchOn).length;
-      const remaining = 3 - greenCount;
-      progress += 25 + remaining * 3;
+      const remaining = LANDING_GEAR_SLOTS.length - greenCount;
+      progress += gearFlapsPriority(view) + remaining * 2;
       break;
     }
 
     case "flaps-1":
     case "flaps-2":
-    case "flaps-3": {
+    case "flaps-3":
+    case "flaps-4": {
       const greenCount = FLAPS_ORDER.filter((id) => view.slots[id].switchOn).length;
-      const remaining = 3 - greenCount;
-      progress += 25 + remaining * 3;
+      const remaining = FLAPS_ORDER.length - greenCount;
+      progress += gearFlapsPriority(view) + remaining * 2;
       break;
     }
 
@@ -134,8 +188,11 @@ function scoreSlot(
     case "brakes-4":
     case "brakes-6": {
       const greenCount = BRAKES_ORDER.filter((id) => view.slots[id].switchOn).length;
-      const urgency = view.isFinalRound ? 30 : Math.min(view.round * 2, 15);
-      progress += urgency + (3 - greenCount) * 2;
+      // Brakes raise the final-round speed threshold, so deploy them before the
+      // landing — urgency climbs as the descent runs out.
+      const roundsLeft = descentRoundsLeft(view);
+      const urgency = view.isFinalRound || roundsLeft <= 2 ? 36 : Math.min(view.round * 3, 18);
+      progress += urgency + (BRAKES_ORDER.length - greenCount) * 3;
       break;
     }
 
@@ -149,7 +206,6 @@ function scoreSlot(
   }
 
   void player;
-  void turnsThisRoundForMe;
   return { risk, progress };
 }
 
@@ -167,16 +223,13 @@ function evaluateCandidate(
   const value = clampToDie(die.value + candidate.coffeeAdjust) as DieValue;
   let { risk, progress } = scoreSlot(view, player, candidate.slot, value);
 
-  if (BASE_SLOT_DEFS[candidate.slot].mandatory) {
-    const def = BASE_SLOT_DEFS[candidate.slot];
-    const matchesMe =
-      (def.eligibility === "pilot" && player === 0) ||
-      (def.eligibility === "copilot" && player === 1);
-    if (matchesMe && view.myDice.length === 1) progress += 250;
-  }
+  // Gentle nudge to make safe progress on mandatory slots when convenient.
+  // (Hard reservation — forcing the die onto a mandatory slot when dice run
+  // low — is enforced by candidate filtering in `pickAction`.)
+  if (MANDATORY_BY_PLAYER[player].includes(candidate.slot)) progress += 8;
 
   if (candidate.coffeeAdjust !== 0) {
-    progress -= Math.abs(candidate.coffeeAdjust) * 4;
+    progress -= Math.abs(candidate.coffeeAdjust) * 2;
   }
 
   const cost = risk * 1000 - progress;
@@ -196,7 +249,17 @@ export const HEURISTIC_V1: SkyTeamAIStrategy = {
     const placements = legal.filter((a): a is PlaceDieAction => a.kind === "place-die");
     if (placements.length === 0) return legal[0];
 
-    const scored = placements.map((c) => evaluateCandidate(view, player, c));
+    // Hard mandatory reservation: once every remaining die is needed to fill a
+    // still-empty axis/engine slot, restrict this placement to those slots so
+    // one can never be left empty (which would lose the round outright).
+    const emptyMandatory = emptyMandatoryForPlayer(view, player);
+    let candidates = placements;
+    if (emptyMandatory.length >= view.myDice.length) {
+      const mandatoryOnly = placements.filter((p) => MANDATORY_BY_PLAYER[player].includes(p.slot));
+      if (mandatoryOnly.length > 0) candidates = mandatoryOnly;
+    }
+
+    const scored = candidates.map((c) => evaluateCandidate(view, player, c));
     scored.sort((a, b) => {
       if (a.cost !== b.cost) return a.cost - b.cost;
       const aValue = view.myDice.find((d) => d.id === a.action.dieId)?.value ?? 6;

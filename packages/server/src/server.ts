@@ -1,8 +1,8 @@
-import { AuthConfigSchema } from "@boardgames/core/protocol";
+import { AuthConfigSchema, WsTicketResponseSchema } from "@boardgames/core/protocol";
 import { createNodeWebSocket } from "@hono/node-ws";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
-import { auth, requireAdmin, requireAuth } from "./auth/index.ts";
+import { auth, requireAdmin, requireAuth, requireWsAuth } from "./auth/index.ts";
 import {
   adminAvailabilityAllRoutes,
   adminAvailabilityRoutes,
@@ -34,6 +34,7 @@ import {
   handleToggleReady,
 } from "./sessions/room-manager.ts";
 import type { ClientToServerMessage } from "./sessions/types.ts";
+import { signWsTicket } from "./sessions/ws-ticket.ts";
 import { tournamentRoutes } from "./tournament/routes.ts";
 
 const app = new Hono();
@@ -116,6 +117,14 @@ app.route("/api/tournaments", tournamentRoutes);
 app.use("/api/games/*", requireAuth);
 app.route("/api/games", persistenceRoutes);
 
+// Issues a short-lived ticket for the cross-origin WebSocket handshake. The
+// cookie authenticates this HTTP call (same-origin via the web proxy); the
+// returned ticket then authenticates the direct `/ws` connection. See
+// sessions/ws-ticket.ts for why the cookie can't be used on `/ws` directly.
+app.get("/api/ws-ticket", requireAuth, (c) =>
+  c.json(WsTicketResponseSchema.parse({ ticket: signWsTicket(c.get("user").id) })),
+);
+
 function handleRoomMessage(ws: import("hono/ws").WSContext, msg: ClientToServerMessage): boolean {
   switch (msg.type) {
     case "create-room":
@@ -144,11 +153,11 @@ function handleRoomMessage(ws: import("hono/ws").WSContext, msg: ClientToServerM
   }
 }
 
-app.use("/ws", requireAuth);
+app.use("/ws", requireWsAuth);
 app.get(
   "/ws",
   upgradeWebSocket((c) => {
-    const userId = c.get("user").id;
+    const userId = c.get("wsUserId");
     return {
       onOpen(_event, ws) {
         wsAuth.set(ws, userId);

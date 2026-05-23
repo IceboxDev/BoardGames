@@ -13,7 +13,7 @@ pnpm lint                     # biome check (lint + format check)
 pnpm lint:fix                 # biome check --write (auto-fix)
 pnpm format                   # biome format --write
 pnpm typecheck                # typecheck all packages
-pnpm test                     # run vitest across packages (currently core-only)
+pnpm test                     # run vitest across core, server, and web
 pnpm -r --filter @boardgames/web typecheck   # typecheck single package
 ```
 
@@ -85,8 +85,10 @@ Each game follows a consistent split:
 
 ### Key abstractions
 
-- **`GameMachineSpec`** (`core/src/machines/types.ts`) — generic interface that all game machines implement: provides player views, legal actions, active player, game result, and game-over detection.
-- **`GameDefinition`** (`web/src/games/types.ts`) — registry entry for each game with metadata and a lazy-loaded component. Games have a `mode` of `"remote"` (server-backed via WebSocket) or `"local"` (client-only).
+- **Runtime model — every playable game is SERVER-AUTHORITATIVE.** The XState machine *and* its AI run on the **server** (`packages/server/src/sessions/manager.ts` creates one actor per session); the browser only renders server state over a single WebSocket per `/play/:slug`, via `useGameShell` → `useRemoteGame` (solo vs AI) / `useMultiplayerRoom` (rooms). There is **no client-side game loop** for the 8 games. (`useLocalGame` exists *only* for Set's standalone trainer mini-mode — it is not how the 8 game sessions run.)
+- **`GameMachineSpec`** (`core/src/machines/types.ts`) — generic interface every game machine implements (player views, legal actions, active player, result, game-over). The server's session manager drives this uniformly for all games.
+- **`GameDefinition` / `PlayableModule`** (`web/src/games/types.ts`) — registry entry for each game (metadata + lazy component). The `mode` field is `"remote"` for all games today and is **not branched on at runtime** — it's vestigial, kept only for a hypothetical future client-only game. Don't infer "client-side" from it.
+- **Dev logging** — `packages/server/src/lib/game-log.ts` (server: session/action/snapshot/AI/game-over) and `packages/web/src/lib/game-log.ts` (client: WS send/recv, dropped sends) emit a unified, dev-only `[game:<slug>]` trace for every game. Use these to debug a stuck/hung session: a gap after `ai-thinking` = slow/blocking AI, a `send DROPPED` = the socket wasn't open.
 - **Game registry** (`web/src/games/registry.ts`) — merges three sources:
   1. `web/src/games/catalog.json` — Zod-validated browse-only metadata for *every* game (slug, bggId, accentHex, family, displayTitle, bggOverrides).
   2. `import.meta.glob("./*/index.ts")` — playable extras (component, mode, tournament strategies, …). Only playable games have an `index.ts`; catalog-only games live entirely in `catalog.json`.
@@ -96,12 +98,20 @@ Each game follows a consistent split:
 
 ### Current games
 
-| Game | Mode | AI |
-|------|------|----|
-| Lost Cities | local | MCTS + heuristic strategies |
-| Exploding Kittens | local | — |
-| Pandemic | local | — |
-| Set | local | — |
+All 8 playable games are **server-authoritative** (`mode: "remote"`, registered in `machine-registry.ts`, multiplayer config in `room-config.ts`). The AI runs server-side inside each game's machine via a `fromPromise` actor.
+
+| Game | AI |
+|------|----|
+| Lost Cities | ISMCTS + heuristic strategies |
+| Exploding Kittens | ISMCTS |
+| Durak | heuristic |
+| Parks | heuristic |
+| Sushi Go | heuristic |
+| Sky Team | heuristic (co-op) |
+| Pandemic | — (co-op; solo controls all roles) |
+| Set | — (PvP / trainer) |
+
+> Note: ISMCTS searches currently run on the server's **main thread**, so a heavy search blocks the Node event loop for all sessions. A worker-thread AI pool is a known scaling improvement.
 
 ### Game board layout structure
 
@@ -150,5 +160,5 @@ Games with non-card-style spatial layouts (maps, instrument panels, hex grids, d
 
 1. Create `packages/web/src/games/<slug>/index.ts` exporting `satisfies PlayableModule` (component, mode, tournament strategies, etc. — see `types.ts` for the full shape). No base fields (`slug`, `bggId`, `accentHex`, `family`, `displayTitle`, `bggOverrides`) here — those live in `catalog.json` only.
 2. If the game has non-trivial logic, put it in `packages/core/src/games/<slug>/` and add exports to core's `package.json`.
-3. Register the server-side state machine in `packages/server/src/sessions/machine-registry.ts` and the multiplayer config in `packages/core/src/protocol/room-config.ts` (remote-mode only).
+3. Register the server-side state machine in `packages/server/src/sessions/machine-registry.ts` (REQUIRED — the server runs every game's machine, including solo-vs-AI) and add the room config in `packages/core/src/protocol/room-config.ts` (for multiplayer rooms / AI seating).
 4. Use `GameScreen` for the board layout — see "Game board layout structure" above.

@@ -1,5 +1,11 @@
 import type { ReactNode } from "react";
+import type { GameDescriptions } from "../../games/types";
 import { ArrowRightIcon, ChevronDownIcon } from "../icons";
+import {
+  DESCRIPTION_LINE_HEIGHT,
+  DESCRIPTION_TARGET_PX,
+  useDescriptionFont,
+} from "./description-font";
 
 // Body block for catalog-style game cards. Owns the standard padding,
 // flex/gap layout, and a header row with a title + optional trailing
@@ -63,26 +69,27 @@ export function GameCardMeta({ children }: { children: ReactNode }) {
 }
 
 /**
- * Body-text description with deterministic line-clamp. `lines` defaults to
- * 6 (the value all current consumers use); pass a different value if a
- * future card layout needs a tighter or looser ceiling.
+ * Body-text description for catalog cards. Renders the `default` variant at
+ * the uniform font chosen by the enclosing {@link DescriptionGrid} — the
+ * largest size at which the longest description in the grid still fits, so
+ * every card matches and nothing is truncated (the font scales down on
+ * smaller screens instead). The baseline `min-height` keeps cards uniform
+ * for shorter blurbs and lets an over-long outlier grow rather than clip.
  */
-export function GameCardDescription({
-  children,
-  lines = 6,
-}: {
-  children: ReactNode;
-  lines?: number;
-}) {
-  // line-clamp-* values must be static for Tailwind to emit the rule; map
-  // common values to their literal class names instead of interpolating.
-  const clampCls =
-    lines === 4
-      ? "line-clamp-4"
-      : lines === 5
-        ? "line-clamp-5"
-        : lines === 7
-          ? "line-clamp-7"
-          : "line-clamp-6";
-  return <p className={`${clampCls} flex-1 text-sm leading-relaxed text-gray-400`}>{children}</p>;
+export function GameCardDescription({ descriptions }: { descriptions: GameDescriptions }) {
+  const fontPx = useDescriptionFont();
+  const text = descriptions.default || descriptions.tight || descriptions.loose;
+  if (!text) return null;
+  return (
+    <p
+      className="shrink-0 text-gray-400"
+      style={{
+        minHeight: DESCRIPTION_TARGET_PX,
+        fontSize: `${fontPx}px`,
+        lineHeight: DESCRIPTION_LINE_HEIGHT,
+      }}
+    >
+      {text}
+    </p>
+  );
 }

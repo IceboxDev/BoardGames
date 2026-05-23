@@ -3,6 +3,7 @@ import type { WSContext } from "hono/ws";
 import type { AnyActorLogic, AnyActorRef } from "xstate";
 import { createActor } from "xstate";
 import { getDb } from "../db.ts";
+import { gameLog } from "../lib/game-log.ts";
 import { getMachineSpec } from "./machine-registry.ts";
 import { handleRoomWsClose } from "./room-manager.ts";
 import type { ClientToServerMessage, ServerToClientMessage } from "./types.ts";
@@ -138,7 +139,11 @@ function subscribeSession(active: ActiveSession): void {
 
     if (phase === "idle") return;
 
+    const activePlayer = active.spec.getActivePlayer(snapshot);
+    gameLog(active.gameSlug, active.id, `→ ${phase}`, { activePlayer });
+
     if (active.spec.isGameOver(snapshot)) {
+      gameLog(active.gameSlug, active.id, "game over", { result: active.spec.getResult(snapshot) });
       void (async () => {
         let replayId: number | undefined;
         if (active.spec.getReplayLog) {
@@ -189,11 +194,10 @@ function subscribeSession(active: ActiveSession): void {
       return;
     }
 
-    const activePlayer = active.spec.getActivePlayer(snapshot);
-
     // Check if the active player is an AI (no ws connection for that index)
     const activeHasWs = active.players.some((p) => p.playerIndex === activePlayer);
     if (!activeHasWs) {
+      gameLog(active.gameSlug, active.id, "ai-thinking", { activePlayer });
       sendToAllPlayers(active, (_p) => ({
         type: "ai-thinking",
         sessionId: active.id,
@@ -244,6 +248,7 @@ function handleCreateSession(
   wsSet.add(id);
   wsSessions.set(ws, wsSet);
 
+  gameLog(msg.gameSlug, id, "session created (solo)", { config });
   subscribeSession(active);
 
   actor.start();
@@ -371,6 +376,11 @@ function handleAction(
     send(ws, { type: "error", sessionId: msg.sessionId, message: "Not your session" });
     return;
   }
+
+  gameLog(active.gameSlug, active.id, "client action", {
+    player: player.playerIndex,
+    action: msg.action,
+  });
 
   // For multi-client sessions, validate it's this player's turn
   if (active.players.length > 1) {

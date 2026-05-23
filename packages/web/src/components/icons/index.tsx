@@ -29,6 +29,21 @@ export function XIcon({ className = "h-4 w-4" }: IconProps) {
   );
 }
 
+export function SearchIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className={className}
+      strokeWidth={2}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <circle cx="7" cy="7" r="4.5" />
+      <path d="M10.5 10.5L14 14" />
+    </svg>
+  );
+}
+
 export function ChevronLeftIcon({ className = "h-5 w-5" }: IconProps) {
   return (
     <svg

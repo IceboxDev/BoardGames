@@ -97,7 +97,7 @@ export default function CockpitSlot({ view, slot, label, canPlace, onSelect }: P
         <SkyTeamTile
           variant={variant}
           label={tileLabel}
-          placedDie={null}
+          placedDie={state.die}
           selectable={selectable && !hasDie}
           onSelect={selectable ? () => onSelect(slot) : undefined}
           className={isPilotAxis || isCopilotAxis || isEngine ? "cockpit-tile--framed" : undefined}

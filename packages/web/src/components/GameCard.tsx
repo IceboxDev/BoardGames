@@ -19,10 +19,6 @@ type Props = {
 };
 
 export default function GameCard({ game, href, index = 0, showComingSoon = true }: Props) {
-  // Catalog grid uses `loose` (~360 chars) — sized to overflow the
-  // `line-clamp-6` ceiling at text-sm so the description always fills the
-  // card. See GameDescriptions docs for variant mapping.
-  const description = game.descriptions.loose;
   const summary = compactSummary(game.bgg);
 
   return (
@@ -37,7 +33,7 @@ export default function GameCard({ game, href, index = 0, showComingSoon = true 
       />
       <GameCardBody title={game.title} affordance={href ? "arrow" : null}>
         {summary && <GameCardMeta>{summary}</GameCardMeta>}
-        {description && <GameCardDescription>{description}</GameCardDescription>}
+        <GameCardDescription descriptions={game.descriptions} />
         <BggMeta bgg={game.bgg} />
       </GameCardBody>
     </GameCardChrome>

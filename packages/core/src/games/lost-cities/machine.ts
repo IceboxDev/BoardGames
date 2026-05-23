@@ -100,9 +100,11 @@ export const lostCitiesMachine = setup({
   actors: {
     computeAiMove: fromPromise(
       async ({ input }: { input: { state: GameState; engine: AIEngine } }) => {
-        // Yield a macrotask so React paints the human's last action before MCTS
-        // blocks the main thread. Without this the UI sits on the pre-action
-        // state for the entire MCTS budget (hundreds of ms).
+        // This runs on the SERVER (all game machines do). Yield a macrotask
+        // first so the session manager can flush its queued `ai-thinking`
+        // message before the synchronous ISMCTS search blocks the Node event
+        // loop for the whole search budget (hundreds of ms). A worker-thread
+        // pool would remove the blocking entirely — see CLAUDE.md.
         await new Promise((resolve) => setTimeout(resolve, 0));
         const strategy = getStrategy(input.engine);
         return runISMCTSWithStats(input.state, 1, strategy);

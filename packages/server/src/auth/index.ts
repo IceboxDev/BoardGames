@@ -1,6 +1,6 @@
 export { type Auth, auth } from "./config.ts";
 export { adminApp, authedApp, publicApp } from "./hono.ts";
-export { requireAdmin, requireAuth } from "./middleware.ts";
+export { requireAdmin, requireAuth, requireWsAuth } from "./middleware.ts";
 export type {
   AdminEnv,
   AdminUser,
@@ -8,4 +8,5 @@ export type {
   AuthSession,
   AuthUser,
   PublicEnv,
+  WsEnv,
 } from "./types.ts";

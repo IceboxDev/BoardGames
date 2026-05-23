@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import type { FormEvent } from "react";
 import { describe, expect, it, vi } from "vitest";
 import { Button } from "./Button";
 
@@ -10,12 +11,26 @@ describe("Button — rendering", () => {
   });
 
   it("defaults to type=button so it never accidentally submits a parent form", () => {
-    // Note: the Button component spreads ...rest, which can override; this
-    // codifies that the default is missing (i.e. native default is "submit"
-    // when inside a <form>). Documents the current behavior so a future
-    // change to make `type=button` the default is intentional.
     render(<Button>Click</Button>);
-    expect(screen.getByRole("button").getAttribute("type")).toBeNull();
+    expect(screen.getByRole("button").getAttribute("type")).toBe("button");
+  });
+
+  it("respects an explicit type=submit", () => {
+    render(<Button type="submit">Save</Button>);
+    expect(screen.getByRole("button").getAttribute("type")).toBe("submit");
+  });
+
+  it("does not submit a parent form on click (action button in a form)", async () => {
+    const onSubmit = vi.fn((e: FormEvent) => e.preventDefault());
+    const onClick = vi.fn();
+    render(
+      <form onSubmit={onSubmit}>
+        <Button onClick={onClick}>Remove</Button>
+      </form>,
+    );
+    await userEvent.click(screen.getByRole("button"));
+    expect(onClick).toHaveBeenCalledTimes(1);
+    expect(onSubmit).not.toHaveBeenCalled();
   });
 
   it("applies the primary gradient by default", () => {

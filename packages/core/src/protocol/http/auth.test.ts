@@ -5,6 +5,7 @@ import {
   AuthConfigSchema,
   SessionUserSchema,
   SetOnlineBodySchema,
+  WsTicketResponseSchema,
 } from "./auth.ts";
 
 describe("AuthConfigSchema", () => {
@@ -156,6 +157,24 @@ describe("AdminUserSchema", () => {
     expect(() =>
       AdminUserSchema.parse({ id: "u1", email: "a@b.com", createdAt: "2026-05-21" }),
     ).toThrow();
+  });
+});
+
+describe("WsTicketResponseSchema", () => {
+  it("accepts a non-empty ticket string", () => {
+    expect(WsTicketResponseSchema.parse({ ticket: "abc.def" })).toEqual({ ticket: "abc.def" });
+  });
+
+  it("rejects an empty ticket", () => {
+    expect(() => WsTicketResponseSchema.parse({ ticket: "" })).toThrow();
+  });
+
+  it("rejects a missing ticket", () => {
+    expect(() => WsTicketResponseSchema.parse({})).toThrow();
+  });
+
+  it("rejects a non-string ticket", () => {
+    expect(() => WsTicketResponseSchema.parse({ ticket: 123 })).toThrow();
   });
 });
 

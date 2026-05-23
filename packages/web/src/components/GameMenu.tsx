@@ -1,29 +1,52 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { groupForPresentation } from "../games/families";
 import { games } from "../games/registry";
 import { isPlayable } from "../games/types";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
+import { EMPTY_FILTERS, filterGames, type GameFilters } from "../lib/game-filters";
 import GameCard from "./GameCard";
+import GameLibraryFilters from "./GameLibraryFilters";
+import { DescriptionGrid } from "./game";
 import OnlineFamilyCard from "./OnlineFamilyCard";
+import { Button } from "./ui/Button";
 
 export default function GameMenu() {
   const { isAdmin } = useCurrentUser();
-  const units = useMemo(
-    () => groupForPresentation(isAdmin ? games : games.filter(isPlayable)),
-    [isAdmin],
+  const [filters, setFilters] = useState<GameFilters>(EMPTY_FILTERS);
+
+  // Admins browse the full catalog (incl. coming-soon entries); everyone
+  // else sees only playable games. Filter the flat list first, then group
+  // into presentation units so families collapse based on the games that
+  // actually survive the filter.
+  const base = useMemo(() => (isAdmin ? games : games.filter(isPlayable)), [isAdmin]);
+  const filtered = useMemo(() => filterGames(base, filters), [base, filters]);
+  const units = useMemo(() => groupForPresentation(filtered), [filtered]);
+
+  // Every default description that can appear in the grid (incl. all family
+  // members). The uniform card font is sized so the longest of these fits —
+  // computed from the full set, not the filtered view, so the text size
+  // doesn't jump around as filters change.
+  const descriptionTexts = useMemo(
+    () => base.map((g) => g.descriptions.default).filter(Boolean),
+    [base],
   );
 
   return (
     <div className="flex h-full flex-col bg-grid">
-      <div className="shrink-0 px-4 py-6 sm:px-8 sm:py-8 lg:px-12">
-        <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Board Game Lab</h1>
-        <p className="mt-1.5 text-sm text-gray-500">
-          Mathematical analysis and strategy research for tabletop games. Select a game to explore.
-        </p>
-      </div>
+      {base.length > 0 && (
+        <div className="shrink-0 px-4 py-3 sm:px-8 lg:px-12">
+          <GameLibraryFilters
+            filters={filters}
+            onChange={setFilters}
+            resultCount={filtered.length}
+            totalCount={base.length}
+            showPlayableFilter={base.some((g) => !isPlayable(g))}
+          />
+        </div>
+      )}
 
       <div className="scrollbar-hide flex-1 overflow-y-auto px-4 pb-8 sm:px-8 lg:px-12">
-        {games.length === 0 ? (
+        {base.length === 0 ? (
           <div className="rounded-xl border border-dashed border-white/10 px-8 py-16 text-center">
             <p className="text-sm text-gray-500">
               No games registered. Add a game module under{" "}
@@ -32,8 +55,22 @@ export default function GameMenu() {
               </code>
             </p>
           </div>
+        ) : units.length === 0 ? (
+          <div className="rounded-xl border border-dashed border-white/10 px-8 py-16 text-center">
+            <p className="text-sm text-gray-500">No games match these filters.</p>
+            <Button
+              variant="link"
+              onClick={() => setFilters(EMPTY_FILTERS)}
+              className="mt-2 text-accent-400 hover:text-accent-300"
+            >
+              Clear filters
+            </Button>
+          </div>
         ) : (
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
+          <DescriptionGrid
+            texts={descriptionTexts}
+            className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4"
+          >
             {units.map((unit, i) =>
               unit.kind === "single" ? (
                 <GameCard
@@ -51,7 +88,7 @@ export default function GameMenu() {
                 />
               ),
             )}
-          </div>
+          </DescriptionGrid>
         )}
       </div>
     </div>

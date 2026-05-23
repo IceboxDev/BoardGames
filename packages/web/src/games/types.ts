@@ -165,7 +165,13 @@ export interface PlayableGame extends GameBase {
   kind: "playable";
   /** Online-playable component. */
   component: LazyExoticComponent<ComponentType<GameComponentProps>>;
-  /** Multiplayer architecture for the playable component. */
+  /**
+   * Vestigial. Every game is server-authoritative today, so this is `"remote"`
+   * for all of them and nothing branches on it at runtime. Kept only for a
+   * hypothetical future client-only game — do NOT infer client-side execution
+   * from `"local"`. (Game machines + AI always run on the server; see
+   * `useGameShell` / `packages/server/src/sessions/manager.ts`.)
+   */
   mode: "remote" | "local";
   /** Optional full-page backdrop for the game's own screens. */
   backgroundImage?: string;

@@ -71,6 +71,12 @@ export function Button({
   loading = false,
   block = false,
   className = "",
+  // Default to "button", NOT the native "submit". A bare <button> inside a
+  // <form> implicitly submits it, so an action button (Cancel / Remove)
+  // sharing a form with a submit button would fire both the click handler
+  // and the form submit on a single click — racing two mutations. Forms
+  // that need a submit button opt in with an explicit type="submit".
+  type = "button",
   children,
   disabled,
   ref,
@@ -86,6 +92,7 @@ export function Button({
   return (
     <button
       ref={ref}
+      type={type}
       disabled={disabled || loading}
       className={`${BASE} ${VARIANTS[variant]} ${sizeCls} ${shapeCls} ${widthCls} ${className}`}
       {...rest}

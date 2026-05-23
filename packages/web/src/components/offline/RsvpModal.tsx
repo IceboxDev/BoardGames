@@ -123,11 +123,16 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
     // the pick, so it's filtered out here even though `fitsRange` would
     // have allowed it (carousel cards use the looser overlap test).
     const filtered = gameRegistry.filter((g) => ownedSet.has(g.slug) && coversWindow(g, lo, hi));
-    // Sort precedence:
-    //   1. "Best at N" cohort (BGG poll matches the confirmed headcount) wins.
-    //   2. Within each cohort, higher averageRating wins.
-    //   3. Title alphabetical as a final stable tiebreak.
+    // Sort precedence (mirrors the carousel card's badge/border precedence:
+    //   New > Best-at-N > default — see CarouselCardFrame):
+    //   1. "New" cohort (freshly-added games) leads the whole list.
+    //   2. "Best at N" cohort (BGG poll matches the confirmed headcount).
+    //   3. Within each cohort, higher averageRating wins.
+    //   4. Title alphabetical as a final stable tiebreak.
     return filtered.sort((a, b) => {
+      const aNew = a.isNew === true ? 0 : 1;
+      const bNew = b.isNew === true ? 0 : 1;
+      if (aNew !== bNew) return aNew - bNew;
       const aBest = a.bgg.bestPlayerCount === lo && lo > 0 ? 0 : 1;
       const bBest = b.bgg.bestPlayerCount === lo && lo > 0 ? 0 : 1;
       if (aBest !== bBest) return aBest - bBest;

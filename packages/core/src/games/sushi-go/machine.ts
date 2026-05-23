@@ -124,9 +124,9 @@ export const sushiGoMachine = setup({
       }: {
         input: { gameState: GameState; humanPlayers: number[]; strategy: StrategyFn };
       }) => {
-        // Yield a macrotask so the UI can render the post-reveal state before
-        // Nash solving blocks the main thread. Without this, the transition out
-        // of `revealing` is visually stuck until the solver finishes.
+        // Runs on the SERVER. Yield a macrotask so the session manager can
+        // flush the post-reveal state + `ai-thinking` to clients before the
+        // synchronous Nash solve blocks the Node event loop.
         await new Promise((resolve) => setTimeout(resolve, 0));
         const selections = computeAiSelectionsPure(
           input.gameState,

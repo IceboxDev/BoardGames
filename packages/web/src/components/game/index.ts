@@ -27,6 +27,7 @@ export {
   SPREAD_K,
   VERTICAL_BREATHING,
 } from "./carousel-3d-constants";
+export { DescriptionGrid } from "./DescriptionGrid";
 export { GameCardBody, GameCardDescription, GameCardMeta } from "./GameCardBody";
 export { GameCardChrome } from "./GameCardChrome";
 export { GameCardThumb } from "./GameCardThumb";
