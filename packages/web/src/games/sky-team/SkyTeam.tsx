@@ -13,7 +13,8 @@ import GameScreen from "../../components/game-layout/GameScreen";
 import { MpGameOverScreen } from "../../components/game-over";
 import { useGameShell } from "../../hooks/useGameShell";
 import type { GameComponentProps } from "../types";
-import BriefingPanel from "./components/BriefingPanel";
+import ApproachTrack from "./components/ApproachTrack";
+import BriefingOverlay from "./components/BriefingOverlay";
 import Cockpit from "./components/board/Cockpit";
 import GameOverScreen from "./components/GameOverScreen";
 import PhaseBanner from "./components/PhaseBanner";
@@ -164,6 +165,8 @@ export default function SkyTeam({ source }: GameComponentProps) {
     <GameScreen
       background="bg-slate-950"
       sidebar={<ActionLog blocks={mapSkyTeamLog(view.log, playerNames)} />}
+      leftSidebar={<ApproachTrack view={view} />}
+      leftSidebarTitle="Approach"
       fan={
         view.phase === "placement" ? (
           <PlayerDiceTray
@@ -182,16 +185,16 @@ export default function SkyTeam({ source }: GameComponentProps) {
       }
       fanActions={<PhaseBanner view={view} isAiThinking={active.isAiThinking} />}
     >
-      {view.phase === "briefing" ? (
-        <BriefingPanel view={view} onReady={handleReady} />
-      ) : (
-        <Cockpit
-          view={view}
-          selectedDieId={selectedDieId}
-          coffeeAdjust={coffeeAdjust}
-          onSelectSlot={handleSelectSlot}
-        />
-      )}
+      {/* The cockpit stays mounted every phase — the briefing renders as a
+          blurred overlay on top (portalled over #app-main) so the player never
+          leaves the board. */}
+      <Cockpit
+        view={view}
+        selectedDieId={selectedDieId}
+        coffeeAdjust={coffeeAdjust}
+        onSelectSlot={handleSelectSlot}
+      />
+      {view.phase === "briefing" && <BriefingOverlay view={view} onReady={handleReady} />}
     </GameScreen>
   );
 }

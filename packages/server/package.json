@@ -3,7 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx src/migrations/cli.ts && tsx watch --include ../core/src src/index.ts",
+    "dev": "tsx watch --include ../core/src src/index.ts",
     "build": "tsup",
     "typecheck": "tsc -b --noEmit",
     "test": "vitest run",

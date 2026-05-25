@@ -24,6 +24,13 @@ describe("backTarget", () => {
       expect(backTarget("/play/lost-cities")).toEqual({ href: "/games", label: "Back" });
     });
 
+    it("/play/:slug/rules → /play/:slug (mode select)", () => {
+      expect(backTarget("/play/lost-cities/rules")).toEqual({
+        href: "/play/lost-cities",
+        label: "Back",
+      });
+    });
+
     it("/play/:slug/solo → /play/:slug (mode select)", () => {
       expect(backTarget("/play/lost-cities/solo")).toEqual({
         href: "/play/lost-cities",

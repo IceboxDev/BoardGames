@@ -1,4 +1,5 @@
 import type { SkyTeamPlayerView } from "@boardgames/core/games/sky-team/types";
+import { useReducedMotion } from "framer-motion";
 import { useId } from "react";
 import { BoardLayer } from "../../../../components/board";
 import { ARTIFICIAL_HORIZON } from "./geometry";
@@ -7,6 +8,17 @@ import Plane from "./Plane";
 interface Props {
   view: SkyTeamPlayerView;
 }
+
+// Ease-in / tilt / ease-out for the bank. Plain CSS transition (not
+// framer-motion) so our `transform-origin` is honoured — framer overrides it
+// with its bounding-box centre, which threw the pivot off the dial centre.
+const TILT_TRANSITION = "transform 0.9s cubic-bezier(0.45, 0, 0.55, 1)";
+
+// One axis unit = one bezel-marker step. The axis-arc markers sit at offsets
+// 29% apart over a ±85° half-arc, so each tick is (29/100)·85 ≈ 24.65°. The
+// level pointer therefore lands exactly on the marker for the current axis
+// position (and on the red X at ±3, one step from a spin).
+const DEG_PER_AXIS_TICK = (29 / 100) * 85;
 
 // Pitch-ladder rungs as fractions of `faceRadius`. Negative y = above horizon.
 // `wFrac` = half-width relative to faceRadius; major rungs longer than minor.
@@ -22,9 +34,11 @@ const PITCH_RUNGS: ReadonlyArray<{ y: number; wFrac: number; major: boolean }> =
 ];
 
 /**
- * Artificial-horizon dial — background only. The dial face is now STATIC; the
- * symbolic plane that overlays it (next iteration) will be what rotates with
- * `view.axis.position`.
+ * Artificial-horizon dial. The dial face, frame and bezel are STATIC; the
+ * level-pointer triangle and the plane silhouette rotate together around the
+ * dial centre to reflect `view.axis.position` (the bank). When both axis dice
+ * are placed the position changes by their difference, so the plane eases over
+ * to the new tilt toward the heavier die's side.
  *
  * Composition (back-to-front):
  *   1. Sky gradient (top half) + ground gradient (bottom half)
@@ -33,11 +47,16 @@ const PITCH_RUNGS: ReadonlyArray<{ y: number; wFrac: number; major: boolean }> =
  *   4. Radial vignette darkening the edges for depth
  *   5. Black frame around the dial face
  *   6. Bezel band — top 170° only, leaving the lower face open for the speed arc
- *   7. Current-level pointer triangle (up-pointing, matching axis-arc style)
- *   8. Plane silhouette — untouched here; reworked next step
+ *   7. Rotating group (pivot = dial centre): level-pointer triangle + plane
  */
-export default function ArtificialHorizon(_props: Props) {
+export default function ArtificialHorizon({ view }: Props) {
   const { center, outerRadius, faceRadius, bezelThickness } = ARTIFICIAL_HORIZON;
+  const reduceMotion = useReducedMotion();
+
+  // Bank angle. Heavier die's side dips: pilot (top-left slot) heavier →
+  // axis.position > 0 → bank left (counter-clockwise / negative); copilot
+  // (top-right) heavier → bank right (clockwise / positive).
+  const tiltDeg = -view.axis.position * DEG_PER_AXIS_TICK;
 
   const faceClipId = useId();
   const skyGradId = useId();
@@ -69,11 +88,12 @@ export default function ArtificialHorizon(_props: Props) {
     " Z";
 
   // Plane silhouette — rendered through the `<Plane>` component (viewBox now
-  // centred on the plane's centroid). 360×360 in board coords ≈ 271 plane
-  // wide, filling most of the dial face (diameter 306). With the centroid-
-  // centred viewBox the plane's visual weight lands at the SVG centre, so no
-  // y-offset is needed — it sits on the horizon line at the dial centre.
-  const PLANE_BOX = 360;
+  // centred on the plane's centroid). Sized so the plane can bank to the
+  // ±3 extreme without its wingtips swinging outside the dial face (it's
+  // also clipped to the face as a hard safety). With the centroid-centred
+  // viewBox the plane's visual weight lands at the SVG centre, so no y-offset
+  // is needed — it sits on the horizon line at the dial centre.
+  const PLANE_BOX = 290;
   const PLANE_Y_OFFSET = 0;
 
   return (
@@ -148,7 +168,6 @@ export default function ArtificialHorizon(_props: Props) {
         <g stroke="rgb(255 255 255 / 0.55)" pointerEvents="none">
           {PITCH_RUNGS.map(({ y, wFrac, major }) => (
             <line
-              // biome-ignore lint/suspicious/noArrayIndexKey: stable indexed pitch rungs
               key={`pitch-${y}`}
               x1={center.x - faceRadius * wFrac}
               y1={center.y + faceRadius * y}
@@ -205,31 +224,51 @@ export default function ArtificialHorizon(_props: Props) {
         style={{ filter: "drop-shadow(0 4px 6px rgba(0,0,0,0.32))" }}
       />
 
-      {/* Current-level pointer — filled isoceles triangle matching the
-          axis-arc spec EXACTLY (base 8, height 11, white fill, white stroke
-          1.8, drop-shadow). Apex 3 above the dial-face top edge; base 8
-          below it — on the dial circle, just barely peeking into the bezel.
-          Same visual weight as axis-arc triangles. */}
-      <polygon
-        points={`${center.x - 4},${center.y - faceRadius + 8} ${center.x + 4},${center.y - faceRadius + 8} ${center.x},${center.y - faceRadius - 3}`}
-        fill="white"
-        stroke="white"
-        strokeWidth={1.8}
-        strokeLinejoin="round"
-        style={{ filter: "drop-shadow(0 1px 1.5px rgba(0,0,0,0.5))" }}
-        pointerEvents="none"
-      />
+      {/* Plane silhouette — banks around the dial centre to show the axis tilt.
+          The clip lives on this STATIC parent (not on the rotating group): a
+          transform on an ancestor breaks `userSpaceOnUse` clipping, so the
+          plane must rotate INSIDE the clip. `transform-box: view-box` makes
+          `transform-origin` resolve in viewBox units → pivot = dial centre. */}
+      <g clipPath={`url(#${faceClipId})`}>
+        <g
+          style={{
+            transform: `rotate(${tiltDeg}deg)`,
+            transformBox: "view-box",
+            transformOrigin: `${center.x}px ${center.y}px`,
+            transition: reduceMotion ? undefined : TILT_TRANSITION,
+          }}
+        >
+          <Plane
+            x={center.x - PLANE_BOX / 2}
+            y={center.y - PLANE_BOX / 2 + PLANE_Y_OFFSET}
+            width={PLANE_BOX}
+            height={PLANE_BOX}
+            color="#ffffff"
+          />
+        </g>
+      </g>
 
-      {/* Plane silhouette — pure white via Plane's feColorMatrix recolour.
-          Shifted UP by 30 from the dial centre so its visual weight lands
-          where the old silhouette did, rather than sagging below centre. */}
-      <Plane
-        x={center.x - PLANE_BOX / 2}
-        y={center.y - PLANE_BOX / 2 + PLANE_Y_OFFSET}
-        width={PLANE_BOX}
-        height={PLANE_BOX}
-        color="#ffffff"
-      />
+      {/* Current-level pointer — rides the bezel, banking in sync with the
+          plane (same rotation/pivot, but NOT clipped so it stays on the rim).
+          At ±1/±2/±3 it lands on the axis-arc markers (red X at ±3). */}
+      <g
+        style={{
+          transform: `rotate(${tiltDeg}deg)`,
+          transformBox: "view-box",
+          transformOrigin: `${center.x}px ${center.y}px`,
+          transition: reduceMotion ? undefined : TILT_TRANSITION,
+        }}
+      >
+        <polygon
+          points={`${center.x - 4},${center.y - faceRadius + 8} ${center.x + 4},${center.y - faceRadius + 8} ${center.x},${center.y - faceRadius - 3}`}
+          fill="white"
+          stroke="white"
+          strokeWidth={1.8}
+          strokeLinejoin="round"
+          style={{ filter: "drop-shadow(0 1px 1.5px rgba(0,0,0,0.5))" }}
+          pointerEvents="none"
+        />
+      </g>
     </BoardLayer>
   );
 }

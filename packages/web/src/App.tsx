@@ -35,6 +35,7 @@ const GameShellLayout = lazy(() =>
   import("./hooks/useGameShell").then((m) => ({ default: m.GameShellLayout })),
 );
 const ModeSelectRoute = lazy(() => import("./components/game-shell/ModeSelectRoute"));
+const RulesRoute = lazy(() => import("./components/game-shell/RulesRoute"));
 const JoinRoomRoute = lazy(() => import("./components/game-shell/JoinRoomRoute"));
 const LobbyRoute = lazy(() => import("./components/game-shell/LobbyRoute"));
 const MatchHistoryRoute = lazy(() => import("./components/game-shell/MatchHistoryRoute"));
@@ -164,6 +165,7 @@ const router = createBrowserRouter(
         <Route path="games" element={<GameMenu />} />
         <Route path="play/:slug" element={<GameShellLayout />}>
           <Route index element={<ModeSelectRoute />} />
+          <Route path="rules" element={<RulesRoute />} />
           <Route path="solo" element={<SoloGameRoute />} />
           <Route path="mp/join" element={<JoinRoomRoute />} />
           <Route path="mp/lobby/:roomCode" element={<LobbyRoute />} />

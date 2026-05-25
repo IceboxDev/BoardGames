@@ -21,7 +21,9 @@ const StateUpdateSchema = z.object({
   sessionId: z.string(),
   playerView: z.unknown(),
   legalActions: z.array(z.unknown()),
-  activePlayer: z.number().int().min(0),
+  // -1 is the "no active player" sentinel the server sends during briefing,
+  // round transitions, and simultaneous-move phases (GameMachineSpec.getActivePlayer).
+  activePlayer: z.number().int().min(-1),
   playerIndex: z.number().int().min(0).optional(),
   phase: z.string(),
 });
@@ -78,7 +80,8 @@ const GameStartedSchema = z.object({
   roomCode: z.string(),
   sessionId: z.string(),
   playerIndex: z.number().int().min(0),
-  activePlayer: z.number().int().min(0),
+  // -1 = no active player (briefing / round transition / simultaneous-move).
+  activePlayer: z.number().int().min(-1),
   playerView: z.unknown(),
   legalActions: z.array(z.unknown()),
   phase: z.string(),

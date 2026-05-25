@@ -1,21 +1,27 @@
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useGameShell } from "../../hooks/useGameShell";
-import { TournamentGrid, TournamentMatchHistory } from "../tournament";
+import { TournamentComingSoon, TournamentGrid, TournamentMatchHistory } from "../tournament";
 
 /**
  * Route element at `/play/:slug/tournament`. Renders the grid of
  * strategy match-ups; clicking a cell navigates to the detail route
  * for that match-up.
  *
- * Games without `hasTournament` (no `tournamentStrategies`) bounce back
- * to the mode select — guards a stale URL.
+ * Games without `hasTournament` bounce back to mode select (guards a stale
+ * URL). Games that enable the tournament button but haven't defined their
+ * `tournamentStrategies` yet get a "coming soon" placeholder instead.
  */
 export function TournamentRoute() {
   const navigate = useNavigate();
   const { def } = useGameShell();
 
-  if (!def.hasTournament || !def.tournamentStrategies) {
+  if (!def.hasTournament) {
     return <Navigate to={`/play/${def.slug}`} replace />;
+  }
+  if (!def.tournamentStrategies) {
+    return (
+      <TournamentComingSoon gameTitle={def.title} onBack={() => navigate(`/play/${def.slug}`)} />
+    );
   }
 
   return (

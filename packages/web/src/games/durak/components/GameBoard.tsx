@@ -118,6 +118,27 @@ export default function GameBoard({
     <GameScreen
       contentClassName=""
       sidebar={<ActionLog blocks={mapDurakLog(view.actionLog, view.players)} />}
+      leftSidebar={
+        <PlayerListPanel
+          turnCount={view.turnCount + 1}
+          players={view.players.map((p): PlayerEntry => {
+            const isMe = p.index === playerIndex;
+            return {
+              index: p.index,
+              label: isMe ? "You" : `AI ${p.index}`,
+              handCount: isMe ? view.hand.length : p.handCount,
+              alive: !p.isOut,
+              isActive: view.attackerIndex === p.index || view.defenderIndex === p.index,
+              role:
+                view.attackerIndex === p.index
+                  ? "attacker"
+                  : view.defenderIndex === p.index
+                    ? "defender"
+                    : undefined,
+            };
+          })}
+        />
+      }
       fan={
         <PlayerHand
           hand={view.hand}
@@ -210,31 +231,6 @@ export default function GameBoard({
       }
     >
       <div className="flex min-h-0 flex-1 gap-3">
-        {/* Left stats column */}
-        <div
-          className={`hidden w-36 shrink-0 flex-col lg:flex${DEBUG_LAYOUT ? " border-2 border-dashed border-blue-400/40" : ""}`}
-        >
-          <PlayerListPanel
-            turnCount={view.turnCount + 1}
-            players={view.players.map((p): PlayerEntry => {
-              const isMe = p.index === playerIndex;
-              return {
-                index: p.index,
-                label: isMe ? "You" : `AI ${p.index}`,
-                handCount: isMe ? view.hand.length : p.handCount,
-                alive: !p.isOut,
-                isActive: view.attackerIndex === p.index || view.defenderIndex === p.index,
-                role:
-                  view.attackerIndex === p.index
-                    ? "attacker"
-                    : view.defenderIndex === p.index
-                      ? "defender"
-                      : undefined,
-              };
-            })}
-          />
-        </div>
-
         {/* Main board column */}
         <div
           className={`flex min-h-0 flex-1 flex-col gap-2${DEBUG_LAYOUT ? " border-2 border-dashed border-orange-400/40" : ""}`}

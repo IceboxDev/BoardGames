@@ -144,6 +144,25 @@ export default function GameBoard({
   return (
     <GameScreen
       sidebar={<ActionLog blocks={mapEKLog(state.actionLog ?? [], state.players)} />}
+      leftSidebar={
+        <PlayerListPanel
+          turnCount={state.turnCount}
+          players={state.players.map(
+            (p): PlayerEntry => ({
+              index: p.index,
+              label: p.type === "human" ? "You" : `AI ${p.index}`,
+              handCount: p.hand.length,
+              alive: p.alive,
+              isActive: p.index === state.currentPlayerIndex && p.alive,
+            }),
+          )}
+          extra={
+            state.turnsRemaining > 1 ? (
+              <span className="text-[10px] text-amber-400">{state.turnsRemaining} turns left</span>
+            ) : undefined
+          }
+        />
+      }
       fan={
         viewerIndex >= 0 && !replayMode ? (
           <PlayerHand
@@ -210,31 +229,6 @@ export default function GameBoard({
       }
     >
       <div className="flex min-h-0 flex-1 gap-3">
-        {/* Left stats column */}
-        <div
-          className={`hidden w-36 shrink-0 flex-col lg:flex${DEBUG_LAYOUT ? " border-2 border-dashed border-blue-400/40" : ""}`}
-        >
-          <PlayerListPanel
-            turnCount={state.turnCount}
-            players={state.players.map(
-              (p): PlayerEntry => ({
-                index: p.index,
-                label: p.type === "human" ? "You" : `AI ${p.index}`,
-                handCount: p.hand.length,
-                alive: p.alive,
-                isActive: p.index === state.currentPlayerIndex && p.alive,
-              }),
-            )}
-            extra={
-              state.turnsRemaining > 1 ? (
-                <span className="text-[10px] text-amber-400">
-                  {state.turnsRemaining} turns left
-                </span>
-              ) : undefined
-            }
-          />
-        </div>
-
         {/* Main content */}
         <div
           className={`min-h-0 flex-1 space-y-6 overflow-y-auto${DEBUG_LAYOUT ? " border-2 border-dashed border-orange-400/40" : ""}`}

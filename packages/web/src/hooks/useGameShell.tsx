@@ -111,6 +111,19 @@ function GameShellLayoutInner({ def, children }: { def: PlayableGame; children?:
   return (
     <GameShellContext.Provider value={value}>
       <RoomLeaveGuardMount />
+      {/* Game-themed backdrop behind every /play/:slug screen (mode select,
+          rules, lobby, board). Fixed at z-0 with darkening overlays; all
+          screen content sits at z-10 (see SetupLayout). */}
+      {def.backgroundImage && (
+        <div
+          className="pointer-events-none fixed inset-0 z-0 animate-bg-fade-in"
+          aria-hidden="true"
+        >
+          <img src={def.backgroundImage} alt="" className="h-full w-full object-cover" />
+          <div className="absolute inset-0 bg-surface-950/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-surface-950/45 via-surface-950/15 to-surface-950/50" />
+        </div>
+      )}
       {children ?? <Outlet />}
     </GameShellContext.Provider>
   );

@@ -7,6 +7,7 @@ export default {
   backgroundImage,
   component: lazy(() => import("./SushiGo")),
   mode: "remote",
+  hasMatchHistory: true,
   hasTournament: true,
   tournamentStrategies: [
     { id: "nash", label: "Nash Equilibrium" },

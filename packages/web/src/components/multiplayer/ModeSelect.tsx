@@ -1,16 +1,12 @@
-import { lazy, type ReactNode, Suspense, useState } from "react";
+import type { ReactNode } from "react";
 import { SetupHeader, SetupLayout } from "../setup";
 import { Button } from "../ui/Button";
-
-const RulesViewer = lazy(() =>
-  import("../rules/RulesViewer").then((m) => ({ default: m.RulesViewer })),
-);
 
 interface ModeSelectProps {
   title: string;
   subtitle?: string;
   soloLabel?: string;
-  rulesUrl?: string;
+  onRules?: () => void;
   onSolo?: () => void;
   onMultiplayer: () => void;
   onMatchHistory?: () => void;
@@ -92,26 +88,25 @@ export function ModeSelect({
   title,
   subtitle,
   soloLabel = "Play vs AI",
-  rulesUrl,
+  onRules,
   onSolo,
   onMultiplayer,
   onMatchHistory,
   onTournament,
 }: ModeSelectProps) {
   const solo = getSoloStyle(soloLabel);
-  const [showRules, setShowRules] = useState(false);
 
   return (
     <SetupLayout>
       <SetupHeader title={title} subtitle={subtitle} />
 
       {/* Rules button — integrated below subtitle */}
-      {rulesUrl && (
+      {onRules && (
         <Button
           variant="secondary"
           size="xs"
           shape="pill"
-          onClick={() => setShowRules(true)}
+          onClick={onRules}
           className="animate-card-fade-up -mt-6 mb-8 border-gray-700/40 bg-gray-800/30 text-gray-400 hover:border-amber-500/40 hover:bg-amber-500/5 hover:text-amber-400"
         >
           <svg viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5" aria-hidden="true">
@@ -272,13 +267,6 @@ export function ModeSelect({
             )}
           </div>
         </div>
-      )}
-
-      {/* Rules overlay */}
-      {showRules && rulesUrl && (
-        <Suspense fallback={null}>
-          <RulesViewer url={rulesUrl} onClose={() => setShowRules(false)} />
-        </Suspense>
       )}
     </SetupLayout>
   );

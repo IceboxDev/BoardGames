@@ -240,6 +240,7 @@ export default function GameBoard(props: GameBoardProps) {
     <GameScreen
       contentClassName=""
       sidebar={sidebar}
+      leftSidebar={<ScoreGridPanel turnCount={state.turnCount + 1} {...buildScoreData(state)} />}
       fan={
         <PlayerHand
           hand={hand}
@@ -295,13 +296,6 @@ export default function GameBoard(props: GameBoardProps) {
     >
       {isWaiting && <WaitingIndicator />}
       <div className="flex min-h-0 flex-1 gap-3">
-        {/* Left stats column */}
-        <div
-          className={`hidden w-36 shrink-0 flex-col lg:flex${DEBUG_LAYOUT ? " border-2 border-dashed border-blue-400/40" : ""}`}
-        >
-          <ScoreGridPanel turnCount={state.turnCount + 1} {...buildScoreData(state)} />
-        </div>
-
         <div
           className={`flex min-h-0 flex-1 flex-col overflow-hidden${DEBUG_LAYOUT ? " border-2 border-dashed border-orange-400/40" : ""}`}
         >

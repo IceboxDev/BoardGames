@@ -38,6 +38,34 @@ describe("ServerMessageSchema", () => {
     ).not.toThrow();
   });
 
+  it("accepts activePlayer -1 (no active player: briefing / round transition)", () => {
+    // Regression: the server sends activePlayer -1 during briefing and round
+    // transitions; rejecting it silently dropped every transition update on the
+    // client, freezing the game on "AI thinking".
+    expect(() =>
+      ServerMessageSchema.parse({
+        type: "state-update",
+        sessionId: "s-1",
+        playerView: {},
+        legalActions: [],
+        activePlayer: -1,
+        phase: "active",
+      }),
+    ).not.toThrow();
+    expect(() =>
+      ServerMessageSchema.parse({
+        type: "game-started",
+        roomCode: "ABC",
+        sessionId: "s-1",
+        playerIndex: 0,
+        activePlayer: -1,
+        playerView: {},
+        legalActions: [],
+        phase: "active",
+      }),
+    ).not.toThrow();
+  });
+
   it("accepts every documented type", () => {
     const sample = (type: string, extra: object) => ServerMessageSchema.parse({ type, ...extra });
     expect(() => sample("ai-thinking", { sessionId: "s-1" })).not.toThrow();

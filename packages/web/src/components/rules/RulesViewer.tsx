@@ -10,13 +10,13 @@ interface RulesViewerProps {
   onClose: () => void;
 }
 
-// The viewer is a modal-like overlay rendered inside the mode-select
-// route; closing it is handled by three explicit affordances: the X
-// button, the Escape key, and a backdrop click. The previous code also
-// re-routed the global top-nav back button into `onClose` via the
-// `useGameBackOverride` mechanism — that hook was deleted along with
-// the URL-driven shell refactor, since top-nav back is now a pure
-// pathname-based navigation. The user keeps three ways to close.
+// Full-screen viewer rendered at the `/play/:slug/rules` route (see RulesRoute).
+// Living at its own URL is what makes Back close it: the browser/OS Back button
+// and the in-app top-nav Back arrow both return to `/play/:slug` (mode select),
+// and the in-view affordances (X, Escape, backdrop) call `onClose`, which pops
+// that entry too. Because `onClose` navigates (Back), it must fire at most once
+// — `closingRef` guards against a double dismiss (e.g. Escape pressed twice
+// during the 200ms fade-out), which would otherwise pop past the menu.
 
 export function RulesViewer({ url, onClose }: RulesViewerProps) {
   const [numPages, setNumPages] = useState<number>(0);
@@ -46,7 +46,10 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
     return () => window.removeEventListener("keydown", handleKey);
   });
 
+  const closingRef = useRef(false);
   const handleClose = useCallback(() => {
+    if (closingRef.current) return;
+    closingRef.current = true;
     setClosing(true);
     setTimeout(onClose, 200);
   }, [onClose]);
