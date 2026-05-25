@@ -292,13 +292,23 @@ export default function GameCarousel3D({
                 marginTop: -cardH / 2,
                 transformStyle: "preserve-3d",
               }}
-              animate={carouselAnimate({
-                offset,
-                spreadMax,
-                zMax,
-                hidden,
-                forceHidden: !isCenter,
-              })}
+              animate={{
+                ...carouselAnimate({
+                  offset,
+                  spreadMax,
+                  zMax,
+                  hidden,
+                  forceHidden: !isCenter,
+                }),
+                // This container is card-sized (cardW × cardH) and sits at
+                // z-30 over the card. carouselAnimate sets pointerEvents:
+                // "auto" for any non-hidden card, which would override the
+                // `pointer-events-none` class and let the empty container
+                // swallow clicks meant for the card beneath (e.g. the heart
+                // reaction). Only the inner shrink-wrapped strip should be
+                // interactive, so force the container itself transparent.
+                pointerEvents: "none",
+              }}
               transition={CAROUSEL_TRANSITION}
             >
               <div
