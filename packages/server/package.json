@@ -3,10 +3,12 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "tsx watch --include ../core/src src/index.ts",
+    "dev": "tsx src/migrations/cli.ts && tsx watch --include ../core/src src/index.ts",
     "build": "tsup",
     "typecheck": "tsc -b --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "migrate": "tsx src/migrations/cli.ts",
+    "migrate:status": "tsx src/migrations/cli.ts --status"
   },
   "dependencies": {
     "@boardgames/core": "workspace:*",

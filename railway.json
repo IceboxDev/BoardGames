@@ -5,7 +5,7 @@
     "buildCommand": "pnpm --filter @boardgames/server build"
   },
   "deploy": {
-    "startCommand": "node packages/server/dist/index.js",
+    "startCommand": "node packages/server/dist/migrations/cli.js && node packages/server/dist/index.js",
     "healthcheckPath": "/api/health",
     "healthcheckTimeout": 30,
     "restartPolicyType": "ON_FAILURE"

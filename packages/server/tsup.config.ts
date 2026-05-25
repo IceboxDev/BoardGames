@@ -1,7 +1,7 @@
 import { defineConfig } from "tsup";
 
 export default defineConfig({
-  entry: ["src/index.ts", "src/tournament/game-worker.ts"],
+  entry: ["src/index.ts", "src/tournament/game-worker.ts", "src/migrations/cli.ts"],
   format: "esm",
   // Bundle the workspace `@boardgames/core` package into the output so the
   // runtime never has to resolve its `.ts` source files (which Node's strict
