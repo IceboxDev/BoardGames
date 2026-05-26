@@ -63,7 +63,10 @@ export default function GameOverScreen({ result, onPlayAgain, onBackToMenu }: Pr
     tone: "lose" as const,
   };
   return (
-    <div className="mx-auto flex max-w-md flex-col items-center gap-4 p-8 text-center">
+    // `relative z-10` lifts this screen above the fixed `def.backgroundImage`
+    // at `z-0` in `GameShellLayoutInner` (same painting-order issue that
+    // hides `GameScreen` without a stacking context).
+    <div className="relative z-10 mx-auto flex max-w-md flex-col items-center gap-4 p-8 text-center">
       <div className="text-6xl leading-none">{meta.tone === "win" ? "🛬" : "💥"}</div>
       <h1
         className={[

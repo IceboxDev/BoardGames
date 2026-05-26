@@ -97,7 +97,11 @@ export default function CockpitSlot({ view, slot, label, canPlace, onSelect }: P
         <SkyTeamTile
           variant={variant}
           label={tileLabel}
-          placedDie={state.die}
+          // Slider slots show their state through the slider underneath (knob
+          // slides left, rail goes green). Suppress the die chip so the tile
+          // isn't cluttered after activation — at end-of-round the engine
+          // clears the dice anyway and the slider stays armed (switch on).
+          placedDie={hasSlider ? null : state.die}
           selectable={selectable && !hasDie}
           onSelect={selectable ? () => onSelect(slot) : undefined}
           className={isPilotAxis || isCopilotAxis || isEngine ? "cockpit-tile--framed" : undefined}
@@ -124,7 +128,7 @@ export default function CockpitSlot({ view, slot, label, canPlace, onSelect }: P
           width={SLIDER_W}
           height={SLIDER_H}
         >
-          <CockpitSlider />
+          <CockpitSlider active={hasDie || state.switchOn === true} />
         </BoardOverlay>
       ) : null}
     </>

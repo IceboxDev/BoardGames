@@ -166,34 +166,41 @@ export default function SkyTeam({ source }: GameComponentProps) {
       background="bg-slate-950"
       sidebar={<ActionLog blocks={mapSkyTeamLog(view.log, playerNames)} />}
       leftSidebar={<ApproachTrack view={view} />}
-      leftSidebarTitle="Approach"
+      // Always render the dice tray — even during briefing — so the bottom
+      // strip of the board stays the same height and the left/right sidebars
+      // don't stretch to the floor when the player isn't placing yet. The
+      // tray renders an empty centre column during briefing/rolling and
+      // populates once myDice exists.
       fan={
-        view.phase === "placement" ? (
-          <PlayerDiceTray
-            view={view}
-            selectedDieId={selectedDieId}
-            coffeeAdjust={coffeeAdjust}
-            onSelectDie={handleSelectDie}
-            onAdjustCoffee={handleAdjustCoffee}
-            onSpendReroll={handleSpendReroll}
-            rerollMode={rerollMode}
-            rerollSelection={rerollSelection}
-            onToggleRerollMode={toggleRerollMode}
-            onToggleRerollDie={toggleRerollDie}
-          />
-        ) : undefined
+        <PlayerDiceTray
+          view={view}
+          selectedDieId={selectedDieId}
+          coffeeAdjust={coffeeAdjust}
+          onSelectDie={handleSelectDie}
+          onAdjustCoffee={handleAdjustCoffee}
+          onSpendReroll={handleSpendReroll}
+          rerollMode={rerollMode}
+          rerollSelection={rerollSelection}
+          onToggleRerollMode={toggleRerollMode}
+          onToggleRerollDie={toggleRerollDie}
+        />
       }
       fanActions={<PhaseBanner view={view} isAiThinking={active.isAiThinking} />}
     >
       {/* The cockpit stays mounted every phase — the briefing renders as a
           blurred overlay on top (portalled over #app-main) so the player never
-          leaves the board. */}
-      <Cockpit
-        view={view}
-        selectedDieId={selectedDieId}
-        coffeeAdjust={coffeeAdjust}
-        onSelectSlot={handleSelectSlot}
-      />
+          leaves the board. The wrapper centers the cockpit and gives it a
+          defined height for its aspect-ratio to consume; without it, the
+          flex-col content area would stretch the cockpit cross-axis (full
+          width) and the aspect ratio would be ignored. */}
+      <div className="flex min-h-0 flex-1 items-center justify-center">
+        <Cockpit
+          view={view}
+          selectedDieId={selectedDieId}
+          coffeeAdjust={coffeeAdjust}
+          onSelectSlot={handleSelectSlot}
+        />
+      </div>
       {view.phase === "briefing" && <BriefingOverlay view={view} onReady={handleReady} />}
     </GameScreen>
   );

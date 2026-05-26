@@ -79,30 +79,29 @@ export const NON_PERSISTENT_SLOTS: readonly SlotId[] = [
 export const COFFEE_TOKEN_CAP = 3;
 
 /**
- * YUL Montréal-Trudeau — base game opening scenario.
+ * YUL Montréal-Trudeau — base game opening scenario (YUL Green setup).
  *
- * Approach corridor: airplane starts at index 0, airport at index 8 (9 spaces).
- * Airliner counts per space match the rulebook setup ("place as many Airplane
- * tokens as there are Traffic icons"). The exact distribution should be
- * verified against the printed approach card on first build pass; values below
- * are a faithful approximation that produces a winnable scenario.
- *
- * Reroll tokens: rules say "if there is a Reroll token in the Current Altitude
- * space, as there is in the first round at 6,000 feet, remove it"; we put one
- * at the starting altitude and additional ones at 4000 and 2000 feet.
- *
- * Axis spin marker: rulebook art shows the spin marker around the 4th tilt
- * mark; tests/UI verify on first build pass.
+ * Approach corridor: 7 spaces total. The plane starts on space 0; the
+ * airport sits on space 6. Initial airliner traffic: 1@2, 2@3, 1@4, 3@5,
+ * 2@6 (the airport itself can carry airliners — they must be cleared
+ * before the plane lands, otherwise loss-airliners-remain triggers).
  */
 export const SCENARIO_YUL: ScenarioConfig = {
   id: "yul-montreal",
   name: "YUL Montréal-Trudeau",
-  totalRounds: 7,
-  approach: { airportIndex: 8, airliners: [0, 0, 1, 0, 1, 1, 1, 1, 0] },
+  // 6 numbered approach rounds (one per 1,000 ft of altitude from 6,000 →
+  // 1,000). After the last drop the plane touches down at 0 ft and the
+  // landing-condition check runs — that's the "Final Approach" step the UI
+  // surfaces with its own label rather than padding the round counter to 7.
+  totalRounds: 6,
+  approach: { airportIndex: 6, airliners: [0, 0, 1, 2, 1, 3, 2] },
   altitudeStart: 6000,
   altitudeStep: 1000,
   rerollAt: [6000, 4000, 2000],
-  axisSpinAt: 4,
+  // Axis spin: the red X warnings on the bezel sit at ±3 ticks; landing on
+  // (or past) them spins the plane out → loss. Triangle markers cover the
+  // safe range ±2.
+  axisSpinAt: 3,
   speedGaugeStart: { bluePos: 4, orangePos: 8 },
   brakeTrackStart: 0,
   brakeThresholdOffset: 2,

@@ -305,17 +305,21 @@ function runEngineEffect(state: SkyTeamGameState): void {
       setOutcome(state, "loss-overshoot");
       return;
     }
-    if (
-      state.approach.airliners[state.approach.current] != null &&
-      state.approach.airliners[state.approach.current] > 0
-    ) {
-      setOutcome(state, "loss-collision");
-      return;
+    // Forward movement is blocked by any airliner the engines try to pass
+    // THROUGH — i.e. the tile the plane is currently sitting on, and every
+    // intermediate tile up to (but not including) the destination. Landing
+    // on a tile that still has traffic isn't a collision; it just means the
+    // next forward move is blocked until ATC (radio dice) clears it. We
+    // sweep `[current, endTile)` so the destination is treated as a landing
+    // spot, not a fly-over.
+    const endTile = Math.min(state.approach.current + advance, state.approach.airportIndex);
+    for (let i = state.approach.current; i < endTile; i++) {
+      if ((state.approach.airliners[i] ?? 0) > 0) {
+        setOutcome(state, "loss-collision");
+        return;
+      }
     }
-    state.approach.current = Math.min(
-      state.approach.current + advance,
-      state.approach.airportIndex,
-    );
+    state.approach.current = endTile;
   }
 }
 

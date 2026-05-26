@@ -309,7 +309,22 @@ describe("engine effect (non-final round)", () => {
     const { state, rng } = readyAndRoll();
     let s: SkyTeamGameState = {
       ...state,
-      approach: { ...state.approach, current: 2, airliners: [0, 0, 1, 0, 1, 1, 1, 1, 0] },
+      approach: { ...state.approach, current: 2, airliners: [0, 0, 1, 0, 0, 0, 0] },
+    };
+    s = setHand(s, 0, [6, 1, 1, 1]);
+    s = setHand(s, 1, [6, 1, 1, 1]);
+    s = place(s, 0, "pilot-engine", 6, rng);
+    s = place(s, 1, "copilot-engine", 6, rng);
+    expect(s.outcome).toBe("loss-collision");
+  });
+
+  it("triggers loss-collision when advancing OVER an airliner (no jumping)", () => {
+    const { state, rng } = readyAndRoll();
+    // Current = 1 (clear), advancing 2 spaces would jump past space 2 which
+    // is occupied. The plane must not be able to fly over it.
+    let s: SkyTeamGameState = {
+      ...state,
+      approach: { ...state.approach, current: 1, airliners: [0, 0, 1, 0, 0, 0, 0] },
     };
     s = setHand(s, 0, [6, 1, 1, 1]);
     s = setHand(s, 1, [6, 1, 1, 1]);
@@ -370,7 +385,7 @@ describe("radio effect", () => {
     const { state, rng } = readyAndRoll();
     let s: SkyTeamGameState = {
       ...state,
-      approach: { ...state.approach, airliners: [0, 0, 1, 0, 1, 1, 1, 1, 0] },
+      approach: { ...state.approach, airliners: [0, 0, 1, 0, 0, 0, 0] },
     };
     s = setHand(s, 0, [3, 1, 1, 1]);
     s = place(s, 0, "pilot-radio", 3, rng);
@@ -381,7 +396,7 @@ describe("radio effect", () => {
     const { state, rng } = readyAndRoll();
     let s: SkyTeamGameState = {
       ...state,
-      approach: { ...state.approach, airliners: [0, 0, 0, 0, 0, 0, 0, 0, 0] },
+      approach: { ...state.approach, airliners: [0, 0, 0, 0, 0, 0, 0] },
     };
     s = setHand(s, 0, [3, 1, 1, 1]);
     s = place(s, 0, "pilot-radio", 3, rng);
@@ -392,7 +407,7 @@ describe("radio effect", () => {
     const { state, rng } = readyAndRoll();
     let s: SkyTeamGameState = {
       ...state,
-      approach: { ...state.approach, current: 7, airliners: [0, 0, 0, 0, 0, 0, 0, 0, 0] },
+      approach: { ...state.approach, current: 5, airliners: [0, 0, 0, 0, 0, 0, 0] },
     };
     s = setHand(s, 0, [6, 1, 1, 1]);
     s = place(s, 0, "pilot-radio", 6, rng);
@@ -597,7 +612,7 @@ describe("final-round victory check", () => {
     return {
       ...s,
       isFinalRound: true,
-      approach: { ...s.approach, airliners: [0, 0, 0, 0, 0, 0, 0, 0, 0] },
+      approach: { ...s.approach, airliners: [0, 0, 0, 0, 0, 0, 0] },
       slots: {
         ...s.slots,
         "landing-gear-1": { ...s.slots["landing-gear-1"], switchOn: true },
@@ -620,7 +635,7 @@ describe("final-round victory check", () => {
 
   it("loss-airliners-remain when airliners on track", () => {
     const s = finalRoundFixture({
-      approach: { current: 0, airportIndex: 8, airliners: [0, 0, 0, 0, 0, 0, 0, 0, 1] },
+      approach: { current: 0, airportIndex: 6, airliners: [0, 0, 0, 0, 0, 0, 1] },
     });
     const out = applyEndRound(s);
     expect(out.outcome).toBe("loss-airliners-remain");
@@ -640,7 +655,7 @@ describe("final-round victory check", () => {
   });
 
   it("loss-axis-not-level when axis != 0", () => {
-    const s = finalRoundFixture({ axis: { position: 1, spinAt: 4 } });
+    const s = finalRoundFixture({ axis: { position: 1, spinAt: 3 } });
     const out = applyEndRound(s);
     expect(out.outcome).toBe("loss-axis-not-level");
   });

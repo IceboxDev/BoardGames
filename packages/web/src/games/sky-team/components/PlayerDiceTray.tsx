@@ -14,6 +14,14 @@ interface Props {
   onToggleRerollDie: (id: number) => void;
 }
 
+/**
+ * Pilot/Co-Pilot dice tray. Fixed-height three-column layout — opponent
+ * dice on the LEFT, the player's own dice (large) centred in the MIDDLE,
+ * and reroll / coffee / status controls on the RIGHT. The tray is rendered
+ * for every phase (briefing, rolling, placement) so the layout below the
+ * cockpit doesn't pop in/out — the centre column just sits empty during
+ * briefing until the engine rolls.
+ */
 export default function PlayerDiceTray({
   view,
   selectedDieId,
@@ -32,105 +40,129 @@ export default function PlayerDiceTray({
     selectedDie != null ? Math.max(1, Math.min(6, selectedDie.value + coffeeAdjust)) : null;
 
   return (
-    <div className="flex flex-col gap-2 rounded-md border-2 border-slate-700 bg-slate-950/80 p-3">
-      <div className="flex items-center justify-between text-[10px] uppercase tracking-wider text-slate-400">
-        <span>Opponent's dice ({view.opponentDiceCount})</span>
-      </div>
-      <div className="flex gap-2">
-        {Array.from({ length: view.opponentDiceCount }, (_, i) => (
-          // biome-ignore lint/suspicious/noArrayIndexKey: opaque hidden dice with no other identity
-          <HiddenDie key={`hidden-${i}`} color={oppColor} size="sm" />
-        ))}
+    <div className="flex h-40 items-stretch gap-3 rounded-md border-2 border-slate-700 bg-slate-950/80 p-3">
+      {/* LEFT: opponent dice — small + hidden. Stack of indicators showing
+          how many of the opponent's dice are still unplaced. */}
+      <aside className="flex w-28 shrink-0 flex-col items-center justify-center gap-2 rounded bg-slate-900/40 p-2">
+        <span className="text-[9px] font-semibold uppercase tracking-wider text-slate-500">
+          Opponent ({view.opponentDiceCount})
+        </span>
+        <div className="flex max-w-full flex-wrap justify-center gap-1">
+          {Array.from({ length: view.opponentDiceCount }, (_, i) => (
+            // biome-ignore lint/suspicious/noArrayIndexKey: opaque hidden dice with no other identity
+            <HiddenDie key={`hidden-${i}`} color={oppColor} size="sm" />
+          ))}
+        </div>
+      </aside>
+
+      {/* CENTER: your dice — the core mechanic. Large, centred, taking most
+          of the vertical space. Empty during briefing/rolling, populated
+          once the engine deals out `myDice`. */}
+      <div className="flex min-w-0 flex-1 items-center justify-center gap-4">
+        {view.myDice.length > 0 ? (
+          view.myDice.map((d) => {
+            if (rerollMode) {
+              const sel = rerollSelection.has(d.id);
+              return (
+                <Die
+                  key={d.id}
+                  die={d}
+                  size="lg"
+                  selected={sel}
+                  onClick={() => onToggleRerollDie(d.id)}
+                />
+              );
+            }
+            return (
+              <Die
+                key={d.id}
+                die={d}
+                size="lg"
+                selected={selectedDieId === d.id}
+                onClick={() => onSelectDie(d.id)}
+              />
+            );
+          })
+        ) : (
+          <span className="text-xs italic text-slate-600">
+            {view.phase === "briefing"
+              ? "Waiting for the briefing — dice roll once you're both ready."
+              : "Rolling dice…"}
+          </span>
+        )}
       </div>
 
-      <div className="my-1 h-px bg-slate-700" />
-
-      <div className="flex items-center justify-between text-[10px] uppercase tracking-wider text-slate-400">
-        <span>Your dice ({view.myDice.length})</span>
-        <div className="flex gap-2">
+      {/* RIGHT: reroll button (top), then a fixed-height status / coffee
+          adjuster row underneath. Both rows are rendered always so the
+          column height matches the centre regardless of state. */}
+      <aside className="flex w-44 shrink-0 flex-col items-stretch justify-center gap-2 rounded bg-slate-900/40 p-2">
+        <div className="flex h-7 items-center justify-center">
           {view.rerollTokens > 0 && view.phase === "placement" ? (
             <button
               type="button"
               className={[
-                "rounded border px-2 py-0.5 text-[10px]",
+                "rounded border px-2 py-0.5 text-[11px] font-semibold",
                 rerollMode
                   ? "border-emerald-300 bg-emerald-700 text-white"
                   : "border-emerald-600 bg-emerald-900/40 text-emerald-300 hover:bg-emerald-800",
               ].join(" ")}
               onClick={onToggleRerollMode}
             >
-              {rerollMode ? "Cancel" : `Reroll (${view.rerollTokens})`}
+              {rerollMode ? "Cancel reroll" : `Reroll (${view.rerollTokens})`}
             </button>
-          ) : null}
+          ) : (
+            <span className="text-[10px] uppercase tracking-wider text-slate-600">
+              Rerolls: {view.rerollTokens}
+            </span>
+          )}
         </div>
-      </div>
-      <div className="flex flex-wrap items-center gap-2">
-        {view.myDice.map((d) => {
-          if (rerollMode) {
-            const sel = rerollSelection.has(d.id);
-            return (
-              <Die key={d.id} die={d} selected={sel} onClick={() => onToggleRerollDie(d.id)} />
-            );
-          }
-          return (
-            <Die
-              key={d.id}
-              die={d}
-              selected={selectedDieId === d.id}
-              onClick={() => onSelectDie(d.id)}
-            />
-          );
-        })}
-      </div>
 
-      {rerollMode ? (
-        <div className="flex items-center justify-end gap-2">
-          <span className="text-xs text-slate-400">Selected: {rerollSelection.size}</span>
-          <button
-            type="button"
-            disabled={rerollSelection.size === 0}
-            className="rounded bg-emerald-600 px-3 py-1 text-xs font-bold text-white disabled:bg-slate-700 disabled:text-slate-500"
-            onClick={() => onSpendReroll([...rerollSelection])}
-          >
-            Roll
-          </button>
-        </div>
-      ) : null}
-
-      {!rerollMode && selectedDie ? (
-        <div className="flex items-center gap-2 rounded bg-slate-900 p-2 text-xs">
-          <span className="text-slate-400">Coffee adjust:</span>
-          <button
-            type="button"
-            className="h-6 w-6 rounded bg-slate-700 text-white disabled:opacity-30"
-            disabled={coffeeAdjust <= -view.coffeeTokens || (adjustedValue ?? 1) <= 1}
-            onClick={() => onAdjustCoffee(coffeeAdjust - 1)}
-          >
-            −
-          </button>
-          <span className="font-mono">
-            {selectedDie.value}
-            {coffeeAdjust !== 0 ? (
-              <span className="text-yellow-300">
-                {" → "}
-                {adjustedValue}
+        <div className="flex h-10 items-center justify-center gap-2 rounded bg-slate-900 px-2 text-xs">
+          {rerollMode ? (
+            <>
+              <span className="text-slate-400">Sel: {rerollSelection.size}</span>
+              <button
+                type="button"
+                disabled={rerollSelection.size === 0}
+                className="rounded bg-emerald-600 px-2 py-0.5 text-xs font-bold text-white disabled:bg-slate-700 disabled:text-slate-500"
+                onClick={() => onSpendReroll([...rerollSelection])}
+              >
+                Roll
+              </button>
+            </>
+          ) : selectedDie ? (
+            <>
+              <button
+                type="button"
+                className="h-6 w-6 rounded bg-slate-700 text-white disabled:opacity-30"
+                disabled={coffeeAdjust <= -view.coffeeTokens || (adjustedValue ?? 1) <= 1}
+                onClick={() => onAdjustCoffee(coffeeAdjust - 1)}
+              >
+                −
+              </button>
+              <span className="font-mono text-xs">
+                ☕ {selectedDie.value}
+                {coffeeAdjust !== 0 ? (
+                  <span className="text-yellow-300">
+                    {" → "}
+                    {adjustedValue}
+                  </span>
+                ) : null}
               </span>
-            ) : null}
-          </span>
-          <button
-            type="button"
-            className="h-6 w-6 rounded bg-slate-700 text-white disabled:opacity-30"
-            disabled={coffeeAdjust >= view.coffeeTokens || (adjustedValue ?? 6) >= 6}
-            onClick={() => onAdjustCoffee(coffeeAdjust + 1)}
-          >
-            +
-          </button>
-          <span className="ml-1 text-slate-500">
-            (uses {Math.abs(coffeeAdjust)}
-            {Math.abs(coffeeAdjust) === 1 ? " token" : " tokens"})
-          </span>
+              <button
+                type="button"
+                className="h-6 w-6 rounded bg-slate-700 text-white disabled:opacity-30"
+                disabled={coffeeAdjust >= view.coffeeTokens || (adjustedValue ?? 6) >= 6}
+                onClick={() => onAdjustCoffee(coffeeAdjust + 1)}
+              >
+                +
+              </button>
+            </>
+          ) : (
+            <span className="text-[10px] text-slate-600">Pick a die →</span>
+          )}
         </div>
-      ) : null}
+      </aside>
     </div>
   );
 }

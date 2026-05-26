@@ -79,7 +79,10 @@ async function persistReplay(
   active: ActiveSession,
   snapshot: ReturnType<ActiveSession["actor"]["getSnapshot"]>,
 ): Promise<number | undefined> {
-  if (!active.spec.getReplayLog) return undefined;
+  if (!active.spec.getReplayLog) {
+    console.warn(`[persistReplay] ${active.gameSlug}: spec has no getReplayLog — replay NOT saved`);
+    return undefined;
+  }
   const log = active.spec.getReplayLog(snapshot) as {
     scoreA?: number;
     scoreB?: number;
@@ -87,11 +90,17 @@ async function persistReplay(
     playerCount?: number;
     durak?: number | null;
   } | null;
-  if (!log) return undefined;
+  if (!log) {
+    console.warn(
+      `[persistReplay] ${active.gameSlug}: getReplayLog returned null — replay NOT saved`,
+    );
+    return undefined;
+  }
 
   const result = active.spec.getResult(snapshot) as {
     winner?: unknown;
     durak?: unknown;
+    outcome?: unknown;
   } | null;
 
   let winner: string;
@@ -101,6 +110,14 @@ async function persistReplay(
     winner = "p0";
   } else if (result?.winner === 1) {
     winner = "p1";
+  } else if (typeof result?.outcome === "string") {
+    // Cooperative games (Sky Team, Pandemic) report a single outcome string
+    // instead of a winning player index — "win" means the team landed, anything
+    // starting with "loss-" means the team didn't. Map both onto the same
+    // p0/p1 buckets the match-history table already understands so the row
+    // shows up as Win/Loss rather than getting swallowed as a draw nobody
+    // bothered to display.
+    winner = result.outcome === "win" ? "p0" : "p1";
   } else {
     winner = "draw";
   }
@@ -123,7 +140,11 @@ async function persistReplay(
       log.playerCount ?? null,
     ],
   });
-  return Number(info.lastInsertRowid);
+  const id = Number(info.lastInsertRowid);
+  console.log(
+    `[persistReplay] ${active.gameSlug} id=${id} winner=${winner} ai=${aiEngine ?? "human"}`,
+  );
+  return id;
 }
 
 // ---------------------------------------------------------------------------

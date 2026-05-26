@@ -54,12 +54,16 @@ export default function TopHud({ view }: Props) {
         height={HUD_WEATHER.h}
       >
         <div
-          className="cockpit-hud cockpit-hud--weather"
+          className="cockpit-hud cockpit-hud--current-approach sky-slot-bg"
           role="img"
-          aria-label={`Weather forecast — round ${view.round} of ${view.scenario.totalRounds}`}
+          aria-label={`Current approach slot — ${view.approach.airliners[view.approach.current] ?? 0} airliner(s)`}
         >
-          <span className="cockpit-weather__icons">☁ ☁</span>
-          <span className="cockpit-weather__dice">⚂ ⚂</span>
+          {Array.from({ length: view.approach.airliners[view.approach.current] ?? 0 }, (_, k) => (
+            // biome-ignore lint/suspicious/noArrayIndexKey: identical airliner glyphs, no other identity
+            <span key={`current-airliner-${k}`} className="cockpit-current-airliner">
+              ✈
+            </span>
+          ))}
         </div>
       </BoardOverlay>
 
@@ -71,7 +75,7 @@ export default function TopHud({ view }: Props) {
         height={HUD_ALTITUDE.h}
       >
         <div
-          className="cockpit-hud cockpit-hud--altitude"
+          className="cockpit-hud cockpit-hud--altitude sky-slot-bg"
           role="img"
           aria-label={`Altitude ${view.altitude.feet} feet${view.isFinalRound ? " — final round" : ""}`}
         >

@@ -74,7 +74,7 @@ describe("HEURISTIC_V1.pickAction", () => {
     s = pinHand(s, 0, [6, 6, 6, 6]);
     s = {
       ...s,
-      axis: { position: 3, spinAt: 4 },
+      axis: { position: 2, spinAt: 3 },
       slots: {
         ...s.slots,
         "copilot-axis": {
@@ -107,7 +107,7 @@ describe("HEURISTIC_V1.pickAction", () => {
     s = pinHand(s, 0, [3, 3, 3, 3]);
     s = {
       ...s,
-      approach: { current: 2, airportIndex: 8, airliners: [0, 0, 1, 0, 0, 0, 0, 0, 0] },
+      approach: { current: 2, airportIndex: 6, airliners: [0, 0, 1, 0, 0, 0, 0] },
       slots: {
         ...s.slots,
         "copilot-engine": {

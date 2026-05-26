@@ -67,14 +67,21 @@ export default function Cockpit({ view, selectedDieId, coffeeAdjust, onSelectSlo
   return (
     <div
       className={[
-        "cockpit-root cockpit-frame relative mx-auto w-full max-w-[720px]",
-        "aspect-[720/1000] transition-shadow",
+        // Fill the available board area instead of capping at the lab's
+        // 720px design width. The cockpit lives inside a flex centering
+        // wrapper in SkyTeam.tsx; inline `height: 100%` + `aspectRatio`
+        // make sure the width is computed from the height (the limiting
+        // dimension on standard 16:9 / 16:10 viewports) regardless of
+        // how flex would otherwise size the element.
+        "cockpit-root cockpit-frame relative transition-shadow",
         myTurn ? "ring-2 ring-yellow-400/40" : "",
       ].join(" ")}
+      style={{ height: "100%", aspectRatio: "720 / 1000", maxWidth: "100%" }}
     >
       <BoardSurface
         viewBox={COCKPIT_VIEWBOX}
         aria-label="Sky Team cockpit"
+        className="absolute inset-0"
         overlays={
           <>
             <TopHud view={view} />
@@ -85,7 +92,7 @@ export default function Cockpit({ view, selectedDieId, coffeeAdjust, onSelectSlo
             <EngineRow view={view} canPlace={canPlace} onSelect={onSelectSlot} />
             <InstrumentSlots view={view} canPlace={canPlace} onSelect={onSelectSlot} />
             <ConcentrationSlots view={view} canPlace={canPlace} onSelect={onSelectSlot} />
-            <WarningLights />
+            <WarningLights view={view} />
           </>
         }
       >

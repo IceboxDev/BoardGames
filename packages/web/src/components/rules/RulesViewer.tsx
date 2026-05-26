@@ -5,8 +5,11 @@ import { IconButton } from "../ui/IconButton";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
+/** A single PDF, or multiple booklets shown as tabs (Sky Team etc.). */
+export type RulesViewerSource = string | { label: string; url: string }[];
+
 interface RulesViewerProps {
-  url: string;
+  url: RulesViewerSource;
   onClose: () => void;
 }
 
@@ -19,10 +22,27 @@ interface RulesViewerProps {
 // during the 200ms fade-out), which would otherwise pop past the menu.
 
 export function RulesViewer({ url, onClose }: RulesViewerProps) {
+  // Normalize: a plain string becomes a single-tab list. The tab bar is only
+  // rendered when there's more than one booklet.
+  const tabs = typeof url === "string" ? [{ label: "Rules", url }] : url;
+  const [activeTab, setActiveTab] = useState(0);
   const [numPages, setNumPages] = useState<number>(0);
   const [pageWidth, setPageWidth] = useState(600);
   const containerRef = useRef<HTMLDivElement>(null);
   const [closing, setClosing] = useState(false);
+
+  // Switching tab: clear page count so stale pages don't render against the
+  // new document, and scroll the new PDF to the top. Optional-call on
+  // `scrollTo` keeps this safe under jsdom (which doesn't implement it).
+  const switchTab = useCallback(
+    (i: number) => {
+      if (i === activeTab) return;
+      setActiveTab(i);
+      setNumPages(0);
+      containerRef.current?.scrollTo?.({ top: 0 });
+    },
+    [activeTab],
+  );
 
   // Responsive page width
   useEffect(() => {
@@ -72,9 +92,12 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
 
       {/* Content */}
       <div className="relative z-10 flex min-h-0 flex-1 flex-col">
-        {/* Header bar */}
-        <div className="flex shrink-0 items-center justify-between border-b border-white/[0.06] bg-surface-950/80 px-6 py-3 backdrop-blur-md">
-          <div className="flex items-center gap-3">
+        {/* Header bar — three zones (title • tabs • close). The middle is a
+            flex-1 spacer when there's only one booklet, so the title and X
+            still anchor to opposite ends; when there are multiple booklets,
+            the tab pills live in that same slot, horizontally centered. */}
+        <div className="flex shrink-0 items-center border-b border-white/[0.06] bg-surface-950/80 px-6 py-3 backdrop-blur-md">
+          <div className="flex shrink-0 items-center gap-3">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400">
               <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden="true">
                 <path d="M10.75 16.82A7.462 7.462 0 0115 15.5c.71 0 1.396.098 2.046.282A.75.75 0 0018 15.06V3.56a.75.75 0 00-.546-.722A9.006 9.006 0 0015 2.5a9.006 9.006 0 00-4.25 1.065v13.255zM9.25 4.565A9.006 9.006 0 005 2.5a9.006 9.006 0 00-2.454.338A.75.75 0 002 3.56v11.5a.75.75 0 00.954.722A7.462 7.462 0 015 15.5a7.462 7.462 0 014.25 1.32V4.565z" />
@@ -87,6 +110,38 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
               </span>
             )}
           </div>
+
+          {tabs.length > 1 ? (
+            <div
+              role="tablist"
+              aria-label="Rules booklets"
+              className="flex flex-1 items-center justify-center gap-1 px-4"
+            >
+              {tabs.map((t, i) => {
+                const active = i === activeTab;
+                return (
+                  // biome-ignore lint/correctness/noRestrictedElements: tab control needs role/aria-selected semantics and a bespoke pill style that <Button> doesn't expose
+                  <button
+                    key={t.label}
+                    type="button"
+                    role="tab"
+                    aria-selected={active}
+                    onClick={() => switchTab(i)}
+                    className={
+                      active
+                        ? "rounded-full bg-amber-500/15 px-3 py-1 text-xs font-medium text-amber-300 ring-1 ring-amber-400/30 transition-colors"
+                        : "rounded-full px-3 py-1 text-xs text-gray-400 transition-colors hover:bg-white/[0.04] hover:text-gray-200"
+                    }
+                  >
+                    {t.label}
+                  </button>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="flex-1" aria-hidden="true" />
+          )}
+
           <IconButton
             variant="ghost"
             size="sm"
@@ -103,7 +158,10 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
         >
           <div className="mx-auto flex max-w-[832px] flex-col items-center gap-3">
             <Document
-              file={url}
+              // Force remount on tab change so react-pdf cleanly reloads the
+              // new file instead of incrementally diffing against the old one.
+              key={activeTab}
+              file={tabs[activeTab].url}
               onLoadSuccess={onDocumentLoadSuccess}
               loading={
                 <div className="flex items-center gap-2 py-20 text-sm text-gray-500">

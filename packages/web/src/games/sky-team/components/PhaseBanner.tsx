@@ -19,13 +19,19 @@ export default function PhaseBanner({ view, isAiThinking }: Props) {
     </span>
   );
 
+  // The "final approach" round is the engine's bonus landing round at 0 ft.
+  // It runs AFTER the last numbered round (6/6), so we label it "Final
+  // Approach" rather than padding totalRounds to 7. The user sees N
+  // numbered rounds + 1 Final.
+  const roundLabel = view.isFinalRound
+    ? "Final Approach"
+    : `Round ${view.round}/${view.scenario.totalRounds}`;
+
   if (view.phase === "briefing") {
     return (
       <span className="flex items-center gap-2 text-sm">
         {seatBadge}
-        <span className="text-amber-300">
-          Round {view.round}/{view.scenario.totalRounds} briefing — discuss, then Ready
-        </span>
+        <span className="text-amber-300">{roundLabel} briefing — discuss, then Ready</span>
       </span>
     );
   }
@@ -52,9 +58,7 @@ export default function PhaseBanner({ view, isAiThinking }: Props) {
               : "text-slate-400",
           ].join(" ")}
         >
-          {meTurn
-            ? `Round ${view.round}/${view.scenario.totalRounds} — your turn to place`
-            : `Waiting for ${placerLabel}…`}
+          {meTurn ? `${roundLabel} — your turn to place` : `Waiting for ${placerLabel}…`}
         </span>
       </span>
     );

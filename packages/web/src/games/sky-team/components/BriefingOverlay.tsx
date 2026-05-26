@@ -80,10 +80,16 @@ export default function BriefingOverlay({ view, onReady }: Props) {
                   Briefing
                 </span>
                 <h2 className="text-2xl font-black text-white">
-                  Round {view.round}{" "}
-                  <span className="text-lg font-bold text-slate-400">
-                    of {view.scenario.totalRounds}
-                  </span>
+                  {view.isFinalRound ? (
+                    "Final Approach"
+                  ) : (
+                    <>
+                      Round {view.round}{" "}
+                      <span className="text-lg font-bold text-slate-400">
+                        of {view.scenario.totalRounds}
+                      </span>
+                    </>
+                  )}
                 </h2>
               </div>
 

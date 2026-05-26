@@ -11,29 +11,32 @@ const LABELS = ["2", "3", "4", "5", "6"] as const;
 const LABEL_OFFSETS_PCT = [14, 32, 50, 68, 86] as const;
 
 const STOP_COLOR = "#ef4444"; // red-500
+const SUM_OK_COLOR = "#facc15"; // yellow-400
+const SUM_FAIL_COLOR = "#ef4444"; // red-500
 
 /**
- * Stop-icon positions along the brake arc (parameter t ≈ path-offset for our
- * shallow curve). Solid square = current threshold; outlines = future spots.
- *  - t=0.05  : left of label "2"
- *  - t=0.23  : between 2 and 3
- *  - t=0.59  : between 4 and 5
- *  - t=0.95  : right of label "6"
+ * Stop-icon positions along the brake arc. The four positions correspond to
+ * `brakeTrack.pos` 0 → 3 (each placed brake die bumps `pos` by 1). Position 0
+ * is the scenario default; positions 1, 2, 3 are reached by placing one,
+ * two, or all three brake dice in the `brakes-2 / 4 / 6` row. The current
+ * pos renders solid red; future positions render outlined.
  */
-const STOP_MARKERS: ReadonlyArray<{ t: number; filled: boolean }> = [
-  { t: 0.05, filled: true },
-  { t: 0.23, filled: false },
-  { t: 0.59, filled: false },
-  { t: 0.95, filled: false },
-];
+const STOP_MARKER_TS = [0.05, 0.23, 0.59, 0.95] as const;
 
 /**
  * Brake-threshold arc — black band with numbers 2..6 and a row of red stop
- * markers. The single solid marker is the current threshold; the outlined
- * ones are the future positions, dimmed for contrast. Each marker rotates
- * to follow the curve's tangent direction.
+ * markers. Just like the speed arc's blue / orange play markers, the solid
+ * brake marker shifts whenever a brake die is placed on the `brakes-2/4/6`
+ * row (engine sets `brakeTrack.pos += 1`).
+ *
+ * On the FINAL APPROACH (altitude 0), the `pilot+copilot` engine sum is
+ * highlighted on this arc instead of the speed arc — the brake threshold is
+ * the only thing that matters for landing, and "failing to brake" (sum ≥
+ * threshold) overruns the runway. The highlight shows yellow when the sum
+ * stays below the threshold and red when it would overrun, so the players
+ * see the result of their placement immediately.
  */
-export default function BrakeArc(_props: Props) {
+export default function BrakeArc({ view }: Props) {
   const pathId = useId();
   const { start, control, end, thickness } = BRAKE_ARC;
 
@@ -85,6 +88,25 @@ export default function BrakeArc(_props: Props) {
     return { x, y, angle };
   };
 
+  const brakeActiveIdx = view.brakeTrack.pos;
+  const brakeThreshold = view.brakeTrack.pos + view.scenario.brakeThresholdOffset;
+
+  const pilotEngine = view.slots["pilot-engine"]?.die?.value ?? null;
+  const copilotEngine = view.slots["copilot-engine"]?.die?.value ?? null;
+  // Same "intermediate sum" semantics as the speed arc: light up the running
+  // total even when only one engine die has been committed so the team can
+  // gauge the next placement against the brake threshold.
+  const engineSum =
+    pilotEngine != null && copilotEngine != null
+      ? pilotEngine + copilotEngine
+      : pilotEngine != null
+        ? pilotEngine
+        : copilotEngine != null
+          ? copilotEngine
+          : null;
+  const showSumHighlight = view.isFinalRound && engineSum != null;
+  const sumOverruns = engineSum != null && engineSum >= brakeThreshold;
+
   return (
     <BoardLayer name="brake-arc" z={3}>
       <defs>
@@ -98,33 +120,50 @@ export default function BrakeArc(_props: Props) {
         strokeLinejoin="round"
         style={{ filter: "drop-shadow(0 3px 4px rgba(0,0,0,0.28))" }}
       />
-      {LABELS.map((text, i) => (
-        <text
-          // biome-ignore lint/suspicious/noArrayIndexKey: brake labels are stable indexed positions
-          key={`brake-${i}`}
-          fill="white"
-          fontSize={20}
-          fontWeight={900}
-          textAnchor="middle"
-          dominantBaseline="central"
-          paintOrder="stroke"
-          stroke="rgba(0,0,0,0.6)"
-          strokeWidth={3}
-        >
-          <textPath href={`#${pathId}`} startOffset={`${LABEL_OFFSETS_PCT[i]}%`}>
-            {text}
-          </textPath>
-        </text>
-      ))}
-      {STOP_MARKERS.map(({ t, filled }, i) => {
+      {LABELS.map((text, i) => {
+        const labelNumber = Number.parseInt(text, 10);
+        const isSum = showSumHighlight && engineSum === labelNumber;
+        const sumColor = sumOverruns ? SUM_FAIL_COLOR : SUM_OK_COLOR;
+        return (
+          <text
+            // biome-ignore lint/suspicious/noArrayIndexKey: brake labels are stable indexed positions
+            key={`brake-${i}`}
+            fill={isSum ? sumColor : "white"}
+            fontSize={isSum ? 24 : 20}
+            fontWeight={900}
+            textAnchor="middle"
+            dominantBaseline="central"
+            paintOrder="stroke"
+            stroke={isSum ? "rgba(0,0,0,0.75)" : "rgba(0,0,0,0.6)"}
+            strokeWidth={isSum ? 4 : 3}
+            style={
+              isSum
+                ? {
+                    filter: `drop-shadow(0 0 5px ${
+                      sumOverruns ? "rgba(239, 68, 68, 0.85)" : "rgba(250, 204, 21, 0.85)"
+                    })`,
+                  }
+                : undefined
+            }
+          >
+            <textPath href={`#${pathId}`} startOffset={`${LABEL_OFFSETS_PCT[i]}%`}>
+              {text}
+            </textPath>
+          </text>
+        );
+      })}
+      {STOP_MARKER_TS.map((t, idx) => {
+        const isCurrent = idx === brakeActiveIdx;
+        const isPast = idx < brakeActiveIdx;
+        if (isPast) return null;
         const { x, y, angle } = sample(t);
         return (
           <g
             // biome-ignore lint/suspicious/noArrayIndexKey: stable indexed brake marker positions
-            key={`stop-${i}`}
+            key={`stop-${idx}`}
             transform={`translate(${x}, ${y}) rotate(${angle})`}
-            opacity={filled ? 1 : 0.35}
-            style={filled ? { filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.45))" } : undefined}
+            opacity={isCurrent ? 1 : 0.35}
+            style={isCurrent ? { filter: "drop-shadow(0 1px 2px rgba(0,0,0,0.45))" } : undefined}
           >
             <rect
               x={-6}
@@ -133,9 +172,9 @@ export default function BrakeArc(_props: Props) {
               height={12}
               rx={2}
               ry={2}
-              fill={filled ? STOP_COLOR : "transparent"}
+              fill={isCurrent ? STOP_COLOR : "transparent"}
               stroke={STOP_COLOR}
-              strokeWidth={filled ? 1 : 1.6}
+              strokeWidth={isCurrent ? 1 : 1.6}
             />
           </g>
         );

@@ -23,7 +23,7 @@ describe("scenarios", () => {
 
   it("getScenario returns the matching scenario", () => {
     const s = getScenario("yul-montreal");
-    expect(s.totalRounds).toBe(7);
+    expect(s.totalRounds).toBe(6);
     expect(s.altitudeStart).toBe(6000);
     expect(s.altitudeStep).toBe(1000);
     expect(s.dicePerPlayer).toEqual([4, 4]);
@@ -37,7 +37,6 @@ describe("scenarios", () => {
   it("approach corridor is consistent: airliners array has airportIndex+1 entries", () => {
     const s = getScenario("yul-montreal");
     expect(s.approach.airliners).toHaveLength(s.approach.airportIndex + 1);
-    expect(s.approach.airliners[s.approach.airportIndex]).toBe(0);
   });
 
   it("ScenarioIdSchema only accepts registered ids", () => {

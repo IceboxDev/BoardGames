@@ -185,8 +185,13 @@ export interface PlayableGame extends GameBase {
   tournamentStrategies?: { id: string; label: string }[];
   /** Whether to show average score diff in tournament grid cells (default true). */
   tournamentShowScoreDiff?: boolean;
-  /** URL to a PDF file with the game rules, shown from the mode-picker. */
-  rulesUrl?: string;
+  /**
+   * Rules document(s) shown from the mode-picker. A plain string is a single
+   * PDF; an array opens the viewer with a tab bar (one tab per booklet). Used
+   * by the rare games that ship more than one rulebook — e.g. Sky Team's
+   * separate Rules and Flight Log.
+   */
+  rulesUrl?: string | { label: string; url: string }[];
   /**
    * Optional game-specific replay component, used by the match-history
    * and tournament-detail routes to render a single game log inline.

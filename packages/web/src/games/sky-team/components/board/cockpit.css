@@ -342,20 +342,31 @@
 }
 
 .cockpit-slider::before {
-  /* Rail. left:6/78=7.7%, top:6/30=20%, w:44/78=56.4%, h:18/30=60%, radius 5/78=6.4% */
+  /* Rail. Symmetric horizontal padding (7.7% on both sides) so the lit area
+     stays visually centred whether the knob is parked on the right (idle)
+     or has slid to the left (active). Original sky-team-lab geometry left
+     the rail offset to the left — the knob "covered" the asymmetry while
+     it sat on the right, but the moment it slid left the empty stripe on
+     the right made the slot look lop-sided. */
   content: "";
   position: absolute;
   left: 7.7%;
+  right: 7.7%;
   top: 20%;
-  width: 56.4%;
-  height: 60%;
+  bottom: 20%;
   border-radius: 6.4cqi;
   background: #15181c;
   box-shadow: 0 2.5cqi 6.4cqi rgba(0, 0, 0, 0.22);
+  transition:
+    background 240ms ease-out,
+    box-shadow 240ms ease-out;
 }
 
 .cockpit-slider::after {
-  /* Knob. w:30/78=38.5%, h:100%, border 2/78=2.6cqi, radius 6/30=20% */
+  /* Knob. w:30/78=38.5%, h:100%, border 2/78=2.6cqi, radius 6/30=20%
+     Animates left ↔ right by switching from `right: 0` (idle) to
+     `left: 0` (active) and easing the transform. Both endpoints are
+     hardware-anchored so we transition the position properties directly. */
   content: "";
   position: absolute;
   right: 0;
@@ -375,6 +386,29 @@
     radial-gradient(circle at 50% 75%, #999 2.6cqi, transparent 3.8cqi),
     radial-gradient(circle at 75% 75%, #999 2.6cqi, transparent 3.8cqi), #f4eee2;
   box-shadow: 0 2.5cqi 6.4cqi rgba(0, 0, 0, 0.22);
+  transition: transform 320ms cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+/* Active slot — knob slides from idle (right) to engaged (left) over the
+   rail. The rail itself lights up with an electronic-green LED glow so the
+   slot reads as "armed" at a glance. The knob slides exactly the rail's
+   span (61.5% of slider width = 100% - knob width). */
+.cockpit-slider--active::before {
+  background: #16a34a; /* functional green */
+  box-shadow:
+    inset 0 0 3cqi rgba(0, 0, 0, 0.45),
+    0 0 8cqi rgba(74, 222, 128, 0.55);
+}
+
+.cockpit-slider--active::after {
+  transform: translateX(-159%); /* (78 - 30) / 30 = 1.6 → ~160% left */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cockpit-slider::before,
+  .cockpit-slider::after {
+    transition: none;
+  }
 }
 
 /* ---------- mug stack ----------
@@ -465,10 +499,27 @@
 
 /* ---------- top HUD chrome ---------- */
 
+/* Shared sky-slot background: deep night sky with a saturated blue glow
+   at the bottom-center. The bright lobe uses a 60% × 95% ellipse — wider
+   than tall — so it reads as a horizontal halo (between an oval and a
+   circle) rather than a vertical column or a tight round bubble. Center
+   stop is solid blue-600 (no alpha mixing) so it doesn't wash out to a
+   pale/white tone; the gradient fades to transparent over a near-black
+   base. */
+.sky-slot-bg {
+  background:
+    radial-gradient(
+      ellipse 60% 95% at 50% 105%,
+      #2563eb 0%,
+      rgba(30, 58, 138, 0.4) 35%,
+      transparent 75%
+    ),
+    #070d1c;
+}
+
 .cockpit-hud {
   width: 100%;
   height: 100%;
-  background: #163757;
   color: #e6eff2;
   border-radius: 0 0 5.9cqi 5.9cqi; /* 10/170 */
   display: grid;
@@ -493,13 +544,26 @@
   letter-spacing: 1.6cqi;
 }
 
-.cockpit-weather__icons {
-  font-size: 1.1em;
+/* Top-left HUD slot — mirrors the current approach slot. Lays the white
+   airliner glyphs out horizontally so the player can see at a glance how
+   much traffic still sits on the cell they're flying over. */
+.cockpit-hud--current-approach {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 4.7cqi; /* 8/170 */
+  letter-spacing: 0;
+  padding: 0 5.9cqi;
 }
 
-.cockpit-weather__dice {
-  letter-spacing: 0.32em;
-  font-size: 1em;
+.cockpit-current-airliner {
+  color: white;
+  font-size: 21cqi; /* large enough to read from across the cockpit */
+  line-height: 1;
+  display: inline-block;
+  transform: rotate(-45deg);
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.7));
 }
 
 /* ---------- reroll well ----------
