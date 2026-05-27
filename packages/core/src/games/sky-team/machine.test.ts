@@ -1,5 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { createActor } from "xstate";
+import { placementsExhausted } from "./game-engine";
 import { skyTeamMachine, skyTeamSpec } from "./machine";
 import { getLegalActionsForPlayer } from "./rules";
 import type { PlayerIndex, SkyTeamAction } from "./types";
@@ -13,7 +14,10 @@ afterEach(() => {
 });
 
 async function flush(): Promise<void> {
-  await vi.advanceTimersByTimeAsync(500);
+  // Has to cover at least one `aiStep` (the AI thinking pause) plus the
+  // auto-progress timers — long enough to land at the next event waiting on
+  // input. 1500ms gives one AI move + slack.
+  await vi.advanceTimersByTimeAsync(1500);
 }
 
 describe("skyTeamMachine — boot", () => {
@@ -76,6 +80,9 @@ describe("skyTeamMachine — human-driven flow", () => {
         if (!gs.readyForRoll[p]) return { player: p, action: { kind: "ready-to-roll" } };
       }
       return null;
+    }
+    if (placementsExhausted(gs)) {
+      return { player: gs.toPlace, action: { kind: "end-round" } };
     }
     if (gs.phase === "placement") {
       const player = gs.toPlace;

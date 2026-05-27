@@ -1,7 +1,9 @@
+import { placementsExhausted } from "./game-engine";
 import type { PlayerIndex, SkyTeamGameState, SkyTeamPlayerView } from "./types";
 
 export function buildPlayerView(state: SkyTeamGameState, viewer: PlayerIndex): SkyTeamPlayerView {
   const opp = (1 - viewer) as PlayerIndex;
+  const canEndRound = placementsExhausted(state) && state.outcome == null;
   return {
     scenario: state.scenario,
     round: state.round,
@@ -28,7 +30,8 @@ export function buildPlayerView(state: SkyTeamGameState, viewer: PlayerIndex): S
     outcome: state.outcome,
     viewerIndex: viewer,
     isYourTurn:
-      (state.phase === "placement" && state.toPlace === viewer) ||
+      (state.phase === "placement" && state.toPlace === viewer && !canEndRound) ||
       (state.phase === "briefing" && !state.readyForRoll[viewer]),
+    canEndRound,
   };
 }

@@ -39,6 +39,7 @@ export default function MatchHistoryRoute() {
     <MatchHistory
       gameSlug={def.slug}
       labelResolver={def.matchHistoryLabelResolver ?? ((id) => id)}
+      opponentLabel={def.matchHistoryOpponentLabel ?? "Opponent"}
       onBack={() => navigate(`/play/${def.slug}`)}
       onSelectReplay={
         def.replayComponent ? (id) => navigate(`/play/${def.slug}/match-history/${id}`) : undefined

@@ -6,7 +6,7 @@ import type {
   SkyTeamResult,
   SlotId,
 } from "@boardgames/core/games/sky-team/types";
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ActionLog } from "../../components/action-log";
 import GameScreen from "../../components/game-layout/GameScreen";
@@ -92,6 +92,23 @@ export default function SkyTeam({ source }: GameComponentProps) {
   const handleReady = useCallback(() => {
     sendAction({ kind: "ready-to-roll" });
   }, [sendAction]);
+
+  const handleEndRound = useCallback(() => {
+    sendAction({ kind: "end-round" });
+  }, [sendAction]);
+
+  // The briefing phase exists so two humans can discuss strategy before the
+  // dice roll. With an AI partner there's no one to discuss with — skip the
+  // overlay and auto-confirm ready-to-roll so the round flows straight into
+  // placement. (We still render *no* overlay below for solo, so this is
+  // belt-and-braces against a stale render.)
+  useEffect(() => {
+    if (source !== "solo") return;
+    if (!view) return;
+    if (view.phase !== "briefing") return;
+    if (view.readyForRoll[view.viewerIndex]) return;
+    sendAction({ kind: "ready-to-roll" });
+  }, [source, view, sendAction]);
 
   const handleSpendReroll = useCallback(
     (ids: number[]) => {
@@ -185,7 +202,13 @@ export default function SkyTeam({ source }: GameComponentProps) {
           onToggleRerollDie={toggleRerollDie}
         />
       }
-      fanActions={<PhaseBanner view={view} isAiThinking={active.isAiThinking} />}
+      fanActions={
+        <PhaseBanner
+          view={view}
+          isAiThinking={active.isAiThinking}
+          onEndRound={view.canEndRound ? handleEndRound : undefined}
+        />
+      }
     >
       {/* The cockpit stays mounted every phase — the briefing renders as a
           blurred overlay on top (portalled over #app-main) so the player never
@@ -201,7 +224,9 @@ export default function SkyTeam({ source }: GameComponentProps) {
           onSelectSlot={handleSelectSlot}
         />
       </div>
-      {view.phase === "briefing" && <BriefingOverlay view={view} onReady={handleReady} />}
+      {view.phase === "briefing" && source === "mp" && (
+        <BriefingOverlay view={view} onReady={handleReady} />
+      )}
     </GameScreen>
   );
 }

@@ -206,6 +206,14 @@ export interface PlayableGame extends GameBase {
    */
   matchHistoryLabelResolver?: (engineId: string) => string;
   /**
+   * Column header used in the match-history table for the AI-engine /
+   * second-seat column. Defaults to "Opponent". Co-op games override
+   * this to something accurate — Sky Team uses "AI Co-pilot" because
+   * "Opponent" implies a versus dynamic that doesn't exist when the
+   * team wins or loses together.
+   */
+  matchHistoryOpponentLabel?: string;
+  /**
    * Game-specific lobby-config UI rendered inside the lobby route.
    * Pandemic's difficulty picker is the canonical example. Omit for
    * games whose mp lobby has no extra controls.

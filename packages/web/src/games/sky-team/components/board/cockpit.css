@@ -330,6 +330,34 @@
   }
 }
 
+/* Coffee-adjust badge on a placed die. Top-right corner of the die, with a
+   warm-mug tint so it visually parallels the concentration coffee cup icon.
+   Sized in container-query units so it scales with the cockpit. */
+.cockpit-placed-die__coffee {
+  position: absolute;
+  top: -8cqi;
+  right: -8cqi;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 16cqi;
+  height: 16cqi;
+  padding: 0 3cqi;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #f5b97a 0%, #c97a3a 100%);
+  border: 0.8cqi solid rgba(40, 18, 8, 0.85);
+  box-shadow: 0 1cqi 2cqi rgba(0, 0, 0, 0.45);
+  color: #fff8ee;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 10cqi;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0.5cqi 0 rgba(40, 18, 8, 0.6);
+  pointer-events: none;
+}
+
 /* ---------- slider ----------
    Lab: 78×30 with rail 44×18 at (6,6) and knob 30×30 at top-right.
    Shell width = 78cqi base. cqi values are %s of 78. */

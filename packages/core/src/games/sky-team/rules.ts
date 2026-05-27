@@ -1,4 +1,4 @@
-import { isLegalPlacement } from "./game-engine";
+import { isLegalPlacement, placementsExhausted } from "./game-engine";
 import { getSlotDef } from "./scenarios";
 import {
   type DieValue,
@@ -63,6 +63,12 @@ export function getLegalActionsForPlayer(
   }
   if (state.phase === "placement") {
     const out: SkyTeamAction[] = [];
+    if (placementsExhausted(state)) {
+      // All 8 dice committed — the only thing either side can do is
+      // confirm the round is done so engines/radio/round-wrap resolve.
+      out.push({ kind: "end-round" });
+      return out;
+    }
     if (state.toPlace === player) {
       out.push(...getLegalPlacements(state, player));
     }

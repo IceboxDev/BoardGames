@@ -305,6 +305,39 @@ describe("engine effect (non-final round)", () => {
     expect(s.approach.current).toBe(2);
   });
 
+  it("advances 2 when speed sits at the orange threshold after flaps placed", () => {
+    // Regression for the off-by-one in `runEngineEffect`. With 2 flaps
+    // placed the orange Aerodynamics marker sits between 10 and 11, so
+    // per the rules speed=11 is "greater than highest (orange)" and the
+    // approach must move 2. The old check used `speed <= orangeT` and
+    // folded the boundary into "advance 1", yielding only 1 space.
+    const { state } = readyAndRoll();
+    let s: SkyTeamGameState = {
+      ...state,
+      speedGauge: { bluePos: 4, orangePos: 10 },
+    };
+    s = setHand(s, 0, [5, 1, 1, 1]);
+    s = setHand(s, 1, [6, 1, 1, 1]);
+    s = place(s, 0, "pilot-engine", 5, createRng(1));
+    s = place(s, 1, "copilot-engine", 6, createRng(1));
+    expect(s.approach.current).toBe(2);
+  });
+
+  it("advances 1 when speed sits strictly between the two markers", () => {
+    // Sanity check the boundary on the other side: orange between 10-11,
+    // speed=10 is "between markers" → advance 1.
+    const { state } = readyAndRoll();
+    let s: SkyTeamGameState = {
+      ...state,
+      speedGauge: { bluePos: 4, orangePos: 10 },
+    };
+    s = setHand(s, 0, [4, 1, 1, 1]);
+    s = setHand(s, 1, [6, 1, 1, 1]);
+    s = place(s, 0, "pilot-engine", 4, createRng(1));
+    s = place(s, 1, "copilot-engine", 6, createRng(1));
+    expect(s.approach.current).toBe(1);
+  });
+
   it("triggers loss-collision if airliner sits at current position when advancing", () => {
     const { state, rng } = readyAndRoll();
     let s: SkyTeamGameState = {
@@ -545,7 +578,10 @@ describe("end of round", () => {
     expect(ended.readyForRoll).toEqual([false, false]);
   });
 
-  it("collects a reroll token when descending into a marked altitude", () => {
+  it("alternates the starting player each round (pilot R1, co-pilot R2, pilot R3)", () => {
+    // Stand in front of `applyEndRound` directly with the round's mandatory
+    // slots already filled — we only care about who starts the *next* round,
+    // not the full placement flow.
     let s = readyAndRoll().state;
     s = setHand(s, 0, [3, 3, 3, 3]);
     s = setHand(s, 1, [3, 3, 3, 3]);
@@ -555,11 +591,64 @@ describe("end of round", () => {
     s = place(s, 1, "copilot-engine", 3, createRng(1));
     s = setHand(s, 0, []);
     s = setHand(s, 1, []);
-    s = { ...s, altitude: { ...s.altitude, feet: 5000 } };
-    const beforeTokens = s.rerollTokens;
+    expect(s.firstThisRound).toBe(0);
+    const r2 = applyEndRound(s);
+    expect(r2.firstThisRound).toBe(1);
+    expect(r2.toPlace).toBe(1);
+    // Take the next round's "post-placement" state by overlaying the same
+    // mandatory dice on top of r2 with toPlace flipped to start. The engine
+    // doesn't actually care about the placement-phase trail in applyEndRound
+    // — it only inspects mandatory slot occupancy.
+    const r2Filled: SkyTeamGameState = {
+      ...r2,
+      phase: "placement",
+      slots: {
+        ...r2.slots,
+        "pilot-axis": { ...r2.slots["pilot-axis"], die: s.slots["pilot-axis"].die },
+        "copilot-axis": { ...r2.slots["copilot-axis"], die: s.slots["copilot-axis"].die },
+        "pilot-engine": { ...r2.slots["pilot-engine"], die: s.slots["pilot-engine"].die },
+        "copilot-engine": { ...r2.slots["copilot-engine"], die: s.slots["copilot-engine"].die },
+      },
+      unplacedDice: [[], []],
+    };
+    const r3 = applyEndRound(r2Filled);
+    expect(r3.firstThisRound).toBe(0);
+  });
+
+  it("refreshes the reroll supply (cap 1) when descending into a marked altitude", () => {
+    // YUL Green has Reroll icons at 6000 (start) and 2000 (round 5). Simulate
+    // the end of round 4 — altitude 3000 → 2000 — with the start-of-game
+    // token already spent (rerollTokens=0). Round 5 must begin with 1 token.
+    let s = readyAndRoll().state;
+    s = setHand(s, 0, [3, 3, 3, 3]);
+    s = setHand(s, 1, [3, 3, 3, 3]);
+    s = place(s, 0, "pilot-axis", 3, createRng(1));
+    s = place(s, 1, "copilot-axis", 3, createRng(1));
+    s = place(s, 0, "pilot-engine", 3, createRng(1));
+    s = place(s, 1, "copilot-engine", 3, createRng(1));
+    s = setHand(s, 0, []);
+    s = setHand(s, 1, []);
+    s = { ...s, altitude: { ...s.altitude, feet: 3000 }, rerollTokens: 0 };
     const ended = applyEndRound(s);
-    expect(ended.altitude.feet).toBe(4000);
-    expect(ended.rerollTokens).toBe(beforeTokens + 1);
+    expect(ended.altitude.feet).toBe(2000);
+    expect(ended.rerollTokens).toBe(1);
+  });
+
+  it("does NOT stack the round-5 reroll on top of an unused start-of-game token", () => {
+    // Same descent as above but the start token was never spent — supply
+    // stays capped at 1 instead of accumulating to 2.
+    let s = readyAndRoll().state;
+    s = setHand(s, 0, [3, 3, 3, 3]);
+    s = setHand(s, 1, [3, 3, 3, 3]);
+    s = place(s, 0, "pilot-axis", 3, createRng(1));
+    s = place(s, 1, "copilot-axis", 3, createRng(1));
+    s = place(s, 0, "pilot-engine", 3, createRng(1));
+    s = place(s, 1, "copilot-engine", 3, createRng(1));
+    s = setHand(s, 0, []);
+    s = setHand(s, 1, []);
+    s = { ...s, altitude: { ...s.altitude, feet: 3000 }, rerollTokens: 1 };
+    const ended = applyEndRound(s);
+    expect(ended.rerollTokens).toBe(1);
   });
 
   it("loss-undershoot when altitude bottoms before reaching airport", () => {

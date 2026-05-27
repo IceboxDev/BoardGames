@@ -47,7 +47,7 @@ describe("createGame", () => {
   it("initializes altitude at the scenario start", () => {
     const state = createGame({ scenario, seed: 1 }, createRng(1));
     expect(state.altitude.feet).toBe(6000);
-    expect([...state.altitude.rerollAt]).toEqual([6000, 4000, 2000]);
+    expect([...state.altitude.rerollAt]).toEqual([6000, 2000]);
   });
 
   it("collects a reroll token immediately if the starting altitude is marked", () => {

@@ -11,7 +11,13 @@ interface Props {
   /** Static label rendered when no die is placed (e.g. "1/2", "Engine"). */
   label?: ReactNode;
   /** When provided, replaces the label with a placed-die chip. */
-  placedDie?: { color: "blue" | "orange"; value: DieValue; owner?: PlayerIndex } | null;
+  placedDie?: {
+    color: "blue" | "orange";
+    value: DieValue;
+    owner?: PlayerIndex;
+    /** +/- delta from a coffee adjustment, surfaced as a small badge. */
+    coffeeAdjust?: number;
+  } | null;
   /** Pulse with the legal-target ring when truthy. */
   selectable?: boolean;
   /** Make the tile act as a button when an onSelect is provided. */
@@ -57,6 +63,20 @@ export default function SkyTeamTile({
       {placedDie ? (
         <span className={`cockpit-placed-die cockpit-placed-die--${placedDie.color}`}>
           <DieFace color={placedDie.color} value={placedDie.value} />
+          {placedDie.coffeeAdjust != null && placedDie.coffeeAdjust !== 0 ? (
+            // Small mug-tinted badge in the upper-right corner so the
+            // round-review viewer can see at a glance that a coffee token
+            // bumped this die up or down. `paintOrder: "stroke"` keeps the
+            // dark outline behind the digit even at small sizes.
+            <span
+              className="cockpit-placed-die__coffee"
+              role="img"
+              aria-label={`coffee adjust ${placedDie.coffeeAdjust > 0 ? "+" : ""}${placedDie.coffeeAdjust}`}
+            >
+              {placedDie.coffeeAdjust > 0 ? "+" : ""}
+              {placedDie.coffeeAdjust}
+            </span>
+          ) : null}
         </span>
       ) : (
         label

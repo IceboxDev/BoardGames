@@ -77,6 +77,11 @@ export const NON_PERSISTENT_SLOTS: readonly SlotId[] = [
 ];
 
 export const COFFEE_TOKEN_CAP = 3;
+// Reroll supply cap — only one Reroll token in your supply at a time. Picking
+// up another icon while you still have one (e.g. round 5 with the round-1
+// token unspent) is wasted; the cap matches the printed rules for Green and
+// Yellow routes. Red-route scenarios that allow stacking should override.
+export const REROLL_TOKEN_CAP = 1;
 
 /**
  * YUL Montréal-Trudeau — base game opening scenario (YUL Green setup).
@@ -89,15 +94,20 @@ export const COFFEE_TOKEN_CAP = 3;
 export const SCENARIO_YUL: ScenarioConfig = {
   id: "yul-montreal",
   name: "YUL Montréal-Trudeau",
-  // 6 numbered approach rounds (one per 1,000 ft of altitude from 6,000 →
-  // 1,000). After the last drop the plane touches down at 0 ft and the
-  // landing-condition check runs — that's the "Final Approach" step the UI
-  // surfaces with its own label rather than padding the round counter to 7.
-  totalRounds: 6,
+  // Per the printed rules ("The game is played over 7 rounds"), round 7 is
+  // the final-approach / landing round at 0 ft. Rounds 1-6 cover the
+  // approach from 6,000 → 1,000 ft (altitudeStep 1000); round 7 fires
+  // `runFinalRoundCheck`. The round counter exposed in the view runs 1-7
+  // accordingly so the UI can label it "Round N/7" the whole way.
+  totalRounds: 7,
   approach: { airportIndex: 6, airliners: [0, 0, 1, 2, 1, 3, 2] },
   altitudeStart: 6000,
   altitudeStep: 1000,
-  rerollAt: [6000, 4000, 2000],
+  // Green/Yellow route: two Reroll icons on the printed Altitude Track — one
+  // at 6,000 ft (collected on setup) and one at 2,000 ft (start of round 5).
+  // The 4,000-ft icon belongs to Red route variants; with the rules' "max 1
+  // Reroll in your supply" cap it's anyway redundant at this altitude.
+  rerollAt: [6000, 2000],
   // Axis spin: the red X warnings on the bezel sit at ±3 ticks; landing on
   // (or past) them spins the plane out → loss. Triangle markers cover the
   // safe range ±2.

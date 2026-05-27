@@ -17,6 +17,13 @@ export interface Die {
   value: DieValue;
   owner: PlayerIndex;
   source: "rolled" | "rerolled";
+  /**
+   * Set on a *placed* die when a coffee adjustment was applied at placement
+   * time. `value` reflects the adjusted face; `coffeeAdjust` records the
+   * +/- delta so the UI can render a small badge next to the die during
+   * the round review. Unset (undefined) for unmodified placements.
+   */
+  coffeeAdjust?: number;
 }
 
 export const SLOT_IDS = [
@@ -139,7 +146,19 @@ export type SkyTeamLogEntry =
       coffeeAdjust: number;
     }
   | { t: "axis-update"; pos: number }
-  | { t: "engine-resolve"; speed: number; advance: number; finalRound: boolean }
+  | {
+      t: "engine-resolve";
+      speed: number;
+      advance: number;
+      finalRound: boolean;
+      /** Speed-gauge state at the moment engines resolved. `bluePos` and
+       * `orangePos` are the indices of the current Aerodynamics markers
+       * (4..7 / 8..12); the gauge thresholds derive as `bluePos + 1` and
+       * `orangePos + 1`. Recorded so a bug report like "speed 11 only
+       * advanced 1" is reproducible from the log alone. */
+      bluePos: number;
+      orangePos: number;
+    }
   | { t: "radio"; targetSpace: number; removed: boolean }
   | { t: "gear"; slot: SlotId; bluePos: number }
   | { t: "flaps"; slot: SlotId; orangePos: number }
@@ -196,6 +215,14 @@ export interface SkyTeamPlayerView {
   outcome: GameOutcome | null;
   viewerIndex: PlayerIndex;
   isYourTurn: boolean;
+  /**
+   * True iff every die is placed and the machine is waiting for a human to
+   * dispatch the `end-round` action so the round-end resolution can run.
+   * Drives the "End Round" button in the UI; allows the team to inspect
+   * the board state (engines, radio, gear) before they commit to seeing
+   * the next round.
+   */
+  canEndRound: boolean;
 }
 
 export interface SkyTeamResult {
@@ -223,6 +250,10 @@ export const SkyTeamActionSchema = z.discriminatedUnion("kind", [
     copilotDieIds: z.array(z.number().int().nonnegative()).default([]),
   }),
   z.object({ kind: z.literal("ready-to-roll") }),
+  // Manually advance from "all dice placed" to round-end resolution.
+  // The human(s) must click an "End Round" button so they can study the
+  // final board before engines fire / radio clears / round wraps.
+  z.object({ kind: z.literal("end-round") }),
 ]);
 
 export type SkyTeamAction = z.infer<typeof SkyTeamActionSchema>;
@@ -230,6 +261,7 @@ export type SkyTeamAction = z.infer<typeof SkyTeamActionSchema>;
 export type SkyTeamPlaceDie = Extract<SkyTeamAction, { kind: "place-die" }>;
 export type SkyTeamSpendReroll = Extract<SkyTeamAction, { kind: "spend-reroll" }>;
 export type SkyTeamReadyToRoll = Extract<SkyTeamAction, { kind: "ready-to-roll" }>;
+export type SkyTeamEndRound = Extract<SkyTeamAction, { kind: "end-round" }>;
 
 export const StartConfigSchema = z.object({
   scenarioId: z.string(),

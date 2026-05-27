@@ -23,7 +23,7 @@ describe("scenarios", () => {
 
   it("getScenario returns the matching scenario", () => {
     const s = getScenario("yul-montreal");
-    expect(s.totalRounds).toBe(6);
+    expect(s.totalRounds).toBe(7);
     expect(s.altitudeStart).toBe(6000);
     expect(s.altitudeStep).toBe(1000);
     expect(s.dicePerPlayer).toEqual([4, 4]);

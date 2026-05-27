@@ -78,6 +78,13 @@ export default function GameOverScreen({ result, onPlayAgain, onBackToMenu }: Pr
       </h1>
       <p className="text-slate-300">{meta.sub}</p>
 
+      {/* Final axis, gear, flaps, and airliners-remaining are all tautological
+          on a win (always 0 / deployed / deployed / 0) and on a loss the
+          headline already explains which of them failed. Showing them
+          as stats was misleading — readers assumed they were variable when
+          they aren't. Scenario / rounds / final approach tile / brakes
+          deployed are the only fields that genuinely vary across successful
+          landings. */}
       <div className="grid w-full grid-cols-2 gap-2 rounded-md border border-slate-700 bg-slate-900/60 p-4 text-left text-xs">
         <div>
           <div className="text-slate-400">Scenario</div>
@@ -88,28 +95,12 @@ export default function GameOverScreen({ result, onPlayAgain, onBackToMenu }: Pr
           <div className="font-mono">{result.rounds}</div>
         </div>
         <div>
-          <div className="text-slate-400">Final axis</div>
-          <div className="font-mono">{result.finalAxis}</div>
-        </div>
-        <div>
           <div className="text-slate-400">Approach</div>
           <div className="font-mono">{result.finalApproach}</div>
         </div>
         <div>
-          <div className="text-slate-400">Gear</div>
-          <div className="font-mono">{result.gearGreen ? "✓" : "✗"}</div>
-        </div>
-        <div>
-          <div className="text-slate-400">Flaps</div>
-          <div className="font-mono">{result.flapsGreen ? "✓" : "✗"}</div>
-        </div>
-        <div>
           <div className="text-slate-400">Brakes deployed</div>
           <div className="font-mono">{result.brakesDeployed}/3</div>
-        </div>
-        <div>
-          <div className="text-slate-400">Airliners left</div>
-          <div className="font-mono">{result.airlinersRemaining}</div>
         </div>
       </div>
 

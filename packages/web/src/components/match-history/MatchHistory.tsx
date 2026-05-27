@@ -5,6 +5,12 @@ import { Button } from "../ui/Button";
 interface MatchHistoryProps {
   gameSlug: string;
   labelResolver: (engine: string) => string;
+  /**
+   * Column header for the AI-engine cell. Defaults to "Opponent"; co-op
+   * games pass an accurate label ("AI Co-pilot" for Sky Team) since
+   * there's no versus dynamic when the team wins or loses together.
+   */
+  opponentLabel?: string;
   onBack: () => void;
   /**
    * Called with the row's stable replay id when the user picks a game.
@@ -19,6 +25,7 @@ interface MatchHistoryProps {
 export default function MatchHistory({
   gameSlug,
   labelResolver,
+  opponentLabel = "Opponent",
   onBack,
   onSelectReplay,
 }: MatchHistoryProps) {
@@ -40,7 +47,11 @@ export default function MatchHistory({
   const draws = replays.filter((r) => r.winner === "draw").length;
 
   return (
-    <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-4 py-8">
+    // `relative z-10` lifts this above the fixed `def.backgroundImage` at
+    // `z-0` in `GameShellLayoutInner` — without a stacking context, the
+    // positioned bg paints over our static block content (same fix as
+    // `GameScreen` / sky-team `GameOverScreen`).
+    <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-6 px-4 py-8">
       <div className="text-center">
         <h2 className="text-2xl font-extrabold text-white">Match History</h2>
         <p className="mt-2 text-sm text-gray-400">
@@ -66,7 +77,7 @@ export default function MatchHistory({
             <thead>
               <tr className="border-b border-gray-800 text-xs font-medium uppercase tracking-wider text-gray-500">
                 <th className="p-2.5 text-left">#</th>
-                <th className="p-2.5 text-left">Opponent</th>
+                <th className="p-2.5 text-left">{opponentLabel}</th>
                 <th className="p-2.5 text-right">You</th>
                 <th className="p-2.5 text-right">Opp</th>
                 <th className="p-2.5 text-right">Diff</th>

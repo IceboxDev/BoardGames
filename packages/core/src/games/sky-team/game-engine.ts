@@ -9,6 +9,7 @@ import {
   MANDATORY_SLOTS,
   NON_PERSISTENT_SLOTS,
   RADIO_SLOTS,
+  REROLL_TOKEN_CAP,
 } from "./scenarios";
 import type {
   Die,
@@ -218,6 +219,7 @@ function applyPlaceDie(
   }
   next.unplacedDice[player] = next.unplacedDice[player].filter((d) => d.id !== dieId);
   const placedDie: Die = { ...die, value: adjustedValue };
+  if (coffeeAdjust !== 0) placedDie.coffeeAdjust = coffeeAdjust;
   next.slots[slot].die = placedDie;
   pushLog(next, {
     t: "place",
@@ -288,17 +290,43 @@ function runEngineEffect(state: SkyTeamGameState): void {
   if (state.isFinalRound) {
     state.finalRoundSpeed = speed;
     const threshold = state.brakeTrack.pos + state.scenario.brakeThresholdOffset;
-    pushLog(state, { t: "engine-resolve", speed, advance: 0, finalRound: true });
+    pushLog(state, {
+      t: "engine-resolve",
+      speed,
+      advance: 0,
+      finalRound: true,
+      bluePos: state.speedGauge.bluePos,
+      orangePos: state.speedGauge.orangePos,
+    });
     if (speed >= threshold) {
       setOutcome(state, "loss-overrun");
     }
     return;
   }
 
+  // Per the rules, the Aerodynamics markers sit BETWEEN two numbers on the
+  // gauge (e.g. blue between 4-5, orange between 8-9). The thresholds are
+  // therefore the next number AFTER each marker — speed must be strictly
+  // greater than the marker's "lower number" to count. We model the marker
+  // position by its lower number (bluePos=4, orangePos=8 at start) and
+  // derive `>= blueT` / `>= orangeT` boundaries.
+  //   - speed < blueT     → 0 ("less than weakest")
+  //   - speed < orangeT   → 1 ("between the 2 markers")
+  //   - speed >= orangeT  → 2 ("greater than highest")
+  // The old code wrote `speed <= orangeT` here, which folded the orange
+  // boundary itself into "advance 1" — a player with the orange marker
+  // between 10-11 and speed=11 saw advance=1 when the rules say advance=2.
   const blueT = state.speedGauge.bluePos + 1;
   const orangeT = state.speedGauge.orangePos + 1;
-  const advance = speed < blueT ? 0 : speed <= orangeT ? 1 : 2;
-  pushLog(state, { t: "engine-resolve", speed, advance, finalRound: false });
+  const advance = speed < blueT ? 0 : speed < orangeT ? 1 : 2;
+  pushLog(state, {
+    t: "engine-resolve",
+    speed,
+    advance,
+    finalRound: false,
+    bluePos: state.speedGauge.bluePos,
+    orangePos: state.speedGauge.orangePos,
+  });
 
   if (advance > 0) {
     if (state.approach.current === state.approach.airportIndex) {
@@ -378,8 +406,12 @@ export function applyEndRound(state: SkyTeamGameState): SkyTeamGameState {
   }
 
   next.altitude.feet -= next.scenario.altitudeStep;
-  const collectedReroll = next.altitude.rerollAt.includes(next.altitude.feet);
-  if (collectedReroll) next.rerollTokens += 1;
+  // Reroll-icon altitudes refresh your supply up to 1, they don't stack on
+  // top of an unused one. On Green/Yellow the only mid-game icon is at
+  // 2,000 ft (round 5); the start-of-game token is granted in `createGame`.
+  const rerollIconHere = next.altitude.rerollAt.includes(next.altitude.feet);
+  const collectedReroll = rerollIconHere && next.rerollTokens < REROLL_TOKEN_CAP;
+  if (collectedReroll) next.rerollTokens = REROLL_TOKEN_CAP;
 
   for (const id of NON_PERSISTENT_SLOTS) {
     next.slots[id].die = null;
@@ -403,7 +435,12 @@ export function applyEndRound(state: SkyTeamGameState): SkyTeamGameState {
   if (isFinalNext) next.isFinalRound = true;
 
   next.round += 1;
-  next.firstThisRound = next.scenario.firstPlacer;
+  // Starting player alternates every round — pilot in round 1 (set by
+  // `createGame` from `scenario.firstPlacer`), co-pilot in round 2, and
+  // so on. The arrow on the printed Altitude screen turns each round
+  // to indicate this; we model it by flipping the previous round's
+  // starter instead of re-reading `scenario.firstPlacer`.
+  next.firstThisRound = (1 - state.firstThisRound) as PlayerIndex;
   next.toPlace = next.firstThisRound;
   next.readyForRoll = [false, false];
   next.unplacedDice = [[], []];
@@ -464,6 +501,15 @@ export function applyAction(
       return applyReroll(state, action.pilotDieIds, action.copilotDieIds, ctx.rng);
     case "place-die":
       return applyPlaceDie(state, player, action.dieId, action.slot, action.coffeeAdjust);
+    case "end-round":
+      // `end-round` is a UI-driven advancement signal: the engine doesn't
+      // change state here — the machine's `endRound` entry runs
+      // `applyEndRound` once the transition fires. We just validate the
+      // request: must be in placement with all dice placed.
+      if (!placementsExhausted(state)) {
+        throw new InvalidActionError("cannot end round: dice still to place");
+      }
+      return state;
   }
 }
 

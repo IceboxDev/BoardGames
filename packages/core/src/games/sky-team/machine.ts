@@ -124,7 +124,12 @@ export const skyTeamMachine = setup({
 
   delays: {
     autoStep: 200,
-    aiStep: 250,
+    // A deliberate beat before each AI placement so the human can read the
+    // board / log after their own move (and between consecutive AI moves)
+    // instead of seeing the state pop instantly. With no humans this still
+    // applies but doesn't matter — AI-vs-AI tests just consume more fake
+    // time, they don't deadlock.
+    aiStep: 800,
   },
 
   actors: {
@@ -149,6 +154,11 @@ export const skyTeamMachine = setup({
     hasAiInput: ({ context }) => aiPlayerForCurrentInput(context) != null,
     inBriefing: ({ context }) => context.gameState?.phase === "briefing",
     inPlacement: ({ context }) => context.gameState?.phase === "placement",
+    // "noHumans" auto-progresses past the awaitingEndRound state so AI-vs-AI
+    // games (tournaments, simulations) don't deadlock waiting for input.
+    noHumans: ({ context }) => context.humanPlayers.length === 0,
+    isEndRoundAction: ({ event }) =>
+      event.type === "PLAYER_ACTION" && event.action.kind === "end-round",
   },
 
   actions: {
@@ -235,7 +245,7 @@ export const skyTeamMachine = setup({
         routing: {
           always: [
             { guard: "isGameOver", target: "#skyTeam.gameOver" },
-            { guard: "placementsExhausted", target: "endRound" },
+            { guard: "placementsExhausted", target: "awaitingEndRound" },
             { guard: "needsRoll", target: "rolling" },
             { guard: "hasAiInput", target: "aiThinking" },
             { guard: "inBriefing", target: "briefing" },
@@ -261,13 +271,22 @@ export const skyTeamMachine = setup({
         },
 
         aiThinking: {
+          // Pause before invoking the AI so the human has a beat to read
+          // the board after the previous action (their own placement or a
+          // prior AI placement) before this AI move resolves on top of it.
+          after: {
+            aiStep: { target: "aiActing" },
+          },
+        },
+
+        aiActing: {
           invoke: {
             id: "computeAiAction",
             src: "computeAiAction",
             input: ({ context }) => {
               const player = aiPlayerForCurrentInput(context);
               if (player == null) {
-                throw new Error("aiThinking invoked without an AI input pending");
+                throw new Error("aiActing invoked without an AI input pending");
               }
               return { ctx: context, player };
             },
@@ -299,6 +318,17 @@ export const skyTeamMachine = setup({
               }),
             },
             onError: { target: "routing" },
+          },
+        },
+
+        // All 8 dice placed. Wait for a human to dispatch `end-round`
+        // before resolving the round so the team can inspect the final
+        // board. In AI-vs-AI games (no humans), auto-progress via
+        // `always: noHumans` so tournament tests don't deadlock.
+        awaitingEndRound: {
+          always: [{ guard: "noHumans", target: "endRound" }],
+          on: {
+            PLAYER_ACTION: { guard: "isEndRoundAction", target: "endRound" },
           },
         },
 
@@ -372,6 +402,10 @@ export const skyTeamSpec: GameMachineSpec<
     const gs = snapshot.context.gameState;
     if (!gs) return 0;
     if (gs.phase === "briefing") return -1;
+    // In `awaitingEndRound`, both humans (or the lone human in solo) can
+    // dispatch the `end-round` action — return -1 so the server's
+    // turn-validation falls into simultaneous-play mode.
+    if (placementsExhausted(gs)) return -1;
     return gs.toPlace;
   },
 

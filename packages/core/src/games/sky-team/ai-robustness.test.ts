@@ -1,6 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { createActor } from "xstate";
 import { registerStrategy } from "./ai-strategies";
+import { placementsExhausted } from "./game-engine";
 import { skyTeamMachine } from "./machine";
 import { getLegalActionsForPlayer } from "./rules";
 import type { PlayerIndex } from "./types";
@@ -31,6 +32,8 @@ async function driveToCompletion(aiStrategy: string, seed: number): Promise<bool
     if (gs.outcome != null) return true;
     if (gs.phase === "briefing" && !gs.readyForRoll[0]) {
       actor.send({ type: "PLAYER_ACTION", player: 0, action: { kind: "ready-to-roll" } });
+    } else if (placementsExhausted(gs)) {
+      actor.send({ type: "PLAYER_ACTION", player: 0, action: { kind: "end-round" } });
     } else if (gs.phase === "placement" && gs.toPlace === 0) {
       const place = getLegalActionsForPlayer(gs, 0 as PlayerIndex).find(
         (a) => a.kind === "place-die",
