@@ -223,6 +223,14 @@ export interface SkyTeamPlayerView {
    * the next round.
    */
   canEndRound: boolean;
+  /**
+   * True iff the game has ended (crash or victory) and the machine is
+   * holding in `awaitingGameOver` until a human acknowledges. Drives the
+   * "View result" button in PhaseBanner; lets the team study the final
+   * board (which die was placed, where the airliners were) before the
+   * GameOverScreen swaps in.
+   */
+  canAcknowledgeGameOver: boolean;
 }
 
 export interface SkyTeamResult {
@@ -254,6 +262,11 @@ export const SkyTeamActionSchema = z.discriminatedUnion("kind", [
   // The human(s) must click an "End Round" button so they can study the
   // final board before engines fire / radio clears / round wraps.
   z.object({ kind: z.literal("end-round") }),
+  // Acknowledge the game-ending event (crash or victory) and let the
+  // machine transition to its terminal `gameOver` state. Held in
+  // `awaitingGameOver` until dispatched so the player can study the
+  // final board position before the GameOverScreen takes over.
+  z.object({ kind: z.literal("acknowledge-game-over") }),
 ]);
 
 export type SkyTeamAction = z.infer<typeof SkyTeamActionSchema>;
@@ -262,6 +275,7 @@ export type SkyTeamPlaceDie = Extract<SkyTeamAction, { kind: "place-die" }>;
 export type SkyTeamSpendReroll = Extract<SkyTeamAction, { kind: "spend-reroll" }>;
 export type SkyTeamReadyToRoll = Extract<SkyTeamAction, { kind: "ready-to-roll" }>;
 export type SkyTeamEndRound = Extract<SkyTeamAction, { kind: "end-round" }>;
+export type SkyTeamAcknowledgeGameOver = Extract<SkyTeamAction, { kind: "acknowledge-game-over" }>;
 
 export const StartConfigSchema = z.object({
   scenarioId: z.string(),

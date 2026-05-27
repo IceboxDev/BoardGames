@@ -159,6 +159,8 @@ export const skyTeamMachine = setup({
     noHumans: ({ context }) => context.humanPlayers.length === 0,
     isEndRoundAction: ({ event }) =>
       event.type === "PLAYER_ACTION" && event.action.kind === "end-round",
+    isAcknowledgeGameOverAction: ({ event }) =>
+      event.type === "PLAYER_ACTION" && event.action.kind === "acknowledge-game-over",
   },
 
   actions: {
@@ -244,7 +246,7 @@ export const skyTeamMachine = setup({
       states: {
         routing: {
           always: [
-            { guard: "isGameOver", target: "#skyTeam.gameOver" },
+            { guard: "isGameOver", target: "awaitingGameOver" },
             { guard: "placementsExhausted", target: "awaitingEndRound" },
             { guard: "needsRoll", target: "rolling" },
             { guard: "hasAiInput", target: "aiThinking" },
@@ -336,6 +338,21 @@ export const skyTeamMachine = setup({
           entry: "applyEndRound",
           after: { autoStep: { target: "routing" } },
         },
+
+        // Game just ended (crash or victory). Hold the final board on
+        // screen until a human dispatches `acknowledge-game-over`; the
+        // server's `getResult` stays null until then so the client keeps
+        // rendering the board instead of swapping in GameOverScreen.
+        // AI-vs-AI games skip the wait via the `noHumans` guard.
+        awaitingGameOver: {
+          always: [{ guard: "noHumans", target: "#skyTeam.gameOver" }],
+          on: {
+            PLAYER_ACTION: {
+              guard: "isAcknowledgeGameOverAction",
+              target: "#skyTeam.gameOver",
+            },
+          },
+        },
       },
 
       on: {
@@ -402,9 +419,11 @@ export const skyTeamSpec: GameMachineSpec<
     const gs = snapshot.context.gameState;
     if (!gs) return 0;
     if (gs.phase === "briefing") return -1;
-    // In `awaitingEndRound`, both humans (or the lone human in solo) can
-    // dispatch the `end-round` action — return -1 so the server's
-    // turn-validation falls into simultaneous-play mode.
+    // `awaitingGameOver` and `awaitingEndRound` are both "either-side
+    // can advance" gates — return -1 so the server's turn-validation
+    // falls into simultaneous-play mode and either human can click
+    // through.
+    if (gs.outcome != null) return -1;
     if (placementsExhausted(gs)) return -1;
     return gs.toPlace;
   },

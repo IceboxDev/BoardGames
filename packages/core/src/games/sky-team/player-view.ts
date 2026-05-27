@@ -4,6 +4,7 @@ import type { PlayerIndex, SkyTeamGameState, SkyTeamPlayerView } from "./types";
 export function buildPlayerView(state: SkyTeamGameState, viewer: PlayerIndex): SkyTeamPlayerView {
   const opp = (1 - viewer) as PlayerIndex;
   const canEndRound = placementsExhausted(state) && state.outcome == null;
+  const canAcknowledgeGameOver = state.outcome != null;
   return {
     scenario: state.scenario,
     round: state.round,
@@ -33,5 +34,6 @@ export function buildPlayerView(state: SkyTeamGameState, viewer: PlayerIndex): S
       (state.phase === "placement" && state.toPlace === viewer && !canEndRound) ||
       (state.phase === "briefing" && !state.readyForRoll[viewer]),
     canEndRound,
+    canAcknowledgeGameOver,
   };
 }

@@ -57,7 +57,12 @@ export function getLegalActionsForPlayer(
   state: SkyTeamGameState,
   player: PlayerIndex,
 ): SkyTeamAction[] {
-  if (state.outcome != null) return [];
+  if (state.outcome != null) {
+    // Game over — only the explicit acknowledgement is legal, both for
+    // the player who just crashed and the partner. The machine sits in
+    // `awaitingGameOver` until one of them clicks through.
+    return [{ kind: "acknowledge-game-over" }];
+  }
   if (state.phase === "briefing") {
     return state.readyForRoll[player] ? [] : [{ kind: "ready-to-roll" }];
   }

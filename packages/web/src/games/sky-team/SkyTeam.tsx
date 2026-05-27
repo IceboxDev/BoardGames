@@ -97,6 +97,10 @@ export default function SkyTeam({ source }: GameComponentProps) {
     sendAction({ kind: "end-round" });
   }, [sendAction]);
 
+  const handleAcknowledgeGameOver = useCallback(() => {
+    sendAction({ kind: "acknowledge-game-over" });
+  }, [sendAction]);
+
   // The briefing phase exists so two humans can discuss strategy before the
   // dice roll. With an AI partner there's no one to discuss with — skip the
   // overlay and auto-confirm ready-to-roll so the round flows straight into
@@ -207,6 +211,9 @@ export default function SkyTeam({ source }: GameComponentProps) {
           view={view}
           isAiThinking={active.isAiThinking}
           onEndRound={view.canEndRound ? handleEndRound : undefined}
+          onAcknowledgeGameOver={
+            view.canAcknowledgeGameOver ? handleAcknowledgeGameOver : undefined
+          }
         />
       }
     >

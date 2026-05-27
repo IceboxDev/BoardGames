@@ -10,8 +10,16 @@ export type AuthConfig = z.infer<typeof AuthConfigSchema>;
 // ── Session user ───────────────────────────────────────────────────────
 
 /**
+ * Three-state participation mode. Source of truth for whether a user plays
+ * online multiplayer, in-person events, or both. Replaces the legacy
+ * `onlineEnabled` boolean — see migration 0003 for the one-way backfill.
+ */
+export const OnlineModeSchema = z.enum(["online", "offline", "both"]);
+export type OnlineMode = z.infer<typeof OnlineModeSchema>;
+
+/**
  * Narrow projection of better-auth's session user — only the fields the app
- * actually reads. The custom `role` and `onlineEnabled` fields are added by
+ * actually reads. The custom `role` and `onlineMode` fields are added by
  * the server's better-auth config; they're not part of better-auth's default
  * types, so this schema is the single source of truth.
  */
@@ -21,16 +29,16 @@ export const SessionUserSchema = z.object({
   name: z.string().nullable().optional(),
   image: z.string().nullable().optional(),
   role: z.enum(["admin", "user"]).default("user"),
-  onlineEnabled: z.boolean().default(false),
+  onlineMode: OnlineModeSchema.default("offline"),
 });
 export type SessionUser = z.infer<typeof SessionUserSchema>;
 
-// ── Admin: online toggle ───────────────────────────────────────────────
+// ── Admin: online-mode picker ──────────────────────────────────────────
 
-export const SetOnlineBodySchema = z.object({
-  onlineEnabled: z.boolean(),
+export const SetOnlineModeBodySchema = z.object({
+  onlineMode: OnlineModeSchema,
 });
-export type SetOnlineBody = z.infer<typeof SetOnlineBodySchema>;
+export type SetOnlineModeBody = z.infer<typeof SetOnlineModeBodySchema>;
 
 // ── Admin: user list (better-auth admin plugin response) ───────────────
 
@@ -39,7 +47,7 @@ export type SetOnlineBody = z.infer<typeof SetOnlineBodySchema>;
  * better-auth's stock User columns (`id`, `email`, `name`, `image`,
  * `emailVerified`, `createdAt`, `updatedAt`), the admin plugin's
  * ban/role columns (`role`, `banned`, `banReason`, `banExpires`), and the
- * two custom fields this app's better-auth config adds (`onlineEnabled`,
+ * custom fields this app's better-auth config adds (`onlineMode`,
  * plus `internal`/`guest` flags on user rows). Fields beyond those are
  * stripped — the schema's default `strip` mode is the boundary contract.
  *
@@ -70,7 +78,7 @@ export const AdminUserSchema = z.object({
   image: z.string().nullable().optional(),
   emailVerified: z.boolean().nullable().optional(),
   role: z.string().nullable().optional(),
-  onlineEnabled: z.boolean().nullable().optional(),
+  onlineMode: OnlineModeSchema.nullable().optional(),
   internal: z.boolean().nullable().optional(),
   guest: z.boolean().nullable().optional(),
   banned: z.boolean().nullable().optional(),

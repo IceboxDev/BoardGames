@@ -17,7 +17,7 @@ interface UseCurrentUserResult {
  * casts that used to live around the codebase are eliminated.
  *
  * Better-auth's session shape is opaque to TypeScript (its custom-fields
- * plugin doesn't expose `role`/`onlineEnabled` in the inferred types), so
+ * plugin doesn't expose `role`/`onlineMode` in the inferred types), so
  * we narrow it once with `SessionUserSchema.safeParse` and let downstream
  * code trust the result. This module is the only file outside
  * `lib/auth-client.ts` that may pull from Better-Auth directly — the

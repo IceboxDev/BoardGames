@@ -74,7 +74,12 @@ describe("skyTeamMachine — human-driven flow", () => {
     const ctx = actor.getSnapshot().context;
     const gs = ctx.gameState;
     if (!gs) return null;
-    if (gs.outcome != null) return null;
+    if (gs.outcome != null) {
+      // Game ended — machine is in `awaitingGameOver`. Dispatch the ack so
+      // the state-machine moves to its terminal `gameOver` state and the
+      // test loop's `matches("gameOver")` check fires.
+      return { player: gs.toPlace, action: { kind: "acknowledge-game-over" } };
+    }
     if (gs.phase === "briefing") {
       for (const p of [0, 1] as PlayerIndex[]) {
         if (!gs.readyForRoll[p]) return { player: p, action: { kind: "ready-to-roll" } };

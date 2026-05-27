@@ -21,7 +21,7 @@ function user(overrides: Partial<SessionUser> = {}): SessionUser {
     email: "u1@example.com",
     name: "User One",
     role: "user",
-    onlineEnabled: false,
+    onlineMode: "offline",
     createdAt: new Date("2026-01-01"),
     updatedAt: new Date("2026-01-01"),
     image: null,
@@ -90,9 +90,9 @@ describe("AuthGuard — mode=unauth (must NOT be signed in)", () => {
 });
 
 describe("AuthGuard — mode=online", () => {
-  it("redirects to / when user.onlineEnabled is false", () => {
+  it("redirects to / when user.onlineMode is 'offline'", () => {
     mockUseCurrentUser.mockReturnValue({
-      user: user({ onlineEnabled: false }),
+      user: user({ onlineMode: "offline" }),
       isLoading: false,
       isAdmin: false,
     });
@@ -100,9 +100,19 @@ describe("AuthGuard — mode=online", () => {
     expect(screen.getByText("Home")).toBeInTheDocument();
   });
 
-  it("renders children when user.onlineEnabled is true", () => {
+  it("renders children when user.onlineMode is 'online'", () => {
     mockUseCurrentUser.mockReturnValue({
-      user: user({ onlineEnabled: true }),
+      user: user({ onlineMode: "online" }),
+      isLoading: false,
+      isAdmin: false,
+    });
+    renderAt("/guarded", "online");
+    expect(screen.getByText("Protected")).toBeInTheDocument();
+  });
+
+  it("renders children when user.onlineMode is 'both'", () => {
+    mockUseCurrentUser.mockReturnValue({
+      user: user({ onlineMode: "both" }),
       isLoading: false,
       isAdmin: false,
     });

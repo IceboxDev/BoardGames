@@ -44,7 +44,7 @@ describe("useAdminUsers", () => {
             email: "a@b.com",
             name: "Anya",
             role: "admin",
-            onlineEnabled: true,
+            onlineMode: "both",
             createdAt: "2026-05-21T00:00:00.000Z",
           },
           {
@@ -52,7 +52,7 @@ describe("useAdminUsers", () => {
             email: "c@d.com",
             name: "Cal",
             role: "user",
-            onlineEnabled: false,
+            onlineMode: "offline",
             createdAt: "2026-05-21T00:00:00.000Z",
           },
         ],

@@ -56,10 +56,14 @@ describe("getLegalActionsForPlayer", () => {
     expect(getLegalActionsForPlayer(half, 1)).toEqual([{ kind: "ready-to-roll" }]);
   });
 
-  it("returns empty when game is over", () => {
+  it("only exposes acknowledge-game-over when the game is over", () => {
+    // After a crash/win the machine sits in `awaitingGameOver` and the only
+    // legal action is the explicit acknowledgement that lets the player
+    // study the final board before GameOverScreen takes over.
     const state = newReady();
     const over: SkyTeamGameState = { ...state, outcome: "win", phase: "game-over" };
-    expect(getLegalActionsForPlayer(over, 0)).toEqual([]);
+    expect(getLegalActionsForPlayer(over, 0)).toEqual([{ kind: "acknowledge-game-over" }]);
+    expect(getLegalActionsForPlayer(over, 1)).toEqual([{ kind: "acknowledge-game-over" }]);
   });
 
   it("includes spend-reroll only for placement phase with rerollTokens > 0", () => {

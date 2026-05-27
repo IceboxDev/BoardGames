@@ -31,7 +31,7 @@ export function AuthGuard({ mode, children }: Props) {
     return <Navigate to="/login" replace state={{ from: location.pathname }} />;
   }
 
-  if (mode === "online" && !user.onlineEnabled) {
+  if (mode === "online" && user.onlineMode === "offline") {
     return <Navigate to="/" replace />;
   }
 

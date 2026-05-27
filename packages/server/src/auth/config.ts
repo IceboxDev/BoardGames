@@ -1,4 +1,4 @@
-import { SlugListSchema } from "@boardgames/core/protocol";
+import { OnlineModeSchema, SlugListSchema } from "@boardgames/core/protocol";
 import { LibsqlDialect } from "@libsql/kysely-libsql";
 import { betterAuth } from "better-auth";
 import { admin } from "better-auth/plugins";
@@ -6,9 +6,10 @@ import { z } from "zod";
 import { getDb, getDbConnectionConfig } from "../db.ts";
 import { jsonColumn, parseRow } from "../lib/db-rows.ts";
 
-/** Row projection for `SELECT game_slugs_json FROM pending_inventory`. */
+/** Row projection for `SELECT game_slugs_json, online_mode FROM pending_inventory`. */
 const PendingInventoryRowSchema = z.object({
   game_slugs_json: jsonColumn(SlugListSchema),
+  online_mode: OnlineModeSchema,
 });
 
 function normalizeOrigin(raw: string): string {
@@ -51,10 +52,14 @@ export const auth = betterAuth({
       : undefined,
   user: {
     additionalFields: {
-      onlineEnabled: {
-        type: "boolean",
+      // Three-state participation mode (replaces the legacy `onlineEnabled`
+      // boolean — see migration 0003). 'offline' for default new signups,
+      // 'both' for the auto-promoted admin, and whatever the pre-register
+      // queue stamps for other signups.
+      onlineMode: {
+        type: "string",
         required: false,
-        defaultValue: false,
+        defaultValue: "offline",
         input: false,
       },
       internal: {
@@ -92,7 +97,7 @@ export const auth = betterAuth({
             data: {
               ...user,
               role: isAdmin ? "admin" : "user",
-              onlineEnabled: isAdmin,
+              onlineMode: isAdmin ? "both" : "offline",
               internal: isInternal,
               guest: isGuest,
             },
@@ -106,26 +111,39 @@ export const auth = betterAuth({
           try {
             const db = getDb();
             const { rows } = await db.execute(
-              "SELECT game_slugs_json FROM pending_inventory WHERE id = 1",
+              "SELECT game_slugs_json, online_mode FROM pending_inventory WHERE id = 1",
             );
             if (rows.length === 0) return;
-            // Round-trip the blob through SlugListSchema so a corrupt
+            // Round-trip the row through the schema so a corrupt
             // pending-inventory cell fails the transfer here rather than
-            // propagating into the new user's inventory.
-            const { game_slugs_json } = parseRow(
+            // propagating into the new user.
+            const { game_slugs_json, online_mode } = parseRow(
               PendingInventoryRowSchema,
               rows[0],
               "pending_inventory",
             );
-            await db.execute({
-              sql: `INSERT INTO user_inventory (user_id, game_slugs_json, updated_at)
-                    VALUES (?, ?, datetime('now'))
-                    ON CONFLICT(user_id) DO UPDATE SET
-                      game_slugs_json = excluded.game_slugs_json,
-                      updated_at = excluded.updated_at`,
-              args: [user.id, JSON.stringify(game_slugs_json)],
-            });
-            await db.execute("DELETE FROM pending_inventory WHERE id = 1");
+            // Apply slugs + onlineMode + delete the queue row as one atomic
+            // batch — partial application would leave a signup with mode but
+            // no inventory (or vice-versa) and a stale queue for the next
+            // signup to inherit.
+            await db.batch(
+              [
+                {
+                  sql: `INSERT INTO user_inventory (user_id, game_slugs_json, updated_at)
+                        VALUES (?, ?, datetime('now'))
+                        ON CONFLICT(user_id) DO UPDATE SET
+                          game_slugs_json = excluded.game_slugs_json,
+                          updated_at = excluded.updated_at`,
+                  args: [user.id, JSON.stringify(game_slugs_json)],
+                },
+                {
+                  sql: `UPDATE "user" SET "onlineMode" = ? WHERE id = ?`,
+                  args: [online_mode, user.id],
+                },
+                "DELETE FROM pending_inventory WHERE id = 1",
+              ],
+              "write",
+            );
           } catch (err) {
             console.error("[auth] failed to transfer pending inventory:", err);
           }

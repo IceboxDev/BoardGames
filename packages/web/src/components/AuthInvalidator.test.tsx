@@ -32,7 +32,7 @@ function withClient(qc: QueryClient) {
 // Build a minimum-shape SessionUser fixture; the invalidator only reads
 // `.id`, so we cast to satisfy the type without filling every field.
 function userWithId(id: string): SessionUser {
-  return { id, email: `${id}@example.com`, role: "user", onlineEnabled: false } as SessionUser;
+  return { id, email: `${id}@example.com`, role: "user", onlineMode: "offline" } as SessionUser;
 }
 
 beforeEach(() => {

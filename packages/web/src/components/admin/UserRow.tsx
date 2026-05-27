@@ -1,8 +1,11 @@
+import type { OnlineMode } from "@boardgames/core/protocol";
 import type { Coverage } from "../../pages/admin-coverage";
 import { Button } from "../ui/Button";
 import { Chip } from "../ui/Chip";
+import { SegmentedControl } from "../ui/SegmentedControl";
 import { CoverageCell } from "./CoverageCell";
 import { InventoryPanel } from "./InventoryPanel";
+import { ONLINE_MODE_OPTIONS } from "./online-mode-options";
 import type { AdminUser } from "./types";
 
 /** Match the number of `<th>` cells in the parent <UsersTable> header. */
@@ -14,14 +17,14 @@ export type UserRowProps = {
   /** Inventory expansion (renders a second `<tr>` with the editor). */
   expanded: boolean;
   onToggleInventory: () => void;
-  /** Online toggle. `pending` greys the switch while the mutation is in flight. */
-  onToggleOnline: () => void;
+  /** Online-mode picker. `pending` greys the control while the mutation is in flight. */
+  onSetOnlineMode: (mode: OnlineMode) => void;
   pending: boolean;
   /** Calendar drawer trigger. */
   onOpenCalendar: () => void;
   /** Delete mode is a page-level switch — when on, the Online column shows
-   *  a Delete chip instead of the iOS switch and the row can drop into the
-   *  email-confirm sub-row.
+   *  a Delete chip instead of the mode picker and the row can drop into
+   *  the email-confirm sub-row.
    *
    *  `isSelf` prevents an admin from deleting their own account. */
   deleteMode: boolean;
@@ -47,7 +50,7 @@ export function UserRow({
   coverage,
   expanded,
   onToggleInventory,
-  onToggleOnline,
+  onSetOnlineMode,
   pending,
   onOpenCalendar,
   deleteMode,
@@ -87,9 +90,9 @@ export function UserRow({
             isSelf={isSelf}
             confirmingDelete={confirmingDelete}
             onStartDelete={onStartDelete}
-            onlineEnabled={Boolean(user.onlineEnabled)}
+            onlineMode={(user.onlineMode ?? "offline") as OnlineMode}
             email={user.email}
-            onToggleOnline={onToggleOnline}
+            onSetOnlineMode={onSetOnlineMode}
             pending={pending}
           />
         </td>
@@ -140,9 +143,9 @@ type DeleteOrOnlineProps = {
   isSelf: boolean;
   confirmingDelete: boolean;
   onStartDelete: () => void;
-  onlineEnabled: boolean;
+  onlineMode: OnlineMode;
   email: string;
-  onToggleOnline: () => void;
+  onSetOnlineMode: (mode: OnlineMode) => void;
   pending: boolean;
 };
 
@@ -150,20 +153,20 @@ type DeleteOrOnlineProps = {
  * Last column of the row. When delete mode is on, shows either the Delete
  * chip, a "Confirm below…" hint while the confirm sub-row is open, or an
  * inert "you" pill for the current admin (can't delete themselves). When
- * delete mode is off, shows the iOS-style online toggle.
+ * delete mode is off, shows the three-state online-mode picker.
  */
 function DeleteOrOnlineCell({
   deleteMode,
   isSelf,
   confirmingDelete,
   onStartDelete,
-  onlineEnabled,
+  onlineMode,
   email,
-  onToggleOnline,
+  onSetOnlineMode,
   pending,
 }: DeleteOrOnlineProps) {
   return (
-    <div className="flex h-6 items-center justify-center">
+    <div className="flex items-center justify-center">
       {deleteMode ? (
         isSelf ? (
           <span
@@ -180,47 +183,19 @@ function DeleteOrOnlineCell({
           </Chip>
         )
       ) : (
-        <OnlineToggle
-          enabled={onlineEnabled}
-          email={email}
-          onToggle={onToggleOnline}
-          pending={pending}
+        <SegmentedControl<OnlineMode>
+          options={ONLINE_MODE_OPTIONS}
+          value={onlineMode}
+          onChange={onSetOnlineMode}
+          shape="pill"
+          size="sm"
+          selectionMode="toggle"
+          tone="accent"
+          disabled={pending}
+          aria-label={`Online mode for ${email}`}
         />
       )}
     </div>
-  );
-}
-
-type OnlineToggleProps = {
-  enabled: boolean;
-  email: string;
-  onToggle: () => void;
-  pending: boolean;
-};
-
-/**
- * iOS-style track-and-thumb switch. Intentionally not a labeled `<Button>` —
- * the on/off state is the entire affordance.
- */
-function OnlineToggle({ enabled, email, onToggle, pending }: OnlineToggleProps) {
-  return (
-    // biome-ignore lint/correctness/noRestrictedElements: track+thumb toggle widget, not a labeled button
-    <button
-      type="button"
-      onClick={onToggle}
-      disabled={pending}
-      className={`relative inline-flex h-6 w-11 items-center rounded-full transition ${
-        enabled ? "bg-accent-500" : "bg-surface-700"
-      } ${pending ? "opacity-50" : ""}`}
-      aria-pressed={enabled}
-      aria-label={`Toggle online for ${email}`}
-    >
-      <span
-        className={`inline-block h-4 w-4 transform rounded-full bg-white transition ${
-          enabled ? "translate-x-6" : "translate-x-1"
-        }`}
-      />
-    </button>
   );
 }
 

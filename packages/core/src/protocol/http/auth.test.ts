@@ -3,8 +3,9 @@ import {
   AdminUserListSchema,
   AdminUserSchema,
   AuthConfigSchema,
+  OnlineModeSchema,
   SessionUserSchema,
-  SetOnlineBodySchema,
+  SetOnlineModeBodySchema,
   WsTicketResponseSchema,
 } from "./auth.ts";
 
@@ -19,22 +20,36 @@ describe("AuthConfigSchema", () => {
   });
 });
 
-describe("SessionUserSchema", () => {
-  it("defaults role to 'user' and onlineEnabled to false", () => {
-    const u = SessionUserSchema.parse({ id: "u1", email: "a@b.com" });
-    expect(u.role).toBe("user");
-    expect(u.onlineEnabled).toBe(false);
+describe("OnlineModeSchema", () => {
+  it("accepts each of the three values", () => {
+    for (const v of ["online", "offline", "both"] as const) {
+      expect(OnlineModeSchema.parse(v)).toBe(v);
+    }
   });
 
-  it("accepts admin role and online flag", () => {
+  it("rejects anything else (including the legacy boolean)", () => {
+    expect(() => OnlineModeSchema.parse(true)).toThrow();
+    expect(() => OnlineModeSchema.parse("yes")).toThrow();
+    expect(() => OnlineModeSchema.parse("ONLINE")).toThrow();
+  });
+});
+
+describe("SessionUserSchema", () => {
+  it("defaults role to 'user' and onlineMode to 'offline'", () => {
+    const u = SessionUserSchema.parse({ id: "u1", email: "a@b.com" });
+    expect(u.role).toBe("user");
+    expect(u.onlineMode).toBe("offline");
+  });
+
+  it("accepts admin role and a non-default mode", () => {
     const u = SessionUserSchema.parse({
       id: "u1",
       email: "a@b.com",
       role: "admin",
-      onlineEnabled: true,
+      onlineMode: "both",
     });
     expect(u.role).toBe("admin");
-    expect(u.onlineEnabled).toBe(true);
+    expect(u.onlineMode).toBe("both");
   });
 
   it("rejects an unknown role string", () => {
@@ -42,15 +57,24 @@ describe("SessionUserSchema", () => {
       SessionUserSchema.parse({ id: "u1", email: "a@b.com", role: "superadmin" }),
     ).toThrow();
   });
+
+  it("rejects an unknown online mode", () => {
+    expect(() =>
+      SessionUserSchema.parse({ id: "u1", email: "a@b.com", onlineMode: "remote" }),
+    ).toThrow();
+  });
 });
 
-describe("SetOnlineBodySchema", () => {
-  it("accepts a boolean", () => {
-    expect(SetOnlineBodySchema.parse({ onlineEnabled: true })).toEqual({ onlineEnabled: true });
+describe("SetOnlineModeBodySchema", () => {
+  it("accepts each enum value", () => {
+    for (const v of ["online", "offline", "both"] as const) {
+      expect(SetOnlineModeBodySchema.parse({ onlineMode: v })).toEqual({ onlineMode: v });
+    }
   });
 
-  it("rejects non-boolean", () => {
-    expect(() => SetOnlineBodySchema.parse({ onlineEnabled: "yes" })).toThrow();
+  it("rejects non-enum values", () => {
+    expect(() => SetOnlineModeBodySchema.parse({ onlineMode: true })).toThrow();
+    expect(() => SetOnlineModeBodySchema.parse({ onlineMode: "remote" })).toThrow();
   });
 });
 
@@ -64,7 +88,7 @@ describe("AdminUserSchema", () => {
     });
     expect(u.id).toBe("u1");
     expect(u.role).toBeUndefined();
-    expect(u.onlineEnabled).toBeUndefined();
+    expect(u.onlineMode).toBeUndefined();
   });
 
   it("accepts Date instances for createdAt (test fixtures often pass Date)", () => {
@@ -79,13 +103,13 @@ describe("AdminUserSchema", () => {
       email: "a@b.com",
       name: "Anya",
       role: null,
-      onlineEnabled: null,
+      onlineMode: null,
       internal: null,
       guest: null,
       createdAt: "2026-05-21T00:00:00.000Z",
     });
     expect(u.role).toBeNull();
-    expect(u.onlineEnabled).toBeNull();
+    expect(u.onlineMode).toBeNull();
   });
 
   it("accepts unknown role strings (server admin plugin is configurable)", () => {
@@ -107,7 +131,7 @@ describe("AdminUserSchema", () => {
       image: "https://cdn.example/avatars/u1.png",
       emailVerified: true,
       role: "admin",
-      onlineEnabled: true,
+      onlineMode: "both",
       banned: false,
       banReason: null,
       banExpires: null,

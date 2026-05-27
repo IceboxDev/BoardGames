@@ -491,7 +491,9 @@ export function applyAction(
   action: SkyTeamAction,
   ctx: ApplyActionContext,
 ): SkyTeamGameState {
-  if (state.outcome != null) {
+  // `acknowledge-game-over` is the only action legal AFTER outcome is set —
+  // every other branch refuses to mutate a finished game.
+  if (state.outcome != null && action.kind !== "acknowledge-game-over") {
     throw new InvalidActionError("game already over");
   }
   switch (action.kind) {
@@ -508,6 +510,14 @@ export function applyAction(
       // request: must be in placement with all dice placed.
       if (!placementsExhausted(state)) {
         throw new InvalidActionError("cannot end round: dice still to place");
+      }
+      return state;
+    case "acknowledge-game-over":
+      // Pure state-transition trigger — the machine moves from
+      // `awaitingGameOver` to the terminal `gameOver` state. No game
+      // state changes here; validation that the game has actually ended.
+      if (state.outcome == null) {
+        throw new InvalidActionError("cannot acknowledge game-over: game still in progress");
       }
       return state;
   }

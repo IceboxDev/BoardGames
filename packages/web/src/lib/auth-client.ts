@@ -26,7 +26,7 @@ export const authClient = createAuthClient({
     adminClient(),
     inferAdditionalFields({
       user: {
-        onlineEnabled: { type: "boolean", required: false, input: false },
+        onlineMode: { type: "string", required: false, input: false },
       },
     }),
   ],

@@ -1,3 +1,4 @@
+import type { OnlineMode } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import {
@@ -13,7 +14,7 @@ import { Chip } from "../components/ui/Chip";
 import { PageMain, PageShell } from "../components/ui/PageShell";
 import { useAdminUsers } from "../hooks/useAdminUsers.ts";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
-import { adminSetOnline } from "../lib/admin";
+import { adminSetOnlineMode } from "../lib/admin";
 import { authClient } from "../lib/auth-client";
 import { errorMessageOf } from "../lib/error-message";
 import {
@@ -90,8 +91,9 @@ export default function AdminPage() {
     });
   }, [rawUsers, aggregate, editableDateKeys]);
 
-  const toggleOnlineMutation = useMutation({
-    mutationFn: (u: AdminUser) => adminSetOnline(u.id, !u.onlineEnabled),
+  const setOnlineModeMutation = useMutation({
+    mutationFn: ({ userId, mode }: { userId: string; mode: OnlineMode }) =>
+      adminSetOnlineMode(userId, mode),
     onSuccess: () => {
       void queryClient.invalidateQueries({ queryKey: qk.adminUsers() });
     },
@@ -115,7 +117,7 @@ export default function AdminPage() {
 
   const errorMessage =
     errorMessageOf(usersQuery.error, "Failed to load users") ??
-    errorMessageOf(toggleOnlineMutation.error, "Update failed") ??
+    errorMessageOf(setOnlineModeMutation.error, "Update failed") ??
     errorMessageOf(deleteMutation.error, "Delete failed");
 
   function toggleDeleteMode() {
@@ -167,8 +169,10 @@ export default function AdminPage() {
             </p>
           ) : (
             <p className="col-span-2 text-sm text-gray-500">
-              Toggle <span className="font-medium text-gray-300">online</span> to grant a user
-              access to multiplayer. Use{" "}
+              Set each user's <span className="font-medium text-gray-300">online mode</span> —{" "}
+              <span className="font-medium text-gray-300">Offline</span> for in-person only,{" "}
+              <span className="font-medium text-gray-300">Online</span> for multiplayer only, or{" "}
+              <span className="font-medium text-gray-300">Both</span>. Use{" "}
               <span className="font-medium text-gray-300">Inventory</span> to set which games each
               user owns. Click <span className="font-medium text-gray-300">Calendar</span> to
               preview a user's offline availability.
@@ -200,9 +204,9 @@ export default function AdminPage() {
               coverage={computeCoverage(aggregate, u.id, editableDateKeys)}
               expanded={expandedUserId === u.id}
               onToggleInventory={() => setExpandedUserId((prev) => (prev === u.id ? null : u.id))}
-              onToggleOnline={() => toggleOnlineMutation.mutate(u)}
+              onSetOnlineMode={(mode) => setOnlineModeMutation.mutate({ userId: u.id, mode })}
               pending={
-                toggleOnlineMutation.isPending && toggleOnlineMutation.variables?.id === u.id
+                setOnlineModeMutation.isPending && setOnlineModeMutation.variables?.userId === u.id
               }
               onOpenCalendar={() => setCalendarUser(u)}
               deleteMode={deleteMode}

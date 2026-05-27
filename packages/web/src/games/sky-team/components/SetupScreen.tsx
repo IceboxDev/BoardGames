@@ -1,6 +1,7 @@
-import { useState } from "react";
-import { OptionCard, SectionLabel, SetupHeader, SetupLayout } from "../../../components/setup";
+import { useMemo, useState } from "react";
 import { Button } from "../../../components/ui/Button";
+import { SCENARIO_CARDS } from "../scenarios";
+import ScenarioPicker from "./ScenarioPicker";
 
 export interface SkyTeamStartConfig {
   scenarioId: string;
@@ -10,13 +11,6 @@ export interface SkyTeamStartConfig {
 
 interface Props {
   onStart: (config: SkyTeamStartConfig) => void;
-}
-
-interface ScenarioOption {
-  id: string;
-  name: string;
-  note: string;
-  accentColor: string;
 }
 
 interface SeatOption {
@@ -35,18 +29,19 @@ interface StrategyOption {
   badgeClass: string;
 }
 
-const SCENARIOS: ScenarioOption[] = [
-  { id: "yul-montreal", name: "YUL Montréal-Trudeau", note: "Base game", accentColor: "#38bdf8" },
-];
-
 const SEATS: SeatOption[] = [
   {
     id: 0,
     label: "Pilot",
-    description: "Blue side; places first each round.",
+    description: "Blue side • deploys gear",
     accentColor: "#38bdf8",
   },
-  { id: 1, label: "Co-Pilot", description: "Orange side; deploys flaps.", accentColor: "#f97316" },
+  {
+    id: 1,
+    label: "Co-Pilot",
+    description: "Orange side • deploys flaps",
+    accentColor: "#f97316",
+  },
 ];
 
 const STRATEGIES: StrategyOption[] = [
@@ -54,125 +49,224 @@ const STRATEGIES: StrategyOption[] = [
     id: "heuristic-v1",
     label: "Heuristic",
     description:
-      "Rule-based AI: prefers safe placements, advances tracks under pressure, spends coffee only to avoid crashes.",
+      "Rule-based AI: safe placements, advances under pressure, spends coffee sparingly.",
     difficulty: "Medium",
     accentColor: "#f59e0b",
-    badgeClass: "bg-amber-500/15 text-amber-400 ring-amber-500/30",
+    badgeClass: "bg-amber-500/15 text-amber-300 ring-amber-500/30",
   },
 ];
 
+const DEFAULT_SCENARIO_SLUG = SCENARIO_CARDS.find((s) => s.backendId != null)?.slug ?? "yul-green";
+
+/**
+ * Sky Team setup screen. Fills the entire `#app-main` viewport with no
+ * scrollbar (universal setup-screen rule). Layout vertical strips:
+ *
+ *   1. Title strip (slim)              — name + tagline
+ *   2. Destination strip (FLEX-1)      — scenario gallery, 4 difficulty
+ *                                        columns, cards stretch to fill
+ *   3. Crew + AI + Start strip (~28%)  — three logical groups: who's
+ *                                        flying, who's flying with them,
+ *                                        the launch button
+ *
+ * Every flex parent carries `min-h-0` so child overflow never forces the
+ * page to scroll.
+ */
 export default function SetupScreen({ onStart }: Props) {
-  const [scenarioId, setScenarioId] = useState(SCENARIOS[0].id);
+  const [scenarioSlug, setScenarioSlug] = useState(DEFAULT_SCENARIO_SLUG);
   const [seat, setSeat] = useState<0 | 1>(0);
   const [strategyId, setStrategyId] = useState(STRATEGIES[0].id);
 
+  const selectedCard = useMemo(
+    () => SCENARIO_CARDS.find((s) => s.slug === scenarioSlug),
+    [scenarioSlug],
+  );
+
   const start = () => {
-    onStart({ scenarioId, humanPlayers: [seat], aiStrategy: strategyId });
+    const backendId = selectedCard?.backendId ?? "yul-montreal";
+    onStart({ scenarioId: backendId, humanPlayers: [seat], aiStrategy: strategyId });
   };
 
-  const totalStars = STRATEGIES.length;
+  const seatLabel = seat === 0 ? "Pilot" : "Co-Pilot";
 
   return (
-    <SetupLayout>
-      <SetupHeader title="Sky Team" subtitle="Choose your seat and AI opponent" />
+    <div className="relative z-10 flex h-full min-h-0 w-full flex-col overflow-hidden px-4 pb-4 pt-3 sm:px-6 sm:pb-5 sm:pt-4">
+      <header className="mb-3 flex shrink-0 items-baseline gap-3">
+        <h1 className="text-xl font-bold text-white sm:text-2xl">Sky Team</h1>
+        <p className="text-xs text-slate-400 sm:text-sm">
+          Pick a destination, your seat, and an AI partner
+        </p>
+      </header>
 
-      {SCENARIOS.length > 1 && (
-        <div className="mb-8 w-full max-w-6xl">
-          <SectionLabel>Scenario</SectionLabel>
-          <div className="grid grid-cols-1 gap-2 sm:gap-4 sm:grid-cols-2">
-            {SCENARIOS.map((s) => (
-              <OptionCard
-                key={s.id}
-                accentColor={s.accentColor}
-                selected={scenarioId === s.id}
-                onClick={() => setScenarioId(s.id)}
-              >
-                <span className="mb-0.5 block text-[11px] font-bold leading-tight text-white sm:mb-1 sm:text-lg">
-                  {s.name}
-                </span>
-                <span className="text-[9px] leading-snug text-gray-400 sm:text-sm">{s.note}</span>
-              </OptionCard>
+      {/* Destination — takes all leftover vertical space above the controls. */}
+      <section className="flex min-h-0 flex-1 flex-col gap-2">
+        <SectionHeading>Destination</SectionHeading>
+        <div className="min-h-0 flex-1">
+          <ScenarioPicker selectedSlug={scenarioSlug} onSelect={setScenarioSlug} />
+        </div>
+      </section>
+
+      {/* Controls strip — fixed-height logical groups for Crew, AI, and Start. */}
+      <footer className="mt-4 grid shrink-0 grid-cols-1 gap-3 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)_minmax(0,1fr)]">
+        <ControlGroup label="Crew">
+          <div className="grid h-full grid-cols-2 gap-2">
+            {SEATS.map((opt) => (
+              <SeatCard
+                key={opt.id}
+                option={opt}
+                selected={seat === opt.id}
+                onSelect={() => setSeat(opt.id)}
+              />
             ))}
           </div>
-        </div>
-      )}
+        </ControlGroup>
 
-      <div className="mb-8 w-full max-w-6xl">
-        <SectionLabel>Your seat (AI takes the other)</SectionLabel>
-        <div className="grid w-full grid-cols-2 gap-2 sm:gap-4">
-          {SEATS.map((opt) => (
-            <OptionCard
-              key={opt.id}
-              accentColor={opt.accentColor}
-              selected={seat === opt.id}
-              onClick={() => setSeat(opt.id)}
-            >
-              <span className="mb-0.5 block text-[11px] font-bold leading-tight text-white sm:mb-1 sm:text-lg">
-                {opt.label}
-              </span>
-              <span className="text-[9px] leading-snug text-gray-400 sm:text-sm">
-                {opt.description}
-              </span>
-            </OptionCard>
-          ))}
-        </div>
+        <ControlGroup label="AI Partner">
+          <div className="flex h-full flex-col gap-2">
+            {STRATEGIES.map((strat) => (
+              <StrategyCard
+                key={strat.id}
+                option={strat}
+                selected={strategyId === strat.id}
+                onSelect={() => setStrategyId(strat.id)}
+              />
+            ))}
+          </div>
+        </ControlGroup>
+
+        <ControlGroup label="Launch">
+          <LaunchSummary
+            airportCode={selectedCard?.airportCode ?? "—"}
+            airportName={selectedCard?.airportName ?? ""}
+            seatLabel={seatLabel}
+            onStart={start}
+          />
+        </ControlGroup>
+      </footer>
+    </div>
+  );
+}
+
+// ── Helpers ──────────────────────────────────────────────────────────────
+
+function SectionHeading({ children }: { children: React.ReactNode }) {
+  return (
+    <h2 className="shrink-0 text-[10px] font-bold uppercase tracking-[0.25em] text-slate-400">
+      {children}
+    </h2>
+  );
+}
+
+/**
+ * One of the three labelled blocks in the bottom strip. Owns the heading
+ * + the rounded card frame so all three groups look like siblings and
+ * line up vertically regardless of inner content.
+ */
+function ControlGroup({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <section className="flex flex-col gap-2">
+      <SectionHeading>{label}</SectionHeading>
+      <div className="min-h-[6.5rem] flex-1 rounded-2xl border border-gray-800/80 bg-gray-900/40 p-2.5">
+        {children}
       </div>
+    </section>
+  );
+}
 
-      <SectionLabel>Choose your opponent</SectionLabel>
+function SeatCard({
+  option,
+  selected,
+  onSelect,
+}: {
+  option: SeatOption;
+  selected: boolean;
+  onSelect: () => void;
+}) {
+  return (
+    // biome-ignore lint/correctness/noRestrictedElements: bespoke pick-tile chrome (accent stripe) — <Button> primary/secondary variants would override it
+    <button
+      type="button"
+      onClick={onSelect}
+      className={`group relative flex flex-col justify-center gap-1 overflow-hidden rounded-lg border bg-gray-800/60 px-3 py-2 text-left transition-all duration-150 ${
+        selected
+          ? "border-white/30 bg-gray-800 shadow-md"
+          : "border-gray-700/70 hover:bg-gray-800 hover:border-gray-600"
+      }`}
+      style={{ borderLeftWidth: "4px", borderLeftColor: option.accentColor }}
+      aria-pressed={selected}
+    >
+      <span className="text-sm font-bold text-white">{option.label}</span>
+      <span className="text-[10px] leading-tight text-gray-400">{option.description}</span>
+    </button>
+  );
+}
 
-      <div className="mb-8 grid w-full min-w-0 max-w-6xl grid-cols-1 gap-2 sm:gap-4">
-        {STRATEGIES.map((strat, index) => {
-          const stars = index + 1;
-          return (
-            <OptionCard
-              key={strat.id}
-              accentColor={strat.accentColor}
-              selected={strategyId === strat.id}
-              className="min-w-0 !px-2 !py-3 sm:!px-4 sm:!py-5"
-              onClick={() => setStrategyId(strat.id)}
-            >
-              <div className="mb-1.5 flex items-start justify-between gap-0.5 sm:mb-3">
-                <span
-                  className={`inline-flex max-w-[4.5rem] items-center truncate rounded-full px-1 py-0.5 text-[8px] font-semibold uppercase tracking-tight ring-1 ring-inset sm:max-w-none sm:px-2.5 sm:text-[10px] sm:tracking-wider ${strat.badgeClass}`}
-                >
-                  {strat.difficulty}
-                </span>
-                <div className="flex shrink-0 gap-px sm:gap-0.5">
-                  {Array.from({ length: totalStars }, (_, i) => i + 1).map((n) => (
-                    <svg
-                      key={n}
-                      viewBox="0 0 20 20"
-                      aria-hidden="true"
-                      fill={n <= stars ? strat.accentColor : "currentColor"}
-                      className={`h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 ${n <= stars ? "" : "text-gray-700"}`}
-                    >
-                      <path
-                        fillRule="evenodd"
-                        d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                        clipRule="evenodd"
-                      />
-                    </svg>
-                  ))}
-                </div>
-              </div>
-
-              <span className="mb-0.5 block text-[11px] font-bold leading-tight text-white sm:mb-1 sm:text-lg">
-                {strat.label}
-              </span>
-
-              <span className="line-clamp-4 text-[9px] leading-snug text-gray-400 sm:line-clamp-none sm:text-sm sm:leading-relaxed">
-                {strat.description}
-              </span>
-            </OptionCard>
-          );
-        })}
+function StrategyCard({
+  option,
+  selected,
+  onSelect,
+}: {
+  option: StrategyOption;
+  selected: boolean;
+  onSelect: () => void;
+}) {
+  return (
+    // biome-ignore lint/correctness/noRestrictedElements: bespoke pick-tile chrome (accent stripe, difficulty pill) — <Button> variants would override the styling
+    <button
+      type="button"
+      onClick={onSelect}
+      className={`group relative flex h-full flex-col gap-1 overflow-hidden rounded-lg border bg-gray-800/60 px-3 py-2 text-left transition-all duration-150 ${
+        selected
+          ? "border-white/30 bg-gray-800 shadow-md"
+          : "border-gray-700/70 hover:bg-gray-800 hover:border-gray-600"
+      }`}
+      style={{ borderLeftWidth: "4px", borderLeftColor: option.accentColor }}
+      aria-pressed={selected}
+    >
+      <div className="flex items-center justify-between gap-2">
+        <span className="text-sm font-bold text-white">{option.label}</span>
+        <span
+          className={`inline-flex items-center rounded-full px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wider ring-1 ring-inset ${option.badgeClass}`}
+        >
+          {option.difficulty}
+        </span>
       </div>
+      <span className="line-clamp-2 text-[10px] leading-tight text-gray-400">
+        {option.description}
+      </span>
+    </button>
+  );
+}
 
-      <div className="flex justify-center pt-2">
-        <Button variant="primary" size="lg" onClick={start}>
-          Start Game
-        </Button>
+/**
+ * Right-most block of the controls strip. Shows a compact summary of the
+ * current selection so the Start button isn't an unanchored CTA — the
+ * player can confirm where they're flying and from which seat at a glance,
+ * then hit Launch. The button fills the height of the group.
+ */
+function LaunchSummary({
+  airportCode,
+  airportName,
+  seatLabel,
+  onStart,
+}: {
+  airportCode: string;
+  airportName: string;
+  seatLabel: string;
+  onStart: () => void;
+}) {
+  return (
+    <div className="flex h-full flex-col justify-between gap-2">
+      <div className="flex flex-col gap-0.5">
+        <span className="font-mono text-base font-black tracking-wider text-white">
+          {airportCode}
+        </span>
+        <span className="line-clamp-1 text-[11px] text-gray-300">{airportName}</span>
+        <span className="text-[10px] text-slate-500">Flying as {seatLabel}</span>
       </div>
-    </SetupLayout>
+      <Button variant="primary" size="lg" block onClick={onStart}>
+        Start Flight
+      </Button>
+    </div>
   );
 }

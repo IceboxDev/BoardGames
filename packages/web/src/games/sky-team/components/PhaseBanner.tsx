@@ -5,10 +5,61 @@ interface Props {
   view: SkyTeamPlayerView;
   isAiThinking?: boolean;
   onEndRound?: () => void;
+  onAcknowledgeGameOver?: () => void;
 }
 
-export default function PhaseBanner({ view, isAiThinking, onEndRound }: Props) {
-  if (view.outcome) return null;
+const OUTCOME_HEADLINES: Record<string, { label: string; tone: "win" | "lose" }> = {
+  win: { label: "Smooth landing!", tone: "win" },
+  "loss-spin": { label: "Crash — axis spin", tone: "lose" },
+  "loss-collision": { label: "Crash — airliner collision", tone: "lose" },
+  "loss-overshoot": { label: "Crash — overshot the airport", tone: "lose" },
+  "loss-overrun": { label: "Crash — runway overrun", tone: "lose" },
+  "loss-undershoot": { label: "Crash — out of altitude", tone: "lose" },
+  "loss-mandatory": { label: "Crash — mandatory dice unplaced", tone: "lose" },
+  "loss-airliners-remain": { label: "Crash — airliners not cleared", tone: "lose" },
+  "loss-gear-or-flaps": { label: "Crash — gear/flaps not deployed", tone: "lose" },
+  "loss-axis-not-level": { label: "Crash — axis not level on touchdown", tone: "lose" },
+};
+
+export default function PhaseBanner({
+  view,
+  isAiThinking,
+  onEndRound,
+  onAcknowledgeGameOver,
+}: Props) {
+  // Game just ended (crash or victory). The machine is parked in
+  // `awaitingGameOver` until a human dispatches `acknowledge-game-over`,
+  // which lets the team study the final board (e.g. which die triggered
+  // the collision) before the GameOverScreen swaps in.
+  if (view.canAcknowledgeGameOver) {
+    const meta = view.outcome ? OUTCOME_HEADLINES[view.outcome] : undefined;
+    const tone = meta?.tone ?? "lose";
+    return (
+      <span className="flex items-center gap-3">
+        <span
+          className={[
+            "text-sm font-semibold",
+            tone === "win" ? "text-emerald-300" : "text-rose-300",
+          ].join(" ")}
+        >
+          {meta?.label ?? "Game over"}
+        </span>
+        <Button
+          variant="primary"
+          size="sm"
+          onClick={onAcknowledgeGameOver}
+          disabled={!onAcknowledgeGameOver}
+          className={
+            tone === "win"
+              ? "!bg-emerald-600 hover:!bg-emerald-500 !shadow-emerald-500/20"
+              : "!bg-rose-600 hover:!bg-rose-500 !shadow-rose-500/20"
+          }
+        >
+          {tone === "win" ? "Review landing" : "View crash"}
+        </Button>
+      </span>
+    );
+  }
 
   // The game runs 7 rounds (printed rules); the 7th is the final-approach
   // landing round. The counter reads "Round N/7" the whole way, and we

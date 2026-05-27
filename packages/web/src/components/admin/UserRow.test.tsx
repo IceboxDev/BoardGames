@@ -17,7 +17,7 @@ function user(overrides: Partial<AdminUser> = {}): AdminUser {
     name: "Lina Smith",
     email: "lina@example.com",
     role: "user",
-    onlineEnabled: false,
+    onlineMode: "offline",
     createdAt: new Date("2026-01-01"),
     ...overrides,
   };
@@ -29,7 +29,7 @@ function defaultProps() {
     coverage: { can: 3, maybe: 1, total: 10 },
     expanded: false,
     onToggleInventory: vi.fn(),
-    onToggleOnline: vi.fn(),
+    onSetOnlineMode: vi.fn(),
     pending: false,
     onOpenCalendar: vi.fn(),
     deleteMode: false,
@@ -98,31 +98,42 @@ describe("UserRow — main row", () => {
   });
 });
 
-describe("UserRow — online toggle (default mode)", () => {
-  it("aria-pressed reflects onlineEnabled", () => {
-    renderRow({ user: user({ onlineEnabled: true }) });
-    const toggle = screen.getByRole("button", { name: /Toggle online for lina/ });
-    expect(toggle).toHaveAttribute("aria-pressed", "true");
+describe("UserRow — online-mode picker (default mode)", () => {
+  function getOption(label: "Offline" | "Online" | "Both") {
+    return screen.getByRole("button", { name: label });
+  }
+
+  it("the user's current onlineMode segment reports aria-pressed=true", () => {
+    renderRow({ user: user({ onlineMode: "online" }) });
+    expect(getOption("Online")).toHaveAttribute("aria-pressed", "true");
+    expect(getOption("Offline")).toHaveAttribute("aria-pressed", "false");
+    expect(getOption("Both")).toHaveAttribute("aria-pressed", "false");
   });
 
-  it("aria-pressed=false when offline", () => {
-    renderRow({ user: user({ onlineEnabled: false }) });
-    expect(screen.getByRole("button", { name: /Toggle online for lina/ })).toHaveAttribute(
-      "aria-pressed",
-      "false",
-    );
+  it("defaults to Offline pressed when onlineMode is unset (legacy row)", () => {
+    renderRow({ user: user({ onlineMode: undefined }) });
+    expect(getOption("Offline")).toHaveAttribute("aria-pressed", "true");
   });
 
-  it("fires onToggleOnline on click", async () => {
-    const onToggleOnline = vi.fn();
-    renderRow({ onToggleOnline });
-    await userEvent.click(screen.getByRole("button", { name: /Toggle online for lina/ }));
-    expect(onToggleOnline).toHaveBeenCalledOnce();
+  it("clicking a different segment fires onSetOnlineMode with that value", async () => {
+    const onSetOnlineMode = vi.fn();
+    renderRow({ user: user({ onlineMode: "offline" }), onSetOnlineMode });
+    await userEvent.click(getOption("Both"));
+    expect(onSetOnlineMode).toHaveBeenCalledWith("both");
   });
 
-  it("is disabled while pending", () => {
+  it("clicking the already-active segment is a no-op", async () => {
+    const onSetOnlineMode = vi.fn();
+    renderRow({ user: user({ onlineMode: "offline" }), onSetOnlineMode });
+    await userEvent.click(getOption("Offline"));
+    expect(onSetOnlineMode).not.toHaveBeenCalled();
+  });
+
+  it("all segments are disabled while pending", () => {
     renderRow({ pending: true });
-    expect(screen.getByRole("button", { name: /Toggle online for lina/ })).toBeDisabled();
+    expect(getOption("Offline")).toBeDisabled();
+    expect(getOption("Both")).toBeDisabled();
+    expect(getOption("Online")).toBeDisabled();
   });
 });
 
@@ -150,9 +161,10 @@ describe("UserRow — delete mode", () => {
     expect(onStartDelete).toHaveBeenCalledOnce();
   });
 
-  it("hides the iOS online switch entirely in delete mode", () => {
+  it("hides the online-mode picker entirely in delete mode", () => {
     renderRow({ deleteMode: true });
-    expect(screen.queryByRole("button", { name: /Toggle online for/ })).toBeNull();
+    expect(screen.queryByRole("group", { name: /Online mode for/ })).toBeNull();
+    expect(screen.queryByRole("button", { name: "Offline" })).toBeNull();
   });
 });
 

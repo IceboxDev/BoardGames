@@ -1,6 +1,10 @@
 import {
   InventoryWriteResponseSchema,
+  type PendingInventory,
+  PendingInventorySchema,
+  PendingInventoryWriteResponseSchema,
   SetInventoryBodySchema,
+  SetPendingInventoryBodySchema,
   SlugListSchema,
 } from "@boardgames/core/protocol";
 import { apiFetch } from "./api-fetch.ts";
@@ -30,16 +34,16 @@ export async function adminSaveInventory(userId: string, slugs: string[]) {
 
 export async function adminFetchPendingInventory(signal?: AbortSignal) {
   return apiFetch("/api/admin/pending-inventory", {
-    response: SlugListSchema,
+    response: PendingInventorySchema,
     signal,
   });
 }
 
-export async function adminSavePendingInventory(slugs: string[]) {
+export async function adminSavePendingInventory(payload: PendingInventory) {
   await apiFetch("/api/admin/pending-inventory", {
     method: "PUT",
-    body: { slugs },
-    request: SetInventoryBodySchema,
-    response: InventoryWriteResponseSchema,
+    body: payload,
+    request: SetPendingInventoryBodySchema,
+    response: PendingInventoryWriteResponseSchema,
   });
 }

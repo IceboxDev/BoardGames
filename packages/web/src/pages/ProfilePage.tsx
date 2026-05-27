@@ -18,13 +18,15 @@ export default function ProfilePage() {
   const navigate = useNavigate();
   // `useCurrentUser` is the only sanctioned read of session state — it
   // narrows the untyped better-auth payload through `SessionUserSchema`
-  // so the fields we touch here (`name`, `onlineEnabled`, `isAdmin`) are
+  // so the fields we touch here (`name`, `onlineMode`, `isAdmin`) are
   // guaranteed to match the wire-protocol contract.
   const { user, isAdmin } = useCurrentUser();
   const userId = user?.id ?? null;
   const [syncModalOpen, setSyncModalOpen] = useState(false);
 
-  const onlineUnlocked = Boolean(user?.onlineEnabled);
+  // Online mode 'online' or 'both' unlocks multiplayer; 'offline' keeps it
+  // locked. (The button itself is always shown; only `locked` flips.)
+  const onlineUnlocked = user?.onlineMode !== undefined && user.onlineMode !== "offline";
 
   const { data: ownedSlugs = null } = useQuery({
     queryKey: qk.inventory(userId),
