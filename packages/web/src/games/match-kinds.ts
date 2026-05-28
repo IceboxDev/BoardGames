@@ -33,7 +33,6 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   "wo-wars": "teams",
 
   // Elimination / last-standing
-  bandit: "last-standing",
   chess: "last-standing",
   "chess-for-three": "last-standing",
   durak: "last-standing",

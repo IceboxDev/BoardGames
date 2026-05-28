@@ -6,7 +6,7 @@
  * Used by the free-for-all form to highlight the leader and by the read-side
  * card to mark the winning row in amber.
  */
-const LOW_SCORE_WINS = new Set<string>(["phase-10"]);
+const LOW_SCORE_WINS = new Set<string>(["phase-10", "bandit"]);
 
 export function lowScoreWinsForSlug(slug: string | null): boolean {
   if (!slug) return false;

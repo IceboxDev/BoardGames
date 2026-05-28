@@ -19,6 +19,12 @@ export type GameVariantConfig = {
   label: string;
   mode: "single" | "multi";
   options: readonly VariantOption[];
+  /**
+   * When true, the picker is hidden and the single option's value is shown as
+   * the subtitle automatically. Used for games with only one ruleset where we
+   * still want a non-empty subtitle row (e.g. Bandit → "Standard").
+   */
+  fixed?: boolean;
 };
 
 const CODENAMES_LANGUAGE: GameVariantConfig = {
@@ -34,11 +40,17 @@ const VARIANTS: Record<string, GameVariantConfig> = {
   codenames: CODENAMES_LANGUAGE,
   "codenames-pictures": CODENAMES_LANGUAGE,
   "codenames-duet": CODENAMES_LANGUAGE,
+  bandit: {
+    label: "Ruleset",
+    mode: "single",
+    fixed: true,
+    options: [{ value: "Standard", label: "Standard" }],
+  },
   wavelength: {
     label: "Mode",
     mode: "single",
     options: [
-      { value: "Normal", label: "Normal" },
+      { value: "Standard", label: "Standard" },
       { value: "Advanced", label: "Advanced" },
     ],
   },

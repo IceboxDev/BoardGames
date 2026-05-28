@@ -25,6 +25,9 @@ type Props = {
 export function GameVariantPicker({ gameSlug, outcome, onChange }: Props) {
   const config = variantConfigForSlug(gameSlug);
   if (!config) return null;
+  // Fixed configs (single hardwired ruleset, e.g. Bandit "Standard") are
+  // displayed as a subtitle in MatchCard, not picked here.
+  if (config.fixed) return null;
 
   // one-vs-many is the only outcome kind without a `scenario` field; bail out
   // there to avoid writing an extra key the wire schema would reject.

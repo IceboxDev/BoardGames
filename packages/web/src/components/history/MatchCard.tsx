@@ -11,6 +11,7 @@ import {
   CLOCKTOWER_EDITIONS,
   detectClocktowerEdition,
 } from "../../games/blood-on-the-clocktower/characters";
+import { variantConfigForSlug } from "../../games/match-variants";
 import { games } from "../../games/registry";
 import { lowScoreWinsForSlug } from "../../games/score-config";
 import { BookIcon, EditIcon, XIcon } from "../icons";
@@ -97,6 +98,10 @@ function deriveTitleSubtitle(outcome: MatchOutcome, gameSlug: string | null): st
   // 7 Wonders, Exploding Kittens, etc. Each match kind carries its own optional
   // `scenario` field on the wire.
   if (outcome.kind !== "one-vs-many" && outcome.scenario) return outcome.scenario;
+  // Fixed-variant games (e.g. Bandit) always show their single option's label
+  // even when nothing is persisted on the outcome.
+  const variant = variantConfigForSlug(gameSlug);
+  if (variant?.fixed && variant.options[0]) return variant.options[0].label;
   // BotC also derives the edition from assigned characters as a fallback for
   // legacy records that didn't persist `scenario`.
   if (outcome.kind === "teams" && gameSlug === "blood-on-the-clocktower") {
