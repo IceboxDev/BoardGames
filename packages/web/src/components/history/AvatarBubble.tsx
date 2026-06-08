@@ -26,8 +26,8 @@ type Accent = "good" | "evil" | "village" | "wolf" | "tanner" | "neutral";
 type TeamAccent = Exclude<Accent, "neutral">;
 
 const SIZE_CLASS = {
-  sm: "h-6 w-6 text-[10px]",
-  md: "h-7 w-7 text-[11px]",
+  sm: "h-6 w-6 text-3xs",
+  md: "h-7 w-7 text-2xs",
 } as const;
 
 // Winner gold gradient — saturated enough to read as actual gold, not muted
@@ -57,8 +57,8 @@ const MUTED_BG = "bg-surface-900";
 
 const TONE_TEXT: Record<Tone, string> = {
   winner: "text-amber-50",
-  loser: "text-gray-200",
-  muted: "text-gray-500",
+  loser: "text-fg-primary",
+  muted: "text-fg-muted",
 };
 
 // Ring colour expresses team affiliation; falls back to a neutral tone ring

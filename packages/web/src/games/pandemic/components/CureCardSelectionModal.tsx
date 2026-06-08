@@ -6,6 +6,7 @@ import type {
 } from "@boardgames/core/games/pandemic/types";
 import { useMemo, useState } from "react";
 import { Button } from "../../../components/ui/Button";
+import { Modal } from "../../../components/ui/Modal";
 import PandemicCard from "./PandemicCard";
 
 export type DiscoverCureOption = Extract<LegalAction, { kind: "discover_cure" }>;
@@ -96,70 +97,71 @@ export default function CureCardSelectionModal({
   }
 
   return (
-    <div className="pointer-events-auto fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4">
-      <div className="flex max-h-full w-full max-w-3xl flex-col gap-3 rounded-xl bg-neutral-900 p-5 text-white shadow-xl">
-        <div className="flex items-baseline justify-between">
-          <h2 className="text-lg font-semibold">Discover a Cure</h2>
-          <div className="text-sm text-white/60">
-            Select {needed} cards — {pick.selected.size}/{needed} chosen
-          </div>
+    <Modal
+      onClose={onCancel}
+      title="Discover a Cure"
+      titleClassName="text-lg font-semibold text-white"
+      subheader={
+        <div className="text-sm text-white/60">
+          Select {needed} cards — {pick.selected.size}/{needed} chosen
         </div>
-
-        {options.length > 1 && (
-          <div className="flex gap-2">
-            {options.map((opt) => {
-              const isActive = opt.color === pick.color;
-              return (
-                // Disease-color tab — bespoke chrome that paints with the per-color hex.
-                // biome-ignore lint/correctness/noRestrictedElements: bespoke disease-color tab with dynamic per-color border/background
-                <button
-                  key={opt.color}
-                  type="button"
-                  onClick={() => switchColor(opt.color)}
-                  className="flex items-center gap-2 rounded-full px-3 py-1 text-sm transition-colors"
-                  style={{
-                    backgroundColor: isActive ? COLOR_SWATCH[opt.color] : "#2a2a2a",
-                    color: isActive && opt.color === "yellow" ? "#000" : "#fff",
-                    border: `2px solid ${COLOR_SWATCH[opt.color]}`,
-                  }}
-                >
-                  {COLOR_LABELS[opt.color]}
-                </button>
-              );
-            })}
-          </div>
-        )}
-
-        <div className="flex flex-wrap gap-2 overflow-auto">
-          {cards.map(({ idx, card }) => {
-            const isSelected = pick.selected.has(idx);
-            const atCap = !isSelected && pick.selected.size >= needed;
+      }
+      panelClassName="max-w-3xl max-h-[85vh] overflow-y-auto"
+    >
+      {options.length > 1 && (
+        <div className="flex gap-2">
+          {options.map((opt) => {
+            const isActive = opt.color === pick.color;
             return (
-              // Card-shaped clickable game piece (selectable city card).
-              // biome-ignore lint/correctness/noRestrictedElements: game-piece (cure card) clickable surface
+              // Disease-color tab — bespoke chrome that paints with the per-color hex.
+              // biome-ignore lint/correctness/noRestrictedElements: bespoke disease-color tab with dynamic per-color border/background
               <button
-                key={idx}
+                key={opt.color}
                 type="button"
-                onClick={() => toggle(idx)}
-                disabled={atCap}
-                className="w-32 rounded-lg transition-transform hover:scale-105 disabled:cursor-not-allowed disabled:opacity-40"
-                style={{ height: 90 }}
+                onClick={() => switchColor(opt.color)}
+                className="flex items-center gap-2 rounded-full px-3 py-1 text-sm transition-colors"
+                style={{
+                  backgroundColor: isActive ? COLOR_SWATCH[opt.color] : "#2a2a2a",
+                  color: isActive && opt.color === "yellow" ? "#000" : "#fff",
+                  border: `2px solid ${COLOR_SWATCH[opt.color]}`,
+                }}
               >
-                <PandemicCard card={card} selected={isSelected} />
+                {COLOR_LABELS[opt.color]}
               </button>
             );
           })}
         </div>
+      )}
 
-        <div className="flex justify-end gap-2 pt-1">
-          <Button variant="ghost" size="md" onClick={onCancel}>
-            Cancel
-          </Button>
-          <Button variant="primary" size="md" onClick={handleConfirm} disabled={!isComplete}>
-            Discover Cure
-          </Button>
-        </div>
+      <div className="flex flex-wrap gap-2 overflow-auto">
+        {cards.map(({ idx, card }) => {
+          const isSelected = pick.selected.has(idx);
+          const atCap = !isSelected && pick.selected.size >= needed;
+          return (
+            // Card-shaped clickable game piece (selectable city card).
+            // biome-ignore lint/correctness/noRestrictedElements: game-piece (cure card) clickable surface
+            <button
+              key={idx}
+              type="button"
+              onClick={() => toggle(idx)}
+              disabled={atCap}
+              className="w-32 rounded-lg transition-transform hover:scale-105 disabled:cursor-not-allowed disabled:opacity-40"
+              style={{ height: 90 }}
+            >
+              <PandemicCard card={card} selected={isSelected} />
+            </button>
+          );
+        })}
       </div>
-    </div>
+
+      <div className="flex justify-end gap-2 pt-1">
+        <Button variant="ghost" size="md" onClick={onCancel}>
+          Cancel
+        </Button>
+        <Button variant="primary" size="md" onClick={handleConfirm} disabled={!isComplete}>
+          Discover Cure
+        </Button>
+      </div>
+    </Modal>
   );
 }

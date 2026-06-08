@@ -2,7 +2,7 @@ import { useCallback, useMemo, useState } from "react";
 import { MinusIcon, PlusIcon } from "../icons";
 import { Button } from "../ui/Button";
 import { IconButton } from "../ui/IconButton";
-import { OptionCard } from "./OptionCard";
+import { SelectableCard } from "../ui/SelectableCard";
 import { SectionLabel } from "./SectionLabel";
 import { SetupHeader } from "./SetupHeader";
 import { SetupLayout } from "./SetupLayout";
@@ -99,7 +99,7 @@ function PlayerCountStepper({
         />
       </div>
 
-      <p className="text-xs text-gray-500">
+      <p className="text-xs text-fg-muted">
         You + {value - 1} bot{value > 2 ? "s" : ""}
       </p>
     </div>
@@ -165,8 +165,9 @@ export function PvAISetupScreen({
         {currentStrategies.map((strat, index) => {
           const stars = index + 1;
           return (
-            <OptionCard
+            <SelectableCard
               key={strat.id}
+              variant="stripe"
               accentColor={strat.accentColor}
               selected={effectiveId === strat.id}
               className="min-w-0 !px-2 !py-3 sm:!px-4 sm:!py-5"
@@ -174,7 +175,7 @@ export function PvAISetupScreen({
             >
               <div className="mb-1.5 flex items-start justify-between gap-0.5 sm:mb-3">
                 <span
-                  className={`inline-flex max-w-[4.5rem] items-center truncate rounded-full px-1 py-0.5 text-[8px] font-semibold uppercase tracking-tight ring-1 ring-inset sm:max-w-none sm:px-2.5 sm:text-[10px] sm:tracking-wider ${strat.badgeClass}`}
+                  className={`inline-flex max-w-[4.5rem] items-center truncate rounded-full px-1 py-0.5 text-4xs font-semibold uppercase tracking-tight ring-1 ring-inset sm:max-w-none sm:px-2.5 sm:text-3xs sm:tracking-wider ${strat.badgeClass}`}
                 >
                   {strat.difficulty}
                 </span>
@@ -185,7 +186,7 @@ export function PvAISetupScreen({
                       viewBox="0 0 20 20"
                       aria-hidden="true"
                       fill={n <= stars ? strat.accentColor : "currentColor"}
-                      className={`h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 ${n <= stars ? "" : "text-gray-700"}`}
+                      className={`h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 ${n <= stars ? "" : "text-fg-disabled"}`}
                     >
                       <path
                         fillRule="evenodd"
@@ -197,14 +198,14 @@ export function PvAISetupScreen({
                 </div>
               </div>
 
-              <span className="mb-0.5 block text-[11px] font-bold leading-tight text-white transition-colors group-hover:text-white sm:mb-1 sm:text-lg">
+              <span className="mb-0.5 block text-2xs font-bold leading-tight text-white transition-colors group-hover:text-white sm:mb-1 sm:text-lg">
                 {strat.label}
               </span>
 
-              <span className="line-clamp-4 text-[9px] leading-snug text-gray-400 sm:line-clamp-none sm:text-sm sm:leading-relaxed">
+              <span className="line-clamp-4 text-3xs leading-snug text-fg-secondary sm:line-clamp-none sm:text-sm sm:leading-relaxed">
                 {strat.description}
               </span>
-            </OptionCard>
+            </SelectableCard>
           );
         })}
       </div>

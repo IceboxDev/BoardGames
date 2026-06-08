@@ -5,7 +5,7 @@ import { Chip } from "../ui/Chip";
 import { SegmentedControl } from "../ui/SegmentedControl";
 import { CoverageCell } from "./CoverageCell";
 import { InventoryPanel } from "./InventoryPanel";
-import { ONLINE_MODE_OPTIONS } from "./online-mode-options";
+import { ONLINE_MODE_OPTIONS_COMPACT } from "./online-mode-options";
 import type { AdminUser } from "./types";
 
 /** Match the number of `<th>` cells in the parent <UsersTable> header. */
@@ -65,12 +65,12 @@ export function UserRow({
 }: UserRowProps) {
   return (
     <>
-      <tr className="h-12 text-gray-200">
+      <tr className="h-12 text-fg-primary">
         <td className="pl-5 pr-3 py-3">
           <CoverageCell coverage={coverage} />
         </td>
         <td className="px-5 py-3 font-medium">{user.name || "—"}</td>
-        <td className="px-5 py-3 text-gray-400">{user.email}</td>
+        <td className="px-5 py-3 text-fg-secondary">{user.email}</td>
         <td className="px-5 py-3 text-center">
           <RoleBadge role={user.role ?? null} />
         </td>
@@ -84,7 +84,7 @@ export function UserRow({
             {expanded ? "Close" : "Manage"}
           </Chip>
         </td>
-        <td className="px-5 py-3 text-center">
+        <td className="px-3 py-3 text-center">
           <DeleteOrOnlineCell
             deleteMode={deleteMode}
             isSelf={isSelf}
@@ -130,7 +130,7 @@ function RoleBadge({ role }: { role: string | null }) {
   return (
     <span
       className={`rounded-full px-2 py-0.5 text-xs ${
-        isAdmin ? "bg-accent-500/20 text-accent-300" : "bg-white/5 text-gray-400"
+        isAdmin ? "bg-accent-500/20 text-accent-300" : "bg-white/5 text-fg-secondary"
       }`}
     >
       {role ?? "user"}
@@ -170,7 +170,7 @@ function DeleteOrOnlineCell({
       {deleteMode ? (
         isSelf ? (
           <span
-            className="inline-flex h-6 items-center rounded-md border border-white/5 bg-white/5 px-2.5 text-xs italic text-gray-500"
+            className="inline-flex h-6 items-center rounded-md border border-white/5 bg-white/5 px-2.5 text-xs italic text-fg-muted"
             title="You cannot delete yourself"
           >
             you
@@ -184,11 +184,11 @@ function DeleteOrOnlineCell({
         )
       ) : (
         <SegmentedControl<OnlineMode>
-          options={ONLINE_MODE_OPTIONS}
+          options={ONLINE_MODE_OPTIONS_COMPACT}
           value={onlineMode}
           onChange={onSetOnlineMode}
           shape="pill"
-          size="sm"
+          size="xs"
           selectionMode="toggle"
           tone="accent"
           disabled={pending}
@@ -242,7 +242,7 @@ function DeleteConfirm({
           disabled={deleting}
           spellCheck={false}
           autoComplete="off"
-          className="w-full flex-1 rounded-md border border-rose-500/30 bg-surface-950 px-3 py-1.5 text-sm text-white placeholder:text-gray-600 focus:border-rose-400 focus:outline-none disabled:opacity-50"
+          className="w-full flex-1 rounded-md border border-rose-500/30 bg-surface-950 px-3 py-1.5 text-sm text-white placeholder:text-fg-disabled focus:border-rose-400 focus:outline-none disabled:opacity-50"
         />
         <div className="flex items-center justify-end gap-2">
           <Button variant="ghost" size="sm" onClick={onCancelDelete} disabled={deleting}>

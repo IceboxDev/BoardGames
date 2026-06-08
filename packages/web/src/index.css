@@ -6,11 +6,26 @@
      huge displays (4K monitors at 150% scale weigh in around 2560px) while
      laptop and below stay at the 2xl rules. */
   --breakpoint-3xl: 1920px;
+  /* Named small breakpoint at 420px — where a view-tab strip + a sibling
+     switch (RSVP Going/Not-going) and the admin online-mode picker widen out
+     of their ultra-tight phone layout. Replaces ad-hoc `min-[420px]:`. */
+  --breakpoint-xs2: 420px;
   --color-surface-950: #08090d;
   --color-surface-900: #0f1117;
   --color-surface-800: #171923;
   --color-surface-700: #1f2233;
   --color-surface-600: #2a2d42;
+  /* Foreground / text ramp — the single source of truth for text color on
+     dark surfaces. primary = body + emphasized labels (the `text-gray-100/200`
+     replacement and the document base); secondary = default labels
+     (`text-gray-300/400`); muted = hints/captions (`text-gray-500`); disabled
+     = faint/inactive (`text-gray-600`). `text-white` stays reserved for the
+     brightest emphasis (headings, text on colored CTAs). App chrome must use
+     these tokens, never raw `text-gray-*`. */
+  --color-fg-primary: #e2e6ee;
+  --color-fg-secondary: #9aa3b4;
+  --color-fg-muted: #6b7387;
+  --color-fg-disabled: #495164;
   --color-accent-500: #6366f1;
   --color-accent-400: #818cf8;
   --color-accent-300: #a5b4fc;
@@ -19,10 +34,38 @@
   --color-neon-cyan: #22d3ee;
   --color-neon-purple: #a855f7;
   --color-neon-pink: #ec4899;
+  /* Micro type scale below Tailwind's text-xs (12px). Replaces ad-hoc
+     `text-[11px]` / `text-[10px]` / `text-[8px]` brackets in app chrome. */
+  --text-2xs: 0.6875rem;
+  --text-2xs--line-height: 1rem;
+  --text-3xs: 0.625rem;
+  --text-3xs--line-height: 0.875rem;
+  --text-4xs: 0.5rem;
+  --text-4xs--line-height: 0.75rem;
+  /* Glow shadows. Each carries its palette's exact rgb so call sites stop
+     hand-duplicating `shadow-[0_0_12px_-4px_rgba(99,102,241,0.5)]` — which is
+     just accent-500. Consumed by SegmentedControl/Chip emphasis + selectable
+     surfaces. */
+  --shadow-glow-accent: 0 0 12px -4px rgb(99 102 241 / 0.5);
+  --shadow-glow-amber: 0 0 12px -4px rgb(251 191 36 / 0.5);
+  --shadow-glow-sky: 0 0 12px -4px rgb(56 189 248 / 0.5);
+  --shadow-glow-emerald: 0 0 12px -4px rgb(16 185 129 / 0.5);
+  --shadow-glow-rose: 0 0 12px -4px rgb(244 63 94 / 0.5);
+  --shadow-glow-cyan: 0 0 12px rgb(34 211 238 / 0.5);
+  /* Layout constants. The sticky TopNav is ~45px tall; fixed-height game
+     surfaces subtract it from the dynamic viewport via the `h-below-nav`
+     utility instead of re-typing `calc(100dvh-45px)`. */
+  --layout-nav-height: 45px;
   --font-display: "Inter Variable", "Inter", sans-serif;
   --font-body: "Inter Variable", "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
-  /* Stacking layers. Keep this list as the single source of truth. */
+  /* Stacking layers. Keep this list as the single source of truth.
+     overlay — in-content overlays portaled into #app-main (board peek
+               overlays); local to that stacking context, above board content
+               but below body-portaled dialogs.
+     modal   — body-portaled dialogs (Modal).
+     tooltip — hover previews (Overlay), above an open modal. */
+  --z-overlay: 100;
   --z-modal: 200;
   --z-tooltip: 300;
 }
@@ -36,13 +79,34 @@
   z-index: var(--z-tooltip);
 }
 
+@utility z-overlay {
+  z-index: var(--z-overlay);
+}
+
+/* Fixed-height game surfaces: full dynamic viewport minus the sticky nav. */
+@utility h-below-nav {
+  height: calc(100dvh - var(--layout-nav-height));
+}
+
 /* ── Base ────────────────────────────────────────── */
 
 body {
   font-family: var(--font-body);
   background: var(--color-surface-950);
-  color: #c9d1d9;
+  color: var(--color-fg-primary);
   overflow-x: hidden;
+}
+
+/* Strip the native number-input spinner stepper arrows. They look out of place
+   in the dark UI and add nothing — scores are typed, not stepped one at a time. */
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 /* ── Scrollbar ───────────────────────────────────── */

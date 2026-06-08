@@ -55,7 +55,7 @@ export default function GameScreen({
               className={`flex w-64 shrink-0 flex-col overflow-y-auto bg-gray-900/60 p-4${DEBUG_LAYOUT ? " border-2 border-fuchsia-400 bg-fuchsia-400/10" : ""}`}
             >
               {leftSidebarTitle && (
-                <h3 className="mb-3 shrink-0 text-xs font-bold uppercase tracking-wider text-gray-500">
+                <h3 className="mb-3 shrink-0 text-xs font-bold uppercase tracking-wider text-fg-muted">
                   {leftSidebarTitle}
                 </h3>
               )}
@@ -89,7 +89,7 @@ export default function GameScreen({
         <aside
           className={`my-2 mr-2 flex w-72 shrink-0 flex-col overflow-y-auto rounded-xl bg-gray-900/60 p-4${DEBUG_LAYOUT ? " border-2 border-cyan-400 bg-cyan-400/10" : ""}`}
         >
-          <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-gray-500">History</h3>
+          <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-fg-muted">History</h3>
           {sidebar}
         </aside>
       )}

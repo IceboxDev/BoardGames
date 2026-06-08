@@ -4,6 +4,7 @@ import type { LockedDate, LockHost, LockInForm } from "../../lib/calendar-locks"
 import { Button } from "../ui/Button";
 import { Field } from "../ui/Field";
 import { Modal } from "../ui/Modal";
+import { Select } from "../ui/Select";
 import AddressAutocomplete from "./AddressAutocomplete";
 
 type Props = {
@@ -91,12 +92,11 @@ export default function LockInModal({
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <div className="flex flex-col gap-3">
           <Field label="Host" htmlFor={hostId}>
-            <select
+            <Select
               id={hostId}
               value={hostUserId}
               onChange={(e) => setHostUserId(e.target.value)}
               disabled={busy}
-              className="w-full rounded-xl border border-white/10 bg-surface-900 px-3 py-2 text-sm text-white focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/20 disabled:cursor-not-allowed disabled:opacity-50"
             >
               <option value="">No host yet</option>
               {uniqueCandidates.map((c) => (
@@ -104,7 +104,7 @@ export default function LockInModal({
                   {c.userId === viewer?.id ? `${c.name} (you)` : c.name}
                 </option>
               ))}
-            </select>
+            </Select>
           </Field>
 
           <Field label="Time" htmlFor={timeId}>
@@ -143,7 +143,7 @@ export default function LockInModal({
               />
               <span className="flex flex-1 flex-col gap-0.5">
                 <span className="font-medium">Hosting at home</span>
-                <span className="text-[11px] leading-snug text-gray-400">
+                <span className="text-2xs leading-snug text-fg-secondary">
                   Host's game collection is on-site. Uncheck for off-site nights (someone else's
                   place, a venue, a rental) — the host then gets the same 3-game bring cap as
                   everyone else.

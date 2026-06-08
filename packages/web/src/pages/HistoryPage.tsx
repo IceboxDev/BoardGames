@@ -4,8 +4,7 @@ import { useMemo, useState } from "react";
 import { NightCard } from "../components/history/NightCard";
 import { RecordMatchModal } from "../components/history/RecordMatchModal";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
-import { Button } from "../components/ui/Button";
-import { PageMain, PageShell } from "../components/ui/PageShell";
+import { Button, EmptyState, LoadingState, PageMain, PageShell } from "../components/ui";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { fetchCalendarLocks, type LockedDate } from "../lib/calendar-locks";
 import { deleteMatch, fetchHistory } from "../lib/match-history";
@@ -128,8 +127,8 @@ export default function HistoryPage() {
       <PageMain width="3xl">
         <header className="mb-6 flex items-center justify-between gap-4">
           <div>
-            <h1 className="text-xl font-semibold text-gray-100">Board game history</h1>
-            <p className="mt-1 text-sm text-gray-500">
+            <h1 className="text-xl font-semibold text-fg-primary">Board game history</h1>
+            <p className="mt-1 text-sm text-fg-muted">
               Every match the group has logged, newest first.
             </p>
           </div>
@@ -145,16 +144,12 @@ export default function HistoryPage() {
         </header>
 
         {historyQuery.isLoading ? (
-          <p className="text-center text-sm text-gray-500">Loading…</p>
+          <LoadingState />
         ) : groups.length === 0 ? (
-          <div className="rounded-2xl border border-dashed border-white/10 p-8 text-center">
-            <p className="text-sm text-gray-400">No matches logged yet.</p>
-            {isAdmin && (
-              <p className="mt-1 text-xs text-gray-500">
-                Use "+ Record match" above to add the first one.
-              </p>
-            )}
-          </div>
+          <EmptyState
+            title="No matches logged yet"
+            description={isAdmin ? 'Use "+ Record match" above to add the first one.' : undefined}
+          />
         ) : (
           <div className="flex flex-col gap-4">
             {groups.map((g) => (

@@ -148,7 +148,7 @@ export function TournamentGridShell<TResult>({
       {renderHeader?.()}
 
       <div className="flex items-center gap-3 mb-4">
-        <label className="text-gray-300 text-sm">
+        <label className="text-fg-secondary text-sm">
           Games per matchup:
           <input
             type="number"
@@ -179,7 +179,7 @@ export function TournamentGridShell<TResult>({
 
       {progress && (
         <div className="mb-4">
-          <div className="text-sm text-gray-400 mb-1">
+          <div className="text-sm text-fg-secondary mb-1">
             {currentPair} — {progress.completed}/{progress.total} ({progressPct}%)
           </div>
           <div className="h-2 bg-gray-700 rounded overflow-hidden">
@@ -195,9 +195,9 @@ export function TournamentGridShell<TResult>({
         <table className="border-collapse text-sm">
           <thead>
             <tr>
-              <th className="p-2 text-gray-400" />
+              <th className="p-2 text-fg-secondary" />
               {strategies.map((s) => (
-                <th key={s.id} className="p-2 text-gray-300 font-medium text-center">
+                <th key={s.id} className="p-2 text-fg-secondary font-medium text-center">
                   {s.label}
                 </th>
               ))}
@@ -206,11 +206,11 @@ export function TournamentGridShell<TResult>({
           <tbody>
             {strategies.map((a) => (
               <tr key={a.id}>
-                <td className="p-2 text-gray-300 font-medium">{a.label}</td>
+                <td className="p-2 text-fg-secondary font-medium">{a.label}</td>
                 {strategies.map((b) => (
                   <td key={b.id} className="p-1">
                     {a.id === b.id ? (
-                      <div className="w-full h-full bg-gray-800 rounded p-2 text-center text-gray-600">
+                      <div className="w-full h-full bg-gray-800 rounded p-2 text-center text-fg-disabled">
                         —
                       </div>
                     ) : (

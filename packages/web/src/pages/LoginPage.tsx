@@ -1,11 +1,7 @@
 import { AuthConfigSchema } from "@boardgames/core/protocol";
 import { useEffect, useId, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button } from "../components/ui/Button";
-import { Field } from "../components/ui/Field";
-import { Input } from "../components/ui/Input";
-import { PageShell } from "../components/ui/PageShell";
-import { SegmentedControl } from "../components/ui/SegmentedControl";
+import { Button, ErrorAlert, Field, Input, PageShell, SegmentedControl } from "../components/ui";
 import { apiFetch } from "../lib/api-fetch";
 import { authClient } from "../lib/auth-client";
 
@@ -70,7 +66,7 @@ export default function LoginPage() {
       <div className="w-full max-w-md space-y-6 rounded-2xl border border-white/10 bg-surface-900/80 p-8 shadow-2xl backdrop-blur">
         <div className="text-center">
           <h1 className="gradient-text text-3xl font-bold tracking-tight">Board Game Lab</h1>
-          <p className="mt-2 text-sm text-gray-400">
+          <p className="mt-2 text-sm text-fg-secondary">
             {mode === "signin"
               ? "Welcome back. Sign in to continue."
               : "Create an account to get started."}
@@ -129,11 +125,7 @@ export default function LoginPage() {
             />
           </Field>
 
-          {error && (
-            <div className="rounded-md border border-red-500/30 bg-red-500/10 px-3 py-2 text-sm text-red-300">
-              {error}
-            </div>
-          )}
+          {error && <ErrorAlert message={error} />}
 
           <Button type="submit" size="lg" loading={submitting} className="w-full">
             {mode === "signin" ? "Sign in" : "Create account"}
@@ -144,7 +136,7 @@ export default function LoginPage() {
           <>
             <div className="flex items-center gap-3">
               <div className="h-px flex-1 bg-white/10" />
-              <span className="text-xs uppercase tracking-wider text-gray-500">or</span>
+              <span className="text-xs uppercase tracking-wider text-fg-muted">or</span>
               <div className="h-px flex-1 bg-white/10" />
             </div>
             <Button

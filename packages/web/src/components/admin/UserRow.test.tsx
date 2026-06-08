@@ -98,21 +98,24 @@ describe("UserRow — main row", () => {
   });
 });
 
+// The row picker uses ONLINE_MODE_OPTIONS_COMPACT to keep the segmented
+// control inside the table's Online column — labels are Off / Both / On,
+// not the full Offline / Online used by the pre-register card.
 describe("UserRow — online-mode picker (default mode)", () => {
-  function getOption(label: "Offline" | "Online" | "Both") {
+  function getOption(label: "Off" | "On" | "Both") {
     return screen.getByRole("button", { name: label });
   }
 
   it("the user's current onlineMode segment reports aria-pressed=true", () => {
     renderRow({ user: user({ onlineMode: "online" }) });
-    expect(getOption("Online")).toHaveAttribute("aria-pressed", "true");
-    expect(getOption("Offline")).toHaveAttribute("aria-pressed", "false");
+    expect(getOption("On")).toHaveAttribute("aria-pressed", "true");
+    expect(getOption("Off")).toHaveAttribute("aria-pressed", "false");
     expect(getOption("Both")).toHaveAttribute("aria-pressed", "false");
   });
 
-  it("defaults to Offline pressed when onlineMode is unset (legacy row)", () => {
+  it("defaults to Off pressed when onlineMode is unset (legacy row)", () => {
     renderRow({ user: user({ onlineMode: undefined }) });
-    expect(getOption("Offline")).toHaveAttribute("aria-pressed", "true");
+    expect(getOption("Off")).toHaveAttribute("aria-pressed", "true");
   });
 
   it("clicking a different segment fires onSetOnlineMode with that value", async () => {
@@ -125,15 +128,15 @@ describe("UserRow — online-mode picker (default mode)", () => {
   it("clicking the already-active segment is a no-op", async () => {
     const onSetOnlineMode = vi.fn();
     renderRow({ user: user({ onlineMode: "offline" }), onSetOnlineMode });
-    await userEvent.click(getOption("Offline"));
+    await userEvent.click(getOption("Off"));
     expect(onSetOnlineMode).not.toHaveBeenCalled();
   });
 
   it("all segments are disabled while pending", () => {
     renderRow({ pending: true });
-    expect(getOption("Offline")).toBeDisabled();
+    expect(getOption("Off")).toBeDisabled();
     expect(getOption("Both")).toBeDisabled();
-    expect(getOption("Online")).toBeDisabled();
+    expect(getOption("On")).toBeDisabled();
   });
 });
 
@@ -164,7 +167,7 @@ describe("UserRow — delete mode", () => {
   it("hides the online-mode picker entirely in delete mode", () => {
     renderRow({ deleteMode: true });
     expect(screen.queryByRole("group", { name: /Online mode for/ })).toBeNull();
-    expect(screen.queryByRole("button", { name: "Offline" })).toBeNull();
+    expect(screen.queryByRole("button", { name: "Off" })).toBeNull();
   });
 });
 

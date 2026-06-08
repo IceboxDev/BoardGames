@@ -43,7 +43,7 @@ export function MatchCard({ match, isAdmin, currentUserId, onEdit, onDelete }: P
           className="h-10 w-10 shrink-0 rounded-md object-cover"
         />
       ) : (
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-surface-800 text-[10px] font-semibold uppercase tracking-wider text-gray-500">
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-surface-800 text-3xs font-semibold uppercase tracking-wider text-fg-muted">
           {match.gameTitle.slice(0, 2)}
         </div>
       )}
@@ -53,8 +53,8 @@ export function MatchCard({ match, isAdmin, currentUserId, onEdit, onDelete }: P
           appears underneath when the game has a meaningful edition/scenario
           tag (BotC edition, Werewolf scenario). */}
       <div className="w-40 shrink-0 sm:w-56">
-        <div className="truncate text-sm font-medium text-gray-100">{match.gameTitle}</div>
-        {subtitle && <div className="truncate text-[10px] italic text-gray-500">{subtitle}</div>}
+        <div className="truncate text-sm font-medium text-fg-primary">{match.gameTitle}</div>
+        {subtitle && <div className="truncate text-3xs italic text-fg-muted">{subtitle}</div>}
       </div>
 
       <div className="min-w-0 flex-1">
@@ -180,7 +180,7 @@ function FreeForAllInline({
             tone={p.score === winningScore ? "winner" : "loser"}
             isMe={p.userId === currentUserId}
           />
-          <span className="text-xs tabular-nums text-gray-500">{p.score}</span>
+          <span className="text-xs tabular-nums text-fg-muted">{p.score}</span>
         </span>
       ))}
     </div>
@@ -221,10 +221,10 @@ function TeamsInline({
               ))}
             </span>
             {hasScore && typeof t.score === "number" && (
-              <span className="text-xs tabular-nums text-gray-500">{t.score}</span>
+              <span className="text-xs tabular-nums text-fg-muted">{t.score}</span>
             )}
             {i < outcome.teams.length - 1 && (
-              <span className="text-[10px] uppercase tracking-wider text-gray-600">vs</span>
+              <span className="text-3xs uppercase tracking-wider text-fg-disabled">vs</span>
             )}
           </span>
         );
@@ -266,7 +266,7 @@ function Storyteller({
         </span>
       </span>
       {moderator.role && (
-        <span className="text-[10px] uppercase tracking-wider text-gray-500">{moderator.role}</span>
+        <span className="text-3xs uppercase tracking-wider text-fg-muted">{moderator.role}</span>
       )}
     </span>
   );
@@ -297,7 +297,7 @@ function LastStandingInline({
       </span>
       {eliminated.length > 0 && (
         <>
-          <span className="text-gray-700">·</span>
+          <span className="text-fg-disabled">·</span>
           <span className="inline-flex -space-x-1.5">
             {eliminated.map((p) => (
               <AvatarBubble
@@ -325,7 +325,7 @@ function CoopInline({
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
       <span
-        className={`rounded px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ${
+        className={`rounded px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wider ${
           won ? "bg-emerald-500/15 text-emerald-300" : "bg-rose-500/15 text-rose-300"
         }`}
       >
@@ -367,12 +367,12 @@ function OneVsManyInline({
           }
         />
         {outcome.solo.roleLabel && (
-          <span className="text-[10px] uppercase tracking-wider text-gray-500">
+          <span className="text-3xs uppercase tracking-wider text-fg-muted">
             {outcome.solo.roleLabel}
           </span>
         )}
       </span>
-      <span className="text-[10px] uppercase tracking-wider text-gray-600">vs</span>
+      <span className="text-3xs uppercase tracking-wider text-fg-disabled">vs</span>
       <span className="inline-flex items-center gap-1">
         <span className="inline-flex -space-x-1.5">
           {outcome.team.members.map((m) => (
@@ -385,7 +385,7 @@ function OneVsManyInline({
           ))}
         </span>
         {outcome.team.roleLabel && (
-          <span className="text-[10px] uppercase tracking-wider text-gray-500">
+          <span className="text-3xs uppercase tracking-wider text-fg-muted">
             {outcome.team.roleLabel}
           </span>
         )}

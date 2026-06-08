@@ -78,7 +78,7 @@ export function GamePicker({ slug, title, onChange }: Props) {
         </ul>
       )}
       {!slug && query && (
-        <p className="mt-1 text-[11px] text-gray-500">
+        <p className="mt-1 text-2xs text-fg-muted">
           Will be saved as a free-text title (not in the registry).
         </p>
       )}

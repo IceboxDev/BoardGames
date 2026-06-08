@@ -313,7 +313,7 @@ export default function OfflineDashboard() {
     >
       <PageMain width="full" padding="tight" fillHeight className="gap-2">
         <p
-          className={`shrink-0 text-center text-[11px] text-gray-400 ${mode === "edit" ? "" : "invisible"}`}
+          className={`shrink-0 text-center text-2xs text-fg-secondary ${mode === "edit" ? "" : "invisible"}`}
           aria-hidden={mode !== "edit"}
         >
           <span className="hidden sm:inline">Tap a day to cycle: </span>

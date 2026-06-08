@@ -105,7 +105,7 @@ export default function LobbyRoute() {
   // a thin holding screen — short-lived (one server round-trip).
   if (!mp.roomState) {
     return (
-      <div className="flex min-h-0 flex-1 items-center justify-center text-sm text-gray-500">
+      <div className="flex min-h-0 flex-1 items-center justify-center text-sm text-fg-muted">
         Joining room {urlRoomCode}…
       </div>
     );
@@ -133,7 +133,7 @@ export default function LobbyRoute() {
           picker). Falls through to `<NoLobbyConfig />` for games without
           one — no Suspense fallback because the chunk is tiny. */}
       <Suspense fallback={null}>
-        <LobbyConfigComponent value={config} onChange={setConfig} />
+        <LobbyConfigComponent value={config} onChange={setConfig} isHost={mp.isHost} />
       </Suspense>
     </Lobby>
   );

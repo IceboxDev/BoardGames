@@ -86,7 +86,7 @@ export default function CardTag({ label, color, imageUrl, tooltipContent }: Card
       {/* biome-ignore lint/a11y/noStaticElementInteractions: tooltip hover trigger */}
       <span
         ref={triggerRef}
-        className="inline-flex items-center rounded px-1 py-0.5 text-[11px] font-medium transition hover:brightness-125"
+        className="inline-flex items-center rounded px-1 py-0.5 text-2xs font-medium transition hover:brightness-125"
         style={{
           backgroundColor: bgColor,
           color: textColor,
@@ -116,7 +116,7 @@ export default function CardTag({ label, color, imageUrl, tooltipContent }: Card
                   draggable={false}
                 />
               )}
-              <span className="text-center text-[10px] font-medium text-gray-400">{label}</span>
+              <span className="text-center text-3xs font-medium text-fg-secondary">{label}</span>
             </div>
           </div>,
           document.body,

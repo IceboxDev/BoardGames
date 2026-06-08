@@ -12,7 +12,7 @@ interface TurnHeaderProps {
 function TurnHeader({ turnCount, extra }: TurnHeaderProps) {
   return (
     <div className="flex items-center justify-between px-1">
-      <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
+      <span className="text-3xs font-bold uppercase tracking-widest text-fg-muted">
         Turn {turnCount}
       </span>
       {extra}
@@ -59,10 +59,10 @@ export function PlayerListPanel({ turnCount, players, extra }: PlayerListPanelPr
             key={p.index}
             className={`flex w-full items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs transition-colors ${
               p.alive === false
-                ? "bg-gray-800/50 text-gray-600 line-through"
+                ? "bg-gray-800/50 text-fg-disabled line-through"
                 : p.isActive
                   ? "bg-indigo-900/60 text-white ring-1 ring-indigo-500"
-                  : "bg-gray-800/60 text-gray-300"
+                  : "bg-gray-800/60 text-fg-secondary"
             }`}
           >
             <span className="flex-1 truncate font-medium">{p.label}</span>
@@ -71,7 +71,7 @@ export function PlayerListPanel({ turnCount, players, extra }: PlayerListPanelPr
               <span className="w-7 shrink-0 text-center">
                 {p.role && (
                   <span
-                    className={`rounded-full px-1 py-0.5 text-[8px] font-semibold uppercase leading-none ring-1 ring-inset ${ROLE_STYLE[p.role]}`}
+                    className={`rounded-full px-1 py-0.5 text-4xs font-semibold uppercase leading-none ring-1 ring-inset ${ROLE_STYLE[p.role]}`}
                   >
                     {p.role === "attacker" ? "ATK" : "DEF"}
                   </span>
@@ -80,11 +80,11 @@ export function PlayerListPanel({ turnCount, players, extra }: PlayerListPanelPr
             )}
 
             {p.alive !== false ? (
-              <span className="shrink-0 rounded-full bg-gray-700 px-1.5 py-0.5 text-[10px] font-bold tabular-nums leading-none">
+              <span className="shrink-0 rounded-full bg-gray-700 px-1.5 py-0.5 text-3xs font-bold tabular-nums leading-none">
                 {p.handCount}
               </span>
             ) : (
-              <span className="shrink-0 text-[10px]">💀</span>
+              <span className="shrink-0 text-3xs">💀</span>
             )}
           </div>
         ))}
@@ -132,9 +132,9 @@ export function ScoreGridPanel({
 
       <div className="flex flex-1 flex-col justify-center gap-2">
         {/* Grid */}
-        <div className="flex w-full flex-col gap-px overflow-hidden rounded-lg border border-gray-700/50 bg-gray-700/30 text-[10px]">
+        <div className="flex w-full flex-col gap-px overflow-hidden rounded-lg border border-gray-700/50 bg-gray-700/30 text-3xs">
           {/* Header row */}
-          <div className="grid grid-cols-[1rem_1fr_1fr] bg-gray-800/80 px-2 py-1 font-semibold uppercase tracking-wider text-gray-500">
+          <div className="grid grid-cols-[1rem_1fr_1fr] bg-gray-800/80 px-2 py-1 font-semibold uppercase tracking-wider text-fg-muted">
             <span />
             <span className="text-center">{playerName}</span>
             <span className="text-center">{opponentName}</span>
@@ -154,10 +154,10 @@ export function ScoreGridPanel({
               <span
                 className={`text-center font-bold tabular-nums ${
                   !e.playerStarted
-                    ? "text-gray-600"
+                    ? "text-fg-disabled"
                     : e.playerScore >= 0
                       ? "text-emerald-400"
-                      : "text-red-400"
+                      : "text-rose-400"
                 }`}
               >
                 {e.playerStarted ? e.playerScore : "-"}
@@ -165,10 +165,10 @@ export function ScoreGridPanel({
               <span
                 className={`text-center font-bold tabular-nums ${
                   !e.opponentStarted
-                    ? "text-gray-600"
+                    ? "text-fg-disabled"
                     : e.opponentScore >= 0
                       ? "text-emerald-400"
-                      : "text-red-400"
+                      : "text-rose-400"
                 }`}
               >
                 {e.opponentStarted ? e.opponentScore : "-"}

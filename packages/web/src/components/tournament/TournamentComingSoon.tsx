@@ -21,7 +21,7 @@ export default function TournamentComingSoon({
         </svg>
       </div>
       <h2 className="mt-5 text-xl font-semibold text-white">AI Tournament</h2>
-      <p className="mt-2 max-w-sm text-sm leading-relaxed text-gray-400">
+      <p className="mt-2 max-w-sm text-sm leading-relaxed text-fg-secondary">
         Tournament support for {gameTitle} is coming soon — the AIs will face off to see which
         strategy wins more.
       </p>

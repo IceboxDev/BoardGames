@@ -110,7 +110,7 @@ export function CardDeck({
         <div
           className={`${s.cls} flex items-center justify-center ${s.radius} border-2 border-dashed border-gray-700/50`}
         >
-          <span className="text-[10px] font-medium uppercase tracking-wider text-gray-600">
+          <span className="text-3xs font-medium uppercase tracking-wider text-fg-disabled">
             Empty
           </span>
         </div>

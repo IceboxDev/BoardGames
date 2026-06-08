@@ -4,6 +4,9 @@ pre-commit:
     biome:
       glob: "*.{ts,tsx,js,jsx,json,css}"
       run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" npx @biomejs/biome check --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+    style-guard:
+      glob: "packages/web/src/**/*.{ts,tsx}"
+      run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" node scripts/lint-styles.mjs
     typecheck:
       run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" pnpm -r typecheck
     test:

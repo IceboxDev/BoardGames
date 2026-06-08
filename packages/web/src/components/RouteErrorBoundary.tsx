@@ -108,17 +108,17 @@ function RouteErrorScreen({ error, onReset }: ScreenProps) {
         role="alert"
         className="w-full max-w-md rounded-2xl border border-rose-400/20 bg-surface-900/80 p-6 text-center shadow-xl shadow-black/40"
       >
-        <p className="text-[11px] font-semibold uppercase tracking-[0.25em] text-rose-300">
+        <p className="text-2xs font-semibold uppercase tracking-[0.25em] text-rose-300">
           {summary.eyebrow}
         </p>
         <h1 className="mt-2 text-xl font-bold tracking-tight text-white">{summary.title}</h1>
-        <p className="mt-3 text-sm text-gray-400">{summary.body}</p>
+        <p className="mt-3 text-sm text-fg-secondary">{summary.body}</p>
         {summary.detail && (
           <pre
             // Diagnostic strip — surfaces the exact error path / message so
             // a user can paste it into a bug report. Long strings stay
             // scrollable inside the box rather than blowing out the panel.
-            className="mt-4 max-h-32 overflow-auto rounded-lg border border-white/5 bg-surface-950/80 p-3 text-left font-mono text-[11px] text-gray-400"
+            className="mt-4 max-h-32 overflow-auto rounded-lg border border-white/5 bg-surface-950/80 p-3 text-left font-mono text-2xs text-fg-secondary"
           >
             {summary.detail}
           </pre>

@@ -37,12 +37,12 @@ export function NightCard({
     <section className="rounded-xl border border-white/5 bg-surface-900/30 p-2.5">
       <header className="mb-1.5 flex items-baseline justify-between gap-3 px-1">
         <div className="flex min-w-0 items-baseline gap-2">
-          <h3 className="truncate text-sm font-semibold text-gray-200">{dayLabel}</h3>
+          <h3 className="truncate text-sm font-semibold text-fg-primary">{dayLabel}</h3>
           {subtitleBits.length > 0 && (
-            <span className="truncate text-xs text-gray-500">{subtitleBits.join(" · ")}</span>
+            <span className="truncate text-xs text-fg-muted">{subtitleBits.join(" · ")}</span>
           )}
           {!dateKey && (
-            <span className="rounded bg-white/5 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-gray-500">
+            <span className="rounded bg-white/5 px-1.5 py-0.5 text-3xs uppercase tracking-wider text-fg-muted">
               standalone
             </span>
           )}

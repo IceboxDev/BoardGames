@@ -18,22 +18,22 @@ export function BggMeta({ bgg }: { bgg: BggGame }) {
   if (!hasRating && !hasWeight) return null;
 
   return (
-    <div className="mt-3 flex flex-col gap-2 border-t border-white/[0.05] pt-3 text-[11px] text-gray-400">
+    <div className="mt-3 flex flex-col gap-2 border-t border-white/[0.05] pt-3 text-2xs text-fg-secondary">
       {hasRating && bgg.averageRating !== null && (
         <div className="flex items-center justify-between gap-3">
           <span className="flex items-center gap-1.5">
             <StarIcon className="h-3.5 w-3.5 text-amber-400" />
-            <span className="font-semibold text-gray-200">{bgg.averageRating.toFixed(1)}</span>
-            <span className="text-gray-500">/ 10</span>
+            <span className="font-semibold text-fg-primary">{bgg.averageRating.toFixed(1)}</span>
+            <span className="text-fg-muted">/ 10</span>
           </span>
           {bgg.numRatings ? (
-            <span className="text-[10px] text-gray-500">{formatCount(bgg.numRatings)} ratings</span>
+            <span className="text-3xs text-fg-muted">{formatCount(bgg.numRatings)} ratings</span>
           ) : null}
         </div>
       )}
       {hasWeight && bgg.averageWeight !== null && (
         <div className="flex items-center gap-2">
-          <span className="shrink-0 text-[10px] uppercase tracking-[0.18em] text-gray-500">
+          <span className="shrink-0 text-3xs uppercase tracking-[0.18em] text-fg-muted">
             Complexity
           </span>
           <div className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-white/[0.06]">
@@ -42,10 +42,10 @@ export function BggMeta({ bgg }: { bgg: BggGame }) {
               style={{ width: `${Math.min(100, (bgg.averageWeight / 5) * 100)}%` }}
             />
           </div>
-          <span className="shrink-0 font-semibold text-gray-200 tabular-nums">
+          <span className="shrink-0 font-semibold text-fg-primary tabular-nums">
             {bgg.averageWeight.toFixed(1)}
           </span>
-          <span className="shrink-0 text-[10px] uppercase tracking-[0.18em] text-gray-500">
+          <span className="shrink-0 text-3xs uppercase tracking-[0.18em] text-fg-muted">
             {weightLabel(bgg.averageWeight)}
           </span>
         </div>

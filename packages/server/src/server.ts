@@ -25,6 +25,7 @@ import { getRegisteredSlugs } from "./sessions/machine-registry.ts";
 import { handleWsClose, handleWsMessage, wsAuth } from "./sessions/manager.ts";
 import { ClientMessageParseError, parseClientMessage } from "./sessions/parse-client-message.ts";
 import {
+  handleChat,
   handleConfigureRoom,
   handleCreateRoom,
   handleJoinRoom,
@@ -147,6 +148,9 @@ function handleRoomMessage(ws: import("hono/ws").WSContext, msg: ClientToServerM
       return true;
     case "toggle-ready":
       handleToggleReady(ws, msg);
+      return true;
+    case "chat":
+      handleChat(ws, msg);
       return true;
     default:
       return false;

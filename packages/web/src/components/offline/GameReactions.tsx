@@ -116,7 +116,7 @@ export default function GameReactions({
   const btnSize = size === "sm" ? "h-7 w-7" : "h-9 w-9";
   const iconSize = size === "sm" ? "h-3.5 w-3.5" : "h-[18px] w-[18px]";
   const badgeSize =
-    size === "sm" ? "h-3.5 min-w-[14px] text-[8px]" : "h-[18px] min-w-[18px] text-[10px]";
+    size === "sm" ? "h-3.5 min-w-[14px] text-4xs" : "h-[18px] min-w-[18px] text-3xs";
   const gap = size === "sm" ? "gap-1.5" : "gap-2";
 
   return (

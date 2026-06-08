@@ -102,7 +102,7 @@ export default function TrainerGame({ onViewHistory }: TrainerGameProps) {
   const isSelecting = state.matches("selecting");
 
   return (
-    <div className="flex h-[calc(100dvh-45px)] overflow-hidden">
+    <div className="flex h-below-nav overflow-hidden">
       {/* Center — card grid */}
       <div className="flex-1 min-h-0 min-w-0 p-2">
         <CardGrid

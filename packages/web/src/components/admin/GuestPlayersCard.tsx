@@ -82,10 +82,10 @@ export function GuestPlayersCard({ guests, onChanged }: Props) {
     <div className="mb-6 overflow-hidden rounded-xl border border-amber-500/20 bg-surface-900">
       <div className="flex items-center justify-between gap-3 px-4 py-3">
         <div className="min-w-0">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-amber-400">
+          <p className="text-3xs font-semibold uppercase tracking-[0.25em] text-amber-400">
             Guest players
           </p>
-          <p className="mt-1 text-sm text-gray-300">
+          <p className="mt-1 text-sm text-fg-secondary">
             {guests.length === 0
               ? "No guests yet — add stub accounts for people who never signed up."
               : `${guests.length} guest${guests.length === 1 ? "" : "s"} — pickable in match history.`}
@@ -105,22 +105,22 @@ export function GuestPlayersCard({ guests, onChanged }: Props) {
         <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
           {error && <p className="text-xs text-rose-400">{error}</p>}
           <form onSubmit={addGuest} className="flex flex-wrap items-end gap-2">
-            <label className="flex flex-col gap-1 text-xs text-gray-400">
+            <label className="flex flex-col gap-1 text-xs text-fg-secondary">
               First name
               <input
                 value={first}
                 onChange={(e) => setFirst(e.target.value)}
                 disabled={busy}
-                className="w-40 rounded-md border border-white/10 bg-surface-900 px-2 py-1 text-sm text-gray-100 focus:border-amber-400/60 focus:outline-none"
+                className="w-40 rounded-md border border-white/10 bg-surface-900 px-2 py-1 text-sm text-fg-primary focus:border-amber-400/60 focus:outline-none"
               />
             </label>
-            <label className="flex flex-col gap-1 text-xs text-gray-400">
+            <label className="flex flex-col gap-1 text-xs text-fg-secondary">
               Last name
               <input
                 value={last}
                 onChange={(e) => setLast(e.target.value)}
                 disabled={busy}
-                className="w-40 rounded-md border border-white/10 bg-surface-900 px-2 py-1 text-sm text-gray-100 focus:border-amber-400/60 focus:outline-none"
+                className="w-40 rounded-md border border-white/10 bg-surface-900 px-2 py-1 text-sm text-fg-primary focus:border-amber-400/60 focus:outline-none"
               />
             </label>
             <Button type="submit" variant="primary" size="sm" loading={busy} disabled={busy}>
@@ -134,7 +134,7 @@ export function GuestPlayersCard({ guests, onChanged }: Props) {
                   key={g.id}
                   className="flex items-center gap-2 rounded-md bg-surface-900/60 px-2.5 py-1.5"
                 >
-                  <span className="flex-1 truncate text-sm text-gray-200">{g.name}</span>
+                  <span className="flex-1 truncate text-sm text-fg-primary">{g.name}</span>
                   {pendingDeleteId === g.id ? (
                     <>
                       <span className="text-xs text-rose-300">Delete?</span>

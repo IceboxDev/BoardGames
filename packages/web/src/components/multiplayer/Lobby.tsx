@@ -1,8 +1,7 @@
 import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
 import type { GameRoomConfig } from "@boardgames/core/protocol/room-config";
 import { SetupLayout } from "../setup";
-import { Button } from "../ui/Button";
-import { Chip } from "../ui/Chip";
+import { Badge, Button, Chip, ErrorAlert } from "../ui";
 
 interface LobbyProps {
   roomCode: string;
@@ -41,26 +40,22 @@ export function Lobby({
     <SetupLayout>
       {/* Room code */}
       <div className="mb-8 text-center">
-        <div className="mb-2 text-xs font-medium uppercase tracking-wider text-gray-400">
+        <div className="mb-2 text-xs font-medium uppercase tracking-wider text-fg-secondary">
           Room Code
         </div>
-        <div className="inline-block rounded-xl border border-gray-700/60 bg-gray-800/60 px-8 py-4">
+        <div className="inline-block rounded-xl border border-white/10 bg-surface-800/60 px-8 py-4">
           <span className="text-4xl font-bold tracking-[0.4em] text-emerald-400 sm:text-5xl">
             {roomCode}
           </span>
         </div>
-        <p className="mt-2 text-xs text-gray-500">Share this code with friends on your network</p>
+        <p className="mt-2 text-xs text-fg-muted">Share this code with a friend to play together</p>
       </div>
 
-      {error && (
-        <div className="mx-auto mb-4 w-full max-w-md rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-2 text-center text-sm text-red-400">
-          {error}
-        </div>
-      )}
+      {error && <ErrorAlert message={error} className="mx-auto mb-4 w-full max-w-md text-center" />}
 
       {/* Player slots */}
       <div className="mx-auto mb-6 w-full max-w-md space-y-2">
-        <div className="mb-2 text-xs font-medium uppercase tracking-wider text-gray-400">
+        <div className="mb-2 text-xs font-medium uppercase tracking-wider text-fg-secondary">
           Players
         </div>
         {roomState.slots.map((slot, i) => (
@@ -146,7 +141,7 @@ function SlotRow({
   return (
     <div
       className={`flex items-center gap-3 rounded-lg border px-4 py-3 ${
-        isMe ? "border-emerald-500/30 bg-emerald-500/5" : "border-gray-700/60 bg-gray-800/30"
+        isMe ? "border-emerald-500/30 bg-emerald-500/5" : "border-white/10 bg-surface-800/30"
       }`}
     >
       {/* Status indicator */}
@@ -157,8 +152,8 @@ function SlotRow({
               ? "bg-emerald-400"
               : "bg-amber-400"
             : slot.kind === "ai"
-              ? "bg-blue-400"
-              : "bg-gray-600"
+              ? "bg-sky-400"
+              : "bg-fg-disabled"
         }`}
       />
 
@@ -167,29 +162,21 @@ function SlotRow({
         {slot.kind === "human" ? (
           <div className="flex items-center gap-2">
             <span className="truncate text-sm font-medium text-white">{slot.playerName}</span>
-            {isSlotHost && (
-              <span className="shrink-0 rounded bg-amber-500/15 px-1.5 py-0.5 text-[10px] font-semibold uppercase text-amber-400">
-                Host
-              </span>
-            )}
-            {isMe && !isSlotHost && (
-              <span className="shrink-0 rounded bg-emerald-500/15 px-1.5 py-0.5 text-[10px] font-semibold uppercase text-emerald-400">
-                You
-              </span>
-            )}
+            {isSlotHost && <Badge tone="amber">Host</Badge>}
+            {isMe && !isSlotHost && <Badge tone="emerald">You</Badge>}
           </div>
         ) : slot.kind === "ai" ? (
-          <span className="text-sm text-blue-400">AI ({slot.aiStrategy})</span>
+          <span className="text-sm text-sky-400">AI ({slot.aiStrategy})</span>
         ) : (
-          <span className="text-sm italic text-gray-500">Waiting for player...</span>
+          <span className="text-sm italic text-fg-muted">Waiting for player...</span>
         )}
       </div>
 
       {/* Ready status for humans */}
       {slot.kind === "human" && slot.connected && (
         <span
-          className={`shrink-0 text-[10px] font-semibold uppercase ${
-            slot.ready ? "text-emerald-400" : "text-gray-500"
+          className={`shrink-0 text-3xs font-semibold uppercase ${
+            slot.ready ? "text-emerald-400" : "text-fg-muted"
           }`}
         >
           {slot.ready ? "Ready" : "Not ready"}

@@ -43,9 +43,9 @@ export default function InventoryGrid({ selected, onToggle, games: input = games
         const owned = members.filter((m) => selectedSet.has(m.slug)).length;
         return (
           <section key={family.id}>
-            <h3 className="mb-2 flex items-baseline gap-2 px-1 text-[11px] font-bold uppercase tracking-[0.18em] text-gray-400">
+            <h3 className="mb-2 flex items-baseline gap-2 px-1 text-2xs font-bold uppercase tracking-[0.18em] text-fg-secondary">
               <span>{family.displayName}</span>
-              <span className="text-[10px] font-normal tracking-[0.14em] text-gray-500">
+              <span className="text-3xs font-normal tracking-[0.14em] text-fg-muted">
                 {owned} / {members.length} owned
               </span>
             </h3>
@@ -107,8 +107,8 @@ function InventoryCell({
         className="h-10 w-10 shrink-0 rounded object-cover"
       />
       <span className="min-w-0 flex-1 text-xs">
-        <span className="block truncate font-semibold text-gray-200">{game.title}</span>
-        <span className="block truncate text-[10px] text-gray-500">{game.slug}</span>
+        <span className="block truncate font-semibold text-fg-primary">{game.title}</span>
+        <span className="block truncate text-3xs text-fg-muted">{game.slug}</span>
       </span>
       {checked && (
         <svg

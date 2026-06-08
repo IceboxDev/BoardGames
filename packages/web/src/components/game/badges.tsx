@@ -6,10 +6,10 @@ import { CheckIcon, FlameIcon, StackIcon, StarIcon } from "../icons";
 // the surface chrome reads identically across catalog and carousel cards.
 
 const BADGE_BASE =
-  "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.16em] backdrop-blur-sm";
+  "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-3xs font-bold uppercase tracking-[0.16em] backdrop-blur-sm";
 
 const BADGE_BASE_TIGHT =
-  "inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-bold uppercase tracking-[0.14em] backdrop-blur-sm";
+  "inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-3xs font-bold uppercase tracking-[0.14em] backdrop-blur-sm";
 
 /**
  * "+N variants" / "{N} variants" stack pill. Used by every family card
@@ -64,7 +64,7 @@ export function ComingSoonBadge() {
 /** "2008" year pill, top-right of carousel cards. */
 export function YearBadge({ year }: { year: number | string }) {
   return (
-    <span className="inline-flex items-center rounded-full bg-black/55 px-2 py-0.5 text-[10px] font-semibold text-white/85 backdrop-blur-sm">
+    <span className="inline-flex items-center rounded-full bg-black/55 px-2 py-0.5 text-3xs font-semibold text-white/85 backdrop-blur-sm">
       {year}
     </span>
   );

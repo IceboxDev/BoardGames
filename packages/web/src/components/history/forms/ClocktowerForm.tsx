@@ -10,6 +10,7 @@ import {
   findClocktowerCharacter,
 } from "../../../games/blood-on-the-clocktower/characters";
 import { Chip } from "../../ui/Chip";
+import { Select } from "../../ui/Select";
 import { ParticipantPicker } from "../ParticipantPicker";
 
 type User = { id: string; name: string };
@@ -145,13 +146,13 @@ export function ClocktowerForm({ users, value, onChange }: Props) {
         <div className="flex flex-col gap-1.5">
           <div className="flex items-center justify-between">
             <Label>Assign characters</Label>
-            <span className="text-[11px] text-gray-500">
+            <span className="text-2xs text-fg-muted">
               <span className="text-emerald-300">Good {goodCount}</span>
-              <span className="px-1 text-gray-700">·</span>
+              <span className="px-1 text-fg-disabled">·</span>
               <span className="text-rose-300">Evil {evilCount}</span>
               {unassignedCount > 0 && (
                 <>
-                  <span className="px-1 text-gray-700">·</span>
+                  <span className="px-1 text-fg-disabled">·</span>
                   <span className="text-amber-300">{unassignedCount} unassigned</span>
                 </>
               )}
@@ -211,13 +212,14 @@ function StorytellerPicker({
     <div>
       <Label>Storyteller</Label>
       <div className="flex flex-wrap items-center gap-2">
-        <select
+        <Select
+          compact
+          block={false}
           value={moderator?.userId ?? ""}
           onChange={(e) => {
             const next = users.find((u) => u.id === e.target.value);
             onChangeStoryteller(next ?? null);
           }}
-          className="rounded-md border border-white/10 bg-surface-900 px-2 py-1 text-xs text-gray-100"
         >
           <option value="">— none —</option>
           {users.map((u) => (
@@ -225,13 +227,14 @@ function StorytellerPicker({
               {u.name}
             </option>
           ))}
-        </select>
+        </Select>
         {moderator && (
           <>
-            <select
+            <Select
+              compact
+              block={false}
               value={moderator.role ?? ""}
               onChange={(e) => onChangeFabled(e.target.value || undefined)}
-              className="rounded-md border border-white/10 bg-surface-900 px-2 py-1 text-xs text-gray-100"
             >
               <option value="">No Fabled</option>
               {groups.map((g) => (
@@ -243,8 +246,8 @@ function StorytellerPicker({
                   ))}
                 </optgroup>
               ))}
-            </select>
-            <span className="text-[10px] uppercase tracking-wider text-gray-500">
+            </Select>
+            <span className="text-3xs uppercase tracking-wider text-fg-muted">
               Runs the game · not a team
             </span>
           </>
@@ -296,13 +299,15 @@ function CharacterRow({
   const align = character ? clocktowerAlignment(character.category) : null;
   return (
     <div className="flex items-center gap-2">
-      <span className="flex-1 truncate text-sm text-gray-200">{slot.displayName}</span>
+      <span className="flex-1 truncate text-sm text-fg-primary">{slot.displayName}</span>
       <AlignmentBadge align={align} />
-      <select
+      <Select
+        compact
+        block={false}
+        className="w-44"
         id={id}
         value={slot.role ?? ""}
         onChange={(e) => onRoleChange(e.target.value || undefined)}
-        className="w-44 rounded-md border border-white/10 bg-surface-900 px-2 py-1 text-xs text-gray-100"
       >
         <option value="">— pick character —</option>
         {groups.map((g) => (
@@ -314,7 +319,7 @@ function CharacterRow({
             ))}
           </optgroup>
         ))}
-      </select>
+      </Select>
     </div>
   );
 }
@@ -322,14 +327,14 @@ function CharacterRow({
 function AlignmentBadge({ align }: { align: "good" | "evil" | null }) {
   if (!align) {
     return (
-      <span className="rounded px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-gray-600">
+      <span className="rounded px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wide text-fg-disabled">
         —
       </span>
     );
   }
   return (
     <span
-      className={`rounded px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide ${
+      className={`rounded px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wide ${
         align === "good" ? "bg-emerald-500/15 text-emerald-300" : "bg-rose-500/15 text-rose-300"
       }`}
     >
@@ -365,7 +370,7 @@ function WinnerButton({
 
 function Label({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
+    <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-fg-secondary">
       {children}
     </div>
   );

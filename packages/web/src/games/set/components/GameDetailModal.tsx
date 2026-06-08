@@ -6,9 +6,8 @@ import {
 } from "@boardgames/core/games/set/analytics";
 import { formatTime } from "@boardgames/core/games/set/metrics";
 import type { GameRecord } from "@boardgames/core/games/set/types";
-import { XIcon } from "../../../components/icons";
 import { Button } from "../../../components/ui/Button";
-import { IconButton } from "../../../components/ui/IconButton";
+import { Modal } from "../../../components/ui/Modal";
 import BarChartH from "./charts/BarChartH";
 import RadarChart from "./charts/RadarChart";
 
@@ -106,197 +105,172 @@ export default function GameDetailModal({ record, history, onClose }: GameDetail
   }));
 
   return (
-    // biome-ignore lint/a11y/useSemanticElements: overlay backdrop, button would affect layout
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/70 p-4"
-      onClick={(e) => {
-        if (e.target === e.currentTarget) onClose();
-      }}
-      onKeyDown={(e) => {
-        if ((e.key === "Enter" || e.key === " ") && e.target === e.currentTarget) {
-          e.preventDefault();
-          onClose();
-        }
-      }}
-      role="button"
-      tabIndex={0}
-      aria-label="Close modal"
+    <Modal
+      onClose={onClose}
+      ariaLabel="Game detail"
+      panelClassName="max-w-2xl max-h-[90vh] overflow-y-auto"
     >
-      <div className="relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl bg-gray-900 p-6 shadow-2xl">
-        <IconButton
-          variant="ghost"
-          size="sm"
-          aria-label="Close detail"
-          onClick={onClose}
-          icon={<XIcon className="h-4 w-4" />}
-          className="absolute right-4 top-4"
-        />
+      <div className="mb-4 text-center">
+        <p className="text-xs text-gray-500 uppercase tracking-widest">
+          {new Date(record.timestamp).toLocaleDateString()} &middot; {formatTime(record.durationMs)}
+        </p>
+        <p className="text-4xl font-extrabold text-white mt-1">{record.rating}</p>
+        <p className="text-sm text-gray-400">Rating</p>
+      </div>
 
-        <div className="mb-4 text-center">
-          <p className="text-xs text-gray-500 uppercase tracking-widest">
-            {new Date(record.timestamp).toLocaleDateString()} &middot;{" "}
-            {formatTime(record.durationMs)}
-          </p>
-          <p className="text-4xl font-extrabold text-white mt-1">{record.rating}</p>
-          <p className="text-sm text-gray-400">Rating</p>
-        </div>
+      {/* Stats grid with percentile + delta */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
+        {metrics.map((m) => {
+          const numVal = record[m.key] as number;
+          const pct = computePercentile(history, numVal, m.key as NumericKey, m.lowerIsBetter);
+          const avg = career[
+            m.key === "rating"
+              ? "avgRating"
+              : m.key === "throughput"
+                ? "avgThroughput"
+                : m.key === "avgFindTimeMs"
+                  ? "avgFindTimeMs"
+                  : "avgRating"
+          ] as number;
+          const isTime = m.key.includes("Ms") || m.key.includes("Time");
+          const diff = numVal - avg;
+          const absDiff = Math.abs(diff);
+          const better = m.lowerIsBetter ? diff < 0 : diff > 0;
+          const sign = diff > 0 ? "+" : "";
+          const diffStr = isTime
+            ? `${sign}${(diff / 1000).toFixed(1)}s`
+            : `${sign}${absDiff < 1 ? diff.toFixed(2) : diff.toFixed(1)}`;
+          const diffColor =
+            absDiff < 0.01 ? "text-gray-600" : better ? "text-green-400" : "text-red-400";
 
-        {/* Stats grid with percentile + delta */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 mb-6">
-          {metrics.map((m) => {
-            const numVal = record[m.key] as number;
-            const pct = computePercentile(history, numVal, m.key as NumericKey, m.lowerIsBetter);
-            const avg = career[
-              m.key === "rating"
-                ? "avgRating"
-                : m.key === "throughput"
-                  ? "avgThroughput"
-                  : m.key === "avgFindTimeMs"
-                    ? "avgFindTimeMs"
-                    : "avgRating"
-            ] as number;
-            const isTime = m.key.includes("Ms") || m.key.includes("Time");
-            const diff = numVal - avg;
-            const absDiff = Math.abs(diff);
-            const better = m.lowerIsBetter ? diff < 0 : diff > 0;
-            const sign = diff > 0 ? "+" : "";
-            const diffStr = isTime
-              ? `${sign}${(diff / 1000).toFixed(1)}s`
-              : `${sign}${absDiff < 1 ? diff.toFixed(2) : diff.toFixed(1)}`;
-            const diffColor =
-              absDiff < 0.01 ? "text-gray-600" : better ? "text-green-400" : "text-red-400";
-
-            return (
-              <div
-                key={m.key}
-                className="rounded-lg bg-gray-800 p-2 text-center"
-                title={STAT_TIPS[m.label]}
-              >
-                <p className="text-xs text-gray-500 cursor-help">{m.label}</p>
-                <p className="text-lg font-bold text-white">{m.value}</p>
-                <div className="flex items-center justify-center gap-2 mt-0.5">
-                  <span className={`text-xs font-semibold ${percentileColor(pct)}`}>
-                    {percentileLabel(pct)}
-                  </span>
-                </div>
-                <p className={`text-xs ${diffColor}`}>
-                  {absDiff < 0.01 ? "= avg" : `${diffStr} vs avg`}
-                </p>
+          return (
+            <div
+              key={m.key}
+              className="rounded-lg bg-gray-800 p-2 text-center"
+              title={STAT_TIPS[m.label]}
+            >
+              <p className="text-xs text-gray-500 cursor-help">{m.label}</p>
+              <p className="text-lg font-bold text-white">{m.value}</p>
+              <div className="flex items-center justify-center gap-2 mt-0.5">
+                <span className={`text-xs font-semibold ${percentileColor(pct)}`}>
+                  {percentileLabel(pct)}
+                </span>
               </div>
-            );
-          })}
-        </div>
+              <p className={`text-xs ${diffColor}`}>
+                {absDiff < 0.01 ? "= avg" : `${diffStr} vs avg`}
+              </p>
+            </div>
+          );
+        })}
+      </div>
 
-        {/* Mini Skill Radar */}
-        <div className="flex flex-col items-center mb-6">
-          <h4 className="text-xs text-gray-500 uppercase tracking-wide mb-1">
-            Skill Profile (this game vs career)
+      {/* Mini Skill Radar */}
+      <div className="flex flex-col items-center mb-6">
+        <h4 className="text-xs text-gray-500 uppercase tracking-wide mb-1">
+          Skill Profile (this game vs career)
+        </h4>
+        <RadarChart profile={gameProfile} previousProfile={careerProfile} size={200} />
+        <div className="flex gap-4 mt-1 text-xs text-gray-600">
+          <span className="flex items-center gap-1">
+            <span className="inline-block w-3 h-0.5 bg-indigo-400 rounded" /> This game
+          </span>
+          <span className="flex items-center gap-1">
+            <span
+              className="inline-block w-3 h-0.5 bg-gray-400 rounded"
+              style={{ borderTop: "1px dashed" }}
+            />{" "}
+            Career (last 10)
+          </span>
+        </div>
+      </div>
+
+      {/* Per-SET Timeline */}
+      {bars.length > 1 && (
+        <div className="mb-6">
+          <h4 className="text-xs text-gray-500 uppercase tracking-wide mb-2">
+            Per-SET Timeline (reaction + selection)
           </h4>
-          <RadarChart profile={gameProfile} previousProfile={careerProfile} size={200} />
-          <div className="flex gap-4 mt-1 text-xs text-gray-600">
+          <BarChartH bars={bars} />
+          <div className="flex gap-4 mt-2 text-xs text-gray-600 justify-end">
             <span className="flex items-center gap-1">
-              <span className="inline-block w-3 h-0.5 bg-indigo-400 rounded" /> This game
+              <span
+                className="inline-block w-3 h-2 rounded"
+                style={{ backgroundColor: "#818cf8" }}
+              />{" "}
+              Reaction
             </span>
             <span className="flex items-center gap-1">
               <span
-                className="inline-block w-3 h-0.5 bg-gray-400 rounded"
-                style={{ borderTop: "1px dashed" }}
+                className="inline-block w-3 h-2 rounded"
+                style={{ backgroundColor: "#fb923c" }}
               />{" "}
-              Career (last 10)
+              Selection
             </span>
+            <span className="text-gray-700">Board size annotated</span>
           </div>
         </div>
+      )}
 
-        {/* Per-SET Timeline */}
-        {bars.length > 1 && (
-          <div className="mb-6">
-            <h4 className="text-xs text-gray-500 uppercase tracking-wide mb-2">
-              Per-SET Timeline (reaction + selection)
-            </h4>
-            <BarChartH bars={bars} />
-            <div className="flex gap-4 mt-2 text-xs text-gray-600 justify-end">
-              <span className="flex items-center gap-1">
-                <span
-                  className="inline-block w-3 h-2 rounded"
-                  style={{ backgroundColor: "#818cf8" }}
-                />{" "}
-                Reaction
-              </span>
-              <span className="flex items-center gap-1">
-                <span
-                  className="inline-block w-3 h-2 rounded"
-                  style={{ backgroundColor: "#fb923c" }}
-                />{" "}
-                Selection
-              </span>
-              <span className="text-gray-700">Board size annotated</span>
-            </div>
-          </div>
-        )}
-
-        {/* Find time bar chart */}
-        {record.perSetDetails.length > 1 && (
-          <div className="mb-6">
-            <h4 className="text-xs text-gray-500 uppercase tracking-wide mb-2">
-              Find Time per SET
-            </h4>
-            <div className="flex items-end gap-1 h-20">
-              {record.perSetDetails.map((psr, i) => {
-                const max = Math.max(...record.perSetDetails.map((r) => r.totalFindTimeMs));
-                const h = max > 0 ? (psr.totalFindTimeMs / max) * 100 : 0;
-                return (
-                  <div
-                    // biome-ignore lint/suspicious/noArrayIndexKey: static list / chart data points don't reorder
-                    key={i}
-                    className="flex-1 rounded-t bg-indigo-500"
-                    style={{ height: `${h}%`, minWidth: "4px" }}
-                    title={`SET ${i + 1}: ${(psr.totalFindTimeMs / 1000).toFixed(1)}s`}
-                  />
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {/* Extra stats */}
-        <div className="grid grid-cols-3 gap-2 text-center text-sm mb-4">
-          <div className="rounded-lg bg-gray-800 p-2" title={STAT_TIPS["SETs Found"]}>
-            <p className="text-xs text-gray-500 cursor-help">SETs Found</p>
-            <p className="font-bold text-white">{record.setsFound}</p>
-          </div>
-          <div className="rounded-lg bg-gray-800 p-2" title={STAT_TIPS.Penalties}>
-            <p className="text-xs text-gray-500 cursor-help">Penalties</p>
-            <p className="font-bold text-white">{record.incorrectCalls}</p>
-          </div>
-          <div className="rounded-lg bg-gray-800 p-2" title={STAT_TIPS["+3 Requests"]}>
-            <p className="text-xs text-gray-500 cursor-help">+3 Requests</p>
-            <p className="font-bold text-white">{record.plusThreeRequests}</p>
-          </div>
-          <div className="rounded-lg bg-gray-800 p-2" title={STAT_TIPS["Early Calls"]}>
-            <p className="text-xs text-gray-500 cursor-help">Early Calls</p>
-            <p className="font-bold text-white">
-              {record.earlyCallCount} ({Math.round(record.earlyCallRate * 100)}%)
-            </p>
-          </div>
-          <div className="rounded-lg bg-gray-800 p-2" title={STAT_TIPS.Fatigue}>
-            <p className="text-xs text-gray-500 cursor-help">Fatigue</p>
-            <p className="font-bold text-white">
-              {record.fatigueSlopeMs > 0 ? "+" : ""}
-              {(record.fatigueSlopeMs / 1000).toFixed(1)}s
-            </p>
-          </div>
-          <div className="rounded-lg bg-gray-800 p-2" title={STAT_TIPS["Cards Left"]}>
-            <p className="text-xs text-gray-500 cursor-help">Cards Left</p>
-            <p className="font-bold text-white">{record.cardsRemaining}</p>
+      {/* Find time bar chart */}
+      {record.perSetDetails.length > 1 && (
+        <div className="mb-6">
+          <h4 className="text-xs text-gray-500 uppercase tracking-wide mb-2">Find Time per SET</h4>
+          <div className="flex items-end gap-1 h-20">
+            {record.perSetDetails.map((psr, i) => {
+              const max = Math.max(...record.perSetDetails.map((r) => r.totalFindTimeMs));
+              const h = max > 0 ? (psr.totalFindTimeMs / max) * 100 : 0;
+              return (
+                <div
+                  // biome-ignore lint/suspicious/noArrayIndexKey: static list / chart data points don't reorder
+                  key={i}
+                  className="flex-1 rounded-t bg-indigo-500"
+                  style={{ height: `${h}%`, minWidth: "4px" }}
+                  title={`SET ${i + 1}: ${(psr.totalFindTimeMs / 1000).toFixed(1)}s`}
+                />
+              );
+            })}
           </div>
         </div>
+      )}
 
-        <div className="flex justify-center">
-          <Button variant="secondary" size="md" onClick={onClose}>
-            Close
-          </Button>
+      {/* Extra stats */}
+      <div className="grid grid-cols-3 gap-2 text-center text-sm mb-4">
+        <div className="rounded-lg bg-gray-800 p-2" title={STAT_TIPS["SETs Found"]}>
+          <p className="text-xs text-gray-500 cursor-help">SETs Found</p>
+          <p className="font-bold text-white">{record.setsFound}</p>
+        </div>
+        <div className="rounded-lg bg-gray-800 p-2" title={STAT_TIPS.Penalties}>
+          <p className="text-xs text-gray-500 cursor-help">Penalties</p>
+          <p className="font-bold text-white">{record.incorrectCalls}</p>
+        </div>
+        <div className="rounded-lg bg-gray-800 p-2" title={STAT_TIPS["+3 Requests"]}>
+          <p className="text-xs text-gray-500 cursor-help">+3 Requests</p>
+          <p className="font-bold text-white">{record.plusThreeRequests}</p>
+        </div>
+        <div className="rounded-lg bg-gray-800 p-2" title={STAT_TIPS["Early Calls"]}>
+          <p className="text-xs text-gray-500 cursor-help">Early Calls</p>
+          <p className="font-bold text-white">
+            {record.earlyCallCount} ({Math.round(record.earlyCallRate * 100)}%)
+          </p>
+        </div>
+        <div className="rounded-lg bg-gray-800 p-2" title={STAT_TIPS.Fatigue}>
+          <p className="text-xs text-gray-500 cursor-help">Fatigue</p>
+          <p className="font-bold text-white">
+            {record.fatigueSlopeMs > 0 ? "+" : ""}
+            {(record.fatigueSlopeMs / 1000).toFixed(1)}s
+          </p>
+        </div>
+        <div className="rounded-lg bg-gray-800 p-2" title={STAT_TIPS["Cards Left"]}>
+          <p className="text-xs text-gray-500 cursor-help">Cards Left</p>
+          <p className="font-bold text-white">{record.cardsRemaining}</p>
         </div>
       </div>
-    </div>
+
+      <div className="flex justify-center">
+        <Button variant="secondary" size="md" onClick={onClose}>
+          Close
+        </Button>
+      </div>
+    </Modal>
   );
 }

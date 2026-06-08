@@ -460,6 +460,36 @@ export function handleToggleReady(ws: WSContext, msg: { roomCode: string }): voi
   }
 }
 
+// Rebroadcast a chat message to every seat in the room. The server stamps
+// the sender's slot + display name so clients can't forge identity, and
+// `timestampMs` for stable ordering when client clocks drift.
+export function handleChat(ws: WSContext, msg: { roomCode: string; text: string }): void {
+  const room = rooms.get(msg.roomCode);
+  if (!room) return;
+  const slotIndex = room.clients.get(ws);
+  if (slotIndex === undefined) return;
+  const slot = room.slots[slotIndex];
+  if (slot.kind !== "human") return;
+
+  const text = msg.text.trim();
+  if (!text) return;
+
+  const payload = {
+    type: "chat-message" as const,
+    roomCode: room.code,
+    fromSlot: slotIndex,
+    fromName: slot.playerName,
+    // Cap to the schema's 500-char limit defensively; the validator
+    // already rejected longer messages but trimming may have changed
+    // length within the bound.
+    text: text.slice(0, 500),
+    timestampMs: Date.now(),
+  };
+  for (const clientWs of room.clients.keys()) {
+    send(clientWs, payload);
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Cleanup
 // ---------------------------------------------------------------------------

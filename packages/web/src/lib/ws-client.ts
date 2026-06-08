@@ -37,6 +37,15 @@ export function parseServerMessage(raw: string): ServerMessage {
 
 export type ConnectionStatus = "connecting" | "connected" | "disconnected" | "error";
 
+/** One chat message in the room's running log. Stamped server-side so
+ *  identity (`fromSlot`/`fromName`) can't be forged client-side. */
+export interface ChatMessage {
+  fromSlot: number;
+  fromName: string;
+  text: string;
+  timestampMs: number;
+}
+
 export interface GameSession<TPlayerView, TAction, TResult> {
   // Connection
   status: ConnectionStatus;
@@ -70,6 +79,18 @@ export interface GameSession<TPlayerView, TAction, TResult> {
   startRoom: (config: unknown) => void;
   kickPlayer: (slotIndex: number) => void;
   toggleReady: () => void;
+  /** Clear the connection-level error. Used by screens that present a
+   *  clean-slate entry point (e.g. JoinRoomRoute) so a stale "Host left"
+   *  / "Room ABCD not found" notice from a previous session doesn't
+   *  follow the user back. */
+  clearError: () => void;
+
+  /** In-room chat. `chatMessages` holds the log for the current room
+   *  (cleared on join/leave); `sendChat` broadcasts a message to every
+   *  seat. Only the Sky Team briefing UI uses this today, but it lives
+   *  on the shared session so any game can opt in. */
+  chatMessages: ChatMessage[];
+  sendChat: (text: string) => void;
 }
 
 const WS_URL =
@@ -107,6 +128,7 @@ export function useGameSession<
   const [roomCode, setRoomCode] = useState<string | null>(null);
   const [roomState, setRoomState] = useState<RoomState | null>(null);
   const [mySlot, setMySlot] = useState<number | null>(null);
+  const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
 
   const connect = useCallback(() => {
     if (wsRef.current?.readyState === WebSocket.OPEN) return;
@@ -188,6 +210,7 @@ export function useGameSession<
             setRoomState(msg.roomState);
             setMySlot(0);
             setError(null);
+            setChatMessages([]);
             pendingRejoinRef.current = {
               roomCode: msg.roomCode,
               playerName: playerNameRef.current,
@@ -199,6 +222,7 @@ export function useGameSession<
             setRoomState(msg.roomState);
             setMySlot(msg.yourSlot);
             setError(null);
+            setChatMessages([]);
             break;
 
           case "room-updated":
@@ -211,6 +235,19 @@ export function useGameSession<
             setMySlot(null);
             pendingRejoinRef.current = null;
             setError(msg.reason);
+            setChatMessages([]);
+            break;
+
+          case "chat-message":
+            setChatMessages((prev) => [
+              ...prev,
+              {
+                fromSlot: msg.fromSlot,
+                fromName: msg.fromName,
+                text: msg.text,
+                timestampMs: msg.timestampMs,
+              },
+            ]);
             break;
 
           case "game-started":
@@ -343,7 +380,24 @@ export function useGameSession<
     setRoomState(null);
     setMySlot(null);
     pendingRejoinRef.current = null;
+    // The server may follow up with a `room-closed` (e.g. host left) — wipe
+    // its reason so the deliberate exit doesn't surface as a red error on
+    // the next screen.
+    setError(null);
+    setChatMessages([]);
   }, [sendMessage, roomCode]);
+
+  const clearError = useCallback(() => setError(null), []);
+
+  const sendChat = useCallback(
+    (text: string) => {
+      if (!roomCode) return;
+      const trimmed = text.trim();
+      if (!trimmed) return;
+      sendMessage({ type: "chat", roomCode, text: trimmed.slice(0, 500) });
+    },
+    [sendMessage, roomCode],
+  );
 
   const configureRoom = useCallback(
     (slots: RoomSlot[]) => {
@@ -398,5 +452,8 @@ export function useGameSession<
     startRoom,
     kickPlayer,
     toggleReady,
+    clearError,
+    chatMessages,
+    sendChat,
   };
 }

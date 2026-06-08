@@ -101,6 +101,18 @@ const PlayerReconnectedSchema = z.object({
   playerName: z.string(),
 });
 
+// Chat broadcast. The server stamps `fromSlot` / `fromName` from the
+// sender's seat so clients can't forge identity, and `timestampMs` for
+// stable ordering when messages cross paths in flight.
+const ChatMessageSchema = z.object({
+  type: z.literal("chat-message"),
+  roomCode: z.string(),
+  fromSlot: z.number().int().min(0),
+  fromName: z.string(),
+  text: z.string(),
+  timestampMs: z.number().int().nonnegative(),
+});
+
 // ── Discriminated union ────────────────────────────────────────────────
 
 export const ServerMessageSchema = z.discriminatedUnion("type", [
@@ -116,6 +128,7 @@ export const ServerMessageSchema = z.discriminatedUnion("type", [
   GameStartedSchema,
   PlayerDisconnectedSchema,
   PlayerReconnectedSchema,
+  ChatMessageSchema,
 ]);
 export type ServerMessage = z.infer<typeof ServerMessageSchema>;
 
@@ -124,6 +137,7 @@ export type ServerMessage = z.infer<typeof ServerMessageSchema>;
 // before constructing messages.
 export {
   AiThinkingSchema,
+  ChatMessageSchema,
   ErrorSchema,
   GameOverSchema,
   GameSlugSchema,

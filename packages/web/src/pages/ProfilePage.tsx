@@ -55,7 +55,7 @@ export default function ProfilePage() {
           <h2 className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
             {user?.name ? user.name.split(" ")[0] : "Player"}
           </h2>
-          <p className="mt-3 text-sm text-gray-500">Choose how you'd like to play.</p>
+          <p className="mt-3 text-sm text-fg-muted">Choose how you'd like to play.</p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2">
@@ -78,7 +78,7 @@ export default function ProfilePage() {
         <CalendarSyncCard onClick={() => setSyncModalOpen(true)} />
 
         {!onlineUnlocked && (
-          <p className="mt-8 text-center text-xs text-gray-500">
+          <p className="mt-8 text-center text-xs text-fg-muted">
             Your account is signed in but online play hasn't been unlocked for you yet. The
             administrator can grant access from the admin panel.
           </p>
@@ -175,7 +175,7 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
       onClick={onClick}
       className="group mt-6 flex w-full items-center gap-4 rounded-2xl border border-white/[0.06] bg-surface-900/60 px-5 py-4 text-left transition-all duration-300 hover:border-white/15 hover:bg-surface-900 sm:px-6 sm:py-5"
     >
-      <div className="flex shrink-0 items-center gap-2 text-gray-300 transition-colors group-hover:text-white">
+      <div className="flex shrink-0 items-center gap-2 text-fg-secondary transition-colors group-hover:text-white">
         <GalleryIcon />
         <span className="text-xs font-semibold uppercase tracking-[0.2em]">Gallery</span>
       </div>
@@ -192,7 +192,7 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
             ))}
           </div>
         ) : empty ? (
-          <span className="text-xs text-gray-500">No games yet — ask an admin to add some</span>
+          <span className="text-xs text-fg-muted">No games yet — ask an admin to add some</span>
         ) : (
           <>
             {/* px-0.5 gives the 1px accent ring on the leading and trailing
@@ -215,19 +215,19 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
                 </span>
               ))}
               {overflow > 0 && (
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-800/80 text-[10px] font-semibold text-gray-400 ring-1 ring-white/10">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-800/80 text-3xs font-semibold text-fg-secondary ring-1 ring-white/10">
                   +{overflow}
                 </span>
               )}
             </div>
-            <span className="hidden truncate text-xs text-gray-500 sm:inline">
+            <span className="hidden truncate text-xs text-fg-muted sm:inline">
               {total} {total === 1 ? "game" : "games"}
             </span>
           </>
         )}
       </div>
 
-      <ArrowRightIcon className="h-4 w-4 shrink-0 text-gray-500 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-accent-300" />
+      <ArrowRightIcon className="h-4 w-4 shrink-0 text-fg-muted transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-accent-300" />
     </button>
   );
 }

@@ -33,7 +33,7 @@ export function StatItem({
         {value}
         {highlight && " \u2605"}
       </div>
-      <div className="text-xs text-gray-500">{label}</div>
+      <div className="text-xs text-fg-muted">{label}</div>
     </div>
   );
 }

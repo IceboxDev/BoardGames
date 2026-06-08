@@ -26,8 +26,8 @@ export default {
   // coming later, so there are no `tournamentStrategies` yet — the tournament
   // route renders a "coming soon" placeholder until they're added.
   hasTournament: true,
-  // Stable scenario for the mp lobby. The lobby route reads this as
-  // the initial config when the host clicks Start; no `lobbyConfigComponent`
-  // because there's nothing for the user to pick.
+  // Stable scenario for the mp lobby. Seeds the lobby config; the host
+  // can override it via `lobbyConfigComponent` (the scenario picker).
   defaultMpConfig: { scenarioId: "yul-montreal" },
+  lobbyConfigComponent: lazy(() => import("./SkyTeamLobbyConfig")),
 } satisfies PlayableModule;

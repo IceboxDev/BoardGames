@@ -1,19 +1,22 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { SetupHeader, SetupLayout } from "../setup";
-import { Button } from "../ui/Button";
-
-const PLAYER_NAME_KEY = "boardgames-player-name";
+import { Button, ErrorAlert } from "../ui";
 
 interface JoinRoomProps {
   title: string;
-  onCreateRoom: (playerName: string) => void;
-  onJoinRoom: (code: string, playerName: string) => void;
+  onCreateRoom: () => void;
+  onJoinRoom: (code: string) => void;
   onBack: () => void;
   error?: string | null;
 }
 
+/**
+ * Multiplayer entry point — pick "Create" or "Join". The player's name is
+ * already known from the auth session (every visitor is signed in), so
+ * there's no name prompt. The host clicks Create; joiners type the
+ * 4-letter code their host shared.
+ */
 export function JoinRoom({ title, onCreateRoom, onJoinRoom, onBack, error }: JoinRoomProps) {
-  const [playerName, setPlayerName] = useState(() => localStorage.getItem(PLAYER_NAME_KEY) ?? "");
   const [roomCode, setRoomCode] = useState("");
   const [mode, setMode] = useState<"choose" | "join">("choose");
   const codeInputRef = useRef<HTMLInputElement>(null);
@@ -22,55 +25,23 @@ export function JoinRoom({ title, onCreateRoom, onJoinRoom, onBack, error }: Joi
     if (mode === "join") codeInputRef.current?.focus();
   }, [mode]);
 
-  const saveName = useCallback((name: string) => {
-    setPlayerName(name);
-    if (name.trim()) localStorage.setItem(PLAYER_NAME_KEY, name.trim());
-  }, []);
-
-  const handleCreate = useCallback(() => {
-    const name = playerName.trim();
-    if (!name) return;
-    onCreateRoom(name);
-  }, [playerName, onCreateRoom]);
-
   const handleJoin = useCallback(() => {
-    const name = playerName.trim();
     const code = roomCode.trim().toUpperCase();
-    if (!name || code.length !== 4) return;
-    onJoinRoom(code, name);
-  }, [playerName, roomCode, onJoinRoom]);
+    if (code.length !== 4) return;
+    onJoinRoom(code);
+  }, [roomCode, onJoinRoom]);
 
-  const canCreate = playerName.trim().length > 0;
-  const canJoin = playerName.trim().length > 0 && roomCode.trim().length === 4;
+  const canJoin = roomCode.trim().length === 4;
 
   return (
     <SetupLayout>
-      <SetupHeader title={title} subtitle="Play with friends on your local network" />
+      <SetupHeader title={title} subtitle="Create a new room or join one with a code" />
 
-      {/* Player name (always shown) */}
-      <label className="mx-auto mb-6 block w-full max-w-sm">
-        <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray-400">
-          Your Name
-        </span>
-        <input
-          type="text"
-          value={playerName}
-          onChange={(e) => saveName(e.target.value)}
-          placeholder="Enter your name..."
-          maxLength={20}
-          className="w-full rounded-lg border border-gray-700 bg-gray-800/60 px-4 py-2.5 text-sm text-white placeholder-gray-500 outline-none transition-colors focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30"
-        />
-      </label>
-
-      {error && (
-        <div className="mx-auto mb-4 w-full max-w-sm rounded-lg border border-red-500/30 bg-red-500/10 px-4 py-2 text-center text-sm text-red-400">
-          {error}
-        </div>
-      )}
+      {error && <ErrorAlert message={error} className="mx-auto mb-4 w-full max-w-sm text-center" />}
 
       {mode === "choose" ? (
         <div className="mx-auto flex w-full max-w-sm flex-col gap-3">
-          <Button variant="primary" size="lg" disabled={!canCreate} onClick={handleCreate}>
+          <Button variant="primary" size="lg" onClick={onCreateRoom}>
             Create Room
           </Button>
           <Button variant="secondary" size="lg" onClick={() => setMode("join")}>
@@ -83,7 +54,7 @@ export function JoinRoom({ title, onCreateRoom, onJoinRoom, onBack, error }: Joi
       ) : (
         <div className="mx-auto flex w-full max-w-sm flex-col gap-3">
           <label>
-            <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-gray-400">
+            <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-fg-secondary">
               Room Code
             </span>
             <input
@@ -96,7 +67,7 @@ export function JoinRoom({ title, onCreateRoom, onJoinRoom, onBack, error }: Joi
               }}
               placeholder="ABCD"
               maxLength={4}
-              className="w-full rounded-lg border border-gray-700 bg-gray-800/60 px-4 py-3 text-center text-2xl font-bold uppercase tracking-[0.3em] text-white placeholder-gray-600 outline-none transition-colors focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30"
+              className="w-full rounded-lg border border-white/10 bg-surface-800/60 px-4 py-3 text-center text-2xl font-bold uppercase tracking-[0.3em] text-white placeholder:text-fg-disabled outline-none transition-colors focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30"
             />
           </label>
           <Button variant="primary" size="lg" disabled={!canJoin} onClick={handleJoin}>

@@ -31,7 +31,7 @@ function ReplayShell({
 
   if (loading) {
     return (
-      <div className="flex min-h-0 flex-1 items-center justify-center text-sm text-gray-500">
+      <div className="flex min-h-0 flex-1 items-center justify-center text-sm text-fg-muted">
         Loading replay…
       </div>
     );

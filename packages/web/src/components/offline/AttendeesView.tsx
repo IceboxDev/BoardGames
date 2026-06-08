@@ -4,7 +4,7 @@ import type { GameDefinition } from "../../games/types";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { Attendee } from "../../lib/calendar-games";
 import { XIcon } from "../icons";
-import { IconButton } from "../ui/IconButton";
+import { EmptyState, IconButton } from "../ui";
 
 type Props = {
   attendees: Attendee[];
@@ -66,18 +66,16 @@ export default function AttendeesView({
 
   if (attendees.length === 0) {
     return (
-      <div className="rounded-2xl border border-dashed border-white/10 px-8 py-10 text-center">
-        <p className="text-sm font-medium text-gray-300">Nobody's confirmed yet.</p>
-        <p className="mt-1 text-xs text-gray-500">
-          When people RSVP, they'll show up here with their picks and what they're bringing.
-        </p>
-      </div>
+      <EmptyState
+        title="Nobody's confirmed yet"
+        description="When people RSVP, they'll show up here with their picks and what they're bringing."
+      />
     );
   }
 
   return (
     <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col gap-2 overflow-y-auto px-1 py-2">
-      <p className="px-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-sky-300">
+      <p className="px-2 text-2xs font-semibold uppercase tracking-[0.25em] text-sky-300">
         Who's coming
       </p>
       <ul className="flex flex-col gap-2">
@@ -147,12 +145,12 @@ function AttendeeRow({
         <div className="flex flex-wrap items-center gap-2">
           <span className="truncate text-sm font-semibold text-white">{attendee.name}</span>
           {attendee.isHost && (
-            <span className="shrink-0 rounded-full bg-amber-400/20 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.18em] text-amber-200">
+            <span className="shrink-0 rounded-full bg-amber-400/20 px-2 py-0.5 text-3xs font-bold uppercase tracking-[0.18em] text-amber-200">
               Host
             </span>
           )}
           {attendee.status === "tentative" && (
-            <span className="shrink-0 rounded-full bg-white/[0.06] px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.18em] text-gray-400">
+            <span className="shrink-0 rounded-full bg-white/[0.06] px-2 py-0.5 text-3xs font-bold uppercase tracking-[0.18em] text-fg-secondary">
               Maybe
             </span>
           )}
@@ -163,14 +161,14 @@ function AttendeeRow({
             // modal-open mutation, so we hide it client-side too.
             <span
               title="Marked availability but never opened the RSVP modal — ping them in real life."
-              className="shrink-0 rounded-full bg-sky-400/15 px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.18em] text-sky-200 ring-1 ring-sky-400/40"
+              className="shrink-0 rounded-full bg-sky-400/15 px-2 py-0.5 text-3xs font-bold uppercase tracking-[0.18em] text-sky-200 ring-1 ring-sky-400/40"
             >
               Hasn't RSVP'd yet
             </span>
           )}
         </div>
 
-        <div className="flex flex-wrap items-center gap-1.5 text-[11px] text-gray-400">
+        <div className="flex flex-wrap items-center gap-1.5 text-2xs text-fg-secondary">
           <VoteChip kind="hype" count={attendee.votes.hype} />
           <VoteChip kind="teach" count={attendee.votes.teach} />
           <VoteChip kind="learn" count={attendee.votes.learn} />
@@ -214,12 +212,12 @@ function BringingList({
 }) {
   if (attendee.status === "tentative") {
     return (
-      <span className="text-[11px] text-gray-500">No bringing assignment until they confirm.</span>
+      <span className="text-2xs text-fg-muted">No bringing assignment until they confirm.</span>
     );
   }
   if (attendee.bringing.length === 0) {
     return (
-      <span className="text-[11px] text-gray-500">
+      <span className="text-2xs text-fg-muted">
         {attendee.isHost
           ? "Doesn't own any of tonight's top picks."
           : "Not bringing top-5 games this time."}
@@ -229,7 +227,7 @@ function BringingList({
   return (
     <div className="flex flex-wrap gap-1.5">
       {attendee.isHost && (
-        <span className="inline-flex items-center rounded-full bg-amber-400/15 px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.12em] text-amber-200">
+        <span className="inline-flex items-center rounded-full bg-amber-400/15 px-2 py-1 text-3xs font-semibold uppercase tracking-[0.12em] text-amber-200">
           From their collection
         </span>
       )}
@@ -239,7 +237,7 @@ function BringingList({
         return (
           <span
             key={slug}
-            className="inline-flex max-w-full items-center gap-1.5 rounded-full bg-surface-800 px-2 py-1 text-[11px] text-gray-200 ring-1 ring-[var(--accent)]/40"
+            className="inline-flex max-w-full items-center gap-1.5 rounded-full bg-surface-800 px-2 py-1 text-2xs text-fg-primary ring-1 ring-[var(--accent)]/40"
             style={{ "--accent": g.accentHex } as React.CSSProperties}
           >
             <img
@@ -267,7 +265,7 @@ function VoteChip({ kind, count }: { kind: "hype" | "teach" | "learn"; count: nu
   return (
     <span
       className={`inline-flex items-center gap-1 rounded-full px-1.5 py-0.5 ${
-        dim ? "bg-white/[0.03] text-gray-600" : "bg-white/[0.06] text-gray-200"
+        dim ? "bg-white/[0.03] text-fg-disabled" : "bg-white/[0.06] text-fg-primary"
       }`}
       title={`${meta.label}: ${count}`}
     >
@@ -299,7 +297,7 @@ function CoverageFooter({
     slugs.map((slug) => slugToGame.get(slug)?.title ?? slug).join(", ");
   return (
     <div
-      className={`mt-1 rounded-2xl border px-3 py-2.5 text-[11px] sm:px-4 ${
+      className={`mt-1 rounded-2xl border px-3 py-2.5 text-2xs sm:px-4 ${
         allCovered
           ? "border-emerald-400/30 bg-emerald-400/[0.06] text-emerald-100"
           : "border-amber-400/30 bg-amber-400/[0.06] text-amber-100"
@@ -309,12 +307,10 @@ function CoverageFooter({
         Top-5 coverage: {covered}/{total}
       </p>
       {unowned.length > 0 && (
-        <p className="mt-1 text-[11px] text-amber-200/80">
-          Nobody attending owns: {titles(unowned)}
-        </p>
+        <p className="mt-1 text-2xs text-amber-200/80">Nobody attending owns: {titles(unowned)}</p>
       )}
       {capLimited.length > 0 && (
-        <p className="mt-1 text-[11px] text-amber-200/80">
+        <p className="mt-1 text-2xs text-amber-200/80">
           Owned but won't be brought (per-person 3-game cap): {titles(capLimited)}
         </p>
       )}

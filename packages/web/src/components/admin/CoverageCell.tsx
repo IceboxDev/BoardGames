@@ -37,7 +37,7 @@ export function CoverageCell({ coverage }: Props) {
           background: `conic-gradient(${COLOR_CAN} 0 ${canEnd}%, ${COLOR_MAYBE} ${canEnd}% ${maybeEnd}%, ${COLOR_UNMARKED} ${maybeEnd}% 100%)`,
         }}
       />
-      <span className="text-xs tabular-nums text-gray-400">{coverPct}%</span>
+      <span className="text-xs tabular-nums text-fg-secondary">{coverPct}%</span>
     </span>
   );
 }

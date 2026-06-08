@@ -52,12 +52,12 @@ export interface LogBlock {
 // ---------------------------------------------------------------------------
 
 const VARIANT_TEXT: Record<LogVariant, string> = {
-  action: "text-gray-200",
-  info: "text-gray-400",
-  danger: "text-red-300",
+  action: "text-fg-primary",
+  info: "text-fg-secondary",
+  danger: "text-rose-300",
   success: "text-emerald-300",
   warning: "text-amber-300",
-  neutral: "text-gray-400",
+  neutral: "text-fg-secondary",
   special: "text-purple-300",
 };
 
@@ -112,7 +112,7 @@ export default function ActionLog({
 }: ActionLogProps) {
   if (blocks.length === 0) {
     return (
-      <div className="flex h-24 items-center justify-center text-sm text-gray-600 italic">
+      <div className="flex h-24 items-center justify-center text-sm text-fg-disabled italic">
         {emptyMessage}
       </div>
     );
@@ -127,7 +127,7 @@ export default function ActionLog({
         <div key={block.key}>
           {/* Block separator — label + hairline */}
           <div className="mb-2 flex items-center gap-2">
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-gray-500">
+            <span className="text-2xs font-semibold uppercase tracking-wider text-fg-muted">
               {block.label}
             </span>
             <div className="h-px flex-1 bg-gray-800" />

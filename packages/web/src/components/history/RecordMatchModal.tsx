@@ -22,6 +22,8 @@ import { Chip } from "../ui/Chip";
 import { Field } from "../ui/Field";
 import { Input } from "../ui/Input";
 import { Modal } from "../ui/Modal";
+import { Select } from "../ui/Select";
+import { Textarea } from "../ui/Textarea";
 import { ClocktowerForm } from "./forms/ClocktowerForm";
 import { CoopForm } from "./forms/CoopForm";
 import { FreeForAllForm } from "./forms/FreeForAllForm";
@@ -225,11 +227,10 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
               : "Pick a locked night, or leave standalone for a one-off"
           }
         >
-          <select
+          <Select
             id={dateKeyId}
             value={dateKey ?? ""}
             onChange={(e) => setDateKey(e.target.value || null)}
-            className="w-full rounded-lg border border-white/10 bg-surface-900 px-3 py-2 text-sm text-gray-100"
           >
             <option value="">Standalone (no calendar lock)</option>
             {sortLockKeys(Object.keys(locksQuery.data ?? {})).map((d) => (
@@ -238,7 +239,7 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
                 {locksQuery.data?.[d]?.host?.name ? ` — ${locksQuery.data[d].host?.name}` : ""}
               </option>
             ))}
-          </select>
+          </Select>
         </Field>
 
         {!dateKey && (
@@ -324,12 +325,11 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
         </div>
 
         <Field label="Notes" htmlFor={notesId} hint="Optional, max 2000 chars">
-          <textarea
+          <Textarea
             id={notesId}
             value={notes}
             onChange={(e) => setNotes(e.target.value.slice(0, 2000))}
             rows={3}
-            className="w-full rounded-lg border border-white/10 bg-surface-900 px-3 py-2 text-sm text-gray-100 placeholder:text-gray-500 focus:border-accent-400/60 focus:outline-none focus:ring-2 focus:ring-accent-400/30"
             placeholder="Anything memorable…"
           />
         </Field>
@@ -339,7 +339,7 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
         {error ? (
           <span className="text-xs text-rose-400">{error}</span>
         ) : (
-          <span className="text-xs text-gray-500">
+          <span className="text-xs text-fg-muted">
             {usersQuery.isLoading ? "Loading users…" : `${allUsers.length} known players`}
           </span>
         )}

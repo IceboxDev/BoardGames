@@ -44,7 +44,7 @@ export function GameVariantPicker({ gameSlug, outcome, onChange }: Props) {
 
   return (
     <div>
-      <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
+      <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-fg-secondary">
         {config.label}
       </div>
       {config.mode === "single" ? (

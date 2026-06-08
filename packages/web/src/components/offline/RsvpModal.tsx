@@ -8,9 +8,14 @@ import { type CalendarLocks, togglePicksLock } from "../../lib/calendar-locks";
 import { kickRsvp, type RsvpStatus, setRsvp } from "../../lib/calendar-rsvps";
 import { qk } from "../../lib/query-keys";
 import { ClockIcon, HostIcon, PadlockIcon, PinIcon } from "../icons";
-import { IconButton } from "../ui/IconButton";
-import { Modal } from "../ui/Modal";
-import { SegmentedControl, type SegmentedOption } from "../ui/SegmentedControl";
+import {
+  EmptyState,
+  IconButton,
+  LoadingState,
+  Modal,
+  SegmentedControl,
+  type SegmentedOption,
+} from "../ui";
 import AttendeesView from "./AttendeesView";
 import GameCarousel3D from "./GameCarousel3D";
 import RankedGameList from "./RankedGameList";
@@ -201,14 +206,14 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
             ·
           </span>
           <span className="font-bold text-emerald-300 tabular-nums">{definiteCount}</span>
-          <span className="text-gray-400">going</span>
+          <span className="text-fg-secondary">going</span>
           {tentativeCount > 0 && (
             <>
               <span aria-hidden="true" className="text-white/30">
                 +
               </span>
               <span className="font-bold text-amber-300 tabular-nums">{tentativeCount}</span>
-              <span className="text-gray-400">maybe</span>
+              <span className="text-fg-secondary">maybe</span>
             </>
           )}
         </span>
@@ -218,7 +223,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
 
   const subheader =
     lock && (lock.host || lock.eventTime || lock.address) ? (
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-gray-300">
+      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-fg-secondary">
         {lock.host && <HostLine name={lock.host.name} />}
         {lock.eventTime && <TimeLine value={lock.eventTime} />}
         {lock.address && <AddressLink address={lock.address} />}
@@ -238,18 +243,13 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
       {error && <p className="text-center text-xs text-rose-400">{error}</p>}
 
       {lockedOut && (
-        <div className="flex min-h-0 flex-1 items-center justify-center px-4">
-          <div className="max-w-md rounded-2xl border border-amber-300/30 bg-amber-400/[0.06] px-6 py-8 text-center">
-            <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-amber-400/20 text-amber-200">
-              <PadlockIcon closed />
-            </div>
-            <p className="text-sm font-semibold text-amber-100">Guest list is locked</p>
-            <p className="mt-2 text-xs leading-relaxed text-amber-200/70">
-              The host sealed the night before you marked yourself available, so this game night is
-              no longer accepting RSVPs. Catch the next one!
-            </p>
-          </div>
-        </div>
+        <EmptyState
+          fill
+          tone="amber"
+          icon={<PadlockIcon closed />}
+          title="Guest list is locked"
+          description="The host sealed the night before you marked yourself available, so this game night is no longer accepting RSVPs. Catch the next one!"
+        />
       )}
 
       {!lockedOut && (
@@ -288,20 +288,19 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
       {!lockedOut && (
         <div className="flex min-h-0 flex-1 items-center justify-center">
           {viewerRsvp === "no" ? (
-            <div className="max-w-md rounded-2xl border border-rose-400/25 bg-rose-500/[0.06] px-6 py-8 text-center">
-              <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-full bg-rose-500/20 text-rose-200">
+            <EmptyState
+              tone="rose"
+              className="max-w-md"
+              icon={
                 <span aria-hidden="true" className="text-lg font-bold">
                   ✗
                 </span>
-              </div>
-              <p className="text-sm font-semibold text-rose-100">You're sitting this one out</p>
-              <p className="mt-2 text-xs leading-relaxed text-rose-200/70">
-                Skipping the picks and votes since you're not coming. Flip the switch back to Going
-                if you change your mind.
-              </p>
-            </div>
+              }
+              title="You're sitting this one out"
+              description="Skipping the picks and votes since you're not coming. Flip the switch back to Going if you change your mind."
+            />
           ) : gamesQuery.isPending ? (
-            <p className="text-sm text-gray-500">Finding games…</p>
+            <LoadingState label="Finding games…" />
           ) : effectiveView === "attendees" ? (
             <AttendeesView
               attendees={attendees}
@@ -314,12 +313,10 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
               }
             />
           ) : availableGames.length === 0 ? (
-            <div className="rounded-2xl border border-dashed border-white/10 px-8 py-10 text-center">
-              <p className="text-sm font-medium text-gray-300">No games match.</p>
-              <p className="mt-1 text-xs text-gray-500">
-                Either nobody owns the same game, or no game fits the group size.
-              </p>
-            </div>
+            <EmptyState
+              title="No games match"
+              description="Either nobody owns the same game, or no game fits the group size."
+            />
           ) : effectiveView === "results" ? (
             <RankedGameList
               date={date}
@@ -358,14 +355,14 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
 const RSVP_OPTIONS: SegmentedOption<RsvpStatus>[] = [
   {
     value: "yes",
-    label: <span className="sr-only min-[420px]:not-sr-only">Going</span>,
+    label: <span className="sr-only xs2:not-sr-only">Going</span>,
     icon: <span aria-hidden="true">✓</span>,
     tone: "emerald",
     title: "Going",
   },
   {
     value: "no",
-    label: <span className="sr-only min-[420px]:not-sr-only">Not going</span>,
+    label: <span className="sr-only xs2:not-sr-only">Not going</span>,
     icon: <span aria-hidden="true">✗</span>,
     tone: "rose",
     title: "Not going",
@@ -425,10 +422,10 @@ function buildViewOptions(
 
 function HostLine({ name }: { name: string }) {
   return (
-    <span className="inline-flex items-center gap-1.5 text-gray-400">
+    <span className="inline-flex items-center gap-1.5 text-fg-secondary">
       <HostIcon className="h-3.5 w-3.5 shrink-0" />
       <span>
-        <span className="text-gray-500">Host </span>
+        <span className="text-fg-muted">Host </span>
         <span className="font-semibold text-white">{name}</span>
       </span>
     </span>
@@ -437,7 +434,7 @@ function HostLine({ name }: { name: string }) {
 
 function TimeLine({ value }: { value: string }) {
   return (
-    <span className="inline-flex items-center gap-1.5 text-gray-400">
+    <span className="inline-flex items-center gap-1.5 text-fg-secondary">
       <ClockIcon className="h-3.5 w-3.5 shrink-0" />
       <span className="font-semibold tabular-nums text-white">{value}</span>
     </span>

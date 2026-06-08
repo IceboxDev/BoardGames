@@ -41,15 +41,15 @@ export function GameCardBody({ title, affordance = null, children }: GameCardBod
 function GameCardHeader({ title, affordance }: { title: string; affordance: Affordance }) {
   return (
     <div className="flex items-baseline justify-between gap-2">
-      <h3 className="text-lg font-semibold text-gray-200 transition-colors group-hover:text-white">
+      <h3 className="text-lg font-semibold text-fg-primary transition-colors group-hover:text-white">
         {title}
       </h3>
       {affordance === "arrow" && (
-        <ArrowRightIcon className="h-4 w-4 shrink-0 text-gray-600 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-[var(--accent)]" />
+        <ArrowRightIcon className="h-4 w-4 shrink-0 text-fg-disabled transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-[var(--accent)]" />
       )}
       {affordance && typeof affordance === "object" && affordance.kind === "chevron" && (
         <ChevronDownIcon
-          className={`h-4 w-4 shrink-0 text-gray-500 transition-transform duration-200 group-hover:text-[var(--accent)] ${
+          className={`h-4 w-4 shrink-0 text-fg-muted transition-transform duration-200 group-hover:text-[var(--accent)] ${
             affordance.expanded ? "rotate-180" : ""
           }`}
         />
@@ -65,7 +65,7 @@ function GameCardHeader({ title, affordance }: { title: string; affordance: Affo
  * same size and weight.
  */
 export function GameCardMeta({ children }: { children: ReactNode }) {
-  return <p className="text-xs uppercase tracking-[0.18em] text-gray-500">{children}</p>;
+  return <p className="text-xs uppercase tracking-[0.18em] text-fg-muted">{children}</p>;
 }
 
 /**
@@ -82,7 +82,7 @@ export function GameCardDescription({ descriptions }: { descriptions: GameDescri
   if (!text) return null;
   return (
     <p
-      className="shrink-0 text-gray-400"
+      className="shrink-0 text-fg-secondary"
       style={{
         minHeight: DESCRIPTION_TARGET_PX,
         fontSize: `${fontPx}px`,

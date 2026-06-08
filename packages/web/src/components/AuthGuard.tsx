@@ -17,7 +17,7 @@ export function AuthGuard({ mode, children }: Props) {
   if (isLoading) {
     return (
       <PageShell layout="centered" background="plain">
-        <span className="text-sm text-gray-500">Loading…</span>
+        <span className="text-sm text-fg-muted">Loading…</span>
       </PageShell>
     );
   }

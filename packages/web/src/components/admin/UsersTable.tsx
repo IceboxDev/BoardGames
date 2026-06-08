@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { EmptyState, LoadingState } from "../ui";
 
 type Props = {
   /** When true, render the loading placeholder instead of the table. */
@@ -22,25 +23,17 @@ type Props = {
  */
 export function UsersTable({ loading, empty, deleteMode, children }: Props) {
   if (loading) {
-    return (
-      <div className="rounded-xl border border-white/10 bg-surface-900 px-6 py-10 text-center text-sm text-gray-500">
-        Loading…
-      </div>
-    );
+    return <LoadingState className="rounded-xl border border-white/10 bg-surface-900" />;
   }
 
   if (empty) {
-    return (
-      <div className="rounded-xl border border-dashed border-white/10 px-6 py-10 text-center text-sm text-gray-500">
-        No users yet.
-      </div>
-    );
+    return <EmptyState title="No users yet" />;
   }
 
   return (
     <div className="overflow-hidden rounded-xl border border-white/10 bg-surface-900">
       <table className="w-full table-fixed text-sm">
-        <thead className="bg-surface-800 text-xs uppercase tracking-wider text-gray-500">
+        <thead className="bg-surface-800 text-xs uppercase tracking-wider text-fg-muted">
           <tr>
             <th className="w-24 pl-5 pr-3 py-3 text-left font-medium" aria-label="Coverage" />
             <th className="w-64 px-5 py-3 text-left font-medium">Name</th>
@@ -49,7 +42,7 @@ export function UsersTable({ loading, empty, deleteMode, children }: Props) {
             <th className="w-32 px-5 py-3 text-center font-medium">Calendar</th>
             <th className="w-32 px-5 py-3 text-center font-medium">Inventory</th>
             <th
-              className={`w-32 px-5 py-3 text-center font-medium ${
+              className={`w-40 px-3 py-3 text-center font-medium ${
                 deleteMode ? "text-rose-300" : ""
               }`}
             >

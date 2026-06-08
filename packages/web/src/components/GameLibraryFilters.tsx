@@ -70,7 +70,7 @@ export default function GameLibraryFilters({
   return (
     <div className="scrollbar-hide flex w-full items-center gap-2 overflow-x-auto py-0.5">
       <div className="relative min-w-[8rem] flex-1">
-        <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-gray-500">
+        <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-fg-muted">
           <SearchIcon className="h-4 w-4" />
         </span>
         <Input
@@ -118,7 +118,7 @@ export default function GameLibraryFilters({
       )}
 
       <p
-        className="hidden w-24 shrink-0 whitespace-nowrap text-right text-xs tabular-nums text-gray-500 md:block"
+        className="hidden w-24 shrink-0 whitespace-nowrap text-right text-xs tabular-nums text-fg-muted md:block"
         aria-live="polite"
       >
         {active ? `${resultCount} / ${totalCount}` : `${totalCount} games`}
@@ -167,7 +167,7 @@ function FilterSelect<T extends string>({
         onChange={(e) => onChange(e.target.value as T)}
         aria-label={label}
         className={`h-9 w-full appearance-none truncate rounded-lg border bg-surface-900 pl-2.5 pr-7 text-sm focus:outline-none focus:ring-2 focus:ring-accent-400/30 ${
-          active ? "border-accent-400/50 text-accent-100" : "border-white/10 text-gray-200"
+          active ? "border-accent-400/50 text-accent-100" : "border-white/10 text-fg-primary"
         }`}
       >
         {options.map((o) => (
@@ -176,7 +176,7 @@ function FilterSelect<T extends string>({
           </option>
         ))}
       </select>
-      <ChevronDownIcon className="pointer-events-none absolute right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-gray-500" />
+      <ChevronDownIcon className="pointer-events-none absolute right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-fg-muted" />
     </div>
   );
 }

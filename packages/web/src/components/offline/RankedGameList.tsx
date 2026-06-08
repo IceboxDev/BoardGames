@@ -55,7 +55,7 @@ export default function RankedGameList({ date, games, reactions, topSlugs }: Pro
 
   return (
     <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col gap-2 overflow-y-auto px-1 py-2">
-      <p className="px-2 text-[11px] font-semibold uppercase tracking-[0.25em] text-amber-300">
+      <p className="px-2 text-2xs font-semibold uppercase tracking-[0.25em] text-amber-300">
         Tonight's picks
       </p>
       <ul className="flex flex-col gap-2">
@@ -104,7 +104,7 @@ function RankedRow({ game, aggregate, date, rank }: RowProps) {
       <div className="flex min-w-0 flex-1 flex-col gap-0.5">
         <div className="flex items-center gap-2">
           <span
-            className="inline-flex h-5 min-w-5 shrink-0 items-center justify-center rounded-full px-1.5 text-[10px] font-bold tabular-nums"
+            className="inline-flex h-5 min-w-5 shrink-0 items-center justify-center rounded-full px-1.5 text-3xs font-bold tabular-nums"
             style={{
               backgroundColor: isTop ? game.accentHex : "color-mix(in srgb, white 8%, transparent)",
               color: isTop ? "#000" : "#d1d5db",
@@ -116,7 +116,7 @@ function RankedRow({ game, aggregate, date, rank }: RowProps) {
           <h3 className="truncate text-sm font-semibold text-white">{game.title}</h3>
           {isTop && (
             <span
-              className="shrink-0 rounded-full px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-[0.18em]"
+              className="shrink-0 rounded-full px-1.5 py-0.5 text-3xs font-bold uppercase tracking-[0.18em]"
               style={{
                 backgroundColor: `color-mix(in srgb, ${game.accentHex} 22%, transparent)`,
                 color: game.accentHex,
@@ -126,7 +126,7 @@ function RankedRow({ game, aggregate, date, rank }: RowProps) {
             </span>
           )}
         </div>
-        {meta && <p className="truncate text-[11px] text-gray-400">{meta}</p>}
+        {meta && <p className="truncate text-2xs text-fg-secondary">{meta}</p>}
       </div>
 
       <div className="shrink-0">

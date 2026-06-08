@@ -47,7 +47,7 @@ export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
       </Field>
       {value.players.length > 0 && (
         <div className="flex flex-col gap-1.5">
-          <span className="text-xs font-medium uppercase tracking-wide text-gray-400">
+          <span className="text-xs font-medium uppercase tracking-wide text-fg-secondary">
             Enter each player's score. {lowestWins ? "Lowest" : "Highest"} wins (ties allowed).
           </span>
           {value.players.map((p) => {
@@ -56,7 +56,7 @@ export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
               <div key={p.userId} className="flex items-center gap-2">
                 <span
                   className={`flex-1 truncate text-sm ${
-                    isLeading ? "text-amber-200" : "text-gray-200"
+                    isLeading ? "text-amber-200" : "text-fg-primary"
                   }`}
                 >
                   {p.displayName}

@@ -29,11 +29,11 @@ const VARIANTS: Record<Variant, string> = {
   primary:
     "bg-gradient-to-r from-accent-500 to-neon-purple text-white shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 hover:brightness-110 active:scale-[0.98]",
   secondary:
-    "bg-surface-800 text-gray-100 border border-white/10 hover:bg-surface-700 hover:border-white/20",
+    "bg-surface-800 text-fg-primary border border-white/10 hover:bg-surface-700 hover:border-white/20",
   // text-only with a subtle background on hover — used for "Cancel" /
   // "Close" / inline-row actions that need to read as low-emphasis but
   // still surface a hover affordance.
-  ghost: "text-gray-300 hover:bg-white/5 hover:text-white",
+  ghost: "text-fg-secondary hover:bg-white/5 hover:text-white",
   // Subtle, tinted destructive — for "Remove" / "Delete row" style
   // actions that aren't immediate destruction. Use this, not raw
   // rose-500. The `danger` IconButton variant covers the icon-only case.
@@ -47,7 +47,7 @@ const VARIANTS: Record<Variant, string> = {
   // Pure text link — no background, just color hover. Used by "Leave Room"
   // / "Back" / "Reset" style passive affordances inside action surfaces
   // where a bordered button would feel too heavy.
-  link: "text-gray-500 transition-colors hover:text-gray-300",
+  link: "text-fg-muted transition-colors hover:text-fg-secondary",
 };
 
 const SIZES: Record<Size, string> = {

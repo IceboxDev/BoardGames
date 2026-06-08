@@ -1,12 +1,19 @@
 import type { SkyTeamPlayerView } from "@boardgames/core/games/sky-team/types";
-import { AnimatePresence, motion } from "framer-motion";
-import { useState } from "react";
-import { createPortal } from "react-dom";
+import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { BoardOverlay } from "../../../components/ui";
 import { Button } from "../../../components/ui/Button";
+import type { ChatMessage } from "../../../lib/ws-client";
 
 interface Props {
   view: SkyTeamPlayerView;
   onReady: () => void;
+  /** Chat log + sender for MP rooms. Omit in solo (chat is N/A). */
+  chat?: {
+    messages: ChatMessage[];
+    onSend: (text: string) => void;
+    mySlot: number;
+  };
 }
 
 function ReadyChip({
@@ -45,92 +52,152 @@ function ReadyChip({
  * underneath — the player never leaves the board. A "Peek board" toggle hides
  * the overlay entirely to study the board mid-discussion.
  */
-export default function BriefingOverlay({ view, onReady }: Props) {
-  const [hidden, setHidden] = useState(false);
-
-  // Portal into <main> (not body) so the overlay sits below the sticky nav and
-  // fills exactly the content area (main is position:relative).
-  const target = typeof document !== "undefined" ? document.getElementById("app-main") : null;
-  if (!target) return null;
-
+export default function BriefingOverlay({ view, onReady, chat }: Props) {
   const myReady = view.readyForRoll[view.viewerIndex];
   const oppIdx = (1 - view.viewerIndex) as 0 | 1;
   const oppReady = view.readyForRoll[oppIdx];
 
-  return createPortal(
-    <>
-      <AnimatePresence>
-        {!hidden && (
-          <motion.div
-            key="briefing-overlay"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="absolute inset-0 z-40 flex items-center justify-center bg-slate-950/70 px-4 backdrop-blur-md"
-          >
-            <motion.div
-              initial={{ y: 18, opacity: 0, scale: 0.97 }}
-              animate={{ y: 0, opacity: 1, scale: 1 }}
-              exit={{ y: 8, opacity: 0 }}
-              transition={{ type: "spring", stiffness: 280, damping: 24, delay: 0.04 }}
-              className="flex w-full max-w-md flex-col items-center gap-5 rounded-2xl border-2 border-amber-500/50 bg-slate-900 p-7 text-center shadow-2xl ring-1 ring-black/40"
-            >
-              <div className="flex flex-col items-center gap-1">
-                <span className="text-[11px] font-bold uppercase tracking-[0.3em] text-amber-300">
-                  Briefing
-                </span>
-                <h2 className="text-2xl font-black text-white">
-                  {view.isFinalRound ? (
-                    "Final Approach"
-                  ) : (
-                    <>
-                      Round {view.round}{" "}
-                      <span className="text-lg font-bold text-slate-400">
-                        of {view.scenario.totalRounds}
-                      </span>
-                    </>
-                  )}
-                </h2>
-              </div>
-
-              <p className="text-sm leading-relaxed text-slate-300">
-                Discuss your plan freely now. Once you're ready the dice roll, and you must stay{" "}
-                <strong className="text-amber-200">silent about specific dice values</strong> for
-                the rest of the round.
-              </p>
-
-              <div className="flex w-full items-stretch justify-center gap-3">
-                <ReadyChip label="Pilot" ready={view.readyForRoll[0]} tone="pilot" />
-                <ReadyChip label="Co-Pilot" ready={view.readyForRoll[1]} tone="copilot" />
-              </div>
-
-              <Button
-                variant="primary"
-                size="lg"
-                disabled={myReady}
-                onClick={onReady}
-                className="w-full"
-              >
-                {myReady ? (oppReady ? "Rolling…" : "Waiting for partner…") : "Ready to roll"}
-              </Button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      {/* Floating peek toggle — always above the backdrop so the player can
-          drop the overlay to study the board mid-briefing, then bring it back. */}
-      {/* biome-ignore lint/correctness/noRestrictedElements: bespoke floating overlay toggle with portal/z-index chrome */}
-      <button
-        type="button"
-        onClick={() => setHidden((h) => !h)}
-        className="absolute right-4 top-4 z-50 flex items-center gap-2 rounded-full border-2 border-amber-300 bg-amber-600 px-4 py-2 text-xs font-bold text-white shadow-[0_0_24px_rgba(245,158,11,0.6)] transition hover:scale-105 hover:bg-amber-500"
-        title={hidden ? "Show the briefing" : "Hide overlay to study the board"}
+  return (
+    <BoardOverlay
+      hideLabel="Peek board"
+      hideIcon="🙈"
+      showLabel="Briefing"
+      showIcon="📋"
+      backdropClassName="bg-slate-950/70"
+      toggleClassName="border-amber-300 bg-amber-600 shadow-[0_0_24px_rgba(245,158,11,0.6)] hover:bg-amber-500"
+    >
+      <motion.div
+        initial={{ y: 18, opacity: 0, scale: 0.97 }}
+        animate={{ y: 0, opacity: 1, scale: 1 }}
+        transition={{ type: "spring", stiffness: 280, damping: 24, delay: 0.04 }}
+        className={`flex w-full ${chat ? "max-w-lg" : "max-w-md"} flex-col items-center gap-5 rounded-2xl border-2 border-amber-500/50 bg-slate-900 p-7 text-center shadow-2xl ring-1 ring-black/40`}
       >
-        <span className="text-base leading-none">{hidden ? "📋" : "🙈"}</span>
-        <span>{hidden ? "Briefing" : "Peek board"}</span>
-      </button>
-    </>,
-    target,
+        <div className="flex flex-col items-center gap-1">
+          <span className="text-2xs font-bold uppercase tracking-[0.3em] text-amber-300">
+            Briefing
+          </span>
+          <h2 className="text-2xl font-black text-white">
+            {view.isFinalRound ? (
+              "Final Approach"
+            ) : (
+              <>
+                Round {view.round}{" "}
+                <span className="text-lg font-bold text-slate-400">
+                  of {view.scenario.totalRounds}
+                </span>
+              </>
+            )}
+          </h2>
+        </div>
+
+        <p className="text-sm leading-relaxed text-slate-300">
+          Discuss your plan freely now. Once you're ready the dice roll, and you must stay{" "}
+          <strong className="text-amber-200">silent about specific dice values</strong> for the rest
+          of the round.
+        </p>
+
+        {chat && <ChatPanel messages={chat.messages} onSend={chat.onSend} mySlot={chat.mySlot} />}
+
+        <div className="flex w-full items-stretch justify-center gap-3">
+          <ReadyChip label="Pilot" ready={view.readyForRoll[0]} tone="pilot" />
+          <ReadyChip label="Co-Pilot" ready={view.readyForRoll[1]} tone="copilot" />
+        </div>
+
+        <Button variant="primary" size="lg" disabled={myReady} onClick={onReady} className="w-full">
+          {myReady ? (oppReady ? "Rolling…" : "Waiting for partner…") : "Ready to roll"}
+        </Button>
+      </motion.div>
+    </BoardOverlay>
+  );
+}
+
+/**
+ * Briefing chat. Auto-scrolls to the latest message and lets the player
+ * send up to 500 chars with Enter. Rendered only in MP (solo never
+ * mounts this overlay).
+ */
+function ChatPanel({
+  messages,
+  onSend,
+  mySlot,
+}: {
+  messages: ChatMessage[];
+  onSend: (text: string) => void;
+  mySlot: number;
+}) {
+  const [draft, setDraft] = useState("");
+  const logRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (logRef.current) {
+      logRef.current.scrollTop = logRef.current.scrollHeight;
+    }
+  }, [messages]);
+
+  const send = () => {
+    const text = draft.trim();
+    if (!text) return;
+    onSend(text);
+    setDraft("");
+  };
+
+  return (
+    <div className="flex w-full flex-col gap-2 rounded-xl border border-slate-700/70 bg-slate-950/40 p-3 text-left">
+      <span className="text-[10px] font-bold uppercase tracking-[0.25em] text-slate-400">
+        Crew Chat
+      </span>
+      <div
+        ref={logRef}
+        className="flex h-40 flex-col gap-1.5 overflow-y-auto rounded-lg bg-slate-950/60 p-2 text-xs"
+      >
+        {messages.length === 0 ? (
+          <span className="my-auto text-center text-[11px] italic text-slate-600">
+            No messages yet — start the briefing.
+          </span>
+        ) : (
+          messages.map((m) => {
+            const isMine = m.fromSlot === mySlot;
+            return (
+              <div
+                key={`${m.fromSlot}-${m.timestampMs}`}
+                className={`flex flex-col ${isMine ? "items-end" : "items-start"}`}
+              >
+                <span className="text-[9px] uppercase tracking-wider text-slate-500">
+                  {m.fromName}
+                </span>
+                <span
+                  className={`max-w-[90%] break-words rounded-lg px-2 py-1 text-[11px] leading-snug ${
+                    isMine
+                      ? "bg-amber-500/15 text-amber-100 ring-1 ring-inset ring-amber-400/30"
+                      : "bg-slate-800/80 text-slate-100 ring-1 ring-inset ring-slate-600/50"
+                  }`}
+                >
+                  {m.text}
+                </span>
+              </div>
+            );
+          })
+        )}
+      </div>
+      <div className="flex gap-2">
+        <input
+          type="text"
+          value={draft}
+          onChange={(e) => setDraft(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              e.preventDefault();
+              send();
+            }
+          }}
+          placeholder="Discuss your plan…"
+          maxLength={500}
+          className="flex-1 rounded-md border border-slate-700 bg-slate-900 px-2.5 py-1.5 text-xs text-white placeholder-slate-500 outline-none focus:border-amber-400/60 focus:ring-1 focus:ring-amber-400/30"
+        />
+        <Button variant="secondary" size="xs" onClick={send} disabled={!draft.trim()}>
+          Send
+        </Button>
+      </div>
+    </div>
   );
 }

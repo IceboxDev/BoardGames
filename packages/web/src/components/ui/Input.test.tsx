@@ -10,14 +10,14 @@ describe("Input", () => {
     expect(input.value).toBe("hello");
   });
 
-  it("invalid=true applies the red border class set", () => {
+  it("invalid=true applies the rose border class set", () => {
     render(<Input invalid value="" onChange={() => {}} placeholder="x" />);
-    expect(screen.getByPlaceholderText("x").className).toMatch(/border-red-500/);
+    expect(screen.getByPlaceholderText("x").className).toMatch(/border-rose-500/);
   });
 
   it("invalid=false uses the neutral border class set", () => {
     render(<Input value="" onChange={() => {}} placeholder="x" />);
-    expect(screen.getByPlaceholderText("x").className).not.toMatch(/border-red-500/);
+    expect(screen.getByPlaceholderText("x").className).not.toMatch(/border-rose-500/);
   });
 
   it("forwards typing through onChange", async () => {

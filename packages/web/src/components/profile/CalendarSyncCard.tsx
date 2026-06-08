@@ -29,14 +29,14 @@ export default function CalendarSyncCard({ onClick }: Props) {
       onClick={onClick}
       className="group mt-6 flex w-full items-center gap-4 rounded-2xl border border-white/[0.06] bg-surface-900/60 px-5 py-4 text-left transition-all duration-300 hover:border-white/15 hover:bg-surface-900 sm:px-6 sm:py-5"
     >
-      <div className="flex shrink-0 items-center gap-2 text-gray-300 transition-colors group-hover:text-white">
+      <div className="flex shrink-0 items-center gap-2 text-fg-secondary transition-colors group-hover:text-white">
         <CalendarSyncIcon />
         <span className="text-xs font-semibold uppercase tracking-[0.2em]">Calendar Sync</span>
       </div>
 
       <div className="flex min-w-0 flex-1 items-center gap-2.5">
         {isLoading ? (
-          <span className="text-xs text-gray-500">…</span>
+          <span className="text-xs text-fg-muted">…</span>
         ) : connected ? (
           <span className="inline-flex items-center gap-2 text-xs text-emerald-300">
             <span
@@ -46,13 +46,13 @@ export default function CalendarSyncCard({ onClick }: Props) {
             Connected — game nights sync to your calendar
           </span>
         ) : (
-          <span className="truncate text-xs text-gray-500">
+          <span className="truncate text-xs text-fg-muted">
             Subscribe to your game nights in Apple / Google / Outlook
           </span>
         )}
       </div>
 
-      <ArrowRightIcon className="h-4 w-4 shrink-0 text-gray-500 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-accent-300" />
+      <ArrowRightIcon className="h-4 w-4 shrink-0 text-fg-muted transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-accent-300" />
     </button>
   );
 }

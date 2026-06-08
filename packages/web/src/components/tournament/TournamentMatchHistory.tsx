@@ -106,28 +106,28 @@ export default function TournamentMatchHistory({
         <h2 className="text-2xl font-extrabold text-white">
           {labelA} vs {labelB}
         </h2>
-        <p className="mt-2 text-sm text-gray-400">
+        <p className="mt-2 text-sm text-fg-secondary">
           {loading ? (
             "Loading..."
           ) : (
             <>
-              {games.length} games &middot; <span className="text-green-400">{stats.aWins}W</span> /{" "}
-              <span className="text-red-400">{stats.bWins}L</span> /{" "}
-              <span className="text-gray-400">{stats.draws}D</span> for {labelA}
+              {games.length} games &middot; <span className="text-emerald-400">{stats.aWins}W</span>{" "}
+              / <span className="text-rose-400">{stats.bWins}L</span> /{" "}
+              <span className="text-fg-secondary">{stats.draws}D</span> for {labelA}
             </>
           )}
         </p>
       </div>
 
       {!loading && games.length === 0 ? (
-        <p className="py-12 text-sm italic text-gray-500">
+        <p className="py-12 text-sm italic text-fg-muted">
           No game logs found for this matchup. Run the tournament first.
         </p>
       ) : !loading ? (
         <div className="w-full overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
-              <tr className="border-b border-gray-800 text-xs font-medium uppercase tracking-wider text-gray-500">
+              <tr className="border-b border-gray-800 text-xs font-medium uppercase tracking-wider text-fg-muted">
                 <th className="p-2.5 text-left">#</th>
                 <th className="p-2.5 text-center">First Player</th>
                 <th className="p-2.5 text-right">{labelA}</th>
@@ -156,35 +156,35 @@ export default function TournamentMatchHistory({
                       onSelectGameIndex ? "cursor-pointer hover:bg-gray-800/50" : ""
                     }`}
                   >
-                    <td className="p-2.5 tabular-nums text-gray-400">{i + 1}</td>
-                    <td className="p-2.5 text-center text-xs text-gray-400">
+                    <td className="p-2.5 tabular-nums text-fg-secondary">{i + 1}</td>
+                    <td className="p-2.5 text-center text-xs text-fg-secondary">
                       {game.aPlaysFirst != null ? (game.aPlaysFirst ? labelA : labelB) : "—"}
                     </td>
                     <td
                       className={`p-2.5 text-right tabular-nums font-semibold ${
-                        aWon ? "text-green-400" : bWon ? "text-red-400" : "text-gray-400"
+                        aWon ? "text-emerald-400" : bWon ? "text-rose-400" : "text-fg-secondary"
                       }`}
                     >
                       {game.scoreA}
                     </td>
                     <td
                       className={`p-2.5 text-right tabular-nums font-semibold ${
-                        bWon ? "text-green-400" : aWon ? "text-red-400" : "text-gray-400"
+                        bWon ? "text-emerald-400" : aWon ? "text-rose-400" : "text-fg-secondary"
                       }`}
                     >
                       {game.scoreB}
                     </td>
-                    <td className="p-2.5 text-right tabular-nums text-gray-500">
+                    <td className="p-2.5 text-right tabular-nums text-fg-muted">
                       {diff > 0 ? "+" : ""}
                       {diff}
                     </td>
                     <td className="p-2.5 text-center text-xs">
                       {aWon ? (
-                        <span className="text-green-400">{labelA}</span>
+                        <span className="text-emerald-400">{labelA}</span>
                       ) : bWon ? (
-                        <span className="text-red-400">{labelB}</span>
+                        <span className="text-rose-400">{labelB}</span>
                       ) : (
-                        <span className="text-gray-500">Draw</span>
+                        <span className="text-fg-muted">Draw</span>
                       )}
                     </td>
                   </tr>

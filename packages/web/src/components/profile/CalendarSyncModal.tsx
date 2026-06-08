@@ -123,12 +123,12 @@ function StateNeverConnected({
 }) {
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-sm leading-relaxed text-gray-300">
+      <p className="text-sm leading-relaxed text-fg-secondary">
         Get a private link that adds every locked game night to your calendar — titles tell you when
         you still need to RSVP or pick games, descriptions list the host, attendees, and what you've
         been asked to bring.
       </p>
-      <p className="text-xs text-gray-500">
+      <p className="text-xs text-fg-muted">
         Calendars refresh on their own schedule — Apple within ~1 hour, Google can take up to a day.
         Your URL is private; we'll show it once.
       </p>
@@ -167,7 +167,7 @@ function StateTokenInMemory({
 
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-xs text-gray-500">
+      <p className="text-xs text-fg-muted">
         This is your private URL. We won't show it again — keep it somewhere safe, or just paste it
         into your calendar now.
       </p>
@@ -242,7 +242,7 @@ function StateConnected({
         </p>
       </div>
 
-      <p className="text-xs text-gray-500">
+      <p className="text-xs text-fg-muted">
         We don't store your URL. If you lost it, regenerate — your calendar will pick up the new one
         within a few hours.
       </p>
@@ -309,7 +309,7 @@ function CopyableUrl({ url }: { url: string }) {
         value={url}
         readOnly
         onFocus={(e) => e.currentTarget.select()}
-        className="flex-1 truncate bg-transparent px-2 text-xs text-gray-200 outline-none"
+        className="flex-1 truncate bg-transparent px-2 text-xs text-fg-primary outline-none"
       />
       <Button variant="secondary" size="sm" onClick={handleCopy}>
         {copied ? "✓ Copied" : "Copy"}
@@ -324,7 +324,7 @@ function DeepLinkButton({ href, label }: { href: string; label: string }) {
       href={href}
       target="_blank"
       rel="noreferrer noopener"
-      className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-surface-800 px-3 py-1.5 text-sm font-medium text-gray-100 transition-all hover:border-white/20 hover:bg-surface-700"
+      className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-surface-800 px-3 py-1.5 text-sm font-medium text-fg-primary transition-all hover:border-white/20 hover:bg-surface-700"
     >
       {label}
     </a>

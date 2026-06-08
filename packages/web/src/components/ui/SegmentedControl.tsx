@@ -45,7 +45,7 @@ type SegmentedControlProps<T extends string | number> = {
   onChange: (next: T) => void;
 
   shape?: "pill" | "rect";
-  size?: "sm" | "md";
+  size?: "xs" | "sm" | "md";
   /** Stretch each option to equal width. Defaults: false for "pill", true for "rect". */
   fullWidth?: boolean;
   /** Default tone for options without `option.tone`. Defaults to "accent". */
@@ -71,12 +71,16 @@ const OPTION_SHAPE: Record<"pill" | "rect", string> = {
   rect: "rounded-md",
 };
 
-const OPTION_SIZE: Record<"sm" | "md", string> = {
+const OPTION_SIZE: Record<"xs" | "sm" | "md", string> = {
+  // xs is for in-row table density (e.g. the admin users-table online-mode
+  // picker) — same tight padding at every viewport, no breakpoint expansion
+  // up to sm/md sizes that would push the cell out of bounds.
+  xs: "px-1.5 py-0.5 text-3xs font-semibold",
   // sm starts tight on phone so view-tabs + a sibling switch (e.g. RSVP
   // Going/Not going) fit on one row even on a ~330px CSS viewport (Galaxy
   // A13 with slight zoom). Two breakpoints: ultra-tight default, mid at
   // 420px, full padding at sm:.
-  sm: "px-1.5 py-1 text-[11px] font-semibold min-[420px]:px-2 sm:px-3 sm:py-1.5 sm:text-xs",
+  sm: "px-1.5 py-1 text-2xs font-semibold xs2:px-2 sm:px-3 sm:py-1.5 sm:text-xs",
   md: "px-3 py-1.5 text-sm font-medium",
 };
 
@@ -105,14 +109,14 @@ const TONE_RING: Record<SegmentedTone, string> = {
 };
 
 const TONE_GLOW: Record<SegmentedTone, string> = {
-  accent: "shadow-[0_0_12px_-4px_rgba(99,102,241,0.5)]",
-  amber: "shadow-[0_0_12px_-4px_rgba(251,191,36,0.5)]",
-  sky: "shadow-[0_0_12px_-4px_rgba(56,189,248,0.5)]",
-  emerald: "shadow-[0_0_12px_-4px_rgba(16,185,129,0.5)]",
-  rose: "shadow-[0_0_12px_-4px_rgba(244,63,94,0.5)]",
+  accent: "shadow-glow-accent",
+  amber: "shadow-glow-amber",
+  sky: "shadow-glow-sky",
+  emerald: "shadow-glow-emerald",
+  rose: "shadow-glow-rose",
 };
 
-const INACTIVE = "text-gray-400 hover:text-white";
+const INACTIVE = "text-fg-secondary hover:text-white";
 
 export function SegmentedControl<T extends string | number>({
   options,

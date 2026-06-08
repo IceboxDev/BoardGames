@@ -51,7 +51,7 @@ export default function PvpGameBoard({ view, playerIndex, opponentName, send }: 
   const selectionColor: SelectionColor = iAmSelecting ? "yellow" : "emerald";
 
   return (
-    <div className="flex h-[calc(100dvh-45px)] overflow-hidden">
+    <div className="flex h-below-nav overflow-hidden">
       {/* Center — card grid */}
       <div className="flex min-h-0 min-w-0 flex-1 flex-col p-2 gap-2">
         {/* Opponent bar */}

@@ -1,6 +1,6 @@
 import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
 import { useCallback, useMemo } from "react";
-import type { GameSession } from "../lib/ws-client";
+import type { ChatMessage, GameSession } from "../lib/ws-client";
 
 export interface MultiplayerRoomState<TView, TAction, TResult> {
   // Connection
@@ -22,6 +22,10 @@ export interface MultiplayerRoomState<TView, TAction, TResult> {
   startRoom: (config: unknown) => void;
   kickPlayer: (slotIndex: number) => void;
   toggleReady: () => void;
+
+  // Room chat (Sky Team briefing today; available to any game that wants it)
+  chatMessages: ChatMessage[];
+  sendChat: (text: string) => void;
 
   // Game state (available after game starts)
   view: TView | null;
@@ -79,6 +83,9 @@ export function useMultiplayerRoom<TView = unknown, TAction = unknown, TResult =
     startRoom: session.startRoom,
     kickPlayer: session.kickPlayer,
     toggleReady: session.toggleReady,
+
+    chatMessages: session.chatMessages,
+    sendChat: session.sendChat,
 
     view: session.playerView,
     legalActions: session.legalActions,

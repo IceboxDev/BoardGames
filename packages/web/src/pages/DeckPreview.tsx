@@ -49,7 +49,7 @@ function SampleTrumpCard({ className }: { className: string }) {
       className={`${className} flex flex-col items-center justify-center border border-gray-500 bg-white`}
     >
       <span className="text-xs font-bold text-red-500">&hearts;</span>
-      <span className="text-sm font-extrabold text-gray-800">7</span>
+      <span className="text-sm font-extrabold text-fg-disabled">7</span>
     </div>
   );
 }
@@ -81,7 +81,7 @@ export default function DeckPreview() {
       <main className="flex flex-1 flex-col text-white">
         <div className="border-b border-gray-800 px-6 py-4">
           <h1 className="text-xl font-bold tracking-tight">CardDeck Preview</h1>
-          <p className="mt-1 text-sm text-gray-500">Reusable card deck component for all games</p>
+          <p className="mt-1 text-sm text-fg-muted">Reusable card deck component for all games</p>
         </div>
 
         <div className="flex flex-1 flex-col gap-8 p-6 lg:flex-row lg:p-10">
@@ -89,7 +89,7 @@ export default function DeckPreview() {
           <div className="w-full space-y-6 lg:w-64 lg:shrink-0">
             {/* Card count */}
             <div>
-              <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-400">
+              <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-fg-secondary">
                 Cards remaining
               </span>
               <div className="flex items-center gap-3">
@@ -122,7 +122,7 @@ export default function DeckPreview() {
 
             {/* Trump toggle */}
             <div>
-              <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-400">
+              <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-fg-secondary">
                 Trump card
               </span>
               <Chip
@@ -138,7 +138,7 @@ export default function DeckPreview() {
 
             {/* Glow toggle */}
             <div>
-              <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-400">
+              <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-fg-secondary">
                 Glow (selected)
               </span>
               <Chip
@@ -154,7 +154,7 @@ export default function DeckPreview() {
 
             {/* Back style */}
             <div>
-              <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-gray-400">
+              <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-fg-secondary">
                 Card back style
               </span>
               <div className="flex gap-2">
@@ -178,7 +178,7 @@ export default function DeckPreview() {
           <div className="flex flex-1 flex-col gap-10">
             {/* All sizes side by side */}
             <div>
-              <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
+              <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-fg-secondary">
                 All sizes
               </h2>
               <div className="flex items-end gap-10 rounded-xl border border-gray-800 bg-gray-900/50 p-8">
@@ -195,7 +195,7 @@ export default function DeckPreview() {
                           : undefined
                       }
                     />
-                    <span className="text-[10px] font-semibold uppercase tracking-wider text-gray-500">
+                    <span className="text-3xs font-semibold uppercase tracking-wider text-fg-muted">
                       {sz}
                     </span>
                   </div>
@@ -205,7 +205,7 @@ export default function DeckPreview() {
 
             {/* Low count gallery */}
             <div>
-              <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
+              <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-fg-secondary">
                 Low count visualization (0-6)
               </h2>
               <div className="flex items-end gap-6 rounded-xl border border-gray-800 bg-gray-900/50 p-8">
@@ -221,7 +221,7 @@ export default function DeckPreview() {
                           : undefined
                       }
                     />
-                    <span className="text-xs font-bold tabular-nums text-gray-400">{n}</span>
+                    <span className="text-xs font-bold tabular-nums text-fg-secondary">{n}</span>
                   </div>
                 ))}
               </div>
@@ -229,14 +229,14 @@ export default function DeckPreview() {
 
             {/* Without trump */}
             <div>
-              <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-gray-400">
+              <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-fg-secondary">
                 Without trump (Lost Cities style)
               </h2>
               <div className="flex items-end gap-6 rounded-xl border border-gray-800 bg-gray-900/50 p-8">
                 {[1, 5, 15, 30].map((n) => (
                   <div key={n} className="flex flex-col items-center gap-3">
                     <CardDeck count={n} size="md" renderBack={back.render} />
-                    <span className="text-xs font-bold tabular-nums text-gray-400">{n}</span>
+                    <span className="text-xs font-bold tabular-nums text-fg-secondary">{n}</span>
                   </div>
                 ))}
               </div>

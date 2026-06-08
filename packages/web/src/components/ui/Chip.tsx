@@ -53,7 +53,7 @@ const BASE =
   "inline-flex items-center justify-center gap-1 font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 disabled:cursor-not-allowed disabled:opacity-40";
 
 const SIZES: Record<Size, string> = {
-  xs: "px-2 py-0.5 text-[11px]",
+  xs: "px-2 py-0.5 text-2xs",
   sm: "px-2.5 py-1 text-xs",
   md: "px-3 py-1.5 text-sm",
 };
@@ -93,10 +93,11 @@ const TONE_ACTIVE_BORDER: Record<ChipTone, string> = {
   sky: "border border-sky-300/50 bg-sky-400/15 text-sky-100",
 };
 
-const INACTIVE_FILLED = "bg-surface-800 text-gray-400 hover:bg-surface-700 hover:text-gray-200";
+const INACTIVE_FILLED =
+  "bg-surface-800 text-fg-secondary hover:bg-surface-700 hover:text-fg-primary";
 
 const INACTIVE_OUTLINED =
-  "border border-white/10 bg-surface-900 text-gray-400 hover:border-white/25 hover:text-gray-200";
+  "border border-white/10 bg-surface-900 text-fg-secondary hover:border-white/25 hover:text-fg-primary";
 
 export function Chip({
   pressed,

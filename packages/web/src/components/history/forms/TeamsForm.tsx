@@ -116,7 +116,7 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
               className="flex flex-col gap-2 rounded-lg border border-white/10 bg-surface-900/60 p-3"
             >
               <div className="flex items-center gap-2">
-                <span className="text-xs font-semibold uppercase tracking-wider text-gray-400">
+                <span className="text-xs font-semibold uppercase tracking-wider text-fg-secondary">
                   Team {idx + 1}
                 </span>
                 <span className="flex-1" />
@@ -207,7 +207,7 @@ function MemberRoleRow({
   const role = member.role ?? "";
   return (
     <div className="flex items-center gap-2">
-      <span className="flex-1 truncate text-sm text-gray-200">{member.displayName}</span>
+      <span className="flex-1 truncate text-sm text-fg-primary">{member.displayName}</span>
       <div className="flex flex-wrap gap-1">
         {roleOptions.map((opt) => {
           const active = role === opt;

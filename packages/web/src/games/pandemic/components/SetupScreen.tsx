@@ -6,6 +6,7 @@ import { useCallback, useState } from "react";
 import { SectionLabel, SetupHeader, SetupLayout } from "../../../components/setup";
 import { Button } from "../../../components/ui/Button";
 import { SegmentedControl } from "../../../components/ui/SegmentedControl";
+import { SelectableCard } from "../../../components/ui/SelectableCard";
 import RoleCard from "./RoleCard";
 
 // The difficulty cards below are card-shaped clickable surfaces: a row
@@ -90,67 +91,53 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
           <div>
             <SectionLabel>Difficulty</SectionLabel>
             <div className="space-y-2">
-              {DIFFICULTY_META.map((d) => {
-                const active = difficulty === d.value;
-                return (
-                  // biome-ignore lint/correctness/noRestrictedElements: card-shaped difficulty option (icon-badge + label + stars + description)
-                  <button
-                    type="button"
-                    key={d.value}
-                    onClick={() => setDifficulty(d.value)}
-                    className={`group relative w-full flex items-center gap-3 rounded-xl border px-4 py-2.5 text-left transition-all duration-200 overflow-hidden ${
-                      active
-                        ? "border-white/20 bg-gray-800/80 shadow-lg"
-                        : "border-gray-700/80 bg-gray-800/50 hover:bg-gray-800/80 hover:shadow-lg hover:shadow-black/20 hover:-translate-y-0.5"
-                    }`}
-                    style={{
-                      borderLeftWidth: "3px",
-                      borderLeftColor: d.accent,
-                    }}
+              {DIFFICULTY_META.map((d) => (
+                <SelectableCard
+                  key={d.value}
+                  variant="stripe"
+                  orientation="horizontal"
+                  accentColor={d.accent}
+                  selected={difficulty === d.value}
+                  onClick={() => setDifficulty(d.value)}
+                  className="!px-4 !py-2.5"
+                >
+                  {/* Epidemic count */}
+                  <div
+                    className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-black"
+                    style={{ backgroundColor: `${d.accent}20`, color: d.accent }}
                   >
-                    <div
-                      className="absolute inset-x-0 top-0 h-px opacity-0 group-hover:opacity-100 transition-opacity"
-                      style={{ backgroundColor: d.accent }}
-                    />
+                    {d.value}
+                  </div>
 
-                    {/* Epidemic count */}
-                    <div
-                      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-black"
-                      style={{ backgroundColor: `${d.accent}20`, color: d.accent }}
-                    >
-                      {d.value}
-                    </div>
-
-                    {/* Text */}
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-center gap-2">
-                        <span className="text-sm font-bold text-white">{d.label}</span>
-                        <div className="flex gap-0.5">
-                          {[1, 2, 3].map((n) => (
-                            <svg
-                              key={n}
-                              viewBox="0 0 20 20"
-                              fill={n <= d.stars ? d.accent : "currentColor"}
-                              className={`h-3 w-3 ${n <= d.stars ? "" : "text-gray-700"}`}
-                              aria-hidden="true"
-                            >
-                              <path
-                                fillRule="evenodd"
-                                d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                                clipRule="evenodd"
-                              />
-                            </svg>
-                          ))}
-                        </div>
+                  {/* Text */}
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-bold text-white">{d.label}</span>
+                      <div className="flex gap-0.5">
+                        {[1, 2, 3].map((n) => (
+                          <svg
+                            key={n}
+                            viewBox="0 0 20 20"
+                            fill={n <= d.stars ? d.accent : "currentColor"}
+                            className={`h-3 w-3 ${n <= d.stars ? "" : "text-fg-disabled"}`}
+                            aria-hidden="true"
+                          >
+                            <path
+                              fillRule="evenodd"
+                              d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                              clipRule="evenodd"
+                            />
+                          </svg>
+                        ))}
                       </div>
-                      <span className="text-xs text-gray-500">{d.desc}</span>
                     </div>
+                    <span className="text-xs text-fg-muted">{d.desc}</span>
+                  </div>
 
-                    {/* Epidemics label */}
-                    <span className="text-xs text-gray-600 shrink-0">{d.value} epidemics</span>
-                  </button>
-                );
-              })}
+                  {/* Epidemics label */}
+                  <span className="text-xs text-fg-disabled shrink-0">{d.value} epidemics</span>
+                </SelectableCard>
+              ))}
             </div>
           </div>
 
@@ -166,7 +153,7 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
             <Button
               variant="link"
               onClick={handleShuffle}
-              className="!text-blue-400 hover:!text-blue-300"
+              className="!text-sky-400 hover:!text-sky-300"
             >
               Shuffle
             </Button>

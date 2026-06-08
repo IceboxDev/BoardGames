@@ -241,7 +241,7 @@ export default function TournamentGrid({
       {/* Header */}
       <div className="shrink-0 text-center">
         <h2 className="text-3xl font-extrabold text-white">AI Tournament</h2>
-        <p className="mt-2 text-sm text-gray-400">
+        <p className="mt-2 text-sm text-fg-secondary">
           {gamesPerMatchup} games per matchup &middot; alternating first player
         </p>
       </div>
@@ -249,7 +249,7 @@ export default function TournamentGrid({
       {/* Progress bar (when running) */}
       {running && (
         <div className="mx-auto mt-4 w-full max-w-md shrink-0">
-          <div className="mb-1 text-center text-xs text-gray-400">
+          <div className="mb-1 text-center text-xs text-fg-secondary">
             {strategies.find((s) => s.id === running.aId)?.label} vs{" "}
             {strategies.find((s) => s.id === running.bId)?.label}
             {" — "}
@@ -291,16 +291,16 @@ export default function TournamentGrid({
             gridTemplateColumns: `3.5rem 10rem repeat(${strategies.length}, 1fr)`,
           }}
         >
-          <div className="px-1 text-center text-[8px] font-semibold uppercase tracking-wider text-gray-500">
+          <div className="px-1 text-center text-4xs font-semibold uppercase tracking-wider text-fg-muted">
             ELO
           </div>
-          <div className="px-2 text-left text-[8px] font-semibold uppercase tracking-wider text-gray-500">
+          <div className="px-2 text-left text-4xs font-semibold uppercase tracking-wider text-fg-muted">
             Row vs Col
           </div>
           {strategies.map((col) => (
             <div
               key={col.id}
-              className="px-1 text-center text-[8px] font-semibold uppercase leading-snug tracking-wide text-gray-500"
+              className="px-1 text-center text-4xs font-semibold uppercase leading-snug tracking-wide text-fg-muted"
             >
               <span className="line-clamp-2">{col.label}</span>
             </div>
@@ -326,7 +326,7 @@ export default function TournamentGrid({
                   {hasResults ? (
                     <span className="tabular-nums text-xs font-semibold text-white">{elo}</span>
                   ) : (
-                    <span className="text-gray-700">—</span>
+                    <span className="text-fg-disabled">—</span>
                   )}
                 </div>
                 <div className="flex min-w-0 items-center border-b border-gray-800/50 px-2">
@@ -342,7 +342,7 @@ export default function TournamentGrid({
                     return (
                       <div
                         key={col.id}
-                        className="flex items-center justify-center border-b border-gray-800/50 text-gray-600"
+                        className="flex items-center justify-center border-b border-gray-800/50 text-fg-disabled"
                       >
                         —
                       </div>
@@ -391,26 +391,24 @@ export default function TournamentGrid({
                         >
                           <span
                             className={`text-sm font-bold tabular-nums leading-snug ${
-                              winRate >= 50 ? "text-green-400" : "text-red-400"
+                              winRate >= 50 ? "text-emerald-400" : "text-rose-400"
                             }`}
                           >
                             {winRate.toFixed(1)}%
                           </span>
                           {showScoreDiff && (
-                            <span className="text-[10px] tabular-nums leading-snug text-gray-500">
+                            <span className="text-3xs tabular-nums leading-snug text-fg-muted">
                               avg {(avgDiff ?? 0) > 0 ? "+" : ""}
                               {avgDiff}
                             </span>
                           )}
-                          <span className="text-[9px] leading-snug text-gray-600">
+                          <span className="text-3xs leading-snug text-fg-disabled">
                             {gamesPlayed} games
                           </span>
                         </Button>
                       ) : isRunning ? (
                         <div className="flex h-full w-full items-center justify-center">
-                          <span className="animate-pulse text-[10px] text-indigo-400">
-                            Running...
-                          </span>
+                          <span className="animate-pulse text-3xs text-indigo-400">Running...</span>
                         </div>
                       ) : (
                         <Button
@@ -422,7 +420,7 @@ export default function TournamentGrid({
                             runPair(aId, bId);
                           }}
                           disabled={!!running}
-                          className="!flex !h-full !w-full !items-center !justify-center !p-0 text-gray-500 hover:text-indigo-400"
+                          className="!flex !h-full !w-full !items-center !justify-center !p-0 text-fg-muted hover:text-indigo-400"
                         >
                           Run
                         </Button>

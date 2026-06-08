@@ -63,6 +63,16 @@ const ToggleReadySchema = z.object({
   roomCode: z.string(),
 });
 
+// Free-form chat between seated humans. Used during the Sky Team briefing
+// phase (and other games that want pre-round discussion). The server
+// rebroadcasts with the sender's slot + display name so clients don't
+// have to trust client-supplied identity.
+const ChatSchema = z.object({
+  type: z.literal("chat"),
+  roomCode: z.string(),
+  text: z.string().min(1).max(500),
+});
+
 // ── Discriminated union ────────────────────────────────────────────────
 
 export const ClientMessageSchema = z.discriminatedUnion("type", [
@@ -76,11 +86,13 @@ export const ClientMessageSchema = z.discriminatedUnion("type", [
   StartRoomSchema,
   KickPlayerSchema,
   ToggleReadySchema,
+  ChatSchema,
 ]);
 export type ClientMessage = z.infer<typeof ClientMessageSchema>;
 
 export {
   ActionSchema,
+  ChatSchema,
   ConfigureRoomSchema,
   CreateRoomSchema,
   CreateSessionSchema,

@@ -232,7 +232,15 @@ export default function SkyTeam({ source }: GameComponentProps) {
         />
       </div>
       {view.phase === "briefing" && source === "mp" && (
-        <BriefingOverlay view={view} onReady={handleReady} />
+        <BriefingOverlay
+          view={view}
+          onReady={handleReady}
+          chat={{
+            messages: mp.chatMessages,
+            onSend: mp.sendChat,
+            mySlot: mp.mySlot ?? 0,
+          }}
+        />
       )}
     </GameScreen>
   );

@@ -38,7 +38,7 @@ export function ParticipantPicker({ users, selectedIds, onChange, max, disabled 
   }
 
   if (users.length === 0) {
-    return <p className="text-xs text-gray-500">No users available.</p>;
+    return <p className="text-xs text-fg-muted">No users available.</p>;
   }
 
   return (

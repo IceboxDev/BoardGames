@@ -54,13 +54,13 @@ export function AvailabilityDrawer({ user, onClose }: Props) {
     <aside className="fixed inset-y-0 right-0 z-50 flex w-full max-w-md flex-col border-l border-white/10 bg-surface-950 shadow-2xl shadow-black/50 sm:w-[28rem]">
       <header className="flex shrink-0 items-start justify-between gap-3 border-b border-white/5 px-5 py-4">
         <div className="min-w-0">
-          <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-accent-400">
+          <p className="text-3xs font-semibold uppercase tracking-[0.25em] text-accent-400">
             Availability
           </p>
           <h2 className="mt-1 truncate text-base font-semibold text-white">
             {user.name || user.email}
           </h2>
-          <p className="mt-0.5 truncate text-xs text-gray-500">{user.email}</p>
+          <p className="mt-0.5 truncate text-xs text-fg-muted">{user.email}</p>
         </div>
         <IconButton
           variant="ghost"
@@ -72,7 +72,7 @@ export function AvailabilityDrawer({ user, onClose }: Props) {
       </header>
 
       <div className="flex min-h-0 flex-1 flex-col gap-3 px-4 py-4 sm:px-5">
-        <p className="shrink-0 text-center text-[11px] text-gray-400">
+        <p className="shrink-0 text-center text-2xs text-fg-secondary">
           <span className="text-accent-300">Can</span>
           <span className="mx-1 opacity-50">·</span>
           <span className="text-amber-300">Maybe</span>
@@ -81,7 +81,7 @@ export function AvailabilityDrawer({ user, onClose }: Props) {
         </p>
 
         {isLoading || availability === null ? (
-          <p className="text-center text-xs text-gray-500">Loading…</p>
+          <p className="text-center text-xs text-fg-muted">Loading…</p>
         ) : (
           <Calendar
             weekStart={weekStart}
@@ -98,7 +98,7 @@ export function AvailabilityDrawer({ user, onClose }: Props) {
           </p>
         )}
 
-        <p className="shrink-0 text-center text-[11px] text-gray-500">
+        <p className="shrink-0 text-center text-2xs text-fg-muted">
           {isLoading || availability === null
             ? ""
             : markedCount === 0

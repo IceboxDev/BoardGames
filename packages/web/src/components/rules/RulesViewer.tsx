@@ -105,7 +105,7 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
             </div>
             <span className="text-sm font-semibold text-white">Game Rules</span>
             {numPages > 0 && (
-              <span className="text-xs tabular-nums text-gray-500">
+              <span className="text-xs tabular-nums text-fg-muted">
                 {numPages} {numPages === 1 ? "page" : "pages"}
               </span>
             )}
@@ -130,7 +130,7 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
                     className={
                       active
                         ? "rounded-full bg-amber-500/15 px-3 py-1 text-xs font-medium text-amber-300 ring-1 ring-amber-400/30 transition-colors"
-                        : "rounded-full px-3 py-1 text-xs text-gray-400 transition-colors hover:bg-white/[0.04] hover:text-gray-200"
+                        : "rounded-full px-3 py-1 text-xs text-fg-secondary transition-colors hover:bg-white/[0.04] hover:text-fg-primary"
                     }
                   >
                     {t.label}
@@ -164,13 +164,13 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
               file={tabs[activeTab].url}
               onLoadSuccess={onDocumentLoadSuccess}
               loading={
-                <div className="flex items-center gap-2 py-20 text-sm text-gray-500">
+                <div className="flex items-center gap-2 py-20 text-sm text-fg-muted">
                   <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-amber-400" />
                   Loading rules...
                 </div>
               }
               error={
-                <div className="py-20 text-center text-sm text-red-400">
+                <div className="py-20 text-center text-sm text-rose-400">
                   Failed to load PDF. Please try again.
                 </div>
               }

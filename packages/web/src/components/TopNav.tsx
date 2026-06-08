@@ -30,7 +30,7 @@ export function TopNav({ homeHref = "/", children }: TopNavProps) {
           >
             <path d="M4.5 12.75l6 6 9-13.5" />
           </svg>
-          <span className="text-sm font-semibold tracking-wide text-gray-300 transition group-hover:text-white">
+          <span className="text-sm font-semibold tracking-wide text-fg-secondary transition group-hover:text-white">
             Board Game Lab
           </span>
         </Link>
@@ -53,7 +53,7 @@ export function TopNavBackButton({ to, label = "Back", onClick }: BackButtonProp
     <Link
       to={to}
       onClick={onClick}
-      className="flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-gray-500 transition hover:bg-surface-800 hover:text-gray-300"
+      className="flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-fg-muted transition hover:bg-surface-800 hover:text-fg-secondary"
     >
       <svg aria-hidden="true" viewBox="0 0 20 20" className="h-3.5 w-3.5" fill="currentColor">
         <path
@@ -78,7 +78,7 @@ export function TopNavLink({
   children: ReactNode;
 }) {
   const className =
-    "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-gray-500 transition hover:bg-surface-800 hover:text-gray-300";
+    "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-fg-muted transition hover:bg-surface-800 hover:text-fg-secondary";
   if (to) {
     return (
       <Link to={to} className={className}>

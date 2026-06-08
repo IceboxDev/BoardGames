@@ -8,7 +8,7 @@ import GameCard from "./GameCard";
 import GameLibraryFilters from "./GameLibraryFilters";
 import { DescriptionGrid } from "./game";
 import OnlineFamilyCard from "./OnlineFamilyCard";
-import { Button } from "./ui/Button";
+import { Button, EmptyState } from "./ui";
 
 export default function GameMenu() {
   const { isAdmin } = useCurrentUser();
@@ -47,25 +47,30 @@ export default function GameMenu() {
 
       <div className="scrollbar-hide flex-1 overflow-y-auto px-4 pb-8 sm:px-8 lg:px-12">
         {base.length === 0 ? (
-          <div className="rounded-xl border border-dashed border-white/10 px-8 py-16 text-center">
-            <p className="text-sm text-gray-500">
-              No games registered. Add a game module under{" "}
-              <code className="rounded bg-surface-800 px-1.5 py-0.5 font-mono text-xs text-accent-400">
-                src/games/
-              </code>
-            </p>
-          </div>
+          <EmptyState
+            title="No games registered"
+            description={
+              <>
+                Add a game module under{" "}
+                <code className="rounded bg-surface-800 px-1.5 py-0.5 font-mono text-xs text-accent-400">
+                  src/games/
+                </code>
+              </>
+            }
+          />
         ) : units.length === 0 ? (
-          <div className="rounded-xl border border-dashed border-white/10 px-8 py-16 text-center">
-            <p className="text-sm text-gray-500">No games match these filters.</p>
-            <Button
-              variant="link"
-              onClick={() => setFilters(EMPTY_FILTERS)}
-              className="mt-2 text-accent-400 hover:text-accent-300"
-            >
-              Clear filters
-            </Button>
-          </div>
+          <EmptyState
+            title="No games match these filters"
+            action={
+              <Button
+                variant="link"
+                onClick={() => setFilters(EMPTY_FILTERS)}
+                className="text-accent-400 hover:text-accent-300"
+              >
+                Clear filters
+              </Button>
+            }
+          />
         ) : (
           <DescriptionGrid
             texts={descriptionTexts}

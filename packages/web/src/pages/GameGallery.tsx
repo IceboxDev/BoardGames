@@ -3,7 +3,7 @@ import { useMemo, useState } from "react";
 import FamilyCard from "../components/FamilyCard";
 import GameCard from "../components/GameCard";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
-import { PageMain, PageShell } from "../components/ui/PageShell";
+import { EmptyState, PageMain, PageShell } from "../components/ui";
 import { groupForPresentation } from "../games/families";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
@@ -55,7 +55,7 @@ export default function GameGallery() {
       <PageMain width="full" padding="spacious" fillHeight className="gap-6">
         <div className="shrink-0">
           <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">My Gallery</h1>
-          <p className="mt-1.5 text-sm text-gray-500">
+          <p className="mt-1.5 text-sm text-fg-muted">
             {loading
               ? "Loading…"
               : owned.length === 0
@@ -65,13 +65,11 @@ export default function GameGallery() {
         </div>
 
         {loading ? null : owned.length === 0 ? (
-          <div className="flex flex-1 items-center justify-center">
-            <div className="rounded-2xl border border-dashed border-white/10 px-10 py-16 text-center">
-              <p className="text-sm text-gray-500">
-                No games in your library yet. Ask an admin to add some.
-              </p>
-            </div>
-          </div>
+          <EmptyState
+            fill
+            title="No games in your library yet"
+            description="Ask an admin to add some."
+          />
         ) : (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
             {units.map((unit, i) => {

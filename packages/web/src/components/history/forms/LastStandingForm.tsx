@@ -52,7 +52,7 @@ export function LastStandingForm({ users, value, onChange }: Props) {
       </Field>
       {value.players.length > 0 && (
         <div className="flex flex-col gap-1.5">
-          <span className="text-xs font-medium uppercase tracking-wide text-gray-400">
+          <span className="text-xs font-medium uppercase tracking-wide text-fg-secondary">
             Eliminate each player in order. Whoever's left standing wins.
           </span>
           {value.players.map((p) => {
@@ -61,17 +61,17 @@ export function LastStandingForm({ users, value, onChange }: Props) {
               <div key={p.userId} className="flex items-center gap-2">
                 <span
                   className={`flex-1 truncate text-sm ${
-                    eliminated ? "text-gray-500 line-through" : "text-amber-100"
+                    eliminated ? "text-fg-muted line-through" : "text-amber-100"
                   }`}
                 >
                   {p.displayName}
                 </span>
                 {eliminated ? (
-                  <span className="text-xs text-gray-500">
+                  <span className="text-xs text-fg-muted">
                     out #{(p.eliminationOrder ?? 0) + 1}
                   </span>
                 ) : (
-                  <span className="rounded bg-amber-400/20 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-amber-200">
+                  <span className="rounded bg-amber-400/20 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wide text-amber-200">
                     Surviving
                   </span>
                 )}

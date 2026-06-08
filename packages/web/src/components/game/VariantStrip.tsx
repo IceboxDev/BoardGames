@@ -78,7 +78,7 @@ export function VariantStrip({
             {!fits && interactive && (
               <span
                 aria-hidden="true"
-                className="absolute inset-0 flex items-center justify-center bg-black/55 text-[9px] font-bold text-white/80"
+                className="absolute inset-0 flex items-center justify-center bg-black/55 text-3xs font-bold text-white/80"
               >
                 ✕
               </span>

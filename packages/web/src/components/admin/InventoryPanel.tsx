@@ -5,7 +5,7 @@ import { errorMessageOf } from "../../lib/error-message";
 import { adminFetchInventory, adminSaveInventory } from "../../lib/inventory";
 import { qk } from "../../lib/query-keys";
 import InventoryGrid from "../InventoryGrid";
-import { Button } from "../ui/Button";
+import { Button, LoadingState } from "../ui";
 
 type Props = { userId: string };
 
@@ -39,7 +39,7 @@ export function InventoryPanel({ userId }: Props) {
     errorMessageOf(saveMutation.error, "Save failed");
 
   if (inventoryQuery.isPending || !list.isReady || list.draft === null) {
-    return <p className="text-xs text-gray-500">Loading inventory…</p>;
+    return <LoadingState label="Loading inventory…" className="justify-start py-3" />;
   }
 
   return (
@@ -47,7 +47,7 @@ export function InventoryPanel({ userId }: Props) {
       {error && <p className="text-xs text-rose-400">{error}</p>}
       <InventoryGrid selected={list.draft} onToggle={list.toggle} />
       <div className="flex items-center justify-end gap-2">
-        <span className="text-xs text-gray-500">
+        <span className="text-xs text-fg-muted">
           {list.draft.length} of {games.length} selected
         </span>
         <Button

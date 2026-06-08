@@ -44,7 +44,7 @@ export function CarouselBody({
       >
         {title}
       </h3>
-      <p className="text-[10px] uppercase tracking-[0.18em] text-gray-400 sm:text-[11px] xl:text-xs">
+      <p className="text-3xs uppercase tracking-[0.18em] text-fg-secondary sm:text-2xs xl:text-xs">
         <span className={bestForHeadcount !== null ? "text-amber-300" : undefined}>
           {playerRange(bgg)}
           {bestForHeadcount !== null && ` · best at ${bestForHeadcount}`}
@@ -64,7 +64,7 @@ export function CarouselBody({
         // height-capping and overflow itself. The generated `default`
         // variant is char-budgeted (~240 chars) to fit within 7 lines
         // even at the smallest cardW + biggest text combination.
-        <p className="line-clamp-7 text-[10px] leading-snug text-gray-400 sm:text-[11px] xl:text-xs 3xl:text-sm">
+        <p className="line-clamp-7 text-3xs leading-snug text-fg-secondary sm:text-2xs xl:text-xs 3xl:text-sm">
           {stripBggHtml(description)}
         </p>
       )}

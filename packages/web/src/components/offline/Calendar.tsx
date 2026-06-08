@@ -70,7 +70,7 @@ export default function Calendar({
         {DAY_NAMES.map((n) => (
           <div
             key={n}
-            className={`text-center font-semibold uppercase tracking-[0.2em] text-gray-400 ${compact ? "text-[8px]" : "text-[10px]"}`}
+            className={`text-center font-semibold uppercase tracking-[0.2em] text-fg-secondary ${compact ? "text-4xs" : "text-3xs"}`}
           >
             {n}
           </div>
@@ -222,7 +222,7 @@ function DayCell({
   const padding = compact ? "p-1 sm:p-1.5" : "p-2 sm:p-3";
   const dayTextSize = compact ? "text-sm sm:text-base" : "text-lg sm:text-xl md:text-2xl";
   const monthLabelPos = compact ? "left-1 top-1" : "left-1.5 top-1.5";
-  const monthLabelSize = compact ? "text-[7px]" : "text-[8px] sm:text-[9px]";
+  const monthLabelSize = compact ? "text-[7px]" : "text-4xs sm:text-3xs";
   const todayDotPos = compact ? "right-1 top-1" : "right-2 top-2";
   const aspectClass = compact ? "aspect-square" : "";
   const layoutClass = compact ? "items-center justify-center" : "";
@@ -313,7 +313,7 @@ function DayCell({
       ) : (
         <span
           className={`relative font-bold leading-none ${dayTextSize} ${dayNumberClass} ${
-            value || heated ? "text-white" : "text-gray-200"
+            value || heated ? "text-white" : "text-fg-primary"
           }`}
         >
           {day}
@@ -558,7 +558,7 @@ function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
   // mass — otherwise the chips' default leading + ring made them taller
   // than the locked pill and adjacent cells looked staggered.
   const pillBase =
-    "pointer-events-none absolute inset-x-1 bottom-1 z-10 inline-flex min-h-3 items-center justify-center gap-0.5 rounded-md px-0.5 py-0 text-[7px] font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:min-h-5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-[8px] sm:tracking-[0.18em]";
+    "pointer-events-none absolute inset-x-1 bottom-1 z-10 inline-flex min-h-3 items-center justify-center gap-0.5 rounded-md px-0.5 py-0 text-[7px] font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:min-h-5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-4xs sm:tracking-[0.18em]";
   if (viewerRsvp === "yes") {
     return (
       <span
@@ -574,7 +574,7 @@ function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
     return (
       <span
         aria-hidden="true"
-        className={`${pillBase} border border-white/10 bg-white/[0.04] text-gray-400`}
+        className={`${pillBase} border border-white/10 bg-white/[0.04] text-fg-secondary`}
       >
         <CrossGlyphSmall />
         Pass
@@ -647,7 +647,7 @@ function PersonalMarkChip({ value }: { value: Availability }) {
   return (
     <span
       aria-hidden="true"
-      className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-[7px] font-extrabold uppercase leading-none tracking-[0.1em] text-white ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-[10px] sm:tracking-[0.15em] md:text-xs ${
+      className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-[7px] font-extrabold uppercase leading-none tracking-[0.1em] text-white ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-3xs sm:tracking-[0.15em] md:text-xs ${
         isCan
           ? "ring-accent-300 shadow-[0_0_10px_rgba(129,140,248,0.6)]"
           : "ring-amber-300 shadow-[0_0_10px_rgba(252,211,77,0.55)]"
@@ -669,7 +669,7 @@ function HeatBadge({ heat }: { heat: Heat }) {
   // one is shown.
   return (
     <span
-      className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-[7px] font-extrabold leading-none ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-[10px] md:text-xs ${
+      className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-[7px] font-extrabold leading-none ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-3xs md:text-xs ${
         isFire
           ? "text-orange-200 ring-orange-300/70 shadow-[0_0_10px_rgba(249,115,22,0.55)]"
           : "text-amber-200 ring-amber-300/70 shadow-[0_0_10px_rgba(252,211,77,0.4)]"
@@ -741,7 +741,7 @@ function NameRow({
           key={e.userId}
           title={`${e.name} — ${e.status}`}
           style={textShadow}
-          className="inline-flex max-w-full items-center gap-0 truncate text-[6px] font-medium leading-tight text-white sm:gap-1 sm:text-[10px] sm:leading-none md:text-[11px] lg:text-xs 3xl:text-sm"
+          className="inline-flex max-w-full items-center gap-0 truncate text-[6px] font-medium leading-tight text-white sm:gap-1 sm:text-3xs sm:leading-none md:text-2xs lg:text-xs 3xl:text-sm"
         >
           <span
             aria-hidden="true"

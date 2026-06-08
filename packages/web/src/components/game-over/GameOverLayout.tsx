@@ -25,8 +25,8 @@ interface GameOverLayoutProps {
 
 const HEADLINE_COLORS = {
   win: "text-emerald-400",
-  lose: "text-red-400",
-  draw: "text-gray-300",
+  lose: "text-rose-400",
+  draw: "text-fg-secondary",
   neutral: "text-white",
 } as const;
 
@@ -45,7 +45,7 @@ export function GameOverLayout({
       <div className="mb-8 text-center">
         {emoji && <div className="mb-2 text-5xl">{emoji}</div>}
         <h2 className={`text-3xl font-bold ${HEADLINE_COLORS[headlineColor]}`}>{headline}</h2>
-        {subtitle && <p className="mt-2 text-sm text-gray-400">{subtitle}</p>}
+        {subtitle && <p className="mt-2 text-sm text-fg-secondary">{subtitle}</p>}
       </div>
 
       {/* Game-specific content */}

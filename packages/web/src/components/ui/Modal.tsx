@@ -103,7 +103,7 @@ export function Modal({
                   type="button"
                   onClick={onClose}
                   aria-label="Close"
-                  className="rounded-md p-1.5 text-gray-400 transition hover:bg-white/5 hover:text-white"
+                  className="rounded-md p-1.5 text-fg-secondary transition hover:bg-white/5 hover:text-white"
                 >
                   <XIcon />
                 </button>
@@ -115,7 +115,7 @@ export function Modal({
             <header className="flex min-w-0 flex-col items-start gap-1 pr-20">
               {eyebrow && (
                 <p
-                  className={`text-[11px] font-semibold uppercase tracking-[0.25em] ${eyebrowClassName}`}
+                  className={`text-2xs font-semibold uppercase tracking-[0.25em] ${eyebrowClassName}`}
                 >
                   {eyebrow}
                 </p>

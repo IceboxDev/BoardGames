@@ -12,6 +12,7 @@ import {
 } from "../../../games/one-night-ultimate-werewolf/roles";
 import { Chip } from "../../ui/Chip";
 import { IconButton } from "../../ui/IconButton";
+import { Select } from "../../ui/Select";
 import { ParticipantPicker } from "../ParticipantPicker";
 
 type User = { id: string; name: string };
@@ -145,10 +146,11 @@ export function WerewolfForm({ users, value, onChange }: Props) {
       <PoolEditor pool={pool} onAdjust={adjustPoolCount} />
 
       {roster.length > 0 && (
-        <div className="text-[11px] text-gray-500">
-          Card pool: <span className="text-gray-300">{totalPool}</span>
-          <span className="px-1 text-gray-700">·</span>
-          Expected: <span className="text-gray-300">{expectedPool}</span> (players + 3 at center)
+        <div className="text-2xs text-fg-muted">
+          Card pool: <span className="text-fg-secondary">{totalPool}</span>
+          <span className="px-1 text-fg-disabled">·</span>
+          Expected: <span className="text-fg-secondary">{expectedPool}</span> (players + 3 at
+          center)
           {totalPool !== expectedPool && (
             <span className="ml-2 text-amber-400">
               ⚠ {totalPool < expectedPool ? "under" : "over"} by{" "}
@@ -192,7 +194,7 @@ export function WerewolfForm({ users, value, onChange }: Props) {
               />
             ))}
           </div>
-          <p className="mt-1 text-[11px] text-gray-500">
+          <p className="mt-1 text-2xs text-fg-muted">
             Click anyone the village killed. Leave blank if nobody died (tie-with-no-kill).
           </p>
         </div>
@@ -210,7 +212,7 @@ export function WerewolfForm({ users, value, onChange }: Props) {
           />
         </div>
         {winners.length === 0 && roster.length > 0 && (
-          <p className="mt-1 text-[11px] text-amber-300">
+          <p className="mt-1 text-2xs text-amber-300">
             No winning team — everyone loses (no Werewolves in play but someone got voted out).
           </p>
         )}
@@ -231,18 +233,14 @@ function ScenarioPicker({
   return (
     <div>
       <Label>Scenario</Label>
-      <select
-        value={scenarioId}
-        onChange={(e) => onPick(e.target.value as ScenarioId)}
-        className="w-full rounded-md border border-white/10 bg-surface-900 px-2 py-1.5 text-xs text-gray-100"
-      >
+      <Select compact value={scenarioId} onChange={(e) => onPick(e.target.value as ScenarioId)}>
         <option value="custom">Custom — pick roles manually</option>
         {SCENARIOS.map((s) => (
           <option key={s.id} value={s.id}>
             {s.label} ({s.difficulty}, {s.players[0]}–{s.players[s.players.length - 1]} players)
           </option>
         ))}
-      </select>
+      </Select>
     </div>
   );
 }
@@ -269,7 +267,9 @@ function PoolEditor({
             >
               <span className="flex items-center gap-1.5">
                 <TeamDot team={role.team} />
-                <span className={count > 0 ? "text-gray-200" : "text-gray-500"}>{role.label}</span>
+                <span className={count > 0 ? "text-fg-primary" : "text-fg-muted"}>
+                  {role.label}
+                </span>
               </span>
               <span className="flex items-center gap-1">
                 <IconButton
@@ -280,7 +280,7 @@ function PoolEditor({
                   aria-label={`Remove ${role.label}`}
                   icon={<span aria-hidden="true">−</span>}
                 />
-                <span className="min-w-[1.5em] text-center font-mono text-[11px] text-gray-200">
+                <span className="min-w-[1.5em] text-center font-mono text-2xs text-fg-primary">
                   {count}
                 </span>
                 <IconButton
@@ -313,7 +313,7 @@ function PlayerRow({
 }) {
   return (
     <div className="flex items-center gap-2">
-      <span className="flex-1 truncate text-sm text-gray-200">{slot.displayName}</span>
+      <span className="flex-1 truncate text-sm text-fg-primary">{slot.displayName}</span>
       <div className="flex shrink-0 overflow-hidden rounded-md border border-white/10">
         <TeamButton
           team="village"
@@ -419,7 +419,7 @@ function TeamDot({ team }: { team: WerewolfTeam }) {
 
 function Label({ children }: { children: React.ReactNode }) {
   return (
-    <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-gray-400">
+    <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-fg-secondary">
       {children}
     </div>
   );

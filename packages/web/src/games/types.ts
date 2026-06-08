@@ -32,6 +32,15 @@ export type GameComponentProps = { source: GameSource };
 export type LobbyConfigProps = {
   value: unknown;
   onChange: (config: unknown) => void;
+  /**
+   * Whether the local viewer is the room host. Most config components
+   * don't care — the lobby route only sends the host's `config` to the
+   * server on Start — but games whose config is large or interactive
+   * (Sky Team's scenario picker) want to render an editable surface for
+   * the host and a passive "host is choosing" placeholder for everyone
+   * else, since the value never syncs across seats.
+   */
+  isHost?: boolean;
 };
 
 /**

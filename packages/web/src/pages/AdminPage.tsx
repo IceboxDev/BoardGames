@@ -10,8 +10,7 @@ import {
   UsersTable,
 } from "../components/admin";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
-import { Chip } from "../components/ui/Chip";
-import { PageMain, PageShell } from "../components/ui/PageShell";
+import { Chip, ErrorAlert, PageMain, PageShell } from "../components/ui";
 import { useAdminUsers } from "../hooks/useAdminUsers.ts";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { adminSetOnlineMode } from "../lib/admin";
@@ -168,14 +167,14 @@ export default function AdminPage() {
               confirm. Deletion is permanent and wipes their inventory and availability.
             </p>
           ) : (
-            <p className="col-span-2 text-sm text-gray-500">
-              Set each user's <span className="font-medium text-gray-300">online mode</span> —{" "}
-              <span className="font-medium text-gray-300">Offline</span> for in-person only,{" "}
-              <span className="font-medium text-gray-300">Online</span> for multiplayer only, or{" "}
-              <span className="font-medium text-gray-300">Both</span>. Use{" "}
-              <span className="font-medium text-gray-300">Inventory</span> to set which games each
-              user owns. Click <span className="font-medium text-gray-300">Calendar</span> to
-              preview a user's offline availability.
+            <p className="col-span-2 text-sm text-fg-muted">
+              Set each user's <span className="font-medium text-fg-secondary">online mode</span> —{" "}
+              <span className="font-medium text-fg-secondary">Offline</span> for in-person only,{" "}
+              <span className="font-medium text-fg-secondary">Online</span> for multiplayer only, or{" "}
+              <span className="font-medium text-fg-secondary">Both</span>. Use{" "}
+              <span className="font-medium text-fg-secondary">Inventory</span> to set which games
+              each user owns. Click <span className="font-medium text-fg-secondary">Calendar</span>{" "}
+              to preview a user's offline availability.
             </p>
           )}
         </div>
@@ -186,11 +185,7 @@ export default function AdminPage() {
           onChanged={() => queryClient.invalidateQueries({ queryKey: qk.adminUsers() })}
         />
 
-        {errorMessage && (
-          <div className="mb-4 rounded-md border border-red-500/30 bg-red-500/10 px-3 py-2 text-sm text-red-300">
-            {errorMessage}
-          </div>
-        )}
+        {errorMessage && <ErrorAlert message={errorMessage} className="mb-4" />}
 
         <UsersTable
           loading={usersQuery.isPending}
