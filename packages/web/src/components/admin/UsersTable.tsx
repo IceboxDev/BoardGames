@@ -18,7 +18,7 @@ type Props = {
  * case; here we own the surrounding `<table>`, `<thead>`, and `<tbody>` so
  * `AdminPage` doesn't have to.
  *
- * Header columns are 7 wide; `UserRow.COLUMN_COUNT` must stay in sync (used
+ * Header columns are 6 wide; `UserRow.COLUMN_COUNT` must stay in sync (used
  * for the expansion / confirmation `colSpan`).
  */
 export function UsersTable({ loading, empty, deleteMode, children }: Props) {
@@ -39,7 +39,6 @@ export function UsersTable({ loading, empty, deleteMode, children }: Props) {
             <th className="w-64 px-5 py-3 text-left font-medium">Name</th>
             <th className="px-5 py-3 text-left font-medium">Email</th>
             <th className="w-24 px-5 py-3 text-center font-medium">Role</th>
-            <th className="w-32 px-5 py-3 text-center font-medium">Calendar</th>
             <th className="w-32 px-5 py-3 text-center font-medium">Inventory</th>
             <th
               className={`w-40 px-3 py-3 text-center font-medium ${

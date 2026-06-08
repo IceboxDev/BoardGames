@@ -65,10 +65,19 @@ function parseFreeForAll(v: Record<string, unknown>): ParseResult<MatchOutcomeFr
     if (score === null) return { ok: false, error: `players[${i}]: invalid score` };
     const rank = raw.rank === undefined ? undefined : asInteger(raw.rank);
     if (rank === null) return { ok: false, error: `players[${i}]: invalid rank` };
-    players.push({ ...p.value, score, ...(rank !== undefined ? { rank } : {}) });
+    // Optional per-player role label (Villainous villain, etc.) — mirrors the
+    // team-member `role` handling so it survives the write round-trip.
+    const role = raw.role !== undefined ? asOptionalString(raw.role, 64) : undefined;
+    players.push({
+      ...p.value,
+      score,
+      ...(rank !== undefined ? { rank } : {}),
+      ...(role !== undefined ? { role } : {}),
+    });
   }
   // No explicit winnerUserIds — the player(s) with the highest score are
-  // implicit co-winners.
+  // implicit co-winners. Point-less variants (Villainous) instead mark the sole
+  // winner with `rank: 1` and keep every score at 0.
   const scenario = asOptionalString(v.scenario, 64);
   return {
     ok: true,

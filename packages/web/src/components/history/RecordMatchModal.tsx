@@ -30,6 +30,7 @@ import { FreeForAllForm } from "./forms/FreeForAllForm";
 import { LastStandingForm } from "./forms/LastStandingForm";
 import { OneVsManyForm } from "./forms/OneVsManyForm";
 import { TeamsForm } from "./forms/TeamsForm";
+import { VillainousForm } from "./forms/VillainousForm";
 import { WerewolfForm } from "./forms/WerewolfForm";
 import { GamePicker } from "./GamePicker";
 import { GameVariantPicker } from "./GameVariantPicker";
@@ -276,14 +277,21 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
         )}
 
         <div className="rounded-xl border border-white/5 bg-surface-900/40 p-3">
-          {kind === "free-for-all" && (
-            <FreeForAllForm
-              users={allUsers}
-              value={outcome as MatchOutcomeFreeForAll}
-              onChange={setOutcome}
-              gameSlug={gameSlug}
-            />
-          )}
+          {kind === "free-for-all" &&
+            (gameSlug === "villainous" ? (
+              <VillainousForm
+                users={allUsers}
+                value={outcome as MatchOutcomeFreeForAll}
+                onChange={setOutcome}
+              />
+            ) : (
+              <FreeForAllForm
+                users={allUsers}
+                value={outcome as MatchOutcomeFreeForAll}
+                onChange={setOutcome}
+                gameSlug={gameSlug}
+              />
+            ))}
           {kind === "teams" &&
             (gameSlug === "blood-on-the-clocktower" ? (
               <ClocktowerForm

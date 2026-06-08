@@ -19,6 +19,8 @@ type Props = {
   visibleMembers: GameDefinition[];
   index?: number;
   showComingSoon?: boolean;
+  /** Above-the-fold hint forwarded to the active thumbnail. */
+  priority?: boolean;
 };
 
 /**
@@ -34,6 +36,7 @@ export default function OnlineFamilyCard({
   visibleMembers,
   index = 0,
   showComingSoon = true,
+  priority = false,
 }: Props) {
   const initialSlug =
     visibleMembers.find((m) => m === family.canonical)?.slug ?? visibleMembers[0]?.slug;
@@ -55,7 +58,7 @@ export default function OnlineFamilyCard({
         // midline.
         <div className="pointer-events-none absolute left-0 top-0 z-20 aspect-[16/9] w-full">
           <div className="flex h-full items-center">
-            <div className="-translate-x-3.5 pointer-events-auto">
+            <div className="-translate-x-2 pointer-events-auto sm:-translate-x-3.5">
               <VariantStrip
                 members={visibleMembers}
                 activeSlug={active.slug}
@@ -76,6 +79,7 @@ export default function OnlineFamilyCard({
             tight
           />
         }
+        priority={priority}
       />
       <GameCardBody title={active.title} affordance={href ? "arrow" : null}>
         <GameCardMeta>

@@ -11,6 +11,10 @@ import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { fetchMyInventory } from "../lib/inventory";
 import { qk } from "../lib/query-keys";
 
+// First grid row (4 cards at the widest `2xl:grid-cols-4` layout) is above the
+// fold — eager-load those thumbnails so they don't queue behind the rest.
+const EAGER_ROW = 4;
+
 export default function GameGallery() {
   const { user } = useCurrentUser();
   const userId = user?.id ?? null;
@@ -80,6 +84,7 @@ export default function GameGallery() {
                     game={unit.game}
                     index={i}
                     showComingSoon={false}
+                    priority={i < EAGER_ROW}
                   />
                 );
               }
@@ -95,6 +100,7 @@ export default function GameGallery() {
                           expanded
                           onToggle={() => toggleFamily(unit.family.id)}
                           index={i}
+                          priority={i < EAGER_ROW}
                         />
                       </div>
                       <div
@@ -122,6 +128,7 @@ export default function GameGallery() {
                       expanded={false}
                       onToggle={() => toggleFamily(unit.family.id)}
                       index={i}
+                      priority={i < EAGER_ROW}
                     />
                   )}
                 </div>

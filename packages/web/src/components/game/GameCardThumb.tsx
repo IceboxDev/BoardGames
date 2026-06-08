@@ -25,6 +25,13 @@ type Props = {
   overlay?: ReactNode;
   /** Drop the default `group-hover:scale-105` on the main image. */
   noHoverScale?: boolean;
+  /**
+   * Above-the-fold hint. When true the image loads eagerly at high fetch
+   * priority instead of the default lazy/low — set it on the first grid row
+   * so those thumbnails don't queue behind the rest on a cold load. The
+   * `aspect-[16/9]` wrapper reserves the layout box either way.
+   */
+  priority?: boolean;
 };
 
 const IMG_BASE = "h-full w-full object-cover transition-transform duration-500";
@@ -36,6 +43,7 @@ export function GameCardThumb({
   badgeTopRight,
   overlay,
   noHoverScale = false,
+  priority = false,
 }: Props) {
   const imgCls = noHoverScale ? IMG_BASE : `${IMG_BASE} group-hover:scale-105`;
   return (
@@ -44,7 +52,8 @@ export function GameCardThumb({
       <img
         src={src}
         alt=""
-        loading="lazy"
+        loading={priority ? "eager" : "lazy"}
+        fetchPriority={priority ? "high" : "low"}
         decoding="async"
         className={backdrop ? `relative ${imgCls}` : imgCls}
       />

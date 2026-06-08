@@ -9,7 +9,7 @@ import { ONLINE_MODE_OPTIONS_COMPACT } from "./online-mode-options";
 import type { AdminUser } from "./types";
 
 /** Match the number of `<th>` cells in the parent <UsersTable> header. */
-const COLUMN_COUNT = 7;
+const COLUMN_COUNT = 6;
 
 export type UserRowProps = {
   user: AdminUser;
@@ -67,17 +67,20 @@ export function UserRow({
     <>
       <tr className="h-12 text-fg-primary">
         <td className="pl-5 pr-3 py-3">
-          <CoverageCell coverage={coverage} />
+          {/* biome-ignore lint/correctness/noRestrictedElements: bespoke clickable coverage pie — opens the user's availability calendar */}
+          <button
+            type="button"
+            onClick={onOpenCalendar}
+            aria-label={`View ${user.name || user.email}'s availability calendar`}
+            className="-mx-1 cursor-pointer rounded-md px-1 py-0.5 transition-colors hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+          >
+            <CoverageCell coverage={coverage} />
+          </button>
         </td>
         <td className="px-5 py-3 font-medium">{user.name || "—"}</td>
         <td className="px-5 py-3 text-fg-secondary">{user.email}</td>
         <td className="px-5 py-3 text-center">
           <RoleBadge role={user.role ?? null} />
-        </td>
-        <td className="px-5 py-3 text-center">
-          <Button variant="secondary" size="xs" onClick={onOpenCalendar}>
-            View
-          </Button>
         </td>
         <td className="px-5 py-3 text-center">
           <Chip pressed={expanded} tone="accent" size="xs" onClick={onToggleInventory}>

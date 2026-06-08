@@ -65,7 +65,7 @@ function GameCardHeader({ title, affordance }: { title: string; affordance: Affo
  * same size and weight.
  */
 export function GameCardMeta({ children }: { children: ReactNode }) {
-  return <p className="text-xs uppercase tracking-[0.18em] text-fg-muted">{children}</p>;
+  return <p className="truncate text-2xs uppercase tracking-[0.18em] text-fg-muted">{children}</p>;
 }
 
 /**

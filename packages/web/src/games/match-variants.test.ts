@@ -25,6 +25,16 @@ describe("variantConfigForSlug", () => {
     expect(config?.mode).toBe("single");
     expect(config?.options.length).toBe(5);
   });
+
+  it("returns the Villainous edition config (single, two editions)", () => {
+    const config = variantConfigForSlug("villainous");
+    expect(config?.label).toBe("Edition");
+    expect(config?.mode).toBe("single");
+    expect(config?.options.map((o) => o.value)).toEqual([
+      "Introduction to Evil",
+      "The Worst Takes It All",
+    ]);
+  });
 });
 
 describe("parseMultiVariant", () => {

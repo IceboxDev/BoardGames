@@ -13,6 +13,8 @@ type Props = {
   expanded: boolean;
   onToggle: () => void;
   index?: number;
+  /** Above-the-fold hint forwarded to the canonical thumbnail. */
+  priority?: boolean;
 };
 
 const MAX_THUMBS_IN_STRIP = 5;
@@ -30,6 +32,7 @@ export default function FamilyCard({
   expanded,
   onToggle,
   index = 0,
+  priority = false,
 }: Props) {
   const canonical = family.canonical;
   const ringMembers = visibleMembers.length;
@@ -56,6 +59,7 @@ export default function FamilyCard({
           <VariantsBadge count={ringMembers} accentHex={canonical.accentHex} mode="plus" />
         }
         noHoverScale
+        priority={priority}
       />
       <GameCardBody title={family.displayName} affordance={{ kind: "chevron", expanded }}>
         <GameCardMeta>

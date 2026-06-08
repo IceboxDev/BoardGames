@@ -117,6 +117,7 @@ export function describeOutcomeError(
 ): string | null {
   switch (outcome.kind) {
     case "free-for-all":
+      if (gameSlug === "villainous") return describeVillainousError(outcome);
       if (outcome.players.length < 2) return "Add at least two players";
       return null;
     case "teams":
@@ -136,6 +137,20 @@ export function describeOutcomeError(
       if (outcome.team.members.length < 1) return "Add at least one team player";
       return null;
   }
+}
+
+/**
+ * Villainous is a point-less free-for-all: every player must be tagged with the
+ * villain they played, and exactly one of them wins (marked `rank: 1`).
+ */
+export function describeVillainousError(outcome: MatchOutcomeFreeForAll): string | null {
+  if (outcome.players.length < 2) return "Add at least two players";
+  const noVillain = outcome.players.find((p) => !p.role);
+  if (noVillain) return `Pick a villain for ${noVillain.displayName}`;
+  const winners = outcome.players.filter((p) => p.rank === 1);
+  if (winners.length === 0) return "Crown the player who won";
+  if (winners.length > 1) return "Only one player can win Villainous";
+  return null;
 }
 
 export function describeGenericTeamsError(outcome: MatchOutcomeTeams): string | null {
@@ -208,10 +223,15 @@ export function applyParticipants(
   switch (kind) {
     case "free-for-all": {
       const ffa = base as MatchOutcomeFreeForAll;
-      const scoreById = new Map(ffa.players.map((p) => [p.userId, p.score]));
+      const byId = new Map(ffa.players.map((p) => [p.userId, p] as const));
       return {
         ...ffa,
-        players: participants.map((p) => ({ ...p, score: scoreById.get(p.userId) ?? 0 })),
+        // Keep score/role/rank for players that remain (Villainous villain +
+        // winner survive a game-night re-prefill); refresh name from the picker.
+        players: participants.map((p) => {
+          const prev = byId.get(p.userId);
+          return prev ? { ...prev, ...p } : { ...p, score: 0 };
+        }),
       };
     }
     case "last-standing": {

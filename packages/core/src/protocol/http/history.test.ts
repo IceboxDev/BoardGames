@@ -72,6 +72,36 @@ describe("MatchOutcomeSchema", () => {
     ).toThrow();
   });
 
+  it("keeps the optional per-player role label (Villainous villain) when present", () => {
+    const parsed = MatchOutcomeSchema.parse({
+      kind: "free-for-all",
+      scenario: "The Worst Takes It All",
+      players: [
+        { ...sampleParticipant("u1", "Alice"), score: 0, rank: 1, role: "Maleficent" },
+        { ...sampleParticipant("u2", "Bob"), score: 0, role: "Jafar" },
+      ],
+    });
+    expect(parsed.kind).toBe("free-for-all");
+    if (parsed.kind === "free-for-all") {
+      expect(parsed.players[0].role).toBe("Maleficent");
+      expect(parsed.players[0].rank).toBe(1);
+      expect(parsed.players[1].role).toBe("Jafar");
+      expect(parsed.scenario).toBe("The Worst Takes It All");
+    }
+  });
+
+  it("rejects a free-for-all role longer than 64 chars", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        kind: "free-for-all",
+        players: [
+          { ...sampleParticipant("u1", "Alice"), score: 0, role: "x".repeat(65) },
+          { ...sampleParticipant("u2", "Bob"), score: 0 },
+        ],
+      }),
+    ).toThrow();
+  });
+
   it("rejects teams with a winner index out of range", () => {
     expect(() => MatchOutcomeSchema.parse({ ...sampleTeams, winnerTeamIndices: [5] })).toThrow(
       /out of range/,

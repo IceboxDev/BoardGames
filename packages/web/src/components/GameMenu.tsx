@@ -10,6 +10,11 @@ import { DescriptionGrid } from "./game";
 import OnlineFamilyCard from "./OnlineFamilyCard";
 import { Button, EmptyState } from "./ui";
 
+// The first grid row (4 cards at the widest `2xl:grid-cols-4` layout) is above
+// the fold — load those thumbnails eagerly so they don't queue behind the lazy
+// rest on a cold refresh.
+const EAGER_ROW = 4;
+
 export default function GameMenu() {
   const { isAdmin } = useCurrentUser();
   const [filters, setFilters] = useState<GameFilters>(EMPTY_FILTERS);
@@ -83,6 +88,7 @@ export default function GameMenu() {
                   game={unit.game}
                   href={unit.game.kind === "playable" ? `/play/${unit.game.slug}` : undefined}
                   index={i}
+                  priority={i < EAGER_ROW}
                 />
               ) : (
                 <OnlineFamilyCard
@@ -90,6 +96,7 @@ export default function GameMenu() {
                   family={unit.family}
                   visibleMembers={unit.visibleMembers}
                   index={i}
+                  priority={i < EAGER_ROW}
                 />
               ),
             )}

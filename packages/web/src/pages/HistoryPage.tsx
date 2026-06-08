@@ -124,9 +124,9 @@ export default function HistoryPage() {
         </TopNav>
       }
     >
-      <PageMain width="3xl">
-        <header className="mb-6 flex items-center justify-between gap-4">
-          <div>
+      <PageMain width="full" className="max-w-3xl lg:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl">
+        <header className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
+          <div className="min-w-0">
             <h1 className="text-xl font-semibold text-fg-primary">Board game history</h1>
             <p className="mt-1 text-sm text-fg-muted">
               Every match the group has logged, newest first.
@@ -137,6 +137,7 @@ export default function HistoryPage() {
               variant="primary"
               size="sm"
               onClick={() => setRecording({ mode: "create", dateKey: null })}
+              className="shrink-0 self-start whitespace-nowrap sm:self-auto"
             >
               + Record match
             </Button>

@@ -208,7 +208,10 @@ function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
                   <img
                     src={g.thumbnail}
                     alt=""
-                    loading="lazy"
+                    width={THUMB_W}
+                    height={THUMB_W}
+                    loading="eager"
+                    fetchPriority="high"
                     decoding="async"
                     className="h-full w-full object-cover"
                   />

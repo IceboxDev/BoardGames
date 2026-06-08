@@ -36,10 +36,12 @@ export function NightCard({
   return (
     <section className="rounded-xl border border-white/5 bg-surface-900/30 p-2.5">
       <header className="mb-1.5 flex items-baseline justify-between gap-3 px-1">
-        <div className="flex min-w-0 items-baseline gap-2">
-          <h3 className="truncate text-sm font-semibold text-fg-primary">{dayLabel}</h3>
+        <div className="flex min-w-0 flex-col items-start gap-y-0.5 sm:flex-row sm:items-baseline sm:gap-2">
+          <h3 className="max-w-full truncate text-sm font-semibold text-fg-primary">{dayLabel}</h3>
           {subtitleBits.length > 0 && (
-            <span className="truncate text-xs text-fg-muted">{subtitleBits.join(" · ")}</span>
+            <span className="max-w-full truncate text-xs text-fg-muted">
+              {subtitleBits.join(" · ")}
+            </span>
           )}
           {!dateKey && (
             <span className="rounded bg-white/5 px-1.5 py-0.5 text-3xs uppercase tracking-wider text-fg-muted">

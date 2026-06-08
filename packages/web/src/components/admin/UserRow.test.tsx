@@ -76,10 +76,10 @@ describe("UserRow — main row", () => {
     expect(badge.className).toMatch(/accent-300/);
   });
 
-  it("invokes onOpenCalendar on the Calendar View button", async () => {
+  it("invokes onOpenCalendar when the coverage pie is clicked", async () => {
     const onOpenCalendar = vi.fn();
     renderRow({ onOpenCalendar });
-    await userEvent.click(screen.getByRole("button", { name: "View" }));
+    await userEvent.click(screen.getByRole("button", { name: /availability calendar/i }));
     expect(onOpenCalendar).toHaveBeenCalledOnce();
   });
 

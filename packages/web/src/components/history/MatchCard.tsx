@@ -33,28 +33,30 @@ export function MatchCard({ match, isAdmin, currentUserId, onEdit, onDelete }: P
   const thumb = match.gameSlug ? THUMB_BY_SLUG.get(match.gameSlug) : undefined;
   const subtitle = deriveTitleSubtitle(match.outcome, match.gameSlug);
   return (
-    <article className="group flex items-center gap-3 rounded-lg bg-surface-900/40 px-2.5 py-1.5 text-sm transition hover:bg-surface-900/70">
-      {thumb ? (
-        <img
-          src={thumb}
-          alt=""
-          loading="lazy"
-          decoding="async"
-          className="h-10 w-10 shrink-0 rounded-md object-cover"
-        />
-      ) : (
-        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-surface-800 text-3xs font-semibold uppercase tracking-wider text-fg-muted">
-          {match.gameTitle.slice(0, 2)}
-        </div>
-      )}
+    <article className="group relative flex flex-col gap-1.5 rounded-lg bg-surface-900/40 px-2.5 py-1.5 text-sm transition hover:bg-surface-900/70 sm:flex-row sm:items-center sm:gap-3">
+      {/* Thumb + title share one row on phone; `sm:contents` dissolves this
+          wrapper at sm+ so they rejoin the article's single-row flow. */}
+      <div className="flex min-w-0 items-center gap-3 sm:contents">
+        {thumb ? (
+          <img
+            src={thumb}
+            alt=""
+            loading="lazy"
+            decoding="async"
+            className="h-10 w-10 shrink-0 rounded-md object-cover"
+          />
+        ) : (
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-surface-800 text-3xs font-semibold uppercase tracking-wider text-fg-muted">
+            {match.gameTitle.slice(0, 2)}
+          </div>
+        )}
 
-      {/* Title column is wider than before so long names like "One Night
-          Ultimate Werewolf" stop truncating; a small italic subtitle line
-          appears underneath when the game has a meaningful edition/scenario
-          tag (BotC edition, Werewolf scenario). */}
-      <div className="w-40 shrink-0 sm:w-56">
-        <div className="truncate text-sm font-medium text-fg-primary">{match.gameTitle}</div>
-        {subtitle && <div className="truncate text-3xs italic text-fg-muted">{subtitle}</div>}
+        {/* Fills the row beside the thumb on phone; fixed-width column at sm+ so
+            long names like "One Night Ultimate Werewolf" stop truncating. */}
+        <div className="min-w-0 flex-1 sm:w-56 sm:flex-none">
+          <div className="truncate text-sm font-medium text-fg-primary">{match.gameTitle}</div>
+          {subtitle && <div className="truncate text-3xs italic text-fg-muted">{subtitle}</div>}
+        </div>
       </div>
 
       <div className="min-w-0 flex-1">
@@ -66,7 +68,7 @@ export function MatchCard({ match, isAdmin, currentUserId, onEdit, onDelete }: P
       </div>
 
       {isAdmin && (onEdit || onDelete) && (
-        <div className="flex shrink-0 items-center gap-0.5 opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100">
+        <div className="absolute right-1.5 top-1.5 flex items-center gap-0.5 opacity-0 transition-opacity group-hover:opacity-100 focus-within:opacity-100 sm:static sm:shrink-0">
           {onEdit && (
             <IconButton
               variant="subtle"
@@ -143,7 +145,9 @@ type OutcomeProps = {
 function CompactOutcome({ outcome, gameSlug, currentUserId }: OutcomeProps) {
   switch (outcome.kind) {
     case "free-for-all":
-      return (
+      return gameSlug === "villainous" ? (
+        <VillainousInline outcome={outcome} currentUserId={currentUserId} />
+      ) : (
         <FreeForAllInline outcome={outcome} gameSlug={gameSlug} currentUserId={currentUserId} />
       );
     case "teams":
@@ -181,6 +185,52 @@ function FreeForAllInline({
             isMe={p.userId === currentUserId}
           />
           <span className="text-xs tabular-nums text-fg-muted">{p.score}</span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
+// Villainous: a point-less free-for-all. No scores — show each player with the
+// villain they played; the sole winner (rank 1) gets the gold winner tone and
+// leads the row. The edition (scenario) renders as the subtitle above.
+function VillainousInline({
+  outcome,
+  currentUserId,
+}: {
+  outcome: MatchOutcomeFreeForAll;
+  currentUserId: string | null;
+}) {
+  // New records mark the sole winner with `rank: 1`. Legacy score-based records
+  // (from before Villainous went point-less) fall back to highest score so they
+  // still surface a winner.
+  const hasRank = outcome.players.some((p) => p.rank === 1);
+  const topScore = outcome.players.reduce(
+    (max, p) => Math.max(max, p.score),
+    Number.NEGATIVE_INFINITY,
+  );
+  const isWinner = (p: MatchOutcomeFreeForAll["players"][number]) =>
+    hasRank ? p.rank === 1 : p.score === topScore;
+
+  const sorted = [...outcome.players].sort((a, b) => {
+    const aWin = isWinner(a) ? 0 : 1;
+    const bWin = isWinner(b) ? 0 : 1;
+    if (aWin !== bWin) return aWin - bWin;
+    return a.displayName.localeCompare(b.displayName);
+  });
+  return (
+    <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+      {sorted.map((p) => (
+        <span key={p.userId} className="inline-flex items-center gap-1">
+          <AvatarBubble
+            name={p.displayName}
+            tone={isWinner(p) ? "winner" : "loser"}
+            isMe={p.userId === currentUserId}
+            title={p.role ? `${p.displayName} — ${p.role}` : p.displayName}
+          />
+          {p.role && (
+            <span className="text-3xs uppercase tracking-wider text-fg-muted">{p.role}</span>
+          )}
         </span>
       ))}
     </div>

@@ -36,6 +36,11 @@ export type Participant = z.infer<typeof ParticipantSchema>;
 const FreeForAllPlayerSchema = ParticipantSchema.extend({
   score: z.number().finite(),
   rank: z.number().int().optional(),
+  // Optional per-player role/character label. Motivating case: Villainous,
+  // a point-less free-for-all where each player plays a named villain
+  // (Maleficent, Jafar, …); the sole winner is marked with `rank: 1` and every
+  // score stays 0. Same shape and intent as `TeamMember.role`.
+  role: z.string().max(64).optional(),
 });
 
 const MatchOutcomeFreeForAllSchema = z.object({

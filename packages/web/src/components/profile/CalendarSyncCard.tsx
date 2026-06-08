@@ -38,12 +38,15 @@ export default function CalendarSyncCard({ onClick }: Props) {
         {isLoading ? (
           <span className="text-xs text-fg-muted">…</span>
         ) : connected ? (
-          <span className="inline-flex items-center gap-2 text-xs text-emerald-300">
+          <span className="inline-flex min-w-0 items-center gap-2 text-xs text-emerald-300">
             <span
               aria-hidden="true"
-              className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(74,222,128,0.7)]"
+              className="h-2 w-2 shrink-0 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(74,222,128,0.7)]"
             />
-            Connected — game nights sync to your calendar
+            <span className="truncate">
+              Connected
+              <span className="hidden sm:inline"> — game nights sync to your calendar</span>
+            </span>
           </span>
         ) : (
           <span className="truncate text-xs text-fg-muted">

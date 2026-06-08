@@ -7,6 +7,8 @@
 //   - "multi":  any subset, joined with " + " when stored as a single string
 //               (7 Wonders expansions, Exploding Kittens death/revival modes).
 
+import { VILLAINOUS_EDITION_LABELS } from "./villainous/villains";
+
 export type VariantOption = {
   value: string;
   label: string;
@@ -65,6 +67,14 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       { value: "Babel", label: "Babel" },
       { value: "Armada", label: "Armada" },
     ],
+  },
+  // Villainous is one unified game; the edition is picked here (and shown as
+  // the MatchCard subtitle, like 7 Wonders). It also drives which villains the
+  // per-player picker offers — see `villainous/villains.ts`.
+  villainous: {
+    label: "Edition",
+    mode: "single",
+    options: VILLAINOUS_EDITION_LABELS.map((e) => ({ value: e, label: e })),
   },
   "exploding-kittens": {
     label: "Modes in play",

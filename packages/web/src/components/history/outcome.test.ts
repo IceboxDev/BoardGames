@@ -14,6 +14,7 @@ import {
   describeClocktowerError,
   describeGenericTeamsError,
   describeOutcomeError,
+  describeVillainousError,
   describeWerewolfError,
   emptyOutcome,
   flatParticipants,
@@ -34,6 +35,22 @@ function ffa(...players: Array<{ id: string; score: number }>): MatchOutcomeFree
   return {
     kind: "free-for-all",
     players: players.map((x) => ({ ...p(x.id), score: x.score })),
+  };
+}
+
+// Villainous: a point-less free-for-all — score stays 0, villain in `role`,
+// sole winner in `rank: 1`.
+function villainousFfa(
+  ...players: Array<{ id: string; role?: string; winner?: boolean }>
+): MatchOutcomeFreeForAll {
+  return {
+    kind: "free-for-all",
+    players: players.map((x) => ({
+      ...p(x.id),
+      score: 0,
+      ...(x.role ? { role: x.role } : {}),
+      ...(x.winner ? { rank: 1 } : {}),
+    })),
   };
 }
 
@@ -449,6 +466,57 @@ describe("describeOutcomeError", () => {
       winnerTeamIndices: [0],
     };
     expect(describeOutcomeError(empty, "codenames")).toBe("Team 2 needs at least one player");
+  });
+
+  it("free-for-all routes the villainous slug to the villainous validator", () => {
+    expect(
+      describeOutcomeError(
+        villainousFfa({ id: "a", role: "Jafar", winner: true }, { id: "b" }),
+        "villainous",
+      ),
+    ).toBe("Pick a villain for Player b");
+    // A non-villainous free-for-all keeps the generic minimum-players check.
+    expect(describeOutcomeError(villainousFfa({ id: "a" }), "uno")).toBe(
+      "Add at least two players",
+    );
+  });
+});
+
+describe("describeVillainousError", () => {
+  it("requires at least two players", () => {
+    expect(describeVillainousError(villainousFfa({ id: "a", role: "Jafar", winner: true }))).toBe(
+      "Add at least two players",
+    );
+  });
+
+  it("requires a villain for every player", () => {
+    expect(
+      describeVillainousError(villainousFfa({ id: "a", role: "Jafar", winner: true }, { id: "b" })),
+    ).toBe("Pick a villain for Player b");
+  });
+
+  it("requires exactly one crowned winner", () => {
+    expect(
+      describeVillainousError(
+        villainousFfa({ id: "a", role: "Jafar" }, { id: "b", role: "Ursula" }),
+      ),
+    ).toBe("Crown the player who won");
+    expect(
+      describeVillainousError(
+        villainousFfa(
+          { id: "a", role: "Jafar", winner: true },
+          { id: "b", role: "Ursula", winner: true },
+        ),
+      ),
+    ).toBe("Only one player can win Villainous");
+  });
+
+  it("returns null for a complete record", () => {
+    expect(
+      describeVillainousError(
+        villainousFfa({ id: "a", role: "Jafar", winner: true }, { id: "b", role: "Ursula" }),
+      ),
+    ).toBeNull();
   });
 });
 

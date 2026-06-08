@@ -41,15 +41,11 @@ export function AvailabilityActionBar({
       {error && <p className="text-xs text-rose-400">{error}</p>}
       {mode === "view" ? (
         <div className="flex w-full items-center gap-2 sm:max-w-md">
-          {/* Mobile: inline admin toggle. Sits in the row so it can't collide
-              with the main button. Hidden on sm+ — the absolute-positioned
-              version below takes over there. */}
+          {/* Admin "view as player" toggle + lock-in entry. In-flow beside the
+              main button on phone; absolutely pinned to the bar edges at sm+ so
+              the main button stays centered (positioning lives in the buttons). */}
           {showAdminToggle && (
-            <AdminToggleButton
-              active={adminViewActive}
-              onClick={onToggleAdminView}
-              variant="inline"
-            />
+            <AdminToggleButton active={adminViewActive} onClick={onToggleAdminView} />
           )}
           <Button
             variant="primary"
@@ -58,7 +54,7 @@ export function AvailabilityActionBar({
           >
             Change my availability
           </Button>
-          {showLockInButton && <LockInButton onClick={onEnterLockMode} variant="inline" />}
+          {showLockInButton && <LockInButton onClick={onEnterLockMode} />}
         </div>
       ) : mode === "edit" ? (
         <div className="flex w-full max-w-md items-center gap-2">
@@ -82,46 +78,21 @@ export function AvailabilityActionBar({
           </Button>
         </div>
       ) : (
-        <div className="flex w-full max-w-md flex-col items-center gap-2">
+        <div className="flex w-full flex-col items-center gap-2 sm:max-w-md">
           <Button
             variant="primary"
-            size="lg"
             onClick={onExitLockMode}
-            className="w-full whitespace-nowrap bg-amber-500 hover:bg-amber-400"
+            className="w-full whitespace-nowrap bg-amber-500 px-4 py-2 text-sm hover:bg-amber-400 sm:px-5 sm:py-3 sm:text-base"
           >
             Exit lock-in mode
           </Button>
         </div>
       )}
-      {/* Desktop: absolute-positioned admin toggle so the centered main button
-          stays perfectly centered regardless of side-button widths. */}
-      {showAdminToggle && mode === "view" && (
-        <AdminToggleButton
-          active={adminViewActive}
-          onClick={onToggleAdminView}
-          variant="floating"
-        />
-      )}
-      {showLockInButton && mode === "view" && (
-        <LockInButton onClick={onEnterLockMode} variant="floating" />
-      )}
     </div>
   );
 }
 
-function AdminToggleButton({
-  active,
-  onClick,
-  variant,
-}: {
-  active: boolean;
-  onClick: () => void;
-  variant: "inline" | "floating";
-}) {
-  const positionClass =
-    variant === "floating"
-      ? "absolute left-3 top-1/2 hidden -translate-y-1/2 sm:flex"
-      : "flex sm:hidden";
+function AdminToggleButton({ active, onClick }: { active: boolean; onClick: () => void }) {
   return (
     <Chip
       pressed={active}
@@ -131,24 +102,14 @@ function AdminToggleButton({
       onClick={onClick}
       aria-label={`${active ? "Disable" : "Enable"} admin view`}
       icon={<EyeIcon className="h-3.5 w-3.5" />}
-      className={`${positionClass} shrink-0 uppercase tracking-[0.16em]`}
+      className="shrink-0 uppercase tracking-[0.16em] sm:absolute sm:left-3 sm:top-1/2 sm:-translate-y-1/2"
     >
       <span className="hidden sm:inline">{active ? "Admin" : "Player"}</span>
     </Chip>
   );
 }
 
-function LockInButton({
-  onClick,
-  variant,
-}: {
-  onClick: () => void;
-  variant: "inline" | "floating";
-}) {
-  const positionClass =
-    variant === "floating"
-      ? "absolute right-3 top-1/2 hidden -translate-y-1/2 sm:flex"
-      : "flex sm:hidden";
+function LockInButton({ onClick }: { onClick: () => void }) {
   return (
     <Chip
       pressed
@@ -159,7 +120,7 @@ function LockInButton({
       onClick={onClick}
       aria-label="Enter lock-in mode"
       icon={<PadlockIcon closed className="h-3.5 w-3.5" />}
-      className={`${positionClass} shrink-0 uppercase tracking-[0.16em]`}
+      className="shrink-0 uppercase tracking-[0.16em] sm:absolute sm:right-3 sm:top-1/2 sm:-translate-y-1/2"
     >
       <span className="hidden sm:inline">Lock-in</span>
     </Chip>

@@ -220,7 +220,15 @@ function DayCell({
       : "pointer-events-none";
 
   const padding = compact ? "p-1 sm:p-1.5" : "p-2 sm:p-3";
-  const dayTextSize = compact ? "text-sm sm:text-base" : "text-lg sm:text-xl md:text-2xl";
+  const hasNames = !compact && !locked && !!labels && labels.length > 0;
+  // Name-bearing cells use a smaller day number so the attendee list below gets
+  // the vertical room it needs (otherwise 6+ names clip on the laptop's shorter
+  // cells); empty cells keep the bold number and grow it on 4K monitors.
+  const dayTextSize = compact
+    ? "text-sm sm:text-base"
+    : hasNames
+      ? "text-base sm:text-lg md:text-xl 3xl:text-2xl"
+      : "text-lg sm:text-xl md:text-2xl 3xl:text-3xl";
   const monthLabelPos = compact ? "left-1 top-1" : "left-1.5 top-1.5";
   const monthLabelSize = compact ? "text-[7px]" : "text-4xs sm:text-3xs";
   const todayDotPos = compact ? "right-1 top-1" : "right-2 top-2";
@@ -735,17 +743,17 @@ function NameRow({
   textShadow: React.CSSProperties | undefined;
 }) {
   return (
-    <div className="flex flex-wrap items-center gap-x-0.5 gap-y-0 sm:gap-x-1 sm:gap-y-0.5">
+    <div className="flex flex-wrap items-center gap-x-0.5 gap-y-0 sm:gap-x-1 sm:gap-y-0.5 3xl:gap-x-1.5 3xl:gap-y-1">
       {entries.map((e) => (
         <span
           key={e.userId}
           title={`${e.name} — ${e.status}`}
           style={textShadow}
-          className="inline-flex max-w-full items-center gap-0 truncate text-[6px] font-medium leading-tight text-white sm:gap-1 sm:text-3xs sm:leading-none md:text-2xs lg:text-xs 3xl:text-sm"
+          className="inline-flex max-w-full items-center gap-0 truncate text-[6px] font-medium leading-tight text-white sm:gap-1 sm:text-3xs sm:leading-none md:text-2xs lg:text-xs 3xl:text-base 3xl:leading-snug"
         >
           <span
             aria-hidden="true"
-            className={`inline-block h-0.5 w-0.5 shrink-0 rounded-full sm:h-1.5 sm:w-1.5 md:h-2 md:w-2 ${dotColor}`}
+            className={`inline-block h-0.5 w-0.5 shrink-0 rounded-full sm:h-1.5 sm:w-1.5 md:h-2 md:w-2 3xl:h-2.5 3xl:w-2.5 ${dotColor}`}
           />
           <span className="truncate">{firstName(e.name)}</span>
         </span>
