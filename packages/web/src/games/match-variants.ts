@@ -27,6 +27,15 @@ export type GameVariantConfig = {
    * still want a non-empty subtitle row (e.g. Bandit → "Standard").
    */
   fixed?: boolean;
+  /**
+   * Pre-selected value for a fresh match — a default beats an empty subtitle.
+   * Omitted on single-select configs means "first option" (see
+   * {@link defaultVariantValue}). On multi-select configs the default is only
+   * applied when set explicitly, because pre-checking an optional expansion
+   * ("Imploding was in play") would assert something that may be false — the
+   * one safe case is a base that's always present (7 Wonders → "Base").
+   */
+  default?: string;
 };
 
 const CODENAMES_LANGUAGE: GameVariantConfig = {
@@ -62,13 +71,15 @@ const VARIANTS: Record<string, GameVariantConfig> = {
     label: "Edition",
     mode: "single",
     options: [
-      { value: "Standard", label: "Standard (no expansion)" },
+      { value: "Standard", label: "Standard" },
       { value: "The Plot Thickens", label: "The Plot Thickens" },
     ],
   },
   "7-wonders": {
     label: "Edition",
     mode: "multi",
+    // The base game is always in play, so pre-check it; expansions stay opt-in.
+    default: "Base",
     options: [
       { value: "Base", label: "Base game" },
       { value: "Leaders", label: "Leaders" },
@@ -115,6 +126,21 @@ const VARIANTS: Record<string, GameVariantConfig> = {
 export function variantConfigForSlug(slug: string | null): GameVariantConfig | null {
   if (!slug) return null;
   return VARIANTS[slug] ?? null;
+}
+
+/**
+ * The scenario value a fresh match of this game should start with. Single-select
+ * games pre-select their first option (a sensible "standard" beats no value);
+ * multi-select games only get a default when one is declared explicitly. Returns
+ * undefined when the game has no variants, or for a multi-select with no
+ * declared base. Used to seed `outcome.scenario` when the game is first picked.
+ */
+export function defaultVariantValue(slug: string | null): string | undefined {
+  const config = variantConfigForSlug(slug);
+  if (!config) return undefined;
+  if (config.default !== undefined) return config.default;
+  if (config.mode === "single") return config.options[0]?.value;
+  return undefined;
 }
 
 const JOIN = " + ";

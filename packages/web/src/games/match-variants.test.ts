@@ -1,5 +1,10 @@
 import { describe, expect, it } from "vitest";
-import { joinMultiVariant, parseMultiVariant, variantConfigForSlug } from "./match-variants";
+import {
+  defaultVariantValue,
+  joinMultiVariant,
+  parseMultiVariant,
+  variantConfigForSlug,
+} from "./match-variants";
 
 describe("variantConfigForSlug", () => {
   it("returns null for null or unknown slug", () => {
@@ -41,6 +46,29 @@ describe("variantConfigForSlug", () => {
     expect(config?.label).toBe("Edition");
     expect(config?.mode).toBe("single");
     expect(config?.options.map((o) => o.value)).toEqual(["Standard", "The Plot Thickens"]);
+  });
+});
+
+describe("defaultVariantValue", () => {
+  it("returns undefined for a game with no variants", () => {
+    expect(defaultVariantValue(null)).toBeUndefined();
+    expect(defaultVariantValue("not-a-real-game")).toBeUndefined();
+  });
+
+  it("single-select games default to their first option", () => {
+    expect(defaultVariantValue("the-resistance")).toBe("Standard");
+    expect(defaultVariantValue("wavelength")).toBe("Standard");
+    expect(defaultVariantValue("codenames")).toBe("English");
+    expect(defaultVariantValue("villainous")).toBe("Introduction to Evil");
+  });
+
+  it("fixed single-option games default to that option", () => {
+    expect(defaultVariantValue("bandit")).toBe("Standard");
+  });
+
+  it("multi-select games default only to a declared base, else undefined", () => {
+    expect(defaultVariantValue("7-wonders")).toBe("Base");
+    expect(defaultVariantValue("exploding-kittens")).toBeUndefined();
   });
 });
 

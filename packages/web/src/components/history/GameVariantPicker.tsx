@@ -6,6 +6,7 @@ import {
   variantConfigForSlug,
 } from "../../games/match-variants";
 import { Chip } from "../ui/Chip";
+import { applyScenario } from "./outcome";
 
 type Props = {
   gameSlug: string | null;
@@ -35,11 +36,7 @@ export function GameVariantPicker({ gameSlug, outcome, onChange }: Props) {
   const stored = outcome.scenario;
 
   function setScenario(next: string | undefined) {
-    if (outcome.kind === "one-vs-many") return;
-    const { scenario: _drop, ...rest } = outcome;
-    onChange(
-      next === undefined ? (rest as MatchOutcome) : ({ ...rest, scenario: next } as MatchOutcome),
-    );
+    onChange(applyScenario(outcome, next));
   }
 
   return (

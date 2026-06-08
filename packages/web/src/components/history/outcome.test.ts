@@ -10,6 +10,7 @@ import type {
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import {
   applyParticipants,
+  applyScenario,
   carryOverParticipants,
   describeClocktowerError,
   describeGenericTeamsError,
@@ -19,6 +20,7 @@ import {
   describeWerewolfError,
   emptyOutcome,
   flatParticipants,
+  getScenario,
   isoNow,
   isoToLocalInput,
   localInputToIso,
@@ -629,5 +631,28 @@ describe("describeResistanceError", () => {
         "the-resistance",
       ),
     ).toBe("Add at least one Spy");
+  });
+});
+
+describe("getScenario / applyScenario", () => {
+  it("reads and round-trips the scenario tag on a teams outcome", () => {
+    const base = teams([{ ids: ["a"] }, { ids: ["b"] }]);
+    expect(getScenario(base)).toBeUndefined();
+    const tagged = applyScenario(base, "Standard");
+    expect(getScenario(tagged)).toBe("Standard");
+  });
+
+  it("clears the tag when applying undefined", () => {
+    const tagged = applyScenario(ffa({ id: "a", score: 1 }), "Base");
+    expect(getScenario(tagged)).toBe("Base");
+    const cleared = applyScenario(tagged, undefined);
+    expect(getScenario(cleared)).toBeUndefined();
+    expect("scenario" in cleared).toBe(false);
+  });
+
+  it("leaves one-vs-many untouched (no scenario field)", () => {
+    const out = ovm("solo", "t1");
+    expect(getScenario(out)).toBeUndefined();
+    expect(applyScenario(out, "Standard")).toBe(out);
   });
 });

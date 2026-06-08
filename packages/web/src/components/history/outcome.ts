@@ -56,6 +56,25 @@ export function emptyOutcome(kind: MatchKind, prefill: Participant[]): MatchOutc
 }
 
 /**
+ * Read the per-game variant tag (`scenario`) off an outcome. one-vs-many is the
+ * only kind without that field, so it always reads as undefined.
+ */
+export function getScenario(outcome: MatchOutcome): string | undefined {
+  return outcome.kind === "one-vs-many" ? undefined : outcome.scenario;
+}
+
+/**
+ * Set (or clear, when `scenario` is undefined) the variant tag on an outcome.
+ * one-vs-many has no scenario field so it's returned untouched. Shared by the
+ * variant picker and the modal's default-seeding so the write is identical.
+ */
+export function applyScenario(outcome: MatchOutcome, scenario: string | undefined): MatchOutcome {
+  if (outcome.kind === "one-vs-many") return outcome;
+  const { scenario: _drop, ...rest } = outcome;
+  return scenario === undefined ? (rest as MatchOutcome) : ({ ...rest, scenario } as MatchOutcome);
+}
+
+/**
  * Convert the modal's local state into the wire-shaped create input. Mostly a
  * shallow projection plus the trim-empty-to-null trick on notes that the
  * server-side schema requires.

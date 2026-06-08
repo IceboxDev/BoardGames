@@ -12,7 +12,7 @@ import type {
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { defaultKindForSlug } from "../../games/match-kinds";
-import { variantConfigForSlug } from "../../games/match-variants";
+import { defaultVariantValue, variantConfigForSlug } from "../../games/match-variants";
 import { useAdminUsers } from "../../hooks/useAdminUsers.ts";
 import { fetchCalendarLocks } from "../../lib/calendar-locks";
 import { recordMatch, updateMatch } from "../../lib/match-history";
@@ -37,9 +37,11 @@ import { GamePicker } from "./GamePicker";
 import { GameVariantPicker } from "./GameVariantPicker";
 import {
   applyParticipants,
+  applyScenario,
   carryOverParticipants,
   describeOutcomeError,
   emptyOutcome,
+  getScenario,
   isoNow,
   isoToLocalInput,
   localInputToIso,
@@ -142,9 +144,14 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
     if (lastSlugRef.current === gameSlug) return;
     lastSlugRef.current = gameSlug;
     const guess = defaultKindForSlug(gameSlug);
-    if (!guess) return;
-    setKind(guess);
-    setOutcome((prev) => carryOverParticipants(guess, prev));
+    // Seed the variant default ("Standard", "Base", …) so a new match starts
+    // with a value instead of an empty subtitle. Replaces any scenario carried
+    // over from the previously-picked game — undefined here clears it.
+    const scenario = defaultVariantValue(gameSlug);
+    if (guess) setKind(guess);
+    setOutcome((prev) =>
+      applyScenario(guess ? carryOverParticipants(guess, prev) : prev, scenario),
+    );
   }, [gameSlug, state.mode]);
 
   // Whenever the user picks a different game night, replace the participant
@@ -171,7 +178,9 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
 
   function changeKind(nextKind: MatchKind) {
     setKind(nextKind);
-    setOutcome(carryOverParticipants(nextKind, outcome));
+    // Carry the variant tag across the kind switch — it's a property of the
+    // game, not the kind, so flipping Teams↔Free-for-all shouldn't drop it.
+    setOutcome(applyScenario(carryOverParticipants(nextKind, outcome), getScenario(outcome)));
   }
 
   const playedAtId = useId();
