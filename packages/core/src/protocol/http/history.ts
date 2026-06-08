@@ -181,6 +181,10 @@ export const MatchRecordSchema = z.object({
   // strings so cached payloads stay parseable.
   recordedAt: z.string(),
   updatedAt: z.string().nullable(),
+  // Server-managed ordering within a night (lower = nearer the top). Admins
+  // reorder via the `/reorder` endpoint; the client sorts each night by it.
+  // May be negative (a newly-recorded match is slotted above the rest).
+  sortOrder: z.number().int(),
 });
 export type MatchRecord = z.infer<typeof MatchRecordSchema>;
 
@@ -218,3 +222,16 @@ export type MatchByNightResponse = z.infer<typeof MatchByNightResponseSchema>;
 
 export const DeleteMatchResponseSchema = z.object({ ok: z.literal(true) });
 export type DeleteMatchResponse = z.infer<typeof DeleteMatchResponseSchema>;
+
+// ── Reorder (admin) ───────────────────────────────────────────────────
+// Re-sort the matches inside one board game night. `orderedIds` is the full
+// set of match ids for `dateKey`, top-to-bottom; the server rejects an
+// incomplete or foreign set and assigns `sort_order = index`.
+export const MatchReorderInputSchema = z.object({
+  dateKey: DateKeyStringSchema,
+  orderedIds: z.array(z.number().int().positive()).min(1),
+});
+export type MatchReorderInput = z.infer<typeof MatchReorderInputSchema>;
+
+export const MatchReorderResponseSchema = z.object({ ok: z.literal(true) });
+export type MatchReorderResponse = z.infer<typeof MatchReorderResponseSchema>;

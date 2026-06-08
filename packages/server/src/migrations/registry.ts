@@ -8,9 +8,15 @@
 import { baseline } from "./0001-baseline.ts";
 import { dropTestDummy } from "./0002-drop-test-dummy.ts";
 import { onlineMode } from "./0003-online-mode.ts";
+import { matchSortOrder } from "./0004-match-sort-order.ts";
 import type { Migration } from "./types.ts";
 
-export const migrations: readonly Migration[] = [baseline, dropTestDummy, onlineMode];
+export const migrations: readonly Migration[] = [
+  baseline,
+  dropTestDummy,
+  onlineMode,
+  matchSortOrder,
+];
 
 /**
  * Fail loudly at module load if the registry is malformed. These invariants are

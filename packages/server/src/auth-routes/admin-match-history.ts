@@ -1,8 +1,10 @@
 import type { MatchOutcome, MatchRecord } from "@boardgames/core/history/types";
+import { MatchReorderInputSchema, MatchReorderResponseSchema } from "@boardgames/core/protocol";
 import { z } from "zod";
 import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { parseRow, parseRows } from "../lib/db-rows.ts";
+import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 import { MatchResultRowSchema, rowToMatchRecord } from "./match-history.ts";
 import {
   collectUserIds,
@@ -106,7 +108,7 @@ async function fetchAndShape(id: number): Promise<MatchRecord | null> {
   const db = getDb();
   const { rows } = await db.execute({
     sql: `SELECT id, date_key, played_at, game_slug, game_title, outcome_json, notes,
-                 recorded_by, recorded_at, updated_at
+                 recorded_by, recorded_at, updated_at, sort_order
           FROM match_results WHERE id = ? LIMIT 1`,
     args: [id],
   });
@@ -141,12 +143,25 @@ adminMatchHistoryRoutes.post("/", async (c) => {
   }
 
   const user = c.get("user");
+  // sort_order slots the new match at the TOP of its night (min - 1, or 0 when
+  // it's the first), preserving the newest-first default. NULL-safe `IS` scopes
+  // the subquery to standalone (NULL date_key) matches too.
   const result = await getDb().execute({
     sql: `INSERT INTO match_results
-            (date_key, played_at, game_slug, game_title, outcome_json, notes, recorded_by, recorded_at)
-          VALUES (?, ?, ?, ?, ?, ?, ?, datetime('now'))
+            (date_key, played_at, game_slug, game_title, outcome_json, notes, recorded_by, recorded_at, sort_order)
+          VALUES (?, ?, ?, ?, ?, ?, ?, datetime('now'),
+                  COALESCE((SELECT MIN(sort_order) - 1 FROM match_results WHERE date_key IS ?), 0))
           RETURNING id`,
-    args: [dateKey, playedAt, gameSlug, gameTitle, JSON.stringify(outcome), notes, user.id],
+    args: [
+      dateKey,
+      playedAt,
+      gameSlug,
+      gameTitle,
+      JSON.stringify(outcome),
+      notes,
+      user.id,
+      dateKey,
+    ],
   });
   const insertedId = parseRow(
     z.object({ id: z.number() }),
@@ -169,12 +184,41 @@ adminMatchHistoryRoutes.patch("/:id{[0-9]+}", async (c) => {
     return c.json({ error: `unknown userIds: ${userCheck.missing.join(", ")}` }, 400);
   }
 
-  const result = await getDb().execute({
+  const db = getDb();
+  // An edit must NOT change the match's position within its night. The one
+  // exception is moving it to a *different* night (dateKey changed), where it
+  // re-slots at the top of the destination — same rule as a fresh record.
+  const existing = await db.execute({
+    sql: "SELECT date_key, sort_order FROM match_results WHERE id = ? LIMIT 1",
+    args: [id],
+  });
+  if (existing.rows.length === 0) return c.json({ error: "not found" }, 404);
+  const prev = parseRow(
+    z.object({ date_key: z.string().nullable(), sort_order: z.number() }),
+    existing.rows[0],
+    "match_results.pre-patch",
+  );
+
+  let sortOrder = prev.sort_order;
+  if (dateKey !== prev.date_key) {
+    const minRes = await db.execute({
+      sql: "SELECT MIN(sort_order) AS min_order FROM match_results WHERE date_key IS ? AND id != ?",
+      args: [dateKey, id],
+    });
+    const minOrder = parseRow(
+      z.object({ min_order: z.number().nullable() }),
+      minRes.rows[0],
+      "match_results.min-order",
+    ).min_order;
+    sortOrder = minOrder == null ? 0 : minOrder - 1;
+  }
+
+  const result = await db.execute({
     sql: `UPDATE match_results
           SET date_key = ?, played_at = ?, game_slug = ?, game_title = ?,
-              outcome_json = ?, notes = ?, updated_at = datetime('now')
+              outcome_json = ?, notes = ?, sort_order = ?, updated_at = datetime('now')
           WHERE id = ?`,
-    args: [dateKey, playedAt, gameSlug, gameTitle, JSON.stringify(outcome), notes, id],
+    args: [dateKey, playedAt, gameSlug, gameTitle, JSON.stringify(outcome), notes, sortOrder, id],
   });
   if (result.rowsAffected === 0) return c.json({ error: "not found" }, 404);
   const record = await fetchAndShape(id);
@@ -189,4 +233,45 @@ adminMatchHistoryRoutes.delete("/:id{[0-9]+}", async (c) => {
   });
   if (result.rowsAffected === 0) return c.json({ error: "not found" }, 404);
   return c.json({ ok: true });
+});
+
+// Re-sort the matches inside one board game night. `orderedIds` is the full,
+// top-to-bottom list of the night's match ids; we assign `sort_order = index`.
+// Requiring the exact set keeps sort_order a contiguous 0..n-1 sequence and
+// rejects a stale client whose page didn't hold every match in the night.
+adminMatchHistoryRoutes.post("/reorder", zJsonBody(MatchReorderInputSchema), async (c) => {
+  const { dateKey, orderedIds } = c.req.valid("json");
+
+  if (new Set(orderedIds).size !== orderedIds.length) {
+    return errorResponse(c, 400, "orderedIds contains duplicates", "BAD_REQUEST");
+  }
+
+  const db = getDb();
+  const { rows } = await db.execute({
+    sql: "SELECT id FROM match_results WHERE date_key = ?",
+    args: [dateKey],
+  });
+  const nightIds = new Set(
+    parseRows(z.object({ id: z.number() }), rows, "match_results.reorder-ids").map((r) => r.id),
+  );
+  if (nightIds.size !== orderedIds.length || orderedIds.some((id) => !nightIds.has(id))) {
+    return errorResponse(
+      c,
+      400,
+      "orderedIds must list exactly the matches in this night",
+      "BAD_REQUEST",
+    );
+  }
+
+  // Atomic all-or-nothing batch. No `updated_at` bump — reordering isn't a
+  // content edit.
+  await db.batch(
+    orderedIds.map((id, index) => ({
+      sql: "UPDATE match_results SET sort_order = ? WHERE id = ? AND date_key = ?",
+      args: [index, id, dateKey],
+    })),
+    "write",
+  );
+
+  return c.json(MatchReorderResponseSchema.parse({ ok: true }));
 });

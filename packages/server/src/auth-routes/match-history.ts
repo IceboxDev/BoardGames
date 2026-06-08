@@ -41,6 +41,7 @@ export const MatchResultRowSchema = z.object({
   recorded_by: z.string(),
   recorded_at: z.string(),
   updated_at: z.string().nullable(),
+  sort_order: z.number(),
 });
 export type MatchResultRow = z.infer<typeof MatchResultRowSchema>;
 
@@ -88,6 +89,7 @@ export function rowToMatchRecord(row: MatchResultRow, nameById: Map<string, stri
     recordedBy: row.recorded_by,
     recordedAt: row.recorded_at,
     updatedAt: row.updated_at,
+    sortOrder: row.sort_order,
   };
 }
 
@@ -116,13 +118,13 @@ matchHistoryRoutes.get("/", async (c) => {
 
   const sql = before
     ? `SELECT id, date_key, played_at, game_slug, game_title, outcome_json, notes,
-              recorded_by, recorded_at, updated_at
+              recorded_by, recorded_at, updated_at, sort_order
          FROM match_results
          WHERE played_at < ?
          ORDER BY played_at DESC, id DESC
          LIMIT ?`
     : `SELECT id, date_key, played_at, game_slug, game_title, outcome_json, notes,
-              recorded_by, recorded_at, updated_at
+              recorded_by, recorded_at, updated_at, sort_order
          FROM match_results
          ORDER BY played_at DESC, id DESC
          LIMIT ?`;
@@ -147,10 +149,10 @@ matchHistoryRoutes.get("/by-night/:dateKey", async (c) => {
   const db = getDb();
   const { rows } = await db.execute({
     sql: `SELECT id, date_key, played_at, game_slug, game_title, outcome_json, notes,
-                 recorded_by, recorded_at, updated_at
+                 recorded_by, recorded_at, updated_at, sort_order
           FROM match_results
           WHERE date_key = ?
-          ORDER BY played_at ASC, id ASC
+          ORDER BY sort_order ASC, id ASC
           LIMIT 100`,
     args: [dateKey],
   });
@@ -163,7 +165,7 @@ matchHistoryRoutes.get("/:id{[0-9]+}", async (c) => {
   const db = getDb();
   const { rows } = await db.execute({
     sql: `SELECT id, date_key, played_at, game_slug, game_title, outcome_json, notes,
-                 recorded_by, recorded_at, updated_at
+                 recorded_by, recorded_at, updated_at, sort_order
           FROM match_results
           WHERE id = ?
           LIMIT 1`,

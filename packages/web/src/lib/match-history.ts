@@ -6,6 +6,8 @@ import {
   MatchCreateInputSchema,
   type MatchRecord,
   MatchRecordSchema,
+  MatchReorderInputSchema,
+  MatchReorderResponseSchema,
   type MatchUpdateInput,
 } from "@boardgames/core/protocol";
 import { apiFetch } from "./api-fetch";
@@ -45,5 +47,18 @@ export async function deleteMatch(id: number): Promise<void> {
   await apiFetch(`/api/admin/history/${id}`, {
     method: "DELETE",
     response: DeleteMatchResponseSchema,
+  });
+}
+
+/**
+ * Re-sort the matches inside one board game night. `orderedIds` must be the
+ * full, top-to-bottom list of that night's match ids.
+ */
+export async function reorderMatchesInNight(dateKey: string, orderedIds: number[]): Promise<void> {
+  await apiFetch("/api/admin/history/reorder", {
+    method: "POST",
+    body: { dateKey, orderedIds },
+    request: MatchReorderInputSchema,
+    response: MatchReorderResponseSchema,
   });
 }

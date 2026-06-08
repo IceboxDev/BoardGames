@@ -399,3 +399,18 @@ export function ShuffleIcon({ className = "h-3.5 w-3.5" }: IconProps) {
     </svg>
   );
 }
+
+// Six-dot drag affordance. Filled (not stroked) so it reads as a handle, not a
+// glyph. Used by the admin match-reorder rows in the history screen.
+export function GripVerticalIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 16 16" className={className} fill="currentColor" aria-hidden="true">
+      <circle cx="6" cy="4" r="1.25" />
+      <circle cx="10" cy="4" r="1.25" />
+      <circle cx="6" cy="8" r="1.25" />
+      <circle cx="10" cy="8" r="1.25" />
+      <circle cx="6" cy="12" r="1.25" />
+      <circle cx="10" cy="12" r="1.25" />
+    </svg>
+  );
+}

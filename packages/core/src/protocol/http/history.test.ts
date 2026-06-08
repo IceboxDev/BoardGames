@@ -5,6 +5,7 @@ import {
   MatchCreateInputSchema,
   MatchOutcomeSchema,
   MatchRecordSchema,
+  MatchReorderInputSchema,
 } from "./history.ts";
 
 const sampleParticipant = (id: string, name: string) => ({
@@ -152,10 +153,17 @@ describe("MatchRecordSchema", () => {
     recordedBy: "user-1",
     recordedAt: "2026-05-10 19:35:01",
     updatedAt: null,
+    sortOrder: 0,
   };
 
   it("accepts a fully-populated record", () => {
     expect(() => MatchRecordSchema.parse(sampleRecord)).not.toThrow();
+  });
+
+  it("rejects a missing or non-integer sortOrder", () => {
+    const { sortOrder: _omit, ...withoutOrder } = sampleRecord;
+    expect(() => MatchRecordSchema.parse(withoutOrder)).toThrow();
+    expect(() => MatchRecordSchema.parse({ ...sampleRecord, sortOrder: 1.5 })).toThrow();
   });
 
   it("accepts a record with null dateKey and gameSlug", () => {
@@ -210,6 +218,30 @@ describe("MatchCreateInputSchema", () => {
         outcome: sampleCoop,
         notes: null,
       }),
+    ).toThrow();
+  });
+});
+
+describe("MatchReorderInputSchema", () => {
+  it("accepts a dateKey with a non-empty ordered id list", () => {
+    expect(() =>
+      MatchReorderInputSchema.parse({ dateKey: "2026-05-10", orderedIds: [3, 1, 2] }),
+    ).not.toThrow();
+  });
+
+  it("rejects an empty orderedIds list", () => {
+    expect(() =>
+      MatchReorderInputSchema.parse({ dateKey: "2026-05-10", orderedIds: [] }),
+    ).toThrow();
+  });
+
+  it("rejects a malformed dateKey", () => {
+    expect(() => MatchReorderInputSchema.parse({ dateKey: "May 10", orderedIds: [1] })).toThrow();
+  });
+
+  it("rejects a non-integer id", () => {
+    expect(() =>
+      MatchReorderInputSchema.parse({ dateKey: "2026-05-10", orderedIds: [1.5] }),
     ).toThrow();
   });
 });

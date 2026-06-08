@@ -1,5 +1,11 @@
-import type { MatchRecord } from "@boardgames/core/history/types";
-import { useInfiniteQuery, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import type { HistoryListResponse, MatchRecord } from "@boardgames/core/history/types";
+import {
+  type InfiniteData,
+  useInfiniteQuery,
+  useMutation,
+  useQuery,
+  useQueryClient,
+} from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { NightCard } from "../components/history/NightCard";
 import { RecordMatchModal } from "../components/history/RecordMatchModal";
@@ -7,7 +13,7 @@ import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button, EmptyState, LoadingState, PageMain, PageShell } from "../components/ui";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { fetchCalendarLocks, type LockedDate } from "../lib/calendar-locks";
-import { deleteMatch, fetchHistory } from "../lib/match-history";
+import { deleteMatch, fetchHistory, reorderMatchesInNight } from "../lib/match-history";
 import { qk } from "../lib/query-keys";
 
 type Group = {
@@ -68,6 +74,40 @@ export default function HistoryPage() {
     },
   });
 
+  // Optimistically re-rank the dragged night in the cached pages, then reconcile
+  // with the server on settle (mirrors `deleteMutation`'s invalidate).
+  const reorderMutation = useMutation({
+    mutationFn: ({ dateKey, orderedIds }: { dateKey: string; orderedIds: number[] }) =>
+      reorderMatchesInNight(dateKey, orderedIds),
+    onMutate: async ({ dateKey, orderedIds }) => {
+      await queryClient.cancelQueries({ queryKey: qk.history() });
+      const previous = queryClient.getQueryData<InfiniteData<HistoryListResponse>>(qk.history());
+      const rank = new Map(orderedIds.map((id, i) => [id, i] as const));
+      queryClient.setQueryData<InfiniteData<HistoryListResponse>>(qk.history(), (data) =>
+        data
+          ? {
+              ...data,
+              pages: data.pages.map((p) => ({
+                ...p,
+                matches: p.matches.map((m) => {
+                  if (m.dateKey !== dateKey) return m;
+                  const next = rank.get(m.id);
+                  return next === undefined ? m : { ...m, sortOrder: next };
+                }),
+              })),
+            }
+          : data,
+      );
+      return { previous };
+    },
+    onError: (_err, _vars, ctx) => {
+      if (ctx?.previous) queryClient.setQueryData(qk.history(), ctx.previous);
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries({ queryKey: qk.history() });
+    },
+  });
+
   const [recording, setRecording] = useState<
     null | { mode: "create"; dateKey: string | null } | { mode: "edit"; match: MatchRecord }
   >(null);
@@ -108,7 +148,13 @@ export default function HistoryPage() {
         g.matches.push(m);
       }
     }
-    return [...byKey.values()].sort((a, b) => b.sortKey.localeCompare(a.sortKey));
+    const ordered = [...byKey.values()].sort((a, b) => b.sortKey.localeCompare(a.sortKey));
+    // Within a real night, matches follow the admin-set `sortOrder` (newest
+    // first by default). Standalone day-groups keep their played_at order.
+    for (const g of ordered) {
+      if (g.dateKey != null) g.matches.sort((a, b) => a.sortOrder - b.sortOrder);
+    }
+    return ordered;
   }, [allMatches, locksQuery.data]);
 
   function handleDelete(m: MatchRecord) {
@@ -153,24 +199,34 @@ export default function HistoryPage() {
           />
         ) : (
           <div className="flex flex-col gap-4">
-            {groups.map((g) => (
-              <NightCard
-                key={`${g.dateKey ?? "day"}:${g.sortKey}`}
-                dateKey={g.dateKey}
-                dayLabel={g.dayLabel}
-                lock={g.lock}
-                matches={g.matches}
-                isAdmin={isAdmin}
-                currentUserId={currentUserId}
-                onAddMatch={
-                  isAdmin && g.dateKey
-                    ? () => setRecording({ mode: "create", dateKey: g.dateKey })
-                    : undefined
-                }
-                onEditMatch={isAdmin ? (m) => setRecording({ mode: "edit", match: m }) : undefined}
-                onDeleteMatch={isAdmin ? handleDelete : undefined}
-              />
-            ))}
+            {groups.map((g) => {
+              const nightKey = g.dateKey;
+              return (
+                <NightCard
+                  key={`${g.dateKey ?? "day"}:${g.sortKey}`}
+                  dateKey={g.dateKey}
+                  dayLabel={g.dayLabel}
+                  lock={g.lock}
+                  matches={g.matches}
+                  isAdmin={isAdmin}
+                  currentUserId={currentUserId}
+                  onAddMatch={
+                    isAdmin && nightKey
+                      ? () => setRecording({ mode: "create", dateKey: nightKey })
+                      : undefined
+                  }
+                  onEditMatch={
+                    isAdmin ? (m) => setRecording({ mode: "edit", match: m }) : undefined
+                  }
+                  onDeleteMatch={isAdmin ? handleDelete : undefined}
+                  onReorder={
+                    isAdmin && nightKey
+                      ? (orderedIds) => reorderMutation.mutate({ dateKey: nightKey, orderedIds })
+                      : undefined
+                  }
+                />
+              );
+            })}
             {historyQuery.hasNextPage && (
               <div className="flex justify-center pt-2">
                 <Button
