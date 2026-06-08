@@ -14,6 +14,7 @@ import {
   describeClocktowerError,
   describeGenericTeamsError,
   describeOutcomeError,
+  describeResistanceError,
   describeVillainousError,
   describeWerewolfError,
   emptyOutcome,
@@ -573,5 +574,60 @@ describe("describeClocktowerError", () => {
         winnerTeamIndices: [0],
       }),
     ).toBe("At least one evil player is required");
+  });
+});
+
+describe("describeResistanceError", () => {
+  it("requires at least one Resistance Operative", () => {
+    expect(
+      describeResistanceError({
+        kind: "teams",
+        teams: [{ members: [] }, { members: [p("a")] }],
+        winnerTeamIndices: [],
+      }),
+    ).toBe("Add at least one Resistance Operative");
+  });
+
+  it("requires at least one Spy", () => {
+    expect(
+      describeResistanceError({
+        kind: "teams",
+        teams: [{ members: [p("a")] }, { members: [] }],
+        winnerTeamIndices: [],
+      }),
+    ).toBe("Add at least one Spy");
+  });
+
+  it("flags a missing winner once both sides are populated", () => {
+    expect(
+      describeResistanceError({
+        kind: "teams",
+        teams: [{ members: [p("a")] }, { members: [p("b")] }],
+        winnerTeamIndices: [],
+      }),
+    ).toBe("Pick the winning side");
+  });
+
+  it("returns null for a complete match", () => {
+    expect(
+      describeResistanceError({
+        kind: "teams",
+        teams: [{ members: [p("a")] }, { members: [p("b")] }],
+        winnerTeamIndices: [1],
+      }),
+    ).toBeNull();
+  });
+
+  it("is selected by describeOutcomeError for the-resistance slug", () => {
+    expect(
+      describeOutcomeError(
+        {
+          kind: "teams",
+          teams: [{ members: [p("a")] }, { members: [] }],
+          winnerTeamIndices: [],
+        },
+        "the-resistance",
+      ),
+    ).toBe("Add at least one Spy");
   });
 });

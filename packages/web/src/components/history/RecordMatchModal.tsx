@@ -29,6 +29,7 @@ import { CoopForm } from "./forms/CoopForm";
 import { FreeForAllForm } from "./forms/FreeForAllForm";
 import { LastStandingForm } from "./forms/LastStandingForm";
 import { OneVsManyForm } from "./forms/OneVsManyForm";
+import { ResistanceForm } from "./forms/ResistanceForm";
 import { TeamsForm } from "./forms/TeamsForm";
 import { VillainousForm } from "./forms/VillainousForm";
 import { WerewolfForm } from "./forms/WerewolfForm";
@@ -301,6 +302,12 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
               />
             ) : gameSlug === "one-night-ultimate-werewolf" ? (
               <WerewolfForm
+                users={allUsers}
+                value={outcome as MatchOutcomeTeams}
+                onChange={setOutcome}
+              />
+            ) : gameSlug === "the-resistance" ? (
+              <ResistanceForm
                 users={allUsers}
                 value={outcome as MatchOutcomeTeams}
                 onChange={setOutcome}

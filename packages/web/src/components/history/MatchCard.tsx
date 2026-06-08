@@ -123,6 +123,11 @@ function teamAccents(outcome: MatchOutcomeTeams, gameSlug: string | null): Accen
   if (gameSlug === "blood-on-the-clocktower") {
     return outcome.teams.map((_, i) => (i === 0 ? "good" : i === 1 ? "evil" : "neutral"));
   }
+  // The Resistance: team 0 = Resistance Operatives (green/good), team 1 = Spies
+  // (red/evil) — same good-vs-evil colouring as Clocktower.
+  if (gameSlug === "the-resistance") {
+    return outcome.teams.map((_, i) => (i === 0 ? "good" : i === 1 ? "evil" : "neutral"));
+  }
   if (gameSlug === "one-night-ultimate-werewolf") {
     return outcome.teams.map((t) => {
       const first = (t.members[0]?.role ?? "").toLowerCase();

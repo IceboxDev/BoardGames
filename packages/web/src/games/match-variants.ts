@@ -56,6 +56,16 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       { value: "Advanced", label: "Advanced" },
     ],
   },
+  // The Resistance plays Resistance Operatives (good) vs Spies (evil), recorded
+  // like Blood on the Clocktower. The only ruleset axis is the expansion.
+  "the-resistance": {
+    label: "Edition",
+    mode: "single",
+    options: [
+      { value: "Standard", label: "Standard (no expansion)" },
+      { value: "The Plot Thickens", label: "The Plot Thickens" },
+    ],
+  },
   "7-wonders": {
     label: "Edition",
     mode: "multi",

@@ -35,6 +35,13 @@ describe("variantConfigForSlug", () => {
       "The Worst Takes It All",
     ]);
   });
+
+  it("returns the Resistance edition config (single, Standard / The Plot Thickens)", () => {
+    const config = variantConfigForSlug("the-resistance");
+    expect(config?.label).toBe("Edition");
+    expect(config?.mode).toBe("single");
+    expect(config?.options.map((o) => o.value)).toEqual(["Standard", "The Plot Thickens"]);
+  });
 });
 
 describe("parseMultiVariant", () => {

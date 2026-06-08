@@ -123,6 +123,7 @@ export function describeOutcomeError(
     case "teams":
       if (gameSlug === "blood-on-the-clocktower") return describeClocktowerError(outcome);
       if (gameSlug === "one-night-ultimate-werewolf") return describeWerewolfError(outcome);
+      if (gameSlug === "the-resistance") return describeResistanceError(outcome);
       return describeGenericTeamsError(outcome);
     case "last-standing":
       if (outcome.players.length < 2) return "Add at least two players";
@@ -157,6 +158,19 @@ export function describeGenericTeamsError(outcome: MatchOutcomeTeams): string | 
   const empty = outcome.teams.findIndex((t) => t.members.length === 0);
   if (empty !== -1) return `Team ${empty + 1} needs at least one player`;
   if (outcome.winnerTeamIndices.length === 0) return "Pick at least one winning team";
+  return null;
+}
+
+/**
+ * The Resistance: team 0 is the Resistance Operatives, team 1 the Spies. Both
+ * sides need at least one player and exactly one side wins.
+ */
+export function describeResistanceError(outcome: MatchOutcomeTeams): string | null {
+  const [resistance, spies] = outcome.teams;
+  if (!resistance || resistance.members.length === 0)
+    return "Add at least one Resistance Operative";
+  if (!spies || spies.members.length === 0) return "Add at least one Spy";
+  if (outcome.winnerTeamIndices.length === 0) return "Pick the winning side";
   return null;
 }
 
