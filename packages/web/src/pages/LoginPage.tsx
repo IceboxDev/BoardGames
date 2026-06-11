@@ -132,6 +132,12 @@ export default function LoginPage() {
           </Button>
         </form>
 
+        {mode === "signin" && (
+          <p className="text-center text-xs text-fg-muted">
+            Forgot your password? Ask an admin to send you a reset link.
+          </p>
+        )}
+
         {googleEnabled && (
           <>
             <div className="flex items-center gap-3">

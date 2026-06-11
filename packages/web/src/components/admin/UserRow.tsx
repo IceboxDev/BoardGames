@@ -1,7 +1,9 @@
 import type { OnlineMode } from "@boardgames/core/protocol";
 import type { Coverage } from "../../pages/admin-coverage";
+import { KeyIcon } from "../icons";
 import { Button } from "../ui/Button";
 import { Chip } from "../ui/Chip";
+import { IconButton } from "../ui/IconButton";
 import { SegmentedControl } from "../ui/SegmentedControl";
 import { CoverageCell } from "./CoverageCell";
 import { InventoryPanel } from "./InventoryPanel";
@@ -36,6 +38,9 @@ export type UserRowProps = {
   onCancelDelete: () => void;
   onCommitDelete: () => void;
   deleting: boolean;
+  /** Mint a one-time password-reset link for this user (admin relays it). */
+  onResetPassword: () => void;
+  resettingPassword: boolean;
 };
 
 /**
@@ -62,6 +67,8 @@ export function UserRow({
   onCancelDelete,
   onCommitDelete,
   deleting,
+  onResetPassword,
+  resettingPassword,
 }: UserRowProps) {
   return (
     <>
@@ -97,6 +104,8 @@ export function UserRow({
             email={user.email}
             onSetOnlineMode={onSetOnlineMode}
             pending={pending}
+            onResetPassword={onResetPassword}
+            resettingPassword={resettingPassword}
           />
         </td>
       </tr>
@@ -150,6 +159,8 @@ type DeleteOrOnlineProps = {
   email: string;
   onSetOnlineMode: (mode: OnlineMode) => void;
   pending: boolean;
+  onResetPassword: () => void;
+  resettingPassword: boolean;
 };
 
 /**
@@ -167,9 +178,11 @@ function DeleteOrOnlineCell({
   email,
   onSetOnlineMode,
   pending,
+  onResetPassword,
+  resettingPassword,
 }: DeleteOrOnlineProps) {
   return (
-    <div className="flex items-center justify-center">
+    <div className="flex items-center justify-center gap-1.5">
       {deleteMode ? (
         isSelf ? (
           <span
@@ -186,17 +199,28 @@ function DeleteOrOnlineCell({
           </Chip>
         )
       ) : (
-        <SegmentedControl<OnlineMode>
-          options={ONLINE_MODE_OPTIONS_COMPACT}
-          value={onlineMode}
-          onChange={onSetOnlineMode}
-          shape="pill"
-          size="xs"
-          selectionMode="toggle"
-          tone="accent"
-          disabled={pending}
-          aria-label={`Online mode for ${email}`}
-        />
+        <>
+          <IconButton
+            variant="subtle"
+            size="xs"
+            aria-label={`Generate password-reset link for ${email}`}
+            title="Generate password-reset link"
+            onClick={onResetPassword}
+            disabled={resettingPassword}
+            icon={<KeyIcon className="h-3.5 w-3.5" />}
+          />
+          <SegmentedControl<OnlineMode>
+            options={ONLINE_MODE_OPTIONS_COMPACT}
+            value={onlineMode}
+            onChange={onSetOnlineMode}
+            shape="pill"
+            size="xs"
+            selectionMode="toggle"
+            tone="accent"
+            disabled={pending}
+            aria-label={`Online mode for ${email}`}
+          />
+        </>
       )}
     </div>
   );

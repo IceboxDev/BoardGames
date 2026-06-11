@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  AdminResetLinkResponseSchema,
   AdminUserListSchema,
   AdminUserSchema,
   AuthConfigSchema,
@@ -180,6 +181,34 @@ describe("AdminUserSchema", () => {
   it("rejects when a required field is missing", () => {
     expect(() =>
       AdminUserSchema.parse({ id: "u1", email: "a@b.com", createdAt: "2026-05-21" }),
+    ).toThrow();
+  });
+});
+
+describe("AdminResetLinkResponseSchema", () => {
+  it("accepts a valid url + positive integer expiry", () => {
+    const r = AdminResetLinkResponseSchema.parse({
+      url: "https://app.example/reset-password?token=abc",
+      expiresInMinutes: 60,
+    });
+    expect(r.expiresInMinutes).toBe(60);
+  });
+
+  it("rejects a non-url string", () => {
+    expect(() =>
+      AdminResetLinkResponseSchema.parse({ url: "not a url", expiresInMinutes: 60 }),
+    ).toThrow();
+  });
+
+  it("rejects a missing or non-positive expiry", () => {
+    expect(() =>
+      AdminResetLinkResponseSchema.parse({ url: "https://app.example/reset-password" }),
+    ).toThrow();
+    expect(() =>
+      AdminResetLinkResponseSchema.parse({
+        url: "https://app.example/reset-password",
+        expiresInMinutes: 0,
+      }),
     ).toThrow();
   });
 });

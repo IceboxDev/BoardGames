@@ -41,6 +41,8 @@ function defaultProps() {
     onCancelDelete: vi.fn(),
     onCommitDelete: vi.fn(),
     deleting: false,
+    onResetPassword: vi.fn(),
+    resettingPassword: false,
   };
 }
 

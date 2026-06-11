@@ -10,6 +10,7 @@ import {
 import { adminInventoryRoutes } from "./auth-routes/admin-inventory.ts";
 import { adminMatchHistoryRoutes } from "./auth-routes/admin-match-history.ts";
 import { adminOnlineRoutes } from "./auth-routes/admin-online.ts";
+import { adminPasswordResetRoutes } from "./auth-routes/admin-password-reset.ts";
 import { adminPendingInventoryRoutes } from "./auth-routes/admin-pending-inventory.ts";
 import { availabilityCountsRoutes } from "./auth-routes/availability-counts.ts";
 import { bggRoutes } from "./auth-routes/bgg.ts";
@@ -88,6 +89,7 @@ app.use("/api/admin/*", requireAdmin);
 app.route("/api/admin/users", adminOnlineRoutes);
 app.route("/api/admin/users", adminInventoryRoutes);
 app.route("/api/admin/users", adminAvailabilityRoutes);
+app.route("/api/admin/users", adminPasswordResetRoutes);
 app.route("/api/admin", adminAvailabilityAllRoutes);
 app.route("/api/admin", adminPendingInventoryRoutes);
 app.route("/api/admin/calendar", adminCalendarLocksRoutes);

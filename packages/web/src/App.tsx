@@ -16,6 +16,7 @@ import { queryClient } from "./lib/query-client";
 import { queryPersistBuster, queryPersister } from "./lib/query-persister";
 
 const LoginPage = lazy(() => import("./pages/LoginPage"));
+const ResetPasswordPage = lazy(() => import("./pages/ResetPasswordPage"));
 const ProfilePage = lazy(() => import("./pages/ProfilePage"));
 const AdminPage = lazy(() => import("./pages/AdminPage"));
 const OfflineDashboard = lazy(() => import("./pages/OfflineDashboard"));
@@ -103,6 +104,10 @@ const router = createBrowserRouter(
           </AuthGuard>
         }
       />
+
+      {/* Public: reached via the one-time link an admin relays. The user is
+          locked out, so no AuthGuard — better-auth validates the token. */}
+      <Route path="/reset-password" element={<ResetPasswordPage />} />
 
       <Route
         index

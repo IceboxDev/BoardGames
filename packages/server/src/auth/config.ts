@@ -5,6 +5,7 @@ import { admin } from "better-auth/plugins";
 import { z } from "zod";
 import { getDb, getDbConnectionConfig } from "../db.ts";
 import { jsonColumn, parseRow } from "../lib/db-rows.ts";
+import { captureResetToken } from "./reset-link.ts";
 
 /** Row projection for `SELECT game_slugs_json, online_mode FROM pending_inventory`. */
 const PendingInventoryRowSchema = z.object({
@@ -40,6 +41,14 @@ export const auth = betterAuth({
     enabled: true,
     autoSignIn: true,
     minPasswordLength: 8,
+    // One-time reset links are minted by the admin (no email). better-auth still
+    // owns the token's validity, single-use, and expiry; this callback just
+    // hands the freshly-minted token to the in-memory sink that the admin
+    // reset-link endpoint reads. See auth/reset-link.ts.
+    resetPasswordTokenExpiresIn: 60 * 60,
+    sendResetPassword: async ({ token }) => {
+      captureResetToken(token);
+    },
   },
   socialProviders:
     googleClientId && googleClientSecret

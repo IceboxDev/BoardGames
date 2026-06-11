@@ -414,3 +414,20 @@ export function GripVerticalIcon({ className = "h-4 w-4" }: IconProps) {
     </svg>
   );
 }
+
+// Key — the admin "generate password-reset link" affordance.
+export function KeyIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className={className}
+      strokeWidth={1.6}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <circle cx="5.5" cy="5.5" r="3" />
+      <path d="M7.7 7.7 L13.5 13.5" />
+      <path d="M11.5 11.5 L13 10" />
+    </svg>
+  );
+}

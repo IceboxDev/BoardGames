@@ -92,6 +92,21 @@ export type AdminUser = z.infer<typeof AdminUserSchema>;
 export const AdminUserListSchema = z.array(AdminUserSchema);
 export type AdminUserList = z.infer<typeof AdminUserListSchema>;
 
+// ── Admin: password-reset link ─────────────────────────────────────────
+
+/**
+ * Response from `POST /api/admin/users/:id/reset-link`. The admin copies `url`
+ * — a one-time better-auth reset link (`…/reset-password?token=…`) — and relays
+ * it to the user out of band (no email is sent). `expiresInMinutes` is surfaced
+ * so the admin knows the window; the token is single-use and validated by
+ * better-auth when the user opens it.
+ */
+export const AdminResetLinkResponseSchema = z.object({
+  url: z.string().url(),
+  expiresInMinutes: z.number().int().positive(),
+});
+export type AdminResetLinkResponse = z.infer<typeof AdminResetLinkResponseSchema>;
+
 // ── WebSocket ticket ────────────────────────────────────────────────────
 
 /**

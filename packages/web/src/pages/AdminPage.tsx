@@ -6,6 +6,7 @@ import {
   AvailabilityDrawer,
   GuestPlayersCard,
   PreRegisterCard,
+  ResetLinkModal,
   UserRow,
   UsersTable,
 } from "../components/admin";
@@ -13,7 +14,7 @@ import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Chip, ErrorAlert, PageMain, PageShell } from "../components/ui";
 import { useAdminUsers } from "../hooks/useAdminUsers.ts";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
-import { adminSetOnlineMode } from "../lib/admin";
+import { adminGenerateResetLink, adminSetOnlineMode } from "../lib/admin";
 import { authClient } from "../lib/auth-client";
 import { errorMessageOf } from "../lib/error-message";
 import {
@@ -114,10 +115,25 @@ export default function AdminPage() {
     },
   });
 
+  // One-time password-reset link (no email). On success the modal opens with
+  // the URL for the admin to copy; `data` carries the user so the modal can
+  // name them.
+  const [resetResult, setResetResult] = useState<{
+    user: AdminUser;
+    url: string;
+    expiresInMinutes: number;
+  } | null>(null);
+
+  const resetLinkMutation = useMutation({
+    mutationFn: async (u: AdminUser) => ({ user: u, ...(await adminGenerateResetLink(u.id)) }),
+    onSuccess: (data) => setResetResult(data),
+  });
+
   const errorMessage =
     errorMessageOf(usersQuery.error, "Failed to load users") ??
     errorMessageOf(setOnlineModeMutation.error, "Update failed") ??
-    errorMessageOf(deleteMutation.error, "Delete failed");
+    errorMessageOf(deleteMutation.error, "Delete failed") ??
+    errorMessageOf(resetLinkMutation.error, "Couldn't generate reset link");
 
   function toggleDeleteMode() {
     setDeleteMode((m) => !m);
@@ -217,6 +233,10 @@ export default function AdminPage() {
               onCancelDelete={cancelDelete}
               onCommitDelete={() => commitDelete(u)}
               deleting={deleteMutation.isPending && deleteMutation.variables === u.id}
+              onResetPassword={() => resetLinkMutation.mutate(u)}
+              resettingPassword={
+                resetLinkMutation.isPending && resetLinkMutation.variables?.id === u.id
+              }
             />
           ))}
         </UsersTable>
@@ -224,6 +244,18 @@ export default function AdminPage() {
 
       {calendarUser && (
         <AvailabilityDrawer user={calendarUser} onClose={() => setCalendarUser(null)} />
+      )}
+
+      {resetResult && (
+        <ResetLinkModal
+          user={resetResult.user}
+          url={resetResult.url}
+          expiresInMinutes={resetResult.expiresInMinutes}
+          onClose={() => {
+            setResetResult(null);
+            resetLinkMutation.reset();
+          }}
+        />
       )}
     </PageShell>
   );
