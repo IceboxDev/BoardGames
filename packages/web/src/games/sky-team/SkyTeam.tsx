@@ -10,7 +10,6 @@ import { useCallback, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ActionLog } from "../../components/action-log";
 import GameScreen from "../../components/game-layout/GameScreen";
-import { MpGameOverScreen } from "../../components/game-over";
 import { useGameShell } from "../../hooks/useGameShell";
 import type { GameComponentProps } from "../types";
 import ApproachTrack from "./components/ApproachTrack";
@@ -160,16 +159,11 @@ export default function SkyTeam({ source }: GameComponentProps) {
   }
 
   if (source === "mp" && mp.result) {
-    const r = mp.result;
-    const isWin = r.outcome === "win";
-    return (
-      <MpGameOverScreen
-        headline={isWin ? "Smooth landing!" : "Crash!"}
-        headlineColor={isWin ? "win" : "lose"}
-        subtitle={r.outcome}
-        onBackToMenu={backToMenu}
-      />
-    );
+    // Same rich screen as solo (outcome headline + explanation + flight
+    // stats) — the generic MpGameOverScreen previously showed the raw
+    // outcome code ("loss-mandatory") as its only context, which read as
+    // a bug. There is no "Play again" in mp; rooms are torn down on exit.
+    return <GameOverScreen result={mp.result} onBackToMenu={backToMenu} />;
   }
 
   if (!view) return null;

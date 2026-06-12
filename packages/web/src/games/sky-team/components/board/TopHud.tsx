@@ -2,6 +2,7 @@ import type { SkyTeamPlayerView } from "@boardgames/core/games/sky-team/types";
 import { BoardOverlay } from "../../../../components/board";
 import rerollDiceUrl from "../../assets/reroll-dice.svg";
 import { HUD_ALTITUDE, HUD_REROLL, HUD_REROLL_WELL, HUD_WEATHER } from "./geometry";
+import Plane from "./Plane";
 
 interface Props {
   view: SkyTeamPlayerView;
@@ -59,10 +60,16 @@ export default function TopHud({ view }: Props) {
           aria-label={`Current approach slot — ${view.approach.airliners[view.approach.current] ?? 0} airliner(s)`}
         >
           {Array.from({ length: view.approach.airliners[view.approach.current] ?? 0 }, (_, k) => (
-            // biome-ignore lint/suspicious/noArrayIndexKey: identical airliner glyphs, no other identity
-            <span key={`current-airliner-${k}`} className="cockpit-current-airliner">
-              ✈
-            </span>
+            // SVG silhouette instead of the ✈ text glyph — Apple devices
+            // render U+2708 as the color emoji, the SVG is identical
+            // everywhere. rotate=45 from nose-up = the old -45° text tilt.
+            <Plane
+              // biome-ignore lint/suspicious/noArrayIndexKey: identical airliner glyphs, no other identity
+              key={`current-airliner-${k}`}
+              rotate={45}
+              color="#ffffff"
+              className="cockpit-current-airliner"
+            />
           ))}
         </div>
       </BoardOverlay>

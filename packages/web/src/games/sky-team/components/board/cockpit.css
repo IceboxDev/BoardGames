@@ -585,12 +585,13 @@
   padding: 0 5.9cqi;
 }
 
+/* Plane SVG (rotation + recolour handled by the component itself). Sized to
+   read like the old 21cqi ✈ glyph — the silhouette fills ~85% of its square
+   box, so 24cqi nets a similar visual footprint. */
 .cockpit-current-airliner {
-  color: white;
-  font-size: 21cqi; /* large enough to read from across the cockpit */
-  line-height: 1;
-  display: inline-block;
-  transform: rotate(-45deg);
+  width: 24cqi;
+  height: 24cqi;
+  flex: none;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.7));
 }
 

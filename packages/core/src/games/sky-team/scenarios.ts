@@ -62,20 +62,6 @@ export const MANDATORY_SLOTS: readonly SlotId[] = [
   "copilot-engine",
 ];
 
-/** Slot ids whose dice are cleared at end of round (everything except switches/markers). */
-export const NON_PERSISTENT_SLOTS: readonly SlotId[] = [
-  "pilot-axis",
-  "pilot-engine",
-  "pilot-radio",
-  "copilot-axis",
-  "copilot-engine",
-  "copilot-radio-1",
-  "copilot-radio-2",
-  "concentration-1",
-  "concentration-2",
-  "concentration-3",
-];
-
 export const COFFEE_TOKEN_CAP = 3;
 // Reroll supply cap — only one Reroll token in your supply at a time. Picking
 // up another icon while you still have one (e.g. round 5 with the round-1

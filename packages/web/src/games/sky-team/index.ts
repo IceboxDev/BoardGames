@@ -30,4 +30,7 @@ export default {
   // can override it via `lobbyConfigComponent` (the scenario picker).
   defaultMpConfig: { scenarioId: "yul-montreal" },
   lobbyConfigComponent: lazy(() => import("./SkyTeamLobbyConfig")),
+  // The destination gallery needs the full viewport — render the lobby
+  // like the solo SetupScreen (controls strip on top, gallery below).
+  lobbyLayout: "wide",
 } satisfies PlayableModule;

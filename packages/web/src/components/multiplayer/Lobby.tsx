@@ -1,6 +1,6 @@
 import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
 import type { GameRoomConfig } from "@boardgames/core/protocol/room-config";
-import { SetupLayout } from "../setup";
+import { ControlGroup, SetupLayout } from "../setup";
 import { Badge, Button, Chip, ErrorAlert } from "../ui";
 
 interface LobbyProps {
@@ -16,6 +16,17 @@ interface LobbyProps {
   onConfigureSlot?: (slotIndex: number, slot: RoomSlot) => void;
   error?: string | null;
   children?: React.ReactNode;
+  /**
+   * `"wide"` renders the full-viewport, non-scrolling variant that mirrors
+   * a game's solo SetupScreen: a compact room/crew/launch strip on top and
+   * the game-specific config (`children`) filling the remaining height.
+   * Games with a large lobby config surface (Sky Team's destination
+   * gallery) opt in via `PlayableGame.lobbyLayout`; the default is the
+   * classic centered scrolling column.
+   */
+  layout?: "default" | "wide";
+  /** Game title for the wide layout's header strip. */
+  title?: string;
 }
 
 export function Lobby({
@@ -31,10 +42,122 @@ export function Lobby({
   onConfigureSlot,
   error,
   children,
+  layout = "default",
+  title,
 }: LobbyProps) {
   const allHumansReady = roomState.slots.every((s) => s.kind !== "human" || s.ready);
   const humanCount = roomState.slots.filter((s) => s.kind === "human" && s.connected).length;
   const canStart = isHost && allHumansReady && humanCount >= roomConfig.minPlayers;
+
+  const slotRows = roomState.slots.map((slot, i) => (
+    <SlotRow
+      // biome-ignore lint/suspicious/noArrayIndexKey: slots are positional, no stable ID
+      key={`slot-${i}-${slot.kind}-${slot.playerName ?? ""}`}
+      slot={slot}
+      index={i}
+      isMe={i === mySlot}
+      seatName={roomConfig.seatNames?.[i]}
+      canKick={isHost && i !== 0 && slot.kind === "human"}
+      canToggle={isHost && i !== 0 && roomConfig.supportsAI}
+      onKick={() => onKick(i)}
+      onToggle={() => {
+        if (!onConfigureSlot) return;
+        if (slot.kind === "open") {
+          onConfigureSlot(i, {
+            kind: "ai",
+            aiStrategy: "heuristic-v1",
+            ready: false,
+            connected: false,
+          });
+        } else if (slot.kind === "ai") {
+          onConfigureSlot(i, { kind: "open", ready: false, connected: false });
+        }
+      }}
+    />
+  ));
+
+  const startOrReadyButton = isHost ? (
+    <Button variant="primary" size="lg" block disabled={!canStart} onClick={onStart}>
+      Start Game
+      {!canStart && humanCount < roomConfig.minPlayers
+        ? ` (need ${roomConfig.minPlayers} players)`
+        : ""}
+    </Button>
+  ) : (
+    <Button
+      variant={roomState.slots[mySlot]?.ready ? "secondary" : "primary"}
+      size="lg"
+      block
+      onClick={onToggleReady}
+    >
+      {roomState.slots[mySlot]?.ready ? "Not Ready" : "Ready"}
+    </Button>
+  );
+
+  if (layout === "wide") {
+    const launchStatus = isHost
+      ? humanCount < roomConfig.minPlayers
+        ? `Waiting for players (${humanCount}/${roomConfig.minPlayers} aboard)`
+        : allHumansReady
+          ? "All crew aboard and ready."
+          : "Waiting for the crew to ready up."
+      : roomState.slots[mySlot]?.ready
+        ? "Ready — waiting for the host to start."
+        : "Ready up when you're set.";
+
+    return (
+      <div className="relative z-10 flex h-full min-h-0 w-full flex-col overflow-hidden px-4 pb-4 pt-3 sm:px-6 sm:pb-5 sm:pt-4">
+        <header className="mb-3 flex shrink-0 flex-wrap items-baseline gap-3">
+          <h1 className="text-xl font-bold text-white sm:text-2xl">{title ?? "Multiplayer"}</h1>
+          <p className="text-xs text-slate-400 sm:text-sm">
+            Share the room code with a friend, ready up, and launch
+          </p>
+        </header>
+
+        {error && <ErrorAlert message={error} className="mb-3 shrink-0" />}
+
+        {/* Controls strip — same chrome and placement as the solo setup
+            screen's Crew / AI / Launch strip, so the two screens mirror. */}
+        <section className="grid shrink-0 grid-cols-1 gap-3 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.3fr)_minmax(0,1fr)]">
+          <ControlGroup label="Room Code">
+            <div className="flex h-full flex-col items-center justify-center gap-1">
+              <span className="font-mono text-3xl font-black tracking-[0.35em] text-emerald-400">
+                {roomCode}
+              </span>
+              <span className="text-center text-[10px] text-slate-500">
+                Friends join with this code
+              </span>
+            </div>
+          </ControlGroup>
+
+          <ControlGroup label="Crew">
+            <div className="flex h-full flex-col justify-center gap-2">{slotRows}</div>
+          </ControlGroup>
+
+          <ControlGroup label="Launch">
+            <div className="flex h-full flex-col justify-between gap-2">
+              <div className="flex flex-col gap-0.5">
+                <span className="text-sm font-bold text-white">
+                  {canStart ? "Cleared for departure" : "Pre-flight checks"}
+                </span>
+                <span className="text-[10px] leading-tight text-slate-400">{launchStatus}</span>
+              </div>
+              <div className="flex flex-col items-stretch gap-1">
+                {startOrReadyButton}
+                <Button variant="link" onClick={onLeave}>
+                  Leave Room
+                </Button>
+              </div>
+            </div>
+          </ControlGroup>
+        </section>
+
+        {/* Game-specific config (e.g. Sky Team's destination gallery) gets
+            all leftover height, exactly like the solo screen's gallery. */}
+        <section className="mt-4 flex min-h-0 flex-1 flex-col gap-2">{children}</section>
+      </div>
+    );
+  }
 
   return (
     <SetupLayout>
@@ -58,31 +181,7 @@ export function Lobby({
         <div className="mb-2 text-xs font-medium uppercase tracking-wider text-fg-secondary">
           Players
         </div>
-        {roomState.slots.map((slot, i) => (
-          <SlotRow
-            // biome-ignore lint/suspicious/noArrayIndexKey: slots are positional, no stable ID
-            key={`slot-${i}-${slot.kind}-${slot.playerName ?? ""}`}
-            slot={slot}
-            index={i}
-            isMe={i === mySlot}
-            canKick={isHost && i !== 0 && slot.kind === "human"}
-            canToggle={isHost && i !== 0 && roomConfig.supportsAI}
-            onKick={() => onKick(i)}
-            onToggle={() => {
-              if (!onConfigureSlot) return;
-              if (slot.kind === "open") {
-                onConfigureSlot(i, {
-                  kind: "ai",
-                  aiStrategy: "heuristic-v1",
-                  ready: false,
-                  connected: false,
-                });
-              } else if (slot.kind === "ai") {
-                onConfigureSlot(i, { kind: "open", ready: false, connected: false });
-              }
-            }}
-          />
-        ))}
+        {slotRows}
       </div>
 
       {/* Game-specific config */}
@@ -90,22 +189,7 @@ export function Lobby({
 
       {/* Actions */}
       <div className="mx-auto flex w-full max-w-md flex-col gap-3">
-        {isHost ? (
-          <Button variant="primary" size="lg" disabled={!canStart} onClick={onStart}>
-            Start Game
-            {!canStart && humanCount < roomConfig.minPlayers
-              ? ` (need ${roomConfig.minPlayers} players)`
-              : ""}
-          </Button>
-        ) : (
-          <Button
-            variant={roomState.slots[mySlot]?.ready ? "secondary" : "primary"}
-            size="lg"
-            onClick={onToggleReady}
-          >
-            {roomState.slots[mySlot]?.ready ? "Not Ready" : "Ready"}
-          </Button>
-        )}
+        {startOrReadyButton}
 
         <Button variant="link" onClick={onLeave}>
           Leave Room
@@ -123,6 +207,7 @@ function SlotRow({
   slot,
   index,
   isMe,
+  seatName,
   canKick,
   canToggle,
   onKick,
@@ -131,6 +216,8 @@ function SlotRow({
   slot: RoomSlot;
   index: number;
   isMe: boolean;
+  /** Role attached to this seat index (e.g. "Pilot"), from `GameRoomConfig.seatNames`. */
+  seatName?: string;
   canKick: boolean;
   canToggle: boolean;
   onKick: () => void;
@@ -156,6 +243,13 @@ function SlotRow({
               : "bg-fg-disabled"
         }`}
       />
+
+      {/* Seat role (Pilot / Co-Pilot) — fixed width so names line up. */}
+      {seatName && (
+        <Badge tone="neutral" className="w-16 justify-center">
+          {seatName}
+        </Badge>
+      )}
 
       {/* Name */}
       <div className="min-w-0 flex-1">

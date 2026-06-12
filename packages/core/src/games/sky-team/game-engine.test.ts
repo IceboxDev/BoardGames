@@ -578,6 +578,26 @@ describe("end of round", () => {
     expect(ended.readyForRoll).toEqual([false, false]);
   });
 
+  it("returns switch-slot dice at round end but keeps the switch armed and unplaceable", () => {
+    let s = readyAndRoll().state;
+    s = setHand(s, 0, [1, 3, 3, 3]);
+    s = setHand(s, 1, [3, 3, 3, 3]);
+    s = place(s, 0, "landing-gear-1", 1, createRng(1));
+    // The die stays on the slot for the rest of the round, like any other.
+    expect(s.slots["landing-gear-1"].die).not.toBeNull();
+    s = place(s, 1, "copilot-axis", 3, createRng(1));
+    s = place(s, 0, "pilot-axis", 3, createRng(1));
+    s = place(s, 1, "copilot-engine", 3, createRng(1));
+    s = place(s, 0, "pilot-engine", 3, createRng(1));
+    s = setHand(s, 0, []);
+    s = setHand(s, 1, []);
+    const ended = applyEndRound(s);
+    // Die returns to the player; the armed switch persists and blocks reuse.
+    expect(ended.slots["landing-gear-1"].die).toBeNull();
+    expect(ended.slots["landing-gear-1"].switchOn).toBe(true);
+    expect(isLegalPlacement(ended, 0, "landing-gear-1", 1)).toBe(false);
+  });
+
   it("alternates the starting player each round (pilot R1, co-pilot R2, pilot R3)", () => {
     // Stand in front of `applyEndRound` directly with the round's mandatory
     // slots already filled — we only care about who starts the *next* round,

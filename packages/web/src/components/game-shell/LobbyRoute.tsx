@@ -120,6 +120,8 @@ export default function LobbyRoute() {
       mySlot={mp.mySlot ?? 0}
       isHost={mp.isHost}
       roomConfig={gameRoomConfigs[def.slug]}
+      layout={def.lobbyLayout}
+      title={def.title}
       onStart={() => mp.startRoom(config)}
       onLeave={() => {
         mp.leaveRoom();

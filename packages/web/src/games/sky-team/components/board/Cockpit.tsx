@@ -45,6 +45,9 @@ export default function Cockpit({ view, selectedDieId, coffeeAdjust, onSelectSlo
     if (def.eligibility === "pilot" && myIdx !== 0) return false;
     if (def.eligibility === "copilot" && myIdx !== 1) return false;
     if (view.slots[slot].die != null) return false;
+    // Armed switches (gear/flaps/brakes) stay used after their die returns
+    // to the player at end of round — mirrors core's `isLegalPlacement`.
+    if (view.slots[slot].switchOn === true) return false;
     if (def.ordered) {
       const chain = FLAPS_ORDER.includes(slot) ? FLAPS_ORDER : BRAKES_ORDER;
       const idx = chain.indexOf(slot);

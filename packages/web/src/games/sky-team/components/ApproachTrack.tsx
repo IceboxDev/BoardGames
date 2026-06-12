@@ -1,4 +1,5 @@
 import type { SkyTeamPlayerView } from "@boardgames/core/games/sky-team/types";
+import Plane from "./board/Plane";
 import "./board/cockpit.css";
 
 interface Props {
@@ -16,6 +17,12 @@ interface Props {
  * slot is "1" and labels count up from there, so the airport is always
  * `airportIndex - current + 1` regardless of how far along the player is.
  * Slots already passed get no label.
+ *
+ * The 240/88 ratio is the slots' NATURAL size only — every level of the
+ * column (`ol`, `li`) carries `min-h-0` so on short viewports the slots
+ * compress evenly and the whole track always fits the sidebar without
+ * scrolling. The airliner planes are sized relative to the slot height,
+ * so they scale down with it.
  */
 export default function ApproachTrack({ view }: Props) {
   const { airliners, current, airportIndex } = view.approach;
@@ -24,7 +31,7 @@ export default function ApproachTrack({ view }: Props) {
   const order = Array.from({ length: spaces }, (_, k) => spaces - 1 - k);
 
   return (
-    <div className="flex h-full flex-col justify-center gap-3">
+    <div className="flex min-h-0 flex-1 flex-col justify-center gap-3">
       {/* Approach card title — names the destination rather than scattering
           tiny YUL pills across the slot grid. The lime colour itself encodes
           the route variant (Sky Team's YUL ships green / orange / red routes);
@@ -36,7 +43,7 @@ export default function ApproachTrack({ view }: Props) {
         <div className="text-[10px] uppercase tracking-wide text-slate-400">Montréal-Trudeau</div>
       </header>
 
-      <ol className="flex flex-col gap-1.5">
+      <ol className="flex min-h-0 flex-col gap-1.5">
         {order.map((i) => {
           const isCurrent = i === current;
           const isAirport = i === airportIndex;
@@ -48,8 +55,9 @@ export default function ApproachTrack({ view }: Props) {
               key={`space-${i + 1}`}
               className={[
                 // Identical aspect ratio to the weather + altitude HUD slots
-                // at the top of the cockpit (240 × 88).
-                "sky-slot-bg relative flex aspect-[240/88] items-center justify-center overflow-hidden rounded-md border",
+                // at the top of the cockpit (240 × 88) when space allows;
+                // min-h-0 lets the slot squash on short viewports.
+                "sky-slot-bg relative flex min-h-0 aspect-[240/88] items-center justify-center overflow-hidden rounded-md border",
                 isCurrent
                   ? "border-amber-300/90 ring-2 ring-amber-300/60"
                   : isAirport
@@ -67,19 +75,22 @@ export default function ApproachTrack({ view }: Props) {
 
               {planes > 0 && (
                 <div
-                  className="flex items-center justify-center gap-1.5"
+                  className="absolute inset-0 flex items-center justify-center gap-1.5"
                   role="img"
                   aria-label={`${planes} airliner${planes === 1 ? "" : "s"}`}
                 >
                   {Array.from({ length: planes }, (_, k) => (
-                    <span
+                    // SVG silhouette instead of the ✈ text glyph — Apple
+                    // devices render U+2708 as the color emoji, the SVG is
+                    // identical everywhere. rotate=45 from nose-up matches
+                    // the old climbing-to-the-right orientation.
+                    <Plane
                       // biome-ignore lint/suspicious/noArrayIndexKey: identical airliner glyphs, no other identity
                       key={`a-${i}-${k}`}
-                      aria-hidden="true"
-                      className="-rotate-45 text-4xl leading-none text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]"
-                    >
-                      ✈
-                    </span>
+                      rotate={45}
+                      color="#ffffff"
+                      className="h-[55%] drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]"
+                    />
                   ))}
                 </div>
               )}

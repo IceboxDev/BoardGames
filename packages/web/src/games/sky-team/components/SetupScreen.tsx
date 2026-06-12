@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { ControlGroup, SectionHeading } from "../../../components/setup";
 import { Button } from "../../../components/ui/Button";
 import { SCENARIO_CARDS } from "../scenarios";
 import ScenarioPicker from "./ScenarioPicker";
@@ -63,11 +64,15 @@ const DEFAULT_SCENARIO_SLUG = SCENARIO_CARDS.find((s) => s.backendId != null)?.s
  * scrollbar (universal setup-screen rule). Layout vertical strips:
  *
  *   1. Title strip (slim)              — name + tagline
- *   2. Destination strip (FLEX-1)      — scenario gallery, 4 difficulty
- *                                        columns, cards stretch to fill
- *   3. Crew + AI + Start strip (~28%)  — three logical groups: who's
+ *   2. Crew + AI + Start strip (~28%)  — three logical groups: who's
  *                                        flying, who's flying with them,
  *                                        the launch button
+ *   3. Destination strip (FLEX-1)      — scenario gallery, 4 difficulty
+ *                                        columns, cards stretch to fill
+ *
+ * The controls sit on TOP and the destination gallery fills the rest —
+ * the multiplayer lobby (wide layout) stacks its room/crew/launch strip
+ * the same way, so the two screens mirror each other.
  *
  * Every flex parent carries `min-h-0` so child overflow never forces the
  * page to scroll.
@@ -98,16 +103,8 @@ export default function SetupScreen({ onStart }: Props) {
         </p>
       </header>
 
-      {/* Destination — takes all leftover vertical space above the controls. */}
-      <section className="flex min-h-0 flex-1 flex-col gap-2">
-        <SectionHeading>Destination</SectionHeading>
-        <div className="min-h-0 flex-1">
-          <ScenarioPicker selectedSlug={scenarioSlug} onSelect={setScenarioSlug} />
-        </div>
-      </section>
-
       {/* Controls strip — fixed-height logical groups for Crew, AI, and Start. */}
-      <footer className="mt-4 grid shrink-0 grid-cols-1 gap-3 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)_minmax(0,1fr)]">
+      <section className="grid shrink-0 grid-cols-1 gap-3 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.1fr)_minmax(0,1fr)]">
         <ControlGroup label="Crew">
           <div className="grid h-full grid-cols-2 gap-2">
             {SEATS.map((opt) => (
@@ -142,36 +139,20 @@ export default function SetupScreen({ onStart }: Props) {
             onStart={start}
           />
         </ControlGroup>
-      </footer>
+      </section>
+
+      {/* Destination — takes all leftover vertical space below the controls. */}
+      <section className="mt-4 flex min-h-0 flex-1 flex-col gap-2">
+        <SectionHeading>Destination</SectionHeading>
+        <div className="min-h-0 flex-1">
+          <ScenarioPicker selectedSlug={scenarioSlug} onSelect={setScenarioSlug} />
+        </div>
+      </section>
     </div>
   );
 }
 
 // ── Helpers ──────────────────────────────────────────────────────────────
-
-function SectionHeading({ children }: { children: React.ReactNode }) {
-  return (
-    <h2 className="shrink-0 text-[10px] font-bold uppercase tracking-[0.25em] text-slate-400">
-      {children}
-    </h2>
-  );
-}
-
-/**
- * One of the three labelled blocks in the bottom strip. Owns the heading
- * + the rounded card frame so all three groups look like siblings and
- * line up vertically regardless of inner content.
- */
-function ControlGroup({ label, children }: { label: string; children: React.ReactNode }) {
-  return (
-    <section className="flex flex-col gap-2">
-      <SectionHeading>{label}</SectionHeading>
-      <div className="min-h-[6.5rem] flex-1 rounded-2xl border border-gray-800/80 bg-gray-900/40 p-2.5">
-        {children}
-      </div>
-    </section>
-  );
-}
 
 function SeatCard({
   option,

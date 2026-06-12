@@ -229,6 +229,15 @@ export interface PlayableGame extends GameBase {
    */
   lobbyConfigComponent?: LazyExoticComponent<ComponentType<LobbyConfigProps>>;
   /**
+   * Lobby layout variant. `"wide"` swaps the centered scrolling column
+   * for a full-viewport, non-scrolling screen that mirrors the game's
+   * solo setup screen: a compact room/crew/launch strip on top with the
+   * `lobbyConfigComponent` filling all remaining height. Opt in when the
+   * lobby config is a large surface (Sky Team's destination gallery);
+   * omit for small configs like Pandemic's difficulty chips.
+   */
+  lobbyLayout?: "wide";
+  /**
    * Initial mp config sent to `mp.startRoom` when the host starts the
    * game. Set when the game has constant config (Sky Team's scenarioId)
    * or when `lobbyConfigComponent` needs an initial value.

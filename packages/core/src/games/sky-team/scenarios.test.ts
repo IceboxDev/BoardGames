@@ -8,7 +8,6 @@ import {
   getSlotDef,
   LANDING_GEAR_SLOTS,
   MANDATORY_SLOTS,
-  NON_PERSISTENT_SLOTS,
   RADIO_SLOTS,
   SCENARIOS,
   ScenarioIdSchema,
@@ -88,17 +87,11 @@ describe("BASE_SLOT_DEFS", () => {
   });
 });
 
-describe("MANDATORY_SLOTS and NON_PERSISTENT_SLOTS", () => {
-  it("MANDATORY_SLOTS lists exactly the four axis/engine slots", () => {
+describe("MANDATORY_SLOTS", () => {
+  it("lists exactly the four axis/engine slots", () => {
     expect([...MANDATORY_SLOTS].sort()).toEqual(
       ["copilot-axis", "copilot-engine", "pilot-axis", "pilot-engine"].sort(),
     );
-  });
-
-  it("NON_PERSISTENT_SLOTS excludes gear/flaps/brakes", () => {
-    for (const id of LANDING_GEAR_SLOTS) expect(NON_PERSISTENT_SLOTS).not.toContain(id);
-    for (const id of FLAPS_ORDER) expect(NON_PERSISTENT_SLOTS).not.toContain(id);
-    for (const id of BRAKES_ORDER) expect(NON_PERSISTENT_SLOTS).not.toContain(id);
   });
 });
 

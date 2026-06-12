@@ -1,3 +1,4 @@
+export { ControlGroup, SectionHeading } from "./ControlGroup";
 export type { PvAISetupScreenProps, StrategyOption } from "./PvAISetupScreen";
 export { PvAISetupScreen } from "./PvAISetupScreen";
 export { SectionLabel } from "./SectionLabel";

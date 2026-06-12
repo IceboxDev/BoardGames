@@ -7,7 +7,6 @@ import {
   getSlotDef,
   LANDING_GEAR_SLOTS,
   MANDATORY_SLOTS,
-  NON_PERSISTENT_SLOTS,
   RADIO_SLOTS,
   REROLL_TOKEN_CAP,
 } from "./scenarios";
@@ -177,6 +176,9 @@ export function isLegalPlacement(
   const def = getSlotDef(state.scenario, slot);
   if (!eligibilityAllowsPlayer(def.eligibility, player)) return false;
   if (state.slots[slot].die != null) return false;
+  // A flipped switch (gear / flaps / brakes) stays used for the rest of the
+  // game even though its die returns to the player at end of round.
+  if (state.slots[slot].switchOn === true) return false;
   if (def.allowedValues && !def.allowedValues.includes(value)) return false;
   if (def.ordered && !isOrderedSlotReady(state, slot)) return false;
   return true;
@@ -413,8 +415,13 @@ export function applyEndRound(state: SkyTeamGameState): SkyTeamGameState {
   const collectedReroll = rerollIconHere && next.rerollTokens < REROLL_TOKEN_CAP;
   if (collectedReroll) next.rerollTokens = REROLL_TOKEN_CAP;
 
-  for (const id of NON_PERSISTENT_SLOTS) {
-    next.slots[id].die = null;
+  // All eight dice go back to the players at end of round — including dice
+  // sitting on gear/flaps/brakes. What persists on those slots is the flipped
+  // switch (`switchOn`), which is also what blocks re-placement (see
+  // `isLegalPlacement`). Mirrors the physical game: dice are re-rolled every
+  // round, switches stay armed.
+  for (const slotState of Object.values(next.slots)) {
+    slotState.die = null;
   }
 
   const altitudeBottomed = next.altitude.feet <= 0;
