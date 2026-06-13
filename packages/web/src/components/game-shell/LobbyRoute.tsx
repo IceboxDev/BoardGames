@@ -129,6 +129,7 @@ export default function LobbyRoute() {
       }}
       onKick={(i) => mp.kickPlayer(i)}
       onToggleReady={() => mp.toggleReady()}
+      onSwapSeats={(a, b) => mp.swapSeats(a, b)}
       error={mp.error}
     >
       {/* Lazy game-specific lobby content (e.g. Pandemic's difficulty

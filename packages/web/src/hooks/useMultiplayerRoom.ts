@@ -22,6 +22,7 @@ export interface MultiplayerRoomState<TView, TAction, TResult> {
   startRoom: (config: unknown) => void;
   kickPlayer: (slotIndex: number) => void;
   toggleReady: () => void;
+  swapSeats: (a: number, b: number) => void;
 
   // Room chat (Sky Team briefing today; available to any game that wants it)
   chatMessages: ChatMessage[];
@@ -49,11 +50,18 @@ export function useMultiplayerRoom<TView = unknown, TAction = unknown, TResult =
   gameSlug: string,
   session: GameSession<TView, TAction, TResult>,
 ): MultiplayerRoomState<TView, TAction, TResult> {
+  // The shared session also carries solo games (`useRemoteGame`); this
+  // projection only surfaces sessions bound to a room. Without the
+  // discriminator, an active solo game made `phase` report "playing" the
+  // moment a room was created — the lobby route then "started" the game and
+  // rendered the solo board as if it were the room's.
+  const isRoomGame = session.gameRoomCode != null;
+
   const phase = useMemo(() => {
-    if (session.sessionId && session.playerView) return "playing" as const;
+    if (isRoomGame && session.sessionId && session.playerView) return "playing" as const;
     if (session.roomCode) return "lobby" as const;
     return "idle" as const;
-  }, [session.sessionId, session.playerView, session.roomCode]);
+  }, [isRoomGame, session.sessionId, session.playerView, session.roomCode]);
 
   const createRoom = useCallback(
     (playerName: string) => {
@@ -83,17 +91,18 @@ export function useMultiplayerRoom<TView = unknown, TAction = unknown, TResult =
     startRoom: session.startRoom,
     kickPlayer: session.kickPlayer,
     toggleReady: session.toggleReady,
+    swapSeats: session.swapSeats,
 
     chatMessages: session.chatMessages,
     sendChat: session.sendChat,
 
-    view: session.playerView,
-    legalActions: session.legalActions,
+    view: isRoomGame ? session.playerView : null,
+    legalActions: isRoomGame ? session.legalActions : [],
     activePlayer: session.activePlayer,
     playerIndex: session.playerIndex,
     isMyTurn: session.activePlayer === session.playerIndex,
-    isAiThinking: session.aiThinking,
-    result: session.result,
+    isAiThinking: isRoomGame && session.aiThinking,
+    result: isRoomGame ? session.result : null,
     replayId: session.replayId,
     send: session.sendAction,
     reset,

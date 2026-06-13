@@ -80,6 +80,12 @@ describe("ServerMessageSchema", () => {
       }),
     ).not.toThrow();
     expect(() =>
+      sample("room-updated", {
+        roomCode: "ABC",
+        roomState: { gameSlug: "sky-team", hostName: "x", slots: [], seatOrder: [1, 0] },
+      }),
+    ).not.toThrow();
+    expect(() =>
       sample("room-joined", {
         roomCode: "ABC",
         roomState: { gameSlug: "set", hostName: "x", slots: [] },

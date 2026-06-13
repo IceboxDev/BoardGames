@@ -1,5 +1,5 @@
 import type { SkyTeamPlayerView } from "@boardgames/core/games/sky-team/types";
-import Plane from "./board/Plane";
+import PlaneTop from "./board/PlaneTop";
 import "./board/cockpit.css";
 
 interface Props {
@@ -80,16 +80,16 @@ export default function ApproachTrack({ view }: Props) {
                   aria-label={`${planes} airliner${planes === 1 ? "" : "s"}`}
                 >
                   {Array.from({ length: planes }, (_, k) => (
-                    // SVG silhouette instead of the ✈ text glyph — Apple
-                    // devices render U+2708 as the color emoji, the SVG is
-                    // identical everywhere. rotate=45 from nose-up matches
-                    // the old climbing-to-the-right orientation.
-                    <Plane
+                    // Top-view SVG silhouette (not the ✈ text glyph — Apple
+                    // devices render U+2708 as the color emoji; and not the
+                    // front-view Plane — airliners on a map read from above).
+                    // rotate=45 from nose-up = climbing to the upper-right.
+                    <PlaneTop
                       // biome-ignore lint/suspicious/noArrayIndexKey: identical airliner glyphs, no other identity
                       key={`a-${i}-${k}`}
                       rotate={45}
                       color="#ffffff"
-                      className="h-[55%] drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]"
+                      className="h-[72%] drop-shadow-[0_1px_2px_rgba(0,0,0,0.7)]"
                     />
                   ))}
                 </div>

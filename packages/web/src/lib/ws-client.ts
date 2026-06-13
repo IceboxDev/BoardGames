@@ -60,6 +60,12 @@ export interface GameSession<TPlayerView, TAction, TResult> {
   aiThinking: boolean;
   result: TResult | null;
   replayId: number | null;
+  /** Which room the active game session belongs to — `null` for a solo
+   *  session. The solo (`useRemoteGame`) and room (`useMultiplayerRoom`)
+   *  projections both read the shared `playerView`; this discriminator is
+   *  what stops one's game state from leaking into the other (e.g. an
+   *  abandoned solo game masquerading as a running room game). */
+  gameRoomCode: string | null;
 
   // Room state
   roomCode: string | null;
@@ -79,6 +85,9 @@ export interface GameSession<TPlayerView, TAction, TResult> {
   startRoom: (config: unknown) => void;
   kickPlayer: (slotIndex: number) => void;
   toggleReady: () => void;
+  /** Host-only: swap the in-game roles assigned to two slots (pre-start).
+   *  Players stay in their slots; `RoomState.seatOrder` changes. */
+  swapSeats: (a: number, b: number) => void;
   /** Clear the connection-level error. Used by screens that present a
    *  clean-slate entry point (e.g. JoinRoomRoute) so a stale "Host left"
    *  / "Room ABCD not found" notice from a previous session doesn't
@@ -123,6 +132,15 @@ export function useGameSession<
   const [result, setResult] = useState<TResult | null>(null);
   const [replayId, setReplayId] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [gameRoomCode, setGameRoomCode] = useState<string | null>(null);
+  // Mirror of `sessionId` readable inside the long-lived `ws.onmessage`
+  // closure — the closure is created once per socket and would otherwise
+  // capture a stale value.
+  const sessionIdRef = useRef<string | null>(null);
+  const setSessionIdSynced = useCallback((id: string | null) => {
+    sessionIdRef.current = id;
+    setSessionId(id);
+  }, []);
 
   // Room state
   const [roomCode, setRoomCode] = useState<string | null>(null);
@@ -170,7 +188,8 @@ export function useGameSession<
         switch (msg.type) {
           // --- Solo session messages ---
           case "session-created":
-            setSessionId(msg.sessionId);
+            setSessionIdSynced(msg.sessionId);
+            setGameRoomCode(null);
             setPlayerView(msg.playerView as TPlayerView);
             setLegalActions(msg.legalActions as TAction[]);
             setAiThinking(false);
@@ -179,6 +198,17 @@ export function useGameSession<
             break;
 
           case "state-update":
+            // One socket can briefly know about two game sessions (e.g. an
+            // abandoned solo game lingering while a room game runs). Only
+            // the bound session may drive the shared view — anything else
+            // is dropped. A null binding means we're rejoining after a
+            // refresh (reconnectPlayer sends a bare state-update, never
+            // game-started) — adopt the session so `sendAction` works.
+            if (sessionIdRef.current && msg.sessionId !== sessionIdRef.current) break;
+            if (!sessionIdRef.current) {
+              setSessionIdSynced(msg.sessionId);
+              setGameRoomCode(pendingRejoinRef.current?.roomCode ?? null);
+            }
             setPlayerView(msg.playerView as TPlayerView);
             setLegalActions(msg.legalActions as TAction[]);
             setActivePlayer(msg.activePlayer);
@@ -187,10 +217,16 @@ export function useGameSession<
             break;
 
           case "ai-thinking":
+            if (sessionIdRef.current && msg.sessionId !== sessionIdRef.current) break;
             setAiThinking(true);
             break;
 
           case "game-over":
+            if (sessionIdRef.current && msg.sessionId !== sessionIdRef.current) break;
+            if (!sessionIdRef.current) {
+              setSessionIdSynced(msg.sessionId);
+              setGameRoomCode(pendingRejoinRef.current?.roomCode ?? null);
+            }
             setPlayerView(msg.playerView as TPlayerView);
             setResult(msg.result as TResult);
             setReplayId(msg.replayId ?? null);
@@ -251,7 +287,8 @@ export function useGameSession<
             break;
 
           case "game-started":
-            setSessionId(msg.sessionId);
+            setSessionIdSynced(msg.sessionId);
+            setGameRoomCode(msg.roomCode);
             setPlayerIndex(msg.playerIndex);
             setActivePlayer(msg.activePlayer);
             setPlayerView(msg.playerView as TPlayerView);
@@ -298,7 +335,7 @@ export function useGameSession<
         openWith(`${WS_URL}${sep}ticket=${encodeURIComponent(ticket)}`);
       })
       .catch(() => openWith(WS_URL));
-  }, []);
+  }, [setSessionIdSynced]);
 
   useEffect(() => {
     connect();
@@ -340,7 +377,8 @@ export function useGameSession<
   const leaveSession = useCallback(() => {
     if (!sessionId) return;
     sendMessage({ type: "leave-session", sessionId });
-    setSessionId(null);
+    setSessionIdSynced(null);
+    setGameRoomCode(null);
     setPlayerView(null);
     setLegalActions([]);
     setResult(null);
@@ -350,7 +388,7 @@ export function useGameSession<
     setRoomState(null);
     setMySlot(null);
     pendingRejoinRef.current = null;
-  }, [sendMessage, sessionId]);
+  }, [sendMessage, sessionId, setSessionIdSynced]);
 
   // --- Room actions ---
 
@@ -428,6 +466,14 @@ export function useGameSession<
     sendMessage({ type: "toggle-ready", roomCode });
   }, [sendMessage, roomCode]);
 
+  const swapSeats = useCallback(
+    (a: number, b: number) => {
+      if (!roomCode) return;
+      sendMessage({ type: "swap-seats", roomCode, a, b });
+    },
+    [sendMessage, roomCode],
+  );
+
   return {
     status,
     sessionId,
@@ -438,6 +484,7 @@ export function useGameSession<
     aiThinking,
     result,
     replayId,
+    gameRoomCode,
     error,
     roomCode,
     roomState,
@@ -452,6 +499,7 @@ export function useGameSession<
     startRoom,
     kickPlayer,
     toggleReady,
+    swapSeats,
     clearError,
     chatMessages,
     sendChat,

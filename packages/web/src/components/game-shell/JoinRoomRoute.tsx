@@ -3,10 +3,45 @@ import { useNavigate } from "react-router-dom";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import { useGameShell } from "../../hooks/useGameShell";
 import { JoinRoom } from "../multiplayer";
+import { SetupHeader, SetupLayout } from "../setup";
+import { Button } from "../ui";
 
 function resolvePlayerName(sessionName: string | null | undefined): string {
   const trimmed = sessionName?.trim();
   return trimmed && trimmed.length > 0 ? trimmed : "Player";
+}
+
+/**
+ * Shown instead of the create/join form while a SOLO game is still in
+ * progress on the shared session. Multiplayer and solo can't run side by
+ * side (one WebSocket, one active game session), so the player must
+ * explicitly abandon the solo game — or go back to it — before entering
+ * a room. Without this gate the room flow used to "start" with the solo
+ * game's state and dump the player back onto their solo board.
+ */
+function AbandonSoloPrompt({
+  onResume,
+  onAbandon,
+}: {
+  onResume: () => void;
+  onAbandon: () => void;
+}) {
+  return (
+    <SetupLayout>
+      <SetupHeader
+        title="Solo game in progress"
+        subtitle="Playing online will abandon your current solo game"
+      />
+      <div className="mx-auto flex w-full max-w-sm flex-col gap-3">
+        <Button variant="primary" size="lg" onClick={onResume}>
+          Back to Solo Game
+        </Button>
+        <Button variant="secondary" size="lg" onClick={onAbandon}>
+          Abandon &amp; Play Online
+        </Button>
+      </div>
+    </SetupLayout>
+  );
 }
 
 /**
@@ -28,7 +63,7 @@ function resolvePlayerName(sessionName: string | null | undefined): string {
  */
 export default function JoinRoomRoute() {
   const navigate = useNavigate();
-  const { def, mp, session } = useGameShell();
+  const { def, game, mp, session } = useGameShell();
   const { user } = useCurrentUser();
   const playerName = resolvePlayerName(user?.name);
 
@@ -46,6 +81,23 @@ export default function JoinRoomRoute() {
       navigate(`/play/${def.slug}/mp/lobby/${mp.roomCode}`, { replace: true });
     }
   }, [mp.roomCode, def.slug, navigate]);
+
+  // A FINISHED solo game (result shown, never reset) doesn't need a
+  // prompt — release the dead session quietly so the join form renders.
+  useEffect(() => {
+    if (game.view && game.result != null) game.reset();
+  }, [game.view, game.result, game.reset]);
+
+  // An in-progress solo game must be explicitly abandoned (or resumed)
+  // before the player can create/join a room.
+  if (game.view && game.result == null) {
+    return (
+      <AbandonSoloPrompt
+        onResume={() => navigate(`/play/${def.slug}/solo`)}
+        onAbandon={() => game.reset()}
+      />
+    );
+  }
 
   return (
     <JoinRoom

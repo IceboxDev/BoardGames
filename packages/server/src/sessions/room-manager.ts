@@ -2,7 +2,12 @@ import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
 import { gameRoomConfigs } from "@boardgames/core/protocol/room-config";
 import type { WSContext } from "hono/ws";
 import { getMachineSpec } from "./machine-registry.ts";
-import { createMultiClientSession, type PlayerConnection, reconnectPlayer } from "./manager.ts";
+import {
+  createMultiClientSession,
+  endSoloSessionsForWs,
+  type PlayerConnection,
+  reconnectPlayer,
+} from "./manager.ts";
 
 // ---------------------------------------------------------------------------
 // Room code generation
@@ -32,6 +37,10 @@ interface Room {
   hostWs: WSContext;
   slots: RoomSlot[];
   clients: Map<WSContext, number>; // ws → slotIndex
+  /** slotIndex → in-game seat (PlayerIndex). Identity until the host swaps
+   *  roles (Sky Team: seat 0 = Pilot, seat 1 = Co-Pilot). Slots and host
+   *  identity never move — only the role assignment does. */
+  seatOrder: number[];
   sessionId: string | null; // set once game starts
 }
 
@@ -58,6 +67,7 @@ function buildRoomState(room: Room): RoomState {
     gameSlug: room.gameSlug,
     hostName: room.slots[0]?.playerName ?? "",
     slots: room.slots,
+    seatOrder: room.seatOrder,
   };
 }
 
@@ -92,6 +102,11 @@ export function handleCreateRoom(
     handleLeaveRoom(ws, { roomCode: existingRoom });
   }
 
+  // A dangling solo game can't coexist with a room game on one socket —
+  // the client gates this with an explicit "abandon solo?" prompt; this
+  // covers direct-URL entries that skip the prompt.
+  endSoloSessionsForWs(ws);
+
   const code = generateRoomCode();
   const slots: RoomSlot[] = [];
 
@@ -114,6 +129,7 @@ export function handleCreateRoom(
     hostWs: ws,
     slots,
     clients: new Map([[ws, 0]]),
+    seatOrder: Array.from({ length: config.maxPlayers }, (_, i) => i),
     sessionId: null,
   };
 
@@ -145,6 +161,9 @@ export function handleJoinRoom(ws: WSContext, msg: { roomCode: string; playerNam
   if (existingJoinRoom) {
     handleLeaveRoom(ws, { roomCode: existingJoinRoom });
   }
+
+  // Same solo-session cleanup as create-room (see comment there).
+  endSoloSessionsForWs(ws);
 
   // Find first open slot
   const slotIndex = room.slots.findIndex((s) => s.kind === "open");
@@ -190,9 +209,10 @@ function handleReconnect(ws: WSContext, room: Room, playerName: string): void {
 
   broadcastRoomUpdate(room);
 
-  // Signal the session manager to send current game state to this player
+  // Signal the session manager to send current game state to this player.
+  // The session is keyed by in-game seat, not slot index.
   if (room.sessionId) {
-    reconnectPlayer(room.sessionId, ws, slotIndex);
+    reconnectPlayer(room.sessionId, ws, room.seatOrder[slotIndex] ?? slotIndex);
   }
 }
 
@@ -273,6 +293,38 @@ export function handleConfigureRoom(
   broadcastRoomUpdate(room);
 }
 
+/**
+ * Swap the in-game seats (roles) assigned to two slots — host only, before
+ * the game starts. Players never change slots (host identity, kick rules,
+ * and ready state all key off slot index); only `seatOrder` changes, so
+ * "who flies as Pilot" is decoupled from "who created the room".
+ */
+export function handleSwapSeats(
+  ws: WSContext,
+  msg: { roomCode: string; a: number; b: number },
+): void {
+  const room = rooms.get(msg.roomCode);
+  if (!room) {
+    sendError(ws, `Room ${msg.roomCode} not found`);
+    return;
+  }
+  if (room.hostWs !== ws) {
+    sendError(ws, "Only the host can swap seats");
+    return;
+  }
+  if (room.sessionId) {
+    sendError(ws, "Cannot swap seats after game has started");
+    return;
+  }
+  const { a, b } = msg;
+  if (a === b || a >= room.seatOrder.length || b >= room.seatOrder.length) {
+    sendError(ws, "Invalid seat swap");
+    return;
+  }
+  [room.seatOrder[a], room.seatOrder[b]] = [room.seatOrder[b], room.seatOrder[a]];
+  broadcastRoomUpdate(room);
+}
+
 export function handleKickPlayer(
   ws: WSContext,
   msg: { roomCode: string; slotIndex: number },
@@ -343,7 +395,8 @@ export function handleStartRoom(ws: WSContext, msg: { roomCode: string; config: 
     return;
   }
 
-  // Build player connections for the session
+  // Build player connections for the session. The in-game seat comes from
+  // `seatOrder`, not the slot index — the host may have swapped roles.
   const players: PlayerConnection[] = [];
   for (let i = 0; i < room.slots.length; i++) {
     const slot = room.slots[i];
@@ -351,7 +404,7 @@ export function handleStartRoom(ws: WSContext, msg: { roomCode: string; config: 
       // Find the ws for this slot
       for (const [clientWs, idx] of room.clients) {
         if (idx === i) {
-          players.push({ ws: clientWs, playerIndex: i, connected: true });
+          players.push({ ws: clientWs, playerIndex: room.seatOrder[i] ?? i, connected: true });
           break;
         }
       }
@@ -371,9 +424,10 @@ export function handleStartRoom(ws: WSContext, msg: { roomCode: string; config: 
 function buildGameConfig(room: Room, extra: Record<string, unknown>): Record<string, unknown> {
   switch (room.gameSlug) {
     case "lost-cities": {
-      // 2 players — if both human, pass humanPlayers: [0, 1]
+      // 2 players — if both human, pass humanPlayers: [0, 1]. Seats map
+      // through seatOrder (identity unless a future UI exposes swapping).
       const humanIndices = room.slots
-        .map((s, i) => (s.kind === "human" ? i : -1))
+        .map((s, i) => (s.kind === "human" ? (room.seatOrder[i] ?? i) : -1))
         .filter((i) => i >= 0);
       const aiSlot = room.slots.find((s) => s.kind === "ai");
       return {
@@ -422,8 +476,10 @@ function buildGameConfig(room: Room, extra: Record<string, unknown>): Record<str
     }
 
     case "sky-team": {
+      // Human SEATS (PlayerIndex), mapped through seatOrder — the host may
+      // have swapped who flies as Pilot vs Co-Pilot.
       const humanIndices = room.slots
-        .map((s, i) => (s.kind === "human" ? i : -1))
+        .map((s, i) => (s.kind === "human" ? (room.seatOrder[i] ?? i) : -1))
         .filter((i) => i >= 0);
       const aiSlot = room.slots.find((s) => s.kind === "ai");
       return {

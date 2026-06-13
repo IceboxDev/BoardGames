@@ -449,6 +449,27 @@ function handleLeaveSession(
   }
 }
 
+/**
+ * Stop any SOLO sessions still bound to this socket. Called by the room
+ * manager when the socket creates or joins a room: solo and room games
+ * can't run side by side on one connection (the client renders a single
+ * shared view), so a dangling solo game would keep emitting state-updates
+ * into the room game's UI. The client prompts the user before reaching
+ * this point; this is the server-side guarantee for direct-URL paths.
+ */
+export function endSoloSessionsForWs(ws: WSContext): void {
+  const ids = wsSessions.get(ws);
+  if (!ids) return;
+  for (const id of [...ids]) {
+    const active = sessions.get(id);
+    if (!active || active.roomCode) continue;
+    gameLog(active.gameSlug, active.id, "solo session ended (socket entered a room)");
+    active.actor.stop();
+    sessions.delete(id);
+    ids.delete(id);
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Message routing
 // ---------------------------------------------------------------------------

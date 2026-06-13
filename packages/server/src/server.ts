@@ -33,6 +33,7 @@ import {
   handleKickPlayer,
   handleLeaveRoom,
   handleStartRoom,
+  handleSwapSeats,
   handleToggleReady,
 } from "./sessions/room-manager.ts";
 import type { ClientToServerMessage } from "./sessions/types.ts";
@@ -150,6 +151,9 @@ function handleRoomMessage(ws: import("hono/ws").WSContext, msg: ClientToServerM
       return true;
     case "toggle-ready":
       handleToggleReady(ws, msg);
+      return true;
+    case "swap-seats":
+      handleSwapSeats(ws, msg);
       return true;
     case "chat":
       handleChat(ws, msg);

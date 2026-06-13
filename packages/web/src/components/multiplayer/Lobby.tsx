@@ -14,6 +14,8 @@ interface LobbyProps {
   onKick: (slotIndex: number) => void;
   onToggleReady: () => void;
   onConfigureSlot?: (slotIndex: number, slot: RoomSlot) => void;
+  /** Host-only role swap (see `GameRoomConfig.seatNames` / `RoomState.seatOrder`). */
+  onSwapSeats?: (a: number, b: number) => void;
   error?: string | null;
   children?: React.ReactNode;
   /**
@@ -40,6 +42,7 @@ export function Lobby({
   onKick,
   onToggleReady,
   onConfigureSlot,
+  onSwapSeats,
   error,
   children,
   layout = "default",
@@ -56,7 +59,7 @@ export function Lobby({
       slot={slot}
       index={i}
       isMe={i === mySlot}
-      seatName={roomConfig.seatNames?.[i]}
+      seatName={roomConfig.seatNames?.[roomState.seatOrder?.[i] ?? i]}
       canKick={isHost && i !== 0 && slot.kind === "human"}
       canToggle={isHost && i !== 0 && roomConfig.supportsAI}
       onKick={() => onKick(i)}
@@ -75,6 +78,21 @@ export function Lobby({
       }}
     />
   ));
+
+  // Host-only role swap — shown for games whose seats carry meaning
+  // (Sky Team: Pilot / Co-Pilot). Two-seat rooms only; players keep their
+  // slots, just the role assignment flips.
+  const swapRolesButton =
+    isHost && onSwapSeats && roomConfig.seatNames && roomState.slots.length === 2 ? (
+      <Button
+        variant="secondary"
+        size="xs"
+        onClick={() => onSwapSeats(0, 1)}
+        className="self-center"
+      >
+        ⇅ Swap roles
+      </Button>
+    ) : null;
 
   const startOrReadyButton = isHost ? (
     <Button variant="primary" size="lg" block disabled={!canStart} onClick={onStart}>
@@ -131,7 +149,10 @@ export function Lobby({
           </ControlGroup>
 
           <ControlGroup label="Crew">
-            <div className="flex h-full flex-col justify-center gap-2">{slotRows}</div>
+            <div className="flex h-full flex-col justify-center gap-2">
+              {slotRows}
+              {swapRolesButton}
+            </div>
           </ControlGroup>
 
           <ControlGroup label="Launch">
@@ -177,11 +198,12 @@ export function Lobby({
       {error && <ErrorAlert message={error} className="mx-auto mb-4 w-full max-w-md text-center" />}
 
       {/* Player slots */}
-      <div className="mx-auto mb-6 w-full max-w-md space-y-2">
-        <div className="mb-2 text-xs font-medium uppercase tracking-wider text-fg-secondary">
+      <div className="mx-auto mb-6 flex w-full max-w-md flex-col gap-2">
+        <div className="text-xs font-medium uppercase tracking-wider text-fg-secondary">
           Players
         </div>
         {slotRows}
+        {swapRolesButton}
       </div>
 
       {/* Game-specific config */}

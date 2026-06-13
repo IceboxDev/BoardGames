@@ -14,6 +14,7 @@ function makeSession(overrides: Partial<GameSession<unknown, unknown, unknown>> 
     aiThinking: false,
     result: null,
     replayId: null,
+    gameRoomCode: null,
     error: null,
     roomCode: null,
     roomState: null,
@@ -28,6 +29,7 @@ function makeSession(overrides: Partial<GameSession<unknown, unknown, unknown>> 
     startRoom: vi.fn(),
     kickPlayer: vi.fn(),
     toggleReady: vi.fn(),
+    swapSeats: vi.fn(),
     ...overrides,
   } as GameSession<unknown, unknown, unknown>;
 }
@@ -45,14 +47,30 @@ describe("useMultiplayerRoom — phase derivation", () => {
     expect(result.current.phase).toBe("lobby");
   });
 
-  it("is 'playing' when both sessionId and playerView are set", () => {
+  it("is 'playing' when a room-bound session has a view", () => {
     const session = makeSession({
       roomCode: "CODE",
+      gameRoomCode: "CODE",
       sessionId: "sess-1",
       playerView: { turn: 1 },
     });
     const { result } = renderHook(() => useMultiplayerRoom("uno", session));
     expect(result.current.phase).toBe("playing");
+  });
+
+  it("stays 'lobby' when the active game session is a SOLO one", () => {
+    // An abandoned solo game on the shared socket must not masquerade as
+    // the room's game — that used to bounce the lobby straight onto the
+    // solo board (gameRoomCode null = not a room game).
+    const session = makeSession({
+      roomCode: "CODE",
+      gameRoomCode: null,
+      sessionId: "solo-sess",
+      playerView: { turn: 3 },
+    });
+    const { result } = renderHook(() => useMultiplayerRoom("uno", session));
+    expect(result.current.phase).toBe("lobby");
+    expect(result.current.view).toBeNull();
   });
 });
 

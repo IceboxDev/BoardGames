@@ -63,6 +63,16 @@ const ToggleReadySchema = z.object({
   roomCode: z.string(),
 });
 
+// Swap the in-game seats (roles) assigned to two slots — host only, before
+// the game starts. Players stay in their slots; only `RoomState.seatOrder`
+// changes (Sky Team: who flies as Pilot vs Co-Pilot).
+const SwapSeatsSchema = z.object({
+  type: z.literal("swap-seats"),
+  roomCode: z.string(),
+  a: z.number().int().min(0),
+  b: z.number().int().min(0),
+});
+
 // Free-form chat between seated humans. Used during the Sky Team briefing
 // phase (and other games that want pre-round discussion). The server
 // rebroadcasts with the sender's slot + display name so clients don't
@@ -86,6 +96,7 @@ export const ClientMessageSchema = z.discriminatedUnion("type", [
   StartRoomSchema,
   KickPlayerSchema,
   ToggleReadySchema,
+  SwapSeatsSchema,
   ChatSchema,
 ]);
 export type ClientMessage = z.infer<typeof ClientMessageSchema>;
@@ -101,5 +112,6 @@ export {
   LeaveRoomSchema,
   LeaveSessionSchema,
   StartRoomSchema,
+  SwapSeatsSchema,
   ToggleReadySchema,
 };

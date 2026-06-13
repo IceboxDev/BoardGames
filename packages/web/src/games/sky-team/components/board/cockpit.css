@@ -566,10 +566,13 @@
   font-size: 11.8cqi; /* 20/170 */
 }
 
+/* Altimeter-tape window — content is the absolutely-positioned SVG drawn by
+   `AltitudeWindow` (tape, readout, starter arrows), so the slot just needs a
+   positioning context and rounded-corner clipping. */
 .cockpit-hud--altitude {
   border: 1.1cqi solid #10324d;
-  font-size: 11.1cqi; /* 20/180 */
-  letter-spacing: 1.6cqi;
+  position: relative;
+  overflow: hidden;
 }
 
 /* Top-left HUD slot — mirrors the current approach slot. Lays the white
@@ -585,12 +588,13 @@
   padding: 0 5.9cqi;
 }
 
-/* Plane SVG (rotation + recolour handled by the component itself). Sized to
-   read like the old 21cqi ✈ glyph — the silhouette fills ~85% of its square
-   box, so 24cqi nets a similar visual footprint. */
+/* Top-view plane SVG (rotation + recolour handled by the component itself).
+   Sized to read like the old 21cqi ✈ glyph — PlaneTop's viewBox is padded
+   for rotation so the silhouette fills ~70% of its square box; 32cqi nets a
+   similar visual footprint. */
 .cockpit-current-airliner {
-  width: 24cqi;
-  height: 24cqi;
+  width: 32cqi;
+  height: 32cqi;
   flex: none;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.7));
 }

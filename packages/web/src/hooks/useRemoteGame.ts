@@ -42,17 +42,22 @@ export function useRemoteGame<TView = unknown, TAction = unknown, TResult = unkn
     setStarted(false);
   }, [session.leaveSession]);
 
+  // The shared session also carries room games (`useMultiplayerRoom`); this
+  // projection only surfaces SOLO sessions, otherwise a room game would show
+  // up as a phantom solo game (and vice versa).
+  const isSoloGame = session.gameRoomCode == null;
+
   return {
-    view: session.playerView,
-    legalActions: session.legalActions,
+    view: isSoloGame ? session.playerView : null,
+    legalActions: isSoloGame ? session.legalActions : [],
     phase: started ? "active" : "idle",
     activePlayer: session.activePlayer,
     playerIndex: session.playerIndex,
     isMyTurn: session.activePlayer === session.playerIndex,
-    result: session.result,
+    result: isSoloGame ? session.result : null,
     replayId: session.replayId,
     isConnected: session.status === "connected",
-    isAiThinking: session.aiThinking,
+    isAiThinking: isSoloGame && session.aiThinking,
     error: session.error,
     send: session.sendAction,
     start,

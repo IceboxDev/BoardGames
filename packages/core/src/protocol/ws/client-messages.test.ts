@@ -35,6 +35,18 @@ describe("ClientMessageSchema", () => {
     expect(() =>
       ClientMessageSchema.parse({ type: "toggle-ready", roomCode: "ABC" }),
     ).not.toThrow();
+    expect(() =>
+      ClientMessageSchema.parse({ type: "swap-seats", roomCode: "ABC", a: 0, b: 1 }),
+    ).not.toThrow();
+  });
+
+  it("rejects swap-seats with negative or missing slot indices", () => {
+    expect(() =>
+      ClientMessageSchema.parse({ type: "swap-seats", roomCode: "ABC", a: -1, b: 1 }),
+    ).toThrow();
+    expect(() =>
+      ClientMessageSchema.parse({ type: "swap-seats", roomCode: "ABC", a: 0 }),
+    ).toThrow();
   });
 
   it("rejects unknown discriminator", () => {

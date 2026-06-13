@@ -1,8 +1,9 @@
 import type { SkyTeamPlayerView } from "@boardgames/core/games/sky-team/types";
 import { BoardOverlay } from "../../../../components/board";
 import rerollDiceUrl from "../../assets/reroll-dice.svg";
+import AltitudeWindow from "./AltitudeWindow";
 import { HUD_ALTITUDE, HUD_REROLL, HUD_REROLL_WELL, HUD_WEATHER } from "./geometry";
-import Plane from "./Plane";
+import PlaneTop from "./PlaneTop";
 
 interface Props {
   view: SkyTeamPlayerView;
@@ -60,10 +61,10 @@ export default function TopHud({ view }: Props) {
           aria-label={`Current approach slot — ${view.approach.airliners[view.approach.current] ?? 0} airliner(s)`}
         >
           {Array.from({ length: view.approach.airliners[view.approach.current] ?? 0 }, (_, k) => (
-            // SVG silhouette instead of the ✈ text glyph — Apple devices
-            // render U+2708 as the color emoji, the SVG is identical
-            // everywhere. rotate=45 from nose-up = the old -45° text tilt.
-            <Plane
+            // Top-view SVG silhouette (not the ✈ text glyph — Apple devices
+            // render U+2708 as the color emoji; and traffic on the approach
+            // reads from above). rotate=45 from nose-up = the old text tilt.
+            <PlaneTop
               // biome-ignore lint/suspicious/noArrayIndexKey: identical airliner glyphs, no other identity
               key={`current-airliner-${k}`}
               rotate={45}
@@ -84,9 +85,11 @@ export default function TopHud({ view }: Props) {
         <div
           className="cockpit-hud cockpit-hud--altitude sky-slot-bg"
           role="img"
-          aria-label={`Altitude ${view.altitude.feet} feet${view.isFinalRound ? " — final round" : ""}`}
+          aria-label={`Altitude ${view.altitude.feet} feet — ${
+            view.firstThisRound === 0 ? "Pilot" : "Co-Pilot"
+          } places first${view.isFinalRound ? " — final round" : ""}`}
         >
-          {view.altitude.feet}
+          <AltitudeWindow view={view} />
         </div>
       </BoardOverlay>
     </>
