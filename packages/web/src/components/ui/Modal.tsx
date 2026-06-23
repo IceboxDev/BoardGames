@@ -1,7 +1,8 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { type ReactNode, useEffect, useId, useRef } from "react";
+import { type ReactNode, useId, useRef } from "react";
 import { createPortal } from "react-dom";
 import { XIcon } from "../icons";
+import { useBodyScrollLock, useDialogEscape, useFocusTrap } from "./dialog-a11y";
 
 // Single dialog primitive. Owns: portal, backdrop, panel chrome, close X,
 // focus trap, body-scroll lock, escape, role=dialog, aria-modal,
@@ -59,7 +60,7 @@ export function Modal({
   const labelledBy = title ? titleId : undefined;
 
   useBodyScrollLock();
-  useEscape(closeOnEscape ? onClose : null);
+  useDialogEscape(closeOnEscape ? onClose : null);
   useFocusTrap(panelRef);
 
   const overlay = (
@@ -137,82 +138,4 @@ export function Modal({
 
   if (typeof document === "undefined") return null;
   return createPortal(overlay, document.body);
-}
-
-// ── Hooks ─────────────────────────────────────────────────────────────
-
-function useBodyScrollLock() {
-  useEffect(() => {
-    const original = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.body.style.overflow = original;
-    };
-  }, []);
-}
-
-function useEscape(onEscape: (() => void) | null) {
-  useEffect(() => {
-    if (!onEscape) return;
-    function handle(e: KeyboardEvent) {
-      if (e.key === "Escape") onEscape?.();
-    }
-    window.addEventListener("keydown", handle);
-    return () => window.removeEventListener("keydown", handle);
-  }, [onEscape]);
-}
-
-const FOCUSABLE_SELECTOR = [
-  "button:not([disabled])",
-  "[href]",
-  "input:not([disabled])",
-  "select:not([disabled])",
-  "textarea:not([disabled])",
-  '[tabindex]:not([tabindex="-1"])',
-].join(",");
-
-function useFocusTrap(panelRef: React.RefObject<HTMLElement | null>) {
-  useEffect(() => {
-    const panel = panelRef.current;
-    if (!panel) return;
-    const previouslyFocused = document.activeElement as HTMLElement | null;
-
-    // Focus the panel itself initially so screen readers announce the
-    // dialog. Tab from there moves into the first focusable child.
-    panel.focus({ preventScroll: true });
-
-    function onKeyDown(e: KeyboardEvent) {
-      if (e.key !== "Tab") return;
-      const focusable = Array.from(
-        panel?.querySelectorAll<HTMLElement>(FOCUSABLE_SELECTOR) ?? [],
-      ).filter((el) => el.offsetParent !== null);
-      if (focusable.length === 0) {
-        e.preventDefault();
-        return;
-      }
-      const first = focusable[0];
-      const last = focusable[focusable.length - 1];
-      const active = document.activeElement;
-      if (e.shiftKey) {
-        if (active === first || active === panel || !panel?.contains(active)) {
-          e.preventDefault();
-          last.focus();
-        }
-      } else if (active === last) {
-        e.preventDefault();
-        first.focus();
-      }
-    }
-
-    document.addEventListener("keydown", onKeyDown);
-    return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      // Restore focus to the trigger when the modal closes (only if the
-      // previously-focused element is still in the DOM — otherwise leave it
-      // alone so the page's natural tab order takes over).
-      if (previouslyFocused?.isConnected) {
-        previouslyFocused.focus({ preventScroll: true });
-      }
-    };
-  }, [panelRef]);
 }

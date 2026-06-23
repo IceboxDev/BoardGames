@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { apiClient } from "../../lib/api-client";
 import { Button } from "../ui/Button";
+import { EmptyState } from "../ui/EmptyState";
+import { LoadingState } from "../ui/LoadingState";
 
 interface TournamentMatchHistoryProps {
   strategies: { id: string; label: string }[];
@@ -119,15 +121,15 @@ export default function TournamentMatchHistory({
         </p>
       </div>
 
-      {!loading && games.length === 0 ? (
-        <p className="py-12 text-sm italic text-fg-muted">
-          No game logs found for this matchup. Run the tournament first.
-        </p>
-      ) : !loading ? (
+      {loading ? (
+        <LoadingState />
+      ) : games.length === 0 ? (
+        <EmptyState title="No game logs found" description="Run the tournament first." />
+      ) : (
         <div className="w-full overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
-              <tr className="border-b border-gray-800 text-xs font-medium uppercase tracking-wider text-fg-muted">
+              <tr className="border-b border-white/10 text-xs font-medium uppercase tracking-wider text-fg-muted">
                 <th className="p-2.5 text-left">#</th>
                 <th className="p-2.5 text-center">First Player</th>
                 <th className="p-2.5 text-right">{labelA}</th>
@@ -152,8 +154,8 @@ export default function TournamentMatchHistory({
                     // biome-ignore lint/suspicious/noArrayIndexKey: static tournament game list
                     key={i}
                     onClick={() => onSelectGameIndex?.(idx)}
-                    className={`border-b border-gray-800/40 transition-colors ${
-                      onSelectGameIndex ? "cursor-pointer hover:bg-gray-800/50" : ""
+                    className={`border-b border-white/10 transition-colors ${
+                      onSelectGameIndex ? "cursor-pointer hover:bg-surface-800/50" : ""
                     }`}
                   >
                     <td className="p-2.5 tabular-nums text-fg-secondary">{i + 1}</td>
@@ -193,7 +195,7 @@ export default function TournamentMatchHistory({
             </tbody>
           </table>
         </div>
-      ) : null}
+      )}
 
       <div className="mt-2 flex gap-4">
         {exportLogFn && rawGames.length > 0 && (

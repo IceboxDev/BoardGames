@@ -1,18 +1,13 @@
-import { useQuery } from "@tanstack/react-query";
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowRightIcon, GalleryIcon, LockIcon } from "../components/icons";
+import { ArrowRightIcon, LockIcon, UserIcon, UsersIcon } from "../components/icons";
 import CalendarSyncCard from "../components/profile/CalendarSyncCard";
 import CalendarSyncModal from "../components/profile/CalendarSyncModal";
 import { TopNav, TopNavLink } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
 import { PageShell } from "../components/ui/PageShell";
-import { games } from "../games/registry";
-import type { GameDefinition } from "../games/types";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { authClient } from "../lib/auth-client";
-import { fetchMyInventory } from "../lib/inventory";
-import { qk } from "../lib/query-keys";
 
 export default function ProfilePage() {
   const navigate = useNavigate();
@@ -27,12 +22,6 @@ export default function ProfilePage() {
   // Online mode 'online' or 'both' unlocks multiplayer; 'offline' keeps it
   // locked. (The button itself is always shown; only `locked` flips.)
   const onlineUnlocked = user?.onlineMode !== undefined && user.onlineMode !== "offline";
-
-  const { data: ownedSlugs = null } = useQuery({
-    queryKey: qk.inventory(userId),
-    queryFn: ({ signal }) => fetchMyInventory(signal),
-    enabled: !!userId,
-  });
 
   async function handleSignOut() {
     await authClient.signOut();
@@ -73,7 +62,20 @@ export default function ProfilePage() {
           />
         </div>
 
-        <GalleryPreview ownedSlugs={ownedSlugs} onClick={() => navigate("/gallery")} />
+        <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <NavCard
+            icon={<UserIcon className="h-4 w-4" />}
+            title="My profile"
+            subtitle="Library, stats & badges"
+            onClick={() => userId && navigate(`/u/${userId}`)}
+          />
+          <NavCard
+            icon={<UsersIcon className="h-4 w-4" />}
+            title="Players"
+            subtitle="Browse the group"
+            onClick={() => navigate("/players")}
+          />
+        </div>
 
         <CalendarSyncCard onClick={() => setSyncModalOpen(true)} />
 
@@ -117,119 +119,30 @@ function ModeButton({ title, subtitle, locked, accent, onClick }: ModeButtonProp
   );
 }
 
-type GalleryPreviewProps = {
-  ownedSlugs: string[] | null;
+type NavCardProps = {
+  icon: React.ReactNode;
+  title: string;
+  subtitle: string;
   onClick: () => void;
 };
 
-const PREVIEW_THUMBS = 6;
-const THUMB_W = 40; // h-10 w-10
-const THUMB_GAP = 6; // gap-1.5
-const BADGE_W = 40; // overflow badge same size as thumbs
-const SLOT_RESERVE = 8; // safety margin so we never partially overflow
-
-function GalleryPreview({ ownedSlugs, onClick }: GalleryPreviewProps) {
-  const isLoading = ownedSlugs === null;
-  const owned: GameDefinition[] = ownedSlugs
-    ? ownedSlugs
-        .map((s) => games.find((g) => g.slug === s))
-        .filter((g): g is GameDefinition => Boolean(g))
-    : [];
-
-  // Measure the thumb-row slot so we can render only as many thumbnails as
-  // actually fit. Pre-measurement we render PREVIEW_THUMBS; the row is
-  // overflow-hidden so any sliver clip during the first frame doesn't escape
-  // the parent.
-  const rowRef = useRef<HTMLDivElement>(null);
-  const [slotW, setSlotW] = useState(0);
-  useEffect(() => {
-    const el = rowRef.current;
-    if (!el) return;
-    const ro = new ResizeObserver(([entry]) => {
-      if (entry) setSlotW(entry.contentRect.width);
-    });
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, []);
-
-  const total = owned.length;
-  // Reserve room for the +N badge, then floor on (slot − badge) / (thumb +
-  // gap). Capped at PREVIEW_THUMBS, floored at 1 so we always show at least
-  // one thumb when inventory is non-empty.
-  const maxByWidth =
-    slotW > 0
-      ? Math.max(1, Math.floor((slotW - BADGE_W - SLOT_RESERVE) / (THUMB_W + THUMB_GAP)))
-      : PREVIEW_THUMBS;
-  const visibleCount = Math.min(total, Math.min(PREVIEW_THUMBS, maxByWidth));
-  const previewGames = owned.slice(0, visibleCount);
-  const overflow = total - visibleCount;
-  const empty = !isLoading && total === 0;
-
+function NavCard({ icon, title, subtitle, onClick }: NavCardProps) {
   return (
-    // Card-shaped clickable surface — entire gallery preview row is the
-    // click target (icon + thumb strip + count + arrow). Exempt as
-    // card-shaped, mirroring CalendarSyncCard.
-    // biome-ignore lint/correctness/noRestrictedElements: card-shaped clickable surface
+    // biome-ignore lint/correctness/noRestrictedElements: card-shaped clickable surface, mirrors CalendarSyncCard
     <button
       type="button"
       onClick={onClick}
-      className="group mt-6 flex w-full items-center gap-4 rounded-2xl border border-white/[0.06] bg-surface-900/60 px-5 py-4 text-left transition-all duration-300 hover:border-white/15 hover:bg-surface-900 sm:px-6 sm:py-5"
+      className="group flex items-center gap-3 rounded-2xl border border-white/[0.06] bg-surface-900/60 px-5 py-4 text-left transition-all duration-300 hover:border-white/15 hover:bg-surface-900"
     >
-      <div className="flex shrink-0 items-center gap-2 text-fg-secondary transition-colors group-hover:text-white">
-        <GalleryIcon />
-        <span className="text-xs font-semibold uppercase tracking-[0.2em]">Gallery</span>
-      </div>
-
-      <div ref={rowRef} className="flex min-h-11 min-w-0 flex-1 items-center gap-2.5">
-        {isLoading ? (
-          <div className="flex gap-1.5 overflow-x-hidden px-0.5 py-0.5" aria-hidden="true">
-            {Array.from({ length: PREVIEW_THUMBS }).map((_, i) => (
-              <span
-                // biome-ignore lint/suspicious/noArrayIndexKey: static skeleton placeholders
-                key={i}
-                className="h-10 w-10 shrink-0 animate-pulse rounded-lg bg-surface-800"
-              />
-            ))}
-          </div>
-        ) : empty ? (
-          <span className="text-xs text-fg-muted">No games yet — ask an admin to add some</span>
-        ) : (
-          <>
-            {/* px-0.5 gives the 1px accent ring on the leading and trailing
-                thumbs room to render — without it the overflow-x-hidden
-                container clipped a hairline off the outer edges. */}
-            <div className="flex gap-1.5 overflow-x-hidden px-0.5 py-0.5">
-              {previewGames.map((g) => (
-                <span
-                  key={g.slug}
-                  className="relative h-10 w-10 shrink-0 overflow-hidden rounded-lg bg-surface-800 ring-1 ring-[var(--accent)]/45"
-                  style={{ "--accent": g.accentHex } as React.CSSProperties}
-                >
-                  <img
-                    src={g.thumbnail}
-                    alt=""
-                    width={THUMB_W}
-                    height={THUMB_W}
-                    loading="eager"
-                    fetchPriority="high"
-                    decoding="async"
-                    className="h-full w-full object-cover"
-                  />
-                </span>
-              ))}
-              {overflow > 0 && (
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface-800/80 text-3xs font-semibold text-fg-secondary ring-1 ring-white/10">
-                  +{overflow}
-                </span>
-              )}
-            </div>
-            <span className="hidden truncate text-xs text-fg-muted sm:inline">
-              {total} {total === 1 ? "game" : "games"}
-            </span>
-          </>
-        )}
-      </div>
-
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-800 text-fg-secondary transition-colors group-hover:text-white">
+        {icon}
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="block text-sm font-semibold text-fg-primary group-hover:text-white">
+          {title}
+        </span>
+        <span className="block text-xs text-fg-muted">{subtitle}</span>
+      </span>
       <ArrowRightIcon className="h-4 w-4 shrink-0 text-fg-muted transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-accent-300" />
     </button>
   );

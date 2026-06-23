@@ -2,7 +2,7 @@ import { AuthConfigSchema, WsTicketResponseSchema } from "@boardgames/core/proto
 import { createNodeWebSocket } from "@hono/node-ws";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
-import { auth, requireAdmin, requireAuth, requireWsAuth } from "./auth/index.ts";
+import { auth, requireAdmin, requireAuth, requireOnline, requireWsAuth } from "./auth/index.ts";
 import {
   adminAvailabilityAllRoutes,
   adminAvailabilityRoutes,
@@ -19,6 +19,7 @@ import { calendarFeedPublicRoutes } from "./auth-routes/calendar-feed-public.ts"
 import { adminCalendarLocksRoutes, calendarLocksRoutes } from "./auth-routes/calendar-locks.ts";
 import { calendarRsvpsRoutes } from "./auth-routes/calendar-rsvps.ts";
 import { matchHistoryRoutes } from "./auth-routes/match-history.ts";
+import { profileRoutes } from "./auth-routes/profile.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
 import { persistenceRoutes } from "./persistence/routes.ts";
@@ -112,10 +113,16 @@ app.route("/api/calendar", calendarFeedRoutes);
 app.use("/api/history/*", requireAuth);
 app.route("/api/history", matchHistoryRoutes);
 
+app.use("/api/profiles/*", requireAuth);
+app.route("/api/profiles", profileRoutes);
+
 app.use("/api/bgg/*", requireAuth);
 app.route("/api/bgg", bggRoutes);
 
-app.use("/api/tournaments/*", requireAuth);
+// Tournaments fork one CPU worker per core, so they're gated to online-mode
+// users (not just any logged-in account); the route handler additionally caps
+// each user to one running tournament at a time (see tournament/manager.ts).
+app.use("/api/tournaments/*", requireAuth, requireOnline);
 app.route("/api/tournaments", tournamentRoutes);
 
 app.use("/api/games/*", requireAuth);

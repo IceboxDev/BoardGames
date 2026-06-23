@@ -96,14 +96,16 @@ export function MatchCard({ match, isAdmin, currentUserId, onEdit, onDelete }: P
 // ── Subtitle (italic) under the game title ────────────────────────────
 
 function deriveTitleSubtitle(outcome: MatchOutcome, gameSlug: string | null): string | null {
+  // Fixed-variant games (Bandit, Lovecraft Letter) have exactly one version, so
+  // its label always wins — even over a persisted `scenario`. (Lovecraft Letter
+  // used to store the win condition in `scenario`; it now lives on the winner's
+  // `role`, and the subtitle is just the edition.)
+  const variant = variantConfigForSlug(gameSlug);
+  if (variant?.fixed && variant.options[0]) return variant.options[0].label;
   // Persisted scenario tag — used by Werewolf, Codenames, Wavelength,
   // 7 Wonders, Exploding Kittens, etc. Each match kind carries its own optional
   // `scenario` field on the wire.
   if (outcome.kind !== "one-vs-many" && outcome.scenario) return outcome.scenario;
-  // Fixed-variant games (e.g. Bandit) always show their single option's label
-  // even when nothing is persisted on the outcome.
-  const variant = variantConfigForSlug(gameSlug);
-  if (variant?.fixed && variant.options[0]) return variant.options[0].label;
   // BotC also derives the edition from assigned characters as a fallback for
   // legacy records that didn't persist `scenario`.
   if (outcome.kind === "teams" && gameSlug === "blood-on-the-clocktower") {
@@ -150,17 +152,21 @@ type OutcomeProps = {
 function CompactOutcome({ outcome, gameSlug, currentUserId }: OutcomeProps) {
   switch (outcome.kind) {
     case "free-for-all":
-      return gameSlug === "villainous" ? (
-        <VillainousInline outcome={outcome} currentUserId={currentUserId} />
+      return gameSlug === "villainous" || gameSlug === "lovecraft-letter" ? (
+        <PointlessFfaInline outcome={outcome} currentUserId={currentUserId} />
       ) : (
         <FreeForAllInline outcome={outcome} gameSlug={gameSlug} currentUserId={currentUserId} />
       );
     case "teams":
       return <TeamsInline outcome={outcome} gameSlug={gameSlug} currentUserId={currentUserId} />;
     case "last-standing":
-      return <LastStandingInline outcome={outcome} currentUserId={currentUserId} />;
+      return gameSlug === "dungeon-mayhem" ? (
+        <DungeonMayhemInline outcome={outcome} currentUserId={currentUserId} />
+      ) : (
+        <LastStandingInline outcome={outcome} currentUserId={currentUserId} />
+      );
     case "coop":
-      return <CoopInline outcome={outcome} currentUserId={currentUserId} />;
+      return <CoopInline outcome={outcome} gameSlug={gameSlug} currentUserId={currentUserId} />;
     case "one-vs-many":
       return <OneVsManyInline outcome={outcome} currentUserId={currentUserId} />;
   }
@@ -196,10 +202,11 @@ function FreeForAllInline({
   );
 }
 
-// Villainous: a point-less free-for-all. No scores — show each player with the
-// villain they played; the sole winner (rank 1) gets the gold winner tone and
-// leads the row. The edition (scenario) renders as the subtitle above.
-function VillainousInline({
+// Point-less free-for-all (Villainous, Lovecraft Letter). No scores — show each
+// player, winner-first with the gold winner tone; a per-player role (Villainous
+// villain) shows as a small label when present. The scenario (edition / win
+// condition) renders as the subtitle above.
+function PointlessFfaInline({
   outcome,
   currentUserId,
 }: {
@@ -315,7 +322,7 @@ function Storyteller({
             the avatar with a small ring matching the row background. */}
         <span
           aria-hidden="true"
-          className="absolute -bottom-1 -right-1 inline-grid h-3.5 w-3.5 place-items-center rounded-full bg-surface-900 text-indigo-300 ring-1 ring-white/10"
+          className="absolute -bottom-1 -right-1 inline-grid h-3.5 w-3.5 place-items-center rounded-full bg-surface-900 text-accent-300 ring-1 ring-white/10"
         >
           <BookIcon className="h-2.5 w-2.5" />
         </span>
@@ -369,13 +376,80 @@ function LastStandingInline({
   );
 }
 
-function CoopInline({
+// Dungeon Mayhem: an elimination game recorded as last-standing. Mirrors
+// PointlessFfaInline — show each player with the hero they played; survivors (last
+// hero standing) get the gold winner tone and lead the row, the eliminated
+// follow in reverse-knockout order. Sets in play (scenario) render as the
+// subtitle above.
+function DungeonMayhemInline({
   outcome,
   currentUserId,
 }: {
-  outcome: MatchOutcomeCoop;
+  outcome: MatchOutcomeLastStanding;
   currentUserId: string | null;
 }) {
+  const isWinner = (p: MatchOutcomeLastStanding["players"][number]) =>
+    p.eliminationOrder === undefined;
+  const sorted = [...outcome.players].sort((a, b) => {
+    const aWin = isWinner(a) ? 0 : 1;
+    const bWin = isWinner(b) ? 0 : 1;
+    if (aWin !== bWin) return aWin - bWin;
+    // Both eliminated: whoever lasted longer (higher eliminationOrder) leads.
+    if (a.eliminationOrder !== undefined && b.eliminationOrder !== undefined) {
+      return b.eliminationOrder - a.eliminationOrder;
+    }
+    return a.displayName.localeCompare(b.displayName);
+  });
+  return (
+    <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+      {sorted.map((p) => (
+        <span key={p.userId} className="inline-flex items-center gap-1">
+          <AvatarBubble
+            name={p.displayName}
+            tone={isWinner(p) ? "winner" : "loser"}
+            isMe={p.userId === currentUserId}
+            title={p.role ? `${p.displayName} — ${p.role}` : p.displayName}
+          />
+          {p.role && (
+            <span className="text-3xs uppercase tracking-wider text-fg-muted">{p.role}</span>
+          )}
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function CoopInline({
+  outcome,
+  gameSlug,
+  currentUserId,
+}: {
+  outcome: MatchOutcomeCoop;
+  gameSlug: string | null;
+  currentUserId: string | null;
+}) {
+  // Scored co-ops (Just One) have no win/loss — show the score + flavour tier.
+  if (outcome.score !== undefined) {
+    // Preview shows the score only; the flavour tier lives in the form / detail.
+    return (
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+        <span className="inline-flex -space-x-1.5">
+          {outcome.participants.map((p) => (
+            <AvatarBubble
+              key={p.userId}
+              name={p.displayName}
+              tone="winner"
+              isMe={p.userId === currentUserId}
+            />
+          ))}
+        </span>
+        <span className="rounded bg-amber-500/15 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wider text-amber-300">
+          {outcome.score}
+          {gameSlug === "just-one" ? " / 13" : ""}
+        </span>
+      </div>
+    );
+  }
   const won = outcome.outcome === "win";
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">

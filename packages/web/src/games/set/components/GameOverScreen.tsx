@@ -47,7 +47,7 @@ function StatCell({ label, value, best }: { label: string; value: string; best?:
       className="rounded-lg bg-surface-800 p-3 text-center group relative"
       title={STAT_TIPS[label]}
     >
-      <p className="text-xs text-gray-500 uppercase tracking-wide cursor-help">{label}</p>
+      <p className="text-xs text-fg-muted uppercase tracking-wide cursor-help">{label}</p>
       <p className={`mt-1 text-lg font-bold ${best ? "text-yellow-400" : "text-white"}`}>
         {value}
         {best && " ★"}
@@ -185,7 +185,7 @@ export default function GameOverScreen({
         {/* vs. Your Average */}
         {comparisons.length > 0 && (
           <div>
-            <p className="mb-2 text-xs uppercase tracking-wide text-gray-500">vs. Your Average</p>
+            <p className="mb-2 text-xs uppercase tracking-wide text-fg-muted">vs. Your Average</p>
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
               {comparisons.map((c) => {
                 const diff = c.value - c.avg;
@@ -197,11 +197,11 @@ export default function GameOverScreen({
                   ? `${sign}${(diff / 1000).toFixed(1)}s`
                   : `${sign}${absDiff < 1 ? diff.toFixed(2) : diff.toFixed(1)}`;
                 const color =
-                  absDiff < 0.01 ? "text-gray-600" : better ? "text-green-400" : "text-red-400";
+                  absDiff < 0.01 ? "text-fg-disabled" : better ? "text-green-400" : "text-red-400";
 
                 return (
                   <div key={c.label} className="rounded-lg bg-surface-800 p-3 text-center">
-                    <p className="text-xs text-gray-500">{c.label}</p>
+                    <p className="text-xs text-fg-muted">{c.label}</p>
                     <p className="text-sm font-bold text-white">{c.format(c.value)}</p>
                     <p className={`text-xs font-semibold ${color}`}>
                       {absDiff < 0.01 ? "= avg" : `${diffStr} vs avg`}
@@ -216,13 +216,13 @@ export default function GameOverScreen({
         {/* Mini Skill Radar */}
         {history.length >= 2 && (
           <div className="flex flex-col items-center">
-            <p className="mb-2 text-xs uppercase tracking-wide text-gray-500">
+            <p className="mb-2 text-xs uppercase tracking-wide text-fg-muted">
               Skill Profile (this game vs career)
             </p>
             <RadarChart profile={gameProfile} previousProfile={careerProfile} size={200} />
-            <div className="flex gap-4 mt-1 text-xs text-gray-600">
+            <div className="flex gap-4 mt-1 text-xs text-fg-disabled">
               <span className="flex items-center gap-1">
-                <span className="inline-block w-3 h-0.5 bg-indigo-400 rounded" /> This game
+                <span className="inline-block w-3 h-0.5 bg-accent-400 rounded" /> This game
               </span>
               <span className="flex items-center gap-1">
                 <span className="inline-block w-3 h-0.5 bg-gray-400 rounded" /> Career
@@ -234,7 +234,7 @@ export default function GameOverScreen({
         {/* Find Time chart */}
         {findTimes.length > 1 && (
           <div>
-            <p className="mb-2 text-xs uppercase tracking-wide text-gray-500">Find Time per SET</p>
+            <p className="mb-2 text-xs uppercase tracking-wide text-fg-muted">Find Time per SET</p>
             <div className="flex items-end gap-1 h-24">
               {findTimes.map((t, i) => {
                 const max = Math.max(...findTimes);
@@ -243,7 +243,7 @@ export default function GameOverScreen({
                   <div
                     // biome-ignore lint/suspicious/noArrayIndexKey: static list / chart data points don't reorder
                     key={i}
-                    className="flex-1 rounded-t bg-indigo-500 transition-all"
+                    className="flex-1 rounded-t bg-accent-500 transition-all"
                     style={{ height: `${h}%`, minWidth: "4px" }}
                     title={`SET ${i + 1}: ${(t / 1000).toFixed(1)}s`}
                   />

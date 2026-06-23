@@ -22,11 +22,11 @@ export default function ScenarioPicker({ selectedSlug, onSelect }: Props) {
         return (
           <section
             key={color}
-            className="flex min-h-0 flex-col gap-2 rounded-2xl border border-gray-800/80 bg-gray-900/40 p-3"
+            className="flex min-h-0 flex-col gap-2 rounded-2xl border border-white/10 bg-surface-900/40 p-3"
           >
-            <header className="flex flex-col gap-1 border-b border-gray-800 pb-2">
+            <header className="flex flex-col gap-1 border-b border-white/10 pb-2">
               <span
-                className={`inline-flex w-fit items-center gap-1.5 rounded-full px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wider ring-1 ring-inset ${theme.pill}`}
+                className={`inline-flex w-fit items-center gap-1.5 rounded-full px-2.5 py-0.5 text-3xs font-bold uppercase tracking-wider ring-1 ring-inset ${theme.pill}`}
               >
                 <span
                   className={`inline-block h-1.5 w-1.5 rounded-full ${theme.dot}`}
@@ -34,7 +34,7 @@ export default function ScenarioPicker({ selectedSlug, onSelect }: Props) {
                 />
                 {theme.label}
               </span>
-              <span className="line-clamp-2 text-[10px] leading-tight text-slate-500">
+              <span className="line-clamp-2 text-3xs leading-tight text-fg-muted">
                 {theme.blurb}
               </span>
             </header>
@@ -73,13 +73,13 @@ function ScenarioCardTile({
   // both stretch all the way down — no orphan whitespace at the bottom.
   // `min-h-0` is required so flex-1 actually shrinks below content size.
   const baseCls =
-    "group relative flex min-h-0 flex-1 flex-col justify-center overflow-hidden rounded-lg border bg-gray-800/60 px-3 py-2.5 text-left transition-all duration-150";
+    "group relative flex min-h-0 flex-1 flex-col justify-center overflow-hidden rounded-lg border bg-surface-800/60 px-3 py-2.5 text-left transition-all duration-150";
 
   const stateCls = !available
-    ? "border-gray-800 opacity-50 cursor-not-allowed"
+    ? "border-white/10 opacity-50 cursor-not-allowed"
     : selected
-      ? `border-white/30 bg-gray-800 shadow-md ${airportTheme.ring}`
-      : "border-gray-700/70 hover:bg-gray-800 hover:border-gray-600 cursor-pointer";
+      ? `border-white/30 bg-surface-800 shadow-md ${airportTheme.ring}`
+      : "border-white/10 hover:bg-surface-800 hover:border-white/10 cursor-pointer";
 
   const className = `${baseCls} ${stateCls}`;
 
@@ -97,10 +97,10 @@ function ScenarioCardTile({
           {card.airportCode}
         </span>
         <div className="flex min-w-0 flex-1 flex-col gap-0.5">
-          <span className="line-clamp-1 text-xs font-semibold leading-tight text-gray-100">
+          <span className="line-clamp-1 text-xs font-semibold leading-tight text-fg-primary">
             {card.airportName}
           </span>
-          <span className="line-clamp-1 text-[10px] leading-tight text-gray-500">
+          <span className="line-clamp-1 text-3xs leading-tight text-fg-muted">
             {card.city}, {card.country}
           </span>
         </div>
@@ -115,7 +115,7 @@ function ScenarioCardTile({
           ) : null
         ) : (
           <span
-            className="shrink-0 rounded bg-slate-700/60 px-1.5 py-0.5 text-[8px] font-semibold uppercase tracking-wider text-slate-300 ring-1 ring-inset ring-slate-500/40"
+            className="shrink-0 rounded bg-surface-700/60 px-1.5 py-0.5 text-4xs font-semibold uppercase tracking-wider text-fg-secondary ring-1 ring-inset ring-white/10"
             aria-hidden="true"
           >
             Soon

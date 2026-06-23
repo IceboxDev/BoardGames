@@ -1,8 +1,8 @@
 import type { EKGameReplayLog } from "@boardgames/core/games/exploding-kittens/replay-log";
 import { snapshotToGameState } from "@boardgames/core/games/exploding-kittens/replay-log";
 import type { ActionLogEntry, GameState } from "@boardgames/core/games/exploding-kittens/types";
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Button } from "../../../components/ui/Button";
+import { useMemo } from "react";
+import { ReplayControls, useReplayPlayback } from "../../../components/replay";
 import GameBoard from "./GameBoard";
 
 interface GameReplayProps {
@@ -12,7 +12,7 @@ interface GameReplayProps {
 function OldFormatNotice() {
   return (
     <div className="flex flex-1 items-center justify-center">
-      <p className="text-sm text-gray-400">
+      <p className="text-sm text-fg-secondary">
         This replay was saved in an older format and cannot be played back.
       </p>
     </div>
@@ -35,47 +35,10 @@ export default function GameReplay({ game }: GameReplayProps) {
     [steps, playerTypes, strategies],
   );
 
-  const [stepIndex, setStepIndex] = useState(0);
-  const [playing, setPlaying] = useState(false);
-  const [speed, setSpeed] = useState(500);
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const playback = useReplayPlayback(steps.length);
 
-  const stop = useCallback(() => {
-    setPlaying(false);
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-      intervalRef.current = null;
-    }
-  }, []);
-
-  const play = useCallback(() => {
-    if (stepIndex >= steps.length - 1) return;
-    setPlaying(true);
-  }, [stepIndex, steps.length]);
-
-  useEffect(() => {
-    if (!playing) return;
-    intervalRef.current = setInterval(() => {
-      setStepIndex((prev) => {
-        if (prev >= steps.length - 1) {
-          stop();
-          return prev;
-        }
-        return prev + 1;
-      });
-    }, speed);
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
-  }, [playing, speed, steps.length, stop]);
-
-  const goTo = (idx: number) => {
-    stop();
-    setStepIndex(Math.max(0, Math.min(idx, steps.length - 1)));
-  };
-
-  const currentStep = steps[stepIndex];
-  const boardState = gameStates[stepIndex];
+  const currentStep = steps[playback.stepIndex];
+  const boardState = gameStates[playback.stepIndex];
 
   // Build actionLog up to the current step's turnCount
   const visibleActionLog = useMemo(() => {
@@ -99,97 +62,8 @@ export default function GameReplay({ game }: GameReplayProps) {
         <GameBoard state={boardStateWithLog} replayMode stepDescription={currentStep.description} />
       </div>
 
-      <div className="shrink-0 border-t border-gray-800/50 bg-gray-900/80 px-4 py-3">
-        <p
-          className="mb-2 text-center text-xs text-gray-400 truncate"
-          title={currentStep.description}
-        >
-          {currentStep.description}
-        </p>
-
-        <div className="flex items-center justify-center gap-2 flex-wrap">
-          <Button
-            variant="ghost"
-            size="xs"
-            onClick={() => goTo(0)}
-            disabled={stepIndex === 0}
-            title="First"
-          >
-            {"<<"}
-          </Button>
-
-          <Button
-            variant="secondary"
-            size="sm"
-            onClick={() => goTo(stepIndex - 1)}
-            disabled={stepIndex === 0}
-          >
-            Prev
-          </Button>
-
-          {playing ? (
-            <Button
-              variant="primary"
-              size="sm"
-              onClick={stop}
-              className="!bg-red-600/80 hover:!bg-red-600 !shadow-rose-500/20"
-            >
-              Pause
-            </Button>
-          ) : (
-            <Button
-              variant="primary"
-              size="sm"
-              onClick={play}
-              disabled={stepIndex >= steps.length - 1}
-            >
-              Play
-            </Button>
-          )}
-
-          <Button
-            variant="secondary"
-            size="sm"
-            onClick={() => goTo(stepIndex + 1)}
-            disabled={stepIndex >= steps.length - 1}
-          >
-            Next
-          </Button>
-
-          <Button
-            variant="ghost"
-            size="xs"
-            onClick={() => goTo(steps.length - 1)}
-            disabled={stepIndex >= steps.length - 1}
-            title="Last"
-          >
-            {">>"}
-          </Button>
-
-          <input
-            type="range"
-            min={0}
-            max={steps.length - 1}
-            value={stepIndex}
-            onChange={(e) => goTo(Number(e.target.value))}
-            className="min-w-[8rem] flex-1 h-1.5 accent-indigo-500"
-          />
-
-          <span className="min-w-[4rem] text-right text-xs tabular-nums text-gray-500">
-            {stepIndex} / {steps.length - 1}
-          </span>
-
-          <select
-            value={speed}
-            onChange={(e) => setSpeed(Number(e.target.value))}
-            className="rounded border border-gray-700 bg-gray-800 px-2 py-1 text-xs text-gray-400"
-          >
-            <option value={1000}>1s</option>
-            <option value={500}>0.5s</option>
-            <option value={250}>0.25s</option>
-            <option value={100}>0.1s</option>
-          </select>
-        </div>
+      <div className="shrink-0 border-t border-white/10 bg-surface-900/80 px-4 py-3">
+        <ReplayControls playback={playback} description={currentStep.description} />
       </div>
     </div>
   );

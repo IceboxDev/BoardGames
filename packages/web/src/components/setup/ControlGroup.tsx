@@ -8,7 +8,7 @@ import type { ReactNode } from "react";
  */
 export function SectionHeading({ children }: { children: ReactNode }) {
   return (
-    <h2 className="shrink-0 text-[10px] font-bold uppercase tracking-[0.25em] text-slate-400">
+    <h2 className="shrink-0 text-3xs font-bold uppercase tracking-[0.25em] text-fg-secondary">
       {children}
     </h2>
   );
@@ -23,7 +23,7 @@ export function ControlGroup({ label, children }: { label: string; children: Rea
   return (
     <section className="flex flex-col gap-2">
       <SectionHeading>{label}</SectionHeading>
-      <div className="min-h-[6.5rem] flex-1 rounded-2xl border border-gray-800/80 bg-gray-900/40 p-2.5">
+      <div className="min-h-[6.5rem] flex-1 rounded-2xl border border-white/10 bg-surface-900/40 p-2.5">
         {children}
       </div>
     </section>

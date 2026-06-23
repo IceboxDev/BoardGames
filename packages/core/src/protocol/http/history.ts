@@ -88,6 +88,11 @@ export type MatchOutcomeTeams = z.infer<typeof MatchOutcomeTeamsSchema>;
 
 const LastStandingPlayerSchema = ParticipantSchema.extend({
   eliminationOrder: z.number().int().optional(),
+  // Optional per-player role/character label. Motivating case: Dungeon Mayhem,
+  // an elimination game where each player plays a named hero (Sutha, Azzan, …);
+  // last hero un-eliminated wins. Same shape and intent as `FreeForAllPlayer.role`
+  // / `TeamMember.role`.
+  role: z.string().max(64).optional(),
 });
 
 const MatchOutcomeLastStandingSchema = z.object({
@@ -101,7 +106,14 @@ export type MatchOutcomeLastStanding = z.infer<typeof MatchOutcomeLastStandingSc
 const MatchOutcomeCoopSchema = z.object({
   kind: z.literal("coop"),
   participants: z.array(ParticipantSchema).min(1).max(20),
-  outcome: z.enum(["win", "loss"]),
+  // win/loss for binary co-ops (Pandemic, etc.). Optional because some co-ops are
+  // SCORED, not won/lost — Just One banks 0–13 points that map to a flavour tier
+  // with no winner. A coop match must carry at least one of `outcome` / `score`
+  // (enforced on the union below).
+  outcome: z.enum(["win", "loss"]).optional(),
+  // Shared team score for scored co-ops (Just One). Independent of `outcome` — a
+  // game uses one or the other.
+  score: z.number().int().min(0).max(1000).optional(),
   difficulty: z.string().max(64).optional(),
   details: z.string().max(1000).optional(),
   // Optional per-game variant tag (e.g. Codenames Duet language).
@@ -150,6 +162,14 @@ export const MatchOutcomeSchema = z
           code: "custom",
           path: ["players"],
           message: "at least one player must survive",
+        });
+      }
+    } else if (v.kind === "coop") {
+      if (v.outcome === undefined && v.score === undefined) {
+        ctx.addIssue({
+          code: "custom",
+          path: ["outcome"],
+          message: "coop match needs a win/loss outcome or a score",
         });
       }
     }
@@ -228,7 +248,9 @@ export type DeleteMatchResponse = z.infer<typeof DeleteMatchResponseSchema>;
 // set of match ids for `dateKey`, top-to-bottom; the server rejects an
 // incomplete or foreign set and assigns `sort_order = index`.
 export const MatchReorderInputSchema = z.object({
-  dateKey: DateKeyStringSchema,
+  // The lock night's dateKey, or null to reorder a standalone day-bucket — those
+  // matches have no dateKey, so the server scopes them by `date_key IS NULL`.
+  dateKey: DateKeyStringSchema.nullable(),
   orderedIds: z.array(z.number().int().positive()).min(1),
 });
 export type MatchReorderInput = z.infer<typeof MatchReorderInputSchema>;

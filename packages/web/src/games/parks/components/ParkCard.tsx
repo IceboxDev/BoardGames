@@ -23,7 +23,7 @@ function CostPills({ park }: { park: Park }) {
           title={`${count} × ${r}`}
         >
           <span>{RESOURCE_EMOJI[r]}</span>
-          <span className="text-[10px]">{count}</span>
+          <span className="text-3xs">{count}</span>
         </span>
       ))}
     </div>
@@ -46,7 +46,7 @@ function RefundPills({ park }: { park: Park }) {
           style={{ backgroundColor: `${RESOURCE_COLORS[r]}33` }}
         >
           <span>{RESOURCE_EMOJI[r]}</span>
-          <span className="text-[10px]">{count}</span>
+          <span className="text-3xs">{count}</span>
         </span>
       ))}
       {park.endGameDividedBonus && (
@@ -78,11 +78,11 @@ export default function ParkCard({ park, affordable, onClick, compact }: ParkCar
     >
       <div className="flex items-start justify-between gap-2">
         <div
-          className={`text-[11px] font-bold leading-tight ${compact ? "" : "line-clamp-2"} text-white`}
+          className={`text-2xs font-bold leading-tight ${compact ? "" : "line-clamp-2"} text-white`}
         >
           {park.name}
         </div>
-        <span className="rounded bg-yellow-900/40 px-1.5 py-0.5 text-[10px] font-bold text-yellow-300">
+        <span className="rounded bg-yellow-900/40 px-1.5 py-0.5 text-3xs font-bold text-yellow-300">
           {park.pt} PT
         </span>
       </div>

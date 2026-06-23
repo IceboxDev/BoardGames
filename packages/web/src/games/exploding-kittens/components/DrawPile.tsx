@@ -7,7 +7,7 @@ interface DrawPileProps {
 export default function DrawPile({ count, onClick, glowing }: DrawPileProps) {
   return (
     <div className="text-center">
-      <p className="mb-2 text-sm text-gray-400">Draw Pile</p>
+      <p className="mb-2 text-sm text-fg-secondary">Draw Pile</p>
       <button
         type="button"
         onClick={onClick}

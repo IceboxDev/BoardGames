@@ -11,7 +11,7 @@ interface TableProps {
 export default function Table({ table, trumpSuit, isDefending, onClickUndefended }: TableProps) {
   if (table.length === 0) {
     return (
-      <div className="flex min-h-[8rem] items-center justify-center rounded-xl border border-dashed border-gray-700 text-sm text-gray-500">
+      <div className="flex min-h-[8rem] items-center justify-center rounded-xl border border-dashed border-white/10 text-sm text-fg-muted">
         No cards on the table
       </div>
     );
@@ -37,7 +37,7 @@ export default function Table({ table, trumpSuit, isDefending, onClickUndefended
               className={`absolute left-3 top-3 flex h-28 w-20 items-center justify-center rounded-lg border-2 border-dashed transition-colors ${
                 isDefending && onClickUndefended
                   ? "border-emerald-500/60 bg-emerald-500/5 hover:border-emerald-400 hover:bg-emerald-500/10 cursor-pointer"
-                  : "border-gray-700/40 bg-gray-800/20"
+                  : "border-white/10 bg-surface-800/20"
               }`}
             >
               {isDefending && onClickUndefended && (

@@ -40,18 +40,18 @@ export default function GameOverScreen({
         { label: "Change Setup", variant: "secondary", onClick: onChangeSetup },
       ]}
     >
-      <div className="rounded-xl border border-gray-700/50 bg-surface-800 p-4 text-left">
-        <p className="mb-2 text-sm font-medium text-gray-300">Elimination Order</p>
+      <div className="rounded-xl border border-white/10 bg-surface-800 p-4 text-left">
+        <p className="mb-2 text-sm font-medium text-fg-secondary">Elimination Order</p>
         <div className="space-y-1">
           {eliminatedPlayers.map((pi, i) => {
             const p = state.players[pi];
             return (
-              <div key={pi} className="flex items-center gap-2 text-sm text-gray-400">
-                <span className="text-gray-600">{i + 1}.</span>
+              <div key={pi} className="flex items-center gap-2 text-sm text-fg-secondary">
+                <span className="text-fg-disabled">{i + 1}.</span>
                 <span>💀</span>
                 <span>{p.type === "human" ? "You" : `AI ${pi}`}</span>
                 {p.aiStrategy && (
-                  <span className="text-xs text-gray-600">
+                  <span className="text-xs text-fg-disabled">
                     ({AI_STRATEGY_LABELS[p.aiStrategy]})
                   </span>
                 )}
@@ -60,10 +60,10 @@ export default function GameOverScreen({
           })}
           {winner && (
             <div className="flex items-center gap-2 text-sm text-emerald-400">
-              <span className="text-gray-600">🏆</span>
+              <span className="text-fg-disabled">🏆</span>
               <span>👑</span>
               <span>{winner.type === "human" ? "You" : `AI ${winner.index}`}</span>
-              <span className="text-xs text-gray-500">(survivor)</span>
+              <span className="text-xs text-fg-muted">(survivor)</span>
             </div>
           )}
         </div>

@@ -42,20 +42,20 @@ export default function CityTooltip({ state, cityId }: Props) {
                 className="inline-block h-2.5 w-2.5 rounded"
                 style={{ backgroundColor: DISEASE_FILL[color] }}
               />
-              <span className="text-[11px] capitalize">
+              <span className="text-2xs capitalize">
                 {color}: {cubes[color]} cube{cubes[color] === 1 ? "" : "s"}
               </span>
             </li>
           ))}
         </ul>
       )}
-      {hasStation && <p className="mt-1 text-[11px] text-emerald-300">Research Station</p>}
+      {hasStation && <p className="mt-1 text-2xs text-emerald-300">Research Station</p>}
       {playersHere.length > 0 && (
         <ul className="mt-1 space-y-0.5">
           {playersHere.map((p) => {
             const role = getRoleDef(p.role);
             return (
-              <li key={p.id} className="flex items-center gap-1.5 text-[11px] text-gray-300">
+              <li key={p.id} className="flex items-center gap-1.5 text-2xs text-fg-secondary">
                 <span
                   className="inline-block h-2.5 w-2.5 rounded-full"
                   style={{ backgroundColor: role.pawnColor }}

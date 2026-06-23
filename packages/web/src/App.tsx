@@ -21,7 +21,8 @@ const ProfilePage = lazy(() => import("./pages/ProfilePage"));
 const AdminPage = lazy(() => import("./pages/AdminPage"));
 const OfflineDashboard = lazy(() => import("./pages/OfflineDashboard"));
 const HistoryPage = lazy(() => import("./pages/HistoryPage"));
-const GameGallery = lazy(() => import("./pages/GameGallery"));
+const PlayerProfilePage = lazy(() => import("./pages/PlayerProfilePage"));
+const PlayersDirectoryPage = lazy(() => import("./pages/PlayersDirectoryPage"));
 const DeckPreview = lazy(() => import("./pages/DeckPreview"));
 
 // `GameMenu` is the dashboard's entry point into the games catalog.
@@ -146,10 +147,19 @@ const router = createBrowserRouter(
       />
 
       <Route
-        path="/gallery"
+        path="/players"
         element={
           <AuthGuard mode="auth">
-            <GameGallery />
+            <PlayersDirectoryPage />
+          </AuthGuard>
+        }
+      />
+
+      <Route
+        path="/u/:userId"
+        element={
+          <AuthGuard mode="auth">
+            <PlayerProfilePage />
           </AuthGuard>
         }
       />

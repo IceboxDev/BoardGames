@@ -64,9 +64,9 @@ const THEMES: Record<
   chopsticks: {
     border: "border-gray-500/15",
     bg: "bg-gray-500/[0.03]",
-    label: "text-gray-400/70",
+    label: "text-fg-secondary/70",
     badgeBg: "bg-gray-500/15",
-    badgeText: "text-gray-300",
+    badgeText: "text-fg-secondary",
   },
 };
 
@@ -96,13 +96,13 @@ export default function StationShell({
     >
       <div className={`flex items-center gap-2 ${compact ? "mb-0.5" : "mb-1.5"}`}>
         <span
-          className={`${compact ? "text-[9px]" : "text-[10px]"} font-semibold uppercase tracking-wider ${t.label}`}
+          className={`${compact ? "text-[9px]" : "text-3xs"} font-semibold uppercase tracking-wider ${t.label}`}
         >
           {emoji} {label}
         </span>
         {badge && (
           <span
-            className={`rounded-full px-1.5 py-px ${compact ? "text-[9px]" : "text-[10px]"} font-bold tabular-nums ${t.badgeBg} ${t.badgeText} ${badgeDimmed ? "opacity-40" : ""}`}
+            className={`rounded-full px-1.5 py-px ${compact ? "text-[9px]" : "text-3xs"} font-bold tabular-nums ${t.badgeBg} ${t.badgeText} ${badgeDimmed ? "opacity-40" : ""}`}
           >
             {badge}
           </span>

@@ -51,7 +51,7 @@ export default function CanteenDisplay({
   return (
     <div className="flex h-full flex-col rounded-lg bg-stone-900/40 p-2">
       <div className="mb-1 flex items-center justify-between">
-        <span className="text-[10px] font-bold uppercase tracking-wider text-violet-300">
+        <span className="text-3xs font-bold uppercase tracking-wider text-violet-300">
           Canteens
         </span>
         {isDrawing && (
@@ -80,7 +80,7 @@ export default function CanteenDisplay({
             >
               <span>{CANTEEN_ICONS[c]}</span>
               {CANTEEN_BADGE[c] && (
-                <span className="absolute -bottom-0.5 -right-0.5 rounded bg-stone-900/90 px-0.5 text-[8px] font-bold text-violet-200">
+                <span className="absolute -bottom-0.5 -right-0.5 rounded bg-stone-900/90 px-0.5 text-4xs font-bold text-violet-200">
                   {CANTEEN_BADGE[c]}
                 </span>
               )}
@@ -99,12 +99,12 @@ export default function CanteenDisplay({
           }`}
         >
           <span>{"\uD83C\uDCA0"}</span>
-          <span className="absolute -bottom-0.5 -right-0.5 rounded bg-stone-900/90 px-0.5 text-[8px] font-bold text-stone-300">
+          <span className="absolute -bottom-0.5 -right-0.5 rounded bg-stone-900/90 px-0.5 text-4xs font-bold text-stone-300">
             {view.canteenPoolCount}
           </span>
         </button>
         {view.canteenDisplay.length === 0 && view.canteenPoolCount === 0 && (
-          <span className="text-[10px] italic text-stone-500">empty</span>
+          <span className="text-3xs italic text-stone-500">empty</span>
         )}
       </div>
     </div>

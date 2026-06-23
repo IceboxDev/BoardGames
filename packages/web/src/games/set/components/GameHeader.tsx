@@ -63,8 +63,8 @@ export default function GameHeader({
         className={[
           "rounded-xl px-5 py-2 text-base font-extrabold tracking-wider text-white transition-all duration-200 shrink-0",
           callSetEnabled
-            ? "bg-indigo-600 hover:bg-indigo-500 active:scale-95 animate-pulse-glow cursor-pointer"
-            : "bg-gray-700 opacity-40 cursor-not-allowed",
+            ? "bg-indigo-600 hover:bg-accent-500 active:scale-95 animate-pulse-glow cursor-pointer"
+            : "bg-surface-700 opacity-40 cursor-not-allowed",
         ].join(" ")}
       >
         SET!
@@ -75,7 +75,7 @@ export default function GameHeader({
         <Stat label="SETs" value={String(score)} color="text-green-400" />
         <Stat label="Pen" value={String(penalties)} color="text-red-400" />
         <Stat label="Net" value={String(score - penalties)} />
-        <Stat label="Deck" value={String(deckRemaining)} color="text-gray-500" />
+        <Stat label="Deck" value={String(deckRemaining)} color="text-fg-muted" />
       </div>
 
       <div className="flex-1 min-w-0 text-center text-xs font-semibold truncate">
@@ -120,7 +120,7 @@ function Stat({
 }) {
   return (
     <div className="text-center leading-tight">
-      <p className="text-[10px] text-gray-500 uppercase tracking-wide">{label}</p>
+      <p className="text-3xs text-fg-muted uppercase tracking-wide">{label}</p>
       <p className={`text-sm font-bold tabular-nums ${color} ${mono ? "font-mono" : ""}`}>
         {value}
       </p>

@@ -10,6 +10,10 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   // relying on the free-for-all fallback) so switching to it from a non-FFA game
   // resets the kind and surfaces the Villainous villain/winner form.
   villainous: "free-for-all",
+  // Point-less free-for-all too — pick the winner + which of the three win
+  // conditions ended it (the scenario), no scores. Listed explicitly for the
+  // same reason as villainous.
+  "lovecraft-letter": "free-for-all",
 
   // Cooperative — players share a single win/loss
   "aeons-end": "coop",
@@ -20,6 +24,7 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   frosthaven: "coop",
   gloomhaven: "coop",
   "gloomhaven-jaws-of-the-lion": "coop",
+  "just-one": "coop",
   pandemic: "coop",
   quiztopia: "coop",
   "sky-team": "coop",
@@ -40,6 +45,7 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   // Elimination / last-standing
   chess: "last-standing",
   "chess-for-three": "last-standing",
+  "dungeon-mayhem": "last-standing",
   durak: "last-standing",
   "exploding-kittens": "last-standing",
   poker: "last-standing",

@@ -22,7 +22,7 @@ export default function TrackPanel({ state }: Props) {
       className="pointer-events-auto flex flex-col gap-2 rounded-lg border border-white/10 bg-black/80 p-2 text-white backdrop-blur-sm"
     >
       <div>
-        <p className="mb-1 text-[10px] font-semibold uppercase tracking-wide text-gray-400">
+        <p className="mb-1 text-3xs font-semibold uppercase tracking-wide text-fg-secondary">
           Infection rate
         </p>
         <ul className="flex gap-0.5">
@@ -32,10 +32,10 @@ export default function TrackPanel({ state }: Props) {
               <li
                 // biome-ignore lint/suspicious/noArrayIndexKey: track index is the identity
                 key={i}
-                className={`flex h-6 w-6 items-center justify-center rounded text-[11px] font-semibold tabular-nums ${
+                className={`flex h-6 w-6 items-center justify-center rounded text-2xs font-semibold tabular-nums ${
                   isActive
                     ? "border border-white bg-red-500 text-white"
-                    : "border border-white/20 text-gray-400"
+                    : "border border-white/20 text-fg-secondary"
                 }`}
               >
                 {rate}
@@ -46,7 +46,7 @@ export default function TrackPanel({ state }: Props) {
       </div>
 
       <div>
-        <p className="mb-1 text-[10px] font-semibold uppercase tracking-wide text-gray-400">
+        <p className="mb-1 text-3xs font-semibold uppercase tracking-wide text-fg-secondary">
           Outbreaks: <span className="text-white">{state.outbreakCount}</span>/8
         </p>
         <ul className="flex gap-0.5">
@@ -63,10 +63,10 @@ export default function TrackPanel({ state }: Props) {
               <li
                 // biome-ignore lint/suspicious/noArrayIndexKey: track index is the identity
                 key={i}
-                className={`flex h-6 w-6 items-center justify-center rounded text-[11px] font-semibold tabular-nums ${
+                className={`flex h-6 w-6 items-center justify-center rounded text-2xs font-semibold tabular-nums ${
                   isActive
                     ? "border border-white text-white"
-                    : "border border-white/15 text-gray-500"
+                    : "border border-white/15 text-fg-muted"
                 }`}
                 style={{ backgroundColor: bg }}
               >
@@ -78,7 +78,7 @@ export default function TrackPanel({ state }: Props) {
       </div>
 
       <div>
-        <p className="mb-1 text-[10px] font-semibold uppercase tracking-wide text-gray-400">
+        <p className="mb-1 text-3xs font-semibold uppercase tracking-wide text-fg-secondary">
           Diseases
         </p>
         <ul className="flex gap-3">
@@ -121,7 +121,7 @@ function DiseaseStatus({ color, status, supply }: DiseaseStatusProps) {
           </>
         )}
       </span>
-      <span className="text-[10px] tabular-nums text-gray-400">{supply}</span>
+      <span className="text-3xs tabular-nums text-fg-secondary">{supply}</span>
     </li>
   );
 }

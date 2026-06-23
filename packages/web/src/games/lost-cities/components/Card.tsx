@@ -166,7 +166,7 @@ export default function Card({
   const selectionRing = selected
     ? "ring-2 ring-yellow-400 scale-105"
     : glowing
-      ? "ring-2 ring-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.5)]"
+      ? "ring-2 ring-cyan-400 shadow-glow-cyan"
       : "";
 
   const artUrl = getCardImageUrl(card);
@@ -233,7 +233,7 @@ export function CardPlaceholder({
         SIZE_CLASSES[size],
         "rounded-md border-[3px] border-dashed flex items-center justify-center transition-all duration-200",
         glowing
-          ? "ring-2 ring-cyan-400 border-cyan-400 shadow-[0_0_12px_rgba(34,211,238,0.5)] cursor-pointer"
+          ? "ring-2 ring-cyan-400 border-cyan-400 shadow-glow-cyan cursor-pointer"
           : onClick
             ? "hover:scale-105 cursor-pointer"
             : "cursor-default",
@@ -244,7 +244,7 @@ export function CardPlaceholder({
       }}
     >
       {label && (
-        <span className="text-[0.5rem] font-medium opacity-40" style={{ color: hex }}>
+        <span className="text-4xs font-medium opacity-40" style={{ color: hex }}>
           {label}
         </span>
       )}

@@ -183,12 +183,12 @@ export default function GameBoard({
           <span className="text-xs font-bold uppercase tracking-wider text-amber-300">
             {SEASON_LABELS[view.season]}
           </span>
-          <span className="text-[10px] text-stone-400">
+          <span className="text-3xs text-stone-400">
             Turn {view.turnCount + 1} · Parks deck {view.parksDeckCount}
           </span>
         </div>
         {showHikerToggle && (
-          <div className="flex items-center gap-1 text-[10px]">
+          <div className="flex items-center gap-1 text-3xs">
             <span className="text-stone-400">Hiker:</span>
             {([0, 1] as (0 | 1)[]).map((id) => (
               <Chip
@@ -219,11 +219,11 @@ export default function GameBoard({
         </div>
         <div className="rounded-lg bg-stone-900/40 p-2">
           <div className="mb-1 flex items-center justify-between">
-            <span className="text-[10px] font-bold uppercase tracking-wider text-amber-300">
+            <span className="text-3xs font-bold uppercase tracking-wider text-amber-300">
               Parks Available
             </span>
             {onParksSite && isMyTurn && (
-              <span className="text-[10px] text-emerald-400">
+              <span className="text-3xs text-emerald-400">
                 Hiker on Parks site — affordable parks highlighted
               </span>
             )}

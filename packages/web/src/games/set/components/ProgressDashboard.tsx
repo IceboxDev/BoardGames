@@ -70,7 +70,7 @@ function trendArrow(dir: TrendDirection) {
 function trendColor(dir: TrendDirection) {
   if (dir === "improving") return "text-green-400";
   if (dir === "declining") return "text-red-400";
-  return "text-gray-500";
+  return "text-fg-muted";
 }
 
 function sparklineColor(dir: TrendDirection) {
@@ -137,7 +137,7 @@ export default function ProgressDashboard({ history }: ProgressDashboardProps) {
 
   if (history.length === 0) {
     return (
-      <div className="flex items-center justify-center py-16 text-gray-500">
+      <div className="flex items-center justify-center py-16 text-fg-muted">
         Play some games to see your progress.
       </div>
     );
@@ -147,16 +147,18 @@ export default function ProgressDashboard({ history }: ProgressDashboardProps) {
     <div className="space-y-6">
       {/* Section A: Skill Radar + Career Summary */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="rounded-xl bg-gray-800/60 p-4 flex flex-col items-center">
-          <h3 className="text-sm font-semibold text-gray-300 mb-2">Skill Profile (last 5 games)</h3>
+        <div className="rounded-xl bg-surface-800/60 p-4 flex flex-col items-center">
+          <h3 className="text-sm font-semibold text-fg-secondary mb-2">
+            Skill Profile (last 5 games)
+          </h3>
           <RadarChart profile={currentProfile} previousProfile={previousProfile} size={220} />
           {previousProfile && (
-            <p className="text-xs text-gray-600 mt-1">Dashed line = previous 5 games</p>
+            <p className="text-xs text-fg-disabled mt-1">Dashed line = previous 5 games</p>
           )}
         </div>
 
-        <div className="rounded-xl bg-gray-800/60 p-4">
-          <h3 className="text-sm font-semibold text-gray-300 mb-3">Career Summary</h3>
+        <div className="rounded-xl bg-surface-800/60 p-4">
+          <h3 className="text-sm font-semibold text-fg-secondary mb-3">Career Summary</h3>
           <div className="grid grid-cols-2 gap-y-2 gap-x-4 text-sm">
             <Stat label="Games Played" value={String(career.totalGames)} />
             <Stat label="Total SETs" value={String(career.totalSets)} />
@@ -176,15 +178,17 @@ export default function ProgressDashboard({ history }: ProgressDashboardProps) {
 
       {/* Section B: Trend Cards */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-300 mb-2">Trends (last 10 games)</h3>
+        <h3 className="text-sm font-semibold text-fg-secondary mb-2">Trends (last 10 games)</h3>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2">
           {trends.map((t) => (
             <div
               key={t.key}
-              className="rounded-lg bg-gray-800/60 p-3 flex flex-col items-center gap-1"
+              className="rounded-lg bg-surface-800/60 p-3 flex flex-col items-center gap-1"
             >
-              <span className="text-xs text-gray-500">{t.label}</span>
-              <span className="text-sm font-bold text-gray-200">{t.format(t.trend.recentAvg)}</span>
+              <span className="text-xs text-fg-muted">{t.label}</span>
+              <span className="text-sm font-bold text-fg-primary">
+                {t.format(t.trend.recentAvg)}
+              </span>
               <Sparkline
                 data={t.sparkData}
                 width={100}
@@ -203,15 +207,15 @@ export default function ProgressDashboard({ history }: ProgressDashboardProps) {
       {/* Section C: Insights */}
       {insights.length > 0 && (
         <div>
-          <h3 className="text-sm font-semibold text-gray-300 mb-2">Insights</h3>
+          <h3 className="text-sm font-semibold text-fg-secondary mb-2">Insights</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             {insights.map((ins, i) => (
               // biome-ignore lint/suspicious/noArrayIndexKey: static list / chart data points don't reorder
-              <div key={i} className="flex items-start gap-2 rounded-lg bg-gray-800/60 p-3">
+              <div key={i} className="flex items-start gap-2 rounded-lg bg-surface-800/60 p-3">
                 <span className="text-lg leading-none">{insightIcon(ins.type)}</span>
                 <div>
-                  <p className="text-sm font-semibold text-gray-200">{ins.title}</p>
-                  <p className="text-xs text-gray-500">{ins.description}</p>
+                  <p className="text-sm font-semibold text-fg-primary">{ins.title}</p>
+                  <p className="text-xs text-fg-muted">{ins.description}</p>
                 </div>
               </div>
             ))}
@@ -221,7 +225,7 @@ export default function ProgressDashboard({ history }: ProgressDashboardProps) {
 
       {/* Section D: Full Progression Charts */}
       <div>
-        <h3 className="text-sm font-semibold text-gray-300 mb-2">Progression</h3>
+        <h3 className="text-sm font-semibold text-fg-secondary mb-2">Progression</h3>
         <div className="flex gap-1 mb-3">
           {CHART_TABS.map((tab) => (
             <Chip
@@ -236,7 +240,7 @@ export default function ProgressDashboard({ history }: ProgressDashboardProps) {
             </Chip>
           ))}
         </div>
-        <div className="rounded-xl bg-gray-800/60 p-4 overflow-x-auto">
+        <div className="rounded-xl bg-surface-800/60 p-4 overflow-x-auto">
           <LineChart
             data={chartData}
             rollingAvgData={rollingAvg}
@@ -244,9 +248,9 @@ export default function ProgressDashboard({ history }: ProgressDashboardProps) {
             invertY={!activeChart.higherIsBetter}
             height={220}
           />
-          <div className="flex items-center gap-4 mt-2 text-xs text-gray-600 justify-end">
+          <div className="flex items-center gap-4 mt-2 text-xs text-fg-disabled justify-end">
             <span className="flex items-center gap-1">
-              <span className="inline-block w-3 h-0.5 bg-indigo-400 rounded" /> Per game
+              <span className="inline-block w-3 h-0.5 bg-accent-400 rounded" /> Per game
             </span>
             <span className="flex items-center gap-1">
               <span className="inline-block w-3 h-0.5 bg-amber-400 rounded border-dashed" /> Rolling
@@ -262,8 +266,8 @@ export default function ProgressDashboard({ history }: ProgressDashboardProps) {
 function Stat({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <span className="text-gray-500 text-xs">{label}</span>
-      <p className="text-gray-200 font-medium tabular-nums">{value}</p>
+      <span className="text-fg-muted text-xs">{label}</span>
+      <p className="text-fg-primary font-medium tabular-nums">{value}</p>
     </div>
   );
 }

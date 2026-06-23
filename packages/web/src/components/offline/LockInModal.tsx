@@ -2,6 +2,7 @@ import { useId, useMemo, useState } from "react";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { LockedDate, LockHost, LockInForm } from "../../lib/calendar-locks";
 import { Button } from "../ui/Button";
+import { ErrorAlert } from "../ui/ErrorAlert";
 import { Field } from "../ui/Field";
 import { Modal } from "../ui/Modal";
 import { Select } from "../ui/Select";
@@ -153,7 +154,7 @@ export default function LockInModal({
           )}
         </div>
 
-        {error && <p className="text-center text-xs text-rose-400">{error}</p>}
+        {error && <ErrorAlert message={error} className="text-center" />}
 
         <div className="mt-1 flex items-center justify-between gap-2">
           <div>

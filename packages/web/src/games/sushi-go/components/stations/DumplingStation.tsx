@@ -47,14 +47,14 @@ export default function DumplingStation({ cards, points, compact }: DumplingStat
             const isPast = stepNum < count;
             return (
               <span key={score} className="flex items-center gap-1">
-                {i > 0 && <span className="text-[8px] text-gray-600">&middot;</span>}
+                {i > 0 && <span className="text-4xs text-fg-disabled">&middot;</span>}
                 <span
-                  className={`text-[10px] tabular-nums transition-all ${
+                  className={`text-3xs tabular-nums transition-all ${
                     isActive
                       ? "font-bold text-yellow-300"
                       : isPast
                         ? "text-yellow-500/50"
-                        : "text-gray-600"
+                        : "text-fg-disabled"
                   }`}
                 >
                   {score}

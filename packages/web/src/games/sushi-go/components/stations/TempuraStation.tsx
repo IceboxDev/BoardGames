@@ -39,7 +39,7 @@ export default function TempuraStation({
                 <CardFace type={b.type} size={size} />
               </div>
             </div>
-            <span className="mt-1 rounded-full bg-amber-500/20 px-1.5 text-[10px] font-semibold text-amber-300">
+            <span className="mt-1 rounded-full bg-amber-500/20 px-1.5 text-3xs font-semibold text-amber-300">
               5 pts
             </span>
           </div>
@@ -56,7 +56,7 @@ export default function TempuraStation({
                 <GhostCard theme="tempura" size={size} />
               </div>
             </div>
-            <span className="mt-1 text-[10px] text-amber-400/50 italic">Need 1 more</span>
+            <span className="mt-1 text-3xs text-amber-400/50 italic">Need 1 more</span>
           </div>
         )}
       </div>

@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { apiClient, type ReplaySummary } from "../../lib/api-client";
 import { Button } from "../ui/Button";
+import { EmptyState } from "../ui/EmptyState";
+import { LoadingState } from "../ui/LoadingState";
 
 interface MatchHistoryProps {
   gameSlug: string;
@@ -67,15 +69,15 @@ export default function MatchHistory({
         </p>
       </div>
 
-      {!loading && replays.length === 0 ? (
-        <p className="py-12 text-sm italic text-fg-muted">
-          No games played yet. Play a game first.
-        </p>
-      ) : !loading ? (
+      {loading ? (
+        <LoadingState />
+      ) : replays.length === 0 ? (
+        <EmptyState title="No games played yet" description="Play a game first." />
+      ) : (
         <div className="w-full overflow-x-auto">
           <table className="w-full border-collapse text-sm">
             <thead>
-              <tr className="border-b border-gray-800 text-xs font-medium uppercase tracking-wider text-fg-muted">
+              <tr className="border-b border-white/10 text-xs font-medium uppercase tracking-wider text-fg-muted">
                 <th className="p-2.5 text-left">#</th>
                 <th className="p-2.5 text-left">{opponentLabel}</th>
                 <th className="p-2.5 text-right">You</th>
@@ -95,8 +97,8 @@ export default function MatchHistory({
                   <tr
                     key={r.id}
                     onClick={() => onSelectReplay?.(r.id)}
-                    className={`border-b border-gray-800/40 transition-colors ${
-                      onSelectReplay ? "cursor-pointer hover:bg-gray-800/50" : ""
+                    className={`border-b border-white/10 transition-colors ${
+                      onSelectReplay ? "cursor-pointer hover:bg-surface-800/50" : ""
                     }`}
                   >
                     <td className="p-2.5 tabular-nums text-fg-secondary">{i + 1}</td>
@@ -139,7 +141,7 @@ export default function MatchHistory({
             </tbody>
           </table>
         </div>
-      ) : null}
+      )}
 
       <Button variant="link" onClick={onBack} className="mt-2 text-sm">
         Back

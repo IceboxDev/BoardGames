@@ -9,6 +9,7 @@ import { baseline } from "./0001-baseline.ts";
 import { dropTestDummy } from "./0002-drop-test-dummy.ts";
 import { onlineMode } from "./0003-online-mode.ts";
 import { matchSortOrder } from "./0004-match-sort-order.ts";
+import { userProfiles } from "./0005-user-profiles.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -16,6 +17,7 @@ export const migrations: readonly Migration[] = [
   dropTestDummy,
   onlineMode,
   matchSortOrder,
+  userProfiles,
 ];
 
 /**

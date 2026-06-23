@@ -19,6 +19,7 @@ import { recordMatch, updateMatch } from "../../lib/match-history";
 import { qk } from "../../lib/query-keys";
 import { Button } from "../ui/Button";
 import { Chip } from "../ui/Chip";
+import { ErrorAlert } from "../ui/ErrorAlert";
 import { Field } from "../ui/Field";
 import { Input } from "../ui/Input";
 import { Modal } from "../ui/Modal";
@@ -26,8 +27,11 @@ import { Select } from "../ui/Select";
 import { Textarea } from "../ui/Textarea";
 import { ClocktowerForm } from "./forms/ClocktowerForm";
 import { CoopForm } from "./forms/CoopForm";
+import { DungeonMayhemForm } from "./forms/DungeonMayhemForm";
 import { FreeForAllForm } from "./forms/FreeForAllForm";
+import { JustOneForm } from "./forms/JustOneForm";
 import { LastStandingForm } from "./forms/LastStandingForm";
+import { LovecraftLetterForm } from "./forms/LovecraftLetterForm";
 import { OneVsManyForm } from "./forms/OneVsManyForm";
 import { ResistanceForm } from "./forms/ResistanceForm";
 import { TeamsForm } from "./forms/TeamsForm";
@@ -59,7 +63,9 @@ const KIND_OPTIONS: { kind: MatchKind; label: string; hint: string }[] = [
   { kind: "one-vs-many", label: "One vs many", hint: "One player against the rest (e.g. Mr. X)." },
 ];
 
-type State = { mode: "create"; dateKey: string | null } | { mode: "edit"; match: MatchRecord };
+type State =
+  | { mode: "create"; dateKey: string | null; playedAt?: string }
+  | { mode: "edit"; match: MatchRecord };
 
 type Props = {
   state: State;
@@ -98,7 +104,9 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
     }
     return {
       dateKey: state.dateKey,
-      playedAt: isoNow(),
+      // A standalone "+ Match" on a past day group seeds that day; the top-level
+      // "Record match" passes nothing and falls back to now.
+      playedAt: state.playedAt ?? isoNow(),
       gameSlug: null as string | null,
       gameTitle: "",
       kind: "free-for-all" as MatchKind,
@@ -294,6 +302,12 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
                 value={outcome as MatchOutcomeFreeForAll}
                 onChange={setOutcome}
               />
+            ) : gameSlug === "lovecraft-letter" ? (
+              <LovecraftLetterForm
+                users={allUsers}
+                value={outcome as MatchOutcomeFreeForAll}
+                onChange={setOutcome}
+              />
             ) : (
               <FreeForAllForm
                 users={allUsers}
@@ -329,16 +343,34 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
                 gameSlug={gameSlug}
               />
             ))}
-          {kind === "last-standing" && (
-            <LastStandingForm
-              users={allUsers}
-              value={outcome as MatchOutcomeLastStanding}
-              onChange={setOutcome}
-            />
-          )}
-          {kind === "coop" && (
-            <CoopForm users={allUsers} value={outcome as MatchOutcomeCoop} onChange={setOutcome} />
-          )}
+          {kind === "last-standing" &&
+            (gameSlug === "dungeon-mayhem" ? (
+              <DungeonMayhemForm
+                users={allUsers}
+                value={outcome as MatchOutcomeLastStanding}
+                onChange={setOutcome}
+              />
+            ) : (
+              <LastStandingForm
+                users={allUsers}
+                value={outcome as MatchOutcomeLastStanding}
+                onChange={setOutcome}
+              />
+            ))}
+          {kind === "coop" &&
+            (gameSlug === "just-one" ? (
+              <JustOneForm
+                users={allUsers}
+                value={outcome as MatchOutcomeCoop}
+                onChange={setOutcome}
+              />
+            ) : (
+              <CoopForm
+                users={allUsers}
+                value={outcome as MatchOutcomeCoop}
+                onChange={setOutcome}
+              />
+            ))}
           {kind === "one-vs-many" && (
             <OneVsManyForm
               users={allUsers}
@@ -361,7 +393,7 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
 
       <footer className="flex shrink-0 items-center justify-between gap-2 border-t border-white/10 pt-3">
         {error ? (
-          <span className="text-xs text-rose-400">{error}</span>
+          <ErrorAlert message={error} />
         ) : (
           <span className="text-xs text-fg-muted">
             {usersQuery.isLoading ? "Loading users…" : `${allUsers.length} known players`}

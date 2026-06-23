@@ -41,7 +41,7 @@ interface PlayerAreaProps {
 function ResourcePill({ r, count }: { r: ResourceType; count: number }) {
   return (
     <div
-      className={`flex items-center gap-1 rounded-full border border-white/10 px-2 py-0.5 text-[11px] font-bold text-white ${count === 0 ? "opacity-30" : ""}`}
+      className={`flex items-center gap-1 rounded-full border border-white/10 px-2 py-0.5 text-2xs font-bold text-white ${count === 0 ? "opacity-30" : ""}`}
       style={{ backgroundColor: `${RESOURCE_COLORS[r]}33` }}
       title={`${count} × ${RESOURCE_LABELS[r]}`}
     >
@@ -63,7 +63,7 @@ function MiniParkBadge({
   onClick?: () => void;
 }) {
   const interactive = !!(reserved && affordable && onClick);
-  const className = `inline-block rounded px-1.5 py-0.5 text-[10px] font-medium text-stone-200 ring-1 ${
+  const className = `inline-block rounded px-1.5 py-0.5 text-3xs font-medium text-stone-200 ring-1 ${
     interactive
       ? "cursor-pointer bg-amber-800/60 ring-emerald-400/60 hover:bg-amber-700/70"
       : reserved
@@ -101,7 +101,7 @@ function GearChip({
   onClick?: () => void;
 }) {
   const baseClasses =
-    "flex items-center gap-1 rounded-md border px-1.5 py-0.5 text-[10px] font-semibold transition disabled:cursor-default";
+    "flex items-center gap-1 rounded-md border px-1.5 py-0.5 text-3xs font-semibold transition disabled:cursor-default";
   const stateClasses = used
     ? "border-stone-700 bg-stone-800/60 text-stone-500 line-through"
     : activatable
@@ -146,7 +146,7 @@ function CanteenSlot({
     );
   }
   const baseClasses =
-    "flex h-9 w-16 items-center justify-center rounded-md border px-1 text-center text-[10px] font-semibold transition disabled:cursor-default";
+    "flex h-9 w-16 items-center justify-center rounded-md border px-1 text-center text-3xs font-semibold transition disabled:cursor-default";
   const stateClasses = canteen.used
     ? "border-stone-700 bg-stone-800/60 text-stone-500 line-through"
     : selected
@@ -295,7 +295,7 @@ export default function PlayerArea({
           ))}
         </div>
         <span
-          className={`flex items-center gap-1 rounded-full border px-1.5 py-0.5 text-[10px] font-bold ${
+          className={`flex items-center gap-1 rounded-full border px-1.5 py-0.5 text-3xs font-bold ${
             player.campfireLit
               ? "border-orange-400/60 bg-orange-700/30 text-orange-100"
               : "border-stone-700/60 bg-stone-900/40 text-stone-500"
@@ -311,7 +311,7 @@ export default function PlayerArea({
         </span>
         {hasShutterbug && (
           <span
-            className="flex items-center gap-1 rounded-full border border-fuchsia-400/60 bg-fuchsia-700/40 px-1.5 py-0.5 text-[10px] font-bold text-fuchsia-100"
+            className="flex items-center gap-1 rounded-full border border-fuchsia-400/60 bg-fuchsia-700/40 px-1.5 py-0.5 text-3xs font-bold text-fuchsia-100"
             title="Shutterbug — your Photo actions take 2 photos instead of 1 (still costs 1 resource)"
           >
             <span>{"🐛"}</span>
@@ -320,7 +320,7 @@ export default function PlayerArea({
         )}
         {hasFirstPlayerToken && (
           <span
-            className="flex items-center gap-1 rounded-full border border-yellow-400/60 bg-yellow-700/40 px-1.5 py-0.5 text-[10px] font-bold text-yellow-100"
+            className="flex items-center gap-1 rounded-full border border-yellow-400/60 bg-yellow-700/40 px-1.5 py-0.5 text-3xs font-bold text-yellow-100"
             title="First-Player Token — you go first next season; +1 PT at game end"
           >
             <span>{"🥇"}</span>
@@ -328,7 +328,7 @@ export default function PlayerArea({
           </span>
         )}
         <span
-          className="ml-auto rounded bg-stone-900/60 px-1.5 py-0.5 text-[10px] text-stone-300"
+          className="ml-auto rounded bg-stone-900/60 px-1.5 py-0.5 text-3xs text-stone-300"
           title={player.passion ? PASSION_DESCRIPTIONS[player.passion] : "Picking passion…"}
         >
           <span className="font-semibold text-violet-300">Passion:</span>{" "}
@@ -338,7 +338,7 @@ export default function PlayerArea({
             <span className="italic text-stone-500">picking…</span>
           )}
         </span>
-        <span className="text-[10px] text-gray-500">
+        <span className="text-3xs text-fg-muted">
           P {player.parks.length} {"\u00b7"} Ph {player.photoCount} {"\u00b7"} G{" "}
           {player.gear.length}
         </span>

@@ -52,7 +52,7 @@ export default function CardFace({
           loading="lazy"
         />
       ) : (
-        <div className="flex h-full w-full items-center justify-center bg-gray-800 text-xs text-gray-400">
+        <div className="flex h-full w-full items-center justify-center bg-gray-800 text-xs text-fg-secondary">
           {CARD_LABELS[type]}
         </div>
       )}
@@ -93,7 +93,7 @@ export function CardFaceHand({
           loading="lazy"
         />
       ) : (
-        <div className="flex h-full w-full items-center justify-center bg-gray-800 text-xs text-gray-400">
+        <div className="flex h-full w-full items-center justify-center bg-gray-800 text-xs text-fg-secondary">
           {CARD_LABELS[type]}
         </div>
       )}

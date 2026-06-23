@@ -11,7 +11,7 @@ import {
   UsersTable,
 } from "../components/admin";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
-import { Chip, ErrorAlert, PageMain, PageShell } from "../components/ui";
+import { Chip, ErrorAlert, PageHeader, PageMain, PageShell } from "../components/ui";
 import { useAdminUsers } from "../hooks/useAdminUsers.ts";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { adminGenerateResetLink, adminSetOnlineMode } from "../lib/admin";
@@ -162,38 +162,38 @@ export default function AdminPage() {
       }
     >
       <PageMain width="7xl" padding="none" className="px-6 py-10">
-        {/* Header grid: title + delete-mode chip side-by-side, descriptive
-            paragraph spans both columns on row 2. */}
-        <div className="mb-8 grid grid-cols-[1fr_auto] items-start gap-x-4 gap-y-2 sm:gap-x-6">
-          <h1 className="text-2xl font-bold tracking-tight text-white">Users</h1>
-          <Chip
-            pressed={deleteMode}
-            tone="rose"
-            variant="outlined"
-            size="sm"
-            onClick={toggleDeleteMode}
-            className="justify-self-end"
-          >
-            {deleteMode ? "Exit delete mode" : "Delete mode"}
-          </Chip>
-          {deleteMode ? (
-            <p className="col-span-2 text-sm text-rose-300">
-              <span className="font-semibold">Delete mode is on.</span> Click{" "}
-              <span className="font-semibold">Delete</span> on a row, then type the user's email to
-              confirm. Deletion is permanent and wipes their inventory and availability.
-            </p>
-          ) : (
-            <p className="col-span-2 text-sm text-fg-muted">
-              Set each user's <span className="font-medium text-fg-secondary">online mode</span> —{" "}
-              <span className="font-medium text-fg-secondary">Offline</span> for in-person only,{" "}
-              <span className="font-medium text-fg-secondary">Online</span> for multiplayer only, or{" "}
-              <span className="font-medium text-fg-secondary">Both</span>. Use{" "}
-              <span className="font-medium text-fg-secondary">Inventory</span> to set which games
-              each user owns. Click <span className="font-medium text-fg-secondary">Calendar</span>{" "}
-              to preview a user's offline availability.
-            </p>
-          )}
-        </div>
+        <PageHeader
+          title="Users"
+          actions={
+            <Chip
+              pressed={deleteMode}
+              tone="rose"
+              variant="outlined"
+              size="sm"
+              onClick={toggleDeleteMode}
+            >
+              {deleteMode ? "Exit delete mode" : "Delete mode"}
+            </Chip>
+          }
+          className="mb-2"
+        />
+        {deleteMode ? (
+          <p className="mb-8 text-sm text-rose-300">
+            <span className="font-semibold">Delete mode is on.</span> Click{" "}
+            <span className="font-semibold">Delete</span> on a row, then type the user's email to
+            confirm. Deletion is permanent and wipes their inventory and availability.
+          </p>
+        ) : (
+          <p className="mb-8 text-sm text-fg-muted">
+            Set each user's <span className="font-medium text-fg-secondary">online mode</span> —{" "}
+            <span className="font-medium text-fg-secondary">Offline</span> for in-person only,{" "}
+            <span className="font-medium text-fg-secondary">Online</span> for multiplayer only, or{" "}
+            <span className="font-medium text-fg-secondary">Both</span>. Use{" "}
+            <span className="font-medium text-fg-secondary">Inventory</span> to set which games each
+            user owns. Click <span className="font-medium text-fg-secondary">Calendar</span> to
+            preview a user's offline availability.
+          </p>
+        )}
 
         <PreRegisterCard />
         <GuestPlayersCard

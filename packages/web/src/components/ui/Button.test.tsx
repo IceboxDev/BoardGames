@@ -43,6 +43,7 @@ describe("Button — rendering", () => {
     ["ghost", /text-fg-secondary/],
     ["danger", /bg-rose-500/],
     ["warning", /bg-amber-500/],
+    ["success", /bg-emerald-500/],
     ["link", /text-fg-muted/],
   ] as const)("variant=%s applies its class signature", (variant, signature) => {
     render(<Button variant={variant}>X</Button>);

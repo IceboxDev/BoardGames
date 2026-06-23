@@ -66,7 +66,7 @@ export default function CardTooltip({ cardType, children }: CardTooltipProps) {
             className="pointer-events-none fixed z-tooltip"
             style={{ left: pos.left, top: pos.top }}
           >
-            <div className="flex w-[150px] flex-col items-center gap-1 rounded-xl bg-gray-900 p-1.5 shadow-2xl ring-1 ring-white/20">
+            <div className="flex w-[150px] flex-col items-center gap-1 rounded-xl bg-surface-900 p-1.5 shadow-2xl ring-1 ring-white/20">
               {skin ? (
                 <img
                   src={getCardImageUrl(skin.file)}
@@ -83,9 +83,9 @@ export default function CardTooltip({ cardType, children }: CardTooltipProps) {
                   <span className="mt-2 text-sm font-bold">{CARD_LABELS[cardType]}</span>
                 </div>
               )}
-              <span className="text-center text-[10px] font-medium text-gray-400">
+              <span className="text-center text-3xs font-medium text-fg-secondary">
                 {CARD_LABELS[cardType]}
-                {skin && <span className="text-gray-500"> — {skin.label}</span>}
+                {skin && <span className="text-fg-muted"> — {skin.label}</span>}
               </span>
             </div>
           </div>,

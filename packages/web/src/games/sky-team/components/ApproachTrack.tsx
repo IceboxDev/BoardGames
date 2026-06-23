@@ -40,7 +40,7 @@ export default function ApproachTrack({ view }: Props) {
         <div className="text-base font-extrabold uppercase tracking-[0.22em] text-lime-400">
           YUL
         </div>
-        <div className="text-[10px] uppercase tracking-wide text-slate-400">Montréal-Trudeau</div>
+        <div className="text-3xs uppercase tracking-wide text-fg-secondary">Montréal-Trudeau</div>
       </header>
 
       <ol className="flex min-h-0 flex-col gap-1.5">
@@ -62,13 +62,13 @@ export default function ApproachTrack({ view }: Props) {
                   ? "border-amber-300/90 ring-2 ring-amber-300/60"
                   : isAirport
                     ? "border-lime-400/70"
-                    : "border-slate-700/60",
+                    : "border-white/10",
                 passed ? "opacity-40 saturate-50" : "",
               ].join(" ")}
               aria-label={isAirport ? "YUL airport" : undefined}
             >
               {relLabel !== null && (
-                <span className="absolute left-1.5 top-0.5 text-[10px] font-semibold text-slate-200/80">
+                <span className="absolute left-1.5 top-0.5 text-3xs font-semibold text-fg-primary/80">
                   {relLabel}
                 </span>
               )}

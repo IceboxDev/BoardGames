@@ -29,8 +29,8 @@ export default function BarChartH({ bars, maxValue }: BarChartHProps) {
             key={i}
             className="flex items-center gap-2 text-xs"
           >
-            <span className="w-8 text-right text-gray-500 shrink-0 tabular-nums">{bar.label}</span>
-            <div className="flex-1 h-5 bg-gray-800 rounded overflow-hidden flex">
+            <span className="w-8 text-right text-fg-muted shrink-0 tabular-nums">{bar.label}</span>
+            <div className="flex-1 h-5 bg-surface-800 rounded overflow-hidden flex">
               {bar.segments.map((seg, j) => {
                 const segPct = (seg.value / computedMax) * 100;
                 if (segPct <= 0) return null;
@@ -49,11 +49,11 @@ export default function BarChartH({ bars, maxValue }: BarChartHProps) {
                 );
               })}
             </div>
-            <span className="w-12 text-right text-gray-500 tabular-nums shrink-0">
+            <span className="w-12 text-right text-fg-muted tabular-nums shrink-0">
               {(total / 1000).toFixed(1)}s
             </span>
             {bar.annotation && (
-              <span className="w-6 text-gray-600 text-center shrink-0" title="Board size">
+              <span className="w-6 text-fg-disabled text-center shrink-0" title="Board size">
                 {bar.annotation}
               </span>
             )}

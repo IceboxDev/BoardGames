@@ -206,8 +206,8 @@ export default function GameBoard({
                   </Chip>
                 )}
                 <span className="text-xs font-semibold text-cyan-400">Your turn</span>
-                <span className="text-gray-500">&middot;</span>
-                <span className="text-xs text-gray-400">
+                <span className="text-fg-muted">&middot;</span>
+                <span className="text-xs text-fg-secondary">
                   {useChopsticks
                     ? selectedCardId !== null
                       ? "Select one more card"
@@ -218,7 +218,7 @@ export default function GameBoard({
             )}
             {!isGameOver && !canAct && !aiWaiting && (
               <div className="flex items-center gap-2">
-                <span className="text-xs text-gray-400">
+                <span className="text-xs text-fg-secondary">
                   {view.phase === "revealing" ? "Revealing cards..." : "Waiting..."}
                 </span>
               </div>
@@ -241,12 +241,12 @@ export default function GameBoard({
       >
         {/* Header — shrink-0 */}
         <div className="shrink-0 flex items-center justify-between">
-          <div className="text-sm font-medium text-gray-300">
+          <div className="text-sm font-medium text-fg-secondary">
             {isGameOver
               ? "Game Over — Review Board"
               : `Round ${view.round}/3 \u00b7 Turn ${view.turn}/${handSize}`}
           </div>
-          <div className="flex items-center gap-3 text-xs text-gray-500">
+          <div className="flex items-center gap-3 text-xs text-fg-muted">
             {hasNashAnalysis && (
               <Button
                 variant="secondary"
@@ -274,15 +274,13 @@ export default function GameBoard({
             <div className="flex flex-wrap gap-3">
               {view.lastRevealed.map((r) => (
                 <div key={r.playerIndex} className="flex items-center gap-1">
-                  <span className="text-xs text-gray-400">
+                  <span className="text-xs text-fg-secondary">
                     {r.playerIndex === myIndex ? "You" : `P${r.playerIndex + 1}`}:
                   </span>
                   {r.cards.map((c) => (
                     <CardFace key={c.id} type={c.type} size="sm" />
                   ))}
-                  {r.returnedChopsticks && (
-                    <span className="text-[10px] text-gray-500">+🥢 back</span>
-                  )}
+                  {r.returnedChopsticks && <span className="text-3xs text-fg-muted">+🥢 back</span>}
                 </div>
               ))}
             </div>

@@ -23,11 +23,11 @@ function PendingCardPreview({ cardType }: { cardType: CardType }) {
           draggable={false}
         />
       ) : (
-        <div className="flex h-[72px] w-[50px] items-center justify-center rounded bg-gray-700 ring-1 ring-white/20">
+        <div className="flex h-[72px] w-[50px] items-center justify-center rounded bg-surface-700 ring-1 ring-white/20">
           <span className="text-lg">{CARD_LABELS[cardType]?.[0] ?? "?"}</span>
         </div>
       )}
-      <span className="max-w-[54px] truncate text-center text-[9px] text-gray-400">
+      <span className="max-w-[54px] truncate text-center text-[9px] text-fg-secondary">
         {CARD_LABELS[cardType]}
       </span>
     </div>
@@ -64,7 +64,7 @@ export default function NopeWindow({ state, onAction }: NopeWindowProps) {
     <div className="rounded-xl border border-yellow-700/50 bg-yellow-950/40 p-4">
       <div className="mb-3 text-center">
         <p className="text-sm font-medium text-yellow-300">✋ Nope Window</p>
-        <p className="mt-1 text-xs text-gray-400">
+        <p className="mt-1 text-xs text-fg-secondary">
           {sourceName} played <span className="font-semibold text-white">{effectLabel}</span>
         </p>
         {nw.nopeChain.length > 0 && (

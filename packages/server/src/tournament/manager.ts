@@ -28,8 +28,18 @@ function resolveWorker(): { path: string; isDev: boolean } {
   };
 }
 
+/** Thrown when a user already has a running tournament. Mapped to HTTP 409. */
+export class TournamentLimitError extends Error {
+  constructor() {
+    super("You already have a tournament running. Finish or abort it first.");
+    this.name = "TournamentLimitError";
+  }
+}
+
 interface TournamentEntry {
   id: string;
+  /** The user who started it — used to enforce one running tournament per user. */
+  userId: string;
   children: ChildProcess[];
   sseClients: Set<(data: string) => void>;
   gamesCompleted: number;
@@ -50,6 +60,13 @@ const running = new Map<string, TournamentEntry>();
 
 export function getRunningTournaments(): string[] {
   return [...running.keys()];
+}
+
+function userHasRunningTournament(userId: string): boolean {
+  for (const entry of running.values()) {
+    if (entry.userId === userId) return true;
+  }
+  return false;
 }
 
 function computeWorkerCount(numGames: number): number {
@@ -181,26 +198,32 @@ async function handleWorkerFailure(entry: TournamentEntry, error: Error | string
 export async function startTournament(
   gameSlug: string,
   config: Record<string, unknown>,
+  userId: string,
 ): Promise<{ id: string }> {
   if (!tournamentRegistry[gameSlug]) {
     throw new Error(`No tournament support for game: ${gameSlug}`);
   }
 
+  // One running tournament per user. Each tournament forks one worker per core,
+  // so N concurrent tournaments would pin N×cores processes and starve live
+  // game sessions. The grid UI already runs matchups sequentially; this is the
+  // server-side guarantee against direct-API abuse. This check AND the
+  // reservation (`running.set` below) both run synchronously before the first
+  // `await`, so two requests from the same user in the same tick can't both pass.
+  if (userHasRunningTournament(userId)) {
+    throw new TournamentLimitError();
+  }
+
   const id = randomUUID();
-  const db = getDb();
-  const numGames = (config.numGames as number) ?? 100;
-
-  await db.execute({
-    sql: `INSERT INTO tournaments (id, game_slug, config_json, status, progress_total) VALUES (?, ?, ?, 'running', ?)`,
-    args: [id, gameSlug, JSON.stringify(config), numGames],
-  });
-
+  // `numGames` is bounded by StartTournamentBodySchema at the HTTP boundary;
+  // narrow defensively here (this path is also reachable from tests) and fall
+  // back to the historical default.
+  const numGames = typeof config.numGames === "number" ? config.numGames : 100;
   const workerCount = computeWorkerCount(numGames);
-  const batches = distributeGameIndices(numGames, workerCount);
-  const { path: workerPath, isDev } = resolveWorker();
 
   const entry: TournamentEntry = {
     id,
+    userId,
     children: [],
     sseClients: new Set(),
     gamesCompleted: 0,
@@ -217,38 +240,54 @@ export async function startTournament(
     ekWins: {},
   };
 
+  // Reserve the slot before any `await` so the per-user guard above is race-free.
   running.set(id, entry);
 
-  for (let w = 0; w < workerCount; w++) {
-    const workerConfig = JSON.stringify({
-      gameSlug,
-      config,
-      gameIndices: batches[w],
+  try {
+    await getDb().execute({
+      sql: `INSERT INTO tournaments (id, game_slug, config_json, status, progress_total) VALUES (?, ?, ?, 'running', ?)`,
+      args: [id, gameSlug, JSON.stringify(config), numGames],
     });
 
-    const child = fork(workerPath, [workerConfig], {
-      execArgv: isDev ? ["--import", "tsx"] : [],
-      serialization: "advanced",
-      stdio: ["ignore", "inherit", "inherit", "ipc"],
-    });
+    const batches = distributeGameIndices(numGames, workerCount);
+    const { path: workerPath, isDev } = resolveWorker();
 
-    entry.children.push(child);
-
-    child.on("message", (msg: { kind: string; [key: string]: unknown }) => {
-      void handleWorkerMessage(entry, id, msg).catch((err) => {
-        console.error(`Tournament ${id} message handler error:`, err);
+    for (let w = 0; w < workerCount; w++) {
+      const workerConfig = JSON.stringify({
+        gameSlug,
+        config,
+        gameIndices: batches[w],
       });
-    });
 
-    child.on("error", (err) => {
-      void handleWorkerFailure(entry, err);
-    });
+      const child = fork(workerPath, [workerConfig], {
+        execArgv: isDev ? ["--import", "tsx"] : [],
+        serialization: "advanced",
+        stdio: ["ignore", "inherit", "inherit", "ipc"],
+      });
 
-    child.on("exit", (code) => {
-      if (running.has(id) && code !== 0) {
-        void handleWorkerFailure(entry, `Worker exited with code ${code}`);
-      }
-    });
+      entry.children.push(child);
+
+      child.on("message", (msg: { kind: string; [key: string]: unknown }) => {
+        void handleWorkerMessage(entry, id, msg).catch((err) => {
+          console.error(`Tournament ${id} message handler error:`, err);
+        });
+      });
+
+      child.on("error", (err) => {
+        void handleWorkerFailure(entry, err);
+      });
+
+      child.on("exit", (code) => {
+        if (running.has(id) && code !== 0) {
+          void handleWorkerFailure(entry, `Worker exited with code ${code}`);
+        }
+      });
+    }
+  } catch (err) {
+    // The DB insert failed — release the reserved slot so the user isn't locked
+    // out by a tournament that never actually started.
+    running.delete(id);
+    throw err;
   }
 
   return { id };

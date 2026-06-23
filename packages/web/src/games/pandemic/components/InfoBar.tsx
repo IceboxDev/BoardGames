@@ -36,14 +36,14 @@ export default function InfoBar({ state }: Props) {
         <p className="font-semibold leading-tight">
           Player {player.id + 1}: <span style={{ color: roleDef.pawnColor }}>{roleDef.name}</span>
         </p>
-        <p className="text-[11px] text-gray-400">in {cityName}</p>
+        <p className="text-2xs text-fg-secondary">in {cityName}</p>
       </div>
 
       <div className={`shrink-0 text-center font-bold uppercase tracking-wide ${phaseColor}`}>
         {PHASE_LABELS[state.phase] ?? state.phase}
       </div>
 
-      <div className="flex shrink-0 items-center gap-3 text-[11px] text-gray-400">
+      <div className="flex shrink-0 items-center gap-3 text-2xs text-fg-secondary">
         <span>Turn {state.turnNumber}</span>
         <ul className="flex items-center gap-1.5">
           {state.players.map((p) => {
@@ -67,7 +67,7 @@ export default function InfoBar({ state }: Props) {
                   draggable={false}
                 />
                 <span
-                  className={`tabular-nums ${isActive ? "text-white" : "text-gray-500"}`}
+                  className={`tabular-nums ${isActive ? "text-white" : "text-fg-muted"}`}
                   style={{ fontSize: 9, lineHeight: 1.2 }}
                 >
                   {p.hand.length}

@@ -80,7 +80,7 @@ export default function StationGrid({ groups, compact }: StationGridProps) {
           {groups.chopsticks.cards.map((c: Card) => (
             <CardFace key={c.id} type="chopsticks" size="sm" />
           ))}
-          <span className="text-[10px] text-gray-500 italic">Ready</span>
+          <span className="text-3xs text-fg-muted italic">Ready</span>
         </div>
       )}
     </div>

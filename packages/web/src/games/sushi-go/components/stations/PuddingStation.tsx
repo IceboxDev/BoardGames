@@ -22,7 +22,7 @@ export default function PuddingStation({ count, currentRoundCards, compact }: Pu
           <div className="relative">
             <CardFace type="pudding" size={size} />
             {priorCount > 1 && (
-              <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-pink-500/80 text-[10px] font-bold text-white shadow">
+              <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-pink-500/80 text-3xs font-bold text-white shadow">
                 {priorCount}
               </span>
             )}

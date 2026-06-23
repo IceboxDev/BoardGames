@@ -52,11 +52,11 @@ export default function GameOverScreen({
                 </h3>
                 <span className="text-2xl font-bold text-yellow-400">{breakdown.total}</span>
               </div>
-              <div className="mb-2 text-[11px] text-violet-300">
+              <div className="mb-2 text-2xs text-violet-300">
                 Passion:{" "}
                 <span className="font-semibold">{p.passion ? PASSION_LABELS[p.passion] : "—"}</span>
               </div>
-              <div className="space-y-1 text-[11px]">
+              <div className="space-y-1 text-2xs">
                 <ScoreRow label="Parks" value={breakdown.parks} />
                 <ScoreRow label="Photos" value={breakdown.photos} />
                 <ScoreRow label="Passion" value={breakdown.passion} />
@@ -64,7 +64,7 @@ export default function GameOverScreen({
                 <div className="my-1 border-t border-stone-700" />
                 <ScoreRow label="Total" value={breakdown.total} bold />
               </div>
-              <div className="mt-2 grid grid-cols-3 gap-1 text-[10px] text-stone-400">
+              <div className="mt-2 grid grid-cols-3 gap-1 text-3xs text-stone-400">
                 <Stat label="Parks visited" value={p.parks.length} />
                 <Stat label="Photos taken" value={p.photoCount} />
                 <Stat label="Canteens used" value={p.canteensUsedCount} />

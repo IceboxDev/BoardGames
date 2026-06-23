@@ -12,13 +12,16 @@ describe("defaultKindForSlug", () => {
 
   it.each([
     ["pandemic", "coop"],
+    ["just-one", "coop"],
     ["sky-team", "coop"],
     ["gloomhaven", "coop"],
     ["codenames", "teams"],
     ["chess", "last-standing"],
+    ["dungeon-mayhem", "last-standing"],
     ["exploding-kittens", "last-standing"],
     ["scotland-yard", "one-vs-many"],
     ["betrayal-at-house-on-the-hill", "one-vs-many"],
+    ["lovecraft-letter", "free-for-all"],
   ])("maps %s → %s", (slug, expected) => {
     expect(defaultKindForSlug(slug)).toBe(expected);
   });

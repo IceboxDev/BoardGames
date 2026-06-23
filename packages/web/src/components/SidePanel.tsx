@@ -59,10 +59,10 @@ export function PlayerListPanel({ turnCount, players, extra }: PlayerListPanelPr
             key={p.index}
             className={`flex w-full items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs transition-colors ${
               p.alive === false
-                ? "bg-gray-800/50 text-fg-disabled line-through"
+                ? "bg-surface-800/50 text-fg-disabled line-through"
                 : p.isActive
-                  ? "bg-indigo-900/60 text-white ring-1 ring-indigo-500"
-                  : "bg-gray-800/60 text-fg-secondary"
+                  ? "bg-indigo-900/60 text-white ring-1 ring-accent-500"
+                  : "bg-surface-800/60 text-fg-secondary"
             }`}
           >
             <span className="flex-1 truncate font-medium">{p.label}</span>
@@ -80,7 +80,7 @@ export function PlayerListPanel({ turnCount, players, extra }: PlayerListPanelPr
             )}
 
             {p.alive !== false ? (
-              <span className="shrink-0 rounded-full bg-gray-700 px-1.5 py-0.5 text-3xs font-bold tabular-nums leading-none">
+              <span className="shrink-0 rounded-full bg-surface-700 px-1.5 py-0.5 text-3xs font-bold tabular-nums leading-none">
                 {p.handCount}
               </span>
             ) : (
@@ -132,9 +132,9 @@ export function ScoreGridPanel({
 
       <div className="flex flex-1 flex-col justify-center gap-2">
         {/* Grid */}
-        <div className="flex w-full flex-col gap-px overflow-hidden rounded-lg border border-gray-700/50 bg-gray-700/30 text-3xs">
+        <div className="flex w-full flex-col gap-px overflow-hidden rounded-lg border border-white/10 bg-surface-700/30 text-3xs">
           {/* Header row */}
-          <div className="grid grid-cols-[1rem_1fr_1fr] bg-gray-800/80 px-2 py-1 font-semibold uppercase tracking-wider text-fg-muted">
+          <div className="grid grid-cols-[1rem_1fr_1fr] bg-surface-800/80 px-2 py-1 font-semibold uppercase tracking-wider text-fg-muted">
             <span />
             <span className="text-center">{playerName}</span>
             <span className="text-center">{opponentName}</span>
@@ -144,7 +144,7 @@ export function ScoreGridPanel({
           {expeditions.map((e) => (
             <div
               key={e.color}
-              className="grid grid-cols-[1rem_1fr_1fr] items-center bg-gray-900/60 px-2 py-1"
+              className="grid grid-cols-[1rem_1fr_1fr] items-center bg-surface-900/60 px-2 py-1"
             >
               <span
                 className="h-2.5 w-2.5 rounded-full"
@@ -177,7 +177,7 @@ export function ScoreGridPanel({
           ))}
 
           {/* Total row */}
-          <div className="grid grid-cols-[1rem_1fr_1fr] items-center bg-gray-800/80 px-2 py-1.5 font-bold">
+          <div className="grid grid-cols-[1rem_1fr_1fr] items-center bg-surface-800/80 px-2 py-1.5 font-bold">
             <span />
             <span className="text-center tabular-nums text-white">{playerTotal}</span>
             <span className="text-center tabular-nums text-white">{opponentTotal}</span>

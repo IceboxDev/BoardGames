@@ -1,6 +1,7 @@
 import { EyeIcon, PadlockIcon } from "../icons";
 import { Button } from "../ui/Button";
 import { Chip } from "../ui/Chip";
+import { ErrorAlert } from "../ui/ErrorAlert";
 
 type Mode = "view" | "edit" | "lock";
 
@@ -38,7 +39,7 @@ export function AvailabilityActionBar({
 }: Props) {
   return (
     <div className="relative shrink-0 flex flex-col items-center gap-2 border-t border-white/5 bg-surface-950/90 px-2 py-2 backdrop-blur sm:px-4">
-      {error && <p className="text-xs text-rose-400">{error}</p>}
+      {error && <ErrorAlert message={error} />}
       {mode === "view" ? (
         <div className="flex w-full items-center gap-2 sm:max-w-md">
           {/* Admin "view as player" toggle + lock-in entry. In-flow beside the

@@ -42,16 +42,16 @@ function GearCardTile({
       }`}
     >
       <div className="flex items-start justify-between gap-1">
-        <span className="flex items-center gap-1 text-[11px] font-bold leading-tight text-white">
+        <span className="flex items-center gap-1 text-2xs font-bold leading-tight text-white">
           <span>{GEAR_LABELS[card.kind]}</span>
           <span
-            className="rounded bg-stone-800 px-1 text-[10px]"
+            className="rounded bg-stone-800 px-1 text-3xs"
             title={GEAR_TRIGGER_LABELS[card.trigger]}
           >
             {GEAR_TRIGGER_ICONS[card.trigger]}
           </span>
         </span>
-        <span className="flex shrink-0 items-center gap-0.5 rounded bg-yellow-900/40 px-1 py-0.5 text-[10px] font-bold text-yellow-300">
+        <span className="flex shrink-0 items-center gap-0.5 rounded bg-yellow-900/40 px-1 py-0.5 text-3xs font-bold text-yellow-300">
           <span>{cost}</span>
           <span>{"\u2600\uFE0F"}</span>
         </span>
@@ -88,7 +88,7 @@ export default function GearMarketDisplay({
   return (
     <div className="flex h-full flex-col rounded-lg bg-stone-900/40 p-2">
       <div className="mb-1 flex items-center justify-between">
-        <span className="text-[10px] font-bold uppercase tracking-wider text-amber-300">
+        <span className="text-3xs font-bold uppercase tracking-wider text-amber-300">
           Trading Post
         </span>
         {inShop && (
@@ -136,7 +136,7 @@ export default function GearMarketDisplay({
           </button>
         )}
         {view.gearMarketVisible.length === 0 && view.gearDeckCount === 0 && (
-          <span className="text-[10px] italic text-stone-500">empty</span>
+          <span className="text-3xs italic text-stone-500">empty</span>
         )}
       </div>
     </div>

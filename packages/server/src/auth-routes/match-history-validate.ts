@@ -178,9 +178,13 @@ function parseLastStanding(v: Record<string, unknown>): ParseResult<MatchOutcome
     if (!isPlainObject(raw)) return { ok: false, error: `players[${i}]: not an object` };
     const elim = raw.eliminationOrder === undefined ? undefined : asInteger(raw.eliminationOrder);
     if (elim === null) return { ok: false, error: `players[${i}]: invalid eliminationOrder` };
+    // Optional per-player role label (Dungeon Mayhem hero, etc.) — mirrors the
+    // free-for-all/team-member `role` handling so it survives the write round-trip.
+    const role = raw.role !== undefined ? asOptionalString(raw.role, 64) : undefined;
     players.push({
       ...p.value,
       ...(elim !== undefined ? { eliminationOrder: elim } : {}),
+      ...(role !== undefined ? { role } : {}),
     });
   }
   // No explicit winnerUserIds for last-standing — every player without an
@@ -212,8 +216,26 @@ function parseCoop(v: Record<string, unknown>): ParseResult<MatchOutcomeCoop> {
     if (!p.ok) return p;
     participants.push(p.value);
   }
-  if (v.outcome !== "win" && v.outcome !== "loss") {
-    return { ok: false, error: "coop: outcome must be 'win' or 'loss'" };
+  // `outcome` (win/loss) and `score` are both optional, but a coop match needs at
+  // least one: binary co-ops carry win/loss, scored co-ops (Just One) carry a
+  // 0–1000 score instead. Mirrors MatchOutcomeCoopSchema.
+  let outcome: "win" | "loss" | undefined;
+  if (v.outcome !== undefined) {
+    if (v.outcome !== "win" && v.outcome !== "loss") {
+      return { ok: false, error: "coop: outcome must be 'win' or 'loss'" };
+    }
+    outcome = v.outcome;
+  }
+  let score: number | undefined;
+  if (v.score !== undefined) {
+    const n = asInteger(v.score);
+    if (n === null || n < 0 || n > 1000) {
+      return { ok: false, error: "coop: score must be an integer in 0..1000" };
+    }
+    score = n;
+  }
+  if (outcome === undefined && score === undefined) {
+    return { ok: false, error: "coop: needs a win/loss outcome or a score" };
   }
   const difficulty = asOptionalString(v.difficulty, 64);
   const details = asOptionalString(v.details, 1000);
@@ -223,7 +245,8 @@ function parseCoop(v: Record<string, unknown>): ParseResult<MatchOutcomeCoop> {
     value: {
       kind: "coop",
       participants,
-      outcome: v.outcome,
+      ...(outcome !== undefined ? { outcome } : {}),
+      ...(score !== undefined ? { score } : {}),
       ...(difficulty !== undefined ? { difficulty } : {}),
       ...(details !== undefined ? { details } : {}),
       ...(scenario !== undefined ? { scenario } : {}),

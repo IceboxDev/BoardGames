@@ -43,7 +43,7 @@ export default function NigiriStation({
                   <CardFace type={nigiri.type} size={size} wasabiBoosted />
                 </div>
               </div>
-              <span className="mt-1 text-[10px] font-semibold text-green-400">x3 = {val * 3}</span>
+              <span className="mt-1 text-3xs font-semibold text-green-400">x3 = {val * 3}</span>
             </div>
           );
         })}
@@ -54,7 +54,7 @@ export default function NigiriStation({
           return (
             <div key={card.id} className="flex flex-col items-center">
               <CardFace type={card.type} size={size} />
-              <span className="mt-1 text-[10px] text-rose-400/70">{val} pts</span>
+              <span className="mt-1 text-3xs text-rose-400/70">{val} pts</span>
             </div>
           );
         })}
@@ -65,7 +65,7 @@ export default function NigiriStation({
             <div className="animate-pulse rounded-lg ring-2 ring-dashed ring-green-500/30">
               <CardFace type={card.type} size={size} />
             </div>
-            <span className="mt-1 text-[10px] text-green-400/50 italic">Waiting...</span>
+            <span className="mt-1 text-3xs text-green-400/50 italic">Waiting...</span>
           </div>
         ))}
       </div>

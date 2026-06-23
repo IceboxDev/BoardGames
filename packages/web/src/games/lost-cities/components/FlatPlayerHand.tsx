@@ -27,12 +27,12 @@ export default function FlatPlayerHand({
       <div className={`flex items-center gap-1.5 px-0.5 ${compact ? "min-h-0" : ""}`}>
         <span
           className={`font-semibold uppercase tracking-wider ${
-            compact ? "text-[10px]" : "text-xs"
-          } ${isActive ? "text-indigo-400" : "text-gray-500"}`}
+            compact ? "text-3xs" : "text-xs"
+          } ${isActive ? "text-accent-400" : "text-fg-muted"}`}
         >
           {label}
         </span>
-        <span className={`text-gray-600 tabular-nums ${compact ? "text-[9px]" : "text-[10px]"}`}>
+        <span className={`text-fg-disabled tabular-nums ${compact ? "text-[9px]" : "text-3xs"}`}>
           {cards.length}
         </span>
       </div>
@@ -43,7 +43,7 @@ export default function FlatPlayerHand({
           </div>
         ))}
         {sorted.length === 0 && (
-          <span className={`text-gray-600 italic ${compact ? "text-[10px] py-1" : "text-xs py-2"}`}>
+          <span className={`text-fg-disabled italic ${compact ? "text-3xs py-1" : "text-xs py-2"}`}>
             Empty
           </span>
         )}

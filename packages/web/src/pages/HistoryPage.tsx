@@ -10,7 +10,14 @@ import { useMemo, useState } from "react";
 import { NightCard } from "../components/history/NightCard";
 import { RecordMatchModal } from "../components/history/RecordMatchModal";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
-import { Button, EmptyState, LoadingState, PageMain, PageShell } from "../components/ui";
+import {
+  Button,
+  EmptyState,
+  LoadingState,
+  PageHeader,
+  PageMain,
+  PageShell,
+} from "../components/ui";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { fetchCalendarLocks, type LockedDate } from "../lib/calendar-locks";
 import { deleteMatch, fetchHistory, reorderMatchesInNight } from "../lib/match-history";
@@ -77,7 +84,7 @@ export default function HistoryPage() {
   // Optimistically re-rank the dragged night in the cached pages, then reconcile
   // with the server on settle (mirrors `deleteMutation`'s invalidate).
   const reorderMutation = useMutation({
-    mutationFn: ({ dateKey, orderedIds }: { dateKey: string; orderedIds: number[] }) =>
+    mutationFn: ({ dateKey, orderedIds }: { dateKey: string | null; orderedIds: number[] }) =>
       reorderMatchesInNight(dateKey, orderedIds),
     onMutate: async ({ dateKey, orderedIds }) => {
       await queryClient.cancelQueries({ queryKey: qk.history() });
@@ -109,7 +116,9 @@ export default function HistoryPage() {
   });
 
   const [recording, setRecording] = useState<
-    null | { mode: "create"; dateKey: string | null } | { mode: "edit"; match: MatchRecord }
+    | null
+    | { mode: "create"; dateKey: string | null; playedAt?: string }
+    | { mode: "edit"; match: MatchRecord }
   >(null);
 
   const allMatches = useMemo(
@@ -149,10 +158,10 @@ export default function HistoryPage() {
       }
     }
     const ordered = [...byKey.values()].sort((a, b) => b.sortKey.localeCompare(a.sortKey));
-    // Within a real night, matches follow the admin-set `sortOrder` (newest
-    // first by default). Standalone day-groups keep their played_at order.
+    // Every group — real night or standalone day — follows the admin-set
+    // `sortOrder` (newest first by default, since a new match takes the lowest).
     for (const g of ordered) {
-      if (g.dateKey != null) g.matches.sort((a, b) => a.sortOrder - b.sortOrder);
+      g.matches.sort((a, b) => a.sortOrder - b.sortOrder);
     }
     return ordered;
   }, [allMatches, locksQuery.data]);
@@ -171,24 +180,24 @@ export default function HistoryPage() {
       }
     >
       <PageMain width="full" className="max-w-3xl lg:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl">
-        <header className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between sm:gap-4">
-          <div className="min-w-0">
-            <h1 className="text-xl font-semibold text-fg-primary">Board game history</h1>
-            <p className="mt-1 text-sm text-fg-muted">
-              Every match the group has logged, newest first.
-            </p>
-          </div>
-          {isAdmin && (
-            <Button
-              variant="primary"
-              size="sm"
-              onClick={() => setRecording({ mode: "create", dateKey: null })}
-              className="shrink-0 self-start whitespace-nowrap sm:self-auto"
-            >
-              + Record match
-            </Button>
-          )}
-        </header>
+        <PageHeader
+          size="sm"
+          title="Board game history"
+          subtitle="Every match the group has logged, newest first."
+          actions={
+            isAdmin && (
+              <Button
+                variant="primary"
+                size="sm"
+                onClick={() => setRecording({ mode: "create", dateKey: null })}
+                className="whitespace-nowrap"
+              >
+                + Record match
+              </Button>
+            )
+          }
+          className="mb-6"
+        />
 
         {historyQuery.isLoading ? (
           <LoadingState />
@@ -211,8 +220,16 @@ export default function HistoryPage() {
                   isAdmin={isAdmin}
                   currentUserId={currentUserId}
                   onAddMatch={
-                    isAdmin && nightKey
-                      ? () => setRecording({ mode: "create", dateKey: nightKey })
+                    isAdmin
+                      ? () =>
+                          setRecording(
+                            nightKey
+                              ? { mode: "create", dateKey: nightKey }
+                              : // Standalone group: new match defaults to this
+                                // group's day (its latest match's time) so it
+                                // lands here rather than in today's group.
+                                { mode: "create", dateKey: null, playedAt: g.sortKey },
+                          )
                       : undefined
                   }
                   onEditMatch={
@@ -220,8 +237,8 @@ export default function HistoryPage() {
                   }
                   onDeleteMatch={isAdmin ? handleDelete : undefined}
                   onReorder={
-                    isAdmin && nightKey
-                      ? (orderedIds) => reorderMutation.mutate({ dateKey: nightKey, orderedIds })
+                    isAdmin
+                      ? (orderedIds) => reorderMutation.mutate({ dateKey: g.dateKey, orderedIds })
                       : undefined
                   }
                 />

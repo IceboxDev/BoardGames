@@ -35,7 +35,7 @@ export default function PandemicLobbyConfig({ value, onChange }: LobbyConfigProp
 
   return (
     <div className="mx-auto mb-4 w-full max-w-md">
-      <div className="mb-2 text-xs font-medium uppercase tracking-wider text-gray-400">
+      <div className="mb-2 text-xs font-medium uppercase tracking-wider text-fg-secondary">
         Difficulty
       </div>
       <div className="flex gap-2">

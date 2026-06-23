@@ -18,7 +18,7 @@ import { getDb } from "../db.ts";
 import { jsonColumn, parseRow, parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 import { tournamentRegistry } from "./game-registry.ts";
-import { abortTournament, startTournament, subscribeSse } from "./manager.ts";
+import { abortTournament, startTournament, subscribeSse, TournamentLimitError } from "./manager.ts";
 
 export const tournamentRoutes = authedApp();
 
@@ -100,11 +100,15 @@ tournamentRoutes.get("/strategies/:slug", (c) => {
 
 tournamentRoutes.post("/", zJsonBody(StartTournamentBodySchema), async (c) => {
   const body = c.req.valid("json");
+  const user = c.get("user");
 
   try {
-    const { id } = await startTournament(body.gameSlug, body.config);
+    const { id } = await startTournament(body.gameSlug, body.config, user.id);
     return c.json(StartTournamentResponseSchema.parse({ id }), 201);
   } catch (err) {
+    if (err instanceof TournamentLimitError) {
+      return errorResponse(c, 409, err.message);
+    }
     const message = err instanceof Error ? err.message : "Failed to start tournament";
     return errorResponse(c, 400, message);
   }

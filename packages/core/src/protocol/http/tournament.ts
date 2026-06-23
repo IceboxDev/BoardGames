@@ -11,10 +11,26 @@ export type StrategyInfo = z.infer<typeof StrategyInfoSchema>;
 
 export const StrategyListSchema = z.array(StrategyInfoSchema);
 
+/**
+ * Upper bound on `numGames` per tournament. Every game's config carries
+ * `numGames`; it sizes the server's game loop AND the per-core worker fan-out,
+ * so an unbounded value is a denial-of-service (huge array allocation + every
+ * core pinned). The cap matches the tournament-grid UI's `max` input.
+ */
+export const MAX_TOURNAMENT_GAMES = 10_000;
+
 export const StartTournamentBodySchema = z.object({
   gameSlug: GameSlugSchema,
-  /** Per-game config — left as unknown until per-game schemas land. */
-  config: z.record(z.string(), z.unknown()),
+  /**
+   * Per-game config. The per-game shape stays open (`catchall`), but the
+   * shared `numGames` field is bounded here at the wire boundary so the server
+   * never forks work for an attacker-chosen game count. `catchall` (not a plain
+   * object) is load-bearing: it KEEPS per-game keys like `strategyAId` /
+   * `strategies` instead of stripping them. See MAX_TOURNAMENT_GAMES.
+   */
+  config: z
+    .object({ numGames: z.number().int().min(1).max(MAX_TOURNAMENT_GAMES) })
+    .catchall(z.unknown()),
 });
 export type StartTournamentBody = z.input<typeof StartTournamentBodySchema>;
 

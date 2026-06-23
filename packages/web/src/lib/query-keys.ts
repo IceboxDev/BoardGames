@@ -13,4 +13,7 @@ export const qk = {
   history: () => ["history"] as const,
   historyByNight: (dateKey: string) => ["history", "by-night", dateKey] as const,
   calendarFeed: () => ["calendar", "feed"] as const,
+  players: () => ["players"] as const,
+  profile: (userId: string | null | undefined) => ["profile", userId] as const,
+  profileMatches: (userId: string) => ["profile", userId, "matches"] as const,
 } as const;

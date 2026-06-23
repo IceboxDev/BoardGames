@@ -7,6 +7,7 @@
 //   - "multi":  any subset, joined with " + " when stored as a single string
 //               (7 Wonders expansions, Exploding Kittens death/revival modes).
 
+import { DUNGEON_MAYHEM_SET_LABELS } from "./dungeon-mayhem/characters";
 import { VILLAINOUS_EDITION_LABELS } from "./villainous/villains";
 
 export type VariantOption = {
@@ -96,6 +97,36 @@ const VARIANTS: Record<string, GameVariantConfig> = {
     label: "Edition",
     mode: "single",
     options: VILLAINOUS_EDITION_LABELS.map((e) => ({ value: e, label: e })),
+  },
+  // Lovecraft Letter is a point-less free-for-all with a single ruleset, so the
+  // version is a fixed "Standard" subtitle (like Bandit). HOW the winner won (the
+  // win condition) is recorded on the winner's `role` in LovecraftLetterForm and
+  // shown next to them in the history — it is NOT the scenario.
+  "lovecraft-letter": {
+    label: "Edition",
+    mode: "single",
+    fixed: true,
+    options: [{ value: "Standard", label: "Standard" }],
+  },
+  // Just One: a cooperative game with two rulesets — Standard, or Discardless
+  // (the harder variant). Shown as the MatchCard subtitle.
+  "just-one": {
+    label: "Mode",
+    mode: "single",
+    options: [
+      { value: "Standard", label: "Standard" },
+      { value: "Discardless", label: "Discardless" },
+    ],
+  },
+  // Dungeon Mayhem is recorded as an elimination match; the sets in play are
+  // picked here (multi-select, like 7 Wonders expansions) and drive which heroes
+  // the per-player picker offers — see `dungeon-mayhem/characters.ts`. Standard
+  // is pre-checked as the common base; expansions stay opt-in.
+  "dungeon-mayhem": {
+    label: "Sets in play",
+    mode: "multi",
+    default: "Standard",
+    options: DUNGEON_MAYHEM_SET_LABELS.map((s) => ({ value: s, label: s })),
   },
   "exploding-kittens": {
     label: "Modes in play",

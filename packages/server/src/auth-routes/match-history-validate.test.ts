@@ -33,3 +33,83 @@ describe("parseOutcome — free-for-all role round-trip", () => {
     }
   });
 });
+
+describe("parseOutcome — last-standing role round-trip", () => {
+  it("preserves each player's role (Dungeon Mayhem hero) and elimination order", () => {
+    const result = parseOutcome({
+      kind: "last-standing",
+      scenario: "Standard + Monster Madness",
+      players: [
+        { userId: "u1", displayName: "Alice", role: "Sutha" },
+        { userId: "u2", displayName: "Bob", eliminationOrder: 0, role: "Blorp" },
+      ],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "last-standing") {
+      expect(result.value.players[0]).toMatchObject({ role: "Sutha" });
+      expect(result.value.players[1]).toMatchObject({ eliminationOrder: 0, role: "Blorp" });
+      expect(result.value.scenario).toBe("Standard + Monster Madness");
+    }
+  });
+
+  it("omits role entirely when a player has none", () => {
+    const result = parseOutcome({
+      kind: "last-standing",
+      players: [
+        { userId: "u1", displayName: "Alice" },
+        { userId: "u2", displayName: "Bob", eliminationOrder: 0 },
+      ],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "last-standing") {
+      expect("role" in result.value.players[0]).toBe(false);
+    }
+  });
+});
+
+describe("parseOutcome — coop score (Just One)", () => {
+  it("accepts a scored co-op with no win/loss and preserves the score", () => {
+    const result = parseOutcome({
+      kind: "coop",
+      participants: [
+        { userId: "u1", displayName: "Alice" },
+        { userId: "u2", displayName: "Bob" },
+      ],
+      score: 11,
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "coop") {
+      expect(result.value.score).toBe(11);
+      expect("outcome" in result.value).toBe(false);
+    }
+  });
+
+  it("still accepts a binary win/loss co-op", () => {
+    const result = parseOutcome({
+      kind: "coop",
+      participants: [{ userId: "u1", displayName: "Alice" }],
+      outcome: "win",
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "coop") {
+      expect(result.value.outcome).toBe("win");
+      expect("score" in result.value).toBe(false);
+    }
+  });
+
+  it("rejects a co-op with neither outcome nor score", () => {
+    expect(
+      parseOutcome({ kind: "coop", participants: [{ userId: "u1", displayName: "Alice" }] }).ok,
+    ).toBe(false);
+  });
+
+  it("rejects an out-of-range score", () => {
+    expect(
+      parseOutcome({
+        kind: "coop",
+        participants: [{ userId: "u1", displayName: "Alice" }],
+        score: -3,
+      }).ok,
+    ).toBe(false);
+  });
+});

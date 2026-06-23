@@ -137,6 +137,7 @@ export function describeOutcomeError(
   switch (outcome.kind) {
     case "free-for-all":
       if (gameSlug === "villainous") return describeVillainousError(outcome);
+      if (gameSlug === "lovecraft-letter") return describeLovecraftLetterError(outcome);
       if (outcome.players.length < 2) return "Add at least two players";
       return null;
     case "teams":
@@ -151,6 +152,7 @@ export function describeOutcomeError(
       return null;
     case "coop":
       if (outcome.participants.length < 1) return "Add at least one participant";
+      if (gameSlug === "just-one" && outcome.score === undefined) return "Pick your score (0–13)";
       return null;
     case "one-vs-many":
       if (!outcome.solo.userId) return "Pick the solo player";
@@ -170,6 +172,19 @@ export function describeVillainousError(outcome: MatchOutcomeFreeForAll): string
   const winners = outcome.players.filter((p) => p.rank === 1);
   if (winners.length === 0) return "Crown the player who won";
   if (winners.length > 1) return "Only one player can win Villainous";
+  return null;
+}
+
+/**
+ * Lovecraft Letter is a point-less free-for-all: exactly one winner (`rank: 1`),
+ * no scores. The win condition is the scenario, picked in the variant picker.
+ */
+export function describeLovecraftLetterError(outcome: MatchOutcomeFreeForAll): string | null {
+  if (outcome.players.length < 2) return "Add at least two players";
+  const winners = outcome.players.filter((p) => p.rank === 1);
+  if (winners.length === 0) return "Crown the player who won";
+  if (winners.length > 1) return "Only one player can win";
+  if (!winners[0].role) return `Pick how ${winners[0].displayName} won`;
   return null;
 }
 

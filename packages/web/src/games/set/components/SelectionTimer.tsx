@@ -22,13 +22,13 @@ export default function SelectionTimer({ deadline }: SelectionTimerProps) {
 
   return (
     <div className="flex items-center gap-2">
-      <div className="flex-1 h-2 rounded-full bg-gray-700 overflow-hidden">
+      <div className="flex-1 h-2 rounded-full bg-surface-700 overflow-hidden">
         <div
           className={`h-full rounded-full transition-all duration-100 ${color}`}
           style={{ width: `${fraction * 100}%` }}
         />
       </div>
-      <span className="text-xs font-mono font-semibold text-gray-400 w-8 text-right tabular-nums">
+      <span className="text-xs font-mono font-semibold text-fg-secondary w-8 text-right tabular-nums">
         {seconds}
       </span>
     </div>

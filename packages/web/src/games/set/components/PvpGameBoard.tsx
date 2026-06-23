@@ -57,11 +57,11 @@ export default function PvpGameBoard({ view, playerIndex, opponentName, send }: 
         {/* Opponent bar */}
         <div
           className={`flex items-center justify-between rounded-lg px-4 py-2 shrink-0 ${
-            oppIsSelecting ? "bg-emerald-900/30 border border-emerald-500/40" : "bg-gray-800/60"
+            oppIsSelecting ? "bg-emerald-900/30 border border-emerald-500/40" : "bg-surface-800/60"
           }`}
         >
           <div className="flex items-center gap-3">
-            <span className="text-sm font-semibold text-gray-300">{opponentName}</span>
+            <span className="text-sm font-semibold text-fg-secondary">{opponentName}</span>
             {oppIsSelecting && (
               <span className="text-xs font-semibold text-emerald-400 animate-pulse">
                 Selecting...
@@ -71,7 +71,7 @@ export default function PvpGameBoard({ view, playerIndex, opponentName, send }: 
           <div className="flex items-center gap-4 text-sm">
             <span className="text-green-400 font-bold">{oppState.score} SETs</span>
             <span className="text-red-400 font-bold">{oppState.penalties} Pen</span>
-            <span className="text-gray-400 font-semibold">
+            <span className="text-fg-secondary font-semibold">
               Net {oppState.score - oppState.penalties}
             </span>
           </div>
@@ -111,15 +111,15 @@ export default function PvpGameBoard({ view, playerIndex, opponentName, send }: 
       </div>
 
       {/* Right sidebar — your stats & SET button */}
-      <div className="flex flex-col gap-3 px-5 py-4 shrink-0 w-44 border-l border-gray-800">
-        <p className="text-xs text-gray-500 uppercase tracking-wide">You</p>
+      <div className="flex flex-col gap-3 px-5 py-4 shrink-0 w-44 border-l border-white/10">
+        <p className="text-xs text-fg-muted uppercase tracking-wide">You</p>
         <StatRow label="SETs" value={String(myState.score)} color="text-green-400" />
         <StatRow label="Penalties" value={String(myState.penalties)} color="text-red-400" />
         <StatRow label="Net" value={String(myState.score - myState.penalties)} />
-        <StatRow label="Deck" value={String(view.deckRemaining)} color="text-gray-500" />
+        <StatRow label="Deck" value={String(view.deckRemaining)} color="text-fg-muted" />
 
         {iAmSelecting && (
-          <div className="pt-3 border-t border-gray-800">
+          <div className="pt-3 border-t border-white/10">
             <p className="text-xs text-yellow-300 font-semibold leading-snug">Select 3 cards</p>
           </div>
         )}
@@ -133,16 +133,18 @@ export default function PvpGameBoard({ view, playerIndex, opponentName, send }: 
           className={[
             "rounded-xl px-5 py-3 text-lg font-extrabold tracking-wider text-white transition-all duration-200 w-full",
             canCallSet
-              ? "bg-indigo-600 hover:bg-indigo-500 active:scale-95 cursor-pointer"
-              : "bg-gray-700 opacity-40 cursor-not-allowed",
+              ? "bg-indigo-600 hover:bg-accent-500 active:scale-95 cursor-pointer"
+              : "bg-surface-700 opacity-40 cursor-not-allowed",
           ].join(" ")}
         >
           SET!
         </button>
 
-        <p className="text-center text-[10px] text-gray-600">
+        <p className="text-center text-3xs text-fg-disabled">
           or press{" "}
-          <kbd className="rounded bg-gray-700 px-1.5 py-0.5 font-mono text-gray-400">Space</kbd>
+          <kbd className="rounded bg-surface-700 px-1.5 py-0.5 font-mono text-fg-secondary">
+            Space
+          </kbd>
         </p>
       </div>
     </div>
@@ -160,7 +162,7 @@ function StatRow({
 }) {
   return (
     <div className="flex items-baseline justify-between gap-2">
-      <span className="text-xs text-gray-500 uppercase tracking-wide">{label}</span>
+      <span className="text-xs text-fg-muted uppercase tracking-wide">{label}</span>
       <span className={`text-base font-bold tabular-nums ${color}`}>{value}</span>
     </div>
   );

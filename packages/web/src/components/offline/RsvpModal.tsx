@@ -10,6 +10,7 @@ import { qk } from "../../lib/query-keys";
 import { ClockIcon, HostIcon, PadlockIcon, PinIcon } from "../icons";
 import {
   EmptyState,
+  ErrorAlert,
   IconButton,
   LoadingState,
   Modal,
@@ -240,7 +241,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
       subheader={subheader}
       headerExtra={picksLockToggle}
     >
-      {error && <p className="text-center text-xs text-rose-400">{error}</p>}
+      {error && <ErrorAlert message={error} className="text-center" />}
 
       {lockedOut && (
         <EmptyState

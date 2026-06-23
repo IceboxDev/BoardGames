@@ -76,13 +76,13 @@ function YourBoard({ groups, tableau, hasSelected, handCount, round, score }: Yo
   const hasCards = hasAnyCards(groups);
 
   return (
-    <div className="bamboo-mat rounded-2xl border border-orange-500/20 bg-gray-900/80 p-3">
+    <div className="bamboo-mat rounded-2xl border border-orange-500/20 bg-surface-900/80 p-3">
       {/* Header */}
       <div className="mb-3 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <span className="text-sm font-bold text-orange-300">Your Board</span>
           {round && (
-            <span className="text-xs text-gray-500">
+            <span className="text-xs text-fg-muted">
               Round {round} &middot; {tableau.length} cards
             </span>
           )}
@@ -90,7 +90,7 @@ function YourBoard({ groups, tableau, hasSelected, handCount, round, score }: Yo
             <span className="text-xs font-semibold tabular-nums text-orange-400">{score} pts</span>
           )}
         </div>
-        <div className="text-xs text-gray-500">
+        <div className="text-xs text-fg-muted">
           {hasSelected ? (
             <span className="text-green-400">Ready</span>
           ) : (
@@ -103,7 +103,7 @@ function YourBoard({ groups, tableau, hasSelected, handCount, round, score }: Yo
       {hasCards ? (
         <StationGrid groups={groups} />
       ) : (
-        <div className="py-6 text-center text-sm text-gray-600 italic">
+        <div className="py-6 text-center text-sm text-fg-disabled italic">
           Your sushi bar is empty — pick your first card!
         </div>
       )}
@@ -142,15 +142,15 @@ function OpponentBoard({
   return (
     // biome-ignore lint/a11y/noStaticElementInteractions: hover-to-preview is decorative
     <div
-      className="rounded-lg border border-gray-800 bg-gray-900/50 p-1.5"
+      className="rounded-lg border border-white/10 bg-surface-900/50 p-1.5"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       {/* Compact header + card strip */}
       <div className="flex items-center gap-2">
-        <span className="shrink-0 text-xs text-gray-400">P{index + 1}</span>
+        <span className="shrink-0 text-xs text-fg-secondary">P{index + 1}</span>
         {score != null && score > 0 && (
-          <span className="shrink-0 text-[10px] font-semibold tabular-nums text-gray-300">
+          <span className="shrink-0 text-3xs font-semibold tabular-nums text-fg-secondary">
             {score}
           </span>
         )}
@@ -163,9 +163,11 @@ function OpponentBoard({
               wasabiBoosted={wasabiBoostedNigiriIds.includes(card.id)}
             />
           ))}
-          {tableau.length === 0 && <span className="text-xs text-gray-600 italic">No cards</span>}
+          {tableau.length === 0 && (
+            <span className="text-xs text-fg-disabled italic">No cards</span>
+          )}
         </div>
-        <div className="ml-auto flex shrink-0 items-center gap-1.5 text-[10px] text-gray-500">
+        <div className="ml-auto flex shrink-0 items-center gap-1.5 text-3xs text-fg-muted">
           {totalMaki > 0 && <span>🍣{totalMaki}</span>}
           {totalPuddings > 0 && <span>🍮{totalPuddings}</span>}
           {hasSelected ? <span className="text-green-400">✓</span> : <span>{handCount}</span>}
@@ -182,7 +184,7 @@ function OpponentBoard({
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
             className="overflow-hidden"
           >
-            <div className="bamboo-mat mt-2 rounded-xl border border-gray-700/30 p-2">
+            <div className="bamboo-mat mt-2 rounded-xl border border-white/10 p-2">
               <StationGrid groups={groups} compact />
             </div>
           </motion.div>

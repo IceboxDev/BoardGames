@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MatchHistory } from "../../../components/match-history";
 import { Button } from "../../../components/ui/Button";
+import { SegmentedControl } from "../../../components/ui/SegmentedControl";
 import { useSetHistory } from "../hooks/useSetHistory";
 import HighScores from "./HighScores";
 
@@ -30,32 +31,17 @@ export default function SetMatchHistory({ onBack }: { onBack: () => void }) {
         </Button>
       </div>
 
-      <div className="mb-6 flex gap-1 border-b border-gray-800 pb-px">
-        <Button
-          variant="ghost"
-          size="md"
-          onClick={() => setTab("trainer")}
-          className={`!rounded-none border-b-2 ${
-            tab === "trainer"
-              ? "!border-indigo-500 !text-white"
-              : "!border-transparent !text-gray-500 hover:!text-gray-300"
-          }`}
-        >
-          Trainer
-        </Button>
-        <Button
-          variant="ghost"
-          size="md"
-          onClick={() => setTab("pvp")}
-          className={`!rounded-none border-b-2 ${
-            tab === "pvp"
-              ? "!border-indigo-500 !text-white"
-              : "!border-transparent !text-gray-500 hover:!text-gray-300"
-          }`}
-        >
-          PvP
-        </Button>
-      </div>
+      <SegmentedControl<HistoryTab>
+        selectionMode="tabs"
+        aria-label="History type"
+        options={[
+          { value: "trainer", label: "Trainer" },
+          { value: "pvp", label: "PvP" },
+        ]}
+        value={tab}
+        onChange={setTab}
+        className="mb-6"
+      />
 
       {tab === "trainer" ? (
         <HighScores history={trainerHistory} onClear={clearTrainer} onBack={onBack} />

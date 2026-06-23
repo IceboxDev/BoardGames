@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { CardDeck } from "../components/CardDeck";
 import { Chip } from "../components/ui/Chip";
-import { PageShell } from "../components/ui/PageShell";
+import { PageMain, PageShell } from "../components/ui/PageShell";
 
 // ---------------------------------------------------------------------------
 // Sample card backs
@@ -78,8 +78,8 @@ export default function DeckPreview() {
 
   return (
     <PageShell background="plain">
-      <main className="flex flex-1 flex-col text-white">
-        <div className="border-b border-gray-800 px-6 py-4">
+      <PageMain width="full" padding="none" className="flex flex-1 flex-col text-white">
+        <div className="border-b border-white/10 px-6 py-4">
           <h1 className="text-xl font-bold tracking-tight">CardDeck Preview</h1>
           <p className="mt-1 text-sm text-fg-muted">Reusable card deck component for all games</p>
         </div>
@@ -181,7 +181,7 @@ export default function DeckPreview() {
               <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-fg-secondary">
                 All sizes
               </h2>
-              <div className="flex items-end gap-10 rounded-xl border border-gray-800 bg-gray-900/50 p-8">
+              <div className="flex items-end gap-10 rounded-xl border border-white/10 bg-surface-900/50 p-8">
                 {(["sm", "md", "lg"] as const).map((sz) => (
                   <div key={sz} className="flex flex-col items-center gap-3">
                     <CardDeck
@@ -208,7 +208,7 @@ export default function DeckPreview() {
               <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-fg-secondary">
                 Low count visualization (0-6)
               </h2>
-              <div className="flex items-end gap-6 rounded-xl border border-gray-800 bg-gray-900/50 p-8">
+              <div className="flex items-end gap-6 rounded-xl border border-white/10 bg-surface-900/50 p-8">
                 {[0, 1, 2, 3, 4, 5, 6].map((n) => (
                   <div key={n} className="flex flex-col items-center gap-3">
                     <CardDeck
@@ -232,7 +232,7 @@ export default function DeckPreview() {
               <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-fg-secondary">
                 Without trump (Lost Cities style)
               </h2>
-              <div className="flex items-end gap-6 rounded-xl border border-gray-800 bg-gray-900/50 p-8">
+              <div className="flex items-end gap-6 rounded-xl border border-white/10 bg-surface-900/50 p-8">
                 {[1, 5, 15, 30].map((n) => (
                   <div key={n} className="flex flex-col items-center gap-3">
                     <CardDeck count={n} size="md" renderBack={back.render} />
@@ -243,7 +243,7 @@ export default function DeckPreview() {
             </div>
           </div>
         </div>
-      </main>
+      </PageMain>
     </PageShell>
   );
 }

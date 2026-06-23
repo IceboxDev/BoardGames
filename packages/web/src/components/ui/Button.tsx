@@ -7,7 +7,7 @@ import type { ButtonHTMLAttributes, Ref } from "react";
 // (close X, edit, delete) live in `IconButton.tsx`; toggle / picker chips
 // live in `Chip.tsx`.
 
-type Variant = "primary" | "secondary" | "ghost" | "danger" | "warning" | "link";
+type Variant = "primary" | "secondary" | "ghost" | "danger" | "warning" | "success" | "link";
 type Size = "xs" | "sm" | "md" | "lg";
 type Shape = "rounded" | "pill";
 
@@ -44,6 +44,12 @@ const VARIANTS: Record<Variant, string> = {
   // than a primary CTA.
   warning:
     "bg-amber-500/15 text-amber-100 border border-amber-400/40 hover:bg-amber-500/25 hover:border-amber-300/60",
+  // Emerald-tinted "confirm / commit" button — the go-ahead twin of `danger`.
+  // Use this for the green "Confirm" / "Take" / "Play selected" action that
+  // games used to hand-roll as important-flag emerald overrides on a secondary
+  // button. Same tinted-bordered shape as danger/warning.
+  success:
+    "bg-emerald-500/15 text-emerald-300 border border-emerald-400/40 hover:bg-emerald-500/25 hover:border-emerald-300/60",
   // Pure text link — no background, just color hover. Used by "Leave Room"
   // / "Back" / "Reset" style passive affordances inside action surfaces
   // where a bordered button would feel too heavy.

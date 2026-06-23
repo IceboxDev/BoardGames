@@ -2,6 +2,7 @@ import { formatTime } from "@boardgames/core/games/set/metrics";
 import type { GameRecord } from "@boardgames/core/games/set/types";
 import { useMemo, useState } from "react";
 import { Button } from "../../../components/ui/Button";
+import { SegmentedControl } from "../../../components/ui/SegmentedControl";
 import Sparkline from "./charts/Sparkline";
 import GameDetailModal from "./GameDetailModal";
 import ProgressDashboard from "./ProgressDashboard";
@@ -105,58 +106,43 @@ export default function HighScores({ history, onClear, onBack }: HighScoresProps
       </div>
 
       {/* Tabs */}
-      <div className="mb-6 flex gap-1 border-b border-gray-800 pb-px">
-        <Button
-          variant="ghost"
-          size="md"
-          onClick={() => setTab("history")}
-          className={`!rounded-none border-b-2 ${
-            tab === "history"
-              ? "!border-indigo-500 !text-white"
-              : "!border-transparent !text-gray-500 hover:!text-gray-300"
-          }`}
-        >
-          History
-        </Button>
-        <Button
-          variant="ghost"
-          size="md"
-          onClick={() => setTab("progress")}
-          className={`!rounded-none border-b-2 ${
-            tab === "progress"
-              ? "!border-indigo-500 !text-white"
-              : "!border-transparent !text-gray-500 hover:!text-gray-300"
-          }`}
-        >
-          Progress
-        </Button>
-      </div>
+      <SegmentedControl<Tab>
+        selectionMode="tabs"
+        aria-label="View"
+        options={[
+          { value: "history", label: "History" },
+          { value: "progress", label: "Progress" },
+        ]}
+        value={tab}
+        onChange={setTab}
+        className="mb-6"
+      />
 
       {tab === "progress" ? (
         <ProgressDashboard history={history} />
       ) : sorted.length === 0 ? (
-        <p className="text-center text-gray-500 mt-12">
+        <p className="text-center text-fg-muted mt-12">
           No games played yet. Complete a game to see scores here.
         </p>
       ) : (
         <div className="overflow-x-auto">
           <table className="w-full text-sm text-left">
             <thead>
-              <tr className="border-b border-gray-800">
-                <th className="px-3 py-2 text-gray-500">#</th>
+              <tr className="border-b border-white/10">
+                <th className="px-3 py-2 text-fg-muted">#</th>
                 {COLUMNS.map((col) => (
                   <th
                     key={col.key}
                     onClick={() => setSortBy(col.key)}
                     className={`cursor-pointer px-3 py-2 transition hover:text-white ${
-                      sortBy === col.key ? "text-indigo-400" : "text-gray-500"
+                      sortBy === col.key ? "text-accent-400" : "text-fg-muted"
                     }`}
                   >
                     {col.label}
                     {sortBy === col.key && " ▾"}
                   </th>
                 ))}
-                {ratingTrend.length >= 2 && <th className="px-3 py-2 text-gray-500">Trend</th>}
+                {ratingTrend.length >= 2 && <th className="px-3 py-2 text-fg-muted">Trend</th>}
               </tr>
             </thead>
             <tbody>
@@ -173,29 +159,29 @@ export default function HighScores({ history, onClear, onBack }: HighScoresProps
                   <tr
                     key={rec.id}
                     onClick={() => setSelectedGame(rec)}
-                    className={`border-b border-gray-800/50 hover:bg-gray-800/40 cursor-pointer transition ${rowBg}`}
+                    className={`border-b border-white/10 hover:bg-surface-800/40 cursor-pointer transition ${rowBg}`}
                   >
-                    <td className="px-3 py-2 text-gray-600">{i + 1}</td>
+                    <td className="px-3 py-2 text-fg-disabled">{i + 1}</td>
                     <td className="px-3 py-2 font-bold text-white">
                       {rec.rating}
                       {pbs?.has("rating") && <PBBadge />}
                     </td>
-                    <td className="px-3 py-2 text-gray-300">
+                    <td className="px-3 py-2 text-fg-secondary">
                       {rec.netScore}
                       {pbs?.has("netScore") && <PBBadge />}
                     </td>
-                    <td className="px-3 py-2 text-gray-300">
+                    <td className="px-3 py-2 text-fg-secondary">
                       {rec.throughput}/min
                       {pbs?.has("throughput") && <PBBadge />}
                     </td>
-                    <td className="px-3 py-2 text-gray-300">
+                    <td className="px-3 py-2 text-fg-secondary">
                       {rec.accuracy}%{pbs?.has("accuracy") && <PBBadge />}
                     </td>
-                    <td className="px-3 py-2 font-mono text-gray-300">
+                    <td className="px-3 py-2 font-mono text-fg-secondary">
                       {formatTime(rec.avgFindTimeMs)}
                       {pbs?.has("avgFindTimeMs") && <PBBadge />}
                     </td>
-                    <td className="px-3 py-2 text-gray-500">
+                    <td className="px-3 py-2 text-fg-muted">
                       {new Date(rec.timestamp).toLocaleDateString()}
                     </td>
                     {ratingTrend.length >= 2 && (
@@ -224,7 +210,7 @@ export default function HighScores({ history, onClear, onBack }: HighScoresProps
 
 function PBBadge() {
   return (
-    <span className="ml-1 inline-block rounded bg-yellow-500/20 px-1 py-px text-[10px] font-bold text-yellow-400 align-middle leading-tight">
+    <span className="ml-1 inline-block rounded bg-yellow-500/20 px-1 py-px text-3xs font-bold text-yellow-400 align-middle leading-tight">
       PB
     </span>
   );

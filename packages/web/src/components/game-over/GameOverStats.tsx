@@ -10,9 +10,7 @@ export function GameOverStats({ children, columns = 2 }: GameOverStatsProps) {
     columns === 4 ? "grid-cols-2 sm:grid-cols-4" : columns === 3 ? "grid-cols-3" : "grid-cols-2";
 
   return (
-    <div
-      className={`grid gap-3 rounded-xl border border-gray-700/50 bg-surface-800 p-4 ${colsClass}`}
-    >
+    <div className={`grid gap-3 rounded-xl border border-white/10 bg-surface-800 p-4 ${colsClass}`}>
       {children}
     </div>
   );

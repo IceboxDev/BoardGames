@@ -28,7 +28,7 @@ type BoardOverlayProps = {
   /** Toggle copy while the overlay is hidden (the "show" action). */
   showLabel: string;
   showIcon?: ReactNode;
-  /** Backdrop tint (game-flavored), e.g. "bg-slate-950/70". */
+  /** Backdrop tint (game-flavored), e.g. "bg-surface-950/70". */
   backdropClassName?: string;
   /** Floating toggle button color (game-flavored). */
   toggleClassName?: string;

@@ -20,7 +20,7 @@ export default function DiscardPile({ color, cards, onClick, glowing = false }: 
           <Card card={topCard} size="sm" onClick={onClick} disabled={!onClick} glowing={glowing} />
           {cards.length > 1 && (
             <span
-              className="absolute -top-1.5 -right-1.5 text-[0.5rem] font-bold rounded-full w-4 h-4 flex items-center justify-center"
+              className="absolute -top-1.5 -right-1.5 text-4xs font-bold rounded-full w-4 h-4 flex items-center justify-center"
               style={{ backgroundColor: hex, color: "white" }}
             >
               {cards.length}

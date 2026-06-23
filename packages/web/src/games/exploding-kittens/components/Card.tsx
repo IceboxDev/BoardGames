@@ -99,7 +99,7 @@ export function CardPlaceholder({
   const sizeClass = SIZE_CLASSES[size];
   return (
     <div
-      className={`${sizeClass} flex items-center justify-center rounded-xl border-2 border-dashed border-gray-700 text-gray-600 text-xs`}
+      className={`${sizeClass} flex items-center justify-center rounded-xl border-2 border-dashed border-gray-700 text-fg-disabled text-xs`}
     >
       {label}
     </div>

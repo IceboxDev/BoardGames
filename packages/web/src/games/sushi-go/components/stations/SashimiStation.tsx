@@ -40,7 +40,7 @@ export default function SashimiStation({
                 </div>
               ))}
             </div>
-            <span className="mt-1 rounded-full bg-emerald-500/20 px-1.5 text-[10px] font-semibold text-emerald-300">
+            <span className="mt-1 rounded-full bg-emerald-500/20 px-1.5 text-3xs font-semibold text-emerald-300">
               10 pts
             </span>
           </div>
@@ -64,7 +64,7 @@ export default function SashimiStation({
                 );
               })}
             </div>
-            <span className="mt-1 text-[10px] text-emerald-400/50 italic">
+            <span className="mt-1 text-3xs text-emerald-400/50 italic">
               Need {3 - remainder.length} more
             </span>
           </div>

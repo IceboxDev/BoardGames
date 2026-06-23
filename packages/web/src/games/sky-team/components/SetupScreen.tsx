@@ -98,7 +98,7 @@ export default function SetupScreen({ onStart }: Props) {
     <div className="relative z-10 flex h-full min-h-0 w-full flex-col overflow-hidden px-4 pb-4 pt-3 sm:px-6 sm:pb-5 sm:pt-4">
       <header className="mb-3 flex shrink-0 items-baseline gap-3">
         <h1 className="text-xl font-bold text-white sm:text-2xl">Sky Team</h1>
-        <p className="text-xs text-slate-400 sm:text-sm">
+        <p className="text-xs text-fg-secondary sm:text-sm">
           Pick a destination, your seat, and an AI partner
         </p>
       </header>
@@ -168,16 +168,16 @@ function SeatCard({
     <button
       type="button"
       onClick={onSelect}
-      className={`group relative flex flex-col justify-center gap-1 overflow-hidden rounded-lg border bg-gray-800/60 px-3 py-2 text-left transition-all duration-150 ${
+      className={`group relative flex flex-col justify-center gap-1 overflow-hidden rounded-lg border bg-surface-800/60 px-3 py-2 text-left transition-all duration-150 ${
         selected
-          ? "border-white/30 bg-gray-800 shadow-md"
-          : "border-gray-700/70 hover:bg-gray-800 hover:border-gray-600"
+          ? "border-white/30 bg-surface-800 shadow-md"
+          : "border-white/10 hover:bg-surface-800 hover:border-white/10"
       }`}
       style={{ borderLeftWidth: "4px", borderLeftColor: option.accentColor }}
       aria-pressed={selected}
     >
       <span className="text-sm font-bold text-white">{option.label}</span>
-      <span className="text-[10px] leading-tight text-gray-400">{option.description}</span>
+      <span className="text-3xs leading-tight text-fg-secondary">{option.description}</span>
     </button>
   );
 }
@@ -196,10 +196,10 @@ function StrategyCard({
     <button
       type="button"
       onClick={onSelect}
-      className={`group relative flex h-full flex-col gap-1 overflow-hidden rounded-lg border bg-gray-800/60 px-3 py-2 text-left transition-all duration-150 ${
+      className={`group relative flex h-full flex-col gap-1 overflow-hidden rounded-lg border bg-surface-800/60 px-3 py-2 text-left transition-all duration-150 ${
         selected
-          ? "border-white/30 bg-gray-800 shadow-md"
-          : "border-gray-700/70 hover:bg-gray-800 hover:border-gray-600"
+          ? "border-white/30 bg-surface-800 shadow-md"
+          : "border-white/10 hover:bg-surface-800 hover:border-white/10"
       }`}
       style={{ borderLeftWidth: "4px", borderLeftColor: option.accentColor }}
       aria-pressed={selected}
@@ -212,7 +212,7 @@ function StrategyCard({
           {option.difficulty}
         </span>
       </div>
-      <span className="line-clamp-2 text-[10px] leading-tight text-gray-400">
+      <span className="line-clamp-2 text-3xs leading-tight text-fg-secondary">
         {option.description}
       </span>
     </button>
@@ -242,8 +242,8 @@ function LaunchSummary({
         <span className="font-mono text-base font-black tracking-wider text-white">
           {airportCode}
         </span>
-        <span className="line-clamp-1 text-[11px] text-gray-300">{airportName}</span>
-        <span className="text-[10px] text-slate-500">Flying as {seatLabel}</span>
+        <span className="line-clamp-1 text-2xs text-fg-secondary">{airportName}</span>
+        <span className="text-3xs text-fg-muted">Flying as {seatLabel}</span>
       </div>
       <Button variant="primary" size="lg" block onClick={onStart}>
         Start Flight

@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  MAX_TOURNAMENT_GAMES,
   StartTournamentBodySchema,
   StrategyListSchema,
   TournamentStreamEventSchema,
@@ -33,6 +34,38 @@ describe("StartTournamentBodySchema", () => {
     expect(() =>
       StartTournamentBodySchema.parse({ gameSlug: "Lost Cities", config: {} }),
     ).toThrow();
+  });
+
+  it("accepts numGames up to the cap", () => {
+    expect(() =>
+      StartTournamentBodySchema.parse({
+        gameSlug: "lost-cities",
+        config: { numGames: MAX_TOURNAMENT_GAMES, strategyAId: "a", strategyBId: "b" },
+      }),
+    ).not.toThrow();
+  });
+
+  it("rejects an unbounded numGames (DoS guard)", () => {
+    expect(() =>
+      StartTournamentBodySchema.parse({
+        gameSlug: "lost-cities",
+        config: { numGames: 1_000_000_000 },
+      }),
+    ).toThrow();
+  });
+
+  it("rejects numGames that is zero, negative, fractional, or missing", () => {
+    for (const config of [{ numGames: 0 }, { numGames: -5 }, { numGames: 10.5 }, {}]) {
+      expect(() => StartTournamentBodySchema.parse({ gameSlug: "lost-cities", config })).toThrow();
+    }
+  });
+
+  it("keeps per-game config keys alongside numGames (catchall, not strip)", () => {
+    const parsed = StartTournamentBodySchema.parse({
+      gameSlug: "exploding-kittens",
+      config: { numGames: 50, strategies: ["a", "b", "c"] },
+    });
+    expect(parsed.config.strategies).toEqual(["a", "b", "c"]);
   });
 });
 

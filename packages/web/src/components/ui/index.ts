@@ -11,6 +11,8 @@ export { Input } from "./Input";
 export { LoadingState } from "./LoadingState";
 export { Modal } from "./Modal";
 export { Overlay } from "./Overlay";
+export type { PageHeaderSize } from "./PageHeader";
+export { PageHeader } from "./PageHeader";
 export type {
   PageMainPadding,
   PageMainWidth,

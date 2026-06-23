@@ -255,9 +255,9 @@ export default function TournamentGrid({
             {" — "}
             {running.completed} / {running.total}
           </div>
-          <div className="h-2 w-full overflow-hidden rounded-full bg-gray-800">
+          <div className="h-2 w-full overflow-hidden rounded-full bg-surface-800">
             <div
-              className="h-full bg-indigo-500 transition-all duration-150"
+              className="h-full bg-accent-500 transition-all duration-150"
               style={{ width: `${(running.completed / running.total) * 100}%` }}
             />
           </div>
@@ -286,7 +286,7 @@ export default function TournamentGrid({
       <div className="mt-6 flex w-full flex-1 flex-col text-sm">
         {/* Header row */}
         <div
-          className="grid h-10 shrink-0 items-center border-b border-gray-800"
+          className="grid h-10 shrink-0 items-center border-b border-white/10"
           style={{
             gridTemplateColumns: `3.5rem 10rem repeat(${strategies.length}, 1fr)`,
           }}
@@ -322,14 +322,14 @@ export default function TournamentGrid({
                   gridTemplateColumns: `3.5rem 10rem repeat(${strategies.length}, 1fr)`,
                 }}
               >
-                <div className="flex items-center justify-center border-b border-gray-800/50 px-1">
+                <div className="flex items-center justify-center border-b border-white/10 px-1">
                   {hasResults ? (
                     <span className="tabular-nums text-xs font-semibold text-white">{elo}</span>
                   ) : (
                     <span className="text-fg-disabled">—</span>
                   )}
                 </div>
-                <div className="flex min-w-0 items-center border-b border-gray-800/50 px-2">
+                <div className="flex min-w-0 items-center border-b border-white/10 px-2">
                   <span
                     className="line-clamp-2 text-sm font-semibold leading-snug text-white"
                     title={row.label}
@@ -342,7 +342,7 @@ export default function TournamentGrid({
                     return (
                       <div
                         key={col.id}
-                        className="flex items-center justify-center border-b border-gray-800/50 text-fg-disabled"
+                        className="flex items-center justify-center border-b border-white/10 text-fg-disabled"
                       >
                         —
                       </div>
@@ -379,7 +379,7 @@ export default function TournamentGrid({
                   const matchup = direct ?? inverse;
 
                   return (
-                    <div key={col.id} className="border-b border-gray-800/50 p-0.5">
+                    <div key={col.id} className="border-b border-white/10 p-0.5">
                       {winRate !== null && tournamentId && matchup ? (
                         <Button
                           variant="ghost"
@@ -387,7 +387,7 @@ export default function TournamentGrid({
                           onClick={() =>
                             onViewMatchHistory?.(matchup.strategyA, matchup.strategyB, tournamentId)
                           }
-                          className="!flex !h-full !w-full !flex-col !items-center !justify-center !p-0 !gap-0 hover:bg-gray-800/60"
+                          className="!flex !h-full !w-full !flex-col !items-center !justify-center !p-0 !gap-0 hover:bg-surface-800/60"
                         >
                           <span
                             className={`text-sm font-bold tabular-nums leading-snug ${
@@ -408,7 +408,7 @@ export default function TournamentGrid({
                         </Button>
                       ) : isRunning ? (
                         <div className="flex h-full w-full items-center justify-center">
-                          <span className="animate-pulse text-3xs text-indigo-400">Running...</span>
+                          <span className="animate-pulse text-3xs text-accent-400">Running...</span>
                         </div>
                       ) : (
                         <Button
@@ -420,7 +420,7 @@ export default function TournamentGrid({
                             runPair(aId, bId);
                           }}
                           disabled={!!running}
-                          className="!flex !h-full !w-full !items-center !justify-center !p-0 text-fg-muted hover:text-indigo-400"
+                          className="!flex !h-full !w-full !items-center !justify-center !p-0 text-fg-muted hover:text-accent-400"
                         >
                           Run
                         </Button>

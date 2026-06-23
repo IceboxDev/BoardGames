@@ -124,6 +124,35 @@ describe("MatchOutcomeSchema", () => {
     ).not.toThrow();
   });
 
+  it("keeps the optional per-player role label (Dungeon Mayhem hero) on last-standing", () => {
+    const parsed = MatchOutcomeSchema.parse({
+      kind: "last-standing",
+      scenario: "Standard + Monster Madness",
+      players: [
+        { ...sampleParticipant("u1", "Alice"), role: "Sutha" },
+        { ...sampleParticipant("u2", "Bob"), eliminationOrder: 0, role: "Blorp" },
+      ],
+    });
+    expect(parsed.kind).toBe("last-standing");
+    if (parsed.kind === "last-standing") {
+      expect(parsed.players[0].role).toBe("Sutha");
+      expect(parsed.players[1].role).toBe("Blorp");
+      expect(parsed.scenario).toBe("Standard + Monster Madness");
+    }
+  });
+
+  it("rejects a last-standing role longer than 64 chars", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        kind: "last-standing",
+        players: [
+          { ...sampleParticipant("u1", "Alice"), role: "x".repeat(65) },
+          { ...sampleParticipant("u2", "Bob"), eliminationOrder: 0 },
+        ],
+      }),
+    ).toThrow();
+  });
+
   it("rejects last-standing with no survivor", () => {
     expect(() =>
       MatchOutcomeSchema.parse({
@@ -138,6 +167,45 @@ describe("MatchOutcomeSchema", () => {
 
   it("rejects coop with an unknown outcome", () => {
     expect(() => MatchOutcomeSchema.parse({ ...sampleCoop, outcome: "draw" })).toThrow();
+  });
+
+  it("accepts a scored co-op with no win/loss outcome (Just One)", () => {
+    const parsed = MatchOutcomeSchema.parse({
+      kind: "coop",
+      participants: [sampleParticipant("u1", "Alice"), sampleParticipant("u2", "Bob")],
+      score: 11,
+    });
+    expect(parsed.kind).toBe("coop");
+    if (parsed.kind === "coop") {
+      expect(parsed.score).toBe(11);
+      expect(parsed.outcome).toBeUndefined();
+    }
+  });
+
+  it("rejects a co-op with neither outcome nor score", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        kind: "coop",
+        participants: [sampleParticipant("u1", "Alice")],
+      }),
+    ).toThrow(/win\/loss outcome or a score/);
+  });
+
+  it("rejects a negative or fractional co-op score", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        kind: "coop",
+        participants: [sampleParticipant("u1", "Alice")],
+        score: -1,
+      }),
+    ).toThrow();
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        kind: "coop",
+        participants: [sampleParticipant("u1", "Alice")],
+        score: 4.5,
+      }),
+    ).toThrow();
   });
 });
 
@@ -226,6 +294,12 @@ describe("MatchReorderInputSchema", () => {
   it("accepts a dateKey with a non-empty ordered id list", () => {
     expect(() =>
       MatchReorderInputSchema.parse({ dateKey: "2026-05-10", orderedIds: [3, 1, 2] }),
+    ).not.toThrow();
+  });
+
+  it("accepts a null dateKey (standalone day reorder)", () => {
+    expect(() =>
+      MatchReorderInputSchema.parse({ dateKey: null, orderedIds: [3, 1, 2] }),
     ).not.toThrow();
   });
 

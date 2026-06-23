@@ -152,12 +152,7 @@ export default function GameBoard({
       fanActions={
         canPlaySelected ? (
           <div className="flex items-center justify-center gap-2">
-            <Button
-              variant="secondary"
-              size="xs"
-              onClick={handleConfirmPlay}
-              className="!border-emerald-500/50 !bg-emerald-500/15 !text-emerald-300 hover:!bg-emerald-500/25"
-            >
+            <Button variant="success" size="xs" onClick={handleConfirmPlay}>
               {view.phase === "throwing-in" ? "Throw In" : "Attack"}
             </Button>
             {canPass && (
@@ -207,8 +202,8 @@ export default function GameBoard({
             >
               {isMyTurn ? "Your turn" : isAiThinking ? "AI" : "Opponent"}
             </span>
-            <span className="text-gray-500">&middot;</span>
-            <span className="text-xs text-gray-400">
+            <span className="text-fg-muted">&middot;</span>
+            <span className="text-xs text-fg-secondary">
               {isAiThinking
                 ? "Thinking..."
                 : !isMyTurn
@@ -255,9 +250,7 @@ export default function GameBoard({
           className={`flex w-36 shrink-0 flex-col items-center justify-center gap-6${DEBUG_LAYOUT ? " border-2 border-dashed border-purple-400/40" : ""}`}
         >
           <div className="flex flex-col items-center gap-1">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
-              Draw
-            </span>
+            <span className="text-3xs font-bold uppercase tracking-widest text-fg-muted">Draw</span>
             <CardDeck
               count={view.drawPileCount}
               size="lg"
@@ -286,7 +279,7 @@ export default function GameBoard({
             />
           </div>
           <div className="flex flex-col items-center gap-1">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
+            <span className="text-3xs font-bold uppercase tracking-widest text-fg-muted">
               Discard
             </span>
             <CardDeck

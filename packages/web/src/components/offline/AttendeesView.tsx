@@ -4,7 +4,7 @@ import type { GameDefinition } from "../../games/types";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { Attendee } from "../../lib/calendar-games";
 import { XIcon } from "../icons";
-import { EmptyState, IconButton } from "../ui";
+import { EmptyState, IconButton, Spinner } from "../ui";
 
 type Props = {
   attendees: Attendee[];
@@ -187,16 +187,7 @@ function AttendeeRow({
           disabled={isKicking}
           onClick={handleKick}
           className="h-7 w-7 bg-white/[0.04]"
-          icon={
-            isKicking ? (
-              <span
-                aria-hidden="true"
-                className="h-3 w-3 animate-spin rounded-full border border-current border-t-transparent"
-              />
-            ) : (
-              <XIcon className="h-3.5 w-3.5" />
-            )
-          }
+          icon={isKicking ? <Spinner size="xs" /> : <XIcon className="h-3.5 w-3.5" />}
         />
       )}
     </div>

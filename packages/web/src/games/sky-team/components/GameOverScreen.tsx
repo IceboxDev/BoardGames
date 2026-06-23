@@ -1,5 +1,5 @@
 import type { SkyTeamResult } from "@boardgames/core/games/sky-team/types";
-import { Button } from "../../../components/ui/Button";
+import { GameOverLayout } from "../../../components/game-over/GameOverLayout";
 
 interface Props {
   result: SkyTeamResult;
@@ -62,63 +62,50 @@ export default function GameOverScreen({ result, onPlayAgain, onBackToMenu }: Pr
     sub: result.outcome,
     tone: "lose" as const,
   };
+  const actions: { label: string; onClick: () => void; variant: "primary" | "secondary" }[] = [
+    ...(onPlayAgain
+      ? [{ label: "Play again", onClick: onPlayAgain, variant: "primary" as const }]
+      : []),
+    { label: "Back to menu", onClick: onBackToMenu, variant: "secondary" as const },
+  ];
+
   return (
     // `relative z-10` lifts this screen above the fixed `def.backgroundImage`
-    // at `z-0` in `GameShellLayoutInner` (same painting-order issue that
-    // hides `GameScreen` without a stacking context).
-    <div className="relative z-10 mx-auto flex max-w-md flex-col items-center gap-4 p-8 text-center">
-      <div className="text-6xl leading-none">{meta.tone === "win" ? "🛬" : "💥"}</div>
-      <h1
-        className={[
-          "text-3xl font-bold",
-          meta.tone === "win" ? "text-emerald-300" : "text-red-400",
-        ].join(" ")}
+    // at `z-0` in `GameShellLayoutInner` (same painting-order issue that hides
+    // `GameScreen` without a stacking context). GameOverLayout owns the
+    // emoji / headline / actions; only the Sky-Team-specific stats are local.
+    <div className="relative z-10">
+      <GameOverLayout
+        emoji={meta.tone === "win" ? "🛬" : "💥"}
+        headline={meta.headline}
+        headlineColor={meta.tone === "win" ? "win" : "lose"}
+        subtitle={meta.sub}
+        actions={actions}
       >
-        {meta.headline}
-      </h1>
-      <p className="text-slate-300">{meta.sub}</p>
-
-      {/* Final axis, gear, flaps, and airliners-remaining are all tautological
-          on a win (always 0 / deployed / deployed / 0) and on a loss the
-          headline already explains which of them failed. Showing them
-          as stats was misleading — readers assumed they were variable when
-          they aren't. Scenario / rounds / final approach tile / brakes
-          deployed are the only fields that genuinely vary across successful
-          landings. */}
-      <div className="grid w-full grid-cols-2 gap-2 rounded-md border border-slate-700 bg-slate-900/60 p-4 text-left text-xs">
-        <div>
-          <div className="text-slate-400">Scenario</div>
-          <div className="font-mono">{result.scenarioId}</div>
+        {/* Final axis, gear, flaps, and airliners-remaining are all tautological
+            on a win (always 0 / deployed / deployed / 0) and on a loss the
+            headline already explains which of them failed. Scenario / rounds /
+            final approach tile / brakes deployed are the only fields that
+            genuinely vary across successful landings. */}
+        <div className="grid w-full grid-cols-2 gap-2 rounded-md border border-white/10 bg-surface-900/60 p-4 text-left text-xs">
+          <div>
+            <div className="text-fg-muted">Scenario</div>
+            <div className="font-mono">{result.scenarioId}</div>
+          </div>
+          <div>
+            <div className="text-fg-muted">Rounds</div>
+            <div className="font-mono">{result.rounds}</div>
+          </div>
+          <div>
+            <div className="text-fg-muted">Approach</div>
+            <div className="font-mono">{result.finalApproach}</div>
+          </div>
+          <div>
+            <div className="text-fg-muted">Brakes deployed</div>
+            <div className="font-mono">{result.brakesDeployed}/3</div>
+          </div>
         </div>
-        <div>
-          <div className="text-slate-400">Rounds</div>
-          <div className="font-mono">{result.rounds}</div>
-        </div>
-        <div>
-          <div className="text-slate-400">Approach</div>
-          <div className="font-mono">{result.finalApproach}</div>
-        </div>
-        <div>
-          <div className="text-slate-400">Brakes deployed</div>
-          <div className="font-mono">{result.brakesDeployed}/3</div>
-        </div>
-      </div>
-
-      <div className="flex gap-2">
-        {onPlayAgain ? (
-          <Button
-            variant="primary"
-            size="md"
-            onClick={onPlayAgain}
-            className="!bg-emerald-600 hover:!bg-emerald-500 !shadow-emerald-500/20"
-          >
-            Play again
-          </Button>
-        ) : null}
-        <Button variant="secondary" size="md" onClick={onBackToMenu}>
-          Back to menu
-        </Button>
-      </div>
+      </GameOverLayout>
     </div>
   );
 }

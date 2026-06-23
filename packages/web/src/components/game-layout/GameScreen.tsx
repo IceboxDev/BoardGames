@@ -41,7 +41,7 @@ export default function GameScreen({
     // fan tray, History) paint at CSS-painting step 3 and the bg image at
     // step 6 — i.e. the image covers them. Promoting GameScreen to
     // `relative z-10` puts its whole subtree above the image's stacking
-    // context so the `bg-slate-950` actually covers the image and the
+    // context so the `bg-surface-950` actually covers the image and the
     // sidebars / history / fan become visible.
     <div className={`relative z-10 flex min-h-0 flex-1${background ? ` ${background}` : ""}`}>
       {/* PC-first layout: the left panel + board sit on top; the fan / controls
@@ -52,7 +52,7 @@ export default function GameScreen({
         <div className="flex min-h-0 flex-1 px-4">
           {leftSidebar && (
             <aside
-              className={`flex w-64 shrink-0 flex-col overflow-y-auto bg-gray-900/60 p-4${DEBUG_LAYOUT ? " border-2 border-fuchsia-400 bg-fuchsia-400/10" : ""}`}
+              className={`flex w-64 shrink-0 flex-col overflow-y-auto bg-surface-900/60 p-4${DEBUG_LAYOUT ? " border-2 border-fuchsia-400 bg-fuchsia-400/10" : ""}`}
             >
               {leftSidebarTitle && (
                 <h3 className="mb-3 shrink-0 text-xs font-bold uppercase tracking-wider text-fg-muted">
@@ -87,7 +87,7 @@ export default function GameScreen({
       </div>
       {sidebar && (
         <aside
-          className={`my-2 mr-2 flex w-72 shrink-0 flex-col overflow-y-auto rounded-xl bg-gray-900/60 p-4${DEBUG_LAYOUT ? " border-2 border-cyan-400 bg-cyan-400/10" : ""}`}
+          className={`my-2 mr-2 flex w-72 shrink-0 flex-col overflow-y-auto rounded-xl bg-surface-900/60 p-4${DEBUG_LAYOUT ? " border-2 border-cyan-400 bg-cyan-400/10" : ""}`}
         >
           <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-fg-muted">History</h3>
           {sidebar}

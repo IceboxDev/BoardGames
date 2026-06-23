@@ -54,7 +54,10 @@ export async function deleteMatch(id: number): Promise<void> {
  * Re-sort the matches inside one board game night. `orderedIds` must be the
  * full, top-to-bottom list of that night's match ids.
  */
-export async function reorderMatchesInNight(dateKey: string, orderedIds: number[]): Promise<void> {
+export async function reorderMatchesInNight(
+  dateKey: string | null,
+  orderedIds: number[],
+): Promise<void> {
   await apiFetch("/api/admin/history/reorder", {
     method: "POST",
     body: { dateKey, orderedIds },

@@ -45,15 +45,10 @@ export default function PhaseBanner({
           {meta?.label ?? "Game over"}
         </span>
         <Button
-          variant="primary"
+          variant={tone === "win" ? "success" : "danger"}
           size="sm"
           onClick={onAcknowledgeGameOver}
           disabled={!onAcknowledgeGameOver}
-          className={
-            tone === "win"
-              ? "!bg-emerald-600 hover:!bg-emerald-500 !shadow-emerald-500/20"
-              : "!bg-rose-600 hover:!bg-rose-500 !shadow-rose-500/20"
-          }
         >
           {tone === "win" ? "Review landing" : "View crash"}
         </Button>
@@ -74,13 +69,7 @@ export default function PhaseBanner({
   // (or "Land the plane" on the final approach); no helper text needed.
   if (view.canEndRound) {
     return (
-      <Button
-        variant="primary"
-        size="sm"
-        onClick={onEndRound}
-        disabled={!onEndRound}
-        className="!bg-emerald-600 hover:!bg-emerald-500 !shadow-emerald-500/20"
-      >
+      <Button variant="success" size="sm" onClick={onEndRound} disabled={!onEndRound}>
         {view.isFinalRound ? "Land the plane" : "End round"}
       </Button>
     );
@@ -109,7 +98,9 @@ export default function PhaseBanner({
       <span
         className={[
           "rounded px-2 py-0.5 text-sm",
-          meTurn ? "bg-yellow-500/20 text-yellow-200 ring-1 ring-yellow-400/40" : "text-slate-400",
+          meTurn
+            ? "bg-yellow-500/20 text-yellow-200 ring-1 ring-yellow-400/40"
+            : "text-fg-secondary",
         ].join(" ")}
       >
         {meTurn ? `${roundLabel} — your turn to place` : `Waiting for ${placerLabel}…`}
@@ -117,5 +108,5 @@ export default function PhaseBanner({
     );
   }
 
-  return <span className="text-sm text-slate-400">…</span>;
+  return <span className="text-sm text-fg-secondary">…</span>;
 }

@@ -182,7 +182,7 @@ export function TournamentGridShell<TResult>({
           <div className="text-sm text-fg-secondary mb-1">
             {currentPair} — {progress.completed}/{progress.total} ({progressPct}%)
           </div>
-          <div className="h-2 bg-gray-700 rounded overflow-hidden">
+          <div className="h-2 bg-surface-700 rounded overflow-hidden">
             <div
               className="h-full bg-blue-500 transition-all"
               style={{ width: `${progressPct}%` }}
@@ -210,7 +210,7 @@ export function TournamentGridShell<TResult>({
                 {strategies.map((b) => (
                   <td key={b.id} className="p-1">
                     {a.id === b.id ? (
-                      <div className="w-full h-full bg-gray-800 rounded p-2 text-center text-fg-disabled">
+                      <div className="w-full h-full bg-surface-800 rounded p-2 text-center text-fg-disabled">
                         —
                       </div>
                     ) : (

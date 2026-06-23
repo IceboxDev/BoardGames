@@ -431,3 +431,22 @@ export function KeyIcon({ className = "h-4 w-4" }: IconProps) {
     </svg>
   );
 }
+
+// Four-point sparkle — the "skill profile coming soon" placeholder and other
+// generated/aspirational affordances on the profile page.
+export function SparkleIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="currentColor" aria-hidden="true">
+      <path d="M10 1.5c.3 2.7 1.3 3.7 4 4-2.7.3-3.7 1.3-4 4-.3-2.7-1.3-3.7-4-4 2.7-.3 3.7-1.3 4-4zM4.5 11c.2 1.6.8 2.2 2.3 2.4-1.5.2-2.1.8-2.3 2.4-.2-1.6-.8-2.2-2.3-2.4 1.5-.2 2.1-.8 2.3-2.4z" />
+    </svg>
+  );
+}
+
+// Heart — the wishlist section glyph (distinct from the favorites StarIcon).
+export function HeartIcon({ className = "h-3.5 w-3.5" }: IconProps) {
+  return (
+    <svg viewBox="0 0 20 20" className={className} fill="currentColor" aria-hidden="true">
+      <path d="M10 17.5l-1.1-1C4.9 12.86 2.5 10.68 2.5 7.94 2.5 5.9 4.1 4.3 6.15 4.3c1.16 0 2.27.54 3 1.39.73-.85 1.84-1.39 3-1.39 2.05 0 3.65 1.6 3.65 3.64 0 2.74-2.4 4.92-6.4 8.56l-1.1 1z" />
+    </svg>
+  );
+}

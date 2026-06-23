@@ -13,7 +13,7 @@ import {
   SITE_LABELS,
 } from "@boardgames/core/games/parks/types";
 import type { ReactNode } from "react";
-import { AiThinkingIndicator } from "../../../components/ui";
+import { AiThinkingIndicator, SelectableCard } from "../../../components/ui";
 import { Button } from "../../../components/ui/Button";
 
 const GEAR_EFFECT_DESCRIPTIONS: Record<PassionId, string> = {
@@ -65,8 +65,8 @@ function Prompt({
       <span className="text-xs font-semibold text-cyan-400">{title}</span>
       {message && (
         <>
-          <span className="text-gray-500">&middot;</span>
-          <span className="text-xs text-gray-400">{message}</span>
+          <span className="text-fg-muted">&middot;</span>
+          <span className="text-xs text-fg-secondary">{message}</span>
         </>
       )}
       {children}
@@ -84,13 +84,7 @@ function PrimaryButton({
   disabled?: boolean;
 }) {
   return (
-    <Button
-      variant="secondary"
-      size="xs"
-      onClick={onClick}
-      disabled={disabled}
-      className="!border-emerald-500/50 !bg-emerald-500/15 !text-emerald-300 hover:!bg-emerald-500/25"
-    >
+    <Button variant="success" size="xs" onClick={onClick} disabled={disabled}>
       {children}
     </Button>
   );
@@ -142,28 +136,24 @@ export default function ActionPanel({
           message={`${PASSION_LABELS[pid]} — pick ONE reward (locked for the rest of the game)`}
         />
         <div className="flex flex-wrap justify-center gap-2">
-          <Button
-            variant="secondary"
-            size="sm"
+          <SelectableCard
+            variant="tile"
+            orientation="horizontal"
+            tone="emerald"
             onClick={() => onAction({ type: "passion-mode-choice", mode: "gear" })}
-            className="!flex-col !items-start !gap-0.5 max-w-xs !text-left !border-emerald-500/50 !bg-emerald-500/15 !text-emerald-300 hover:!bg-emerald-500/25"
-          >
-            <span className="text-xs font-semibold">Gear Effect (ongoing)</span>
-            <span className="text-[10px] leading-tight text-emerald-200/70">
-              {GEAR_EFFECT_DESCRIPTIONS[pid]}
-            </span>
-          </Button>
-          <Button
-            variant="secondary"
-            size="sm"
+            title="Gear Effect (ongoing)"
+            description={GEAR_EFFECT_DESCRIPTIONS[pid]}
+            className="max-w-xs"
+          />
+          <SelectableCard
+            variant="tile"
+            orientation="horizontal"
+            tone="accent"
             onClick={() => onAction({ type: "passion-mode-choice", mode: "end-bonus" })}
-            className="!flex-col !items-start !gap-0.5 max-w-xs !text-left !border-violet-500/50 !bg-violet-500/15 !text-violet-300 hover:!bg-violet-500/25"
-          >
-            <span className="text-xs font-semibold">End-Game Bonus</span>
-            <span className="text-[10px] leading-tight text-violet-200/70">
-              {END_BONUS_DESCRIPTIONS[pid]}
-            </span>
-          </Button>
+            title="End-Game Bonus"
+            description={END_BONUS_DESCRIPTIONS[pid]}
+            className="max-w-xs"
+          />
         </div>
       </div>
     );

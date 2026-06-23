@@ -25,7 +25,7 @@ export default function DefuseDialog({ state, onAction }: DefuseDialogProps) {
           <span className="text-5xl">💣</span>
         </div>
         <p className="text-lg font-bold text-red-300">You drew an Exploding Kitten!</p>
-        <p className="mt-1 text-sm text-gray-400">
+        <p className="mt-1 text-sm text-fg-secondary">
           {defuseActions.length > 0
             ? "Play a Defuse card to survive!"
             : "You have no Defuse cards..."}
@@ -69,13 +69,13 @@ export function ReinsertDialog({
   return (
     <div className="rounded-xl border border-emerald-700/50 bg-emerald-950/40 p-6 text-center">
       <p className="text-sm font-medium text-emerald-300">🔧 Kitten Defused!</p>
-      <p className="mt-1 text-xs text-gray-400">
+      <p className="mt-1 text-xs text-fg-secondary">
         Choose where to secretly reinsert the Exploding Kitten.
       </p>
 
       <div className="mt-4 flex flex-col items-center gap-3">
         <div className="flex items-center gap-3 w-full max-w-xs">
-          <span className="text-xs text-gray-500 w-8">Top</span>
+          <span className="text-xs text-fg-muted w-8">Top</span>
           <input
             type="range"
             min={0}
@@ -84,9 +84,9 @@ export function ReinsertDialog({
             onChange={(e) => setPosition(parseInt(e.target.value, 10))}
             className="flex-1 accent-emerald-500"
           />
-          <span className="text-xs text-gray-500 w-12">Bottom</span>
+          <span className="text-xs text-fg-muted w-12">Bottom</span>
         </div>
-        <p className="text-xs text-gray-400">
+        <p className="text-xs text-fg-secondary">
           Position: {position} of {deckSize} (
           {position === 0 ? "top" : position === deckSize ? "bottom" : `${position} from top`})
         </p>

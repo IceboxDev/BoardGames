@@ -28,7 +28,7 @@ export default function PlayerStrip({ players, currentPlayerIndex }: Props) {
               active={isActive}
             />
             <span
-              className="absolute right-1 top-1 flex h-5 w-5 items-center justify-center rounded-full bg-black/80 text-[10px] font-bold text-white"
+              className="absolute right-1 top-1 flex h-5 w-5 items-center justify-center rounded-full bg-black/80 text-3xs font-bold text-white"
               style={{ border: `1.5px solid ${role.pawnColor}` }}
               title={`${p.hand.length} cards`}
             >

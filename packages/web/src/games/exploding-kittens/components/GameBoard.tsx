@@ -137,7 +137,7 @@ export default function GameBoard({
 
   const replayFanActions = replayMode ? (
     <div className="flex items-center gap-2">
-      <span className="text-xs text-gray-400">{stepDescription ?? ""}</span>
+      <span className="text-xs text-fg-secondary">{stepDescription ?? ""}</span>
     </div>
   ) : undefined;
 
@@ -158,7 +158,7 @@ export default function GameBoard({
           )}
           extra={
             state.turnsRemaining > 1 ? (
-              <span className="text-[10px] text-amber-400">{state.turnsRemaining} turns left</span>
+              <span className="text-3xs text-amber-400">{state.turnsRemaining} turns left</span>
             ) : undefined
           }
         />
@@ -217,8 +217,8 @@ export default function GameBoard({
             >
               {isHumanTurn ? "Your turn" : `AI ${activeDecider}'s turn`}
             </span>
-            <span className="text-gray-500">&middot;</span>
-            <span className="text-xs text-gray-400">
+            <span className="text-fg-muted">&middot;</span>
+            <span className="text-xs text-fg-secondary">
               {isHumanTurn ? "Respond to the dialog above" : "Waiting for AI..."}
             </span>
             {!isHumanTurn && (
@@ -246,7 +246,7 @@ export default function GameBoard({
               {state.players.map((p) =>
                 p.alive ? (
                   <div key={p.index}>
-                    <p className="mb-1 text-xs text-gray-400">
+                    <p className="mb-1 text-xs text-fg-secondary">
                       {p.type === "human" ? "You" : `Player ${p.index}`}
                       {p.index === state.currentPlayerIndex && (
                         <span className="ml-1 text-emerald-400">(active)</span>
@@ -295,9 +295,7 @@ export default function GameBoard({
           className={`flex w-36 shrink-0 flex-col items-center justify-center gap-6${DEBUG_LAYOUT ? " border-2 border-dashed border-purple-400/40" : ""}`}
         >
           <div className="flex flex-col items-center gap-1">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
-              Draw
-            </span>
+            <span className="text-3xs font-bold uppercase tracking-widest text-fg-muted">Draw</span>
             <CardDeck
               count={state.drawPile.length}
               size="lg"
@@ -316,7 +314,7 @@ export default function GameBoard({
             />
           </div>
           <div className="flex flex-col items-center gap-1">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-gray-500">
+            <span className="text-3xs font-bold uppercase tracking-widest text-fg-muted">
               Discard
             </span>
             <CardDeck
@@ -352,7 +350,7 @@ export default function GameBoard({
                           style={{ backgroundColor: CARD_COLORS[topCard.type] }}
                         >
                           <span className="text-lg leading-none">{CARD_EMOJI[topCard.type]}</span>
-                          <span className="mt-0.5 text-[8px] font-semibold leading-tight">
+                          <span className="mt-0.5 text-4xs font-semibold leading-tight">
                             {CARD_LABELS[topCard.type]}
                           </span>
                         </div>

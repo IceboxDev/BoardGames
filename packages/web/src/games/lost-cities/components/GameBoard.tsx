@@ -163,7 +163,7 @@ export default function GameBoard(props: GameBoardProps) {
                   <ExpeditionArea expeditions={state.expeditions[1]} isPlayer={false} />
                 </div>
 
-                <div className="flex flex-1 items-center justify-center border-y border-gray-800 my-1.5">
+                <div className="flex flex-1 items-center justify-center border-y border-white/10 my-1.5">
                   <DiscardArea discardPiles={state.discardPiles} />
                 </div>
 
@@ -253,12 +253,7 @@ export default function GameBoard(props: GameBoardProps) {
         isPlayPhase && selectedCard ? (
           <div className="flex items-center justify-center gap-2">
             {canPlay && (
-              <Button
-                variant="secondary"
-                size="xs"
-                onClick={onPlayToExpedition}
-                className="!border-emerald-500/50 !bg-emerald-500/15 !text-emerald-300 hover:!bg-emerald-500/25"
-              >
+              <Button variant="success" size="xs" onClick={onPlayToExpedition}>
                 Play to Expedition
               </Button>
             )}
@@ -269,8 +264,8 @@ export default function GameBoard(props: GameBoardProps) {
         ) : isHumanTurn && state.phase !== "game-over" ? (
           <div className="flex items-center gap-2">
             <span className="text-xs font-semibold text-cyan-400">Your turn</span>
-            <span className="text-gray-500">&middot;</span>
-            <span className="text-xs text-gray-400">
+            <span className="text-fg-muted">&middot;</span>
+            <span className="text-xs text-fg-secondary">
               {isPlayPhase
                 ? "Select a card to play or discard"
                 : "Draw a card from the pile or discard"}
@@ -280,8 +275,8 @@ export default function GameBoard(props: GameBoardProps) {
           isMultiplayer ? (
             <div className="flex items-center gap-2">
               <span className="text-xs font-semibold text-amber-400">Opponent</span>
-              <span className="text-gray-500">&middot;</span>
-              <span className="text-xs text-gray-400">Waiting for opponent&hellip;</span>
+              <span className="text-fg-muted">&middot;</span>
+              <span className="text-xs text-fg-secondary">Waiting for opponent&hellip;</span>
               <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-amber-400" />
             </div>
           ) : (
@@ -305,7 +300,7 @@ export default function GameBoard(props: GameBoardProps) {
                 <ExpeditionArea expeditions={state.expeditions[1]} isPlayer={false} />
               </div>
 
-              <div className="flex flex-1 items-center justify-center border-y border-gray-800 my-1.5">
+              <div className="flex flex-1 items-center justify-center border-y border-white/10 my-1.5">
                 <DiscardArea
                   discardPiles={state.discardPiles}
                   onPickDiscard={isDrawPhase ? onDrawFromDiscard : undefined}

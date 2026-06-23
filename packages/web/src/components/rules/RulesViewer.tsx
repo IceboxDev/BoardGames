@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 import { XIcon } from "../icons";
+import { useBodyScrollLock, useFocusTrap } from "../ui/dialog-a11y";
 import { IconButton } from "../ui/IconButton";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
@@ -29,7 +30,15 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
   const [numPages, setNumPages] = useState<number>(0);
   const [pageWidth, setPageWidth] = useState(600);
   const containerRef = useRef<HTMLDivElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
   const [closing, setClosing] = useState(false);
+
+  // Same dialog contract as Modal: lock background scroll and trap focus
+  // inside the reader while it's open. Escape is handled below (it carries the
+  // bespoke closing-fade guard, so it stays local rather than using the shared
+  // useDialogEscape).
+  useBodyScrollLock();
+  useFocusTrap(dialogRef);
 
   // Switching tab: clear page count so stale pages don't render against the
   // new document, and scroll the new PDF to the top. Optional-call on
@@ -80,7 +89,7 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex flex-col transition-opacity duration-200 ${closing ? "opacity-0" : "opacity-100"}`}
+      className={`fixed inset-0 z-modal flex flex-col transition-opacity duration-200 ${closing ? "opacity-0" : "opacity-100"}`}
     >
       {/* Backdrop */}
       {/* biome-ignore lint/a11y/noStaticElementInteractions: backdrop dismiss */}
@@ -91,7 +100,14 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
       />
 
       {/* Content */}
-      <div className="relative z-10 flex min-h-0 flex-1 flex-col">
+      <div
+        ref={dialogRef}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Game rules"
+        tabIndex={-1}
+        className="relative z-10 flex min-h-0 flex-1 flex-col outline-none"
+      >
         {/* Header bar — three zones (title • tabs • close). The middle is a
             flex-1 spacer when there's only one booklet, so the title and X
             still anchor to opposite ends; when there are multiple booklets,

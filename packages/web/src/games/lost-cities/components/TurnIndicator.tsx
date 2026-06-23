@@ -43,8 +43,8 @@ export default function TurnIndicator({
         >
           {name}
         </span>
-        <span className="text-gray-500">·</span>
-        <span className={`text-gray-400 ${dense ? "text-xs" : "text-sm"}`}>{phaseStr}</span>
+        <span className="text-fg-muted">·</span>
+        <span className={`text-fg-secondary ${dense ? "text-xs" : "text-sm"}`}>{phaseStr}</span>
       </div>
     );
   }
@@ -67,8 +67,8 @@ export default function TurnIndicator({
       >
         {isHuman ? "Your turn" : `${opponentLabel} turn`}
       </span>
-      <span className="text-gray-500">&middot;</span>
-      <span className="text-xs text-gray-400">{message}</span>
+      <span className="text-fg-muted">&middot;</span>
+      <span className="text-xs text-fg-secondary">{message}</span>
       {!isHuman && (
         <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-amber-400" />
       )}

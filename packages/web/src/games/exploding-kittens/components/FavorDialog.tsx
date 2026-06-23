@@ -19,7 +19,7 @@ export default function FavorDialog({ state, onAction }: FavorDialogProps) {
   return (
     <div className="rounded-xl border border-amber-700/50 bg-amber-950/40 p-4">
       <p className="mb-1 text-sm font-medium text-amber-300">🙏 Favor</p>
-      <p className="mb-3 text-xs text-gray-400">
+      <p className="mb-3 text-xs text-fg-secondary">
         {fromName} demands a favor. Choose a card to give.
       </p>
 

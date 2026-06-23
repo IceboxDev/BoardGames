@@ -9,6 +9,7 @@ import { qk } from "../../lib/query-keys";
 import InventoryGrid from "../InventoryGrid";
 import { Button } from "../ui/Button";
 import { Chip } from "../ui/Chip";
+import { ErrorAlert } from "../ui/ErrorAlert";
 import { SegmentedControl } from "../ui/SegmentedControl";
 import { ONLINE_MODE_OPTIONS } from "./online-mode-options";
 
@@ -106,7 +107,7 @@ export function PreRegisterCard() {
       </div>
       {expanded && !loading && slugList.draft !== null && (
         <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
-          {error && <p className="text-xs text-rose-400">{error}</p>}
+          {error && <ErrorAlert message={error} />}
           <div className="flex flex-wrap items-center justify-between gap-2">
             <span className="text-xs uppercase tracking-[0.2em] text-fg-muted">Online mode</span>
             <SegmentedControl<OnlineMode>

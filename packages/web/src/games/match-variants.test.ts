@@ -41,6 +41,31 @@ describe("variantConfigForSlug", () => {
     ]);
   });
 
+  it("returns the Dungeon Mayhem sets config (multi-select, three sets)", () => {
+    const config = variantConfigForSlug("dungeon-mayhem");
+    expect(config?.label).toBe("Sets in play");
+    expect(config?.mode).toBe("multi");
+    expect(config?.options.map((o) => o.value)).toEqual([
+      "Standard",
+      "Battle for Baldur's Gate",
+      "Monster Madness",
+    ]);
+  });
+
+  it("returns the Lovecraft Letter edition config (fixed Standard)", () => {
+    const config = variantConfigForSlug("lovecraft-letter");
+    expect(config?.label).toBe("Edition");
+    expect(config?.fixed).toBe(true);
+    expect(config?.options.map((o) => o.value)).toEqual(["Standard"]);
+  });
+
+  it("returns the Just One mode config (single, Standard / Discardless)", () => {
+    const config = variantConfigForSlug("just-one");
+    expect(config?.label).toBe("Mode");
+    expect(config?.mode).toBe("single");
+    expect(config?.options.map((o) => o.value)).toEqual(["Standard", "Discardless"]);
+  });
+
   it("returns the Resistance edition config (single, Standard / The Plot Thickens)", () => {
     const config = variantConfigForSlug("the-resistance");
     expect(config?.label).toBe("Edition");
@@ -60,14 +85,17 @@ describe("defaultVariantValue", () => {
     expect(defaultVariantValue("wavelength")).toBe("Standard");
     expect(defaultVariantValue("codenames")).toBe("English");
     expect(defaultVariantValue("villainous")).toBe("Introduction to Evil");
+    expect(defaultVariantValue("just-one")).toBe("Standard");
   });
 
   it("fixed single-option games default to that option", () => {
     expect(defaultVariantValue("bandit")).toBe("Standard");
+    expect(defaultVariantValue("lovecraft-letter")).toBe("Standard");
   });
 
   it("multi-select games default only to a declared base, else undefined", () => {
     expect(defaultVariantValue("7-wonders")).toBe("Base");
+    expect(defaultVariantValue("dungeon-mayhem")).toBe("Standard");
     expect(defaultVariantValue("exploding-kittens")).toBeUndefined();
   });
 });

@@ -267,7 +267,7 @@ export const ROUTE_THEMES: Record<RouteColor, RouteTheme> = {
     label: "Heroic Landing",
     blurb: "Limit-pushing routes for veteran crews.",
     hex: "#94a3b8",
-    pill: "bg-slate-500/20 text-slate-200 ring-slate-400/30",
+    pill: "bg-slate-500/20 text-fg-primary ring-white/10",
     dot: "bg-slate-300",
     ring: "shadow-slate-400/30",
   },

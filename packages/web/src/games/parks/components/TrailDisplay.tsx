@@ -34,7 +34,7 @@ const SITE_BG: Record<SiteType, string> = {
   "gain-1M": "bg-purple-900/30 border-purple-500/40",
   "gain-1F": "bg-emerald-900/30 border-emerald-500/40",
   "exchange-A": "bg-pink-900/30 border-pink-500/40",
-  "canteen-or-photo": "bg-indigo-900/30 border-indigo-500/40",
+  "canteen-or-photo": "bg-indigo-900/30 border-accent-500/40",
   "trail-die": "bg-stone-800/50 border-stone-500/40",
   shop: "bg-orange-900/30 border-orange-500/40",
 };
@@ -88,7 +88,7 @@ function HikerToken({
   const color = isMe ? "bg-cyan-500 ring-cyan-300" : "bg-amber-500 ring-amber-300";
   return (
     <div
-      className={`flex h-5 w-5 items-center justify-center rounded-full ring-1 text-[10px] font-bold text-white ${color}`}
+      className={`flex h-5 w-5 items-center justify-center rounded-full ring-1 text-3xs font-bold text-white ${color}`}
       title={`${isMe ? "You" : "Opponent"} hiker ${hikerId + 1}`}
     >
       {hikerId + 1}
@@ -128,12 +128,12 @@ function TrailEndBox({
             onClick={isLegalTarget ? () => onSelectMoveTarget(meta.position) : undefined}
             disabled={!isLegalTarget}
             title={tooltip}
-            className={`flex flex-1 items-center gap-1 rounded-md px-1 text-[10px] leading-none transition disabled:cursor-default ${meta.bg} ${interactive}`}
+            className={`flex flex-1 items-center gap-1 rounded-md px-1 text-3xs leading-none transition disabled:cursor-default ${meta.bg} ${interactive}`}
           >
             <span className="text-xs">{meta.icon}</span>
-            <span className="font-semibold text-gray-100">{meta.label}</span>
+            <span className="font-semibold text-fg-primary">{meta.label}</span>
             <span
-              className={`text-[10px] ${bonusClaimed ? "text-stone-500 line-through" : "text-emerald-300"}`}
+              className={`text-3xs ${bonusClaimed ? "text-stone-500 line-through" : "text-emerald-300"}`}
             >
               {meta.bonusIcon}
             </span>
@@ -187,7 +187,7 @@ export default function TrailDisplay({
         const isLegalTarget = selectedHikerId !== null && legalMoveTargets.has(pos);
         const weather = isSite ? view.weatherTokens[pos] : null;
 
-        const baseClass = isSite && site ? SITE_BG[site] : "bg-gray-800/40 border-gray-600/40";
+        const baseClass = isSite && site ? SITE_BG[site] : "bg-surface-800/40 border-white/10";
 
         const interactive = isLegalTarget
           ? "cursor-pointer hover:scale-105 ring-2 ring-emerald-400 animate-pulse"
@@ -227,14 +227,14 @@ export default function TrailDisplay({
                 {weather === "S" ? "☀️" : "💧"}
               </div>
             )}
-            <div className="text-[9px] uppercase tracking-wider text-gray-400">
+            <div className="text-[9px] uppercase tracking-wider text-fg-secondary">
               {isStart ? "Start" : `#${pos + 1}`}
             </div>
             <div className="flex flex-1 flex-col items-center justify-center text-center">
               {isSite && site ? (
                 <>
                   <div className="text-xl">{SITE_ICONS[site]}</div>
-                  <div className="mt-1 text-[8px] leading-tight text-gray-300">
+                  <div className="mt-1 text-4xs leading-tight text-fg-secondary">
                     {SITE_LABELS[site]}
                   </div>
                 </>

@@ -4,6 +4,7 @@ import { formatAuthError } from "../../pages/admin-coverage";
 import { TrashIcon } from "../icons";
 import { Button } from "../ui/Button";
 import { Chip } from "../ui/Chip";
+import { ErrorAlert } from "../ui/ErrorAlert";
 import { IconButton } from "../ui/IconButton";
 import { synthesizeGuestEmail } from "./guest-email";
 import type { AdminUser } from "./types";
@@ -103,7 +104,7 @@ export function GuestPlayersCard({ guests, onChanged }: Props) {
       </div>
       {expanded && (
         <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
-          {error && <p className="text-xs text-rose-400">{error}</p>}
+          {error && <ErrorAlert message={error} />}
           <form onSubmit={addGuest} className="flex flex-wrap items-end gap-2">
             <label className="flex flex-col gap-1 text-xs text-fg-secondary">
               First name

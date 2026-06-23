@@ -115,15 +115,15 @@ export default function TrainerGame({ onViewHistory }: TrainerGameProps) {
       </div>
 
       {/* Right sidebar — stats, actions & metrics */}
-      <div className="flex flex-col gap-3 px-5 py-4 shrink-0 w-44 border-l border-gray-800">
+      <div className="flex flex-col gap-3 px-5 py-4 shrink-0 w-44 border-l border-white/10">
         <StatRow label="Time" value={formatTime(elapsed)} mono />
         <StatRow label="SETs" value={String(ctx.score)} color="text-green-400" />
         <StatRow label="Penalties" value={String(ctx.penalties)} color="text-red-400" />
         <StatRow label="Net" value={String(ctx.score - ctx.penalties)} />
-        <StatRow label="Deck" value={String(ctx.deck.length)} color="text-gray-500" />
+        <StatRow label="Deck" value={String(ctx.deck.length)} color="text-fg-muted" />
 
         {(isSelecting || message) && (
-          <div className="pt-3 border-t border-gray-800">
+          <div className="pt-3 border-t border-white/10">
             {isSelecting ? (
               <p className="text-xs text-yellow-300 font-semibold leading-snug">Select 3 cards</p>
             ) : message ? (
@@ -153,7 +153,7 @@ export default function TrainerGame({ onViewHistory }: TrainerGameProps) {
           />
         )}
 
-        <div className="flex flex-col gap-2 pt-3 border-t border-gray-800">
+        <div className="flex flex-col gap-2 pt-3 border-t border-white/10">
           <Button
             variant="secondary"
             size="xs"
@@ -195,7 +195,7 @@ function StatRow({
 }) {
   return (
     <div className="flex items-baseline justify-between gap-2">
-      <span className="text-xs text-gray-500 uppercase tracking-wide">{label}</span>
+      <span className="text-xs text-fg-muted uppercase tracking-wide">{label}</span>
       <span className={`text-base font-bold tabular-nums ${color} ${mono ? "font-mono" : ""}`}>
         {value}
       </span>

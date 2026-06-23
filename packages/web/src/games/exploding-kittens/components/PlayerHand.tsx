@@ -15,7 +15,7 @@ export default function PlayerHand({ hand, selectedIds, onToggleCard, disabled }
   const sorted = useMemo(() => sortHand(hand), [hand]);
 
   if (hand.length === 0) {
-    return <p className="text-center text-sm text-gray-600">No cards in hand</p>;
+    return <p className="text-center text-sm text-fg-disabled">No cards in hand</p>;
   }
 
   return (

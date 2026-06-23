@@ -40,7 +40,7 @@ function CardButton({ cardType, onClick }: { cardType: CardType; onClick: () => 
           <span className="text-2xl">{CARD_EMOJI[cardType]}</span>
         </div>
       )}
-      <span className="text-center text-[10px] font-medium leading-tight text-gray-300 group-hover:text-white">
+      <span className="text-center text-3xs font-medium leading-tight text-fg-secondary group-hover:text-white">
         {CARD_LABELS[cardType]}
       </span>
     </button>
@@ -67,7 +67,7 @@ export default function StealDialog({ state, onAction }: StealDialogProps) {
               ? "🎯 Choose Steal Target (Named)"
               : "🎯 Choose Steal Target"}
         </p>
-        <p className="mb-3 text-xs text-gray-400">
+        <p className="mb-3 text-xs text-fg-secondary">
           Select a player to {isForFavor ? "demand a favor from" : "steal from"}
         </p>
 
@@ -85,7 +85,7 @@ export default function StealDialog({ state, onAction }: StealDialogProps) {
                 <div className="font-medium">
                   {player.type === "human" ? "You" : `AI ${t.targetIndex}`}
                 </div>
-                <div className="text-xs text-gray-400">{player.hand.length} cards</div>
+                <div className="text-xs text-fg-secondary">{player.hand.length} cards</div>
               </Button>
             );
           })}
@@ -102,7 +102,7 @@ export default function StealDialog({ state, onAction }: StealDialogProps) {
     return (
       <div className="rounded-xl border border-purple-700/50 bg-purple-950/40 p-4">
         <p className="mb-1 text-sm font-medium text-purple-300">🎯 Name a Card</p>
-        <p className="mb-3 text-xs text-gray-400">If the target has this card, you steal it.</p>
+        <p className="mb-3 text-xs text-fg-secondary">If the target has this card, you steal it.</p>
 
         <div className="flex flex-wrap gap-1 overflow-x-auto">
           {nameActions.map((a) => (

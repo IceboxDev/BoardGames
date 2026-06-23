@@ -5,7 +5,7 @@ import { errorMessageOf } from "../../lib/error-message";
 import { adminFetchInventory, adminSaveInventory } from "../../lib/inventory";
 import { qk } from "../../lib/query-keys";
 import InventoryGrid from "../InventoryGrid";
-import { Button, LoadingState } from "../ui";
+import { Button, ErrorAlert, LoadingState } from "../ui";
 
 type Props = { userId: string };
 
@@ -44,7 +44,7 @@ export function InventoryPanel({ userId }: Props) {
 
   return (
     <div className="space-y-3">
-      {error && <p className="text-xs text-rose-400">{error}</p>}
+      {error && <ErrorAlert message={error} />}
       <InventoryGrid selected={list.draft} onToggle={list.toggle} />
       <div className="flex items-center justify-end gap-2">
         <span className="text-xs text-fg-muted">

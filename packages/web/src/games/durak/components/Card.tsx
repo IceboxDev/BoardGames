@@ -59,7 +59,7 @@ export default function Card({
       />
 
       {isTrump && (
-        <div className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-amber-400 text-[8px] font-bold text-amber-900 shadow">
+        <div className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-amber-400 text-4xs font-bold text-amber-900 shadow">
           T
         </div>
       )}
@@ -76,7 +76,7 @@ export function CardBack({ size = "md" }: { size?: "sm" | "md" | "lg" | "hand" }
     <div
       className={`${SIZE_CLASSES[size]} flex items-center justify-center rounded-lg border border-gray-600 bg-gradient-to-br from-indigo-900 to-indigo-950 shadow-md`}
     >
-      <div className="text-lg text-indigo-400/50">&#x2660;</div>
+      <div className="text-lg text-accent-400/50">&#x2660;</div>
     </div>
   );
 }

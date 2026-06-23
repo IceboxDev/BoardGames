@@ -75,7 +75,7 @@ export default function GameOverScreen({ state, onRestart, onMenu }: GameOverScr
                       ? "text-green-400"
                       : status === "cured"
                         ? "text-yellow-400"
-                        : "text-gray-500"
+                        : "text-fg-muted"
                   }`}
                 >
                   {status}
@@ -89,15 +89,15 @@ export default function GameOverScreen({ state, onRestart, onMenu }: GameOverScr
         <div className="grid grid-cols-3 gap-3 text-center">
           <div className="rounded-lg bg-surface-800 p-3">
             <div className="text-2xl font-bold text-white">{state.turnNumber}</div>
-            <div className="text-xs text-gray-500">Turns</div>
+            <div className="text-xs text-fg-muted">Turns</div>
           </div>
           <div className="rounded-lg bg-surface-800 p-3">
             <div className="text-2xl font-bold text-white">{state.outbreakCount}</div>
-            <div className="text-xs text-gray-500">Outbreaks</div>
+            <div className="text-xs text-fg-muted">Outbreaks</div>
           </div>
           <div className="rounded-lg bg-surface-800 p-3">
             <div className="text-2xl font-bold text-white">{totalCubesOnBoard}</div>
-            <div className="text-xs text-gray-500">Cubes Left</div>
+            <div className="text-xs text-fg-muted">Cubes Left</div>
           </div>
         </div>
 

@@ -19,7 +19,7 @@ const GHOST_TEXT: Record<StationTheme, string> = {
   sashimi: "text-emerald-500/30",
   dumpling: "text-yellow-500/30",
   pudding: "text-pink-500/30",
-  chopsticks: "text-gray-500/30",
+  chopsticks: "text-fg-muted/30",
 };
 
 interface GhostCardProps {

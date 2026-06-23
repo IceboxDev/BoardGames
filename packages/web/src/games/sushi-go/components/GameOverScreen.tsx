@@ -28,7 +28,7 @@ function rowCls(playerIdx: number, myIndex: number, hoveredPlayer: number | null
   const isHovered = hoveredPlayer === playerIdx;
   if (isHovered) return "bg-orange-500/15 text-orange-200 font-semibold";
   if (isYou) return "font-semibold text-orange-300";
-  return "text-gray-300";
+  return "text-fg-secondary";
 }
 
 export default function GameOverScreen({
@@ -76,10 +76,10 @@ export default function GameOverScreen({
     >
       <div className="space-y-8">
         {/* Standings table */}
-        <div className="rounded-xl border border-gray-700/50 bg-surface-800 p-6">
+        <div className="rounded-xl border border-white/10 bg-surface-800 p-6">
           <table className="w-full text-sm">
             <thead>
-              <tr className="text-gray-500">
+              <tr className="text-fg-muted">
                 <th className="pb-3 text-left font-medium">#</th>
                 <th className="pb-3 text-left font-medium">Player</th>
                 {roundTotals.map((_, r) => (
@@ -106,7 +106,7 @@ export default function GameOverScreen({
                     onMouseEnter={() => setHoveredPlayer(i)}
                     onMouseLeave={() => setHoveredPlayer(null)}
                   >
-                    <td className="py-1.5 text-gray-500">{rank + 1}</td>
+                    <td className="py-1.5 text-fg-muted">{rank + 1}</td>
                     <td className="py-1.5">
                       {pName(i, myIndex)}
                       {i === result.winner ? " 👑" : ""}
@@ -181,13 +181,13 @@ function RoundDetail({
   );
 
   return (
-    <div className="rounded-xl border border-gray-700/50 bg-surface-800 p-5">
-      <div className="mb-3 text-sm font-bold uppercase tracking-wider text-gray-500">
+    <div className="rounded-xl border border-white/10 bg-surface-800 p-5">
+      <div className="mb-3 text-sm font-bold uppercase tracking-wider text-fg-muted">
         Round {entry.round}
       </div>
       <table className="w-full text-sm">
         <thead>
-          <tr className="text-gray-500">
+          <tr className="text-fg-muted">
             <th className="pb-2 text-left font-medium" />
             {CATEGORIES.map((c) => (
               <th key={c.key} className="pb-2 text-center font-medium" title={c.label}>

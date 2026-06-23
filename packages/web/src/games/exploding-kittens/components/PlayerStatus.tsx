@@ -17,20 +17,20 @@ export default function PlayerStatus({ state }: PlayerStatusProps) {
             key={player.index}
             className={`flex items-center gap-2 rounded-lg px-3 py-2 text-sm ${
               !player.alive
-                ? "bg-gray-800/50 text-gray-600 line-through"
+                ? "bg-surface-800/50 text-fg-disabled line-through"
                 : isCurrent
-                  ? "bg-indigo-900/60 text-white ring-1 ring-indigo-500"
-                  : "bg-gray-800/60 text-gray-300"
+                  ? "bg-indigo-900/60 text-white ring-1 ring-accent-500"
+                  : "bg-surface-800/60 text-fg-secondary"
             }`}
           >
             <span className="font-medium">{isHuman ? "You" : `AI ${player.index}`}</span>
             {!isHuman && player.aiStrategy && (
-              <span className="text-[10px] text-gray-500">
+              <span className="text-3xs text-fg-muted">
                 ({AI_STRATEGY_LABELS[player.aiStrategy]})
               </span>
             )}
             {player.alive ? (
-              <span className="rounded-full bg-gray-700 px-2 py-0.5 text-xs">
+              <span className="rounded-full bg-surface-700 px-2 py-0.5 text-xs">
                 {player.hand.length} cards
               </span>
             ) : (
@@ -43,7 +43,7 @@ export default function PlayerStatus({ state }: PlayerStatusProps) {
         );
       })}
 
-      <div className="flex items-center gap-2 text-xs text-gray-500">
+      <div className="flex items-center gap-2 text-xs text-fg-muted">
         <span>Turn {state.turnCount}</span>
         {state.turnsRemaining > 1 && (
           <span className="text-amber-400">({state.turnsRemaining} turns remaining)</span>

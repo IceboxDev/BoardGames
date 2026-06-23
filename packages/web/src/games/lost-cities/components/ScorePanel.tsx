@@ -25,8 +25,8 @@ export default function ScorePanel({
 
   return (
     <div
-      className={`flex items-center justify-between text-gray-400 shrink-0 ${
-        compact ? "text-[10px] px-1 gap-2" : "text-xs px-2 gap-3"
+      className={`flex items-center justify-between text-fg-secondary shrink-0 ${
+        compact ? "text-3xs px-1 gap-2" : "text-xs px-2 gap-3"
       }`}
     >
       <div className={`flex ${compact ? "gap-2 flex-wrap" : "gap-3"}`}>
@@ -36,7 +36,7 @@ export default function ScorePanel({
         <span>
           {name1}: <span className="font-bold text-white">{aiScore.total}</span>
         </span>
-        <span className={diff > 0 ? "text-green-400" : diff < 0 ? "text-red-400" : "text-gray-500"}>
+        <span className={diff > 0 ? "text-green-400" : diff < 0 ? "text-red-400" : "text-fg-muted"}>
           ({diff > 0 ? "+" : ""}
           {diff})
         </span>

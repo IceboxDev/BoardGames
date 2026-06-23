@@ -127,7 +127,7 @@ export function Lobby({
       <div className="relative z-10 flex h-full min-h-0 w-full flex-col overflow-hidden px-4 pb-4 pt-3 sm:px-6 sm:pb-5 sm:pt-4">
         <header className="mb-3 flex shrink-0 flex-wrap items-baseline gap-3">
           <h1 className="text-xl font-bold text-white sm:text-2xl">{title ?? "Multiplayer"}</h1>
-          <p className="text-xs text-slate-400 sm:text-sm">
+          <p className="text-xs text-fg-secondary sm:text-sm">
             Share the room code with a friend, ready up, and launch
           </p>
         </header>
@@ -142,7 +142,7 @@ export function Lobby({
               <span className="font-mono text-3xl font-black tracking-[0.35em] text-emerald-400">
                 {roomCode}
               </span>
-              <span className="text-center text-[10px] text-slate-500">
+              <span className="text-center text-3xs text-fg-muted">
                 Friends join with this code
               </span>
             </div>
@@ -161,7 +161,7 @@ export function Lobby({
                 <span className="text-sm font-bold text-white">
                   {canStart ? "Cleared for departure" : "Pre-flight checks"}
                 </span>
-                <span className="text-[10px] leading-tight text-slate-400">{launchStatus}</span>
+                <span className="text-3xs leading-tight text-fg-secondary">{launchStatus}</span>
               </div>
               <div className="flex flex-col items-stretch gap-1">
                 {startOrReadyButton}

@@ -103,9 +103,7 @@ export default function SeasonMissionsPanel({ view, myIndex }: SeasonMissionsPan
   return (
     <div className="flex h-full flex-col rounded-lg bg-stone-900/40 p-2">
       <div className="mb-1 flex items-center justify-between">
-        <span className="text-[10px] font-bold uppercase tracking-wider text-amber-300">
-          Missions
-        </span>
+        <span className="text-3xs font-bold uppercase tracking-wider text-amber-300">Missions</span>
         <span
           className="text-[9px] italic text-stone-500"
           title="Strict majority each season — ties earn nothing"
@@ -142,7 +140,7 @@ export default function SeasonMissionsPanel({ view, myIndex }: SeasonMissionsPan
                 {SEASON_ICON[season]}
               </span>
               <div className="flex min-w-0 flex-1 flex-col leading-tight">
-                <span className="truncate text-[10px] font-semibold text-stone-200">
+                <span className="truncate text-3xs font-semibold text-stone-200">
                   {SEASON_MISSION_LABELS[mission]}
                 </span>
                 <span className="text-[9px] italic text-stone-500">
@@ -150,7 +148,7 @@ export default function SeasonMissionsPanel({ view, myIndex }: SeasonMissionsPan
                 </span>
               </div>
               {status === "current" && (
-                <div className="flex items-center gap-0.5 text-[10px]" title="You / Opponent">
+                <div className="flex items-center gap-0.5 text-3xs" title="You / Opponent">
                   <span
                     className={`rounded px-1 font-bold tabular-nums ${
                       leader === "me" ? "bg-cyan-700 text-white" : "bg-stone-700 text-stone-300"

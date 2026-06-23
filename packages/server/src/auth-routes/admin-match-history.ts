@@ -247,28 +247,49 @@ adminMatchHistoryRoutes.post("/reorder", zJsonBody(MatchReorderInputSchema), asy
   }
 
   const db = getDb();
-  const { rows } = await db.execute({
-    sql: "SELECT id FROM match_results WHERE date_key = ?",
-    args: [dateKey],
-  });
-  const nightIds = new Set(
-    parseRows(z.object({ id: z.number() }), rows, "match_results.reorder-ids").map((r) => r.id),
-  );
-  if (nightIds.size !== orderedIds.length || orderedIds.some((id) => !nightIds.has(id))) {
-    return errorResponse(
-      c,
-      400,
-      "orderedIds must list exactly the matches in this night",
-      "BAD_REQUEST",
+  // Validate the ids form the group being reordered. A real night is scoped by
+  // its dateKey and must list EXACTLY that night's matches. A standalone bucket
+  // (dateKey null) only requires every id to be an existing match with no
+  // dateKey — the client sends one day's matches, and standalone sort_order is a
+  // single space, so reordering a per-day subset is fine.
+  if (dateKey !== null) {
+    const { rows } = await db.execute({
+      sql: "SELECT id FROM match_results WHERE date_key = ?",
+      args: [dateKey],
+    });
+    const nightIds = new Set(
+      parseRows(z.object({ id: z.number() }), rows, "match_results.reorder-ids").map((r) => r.id),
     );
+    if (nightIds.size !== orderedIds.length || orderedIds.some((id) => !nightIds.has(id))) {
+      return errorResponse(
+        c,
+        400,
+        "orderedIds must list exactly the matches in this night",
+        "BAD_REQUEST",
+      );
+    }
+  } else {
+    const placeholders = orderedIds.map(() => "?").join(",");
+    const { rows } = await db.execute({
+      sql: `SELECT id FROM match_results WHERE date_key IS NULL AND id IN (${placeholders})`,
+      args: orderedIds,
+    });
+    const standaloneIds = parseRows(
+      z.object({ id: z.number() }),
+      rows,
+      "match_results.reorder-ids",
+    );
+    if (standaloneIds.length !== orderedIds.length) {
+      return errorResponse(c, 400, "orderedIds must all be standalone matches", "BAD_REQUEST");
+    }
   }
 
   // Atomic all-or-nothing batch. No `updated_at` bump — reordering isn't a
-  // content edit.
+  // content edit. `id` is the primary key, so it scopes each update on its own.
   await db.batch(
     orderedIds.map((id, index) => ({
-      sql: "UPDATE match_results SET sort_order = ? WHERE id = ? AND date_key = ?",
-      args: [index, id, dateKey],
+      sql: "UPDATE match_results SET sort_order = ? WHERE id = ?",
+      args: [index, id],
     })),
     "write",
   );

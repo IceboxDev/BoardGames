@@ -12,6 +12,7 @@ export * from "./http/calendar-feed.ts";
 export * from "./http/games.ts";
 export * from "./http/history.ts";
 export * from "./http/inventory.ts";
+export * from "./http/profile.ts";
 export * from "./http/tournament.ts";
 export * from "./ws/client-messages.ts";
 export * from "./ws/room.ts";

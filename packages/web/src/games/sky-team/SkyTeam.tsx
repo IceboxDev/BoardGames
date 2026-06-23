@@ -178,7 +178,7 @@ export default function SkyTeam({ source }: GameComponentProps) {
 
   return (
     <GameScreen
-      background="bg-slate-950"
+      background="bg-surface-950"
       sidebar={<ActionLog blocks={mapSkyTeamLog(view.log, playerNames)} />}
       leftSidebar={<ApproachTrack view={view} />}
       // Always render the dice tray — even during briefing — so the bottom

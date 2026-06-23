@@ -107,7 +107,7 @@ export default function CardTag({ label, color, imageUrl, tooltipContent }: Card
             className="pointer-events-none fixed z-tooltip"
             style={{ left: tooltipPos.left, top: tooltipPos.top }}
           >
-            <div className="flex w-[150px] flex-col items-center gap-1 rounded-xl bg-gray-900 p-1.5 shadow-2xl ring-1 ring-white/20">
+            <div className="flex w-[150px] flex-col items-center gap-1 rounded-xl bg-surface-900 p-1.5 shadow-2xl ring-1 ring-white/20">
               {tooltipContent ?? (
                 <img
                   src={imageUrl}

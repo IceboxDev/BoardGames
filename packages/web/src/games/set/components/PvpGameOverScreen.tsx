@@ -52,7 +52,7 @@ function PlayerColumn({
         highlight ? "bg-green-900/20 border border-green-500/30" : "bg-surface-800"
       }`}
     >
-      <p className="text-sm font-semibold text-gray-400 mb-3">{label}</p>
+      <p className="text-sm font-semibold text-fg-secondary mb-3">{label}</p>
       <div className="space-y-2">
         <Stat label="SETs Found" value={String(stats.setsFound)} />
         <Stat label="Penalties" value={String(stats.penalties)} />
@@ -86,7 +86,7 @@ function Stat({
 }) {
   return (
     <div className="flex items-baseline justify-between gap-2">
-      <span className="text-xs text-gray-500">{label}</span>
+      <span className="text-xs text-fg-muted">{label}</span>
       <span className={`text-sm tabular-nums ${color} ${bold ? "font-bold" : "font-medium"}`}>
         {value}
       </span>

@@ -150,11 +150,7 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
         <div className="w-[676px]">
           <div className="flex items-center justify-between mb-4">
             <SectionLabel>Assigned roles</SectionLabel>
-            <Button
-              variant="link"
-              onClick={handleShuffle}
-              className="!text-sky-400 hover:!text-sky-300"
-            >
+            <Button variant="link" onClick={handleShuffle}>
               Shuffle
             </Button>
           </div>

@@ -59,7 +59,7 @@ const UserNameRowSchema = z.object({
  * when no user ids are referenced — callers can pass it to
  * `refreshDisplayNames` unconditionally.
  */
-async function fetchNameMap(db: Db, ids: Set<string>): Promise<Map<string, string>> {
+export async function fetchNameMap(db: Db, ids: Set<string>): Promise<Map<string, string>> {
   if (ids.size === 0) return new Map();
   const list = [...ids];
   const placeholders = list.map(() => "?").join(",");
