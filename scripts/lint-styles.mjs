@@ -30,9 +30,13 @@
 //   zero everywhere, delete its baseline section and it is effectively STRICT.
 //
 // Runs in `pnpm lint` and the lefthook pre-commit. Exits 1 on any violation.
-// `--update` rewrites the baseline from the current tree (and still enforces
-// the STRICT rules).
+// `--update` rewrites the baseline from the current tree — but it is DOWN-ONLY:
+// it refuses to raise any rule's total (pass `--allow-increase` to override — a
+// deliberate, diff-visible act). `--check-baseline [--base=<ref>]` is the CI
+// gate: it asserts the committed baseline never grew vs a base ref (default
+// origin/master), skipping gracefully when that ref isn't available.
 
+import { execSync } from "node:child_process";
 import { existsSync, readFileSync, readdirSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join, relative } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -41,6 +45,14 @@ const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const WEB = join(SCRIPT_DIR, "..", "packages", "web", "src");
 const BASELINE_PATH = join(SCRIPT_DIR, "style-baseline.json");
 const UPDATE = process.argv.includes("--update");
+// `--update` is down-only: it refuses to RAISE any rule's total (new violations
+// must be fixed, not pinned). `--allow-increase` is the explicit, diff-visible
+// escape hatch for the rare deliberate pin.
+const ALLOW_INCREASE = process.argv.includes("--allow-increase");
+// `--check-baseline [--base=<ref>]` (CI gate): assert the committed baseline is
+// at or below a base git ref (default origin/master) for every rule. Skips
+// gracefully when the ref isn't available (offline / fresh clone).
+const CHECK_BASELINE = process.argv.includes("--check-baseline");
 
 // ── Strict rules ──────────────────────────────────────────────────────────
 
@@ -80,11 +92,13 @@ const RATCHET_RULES = [
   {
     name: "tailwind-important",
     // `!` directly before a Tailwind utility. Variant prefixes sit before the
-    // `!` (hover:!bg-…) so they aren't matched here. Two branches: value
-    // utilities must be followed by `-<value>` (so JS negations of short names
-    // like `!p.isOut` / `!m.length` / `!w` never match), and the handful of
-    // bare display/text utilities (`!flex`, `!hidden`, …) match on a boundary.
-    re: /\!(?:bg|text|border|shadow|ring|rounded|gap|space|divide|w|h|min-w|max-w|min-h|max-h|p|px|py|pt|pr|pb|pl|m|mx|my|mt|mr|mb|ml|inset|top|right|bottom|left|z|opacity|leading|tracking|from|to|via|order|col|row|object|overflow|cursor|place|content|aspect|whitespace|font|items|justify|self|grid|flex)-|\!(?:flex|grid|block|hidden|inline|table|contents|truncate|italic|underline|uppercase|lowercase|capitalize|sr-only)\b/g,
+    // `!` (hover:!bg-…) so they aren't matched here. ONLY the value-utility form
+    // (`!util-<value>`) is matched — the required trailing `-` means it never
+    // collides with JS negations of short identifiers (`!grid`, `!hidden`,
+    // `!p.isOut`, `!h`). Bare important display utilities (`!flex`, `!hidden`)
+    // are deliberately NOT matched: rare in real code, and indistinguishable
+    // from a JS negation at the regex level.
+    re: /\!(?:bg|text|border|shadow|ring|rounded|gap|space|divide|w|h|min-w|max-w|min-h|max-h|p|px|py|pt|pr|pb|pl|m|mx|my|mt|mr|mb|ml|inset|top|right|bottom|left|z|opacity|leading|tracking|from|to|via|order|col|row|object|overflow|cursor|place|content|aspect|whitespace|font|items|justify|self|grid|flex)-/g,
     hint: "no !important overrides — add a variant to the primitive instead",
   },
   {
@@ -110,10 +124,55 @@ function countMatches(text, re) {
   return m ? m.length : 0;
 }
 
-const baseline =
-  existsSync(BASELINE_PATH) && !UPDATE
-    ? JSON.parse(readFileSync(BASELINE_PATH, "utf8"))
-    : {};
+// Sum every rule's per-file counts → { rule: total }. The down-only checks let
+// a rule's total shrink but never grow.
+function ruleTotals(bl) {
+  const totals = {};
+  for (const [rule, files] of Object.entries(bl)) {
+    totals[rule] = Object.values(files).reduce((a, n) => a + n, 0);
+  }
+  return totals;
+}
+
+const existing = existsSync(BASELINE_PATH)
+  ? JSON.parse(readFileSync(BASELINE_PATH, "utf8"))
+  : {};
+
+// `--check-baseline`: assert the committed baseline is at or below a base git
+// ref for every rule — the gate that stops the baseline being ratcheted UP.
+// Skips (passes) when the ref isn't fetched, so it never breaks offline work.
+if (CHECK_BASELINE) {
+  const baseArg = process.argv.find((a) => a.startsWith("--base="));
+  const ref = baseArg
+    ? baseArg.slice("--base=".length)
+    : process.env.STYLE_BASELINE_BASE || "origin/master";
+  let refJson;
+  try {
+    refJson = execSync(`git show ${ref}:scripts/style-baseline.json`, {
+      encoding: "utf8",
+      stdio: ["pipe", "pipe", "ignore"],
+    });
+  } catch {
+    console.log(`✓ style-guard: baseline check skipped — ${ref}:scripts/style-baseline.json unavailable`);
+    process.exit(0);
+  }
+  const before = ruleTotals(JSON.parse(refJson));
+  const after = ruleTotals(existing);
+  const grown = Object.keys(after)
+    .filter((rule) => (after[rule] ?? 0) > (before[rule] ?? 0))
+    .map((rule) => `    ${rule}: ${before[rule] ?? 0} → ${after[rule]}`);
+  if (grown.length > 0) {
+    console.error(`\n✖ style-guard: baseline grew vs ${ref} — it must be down-only\n`);
+    console.error(grown.join("\n"));
+    console.error("\n  New violations must be fixed, not pinned. A deliberate pin is a reviewable");
+    console.error("  baseline increase — get it approved rather than letting it slip in.\n");
+    process.exit(1);
+  }
+  console.log(`✓ style-guard: baseline is at or below ${ref} for every rule`);
+  process.exit(0);
+}
+
+const baseline = UPDATE ? {} : existing;
 
 const strictViolations = [];
 const ratchetViolations = [];
@@ -155,12 +214,29 @@ if (UPDATE) {
   for (const name of Object.keys(nextBaseline)) {
     if (Object.keys(nextBaseline[name]).length === 0) delete nextBaseline[name];
   }
+  // Down-only: refuse to raise any rule's total without an explicit opt-in, so
+  // `--update` can never silently pin new violations.
+  const before = ruleTotals(existing);
+  const after = ruleTotals(nextBaseline);
+  const grown = Object.keys(after)
+    .filter((rule) => (after[rule] ?? 0) > (before[rule] ?? 0))
+    .map((rule) => `    ${rule}: ${before[rule] ?? 0} → ${after[rule]}`);
+  if (grown.length > 0 && !ALLOW_INCREASE) {
+    console.error("\n✖ style-guard --update: refusing to RAISE the baseline (it is down-only)\n");
+    console.error(grown.join("\n"));
+    console.error("\n  Fix the new violation(s) instead of pinning them. If a pin is truly");
+    console.error("  unavoidable, re-run with --allow-increase (shows up as a baseline diff).\n");
+    process.exit(1);
+  }
   writeFileSync(BASELINE_PATH, `${JSON.stringify(nextBaseline, null, 2)}\n`);
   const total = Object.values(nextBaseline).reduce(
     (a, files) => a + Object.values(files).reduce((b, n) => b + n, 0),
     0,
   );
-  console.log(`✓ style-guard: baseline written (${total} pinned hit(s) across ${Object.keys(nextBaseline).length} rule(s))`);
+  const note = grown.length > 0 ? " — baseline RAISED via --allow-increase" : "";
+  console.log(
+    `✓ style-guard: baseline written (${total} pinned hit(s) across ${Object.keys(nextBaseline).length} rule(s))${note}`,
+  );
 }
 
 let failed = false;

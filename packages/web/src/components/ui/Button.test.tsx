@@ -87,6 +87,55 @@ describe("Button — rendering", () => {
   });
 });
 
+describe("Button — tone / fill / align", () => {
+  it("variant=tinted uses the tone's tinted palette", () => {
+    render(
+      <Button variant="tinted" tone="purple">
+        X
+      </Button>,
+    );
+    expect(screen.getByRole("button").className).toMatch(/border-purple-400/);
+  });
+
+  it("variant=solid uses the tone's solid fill", () => {
+    render(
+      <Button variant="solid" tone="emerald">
+        X
+      </Button>,
+    );
+    expect(screen.getByRole("button").className).toMatch(/bg-emerald-600/);
+  });
+
+  it("tone overrides the canonical color of a tinted alias", () => {
+    render(
+      <Button variant="danger" tone="amber">
+        X
+      </Button>,
+    );
+    const cls = screen.getByRole("button").className;
+    expect(cls).toMatch(/bg-amber-500/);
+    expect(cls).not.toMatch(/bg-rose-500/);
+  });
+
+  it("fill stretches to the parent and drops size padding + shape", () => {
+    render(
+      <Button fill size="md">
+        X
+      </Button>,
+    );
+    const cls = screen.getByRole("button").className;
+    expect(cls).toMatch(/h-full/);
+    expect(cls).toMatch(/w-full/);
+    expect(cls).not.toMatch(/px-4/);
+    expect(cls).not.toMatch(/rounded-lg/);
+  });
+
+  it("align=start left-aligns the content", () => {
+    render(<Button align="start">X</Button>);
+    expect(screen.getByRole("button").className).toMatch(/justify-start/);
+  });
+});
+
 describe("Button — interaction", () => {
   it("fires onClick on click", async () => {
     const onClick = vi.fn();

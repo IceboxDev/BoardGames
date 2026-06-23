@@ -4,7 +4,7 @@ import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { LoadingState } from "./ui/LoadingState";
 import { PageShell } from "./ui/PageShell";
 
-type Mode = "auth" | "unauth" | "online" | "admin";
+type Mode = "auth" | "unauth" | "online" | "offline" | "admin";
 
 type Props = {
   mode: Mode;
@@ -33,6 +33,11 @@ export function AuthGuard({ mode, children }: Props) {
   }
 
   if (mode === "online" && user.onlineMode === "offline") {
+    return <Navigate to="/" replace />;
+  }
+
+  // Profiles are for offline players; online-only users are sent home.
+  if (mode === "offline" && user.onlineMode === "online") {
     return <Navigate to="/" replace />;
   }
 

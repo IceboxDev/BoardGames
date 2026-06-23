@@ -21,7 +21,7 @@ export type ChipTone = "accent" | "amber" | "emerald" | "rose" | "sky";
 
 type Variant = "filled" | "outlined";
 type Size = "xs" | "sm" | "md";
-type Shape = "rounded" | "pill";
+type Shape = "rounded" | "pill" | "square";
 
 type Props = {
   pressed: boolean;
@@ -61,6 +61,9 @@ const SIZES: Record<Size, string> = {
 const SHAPES: Record<Shape, string> = {
   rounded: "rounded-md",
   pill: "rounded-full",
+  // Square corners — abutting chips inside a segmented group (e.g. the
+  // WerewolfForm team picker) where rounded inner corners would break the row.
+  square: "rounded-none",
 };
 
 // Active background + text per tone. Mirrors SegmentedControl's TONE_*

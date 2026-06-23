@@ -179,22 +179,12 @@ export default function GameBoard({
         ) : isActionPhaseForHuman ? (
           <div className="flex items-center justify-center gap-2">
             {singleSelected && (
-              <Button
-                variant="secondary"
-                size="xs"
-                onClick={handlePlaySingle}
-                className="!border-emerald-500/50 !bg-emerald-500/15 !text-emerald-300 hover:!bg-emerald-500/25"
-              >
+              <Button variant="success" size="xs" onClick={handlePlaySingle}>
                 Play Card
               </Button>
             )}
             {selectedCombo && (
-              <Button
-                variant="secondary"
-                size="xs"
-                onClick={handlePlayCombo}
-                className="!border-purple-500/50 !bg-purple-500/15 !text-purple-300 hover:!bg-purple-500/25"
-              >
+              <Button variant="tinted" tone="purple" size="xs" onClick={handlePlayCombo}>
                 Play{" "}
                 {selectedCombo.comboType === "pair"
                   ? "Pair"

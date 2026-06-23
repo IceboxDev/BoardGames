@@ -14,6 +14,7 @@ import { Chip } from "../../ui/Chip";
 import { IconButton } from "../../ui/IconButton";
 import { Select } from "../../ui/Select";
 import { ParticipantPicker } from "../ParticipantPicker";
+import { PlayerRow } from "../PlayerRow";
 
 type User = { id: string; name: string };
 
@@ -170,7 +171,7 @@ export function WerewolfForm({ users, value, onChange }: Props) {
           <Label>Final teams</Label>
           <div className="flex flex-col gap-1.5">
             {roster.map((slot) => (
-              <PlayerRow
+              <TeamRow
                 key={slot.userId}
                 slot={slot}
                 tannerAvailable={tannerInPool}
@@ -300,7 +301,7 @@ function PoolEditor({
   );
 }
 
-function PlayerRow({
+function TeamRow({
   slot,
   tannerAvailable,
   werewolfAvailable,
@@ -312,28 +313,30 @@ function PlayerRow({
   onTeamChange: (team: WerewolfTeam) => void;
 }) {
   return (
-    <div className="flex items-center gap-2">
-      <span className="flex-1 truncate text-sm text-fg-primary">{slot.displayName}</span>
-      <div className="flex shrink-0 overflow-hidden rounded-md border border-white/10">
-        <TeamButton
-          team="village"
-          active={slot.team === "village"}
-          onClick={() => onTeamChange("village")}
-        />
-        <TeamButton
-          team="werewolf"
-          active={slot.team === "werewolf"}
-          disabled={!werewolfAvailable && slot.team !== "werewolf"}
-          onClick={() => onTeamChange("werewolf")}
-        />
-        <TeamButton
-          team="tanner"
-          active={slot.team === "tanner"}
-          disabled={!tannerAvailable && slot.team !== "tanner"}
-          onClick={() => onTeamChange("tanner")}
-        />
-      </div>
-    </div>
+    <PlayerRow
+      name={slot.displayName}
+      right={
+        <div className="flex shrink-0 overflow-hidden rounded-md border border-white/10">
+          <TeamButton
+            team="village"
+            active={slot.team === "village"}
+            onClick={() => onTeamChange("village")}
+          />
+          <TeamButton
+            team="werewolf"
+            active={slot.team === "werewolf"}
+            disabled={!werewolfAvailable && slot.team !== "werewolf"}
+            onClick={() => onTeamChange("werewolf")}
+          />
+          <TeamButton
+            team="tanner"
+            active={slot.team === "tanner"}
+            disabled={!tannerAvailable && slot.team !== "tanner"}
+            onClick={() => onTeamChange("tanner")}
+          />
+        </div>
+      }
+    />
   );
 }
 
@@ -371,13 +374,10 @@ function TeamButton({
       pressed={active}
       tone={tone}
       size="xs"
-      shape="rounded"
+      shape="square"
       ring={false}
       disabled={disabled}
       onClick={onClick}
-      // Drop default rounded-md so the three buttons sit flush inside the
-      // shared border container (`overflow-hidden rounded-md border`).
-      className="!rounded-none"
     >
       {label}
     </Chip>

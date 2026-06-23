@@ -3,7 +3,9 @@ import { useEffect } from "react";
 import { villainsForEdition } from "../../../games/villainous/villains";
 import { Chip } from "../../ui/Chip";
 import { Field } from "../../ui/Field";
+import { Surface } from "../../ui/Surface";
 import { ParticipantPicker } from "../ParticipantPicker";
+import { PlayerRow } from "../PlayerRow";
 
 type User = { id: string; name: string };
 type FfaPlayer = MatchOutcomeFreeForAll["players"][number];
@@ -84,28 +86,22 @@ export function VillainousForm({ users, value, onChange }: Props) {
           {value.players.map((p) => {
             const isWinner = p.rank === 1;
             return (
-              <div
-                key={p.userId}
-                className="flex flex-col gap-1.5 rounded-md border border-white/5 bg-surface-900/40 p-2"
-              >
-                <div className="flex items-center gap-2">
-                  <span
-                    className={`flex-1 truncate text-sm ${
-                      isWinner ? "text-amber-200" : "text-fg-primary"
-                    }`}
-                  >
-                    {p.displayName}
-                  </span>
-                  <Chip
-                    pressed={isWinner}
-                    tone="amber"
-                    size="xs"
-                    onClick={() => setWinner(p.userId)}
-                    icon={<span aria-hidden="true">👑</span>}
-                  >
-                    Winner
-                  </Chip>
-                </div>
+              <Surface key={p.userId} variant="tile" padding="sm" className="flex flex-col gap-1.5">
+                <PlayerRow
+                  name={p.displayName}
+                  highlight={isWinner}
+                  right={
+                    <Chip
+                      pressed={isWinner}
+                      tone="amber"
+                      size="xs"
+                      onClick={() => setWinner(p.userId)}
+                      icon={<span aria-hidden="true">👑</span>}
+                    >
+                      Winner
+                    </Chip>
+                  }
+                />
                 <div className="flex flex-wrap gap-1.5">
                   {roster.map((villain) => (
                     <Chip
@@ -120,7 +116,7 @@ export function VillainousForm({ users, value, onChange }: Props) {
                     </Chip>
                   ))}
                 </div>
-              </div>
+              </Surface>
             );
           })}
         </div>

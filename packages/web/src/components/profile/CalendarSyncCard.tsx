@@ -41,7 +41,7 @@ export default function CalendarSyncCard({ onClick }: Props) {
           <span className="inline-flex min-w-0 items-center gap-2 text-xs text-emerald-300">
             <span
               aria-hidden="true"
-              className="h-2 w-2 shrink-0 rounded-full bg-emerald-400 shadow-[0_0_6px_rgba(74,222,128,0.7)]"
+              className="h-2 w-2 shrink-0 rounded-full bg-emerald-400 shadow-glow-emerald"
             />
             <span className="truncate">
               Connected

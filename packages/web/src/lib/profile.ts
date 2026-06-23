@@ -1,4 +1,8 @@
 import {
+  type GenerateAvatarRequest,
+  GenerateAvatarRequestSchema,
+  type GenerateAvatarResponse,
+  GenerateAvatarResponseSchema,
   type HistoryListResponse,
   HistoryListResponseSchema,
   type ProfileDirectoryResponse,
@@ -9,6 +13,9 @@ import {
   ProfileUpdateInputSchema,
   type PublicProfile,
   PublicProfileSchema,
+  SaveAvatarRequestSchema,
+  type SaveAvatarResponse,
+  SaveAvatarResponseSchema,
 } from "@boardgames/core/protocol";
 import { apiFetch } from "./api-fetch.ts";
 
@@ -45,5 +52,28 @@ export async function updateMyProfile(
     body,
     request: ProfileUpdateInputSchema,
     response: ProfileEditableSchema,
+  });
+}
+
+/** Generate (but don't save) an AI avatar preview from a reference photo. */
+export async function generateAvatar(
+  userId: string,
+  body: GenerateAvatarRequest,
+): Promise<GenerateAvatarResponse> {
+  return apiFetch(`/api/profiles/${encodeURIComponent(userId)}/avatar/generate`, {
+    method: "POST",
+    body,
+    request: GenerateAvatarRequestSchema,
+    response: GenerateAvatarResponseSchema,
+  });
+}
+
+/** Persist a confirmed avatar (webp data URI) as the user's profile picture. */
+export async function saveAvatar(userId: string, image: string): Promise<SaveAvatarResponse> {
+  return apiFetch(`/api/profiles/${encodeURIComponent(userId)}/avatar`, {
+    method: "PUT",
+    body: { image },
+    request: SaveAvatarRequestSchema,
+    response: SaveAvatarResponseSchema,
   });
 }

@@ -13,6 +13,7 @@ import {
 } from "../components/icons";
 import { EditProfileModal } from "../components/profile/EditProfileModal.tsx";
 import { GameSlugGrid } from "../components/profile/GameSlugGrid.tsx";
+import { GenerateAvatarModal } from "../components/profile/GenerateAvatarModal.tsx";
 import { HexSkillChart } from "../components/profile/HexSkillChart.tsx";
 import { NextNightCard } from "../components/profile/NextNightCard.tsx";
 import { ProfileBadges } from "../components/profile/ProfileBadges.tsx";
@@ -22,6 +23,7 @@ import { ProfileStatsPanel } from "../components/profile/ProfileStatsPanel.tsx";
 import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
 import { Button } from "../components/ui/Button.tsx";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
+import { LoadingState } from "../components/ui/LoadingState.tsx";
 import { PageMain, PageShell } from "../components/ui/PageShell.tsx";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { ApiError } from "../lib/api-fetch.ts";
@@ -34,9 +36,11 @@ const SHOW_ACHIEVEMENTS = false;
 
 export default function PlayerProfilePage() {
   const { userId } = useParams<{ userId: string }>();
-  const { user } = useCurrentUser();
+  const { user, isAdmin } = useCurrentUser();
   const isSelf = !!userId && user?.id === userId;
+  const canManageAvatar = isSelf || isAdmin;
   const [editing, setEditing] = useState(false);
+  const [changingAvatar, setChangingAvatar] = useState(false);
   const [showAllMatches, setShowAllMatches] = useState(false);
 
   const profileQuery = useQuery({
@@ -64,10 +68,8 @@ export default function PlayerProfilePage() {
   if (profileQuery.isLoading) {
     return (
       <PageShell topNav={topNav}>
-        <PageMain width="6xl" padding="spacious">
-          <div className="flex min-h-[40vh] items-center justify-center text-sm text-fg-muted">
-            Loading profile…
-          </div>
+        <PageMain width="6xl" padding="spacious" fillHeight>
+          <LoadingState fill label="Loading profile…" />
         </PageMain>
       </PageShell>
     );
@@ -131,7 +133,9 @@ export default function PlayerProfilePage() {
             profile={profile.profile}
             stats={profile.stats}
             isSelf={isSelf}
+            canChangeAvatar={canManageAvatar}
             onEdit={() => setEditing(true)}
+            onChangeAvatar={() => setChangingAvatar(true)}
           />
 
           <NextNightCard nextNight={profile.nextNight} firstName={firstName} isSelf={isSelf} />
@@ -213,6 +217,14 @@ export default function PlayerProfilePage() {
           userId={profile.user.id}
           initial={profile.profile}
           onClose={() => setEditing(false)}
+        />
+      )}
+
+      {changingAvatar && canManageAvatar && (
+        <GenerateAvatarModal
+          userId={profile.user.id}
+          targetName={isSelf ? undefined : profile.user.name}
+          onClose={() => setChangingAvatar(false)}
         />
       )}
     </PageShell>

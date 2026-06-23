@@ -160,10 +160,11 @@ export default function GameBoard({
             {isGameOver && !roundEndEntry && onShowResults && (
               <div className="flex items-center justify-center">
                 <Button
-                  variant="secondary"
+                  variant="tinted"
+                  tone="orange"
                   size="md"
                   onClick={onShowResults}
-                  className="!border-orange-500/50 !bg-orange-500/15 !text-orange-300 hover:!bg-orange-500/25 !px-8"
+                  className="px-8"
                 >
                   View Final Results
                 </Button>
@@ -182,12 +183,7 @@ export default function GameBoard({
                     🥢 Chopsticks{useChopsticks ? " (ON)" : ""}
                   </Chip>
                 )}
-                <Button
-                  variant="secondary"
-                  size="xs"
-                  onClick={handleConfirm}
-                  className="!border-orange-500/50 !bg-orange-500/15 !text-orange-300 hover:!bg-orange-500/25"
-                >
+                <Button variant="tinted" tone="orange" size="xs" onClick={handleConfirm}>
                   Confirm
                 </Button>
               </div>
@@ -249,10 +245,10 @@ export default function GameBoard({
           <div className="flex items-center gap-3 text-xs text-fg-muted">
             {hasNashAnalysis && (
               <Button
-                variant="secondary"
+                variant="tinted"
+                tone="purple"
                 size="xs"
                 onClick={() => setShowNashMatrix(true)}
-                className="!border-purple-500/30 !bg-purple-500/10 !text-purple-400 hover:!border-purple-500/50 hover:!bg-purple-500/20"
               >
                 Nash Matrix
               </Button>

@@ -1,6 +1,7 @@
 import type { MatchOutcomeTeams, Participant } from "@boardgames/core/history/types";
 import { Chip } from "../../ui/Chip";
 import { ParticipantPicker } from "../ParticipantPicker";
+import { PlayerRow } from "../PlayerRow";
 
 type User = { id: string; name: string };
 type Side = "resistance" | "spy";
@@ -119,22 +120,24 @@ export function ResistanceForm({ users, value, onChange }: Props) {
 
 function SideRow({ slot, onSide }: { slot: Slot; onSide: (side: Side) => void }) {
   return (
-    <div className="flex items-center gap-2">
-      <span className="flex-1 truncate text-sm text-fg-primary">{slot.displayName}</span>
-      <div className="flex gap-1">
-        <Chip
-          pressed={slot.side === "resistance"}
-          tone="emerald"
-          size="xs"
-          onClick={() => onSide("resistance")}
-        >
-          Resistance
-        </Chip>
-        <Chip pressed={slot.side === "spy"} tone="rose" size="xs" onClick={() => onSide("spy")}>
-          Spy
-        </Chip>
-      </div>
-    </div>
+    <PlayerRow
+      name={slot.displayName}
+      right={
+        <div className="flex gap-1">
+          <Chip
+            pressed={slot.side === "resistance"}
+            tone="emerald"
+            size="xs"
+            onClick={() => onSide("resistance")}
+          >
+            Resistance
+          </Chip>
+          <Chip pressed={slot.side === "spy"} tone="rose" size="xs" onClick={() => onSide("spy")}>
+            Spy
+          </Chip>
+        </div>
+      }
+    />
   );
 }
 

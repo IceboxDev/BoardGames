@@ -22,6 +22,8 @@ import type { SegmentedTone } from "./SegmentedControl";
 // omit it for navigation cards. Tone maps mirror SegmentedControl / Chip so a
 // card and a segmented option at the same tone read identically.
 
+export type SelectableCardPadding = "default" | "compact";
+
 type SelectableCardProps = {
   variant?: "tile" | "stripe";
   /** System tone driving tile hover border, glow, icon tint, selected ring. */
@@ -29,6 +31,8 @@ type SelectableCardProps = {
   /** Raw accent (hex/css color) for the `stripe` left bar + top hover line. */
   accentColor?: string;
   orientation?: "vertical" | "horizontal";
+  /** Padding density. `compact` tightens the card for dense grids / list rows. */
+  padding?: SelectableCardPadding;
   icon?: ReactNode;
   title?: ReactNode;
   description?: ReactNode;
@@ -101,6 +105,7 @@ export function SelectableCard({
   tone = "accent",
   accentColor,
   orientation = "vertical",
+  padding = "default",
   icon,
   title,
   description,
@@ -116,6 +121,23 @@ export function SelectableCard({
   const Component = onClick ? "button" : "div";
   const isToggle = selected !== undefined;
   const animated = animationDelay !== undefined;
+
+  // Padding lives here (not in caller `className`) so call sites never need an
+  // `!important` to beat the default px/py. `compact` is orientation-aware.
+  const pad =
+    variant === "stripe"
+      ? padding === "compact"
+        ? orientation === "horizontal"
+          ? "px-4 py-2.5"
+          : "px-2 py-3 sm:px-4 sm:py-5"
+        : "px-5 py-5"
+      : orientation === "horizontal"
+        ? padding === "compact"
+          ? "px-3 py-2.5"
+          : "px-5 py-3.5"
+        : padding === "compact"
+          ? "px-3 py-4"
+          : "px-6 py-8";
 
   const style: CSSProperties = {};
   if (variant === "stripe" && accentColor) {
@@ -177,7 +199,7 @@ export function SelectableCard({
   let cls: string;
   if (variant === "stripe") {
     cls = [
-      "group relative flex overflow-hidden rounded-xl border bg-surface-800/50 px-5 py-5 text-left transition-all duration-200",
+      `group relative flex overflow-hidden rounded-xl border bg-surface-800/50 ${pad} text-left transition-all duration-200`,
       orientation === "horizontal" ? "items-center gap-3" : "flex-col",
       isToggle && selected
         ? "border-white/20 bg-surface-800/80 shadow-lg"
@@ -190,7 +212,7 @@ export function SelectableCard({
       .join(" ");
   } else if (orientation === "horizontal") {
     cls = [
-      "group flex items-center gap-3 rounded-xl border bg-surface-800/30 px-5 py-3.5 text-left transition-all duration-200 hover:bg-surface-800/60",
+      `group flex items-center gap-3 rounded-xl border bg-surface-800/30 ${pad} text-left transition-all duration-200 hover:bg-surface-800/60`,
       isToggle && selected ? TILE_SELECTED[tone] : `border-white/10 ${TILE_HOVER_BORDER[tone]}`,
       animated ? "animate-card-fade-up" : "",
       onClick ? "disabled:pointer-events-none disabled:opacity-50" : "",
@@ -200,7 +222,7 @@ export function SelectableCard({
       .join(" ");
   } else {
     cls = [
-      "group flex flex-col items-center gap-4 rounded-2xl border bg-surface-800/40 px-6 py-8 text-center shadow-lg shadow-transparent transition-all duration-300 hover:-translate-y-1 hover:bg-surface-800/70 hover:shadow-xl",
+      `group flex flex-col items-center gap-4 rounded-2xl border bg-surface-800/40 ${pad} text-center shadow-lg shadow-transparent transition-all duration-300 hover:-translate-y-1 hover:bg-surface-800/70 hover:shadow-xl`,
       isToggle && selected
         ? TILE_SELECTED[tone]
         : `border-white/10 ${TILE_HOVER_BORDER[tone]} ${TILE_HOVER_GLOW[tone]}`,

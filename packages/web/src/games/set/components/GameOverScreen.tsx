@@ -7,6 +7,7 @@ import { formatTime } from "@boardgames/core/games/set/metrics";
 import type { GameRecord } from "@boardgames/core/games/set/types";
 import { useMemo } from "react";
 import { GameOverLayout } from "../../../components/game-over";
+import { StatCell } from "../../../components/game-over/GameOverStats";
 import { computePersonalBests } from "../logic/persistence";
 import RadarChart from "./charts/RadarChart";
 
@@ -41,17 +42,12 @@ const STAT_TIPS: Record<string, string> = {
   "Cards Left": "Cards remaining in the deck when the game ended",
 };
 
-function StatCell({ label, value, best }: { label: string; value: string; best?: boolean }) {
+// Boxed stat tile (shared `StatCell` chrome) plus Set's per-stat tooltip — the
+// tooltip is the only thing the shared primitive doesn't carry, so we wrap it.
+function StatTile({ label, value, best }: { label: string; value: string; best?: boolean }) {
   return (
-    <div
-      className="rounded-lg bg-surface-800 p-3 text-center group relative"
-      title={STAT_TIPS[label]}
-    >
-      <p className="text-xs text-fg-muted uppercase tracking-wide cursor-help">{label}</p>
-      <p className={`mt-1 text-lg font-bold ${best ? "text-yellow-400" : "text-white"}`}>
-        {value}
-        {best && " ★"}
-      </p>
+    <div className="cursor-help" title={STAT_TIPS[label]}>
+      <StatCell label={label} value={value} best={best} />
     </div>
   );
 }
@@ -133,53 +129,53 @@ export default function GameOverScreen({
       <div className="space-y-8">
         {/* Stats grid */}
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-          <StatCell label="Duration" value={formatTime(record.durationMs)} />
-          <StatCell
+          <StatTile label="Duration" value={formatTime(record.durationMs)} />
+          <StatTile
             label="SETs Found"
             value={String(record.setsFound)}
             best={isBest("bestNetScore", record.netScore)}
           />
-          <StatCell label="Penalties" value={String(record.incorrectCalls)} />
-          <StatCell label="Net Score" value={String(record.netScore)} />
-          <StatCell
+          <StatTile label="Penalties" value={String(record.incorrectCalls)} />
+          <StatTile label="Net Score" value={String(record.netScore)} />
+          <StatTile
             label="Accuracy"
             value={`${record.accuracy}%`}
             best={isBest("bestAccuracy", record.accuracy)}
           />
-          <StatCell
+          <StatTile
             label="Avg Find Time"
             value={formatTime(record.avgFindTimeMs)}
             best={isBest("fastestAvgFindTime", record.avgFindTimeMs, true)}
           />
-          <StatCell label="Median Find" value={formatTime(record.medianFindTimeMs)} />
-          <StatCell
+          <StatTile label="Median Find" value={formatTime(record.medianFindTimeMs)} />
+          <StatTile
             label="Fastest SET"
             value={formatTime(record.fastestSetMs)}
             best={isBest("fastestSingleSet", record.fastestSetMs, true)}
           />
-          <StatCell label="Slowest SET" value={formatTime(record.slowestSetMs)} />
-          <StatCell label="Consistency" value={`${(record.consistencyMs / 1000).toFixed(1)}s`} />
-          <StatCell
+          <StatTile label="Slowest SET" value={formatTime(record.slowestSetMs)} />
+          <StatTile label="Consistency" value={`${(record.consistencyMs / 1000).toFixed(1)}s`} />
+          <StatTile
             label="Throughput"
             value={`${record.throughput}/min`}
             best={isBest("bestThroughput", record.throughput)}
           />
-          <StatCell label="1st SET" value={formatTime(record.timeToFirstSetMs)} />
-          <StatCell label="Early Calls" value={String(record.earlyCallCount)} />
-          <StatCell label="Early Rate" value={`${Math.round(record.earlyCallRate * 100)}%`} />
-          <StatCell label="Avg Board" value={String(record.avgBoardSize)} />
-          <StatCell label="+3 Requests" value={String(record.plusThreeRequests)} />
-          {record.hintCount > 0 && <StatCell label="Hints Used" value={String(record.hintCount)} />}
-          <StatCell
+          <StatTile label="1st SET" value={formatTime(record.timeToFirstSetMs)} />
+          <StatTile label="Early Calls" value={String(record.earlyCallCount)} />
+          <StatTile label="Early Rate" value={`${Math.round(record.earlyCallRate * 100)}%`} />
+          <StatTile label="Avg Board" value={String(record.avgBoardSize)} />
+          <StatTile label="+3 Requests" value={String(record.plusThreeRequests)} />
+          {record.hintCount > 0 && <StatTile label="Hints Used" value={String(record.hintCount)} />}
+          <StatTile
             label="Best Streak"
             value={String(record.longestStreak)}
             best={isBest("longestStreak", record.longestStreak)}
           />
-          <StatCell
+          <StatTile
             label="Fatigue"
             value={`${record.fatigueSlopeMs > 0 ? "+" : ""}${(record.fatigueSlopeMs / 1000).toFixed(1)}s`}
           />
-          <StatCell label="Cards Left" value={String(record.cardsRemaining)} />
+          <StatTile label="Cards Left" value={String(record.cardsRemaining)} />
         </div>
 
         {/* vs. Your Average */}

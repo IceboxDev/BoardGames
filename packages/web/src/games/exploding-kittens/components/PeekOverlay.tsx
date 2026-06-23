@@ -30,10 +30,10 @@ export default function PeekOverlay({ state, onAction }: PeekOverlayProps) {
       </div>
 
       <Button
-        variant="primary"
+        variant="solid"
+        tone="purple"
         size="md"
         onClick={() => onAction({ type: "acknowledge-peek" })}
-        className="!bg-purple-600 !shadow-purple-500/20 hover:!bg-purple-500"
       >
         Got it
       </Button>

@@ -5,7 +5,9 @@ import { parseMultiVariant } from "../../../games/match-variants";
 import { Button } from "../../ui/Button";
 import { Chip } from "../../ui/Chip";
 import { Field } from "../../ui/Field";
+import { Surface } from "../../ui/Surface";
 import { ParticipantPicker } from "../ParticipantPicker";
+import { PlayerRow } from "../PlayerRow";
 
 type User = { id: string; name: string };
 type LsPlayer = MatchOutcomeLastStanding["players"][number];
@@ -92,31 +94,31 @@ export function DungeonMayhemForm({ users, value, onChange }: Props) {
           {value.players.map((p) => {
             const eliminated = p.eliminationOrder !== undefined;
             return (
-              <div
-                key={p.userId}
-                className="flex flex-col gap-1.5 rounded-md border border-white/5 bg-surface-900/40 p-2"
-              >
-                <div className="flex items-center gap-2">
-                  <span
-                    className={`flex-1 truncate text-sm ${
-                      eliminated ? "text-fg-muted line-through" : "text-amber-100"
-                    }`}
-                  >
-                    {p.displayName}
-                  </span>
-                  {eliminated ? (
-                    <span className="text-xs text-fg-muted">
-                      out #{(p.eliminationOrder ?? 0) + 1}
-                    </span>
-                  ) : (
-                    <span className="rounded bg-amber-400/20 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wide text-amber-200">
-                      Surviving
-                    </span>
-                  )}
-                  <Button variant="secondary" size="xs" onClick={() => toggleEliminated(p.userId)}>
-                    {eliminated ? "Revive" : "Eliminate"}
-                  </Button>
-                </div>
+              <Surface key={p.userId} variant="tile" padding="sm" className="flex flex-col gap-1.5">
+                <PlayerRow
+                  name={p.displayName}
+                  nameClassName={eliminated ? "text-fg-muted line-through" : "text-amber-100"}
+                  right={
+                    <>
+                      {eliminated ? (
+                        <span className="text-xs text-fg-muted">
+                          out #{(p.eliminationOrder ?? 0) + 1}
+                        </span>
+                      ) : (
+                        <span className="rounded bg-amber-400/20 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wide text-amber-200">
+                          Surviving
+                        </span>
+                      )}
+                      <Button
+                        variant="secondary"
+                        size="xs"
+                        onClick={() => toggleEliminated(p.userId)}
+                      >
+                        {eliminated ? "Revive" : "Eliminate"}
+                      </Button>
+                    </>
+                  }
+                />
                 <div className="flex flex-wrap gap-1.5">
                   {roster.map((hero) => (
                     <Chip
@@ -131,7 +133,7 @@ export function DungeonMayhemForm({ users, value, onChange }: Props) {
                     </Chip>
                   ))}
                 </div>
-              </div>
+              </Surface>
             );
           })}
         </div>

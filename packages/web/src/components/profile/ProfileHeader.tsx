@@ -1,10 +1,11 @@
 import type { ProfileEditable, ProfileStats, ProfileUserSummary } from "@boardgames/core/protocol";
 import type { CSSProperties } from "react";
 import { formatMonthYear } from "../../lib/profile-format.ts";
-import { EditIcon, PinIcon } from "../icons";
+import { CameraIcon, EditIcon, PinIcon } from "../icons";
 import { Avatar } from "../ui/Avatar.tsx";
 import { Badge } from "../ui/Badge.tsx";
 import { Button } from "../ui/Button.tsx";
+import { Surface } from "../ui/Surface.tsx";
 import { StatTile } from "./StatTile.tsx";
 
 // Profile hero: accent-gradient banner, overlapping avatar, identity block,
@@ -17,39 +18,73 @@ type ProfileHeaderProps = {
   profile: ProfileEditable;
   stats: ProfileStats;
   isSelf: boolean;
+  /** Whether the viewer may change this avatar (owner or admin). */
+  canChangeAvatar: boolean;
   onEdit: () => void;
+  /** Open the AI avatar generator (avatar becomes a click target). */
+  onChangeAvatar: () => void;
 };
 
 function formatPercent(value: number | null): string {
   return value === null ? "—" : `${Math.round(value * 100)}%`;
 }
 
-export function ProfileHeader({ user, profile, stats, isSelf, onEdit }: ProfileHeaderProps) {
+export function ProfileHeader({
+  user,
+  profile,
+  stats,
+  isSelf,
+  canChangeAvatar,
+  onEdit,
+  onChangeAvatar,
+}: ProfileHeaderProps) {
   const accent = profile.accentHex ?? "#6366f1";
   const style = { "--accent": accent } as CSSProperties;
 
   return (
-    <header
+    <Surface
+      as="header"
+      variant="raised"
+      padding="none"
       style={style}
-      className="overflow-hidden rounded-2xl border border-white/[0.06] bg-surface-900/40"
+      className="relative overflow-hidden"
     >
-      <div className="relative h-24 bg-gradient-to-br from-[var(--accent)]/45 via-[var(--accent)]/15 to-surface-900 sm:h-32">
-        {isSelf && (
-          <Button
-            variant="secondary"
-            size="sm"
-            onClick={onEdit}
-            className="absolute right-3 top-3 gap-1.5"
-          >
-            <EditIcon />
-            Edit profile
-          </Button>
-        )}
-      </div>
+      {/* Banner is a plain (non-positioned) background block; the content below
+          uses `relative z-10` so the overlapping avatar + name paint ON TOP of
+          it. A positioned banner paints over static content per CSS stacking
+          rules — that was the bug (banner covered the avatar/name). */}
+      <div className="h-24 bg-gradient-to-br from-[var(--accent)]/45 via-[var(--accent)]/15 to-surface-900 sm:h-32" />
 
-      <div className="px-4 pb-5 sm:px-6">
+      {isSelf && (
+        <Button
+          variant="secondary"
+          size="sm"
+          onClick={onEdit}
+          className="absolute right-3 top-3 z-20 gap-1.5"
+        >
+          <EditIcon />
+          Edit profile
+        </Button>
+      )}
+
+      <div className="relative z-10 px-4 pb-5 sm:px-6">
         <div className="-mt-10 flex flex-wrap items-end gap-4 sm:-mt-12">
-          <Avatar name={user.name} image={user.image} accentHex={accent} size="xl" ring />
+          {canChangeAvatar ? (
+            // biome-ignore lint/correctness/noRestrictedElements: avatar doubles as the change-photo trigger
+            <button
+              type="button"
+              onClick={onChangeAvatar}
+              aria-label="Change profile picture"
+              className="group/avatar relative shrink-0 rounded-full"
+            >
+              <Avatar name={user.name} image={user.image} accentHex={accent} size="xl" ring />
+              <span className="absolute inset-0 flex items-center justify-center rounded-full bg-black/45 text-white opacity-0 transition group-hover/avatar:opacity-100">
+                <CameraIcon className="h-5 w-5" />
+              </span>
+            </button>
+          ) : (
+            <Avatar name={user.name} image={user.image} accentHex={accent} size="xl" ring />
+          )}
           <div className="min-w-0 flex-1 pb-1">
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
               <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
@@ -117,6 +152,6 @@ export function ProfileHeader({ user, profile, stats, isSelf, onEdit }: ProfileH
           <StatTile label="Nights attended" value={stats.nightsAttended} />
         </div>
       </div>
-    </header>
+    </Surface>
   );
 }

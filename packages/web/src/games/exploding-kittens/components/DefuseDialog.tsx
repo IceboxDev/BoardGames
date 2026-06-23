@@ -35,10 +35,10 @@ export default function DefuseDialog({ state, onAction }: DefuseDialogProps) {
           {defuseActions.map((a) => (
             <Button
               key={a.cardId}
-              variant="primary"
+              variant="solid"
+              tone="emerald"
               size="md"
               onClick={() => onAction(a)}
-              className="!bg-emerald-600 !shadow-emerald-500/20 hover:!bg-emerald-500"
             >
               🔧 Defuse!
             </Button>
@@ -91,10 +91,10 @@ export function ReinsertDialog({
           {position === 0 ? "top" : position === deckSize ? "bottom" : `${position} from top`})
         </p>
         <Button
-          variant="primary"
+          variant="solid"
+          tone="emerald"
           size="md"
           onClick={() => onAction({ type: "reinsert-kitten", position })}
-          className="!bg-emerald-600 !shadow-emerald-500/20 hover:!bg-emerald-500"
         >
           Place Kitten Here
         </Button>

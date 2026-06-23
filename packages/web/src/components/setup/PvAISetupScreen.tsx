@@ -170,7 +170,8 @@ export function PvAISetupScreen({
               variant="stripe"
               accentColor={strat.accentColor}
               selected={effectiveId === strat.id}
-              className="min-w-0 !px-2 !py-3 sm:!px-4 sm:!py-5"
+              padding="compact"
+              className="min-w-0"
               onClick={() => setSelectedId(strat.id)}
             >
               <div className="mb-1.5 flex items-start justify-between gap-0.5 sm:mb-3">

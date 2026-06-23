@@ -2,7 +2,14 @@ import { AuthConfigSchema, WsTicketResponseSchema } from "@boardgames/core/proto
 import { createNodeWebSocket } from "@hono/node-ws";
 import { Hono } from "hono";
 import { cors } from "hono/cors";
-import { auth, requireAdmin, requireAuth, requireOnline, requireWsAuth } from "./auth/index.ts";
+import {
+  auth,
+  requireAdmin,
+  requireAuth,
+  requireOffline,
+  requireOnline,
+  requireWsAuth,
+} from "./auth/index.ts";
 import {
   adminAvailabilityAllRoutes,
   adminAvailabilityRoutes,
@@ -13,6 +20,7 @@ import { adminOnlineRoutes } from "./auth-routes/admin-online.ts";
 import { adminPasswordResetRoutes } from "./auth-routes/admin-password-reset.ts";
 import { adminPendingInventoryRoutes } from "./auth-routes/admin-pending-inventory.ts";
 import { availabilityCountsRoutes } from "./auth-routes/availability-counts.ts";
+import { avatarRoutes } from "./auth-routes/avatar.ts";
 import { bggRoutes } from "./auth-routes/bgg.ts";
 import { calendarFeedRoutes } from "./auth-routes/calendar-feed.ts";
 import { calendarFeedPublicRoutes } from "./auth-routes/calendar-feed-public.ts";
@@ -113,8 +121,10 @@ app.route("/api/calendar", calendarFeedRoutes);
 app.use("/api/history/*", requireAuth);
 app.route("/api/history", matchHistoryRoutes);
 
-app.use("/api/profiles/*", requireAuth);
+// Profiles are an offline-players feature: online-only users are blocked.
+app.use("/api/profiles/*", requireAuth, requireOffline);
 app.route("/api/profiles", profileRoutes);
+app.route("/api/profiles", avatarRoutes);
 
 app.use("/api/bgg/*", requireAuth);
 app.route("/api/bgg", bggRoutes);

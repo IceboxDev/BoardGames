@@ -99,7 +99,7 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
                   accentColor={d.accent}
                   selected={difficulty === d.value}
                   onClick={() => setDifficulty(d.value)}
-                  className="!px-4 !py-2.5"
+                  padding="compact"
                 >
                   {/* Epidemic count */}
                   <div

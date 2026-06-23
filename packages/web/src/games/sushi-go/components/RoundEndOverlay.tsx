@@ -96,12 +96,7 @@ export default function RoundEndOverlay({
       )}
 
       <div className="flex justify-center">
-        <Button
-          variant="primary"
-          size="md"
-          onClick={onContinue}
-          className="!bg-orange-600 hover:!bg-orange-500 !shadow-orange-500/20"
-        >
+        <Button variant="solid" tone="orange" size="md" onClick={onContinue}>
           {entry.round >= 3 ? "See Final Results" : `Start Round ${entry.round + 1}`}
         </Button>
       </div>

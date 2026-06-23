@@ -2,6 +2,7 @@ import type { SushiGoResult } from "@boardgames/core/games/sushi-go/machine";
 import type { ActionLogEntry } from "@boardgames/core/games/sushi-go/types";
 import { useState } from "react";
 import { GameOverLayout } from "../../../components/game-over";
+import { Surface } from "../../../components/ui/Surface";
 
 interface GameOverScreenProps {
   result: SushiGoResult;
@@ -76,7 +77,7 @@ export default function GameOverScreen({
     >
       <div className="space-y-8">
         {/* Standings table */}
-        <div className="rounded-xl border border-white/10 bg-surface-800 p-6">
+        <Surface variant="panel" padding="none" className="p-6">
           <table className="w-full text-sm">
             <thead>
               <tr className="text-fg-muted">
@@ -136,7 +137,7 @@ export default function GameOverScreen({
               })}
             </tbody>
           </table>
-        </div>
+        </Surface>
 
         {/* 3 round category breakdowns */}
         <div className="grid grid-cols-3 gap-4">
@@ -181,7 +182,7 @@ function RoundDetail({
   );
 
   return (
-    <div className="rounded-xl border border-white/10 bg-surface-800 p-5">
+    <Surface variant="panel" padding="xl">
       <div className="mb-3 text-sm font-bold uppercase tracking-wider text-fg-muted">
         Round {entry.round}
       </div>
@@ -219,6 +220,6 @@ function RoundDetail({
           ))}
         </tbody>
       </table>
-    </div>
+    </Surface>
   );
 }

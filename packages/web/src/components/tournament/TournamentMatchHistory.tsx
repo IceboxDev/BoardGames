@@ -108,17 +108,13 @@ export default function TournamentMatchHistory({
         <h2 className="text-2xl font-extrabold text-white">
           {labelA} vs {labelB}
         </h2>
-        <p className="mt-2 text-sm text-fg-secondary">
-          {loading ? (
-            "Loading..."
-          ) : (
-            <>
-              {games.length} games &middot; <span className="text-emerald-400">{stats.aWins}W</span>{" "}
-              / <span className="text-rose-400">{stats.bWins}L</span> /{" "}
-              <span className="text-fg-secondary">{stats.draws}D</span> for {labelA}
-            </>
-          )}
-        </p>
+        {!loading && (
+          <p className="mt-2 text-sm text-fg-secondary">
+            {games.length} games &middot; <span className="text-emerald-400">{stats.aWins}W</span> /{" "}
+            <span className="text-rose-400">{stats.bWins}L</span> /{" "}
+            <span className="text-fg-secondary">{stats.draws}D</span> for {labelA}
+          </p>
+        )}
       </div>
 
       {loading ? (

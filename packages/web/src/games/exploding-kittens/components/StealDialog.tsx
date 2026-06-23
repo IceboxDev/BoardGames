@@ -77,15 +77,18 @@ export default function StealDialog({ state, onAction }: StealDialogProps) {
             return (
               <Button
                 key={t.targetIndex}
-                variant="secondary"
+                variant="tinted"
+                tone="purple"
                 size="md"
+                align="start"
                 onClick={() => onAction(t)}
-                className="!flex-col !items-start !bg-purple-800/60 !border-purple-700/60 hover:!bg-purple-700"
               >
-                <div className="font-medium">
-                  {player.type === "human" ? "You" : `AI ${t.targetIndex}`}
-                </div>
-                <div className="text-xs text-fg-secondary">{player.hand.length} cards</div>
+                <span className="flex flex-col items-start">
+                  <span className="font-medium">
+                    {player.type === "human" ? "You" : `AI ${t.targetIndex}`}
+                  </span>
+                  <span className="text-xs text-fg-secondary">{player.hand.length} cards</span>
+                </span>
               </Button>
             );
           })}

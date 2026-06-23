@@ -1,6 +1,7 @@
 import type { ParksPlayerView, ParksResult } from "@boardgames/core/games/parks/types";
 import { PASSION_LABELS } from "@boardgames/core/games/parks/types";
 import { GameOverLayout } from "../../../components/game-over";
+import { LabelValueRow } from "../../../components/game-over/GameOverStats";
 
 interface GameOverScreenProps {
   view: ParksPlayerView;
@@ -57,12 +58,12 @@ export default function GameOverScreen({
                 <span className="font-semibold">{p.passion ? PASSION_LABELS[p.passion] : "—"}</span>
               </div>
               <div className="space-y-1 text-2xs">
-                <ScoreRow label="Parks" value={breakdown.parks} />
-                <ScoreRow label="Photos" value={breakdown.photos} />
-                <ScoreRow label="Passion" value={breakdown.passion} />
-                <ScoreRow label="Mission bonuses" value={breakdown.bonusPT} />
+                <LabelValueRow label="Parks" value={breakdown.parks} />
+                <LabelValueRow label="Photos" value={breakdown.photos} />
+                <LabelValueRow label="Passion" value={breakdown.passion} />
+                <LabelValueRow label="Mission bonuses" value={breakdown.bonusPT} />
                 <div className="my-1 border-t border-stone-700" />
-                <ScoreRow label="Total" value={breakdown.total} bold />
+                <LabelValueRow label="Total" value={breakdown.total} highlight />
               </div>
               <div className="mt-2 grid grid-cols-3 gap-1 text-3xs text-stone-400">
                 <Stat label="Parks visited" value={p.parks.length} />
@@ -74,15 +75,6 @@ export default function GameOverScreen({
         })}
       </div>
     </GameOverLayout>
-  );
-}
-
-function ScoreRow({ label, value, bold }: { label: string; value: number; bold?: boolean }) {
-  return (
-    <div className={`flex justify-between ${bold ? "font-bold text-white" : "text-stone-300"}`}>
-      <span>{label}</span>
-      <span className="tabular-nums">{value}</span>
-    </div>
   );
 }
 

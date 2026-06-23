@@ -113,7 +113,7 @@ export function HexSkillChart({ skill, accentHex }: HexSkillChartProps) {
                   y={labelPoint.y}
                   textAnchor={anchor}
                   dominantBaseline="middle"
-                  className="fill-fg-muted text-[9px] font-semibold"
+                  className="fill-fg-muted text-4xs font-semibold"
                 >
                   {axis.label}
                 </text>

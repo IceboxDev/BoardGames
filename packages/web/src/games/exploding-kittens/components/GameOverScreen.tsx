@@ -1,6 +1,7 @@
 import type { AIStrategyId, GameState } from "@boardgames/core/games/exploding-kittens/types";
 import { AI_STRATEGY_LABELS } from "@boardgames/core/games/exploding-kittens/types";
 import { GameOverLayout } from "../../../components/game-over";
+import { Surface } from "../../../components/ui/Surface";
 
 interface GameOverScreenProps {
   state: GameState;
@@ -40,7 +41,7 @@ export default function GameOverScreen({
         { label: "Change Setup", variant: "secondary", onClick: onChangeSetup },
       ]}
     >
-      <div className="rounded-xl border border-white/10 bg-surface-800 p-4 text-left">
+      <Surface variant="panel" padding="lg" className="text-left">
         <p className="mb-2 text-sm font-medium text-fg-secondary">Elimination Order</p>
         <div className="space-y-1">
           {eliminatedPlayers.map((pi, i) => {
@@ -67,7 +68,7 @@ export default function GameOverScreen({
             </div>
           )}
         </div>
-      </div>
+      </Surface>
     </GameOverLayout>
   );
 }

@@ -56,17 +56,13 @@ export default function MatchHistory({
     <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-6 px-4 py-8">
       <div className="text-center">
         <h2 className="text-2xl font-extrabold text-white">Match History</h2>
-        <p className="mt-2 text-sm text-fg-secondary">
-          {loading ? (
-            "Loading..."
-          ) : (
-            <>
-              {replays.length} games &middot; <span className="text-emerald-400">{wins}W</span> /{" "}
-              <span className="text-rose-400">{losses}L</span> /{" "}
-              <span className="text-fg-secondary">{draws}D</span>
-            </>
-          )}
-        </p>
+        {!loading && (
+          <p className="mt-2 text-sm text-fg-secondary">
+            {replays.length} games &middot; <span className="text-emerald-400">{wins}W</span> /{" "}
+            <span className="text-rose-400">{losses}L</span> /{" "}
+            <span className="text-fg-secondary">{draws}D</span>
+          </p>
+        )}
       </div>
 
       {loading ? (

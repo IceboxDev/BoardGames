@@ -12,6 +12,7 @@ import {
 import { Chip } from "../../ui/Chip";
 import { Select } from "../../ui/Select";
 import { ParticipantPicker } from "../ParticipantPicker";
+import { PlayerRow } from "../PlayerRow";
 
 type User = { id: string; name: string };
 
@@ -298,29 +299,33 @@ function CharacterRow({
   const character = findClocktowerCharacter(slot.role);
   const align = character ? clocktowerAlignment(character.category) : null;
   return (
-    <div className="flex items-center gap-2">
-      <span className="flex-1 truncate text-sm text-fg-primary">{slot.displayName}</span>
-      <AlignmentBadge align={align} />
-      <Select
-        compact
-        block={false}
-        className="w-44"
-        id={id}
-        value={slot.role ?? ""}
-        onChange={(e) => onRoleChange(e.target.value || undefined)}
-      >
-        <option value="">— pick character —</option>
-        {groups.map((g) => (
-          <optgroup key={g.label} label={g.label}>
-            {g.names.map((n) => (
-              <option key={n} value={n}>
-                {n}
-              </option>
+    <PlayerRow
+      name={slot.displayName}
+      right={
+        <>
+          <AlignmentBadge align={align} />
+          <Select
+            compact
+            block={false}
+            className="w-44"
+            id={id}
+            value={slot.role ?? ""}
+            onChange={(e) => onRoleChange(e.target.value || undefined)}
+          >
+            <option value="">— pick character —</option>
+            {groups.map((g) => (
+              <optgroup key={g.label} label={g.label}>
+                {g.names.map((n) => (
+                  <option key={n} value={n}>
+                    {n}
+                  </option>
+                ))}
+              </optgroup>
             ))}
-          </optgroup>
-        ))}
-      </Select>
-    </div>
+          </Select>
+        </>
+      }
+    />
   );
 }
 

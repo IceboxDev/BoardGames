@@ -64,12 +64,12 @@ export function GamePicker({ slug, title, onChange }: Props) {
                 variant="ghost"
                 size="sm"
                 block
-                shape="rounded"
+                shape="square"
+                align="start"
                 onMouseDown={(e) => {
                   e.preventDefault();
                   pick(m.slug, m.title);
                 }}
-                className="!justify-start rounded-none"
               >
                 {m.title}
               </Button>

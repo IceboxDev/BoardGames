@@ -149,7 +149,7 @@ const router = createBrowserRouter(
       <Route
         path="/players"
         element={
-          <AuthGuard mode="auth">
+          <AuthGuard mode="offline">
             <PlayersDirectoryPage />
           </AuthGuard>
         }
@@ -158,7 +158,7 @@ const router = createBrowserRouter(
       <Route
         path="/u/:userId"
         element={
-          <AuthGuard mode="auth">
+          <AuthGuard mode="offline">
             <PlayerProfilePage />
           </AuthGuard>
         }

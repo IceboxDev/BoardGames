@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { JUST_ONE_SCORES, justOneTier } from "../../../games/just-one/scoring";
 import { Chip } from "../../ui/Chip";
 import { Field } from "../../ui/Field";
+import { Surface } from "../../ui/Surface";
 import { ParticipantPicker } from "../ParticipantPicker";
 
 type User = { id: string; name: string };
@@ -63,13 +64,17 @@ export function JustOneForm({ users, value, onChange }: Props) {
       </Field>
 
       {value.score !== undefined && (
-        <div className="flex flex-col items-center gap-0.5 rounded-md border border-white/5 bg-surface-900/40 p-2 text-center">
+        <Surface
+          variant="tile"
+          padding="sm"
+          className="flex flex-col items-center gap-0.5 text-center"
+        >
           <span className="font-bold text-amber-200">
             <span className="text-2xl">{value.score}</span>
             <span className="text-sm text-fg-muted"> / 13</span>
           </span>
           <span className="text-sm text-fg-secondary">{justOneTier(value.score)}</span>
-        </div>
+        </Surface>
       )}
     </div>
   );

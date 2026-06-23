@@ -17,6 +17,7 @@ import InventoryGrid from "../InventoryGrid.tsx";
 import { PlusIcon, TrashIcon } from "../icons";
 import { Button } from "../ui/Button.tsx";
 import { Chip } from "../ui/Chip.tsx";
+import { ErrorAlert } from "../ui/ErrorAlert.tsx";
 import { Field } from "../ui/Field.tsx";
 import { Input } from "../ui/Input.tsx";
 import { Modal } from "../ui/Modal.tsx";
@@ -297,7 +298,7 @@ export function EditProfileModal({ userId, initial, onClose }: EditProfileModalP
         )}
       </div>
 
-      {error && <p className="text-xs text-rose-400">{error}</p>}
+      {error && <ErrorAlert message={error} />}
 
       <div className="flex justify-end gap-2">
         <Button variant="ghost" onClick={onClose} disabled={mutation.isPending}>

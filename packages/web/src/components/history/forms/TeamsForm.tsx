@@ -5,6 +5,7 @@ import { Chip } from "../../ui/Chip";
 import { IconButton } from "../../ui/IconButton";
 import { Input } from "../../ui/Input";
 import { ParticipantPicker } from "../ParticipantPicker";
+import { PlayerRow } from "../PlayerRow";
 
 type User = { id: string; name: string };
 type TeamMember = MatchOutcomeTeams["teams"][number]["members"][number];
@@ -129,7 +130,7 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
                       const num = Number.parseFloat(e.target.value);
                       updateTeam(idx, { score: Number.isFinite(num) ? num : 0 });
                     }}
-                    className="!w-24 text-right"
+                    width="score"
                   />
                 )}
                 {showManualWinner ? (
@@ -206,25 +207,27 @@ function MemberRoleRow({
 }) {
   const role = member.role ?? "";
   return (
-    <div className="flex items-center gap-2">
-      <span className="flex-1 truncate text-sm text-fg-primary">{member.displayName}</span>
-      <div className="flex flex-wrap gap-1">
-        {roleOptions.map((opt) => {
-          const active = role === opt;
-          return (
-            <Chip
-              key={opt}
-              pressed={active}
-              tone="accent"
-              size="xs"
-              onClick={() => onRoleChange(active ? undefined : opt)}
-            >
-              {opt}
-            </Chip>
-          );
-        })}
-      </div>
-    </div>
+    <PlayerRow
+      name={member.displayName}
+      right={
+        <div className="flex flex-wrap gap-1">
+          {roleOptions.map((opt) => {
+            const active = role === opt;
+            return (
+              <Chip
+                key={opt}
+                pressed={active}
+                tone="accent"
+                size="xs"
+                onClick={() => onRoleChange(active ? undefined : opt)}
+              >
+                {opt}
+              </Chip>
+            );
+          })}
+        </div>
+      }
+    />
   );
 }
 

@@ -5,6 +5,7 @@ import CalendarSyncCard from "../components/profile/CalendarSyncCard";
 import CalendarSyncModal from "../components/profile/CalendarSyncModal";
 import { TopNav, TopNavLink } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
+import { PageHeader } from "../components/ui/PageHeader";
 import { PageShell } from "../components/ui/PageShell";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { authClient } from "../lib/auth-client";
@@ -22,6 +23,8 @@ export default function ProfilePage() {
   // Online mode 'online' or 'both' unlocks multiplayer; 'offline' keeps it
   // locked. (The button itself is always shown; only `locked` flips.)
   const onlineUnlocked = user?.onlineMode !== undefined && user.onlineMode !== "offline";
+  // Profiles are an offline-players feature — hidden from online-only users.
+  const profilesVisible = user?.onlineMode !== "online";
 
   async function handleSignOut() {
     await authClient.signOut();
@@ -39,13 +42,14 @@ export default function ProfilePage() {
       }
     >
       <div className="w-full max-w-3xl">
-        <div className="mb-12 text-center">
-          <p className="text-xs uppercase tracking-widest text-accent-400">Welcome</p>
-          <h2 className="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-            {user?.name ? user.name.split(" ")[0] : "Player"}
-          </h2>
-          <p className="mt-3 text-sm text-fg-muted">Choose how you'd like to play.</p>
-        </div>
+        <PageHeader
+          align="center"
+          size="xl"
+          eyebrow="Welcome"
+          title={user?.name ? user.name.split(" ")[0] : "Player"}
+          subtitle="Choose how you'd like to play."
+          className="mb-12"
+        />
 
         <div className="grid gap-4 sm:grid-cols-2">
           <ModeButton
@@ -62,20 +66,22 @@ export default function ProfilePage() {
           />
         </div>
 
-        <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-          <NavCard
-            icon={<UserIcon className="h-4 w-4" />}
-            title="My profile"
-            subtitle="Library, stats & badges"
-            onClick={() => userId && navigate(`/u/${userId}`)}
-          />
-          <NavCard
-            icon={<UsersIcon className="h-4 w-4" />}
-            title="Players"
-            subtitle="Browse the group"
-            onClick={() => navigate("/players")}
-          />
-        </div>
+        {profilesVisible && (
+          <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+            <NavCard
+              icon={<UserIcon className="h-4 w-4" />}
+              title="My profile"
+              subtitle="Library, stats & badges"
+              onClick={() => userId && navigate(`/u/${userId}`)}
+            />
+            <NavCard
+              icon={<UsersIcon className="h-4 w-4" />}
+              title="Players"
+              subtitle="Browse the group"
+              onClick={() => navigate("/players")}
+            />
+          </div>
+        )}
 
         <CalendarSyncCard onClick={() => setSyncModalOpen(true)} />
 
@@ -106,15 +112,19 @@ function ModeButton({ title, subtitle, locked, accent, onClick }: ModeButtonProp
     <Button
       type="button"
       variant={accent && !disabled ? "primary" : "secondary"}
+      align="start"
+      block
       onClick={disabled ? undefined : onClick}
       disabled={disabled}
-      className="!h-auto flex-col items-start gap-1 px-6 py-6 text-left"
+      className="px-6 py-6 text-left"
     >
-      <span className="flex w-full items-center justify-between">
-        <span className="text-xl font-semibold">{title}</span>
-        {locked && <LockIcon />}
+      <span className="flex w-full flex-col items-start gap-1">
+        <span className="flex w-full items-center justify-between">
+          <span className="text-xl font-semibold">{title}</span>
+          {locked && <LockIcon />}
+        </span>
+        <span className="text-xs font-normal opacity-70">{subtitle}</span>
       </span>
-      <span className="text-xs font-normal opacity-70">{subtitle}</span>
     </Button>
   );
 }

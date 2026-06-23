@@ -382,28 +382,31 @@ export default function TournamentGrid({
                     <div key={col.id} className="border-b border-white/10 p-0.5">
                       {winRate !== null && tournamentId && matchup ? (
                         <Button
-                          variant="ghost"
+                          variant="plain"
                           size="xs"
+                          fill
                           onClick={() =>
                             onViewMatchHistory?.(matchup.strategyA, matchup.strategyB, tournamentId)
                           }
-                          className="!flex !h-full !w-full !flex-col !items-center !justify-center !p-0 !gap-0 hover:bg-surface-800/60"
+                          className="hover:bg-surface-800/60"
                         >
-                          <span
-                            className={`text-sm font-bold tabular-nums leading-snug ${
-                              winRate >= 50 ? "text-emerald-400" : "text-rose-400"
-                            }`}
-                          >
-                            {winRate.toFixed(1)}%
-                          </span>
-                          {showScoreDiff && (
-                            <span className="text-3xs tabular-nums leading-snug text-fg-muted">
-                              avg {(avgDiff ?? 0) > 0 ? "+" : ""}
-                              {avgDiff}
+                          <span className="flex flex-col items-center justify-center leading-snug">
+                            <span
+                              className={`text-sm font-bold tabular-nums leading-snug ${
+                                winRate >= 50 ? "text-emerald-400" : "text-rose-400"
+                              }`}
+                            >
+                              {winRate.toFixed(1)}%
                             </span>
-                          )}
-                          <span className="text-3xs leading-snug text-fg-disabled">
-                            {gamesPlayed} games
+                            {showScoreDiff && (
+                              <span className="text-3xs tabular-nums leading-snug text-fg-muted">
+                                avg {(avgDiff ?? 0) > 0 ? "+" : ""}
+                                {avgDiff}
+                              </span>
+                            )}
+                            <span className="text-3xs leading-snug text-fg-disabled">
+                              {gamesPlayed} games
+                            </span>
                           </span>
                         </Button>
                       ) : isRunning ? (
@@ -412,15 +415,16 @@ export default function TournamentGrid({
                         </div>
                       ) : (
                         <Button
-                          variant="ghost"
+                          variant="plain"
                           size="xs"
+                          fill
                           onClick={() => {
                             const aId = row.id < col.id ? row.id : col.id;
                             const bId = row.id < col.id ? col.id : row.id;
                             runPair(aId, bId);
                           }}
                           disabled={!!running}
-                          className="!flex !h-full !w-full !items-center !justify-center !p-0 text-fg-muted hover:text-accent-400"
+                          className="text-fg-muted transition-colors hover:text-accent-400"
                         >
                           Run
                         </Button>

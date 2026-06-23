@@ -2,6 +2,7 @@ import type { MatchOutcomeLastStanding, Participant } from "@boardgames/core/his
 import { Button } from "../../ui/Button";
 import { Field } from "../../ui/Field";
 import { ParticipantPicker } from "../ParticipantPicker";
+import { PlayerRow } from "../PlayerRow";
 
 type User = { id: string; name: string };
 
@@ -58,27 +59,31 @@ export function LastStandingForm({ users, value, onChange }: Props) {
           {value.players.map((p) => {
             const eliminated = p.eliminationOrder !== undefined;
             return (
-              <div key={p.userId} className="flex items-center gap-2">
-                <span
-                  className={`flex-1 truncate text-sm ${
-                    eliminated ? "text-fg-muted line-through" : "text-amber-100"
-                  }`}
-                >
-                  {p.displayName}
-                </span>
-                {eliminated ? (
-                  <span className="text-xs text-fg-muted">
-                    out #{(p.eliminationOrder ?? 0) + 1}
-                  </span>
-                ) : (
-                  <span className="rounded bg-amber-400/20 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wide text-amber-200">
-                    Surviving
-                  </span>
-                )}
-                <Button variant="secondary" size="xs" onClick={() => toggleEliminated(p.userId)}>
-                  {eliminated ? "Revive" : "Eliminate"}
-                </Button>
-              </div>
+              <PlayerRow
+                key={p.userId}
+                name={p.displayName}
+                nameClassName={eliminated ? "text-fg-muted line-through" : "text-amber-100"}
+                right={
+                  <>
+                    {eliminated ? (
+                      <span className="text-xs text-fg-muted">
+                        out #{(p.eliminationOrder ?? 0) + 1}
+                      </span>
+                    ) : (
+                      <span className="rounded bg-amber-400/20 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wide text-amber-200">
+                        Surviving
+                      </span>
+                    )}
+                    <Button
+                      variant="secondary"
+                      size="xs"
+                      onClick={() => toggleEliminated(p.userId)}
+                    >
+                      {eliminated ? "Revive" : "Eliminate"}
+                    </Button>
+                  </>
+                }
+              />
             );
           })}
         </div>

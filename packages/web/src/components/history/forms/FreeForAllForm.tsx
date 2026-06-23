@@ -3,6 +3,7 @@ import { lowScoreWinsForSlug } from "../../../games/score-config";
 import { Field } from "../../ui/Field";
 import { Input } from "../../ui/Input";
 import { ParticipantPicker } from "../ParticipantPicker";
+import { PlayerRow } from "../PlayerRow";
 
 type User = { id: string; name: string };
 
@@ -53,22 +54,20 @@ export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
           {value.players.map((p) => {
             const isLeading = winningScore !== null && p.score === winningScore;
             return (
-              <div key={p.userId} className="flex items-center gap-2">
-                <span
-                  className={`flex-1 truncate text-sm ${
-                    isLeading ? "text-amber-200" : "text-fg-primary"
-                  }`}
-                >
-                  {p.displayName}
-                </span>
-                <Input
-                  type="number"
-                  inputMode="numeric"
-                  value={p.score}
-                  onChange={(e) => setScore(p.userId, e.target.value)}
-                  className="!w-24 text-right"
-                />
-              </div>
+              <PlayerRow
+                key={p.userId}
+                name={p.displayName}
+                highlight={isLeading}
+                right={
+                  <Input
+                    type="number"
+                    inputMode="numeric"
+                    value={p.score}
+                    onChange={(e) => setScore(p.userId, e.target.value)}
+                    width="score"
+                  />
+                }
+              />
             );
           })}
         </div>

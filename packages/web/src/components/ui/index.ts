@@ -11,7 +11,7 @@ export { Input } from "./Input";
 export { LoadingState } from "./LoadingState";
 export { Modal } from "./Modal";
 export { Overlay } from "./Overlay";
-export type { PageHeaderSize } from "./PageHeader";
+export type { PageHeaderAlign, PageHeaderSize } from "./PageHeader";
 export { PageHeader } from "./PageHeader";
 export type {
   PageMainPadding,
@@ -20,6 +20,7 @@ export type {
   PageShellLayout,
 } from "./PageShell";
 export { PageMain, PageShell } from "./PageShell";
+export { QueryBoundary } from "./QueryBoundary";
 export type { SegmentedOption, SegmentedTone } from "./SegmentedControl";
 export { SegmentedControl } from "./SegmentedControl";
 export { Select } from "./Select";
