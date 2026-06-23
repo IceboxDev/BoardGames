@@ -5,6 +5,7 @@
 
 import {
   CalendarLocksSchema,
+  HostStatsMapSchema,
   type LockInForm,
   LockInRequestBodySchema,
   LockInResponseSchema,
@@ -19,6 +20,8 @@ import { apiFetch } from "./api-fetch.ts";
 // keep working without churn.
 export type {
   CalendarLocks,
+  HostStats,
+  HostStatsMap,
   LockedDate,
   LockHost,
   LockInForm,
@@ -27,6 +30,14 @@ export type {
 export async function fetchCalendarLocks(signal?: AbortSignal) {
   return apiFetch("/api/calendar/locks", {
     response: CalendarLocksSchema,
+    signal,
+  });
+}
+
+/** Admin-only: per-user hosting stats for the lock-in host picker. */
+export async function fetchHostStats(signal?: AbortSignal) {
+  return apiFetch("/api/admin/calendar/host-stats", {
+    response: HostStatsMapSchema,
     signal,
   });
 }

@@ -88,8 +88,10 @@ export const ProfileStatsSchema = z.object({
   winRate: z.number().min(0).max(1).nullable(),
   gamesOwned: z.number().int().nonnegative(),
   distinctGames: z.number().int().nonnegative(),
-  /** Past board-game nights the user RSVP'd yes to. */
+  /** Organized (locked) past nights the user RSVP'd yes to. */
   nightsAttended: z.number().int().nonnegative(),
+  /** Total board-game nights organized so far (past locked dates). */
+  nightsTotal: z.number().int().nonnegative(),
   favoriteGameSlug: GameSlugSchema.nullable(),
   perGame: z.array(ProfilePerGameStatSchema),
 });

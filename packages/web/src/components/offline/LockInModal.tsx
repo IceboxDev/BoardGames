@@ -1,6 +1,12 @@
 import { useId, useMemo, useState } from "react";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
-import type { LockedDate, LockHost, LockInForm } from "../../lib/calendar-locks";
+import type {
+  HostStats,
+  HostStatsMap,
+  LockedDate,
+  LockHost,
+  LockInForm,
+} from "../../lib/calendar-locks";
 import { Button } from "../ui/Button";
 import { ErrorAlert } from "../ui/ErrorAlert";
 import { Field } from "../ui/Field";
@@ -12,6 +18,8 @@ type Props = {
   date: string;
   initialLock: LockedDate | null;
   candidates: LockHost[];
+  /** Per-user hosting history (total + last date), keyed by userId. */
+  hostStats?: HostStatsMap | null;
   busy?: boolean;
   error?: string | null;
   onSubmit: (form: LockInForm) => void;
@@ -23,6 +31,7 @@ export default function LockInModal({
   date,
   initialLock,
   candidates,
+  hostStats = null,
   busy = false,
   error = null,
   onSubmit,
@@ -102,7 +111,7 @@ export default function LockInModal({
               <option value="">No host yet</option>
               {uniqueCandidates.map((c) => (
                 <option key={c.userId} value={c.userId}>
-                  {c.userId === viewer?.id ? `${c.name} (you)` : c.name}
+                  {hostOptionLabel(c, hostStats?.[c.userId], c.userId === viewer?.id)}
                 </option>
               ))}
             </Select>
@@ -176,4 +185,25 @@ export default function LockInModal({
       </form>
     </Modal>
   );
+}
+
+// Build the host <option> label: name (+ "you"), how many nights they've hosted
+// and when they last did — so the admin can spread hosting around.
+function hostOptionLabel(c: LockHost, stats: HostStats | undefined, isYou: boolean): string {
+  const base = isYou ? `${c.name} (you)` : c.name;
+  if (!stats || stats.totalHosts === 0) return `${base} — never hosted`;
+  const last = stats.lastHostedDate ? formatHostDate(stats.lastHostedDate) : null;
+  return last
+    ? `${base} — hosted ${stats.totalHosts}×, last ${last}`
+    : `${base} — hosted ${stats.totalHosts}×`;
+}
+
+function formatHostDate(isoDay: string): string {
+  const [y, m, d] = isoDay.split("-").map(Number);
+  if (!y || !m || !d) return isoDay;
+  return new Date(y, m - 1, d).toLocaleDateString(undefined, {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+  });
 }

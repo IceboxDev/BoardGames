@@ -5,6 +5,7 @@ import {
   AvailableGamesSchema,
   CalendarLocksSchema,
   GameReactionBodySchema,
+  HostStatsMapSchema,
   LockInRequestBodySchema,
   LockInResponseSchema,
   OkResponseSchema,
@@ -310,6 +311,30 @@ calendarLocksRoutes.get("/locks", async (c) => {
 });
 
 export const adminCalendarLocksRoutes = adminApp();
+
+/** Row projection for the per-host aggregate over locked_dates. */
+const HostStatsRowSchema = z.object({
+  host_user_id: z.string(),
+  total: z.number(),
+  last_date: z.string().nullable(),
+});
+
+// Per-host aggregate over locked nights — how many a person has hosted and the
+// most recent — surfaced in the lock-in host picker so the admin can spread
+// hosting around.
+adminCalendarLocksRoutes.get("/host-stats", async (c) => {
+  const { rows } = await getDb().execute(
+    `SELECT host_user_id, COUNT(*) AS total, MAX(date_key) AS last_date
+       FROM locked_dates
+      WHERE host_user_id IS NOT NULL
+      GROUP BY host_user_id`,
+  );
+  const stats: Record<string, { totalHosts: number; lastHostedDate: string | null }> = {};
+  for (const r of parseRows(HostStatsRowSchema, rows, "locked_dates.host-stats")) {
+    stats[r.host_user_id] = { totalHosts: r.total, lastHostedDate: r.last_date };
+  }
+  return c.json(HostStatsMapSchema.parse(stats));
+});
 
 adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async (c) => {
   const user = c.get("user");

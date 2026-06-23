@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   CalendarLocksSchema,
+  HostStatsMapSchema,
   KickRsvpBodySchema,
   LockedDateSchema,
   LockInFormSchema,
@@ -69,6 +70,23 @@ describe("CalendarLocksSchema", () => {
   it("accepts a populated map keyed by date", () => {
     const parsed = CalendarLocksSchema.parse({ "2026-05-05": sampleLocked });
     expect(parsed["2026-05-05"]?.lockedBy).toBe("user-1");
+  });
+});
+
+describe("HostStatsMapSchema", () => {
+  it("accepts per-user host stats keyed by userId", () => {
+    const parsed = HostStatsMapSchema.parse({
+      "user-1": { totalHosts: 5, lastHostedDate: "2026-06-02" },
+      "user-2": { totalHosts: 0, lastHostedDate: null },
+    });
+    expect(parsed["user-1"]?.totalHosts).toBe(5);
+    expect(parsed["user-2"]?.lastHostedDate).toBeNull();
+  });
+
+  it("rejects a negative host count", () => {
+    expect(() =>
+      HostStatsMapSchema.parse({ "user-1": { totalHosts: -1, lastHostedDate: null } }),
+    ).toThrow();
   });
 });
 

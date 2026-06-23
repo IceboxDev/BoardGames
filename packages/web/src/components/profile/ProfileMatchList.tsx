@@ -1,35 +1,17 @@
-import {
-  deriveParticipantResult,
-  extractParticipantIds,
-} from "@boardgames/core/history/participant-results";
+import { extractParticipantIds } from "@boardgames/core/history/participant-results";
 import type { MatchRecord } from "@boardgames/core/protocol";
 import type { CSSProperties, ReactNode } from "react";
 import { resolveGame } from "../../lib/games-by-slug.ts";
+import { matchResultBadge } from "../../lib/match-result-badge.ts";
 import { formatShortDate } from "../../lib/profile-format.ts";
 import { TrophyIcon } from "../icons";
-import type { BadgeTone } from "../ui/Badge.tsx";
 import { Badge } from "../ui/Badge.tsx";
 import { EmptyState } from "../ui/EmptyState.tsx";
 
-// Renders a profile owner's matches with a Won/Lost/Ran-it badge derived from
-// the shared core helper (so it never disagrees with the server's win counts).
-// The page supplies the match array (recent slice or the full infinite list)
-// plus an optional footer (the "show more" control).
-
-type ResultBadge = { label: string; tone: BadgeTone };
-
-function resultBadge(result: ReturnType<typeof deriveParticipantResult>): ResultBadge | null {
-  switch (result) {
-    case "win":
-      return { label: "Won", tone: "emerald" };
-    case "loss":
-      return { label: "Lost", tone: "rose" };
-    case "moderator":
-      return { label: "Ran it", tone: "neutral" };
-    default:
-      return null;
-  }
-}
+// Renders a profile owner's matches with a game-aware result badge — placement
+// for score games (Won / 2nd / Last), the team score for Just One, Won/Lost
+// otherwise (see `lib/match-result-badge`). The page supplies the match array
+// (recent slice or the full infinite list) plus an optional footer.
 
 type ProfileMatchListProps = {
   matches: readonly MatchRecord[];
@@ -54,7 +36,7 @@ export function ProfileMatchList({ matches, userId, firstName, footer }: Profile
       <ul className="flex flex-col gap-2">
         {matches.map((match) => {
           const game = resolveGame(match.gameSlug);
-          const badge = resultBadge(deriveParticipantResult(match.outcome, userId));
+          const badge = matchResultBadge(match.outcome, userId, match.gameSlug);
           const playerCount = extractParticipantIds(match.outcome).length;
           return (
             <li
@@ -81,7 +63,7 @@ export function ProfileMatchList({ matches, userId, firstName, footer }: Profile
                 </p>
               </div>
               {badge && (
-                <Badge tone={badge.tone} size="sm">
+                <Badge tone={badge.tone} size="sm" className="min-w-[3.75rem] justify-center">
                   {badge.label}
                 </Badge>
               )}

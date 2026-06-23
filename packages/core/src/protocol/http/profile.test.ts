@@ -95,6 +95,7 @@ describe("PublicProfileSchema", () => {
         gamesOwned: 1,
         distinctGames: 2,
         nightsAttended: 4,
+        nightsTotal: 6,
         favoriteGameSlug: "lost-cities",
         perGame: [{ slug: "lost-cities", title: "Lost Cities", plays: 2, wins: 1 }],
       },

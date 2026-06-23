@@ -14,7 +14,7 @@ type StatTileProps = {
 
 export function StatTile({ label, value, sub, icon }: StatTileProps) {
   return (
-    <div className="flex flex-col gap-0.5 rounded-xl border border-white/[0.06] bg-surface-900/60 px-3 py-2.5">
+    <div className="flex flex-col items-center gap-0.5 rounded-xl border border-white/[0.06] bg-surface-900/60 px-3 py-2.5 text-center">
       <span className="flex items-center gap-1 text-3xs font-semibold uppercase tracking-[0.16em] text-fg-muted">
         {icon}
         {label}

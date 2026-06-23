@@ -149,7 +149,10 @@ export function ProfileHeader({
             sub={`${stats.wins}W · ${stats.losses}L`}
           />
           <StatTile label="Games owned" value={stats.gamesOwned} />
-          <StatTile label="Nights attended" value={stats.nightsAttended} />
+          <StatTile
+            label="Nights attended"
+            value={`${stats.nightsAttended} / ${stats.nightsTotal}`}
+          />
         </div>
       </div>
     </Surface>

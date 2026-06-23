@@ -14,6 +14,7 @@ import {
   adminUnsetCalendarLock,
   type CalendarLocks,
   fetchCalendarLocks,
+  fetchHostStats,
   type LockHost,
   type LockInForm,
 } from "../lib/calendar-locks";
@@ -63,6 +64,13 @@ export default function OfflineDashboard() {
     queryKey: qk.calendarLocks(),
     queryFn: ({ signal }) => fetchCalendarLocks(signal),
     enabled: !!userId,
+  });
+
+  // Hosting history for the lock-in picker (admin-only feature).
+  const hostStatsQuery = useQuery({
+    queryKey: qk.hostStats(),
+    queryFn: ({ signal }) => fetchHostStats(signal),
+    enabled: isAdmin,
   });
 
   const committed: AvailabilityMap = availabilityQuery.data ?? {};
@@ -368,6 +376,7 @@ export default function OfflineDashboard() {
           date={lockingDate}
           initialLock={locks?.[lockingDate] ?? null}
           candidates={hostCandidates}
+          hostStats={hostStatsQuery.data ?? null}
           busy={lockMutation.isPending || unlockMutation.isPending}
           error={lockMutationError ?? unlockMutationError}
           onSubmit={submitLock}

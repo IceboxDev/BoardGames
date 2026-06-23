@@ -13,7 +13,7 @@ import {
 } from "../../games/blood-on-the-clocktower/characters";
 import { variantConfigForSlug } from "../../games/match-variants";
 import { games } from "../../games/registry";
-import { lowScoreWinsForSlug } from "../../games/score-config";
+import { isPointlessFreeForAll, lowScoreWinsForSlug } from "../../games/score-config";
 import { BookIcon, EditIcon, XIcon } from "../icons";
 import { IconButton } from "../ui/IconButton";
 import { AvatarBubble } from "./AvatarBubble";
@@ -152,7 +152,7 @@ type OutcomeProps = {
 function CompactOutcome({ outcome, gameSlug, currentUserId }: OutcomeProps) {
   switch (outcome.kind) {
     case "free-for-all":
-      return gameSlug === "villainous" || gameSlug === "lovecraft-letter" ? (
+      return isPointlessFreeForAll(gameSlug) ? (
         <PointlessFfaInline outcome={outcome} currentUserId={currentUserId} />
       ) : (
         <FreeForAllInline outcome={outcome} gameSlug={gameSlug} currentUserId={currentUserId} />

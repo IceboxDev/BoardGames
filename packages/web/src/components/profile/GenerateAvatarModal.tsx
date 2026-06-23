@@ -6,7 +6,7 @@ import { ApiError, SchemaError } from "../../lib/api-fetch.ts";
 import { fileToDownscaledDataUri } from "../../lib/downscale-image.ts";
 import { fetchAvatarJob, generateAvatar, saveAvatar } from "../../lib/profile.ts";
 import { qk } from "../../lib/query-keys.ts";
-import { CameraIcon, CheckIcon, SearchIcon } from "../icons";
+import { CameraIcon, SearchIcon } from "../icons";
 import { Button } from "../ui/Button.tsx";
 import { Chip } from "../ui/Chip.tsx";
 import { Field } from "../ui/Field.tsx";
@@ -200,59 +200,68 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
             <span className="text-xs font-medium uppercase tracking-wide text-fg-secondary">
               Game you're an expert in
             </span>
-            {selectedGame && (
-              <div className="flex items-center gap-2.5 rounded-lg border border-accent-400/50 bg-accent-500/15 px-2.5 py-2">
+            {selectedGame ? (
+              // Selected: collapse the picker to just the chosen game + a way to
+              // re-pick. (Showing the search + list here duplicated the game 3×.)
+              <div className="flex items-center gap-2.5 rounded-lg border border-accent-400/50 bg-accent-500/15 px-3 py-2.5">
                 <img
                   src={selectedGame.thumbnail}
                   alt=""
-                  className="h-8 w-8 shrink-0 rounded object-cover"
+                  className="h-9 w-9 shrink-0 rounded object-cover"
                 />
                 <span className="min-w-0 flex-1 truncate text-sm font-semibold text-accent-100">
                   {selectedGame.title}
                 </span>
-                <CheckIcon className="h-4 w-4 shrink-0 text-accent-300" />
+                <Button
+                  variant="ghost"
+                  size="xs"
+                  onClick={() => {
+                    setGameSlug(null);
+                    setGameSearch("");
+                  }}
+                >
+                  Change
+                </Button>
               </div>
+            ) : (
+              <>
+                <div className="relative">
+                  <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-fg-muted">
+                    <SearchIcon />
+                  </span>
+                  <Input
+                    value={gameSearch}
+                    onChange={(e) => setGameSearch(e.target.value)}
+                    placeholder="Search games…"
+                    aria-label="Search games"
+                    className="pl-9"
+                  />
+                </div>
+                <ul className="max-h-44 overflow-y-auto rounded-lg border border-white/10 bg-surface-900/40">
+                  {filteredGames.map((game) => (
+                    <li key={game.slug}>
+                      {/* biome-ignore lint/correctness/noRestrictedElements: row-select option in a custom list */}
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setGameSlug(game.slug);
+                          setGameSearch("");
+                        }}
+                        className="flex w-full items-center gap-2.5 px-2.5 py-2 text-left text-fg-secondary transition hover:bg-white/5 hover:text-fg-primary active:scale-[0.99]"
+                      >
+                        <img
+                          src={game.thumbnail}
+                          alt=""
+                          loading="lazy"
+                          className="h-7 w-7 shrink-0 rounded object-cover"
+                        />
+                        <span className="min-w-0 flex-1 truncate text-sm">{game.title}</span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </>
             )}
-            <div className="relative">
-              <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-fg-muted">
-                <SearchIcon />
-              </span>
-              <Input
-                value={gameSearch}
-                onChange={(e) => setGameSearch(e.target.value)}
-                placeholder={selectedGame ? "Search to change…" : "Search games…"}
-                aria-label="Search games"
-                className="pl-9"
-              />
-            </div>
-            <ul className="max-h-44 overflow-y-auto rounded-lg border border-white/10 bg-surface-900/40">
-              {filteredGames.map((game) => {
-                const active = game.slug === gameSlug;
-                return (
-                  <li key={game.slug}>
-                    {/* biome-ignore lint/correctness/noRestrictedElements: row-select option in a custom list */}
-                    <button
-                      type="button"
-                      onClick={() => setGameSlug(game.slug)}
-                      className={`flex w-full items-center gap-2.5 px-2.5 py-2 text-left transition active:scale-[0.99] ${
-                        active
-                          ? "bg-accent-500/20 text-accent-100"
-                          : "text-fg-secondary hover:bg-white/5 hover:text-fg-primary"
-                      }`}
-                    >
-                      <img
-                        src={game.thumbnail}
-                        alt=""
-                        loading="lazy"
-                        className="h-7 w-7 shrink-0 rounded object-cover"
-                      />
-                      <span className="min-w-0 flex-1 truncate text-sm">{game.title}</span>
-                      {active && <CheckIcon className="h-4 w-4 shrink-0 text-accent-300" />}
-                    </button>
-                  </li>
-                );
-              })}
-            </ul>
           </div>
 
           {/* 3. Style */}

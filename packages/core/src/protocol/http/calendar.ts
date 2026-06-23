@@ -43,6 +43,17 @@ export const LockedDateSchema = z.object({
 export type LockedDate = z.infer<typeof LockedDateSchema>;
 
 export const CalendarLocksSchema = z.record(z.string(), LockedDateSchema);
+
+// Per-user hosting stats for the lock-in host picker: total nights hosted and
+// the most recent date (YYYY-MM-DD, null if never). Keyed by userId.
+export const HostStatsSchema = z.object({
+  totalHosts: z.number().int().min(0),
+  lastHostedDate: z.string().nullable(),
+});
+export type HostStats = z.infer<typeof HostStatsSchema>;
+
+export const HostStatsMapSchema = z.record(z.string(), HostStatsSchema);
+export type HostStatsMap = z.infer<typeof HostStatsMapSchema>;
 export type CalendarLocks = z.infer<typeof CalendarLocksSchema>;
 
 // ── Request bodies ─────────────────────────────────────────────────────

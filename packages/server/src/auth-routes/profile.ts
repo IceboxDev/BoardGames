@@ -266,38 +266,50 @@ profileRoutes.get("/:userId", async (c) => {
   const db = getDb();
   const today = todayDateKey();
 
-  const [userResult, profileResult, inventoryResult, matchResult, nightsResult, nextRef] =
-    await Promise.all([
-      db.execute({
-        sql: `SELECT id, name, image, role, CAST(createdAt AS TEXT) AS created_at
+  const [
+    userResult,
+    profileResult,
+    inventoryResult,
+    matchResult,
+    nightsResult,
+    nightsTotalResult,
+    nextRef,
+  ] = await Promise.all([
+    db.execute({
+      sql: `SELECT id, name, image, role, CAST(createdAt AS TEXT) AS created_at
               FROM "user" WHERE id = ? LIMIT 1`,
-        args: [userId],
-      }),
-      db.execute({
-        sql: `SELECT tagline, bio, pronouns, location, accent_hex,
+      args: [userId],
+    }),
+    db.execute({
+      sql: `SELECT tagline, bio, pronouns, location, accent_hex,
                      favorite_game_slugs_json, wishlist_game_slugs_json, links_json, skill_json
               FROM user_profiles WHERE user_id = ? LIMIT 1`,
-        args: [userId],
-      }),
-      db.execute({
-        sql: "SELECT game_slugs_json FROM user_inventory WHERE user_id = ?",
-        args: [userId],
-      }),
-      db.execute({
-        sql: `SELECT id, date_key, played_at, game_slug, game_title, outcome_json, notes,
+      args: [userId],
+    }),
+    db.execute({
+      sql: "SELECT game_slugs_json FROM user_inventory WHERE user_id = ?",
+      args: [userId],
+    }),
+    db.execute({
+      sql: `SELECT id, date_key, played_at, game_slug, game_title, outcome_json, notes,
                      recorded_by, recorded_at, updated_at, sort_order
               FROM match_results
               WHERE outcome_json LIKE ?
               ORDER BY played_at DESC, id DESC`,
-        args: [likePattern(userId)],
-      }),
-      db.execute({
-        sql: `SELECT COUNT(*) AS n FROM rsvps
-              WHERE user_id = ? AND status = 'yes' AND date_key < ?`,
-        args: [userId, today],
-      }),
-      findNextNightForUser(db, userId, today),
-    ]);
+      args: [likePattern(userId)],
+    }),
+    db.execute({
+      sql: `SELECT COUNT(*) AS n FROM rsvps r
+              JOIN locked_dates l ON l.date_key = r.date_key
+              WHERE r.user_id = ? AND r.status = 'yes' AND r.date_key < ?`,
+      args: [userId, today],
+    }),
+    db.execute({
+      sql: "SELECT COUNT(*) AS n FROM locked_dates WHERE date_key < ?",
+      args: [today],
+    }),
+    findNextNightForUser(db, userId, today),
+  ]);
 
   if (userResult.rows.length === 0) {
     return errorResponse(c, 404, "user not found", "NOT_FOUND");
@@ -372,6 +384,7 @@ profileRoutes.get("/:userId", async (c) => {
     gamesOwned: library.length,
     distinctGames: distinctSlugs.size,
     nightsAttended: Number(nightsResult.rows[0]?.n ?? 0),
+    nightsTotal: Number(nightsTotalResult.rows[0]?.n ?? 0),
     favoriteGameSlug: perGame[0]?.slug ?? null,
     perGame,
   };
