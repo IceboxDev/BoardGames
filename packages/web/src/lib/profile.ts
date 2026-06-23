@@ -1,4 +1,6 @@
 import {
+  type AvatarJobStatus,
+  AvatarJobStatusSchema,
   type GenerateAvatarRequest,
   GenerateAvatarRequestSchema,
   type GenerateAvatarResponse,
@@ -55,7 +57,7 @@ export async function updateMyProfile(
   });
 }
 
-/** Generate (but don't save) an AI avatar preview from a reference photo. */
+/** Start a background avatar generation; returns a job id to poll. */
 export async function generateAvatar(
   userId: string,
   body: GenerateAvatarRequest,
@@ -66,6 +68,18 @@ export async function generateAvatar(
     request: GenerateAvatarRequestSchema,
     response: GenerateAvatarResponseSchema,
   });
+}
+
+/** Poll a generation job's status (pending → done/error). */
+export async function fetchAvatarJob(
+  userId: string,
+  jobId: string,
+  signal?: AbortSignal,
+): Promise<AvatarJobStatus> {
+  return apiFetch(
+    `/api/profiles/${encodeURIComponent(userId)}/avatar/generate/${encodeURIComponent(jobId)}`,
+    { response: AvatarJobStatusSchema, signal },
+  );
 }
 
 /** Persist a confirmed avatar (webp data URI) as the user's profile picture. */

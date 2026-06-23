@@ -1,10 +1,10 @@
 import { AVATAR_STYLES, type AvatarStyleId } from "@boardgames/core/protocol";
-import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { type ChangeEvent, useId, useMemo, useState } from "react";
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { type ChangeEvent, useEffect, useId, useMemo, useState } from "react";
 import { games } from "../../games/registry.ts";
 import { ApiError, SchemaError } from "../../lib/api-fetch.ts";
 import { fileToDownscaledDataUri } from "../../lib/downscale-image.ts";
-import { generateAvatar, saveAvatar } from "../../lib/profile.ts";
+import { fetchAvatarJob, generateAvatar, saveAvatar } from "../../lib/profile.ts";
 import { qk } from "../../lib/query-keys.ts";
 import { CameraIcon, CheckIcon, SearchIcon } from "../icons";
 import { Button } from "../ui/Button.tsx";
@@ -16,9 +16,10 @@ import { Modal } from "../ui/Modal.tsx";
 import { Textarea } from "../ui/Textarea.tsx";
 
 // AI profile-picture generator. Flow: upload reference photo → pick game →
-// pick style → optional comments → Generate (calls the server, ~20s) → preview
-// the result → confirm to save (or regenerate / go back). The server owns the
-// prompt; the client just collects inputs and previews/saves the webp it returns.
+// pick style → optional comments → Generate starts a background job on the
+// server (takes ~a minute) which the client polls → preview the result → save
+// on confirm (or Regenerate returns here to tweak). The server owns the prompt;
+// the client just collects inputs and previews/saves the webp it returns.
 
 const COMMENTS_MAX = 500;
 const GAME_LIST_LIMIT = 60;
@@ -58,7 +59,9 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
 
   const selectedGame = useMemo(() => games.find((g) => g.slug === gameSlug), [gameSlug]);
 
-  const genMutation = useMutation({
+  const [jobId, setJobId] = useState<string | null>(null);
+
+  const startMutation = useMutation({
     mutationFn: () =>
       generateAvatar(userId, {
         referenceImage: referenceImage as string,
@@ -70,15 +73,41 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
       setError(null);
       setPhase("generating");
     },
-    onSuccess: (res) => {
-      setGenerated(res.image);
-      setPhase("preview");
-    },
+    onSuccess: (res) => setJobId(res.jobId),
     onError: (err) => {
       setError(errorMessage(err));
       setPhase("form");
     },
   });
+
+  // Poll the background job while generating; the effect below transitions the
+  // modal when it finishes. Polling stops on done/error (and on unmount, since
+  // react-query tears the query down).
+  const jobQuery = useQuery({
+    queryKey: ["avatar-job", userId, jobId],
+    queryFn: ({ signal }) => fetchAvatarJob(userId, jobId as string, signal),
+    enabled: !!jobId && phase === "generating",
+    refetchInterval: (query) => (query.state.data?.status === "pending" ? 2500 : false),
+    retry: 2,
+  });
+
+  useEffect(() => {
+    if (phase !== "generating") return;
+    const data = jobQuery.data;
+    if (data?.status === "done" && data.image) {
+      setGenerated(data.image);
+      setPhase("preview");
+      setJobId(null);
+    } else if (data?.status === "error") {
+      setError(data.error ?? "Generation failed. Please try again.");
+      setPhase("form");
+      setJobId(null);
+    } else if (jobQuery.isError) {
+      setError(errorMessage(jobQuery.error));
+      setPhase("form");
+      setJobId(null);
+    }
+  }, [phase, jobQuery.data, jobQuery.isError, jobQuery.error]);
 
   const saveMutation = useMutation({
     mutationFn: (image: string) => saveAvatar(userId, image),
@@ -102,7 +131,7 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
   }
 
   const canGenerate = !!referenceImage && !!gameSlug;
-  const busy = genMutation.isPending || saveMutation.isPending;
+  const busy = phase === "generating" || saveMutation.isPending;
 
   return (
     <Modal
@@ -262,7 +291,7 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
             <Button variant="ghost" onClick={onClose}>
               Cancel
             </Button>
-            <Button onClick={() => genMutation.mutate()} disabled={!canGenerate}>
+            <Button onClick={() => startMutation.mutate()} disabled={!canGenerate}>
               Generate
             </Button>
           </div>

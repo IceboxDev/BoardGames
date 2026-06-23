@@ -43,11 +43,22 @@ export const GenerateAvatarRequestSchema = z.object({
 });
 export type GenerateAvatarRequest = z.infer<typeof GenerateAvatarRequestSchema>;
 
+// Generation runs in the background (it takes ~a minute — far longer than the
+// Vercel/Railway proxy will hold a request open), so the POST returns a job id
+// and the client polls the status endpoint below.
 export const GenerateAvatarResponseSchema = z.object({
-  /** A generated 256px webp data URI — the exact image that will be saved if confirmed. */
-  image: WebpDataUriSchema,
+  jobId: z.string().min(1),
 });
 export type GenerateAvatarResponse = z.infer<typeof GenerateAvatarResponseSchema>;
+
+export const AvatarJobStatusSchema = z.object({
+  status: z.enum(["pending", "done", "error"]),
+  /** A generated 256px webp data URI once `status === "done"`. */
+  image: WebpDataUriSchema.nullable(),
+  /** A human-readable failure reason once `status === "error"`. */
+  error: z.string().nullable(),
+});
+export type AvatarJobStatus = z.infer<typeof AvatarJobStatusSchema>;
 
 // ── Save (confirm) ─────────────────────────────────────────────────────
 export const SaveAvatarRequestSchema = z.object({

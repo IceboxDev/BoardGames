@@ -1,10 +1,14 @@
-// AI avatar generation routes (self-only). Generate previews an avatar from a
-// reference photo + game + style without saving; save persists a confirmed one
-// as a webp data URI on `user.image`. Mounted under `/api/profiles` alongside
-// the profile routes (both behind requireAuth).
+// AI avatar generation routes (self or admin). Mounted under `/api/profiles`
+// alongside the profile routes (behind requireAuth + requireOffline).
+//
+// Generation takes ~a minute — longer than the prod proxy (Vercel rewrite →
+// Railway) holds a request open, which 502s a long request. So `generate`
+// starts a background job and returns its id immediately; the client polls the
+// status route. `save` persists a confirmed avatar as a webp data URI.
 
 import { getBggBySlug } from "@boardgames/core/bgg";
 import {
+  AvatarJobStatusSchema,
   GenerateAvatarRequestSchema,
   GenerateAvatarResponseSchema,
   SaveAvatarRequestSchema,
@@ -19,6 +23,12 @@ import {
   runAvatarGeneration,
   toAvatarDataUri,
 } from "../lib/avatar-image.ts";
+import {
+  completeAvatarJob,
+  createAvatarJob,
+  failAvatarJob,
+  getAvatarJob,
+} from "../lib/avatar-jobs.ts";
 import { buildAvatarPrompt } from "../lib/avatar-prompts.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 
@@ -39,19 +49,41 @@ avatarRoutes.post("/:userId/avatar/generate", zJsonBody(GenerateAvatarRequestSch
   }
 
   const prompt = buildAvatarPrompt(body.styleId, bgg.name, bgg.description ?? "", body.comments);
+  const jobId = createAvatarJob(userId);
 
-  try {
-    const reference = await prepareReference(body.referenceImage);
-    const generated = await runAvatarGeneration(reference, prompt);
-    const image = await toAvatarDataUri(generated);
-    return c.json(GenerateAvatarResponseSchema.parse({ image }));
-  } catch (err) {
-    if (err instanceof AvatarConfigError) {
-      return errorResponse(c, 503, err.message, "AVATAR_NOT_CONFIGURED");
+  // Run in the background — the request returns now; the work outlives it on the
+  // persistent Node server. `void` + an internal try/catch keeps it from ever
+  // becoming an unhandled rejection.
+  void (async () => {
+    try {
+      const reference = await prepareReference(body.referenceImage);
+      const generated = await runAvatarGeneration(reference, prompt);
+      completeAvatarJob(jobId, await toAvatarDataUri(generated));
+    } catch (err) {
+      const message =
+        err instanceof AvatarConfigError
+          ? err.message
+          : `Image generation failed: ${err instanceof Error ? err.message : "unknown error"}`;
+      failAvatarJob(jobId, message);
     }
-    const message = err instanceof Error ? err.message : "image generation failed";
-    return errorResponse(c, 502, `Image generation failed: ${message}`, "GENERATION_FAILED");
+  })();
+
+  return c.json(GenerateAvatarResponseSchema.parse({ jobId }));
+});
+
+avatarRoutes.get("/:userId/avatar/generate/:jobId", async (c) => {
+  const userId = c.req.param("userId");
+  const user = c.get("user");
+  if (user.id !== userId && user.role !== "admin") {
+    return errorResponse(c, 403, "cannot view another user's avatar job", "FORBIDDEN");
   }
+  const job = getAvatarJob(c.req.param("jobId"));
+  if (!job || job.userId !== userId) {
+    return errorResponse(c, 404, "avatar job not found", "NOT_FOUND");
+  }
+  return c.json(
+    AvatarJobStatusSchema.parse({ status: job.status, image: job.image, error: job.error }),
+  );
 });
 
 avatarRoutes.put("/:userId/avatar", zJsonBody(SaveAvatarRequestSchema), async (c) => {
