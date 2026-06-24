@@ -6,7 +6,7 @@ import CalendarSyncModal from "../components/profile/CalendarSyncModal";
 import { TopNav, TopNavLink } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
 import { PageHeader } from "../components/ui/PageHeader";
-import { PageMain, PageShell } from "../components/ui/PageShell";
+import { PageShell } from "../components/ui/PageShell";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { authClient } from "../lib/auth-client";
 
@@ -33,6 +33,7 @@ export default function ProfilePage() {
 
   return (
     <PageShell
+      layout="centered"
       topNav={
         <TopNav>
           {isAdmin && <TopNavLink to="/admin">Admin</TopNavLink>}
@@ -40,7 +41,11 @@ export default function ProfilePage() {
         </TopNav>
       }
     >
-      <PageMain width="3xl" padding="spacious">
+      {/* `centered` layout owns the <main> and the vertical centering, so the
+          hub sits in a width-capped column here — deliberately NOT <PageMain>,
+          which is its own <main>: nesting it double-wraps the landmark and
+          top-anchors the page (killing the vertical centering). */}
+      <div className="w-full max-w-3xl">
         <PageHeader
           align="center"
           size="xl"
@@ -90,7 +95,7 @@ export default function ProfilePage() {
             administrator can grant access from the admin panel.
           </p>
         )}
-      </PageMain>
+      </div>
 
       {syncModalOpen && <CalendarSyncModal onClose={() => setSyncModalOpen(false)} />}
     </PageShell>
