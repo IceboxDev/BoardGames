@@ -9,6 +9,12 @@
 import { createHash } from "node:crypto";
 import { getBggBySlug } from "@boardgames/core/bgg";
 import { buildIcs, type IcsEvent } from "@boardgames/core/ical/builder";
+import {
+  buildDndDescription,
+  buildDndSummary,
+  type DndPartyMember,
+  isDndFeedNight,
+} from "@boardgames/core/ical/dnd";
 import { buildSummary, deriveSummaryPrefix } from "@boardgames/core/ical/personalization";
 import { redactToken } from "@boardgames/core/ical/token";
 import { Hono } from "hono";
@@ -143,28 +149,31 @@ async function buildEventForLockedDate(
   // changes, so the ETag matches and 304 fires.
   const stamp = formatUtcFromSqlite(view.latestActivityAt);
 
-  // Resolve the viewer's bring slugs into display titles (for the title's
-  // [Bring: …] prefix and the description body).
-  const bringingTitles = resolveSlugTitles(view.viewer.bringing);
-  const topPickTitles = resolveSlugTitles(view.wire.topSlugs);
+  // A sealed D&D night takes over the whole entry: themed title + quest copy,
+  // no other-game references — mirroring the web's D&D-night panel. Every other
+  // night keeps the generic "Game Night / Top picks / bring X" shape.
+  let summary: string;
+  let description: string;
+  if (isDndFeedNight(view.lock.picksLockedAt, view.wire.topSlugs[0])) {
+    ({ summary, description } = buildDndEvent(view, viewerId, dateKey));
+  } else {
+    // Resolve the viewer's bring slugs into display titles (for the title's
+    // [Bring: …] prefix and the description body).
+    const bringingTitles = resolveSlugTitles(view.viewer.bringing);
+    const topPickTitles = resolveSlugTitles(view.wire.topSlugs);
 
-  const prefix = deriveSummaryPrefix({
-    expectedUserIds: view.lock.expectedUserIds,
-    picksLockedAt: view.lock.picksLockedAt,
-    viewerId,
-    viewerRsvp: view.viewer.rsvp,
-    viewerManuallyRsvped: view.viewer.rsvpManual,
-    viewerHyped: view.viewer.hyped,
-    viewerBringing: bringingTitles,
-  });
-  const summary = buildSummary(prefix, view.lock.hostName);
-
-  const description = buildDescription({
-    view,
-    topPickTitles,
-    bringingTitles,
-    dateKey,
-  });
+    const prefix = deriveSummaryPrefix({
+      expectedUserIds: view.lock.expectedUserIds,
+      picksLockedAt: view.lock.picksLockedAt,
+      viewerId,
+      viewerRsvp: view.viewer.rsvp,
+      viewerManuallyRsvped: view.viewer.rsvpManual,
+      viewerHyped: view.viewer.hyped,
+      viewerBringing: bringingTitles,
+    });
+    summary = buildSummary(prefix, view.lock.hostName);
+    description = buildDescription({ view, topPickTitles, bringingTitles, dateKey });
+  }
 
   const { start, end } = buildEventTimes(dateKey, view.lock.eventTime);
   const sequence = await bumpSequence(viewerId, dateKey, view, "CONFIRMED");
@@ -209,6 +218,62 @@ async function buildEventForTombstone(viewerId: string, dateKey: string): Promis
     lastModified: stamp,
     dtstamp: stamp,
   };
+}
+
+// ── D&D-night entry ───────────────────────────────────────────────────
+
+function buildDndEvent(
+  view: AvailableGamesView,
+  viewerId: string,
+  dateKey: string,
+): { summary: string; description: string } {
+  const attendees = view.wire.attendees;
+  // Dungeon Master: a definite admin runs the table; the host takes over when no
+  // admin is in the party. Mirrors `DndNightPanel`.
+  const dm =
+    attendees.find((a) => a.isAdmin && a.status === "definite") ??
+    attendees.find((a) => a.isHost) ??
+    null;
+  const dmName = dm?.name ?? view.lock.hostName ?? null;
+
+  // On a sealed D&D night only [Not going] / [RSVP!] still apply — there's no
+  // voting and nothing to bring, so force the bring list empty (kills the
+  // [Bring: …] branch) and let [Vote?] fall away naturally (picks are locked).
+  const prefix = deriveSummaryPrefix({
+    expectedUserIds: view.lock.expectedUserIds,
+    picksLockedAt: view.lock.picksLockedAt,
+    viewerId,
+    viewerRsvp: view.viewer.rsvp,
+    viewerManuallyRsvped: view.viewer.rsvpManual,
+    viewerHyped: view.viewer.hyped,
+    viewerBringing: [],
+  });
+  const summary = buildDndSummary(prefix, dmName);
+
+  const definiteCount = attendees.filter((a) => a.status === "definite").length;
+  const party: DndPartyMember[] = attendees.map((a) => ({
+    name: a.name,
+    role: a.userId === dm?.userId ? "dm" : a.isHost ? "host" : "player",
+    tentative: a.status === "tentative",
+  }));
+
+  const description = buildDndDescription({
+    partyCount: definiteCount,
+    tentativeCount: attendees.length - definiteCount,
+    party,
+    personalNudge: dndPersonalNudge(view),
+    deepLink: buildDeepLink(dateKey) ?? null,
+  });
+  return { summary, description };
+}
+
+/** Themed equivalent of the generic decline / RSVP nudge lines. */
+function dndPersonalNudge(view: AvailableGamesView): string | null {
+  if (view.viewer.rsvp === "no") return "You're sitting this quest out.";
+  if (view.viewer.inExpectedSet && view.viewer.rsvp !== "yes" && !view.viewer.rsvpManual) {
+    return "Answer the call — RSVP in the planner.";
+  }
+  return null;
 }
 
 function buildDescription(opts: {

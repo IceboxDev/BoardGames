@@ -16,6 +16,12 @@ type GameSlugGridProps = {
   emptyIcon?: ReactNode;
   emptyTitle: string;
   emptyDescription?: string;
+  /**
+   * Sort tiles alphabetically by title. Off by default so curated lists
+   * (favorites / wishlist) keep their hand-picked order; on for the library,
+   * whose stored order is just the arbitrary order games were toggled in.
+   */
+  sort?: boolean;
 };
 
 export function GameSlugGrid({
@@ -23,11 +29,13 @@ export function GameSlugGrid({
   emptyIcon,
   emptyTitle,
   emptyDescription,
+  sort = false,
 }: GameSlugGridProps) {
   const [selected, setSelected] = useState<GameDefinition | null>(null);
   const resolved = slugs
     .map((slug) => resolveGame(slug))
     .filter((g): g is GameDefinition => Boolean(g));
+  if (sort) resolved.sort((a, b) => a.title.localeCompare(b.title));
 
   if (resolved.length === 0) {
     return <EmptyState icon={emptyIcon} title={emptyTitle} description={emptyDescription} />;
