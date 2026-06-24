@@ -1,7 +1,15 @@
 import { AuthConfigSchema } from "@boardgames/core/protocol";
 import { useEffect, useId, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Button, ErrorAlert, Field, Input, PageShell, SegmentedControl } from "../components/ui";
+import {
+  AuthCard,
+  Button,
+  ErrorAlert,
+  Field,
+  Input,
+  PageShell,
+  SegmentedControl,
+} from "../components/ui";
 import { apiFetch } from "../lib/api-fetch";
 import { authClient } from "../lib/auth-client";
 
@@ -63,16 +71,14 @@ export default function LoginPage() {
 
   return (
     <PageShell layout="centered">
-      <div className="w-full max-w-md space-y-6 rounded-2xl border border-white/10 bg-surface-900/80 p-8 shadow-2xl backdrop-blur">
-        <div className="text-center">
-          <h1 className="gradient-text text-3xl font-bold tracking-tight">Board Game Lab</h1>
-          <p className="mt-2 text-sm text-fg-secondary">
-            {mode === "signin"
-              ? "Welcome back. Sign in to continue."
-              : "Create an account to get started."}
-          </p>
-        </div>
-
+      <AuthCard
+        title="Board Game Lab"
+        subtitle={
+          mode === "signin"
+            ? "Welcome back. Sign in to continue."
+            : "Create an account to get started."
+        }
+      >
         <SegmentedControl<Mode>
           shape="rect"
           aria-label="Sign in or create an account"
@@ -127,7 +133,7 @@ export default function LoginPage() {
 
           {error && <ErrorAlert message={error} />}
 
-          <Button type="submit" size="lg" loading={submitting} className="w-full">
+          <Button type="submit" size="lg" loading={submitting} block>
             {mode === "signin" ? "Sign in" : "Create account"}
           </Button>
         </form>
@@ -145,19 +151,13 @@ export default function LoginPage() {
               <span className="text-xs uppercase tracking-wider text-fg-muted">or</span>
               <div className="h-px flex-1 bg-white/10" />
             </div>
-            <Button
-              type="button"
-              variant="secondary"
-              size="lg"
-              onClick={handleGoogle}
-              className="w-full"
-            >
+            <Button type="button" variant="secondary" size="lg" onClick={handleGoogle} block>
               <GoogleIcon />
               Continue with Google
             </Button>
           </>
         )}
-      </div>
+      </AuthCard>
     </PageShell>
   );
 }

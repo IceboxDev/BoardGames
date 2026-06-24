@@ -101,7 +101,7 @@ export default function BriefingOverlay({ view, onReady, chat }: Props) {
           <ReadyChip label="Co-Pilot" ready={view.readyForRoll[1]} tone="copilot" />
         </div>
 
-        <Button variant="primary" size="lg" disabled={myReady} onClick={onReady} className="w-full">
+        <Button variant="primary" size="lg" disabled={myReady} onClick={onReady} block>
           {myReady ? (oppReady ? "Rolling…" : "Waiting for partner…") : "Ready to roll"}
         </Button>
       </motion.div>

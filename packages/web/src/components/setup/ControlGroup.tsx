@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Surface } from "../ui/Surface";
 
 /**
  * Micro section heading used by the full-viewport setup/lobby screens
@@ -23,9 +24,9 @@ export function ControlGroup({ label, children }: { label: string; children: Rea
   return (
     <section className="flex flex-col gap-2">
       <SectionHeading>{label}</SectionHeading>
-      <div className="min-h-[6.5rem] flex-1 rounded-2xl border border-white/10 bg-surface-900/40 p-2.5">
+      <Surface variant="raised" padding="md" className="min-h-[6.5rem] flex-1">
         {children}
-      </div>
+      </Surface>
     </section>
   );
 }

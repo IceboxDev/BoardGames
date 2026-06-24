@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { Button } from "../ui/Button";
+import { PageHeader } from "../ui/PageHeader";
 
 interface GameOverAction {
   label: string;
@@ -41,11 +42,17 @@ export function GameOverLayout({
 }: GameOverLayoutProps) {
   const inner = (
     <div className="mx-auto w-full max-w-2xl animate-card-enter px-6 py-8">
-      {/* Header */}
-      <div className="mb-8 text-center">
+      {/* Header — PageHeader owns the title/subtitle typography; the win/lose
+          color rides in via a child <span> (it overrides PageHeader's
+          text-white), and the emoji stays a sibling decoration. */}
+      <div className="mb-8 flex flex-col items-center">
         {emoji && <div className="mb-2 text-5xl">{emoji}</div>}
-        <h2 className={`text-3xl font-bold ${HEADLINE_COLORS[headlineColor]}`}>{headline}</h2>
-        {subtitle && <p className="mt-2 text-sm text-fg-secondary">{subtitle}</p>}
+        <PageHeader
+          align="center"
+          size="lg"
+          title={<span className={HEADLINE_COLORS[headlineColor]}>{headline}</span>}
+          subtitle={subtitle}
+        />
       </div>
 
       {/* Game-specific content */}

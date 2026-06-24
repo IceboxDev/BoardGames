@@ -80,9 +80,10 @@ export const apiClient = {
     });
   },
 
-  async getTournamentGames(id: string) {
+  async getTournamentGames(id: string, signal?: AbortSignal) {
     return apiFetch(`${BASE}/tournaments/${id}/games`, {
       response: TournamentGameLogListSchema,
+      signal,
     });
   },
 
@@ -129,9 +130,10 @@ export const apiClient = {
     });
   },
 
-  async getGameReplays(gameSlug: string) {
+  async getGameReplays(gameSlug: string, signal?: AbortSignal) {
     return apiFetch(`${BASE}/games/${gameSlug}/replays`, {
       response: ReplaySummaryListSchema,
+      signal,
     });
   },
 

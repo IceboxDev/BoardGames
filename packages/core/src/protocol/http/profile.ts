@@ -76,6 +76,18 @@ export const ProfilePerGameStatSchema = z.object({
   title: z.string(),
   plays: z.number().int().nonnegative(),
   wins: z.number().int().nonnegative(),
+  losses: z.number().int().nonnegative(),
+  /**
+   * Scheme-A performance (0..1) over this game's COMPETITIVE plays — wins plus
+   * placement-graded free-for-all losses (other losses = 0). Null when the game
+   * has no competitive plays: a scored co-op (Just One — see `coopScoreAvg`) or
+   * a game the user only moderated.
+   */
+  performance: z.number().min(0).max(1).nullable(),
+  /** Average team score across this game's scored-coop plays (Just One); null otherwise. */
+  coopScoreAvg: z.number().nonnegative().nullable(),
+  /** Number of scored-coop plays (the denominator behind `coopScoreAvg`). */
+  coopPlays: z.number().int().nonnegative(),
 });
 export type ProfilePerGameStat = z.infer<typeof ProfilePerGameStatSchema>;
 
@@ -86,6 +98,14 @@ export const ProfileStatsSchema = z.object({
   losses: z.number().int().nonnegative(),
   /** wins / (wins + losses); null when the user has no competitive results. */
   winRate: z.number().min(0).max(1).nullable(),
+  /**
+   * Placement-weighted "performance" in [0,1] (Scheme A): wins = 1, free-for-all
+   * losses get linear placement credit `(N-place)/(N-1)` (a close 2nd is worth
+   * more than dead last), every other loss = 0; moderator + scored co-ops are
+   * excluded. The headline rate shown on the profile. Null with no competitive
+   * results.
+   */
+  performance: z.number().min(0).max(1).nullable(),
   gamesOwned: z.number().int().nonnegative(),
   distinctGames: z.number().int().nonnegative(),
   /** Organized (locked) past nights the user RSVP'd yes to. */

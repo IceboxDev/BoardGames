@@ -4,7 +4,7 @@ import type { GameDefinition } from "../../games/types";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { Attendee } from "../../lib/calendar-games";
 import { XIcon } from "../icons";
-import { EmptyState, IconButton, Spinner } from "../ui";
+import { EmptyState, IconButton, Spinner, Surface } from "../ui";
 
 type Props = {
   attendees: Attendee[];
@@ -129,7 +129,7 @@ function AttendeeRow({
     if (ok) onKick(attendee.userId);
   };
   return (
-    <div className="flex items-start gap-3 rounded-2xl border border-white/[0.06] bg-surface-900/80 px-3 py-3 sm:px-4">
+    <Surface variant="raised" padding="none" className="flex items-start gap-3 px-3 py-3 sm:px-4">
       <span
         aria-hidden="true"
         className={`grid h-10 w-10 shrink-0 place-items-center rounded-full text-sm font-bold text-white ${
@@ -190,7 +190,7 @@ function AttendeeRow({
           icon={isKicking ? <Spinner size="xs" /> : <XIcon className="h-3.5 w-3.5" />}
         />
       )}
-    </div>
+    </Surface>
   );
 }
 

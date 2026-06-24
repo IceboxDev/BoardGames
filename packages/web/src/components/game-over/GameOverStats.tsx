@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Surface } from "../ui/Surface";
 
 interface GameOverStatsProps {
   children: ReactNode;
@@ -11,9 +12,9 @@ export function GameOverStats({ children, columns = 2 }: GameOverStatsProps) {
     columns === 4 ? "grid-cols-2 sm:grid-cols-4" : columns === 3 ? "grid-cols-3" : "grid-cols-2";
 
   return (
-    <div className={`grid gap-3 rounded-xl border border-white/10 bg-surface-800 p-4 ${colsClass}`}>
+    <Surface variant="panel" padding="lg" className={`grid gap-3 ${colsClass}`}>
       {children}
-    </div>
+    </Surface>
   );
 }
 

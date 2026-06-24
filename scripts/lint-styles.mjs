@@ -22,6 +22,18 @@
 //                            variant or a shared primitive instead of fighting one.
 //     • glow-shadow-literal  use shadow-glow-* tokens, not a hand-rolled
 //                            shadow-[0_0_…rgb(…)].
+//     • raw-heading-size     use <PageHeader> (or its SetupHeader preset), not a
+//                            hand-rolled <h1>/<h2> carrying text-3xl/4xl/5xl.
+//     • raw-card-chrome      use <Surface> (static) / <SelectableCard>
+//                            (interactive), not a hand-rolled rounded + border +
+//                            bg-surface panel.
+//     • raw-async-ladder     wrap a React Query result in <QueryBoundary>, not a
+//                            hand-rolled `isLoading ?` / `isPending ?` ternary.
+//
+//   The first five are TOKEN bans (use the design token, not a raw value); the
+//   last three are PRIMITIVE-ADOPTION rules (use the shared component, not a
+//   hand-rolled equivalent). Each rule may `scope` itself to app chrome — games/
+//   and the components/ui/ primitives that DEFINE the chrome are exempt.
 //
 //   The baseline pins the per-file count of pre-existing hits: a new file (or a
 //   new hit in a pinned file) fails the check; removing hits is always allowed.
@@ -106,6 +118,45 @@ const RATCHET_RULES = [
     re: /shadow-\[0_0_[^\]]*rgb/g,
     hint: "use the shadow-glow-* tokens",
   },
+  {
+    name: "raw-heading-size",
+    // A hand-rolled page heading: an <h1>/<h2> whose OWN class string carries a
+    // large display size (text-3xl/4xl/5xl). `[^>]*` cannot cross the tag's `>`,
+    // so only the heading element's attributes are inspected — a text-4xl on a
+    // child or in the body never trips it. The large-title scale is owned by the
+    // heading primitives (PageHeader, its SetupHeader preset, AuthCard) under
+    // components/ui/, which is scoped out; everyone else composes those.
+    re: /<h[12][^>]*\btext-(?:3xl|4xl|5xl)\b/g,
+    hint: "use <PageHeader> (or its SetupHeader preset), not a hand-rolled <h1>/<h2> with text-3xl+",
+    scope: (rel) => !rel.startsWith("games/") && !rel.startsWith("components/ui/"),
+  },
+  {
+    name: "raw-card-chrome",
+    // A hand-rolled bordered panel: one class string carrying rounded + border +
+    // bg-surface together. The negative lookahead lets genuinely-interactive
+    // surfaces through (hover:/focus:/cursor-/group-hover:) — those are
+    // <SelectableCard> / inputs / link-cards, not a static <Surface>. The
+    // chrome-OWNING primitives (Surface, Modal, SegmentedControl, AuthCard, …)
+    // live under components/ui/ and games/ is exempt; both are scoped out.
+    // Double-quoted class strings only — the static-panel norm; dynamic
+    // template-literal chrome is rare and almost always interactive.
+    re: /"(?=[^"]*\brounded-(?:md|lg|xl|2xl|3xl|full)\b)(?=[^"]*\bborder\b)(?=[^"]*\bbg-surface-\d)(?![^"]*(?:hover:|focus:|focus-visible:|cursor-|group-hover:))[^"]*"/g,
+    hint: "use <Surface> for a static panel (or <SelectableCard> if interactive), not a hand-rolled rounded+border+bg-surface chain",
+    scope: (rel) => !rel.startsWith("games/") && !rel.startsWith("components/ui/"),
+  },
+  {
+    name: "raw-async-ladder",
+    // A hand-rolled async ladder: an `isLoading ?` / `isPending ?` ternary in app
+    // chrome. <QueryBoundary> renders loading/error/empty/data uniformly — a raw
+    // ternary on the query flag re-invents it and usually drops the error branch.
+    // Scoped to pages/ + components/ feature code; the async primitives live under
+    // components/ui/ (excluded) and games/ run their own server-driven loop.
+    re: /\b(?:isLoading|isPending)\s*\?/g,
+    hint: "wrap the query in <QueryBoundary>, don't hand-roll an isLoading/isPending ternary",
+    scope: (rel) =>
+      (rel.startsWith("pages/") || rel.startsWith("components/")) &&
+      !rel.startsWith("components/ui/"),
+  },
 ];
 
 function* walk(dir) {
@@ -159,8 +210,11 @@ if (CHECK_BASELINE) {
   const before = ruleTotals(JSON.parse(refJson));
   const after = ruleTotals(existing);
   const grown = Object.keys(after)
-    .filter((rule) => (after[rule] ?? 0) > (before[rule] ?? 0))
-    .map((rule) => `    ${rule}: ${before[rule] ?? 0} → ${after[rule]}`);
+    // A rule absent from the base ref is newly introduced in this change — its
+    // seed baseline is reviewed as an ordinary diff, so 0→N is not "growth" here.
+    // Only an EXISTING rule that grew is a down-only violation.
+    .filter((rule) => before[rule] !== undefined && (after[rule] ?? 0) > before[rule])
+    .map((rule) => `    ${rule}: ${before[rule]} → ${after[rule]}`);
   if (grown.length > 0) {
     console.error(`\n✖ style-guard: baseline grew vs ${ref} — it must be down-only\n`);
     console.error(grown.join("\n"));
@@ -197,8 +251,11 @@ for (const file of walk(WEB)) {
     }
   });
 
-  // Ratchet rules — per file count vs baseline.
+  // Ratchet rules — per file count vs baseline. A rule may `scope` itself to a
+  // subset of files (app chrome only); scoped-out files are neither checked nor
+  // baselined for that rule.
   for (const rule of RATCHET_RULES) {
+    if (rule.scope && !rule.scope(rel)) continue;
     const count = countMatches(text, rule.re);
     if (count > 0) nextBaseline[rule.name][rel] = count;
     if (UPDATE) continue;

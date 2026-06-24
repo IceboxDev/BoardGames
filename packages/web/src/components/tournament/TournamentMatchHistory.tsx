@@ -1,8 +1,11 @@
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { useCallback, useMemo } from "react";
 import { apiClient } from "../../lib/api-client";
+import { qk } from "../../lib/query-keys";
 import { Button } from "../ui/Button";
 import { EmptyState } from "../ui/EmptyState";
 import { LoadingState } from "../ui/LoadingState";
+import { QueryBoundary } from "../ui/QueryBoundary";
 
 interface TournamentMatchHistoryProps {
   strategies: { id: string; label: string }[];
@@ -42,33 +45,27 @@ export default function TournamentMatchHistory({
   const labelA = strategies.find((s) => s.id === strategyAId)?.label ?? strategyAId;
   const labelB = strategies.find((s) => s.id === strategyBId)?.label ?? strategyBId;
 
-  const [games, setGames] = useState<GameRecord[]>([]);
-  const [rawGames, setRawGames] = useState<unknown[]>([]);
-  const [loading, setLoading] = useState(true);
+  const gamesQuery = useQuery({
+    queryKey: qk.tournamentGames(tournamentId),
+    queryFn: ({ signal }) => apiClient.getTournamentGames(tournamentId, signal),
+  });
 
-  useEffect(() => {
-    setLoading(true);
-    apiClient
-      .getTournamentGames(tournamentId)
-      .then((logs) => {
-        setRawGames(logs);
-        setGames(
-          logs.map((g) => {
-            const rec = g as Record<string, unknown>;
-            return {
-              scoreA: (rec.scoreA as number) ?? 0,
-              scoreB: (rec.scoreB as number) ?? 0,
-              aPlaysFirst: rec.aPlaysFirst as boolean | undefined,
-              gameIndex: rec.gameIndex as number | undefined,
-            };
-          }),
-        );
-        setLoading(false);
-      })
-      .catch(() => {
-        setLoading(false);
-      });
-  }, [tournamentId]);
+  // Raw logs power the ZIP export; `games` is the parsed view the table and
+  // stats read. Both derive from `gamesQuery.data` — no duplicated state.
+  const rawGames = useMemo(() => gamesQuery.data ?? [], [gamesQuery.data]);
+  const games = useMemo<GameRecord[]>(
+    () =>
+      rawGames.map((g) => {
+        const rec = g as Record<string, unknown>;
+        return {
+          scoreA: (rec.scoreA as number) ?? 0,
+          scoreB: (rec.scoreB as number) ?? 0,
+          aPlaysFirst: rec.aPlaysFirst as boolean | undefined,
+          gameIndex: rec.gameIndex as number | undefined,
+        };
+      }),
+    [rawGames],
+  );
 
   const stats = useMemo(() => {
     let aWins = 0;
@@ -108,7 +105,7 @@ export default function TournamentMatchHistory({
         <h2 className="text-2xl font-extrabold text-white">
           {labelA} vs {labelB}
         </h2>
-        {!loading && (
+        {gamesQuery.data && (
           <p className="mt-2 text-sm text-fg-secondary">
             {games.length} games &middot; <span className="text-emerald-400">{stats.aWins}W</span> /{" "}
             <span className="text-rose-400">{stats.bWins}L</span> /{" "}
@@ -117,81 +114,84 @@ export default function TournamentMatchHistory({
         )}
       </div>
 
-      {loading ? (
-        <LoadingState />
-      ) : games.length === 0 ? (
-        <EmptyState title="No game logs found" description="Run the tournament first." />
-      ) : (
-        <div className="w-full overflow-x-auto">
-          <table className="w-full border-collapse text-sm">
-            <thead>
-              <tr className="border-b border-white/10 text-xs font-medium uppercase tracking-wider text-fg-muted">
-                <th className="p-2.5 text-left">#</th>
-                <th className="p-2.5 text-center">First Player</th>
-                <th className="p-2.5 text-right">{labelA}</th>
-                <th className="p-2.5 text-right">{labelB}</th>
-                <th className="p-2.5 text-right">Diff</th>
-                <th className="p-2.5 text-center">Winner</th>
-              </tr>
-            </thead>
-            <tbody>
-              {games.map((game, i) => {
-                const diff = game.scoreA - game.scoreB;
-                const aWon = diff > 0;
-                const bWon = diff < 0;
-                // Each tournament row carries its own `gameIndex` from the
-                // server; we prefer that over the table position so the
-                // index in the replay URL points at the exact game even
-                // when the table is filtered or partially loaded.
-                const idx = game.gameIndex ?? i;
+      <QueryBoundary
+        query={gamesQuery}
+        loading={<LoadingState />}
+        isEmpty={(logs) => logs.length === 0}
+        empty={<EmptyState title="No game logs found" description="Run the tournament first." />}
+      >
+        {() => (
+          <div className="w-full overflow-x-auto">
+            <table className="w-full border-collapse text-sm">
+              <thead>
+                <tr className="border-b border-white/10 text-xs font-medium uppercase tracking-wider text-fg-muted">
+                  <th className="p-2.5 text-left">#</th>
+                  <th className="p-2.5 text-center">First Player</th>
+                  <th className="p-2.5 text-right">{labelA}</th>
+                  <th className="p-2.5 text-right">{labelB}</th>
+                  <th className="p-2.5 text-right">Diff</th>
+                  <th className="p-2.5 text-center">Winner</th>
+                </tr>
+              </thead>
+              <tbody>
+                {games.map((game, i) => {
+                  const diff = game.scoreA - game.scoreB;
+                  const aWon = diff > 0;
+                  const bWon = diff < 0;
+                  // Each tournament row carries its own `gameIndex` from the
+                  // server; we prefer that over the table position so the
+                  // index in the replay URL points at the exact game even
+                  // when the table is filtered or partially loaded.
+                  const idx = game.gameIndex ?? i;
 
-                return (
-                  <tr
-                    // biome-ignore lint/suspicious/noArrayIndexKey: static tournament game list
-                    key={i}
-                    onClick={() => onSelectGameIndex?.(idx)}
-                    className={`border-b border-white/10 transition-colors ${
-                      onSelectGameIndex ? "cursor-pointer hover:bg-surface-800/50" : ""
-                    }`}
-                  >
-                    <td className="p-2.5 tabular-nums text-fg-secondary">{i + 1}</td>
-                    <td className="p-2.5 text-center text-xs text-fg-secondary">
-                      {game.aPlaysFirst != null ? (game.aPlaysFirst ? labelA : labelB) : "—"}
-                    </td>
-                    <td
-                      className={`p-2.5 text-right tabular-nums font-semibold ${
-                        aWon ? "text-emerald-400" : bWon ? "text-rose-400" : "text-fg-secondary"
+                  return (
+                    <tr
+                      // biome-ignore lint/suspicious/noArrayIndexKey: static tournament game list
+                      key={i}
+                      onClick={() => onSelectGameIndex?.(idx)}
+                      className={`border-b border-white/10 transition-colors ${
+                        onSelectGameIndex ? "cursor-pointer hover:bg-surface-800/50" : ""
                       }`}
                     >
-                      {game.scoreA}
-                    </td>
-                    <td
-                      className={`p-2.5 text-right tabular-nums font-semibold ${
-                        bWon ? "text-emerald-400" : aWon ? "text-rose-400" : "text-fg-secondary"
-                      }`}
-                    >
-                      {game.scoreB}
-                    </td>
-                    <td className="p-2.5 text-right tabular-nums text-fg-muted">
-                      {diff > 0 ? "+" : ""}
-                      {diff}
-                    </td>
-                    <td className="p-2.5 text-center text-xs">
-                      {aWon ? (
-                        <span className="text-emerald-400">{labelA}</span>
-                      ) : bWon ? (
-                        <span className="text-rose-400">{labelB}</span>
-                      ) : (
-                        <span className="text-fg-muted">Draw</span>
-                      )}
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-      )}
+                      <td className="p-2.5 tabular-nums text-fg-secondary">{i + 1}</td>
+                      <td className="p-2.5 text-center text-xs text-fg-secondary">
+                        {game.aPlaysFirst != null ? (game.aPlaysFirst ? labelA : labelB) : "—"}
+                      </td>
+                      <td
+                        className={`p-2.5 text-right tabular-nums font-semibold ${
+                          aWon ? "text-emerald-400" : bWon ? "text-rose-400" : "text-fg-secondary"
+                        }`}
+                      >
+                        {game.scoreA}
+                      </td>
+                      <td
+                        className={`p-2.5 text-right tabular-nums font-semibold ${
+                          bWon ? "text-emerald-400" : aWon ? "text-rose-400" : "text-fg-secondary"
+                        }`}
+                      >
+                        {game.scoreB}
+                      </td>
+                      <td className="p-2.5 text-right tabular-nums text-fg-muted">
+                        {diff > 0 ? "+" : ""}
+                        {diff}
+                      </td>
+                      <td className="p-2.5 text-center text-xs">
+                        {aWon ? (
+                          <span className="text-emerald-400">{labelA}</span>
+                        ) : bWon ? (
+                          <span className="text-rose-400">{labelB}</span>
+                        ) : (
+                          <span className="text-fg-muted">Draw</span>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </QueryBoundary>
 
       <div className="mt-2 flex gap-4">
         {exportLogFn && rawGames.length > 0 && (

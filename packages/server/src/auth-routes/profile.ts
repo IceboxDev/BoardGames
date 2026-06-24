@@ -16,7 +16,9 @@
 import {
   deriveParticipantResult,
   extractParticipantIds,
+  participantPerformanceCredit,
 } from "@boardgames/core/history/participant-results";
+import { lowScoreWinsForSlug } from "@boardgames/core/history/score-config";
 import {
   HistoryListResponseSchema,
   ProfileDirectoryResponseSchema,
@@ -47,7 +49,7 @@ export const profileRoutes = authedApp();
 const DEFAULT_MATCH_LIMIT = 50;
 const MAX_MATCH_LIMIT = 200;
 const RECENT_MATCH_COUNT = 10;
-const PER_GAME_MAX = 8;
+const PER_GAME_MAX = 30;
 
 // ── Row projections ────────────────────────────────────────────────────
 
@@ -330,25 +332,79 @@ profileRoutes.get("/:userId", async (c) => {
   );
   let wins = 0;
   let losses = 0;
+  // Scheme-A performance: placement-weighted credit averaged over competitive
+  // matches (moderator + scored co-ops excluded — they return null).
+  let perfSum = 0;
+  let perfCount = 0;
   const distinctSlugs = new Set<string>();
-  const playsBySlug = new Map<string, { title: string; plays: number; wins: number }>();
+  type PerGameAgg = {
+    title: string;
+    plays: number;
+    wins: number;
+    losses: number;
+    perfSum: number;
+    perfCount: number;
+    coopSum: number;
+    coopCount: number;
+  };
+  const playsBySlug = new Map<string, PerGameAgg>();
   for (const r of matchRows) {
-    const result = deriveParticipantResult(r.outcome_json, userId);
+    // Direction matters: penalty games (Phase 10 / Bandit) are lowest-wins, so
+    // pass the slug's direction or the highest-score player is wrongly credited.
+    const lowestWins = lowScoreWinsForSlug(r.game_slug);
+    const result = deriveParticipantResult(r.outcome_json, userId, lowestWins);
+    const credit = participantPerformanceCredit(r.outcome_json, userId, r.game_slug);
+    if (credit !== null) {
+      perfSum += credit;
+      perfCount += 1;
+    }
     if (result === "win") wins += 1;
     else if (result === "loss") losses += 1;
     if (r.game_slug) {
       distinctSlugs.add(r.game_slug);
       let agg = playsBySlug.get(r.game_slug);
       if (!agg) {
-        agg = { title: r.game_title, plays: 0, wins: 0 };
+        agg = {
+          title: r.game_title,
+          plays: 0,
+          wins: 0,
+          losses: 0,
+          perfSum: 0,
+          perfCount: 0,
+          coopSum: 0,
+          coopCount: 0,
+        };
         playsBySlug.set(r.game_slug, agg);
       }
       agg.plays += 1;
       if (result === "win") agg.wins += 1;
+      else if (result === "loss") agg.losses += 1;
+      if (credit !== null) {
+        agg.perfSum += credit;
+        agg.perfCount += 1;
+      }
+      // Scored co-op (Just One): banks a team score with no win/loss. Tracked
+      // separately so the panel shows "avg x / max" instead of a 0W record.
+      const o = r.outcome_json;
+      if (o.kind === "coop" && o.outcome === undefined && o.score !== undefined) {
+        agg.coopSum += o.score;
+        agg.coopCount += 1;
+      }
     }
   }
+  // Sorted by plays so `favoriteGameSlug` (perGame[0]) stays "most played"; the
+  // profile panel re-sorts by performance for display.
   const perGame: ProfilePerGameStat[] = [...playsBySlug.entries()]
-    .map(([slug, a]) => ({ slug, title: a.title, plays: a.plays, wins: a.wins }))
+    .map(([slug, a]) => ({
+      slug,
+      title: a.title,
+      plays: a.plays,
+      wins: a.wins,
+      losses: a.losses,
+      performance: a.perfCount > 0 ? a.perfSum / a.perfCount : null,
+      coopScoreAvg: a.coopCount > 0 ? a.coopSum / a.coopCount : null,
+      coopPlays: a.coopCount,
+    }))
     .sort((x, y) => y.plays - x.plays || y.wins - x.wins || x.slug.localeCompare(y.slug))
     .slice(0, PER_GAME_MAX);
 
@@ -381,6 +437,7 @@ profileRoutes.get("/:userId", async (c) => {
     wins,
     losses,
     winRate: wins + losses > 0 ? wins / (wins + losses) : null,
+    performance: perfCount > 0 ? perfSum / perfCount : null,
     gamesOwned: library.length,
     distinctGames: distinctSlugs.size,
     nightsAttended: Number(nightsResult.rows[0]?.n ?? 0),

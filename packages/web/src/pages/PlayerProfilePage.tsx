@@ -151,10 +151,6 @@ export default function PlayerProfilePage() {
                   footer={matchFooter}
                 />
               </Section>
-
-              <Section title="Stats by game" icon={<UsersIcon className="h-3.5 w-3.5" />}>
-                <ProfileStatsPanel stats={profile.stats} />
-              </Section>
             </div>
 
             {/* Side rail */}
@@ -190,6 +186,12 @@ export default function PlayerProfilePage() {
               </Section>
             </div>
           </div>
+
+          {/* Full width: by the time the eye reaches this, the side rail
+              (skill / favorites / wishlist) has ended, so it gets the whole row. */}
+          <Section title="Performance by game" icon={<UsersIcon className="h-3.5 w-3.5" />}>
+            <ProfileStatsPanel stats={profile.stats} />
+          </Section>
 
           {SHOW_ACHIEVEMENTS && (
             <Section title="Achievements" icon={<TrophyIcon className="h-4 w-4" />}>

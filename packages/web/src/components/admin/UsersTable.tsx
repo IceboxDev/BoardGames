@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { EmptyState, LoadingState } from "../ui";
+import { EmptyState, LoadingState, Surface } from "../ui";
 
 type Props = {
   /** When true, render the loading placeholder instead of the table. */
@@ -23,7 +23,11 @@ type Props = {
  */
 export function UsersTable({ loading, empty, deleteMode, children }: Props) {
   if (loading) {
-    return <LoadingState className="rounded-xl border border-white/10 bg-surface-900" />;
+    return (
+      <Surface variant="panel" padding="none">
+        <LoadingState />
+      </Surface>
+    );
   }
 
   if (empty) {
@@ -31,7 +35,7 @@ export function UsersTable({ loading, empty, deleteMode, children }: Props) {
   }
 
   return (
-    <div className="overflow-hidden rounded-xl border border-white/10 bg-surface-900">
+    <Surface variant="panel" padding="none" className="overflow-hidden">
       <table className="w-full table-fixed text-sm">
         <thead className="bg-surface-800 text-xs uppercase tracking-wider text-fg-muted">
           <tr>
@@ -51,6 +55,6 @@ export function UsersTable({ loading, empty, deleteMode, children }: Props) {
         </thead>
         <tbody className="divide-y divide-white/5">{children}</tbody>
       </table>
-    </div>
+    </Surface>
   );
 }

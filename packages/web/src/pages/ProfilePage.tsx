@@ -6,7 +6,7 @@ import CalendarSyncModal from "../components/profile/CalendarSyncModal";
 import { TopNav, TopNavLink } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
 import { PageHeader } from "../components/ui/PageHeader";
-import { PageShell } from "../components/ui/PageShell";
+import { PageMain, PageShell } from "../components/ui/PageShell";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { authClient } from "../lib/auth-client";
 
@@ -33,7 +33,6 @@ export default function ProfilePage() {
 
   return (
     <PageShell
-      layout="centered"
       topNav={
         <TopNav>
           {isAdmin && <TopNavLink to="/admin">Admin</TopNavLink>}
@@ -41,7 +40,7 @@ export default function ProfilePage() {
         </TopNav>
       }
     >
-      <div className="w-full max-w-3xl">
+      <PageMain width="3xl" padding="spacious">
         <PageHeader
           align="center"
           size="xl"
@@ -91,7 +90,7 @@ export default function ProfilePage() {
             administrator can grant access from the admin panel.
           </p>
         )}
-      </div>
+      </PageMain>
 
       {syncModalOpen && <CalendarSyncModal onClose={() => setSyncModalOpen(false)} />}
     </PageShell>

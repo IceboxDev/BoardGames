@@ -1,6 +1,6 @@
 import { useId, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { Button, ErrorAlert, Field, Input, PageShell } from "../components/ui";
+import { AuthCard, Button, ErrorAlert, Field, Input, PageShell } from "../components/ui";
 import { authClient } from "../lib/auth-client";
 
 /**
@@ -52,27 +52,21 @@ export default function ResetPasswordPage() {
 
   return (
     <PageShell layout="centered">
-      <div className="w-full max-w-md space-y-6 rounded-2xl border border-white/10 bg-surface-900/80 p-8 shadow-2xl backdrop-blur">
-        <div className="text-center">
-          <h1 className="gradient-text text-3xl font-bold tracking-tight">Reset password</h1>
-          <p className="mt-2 text-sm text-fg-secondary">
-            {done ? "Your password has been updated." : "Choose a new password for your account."}
-          </p>
-        </div>
-
+      <AuthCard
+        title="Reset password"
+        subtitle={
+          done ? "Your password has been updated." : "Choose a new password for your account."
+        }
+      >
         {!token ? (
           <div className="space-y-4">
             <ErrorAlert message="This link is missing its reset token. Ask an admin to send you a fresh reset link." />
-            <Button size="lg" className="w-full" onClick={() => navigate("/login")}>
+            <Button size="lg" block onClick={() => navigate("/login")}>
               Back to sign in
             </Button>
           </div>
         ) : done ? (
-          <Button
-            size="lg"
-            className="w-full"
-            onClick={() => navigate("/login", { replace: true })}
-          >
+          <Button size="lg" block onClick={() => navigate("/login", { replace: true })}>
             Go to sign in
           </Button>
         ) : (
@@ -102,12 +96,12 @@ export default function ResetPasswordPage() {
 
             {error && <ErrorAlert message={error} />}
 
-            <Button type="submit" size="lg" loading={submitting} className="w-full">
+            <Button type="submit" size="lg" loading={submitting} block>
               Set new password
             </Button>
           </form>
         )}
-      </div>
+      </AuthCard>
     </PageShell>
   );
 }

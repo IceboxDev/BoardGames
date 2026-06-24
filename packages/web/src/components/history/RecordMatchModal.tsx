@@ -24,6 +24,7 @@ import { Field } from "../ui/Field";
 import { Input } from "../ui/Input";
 import { Modal } from "../ui/Modal";
 import { Select } from "../ui/Select";
+import { Surface } from "../ui/Surface";
 import { Textarea } from "../ui/Textarea";
 import { ClocktowerForm } from "./forms/ClocktowerForm";
 import { CoopForm } from "./forms/CoopForm";
@@ -294,7 +295,7 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
           <GameVariantPicker gameSlug={gameSlug} outcome={outcome} onChange={setOutcome} />
         )}
 
-        <div className="rounded-xl border border-white/5 bg-surface-900/40 p-3">
+        <Surface variant="tile" padding="md">
           {kind === "free-for-all" &&
             (gameSlug === "villainous" ? (
               <VillainousForm
@@ -378,7 +379,7 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
               onChange={setOutcome}
             />
           )}
-        </div>
+        </Surface>
 
         <Field label="Notes" htmlFor={notesId} hint="Optional, max 2000 chars">
           <Textarea

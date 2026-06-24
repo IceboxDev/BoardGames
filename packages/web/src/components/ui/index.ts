@@ -1,4 +1,5 @@
 export { AiThinkingIndicator, WaitingIndicator } from "./AiThinkingIndicator";
+export { AuthCard } from "./AuthCard";
 export { Badge, type BadgeTone } from "./Badge";
 export { BoardOverlay } from "./BoardOverlay";
 export { Button } from "./Button";
@@ -26,4 +27,5 @@ export { SegmentedControl } from "./SegmentedControl";
 export { Select } from "./Select";
 export { SelectableCard } from "./SelectableCard";
 export { Spinner } from "./Spinner";
+export { Surface, type SurfacePadding, type SurfaceVariant } from "./Surface";
 export { Textarea } from "./Textarea";

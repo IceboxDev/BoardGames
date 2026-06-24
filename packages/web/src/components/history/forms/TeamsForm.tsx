@@ -4,6 +4,7 @@ import { Button } from "../../ui/Button";
 import { Chip } from "../../ui/Chip";
 import { IconButton } from "../../ui/IconButton";
 import { Input } from "../../ui/Input";
+import { Surface } from "../../ui/Surface";
 import { ParticipantPicker } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
 
@@ -111,10 +112,13 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
         {value.teams.map((team, idx) => {
           const isWinner = value.winnerTeamIndices.includes(idx);
           return (
-            <div
+            <Surface
+              as="div"
               // biome-ignore lint/suspicious/noArrayIndexKey: teams have no stable id; reorders aren't supported.
               key={idx}
-              className="flex flex-col gap-2 rounded-lg border border-white/10 bg-surface-900/60 p-3"
+              variant="panel"
+              padding="md"
+              className="flex flex-col gap-2"
             >
               <div className="flex items-center gap-2">
                 <span className="text-xs font-semibold uppercase tracking-wider text-fg-secondary">
@@ -177,7 +181,7 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
                   ))}
                 </div>
               )}
-            </div>
+            </Surface>
           );
         })}
       </div>

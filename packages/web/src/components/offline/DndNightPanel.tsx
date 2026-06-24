@@ -2,6 +2,7 @@ import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { Attendee } from "../../lib/calendar-games";
 import { DND_SLUG } from "../../lib/dnd-night.ts";
 import { resolveGame } from "../../lib/games-by-slug.ts";
+import { Surface } from "../ui/Surface";
 import { D20Die } from "./D20Die";
 
 // The RSVP modal's body for a sealed D&D night. Replaces the whole pick / vote
@@ -99,9 +100,12 @@ export default function DndNightPanel({ attendees, partyCount }: Props) {
         ) : (
           <ul className="mt-2 flex flex-col gap-2">
             {attendees.map((a) => (
-              <li
+              <Surface
+                as="li"
                 key={a.userId}
-                className="flex items-center gap-3 rounded-2xl border border-white/[0.06] bg-surface-900/80 px-3 py-2.5"
+                variant="raised"
+                padding="none"
+                className="flex items-center gap-3 px-3 py-2.5"
               >
                 <span
                   aria-hidden="true"
@@ -135,7 +139,7 @@ export default function DndNightPanel({ attendees, partyCount }: Props) {
                     Maybe
                   </span>
                 ) : null}
-              </li>
+              </Surface>
             ))}
           </ul>
         )}

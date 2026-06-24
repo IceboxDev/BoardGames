@@ -29,6 +29,14 @@ function formatPercent(value: number | null): string {
   return value === null ? "—" : `${Math.round(value * 100)}%`;
 }
 
+// Raw W/L split under the (placement-weighted) win-rate headline. "N/A" covers
+// games that are neither a win nor a loss — moderator slots and scored co-ops
+// (Just One) — so the three numbers always sum to gamesPlayed.
+function winLossSub(stats: ProfileStats): string {
+  const na = stats.gamesPlayed - stats.wins - stats.losses;
+  return `${stats.wins}W · ${stats.losses}L${na > 0 ? ` · ${na} N/A` : ""}`;
+}
+
 export function ProfileHeader({
   user,
   profile,
@@ -145,8 +153,8 @@ export function ProfileHeader({
           />
           <StatTile
             label="Win rate"
-            value={formatPercent(stats.winRate)}
-            sub={`${stats.wins}W · ${stats.losses}L`}
+            value={formatPercent(stats.performance)}
+            sub={winLossSub(stats)}
           />
           <StatTile label="Games owned" value={stats.gamesOwned} />
           <StatTile

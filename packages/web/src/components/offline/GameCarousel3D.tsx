@@ -154,6 +154,11 @@ export default function GameCarousel3D({
   const zMax = cardW * (380 / REF_CARD_W);
   const perspective = cardW * (1600 / REF_CARD_W);
 
+  // Shared chrome for the two edge nav buttons; only the side (left/right) and
+  // each button's handler / disabled / aria-label / icon / style differ.
+  const navBtnCls =
+    "absolute top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/80 text-white backdrop-blur-sm transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:h-12 sm:w-12";
+
   return (
     <div
       ref={rootRef}
@@ -165,7 +170,7 @@ export default function GameCarousel3D({
         onClick={goPrev}
         disabled={center === 0}
         aria-label="Previous game"
-        className="absolute left-2 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/80 text-white backdrop-blur-sm transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:left-4 sm:h-12 sm:w-12"
+        className={`${navBtnCls} left-2 sm:left-4`}
       >
         <ChevronLeftIcon />
       </button>
@@ -334,7 +339,7 @@ export default function GameCarousel3D({
         onClick={goNext}
         disabled={atEnd && !onPastEnd}
         aria-label={atEnd && onPastEnd ? "Switch to results" : "Next game"}
-        className="absolute right-2 top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/80 text-white backdrop-blur-sm transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:right-4 sm:h-12 sm:w-12"
+        className={`${navBtnCls} right-2 sm:right-4`}
         style={
           atEnd && onPastEnd
             ? { borderColor: "rgb(251 191 36 / 0.6)", color: "rgb(253 230 138)" }
