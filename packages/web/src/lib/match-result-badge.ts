@@ -20,7 +20,7 @@ export type MatchResultBadge = { label: string; tone: BadgeTone };
 
 type FreeForAllPlayer = MatchOutcomeFreeForAll["players"][number];
 
-function ordinal(n: number): string {
+export function ordinal(n: number): string {
   const rem100 = n % 100;
   if (rem100 >= 11 && rem100 <= 13) return `${n}th`;
   switch (n % 10) {
@@ -52,9 +52,16 @@ function freeForAllBadge(
   }
 
   // Score-based placement (direction per game: Bandit/Phase 10 = lowest wins).
+  // When players carry an explicit `rank` a tie was broken into a strict 1..n
+  // order, so placement follows rank — otherwise two tied scores would both read
+  // as "2nd" with nobody in "3rd".
+  const rankMode = outcome.players.some((p) => p.rank !== undefined);
   const lowWins = lowScoreWinsForSlug(gameSlug);
-  const better = (a: FreeForAllPlayer, b: FreeForAllPlayer) =>
-    lowWins ? a.score < b.score : a.score > b.score;
+  const better = rankMode
+    ? (a: FreeForAllPlayer, b: FreeForAllPlayer) =>
+        (a.rank ?? Number.POSITIVE_INFINITY) < (b.rank ?? Number.POSITIVE_INFINITY)
+    : (a: FreeForAllPlayer, b: FreeForAllPlayer) =>
+        lowWins ? a.score < b.score : a.score > b.score;
   const placement = 1 + outcome.players.filter((p) => better(p, me)).length;
   const someoneBelow = outcome.players.some((p) => better(me, p));
 

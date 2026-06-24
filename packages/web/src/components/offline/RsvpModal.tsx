@@ -6,6 +6,7 @@ import { coversWindow } from "../../lib/bgg-format";
 import { fetchAvailableGames } from "../../lib/calendar-games";
 import { type CalendarLocks, togglePicksLock } from "../../lib/calendar-locks";
 import { kickRsvp, type RsvpStatus, setRsvp } from "../../lib/calendar-rsvps";
+import { DND_SLUG } from "../../lib/dnd-night";
 import { qk } from "../../lib/query-keys";
 import { ClockIcon, HostIcon, PadlockIcon, PinIcon } from "../icons";
 import {
@@ -18,6 +19,7 @@ import {
   type SegmentedOption,
 } from "../ui";
 import AttendeesView from "./AttendeesView";
+import DndNightPanel from "./DndNightPanel";
 import GameCarousel3D from "./GameCarousel3D";
 import RankedGameList from "./RankedGameList";
 
@@ -104,6 +106,11 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   const topSlugs = gamesQuery.data?.topSlugs ?? [];
   const attendees = gamesQuery.data?.attendees ?? [];
   const ownedSlugs = gamesQuery.data?.ownedSlugs ?? [];
+
+  // A sealed night whose vote winner is D&D takes over the modal: one quest on
+  // the table, a party roster, no bringing. Gated on picks-locked so the normal
+  // pick/vote flow runs right up until the guest list is sealed.
+  const isDnd = picksLocked && topSlugs[0] === DND_SLUG;
 
   // When picks are locked, the modal contents are inaccessible to anyone who
   // wasn't in the expected (RSVP yes / maybe) snapshot at lock-in time. The
@@ -200,7 +207,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   // inherit the eyebrow's uppercase / wide-letter-spacing rules.
   const eyebrow = (
     <span className="inline-flex flex-wrap items-baseline gap-x-2">
-      <span>Game night</span>
+      <span>{isDnd ? "D&D night" : "Game night"}</span>
       {(definiteCount > 0 || tentativeCount > 0) && (
         <span className="inline-flex items-baseline gap-1 tracking-normal normal-case">
           <span aria-hidden="true" className="text-white/30">
@@ -261,7 +268,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
         // going) fits at ~250px of content width — see `RsvpSwitch` and the
         // tightened sm padding in SegmentedControl.
         <div className="flex items-center justify-between gap-2">
-          {showViewToggle && viewerRsvp !== "no" ? (
+          {showViewToggle && viewerRsvp !== "no" && !isDnd ? (
             <SegmentedControl
               shape="pill"
               size="sm"
@@ -302,6 +309,8 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
             />
           ) : gamesQuery.isPending ? (
             <LoadingState label="Finding games…" />
+          ) : isDnd ? (
+            <DndNightPanel attendees={attendees} partyCount={definiteCount} />
           ) : effectiveView === "attendees" ? (
             <AttendeesView
               attendees={attendees}

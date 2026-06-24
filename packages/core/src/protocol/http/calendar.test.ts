@@ -60,6 +60,19 @@ describe("LockedDateSchema", () => {
     const bad = { ...sampleLocked, eventTime: "7pm" };
     expect(() => LockedDateSchema.parse(bad)).toThrow();
   });
+
+  it("defaults topGameSlug to null when missing (legacy payload)", () => {
+    const parsed = LockedDateSchema.parse(sampleLocked);
+    expect(parsed.topGameSlug).toBeNull();
+  });
+
+  it("preserves a topGameSlug on the wire", () => {
+    const parsed = LockedDateSchema.parse({
+      ...sampleLocked,
+      topGameSlug: "dungeons-and-dragons",
+    });
+    expect(parsed.topGameSlug).toBe("dungeons-and-dragons");
+  });
 });
 
 describe("CalendarLocksSchema", () => {
@@ -177,6 +190,16 @@ describe("mkOptimisticLock", () => {
     expect(lock.attendance).toEqual(sampleLocked.attendance);
     expect(lock.host).toEqual({ userId: "user-2", name: "Bob" });
     expect(lock.eventTime).toBe("20:00");
+  });
+
+  it("carries the existing topGameSlug across a re-lock", () => {
+    const existing = LockedDateSchema.parse({
+      ...sampleLocked,
+      topGameSlug: "dungeons-and-dragons",
+    });
+    const form = LockInFormSchema.parse({ eventTime: "20:00" });
+    const lock = mkOptimisticLock(form, existing, "self");
+    expect(lock.topGameSlug).toBe("dungeons-and-dragons");
   });
 
   it("uses fallbackLockedBy when no existing entry", () => {

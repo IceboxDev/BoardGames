@@ -79,11 +79,12 @@ const UserInventoryRowSchema = z.object({
   game_slugs_json: jsonColumn(SlugListSchema),
 });
 
-/** `SELECT id, name, email FROM user WHERE id IN (...)`. */
+/** `SELECT id, name, email, role FROM user WHERE id IN (...)`. */
 const UserDisplayRowSchema = z.object({
   id: z.string(),
   name: z.string().nullable(),
   email: z.string().nullable(),
+  role: z.string().nullable(),
 });
 
 /** Single-column `SELECT date_key FROM …` projection. */
@@ -148,6 +149,62 @@ export type AvailableGamesView = {
    */
   latestActivityAt: string;
 };
+
+/**
+ * "Playable" = a slug owned by ≥1 confirmed attendee AND whose BGG player
+ * range covers the whole [lo, hi] headcount window. Shared by the per-date
+ * games payload below and the calendar `/locks` top-game computation so the
+ * playability rule lives in exactly one place. Games with no BGG entry
+ * (homebrew, bggId 0 — e.g. Dungeons & Dragons before its synthetic snapshot)
+ * default to min 1 / max ∞ so they always fit.
+ */
+export function computePlayableSlugs(
+  ownedSlugs: Iterable<string>,
+  lo: number,
+  hi: number,
+): Set<string> {
+  const playable = new Set<string>();
+  for (const slug of ownedSlugs) {
+    const bgg = getBggBySlug(slug);
+    const min = bgg?.minPlayers ?? 1;
+    const max = maxPlayersAsNumber(bgg?.maxPlayers ?? null);
+    if (min <= lo && max >= hi) playable.add(slug);
+  }
+  return playable;
+}
+
+type RankableReaction = { hype: number; teach: number; learn: number };
+
+/**
+ * Rank playable, hyped games into an ordered slug list. Hype first, then
+ * teach+learn support (learn only counts toward support when ≥1 teach is
+ * present — a learner with no teacher is wishful, not actionable), then slug
+ * alphabetical for a stable tiebreak. Unplayable games are filtered out
+ * *before* slicing so they never block a slot. This is the single source of
+ * truth for both the modal's `topSlugs` and the calendar's per-night
+ * `topGameSlug`.
+ */
+export function rankTopSlugs(
+  reactions: Record<string, RankableReaction>,
+  playableSlugs: Set<string>,
+  limit = 5,
+): string[] {
+  return Object.entries(reactions)
+    .filter(([slug, agg]) => agg.hype > 0 && playableSlugs.has(slug))
+    .sort((a, b) => {
+      const aAgg = a[1];
+      const bAgg = b[1];
+      if (bAgg.hype !== aAgg.hype) return bAgg.hype - aAgg.hype;
+      const aLearn = aAgg.teach > 0 ? aAgg.learn : 0;
+      const bLearn = bAgg.teach > 0 ? bAgg.learn : 0;
+      const aSupport = aAgg.teach + aLearn;
+      const bSupport = bAgg.teach + bLearn;
+      if (bSupport !== aSupport) return bSupport - aSupport;
+      return a[0].localeCompare(b[0]);
+    })
+    .slice(0, limit)
+    .map(([slug]) => slug);
+}
 
 /**
  * Compute the full view of a locked game night from the viewer's perspective.
@@ -286,13 +343,7 @@ export async function computeAvailableGamesPayload(opts: {
   // "Playable" = owned AND fits the [definite, definite+tentative] window.
   const lo = definiteIds.length;
   const hi = definiteIds.length + tentativeIds.length;
-  const playableSlugs = new Set<string>();
-  for (const slug of ownedUnion) {
-    const bgg = getBggBySlug(slug);
-    const min = bgg?.minPlayers ?? 1;
-    const max = maxPlayersAsNumber(bgg?.maxPlayers ?? null);
-    if (min <= lo && max >= hi) playableSlugs.add(slug);
-  }
+  const playableSlugs = computePlayableSlugs(ownedUnion, lo, hi);
 
   type ReactionAggregate = {
     hype: number;
@@ -324,37 +375,23 @@ export async function computeAvailableGamesPayload(opts: {
     }
   }
 
-  // Top-5 selection: hype first, then teach+learn (learn only counts when at
-  // least one teach is present), then slug alphabetical for stability.
-  // Unplayable games are filtered out *before* slicing so they never block a
-  // slot — the 5th playable hype winner gets the spot instead.
-  const ranked = Object.entries(reactions)
-    .filter(([slug, agg]) => agg.hype > 0 && playableSlugs.has(slug))
-    .sort((a, b) => {
-      const aAgg = a[1];
-      const bAgg = b[1];
-      if (bAgg.hype !== aAgg.hype) return bAgg.hype - aAgg.hype;
-      const aLearn = aAgg.teach > 0 ? aAgg.learn : 0;
-      const bLearn = bAgg.teach > 0 ? bAgg.learn : 0;
-      const aSupport = aAgg.teach + aLearn;
-      const bSupport = bAgg.teach + bLearn;
-      if (bSupport !== aSupport) return bSupport - aSupport;
-      return a[0].localeCompare(b[0]);
-    });
-  const topSlugs = ranked.slice(0, 5).map(([slug]) => slug);
+  // Top-5 selection — shared ranking (hype → support → slug). See `rankTopSlugs`.
+  const topSlugs = rankTopSlugs(reactions, playableSlugs, 5);
 
   // Resolve display names.
   const allAttendeeIds = [...new Set([...definiteIds, ...tentativeIds])];
   const userNames = new Map<string, string>();
+  const adminIds = new Set<string>();
   if (allAttendeeIds.length > 0) {
     const placeholders = allAttendeeIds.map(() => "?").join(",");
     const userResult = await db.execute({
-      sql: `SELECT id, name, email FROM user WHERE id IN (${placeholders})`,
+      sql: `SELECT id, name, email, role FROM user WHERE id IN (${placeholders})`,
       args: allAttendeeIds,
     });
     for (const u of parseRows(UserDisplayRowSchema, userResult.rows, "user")) {
       const raw = ((u.name ?? "") || (u.email ?? "") || "—").trim() || "—";
       userNames.set(u.id, raw);
+      if (u.role === "admin") adminIds.add(u.id);
     }
   }
 
@@ -403,6 +440,7 @@ export async function computeAvailableGamesPayload(opts: {
     userId: string;
     name: string;
     isHost: boolean;
+    isAdmin: boolean;
     status: "definite" | "tentative";
     hasRsvped: boolean;
     votes: { hype: number; teach: number; learn: number };
@@ -420,6 +458,7 @@ export async function computeAvailableGamesPayload(opts: {
       userId: id,
       name: userNames.get(id) ?? "—",
       isHost,
+      isAdmin: adminIds.has(id),
       status: "definite",
       hasRsvped: manuallyRsvpedYes.has(id),
       votes: votesByUser.get(id) ?? { hype: 0, teach: 0, learn: 0 },
@@ -431,6 +470,7 @@ export async function computeAvailableGamesPayload(opts: {
       userId: id,
       name: userNames.get(id) ?? "—",
       isHost: id === hostUserId,
+      isAdmin: adminIds.has(id),
       status: "tentative",
       hasRsvped: manuallyRsvpedYes.has(id),
       votes: votesByUser.get(id) ?? { hype: 0, teach: 0, learn: 0 },

@@ -1,5 +1,6 @@
 import type { CalendarLocks } from "../../lib/calendar-locks";
 import type { RsvpStatus } from "../../lib/calendar-rsvps";
+import { isDndNight } from "../../lib/dnd-night";
 import type {
   AggregateAvailabilityMap,
   Availability,
@@ -8,6 +9,7 @@ import type {
 } from "../../lib/offline-availability";
 import { dateKey } from "../../lib/offline-availability";
 import { build42Days } from "../../lib/offline-week";
+import { D20Die } from "./D20Die";
 
 const DAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
@@ -98,6 +100,7 @@ export default function Calendar({
           const viewerRsvp = lock ? viewerRsvpByDate?.[key] : undefined;
           const picksLocked = !!lock?.picksLockedAt;
           const attendance = lock?.attendance ?? null;
+          const dndNight = isDndNight(lock);
           return (
             <DayCell
               key={key}
@@ -117,6 +120,7 @@ export default function Calendar({
               locked={!!lock}
               picksLocked={picksLocked}
               attendance={attendance}
+              dndNight={dndNight}
               lockMode={lockMode}
               viewerRsvp={viewerRsvp}
               cellSeed={i}
@@ -157,6 +161,8 @@ type DayCellProps = {
   locked: boolean;
   picksLocked: boolean;
   attendance: { definite: number; tentative: number } | null;
+  /** Sealed night whose vote winner is D&D — swaps in the crimson/d20 treatment. */
+  dndNight: boolean;
   lockMode: boolean;
   viewerRsvp?: RsvpStatus;
   cellSeed: number;
@@ -178,6 +184,7 @@ function DayCell({
   locked,
   picksLocked,
   attendance,
+  dndNight,
   lockMode,
   viewerRsvp,
   cellSeed,
@@ -187,6 +194,9 @@ function DayCell({
   // Lock visually overrides heat (and personal mark gradient).
   const showHeatLayer = !locked && heated;
   const showPersonalGradient = !locked && !heated && value;
+  // D&D night: a sealed night whose vote winner is D&D. Takes over the locked
+  // cell entirely — crimson frame, dungeon background, a d20 headcount.
+  const showDnd = dndNight && picksLocked && !!attendance;
 
   // Personal-mark gradient layer — render only when no aggregate heat or lock overrides it.
   // "maybe" stays in yellow tones so it never reads as the orange/red of warming or fire.
@@ -197,19 +207,21 @@ function DayCell({
         ? "bg-gradient-to-br from-yellow-400/35 via-yellow-300/22 to-yellow-200/10 shadow-[0_0_24px_-6px_rgba(234,179,8,0.4)]"
         : "";
 
-  const borderClass = locked
-    ? "border-amber-300/40"
-    : heat.kind === "fire"
-      ? "border-red-500/80"
-      : heat.kind === "warming"
-        ? "border-orange-400/65"
-        : value === "can"
-          ? "border-accent-400/70"
-          : value === "maybe"
-            ? "border-yellow-400/60"
-            : lockMode
-              ? "border-amber-200/30 hover:border-amber-200/60"
-              : "border-white/10 hover:border-white/25";
+  const borderClass = showDnd
+    ? "" // `.dnd-night-cell` owns the animated crimson↔gold border + glow.
+    : locked
+      ? "border-amber-300/40"
+      : heat.kind === "fire"
+        ? "border-red-500/80"
+        : heat.kind === "warming"
+          ? "border-orange-400/65"
+          : value === "can"
+            ? "border-accent-400/70"
+            : value === "maybe"
+              ? "border-yellow-400/60"
+              : lockMode
+                ? "border-amber-200/30 hover:border-amber-200/60"
+                : "border-white/10 hover:border-white/25";
 
   const baseBgClass = !value && !heated && !locked ? "bg-surface-800/55" : "";
   const baseHover = !value && !heated && !locked && interactive ? "hover:bg-surface-800/80" : "";
@@ -255,9 +267,11 @@ function DayCell({
       disabled={!interactive || isPast}
       aria-label={`${day}${value ? ` — ${value}` : ""}${locked ? " — locked in" : ""}${
         !locked && heat.kind === "warming" ? ` — warming up, ${heat.can} confirmed` : ""
-      }${!locked && heat.kind === "fire" ? ` — on fire, ${heat.can} confirmed` : ""}`}
+      }${!locked && heat.kind === "fire" ? ` — on fire, ${heat.can} confirmed` : ""}${
+        showDnd ? " — Dungeons & Dragons night" : ""
+      }`}
       aria-pressed={value !== undefined}
-      className={`group relative flex flex-col overflow-hidden rounded-xl border transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${layoutClass} ${aspectClass} ${padding} ${baseBgClass} ${borderClass} ${baseHover} ${lockedDisplayClass} ${heatAnim}`}
+      className={`group relative flex flex-col overflow-hidden rounded-xl border transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${layoutClass} ${aspectClass} ${padding} ${baseBgClass} ${borderClass} ${showDnd ? "dnd-night-cell" : ""} ${baseHover} ${lockedDisplayClass} ${heatAnim}`}
     >
       <span
         className={`pointer-events-none absolute inset-0 ${monthTintClass(monthBucket)}`}
@@ -271,9 +285,12 @@ function DayCell({
       )}
       {showHeatLayer && heat.kind === "warming" && <WarmingLayer compact={compact} />}
       {showHeatLayer && heat.kind === "fire" && <FireLayer compact={compact} cellSeed={cellSeed} />}
-      {locked && (
-        <LockedLayer compact={compact} viewerRsvp={viewerRsvp} showMedallion={picksLocked} />
-      )}
+      {locked &&
+        (showDnd ? (
+          <DndNightLayer compact={compact} viewerRsvp={viewerRsvp} />
+        ) : (
+          <LockedLayer compact={compact} viewerRsvp={viewerRsvp} showMedallion={picksLocked} />
+        ))}
       {/* Personal availability stripe — guarantees the user's own can/maybe
           mark stays visible against any background (fire, warming, locked
           gradients all override the cell's base color, so we draw a slim
@@ -302,7 +319,20 @@ function DayCell({
           aria-hidden="true"
         />
       )}
-      {picksLocked && attendance ? (
+      {showDnd && attendance ? (
+        // D&D night: a glowing d20 replaces the headcount, the party size
+        // rolled onto its face. The grid position still tells you the date.
+        <span className="relative z-[5] flex flex-1 items-center justify-center">
+          <D20Die
+            count={attendance.definite}
+            className={`dnd-die dnd-die-animated ${
+              compact
+                ? "h-8 w-8"
+                : "h-12 w-12 sm:h-16 sm:w-16 md:h-20 md:w-20 lg:h-[5.5rem] lg:w-[5.5rem]"
+            }`}
+          />
+        </span>
+      ) : picksLocked && attendance ? (
         // Picks-locked cell: the day number is dropped — the cell's position
         // in the calendar grid already tells you which date it is. The big
         // centered "definite / definite+tentative" headcount takes over.
@@ -549,6 +579,69 @@ function LockedLayer({
         </span>
       )}
       {/* RSVP-aware pill: invitation by default; flips to GOING / PASS once viewer commits. */}
+      {!compact && <LockedPill viewerRsvp={viewerRsvp} />}
+    </>
+  );
+}
+
+/**
+ * Background treatment for a sealed D&D night — swapped in for `LockedLayer`.
+ * A dungeon-crimson base with central torchlight, a gold hairline + shimmer,
+ * and drifting torch embers. The crimson↔gold rim + the red d20 headcount
+ * (painted by the cell itself) carry the identity — no explicit "D&D" label
+ * needed. This layer is everything behind them.
+ */
+function DndNightLayer({ compact, viewerRsvp }: { compact: boolean; viewerRsvp?: RsvpStatus }) {
+  return (
+    <>
+      {/* Deep dungeon base — blood-crimson fading to obsidian. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#3b0a0a] via-[#1a0606] to-black"
+      />
+      {/* Warm torchlight glow rising from the center, behind the die. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_55%_at_50%_46%,rgba(220,38,38,0.45),transparent_70%)]"
+      />
+      {/* Gold inner hairline — the gilt edge of a sealed tome. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-amber-300/30"
+      />
+      {/* Slow gold shimmer sweep (shared with the locked wax-seal cell). */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 -left-1/4 w-1/3 bg-gradient-to-r from-transparent via-amber-200/30 to-transparent motion-safe:animate-seal-shimmer"
+      />
+      {/* Torch embers drifting up. Desktop cells only — phones have no room. */}
+      {!compact && (
+        <>
+          <span
+            className="ember"
+            style={
+              {
+                "--x": "26%",
+                "--delay": "0s",
+                "--dur": "3.6s",
+                "--drift": "-3px",
+              } as React.CSSProperties
+            }
+          />
+          <span
+            className="ember"
+            style={
+              {
+                "--x": "72%",
+                "--delay": "1.5s",
+                "--dur": "3.1s",
+                "--drift": "2px",
+              } as React.CSSProperties
+            }
+          />
+        </>
+      )}
+      {/* RSVP-aware pill: invitation by default; flips to GOING / PASS. */}
       {!compact && <LockedPill viewerRsvp={viewerRsvp} />}
     </>
   );

@@ -39,6 +39,15 @@ export const LockedDateSchema = z.object({
     definite: z.number().int().min(0),
     tentative: z.number().int().min(0),
   }),
+  /**
+   * Slug of the vote-winning game for this night (the per-date games
+   * payload's `topSlugs[0]`), or null when nothing playable has been hyped
+   * yet. Computed server-side with the shared ranking so the calendar grid
+   * can light up special-night treatments — notably the Dungeons & Dragons
+   * night card — without fetching the full per-date payload for every cell.
+   * Defaults to null so older cached lock payloads parse cleanly.
+   */
+  topGameSlug: z.string().nullable().default(null),
 });
 export type LockedDate = z.infer<typeof LockedDateSchema>;
 
@@ -143,6 +152,13 @@ export const AttendeeSchema = z.object({
   userId: z.string(),
   name: z.string(),
   isHost: z.boolean(),
+  /**
+   * True when this attendee is an app admin. The D&D-night panel uses it to
+   * crown the Dungeon Master (the admin runs the table; the host takes over
+   * only when no admin is in the party). Default false so legacy payloads
+   * parse.
+   */
+  isAdmin: z.boolean().default(false),
   status: AttendeeStatusSchema,
   /**
    * True when the user has explicitly clicked yes in the RSVP modal (or was
@@ -241,5 +257,8 @@ export function mkOptimisticLock(
     picksLockedAt: existing?.picksLockedAt ?? null,
     hostAtHome,
     attendance: existing?.attendance ?? { definite: 0, tentative: 0 },
+    // Locking a date doesn't change the vote winner — carry the existing
+    // value (a fresh lock has none yet; the server recomputes on next read).
+    topGameSlug: existing?.topGameSlug ?? null,
   };
 }

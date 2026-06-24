@@ -10,12 +10,17 @@ import {
   LockInResponseSchema,
   OkResponseSchema,
   PicksLockBodySchema,
+  SlugListSchema,
   UnlockBodySchema,
 } from "@boardgames/core/protocol";
 import { z } from "zod";
 import { adminApp, authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
-import { computeAvailableGamesPayload } from "../lib/available-games.ts";
+import {
+  computeAvailableGamesPayload,
+  computePlayableSlugs,
+  rankTopSlugs,
+} from "../lib/available-games.ts";
 import { jsonColumn, parseRow, parseRows, RowParseError } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 
@@ -54,6 +59,23 @@ const RsvpRowSchema = z.object({
   date_key: z.string(),
   user_id: z.string(),
   status: z.enum(["yes", "no"]),
+});
+
+/**
+ * `SELECT date_key, user_id, game_slug, reaction FROM game_requests` —
+ * scoped to locked dates. Feeds the per-night vote-winner (`topGameSlug`).
+ */
+const GameRequestRowSchema = z.object({
+  date_key: z.string(),
+  user_id: z.string(),
+  game_slug: z.string(),
+  reaction: z.enum(["hype", "teach", "learn"]),
+});
+
+/** `SELECT user_id, game_slugs_json FROM user_inventory`. */
+const InventoryRowSchema = z.object({
+  user_id: z.string(),
+  game_slugs_json: jsonColumn(SlugListSchema),
 });
 
 /**
@@ -198,13 +220,46 @@ calendarLocksRoutes.post("/games/reaction", zJsonBody(GameReactionBodySchema), a
 });
 
 calendarLocksRoutes.get("/locks", async (c) => {
-  const [locksResult, rsvpsResult, availabilityResult] = await Promise.all([
-    getDb().execute(
-      "SELECT date_key, locked_by, locked_at, expected_user_ids_json, host_user_id, host_name, event_time, address, picks_locked_at, host_at_home FROM locked_dates",
-    ),
-    getDb().execute("SELECT date_key, user_id, status FROM rsvps"),
-    getDb().execute("SELECT user_id, availability_json FROM user_availability"),
-  ]);
+  const [locksResult, rsvpsResult, availabilityResult, reactionsResult, inventoryResult] =
+    await Promise.all([
+      getDb().execute(
+        "SELECT date_key, locked_by, locked_at, expected_user_ids_json, host_user_id, host_name, event_time, address, picks_locked_at, host_at_home FROM locked_dates",
+      ),
+      getDb().execute("SELECT date_key, user_id, status FROM rsvps"),
+      getDb().execute("SELECT user_id, availability_json FROM user_availability"),
+      // Reactions for locked nights only — feeds each night's vote-winner.
+      // Scoped to locked dates so the scan grows with game nights, not with
+      // the whole reaction history.
+      getDb().execute(
+        "SELECT date_key, user_id, game_slug, reaction FROM game_requests WHERE date_key IN (SELECT date_key FROM locked_dates)",
+      ),
+      getDb().execute("SELECT user_id, game_slugs_json FROM user_inventory"),
+    ]);
+
+  // user_id → owned slug set. One row per user, so loading the whole table is
+  // cheap; per-row tolerance keeps one corrupt inventory from breaking /locks.
+  const inventoryByUser = new Map<string, Set<string>>();
+  for (const row of inventoryResult.rows) {
+    let inv: { user_id: string; game_slugs_json: string[] };
+    try {
+      inv = parseRow(InventoryRowSchema, row, "user_inventory");
+    } catch (err) {
+      if (!(err instanceof RowParseError)) throw err;
+      continue;
+    }
+    inventoryByUser.set(inv.user_id, new Set(inv.game_slugs_json));
+  }
+
+  // date_key → raw reaction rows, grouped for the per-night ranking below.
+  const reactionsByDate = new Map<string, z.infer<typeof GameRequestRowSchema>[]>();
+  for (const r of parseRows(GameRequestRowSchema, reactionsResult.rows, "game_requests")) {
+    let arr = reactionsByDate.get(r.date_key);
+    if (!arr) {
+      arr = [];
+      reactionsByDate.set(r.date_key, arr);
+    }
+    arr.push(r);
+  }
 
   // Build per-date sets we need to derive headcounts:
   //   canByDate / maybeByDate — declared availability
@@ -267,6 +322,7 @@ calendarLocksRoutes.get("/locks", async (c) => {
       picksLockedAt: string | null;
       hostAtHome: boolean;
       attendance: { definite: number; tentative: number };
+      topGameSlug: string | null;
     }
   > = {};
   for (const row of locksResult.rows) {
@@ -289,6 +345,31 @@ calendarLocksRoutes.get("/locks", async (c) => {
       if (!definite.has(id) && !no.has(id)) tentativeCount++;
     }
 
+    // Vote winner for this night, using the same ranking as the per-date
+    // games payload (so `topGameSlug` always equals that payload's
+    // `topSlugs[0]`). Reactions count from definite attendees only; playable
+    // = owned by a definite attendee AND fits the [definite, definite+
+    // tentative] window. Drives the calendar's D&D-night card treatment.
+    const lo = definite.size;
+    const hi = definite.size + tentativeCount;
+    const ownedUnion = new Set<string>();
+    for (const id of definite) {
+      const inv = inventoryByUser.get(id);
+      if (inv) for (const slug of inv) ownedUnion.add(slug);
+    }
+    const dateReactions: Record<string, { hype: number; teach: number; learn: number }> = {};
+    for (const r of reactionsByDate.get(lock.date_key) ?? []) {
+      if (!definite.has(r.user_id)) continue;
+      let agg = dateReactions[r.game_slug];
+      if (!agg) {
+        agg = { hype: 0, teach: 0, learn: 0 };
+        dateReactions[r.game_slug] = agg;
+      }
+      agg[r.reaction] += 1;
+    }
+    const topGameSlug =
+      rankTopSlugs(dateReactions, computePlayableSlugs(ownedUnion, lo, hi), 1)[0] ?? null;
+
     out[lock.date_key] = {
       lockedBy: lock.locked_by,
       lockedAt: lock.locked_at,
@@ -300,6 +381,7 @@ calendarLocksRoutes.get("/locks", async (c) => {
       eventTime: lock.event_time,
       address: lock.address,
       attendance: { definite: definite.size, tentative: tentativeCount },
+      topGameSlug,
     };
   }
   for (const r of rsvps) {

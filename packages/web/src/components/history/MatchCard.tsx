@@ -182,17 +182,26 @@ function FreeForAllInline({
   currentUserId: string | null;
 }) {
   const lowestWins = lowScoreWinsForSlug(gameSlug);
+  // An explicit `rank` means a score tie was broken into a strict order — honour
+  // it so the tie-break winner alone shows the winner tone, in placement order.
+  const rankMode = outcome.players.some((p) => p.rank !== undefined);
   const sorted = [...outcome.players].sort((a, b) =>
-    lowestWins ? a.score - b.score : b.score - a.score,
+    rankMode
+      ? (a.rank ?? Number.POSITIVE_INFINITY) - (b.rank ?? Number.POSITIVE_INFINITY)
+      : lowestWins
+        ? a.score - b.score
+        : b.score - a.score,
   );
   const winningScore = sorted.length > 0 ? sorted[0].score : null;
+  const isWinner = (p: MatchOutcomeFreeForAll["players"][number]) =>
+    rankMode ? p.rank === 1 : p.score === winningScore;
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
       {sorted.map((p) => (
         <span key={p.userId} className="inline-flex items-center gap-1">
           <AvatarBubble
             name={p.displayName}
-            tone={p.score === winningScore ? "winner" : "loser"}
+            tone={isWinner(p) ? "winner" : "loser"}
             isMe={p.userId === currentUserId}
           />
           <span className="text-xs tabular-nums text-fg-muted">{p.score}</span>

@@ -25,6 +25,23 @@ describe("matchResultBadge — score-based free-for-all (7 Wonders)", () => {
   });
 });
 
+describe("matchResultBadge — tie broken by explicit rank (7 Wonders)", () => {
+  // a & b both scored 65; the tie was broken so a places 1st, b 2nd, c 3rd.
+  const outcome: MatchOutcome = {
+    kind: "free-for-all",
+    players: [p("a", 65, 1), p("b", 65, 2), p("c", 40, 3)],
+  };
+  it("tie-break winner → Won, not a shared 2nd", () => {
+    expect(matchResultBadge(outcome, "a", "7-wonders")).toEqual({ label: "Won", tone: "emerald" });
+  });
+  it("tie-break loser → distinct 2nd despite the equal score", () => {
+    expect(matchResultBadge(outcome, "b", "7-wonders")).toEqual({ label: "2nd", tone: "amber" });
+  });
+  it("lowest rank → Last", () => {
+    expect(matchResultBadge(outcome, "c", "7-wonders")).toEqual({ label: "Last", tone: "rose" });
+  });
+});
+
 describe("matchResultBadge — lowest-wins free-for-all (Bandit)", () => {
   const outcome: MatchOutcome = {
     kind: "free-for-all",

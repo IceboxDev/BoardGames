@@ -24,6 +24,7 @@ const HistoryPage = lazy(() => import("./pages/HistoryPage"));
 const PlayerProfilePage = lazy(() => import("./pages/PlayerProfilePage"));
 const PlayersDirectoryPage = lazy(() => import("./pages/PlayersDirectoryPage"));
 const DeckPreview = lazy(() => import("./pages/DeckPreview"));
+const DndNightPreview = lazy(() => import("./pages/DndNightPreview"));
 
 // `GameMenu` is the dashboard's entry point into the games catalog.
 // `GameShellLayout` mounts under `/play/:slug` and pulls in the games
@@ -200,6 +201,7 @@ const router = createBrowserRouter(
       </Route>
 
       <Route path="dev/deck-preview" element={<DeckPreview />} />
+      <Route path="dev/dnd-preview" element={<DndNightPreview />} />
     </Route>,
   ),
 );
