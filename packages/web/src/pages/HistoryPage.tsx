@@ -17,9 +17,11 @@ import {
   PageHeader,
   PageMain,
   PageShell,
+  QueryBoundary,
 } from "../components/ui";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { fetchCalendarLocks, type LockedDate } from "../lib/calendar-locks";
+import { formatDayKey } from "../lib/date-format.ts";
 import { deleteMatch, fetchHistory, reorderMatchesInNight } from "../lib/match-history";
 import { qk } from "../lib/query-keys";
 
@@ -44,17 +46,6 @@ function dayLabelOf(playedAt: string): { day: string; label: string } {
     day: "numeric",
   });
   return { day, label };
-}
-
-function dateKeyLabel(dateKey: string): string {
-  const [y, m, d] = dateKey.split("-").map((s) => Number.parseInt(s, 10));
-  if (!y || !m || !d) return dateKey;
-  return new Date(y, m - 1, d).toLocaleDateString(undefined, {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
 }
 
 export default function HistoryPage() {
@@ -136,7 +127,7 @@ export default function HistoryPage() {
         if (!g) {
           g = {
             dateKey,
-            dayLabel: dateKeyLabel(dateKey),
+            dayLabel: formatDayKey(dateKey, "full"),
             sortKey: dateKey,
             lock: locksQuery.data?.[dateKey] ?? null,
             matches: [],
@@ -199,65 +190,70 @@ export default function HistoryPage() {
           className="mb-6"
         />
 
-        {historyQuery.isLoading ? (
-          <LoadingState />
-        ) : groups.length === 0 ? (
-          <EmptyState
-            title="No matches logged yet"
-            description={isAdmin ? 'Use "+ Record match" above to add the first one.' : undefined}
-          />
-        ) : (
-          <div className="flex flex-col gap-4">
-            {groups.map((g) => {
-              const nightKey = g.dateKey;
-              return (
-                <NightCard
-                  key={`${g.dateKey ?? "day"}:${g.sortKey}`}
-                  dateKey={g.dateKey}
-                  dayLabel={g.dayLabel}
-                  lock={g.lock}
-                  matches={g.matches}
-                  isAdmin={isAdmin}
-                  currentUserId={currentUserId}
-                  onAddMatch={
-                    isAdmin
-                      ? () =>
-                          setRecording(
-                            nightKey
-                              ? { mode: "create", dateKey: nightKey }
-                              : // Standalone group: new match defaults to this
-                                // group's day (its latest match's time) so it
-                                // lands here rather than in today's group.
-                                { mode: "create", dateKey: null, playedAt: g.sortKey },
-                          )
-                      : undefined
-                  }
-                  onEditMatch={
-                    isAdmin ? (m) => setRecording({ mode: "edit", match: m }) : undefined
-                  }
-                  onDeleteMatch={isAdmin ? handleDelete : undefined}
-                  onReorder={
-                    isAdmin
-                      ? (orderedIds) => reorderMutation.mutate({ dateKey: g.dateKey, orderedIds })
-                      : undefined
-                  }
-                />
-              );
-            })}
-            {historyQuery.hasNextPage && (
-              <div className="flex justify-center pt-2">
-                <Button
-                  variant="secondary"
-                  size="sm"
-                  loading={historyQuery.isFetchingNextPage}
-                  onClick={() => historyQuery.fetchNextPage()}
-                >
-                  Load more
-                </Button>
-              </div>
-            )}
-          </div>
-        )}
+        <QueryBoundary
+          query={historyQuery}
+          loading={<LoadingState />}
+          isEmpty={() => groups.length === 0}
+          empty={
+            <EmptyState
+              title="No matches logged yet"
+              description={isAdmin ? 'Use "+ Record match" above to add the first one.' : undefined}
+            />
+          }
+        >
+          {() => (
+            <div className="flex flex-col gap-4">
+              {groups.map((g) => {
+                const nightKey = g.dateKey;
+                return (
+                  <NightCard
+                    key={`${g.dateKey ?? "day"}:${g.sortKey}`}
+                    dateKey={g.dateKey}
+                    dayLabel={g.dayLabel}
+                    lock={g.lock}
+                    matches={g.matches}
+                    isAdmin={isAdmin}
+                    currentUserId={currentUserId}
+                    onAddMatch={
+                      isAdmin
+                        ? () =>
+                            setRecording(
+                              nightKey
+                                ? { mode: "create", dateKey: nightKey }
+                                : // Standalone group: new match defaults to this
+                                  // group's day (its latest match's time) so it
+                                  // lands here rather than in today's group.
+                                  { mode: "create", dateKey: null, playedAt: g.sortKey },
+                            )
+                        : undefined
+                    }
+                    onEditMatch={
+                      isAdmin ? (m) => setRecording({ mode: "edit", match: m }) : undefined
+                    }
+                    onDeleteMatch={isAdmin ? handleDelete : undefined}
+                    onReorder={
+                      isAdmin
+                        ? (orderedIds) => reorderMutation.mutate({ dateKey: g.dateKey, orderedIds })
+                        : undefined
+                    }
+                  />
+                );
+              })}
+              {historyQuery.hasNextPage && (
+                <div className="flex justify-center pt-2">
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    loading={historyQuery.isFetchingNextPage}
+                    onClick={() => historyQuery.fetchNextPage()}
+                  >
+                    Load more
+                  </Button>
+                </div>
+              )}
+            </div>
+          )}
+        </QueryBoundary>
       </PageMain>
 
       {recording && (

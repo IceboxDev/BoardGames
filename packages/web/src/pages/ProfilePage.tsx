@@ -5,6 +5,7 @@ import CalendarSyncCard from "../components/profile/CalendarSyncCard";
 import CalendarSyncModal from "../components/profile/CalendarSyncModal";
 import { TopNav, TopNavLink } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
+import { InteractiveCard } from "../components/ui/InteractiveCard";
 import { PageHeader } from "../components/ui/PageHeader";
 import { PageShell } from "../components/ui/PageShell";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
@@ -142,12 +143,7 @@ type NavCardProps = {
 
 function NavCard({ icon, title, subtitle, onClick }: NavCardProps) {
   return (
-    // biome-ignore lint/correctness/noRestrictedElements: card-shaped clickable surface, mirrors CalendarSyncCard
-    <button
-      type="button"
-      onClick={onClick}
-      className="group flex items-center gap-3 rounded-2xl border border-white/[0.06] bg-surface-900/60 px-5 py-4 text-left transition-all duration-300 hover:border-white/15 hover:bg-surface-900"
-    >
+    <InteractiveCard onClick={onClick} className="flex items-center gap-3 text-left">
       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-800 text-fg-secondary transition-colors group-hover:text-white">
         {icon}
       </span>
@@ -158,6 +154,6 @@ function NavCard({ icon, title, subtitle, onClick }: NavCardProps) {
         <span className="block text-xs text-fg-muted">{subtitle}</span>
       </span>
       <ArrowRightIcon className="h-4 w-4 shrink-0 text-fg-muted transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-accent-300" />
-    </button>
+    </InteractiveCard>
   );
 }

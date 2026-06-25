@@ -1,9 +1,9 @@
 import { extractParticipantIds } from "@boardgames/core/history/participant-results";
 import type { MatchRecord } from "@boardgames/core/protocol";
 import type { CSSProperties, ReactNode } from "react";
+import { formatShortDate } from "../../lib/date-format.ts";
 import { resolveGame } from "../../lib/games-by-slug.ts";
 import { matchResultBadge } from "../../lib/match-result-badge.ts";
-import { formatShortDate } from "../../lib/profile-format.ts";
 import { TrophyIcon } from "../icons";
 import { Badge } from "../ui/Badge.tsx";
 import { EmptyState } from "../ui/EmptyState.tsx";

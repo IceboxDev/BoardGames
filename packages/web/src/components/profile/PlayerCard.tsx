@@ -1,9 +1,10 @@
 import type { ProfileDirectoryEntry } from "@boardgames/core/protocol";
 import { Link } from "react-router-dom";
-import { formatDateKey } from "../../lib/profile-format.ts";
+import { formatDayKey } from "../../lib/date-format.ts";
 import { GalleryIcon } from "../icons";
 import { Avatar } from "../ui/Avatar.tsx";
 import { Badge } from "../ui/Badge.tsx";
+import { InteractiveCard } from "../ui/InteractiveCard.tsx";
 
 // One player tile in the directory. Links to the full profile. Surfaces the
 // quick at-a-glance signal: avatar, name, tagline, owned-game count, and the
@@ -15,9 +16,11 @@ type PlayerCardProps = {
 
 export function PlayerCard({ player }: PlayerCardProps) {
   return (
-    <Link
+    <InteractiveCard
+      as={Link}
       to={`/u/${player.id}`}
-      className="group flex flex-col items-center gap-2 rounded-2xl border border-white/[0.06] bg-surface-900/50 p-4 text-center transition-all hover:border-white/15 hover:bg-surface-900"
+      padding="sm"
+      className="flex flex-col items-center gap-2 text-center"
     >
       <Avatar name={player.name} image={player.image} accentHex={player.accentHex} size="lg" ring />
       <p className="mt-1 w-full truncate text-sm font-semibold text-fg-primary group-hover:text-white">
@@ -30,10 +33,10 @@ export function PlayerCard({ player }: PlayerCardProps) {
         </Badge>
         {player.nextNightDateKey && (
           <Badge tone="accent" size="xs">
-            {formatDateKey(player.nextNightDateKey)}
+            {formatDayKey(player.nextNightDateKey)}
           </Badge>
         )}
       </div>
-    </Link>
+    </InteractiveCard>
   );
 }

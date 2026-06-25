@@ -435,10 +435,37 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
   // Snapshot the set of users who marked can/maybe at lock time so we can
   // decide "fully RSVPed" against a frozen baseline. Track cans separately
   // so we can auto-confirm them as RSVP "yes".
-  const { rows } = await getDb().execute(
-    "SELECT user_id, availability_json FROM user_availability",
-  );
-  const expected: string[] = [];
+  const [{ rows }, lockRow, { rows: yesRows }] = await Promise.all([
+    getDb().execute("SELECT user_id, availability_json FROM user_availability"),
+    getDb().execute({
+      sql: "SELECT expected_user_ids_json FROM locked_dates WHERE date_key = ?",
+      args: [date],
+    }),
+    getDb().execute({
+      sql: "SELECT user_id FROM rsvps WHERE date_key = ? AND status = 'yes'",
+      args: [date],
+    }),
+  ]);
+  // The guest list must never SHRINK on a re-lock. Re-running `/lock` (e.g. to
+  // edit host/time/address after the night was already sealed) overwrites this
+  // snapshot, so seed it with everyone already committed: the prior `expected`
+  // set plus every current `yes` RSVP (the same union `/lock-picks` does). A
+  // user who RSVPed yes through the modal without ever marking availability —
+  // and is therefore absent from the can/maybe scan below — would otherwise be
+  // silently evicted from a sealed night.
+  const expectedSet = new Set<string>();
+  if (lockRow.rows[0]) {
+    try {
+      for (const id of parseRow(ExpectedUserIdsRowSchema, lockRow.rows[0], "locked_dates")
+        .expected_user_ids_json) {
+        expectedSet.add(id);
+      }
+    } catch (err) {
+      if (!(err instanceof RowParseError)) throw err;
+    }
+  }
+  for (const r of parseRows(RsvpUserIdRowSchema, yesRows, "rsvps")) expectedSet.add(r.user_id);
+
   const cans: string[] = [];
   for (const row of rows) {
     // Per-row tolerance: a malformed availability blob shouldn't block a
@@ -453,12 +480,13 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
     }
     const v = parsed.availability_json[date];
     if (v === "can") {
-      expected.push(parsed.user_id);
+      expectedSet.add(parsed.user_id);
       cans.push(parsed.user_id);
     } else if (v === "maybe") {
-      expected.push(parsed.user_id);
+      expectedSet.add(parsed.user_id);
     }
   }
+  const expected = [...expectedSet];
 
   // Auto-RSVP "yes" for every can. They've already committed via availability
   // — the lock just confirms the date — so no separate click is required for

@@ -1,5 +1,5 @@
 import type { NextNight } from "@boardgames/core/protocol";
-import { formatDateKey } from "../../lib/profile-format.ts";
+import { formatDayKey } from "../../lib/date-format.ts";
 import { ClockIcon, HostIcon, PinIcon, UsersIcon } from "../icons";
 import { Badge } from "../ui/Badge.tsx";
 import { EmptyState } from "../ui/EmptyState.tsx";
@@ -36,7 +36,7 @@ export function NextNightCard({ nextNight, firstName, isSelf }: NextNightCardPro
           <p className="text-3xs font-semibold uppercase tracking-[0.2em] text-accent-300">
             Next game night
           </p>
-          <p className="mt-1 text-lg font-bold text-white">{formatDateKey(nextNight.dateKey)}</p>
+          <p className="mt-1 text-lg font-bold text-white">{formatDayKey(nextNight.dateKey)}</p>
         </div>
         <Badge tone={nextNight.status === "definite" ? "emerald" : "amber"} size="sm">
           {nextNight.status === "definite" ? "Going" : "Maybe"}

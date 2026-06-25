@@ -1,7 +1,8 @@
 import { TournamentStreamEventSchema } from "@boardgames/core/protocol";
 import type { ReactNode } from "react";
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useId, useRef, useState } from "react";
 import { Button } from "../components/ui/Button";
+import { Input } from "../components/ui/Input";
 import { apiClient } from "./api-client";
 
 export interface StrategyInfo {
@@ -42,6 +43,7 @@ export function TournamentGridShell<TResult>({
   onBack,
 }: TournamentGridShellProps<TResult>) {
   const [runState, setRunState] = useState<RunState>("idle");
+  const numGamesId = useId();
   const [progress, setProgress] = useState<TournamentProgress | null>(null);
   const [currentPair, setCurrentPair] = useState<string | null>(null);
   const activeTournamentRef = useRef<string | null>(null);
@@ -148,13 +150,15 @@ export function TournamentGridShell<TResult>({
       {renderHeader?.()}
 
       <div className="flex items-center gap-3 mb-4">
-        <label className="text-fg-secondary text-sm">
+        <label htmlFor={numGamesId} className="text-fg-secondary text-sm">
           Games per matchup:
-          <input
+          <Input
+            id={numGamesId}
             type="number"
             value={numGames}
             onChange={(e) => onNumGamesChange?.(Number(e.target.value))}
-            className="ml-2 w-20 px-2 py-1 bg-surface-800 text-white rounded border border-white/10"
+            width="auto"
+            className="ml-2 w-20"
             min={1}
             max={10000}
             disabled={runState !== "idle"}

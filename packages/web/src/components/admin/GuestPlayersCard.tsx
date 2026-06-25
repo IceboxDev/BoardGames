@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useId, useState } from "react";
 import { authClient } from "../../lib/auth-client";
 import { formatAuthError } from "../../pages/admin-coverage";
 import { TrashIcon } from "../icons";
 import { Button } from "../ui/Button";
 import { Chip } from "../ui/Chip";
 import { ErrorAlert } from "../ui/ErrorAlert";
+import { Field } from "../ui/Field";
 import { IconButton } from "../ui/IconButton";
+import { Input } from "../ui/Input";
 import { synthesizeGuestEmail } from "./guest-email";
 import type { AdminUser } from "./types";
 
@@ -32,6 +34,8 @@ export function GuestPlayersCard({ guests, onChanged }: Props) {
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
   const [pendingDeleteId, setPendingDeleteId] = useState<string | null>(null);
+  const firstId = useId();
+  const lastId = useId();
 
   async function addGuest(e: React.FormEvent) {
     e.preventDefault();
@@ -106,24 +110,26 @@ export function GuestPlayersCard({ guests, onChanged }: Props) {
         <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
           {error && <ErrorAlert message={error} />}
           <form onSubmit={addGuest} className="flex flex-wrap items-end gap-2">
-            <label className="flex flex-col gap-1 text-xs text-fg-secondary">
-              First name
-              <input
+            <Field label="First name" htmlFor={firstId}>
+              <Input
+                id={firstId}
                 value={first}
                 onChange={(e) => setFirst(e.target.value)}
                 disabled={busy}
-                className="w-40 rounded-md border border-white/10 bg-surface-900 px-2 py-1 text-sm text-fg-primary focus:border-amber-400/60 focus:outline-none"
+                width="auto"
+                className="w-40"
               />
-            </label>
-            <label className="flex flex-col gap-1 text-xs text-fg-secondary">
-              Last name
-              <input
+            </Field>
+            <Field label="Last name" htmlFor={lastId}>
+              <Input
+                id={lastId}
                 value={last}
                 onChange={(e) => setLast(e.target.value)}
                 disabled={busy}
-                className="w-40 rounded-md border border-white/10 bg-surface-900 px-2 py-1 text-sm text-fg-primary focus:border-amber-400/60 focus:outline-none"
+                width="auto"
+                className="w-40"
               />
-            </label>
+            </Field>
             <Button type="submit" variant="primary" size="sm" loading={busy} disabled={busy}>
               Add guest
             </Button>

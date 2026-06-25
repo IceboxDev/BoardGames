@@ -16,7 +16,7 @@
 //     • no-raw-indigo        use accent-* tokens, not raw indigo-* (accent IS
 //                            indigo-500). The `accent-indigo` accent-color util
 //                            is exempt — the util alternation never includes it.
-//     • arbitrary-text-size  use the text-2xs/3xs/4xs micro scale (or the
+//     • arbitrary-text-size  use the text-2xs/3xs/4xs/5xs/6xs micro scale (or the
 //                            standard text-* scale), not text-[Npx] / text-[Nrem].
 //     • tailwind-important   no `!`-important class overrides — add a Button/Chip
 //                            variant or a shared primitive instead of fighting one.
@@ -29,9 +29,11 @@
 //                            bg-surface panel.
 //     • raw-async-ladder     wrap a React Query result in <QueryBoundary>, not a
 //                            hand-rolled `isLoading ?` / `isPending ?` ternary.
+//     • raw-form-field       use <Input> inside a <Field>, not a raw <input>
+//                            hand-styled with surface chrome (border/bg-surface).
 //
 //   The first five are TOKEN bans (use the design token, not a raw value); the
-//   last three are PRIMITIVE-ADOPTION rules (use the shared component, not a
+//   last four are PRIMITIVE-ADOPTION rules (use the shared component, not a
 //   hand-rolled equivalent). Each rule may `scope` itself to app chrome — games/
 //   and the components/ui/ primitives that DEFINE the chrome are exempt.
 //
@@ -71,7 +73,7 @@ const CHECK_BASELINE = process.argv.includes("--check-baseline");
 // Files where `red-*` is a literal color, not a danger/status accent.
 const RED_ALLOWLIST = new Set([
   "pages/DeckPreview.tsx", // playing-card suit + card-back art
-  "components/offline/Calendar.tsx", // fire-heat effect (red→orange gradient)
+  "components/offline/CalendarDayCell.tsx", // fire-heat effect (red→orange gradient)
 ]);
 
 const RED_RE =
@@ -156,6 +158,20 @@ const RATCHET_RULES = [
     scope: (rel) =>
       (rel.startsWith("pages/") || rel.startsWith("components/")) &&
       !rel.startsWith("components/ui/"),
+  },
+  {
+    name: "raw-form-field",
+    // A hand-styled text input bypassing the <Input>/<Field> primitives: a raw
+    // <input> whose OWN tag carries surface chrome (bg-surface). `[^<]*?` spans
+    // the opening tag (which contains no `<`) up to the chrome class — this
+    // tolerates `>` inside inline handlers (`onChange={(e) => …}`) yet never
+    // crosses into a sibling element. The primitives that DEFINE input chrome
+    // (Input, Checkbox, Radio) live under components/ui/, and games/ run bespoke
+    // controls — both scoped out. A truly one-off display input (e.g. an
+    // oversized room-code field) is pinned in the baseline, not forced.
+    re: /<input\b[^<]*?\bbg-surface-\d/g,
+    hint: "use <Input> inside a <Field>, not a hand-styled raw <input>",
+    scope: (rel) => !rel.startsWith("games/") && !rel.startsWith("components/ui/"),
   },
 ];
 

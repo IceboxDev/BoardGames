@@ -397,7 +397,7 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
           <ErrorAlert message={error} />
         ) : (
           <span className="text-xs text-fg-muted">
-            {usersQuery.isLoading ? "Loading users…" : `${allUsers.length} known players`}
+            {usersQuery.data === undefined ? "Loading users…" : `${allUsers.length} known players`}
           </span>
         )}
         <div className="flex items-center gap-2">

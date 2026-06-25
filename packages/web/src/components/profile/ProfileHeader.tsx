@@ -1,6 +1,6 @@
 import type { ProfileEditable, ProfileStats, ProfileUserSummary } from "@boardgames/core/protocol";
 import type { CSSProperties } from "react";
-import { formatMonthYear } from "../../lib/profile-format.ts";
+import { formatMonthYear } from "../../lib/date-format.ts";
 import { CameraIcon, EditIcon, PinIcon } from "../icons";
 import { Avatar } from "../ui/Avatar.tsx";
 import { Badge } from "../ui/Badge.tsx";

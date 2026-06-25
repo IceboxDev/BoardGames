@@ -21,7 +21,7 @@
   },
   "no-raw-indigo": {
     "components/SidePanel.tsx": 1,
-    "components/offline/Calendar.tsx": 2,
+    "components/offline/CalendarDayCell.tsx": 2,
     "games/durak/components/Card.tsx": 2,
     "games/exploding-kittens/components/Card.tsx": 1,
     "games/exploding-kittens/components/DrawPile.tsx": 2,
@@ -34,7 +34,6 @@
   },
   "arbitrary-text-size": {
     "components/action-log/ActionLog.tsx": 1,
-    "components/offline/Calendar.tsx": 5,
     "games/exploding-kittens/components/NopeWindow.tsx": 1,
     "games/lost-cities/components/DrawPile.tsx": 1,
     "games/lost-cities/components/FlatPlayerHand.tsx": 1,
@@ -55,7 +54,7 @@
     "games/sushi-go/components/stations/StationShell.tsx": 2
   },
   "glow-shadow-literal": {
-    "components/offline/Calendar.tsx": 9,
+    "components/offline/CalendarDayCell.tsx": 9,
     "games/parks/components/PassionPickOverlay.tsx": 1,
     "games/set/components/SetCard.tsx": 1,
     "games/sky-team/components/BriefingOverlay.tsx": 2,
@@ -86,9 +85,12 @@
     "pages/DndNightPreview.tsx": 4
   },
   "raw-async-ladder": {
-    "components/history/RecordMatchModal.tsx": 1,
-    "components/offline/RsvpModal.tsx": 2,
-    "components/profile/CalendarSyncCard.tsx": 1,
-    "pages/HistoryPage.tsx": 1
+    "components/offline/RsvpModal.tsx": 2
+  },
+  "raw-form-field": {
+    "components/admin/ResetLinkModal.tsx": 1,
+    "components/admin/UserRow.tsx": 1,
+    "components/multiplayer/JoinRoom.tsx": 1,
+    "components/offline/LockInModal.tsx": 1
   }
 }

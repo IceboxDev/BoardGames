@@ -7,6 +7,7 @@ import type {
   LockHost,
   LockInForm,
 } from "../../lib/calendar-locks";
+import { formatDayKey } from "../../lib/date-format.ts";
 import { Button } from "../ui/Button";
 import { ErrorAlert } from "../ui/ErrorAlert";
 import { Field } from "../ui/Field";
@@ -67,15 +68,7 @@ export default function LockInModal({
     return out;
   }, [candidates]);
 
-  const headingDate = useMemo(() => {
-    const [y, m, d] = date.split("-").map(Number);
-    if (!y || !m || !d) return date;
-    return new Date(y, m - 1, d).toLocaleDateString(undefined, {
-      weekday: "long",
-      month: "long",
-      day: "numeric",
-    });
-  }, [date]);
+  const headingDate = formatDayKey(date, "weekday");
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -192,18 +185,8 @@ export default function LockInModal({
 function hostOptionLabel(c: LockHost, stats: HostStats | undefined, isYou: boolean): string {
   const base = isYou ? `${c.name} (you)` : c.name;
   if (!stats || stats.totalHosts === 0) return `${base} — never hosted`;
-  const last = stats.lastHostedDate ? formatHostDate(stats.lastHostedDate) : null;
+  const last = stats.lastHostedDate ? formatDayKey(stats.lastHostedDate, "compact") : null;
   return last
     ? `${base} — hosted ${stats.totalHosts}×, last ${last}`
     : `${base} — hosted ${stats.totalHosts}×`;
-}
-
-function formatHostDate(isoDay: string): string {
-  const [y, m, d] = isoDay.split("-").map(Number);
-  if (!y || !m || !d) return isoDay;
-  return new Date(y, m - 1, d).toLocaleDateString(undefined, {
-    day: "numeric",
-    month: "short",
-    year: "numeric",
-  });
 }

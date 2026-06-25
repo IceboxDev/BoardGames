@@ -25,6 +25,8 @@ import { Button } from "../components/ui/Button.tsx";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
 import { LoadingState } from "../components/ui/LoadingState.tsx";
 import { PageMain, PageShell } from "../components/ui/PageShell.tsx";
+import { Section } from "../components/ui/Section.tsx";
+import { Stack } from "../components/ui/Stack.tsx";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { ApiError } from "../lib/api-fetch.ts";
 import { fetchProfile, fetchProfileMatches } from "../lib/profile.ts";
@@ -127,7 +129,7 @@ export default function PlayerProfilePage() {
   return (
     <PageShell topNav={topNav}>
       <PageMain width="6xl" padding="spacious">
-        <div className="flex flex-col gap-6">
+        <Stack gap="lg">
           <ProfileHeader
             user={profile.user}
             profile={profile.profile}
@@ -142,7 +144,7 @@ export default function PlayerProfilePage() {
 
           <div className="grid gap-6 lg:grid-cols-3">
             {/* Main column */}
-            <div className="flex flex-col gap-6 lg:col-span-2">
+            <Stack gap="lg" className="lg:col-span-2">
               <Section title="Match history" icon={<BookIcon className="h-4 w-4" />}>
                 <ProfileMatchList
                   matches={allMatches}
@@ -151,10 +153,10 @@ export default function PlayerProfilePage() {
                   footer={matchFooter}
                 />
               </Section>
-            </div>
+            </Stack>
 
             {/* Side rail */}
-            <div className="flex flex-col gap-6 lg:col-span-1">
+            <Stack gap="lg" className="lg:col-span-1">
               <Section title="Skill profile" icon={<SparkleIcon className="h-3.5 w-3.5" />}>
                 <HexSkillChart skill={profile.skill} accentHex={profile.profile.accentHex} />
               </Section>
@@ -184,7 +186,7 @@ export default function PlayerProfilePage() {
                   emptyDescription={isSelf ? "Add games you'd love to play." : undefined}
                 />
               </Section>
-            </div>
+            </Stack>
           </div>
 
           {/* Full width: by the time the eye reaches this, the side rail
@@ -212,7 +214,7 @@ export default function PlayerProfilePage() {
               emptyDescription={`${firstName}'s owned games will appear here.`}
             />
           </Section>
-        </div>
+        </Stack>
       </PageMain>
 
       {editing && isSelf && (
@@ -231,28 +233,5 @@ export default function PlayerProfilePage() {
         />
       )}
     </PageShell>
-  );
-}
-
-function Section({
-  title,
-  icon,
-  count,
-  children,
-}: {
-  title: string;
-  icon?: ReactNode;
-  count?: number;
-  children: ReactNode;
-}) {
-  return (
-    <section className="flex flex-col gap-3">
-      <h2 className="flex items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-fg-secondary">
-        {icon}
-        {title}
-        {count !== undefined && <span className="font-medium text-fg-muted">({count})</span>}
-      </h2>
-      {children}
-    </section>
   );
 }

@@ -6,28 +6,24 @@ import { useQuery } from "@tanstack/react-query";
 import { fetchCalendarFeedStatus } from "../../lib/calendar-feed.ts";
 import { qk } from "../../lib/query-keys.ts";
 import { ArrowRightIcon } from "../icons";
+import { InteractiveCard } from "../ui/InteractiveCard.tsx";
+import { QueryBoundary } from "../ui/QueryBoundary.tsx";
 
 type Props = {
   onClick: () => void;
 };
 
 export default function CalendarSyncCard({ onClick }: Props) {
-  const { data, isLoading } = useQuery({
+  const statusQuery = useQuery({
     queryKey: qk.calendarFeed(),
     queryFn: ({ signal }) => fetchCalendarFeedStatus(signal),
   });
 
-  const connected = Boolean(data?.connected);
-
   return (
-    // Card-shaped clickable surface (full-width row). Exempted from the
-    // <Button> mandate because the entire card is the click target — see
-    // ProfilePage's GalleryPreview for the matching pattern.
-    // biome-ignore lint/correctness/noRestrictedElements: card-shaped clickable surface
-    <button
-      type="button"
+    <InteractiveCard
       onClick={onClick}
-      className="group mt-6 flex w-full items-center gap-4 rounded-2xl border border-white/[0.06] bg-surface-900/60 px-5 py-4 text-left transition-all duration-300 hover:border-white/15 hover:bg-surface-900 sm:px-6 sm:py-5"
+      padding="lg"
+      className="mt-6 flex w-full items-center gap-4 text-left"
     >
       <div className="flex shrink-0 items-center gap-2 text-fg-secondary transition-colors group-hover:text-white">
         <CalendarSyncIcon />
@@ -35,28 +31,39 @@ export default function CalendarSyncCard({ onClick }: Props) {
       </div>
 
       <div className="flex min-w-0 flex-1 items-center gap-2.5">
-        {isLoading ? (
-          <span className="text-xs text-fg-muted">…</span>
-        ) : connected ? (
-          <span className="inline-flex min-w-0 items-center gap-2 text-xs text-emerald-300">
-            <span
-              aria-hidden="true"
-              className="h-2 w-2 shrink-0 rounded-full bg-emerald-400 shadow-glow-emerald"
-            />
-            <span className="truncate">
-              Connected
-              <span className="hidden sm:inline"> — game nights sync to your calendar</span>
-            </span>
-          </span>
-        ) : (
-          <span className="truncate text-xs text-fg-muted">
-            Subscribe to your game nights in Apple / Google / Outlook
-          </span>
-        )}
+        <QueryBoundary
+          query={statusQuery}
+          loading={<span className="text-xs text-fg-muted">…</span>}
+          errorFallback={() => <SyncStatus connected={false} />}
+        >
+          {(data) => <SyncStatus connected={data.connected} />}
+        </QueryBoundary>
       </div>
 
       <ArrowRightIcon className="h-4 w-4 shrink-0 text-fg-muted transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-accent-300" />
-    </button>
+    </InteractiveCard>
+  );
+}
+
+function SyncStatus({ connected }: { connected: boolean }) {
+  if (!connected) {
+    return (
+      <span className="truncate text-xs text-fg-muted">
+        Subscribe to your game nights in Apple / Google / Outlook
+      </span>
+    );
+  }
+  return (
+    <span className="inline-flex min-w-0 items-center gap-2 text-xs text-emerald-300">
+      <span
+        aria-hidden="true"
+        className="h-2 w-2 shrink-0 rounded-full bg-emerald-400 shadow-glow-emerald"
+      />
+      <span className="truncate">
+        Connected
+        <span className="hidden sm:inline"> — game nights sync to your calendar</span>
+      </span>
+    </span>
   );
 }
 

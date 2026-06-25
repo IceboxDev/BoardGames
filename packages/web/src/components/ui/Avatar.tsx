@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { initialsFromName } from "../../lib/profile-format.ts";
+import { initialsFromName } from "../../lib/names.ts";
 
 // Avatar primitive: renders the user's `image` when present, otherwise an
 // initials monogram. Avatars are generated/assigned out-of-band and stored on

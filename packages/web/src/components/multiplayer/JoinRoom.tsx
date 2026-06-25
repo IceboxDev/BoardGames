@@ -1,6 +1,6 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { SetupHeader, SetupLayout } from "../setup";
-import { Button, ErrorAlert } from "../ui";
+import { Button, ErrorAlert, Field } from "../ui";
 
 interface JoinRoomProps {
   title: string;
@@ -20,6 +20,7 @@ export function JoinRoom({ title, onCreateRoom, onJoinRoom, onBack, error }: Joi
   const [roomCode, setRoomCode] = useState("");
   const [mode, setMode] = useState<"choose" | "join">("choose");
   const codeInputRef = useRef<HTMLInputElement>(null);
+  const codeId = useId();
 
   useEffect(() => {
     if (mode === "join") codeInputRef.current?.focus();
@@ -53,12 +54,12 @@ export function JoinRoom({ title, onCreateRoom, onJoinRoom, onBack, error }: Joi
         </div>
       ) : (
         <div className="mx-auto flex w-full max-w-sm flex-col gap-3">
-          <label>
-            <span className="mb-1.5 block text-xs font-medium uppercase tracking-wider text-fg-secondary">
-              Room Code
-            </span>
+          <Field label="Room Code" htmlFor={codeId}>
+            {/* Bespoke display input (oversized, centered, wide letter-spacing
+                for a 4-char code) — intentionally not the standard <Input>. */}
             <input
               ref={codeInputRef}
+              id={codeId}
               type="text"
               value={roomCode}
               onChange={(e) => setRoomCode(e.target.value.toUpperCase().slice(0, 4))}
@@ -69,7 +70,7 @@ export function JoinRoom({ title, onCreateRoom, onJoinRoom, onBack, error }: Joi
               maxLength={4}
               className="w-full rounded-lg border border-white/10 bg-surface-800/60 px-4 py-3 text-center text-2xl font-bold uppercase tracking-[0.3em] text-white placeholder:text-fg-disabled outline-none transition-colors focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30"
             />
-          </label>
+          </Field>
           <Button variant="primary" size="lg" disabled={!canJoin} onClick={handleJoin}>
             Join
           </Button>

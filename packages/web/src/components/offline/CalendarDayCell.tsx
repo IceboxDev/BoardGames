@@ -1,0 +1,730 @@
+import type { RsvpStatus } from "../../lib/calendar-rsvps";
+import type { Availability, AvailabilityEntry } from "../../lib/offline-availability";
+import { D20Die } from "./D20Die";
+
+export type Heat =
+  | { kind: "neutral" }
+  | { kind: "warming"; can: 3; maybe: number }
+  | { kind: "fire"; can: number; maybe: number };
+
+export type DayCellProps = {
+  day: number;
+  monthBucket: 0 | 1 | 2;
+  monthLabel: string | null;
+  value: Availability | undefined;
+  isToday: boolean;
+  isPast: boolean;
+  interactive: boolean;
+  compact: boolean;
+  labels?: AvailabilityEntry[];
+  /** True when admin overlay is active for the whole calendar (drives label vs personal-status priority). */
+  isAdminView: boolean;
+  heat: Heat;
+  locked: boolean;
+  picksLocked: boolean;
+  attendance: { definite: number; tentative: number } | null;
+  /** Sealed night whose vote winner is D&D — swaps in the crimson/d20 treatment. */
+  dndNight: boolean;
+  lockMode: boolean;
+  viewerRsvp?: RsvpStatus;
+  cellSeed: number;
+  onClick: () => void;
+};
+
+export function DayCell({
+  day,
+  monthBucket,
+  monthLabel,
+  value,
+  isToday,
+  isPast,
+  interactive,
+  compact,
+  labels,
+  isAdminView,
+  heat,
+  locked,
+  picksLocked,
+  attendance,
+  dndNight,
+  lockMode,
+  viewerRsvp,
+  cellSeed,
+  onClick,
+}: DayCellProps) {
+  const heated = heat.kind !== "neutral";
+  // Lock visually overrides heat (and personal mark gradient).
+  const showHeatLayer = !locked && heated;
+  const showPersonalGradient = !locked && !heated && value;
+  // D&D night: a sealed night whose vote winner is D&D. Takes over the locked
+  // cell entirely — crimson frame, dungeon background, a d20 headcount.
+  const showDnd = dndNight && picksLocked && !!attendance;
+
+  // Personal-mark gradient layer — render only when no aggregate heat or lock overrides it.
+  // "maybe" stays in yellow tones so it never reads as the orange/red of warming or fire.
+  const personalStateClass =
+    showPersonalGradient && value === "can"
+      ? "bg-gradient-to-br from-accent-500/40 via-accent-500/20 to-neon-cyan/15 shadow-[0_0_30px_-5px_rgba(99,102,241,0.45)]"
+      : showPersonalGradient && value === "maybe"
+        ? "bg-gradient-to-br from-yellow-400/35 via-yellow-300/22 to-yellow-200/10 shadow-[0_0_24px_-6px_rgba(234,179,8,0.4)]"
+        : "";
+
+  const borderClass = showDnd
+    ? "" // `.dnd-night-cell` owns the animated crimson↔gold border + glow.
+    : locked
+      ? "border-amber-300/40"
+      : heat.kind === "fire"
+        ? "border-red-500/80"
+        : heat.kind === "warming"
+          ? "border-orange-400/65"
+          : value === "can"
+            ? "border-accent-400/70"
+            : value === "maybe"
+              ? "border-yellow-400/60"
+              : lockMode
+                ? "border-amber-200/30 hover:border-amber-200/60"
+                : "border-white/10 hover:border-white/25";
+
+  const baseBgClass = !value && !heated && !locked ? "bg-surface-800/55" : "";
+  const baseHover = !value && !heated && !locked && interactive ? "hover:bg-surface-800/80" : "";
+  const lockedDisplayClass = isPast
+    ? "pointer-events-none opacity-30"
+    : interactive
+      ? "hover:scale-[1.015] active:scale-[0.985]"
+      : "pointer-events-none";
+
+  const padding = compact ? "p-1 sm:p-1.5" : "p-2 sm:p-3";
+  const hasNames = !compact && !locked && !!labels && labels.length > 0;
+  // Name-bearing cells use a smaller day number so the attendee list below gets
+  // the vertical room it needs (otherwise 6+ names clip on the laptop's shorter
+  // cells); empty cells keep the bold number and grow it on 4K monitors.
+  const dayTextSize = compact
+    ? "text-sm sm:text-base"
+    : hasNames
+      ? "text-base sm:text-lg md:text-xl 3xl:text-2xl"
+      : "text-lg sm:text-xl md:text-2xl 3xl:text-3xl";
+  const monthLabelPos = compact ? "left-1 top-1" : "left-1.5 top-1.5";
+  const monthLabelSize = compact ? "text-5xs" : "text-4xs sm:text-3xs";
+  const todayDotPos = compact ? "right-1 top-1" : "right-2 top-2";
+  const aspectClass = compact ? "aspect-square" : "";
+  const layoutClass = compact ? "items-center justify-center" : "";
+
+  // Ring/animation per heat state. Lock disables heat animations. Past days never animate.
+  const heatAnim =
+    isPast || compact || locked
+      ? ""
+      : heat.kind === "fire"
+        ? "motion-safe:animate-fire-breathe"
+        : heat.kind === "warming"
+          ? "motion-safe:animate-ember-ring"
+          : "";
+
+  const dayNumberClass =
+    !isPast && !locked && heat.kind === "fire" && !compact ? "motion-safe:animate-heat-haze" : "";
+
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={!interactive || isPast}
+      aria-label={`${day}${value ? ` — ${value}` : ""}${locked ? " — locked in" : ""}${
+        !locked && heat.kind === "warming" ? ` — warming up, ${heat.can} confirmed` : ""
+      }${!locked && heat.kind === "fire" ? ` — on fire, ${heat.can} confirmed` : ""}${
+        showDnd ? " — Dungeons & Dragons night" : ""
+      }`}
+      aria-pressed={value !== undefined}
+      className={`group relative flex flex-col overflow-hidden rounded-xl border transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${layoutClass} ${aspectClass} ${padding} ${baseBgClass} ${borderClass} ${showDnd ? "dnd-night-cell" : ""} ${baseHover} ${lockedDisplayClass} ${heatAnim}`}
+    >
+      <span
+        className={`pointer-events-none absolute inset-0 ${monthTintClass(monthBucket)}`}
+        aria-hidden="true"
+      />
+      {personalStateClass && (
+        <span
+          className={`pointer-events-none absolute inset-0 ${personalStateClass}`}
+          aria-hidden="true"
+        />
+      )}
+      {showHeatLayer && heat.kind === "warming" && <WarmingLayer compact={compact} />}
+      {showHeatLayer && heat.kind === "fire" && <FireLayer compact={compact} cellSeed={cellSeed} />}
+      {locked &&
+        (showDnd ? (
+          <DndNightLayer compact={compact} viewerRsvp={viewerRsvp} />
+        ) : (
+          <LockedLayer compact={compact} viewerRsvp={viewerRsvp} showMedallion={picksLocked} />
+        ))}
+      {/* Personal availability stripe — guarantees the user's own can/maybe
+          mark stays visible against any background (fire, warming, locked
+          gradients all override the cell's base color, so we draw a slim
+          color stripe on the leading edge that the heat layers can't drown). */}
+      {value && !locked && !isAdminView && (
+        <span
+          aria-hidden="true"
+          className={`pointer-events-none absolute inset-y-0 left-0 z-[5] w-1 sm:w-1.5 ${
+            value === "can"
+              ? "bg-accent-400 shadow-[0_0_8px_rgba(99,102,241,0.6)]"
+              : "bg-yellow-400 shadow-[0_0_8px_rgba(234,179,8,0.55)]"
+          }`}
+        />
+      )}
+      {monthLabel && (
+        <span
+          className={`pointer-events-none absolute font-bold uppercase tracking-[0.18em] text-white/40 ${monthLabelPos} ${monthLabelSize}`}
+          aria-hidden="true"
+        >
+          {monthLabel}
+        </span>
+      )}
+      {isToday && (
+        <span
+          className={`pointer-events-none absolute h-1.5 w-1.5 animate-pulse rounded-full bg-neon-cyan shadow-[0_0_10px_2px_rgba(34,211,238,0.7)] ${todayDotPos}`}
+          aria-hidden="true"
+        />
+      )}
+      {showDnd && attendance ? (
+        // D&D night: a glowing d20 replaces the headcount, the party size
+        // rolled onto its face. The grid position still tells you the date.
+        <span className="relative z-[5] flex min-h-0 flex-1 items-center justify-center p-1">
+          {/* The die fills whatever space the cell row gives it (rows are
+              flex-sized, so they're shorter on a 1080p screen than on 4K) and
+              its SVG `meet` aspect-fit keeps it centered. Caps mirror the old
+              fixed sizes so 4K is unchanged; shorter rows simply shrink it
+              instead of overflowing the bottom edge. */}
+          <D20Die
+            count={attendance.definite}
+            className={`dnd-die dnd-die-animated h-full w-full ${
+              compact
+                ? "max-h-8 max-w-8"
+                : "max-h-12 max-w-12 sm:max-h-16 sm:max-w-16 md:max-h-20 md:max-w-20 lg:max-h-[5.5rem] lg:max-w-[5.5rem]"
+            }`}
+          />
+        </span>
+      ) : picksLocked && attendance ? (
+        // Picks-locked cell: the day number is dropped — the cell's position
+        // in the calendar grid already tells you which date it is. The big
+        // centered "definite / definite+tentative" headcount takes over.
+        // N1 = RSVP-yes (coming for sure), N2 = N1 plus maybes.
+        <span className="relative flex flex-1 items-center justify-center">
+          <span
+            className={`flex items-baseline gap-1 font-extrabold leading-none text-amber-100 drop-shadow ${
+              compact ? "text-base" : "text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+            }`}
+          >
+            <span className="tabular-nums">{attendance.definite}</span>
+            <span className="text-amber-200/60">/</span>
+            <span className="tabular-nums">{attendance.definite + attendance.tentative}</span>
+          </span>
+        </span>
+      ) : (
+        <span
+          className={`relative font-bold leading-none ${dayTextSize} ${dayNumberClass} ${
+            value || heated ? "text-white" : "text-fg-primary"
+          }`}
+        >
+          {day}
+        </span>
+      )}
+      {labels && labels.length > 0 && !compact && !locked && (
+        <DayLabels entries={labels} heated={heated} />
+      )}
+      {/* Mobile: stacked centered, conditional render means there is never
+          an empty wrapper span below the visible chip — the empty span's
+          flex-gap was previously pushing single-present chips 2px above
+          the intended bottom, so personal-only cells looked taller than
+          adjacent locked cells. With conditional render, the *only*
+          present chip lands at exactly the same y-offset as the locked
+          pill (both anchored at bottom-1). All three badges share the
+          same `min-h-3` so element heights match across cell types — the
+          chip's `ring-1` glow doesn't ride below the cell border anymore
+          because the pill chrome itself extends down to match. */}
+      {!compact && !locked && !isAdminView && (value || heated) && (
+        <div className="pointer-events-none absolute inset-x-1 bottom-1 z-10 flex flex-col items-center gap-0.5 sm:hidden">
+          {value && <PersonalMarkChip value={value} />}
+          {heated && <HeatBadge heat={heat} />}
+        </div>
+      )}
+      {/* sm+: pinned to opposite corners, stable slots regardless of which
+          badge is present. */}
+      {!compact && !locked && !isAdminView && value && (
+        <span className="pointer-events-none absolute z-10 hidden sm:bottom-1.5 sm:left-2 sm:inline-flex">
+          <PersonalMarkChip value={value} />
+        </span>
+      )}
+      {!compact && !locked && !isAdminView && heated && (
+        <span className="pointer-events-none absolute z-10 hidden sm:right-2 sm:bottom-1.5 sm:inline-flex">
+          <HeatBadge heat={heat} />
+        </span>
+      )}
+      {/* Admin overlay shows the names panel and hides the personal footer —
+          surface the viewer's own mark as a small chip so admins can still
+          see what they marked without dropping back to player view. */}
+      {!compact && !locked && isAdminView && value && (
+        <span className="pointer-events-none absolute right-1.5 bottom-1.5 z-10">
+          <PersonalMarkChip value={value} />
+        </span>
+      )}
+    </button>
+  );
+}
+
+function WarmingLayer({ compact }: { compact: boolean }) {
+  return (
+    <>
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-orange-700/45 via-orange-500/30 to-orange-400/15 shadow-[inset_0_-12px_18px_-12px_rgba(251,146,60,0.5)]"
+      />
+      {!compact && (
+        <>
+          <span
+            className="ember"
+            style={
+              {
+                "--x": "20%",
+                "--delay": "0s",
+                "--dur": "3.4s",
+                "--drift": "-3px",
+              } as React.CSSProperties
+            }
+          />
+          <span
+            className="ember"
+            style={
+              {
+                "--x": "55%",
+                "--delay": "0.9s",
+                "--dur": "3s",
+                "--drift": "2px",
+              } as React.CSSProperties
+            }
+          />
+          <span
+            className="ember"
+            style={
+              {
+                "--x": "82%",
+                "--delay": "1.6s",
+                "--dur": "3.6s",
+                "--drift": "-1px",
+              } as React.CSSProperties
+            }
+          />
+        </>
+      )}
+    </>
+  );
+}
+
+function FireLayer({ compact, cellSeed }: { compact: boolean; cellSeed: number }) {
+  // Independent phase offsets per layer (seeded by cell) so neighboring cells
+  // never pulse in lockstep AND layers within one cell drift relative to each
+  // other. Negative `animation-delay` starts the layer mid-cycle.
+  const phaseBloom = (cellSeed * 0.37) % 3.4;
+  const phaseLeft = (cellSeed * 0.71) % 2.1;
+  const phaseRight = (cellSeed * 0.53) % 2.7;
+  const phaseGlow = (cellSeed * 0.91) % 4.3;
+  const phaseEmber = (cellSeed * 0.17) % 3.6;
+
+  return (
+    <>
+      {/* Molten base — warm static gradient, fades to transparent at the top so
+          there's no hard horizon line. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-red-900/85 via-orange-700/40 to-transparent"
+      />
+      {/* Heart of the fire — soft radial dome at the bottom, breathes. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none fire-bloom absolute inset-0 motion-safe:animate-fire-bloom"
+        style={{ animationDelay: `-${phaseBloom}s` } as React.CSSProperties}
+      />
+      {/* Asymmetric flame petals — left and right blobs on different periods. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none fire-petal-left absolute inset-0 motion-safe:animate-fire-petal-left"
+        style={{ animationDelay: `-${phaseLeft}s` } as React.CSSProperties}
+      />
+      <span
+        aria-hidden="true"
+        className="pointer-events-none fire-petal-right absolute inset-0 motion-safe:animate-fire-petal-right"
+        style={{ animationDelay: `-${phaseRight}s` } as React.CSSProperties}
+      />
+      {/* Outer rim glow — soft inset shadows, slow breathe. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 motion-safe:animate-fire-glow shadow-[inset_0_-22px_28px_-12px_rgba(251,146,60,0.55),inset_0_0_22px_-10px_rgba(220,38,38,0.5)]"
+        style={{ animationDelay: `-${phaseGlow}s` } as React.CSSProperties}
+      />
+      {!compact && (
+        <>
+          <span
+            className="ember"
+            style={
+              {
+                "--x": "22%",
+                "--delay": `-${phaseEmber}s`,
+                "--dur": "3.4s",
+                "--drift": "-4px",
+              } as React.CSSProperties
+            }
+          />
+          <span
+            className="ember"
+            style={
+              {
+                "--x": "55%",
+                "--delay": `-${(phaseEmber + 1.3) % 3.6}s`,
+                "--dur": "3.8s",
+                "--drift": "2px",
+              } as React.CSSProperties
+            }
+          />
+          <span
+            className="ember"
+            style={
+              {
+                "--x": "78%",
+                "--delay": `-${(phaseEmber + 2.4) % 3.6}s`,
+                "--dur": "3.1s",
+                "--drift": "-2px",
+              } as React.CSSProperties
+            }
+          />
+        </>
+      )}
+    </>
+  );
+}
+
+function LockedLayer({
+  compact,
+  viewerRsvp,
+  showMedallion,
+}: {
+  compact: boolean;
+  viewerRsvp?: RsvpStatus;
+  /** Wax-seal medallion now signals "guest list is sealed" specifically —
+   * shown only when picks are locked, not just when the date is locked-in. */
+  showMedallion: boolean;
+}) {
+  return (
+    <>
+      {/* Deep regal base — feels weighty. No animation on the bg itself. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-950 via-violet-900/95 to-indigo-900 shadow-[inset_0_0_24px_-8px_rgba(0,0,0,0.6),0_0_24px_-6px_rgba(251,191,36,0.25)]"
+      />
+      {/* Faint gold ring for the "sealed" feel. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-amber-300/35"
+      />
+      {/* Slow diagonal shimmer — light catching the seal. Idle most of cycle. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 -left-1/4 w-1/3 bg-gradient-to-r from-transparent via-amber-200/25 to-transparent motion-safe:animate-seal-shimmer"
+      />
+      {/* Wax-seal medallion + compact lock pip — visible only when picks are
+          locked, communicating "guest list is sealed" rather than the date
+          itself being chosen. Centered along the top edge so the medallion
+          sits symmetrically above the headcount on both phone and desktop. */}
+      {showMedallion && !compact && (
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute left-1/2 top-1.5 z-10 flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-700 shadow-[0_2px_8px_rgba(0,0,0,0.5),inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3)]"
+        >
+          <LockGlyph />
+        </span>
+      )}
+      {showMedallion && compact && (
+        <span
+          aria-hidden="true"
+          className="pointer-events-none absolute left-1/2 top-0.5 z-10 flex h-3 w-3 -translate-x-1/2 items-center justify-center rounded-full bg-amber-400 shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
+        >
+          <LockGlyph small />
+        </span>
+      )}
+      {/* RSVP-aware pill: invitation by default; flips to GOING / PASS once viewer commits. */}
+      {!compact && <LockedPill viewerRsvp={viewerRsvp} />}
+    </>
+  );
+}
+
+/**
+ * Background treatment for a sealed D&D night — swapped in for `LockedLayer`.
+ * A dungeon-crimson base with central torchlight, a gold hairline + shimmer,
+ * and drifting torch embers. The crimson↔gold rim + the red d20 headcount
+ * (painted by the cell itself) carry the identity — no explicit "D&D" label
+ * needed. This layer is everything behind them.
+ */
+function DndNightLayer({ compact, viewerRsvp }: { compact: boolean; viewerRsvp?: RsvpStatus }) {
+  return (
+    <>
+      {/* Deep dungeon base — blood-crimson fading to obsidian. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#3b0a0a] via-[#1a0606] to-black"
+      />
+      {/* Warm torchlight glow rising from the center, behind the die. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_55%_at_50%_46%,rgba(220,38,38,0.45),transparent_70%)]"
+      />
+      {/* Gold inner hairline — the gilt edge of a sealed tome. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-amber-300/30"
+      />
+      {/* Slow gold shimmer sweep (shared with the locked wax-seal cell). */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 -left-1/4 w-1/3 bg-gradient-to-r from-transparent via-amber-200/30 to-transparent motion-safe:animate-seal-shimmer"
+      />
+      {/* Torch embers drifting up. Desktop cells only — phones have no room. */}
+      {!compact && (
+        <>
+          <span
+            className="ember"
+            style={
+              {
+                "--x": "26%",
+                "--delay": "0s",
+                "--dur": "3.6s",
+                "--drift": "-3px",
+              } as React.CSSProperties
+            }
+          />
+          <span
+            className="ember"
+            style={
+              {
+                "--x": "72%",
+                "--delay": "1.5s",
+                "--dur": "3.1s",
+                "--drift": "2px",
+              } as React.CSSProperties
+            }
+          />
+        </>
+      )}
+      {/* RSVP-aware pill: invitation by default; flips to GOING / PASS. */}
+      {!compact && <LockedPill viewerRsvp={viewerRsvp} />}
+    </>
+  );
+}
+
+function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
+  // Phone cells are ~50px wide. The pill sits at the bottom with a small
+  // horizontal inset; the inline-flex BG would otherwise be capped at that
+  // width and the wider tracking would push the label out of the green
+  // outline. Tighter tracking + smaller mobile font keeps "GOING" / "PASS"
+  // / "RSVP" inside the pill on every device.
+  //
+  // `min-h-3 sm:min-h-5` matches the heights of PersonalMarkChip and
+  // HeatBadge, so locked vs. unlocked cells render at the same vertical
+  // mass — otherwise the chips' default leading + ring made them taller
+  // than the locked pill and adjacent cells looked staggered.
+  const pillBase =
+    "pointer-events-none absolute inset-x-1 bottom-1 z-10 inline-flex min-h-3 items-center justify-center gap-0.5 rounded-md px-0.5 py-0 text-5xs font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:min-h-5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-4xs sm:tracking-[0.18em]";
+  if (viewerRsvp === "yes") {
+    return (
+      <span
+        aria-hidden="true"
+        className={`${pillBase} border border-emerald-300/45 bg-emerald-400/15 text-emerald-100 motion-safe:animate-pulse-soft`}
+      >
+        <CheckGlyphSmall />
+        Going
+      </span>
+    );
+  }
+  if (viewerRsvp === "no") {
+    return (
+      <span
+        aria-hidden="true"
+        className={`${pillBase} border border-white/10 bg-white/[0.04] text-fg-secondary`}
+      >
+        <CrossGlyphSmall />
+        Pass
+      </span>
+    );
+  }
+  return (
+    <span
+      aria-hidden="true"
+      className={`${pillBase} border border-amber-300/45 bg-amber-300/10 text-center text-amber-200 motion-safe:animate-pulse-soft`}
+    >
+      RSVP
+    </span>
+  );
+}
+
+function CheckGlyphSmall() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className="h-2.5 w-2.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={3}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="M3 8.5l3 3 7-7" />
+    </svg>
+  );
+}
+
+function CrossGlyphSmall() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className="h-2.5 w-2.5"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2.5}
+      strokeLinecap="round"
+      aria-hidden="true"
+    >
+      <path d="M4 4l8 8M12 4l-8 8" />
+    </svg>
+  );
+}
+
+function LockGlyph({ small = false }: { small?: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={`text-amber-950 ${small ? "h-2 w-2" : "h-3 w-3"}`}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={small ? 3 : 2.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <rect x="5" y="11" width="14" height="9" rx="1.5" />
+      <path d="M8 11V7a4 4 0 0 1 8 0v4" />
+    </svg>
+  );
+}
+
+function PersonalMarkChip({ value }: { value: Availability }) {
+  const isCan = value === "can";
+  return (
+    <span
+      aria-hidden="true"
+      className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-5xs font-extrabold uppercase leading-none tracking-[0.1em] text-white ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-3xs sm:tracking-[0.15em] md:text-xs ${
+        isCan
+          ? "ring-accent-300 shadow-[0_0_10px_rgba(129,140,248,0.6)]"
+          : "ring-amber-300 shadow-[0_0_10px_rgba(252,211,77,0.55)]"
+      }`}
+    >
+      <span
+        className={`inline-block h-1 w-1 shrink-0 rounded-full sm:h-1.5 sm:w-1.5 ${isCan ? "bg-accent-300" : "bg-amber-300"}`}
+      />
+      {value}
+    </span>
+  );
+}
+
+function HeatBadge({ heat }: { heat: Heat }) {
+  if (heat.kind === "neutral") return null;
+  const isFire = heat.kind === "fire";
+  // Sizing intentionally mirrors PersonalMarkChip so the two badges read as
+  // a matched pair when both are present and don't change weight when only
+  // one is shown.
+  return (
+    <span
+      className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-5xs font-extrabold leading-none ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-3xs md:text-xs ${
+        isFire
+          ? "text-orange-200 ring-orange-300/70 shadow-[0_0_10px_rgba(249,115,22,0.55)]"
+          : "text-amber-200 ring-amber-300/70 shadow-[0_0_10px_rgba(252,211,77,0.4)]"
+      }`}
+      aria-hidden="true"
+    >
+      <FlameGlyph filled={isFire} />
+      {heat.can}
+      {heat.maybe > 0 && <span className="opacity-70">·{heat.maybe}m</span>}
+    </span>
+  );
+}
+
+function FlameGlyph({ filled }: { filled: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className="h-2.5 w-2.5"
+      fill={filled ? "currentColor" : "none"}
+      stroke="currentColor"
+      strokeWidth={filled ? 0 : 1.5}
+      aria-hidden="true"
+    >
+      <path d="M8 1.5c0 2.5-3 3.2-3 6 0 1.4 1 2.7 2.2 3.1-.5-.5-.7-1.1-.7-1.7 0-1.6 1.6-2.1 1.6-3.7 1.3 1.4 2.4 2.4 2.4 4.1 0 1.7-1.4 3.2-3.5 3.2C5 12.5 3 10.7 3 8.3 3 4.8 8 4 8 1.5z" />
+    </svg>
+  );
+}
+
+function DayLabels({ entries, heated }: { entries: AvailabilityEntry[]; heated: boolean }) {
+  // Cans always come first so the can row is on top, maybes underneath.
+  // No explicit cap: with the responsive font scale the cell can carry every
+  // name in the friend group, and the wrapper's `overflow-hidden` is the
+  // safety net for the rare oversized case — we don't render a ragged
+  // "+N" pill any more.
+  const cans = entries.filter((e) => e.status === "can");
+  const maybes = entries.filter((e) => e.status === "maybe");
+  const textShadow = heated ? { textShadow: "0 1px 2px rgba(0,0,0,0.85)" } : undefined;
+  return (
+    <div className="relative z-10 mt-0.5 flex min-h-0 flex-1 flex-col overflow-hidden">
+      {cans.length > 0 && (
+        <NameRow entries={cans} dotColor="bg-accent-300" textShadow={textShadow} />
+      )}
+      {maybes.length > 0 && (
+        <NameRow entries={maybes} dotColor="bg-yellow-400" textShadow={textShadow} />
+      )}
+    </div>
+  );
+}
+
+function NameRow({
+  entries,
+  dotColor,
+  textShadow,
+}: {
+  entries: AvailabilityEntry[];
+  dotColor: string;
+  textShadow: React.CSSProperties | undefined;
+}) {
+  return (
+    <div className="flex flex-wrap items-center gap-x-0.5 gap-y-0 sm:gap-x-1 sm:gap-y-0.5 3xl:gap-x-1.5 3xl:gap-y-1">
+      {entries.map((e) => (
+        <span
+          key={e.userId}
+          title={`${e.name} — ${e.status}`}
+          style={textShadow}
+          className="inline-flex max-w-full items-center gap-0 truncate text-6xs font-medium leading-tight text-white sm:gap-1 sm:text-3xs sm:leading-none md:text-2xs lg:text-xs 3xl:text-base 3xl:leading-snug"
+        >
+          <span
+            aria-hidden="true"
+            className={`inline-block h-0.5 w-0.5 shrink-0 rounded-full sm:h-1.5 sm:w-1.5 md:h-2 md:w-2 3xl:h-2.5 3xl:w-2.5 ${dotColor}`}
+          />
+          <span className="truncate">{firstName(e.name)}</span>
+        </span>
+      ))}
+    </div>
+  );
+}
+
+function firstName(full: string): string {
+  const trimmed = full.trim();
+  if (!trimmed) return "—";
+  const space = trimmed.indexOf(" ");
+  return space === -1 ? trimmed : trimmed.slice(0, space);
+}
+
+function monthTintClass(bucket: 0 | 1 | 2): string {
+  if (bucket === 0) return "bg-accent-500/[0.06]";
+  if (bucket === 1) return "bg-neon-cyan/[0.06]";
+  return "bg-neon-purple/[0.06]";
+}

@@ -21,6 +21,8 @@
  *      reads as "this is you" regardless of tone or team.
  */
 
+import { initialsFromName } from "../../lib/names.ts";
+
 type Tone = "winner" | "loser" | "muted";
 type Accent = "good" | "evil" | "village" | "wolf" | "tanner" | "neutral";
 type TeamAccent = Exclude<Accent, "neutral">;
@@ -106,7 +108,7 @@ export function AvatarBubble({
       aria-label={isMe ? `${name} (you)` : name}
       className={`relative inline-grid shrink-0 place-items-center rounded-full font-bold ${SIZE_CLASS[size]} ${bg} ${ring} ${TONE_TEXT[tone]}`}
     >
-      <span aria-hidden="true">{initialsOf(name)}</span>
+      <span aria-hidden="true">{initialsFromName(name)}</span>
       {isMe && (
         // Small white caret sitting just below the bubble, pointing up at it.
         // SVG (not unicode) so its size and stroke stay consistent across
@@ -122,16 +124,4 @@ export function AvatarBubble({
       )}
     </span>
   );
-}
-
-function initialsOf(name: string): string {
-  const parts = name.trim().split(/\s+/).filter(Boolean);
-  if (parts.length === 0) return "?";
-  if (parts.length === 1) {
-    const w = parts[0];
-    return (w.length === 1 ? w : w.slice(0, 2)).toUpperCase();
-  }
-  const first = parts[0][0] ?? "";
-  const last = parts[parts.length - 1][0] ?? "";
-  return (first + last).toUpperCase();
 }

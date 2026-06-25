@@ -2,6 +2,7 @@ import type { LockedDate } from "@boardgames/core/protocol";
 import Calendar from "../components/offline/Calendar";
 import { D20Die } from "../components/offline/D20Die";
 import DndNightPanel from "../components/offline/DndNightPanel";
+import { PageMain, PageShell } from "../components/ui/PageShell";
 import type { Attendee } from "../lib/calendar-games";
 import { DND_SLUG } from "../lib/dnd-night";
 import type { AvailabilityCounts, AvailabilityMap } from "../lib/offline-availability";
@@ -113,8 +114,8 @@ export default function DndNightPreview() {
   const viewerRsvpByDate = { [dnd]: "yes" as const, [dndBig]: undefined };
 
   return (
-    <div className="min-h-screen w-full bg-surface-950 px-4 py-8 text-fg-primary sm:px-8">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10">
+    <PageShell background="plain">
+      <PageMain width="6xl" padding="spacious" className="flex flex-col gap-10 text-fg-primary">
         <header>
           <h1 className="text-2xl font-bold text-white">D&amp;D Night — visual preview</h1>
           <p className="mt-1 text-sm text-fg-secondary">
@@ -174,7 +175,7 @@ export default function DndNightPreview() {
             <DndNightPanel attendees={ATTENDEES} partyCount={4} />
           </div>
         </section>
-      </div>
-    </div>
+      </PageMain>
+    </PageShell>
   );
 }

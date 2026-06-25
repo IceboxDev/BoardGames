@@ -1,13 +1,9 @@
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useEffect, useMemo, useRef, useState } from "react";
-import { games as gameRegistry } from "../../games/registry";
+import { useEffect, useRef, useState } from "react";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
-import { coversWindow } from "../../lib/bgg-format";
-import { fetchAvailableGames } from "../../lib/calendar-games";
-import { type CalendarLocks, togglePicksLock } from "../../lib/calendar-locks";
-import { kickRsvp, type RsvpStatus, setRsvp } from "../../lib/calendar-rsvps";
+import type { CalendarLocks } from "../../lib/calendar-locks";
+import type { RsvpStatus } from "../../lib/calendar-rsvps";
+import { formatDayKey } from "../../lib/date-format.ts";
 import { DND_SLUG } from "../../lib/dnd-night";
-import { qk } from "../../lib/query-keys";
 import { ClockIcon, HostIcon, PadlockIcon, PinIcon } from "../icons";
 import {
   EmptyState,
@@ -22,6 +18,7 @@ import AttendeesView from "./AttendeesView";
 import DndNightPanel from "./DndNightPanel";
 import GameCarousel3D from "./GameCarousel3D";
 import RankedGameList from "./RankedGameList";
+import { useRsvpAvailability } from "./useRsvpAvailability.ts";
 
 type Props = {
   date: string;
@@ -32,41 +29,24 @@ type Props = {
 export default function RsvpModal({ date, locks, onClose }: Props) {
   const { user, isAdmin } = useCurrentUser();
   const userId = user?.id ?? null;
-  const queryClient = useQueryClient();
 
   const lock = locks?.[date];
   const viewerRsvp: RsvpStatus | undefined = userId ? lock?.rsvps[userId] : undefined;
 
-  const gamesQuery = useQuery({
-    queryKey: qk.availableGames(date),
-    queryFn: ({ signal }) => fetchAvailableGames(date, signal),
-    enabled: !!lock,
-  });
-
-  const setRsvpMutation = useMutation({
-    mutationFn: ({ status, auto }: { status: RsvpStatus; auto?: boolean }) =>
-      setRsvp(date, status, auto ?? false),
-    onSettled: () => {
-      void queryClient.invalidateQueries({ queryKey: qk.calendarLocks() });
-      void queryClient.invalidateQueries({ queryKey: qk.availableGames(date) });
-    },
-  });
-
-  const togglePicksLockMutation = useMutation({
-    mutationFn: ({ on }: { on: boolean }) => togglePicksLock(date, on),
-    onSettled: () => {
-      void queryClient.invalidateQueries({ queryKey: qk.calendarLocks() });
-      void queryClient.invalidateQueries({ queryKey: qk.availableGames(date) });
-    },
-  });
-
-  const kickMutation = useMutation({
-    mutationFn: ({ userId }: { userId: string }) => kickRsvp(date, userId),
-    onSettled: () => {
-      void queryClient.invalidateQueries({ queryKey: qk.calendarLocks() });
-      void queryClient.invalidateQueries({ queryKey: qk.availableGames(date) });
-    },
-  });
+  const {
+    gamesQuery,
+    setRsvpMutation,
+    togglePicksLockMutation,
+    kickMutation,
+    definiteCount,
+    tentativeCount,
+    reactions,
+    topSlugs,
+    attendees,
+    ownedSlugs,
+    availableGames,
+    hypedCount,
+  } = useRsvpAvailability({ date, enabled: !!lock });
 
   const isHost = !!lock?.host && lock.host.userId === userId;
   const canTogglePicksLock = !!lock && (isAdmin || isHost);
@@ -90,22 +70,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
     setRsvpMutation.mutate({ status: "yes" });
   }, [lock, userId, viewerRsvp, setRsvpMutation.mutate, picksLocked, isAdmin, isHost]);
 
-  const headingDate = useMemo(() => {
-    const [y, m, d] = date.split("-").map(Number);
-    if (!y || !m || !d) return date;
-    return new Date(y, m - 1, d).toLocaleDateString(undefined, {
-      weekday: "long",
-      month: "long",
-      day: "numeric",
-    });
-  }, [date]);
-
-  const definiteCount = gamesQuery.data?.definiteCount ?? 0;
-  const tentativeCount = gamesQuery.data?.tentativeCount ?? 0;
-  const reactions = gamesQuery.data?.reactions ?? {};
-  const topSlugs = gamesQuery.data?.topSlugs ?? [];
-  const attendees = gamesQuery.data?.attendees ?? [];
-  const ownedSlugs = gamesQuery.data?.ownedSlugs ?? [];
+  const headingDate = formatDayKey(date, "weekday");
 
   // A sealed night whose vote winner is D&D takes over the modal: one quest on
   // the table, a party roster, no bringing. Gated on picks-locked so the normal
@@ -116,50 +81,18 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   // wasn't in the expected (RSVP yes / maybe) snapshot at lock-in time. The
   // host and admin can still see everything regardless. Past attendees who
   // RSVPed "no" are still in expectedUserIds and retain access.
+  //
+  // A viewer holding their own "yes" is a committed guest and is NEVER locked
+  // out, even if they've fallen out of the expected snapshot (e.g. a re-lock
+  // that re-derived the list) — their RSVP is the authoritative commitment.
   const lockedOut =
     picksLocked &&
     !!lock &&
     !!userId &&
     !isAdmin &&
     !isHost &&
+    viewerRsvp !== "yes" &&
     !lock.expectedUserIds.includes(userId);
-
-  const availableGames = useMemo(() => {
-    const data = gamesQuery.data;
-    if (!data || data.ownedSlugs.length === 0) return [];
-    const ownedSet = new Set(data.ownedSlugs);
-    const lo = data.definiteCount;
-    const hi = data.definiteCount + data.tentativeCount;
-    // Only suggest games that fit *every* headcount in the [definite,
-    // definite+tentative] window — see `coversWindow` doc. A max-4 game
-    // on a 4-going/3-maybe night would lock out the maybes if it became
-    // the pick, so it's filtered out here even though `fitsRange` would
-    // have allowed it (carousel cards use the looser overlap test).
-    const filtered = gameRegistry.filter((g) => ownedSet.has(g.slug) && coversWindow(g, lo, hi));
-    // Sort precedence (mirrors the carousel card's badge/border precedence:
-    //   New > Best-at-N > default — see CarouselCardFrame):
-    //   1. "New" cohort (freshly-added games) leads the whole list.
-    //   2. "Best at N" cohort (BGG poll matches the confirmed headcount).
-    //   3. Within each cohort, higher averageRating wins.
-    //   4. Title alphabetical as a final stable tiebreak.
-    return filtered.sort((a, b) => {
-      const aNew = a.isNew === true ? 0 : 1;
-      const bNew = b.isNew === true ? 0 : 1;
-      if (aNew !== bNew) return aNew - bNew;
-      const aBest = a.bgg.bestPlayerCount === lo && lo > 0 ? 0 : 1;
-      const bBest = b.bgg.bestPlayerCount === lo && lo > 0 ? 0 : 1;
-      if (aBest !== bBest) return aBest - bBest;
-      const aRating = a.bgg.averageRating ?? 0;
-      const bRating = b.bgg.averageRating ?? 0;
-      if (aRating !== bRating) return bRating - aRating;
-      return a.title.localeCompare(b.title);
-    });
-  }, [gamesQuery.data]);
-
-  const hypedCount = useMemo(
-    () => availableGames.filter((g) => (reactions[g.slug]?.hype ?? 0) > 0).length,
-    [availableGames, reactions],
-  );
 
   // Default to "pick games"; the user switches via the toggle below or by
   // navigating past the rightmost card.
