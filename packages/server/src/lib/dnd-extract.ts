@@ -1386,7 +1386,7 @@ const TURN_JSON_SCHEMA = {
     narration: {
       type: "string",
       description:
-        "The DM's read-aloud describing the FULL turn — how the arrow flew, the blade bit, resistances implied by low damage — vivid, 1–2 short paragraphs (max ~1400 chars). Empty string when alerts are raised.",
+        "The DM's read-aloud describing the FULL turn — vivid, 1–2 short paragraphs (max ~1400 chars), written PURELY in-fiction: NEVER mention HP, damage numbers, ACs, rolls, modifiers, or any rules vocabulary — the characters don't know those concepts and hearing them breaks immersion. Convey severity through description instead (a stagger, sap weeping from split bark, a creature barely upright). Empty string when alerts are raised.",
     },
     alerts: {
       type: "array",
@@ -1481,7 +1481,7 @@ function buildTurnPrompt(ctx: CombatTurnContext): string {
     "2. STATE: when legal, return full replacement state for every combatant the turn touched — hp after damage/healing (respect resistances/immunities implied by the creature's nature), added/removed conditions, updated positions and distances (keep them consistent for range checks next turn), and cumulative notes for spent resources (arrows, spell slots, feature uses). ALSO maintain each touched combatant's option lists: when the turn grants someone a usable option (a Bardic Inspiration die, a handed potion, a picked-up weapon), add it to the RECEIVER's granted_actions with its mechanics; drop it when spent. When a baseline dashboard option becomes unusable (last arrow fired → 'Shortbow', a 1/day feature spent), add its exact name to that combatant's removed_actions; drop it when restored. Both lists are FULL REPLACEMENTS — carry forward entries that still apply.",
   );
   lines.push(
-    "3. NARRATION: write the read-aloud for the whole turn — the arrow's flight, the blade's bite, damage that felt weaker than it should (implying resistance) — grounded in exactly what the DM reported and the numbers rolled. Cover EVERY action in the report: when a group acts, narrate each creature's action in sequence — never stop after the first.",
+    "3. NARRATION: write the read-aloud for the whole turn — the arrow's flight, the blade's bite, damage that felt weaker than it should (implying resistance) — grounded in exactly what the DM reported. The narration is read to the PLAYERS IN CHARACTER: no HP totals, no damage numbers, no ACs, rolls, or rules vocabulary of any kind — translate the numbers into fiction (how hard it hit, how close to collapse the target looks). The mechanical bookkeeping belongs in the updates, never in the narration. Cover EVERY action in the report: when a group acts, narrate each creature's action in sequence — never stop after the first.",
   );
   lines.push("");
   lines.push(
