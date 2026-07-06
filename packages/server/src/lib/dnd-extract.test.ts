@@ -432,6 +432,12 @@ describe("normalizeTurnResult", () => {
     expect(result.updates[0]?.removedActions).toEqual([]);
   });
 
+  it("keeps long alert explanations intact", () => {
+    const longAlert = `Nicolo cannot move from 40 ft away into melee and still attack twice. ${"x".repeat(400)}`;
+    const result = normalizeTurnResult({ narration: "", alerts: [longAlert], updates: [] });
+    expect(result.alerts[0]).toBe(longAlert);
+  });
+
   it("drops all updates when the referee raises alerts", () => {
     const result = normalizeTurnResult({
       narration: "",

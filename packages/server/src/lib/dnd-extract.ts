@@ -1393,7 +1393,7 @@ const TURN_JSON_SCHEMA = {
       maxItems: 6,
       items: { type: "string" },
       description:
-        "Rule violations making this turn impossible (action economy, range vs tracked positions, missing spell slots or ammo per notes/history, condition restrictions). EMPTY when the turn is legal.",
+        "Rule violations making this turn impossible (action economy, range vs tracked positions, missing spell slots or ammo per notes/history, condition restrictions). Each alert is a COMPLETE explanation in 2–3 sentences (max ~900 chars): what rule is broken, the numbers that break it, and what would make it legal. EMPTY when the turn is legal.",
     },
     updates: {
       type: "array",
@@ -1507,7 +1507,7 @@ function buildTurnPrompt(ctx: CombatTurnContext): string {
 
 export function normalizeTurnResult(raw: unknown): CombatTurnResult {
   const parsed = RawTurnSchema.parse(raw);
-  const alerts = parsed.alerts.map((a) => clamp(a, 300)).filter((a) => a.length > 0);
+  const alerts = parsed.alerts.map((a) => clamp(a, 1000)).filter((a) => a.length > 0);
   return {
     narration: clamp(parsed.narration, 1500),
     alerts,
