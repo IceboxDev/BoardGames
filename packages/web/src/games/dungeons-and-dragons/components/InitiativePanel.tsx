@@ -27,6 +27,42 @@ function rollD20(mod: number): number {
 
 type EnemyRow = { key: number; name: string; mod: number; roll: number | null };
 
+const NUMBER_WORDS: Record<string, number> = {
+  one: 1,
+  two: 2,
+  three: 3,
+  four: 4,
+  five: 5,
+  six: 6,
+  seven: 7,
+  eight: 8,
+  nine: 9,
+  ten: 10,
+  "a pair of": 2,
+  "a couple of": 2,
+};
+
+function escapeRegex(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/** "three dead vines" / "3 dead vines" near the creature's name → 3. */
+function inferCount(haystack: string, lowerName: string): number {
+  const stem = lowerName.replace(/s$/, "");
+  // Accept regular plurals (vine→vines) and f→ves (wolf→wolves).
+  const variants = [`${escapeRegex(stem)}(?:s|es)?`];
+  if (stem.endsWith("f")) variants.push(`${escapeRegex(stem.slice(0, -1))}ves`);
+  const pattern = new RegExp(
+    `(\\d+|${Object.keys(NUMBER_WORDS).join("|")})\\s+(?:[a-z-]+\\s+){0,2}?(?:${variants.join("|")})\\b`,
+  );
+  const match = haystack.match(pattern);
+  if (!match?.[1]) return 1;
+  const token = match[1];
+  const parsed = Number.parseInt(token, 10);
+  const count = Number.isFinite(parsed) ? parsed : (NUMBER_WORDS[token] ?? 1);
+  return Math.min(12, Math.max(1, count));
+}
+
 type Props = {
   node: DndNode;
   party: DndCharacter[];
@@ -40,19 +76,28 @@ export function InitiativePanel({ node, party, npcs }: Props) {
   const [combatPending, setCombatPending] = useState(false);
   const [nextKey, setNextKey] = useState(1000);
 
-  // Pre-seat enemies the node's text mentions — one row per creature group
-  // (the 5e group-initiative rule); the duplicate button covers per-creature
-  // rolls.
+  // Pre-seat enemies the node's text mentions, with their COUNT inferred
+  // from the wording ("three dead vines" → 3 rows) — the generation prompts
+  // instruct initiative summaries to state counts. Each creature gets its
+  // own row and roll; the duplicate button covers reinforcements.
   const [enemies, setEnemies] = useState<EnemyRow[]>(() => {
     const haystack = `${node.summary} ${node.readText}`.toLowerCase();
-    return npcs
-      .filter((npc) => haystack.includes(npc.name.toLowerCase()))
-      .map((npc, i) => ({
-        key: i,
-        name: npc.name,
-        mod: dexMod(npc.abilities?.dex),
-        roll: null,
-      }));
+    const rows: EnemyRow[] = [];
+    let key = 0;
+    for (const npc of npcs) {
+      const name = npc.name.toLowerCase();
+      if (!haystack.includes(name)) continue;
+      const count = inferCount(haystack, name);
+      for (let i = 0; i < count; i++) {
+        rows.push({
+          key: key++,
+          name: count > 1 ? `${npc.name} ${i + 1}` : npc.name,
+          mod: dexMod(npc.abilities?.dex),
+          roll: null,
+        });
+      }
+    }
+    return rows;
   });
 
   const addEnemy = () => {
@@ -68,11 +113,16 @@ export function InitiativePanel({ node, party, npcs }: Props) {
   const order = [
     ...party
       .filter((ch) => ch.sheet)
-      .map((ch) => ({
-        label: displayCharacterName(ch.sheet, ch.sourceFilename),
-        kind: "pc" as const,
-        value: Number.parseInt(pcRolls[ch.id] ?? "", 10),
-      })),
+      .map((ch) => {
+        const raw = Number.parseInt(pcRolls[ch.id] ?? "", 10);
+        return {
+          label: displayCharacterName(ch.sheet, ch.sourceFilename),
+          kind: "pc" as const,
+          // The DM types the raw d20 — the character's initiative bonus
+          // (DEX modifier) is added here.
+          value: raw + dexMod(ch.sheet?.abilities?.dex),
+        };
+      }),
     ...enemies.map((e) => ({ label: e.name, kind: "enemy" as const, value: e.roll ?? Number.NaN })),
   ]
     .filter((row) => Number.isFinite(row.value))
@@ -119,10 +169,15 @@ export function InitiativePanel({ node, party, npcs }: Props) {
                     id={`${uid}-${ch.id}`}
                     inputMode="numeric"
                     width="score"
-                    placeholder="—"
+                    placeholder="d20"
                     value={pcRolls[ch.id] ?? ""}
                     onChange={(e) => setPcRolls({ ...pcRolls, [ch.id]: e.target.value })}
                   />
+                  <span className="w-9 shrink-0 text-center font-fantasy text-base font-bold text-amber-100">
+                    {Number.isFinite(Number.parseInt(pcRolls[ch.id] ?? "", 10))
+                      ? `= ${Number.parseInt(pcRolls[ch.id] ?? "", 10) + dexMod(ch.sheet?.abilities?.dex)}`
+                      : ""}
+                  </span>
                 </li>
               ))}
           </ul>

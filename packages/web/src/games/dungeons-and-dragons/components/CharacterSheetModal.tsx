@@ -16,6 +16,7 @@ import { Button, Field, Input, Modal, Textarea } from "../../../components/ui";
 import { deleteCharacter, updateCharacter } from "../../../lib/dnd-campaigns";
 import { errorMessageOf } from "../../../lib/error-message";
 import { qk } from "../../../lib/query-keys";
+import { getSpellEntry, spellLevelLabel } from "../logic/spellbook";
 import { HoverTerm } from "./HoverTerm";
 
 // The party ledger entry, laid out like the official 5e character sheet with
@@ -120,6 +121,79 @@ function ProseSection({ title, text }: { title: string; text: string | null }) {
       <p className="text-sm leading-relaxed text-amber-200/75" style={SERIF}>
         {text}
       </p>
+    </div>
+  );
+}
+
+/** The Spellbook page: one detailed card per known/prepared spell. */
+function Spellbook({ spells }: { spells: string[] }) {
+  const entries = spells.map((name) => ({ name, entry: getSpellEntry(name) }));
+  const sorted = [...entries].sort(
+    (a, b) => (a.entry?.level ?? 99) - (b.entry?.level ?? 99) || a.name.localeCompare(b.name),
+  );
+  return (
+    <div className="flex flex-col gap-3">
+      <p className="text-xs text-amber-200/50" style={SERIF}>
+        Spell slots, prepared counts, and full rules text will come from the spell archive — the
+        entries below are its first pages.
+      </p>
+      <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+        {sorted.map(({ name, entry }) => (
+          <div
+            key={name}
+            className="flex flex-col gap-1.5 rounded-xl border border-purple-400/25 bg-gradient-to-br from-[#170a2a]/60 via-black/30 to-black/40 p-3.5"
+          >
+            <div className="flex items-baseline justify-between gap-2">
+              <span className="font-fantasy text-base font-bold text-amber-100">
+                {entry?.name ?? name}
+              </span>
+              <span className="shrink-0 rounded-full bg-purple-500/15 px-2 py-0.5 text-3xs font-bold uppercase tracking-[0.12em] text-purple-200/80 ring-1 ring-purple-400/30">
+                {entry ? `${spellLevelLabel(entry.level)} · ${entry.school}` : "Unknown"}
+              </span>
+            </div>
+            {entry ? (
+              <>
+                <dl className="grid grid-cols-2 gap-x-3 gap-y-0.5 text-2xs text-amber-200/70">
+                  <div>
+                    <dt className="inline font-bold uppercase tracking-wide text-amber-300/60">
+                      Casting:{" "}
+                    </dt>
+                    <dd className="inline">{entry.castingTime}</dd>
+                  </div>
+                  <div>
+                    <dt className="inline font-bold uppercase tracking-wide text-amber-300/60">
+                      Range:{" "}
+                    </dt>
+                    <dd className="inline">{entry.range}</dd>
+                  </div>
+                  <div>
+                    <dt className="inline font-bold uppercase tracking-wide text-amber-300/60">
+                      Duration:{" "}
+                    </dt>
+                    <dd className="inline">{entry.duration}</dd>
+                  </div>
+                  <div>
+                    <dt className="inline font-bold uppercase tracking-wide text-amber-300/60">
+                      Components:{" "}
+                    </dt>
+                    <dd className="inline">{entry.components}</dd>
+                  </div>
+                </dl>
+                {entry.damage && (
+                  <p className="text-2xs font-semibold text-rose-200/90">{entry.damage}</p>
+                )}
+                <p className="text-xs leading-relaxed text-amber-200/75" style={SERIF}>
+                  {entry.text}
+                </p>
+              </>
+            ) : (
+              <p className="text-xs leading-relaxed text-amber-200/50" style={SERIF}>
+                Not yet in the spell archive — details will appear once it is inscribed.
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
     </div>
   );
 }
@@ -244,6 +318,7 @@ export function CharacterSheetModal({ character, onClose }: Props) {
   const [form, setForm] = useState<FormState | null>(null); // non-null = edit mode
   const [formError, setFormError] = useState<string | null>(null);
   const [confirmingDelete, setConfirmingDelete] = useState(false);
+  const [page, setPage] = useState<"sheet" | "spellbook">("sheet");
 
   const invalidate = () =>
     character.partyId
@@ -348,6 +423,25 @@ export function CharacterSheetModal({ character, onClose }: Props) {
       }
       panelClassName="max-w-5xl max-h-[94vh] min-h-[80vh] overflow-y-auto border-amber-400/25"
     >
+      {!editing && sheet.spells.length > 0 && (
+        <div className="flex gap-1.5">
+          {(["sheet", "spellbook"] as const).map((p) => (
+            <Button
+              key={p}
+              variant={page === p ? "tinted" : "ghost"}
+              tone="amber"
+              size="xs"
+              onClick={() => setPage(p)}
+              className={page === p ? "" : "text-amber-200/50 hover:text-amber-100"}
+            >
+              <span className="font-fantasy font-bold">
+                {p === "sheet" ? "Character Sheet" : "Spellbook"}
+              </span>
+            </Button>
+          ))}
+        </div>
+      )}
+
       {editing ? (
         <div className="flex flex-col gap-4">
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -516,6 +610,8 @@ export function CharacterSheetModal({ character, onClose }: Props) {
             </Button>
           </div>
         </div>
+      ) : page === "spellbook" ? (
+        <Spellbook spells={sheet.spells} />
       ) : (
         <div className="flex flex-col gap-5">
           {/* Combat shields. */}
@@ -539,14 +635,14 @@ export function CharacterSheetModal({ character, onClose }: Props) {
           <div className="grid grid-cols-1 gap-5 md:grid-cols-12">
             {/* Ability rail. */}
             {sheet.abilities && (
-              <div className="grid grid-cols-3 gap-2 md:col-span-3 md:grid-cols-1 md:content-start">
+              <div className="grid grid-cols-3 gap-2 md:col-span-3 md:h-full md:grid-cols-1 md:grid-rows-6">
                 {ABILITY_KEYS.map((key) => {
                   const score = sheet.abilities?.[key];
                   if (score === undefined) return null;
                   return (
                     <div
                       key={key}
-                      className="flex flex-col items-center rounded-xl border border-amber-400/25 bg-[#1a0606]/70 px-2 py-2.5"
+                      className="flex flex-col items-center justify-center rounded-xl border border-amber-400/25 bg-[#1a0606]/70 px-2 py-2.5"
                     >
                       <span
                         className="text-4xs font-bold uppercase tracking-[0.2em] text-amber-300/70"
@@ -636,20 +732,6 @@ export function CharacterSheetModal({ character, onClose }: Props) {
                       <span key={item}>
                         {i > 0 && ", "}
                         <HoverTerm term={item} />
-                      </span>
-                    ))}
-                  </p>
-                </div>
-              )}
-
-              {sheet.spells.length > 0 && (
-                <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
-                  <SectionHeading>Spells</SectionHeading>
-                  <p className="mt-1 text-xs leading-relaxed text-amber-200/75">
-                    {sheet.spells.map((spell, i) => (
-                      <span key={spell}>
-                        {i > 0 && ", "}
-                        <HoverTerm term={spell} />
                       </span>
                     ))}
                   </p>

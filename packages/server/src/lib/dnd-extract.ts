@@ -807,7 +807,7 @@ Rules:
 - SKIP any passage that is a waypoint's own arrival/opening narration — that text is already shown when the party arrives; never duplicate it as a block.
 - Blocks form a tree: if reaching a scene requires an earlier action (you must knock before entering, and enter before asking questions), set parent_index to that earlier block's position in this array. Independent actions at the waypoint get parent_index null. Parents must appear in the array BEFORE their children and on the same waypoint.
 - Triggers are SHORT imperative player actions ('Knock', 'Enter the cabin', 'Ask about Admjir') — never 'When the party…' descriptions.
-- Wherever a scripted moment STARTS COMBAT (an encounter block, an ambush, a fight the module expects), add a block with node_type 'initiative', trigger 'Roll initiative', a summary naming the enemies, and read_text describing the moment combat erupts. Every scripted combat encounter gets exactly one initiative block at the right spot in the tree.
+- Wherever a scripted moment STARTS COMBAT (an encounter block, an ambush, a fight the module expects), add a block with node_type 'initiative', trigger 'Roll initiative', a summary naming the enemies AND their count as a word or numeral (e.g. 'Three dead vines attack.'), and read_text describing the moment combat erupts. Every scripted combat encounter gets exactly one initiative block at the right spot in the tree.
 - read_text is the module's own text where it exists, verbatim and lightly cleaned; do not invent content that is not in the document.`;
 }
 
@@ -963,7 +963,7 @@ function buildNodePrompt(ctx: StoryNodeContext): string {
   }
   lines.push(`The players now: ${ctx.message}`);
   lines.push(
-    "Write the next story node. `trigger` restates what the players did as a SHORT imperative action ('Knock', 'Search the wagon') — never 'When the party…'. `summary` is the immediate consequence in one short sentence. `read_text` is what the DM reads aloud: second person, grounded in the module's tone and everything established above, never contradicting it, ending at a natural decision point. If the players' action STARTS COMBAT, set node_type to 'initiative', trigger to 'Roll initiative', name the enemies in the summary, and make read_text the moment combat erupts; otherwise node_type is 'story'.",
+    "Write the next story node. `trigger` restates what the players did as a SHORT imperative action ('Knock', 'Search the wagon') — never 'When the party…'. `summary` is the immediate consequence in one short sentence. `read_text` is what the DM reads aloud: second person, grounded in the module's tone and everything established above, never contradicting it, ending at a natural decision point. If the players' action STARTS COMBAT, set node_type to 'initiative', trigger to 'Roll initiative', name the enemies AND their count in the summary (e.g. 'Two shadow-wolves attack.'), and make read_text the moment combat erupts; otherwise node_type is 'story'.",
   );
   return lines.join("\n");
 }
