@@ -36,13 +36,6 @@ const KIND_STYLE: Record<ActionCard["kind"], { label: string; chip: string }> = 
 
 const ABILITY_LABEL = { str: "STR", dex: "DEX", con: "CON", int: "INT", wis: "WIS", cha: "CHA" };
 
-function hpTone(c: Combatant): string {
-  if (c.hp === null || c.maxHp === null) return "text-amber-200/60";
-  if (c.hp <= 0) return "text-rose-400";
-  if (c.hp * 3 <= c.maxHp) return "text-rose-300";
-  return "text-emerald-200/90";
-}
-
 /** Best-known AC for a combatant: PC sheet, else campaign card, else compendium. */
 function armorClassOf(c: Combatant, party: DndCharacter[], npcs: DndNpc[]): number | null {
   if (c.characterId) {
@@ -62,13 +55,6 @@ function CombatantRow({ c, active, ac }: { c: Combatant; active: boolean; ac: nu
       }`}
     >
       <div className="flex items-center gap-2">
-        <span
-          className={`font-fantasy w-7 shrink-0 text-center text-base font-bold ${
-            active ? "text-rose-200" : "text-amber-300/60"
-          }`}
-        >
-          {c.initiative}
-        </span>
         <span className="font-fantasy min-w-0 flex-1 truncate text-sm font-bold text-amber-100">
           {c.name}
           {c.count > 1 && <span className="text-amber-300/70"> ×{c.count}</span>}
@@ -83,14 +69,9 @@ function CombatantRow({ c, active, ac }: { c: Combatant; active: boolean; ac: nu
             AC {ac}
           </span>
         )}
-        {c.maxHp !== null && (
-          <span className={`shrink-0 text-xs font-bold ${hpTone(c)}`}>
-            {c.hp ?? c.maxHp}/{c.maxHp}
-          </span>
-        )}
       </div>
       {(c.conditions.length > 0 || c.position !== "" || c.notes !== "") && (
-        <div className="mt-1 flex flex-wrap items-center gap-1 pl-9">
+        <div className="mt-1 flex flex-wrap items-center gap-1">
           {c.conditions.map((condition) => (
             <span
               key={condition}
@@ -425,7 +406,7 @@ export function CombatPanel({ combat, party, npcs, turnResult }: Props) {
         >
           Round {combat.round} · turn order
         </p>
-        <ol className="mt-2 flex min-h-0 flex-1 flex-col gap-1.5 overflow-y-auto">
+        <ol className="scrollbar-hide mt-2 flex min-h-0 flex-1 flex-col gap-1.5 overflow-y-auto">
           {rotated.map((c, i) => (
             <CombatantRow key={c.key} c={c} active={i === 0} ac={armorClassOf(c, party, npcs)} />
           ))}
