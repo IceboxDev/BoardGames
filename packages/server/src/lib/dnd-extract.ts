@@ -396,6 +396,7 @@ const RawCharacterSchema = z.object({
   tool_proficiencies: z.array(z.string()),
   saving_throws: z.array(z.string()),
   languages: z.array(z.string()),
+  attacks: z.array(z.string()).default([]),
   equipment: z.array(z.string()),
   spells: z.array(z.string()),
   personality: z.string().nullable(),
@@ -491,6 +492,13 @@ const CHARACTER_JSON_SCHEMA = {
       items: { type: "string" },
       description: "e.g. ['Common', \"Thieves' Cant\"].",
     },
+    attacks: {
+      type: "array",
+      maxItems: 12,
+      items: { type: "string" },
+      description:
+        "Every entry in the sheet's Attacks/Weapons section, transcribed VERBATIM and COMPLETE as one string each: weapon name, to-hit bonus, reach/range, damage dice and type, AND any rider printed with it (weapon masteries like Cleave or Topple, special properties, notes). Do not summarize or drop riders.",
+    },
     equipment: {
       type: "array",
       maxItems: 24,
@@ -529,6 +537,7 @@ const CHARACTER_JSON_SCHEMA = {
     "tool_proficiencies",
     "saving_throws",
     "languages",
+    "attacks",
     "equipment",
     "spells",
     "personality",
@@ -539,7 +548,7 @@ const CHARACTER_JSON_SCHEMA = {
 
 const CHARACTER_PROMPT = `You are assisting a Dungeon Master. The attached PDF is one player's D&D character sheet (possibly with backstory pages). Transcribe the character into the requested structure.
 CRITICAL: numbers must be copied EXACTLY as printed on the sheet — especially every skill's total modifier. Never recompute or 'correct' a printed value; if the sheet says +7, the answer is 7.
-Extract: character name; the player's real name from the 'Player Name' header field (null if blank); race; class (with multiclass splits); total level; alignment; the six ability scores; max HP; armor class; speed; ALL 18 skills with their printed total modifiers and proficiency marks (a filled bubble/checkbox/asterisk = proficient, a double mark or doubled proficiency = expertise, otherwise none); proficiencies split into armor, weapons, and tools; proficient saving throws; languages; notable equipment; known or prepared spells (empty for non-casters); a condensed personality summary; and a short DM-facing backstory summary. Use null for anything the sheet doesn't state. Do not invent details that are not in the document.`;
+Extract: character name; the player's real name from the 'Player Name' header field (null if blank); race; class (with multiclass splits); total level; alignment; the six ability scores; max HP; armor class; speed; ALL 18 skills with their printed total modifiers and proficiency marks (a filled bubble/checkbox/asterisk = proficient, a double mark or doubled proficiency = expertise, otherwise none); proficiencies split into armor, weapons, and tools; proficient saving throws; languages; every attack entry from the Attacks/Weapons section transcribed verbatim and complete (to-hit, range, damage, and any printed riders such as weapon masteries like Cleave — never drop the rider text); notable equipment; known or prepared spells (empty for non-casters); a condensed personality summary; and a short DM-facing backstory summary. Use null for anything the sheet doesn't state. Do not invent details that are not in the document.`;
 
 function clampScore(value: number): number {
   return Math.min(30, Math.max(1, Math.round(value)));
@@ -615,6 +624,10 @@ export function normalizeCharacter(raw: unknown): CharacterSheet {
     languages: clampList(parsed.languages, 12, 40),
     // Legacy flat list — superseded by the categorized fields above.
     proficiencies: [],
+    attacks: parsed.attacks
+      .map((a) => clamp(a, 300))
+      .filter((a) => a.length > 0)
+      .slice(0, 12),
     equipment: clampList(parsed.equipment, EQUIPMENT_MAX, 80),
     spells: clampList(parsed.spells, SPELLS_MAX, 60),
     personality: clampNullable(parsed.personality, PERSONALITY_MAX),
@@ -1307,7 +1320,7 @@ export function normalizeActionCards(raw: unknown): ActionCard[] {
 export async function generateActionCards(sheetJson: string): Promise<ActionCard[]> {
   const client = getClient();
   const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
-  const prompt = `You are preparing a DM's combat dashboard for one D&D player character. From the character sheet JSON below, produce 6–10 action cards covering the MIX a DM needs at a glance during that character's turn: weapon attacks (one card per relevant weapon, with to-hit and damage math computed from the sheet's abilities, proficiency, and weapon type), cantrips and the most combat-relevant prepared/known spells (attack roll or save DC, damage/effect), signature class/bonus-action features appropriate to the class and level (e.g. Cunning Action, Steady Aim, Sneak Attack dice, Second Wind, racial traits like Feline Agility), and — only when the character has few special options — 1–2 basics (Dash, Disengage, Dodge, Hide). Prioritize the most important options for characters with long lists; keep the set normalized so every character's dashboard reads the same way. Compute concrete numbers where the sheet allows; do not invent items or spells the sheet doesn't have.
+  const prompt = `You are preparing a DM's combat dashboard for one D&D player character. From the character sheet JSON below, produce 6–10 action cards covering the MIX a DM needs at a glance during that character's turn: weapon attacks (one card per relevant weapon — when the sheet's 'attacks' array has a printed entry, use ITS numbers and carry its full rider text (weapon masteries like Cleave, special properties) into the card's roll/note; otherwise compute from abilities, proficiency, and weapon type), cantrips and the most combat-relevant prepared/known spells (attack roll or save DC, damage/effect), signature class/bonus-action features appropriate to the class and level (e.g. Cunning Action, Steady Aim, Sneak Attack dice, Second Wind, racial traits like Feline Agility), and — only when the character has few special options — 1–2 basics (Dash, Disengage, Dodge, Hide). Prioritize the most important options for characters with long lists; keep the set normalized so every character's dashboard reads the same way. Compute concrete numbers where the sheet allows; do not invent items or spells the sheet doesn't have.
 
 Character sheet JSON:
 ${sheetJson}`;

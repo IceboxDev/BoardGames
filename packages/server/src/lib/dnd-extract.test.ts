@@ -185,6 +185,22 @@ const RAW_NPC = {
   secrets: "He believes Ireena is Tatyana reborn.",
 };
 
+describe("normalizeCharacter attacks", () => {
+  it("keeps verbatim attack entries with riders, clamped", () => {
+    const sheet = normalizeCharacter({
+      ...RAW_CHARACTER,
+      attacks: [
+        "Greataxe. Melee Weapon Attack: +5 to hit, reach 5 ft. Hit: 1d12+3 slashing. + Cleave: On hit, once per turn attack second target within 5 ft. for 1d12 slashing.",
+        "   ",
+        `Dagger. ${"x".repeat(400)}`,
+      ],
+    });
+    expect(sheet.attacks).toHaveLength(2);
+    expect(sheet.attacks[0]).toContain("Cleave");
+    expect(sheet.attacks[1]?.length).toBeLessThanOrEqual(300);
+  });
+});
+
 describe("normalizeNpcs", () => {
   it("passes clean NPCs through", () => {
     const npcs = normalizeNpcs({ npcs: [RAW_NPC] });

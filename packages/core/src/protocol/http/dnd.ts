@@ -171,6 +171,8 @@ export const CharacterSheetSchema = z.object({
   toolProficiencies: z.array(z.string().min(1).max(60)).max(12).default([]),
   savingThrows: z.array(z.string().min(1).max(20)).max(6).default([]),
   languages: z.array(z.string().min(1).max(40)).max(12).default([]),
+  /** Attack entries VERBATIM from the sheet, riders included ("Greataxe. +5 to hit... + Cleave: ..."). */
+  attacks: z.array(z.string().min(1).max(300)).max(12).default([]),
   /** Legacy flat list (pre-categorization rows); display fallback only. */
   proficiencies: z.array(z.string().min(1).max(60)).max(24),
   equipment: z.array(z.string().min(1).max(80)).max(24),

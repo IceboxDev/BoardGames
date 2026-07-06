@@ -644,7 +644,7 @@ dndCampaignRoutes.post("/combats/:id/turn", zJsonBody(ResolveTurnRequestSchema),
           const abilities = sheet.abilities
             ? `, abilities ${ABILITY_KEYS.map((k) => `${k.toUpperCase()} ${sheet.abilities?.[k]}`).join(" ")}`
             : "";
-          return `${displayCharacterName(sheet, ch.sourceFilename)}: ${identity}, AC ${sheet.armorClass ?? "?"}, HP ${sheet.maxHp ?? "?"}, speed ${sheet.speed ?? "?"}${abilities}; weapons/gear: ${sheet.equipment.join(", ") || "-"}; spells: ${sheet.spells.join(", ") || "-"}${options ? `; combat options (authoritative — the character HAS all of these): ${options}` : ""}`;
+          return `${displayCharacterName(sheet, ch.sourceFilename)}: ${identity}, AC ${sheet.armorClass ?? "?"}, HP ${sheet.maxHp ?? "?"}, speed ${sheet.speed ?? "?"}${abilities}${sheet.attacks.length > 0 ? `; attacks (verbatim from sheet): ${sheet.attacks.join(" | ")}` : ""}; weapons/gear: ${sheet.equipment.join(", ") || "-"}; spells: ${sheet.spells.join(", ") || "-"}${options ? `; combat options (authoritative — the character HAS all of these): ${options}` : ""}`;
         }),
     )
   ).filter((brief) => brief.length > 0);

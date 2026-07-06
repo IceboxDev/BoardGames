@@ -132,6 +132,9 @@ const VEX_SHEET: NonNullable<DndCharacter["sheet"]> = {
   savingThrows: ["Wisdom", "Charisma"],
   languages: ["Common", "Elvish"],
   proficiencies: [],
+  attacks: [
+    "Longsword. Melee Weapon Attack: +6 to hit, reach 5 ft. Hit: 1d8+3 slashing (1d10+3 two-handed).",
+  ],
   equipment: ["Longsword", "Shield", "Chain mail", "Holy symbol of Lathander"],
   spells: ["Bless", "Shield of Faith", "Cure Wounds", "Thunderous Smite"],
   personality: "Charges first, apologizes later. Cannot walk past an injustice.",

@@ -724,6 +724,19 @@ export function CharacterSheetModal({ character, onClose }: Props) {
                 </div>
               </div>
 
+              {sheet.attacks.length > 0 && (
+                <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                  <SectionHeading>Attacks</SectionHeading>
+                  <ul className="mt-1 flex flex-col gap-1.5">
+                    {sheet.attacks.map((attack) => (
+                      <li key={attack} className="text-xs leading-relaxed text-amber-200/75">
+                        {attack}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
               {sheet.equipment.length > 0 && (
                 <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
                   <SectionHeading>Equipment</SectionHeading>
