@@ -14,7 +14,7 @@ import {
   CHECKPOINT_TITLE_MAX,
   DND_SKILLS,
 } from "@boardgames/core/protocol";
-import OpenAI from "openai";
+import OpenAI, { type ClientOptions } from "openai";
 import { z } from "zod";
 
 // Campaign extraction: send an adventure-module PDF to an OpenAI model and get
@@ -37,7 +37,11 @@ function getClient(): OpenAI {
   if (!apiKey) {
     throw new DndConfigError("Campaign extraction is not configured (OPENAI_API_KEY).");
   }
-  return new OpenAI({ apiKey });
+  // The SDK's default Node HTTP client is node-fetch@2, whose long-known
+  // "Premature close" bug fires systematically on Railway's egress path
+  // (FetchError [ERR_STREAM_PREMATURE_CLOSE] on every attempt). Node's
+  // built-in undici fetch doesn't have it.
+  return new OpenAI({ apiKey, fetch: globalThis.fetch as unknown as ClientOptions["fetch"] });
 }
 
 /**
@@ -119,6 +123,36 @@ async function createWithRetry(
     throw new Error(`openai response ${res.status ?? "unknown"}: ${detail}`);
   }
   return res;
+}
+
+/**
+ * Reachability probe for `/api/health/openai` — lets us verify the deploy
+ * host's path to OpenAI without playing a combat turn. `gen: true` runs a
+ * one-word generation through the exact background+poll transport the
+ * referee uses; plain mode is a free models.list.
+ */
+export async function probeOpenAI(
+  gen: boolean,
+): Promise<{ ok: true; detail: string } | { ok: false; error: string }> {
+  const t0 = Date.now();
+  try {
+    const client = getClient();
+    if (!gen) {
+      const models = await client.models.list();
+      return {
+        ok: true,
+        detail: `models.list ok (${models.data.length} models, ${Date.now() - t0}ms)`,
+      };
+    }
+    const res = await createWithRetry(client, {
+      model: process.env.OPENAI_MODEL ?? "gpt-5.5",
+      input: [{ role: "user", content: [{ type: "input_text", text: "Reply with exactly: OK" }] }],
+    });
+    const text = responseOutputText(res).slice(0, 40);
+    return { ok: true, detail: `background generation ok (${Date.now() - t0}ms): ${text}` };
+  } catch (err) {
+    return { ok: false, error: causeChain(err) };
+  }
 }
 
 /**

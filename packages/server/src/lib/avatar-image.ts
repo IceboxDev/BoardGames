@@ -1,4 +1,4 @@
-import OpenAI from "openai";
+import OpenAI, { type ClientOptions } from "openai";
 import sharp from "sharp";
 
 // OpenAI image generation + sharp processing for AI avatars.
@@ -32,7 +32,8 @@ function resolveQuality(): ImageQuality {
 function getClient(): OpenAI {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) throw new AvatarConfigError("Image generation is not configured (OPENAI_API_KEY).");
-  return new OpenAI({ apiKey });
+  // node-fetch (the SDK's default) premature-closes on Railway; use undici.
+  return new OpenAI({ apiKey, fetch: globalThis.fetch as unknown as ClientOptions["fetch"] });
 }
 
 export function dataUriToBuffer(dataUri: string): Buffer {

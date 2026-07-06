@@ -31,6 +31,7 @@ import { matchHistoryRoutes } from "./auth-routes/match-history.ts";
 import { profileRoutes } from "./auth-routes/profile.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
+import { probeOpenAI } from "./lib/dnd-extract.ts";
 import { persistenceRoutes } from "./persistence/routes.ts";
 import { getRegisteredSlugs } from "./sessions/machine-registry.ts";
 import { handleWsClose, handleWsMessage, wsAuth } from "./sessions/manager.ts";
@@ -85,6 +86,13 @@ app.on(["GET", "POST"], "/api/auth/*", (c) => auth.handler(c.req.raw));
 app.get("/api/auth-config", (c) =>
   c.json(AuthConfigSchema.parse({ googleEnabled: Boolean(process.env.GOOGLE_CLIENT_ID) })),
 );
+
+// OpenAI reachability from THIS host (`?gen=1` exercises the referee's
+// exact background+poll transport with a one-word generation).
+app.get("/api/health/openai", async (c) => {
+  const result = await probeOpenAI(c.req.query("gen") === "1");
+  return c.json(result, result.ok ? 200 : 502);
+});
 
 // `commit` verifies WHICH build is live (Railway injects the SHA) — deploy
 // races have burned us before ("the fix doesn't work" while it was rolling).
