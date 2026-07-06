@@ -657,6 +657,7 @@ dndCampaignRoutes.post("/combats/:id/turn", zJsonBody(ResolveTurnRequestSchema),
     const result = await resolveCombatTurn({
       round: combat.round,
       currentName: current.name,
+      currentCount: current.count,
       combatants: combat.combatants,
       partyBriefs,
       npcBriefs,

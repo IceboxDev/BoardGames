@@ -1335,6 +1335,8 @@ ${sheetJson}`;
 export interface CombatTurnContext {
   round: number;
   currentName: string;
+  /** Group size of the acting combatant — ×3 means all three act this turn. */
+  currentCount: number;
   combatants: Combatant[];
   /** Party sheet briefs (name, class, key numbers, equipment, spells). */
   partyBriefs: string[];
@@ -1418,8 +1420,12 @@ const TURN_JSON_SCHEMA = {
 
 function buildTurnPrompt(ctx: CombatTurnContext): string {
   const lines: string[] = [];
+  const actor =
+    ctx.currentCount > 1
+      ? `the ${ctx.currentName} group's turn (×${ctx.currentCount} — ALL ${ctx.currentCount} creatures act on this shared initiative; the report may describe a different action for each one)`
+      : `${ctx.currentName}'s turn`;
   lines.push(
-    `You are the combat referee and narrator at a D&D table. Round ${ctx.round}; it is ${ctx.currentName}'s turn. The DM resolved the turn physically at the table and reports it below. Your jobs, in order:`,
+    `You are the combat referee and narrator at a D&D table. Round ${ctx.round}; it is ${actor}. The DM resolved the turn physically at the table and reports it below. Your jobs, in order:`,
   );
   lines.push(
     "1. LEGALITY: alert ONLY on clear violations — action economy (one action, one bonus action per turn), spell slots or ammunition the notes/history show as already spent, conditions that forbid the act, abilities the character simply does not have (each PC's listed combat options are AUTHORITATIVE: if an option appears in their sheet brief, they have it — never claim otherwise), or ranges that contradict explicitly tracked positions. The tracked state is a coarse sketch: positions are approximate free text and most battlefield facts are never recorded. The DM is looking at the real battlefield — when a precondition (advantage, an ally within 5 ft, line of sight, flanking) is merely NOT RECORDED, assume the DM ruled it correctly at the table and do not alert. Absence of evidence is not a violation. When there are violations, return alerts naming each one, an empty narration, and NO updates.",
@@ -1428,7 +1434,7 @@ function buildTurnPrompt(ctx: CombatTurnContext): string {
     "2. STATE: when legal, return full replacement state for every combatant the turn touched — hp after damage/healing (respect resistances/immunities implied by the creature's nature), added/removed conditions, updated positions and distances (keep them consistent for range checks next turn), and cumulative notes for spent resources (arrows, spell slots, feature uses).",
   );
   lines.push(
-    "3. NARRATION: write the read-aloud for the whole turn — the arrow's flight, the blade's bite, damage that felt weaker than it should (implying resistance) — grounded in exactly what the DM reported and the numbers rolled.",
+    "3. NARRATION: write the read-aloud for the whole turn — the arrow's flight, the blade's bite, damage that felt weaker than it should (implying resistance) — grounded in exactly what the DM reported and the numbers rolled. Cover EVERY action in the report: when a group acts, narrate each creature's action in sequence — never stop after the first.",
   );
   lines.push("");
   lines.push(
