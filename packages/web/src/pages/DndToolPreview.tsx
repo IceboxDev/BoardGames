@@ -14,6 +14,7 @@ import { CharacterCard } from "../games/dungeons-and-dragons/components/Characte
 import { CharacterSheetModal } from "../games/dungeons-and-dragons/components/CharacterSheetModal";
 import { CombatPanel } from "../games/dungeons-and-dragons/components/CombatPanel";
 import { HallHero } from "../games/dungeons-and-dragons/components/HallHero";
+import { PlayerCardLarge } from "../games/dungeons-and-dragons/components/PlayerCardLarge";
 import { DndGameScreen } from "../games/dungeons-and-dragons/DndGameScreen";
 import { qk } from "../lib/query-keys";
 
@@ -569,6 +570,15 @@ export default function DndToolPreview() {
       </div>
 
       <div className="mx-auto flex max-w-6xl flex-col gap-3 px-3 pb-8">
+        <SectionTitle>Players — session overview cards</SectionTitle>
+        <ul className="grid grid-cols-1 gap-3 md:grid-cols-2">
+          {PARTY.filter((ch) => ch.status === "ready" && ch.sheet).map((character) => (
+            <li key={character.id} className="min-h-0">
+              <PlayerCardLarge character={character} onView={() => setViewingSheet(true)} />
+            </li>
+          ))}
+        </ul>
+
         <SectionTitle>Combat — action dashboard (PC turn)</SectionTitle>
         <div className="flex h-[440px] overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-3">
           <CombatPanel combat={COMBAT} party={PARTY} npcs={NPCS} turnResult={null} />

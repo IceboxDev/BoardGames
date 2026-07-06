@@ -40,6 +40,43 @@ function getClient(): OpenAI {
   return new OpenAI({ apiKey });
 }
 
+/**
+ * The Responses API occasionally drops the connection mid-body ("Premature
+ * close") — the SDK's built-in retries only cover failures BEFORE the body
+ * streams, so transient network errors here need their own retry loop.
+ * Mid-combat is the worst place to surface one of these.
+ */
+const TRANSIENT_ERROR =
+  /premature close|econnreset|econnrefused|etimedout|socket hang up|terminated|fetch failed|network|aborted/i;
+
+function transientMessage(err: unknown): string {
+  if (!(err instanceof Error)) return "";
+  const cause = err.cause instanceof Error ? ` ${err.cause.message}` : "";
+  return `${err.message}${cause}`;
+}
+
+async function createWithRetry(
+  client: OpenAI,
+  params: OpenAI.Responses.ResponseCreateParamsNonStreaming,
+): Promise<OpenAI.Responses.Response> {
+  const attempts = 3;
+  let lastErr: unknown;
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      return await client.responses.create(params);
+    } catch (err) {
+      lastErr = err;
+      if (attempt === attempts || !TRANSIENT_ERROR.test(transientMessage(err))) throw err;
+      console.warn(
+        `[dnd] openai transient error (attempt ${attempt}/${attempts}), retrying:`,
+        transientMessage(err),
+      );
+      await new Promise((resolve) => setTimeout(resolve, 1000 * attempt));
+    }
+  }
+  throw lastErr;
+}
+
 export interface CampaignExtraction {
   title: string;
   tagline: string | null;
@@ -182,7 +219,7 @@ async function runPdfExtraction(args: {
   const client = getClient();
   const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
 
-  const res = await client.responses.create({
+  const res = await createWithRetry(client, {
     model,
     input: [
       {
@@ -1096,7 +1133,7 @@ export async function generateStoryNode(ctx: StoryNodeContext): Promise<StoryNod
   const client = getClient();
   const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
 
-  const res = await client.responses.create({
+  const res = await createWithRetry(client, {
     model,
     input: [{ role: "user", content: [{ type: "input_text", text: buildNodePrompt(ctx) }] }],
     text: {
@@ -1181,7 +1218,7 @@ export async function generateActionCards(sheetJson: string): Promise<ActionCard
 
 Character sheet JSON:
 ${sheetJson}`;
-  const res = await client.responses.create({
+  const res = await createWithRetry(client, {
     model,
     input: [{ role: "user", content: [{ type: "input_text", text: prompt }] }],
     text: {
@@ -1345,7 +1382,7 @@ export function normalizeTurnResult(raw: unknown): CombatTurnResult {
 export async function resolveCombatTurn(ctx: CombatTurnContext): Promise<CombatTurnResult> {
   const client = getClient();
   const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
-  const res = await client.responses.create({
+  const res = await createWithRetry(client, {
     model,
     input: [{ role: "user", content: [{ type: "input_text", text: buildTurnPrompt(ctx) }] }],
     text: {
