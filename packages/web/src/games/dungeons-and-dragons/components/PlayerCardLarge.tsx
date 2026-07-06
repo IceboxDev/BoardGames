@@ -1,5 +1,5 @@
 import type { AbilityKey, DndCharacter } from "@boardgames/core/protocol";
-import { ABILITY_KEYS } from "@boardgames/core/protocol";
+import { ABILITY_KEYS, displayCharacterName } from "@boardgames/core/protocol";
 
 // The in-game Players grid card: a mini character sheet, not just a row.
 // Shows identity, combat vitals, the full ability strip, and a personality
@@ -29,6 +29,7 @@ type Props = {
 export function PlayerCardLarge({ character, onView }: Props) {
   const sheet = character.sheet;
   if (!sheet) return null;
+  const shownName = displayCharacterName(sheet, character.sourceFilename);
 
   const identityLine = [
     sheet.race,
@@ -51,11 +52,11 @@ export function PlayerCardLarge({ character, onView }: Props) {
           aria-hidden="true"
           className="font-fantasy grid h-12 w-12 shrink-0 place-items-center rounded-full bg-amber-500/20 text-xl font-bold text-amber-200 ring-1 ring-amber-400/50"
         >
-          {sheet.name[0]?.toUpperCase()}
+          {shownName[0]?.toUpperCase()}
         </span>
         <span className="min-w-0 flex-1">
           <span className="font-fantasy block truncate text-xl font-bold text-amber-100">
-            {sheet.name}
+            {shownName}
           </span>
           <span className="block truncate text-xs italic text-amber-200/65" style={SERIF}>
             {identityLine}

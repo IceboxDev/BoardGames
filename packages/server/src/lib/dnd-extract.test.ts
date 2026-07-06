@@ -85,6 +85,7 @@ describe("normalizeExtraction", () => {
 
 const RAW_CHARACTER = {
   name: "Vex the Bold",
+  player_name: "Mantas",
   race: "Half-Elf",
   class: "Paladin",
   level: 5,
@@ -93,7 +94,19 @@ const RAW_CHARACTER = {
   max_hp: 44,
   armor_class: 18,
   speed: "30 ft.",
-  proficiencies: ["Athletics", "Persuasion"],
+  passive_perception: 12,
+  skills: [
+    { name: "Athletics", modifier: 6, proficiency: "proficient" },
+    { name: "Perception", modifier: 2, proficiency: "proficient" },
+    { name: "stealth", modifier: 0, proficiency: "none" },
+    { name: "Basket Weaving", modifier: 9, proficiency: "expertise" },
+    { name: "Athletics", modifier: 1, proficiency: "none" },
+  ],
+  armor_proficiencies: ["All armor", "Shields"],
+  weapon_proficiencies: ["Simple weapons", "Martial weapons"],
+  tool_proficiencies: [],
+  saving_throws: ["Wisdom", "Charisma"],
+  languages: ["Common", "Elvish"],
   equipment: ["Longsword", "Shield"],
   spells: ["Bless"],
   personality: "Charges first, apologizes later.",
@@ -104,8 +117,33 @@ describe("normalizeCharacter", () => {
   it("passes a clean sheet through", () => {
     const sheet = normalizeCharacter(RAW_CHARACTER);
     expect(sheet.name).toBe("Vex the Bold");
+    expect(sheet.playerName).toBe("Mantas");
     expect(sheet.abilities).toEqual(RAW_CHARACTER.abilities);
     expect(sheet.maxHp).toBe(44);
+    // Printed value, NOT recomputed from WIS (which would give 11).
+    expect(sheet.passivePerception).toBe(12);
+    expect(sheet.savingThrows).toEqual(["Wisdom", "Charisma"]);
+  });
+
+  it("canonicalizes skills, drops unknowns, keeps first duplicate", () => {
+    const sheet = normalizeCharacter(RAW_CHARACTER);
+    expect(sheet.skills).toEqual([
+      { name: "Athletics", modifier: 6, proficiency: "proficient" },
+      { name: "Perception", modifier: 2, proficiency: "proficient" },
+      { name: "Stealth", modifier: 0, proficiency: "none" },
+    ]);
+  });
+
+  it("accepts a nameless character when the player name exists", () => {
+    const sheet = normalizeCharacter({ ...RAW_CHARACTER, name: null });
+    expect(sheet.name).toBeNull();
+    expect(sheet.playerName).toBe("Mantas");
+  });
+
+  it("throws when both names are missing", () => {
+    expect(() => normalizeCharacter({ ...RAW_CHARACTER, name: null, player_name: " " })).toThrow(
+      /no character or player name/,
+    );
   });
 
   it("clamps out-of-range numbers instead of failing", () => {
@@ -132,10 +170,6 @@ describe("normalizeCharacter", () => {
 
   it("falls back to 'Adventurer' for a blank class", () => {
     expect(normalizeCharacter({ ...RAW_CHARACTER, class: "  " }).class).toBe("Adventurer");
-  });
-
-  it("throws on a missing name", () => {
-    expect(() => normalizeCharacter({ ...RAW_CHARACTER, name: "  " })).toThrow(/no character name/);
   });
 });
 

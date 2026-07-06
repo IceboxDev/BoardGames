@@ -102,6 +102,7 @@ const ERROR_CAMPAIGN: Campaign = {
 
 const VEX_SHEET: NonNullable<DndCharacter["sheet"]> = {
   name: "Vex the Bold",
+  playerName: "Mantas",
   race: "Half-Elf",
   class: "Paladin",
   level: 5,
@@ -110,7 +111,20 @@ const VEX_SHEET: NonNullable<DndCharacter["sheet"]> = {
   maxHp: 44,
   armorClass: 18,
   speed: "30 ft.",
-  proficiencies: ["Athletics", "Persuasion", "Religion", "Smith's tools"],
+  passivePerception: 12,
+  skills: [
+    { name: "Athletics", modifier: 6, proficiency: "proficient" as const },
+    { name: "Persuasion", modifier: 6, proficiency: "proficient" as const },
+    { name: "Perception", modifier: 2, proficiency: "proficient" as const },
+    { name: "Religion", modifier: 2, proficiency: "proficient" as const },
+    { name: "Stealth", modifier: -1, proficiency: "none" as const },
+  ],
+  armorProficiencies: ["All armor", "Shields"],
+  weaponProficiencies: ["Simple weapons", "Martial weapons"],
+  toolProficiencies: ["Smith's tools"],
+  savingThrows: ["Wisdom", "Charisma"],
+  languages: ["Common", "Elvish"],
+  proficiencies: [],
   equipment: ["Longsword", "Shield", "Chain mail", "Holy symbol of Lathander"],
   spells: ["Bless", "Shield of Faith", "Cure Wounds", "Thunderous Smite"],
   personality: "Charges first, apologizes later. Cannot walk past an injustice.",
@@ -146,6 +160,7 @@ const PARTY: DndCharacter[] = [
     sheet: {
       ...VEX_SHEET,
       name: "Whisper",
+      playerName: "Riccardo",
       race: "Tabaxi",
       class: "Rogue (Arcane Trickster)",
       level: 5,
@@ -153,6 +168,18 @@ const PARTY: DndCharacter[] = [
       abilities: { str: 8, dex: 18, con: 12, int: 14, wis: 10, cha: 13 },
       maxHp: 33,
       armorClass: 15,
+      passivePerception: 14,
+      skills: [
+        { name: "Stealth", modifier: 8, proficiency: "expertise" as const },
+        { name: "Sleight of Hand", modifier: 8, proficiency: "expertise" as const },
+        { name: "Acrobatics", modifier: 4, proficiency: "proficient" as const },
+        { name: "Perception", modifier: 4, proficiency: "proficient" as const },
+      ],
+      armorProficiencies: ["Light armor"],
+      weaponProficiencies: ["Simple weapons", "Scimitar", "Shortsword", "Whip"],
+      toolProficiencies: ["Thieves' tools"],
+      savingThrows: ["Dexterity", "Intelligence"],
+      languages: ["Common", "Thieves' Cant"],
       spells: ["Mage Hand", "Minor Illusion", "Disguise Self"],
       personality: "Collects shiny things and secrets, in that order.",
       backstory: null,
@@ -292,7 +319,8 @@ const FILES = [
 
 export default function DndToolPreview() {
   const queryClient = useQueryClient();
-  const [viewingSheet, setViewingSheet] = useState(false);
+  // Sheet modal open by default — this dev page exists for screenshots.
+  const [viewingSheet, setViewingSheet] = useState(true);
   // Seed the game screen's internal queries (background refetch will fail
   // without a server, which keeps the seeded data — fine for a styling
   // preview).

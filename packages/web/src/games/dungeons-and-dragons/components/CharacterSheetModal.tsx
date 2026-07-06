@@ -1,16 +1,28 @@
-import type { AbilityKey, CharacterSheet, DndCharacter } from "@boardgames/core/protocol";
-import { ABILITY_KEYS, CharacterSheetSchema } from "@boardgames/core/protocol";
+import type {
+  AbilityKey,
+  CharacterSheet,
+  DndCharacter,
+  SkillProficiency,
+} from "@boardgames/core/protocol";
+import {
+  ABILITY_KEYS,
+  CharacterSheetSchema,
+  DND_SKILLS,
+  displayCharacterName,
+} from "@boardgames/core/protocol";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useId, useState } from "react";
 import { Button, Field, Input, Modal, Textarea } from "../../../components/ui";
 import { deleteCharacter, updateCharacter } from "../../../lib/dnd-campaigns";
 import { errorMessageOf } from "../../../lib/error-message";
 import { qk } from "../../../lib/query-keys";
+import { HoverTerm } from "./HoverTerm";
 
-// The party ledger entry — the internal representation of a character,
-// rendered as a full D&D-style sheet: ability column on the left, combat
-// vitals and derived stats up top, features and story on the right. The DM
-// can edit any extracted field or burn the entry entirely.
+// The party ledger entry, laid out like the official 5e character sheet with
+// a modern dark-D&D treatment: header band (name / class / player), a row of
+// combat shields, the ability rail, saving throws + the full 18-skill list
+// with proficiency pips, and labeled proficiency lines (Armor: … / Weapons:
+// … / Tools: … / Languages: …) whose terms hover-open compendium cards.
 
 const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
 
@@ -21,6 +33,15 @@ const ABILITY_LABEL: Record<AbilityKey, string> = {
   int: "Intelligence",
   wis: "Wisdom",
   cha: "Charisma",
+};
+
+const ABILITY_ABBR: Record<AbilityKey, string> = {
+  str: "Str",
+  dex: "Dex",
+  con: "Con",
+  int: "Int",
+  wis: "Wis",
+  cha: "Cha",
 };
 
 function mod(score: number): number {
@@ -37,17 +58,31 @@ function proficiencyBonus(level: number | null): number | null {
   return Math.floor((level - 1) / 4) + 2;
 }
 
-function VitalChip({ label, value }: { label: string; value: string }) {
+/**
+ * Passive Perception: the sheet's printed value first; else 10 + the
+ * Perception SKILL modifier (which already carries proficiency — 10+0+2, not
+ * 10+0); else 10 + WIS mod as the last resort.
+ */
+function passivePerception(sheet: CharacterSheet): number | null {
+  if (sheet.passivePerception !== null) return sheet.passivePerception;
+  const perception = sheet.skills.find((s) => s.name === "Perception");
+  if (perception) return 10 + perception.modifier;
+  return sheet.abilities ? 10 + mod(sheet.abilities.wis) : null;
+}
+
+function ProficiencyPip({ level }: { level: SkillProficiency }) {
   return (
-    <div className="flex flex-col items-center rounded-xl border border-amber-400/25 bg-[#1a0606]/70 px-3 py-1.5">
-      <span className="font-fantasy text-base font-bold text-amber-100">{value}</span>
-      <span
-        className="text-4xs font-bold uppercase tracking-[0.18em] text-amber-300/60"
-        style={SERIF}
-      >
-        {label}
-      </span>
-    </div>
+    <span
+      role="img"
+      aria-label={level}
+      className={`inline-block h-2 w-2 shrink-0 rotate-45 rounded-[2px] border ${
+        level === "expertise"
+          ? "border-amber-200 bg-amber-300"
+          : level === "proficient"
+            ? "border-amber-300/80 bg-amber-400/50"
+            : "border-amber-400/25 bg-transparent"
+      }`}
+    />
   );
 }
 
@@ -62,29 +97,26 @@ function SectionHeading({ children }: { children: string }) {
   );
 }
 
-function ListSection({ title, items }: { title: string; items: string[] }) {
-  if (items.length === 0) return null;
+/** "Armor: light armor" — the classic labeled proficiency line. */
+function LabeledTerms({ label, terms }: { label: string; terms: string[] }) {
+  if (terms.length === 0) return null;
   return (
-    <div className="flex flex-col gap-2">
-      <SectionHeading>{title}</SectionHeading>
-      <div className="flex flex-wrap gap-1.5">
-        {items.map((item) => (
-          <span
-            key={item}
-            className="rounded-full bg-white/[0.05] px-2.5 py-1 text-xs text-amber-100/85 ring-1 ring-amber-400/20"
-          >
-            {item}
-          </span>
-        ))}
-      </div>
-    </div>
+    <p className="text-xs leading-relaxed text-amber-200/75">
+      <span className="font-bold uppercase tracking-wide text-amber-300/70">{label}: </span>
+      {terms.map((term, i) => (
+        <span key={term}>
+          {i > 0 && ", "}
+          <HoverTerm term={term} />
+        </span>
+      ))}
+    </p>
   );
 }
 
 function ProseSection({ title, text }: { title: string; text: string | null }) {
   if (!text) return null;
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-1.5">
       <SectionHeading>{title}</SectionHeading>
       <p className="text-sm leading-relaxed text-amber-200/75" style={SERIF}>
         {text}
@@ -97,6 +129,7 @@ function ProseSection({ title, text }: { title: string; text: string | null }) {
 
 type FormState = {
   name: string;
+  playerName: string;
   race: string;
   class: string;
   level: string;
@@ -104,17 +137,19 @@ type FormState = {
   maxHp: string;
   armorClass: string;
   speed: string;
+  passivePerception: string;
   abilities: Record<AbilityKey, string>;
-  proficiencies: string;
   equipment: string;
   spells: string;
+  languages: string;
   personality: string;
   backstory: string;
 };
 
 function sheetToForm(sheet: CharacterSheet): FormState {
   return {
-    name: sheet.name,
+    name: sheet.name ?? "",
+    playerName: sheet.playerName ?? "",
     race: sheet.race ?? "",
     class: sheet.class,
     level: sheet.level?.toString() ?? "",
@@ -122,6 +157,7 @@ function sheetToForm(sheet: CharacterSheet): FormState {
     maxHp: sheet.maxHp?.toString() ?? "",
     armorClass: sheet.armorClass?.toString() ?? "",
     speed: sheet.speed ?? "",
+    passivePerception: sheet.passivePerception?.toString() ?? "",
     abilities: {
       str: sheet.abilities?.str.toString() ?? "10",
       dex: sheet.abilities?.dex.toString() ?? "10",
@@ -130,9 +166,9 @@ function sheetToForm(sheet: CharacterSheet): FormState {
       wis: sheet.abilities?.wis.toString() ?? "10",
       cha: sheet.abilities?.cha.toString() ?? "10",
     },
-    proficiencies: sheet.proficiencies.join(", "),
     equipment: sheet.equipment.join(", "),
     spells: sheet.spells.join(", "),
+    languages: sheet.languages.join(", "),
     personality: sheet.personality ?? "",
     backstory: sheet.backstory ?? "",
   };
@@ -157,9 +193,15 @@ function splitList(value: string): string[] {
     .filter((s) => s.length > 0);
 }
 
-function formToSheet(form: FormState): { sheet?: CharacterSheet; error?: string } {
-  const candidate = {
-    name: form.name.trim(),
+/** Merge the form over the existing sheet — skills etc. survive edits. */
+function formToSheet(
+  base: CharacterSheet,
+  form: FormState,
+): { sheet?: CharacterSheet; error?: string } {
+  const candidate: CharacterSheet = {
+    ...base,
+    name: optionalText(form.name),
+    playerName: optionalText(form.playerName),
     race: optionalText(form.race),
     class: form.class.trim(),
     level: optionalInt(form.level),
@@ -175,12 +217,16 @@ function formToSheet(form: FormState): { sheet?: CharacterSheet; error?: string 
     maxHp: optionalInt(form.maxHp),
     armorClass: optionalInt(form.armorClass),
     speed: optionalText(form.speed),
-    proficiencies: splitList(form.proficiencies),
+    passivePerception: optionalInt(form.passivePerception),
+    languages: splitList(form.languages),
     equipment: splitList(form.equipment),
     spells: splitList(form.spells),
     personality: optionalText(form.personality),
     backstory: optionalText(form.backstory),
   };
+  if (!candidate.name && !candidate.playerName) {
+    return { error: "Give them a character name or a player name — one must remain." };
+  }
   const parsed = CharacterSheetSchema.safeParse(candidate);
   if (!parsed.success) {
     const issue = parsed.error.issues[0];
@@ -228,21 +274,37 @@ export function CharacterSheetModal({ character, onClose }: Props) {
   const sheet = character.sheet;
   if (!sheet) return null;
 
-  const identityLine = [
-    sheet.race,
-    sheet.class,
-    sheet.level !== null ? `Level ${sheet.level}` : null,
-    sheet.alignment,
-  ]
-    .filter(Boolean)
-    .join(" · ");
-
+  const shownName = displayCharacterName(sheet, character.sourceFilename);
   const profBonus = proficiencyBonus(sheet.level);
+  const pp = passivePerception(sheet);
   const editing = form !== null;
+
+  const skillRows = DND_SKILLS.map((def) => {
+    const extracted = sheet.skills.find((s) => s.name === def.name);
+    return {
+      name: def.name,
+      abbr: ABILITY_ABBR[def.ability],
+      modifier: extracted?.modifier ?? (sheet.abilities ? mod(sheet.abilities[def.ability]) : 0),
+      proficiency: extracted?.proficiency ?? ("none" as SkillProficiency),
+    };
+  });
+
+  const savingThrowRows = ABILITY_KEYS.map((key) => {
+    const proficient = sheet.savingThrows.some(
+      (s) => s.toLowerCase() === ABILITY_LABEL[key].toLowerCase(),
+    );
+    const base = sheet.abilities ? mod(sheet.abilities[key]) : 0;
+    return {
+      key,
+      label: ABILITY_LABEL[key],
+      proficient,
+      modifier: base + (proficient ? (profBonus ?? 2) : 0),
+    };
+  });
 
   const handleSave = () => {
     if (!form) return;
-    const result = formToSheet(form);
+    const result = formToSheet(sheet, form);
     if (!result.sheet) {
       setFormError(result.error ?? "Invalid sheet");
       return;
@@ -251,29 +313,64 @@ export function CharacterSheetModal({ character, onClose }: Props) {
     saveMutation.mutate(result.sheet);
   };
 
+  const vitals: { label: string; value: string }[] = [
+    ...(sheet.armorClass !== null ? [{ label: "Armor Class", value: `${sheet.armorClass}` }] : []),
+    ...(sheet.abilities ? [{ label: "Initiative", value: fmtMod(mod(sheet.abilities.dex)) }] : []),
+    ...(sheet.speed ? [{ label: "Speed", value: sheet.speed }] : []),
+    ...(sheet.maxHp !== null ? [{ label: "Hit Point Max", value: `${sheet.maxHp}` }] : []),
+    ...(profBonus !== null ? [{ label: "Proficiency", value: fmtMod(profBonus) }] : []),
+    ...(pp !== null ? [{ label: "Passive Perception", value: `${pp}` }] : []),
+  ];
+
   return (
     <Modal
       onClose={onClose}
       eyebrow="Party ledger"
-      title={sheet.name}
+      title={shownName}
       titleClassName="font-fantasy text-3xl font-bold text-amber-100"
       subheader={
-        !editing && identityLine ? (
-          <p className="text-base italic text-amber-200/70" style={SERIF}>
-            {identityLine}
-          </p>
+        !editing ? (
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
+            <p className="text-base italic text-amber-200/70" style={SERIF}>
+              {[
+                sheet.race,
+                sheet.class,
+                sheet.level !== null ? `Level ${sheet.level}` : null,
+                sheet.alignment,
+              ]
+                .filter(Boolean)
+                .join(" · ")}
+            </p>
+            {sheet.playerName && (
+              <p className="text-xs text-amber-300/60" style={SERIF}>
+                played by{" "}
+                <span className="font-semibold text-amber-200/80">{sheet.playerName}</span>
+              </p>
+            )}
+          </div>
         ) : undefined
       }
-      panelClassName="max-w-4xl max-h-[92vh] overflow-y-auto border-amber-400/25"
+      panelClassName="max-w-5xl max-h-[94vh] min-h-[80vh] overflow-y-auto border-amber-400/25"
     >
       {editing ? (
         <div className="flex flex-col gap-4">
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            <Field label="Name" htmlFor={`${uid}-name`}>
+            <Field
+              label="Character name"
+              htmlFor={`${uid}-name`}
+              hint="Leave empty to go by the player's name"
+            >
               <Input
                 id={`${uid}-name`}
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
+              />
+            </Field>
+            <Field label="Player" htmlFor={`${uid}-player`}>
+              <Input
+                id={`${uid}-player`}
+                value={form.playerName}
+                onChange={(e) => setForm({ ...form, playerName: e.target.value })}
               />
             </Field>
             <Field label="Race" htmlFor={`${uid}-race`}>
@@ -290,7 +387,7 @@ export function CharacterSheetModal({ character, onClose }: Props) {
                 onChange={(e) => setForm({ ...form, class: e.target.value })}
               />
             </Field>
-            <div className="grid grid-cols-3 gap-3">
+            <div className="grid grid-cols-4 gap-3">
               <Field label="Level" htmlFor={`${uid}-level`}>
                 <Input
                   id={`${uid}-level`}
@@ -313,6 +410,14 @@ export function CharacterSheetModal({ character, onClose }: Props) {
                   inputMode="numeric"
                   value={form.armorClass}
                   onChange={(e) => setForm({ ...form, armorClass: e.target.value })}
+                />
+              </Field>
+              <Field label="Passive Perc." htmlFor={`${uid}-pp`}>
+                <Input
+                  id={`${uid}-pp`}
+                  inputMode="numeric"
+                  value={form.passivePerception}
+                  onChange={(e) => setForm({ ...form, passivePerception: e.target.value })}
                 />
               </Field>
             </div>
@@ -351,16 +456,12 @@ export function CharacterSheetModal({ character, onClose }: Props) {
             ))}
           </div>
 
-          <Field
-            label="Proficiencies"
-            htmlFor={`${uid}-prof`}
-            hint="Comma-separated (e.g. Athletics, Persuasion)"
-          >
+          <Field label="Languages" htmlFor={`${uid}-langs`} hint="Comma-separated">
             <Textarea
-              id={`${uid}-prof`}
+              id={`${uid}-langs`}
               rows={2}
-              value={form.proficiencies}
-              onChange={(e) => setForm({ ...form, proficiencies: e.target.value })}
+              value={form.languages}
+              onChange={(e) => setForm({ ...form, languages: e.target.value })}
             />
           </Field>
           <Field label="Equipment" htmlFor={`${uid}-equip`} hint="Comma-separated">
@@ -429,26 +530,28 @@ export function CharacterSheetModal({ character, onClose }: Props) {
         </div>
       ) : (
         <div className="flex flex-col gap-5">
-          {/* Combat vitals + derived stats. */}
-          <div className="flex flex-wrap gap-2">
-            {sheet.maxHp !== null && <VitalChip label="Hit Points" value={`${sheet.maxHp}`} />}
-            {sheet.armorClass !== null && (
-              <VitalChip label="Armor Class" value={`${sheet.armorClass}`} />
-            )}
-            {sheet.speed && <VitalChip label="Speed" value={sheet.speed} />}
-            {sheet.abilities && (
-              <VitalChip label="Initiative" value={fmtMod(mod(sheet.abilities.dex))} />
-            )}
-            {profBonus !== null && <VitalChip label="Proficiency" value={fmtMod(profBonus)} />}
-            {sheet.abilities && (
-              <VitalChip label="Passive Perception" value={`${10 + mod(sheet.abilities.wis)}`} />
-            )}
+          {/* Combat shields. */}
+          <div className="grid grid-cols-3 gap-2 sm:grid-cols-6">
+            {vitals.map((v) => (
+              <div
+                key={v.label}
+                className="flex flex-col items-center rounded-xl border border-amber-400/25 bg-[#1a0606]/70 px-2 py-2"
+              >
+                <span className="font-fantasy text-xl font-bold text-amber-100">{v.value}</span>
+                <span
+                  className="mt-0.5 text-center text-4xs font-bold uppercase tracking-[0.14em] text-amber-300/60"
+                  style={SERIF}
+                >
+                  {v.label}
+                </span>
+              </div>
+            ))}
           </div>
 
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-[200px_1fr]">
-            {/* Ability column — the classic left rail of a 5e sheet. */}
+          <div className="grid grid-cols-1 gap-5 md:grid-cols-12">
+            {/* Ability rail. */}
             {sheet.abilities && (
-              <div className="grid grid-cols-3 gap-2 sm:grid-cols-1 sm:content-start">
+              <div className="grid grid-cols-3 gap-2 md:col-span-3 md:grid-cols-1 md:content-start">
                 {ABILITY_KEYS.map((key) => {
                   const score = sheet.abilities?.[key];
                   if (score === undefined) return null;
@@ -475,10 +578,96 @@ export function CharacterSheetModal({ character, onClose }: Props) {
               </div>
             )}
 
-            <div className="flex min-w-0 flex-col gap-5">
-              <ListSection title="Proficiencies" items={sheet.proficiencies} />
-              <ListSection title="Equipment" items={sheet.equipment} />
-              <ListSection title="Spells" items={sheet.spells} />
+            {/* Saving throws + skills — the sheet's middle column. */}
+            <div className="flex flex-col gap-4 md:col-span-4">
+              <div className="rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                <SectionHeading>Saving Throws</SectionHeading>
+                <ul className="mt-2 flex flex-col gap-1">
+                  {savingThrowRows.map((row) => (
+                    <li key={row.key} className="flex items-center gap-2 text-xs">
+                      <ProficiencyPip level={row.proficient ? "proficient" : "none"} />
+                      <span className="w-7 text-right font-fantasy font-bold text-amber-100">
+                        {fmtMod(row.modifier)}
+                      </span>
+                      <span className="text-amber-200/75">{row.label}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                <SectionHeading>Skills</SectionHeading>
+                <ul className="mt-2 flex flex-col gap-1">
+                  {skillRows.map((row) => (
+                    <li key={row.name} className="flex items-center gap-2 text-xs">
+                      <ProficiencyPip level={row.proficiency} />
+                      <span className="w-7 text-right font-fantasy font-bold text-amber-100">
+                        {fmtMod(row.modifier)}
+                      </span>
+                      <span
+                        className={
+                          row.proficiency === "none" ? "text-amber-200/60" : "text-amber-100"
+                        }
+                      >
+                        {row.name}
+                      </span>
+                      <span className="text-3xs text-amber-300/40">({row.abbr})</span>
+                      {row.proficiency === "expertise" && (
+                        <span className="text-3xs text-amber-300/60">••</span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            {/* Proficiencies, gear, story — the sheet's right column. */}
+            <div className="flex min-w-0 flex-col gap-4 md:col-span-5">
+              <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                <SectionHeading>Proficiencies & Languages</SectionHeading>
+                <div className="mt-1 flex flex-col gap-1">
+                  <LabeledTerms label="Armor" terms={sheet.armorProficiencies} />
+                  <LabeledTerms label="Weapons" terms={sheet.weaponProficiencies} />
+                  <LabeledTerms label="Tools" terms={sheet.toolProficiencies} />
+                  <LabeledTerms label="Saving Throws" terms={sheet.savingThrows} />
+                  <LabeledTerms label="Languages" terms={sheet.languages} />
+                  {sheet.armorProficiencies.length === 0 &&
+                    sheet.weaponProficiencies.length === 0 &&
+                    sheet.toolProficiencies.length === 0 &&
+                    sheet.languages.length === 0 && (
+                      <LabeledTerms label="Proficiencies" terms={sheet.proficiencies} />
+                    )}
+                </div>
+              </div>
+
+              {sheet.equipment.length > 0 && (
+                <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                  <SectionHeading>Equipment</SectionHeading>
+                  <p className="mt-1 text-xs leading-relaxed text-amber-200/75">
+                    {sheet.equipment.map((item, i) => (
+                      <span key={item}>
+                        {i > 0 && ", "}
+                        <HoverTerm term={item} />
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              )}
+
+              {sheet.spells.length > 0 && (
+                <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                  <SectionHeading>Spells</SectionHeading>
+                  <p className="mt-1 text-xs leading-relaxed text-amber-200/75">
+                    {sheet.spells.map((spell, i) => (
+                      <span key={spell}>
+                        {i > 0 && ", "}
+                        <HoverTerm term={spell} />
+                      </span>
+                    ))}
+                  </p>
+                </div>
+              )}
+
               <ProseSection title="Personality" text={sheet.personality} />
               <ProseSection title="Backstory" text={sheet.backstory} />
             </div>
@@ -490,7 +679,7 @@ export function CharacterSheetModal({ character, onClose }: Props) {
             </p>
           )}
 
-          <div className="flex flex-wrap items-center justify-between gap-3 border-t border-amber-400/15 pt-3">
+          <div className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-amber-400/15 pt-3">
             <p className="text-3xs text-amber-200/40">
               Copied from {character.sourceFilename} by the scribes.
             </p>

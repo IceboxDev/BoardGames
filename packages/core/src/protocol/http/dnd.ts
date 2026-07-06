@@ -118,8 +118,44 @@ export const AbilityScoresSchema = z.object({
 });
 export type AbilityScores = z.infer<typeof AbilityScoresSchema>;
 
+/** The 18 core skills and the ability each keys off. */
+export const DND_SKILLS = [
+  { name: "Acrobatics", ability: "dex" },
+  { name: "Animal Handling", ability: "wis" },
+  { name: "Arcana", ability: "int" },
+  { name: "Athletics", ability: "str" },
+  { name: "Deception", ability: "cha" },
+  { name: "History", ability: "int" },
+  { name: "Insight", ability: "wis" },
+  { name: "Intimidation", ability: "cha" },
+  { name: "Investigation", ability: "int" },
+  { name: "Medicine", ability: "wis" },
+  { name: "Nature", ability: "int" },
+  { name: "Perception", ability: "wis" },
+  { name: "Performance", ability: "cha" },
+  { name: "Persuasion", ability: "cha" },
+  { name: "Religion", ability: "int" },
+  { name: "Sleight of Hand", ability: "dex" },
+  { name: "Stealth", ability: "dex" },
+  { name: "Survival", ability: "wis" },
+] as const satisfies readonly { name: string; ability: AbilityKey }[];
+
+export const SkillProficiencySchema = z.enum(["none", "proficient", "expertise"]);
+export type SkillProficiency = z.infer<typeof SkillProficiencySchema>;
+
+export const CharacterSkillSchema = z.object({
+  name: z.string().min(1).max(40),
+  /** Total modifier as printed on the sheet (e.g. +7 → 7). */
+  modifier: z.number().int().min(-10).max(20),
+  proficiency: SkillProficiencySchema,
+});
+export type CharacterSkill = z.infer<typeof CharacterSkillSchema>;
+
 export const CharacterSheetSchema = z.object({
-  name: z.string().min(1).max(80),
+  /** Character name — nullable so a cleared name falls back to the player. */
+  name: z.string().min(1).max(80).nullable(),
+  /** The real person playing this character. */
+  playerName: z.string().min(1).max(80).nullable().default(null),
   race: z.string().max(60).nullable(),
   class: z.string().max(80),
   level: z.number().int().min(1).max(20).nullable(),
@@ -128,6 +164,16 @@ export const CharacterSheetSchema = z.object({
   maxHp: z.number().int().min(1).max(999).nullable(),
   armorClass: z.number().int().min(1).max(40).nullable(),
   speed: z.string().max(40).nullable(),
+  /** As printed on the sheet — includes proficiency, NOT recomputed. */
+  passivePerception: z.number().int().min(1).max(40).nullable().default(null),
+  /** Per-skill totals with proficiency marks, as printed. */
+  skills: z.array(CharacterSkillSchema).max(20).default([]),
+  armorProficiencies: z.array(z.string().min(1).max(60)).max(12).default([]),
+  weaponProficiencies: z.array(z.string().min(1).max(60)).max(16).default([]),
+  toolProficiencies: z.array(z.string().min(1).max(60)).max(12).default([]),
+  savingThrows: z.array(z.string().min(1).max(20)).max(6).default([]),
+  languages: z.array(z.string().min(1).max(40)).max(12).default([]),
+  /** Legacy flat list (pre-categorization rows); display fallback only. */
   proficiencies: z.array(z.string().min(1).max(60)).max(24),
   equipment: z.array(z.string().min(1).max(80)).max(24),
   spells: z.array(z.string().min(1).max(60)).max(40),
@@ -135,6 +181,18 @@ export const CharacterSheetSchema = z.object({
   backstory: z.string().max(1200).nullable(),
 });
 export type CharacterSheet = z.infer<typeof CharacterSheetSchema>;
+
+/**
+ * The one display-name rule, used everywhere a character is shown: the
+ * character's name, else the player's name, else the caller's fallback
+ * (usually the source filename).
+ */
+export function displayCharacterName(
+  sheet: { name: string | null; playerName: string | null } | null | undefined,
+  fallback: string,
+): string {
+  return sheet?.name?.trim() || sheet?.playerName?.trim() || fallback;
+}
 
 export const DndCharacterSchema = z.object({
   id: z.string().min(1),

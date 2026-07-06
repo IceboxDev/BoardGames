@@ -22,6 +22,7 @@ import {
   DeleteCampaignResponseSchema,
   DeleteCharacterResponseSchema,
   DeletePartyResponseSchema,
+  displayCharacterName,
   GenerateNodeRequestSchema,
   GenerateNodeResponseSchema,
   ListCampaignsResponseSchema,
@@ -423,7 +424,13 @@ dndCampaignRoutes.post("/parties/:id/nodes", zJsonBody(GenerateNodeRequestSchema
     .map((ch) => {
       const s = ch.sheet;
       if (!s) return "";
-      return [s.name, "—", s.race, s.class, s.level !== null ? `level ${s.level}` : null]
+      return [
+        displayCharacterName(s, ch.sourceFilename),
+        "—",
+        s.race,
+        s.class,
+        s.level !== null ? `level ${s.level}` : null,
+      ]
         .filter(Boolean)
         .join(" ");
     })

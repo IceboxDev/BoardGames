@@ -9,6 +9,7 @@ import {
   CHECKPOINT_DESCRIPTION_MAX,
   CHECKPOINT_KINDS,
   CHECKPOINT_TITLE_MAX,
+  DND_SKILLS,
 } from "@boardgames/core/protocol";
 import OpenAI from "openai";
 import { z } from "zod";
@@ -225,7 +226,6 @@ const CLASS_MAX = 80;
 const ALIGNMENT_MAX = 40;
 const SPEED_MAX = 40;
 const LIST_ITEM_MAX = 80;
-const PROFICIENCIES_MAX = 24;
 const EQUIPMENT_MAX = 24;
 const SPELLS_MAX = 40;
 const PERSONALITY_MAX = 600;
@@ -240,8 +240,15 @@ const RawAbilityScoresSchema = z.object({
   cha: z.number(),
 });
 
-const RawCharacterSchema = z.object({
+const RawCharacterSkillSchema = z.object({
   name: z.string(),
+  modifier: z.number(),
+  proficiency: z.string(),
+});
+
+const RawCharacterSchema = z.object({
+  name: z.string().nullable(),
+  player_name: z.string().nullable(),
   race: z.string().nullable(),
   class: z.string(),
   level: z.number().nullable(),
@@ -250,7 +257,13 @@ const RawCharacterSchema = z.object({
   max_hp: z.number().nullable(),
   armor_class: z.number().nullable(),
   speed: z.string().nullable(),
-  proficiencies: z.array(z.string()),
+  passive_perception: z.number().nullable(),
+  skills: z.array(RawCharacterSkillSchema),
+  armor_proficiencies: z.array(z.string()),
+  weapon_proficiencies: z.array(z.string()),
+  tool_proficiencies: z.array(z.string()),
+  saving_throws: z.array(z.string()),
+  languages: z.array(z.string()),
   equipment: z.array(z.string()),
   spells: z.array(z.string()),
   personality: z.string().nullable(),
@@ -260,7 +273,11 @@ const RawCharacterSchema = z.object({
 const CHARACTER_JSON_SCHEMA = {
   type: "object",
   properties: {
-    name: { type: "string", description: "The character's name." },
+    name: { type: ["string", "null"], description: "The character's name." },
+    player_name: {
+      type: ["string", "null"],
+      description: "The real person's name from the sheet's 'Player Name' field, if filled in.",
+    },
     race: { type: ["string", "null"], description: "Race / species / lineage." },
     class: {
       type: "string",
@@ -285,11 +302,67 @@ const CHARACTER_JSON_SCHEMA = {
     max_hp: { type: ["integer", "null"], description: "Maximum hit points." },
     armor_class: { type: ["integer", "null"] },
     speed: { type: ["string", "null"], description: "e.g. '30 ft.'" },
-    proficiencies: {
+    passive_perception: {
+      type: ["integer", "null"],
+      description:
+        "The number printed in the sheet's 'Passive Wisdom (Perception)' box, copied EXACTLY — do NOT recompute it.",
+    },
+    skills: {
       type: "array",
-      maxItems: 24,
+      maxItems: 18,
+      description:
+        "All 18 skills from the sheet's skill list, each with its printed total modifier.",
+      items: {
+        type: "object",
+        properties: {
+          name: {
+            type: "string",
+            description: "Skill name exactly as standard: Acrobatics, Animal Handling, …",
+          },
+          modifier: {
+            type: "integer",
+            description: "The printed total modifier (e.g. '+7' → 7, '-1' → -1), copied EXACTLY.",
+          },
+          proficiency: {
+            type: "string",
+            enum: ["none", "proficient", "expertise"],
+            description:
+              "'proficient' if the sheet marks the skill (filled bubble/checkbox/asterisk); 'expertise' if double-marked or the modifier includes double proficiency.",
+          },
+        },
+        required: ["name", "modifier", "proficiency"],
+        additionalProperties: false,
+      },
+    },
+    armor_proficiencies: {
+      type: "array",
+      maxItems: 12,
       items: { type: "string" },
-      description: "Skill and tool proficiencies.",
+      description: "e.g. ['Light armor'].",
+    },
+    weapon_proficiencies: {
+      type: "array",
+      maxItems: 16,
+      items: { type: "string" },
+      description: "e.g. ['Simple weapons', 'Scimitar', 'Shortsword'].",
+    },
+    tool_proficiencies: {
+      type: "array",
+      maxItems: 12,
+      items: { type: "string" },
+      description: 'e.g. ["Thieves\' tools"].',
+    },
+    saving_throws: {
+      type: "array",
+      maxItems: 6,
+      items: { type: "string" },
+      description: "Proficient saving throws, e.g. ['Dexterity', 'Intelligence'].",
+    },
+    languages: {
+      type: "array",
+      maxItems: 12,
+      items: { type: "string" },
+      description: "e.g. ['Common', \"Thieves' Cant\"].",
     },
     equipment: {
       type: "array",
@@ -314,6 +387,7 @@ const CHARACTER_JSON_SCHEMA = {
   },
   required: [
     "name",
+    "player_name",
     "race",
     "class",
     "level",
@@ -322,7 +396,13 @@ const CHARACTER_JSON_SCHEMA = {
     "max_hp",
     "armor_class",
     "speed",
-    "proficiencies",
+    "passive_perception",
+    "skills",
+    "armor_proficiencies",
+    "weapon_proficiencies",
+    "tool_proficiencies",
+    "saving_throws",
+    "languages",
     "equipment",
     "spells",
     "personality",
@@ -331,7 +411,9 @@ const CHARACTER_JSON_SCHEMA = {
   additionalProperties: false,
 } as const;
 
-const CHARACTER_PROMPT = `You are assisting a Dungeon Master. The attached PDF is one player's D&D character sheet (possibly with backstory pages). Extract the character into the requested structure: name, race, class (with multiclass splits), total level, alignment, the six ability scores, max HP, armor class, speed, skill/tool proficiencies, notable equipment, known or prepared spells (empty list for non-casters), a condensed personality summary, and a short DM-facing backstory summary. Use null for anything the sheet doesn't state. Do not invent details that are not in the document.`;
+const CHARACTER_PROMPT = `You are assisting a Dungeon Master. The attached PDF is one player's D&D character sheet (possibly with backstory pages). Transcribe the character into the requested structure.
+CRITICAL: numbers must be copied EXACTLY as printed on the sheet — especially the 'Passive Wisdom (Perception)' box and every skill's total modifier. Never recompute or 'correct' a printed value; if the sheet says 12, the answer is 12.
+Extract: character name; the player's real name from the 'Player Name' header field (null if blank); race; class (with multiclass splits); total level; alignment; the six ability scores; max HP; armor class; speed; passive perception (printed value); ALL 18 skills with their printed total modifiers and proficiency marks (a filled bubble/checkbox/asterisk = proficient, a double mark or doubled proficiency = expertise, otherwise none); proficiencies split into armor, weapons, and tools; proficient saving throws; languages; notable equipment; known or prepared spells (empty for non-casters); a condensed personality summary; and a short DM-facing backstory summary. Use null for anything the sheet doesn't state. Do not invent details that are not in the document.`;
 
 function clampScore(value: number): number {
   return Math.min(30, Math.max(1, Math.round(value)));
@@ -349,21 +431,41 @@ function clampList(items: string[], maxItems: number, maxLen: number): string[] 
     .slice(0, maxItems);
 }
 
+const SKILL_NAME_BY_LOWER = new Map(DND_SKILLS.map((s) => [s.name.toLowerCase(), s.name]));
+
 /**
  * Validate + normalize a raw character extraction into the protocol's
  * `CharacterSheet` shape. Ability scores and numeric fields are clamped into
- * their legal ranges rather than rejected — a scanned sheet misread as
- * STR 160 should degrade, not fail the whole upload. Throws only on a
- * missing name (a nameless character card is useless).
+ * their legal ranges rather than rejected; unknown skill names are dropped
+ * and duplicate skills keep the first occurrence. Throws only when BOTH the
+ * character name and the player name are missing.
  */
 export function normalizeCharacter(raw: unknown): CharacterSheet {
   const parsed = RawCharacterSchema.parse(raw);
 
-  const name = clamp(parsed.name, NAME_MAX);
-  if (!name) throw new Error("the model returned no character name");
+  const name = clampNullable(parsed.name, NAME_MAX);
+  const playerName = clampNullable(parsed.player_name, NAME_MAX);
+  if (!name && !playerName) throw new Error("the model returned no character or player name");
+
+  const seenSkills = new Set<string>();
+  const skills = parsed.skills.flatMap((skill) => {
+    const canonical = SKILL_NAME_BY_LOWER.get(skill.name.trim().toLowerCase());
+    if (!canonical || seenSkills.has(canonical)) return [];
+    seenSkills.add(canonical);
+    return [
+      {
+        name: canonical,
+        modifier: Math.min(20, Math.max(-10, Math.round(skill.modifier))),
+        proficiency: (skill.proficiency === "proficient" || skill.proficiency === "expertise"
+          ? skill.proficiency
+          : "none") as "none" | "proficient" | "expertise",
+      },
+    ];
+  });
 
   return {
     name,
+    playerName,
     race: clampNullable(parsed.race, RACE_MAX),
     class: clamp(parsed.class, CLASS_MAX) || "Adventurer",
     level: clampInt(parsed.level, 1, 20),
@@ -379,7 +481,15 @@ export function normalizeCharacter(raw: unknown): CharacterSheet {
     maxHp: clampInt(parsed.max_hp, 1, 999),
     armorClass: clampInt(parsed.armor_class, 1, 40),
     speed: clampNullable(parsed.speed, SPEED_MAX),
-    proficiencies: clampList(parsed.proficiencies, PROFICIENCIES_MAX, 60),
+    passivePerception: clampInt(parsed.passive_perception, 1, 40),
+    skills,
+    armorProficiencies: clampList(parsed.armor_proficiencies, 12, 60),
+    weaponProficiencies: clampList(parsed.weapon_proficiencies, 16, 60),
+    toolProficiencies: clampList(parsed.tool_proficiencies, 12, 60),
+    savingThrows: clampList(parsed.saving_throws, 6, 20),
+    languages: clampList(parsed.languages, 12, 40),
+    // Legacy flat list — superseded by the categorized fields above.
+    proficiencies: [],
     equipment: clampList(parsed.equipment, EQUIPMENT_MAX, 80),
     spells: clampList(parsed.spells, SPELLS_MAX, 60),
     personality: clampNullable(parsed.personality, PERSONALITY_MAX),

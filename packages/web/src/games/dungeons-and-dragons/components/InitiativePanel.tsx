@@ -1,4 +1,5 @@
 import type { DndCharacter, DndNode, DndNpc } from "@boardgames/core/protocol";
+import { displayCharacterName } from "@boardgames/core/protocol";
 import { useId, useState } from "react";
 import { PlusIcon } from "../../../components/icons";
 import { D20Die } from "../../../components/offline/D20Die";
@@ -68,7 +69,7 @@ export function InitiativePanel({ node, party, npcs }: Props) {
     ...party
       .filter((ch) => ch.sheet)
       .map((ch) => ({
-        label: ch.sheet?.name ?? "?",
+        label: displayCharacterName(ch.sheet, ch.sourceFilename),
         kind: "pc" as const,
         value: Number.parseInt(pcRolls[ch.id] ?? "", 10),
       })),
@@ -109,7 +110,7 @@ export function InitiativePanel({ node, party, npcs }: Props) {
                     htmlFor={`${uid}-${ch.id}`}
                     className="min-w-0 flex-1 truncate text-sm text-amber-100"
                   >
-                    {ch.sheet?.name}
+                    {displayCharacterName(ch.sheet, ch.sourceFilename)}
                     <span className="ml-1.5 text-3xs text-amber-200/40">
                       DEX {fmtMod(dexMod(ch.sheet?.abilities?.dex))}
                     </span>

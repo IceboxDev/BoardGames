@@ -1,4 +1,5 @@
 import type { DndCharacter } from "@boardgames/core/protocol";
+import { displayCharacterName } from "@boardgames/core/protocol";
 import { TrashIcon } from "../../../components/icons";
 import { D20Die } from "../../../components/offline/D20Die";
 import { Button } from "../../../components/ui";
@@ -61,6 +62,7 @@ export function CharacterCard({ character, onView, onDelete, deleting }: Props) 
   }
 
   const sheet = character.sheet;
+  const shownName = displayCharacterName(sheet, character.sourceFilename);
   return (
     // biome-ignore lint/correctness/noRestrictedElements: full-card click target styled as a party ledger row; Button/Chip chrome doesn't fit.
     <button
@@ -72,11 +74,11 @@ export function CharacterCard({ character, onView, onDelete, deleting }: Props) 
         aria-hidden="true"
         className="font-fantasy grid h-10 w-10 shrink-0 place-items-center rounded-full bg-amber-500/20 text-base font-bold text-amber-200 ring-1 ring-amber-400/50"
       >
-        {sheet?.name[0]?.toUpperCase() ?? "?"}
+        {shownName[0]?.toUpperCase() ?? "?"}
       </span>
       <span className="min-w-0 flex-1">
         <span className="font-fantasy block truncate text-base font-bold text-amber-100">
-          {sheet?.name}
+          {shownName}
         </span>
         <span className="block truncate text-2xs text-amber-200/60">
           {[sheet?.race, sheet?.class, sheet?.level !== null ? `Lv ${sheet?.level}` : null]
