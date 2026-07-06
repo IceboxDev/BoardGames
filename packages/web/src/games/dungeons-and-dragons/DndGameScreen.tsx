@@ -1,4 +1,4 @@
-import type { Campaign, DndNode, DndNpc, DndParty } from "@boardgames/core/protocol";
+import type { Campaign, DndNpc, DndParty } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { GameScreen } from "../../components/game-layout";
@@ -6,11 +6,13 @@ import { BookIcon } from "../../components/icons";
 import { D20Die } from "../../components/offline/D20Die";
 import { Button, EmptyState, LoadingState } from "../../components/ui";
 import {
+  appendHistoryEntries,
   charactersQueryFn,
   createDndSession,
   fileContentUrl,
   filesQueryFn,
   generateNode,
+  historyQueryFn,
   nodesQueryFn,
   npcsQueryFn,
   retriggerNpcs,
@@ -18,6 +20,7 @@ import {
 import { errorMessageOf } from "../../lib/error-message";
 import { qk } from "../../lib/query-keys";
 import { CharacterSheetModal } from "./components/CharacterSheetModal";
+import { HistoryLog } from "./components/HistoryLog";
 import { NpcSheetModal } from "./components/NpcSheetModal";
 import { PlayerCardLarge } from "./components/PlayerCardLarge";
 import { QuestProgressBar } from "./components/QuestProgressBar";
@@ -31,12 +34,13 @@ import { DND_RULEBOOKS } from "./index";
 
 const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
 
-type MenuScreen = "main" | "players" | "npcs" | "sources";
+type MenuScreen = "main" | "players" | "npcs" | "history" | "sources";
 
 const MENU: { id: MenuScreen; label: string; description: string }[] = [
   { id: "main", label: "Game Screen", description: "The story tree" },
   { id: "players", label: "Players", description: "The party ledger" },
   { id: "npcs", label: "NPCs & Monsters", description: "Cast & bestiary" },
+  { id: "history", label: "History", description: "The chronicle" },
   { id: "sources", label: "Sources", description: "Tomes & sheets" },
 ];
 
@@ -60,7 +64,7 @@ export function DndGameScreen({ campaign, party }: Props) {
   const [viewingCharacterId, setViewingCharacterId] = useState<string | null>(null);
   const [viewingNpc, setViewingNpc] = useState<DndNpc | null>(null);
   const [recharting, setRecharting] = useState(false);
-  const [combatNote, setCombatNote] = useState(false);
+  const [combatSummary, setCombatSummary] = useState<string | null>(null);
 
   // (Re-)register the live session so a beamer companion can attach.
   useEffect(() => {
@@ -82,12 +86,17 @@ export function DndGameScreen({ campaign, party }: Props) {
     refetchInterval: recharting ? 5000 : false,
   });
   const filesQuery = useQuery({ queryKey: qk.dndFiles(), queryFn: filesQueryFn });
+  const historyQuery = useQuery({
+    queryKey: qk.dndHistory(party.id),
+    queryFn: historyQueryFn(party.id),
+  });
 
   const characters = charactersQuery.data?.characters ?? [];
   const partyMembers = characters.filter((ch) => ch.status === "ready" && ch.sheet);
   const nodes = nodesQuery.data?.nodes ?? [];
   const npcs = npcsQuery.data?.npcs ?? [];
   const files = filesQuery.data?.files ?? [];
+  const history = historyQuery.data?.entries ?? [];
 
   const currentNodeId = path.at(-1) ?? null;
   const currentNode = nodes.find((n) => n.id === currentNodeId) ?? null;
@@ -120,11 +129,55 @@ export function DndGameScreen({ campaign, party }: Props) {
     onSuccess: () => setRecharting(true),
   });
 
+  // The table history: appended when the DM presses Log — the ground truth
+  // of what the party has actually heard.
+  const logMutation = useMutation({
+    mutationFn: (entries: Parameters<typeof appendHistoryEntries>[1]) =>
+      appendHistoryEntries(party.id, entries),
+    onSettled: () => queryClient.invalidateQueries({ queryKey: qk.dndHistory(party.id) }),
+  });
+
+  const waypoint = campaign.checkpoints[waypointIndex];
+  const arrivalHeader = waypoint ? `The party reaches ${waypoint.title}.` : "";
+  const currentLogged =
+    currentNode !== null &&
+    history.some((h) => h.nodeId === currentNode.id && h.kind === "dm-narration");
+  const arrivalLogged = history.some((h) => h.kind === "arrival" && h.text === arrivalHeader);
+  const combatLogged =
+    currentNode !== null && history.some((h) => h.nodeId === currentNode.id && h.kind === "combat");
+
+  const logCurrentNode = () => {
+    if (!currentNode || currentLogged) return;
+    logMutation.mutate([
+      { kind: "player-action", text: currentNode.trigger, nodeId: currentNode.id },
+      { kind: "dm-narration", text: currentNode.readText, nodeId: currentNode.id },
+    ]);
+  };
+
+  const logArrival = () => {
+    if (!waypoint?.arrivalText || arrivalLogged) return;
+    logMutation.mutate([
+      { kind: "arrival", text: arrivalHeader, nodeId: null },
+      { kind: "dm-narration", text: waypoint.arrivalText, nodeId: null },
+    ]);
+  };
+
+  const logCombat = () => {
+    if (!currentNode || combatLogged) return;
+    logMutation.mutate([
+      {
+        kind: "combat",
+        text: combatSummary ?? `Combat begins — ${currentNode.summary}`,
+        nodeId: currentNode.id,
+      },
+    ]);
+  };
+
   const selectWaypoint = (i: number) => {
     setWaypointIndex(i);
     setPath([]);
     setMode("root");
-    setCombatNote(false);
+    setCombatSummary(null);
   };
 
   const send = () => {
@@ -132,11 +185,15 @@ export function DndGameScreen({ campaign, party }: Props) {
     if (msg && !generateMutation.isPending) generateMutation.mutate(msg);
   };
 
-  const chronicle = [
-    `The tome "${campaign.title ?? campaign.sourceFilename}" was inscribed.`,
-    `${party.name} gathered (${partyMembers.length} adventurers).`,
-    ...nodes.slice(-8).map((n: DndNode) => n.trigger),
-  ];
+  // Ultra-short recap of the LOGGED history only — what the party last did
+  // and how the DM answered, glanceable across sessions.
+  const recap = history.slice(-9).map((h) => ({
+    id: h.id,
+    kind: h.kind,
+    line:
+      (h.kind === "player-action" ? "▸ " : h.kind === "combat" ? "⚔ " : "") +
+      (h.text.length > 72 ? `${h.text.slice(0, 71)}…` : h.text),
+  }));
 
   return (
     <GameScreen
@@ -173,31 +230,44 @@ export function DndGameScreen({ campaign, party }: Props) {
         </div>
       }
       sidebar={
-        <ol className="flex flex-col gap-2">
-          {chronicle.map((entry) => (
-            <li
-              key={entry}
-              className="rounded-lg border border-amber-400/10 bg-black/20 px-2.5 py-1.5 text-xs leading-relaxed text-amber-200/70"
-            >
-              {entry}
-            </li>
-          ))}
-        </ol>
+        recap.length === 0 ? (
+          <p className="text-xs leading-relaxed text-amber-200/40" style={SERIF}>
+            Nothing logged yet — press Log on a spoken text and the chronicle starts here.
+          </p>
+        ) : (
+          <ol className="flex flex-col gap-2">
+            {recap.map((entry) => (
+              <li
+                key={entry.id}
+                className={`rounded-lg border px-2.5 py-1.5 text-xs leading-relaxed ${
+                  entry.kind === "player-action"
+                    ? "border-amber-400/15 bg-black/10 italic text-amber-300/70"
+                    : entry.kind === "combat"
+                      ? "border-rose-400/20 bg-rose-950/20 text-rose-100/80"
+                      : "border-amber-400/10 bg-black/20 text-amber-200/70"
+                }`}
+              >
+                {entry.line}
+              </li>
+            ))}
+          </ol>
+        )
       }
       fanActions={
         screen === "main" && branchingBlocked ? (
           // On an initiative node there is nothing to chat about — the action
-          // bar carries the one action that matters.
-          <div className="flex items-center gap-3">
-            <Button variant="tinted" tone="rose" size="sm" onClick={() => setCombatNote(true)}>
-              Enter combat
-            </Button>
-            <span className="text-3xs text-amber-200/40" style={SERIF}>
-              {combatNote
-                ? "The combat phase arrives in a coming update — run this fight at the table, then step back up the tree."
-                : "Set the turn order above, then enter combat"}
-            </span>
-          </div>
+          // bar carries the one action that matters. Entering combat logs the
+          // participants and turn order to the history.
+          <Button
+            variant="tinted"
+            tone="rose"
+            size="sm"
+            disabled={combatLogged}
+            loading={logMutation.isPending}
+            onClick={logCombat}
+          >
+            {combatLogged ? "Combat logged ✓" : "Enter combat"}
+          </Button>
         ) : screen === "main" ? (
           <div className="flex items-center gap-2">
             <Button
@@ -217,11 +287,6 @@ export function DndGameScreen({ campaign, party }: Props) {
             >
               New branch
             </Button>
-            <span className="text-3xs text-amber-200/40" style={SERIF}>
-              {mode === "root"
-                ? "The message starts a new tree at this waypoint"
-                : "The message branches from the current node"}
-            </span>
           </div>
         ) : undefined
       }
@@ -290,6 +355,12 @@ export function DndGameScreen({ campaign, party }: Props) {
               onJumpTo={(i) => setPath(i < 0 ? [] : path.slice(0, i + 1))}
               party={partyMembers}
               npcs={npcs}
+              onOrderChange={setCombatSummary}
+              onLogCurrent={logCurrentNode}
+              currentLogged={currentLogged}
+              onLogArrival={logArrival}
+              arrivalLogged={arrivalLogged}
+              logPending={logMutation.isPending}
             />
           )}
         </>
@@ -408,6 +479,22 @@ export function DndGameScreen({ campaign, party }: Props) {
               </ul>
             )}
           </div>
+        </div>
+      )}
+
+      {screen === "history" && (
+        <div className="min-h-0 flex-1 overflow-y-auto">
+          {historyQuery.isPending ? (
+            <LoadingState fill label="Opening the chronicle…" />
+          ) : (
+            <HistoryLog
+              entries={history}
+              party={partyMembers}
+              npcs={npcs}
+              onOpenCharacter={(character) => setViewingCharacterId(character.id)}
+              onOpenNpc={(npc) => setViewingNpc(npc)}
+            />
+          )}
         </div>
       )}
 

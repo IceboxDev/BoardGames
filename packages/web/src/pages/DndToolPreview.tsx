@@ -328,8 +328,7 @@ const FILES = [
 
 export default function DndToolPreview() {
   const queryClient = useQueryClient();
-  // Sheet modal open by default — this dev page exists for screenshots.
-  const [viewingSheet, setViewingSheet] = useState(true);
+  const [viewingSheet, setViewingSheet] = useState(false);
   // Seed the game screen's internal queries (background refetch will fail
   // without a server, which keeps the seeded data — fine for a styling
   // preview).
@@ -338,6 +337,50 @@ export default function DndToolPreview() {
     queryClient.setQueryData(qk.dndNpcs(STRAHD.id), { npcs: NPCS });
     queryClient.setQueryData(qk.dndNodes(PARTY_META.id), { nodes: NODES });
     queryClient.setQueryData(qk.dndFiles(), { files: FILES });
+    queryClient.setQueryData(qk.dndHistory(PARTY_META.id), {
+      entries: [
+        {
+          id: "h1",
+          partyId: PARTY_META.id,
+          nodeId: null,
+          kind: "arrival" as const,
+          text: "The party reaches Into the Mists.",
+          createdAt: "2026-07-05 19:00:00",
+        },
+        {
+          id: "h2",
+          partyId: PARTY_META.id,
+          nodeId: null,
+          kind: "dm-narration" as const,
+          text: "The fog does not lift so much as decide to let you see. A road of packed black earth runs ahead between walls of mist.",
+          createdAt: "2026-07-05 19:00:01",
+        },
+        {
+          id: "h3",
+          partyId: PARTY_META.id,
+          nodeId: "node-root-1",
+          kind: "player-action" as const,
+          text: "Follow the wolf howls off the road",
+          createdAt: "2026-07-05 19:05:00",
+        },
+        {
+          id: "h4",
+          partyId: PARTY_META.id,
+          nodeId: "node-root-1",
+          kind: "dm-narration" as const,
+          text: "The howls pull you off the Old Svalich Road. Ahead, a farmhouse leans into the hillside. Vex the Bold readies her Longsword; Whisper casts Mage Hand.",
+          createdAt: "2026-07-05 19:05:01",
+        },
+        {
+          id: "h5",
+          partyId: PARTY_META.id,
+          nodeId: "node-initiative-1",
+          kind: "combat" as const,
+          text: "Two shadow-wolves burst from the treeline. Turn order: Whisper 19, Vex the Bold 14, shadow-wolves 8.",
+          createdAt: "2026-07-05 19:07:00",
+        },
+      ],
+    });
     return null;
   });
 

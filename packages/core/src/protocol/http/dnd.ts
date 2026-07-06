@@ -444,6 +444,45 @@ export type GenerateNodeRequest = z.infer<typeof GenerateNodeRequestSchema>;
 export const GenerateNodeResponseSchema = z.object({ node: DndNodeSchema });
 export type GenerateNodeResponse = z.infer<typeof GenerateNodeResponseSchema>;
 
+// ── Table history ──────────────────────────────────────────────────────
+// The session log: everything actually spoken/done at the table, appended
+// when the DM presses Log. It IS the party's knowledge — the History page,
+// the sidebar recap, and the generation context all read from it.
+
+export const HISTORY_TEXT_MAX = 2200;
+
+export const HistoryKindSchema = z.enum(["player-action", "dm-narration", "arrival", "combat"]);
+export type HistoryKind = z.infer<typeof HistoryKindSchema>;
+
+export const DndHistoryEntrySchema = z.object({
+  id: z.string().min(1),
+  partyId: z.string().min(1),
+  nodeId: z.string().nullable(),
+  kind: HistoryKindSchema,
+  text: z.string().min(1).max(HISTORY_TEXT_MAX),
+  createdAt: z.string(),
+});
+export type DndHistoryEntry = z.infer<typeof DndHistoryEntrySchema>;
+
+export const AppendHistoryRequestSchema = z.object({
+  entries: z
+    .array(
+      z.object({
+        kind: HistoryKindSchema,
+        text: z.string().min(1).max(HISTORY_TEXT_MAX),
+        nodeId: z.string().nullable(),
+      }),
+    )
+    .min(1)
+    .max(10),
+});
+export type AppendHistoryRequest = z.infer<typeof AppendHistoryRequestSchema>;
+
+export const ListHistoryResponseSchema = z.object({
+  entries: z.array(DndHistoryEntrySchema),
+});
+export type ListHistoryResponse = z.infer<typeof ListHistoryResponseSchema>;
+
 // ── Files (Sources) ────────────────────────────────────────────────────
 // Uploaded PDFs are persisted (chunked, server-side) so extraction can be
 // re-run and the Sources screen can serve them back.

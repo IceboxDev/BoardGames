@@ -1,7 +1,7 @@
 import type { DndCharacter, DndNode, DndNpc } from "@boardgames/core/protocol";
 import { displayCharacterName } from "@boardgames/core/protocol";
-import { useId, useState } from "react";
-import { PlusIcon } from "../../../components/icons";
+import { useEffect, useId, useState } from "react";
+import { MinusIcon, PlusIcon } from "../../../components/icons";
 import { Button, Input, Select } from "../../../components/ui";
 
 // The initiative tracker — what an `initiative` node opens instead of a
@@ -26,7 +26,7 @@ function rollD20(mod: number): number {
   return Math.floor(Math.random() * 20) + 1 + mod;
 }
 
-type EnemyRow = { key: number; name: string; count: number; mod: number; roll: number | null };
+type EnemyRow = { key: number; name: string; count: number; mod: number; roll: string };
 
 const NUMBER_WORDS: Record<string, number> = {
   one: 1,
@@ -68,9 +68,11 @@ type Props = {
   node: DndNode;
   party: DndCharacter[];
   npcs: DndNpc[];
+  /** Emits a loggable summary of the current turn order (null when empty). */
+  onOrderChange?: (summary: string | null) => void;
 };
 
-export function InitiativePanel({ node, party, npcs }: Props) {
+export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
   const uid = useId();
   const [pcRolls, setPcRolls] = useState<Record<string, string>>({});
   const [addNpcId, setAddNpcId] = useState("");
@@ -90,7 +92,7 @@ export function InitiativePanel({ node, party, npcs }: Props) {
         name: npc.name,
         count: inferCount(haystack, npc.name.toLowerCase()),
         mod: dexMod(npc.abilities?.dex),
-        roll: null,
+        roll: "",
       }));
   });
 
@@ -99,9 +101,19 @@ export function InitiativePanel({ node, party, npcs }: Props) {
     if (!npc) return;
     setEnemies([
       ...enemies,
-      { key: nextKey, name: npc.name, count: 1, mod: dexMod(npc.abilities?.dex), roll: null },
+      { key: nextKey, name: npc.name, count: 1, mod: dexMod(npc.abilities?.dex), roll: "" },
     ]);
     setNextKey(nextKey + 1);
+  };
+
+  const bumpCount = (key: number, delta: number) => {
+    setEnemies(
+      enemies.flatMap((e) => {
+        if (e.key !== key) return [e];
+        const count = e.count + delta;
+        return count <= 0 ? [] : [{ ...e, count }];
+      }),
+    );
   };
 
   const unleashDanger = () => {
@@ -116,9 +128,9 @@ export function InitiativePanel({ node, party, npcs }: Props) {
             name: npc.name,
             count: inferCount(lower, npc.name.toLowerCase()),
             mod: dexMod(npc.abilities?.dex),
-            roll: null,
+            roll: "",
           }))
-        : [{ key: nextKey, name: entry.text.replace(/\.$/, ""), count: 1, mod: 0, roll: null }];
+        : [{ key: nextKey, name: entry.text.replace(/\.$/, ""), count: 1, mod: 0, roll: "" }];
     setEnemies([...enemies, ...rows]);
     setNextKey(nextKey + rows.length);
     setDangerPick("");
@@ -142,11 +154,21 @@ export function InitiativePanel({ node, party, npcs }: Props) {
     ...enemies.map((e) => ({
       label: enemyLabel(e),
       kind: "enemy" as const,
-      value: e.roll ?? Number.NaN,
+      value: Number.parseInt(e.roll, 10),
     })),
   ]
     .filter((row) => Number.isFinite(row.value))
     .sort((a, b) => b.value - a.value);
+
+  // Surface a loggable summary to the game screen's "Enter combat" button.
+  const summary =
+    order.length > 0
+      ? `${node.summary} Turn order: ${order.map((r) => `${r.label} ${r.value}`).join(", ")}.`
+      : null;
+  // biome-ignore lint/correctness/useExhaustiveDependencies: summary is derived from the states below; reporting it upward on change is the point.
+  useEffect(() => {
+    onOrderChange?.(summary);
+  }, [summary]);
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto pb-2">
@@ -215,10 +237,12 @@ export function InitiativePanel({ node, party, npcs }: Props) {
             <Button
               variant="ghost"
               size="xs"
-              disabled={enemies.every((e) => e.roll !== null) && enemies.length > 0}
+              disabled={enemies.length === 0 || enemies.every((e) => e.roll.trim() !== "")}
               onClick={() =>
                 setEnemies(
-                  enemies.map((e) => (e.roll === null ? { ...e, roll: rollD20(e.mod) } : e)),
+                  enemies.map((e) =>
+                    e.roll.trim() === "" ? { ...e, roll: String(rollD20(e.mod)) } : e,
+                  ),
                 )
               }
             >
@@ -237,9 +261,38 @@ export function InitiativePanel({ node, party, npcs }: Props) {
                   )}
                   <span className="ml-1.5 text-3xs text-rose-200/40">DEX {fmtMod(enemy.mod)}</span>
                 </span>
-                <span className="w-8 text-center font-fantasy text-base font-bold text-amber-100">
-                  {enemy.roll ?? "—"}
-                </span>
+                <Button
+                  variant="ghost"
+                  size="xs"
+                  aria-label={`Fewer ${enemy.name}`}
+                  className="text-rose-200/40 hover:text-rose-200"
+                  onClick={() => bumpCount(enemy.key, -1)}
+                >
+                  <MinusIcon className="h-3.5 w-3.5" />
+                </Button>
+                <Button
+                  variant="ghost"
+                  size="xs"
+                  aria-label={`More ${enemy.name}`}
+                  className="text-rose-200/40 hover:text-rose-200"
+                  onClick={() => bumpCount(enemy.key, 1)}
+                >
+                  <PlusIcon className="h-3.5 w-3.5" />
+                </Button>
+                <Input
+                  inputMode="numeric"
+                  width="score"
+                  placeholder="init"
+                  aria-label={`${enemy.name} initiative`}
+                  value={enemy.roll}
+                  onChange={(e) =>
+                    setEnemies(
+                      enemies.map((row) =>
+                        row.key === enemy.key ? { ...row, roll: e.target.value } : row,
+                      ),
+                    )
+                  }
+                />
                 <Button
                   variant="tinted"
                   tone="rose"
@@ -247,27 +300,12 @@ export function InitiativePanel({ node, party, npcs }: Props) {
                   onClick={() =>
                     setEnemies(
                       enemies.map((e) =>
-                        e.key === enemy.key ? { ...e, roll: rollD20(e.mod) } : e,
+                        e.key === enemy.key ? { ...e, roll: String(rollD20(e.mod)) } : e,
                       ),
                     )
                   }
                 >
                   Roll
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="xs"
-                  aria-label={`Split off another ${enemy.name} group`}
-                  className="text-rose-200/40 hover:text-rose-200"
-                  onClick={() => {
-                    setEnemies([
-                      ...enemies,
-                      { key: nextKey, name: enemy.name, count: 1, mod: enemy.mod, roll: null },
-                    ]);
-                    setNextKey(nextKey + 1);
-                  }}
-                >
-                  <PlusIcon className="h-3.5 w-3.5" />
                 </Button>
               </li>
             ))}

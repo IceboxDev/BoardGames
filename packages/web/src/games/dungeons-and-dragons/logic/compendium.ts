@@ -121,6 +121,10 @@ function normalizeKey(name: string): string {
   return name.trim().toLowerCase().replace(/\.$/, "");
 }
 
+export function listCompendiumTerms(): string[] {
+  return Object.values(ENTRIES).map((e) => e.title);
+}
+
 export function getCompendiumEntry(name: string): CompendiumEntry | null {
   const key = normalizeKey(name);
   return ENTRIES[key] ?? ENTRIES[key.replace(/s$/, "")] ?? null;

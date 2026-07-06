@@ -953,6 +953,11 @@ export interface StoryNodeContext {
   siblings: { trigger: string; summary: string }[];
   /** e.g. "Vex the Bold — Half-Elf Paladin 5". */
   party: string[];
+  /**
+   * The table history — everything actually spoken/done, oldest first.
+   * Ground truth of what the party knows and what resources were spent.
+   */
+  history: string[];
   /** What the players said/did, per the DM. */
   message: string;
 }
@@ -1013,6 +1018,12 @@ function buildNodePrompt(ctx: StoryNodeContext): string {
     `The party is at waypoint ${ctx.waypoint.index + 1} of ${ctx.waypoint.total}: "${ctx.waypoint.title}" — ${ctx.waypoint.description}`,
   );
   if (ctx.party.length > 0) lines.push(`The party: ${ctx.party.join("; ")}.`);
+  if (ctx.history.length > 0) {
+    lines.push(
+      "The table history — everything actually spoken and done so far (oldest first). This is the ground truth: the party knows ONLY what appears here or in the branch below; spells cast and resources spent here are gone; never contradict it:",
+    );
+    for (const entry of ctx.history) lines.push(entry);
+  }
   if (ctx.ancestors.length > 0) {
     lines.push("What has happened down this branch, in order:");
     ctx.ancestors.forEach((a, i) => {

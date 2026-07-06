@@ -24,6 +24,14 @@ type Props = {
   /** For the initiative tracker: the party's PCs and the campaign's cast. */
   party: DndCharacter[];
   npcs: DndNpc[];
+  /** Initiative tracker → game screen: loggable turn-order summary. */
+  onOrderChange?: (summary: string | null) => void;
+  /** History logging: mark a spoken text as read to the party. */
+  onLogCurrent: () => void;
+  currentLogged: boolean;
+  onLogArrival: () => void;
+  arrivalLogged: boolean;
+  logPending: boolean;
 };
 
 export function StoryTree({
@@ -35,6 +43,12 @@ export function StoryTree({
   onJumpTo,
   party,
   npcs,
+  onOrderChange,
+  onLogCurrent,
+  currentLogged,
+  onLogArrival,
+  arrivalLogged,
+  logPending,
 }: Props) {
   const waypoint = campaign.checkpoints[waypointIndex];
   const byId = new Map(nodes.map((n) => [n.id, n]));
@@ -85,15 +99,27 @@ export function StoryTree({
           Same treatment for both: a waypoint header is read to the players
           exactly like a node. */}
       {current?.nodeType === "initiative" ? (
-        <InitiativePanel node={current} party={party} npcs={npcs} />
+        <InitiativePanel node={current} party={party} npcs={npcs} onOrderChange={onOrderChange} />
       ) : current ? (
         <div className="shrink-0 rounded-2xl border border-amber-400/25 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/85 to-black/80 p-4">
-          <p
-            className="text-3xs font-bold uppercase tracking-[0.3em] text-amber-300/70"
-            style={SERIF}
-          >
-            Read aloud
-          </p>
+          <div className="flex items-center justify-between gap-2">
+            <p
+              className="text-3xs font-bold uppercase tracking-[0.3em] text-amber-300/70"
+              style={SERIF}
+            >
+              Read aloud
+            </p>
+            <Button
+              variant={currentLogged ? "ghost" : "tinted"}
+              tone="amber"
+              size="xs"
+              disabled={currentLogged}
+              loading={logPending}
+              onClick={onLogCurrent}
+            >
+              {currentLogged ? "Logged ✓" : "Log"}
+            </Button>
+          </div>
           <p
             className="mt-2 whitespace-pre-line text-base leading-relaxed text-amber-100/90"
             style={SERIF}
@@ -103,12 +129,24 @@ export function StoryTree({
         </div>
       ) : waypoint?.arrivalText ? (
         <div className="shrink-0 rounded-2xl border border-amber-400/25 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/85 to-black/80 p-4">
-          <p
-            className="text-3xs font-bold uppercase tracking-[0.3em] text-amber-300/70"
-            style={SERIF}
-          >
-            Read aloud — on arrival
-          </p>
+          <div className="flex items-center justify-between gap-2">
+            <p
+              className="text-3xs font-bold uppercase tracking-[0.3em] text-amber-300/70"
+              style={SERIF}
+            >
+              Read aloud — on arrival
+            </p>
+            <Button
+              variant={arrivalLogged ? "ghost" : "tinted"}
+              tone="amber"
+              size="xs"
+              disabled={arrivalLogged}
+              loading={logPending}
+              onClick={onLogArrival}
+            >
+              {arrivalLogged ? "Logged ✓" : "Log"}
+            </Button>
+          </div>
           <p
             className="mt-2 whitespace-pre-line text-base leading-relaxed text-amber-100/90"
             style={SERIF}

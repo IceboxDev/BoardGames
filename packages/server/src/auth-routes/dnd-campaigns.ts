@@ -10,6 +10,7 @@
 import { randomUUID } from "node:crypto";
 import {
   ActiveSessionResponseSchema,
+  AppendHistoryRequestSchema,
   BeamerEventSchema,
   CreateCampaignRequestSchema,
   CreateCampaignResponseSchema,
@@ -28,6 +29,7 @@ import {
   ListCampaignsResponseSchema,
   ListCharactersResponseSchema,
   ListFilesResponseSchema,
+  ListHistoryResponseSchema,
   ListNodesResponseSchema,
   ListNpcsResponseSchema,
   ListPartiesResponseSchema,
@@ -70,6 +72,7 @@ import {
   generateStoryNode,
 } from "../lib/dnd-extract.ts";
 import { getFileBase64, getFileMeta, insertFile, listFilesForUser } from "../lib/dnd-files-db.ts";
+import { appendHistory, listHistoryForParty } from "../lib/dnd-history-db.ts";
 import { replaceNodeTemplates, seedPartyFromTemplates } from "../lib/dnd-node-templates-db.ts";
 import { insertNode, listNodesForParty } from "../lib/dnd-nodes-db.ts";
 import { deleteNpcsForCampaign, insertNpcs, listNpcsForCampaign } from "../lib/dnd-npcs-db.ts";
@@ -369,6 +372,30 @@ dndCampaignRoutes.put("/characters/:id", zJsonBody(UpdateCharacterRequestSchema)
   return c.json(UpdateCharacterResponseSchema.parse({ character }));
 });
 
+// ── Table history ──────────────────────────────────────────────────────
+// Append-only session log. The DM's Log buttons post here; the History page
+// and the generation context read from it.
+
+dndCampaignRoutes.get("/parties/:id/history", async (c) => {
+  const user = c.get("user");
+  const partyId = c.req.param("id");
+  if (!(await getParty(partyId, user.id))) {
+    return errorResponse(c, 404, "party not found", "NOT_FOUND");
+  }
+  const entries = await listHistoryForParty(partyId, user.id);
+  return c.json(ListHistoryResponseSchema.parse({ entries }));
+});
+
+dndCampaignRoutes.post("/parties/:id/history", zJsonBody(AppendHistoryRequestSchema), async (c) => {
+  const user = c.get("user");
+  const partyId = c.req.param("id");
+  const party = await getParty(partyId, user.id);
+  if (!party) return errorResponse(c, 404, "party not found", "NOT_FOUND");
+  await appendHistory(party.campaignId, partyId, user.id, c.req.valid("json").entries);
+  const entries = await listHistoryForParty(partyId, user.id);
+  return c.json(ListHistoryResponseSchema.parse({ entries }), 201);
+});
+
 // ── Story nodes ────────────────────────────────────────────────────────
 // The main game screen's tree. Generation is synchronous (text-only OpenAI
 // call, seconds not minutes); the node is persisted before the response, so
@@ -436,6 +463,12 @@ dndCampaignRoutes.post("/parties/:id/nodes", zJsonBody(GenerateNodeRequestSchema
     })
     .filter((s) => s.length > 0);
 
+  // The table history is the ground truth of what the party knows — the
+  // generator must not contradict it or assume unspoken knowledge.
+  const historyLines = (await listHistoryForParty(partyId, user.id))
+    .slice(-40)
+    .map((h) => `[${h.kind === "player-action" ? "party" : "dm"}] ${h.text.slice(0, 300)}`);
+
   try {
     const generated = await generateStoryNode({
       campaign: {
@@ -452,6 +485,7 @@ dndCampaignRoutes.post("/parties/:id/nodes", zJsonBody(GenerateNodeRequestSchema
       ancestors,
       siblings,
       party: partyMembers,
+      history: historyLines,
       message: body.message,
     });
     const node = await insertNode({

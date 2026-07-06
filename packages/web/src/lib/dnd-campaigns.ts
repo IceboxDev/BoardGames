@@ -1,5 +1,7 @@
 import {
   ActiveSessionResponseSchema,
+  type AppendHistoryRequest,
+  AppendHistoryRequestSchema,
   type BeamerTrigger,
   CAMPAIGN_PDF_MAX_BYTES,
   type CharacterSheet,
@@ -29,6 +31,7 @@ import {
   ListCampaignsResponseSchema,
   ListCharactersResponseSchema,
   ListFilesResponseSchema,
+  ListHistoryResponseSchema,
   ListNodesResponseSchema,
   ListNpcsResponseSchema,
   ListPartiesResponseSchema,
@@ -117,6 +120,24 @@ export function generateNode(
     body,
     request: GenerateNodeRequestSchema,
     response: GenerateNodeResponseSchema,
+  });
+}
+
+// ── Table history ──────────────────────────────────────────────────────
+
+export function historyQueryFn(partyId: string) {
+  return jsonQuery(`/api/dnd/parties/${partyId}/history`, ListHistoryResponseSchema);
+}
+
+export function appendHistoryEntries(
+  partyId: string,
+  entries: AppendHistoryRequest["entries"],
+): Promise<import("@boardgames/core/protocol").ListHistoryResponse> {
+  return apiFetch(`/api/dnd/parties/${partyId}/history`, {
+    method: "POST",
+    body: { entries },
+    request: AppendHistoryRequestSchema,
+    response: ListHistoryResponseSchema,
   });
 }
 

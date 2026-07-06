@@ -117,6 +117,10 @@ const SPELLS: Record<string, SpellEntry> = {
   },
 };
 
+export function listSpellNames(): string[] {
+  return Object.values(SPELLS).map((s) => s.name);
+}
+
 export function getSpellEntry(name: string): SpellEntry | null {
   return SPELLS[name.trim().toLowerCase()] ?? null;
 }

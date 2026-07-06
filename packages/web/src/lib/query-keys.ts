@@ -23,6 +23,7 @@ export const qk = {
   dndCharacters: (partyId: string) => ["dnd", "characters", partyId] as const,
   dndParties: (campaignId: string) => ["dnd", "parties", campaignId] as const,
   dndNodes: (partyId: string) => ["dnd", "nodes", partyId] as const,
+  dndHistory: (partyId: string) => ["dnd", "history", partyId] as const,
   dndNpcs: (campaignId: string) => ["dnd", "npcs", campaignId] as const,
   dndFiles: () => ["dnd", "files"] as const,
   dndActiveSession: () => ["dnd", "session", "active"] as const,
