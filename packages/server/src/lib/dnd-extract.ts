@@ -257,7 +257,6 @@ const RawCharacterSchema = z.object({
   max_hp: z.number().nullable(),
   armor_class: z.number().nullable(),
   speed: z.string().nullable(),
-  passive_perception: z.number().nullable(),
   skills: z.array(RawCharacterSkillSchema),
   armor_proficiencies: z.array(z.string()),
   weapon_proficiencies: z.array(z.string()),
@@ -302,11 +301,6 @@ const CHARACTER_JSON_SCHEMA = {
     max_hp: { type: ["integer", "null"], description: "Maximum hit points." },
     armor_class: { type: ["integer", "null"] },
     speed: { type: ["string", "null"], description: "e.g. '30 ft.'" },
-    passive_perception: {
-      type: ["integer", "null"],
-      description:
-        "The number printed in the sheet's 'Passive Wisdom (Perception)' box, copied EXACTLY — do NOT recompute it.",
-    },
     skills: {
       type: "array",
       maxItems: 18,
@@ -396,7 +390,6 @@ const CHARACTER_JSON_SCHEMA = {
     "max_hp",
     "armor_class",
     "speed",
-    "passive_perception",
     "skills",
     "armor_proficiencies",
     "weapon_proficiencies",
@@ -412,8 +405,8 @@ const CHARACTER_JSON_SCHEMA = {
 } as const;
 
 const CHARACTER_PROMPT = `You are assisting a Dungeon Master. The attached PDF is one player's D&D character sheet (possibly with backstory pages). Transcribe the character into the requested structure.
-CRITICAL: numbers must be copied EXACTLY as printed on the sheet — especially the 'Passive Wisdom (Perception)' box and every skill's total modifier. Never recompute or 'correct' a printed value; if the sheet says 12, the answer is 12.
-Extract: character name; the player's real name from the 'Player Name' header field (null if blank); race; class (with multiclass splits); total level; alignment; the six ability scores; max HP; armor class; speed; passive perception (printed value); ALL 18 skills with their printed total modifiers and proficiency marks (a filled bubble/checkbox/asterisk = proficient, a double mark or doubled proficiency = expertise, otherwise none); proficiencies split into armor, weapons, and tools; proficient saving throws; languages; notable equipment; known or prepared spells (empty for non-casters); a condensed personality summary; and a short DM-facing backstory summary. Use null for anything the sheet doesn't state. Do not invent details that are not in the document.`;
+CRITICAL: numbers must be copied EXACTLY as printed on the sheet — especially every skill's total modifier. Never recompute or 'correct' a printed value; if the sheet says +7, the answer is 7.
+Extract: character name; the player's real name from the 'Player Name' header field (null if blank); race; class (with multiclass splits); total level; alignment; the six ability scores; max HP; armor class; speed; ALL 18 skills with their printed total modifiers and proficiency marks (a filled bubble/checkbox/asterisk = proficient, a double mark or doubled proficiency = expertise, otherwise none); proficiencies split into armor, weapons, and tools; proficient saving throws; languages; notable equipment; known or prepared spells (empty for non-casters); a condensed personality summary; and a short DM-facing backstory summary. Use null for anything the sheet doesn't state. Do not invent details that are not in the document.`;
 
 function clampScore(value: number): number {
   return Math.min(30, Math.max(1, Math.round(value)));
@@ -481,7 +474,6 @@ export function normalizeCharacter(raw: unknown): CharacterSheet {
     maxHp: clampInt(parsed.max_hp, 1, 999),
     armorClass: clampInt(parsed.armor_class, 1, 40),
     speed: clampNullable(parsed.speed, SPEED_MAX),
-    passivePerception: clampInt(parsed.passive_perception, 1, 40),
     skills,
     armorProficiencies: clampList(parsed.armor_proficiencies, 12, 60),
     weaponProficiencies: clampList(parsed.weapon_proficiencies, 16, 60),

@@ -94,7 +94,6 @@ const RAW_CHARACTER = {
   max_hp: 44,
   armor_class: 18,
   speed: "30 ft.",
-  passive_perception: 12,
   skills: [
     { name: "Athletics", modifier: 6, proficiency: "proficient" },
     { name: "Perception", modifier: 2, proficiency: "proficient" },
@@ -120,8 +119,6 @@ describe("normalizeCharacter", () => {
     expect(sheet.playerName).toBe("Mantas");
     expect(sheet.abilities).toEqual(RAW_CHARACTER.abilities);
     expect(sheet.maxHp).toBe(44);
-    // Printed value, NOT recomputed from WIS (which would give 11).
-    expect(sheet.passivePerception).toBe(12);
     expect(sheet.savingThrows).toEqual(["Wisdom", "Charisma"]);
   });
 

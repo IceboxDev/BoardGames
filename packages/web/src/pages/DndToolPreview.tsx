@@ -111,7 +111,6 @@ const VEX_SHEET: NonNullable<DndCharacter["sheet"]> = {
   maxHp: 44,
   armorClass: 18,
   speed: "30 ft.",
-  passivePerception: 12,
   skills: [
     { name: "Athletics", modifier: 6, proficiency: "proficient" as const },
     { name: "Persuasion", modifier: 6, proficiency: "proficient" as const },
@@ -168,7 +167,6 @@ const PARTY: DndCharacter[] = [
       abilities: { str: 8, dex: 18, con: 12, int: 14, wis: 10, cha: 13 },
       maxHp: 33,
       armorClass: 15,
-      passivePerception: 14,
       skills: [
         { name: "Stealth", modifier: 8, proficiency: "expertise" as const },
         { name: "Sleight of Hand", modifier: 8, proficiency: "expertise" as const },

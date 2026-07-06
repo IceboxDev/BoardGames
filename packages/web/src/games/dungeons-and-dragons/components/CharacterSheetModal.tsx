@@ -59,12 +59,11 @@ function proficiencyBonus(level: number | null): number | null {
 }
 
 /**
- * Passive Perception: the sheet's printed value first; else 10 + the
- * Perception SKILL modifier (which already carries proficiency — 10+0+2, not
- * 10+0); else 10 + WIS mod as the last resort.
+ * Passive Perception is DERIVED, never transcribed: 10 + the Perception
+ * SKILL modifier (which already carries proficiency — 10+0+2, not 10+0);
+ * 10 + WIS mod only when the skill list is missing entirely (old rows).
  */
 function passivePerception(sheet: CharacterSheet): number | null {
-  if (sheet.passivePerception !== null) return sheet.passivePerception;
   const perception = sheet.skills.find((s) => s.name === "Perception");
   if (perception) return 10 + perception.modifier;
   return sheet.abilities ? 10 + mod(sheet.abilities.wis) : null;
@@ -137,7 +136,6 @@ type FormState = {
   maxHp: string;
   armorClass: string;
   speed: string;
-  passivePerception: string;
   abilities: Record<AbilityKey, string>;
   equipment: string;
   spells: string;
@@ -157,7 +155,6 @@ function sheetToForm(sheet: CharacterSheet): FormState {
     maxHp: sheet.maxHp?.toString() ?? "",
     armorClass: sheet.armorClass?.toString() ?? "",
     speed: sheet.speed ?? "",
-    passivePerception: sheet.passivePerception?.toString() ?? "",
     abilities: {
       str: sheet.abilities?.str.toString() ?? "10",
       dex: sheet.abilities?.dex.toString() ?? "10",
@@ -217,7 +214,6 @@ function formToSheet(
     maxHp: optionalInt(form.maxHp),
     armorClass: optionalInt(form.armorClass),
     speed: optionalText(form.speed),
-    passivePerception: optionalInt(form.passivePerception),
     languages: splitList(form.languages),
     equipment: splitList(form.equipment),
     spells: splitList(form.spells),
@@ -387,7 +383,7 @@ export function CharacterSheetModal({ character, onClose }: Props) {
                 onChange={(e) => setForm({ ...form, class: e.target.value })}
               />
             </Field>
-            <div className="grid grid-cols-4 gap-3">
+            <div className="grid grid-cols-3 gap-3">
               <Field label="Level" htmlFor={`${uid}-level`}>
                 <Input
                   id={`${uid}-level`}
@@ -410,14 +406,6 @@ export function CharacterSheetModal({ character, onClose }: Props) {
                   inputMode="numeric"
                   value={form.armorClass}
                   onChange={(e) => setForm({ ...form, armorClass: e.target.value })}
-                />
-              </Field>
-              <Field label="Passive Perc." htmlFor={`${uid}-pp`}>
-                <Input
-                  id={`${uid}-pp`}
-                  inputMode="numeric"
-                  value={form.passivePerception}
-                  onChange={(e) => setForm({ ...form, passivePerception: e.target.value })}
                 />
               </Field>
             </div>

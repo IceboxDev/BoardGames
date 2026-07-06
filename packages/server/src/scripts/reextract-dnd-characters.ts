@@ -37,8 +37,10 @@ for (const row of rows.rows) {
   try {
     const sheet = await extractCharacter(`data:application/pdf;base64,${base64}`, filename);
     await setCharacterReady(id, sheet);
+    const perception = sheet.skills.find((s) => s.name === "Perception");
+    const pp = perception ? 10 + perception.modifier : "?";
     console.log(
-      `OK ${filename}: name=${sheet.name ?? "(none)"} player=${sheet.playerName ?? "(none)"} PP=${sheet.passivePerception ?? "?"} skills=${sheet.skills.length} saves=${sheet.savingThrows.join("/") || "-"}`,
+      `OK ${filename}: name=${sheet.name ?? "(none)"} player=${sheet.playerName ?? "(none)"} PP(computed)=${pp} skills=${sheet.skills.length} saves=${sheet.savingThrows.join("/") || "-"}`,
     );
   } catch (err) {
     console.error(`FAIL ${filename}:`, err instanceof Error ? err.message : err);

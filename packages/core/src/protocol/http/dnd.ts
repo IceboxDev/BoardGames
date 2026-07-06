@@ -164,8 +164,6 @@ export const CharacterSheetSchema = z.object({
   maxHp: z.number().int().min(1).max(999).nullable(),
   armorClass: z.number().int().min(1).max(40).nullable(),
   speed: z.string().max(40).nullable(),
-  /** As printed on the sheet — includes proficiency, NOT recomputed. */
-  passivePerception: z.number().int().min(1).max(40).nullable().default(null),
   /** Per-skill totals with proficiency marks, as printed. */
   skills: z.array(CharacterSkillSchema).max(20).default([]),
   armorProficiencies: z.array(z.string().min(1).max(60)).max(12).default([]),
