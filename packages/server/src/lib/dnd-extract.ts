@@ -41,13 +41,16 @@ function getClient(): OpenAI {
 }
 
 /**
- * The Responses API occasionally drops the connection mid-body ("Premature
- * close") — the SDK's built-in retries only cover failures BEFORE the body
- * streams, so transient network errors here need their own retry loop.
- * Mid-combat is the worst place to surface one of these.
+ * A non-streaming Responses call holds ONE silent HTTP response open for the
+ * model's full thinking time (minutes) — pooled-socket reuse, NATs, and
+ * proxies love to kill exactly that, surfacing as "Premature close" /
+ * "Invalid response body". So: stream the response (SSE chunks keep bytes
+ * flowing the whole time, the SDK reassembles the final response), and keep
+ * a retry loop around it for the transient failures that remain. Mid-combat
+ * is the worst place to surface one of these.
  */
 const TRANSIENT_ERROR =
-  /premature close|econnreset|econnrefused|etimedout|socket hang up|terminated|fetch failed|network|aborted/i;
+  /premature close|invalid response body|econnreset|econnrefused|etimedout|socket hang up|terminated|fetch failed|network|aborted|connection error/i;
 
 function transientMessage(err: unknown): string {
   if (!(err instanceof Error)) return "";
@@ -57,13 +60,13 @@ function transientMessage(err: unknown): string {
 
 async function createWithRetry(
   client: OpenAI,
-  params: OpenAI.Responses.ResponseCreateParamsNonStreaming,
+  params: Omit<OpenAI.Responses.ResponseCreateParamsNonStreaming, "stream">,
 ): Promise<OpenAI.Responses.Response> {
   const attempts = 3;
   let lastErr: unknown;
   for (let attempt = 1; attempt <= attempts; attempt++) {
     try {
-      return await client.responses.create(params);
+      return await client.responses.stream(params).finalResponse();
     } catch (err) {
       lastErr = err;
       if (attempt === attempts || !TRANSIENT_ERROR.test(transientMessage(err))) throw err;
@@ -75,6 +78,21 @@ async function createWithRetry(
     }
   }
   throw lastErr;
+}
+
+/**
+ * `output_text` is an SDK convenience that the non-streaming path adds; the
+ * final response assembled from a stream carries only the raw `output`
+ * items, so aggregate the text ourselves.
+ */
+function responseOutputText(res: OpenAI.Responses.Response): string {
+  if (typeof res.output_text === "string" && res.output_text.length > 0) return res.output_text;
+  return res.output
+    .filter((item) => item.type === "message")
+    .flatMap((item) => item.content)
+    .filter((content) => content.type === "output_text")
+    .map((content) => content.text)
+    .join("");
 }
 
 export interface CampaignExtraction {
@@ -240,7 +258,7 @@ async function runPdfExtraction(args: {
     },
   });
 
-  return JSON.parse(res.output_text);
+  return JSON.parse(responseOutputText(res));
 }
 
 /** Send the module PDF to OpenAI and return the normalized extraction. */
@@ -1146,7 +1164,7 @@ export async function generateStoryNode(ctx: StoryNodeContext): Promise<StoryNod
     },
   });
 
-  return normalizeNode(JSON.parse(res.output_text));
+  return normalizeNode(JSON.parse(responseOutputText(res)));
 }
 
 // ── Combat: action dashboards ──────────────────────────────────────────
@@ -1230,7 +1248,7 @@ ${sheetJson}`;
       },
     },
   });
-  return normalizeActionCards(JSON.parse(res.output_text));
+  return normalizeActionCards(JSON.parse(responseOutputText(res)));
 }
 
 // ── Combat: the turn referee ───────────────────────────────────────────
@@ -1394,5 +1412,5 @@ export async function resolveCombatTurn(ctx: CombatTurnContext): Promise<CombatT
       },
     },
   });
-  return normalizeTurnResult(JSON.parse(res.output_text));
+  return normalizeTurnResult(JSON.parse(responseOutputText(res)));
 }
