@@ -86,7 +86,15 @@ app.get("/api/auth-config", (c) =>
   c.json(AuthConfigSchema.parse({ googleEnabled: Boolean(process.env.GOOGLE_CLIENT_ID) })),
 );
 
-app.get("/api/health", (c) => c.json({ ok: true, games: getRegisteredSlugs() }));
+// `commit` verifies WHICH build is live (Railway injects the SHA) — deploy
+// races have burned us before ("the fix doesn't work" while it was rolling).
+app.get("/api/health", (c) =>
+  c.json({
+    ok: true,
+    commit: process.env.RAILWAY_GIT_COMMIT_SHA?.slice(0, 7) ?? "dev",
+    games: getRegisteredSlugs(),
+  }),
+);
 
 // Public iCalendar feed. Path-token authentication (see auth/feed-token.ts),
 // no session cookie required — calendar clients are external. Mounted on

@@ -62,6 +62,18 @@ function transientMessage(err: unknown): string {
   return `${err.message}${cause}`;
 }
 
+/** Full error→cause chain with codes, for Railway logs. */
+function causeChain(err: unknown): string {
+  const parts: string[] = [];
+  let cur: unknown = err;
+  for (let depth = 0; cur instanceof Error && depth < 5; depth++) {
+    const code = "code" in cur && typeof cur.code === "string" ? ` [${cur.code}]` : "";
+    parts.push(`${cur.name}: ${cur.message}${code}`);
+    cur = cur.cause;
+  }
+  return parts.join(" ← ") || String(err);
+}
+
 async function withTransientRetry<T>(run: () => Promise<T>): Promise<T> {
   const attempts = 3;
   let lastErr: unknown;
@@ -70,7 +82,13 @@ async function withTransientRetry<T>(run: () => Promise<T>): Promise<T> {
       return await run();
     } catch (err) {
       lastErr = err;
-      if (attempt === attempts || !TRANSIENT_ERROR.test(transientMessage(err))) throw err;
+      if (attempt === attempts || !TRANSIENT_ERROR.test(transientMessage(err))) {
+        console.error(
+          `[dnd] openai call failed permanently (attempt ${attempt}/${attempts}):`,
+          causeChain(err),
+        );
+        throw err;
+      }
       console.warn(
         `[dnd] openai transient error (attempt ${attempt}/${attempts}), retrying:`,
         transientMessage(err),
