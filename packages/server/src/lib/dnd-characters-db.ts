@@ -129,6 +129,22 @@ export async function setCharacterReady(id: string, sheet: CharacterSheet): Prom
   });
 }
 
+export async function getCharacterActions(id: string): Promise<string | null> {
+  const result = await getDb().execute({
+    sql: "SELECT actions_json FROM dnd_characters WHERE id = ?",
+    args: [id],
+  });
+  const raw = result.rows[0]?.actions_json;
+  return typeof raw === "string" ? raw : null;
+}
+
+export async function setCharacterActions(id: string, actionsJson: string | null): Promise<void> {
+  await getDb().execute({
+    sql: "UPDATE dnd_characters SET actions_json = ? WHERE id = ?",
+    args: [actionsJson, id],
+  });
+}
+
 export async function setCharacterError(id: string, error: string): Promise<void> {
   await getDb().execute({
     sql: "UPDATE dnd_characters SET status = 'error', error = ? WHERE id = ?",

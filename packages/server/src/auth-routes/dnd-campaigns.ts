@@ -48,7 +48,6 @@ import {
 } from "@boardgames/core/protocol";
 import { streamSSE } from "hono/streaming";
 import { authedApp } from "../auth/index.ts";
-import { getDb } from "../db.ts";
 import {
   countCampaignsForUser,
   deleteCampaign,
@@ -65,8 +64,10 @@ import {
   deleteCharacter,
   deleteCharactersForCampaign,
   getCharacter,
+  getCharacterActions,
   insertCharacter,
   listCharactersForParty,
+  setCharacterActions,
   setCharacterError,
   setCharacterFile,
   setCharacterReady,
@@ -352,6 +353,9 @@ dndCampaignRoutes.post(
       try {
         const sheet = await extractCharacter(body.pdf, body.filename);
         await setCharacterReady(character.id, sheet);
+        // Precompute the combat action dashboard now, while nobody is
+        // waiting — a fight is the worst moment for a cold LLM call.
+        await cacheActionCards(character.id, sheet);
       } catch (err) {
         try {
           await setCharacterError(character.id, extractionErrorMessage(err));
@@ -364,6 +368,17 @@ dndCampaignRoutes.post(
     return c.json(CreateCharacterResponseSchema.parse({ character }), 201);
   },
 );
+
+/** Generate and cache a character's action dashboard; failure is non-fatal
+ * (the combat-time endpoint regenerates on cache miss). */
+async function cacheActionCards(characterId: string, sheet: unknown): Promise<void> {
+  try {
+    const cards = await generateActionCards(JSON.stringify(sheet));
+    await setCharacterActions(characterId, JSON.stringify(cards));
+  } catch (err) {
+    console.error("[dnd] action card precompute failed (will retry on demand)", err);
+  }
+}
 
 dndCampaignRoutes.delete("/characters/:id", async (c) => {
   const deleted = await deleteCharacter(c.req.param("id"), c.get("user").id);
@@ -378,7 +393,12 @@ dndCampaignRoutes.put("/characters/:id", zJsonBody(UpdateCharacterRequestSchema)
   if (!existing || existing.status !== "ready") {
     return errorResponse(c, 404, "character not found", "NOT_FOUND");
   }
-  await setCharacterReady(id, c.req.valid("json").sheet);
+  const sheet = c.req.valid("json").sheet;
+  await setCharacterReady(id, sheet);
+  // The dashboard math is derived from the sheet — stale cards are worse
+  // than none. Drop the cache and rebuild it in the background.
+  await setCharacterActions(id, null);
+  void cacheActionCards(id, sheet);
   const character = await getCharacter(id, user.id);
   return c.json(UpdateCharacterResponseSchema.parse({ character }));
 });
@@ -690,20 +710,13 @@ dndCampaignRoutes.post("/characters/:id/actions", async (c) => {
   if (!character || character.status !== "ready" || !character.sheet) {
     return errorResponse(c, 404, "character not found", "NOT_FOUND");
   }
-  const cached = await getDb().execute({
-    sql: "SELECT actions_json FROM dnd_characters WHERE id = ?",
-    args: [character.id],
-  });
-  const raw = cached.rows[0]?.actions_json;
-  if (typeof raw === "string") {
-    return c.json(CharacterActionsResponseSchema.parse({ cards: JSON.parse(raw) }));
+  const cached = await getCharacterActions(character.id);
+  if (cached !== null) {
+    return c.json(CharacterActionsResponseSchema.parse({ cards: JSON.parse(cached) }));
   }
   try {
     const cards = await generateActionCards(JSON.stringify(character.sheet));
-    await getDb().execute({
-      sql: "UPDATE dnd_characters SET actions_json = ? WHERE id = ?",
-      args: [JSON.stringify(cards), character.id],
-    });
+    await setCharacterActions(character.id, JSON.stringify(cards));
     return c.json(CharacterActionsResponseSchema.parse({ cards }));
   } catch (err) {
     if (err instanceof DndConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");

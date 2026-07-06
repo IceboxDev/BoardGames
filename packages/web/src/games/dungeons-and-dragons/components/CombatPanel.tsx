@@ -7,7 +7,9 @@ import type {
   ResolveTurnResponse,
 } from "@boardgames/core/protocol";
 import { useQuery } from "@tanstack/react-query";
+import { Button } from "../../../components/ui";
 import { characterActions } from "../../../lib/dnd-campaigns";
+import { errorMessageOf } from "../../../lib/error-message";
 import { qk } from "../../../lib/query-keys";
 import { getMonsterEntry } from "../logic/monsters";
 
@@ -107,9 +109,23 @@ function ActionDashboard({ characterId }: { characterId: string }) {
   }
   if (actionsQuery.isError || !actionsQuery.data) {
     return (
-      <p className="px-1 py-4 text-center text-xs text-rose-300" style={SERIF}>
-        The action cards could not be drawn — resolve from the character sheet.
-      </p>
+      <div className="flex flex-col items-center gap-2 px-1 py-4">
+        <p className="text-center text-xs text-rose-300" style={SERIF}>
+          {errorMessageOf(
+            actionsQuery.error,
+            "The action cards could not be drawn — resolve from the character sheet.",
+          )}
+        </p>
+        <Button
+          variant="tinted"
+          tone="amber"
+          size="xs"
+          loading={actionsQuery.isRefetching}
+          onClick={() => void actionsQuery.refetch()}
+        >
+          Draw again
+        </Button>
+      </div>
     );
   }
   return (
