@@ -1,4 +1,4 @@
-import type { Campaign, DndNpc, DndParty } from "@boardgames/core/protocol";
+import type { Campaign, DndNpc, DndParty, ResolveTurnResponse } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { GameScreen } from "../../components/game-layout";
@@ -6,21 +6,28 @@ import { BookIcon } from "../../components/icons";
 import { D20Die } from "../../components/offline/D20Die";
 import { Button, EmptyState, LoadingState } from "../../components/ui";
 import {
+  activeCombatQueryFn,
+  advanceCombat,
   appendHistoryEntries,
   charactersQueryFn,
   createDndSession,
+  endCombat,
   fileContentUrl,
   filesQueryFn,
   generateNode,
   historyQueryFn,
   nodesQueryFn,
   npcsQueryFn,
+  resolveTurn,
   retriggerNpcs,
+  startCombat,
 } from "../../lib/dnd-campaigns";
 import { errorMessageOf } from "../../lib/error-message";
 import { qk } from "../../lib/query-keys";
 import { CharacterSheetModal } from "./components/CharacterSheetModal";
+import { CombatPanel } from "./components/CombatPanel";
 import { HistoryLog } from "./components/HistoryLog";
+import type { InitiativeOrder } from "./components/InitiativePanel";
 import { NpcSheetModal } from "./components/NpcSheetModal";
 import { PlayerCardLarge } from "./components/PlayerCardLarge";
 import { QuestProgressBar } from "./components/QuestProgressBar";
@@ -64,7 +71,8 @@ export function DndGameScreen({ campaign, party }: Props) {
   const [viewingCharacterId, setViewingCharacterId] = useState<string | null>(null);
   const [viewingNpc, setViewingNpc] = useState<DndNpc | null>(null);
   const [recharting, setRecharting] = useState(false);
-  const [combatSummary, setCombatSummary] = useState<string | null>(null);
+  const [combatOrder, setCombatOrder] = useState<InitiativeOrder | null>(null);
+  const [turnResult, setTurnResult] = useState<ResolveTurnResponse | null>(null);
 
   // (Re-)register the live session so a beamer companion can attach.
   useEffect(() => {
@@ -90,6 +98,10 @@ export function DndGameScreen({ campaign, party }: Props) {
     queryKey: qk.dndHistory(party.id),
     queryFn: historyQueryFn(party.id),
   });
+  const combatQuery = useQuery({
+    queryKey: qk.dndCombat(party.id),
+    queryFn: activeCombatQueryFn(party.id),
+  });
 
   const characters = charactersQuery.data?.characters ?? [];
   const partyMembers = characters.filter((ch) => ch.status === "ready" && ch.sheet);
@@ -101,6 +113,16 @@ export function DndGameScreen({ campaign, party }: Props) {
   const currentNodeId = path.at(-1) ?? null;
   const currentNode = nodes.find((n) => n.id === currentNodeId) ?? null;
   const branchingBlocked = currentNode?.nodeType === "initiative";
+  const activeCombat = combatQuery.data?.combat ?? null;
+  // The combat phase takes over the main screen only while standing on the
+  // initiative node the fight was started from.
+  const combatHere =
+    activeCombat !== null &&
+    activeCombat.status === "active" &&
+    currentNode !== null &&
+    activeCombat.nodeId === currentNode.id
+      ? activeCombat
+      : null;
   const viewingCharacter =
     characters.find((ch) => ch.id === viewingCharacterId && ch.sheet) ?? null;
 
@@ -146,6 +168,55 @@ export function DndGameScreen({ campaign, party }: Props) {
   const combatLogged =
     currentNode !== null && history.some((h) => h.nodeId === currentNode.id && h.kind === "combat");
 
+  const startCombatMutation = useMutation({
+    mutationFn: (order: InitiativeOrder) =>
+      startCombat(party.id, {
+        nodeId: currentNode?.id ?? "",
+        combatants: order.combatants,
+      }),
+    onSuccess: (result, order) => {
+      queryClient.setQueryData(qk.dndCombat(party.id), { combat: result.combat });
+      setTurnResult(null);
+      if (!combatLogged && currentNode) {
+        logMutation.mutate([{ kind: "combat", text: order.summary, nodeId: currentNode.id }]);
+      }
+    },
+  });
+
+  const resolveTurnMutation = useMutation({
+    mutationFn: (args: { combatId: string; message: string }) =>
+      resolveTurn(args.combatId, args.message),
+    onSuccess: (result) => {
+      setTurnResult(result);
+      queryClient.setQueryData(qk.dndCombat(party.id), { combat: result.combat });
+      // Legal turn: the report is consumed. Alerts: leave it in the chat to amend.
+      if (result.alerts.length === 0) setMessage("");
+    },
+  });
+
+  const advanceMutation = useMutation({
+    mutationFn: (combatId: string) => advanceCombat(combatId),
+    onSuccess: (result) => {
+      queryClient.setQueryData(qk.dndCombat(party.id), { combat: result.combat });
+      setTurnResult(null);
+    },
+  });
+
+  const endCombatMutation = useMutation({
+    mutationFn: (combatId: string) => endCombat(combatId),
+    onSuccess: () => {
+      queryClient.setQueryData(qk.dndCombat(party.id), { combat: null });
+      setTurnResult(null);
+      setMessage("");
+    },
+  });
+
+  const logTurnAndAdvance = () => {
+    if (!combatHere || !turnResult || turnResult.alerts.length > 0) return;
+    logMutation.mutate([{ kind: "combat", text: turnResult.narration, nodeId: combatHere.nodeId }]);
+    advanceMutation.mutate(combatHere.id);
+  };
+
   const logCurrentNode = () => {
     if (!currentNode || currentLogged) return;
     logMutation.mutate([
@@ -162,27 +233,22 @@ export function DndGameScreen({ campaign, party }: Props) {
     ]);
   };
 
-  const logCombat = () => {
-    if (!currentNode || combatLogged) return;
-    logMutation.mutate([
-      {
-        kind: "combat",
-        text: combatSummary ?? `Combat begins — ${currentNode.summary}`,
-        nodeId: currentNode.id,
-      },
-    ]);
-  };
-
   const selectWaypoint = (i: number) => {
     setWaypointIndex(i);
     setPath([]);
     setMode("root");
-    setCombatSummary(null);
+    setCombatOrder(null);
   };
 
   const send = () => {
     const msg = message.trim();
-    if (msg && !generateMutation.isPending) generateMutation.mutate(msg);
+    if (!msg) return;
+    if (combatHere) {
+      if (!resolveTurnMutation.isPending)
+        resolveTurnMutation.mutate({ combatId: combatHere.id, message: msg });
+      return;
+    }
+    if (!generateMutation.isPending) generateMutation.mutate(msg);
   };
 
   // Ultra-short recap of the LOGGED history only — what the party last did
@@ -254,19 +320,57 @@ export function DndGameScreen({ campaign, party }: Props) {
         )
       }
       fanActions={
-        screen === "main" && branchingBlocked ? (
-          // On an initiative node there is nothing to chat about — the action
-          // bar carries the one action that matters. Entering combat logs the
-          // participants and turn order to the history.
+        screen === "main" && combatHere ? (
+          // Combat controls: log the referee's narration and pass the torch,
+          // or skip ahead, or call the fight.
+          <div className="flex items-center gap-2">
+            {turnResult !== null && turnResult.alerts.length === 0 && (
+              <Button
+                variant="tinted"
+                tone="amber"
+                size="sm"
+                loading={logMutation.isPending || advanceMutation.isPending}
+                onClick={logTurnAndAdvance}
+              >
+                Log &amp; next
+              </Button>
+            )}
+            <Button
+              variant="ghost"
+              tone="amber"
+              size="sm"
+              loading={advanceMutation.isPending}
+              onClick={() => advanceMutation.mutate(combatHere.id)}
+            >
+              Next combatant
+            </Button>
+            <span className="text-3xs uppercase tracking-[0.2em] text-rose-300/60" style={SERIF}>
+              Round {combatHere.round}
+            </span>
+            <Button
+              variant="tinted"
+              tone="rose"
+              size="sm"
+              className="ml-auto"
+              loading={endCombatMutation.isPending}
+              onClick={() => endCombatMutation.mutate(combatHere.id)}
+            >
+              End combat
+            </Button>
+          </div>
+        ) : screen === "main" && branchingBlocked ? (
+          // On an initiative node the action bar carries the one action that
+          // matters: rolling into the combat phase (which also logs the
+          // participants and turn order to the history).
           <Button
             variant="tinted"
             tone="rose"
             size="sm"
-            disabled={combatLogged}
-            loading={logMutation.isPending}
-            onClick={logCombat}
+            disabled={combatOrder === null || activeCombat !== null}
+            loading={startCombatMutation.isPending}
+            onClick={() => combatOrder && startCombatMutation.mutate(combatOrder)}
           >
-            {combatLogged ? "Combat logged ✓" : "Enter combat"}
+            {activeCombat !== null ? "Combat underway ⚔" : "Enter combat"}
           </Button>
         ) : screen === "main" ? (
           <div className="flex items-center gap-2">
@@ -291,7 +395,7 @@ export function DndGameScreen({ campaign, party }: Props) {
         ) : undefined
       }
       fan={
-        screen === "main" && !branchingBlocked ? (
+        screen === "main" && (!branchingBlocked || combatHere) ? (
           <div className="flex gap-2" style={{ height: 190 }}>
             <textarea
               value={message}
@@ -302,28 +406,36 @@ export function DndGameScreen({ campaign, party }: Props) {
                   send();
                 }
               }}
-              placeholder='What do the players say or do? — e.g. "We pry open the crypt door as quietly as we can."'
+              placeholder={
+                combatHere
+                  ? 'What happened this turn? — e.g. "Victor darts behind the vine and stabs: 19 to hit, 8 piercing."'
+                  : 'What do the players say or do? — e.g. "We pry open the crypt door as quietly as we can."'
+              }
               className="h-full min-w-0 flex-1 resize-none rounded-2xl border border-amber-400/25 bg-[#1a0606]/70 p-3 text-sm text-amber-100 placeholder:text-amber-200/30 focus:border-amber-300/60 focus:outline-none"
             />
             <div className="flex w-36 shrink-0 flex-col justify-between gap-2">
               <p className="text-3xs leading-relaxed text-amber-200/40" style={SERIF}>
-                The sages will chart the {mode === "root" ? "new beginning" : "next step"} and read
-                it back.
+                {combatHere
+                  ? "The referee checks the rules, updates everyone, and reads the turn back."
+                  : `The sages will chart the ${mode === "root" ? "new beginning" : "next step"} and read it back.`}
               </p>
-              {generateMutation.isError && (
+              {(combatHere ? resolveTurnMutation : generateMutation).isError && (
                 <p className="text-3xs text-rose-300">
-                  {errorMessageOf(generateMutation.error, "The sages faltered.")}
+                  {errorMessageOf(
+                    (combatHere ? resolveTurnMutation : generateMutation).error,
+                    combatHere ? "The referee faltered." : "The sages faltered.",
+                  )}
                 </p>
               )}
               <Button
                 variant="tinted"
-                tone="amber"
+                tone={combatHere ? "rose" : "amber"}
                 block
                 disabled={!message.trim()}
-                loading={generateMutation.isPending}
+                loading={combatHere ? resolveTurnMutation.isPending : generateMutation.isPending}
                 onClick={send}
               >
-                Send to the sages
+                {combatHere ? "Send to the referee" : "Send to the sages"}
               </Button>
             </div>
           </div>
@@ -345,6 +457,13 @@ export function DndGameScreen({ campaign, party }: Props) {
           </div>
           {nodesQuery.isPending ? (
             <LoadingState fill label="Unrolling the story tree…" />
+          ) : combatHere ? (
+            <CombatPanel
+              combat={combatHere}
+              party={partyMembers}
+              npcs={npcs}
+              turnResult={turnResult}
+            />
           ) : (
             <StoryTree
               campaign={campaign}
@@ -355,7 +474,7 @@ export function DndGameScreen({ campaign, party }: Props) {
               onJumpTo={(i) => setPath(i < 0 ? [] : path.slice(0, i + 1))}
               party={partyMembers}
               npcs={npcs}
-              onOrderChange={setCombatSummary}
+              onOrderChange={setCombatOrder}
               onLogCurrent={logCurrentNode}
               currentLogged={currentLogged}
               onLogArrival={logArrival}

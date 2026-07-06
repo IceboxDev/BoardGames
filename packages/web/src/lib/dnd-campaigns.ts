@@ -1,10 +1,15 @@
 import {
+  ActiveCombatResponseSchema,
   ActiveSessionResponseSchema,
   type AppendHistoryRequest,
   AppendHistoryRequestSchema,
   type BeamerTrigger,
   CAMPAIGN_PDF_MAX_BYTES,
+  type CharacterActionsResponse,
+  CharacterActionsResponseSchema,
   type CharacterSheet,
+  type CombatResponse,
+  CombatResponseSchema,
   type CreateCampaignRequest,
   CreateCampaignRequestSchema,
   CreateCampaignResponseSchema,
@@ -35,8 +40,13 @@ import {
   ListNodesResponseSchema,
   ListNpcsResponseSchema,
   ListPartiesResponseSchema,
+  ResolveTurnRequestSchema,
+  type ResolveTurnResponse,
+  ResolveTurnResponseSchema,
   type RetriggerNpcsResponse,
   RetriggerNpcsResponseSchema,
+  type StartCombatRequest,
+  StartCombatRequestSchema,
   TriggerBeamerRequestSchema,
   type TriggerBeamerResponse,
   TriggerBeamerResponseSchema,
@@ -138,6 +148,54 @@ export function appendHistoryEntries(
     body: { entries },
     request: AppendHistoryRequestSchema,
     response: ListHistoryResponseSchema,
+  });
+}
+
+// ── Combat ─────────────────────────────────────────────────────────────
+
+export function activeCombatQueryFn(partyId: string) {
+  return jsonQuery(`/api/dnd/parties/${partyId}/combat`, ActiveCombatResponseSchema);
+}
+
+export function startCombat(partyId: string, body: StartCombatRequest): Promise<CombatResponse> {
+  return apiFetch(`/api/dnd/parties/${partyId}/combat`, {
+    method: "POST",
+    body,
+    request: StartCombatRequestSchema,
+    response: CombatResponseSchema,
+  });
+}
+
+export function resolveTurn(combatId: string, message: string): Promise<ResolveTurnResponse> {
+  return apiFetch(`/api/dnd/combats/${combatId}/turn`, {
+    method: "POST",
+    body: { message },
+    request: ResolveTurnRequestSchema,
+    response: ResolveTurnResponseSchema,
+  });
+}
+
+export function advanceCombat(combatId: string): Promise<CombatResponse> {
+  return apiFetch(`/api/dnd/combats/${combatId}/advance`, {
+    method: "POST",
+    body: {},
+    response: CombatResponseSchema,
+  });
+}
+
+export function endCombat(combatId: string): Promise<CombatResponse> {
+  return apiFetch(`/api/dnd/combats/${combatId}/end`, {
+    method: "POST",
+    body: {},
+    response: CombatResponseSchema,
+  });
+}
+
+export function characterActions(characterId: string): Promise<CharacterActionsResponse> {
+  return apiFetch(`/api/dnd/characters/${characterId}/actions`, {
+    method: "POST",
+    body: {},
+    response: CharacterActionsResponseSchema,
   });
 }
 

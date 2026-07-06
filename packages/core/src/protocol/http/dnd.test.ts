@@ -1,16 +1,21 @@
 import { describe, expect, it } from "vitest";
 import {
+  ActionCardSchema,
   BeamerEventSchema,
   BeamerTriggerSchema,
   CAMPAIGN_PDF_DATA_URI_MAX,
   CampaignSchema,
+  CombatantSchema,
   CreateCampaignRequestSchema,
   CreateCharacterRequestSchema,
   DndCharacterSchema,
+  DndCombatSchema,
   DndFileSchema,
   DndNodeSchema,
   DndNpcSchema,
   GenerateNodeRequestSchema,
+  ResolveTurnRequestSchema,
+  StartCombatRequestSchema,
 } from "./dnd.ts";
 
 const PDF = "data:application/pdf;base64,JVBERi0xLjQ=";
@@ -324,6 +329,67 @@ describe("BeamerEventSchema", () => {
     expect(
       BeamerTriggerSchema.safeParse({ type: "connected", campaignId: "c1", campaignTitle: null })
         .success,
+    ).toBe(false);
+  });
+});
+
+describe("combat schemas", () => {
+  const COMBATANT = {
+    key: "c0",
+    name: "Vex the Bold",
+    kind: "pc",
+    characterId: "ch1",
+    count: 1,
+    initiative: 17,
+    maxHp: 44,
+    hp: 31,
+    conditions: ["prone"],
+    position: "front line",
+    notes: "one L1 slot spent",
+  };
+
+  it("parses a full combat and applies combatant defaults", () => {
+    const combat = DndCombatSchema.parse({
+      id: "f1",
+      partyId: "p1",
+      nodeId: "n1",
+      status: "active",
+      round: 2,
+      turnIndex: 1,
+      combatants: [COMBATANT, { key: "c1", name: "Wolf", kind: "enemy", initiative: 9 }],
+      createdAt: "2026-07-05 19:08:00",
+    });
+    const wolf = combat.combatants[1];
+    expect(wolf?.count).toBe(1);
+    expect(wolf?.characterId).toBeNull();
+    expect(wolf?.hp).toBeNull();
+    expect(wolf?.conditions).toEqual([]);
+  });
+
+  it("rejects an unknown combatant kind", () => {
+    const result = CombatantSchema.safeParse({ ...COMBATANT, kind: "npc" });
+    expect(result.success).toBe(false);
+    if (!result.success) expect(result.error.issues[0]?.path).toEqual(["kind"]);
+  });
+
+  it("start request needs at least one combatant", () => {
+    expect(StartCombatRequestSchema.safeParse({ nodeId: "n1", combatants: [] }).success).toBe(
+      false,
+    );
+  });
+
+  it("turn report is capped at 1500 chars", () => {
+    expect(ResolveTurnRequestSchema.safeParse({ message: "x".repeat(1500) }).success).toBe(true);
+    expect(ResolveTurnRequestSchema.safeParse({ message: "x".repeat(1501) }).success).toBe(false);
+  });
+
+  it("action cards reject an unknown kind", () => {
+    expect(
+      ActionCardSchema.safeParse({ name: "Rapier", kind: "attack", roll: "d20+7", note: "" })
+        .success,
+    ).toBe(true);
+    expect(
+      ActionCardSchema.safeParse({ name: "Rapier", kind: "reaction", roll: "", note: "" }).success,
     ).toBe(false);
   });
 });

@@ -1,10 +1,12 @@
 import { describe, expect, it } from "vitest";
 import {
+  normalizeActionCards,
   normalizeCharacter,
   normalizeExtraction,
   normalizeNode,
   normalizeNpcs,
   normalizeReadAloudBlocks,
+  normalizeTurnResult,
 } from "./dnd-extract.ts";
 
 const CHECKPOINT = {
@@ -251,7 +253,9 @@ describe("normalizeNode", () => {
     const table = {
       die: "1d6",
       description: "Second round, initiative count 20.",
-      entries: [{ roll: "2", text: "two wolves on the prowl" }],
+      entries: [
+        { roll: "2", text: "two wolves on the prowl", creatures: [{ name: "Wolf", count: "2" }] },
+      ],
     };
     expect(
       normalizeNode({ ...RAW_NODE, node_type: "initiative", danger_table: table }).dangerTable,
@@ -345,5 +349,59 @@ describe("normalizeReadAloudBlocks", () => {
   it("drops empty blocks and accepts an empty list", () => {
     expect(normalizeReadAloudBlocks({ blocks: [{ ...BLOCK, read_text: " " }] }, 5)).toHaveLength(0);
     expect(normalizeReadAloudBlocks({ blocks: [] }, 5)).toEqual([]);
+  });
+});
+
+describe("normalizeActionCards", () => {
+  it("coerces unknown kinds to basic, drops empty names, caps at 10", () => {
+    const cards = normalizeActionCards({
+      cards: [
+        { name: "Rapier", kind: "attack", roll: "To hit d20+7; 1d8+4 piercing", note: "" },
+        { name: "Mystery Move", kind: "legendary", roll: "", note: "" },
+        { name: "   ", kind: "basic", roll: "", note: "" },
+        ...Array.from({ length: 12 }, (_, i) => ({
+          name: `Filler ${i}`,
+          kind: "basic",
+          roll: "",
+          note: "",
+        })),
+      ],
+    });
+    expect(cards).toHaveLength(10);
+    expect(cards[0]?.kind).toBe("attack");
+    expect(cards[1]?.kind).toBe("basic");
+    expect(cards.some((c) => c.name === "")).toBe(false);
+  });
+});
+
+describe("normalizeTurnResult", () => {
+  const UPDATE = {
+    key: "c2",
+    hp: 4.6,
+    conditions: ["prone", "   "],
+    position: "engaged with Vex",
+    notes: "one wolf bloodied",
+  };
+
+  it("keeps updates on a legal turn and clamps hp/conditions", () => {
+    const result = normalizeTurnResult({
+      narration: "The wolf crashes into the mud.",
+      alerts: [],
+      updates: [UPDATE, { ...UPDATE, key: "c0", hp: -3 }],
+    });
+    expect(result.alerts).toEqual([]);
+    expect(result.updates[0]?.hp).toBe(5);
+    expect(result.updates[0]?.conditions).toEqual(["prone"]);
+    expect(result.updates[1]?.hp).toBe(0);
+  });
+
+  it("drops all updates when the referee raises alerts", () => {
+    const result = normalizeTurnResult({
+      narration: "",
+      alerts: ["Vex has no action left this turn.", ""],
+      updates: [UPDATE],
+    });
+    expect(result.alerts).toEqual(["Vex has no action left this turn."]);
+    expect(result.updates).toEqual([]);
   });
 });

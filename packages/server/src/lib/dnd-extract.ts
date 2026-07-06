@@ -1,7 +1,9 @@
 import type {
+  ActionCard,
   CampaignCheckpoint,
   CampaignCheckpointKind,
   CharacterSheet,
+  Combatant,
   DangerTable,
   NpcSheet,
 } from "@boardgames/core/protocol";
@@ -733,7 +735,13 @@ const RawDangerTableSchema = z
   .object({
     die: z.string(),
     description: z.string(),
-    entries: z.array(z.object({ roll: z.string(), text: z.string() })),
+    entries: z.array(
+      z.object({
+        roll: z.string(),
+        text: z.string(),
+        creatures: z.array(z.object({ name: z.string(), count: z.string() })),
+      }),
+    ),
   })
   .nullable();
 
@@ -759,8 +767,23 @@ const DANGER_TABLE_JSON_SCHEMA = {
                 type: "string",
                 description: "What appears, e.g. 'two wolves on the prowl'.",
               },
+              creatures: {
+                type: "array",
+                maxItems: 4,
+                description:
+                  "The canonical creatures behind the flavor text, singular stat-block names: 'two wolves on the prowl' → [{name:'Wolf',count:'2'}]; dice counts stay dice ('1d4').",
+                items: {
+                  type: "object",
+                  properties: {
+                    name: { type: "string", description: "Singular stat-block name, e.g. 'Wolf'." },
+                    count: { type: "string", description: "'2' or a dice expression like '1d4'." },
+                  },
+                  required: ["name", "count"],
+                  additionalProperties: false,
+                },
+              },
             },
-            required: ["roll", "text"],
+            required: ["roll", "text", "creatures"],
             additionalProperties: false,
           },
         },
@@ -779,7 +802,14 @@ export function normalizeDangerTable(raw: unknown): DangerTable | null {
   if (!parsed) return null;
   const die = clamp(parsed.die, 20);
   const entries = parsed.entries
-    .map((e) => ({ roll: clamp(e.roll, 20), text: clamp(e.text, 200) }))
+    .map((e) => ({
+      roll: clamp(e.roll, 20),
+      text: clamp(e.text, 200),
+      creatures: e.creatures
+        .map((c) => ({ name: clamp(c.name, 60), count: clamp(c.count, 10) || "1" }))
+        .filter((c) => c.name.length > 0)
+        .slice(0, 4),
+    }))
     .filter((e) => e.roll.length > 0 && e.text.length > 0)
     .slice(0, 12);
   if (!die || entries.length === 0) return null;
@@ -1080,4 +1110,252 @@ export async function generateStoryNode(ctx: StoryNodeContext): Promise<StoryNod
   });
 
   return normalizeNode(JSON.parse(res.output_text));
+}
+
+// ── Combat: action dashboards ──────────────────────────────────────────
+// A character's combat options, distilled from the sheet into 6–10 glance
+// cards for the DM: what to check and what to tell the player to roll.
+// Generated once per character and cached.
+
+const RawActionCardsSchema = z.object({
+  cards: z.array(
+    z.object({
+      name: z.string(),
+      kind: z.string(),
+      roll: z.string(),
+      note: z.string(),
+    }),
+  ),
+});
+
+const ACTION_CARDS_JSON_SCHEMA = {
+  type: "object",
+  properties: {
+    cards: {
+      type: "array",
+      maxItems: 10,
+      items: {
+        type: "object",
+        properties: {
+          name: { type: "string", description: "e.g. 'Rapier', 'Fire Bolt', 'Cunning Action'." },
+          kind: { type: "string", enum: ["attack", "spell", "bonus", "feature", "basic"] },
+          roll: {
+            type: "string",
+            description:
+              "What to check / tell them to roll, with concrete math from the sheet: 'To hit d20+7 vs AC; 1d8+4 piercing'. Empty when nothing is rolled.",
+          },
+          note: {
+            type: "string",
+            description: "Range, uses, conditions, rules reminder — one short line.",
+          },
+        },
+        required: ["name", "kind", "roll", "note"],
+        additionalProperties: false,
+      },
+    },
+  },
+  required: ["cards"],
+  additionalProperties: false,
+} as const;
+
+const ACTION_KINDS = new Set(["attack", "spell", "bonus", "feature", "basic"]);
+
+export function normalizeActionCards(raw: unknown): ActionCard[] {
+  const parsed = RawActionCardsSchema.parse(raw);
+  return parsed.cards
+    .map((card) => ({
+      name: clamp(card.name, 60),
+      kind: (ACTION_KINDS.has(card.kind) ? card.kind : "basic") as ActionCard["kind"],
+      roll: clamp(card.roll, 160),
+      note: clamp(card.note, 200),
+    }))
+    .filter((card) => card.name.length > 0)
+    .slice(0, 10);
+}
+
+/** Distill a character sheet into a normalized combat action dashboard. */
+export async function generateActionCards(sheetJson: string): Promise<ActionCard[]> {
+  const client = getClient();
+  const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
+  const prompt = `You are preparing a DM's combat dashboard for one D&D player character. From the character sheet JSON below, produce 6–10 action cards covering the MIX a DM needs at a glance during that character's turn: weapon attacks (one card per relevant weapon, with to-hit and damage math computed from the sheet's abilities, proficiency, and weapon type), cantrips and the most combat-relevant prepared/known spells (attack roll or save DC, damage/effect), signature class/bonus-action features appropriate to the class and level (e.g. Cunning Action, Steady Aim, Sneak Attack dice, Second Wind, racial traits like Feline Agility), and — only when the character has few special options — 1–2 basics (Dash, Disengage, Dodge, Hide). Prioritize the most important options for characters with long lists; keep the set normalized so every character's dashboard reads the same way. Compute concrete numbers where the sheet allows; do not invent items or spells the sheet doesn't have.
+
+Character sheet JSON:
+${sheetJson}`;
+  const res = await client.responses.create({
+    model,
+    input: [{ role: "user", content: [{ type: "input_text", text: prompt }] }],
+    text: {
+      format: {
+        type: "json_schema",
+        name: "action_cards",
+        strict: true,
+        schema: ACTION_CARDS_JSON_SCHEMA as unknown as Record<string, unknown>,
+      },
+    },
+  });
+  return normalizeActionCards(JSON.parse(res.output_text));
+}
+
+// ── Combat: the turn referee ───────────────────────────────────────────
+// The DM resolves a turn at the table and describes it; the referee checks
+// legality against the rules and the tracked state, updates hp/conditions/
+// positions/resources for everyone involved, and writes the narration the
+// DM reads back. Illegal turns produce alerts and NO updates.
+
+export interface CombatTurnContext {
+  round: number;
+  currentName: string;
+  combatants: Combatant[];
+  /** Party sheet briefs (name, class, key numbers, equipment, spells). */
+  partyBriefs: string[];
+  /** Cast briefs for enemies (stat lines, behavior). */
+  npcBriefs: string[];
+  /** Recent table history (ground truth of prior events/resources). */
+  history: string[];
+  /** What the DM says happened this turn. */
+  message: string;
+}
+
+export interface CombatTurnResult {
+  narration: string;
+  alerts: string[];
+  updates: {
+    key: string;
+    hp: number | null;
+    conditions: string[];
+    position: string;
+    notes: string;
+  }[];
+}
+
+const RawTurnSchema = z.object({
+  narration: z.string(),
+  alerts: z.array(z.string()),
+  updates: z.array(
+    z.object({
+      key: z.string(),
+      hp: z.number().nullable(),
+      conditions: z.array(z.string()),
+      position: z.string(),
+      notes: z.string(),
+    }),
+  ),
+});
+
+const TURN_JSON_SCHEMA = {
+  type: "object",
+  properties: {
+    narration: {
+      type: "string",
+      description:
+        "The DM's read-aloud describing the FULL turn — how the arrow flew, the blade bit, resistances implied by low damage — vivid, 1–2 short paragraphs (max ~1400 chars). Empty string when alerts are raised.",
+    },
+    alerts: {
+      type: "array",
+      maxItems: 6,
+      items: { type: "string" },
+      description:
+        "Rule violations making this turn impossible (action economy, range vs tracked positions, missing spell slots or ammo per notes/history, condition restrictions). EMPTY when the turn is legal.",
+    },
+    updates: {
+      type: "array",
+      maxItems: 30,
+      description:
+        "Full replacement state for every combatant the turn touched (attacker included: spent resources, movement). Empty when alerts are raised.",
+      items: {
+        type: "object",
+        properties: {
+          key: { type: "string", description: "The combatant's key, exactly as given." },
+          hp: {
+            type: ["integer", "null"],
+            description: "Hp after this turn (per creature for groups); null if untracked.",
+          },
+          conditions: { type: "array", maxItems: 10, items: { type: "string" } },
+          position: { type: "string", description: "Updated position/range notes." },
+          notes: {
+            type: "string",
+            description: "Cumulative spent resources/flags ('3 arrows spent, L1 slot used').",
+          },
+        },
+        required: ["key", "hp", "conditions", "position", "notes"],
+        additionalProperties: false,
+      },
+    },
+  },
+  required: ["narration", "alerts", "updates"],
+  additionalProperties: false,
+} as const;
+
+function buildTurnPrompt(ctx: CombatTurnContext): string {
+  const lines: string[] = [];
+  lines.push(
+    `You are the combat referee and narrator at a D&D table. Round ${ctx.round}; it is ${ctx.currentName}'s turn. The DM resolved the turn physically at the table and reports it below. Your jobs, in order:`,
+  );
+  lines.push(
+    "1. LEGALITY: check the reported turn against 5e rules and the tracked state — action economy (one action, one bonus action, movement), ranges versus the tracked positions, spell slots and ammunition versus the notes and history, conditions that would forbid the act. If ANYTHING is impossible, return alerts naming each violation, an empty narration, and NO updates.",
+  );
+  lines.push(
+    "2. STATE: when legal, return full replacement state for every combatant the turn touched — hp after damage/healing (respect resistances/immunities implied by the creature's nature), added/removed conditions, updated positions and distances (keep them consistent for range checks next turn), and cumulative notes for spent resources (arrows, spell slots, feature uses).",
+  );
+  lines.push(
+    "3. NARRATION: write the read-aloud for the whole turn — the arrow's flight, the blade's bite, damage that felt weaker than it should (implying resistance) — grounded in exactly what the DM reported and the numbers rolled.",
+  );
+  lines.push("");
+  lines.push(
+    `Tracked combatants (key | name ×count | kind | init | hp/max | conditions | position | notes):`,
+  );
+  for (const c of ctx.combatants) {
+    lines.push(
+      `${c.key} | ${c.name}${c.count > 1 ? ` ×${c.count}` : ""} | ${c.kind} | ${c.initiative} | ${c.hp ?? "?"}/${c.maxHp ?? "?"} | ${c.conditions.join("+") || "-"} | ${c.position || "-"} | ${c.notes || "-"}`,
+    );
+  }
+  if (ctx.partyBriefs.length > 0) lines.push(`\nParty sheets: ${ctx.partyBriefs.join(" || ")}`);
+  if (ctx.npcBriefs.length > 0) lines.push(`Opposition: ${ctx.npcBriefs.join(" || ")}`);
+  if (ctx.history.length > 0) {
+    lines.push("Recent table history (ground truth of prior events and spent resources):");
+    for (const h of ctx.history) lines.push(h);
+  }
+  lines.push(`\nThe DM reports ${ctx.currentName}'s turn: ${ctx.message}`);
+  return lines.join("\n");
+}
+
+export function normalizeTurnResult(raw: unknown): CombatTurnResult {
+  const parsed = RawTurnSchema.parse(raw);
+  const alerts = parsed.alerts.map((a) => clamp(a, 300)).filter((a) => a.length > 0);
+  return {
+    narration: clamp(parsed.narration, 1500),
+    alerts,
+    updates:
+      alerts.length > 0
+        ? []
+        : parsed.updates.slice(0, 30).map((u) => ({
+            key: clamp(u.key, 40),
+            hp: u.hp === null ? null : Math.max(0, Math.min(999, Math.round(u.hp))),
+            conditions: u.conditions
+              .map((c) => clamp(c, 40))
+              .filter((c) => c.length > 0)
+              .slice(0, 10),
+            position: clamp(u.position, 200),
+            notes: clamp(u.notes, 300),
+          })),
+  };
+}
+
+/** Referee one combat turn: legality → state updates → narration. */
+export async function resolveCombatTurn(ctx: CombatTurnContext): Promise<CombatTurnResult> {
+  const client = getClient();
+  const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
+  const res = await client.responses.create({
+    model,
+    input: [{ role: "user", content: [{ type: "input_text", text: buildTurnPrompt(ctx) }] }],
+    text: {
+      format: {
+        type: "json_schema",
+        name: "combat_turn",
+        strict: true,
+        schema: TURN_JSON_SCHEMA as unknown as Record<string, unknown>,
+      },
+    },
+  });
+  return normalizeTurnResult(JSON.parse(res.output_text));
 }

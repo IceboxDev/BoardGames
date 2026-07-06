@@ -405,6 +405,20 @@ export const DangerTableSchema = z.object({
       z.object({
         roll: z.string().min(1).max(20),
         text: z.string().min(1).max(200),
+        /**
+         * Canonical creatures behind the flavor text — "two wolves on the
+         * prowl" → [{ name: "Wolf", count: "2" }]. Count may be a dice
+         * expression ("1d4"). Empty for old rows.
+         */
+        creatures: z
+          .array(
+            z.object({
+              name: z.string().min(1).max(60),
+              count: z.string().min(1).max(10),
+            }),
+          )
+          .max(4)
+          .default([]),
       }),
     )
     .min(1)
@@ -443,6 +457,104 @@ export type GenerateNodeRequest = z.infer<typeof GenerateNodeRequestSchema>;
 
 export const GenerateNodeResponseSchema = z.object({ node: DndNodeSchema });
 export type GenerateNodeResponse = z.infer<typeof GenerateNodeResponseSchema>;
+
+// ── Combat ─────────────────────────────────────────────────────────────
+// The combat phase attached to an initiative node. The DM resolves each
+// turn at the table using the current combatant's action dashboard, writes
+// what happened into the chat, and the referee model verifies legality,
+// updates the shared state (hp, conditions, positions/ranges, spent
+// resources), and produces the narration read back to the party.
+
+export const CombatantKindSchema = z.enum(["pc", "enemy"]);
+
+export const CombatantSchema = z.object({
+  key: z.string().min(1),
+  name: z.string().min(1).max(80),
+  kind: CombatantKindSchema,
+  characterId: z.string().nullable().default(null),
+  /** Group size (group initiative) — "Dead Vine ×3". */
+  count: z.number().int().min(1).default(1),
+  initiative: z.number().int(),
+  maxHp: z.number().int().nullable().default(null),
+  /** Current hp (per creature for groups); null = untracked. */
+  hp: z.number().int().nullable().default(null),
+  conditions: z.array(z.string().min(1).max(40)).max(10).default([]),
+  /** Free-text position/range notes ("30 ft from the vines, behind the cart"). */
+  position: z.string().max(200).default(""),
+  /** Spent resources & flags ("2 arrows spent, L1 slot used"). */
+  notes: z.string().max(300).default(""),
+});
+export type Combatant = z.infer<typeof CombatantSchema>;
+
+export const CombatStatusSchema = z.enum(["active", "ended"]);
+
+export const DndCombatSchema = z.object({
+  id: z.string().min(1),
+  partyId: z.string().min(1),
+  nodeId: z.string().min(1),
+  status: CombatStatusSchema,
+  round: z.number().int().min(1),
+  turnIndex: z.number().int().min(0),
+  combatants: z.array(CombatantSchema).min(1),
+  createdAt: z.string(),
+});
+export type DndCombat = z.infer<typeof DndCombatSchema>;
+
+export const StartCombatRequestSchema = z.object({
+  nodeId: z.string().min(1),
+  combatants: z
+    .array(
+      z.object({
+        name: z.string().min(1).max(80),
+        kind: CombatantKindSchema,
+        characterId: z.string().nullable(),
+        count: z.number().int().min(1),
+        initiative: z.number().int(),
+        maxHp: z.number().int().nullable(),
+      }),
+    )
+    .min(1)
+    .max(30),
+});
+export type StartCombatRequest = z.infer<typeof StartCombatRequestSchema>;
+
+export const CombatResponseSchema = z.object({ combat: DndCombatSchema });
+export type CombatResponse = z.infer<typeof CombatResponseSchema>;
+
+export const ActiveCombatResponseSchema = z.object({ combat: DndCombatSchema.nullable() });
+export type ActiveCombatResponse = z.infer<typeof ActiveCombatResponseSchema>;
+
+export const ResolveTurnRequestSchema = z.object({
+  message: z.string().min(1).max(1500),
+});
+export type ResolveTurnRequest = z.infer<typeof ResolveTurnRequestSchema>;
+
+export const ResolveTurnResponseSchema = z.object({
+  /** The read-aloud description of the full turn. */
+  narration: z.string(),
+  /** Rule violations — non-empty means nothing was applied; fix and resend. */
+  alerts: z.array(z.string()),
+  applied: z.boolean(),
+  combat: DndCombatSchema,
+});
+export type ResolveTurnResponse = z.infer<typeof ResolveTurnResponseSchema>;
+
+// Per-character action dashboard, generated once from the sheet and cached.
+export const ActionCardKindSchema = z.enum(["attack", "spell", "bonus", "feature", "basic"]);
+
+export const ActionCardSchema = z.object({
+  name: z.string().min(1).max(60),
+  kind: ActionCardKindSchema,
+  /** What to check / tell them to roll ("To hit d20+7 vs AC; 1d6+4 piercing"). */
+  roll: z.string().max(160),
+  note: z.string().max(200),
+});
+export type ActionCard = z.infer<typeof ActionCardSchema>;
+
+export const CharacterActionsResponseSchema = z.object({
+  cards: z.array(ActionCardSchema),
+});
+export type CharacterActionsResponse = z.infer<typeof CharacterActionsResponseSchema>;
 
 // ── Table history ──────────────────────────────────────────────────────
 // The session log: everything actually spoken/done at the table, appended

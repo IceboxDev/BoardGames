@@ -1,11 +1,18 @@
 import "@fontsource/cinzel/600.css";
 import "@fontsource/cinzel/700.css";
-import type { Campaign, CampaignCheckpoint, DndCharacter } from "@boardgames/core/protocol";
+import type {
+  ActionCard,
+  Campaign,
+  CampaignCheckpoint,
+  DndCharacter,
+  DndCombat,
+} from "@boardgames/core/protocol";
 import { useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { CampaignTome } from "../games/dungeons-and-dragons/components/CampaignTome";
 import { CharacterCard } from "../games/dungeons-and-dragons/components/CharacterCard";
 import { CharacterSheetModal } from "../games/dungeons-and-dragons/components/CharacterSheetModal";
+import { CombatPanel } from "../games/dungeons-and-dragons/components/CombatPanel";
 import { HallHero } from "../games/dungeons-and-dragons/components/HallHero";
 import { DndGameScreen } from "../games/dungeons-and-dragons/DndGameScreen";
 import { qk } from "../lib/query-keys";
@@ -281,8 +288,8 @@ const NODES = [
       die: "1d6",
       description: "Second round, initiative count 20: the mists send something more.",
       entries: [
-        { roll: "1", text: "two wolves on the prowl" },
-        { roll: "2", text: "a swarm of ravens" },
+        { roll: "1", text: "two wolves on the prowl", creatures: [{ name: "Wolf", count: "2" }] },
+        { roll: "2", text: "a swarm of ravens", creatures: [] },
       ],
     },
     trigger: "Roll initiative",
@@ -304,6 +311,136 @@ const NODES = [
     readText:
       "The lock gives with a soft click. Root vegetables, salted meat, and four bedrolls arranged in a square — one of them still warm.",
     createdAt: "2026-07-05 19:06:00",
+  },
+];
+
+const COMBAT: DndCombat = {
+  id: "preview-combat",
+  partyId: PARTY_META.id,
+  nodeId: "node-initiative-1",
+  status: "active",
+  round: 2,
+  turnIndex: 1,
+  combatants: [
+    {
+      key: "c0",
+      name: "Whisper",
+      kind: "pc",
+      characterId: "preview-whisper",
+      count: 1,
+      initiative: 21,
+      maxHp: 33,
+      hp: 33,
+      conditions: [],
+      position: "on the cart roof, 20 ft from the wolves",
+      notes: "",
+    },
+    {
+      key: "c1",
+      name: "Vex the Bold",
+      kind: "pc",
+      characterId: "preview-vex",
+      count: 1,
+      initiative: 14,
+      maxHp: 44,
+      hp: 31,
+      conditions: [],
+      position: "front line, engaged",
+      notes: "one L1 slot spent",
+    },
+    {
+      key: "c2",
+      name: "Wolf",
+      kind: "enemy",
+      characterId: null,
+      count: 2,
+      initiative: 9,
+      maxHp: 11,
+      hp: 4,
+      conditions: ["prone"],
+      position: "engaged with Vex",
+      notes: "one wolf bloodied",
+    },
+  ],
+  createdAt: "2026-07-05 19:08:00",
+};
+
+const VEX_ACTIONS: ActionCard[] = [
+  {
+    name: "Longsword",
+    kind: "attack",
+    roll: "To hit d20+6; 1d8+3 slashing (1d10+3 two-handed)",
+    note: "Melee, 5 ft.",
+  },
+  {
+    name: "Divine Smite",
+    kind: "feature",
+    roll: "+2d8 radiant on a melee hit (L1 slot)",
+    note: "Decide after the hit lands; +1d8 vs undead/fiends.",
+  },
+  {
+    name: "Bless",
+    kind: "spell",
+    roll: "3 allies add 1d4 to attacks & saves",
+    note: "Concentration, 1 min. L1 slot.",
+  },
+  { name: "Cure Wounds", kind: "spell", roll: "Touch, heal 1d8+3", note: "L1 slot." },
+  {
+    name: "Lay on Hands",
+    kind: "feature",
+    roll: "Heal up to 25 HP from the pool",
+    note: "Action; splittable.",
+  },
+  {
+    name: "Dash / Dodge / Help",
+    kind: "basic",
+    roll: "",
+    note: "Standard actions — always available.",
+  },
+];
+
+const WHISPER_ACTIONS: ActionCard[] = [
+  {
+    name: "Shortsword",
+    kind: "attack",
+    roll: "To hit d20+7; 1d6+4 piercing",
+    note: "Melee, finesse — sneak attack eligible.",
+  },
+  {
+    name: "Shortbow",
+    kind: "attack",
+    roll: "To hit d20+7; 1d6+4 piercing",
+    note: "Range 80/320 ft.",
+  },
+  {
+    name: "Sneak Attack",
+    kind: "feature",
+    roll: "+3d6 on one hit/turn",
+    note: "Needs advantage or an adjacent ally.",
+  },
+  {
+    name: "Cunning Action",
+    kind: "bonus",
+    roll: "Dash, Disengage, or Hide",
+    note: "Bonus action, every turn.",
+  },
+  {
+    name: "Steady Aim",
+    kind: "bonus",
+    roll: "Advantage on next attack",
+    note: "Bonus action; speed becomes 0 this turn.",
+  },
+  {
+    name: "Mage Hand",
+    kind: "spell",
+    roll: "Spectral hand, 30 ft",
+    note: "Cantrip — invisible (Arcane Trickster).",
+  },
+  {
+    name: "Dash / Dodge / Help",
+    kind: "basic",
+    roll: "",
+    note: "Standard actions — always available.",
   },
 ];
 
@@ -337,6 +474,9 @@ export default function DndToolPreview() {
     queryClient.setQueryData(qk.dndNpcs(STRAHD.id), { npcs: NPCS });
     queryClient.setQueryData(qk.dndNodes(PARTY_META.id), { nodes: NODES });
     queryClient.setQueryData(qk.dndFiles(), { files: FILES });
+    queryClient.setQueryData(qk.dndCombat(PARTY_META.id), { combat: COMBAT });
+    queryClient.setQueryData(qk.dndActions("preview-vex"), { cards: VEX_ACTIONS });
+    queryClient.setQueryData(qk.dndActions("preview-whisper"), { cards: WHISPER_ACTIONS });
     queryClient.setQueryData(qk.dndHistory(PARTY_META.id), {
       entries: [
         {
@@ -425,6 +565,47 @@ export default function DndToolPreview() {
         <SectionTitle>Session — game screen</SectionTitle>
         <div className="mt-3 flex h-[860px] overflow-hidden rounded-2xl border border-white/10">
           <DndGameScreen campaign={STRAHD} party={PARTY_META} />
+        </div>
+      </div>
+
+      <div className="mx-auto flex max-w-6xl flex-col gap-3 px-3 pb-8">
+        <SectionTitle>Combat — action dashboard (PC turn)</SectionTitle>
+        <div className="flex h-[440px] overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-3">
+          <CombatPanel combat={COMBAT} party={PARTY} npcs={NPCS} turnResult={null} />
+        </div>
+
+        <SectionTitle>Combat — enemy turn + read-aloud narration</SectionTitle>
+        <div className="flex h-[440px] overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-3">
+          <CombatPanel
+            combat={{ ...COMBAT, turnIndex: 2 }}
+            party={PARTY}
+            npcs={NPCS}
+            turnResult={{
+              narration:
+                "Vex steps inside the wolf's lunge and her longsword flashes once — the blade opens its flank and the beast crashes into the mud, twitching to stillness. Its packmate circles wide, hackles up, suddenly alone.",
+              alerts: [],
+              applied: true,
+              combat: COMBAT,
+            }}
+          />
+        </div>
+
+        <SectionTitle>Combat — referee alert (illegal turn)</SectionTitle>
+        <div className="flex h-[440px] overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-3">
+          <CombatPanel
+            combat={COMBAT}
+            party={PARTY}
+            npcs={NPCS}
+            turnResult={{
+              narration: "",
+              alerts: [
+                "Vex has already attacked this turn — a second weapon attack needs Extra Attack plus an action she no longer has.",
+                "The wolves are engaged with Vex, 20 ft from the cart — Whisper cannot reach them with a melee shortsword without moving first.",
+              ],
+              applied: false,
+              combat: COMBAT,
+            }}
+          />
         </div>
       </div>
 

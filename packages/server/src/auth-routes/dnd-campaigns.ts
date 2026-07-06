@@ -9,9 +9,13 @@
 
 import { randomUUID } from "node:crypto";
 import {
+  ActiveCombatResponseSchema,
   ActiveSessionResponseSchema,
   AppendHistoryRequestSchema,
   BeamerEventSchema,
+  CharacterActionsResponseSchema,
+  type Combatant,
+  CombatResponseSchema,
   CreateCampaignRequestSchema,
   CreateCampaignResponseSchema,
   CreateCharacterRequestSchema,
@@ -33,7 +37,10 @@ import {
   ListNodesResponseSchema,
   ListNpcsResponseSchema,
   ListPartiesResponseSchema,
+  ResolveTurnRequestSchema,
+  ResolveTurnResponseSchema,
   RetriggerNpcsResponseSchema,
+  StartCombatRequestSchema,
   TriggerBeamerRequestSchema,
   TriggerBeamerResponseSchema,
   UpdateCharacterRequestSchema,
@@ -41,6 +48,7 @@ import {
 } from "@boardgames/core/protocol";
 import { streamSSE } from "hono/streaming";
 import { authedApp } from "../auth/index.ts";
+import { getDb } from "../db.ts";
 import {
   countCampaignsForUser,
   deleteCampaign,
@@ -63,13 +71,16 @@ import {
   setCharacterFile,
   setCharacterReady,
 } from "../lib/dnd-characters-db.ts";
+import { getActiveCombat, getCombat, insertCombat, updateCombat } from "../lib/dnd-combats-db.ts";
 import {
   DndConfigError,
   extractCampaign,
   extractCharacter,
   extractNpcs,
   extractReadAloudNodes,
+  generateActionCards,
   generateStoryNode,
+  resolveCombatTurn,
 } from "../lib/dnd-extract.ts";
 import { getFileBase64, getFileMeta, insertFile, listFilesForUser } from "../lib/dnd-files-db.ts";
 import { appendHistory, listHistoryForParty } from "../lib/dnd-history-db.ts";
@@ -526,6 +537,183 @@ dndCampaignRoutes.get("/files/:id/content", async (c) => {
   c.header("Content-Disposition", `inline; filename="${meta.filename.replace(/"/g, "")}"`);
   c.header("Cache-Control", "private, max-age=3600");
   return c.body(Buffer.from(base64, "base64"));
+});
+
+// ── Combat ─────────────────────────────────────────────────────────────
+// One active combat per party. The referee call is synchronous (seconds);
+// updates apply only when no rule alerts are raised.
+
+dndCampaignRoutes.get("/parties/:id/combat", async (c) => {
+  const user = c.get("user");
+  const partyId = c.req.param("id");
+  if (!(await getParty(partyId, user.id))) {
+    return errorResponse(c, 404, "party not found", "NOT_FOUND");
+  }
+  const combat = await getActiveCombat(partyId, user.id);
+  return c.json(ActiveCombatResponseSchema.parse({ combat }));
+});
+
+dndCampaignRoutes.post("/parties/:id/combat", zJsonBody(StartCombatRequestSchema), async (c) => {
+  const user = c.get("user");
+  const partyId = c.req.param("id");
+  const party = await getParty(partyId, user.id);
+  if (!party) return errorResponse(c, 404, "party not found", "NOT_FOUND");
+  const existing = await getActiveCombat(partyId, user.id);
+  if (existing) return errorResponse(c, 409, "a combat is already active", "COMBAT_ACTIVE");
+  const body = c.req.valid("json");
+  const sorted = [...body.combatants].sort((a, b) => b.initiative - a.initiative);
+  const combatants: Combatant[] = sorted.map((entry, i) => ({
+    key: `c${i}`,
+    name: entry.name,
+    kind: entry.kind,
+    characterId: entry.characterId,
+    count: entry.count,
+    initiative: entry.initiative,
+    maxHp: entry.maxHp,
+    hp: entry.maxHp,
+    conditions: [],
+    position: "",
+    notes: "",
+  }));
+  const combat = await insertCombat({
+    campaignId: party.campaignId,
+    partyId,
+    userId: user.id,
+    nodeId: body.nodeId,
+    combatants,
+  });
+  return c.json(CombatResponseSchema.parse({ combat }), 201);
+});
+
+dndCampaignRoutes.post("/combats/:id/turn", zJsonBody(ResolveTurnRequestSchema), async (c) => {
+  const user = c.get("user");
+  const combat = await getCombat(c.req.param("id"), user.id);
+  if (!combat || combat.status !== "active") {
+    return errorResponse(c, 404, "combat not found", "NOT_FOUND");
+  }
+  const current = combat.combatants[combat.turnIndex % combat.combatants.length];
+  if (!current) return errorResponse(c, 500, "combat has no combatants", "BAD_STATE");
+
+  const characters = await listCharactersForParty(combat.partyId, user.id);
+  const partyBriefs = characters
+    .filter((ch) => ch.status === "ready" && ch.sheet)
+    .map((ch) => {
+      const sheet = ch.sheet;
+      if (!sheet) return "";
+      return `${displayCharacterName(sheet, ch.sourceFilename)}: ${sheet.class} ${sheet.level ?? "?"}, AC ${sheet.armorClass ?? "?"}, HP ${sheet.maxHp ?? "?"}; weapons/gear: ${sheet.equipment.join(", ") || "-"}; spells: ${sheet.spells.join(", ") || "-"}`;
+    })
+    .filter((brief) => brief.length > 0);
+  const party = await getParty(combat.partyId, user.id);
+  const npcBriefs = party
+    ? (await listNpcsForCampaign(party.campaignId, user.id)).map(
+        (npc) =>
+          `${npc.name} (${npc.kind ?? "?"}): AC ${npc.armorClass ?? "?"}, HP ${npc.maxHp ?? "?"} — ${npc.description.slice(0, 160)}`,
+      )
+    : [];
+  const history = (await listHistoryForParty(combat.partyId, user.id))
+    .slice(-25)
+    .map((h) => `[${h.kind === "player-action" ? "party" : "dm"}] ${h.text.slice(0, 240)}`);
+
+  try {
+    const result = await resolveCombatTurn({
+      round: combat.round,
+      currentName: current.name,
+      combatants: combat.combatants,
+      partyBriefs,
+      npcBriefs,
+      history,
+      message: c.req.valid("json").message,
+    });
+    let updated = combat;
+    const applied = result.alerts.length === 0;
+    if (applied && result.updates.length > 0) {
+      const byKey = new Map(result.updates.map((u) => [u.key, u]));
+      const combatants = combat.combatants.map((combatant) => {
+        const patch = byKey.get(combatant.key);
+        return patch
+          ? {
+              ...combatant,
+              hp: patch.hp,
+              conditions: patch.conditions,
+              position: patch.position,
+              notes: patch.notes,
+            }
+          : combatant;
+      });
+      updated = (await updateCombat(combat.id, user.id, { combatants })) ?? combat;
+    }
+    return c.json(
+      ResolveTurnResponseSchema.parse({
+        narration: result.narration,
+        alerts: result.alerts,
+        applied,
+        combat: updated,
+      }),
+    );
+  } catch (err) {
+    if (err instanceof DndConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
+    return errorResponse(
+      c,
+      502,
+      `turn resolution failed: ${err instanceof Error ? err.message : "unknown error"}`,
+      "GENERATION_FAILED",
+    );
+  }
+});
+
+dndCampaignRoutes.post("/combats/:id/advance", async (c) => {
+  const user = c.get("user");
+  const combat = await getCombat(c.req.param("id"), user.id);
+  if (!combat || combat.status !== "active") {
+    return errorResponse(c, 404, "combat not found", "NOT_FOUND");
+  }
+  const nextIndex = (combat.turnIndex + 1) % combat.combatants.length;
+  const updated = await updateCombat(combat.id, user.id, {
+    turnIndex: nextIndex,
+    round: nextIndex === 0 ? combat.round + 1 : combat.round,
+  });
+  return c.json(CombatResponseSchema.parse({ combat: updated }));
+});
+
+dndCampaignRoutes.post("/combats/:id/end", async (c) => {
+  const user = c.get("user");
+  const combat = await getCombat(c.req.param("id"), user.id);
+  if (!combat) return errorResponse(c, 404, "combat not found", "NOT_FOUND");
+  const updated = await updateCombat(combat.id, user.id, { status: "ended" });
+  return c.json(CombatResponseSchema.parse({ combat: updated }));
+});
+
+// Character combat dashboard: generated once from the sheet, cached.
+dndCampaignRoutes.post("/characters/:id/actions", async (c) => {
+  const user = c.get("user");
+  const character = await getCharacter(c.req.param("id"), user.id);
+  if (!character || character.status !== "ready" || !character.sheet) {
+    return errorResponse(c, 404, "character not found", "NOT_FOUND");
+  }
+  const cached = await getDb().execute({
+    sql: "SELECT actions_json FROM dnd_characters WHERE id = ?",
+    args: [character.id],
+  });
+  const raw = cached.rows[0]?.actions_json;
+  if (typeof raw === "string") {
+    return c.json(CharacterActionsResponseSchema.parse({ cards: JSON.parse(raw) }));
+  }
+  try {
+    const cards = await generateActionCards(JSON.stringify(character.sheet));
+    await getDb().execute({
+      sql: "UPDATE dnd_characters SET actions_json = ? WHERE id = ?",
+      args: [JSON.stringify(cards), character.id],
+    });
+    return c.json(CharacterActionsResponseSchema.parse({ cards }));
+  } catch (err) {
+    if (err instanceof DndConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
+    return errorResponse(
+      c,
+      502,
+      `action generation failed: ${err instanceof Error ? err.message : "unknown error"}`,
+      "GENERATION_FAILED",
+    );
+  }
 });
 
 // ── Sessions (beamer / TTS companion) ──────────────────────────────────

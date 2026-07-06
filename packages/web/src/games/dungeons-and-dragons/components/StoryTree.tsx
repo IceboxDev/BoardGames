@@ -2,7 +2,7 @@ import type { Campaign, DndCharacter, DndNode, DndNpc } from "@boardgames/core/p
 import { ChevronRightIcon } from "../../../components/icons";
 import { D20Die } from "../../../components/offline/D20Die";
 import { Button } from "../../../components/ui";
-import { InitiativePanel } from "./InitiativePanel";
+import { type InitiativeOrder, InitiativePanel } from "./InitiativePanel";
 
 // The main game screen's core: the story tree inside a waypoint "folder".
 // Waypoint view shows the roots of every tree charted there; entering a node
@@ -25,7 +25,7 @@ type Props = {
   party: DndCharacter[];
   npcs: DndNpc[];
   /** Initiative tracker → game screen: loggable turn-order summary. */
-  onOrderChange?: (summary: string | null) => void;
+  onOrderChange?: (order: InitiativeOrder | null) => void;
   /** History logging: mark a spoken text as read to the party. */
   onLogCurrent: () => void;
   currentLogged: boolean;

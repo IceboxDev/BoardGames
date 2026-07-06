@@ -30,12 +30,32 @@ const WAYPOINT_0: ReadAloudBlock[] = [
       description:
         "Further Danger (optional): during the second round of combat, on initiative count 20, roll once to introduce another threat spurred on by the spirit of Fossmoor.",
       entries: [
-        { roll: "1", text: "1d4 angry swarms of wasps" },
-        { roll: "2", text: "two wolves on the prowl" },
-        { roll: "3", text: "1d6 vultures that swoop in, hoping for a bit of fresh meat" },
-        { roll: "4", text: "a pair of panthers trying to one-up each other" },
-        { roll: "5", text: "a giant spider crawling from its lair beneath the big rock" },
-        { roll: "6", text: "an incredibly surly giant goat" },
+        {
+          roll: "1",
+          text: "1d4 angry swarms of wasps",
+          creatures: [{ name: "Swarm of Wasps", count: "1d4" }],
+        },
+        { roll: "2", text: "two wolves on the prowl", creatures: [{ name: "Wolf", count: "2" }] },
+        {
+          roll: "3",
+          text: "1d6 vultures that swoop in, hoping for a bit of fresh meat",
+          creatures: [{ name: "Vulture", count: "1d6" }],
+        },
+        {
+          roll: "4",
+          text: "a pair of panthers trying to one-up each other",
+          creatures: [{ name: "Panther", count: "2" }],
+        },
+        {
+          roll: "5",
+          text: "a giant spider crawling from its lair beneath the big rock",
+          creatures: [{ name: "Giant Spider", count: "1" }],
+        },
+        {
+          roll: "6",
+          text: "an incredibly surly giant goat",
+          creatures: [{ name: "Giant Goat", count: "1" }],
+        },
       ],
     },
     trigger: "Roll initiative",

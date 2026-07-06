@@ -3,6 +3,7 @@ import { displayCharacterName } from "@boardgames/core/protocol";
 import { useEffect, useId, useState } from "react";
 import { MinusIcon, PlusIcon } from "../../../components/icons";
 import { Button, Input, Select } from "../../../components/ui";
+import { getMonsterEntry } from "../logic/monsters";
 
 // The initiative tracker — what an `initiative` node opens instead of a
 // conversation. The DM types the players' RAW d20 rolls (the tracker adds
@@ -26,7 +27,14 @@ function rollD20(mod: number): number {
   return Math.floor(Math.random() * 20) + 1 + mod;
 }
 
-type EnemyRow = { key: number; name: string; count: number; mod: number; roll: string };
+type EnemyRow = {
+  key: number;
+  name: string;
+  count: number;
+  mod: number;
+  maxHp: number | null;
+  roll: string;
+};
 
 const NUMBER_WORDS: Record<string, number> = {
   one: 1,
@@ -68,8 +76,20 @@ type Props = {
   node: DndNode;
   party: DndCharacter[];
   npcs: DndNpc[];
-  /** Emits a loggable summary of the current turn order (null when empty). */
-  onOrderChange?: (summary: string | null) => void;
+  /** Emits the loggable summary + structured combatants for Enter combat. */
+  onOrderChange?: (order: InitiativeOrder | null) => void;
+};
+
+export type InitiativeOrder = {
+  summary: string;
+  combatants: {
+    name: string;
+    kind: "pc" | "enemy";
+    characterId: string | null;
+    count: number;
+    initiative: number;
+    maxHp: number | null;
+  }[];
 };
 
 export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
@@ -92,6 +112,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
         name: npc.name,
         count: inferCount(haystack, npc.name.toLowerCase()),
         mod: dexMod(npc.abilities?.dex),
+        maxHp: npc.maxHp,
         roll: "",
       }));
   });
@@ -101,7 +122,14 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
     if (!npc) return;
     setEnemies([
       ...enemies,
-      { key: nextKey, name: npc.name, count: 1, mod: dexMod(npc.abilities?.dex), roll: "" },
+      {
+        key: nextKey,
+        name: npc.name,
+        count: 1,
+        mod: dexMod(npc.abilities?.dex),
+        maxHp: npc.maxHp,
+        roll: "",
+      },
     ]);
     setNextKey(nextKey + 1);
   };
@@ -119,20 +147,33 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
   const unleashDanger = () => {
     const entry = node.dangerTable?.entries.find((e) => e.roll === dangerPick);
     if (!entry) return;
-    const lower = entry.text.toLowerCase();
-    const matched = npcs.filter((npc) => lower.includes(npc.name.toLowerCase()));
-    const rows: EnemyRow[] =
-      matched.length > 0
-        ? matched.map((npc, i) => ({
-            key: nextKey + i,
-            name: npc.name,
-            count: inferCount(lower, npc.name.toLowerCase()),
-            mod: dexMod(npc.abilities?.dex),
-            roll: "",
-          }))
-        : [{ key: nextKey, name: entry.text.replace(/\.$/, ""), count: 1, mod: 0, roll: "" }];
+    // Structured creatures first (canonical names); resolve each against the
+    // campaign's cards, then the monster compendium. Dice counts ("1d4")
+    // seat one group — adjust with ± after rolling the dice at the table.
+    const rows: EnemyRow[] = [];
+    let key = nextKey;
+    const creatures =
+      entry.creatures.length > 0
+        ? entry.creatures
+        : [{ name: entry.text.replace(/\.$/, ""), count: "1" }];
+    for (const creature of creatures) {
+      const card = npcs.find((n) => n.name.toLowerCase() === creature.name.toLowerCase());
+      const monster = card ? null : getMonsterEntry(creature.name);
+      const parsedCount = Number.parseInt(creature.count, 10);
+      rows.push({
+        key: key++,
+        name: card?.name ?? monster?.name ?? creature.name,
+        count:
+          Number.isFinite(parsedCount) && `${parsedCount}` === creature.count
+            ? Math.min(12, Math.max(1, parsedCount))
+            : 1,
+        mod: card ? dexMod(card.abilities?.dex) : monster ? dexMod(monster.dex) : 0,
+        maxHp: card?.maxHp ?? monster?.maxHp ?? null,
+        roll: "",
+      });
+    }
     setEnemies([...enemies, ...rows]);
-    setNextKey(nextKey + rows.length);
+    setNextKey(key);
     setDangerPick("");
   };
 
@@ -154,21 +195,45 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
     ...enemies.map((e) => ({
       label: enemyLabel(e),
       kind: "enemy" as const,
-      value: Number.parseInt(e.roll, 10),
+      // Same convention as the party: the input is the raw d20; the group's
+      // DEX modifier is added here.
+      value: Number.parseInt(e.roll, 10) + e.mod,
     })),
   ]
     .filter((row) => Number.isFinite(row.value))
     .sort((a, b) => b.value - a.value);
 
-  // Surface a loggable summary to the game screen's "Enter combat" button.
+  // Surface the loggable summary + structured combatants to Enter combat.
   const summary =
     order.length > 0
       ? `${node.summary} Turn order: ${order.map((r) => `${r.label} ${r.value}`).join(", ")}.`
       : null;
-  // biome-ignore lint/correctness/useExhaustiveDependencies: summary is derived from the states below; reporting it upward on change is the point.
+  const combatantsJson = JSON.stringify([
+    ...party
+      .filter((ch) => ch.sheet && Number.isFinite(Number.parseInt(pcRolls[ch.id] ?? "", 10)))
+      .map((ch) => ({
+        name: displayCharacterName(ch.sheet, ch.sourceFilename),
+        kind: "pc" as const,
+        characterId: ch.id,
+        count: 1,
+        initiative: Number.parseInt(pcRolls[ch.id] ?? "", 10) + dexMod(ch.sheet?.abilities?.dex),
+        maxHp: ch.sheet?.maxHp ?? null,
+      })),
+    ...enemies
+      .filter((e) => Number.isFinite(Number.parseInt(e.roll, 10)))
+      .map((e) => ({
+        name: e.name,
+        kind: "enemy" as const,
+        characterId: null,
+        count: e.count,
+        initiative: Number.parseInt(e.roll, 10) + e.mod,
+        maxHp: e.maxHp,
+      })),
+  ]);
+  // biome-ignore lint/correctness/useExhaustiveDependencies: derived from the states above; reporting upward on change is the point.
   useEffect(() => {
-    onOrderChange?.(summary);
-  }, [summary]);
+    onOrderChange?.(summary ? { summary, combatants: JSON.parse(combatantsJson) } : null);
+  }, [summary, combatantsJson]);
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto pb-2">
@@ -241,7 +306,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
               onClick={() =>
                 setEnemies(
                   enemies.map((e) =>
-                    e.roll.trim() === "" ? { ...e, roll: String(rollD20(e.mod)) } : e,
+                    e.roll.trim() === "" ? { ...e, roll: String(rollD20(0)) } : e,
                   ),
                 )
               }
@@ -282,7 +347,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
                 <Input
                   inputMode="numeric"
                   width="score"
-                  placeholder="init"
+                  placeholder="d20"
                   aria-label={`${enemy.name} initiative`}
                   value={enemy.roll}
                   onChange={(e) =>
@@ -293,6 +358,11 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
                     )
                   }
                 />
+                <span className="w-9 shrink-0 text-center font-fantasy text-base font-bold text-amber-100">
+                  {Number.isFinite(Number.parseInt(enemy.roll, 10))
+                    ? `= ${Number.parseInt(enemy.roll, 10) + enemy.mod}`
+                    : ""}
+                </span>
                 <Button
                   variant="tinted"
                   tone="rose"
@@ -300,7 +370,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
                   onClick={() =>
                     setEnemies(
                       enemies.map((e) =>
-                        e.key === enemy.key ? { ...e, roll: String(rollD20(e.mod)) } : e,
+                        e.key === enemy.key ? { ...e, roll: String(rollD20(0)) } : e,
                       ),
                     )
                   }
