@@ -89,6 +89,8 @@ export function DndGameScreen({ campaign, party }: Props) {
   const files = filesQuery.data?.files ?? [];
 
   const currentNodeId = path.at(-1) ?? null;
+  const currentNode = nodes.find((n) => n.id === currentNodeId) ?? null;
+  const branchingBlocked = currentNode?.nodeType === "initiative";
   const viewingCharacter =
     characters.find((ch) => ch.id === viewingCharacterId && ch.sheet) ?? null;
 
@@ -96,7 +98,7 @@ export function DndGameScreen({ campaign, party }: Props) {
     mutationFn: (msg: string) =>
       generateNode(party.id, {
         waypointIndex,
-        parentId: mode === "node" && currentNodeId ? currentNodeId : null,
+        parentId: mode === "node" && currentNodeId && !branchingBlocked ? currentNodeId : null,
         message: msg,
       }),
     onSuccess: (result) => {
@@ -195,15 +197,17 @@ export function DndGameScreen({ campaign, party }: Props) {
               variant={mode === "node" ? "tinted" : "ghost"}
               tone="amber"
               size="xs"
-              disabled={currentNodeId === null}
+              disabled={currentNodeId === null || branchingBlocked}
               onClick={() => setMode("node")}
             >
               New branch
             </Button>
             <span className="text-3xs text-amber-200/40" style={SERIF}>
-              {mode === "root"
-                ? "The message starts a new tree at this waypoint"
-                : "The message branches from the current node"}
+              {branchingBlocked
+                ? "Combat resolves at the table — story branches continue after it"
+                : mode === "root"
+                  ? "The message starts a new tree at this waypoint"
+                  : "The message branches from the current node"}
             </span>
           </div>
         ) : undefined
@@ -271,6 +275,8 @@ export function DndGameScreen({ campaign, party }: Props) {
               path={path}
               onEnterNode={(nodeId) => setPath([...path, nodeId])}
               onJumpTo={(i) => setPath(i < 0 ? [] : path.slice(0, i + 1))}
+              party={partyMembers}
+              npcs={npcs}
             />
           )}
         </>

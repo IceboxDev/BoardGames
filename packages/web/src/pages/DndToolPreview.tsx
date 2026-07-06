@@ -223,7 +223,8 @@ const NODES = [
     partyId: PARTY_META.id,
     waypointIndex: 0,
     parentId: null,
-    trigger: "The party follows the wolf howls off the road",
+    nodeType: "story" as const,
+    trigger: "Follow the wolf howls off the road",
     summary: "The mists tighten; a shuttered farmhouse appears ahead.",
     readText:
       "The howls pull you off the Old Svalich Road before you notice the fog closing behind you. Ahead, a farmhouse leans into the hillside, its shutters nailed from the inside. A thin line of chimney smoke rises — someone is home, and hiding.",
@@ -235,11 +236,25 @@ const NODES = [
     partyId: PARTY_META.id,
     waypointIndex: 0,
     parentId: "node-root-1",
-    trigger: "They knock and announce themselves as travelers",
+    nodeType: "story" as const,
+    trigger: "Knock and announce yourselves",
     summary: "A woman's voice begs them to prove they cast a shadow.",
     readText:
       'A long silence. Then a woman\'s voice, cracked with fear: "Hold your lantern low. Show me your shadow on the door. The ones without shadows came last night."',
     createdAt: "2026-07-05 19:05:00",
+  },
+  {
+    id: "node-initiative-1",
+    campaignId: STRAHD.id,
+    partyId: PARTY_META.id,
+    waypointIndex: 0,
+    parentId: "node-root-1",
+    nodeType: "initiative" as const,
+    trigger: "Roll initiative",
+    summary: "Two shadow-wolves burst from the treeline.",
+    readText:
+      "The howls stop. That is worse. Two shapes of matted fur and moonless dark detach from the treeline at a dead run — steel out, roll initiative.",
+    createdAt: "2026-07-05 19:07:00",
   },
   {
     id: "node-child-2",
@@ -247,7 +262,8 @@ const NODES = [
     partyId: PARTY_META.id,
     waypointIndex: 0,
     parentId: "node-root-1",
-    trigger: "Whisper picks the lock on the storm cellar",
+    nodeType: "story" as const,
+    trigger: "Pick the storm-cellar lock",
     summary: "The cellar is stocked for a siege — and recently slept in.",
     readText:
       "The lock gives with a soft click. Root vegetables, salted meat, and four bedrolls arranged in a square — one of them still warm.",

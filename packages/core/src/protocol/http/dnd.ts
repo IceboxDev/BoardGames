@@ -327,12 +327,22 @@ export const NODE_SUMMARY_MAX = 160;
 export const NODE_READ_TEXT_MAX = 2000;
 export const NODE_MESSAGE_MAX = 1000;
 
+/**
+ * `story` — read-aloud narration with further branches.
+ * `initiative` — combat begins: the node opens the initiative tracker
+ * (enter the players' rolls, roll for NPCs) instead of a conversation.
+ */
+export const NodeTypeSchema = z.enum(["story", "initiative"]);
+export type NodeType = z.infer<typeof NodeTypeSchema>;
+
 export const DndNodeSchema = z.object({
   id: z.string().min(1),
   campaignId: z.string().min(1),
   partyId: z.string().min(1),
   waypointIndex: z.number().int().nonnegative(),
   parentId: z.string().nullable(),
+  /** Defaults for rows stored before node types existed. */
+  nodeType: NodeTypeSchema.default("story"),
   trigger: z.string().min(1).max(NODE_TRIGGER_MAX),
   summary: z.string().max(NODE_SUMMARY_MAX),
   readText: z.string().min(1).max(NODE_READ_TEXT_MAX),

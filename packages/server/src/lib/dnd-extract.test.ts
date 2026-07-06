@@ -197,7 +197,8 @@ describe("normalizeNpcs", () => {
 
 describe("normalizeNode", () => {
   const RAW_NODE = {
-    trigger: "The party inspects the coffin",
+    node_type: "story",
+    trigger: "Inspect the coffin",
     summary: "The lid is ajar; the earth inside is fresh.",
     read_text: "As you lean closer, the smell of turned soil rises to meet you.",
   };
@@ -206,6 +207,12 @@ describe("normalizeNode", () => {
     const node = normalizeNode(RAW_NODE);
     expect(node.trigger).toBe(RAW_NODE.trigger);
     expect(node.readText).toBe(RAW_NODE.read_text);
+    expect(node.nodeType).toBe("story");
+  });
+
+  it("keeps initiative nodes and coerces unknown types to story", () => {
+    expect(normalizeNode({ ...RAW_NODE, node_type: "initiative" }).nodeType).toBe("initiative");
+    expect(normalizeNode({ ...RAW_NODE, node_type: "dance-off" }).nodeType).toBe("story");
   });
 
   it("truncates over-long fields", () => {
@@ -222,7 +229,9 @@ describe("normalizeNode", () => {
 describe("normalizeReadAloudBlocks", () => {
   const BLOCK = {
     waypoint_index: 1,
-    trigger: "The party reaches the forest edge",
+    parent_index: null,
+    node_type: "story",
+    trigger: "Approach the treeline",
     summary: "The treeline looms, unnaturally silent.",
     read_text: "The trees ahead stand shoulder to shoulder, and no birds sing.",
   };
@@ -231,6 +240,8 @@ describe("normalizeReadAloudBlocks", () => {
     const blocks = normalizeReadAloudBlocks({ blocks: [BLOCK] }, 5);
     expect(blocks).toHaveLength(1);
     expect(blocks[0]?.waypointIndex).toBe(1);
+    expect(blocks[0]?.parentIndex).toBeNull();
+    expect(blocks[0]?.nodeType).toBe("story");
   });
 
   it("snaps out-of-range waypoint indexes into range", () => {
@@ -245,6 +256,38 @@ describe("normalizeReadAloudBlocks", () => {
     );
     expect(blocks[0]?.waypointIndex).toBe(4);
     expect(blocks[1]?.waypointIndex).toBe(0);
+  });
+
+  it("preserves valid hierarchy and initiative typing", () => {
+    const blocks = normalizeReadAloudBlocks(
+      {
+        blocks: [
+          BLOCK,
+          { ...BLOCK, parent_index: 0, trigger: "Knock" },
+          { ...BLOCK, parent_index: 1, node_type: "initiative", trigger: "Roll initiative" },
+        ],
+      },
+      5,
+    );
+    expect(blocks[1]?.parentIndex).toBe(0);
+    expect(blocks[2]?.parentIndex).toBe(1);
+    expect(blocks[2]?.nodeType).toBe("initiative");
+  });
+
+  it("degrades bad parents to roots (dropped, forward, cross-waypoint)", () => {
+    const blocks = normalizeReadAloudBlocks(
+      {
+        blocks: [
+          { ...BLOCK, read_text: " " }, // dropped
+          { ...BLOCK, parent_index: 0, trigger: "Child of dropped" },
+          { ...BLOCK, parent_index: 5, trigger: "Forward ref" },
+          { ...BLOCK, waypoint_index: 2, parent_index: 1, trigger: "Cross waypoint" },
+        ],
+      },
+      5,
+    );
+    expect(blocks).toHaveLength(3);
+    expect(blocks.every((b) => b.parentIndex === null)).toBe(true);
   });
 
   it("drops empty blocks and accepts an empty list", () => {

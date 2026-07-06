@@ -5,6 +5,7 @@
 
 import { randomUUID } from "node:crypto";
 import type { DndNode } from "@boardgames/core/protocol";
+import { NodeTypeSchema } from "@boardgames/core/protocol";
 import { z } from "zod";
 import { getDb } from "../db.ts";
 import { parseRow, parseRows } from "./db-rows.ts";
@@ -15,6 +16,7 @@ const NodeRowSchema = z.object({
   party_id: z.string(),
   waypoint_index: z.number().int().nonnegative(),
   parent_id: z.string().nullable(),
+  node_type: NodeTypeSchema,
   trigger_text: z.string(),
   summary: z.string(),
   read_text: z.string(),
@@ -28,6 +30,7 @@ function rowToNode(row: z.infer<typeof NodeRowSchema>): DndNode {
     partyId: row.party_id,
     waypointIndex: row.waypoint_index,
     parentId: row.parent_id,
+    nodeType: row.node_type,
     trigger: row.trigger_text,
     summary: row.summary,
     readText: row.read_text,
@@ -36,7 +39,7 @@ function rowToNode(row: z.infer<typeof NodeRowSchema>): DndNode {
 }
 
 const SELECT_COLUMNS = `id, campaign_id, party_id, waypoint_index, parent_id,
-   trigger_text, summary, read_text, created_at`;
+   node_type, trigger_text, summary, read_text, created_at`;
 
 export async function insertNode(args: {
   campaignId: string;
@@ -44,6 +47,7 @@ export async function insertNode(args: {
   userId: string;
   waypointIndex: number;
   parentId: string | null;
+  nodeType: "story" | "initiative";
   trigger: string;
   summary: string;
   readText: string;
@@ -52,8 +56,8 @@ export async function insertNode(args: {
   const result = await getDb().execute({
     sql: `INSERT INTO dnd_nodes
             (id, campaign_id, party_id, user_id, waypoint_index, parent_id,
-             trigger_text, summary, read_text)
-          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+             node_type, trigger_text, summary, read_text)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
           RETURNING ${SELECT_COLUMNS}`,
     args: [
       id,
@@ -62,6 +66,7 @@ export async function insertNode(args: {
       args.userId,
       args.waypointIndex,
       args.parentId,
+      args.nodeType,
       args.trigger,
       args.summary,
       args.readText,

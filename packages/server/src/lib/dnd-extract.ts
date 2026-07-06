@@ -608,22 +608,29 @@ export async function extractNpcs(pdfDataUri: string, filename: string): Promise
 
 // ── Read-aloud templates ───────────────────────────────────────────────
 // Modules script their scenes as boxed read-aloud blocks. We chart each
-// block as a template story node (per waypoint) so every new party's tree
-// starts from the module's own script.
+// block as a template node (per waypoint) so every new party's tree starts
+// from the module's own script. Templates form trees: `parentIndex` points
+// at an earlier block in the same list (null = a waypoint root). A block can
+// be an `initiative` node — combat starts there and the node opens the
+// initiative tracker instead of a conversation.
 
 export interface ReadAloudBlock {
   waypointIndex: number;
+  parentIndex: number | null;
+  nodeType: "story" | "initiative";
   trigger: string;
   summary: string;
   readText: string;
 }
 
-const READ_ALOUD_MAX = 40;
+const READ_ALOUD_MAX = 60;
 
 const RawReadAloudSchema = z.object({
   blocks: z.array(
     z.object({
       waypoint_index: z.number(),
+      parent_index: z.number().nullable(),
+      node_type: z.string(),
       trigger: z.string(),
       summary: z.string(),
       read_text: z.string(),
@@ -636,7 +643,7 @@ const READ_ALOUD_JSON_SCHEMA = {
   properties: {
     blocks: {
       type: "array",
-      maxItems: 40,
+      maxItems: 60,
       items: {
         type: "object",
         properties: {
@@ -644,22 +651,41 @@ const READ_ALOUD_JSON_SCHEMA = {
             type: "integer",
             description: "0-based index of the waypoint this block belongs to.",
           },
+          parent_index: {
+            type: ["integer", "null"],
+            description:
+              "0-based index (within THIS array, smaller than this block's own position) of the block the players act from to reach this one; null for a top-level action at the waypoint.",
+          },
+          node_type: {
+            type: "string",
+            enum: ["story", "initiative"],
+            description:
+              "'initiative' when this moment starts combat (the players roll initiative); otherwise 'story'.",
+          },
           trigger: {
             type: "string",
             description:
-              "When the DM reads it — what the players did/where they arrived (max ~90 chars).",
+              "SHORT imperative player action, as the players would say it — e.g. 'Knock', 'Enter the cave', 'Ask about the tome', 'Roll initiative'. A few words, max ~50 chars. NEVER 'When the party…' phrasing.",
           },
           summary: {
             type: "string",
-            description: "One short sentence describing the scene (max ~150 chars).",
+            description:
+              "One short sentence describing the reaction/scene (for initiative nodes: name the enemies, e.g. 'Three dead vines attack.').",
           },
           read_text: {
             type: "string",
             description:
-              "The boxed read-aloud text, verbatim or lightly cleaned (max ~1900 chars).",
+              "The boxed read-aloud text, verbatim or lightly cleaned (max ~1900 chars). For initiative nodes: the moment combat erupts.",
           },
         },
-        required: ["waypoint_index", "trigger", "summary", "read_text"],
+        required: [
+          "waypoint_index",
+          "parent_index",
+          "node_type",
+          "trigger",
+          "summary",
+          "read_text",
+        ],
         additionalProperties: false,
       },
     },
@@ -672,30 +698,56 @@ function buildReadAloudPrompt(checkpoints: { title: string; description: string 
   const waypointList = checkpoints
     .map((cp, i) => `${i}: "${cp.title}" — ${cp.description}`)
     .join("\n");
-  return `You are assisting a Dungeon Master preparing to run the attached D&D adventure module. The module contains boxed read-aloud text — the passages the DM reads to the players verbatim (often typeset in boxes, italics, or indented blocks). Extract every read-aloud block, in the order it appears. For each block: assign it to the waypoint it belongs to using this 0-based list of the campaign's charted waypoints:
+  return `You are assisting a Dungeon Master preparing to run the attached D&D adventure module. The module contains boxed read-aloud text — the passages the DM reads to the players verbatim (often typeset in boxes, italics, or indented blocks). Chart the module's scenes as a TREE of player actions per waypoint, using this 0-based waypoint list:
 ${waypointList}
-Also provide: a short trigger describing when the DM reads it (what the players did or where they arrived), a one-sentence summary of the scene, and the read-aloud text itself — verbatim, lightly cleaned of layout artifacts. Do not invent blocks that are not in the document.`;
+Rules:
+- One block per read-aloud passage or scripted moment, assigned to its waypoint.
+- SKIP any passage that is a waypoint's own arrival/opening narration — that text is already shown when the party arrives; never duplicate it as a block.
+- Blocks form a tree: if reaching a scene requires an earlier action (you must knock before entering, and enter before asking questions), set parent_index to that earlier block's position in this array. Independent actions at the waypoint get parent_index null. Parents must appear in the array BEFORE their children and on the same waypoint.
+- Triggers are SHORT imperative player actions ('Knock', 'Enter the cabin', 'Ask about Admjir') — never 'When the party…' descriptions.
+- Wherever a scripted moment STARTS COMBAT (an encounter block, an ambush, a fight the module expects), add a block with node_type 'initiative', trigger 'Roll initiative', a summary naming the enemies, and read_text describing the moment combat erupts. Every scripted combat encounter gets exactly one initiative block at the right spot in the tree.
+- read_text is the module's own text where it exists, verbatim and lightly cleaned; do not invent content that is not in the document.`;
 }
 
 /**
  * Normalize the raw block list: clamp text, snap out-of-range waypoint
- * indexes into range, drop empty blocks. An empty result is legal (not every
- * module uses boxed text).
+ * indexes into range, drop empty blocks, and sanitize hierarchy (a parent
+ * must be an earlier surviving block on the SAME waypoint; anything else
+ * degrades to a root). An empty result is legal.
  */
 export function normalizeReadAloudBlocks(raw: unknown, waypointCount: number): ReadAloudBlock[] {
   const parsed = RawReadAloudSchema.parse(raw);
   const blocks: ReadAloudBlock[] = [];
-  for (const block of parsed.blocks) {
+  // Original array position → surviving index. Children of dropped blocks
+  // degrade to roots rather than pointing at the wrong parent.
+  const survivorIndex = new Map<number, number>();
+  for (let i = 0; i < parsed.blocks.length && blocks.length < READ_ALOUD_MAX; i++) {
+    const block = parsed.blocks[i];
+    if (!block) continue;
     const trigger = clamp(block.trigger, NODE_TRIGGER_MAX);
     const readText = clamp(block.read_text, NODE_READ_TEXT_MAX);
     if (!trigger || !readText || waypointCount === 0) continue;
+    const waypointIndex = Math.min(
+      waypointCount - 1,
+      Math.max(0, Math.round(block.waypoint_index)),
+    );
+    let parentIndex: number | null = null;
+    if (block.parent_index !== null) {
+      const mapped = survivorIndex.get(Math.round(block.parent_index));
+      const parent = mapped !== undefined ? blocks[mapped] : undefined;
+      if (mapped !== undefined && parent && parent.waypointIndex === waypointIndex) {
+        parentIndex = mapped;
+      }
+    }
+    survivorIndex.set(i, blocks.length);
     blocks.push({
-      waypointIndex: Math.min(waypointCount - 1, Math.max(0, Math.round(block.waypoint_index))),
+      waypointIndex,
+      parentIndex,
+      nodeType: block.node_type === "initiative" ? "initiative" : "story",
       trigger,
       summary: clamp(block.summary, NODE_SUMMARY_MAX),
       readText,
     });
-    if (blocks.length >= READ_ALOUD_MAX) break;
   }
   return blocks;
 }
@@ -740,12 +792,14 @@ export interface StoryNodeContext {
 }
 
 export interface StoryNode {
+  nodeType: "story" | "initiative";
   trigger: string;
   summary: string;
   readText: string;
 }
 
 const RawNodeSchema = z.object({
+  node_type: z.string(),
   trigger: z.string(),
   summary: z.string(),
   read_text: z.string(),
@@ -754,6 +808,12 @@ const RawNodeSchema = z.object({
 const NODE_JSON_SCHEMA = {
   type: "object",
   properties: {
+    node_type: {
+      type: "string",
+      enum: ["story", "initiative"],
+      description:
+        "'initiative' when the players' action starts combat — the node becomes an initiative roll; otherwise 'story'.",
+    },
     trigger: {
       type: "string",
       description: "Short label restating what the players did (max ~90 chars).",
@@ -768,7 +828,7 @@ const NODE_JSON_SCHEMA = {
         "The narration the DM reads aloud: second person, vivid, 1-3 short paragraphs, ending at a natural decision point (max ~1900 chars).",
     },
   },
-  required: ["trigger", "summary", "read_text"],
+  required: ["node_type", "trigger", "summary", "read_text"],
   additionalProperties: false,
 } as const;
 
@@ -801,7 +861,7 @@ function buildNodePrompt(ctx: StoryNodeContext): string {
   }
   lines.push(`The players now: ${ctx.message}`);
   lines.push(
-    "Write the next story node. `trigger` restates what the players did, short. `summary` is the immediate consequence in one short sentence. `read_text` is what the DM reads aloud: second person, grounded in the module's tone and everything established above, never contradicting it, ending at a natural decision point.",
+    "Write the next story node. `trigger` restates what the players did as a SHORT imperative action ('Knock', 'Search the wagon') — never 'When the party…'. `summary` is the immediate consequence in one short sentence. `read_text` is what the DM reads aloud: second person, grounded in the module's tone and everything established above, never contradicting it, ending at a natural decision point. If the players' action STARTS COMBAT, set node_type to 'initiative', trigger to 'Roll initiative', name the enemies in the summary, and make read_text the moment combat erupts; otherwise node_type is 'story'.",
   );
   return lines.join("\n");
 }
@@ -811,7 +871,12 @@ export function normalizeNode(raw: unknown): StoryNode {
   const trigger = clamp(parsed.trigger, NODE_TRIGGER_MAX);
   const readText = clamp(parsed.read_text, NODE_READ_TEXT_MAX);
   if (!trigger || !readText) throw new Error("the model returned an empty node");
-  return { trigger, summary: clamp(parsed.summary, NODE_SUMMARY_MAX), readText };
+  return {
+    nodeType: parsed.node_type === "initiative" ? "initiative" : "story",
+    trigger,
+    summary: clamp(parsed.summary, NODE_SUMMARY_MAX),
+    readText,
+  };
 }
 
 /** Text-only generation — no PDF, a few seconds instead of minutes. */
