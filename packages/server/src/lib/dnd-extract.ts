@@ -41,16 +41,20 @@ function getClient(): OpenAI {
 }
 
 /**
- * A non-streaming Responses call holds ONE silent HTTP response open for the
- * model's full thinking time (minutes) — pooled-socket reuse, NATs, and
- * proxies love to kill exactly that, surfacing as "Premature close" /
- * "Invalid response body". So: stream the response (SSE chunks keep bytes
- * flowing the whole time, the SDK reassembles the final response), and keep
- * a retry loop around it for the transient failures that remain. Mid-combat
- * is the worst place to surface one of these.
+ * Any long-lived HTTP connection to OpenAI eventually gets severed by
+ * something between here and there ("Premature close") — a non-streaming
+ * call waits silently for the model's full thinking time, and even an SSE
+ * stream goes quiet for minutes while a reasoning model thinks, so both
+ * transports died in prod. Background mode removes the long-lived
+ * connection entirely: the create call returns as soon as the job is
+ * queued, and completion is fetched with short, independent polls that are
+ * individually retried. Nothing stays open long enough to be killed.
  */
 const TRANSIENT_ERROR =
   /premature close|invalid response body|econnreset|econnrefused|etimedout|socket hang up|terminated|fetch failed|network|aborted|connection error/i;
+
+const POLL_INTERVAL_MS = 2_000;
+const POLL_BUDGET_MS = 15 * 60_000;
 
 function transientMessage(err: unknown): string {
   if (!(err instanceof Error)) return "";
@@ -58,15 +62,12 @@ function transientMessage(err: unknown): string {
   return `${err.message}${cause}`;
 }
 
-async function createWithRetry(
-  client: OpenAI,
-  params: Omit<OpenAI.Responses.ResponseCreateParamsNonStreaming, "stream">,
-): Promise<OpenAI.Responses.Response> {
+async function withTransientRetry<T>(run: () => Promise<T>): Promise<T> {
   const attempts = 3;
   let lastErr: unknown;
   for (let attempt = 1; attempt <= attempts; attempt++) {
     try {
-      return await client.responses.stream(params).finalResponse();
+      return await run();
     } catch (err) {
       lastErr = err;
       if (attempt === attempts || !TRANSIENT_ERROR.test(transientMessage(err))) throw err;
@@ -78,6 +79,28 @@ async function createWithRetry(
     }
   }
   throw lastErr;
+}
+
+async function createWithRetry(
+  client: OpenAI,
+  params: Omit<OpenAI.Responses.ResponseCreateParamsNonStreaming, "stream">,
+): Promise<OpenAI.Responses.Response> {
+  let res = await withTransientRetry(() =>
+    client.responses.create({ ...params, background: true }),
+  );
+  const deadline = Date.now() + POLL_BUDGET_MS;
+  while (res.status === "queued" || res.status === "in_progress") {
+    if (Date.now() > deadline) {
+      throw new Error(`openai response ${res.id} still ${res.status} after 15 minutes`);
+    }
+    await new Promise((resolve) => setTimeout(resolve, POLL_INTERVAL_MS));
+    res = await withTransientRetry(() => client.responses.retrieve(res.id));
+  }
+  if (res.status !== "completed") {
+    const detail = res.error?.message ?? res.incomplete_details?.reason ?? "no detail";
+    throw new Error(`openai response ${res.status ?? "unknown"}: ${detail}`);
+  }
+  return res;
 }
 
 /**
