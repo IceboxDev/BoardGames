@@ -19,39 +19,47 @@ const STRAHD_CHECKPOINTS: CampaignCheckpoint[] = [
     title: "Into the Mists",
     description:
       "The fog of Barovia swallows the road behind the party — there is no way home but through.",
+    arrivalText:
+      "The fog does not lift so much as decide to let you see. A road of packed black earth runs ahead between walls of mist, and somewhere beyond them, wolves begin to howl — first one, then many.",
     kind: "quest",
   },
   {
     title: "Death House",
     description:
       "A dollhouse-perfect townhouse lures the party in; the basement cult demands a sacrifice.",
+    arrivalText: null,
     kind: "location",
   },
   {
     title: "The Burgomaster's Funeral",
     description: "Ireena Kolyana buries her father while the devil watches from the castle.",
+    arrivalText: null,
     kind: "revelation",
   },
   {
     title: "The Fanes of the Forest",
     description: "Wintersplinter marches on Vallaki — a set-piece defense of the town square.",
+    arrivalText: null,
     kind: "battle",
   },
   {
     title: "The Sunsword",
     description:
       "The lost blade of the Morninglord surfaces in a werewolf den, wrapped in riddles.",
+    arrivalText: null,
     kind: "treasure",
   },
   {
     title: "The Amber Temple",
     description: "Dark gifts whisper from amber sarcophagi; every boon costs a piece of a soul.",
+    arrivalText: null,
     kind: "revelation",
   },
   {
     title: "Castle Ravenloft",
     description:
       "The heart of the mists. Strahd waits in the place of his choosing — the reading of the cards decides where.",
+    arrivalText: null,
     kind: "finale",
   },
 ];

@@ -7,7 +7,12 @@ import {
   normalizeReadAloudBlocks,
 } from "./dnd-extract.ts";
 
-const CHECKPOINT = { title: "Into the Mists", description: "The party arrives.", kind: "quest" };
+const CHECKPOINT = {
+  title: "Into the Mists",
+  description: "The party arrives.",
+  arrival_text: "The fog closes behind you; ahead, the road bends into darkness.",
+  kind: "quest",
+};
 
 const RAW = {
   title: "Curse of Strahd",
@@ -22,7 +27,22 @@ describe("normalizeExtraction", () => {
     const result = normalizeExtraction(RAW);
     expect(result.title).toBe("Curse of Strahd");
     expect(result.levelRange).toBe("Levels 1–10");
-    expect(result.checkpoints).toEqual([CHECKPOINT]);
+    expect(result.checkpoints).toEqual([
+      {
+        title: CHECKPOINT.title,
+        description: CHECKPOINT.description,
+        arrivalText: CHECKPOINT.arrival_text,
+        kind: CHECKPOINT.kind,
+      },
+    ]);
+  });
+
+  it("nulls a blank arrival text", () => {
+    const result = normalizeExtraction({
+      ...RAW,
+      checkpoints: [{ ...CHECKPOINT, arrival_text: "   " }],
+    });
+    expect(result.checkpoints[0]?.arrivalText).toBeNull();
   });
 
   it("trims and truncates over-long strings", () => {

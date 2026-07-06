@@ -67,7 +67,10 @@ export function StoryTree({ campaign, nodes, waypointIndex, path, onEnterNode, o
         ))}
       </nav>
 
-      {/* Read-aloud panel (node view) or the folder header (waypoint view). */}
+      {/* Read-aloud panel: the current node's narration, or — at the waypoint
+          level — the arrival narration the DM reads when the party gets here.
+          Same treatment for both: a waypoint header is read to the players
+          exactly like a node. */}
       {current ? (
         <div className="shrink-0 rounded-2xl border border-amber-400/25 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/85 to-black/80 p-4">
           <p
@@ -81,6 +84,21 @@ export function StoryTree({ campaign, nodes, waypointIndex, path, onEnterNode, o
             style={SERIF}
           >
             {current.readText}
+          </p>
+        </div>
+      ) : waypoint?.arrivalText ? (
+        <div className="shrink-0 rounded-2xl border border-amber-400/25 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/85 to-black/80 p-4">
+          <p
+            className="text-3xs font-bold uppercase tracking-[0.3em] text-amber-300/70"
+            style={SERIF}
+          >
+            Read aloud — on arrival
+          </p>
+          <p
+            className="mt-2 whitespace-pre-line text-base leading-relaxed text-amber-100/90"
+            style={SERIF}
+          >
+            {waypoint.arrivalText}
           </p>
         </div>
       ) : (

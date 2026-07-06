@@ -36,10 +36,18 @@ export type CampaignCheckpointKind = z.infer<typeof CampaignCheckpointKindSchema
 
 export const CHECKPOINT_TITLE_MAX = 120;
 export const CHECKPOINT_DESCRIPTION_MAX = 500;
+export const CHECKPOINT_ARRIVAL_MAX = 2000;
 
 export const CampaignCheckpointSchema = z.object({
   title: z.string().min(1).max(CHECKPOINT_TITLE_MAX),
+  /** DM-facing summary (quest-bar detail); spoilers welcome. */
   description: z.string().max(CHECKPOINT_DESCRIPTION_MAX),
+  /**
+   * Read-aloud arrival narration — the boxed-text-style scene the DM reads
+   * when the party reaches this stage. Null for campaigns extracted before
+   * the field existed.
+   */
+  arrivalText: z.string().max(CHECKPOINT_ARRIVAL_MAX).nullable().default(null),
   kind: CampaignCheckpointKindSchema,
 });
 export type CampaignCheckpoint = z.infer<typeof CampaignCheckpointSchema>;

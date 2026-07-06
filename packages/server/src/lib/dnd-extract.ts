@@ -5,6 +5,7 @@ import type {
   NpcSheet,
 } from "@boardgames/core/protocol";
 import {
+  CHECKPOINT_ARRIVAL_MAX,
   CHECKPOINT_DESCRIPTION_MAX,
   CHECKPOINT_KINDS,
   CHECKPOINT_TITLE_MAX,
@@ -59,6 +60,7 @@ const RawExtractionSchema = z.object({
     z.object({
       title: z.string(),
       description: z.string(),
+      arrival_text: z.string(),
       kind: z.string(),
     }),
   ),
@@ -83,7 +85,7 @@ const EXTRACTION_JSON_SCHEMA = {
     checkpoints: {
       type: "array",
       minItems: 5,
-      maxItems: 12,
+      maxItems: 20,
       items: {
         type: "object",
         properties: {
@@ -92,9 +94,14 @@ const EXTRACTION_JSON_SCHEMA = {
             type: "string",
             description: "1–2 sentences for the DM's eyes; spoilers allowed.",
           },
+          arrival_text: {
+            type: "string",
+            description:
+              "Boxed-text-style arrival narration read aloud to the players when they reach this stage: second person, atmospheric, 2–4 short paragraphs (max ~1900 chars), NO spoilers or DM-only information, ending just before the players act.",
+          },
           kind: { type: "string", enum: [...CHECKPOINT_KINDS] },
         },
-        required: ["title", "description", "kind"],
+        required: ["title", "description", "arrival_text", "kind"],
         additionalProperties: false,
       },
     },
@@ -108,7 +115,11 @@ const EXTRACTION_PROMPT = `You are assisting a Dungeon Master preparing to run t
 2. A one-sentence dramatic tagline pitching the adventure.
 3. The primary setting or region.
 4. The intended character level range as a short label like "Levels 1–10" (null if not stated).
-5. The 5–12 most significant story checkpoints, in the order a party would typically encounter them: major chapters, set-piece battles, key revelations, memorable locations, treasure or artifact moments, and the finale. Checkpoint titles must be short and evocative; descriptions are 1–2 sentences written for the DM's eyes (spoilers are expected). Classify each checkpoint's kind.
+5. The story waypoints. Waypoints MUST follow the module's own structure, in document order: one waypoint per named part/chapter, and one waypoint per enumerated area or location (e.g. "Area 1: …", "Area 2: …") — preserve the module's numbering and order EXACTLY, never reordering, merging, or skipping enumerated areas. For each waypoint provide:
+   - a short, evocative title (keep the module's area/part name recognizable);
+   - a 1–2 sentence DM-facing description (spoilers expected);
+   - arrival_text: the narration the DM reads ALOUD when the party arrives at this stage — second person, atmospheric, 2–4 short paragraphs. Use the module's own boxed read-aloud text for this stage where it exists (verbatim or lightly adapted); otherwise write it in the module's tone, grounded strictly in what the document establishes. Scene-setting only: no spoilers, no DM-only knowledge, and end just before the players would act or speak.
+   - the waypoint's kind.
 Do not invent content that is not present in the document.`;
 
 function clamp(value: string, max: number): string {
@@ -141,6 +152,7 @@ export function normalizeExtraction(raw: unknown): CampaignExtraction {
     .map((cp) => ({
       title: clamp(cp.title, CHECKPOINT_TITLE_MAX),
       description: clamp(cp.description, CHECKPOINT_DESCRIPTION_MAX),
+      arrivalText: clampNullable(cp.arrival_text, CHECKPOINT_ARRIVAL_MAX),
       kind: (KIND_SET.has(cp.kind) ? cp.kind : "quest") as CampaignCheckpointKind,
     }))
     .filter((cp) => cp.title.length > 0);
