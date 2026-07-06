@@ -1,11 +1,26 @@
 import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
 import { useCallback, useMemo } from "react";
-import type { ChatMessage, GameSession } from "../lib/ws-client";
+import type {
+  ChatMessage,
+  ConnectionStatus,
+  GameSession,
+  PeerConnectionState,
+} from "../lib/ws-client";
 
 export interface MultiplayerRoomState<TView, TAction, TResult> {
   // Connection
+  /** Full transport status — distinguishes connecting / reconnecting / error
+   *  from a plain connected/disconnected boolean. */
+  status: ConnectionStatus;
+  /** Convenience derived from `status` — kept for existing consumers. */
   isConnected: boolean;
+  /** Game-rule / lobby error (illegal move, "room not found", host left). */
   error: string | null;
+  /** Transport-level error (socket down / send dropped). */
+  connectionError: string | null;
+  /** Connection state of the other seated humans — drives "player X
+   *  disconnected" banners. */
+  peers: PeerConnectionState[];
 
   // Lobby
   roomCode: string | null;
@@ -75,8 +90,11 @@ export function useMultiplayerRoom<TView = unknown, TAction = unknown, TResult =
   }, [session.leaveSession]);
 
   return {
+    status: session.status,
     isConnected: session.status === "connected",
     error: session.error,
+    connectionError: session.connectionError,
+    peers: session.peers,
 
     roomCode: session.roomCode,
     roomState: session.roomState,

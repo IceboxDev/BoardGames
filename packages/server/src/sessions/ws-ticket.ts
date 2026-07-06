@@ -20,8 +20,18 @@ const TICKET_TTL_MS = 30_000;
 // Falls back to a fixed dev string when the secret is unset (local dev relies
 // on the same-origin cookie anyway). Signing and verifying both run in the
 // same process, so whatever this resolves to is internally consistent.
+//
+// In production the fallback is a hard error: a publicly-known signing key
+// would let anyone forge a valid ticket for any userId and pass requireWsAuth.
+// Boot already refuses to start without BETTER_AUTH_SECRET in prod (see
+// env.ts); this is the defense-in-depth guarantee at the signing site.
 function ticketSecret(): string {
-  return process.env.BETTER_AUTH_SECRET ?? "dev-insecure-ws-ticket-secret";
+  const secret = process.env.BETTER_AUTH_SECRET;
+  if (secret) return secret;
+  if (process.env.NODE_ENV === "production") {
+    throw new Error("BETTER_AUTH_SECRET is required in production to sign WebSocket tickets");
+  }
+  return "dev-insecure-ws-ticket-secret";
 }
 
 function sign(payload: string): string {

@@ -1,3 +1,4 @@
+import { shuffle } from "../../lib/rng";
 import type { Card } from "./types";
 import { DECK_COMPOSITION, HAND_SIZES } from "./types";
 
@@ -13,12 +14,7 @@ export function createDeck(): Card[] {
 }
 
 export function shuffleDeck(deck: Card[]): Card[] {
-  const a = deck.slice();
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
+  return shuffle(deck);
 }
 
 export function dealHands(

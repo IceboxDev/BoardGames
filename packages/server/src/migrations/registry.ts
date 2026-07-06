@@ -10,6 +10,16 @@ import { dropTestDummy } from "./0002-drop-test-dummy.ts";
 import { onlineMode } from "./0003-online-mode.ts";
 import { matchSortOrder } from "./0004-match-sort-order.ts";
 import { userProfiles } from "./0005-user-profiles.ts";
+import { dndCampaigns } from "./0006-dnd-campaigns.ts";
+import { dndCharacters } from "./0007-dnd-characters.ts";
+import { dndNpcs } from "./0008-dnd-npcs.ts";
+import { matchClientId } from "./0009-match-client-id.ts";
+import { availabilityDays } from "./0010-availability-days.ts";
+import { fkLockedDates } from "./0011-fk-locked-dates.ts";
+import { fkRsvpsGameRequests } from "./0012-fk-rsvps-game-requests.ts";
+import { fkUserOwned } from "./0013-fk-user-owned.ts";
+import { dndPartiesNodesFiles } from "./0014-dnd-parties-nodes-files.ts";
+import { dndNodeTemplates } from "./0015-dnd-node-templates.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -18,6 +28,16 @@ export const migrations: readonly Migration[] = [
   onlineMode,
   matchSortOrder,
   userProfiles,
+  dndCampaigns,
+  dndCharacters,
+  dndNpcs,
+  matchClientId,
+  availabilityDays,
+  fkLockedDates,
+  fkRsvpsGameRequests,
+  fkUserOwned,
+  dndPartiesNodesFiles,
+  dndNodeTemplates,
 ];
 
 /**

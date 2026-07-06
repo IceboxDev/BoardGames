@@ -215,6 +215,11 @@ export const MatchCreateInputSchema = z.object({
   gameTitle: z.string().min(1).max(200),
   outcome: MatchOutcomeSchema,
   notes: z.string().nullable(),
+  // Optional client-generated idempotency key. A retried/double-clicked submit
+  // reuses it so the server records the match once (partial unique index on
+  // match_results.client_id). Only meaningful on create; ignored by the PATCH
+  // update path, which shares this schema.
+  clientId: z.string().min(1).max(100).optional(),
 });
 export type MatchCreateInput = z.infer<typeof MatchCreateInputSchema>;
 

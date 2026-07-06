@@ -37,6 +37,16 @@ export function parseServerMessage(raw: string): ServerMessage {
 
 export type ConnectionStatus = "connecting" | "connected" | "disconnected" | "error";
 
+/** Connection state of a peer (human) in the current game session. Derived
+ *  from the server's `player-disconnected` / `player-reconnected` messages so
+ *  the multiplayer UI can show "player X dropped" without polling. Keyed by
+ *  in-game `playerIndex`. */
+export interface PeerConnectionState {
+  playerIndex: number;
+  playerName: string;
+  connected: boolean;
+}
+
 /** One chat message in the room's running log. Stamped server-side so
  *  identity (`fromSlot`/`fromName`) can't be forged client-side. */
 export interface ChatMessage {
@@ -49,7 +59,20 @@ export interface ChatMessage {
 export interface GameSession<TPlayerView, TAction, TResult> {
   // Connection
   status: ConnectionStatus;
+  /** Game-rule / lobby error (illegal move, "room not found", host left).
+   *  Distinct from `connectionError` so a transient rule rejection isn't
+   *  mistaken for a fatal socket failure. */
   error: string | null;
+  /** Transport-level error (socket errored, or a send couldn't go out
+   *  because the socket was down). Cleared on the next successful open. */
+  connectionError: string | null;
+  /** Dev-visible counter of malformed server frames that failed envelope
+   *  validation. The happy path is unchanged — bad frames are still dropped
+   *  — but a server-side protocol regression is now observable instead of
+   *  invisible. */
+  malformedMessageCount: number;
+  /** Connection state of the other humans in the running session. */
+  peers: PeerConnectionState[];
 
   // Solo session state
   sessionId: string | null;
@@ -108,7 +131,39 @@ const WS_URL =
     ? `${window.location.protocol === "https:" ? "wss:" : "ws:"}//${window.location.host}/ws`
     : "ws://localhost:3001/ws");
 
-const RECONNECT_DELAYS = [1000, 2000, 4000, 8000, 16000];
+export const RECONNECT_BASE_DELAY_MS = 1000;
+export const RECONNECT_MAX_DELAY_MS = 30_000;
+
+/**
+ * Full-jitter exponential backoff. Returns a delay in ms in the half-open
+ * range `[0, ceiling)`, where `ceiling = min(base * 2^attempt, max)`. The
+ * ceiling grows exponentially with `attempt` until it saturates at
+ * {@link RECONNECT_MAX_DELAY_MS}, and never gives up — callers keep retrying
+ * indefinitely until the hook unmounts.
+ *
+ * Jitter (`Math.random`) spreads reconnect attempts so a fleet of clients
+ * that dropped together (e.g. a server restart) don't stampede back in
+ * lockstep. Randomness is fine here: this is the browser transport layer,
+ * not the deterministic game engine. `rng` is injectable for tests.
+ */
+export function reconnectDelay(attempt: number, rng: () => number = Math.random): number {
+  const ceiling = Math.min(RECONNECT_BASE_DELAY_MS * 2 ** attempt, RECONNECT_MAX_DELAY_MS);
+  return Math.floor(rng() * ceiling);
+}
+
+// Client-side liveness heartbeat via application-level ping/pong (the wire
+// protocol carries `{type:"ping"}` / `{type:"pong"}` — see core/protocol/ws/*).
+// Every interval, an OPEN socket sends a ping; the server's pong (like any
+// received frame) refreshes `lastActivityRef`. So an otherwise-idle socket —
+// e.g. a lobby waiting for players — keeps generating traffic and never trips
+// the staleness check, while a half-open socket (the browser hasn't noticed
+// the TCP drop) stops receiving pongs, crosses the stale threshold, and is
+// force-closed so the backoff reconnect kicks in. The threshold is several
+// interval-widths so a briefly quiet-but-healthy session isn't torn down.
+const HEARTBEAT_INTERVAL_MS = 25_000;
+const STALE_TIMEOUT_MS = 70_000;
+// Bound on the outbound queue so a long outage can't grow it without limit.
+const MAX_OUTBOUND_QUEUE = 32;
 
 export function useGameSession<
   TPlayerView = unknown,
@@ -118,11 +173,24 @@ export function useGameSession<
   const wsRef = useRef<WebSocket | null>(null);
   const reconnectAttemptRef = useRef(0);
   const reconnectTimerRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+  const heartbeatTimerRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined);
+  // Timestamp of the last received frame; drives passive staleness detection.
+  const lastActivityRef = useRef(Date.now());
+  // Gate that stops `onclose` from scheduling a reconnect after an intentional
+  // teardown (hook unmount). Re-armed on each mount so StrictMode's
+  // mount→unmount→mount cycle still reconnects.
+  const shouldReconnectRef = useRef(true);
+  // User actions issued while the socket is down are queued here and flushed on
+  // the next open, rather than being silently dropped.
+  const outboundQueueRef = useRef<unknown[]>([]);
 
   // Refs for auto-rejoin on reconnect
   const pendingRejoinRef = useRef<{ roomCode: string; playerName: string } | null>(null);
 
   const [status, setStatus] = useState<ConnectionStatus>("disconnected");
+  const [connectionError, setConnectionError] = useState<string | null>(null);
+  const [malformedMessageCount, setMalformedMessageCount] = useState(0);
+  const [peers, setPeers] = useState<PeerConnectionState[]>([]);
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [playerView, setPlayerView] = useState<TPlayerView | null>(null);
   const [legalActions, setLegalActions] = useState<TAction[]>([]);
@@ -153,6 +221,37 @@ export function useGameSession<
 
     setStatus("connecting");
 
+    const stopHeartbeat = () => {
+      if (heartbeatTimerRef.current !== undefined) {
+        clearInterval(heartbeatTimerRef.current);
+        heartbeatTimerRef.current = undefined;
+      }
+    };
+
+    const startHeartbeat = () => {
+      stopHeartbeat();
+      heartbeatTimerRef.current = setInterval(() => {
+        const sock = wsRef.current;
+        if (!sock) return;
+        if (sock.readyState !== WebSocket.OPEN) {
+          // Socket is CLOSING/CLOSED but `onclose` hasn't fired — force it.
+          sock.close();
+          return;
+        }
+        if (Date.now() - lastActivityRef.current > STALE_TIMEOUT_MS) {
+          gameLog("heartbeat: no server activity — forcing reconnect");
+          sock.close(); // onclose schedules the backoff reconnect
+          return;
+        }
+        // Probe liveness; the server answers with `pong`, refreshing activity.
+        try {
+          sock.send(JSON.stringify({ type: "ping" }));
+        } catch {
+          sock.close();
+        }
+      }, HEARTBEAT_INTERVAL_MS);
+    };
+
     const openWith = (url: string) => {
       // A socket may have opened while we awaited the ticket.
       if (wsRef.current?.readyState === WebSocket.OPEN) return;
@@ -163,22 +262,43 @@ export function useGameSession<
       ws.onopen = () => {
         setStatus("connected");
         setError(null);
+        setConnectionError(null);
         reconnectAttemptRef.current = 0;
+        lastActivityRef.current = Date.now();
+        startHeartbeat();
 
         // Auto-rejoin room on reconnect
         if (pendingRejoinRef.current) {
           const { roomCode: code, playerName } = pendingRejoinRef.current;
           ws.send(JSON.stringify({ type: "join-room", roomCode: code, playerName }));
         }
+
+        // Flush any actions the user issued while the socket was down. The
+        // rejoin above goes first so the server re-establishes the session
+        // before the queued actions land. The server is authoritative and
+        // rejects anything now stale with an `error` message.
+        const queued = outboundQueueRef.current;
+        outboundQueueRef.current = [];
+        for (const queuedMsg of queued) {
+          const queuedType = (queuedMsg as { type?: string }).type ?? "?";
+          gameLog(`send (flushed) ${queuedType}`, queuedMsg);
+          ws.send(JSON.stringify(queuedMsg));
+        }
       };
 
       ws.onmessage = (event) => {
+        // Any frame — even a malformed one — proves the socket is alive.
+        lastActivityRef.current = Date.now();
+
         let msg: ServerMessage;
         try {
           msg = parseServerMessage(event.data);
         } catch (err) {
           if (err instanceof SchemaError) {
             console.warn("Bad WS message shape:", err.issues);
+            // Keep dropping the frame (don't crash the session), but make the
+            // regression observable rather than invisible.
+            setMalformedMessageCount((n) => n + 1);
           }
           return;
         }
@@ -272,6 +392,7 @@ export function useGameSession<
             pendingRejoinRef.current = null;
             setError(msg.reason);
             setChatMessages([]);
+            setPeers([]);
             break;
 
           case "chat-message":
@@ -296,11 +417,30 @@ export function useGameSession<
             setResult(null);
             setAiThinking(false);
             setError(null);
+            setPeers([]);
             break;
 
           case "player-disconnected":
-          case "player-reconnected":
-            // These could drive UI notifications in the future
+          case "player-reconnected": {
+            // Surface peer connection changes so the multiplayer UI can show
+            // "player X disconnected" (and clear it on reconnect). Keyed by
+            // in-game playerIndex; latest event per peer wins.
+            const connected = msg.type === "player-reconnected";
+            setPeers((prev) => {
+              const next = prev.filter((p) => p.playerIndex !== msg.playerIndex);
+              next.push({
+                playerIndex: msg.playerIndex,
+                playerName: msg.playerName,
+                connected,
+              });
+              next.sort((a, b) => a.playerIndex - b.playerIndex);
+              return next;
+            });
+            break;
+          }
+
+          case "pong":
+            // Liveness response — its arrival already refreshed lastActivity.
             break;
         }
       };
@@ -308,18 +448,22 @@ export function useGameSession<
       ws.onclose = () => {
         setStatus("disconnected");
         wsRef.current = null;
+        stopHeartbeat();
 
-        const attempt = reconnectAttemptRef.current;
-        if (attempt < RECONNECT_DELAYS.length) {
-          reconnectTimerRef.current = setTimeout(() => {
-            reconnectAttemptRef.current++;
-            connect();
-          }, RECONNECT_DELAYS[attempt]);
-        }
+        // Don't reconnect after an intentional teardown (unmount).
+        if (!shouldReconnectRef.current) return;
+
+        // Uncapped exponential backoff with full jitter — retry forever.
+        const delay = reconnectDelay(reconnectAttemptRef.current);
+        reconnectTimerRef.current = setTimeout(() => {
+          reconnectAttemptRef.current++;
+          connect();
+        }, delay);
       };
 
       ws.onerror = () => {
         setStatus("error");
+        setConnectionError("Connection error");
       };
     };
 
@@ -338,9 +482,12 @@ export function useGameSession<
   }, [setSessionIdSynced]);
 
   useEffect(() => {
+    shouldReconnectRef.current = true;
     connect();
     return () => {
+      shouldReconnectRef.current = false;
       clearTimeout(reconnectTimerRef.current);
+      clearInterval(heartbeatTimerRef.current);
       wsRef.current?.close();
     };
   }, [connect]);
@@ -349,8 +496,16 @@ export function useGameSession<
     const ws = wsRef.current;
     const type = (msg as { type?: string }).type ?? "?";
     if (!ws || ws.readyState !== WebSocket.OPEN) {
-      // A dropped send (socket not open) silently strands the game — log it.
-      gameLog(`send DROPPED (socket not open): ${type}`, msg);
+      // Socket isn't open (mid-reconnect). Rather than silently stranding the
+      // user's action, queue it (bounded) to flush on the next open and
+      // surface the outage on the transport-error channel so the UI can show a
+      // "reconnecting…" state. The queue is the least-invasive fix that keeps
+      // actions from being lost; the server rejects anything gone stale.
+      gameLog(`send DEFERRED (socket not open): ${type}`, msg);
+      if (outboundQueueRef.current.length < MAX_OUTBOUND_QUEUE) {
+        outboundQueueRef.current.push(msg);
+      }
+      setConnectionError("Connection lost — retrying…");
       return;
     }
     gameLog(`send ${type}`, msg);
@@ -387,6 +542,7 @@ export function useGameSession<
     setRoomCode(null);
     setRoomState(null);
     setMySlot(null);
+    setPeers([]);
     pendingRejoinRef.current = null;
   }, [sendMessage, sessionId, setSessionIdSynced]);
 
@@ -417,6 +573,7 @@ export function useGameSession<
     setRoomCode(null);
     setRoomState(null);
     setMySlot(null);
+    setPeers([]);
     pendingRejoinRef.current = null;
     // The server may follow up with a `room-closed` (e.g. host left) — wipe
     // its reason so the deliberate exit doesn't surface as a red error on
@@ -486,6 +643,9 @@ export function useGameSession<
     replayId,
     gameRoomCode,
     error,
+    connectionError,
+    malformedMessageCount,
+    peers,
     roomCode,
     roomState,
     mySlot,

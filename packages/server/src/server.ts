@@ -26,6 +26,7 @@ import { calendarFeedRoutes } from "./auth-routes/calendar-feed.ts";
 import { calendarFeedPublicRoutes } from "./auth-routes/calendar-feed-public.ts";
 import { adminCalendarLocksRoutes, calendarLocksRoutes } from "./auth-routes/calendar-locks.ts";
 import { calendarRsvpsRoutes } from "./auth-routes/calendar-rsvps.ts";
+import { dndCampaignRoutes } from "./auth-routes/dnd-campaigns.ts";
 import { matchHistoryRoutes } from "./auth-routes/match-history.ts";
 import { profileRoutes } from "./auth-routes/profile.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
@@ -135,6 +136,10 @@ app.route("/api/bgg", bggRoutes);
 app.use("/api/tournaments/*", requireAuth, requireOnline);
 app.route("/api/tournaments", tournamentRoutes);
 
+// D&D DM tool (campaign hall). Lives in the play area, so gated like it.
+app.use("/api/dnd/*", requireAuth, requireOnline);
+app.route("/api/dnd", dndCampaignRoutes);
+
 app.use("/api/games/*", requireAuth);
 app.route("/api/games", persistenceRoutes);
 
@@ -203,6 +208,12 @@ app.get(
               ? `Malformed message: ${JSON.stringify(err.issues)}`
               : "Malformed message";
           ws.send(JSON.stringify({ type: "error", message }));
+          return;
+        }
+
+        // Liveness probe — answer immediately and don't route it further.
+        if (msg.type === "ping") {
+          ws.send(JSON.stringify({ type: "pong" }));
           return;
         }
 

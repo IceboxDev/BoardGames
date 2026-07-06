@@ -7,6 +7,7 @@ import {
   endSoloSessionsForWs,
   type PlayerConnection,
   reconnectPlayer,
+  wsAuth,
 } from "./manager.ts";
 
 // ---------------------------------------------------------------------------
@@ -37,6 +38,12 @@ interface Room {
   hostWs: WSContext;
   slots: RoomSlot[];
   clients: Map<WSContext, number>; // ws → slotIndex
+  /** slotIndex → authenticated userId that owns the seat (server-side only,
+   *  never sent over the wire). Reconnection and seat ownership key off this,
+   *  NOT the client-supplied playerName — otherwise anyone who knows a room
+   *  code + a player's display name could hijack their seat and read their
+   *  private hand. `undefined` for open/AI slots. */
+  slotUserIds: (string | undefined)[];
   /** slotIndex → in-game seat (PlayerIndex). Identity until the host swaps
    *  roles (Sky Team: seat 0 = Pilot, seat 1 = Co-Pilot). Slots and host
    *  identity never move — only the role assignment does. */
@@ -83,6 +90,15 @@ export function handleCreateRoom(
   ws: WSContext,
   msg: { gameSlug: string; playerName: string },
 ): void {
+  // The socket is authenticated at upgrade (requireWsAuth); the resolved
+  // userId owns the host seat. Refuse if it's somehow missing rather than
+  // creating an unowned room.
+  const userId = wsAuth.get(ws);
+  if (!userId) {
+    sendError(ws, "Not authenticated");
+    return;
+  }
+
   // Validate game exists
   const spec = getMachineSpec(msg.gameSlug);
   if (!spec) {
@@ -123,12 +139,16 @@ export function handleCreateRoom(
     slots.push({ kind: "open", ready: false, connected: false });
   }
 
+  const slotUserIds: (string | undefined)[] = new Array(config.maxPlayers).fill(undefined);
+  slotUserIds[0] = userId;
+
   const room: Room = {
     code,
     gameSlug: msg.gameSlug,
     hostWs: ws,
     slots,
     clients: new Map([[ws, 0]]),
+    slotUserIds,
     seatOrder: Array.from({ length: config.maxPlayers }, (_, i) => i),
     sessionId: null,
   };
@@ -150,9 +170,22 @@ export function handleJoinRoom(ws: WSContext, msg: { roomCode: string; playerNam
     return;
   }
 
+  const userId = wsAuth.get(ws);
+  if (!userId) {
+    sendError(ws, "Not authenticated");
+    return;
+  }
+
   if (room.sessionId) {
-    // Game already started — check for reconnection
-    handleReconnect(ws, room, msg.playerName);
+    // Game already started — check for reconnection (matched by userId).
+    handleReconnect(ws, room, userId);
+    return;
+  }
+
+  // One seat per user: if this account already holds a slot in the room,
+  // don't hand it a second one (also stops a second tab from shadow-joining).
+  if (room.slotUserIds.includes(userId)) {
+    sendError(ws, "You are already in this room");
     return;
   }
 
@@ -178,6 +211,7 @@ export function handleJoinRoom(ws: WSContext, msg: { roomCode: string; playerNam
     ready: false,
     connected: true,
   };
+  room.slotUserIds[slotIndex] = userId;
   room.clients.set(ws, slotIndex);
   wsToRoom.set(ws, room.code);
 
@@ -193,17 +227,21 @@ export function handleJoinRoom(ws: WSContext, msg: { roomCode: string; playerNam
   broadcastRoomUpdate(room);
 }
 
-function handleReconnect(ws: WSContext, room: Room, playerName: string): void {
-  // Find the disconnected slot with matching name
+function handleReconnect(ws: WSContext, room: Room, userId: string): void {
+  // Find the disconnected slot owned by THIS authenticated user. Matching on
+  // userId (not the client-supplied playerName) is what prevents a stranger
+  // who knows the room code + a display name from stealing the seat and its
+  // private player view.
   const slotIndex = room.slots.findIndex(
-    (s) => s.kind === "human" && !s.connected && s.playerName === playerName,
+    (s, i) => s.kind === "human" && !s.connected && room.slotUserIds[i] === userId,
   );
   if (slotIndex === -1) {
-    sendError(ws, "Cannot reconnect: no matching slot");
+    sendError(ws, "Cannot reconnect: no seat in this game belongs to you");
     return;
   }
 
-  room.slots[slotIndex].connected = true;
+  const slot = room.slots[slotIndex];
+  if (slot.kind === "human") slot.connected = true;
   room.clients.set(ws, slotIndex);
   wsToRoom.set(ws, room.code);
 
@@ -234,6 +272,7 @@ export function handleLeaveRoom(ws: WSContext, msg: { roomCode: string }): void 
 
   // Free the slot
   room.slots[slotIndex] = { kind: "open", ready: false, connected: false };
+  room.slotUserIds[slotIndex] = undefined;
   broadcastRoomUpdate(room);
 }
 
@@ -287,6 +326,17 @@ export function handleConfigureRoom(
     room.slots.length = msg.slots.length;
     for (let i = room.slots.length; i < msg.slots.length; i++) {
       room.slots.push(msg.slots[i]);
+    }
+  }
+
+  // Keep seat ownership aligned with the reconfigured slots: an owned userId is
+  // only valid for a slot that stayed a connected human. Anything that became
+  // open/AI or lost its connection loses its owner.
+  room.slotUserIds.length = room.slots.length;
+  for (let i = 0; i < room.slots.length; i++) {
+    const slot = room.slots[i];
+    if (slot.kind !== "human" || !slot.connected) {
+      room.slotUserIds[i] = undefined;
     }
   }
 
@@ -358,6 +408,7 @@ export function handleKickPlayer(
   }
 
   room.slots[msg.slotIndex] = { kind: "open", ready: false, connected: false };
+  room.slotUserIds[msg.slotIndex] = undefined;
   broadcastRoomUpdate(room);
 }
 

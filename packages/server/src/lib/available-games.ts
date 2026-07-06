@@ -12,12 +12,7 @@
 // fields) without leaking them into the public JSON.
 
 import { getBggBySlug, maxPlayersAsNumber } from "@boardgames/core/bgg";
-import {
-  type Availability,
-  AvailabilityMapSchema,
-  type AvailableGames,
-  SlugListSchema,
-} from "@boardgames/core/protocol";
+import { type AvailableGames, SlugListSchema } from "@boardgames/core/protocol";
 import type { Client } from "@libsql/client";
 import { z } from "zod";
 import { jsonColumn, parseRow, parseRows, RowParseError } from "./db-rows.ts";
@@ -44,10 +39,12 @@ const LockedDateFullRowSchema = z.object({
   host_at_home: z.number().nullable(),
 });
 
-/** `SELECT user_id, availability_json FROM user_availability`. */
-const UserAvailabilityRowSchema = z.object({
+/** `SELECT user_id, status FROM user_availability_days WHERE date_key = ?`.
+ *  Normalized per-date rows (migration 0010) — an indexed seek instead of the
+ *  old full JSON-blob scan. */
+const AvailabilityDayRowSchema = z.object({
   user_id: z.string(),
-  availability_json: jsonColumn(AvailabilityMapSchema),
+  status: z.enum(["can", "maybe"]),
 });
 
 /** `SELECT user_id, status, auto FROM rsvps WHERE date_key = ?`. */
@@ -240,7 +237,10 @@ export async function computeAvailableGamesPayload(opts: {
   // MAX(rsvped_at) and MAX(created_at) for this date so the ICS feed can
   // derive a stable DTSTAMP/LAST-MODIFIED without re-scanning these tables.
   const [availabilityResult, rsvpResult, reactionResult, freshnessResult] = await Promise.all([
-    db.execute("SELECT user_id, availability_json FROM user_availability"),
+    db.execute({
+      sql: "SELECT user_id, status FROM user_availability_days WHERE date_key = ?",
+      args: [date],
+    }),
     db.execute({
       sql: "SELECT user_id, status, auto FROM rsvps WHERE date_key = ?",
       args: [date],
@@ -268,19 +268,13 @@ export async function computeAvailableGamesPayload(opts: {
 
   const canSet = new Set<string>();
   const maybeSet = new Set<string>();
-  for (const row of availabilityResult.rows) {
-    // Per-row tolerance: one corrupted availability blob shouldn't poison
-    // the whole game-night view. Drop and continue.
-    let avail: { user_id: string; availability_json: Record<string, Availability> };
-    try {
-      avail = parseRow(UserAvailabilityRowSchema, row, "user_availability");
-    } catch (err) {
-      if (!(err instanceof RowParseError)) throw err;
-      continue;
-    }
-    const v = avail.availability_json[date];
-    if (v === "can") canSet.add(avail.user_id);
-    else if (v === "maybe") maybeSet.add(avail.user_id);
+  for (const row of parseRows(
+    AvailabilityDayRowSchema,
+    availabilityResult.rows,
+    "user_availability_days",
+  )) {
+    if (row.status === "can") canSet.add(row.user_id);
+    else if (row.status === "maybe") maybeSet.add(row.user_id);
   }
 
   const rsvpYes = new Set<string>();

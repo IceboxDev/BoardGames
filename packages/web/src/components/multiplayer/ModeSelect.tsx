@@ -19,6 +19,8 @@ interface ModeSelectProps {
   onRules?: () => void;
   onSolo?: () => void;
   onMultiplayer: () => void;
+  /** Companion-device card (e.g. beamer display) shown INSTEAD of Multiplayer. */
+  companion?: { label: string; description: string; onClick: () => void };
   onMatchHistory?: () => void;
   onTournament?: () => void;
 }
@@ -41,6 +43,12 @@ function soloMode(label: string): { icon: ReactNode; tone: SegmentedTone; descri
         tone: "amber",
         description: "Practice and sharpen your skills",
       };
+    case "DM Screen":
+      return {
+        icon: <BookIcon className="h-7 w-7" />,
+        tone: "amber",
+        description: "Run the campaign as Dungeon Master",
+      };
     default:
       return {
         icon: <BotIcon className="h-7 w-7" />,
@@ -57,6 +65,7 @@ export function ModeSelect({
   onRules,
   onSolo,
   onMultiplayer,
+  companion,
   onMatchHistory,
   onTournament,
 }: ModeSelectProps) {
@@ -93,14 +102,25 @@ export function ModeSelect({
             animationDelay={0}
           />
         )}
-        <SelectableCard
-          tone="emerald"
-          icon={<UsersIcon className="h-7 w-7" />}
-          title="Multiplayer"
-          description="Create a room and play online with friends"
-          onClick={onMultiplayer}
-          animationDelay={60}
-        />
+        {companion ? (
+          <SelectableCard
+            tone="emerald"
+            icon={<UsersIcon className="h-7 w-7" />}
+            title={companion.label}
+            description={companion.description}
+            onClick={companion.onClick}
+            animationDelay={60}
+          />
+        ) : (
+          <SelectableCard
+            tone="emerald"
+            icon={<UsersIcon className="h-7 w-7" />}
+            title="Multiplayer"
+            description="Create a room and play online with friends"
+            onClick={onMultiplayer}
+            animationDelay={60}
+          />
+        )}
       </div>
 
       {/* Secondary actions — separated with breathing room */}

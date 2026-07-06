@@ -13,14 +13,7 @@ export function buildDeck(): Card[] {
   return cards;
 }
 
-export function shuffleInPlace<T>(arr: T[]): void {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const tmp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = tmp;
-  }
-}
+export { shuffleInPlace } from "../../lib/rng";
 
 const SUIT_ORDER: Record<Suit, number> = {
   spades: 0,

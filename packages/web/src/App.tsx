@@ -25,6 +25,7 @@ const PlayerProfilePage = lazy(() => import("./pages/PlayerProfilePage"));
 const PlayersDirectoryPage = lazy(() => import("./pages/PlayersDirectoryPage"));
 const DeckPreview = lazy(() => import("./pages/DeckPreview"));
 const DndNightPreview = lazy(() => import("./pages/DndNightPreview"));
+const DndToolPreview = lazy(() => import("./pages/DndToolPreview"));
 
 // `GameMenu` is the dashboard's entry point into the games catalog.
 // `GameShellLayout` mounts under `/play/:slug` and pulls in the games
@@ -47,6 +48,9 @@ const SoloGameRoute = lazy(() =>
 );
 const MpGameRoute = lazy(() =>
   import("./components/game-shell/GameRoute").then((m) => ({ default: m.MpGameRoute })),
+);
+const CompanionRoute = lazy(() =>
+  import("./components/game-shell/GameRoute").then((m) => ({ default: m.CompanionRoute })),
 );
 const TournamentRoute = lazy(() =>
   import("./components/game-shell/TournamentRoutes").then((m) => ({ default: m.TournamentRoute })),
@@ -182,7 +186,10 @@ const router = createBrowserRouter(
         <Route path="play/:slug" element={<GameShellLayout />}>
           <Route index element={<ModeSelectRoute />} />
           <Route path="rules" element={<RulesRoute />} />
-          <Route path="solo" element={<SoloGameRoute />} />
+          {/* `solo/*` so a game component can host internal sub-routes
+              (the D&D tool's hall → setup → session screens). */}
+          <Route path="solo/*" element={<SoloGameRoute />} />
+          <Route path="companion" element={<CompanionRoute />} />
           <Route path="mp/join" element={<JoinRoomRoute />} />
           <Route path="mp/lobby/:roomCode" element={<LobbyRoute />} />
           <Route path="mp/play/:roomCode" element={<MpGameRoute />} />
@@ -202,6 +209,7 @@ const router = createBrowserRouter(
 
       <Route path="dev/deck-preview" element={<DeckPreview />} />
       <Route path="dev/dnd-preview" element={<DndNightPreview />} />
+      <Route path="dev/dnd-tool-preview" element={<DndToolPreview />} />
     </Route>,
   ),
 );

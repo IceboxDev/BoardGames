@@ -196,6 +196,11 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
   const dateKeyId = useId();
   const notesId = useId();
 
+  // Stable idempotency key for this record session. The modal is mounted fresh
+  // per open (conditionally rendered), so this is one id per new match, reused
+  // across a double-click or network retry — the server records it once.
+  const clientIdRef = useRef(crypto.randomUUID());
+
   const saveMutation = useMutation({
     mutationFn: async () => {
       const trimmedTitle = gameTitle.trim();
@@ -213,7 +218,7 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
       if (state.mode === "edit") {
         return updateMatch(state.match.id, input);
       }
-      return recordMatch(input);
+      return recordMatch({ ...input, clientId: clientIdRef.current });
     },
     onSuccess: () => onSaved(),
     onError: (e) => setError(e instanceof Error ? e.message : "Could not save"),

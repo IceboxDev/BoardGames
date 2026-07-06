@@ -19,4 +19,11 @@ export const qk = {
   players: () => ["players"] as const,
   profile: (userId: string | null | undefined) => ["profile", userId] as const,
   profileMatches: (userId: string) => ["profile", userId, "matches"] as const,
+  dndCampaigns: () => ["dnd", "campaigns"] as const,
+  dndCharacters: (partyId: string) => ["dnd", "characters", partyId] as const,
+  dndParties: (campaignId: string) => ["dnd", "parties", campaignId] as const,
+  dndNodes: (partyId: string) => ["dnd", "nodes", partyId] as const,
+  dndNpcs: (campaignId: string) => ["dnd", "npcs", campaignId] as const,
+  dndFiles: () => ["dnd", "files"] as const,
+  dndActiveSession: () => ["dnd", "session", "active"] as const,
 } as const;

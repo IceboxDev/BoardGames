@@ -1,3 +1,4 @@
+import { shuffleInPlace } from "../../lib/rng";
 import { buildGearDeck } from "./gear-data";
 import { ALL_PARKS, getParkExtras } from "./parks-data";
 import {
@@ -82,15 +83,6 @@ const CANTEEN_POOL_COUNTS: Record<CanteenEffect, number> = {
 // ---------------------------------------------------------------------------
 // RNG
 // ---------------------------------------------------------------------------
-
-function shuffleInPlace<T>(arr: T[]): void {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    const tmp = arr[i];
-    arr[i] = arr[j];
-    arr[j] = tmp;
-  }
-}
 
 function randomChoice<T>(arr: T[]): T {
   return arr[Math.floor(Math.random() * arr.length)];

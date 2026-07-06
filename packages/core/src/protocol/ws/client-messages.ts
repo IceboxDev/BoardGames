@@ -83,6 +83,14 @@ const ChatSchema = z.object({
   text: z.string().min(1).max(500),
 });
 
+// Application-level liveness probe. The client sends this on an interval; the
+// server answers with `{type:"pong"}`. It keeps an otherwise-idle lobby socket
+// generating traffic (so the client's staleness check never false-trips) and
+// lets the client detect a half-open connection when no pong comes back.
+const PingSchema = z.object({
+  type: z.literal("ping"),
+});
+
 // ── Discriminated union ────────────────────────────────────────────────
 
 export const ClientMessageSchema = z.discriminatedUnion("type", [
@@ -98,6 +106,7 @@ export const ClientMessageSchema = z.discriminatedUnion("type", [
   ToggleReadySchema,
   SwapSeatsSchema,
   ChatSchema,
+  PingSchema,
 ]);
 export type ClientMessage = z.infer<typeof ClientMessageSchema>;
 
@@ -111,6 +120,7 @@ export {
   KickPlayerSchema,
   LeaveRoomSchema,
   LeaveSessionSchema,
+  PingSchema,
   StartRoomSchema,
   SwapSeatsSchema,
   ToggleReadySchema,

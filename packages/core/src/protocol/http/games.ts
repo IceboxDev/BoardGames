@@ -12,6 +12,17 @@ export type GameResult = z.infer<typeof GameResultSchema>;
 
 export const GameResultListSchema = z.array(GameResultSchema);
 
+/**
+ * Request body for `POST /:slug/results`. The per-game result shape is still
+ * opaque (`z.unknown()` values — per-game schemas are a follow-up), but the
+ * boundary at least enforces that the payload is a JSON object rather than an
+ * array/primitive, and that `id` (used as the dedup client key) is a string
+ * when present. Rejects malformed bodies at the wire instead of stringifying
+ * whatever arrives straight into the database.
+ */
+export const SaveResultBodySchema = z.object({ id: z.string().optional() }).catchall(z.unknown());
+export type SaveResultBody = z.infer<typeof SaveResultBodySchema>;
+
 export const SaveResultResponseSchema = z.object({
   ok: z.literal(true),
   existed: z.boolean().optional(),

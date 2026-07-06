@@ -18,7 +18,13 @@ import { getDb } from "../db.ts";
 import { jsonColumn, parseRow, parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 import { tournamentRegistry } from "./game-registry.ts";
-import { abortTournament, startTournament, subscribeSse, TournamentLimitError } from "./manager.ts";
+import {
+  abortTournament,
+  getRunningTournamentOwner,
+  startTournament,
+  subscribeSse,
+  TournamentLimitError,
+} from "./manager.ts";
 
 export const tournamentRoutes = authedApp();
 
@@ -220,6 +226,16 @@ tournamentRoutes.get("/:id/stream", (c) => {
 
 tournamentRoutes.delete("/:id", async (c) => {
   const id = c.req.param("id");
+  const user = c.get("user");
+
+  // Only the owner (or an admin) may abort a running tournament — otherwise any
+  // online user could kill anyone's run by guessing/observing its id.
+  const owner = getRunningTournamentOwner(id);
+  if (owner === undefined) return errorResponse(c, 404, "Tournament not running");
+  if (owner !== user.id && user.role !== "admin") {
+    return errorResponse(c, 403, "Not your tournament");
+  }
+
   const ok = await abortTournament(id);
   if (!ok) return errorResponse(c, 404, "Tournament not running");
   return c.json(OkResponseSchema.parse({ ok: true }));

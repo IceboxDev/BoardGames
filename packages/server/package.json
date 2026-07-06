@@ -8,7 +8,8 @@
     "typecheck": "tsc -b --noEmit",
     "test": "vitest run",
     "migrate": "tsx src/migrations/cli.ts",
-    "migrate:status": "tsx src/migrations/cli.ts --status"
+    "migrate:status": "tsx src/migrations/cli.ts --status",
+    "migrate:dry-run": "tsx src/migrations/dry-run.ts"
   },
   "dependencies": {
     "@boardgames/core": "workspace:*",

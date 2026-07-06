@@ -27,6 +27,15 @@ export default function ModeSelectRoute() {
       onRules={def.rulesUrl ? () => navigate(`/play/${slug}/rules`) : undefined}
       onSolo={() => navigate(`/play/${slug}/solo`)}
       onMultiplayer={() => navigate(`/play/${slug}/mp/join`)}
+      companion={
+        def.companion
+          ? {
+              label: def.companion.label,
+              description: def.companion.description,
+              onClick: () => navigate(`/play/${slug}/companion`),
+            }
+          : undefined
+      }
       onMatchHistory={
         def.hasMatchHistory ? () => navigate(`/play/${slug}/match-history`) : undefined
       }

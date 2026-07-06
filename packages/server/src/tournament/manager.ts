@@ -386,6 +386,14 @@ async function handleWorkerMessage(
   }
 }
 
+/** The userId that started a still-running tournament, or `undefined` if no
+ *  such tournament is running. The abort route uses this to enforce ownership
+ *  (a tournament is not user-private data, but aborting one is a mutation only
+ *  its owner — or an admin — should be able to perform). */
+export function getRunningTournamentOwner(id: string): string | undefined {
+  return running.get(id)?.userId;
+}
+
 export async function abortTournament(id: string): Promise<boolean> {
   const entry = running.get(id);
   if (!entry) return false;

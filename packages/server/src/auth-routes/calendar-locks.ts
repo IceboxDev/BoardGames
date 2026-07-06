@@ -1,6 +1,4 @@
 import {
-  type Availability,
-  AvailabilityMapSchema,
   AvailableGamesQuerySchema,
   AvailableGamesSchema,
   CalendarLocksSchema,
@@ -48,10 +46,18 @@ const ExpectedUserIdsRowSchema = z.object({
 /** `SELECT user_id FROM rsvps WHERE date_key = ? AND status = 'yes'`. */
 const RsvpUserIdRowSchema = z.object({ user_id: z.string() });
 
-/** `SELECT user_id, availability_json FROM user_availability`. */
-const UserAvailabilityRowSchema = z.object({
+/** `SELECT user_id, date_key, status FROM user_availability_days` — normalized
+ *  per-date availability (migration 0010). */
+const AvailabilityDayRowSchema = z.object({
   user_id: z.string(),
-  availability_json: jsonColumn(AvailabilityMapSchema),
+  date_key: z.string(),
+  status: z.enum(["can", "maybe"]),
+});
+
+/** `SELECT user_id, status FROM user_availability_days WHERE date_key = ?`. */
+const AvailabilityDayForDateRowSchema = z.object({
+  user_id: z.string(),
+  status: z.enum(["can", "maybe"]),
 });
 
 /** `SELECT date_key, user_id, status FROM rsvps`. */
@@ -226,7 +232,9 @@ calendarLocksRoutes.get("/locks", async (c) => {
         "SELECT date_key, locked_by, locked_at, expected_user_ids_json, host_user_id, host_name, event_time, address, picks_locked_at, host_at_home FROM locked_dates",
       ),
       getDb().execute("SELECT date_key, user_id, status FROM rsvps"),
-      getDb().execute("SELECT user_id, availability_json FROM user_availability"),
+      getDb().execute(
+        "SELECT user_id, date_key, status FROM user_availability_days WHERE date_key IN (SELECT date_key FROM locked_dates)",
+      ),
       // Reactions for locked nights only — feeds each night's vote-winner.
       // Scoped to locked dates so the scan grows with game nights, not with
       // the whole reaction history.
@@ -268,33 +276,18 @@ calendarLocksRoutes.get("/locks", async (c) => {
   //   N1 = definite attendees, N2 = definite + tentative.
   const canByDate = new Map<string, Set<string>>();
   const maybeByDate = new Map<string, Set<string>>();
-  for (const row of availabilityResult.rows) {
-    // Per-row tolerance: one malformed availability blob shouldn't
-    // poison the whole /locks endpoint.
-    let parsed: { user_id: string; availability_json: Record<string, Availability> };
-    try {
-      parsed = parseRow(UserAvailabilityRowSchema, row, "user_availability");
-    } catch (err) {
-      if (!(err instanceof RowParseError)) throw err;
-      continue;
+  for (const row of parseRows(
+    AvailabilityDayRowSchema,
+    availabilityResult.rows,
+    "user_availability_days",
+  )) {
+    const target = row.status === "can" ? canByDate : maybeByDate;
+    let s = target.get(row.date_key);
+    if (!s) {
+      s = new Set();
+      target.set(row.date_key, s);
     }
-    for (const [date, v] of Object.entries(parsed.availability_json)) {
-      if (v === "can") {
-        let s = canByDate.get(date);
-        if (!s) {
-          s = new Set();
-          canByDate.set(date, s);
-        }
-        s.add(parsed.user_id);
-      } else if (v === "maybe") {
-        let s = maybeByDate.get(date);
-        if (!s) {
-          s = new Set();
-          maybeByDate.set(date, s);
-        }
-        s.add(parsed.user_id);
-      }
-    }
+    s.add(row.user_id);
   }
   const yesByDate = new Map<string, Set<string>>();
   const noByDate = new Map<string, Set<string>>();
@@ -436,7 +429,10 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
   // decide "fully RSVPed" against a frozen baseline. Track cans separately
   // so we can auto-confirm them as RSVP "yes".
   const [{ rows }, lockRow, { rows: yesRows }] = await Promise.all([
-    getDb().execute("SELECT user_id, availability_json FROM user_availability"),
+    getDb().execute({
+      sql: "SELECT user_id, status FROM user_availability_days WHERE date_key = ?",
+      args: [date],
+    }),
     getDb().execute({
       sql: "SELECT expected_user_ids_json FROM locked_dates WHERE date_key = ?",
       args: [date],
@@ -467,23 +463,12 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
   for (const r of parseRows(RsvpUserIdRowSchema, yesRows, "rsvps")) expectedSet.add(r.user_id);
 
   const cans: string[] = [];
-  for (const row of rows) {
-    // Per-row tolerance: a malformed availability blob shouldn't block a
-    // host from locking the date — the user gets dropped from the snapshot
-    // and can re-mark availability later if they want a guest seat.
-    let parsed: { user_id: string; availability_json: Record<string, Availability> };
-    try {
-      parsed = parseRow(UserAvailabilityRowSchema, row, "user_availability");
-    } catch (err) {
-      if (!(err instanceof RowParseError)) throw err;
-      continue;
-    }
-    const v = parsed.availability_json[date];
-    if (v === "can") {
-      expectedSet.add(parsed.user_id);
-      cans.push(parsed.user_id);
-    } else if (v === "maybe") {
-      expectedSet.add(parsed.user_id);
+  for (const row of parseRows(AvailabilityDayForDateRowSchema, rows, "user_availability_days")) {
+    if (row.status === "can") {
+      expectedSet.add(row.user_id);
+      cans.push(row.user_id);
+    } else if (row.status === "maybe") {
+      expectedSet.add(row.user_id);
     }
   }
   const expected = [...expectedSet];

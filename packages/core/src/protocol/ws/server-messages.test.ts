@@ -109,6 +109,10 @@ describe("ServerMessageSchema", () => {
     expect(() => ServerMessageSchema.parse({ type: "nope", sessionId: "s-1" })).toThrow();
   });
 
+  it("accepts a liveness pong", () => {
+    expect(() => ServerMessageSchema.parse({ type: "pong" })).not.toThrow();
+  });
+
   it("rejects missing required fields", () => {
     expect(() =>
       ServerMessageSchema.parse({ type: "session-created", sessionId: "s-1" }),

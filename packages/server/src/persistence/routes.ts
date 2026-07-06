@@ -5,6 +5,7 @@ import {
   OkResponseSchema,
   ReplayLogSchema,
   ReplaySummaryListSchema,
+  SaveResultBodySchema,
   SaveResultResponseSchema,
 } from "@boardgames/core/protocol";
 import { z } from "zod";
@@ -44,9 +45,9 @@ const ReplayLogRowSchema = z.object({
 
 // ── Routes ────────────────────────────────────────────────────────────
 
-persistenceRoutes.post("/:slug/results", async (c) => {
+persistenceRoutes.post("/:slug/results", zJsonBody(SaveResultBodySchema), async (c) => {
   const slug = c.req.param("slug");
-  const body = (await c.req.json()) as Record<string, unknown>;
+  const body = c.req.valid("json");
   const db = getDb();
   const clientId = typeof body.id === "string" ? body.id : undefined;
 
@@ -110,6 +111,12 @@ persistenceRoutes.get("/:slug/results", async (c) => {
 });
 
 persistenceRoutes.delete("/:slug/results", async (c) => {
+  // `game_results` is a global, non-user-scoped table, so deleting a slug's
+  // rows wipes every player's history for that game. Restrict to admins —
+  // previously any logged-in user could clear it.
+  const user = c.get("user");
+  if (user.role !== "admin") return errorResponse(c, 403, "forbidden");
+
   const slug = c.req.param("slug");
   const db = getDb();
   await db.execute({
@@ -147,11 +154,14 @@ persistenceRoutes.get("/:slug/replays", async (c) => {
 });
 
 persistenceRoutes.get("/:slug/replays/:id", async (c) => {
+  const slug = c.req.param("slug");
   const id = Number(c.req.param("id"));
   const db = getDb();
+  // Scope the lookup by slug too — the id alone would return any game's replay
+  // regardless of the path, which is both an integrity and an access surprise.
   const { rows } = await db.execute({
-    sql: "SELECT replay_json FROM session_replays WHERE id = ?",
-    args: [id],
+    sql: "SELECT replay_json FROM session_replays WHERE id = ? AND game_slug = ?",
+    args: [id, slug],
   });
 
   if (rows.length === 0) return errorResponse(c, 404, "Not found");

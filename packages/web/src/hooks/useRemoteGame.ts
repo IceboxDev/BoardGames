@@ -1,5 +1,5 @@
 import { useCallback, useState } from "react";
-import type { GameSession } from "../lib/ws-client";
+import type { ConnectionStatus, GameSession } from "../lib/ws-client";
 
 export interface RemoteGameState<TView, TAction, TResult> {
   view: TView | null;
@@ -10,9 +10,16 @@ export interface RemoteGameState<TView, TAction, TResult> {
   isMyTurn: boolean;
   result: TResult | null;
   replayId: number | null;
+  /** Full transport status. Prefer this over `isConnected` when the UI needs
+   *  to distinguish "connecting" / "reconnecting" from a hard failure. */
+  status: ConnectionStatus;
+  /** Convenience derived from `status` — kept for existing consumers. */
   isConnected: boolean;
   isAiThinking: boolean;
+  /** Game-rule error (illegal move, etc.). Distinct from `connectionError`. */
   error: string | null;
+  /** Transport-level error (socket down / send dropped). */
+  connectionError: string | null;
   send: (action: TAction) => void;
   start: (config: unknown) => void;
   reset: () => void;
@@ -56,9 +63,11 @@ export function useRemoteGame<TView = unknown, TAction = unknown, TResult = unkn
     isMyTurn: session.activePlayer === session.playerIndex,
     result: isSoloGame ? session.result : null,
     replayId: session.replayId,
+    status: session.status,
     isConnected: session.status === "connected",
     isAiThinking: isSoloGame && session.aiThinking,
     error: session.error,
+    connectionError: session.connectionError,
     send: session.sendAction,
     start,
     reset,

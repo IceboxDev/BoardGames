@@ -186,7 +186,7 @@ describe("useGameSession — message dispatch", () => {
     }
   });
 
-  it("ignores malformed messages without crashing", async () => {
+  it("ignores malformed messages without crashing, but counts them", async () => {
     const server = new Server(WS_URL);
     try {
       const { result } = renderHook(() => useGameSession());
@@ -203,7 +203,49 @@ describe("useGameSession — message dispatch", () => {
       // No state change; the hook should still be connected and clean.
       expect(result.current.status).toBe("connected");
       expect(result.current.error).toBeNull();
+      // ...but the bad frames are observable, not invisible.
+      expect(result.current.malformedMessageCount).toBe(2);
       warn.mockRestore();
+    } finally {
+      server.close();
+    }
+  });
+
+  it("tracks peer connection changes from player-disconnected/reconnected", async () => {
+    const server = new Server(WS_URL);
+    try {
+      const { result } = renderHook(() => useGameSession());
+      await tick();
+      act(() => {
+        for (const socket of server.clients()) {
+          socket.send(
+            JSON.stringify({
+              type: "player-disconnected",
+              sessionId: "sess-1",
+              playerIndex: 1,
+              playerName: "Bo",
+            }),
+          );
+        }
+      });
+      await tick();
+      expect(result.current.peers).toEqual([
+        { playerIndex: 1, playerName: "Bo", connected: false },
+      ]);
+      act(() => {
+        for (const socket of server.clients()) {
+          socket.send(
+            JSON.stringify({
+              type: "player-reconnected",
+              sessionId: "sess-1",
+              playerIndex: 1,
+              playerName: "Bo",
+            }),
+          );
+        }
+      });
+      await tick();
+      expect(result.current.peers).toEqual([{ playerIndex: 1, playerName: "Bo", connected: true }]);
     } finally {
       server.close();
     }

@@ -50,7 +50,11 @@ describe("ClientMessageSchema", () => {
   });
 
   it("rejects unknown discriminator", () => {
-    expect(() => ClientMessageSchema.parse({ type: "ping" })).toThrow();
+    expect(() => ClientMessageSchema.parse({ type: "not-a-real-message" })).toThrow();
+  });
+
+  it("accepts a liveness ping", () => {
+    expect(() => ClientMessageSchema.parse({ type: "ping" })).not.toThrow();
   });
 
   it("rejects malformed gameSlug", () => {

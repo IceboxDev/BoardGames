@@ -182,6 +182,17 @@ export interface PlayableGame extends GameBase {
    * `useGameShell` / `packages/server/src/sessions/manager.ts`.)
    */
   mode: "remote" | "local";
+  /**
+   * Companion-device screen (e.g. the D&D beamer/TTS display). When set, the
+   * mode picker shows this instead of the Multiplayer card and routes to
+   * `/play/:slug/companion`, which renders the component full-screen. The
+   * component attaches to the primary device's session on its own.
+   */
+  companion?: {
+    label: string;
+    description: string;
+    component: LazyExoticComponent<ComponentType>;
+  };
   /** Optional full-page backdrop for the game's own screens. */
   backgroundImage?: string;
   /** Label for the solo/AI button on the mode-picker (e.g. "Play vs AI", "Trainer"). */

@@ -113,6 +113,12 @@ const ChatMessageSchema = z.object({
   timestampMs: z.number().int().nonnegative(),
 });
 
+// Liveness response to a client `{type:"ping"}`. Carries no payload — its
+// arrival is the signal, refreshing the client's last-activity timestamp.
+const PongSchema = z.object({
+  type: z.literal("pong"),
+});
+
 // ── Discriminated union ────────────────────────────────────────────────
 
 export const ServerMessageSchema = z.discriminatedUnion("type", [
@@ -129,6 +135,7 @@ export const ServerMessageSchema = z.discriminatedUnion("type", [
   PlayerDisconnectedSchema,
   PlayerReconnectedSchema,
   ChatMessageSchema,
+  PongSchema,
 ]);
 export type ServerMessage = z.infer<typeof ServerMessageSchema>;
 
@@ -144,6 +151,7 @@ export {
   GameStartedSchema,
   PlayerDisconnectedSchema,
   PlayerReconnectedSchema,
+  PongSchema,
   RoomClosedSchema,
   RoomCreatedSchema,
   RoomJoinedSchema,

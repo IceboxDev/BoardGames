@@ -23,6 +23,9 @@ type ParsedInput = {
   gameTitle: string;
   outcome: MatchOutcome;
   notes: string | null;
+  /** Optional client-generated idempotency key. A retried submit reuses it so
+   *  the record is inserted once (partial unique index on match_results). */
+  clientId: string | null;
 };
 
 /** Projection used for the bulk userId existence check + name lookup. */
@@ -86,6 +89,14 @@ function parseInput(
     notes = t.length === 0 ? null : t.slice(0, 2000);
   }
 
+  let clientId: string | null = null;
+  if (b.clientId !== null && b.clientId !== undefined) {
+    if (typeof b.clientId !== "string") return { ok: false, error: "clientId must be a string" };
+    const t = b.clientId.trim();
+    if (t.length === 0 || t.length > 100) return { ok: false, error: "clientId: 1-100 chars" };
+    clientId = t;
+  }
+
   return {
     ok: true,
     value: {
@@ -95,6 +106,7 @@ function parseInput(
       gameTitle,
       outcome: outcomeResult.value,
       notes,
+      clientId,
     },
   };
 }
@@ -135,7 +147,7 @@ adminMatchHistoryRoutes.post("/", async (c) => {
   const body = await c.req.json().catch(() => null);
   const parsed = parseInput(body);
   if (!parsed.ok) return c.json({ error: parsed.error }, 400);
-  const { dateKey, playedAt, gameSlug, gameTitle, outcome, notes } = parsed.value;
+  const { dateKey, playedAt, gameSlug, gameTitle, outcome, notes, clientId } = parsed.value;
 
   const userCheck = await verifyUserIdsExist(collectUserIds(outcome));
   if (!userCheck.ok) {
@@ -146,11 +158,17 @@ adminMatchHistoryRoutes.post("/", async (c) => {
   // sort_order slots the new match at the TOP of its night (min - 1, or 0 when
   // it's the first), preserving the newest-first default. NULL-safe `IS` scopes
   // the subquery to standalone (NULL date_key) matches too.
+  //
+  // `client_id` makes the insert idempotent: a retried/double-clicked submit
+  // reusing the same id conflicts on the partial unique index and DOES NOTHING;
+  // we then return the already-recorded row instead of a duplicate. A null
+  // client_id (older clients) isn't in the partial index, so it always inserts.
   const result = await getDb().execute({
     sql: `INSERT INTO match_results
-            (date_key, played_at, game_slug, game_title, outcome_json, notes, recorded_by, recorded_at, sort_order)
+            (date_key, played_at, game_slug, game_title, outcome_json, notes, recorded_by, recorded_at, sort_order, client_id)
           VALUES (?, ?, ?, ?, ?, ?, ?, datetime('now'),
-                  COALESCE((SELECT MIN(sort_order) - 1 FROM match_results WHERE date_key IS ?), 0))
+                  COALESCE((SELECT MIN(sort_order) - 1 FROM match_results WHERE date_key IS ?), 0), ?)
+          ON CONFLICT(client_id) WHERE client_id IS NOT NULL DO NOTHING
           RETURNING id`,
     args: [
       dateKey,
@@ -161,13 +179,33 @@ adminMatchHistoryRoutes.post("/", async (c) => {
       notes,
       user.id,
       dateKey,
+      clientId,
     ],
   });
-  const insertedId = parseRow(
-    z.object({ id: z.number() }),
-    result.rows[0],
-    "match_results.RETURNING",
-  ).id;
+
+  let insertedId: number;
+  if (result.rows[0]) {
+    insertedId = parseRow(
+      z.object({ id: z.number() }),
+      result.rows[0],
+      "match_results.RETURNING",
+    ).id;
+  } else {
+    // DO NOTHING fired → this exact submit was already recorded. Return the
+    // existing row so the client sees success without creating a duplicate.
+    const existing = await getDb().execute({
+      sql: "SELECT id FROM match_results WHERE client_id = ? LIMIT 1",
+      args: [clientId],
+    });
+    if (existing.rows.length === 0) {
+      return c.json({ error: "insert produced no row" }, 500);
+    }
+    insertedId = parseRow(
+      z.object({ id: z.number() }),
+      existing.rows[0],
+      "match_results.client_id",
+    ).id;
+  }
   const record = await fetchAndShape(insertedId);
   return c.json(record);
 });
@@ -188,37 +226,34 @@ adminMatchHistoryRoutes.patch("/:id{[0-9]+}", async (c) => {
   // An edit must NOT change the match's position within its night. The one
   // exception is moving it to a *different* night (dateKey changed), where it
   // re-slots at the top of the destination — same rule as a fresh record.
-  const existing = await db.execute({
-    sql: "SELECT date_key, sort_order FROM match_results WHERE id = ? LIMIT 1",
-    args: [id],
-  });
-  if (existing.rows.length === 0) return c.json({ error: "not found" }, 404);
-  const prev = parseRow(
-    z.object({ date_key: z.string().nullable(), sort_order: z.number() }),
-    existing.rows[0],
-    "match_results.pre-patch",
-  );
-
-  let sortOrder = prev.sort_order;
-  if (dateKey !== prev.date_key) {
-    const minRes = await db.execute({
-      sql: "SELECT MIN(sort_order) AS min_order FROM match_results WHERE date_key IS ? AND id != ?",
-      args: [dateKey, id],
-    });
-    const minOrder = parseRow(
-      z.object({ min_order: z.number().nullable() }),
-      minRes.rows[0],
-      "match_results.min-order",
-    ).min_order;
-    sortOrder = minOrder == null ? 0 : minOrder - 1;
-  }
-
+  //
+  // Done as ONE atomic statement: the SET RHS sees the row's PRE-update
+  // `date_key`, so `date_key IS ?` detects "same night → keep sort_order",
+  // otherwise the correlated subquery computes MIN(sort_order)-1 of the
+  // destination (excluding this row). The previous read-then-update version
+  // could race two concurrent night-moves onto the same computed slot.
   const result = await db.execute({
     sql: `UPDATE match_results
           SET date_key = ?, played_at = ?, game_slug = ?, game_title = ?,
-              outcome_json = ?, notes = ?, sort_order = ?, updated_at = datetime('now')
+              outcome_json = ?, notes = ?, updated_at = datetime('now'),
+              sort_order = CASE
+                WHEN date_key IS ? THEN sort_order
+                ELSE COALESCE(
+                  (SELECT MIN(m2.sort_order) - 1 FROM match_results m2
+                   WHERE m2.date_key IS ? AND m2.id <> match_results.id), 0)
+              END
           WHERE id = ?`,
-    args: [dateKey, playedAt, gameSlug, gameTitle, JSON.stringify(outcome), notes, sortOrder, id],
+    args: [
+      dateKey,
+      playedAt,
+      gameSlug,
+      gameTitle,
+      JSON.stringify(outcome),
+      notes,
+      dateKey, // CASE WHEN date_key IS ? (unchanged night → keep position)
+      dateKey, // subquery: MIN(sort_order) of the destination night
+      id,
+    ],
   });
   if (result.rowsAffected === 0) return c.json({ error: "not found" }, 404);
   const record = await fetchAndShape(id);

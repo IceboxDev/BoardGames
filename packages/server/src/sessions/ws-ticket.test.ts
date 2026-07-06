@@ -37,4 +37,37 @@ describe("ws-ticket", () => {
     expect(verifyWsTicket(".onlysig")).toBeNull();
     expect(verifyWsTicket("notbase64!.sig")).toBeNull();
   });
+
+  describe("secret handling", () => {
+    // Save/restore the two env vars these tests mutate so ordering stays clean.
+    const savedSecret = process.env.BETTER_AUTH_SECRET;
+    const savedNodeEnv = process.env.NODE_ENV;
+    const restore = () => {
+      if (savedSecret === undefined) delete process.env.BETTER_AUTH_SECRET;
+      else process.env.BETTER_AUTH_SECRET = savedSecret;
+      if (savedNodeEnv === undefined) delete process.env.NODE_ENV;
+      else process.env.NODE_ENV = savedNodeEnv;
+    };
+
+    it("refuses to sign with the insecure fallback secret in production", () => {
+      delete process.env.BETTER_AUTH_SECRET;
+      process.env.NODE_ENV = "production";
+      try {
+        expect(() => signWsTicket("user-123")).toThrow(/BETTER_AUTH_SECRET/);
+      } finally {
+        restore();
+      }
+    });
+
+    it("allows the dev fallback outside production", () => {
+      delete process.env.BETTER_AUTH_SECRET;
+      process.env.NODE_ENV = "development";
+      try {
+        const ticket = signWsTicket("user-123");
+        expect(verifyWsTicket(ticket)).toBe("user-123");
+      } finally {
+        restore();
+      }
+    });
+  });
 });

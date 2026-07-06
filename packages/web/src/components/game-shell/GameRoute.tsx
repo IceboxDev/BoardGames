@@ -91,6 +91,25 @@ export function MpGameRoute() {
   );
 }
 
+/**
+ * Route element at `/play/:slug/companion`. Renders the game's
+ * companion-device screen (e.g. the D&D beamer display) full-screen. The
+ * component owns its session attachment; games without a companion redirect
+ * to the mode picker.
+ */
+export function CompanionRoute() {
+  const { def } = useGameShell();
+  const Companion = def.companion?.component;
+  if (!Companion) {
+    return <Navigate to={`/play/${def.slug}`} replace />;
+  }
+  return (
+    <Suspense fallback={null}>
+      <Companion />
+    </Suspense>
+  );
+}
+
 /** Game-component `source` discriminator — surfaced from the hook module. */
 // biome-ignore lint/style/useComponentExportOnlyModules: type re-export for callers that import GameSource alongside the route components
 export type { GameSource };

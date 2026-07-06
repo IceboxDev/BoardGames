@@ -24,7 +24,14 @@ function backTarget(pathname: string): { href: string; label: string } {
   if (playSegments[0] === "play" && playSegments.length === 2) {
     return { href: "/games", label: "Back" };
   }
-  // `/play/:slug/<screen>` (any sub-route) → mode select.
+  // `/play/:slug/solo/<deeper…>` → one level up. The solo subtree is the
+  // only place games host internal sub-routes (the D&D tool's hall → setup
+  // → session screens), and there Back should unwind one screen, not jump
+  // to the mode picker.
+  if (playSegments[0] === "play" && playSegments[2] === "solo" && playSegments.length > 3) {
+    return { href: `/${playSegments.slice(0, -1).join("/")}`, label: "Back" };
+  }
+  // `/play/:slug/<screen>` (any other sub-route) → mode select.
   if (playSegments[0] === "play" && playSegments.length > 2) {
     return { href: `/play/${playSegments[1]}`, label: "Back" };
   }

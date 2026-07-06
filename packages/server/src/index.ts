@@ -4,6 +4,8 @@ import "./env.ts";
 
 import { serve } from "@hono/node-server";
 import { initDb } from "./db.ts";
+import { markStaleProcessingCampaigns } from "./lib/dnd-campaigns-db.ts";
+import { markStaleProcessingCharacters } from "./lib/dnd-characters-db.ts";
 import { app, injectWebSocket } from "./server.ts";
 import { markStaleRunning } from "./tournament/manager.ts";
 
@@ -13,6 +15,8 @@ const PORT = Number(process.env.PORT ?? 3001);
 
 await initDb();
 await markStaleRunning();
+await markStaleProcessingCampaigns();
+await markStaleProcessingCharacters();
 
 // Production (Railway) requires IPv6 wildcard `::` so the IPv6-first internal
 // network can reach the container. In dev, Vite's proxy connects to

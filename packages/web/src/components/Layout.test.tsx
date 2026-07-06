@@ -38,6 +38,24 @@ describe("backTarget", () => {
       });
     });
 
+    it("/play/:slug/solo/<sub> → one level up (game-internal sub-routes)", () => {
+      expect(backTarget("/play/dungeons-and-dragons/solo/campaign/abc")).toEqual({
+        href: "/play/dungeons-and-dragons/solo/campaign",
+        label: "Back",
+      });
+      expect(backTarget("/play/dungeons-and-dragons/solo/campaign/abc/game")).toEqual({
+        href: "/play/dungeons-and-dragons/solo/campaign/abc",
+        label: "Back",
+      });
+    });
+
+    it("/play/:slug/companion → /play/:slug (mode select)", () => {
+      expect(backTarget("/play/dungeons-and-dragons/companion")).toEqual({
+        href: "/play/dungeons-and-dragons",
+        label: "Back",
+      });
+    });
+
     it("/play/:slug/mp/join → /play/:slug", () => {
       expect(backTarget("/play/pandemic/mp/join")).toEqual({
         href: "/play/pandemic",

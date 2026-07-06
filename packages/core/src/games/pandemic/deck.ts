@@ -1,20 +1,9 @@
+import { shuffle } from "../../lib/rng";
 import { ALL_CITY_IDS, CITY_DATA } from "./city-graph";
 import type { Rng } from "./rng";
 import type { CityCard, DiseaseColor, EventCard, InfectionCard, PlayerCard } from "./types";
 
-/**
- * Fisher–Yates shuffle driven by a caller-supplied PRNG. Callers must pass
- * a deterministic Rng (see ./rng.ts) — `Math.random` is no longer accepted
- * so that every shuffle the engine performs is reproducible from the seed.
- */
-export function shuffle<T>(arr: readonly T[], rng: Rng): T[] {
-  const a = [...arr];
-  for (let i = a.length - 1; i > 0; i--) {
-    const j = Math.floor(rng() * (i + 1));
-    [a[i], a[j]] = [a[j], a[i]];
-  }
-  return a;
-}
+export { shuffle };
 
 export function buildCityCards(): CityCard[] {
   return ALL_CITY_IDS.map((id) => {

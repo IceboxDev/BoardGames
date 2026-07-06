@@ -1,19 +1,9 @@
+import { shuffle, shuffleInPlace } from "../../lib/rng";
 import type { Rng } from "./rng";
 import type { Card, CardType } from "./types";
 import { DECK_COMPOSITION } from "./types";
 
-export function shuffleInPlace<T>(arr: T[], rng: Rng = Math.random): void {
-  for (let i = arr.length - 1; i > 0; i--) {
-    const j = Math.floor(rng() * (i + 1));
-    [arr[i], arr[j]] = [arr[j], arr[i]];
-  }
-}
-
-export function shuffle<T>(arr: T[], rng: Rng = Math.random): T[] {
-  const a = [...arr];
-  shuffleInPlace(a, rng);
-  return a;
-}
+export { shuffle, shuffleInPlace };
 
 export function buildFullDeck(): Card[] {
   const cards: Card[] = [];
