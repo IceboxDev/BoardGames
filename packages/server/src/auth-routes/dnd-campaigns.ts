@@ -9,6 +9,7 @@
 
 import { randomUUID } from "node:crypto";
 import {
+  type ActionCard,
   ActiveCombatResponseSchema,
   ActiveSessionResponseSchema,
   AppendHistoryRequestSchema,
@@ -615,14 +616,32 @@ dndCampaignRoutes.post("/combats/:id/turn", zJsonBody(ResolveTurnRequestSchema),
   if (!current) return errorResponse(c, 500, "combat has no combatants", "BAD_STATE");
 
   const characters = await listCharactersForParty(combat.partyId, user.id);
-  const partyBriefs = characters
-    .filter((ch) => ch.status === "ready" && ch.sheet)
-    .map((ch) => {
-      const sheet = ch.sheet;
-      if (!sheet) return "";
-      return `${displayCharacterName(sheet, ch.sourceFilename)}: ${sheet.class} ${sheet.level ?? "?"}, AC ${sheet.armorClass ?? "?"}, HP ${sheet.maxHp ?? "?"}; weapons/gear: ${sheet.equipment.join(", ") || "-"}; spells: ${sheet.spells.join(", ") || "-"}`;
-    })
-    .filter((brief) => brief.length > 0);
+  // The brief must carry everything the DM's dashboard shows — race and the
+  // cached action cards included — or the referee "corrects" features the
+  // character verifiably has (it once rejected a Tabaxi's Feline Agility).
+  const partyBriefs = (
+    await Promise.all(
+      characters
+        .filter((ch) => ch.status === "ready" && ch.sheet)
+        .map(async (ch) => {
+          const sheet = ch.sheet;
+          if (!sheet) return "";
+          const cardsJson = await getCharacterActions(ch.id);
+          const cards = cardsJson ? (JSON.parse(cardsJson) as ActionCard[]) : [];
+          const options = cards
+            .map((card) => `${card.name}${card.note ? ` — ${card.note.slice(0, 120)}` : ""}`)
+            .join("; ");
+          const identity = [
+            sheet.race,
+            sheet.class,
+            sheet.level !== null ? `level ${sheet.level}` : null,
+          ]
+            .filter(Boolean)
+            .join(" ");
+          return `${displayCharacterName(sheet, ch.sourceFilename)}: ${identity}, AC ${sheet.armorClass ?? "?"}, HP ${sheet.maxHp ?? "?"}; weapons/gear: ${sheet.equipment.join(", ") || "-"}; spells: ${sheet.spells.join(", ") || "-"}${options ? `; combat options (authoritative — the character HAS all of these): ${options}` : ""}`;
+        }),
+    )
+  ).filter((brief) => brief.length > 0);
   const party = await getParty(combat.partyId, user.id);
   const npcBriefs = party
     ? (await listNpcsForCampaign(party.campaignId, user.id)).map(
