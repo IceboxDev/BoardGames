@@ -391,6 +391,27 @@ export const NODE_MESSAGE_MAX = 1000;
 export const NodeTypeSchema = z.enum(["story", "initiative"]);
 export type NodeType = z.infer<typeof NodeTypeSchema>;
 
+/**
+ * A module's escalation/reinforcement table attached to an encounter
+ * ("Further Danger — roll 1d6 on the table below…"). Lives on initiative
+ * nodes; the DM decides at the table whether to roll it and enters the
+ * result, which seats extra combatants.
+ */
+export const DangerTableSchema = z.object({
+  die: z.string().min(1).max(20),
+  description: z.string().max(300),
+  entries: z
+    .array(
+      z.object({
+        roll: z.string().min(1).max(20),
+        text: z.string().min(1).max(200),
+      }),
+    )
+    .min(1)
+    .max(12),
+});
+export type DangerTable = z.infer<typeof DangerTableSchema>;
+
 export const DndNodeSchema = z.object({
   id: z.string().min(1),
   campaignId: z.string().min(1),
@@ -399,6 +420,8 @@ export const DndNodeSchema = z.object({
   parentId: z.string().nullable(),
   /** Defaults for rows stored before node types existed. */
   nodeType: NodeTypeSchema.default("story"),
+  /** Escalation table for initiative nodes; null elsewhere. */
+  dangerTable: DangerTableSchema.nullable().default(null),
   trigger: z.string().min(1).max(NODE_TRIGGER_MAX),
   summary: z.string().max(NODE_SUMMARY_MAX),
   readText: z.string().min(1).max(NODE_READ_TEXT_MAX),

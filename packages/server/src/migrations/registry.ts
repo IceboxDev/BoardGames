@@ -21,6 +21,7 @@ import { fkUserOwned } from "./0013-fk-user-owned.ts";
 import { dndPartiesNodesFiles } from "./0014-dnd-parties-nodes-files.ts";
 import { dndNodeTemplates } from "./0015-dnd-node-templates.ts";
 import { dndNodeTypes } from "./0016-dnd-node-types.ts";
+import { dndDangerTables } from "./0017-dnd-danger-tables.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -40,6 +41,7 @@ export const migrations: readonly Migration[] = [
   dndPartiesNodesFiles,
   dndNodeTemplates,
   dndNodeTypes,
+  dndDangerTables,
 ];
 
 /**

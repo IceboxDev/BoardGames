@@ -2,14 +2,15 @@ import type { DndCharacter, DndNode, DndNpc } from "@boardgames/core/protocol";
 import { displayCharacterName } from "@boardgames/core/protocol";
 import { useId, useState } from "react";
 import { PlusIcon } from "../../../components/icons";
-import { D20Die } from "../../../components/offline/D20Die";
 import { Button, Input, Select } from "../../../components/ui";
 
 // The initiative tracker — what an `initiative` node opens instead of a
-// conversation. The DM types the players' rolled results and rolls here for
-// NPCs/monsters (d20 + DEX modifier, one row per creature group per the
-// group-initiative rule; duplicate a row for individual rolls). The sorted
-// order updates live. The combat phase itself lands in a later slice.
+// conversation. The DM types the players' RAW d20 rolls (the tracker adds
+// each PC's DEX bonus) and rolls here for the opposition — ONE roll per
+// creature group (the 5e group-initiative rule; a ×N badge shows the head
+// count, and the split button breaks a group out when a fight calls for it).
+// A module escalation table ("Further Danger") can be rolled from here and
+// its result seated. "Enter combat" lives in the game screen's action bar.
 
 const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
 
@@ -25,7 +26,7 @@ function rollD20(mod: number): number {
   return Math.floor(Math.random() * 20) + 1 + mod;
 }
 
-type EnemyRow = { key: number; name: string; mod: number; roll: number | null };
+type EnemyRow = { key: number; name: string; count: number; mod: number; roll: number | null };
 
 const NUMBER_WORDS: Record<string, number> = {
   one: 1,
@@ -73,31 +74,24 @@ export function InitiativePanel({ node, party, npcs }: Props) {
   const uid = useId();
   const [pcRolls, setPcRolls] = useState<Record<string, string>>({});
   const [addNpcId, setAddNpcId] = useState("");
-  const [combatPending, setCombatPending] = useState(false);
+  const [dangerPick, setDangerPick] = useState("");
   const [nextKey, setNextKey] = useState(1000);
 
-  // Pre-seat enemies the node's text mentions, with their COUNT inferred
-  // from the wording ("three dead vines" → 3 rows) — the generation prompts
-  // instruct initiative summaries to state counts. Each creature gets its
-  // own row and roll; the duplicate button covers reinforcements.
+  // Pre-seat the opposition the node's text mentions — one GROUP row per
+  // creature type, with the head count inferred from the wording ("three
+  // dead vines" → ×3). The generation prompts instruct initiative summaries
+  // to state counts.
   const [enemies, setEnemies] = useState<EnemyRow[]>(() => {
     const haystack = `${node.summary} ${node.readText}`.toLowerCase();
-    const rows: EnemyRow[] = [];
-    let key = 0;
-    for (const npc of npcs) {
-      const name = npc.name.toLowerCase();
-      if (!haystack.includes(name)) continue;
-      const count = inferCount(haystack, name);
-      for (let i = 0; i < count; i++) {
-        rows.push({
-          key: key++,
-          name: count > 1 ? `${npc.name} ${i + 1}` : npc.name,
-          mod: dexMod(npc.abilities?.dex),
-          roll: null,
-        });
-      }
-    }
-    return rows;
+    return npcs
+      .filter((npc) => haystack.includes(npc.name.toLowerCase()))
+      .map((npc, i) => ({
+        key: i,
+        name: npc.name,
+        count: inferCount(haystack, npc.name.toLowerCase()),
+        mod: dexMod(npc.abilities?.dex),
+        roll: null,
+      }));
   });
 
   const addEnemy = () => {
@@ -105,10 +99,32 @@ export function InitiativePanel({ node, party, npcs }: Props) {
     if (!npc) return;
     setEnemies([
       ...enemies,
-      { key: nextKey, name: npc.name, mod: dexMod(npc.abilities?.dex), roll: null },
+      { key: nextKey, name: npc.name, count: 1, mod: dexMod(npc.abilities?.dex), roll: null },
     ]);
     setNextKey(nextKey + 1);
   };
+
+  const unleashDanger = () => {
+    const entry = node.dangerTable?.entries.find((e) => e.roll === dangerPick);
+    if (!entry) return;
+    const lower = entry.text.toLowerCase();
+    const matched = npcs.filter((npc) => lower.includes(npc.name.toLowerCase()));
+    const rows: EnemyRow[] =
+      matched.length > 0
+        ? matched.map((npc, i) => ({
+            key: nextKey + i,
+            name: npc.name,
+            count: inferCount(lower, npc.name.toLowerCase()),
+            mod: dexMod(npc.abilities?.dex),
+            roll: null,
+          }))
+        : [{ key: nextKey, name: entry.text.replace(/\.$/, ""), count: 1, mod: 0, roll: null }];
+    setEnemies([...enemies, ...rows]);
+    setNextKey(nextKey + rows.length);
+    setDangerPick("");
+  };
+
+  const enemyLabel = (e: EnemyRow) => (e.count > 1 ? `${e.name} ×${e.count}` : e.name);
 
   const order = [
     ...party
@@ -123,7 +139,11 @@ export function InitiativePanel({ node, party, npcs }: Props) {
           value: raw + dexMod(ch.sheet?.abilities?.dex),
         };
       }),
-    ...enemies.map((e) => ({ label: e.name, kind: "enemy" as const, value: e.roll ?? Number.NaN })),
+    ...enemies.map((e) => ({
+      label: enemyLabel(e),
+      kind: "enemy" as const,
+      value: e.roll ?? Number.NaN,
+    })),
   ]
     .filter((row) => Number.isFinite(row.value))
     .sort((a, b) => b.value - a.value);
@@ -143,13 +163,13 @@ export function InitiativePanel({ node, party, npcs }: Props) {
       </div>
 
       <div className="grid min-h-0 grid-cols-1 gap-3 lg:grid-cols-2">
-        {/* The party — the DM enters what the players rolled. */}
+        {/* The party — the DM enters their raw d20 rolls. */}
         <div className="rounded-2xl border border-amber-400/20 bg-black/25 p-3">
           <p
             className="text-3xs font-bold uppercase tracking-[0.25em] text-amber-300/60"
             style={SERIF}
           >
-            The party — enter their rolls
+            The party — enter their d20 rolls
           </p>
           <ul className="mt-2 flex flex-col gap-2">
             {party
@@ -183,14 +203,14 @@ export function InitiativePanel({ node, party, npcs }: Props) {
           </ul>
         </div>
 
-        {/* The opposition — rolled here. */}
+        {/* The opposition — one roll per creature group. */}
         <div className="rounded-2xl border border-rose-400/20 bg-black/25 p-3">
           <div className="flex items-center justify-between gap-2">
             <p
               className="text-3xs font-bold uppercase tracking-[0.25em] text-rose-300/60"
               style={SERIF}
             >
-              The opposition — roll for them
+              The opposition — one roll per group
             </p>
             <Button
               variant="ghost"
@@ -210,6 +230,11 @@ export function InitiativePanel({ node, party, npcs }: Props) {
               <li key={enemy.key} className="flex items-center gap-2">
                 <span className="min-w-0 flex-1 truncate text-sm text-rose-100/90">
                   {enemy.name}
+                  {enemy.count > 1 && (
+                    <span className="ml-1 rounded-full bg-rose-500/15 px-1.5 text-3xs font-bold text-rose-200 ring-1 ring-rose-400/30">
+                      ×{enemy.count}
+                    </span>
+                  )}
                   <span className="ml-1.5 text-3xs text-rose-200/40">DEX {fmtMod(enemy.mod)}</span>
                 </span>
                 <span className="w-8 text-center font-fantasy text-base font-bold text-amber-100">
@@ -232,12 +257,12 @@ export function InitiativePanel({ node, party, npcs }: Props) {
                 <Button
                   variant="ghost"
                   size="xs"
-                  aria-label={`Duplicate ${enemy.name}`}
+                  aria-label={`Split off another ${enemy.name} group`}
                   className="text-rose-200/40 hover:text-rose-200"
                   onClick={() => {
                     setEnemies([
                       ...enemies,
-                      { key: nextKey, name: enemy.name, mod: enemy.mod, roll: null },
+                      { key: nextKey, name: enemy.name, count: 1, mod: enemy.mod, roll: null },
                     ]);
                     setNextKey(nextKey + 1);
                   }}
@@ -272,6 +297,44 @@ export function InitiativePanel({ node, party, npcs }: Props) {
         </div>
       </div>
 
+      {/* The module's escalation table, when the encounter carries one. */}
+      {node.dangerTable && (
+        <div className="shrink-0 rounded-2xl border border-rose-400/30 bg-gradient-to-br from-[#3a0a0a]/70 via-black/30 to-black/40 p-3">
+          <p
+            className="text-3xs font-bold uppercase tracking-[0.25em] text-rose-300/80"
+            style={SERIF}
+          >
+            Further danger — roll {node.dangerTable.die}
+          </p>
+          <p className="mt-1 text-xs leading-relaxed text-amber-200/65" style={SERIF}>
+            {node.dangerTable.description}
+          </p>
+          <div className="mt-2 flex items-center gap-2">
+            <Select
+              value={dangerPick}
+              onChange={(e) => setDangerPick(e.target.value)}
+              className="min-w-0 flex-1"
+            >
+              <option value="">What did the {node.dangerTable.die} show?</option>
+              {node.dangerTable.entries.map((entry) => (
+                <option key={entry.roll} value={entry.roll}>
+                  {entry.roll} — {entry.text}
+                </option>
+              ))}
+            </Select>
+            <Button
+              variant="tinted"
+              tone="rose"
+              size="xs"
+              disabled={!dangerPick}
+              onClick={unleashDanger}
+            >
+              Unleash
+            </Button>
+          </div>
+        </div>
+      )}
+
       {/* Live turn order. */}
       <div className="shrink-0 rounded-2xl border border-amber-400/20 bg-black/25 p-3">
         <p
@@ -301,21 +364,6 @@ export function InitiativePanel({ node, party, npcs }: Props) {
               </li>
             ))}
           </ol>
-        )}
-      </div>
-
-      <div className="flex shrink-0 flex-col items-center gap-1.5 pb-1">
-        <Button variant="tinted" tone="rose" size="lg" onClick={() => setCombatPending(true)}>
-          <span aria-hidden="true">
-            <D20Die count={20} className="h-5 w-5" />
-          </span>
-          Enter combat
-        </Button>
-        {combatPending && (
-          <p className="text-3xs text-amber-200/50" style={SERIF}>
-            The combat phase arrives in a coming update — run this fight at the table, then step
-            back up the tree.
-          </p>
         )}
       </div>
     </div>

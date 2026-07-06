@@ -2,6 +2,7 @@ import type {
   CampaignCheckpoint,
   CampaignCheckpointKind,
   CharacterSheet,
+  DangerTable,
   NpcSheet,
 } from "@boardgames/core/protocol";
 import {
@@ -720,6 +721,7 @@ export interface ReadAloudBlock {
   waypointIndex: number;
   parentIndex: number | null;
   nodeType: "story" | "initiative";
+  dangerTable: DangerTable | null;
   trigger: string;
   summary: string;
   readText: string;
@@ -727,12 +729,70 @@ export interface ReadAloudBlock {
 
 const READ_ALOUD_MAX = 60;
 
+const RawDangerTableSchema = z
+  .object({
+    die: z.string(),
+    description: z.string(),
+    entries: z.array(z.object({ roll: z.string(), text: z.string() })),
+  })
+  .nullable();
+
+const DANGER_TABLE_JSON_SCHEMA = {
+  anyOf: [
+    {
+      type: "object",
+      properties: {
+        die: { type: "string", description: "The die to roll, e.g. '1d6'." },
+        description: {
+          type: "string",
+          description:
+            "When/how the module says to roll it (e.g. 'second round, initiative count 20').",
+        },
+        entries: {
+          type: "array",
+          maxItems: 12,
+          items: {
+            type: "object",
+            properties: {
+              roll: { type: "string", description: "The roll this entry matches, e.g. '3'." },
+              text: {
+                type: "string",
+                description: "What appears, e.g. 'two wolves on the prowl'.",
+              },
+            },
+            required: ["roll", "text"],
+            additionalProperties: false,
+          },
+        },
+      },
+      required: ["die", "description", "entries"],
+      additionalProperties: false,
+    },
+    { type: "null" },
+  ],
+  description:
+    "The encounter's escalation/reinforcement table ('Further Danger — roll 1d6…'), or null when the module attaches none.",
+} as const;
+
+export function normalizeDangerTable(raw: unknown): DangerTable | null {
+  const parsed = RawDangerTableSchema.parse(raw);
+  if (!parsed) return null;
+  const die = clamp(parsed.die, 20);
+  const entries = parsed.entries
+    .map((e) => ({ roll: clamp(e.roll, 20), text: clamp(e.text, 200) }))
+    .filter((e) => e.roll.length > 0 && e.text.length > 0)
+    .slice(0, 12);
+  if (!die || entries.length === 0) return null;
+  return { die, description: clamp(parsed.description, 300), entries };
+}
+
 const RawReadAloudSchema = z.object({
   blocks: z.array(
     z.object({
       waypoint_index: z.number(),
       parent_index: z.number().nullable(),
       node_type: z.string(),
+      danger_table: RawDangerTableSchema,
       trigger: z.string(),
       summary: z.string(),
       read_text: z.string(),
@@ -764,6 +824,7 @@ const READ_ALOUD_JSON_SCHEMA = {
             description:
               "'initiative' when this moment starts combat (the players roll initiative); otherwise 'story'.",
           },
+          danger_table: DANGER_TABLE_JSON_SCHEMA,
           trigger: {
             type: "string",
             description:
@@ -784,6 +845,7 @@ const READ_ALOUD_JSON_SCHEMA = {
           "waypoint_index",
           "parent_index",
           "node_type",
+          "danger_table",
           "trigger",
           "summary",
           "read_text",
@@ -807,7 +869,7 @@ Rules:
 - SKIP any passage that is a waypoint's own arrival/opening narration — that text is already shown when the party arrives; never duplicate it as a block.
 - Blocks form a tree: if reaching a scene requires an earlier action (you must knock before entering, and enter before asking questions), set parent_index to that earlier block's position in this array. Independent actions at the waypoint get parent_index null. Parents must appear in the array BEFORE their children and on the same waypoint.
 - Triggers are SHORT imperative player actions ('Knock', 'Enter the cabin', 'Ask about Admjir') — never 'When the party…' descriptions.
-- Wherever a scripted moment STARTS COMBAT (an encounter block, an ambush, a fight the module expects), add a block with node_type 'initiative', trigger 'Roll initiative', a summary naming the enemies AND their count as a word or numeral (e.g. 'Three dead vines attack.'), and read_text describing the moment combat erupts. Every scripted combat encounter gets exactly one initiative block at the right spot in the tree.
+- Wherever a scripted moment STARTS COMBAT (an encounter block, an ambush, a fight the module expects), add a block with node_type 'initiative', trigger 'Roll initiative', a summary naming the enemies AND their count as a word or numeral (e.g. 'Three dead vines attack.'), and read_text describing the moment combat erupts. If the module attaches an escalation/reinforcement table to the encounter ('Further Danger', 'roll on the table below to introduce another threat'), include it on that initiative block as danger_table (die, when/how to roll it, and every entry verbatim); otherwise danger_table is null. Every scripted combat encounter gets exactly one initiative block at the right spot in the tree.
 - read_text is the module's own text where it exists, verbatim and lightly cleaned; do not invent content that is not in the document.`;
 }
 
@@ -846,6 +908,8 @@ export function normalizeReadAloudBlocks(raw: unknown, waypointCount: number): R
       waypointIndex,
       parentIndex,
       nodeType: block.node_type === "initiative" ? "initiative" : "story",
+      dangerTable:
+        block.node_type === "initiative" ? normalizeDangerTable(block.danger_table) : null,
       trigger,
       summary: clamp(block.summary, NODE_SUMMARY_MAX),
       readText,
@@ -895,6 +959,7 @@ export interface StoryNodeContext {
 
 export interface StoryNode {
   nodeType: "story" | "initiative";
+  dangerTable: DangerTable | null;
   trigger: string;
   summary: string;
   readText: string;
@@ -902,6 +967,7 @@ export interface StoryNode {
 
 const RawNodeSchema = z.object({
   node_type: z.string(),
+  danger_table: RawDangerTableSchema,
   trigger: z.string(),
   summary: z.string(),
   read_text: z.string(),
@@ -916,6 +982,7 @@ const NODE_JSON_SCHEMA = {
       description:
         "'initiative' when the players' action starts combat — the node becomes an initiative roll; otherwise 'story'.",
     },
+    danger_table: DANGER_TABLE_JSON_SCHEMA,
     trigger: {
       type: "string",
       description: "Short label restating what the players did (max ~90 chars).",
@@ -930,7 +997,7 @@ const NODE_JSON_SCHEMA = {
         "The narration the DM reads aloud: second person, vivid, 1-3 short paragraphs, ending at a natural decision point (max ~1900 chars).",
     },
   },
-  required: ["node_type", "trigger", "summary", "read_text"],
+  required: ["node_type", "danger_table", "trigger", "summary", "read_text"],
   additionalProperties: false,
 } as const;
 
@@ -963,7 +1030,7 @@ function buildNodePrompt(ctx: StoryNodeContext): string {
   }
   lines.push(`The players now: ${ctx.message}`);
   lines.push(
-    "Write the next story node. `trigger` restates what the players did as a SHORT imperative action ('Knock', 'Search the wagon') — never 'When the party…'. `summary` is the immediate consequence in one short sentence. `read_text` is what the DM reads aloud: second person, grounded in the module's tone and everything established above, never contradicting it, ending at a natural decision point. If the players' action STARTS COMBAT, set node_type to 'initiative', trigger to 'Roll initiative', name the enemies AND their count in the summary (e.g. 'Two shadow-wolves attack.'), and make read_text the moment combat erupts; otherwise node_type is 'story'.",
+    "Write the next story node. `trigger` restates what the players did as a SHORT imperative action ('Knock', 'Search the wagon') — never 'When the party…'. `summary` is the immediate consequence in one short sentence. `read_text` is what the DM reads aloud: second person, grounded in the module's tone and everything established above, never contradicting it, ending at a natural decision point. If the players' action STARTS COMBAT, set node_type to 'initiative', trigger to 'Roll initiative', name the enemies AND their count in the summary (e.g. 'Two shadow-wolves attack.'), and make read_text the moment combat erupts; when the situation plausibly invites reinforcements you MAY include a danger_table (die, when to roll, entries) in the module's spirit — otherwise danger_table is null. For story nodes danger_table is always null.",
   );
   return lines.join("\n");
 }
@@ -975,6 +1042,8 @@ export function normalizeNode(raw: unknown): StoryNode {
   if (!trigger || !readText) throw new Error("the model returned an empty node");
   return {
     nodeType: parsed.node_type === "initiative" ? "initiative" : "story",
+    dangerTable:
+      parsed.node_type === "initiative" ? normalizeDangerTable(parsed.danger_table) : null,
     trigger,
     summary: clamp(parsed.summary, NODE_SUMMARY_MAX),
     readText,

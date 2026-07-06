@@ -60,6 +60,7 @@ export function DndGameScreen({ campaign, party }: Props) {
   const [viewingCharacterId, setViewingCharacterId] = useState<string | null>(null);
   const [viewingNpc, setViewingNpc] = useState<DndNpc | null>(null);
   const [recharting, setRecharting] = useState(false);
+  const [combatNote, setCombatNote] = useState(false);
 
   // (Re-)register the live session so a beamer companion can attach.
   useEffect(() => {
@@ -123,6 +124,7 @@ export function DndGameScreen({ campaign, party }: Props) {
     setWaypointIndex(i);
     setPath([]);
     setMode("root");
+    setCombatNote(false);
   };
 
   const send = () => {
@@ -183,7 +185,20 @@ export function DndGameScreen({ campaign, party }: Props) {
         </ol>
       }
       fanActions={
-        screen === "main" ? (
+        screen === "main" && branchingBlocked ? (
+          // On an initiative node there is nothing to chat about — the action
+          // bar carries the one action that matters.
+          <div className="flex items-center gap-3">
+            <Button variant="tinted" tone="rose" size="sm" onClick={() => setCombatNote(true)}>
+              Enter combat
+            </Button>
+            <span className="text-3xs text-amber-200/40" style={SERIF}>
+              {combatNote
+                ? "The combat phase arrives in a coming update — run this fight at the table, then step back up the tree."
+                : "Set the turn order above, then enter combat"}
+            </span>
+          </div>
+        ) : screen === "main" ? (
           <div className="flex items-center gap-2">
             <Button
               variant={mode === "root" ? "tinted" : "ghost"}
@@ -197,23 +212,21 @@ export function DndGameScreen({ campaign, party }: Props) {
               variant={mode === "node" ? "tinted" : "ghost"}
               tone="amber"
               size="xs"
-              disabled={currentNodeId === null || branchingBlocked}
+              disabled={currentNodeId === null}
               onClick={() => setMode("node")}
             >
               New branch
             </Button>
             <span className="text-3xs text-amber-200/40" style={SERIF}>
-              {branchingBlocked
-                ? "Combat resolves at the table — story branches continue after it"
-                : mode === "root"
-                  ? "The message starts a new tree at this waypoint"
-                  : "The message branches from the current node"}
+              {mode === "root"
+                ? "The message starts a new tree at this waypoint"
+                : "The message branches from the current node"}
             </span>
           </div>
         ) : undefined
       }
       fan={
-        screen === "main" ? (
+        screen === "main" && !branchingBlocked ? (
           <div className="flex gap-2" style={{ height: 190 }}>
             <textarea
               value={message}

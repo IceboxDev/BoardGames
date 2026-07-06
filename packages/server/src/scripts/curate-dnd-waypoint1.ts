@@ -25,6 +25,19 @@ const WAYPOINT_0: ReadAloudBlock[] = [
     waypointIndex: 0,
     parentIndex: null,
     nodeType: "initiative",
+    dangerTable: {
+      die: "1d6",
+      description:
+        "Further Danger (optional): during the second round of combat, on initiative count 20, roll once to introduce another threat spurred on by the spirit of Fossmoor.",
+      entries: [
+        { roll: "1", text: "1d4 angry swarms of wasps" },
+        { roll: "2", text: "two wolves on the prowl" },
+        { roll: "3", text: "1d6 vultures that swoop in, hoping for a bit of fresh meat" },
+        { roll: "4", text: "a pair of panthers trying to one-up each other" },
+        { roll: "5", text: "a giant spider crawling from its lair beneath the big rock" },
+        { roll: "6", text: "an incredibly surly giant goat" },
+      ],
+    },
     trigger: "Roll initiative",
     summary: "Three dead vines attack the crossroads.",
     readText:
@@ -34,6 +47,7 @@ const WAYPOINT_0: ReadAloudBlock[] = [
     waypointIndex: 0,
     parentIndex: null,
     nodeType: "story",
+    dangerTable: null,
     trigger: "Go deeper into the city",
     summary: "Merrick's streets: taverns, outfitters, a smithy, and stranger shops.",
     readText:
@@ -43,6 +57,7 @@ const WAYPOINT_0: ReadAloudBlock[] = [
     waypointIndex: 0,
     parentIndex: 1,
     nodeType: "story",
+    dangerTable: null,
     trigger: "Enter The Copper Kettle",
     summary: "A loud, warm tavern — and the city's rumor mill.",
     readText:
@@ -52,6 +67,7 @@ const WAYPOINT_0: ReadAloudBlock[] = [
     waypointIndex: 0,
     parentIndex: 1,
     nodeType: "story",
+    dangerTable: null,
     trigger: "Browse Greenspan's Supplies",
     summary: "Expedition gear stacked to the rafters; the owner knows why you're buying.",
     readText:
@@ -61,6 +77,7 @@ const WAYPOINT_0: ReadAloudBlock[] = [
     waypointIndex: 0,
     parentIndex: 1,
     nodeType: "story",
+    dangerTable: null,
     trigger: "Enter The Pixie's Take",
     summary: "A narrow shop of curios and minor enchantments — at proud prices.",
     readText:
@@ -70,6 +87,7 @@ const WAYPOINT_0: ReadAloudBlock[] = [
     waypointIndex: 0,
     parentIndex: 1,
     nodeType: "story",
+    dangerTable: null,
     trigger: "Visit Iron & Oath",
     summary: "The city smithy — honest steel, mended mail, and a warning.",
     readText:
@@ -79,6 +97,7 @@ const WAYPOINT_0: ReadAloudBlock[] = [
     waypointIndex: 0,
     parentIndex: 1,
     nodeType: "story",
+    dangerTable: null,
     trigger: "Go to Allani's house",
     summary: "A narrow two-story home marked with the White Tower's icon.",
     readText:
@@ -88,6 +107,7 @@ const WAYPOINT_0: ReadAloudBlock[] = [
     waypointIndex: 0,
     parentIndex: 6,
     nodeType: "story",
+    dangerTable: null,
     trigger: "Knock",
     summary: "Allani answers and hurries the party inside.",
     readText:
@@ -97,6 +117,7 @@ const WAYPOINT_0: ReadAloudBlock[] = [
     waypointIndex: 0,
     parentIndex: 7,
     nodeType: "story",
+    dangerTable: null,
     trigger: "Go in",
     summary: "Tea, lavender, and the job: escort Allani to Admjir.",
     readText:
@@ -106,6 +127,7 @@ const WAYPOINT_0: ReadAloudBlock[] = [
     waypointIndex: 0,
     parentIndex: 8,
     nodeType: "story",
+    dangerTable: null,
     trigger: "Ask about the ancient tome",
     summary: "A stolen occultist script from the restricted library.",
     readText:
@@ -115,6 +137,7 @@ const WAYPOINT_0: ReadAloudBlock[] = [
     waypointIndex: 0,
     parentIndex: 8,
     nodeType: "story",
+    dangerTable: null,
     trigger: "Ask about Admjir",
     summary: "The first tree of Fossmoor — and a misread promise of immortality.",
     readText:
@@ -124,6 +147,7 @@ const WAYPOINT_0: ReadAloudBlock[] = [
     waypointIndex: 0,
     parentIndex: 8,
     nodeType: "story",
+    dangerTable: null,
     trigger: "Ask why no White Tower escort",
     summary: "Scholars, not warriors — the capable ones are far away.",
     readText:
@@ -192,11 +216,19 @@ for (const [i, b] of combined.entries()) {
   );
 }
 
+const force = process.argv.includes("--force");
 for (const party of await listPartiesForCampaign(campaignId, userId)) {
   const nodes = await listNodesForParty(party.id, userId);
-  const untouched = nodes.every((n) => n.parentId === null);
+  // Untouched = every node is a copy of some template (trigger+readText
+  // match) — DM-grown nodes have novel content. Note the comparison is
+  // against the NEW template set, so any re-extraction makes old seeds look
+  // grown; pass --force after confirming the tree holds no real play state.
+  const templateKeys = new Set(combined.map((b) => `${b.trigger}::${b.readText}`));
+  const untouched = force || nodes.every((n) => templateKeys.has(`${n.trigger}::${n.readText}`));
   if (!untouched) {
-    console.log(`party "${party.name}": tree has grown branches — left untouched`);
+    console.log(
+      `party "${party.name}": tree has DM-grown nodes — left untouched (--force reseeds)`,
+    );
     continue;
   }
   await getDb().execute({

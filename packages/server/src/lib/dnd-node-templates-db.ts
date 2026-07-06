@@ -6,10 +6,10 @@
 // from there.
 
 import { randomUUID } from "node:crypto";
-import { NodeTypeSchema } from "@boardgames/core/protocol";
+import { DangerTableSchema, NodeTypeSchema } from "@boardgames/core/protocol";
 import { z } from "zod";
 import { getDb } from "../db.ts";
-import { parseRows } from "./db-rows.ts";
+import { jsonColumn, parseRows } from "./db-rows.ts";
 import type { ReadAloudBlock } from "./dnd-extract.ts";
 
 const TemplateRowSchema = z.object({
@@ -17,6 +17,7 @@ const TemplateRowSchema = z.object({
   sort_order: z.number().int(),
   parent_sort: z.number().int().nullable(),
   node_type: NodeTypeSchema,
+  danger_table_json: jsonColumn(DangerTableSchema).nullable(),
   trigger_text: z.string(),
   summary: z.string(),
   read_text: z.string(),
@@ -36,8 +37,8 @@ export async function replaceNodeTemplates(
     blocks.map((block, i) => ({
       sql: `INSERT INTO dnd_node_templates
               (id, campaign_id, user_id, waypoint_index, sort_order, parent_sort,
-               node_type, trigger_text, summary, read_text)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+               node_type, danger_table_json, trigger_text, summary, read_text)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       args: [
         randomUUID(),
         campaignId,
@@ -46,6 +47,7 @@ export async function replaceNodeTemplates(
         i,
         block.parentIndex,
         block.nodeType,
+        block.dangerTable ? JSON.stringify(block.dangerTable) : null,
         block.trigger,
         block.summary,
         block.readText,
@@ -60,7 +62,8 @@ export async function listNodeTemplates(
   userId: string,
 ): Promise<ReadAloudBlock[]> {
   const result = await getDb().execute({
-    sql: `SELECT waypoint_index, sort_order, parent_sort, node_type, trigger_text, summary, read_text
+    sql: `SELECT waypoint_index, sort_order, parent_sort, node_type, danger_table_json,
+                 trigger_text, summary, read_text
           FROM dnd_node_templates
           WHERE campaign_id = ? AND user_id = ?
           ORDER BY sort_order ASC`,
@@ -70,6 +73,7 @@ export async function listNodeTemplates(
     waypointIndex: row.waypoint_index,
     parentIndex: row.parent_sort,
     nodeType: row.node_type,
+    dangerTable: row.danger_table_json,
     trigger: row.trigger_text,
     summary: row.summary,
     readText: row.read_text,
@@ -96,8 +100,8 @@ export async function seedPartyFromTemplates(
     templates.map((t, i) => ({
       sql: `INSERT INTO dnd_nodes
               (id, campaign_id, party_id, user_id, waypoint_index, parent_id,
-               node_type, trigger_text, summary, read_text)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+               node_type, danger_table_json, trigger_text, summary, read_text)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       args: [
         idByIndex.get(i) ?? randomUUID(),
         campaignId,
@@ -106,6 +110,7 @@ export async function seedPartyFromTemplates(
         t.waypointIndex,
         t.parentIndex !== null ? (idByIndex.get(t.parentIndex) ?? null) : null,
         t.nodeType,
+        t.dangerTable ? JSON.stringify(t.dangerTable) : null,
         t.trigger,
         t.summary,
         t.readText,

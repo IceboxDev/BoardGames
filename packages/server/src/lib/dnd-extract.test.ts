@@ -229,6 +229,7 @@ describe("normalizeNpcs", () => {
 describe("normalizeNode", () => {
   const RAW_NODE = {
     node_type: "story",
+    danger_table: null,
     trigger: "Inspect the coffin",
     summary: "The lid is ajar; the earth inside is fresh.",
     read_text: "As you lean closer, the smell of turned soil rises to meet you.",
@@ -244,6 +245,25 @@ describe("normalizeNode", () => {
   it("keeps initiative nodes and coerces unknown types to story", () => {
     expect(normalizeNode({ ...RAW_NODE, node_type: "initiative" }).nodeType).toBe("initiative");
     expect(normalizeNode({ ...RAW_NODE, node_type: "dance-off" }).nodeType).toBe("story");
+  });
+
+  it("keeps a danger table on initiative nodes, drops it elsewhere or when empty", () => {
+    const table = {
+      die: "1d6",
+      description: "Second round, initiative count 20.",
+      entries: [{ roll: "2", text: "two wolves on the prowl" }],
+    };
+    expect(
+      normalizeNode({ ...RAW_NODE, node_type: "initiative", danger_table: table }).dangerTable,
+    ).toEqual(table);
+    expect(normalizeNode({ ...RAW_NODE, danger_table: table }).dangerTable).toBeNull();
+    expect(
+      normalizeNode({
+        ...RAW_NODE,
+        node_type: "initiative",
+        danger_table: { ...table, entries: [] },
+      }).dangerTable,
+    ).toBeNull();
   });
 
   it("truncates over-long fields", () => {
@@ -262,6 +282,7 @@ describe("normalizeReadAloudBlocks", () => {
     waypoint_index: 1,
     parent_index: null,
     node_type: "story",
+    danger_table: null,
     trigger: "Approach the treeline",
     summary: "The treeline looms, unnaturally silent.",
     read_text: "The trees ahead stand shoulder to shoulder, and no birds sing.",

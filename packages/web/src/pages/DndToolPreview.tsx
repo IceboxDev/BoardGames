@@ -249,6 +249,7 @@ const NODES = [
     waypointIndex: 0,
     parentId: null,
     nodeType: "story" as const,
+    dangerTable: null,
     trigger: "Follow the wolf howls off the road",
     summary: "The mists tighten; a shuttered farmhouse appears ahead.",
     readText:
@@ -262,6 +263,7 @@ const NODES = [
     waypointIndex: 0,
     parentId: "node-root-1",
     nodeType: "story" as const,
+    dangerTable: null,
     trigger: "Knock and announce yourselves",
     summary: "A woman's voice begs them to prove they cast a shadow.",
     readText:
@@ -275,6 +277,14 @@ const NODES = [
     waypointIndex: 0,
     parentId: "node-root-1",
     nodeType: "initiative" as const,
+    dangerTable: {
+      die: "1d6",
+      description: "Second round, initiative count 20: the mists send something more.",
+      entries: [
+        { roll: "1", text: "two wolves on the prowl" },
+        { roll: "2", text: "a swarm of ravens" },
+      ],
+    },
     trigger: "Roll initiative",
     summary: "Two shadow-wolves burst from the treeline.",
     readText:
@@ -288,6 +298,7 @@ const NODES = [
     waypointIndex: 0,
     parentId: "node-root-1",
     nodeType: "story" as const,
+    dangerTable: null,
     trigger: "Pick the storm-cellar lock",
     summary: "The cellar is stocked for a siege — and recently slept in.",
     readText:

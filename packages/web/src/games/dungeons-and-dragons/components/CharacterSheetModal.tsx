@@ -613,7 +613,7 @@ export function CharacterSheetModal({ character, onClose }: Props) {
       ) : page === "spellbook" ? (
         <Spellbook spells={sheet.spells} />
       ) : (
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-1 flex-col gap-5">
           {/* Combat shields. */}
           <div className="grid grid-cols-3 gap-2 sm:grid-cols-6">
             {vitals.map((v) => (
