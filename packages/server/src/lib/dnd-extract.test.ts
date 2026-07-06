@@ -121,6 +121,7 @@ describe("normalizeCharacter", () => {
 
 const RAW_NPC = {
   name: "Strahd von Zarovich",
+  category: "npc",
   role: "Vampire lord — the campaign's antagonist",
   kind: "Undead (vampire)",
   location: "Castle Ravenloft",
@@ -160,6 +161,17 @@ describe("normalizeNpcs", () => {
     });
     expect(npcs[0]?.maxHp).toBe(999);
     expect(npcs[0]?.abilities?.cha).toBe(30);
+  });
+
+  it("keeps monster category and coerces unknown categories to npc", () => {
+    const npcs = normalizeNpcs({
+      npcs: [
+        { ...RAW_NPC, name: "Dead Vine", category: "monster" },
+        { ...RAW_NPC, category: "deity" },
+      ],
+    });
+    expect(npcs[0]?.category).toBe("monster");
+    expect(npcs[1]?.category).toBe("npc");
   });
 });
 

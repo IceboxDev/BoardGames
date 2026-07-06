@@ -36,7 +36,7 @@ type MenuScreen = "main" | "players" | "npcs" | "sources";
 const MENU: { id: MenuScreen; label: string; description: string }[] = [
   { id: "main", label: "Game Screen", description: "The story tree" },
   { id: "players", label: "Players", description: "The party ledger" },
-  { id: "npcs", label: "NPCs", description: "Dramatis personae" },
+  { id: "npcs", label: "NPCs & Monsters", description: "Cast & bestiary" },
   { id: "sources", label: "Sources", description: "Tomes & sheets" },
 ];
 
@@ -350,7 +350,11 @@ export function DndGameScreen({ campaign, party }: Props) {
                     >
                       <span
                         aria-hidden="true"
-                        className="font-fantasy grid h-10 w-10 shrink-0 place-items-center rounded-full bg-purple-500/20 text-base font-bold text-purple-200 ring-1 ring-purple-400/50"
+                        className={`font-fantasy grid h-10 w-10 shrink-0 place-items-center rounded-full text-base font-bold ring-1 ${
+                          npc.category === "monster"
+                            ? "bg-emerald-500/20 text-emerald-200 ring-emerald-400/50"
+                            : "bg-purple-500/20 text-purple-200 ring-purple-400/50"
+                        }`}
                       >
                         {npc.name[0]?.toUpperCase()}
                       </span>
@@ -362,6 +366,11 @@ export function DndGameScreen({ campaign, party }: Props) {
                           {npc.role}
                         </span>
                       </span>
+                      {npc.category === "monster" && (
+                        <span className="shrink-0 rounded-full bg-emerald-500/10 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-[0.12em] text-emerald-200/80 ring-1 ring-emerald-400/30">
+                          Monster
+                        </span>
+                      )}
                       <span className="flex shrink-0 gap-1">
                         {npc.maxHp !== null && (
                           <span className="rounded-full bg-rose-500/15 px-1.5 py-0.5 text-3xs font-bold text-rose-200 ring-1 ring-rose-400/30">

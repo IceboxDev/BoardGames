@@ -177,13 +177,20 @@ export const UpdateCharacterResponseSchema = z.object({
 });
 export type UpdateCharacterResponse = z.infer<typeof UpdateCharacterResponseSchema>;
 
-// ── NPCs ───────────────────────────────────────────────────────────────
-// Extracted alongside the campaign checkpoints from the module's NPC
-// appendix / stat blocks. No per-row job status: they ride the campaign's
-// extraction job, and a failed NPC pass simply yields an empty list.
+// ── NPCs & monsters ────────────────────────────────────────────────────
+// Extracted alongside the campaign checkpoints from the module's appendix
+// of stat blocks: named characters (category "npc") AND creature types
+// unique to the module (category "monster", e.g. a custom plant horror).
+// No per-row job status: they ride the campaign's extraction job, and a
+// failed pass simply yields an empty list.
+
+export const NpcCategorySchema = z.enum(["npc", "monster"]);
+export type NpcCategory = z.infer<typeof NpcCategorySchema>;
 
 export const NpcSheetSchema = z.object({
   name: z.string().min(1).max(80),
+  /** Named character vs creature type. Defaults for rows stored pre-field. */
+  category: NpcCategorySchema.default("npc"),
   /** Story role, e.g. "Vampire lord — the campaign's antagonist". */
   role: z.string().max(160),
   /** Creature kind, e.g. "Undead (vampire)", "Human noble". */

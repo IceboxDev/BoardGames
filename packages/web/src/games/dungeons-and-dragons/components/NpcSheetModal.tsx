@@ -2,8 +2,8 @@ import type { AbilityKey, DndNpc } from "@boardgames/core/protocol";
 import { ABILITY_KEYS } from "@boardgames/core/protocol";
 import { Modal } from "../../../components/ui";
 
-// An NPC card, extracted from the module's stat-block appendix during the
-// campaign reading. Read-only — the module is the source of truth.
+// An NPC or monster card, extracted from the module's stat-block appendix
+// during the campaign reading. Read-only — the module is the source of truth.
 
 const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
 
@@ -30,7 +30,7 @@ export function NpcSheetModal({ npc, onClose }: Props) {
   return (
     <Modal
       onClose={onClose}
-      eyebrow="Dramatis personae"
+      eyebrow={npc.category === "monster" ? "Bestiary" : "Dramatis personae"}
       title={npc.name}
       titleClassName="font-fantasy text-3xl font-bold text-amber-100"
       subheader={

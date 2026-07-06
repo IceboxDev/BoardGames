@@ -397,10 +397,11 @@ const NPC_KIND_MAX = 60;
 const NPC_LOCATION_MAX = 120;
 const NPC_DESCRIPTION_MAX = 800;
 const NPC_SECRETS_MAX = 600;
-const NPCS_MAX = 20;
+const NPCS_MAX = 30;
 
 const RawNpcSchema = z.object({
   name: z.string(),
+  category: z.string(),
   role: z.string(),
   kind: z.string().nullable(),
   location: z.string().nullable(),
@@ -417,18 +418,25 @@ const NPC_JSON_SCHEMA = {
   properties: {
     npcs: {
       type: "array",
-      maxItems: 20,
+      maxItems: 30,
       items: {
         type: "object",
         properties: {
           name: { type: "string" },
+          category: {
+            type: "string",
+            enum: ["npc", "monster"],
+            description:
+              "'npc' for a named character; 'monster' for a creature type (its stat block is a species, not a person).",
+          },
           role: {
             type: "string",
-            description: "Story role, e.g. 'Vampire lord — the campaign's antagonist'.",
+            description:
+              "Story role, e.g. 'Vampire lord — the campaign's antagonist' or 'Corrupted plant horror — the forest's foot soldiers'.",
           },
           kind: {
             type: ["string", "null"],
-            description: "Creature kind, e.g. 'Undead (vampire)'.",
+            description: "Creature kind, e.g. 'Undead (vampire)', 'Plant'.",
           },
           location: { type: ["string", "null"], description: "Where the party meets them." },
           abilities: {
@@ -463,6 +471,7 @@ const NPC_JSON_SCHEMA = {
         },
         required: [
           "name",
+          "category",
           "role",
           "kind",
           "location",
@@ -480,10 +489,41 @@ const NPC_JSON_SCHEMA = {
   additionalProperties: false,
 } as const;
 
-const NPC_PROMPT = `You are assisting a Dungeon Master preparing to run the attached D&D adventure module. Extract the significant NPCs — the named characters the party will interact with, usually detailed in the module's appendix of stat blocks and NPC descriptions near the end of the book. For each (up to 20, most significant first): name; story role; creature kind; the location where the party typically meets them; ability scores from their stat block (null if the module gives none); max HP and armor class (null if not stated); a DM-facing description covering who they are, their motivations, and how to roleplay them; and any DM-only secrets or hidden agendas. Skip generic unnamed monsters. Do not invent content that is not present in the document.`;
+// Pass 1 of the two-pass pipeline: enumerate every stat block so pass 2 has
+// an explicit checklist — recall of monster-type blocks (e.g. a custom plant
+// horror in the appendix) is unreliable when a single pass must both find
+// and describe them.
+const STAT_BLOCK_ENUM_JSON_SCHEMA = {
+  type: "object",
+  properties: {
+    names: {
+      type: "array",
+      maxItems: 40,
+      items: { type: "string" },
+      description: "Stat-block and named-character names, in document order, no duplicates.",
+    },
+  },
+  required: ["names"],
+  additionalProperties: false,
+} as const;
+
+const RawStatBlockNamesSchema = z.object({ names: z.array(z.string()) });
+
+const STAT_BLOCK_ENUM_PROMPT = `You are indexing the attached D&D adventure module. List the header name of EVERY creature or character stat block in the document — stat blocks are the boxes/sections giving AC, hit points, speed, and the six ability scores, usually collected in an appendix near the end of the book. Include BOTH named characters (NPCs) and monster/creature types unique to this module (custom monsters count even if they are not a person). Additionally include significant named characters discussed in the story text even if they have no stat block of their own. Return only the names, in document order, without duplicates. Do not invent names that are not in the document.`;
+
+function buildNpcPrompt(statBlockNames: string[]): string {
+  const checklist =
+    statBlockNames.length > 0
+      ? `\nAn index pass over this document found these stat blocks and named characters — extract a card for EVERY one of them (plus anything the index missed):\n${statBlockNames.map((n) => `- ${n}`).join("\n")}\n`
+      : "";
+  return `You are assisting a Dungeon Master preparing to run the attached D&D adventure module. Extract a card for every significant creature and character: the named NPCs the party will interact with AND the monster/creature types that appear in the module's stat-block appendix (custom monsters unique to this module must be included — a stat block for a creature type counts even though it is not a person).${checklist}
+For each card: name; category ('npc' for a named character, 'monster' for a creature type); story role; creature kind; the location where the party typically encounters them; ability scores from the stat block (null if none is given); max HP and armor class (null if not stated); a DM-facing description covering who or what they are, their motivations or behavior in combat, and how to run them; and any DM-only secrets (null for most monsters). Do not invent content that is not present in the document.`;
+}
+
+const KNOWN_CATEGORIES = new Set(["npc", "monster"]);
 
 /**
- * Validate + normalize the raw NPC extraction. Individual malformed NPCs are
+ * Validate + normalize the raw NPC extraction. Individual malformed cards are
  * dropped rather than failing the batch; an empty result is legal (some
  * one-shots genuinely have no named NPCs).
  */
@@ -496,6 +536,7 @@ export function normalizeNpcs(raw: unknown): NpcSheet[] {
     if (!name || !description) continue;
     npcs.push({
       name,
+      category: KNOWN_CATEGORIES.has(npc.category) ? (npc.category as "npc" | "monster") : "npc",
       role: clamp(npc.role, NPC_ROLE_MAX),
       kind: clampNullable(npc.kind, NPC_KIND_MAX),
       location: clampNullable(npc.location, NPC_LOCATION_MAX),
@@ -519,10 +560,32 @@ export function normalizeNpcs(raw: unknown): NpcSheet[] {
   return npcs;
 }
 
-/** Send the module PDF to OpenAI and return the normalized NPC cards. */
+/**
+ * Two-pass extraction: (1) index every stat block in the document, (2)
+ * extract a card for each indexed name. The explicit checklist is what makes
+ * monster-type blocks (not just named characters) come out reliably. A failed
+ * index pass degrades to the single-pass behavior rather than failing.
+ */
 export async function extractNpcs(pdfDataUri: string, filename: string): Promise<NpcSheet[]> {
+  let statBlockNames: string[] = [];
+  try {
+    const rawIndex = await runPdfExtraction({
+      prompt: STAT_BLOCK_ENUM_PROMPT,
+      schemaName: "stat_block_index",
+      jsonSchema: STAT_BLOCK_ENUM_JSON_SCHEMA as unknown as Record<string, unknown>,
+      pdfDataUri,
+      filename,
+    });
+    statBlockNames = RawStatBlockNamesSchema.parse(rawIndex)
+      .names.map((n) => n.trim())
+      .filter((n) => n.length > 0)
+      .slice(0, 40);
+  } catch (err) {
+    console.error("[dnd] stat-block index pass failed (falling back to single pass)", err);
+  }
+
   const raw = await runPdfExtraction({
-    prompt: NPC_PROMPT,
+    prompt: buildNpcPrompt(statBlockNames),
     schemaName: "npc_extraction",
     jsonSchema: NPC_JSON_SCHEMA as unknown as Record<string, unknown>,
     pdfDataUri,
