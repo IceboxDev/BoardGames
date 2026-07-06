@@ -9,6 +9,7 @@
 
 import { randomUUID } from "node:crypto";
 import {
+  ABILITY_KEYS,
   type ActionCard,
   ActiveCombatResponseSchema,
   ActiveSessionResponseSchema,
@@ -640,7 +641,10 @@ dndCampaignRoutes.post("/combats/:id/turn", zJsonBody(ResolveTurnRequestSchema),
           ]
             .filter(Boolean)
             .join(" ");
-          return `${displayCharacterName(sheet, ch.sourceFilename)}: ${identity}, AC ${sheet.armorClass ?? "?"}, HP ${sheet.maxHp ?? "?"}; weapons/gear: ${sheet.equipment.join(", ") || "-"}; spells: ${sheet.spells.join(", ") || "-"}${options ? `; combat options (authoritative — the character HAS all of these): ${options}` : ""}`;
+          const abilities = sheet.abilities
+            ? `, abilities ${ABILITY_KEYS.map((k) => `${k.toUpperCase()} ${sheet.abilities?.[k]}`).join(" ")}`
+            : "";
+          return `${displayCharacterName(sheet, ch.sourceFilename)}: ${identity}, AC ${sheet.armorClass ?? "?"}, HP ${sheet.maxHp ?? "?"}, speed ${sheet.speed ?? "?"}${abilities}; weapons/gear: ${sheet.equipment.join(", ") || "-"}; spells: ${sheet.spells.join(", ") || "-"}${options ? `; combat options (authoritative — the character HAS all of these): ${options}` : ""}`;
         }),
     )
   ).filter((brief) => brief.length > 0);
