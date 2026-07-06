@@ -364,6 +364,8 @@ describe("combat schemas", () => {
     expect(wolf?.characterId).toBeNull();
     expect(wolf?.hp).toBeNull();
     expect(wolf?.conditions).toEqual([]);
+    expect(wolf?.grantedActions).toEqual([]);
+    expect(wolf?.removedActions).toEqual([]);
   });
 
   it("rejects an unknown combatant kind", () => {

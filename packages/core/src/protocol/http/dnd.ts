@@ -465,6 +465,18 @@ export type GenerateNodeResponse = z.infer<typeof GenerateNodeResponseSchema>;
 // updates the shared state (hp, conditions, positions/ranges, spent
 // resources), and produces the narration read back to the party.
 
+// Per-character action dashboard, generated once from the sheet and cached.
+export const ActionCardKindSchema = z.enum(["attack", "spell", "bonus", "feature", "basic"]);
+
+export const ActionCardSchema = z.object({
+  name: z.string().min(1).max(60),
+  kind: ActionCardKindSchema,
+  /** What to check / tell them to roll ("To hit d20+7 vs AC; 1d6+4 piercing"). */
+  roll: z.string().max(160),
+  note: z.string().max(200),
+});
+export type ActionCard = z.infer<typeof ActionCardSchema>;
+
 export const CombatantKindSchema = z.enum(["pc", "enemy"]);
 
 export const CombatantSchema = z.object({
@@ -483,6 +495,10 @@ export const CombatantSchema = z.object({
   position: z.string().max(200).default(""),
   /** Spent resources & flags ("2 arrows spent, L1 slot used"). */
   notes: z.string().max(300).default(""),
+  /** Options the referee granted mid-combat (Bardic Inspiration, a handed potion). */
+  grantedActions: z.array(ActionCardSchema).max(12).default([]),
+  /** Baseline dashboard cards currently unavailable (out of arrows → "Shortbow"). */
+  removedActions: z.array(z.string().min(1).max(60)).max(20).default([]),
 });
 export type Combatant = z.infer<typeof CombatantSchema>;
 
@@ -538,18 +554,6 @@ export const ResolveTurnResponseSchema = z.object({
   combat: DndCombatSchema,
 });
 export type ResolveTurnResponse = z.infer<typeof ResolveTurnResponseSchema>;
-
-// Per-character action dashboard, generated once from the sheet and cached.
-export const ActionCardKindSchema = z.enum(["attack", "spell", "bonus", "feature", "basic"]);
-
-export const ActionCardSchema = z.object({
-  name: z.string().min(1).max(60),
-  kind: ActionCardKindSchema,
-  /** What to check / tell them to roll ("To hit d20+7 vs AC; 1d6+4 piercing"). */
-  roll: z.string().max(160),
-  note: z.string().max(200),
-});
-export type ActionCard = z.infer<typeof ActionCardSchema>;
 
 export const CharacterActionsResponseSchema = z.object({
   cards: z.array(ActionCardSchema),

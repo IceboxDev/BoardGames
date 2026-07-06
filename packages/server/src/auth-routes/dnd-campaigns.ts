@@ -595,6 +595,8 @@ dndCampaignRoutes.post("/parties/:id/combat", zJsonBody(StartCombatRequestSchema
     conditions: [],
     position: "",
     notes: "",
+    grantedActions: [],
+    removedActions: [],
   }));
   const combat = await insertCombat({
     campaignId: party.campaignId,
@@ -677,6 +679,8 @@ dndCampaignRoutes.post("/combats/:id/turn", zJsonBody(ResolveTurnRequestSchema),
               conditions: patch.conditions,
               position: patch.position,
               notes: patch.notes,
+              grantedActions: patch.grantedActions,
+              removedActions: patch.removedActions,
             }
           : combatant;
       });

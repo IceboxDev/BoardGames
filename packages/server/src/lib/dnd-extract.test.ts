@@ -395,6 +395,43 @@ describe("normalizeTurnResult", () => {
     expect(result.updates[1]?.hp).toBe(0);
   });
 
+  it("normalizes granted and removed options on updates", () => {
+    const result = normalizeTurnResult({
+      narration: "Simon's word lands on Burg like a war-drum.",
+      alerts: [],
+      updates: [
+        {
+          ...UPDATE,
+          key: "c1",
+          granted_actions: [
+            {
+              name: "Bardic Inspiration (d6)",
+              kind: "legendary",
+              roll: "Add 1d6 to one attack, check, or save",
+              note: "From Simon; expires when used.",
+            },
+          ],
+          removed_actions: ["Shortbow", "   "],
+        },
+      ],
+    });
+    expect(result.updates[0]?.grantedActions).toEqual([
+      {
+        name: "Bardic Inspiration (d6)",
+        kind: "basic",
+        roll: "Add 1d6 to one attack, check, or save",
+        note: "From Simon; expires when used.",
+      },
+    ]);
+    expect(result.updates[0]?.removedActions).toEqual(["Shortbow"]);
+  });
+
+  it("defaults option lists when the model omits them", () => {
+    const result = normalizeTurnResult({ narration: "x", alerts: [], updates: [UPDATE] });
+    expect(result.updates[0]?.grantedActions).toEqual([]);
+    expect(result.updates[0]?.removedActions).toEqual([]);
+  });
+
   it("drops all updates when the referee raises alerts", () => {
     const result = normalizeTurnResult({
       narration: "",

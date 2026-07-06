@@ -334,7 +334,9 @@ const COMBAT: DndCombat = {
       hp: 33,
       conditions: [],
       position: "on the cart roof, 20 ft from the wolves",
-      notes: "",
+      notes: "out of arrows",
+      grantedActions: [],
+      removedActions: ["Shortbow"],
     },
     {
       key: "c1",
@@ -348,6 +350,15 @@ const COMBAT: DndCombat = {
       conditions: [],
       position: "front line, engaged",
       notes: "one L1 slot spent",
+      grantedActions: [
+        {
+          name: "Bardic Inspiration (d6)",
+          kind: "bonus",
+          roll: "Add 1d6 to one attack roll, check, or save",
+          note: "From Whisper's flourish — expires when used.",
+        },
+      ],
+      removedActions: [],
     },
     {
       key: "c2",
@@ -361,6 +372,8 @@ const COMBAT: DndCombat = {
       conditions: ["prone"],
       position: "engaged with Vex",
       notes: "one wolf bloodied",
+      grantedActions: [],
+      removedActions: [],
     },
   ],
   createdAt: "2026-07-05 19:08:00",
@@ -579,9 +592,14 @@ export default function DndToolPreview() {
           ))}
         </ul>
 
-        <SectionTitle>Combat — action dashboard (PC turn)</SectionTitle>
+        <SectionTitle>Combat — action dashboard (PC turn, Shortbow spent)</SectionTitle>
         <div className="flex h-[440px] overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-3">
-          <CombatPanel combat={COMBAT} party={PARTY} npcs={NPCS} turnResult={null} />
+          <CombatPanel
+            combat={{ ...COMBAT, turnIndex: 0 }}
+            party={PARTY}
+            npcs={NPCS}
+            turnResult={null}
+          />
         </div>
 
         <SectionTitle>Combat — enemy turn + read-aloud narration</SectionTitle>

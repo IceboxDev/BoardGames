@@ -1357,6 +1357,8 @@ export interface CombatTurnResult {
     conditions: string[];
     position: string;
     notes: string;
+    grantedActions: ActionCard[];
+    removedActions: string[];
   }[];
 }
 
@@ -1370,6 +1372,10 @@ const RawTurnSchema = z.object({
       conditions: z.array(z.string()),
       position: z.string(),
       notes: z.string(),
+      granted_actions: z
+        .array(z.object({ name: z.string(), kind: z.string(), roll: z.string(), note: z.string() }))
+        .default([]),
+      removed_actions: z.array(z.string()).default([]),
     }),
   ),
 });
@@ -1408,8 +1414,49 @@ const TURN_JSON_SCHEMA = {
             type: "string",
             description: "Cumulative spent resources/flags ('3 arrows spent, L1 slot used').",
           },
+          granted_actions: {
+            type: "array",
+            maxItems: 12,
+            description:
+              "FULL list of extra usable options this combatant currently holds beyond their baseline sheet (a Bardic Inspiration die received, a handed potion, a picked-up weapon). Carry forward existing ones; add on grant; drop when spent. Empty when none.",
+            items: {
+              type: "object",
+              properties: {
+                name: {
+                  type: "string",
+                  description: "Short option name, e.g. 'Bardic Inspiration (d6)'.",
+                },
+                kind: { type: "string", enum: ["attack", "spell", "bonus", "feature", "basic"] },
+                roll: {
+                  type: "string",
+                  description: "The mechanics, e.g. 'add 1d6 to one attack, check, or save'.",
+                },
+                note: {
+                  type: "string",
+                  description: "Source/limits, e.g. 'from Simon; expires when used'.",
+                },
+              },
+              required: ["name", "kind", "roll", "note"],
+              additionalProperties: false,
+            },
+          },
+          removed_actions: {
+            type: "array",
+            maxItems: 20,
+            items: { type: "string" },
+            description:
+              "FULL list of this combatant's baseline dashboard options currently unavailable, each as the option's exact NAME ONLY — 'Shortbow', never the description after the dash. Add when exhausted (out of arrows, a spent 1/day feature); drop when restored. Carry forward entries that still apply. Empty when none.",
+          },
         },
-        required: ["key", "hp", "conditions", "position", "notes"],
+        required: [
+          "key",
+          "hp",
+          "conditions",
+          "position",
+          "notes",
+          "granted_actions",
+          "removed_actions",
+        ],
         additionalProperties: false,
       },
     },
@@ -1431,18 +1478,21 @@ function buildTurnPrompt(ctx: CombatTurnContext): string {
     "1. LEGALITY: alert ONLY on clear violations — action economy (one action, one bonus action per turn), spell slots or ammunition the notes/history show as already spent, conditions that forbid the act, abilities the character simply does not have (each PC's listed combat options are AUTHORITATIVE: if an option appears in their sheet brief, they have it — never claim otherwise), or ranges that contradict explicitly tracked positions. The tracked state is a coarse sketch: positions are approximate free text and most battlefield facts are never recorded. The DM is looking at the real battlefield — when a precondition (advantage, an ally within 5 ft, line of sight, flanking) is merely NOT RECORDED, assume the DM ruled it correctly at the table and do not alert. Absence of evidence is not a violation. When there are violations, return alerts naming each one, an empty narration, and NO updates.",
   );
   lines.push(
-    "2. STATE: when legal, return full replacement state for every combatant the turn touched — hp after damage/healing (respect resistances/immunities implied by the creature's nature), added/removed conditions, updated positions and distances (keep them consistent for range checks next turn), and cumulative notes for spent resources (arrows, spell slots, feature uses).",
+    "2. STATE: when legal, return full replacement state for every combatant the turn touched — hp after damage/healing (respect resistances/immunities implied by the creature's nature), added/removed conditions, updated positions and distances (keep them consistent for range checks next turn), and cumulative notes for spent resources (arrows, spell slots, feature uses). ALSO maintain each touched combatant's option lists: when the turn grants someone a usable option (a Bardic Inspiration die, a handed potion, a picked-up weapon), add it to the RECEIVER's granted_actions with its mechanics; drop it when spent. When a baseline dashboard option becomes unusable (last arrow fired → 'Shortbow', a 1/day feature spent), add its exact name to that combatant's removed_actions; drop it when restored. Both lists are FULL REPLACEMENTS — carry forward entries that still apply.",
   );
   lines.push(
     "3. NARRATION: write the read-aloud for the whole turn — the arrow's flight, the blade's bite, damage that felt weaker than it should (implying resistance) — grounded in exactly what the DM reported and the numbers rolled. Cover EVERY action in the report: when a group acts, narrate each creature's action in sequence — never stop after the first.",
   );
   lines.push("");
   lines.push(
-    `Tracked combatants (key | name ×count | kind | init | hp/max | conditions | position | notes):`,
+    `Tracked combatants (key | name ×count | kind | init | hp/max | conditions | position | notes | granted options | unavailable options):`,
   );
   for (const c of ctx.combatants) {
+    const granted =
+      c.grantedActions.map((a) => `${a.name} (${a.roll || a.note})`).join("; ") || "-";
+    const removed = c.removedActions.join("; ") || "-";
     lines.push(
-      `${c.key} | ${c.name}${c.count > 1 ? ` ×${c.count}` : ""} | ${c.kind} | ${c.initiative} | ${c.hp ?? "?"}/${c.maxHp ?? "?"} | ${c.conditions.join("+") || "-"} | ${c.position || "-"} | ${c.notes || "-"}`,
+      `${c.key} | ${c.name}${c.count > 1 ? ` ×${c.count}` : ""} | ${c.kind} | ${c.initiative} | ${c.hp ?? "?"}/${c.maxHp ?? "?"} | ${c.conditions.join("+") || "-"} | ${c.position || "-"} | ${c.notes || "-"} | ${granted} | ${removed}`,
     );
   }
   if (ctx.partyBriefs.length > 0) lines.push(`\nParty sheets: ${ctx.partyBriefs.join(" || ")}`);
@@ -1473,6 +1523,19 @@ export function normalizeTurnResult(raw: unknown): CombatTurnResult {
               .slice(0, 10),
             position: clamp(u.position, 200),
             notes: clamp(u.notes, 300),
+            grantedActions: u.granted_actions
+              .map((card) => ({
+                name: clamp(card.name, 60),
+                kind: (ACTION_KINDS.has(card.kind) ? card.kind : "basic") as ActionCard["kind"],
+                roll: clamp(card.roll, 160),
+                note: clamp(card.note, 200),
+              }))
+              .filter((card) => card.name.length > 0)
+              .slice(0, 12),
+            removedActions: u.removed_actions
+              .map((name) => clamp(name, 60))
+              .filter((name) => name.length > 0)
+              .slice(0, 20),
           })),
   };
 }

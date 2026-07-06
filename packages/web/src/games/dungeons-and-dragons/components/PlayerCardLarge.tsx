@@ -1,5 +1,6 @@
-import type { AbilityKey, CharacterSheet, DndCharacter } from "@boardgames/core/protocol";
+import type { AbilityKey, DndCharacter } from "@boardgames/core/protocol";
 import { ABILITY_KEYS, displayCharacterName } from "@boardgames/core/protocol";
+import { fmt, mod, passivePerception, proficiencyBonus, shortSpeed } from "../logic/sheet-derived";
 
 // The in-game Players grid card: a full mini character sheet — identity,
 // every combat vital, abilities, saves, trained skills, proficiencies,
@@ -16,26 +17,6 @@ const ABILITY_LABEL: Record<AbilityKey, string> = {
   wis: "WIS",
   cha: "CHA",
 };
-
-function mod(score: number): number {
-  return Math.floor((score - 10) / 2);
-}
-
-function fmt(value: number): string {
-  return value >= 0 ? `+${value}` : `${value}`;
-}
-
-/** Same derivation as the ledger: 10 + Perception skill mod (carries prof),
- * 10 + WIS mod only for old rows without a skill list. */
-function passivePerception(sheet: CharacterSheet): number | null {
-  const perception = sheet.skills.find((s) => s.name === "Perception");
-  if (perception) return 10 + perception.modifier;
-  return sheet.abilities ? 10 + mod(sheet.abilities.wis) : null;
-}
-
-function proficiencyBonus(level: number | null): number | null {
-  return level === null ? null : 2 + Math.floor((level - 1) / 4);
-}
 
 function Vital({ label, value, tone }: { label: string; value: string; tone: string }) {
   return (
@@ -128,7 +109,7 @@ export function PlayerCardLarge({ character, onView }: Props) {
         />
         <Vital
           label="Speed"
-          value={sheet.speed ? sheet.speed.replace(/\s*(ft|feet)\.?.*$/i, "") : "—"}
+          value={sheet.speed ? shortSpeed(sheet.speed) : "—"}
           tone="border-white/10 bg-white/[0.04] text-fg-secondary"
         />
         <Vital
