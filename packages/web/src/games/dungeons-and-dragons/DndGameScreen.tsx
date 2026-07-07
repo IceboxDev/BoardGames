@@ -32,6 +32,7 @@ import { qk } from "../../lib/query-keys";
 import { CharacterSheetModal } from "./components/CharacterSheetModal";
 import { CombatPanel } from "./components/CombatPanel";
 import { CompendiumScreen } from "./components/CompendiumScreen";
+import { DevicesScreen } from "./components/DevicesScreen";
 import { HistoryLog } from "./components/HistoryLog";
 import type { InitiativeOrder } from "./components/InitiativePanel";
 import { NpcSheetModal } from "./components/NpcSheetModal";
@@ -47,7 +48,7 @@ import { DND_RULEBOOKS } from "./index";
 
 const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
 
-type MenuScreen = "main" | "players" | "npcs" | "history" | "sources";
+type MenuScreen = "main" | "players" | "npcs" | "history" | "sources" | "devices";
 
 const MENU: { id: MenuScreen; label: string; description: string }[] = [
   { id: "main", label: "Game Screen", description: "The story tree" },
@@ -55,6 +56,7 @@ const MENU: { id: MenuScreen; label: string; description: string }[] = [
   { id: "npcs", label: "Compendium", description: "Monsters, items & spells" },
   { id: "history", label: "History", description: "The chronicle" },
   { id: "sources", label: "Sources", description: "Tomes & sheets" },
+  { id: "devices", label: "Devices", description: "Beamer & TTS" },
 ];
 
 function formatSize(bytes: number): string {
@@ -748,6 +750,8 @@ export function DndGameScreen({ campaign, party }: Props) {
           </div>
         </div>
       )}
+
+      {screen === "devices" && <DevicesScreen />}
 
       {viewingCharacter && (
         <CharacterSheetModal

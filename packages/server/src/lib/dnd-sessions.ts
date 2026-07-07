@@ -15,10 +15,26 @@ type SessionEntry = {
   session: DndSession;
   userId: string;
   clients: Set<(data: string) => void>;
+  /** The image currently on the beamer, held in memory like the session. */
+  image: { bytes: Buffer; contentType: string; version: number } | null;
 };
 
 const byId = new Map<string, SessionEntry>();
 const byUser = new Map<string, SessionEntry>();
+const byCode = new Map<string, SessionEntry>();
+
+// No 0/O/1/I — the code is read aloud across the table.
+const CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+
+function newCode(): string {
+  for (;;) {
+    let code = "";
+    for (let i = 0; i < 6; i++) {
+      code += CODE_ALPHABET[Math.floor(Math.random() * CODE_ALPHABET.length)];
+    }
+    if (!byCode.has(code)) return code;
+  }
+}
 
 /**
  * Create the user's active session, or return the existing one when it
@@ -37,20 +53,24 @@ export function createOrReuseSession(
   }
   if (existing) {
     byId.delete(existing.session.id);
+    byCode.delete(existing.session.code);
     existing.clients.clear();
   }
   const entry: SessionEntry = {
     session: {
       id: randomUUID(),
+      code: newCode(),
       campaignId,
       campaignTitle,
       createdAt: new Date().toISOString(),
     },
     userId,
     clients: new Set(),
+    image: null,
   };
   byId.set(entry.session.id, entry);
   byUser.set(userId, entry);
+  byCode.set(entry.session.code, entry);
   return entry.session;
 }
 
@@ -64,21 +84,54 @@ export function getSession(sessionId: string, userId: string): DndSession | null
   return entry.session;
 }
 
+/** Lookup without owner check — for stream attach via code-derived id. */
+export function getSessionById(sessionId: string): DndSession | null {
+  return byId.get(sessionId)?.session ?? null;
+}
+
+/** Companion join: possession of the code IS the authorization. */
+export function getSessionByCode(code: string): DndSession | null {
+  return byCode.get(code.trim().toUpperCase())?.session ?? null;
+}
+
 /**
- * Subscribe a beamer client to a session's event stream. Every payload is
- * validated through `BeamerEventSchema` at the source so a malformed event
- * throws here, not on the companion device. Returns an unsubscribe fn, or
- * null if the session doesn't exist / isn't the caller's.
+ * Subscribe a beamer client to a session's event stream. The session id is
+ * an unguessable uuid handed out via the join code, so possession of it is
+ * the authorization — companions may be a different account than the DM.
+ * Returns an unsubscribe fn, or null if the session doesn't exist.
  */
 export function subscribeToSession(
   sessionId: string,
-  userId: string,
   send: (data: string) => void,
 ): (() => void) | null {
   const entry = byId.get(sessionId);
-  if (!entry || entry.userId !== userId) return null;
+  if (!entry) return null;
   entry.clients.add(send);
   return () => entry.clients.delete(send);
+}
+
+/** Store the beamer image (owner only); returns the new version. */
+export function setSessionImage(sessionId: string, userId: string, dataUri: string): number | null {
+  const entry = byId.get(sessionId);
+  if (!entry || entry.userId !== userId) return null;
+  const comma = dataUri.indexOf(",");
+  const header = dataUri.slice(0, comma);
+  const contentType = header.slice("data:".length, header.indexOf(";"));
+  const bytes = Buffer.from(dataUri.slice(comma + 1), "base64");
+  const version = (entry.image?.version ?? 0) + 1;
+  entry.image = { bytes, contentType, version };
+  return version;
+}
+
+export function getSessionImage(
+  sessionId: string,
+): { bytes: Buffer; contentType: string; version: number } | null {
+  return byId.get(sessionId)?.image ?? null;
+}
+
+/** How many companion screens are attached right now. */
+export function sessionClientCount(sessionId: string): number {
+  return byId.get(sessionId)?.clients.size ?? 0;
 }
 
 /** Broadcast an event to a session's subscribers. Returns the client count. */

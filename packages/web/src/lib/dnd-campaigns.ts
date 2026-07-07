@@ -1,5 +1,6 @@
 import {
   ActiveCombatResponseSchema,
+  type ActiveSessionResponse,
   ActiveSessionResponseSchema,
   type AppendHistoryRequest,
   AppendHistoryRequestSchema,
@@ -49,6 +50,7 @@ import {
   ResolveTurnResponseSchema,
   type RetriggerNpcsResponse,
   RetriggerNpcsResponseSchema,
+  SetBeamerImageRequestSchema,
   type StartCombatRequest,
   StartCombatRequestSchema,
   type SuggestNodesRequest,
@@ -309,9 +311,29 @@ export const fetchActiveDndSession = jsonQuery(
   ActiveSessionResponseSchema,
 );
 
-/** SSE stream of `BeamerEvent`s; the caller parses each message. */
+export function sessionByCode(code: string): Promise<ActiveSessionResponse> {
+  return apiFetch(`/api/dnd/sessions/by-code/${encodeURIComponent(code.trim().toUpperCase())}`, {
+    response: ActiveSessionResponseSchema,
+  });
+}
+
+export function setBeamerImage(sessionId: string, image: string): Promise<TriggerBeamerResponse> {
+  return apiFetch(`/api/dnd/sessions/${sessionId}/image`, {
+    method: "PUT",
+    body: { image },
+    request: SetBeamerImageRequestSchema,
+    response: TriggerBeamerResponseSchema,
+  });
+}
+
+/**
+ * SSE stream of `BeamerEvent`s; the caller parses each message. Deliberately
+ * SAME-ORIGIN (through the Vercel rewrite in prod): the auth cookie lives on
+ * the app domain, not Railway's — a direct-origin EventSource can't send it
+ * (the same reason game WebSockets use signed tickets).
+ */
 export function streamDndSession(sessionId: string): EventSource {
-  return new EventSource(apiUrl(`/api/dnd/sessions/${sessionId}/stream`), {
+  return new EventSource(`/api/dnd/sessions/${sessionId}/stream`, {
     withCredentials: true,
   });
 }

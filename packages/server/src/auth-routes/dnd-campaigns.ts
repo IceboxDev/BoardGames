@@ -45,6 +45,7 @@ import {
   ResolveTurnRequestSchema,
   ResolveTurnResponseSchema,
   RetriggerNpcsResponseSchema,
+  SetBeamerImageRequestSchema,
   StartCombatRequestSchema,
   SuggestNodesRequestSchema,
   SuggestNodesResponseSchema,
@@ -118,6 +119,10 @@ import {
   createOrReuseSession,
   getActiveSession,
   getSession,
+  getSessionByCode,
+  getSessionById,
+  getSessionImage,
+  setSessionImage,
   subscribeToSession,
 } from "../lib/dnd-sessions.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
@@ -1116,13 +1121,20 @@ dndCampaignRoutes.get("/sessions/active", (c) => {
   return c.json(ActiveSessionResponseSchema.parse({ session }));
 });
 
+// Companion join: the code typed on the second device resolves the session.
+dndCampaignRoutes.get("/sessions/by-code/:code", (c) => {
+  const session = getSessionByCode(c.req.param("code"));
+  return c.json(ActiveSessionResponseSchema.parse({ session }));
+});
+
 dndCampaignRoutes.get("/sessions/:id/stream", (c) => {
-  const user = c.get("user");
   const id = c.req.param("id");
-  const session = getSession(id, user.id);
+  // The uuid was handed out via the join code — possession authorizes;
+  // companions may be logged in as a different member than the DM.
+  const session = getSessionById(id);
   if (!session) return errorResponse(c, 404, "session not found", "NOT_FOUND");
   return streamSSE(c, async (stream) => {
-    const unsubscribe = subscribeToSession(id, user.id, (data) => {
+    const unsubscribe = subscribeToSession(id, (data) => {
       void stream.writeSSE({ data });
     });
     stream.onAbort(() => unsubscribe?.());
@@ -1146,4 +1158,27 @@ dndCampaignRoutes.post("/sessions/:id/trigger", zJsonBody(TriggerBeamerRequestSc
   if (!getSession(id, user.id)) return errorResponse(c, 404, "session not found", "NOT_FOUND");
   const delivered = broadcastToSession(id, user.id, c.req.valid("json").event);
   return c.json(TriggerBeamerResponseSchema.parse({ ok: true, delivered }));
+});
+
+// The DM uploads the table image; every attached beamer flips to it.
+dndCampaignRoutes.put("/sessions/:id/image", zJsonBody(SetBeamerImageRequestSchema), (c) => {
+  const user = c.get("user");
+  const id = c.req.param("id");
+  if (!getSession(id, user.id)) return errorResponse(c, 404, "session not found", "NOT_FOUND");
+  const version = setSessionImage(id, user.id, c.req.valid("json").image);
+  if (version === null) return errorResponse(c, 404, "session not found", "NOT_FOUND");
+  const delivered = broadcastToSession(id, user.id, {
+    type: "show-image",
+    url: `/api/dnd/sessions/${id}/image?v=${version}`,
+  });
+  return c.json(TriggerBeamerResponseSchema.parse({ ok: true, delivered }));
+});
+
+// Served to the beamer's <img>; the ?v= param busts its cache per upload.
+dndCampaignRoutes.get("/sessions/:id/image", (c) => {
+  const image = getSessionImage(c.req.param("id"));
+  if (!image) return errorResponse(c, 404, "no image", "NOT_FOUND");
+  c.header("Content-Type", image.contentType);
+  c.header("Cache-Control", "private, max-age=31536000, immutable");
+  return c.body(new Uint8Array(image.bytes));
 });

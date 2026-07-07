@@ -306,6 +306,8 @@ export type ListNpcsResponse = z.infer<typeof ListNpcsResponseSchema>;
 
 export const DndSessionSchema = z.object({
   id: z.string().min(1),
+  /** Short join code the companion device types in (like a game room). */
+  code: z.string().min(4).max(8),
   campaignId: z.string().min(1),
   campaignTitle: z.string().nullable(),
   createdAt: z.string(),
@@ -326,6 +328,17 @@ export const ActiveSessionResponseSchema = z.object({
   session: DndSessionSchema.nullable(),
 });
 export type ActiveSessionResponse = z.infer<typeof ActiveSessionResponseSchema>;
+
+/** ~10 MB of base64 image is the practical ceiling for a table map/artwork. */
+export const BEAMER_IMAGE_DATA_URI_MAX = 14_000_000;
+
+export const SetBeamerImageRequestSchema = z.object({
+  image: z
+    .string()
+    .regex(/^data:image\/(png|jpeg|webp|gif);base64,/, "Expected an image data URI")
+    .max(BEAMER_IMAGE_DATA_URI_MAX, "Image is too large (10 MB max)"),
+});
+export type SetBeamerImageRequest = z.infer<typeof SetBeamerImageRequestSchema>;
 
 /** Events the DM's screen can fire at the beamer. */
 export const BeamerTriggerSchema = z.discriminatedUnion("type", [
