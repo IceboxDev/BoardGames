@@ -1550,7 +1550,7 @@ export async function generateAftermath(ctx: {
   const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
   const lines: string[] = [];
   lines.push(
-    "You are the narrator at a D&D table. The combat below has just ENDED (the DM called it). Write the read-aloud the DM speaks as the fight closes — how the last of it played out and how the party realizes it is over — plus a one-sentence DM-facing summary of the outcome.",
+    "You are the narrator at a D&D table. The combat below has just ENDED (the DM called it). Write the read-aloud the DM speaks NOW — the moment AFTER the last logged action. Every turn in the log was already narrated at the table, so do NOT retell any of it: no replaying the final blow, no recap. Describe only what comes next — the scene settling, the quiet after, what the party sees, hears, and feels as they realize the fight is over. Also return a one-sentence DM-facing summary of the outcome.",
   );
   if (ctx.scene) lines.push(`\nHow the encounter began: ${ctx.scene}`);
   lines.push(
@@ -1582,6 +1582,93 @@ export async function generateAftermath(ctx: {
     readText: clamp(parsed.read_aloud, 1900),
     summary: clamp(parsed.summary, 160),
   };
+}
+
+export interface SuggestionContext {
+  campaign: { title: string; tagline: string | null; setting: string | null };
+  waypoint: { title: string; description: string; index: number; total: number };
+  ancestors: { trigger: string; readText: string }[];
+  siblings: { trigger: string; summary: string }[];
+  party: string[];
+  history: string[];
+  /** The stored module PDF — the source of scripted, unprompted events. */
+  modulePdf: { filename: string; dataUri: string } | null;
+}
+
+const SUGGESTIONS_JSON_SCHEMA = {
+  type: "object",
+  properties: {
+    branches: {
+      type: "array",
+      minItems: 2,
+      maxItems: 5,
+      items: NODE_JSON_SCHEMA,
+    },
+  },
+  required: ["branches"],
+  additionalProperties: false,
+} as const;
+
+const RawSuggestionsSchema = z.object({ branches: z.array(z.unknown()) });
+
+/**
+ * Unprompted DM developments: instead of reacting to the players, propose
+ * what the world does next — module-scripted events due at this spot first
+ * (from the attached PDF), then natural table moves (short rest, search).
+ */
+export async function generateNodeSuggestions(ctx: SuggestionContext): Promise<StoryNode[]> {
+  const client = getClient();
+  const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
+
+  const lines: string[] = [];
+  lines.push(
+    "You are the Dungeon Master preparing UNPROMPTED developments — the world acting while the players catch their breath. Given the current position in the story below (and the adventure module PDF when attached), propose 2–5 branch options for what plausibly happens NEXT from this exact moment, without any player prompting. PRIORITIZE events the module itself scripts for this location and moment (an NPC arriving, a timed event, a consequence the text calls for) — quote or closely adapt the module's own read-aloud where it exists. Then add natural table moves a DM or the players would reach for in this situation (a short rest right after a fight, searching the area, pressing on). Each branch: a SHORT imperative trigger (max ~8 words, e.g. 'Marcus arrives', 'Take a short rest'), a one-sentence DM summary, and the read-aloud text spoken when it happens. Never duplicate the existing sibling branches listed below. Ground everything in the table history — it is the truth of what already happened.",
+  );
+  lines.push(
+    `\nCampaign: ${ctx.campaign.title}${ctx.campaign.setting ? ` — ${ctx.campaign.setting}` : ""}`,
+  );
+  lines.push(
+    `Waypoint ${ctx.waypoint.index + 1}/${ctx.waypoint.total}: ${ctx.waypoint.title} — ${ctx.waypoint.description}`,
+  );
+  if (ctx.ancestors.length > 0) {
+    lines.push("\nThe branch so far (root → current node):");
+    for (const a of ctx.ancestors) lines.push(`- [${a.trigger}] ${a.readText.slice(0, 300)}`);
+  }
+  if (ctx.siblings.length > 0) {
+    lines.push("\nExisting branches at this level (do NOT duplicate):");
+    for (const sib of ctx.siblings) lines.push(`- ${sib.trigger}: ${sib.summary}`);
+  }
+  if (ctx.party.length > 0) lines.push(`\nThe party: ${ctx.party.join("; ")}`);
+  if (ctx.history.length > 0) {
+    lines.push("\nTable history (ground truth, oldest first):");
+    for (const h of ctx.history) lines.push(h);
+  }
+
+  const content: OpenAI.Responses.ResponseInputContent[] = [
+    { type: "input_text", text: lines.join("\n") },
+  ];
+  if (ctx.modulePdf) {
+    content.push({
+      type: "input_file",
+      filename: ctx.modulePdf.filename,
+      file_data: ctx.modulePdf.dataUri,
+    });
+  }
+
+  const res = await createWithRetry(client, {
+    model,
+    input: [{ role: "user", content }],
+    text: {
+      format: {
+        type: "json_schema",
+        name: "branch_suggestions",
+        strict: true,
+        schema: SUGGESTIONS_JSON_SCHEMA as unknown as Record<string, unknown>,
+      },
+    },
+  });
+  const parsed = RawSuggestionsSchema.parse(JSON.parse(responseOutputText(res)));
+  return parsed.branches.slice(0, 5).map((branch) => normalizeNode(branch));
 }
 
 export function normalizeTurnResult(raw: unknown): CombatTurnResult {

@@ -47,6 +47,10 @@ import {
   RetriggerNpcsResponseSchema,
   type StartCombatRequest,
   StartCombatRequestSchema,
+  type SuggestNodesRequest,
+  SuggestNodesRequestSchema,
+  type SuggestNodesResponse,
+  SuggestNodesResponseSchema,
   TriggerBeamerRequestSchema,
   type TriggerBeamerResponse,
   TriggerBeamerResponseSchema,
@@ -148,6 +152,18 @@ export function appendHistoryEntries(
     body: { entries },
     request: AppendHistoryRequestSchema,
     response: ListHistoryResponseSchema,
+  });
+}
+
+export function suggestNodes(
+  partyId: string,
+  body: SuggestNodesRequest,
+): Promise<SuggestNodesResponse> {
+  return apiFetch(`/api/dnd/parties/${partyId}/nodes/suggest`, {
+    method: "POST",
+    body,
+    request: SuggestNodesRequestSchema,
+    response: SuggestNodesResponseSchema,
   });
 }
 

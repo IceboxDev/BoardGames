@@ -16,6 +16,8 @@ import {
   GenerateNodeRequestSchema,
   ResolveTurnRequestSchema,
   StartCombatRequestSchema,
+  SuggestNodesRequestSchema,
+  SuggestNodesResponseSchema,
 } from "./dnd.ts";
 
 const PDF = "data:application/pdf;base64,JVBERi0xLjQ=";
@@ -330,6 +332,22 @@ describe("BeamerEventSchema", () => {
       BeamerTriggerSchema.safeParse({ type: "connected", campaignId: "c1", campaignTitle: null })
         .success,
     ).toBe(false);
+  });
+});
+
+describe("suggest nodes schemas", () => {
+  it("accepts a root-level suggestion request", () => {
+    expect(SuggestNodesRequestSchema.safeParse({ waypointIndex: 0, parentId: null }).success).toBe(
+      true,
+    );
+  });
+  it("rejects a negative waypoint", () => {
+    expect(SuggestNodesRequestSchema.safeParse({ waypointIndex: -1, parentId: "n1" }).success).toBe(
+      false,
+    );
+  });
+  it("response needs at least one node", () => {
+    expect(SuggestNodesResponseSchema.safeParse({ nodes: [] }).success).toBe(false);
   });
 });
 

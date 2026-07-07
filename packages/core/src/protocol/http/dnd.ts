@@ -460,6 +460,17 @@ export type GenerateNodeRequest = z.infer<typeof GenerateNodeRequestSchema>;
 export const GenerateNodeResponseSchema = z.object({ node: DndNodeSchema });
 export type GenerateNodeResponse = z.infer<typeof GenerateNodeResponseSchema>;
 
+export const SuggestNodesRequestSchema = z.object({
+  waypointIndex: z.number().int().min(0),
+  parentId: z.string().min(1).nullable(),
+});
+export type SuggestNodesRequest = z.infer<typeof SuggestNodesRequestSchema>;
+
+export const SuggestNodesResponseSchema = z.object({
+  nodes: z.array(DndNodeSchema).min(1).max(5),
+});
+export type SuggestNodesResponse = z.infer<typeof SuggestNodesResponseSchema>;
+
 // ── Combat ─────────────────────────────────────────────────────────────
 // The combat phase attached to an initiative node. The DM resolves each
 // turn at the table using the current combatant's action dashboard, writes

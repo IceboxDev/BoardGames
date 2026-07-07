@@ -21,6 +21,7 @@ import {
   resolveTurn,
   retriggerNpcs,
   startCombat,
+  suggestNodes,
 } from "../../lib/dnd-campaigns";
 import { errorMessageOf } from "../../lib/error-message";
 import { qk } from "../../lib/query-keys";
@@ -144,6 +145,17 @@ export function DndGameScreen({ campaign, party }: Props) {
     },
     // Even a proxy timeout leaves the node persisted — re-fetch regardless.
     onError: () => void queryClient.invalidateQueries({ queryKey: qk.dndNodes(party.id) }),
+  });
+
+  // Unprompted developments: the module (and common sense) act while the
+  // players idle — populates the current level with 2–5 branch options.
+  const suggestMutation = useMutation({
+    mutationFn: () =>
+      suggestNodes(party.id, {
+        waypointIndex,
+        parentId: currentNodeId && !branchingBlocked ? currentNodeId : null,
+      }),
+    onSuccess: () => void queryClient.invalidateQueries({ queryKey: qk.dndNodes(party.id) }),
   });
 
   const retriggerMutation = useMutation({
@@ -415,12 +427,7 @@ export function DndGameScreen({ campaign, party }: Props) {
               }
               className="h-full min-w-0 flex-1 resize-none rounded-2xl border border-amber-400/25 bg-[#1a0606]/70 p-3 text-sm text-amber-100 placeholder:text-amber-200/30 focus:border-amber-300/60 focus:outline-none"
             />
-            <div className="flex w-36 shrink-0 flex-col justify-between gap-2">
-              <p className="text-3xs leading-relaxed text-amber-200/40" style={SERIF}>
-                {combatHere
-                  ? "The referee checks the rules, updates everyone, and reads the turn back."
-                  : `The sages will chart the ${mode === "root" ? "new beginning" : "next step"} and read it back.`}
-              </p>
+            <div className="flex w-36 shrink-0 flex-col gap-2">
               {(combatHere ? resolveTurnMutation : generateMutation).isError && (
                 <p className="text-3xs text-rose-300">
                   {errorMessageOf(
@@ -429,10 +436,29 @@ export function DndGameScreen({ campaign, party }: Props) {
                   )}
                 </p>
               )}
+              {!combatHere && suggestMutation.isError && (
+                <p className="text-3xs text-rose-300">
+                  {errorMessageOf(suggestMutation.error, "The suggestion failed.")}
+                </p>
+              )}
+              {!combatHere && (
+                <Button
+                  variant="tinted"
+                  tone="amber"
+                  block
+                  className="flex-1"
+                  loading={suggestMutation.isPending}
+                  disabled={generateMutation.isPending}
+                  onClick={() => suggestMutation.mutate()}
+                >
+                  Suggest branches
+                </Button>
+              )}
               <Button
                 variant="tinted"
                 tone={combatHere ? "rose" : "amber"}
                 block
+                className="flex-1"
                 disabled={!message.trim()}
                 loading={combatHere ? resolveTurnMutation.isPending : generateMutation.isPending}
                 onClick={send}

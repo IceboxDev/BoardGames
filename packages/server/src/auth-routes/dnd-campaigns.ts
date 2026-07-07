@@ -43,6 +43,8 @@ import {
   ResolveTurnResponseSchema,
   RetriggerNpcsResponseSchema,
   StartCombatRequestSchema,
+  SuggestNodesRequestSchema,
+  SuggestNodesResponseSchema,
   TriggerBeamerRequestSchema,
   TriggerBeamerResponseSchema,
   UpdateCharacterRequestSchema,
@@ -83,6 +85,7 @@ import {
   extractReadAloudNodes,
   generateActionCards,
   generateAftermath,
+  generateNodeSuggestions,
   generateStoryNode,
   resolveCombatTurn,
 } from "../lib/dnd-extract.ts";
@@ -559,6 +562,127 @@ dndCampaignRoutes.post("/parties/:id/nodes", zJsonBody(GenerateNodeRequestSchema
 });
 
 // ── Files (Sources) ────────────────────────────────────────────────────
+
+// Unprompted developments: the world moves without player input. Generates
+// 2–5 sibling options at once (module-scripted events first, sourced from
+// the stored PDF, then natural table moves) and inserts them all.
+dndCampaignRoutes.post(
+  "/parties/:id/nodes/suggest",
+  zJsonBody(SuggestNodesRequestSchema),
+  async (c) => {
+    const user = c.get("user");
+    const partyId = c.req.param("id");
+    const body = c.req.valid("json");
+
+    const party = await getParty(partyId, user.id);
+    if (!party) return errorResponse(c, 404, "party not found", "NOT_FOUND");
+    const campaign = await getCampaign(party.campaignId, user.id);
+    if (!campaign || campaign.status !== "ready") {
+      return errorResponse(c, 404, "campaign not found", "NOT_FOUND");
+    }
+    const waypoint = campaign.checkpoints[body.waypointIndex];
+    if (!waypoint) return errorResponse(c, 400, "unknown waypoint", "BAD_WAYPOINT");
+
+    const nodes = await listNodesForParty(partyId, user.id);
+    const byId = new Map(nodes.map((n) => [n.id, n]));
+    let parent = null;
+    if (body.parentId !== null) {
+      parent = byId.get(body.parentId) ?? null;
+      if (!parent) return errorResponse(c, 404, "parent node not found", "NOT_FOUND");
+      if (parent.waypointIndex !== body.waypointIndex) {
+        return errorResponse(c, 400, "parent belongs to another waypoint", "BAD_WAYPOINT");
+      }
+    }
+    const ancestors: { trigger: string; readText: string }[] = [];
+    for (let cur = parent; cur; cur = cur.parentId ? (byId.get(cur.parentId) ?? null) : null) {
+      ancestors.unshift({ trigger: cur.trigger, readText: cur.readText });
+    }
+    const siblings = nodes
+      .filter((n) => n.waypointIndex === body.waypointIndex && n.parentId === body.parentId)
+      .map((n) => ({ trigger: n.trigger, summary: n.summary }));
+    const partyMembers = (await listCharactersForParty(partyId, user.id))
+      .filter((ch) => ch.status === "ready" && ch.sheet)
+      .map((ch) => {
+        const s = ch.sheet;
+        if (!s) return "";
+        return [
+          displayCharacterName(s, ch.sourceFilename),
+          "—",
+          s.race,
+          s.class,
+          s.level !== null ? `level ${s.level}` : null,
+        ]
+          .filter(Boolean)
+          .join(" ");
+      })
+      .filter((s) => s.length > 0);
+    const historyLines = (await listHistoryForParty(partyId, user.id))
+      .slice(-40)
+      .map((h) => `[${h.kind === "player-action" ? "party" : "dm"}] ${h.text.slice(0, 300)}`);
+
+    // The stored module PDF is the source of scripted events; suggestions
+    // degrade gracefully without it.
+    let modulePdf: { filename: string; dataUri: string } | null = null;
+    try {
+      const fileId = await getCampaignFileId(campaign.id, user.id);
+      if (fileId) {
+        const base64 = await getFileBase64(fileId, user.id);
+        if (base64) {
+          modulePdf = {
+            filename: campaign.sourceFilename,
+            dataUri: `data:application/pdf;base64,${base64}`,
+          };
+        }
+      }
+    } catch (err) {
+      console.error("[dnd] module PDF unavailable for suggestions (continuing without)", err);
+    }
+
+    try {
+      const branches = await generateNodeSuggestions({
+        campaign: {
+          title: campaign.title ?? campaign.sourceFilename,
+          tagline: campaign.tagline,
+          setting: campaign.setting,
+        },
+        waypoint: {
+          title: waypoint.title,
+          description: waypoint.description,
+          index: body.waypointIndex,
+          total: campaign.checkpoints.length,
+        },
+        ancestors,
+        siblings,
+        party: partyMembers,
+        history: historyLines,
+        modulePdf,
+      });
+      const inserted = [];
+      for (const branch of branches) {
+        inserted.push(
+          await insertNode({
+            campaignId: campaign.id,
+            partyId,
+            userId: user.id,
+            waypointIndex: body.waypointIndex,
+            parentId: body.parentId,
+            ...branch,
+          }),
+        );
+      }
+      return c.json(SuggestNodesResponseSchema.parse({ nodes: inserted }), 201);
+    } catch (err) {
+      if (err instanceof DndConfigError)
+        return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
+      return errorResponse(
+        c,
+        502,
+        `suggestion generation failed: ${err instanceof Error ? err.message : "unknown error"}`,
+        "GENERATION_FAILED",
+      );
+    }
+  },
+);
 
 dndCampaignRoutes.get("/files", async (c) => {
   const files = await listFilesForUser(c.get("user").id);
