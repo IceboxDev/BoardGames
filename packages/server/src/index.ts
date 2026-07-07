@@ -2,6 +2,9 @@
 // (including auth.ts) evaluates. See env.ts for the full reasoning.
 import "./env.ts";
 
+// Railway watch paths live in railway.json (server + core + lockfiles) —
+// core-only protocol changes must rebuild this server too.
+
 import { serve } from "@hono/node-server";
 import { initDb } from "./db.ts";
 import { markStaleProcessingCampaigns } from "./lib/dnd-campaigns-db.ts";
