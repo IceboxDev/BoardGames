@@ -429,9 +429,9 @@ describe("combat schemas", () => {
     );
   });
 
-  it("turn report is capped at 1500 chars", () => {
-    expect(ResolveTurnRequestSchema.safeParse({ message: "x".repeat(1500) }).success).toBe(true);
-    expect(ResolveTurnRequestSchema.safeParse({ message: "x".repeat(1501) }).success).toBe(false);
+  it("turn report is capped at 6000 chars", () => {
+    expect(ResolveTurnRequestSchema.safeParse({ message: "x".repeat(6000) }).success).toBe(true);
+    expect(ResolveTurnRequestSchema.safeParse({ message: "x".repeat(6001) }).success).toBe(false);
   });
 
   it("action cards reject an unknown kind", () => {

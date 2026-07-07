@@ -397,7 +397,7 @@ export type DeletePartyResponse = z.infer<typeof DeletePartyResponseSchema>;
 export const NODE_TRIGGER_MAX = 100;
 export const NODE_SUMMARY_MAX = 160;
 export const NODE_READ_TEXT_MAX = 2000;
-export const NODE_MESSAGE_MAX = 1000;
+export const NODE_MESSAGE_MAX = 6000;
 
 /**
  * `story` — read-aloud narration with further branches.
@@ -492,7 +492,7 @@ export type UndoHistoryResponse = z.infer<typeof UndoHistoryResponseSchema>;
 export const ResolveEventRequestSchema = z.object({
   waypointIndex: z.number().int().min(0),
   nodeId: z.string().min(1).nullable(),
-  message: z.string().min(1).max(1500),
+  message: z.string().min(1).max(6000),
 });
 export type ResolveEventRequest = z.infer<typeof ResolveEventRequestSchema>;
 
@@ -595,7 +595,7 @@ export const ActiveCombatResponseSchema = z.object({ combat: DndCombatSchema.nul
 export type ActiveCombatResponse = z.infer<typeof ActiveCombatResponseSchema>;
 
 export const ResolveTurnRequestSchema = z.object({
-  message: z.string().min(1).max(1500),
+  message: z.string().min(1).max(6000),
 });
 export type ResolveTurnRequest = z.infer<typeof ResolveTurnRequestSchema>;
 
