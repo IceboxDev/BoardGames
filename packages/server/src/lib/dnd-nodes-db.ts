@@ -81,6 +81,20 @@ export async function insertNode(args: {
   return rowToNode(parseRow(NodeRowSchema, row, "dnd_nodes"));
 }
 
+/** Post-combat conversion: the fight is over, the node becomes a normal
+ * story node ("Defeat the dead vines") that can grow children. */
+export async function convertNodeToStory(
+  id: string,
+  userId: string,
+  trigger: string,
+): Promise<void> {
+  await getDb().execute({
+    sql: `UPDATE dnd_nodes SET node_type = 'story', trigger_text = ?
+          WHERE id = ? AND user_id = ?`,
+    args: [trigger, id, userId],
+  });
+}
+
 export async function listNodesForParty(partyId: string, userId: string): Promise<DndNode[]> {
   const result = await getDb().execute({
     sql: `SELECT ${SELECT_COLUMNS} FROM dnd_nodes

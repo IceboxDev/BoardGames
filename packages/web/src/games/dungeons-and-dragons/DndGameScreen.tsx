@@ -208,6 +208,8 @@ export function DndGameScreen({ campaign, party }: Props) {
       queryClient.setQueryData(qk.dndCombat(party.id), { combat: null });
       setTurnResult(null);
       setMessage("");
+      // The server converted the initiative node into a story node.
+      void queryClient.invalidateQueries({ queryKey: qk.dndNodes(party.id) });
     },
   });
 

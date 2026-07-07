@@ -88,7 +88,7 @@ import {
 import { getFileBase64, getFileMeta, insertFile, listFilesForUser } from "../lib/dnd-files-db.ts";
 import { appendHistory, listHistoryForParty } from "../lib/dnd-history-db.ts";
 import { replaceNodeTemplates, seedPartyFromTemplates } from "../lib/dnd-node-templates-db.ts";
-import { insertNode, listNodesForParty } from "../lib/dnd-nodes-db.ts";
+import { convertNodeToStory, insertNode, listNodesForParty } from "../lib/dnd-nodes-db.ts";
 import { deleteNpcsForCampaign, insertNpcs, listNpcsForCampaign } from "../lib/dnd-npcs-db.ts";
 import {
   deleteParty,
@@ -370,6 +370,22 @@ dndCampaignRoutes.post(
     return c.json(CreateCharacterResponseSchema.parse({ character }), 201);
   },
 );
+
+/** "Defeat the dead vines" — derived from the combat's enemy groups. */
+function defeatTrigger(combatants: Combatant[]): string {
+  const names = [
+    ...new Set(
+      combatants
+        .filter((combatant) => combatant.kind === "enemy")
+        .map((combatant) =>
+          combatant.count > 1 && !combatant.name.toLowerCase().endsWith("s")
+            ? `${combatant.name.toLowerCase()}s`
+            : combatant.name.toLowerCase(),
+        ),
+    ),
+  ];
+  return names.length > 0 ? `Defeat the ${names.join(" and ")}` : "Survive the encounter";
+}
 
 /** Generate and cache a character's action dashboard; failure is non-fatal
  * (the combat-time endpoint regenerates on cache miss). */
@@ -735,6 +751,9 @@ dndCampaignRoutes.post("/combats/:id/end", async (c) => {
   const combat = await getCombat(c.req.param("id"), user.id);
   if (!combat) return errorResponse(c, 404, "combat not found", "NOT_FOUND");
   const updated = await updateCombat(combat.id, user.id, { status: "ended" });
+  // The fight is over — the initiative node becomes a normal story node
+  // ("Defeat the dead vines") so the tree can branch onward from it.
+  await convertNodeToStory(combat.nodeId, user.id, defeatTrigger(combat.combatants));
   return c.json(CombatResponseSchema.parse({ combat: updated }));
 });
 
