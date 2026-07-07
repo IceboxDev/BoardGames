@@ -1130,6 +1130,8 @@ const NODE_READ_TEXT_MAX = 2000;
 export interface StoryNodeContext {
   campaign: { title: string; tagline: string | null; setting: string | null };
   waypoint: { title: string; description: string; index: number; total: number };
+  /** Every node at this waypoint — link targets for converging branches. */
+  waypointNodes: { id: string; trigger: string; summary: string }[];
   /** Root → parent chain of the branch being extended (empty for a new root). */
   ancestors: { trigger: string; readText: string }[];
   /** Nodes already at this level — avoid duplicating them. */
@@ -1222,9 +1224,15 @@ function buildNodePrompt(ctx: StoryNodeContext): string {
         .join(" | ")}`,
     );
   }
+  if (ctx.waypointNodes.length > 0) {
+    lines.push(
+      "All existing nodes at this waypoint (link_to targets — converge instead of duplicating):",
+    );
+    for (const n of ctx.waypointNodes) lines.push(`- id=${n.id} [${n.trigger}] ${n.summary}`);
+  }
   lines.push(`The players now: ${ctx.message}`);
   lines.push(
-    "Write the next story node. `trigger` restates what the players did as a SHORT imperative action ('Knock', 'Search the wagon') — never 'When the party…'. `summary` is the immediate consequence in one short sentence. `read_text` is what the DM reads aloud: second person, grounded in the module's tone and everything established above, never contradicting it, ending at a natural decision point. If the players' action STARTS COMBAT, set node_type to 'initiative', trigger to 'Roll initiative', name the enemies AND their count in the summary (e.g. 'Two shadow-wolves attack.'), and make read_text the moment combat erupts; when the situation plausibly invites reinforcements you MAY include a danger_table (die, when to roll, entries) in the module's spirit — otherwise danger_table is null. For story nodes danger_table is always null.",
+    "Write the story's response as 1–5 nodes. USUALLY that is exactly ONE node. Produce SEVERAL when the DM's message itself contains distinct paths or persons — e.g. a scene where the party may question three different witnesses becomes one parent-worthy node per witness; a prepared scene script with multiple options becomes one node per option (translate any non-English material into English, staying faithful to it). Structural tools per node: `follows` = 0-based index of an earlier node in THIS batch it should nest under (a shared intro node first, each witness following it); `link_to` = the exact id of an EXISTING waypoint node this path converges into instead of duplicating it; node_type 'rest' for a short rest. For each node: `trigger` restates the players' choice as a SHORT imperative ('Question the merchant') — never 'When the party…'. `summary` is the immediate consequence in one short sentence. `read_text` is what the DM reads aloud: second person, grounded in the module's tone and everything established above, never contradicting it, ending at a natural decision point. If an action STARTS COMBAT, set node_type to 'initiative', trigger to 'Roll initiative', name the enemies AND their count in the summary, and make read_text the moment combat erupts; when the situation plausibly invites reinforcements you MAY include a danger_table in the module's spirit — otherwise danger_table is null. For story and rest nodes danger_table is always null.",
   );
   return lines.join("\n");
 }
@@ -1245,8 +1253,9 @@ export function normalizeNode(raw: unknown): StoryNode {
   };
 }
 
-/** Text-only generation — no PDF, a few seconds instead of minutes. */
-export async function generateStoryNode(ctx: StoryNodeContext): Promise<StoryNode> {
+/** Text-only generation — no PDF, a few seconds instead of minutes.
+ * Returns 1–5 structured branches (per-NPC splits, links, follow-ups). */
+export async function generateStoryNode(ctx: StoryNodeContext): Promise<SuggestedBranch[]> {
   const client = getClient();
   const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
 
@@ -1256,14 +1265,20 @@ export async function generateStoryNode(ctx: StoryNodeContext): Promise<StoryNod
     text: {
       format: {
         type: "json_schema",
-        name: "story_node",
+        name: "story_branches",
         strict: true,
-        schema: NODE_JSON_SCHEMA as unknown as Record<string, unknown>,
+        schema: STORY_BRANCHES_JSON_SCHEMA as unknown as Record<string, unknown>,
       },
     },
   });
 
-  return normalizeNode(JSON.parse(responseOutputText(res)));
+  const parsed = RawSuggestionsSchema.parse(JSON.parse(responseOutputText(res)));
+  return parsed.branches.slice(0, 5).map((branch, i) => ({
+    node: normalizeNode(branch),
+    linkTo: branch.link_to,
+    follows:
+      branch.follows !== null && branch.follows >= 0 && branch.follows < i ? branch.follows : null,
+  }));
 }
 
 // ── Combat: action dashboards ──────────────────────────────────────────
@@ -1632,6 +1647,20 @@ const SUGGESTION_BRANCH_SCHEMA = {
     },
   },
   required: [...NODE_JSON_SCHEMA.required, "link_to", "follows"],
+} as const;
+
+const STORY_BRANCHES_JSON_SCHEMA = {
+  type: "object",
+  properties: {
+    branches: {
+      type: "array",
+      minItems: 1,
+      maxItems: 5,
+      items: SUGGESTION_BRANCH_SCHEMA,
+    },
+  },
+  required: ["branches"],
+  additionalProperties: false,
 } as const;
 
 const SUGGESTIONS_JSON_SCHEMA = {

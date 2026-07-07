@@ -474,7 +474,11 @@ export const GenerateNodeRequestSchema = z.object({
 });
 export type GenerateNodeRequest = z.infer<typeof GenerateNodeRequestSchema>;
 
-export const GenerateNodeResponseSchema = z.object({ node: DndNodeSchema });
+/** The sages may answer with several structured nodes (per-NPC branches,
+ * chain links, nested follow-ups) — first node is the primary one. */
+export const GenerateNodeResponseSchema = z.object({
+  nodes: z.array(DndNodeSchema).min(1).max(5),
+});
 export type GenerateNodeResponse = z.infer<typeof GenerateNodeResponseSchema>;
 
 export const UpdateCharacterStateRequestSchema = z.object({

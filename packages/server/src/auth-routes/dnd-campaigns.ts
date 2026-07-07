@@ -544,7 +544,7 @@ dndCampaignRoutes.post("/parties/:id/nodes", zJsonBody(GenerateNodeRequestSchema
     .map((h) => `[${h.kind === "player-action" ? "party" : "dm"}] ${h.text.slice(0, 300)}`);
 
   try {
-    const generated = await generateStoryNode({
+    const branches = await generateStoryNode({
       campaign: {
         title: campaign.title ?? campaign.sourceFilename,
         tagline: campaign.tagline,
@@ -558,19 +558,37 @@ dndCampaignRoutes.post("/parties/:id/nodes", zJsonBody(GenerateNodeRequestSchema
       },
       ancestors,
       siblings,
+      waypointNodes: nodes
+        .filter((n) => n.waypointIndex === body.waypointIndex)
+        .map((n) => ({ id: n.id, trigger: n.trigger, summary: n.summary })),
       party: partyMembers,
       history: historyLines,
       message: body.message,
     });
-    const node = await insertNode({
-      campaignId: campaign.id,
-      partyId,
-      userId: user.id,
-      waypointIndex: body.waypointIndex,
-      parentId: body.parentId,
-      ...generated,
-    });
-    return c.json(GenerateNodeResponseSchema.parse({ node }), 201);
+    // Same structural resolution as suggestions: chain links must point at
+    // real nodes here; `follows` nests under an earlier node of this batch.
+    const inserted: DndNode[] = [];
+    for (const branch of branches) {
+      const linkTarget = branch.linkTo !== null ? (byId.get(branch.linkTo) ?? null) : null;
+      const validLink =
+        linkTarget !== null && linkTarget.waypointIndex === body.waypointIndex
+          ? linkTarget.id
+          : null;
+      const parentFromBatch =
+        branch.follows !== null ? (inserted[branch.follows]?.id ?? null) : null;
+      inserted.push(
+        await insertNode({
+          campaignId: campaign.id,
+          partyId,
+          userId: user.id,
+          waypointIndex: body.waypointIndex,
+          parentId: parentFromBatch ?? body.parentId,
+          linkTargetId: validLink,
+          ...branch.node,
+        }),
+      );
+    }
+    return c.json(GenerateNodeResponseSchema.parse({ nodes: inserted }), 201);
   } catch (err) {
     if (err instanceof DndConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
     return errorResponse(

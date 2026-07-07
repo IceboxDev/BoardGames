@@ -142,11 +142,13 @@ export function DndGameScreen({ campaign, party }: Props) {
       }),
     onSuccess: (result) => {
       setMessage("");
-      // Step straight into the fresh node — the players are waiting for the
-      // narration. (Existing branches still reveal only on click.)
-      setPath(
-        result.node.parentId === null ? [result.node.id] : [...path.slice(0), result.node.id],
-      );
+      // One plain node → step straight into it (the players are waiting for
+      // the narration). Several nodes (per-NPC splits, links, follow-ups) →
+      // stay put so the new branch tiles present the options.
+      const only = result.nodes.length === 1 ? result.nodes[0] : null;
+      if (only && !only.linkTargetId) {
+        setPath(only.parentId === null ? [only.id] : [...path.slice(0), only.id]);
+      }
       void queryClient.invalidateQueries({ queryKey: qk.dndNodes(party.id) });
     },
     // Even a proxy timeout leaves the node persisted — re-fetch regardless.
