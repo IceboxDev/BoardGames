@@ -94,8 +94,18 @@ export function PlayerCardLarge({ character, onView }: Props) {
       <div className="grid grid-cols-6 gap-1.5">
         <Vital
           label="HP"
-          value={sheet.maxHp !== null ? `${sheet.maxHp}` : "—"}
-          tone="border-rose-400/30 bg-rose-950/25 text-rose-200"
+          value={
+            sheet.maxHp !== null
+              ? character.state?.hp != null
+                ? `${character.state.hp}/${sheet.maxHp}`
+                : `${sheet.maxHp}`
+              : "—"
+          }
+          tone={
+            character.state?.hp != null && sheet.maxHp !== null && character.state.hp < sheet.maxHp
+              ? "border-rose-400/50 bg-rose-950/40 text-rose-100"
+              : "border-rose-400/30 bg-rose-950/25 text-rose-200"
+          }
         />
         <Vital
           label="AC"

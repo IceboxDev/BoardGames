@@ -51,6 +51,8 @@ type Props = {
   onJumpToNode: (pathIds: string[]) => void;
   /** Short-rest bookkeeping → chronicle. */
   onLogRest: (text: string) => void;
+  /** Short-rest healing → persistent character state. */
+  onRestStateUpdates: (updates: { characterId: string; hp: number; notes: string }[]) => void;
   /** For the initiative tracker: the party's PCs and the campaign's cast. */
   party: DndCharacter[];
   npcs: DndNpc[];
@@ -73,6 +75,7 @@ export function StoryTree({
   onJumpTo,
   onJumpToNode,
   onLogRest,
+  onRestStateUpdates,
   party,
   npcs,
   onOrderChange,
@@ -215,7 +218,12 @@ export function StoryTree({
       )}
 
       {current?.nodeType === "rest" && (
-        <RestPanel party={party} onLog={onLogRest} logPending={logPending} />
+        <RestPanel
+          party={party}
+          onLog={onLogRest}
+          logPending={logPending}
+          onStateUpdates={onRestStateUpdates}
+        />
       )}
 
       {/* Branches (an initiative node has no story branches — the tracker

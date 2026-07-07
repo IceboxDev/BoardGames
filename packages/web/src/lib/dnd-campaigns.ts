@@ -40,6 +40,10 @@ import {
   ListNodesResponseSchema,
   ListNpcsResponseSchema,
   ListPartiesResponseSchema,
+  type ResolveEventRequest,
+  ResolveEventRequestSchema,
+  type ResolveEventResponse,
+  ResolveEventResponseSchema,
   ResolveTurnRequestSchema,
   type ResolveTurnResponse,
   ResolveTurnResponseSchema,
@@ -57,6 +61,8 @@ import {
   UpdateCharacterRequestSchema,
   type UpdateCharacterResponse,
   UpdateCharacterResponseSchema,
+  type UpdateCharacterStateRequest,
+  UpdateCharacterStateRequestSchema,
 } from "@boardgames/core/protocol";
 import { apiUrl } from "./api-base.ts";
 import { apiFetch } from "./api-fetch.ts";
@@ -152,6 +158,30 @@ export function appendHistoryEntries(
     body: { entries },
     request: AppendHistoryRequestSchema,
     response: ListHistoryResponseSchema,
+  });
+}
+
+export function resolveEvent(
+  partyId: string,
+  body: ResolveEventRequest,
+): Promise<ResolveEventResponse> {
+  return apiFetch(`/api/dnd/parties/${partyId}/resolve`, {
+    method: "POST",
+    body,
+    request: ResolveEventRequestSchema,
+    response: ResolveEventResponseSchema,
+  });
+}
+
+export function updateCharacterState(
+  characterId: string,
+  body: UpdateCharacterStateRequest,
+): Promise<UpdateCharacterResponse> {
+  return apiFetch(`/api/dnd/characters/${characterId}/state`, {
+    method: "PUT",
+    body,
+    request: UpdateCharacterStateRequestSchema,
+    response: UpdateCharacterResponseSchema,
   });
 }
 

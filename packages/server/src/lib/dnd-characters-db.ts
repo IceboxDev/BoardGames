@@ -4,7 +4,11 @@
 // read in the context of a campaign the same user owns.
 
 import type { CharacterSheet, DndCharacter } from "@boardgames/core/protocol";
-import { CharacterSheetSchema, CharacterStatusSchema } from "@boardgames/core/protocol";
+import {
+  CharacterSheetSchema,
+  CharacterStateSchema,
+  CharacterStatusSchema,
+} from "@boardgames/core/protocol";
 import { z } from "zod";
 import { getDb } from "../db.ts";
 import { jsonColumn, parseRow, parseRows } from "./db-rows.ts";
@@ -16,6 +20,7 @@ const CharacterRowSchema = z.object({
   user_id: z.string(),
   status: CharacterStatusSchema,
   sheet_json: jsonColumn(CharacterSheetSchema).nullable(),
+  state_json: jsonColumn(CharacterStateSchema).nullable().default(null),
   source_filename: z.string(),
   source_size_bytes: z.number().int().nonnegative(),
   error: z.string().nullable(),
@@ -30,6 +35,7 @@ function rowToCharacter(row: CharacterRow): DndCharacter {
     partyId: row.party_id,
     status: row.status,
     sheet: row.sheet_json,
+    state: row.state_json,
     sourceFilename: row.source_filename,
     sourceSizeBytes: row.source_size_bytes,
     error: row.error,
@@ -37,7 +43,7 @@ function rowToCharacter(row: CharacterRow): DndCharacter {
   };
 }
 
-const SELECT_COLUMNS = `id, campaign_id, party_id, user_id, status, sheet_json,
+const SELECT_COLUMNS = `id, campaign_id, party_id, user_id, status, sheet_json, state_json,
    source_filename, source_size_bytes, error, created_at`;
 
 export async function insertCharacter(args: {
@@ -126,6 +132,16 @@ export async function setCharacterReady(id: string, sheet: CharacterSheet): Prom
           SET status = 'ready', sheet_json = ?, error = NULL
           WHERE id = ?`,
     args: [JSON.stringify(sheet), id],
+  });
+}
+
+export async function setCharacterState(
+  id: string,
+  state: import("@boardgames/core/protocol").CharacterState,
+): Promise<void> {
+  await getDb().execute({
+    sql: "UPDATE dnd_characters SET state_json = ? WHERE id = ?",
+    args: [JSON.stringify(state), id],
   });
 }
 

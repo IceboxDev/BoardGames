@@ -98,21 +98,13 @@ export function CampaignSetup({ campaign, onOpenParty, onBurned }: Props) {
               {campaign.tagline}
             </p>
           )}
-          <div className="mt-3 flex flex-wrap items-center justify-center gap-1.5">
-            {campaign.setting && (
-              <span className="rounded-full bg-amber-400/10 px-2 py-0.5 text-3xs font-semibold uppercase tracking-[0.12em] text-amber-200/80 ring-1 ring-amber-400/25">
-                {campaign.setting}
-              </span>
-            )}
-            {campaign.levelRange && (
-              <span className="rounded-full bg-amber-400/10 px-2 py-0.5 text-3xs font-semibold uppercase tracking-[0.12em] text-amber-200/80 ring-1 ring-amber-400/25">
-                {campaign.levelRange}
-              </span>
-            )}
-            <span className="rounded-full bg-white/[0.04] px-2 py-0.5 text-3xs font-semibold uppercase tracking-[0.12em] text-fg-secondary ring-1 ring-white/10">
-              {campaign.checkpoints.length} waypoints charted
-            </span>
-          </div>
+          {(campaign.levelRange || campaign.kind === "one-shot") && (
+            <p className="mt-3 text-2xs uppercase tracking-[0.2em] text-amber-300/60" style={SERIF}>
+              {[campaign.kind === "one-shot" ? "One-shot" : null, campaign.levelRange]
+                .filter(Boolean)
+                .join(" · ")}
+            </p>
+          )}
         </div>
       </div>
 
@@ -149,9 +141,10 @@ export function CampaignSetup({ campaign, onOpenParty, onBurned }: Props) {
                 >
                   <span
                     aria-hidden="true"
+                    title={`${party.memberCount} adventurers`}
                     className="font-fantasy grid h-10 w-10 shrink-0 place-items-center rounded-full bg-amber-500/20 text-base font-bold text-amber-200 ring-1 ring-amber-400/50"
                   >
-                    {party.name[0]?.toUpperCase()}
+                    {party.memberCount}
                   </span>
                   <span className="min-w-0 flex-1">
                     <span className="font-fantasy block truncate text-lg font-bold text-amber-100">

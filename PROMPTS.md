@@ -810,6 +810,14 @@ These images are used as fixed full-viewport backgrounds behind the game UI. The
 
 ---
 
+## 9. Dungeons & Dragons (DM Tool) — Background
+
+**File:** `packages/web/src/games/dungeons-and-dragons/assets/background.png`
+
+> A moody, atmospheric view of a Dungeon Master's study at midnight, seen from above at a steep angle. A heavy oak table dominates the lower third, its surface barely visible through shadow — an open leather-bound adventure tome with age-yellowed pages curls at the frame's lower edge, a guttering red candle beside it dripping wax onto the wood. At the periphery, warm crimson-amber light from the candle and the faint ember glow of a stone hearth catch the edges of scattered treasures: a handful of polished dice with a single d20 catching the light, a folded cloth map with unreadable ink contours, a brass inkwell and quill, a small pewter dragon figurine rearing at the table's far corner, and a DM's screen panel rising just into frame, its inner face lost in darkness. Thin drifts of candle smoke curl through the frame, and beyond the table's edge the room dissolves into bookshelf silhouettes and the suggestion of a mounted shield. The center of the image is deep shadow and near-black, dominated by the empty stretch of dark oak between candle and hearth-glow. The mood is hushed anticipation — the breath before the adventure begins. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. The scene should feel like ambient environmental art — more mood than detail. Soft painterly textures with film grain. Volumetric haze and warm rim lighting from below. The center must remain dark enough (near-black) to serve as a backdrop for white UI text. No text, no logos, no UI elements, no readable page contents. Landscape 3:2 aspect ratio (1536×1024).
+
+---
+
 Game-specific card/role prompts live alongside each game:
 
 - **Lost Cities card art** (60 cards): [`packages/web/src/games/lost-cities/CARD-PROMPTS.md`](packages/web/src/games/lost-cities/CARD-PROMPTS.md)

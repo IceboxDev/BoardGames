@@ -40,6 +40,8 @@ import {
   ListNodesResponseSchema,
   ListNpcsResponseSchema,
   ListPartiesResponseSchema,
+  ResolveEventRequestSchema,
+  ResolveEventResponseSchema,
   ResolveTurnRequestSchema,
   ResolveTurnResponseSchema,
   RetriggerNpcsResponseSchema,
@@ -50,6 +52,7 @@ import {
   TriggerBeamerResponseSchema,
   UpdateCharacterRequestSchema,
   UpdateCharacterResponseSchema,
+  UpdateCharacterStateRequestSchema,
 } from "@boardgames/core/protocol";
 import { streamSSE } from "hono/streaming";
 import { authedApp } from "../auth/index.ts";
@@ -76,6 +79,7 @@ import {
   setCharacterError,
   setCharacterFile,
   setCharacterReady,
+  setCharacterState,
 } from "../lib/dnd-characters-db.ts";
 import { getActiveCombat, getCombat, insertCombat, updateCombat } from "../lib/dnd-combats-db.ts";
 import {
@@ -87,10 +91,17 @@ import {
   generateActionCards,
   generateAftermath,
   generateNodeSuggestions,
+  generateQuickResolution,
   generateStoryNode,
   resolveCombatTurn,
 } from "../lib/dnd-extract.ts";
-import { getFileBase64, getFileMeta, insertFile, listFilesForUser } from "../lib/dnd-files-db.ts";
+import {
+  getFileBase64,
+  getFileMeta,
+  insertFile,
+  listFilesForUser,
+  renameFile,
+} from "../lib/dnd-files-db.ts";
 import { appendHistory, listHistoryForParty } from "../lib/dnd-history-db.ts";
 import { replaceNodeTemplates, seedPartyFromTemplates } from "../lib/dnd-node-templates-db.ts";
 import { convertNodeToStory, insertNode, listNodesForParty } from "../lib/dnd-nodes-db.ts";
@@ -186,6 +197,14 @@ dndCampaignRoutes.post("/campaigns", zJsonBody(CreateCampaignRequestSchema), asy
         }),
       ]);
       await setCampaignReady(campaign.id, extracted);
+      // The stored tome now carries the adventure's real name, not the
+      // filesystem name it was uploaded under.
+      try {
+        const storedFileId = await getCampaignFileId(campaign.id, user.id);
+        if (storedFileId) await renameFile(storedFileId, `${extracted.title}.pdf`);
+      } catch (err) {
+        console.error("[dnd] module rename failed (continuing)", err);
+      }
       await insertNpcs(campaign.id, user.id, npcs);
       try {
         const blocks = await extractReadAloudNodes(body.pdf, body.filename, extracted.checkpoints);
@@ -564,6 +583,66 @@ dndCampaignRoutes.post("/parties/:id/nodes", zJsonBody(GenerateNodeRequestSchema
 
 // ── Files (Sources) ────────────────────────────────────────────────────
 
+// Quick resolve: adjudicate a table event (a check, an examination, a small
+// interaction) WITHOUT growing the tree — the narration is generated,
+// logged straight into the history (ground truth), and returned to read.
+dndCampaignRoutes.post("/parties/:id/resolve", zJsonBody(ResolveEventRequestSchema), async (c) => {
+  const user = c.get("user");
+  const partyId = c.req.param("id");
+  const body = c.req.valid("json");
+  const party = await getParty(partyId, user.id);
+  if (!party) return errorResponse(c, 404, "party not found", "NOT_FOUND");
+  const campaign = await getCampaign(party.campaignId, user.id);
+  if (!campaign || campaign.status !== "ready") {
+    return errorResponse(c, 404, "campaign not found", "NOT_FOUND");
+  }
+  const waypoint = campaign.checkpoints[body.waypointIndex];
+  if (!waypoint) return errorResponse(c, 400, "unknown waypoint", "BAD_WAYPOINT");
+  const node = body.nodeId
+    ? (await listNodesForParty(partyId, user.id)).find((n) => n.id === body.nodeId)
+    : null;
+  const partyMembers = (await listCharactersForParty(partyId, user.id))
+    .filter((ch) => ch.status === "ready" && ch.sheet)
+    .map((ch) => {
+      const sheet = ch.sheet;
+      if (!sheet) return "";
+      return `${displayCharacterName(sheet, ch.sourceFilename)} — ${[sheet.race, sheet.class].filter(Boolean).join(" ")}`;
+    })
+    .filter((brief) => brief.length > 0);
+  const npcBriefs = (await listNpcsForCampaign(party.campaignId, user.id)).map(
+    (npc) =>
+      `${npc.name}: ${npc.description.slice(0, 120)}${npc.secrets ? ` [DM-only, reveal only if a check earns it: ${npc.secrets.slice(0, 160)}]` : ""}`,
+  );
+  const history = (await listHistoryForParty(partyId, user.id))
+    .slice(-40)
+    .map((h) => `[${h.kind === "player-action" ? "party" : "dm"}] ${h.text.slice(0, 240)}`);
+  try {
+    const narration = await generateQuickResolution({
+      campaign: { title: campaign.title ?? campaign.sourceFilename, setting: campaign.setting },
+      waypoint: { title: waypoint.title, description: waypoint.description },
+      scene: node ? `${node.summary} ${node.readText}`.slice(0, 700) : null,
+      party: partyMembers,
+      npcBriefs,
+      history,
+      message: body.message,
+    });
+    // The resolution is ground truth the moment it is read — log it.
+    await appendHistory(partyId, campaign.id, user.id, [
+      { kind: "player-action", text: body.message.slice(0, 2000), nodeId: body.nodeId },
+      { kind: "dm-narration", text: narration, nodeId: body.nodeId },
+    ]);
+    return c.json(ResolveEventResponseSchema.parse({ narration }));
+  } catch (err) {
+    if (err instanceof DndConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
+    return errorResponse(
+      c,
+      502,
+      `resolution failed: ${err instanceof Error ? err.message : "unknown error"}`,
+      "GENERATION_FAILED",
+    );
+  }
+});
+
 // Unprompted developments: the world moves without player input. Generates
 // 2–5 sibling options at once (module-scripted events first, sourced from
 // the stored PDF, then natural table moves) and inserts them all.
@@ -740,22 +819,34 @@ dndCampaignRoutes.post("/parties/:id/combat", zJsonBody(StartCombatRequestSchema
   const existing = await getActiveCombat(partyId, user.id);
   if (existing) return errorResponse(c, 409, "a combat is already active", "COMBAT_ACTIVE");
   const body = c.req.valid("json");
+  // Damage carries between battles: PCs enter at their persistent current
+  // hp (from the last fight/rest), not automatically at full.
+  const partyState = new Map(
+    (await listCharactersForParty(partyId, user.id)).map((ch) => [ch.id, ch.state]),
+  );
   const sorted = [...body.combatants].sort((a, b) => b.initiative - a.initiative);
-  const combatants: Combatant[] = sorted.map((entry, i) => ({
-    key: `c${i}`,
-    name: entry.name,
-    kind: entry.kind,
-    characterId: entry.characterId,
-    count: entry.count,
-    initiative: entry.initiative,
-    maxHp: entry.maxHp,
-    hp: entry.maxHp,
-    conditions: [],
-    position: "",
-    notes: "",
-    grantedActions: [],
-    removedActions: [],
-  }));
+  const combatants: Combatant[] = sorted.map((entry, i) => {
+    const state = entry.characterId ? (partyState.get(entry.characterId) ?? null) : null;
+    const hp =
+      state?.hp != null && entry.maxHp !== null
+        ? Math.min(entry.maxHp, state.hp)
+        : (state?.hp ?? entry.maxHp);
+    return {
+      key: `c${i}`,
+      name: entry.name,
+      kind: entry.kind,
+      characterId: entry.characterId,
+      count: entry.count,
+      initiative: entry.initiative,
+      maxHp: entry.maxHp,
+      hp,
+      conditions: [],
+      position: "",
+      notes: state?.notes ? state.notes : "",
+      grantedActions: [],
+      removedActions: [],
+    };
+  });
   const combat = await insertCombat({
     campaignId: party.campaignId,
     partyId,
@@ -892,6 +983,19 @@ dndCampaignRoutes.post("/combats/:id/end", async (c) => {
   const combat = await getCombat(c.req.param("id"), user.id);
   if (!combat) return errorResponse(c, 404, "combat not found", "NOT_FOUND");
   const updated = await updateCombat(combat.id, user.id, { status: "ended" });
+  // Persist each PC's outcome: hp and resource notes carry to the next
+  // fight and to the rest screen.
+  for (const combatant of combat.combatants) {
+    if (combatant.kind !== "pc" || !combatant.characterId) continue;
+    try {
+      await setCharacterState(combatant.characterId, {
+        hp: combatant.hp,
+        notes: combatant.notes.slice(0, 400),
+      });
+    } catch (err) {
+      console.error("[dnd] failed to persist character state", err);
+    }
+  }
   // The fight is over — the initiative node becomes a normal story node
   // ("Defeat the dead vines") whose read-aloud is rewritten as the battle's
   // AFTERMATH, generated from the logged history. Generation failure is
@@ -915,6 +1019,23 @@ dndCampaignRoutes.post("/combats/:id/end", async (c) => {
   await convertNodeToStory(combat.nodeId, user.id, defeatTrigger(combat.combatants), aftermath);
   return c.json(CombatResponseSchema.parse({ combat: updated }));
 });
+
+// Persistent between-battles state (hp, notes) — the rest screen and
+// manual corrections write here.
+dndCampaignRoutes.put(
+  "/characters/:id/state",
+  zJsonBody(UpdateCharacterStateRequestSchema),
+  async (c) => {
+    const user = c.get("user");
+    const character = await getCharacter(c.req.param("id"), user.id);
+    if (!character || character.status !== "ready") {
+      return errorResponse(c, 404, "character not found", "NOT_FOUND");
+    }
+    await setCharacterState(character.id, c.req.valid("json").state);
+    const updated = await getCharacter(character.id, user.id);
+    return c.json(UpdateCharacterResponseSchema.parse({ character: updated }));
+  },
+);
 
 // Character combat dashboard: generated once from the sheet, cached.
 dndCampaignRoutes.post("/characters/:id/actions", async (c) => {

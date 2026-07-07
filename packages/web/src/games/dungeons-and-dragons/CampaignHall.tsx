@@ -39,13 +39,10 @@ export function CampaignHall({ onOpenCampaign }: Props) {
     <div className="mx-auto flex w-full max-w-3xl flex-col gap-5 px-3 py-4 sm:px-6 sm:py-6">
       <HallHero />
 
-      <div className="flex items-center justify-between gap-3 px-1">
-        <h2 className="font-fantasy text-2xs font-bold uppercase tracking-[0.3em] text-amber-300/80">
-          Your campaigns
-        </h2>
+      <div className="flex items-center justify-end gap-3 px-1">
         <Button variant="tinted" tone="amber" size="sm" onClick={() => setCreating(true)}>
           <PlusIcon className="h-4 w-4" />
-          Add a campaign
+          Add an adventure
         </Button>
       </div>
 
@@ -67,25 +64,50 @@ export function CampaignHall({ onOpenCampaign }: Props) {
           />
         }
       >
-        {(data) => (
-          <ul className="flex flex-col gap-3">
-            {data.campaigns.map((campaign, i) => (
-              <motion.li
-                key={campaign.id}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.25, delay: Math.min(i * 0.05, 0.3) }}
-              >
-                <CampaignTome
-                  campaign={campaign}
-                  onOpen={onOpenCampaign}
-                  onDelete={(id) => deleteMutation.mutate(id)}
-                  deleting={deleteMutation.isPending && deleteMutation.variables === campaign.id}
-                />
-              </motion.li>
-            ))}
-          </ul>
-        )}
+        {(data) => {
+          // Two shelves: full campaigns and single-session one-shots.
+          // Processing rows sit with the campaigns until their kind is known.
+          const shelves = [
+            {
+              title: "Campaigns",
+              items: data.campaigns.filter((c) => c.kind !== "one-shot"),
+            },
+            {
+              title: "One-shots",
+              items: data.campaigns.filter((c) => c.kind === "one-shot"),
+            },
+          ].filter((shelf) => shelf.items.length > 0);
+          return (
+            <div className="flex flex-col gap-5">
+              {shelves.map((shelf) => (
+                <div key={shelf.title} className="flex flex-col gap-3">
+                  <h2 className="font-fantasy px-1 text-2xs font-bold uppercase tracking-[0.3em] text-amber-300/80">
+                    {shelf.title}
+                  </h2>
+                  <ul className="flex flex-col gap-3">
+                    {shelf.items.map((campaign, i) => (
+                      <motion.li
+                        key={campaign.id}
+                        initial={{ opacity: 0, y: 10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.25, delay: Math.min(i * 0.05, 0.3) }}
+                      >
+                        <CampaignTome
+                          campaign={campaign}
+                          onOpen={onOpenCampaign}
+                          onDelete={(id) => deleteMutation.mutate(id)}
+                          deleting={
+                            deleteMutation.isPending && deleteMutation.variables === campaign.id
+                          }
+                        />
+                      </motion.li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          );
+        }}
       </QueryBoundary>
 
       {creating && <CreateCampaignModal onClose={() => setCreating(false)} />}

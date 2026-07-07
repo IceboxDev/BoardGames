@@ -21,9 +21,11 @@ type Props = {
   party: DndCharacter[];
   onLog: (text: string) => void;
   logPending: boolean;
+  /** Persist healed hp per resting character (current + regained, capped). */
+  onStateUpdates: (updates: { characterId: string; hp: number; notes: string }[]) => void;
 };
 
-export function RestPanel({ party, onLog, logPending }: Props) {
+export function RestPanel({ party, onLog, logPending, onStateUpdates }: Props) {
   const [rows, setRows] = useState<Record<string, RestRow>>(() =>
     Object.fromEntries(
       party.map((ch) => [ch.id, { resting: true, hitDice: "", hpRegained: "", activity: "" }]),
@@ -78,7 +80,24 @@ export function RestPanel({ party, onLog, logPending }: Props) {
           tone="amber"
           size="xs"
           loading={logPending}
-          onClick={() => onLog(buildLog())}
+          onClick={() => {
+            const updates: { characterId: string; hp: number; notes: string }[] = [];
+            for (const ch of party) {
+              const row = rows[ch.id];
+              const max = ch.sheet?.maxHp ?? null;
+              if (!row || !row.resting || max === null) continue;
+              const regained = Number.parseInt(row.hpRegained, 10);
+              if (!Number.isFinite(regained) || regained <= 0) continue;
+              const current = ch.state?.hp ?? max;
+              updates.push({
+                characterId: ch.id,
+                hp: Math.min(max, current + regained),
+                notes: ch.state?.notes ?? "",
+              });
+            }
+            if (updates.length > 0) onStateUpdates(updates);
+            onLog(buildLog());
+          }}
         >
           Log rest
         </Button>
@@ -107,9 +126,15 @@ export function RestPanel({ party, onLog, logPending }: Props) {
                 <span className="font-fantasy truncate text-sm font-bold text-amber-100">
                   {name}
                 </span>
-                {ch.sheet?.maxHp !== null && (
-                  <span className="shrink-0 text-3xs text-amber-200/40">
-                    max {ch.sheet?.maxHp} HP
+                {ch.sheet?.maxHp != null && (
+                  <span
+                    className={`shrink-0 text-3xs font-bold ${
+                      (ch.state?.hp ?? ch.sheet.maxHp) < ch.sheet.maxHp
+                        ? "text-rose-300"
+                        : "text-emerald-300/70"
+                    }`}
+                  >
+                    {ch.state?.hp ?? ch.sheet.maxHp}/{ch.sheet.maxHp} HP
                   </span>
                 )}
               </label>

@@ -76,6 +76,7 @@ const STRAHD_CHECKPOINTS: CampaignCheckpoint[] = [
 const STRAHD: Campaign = {
   id: "preview-strahd",
   status: "ready",
+  kind: "campaign",
   title: "Curse of Strahd",
   tagline: "A gothic horror sandbox where the villain always has the home advantage.",
   setting: "Barovia, the Domains of Dread",
@@ -157,6 +158,7 @@ const VEX: DndCharacter = {
   partyId: PARTY_META.id,
   status: "ready",
   sheet: VEX_SHEET,
+  state: { hp: 31, notes: "one L1 slot spent" },
   sourceFilename: "vex-character-sheet.pdf",
   sourceSizeBytes: 240_000,
   error: null,
@@ -637,6 +639,7 @@ export default function DndToolPreview() {
           party={PARTY.filter((ch) => ch.status === "ready" && ch.sheet)}
           onLog={() => {}}
           logPending={false}
+          onStateUpdates={() => {}}
         />
 
         <SectionTitle>Combat — action dashboard (PC turn, Shortbow spent)</SectionTitle>

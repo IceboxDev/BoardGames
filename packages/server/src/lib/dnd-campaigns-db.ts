@@ -12,6 +12,7 @@ const CampaignRowSchema = z.object({
   id: z.string(),
   user_id: z.string(),
   status: CampaignStatusSchema,
+  kind: z.string().nullable().default("campaign"),
   title: z.string().nullable(),
   tagline: z.string().nullable(),
   setting: z.string().nullable(),
@@ -27,6 +28,7 @@ type CampaignRow = z.infer<typeof CampaignRowSchema>;
 function rowToCampaign(row: CampaignRow): Campaign {
   return {
     id: row.id,
+    kind: row.kind === "one-shot" ? "one-shot" : "campaign",
     status: row.status,
     title: row.title,
     tagline: row.tagline,
@@ -40,7 +42,7 @@ function rowToCampaign(row: CampaignRow): Campaign {
   };
 }
 
-const SELECT_COLUMNS = `id, user_id, status, title, tagline, setting, level_range,
+const SELECT_COLUMNS = `id, user_id, status, kind, title, tagline, setting, level_range,
    source_filename, source_size_bytes, checkpoints_json, error, created_at`;
 
 export async function insertCampaign(args: {
@@ -94,12 +96,13 @@ export async function setCampaignReady(
     tagline: string | null;
     setting: string | null;
     levelRange: string | null;
+    kind: "campaign" | "one-shot";
     checkpoints: CampaignCheckpoint[];
   },
 ): Promise<void> {
   await getDb().execute({
     sql: `UPDATE dnd_campaigns
-          SET status = 'ready', title = ?, tagline = ?, setting = ?, level_range = ?,
+          SET status = 'ready', title = ?, tagline = ?, setting = ?, level_range = ?, kind = ?,
               checkpoints_json = ?, error = NULL
           WHERE id = ?`,
     args: [
@@ -107,6 +110,7 @@ export async function setCampaignReady(
       extracted.tagline,
       extracted.setting,
       extracted.levelRange,
+      extracted.kind,
       JSON.stringify(extracted.checkpoints),
       id,
     ],

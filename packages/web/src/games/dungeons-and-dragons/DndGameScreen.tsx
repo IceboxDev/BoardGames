@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { GameScreen } from "../../components/game-layout";
 import { BookIcon } from "../../components/icons";
 import { D20Die } from "../../components/offline/D20Die";
-import { Button, EmptyState, LoadingState } from "../../components/ui";
+import { Button, EmptyState, LoadingState, Modal } from "../../components/ui";
 import {
   activeCombatQueryFn,
   advanceCombat,
@@ -18,15 +18,18 @@ import {
   historyQueryFn,
   nodesQueryFn,
   npcsQueryFn,
+  resolveEvent,
   resolveTurn,
   retriggerNpcs,
   startCombat,
   suggestNodes,
+  updateCharacterState,
 } from "../../lib/dnd-campaigns";
 import { errorMessageOf } from "../../lib/error-message";
 import { qk } from "../../lib/query-keys";
 import { CharacterSheetModal } from "./components/CharacterSheetModal";
 import { CombatPanel } from "./components/CombatPanel";
+import { CompendiumScreen } from "./components/CompendiumScreen";
 import { HistoryLog } from "./components/HistoryLog";
 import type { InitiativeOrder } from "./components/InitiativePanel";
 import { NpcSheetModal } from "./components/NpcSheetModal";
@@ -47,7 +50,7 @@ type MenuScreen = "main" | "players" | "npcs" | "history" | "sources";
 const MENU: { id: MenuScreen; label: string; description: string }[] = [
   { id: "main", label: "Game Screen", description: "The story tree" },
   { id: "players", label: "Players", description: "The party ledger" },
-  { id: "npcs", label: "NPCs & Monsters", description: "Cast & bestiary" },
+  { id: "npcs", label: "Compendium", description: "Monsters, items & spells" },
   { id: "history", label: "History", description: "The chronicle" },
   { id: "sources", label: "Sources", description: "Tomes & sheets" },
 ];
@@ -74,6 +77,7 @@ export function DndGameScreen({ campaign, party }: Props) {
   const [recharting, setRecharting] = useState(false);
   const [combatOrder, setCombatOrder] = useState<InitiativeOrder | null>(null);
   const [turnResult, setTurnResult] = useState<ResolveTurnResponse | null>(null);
+  const [quickNarration, setQuickNarration] = useState<string | null>(null);
 
   // (Re-)register the live session so a beamer companion can attach.
   useEffect(() => {
@@ -156,6 +160,33 @@ export function DndGameScreen({ campaign, party }: Props) {
         parentId: currentNodeId && !branchingBlocked ? currentNodeId : null,
       }),
     onSuccess: () => void queryClient.invalidateQueries({ queryKey: qk.dndNodes(party.id) }),
+  });
+
+  // Short-rest healing persists to each character's between-battles state.
+  const restStateMutation = useMutation({
+    mutationFn: async (updates: { characterId: string; hp: number; notes: string }[]) => {
+      for (const update of updates) {
+        await updateCharacterState(update.characterId, {
+          state: { hp: update.hp, notes: update.notes },
+        });
+      }
+    },
+    onSettled: () => queryClient.invalidateQueries({ queryKey: qk.dndCharacters(party.id) }),
+  });
+
+  // Quick resolve: adjudicate a table event in place — logged, no node.
+  const quickResolveMutation = useMutation({
+    mutationFn: (msg: string) =>
+      resolveEvent(party.id, {
+        waypointIndex,
+        nodeId: currentNodeId && !branchingBlocked ? currentNodeId : null,
+        message: msg,
+      }),
+    onSuccess: (result) => {
+      setMessage("");
+      setQuickNarration(result.narration);
+      void queryClient.invalidateQueries({ queryKey: qk.dndHistory(party.id) });
+    },
   });
 
   const retriggerMutation = useMutation({
@@ -265,15 +296,18 @@ export function DndGameScreen({ campaign, party }: Props) {
     if (!generateMutation.isPending) generateMutation.mutate(msg);
   };
 
-  // Ultra-short recap of the LOGGED history only — what the party last did
-  // and how the DM answered, glanceable across sessions.
-  const recap = history.slice(-9).map((h) => ({
-    id: h.id,
-    kind: h.kind,
-    line:
-      (h.kind === "player-action" ? "▸ " : h.kind === "combat" ? "⚔ " : "") +
-      (h.text.length > 72 ? `${h.text.slice(0, 71)}…` : h.text),
-  }));
+  // Ultra-short recap of the LOGGED history only — newest first, enough
+  // entries to fill the column (it scrolls past the fold).
+  const recap = history
+    .slice(-40)
+    .reverse()
+    .map((h) => ({
+      id: h.id,
+      kind: h.kind,
+      line:
+        (h.kind === "player-action" ? "▸ " : h.kind === "combat" ? "⚔ " : "") +
+        (h.text.length > 72 ? `${h.text.slice(0, 71)}…` : h.text),
+    }));
 
   return (
     <GameScreen
@@ -441,6 +475,11 @@ export function DndGameScreen({ campaign, party }: Props) {
                   {errorMessageOf(suggestMutation.error, "The suggestion failed.")}
                 </p>
               )}
+              {!combatHere && quickResolveMutation.isError && (
+                <p className="text-3xs text-rose-300">
+                  {errorMessageOf(quickResolveMutation.error, "The resolution failed.")}
+                </p>
+              )}
               {!combatHere && (
                 <Button
                   variant="tinted"
@@ -448,10 +487,26 @@ export function DndGameScreen({ campaign, party }: Props) {
                   block
                   className="flex-1"
                   loading={suggestMutation.isPending}
-                  disabled={generateMutation.isPending}
+                  disabled={generateMutation.isPending || quickResolveMutation.isPending}
                   onClick={() => suggestMutation.mutate()}
                 >
                   Suggest branches
+                </Button>
+              )}
+              {!combatHere && (
+                <Button
+                  variant="tinted"
+                  tone="emerald"
+                  block
+                  className="flex-1"
+                  disabled={!message.trim() || generateMutation.isPending}
+                  loading={quickResolveMutation.isPending}
+                  onClick={() => {
+                    const msg = message.trim();
+                    if (msg) quickResolveMutation.mutate(msg);
+                  }}
+                >
+                  Quick resolve
                 </Button>
               )}
               <Button
@@ -501,6 +556,7 @@ export function DndGameScreen({ campaign, party }: Props) {
               onEnterNode={(nodeId) => setPath([...path, nodeId])}
               onJumpTo={(i) => setPath(i < 0 ? [] : path.slice(0, i + 1))}
               onJumpToNode={setPath}
+              onRestStateUpdates={(updates) => restStateMutation.mutate(updates)}
               onLogRest={(text) =>
                 logMutation.mutate([
                   {
@@ -525,7 +581,7 @@ export function DndGameScreen({ campaign, party }: Props) {
       )}
 
       {screen === "players" && (
-        <div className="min-h-0 flex-1 overflow-y-auto">
+        <div className="min-h-0 flex-1 overflow-y-auto pt-3">
           {charactersQuery.isPending ? (
             <LoadingState fill label="Opening the party ledger…" />
           ) : partyMembers.length === 0 ? (
@@ -552,96 +608,22 @@ export function DndGameScreen({ campaign, party }: Props) {
       )}
 
       {screen === "npcs" && (
-        <div className="flex min-h-0 flex-1 flex-col gap-3">
-          <div className="flex shrink-0 items-center justify-between gap-3 px-1">
-            <p className="text-2xs text-amber-200/50" style={SERIF}>
-              {recharting
-                ? "The sages are recharting the cast from the module — this takes a few minutes."
-                : "Charted from the module's appendix."}
-            </p>
-            <Button
-              variant="tinted"
-              tone="amber"
-              size="xs"
-              loading={retriggerMutation.isPending}
-              disabled={recharting}
-              onClick={() => retriggerMutation.mutate()}
-            >
-              Recharter NPCs
-            </Button>
-          </div>
-          {retriggerMutation.isError && (
-            <p className="px-1 text-xs text-rose-300">
-              {errorMessageOf(retriggerMutation.error, "Recharter failed.")}
-            </p>
-          )}
-          <div className="min-h-0 flex-1 overflow-y-auto">
-            {npcsQuery.isPending ? (
-              <LoadingState fill label="Consulting the dramatis personae…" />
-            ) : npcs.length === 0 ? (
-              <EmptyState
-                tone="amber"
-                fill
-                icon={<D20Die count={20} className="h-6 w-6" />}
-                title="No NPC cards"
-                description='NPCs are charted from the module when a campaign is uploaded. Use "Recharter NPCs" above — or re-upload the module if it predates source storage.'
-              />
-            ) : (
-              <ul className="grid grid-cols-1 gap-2.5 lg:grid-cols-2 2xl:grid-cols-3">
-                {npcs.map((npc) => (
-                  <li key={npc.id}>
-                    {/* biome-ignore lint/correctness/noRestrictedElements: full-card click target styled as an NPC card; Button/Chip chrome doesn't fit. */}
-                    <button
-                      type="button"
-                      onClick={() => setViewingNpc(npc)}
-                      className="flex w-full items-center gap-3 rounded-2xl border border-amber-400/20 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/90 to-black/80 p-3 text-left transition-colors hover:border-amber-400/40"
-                    >
-                      <span
-                        aria-hidden="true"
-                        className={`font-fantasy grid h-10 w-10 shrink-0 place-items-center rounded-full text-base font-bold ring-1 ${
-                          npc.category === "monster"
-                            ? "bg-emerald-500/20 text-emerald-200 ring-emerald-400/50"
-                            : "bg-purple-500/20 text-purple-200 ring-purple-400/50"
-                        }`}
-                      >
-                        {npc.name[0]?.toUpperCase()}
-                      </span>
-                      <span className="min-w-0 flex-1">
-                        <span className="font-fantasy block truncate text-base font-bold text-amber-100">
-                          {npc.name}
-                        </span>
-                        <span className="block truncate text-2xs text-amber-200/60">
-                          {npc.role}
-                        </span>
-                      </span>
-                      {npc.category === "monster" && (
-                        <span className="shrink-0 rounded-full bg-emerald-500/10 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-[0.12em] text-emerald-200/80 ring-1 ring-emerald-400/30">
-                          Monster
-                        </span>
-                      )}
-                      <span className="flex shrink-0 gap-1">
-                        {npc.maxHp !== null && (
-                          <span className="rounded-full bg-rose-500/15 px-1.5 py-0.5 text-3xs font-bold text-rose-200 ring-1 ring-rose-400/30">
-                            {npc.maxHp} HP
-                          </span>
-                        )}
-                        {npc.armorClass !== null && (
-                          <span className="rounded-full bg-sky-500/15 px-1.5 py-0.5 text-3xs font-bold text-sky-200 ring-1 ring-sky-400/30">
-                            AC {npc.armorClass}
-                          </span>
-                        )}
-                      </span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div>
-        </div>
+        <CompendiumScreen
+          npcs={npcs}
+          onOpenNpc={(npc) => setViewingNpc(npc)}
+          recharting={recharting}
+          onRecharter={() => retriggerMutation.mutate()}
+          recharterPending={retriggerMutation.isPending}
+          recharterError={
+            retriggerMutation.isError
+              ? errorMessageOf(retriggerMutation.error, "Recharter failed.")
+              : null
+          }
+        />
       )}
 
       {screen === "history" && (
-        <div className="min-h-0 flex-1 overflow-y-auto">
+        <div className="min-h-0 flex-1 overflow-y-auto pt-3">
           {historyQuery.isPending ? (
             <LoadingState fill label="Opening the chronicle…" />
           ) : (
@@ -657,7 +639,7 @@ export function DndGameScreen({ campaign, party }: Props) {
       )}
 
       {screen === "sources" && (
-        <div className="min-h-0 flex-1 overflow-y-auto">
+        <div className="min-h-0 flex-1 overflow-y-auto pt-3">
           <div className="flex flex-col gap-4">
             <div>
               <p
@@ -750,6 +732,20 @@ export function DndGameScreen({ campaign, party }: Props) {
         />
       )}
       {viewingNpc && <NpcSheetModal npc={viewingNpc} onClose={() => setViewingNpc(null)} />}
+      {quickNarration && (
+        <Modal
+          eyebrow="Resolved in place — logged to the chronicle"
+          title="Read aloud"
+          onClose={() => setQuickNarration(null)}
+        >
+          <p
+            className="whitespace-pre-line text-base leading-relaxed text-amber-100/95"
+            style={SERIF}
+          >
+            {quickNarration}
+          </p>
+        </Modal>
+      )}
     </GameScreen>
   );
 }

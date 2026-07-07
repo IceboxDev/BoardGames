@@ -82,6 +82,14 @@ export async function getFileMeta(id: string, userId: string): Promise<DndFile |
 }
 
 /** Reassemble a stored file's base64 payload, chunk by chunk. */
+/** Post-extraction rename: the ugly upload filename becomes the title. */
+export async function renameFile(id: string, filename: string): Promise<void> {
+  await getDb().execute({
+    sql: "UPDATE dnd_files SET filename = ? WHERE id = ?",
+    args: [filename, id],
+  });
+}
+
 export async function getFileBase64(id: string, userId: string): Promise<string | null> {
   if (!(await getFileMeta(id, userId))) return null;
   const parts: string[] = [];

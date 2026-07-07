@@ -175,6 +175,7 @@ export interface CampaignExtraction {
   tagline: string | null;
   setting: string | null;
   levelRange: string | null;
+  kind: "campaign" | "one-shot";
   checkpoints: CampaignCheckpoint[];
 }
 
@@ -190,6 +191,7 @@ const RawExtractionSchema = z.object({
   tagline: z.string().nullable(),
   setting: z.string().nullable(),
   level_range: z.string().nullable(),
+  kind: z.string().default("campaign"),
   checkpoints: z.array(
     z.object({
       title: z.string(),
@@ -216,6 +218,12 @@ const EXTRACTION_JSON_SCHEMA = {
       type: ["string", "null"],
       description: "Short label like 'Levels 1–10', or null if not stated.",
     },
+    kind: {
+      type: "string",
+      enum: ["campaign", "one-shot"],
+      description:
+        "'one-shot' when the module is a single-session adventure (self-described as a one-shot, or a short module clearly meant for one sitting); 'campaign' for multi-session adventures.",
+    },
     checkpoints: {
       type: "array",
       minItems: 5,
@@ -240,7 +248,7 @@ const EXTRACTION_JSON_SCHEMA = {
       },
     },
   },
-  required: ["title", "tagline", "setting", "level_range", "checkpoints"],
+  required: ["title", "tagline", "setting", "level_range", "kind", "checkpoints"],
   additionalProperties: false,
 } as const;
 
@@ -248,7 +256,7 @@ const EXTRACTION_PROMPT = `You are assisting a Dungeon Master preparing to run t
 1. The adventure's official title.
 2. A one-sentence dramatic tagline pitching the adventure.
 3. The primary setting or region.
-4. The intended character level range as a short label like "Levels 1–10" (null if not stated).
+4. The intended character level range as a short label like "Levels 1–10" (null if not stated), and whether the module is a single-session ONE-SHOT or a multi-session CAMPAIGN.
 5. The story waypoints. Waypoints MUST follow the module's own structure, in document order: one waypoint per named part/chapter, and one waypoint per enumerated area or location (e.g. "Area 1: …", "Area 2: …") — preserve the module's numbering and order EXACTLY, never reordering, merging, or skipping enumerated areas. For each waypoint provide:
    - a short, evocative title (keep the module's area/part name recognizable);
    - a 1–2 sentence DM-facing description (spoilers expected);
@@ -281,6 +289,7 @@ export function normalizeExtraction(raw: unknown): CampaignExtraction {
 
   const title = clamp(parsed.title, CHECKPOINT_TITLE_MAX);
   if (!title) throw new Error("the model returned no campaign title");
+  const kind = parsed.kind === "one-shot" ? ("one-shot" as const) : ("campaign" as const);
 
   const checkpoints = parsed.checkpoints
     .map((cp) => ({
@@ -297,6 +306,7 @@ export function normalizeExtraction(raw: unknown): CampaignExtraction {
     tagline: clampNullable(parsed.tagline, TAGLINE_MAX),
     setting: clampNullable(parsed.setting, SETTING_MAX),
     levelRange: clampNullable(parsed.level_range, LEVEL_RANGE_MAX),
+    kind,
     checkpoints,
   };
 }
@@ -1713,6 +1723,63 @@ export async function generateNodeSuggestions(ctx: SuggestionContext): Promise<S
     follows:
       branch.follows !== null && branch.follows >= 0 && branch.follows < i ? branch.follows : null,
   }));
+}
+
+const QUICK_RESOLVE_JSON_SCHEMA = {
+  type: "object",
+  properties: {
+    narration: {
+      type: "string",
+      description:
+        "The read-aloud resolving the reported action — purely in-fiction (no rolls, DCs, or rules vocabulary), 1 short paragraph (max ~1200 chars). When the report includes a check with a roll, adjudicate it (pick a sensible DC, compare, reveal in proportion — grounded in the scene, the cast's nature and DM-only notes, and the history).",
+    },
+  },
+  required: ["narration"],
+  additionalProperties: false,
+} as const;
+
+/** Resolve a table event in place — no node, just narration for the log. */
+export async function generateQuickResolution(ctx: {
+  campaign: { title: string; setting: string | null };
+  waypoint: { title: string; description: string };
+  scene: string | null;
+  party: string[];
+  npcBriefs: string[];
+  history: string[];
+  message: string;
+}): Promise<string> {
+  const client = getClient();
+  const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
+  const lines: string[] = [];
+  lines.push(
+    "You are the narrator at a D&D table. The DM reports a small table event — an ability or skill check, a quick interaction, an examination — that should be RESOLVED IN PLACE without branching the story. Write the read-aloud that resolves it: when a check with a roll is reported, adjudicate it (choose a sensible DC for the difficulty, compare the roll, and reveal in proportion — a bare success gives partial insight, a high roll the useful truth, a failure is narrated as absence or confusion, never silence). Ground everything in the scene, the cast's nature and DM-only notes, and the table history. Purely in-fiction: no numbers, DCs, or rules vocabulary in the narration.",
+  );
+  lines.push(
+    `\nCampaign: ${ctx.campaign.title}${ctx.campaign.setting ? ` — ${ctx.campaign.setting}` : ""}`,
+  );
+  lines.push(`Waypoint: ${ctx.waypoint.title} — ${ctx.waypoint.description}`);
+  if (ctx.scene) lines.push(`\nScene: ${ctx.scene}`);
+  if (ctx.party.length > 0) lines.push(`\nThe party: ${ctx.party.join("; ")}`);
+  if (ctx.npcBriefs.length > 0) lines.push(`Cast: ${ctx.npcBriefs.join(" || ")}`);
+  if (ctx.history.length > 0) {
+    lines.push("\nTable history (ground truth, oldest first):");
+    for (const h of ctx.history) lines.push(h);
+  }
+  lines.push(`\nThe DM reports: ${ctx.message}`);
+  const res = await createWithRetry(client, {
+    model,
+    input: [{ role: "user", content: [{ type: "input_text", text: lines.join("\n") }] }],
+    text: {
+      format: {
+        type: "json_schema",
+        name: "quick_resolution",
+        strict: true,
+        schema: QUICK_RESOLVE_JSON_SCHEMA as unknown as Record<string, unknown>,
+      },
+    },
+  });
+  const parsed = z.object({ narration: z.string() }).parse(JSON.parse(responseOutputText(res)));
+  return clamp(parsed.narration, 1500);
 }
 
 export function normalizeTurnResult(raw: unknown): CombatTurnResult {

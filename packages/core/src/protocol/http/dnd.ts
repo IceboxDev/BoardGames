@@ -56,9 +56,14 @@ export type CampaignCheckpoint = z.infer<typeof CampaignCheckpointSchema>;
 export const CampaignStatusSchema = z.enum(["processing", "ready", "error"]);
 export type CampaignStatus = z.infer<typeof CampaignStatusSchema>;
 
+export const CampaignKindSchema = z.enum(["campaign", "one-shot"]);
+export type CampaignKind = z.infer<typeof CampaignKindSchema>;
+
 export const CampaignSchema = z.object({
   id: z.string().min(1),
   status: CampaignStatusSchema,
+  /** Full campaign vs single-session one-shot — shelved separately in the hall. */
+  kind: CampaignKindSchema.default("campaign"),
   /** Extracted fields — null until `status === "ready"`. */
   title: z.string().nullable(),
   tagline: z.string().nullable(),
@@ -194,6 +199,13 @@ export function displayCharacterName(
   return sheet?.name?.trim() || sheet?.playerName?.trim() || fallback;
 }
 
+/** Between-battles state: damage carries over, rests heal, notes persist. */
+export const CharacterStateSchema = z.object({
+  hp: z.number().int().min(0).max(999).nullable().default(null),
+  notes: z.string().max(400).default(""),
+});
+export type CharacterState = z.infer<typeof CharacterStateSchema>;
+
 export const DndCharacterSchema = z.object({
   id: z.string().min(1),
   campaignId: z.string().min(1),
@@ -202,6 +214,8 @@ export const DndCharacterSchema = z.object({
   status: CharacterStatusSchema,
   /** The extracted internal representation — null until `status === "ready"`. */
   sheet: CharacterSheetSchema.nullable(),
+  /** Between-battles state — null until the first fight/rest touches it. */
+  state: CharacterStateSchema.nullable().default(null),
   sourceFilename: z.string(),
   sourceSizeBytes: z.number().int().nonnegative(),
   error: z.string().nullable(),
@@ -462,6 +476,25 @@ export type GenerateNodeRequest = z.infer<typeof GenerateNodeRequestSchema>;
 
 export const GenerateNodeResponseSchema = z.object({ node: DndNodeSchema });
 export type GenerateNodeResponse = z.infer<typeof GenerateNodeResponseSchema>;
+
+export const UpdateCharacterStateRequestSchema = z.object({
+  state: CharacterStateSchema,
+});
+export type UpdateCharacterStateRequest = z.infer<typeof UpdateCharacterStateRequestSchema>;
+
+// Quick resolve: adjudicate a table event (a check, a small interaction)
+// WITHOUT growing the tree — the outcome is narrated and logged to history.
+export const ResolveEventRequestSchema = z.object({
+  waypointIndex: z.number().int().min(0),
+  nodeId: z.string().min(1).nullable(),
+  message: z.string().min(1).max(1500),
+});
+export type ResolveEventRequest = z.infer<typeof ResolveEventRequestSchema>;
+
+export const ResolveEventResponseSchema = z.object({
+  narration: z.string(),
+});
+export type ResolveEventResponse = z.infer<typeof ResolveEventResponseSchema>;
 
 export const SuggestNodesRequestSchema = z.object({
   waypointIndex: z.number().int().min(0),

@@ -19,6 +19,10 @@ const MONSTERS: Record<string, MonsterEntry> = {
   "swarm of wasps": { name: "Swarm of Wasps", dex: 13, maxHp: 22, armorClass: 12 },
 };
 
+export function listMonsterEntries(): MonsterEntry[] {
+  return Object.values(MONSTERS);
+}
+
 export function getMonsterEntry(name: string): MonsterEntry | null {
   return MONSTERS[name.trim().toLowerCase()] ?? null;
 }
