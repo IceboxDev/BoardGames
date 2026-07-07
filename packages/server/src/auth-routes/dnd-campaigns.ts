@@ -652,9 +652,15 @@ dndCampaignRoutes.post("/combats/:id/turn", zJsonBody(ResolveTurnRequestSchema),
   const npcBriefs = party
     ? (await listNpcsForCampaign(party.campaignId, user.id)).map(
         (npc) =>
-          `${npc.name} (${npc.kind ?? "?"}): AC ${npc.armorClass ?? "?"}, HP ${npc.maxHp ?? "?"} — ${npc.description.slice(0, 160)}`,
+          `${npc.name} (${npc.kind ?? "?"}): AC ${npc.armorClass ?? "?"}, HP ${npc.maxHp ?? "?"} — ${npc.description.slice(0, 160)}${npc.secrets ? ` [DM-only, reveal only if a check earns it: ${npc.secrets.slice(0, 200)}]` : ""}`,
       )
     : [];
+  // The encounter's scene text grounds knowledge checks ("what twisted this
+  // place?") — without it the referee can only narrate the attempt.
+  const combatNode = (await listNodesForParty(combat.partyId, user.id)).find(
+    (node) => node.id === combat.nodeId,
+  );
+  const scene = combatNode ? `${combatNode.summary} ${combatNode.readText}`.slice(0, 700) : null;
   const history = (await listHistoryForParty(combat.partyId, user.id))
     .slice(-25)
     .map((h) => `[${h.kind === "player-action" ? "party" : "dm"}] ${h.text.slice(0, 240)}`);
@@ -664,6 +670,7 @@ dndCampaignRoutes.post("/combats/:id/turn", zJsonBody(ResolveTurnRequestSchema),
       round: combat.round,
       currentName: current.name,
       currentCount: current.count,
+      scene,
       combatants: combat.combatants,
       partyBriefs,
       npcBriefs,

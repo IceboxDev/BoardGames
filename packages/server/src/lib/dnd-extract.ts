@@ -1350,6 +1350,8 @@ export interface CombatTurnContext {
   currentName: string;
   /** Group size of the acting combatant — ×3 means all three act this turn. */
   currentCount: number;
+  /** The encounter node's summary + read-aloud — grounds knowledge checks. */
+  scene: string | null;
   combatants: Combatant[];
   /** Party sheet briefs (name, class, key numbers, equipment, spells). */
   partyBriefs: string[];
@@ -1494,7 +1496,7 @@ function buildTurnPrompt(ctx: CombatTurnContext): string {
     "2. STATE: when legal, return full replacement state for every combatant the turn touched — hp after damage/healing (respect resistances/immunities implied by the creature's nature), added/removed conditions, updated positions and distances (keep them consistent for range checks next turn), and cumulative notes for spent resources (arrows, spell slots, feature uses). ALSO maintain each touched combatant's option lists: when the turn grants someone a usable option (a Bardic Inspiration die, a handed potion, a picked-up weapon), add it to the RECEIVER's granted_actions with its mechanics; drop it when spent. When a baseline dashboard option becomes unusable (last arrow fired → 'Shortbow', a 1/day feature spent), add its exact name to that combatant's removed_actions; drop it when restored. Both lists are FULL REPLACEMENTS — carry forward entries that still apply.",
   );
   lines.push(
-    "3. NARRATION: write the read-aloud for the whole turn — the arrow's flight, the blade's bite, damage that felt weaker than it should (implying resistance) — grounded in exactly what the DM reported. The narration is read to the PLAYERS IN CHARACTER: no HP totals, no damage numbers, no ACs, rolls, or rules vocabulary of any kind — translate the numbers into fiction (how hard it hit, how close to collapse the target looks). The mechanical bookkeeping belongs in the updates, never in the narration. Cover EVERY action in the report: when a group acts, narrate each creature's action in sequence — never stop after the first.",
+    "3. NARRATION: write the read-aloud for the whole turn — the arrow's flight, the blade's bite, damage that felt weaker than it should (implying resistance) — grounded in exactly what the DM reported. The narration is read to the PLAYERS IN CHARACTER: no HP totals, no damage numbers, no ACs, rolls, or rules vocabulary of any kind — translate the numbers into fiction (how hard it hit, how close to collapse the target looks). The mechanical bookkeeping belongs in the updates, never in the narration. When the report includes an ability or skill check with a roll (Nature, Investigation, Perception, ...), ADJUDICATE it: pick a sensible DC for the difficulty, compare the roll, and RESOLVE the outcome inside the narration — what the character actually learns, notices, or achieves, grounded in the scene, the opposition's nature and DM-only notes, and the history. Reveal in proportion to the roll: a bare success gives partial insight, a high roll the useful truth (a creature's weakness, the cause behind the scene). A failed check is still resolved — narrate the absence or confusion of insight. Never leave a declared check unresolved. Cover EVERY action in the report: when a group acts, narrate each creature's action in sequence — never stop after the first.",
   );
   lines.push("");
   lines.push(
@@ -1508,6 +1510,7 @@ function buildTurnPrompt(ctx: CombatTurnContext): string {
       `${c.key} | ${c.name}${c.count > 1 ? ` ×${c.count}` : ""} | ${c.kind} | ${c.initiative} | ${c.hp ?? "?"}/${c.maxHp ?? "?"} | ${c.conditions.join("+") || "-"} | ${c.position || "-"} | ${c.notes || "-"} | ${granted} | ${removed}`,
     );
   }
+  if (ctx.scene) lines.push(`\nScene: ${ctx.scene}`);
   if (ctx.partyBriefs.length > 0) lines.push(`\nParty sheets: ${ctx.partyBriefs.join(" || ")}`);
   if (ctx.npcBriefs.length > 0) lines.push(`Opposition: ${ctx.npcBriefs.join(" || ")}`);
   if (ctx.history.length > 0) {
