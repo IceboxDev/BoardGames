@@ -87,7 +87,16 @@ export async function convertNodeToStory(
   id: string,
   userId: string,
   trigger: string,
+  aftermath?: { readText: string; summary: string },
 ): Promise<void> {
+  if (aftermath) {
+    await getDb().execute({
+      sql: `UPDATE dnd_nodes SET node_type = 'story', trigger_text = ?, read_text = ?, summary = ?
+            WHERE id = ? AND user_id = ?`,
+      args: [trigger, aftermath.readText, aftermath.summary, id, userId],
+    });
+    return;
+  }
   await getDb().execute({
     sql: `UPDATE dnd_nodes SET node_type = 'story', trigger_text = ?
           WHERE id = ? AND user_id = ?`,

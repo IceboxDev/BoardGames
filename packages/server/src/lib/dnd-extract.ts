@@ -1521,6 +1521,69 @@ function buildTurnPrompt(ctx: CombatTurnContext): string {
   return lines.join("\n");
 }
 
+const AFTERMATH_JSON_SCHEMA = {
+  type: "object",
+  properties: {
+    read_aloud: {
+      type: "string",
+      description:
+        "The read-aloud for the battle's end — the last blow landing, the scene falling quiet, what the party sees and feels as they realize it is over. Purely in-fiction (no HP, rolls, or rules vocabulary), 1–2 short paragraphs (max ~1800 chars), grounded ONLY in what the battle log and final state establish.",
+    },
+    summary: {
+      type: "string",
+      description: "One DM-facing sentence stating how the encounter ended.",
+    },
+  },
+  required: ["read_aloud", "summary"],
+  additionalProperties: false,
+} as const;
+
+const RawAftermathSchema = z.object({ read_aloud: z.string(), summary: z.string() });
+
+/** Post-combat: rewrite the encounter node's read-aloud as the aftermath. */
+export async function generateAftermath(ctx: {
+  scene: string | null;
+  combatants: Combatant[];
+  history: string[];
+}): Promise<{ readText: string; summary: string }> {
+  const client = getClient();
+  const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
+  const lines: string[] = [];
+  lines.push(
+    "You are the narrator at a D&D table. The combat below has just ENDED (the DM called it). Write the read-aloud the DM speaks as the fight closes — how the last of it played out and how the party realizes it is over — plus a one-sentence DM-facing summary of the outcome.",
+  );
+  if (ctx.scene) lines.push(`\nHow the encounter began: ${ctx.scene}`);
+  lines.push(
+    "\nFinal combatant state (name ×count | kind | hp/max | conditions | position | notes):",
+  );
+  for (const c of ctx.combatants) {
+    lines.push(
+      `${c.name}${c.count > 1 ? ` ×${c.count}` : ""} | ${c.kind} | ${c.hp ?? "?"}/${c.maxHp ?? "?"} | ${c.conditions.join("+") || "-"} | ${c.position || "-"} | ${c.notes || "-"}`,
+    );
+  }
+  if (ctx.history.length > 0) {
+    lines.push("\nThe battle as logged, in order:");
+    for (const h of ctx.history) lines.push(h);
+  }
+  const res = await createWithRetry(client, {
+    model,
+    input: [{ role: "user", content: [{ type: "input_text", text: lines.join("\n") }] }],
+    text: {
+      format: {
+        type: "json_schema",
+        name: "combat_aftermath",
+        strict: true,
+        schema: AFTERMATH_JSON_SCHEMA as unknown as Record<string, unknown>,
+      },
+    },
+  });
+  const parsed = RawAftermathSchema.parse(JSON.parse(responseOutputText(res)));
+  return {
+    readText: clamp(parsed.read_aloud, 1900),
+    summary: clamp(parsed.summary, 160),
+  };
+}
+
 export function normalizeTurnResult(raw: unknown): CombatTurnResult {
   const parsed = RawTurnSchema.parse(raw);
   const alerts = parsed.alerts.map((a) => clamp(a, 1000)).filter((a) => a.length > 0);

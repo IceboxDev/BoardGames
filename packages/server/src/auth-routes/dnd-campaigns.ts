@@ -82,6 +82,7 @@ import {
   extractNpcs,
   extractReadAloudNodes,
   generateActionCards,
+  generateAftermath,
   generateStoryNode,
   resolveCombatTurn,
 } from "../lib/dnd-extract.ts";
@@ -752,8 +753,26 @@ dndCampaignRoutes.post("/combats/:id/end", async (c) => {
   if (!combat) return errorResponse(c, 404, "combat not found", "NOT_FOUND");
   const updated = await updateCombat(combat.id, user.id, { status: "ended" });
   // The fight is over — the initiative node becomes a normal story node
-  // ("Defeat the dead vines") so the tree can branch onward from it.
-  await convertNodeToStory(combat.nodeId, user.id, defeatTrigger(combat.combatants));
+  // ("Defeat the dead vines") whose read-aloud is rewritten as the battle's
+  // AFTERMATH, generated from the logged history. Generation failure is
+  // non-fatal: the node still converts, keeping its original text.
+  let aftermath: { readText: string; summary: string } | undefined;
+  try {
+    const node = (await listNodesForParty(combat.partyId, user.id)).find(
+      (n) => n.id === combat.nodeId,
+    );
+    const history = (await listHistoryForParty(combat.partyId, user.id))
+      .slice(-25)
+      .map((h) => `[${h.kind === "player-action" ? "party" : "dm"}] ${h.text.slice(0, 240)}`);
+    aftermath = await generateAftermath({
+      scene: node ? `${node.summary} ${node.readText}`.slice(0, 700) : null,
+      combatants: combat.combatants,
+      history,
+    });
+  } catch (err) {
+    console.error("[dnd] aftermath generation failed (node still converts)", err);
+  }
+  await convertNodeToStory(combat.nodeId, user.id, defeatTrigger(combat.combatants), aftermath);
   return c.json(CombatResponseSchema.parse({ combat: updated }));
 });
 
