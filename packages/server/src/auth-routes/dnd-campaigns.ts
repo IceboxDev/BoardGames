@@ -29,6 +29,7 @@ import {
   DeleteCampaignResponseSchema,
   DeleteCharacterResponseSchema,
   DeletePartyResponseSchema,
+  type DndNode,
   displayCharacterName,
   GenerateNodeRequestSchema,
   GenerateNodeResponseSchema,
@@ -653,20 +654,35 @@ dndCampaignRoutes.post(
         },
         ancestors,
         siblings,
+        waypointNodes: nodes
+          .filter((n) => n.waypointIndex === body.waypointIndex)
+          .map((n) => ({ id: n.id, trigger: n.trigger, summary: n.summary })),
         party: partyMembers,
         history: historyLines,
         modulePdf,
       });
-      const inserted = [];
+      const inserted: DndNode[] = [];
       for (const branch of branches) {
+        // Chain links must point at a real node at this waypoint; a bad id
+        // degrades to an ordinary branch rather than failing the batch.
+        const linkTarget = branch.linkTo !== null ? (byId.get(branch.linkTo) ?? null) : null;
+        const validLink =
+          linkTarget !== null && linkTarget.waypointIndex === body.waypointIndex
+            ? linkTarget.id
+            : null;
+        // `follows` nests a dependent branch under an earlier one from this
+        // same batch (guards react AFTER the captain arrives).
+        const parentFromBatch =
+          branch.follows !== null ? (inserted[branch.follows]?.id ?? null) : null;
         inserted.push(
           await insertNode({
             campaignId: campaign.id,
             partyId,
             userId: user.id,
             waypointIndex: body.waypointIndex,
-            parentId: body.parentId,
-            ...branch,
+            parentId: parentFromBatch ?? body.parentId,
+            linkTargetId: validLink,
+            ...branch.node,
           }),
         );
       }

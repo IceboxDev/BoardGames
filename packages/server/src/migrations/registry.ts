@@ -24,6 +24,7 @@ import { dndNodeTypes } from "./0016-dnd-node-types.ts";
 import { dndDangerTables } from "./0017-dnd-danger-tables.ts";
 import { dndHistory } from "./0018-dnd-history.ts";
 import { dndCombats } from "./0019-dnd-combats.ts";
+import { dndNodeLinks } from "./0020-dnd-node-links.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -46,6 +47,7 @@ export const migrations: readonly Migration[] = [
   dndDangerTables,
   dndHistory,
   dndCombats,
+  dndNodeLinks,
 ];
 
 /**

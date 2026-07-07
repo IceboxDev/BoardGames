@@ -3,6 +3,32 @@ import { ChevronRightIcon } from "../../../components/icons";
 import { D20Die } from "../../../components/offline/D20Die";
 import { Button } from "../../../components/ui";
 import { type InitiativeOrder, InitiativePanel } from "./InitiativePanel";
+import { RestPanel } from "./RestPanel";
+
+/** Chain-link glyph for nodes that converge into a parallel branch. */
+function ChainIcon({ className }: { className?: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      className={className}
+      aria-hidden="true"
+    >
+      <path
+        d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 // The main game screen's core: the story tree inside a waypoint "folder".
 // Waypoint view shows the roots of every tree charted there; entering a node
@@ -21,6 +47,10 @@ type Props = {
   onEnterNode: (nodeId: string) => void;
   /** Jump up the breadcrumb: -1 = waypoint view, otherwise index into path. */
   onJumpTo: (pathIndex: number) => void;
+  /** Chain-link traversal: replace the whole path (root → target ids). */
+  onJumpToNode: (pathIds: string[]) => void;
+  /** Short-rest bookkeeping → chronicle. */
+  onLogRest: (text: string) => void;
   /** For the initiative tracker: the party's PCs and the campaign's cast. */
   party: DndCharacter[];
   npcs: DndNpc[];
@@ -41,6 +71,8 @@ export function StoryTree({
   path,
   onEnterNode,
   onJumpTo,
+  onJumpToNode,
+  onLogRest,
   party,
   npcs,
   onOrderChange,
@@ -58,6 +90,24 @@ export function StoryTree({
   const children = nodes.filter(
     (n) => n.waypointIndex === waypointIndex && n.parentId === (current?.id ?? null),
   );
+
+  // A chain-link tile doesn't open its own node — it jumps to the target's
+  // branch (root → target), "ending" this one.
+  const enter = (node: DndNode) => {
+    if (node.linkTargetId && byId.has(node.linkTargetId)) {
+      const ids: string[] = [];
+      for (
+        let cur: DndNode | null = byId.get(node.linkTargetId) ?? null;
+        cur;
+        cur = cur.parentId ? (byId.get(cur.parentId) ?? null) : null
+      ) {
+        ids.unshift(cur.id);
+      }
+      onJumpToNode(ids);
+      return;
+    }
+    onEnterNode(node.id);
+  };
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto pb-2">
@@ -164,6 +214,10 @@ export function StoryTree({
         )
       )}
 
+      {current?.nodeType === "rest" && (
+        <RestPanel party={party} onLog={onLogRest} logPending={logPending} />
+      )}
+
       {/* Branches (an initiative node has no story branches — the tracker
           above IS the node; combat resolution lands in a later slice). */}
       {current?.nodeType === "initiative" ? null : (
@@ -192,7 +246,7 @@ export function StoryTree({
                   {/* biome-ignore lint/correctness/noRestrictedElements: full-card click target — a story branch tile; Button/Chip chrome doesn't fit. */}
                   <button
                     type="button"
-                    onClick={() => onEnterNode(node.id)}
+                    onClick={() => enter(node)}
                     className={`flex h-full w-full flex-col gap-1.5 rounded-2xl border p-3.5 text-left transition-all hover:-translate-y-0.5 ${
                       node.nodeType === "initiative"
                         ? "border-rose-400/40 bg-gradient-to-br from-[#3a0a0a]/90 via-surface-900/90 to-black/80 hover:border-rose-300/60"
@@ -215,6 +269,19 @@ export function StoryTree({
                       {node.nodeType === "initiative" && (
                         <span className="ml-auto shrink-0 rounded-full bg-rose-500/15 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-[0.12em] text-rose-200/80 ring-1 ring-rose-400/30">
                           Combat
+                        </span>
+                      )}
+                      {node.nodeType === "rest" && (
+                        <span className="ml-auto shrink-0 rounded-full bg-emerald-500/15 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-[0.12em] text-emerald-200/80 ring-1 ring-emerald-400/30">
+                          Rest
+                        </span>
+                      )}
+                      {node.linkTargetId && (
+                        <span
+                          className="ml-auto shrink-0 text-amber-300/70"
+                          title="Leads to an existing branch"
+                        >
+                          <ChainIcon className="h-4 w-4" />
                         </span>
                       )}
                     </span>

@@ -15,6 +15,7 @@ import { CharacterSheetModal } from "../games/dungeons-and-dragons/components/Ch
 import { CombatPanel } from "../games/dungeons-and-dragons/components/CombatPanel";
 import { HallHero } from "../games/dungeons-and-dragons/components/HallHero";
 import { PlayerCardLarge } from "../games/dungeons-and-dragons/components/PlayerCardLarge";
+import { RestPanel } from "../games/dungeons-and-dragons/components/RestPanel";
 import { DndGameScreen } from "../games/dungeons-and-dragons/DndGameScreen";
 import { qk } from "../lib/query-keys";
 
@@ -261,6 +262,7 @@ const NODES = [
     parentId: null,
     nodeType: "story" as const,
     dangerTable: null,
+    linkTargetId: null,
     trigger: "Follow the wolf howls off the road",
     summary: "The mists tighten; a shuttered farmhouse appears ahead.",
     readText:
@@ -275,6 +277,7 @@ const NODES = [
     parentId: "node-root-1",
     nodeType: "story" as const,
     dangerTable: null,
+    linkTargetId: null,
     trigger: "Knock and announce yourselves",
     summary: "A woman's voice begs them to prove they cast a shadow.",
     readText:
@@ -296,6 +299,7 @@ const NODES = [
         { roll: "2", text: "a swarm of ravens", creatures: [] },
       ],
     },
+    linkTargetId: null,
     trigger: "Roll initiative",
     summary: "Two shadow-wolves burst from the treeline.",
     readText:
@@ -310,6 +314,7 @@ const NODES = [
     parentId: "node-root-1",
     nodeType: "story" as const,
     dangerTable: null,
+    linkTargetId: null,
     trigger: "Pick the storm-cellar lock",
     summary: "The cellar is stocked for a siege — and recently slept in.",
     readText:
@@ -461,6 +466,38 @@ const WHISPER_ACTIONS: ActionCard[] = [
   },
 ];
 
+const EXTRA_NODES = [
+  {
+    id: "node-rest-1",
+    campaignId: STRAHD.id,
+    partyId: PARTY_META.id,
+    waypointIndex: 0,
+    parentId: "node-root-1",
+    nodeType: "rest" as const,
+    dangerTable: null,
+    linkTargetId: null,
+    trigger: "Take a short rest",
+    summary: "An hour of quiet by the farmhouse wall.",
+    readText:
+      "The farmhouse wall gives cover from the road, and for the first time since the mists closed, nothing is watching. An hour, maybe — enough to bind wounds and breathe.",
+    createdAt: "2026-07-05 19:08:00",
+  },
+  {
+    id: "node-link-1",
+    campaignId: STRAHD.id,
+    partyId: PARTY_META.id,
+    waypointIndex: 0,
+    parentId: "node-root-1",
+    nodeType: "story" as const,
+    dangerTable: null,
+    linkTargetId: "node-child-1",
+    trigger: "Approach the farmhouse door",
+    summary: "Leads back to the knock at the door.",
+    readText: "The path bends back toward the shuttered farmhouse door.",
+    createdAt: "2026-07-05 19:09:00",
+  },
+];
+
 const FILES = [
   {
     id: "file-module",
@@ -489,7 +526,7 @@ export default function DndToolPreview() {
   useState(() => {
     queryClient.setQueryData(qk.dndCharacters(PARTY_META.id), { characters: PARTY });
     queryClient.setQueryData(qk.dndNpcs(STRAHD.id), { npcs: NPCS });
-    queryClient.setQueryData(qk.dndNodes(PARTY_META.id), { nodes: NODES });
+    queryClient.setQueryData(qk.dndNodes(PARTY_META.id), { nodes: [...NODES, ...EXTRA_NODES] });
     queryClient.setQueryData(qk.dndFiles(), { files: FILES });
     queryClient.setQueryData(qk.dndCombat(PARTY_META.id), { combat: COMBAT });
     queryClient.setQueryData(qk.dndActions("preview-vex"), { cards: VEX_ACTIONS });
@@ -594,6 +631,13 @@ export default function DndToolPreview() {
             </li>
           ))}
         </ul>
+
+        <SectionTitle>Short rest — bookkeeping panel</SectionTitle>
+        <RestPanel
+          party={PARTY.filter((ch) => ch.status === "ready" && ch.sheet)}
+          onLog={() => {}}
+          logPending={false}
+        />
 
         <SectionTitle>Combat — action dashboard (PC turn, Shortbow spent)</SectionTitle>
         <div className="flex h-[440px] overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-3">

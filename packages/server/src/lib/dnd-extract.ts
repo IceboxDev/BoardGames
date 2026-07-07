@@ -865,7 +865,7 @@ export async function extractNpcs(pdfDataUri: string, filename: string): Promise
 export interface ReadAloudBlock {
   waypointIndex: number;
   parentIndex: number | null;
-  nodeType: "story" | "initiative";
+  nodeType: "story" | "initiative" | "rest";
   dangerTable: DangerTable | null;
   trigger: string;
   summary: string;
@@ -1136,7 +1136,7 @@ export interface StoryNodeContext {
 }
 
 export interface StoryNode {
-  nodeType: "story" | "initiative";
+  nodeType: "story" | "initiative" | "rest";
   dangerTable: DangerTable | null;
   trigger: string;
   summary: string;
@@ -1156,9 +1156,9 @@ const NODE_JSON_SCHEMA = {
   properties: {
     node_type: {
       type: "string",
-      enum: ["story", "initiative"],
+      enum: ["story", "initiative", "rest"],
       description:
-        "'initiative' when the players' action starts combat — the node becomes an initiative roll; otherwise 'story'.",
+        "'initiative' when the players' action starts combat — the node becomes an initiative roll; 'rest' when the branch is the party taking a short rest (the node gets a hit-dice bookkeeping panel); otherwise 'story'.",
     },
     danger_table: DANGER_TABLE_JSON_SCHEMA,
     trigger: {
@@ -1225,7 +1225,8 @@ export function normalizeNode(raw: unknown): StoryNode {
   const readText = clamp(parsed.read_text, NODE_READ_TEXT_MAX);
   if (!trigger || !readText) throw new Error("the model returned an empty node");
   return {
-    nodeType: parsed.node_type === "initiative" ? "initiative" : "story",
+    nodeType:
+      parsed.node_type === "initiative" || parsed.node_type === "rest" ? parsed.node_type : "story",
     dangerTable:
       parsed.node_type === "initiative" ? normalizeDangerTable(parsed.danger_table) : null,
     trigger,
@@ -1589,11 +1590,39 @@ export interface SuggestionContext {
   waypoint: { title: string; description: string; index: number; total: number };
   ancestors: { trigger: string; readText: string }[];
   siblings: { trigger: string; summary: string }[];
+  /** Every node at this waypoint — link targets for converging branches. */
+  waypointNodes: { id: string; trigger: string; summary: string }[];
   party: string[];
   history: string[];
   /** The stored module PDF — the source of scripted, unprompted events. */
   modulePdf: { filename: string; dataUri: string } | null;
 }
+
+export interface SuggestedBranch {
+  node: StoryNode;
+  /** Existing node id this branch converges into (chain link) — or null. */
+  linkTo: string | null;
+  /** Index of an earlier branch in the same batch this one follows — or null. */
+  follows: number | null;
+}
+
+const SUGGESTION_BRANCH_SCHEMA = {
+  ...NODE_JSON_SCHEMA,
+  properties: {
+    ...NODE_JSON_SCHEMA.properties,
+    link_to: {
+      type: ["string", "null"],
+      description:
+        "When this branch would lead to a place the tree ALREADY covers (an existing node listed below), put that node's exact id here instead of duplicating its content — the branch becomes a chain-link that converges into it. Null for original branches.",
+    },
+    follows: {
+      type: ["integer", "null"],
+      description:
+        "When this branch only makes sense AFTER another branch in this same batch (e.g. guards reacting requires the captain to have arrived first), the 0-based index of that earlier branch — it will be created as its child. Null for top-level branches.",
+    },
+  },
+  required: [...NODE_JSON_SCHEMA.required, "link_to", "follows"],
+} as const;
 
 const SUGGESTIONS_JSON_SCHEMA = {
   type: "object",
@@ -1602,27 +1631,31 @@ const SUGGESTIONS_JSON_SCHEMA = {
       type: "array",
       minItems: 2,
       maxItems: 5,
-      items: NODE_JSON_SCHEMA,
+      items: SUGGESTION_BRANCH_SCHEMA,
     },
   },
   required: ["branches"],
   additionalProperties: false,
 } as const;
 
-const RawSuggestionsSchema = z.object({ branches: z.array(z.unknown()) });
+const RawSuggestionsSchema = z.object({
+  branches: z.array(
+    z.object({ link_to: z.string().nullable(), follows: z.number().int().nullable() }).loose(),
+  ),
+});
 
 /**
  * Unprompted DM developments: instead of reacting to the players, propose
  * what the world does next — module-scripted events due at this spot first
  * (from the attached PDF), then natural table moves (short rest, search).
  */
-export async function generateNodeSuggestions(ctx: SuggestionContext): Promise<StoryNode[]> {
+export async function generateNodeSuggestions(ctx: SuggestionContext): Promise<SuggestedBranch[]> {
   const client = getClient();
   const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
 
   const lines: string[] = [];
   lines.push(
-    "You are the Dungeon Master preparing UNPROMPTED developments — the world acting while the players catch their breath. Given the current position in the story below (and the adventure module PDF when attached), propose 2–5 branch options for what plausibly happens NEXT from this exact moment, without any player prompting. PRIORITIZE events the module itself scripts for this location and moment (an NPC arriving, a timed event, a consequence the text calls for) — quote or closely adapt the module's own read-aloud where it exists. Then add natural table moves a DM or the players would reach for in this situation (a short rest right after a fight, searching the area, pressing on). Each branch: a SHORT imperative trigger (max ~8 words, e.g. 'Marcus arrives', 'Take a short rest'), a one-sentence DM summary, and the read-aloud text spoken when it happens. Never duplicate the existing sibling branches listed below. Ground everything in the table history — it is the truth of what already happened.",
+    "You are the Dungeon Master preparing UNPROMPTED developments — the world acting while the players catch their breath. Given the current position in the story below (and the adventure module PDF when attached), propose 2–5 branch options for what plausibly happens NEXT from this exact moment, without any player prompting. PRIORITIZE events the module itself scripts for this location and moment (an NPC arriving, a timed event, a consequence the text calls for) — quote or closely adapt the module's own read-aloud where it exists. Then add natural table moves a DM or the players would reach for in this situation (a short rest right after a fight, searching the area, pressing on). Each branch: a SHORT imperative trigger (max ~8 words, e.g. 'Marcus arrives', 'Take a short rest'), a one-sentence DM summary, and the read-aloud text spoken when it happens. Use node_type 'rest' for a short-rest branch. THREE structural tools: (1) never duplicate the existing sibling branches listed below; (2) when a branch would lead somewhere the tree ALREADY covers (see the existing-nodes list with ids), set link_to to that node's id instead of rewriting it — the branch converges there; (3) when a branch only makes sense AFTER another branch in this batch (a reaction to an arrival), set follows to that branch's 0-based index so it nests under it. Ground everything in the table history — it is the truth of what already happened.",
   );
   lines.push(
     `\nCampaign: ${ctx.campaign.title}${ctx.campaign.setting ? ` — ${ctx.campaign.setting}` : ""}`,
@@ -1637,6 +1670,12 @@ export async function generateNodeSuggestions(ctx: SuggestionContext): Promise<S
   if (ctx.siblings.length > 0) {
     lines.push("\nExisting branches at this level (do NOT duplicate):");
     for (const sib of ctx.siblings) lines.push(`- ${sib.trigger}: ${sib.summary}`);
+  }
+  if (ctx.waypointNodes.length > 0) {
+    lines.push(
+      "\nAll existing nodes at this waypoint (link_to targets — converge instead of duplicating):",
+    );
+    for (const n of ctx.waypointNodes) lines.push(`- id=${n.id} [${n.trigger}] ${n.summary}`);
   }
   if (ctx.party.length > 0) lines.push(`\nThe party: ${ctx.party.join("; ")}`);
   if (ctx.history.length > 0) {
@@ -1668,7 +1707,12 @@ export async function generateNodeSuggestions(ctx: SuggestionContext): Promise<S
     },
   });
   const parsed = RawSuggestionsSchema.parse(JSON.parse(responseOutputText(res)));
-  return parsed.branches.slice(0, 5).map((branch) => normalizeNode(branch));
+  return parsed.branches.slice(0, 5).map((branch, i) => ({
+    node: normalizeNode(branch),
+    linkTo: branch.link_to,
+    follows:
+      branch.follows !== null && branch.follows >= 0 && branch.follows < i ? branch.follows : null,
+  }));
 }
 
 export function normalizeTurnResult(raw: unknown): CombatTurnResult {

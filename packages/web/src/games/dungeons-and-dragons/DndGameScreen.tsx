@@ -500,6 +500,17 @@ export function DndGameScreen({ campaign, party }: Props) {
               path={path}
               onEnterNode={(nodeId) => setPath([...path, nodeId])}
               onJumpTo={(i) => setPath(i < 0 ? [] : path.slice(0, i + 1))}
+              onJumpToNode={setPath}
+              onLogRest={(text) =>
+                logMutation.mutate([
+                  {
+                    kind: "player-action",
+                    text: "The party takes a short rest.",
+                    nodeId: currentNode?.id ?? null,
+                  },
+                  { kind: "dm-narration", text, nodeId: currentNode?.id ?? null },
+                ])
+              }
               party={partyMembers}
               npcs={npcs}
               onOrderChange={setCombatOrder}

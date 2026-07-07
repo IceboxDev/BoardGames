@@ -21,6 +21,7 @@ const NodeRowSchema = z.object({
   trigger_text: z.string(),
   summary: z.string(),
   read_text: z.string(),
+  link_target_id: z.string().nullable().default(null),
   created_at: z.string(),
 });
 
@@ -36,12 +37,13 @@ function rowToNode(row: z.infer<typeof NodeRowSchema>): DndNode {
     trigger: row.trigger_text,
     summary: row.summary,
     readText: row.read_text,
+    linkTargetId: row.link_target_id,
     createdAt: row.created_at,
   };
 }
 
 const SELECT_COLUMNS = `id, campaign_id, party_id, waypoint_index, parent_id,
-   node_type, danger_table_json, trigger_text, summary, read_text, created_at`;
+   node_type, danger_table_json, trigger_text, summary, read_text, link_target_id, created_at`;
 
 export async function insertNode(args: {
   campaignId: string;
@@ -49,18 +51,19 @@ export async function insertNode(args: {
   userId: string;
   waypointIndex: number;
   parentId: string | null;
-  nodeType: "story" | "initiative";
+  nodeType: "story" | "initiative" | "rest";
   dangerTable: import("@boardgames/core/protocol").DangerTable | null;
   trigger: string;
   summary: string;
   readText: string;
+  linkTargetId?: string | null;
 }): Promise<DndNode> {
   const id = randomUUID();
   const result = await getDb().execute({
     sql: `INSERT INTO dnd_nodes
             (id, campaign_id, party_id, user_id, waypoint_index, parent_id,
-             node_type, danger_table_json, trigger_text, summary, read_text)
-          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+             node_type, danger_table_json, trigger_text, summary, read_text, link_target_id)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
           RETURNING ${SELECT_COLUMNS}`,
     args: [
       id,
@@ -74,6 +77,7 @@ export async function insertNode(args: {
       args.trigger,
       args.summary,
       args.readText,
+      args.linkTargetId ?? null,
     ],
   });
   const row = result.rows[0];

@@ -14,6 +14,7 @@ import {
   DndNodeSchema,
   DndNpcSchema,
   GenerateNodeRequestSchema,
+  NodeTypeSchema,
   ResolveTurnRequestSchema,
   StartCombatRequestSchema,
   SuggestNodesRequestSchema,
@@ -332,6 +333,28 @@ describe("BeamerEventSchema", () => {
       BeamerTriggerSchema.safeParse({ type: "connected", campaignId: "c1", campaignTitle: null })
         .success,
     ).toBe(false);
+  });
+});
+
+describe("node type + links", () => {
+  it("accepts a rest node and defaults linkTargetId", () => {
+    const node = DndNodeSchema.parse({
+      id: "n1",
+      campaignId: "c1",
+      partyId: "p1",
+      waypointIndex: 0,
+      parentId: null,
+      nodeType: "rest",
+      dangerTable: null,
+      trigger: "Take a short rest",
+      summary: "",
+      readText: "An hour of quiet.",
+      createdAt: "2026-07-07 10:00:00",
+    });
+    expect(node.linkTargetId).toBeNull();
+  });
+  it("rejects an unknown node type", () => {
+    expect(NodeTypeSchema.safeParse("longrest").success).toBe(false);
   });
 });
 

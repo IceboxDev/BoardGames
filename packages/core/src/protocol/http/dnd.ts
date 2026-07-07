@@ -390,7 +390,7 @@ export const NODE_MESSAGE_MAX = 1000;
  * `initiative` — combat begins: the node opens the initiative tracker
  * (enter the players' rolls, roll for NPCs) instead of a conversation.
  */
-export const NodeTypeSchema = z.enum(["story", "initiative"]);
+export const NodeTypeSchema = z.enum(["story", "initiative", "rest"]);
 export type NodeType = z.infer<typeof NodeTypeSchema>;
 
 /**
@@ -441,6 +441,9 @@ export const DndNodeSchema = z.object({
   trigger: z.string().min(1).max(NODE_TRIGGER_MAX),
   summary: z.string().max(NODE_SUMMARY_MAX),
   readText: z.string().min(1).max(NODE_READ_TEXT_MAX),
+  /** Set when this node is a cross-link that "ends" its branch by jumping
+   * to an existing node on a parallel branch (chain icon in the UI). */
+  linkTargetId: z.string().nullable().default(null),
   createdAt: z.string(),
 });
 export type DndNode = z.infer<typeof DndNodeSchema>;
