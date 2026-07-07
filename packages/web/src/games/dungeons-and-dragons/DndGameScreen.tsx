@@ -1,4 +1,5 @@
 import type { Campaign, DndNpc, DndParty, ResolveTurnResponse } from "@boardgames/core/protocol";
+import { NODE_MESSAGE_MAX } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { GameScreen } from "../../components/game-layout";
@@ -467,6 +468,7 @@ export function DndGameScreen({ campaign, party }: Props) {
           <div className="flex gap-2" style={{ height: 190 }}>
             <textarea
               value={message}
+              maxLength={NODE_MESSAGE_MAX}
               onChange={(e) => setMessage(e.target.value)}
               onKeyDown={(e) => {
                 if (e.key === "Enter" && !e.shiftKey) {
