@@ -19,6 +19,7 @@ import {
   StartCombatRequestSchema,
   SuggestNodesRequestSchema,
   SuggestNodesResponseSchema,
+  UndoHistoryResponseSchema,
 } from "./dnd.ts";
 
 const PDF = "data:application/pdf;base64,JVBERi0xLjQ=";
@@ -355,6 +356,13 @@ describe("node type + links", () => {
   });
   it("rejects an unknown node type", () => {
     expect(NodeTypeSchema.safeParse("longrest").success).toBe(false);
+  });
+});
+
+describe("undo history schema", () => {
+  it("accepts a removed count", () => {
+    expect(UndoHistoryResponseSchema.safeParse({ removed: 2 }).success).toBe(true);
+    expect(UndoHistoryResponseSchema.safeParse({ removed: -1 }).success).toBe(false);
   });
 });
 

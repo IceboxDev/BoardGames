@@ -50,6 +50,7 @@ import {
   SuggestNodesResponseSchema,
   TriggerBeamerRequestSchema,
   TriggerBeamerResponseSchema,
+  UndoHistoryResponseSchema,
   UpdateCharacterRequestSchema,
   UpdateCharacterResponseSchema,
   UpdateCharacterStateRequestSchema,
@@ -102,7 +103,7 @@ import {
   listFilesForUser,
   renameFile,
 } from "../lib/dnd-files-db.ts";
-import { appendHistory, listHistoryForParty } from "../lib/dnd-history-db.ts";
+import { appendHistory, listHistoryForParty, undoLastHistory } from "../lib/dnd-history-db.ts";
 import { replaceNodeTemplates, seedPartyFromTemplates } from "../lib/dnd-node-templates-db.ts";
 import { convertNodeToStory, insertNode, listNodesForParty } from "../lib/dnd-nodes-db.ts";
 import { deleteNpcsForCampaign, insertNpcs, listNpcsForCampaign } from "../lib/dnd-npcs-db.ts";
@@ -583,6 +584,18 @@ dndCampaignRoutes.post("/parties/:id/nodes", zJsonBody(GenerateNodeRequestSchema
 
 // ── Files (Sources) ────────────────────────────────────────────────────
 
+// Undo the last Log press — removes the newest entry (and its paired
+// player-action line when they were logged together).
+dndCampaignRoutes.delete("/parties/:id/history/last", async (c) => {
+  const user = c.get("user");
+  const partyId = c.req.param("id");
+  if (!(await getParty(partyId, user.id))) {
+    return errorResponse(c, 404, "party not found", "NOT_FOUND");
+  }
+  const removed = await undoLastHistory(partyId, user.id);
+  return c.json(UndoHistoryResponseSchema.parse({ removed }));
+});
+
 // Quick resolve: adjudicate a table event (a check, an examination, a small
 // interaction) WITHOUT growing the tree — the narration is generated,
 // logged straight into the history (ground truth), and returned to read.
@@ -627,7 +640,7 @@ dndCampaignRoutes.post("/parties/:id/resolve", zJsonBody(ResolveEventRequestSche
       message: body.message,
     });
     // The resolution is ground truth the moment it is read — log it.
-    await appendHistory(partyId, campaign.id, user.id, [
+    await appendHistory(campaign.id, partyId, user.id, [
       { kind: "player-action", text: body.message.slice(0, 2000), nodeId: body.nodeId },
       { kind: "dm-narration", text: narration, nodeId: body.nodeId },
     ]);

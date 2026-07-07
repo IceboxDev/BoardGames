@@ -482,6 +482,11 @@ export const UpdateCharacterStateRequestSchema = z.object({
 });
 export type UpdateCharacterStateRequest = z.infer<typeof UpdateCharacterStateRequestSchema>;
 
+export const UndoHistoryResponseSchema = z.object({
+  removed: z.number().int().min(0),
+});
+export type UndoHistoryResponse = z.infer<typeof UndoHistoryResponseSchema>;
+
 // Quick resolve: adjudicate a table event (a check, a small interaction)
 // WITHOUT growing the tree — the outcome is narrated and logged to history.
 export const ResolveEventRequestSchema = z.object({

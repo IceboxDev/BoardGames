@@ -36,6 +36,38 @@ export async function appendHistory(
   );
 }
 
+/**
+ * Un-log the most recent entry. Log actions land as batches (player action
+ * + DM narration), so when the newest entry is a narration whose immediate
+ * predecessor is the paired player-action/arrival line for the same node,
+ * both are removed. Returns the number of entries removed.
+ */
+export async function undoLastHistory(partyId: string, userId: string): Promise<number> {
+  const result = await getDb().execute({
+    sql: `SELECT rowid AS rid, id, node_id, kind FROM dnd_history
+          WHERE party_id = ? AND user_id = ? ORDER BY rowid DESC LIMIT 2`,
+    args: [partyId, userId],
+  });
+  const last = result.rows[0];
+  if (!last) return 0;
+  const prev = result.rows[1];
+  const ids = [String(last.id)];
+  if (
+    prev &&
+    last.kind === "dm-narration" &&
+    (prev.kind === "player-action" || prev.kind === "arrival") &&
+    prev.node_id === last.node_id &&
+    Number(prev.rid) === Number(last.rid) - 1
+  ) {
+    ids.push(String(prev.id));
+  }
+  await getDb().execute({
+    sql: `DELETE FROM dnd_history WHERE id IN (${ids.map(() => "?").join(", ")})`,
+    args: ids,
+  });
+  return ids.length;
+}
+
 export async function listHistoryForParty(
   partyId: string,
   userId: string,

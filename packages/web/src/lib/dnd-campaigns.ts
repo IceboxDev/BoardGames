@@ -58,6 +58,8 @@ import {
   TriggerBeamerRequestSchema,
   type TriggerBeamerResponse,
   TriggerBeamerResponseSchema,
+  type UndoHistoryResponse,
+  UndoHistoryResponseSchema,
   UpdateCharacterRequestSchema,
   type UpdateCharacterResponse,
   UpdateCharacterResponseSchema,
@@ -158,6 +160,13 @@ export function appendHistoryEntries(
     body: { entries },
     request: AppendHistoryRequestSchema,
     response: ListHistoryResponseSchema,
+  });
+}
+
+export function undoLastHistory(partyId: string): Promise<UndoHistoryResponse> {
+  return apiFetch(`/api/dnd/parties/${partyId}/history/last`, {
+    method: "DELETE",
+    response: UndoHistoryResponseSchema,
   });
 }
 

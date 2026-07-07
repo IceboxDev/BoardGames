@@ -23,6 +23,7 @@ import {
   retriggerNpcs,
   startCombat,
   suggestNodes,
+  undoLastHistory,
   updateCharacterState,
 } from "../../lib/dnd-campaigns";
 import { errorMessageOf } from "../../lib/error-message";
@@ -172,6 +173,13 @@ export function DndGameScreen({ campaign, party }: Props) {
       }
     },
     onSettled: () => queryClient.invalidateQueries({ queryKey: qk.dndCharacters(party.id) }),
+  });
+
+  // Undo the last Log press — removes the newest chronicle entry (and its
+  // paired player-action line).
+  const undoMutation = useMutation({
+    mutationFn: () => undoLastHistory(party.id),
+    onSettled: () => queryClient.invalidateQueries({ queryKey: qk.dndHistory(party.id) }),
   });
 
   // Quick resolve: adjudicate a table event in place — logged, no node.
@@ -349,22 +357,34 @@ export function DndGameScreen({ campaign, party }: Props) {
             Nothing logged yet — press Log on a spoken text and the chronicle starts here.
           </p>
         ) : (
-          <ol className="flex flex-col gap-2">
-            {recap.map((entry) => (
-              <li
-                key={entry.id}
-                className={`rounded-lg border px-2.5 py-1.5 text-xs leading-relaxed ${
-                  entry.kind === "player-action"
-                    ? "border-amber-400/15 bg-black/10 italic text-amber-300/70"
-                    : entry.kind === "combat"
-                      ? "border-rose-400/20 bg-rose-950/20 text-rose-100/80"
-                      : "border-amber-400/10 bg-black/20 text-amber-200/70"
-                }`}
-              >
-                {entry.line}
-              </li>
-            ))}
-          </ol>
+          <div className="flex flex-col gap-2">
+            <Button
+              variant="ghost"
+              tone="rose"
+              size="xs"
+              className="self-end"
+              loading={undoMutation.isPending}
+              onClick={() => undoMutation.mutate()}
+            >
+              ↩ Undo last log
+            </Button>
+            <ol className="flex flex-col gap-2">
+              {recap.map((entry) => (
+                <li
+                  key={entry.id}
+                  className={`rounded-lg border px-2.5 py-1.5 text-xs leading-relaxed ${
+                    entry.kind === "player-action"
+                      ? "border-amber-400/15 bg-black/10 italic text-amber-300/70"
+                      : entry.kind === "combat"
+                        ? "border-rose-400/20 bg-rose-950/20 text-rose-100/80"
+                        : "border-amber-400/10 bg-black/20 text-amber-200/70"
+                  }`}
+                >
+                  {entry.line}
+                </li>
+              ))}
+            </ol>
+          </div>
         )
       }
       fanActions={
