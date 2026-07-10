@@ -28,7 +28,9 @@ import { optimizeOne } from "../packages/web/scripts/optimize-thumbnails.mjs";
 import { parseBggThings } from "./bgg-parse.mjs";
 
 const GAMES_ROOT = "packages/web/src/games";
-const CATALOG_PATH = join(GAMES_ROOT, "catalog.json");
+// The catalog is the shared source of truth and lives in `core` (imported by
+// both web and server); per-slug assets below still live under GAMES_ROOT.
+const CATALOG_PATH = "packages/core/src/games/catalog.json";
 const SNAPSHOT_PATH = "packages/core/src/bgg/snapshot.json";
 const NEW_GAMES_PATH = "scripts/bgg-new-games.json";
 const SLUG_RE = /^[a-z0-9][a-z0-9-]{0,63}$/;

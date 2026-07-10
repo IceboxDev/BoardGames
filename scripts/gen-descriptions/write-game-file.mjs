@@ -11,7 +11,9 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
 
 const GAMES_ROOT = "packages/web/src/games";
-const CATALOG_PATH = join(GAMES_ROOT, "catalog.json");
+// The catalog is the shared source of truth and lives in `core` (imported by
+// both web and server); per-slug assets below still live under GAMES_ROOT.
+const CATALOG_PATH = "packages/core/src/games/catalog.json";
 
 let _catalogSlugCache = null;
 async function getCatalogSlugs() {
@@ -53,7 +55,7 @@ function renderFile({ data, meta }) {
 //   pnpm gen-descriptions --slug ${jsonOrEmpty(meta.slug)}
 //
 // To override one description by hand, set \`bggOverrides.description\` on
-// this game's entry in \`packages/web/src/games/catalog.json\` — it will
+// this game's entry in \`packages/core/src/games/catalog.json\` — it will
 // replace all three variants uniformly.
 
 import type { GameDescriptions } from "../types";

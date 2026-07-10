@@ -1,14 +1,41 @@
 import { z } from "zod";
+import { isCatalogSlug } from "../../games/catalog.ts";
 import { GameSlugSchema } from "../common.ts";
 import { OnlineModeSchema } from "./auth.ts";
 
-/** A user's owned-games list (or the pending-inventory queue). Capped at 200. */
+/**
+ * A user's owned-games list (or the pending-inventory queue). Capped at 200.
+ *
+ * Shape only — this does NOT check the slug names a real game. Use it for reads
+ * and responses, so that retiring a slug from the catalog never turns a stored
+ * row into an unreadable one.
+ */
 export const SlugListSchema = z.array(GameSlugSchema).max(200);
 export type SlugList = z.infer<typeof SlugListSchema>;
 
+/**
+ * A slug list where every entry must name a game in the catalog. Use it for
+ * request bodies: a slug that resolves to no game is silently dropped from
+ * availability, so an inventory holding `villainous-introduction-to-evil` (an
+ * *edition*, not a game) means its owner never shows as owning Villainous.
+ * Reject it at the boundary instead of storing an unresolvable reference.
+ */
+export const CatalogSlugListSchema = SlugListSchema.superRefine((slugs, ctx) => {
+  slugs.forEach((slug, i) => {
+    if (!isCatalogSlug(slug)) {
+      ctx.addIssue({
+        code: "custom",
+        path: [i],
+        message: `Unknown game slug "${slug}" — not present in the catalog`,
+      });
+    }
+  });
+});
+export type CatalogSlugList = z.infer<typeof CatalogSlugListSchema>;
+
 /** `PUT` body for user inventory (slugs only). */
 export const SetInventoryBodySchema = z.object({
-  slugs: SlugListSchema,
+  slugs: CatalogSlugListSchema,
 });
 export type SetInventoryBody = z.infer<typeof SetInventoryBodySchema>;
 
@@ -30,7 +57,13 @@ export const PendingInventorySchema = z.object({
 });
 export type PendingInventory = z.infer<typeof PendingInventorySchema>;
 
-export const SetPendingInventoryBodySchema = PendingInventorySchema;
+// Not an alias of `PendingInventorySchema`: that one also parses the stored row
+// on the read path, where a stale slug must not throw. Only the write body
+// enforces catalog membership.
+export const SetPendingInventoryBodySchema = z.object({
+  slugs: CatalogSlugListSchema,
+  onlineMode: OnlineModeSchema,
+});
 export type SetPendingInventoryBody = z.infer<typeof SetPendingInventoryBodySchema>;
 
 export const PendingInventoryWriteResponseSchema = z.object({

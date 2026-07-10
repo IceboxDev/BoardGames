@@ -1,6 +1,6 @@
 // Extracts the dominant accent color from each game's thumbnail and
 // updates the corresponding `accentHex` field in
-// `packages/web/src/games/catalog.json`. Run via `pnpm extract-accents`.
+// `packages/core/src/games/catalog.json`. Run via `pnpm extract-accents`.
 //
 // Pipeline (per slug):
 // 1. Center-crop the thumbnail to 70% to skip vignettes / dark borders.
@@ -23,7 +23,9 @@ import { Vibrant } from "node-vibrant/node";
 import sharp from "sharp";
 
 const GAMES_ROOT = "packages/web/src/games";
-const CATALOG_PATH = join(GAMES_ROOT, "catalog.json");
+// The catalog is the shared source of truth and lives in `core` (imported by
+// both web and server); per-slug assets below still live under GAMES_ROOT.
+const CATALOG_PATH = "packages/core/src/games/catalog.json";
 const CENTER_CROP = 0.7;
 
 // Saturation floor + lightness window (HSL space). 65% saturation makes hues

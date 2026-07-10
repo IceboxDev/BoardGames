@@ -27,8 +27,8 @@
 //   - missing descriptions.generated.ts → repeat `bgg.description`
 
 import { bggSnapshot } from "@boardgames/core/bgg";
+import { CATALOG as catalogRaw } from "@boardgames/core/games/catalog";
 import placeholderThumbnail from "./_placeholder-thumbnail.svg?url";
-import catalogRaw from "./catalog.json";
 import { CatalogSchema } from "./catalog-schema";
 import type {
   CatalogEntry,
@@ -73,7 +73,7 @@ for (const [path, mod] of Object.entries(playableModules)) {
   const slug = slugFromModulePath(path);
   if (!catalogBySlug.has(slug)) {
     throw new Error(
-      `[registry] Playable module "${slug}" has no catalog entry. Add it to packages/web/src/games/catalog.json or delete the index.ts.`,
+      `[registry] Playable module "${slug}" has no catalog entry. Add it to packages/core/src/games/catalog.json or delete the index.ts.`,
     );
   }
   playableBySlug.set(slug, mod.default);

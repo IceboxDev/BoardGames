@@ -5,6 +5,7 @@
   "exports": {
     "./bgg": "./src/bgg/index.ts",
     "./bgg/*": "./src/bgg/*.ts",
+    "./games/catalog": "./src/games/catalog.ts",
     "./games/7-wonders/*": "./src/games/7-wonders/*.ts",
     "./games/lost-cities/*": "./src/games/lost-cities/*.ts",
     "./games/exploding-kittens/*": "./src/games/exploding-kittens/*.ts",

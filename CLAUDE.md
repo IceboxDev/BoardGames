@@ -90,7 +90,7 @@ Each game follows a consistent split:
 - **`GameDefinition` / `PlayableModule`** (`web/src/games/types.ts`) — registry entry for each game (metadata + lazy component). The `mode` field is `"remote"` for all games today and is **not branched on at runtime** — it's vestigial, kept only for a hypothetical future client-only game. Don't infer "client-side" from it.
 - **Dev logging** — `packages/server/src/lib/game-log.ts` (server: session/action/snapshot/AI/game-over) and `packages/web/src/lib/game-log.ts` (client: WS send/recv, dropped sends) emit a unified, dev-only `[game:<slug>]` trace for every game. Use these to debug a stuck/hung session: a gap after `ai-thinking` = slow/blocking AI, a `send DROPPED` = the socket wasn't open.
 - **Game registry** (`web/src/games/registry.ts`) — merges three sources:
-  1. `web/src/games/catalog.json` — Zod-validated browse-only metadata for *every* game (slug, bggId, accentHex, family, displayTitle, bggOverrides).
+  1. `core/src/games/catalog.json` — Zod-validated browse-only metadata for *every* game (slug, bggId, accentHex, family, displayTitle, bggOverrides).
   2. `import.meta.glob("./*/index.ts")` — playable extras (component, mode, tournament strategies, …). Only playable games have an `index.ts`; catalog-only games live entirely in `catalog.json`.
   3. The bundled BGG snapshot + per-game `descriptions.generated.ts` + thumbnail webp.
 
@@ -152,7 +152,7 @@ Games with non-card-style spatial layouts (maps, instrument panels, hex grids, d
 
 **For a catalog-only entry** (browse + RSVP voting, no playable surface — covers most additions):
 
-1. Run `pnpm bgg-sync --add` after adding `{ slug, bggId, displayTitle? }` to `scripts/bgg-new-games.json`. The script downloads the thumbnail, optimizes it, computes the accent hex, and appends a new entry to `packages/web/src/games/catalog.json`.
+1. Run `pnpm bgg-sync --add` after adding `{ slug, bggId, displayTitle? }` to `scripts/bgg-new-games.json`. The script downloads the thumbnail, optimizes it, computes the accent hex, and appends a new entry to `packages/core/src/games/catalog.json`.
 2. Optional: run `pnpm gen-descriptions --slug <slug>` to populate `packages/web/src/games/<slug>/descriptions.generated.ts`. Catalog entries without this file fall back to BGG's raw description.
 3. No code changes needed — the registry picks it up.
 

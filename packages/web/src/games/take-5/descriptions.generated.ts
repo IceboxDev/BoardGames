@@ -3,7 +3,7 @@
 //   pnpm gen-descriptions --slug take-5
 //
 // To override one description by hand, set `bggOverrides.description` on
-// this game's entry in `packages/web/src/games/catalog.json` — it will
+// this game's entry in `packages/core/src/games/catalog.json` — it will
 // replace all three variants uniformly.
 
 import type { GameDescriptions } from "../types";
