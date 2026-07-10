@@ -10,6 +10,7 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   // relying on the free-for-all fallback) so switching to it from a non-FFA game
   // resets the kind and surfaces the Villainous villain/winner form.
   villainous: "free-for-all",
+  "villainous-introduction-to-evil": "free-for-all",
   // Point-less free-for-all too — pick the winner + which of the three win
   // conditions ended it (the scenario), no scores. Listed explicitly for the
   // same reason as villainous.
@@ -48,6 +49,7 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   "dungeon-mayhem": "last-standing",
   durak: "last-standing",
   "exploding-kittens": "last-standing",
+  "not-enough-mana": "last-standing",
   poker: "last-standing",
   "tellstones-kings-gambit": "last-standing",
   "the-fox-in-the-forest": "last-standing",
