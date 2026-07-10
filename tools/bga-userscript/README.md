@@ -31,19 +31,39 @@ Relays a live Board Game Arena 7 Wonders table into the BoardGames site's
 
 ## Behavior notes
 
-- On hook it sends a full `gamedatas` checkpoint, then every notification
-  raw (`newHand`, `cardsPlayed`, `coinsChanged`, `warResult`, `newAge`, …).
-  Unknown notification types are fine — the adapter ignores what it doesn't
-  know, so BGA format drift degrades the view instead of breaking anything.
-- Events are batched (~750 ms), retried with backoff, and re-anchored with a
-  fresh checkpoint if the server restarts or the session was re-created.
+- **Primary capture is a WebSocket tee** installed at `document-start` on
+  `unsafeWindow.WebSocket`. BGA's realtime notifications arrive on that socket
+  before any `gameui` API sees them, and `gameui.notifqueue`'s internals are
+  undocumented and version-dependent. Frames are forwarded as
+  `{kind: "notif", payload: {source: "ws", url, data}}`.
+- `gameui.gamedatas` is polled separately and sent once as the full-state
+  checkpoint (`kind: "gamedatas"`). A `notifqueue.onNotification` hook is
+  installed opportunistically *if* that method exists on your BGA build,
+  tagged `source: "notifqueue"`.
+- The script must run **inside the game iframe** (that's where `gameui`
+  lives), so it deliberately does not set `@noframes`.
+- Events are batched (~750 ms) and retried with backoff. On HTTP 401 it
+  re-sends a fresh checkpoint once the session is re-created.
 - Sessions are ephemeral. If the badge goes red after a deploy/restart,
   re-open "Connect to BGA", re-create the bridge session, and paste the new
   token via the Tampermonkey menu.
+- **"Diagnose bridge"** (Tampermonkey menu) reports whether `gameui`,
+  `gamedatas`, and `notifqueue` were found, whether the WebSocket tee is
+  installed, how many frames were seen, and the last delivery error. Run this
+  first whenever nothing shows up.
 
-## Capturing fixtures
+## Capturing fixtures (do this before trusting the adapter)
 
-Point `ingestUrl` at a local dev server (`http://localhost:3001/api/bga-ingest`)
-and copy payloads from the server log or the session buffer into
-`packages/core/src/games/7-wonders/bga/fixtures/` to grow the adapter's test
-suite.
+The checked-in fixture (`packages/core/src/games/7-wonders/bga/fixtures/sample-game.json`)
+is **synthetic** — the notification type names and `gamedatas` keys in the
+adapter are guesses until validated against a real table.
+
+```bash
+node tools/bga-userscript/capture-sink.mjs bga-capture.jsonl 3999
+```
+
+Point the userscript's ingest URL at `http://localhost:3999/ingest` (any token
+value works — the sink is unauthenticated and local-only), open your BGA
+7 Wonders table, and play a few turns. The sink prints a live tally of the
+notification types it sees and appends every event to the JSONL file. Feed
+that file back into the adapter's fixtures and tests.

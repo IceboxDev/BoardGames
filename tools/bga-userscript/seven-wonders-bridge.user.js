@@ -1,23 +1,35 @@
 // ==UserScript==
 // @name         BoardGames 7 Wonders BGA Bridge
 // @namespace    boardgames-bridge
-// @version      1.0.0
+// @version      2.0.0
 // @description  Relays your live BGA 7 Wonders table (gamedatas + notifications) to your BoardGames site for spectating. Passive observation only: sends NOTHING to BGA and automates NO moves.
-// @match        https://boardgamearena.com/*
+// @match        *://boardgamearena.com/*
+// @match        *://*.boardgamearena.com/*
 // @grant        GM_xmlhttpRequest
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @grant        GM_registerMenuCommand
+// @grant        unsafeWindow
 // @connect      *
-// @run-at       document-idle
-// @noframes     false
+// @run-at       document-start
 // ==/UserScript==
 
 // ─── ToS note ────────────────────────────────────────────────────────────────
 // This script passively observes tables you are seated at or permitted to
-// watch. It only READS window.gameui state that BGA already delivers to your
-// browser, and forwards it to YOUR OWN server. It never sends requests to
+// watch. It only READS state that BGA already delivers to your browser, and
+// forwards it to YOUR OWN server. It never sends requests to
 // boardgamearena.com and never plays moves for you.
+//
+// ─── Why it captures the way it does ─────────────────────────────────────────
+// BGA's realtime notifications arrive over a WebSocket before any documented
+// `gameui` API sees them, and `gameui.notifqueue`'s internals are undocumented
+// and version-dependent. So the PRIMARY capture is a WebSocket tee installed
+// at document-start (robust, sees everything); `gameui.gamedatas` is polled
+// separately for the full-state checkpoint. A `notifqueue` hook is installed
+// opportunistically when the method happens to exist.
+//
+// NOTE: the script runs INSIDE the game iframe too (no @noframes) — that is
+// where `gameui` lives.
 
 (function () {
   "use strict";
@@ -25,26 +37,52 @@
   const FLUSH_INTERVAL_MS = 750;
   const FLUSH_BATCH_SIZE = 20;
   const MAX_BATCH = 50; // must match BGA_INGEST_MAX_EVENTS on the server
-  const HOOK_POLL_MS = 500;
-  const HOOK_POLL_MAX_MS = 120000;
+  const POLL_MS = 500;
+  const POLL_MAX_MS = 180000;
   const BACKOFF_MIN_MS = 1000;
   const BACKOFF_MAX_MS = 30000;
+
+  // Page globals live on `unsafeWindow`, NOT on the sandboxed `window`.
+  const pageWindow = typeof unsafeWindow !== "undefined" ? unsafeWindow : window;
 
   /** @type {{ingestUrl?: string, token?: string}} */
   const config = GM_getValue("bga-bridge", {});
 
   GM_registerMenuCommand("Set bridge server URL + token", () => {
     const ingestUrl = prompt(
-      "Ingest URL (e.g. https://your-site.example/api/bga-ingest):",
+      "Ingest URL (e.g. https://your-site.example/api/bga-ingest, or http://localhost:3999/ingest for the capture sink):",
       config.ingestUrl || "",
     );
     if (ingestUrl === null) return;
-    const token = prompt("Ingest token (from the Connect to BGA screen):", config.token || "");
+    const token = prompt(
+      "Ingest token (from the Connect to BGA screen; any value for the capture sink):",
+      config.token || "",
+    );
     if (token === null) return;
     config.ingestUrl = ingestUrl.trim();
     config.token = token.trim();
     GM_setValue("bga-bridge", config);
-    setBadge("config saved — reload the game page", "#888");
+    alert("Bridge config saved. Reload the game page.");
+  });
+
+  GM_registerMenuCommand("Diagnose bridge", () => {
+    const gameui = pageWindow.gameui;
+    const lines = [
+      `url: ${location.href}`,
+      `in iframe: ${window.top !== window.self}`,
+      `ingestUrl: ${config.ingestUrl || "(unset)"}`,
+      `token: ${config.token ? "set" : "(unset)"}`,
+      `unsafeWindow available: ${typeof unsafeWindow !== "undefined"}`,
+      `gameui: ${gameui ? "present" : "MISSING"}`,
+      `gameui.gamedatas: ${gameui && gameui.gamedatas ? "present" : "MISSING"}`,
+      `gameui.notifqueue: ${gameui && gameui.notifqueue ? "present" : "MISSING"}`,
+      `websocket tee installed: ${wsTeeInstalled}`,
+      `ws frames seen: ${wsFrameCount}`,
+      `queued: ${queue.length}, sent: ${sentCount}`,
+      `last error: ${lastError || "none"}`,
+    ];
+    console.log("[bga-bridge]\n" + lines.join("\n"));
+    alert(lines.join("\n"));
   });
 
   // ─── Status badge ──────────────────────────────────────────────────────────
@@ -52,8 +90,10 @@
   let badge = null;
   let paused = false;
   let sentCount = 0;
+  let lastError = null;
 
   function setBadge(text, color) {
+    if (!document.body) return;
     if (!badge) {
       badge = document.createElement("div");
       badge.style.cssText =
@@ -63,33 +103,46 @@
       badge.title = "BoardGames BGA bridge — click to pause/resume";
       badge.addEventListener("click", () => {
         paused = !paused;
-        render();
+        setBadge(paused ? "bridge paused" : "bridging", paused ? "#555" : "#15803d");
       });
       document.body.appendChild(badge);
     }
-    badge.textContent = paused ? "bridge paused" : text;
-    badge.style.background = paused ? "#555" : color;
+    badge.textContent = text;
+    badge.style.background = color;
   }
 
-  function render() {
-    if (paused) setBadge("", "#555");
-  }
-
-  // ─── Event queue + delivery ────────────────────────────────────────────────
+  // ─── Event queue ───────────────────────────────────────────────────────────
 
   let seq = 0;
   /** @type {Array<{seq:number,kind:string,payload:unknown,ts:number}>} */
   const queue = [];
   let inFlight = false;
   let backoffMs = 0;
-  let lastError = null;
 
-  function sanitize(value) {
-    try {
-      return JSON.parse(JSON.stringify(value));
-    } catch (_e) {
-      return { unserializable: true };
+  /**
+   * Structured-clone-ish deep copy that survives cycles and DOM/function
+   * values instead of throwing (a naive JSON round-trip loses the whole
+   * payload the moment BGA attaches a back-reference).
+   */
+  function sanitize(value, depth = 0, seen = new WeakSet()) {
+    if (value === null || typeof value !== "object") {
+      return typeof value === "function" ? undefined : value;
     }
+    if (depth > 8) return "[deep]";
+    if (seen.has(value)) return "[circular]";
+    if (typeof Node !== "undefined" && value instanceof Node) return "[dom]";
+    seen.add(value);
+    if (Array.isArray(value)) return value.map((v) => sanitize(v, depth + 1, seen));
+    const out = {};
+    for (const key of Object.keys(value)) {
+      try {
+        const copied = sanitize(value[key], depth + 1, seen);
+        if (copied !== undefined) out[key] = copied;
+      } catch (_e) {
+        /* skip hostile getters */
+      }
+    }
+    return out;
   }
 
   function enqueue(kind, payload) {
@@ -97,18 +150,113 @@
     queue.push({ seq: seq++, kind, payload: sanitize(payload), ts: Date.now() });
   }
 
-  function enqueueCheckpoint() {
-    const gameui = window.gameui || (window.unsafeWindow && window.unsafeWindow.gameui);
-    if (gameui && gameui.gamedatas) enqueue("gamedatas", gameui.gamedatas);
+  // ─── WebSocket tee (primary notification capture) ──────────────────────────
+
+  let wsTeeInstalled = false;
+  let wsFrameCount = 0;
+
+  function installWebSocketTee() {
+    const NativeWebSocket = pageWindow.WebSocket;
+    if (!NativeWebSocket || NativeWebSocket.__bgaBridgePatched) return;
+
+    function PatchedWebSocket(url, protocols) {
+      const socket =
+        protocols === undefined
+          ? new NativeWebSocket(url)
+          : new NativeWebSocket(url, protocols);
+      try {
+        if (String(url).includes("boardgamearena.com")) {
+          socket.addEventListener("message", (event) => {
+            wsFrameCount++;
+            let data = event.data;
+            if (typeof data === "string") {
+              try {
+                data = JSON.parse(data);
+              } catch (_e) {
+                /* keep the raw string */
+              }
+            } else {
+              return; // binary frames (ping/pong) carry no game state
+            }
+            enqueue("notif", { source: "ws", url: String(url), data });
+          });
+        }
+      } catch (_e) {
+        /* never break the page's socket */
+      }
+      return socket;
+    }
+    PatchedWebSocket.prototype = NativeWebSocket.prototype;
+    PatchedWebSocket.__bgaBridgePatched = true;
+    for (const key of ["CONNECTING", "OPEN", "CLOSING", "CLOSED"]) {
+      PatchedWebSocket[key] = NativeWebSocket[key];
+    }
+    pageWindow.WebSocket = PatchedWebSocket;
+    wsTeeInstalled = true;
+    console.log("[bga-bridge] WebSocket tee installed");
   }
 
-  function flush() {
-    if (paused || inFlight || queue.length === 0) return;
-    if (!config.ingestUrl || !config.token) {
-      setBadge("bridge: set URL + token via Tampermonkey menu", "#b45309");
-      return;
+  installWebSocketTee();
+
+  // ─── gamedatas checkpoint + optional notifqueue hook ───────────────────────
+
+  let checkpointSent = false;
+  let notifqueueHooked = false;
+
+  function enqueueCheckpoint() {
+    const gameui = pageWindow.gameui;
+    if (!gameui || !gameui.gamedatas) return false;
+    enqueue("gamedatas", gameui.gamedatas);
+    return true;
+  }
+
+  function tryHookNotifqueue() {
+    const gameui = pageWindow.gameui;
+    if (!gameui || !gameui.notifqueue || notifqueueHooked) return;
+    const queueObj = gameui.notifqueue;
+    // `onNotification` is not part of any documented API; wrap it only when
+    // this BGA build actually exposes it. The WebSocket tee is the real feed.
+    if (typeof queueObj.onNotification === "function") {
+      const original = queueObj.onNotification;
+      queueObj.onNotification = function (notif) {
+        try {
+          enqueue("notif", { source: "notifqueue", data: notif });
+        } catch (_e) {
+          /* never break the game UI */
+        }
+        return original.apply(this, arguments);
+      };
+      notifqueueHooked = true;
+      console.log("[bga-bridge] notifqueue.onNotification hooked");
     }
-    if (backoffMs > 0) return; // a retry timer will clear this
+  }
+
+  const started = Date.now();
+  const poll = setInterval(() => {
+    installWebSocketTee(); // BGA may reassign window.WebSocket late
+    tryHookNotifqueue();
+
+    if (!checkpointSent) checkpointSent = enqueueCheckpoint();
+
+    if (!config.ingestUrl || !config.token) {
+      setBadge("bridge: set URL + token (Tampermonkey menu)", "#b45309");
+    } else if (checkpointSent || wsFrameCount > 0) {
+      if (!paused && !lastError) setBadge(`bridging · ${sentCount} sent`, "#15803d");
+    } else {
+      setBadge("waiting for game…", "#666");
+    }
+
+    if (Date.now() - started > POLL_MAX_MS && !checkpointSent && wsFrameCount === 0) {
+      clearInterval(poll);
+      if (badge) badge.remove();
+    }
+  }, POLL_MS);
+
+  // ─── Delivery ──────────────────────────────────────────────────────────────
+
+  function flush() {
+    if (paused || inFlight || backoffMs > 0 || queue.length === 0) return;
+    if (!config.ingestUrl || !config.token) return;
 
     const batch = queue.slice(0, MAX_BATCH);
     inFlight = true;
@@ -125,16 +273,6 @@
           sentCount += batch.length;
           backoffMs = 0;
           lastError = null;
-          try {
-            const body = JSON.parse(res.responseText);
-            // Server reset (fresh session/lower nextSeq): re-anchor with a
-            // full checkpoint so late state is never missing.
-            if (typeof body.nextSeq === "number" && body.nextSeq < seq - queue.length) {
-              enqueueCheckpoint();
-            }
-          } catch (_e) {
-            /* response shape is best-effort */
-          }
           setBadge(`bridging · ${sentCount} sent`, "#15803d");
         } else {
           failBatch(`HTTP ${res.status}`);
@@ -155,52 +293,17 @@
     lastError = reason;
     backoffMs = Math.min(backoffMs === 0 ? BACKOFF_MIN_MS : backoffMs * 2, BACKOFF_MAX_MS);
     setBadge(`bridge error (${reason}) — retrying`, "#b91c1c");
+    const wait = backoffMs;
     setTimeout(() => {
       backoffMs = 0;
-      // After a long outage the session may have been re-created server-side;
+      // The session may have been re-created server-side while we were down;
       // a fresh checkpoint makes the stream self-healing.
-      if (lastError && queue.length === 0) enqueueCheckpoint();
-    }, backoffMs);
+      if (reason === "HTTP 401") checkpointSent = false;
+    }, wait);
   }
 
   setInterval(flush, FLUSH_INTERVAL_MS);
   setInterval(() => {
     if (queue.length >= FLUSH_BATCH_SIZE) flush();
   }, 100);
-
-  // ─── Hook installation ─────────────────────────────────────────────────────
-
-  function tryHook() {
-    const gameui = window.gameui || (window.unsafeWindow && window.unsafeWindow.gameui);
-    if (!gameui || !gameui.gamedatas || !gameui.notifqueue) return false;
-
-    // Full-state checkpoint first, so a notif missed before hooking is moot.
-    enqueue("gamedatas", gameui.gamedatas);
-
-    const original = gameui.notifqueue.onNotification;
-    gameui.notifqueue.onNotification = function (notif) {
-      try {
-        enqueue("notif", notif);
-      } catch (_e) {
-        /* never break the game UI */
-      }
-      return original.apply(this, arguments);
-    };
-
-    setBadge("bridging · 0 sent", "#15803d");
-    return true;
-  }
-
-  const started = Date.now();
-  const poll = setInterval(() => {
-    if (tryHook()) {
-      clearInterval(poll);
-    } else if (Date.now() - started > HOOK_POLL_MAX_MS) {
-      clearInterval(poll);
-      // Not a game page (lobby, forums, …) — stay silent.
-      if (badge) badge.remove();
-    } else if (!badge && document.body) {
-      setBadge("waiting for game…", "#666");
-    }
-  }, HOOK_POLL_MS);
 })();
