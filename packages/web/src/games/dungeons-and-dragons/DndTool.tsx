@@ -24,7 +24,7 @@ import { PartySetup } from "./PartySetup";
 //
 // The Cinzel display face is imported here so it rides this lazy chunk only.
 
-const BG = "bg-gradient-to-b from-[#1a0606] via-surface-950 to-black";
+const BG = "bg-gradient-to-b from-dnd-ink via-surface-950 to-black";
 
 export default function DndTool(_props: GameComponentProps) {
   return (

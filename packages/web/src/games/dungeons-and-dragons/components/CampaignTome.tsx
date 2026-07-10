@@ -1,20 +1,15 @@
 import type { Campaign } from "@boardgames/core/protocol";
-import { useState } from "react";
+
 import { ArrowRightIcon, TrashIcon } from "../../../components/icons";
 import { D20Die } from "../../../components/offline/D20Die";
-import { Button, ErrorAlert, Modal } from "../../../components/ui";
+import { Button, ErrorAlert, useConfirm } from "../../../components/ui";
+import { formatBytes } from "../../../lib/format-bytes";
+import { DndPanel } from "./ui";
 
 // One campaign as a bound tome on the hall's shelf. The card carries all
 // three job states: the sages reading (processing), a failed reading (error),
 // and — once ready — just the title and tagline. Opening the tome leads to
 // the session-setup screen; the quest map lives there and on the game screen.
-
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
-
-function formatSize(bytes: number): string {
-  if (bytes >= 1024 * 1024) return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
-  return `${Math.max(1, Math.round(bytes / 1024))} KB`;
-}
 
 type Props = {
   campaign: Campaign;
@@ -24,11 +19,22 @@ type Props = {
 };
 
 export function CampaignTome({ campaign, onOpen, onDelete, deleting }: Props) {
-  const [confirmingDelete, setConfirmingDelete] = useState(false);
+  const { confirm, confirmDialog } = useConfirm();
+
+  const handleDelete = async () => {
+    const ok = await confirm({
+      title: `Burn ${campaign.title ?? campaign.sourceFilename}?`,
+      description:
+        "This campaign and its charted waypoints will be lost to the flames. The original PDF stays wherever you keep it — you can always upload it again.",
+      confirmLabel: "Burn it",
+      cancelLabel: "Keep it",
+    });
+    if (ok) onDelete(campaign.id);
+  };
 
   const sourceLine = (
     <span className="truncate text-3xs text-amber-200/40">
-      {campaign.sourceFilename} · {formatSize(campaign.sourceSizeBytes)}
+      {campaign.sourceFilename} · {formatBytes(campaign.sourceSizeBytes)}
     </span>
   );
 
@@ -37,7 +43,7 @@ export function CampaignTome({ campaign, onOpen, onDelete, deleting }: Props) {
       variant="ghost"
       size="xs"
       aria-label="Delete campaign"
-      onClick={() => setConfirmingDelete(true)}
+      onClick={handleDelete}
       disabled={deleting}
       className="shrink-0 text-amber-200/50 hover:text-rose-300"
     >
@@ -46,14 +52,14 @@ export function CampaignTome({ campaign, onOpen, onDelete, deleting }: Props) {
   );
 
   return (
-    <div className="overflow-hidden rounded-2xl border border-amber-400/20 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/90 to-black/80 p-4 transition-colors hover:border-amber-400/35">
+    <DndPanel padding="lg" interactive className="overflow-hidden">
       {campaign.status === "processing" && (
         <div className="flex items-center gap-4">
           <span aria-hidden="true" className="shrink-0">
             <D20Die count={20} className="dnd-die dnd-die-animated h-12 w-12" />
           </span>
           <div className="min-w-0 flex-1">
-            <p className="animate-pulse-soft text-sm font-semibold text-amber-100" style={SERIF}>
+            <p className="font-serif-body animate-pulse-soft text-sm font-semibold text-amber-100">
               The sages are studying your tome…
             </p>
             <p className="mt-0.5 text-2xs text-amber-200/60">
@@ -91,15 +97,12 @@ export function CampaignTome({ campaign, onOpen, onDelete, deleting }: Props) {
                 {campaign.title}
               </span>
               {campaign.tagline && (
-                <span
-                  className="mt-1 block text-sm italic leading-relaxed text-amber-200/70"
-                  style={SERIF}
-                >
+                <span className="font-serif-body mt-1 block text-sm italic leading-relaxed text-amber-200/70">
                   {campaign.tagline}
                 </span>
               )}
             </span>
-            <span className="flex shrink-0 items-center gap-1 text-2xs font-semibold uppercase tracking-[0.14em] text-amber-300/60 transition-colors group-hover:text-amber-200">
+            <span className="flex shrink-0 items-center gap-1 text-2xs font-semibold uppercase tracking-label text-amber-300/60 transition-colors group-hover:text-amber-200">
               Open
               <ArrowRightIcon className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
             </span>
@@ -107,36 +110,7 @@ export function CampaignTome({ campaign, onOpen, onDelete, deleting }: Props) {
         </div>
       )}
 
-      {confirmingDelete && (
-        <Modal
-          onClose={() => setConfirmingDelete(false)}
-          eyebrow="Burn the tome"
-          title={campaign.title ?? campaign.sourceFilename}
-          titleClassName="font-fantasy text-xl font-bold text-amber-100"
-          panelClassName="max-w-md"
-        >
-          <p className="text-sm text-fg-secondary">
-            This campaign and its charted waypoints will be lost to the flames. The original PDF
-            stays wherever you keep it — you can always upload it again.
-          </p>
-          <div className="flex justify-end gap-2">
-            <Button variant="ghost" onClick={() => setConfirmingDelete(false)}>
-              Keep it
-            </Button>
-            <Button
-              variant="tinted"
-              tone="rose"
-              loading={deleting}
-              onClick={() => {
-                onDelete(campaign.id);
-                setConfirmingDelete(false);
-              }}
-            >
-              Burn it
-            </Button>
-          </div>
-        </Modal>
-      )}
-    </div>
+      {confirmDialog}
+    </DndPanel>
   );
 }

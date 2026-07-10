@@ -4,12 +4,12 @@ import { Button, LoadingState } from "../../../components/ui";
 import { fetchActiveDndSession, setBeamerImage, triggerBeamer } from "../../../lib/dnd-campaigns";
 import { errorMessageOf } from "../../../lib/error-message";
 import { qk } from "../../../lib/query-keys";
+import { DndPanel } from "./ui";
 
 // External devices: the join code a beamer/TTS companion types in, and the
 // image control — whatever the DM uploads here is what the beamer shows,
 // fullscreen, nothing else.
 
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
 const IMAGE_MAX_BYTES = 10 * 1024 * 1024;
 
 function fileToDataUri(file: File): Promise<string> {
@@ -67,41 +67,35 @@ export function DevicesScreen() {
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-4 overflow-y-auto pt-3">
       <div className="mx-auto flex w-full max-w-xl flex-col gap-4">
-        <div className="rounded-2xl border border-amber-400/25 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/85 to-black/80 p-5 text-center">
-          <p
-            className="text-3xs font-bold uppercase tracking-[0.3em] text-amber-300/70"
-            style={SERIF}
-          >
+        <DndPanel padding="xl" className="text-center">
+          <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-amber-300/70">
             Join code — external devices
           </p>
           {session ? (
             <>
-              <p className="font-fantasy mt-2 text-5xl font-bold tracking-[0.35em] text-amber-100">
+              <p className="font-fantasy mt-2 text-5xl font-bold tracking-eyebrow text-amber-100">
                 {session.code}
               </p>
-              <p className="mt-3 text-xs leading-relaxed text-amber-200/50" style={SERIF}>
+              <p className="font-serif-body mt-3 text-xs leading-relaxed text-amber-200/50">
                 On the beamer device: open this game, pick “Beamer / TTS”, and enter the code. The
                 screen becomes a fullscreen display of whatever you put below.
               </p>
             </>
           ) : (
-            <p className="mt-2 text-sm text-amber-200/60" style={SERIF}>
+            <p className="font-serif-body mt-2 text-sm text-amber-200/60">
               No live session — reopen the campaign to light one.
             </p>
           )}
-        </div>
+        </DndPanel>
 
         <div className="rounded-2xl border border-amber-400/20 bg-black/25 p-4">
           <div className="flex items-center justify-between gap-2">
-            <p
-              className="text-3xs font-bold uppercase tracking-[0.25em] text-amber-300/60"
-              style={SERIF}
-            >
+            <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-amber-300/60">
               On the beamer now
             </p>
             <div className="flex items-center gap-2">
               {delivered !== null && (
-                <span className="text-3xs text-amber-200/40" style={SERIF}>
+                <span className="font-serif-body text-3xs text-amber-200/40">
                   delivered to {delivered} {delivered === 1 ? "screen" : "screens"}
                 </span>
               )}
@@ -156,7 +150,7 @@ export function DevicesScreen() {
               className="mt-3 max-h-80 w-full rounded-xl object-contain"
             />
           ) : (
-            <p className="mt-3 py-8 text-center text-xs text-amber-200/40" style={SERIF}>
+            <p className="font-serif-body mt-3 py-8 text-center text-xs text-amber-200/40">
               Nothing on the beamer — connected screens show the campaign splash.
             </p>
           )}

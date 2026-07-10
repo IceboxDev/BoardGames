@@ -9,8 +9,6 @@ import { buildEntityIndex, EnrichedText } from "./EnrichedText";
 // Names and items in the text are wiki-linked to their sheets/compendium
 // entries. After the campaign, this page IS the campaign.
 
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
-
 type Props = {
   entries: DndHistoryEntry[];
   party: DndCharacter[];
@@ -49,7 +47,7 @@ export function HistoryLog({ entries, party, npcs, onOpenCharacter, onOpenNpc }:
       {entries.map((entry) => {
         if (entry.kind === "player-action") {
           return (
-            <p key={entry.id} className="text-sm italic text-amber-300/70" style={SERIF}>
+            <p key={entry.id} className="font-serif-body text-sm italic text-amber-300/70">
               ▸ The party: {enrich(entry.text)}
             </p>
           );
@@ -58,7 +56,7 @@ export function HistoryLog({ entries, party, npcs, onOpenCharacter, onOpenNpc }:
           return (
             <p
               key={entry.id}
-              className="font-fantasy mt-3 border-b border-amber-400/20 pb-1 text-sm font-bold uppercase tracking-[0.2em] text-amber-300/80"
+              className="font-fantasy mt-3 border-b border-amber-400/20 pb-1 text-sm font-bold uppercase tracking-eyebrow text-amber-300/80"
             >
               {enrich(entry.text)}
             </p>
@@ -70,13 +68,10 @@ export function HistoryLog({ entries, party, npcs, onOpenCharacter, onOpenNpc }:
               key={entry.id}
               className="rounded-xl border border-rose-400/30 bg-rose-950/20 px-3.5 py-2.5"
             >
-              <p
-                className="text-3xs font-bold uppercase tracking-[0.25em] text-rose-300/80"
-                style={SERIF}
-              >
+              <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-rose-300/80">
                 Combat
               </p>
-              <p className="mt-1 text-sm leading-relaxed text-rose-100/85" style={SERIF}>
+              <p className="font-serif-body mt-1 text-sm leading-relaxed text-rose-100/85">
                 {enrich(entry.text)}
               </p>
             </div>
@@ -85,8 +80,7 @@ export function HistoryLog({ entries, party, npcs, onOpenCharacter, onOpenNpc }:
         return (
           <p
             key={entry.id}
-            className="whitespace-pre-line text-base leading-relaxed text-amber-100/90"
-            style={SERIF}
+            className="font-serif-body whitespace-pre-line text-base leading-relaxed text-amber-100/90"
           >
             {enrich(entry.text)}
           </p>

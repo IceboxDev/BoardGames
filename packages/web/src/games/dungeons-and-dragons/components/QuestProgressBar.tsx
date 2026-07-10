@@ -24,8 +24,6 @@ const KIND_CHIP: Record<CampaignCheckpointKind, string> = {
   finale: "bg-amber-400/25 text-amber-100 ring-amber-300/60",
 };
 
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
-
 type Props = {
   checkpoints: CampaignCheckpoint[];
   /** Controlled selection (the game screen drives the waypoint folder). */
@@ -55,7 +53,7 @@ export function QuestProgressBar({
       {/* Rail + seals. Horizontal padding keeps the end diamonds (0% / 100%)
           from overhanging the card. */}
       <div className="relative px-2 py-2.5">
-        <div className="dnd-quest-rail h-2 rounded-full bg-gradient-to-r from-[#641212] via-[#b91c1c] to-amber-400/90" />
+        <div className="dnd-quest-rail h-2 rounded-full bg-gradient-to-r from-dnd-ember-deep via-dnd-ember to-amber-400/90" />
         <div className="absolute inset-x-2 inset-y-0">
           {checkpoints.map((cp, i) => {
             const pct = checkpoints.length === 1 ? 50 : (i / (checkpoints.length - 1)) * 100;
@@ -79,9 +77,7 @@ export function QuestProgressBar({
                       ? "dnd-checkpoint-seal-finale h-4 w-4 border-amber-200"
                       : "dnd-checkpoint-seal h-3 w-3 border-amber-300/70"
                   } ${
-                    isSelected
-                      ? "scale-125 bg-amber-300"
-                      : "bg-[#1a0606] group-hover:bg-amber-400/40"
+                    isSelected ? "scale-125 bg-amber-300" : "bg-dnd-ink group-hover:bg-amber-400/40"
                   }`}
                 />
               </button>
@@ -95,8 +91,7 @@ export function QuestProgressBar({
         <div className="rounded-xl border border-amber-400/15 bg-black/25 px-3 py-2.5">
           <div className="flex flex-wrap items-center gap-2">
             <span
-              className={`shrink-0 rounded-full px-2 py-0.5 text-3xs font-bold uppercase tracking-[0.14em] ring-1 ${KIND_CHIP[current.kind]}`}
-              style={SERIF}
+              className={`font-serif-body shrink-0 rounded-full px-2 py-0.5 text-3xs font-bold uppercase tracking-label ring-1 ${KIND_CHIP[current.kind]}`}
             >
               {KIND_LABEL[current.kind]}
             </span>

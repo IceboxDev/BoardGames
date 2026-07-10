@@ -3,7 +3,11 @@ import { displayCharacterName } from "@boardgames/core/protocol";
 import { useEffect, useId, useState } from "react";
 import { MinusIcon, PlusIcon } from "../../../components/icons";
 import { Button, Input, Select } from "../../../components/ui";
+import { rollD20 } from "../logic/dice";
 import { getMonsterEntry } from "../logic/monsters";
+import { fmt, modOrZero } from "../logic/sheet-derived";
+import { escapeRegex } from "../logic/text";
+import { DndPanel } from "./ui";
 
 // The initiative tracker — what an `initiative` node opens instead of a
 // conversation. The DM types the players' RAW d20 rolls (the tracker adds
@@ -12,20 +16,6 @@ import { getMonsterEntry } from "../logic/monsters";
 // count, and the split button breaks a group out when a fight calls for it).
 // A module escalation table ("Further Danger") can be rolled from here and
 // its result seated. "Enter combat" lives in the game screen's action bar.
-
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
-
-function dexMod(dex: number | undefined | null): number {
-  return dex === undefined || dex === null ? 0 : Math.floor((dex - 10) / 2);
-}
-
-function fmtMod(value: number): string {
-  return value >= 0 ? `+${value}` : `${value}`;
-}
-
-function rollD20(mod: number): number {
-  return Math.floor(Math.random() * 20) + 1 + mod;
-}
 
 type EnemyRow = {
   key: number;
@@ -50,10 +40,6 @@ const NUMBER_WORDS: Record<string, number> = {
   "a pair of": 2,
   "a couple of": 2,
 };
-
-function escapeRegex(value: string): string {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
 
 /** "three dead vines" / "3 dead vines" near the creature's name → 3. */
 function inferCount(haystack: string, lowerName: string): number {
@@ -111,7 +97,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
         key: i,
         name: npc.name,
         count: inferCount(haystack, npc.name.toLowerCase()),
-        mod: dexMod(npc.abilities?.dex),
+        mod: modOrZero(npc.abilities?.dex),
         maxHp: npc.maxHp,
         roll: "",
       }));
@@ -126,7 +112,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
         key: nextKey,
         name: npc.name,
         count: 1,
-        mod: dexMod(npc.abilities?.dex),
+        mod: modOrZero(npc.abilities?.dex),
         maxHp: npc.maxHp,
         roll: "",
       },
@@ -167,7 +153,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
           Number.isFinite(parsedCount) && `${parsedCount}` === creature.count
             ? Math.min(12, Math.max(1, parsedCount))
             : 1,
-        mod: card ? dexMod(card.abilities?.dex) : monster ? dexMod(monster.dex) : 0,
+        mod: card ? modOrZero(card.abilities?.dex) : monster ? modOrZero(monster.dex) : 0,
         maxHp: card?.maxHp ?? monster?.maxHp ?? null,
         roll: "",
       });
@@ -189,7 +175,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
           kind: "pc" as const,
           // The DM types the raw d20 — the character's initiative bonus
           // (DEX modifier) is added here.
-          value: raw + dexMod(ch.sheet?.abilities?.dex),
+          value: raw + modOrZero(ch.sheet?.abilities?.dex),
         };
       }),
     ...enemies.map((e) => ({
@@ -216,7 +202,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
         kind: "pc" as const,
         characterId: ch.id,
         count: 1,
-        initiative: Number.parseInt(pcRolls[ch.id] ?? "", 10) + dexMod(ch.sheet?.abilities?.dex),
+        initiative: Number.parseInt(pcRolls[ch.id] ?? "", 10) + modOrZero(ch.sheet?.abilities?.dex),
         maxHp: ch.sheet?.maxHp ?? null,
       })),
     ...enemies
@@ -237,25 +223,19 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
 
   return (
     <div className="flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto pb-2">
-      <div className="shrink-0 rounded-2xl border border-rose-400/30 bg-gradient-to-br from-[#2a0808]/90 via-surface-900/85 to-black/80 p-4">
-        <p className="text-3xs font-bold uppercase tracking-[0.3em] text-rose-300/80" style={SERIF}>
+      <DndPanel border="rose" padding="lg" className="shrink-0">
+        <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-rose-300/80">
           Combat — roll initiative
         </p>
-        <p
-          className="mt-2 whitespace-pre-line text-base leading-relaxed text-amber-100/90"
-          style={SERIF}
-        >
+        <p className="font-serif-body mt-2 whitespace-pre-line text-base leading-relaxed text-amber-100/90">
           {node.readText}
         </p>
-      </div>
+      </DndPanel>
 
       <div className="grid min-h-0 grid-cols-1 gap-3 lg:grid-cols-2">
         {/* The party — the DM enters their raw d20 rolls. */}
         <div className="rounded-2xl border border-amber-400/20 bg-black/25 p-3">
-          <p
-            className="text-3xs font-bold uppercase tracking-[0.25em] text-amber-300/60"
-            style={SERIF}
-          >
+          <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-amber-300/60">
             The party — enter their d20 rolls
           </p>
           <ul className="mt-2 flex flex-col gap-2">
@@ -269,7 +249,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
                   >
                     {displayCharacterName(ch.sheet, ch.sourceFilename)}
                     <span className="ml-1.5 text-3xs text-amber-200/40">
-                      DEX {fmtMod(dexMod(ch.sheet?.abilities?.dex))}
+                      DEX {fmt(modOrZero(ch.sheet?.abilities?.dex))}
                     </span>
                   </label>
                   <Input
@@ -282,7 +262,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
                   />
                   <span className="w-9 shrink-0 text-center font-fantasy text-base font-bold text-amber-100">
                     {Number.isFinite(Number.parseInt(pcRolls[ch.id] ?? "", 10))
-                      ? `= ${Number.parseInt(pcRolls[ch.id] ?? "", 10) + dexMod(ch.sheet?.abilities?.dex)}`
+                      ? `= ${Number.parseInt(pcRolls[ch.id] ?? "", 10) + modOrZero(ch.sheet?.abilities?.dex)}`
                       : ""}
                   </span>
                 </li>
@@ -293,10 +273,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
         {/* The opposition — one roll per creature group. */}
         <div className="rounded-2xl border border-rose-400/20 bg-black/25 p-3">
           <div className="flex items-center justify-between gap-2">
-            <p
-              className="text-3xs font-bold uppercase tracking-[0.25em] text-rose-300/60"
-              style={SERIF}
-            >
+            <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-rose-300/60">
               The opposition — one roll per group
             </p>
             <Button
@@ -324,7 +301,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
                       ×{enemy.count}
                     </span>
                   )}
-                  <span className="ml-1.5 text-3xs text-rose-200/40">DEX {fmtMod(enemy.mod)}</span>
+                  <span className="ml-1.5 text-3xs text-rose-200/40">DEX {fmt(enemy.mod)}</span>
                 </span>
                 <Button
                   variant="ghost"
@@ -380,7 +357,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
               </li>
             ))}
             {enemies.length === 0 && (
-              <li className="text-xs text-rose-200/40" style={SERIF}>
+              <li className="font-serif-body text-xs text-rose-200/40">
                 No combatants recognized — add them below.
               </li>
             )}
@@ -394,7 +371,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
               <option value="">Add a combatant…</option>
               {npcs.map((npc) => (
                 <option key={npc.id} value={npc.id}>
-                  {npc.name} (DEX {fmtMod(dexMod(npc.abilities?.dex))})
+                  {npc.name} (DEX {fmt(modOrZero(npc.abilities?.dex))})
                 </option>
               ))}
             </Select>
@@ -407,14 +384,11 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
 
       {/* The module's escalation table, when the encounter carries one. */}
       {node.dangerTable && (
-        <div className="shrink-0 rounded-2xl border border-rose-400/30 bg-gradient-to-br from-[#3a0a0a]/70 via-black/30 to-black/40 p-3">
-          <p
-            className="text-3xs font-bold uppercase tracking-[0.25em] text-rose-300/80"
-            style={SERIF}
-          >
+        <div className="shrink-0 rounded-2xl border border-rose-400/30 bg-gradient-to-br from-dnd-blood/70 via-black/30 to-black/40 p-3">
+          <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-rose-300/80">
             Further danger — roll {node.dangerTable.die}
           </p>
-          <p className="mt-1 text-xs leading-relaxed text-amber-200/65" style={SERIF}>
+          <p className="font-serif-body mt-1 text-xs leading-relaxed text-amber-200/65">
             {node.dangerTable.description}
           </p>
           <div className="mt-2 flex items-center gap-2">
@@ -445,14 +419,11 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
 
       {/* Live turn order. */}
       <div className="shrink-0 rounded-2xl border border-amber-400/20 bg-black/25 p-3">
-        <p
-          className="text-3xs font-bold uppercase tracking-[0.25em] text-amber-300/60"
-          style={SERIF}
-        >
+        <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-amber-300/60">
           Turn order
         </p>
         {order.length === 0 ? (
-          <p className="mt-2 text-xs text-amber-200/40" style={SERIF}>
+          <p className="font-serif-body mt-2 text-xs text-amber-200/40">
             Enter and roll initiative above — the order forms here.
           </p>
         ) : (

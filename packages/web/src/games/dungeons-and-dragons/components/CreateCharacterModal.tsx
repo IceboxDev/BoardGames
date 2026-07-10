@@ -51,7 +51,8 @@ export function CreateCharacterModal({ campaignId, partyId, onClose }: Props) {
       eyebrow="Recruit an adventurer"
       title="Present a Character Sheet"
       titleClassName="font-fantasy text-2xl font-bold text-amber-100"
-      panelClassName="max-w-lg border-amber-400/25"
+      size="sm"
+      panelClassName="border-amber-400/25"
     >
       <PdfDropField
         file={file}

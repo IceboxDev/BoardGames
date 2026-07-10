@@ -8,8 +8,6 @@ import { Button, Input } from "../../../components/ui";
 // the hour. Logging writes the outcome into the chronicle; hp itself lives
 // on the players' sheets at the table.
 
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
-
 type RestRow = {
   resting: boolean;
   hitDice: string;
@@ -67,12 +65,9 @@ export function RestPanel({ party, onLog, logPending, onStateUpdates }: Props) {
   };
 
   return (
-    <div className="shrink-0 rounded-2xl border border-emerald-400/25 bg-gradient-to-br from-[#07231a]/70 via-surface-900/85 to-black/80 p-4">
+    <div className="shrink-0 rounded-2xl border border-emerald-400/25 bg-gradient-to-br from-dnd-rest/70 via-surface-900/85 to-black/80 p-4">
       <div className="flex items-center justify-between gap-2">
-        <p
-          className="text-3xs font-bold uppercase tracking-[0.3em] text-emerald-300/80"
-          style={SERIF}
-        >
+        <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-emerald-300/80">
           Short rest — one hour
         </p>
         <Button
@@ -148,7 +143,7 @@ export function RestPanel({ party, onLog, logPending, onStateUpdates }: Props) {
                     value={row.hitDice}
                     onChange={(e) => patch(ch.id, { hitDice: e.target.value })}
                   />
-                  <span className="text-3xs uppercase tracking-[0.12em] text-emerald-200/60">
+                  <span className="text-3xs uppercase tracking-label text-emerald-200/60">
                     dice →
                   </span>
                   <Input
@@ -173,7 +168,7 @@ export function RestPanel({ party, onLog, logPending, onStateUpdates }: Props) {
           );
         })}
       </ul>
-      <p className="mt-2 text-3xs leading-relaxed text-emerald-200/40" style={SERIF}>
+      <p className="font-serif-body mt-2 text-3xs leading-relaxed text-emerald-200/40">
         Hit dice heal die + CON each; logging writes the outcome into the chronicle as ground truth
         for the sages and the referee.
       </p>

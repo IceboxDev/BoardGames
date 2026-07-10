@@ -1,37 +1,18 @@
-import type { AbilityKey, DndCharacter } from "@boardgames/core/protocol";
-import { ABILITY_KEYS, displayCharacterName } from "@boardgames/core/protocol";
+import type { DndCharacter } from "@boardgames/core/protocol";
+import { displayCharacterName } from "@boardgames/core/protocol";
 import { fmt, mod, passivePerception, proficiencyBonus, shortSpeed } from "../logic/sheet-derived";
+import { AbilityGrid, DndPanel, Vital } from "./ui";
 
 // The in-game Players grid card: a full mini character sheet — identity,
 // every combat vital, abilities, saves, trained skills, proficiencies,
 // gear, and spells. The DM should almost never need to open the ledger
 // mid-session; the card IS the overview. Click for the full sheet.
 
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
-
-const ABILITY_LABEL: Record<AbilityKey, string> = {
-  str: "STR",
-  dex: "DEX",
-  con: "CON",
-  int: "INT",
-  wis: "WIS",
-  cha: "CHA",
-};
-
-function Vital({ label, value, tone }: { label: string; value: string; tone: string }) {
-  return (
-    <span className={`flex min-w-0 flex-col items-center rounded-lg border py-1 ${tone}`}>
-      <span className="font-fantasy text-sm font-bold leading-tight">{value}</span>
-      <span className="text-4xs font-bold uppercase tracking-[0.14em] opacity-60">{label}</span>
-    </span>
-  );
-}
-
 function InfoLine({ label, values }: { label: string; values: string[] }) {
   if (values.length === 0) return null;
   return (
-    <p className="text-2xs leading-snug text-amber-200/70" style={SERIF}>
-      <span className="font-bold uppercase tracking-[0.1em] text-amber-300/60">{label} </span>
+    <p className="font-serif-body text-2xs leading-snug text-amber-200/70">
+      <span className="font-bold uppercase tracking-label text-amber-300/60">{label} </span>
       {values.join(", ")}
     </p>
   );
@@ -61,11 +42,12 @@ export function PlayerCardLarge({ character, onView }: Props) {
   const trainedSkills = sheet.skills.filter((s) => s.proficiency !== "none");
 
   return (
-    // biome-ignore lint/correctness/noRestrictedElements: full-card click target styled as a character sheet card; Button/Chip chrome doesn't fit.
-    <button
-      type="button"
+    <DndPanel
+      as="button"
+      padding="md"
+      interactive
       onClick={onView}
-      className="flex h-full w-full flex-col gap-2.5 rounded-2xl border border-amber-400/20 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/90 to-black/80 p-3.5 text-left transition-all hover:-translate-y-0.5 hover:border-amber-400/45"
+      className="flex h-full w-full flex-col gap-2.5 text-left transition-all hover:-translate-y-0.5"
     >
       <div className="flex items-start gap-3">
         <span
@@ -80,12 +62,12 @@ export function PlayerCardLarge({ character, onView }: Props) {
               {shownName}
             </span>
             {sheet.playerName && (
-              <span className="shrink-0 truncate text-3xs text-amber-200/50" style={SERIF}>
+              <span className="font-serif-body shrink-0 truncate text-3xs text-amber-200/50">
                 {sheet.playerName}
               </span>
             )}
           </span>
-          <span className="block truncate text-xs italic text-amber-200/65" style={SERIF}>
+          <span className="font-serif-body block truncate text-xs italic text-amber-200/65">
             {identityLine}
           </span>
         </span>
@@ -134,28 +116,7 @@ export function PlayerCardLarge({ character, onView }: Props) {
         />
       </div>
 
-      {sheet.abilities && (
-        <div className="grid grid-cols-6 gap-1.5">
-          {ABILITY_KEYS.map((key) => {
-            const score = sheet.abilities?.[key];
-            if (score === undefined) return null;
-            return (
-              <span
-                key={key}
-                className="flex flex-col items-center rounded-lg border border-amber-400/20 bg-[#1a0606]/70 py-1"
-              >
-                <span className="text-4xs font-bold uppercase tracking-widest text-amber-300/60">
-                  {ABILITY_LABEL[key]}
-                </span>
-                <span className="font-fantasy text-sm font-bold leading-tight text-amber-100">
-                  {score}
-                </span>
-                <span className="text-3xs text-amber-200/50">{fmt(mod(score))}</span>
-              </span>
-            );
-          })}
-        </div>
-      )}
+      {sheet.abilities && <AbilityGrid abilities={sheet.abilities} size="sm" />}
 
       {trainedSkills.length > 0 && (
         <div className="flex flex-wrap gap-1">
@@ -184,26 +145,23 @@ export function PlayerCardLarge({ character, onView }: Props) {
       </div>
 
       {sheet.equipment.length > 0 && (
-        <p className="line-clamp-2 text-2xs leading-snug text-amber-200/70" style={SERIF}>
-          <span className="font-bold uppercase tracking-[0.1em] text-amber-300/60">Gear </span>
+        <p className="font-serif-body line-clamp-2 text-2xs leading-snug text-amber-200/70">
+          <span className="font-bold uppercase tracking-label text-amber-300/60">Gear </span>
           {sheet.equipment.join(", ")}
         </p>
       )}
       {sheet.spells.length > 0 && (
-        <p className="line-clamp-2 text-2xs leading-snug text-purple-200/80" style={SERIF}>
-          <span className="font-bold uppercase tracking-[0.1em] text-purple-300/60">Spells </span>
+        <p className="font-serif-body line-clamp-2 text-2xs leading-snug text-purple-200/80">
+          <span className="font-bold uppercase tracking-label text-purple-300/60">Spells </span>
           {sheet.spells.join(", ")}
         </p>
       )}
 
       {sheet.personality && (
-        <p
-          className="mt-auto line-clamp-2 text-xs italic leading-relaxed text-amber-200/55"
-          style={SERIF}
-        >
+        <p className="font-serif-body mt-auto line-clamp-2 text-xs italic leading-relaxed text-amber-200/55">
           {sheet.personality}
         </p>
       )}
-    </button>
+    </DndPanel>
   );
 }

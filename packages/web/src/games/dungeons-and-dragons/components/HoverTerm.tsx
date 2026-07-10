@@ -6,8 +6,6 @@ import { getCompendiumEntry } from "../logic/compendium";
 // entry. Entries come from the mock compendium for now; the lookup point is
 // what matters — a real item database slots in behind `getCompendiumEntry`.
 
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
-
 type Props = {
   term: string;
 };
@@ -34,24 +32,21 @@ export function HoverTerm({ term }: Props) {
       </button>
       {open && (
         <span className="absolute bottom-full left-1/2 z-overlay w-64 -translate-x-1/2 pb-1.5">
-          <span className="block rounded-xl border border-amber-400/30 bg-[#1a0606] p-3 shadow-2xl shadow-black/70">
+          <span className="block rounded-xl border border-amber-400/30 bg-dnd-ink p-3 shadow-2xl shadow-black/70">
             {entry ? (
               <>
                 <span className="font-fantasy block text-sm font-bold text-amber-100">
                   {entry.title}
                 </span>
-                <span className="block text-3xs font-semibold uppercase tracking-[0.14em] text-amber-300/60">
+                <span className="block text-3xs font-semibold uppercase tracking-label text-amber-300/60">
                   {entry.kind}
                 </span>
-                <span
-                  className="mt-1.5 block text-xs leading-relaxed text-amber-200/75"
-                  style={SERIF}
-                >
+                <span className="font-serif-body mt-1.5 block text-xs leading-relaxed text-amber-200/75">
                   {entry.text}
                 </span>
               </>
             ) : (
-              <span className="block text-xs leading-relaxed text-amber-200/50" style={SERIF}>
+              <span className="font-serif-body block text-xs leading-relaxed text-amber-200/50">
                 No compendium entry for "{term}" yet — the item archive is still being inscribed.
               </span>
             )}

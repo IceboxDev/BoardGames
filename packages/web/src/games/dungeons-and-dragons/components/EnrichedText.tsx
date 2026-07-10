@@ -3,6 +3,7 @@ import { displayCharacterName } from "@boardgames/core/protocol";
 import type { ReactNode } from "react";
 import { listCompendiumTerms } from "../logic/compendium";
 import { listSpellNames } from "../logic/spellbook";
+import { escapeRegex } from "../logic/text";
 import { HoverTerm } from "./HoverTerm";
 
 // Wiki-style enrichment for history text: PC and NPC names become links that
@@ -13,10 +14,6 @@ type Entity =
   | { kind: "pc"; name: string; character: DndCharacter }
   | { kind: "npc"; name: string; npc: DndNpc }
   | { kind: "term"; name: string };
-
-function escapeRegex(value: string): string {
-  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-}
 
 export function buildEntityIndex(
   party: DndCharacter[],

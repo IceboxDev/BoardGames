@@ -4,6 +4,31 @@ import { D20Die } from "../../../components/offline/D20Die";
 import { Button } from "../../../components/ui";
 import { type InitiativeOrder, InitiativePanel } from "./InitiativePanel";
 import { RestPanel } from "./RestPanel";
+import { DndPanel, ReadAloudPanel } from "./ui";
+
+/** The "Log" / "Logged ✓" control on a read-aloud panel's eyebrow row. */
+function LogButton({
+  logged,
+  pending,
+  onClick,
+}: {
+  logged: boolean;
+  pending: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <Button
+      variant={logged ? "ghost" : "tinted"}
+      tone="amber"
+      size="xs"
+      disabled={logged}
+      loading={pending}
+      onClick={onClick}
+    >
+      {logged ? "Logged ✓" : "Log"}
+    </Button>
+  );
+}
 
 /** Chain-link glyph for nodes that converge into a parallel branch. */
 function ChainIcon({ className }: { className?: string }) {
@@ -35,8 +60,6 @@ function ChainIcon({ className }: { className?: string }) {
 // shows the text the DM reads aloud plus the child branches — each child card
 // leads with its trigger (what the players could do) and a one-line summary,
 // and the full narration reveals only on traversal.
-
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
 
 type Props = {
   campaign: Campaign;
@@ -121,7 +144,7 @@ export function StoryTree({
           size="xs"
           onClick={() => onJumpTo(-1)}
           disabled={path.length === 0}
-          className={`font-fantasy font-bold uppercase tracking-[0.14em] ${
+          className={`font-fantasy font-bold uppercase tracking-label ${
             path.length === 0 ? "text-amber-100" : "text-amber-300/60 hover:text-amber-100"
           }`}
         >
@@ -154,63 +177,22 @@ export function StoryTree({
       {current?.nodeType === "initiative" ? (
         <InitiativePanel node={current} party={party} npcs={npcs} onOrderChange={onOrderChange} />
       ) : current ? (
-        <div className="shrink-0 rounded-2xl border border-amber-400/25 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/85 to-black/80 p-4">
-          <div className="flex items-center justify-between gap-2">
-            <p
-              className="text-3xs font-bold uppercase tracking-[0.3em] text-amber-300/70"
-              style={SERIF}
-            >
-              Read aloud
-            </p>
-            <Button
-              variant={currentLogged ? "ghost" : "tinted"}
-              tone="amber"
-              size="xs"
-              disabled={currentLogged}
-              loading={logPending}
-              onClick={onLogCurrent}
-            >
-              {currentLogged ? "Logged ✓" : "Log"}
-            </Button>
-          </div>
-          <p
-            className="mt-2 whitespace-pre-line text-base leading-relaxed text-amber-100/90"
-            style={SERIF}
-          >
-            {current.readText}
-          </p>
-        </div>
+        <ReadAloudPanel
+          action={<LogButton logged={currentLogged} pending={logPending} onClick={onLogCurrent} />}
+        >
+          {current.readText}
+        </ReadAloudPanel>
       ) : waypoint?.arrivalText ? (
-        <div className="shrink-0 rounded-2xl border border-amber-400/25 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/85 to-black/80 p-4">
-          <div className="flex items-center justify-between gap-2">
-            <p
-              className="text-3xs font-bold uppercase tracking-[0.3em] text-amber-300/70"
-              style={SERIF}
-            >
-              Read aloud — on arrival
-            </p>
-            <Button
-              variant={arrivalLogged ? "ghost" : "tinted"}
-              tone="amber"
-              size="xs"
-              disabled={arrivalLogged}
-              loading={logPending}
-              onClick={onLogArrival}
-            >
-              {arrivalLogged ? "Logged ✓" : "Log"}
-            </Button>
-          </div>
-          <p
-            className="mt-2 whitespace-pre-line text-base leading-relaxed text-amber-100/90"
-            style={SERIF}
-          >
-            {waypoint.arrivalText}
-          </p>
-        </div>
+        <ReadAloudPanel
+          eyebrow="Read aloud — on arrival"
+          action={<LogButton logged={arrivalLogged} pending={logPending} onClick={onLogArrival} />}
+        >
+          {waypoint.arrivalText}
+        </ReadAloudPanel>
       ) : (
         waypoint && (
           <div className="shrink-0 rounded-2xl border border-amber-400/15 bg-black/25 px-4 py-3">
-            <p className="text-sm leading-relaxed text-amber-200/70" style={SERIF}>
+            <p className="font-serif-body text-sm leading-relaxed text-amber-200/70">
               {waypoint.description}
             </p>
           </div>
@@ -230,10 +212,7 @@ export function StoryTree({
           above IS the node; combat resolution lands in a later slice). */}
       {current?.nodeType === "initiative" ? null : (
         <>
-          <p
-            className="px-1 text-3xs font-bold uppercase tracking-[0.25em] text-amber-300/50"
-            style={SERIF}
-          >
+          <p className="font-serif-body px-1 text-3xs font-bold uppercase tracking-eyebrow text-amber-300/50">
             {current ? "The paths from here" : "Charted beginnings"}
           </p>
           {children.length === 0 ? (
@@ -251,15 +230,13 @@ export function StoryTree({
             <ul className="grid grid-cols-1 gap-2.5 lg:grid-cols-2 2xl:grid-cols-3">
               {children.map((node) => (
                 <li key={node.id}>
-                  {/* biome-ignore lint/correctness/noRestrictedElements: full-card click target — a story branch tile; Button/Chip chrome doesn't fit. */}
-                  <button
-                    type="button"
+                  <DndPanel
+                    as="button"
+                    tone={node.nodeType === "initiative" ? "rose" : "amber"}
+                    padding="md"
+                    interactive
                     onClick={() => enter(node)}
-                    className={`flex h-full w-full flex-col gap-1.5 rounded-2xl border p-3.5 text-left transition-all hover:-translate-y-0.5 ${
-                      node.nodeType === "initiative"
-                        ? "border-rose-400/40 bg-gradient-to-br from-[#3a0a0a]/90 via-surface-900/90 to-black/80 hover:border-rose-300/60"
-                        : "border-amber-400/20 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/90 to-black/80 hover:border-amber-400/45"
-                    }`}
+                    className="flex h-full w-full flex-col gap-1.5 text-left transition-all hover:-translate-y-0.5"
                   >
                     <span className="flex items-center gap-2">
                       {node.nodeType === "initiative" && (
@@ -275,12 +252,12 @@ export function StoryTree({
                         {node.trigger}
                       </span>
                       {node.nodeType === "initiative" && (
-                        <span className="ml-auto shrink-0 rounded-full bg-rose-500/15 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-[0.12em] text-rose-200/80 ring-1 ring-rose-400/30">
+                        <span className="ml-auto shrink-0 rounded-full bg-rose-500/15 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-label text-rose-200/80 ring-1 ring-rose-400/30">
                           Combat
                         </span>
                       )}
                       {node.nodeType === "rest" && (
-                        <span className="ml-auto shrink-0 rounded-full bg-emerald-500/15 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-[0.12em] text-emerald-200/80 ring-1 ring-emerald-400/30">
+                        <span className="ml-auto shrink-0 rounded-full bg-emerald-500/15 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-label text-emerald-200/80 ring-1 ring-emerald-400/30">
                           Rest
                         </span>
                       )}
@@ -294,11 +271,11 @@ export function StoryTree({
                       )}
                     </span>
                     {node.summary && (
-                      <span className="text-xs leading-relaxed text-amber-200/60" style={SERIF}>
+                      <span className="font-serif-body text-xs leading-relaxed text-amber-200/60">
                         {node.summary}
                       </span>
                     )}
-                  </button>
+                  </DndPanel>
                 </li>
               ))}
             </ul>

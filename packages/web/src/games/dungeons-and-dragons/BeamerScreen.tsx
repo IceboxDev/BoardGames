@@ -13,7 +13,6 @@ import { errorMessageOf } from "../../lib/error-message";
 // Devices screen, then becomes exactly one thing: a fullscreen display of
 // whatever image the DM uploads. No banner, no padding, no cropping.
 
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
 const CODE_KEY = "dnd-beamer-code";
 
 type Display = { kind: "splash" } | { kind: "image"; url: string };
@@ -83,7 +82,7 @@ export default function BeamerScreen() {
 
   if (session) {
     return (
-      <div className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-gradient-to-b from-[#1a0606] via-surface-950 to-black px-6 text-center">
+      <div className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-gradient-to-b from-dnd-ink via-surface-950 to-black px-6 text-center">
         <span aria-hidden="true">
           <D20Die
             count={20}
@@ -91,16 +90,13 @@ export default function BeamerScreen() {
           />
         </span>
         <div>
-          <p className="font-fantasy text-2xs font-bold uppercase tracking-[0.35em] text-amber-300/80">
+          <p className="font-fantasy text-2xs font-bold uppercase tracking-eyebrow text-amber-300/80">
             {connected ? "The table is live" : "Reconnecting…"}
           </p>
-          <h1
-            className="font-fantasy mt-2 text-4xl font-bold text-amber-100 sm:text-5xl"
-            style={{ textShadow: "0 2px 14px rgba(0,0,0,0.7)" }}
-          >
+          <h1 className="dnd-hero-title font-fantasy mt-2 text-4xl font-bold text-amber-100 sm:text-5xl">
             {session.campaignTitle ?? "The Adventure"}
           </h1>
-          <p className="mt-3 text-sm text-amber-200/60" style={SERIF}>
+          <p className="font-serif-body mt-3 text-sm text-amber-200/60">
             Awaiting the Dungeon Master's signal…
           </p>
         </div>
@@ -121,24 +117,18 @@ export default function BeamerScreen() {
   }
 
   return (
-    <div className="relative z-10 flex h-full flex-col items-center justify-center gap-6 bg-gradient-to-b from-[#1a0606] via-surface-950 to-black px-6 text-center">
+    <div className="relative z-10 flex h-full flex-col items-center justify-center gap-6 bg-gradient-to-b from-dnd-ink via-surface-950 to-black px-6 text-center">
       <span aria-hidden="true">
         <D20Die count={20} className="dnd-die h-24 w-24 opacity-70 sm:h-32 sm:w-32" />
       </span>
       <div>
-        <p className="font-fantasy text-2xs font-bold uppercase tracking-[0.35em] text-amber-300/80">
+        <p className="font-fantasy text-2xs font-bold uppercase tracking-eyebrow text-amber-300/80">
           Beamer &amp; voice companion
         </p>
-        <h1
-          className="font-fantasy mt-2 text-3xl font-bold text-amber-100 sm:text-4xl"
-          style={{ textShadow: "0 2px 14px rgba(0,0,0,0.7)" }}
-        >
+        <h1 className="dnd-hero-title font-fantasy mt-2 text-3xl font-bold text-amber-100 sm:text-4xl">
           Join the table
         </h1>
-        <p
-          className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-amber-200/60"
-          style={SERIF}
-        >
+        <p className="font-serif-body mx-auto mt-3 max-w-sm text-sm leading-relaxed text-amber-200/60">
           Enter the code from the Dungeon Master's Devices screen. This display then shows whatever
           the DM puts on it — fullscreen, nothing else.
         </p>
@@ -156,7 +146,7 @@ export default function BeamerScreen() {
           placeholder="CODE"
           maxLength={8}
           aria-label="Session code"
-          className="font-fantasy w-40 text-center text-xl tracking-[0.3em]"
+          className="font-fantasy w-40 text-center text-xl tracking-eyebrow"
         />
         <Button variant="tinted" tone="amber" type="submit" loading={joining}>
           Join

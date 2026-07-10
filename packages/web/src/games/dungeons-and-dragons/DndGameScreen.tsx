@@ -28,6 +28,7 @@ import {
   updateCharacterState,
 } from "../../lib/dnd-campaigns";
 import { errorMessageOf } from "../../lib/error-message";
+import { formatBytes } from "../../lib/format-bytes";
 import { qk } from "../../lib/query-keys";
 import { CharacterSheetModal } from "./components/CharacterSheetModal";
 import { CombatPanel } from "./components/CombatPanel";
@@ -39,14 +40,13 @@ import { NpcSheetModal } from "./components/NpcSheetModal";
 import { PlayerCardLarge } from "./components/PlayerCardLarge";
 import { QuestProgressBar } from "./components/QuestProgressBar";
 import { StoryTree } from "./components/StoryTree";
+import { DndPanel } from "./components/ui";
 import { DND_RULEBOOKS } from "./index";
 
 // The running-session screen, laid out like every other game via GameScreen.
 // Left sidebar: the game menu. Right sidebar: the chronicle. Bottom tray:
 // the sages' chat — the DM types what the players said/did and the model
 // grows the story tree (per party) at the current waypoint/node.
-
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
 
 type MenuScreen = "main" | "players" | "npcs" | "history" | "sources" | "devices";
 
@@ -58,11 +58,6 @@ const MENU: { id: MenuScreen; label: string; description: string }[] = [
   { id: "sources", label: "Sources", description: "Tomes & sheets" },
   { id: "devices", label: "Devices", description: "Beamer & TTS" },
 ];
-
-function formatSize(bytes: number): string {
-  if (bytes >= 1024 * 1024) return `${(bytes / 1024 / 1024).toFixed(1)} MB`;
-  return `${Math.max(1, Math.round(bytes / 1024))} KB`;
-}
 
 type Props = {
   campaign: Campaign;
@@ -324,7 +319,7 @@ export function DndGameScreen({ campaign, party }: Props) {
 
   return (
     <GameScreen
-      background="bg-gradient-to-b from-[#1a0606] via-surface-950 to-black"
+      background="bg-gradient-to-b from-dnd-ink via-surface-950 to-black"
       leftSidebarTitle={campaign.title ?? "Campaign"}
       leftSidebar={
         <div className="flex h-full flex-col gap-4">
@@ -343,7 +338,7 @@ export function DndGameScreen({ campaign, party }: Props) {
                 >
                   <span className="flex min-w-0 flex-col items-start">
                     <span className="font-fantasy text-sm font-bold">{item.label}</span>
-                    <span className="text-3xs font-normal opacity-70" style={SERIF}>
+                    <span className="font-serif-body text-3xs font-normal opacity-70">
                       {item.description}
                     </span>
                   </span>
@@ -351,14 +346,14 @@ export function DndGameScreen({ campaign, party }: Props) {
               );
             })}
           </nav>
-          <p className="mt-auto text-3xs leading-relaxed text-amber-200/40" style={SERIF}>
+          <p className="font-serif-body mt-auto text-3xs leading-relaxed text-amber-200/40">
             {party.name} · waypoint {waypointIndex + 1} of {campaign.checkpoints.length}
           </p>
         </div>
       }
       sidebar={
         recap.length === 0 ? (
-          <p className="text-xs leading-relaxed text-amber-200/40" style={SERIF}>
+          <p className="font-serif-body text-xs leading-relaxed text-amber-200/40">
             Nothing logged yet — press Log on a spoken text and the chronicle starts here.
           </p>
         ) : (
@@ -417,7 +412,7 @@ export function DndGameScreen({ campaign, party }: Props) {
             >
               Next combatant
             </Button>
-            <span className="text-3xs uppercase tracking-[0.2em] text-rose-300/60" style={SERIF}>
+            <span className="font-serif-body text-3xs uppercase tracking-eyebrow text-rose-300/60">
               Round {combatHere.round}
             </span>
             <Button
@@ -485,7 +480,7 @@ export function DndGameScreen({ campaign, party }: Props) {
                   ? 'What happened this turn? — e.g. "Victor darts behind the vine and stabs: 19 to hit, 8 piercing."'
                   : 'What do the players say or do? — e.g. "We pry open the crypt door as quietly as we can."'
               }
-              className="h-full min-w-0 flex-1 resize-none rounded-2xl border border-amber-400/25 bg-[#1a0606]/70 p-3 text-sm text-amber-100 placeholder:text-amber-200/30 focus:border-amber-300/60 focus:outline-none"
+              className="h-full min-w-0 flex-1 resize-none rounded-2xl border border-amber-400/25 bg-dnd-ink/70 p-3 text-sm text-amber-100 placeholder:text-amber-200/30 focus:border-amber-300/60 focus:outline-none"
             />
             <div className="flex w-36 shrink-0 flex-col gap-2">
               {(combatHere ? resolveTurnMutation : generateMutation).isError && (
@@ -556,14 +551,14 @@ export function DndGameScreen({ campaign, party }: Props) {
     >
       {screen === "main" && (
         <>
-          <div className="shrink-0 rounded-2xl border border-amber-400/20 bg-gradient-to-br from-[#2a0808]/70 via-surface-900/80 to-black/70 px-4 py-3">
+          <DndPanel padding="none" className="shrink-0 px-4 py-3">
             <QuestProgressBar
               checkpoints={campaign.checkpoints}
               selected={waypointIndex}
               onSelect={selectWaypoint}
               showDetail={false}
             />
-          </div>
+          </DndPanel>
           {nodesQuery.isPending ? (
             <LoadingState fill label="Unrolling the story tree…" />
           ) : combatHere ? (
@@ -668,20 +663,19 @@ export function DndGameScreen({ campaign, party }: Props) {
         <div className="min-h-0 flex-1 overflow-y-auto pt-3">
           <div className="flex flex-col gap-4">
             <div>
-              <p
-                className="px-1 text-3xs font-bold uppercase tracking-[0.25em] text-amber-300/50"
-                style={SERIF}
-              >
+              <p className="font-serif-body px-1 text-3xs font-bold uppercase tracking-eyebrow text-amber-300/50">
                 Rulebooks
               </p>
               <ul className="mt-2 flex flex-col gap-2">
                 {DND_RULEBOOKS.map((book) => (
                   <li key={book.url}>
-                    <a
+                    <DndPanel
+                      as="a"
+                      interactive
                       href={book.url}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center gap-3 rounded-2xl border border-amber-400/20 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/90 to-black/80 p-3 transition-colors hover:border-amber-400/40"
+                      className="flex items-center gap-3"
                     >
                       <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-400/15 text-amber-200 ring-1 ring-amber-400/40">
                         <BookIcon className="h-4 w-4" />
@@ -689,37 +683,36 @@ export function DndGameScreen({ campaign, party }: Props) {
                       <span className="font-fantasy min-w-0 flex-1 truncate text-base font-bold text-amber-100">
                         {book.label}
                       </span>
-                      <span className="shrink-0 rounded-full bg-white/[0.04] px-2 py-0.5 text-3xs font-semibold uppercase tracking-[0.12em] text-fg-secondary ring-1 ring-white/10">
+                      <span className="shrink-0 rounded-full bg-white/[0.04] px-2 py-0.5 text-3xs font-semibold uppercase tracking-label text-fg-secondary ring-1 ring-white/10">
                         Core rules
                       </span>
-                    </a>
+                    </DndPanel>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <p
-                className="px-1 text-3xs font-bold uppercase tracking-[0.25em] text-amber-300/50"
-                style={SERIF}
-              >
+              <p className="font-serif-body px-1 text-3xs font-bold uppercase tracking-eyebrow text-amber-300/50">
                 Uploaded tomes & sheets
               </p>
               {filesQuery.isPending ? (
                 <LoadingState label="Opening the archive…" />
               ) : files.length === 0 ? (
-                <p className="mt-2 px-1 text-xs text-amber-200/50" style={SERIF}>
+                <p className="font-serif-body mt-2 px-1 text-xs text-amber-200/50">
                   Nothing archived yet — PDFs uploaded from now on land here.
                 </p>
               ) : (
                 <ul className="mt-2 flex flex-col gap-2">
                   {files.map((file) => (
                     <li key={file.id}>
-                      <a
+                      <DndPanel
+                        as="a"
+                        interactive
                         href={fileContentUrl(file.id)}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center gap-3 rounded-2xl border border-amber-400/20 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/90 to-black/80 p-3 transition-colors hover:border-amber-400/40"
+                        className="flex items-center gap-3"
                       >
                         <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-amber-400/15 text-amber-200 ring-1 ring-amber-400/40">
                           <BookIcon className="h-4 w-4" />
@@ -729,11 +722,11 @@ export function DndGameScreen({ campaign, party }: Props) {
                             {file.filename}
                           </span>
                           <span className="block text-3xs text-amber-200/40">
-                            {formatSize(file.sizeBytes)}
+                            {formatBytes(file.sizeBytes)}
                           </span>
                         </span>
                         <span
-                          className={`shrink-0 rounded-full px-2 py-0.5 text-3xs font-semibold uppercase tracking-[0.12em] ring-1 ${
+                          className={`shrink-0 rounded-full px-2 py-0.5 text-3xs font-semibold uppercase tracking-label ring-1 ${
                             file.kind === "module"
                               ? "bg-amber-400/10 text-amber-200/80 ring-amber-400/25"
                               : "bg-sky-500/10 text-sky-200/80 ring-sky-400/25"
@@ -741,7 +734,7 @@ export function DndGameScreen({ campaign, party }: Props) {
                         >
                           {file.kind === "module" ? "Module" : "Character sheet"}
                         </span>
-                      </a>
+                      </DndPanel>
                     </li>
                   ))}
                 </ul>
@@ -766,10 +759,7 @@ export function DndGameScreen({ campaign, party }: Props) {
           title="Read aloud"
           onClose={() => setQuickNarration(null)}
         >
-          <p
-            className="whitespace-pre-line text-base leading-relaxed text-amber-100/95"
-            style={SERIF}
-          >
+          <p className="font-serif-body whitespace-pre-line text-base leading-relaxed text-amber-100/95">
             {quickNarration}
           </p>
         </Modal>

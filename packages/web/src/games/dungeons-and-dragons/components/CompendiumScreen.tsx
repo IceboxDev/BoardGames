@@ -5,32 +5,20 @@ import { Button, EmptyState, Input } from "../../../components/ui";
 import { getCompendiumEntry, listCompendiumTerms } from "../logic/compendium";
 import { listMonsterEntries } from "../logic/monsters";
 import { getSpellEntry, listSpellNames, spellLevelLabel } from "../logic/spellbook";
+import { DndPanel, StatPill } from "./ui";
 
 // The Compendium: every monster, item, spell, and reference the table can
 // reach for — with the running campaign's own cast & monsters shelved at
 // the top. One search box filters everything.
 
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
-
 function SectionHeading({ children, count }: { children: string; count: number }) {
   return (
     <div className="flex items-baseline gap-2 px-1">
-      <h3
-        className="text-3xs font-bold uppercase tracking-[0.25em] text-amber-300/60"
-        style={SERIF}
-      >
+      <h3 className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-amber-300/60">
         {children}
       </h3>
       <span className="text-3xs text-amber-200/30">{count}</span>
     </div>
-  );
-}
-
-function StatChip({ children, tone }: { children: string; tone: string }) {
-  return (
-    <span className={`rounded-full px-1.5 py-0.5 text-3xs font-bold ring-1 ${tone}`}>
-      {children}
-    </span>
   );
 }
 
@@ -77,7 +65,7 @@ export function CompendiumScreen({
           onChange={(e) => setQuery(e.target.value)}
           className="max-w-md flex-1"
         />
-        <p className="hidden text-2xs text-amber-200/40 sm:block" style={SERIF}>
+        <p className="font-serif-body hidden text-2xs text-amber-200/40 sm:block">
           The table's library — the campaign's cast first, the wider references below.
         </p>
       </div>
@@ -99,7 +87,7 @@ export function CompendiumScreen({
               <SectionHeading count={cast.length}>This campaign — cast & monsters</SectionHeading>
               <div className="flex items-center gap-2">
                 {recharting && (
-                  <span className="text-3xs text-amber-200/50" style={SERIF}>
+                  <span className="font-serif-body text-3xs text-amber-200/50">
                     recharting from the module…
                   </span>
                 )}
@@ -119,11 +107,11 @@ export function CompendiumScreen({
             <ul className="grid grid-cols-1 gap-2.5 lg:grid-cols-2 2xl:grid-cols-3">
               {cast.map((npc) => (
                 <li key={npc.id}>
-                  {/* biome-ignore lint/correctness/noRestrictedElements: full-card click target styled as an NPC card; Button/Chip chrome doesn't fit. */}
-                  <button
-                    type="button"
+                  <DndPanel
+                    as="button"
+                    interactive
                     onClick={() => onOpenNpc(npc)}
-                    className="flex w-full items-center gap-3 rounded-2xl border border-amber-400/20 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/90 to-black/80 p-3 text-left transition-colors hover:border-amber-400/40"
+                    className="flex w-full items-center gap-3 text-left"
                   >
                     <span
                       aria-hidden="true"
@@ -142,18 +130,12 @@ export function CompendiumScreen({
                       <span className="block truncate text-2xs text-amber-200/60">{npc.role}</span>
                     </span>
                     <span className="flex shrink-0 gap-1">
-                      {npc.maxHp !== null && (
-                        <StatChip tone="bg-rose-500/15 text-rose-200 ring-rose-400/30">
-                          {`${npc.maxHp} HP`}
-                        </StatChip>
-                      )}
+                      {npc.maxHp !== null && <StatPill tone="hp">{`${npc.maxHp} HP`}</StatPill>}
                       {npc.armorClass !== null && (
-                        <StatChip tone="bg-sky-500/15 text-sky-200 ring-sky-400/30">
-                          {`AC ${npc.armorClass}`}
-                        </StatChip>
+                        <StatPill tone="ac">{`AC ${npc.armorClass}`}</StatPill>
                       )}
                     </span>
-                  </button>
+                  </DndPanel>
                 </li>
               ))}
             </ul>
@@ -172,8 +154,8 @@ export function CompendiumScreen({
                   <span className="font-fantasy min-w-0 flex-1 truncate text-sm font-bold text-amber-100">
                     {m.name}
                   </span>
-                  <StatChip tone="bg-sky-500/15 text-sky-200 ring-sky-400/30">{`AC ${m.armorClass}`}</StatChip>
-                  <StatChip tone="bg-rose-500/15 text-rose-200 ring-rose-400/30">{`${m.maxHp} HP`}</StatChip>
+                  <StatPill tone="ac">{`AC ${m.armorClass}`}</StatPill>
+                  <StatPill tone="hp">{`${m.maxHp} HP`}</StatPill>
                 </li>
               ))}
             </ul>
@@ -193,7 +175,7 @@ export function CompendiumScreen({
                     <span className="font-fantasy min-w-0 flex-1 truncate text-sm font-bold text-amber-100">
                       {spell.name}
                     </span>
-                    <span className="shrink-0 text-3xs uppercase tracking-[0.12em] text-purple-300/70">
+                    <span className="shrink-0 text-3xs uppercase tracking-label text-purple-300/70">
                       {spellLevelLabel(spell.level)} · {spell.school}
                     </span>
                   </div>
@@ -201,7 +183,7 @@ export function CompendiumScreen({
                     {spell.castingTime} · {spell.range} · {spell.duration}
                     {spell.damage ? ` · ${spell.damage}` : ""}
                   </p>
-                  <p className="line-clamp-2 text-2xs leading-snug text-amber-200/65" style={SERIF}>
+                  <p className="font-serif-body line-clamp-2 text-2xs leading-snug text-amber-200/65">
                     {spell.text}
                   </p>
                 </li>
@@ -223,11 +205,11 @@ export function CompendiumScreen({
                     <span className="font-fantasy min-w-0 flex-1 truncate text-sm font-bold text-amber-100">
                       {entry.title}
                     </span>
-                    <span className="shrink-0 text-3xs uppercase tracking-[0.12em] text-amber-300/50">
+                    <span className="shrink-0 text-3xs uppercase tracking-label text-amber-300/50">
                       {entry.kind}
                     </span>
                   </div>
-                  <p className="line-clamp-3 text-2xs leading-snug text-amber-200/65" style={SERIF}>
+                  <p className="font-serif-body line-clamp-3 text-2xs leading-snug text-amber-200/65">
                     {entry.text}
                   </p>
                 </li>

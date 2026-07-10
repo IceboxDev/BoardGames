@@ -9,12 +9,11 @@ import { qk } from "../../lib/query-keys";
 import { CharacterCard } from "./components/CharacterCard";
 import { CharacterSheetModal } from "./components/CharacterSheetModal";
 import { CreateCharacterModal } from "./components/CreateCharacterModal";
+import { HeroBanner } from "./components/ui";
 
 // Party setup: assemble or adjust THIS group's roster, then begin (or
 // continue) the campaign. Character sheets are per party — two groups running
 // the same one-shot never share adventurers or story trees.
-
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
 
 type Props = {
   campaign: Campaign;
@@ -46,29 +45,14 @@ export function PartySetup({ campaign, party, onStart }: Props) {
 
   return (
     <div className="mx-auto flex w-full max-w-3xl flex-col gap-5 px-3 py-4 sm:px-6 sm:py-6">
-      <div className="dnd-hero-glow relative overflow-hidden rounded-3xl border border-amber-400/30 bg-gradient-to-br from-[#3b0a0a] via-[#1a0606] to-black p-5 text-center">
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_60%_at_50%_20%,rgba(220,38,38,0.4),transparent_72%)]"
-        />
-        <div className="relative">
-          <p className="font-fantasy text-2xs font-bold uppercase tracking-[0.35em] text-amber-300/80">
-            {campaign.title}
-          </p>
-          <h1
-            className="font-fantasy mt-1 text-3xl font-bold text-amber-100"
-            style={{ textShadow: "0 2px 14px rgba(0,0,0,0.7)" }}
-          >
-            {party.name}
-          </h1>
-          <p className="mt-2 text-sm italic text-amber-200/70" style={SERIF}>
-            Assemble the party, then step into the world.
-          </p>
-        </div>
-      </div>
+      <HeroBanner
+        eyebrow={campaign.title}
+        title={party.name}
+        subtitle="Assemble the party, then step into the world."
+      />
 
       <div className="flex items-center justify-between gap-3 px-1">
-        <h2 className="font-fantasy text-2xs font-bold uppercase tracking-[0.3em] text-amber-300/80">
+        <h2 className="font-fantasy text-2xs font-bold uppercase tracking-eyebrow text-amber-300/80">
           The party
         </h2>
         <Button variant="tinted" tone="amber" size="sm" onClick={() => setRecruiting(true)}>

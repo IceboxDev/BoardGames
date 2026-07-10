@@ -12,63 +12,31 @@ import {
 } from "@boardgames/core/protocol";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useId, useState } from "react";
-import { Button, Field, Input, Modal, Textarea } from "../../../components/ui";
+import {
+  Button,
+  ErrorAlert,
+  Field,
+  Input,
+  Modal,
+  ModalBody,
+  ModalFooter,
+  Textarea,
+  useConfirm,
+} from "../../../components/ui";
 import { deleteCharacter, updateCharacter } from "../../../lib/dnd-campaigns";
 import { errorMessageOf } from "../../../lib/error-message";
 import { qk } from "../../../lib/query-keys";
+import { ABILITY_ABBR, ABILITY_NAME } from "../logic/abilities";
+import { fmt, mod, passivePerception, proficiencyBonus } from "../logic/sheet-derived";
 import { getSpellEntry, spellLevelLabel } from "../logic/spellbook";
 import { HoverTerm } from "./HoverTerm";
+import { AbilityGrid, DndPanel } from "./ui";
 
 // The party ledger entry, laid out like the official 5e character sheet with
 // a modern dark-D&D treatment: header band (name / class / player), a row of
 // combat shields, the ability rail, saving throws + the full 18-skill list
 // with proficiency pips, and labeled proficiency lines (Armor: … / Weapons:
 // … / Tools: … / Languages: …) whose terms hover-open compendium cards.
-
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
-
-const ABILITY_LABEL: Record<AbilityKey, string> = {
-  str: "Strength",
-  dex: "Dexterity",
-  con: "Constitution",
-  int: "Intelligence",
-  wis: "Wisdom",
-  cha: "Charisma",
-};
-
-const ABILITY_ABBR: Record<AbilityKey, string> = {
-  str: "Str",
-  dex: "Dex",
-  con: "Con",
-  int: "Int",
-  wis: "Wis",
-  cha: "Cha",
-};
-
-function mod(score: number): number {
-  return Math.floor((score - 10) / 2);
-}
-
-function fmtMod(value: number): string {
-  return value >= 0 ? `+${value}` : `${value}`;
-}
-
-/** 5e proficiency bonus by total level. */
-function proficiencyBonus(level: number | null): number | null {
-  if (level === null) return null;
-  return Math.floor((level - 1) / 4) + 2;
-}
-
-/**
- * Passive Perception is DERIVED, never transcribed: 10 + the Perception
- * SKILL modifier (which already carries proficiency — 10+0+2, not 10+0);
- * 10 + WIS mod only when the skill list is missing entirely (old rows).
- */
-function passivePerception(sheet: CharacterSheet): number | null {
-  const perception = sheet.skills.find((s) => s.name === "Perception");
-  if (perception) return 10 + perception.modifier;
-  return sheet.abilities ? 10 + mod(sheet.abilities.wis) : null;
-}
 
 function ProficiencyPip({ level }: { level: SkillProficiency }) {
   return (
@@ -88,10 +56,7 @@ function ProficiencyPip({ level }: { level: SkillProficiency }) {
 
 function SectionHeading({ children }: { children: string }) {
   return (
-    <p
-      className="border-b border-amber-400/20 pb-1 text-2xs font-bold uppercase tracking-[0.25em] text-amber-300/70"
-      style={SERIF}
-    >
+    <p className="font-serif-body border-b border-amber-400/20 pb-1 text-2xs font-bold uppercase tracking-eyebrow text-amber-300/70">
       {children}
     </p>
   );
@@ -118,9 +83,7 @@ function ProseSection({ title, text }: { title: string; text: string | null }) {
   return (
     <div className="flex flex-col gap-1.5">
       <SectionHeading>{title}</SectionHeading>
-      <p className="text-sm leading-relaxed text-amber-200/75" style={SERIF}>
-        {text}
-      </p>
+      <p className="font-serif-body text-sm leading-relaxed text-amber-200/75">{text}</p>
     </div>
   );
 }
@@ -133,21 +96,24 @@ function Spellbook({ spells }: { spells: string[] }) {
   );
   return (
     <div className="flex flex-col gap-3">
-      <p className="text-xs text-amber-200/50" style={SERIF}>
+      <p className="font-serif-body text-xs text-amber-200/50">
         Spell slots, prepared counts, and full rules text will come from the spell archive — the
         entries below are its first pages.
       </p>
       <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
         {sorted.map(({ name, entry }) => (
-          <div
+          <DndPanel
             key={name}
-            className="flex flex-col gap-1.5 rounded-xl border border-purple-400/25 bg-gradient-to-br from-[#170a2a]/60 via-black/30 to-black/40 p-3.5"
+            tone="arcane"
+            radius="xl"
+            padding="md"
+            className="flex flex-col gap-1.5"
           >
             <div className="flex items-baseline justify-between gap-2">
               <span className="font-fantasy text-base font-bold text-amber-100">
                 {entry?.name ?? name}
               </span>
-              <span className="shrink-0 rounded-full bg-purple-500/15 px-2 py-0.5 text-3xs font-bold uppercase tracking-[0.12em] text-purple-200/80 ring-1 ring-purple-400/30">
+              <span className="shrink-0 rounded-full bg-purple-500/15 px-2 py-0.5 text-3xs font-bold uppercase tracking-label text-purple-200/80 ring-1 ring-purple-400/30">
                 {entry ? `${spellLevelLabel(entry.level)} · ${entry.school}` : "Unknown"}
               </span>
             </div>
@@ -182,16 +148,16 @@ function Spellbook({ spells }: { spells: string[] }) {
                 {entry.damage && (
                   <p className="text-2xs font-semibold text-rose-200/90">{entry.damage}</p>
                 )}
-                <p className="text-xs leading-relaxed text-amber-200/75" style={SERIF}>
+                <p className="font-serif-body text-xs leading-relaxed text-amber-200/75">
                   {entry.text}
                 </p>
               </>
             ) : (
-              <p className="text-xs leading-relaxed text-amber-200/50" style={SERIF}>
+              <p className="font-serif-body text-xs leading-relaxed text-amber-200/50">
                 Not yet in the spell archive — details will appear once it is inscribed.
               </p>
             )}
-          </div>
+          </DndPanel>
         ))}
       </div>
     </div>
@@ -317,8 +283,8 @@ export function CharacterSheetModal({ character, onClose }: Props) {
   const uid = useId();
   const [form, setForm] = useState<FormState | null>(null); // non-null = edit mode
   const [formError, setFormError] = useState<string | null>(null);
-  const [confirmingDelete, setConfirmingDelete] = useState(false);
   const [page, setPage] = useState<"sheet" | "spellbook">("sheet");
+  const { confirm, confirmDialog } = useConfirm();
 
   const invalidate = () =>
     character.partyId
@@ -342,6 +308,19 @@ export function CharacterSheetModal({ character, onClose }: Props) {
     },
   });
 
+  // The delete confirmation used to swap the footer's own buttons in place —
+  // a mental model no other destructive action in the app uses.
+  const handleRemove = async () => {
+    const ok = await confirm({
+      title: "Remove this adventurer from the party?",
+      description:
+        "Their page is burned from this party's ledger. The original character-sheet PDF is untouched — you can recruit them again.",
+      confirmLabel: "Burn this page",
+      cancelLabel: "Keep them",
+    });
+    if (ok) deleteMutation.mutate();
+  };
+
   const sheet = character.sheet;
   if (!sheet) return null;
 
@@ -362,12 +341,12 @@ export function CharacterSheetModal({ character, onClose }: Props) {
 
   const savingThrowRows = ABILITY_KEYS.map((key) => {
     const proficient = sheet.savingThrows.some(
-      (s) => s.toLowerCase() === ABILITY_LABEL[key].toLowerCase(),
+      (s) => s.toLowerCase() === ABILITY_NAME[key].toLowerCase(),
     );
     const base = sheet.abilities ? mod(sheet.abilities[key]) : 0;
     return {
       key,
-      label: ABILITY_LABEL[key],
+      label: ABILITY_NAME[key],
       proficient,
       modifier: base + (proficient ? (profBonus ?? 2) : 0),
     };
@@ -386,10 +365,10 @@ export function CharacterSheetModal({ character, onClose }: Props) {
 
   const vitals: { label: string; value: string }[] = [
     ...(sheet.armorClass !== null ? [{ label: "Armor Class", value: `${sheet.armorClass}` }] : []),
-    ...(sheet.abilities ? [{ label: "Initiative", value: fmtMod(mod(sheet.abilities.dex)) }] : []),
+    ...(sheet.abilities ? [{ label: "Initiative", value: fmt(mod(sheet.abilities.dex)) }] : []),
     ...(sheet.speed ? [{ label: "Speed", value: sheet.speed }] : []),
     ...(sheet.maxHp !== null ? [{ label: "Hit Point Max", value: `${sheet.maxHp}` }] : []),
-    ...(profBonus !== null ? [{ label: "Proficiency", value: fmtMod(profBonus) }] : []),
+    ...(profBonus !== null ? [{ label: "Proficiency", value: fmt(profBonus) }] : []),
     ...(pp !== null ? [{ label: "Passive Perception", value: `${pp}` }] : []),
   ];
 
@@ -402,7 +381,7 @@ export function CharacterSheetModal({ character, onClose }: Props) {
       subheader={
         !editing ? (
           <div className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
-            <p className="text-base italic text-amber-200/70" style={SERIF}>
+            <p className="font-serif-body text-base italic text-amber-200/70">
               {[
                 sheet.race,
                 sheet.class,
@@ -413,7 +392,7 @@ export function CharacterSheetModal({ character, onClose }: Props) {
                 .join(" · ")}
             </p>
             {sheet.playerName && (
-              <p className="text-xs text-amber-300/60" style={SERIF}>
+              <p className="font-serif-body text-xs text-amber-300/60">
                 played by{" "}
                 <span className="font-semibold text-amber-200/80">{sheet.playerName}</span>
               </p>
@@ -421,7 +400,8 @@ export function CharacterSheetModal({ character, onClose }: Props) {
           </div>
         ) : undefined
       }
-      panelClassName="max-w-5xl max-h-[94vh] min-h-[80vh] overflow-y-auto border-amber-400/25"
+      size="xl"
+      panelClassName="min-h-[80vh] border-amber-400/25"
     >
       {!editing && sheet.spells.length > 0 && (
         <div className="flex gap-1.5">
@@ -443,155 +423,163 @@ export function CharacterSheetModal({ character, onClose }: Props) {
       )}
 
       {editing ? (
-        <div className="flex flex-col gap-4">
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-            <Field
-              label="Character name"
-              htmlFor={`${uid}-name`}
-              hint="Leave empty to go by the player's name"
-            >
-              <Input
-                id={`${uid}-name`}
-                value={form.name}
-                onChange={(e) => setForm({ ...form, name: e.target.value })}
-              />
-            </Field>
-            <Field label="Player" htmlFor={`${uid}-player`}>
-              <Input
-                id={`${uid}-player`}
-                value={form.playerName}
-                onChange={(e) => setForm({ ...form, playerName: e.target.value })}
-              />
-            </Field>
-            <Field label="Race" htmlFor={`${uid}-race`}>
-              <Input
-                id={`${uid}-race`}
-                value={form.race}
-                onChange={(e) => setForm({ ...form, race: e.target.value })}
-              />
-            </Field>
-            <Field label="Class" htmlFor={`${uid}-class`}>
-              <Input
-                id={`${uid}-class`}
-                value={form.class}
-                onChange={(e) => setForm({ ...form, class: e.target.value })}
-              />
-            </Field>
-            <div className="grid grid-cols-3 gap-3">
-              <Field label="Level" htmlFor={`${uid}-level`}>
+        <>
+          <ModalBody gap="md">
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <Field
+                label="Character name"
+                htmlFor={`${uid}-name`}
+                hint="Leave empty to go by the player's name"
+              >
                 <Input
-                  id={`${uid}-level`}
-                  inputMode="numeric"
-                  value={form.level}
-                  onChange={(e) => setForm({ ...form, level: e.target.value })}
+                  id={`${uid}-name`}
+                  value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
                 />
               </Field>
-              <Field label="Max HP" htmlFor={`${uid}-hp`}>
+              <Field label="Player" htmlFor={`${uid}-player`}>
                 <Input
-                  id={`${uid}-hp`}
-                  inputMode="numeric"
-                  value={form.maxHp}
-                  onChange={(e) => setForm({ ...form, maxHp: e.target.value })}
+                  id={`${uid}-player`}
+                  value={form.playerName}
+                  onChange={(e) => setForm({ ...form, playerName: e.target.value })}
                 />
               </Field>
-              <Field label="AC" htmlFor={`${uid}-ac`}>
+              <Field label="Race" htmlFor={`${uid}-race`}>
                 <Input
-                  id={`${uid}-ac`}
-                  inputMode="numeric"
-                  value={form.armorClass}
-                  onChange={(e) => setForm({ ...form, armorClass: e.target.value })}
+                  id={`${uid}-race`}
+                  value={form.race}
+                  onChange={(e) => setForm({ ...form, race: e.target.value })}
+                />
+              </Field>
+              <Field label="Class" htmlFor={`${uid}-class`}>
+                <Input
+                  id={`${uid}-class`}
+                  value={form.class}
+                  onChange={(e) => setForm({ ...form, class: e.target.value })}
+                />
+              </Field>
+              <div className="grid grid-cols-3 gap-3">
+                <Field label="Level" htmlFor={`${uid}-level`}>
+                  <Input
+                    id={`${uid}-level`}
+                    inputMode="numeric"
+                    value={form.level}
+                    onChange={(e) => setForm({ ...form, level: e.target.value })}
+                  />
+                </Field>
+                <Field label="Max HP" htmlFor={`${uid}-hp`}>
+                  <Input
+                    id={`${uid}-hp`}
+                    inputMode="numeric"
+                    value={form.maxHp}
+                    onChange={(e) => setForm({ ...form, maxHp: e.target.value })}
+                  />
+                </Field>
+                <Field label="AC" htmlFor={`${uid}-ac`}>
+                  <Input
+                    id={`${uid}-ac`}
+                    inputMode="numeric"
+                    value={form.armorClass}
+                    onChange={(e) => setForm({ ...form, armorClass: e.target.value })}
+                  />
+                </Field>
+              </div>
+              <Field label="Alignment" htmlFor={`${uid}-align`}>
+                <Input
+                  id={`${uid}-align`}
+                  value={form.alignment}
+                  onChange={(e) => setForm({ ...form, alignment: e.target.value })}
+                />
+              </Field>
+              <Field label="Speed" htmlFor={`${uid}-speed`}>
+                <Input
+                  id={`${uid}-speed`}
+                  value={form.speed}
+                  placeholder="30 ft."
+                  onChange={(e) => setForm({ ...form, speed: e.target.value })}
                 />
               </Field>
             </div>
-            <Field label="Alignment" htmlFor={`${uid}-align`}>
-              <Input
-                id={`${uid}-align`}
-                value={form.alignment}
-                onChange={(e) => setForm({ ...form, alignment: e.target.value })}
-              />
-            </Field>
-            <Field label="Speed" htmlFor={`${uid}-speed`}>
-              <Input
-                id={`${uid}-speed`}
-                value={form.speed}
-                placeholder="30 ft."
-                onChange={(e) => setForm({ ...form, speed: e.target.value })}
-              />
-            </Field>
-          </div>
 
-          <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
-            {ABILITY_KEYS.map((key) => (
-              <Field key={key} label={key.toUpperCase()} htmlFor={`${uid}-${key}`}>
-                <Input
-                  id={`${uid}-${key}`}
-                  inputMode="numeric"
-                  value={form.abilities[key]}
-                  onChange={(e) =>
-                    setForm({
-                      ...form,
-                      abilities: { ...form.abilities, [key]: e.target.value },
-                    })
+            <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
+              {ABILITY_KEYS.map((key) => (
+                <Field key={key} label={key.toUpperCase()} htmlFor={`${uid}-${key}`}>
+                  <Input
+                    id={`${uid}-${key}`}
+                    inputMode="numeric"
+                    value={form.abilities[key]}
+                    onChange={(e) =>
+                      setForm({
+                        ...form,
+                        abilities: { ...form.abilities, [key]: e.target.value },
+                      })
+                    }
+                  />
+                </Field>
+              ))}
+            </div>
+
+            <Field label="Languages" htmlFor={`${uid}-langs`} hint="Comma-separated">
+              <Textarea
+                id={`${uid}-langs`}
+                rows={2}
+                value={form.languages}
+                onChange={(e) => setForm({ ...form, languages: e.target.value })}
+              />
+            </Field>
+            <Field label="Equipment" htmlFor={`${uid}-equip`} hint="Comma-separated">
+              <Textarea
+                id={`${uid}-equip`}
+                rows={2}
+                value={form.equipment}
+                onChange={(e) => setForm({ ...form, equipment: e.target.value })}
+              />
+            </Field>
+            <Field
+              label="Spells"
+              htmlFor={`${uid}-spells`}
+              hint="Comma-separated; empty for non-casters"
+            >
+              <Textarea
+                id={`${uid}-spells`}
+                rows={2}
+                value={form.spells}
+                onChange={(e) => setForm({ ...form, spells: e.target.value })}
+              />
+            </Field>
+            <Field label="Personality" htmlFor={`${uid}-personality`}>
+              <Textarea
+                id={`${uid}-personality`}
+                rows={3}
+                value={form.personality}
+                onChange={(e) => setForm({ ...form, personality: e.target.value })}
+              />
+            </Field>
+            <Field label="Backstory" htmlFor={`${uid}-backstory`}>
+              <Textarea
+                id={`${uid}-backstory`}
+                rows={4}
+                value={form.backstory}
+                onChange={(e) => setForm({ ...form, backstory: e.target.value })}
+              />
+            </Field>
+          </ModalBody>
+
+          <ModalFooter
+            start={
+              (formError || saveMutation.isError) && (
+                <ErrorAlert
+                  message={
+                    formError ??
+                    errorMessageOf(saveMutation.error, "The ledger rejected the edits.")
                   }
                 />
-              </Field>
-            ))}
-          </div>
-
-          <Field label="Languages" htmlFor={`${uid}-langs`} hint="Comma-separated">
-            <Textarea
-              id={`${uid}-langs`}
-              rows={2}
-              value={form.languages}
-              onChange={(e) => setForm({ ...form, languages: e.target.value })}
-            />
-          </Field>
-          <Field label="Equipment" htmlFor={`${uid}-equip`} hint="Comma-separated">
-            <Textarea
-              id={`${uid}-equip`}
-              rows={2}
-              value={form.equipment}
-              onChange={(e) => setForm({ ...form, equipment: e.target.value })}
-            />
-          </Field>
-          <Field
-            label="Spells"
-            htmlFor={`${uid}-spells`}
-            hint="Comma-separated; empty for non-casters"
+              )
+            }
           >
-            <Textarea
-              id={`${uid}-spells`}
-              rows={2}
-              value={form.spells}
-              onChange={(e) => setForm({ ...form, spells: e.target.value })}
-            />
-          </Field>
-          <Field label="Personality" htmlFor={`${uid}-personality`}>
-            <Textarea
-              id={`${uid}-personality`}
-              rows={3}
-              value={form.personality}
-              onChange={(e) => setForm({ ...form, personality: e.target.value })}
-            />
-          </Field>
-          <Field label="Backstory" htmlFor={`${uid}-backstory`}>
-            <Textarea
-              id={`${uid}-backstory`}
-              rows={4}
-              value={form.backstory}
-              onChange={(e) => setForm({ ...form, backstory: e.target.value })}
-            />
-          </Field>
-
-          {(formError || saveMutation.isError) && (
-            <p className="text-xs text-rose-300">
-              {formError ?? errorMessageOf(saveMutation.error, "The ledger rejected the edits.")}
-            </p>
-          )}
-
-          <div className="flex justify-end gap-2">
             <Button
               variant="ghost"
+              size="sm"
               onClick={() => {
                 setForm(null);
                 setFormError(null);
@@ -603,209 +591,177 @@ export function CharacterSheetModal({ character, onClose }: Props) {
             <Button
               variant="tinted"
               tone="amber"
+              size="sm"
               loading={saveMutation.isPending}
               onClick={handleSave}
             >
               Inscribe changes
             </Button>
-          </div>
-        </div>
+          </ModalFooter>
+        </>
       ) : page === "spellbook" ? (
-        <Spellbook spells={sheet.spells} />
+        <ModalBody>
+          <Spellbook spells={sheet.spells} />
+        </ModalBody>
       ) : (
-        <div className="flex flex-1 flex-col gap-5">
-          {/* Combat shields. */}
-          <div className="grid grid-cols-3 gap-2 sm:grid-cols-6">
-            {vitals.map((v) => (
-              <div
-                key={v.label}
-                className="flex flex-col items-center rounded-xl border border-amber-400/25 bg-[#1a0606]/70 px-2 py-2"
-              >
-                <span className="font-fantasy text-xl font-bold text-amber-100">{v.value}</span>
-                <span
-                  className="mt-0.5 text-center text-4xs font-bold uppercase tracking-[0.14em] text-amber-300/60"
-                  style={SERIF}
+        <>
+          <ModalBody gap="md">
+            {/* Combat shields. */}
+            <div className="grid grid-cols-3 gap-2 sm:grid-cols-6">
+              {vitals.map((v) => (
+                <div
+                  key={v.label}
+                  className="flex flex-col items-center rounded-xl border border-amber-400/25 bg-dnd-ink/70 px-2 py-2"
                 >
-                  {v.label}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 gap-5 md:grid-cols-12">
-            {/* Ability rail. */}
-            {sheet.abilities && (
-              <div className="grid grid-cols-3 gap-2 md:col-span-3 md:h-full md:grid-cols-1 md:grid-rows-6">
-                {ABILITY_KEYS.map((key) => {
-                  const score = sheet.abilities?.[key];
-                  if (score === undefined) return null;
-                  return (
-                    <div
-                      key={key}
-                      className="flex flex-col items-center justify-center rounded-xl border border-amber-400/25 bg-[#1a0606]/70 px-2 py-2.5"
-                    >
-                      <span
-                        className="text-4xs font-bold uppercase tracking-[0.2em] text-amber-300/70"
-                        style={SERIF}
-                      >
-                        {ABILITY_LABEL[key]}
-                      </span>
-                      <span className="font-fantasy text-2xl font-bold text-amber-100">
-                        {fmtMod(mod(score))}
-                      </span>
-                      <span className="rounded-full bg-black/40 px-2 text-2xs text-amber-200/60 ring-1 ring-amber-400/20">
-                        {score}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-            )}
-
-            {/* Saving throws + skills — the sheet's middle column. */}
-            <div className="flex flex-col gap-4 md:col-span-4">
-              <div className="rounded-xl border border-amber-400/20 bg-black/25 p-3">
-                <SectionHeading>Saving Throws</SectionHeading>
-                <ul className="mt-2 flex flex-col gap-1">
-                  {savingThrowRows.map((row) => (
-                    <li key={row.key} className="flex items-center gap-2 text-xs">
-                      <ProficiencyPip level={row.proficient ? "proficient" : "none"} />
-                      <span className="w-7 text-right font-fantasy font-bold text-amber-100">
-                        {fmtMod(row.modifier)}
-                      </span>
-                      <span className="text-amber-200/75">{row.label}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="rounded-xl border border-amber-400/20 bg-black/25 p-3">
-                <SectionHeading>Skills</SectionHeading>
-                <ul className="mt-2 flex flex-col gap-1">
-                  {skillRows.map((row) => (
-                    <li key={row.name} className="flex items-center gap-2 text-xs">
-                      <ProficiencyPip level={row.proficiency} />
-                      <span className="w-7 text-right font-fantasy font-bold text-amber-100">
-                        {fmtMod(row.modifier)}
-                      </span>
-                      <span
-                        className={
-                          row.proficiency === "none" ? "text-amber-200/60" : "text-amber-100"
-                        }
-                      >
-                        {row.name}
-                      </span>
-                      <span className="text-3xs text-amber-300/40">({row.abbr})</span>
-                      {row.proficiency === "expertise" && (
-                        <span className="text-3xs text-amber-300/60">••</span>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                  <span className="font-fantasy text-xl font-bold text-amber-100">{v.value}</span>
+                  <span className="font-serif-body mt-0.5 text-center text-4xs font-bold uppercase tracking-label text-amber-300/60">
+                    {v.label}
+                  </span>
+                </div>
+              ))}
             </div>
 
-            {/* Proficiencies, gear, story — the sheet's right column. */}
-            <div className="flex min-w-0 flex-col gap-4 md:col-span-5">
-              <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
-                <SectionHeading>Proficiencies & Languages</SectionHeading>
-                <div className="mt-1 flex flex-col gap-1">
-                  <LabeledTerms label="Armor" terms={sheet.armorProficiencies} />
-                  <LabeledTerms label="Weapons" terms={sheet.weaponProficiencies} />
-                  <LabeledTerms label="Tools" terms={sheet.toolProficiencies} />
-                  <LabeledTerms label="Saving Throws" terms={sheet.savingThrows} />
-                  <LabeledTerms label="Languages" terms={sheet.languages} />
-                  {sheet.armorProficiencies.length === 0 &&
-                    sheet.weaponProficiencies.length === 0 &&
-                    sheet.toolProficiencies.length === 0 &&
-                    sheet.languages.length === 0 && (
-                      <LabeledTerms label="Proficiencies" terms={sheet.proficiencies} />
-                    )}
-                </div>
-              </div>
+            <div className="grid grid-cols-1 gap-5 md:grid-cols-12">
+              {/* Ability rail. */}
+              {sheet.abilities && (
+                <AbilityGrid
+                  abilities={sheet.abilities}
+                  emphasis="modifier"
+                  label="name"
+                  layout="rail"
+                  className="md:col-span-3"
+                />
+              )}
 
-              {sheet.attacks.length > 0 && (
-                <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
-                  <SectionHeading>Attacks</SectionHeading>
-                  <ul className="mt-1 flex flex-col gap-1.5">
-                    {sheet.attacks.map((attack) => (
-                      <li key={attack} className="text-xs leading-relaxed text-amber-200/75">
-                        {attack}
+              {/* Saving throws + skills — the sheet's middle column. */}
+              <div className="flex flex-col gap-4 md:col-span-4">
+                <div className="rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                  <SectionHeading>Saving Throws</SectionHeading>
+                  <ul className="mt-2 flex flex-col gap-1">
+                    {savingThrowRows.map((row) => (
+                      <li key={row.key} className="flex items-center gap-2 text-xs">
+                        <ProficiencyPip level={row.proficient ? "proficient" : "none"} />
+                        <span className="w-7 text-right font-fantasy font-bold text-amber-100">
+                          {fmt(row.modifier)}
+                        </span>
+                        <span className="text-amber-200/75">{row.label}</span>
                       </li>
                     ))}
                   </ul>
                 </div>
-              )}
 
-              {sheet.equipment.length > 0 && (
-                <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
-                  <SectionHeading>Equipment</SectionHeading>
-                  <p className="mt-1 text-xs leading-relaxed text-amber-200/75">
-                    {sheet.equipment.map((item, i) => (
-                      <span key={item}>
-                        {i > 0 && ", "}
-                        <HoverTerm term={item} />
-                      </span>
+                <div className="rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                  <SectionHeading>Skills</SectionHeading>
+                  <ul className="mt-2 flex flex-col gap-1">
+                    {skillRows.map((row) => (
+                      <li key={row.name} className="flex items-center gap-2 text-xs">
+                        <ProficiencyPip level={row.proficiency} />
+                        <span className="w-7 text-right font-fantasy font-bold text-amber-100">
+                          {fmt(row.modifier)}
+                        </span>
+                        <span
+                          className={
+                            row.proficiency === "none" ? "text-amber-200/60" : "text-amber-100"
+                          }
+                        >
+                          {row.name}
+                        </span>
+                        <span className="text-3xs text-amber-300/40">({row.abbr})</span>
+                        {row.proficiency === "expertise" && (
+                          <span className="text-3xs text-amber-300/60">••</span>
+                        )}
+                      </li>
                     ))}
-                  </p>
+                  </ul>
                 </div>
-              )}
+              </div>
 
-              <ProseSection title="Personality" text={sheet.personality} />
-              <ProseSection title="Backstory" text={sheet.backstory} />
+              {/* Proficiencies, gear, story — the sheet's right column. */}
+              <div className="flex min-w-0 flex-col gap-4 md:col-span-5">
+                <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                  <SectionHeading>Proficiencies & Languages</SectionHeading>
+                  <div className="mt-1 flex flex-col gap-1">
+                    <LabeledTerms label="Armor" terms={sheet.armorProficiencies} />
+                    <LabeledTerms label="Weapons" terms={sheet.weaponProficiencies} />
+                    <LabeledTerms label="Tools" terms={sheet.toolProficiencies} />
+                    <LabeledTerms label="Saving Throws" terms={sheet.savingThrows} />
+                    <LabeledTerms label="Languages" terms={sheet.languages} />
+                    {sheet.armorProficiencies.length === 0 &&
+                      sheet.weaponProficiencies.length === 0 &&
+                      sheet.toolProficiencies.length === 0 &&
+                      sheet.languages.length === 0 && (
+                        <LabeledTerms label="Proficiencies" terms={sheet.proficiencies} />
+                      )}
+                  </div>
+                </div>
+
+                {sheet.attacks.length > 0 && (
+                  <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                    <SectionHeading>Attacks</SectionHeading>
+                    <ul className="mt-1 flex flex-col gap-1.5">
+                      {sheet.attacks.map((attack) => (
+                        <li key={attack} className="text-xs leading-relaxed text-amber-200/75">
+                          {attack}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {sheet.equipment.length > 0 && (
+                  <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                    <SectionHeading>Equipment</SectionHeading>
+                    <p className="mt-1 text-xs leading-relaxed text-amber-200/75">
+                      {sheet.equipment.map((item, i) => (
+                        <span key={item}>
+                          {i > 0 && ", "}
+                          <HoverTerm term={item} />
+                        </span>
+                      ))}
+                    </p>
+                  </div>
+                )}
+
+                <ProseSection title="Personality" text={sheet.personality} />
+                <ProseSection title="Backstory" text={sheet.backstory} />
+              </div>
             </div>
-          </div>
+          </ModalBody>
 
-          {deleteMutation.isError && (
-            <p className="text-xs text-rose-300">
-              {errorMessageOf(deleteMutation.error, "The page refused to burn.")}
-            </p>
-          )}
-
-          <div className="mt-auto flex flex-wrap items-center justify-between gap-3 border-t border-amber-400/15 pt-3">
-            <p className="text-3xs text-amber-200/40">
-              Copied from {character.sourceFilename} by the scribes.
-            </p>
-            <div className="flex gap-2">
-              {confirmingDelete ? (
-                <>
-                  <Button variant="ghost" size="sm" onClick={() => setConfirmingDelete(false)}>
-                    Keep them
-                  </Button>
-                  <Button
-                    variant="tinted"
-                    tone="rose"
-                    size="sm"
-                    loading={deleteMutation.isPending}
-                    onClick={() => deleteMutation.mutate()}
-                  >
-                    Burn this page
-                  </Button>
-                </>
+          <ModalFooter
+            start={
+              deleteMutation.isError ? (
+                <ErrorAlert
+                  message={errorMessageOf(deleteMutation.error, "The page refused to burn.")}
+                />
               ) : (
-                <>
-                  <Button
-                    variant="ghost"
-                    size="sm"
-                    className="text-rose-300/70 hover:text-rose-300"
-                    onClick={() => setConfirmingDelete(true)}
-                  >
-                    Remove from party
-                  </Button>
-                  <Button
-                    variant="tinted"
-                    tone="amber"
-                    size="sm"
-                    onClick={() => setForm(sheetToForm(sheet))}
-                  >
-                    Edit the ledger
-                  </Button>
-                </>
-              )}
-            </div>
-          </div>
-        </div>
+                <p className="text-3xs text-amber-200/40">
+                  Copied from {character.sourceFilename} by the scribes.
+                </p>
+              )
+            }
+          >
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-rose-300/70 hover:text-rose-300"
+              loading={deleteMutation.isPending}
+              onClick={handleRemove}
+            >
+              Remove from party
+            </Button>
+            <Button
+              variant="tinted"
+              tone="amber"
+              size="sm"
+              onClick={() => setForm(sheetToForm(sheet))}
+            >
+              Edit the ledger
+            </Button>
+          </ModalFooter>
+        </>
       )}
+      {confirmDialog}
     </Modal>
   );
 }

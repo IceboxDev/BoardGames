@@ -3,7 +3,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useId, useState } from "react";
 import { ArrowRightIcon, PlusIcon, TrashIcon } from "../../components/icons";
 import { D20Die } from "../../components/offline/D20Die";
-import { Button, EmptyState, Input, Modal, QueryBoundary } from "../../components/ui";
+import { Button, EmptyState, Input, QueryBoundary, useConfirm } from "../../components/ui";
 import {
   createDndSession,
   createParty,
@@ -13,13 +13,12 @@ import {
 } from "../../lib/dnd-campaigns";
 import { errorMessageOf } from "../../lib/error-message";
 import { qk } from "../../lib/query-keys";
+import { DndPanel, HeroBanner } from "./components/ui";
 
 // Campaign screen: the world is chosen — now pick WHICH group is playing it.
 // Several parties can run the same one-shot side by side, each with its own
 // roster and its own story tree. Opening a party leads to its setup (roster +
 // begin); this screen is only the picker.
-
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
 
 type Props = {
   campaign: Campaign;
@@ -32,7 +31,7 @@ export function CampaignSetup({ campaign, onOpenParty, onBurned }: Props) {
   const queryClient = useQueryClient();
   const uid = useId();
   const [newPartyName, setNewPartyName] = useState("");
-  const [confirmingBurn, setConfirmingBurn] = useState(false);
+  const { confirm, confirmDialog } = useConfirm();
 
   // Register the live session as soon as the campaign is opened (the
   // "loading phase") so a beamer on a second device can already attach.
@@ -75,41 +74,32 @@ export function CampaignSetup({ campaign, onOpenParty, onBurned }: Props) {
     if (name) createMutation.mutate(name);
   };
 
+  const handleBurn = async () => {
+    const ok = await confirm({
+      title: `Burn ${campaign.title ?? campaign.sourceFilename}?`,
+      description:
+        "The campaign, its waypoints, every party's ledger and story tree, and the NPC cards will be lost to the flames. The original PDFs stay wherever you keep them.",
+      confirmLabel: "Burn it",
+      cancelLabel: "Keep it",
+    });
+    if (ok) burnMutation.mutate();
+  };
+
   return (
     <div className="mx-auto flex w-full max-w-3xl flex-col gap-5 px-3 py-4 sm:px-6 sm:py-6">
       {/* Campaign identity. */}
-      <div className="dnd-hero-glow relative overflow-hidden rounded-3xl border border-amber-400/30 bg-gradient-to-br from-[#3b0a0a] via-[#1a0606] to-black p-5 text-center sm:p-6">
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_60%_at_50%_20%,rgba(220,38,38,0.4),transparent_72%)]"
-        />
-        <div className="relative">
-          <p className="font-fantasy text-2xs font-bold uppercase tracking-[0.35em] text-amber-300/80">
-            The adventure
+      <HeroBanner eyebrow="The adventure" title={campaign.title} subtitle={campaign.tagline}>
+        {(campaign.levelRange || campaign.kind === "one-shot") && (
+          <p className="font-serif-body mt-3 text-2xs uppercase tracking-eyebrow text-amber-300/60">
+            {[campaign.kind === "one-shot" ? "One-shot" : null, campaign.levelRange]
+              .filter(Boolean)
+              .join(" · ")}
           </p>
-          <h1
-            className="font-fantasy mt-1 text-3xl font-bold text-amber-100 sm:text-4xl"
-            style={{ textShadow: "0 2px 14px rgba(0,0,0,0.7)" }}
-          >
-            {campaign.title}
-          </h1>
-          {campaign.tagline && (
-            <p className="mt-2 text-sm italic text-amber-200/70" style={SERIF}>
-              {campaign.tagline}
-            </p>
-          )}
-          {(campaign.levelRange || campaign.kind === "one-shot") && (
-            <p className="mt-3 text-2xs uppercase tracking-[0.2em] text-amber-300/60" style={SERIF}>
-              {[campaign.kind === "one-shot" ? "One-shot" : null, campaign.levelRange]
-                .filter(Boolean)
-                .join(" · ")}
-            </p>
-          )}
-        </div>
-      </div>
+        )}
+      </HeroBanner>
 
       {/* Party picker. */}
-      <h2 className="font-fantasy px-1 text-2xs font-bold uppercase tracking-[0.3em] text-amber-300/80">
+      <h2 className="font-fantasy px-1 text-2xs font-bold uppercase tracking-eyebrow text-amber-300/80">
         Who's playing?
       </h2>
 
@@ -129,10 +119,7 @@ export function CampaignSetup({ campaign, onOpenParty, onBurned }: Props) {
         {(data) => (
           <ul className="flex flex-col gap-2.5">
             {data.parties.map((party) => (
-              <li
-                key={party.id}
-                className="flex items-center gap-2 rounded-2xl border border-amber-400/20 bg-gradient-to-br from-[#2a0808]/80 via-surface-900/90 to-black/80 p-3 transition-colors hover:border-amber-400/40"
-              >
+              <DndPanel as="li" key={party.id} interactive className="flex items-center gap-2">
                 {/* biome-ignore lint/correctness/noRestrictedElements: card body is the click target with a sibling delete Button — a full-card InteractiveCard would nest buttons. */}
                 <button
                   type="button"
@@ -154,7 +141,7 @@ export function CampaignSetup({ campaign, onOpenParty, onBurned }: Props) {
                       {party.memberCount} {party.memberCount === 1 ? "adventurer" : "adventurers"}
                     </span>
                   </span>
-                  <span className="flex shrink-0 items-center gap-1 text-2xs font-semibold uppercase tracking-[0.14em] text-amber-300/60 transition-colors group-hover:text-amber-200">
+                  <span className="flex shrink-0 items-center gap-1 text-2xs font-semibold uppercase tracking-label text-amber-300/60 transition-colors group-hover:text-amber-200">
                     Open
                     <ArrowRightIcon className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
                   </span>
@@ -169,7 +156,7 @@ export function CampaignSetup({ campaign, onOpenParty, onBurned }: Props) {
                 >
                   <TrashIcon className="h-4 w-4" />
                 </Button>
-              </li>
+              </DndPanel>
             ))}
           </ul>
         )}
@@ -218,39 +205,14 @@ export function CampaignSetup({ campaign, onOpenParty, onBurned }: Props) {
           variant="ghost"
           size="xs"
           className="text-amber-200/30 hover:text-rose-300"
-          onClick={() => setConfirmingBurn(true)}
+          loading={burnMutation.isPending}
+          onClick={handleBurn}
         >
           Burn this tome
         </Button>
       </div>
 
-      {confirmingBurn && (
-        <Modal
-          onClose={() => setConfirmingBurn(false)}
-          eyebrow="Burn the tome"
-          title={campaign.title ?? campaign.sourceFilename}
-          titleClassName="font-fantasy text-xl font-bold text-amber-100"
-          panelClassName="max-w-md"
-        >
-          <p className="text-sm text-fg-secondary">
-            The campaign, its waypoints, every party's ledger and story tree, and the NPC cards will
-            be lost to the flames. The original PDFs stay wherever you keep them.
-          </p>
-          <div className="flex justify-end gap-2">
-            <Button variant="ghost" onClick={() => setConfirmingBurn(false)}>
-              Keep it
-            </Button>
-            <Button
-              variant="tinted"
-              tone="rose"
-              loading={burnMutation.isPending}
-              onClick={() => burnMutation.mutate()}
-            >
-              Burn it
-            </Button>
-          </div>
-        </Modal>
-      )}
+      {confirmDialog}
     </div>
   );
 }

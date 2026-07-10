@@ -217,7 +217,7 @@ const PARTY: DndCharacter[] = [
 
 function SectionTitle({ children }: { children: string }) {
   return (
-    <h2 className="font-fantasy px-1 text-2xs font-bold uppercase tracking-[0.3em] text-amber-300/80">
+    <h2 className="font-fantasy px-1 text-2xs font-bold uppercase tracking-eyebrow text-amber-300/80">
       {children}
     </h2>
   );

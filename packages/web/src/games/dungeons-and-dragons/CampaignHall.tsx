@@ -81,7 +81,7 @@ export function CampaignHall({ onOpenCampaign }: Props) {
             <div className="flex flex-col gap-5">
               {shelves.map((shelf) => (
                 <div key={shelf.title} className="flex flex-col gap-3">
-                  <h2 className="font-fantasy px-1 text-2xs font-bold uppercase tracking-[0.3em] text-amber-300/80">
+                  <h2 className="font-fantasy px-1 text-2xs font-bold uppercase tracking-eyebrow text-amber-300/80">
                     {shelf.title}
                   </h2>
                   <ul className="flex flex-col gap-3">
