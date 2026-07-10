@@ -84,9 +84,26 @@ describe("PageMain — widths and padding", () => {
     expect(screen.getByRole("main").className).not.toMatch(/max-w-/);
   });
 
+  // `wide` replaces HistoryPage's hand-written responsive chain. It is the one
+  // width whose cap changes per breakpoint, so it must stay a single preset
+  // rather than a `width="full"` + className escape hatch.
+  it("width='wide' widens across breakpoints from a readable base", () => {
+    render(
+      <PageMain width="wide">
+        <div>X</div>
+      </PageMain>,
+    );
+    const cls = screen.getByRole("main").className;
+    expect(cls).toContain("max-w-3xl");
+    expect(cls).toContain("lg:max-w-5xl");
+    expect(cls).toContain("2xl:max-w-6xl");
+    expect(cls).toContain("3xl:max-w-7xl");
+  });
+
   it.each([
     ["tight", /py-2/],
     ["comfortable", /py-6/],
+    ["dense", /py-8/],
     ["spacious", /py-6/],
   ] as const)("padding=%s applies its padding class", (padding, cls) => {
     render(

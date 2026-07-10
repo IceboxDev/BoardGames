@@ -21,7 +21,7 @@ type SectionProps = {
 export function Section({ title, icon, count, children }: SectionProps) {
   return (
     <section className="flex flex-col gap-3">
-      <h2 className="flex items-center gap-2 text-sm font-bold uppercase tracking-[0.14em] text-fg-secondary">
+      <h2 className="flex items-center gap-2 text-sm font-bold uppercase tracking-label text-fg-secondary">
         {icon}
         {title}
         {count !== undefined && <span className="font-medium text-fg-muted">({count})</span>}

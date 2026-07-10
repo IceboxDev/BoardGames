@@ -29,12 +29,7 @@ export function ResetLinkModal({ user, url, expiresInMinutes, onClose }: Props) 
   }
 
   return (
-    <Modal
-      onClose={onClose}
-      panelClassName="max-w-lg"
-      eyebrow="Password reset"
-      title="One-time reset link"
-    >
+    <Modal onClose={onClose} size="sm" eyebrow="Password reset" title="One-time reset link">
       <div className="space-y-4">
         <p className="text-sm text-fg-secondary">
           Send this link to{" "}

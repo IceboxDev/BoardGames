@@ -11,7 +11,7 @@ import { formatDayKey } from "../../lib/date-format.ts";
 import { Button } from "../ui/Button";
 import { ErrorAlert } from "../ui/ErrorAlert";
 import { Field } from "../ui/Field";
-import { Modal } from "../ui/Modal";
+import { Modal, ModalBody, ModalFooter } from "../ui/Modal";
 import { Select } from "../ui/Select";
 import AddressAutocomplete from "./AddressAutocomplete";
 
@@ -88,12 +88,12 @@ export default function LockInModal({
   return (
     <Modal
       onClose={onClose}
-      panelClassName="max-w-md"
+      size="xs"
       eyebrow={isEditing ? "Edit lock-in" : "Lock in date"}
       title={headingDate}
     >
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-        <div className="flex flex-col gap-3">
+      <form onSubmit={handleSubmit} className="flex min-h-0 flex-1 flex-col gap-4">
+        <ModalBody>
           <Field label="Host" htmlFor={hostId}>
             <Select
               id={hostId}
@@ -154,27 +154,26 @@ export default function LockInModal({
               </span>
             </label>
           )}
-        </div>
 
-        {error && <ErrorAlert message={error} className="text-center" />}
+          {error && <ErrorAlert message={error} className="text-center" />}
+        </ModalBody>
 
-        <div className="mt-1 flex items-center justify-between gap-2">
-          <div>
-            {isEditing && onRemove && (
+        <ModalFooter
+          start={
+            isEditing && onRemove ? (
               <Button variant="danger" size="sm" onClick={onRemove} disabled={busy}>
                 Remove lock
               </Button>
-            )}
-          </div>
-          <div className="flex items-center gap-2">
-            <Button variant="ghost" size="sm" onClick={onClose} disabled={busy}>
-              Cancel
-            </Button>
-            <Button variant="primary" size="sm" type="submit" disabled={busy}>
-              {isEditing ? "Save changes" : "Lock in"}
-            </Button>
-          </div>
-        </div>
+            ) : undefined
+          }
+        >
+          <Button variant="ghost" size="sm" onClick={onClose} disabled={busy}>
+            Cancel
+          </Button>
+          <Button variant="primary" size="sm" type="submit" loading={busy}>
+            {isEditing ? "Save changes" : "Lock in"}
+          </Button>
+        </ModalFooter>
       </form>
     </Modal>
   );

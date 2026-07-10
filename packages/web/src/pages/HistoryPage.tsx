@@ -18,6 +18,7 @@ import {
   PageMain,
   PageShell,
   QueryBoundary,
+  useConfirm,
 } from "../components/ui";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { fetchCalendarLocks, type LockedDate } from "../lib/calendar-locks";
@@ -106,6 +107,8 @@ export default function HistoryPage() {
     },
   });
 
+  const { confirm, confirmDialog } = useConfirm();
+
   const [recording, setRecording] = useState<
     | null
     | { mode: "create"; dateKey: string | null; playedAt?: string }
@@ -157,9 +160,13 @@ export default function HistoryPage() {
     return ordered;
   }, [allMatches, locksQuery.data]);
 
-  function handleDelete(m: MatchRecord) {
-    if (!confirm(`Delete this ${m.gameTitle} match? This cannot be undone.`)) return;
-    deleteMutation.mutate(m.id);
+  async function handleDelete(m: MatchRecord) {
+    const ok = await confirm({
+      title: `Delete this ${m.gameTitle} match?`,
+      description: "The match and its scores are removed for everyone. This cannot be undone.",
+      confirmLabel: "Delete match",
+    });
+    if (ok) deleteMutation.mutate(m.id);
   }
 
   return (
@@ -170,7 +177,7 @@ export default function HistoryPage() {
         </TopNav>
       }
     >
-      <PageMain width="full" className="max-w-3xl lg:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl">
+      <PageMain width="wide">
         <PageHeader
           size="sm"
           title="Board game history"
@@ -266,6 +273,8 @@ export default function HistoryPage() {
           }}
         />
       )}
+
+      {confirmDialog}
     </PageShell>
   );
 }

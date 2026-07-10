@@ -92,11 +92,17 @@ export function PageShell({
 //   3xl  (48rem)   default — most app pages (Profile, History, Gallery)
 //   6xl  (72rem)   wide grids and multi-column layouts
 //   7xl  (80rem)   admin tables and dense data views
+//   wide           RESPONSIVE: grows 3xl → 7xl as the display does. For pages
+//                  whose content is a list of cards that benefits from extra
+//                  columns on a large monitor but must stay readable on a
+//                  laptop (History). Replaces the hand-written
+//                  `width="full" className="max-w-3xl lg:max-w-5xl …"` chain.
 //   full           no cap; fills parent
 //
 // Padding presets (responsive):
 //   tight        px-3 py-2 sm:px-6                      calendars, dashboards
 //   comfortable  px-4 py-6 sm:px-6 sm:py-8              default — most pages
+//   dense        px-4 py-8 sm:px-6 sm:py-10             admin tables / data views
 //   spacious     px-4 py-6 sm:px-8 sm:py-10 lg:px-12    galleries, hero pages
 //   none         no padding; caller controls everything
 //
@@ -106,8 +112,8 @@ export function PageShell({
 // fit within the viewport. Without it, the main is `flex-1` only — fine
 // for content-driven scroll pages, wrong for fixed-height ones.
 
-export type PageMainWidth = "md" | "2xl" | "3xl" | "6xl" | "7xl" | "full";
-export type PageMainPadding = "tight" | "comfortable" | "spacious" | "none";
+export type PageMainWidth = "md" | "2xl" | "3xl" | "6xl" | "7xl" | "wide" | "full";
+export type PageMainPadding = "tight" | "comfortable" | "dense" | "spacious" | "none";
 
 type PageMainProps = Omit<HTMLAttributes<HTMLElement>, "children"> & {
   width?: PageMainWidth;
@@ -122,12 +128,14 @@ const WIDTH_CLASSES: Record<PageMainWidth, string> = {
   "3xl": "max-w-3xl",
   "6xl": "max-w-6xl",
   "7xl": "max-w-7xl",
+  wide: "max-w-3xl lg:max-w-5xl 2xl:max-w-6xl 3xl:max-w-7xl",
   full: "",
 };
 
 const PADDING_CLASSES: Record<PageMainPadding, string> = {
   tight: "px-3 py-2 sm:px-6",
   comfortable: "px-4 py-6 sm:px-6 sm:py-8",
+  dense: "px-4 py-8 sm:px-6 sm:py-10",
   spacious: "px-4 py-6 sm:px-8 sm:py-10 lg:px-12",
   none: "",
 };

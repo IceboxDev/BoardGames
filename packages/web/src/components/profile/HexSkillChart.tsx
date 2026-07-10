@@ -45,7 +45,7 @@ export function HexSkillChart({ skill, accentHex }: HexSkillChartProps) {
   const valuePoints = axes?.map((axis, i) => vertex(i, count, RADIUS * axis.value)) ?? [];
 
   return (
-    <div className="relative mx-auto w-full max-w-[280px]" style={style}>
+    <div className="relative mx-auto w-full max-w-70" style={style}>
       <svg
         viewBox={`0 0 ${SIZE} ${SIZE}`}
         className={`w-full ${axes ? "" : "opacity-40"}`}
@@ -126,7 +126,7 @@ export function HexSkillChart({ skill, accentHex }: HexSkillChartProps) {
       {!axes && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 text-center">
           <SparkleIcon className="h-5 w-5 text-accent-300/70" />
-          <p className="text-2xs font-semibold uppercase tracking-[0.18em] text-fg-secondary">
+          <p className="text-2xs font-semibold uppercase tracking-pill text-fg-secondary">
             Skill profile
           </p>
           <p className="text-3xs text-fg-muted">Coming soon</p>

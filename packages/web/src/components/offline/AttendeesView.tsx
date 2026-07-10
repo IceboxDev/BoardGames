@@ -4,7 +4,16 @@ import type { GameDefinition } from "../../games/types";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { Attendee } from "../../lib/calendar-games";
 import { XIcon } from "../icons";
-import { EmptyState, IconButton, Spinner, Surface } from "../ui";
+import {
+  Avatar,
+  Badge,
+  EmptyState,
+  Eyebrow,
+  IconButton,
+  Spinner,
+  Surface,
+  useConfirm,
+} from "../ui";
 
 type Props = {
   attendees: Attendee[];
@@ -75,9 +84,9 @@ export default function AttendeesView({
 
   return (
     <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col gap-2 overflow-y-auto px-1 py-2">
-      <p className="px-2 text-2xs font-semibold uppercase tracking-[0.25em] text-sky-300">
+      <Eyebrow tone="sky" className="px-2">
         Who's coming
-      </p>
+      </Eyebrow>
       <ul className="flex flex-col gap-2">
         {attendees.map((a) => (
           <li key={a.userId}>
@@ -120,51 +129,49 @@ function AttendeeRow({
   onKick?: (userId: string) => void;
   isKicking: boolean;
 }) {
-  const initial = attendee.name[0]?.toUpperCase() ?? "?";
-  const handleKick = () => {
+  const { confirm, confirmDialog } = useConfirm();
+
+  const handleKick = async () => {
     if (!onKick || isKicking) return;
-    const ok = window.confirm(
-      `Remove ${attendee.name} from this game night? Their RSVP will be set to "Not going".`,
-    );
+    const ok = await confirm({
+      title: `Remove ${attendee.name} from this game night?`,
+      description: 'Their RSVP will be set to "Not going". They can RSVP again themselves.',
+      confirmLabel: "Remove",
+    });
     if (ok) onKick(attendee.userId);
   };
+
   return (
     <Surface variant="raised" padding="none" className="flex items-start gap-3 px-3 py-3 sm:px-4">
-      <span
-        aria-hidden="true"
-        className={`grid h-10 w-10 shrink-0 place-items-center rounded-full text-sm font-bold text-white ${
-          attendee.isHost
-            ? "bg-amber-500/25 ring-1 ring-amber-400/60"
-            : "bg-surface-800 ring-1 ring-white/10"
-        }`}
-      >
-        {initial}
-      </span>
+      <Avatar name={attendee.name} size="sm" />
 
       <div className="flex min-w-0 flex-1 flex-col gap-1">
         <div className="flex flex-wrap items-center gap-2">
           <span className="truncate text-sm font-semibold text-white">{attendee.name}</span>
           {attendee.isHost && (
-            <span className="shrink-0 rounded-full bg-amber-400/20 px-2 py-0.5 text-3xs font-bold uppercase tracking-[0.18em] text-amber-200">
+            <Badge tone="amber" shape="pill" size="xs">
               Host
-            </span>
+            </Badge>
           )}
           {attendee.status === "tentative" && (
-            <span className="shrink-0 rounded-full bg-white/[0.06] px-2 py-0.5 text-3xs font-bold uppercase tracking-[0.18em] text-fg-secondary">
+            <Badge tone="neutral" shape="pill" size="xs">
               Maybe
-            </span>
+            </Badge>
           )}
           {!attendee.hasRsvped && !isViewer && (
             // Don't pin the badge on the viewer themselves: they're literally
             // looking at the modal right now, so they obviously opened the
             // card. Server data may take a moment to refresh after the
             // modal-open mutation, so we hide it client-side too.
-            <span
+            <Badge
+              tone="sky"
+              shape="pill"
+              size="xs"
+              ring
               title="Marked availability but never opened the RSVP modal — ping them in real life."
-              className="shrink-0 rounded-full bg-sky-400/15 px-2 py-0.5 text-3xs font-bold uppercase tracking-[0.18em] text-sky-200 ring-1 ring-sky-400/40"
             >
               Hasn't RSVP'd yet
-            </span>
+            </Badge>
           )}
         </div>
 
@@ -190,6 +197,8 @@ function AttendeeRow({
           icon={isKicking ? <Spinner size="xs" /> : <XIcon className="h-3.5 w-3.5" />}
         />
       )}
+
+      {confirmDialog}
     </Surface>
   );
 }
@@ -218,9 +227,9 @@ function BringingList({
   return (
     <div className="flex flex-wrap gap-1.5">
       {attendee.isHost && (
-        <span className="inline-flex items-center rounded-full bg-amber-400/15 px-2 py-1 text-3xs font-semibold uppercase tracking-[0.12em] text-amber-200">
+        <Badge tone="amber" shape="pill" size="xs" className="py-1">
           From their collection
-        </span>
+        </Badge>
       )}
       {attendee.bringing.map((slug) => {
         const g = slugToGame.get(slug);

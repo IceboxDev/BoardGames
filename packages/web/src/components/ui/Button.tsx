@@ -1,4 +1,5 @@
 import type { ButtonHTMLAttributes, Ref } from "react";
+import { Spinner } from "./Spinner";
 
 // The single text-button primitive. Owns disabled, focus-visible ring, the
 // palette, sizes, and an optional pill shape. Every catalog/admin/form/game
@@ -61,8 +62,11 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   ref?: Ref<HTMLButtonElement>;
 };
 
+// `relative` anchors the loading spinner, which is absolutely centered over the
+// (still-laid-out but invisible) label. Swapping the label for a "…" glyph — as
+// this used to — collapsed the button's width mid-submit and jumped the row.
 const BASE =
-  "items-center font-medium transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/60 disabled:cursor-not-allowed disabled:opacity-50";
+  "relative items-center font-medium transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/60 disabled:cursor-not-allowed disabled:opacity-50";
 
 // Color classes are written as full literals — Tailwind cannot see a class name
 // assembled at runtime (`bg-${tone}-500`), so every tone is spelled out.
@@ -194,10 +198,21 @@ export function Button({
       ref={ref}
       type={type}
       disabled={disabled || loading}
+      aria-busy={loading || undefined}
       className={`${BASE} ${colorCls} ${layoutCls} ${widthCls} ${className}`}
       {...rest}
     >
-      {loading ? <span className="animate-pulse">…</span> : children}
+      {loading && (
+        <span aria-hidden="true" className="absolute inset-0 flex items-center justify-center">
+          <Spinner size={size === "lg" ? "sm" : "xs"} className="text-current" />
+        </span>
+      )}
+      {/* `contents` keeps the idle button's children as direct flex items of the
+          button (preserving its own gap); while loading the wrapper becomes a
+          real, invisible box so it still reserves the label's width. */}
+      <span className={loading ? "invisible inline-flex items-center gap-2" : "contents"}>
+        {children}
+      </span>
     </button>
   );
 }

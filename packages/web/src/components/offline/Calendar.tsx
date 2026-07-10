@@ -72,7 +72,7 @@ export default function Calendar({
         {DAY_NAMES.map((n) => (
           <div
             key={n}
-            className={`text-center font-semibold uppercase tracking-[0.2em] text-fg-secondary ${compact ? "text-4xs" : "text-3xs"}`}
+            className={`text-center font-semibold uppercase tracking-eyebrow text-fg-secondary ${compact ? "text-4xs" : "text-3xs"}`}
           >
             {n}
           </div>

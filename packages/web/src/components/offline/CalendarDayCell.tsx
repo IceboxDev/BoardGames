@@ -169,7 +169,7 @@ export function DayCell({
       )}
       {monthLabel && (
         <span
-          className={`pointer-events-none absolute font-bold uppercase tracking-[0.18em] text-white/40 ${monthLabelPos} ${monthLabelSize}`}
+          className={`pointer-events-none absolute font-bold uppercase tracking-pill text-white/40 ${monthLabelPos} ${monthLabelSize}`}
           aria-hidden="true"
         >
           {monthLabel}
@@ -195,7 +195,7 @@ export function DayCell({
             className={`dnd-die dnd-die-animated h-full w-full ${
               compact
                 ? "max-h-8 max-w-8"
-                : "max-h-12 max-w-12 sm:max-h-16 sm:max-w-16 md:max-h-20 md:max-w-20 lg:max-h-[5.5rem] lg:max-w-[5.5rem]"
+                : "max-h-12 max-w-12 sm:max-h-16 sm:max-w-16 md:max-h-20 md:max-w-20 lg:max-h-22 lg:max-w-22"
             }`}
           />
         </span>
@@ -525,6 +525,13 @@ function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
   // HeatBadge, so locked vs. unlocked cells render at the same vertical
   // mass — otherwise the chips' default leading + ring made them taller
   // than the locked pill and adjacent cells looked staggered.
+  //
+  // The bracketed letter-spacing below is a deliberate hold-out from the
+  // tracking-label/pill/eyebrow token scale (pinned in scripts/style-baseline.json).
+  // These glyphs are 7px (`text-5xs`) inside a pill only a few px wider: the
+  // spacing is per-breakpoint optical tuning to stop "RSVP" overflowing its own
+  // pill, not the label-typography role the tokens describe. Applying the pill
+  // token (0.18em) at the phone size overflows the cell.
   const pillBase =
     "pointer-events-none absolute inset-x-1 bottom-1 z-10 inline-flex min-h-3 items-center justify-center gap-0.5 rounded-md px-0.5 py-0 text-5xs font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:min-h-5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-4xs sm:tracking-[0.18em]";
   if (viewerRsvp === "yes") {

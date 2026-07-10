@@ -1,9 +1,14 @@
 import type { ReactNode } from "react";
 
-// The single inline error banner. One rose tone, one geometry — replaces the
-// fork between Tailwind `red-*` and `rose-*` error boxes and the loose
-// `text-xs text-rose-400` one-liners scattered through forms and modals.
+// The single inline error banner. One rose tone, one geometry. It is the ONLY
+// sanctioned way to surface an error string in app chrome: a hand-rolled rose
+// box (`rounded-md border border-rose-500/30 …`) or a loose
+// `<p className="text-xs text-rose-400">` re-implements this with drifted
+// geometry, and the `raw-error-text` style-guard rule now rejects both.
 // `role="alert"` so the message is announced when it appears.
+//
+// Inside a dialog, pass it as `ModalFooter`'s `start` slot so the error sits on
+// the action row rather than pushing the body around.
 
 type ErrorAlertProps = {
   /** Optional bold lead line above the message. */

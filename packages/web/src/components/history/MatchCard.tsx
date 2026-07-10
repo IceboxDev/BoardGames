@@ -16,6 +16,7 @@ import { games } from "../../games/registry";
 import { isPointlessFreeForAll, lowScoreWinsForSlug } from "../../games/score-config";
 import { BookIcon, EditIcon, XIcon } from "../icons";
 import { IconButton } from "../ui/IconButton";
+import { MicroLabel } from "../ui/Label";
 import { AvatarBubble } from "./AvatarBubble";
 
 type Props = {
@@ -249,9 +250,7 @@ function PointlessFfaInline({
             isMe={p.userId === currentUserId}
             title={p.role ? `${p.displayName} — ${p.role}` : p.displayName}
           />
-          {p.role && (
-            <span className="text-3xs uppercase tracking-wider text-fg-muted">{p.role}</span>
-          )}
+          {p.role && <MicroLabel>{p.role}</MicroLabel>}
         </span>
       ))}
     </div>
@@ -295,7 +294,9 @@ function TeamsInline({
               <span className="text-xs tabular-nums text-fg-muted">{t.score}</span>
             )}
             {i < outcome.teams.length - 1 && (
-              <span className="text-3xs uppercase tracking-wider text-fg-disabled">vs</span>
+              <MicroLabel className="text-fg-disabled" inheritColor>
+                vs
+              </MicroLabel>
             )}
           </span>
         );
@@ -336,9 +337,7 @@ function Storyteller({
           <BookIcon className="h-2.5 w-2.5" />
         </span>
       </span>
-      {moderator.role && (
-        <span className="text-3xs uppercase tracking-wider text-fg-muted">{moderator.role}</span>
-      )}
+      {moderator.role && <MicroLabel>{moderator.role}</MicroLabel>}
     </span>
   );
 }
@@ -419,9 +418,7 @@ function DungeonMayhemInline({
             isMe={p.userId === currentUserId}
             title={p.role ? `${p.displayName} — ${p.role}` : p.displayName}
           />
-          {p.role && (
-            <span className="text-3xs uppercase tracking-wider text-fg-muted">{p.role}</span>
-          )}
+          {p.role && <MicroLabel>{p.role}</MicroLabel>}
         </span>
       ))}
     </div>
@@ -504,13 +501,11 @@ function OneVsManyInline({
               : outcome.solo.displayName
           }
         />
-        {outcome.solo.roleLabel && (
-          <span className="text-3xs uppercase tracking-wider text-fg-muted">
-            {outcome.solo.roleLabel}
-          </span>
-        )}
+        {outcome.solo.roleLabel && <MicroLabel>{outcome.solo.roleLabel}</MicroLabel>}
       </span>
-      <span className="text-3xs uppercase tracking-wider text-fg-disabled">vs</span>
+      <MicroLabel className="text-fg-disabled" inheritColor>
+        vs
+      </MicroLabel>
       <span className="inline-flex items-center gap-1">
         <span className="inline-flex -space-x-1.5">
           {outcome.team.members.map((m) => (
@@ -522,11 +517,7 @@ function OneVsManyInline({
             />
           ))}
         </span>
-        {outcome.team.roleLabel && (
-          <span className="text-3xs uppercase tracking-wider text-fg-muted">
-            {outcome.team.roleLabel}
-          </span>
-        )}
+        {outcome.team.roleLabel && <MicroLabel>{outcome.team.roleLabel}</MicroLabel>}
       </span>
     </div>
   );

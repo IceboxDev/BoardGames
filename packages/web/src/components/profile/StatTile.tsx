@@ -1,8 +1,11 @@
 import type { ReactNode } from "react";
+import { MicroLabel } from "../ui/Label";
+import { Surface } from "../ui/Surface";
 
-// Compact label + value tile used in the profile header's quick-stats row and
-// the stats panel. Keeps the metric typography consistent everywhere a number
-// is surfaced on a profile.
+// Compact label + value tile — the one place a metric is typeset on a profile.
+// Used by `ProfileHeader`'s quick-stats row. Chrome comes from `Surface`
+// (`raised`); this component owns only the metric typography, so a caption plus
+// a big number reads identically wherever it appears.
 
 type StatTileProps = {
   label: string;
@@ -14,13 +17,17 @@ type StatTileProps = {
 
 export function StatTile({ label, value, sub, icon }: StatTileProps) {
   return (
-    <div className="flex flex-col items-center gap-0.5 rounded-xl border border-white/[0.06] bg-surface-900/60 px-3 py-2.5 text-center">
-      <span className="flex items-center gap-1 text-3xs font-semibold uppercase tracking-[0.16em] text-fg-muted">
+    <Surface
+      variant="raised"
+      padding="none"
+      className="flex flex-col items-center gap-0.5 px-3 py-2.5 text-center"
+    >
+      <MicroLabel className="flex items-center gap-1 font-semibold">
         {icon}
         {label}
-      </span>
+      </MicroLabel>
       <span className="text-xl font-bold tabular-nums text-white">{value}</span>
       {sub && <span className="text-3xs text-fg-muted">{sub}</span>}
-    </div>
+    </Surface>
   );
 }

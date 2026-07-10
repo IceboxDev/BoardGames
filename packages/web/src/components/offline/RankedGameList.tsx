@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import type { GameDefinition } from "../../games/types";
 import type { ReactionAggregate } from "../../lib/calendar-games";
+import { Eyebrow } from "../ui/Label";
 import GameReactions from "./GameReactions";
 
 type Props = {
@@ -55,9 +56,9 @@ export default function RankedGameList({ date, games, reactions, topSlugs }: Pro
 
   return (
     <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col gap-2 overflow-y-auto px-1 py-2">
-      <p className="px-2 text-2xs font-semibold uppercase tracking-[0.25em] text-amber-300">
+      <Eyebrow tone="amber" className="px-2">
         Tonight's picks
-      </p>
+      </Eyebrow>
       <ul className="flex flex-col gap-2">
         {ranked.map(({ game, agg }, i) => (
           <li key={game.slug}>
@@ -116,7 +117,7 @@ function RankedRow({ game, aggregate, date, rank }: RowProps) {
           <h3 className="truncate text-sm font-semibold text-white">{game.title}</h3>
           {isTop && (
             <span
-              className="shrink-0 rounded-full px-1.5 py-0.5 text-3xs font-bold uppercase tracking-[0.18em]"
+              className="shrink-0 rounded-full px-1.5 py-0.5 text-3xs font-bold uppercase tracking-pill"
               style={{
                 backgroundColor: `color-mix(in srgb, ${game.accentHex} 22%, transparent)`,
                 color: game.accentHex,

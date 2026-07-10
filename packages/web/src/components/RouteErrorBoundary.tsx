@@ -2,6 +2,7 @@ import { Component, type ErrorInfo, type ReactNode } from "react";
 import { useLocation } from "react-router-dom";
 import { ApiError, SchemaError } from "../lib/api-fetch";
 import { Button } from "./ui/Button";
+import { Eyebrow } from "./ui/Label";
 import { PageShell } from "./ui/PageShell";
 
 // Top-level error boundary mounted once inside `<BrowserRouter>` (see
@@ -108,9 +109,7 @@ function RouteErrorScreen({ error, onReset }: ScreenProps) {
         role="alert"
         className="w-full max-w-md rounded-2xl border border-rose-400/20 bg-surface-900/80 p-6 text-center shadow-xl shadow-black/40"
       >
-        <p className="text-2xs font-semibold uppercase tracking-[0.25em] text-rose-300">
-          {summary.eyebrow}
-        </p>
+        <Eyebrow tone="rose">{summary.eyebrow}</Eyebrow>
         <h1 className="mt-2 text-xl font-bold tracking-tight text-white">{summary.title}</h1>
         <p className="mt-3 text-sm text-fg-secondary">{summary.body}</p>
         {summary.detail && (

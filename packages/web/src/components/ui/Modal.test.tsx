@@ -1,7 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
-import { Modal } from "./Modal";
+import { Button } from "./Button";
+import { Modal, ModalFooter } from "./Modal";
 
 describe("Modal — rendering", () => {
   it("renders title, eyebrow, subheader, and body content", () => {
@@ -46,6 +47,96 @@ describe("Modal — rendering", () => {
     expect(document.body.style.overflow).toBe("hidden");
     unmount();
     expect(document.body.style.overflow).toBe("");
+  });
+});
+
+describe("Modal — sizing", () => {
+  const panelOf = () => screen.getByRole("dialog");
+
+  it("maps each size to exactly one width class, with a viewport height cap", () => {
+    const cases = [
+      ["xs", "max-w-md"],
+      ["sm", "max-w-lg"],
+      ["md", "max-w-xl"],
+      ["lg", "max-w-2xl"],
+      ["xl", "max-w-5xl"],
+    ] as const;
+    for (const [size, expected] of cases) {
+      const { unmount } = render(
+        <Modal onClose={() => {}} ariaLabel="x" size={size}>
+          <div />
+        </Modal>,
+      );
+      const cls = panelOf().className;
+      expect(cls).toContain(expected);
+      expect(cls).toContain("max-h-[90dvh]");
+      // Exactly one unprefixed max-w-* — two would collide in the same CSS
+      // layer and Tailwind's ordering, not ours, would pick the winner.
+      expect(cls.split(/\s+/).filter((c) => c.startsWith("max-w-"))).toHaveLength(1);
+      unmount();
+    }
+  });
+
+  it("`full` fills the height and widens on large displays", () => {
+    render(
+      <Modal onClose={() => {}} ariaLabel="x" size="full">
+        <div />
+      </Modal>,
+    );
+    const cls = panelOf().className;
+    expect(cls).toContain("h-full");
+    expect(cls).toContain("2xl:max-w-[110rem]");
+    expect(cls).not.toContain("max-h-[90dvh]");
+  });
+
+  it("size wins outright: no default width is emitted alongside it", () => {
+    render(
+      <Modal onClose={() => {}} ariaLabel="x" size="xs" panelClassName="border-amber-400/25">
+        <div />
+      </Modal>,
+    );
+    const cls = panelOf().className;
+    expect(cls).toContain("max-w-md");
+    expect(cls).toContain("border-amber-400/25");
+    expect(cls).not.toContain("max-w-2xl");
+  });
+
+  it("legacy callers keep the historical default, and their panelClassName width stands alone", () => {
+    const { unmount } = render(
+      <Modal onClose={() => {}} ariaLabel="x">
+        <div />
+      </Modal>,
+    );
+    expect(panelOf().className).toContain("max-w-2xl");
+    unmount();
+
+    // A panelClassName-only caller (the not-yet-migrated game modals) must not
+    // also receive the base `max-w-2xl`, or the two would fight.
+    render(
+      <Modal onClose={() => {}} ariaLabel="x" panelClassName="max-w-md">
+        <div />
+      </Modal>,
+    );
+    const cls = panelOf().className;
+    expect(cls).toContain("max-w-md");
+    expect(cls).not.toContain("max-w-2xl");
+  });
+});
+
+describe("ModalFooter", () => {
+  it("renders the start slot and the trailing actions", () => {
+    render(
+      <Modal onClose={() => {}} ariaLabel="x" size="xs">
+        <ModalFooter start={<span>3 known players</span>}>
+          <Button variant="ghost" size="sm">
+            Cancel
+          </Button>
+          <Button size="sm">Save</Button>
+        </ModalFooter>
+      </Modal>,
+    );
+    expect(screen.getByText("3 known players")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Save" })).toBeInTheDocument();
   });
 });
 

@@ -18,6 +18,7 @@ import {
 } from "../../lib/calendar-feed.ts";
 import { qk } from "../../lib/query-keys.ts";
 import { Button } from "../ui/Button.tsx";
+import { ErrorAlert } from "../ui/ErrorAlert.tsx";
 import { Modal } from "../ui/Modal.tsx";
 
 type Props = {
@@ -70,12 +71,8 @@ export default function CalendarSyncModal({ onClose }: Props) {
   const screen: "A" | "B" | "C" = justMinted !== null ? "B" : connected ? "C" : "A";
 
   return (
-    <Modal onClose={onClose} panelClassName="max-w-xl" eyebrow="Subscribe" title="Calendar Sync">
-      {error && (
-        <p className="rounded-md border border-rose-500/30 bg-rose-500/10 px-3 py-2 text-xs text-rose-300">
-          {error}
-        </p>
-      )}
+    <Modal onClose={onClose} size="md" eyebrow="Subscribe" title="Calendar Sync">
+      {error && <ErrorAlert message={error} />}
 
       {screen === "A" && (
         <StateNeverConnected

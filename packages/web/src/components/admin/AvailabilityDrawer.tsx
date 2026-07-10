@@ -63,7 +63,7 @@ export function AvailabilityDrawer({ user, onClose }: Props) {
     >
       <header className="flex shrink-0 items-start justify-between gap-3 border-b border-white/5 px-5 py-4">
         <div className="min-w-0">
-          <p className="text-3xs font-semibold uppercase tracking-[0.25em] text-accent-400">
+          <p className="text-3xs font-semibold uppercase tracking-eyebrow text-accent-400">
             Availability
           </p>
           <h2 className="mt-1 truncate text-base font-semibold text-white">

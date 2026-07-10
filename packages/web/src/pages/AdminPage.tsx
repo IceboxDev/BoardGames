@@ -161,7 +161,7 @@ export default function AdminPage() {
         </TopNav>
       }
     >
-      <PageMain width="7xl" padding="none" className="px-6 py-10">
+      <PageMain width="7xl" padding="dense">
         <PageHeader
           title="Users"
           actions={

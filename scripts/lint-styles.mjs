@@ -31,11 +31,28 @@
 //                            hand-rolled `isLoading ?` / `isPending ?` ternary.
 //     • raw-form-field       use <Input> inside a <Field>, not a raw <input>
 //                            hand-styled with surface chrome (border/bg-surface).
+//     • arbitrary-tracking   use the tracking-label/pill/eyebrow tokens (or the
+//                            <Eyebrow>/<MicroLabel>/<Badge> primitives), not a
+//                            one-off tracking-[0.NNem].
+//     • arbitrary-modal-size use <Modal size=…> and <PageMain width=…>, not a
+//                            hand-written max-w-[…]/max-h-[…] escape hatch. Two
+//                            competing max-w classes collide in the same CSS
+//                            layer and Tailwind's ordering picks the winner.
+//     • raw-error-box        use <ErrorAlert>, not a hand-drawn rose border+fill
+//                            box (rose TEXT is a legit loss/evil-team color).
+//     • dnd-raw-hex          (DM tool) use the dnd-* colour tokens, not a raw
+//                            `from-[#2a0808]` — two spellings of one crimson had
+//                            already drifted apart by a single hex digit.
+//     • inline-font-stack    (DM tool) a typeface is a role, so it is a --font-*
+//                            token, never an inline `style={{ fontFamily }}`.
 //
 //   The first five are TOKEN bans (use the design token, not a raw value); the
-//   last four are PRIMITIVE-ADOPTION rules (use the shared component, not a
-//   hand-rolled equivalent). Each rule may `scope` itself to app chrome — games/
-//   and the components/ui/ primitives that DEFINE the chrome are exempt.
+//   rest are PRIMITIVE-ADOPTION rules (use the shared component, not a
+//   hand-rolled equivalent). Each rule may `scope` itself; the three scopes are
+//   `inAppShell` (pages + feature components), `inDndTool` (the DM tool, which
+//   is an application living under games/), and `inTokenScope` (both). The
+//   primitives that DEFINE the chrome — global `components/ui/` and the tool's
+//   own `components/ui/` — are exempt, as is the rest of `games/` (board art).
 //
 //   The baseline pins the per-file count of pre-existing hits: a new file (or a
 //   new hit in a pinned file) fails the check; removing hits is always allowed.
@@ -86,6 +103,31 @@ const STACK_RE = /\bz-(?:30|40|50)\b|\bz-\[/;
 // indigo bans to real classes, never bare identifiers).
 const UTIL =
   "(?:bg|text|border|ring|divide|from|to|via|placeholder|fill|stroke|outline|decoration)";
+
+// The APP SHELL: the non-game, non-primitive product surface. These are the
+// screens a new feature is most likely to be copy-pasted from, so the
+// primitive-adoption rules below are enforced here and nowhere else. Outside it
+// live (a) `components/ui/` — the primitives that DEFINE the tokens, (b)
+// `games/` — bespoke board art, (c) `components/{game,setup,multiplayer}/` —
+// display typography such as the oversized room code, whose letter-spacing is
+// art, not a label token.
+const APP_SHELL = /^(?:pages\/|components\/(?:offline|profile|history|admin|match-history)\/)/;
+const inAppShell = (rel) => APP_SHELL.test(rel);
+
+// The D&D DM tool is inside `games/`, but it is not a board — it is a second
+// application with pages, forms, modals, and a palette. It inherited the
+// `games/` exemption that was written for `Card.tsx` and `Die.tsx`, and drifted
+// accordingly (32 raw hexes, 45 one-off trackings, an inline font stack copied
+// into 18 files). It gets the token rules; the rest of `games/` still doesn't.
+//
+// `components/ui/` inside the tool DEFINES its panel chrome, so it is exempt
+// from the chrome-adoption checks the same way the global primitives are.
+const DND_TOOL = /^games\/dungeons-and-dragons\//;
+const DND_TOOL_PRIMITIVES = /^games\/dungeons-and-dragons\/components\/ui\//;
+const inDndTool = (rel) => DND_TOOL.test(rel) && !DND_TOOL_PRIMITIVES.test(rel);
+
+/** App-shell rules that now also cover the DM tool. */
+const inTokenScope = (rel) => inAppShell(rel) || inDndTool(rel);
 
 const RATCHET_RULES = [
   {
@@ -172,6 +214,67 @@ const RATCHET_RULES = [
     re: /<input\b[^<]*?\bbg-surface-\d/g,
     hint: "use <Input> inside a <Field>, not a hand-styled raw <input>",
     scope: (rel) => !rel.startsWith("games/") && !rel.startsWith("components/ui/"),
+  },
+  {
+    name: "arbitrary-tracking",
+    // A one-off letter-spacing. The app shell had drifted to nine distinct
+    // values for three visual roles; `tracking-label` / `tracking-pill` /
+    // `tracking-eyebrow` (index.css) are the roles. Matches the `sm:` etc.
+    // variant forms too, since `sm:tracking-[0.18em]` is the same one-off.
+    re: /\btracking-\[[^\]]+\]/g,
+    hint: "use tracking-label/pill/eyebrow (or <Eyebrow>/<MicroLabel>/<Badge>), not a one-off tracking-[…]",
+    scope: inTokenScope,
+  },
+  {
+    name: "arbitrary-modal-size",
+    // A hand-written width/height cap. `Modal size=…` and `PageMain width=…`
+    // own dialog and page sizing; an arbitrary `max-w-[…]` here both re-invents
+    // the scale AND risks silently losing to a primitive's own `max-w-*`, since
+    // the two land in the same CSS layer and Tailwind's generated order — not
+    // the class string's order — decides which wins.
+    re: /\b(?:max-w|max-h)-\[[^\]]+\]/g,
+    hint: "use <Modal size=…> / <PageMain width=…>, not a hand-written max-w-[…] / max-h-[…]",
+    scope: inTokenScope,
+  },
+  {
+    name: "raw-error-box",
+    // A hand-rolled <ErrorAlert>: one class string carrying BOTH a rose border
+    // and a rose fill — that pairing is ErrorAlert's chrome and nothing else's.
+    // Deliberately NOT keyed on `text-rose-*` alone: in this app rose is also
+    // the semantic color for a loss ("5L", "Loss") and the evil team ("Spies
+    // 3"), so a text-only match is all false positives. The real defect is
+    // re-drawing the BOX (CalendarSyncModal drifted to rounded-md/px-3/text-xs
+    // against the primitive's rounded-lg/px-4/text-sm) and thereby dropping
+    // `role="alert"`.
+    //
+    // The signature is all three of: a radius, a full `border`, and a rose-500
+    // FILL. That excludes a destructive-zone banner (`border-t` + `bg-rose-950`,
+    // UserRow) and a rose-outlined input (`border-rose-500/30` + bg-surface),
+    // neither of which is an alert.
+    re: /"(?=[^"]*\brounded-)(?=[^"]*\bborder\b)(?=[^"]*\bborder-rose-\d)(?=[^"]*\bbg-rose-500\/)[^"]*"/g,
+    hint: "use <ErrorAlert> — it owns the rose geometry, the tone, and role=alert",
+    scope: inTokenScope,
+  },
+  {
+    name: "dnd-raw-hex",
+    // A raw crimson literal in the DM tool. The palette is tokenised
+    // (`--color-dnd-ink/-ash/-blood/-rest/-arcane/-ember*`); a `from-[#2a0808]`
+    // both re-mixes a token by hand and invites the near-miss that already
+    // happened (`#3a0a0a` vs `#3b0a0a`, one digit apart, same intent).
+    re: /\b(?:from|via|to|bg|text|border|ring)-\[#[0-9a-fA-F]{6}\]/g,
+    hint: "use the dnd-ink/ash/blood/rest/arcane/ember colour tokens, not a raw hex",
+    scope: inDndTool,
+  },
+  {
+    name: "inline-font-stack",
+    // `const SERIF = { fontFamily: "ui-serif, Georgia, serif" }` lived in 18
+    // files and was applied inline 90 times. A typeface is a role, so it is a
+    // theme token (`--font-serif-body` → `font-serif-body`), never an inline
+    // style: inline styles cannot be themed, cannot be responsive, and cannot
+    // be found by a class-name grep.
+    re: /fontFamily:\s*["'`]/g,
+    hint: "use a font-* utility backed by a --font-* theme token, not an inline fontFamily",
+    scope: inDndTool,
   },
 ];
 

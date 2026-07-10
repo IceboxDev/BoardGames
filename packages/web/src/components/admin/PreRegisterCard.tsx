@@ -83,7 +83,7 @@ export function PreRegisterCard() {
     <div className="mb-6 overflow-hidden rounded-xl border border-accent-500/20 bg-surface-900">
       <div className="flex items-center justify-between gap-3 px-4 py-3">
         <div className="min-w-0">
-          <p className="text-3xs font-semibold uppercase tracking-[0.25em] text-accent-400">
+          <p className="text-3xs font-semibold uppercase tracking-eyebrow text-accent-400">
             Pre-register
           </p>
           <p className="mt-1 text-sm text-fg-secondary">
@@ -109,7 +109,7 @@ export function PreRegisterCard() {
         <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
           {error && <ErrorAlert message={error} />}
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <span className="text-xs uppercase tracking-[0.2em] text-fg-muted">Online mode</span>
+            <span className="text-xs uppercase tracking-eyebrow text-fg-muted">Online mode</span>
             <SegmentedControl<OnlineMode>
               options={ONLINE_MODE_OPTIONS}
               value={activeMode}

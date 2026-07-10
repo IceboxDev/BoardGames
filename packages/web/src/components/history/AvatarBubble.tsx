@@ -1,8 +1,18 @@
 /**
- * Compact avatar bubble for participants in match-history rows. Mirrors the
- * style of `AttendeesView`'s host/attendee avatars, but uses a two-letter
- * monogram (first letter of first name + first letter of last name) so two
- * users sharing a first initial don't collapse onto each other.
+ * Compact avatar bubble for participants in match-history rows.
+ *
+ * ── Relationship to `ui/Avatar` ──────────────────────────────────────────
+ * This is NOT a duplicate of `Avatar`, and it deliberately does not wrap it.
+ * `Avatar` answers "who is this person" — it shows their photo when they have
+ * one, else a tinted monogram. `AvatarBubble` answers "how did this person do
+ * in this match" — its entire surface is a data channel (background gradient =
+ * tone × team, ring = team, caret = you), which a photo would obliterate at
+ * 24px. Two components, two questions.
+ *
+ * What they DO share is the identity rule: both derive their monogram from
+ * `initialsFromName` (first + last initial), so the same person never renders
+ * as "A" here and "AB" there. That helper is the single source of truth; do not
+ * re-implement `name[0]` anywhere.
  *
  * Visual encoding is split across non-overlapping CSS axes so the signals
  * never fight each other:

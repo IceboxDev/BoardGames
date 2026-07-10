@@ -1,4 +1,4 @@
-import { type RefObject, useEffect } from "react";
+import { type RefObject, useEffect, useRef } from "react";
 
 // ── Dialog accessibility hooks ───────────────────────────────────────────
 //
@@ -21,16 +21,41 @@ export function useBodyScrollLock() {
   }, []);
 }
 
-/** Call `onEscape` when Escape is pressed. Pass `null` to disable. */
+// Mount-ordered stack of the dialogs currently listening for Escape. Dialogs
+// nest for real — `useConfirm` opens a confirmation ON TOP of the RSVP modal —
+// and every open dialog listens on the same `window`, so without this stack a
+// single Escape fires every handler at once: the confirmation dismisses AND the
+// dialog behind it closes. Only the topmost entry reacts.
+type EscapeEntry = { fire: () => void };
+const escapeStack: EscapeEntry[] = [];
+
+/** Call `onEscape` when Escape is pressed, but only for the topmost dialog. Pass `null` to disable. */
 export function useDialogEscape(onEscape: (() => void) | null) {
+  // The latest callback lives in a ref so the effect can register ONCE per
+  // mount. Re-registering whenever an inline `onClose={() => …}` changes
+  // identity would pop the outer dialog and push it back on top of an inner
+  // one, silently handing it the Escape key.
+  const latest = useRef(onEscape);
+  latest.current = onEscape;
+
+  const enabled = onEscape !== null;
   useEffect(() => {
-    if (!onEscape) return;
+    if (!enabled) return;
+    const entry: EscapeEntry = { fire: () => latest.current?.() };
+    escapeStack.push(entry);
+
     function handle(e: KeyboardEvent) {
-      if (e.key === "Escape") onEscape?.();
+      if (e.key !== "Escape") return;
+      if (escapeStack[escapeStack.length - 1] !== entry) return;
+      entry.fire();
     }
     window.addEventListener("keydown", handle);
-    return () => window.removeEventListener("keydown", handle);
-  }, [onEscape]);
+    return () => {
+      window.removeEventListener("keydown", handle);
+      const i = escapeStack.indexOf(entry);
+      if (i !== -1) escapeStack.splice(i, 1);
+    };
+  }, [enabled]);
 }
 
 const FOCUSABLE_SELECTOR = [

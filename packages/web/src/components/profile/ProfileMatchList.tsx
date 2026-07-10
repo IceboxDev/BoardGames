@@ -7,6 +7,7 @@ import { matchResultBadge } from "../../lib/match-result-badge.ts";
 import { TrophyIcon } from "../icons";
 import { Badge } from "../ui/Badge.tsx";
 import { EmptyState } from "../ui/EmptyState.tsx";
+import { Surface } from "../ui/Surface.tsx";
 
 // Renders a profile owner's matches with a game-aware result badge — placement
 // for score games (Won / 2nd / Last), the team score for Just One, Won/Lost
@@ -39,10 +40,13 @@ export function ProfileMatchList({ matches, userId, firstName, footer }: Profile
           const badge = matchResultBadge(match.outcome, userId, match.gameSlug);
           const playerCount = extractParticipantIds(match.outcome).length;
           return (
-            <li
+            <Surface
+              as="li"
               key={match.id}
+              variant="raised"
+              padding="none"
               style={{ "--accent": game?.accentHex ?? "#6366f1" } as CSSProperties}
-              className="flex items-center gap-3 rounded-xl border border-white/[0.06] bg-surface-900/60 p-2.5"
+              className="flex items-center gap-3 p-2.5"
             >
               <div className="h-11 w-11 shrink-0 overflow-hidden rounded-lg bg-surface-800 ring-1 ring-[var(--accent)]/30">
                 {game ? (
@@ -67,7 +71,7 @@ export function ProfileMatchList({ matches, userId, firstName, footer }: Profile
                   {badge.label}
                 </Badge>
               )}
-            </li>
+            </Surface>
           );
         })}
       </ul>

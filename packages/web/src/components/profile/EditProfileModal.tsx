@@ -18,9 +18,9 @@ import { PlusIcon, TrashIcon } from "../icons";
 import { Button } from "../ui/Button.tsx";
 import { Chip } from "../ui/Chip.tsx";
 import { ErrorAlert } from "../ui/ErrorAlert.tsx";
-import { Field } from "../ui/Field.tsx";
+import { Field, FieldGroup } from "../ui/Field.tsx";
 import { Input } from "../ui/Input.tsx";
-import { Modal } from "../ui/Modal.tsx";
+import { Modal, ModalBody, ModalFooter } from "../ui/Modal.tsx";
 import { SegmentedControl } from "../ui/SegmentedControl.tsx";
 import { Textarea } from "../ui/Textarea.tsx";
 
@@ -127,12 +127,7 @@ export function EditProfileModal({ userId, initial, onClose }: EditProfileModalP
   }
 
   return (
-    <Modal
-      onClose={onClose}
-      eyebrow="Your profile"
-      title="Edit profile"
-      panelClassName="max-w-2xl max-h-[90vh]"
-    >
+    <Modal onClose={onClose} size="lg" eyebrow="Your profile" title="Edit profile">
       <SegmentedControl
         options={TABS}
         value={tab}
@@ -142,7 +137,7 @@ export function EditProfileModal({ userId, initial, onClose }: EditProfileModalP
         aria-label="Profile editor sections"
       />
 
-      <div className="-mr-1 max-h-[60vh] overflow-y-auto pr-1">
+      <ModalBody>
         {tab === "about" && (
           <div className="flex flex-col gap-4">
             <Field
@@ -189,10 +184,7 @@ export function EditProfileModal({ userId, initial, onClose }: EditProfileModalP
               </Field>
             </div>
 
-            <div className="flex flex-col gap-1.5">
-              <span className="text-xs font-medium uppercase tracking-wide text-fg-secondary">
-                Accent color
-              </span>
+            <FieldGroup label="Accent color">
               <div className="flex flex-wrap items-center gap-2">
                 {PRESET_ACCENTS.map((hex) => (
                   // biome-ignore lint/correctness/noRestrictedElements: bespoke color swatch disc, no Button/Chip variant fits
@@ -219,13 +211,11 @@ export function EditProfileModal({ userId, initial, onClose }: EditProfileModalP
                   Default
                 </Chip>
               </div>
-            </div>
+            </FieldGroup>
 
-            <div className="flex flex-col gap-2">
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-medium uppercase tracking-wide text-fg-secondary">
-                  Links
-                </span>
+            <FieldGroup
+              label="Links"
+              action={
                 <Button
                   variant="ghost"
                   size="xs"
@@ -234,38 +224,43 @@ export function EditProfileModal({ userId, initial, onClose }: EditProfileModalP
                 >
                   <PlusIcon className="h-3.5 w-3.5" /> Add
                 </Button>
+              }
+            >
+              <div className="flex flex-col gap-2">
+                {links.map((link, i) => (
+                  // biome-ignore lint/suspicious/noArrayIndexKey: editable link rows have no stable id
+                  <div key={`link-row-${i}`} className="flex items-center gap-2">
+                    <Input
+                      aria-label="Link label"
+                      value={link.label}
+                      placeholder="BGG"
+                      className="max-w-32"
+                      onChange={(e) =>
+                        setLinks(
+                          links.map((l, j) => (j === i ? { ...l, label: e.target.value } : l)),
+                        )
+                      }
+                    />
+                    <Input
+                      aria-label="Link URL"
+                      value={link.url}
+                      placeholder="boardgamegeek.com/user/…"
+                      onChange={(e) =>
+                        setLinks(links.map((l, j) => (j === i ? { ...l, url: e.target.value } : l)))
+                      }
+                    />
+                    <Button
+                      variant="ghost"
+                      size="xs"
+                      aria-label="Remove link"
+                      onClick={() => setLinks(links.filter((_, j) => j !== i))}
+                    >
+                      <TrashIcon />
+                    </Button>
+                  </div>
+                ))}
               </div>
-              {links.map((link, i) => (
-                // biome-ignore lint/suspicious/noArrayIndexKey: editable link rows have no stable id
-                <div key={`link-row-${i}`} className="flex items-center gap-2">
-                  <Input
-                    aria-label="Link label"
-                    value={link.label}
-                    placeholder="BGG"
-                    className="max-w-[8rem]"
-                    onChange={(e) =>
-                      setLinks(links.map((l, j) => (j === i ? { ...l, label: e.target.value } : l)))
-                    }
-                  />
-                  <Input
-                    aria-label="Link URL"
-                    value={link.url}
-                    placeholder="boardgamegeek.com/user/…"
-                    onChange={(e) =>
-                      setLinks(links.map((l, j) => (j === i ? { ...l, url: e.target.value } : l)))
-                    }
-                  />
-                  <Button
-                    variant="ghost"
-                    size="xs"
-                    aria-label="Remove link"
-                    onClick={() => setLinks(links.filter((_, j) => j !== i))}
-                  >
-                    <TrashIcon />
-                  </Button>
-                </div>
-              ))}
-            </div>
+            </FieldGroup>
           </div>
         )}
 
@@ -296,18 +291,16 @@ export function EditProfileModal({ userId, initial, onClose }: EditProfileModalP
             />
           </div>
         )}
-      </div>
+      </ModalBody>
 
-      {error && <ErrorAlert message={error} />}
-
-      <div className="flex justify-end gap-2">
-        <Button variant="ghost" onClick={onClose} disabled={mutation.isPending}>
+      <ModalFooter start={error ? <ErrorAlert message={error} /> : undefined}>
+        <Button variant="ghost" size="sm" onClick={onClose} disabled={mutation.isPending}>
           Cancel
         </Button>
-        <Button onClick={handleSave} loading={mutation.isPending}>
+        <Button size="sm" onClick={handleSave} loading={mutation.isPending}>
           Save profile
         </Button>
-      </div>
+      </ModalFooter>
     </Modal>
   );
 }

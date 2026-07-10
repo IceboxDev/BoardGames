@@ -2,6 +2,9 @@ import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { Attendee } from "../../lib/calendar-games";
 import { DND_SLUG } from "../../lib/dnd-night.ts";
 import { resolveGame } from "../../lib/games-by-slug.ts";
+import { Avatar } from "../ui/Avatar";
+import { Badge } from "../ui/Badge";
+import { Eyebrow } from "../ui/Label";
 import { Surface } from "../ui/Surface";
 import { D20Die } from "./D20Die";
 
@@ -50,9 +53,9 @@ export default function DndNightPanel({ attendees, partyCount }: Props) {
             className="dnd-die dnd-die-animated h-24 w-24 sm:h-28 sm:w-28"
           />
           <div>
-            <p className="text-2xs font-bold uppercase tracking-[0.35em] text-amber-300/80">
+            <Eyebrow tone="amber" className="text-amber-300/80">
               Tonight's quest
-            </p>
+            </Eyebrow>
             <h2
               className="mt-1.5 text-3xl font-bold text-amber-100 sm:text-4xl"
               style={{ ...SERIF, textShadow: "0 2px 14px rgba(0,0,0,0.7)" }}
@@ -89,12 +92,9 @@ export default function DndNightPanel({ attendees, partyCount }: Props) {
 
       {/* The party — no bringing assignments on a D&D night. */}
       <div className="shrink-0">
-        <p
-          className="px-2 text-2xs font-semibold uppercase tracking-[0.25em] text-amber-300"
-          style={SERIF}
-        >
+        <Eyebrow tone="amber" className="px-2" style={SERIF}>
           The party
-        </p>
+        </Eyebrow>
         {attendees.length === 0 ? (
           <p className="mt-2 px-2 text-2xs text-fg-muted">The adventurers are still assembling…</p>
         ) : (
@@ -107,16 +107,7 @@ export default function DndNightPanel({ attendees, partyCount }: Props) {
                 padding="none"
                 className="flex items-center gap-3 px-3 py-2.5"
               >
-                <span
-                  aria-hidden="true"
-                  className={`grid h-9 w-9 shrink-0 place-items-center rounded-full text-sm font-bold text-white ${
-                    a.userId === dmUserId
-                      ? "bg-amber-500/25 ring-1 ring-amber-400/60"
-                      : "bg-surface-800 ring-1 ring-white/10"
-                  }`}
-                >
-                  {a.name[0]?.toUpperCase() ?? "?"}
-                </span>
+                <Avatar name={a.name} size="sm" />
                 <span className="min-w-0 flex-1 truncate text-sm font-semibold text-white">
                   {a.name}
                   {a.userId === viewerId && (
@@ -124,20 +115,17 @@ export default function DndNightPanel({ attendees, partyCount }: Props) {
                   )}
                 </span>
                 {a.userId === dmUserId ? (
-                  <span
-                    className="shrink-0 rounded-full bg-amber-400/20 px-2 py-0.5 text-3xs font-bold uppercase tracking-[0.14em] text-amber-200"
-                    style={SERIF}
-                  >
+                  <Badge tone="amber" shape="pill" size="xs">
                     Dungeon Master
-                  </span>
+                  </Badge>
                 ) : a.isHost ? (
-                  <span className="shrink-0 rounded-full bg-white/[0.06] px-2 py-0.5 text-3xs font-bold uppercase tracking-[0.18em] text-fg-secondary">
+                  <Badge tone="neutral" shape="pill" size="xs">
                     Host
-                  </span>
+                  </Badge>
                 ) : a.status === "tentative" ? (
-                  <span className="shrink-0 rounded-full bg-white/[0.06] px-2 py-0.5 text-3xs font-bold uppercase tracking-[0.18em] text-fg-secondary">
+                  <Badge tone="neutral" shape="pill" size="xs">
                     Maybe
-                  </span>
+                  </Badge>
                 ) : null}
               </Surface>
             ))}

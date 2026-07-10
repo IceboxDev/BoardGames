@@ -2,11 +2,18 @@ import type { CSSProperties } from "react";
 import { initialsFromName } from "../../lib/names.ts";
 
 // Avatar primitive: renders the user's `image` when present, otherwise an
-// initials monogram. Avatars are generated/assigned out-of-band and stored on
-// `user.image`; every surface that shows a person (profile header, players
-// directory, attendee lists) routes through here so the fallback and ring are
-// consistent. Optional `accentHex` tints the monogram + ring to the user's
-// profile accent.
+// initials monogram (first + last initial, via the shared `initialsFromName`).
+// Avatars are generated/assigned out-of-band and stored on `user.image`.
+// Optional `accentHex` tints the monogram + ring to the user's profile accent.
+//
+// Every surface that IDENTIFIES a person routes through here: ProfileHeader,
+// PlayerCard, the RSVP attendee list, and the D&D party roster. The one
+// deliberate exception is `history/AvatarBubble`, whose surface encodes match
+// outcome and team rather than identity — see its header comment.
+//
+// Callers whose payload carries no `image` (the calendar `Attendee` wire type)
+// simply get the monogram; when the server starts sending `image` on those
+// endpoints, they light up here with no call-site change.
 
 export type AvatarSize = "xs" | "sm" | "md" | "lg" | "xl";
 

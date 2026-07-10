@@ -174,7 +174,8 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   return (
     <Modal
       onClose={onClose}
-      panelClassName="h-full max-w-[80rem] gap-2 sm:gap-4 sm:p-7 xl:max-w-[92rem] 2xl:max-w-[110rem]"
+      size="full"
+      panelClassName="gap-2 sm:gap-4 sm:p-7"
       eyebrow={eyebrow}
       title={headingDate}
       titleClassName="text-2xl font-bold tracking-tight text-white sm:text-3xl"

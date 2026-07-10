@@ -48,6 +48,17 @@
   --text-5xs--line-height: 0.625rem;
   --text-6xs: 0.375rem;
   --text-6xs--line-height: 0.5rem;
+  /* Uppercase-label letter-spacing. The app-shell had drifted to NINE distinct
+     one-off values (0.1 / 0.12 / 0.14 / 0.15 / 0.16 / 0.18 / 0.2 / 0.25 /
+     0.35em) for what is really three roles. Consumed via `tracking-label`,
+     `tracking-pill`, `tracking-eyebrow` — though most call sites should reach
+     for the <MicroLabel> / <Eyebrow> components that wrap them.
+       label   — section headings, Field labels, stat captions
+       pill    — status pills (Badge) and dense role micro-labels
+       eyebrow — the widest kicker: modal eyebrows, section kickers */
+  --tracking-label: 0.14em;
+  --tracking-pill: 0.18em;
+  --tracking-eyebrow: 0.25em;
   /* Glow shadows. Each carries its palette's exact rgb so call sites stop
      hand-duplicating `shadow-[0_0_12px_-4px_rgba(99,102,241,0.5)]` — which is
      just accent-500. Consumed by SegmentedControl/Chip emphasis + selectable
@@ -69,6 +80,30 @@
      chunk (see games/dungeons-and-dragons/DndTool.tsx), so anything outside
      it falls back to the serif stack. */
   --font-fantasy: "Cinzel", ui-serif, Georgia, serif;
+  /* The D&D tool's BODY serif — the reading face under the Cinzel display
+     face. Deliberately Cinzel-less: Cinzel is a titling face and is unreadable
+     at paragraph sizes. This existed as `const SERIF = { fontFamily: … }`
+     copy-pasted into 18 files and applied inline 90 times; it is a role, so it
+     is a token. */
+  --font-serif-body: ui-serif, Georgia, serif;
+  /* ── D&D tool palette ──────────────────────────────────────────────────
+     The crimson-and-ash range the DM tool paints its panels with. These were
+     32 raw `from-[#2a0808]` / `bg-[#1a0606]/70` brackets across 20 files, and
+     had already drifted: `#3a0a0a` and `#3b0a0a` were two spellings of one
+     colour, one hex digit apart. `blood` is that colour, canonicalised.
+       ink    — deepest well: page background, input fields, stat boxes
+       ash    — the standard panel gradient's warm start
+       blood  — hero banners and danger panels
+       rest   — the short-rest panel's green
+       arcane — the spellbook card's purple
+       ember* — the quest rail's torch-lit progress gradient */
+  --color-dnd-ink: #1a0606;
+  --color-dnd-ash: #2a0808;
+  --color-dnd-blood: #3b0a0a;
+  --color-dnd-rest: #07231a;
+  --color-dnd-arcane: #170a2a;
+  --color-dnd-ember-deep: #641212;
+  --color-dnd-ember: #b91c1c;
   /* Stacking layers. Keep this list as the single source of truth.
      overlay — in-content overlays portaled into #app-main (board peek
                overlays); local to that stacking context, above board content
@@ -678,6 +713,23 @@ input[type="number"]::-webkit-inner-spin-button {
    shadow-[0_0_…] literal) so it reads as a D&D-night token, not ad-hoc art. */
 .dnd-hero-glow {
   box-shadow: 0 0 50px -14px rgba(220, 38, 38, 0.7);
+}
+/* The hero's title, lifted off the crimson bloom behind it. Sits on the
+   heading INSIDE `.dnd-hero-glow`, not on the banner itself — which is why it
+   is its own class rather than a rule folded into the one above. Was an inline
+   `style={{ textShadow: … }}` duplicated across five heroes. */
+.dnd-hero-title {
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+}
+/* The crimson bloom INSIDE a hero banner — an overlay span, not the banner's
+   own box-shadow. `strong` is the campaign hall's full-page banner; the softer
+   default suits the smaller campaign/party headers. Both were
+   `bg-[radial-gradient(ellipse_55%_60%_at_50%_…)]` literals. */
+.dnd-hero-bloom {
+  background: radial-gradient(ellipse 55% 60% at 50% 20%, rgba(220, 38, 38, 0.4), transparent 72%);
+}
+.dnd-hero-bloom-strong {
+  background: radial-gradient(ellipse 55% 60% at 50% 28%, rgba(220, 38, 38, 0.5), transparent 72%);
 }
 .dnd-die-animated {
   animation: d20-pulse 5s ease-in-out infinite;

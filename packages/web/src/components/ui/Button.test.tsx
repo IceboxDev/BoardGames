@@ -155,10 +155,13 @@ describe("Button — interaction", () => {
     expect(onClick).not.toHaveBeenCalled();
   });
 
-  it("loading state disables the button and swaps children for ellipsis", () => {
+  // The label stays mounted (just visually hidden) so the button keeps its
+  // width while the spinner overlays it — no mid-submit layout jump.
+  it("loading state disables the button, keeps the label, and marks it busy", () => {
     render(<Button loading>Save</Button>);
     const btn = screen.getByRole("button");
     expect(btn).toBeDisabled();
-    expect(btn.textContent).toBe("…");
+    expect(btn).toHaveAttribute("aria-busy", "true");
+    expect(btn.textContent).toBe("Save");
   });
 });

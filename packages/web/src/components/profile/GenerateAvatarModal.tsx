@@ -9,10 +9,11 @@ import { qk } from "../../lib/query-keys.ts";
 import { CameraIcon, SearchIcon } from "../icons";
 import { Button } from "../ui/Button.tsx";
 import { Chip } from "../ui/Chip.tsx";
-import { Field } from "../ui/Field.tsx";
+import { ErrorAlert } from "../ui/ErrorAlert.tsx";
+import { Field, FieldGroup } from "../ui/Field.tsx";
 import { Input } from "../ui/Input.tsx";
 import { LoadingState } from "../ui/LoadingState.tsx";
-import { Modal } from "../ui/Modal.tsx";
+import { Modal, ModalBody, ModalFooter } from "../ui/Modal.tsx";
 import { Textarea } from "../ui/Textarea.tsx";
 
 // AI profile-picture generator. Flow: upload reference photo → pick game →
@@ -139,7 +140,7 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
       eyebrow="AI avatar"
       title="Generate profile picture"
       subheader={targetName ? <p className="text-sm text-fg-muted">for {targetName}</p> : undefined}
-      panelClassName="max-w-lg max-h-[90vh]"
+      size="sm"
       closeOnBackdrop={!busy}
       closeOnEscape={!busy}
     >
@@ -155,7 +156,7 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
             className="h-44 w-44 rounded-full object-cover ring-2 ring-accent-400/50"
           />
           <p className="text-center text-sm text-fg-secondary">Use this as your profile picture?</p>
-          {error && <p className="text-xs text-rose-400">{error}</p>}
+          {error && <ErrorAlert message={error} />}
           <div className="flex flex-wrap justify-center gap-2">
             <Button onClick={() => saveMutation.mutate(generated)} loading={saveMutation.isPending}>
               Use this photo
@@ -170,12 +171,9 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
           </div>
         </div>
       ) : (
-        <div className="flex max-h-[68vh] flex-col gap-4 overflow-y-auto pr-1">
+        <ModalBody gap="md">
           {/* 1. Reference image */}
-          <div className="flex flex-col gap-1.5">
-            <span className="text-xs font-medium uppercase tracking-wide text-fg-secondary">
-              Reference photo
-            </span>
+          <FieldGroup label="Reference photo">
             <label className="flex cursor-pointer items-center gap-3 rounded-lg border border-dashed border-white/15 bg-surface-900/60 p-3 transition hover:border-accent-400/40">
               <input type="file" accept="image/*" onChange={handleFile} className="sr-only" />
               {referenceImage ? (
@@ -193,13 +191,10 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
                 {referenceImage ? "Change photo" : "Upload a clear photo of your face"}
               </span>
             </label>
-          </div>
+          </FieldGroup>
 
           {/* 2. Game */}
-          <div className="flex flex-col gap-1.5">
-            <span className="text-xs font-medium uppercase tracking-wide text-fg-secondary">
-              Game you're an expert in
-            </span>
+          <FieldGroup label="Game you're an expert in">
             {selectedGame ? (
               // Selected: collapse the picker to just the chosen game + a way to
               // re-pick. (Showing the search + list here duplicated the game 3×.)
@@ -262,13 +257,10 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
                 </ul>
               </>
             )}
-          </div>
+          </FieldGroup>
 
           {/* 3. Style */}
-          <div className="flex flex-col gap-1.5">
-            <span className="text-xs font-medium uppercase tracking-wide text-fg-secondary">
-              Style
-            </span>
+          <FieldGroup label="Style">
             <div className="flex flex-wrap gap-2">
               {AVATAR_STYLES.map((style) => (
                 <Chip
@@ -280,7 +272,7 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
                 </Chip>
               ))}
             </div>
-          </div>
+          </FieldGroup>
 
           {/* 4. Comments */}
           <Field label="Additional comments" htmlFor={commentsId} hint="Optional">
@@ -293,18 +285,23 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
               onChange={(e) => setComments(e.target.value)}
             />
           </Field>
+        </ModalBody>
+      )}
 
-          {error && <p className="text-xs text-rose-400">{error}</p>}
-
-          <div className="flex justify-end gap-2">
-            <Button variant="ghost" onClick={onClose}>
-              Cancel
-            </Button>
-            <Button onClick={() => startMutation.mutate()} disabled={!canGenerate}>
-              Generate
-            </Button>
-          </div>
-        </div>
+      {phase === "form" && (
+        <ModalFooter start={error ? <ErrorAlert message={error} /> : undefined}>
+          <Button variant="ghost" size="sm" onClick={onClose}>
+            Cancel
+          </Button>
+          <Button
+            size="sm"
+            onClick={() => startMutation.mutate()}
+            disabled={!canGenerate}
+            loading={startMutation.isPending}
+          >
+            Generate
+          </Button>
+        </ModalFooter>
       )}
     </Modal>
   );

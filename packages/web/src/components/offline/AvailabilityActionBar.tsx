@@ -103,7 +103,7 @@ function AdminToggleButton({ active, onClick }: { active: boolean; onClick: () =
       onClick={onClick}
       aria-label={`${active ? "Disable" : "Enable"} admin view`}
       icon={<EyeIcon className="h-3.5 w-3.5" />}
-      className="shrink-0 uppercase tracking-[0.16em] sm:absolute sm:left-3 sm:top-1/2 sm:-translate-y-1/2"
+      className="shrink-0 uppercase tracking-label sm:absolute sm:left-3 sm:top-1/2 sm:-translate-y-1/2"
     >
       <span className="hidden sm:inline">{active ? "Admin" : "Player"}</span>
     </Chip>
@@ -121,7 +121,7 @@ function LockInButton({ onClick }: { onClick: () => void }) {
       onClick={onClick}
       aria-label="Enter lock-in mode"
       icon={<PadlockIcon closed className="h-3.5 w-3.5" />}
-      className="shrink-0 uppercase tracking-[0.16em] sm:absolute sm:right-3 sm:top-1/2 sm:-translate-y-1/2"
+      className="shrink-0 uppercase tracking-label sm:absolute sm:right-3 sm:top-1/2 sm:-translate-y-1/2"
     >
       <span className="hidden sm:inline">Lock-in</span>
     </Chip>
