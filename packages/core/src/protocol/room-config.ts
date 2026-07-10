@@ -13,6 +13,7 @@ export interface GameRoomConfig {
 }
 
 export const gameRoomConfigs: Record<string, GameRoomConfig> = {
+  "7-wonders": { minPlayers: 3, maxPlayers: 7, supportsAI: true },
   "lost-cities": { minPlayers: 2, maxPlayers: 2, supportsAI: true },
   "exploding-kittens": { minPlayers: 2, maxPlayers: 5, supportsAI: true },
   durak: { minPlayers: 2, maxPlayers: 5, supportsAI: true },

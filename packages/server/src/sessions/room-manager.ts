@@ -526,6 +526,15 @@ function buildGameConfig(room: Room, extra: Record<string, unknown>): Record<str
       return { playerCount: humanCount, ...extra };
     }
 
+    case "7-wonders": {
+      // AI fills every non-human seat; seats map through seatOrder.
+      const humanIndices = room.slots
+        .map((s, i) => (s.kind === "human" ? (room.seatOrder[i] ?? i) : -1))
+        .filter((i) => i >= 0);
+      const playerCount = room.slots.filter((s) => s.kind !== "open").length;
+      return { playerCount, humanPlayers: humanIndices, ...extra };
+    }
+
     case "sky-team": {
       // Human SEATS (PlayerIndex), mapped through seatOrder — the host may
       // have swapped who flies as Pilot vs Co-Pilot.
