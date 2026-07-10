@@ -32,7 +32,7 @@ export type GameSource = "solo" | "mp";
 // projection. The context itself stores `unknown`; the hook does a
 // single cast at the boundary.
 
-export interface GameShellValue<TView, TAction, TResult> {
+export interface GameShellValue<TView, TAction, TResult, TLegal = TAction> {
   /**
    * Game registry entry. Always defined inside a layout — and always a
    * `PlayableGame` because `<GameShellLayout>` redirects to `/games`
@@ -44,9 +44,9 @@ export interface GameShellValue<TView, TAction, TResult> {
   /** Shared raw session (WebSocket + state). Prefer `game` / `mp` projections. */
   session: GameSession<TView, TAction, TResult>;
   /** Solo (vs-AI) projection. */
-  game: RemoteGameState<TView, TAction, TResult>;
+  game: RemoteGameState<TView, TAction, TResult, TLegal>;
   /** Multiplayer-room projection. */
-  mp: MultiplayerRoomState<TView, TAction, TResult>;
+  mp: MultiplayerRoomState<TView, TAction, TResult, TLegal>;
 }
 
 const GameShellContext = createContext<GameShellValue<unknown, unknown, unknown> | null>(null);
@@ -69,14 +69,15 @@ export function useGameShell<
   TView = unknown,
   TAction = unknown,
   TResult = unknown,
->(): GameShellValue<TView, TAction, TResult> {
+  TLegal = TAction,
+>(): GameShellValue<TView, TAction, TResult, TLegal> {
   const ctx = useContext(GameShellContext);
   if (!ctx) {
     throw new Error(
       "useGameShell must be used inside <GameShellLayout> (mounted at /play/:slug/*)",
     );
   }
-  return ctx as unknown as GameShellValue<TView, TAction, TResult>;
+  return ctx as unknown as GameShellValue<TView, TAction, TResult, TLegal>;
 }
 
 // ── Layout (route element) ────────────────────────────────────────────────

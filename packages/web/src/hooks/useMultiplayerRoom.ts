@@ -7,7 +7,7 @@ import type {
   PeerConnectionState,
 } from "../lib/ws-client";
 
-export interface MultiplayerRoomState<TView, TAction, TResult> {
+export interface MultiplayerRoomState<TView, TAction, TResult, TLegal = TAction> {
   // Connection
   /** Full transport status — distinguishes connecting / reconnecting / error
    *  from a plain connected/disconnected boolean. */
@@ -45,7 +45,8 @@ export interface MultiplayerRoomState<TView, TAction, TResult> {
 
   // Game state (available after game starts)
   view: TView | null;
-  legalActions: TAction[];
+  /** Server-provided legal moves — see {@link RemoteGameState.legalActions}. */
+  legalActions: TLegal[];
   activePlayer: number;
   playerIndex: number;
   isMyTurn: boolean;

@@ -1,9 +1,11 @@
 import { useCallback, useState } from "react";
 import type { ConnectionStatus, GameSession } from "../lib/ws-client";
 
-export interface RemoteGameState<TView, TAction, TResult> {
+export interface RemoteGameState<TView, TAction, TResult, TLegal = TAction> {
   view: TView | null;
-  legalActions: TAction[];
+  /** Server-provided legal moves. Games whose send-event type differs from
+   *  their action type name it via the fourth `useGameShell` generic. */
+  legalActions: TLegal[];
   phase: string;
   activePlayer: number;
   playerIndex: number;
