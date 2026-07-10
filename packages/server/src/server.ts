@@ -21,6 +21,8 @@ import { adminPasswordResetRoutes } from "./auth-routes/admin-password-reset.ts"
 import { adminPendingInventoryRoutes } from "./auth-routes/admin-pending-inventory.ts";
 import { availabilityCountsRoutes } from "./auth-routes/availability-counts.ts";
 import { avatarRoutes } from "./auth-routes/avatar.ts";
+import { bgaIngestRoutes } from "./auth-routes/bga-ingest.ts";
+import { bgaSessionRoutes } from "./auth-routes/bga-sessions.ts";
 import { bggRoutes } from "./auth-routes/bgg.ts";
 import { calendarFeedRoutes } from "./auth-routes/calendar-feed.ts";
 import { calendarFeedPublicRoutes } from "./auth-routes/calendar-feed-public.ts";
@@ -111,6 +113,11 @@ app.get("/api/health", (c) =>
 // the non-browser fetchers that hit this endpoint.
 app.route("/api/ical", calendarFeedPublicRoutes);
 
+// Public BGA-bridge ingest: the producer is a userscript on boardgamearena.com
+// (GM_xmlhttpRequest — no cookie), authenticated by its per-session ingest
+// token instead of the requireAuth umbrella. See auth-routes/bga-ingest.ts.
+app.route("/api/bga-ingest", bgaIngestRoutes);
+
 // --- Protected: admin only ---
 app.use("/api/admin/*", requireAdmin);
 app.route("/api/admin/users", adminOnlineRoutes);
@@ -155,6 +162,11 @@ app.route("/api/tournaments", tournamentRoutes);
 // D&D DM tool (campaign hall). Lives in the play area, so gated like it.
 app.use("/api/dnd/*", requireAuth, requireOnline);
 app.route("/api/dnd", dndCampaignRoutes);
+
+// BGA bridge sessions (create / join-by-code / SSE spectate). Play-area
+// feature, gated like the games it mirrors.
+app.use("/api/bga/*", requireAuth, requireOnline);
+app.route("/api/bga", bgaSessionRoutes);
 
 app.use("/api/games/*", requireAuth);
 app.route("/api/games", persistenceRoutes);
