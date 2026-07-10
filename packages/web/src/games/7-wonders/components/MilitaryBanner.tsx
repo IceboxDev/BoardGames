@@ -36,7 +36,7 @@ export default function MilitaryBanner({ entry, labelFor, onDismiss }: MilitaryB
           );
         })}
       </div>
-      <p className="mt-1 text-center text-[10px] italic text-fg-disabled">tap to dismiss</p>
+      <p className="mt-1 text-center text-3xs italic text-fg-disabled">tap to dismiss</p>
     </button>
   );
 }

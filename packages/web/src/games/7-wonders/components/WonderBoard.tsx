@@ -17,13 +17,13 @@ export default function WonderBoard({ player, size = "md" }: WonderBoardProps) {
   return (
     <div className="flex flex-col gap-1">
       <div className="flex items-center gap-1.5">
-        <span className={`font-semibold text-fg-primary ${compact ? "text-[11px]" : "text-sm"}`}>
+        <span className={`font-semibold text-fg-primary ${compact ? "text-2xs" : "text-sm"}`}>
           {def.name}
         </span>
-        <span className="rounded bg-surface-700 px-1 text-[9px] font-bold text-fg-secondary">
+        <span className="rounded bg-surface-700 px-1 text-4xs font-bold text-fg-secondary">
           {player.side}
         </span>
-        <span className={compact ? "text-[11px]" : "text-sm"}>
+        <span className={compact ? "text-2xs" : "text-sm"}>
           {RESOURCE_GLYPH[side.initialResource]}
         </span>
       </div>
@@ -40,13 +40,11 @@ export default function WonderBoard({ player, size = "md" }: WonderBoardProps) {
               }`}
               title={stage.effects.map(effectLabel).join(", ")}
             >
-              <p
-                className={`leading-tight text-fg-secondary ${compact ? "text-[8px]" : "text-[10px]"}`}
-              >
+              <p className={`leading-tight text-fg-secondary ${compact ? "text-4xs" : "text-3xs"}`}>
                 {costText(stage.cost)}
               </p>
               <p
-                className={`leading-tight ${compact ? "text-[9px]" : "text-[11px]"} ${
+                className={`leading-tight ${compact ? "text-4xs" : "text-2xs"} ${
                   built ? "text-amber-200" : "text-fg-primary"
                 }`}
               >

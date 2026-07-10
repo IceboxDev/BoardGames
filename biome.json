@@ -3,10 +3,11 @@
   "files": {
     "includes": [
       "packages/**",
-      "!**/dist/**",
-      "!**/.vite/**",
-      "!**/node_modules/**",
-      "!packages/core/src/bgg/snapshot.json"
+      "!**/dist",
+      "!**/.vite",
+      "!**/node_modules",
+      "!packages/core/src/bgg/snapshot.json",
+      "!packages/web/bundle-*.html"
     ]
   },
   "formatter": {
@@ -52,7 +53,7 @@
           "level": "error",
           "options": {
             "paths": {
-              "better-auth/react": "Direct better-auth/react imports are forbidden outside src/lib/auth-client.ts. Use `useCurrentUser()` from src/hooks/useCurrentUser.ts — it schema-validates the session through SessionUserSchema and exposes a typed { user, isLoading, isAdmin }. This rule prevents ad-hoc casts like `(session?.user as { role?: string })?.role` from creeping back in.",
+              "better-auth/react": "Direct better-auth/react imports are forbidden outside src/lib/auth-client.ts. Use `useCurrentUser()` from src/hooks/useCurrentUser.ts \u2014 it schema-validates the session through SessionUserSchema and exposes a typed { user, isLoading, isAdmin }. This rule prevents ad-hoc casts like `(session?.user as { role?: string })?.role` from creeping back in.",
               "better-auth/client/plugins": "Configure better-auth plugins in src/lib/auth-client.ts only, so the whole app shares a single authClient instance."
             }
           }

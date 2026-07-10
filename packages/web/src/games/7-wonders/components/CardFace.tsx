@@ -41,25 +41,25 @@ export default function CardFace({
       className={`relative flex h-full w-full flex-col overflow-hidden rounded-lg border border-white/15 bg-surface-800 text-left shadow-md transition-all ${ringClass} ${interactionClass} ${className ?? ""}`}
     >
       <div
-        className="px-1.5 py-1 text-[10px] font-bold leading-tight text-white"
+        className="px-1.5 py-1 text-3xs font-bold leading-tight text-white"
         style={{ backgroundColor: hex }}
       >
         {def.name}
       </div>
       <div className="flex flex-1 flex-col items-center justify-center gap-0.5 px-1 text-center">
         {def.effects.map((effect) => (
-          <span key={effectLabel(effect)} className="text-[11px] leading-tight text-fg-primary">
+          <span key={effectLabel(effect)} className="text-2xs leading-tight text-fg-primary">
             {effectLabel(effect)}
           </span>
         ))}
         {def.chainFrom && (
-          <span className="text-[9px] italic leading-tight text-fg-disabled">
+          <span className="text-4xs italic leading-tight text-fg-disabled">
             ⛓ {def.chainFrom.join(" / ")}
           </span>
         )}
       </div>
       <div className="flex items-center justify-between px-1.5 pb-1">
-        <span className="text-[10px] text-fg-secondary">{cost || "free"}</span>
+        <span className="text-3xs text-fg-secondary">{cost || "free"}</span>
         <span className="h-2 w-2 rounded-full" style={{ backgroundColor: hex }} title={def.color} />
       </div>
     </button>

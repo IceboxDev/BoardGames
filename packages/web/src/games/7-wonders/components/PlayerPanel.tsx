@@ -26,20 +26,20 @@ export default function PlayerPanel({
         <span className="truncate text-xs font-semibold text-fg-primary">{label}</span>
         <span className="flex items-center gap-1">
           {neighborSide && (
-            <span className="rounded bg-surface-700 px-1 text-[9px] text-fg-secondary">
+            <span className="rounded bg-surface-700 px-1 text-4xs text-fg-secondary">
               {neighborSide === "left" ? "← left" : "right →"}
             </span>
           )}
           {isSelecting &&
             (player.hasSelected ? (
-              <span className="text-[10px] text-emerald-400">✓ picked</span>
+              <span className="text-3xs text-emerald-400">✓ picked</span>
             ) : (
-              <span className="text-[10px] italic text-fg-disabled">thinking…</span>
+              <span className="text-3xs italic text-fg-disabled">thinking…</span>
             ))}
         </span>
       </div>
       <WonderBoard player={player} size="sm" />
-      <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-[11px] text-fg-secondary">
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-2xs text-fg-secondary">
         <span>🪙 {player.coins}</span>
         <span>🛡️ {player.shields}</span>
         <span className={militarySum < 0 ? "text-rose-400" : "text-emerald-400"}>

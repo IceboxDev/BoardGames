@@ -20,7 +20,7 @@ export default function TableauDisplay({ tableau, size = "md" }: TableauDisplayP
     return <p className="text-xs italic text-fg-disabled">No cards built yet</p>;
   }
 
-  const chipClass = size === "sm" ? "px-1 py-px text-[9px]" : "px-1.5 py-0.5 text-[11px]";
+  const chipClass = size === "sm" ? "px-1 py-px text-4xs" : "px-1.5 py-0.5 text-2xs";
 
   return (
     <div className="flex flex-col gap-0.5">
