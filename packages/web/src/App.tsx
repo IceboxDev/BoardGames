@@ -52,6 +52,9 @@ const MpGameRoute = lazy(() =>
 const CompanionRoute = lazy(() =>
   import("./components/game-shell/GameRoute").then((m) => ({ default: m.CompanionRoute })),
 );
+const BgaRoute = lazy(() =>
+  import("./components/game-shell/GameRoute").then((m) => ({ default: m.BgaRoute })),
+);
 const TournamentRoute = lazy(() =>
   import("./components/game-shell/TournamentRoutes").then((m) => ({ default: m.TournamentRoute })),
 );
@@ -190,6 +193,7 @@ const router = createBrowserRouter(
               (the D&D tool's hall → setup → session screens). */}
           <Route path="solo/*" element={<SoloGameRoute />} />
           <Route path="companion" element={<CompanionRoute />} />
+          <Route path="bga" element={<BgaRoute />} />
           <Route path="mp/join" element={<JoinRoomRoute />} />
           <Route path="mp/lobby/:roomCode" element={<LobbyRoute />} />
           <Route path="mp/play/:roomCode" element={<MpGameRoute />} />

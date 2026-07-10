@@ -110,6 +110,23 @@ export function CompanionRoute() {
   );
 }
 
+/**
+ * Route element at `/play/:slug/bga`. Renders the game's "Connect to BGA"
+ * live-spectate screen. Games without a bridge redirect to the mode picker.
+ */
+export function BgaRoute() {
+  const { def } = useGameShell();
+  const BgaScreen = def.bgaConnect?.component;
+  if (!BgaScreen) {
+    return <Navigate to={`/play/${def.slug}`} replace />;
+  }
+  return (
+    <Suspense fallback={null}>
+      <BgaScreen />
+    </Suspense>
+  );
+}
+
 /** Game-component `source` discriminator — surfaced from the hook module. */
 // biome-ignore lint/style/useComponentExportOnlyModules: type re-export for callers that import GameSource alongside the route components
 export type { GameSource };

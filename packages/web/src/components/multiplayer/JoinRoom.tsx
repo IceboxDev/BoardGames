@@ -6,17 +6,26 @@ interface JoinRoomProps {
   title: string;
   onCreateRoom: () => void;
   onJoinRoom: (code: string) => void;
+  /** Games with a BGA bridge (`def.bgaConnect`) get a third option here. */
+  onConnectBga?: () => void;
   onBack: () => void;
   error?: string | null;
 }
 
 /**
- * Multiplayer entry point — pick "Create" or "Join". The player's name is
- * already known from the auth session (every visitor is signed in), so
- * there's no name prompt. The host clicks Create; joiners type the
- * 4-letter code their host shared.
+ * Multiplayer entry point — pick "Create" or "Join" (plus "Connect to BGA"
+ * for games with a bridge). The player's name is already known from the auth
+ * session (every visitor is signed in), so there's no name prompt. The host
+ * clicks Create; joiners type the 4-letter code their host shared.
  */
-export function JoinRoom({ title, onCreateRoom, onJoinRoom, onBack, error }: JoinRoomProps) {
+export function JoinRoom({
+  title,
+  onCreateRoom,
+  onJoinRoom,
+  onConnectBga,
+  onBack,
+  error,
+}: JoinRoomProps) {
   const [roomCode, setRoomCode] = useState("");
   const [mode, setMode] = useState<"choose" | "join">("choose");
   const codeInputRef = useRef<HTMLInputElement>(null);
@@ -48,6 +57,11 @@ export function JoinRoom({ title, onCreateRoom, onJoinRoom, onBack, error }: Joi
           <Button variant="secondary" size="lg" onClick={() => setMode("join")}>
             Join Room
           </Button>
+          {onConnectBga && (
+            <Button variant="secondary" size="lg" onClick={onConnectBga}>
+              Connect to BGA
+            </Button>
+          )}
           <Button variant="link" onClick={onBack} className="mt-2">
             Back
           </Button>

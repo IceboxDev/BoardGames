@@ -104,6 +104,7 @@ export default function JoinRoomRoute() {
       title={def.title}
       onCreateRoom={() => mp.createRoom(playerName)}
       onJoinRoom={(code) => mp.joinRoom(code, playerName)}
+      onConnectBga={def.bgaConnect ? () => navigate(`/play/${def.slug}/bga`) : undefined}
       onBack={() => navigate(`/play/${def.slug}`)}
       error={mp.error}
     />
