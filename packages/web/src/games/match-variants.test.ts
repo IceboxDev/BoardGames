@@ -31,14 +31,11 @@ describe("variantConfigForSlug", () => {
     expect(config?.options.length).toBe(5);
   });
 
-  it("returns the Villainous edition config (single, two editions)", () => {
-    const config = variantConfigForSlug("villainous");
-    expect(config?.label).toBe("Edition");
-    expect(config?.mode).toBe("single");
-    expect(config?.options.map((o) => o.value)).toEqual([
-      "Introduction to Evil",
-      "The Worst Takes It All",
-    ]);
+  // Villainous has no edition picker: each box is its own catalog game, so the
+  // chosen game already names the edition.
+  it("returns no config for either Villainous box", () => {
+    expect(variantConfigForSlug("villainous")).toBeNull();
+    expect(variantConfigForSlug("villainous-introduction-to-evil")).toBeNull();
   });
 
   it("returns the Dungeon Mayhem sets config (multi-select, three sets)", () => {
@@ -78,13 +75,13 @@ describe("defaultVariantValue", () => {
   it("returns undefined for a game with no variants", () => {
     expect(defaultVariantValue(null)).toBeUndefined();
     expect(defaultVariantValue("not-a-real-game")).toBeUndefined();
+    expect(defaultVariantValue("villainous")).toBeUndefined();
   });
 
   it("single-select games default to their first option", () => {
     expect(defaultVariantValue("the-resistance")).toBe("Standard");
     expect(defaultVariantValue("wavelength")).toBe("Standard");
     expect(defaultVariantValue("codenames")).toBe("English");
-    expect(defaultVariantValue("villainous")).toBe("Introduction to Evil");
     expect(defaultVariantValue("just-one")).toBe("Standard");
   });
 

@@ -13,6 +13,7 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { defaultKindForSlug } from "../../games/match-kinds";
 import { defaultVariantValue, variantConfigForSlug } from "../../games/match-variants";
+import { isVillainousSlug } from "../../games/villainous/villains";
 import { useAdminUsers } from "../../hooks/useAdminUsers.ts";
 import { fetchCalendarLocks } from "../../lib/calendar-locks";
 import { recordMatch, updateMatch } from "../../lib/match-history";
@@ -22,7 +23,7 @@ import { Chip } from "../ui/Chip";
 import { ErrorAlert } from "../ui/ErrorAlert";
 import { Field } from "../ui/Field";
 import { Input } from "../ui/Input";
-import { Modal } from "../ui/Modal";
+import { Modal, ModalBody, ModalFooter } from "../ui/Modal";
 import { Select } from "../ui/Select";
 import { Surface } from "../ui/Surface";
 import { Textarea } from "../ui/Textarea";
@@ -227,11 +228,11 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
   return (
     <Modal
       onClose={onClose}
-      panelClassName="max-w-2xl max-h-[90vh]"
+      size="lg"
       eyebrow="History"
       title={state.mode === "edit" ? "Edit match" : "Record a match"}
     >
-      <div className="-mr-2 flex min-h-0 flex-1 flex-col gap-3 overflow-y-auto pr-2">
+      <ModalBody>
         <Field label="Game" htmlFor="rmm-game">
           <GamePicker
             slug={gameSlug}
@@ -302,9 +303,10 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
 
         <Surface variant="tile" padding="md">
           {kind === "free-for-all" &&
-            (gameSlug === "villainous" ? (
+            (isVillainousSlug(gameSlug) ? (
               <VillainousForm
                 users={allUsers}
+                gameSlug={gameSlug}
                 value={outcome as MatchOutcomeFreeForAll}
                 onChange={setOutcome}
               />
@@ -395,30 +397,33 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
             placeholder="Anything memorable…"
           />
         </Field>
-      </div>
+      </ModalBody>
 
-      <footer className="flex shrink-0 items-center justify-between gap-2 border-t border-white/10 pt-3">
-        {error ? (
-          <ErrorAlert message={error} />
-        ) : (
-          <span className="text-xs text-fg-muted">
-            {usersQuery.data === undefined ? "Loading users…" : `${allUsers.length} known players`}
-          </span>
-        )}
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="sm" onClick={onClose}>
-            Cancel
-          </Button>
-          <Button
-            variant="primary"
-            size="sm"
-            loading={saveMutation.isPending}
-            onClick={() => saveMutation.mutate()}
-          >
-            {state.mode === "edit" ? "Save" : "Record"}
-          </Button>
-        </div>
-      </footer>
+      <ModalFooter
+        start={
+          error ? (
+            <ErrorAlert message={error} />
+          ) : (
+            <span className="text-xs text-fg-muted">
+              {usersQuery.data === undefined
+                ? "Loading users…"
+                : `${allUsers.length} known players`}
+            </span>
+          )
+        }
+      >
+        <Button variant="ghost" size="sm" onClick={onClose}>
+          Cancel
+        </Button>
+        <Button
+          variant="primary"
+          size="sm"
+          loading={saveMutation.isPending}
+          onClick={() => saveMutation.mutate()}
+        >
+          {state.mode === "edit" ? "Save" : "Record"}
+        </Button>
+      </ModalFooter>
     </Modal>
   );
 }

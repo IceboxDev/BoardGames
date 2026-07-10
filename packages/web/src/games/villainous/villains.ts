@@ -1,19 +1,24 @@
-// Villainous editions and their villain rosters. Single source of truth shared
-// by the match-variant edition picker (`match-variants.ts`) and the per-player
-// villain selector (`VillainousForm`).
+// The Villainous boxes and their villain rosters. Single source of truth shared
+// by the per-player villain selector (`VillainousForm`) and history rendering.
+//
+// Villainous ships as two separate BOXES, and they are two separate catalog
+// games — not one game with an "edition" variant. They seat different party
+// sizes (Introduction to Evil 2-4, The Worst Takes it All 2-6), so which box a
+// player owns decides whether a night's group fits. Ownership is therefore
+// per-box, exactly like the Codenames family.
 //
 // Villainous is recorded as a point-less free-for-all: the sole winner is
 // marked with `rank: 1`, every score stays 0, and each player's villain is
-// stored in the free-for-all player's optional `role` field. The chosen edition
-// is persisted in `outcome.scenario` (shown as the italic subtitle under the
-// game in MatchCard, exactly like 7 Wonders expansions) and decides which
-// villains are selectable.
+// stored in the free-for-all player's optional `role` field.
 
-export const VILLAINOUS_EDITIONS = {
-  // The 4-villain streamlined starter box.
-  "Introduction to Evil": ["Captain Hook", "Maleficent", "Prince John", "Ursula"],
-  // The 6-villain base game; a superset of Introduction to Evil.
-  "The Worst Takes It All": [
+/** The 6-villain base box (2-6 players). Its roster is a superset of the starter's. */
+export const VILLAINOUS_BASE_SLUG = "villainous";
+/** The 4-villain streamlined starter box (2-4 players). */
+export const VILLAINOUS_INTRO_SLUG = "villainous-introduction-to-evil";
+
+export const VILLAINOUS_ROSTERS = {
+  [VILLAINOUS_INTRO_SLUG]: ["Captain Hook", "Maleficent", "Prince John", "Ursula"],
+  [VILLAINOUS_BASE_SLUG]: [
     "Captain Hook",
     "Jafar",
     "Maleficent",
@@ -23,21 +28,20 @@ export const VILLAINOUS_EDITIONS = {
   ],
 } as const satisfies Record<string, readonly string[]>;
 
-export type VillainousEdition = keyof typeof VILLAINOUS_EDITIONS;
+export type VillainousSlug = keyof typeof VILLAINOUS_ROSTERS;
 
-export const VILLAINOUS_EDITION_LABELS = Object.keys(VILLAINOUS_EDITIONS) as VillainousEdition[];
-
-function isEdition(value: string | undefined): value is VillainousEdition {
-  return value !== undefined && value in VILLAINOUS_EDITIONS;
+/** True when `slug` names one of the Villainous boxes. */
+export function isVillainousSlug(slug: string | null | undefined): slug is VillainousSlug {
+  return slug !== null && slug !== undefined && slug in VILLAINOUS_ROSTERS;
 }
 
 /**
- * Villains selectable for a stored edition string. Falls back to the full
- * 6-villain superset ("The Worst Takes It All") when no edition is picked yet,
- * so the form is usable before the admin taps an edition chip.
+ * Villains selectable for a box. Falls back to the 6-villain superset so a
+ * caller holding a non-Villainous slug still gets a usable roster rather than
+ * an empty picker.
  */
-export function villainsForEdition(edition: string | undefined): readonly string[] {
-  return isEdition(edition)
-    ? VILLAINOUS_EDITIONS[edition]
-    : VILLAINOUS_EDITIONS["The Worst Takes It All"];
+export function villainsForGame(slug: string | null | undefined): readonly string[] {
+  return isVillainousSlug(slug)
+    ? VILLAINOUS_ROSTERS[slug]
+    : VILLAINOUS_ROSTERS[VILLAINOUS_BASE_SLUG];
 }

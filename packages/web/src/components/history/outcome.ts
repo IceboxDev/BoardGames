@@ -13,6 +13,7 @@ import type {
   MatchOutcomeTeams,
   Participant,
 } from "@boardgames/core/history/types";
+import { isVillainousSlug } from "../../games/villainous/villains";
 
 /** Current timestamp as an ISO string. Wrapped so tests can stub it. */
 export function isoNow(): string {
@@ -136,7 +137,7 @@ export function describeOutcomeError(
 ): string | null {
   switch (outcome.kind) {
     case "free-for-all":
-      if (gameSlug === "villainous") return describeVillainousError(outcome);
+      if (isVillainousSlug(gameSlug)) return describeVillainousError(outcome);
       if (gameSlug === "lovecraft-letter") return describeLovecraftLetterError(outcome);
       if (outcome.players.length < 2) return "Add at least two players";
       return null;

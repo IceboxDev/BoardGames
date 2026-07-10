@@ -8,7 +8,6 @@
 //               (7 Wonders expansions, Exploding Kittens death/revival modes).
 
 import { DUNGEON_MAYHEM_SET_LABELS } from "./dungeon-mayhem/characters";
-import { VILLAINOUS_EDITION_LABELS } from "./villainous/villains";
 
 export type VariantOption = {
   value: string;
@@ -90,14 +89,10 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       { value: "Armada", label: "Armada" },
     ],
   },
-  // Villainous is one unified game; the edition is picked here (and shown as
-  // the MatchCard subtitle, like 7 Wonders). It also drives which villains the
-  // per-player picker offers — see `villainous/villains.ts`.
-  villainous: {
-    label: "Edition",
-    mode: "single",
-    options: VILLAINOUS_EDITION_LABELS.map((e) => ({ value: e, label: e })),
-  },
+  // Villainous has NO variant picker: its two editions are two separate catalog
+  // games (`villainous`, `villainous-introduction-to-evil`) because they are
+  // separate boxes seating different party sizes. The chosen game already names
+  // the edition, and it drives the villain roster — see `villainous/villains.ts`.
   // Lovecraft Letter is a point-less free-for-all with a single ruleset, so the
   // version is a fixed "Standard" subtitle (like Bandit). HOW the winner won (the
   // win condition) is recorded on the winner's `role` in LovecraftLetterForm and

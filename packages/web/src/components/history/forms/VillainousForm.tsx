@@ -1,6 +1,6 @@
 import type { MatchOutcomeFreeForAll, Participant } from "@boardgames/core/history/types";
 import { useEffect } from "react";
-import { villainsForEdition } from "../../../games/villainous/villains";
+import { villainsForGame } from "../../../games/villainous/villains";
 import { Chip } from "../../ui/Chip";
 import { Field } from "../../ui/Field";
 import { Surface } from "../../ui/Surface";
@@ -12,6 +12,8 @@ type FfaPlayer = MatchOutcomeFreeForAll["players"][number];
 
 type Props = {
   users: User[];
+  /** Which Villainous box was played — decides the villain roster. */
+  gameSlug: string;
   value: MatchOutcomeFreeForAll;
   onChange: (next: MatchOutcomeFreeForAll) => void;
 };
@@ -20,20 +22,19 @@ type Props = {
  * Match-history form for Villainous — a point-less free-for-all where exactly
  * one player wins by completing their villain's objective. We don't track
  * scores; instead each player is tagged with the villain they played (`role`)
- * and the sole winner is marked with `rank: 1`. The edition (picked in the
- * GameVariantPicker above, stored in `scenario`) decides which villains are
- * offered — see `villainous/villains.ts`.
+ * and the sole winner is marked with `rank: 1`. The box being played (the game
+ * slug) decides which villains are offered — see `villainous/villains.ts`.
  */
-export function VillainousForm({ users, value, onChange }: Props) {
+export function VillainousForm({ users, gameSlug, value, onChange }: Props) {
   const selectedIds = value.players.map((p) => p.userId);
-  const roster = villainsForEdition(value.scenario);
+  const roster = villainsForGame(gameSlug);
 
-  // When the edition narrows (e.g. "The Worst Takes It All" → "Introduction to
-  // Evil", which drops Jafar / Queen of Hearts), clear any now-invalid villain
-  // so the saved record can never reference a villain outside its edition.
-  // Guarded so it only writes when something is actually stale — no loop.
+  // When the admin switches to a narrower box (The Worst Takes it All →
+  // Introduction to Evil, which drops Jafar / Queen of Hearts), clear any
+  // now-invalid villain so a saved record can never reference a villain outside
+  // its box. Guarded so it only writes when something is actually stale.
   useEffect(() => {
-    const valid = new Set(villainsForEdition(value.scenario));
+    const valid = new Set(roster);
     if (!value.players.some((p) => p.role !== undefined && !valid.has(p.role))) return;
     onChange({
       ...value,
@@ -41,7 +42,7 @@ export function VillainousForm({ users, value, onChange }: Props) {
         p.role !== undefined && !valid.has(p.role) ? withRole(p, undefined) : p,
       ),
     });
-  }, [value, onChange]);
+  }, [value, onChange, roster]);
 
   function setParticipants(participants: Participant[]) {
     const byId = new Map(value.players.map((p) => [p.userId, p] as const));
@@ -78,11 +79,6 @@ export function VillainousForm({ users, value, onChange }: Props) {
           <span className="text-xs font-medium uppercase tracking-wide text-fg-secondary">
             Tap each player's villain, then crown the one who won.
           </span>
-          {!value.scenario && (
-            <span className="text-2xs text-fg-muted">
-              Pick an edition above to limit the roster — showing all villains for now.
-            </span>
-          )}
           {value.players.map((p) => {
             const isWinner = p.rank === 1;
             return (

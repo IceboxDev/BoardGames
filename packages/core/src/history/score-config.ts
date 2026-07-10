@@ -20,7 +20,11 @@ export function lowScoreWinsForSlug(slug: string | null | undefined): boolean {
  * (Villainous, Lovecraft Letter). They get a plain Won/Lost treatment — no
  * numeric placement and no partial placement credit.
  */
-const POINTLESS_FFA = new Set<string>(["villainous", "lovecraft-letter"]);
+const POINTLESS_FFA = new Set<string>([
+  "villainous",
+  "villainous-introduction-to-evil",
+  "lovecraft-letter",
+]);
 
 export function isPointlessFreeForAll(slug: string | null | undefined): boolean {
   return !!slug && POINTLESS_FFA.has(slug);
