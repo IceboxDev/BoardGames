@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { allSelected, applyReveal, applySelection, createInitialState } from "./game-engine";
 import { getLegalActions } from "./rules";
 import { idsFor, makeTestState } from "./test-fixtures";
-import type { GameState, Selection } from "./types";
+import type { GameState } from "./types";
 import { cardIdName } from "./types";
 
 function discardFirst(state: GameState): GameState {
@@ -262,7 +262,7 @@ describe("full age flow", () => {
     let state = createInitialState({ playerCount: 4, seed: 7, sideMode: "random" });
     for (let i = 0; i < 18; i++) state = discardFirst(state);
     expect(state.phase).toBe("game-over");
-    const end = state.actionLog.at(-1);
+    const end = state.actionLog[state.actionLog.length - 1];
     expect(end?.type).toBe("game-end");
     if (end?.type === "game-end") {
       // All-discard game: scores are coins only (3 + 18*3 = 57 → 19 points each).

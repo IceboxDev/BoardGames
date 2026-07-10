@@ -47,7 +47,7 @@ describe("resolveMilitary", () => {
     const next = resolveMilitary(state);
     expect(next.players[0].militaryTokens).toEqual([1, 1]);
     // p1's Stockade still beats shieldless p2.
-    expect(next.players[1].militaryTokens.toSorted()).toEqual([-1, 1]);
+    expect(next.players[1].militaryTokens.slice().sort((a, b) => a - b)).toEqual([-1, 1]);
     expect(next.players[2].militaryTokens).toEqual([-1, -1]);
   });
 
@@ -59,7 +59,7 @@ describe("resolveMilitary", () => {
       { wonder: "olympia" },
     ]);
     const next = resolveMilitary(state);
-    expect(next.players[0].militaryTokens.toSorted()).toEqual([-1, 1]); // loses to p1, beats p2
+    expect(next.players[0].militaryTokens.slice().sort((a, b) => a - b)).toEqual([-1, 1]); // loses to p1, beats p2
     expect(next.players[1].militaryTokens).toEqual([1, 1]);
     expect(next.players[2].militaryTokens).toEqual([-1, -1]);
   });
@@ -71,7 +71,7 @@ describe("resolveMilitary", () => {
       { wonder: "olympia" },
     ]);
     const next = resolveMilitary(state);
-    const entry = next.actionLog.at(-1);
+    const entry = next.actionLog[next.actionLog.length - 1];
     expect(entry?.type).toBe("military");
     if (entry?.type === "military") {
       expect(entry.age).toBe(1);
