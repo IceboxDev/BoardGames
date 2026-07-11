@@ -58,6 +58,23 @@ describe("bga-sessions", () => {
     expect(retry).toMatchObject({ ok: true, accepted: 1, nextSeq: 4 });
   });
 
+  it("accepts a new game's gamedatas even when its seq restarts below lastSeq", () => {
+    const { session, ingestToken } = createOrReuseBgaSession("user-newgame", "7-wonders");
+    // First game: seqs climb high.
+    ingestBgaEvents(ingestToken, [ev(0, "gamedatas"), ev(1), ev(2), ev(3)]);
+    expect(getBgaSessionLastSeq(session.id)).toBe(3);
+
+    // New game: the producer (fresh page load) restarts its seq at 0.
+    const res = ingestBgaEvents(ingestToken, [ev(0, "gamedatas"), ev(1)]);
+    expect(res).toMatchObject({ ok: true });
+
+    const replayed: BgaEvent[] = [];
+    subscribeToBgaSession(session.id, (e) => replayed.push(e), -1)?.();
+    // Buffer reset to the new game's checkpoint + its notif — not dedup-rejected.
+    expect(replayed.map((e) => e.kind)).toEqual(["gamedatas", "notif"]);
+    expect(replayed.map((e) => e.seq)).toEqual([0, 1]);
+  });
+
   it("compacts the buffer on a gamedatas checkpoint and replays it to late joiners", () => {
     const { session, ingestToken } = createOrReuseBgaSession("user-c", "7-wonders");
     ingestBgaEvents(ingestToken, [ev(0, "gamedatas"), ev(1), ev(2)]);

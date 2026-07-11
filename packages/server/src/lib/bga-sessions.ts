@@ -168,6 +168,20 @@ export function getBgaSessionById(sessionId: string): BgaSession | null {
   return byId.get(sessionId)?.session ?? null;
 }
 
+/**
+ * Self-heal the spectate stream: if `sessionId` is the deterministic id of one
+ * of the authed user's (owner's) sessions, revive it. Lets the owner's
+ * EventSource reconnect after a restart even before the userscript re-posts.
+ */
+export function reviveBgaSessionForOwner(userId: string, sessionId: string): BgaSession | null {
+  for (const game of BGA_SUPPORTED_GAMES) {
+    if (deterministicId(userId, game) === sessionId) {
+      return reviveOrCreate(userId, game).session;
+    }
+  }
+  return null;
+}
+
 export function getBgaSessionLastSeq(sessionId: string): number {
   return byId.get(sessionId)?.lastSeq ?? -1;
 }
@@ -214,12 +228,20 @@ export function ingestBgaEvents(token: string, events: BgaEvent[]): IngestResult
 
   let accepted = 0;
   for (const event of [...events].sort((a, b) => a.seq - b.seq)) {
-    if (event.seq <= entry.lastSeq) continue; // duplicate/replayed batch
     if (event.kind === "gamedatas") {
-      entry.events = [event]; // checkpoint compaction
-    } else {
-      entry.events.push(event);
+      // A full-state checkpoint is a NEW anchor: reset the buffer and the
+      // sequence. Critical because the producer restarts its seq at 0 for each
+      // new game (a fresh page load), while this session persists with a high
+      // lastSeq — without the reset the new game's low seqs dedup-reject and
+      // the viewer hangs on "waiting for the first snapshot".
+      entry.events = [event];
+      entry.lastSeq = event.seq;
+      accepted++;
+      for (const send of entry.clients) send(event);
+      continue;
     }
+    if (event.seq <= entry.lastSeq) continue; // duplicate/replayed notif
+    entry.events.push(event);
     entry.lastSeq = event.seq;
     accepted++;
     for (const send of entry.clients) send(event);

@@ -12,7 +12,12 @@ import { useNavigate } from "react-router-dom";
 import { SetupHeader, SetupLayout } from "../../../components/setup";
 import { Button, ErrorAlert, Field } from "../../../components/ui";
 import { useGameShell } from "../../../hooks/useGameShell";
-import { bgaSessionByCode, createBgaSession, streamBgaSession } from "../../../lib/bga";
+import {
+  bgaSessionByCode,
+  createBgaSession,
+  fetchActiveBgaSession,
+  streamBgaSession,
+} from "../../../lib/bga";
 import { gameLog } from "../../../lib/game-log";
 import BgaBoard from "./BgaBoard";
 
@@ -31,10 +36,29 @@ export default function BgaScreen() {
   const [ingestToken, setIngestToken] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [busy, setBusy] = useState(false);
+  const [restoring, setRestoring] = useState(true);
   const [code, setCode] = useState(() => localStorage.getItem(CODE_KEY) ?? "");
   const codeId = useId();
 
   const back = () => navigate(`/play/${def.slug}/mp/join`);
+
+  // Auto-restore: if a bridge session is already active for this account (the
+  // userscript is bridging), jump straight into the spectate view instead of
+  // making the user click "Bridge my BGA table" every page load.
+  useEffect(() => {
+    let cancelled = false;
+    fetchActiveBgaSession()
+      .then(({ session: active }) => {
+        if (!cancelled && active) setSession(active);
+      })
+      .catch(() => {})
+      .finally(() => {
+        if (!cancelled) setRestoring(false);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const host = useCallback(async () => {
     setBusy(true);
@@ -71,6 +95,14 @@ export default function BgaScreen() {
       setBusy(false);
     }
   }, [code]);
+
+  if (restoring && !session) {
+    return (
+      <SetupLayout>
+        <SetupHeader title="Connect to BGA" subtitle="Checking for an active bridge…" />
+      </SetupLayout>
+    );
+  }
 
   if (!session) {
     return (
@@ -143,22 +175,46 @@ function BgaSpectateView({
   const [copied, setCopied] = useState(false);
 
   useEffect(() => {
-    foldRef.current = initBgaFold();
-    setView(null);
-    const source = streamBgaSession(session.id);
-    source.onopen = () => setConnected(true);
-    source.onerror = () => setConnected(false);
-    source.onmessage = (message) => {
-      const parsed = BgaStreamEventSchema.safeParse(JSON.parse(message.data));
-      if (!parsed.success) {
-        gameLog("bga frame dropped (schema mismatch)");
-        return;
-      }
-      if (parsed.data.type !== "event") return;
-      foldRef.current = applyBgaEvent(foldRef.current, parsed.data.event);
-      setView(toSpectatorView(foldRef.current));
+    let source: EventSource | null = null;
+    let reconnectTimer: ReturnType<typeof setTimeout> | undefined;
+    let closed = false;
+
+    const connect = () => {
+      if (closed) return;
+      // Reset the fold on every (re)connect: the buffer replay always starts at
+      // a gamedatas checkpoint, so this rebuilds cleanly.
+      foldRef.current = initBgaFold();
+      setView(null);
+      source = streamBgaSession(session.id);
+      source.onopen = () => setConnected(true);
+      source.onmessage = (message) => {
+        const parsed = BgaStreamEventSchema.safeParse(JSON.parse(message.data));
+        if (!parsed.success) {
+          gameLog("bga frame dropped (schema mismatch)");
+          return;
+        }
+        if (parsed.data.type !== "event") return;
+        foldRef.current = applyBgaEvent(foldRef.current, parsed.data.event);
+        setView(toSpectatorView(foldRef.current));
+      };
+      source.onerror = () => {
+        setConnected(false);
+        // The browser retries network drops itself, but a clean HTTP error
+        // (e.g. a 404 while the session is being revived after a server
+        // restart) closes the stream for good — reopen it ourselves.
+        if (source && source.readyState === EventSource.CLOSED) {
+          source.close();
+          reconnectTimer = setTimeout(connect, 2000);
+        }
+      };
     };
-    return () => source.close();
+    connect();
+
+    return () => {
+      closed = true;
+      if (reconnectTimer) clearTimeout(reconnectTimer);
+      source?.close();
+    };
   }, [session.id]);
 
   const ingestUrl = `${window.location.origin}/api/bga-ingest`;

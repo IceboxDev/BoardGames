@@ -3,6 +3,7 @@
 // signed-in member with the join code can spectate the SSE stream. Modeled
 // on the beamer session block in dnd-campaigns.ts.
 
+import { appendFileSync } from "node:fs";
 import {
   ActiveBgaSessionResponseSchema,
   type BgaEvent,
@@ -19,11 +20,29 @@ import {
   getBgaSessionByCode,
   getBgaSessionById,
   getBgaSessionLastSeq,
+  reviveBgaSessionForOwner,
   subscribeToBgaSession,
 } from "../lib/bga-sessions.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 
 export const bgaSessionRoutes = authedApp();
+
+// Dev-only trace of SSE spectate connections, to diagnose a blank viewer.
+const SSE_LOG = process.env.NODE_ENV !== "production" ? "bga-sse.log" : null;
+function sseLog(msg: string): void {
+  if (!SSE_LOG) return;
+  try {
+    appendFileSync(SSE_LOG, `${new Date().toISOString()} ${msg}\n`);
+  } catch {}
+}
+
+// Dev-only: log every /api/bga/* request the browser makes, with its status.
+if (SSE_LOG) {
+  bgaSessionRoutes.use("*", async (c, next) => {
+    await next();
+    sseLog(`REQ ${c.req.method} ${c.req.path} -> ${c.res.status}`);
+  });
+}
 
 bgaSessionRoutes.post("/sessions", zJsonBody(CreateBgaSessionRequestSchema), (c) => {
   const user = c.get("user");
@@ -45,9 +64,13 @@ bgaSessionRoutes.get("/sessions/by-code/:code", (c) => {
 
 bgaSessionRoutes.get("/sessions/:id/stream", (c) => {
   const id = c.req.param("id");
-  // The uuid was handed out via the join code — possession authorizes.
-  const session = getBgaSessionById(id);
-  if (!session) return errorResponse(c, 404, "session not found", "NOT_FOUND");
+  // The uuid was handed out via the join code — possession authorizes. If the
+  // session was wiped by a restart, revive it for its owner so reconnects work.
+  const session = getBgaSessionById(id) ?? reviveBgaSessionForOwner(c.get("user").id, id);
+  if (!session) {
+    sseLog(`connect id=${id.slice(0, 8)} -> 404 (session not live)`);
+    return errorResponse(c, 404, "session not found", "NOT_FOUND");
+  }
 
   // EventSource reconnects resume via Last-Event-ID (the SSE id carries the
   // event seq); a fresh viewer can also pass ?since= explicitly.
@@ -56,6 +79,7 @@ bgaSessionRoutes.get("/sessions/:id/stream", (c) => {
   const parsed = sinceParam === undefined ? Number.NaN : Number(sinceParam);
   const sinceSeq = Number.isInteger(parsed) ? parsed : -1;
 
+  sseLog(`connect id=${id.slice(0, 8)} since=${sinceSeq} lastSeq=${getBgaSessionLastSeq(id)}`);
   return streamSSE(c, async (stream) => {
     await stream.writeSSE({
       data: JSON.stringify(
@@ -66,14 +90,20 @@ bgaSessionRoutes.get("/sessions/:id/stream", (c) => {
         }),
       ),
     });
+    let sent = 0;
     const send = (event: BgaEvent) => {
+      sent++;
       void stream.writeSSE({
         data: JSON.stringify(BgaStreamEventSchema.parse({ type: "event", event })),
         id: String(event.seq),
       });
     };
     const unsubscribe = subscribeToBgaSession(id, send, sinceSeq);
-    stream.onAbort(() => unsubscribe?.());
+    sseLog(`  id=${id.slice(0, 8)} replayed ${sent} buffered events`);
+    stream.onAbort(() => {
+      sseLog(`  id=${id.slice(0, 8)} disconnected after ${sent} events`);
+      unsubscribe?.();
+    });
     // Hold the stream open until the client disconnects (onAbort cleans up).
     await new Promise(() => {});
   });
