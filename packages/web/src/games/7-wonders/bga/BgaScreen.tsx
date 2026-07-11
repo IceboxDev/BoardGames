@@ -2,10 +2,9 @@ import type { BgaFoldState } from "@boardgames/core/games/7-wonders/bga/adapter"
 import {
   applyBgaEvent,
   initBgaFold,
-  spectatorNames,
   toSpectatorView,
 } from "@boardgames/core/games/7-wonders/bga/adapter";
-import type { SevenWondersPlayerView } from "@boardgames/core/games/7-wonders/machine";
+import type { BgaSpectatorView } from "@boardgames/core/games/7-wonders/bga/types";
 import type { BgaSession } from "@boardgames/core/protocol";
 import { BgaStreamEventSchema } from "@boardgames/core/protocol";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
@@ -15,8 +14,7 @@ import { Button, ErrorAlert, Field } from "../../../components/ui";
 import { useGameShell } from "../../../hooks/useGameShell";
 import { bgaSessionByCode, createBgaSession, streamBgaSession } from "../../../lib/bga";
 import { gameLog } from "../../../lib/game-log";
-import { AGE_LABEL } from "../card-utils";
-import PlayerPanel from "../components/PlayerPanel";
+import BgaBoard from "./BgaBoard";
 
 const CODE_KEY = "bga-bridge-code";
 
@@ -140,8 +138,7 @@ function BgaSpectateView({
   onLeave: () => void;
 }) {
   const foldRef = useRef<BgaFoldState>(initBgaFold());
-  const [view, setView] = useState<SevenWondersPlayerView | null>(null);
-  const [names, setNames] = useState<string[]>([]);
+  const [view, setView] = useState<BgaSpectatorView | null>(null);
   const [connected, setConnected] = useState(false);
   const [copied, setCopied] = useState(false);
 
@@ -160,7 +157,6 @@ function BgaSpectateView({
       if (parsed.data.type !== "event") return;
       foldRef.current = applyBgaEvent(foldRef.current, parsed.data.event);
       setView(toSpectatorView(foldRef.current));
-      setNames(spectatorNames(foldRef.current));
     };
     return () => source.close();
   }, [session.id]);
@@ -215,21 +211,7 @@ function BgaSpectateView({
       )}
 
       {view ? (
-        <>
-          <p className="text-sm font-semibold text-fg-primary">
-            {AGE_LABEL[view.age]} · Turn {view.turn}/6 · 🗑️ {view.discardCount}
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {view.players.map((player) => (
-              <PlayerPanel
-                key={player.index}
-                player={player}
-                label={names[player.index] ?? `P${player.index + 1}`}
-                isSelecting={false}
-              />
-            ))}
-          </div>
-        </>
+        <BgaBoard view={view} />
       ) : (
         <div className="flex h-48 items-center justify-center rounded-lg border border-white/10 bg-surface-900/60">
           <p className="text-sm italic text-fg-disabled">
