@@ -128,7 +128,10 @@
     if (value === null || typeof value !== "object") {
       return typeof value === "function" ? undefined : value;
     }
-    if (depth > 8) return "[deep]";
+    // BGA's realtime frames nest deeply (push → pub → data → data[] → args →
+    // cards → …). Cap generously so card/wonder payloads survive intact; the
+    // cycle guard below is what actually bounds the walk.
+    if (depth > 40) return "[deep]";
     if (seen.has(value)) return "[circular]";
     if (typeof Node !== "undefined" && value instanceof Node) return "[dom]";
     seen.add(value);

@@ -1,341 +1,570 @@
-import { z } from "zod";
-import type { BgaEvent } from "../../../protocol/http/bga";
 import { CARD_BY_NAME } from "../cards";
-import type { SevenWondersPlayerBoardView, SevenWondersPlayerView } from "../machine";
-import type { Age, CardId, ScienceSymbol, WonderId } from "../types";
-import { makeCardId, WONDER_IDS } from "../types";
+import type { ScienceSymbol } from "../types";
+import type { BgaEdificeStatus, BgaEdificeView, BgaPlayerView, BgaSpectatorView } from "./types";
 
 /**
- * Pure fold from raw BGA events (one `gamedatas` checkpoint + notifications)
- * to the same spectator view shape the native board components render
- * (`me: null`). Runs client-side; the server never interprets BGA payloads.
+ * Fold from raw BGA events (one `gamedatas` checkpoint + the deduplicated
+ * notification stream) to a BGA-native spectator view. Runs client-side; the
+ * server never interprets BGA payloads.
  *
- * BGA's shapes are undocumented and drift — every extractor here is lenient
- * (loose objects, coerced numbers, several known key spellings) and every
- * unknown notification type is a NO-OP, so drift degrades the view instead
- * of crashing it. Grow `fixtures/` with real captures (see
- * tools/bga-userscript/README.md) and lock behavior in adapter.test.ts.
+ * The whole card/wonder/edifice dictionary ships INSIDE `gamedatas`, so names
+ * are resolved from BGA itself rather than a hardcoded table — robust across
+ * BGA versions, expansions and wonders (Ur/Carthage) our engine doesn't model.
+ *
+ * Notifications arrive twice (a WebSocket tee superset + the notifqueue
+ * subset); every game notif carries a `uid`, so we dedup on it. Envelope
+ * shapes handled: notifqueue `{data:[{type,args,uid}]}` and Centrifugo push
+ * `{push:{pub:{data:{data:[...]}}}}`.
  */
 
-// ── Lenient local schemas (never on the wire) ───────────────────────────────
+// ── BGA resource letters (confirmed against card_types: Lumber Yard=W …) ─────
 
-/** BGA serializes most numbers as strings. */
-const num = z.coerce.number();
+const RESOURCE_GLYPH: Record<string, string> = {
+  W: "🪵",
+  S: "🪨",
+  C: "🧱",
+  O: "⛏️",
+  G: "🫙",
+  L: "🧵",
+  P: "📜",
+};
 
-const BgaPlayerSchema = z.looseObject({
-  id: z.coerce.string(),
-  name: z.string().optional(),
-});
+function formatCost(cost: unknown, coinCost?: number): string {
+  const parts: string[] = [];
+  if (typeof coinCost === "number" && coinCost > 0) parts.push(`${coinCost}🪙`);
+  if (Array.isArray(cost)) {
+    for (const r of cost) parts.push(RESOURCE_GLYPH[String(r)] ?? String(r));
+  }
+  return parts.join("") || "free";
+}
 
-const GamedatasSchema = z.looseObject({
-  players: z.record(z.string(), BgaPlayerSchema).optional(),
-  playerorder: z.array(z.coerce.string()).optional(),
-});
+function asRecord(value: unknown): Record<string, unknown> {
+  return value && typeof value === "object" ? (value as Record<string, unknown>) : {};
+}
 
-const NotifSchema = z.looseObject({
-  type: z.string(),
-  args: z.looseObject({}).optional(),
-});
+function num(value: unknown): number | null {
+  const n = typeof value === "string" ? Number(value) : typeof value === "number" ? value : NaN;
+  return Number.isFinite(n) ? n : null;
+}
+
+/** Format one effect bag (a wonder stage, a Carthage sub-option, or edifice reward). */
+function formatEffect(effect: Record<string, unknown>): string {
+  const parts: string[] = [];
+  const points = asRecord(effect.points);
+  if (points.qt !== undefined) parts.push(`${num(points.qt)} VP`);
+  const shield = effect.shield;
+  if (num(shield) !== null && num(shield) !== 0) parts.push(`${num(shield)}🛡`);
+  const coins = asRecord(effect.coins);
+  if (coins.qt !== undefined) parts.push(`${num(coins.qt)}🪙`);
+  if (effect.science === "?" || effect.science) parts.push("science");
+  if (effect.participation !== undefined) parts.push("participate");
+  if (effect.buildFirstEachColor) parts.push("free build");
+  if (effect.pickDiscarded) parts.push("from discard");
+  const production = asRecord(effect.production);
+  if (Array.isArray(production.ress)) {
+    parts.push(production.ress.map((r) => RESOURCE_GLYPH[String(r)] ?? String(r)).join("/"));
+  }
+  if (effect.duplicateguild) parts.push("copy guild");
+  if (effect.victorytoken) parts.push(`${num(asRecord(effect.victorytoken).value)} VP token`);
+  return parts.join(" · ");
+}
+
+interface StageDef {
+  cost: string;
+  effect: string;
+}
+
+/** BGA wonder stage: either a flat effect bag or a numbered choice of bags. */
+function formatWonderStages(stages: unknown): StageDef[] {
+  const record = asRecord(stages);
+  const out: StageDef[] = [];
+  for (const key of Object.keys(record).sort()) {
+    const stage = asRecord(record[key]);
+    const cost = formatCost(stage.cost);
+    const choiceKeys = Object.keys(stage).filter((k) => /^\d+$/.test(k));
+    const effect =
+      choiceKeys.length > 0
+        ? choiceKeys.map((k) => formatEffect(asRecord(stage[k]))).join("  /  ")
+        : formatEffect(stage);
+    out.push({ cost, effect });
+  }
+  return out;
+}
+
+function formatReward(reward: unknown): string {
+  const bag = asRecord(reward);
+  if (bag.looseDefeatToken) return `${formatEffect(bag)} · remove defeats`.replace(/^ · /, "");
+  return formatEffect(bag) || "—";
+}
+
+function formatPenalty(penalty: unknown): string {
+  const bag = asRecord(penalty);
+  const discard = asRecord(bag.discard);
+  if (discard.cardCategory) return `discard a ${categoryLabel(String(discard.cardCategory))} card`;
+  const coins = asRecord(bag.coins);
+  if (coins.qt !== undefined) return `pay ${num(coins.qt)}🪙`;
+  if (bag.victorytokenloose !== undefined) return `lose ${num(bag.victorytokenloose)} VP`;
+  return "—";
+}
+
+function categoryLabel(cat: string): string {
+  return (
+    {
+      raw: "raw",
+      man: "manufactured",
+      civ: "civilian",
+      com: "commercial",
+      mil: "military",
+      sci: "science",
+      gui: "guild",
+    }[cat] ?? cat
+  );
+}
 
 // ── Fold state ──────────────────────────────────────────────────────────────
 
-interface BgaPlayerAcc {
-  bgaId: string;
+interface CardTypeDef {
   name: string;
+  category: string;
+}
+interface WonderDef {
+  name: string;
+  side: string;
+  initial: string;
+  stages: StageDef[];
+}
+interface EdificeMetaDef {
+  name: string;
+  age: number;
+  cost: number;
+  reward: string;
+  penalty: string;
+}
+
+interface PlayerAcc {
+  id: string;
+  name: string;
+  wonderId: string;
   coins: number;
-  /** English card names as announced by BGA; mapped to our defs at view time. */
-  tableauNames: string[];
-  wonderId: WonderId | null;
+  shields: number;
+  tokens: number[];
   stagesBuilt: number;
-  militaryTokens: number[];
-  handCount: number;
+  tableauCardIds: Set<string>;
+  tableauNames: string[];
+  wildScience: number;
+  edificePawns: Set<number>;
+}
+
+interface EdificeAcc {
+  slot: number;
+  metaId: string;
+  tokensLeft: number;
+  status: BgaEdificeStatus;
+  participants: Set<string>;
 }
 
 export interface BgaFoldState {
   gamedatasSeen: boolean;
+  cardTypes: Map<string, CardTypeDef>;
+  wonders: Map<string, WonderDef>;
+  edificeMeta: Map<string, EdificeMetaDef>;
   seatOrder: string[];
-  players: Map<string, BgaPlayerAcc>;
-  age: Age;
+  players: Map<string, PlayerAcc>;
+  edifices: Map<number, EdificeAcc>;
+  age: number;
   turn: number;
   discardCount: number;
-  /** Notification types seen but not understood — surfaced for debugging. */
-  unknownNotifTypes: Set<string>;
+  finished: boolean;
+  seenUids: Set<string>;
+  /** Distinct card-reveal uids this age — one per turn. */
+  revealUids: Set<string>;
+  unknownTypes: Set<string>;
 }
 
 export function initBgaFold(): BgaFoldState {
   return {
     gamedatasSeen: false,
+    cardTypes: new Map(),
+    wonders: new Map(),
+    edificeMeta: new Map(),
     seatOrder: [],
     players: new Map(),
+    edifices: new Map(),
     age: 1,
     turn: 1,
     discardCount: 0,
-    unknownNotifTypes: new Set(),
+    finished: false,
+    seenUids: new Set(),
+    revealUids: new Set(),
+    unknownTypes: new Set(),
   };
 }
 
-// ── Helpers ─────────────────────────────────────────────────────────────────
+// ── Notif extraction ────────────────────────────────────────────────────────
 
-function newPlayer(bgaId: string, name: string): BgaPlayerAcc {
-  return {
-    bgaId,
-    name,
-    coins: 3,
-    tableauNames: [],
-    wonderId: null,
-    stagesBuilt: 0,
-    militaryTokens: [],
-    handCount: 7,
-    // Age/coins get corrected by gamedatas/notifs when the table is mid-game.
-  };
+interface RawNotif {
+  type: string;
+  args: Record<string, unknown>;
+  uid?: string;
 }
 
-/** Probe several key spellings; BGA args are not stable across games/versions. */
-function pick(args: Record<string, unknown>, keys: string[]): unknown {
-  for (const key of keys) {
-    if (args[key] !== undefined) return args[key];
-  }
-  return undefined;
-}
+/** Pull game notifs out of either envelope shape a bridge event may carry. */
+function extractNotifs(payload: unknown): RawNotif[] {
+  const p = asRecord(payload);
+  const data = asRecord(p.data);
+  const out: RawNotif[] = [];
 
-function asNumber(value: unknown): number | null {
-  const parsed = num.safeParse(value);
-  return parsed.success ? parsed.data : null;
-}
-
-function asString(value: unknown): string | null {
-  return typeof value === "string" || typeof value === "number" ? String(value) : null;
-}
-
-/** "The Hanging Gardens of Babylon" / "babylon_a" / "Babylon (A)" → "babylon". */
-export function matchWonderId(raw: string): WonderId | null {
-  const lower = raw.toLowerCase();
-  for (const id of WONDER_IDS) {
-    if (lower.includes(id)) return id;
-  }
-  if (lower.includes("pyramid")) return "giza";
-  if (lower.includes("colossus")) return "rhodes";
-  if (lower.includes("mausoleum")) return "halikarnassos";
-  if (lower.includes("artemis")) return "ephesos";
-  if (lower.includes("zeus") || lower.includes("statue")) return "olympia";
-  if (lower.includes("lighthouse")) return "alexandria";
-  if (lower.includes("gardens")) return "babylon";
-  return null;
-}
-
-function playerFor(state: BgaFoldState, rawId: unknown): BgaPlayerAcc | null {
-  const id = asString(rawId);
-  if (id === null) return null;
-  let player = state.players.get(id);
-  if (!player) {
-    player = newPlayer(id, `BGA ${id}`);
-    state.players.set(id, player);
-    state.seatOrder.push(id);
-  }
-  return player;
-}
-
-// ── The fold ────────────────────────────────────────────────────────────────
-
-function applyGamedatas(state: BgaFoldState, payload: unknown): BgaFoldState {
-  const parsed = GamedatasSchema.safeParse(payload);
-  if (!parsed.success) return state;
-  const data = parsed.data;
-
-  const next: BgaFoldState = { ...initBgaFold(), gamedatasSeen: true };
-  const order =
-    data.playerorder && data.playerorder.length > 0
-      ? data.playerorder
-      : Object.keys(data.players ?? {});
-
-  for (const id of order) {
-    const raw = data.players?.[id];
-    const acc = newPlayer(id, raw?.name ?? `BGA ${id}`);
-    if (raw) {
-      const coins = asNumber(pick(raw, ["coins", "gold", "money"]));
-      if (coins !== null) acc.coins = coins;
-      const wonder = asString(pick(raw, ["wonder", "wonder_name", "board"]));
-      if (wonder) acc.wonderId = matchWonderId(wonder);
-      const stages = asNumber(pick(raw, ["wonder_steps", "stages", "steps_built"]));
-      if (stages !== null) acc.stagesBuilt = stages;
+  const collect = (list: unknown) => {
+    if (!Array.isArray(list)) return;
+    for (const n of list) {
+      const rec = asRecord(n);
+      if (typeof rec.type === "string") {
+        out.push({
+          type: rec.type,
+          args: asRecord(rec.args),
+          uid: typeof rec.uid === "string" ? rec.uid : undefined,
+        });
+      }
     }
-    next.players.set(id, acc);
-    next.seatOrder.push(id);
+  };
+
+  // notifqueue: { packet_type, channel, data: [ {type,args,uid} ] }
+  collect(data.data);
+
+  // Centrifugo WebSocket push: { push: { pub: { data: { data: [...] } } } }
+  const pub = asRecord(asRecord(data.push).pub);
+  const pubData = asRecord(pub.data);
+  collect(pubData.data);
+
+  return out;
+}
+
+// ── gamedatas checkpoint ────────────────────────────────────────────────────
+
+function applyGamedatas(payload: unknown): BgaFoldState {
+  // A gamedatas checkpoint is a full-state reset — the prior fold is discarded.
+  const gd = asRecord(payload);
+  const next = initBgaFold();
+  next.gamedatasSeen = true;
+
+  for (const [id, raw] of Object.entries(asRecord(gd.card_types))) {
+    const c = asRecord(raw);
+    next.cardTypes.set(id, {
+      name: String(c.name ?? id),
+      category: String(c.category ?? ""),
+    });
+  }
+  for (const [id, raw] of Object.entries(asRecord(gd.wonders))) {
+    const w = asRecord(raw);
+    const initial = Array.isArray(w.ress) && w.ress.length > 0 ? String(w.ress[0]) : "";
+    next.wonders.set(id, {
+      name: String(w.name ?? id),
+      side: String(w.side ?? ""),
+      initial: RESOURCE_GLYPH[initial] ?? initial,
+      stages: formatWonderStages(w.stages),
+    });
+  }
+  for (const [id, raw] of Object.entries(asRecord(gd.edifice_meta))) {
+    const m = asRecord(raw);
+    next.edificeMeta.set(id, {
+      name: String(m.name ?? id),
+      age: num(m.age) ?? 0,
+      cost: num(m.cost) ?? 0,
+      reward: formatReward(m.reward),
+      penalty: formatPenalty(m.penalty),
+    });
   }
 
-  const age = asNumber(pick(data, ["age", "current_age"]));
-  if (age === 1 || age === 2 || age === 3) next.age = age;
+  const order = Array.isArray(gd.playerorder) ? gd.playerorder.map(String) : [];
+  const players = asRecord(gd.players);
+  const seats = order.length > 0 ? order : Object.keys(players);
+  for (const pid of seats) {
+    const p = asRecord(players[pid]);
+    next.seatOrder.push(pid);
+    next.players.set(pid, {
+      id: pid,
+      name: String(p.name ?? `BGA ${pid}`),
+      wonderId: p.wonder !== undefined ? String(p.wonder) : "",
+      coins: num(p.coin) ?? 3,
+      shields: 0,
+      tokens: [],
+      stagesBuilt: num(p.wonderStep) ?? 0,
+      tableauCardIds: new Set(),
+      tableauNames: [],
+      wildScience: 0,
+      edificePawns: new Set(),
+    });
+  }
 
+  // Edifice slots in play: key = slot(=age), value.id = edifice_meta id.
+  for (const [slot, raw] of Object.entries(asRecord(gd.edifices))) {
+    const e = asRecord(raw);
+    next.edifices.set(num(slot) ?? 0, {
+      slot: num(slot) ?? 0,
+      metaId: String(e.id ?? ""),
+      tokensLeft: num(e.tokens) ?? 0,
+      status: num(e.status) === 1 ? "built" : "project",
+      participants: new Set(),
+    });
+  }
+
+  next.age = num(gd.age) ?? 1;
+  next.discardCount = num(gd.discardCount) ?? 0;
   return next;
 }
 
-function applyNotif(state: BgaFoldState, payload: unknown): BgaFoldState {
-  const parsed = NotifSchema.safeParse(payload);
-  if (!parsed.success) return state;
-  const { type, args = {} } = parsed.data;
+// ── notif application ───────────────────────────────────────────────────────
 
-  // Every branch mutates a structural copy so callers can treat folds as values.
-  const next: BgaFoldState = {
-    ...state,
-    players: new Map([...state.players].map(([k, v]) => [k, { ...v }])),
-    seatOrder: [...state.seatOrder],
-    unknownNotifTypes: new Set(state.unknownNotifTypes),
-  };
+function edificeForAge(state: BgaFoldState, age: number): EdificeAcc | undefined {
+  return state.edifices.get(age);
+}
+
+function applyNotif(state: BgaFoldState, notif: RawNotif): void {
+  const { type, args, uid } = notif;
+  const players = state.players;
 
   switch (type) {
     case "newAge": {
-      const age = asNumber(pick(args, ["age", "ageNum"]));
-      if (age === 1 || age === 2 || age === 3) {
-        next.age = age;
-        next.turn = 1;
-        for (const p of next.players.values()) p.handCount = 7;
+      const age = num(args.age);
+      // Any earlier edifice still a project when the age turns has failed.
+      for (const e of state.edifices.values()) {
+        if (age !== null && e.slot < age && e.status === "project" && e.tokensLeft > 0) {
+          e.status = "failed";
+        }
       }
-      return next;
+      if (age !== null) state.age = age;
+      state.turn = 1;
+      state.revealUids.clear();
+      break;
     }
 
-    case "newHand":
-    case "newHandNotify": {
-      const cards = pick(args, ["cards", "hand"]);
-      const count = Array.isArray(cards) ? cards.length : cards ? Object.keys(cards).length : null;
-      if (count !== null) {
-        for (const p of next.players.values()) p.handCount = count;
-        // A fresh hand of N means 7-N cards have been resolved this age.
-        next.turn = Math.max(1, Math.min(6, 7 - count + 1));
+    case "cardsPlayed": {
+      const cards = asRecord(args.cards);
+      for (const raw of Object.values(cards)) {
+        const card = asRecord(raw);
+        const cardId = String(card.id ?? "");
+        const pid = String(card.locationArg ?? "");
+        const player = players.get(pid);
+        if (!player || player.tableauCardIds.has(cardId)) continue;
+        player.tableauCardIds.add(cardId);
+        const def = state.cardTypes.get(String(card.type));
+        player.tableauNames.push(def?.name ?? `#${card.type}`);
       }
-      return next;
+      // One reveal = one turn; count each distinct reveal once (fires twice).
+      if (uid && !state.revealUids.has(uid)) {
+        state.revealUids.add(uid);
+        state.turn += 1;
+      }
+      break;
     }
 
-    case "cardsPlayed":
-    case "cardPlayed":
-    case "buildCard": {
-      const player = playerFor(next, pick(args, ["player_id", "playerId", "player"]));
-      if (!player) return next;
-      const cardName = asString(pick(args, ["card_name", "cardName", "name"]));
-      if (cardName && CARD_BY_NAME.has(cardName)) player.tableauNames.push(cardName);
-      player.handCount = Math.max(0, player.handCount - 1);
-      return next;
+    case "wonderBuild": {
+      const player = players.get(String(args.player_id));
+      const step = num(args.step);
+      if (player && step !== null) player.stagesBuilt = step;
+      break;
     }
 
-    case "wonderBuilt":
-    case "buildWonder":
-    case "wonderStageBuilt": {
-      const player = playerFor(next, pick(args, ["player_id", "playerId", "player"]));
-      if (!player) return next;
-      const stage = asNumber(pick(args, ["step", "stage", "steps_built"]));
-      player.stagesBuilt = stage !== null ? stage : player.stagesBuilt + 1;
-      player.handCount = Math.max(0, player.handCount - 1);
-      return next;
+    case "coinDelta": {
+      const player = players.get(String(args.player_id));
+      const coin = num(args.coin);
+      if (player && coin !== null) player.coins = coin;
+      break;
     }
 
-    case "discardCard":
-    case "cardDiscarded": {
-      const player = playerFor(next, pick(args, ["player_id", "playerId", "player"]));
-      if (player) player.handCount = Math.max(0, player.handCount - 1);
-      next.discardCount += 1;
-      return next;
+    case "updateMilitaryStrength": {
+      for (const [pid, val] of Object.entries(asRecord(args.militaryStrength))) {
+        const player = players.get(pid);
+        const shields = num(val);
+        if (player && shields !== null) player.shields = shields;
+      }
+      break;
     }
 
-    case "coinsChanged":
-    case "coinDelta":
-    case "coinsScore": {
-      const player = playerFor(next, pick(args, ["player_id", "playerId", "player"]));
-      if (!player) return next;
-      const total = asNumber(pick(args, ["coins", "total"]));
-      const delta = asNumber(pick(args, ["delta", "amount", "coinsDelta"]));
-      if (total !== null) player.coins = total;
-      else if (delta !== null) player.coins += delta;
-      return next;
+    case "warVictory": {
+      const player = players.get(String(args.player_id));
+      const points = num(args.points);
+      if (player && points !== null && points !== 0) player.tokens.push(points);
+      break;
     }
 
-    case "warResult":
-    case "warVictory":
-    case "warDefeat":
-    case "militaryResult": {
-      const player = playerFor(next, pick(args, ["player_id", "playerId", "player"]));
-      if (!player) return next;
-      const token = asNumber(pick(args, ["token", "points", "value"]));
-      if (token !== null && token !== 0) player.militaryTokens.push(token);
-      return next;
+    case "additionalScienceSymbols": {
+      // Wildcard science granted (e.g. Babylon stage, Scientists Guild).
+      const player = [...players.values()].find((p) => p.name === String(args.player_name));
+      const count = num(args.count);
+      if (player && count !== null) player.wildScience += count;
+      break;
+    }
+
+    case "updateDiscardCount": {
+      const cnt = num(args.cnt);
+      if (cnt !== null) state.discardCount = cnt;
+      break;
+    }
+
+    case "edificeParticipation": {
+      const age = num(args.age);
+      const player = players.get(String(args.player_id));
+      if (age !== null) {
+        const edifice = edificeForAge(state, age);
+        if (edifice) {
+          if (player) edifice.participants.add(player.id);
+          edifice.tokensLeft = Math.max(0, edifice.tokensLeft - 1);
+        }
+        if (player) player.edificePawns.add(age);
+      }
+      break;
+    }
+
+    case "edificeComplete": {
+      const age = num(args.age);
+      if (age !== null) {
+        const edifice = edificeForAge(state, age);
+        if (edifice) {
+          edifice.status = "built";
+          edifice.tokensLeft = 0;
+        }
+      }
+      break;
+    }
+
+    case "resultsAvailable":
+    case "tableWindowSevenWonder": {
+      state.finished = true;
+      // Any un-built edifice at game end has failed.
+      for (const e of state.edifices.values()) {
+        if (e.status === "project" && e.tokensLeft > 0) e.status = "failed";
+      }
+      break;
     }
 
     default:
-      next.unknownNotifTypes.add(type);
-      return next;
+      state.unknownTypes.add(type);
   }
 }
 
-export function applyBgaEvent(state: BgaFoldState, event: BgaEvent): BgaFoldState {
-  if (event.kind === "gamedatas") return applyGamedatas(state, event.payload);
-  return applyNotif(state, event.payload);
-}
+/**
+ * Notif types whose handlers ACCUMULATE (append a token, add a pawn, sum
+ * science) and so must be applied exactly once — deduped by `uid`. Every
+ * other handler sets absolute state (coins, shields, stage, tableau-by-card-id)
+ * and is safe to re-apply, so those are NOT deduped: the same event arrives on
+ * both the WebSocket tee and the notifqueue, and one copy may be truncated
+ * (an older userscript capped payload depth) — re-applying the intact copy
+ * heals it.
+ */
+const DEDUP_TYPES = new Set(["warVictory", "edificeParticipation", "additionalScienceSymbols"]);
 
-// ── Projection to the native view shape ─────────────────────────────────────
-
-function tableauIds(names: string[]): CardId[] {
-  const seen = new Map<string, number>();
-  const ids: CardId[] = [];
-  for (const name of names) {
-    const def = CARD_BY_NAME.get(name);
-    if (!def) continue;
-    const copy = seen.get(name) ?? 0;
-    seen.set(name, copy + 1);
-    ids.push(makeCardId(name, def.age, copy));
+export function applyBgaEvent(
+  state: BgaFoldState,
+  event: { kind: "gamedatas" | "notif"; payload: unknown },
+): BgaFoldState {
+  if (event.kind === "gamedatas") return applyGamedatas(event.payload);
+  if (!state.gamedatasSeen) return state;
+  for (const notif of extractNotifs(event.payload)) {
+    if (DEDUP_TYPES.has(notif.type)) {
+      if (!notif.uid || state.seenUids.has(notif.uid)) continue;
+      state.seenUids.add(notif.uid);
+    }
+    applyNotif(state, notif);
   }
-  return ids;
+  return state;
 }
 
-function boardView(acc: BgaPlayerAcc, index: number): SevenWondersPlayerBoardView {
-  const tableau = tableauIds(acc.tableauNames);
-  const scienceCounts: Record<ScienceSymbol, number> = { gear: 0, compass: 0, tablet: 0 };
-  let scienceWildcards = 0;
-  let shields = 0;
+// ── Projection ──────────────────────────────────────────────────────────────
+
+function scienceOf(acc: PlayerAcc): BgaPlayerView["science"] {
+  const counts: Record<ScienceSymbol, number> = { gear: 0, compass: 0, tablet: 0 };
   for (const name of acc.tableauNames) {
-    const def = CARD_BY_NAME.get(name);
-    if (!def) continue;
-    for (const effect of def.effects) {
-      if (effect.kind === "science") scienceCounts[effect.symbol]++;
-      if (effect.kind === "science-wildcard") scienceWildcards++;
-      if (effect.kind === "shields") shields += effect.amount;
+    for (const effect of CARD_BY_NAME.get(name)?.effects ?? []) {
+      if (effect.kind === "science") counts[effect.symbol]++;
     }
   }
-  return {
-    index,
-    wonderId: acc.wonderId ?? "giza",
-    side: "A",
-    stagesBuilt: acc.stagesBuilt,
-    coins: acc.coins,
-    shields,
-    militaryTokens: acc.militaryTokens,
-    tableau,
-    scienceCounts,
-    scienceWildcards,
-    handCount: acc.handCount,
-    hasSelected: false,
-  };
+  return { ...counts, wild: acc.wildScience };
 }
 
-/** Display names per seat, aligned with `toSpectatorView().players`. */
-export function spectatorNames(state: BgaFoldState): string[] {
-  return state.seatOrder.map((id) => state.players.get(id)?.name ?? `BGA ${id}`);
-}
-
-/** null until the first gamedatas checkpoint has been folded. */
-export function toSpectatorView(state: BgaFoldState): SevenWondersPlayerView | null {
+export function toSpectatorView(state: BgaFoldState): BgaSpectatorView | null {
   if (!state.gamedatasSeen || state.seatOrder.length === 0) return null;
-  const players = state.seatOrder.map((id, index) => {
-    const acc = state.players.get(id);
-    return boardView(acc ?? newPlayer(id, `BGA ${id}`), index);
+
+  const players: BgaPlayerView[] = state.seatOrder.map((pid, seat) => {
+    const acc = state.players.get(pid);
+    if (!acc) {
+      return {
+        id: pid,
+        name: `BGA ${pid}`,
+        seat,
+        wonderName: "?",
+        side: "",
+        coins: 0,
+        shields: 0,
+        militaryTokens: [],
+        wonderInitial: "",
+        stages: [],
+        stagesBuilt: 0,
+        tableau: [],
+        science: { gear: 0, compass: 0, tablet: 0, wild: 0 },
+        edificePawns: [],
+      };
+    }
+    const wonder = state.wonders.get(acc.wonderId);
+    return {
+      id: acc.id,
+      name: acc.name,
+      seat,
+      wonderName: wonder?.name ?? "?",
+      side: wonder?.side ?? "",
+      coins: acc.coins,
+      shields: acc.shields,
+      militaryTokens: acc.tokens,
+      wonderInitial: wonder?.initial ?? "",
+      stages: (wonder?.stages ?? []).map((s, i) => ({
+        cost: s.cost,
+        effect: s.effect,
+        built: i < acc.stagesBuilt,
+      })),
+      stagesBuilt: acc.stagesBuilt,
+      tableau: acc.tableauNames.map((name) => ({ name, category: categoryOf(name) })),
+      science: scienceOf(acc),
+      edificePawns: [...acc.edificePawns].sort(),
+    };
   });
+
+  const edifices: BgaEdificeView[] = [...state.edifices.values()]
+    .sort((a, b) => a.slot - b.slot)
+    .map((e) => {
+      const meta = state.edificeMeta.get(e.metaId);
+      return {
+        slot: e.slot,
+        name: meta?.name ?? "Edifice",
+        cost: `${meta?.cost ?? 0}🪙`,
+        reward: meta?.reward ?? "—",
+        penalty: meta?.penalty ?? "—",
+        tokensLeft: e.tokensLeft,
+        status: e.status,
+        participants: [...e.participants].map((pid) => state.players.get(pid)?.name ?? pid),
+      };
+    });
+
   return {
-    phase: "selecting",
     age: state.age,
     turn: state.turn,
-    playerCount: players.length,
-    me: null,
-    players,
     discardCount: state.discardCount,
-    pending: null,
-    lastRevealed: [],
-    actionLog: [],
+    players,
+    edifices,
+    finished: state.finished,
   };
+}
+
+// Tableau category via our own card DB (names match BGA for base cards).
+const COLOR_TO_CATEGORY: Record<string, string> = {
+  brown: "raw",
+  grey: "man",
+  blue: "civ",
+  yellow: "com",
+  red: "mil",
+  green: "sci",
+  purple: "gui",
+};
+function categoryOf(name: string): string {
+  const color = CARD_BY_NAME.get(name)?.color;
+  return color ? (COLOR_TO_CATEGORY[color] ?? "") : "";
 }
