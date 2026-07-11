@@ -436,6 +436,37 @@ describe("describeOutcomeError", () => {
     ).toBe("Add at least one participant");
   });
 
+  it("D&D needs a campaign name; resolution is optional", () => {
+    // No campaign → blocked, even with players present.
+    expect(
+      describeOutcomeError(
+        { kind: "coop", participants: [p("a")], campaign: "" },
+        "dungeons-and-dragons",
+      ),
+    ).toBe("Name the campaign or one-shot");
+    // Whitespace-only is still empty.
+    expect(
+      describeOutcomeError(
+        { kind: "coop", participants: [p("a")], campaign: "   " },
+        "dungeons-and-dragons",
+      ),
+    ).toBe("Name the campaign or one-shot");
+    // Campaign + a player, no resolution → valid (an ongoing session).
+    expect(
+      describeOutcomeError(
+        { kind: "coop", participants: [p("a")], campaign: "Curse of Strahd" },
+        "dungeons-and-dragons",
+      ),
+    ).toBeNull();
+    // Resolved win is likewise fine.
+    expect(
+      describeOutcomeError(
+        { kind: "coop", participants: [p("a")], campaign: "Curse of Strahd", outcome: "win" },
+        "dungeons-and-dragons",
+      ),
+    ).toBeNull();
+  });
+
   it("one-vs-many needs solo + at least one team player", () => {
     const noSolo: MatchOutcomeOneVsMany = {
       kind: "one-vs-many",

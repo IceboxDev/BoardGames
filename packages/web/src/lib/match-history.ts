@@ -1,5 +1,6 @@
 import {
   DeleteMatchResponseSchema,
+  DndOpenCampaignsResponseSchema,
   type HistoryListResponse,
   HistoryListResponseSchema,
   type MatchCreateInput,
@@ -11,6 +12,15 @@ import {
   type MatchUpdateInput,
 } from "@boardgames/core/protocol";
 import { apiFetch } from "./api-fetch";
+
+/** Open D&D campaign names (recorded but unresolved), for the record-match dropdown. */
+export async function fetchDndOpenCampaigns(signal?: AbortSignal): Promise<string[]> {
+  const res = await apiFetch("/api/history/dnd-campaigns", {
+    response: DndOpenCampaignsResponseSchema,
+    signal,
+  });
+  return res.campaigns;
+}
 
 export async function fetchHistory(
   opts: { limit?: number; before?: string | null; signal?: AbortSignal } = {},

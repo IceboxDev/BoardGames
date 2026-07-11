@@ -14,6 +14,7 @@ import type {
   Participant,
 } from "@boardgames/core/history/types";
 import { isVillainousSlug } from "../../games/villainous/villains";
+import { isDndSlug } from "./dnd";
 
 /** Current timestamp as an ISO string. Wrapped so tests can stub it. */
 export function isoNow(): string {
@@ -152,6 +153,7 @@ export function describeOutcomeError(
         return "At least one player must survive";
       return null;
     case "coop":
+      if (isDndSlug(gameSlug)) return describeDndError(outcome);
       if (outcome.participants.length < 1) return "Add at least one participant";
       if (gameSlug === "just-one" && outcome.score === undefined) return "Pick your score (0–13)";
       return null;
@@ -160,6 +162,19 @@ export function describeOutcomeError(
       if (outcome.team.members.length < 1) return "Add at least one team player";
       return null;
   }
+}
+
+/**
+ * D&D is a co-op with a required campaign / one-shot name. Resolution is
+ * optional — an "ongoing" session (no win/loss recorded yet) is valid; it just
+ * continues next time. Per-player death is optional metadata, never required.
+ */
+export function describeDndError(outcome: MatchOutcomeCoop): string | null {
+  if (!outcome.campaign || outcome.campaign.trim().length === 0) {
+    return "Name the campaign or one-shot";
+  }
+  if (outcome.participants.length < 1) return "Add at least one player";
+  return null;
 }
 
 /**

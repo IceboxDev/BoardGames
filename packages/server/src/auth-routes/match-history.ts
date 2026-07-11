@@ -1,5 +1,5 @@
 import type { MatchRecord } from "@boardgames/core/history/types";
-import { MatchOutcomeSchema } from "@boardgames/core/protocol";
+import { DndOpenCampaignsResponseSchema, MatchOutcomeSchema } from "@boardgames/core/protocol";
 import type { Client, Row } from "@libsql/client";
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
@@ -49,6 +49,11 @@ export type MatchResultRow = z.infer<typeof MatchResultRowSchema>;
 const UserNameRowSchema = z.object({
   id: z.string(),
   name: z.string(),
+});
+
+/** Single-column projection for the open-D&D-campaigns query. */
+const CampaignRowSchema = z.object({
+  campaign: z.string().min(1).max(120),
 });
 
 // ── Helpers ────────────────────────────────────────────────────────────
@@ -139,6 +144,28 @@ matchHistoryRoutes.get("/", async (c) => {
   const nextBefore = hasMore && matches.length > 0 ? matches[matches.length - 1].playedAt : null;
 
   return c.json({ matches, nextBefore });
+});
+
+// Open D&D campaigns: names with at least one recorded session but no resolved
+// one (no session carries a win/loss). Feeds the record-match campaign dropdown.
+matchHistoryRoutes.get("/dnd-campaigns", async (c) => {
+  const db = getDb();
+  const { rows } = await db.execute(
+    `SELECT DISTINCT json_extract(outcome_json, '$.campaign') AS campaign
+       FROM match_results
+      WHERE game_slug = 'dungeons-and-dragons'
+        AND json_extract(outcome_json, '$.campaign') IS NOT NULL
+        AND json_extract(outcome_json, '$.campaign') NOT IN (
+          SELECT json_extract(outcome_json, '$.campaign')
+            FROM match_results
+           WHERE game_slug = 'dungeons-and-dragons'
+             AND json_extract(outcome_json, '$.campaign') IS NOT NULL
+             AND json_extract(outcome_json, '$.outcome') IS NOT NULL
+        )
+      ORDER BY campaign COLLATE NOCASE`,
+  );
+  const campaigns = parseRows(CampaignRowSchema, rows, "dnd-campaigns").map((r) => r.campaign);
+  return c.json(DndOpenCampaignsResponseSchema.parse({ campaigns }));
 });
 
 matchHistoryRoutes.get("/by-night/:dateKey", async (c) => {

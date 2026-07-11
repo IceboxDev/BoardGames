@@ -18,6 +18,9 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
 
   // Cooperative — players share a single win/loss
   "aeons-end": "coop",
+  // D&D: the party wins or loses together. Recorded with a campaign/one-shot
+  // name, a three-state resolution (ongoing/win/loss), and per-player death.
+  "dungeons-and-dragons": "coop",
   "captain-sonar": "teams",
   "codenames-duet": "coop",
   "elements-of-truth": "coop",

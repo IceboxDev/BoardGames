@@ -16,7 +16,7 @@ import { defaultVariantValue, variantConfigForSlug } from "../../games/match-var
 import { isVillainousSlug } from "../../games/villainous/villains";
 import { useAdminUsers } from "../../hooks/useAdminUsers.ts";
 import { fetchCalendarLocks } from "../../lib/calendar-locks";
-import { recordMatch, updateMatch } from "../../lib/match-history";
+import { fetchDndOpenCampaigns, recordMatch, updateMatch } from "../../lib/match-history";
 import { qk } from "../../lib/query-keys";
 import { Button } from "../ui/Button";
 import { Chip } from "../ui/Chip";
@@ -27,8 +27,10 @@ import { Modal, ModalBody, ModalFooter } from "../ui/Modal";
 import { Select } from "../ui/Select";
 import { Surface } from "../ui/Surface";
 import { Textarea } from "../ui/Textarea";
+import { isDndSlug } from "./dnd";
 import { ClocktowerForm } from "./forms/ClocktowerForm";
 import { CoopForm } from "./forms/CoopForm";
+import { DndForm } from "./forms/DndForm";
 import { DungeonMayhemForm } from "./forms/DungeonMayhemForm";
 import { FreeForAllForm } from "./forms/FreeForAllForm";
 import { JustOneForm } from "./forms/JustOneForm";
@@ -124,6 +126,15 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
   const [kind, setKind] = useState<MatchKind>(initial.kind);
   const [outcome, setOutcome] = useState<MatchOutcome>(initial.outcome);
   const [notes, setNotes] = useState<string>(initial.notes);
+
+  // Ongoing campaign names for the D&D form's dropdown. Only fetched once the
+  // user is actually recording D&D, so it stays off the hot path for every
+  // other game.
+  const dndCampaignsQuery = useQuery({
+    queryKey: qk.dndOpenCampaigns(),
+    queryFn: ({ signal }) => fetchDndOpenCampaigns(signal),
+    enabled: isDndSlug(gameSlug),
+  });
   const [error, setError] = useState<string | null>(null);
 
   // When a game night is picked, the match's date+time is implied by that
@@ -159,9 +170,17 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
     // over from the previously-picked game — undefined here clears it.
     const scenario = defaultVariantValue(gameSlug);
     if (guess) setKind(guess);
-    setOutcome((prev) =>
-      applyScenario(guess ? carryOverParticipants(guess, prev) : prev, scenario),
-    );
+    setOutcome((prev) => {
+      const next = applyScenario(guess ? carryOverParticipants(guess, prev) : prev, scenario);
+      // D&D starts UNRESOLVED (ongoing) with an empty campaign name — the common
+      // case is a mid-campaign session, so pre-selecting "won" would be a
+      // footgun. The campaign name is required before the match can be saved.
+      if (isDndSlug(gameSlug) && next.kind === "coop") {
+        const { outcome: _o, score: _s, ...rest } = next;
+        return { ...rest, campaign: next.campaign ?? "" };
+      }
+      return next;
+    });
   }, [gameSlug, state.mode]);
 
   // Whenever the user picks a different game night, replace the participant
@@ -366,7 +385,14 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
               />
             ))}
           {kind === "coop" &&
-            (gameSlug === "just-one" ? (
+            (isDndSlug(gameSlug) ? (
+              <DndForm
+                users={allUsers}
+                value={outcome as MatchOutcomeCoop}
+                onChange={setOutcome}
+                openCampaigns={dndCampaignsQuery.data ?? []}
+              />
+            ) : gameSlug === "just-one" ? (
               <JustOneForm
                 users={allUsers}
                 value={outcome as MatchOutcomeCoop}

@@ -103,6 +103,67 @@ describe("MatchOutcomeSchema", () => {
     ).toThrow();
   });
 
+  // ── D&D co-op (campaign + resolution + per-player condition) ──────────
+
+  it("accepts an UNRESOLVED D&D session — a campaign name in lieu of an outcome", () => {
+    const parsed = MatchOutcomeSchema.parse({
+      kind: "coop",
+      campaign: "Curse of Strahd",
+      participants: [sampleParticipant("u1", "Alice"), sampleParticipant("u2", "Bob")],
+    });
+    expect(parsed.kind).toBe("coop");
+    if (parsed.kind === "coop") {
+      expect(parsed.campaign).toBe("Curse of Strahd");
+      expect(parsed.outcome).toBeUndefined();
+    }
+  });
+
+  it("accepts a RESOLVED D&D session with a campaign and a win", () => {
+    const parsed = MatchOutcomeSchema.parse({
+      kind: "coop",
+      campaign: "Curse of Strahd",
+      outcome: "win",
+      participants: [sampleParticipant("u1", "Alice")],
+    });
+    expect(parsed.kind === "coop" && parsed.outcome).toBe("win");
+  });
+
+  it("keeps per-player condition (unconscious / dead)", () => {
+    const parsed = MatchOutcomeSchema.parse({
+      kind: "coop",
+      campaign: "The Wild Beyond",
+      participants: [
+        { ...sampleParticipant("u1", "Alice"), condition: "dead" },
+        { ...sampleParticipant("u2", "Bob"), condition: "unconscious" },
+        sampleParticipant("u3", "Cara"),
+      ],
+    });
+    if (parsed.kind === "coop") {
+      expect(parsed.participants[0].condition).toBe("dead");
+      expect(parsed.participants[1].condition).toBe("unconscious");
+      expect(parsed.participants[2].condition).toBeUndefined();
+    }
+  });
+
+  it("rejects an unknown per-player condition", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        kind: "coop",
+        campaign: "x",
+        participants: [{ ...sampleParticipant("u1", "Alice"), condition: "poisoned" }],
+      }),
+    ).toThrow();
+  });
+
+  it("still rejects a co-op with no outcome, no score, and no campaign", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        kind: "coop",
+        participants: [sampleParticipant("u1", "Alice")],
+      }),
+    ).toThrow();
+  });
+
   it("rejects teams with a winner index out of range", () => {
     expect(() => MatchOutcomeSchema.parse({ ...sampleTeams, winnerTeamIndices: [5] })).toThrow(
       /out of range/,

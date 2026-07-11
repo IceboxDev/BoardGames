@@ -210,11 +210,24 @@ function parseCoop(v: Record<string, unknown>): ParseResult<MatchOutcomeCoop> {
     return { ok: false, error: "coop: participants must be non-empty" };
   }
   if (v.participants.length > 20) return { ok: false, error: "coop: too many participants" };
-  const participants: Participant[] = [];
+  const participants: MatchOutcomeCoop["participants"] = [];
   for (let i = 0; i < v.participants.length; i++) {
-    const p = parseParticipant(v.participants[i], `participants[${i}]`);
+    const raw = v.participants[i];
+    const p = parseParticipant(raw, `participants[${i}]`);
     if (!p.ok) return p;
-    participants.push(p.value);
+    // Optional per-player D&D condition: "unconscious" or "dead". Mirrors
+    // CoopParticipantSchema.
+    let condition: "unconscious" | "dead" | undefined;
+    if (isPlainObject(raw) && raw.condition !== undefined) {
+      if (raw.condition !== "unconscious" && raw.condition !== "dead") {
+        return {
+          ok: false,
+          error: `participants[${i}]: condition must be 'unconscious' or 'dead'`,
+        };
+      }
+      condition = raw.condition;
+    }
+    participants.push({ ...p.value, ...(condition !== undefined ? { condition } : {}) });
   }
   // `outcome` (win/loss) and `score` are both optional, but a coop match needs at
   // least one: binary co-ops carry win/loss, scored co-ops (Just One) carry a
@@ -234,7 +247,10 @@ function parseCoop(v: Record<string, unknown>): ParseResult<MatchOutcomeCoop> {
     }
     score = n;
   }
-  if (outcome === undefined && score === undefined) {
+  // A D&D campaign session may be unresolved (no outcome/score yet). Its name is
+  // what makes that legal. Mirrors MatchOutcomeCoopSchema's union refinement.
+  const campaign = asOptionalString(v.campaign, 120);
+  if (outcome === undefined && score === undefined && campaign === undefined) {
     return { ok: false, error: "coop: needs a win/loss outcome or a score" };
   }
   const difficulty = asOptionalString(v.difficulty, 64);
@@ -250,6 +266,7 @@ function parseCoop(v: Record<string, unknown>): ParseResult<MatchOutcomeCoop> {
       ...(difficulty !== undefined ? { difficulty } : {}),
       ...(details !== undefined ? { details } : {}),
       ...(scenario !== undefined ? { scenario } : {}),
+      ...(campaign !== undefined ? { campaign } : {}),
     },
   };
 }

@@ -13,6 +13,7 @@ export const qk = {
   adminAggregateAvailability: () => ["admin", "availability", "all"] as const,
   history: () => ["history"] as const,
   historyByNight: (dateKey: string) => ["history", "by-night", dateKey] as const,
+  dndOpenCampaigns: () => ["history", "dnd-campaigns"] as const,
   gameReplays: (gameSlug: string) => ["game-replays", gameSlug] as const,
   tournamentGames: (tournamentId: string) => ["tournament-games", tournamentId] as const,
   calendarFeed: () => ["calendar", "feed"] as const,

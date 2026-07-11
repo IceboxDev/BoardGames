@@ -103,13 +103,23 @@ const MatchOutcomeLastStandingSchema = z.object({
 });
 export type MatchOutcomeLastStanding = z.infer<typeof MatchOutcomeLastStandingSchema>;
 
+// A co-op participant. `condition` is D&D-specific: whether this character went
+// down during the session — "unconscious" (dropped to 0 HP but survived) or
+// "dead" (permanent character death). Absent = came through unscathed. It is the
+// only per-player datum a co-op carries; the win/loss is shared by the table.
+export const CoopParticipantSchema = ParticipantSchema.extend({
+  condition: z.enum(["unconscious", "dead"]).optional(),
+});
+export type CoopParticipant = z.infer<typeof CoopParticipantSchema>;
+
 const MatchOutcomeCoopSchema = z.object({
   kind: z.literal("coop"),
-  participants: z.array(ParticipantSchema).min(1).max(20),
+  participants: z.array(CoopParticipantSchema).min(1).max(20),
   // win/loss for binary co-ops (Pandemic, etc.). Optional because some co-ops are
   // SCORED, not won/lost — Just One banks 0–13 points that map to a flavour tier
-  // with no winner. A coop match must carry at least one of `outcome` / `score`
-  // (enforced on the union below).
+  // with no winner — and because a D&D `campaign` session may be UNRESOLVED (see
+  // below). A coop match must carry at least one of `outcome` / `score` /
+  // `campaign` (enforced on the union below).
   outcome: z.enum(["win", "loss"]).optional(),
   // Shared team score for scored co-ops (Just One). Independent of `outcome` — a
   // game uses one or the other.
@@ -118,6 +128,12 @@ const MatchOutcomeCoopSchema = z.object({
   details: z.string().max(1000).optional(),
   // Optional per-game variant tag (e.g. Codenames Duet language).
   scenario: z.string().max(64).optional(),
+  // D&D campaign / one-shot name. A "campaign session" is the one co-op shape
+  // allowed to carry no `outcome` and no `score`: an UNRESOLVED session the
+  // party continues next time (a two-shot's first sitting). When the story
+  // concludes, the final session is recorded with `outcome` win/loss. The
+  // refinement below accepts `campaign` in lieu of an outcome/score.
+  campaign: z.string().min(1).max(120).optional(),
 });
 export type MatchOutcomeCoop = z.infer<typeof MatchOutcomeCoopSchema>;
 
@@ -165,7 +181,9 @@ export const MatchOutcomeSchema = z
         });
       }
     } else if (v.kind === "coop") {
-      if (v.outcome === undefined && v.score === undefined) {
+      // A D&D `campaign` session may be unresolved (no outcome yet — it
+      // continues next time). Every other co-op needs a win/loss or a score.
+      if (v.outcome === undefined && v.score === undefined && v.campaign === undefined) {
         ctx.addIssue({
           code: "custom",
           path: ["outcome"],
@@ -244,6 +262,16 @@ export const MatchByNightResponseSchema = z.object({
   matches: z.array(MatchRecordSchema),
 });
 export type MatchByNightResponse = z.infer<typeof MatchByNightResponseSchema>;
+
+// ── D&D open campaigns ────────────────────────────────────────────────
+// Campaign / one-shot names that have at least one recorded session but no
+// resolved one yet. Feeds the record-match form's campaign dropdown so an
+// ongoing campaign doesn't have to be retyped each session; a name drops off
+// the list once any of its sessions is recorded with a win/loss.
+export const DndOpenCampaignsResponseSchema = z.object({
+  campaigns: z.array(z.string().min(1).max(120)),
+});
+export type DndOpenCampaignsResponse = z.infer<typeof DndOpenCampaignsResponseSchema>;
 
 export const DeleteMatchResponseSchema = z.object({ ok: z.literal(true) });
 export type DeleteMatchResponse = z.infer<typeof DeleteMatchResponseSchema>;

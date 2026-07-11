@@ -18,6 +18,7 @@ import { BookIcon, EditIcon, XIcon } from "../icons";
 import { IconButton } from "../ui/IconButton";
 import { MicroLabel } from "../ui/Label";
 import { AvatarBubble } from "./AvatarBubble";
+import { conditionMeta, isDndSlug, resolutionOf } from "./dnd";
 
 type Props = {
   match: MatchRecord;
@@ -101,6 +102,8 @@ function deriveTitleSubtitle(outcome: MatchOutcome, gameSlug: string | null): st
   // its label always wins — even over a persisted `scenario`. (Lovecraft Letter
   // used to store the win condition in `scenario`; it now lives on the winner's
   // `role`, and the subtitle is just the edition.)
+  // D&D subtitle is the campaign / one-shot name.
+  if (outcome.kind === "coop" && isDndSlug(gameSlug) && outcome.campaign) return outcome.campaign;
   const variant = variantConfigForSlug(gameSlug);
   if (variant?.fixed && variant.options[0]) return variant.options[0].label;
   // Persisted scenario tag — used by Werewolf, Codenames, Wavelength,
@@ -167,7 +170,11 @@ function CompactOutcome({ outcome, gameSlug, currentUserId }: OutcomeProps) {
         <LastStandingInline outcome={outcome} currentUserId={currentUserId} />
       );
     case "coop":
-      return <CoopInline outcome={outcome} gameSlug={gameSlug} currentUserId={currentUserId} />;
+      return isDndSlug(gameSlug) ? (
+        <DndInline outcome={outcome} currentUserId={currentUserId} />
+      ) : (
+        <CoopInline outcome={outcome} gameSlug={gameSlug} currentUserId={currentUserId} />
+      );
     case "one-vs-many":
       return <OneVsManyInline outcome={outcome} currentUserId={currentUserId} />;
   }
@@ -476,6 +483,61 @@ function CoopInline({
           />
         ))}
       </span>
+    </div>
+  );
+}
+
+function DndInline({
+  outcome,
+  currentUserId,
+}: {
+  outcome: MatchOutcomeCoop;
+  currentUserId: string | null;
+}) {
+  const resolution = resolutionOf(outcome);
+  const badge =
+    resolution === "win"
+      ? { text: "Won", cls: "bg-emerald-500/15 text-emerald-300" }
+      : resolution === "loss"
+        ? { text: "Lost", cls: "bg-rose-500/15 text-rose-300" }
+        : { text: "Ongoing", cls: "bg-sky-500/15 text-sky-300" };
+  // Avatar tone: winners glow, a wipe dims the party; an ongoing session is muted.
+  const tone = resolution === "win" ? "winner" : resolution === "loss" ? "loser" : "muted";
+  const casualties = outcome.participants.filter((p) => p.condition);
+  return (
+    <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+      <span
+        className={`rounded px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wider ${badge.cls}`}
+      >
+        {badge.text}
+      </span>
+      <span className="inline-flex -space-x-1.5">
+        {outcome.participants.map((p) => {
+          const cond = p.condition ? conditionMeta(p.condition) : null;
+          return (
+            <AvatarBubble
+              key={p.userId}
+              name={p.displayName}
+              tone={tone}
+              isMe={p.userId === currentUserId}
+              title={cond ? `${p.displayName} — ${cond.full}` : p.displayName}
+            />
+          );
+        })}
+      </span>
+      {casualties.map((p) => {
+        const cond = conditionMeta(p.condition as NonNullable<typeof p.condition>);
+        return (
+          <span
+            key={p.userId}
+            title={cond ? `${p.displayName} — ${cond.full}` : undefined}
+            className="inline-flex items-center gap-0.5 text-3xs text-fg-muted"
+          >
+            <span aria-hidden="true">{cond?.icon}</span>
+            {p.displayName}
+          </span>
+        );
+      })}
     </div>
   );
 }

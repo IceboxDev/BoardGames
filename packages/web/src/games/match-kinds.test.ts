@@ -23,6 +23,7 @@ describe("defaultKindForSlug", () => {
     // Players are knocked out as they run dry; the survivor wins — same shape
     // as Exploding Kittens, not a scored free-for-all.
     ["not-enough-mana", "last-standing"],
+    ["dungeons-and-dragons", "coop"],
     ["scotland-yard", "one-vs-many"],
     ["betrayal-at-house-on-the-hill", "one-vs-many"],
     ["lovecraft-letter", "free-for-all"],

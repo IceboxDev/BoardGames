@@ -113,3 +113,45 @@ describe("parseOutcome — coop score (Just One)", () => {
     ).toBe(false);
   });
 });
+
+describe("parseOutcome — D&D co-op (campaign + condition)", () => {
+  it("accepts an unresolved session: a campaign name, no outcome", () => {
+    const result = parseOutcome({
+      kind: "coop",
+      campaign: "Curse of Strahd",
+      participants: [{ userId: "u1", displayName: "Alice" }],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "coop") {
+      expect(result.value.campaign).toBe("Curse of Strahd");
+      expect("outcome" in result.value).toBe(false);
+    }
+  });
+
+  it("preserves per-player condition and drops it when absent", () => {
+    const result = parseOutcome({
+      kind: "coop",
+      campaign: "The Wild Beyond",
+      outcome: "loss",
+      participants: [
+        { userId: "u1", displayName: "Alice", condition: "dead" },
+        { userId: "u2", displayName: "Bob" },
+      ],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "coop") {
+      expect(result.value.participants[0].condition).toBe("dead");
+      expect("condition" in result.value.participants[1]).toBe(false);
+    }
+  });
+
+  it("rejects an unknown condition value", () => {
+    expect(
+      parseOutcome({
+        kind: "coop",
+        campaign: "x",
+        participants: [{ userId: "u1", displayName: "Alice", condition: "stunned" }],
+      }).ok,
+    ).toBe(false);
+  });
+});
