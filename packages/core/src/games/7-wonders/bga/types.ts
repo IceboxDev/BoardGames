@@ -45,6 +45,23 @@ export interface BgaPlayerView {
   science: BgaScienceCounts;
   /** Ages (1–3) this player holds an Edifice participation pawn for. */
   edificePawns: number[];
+  /** Deduced current hand (card counting). Null until it can be known. */
+  hand: BgaHand | null;
+}
+
+export interface BgaHand {
+  /**
+   * Candidate/known card names. When `cards.length === size` the hand is known
+   * exactly; when larger, some candidates were buried under Wonders (unknown
+   * which); when smaller, the remainder is unidentified.
+   */
+  cards: string[];
+  /** Actual number of cards in the hand right now. */
+  size: number;
+  /** Filled by deck elimination rather than direct observation. */
+  deduced: boolean;
+  /** Residual uncertainty (e.g. Age III guilds under elimination). */
+  uncertain: boolean;
 }
 
 export type BgaEdificeStatus = "project" | "built" | "failed";

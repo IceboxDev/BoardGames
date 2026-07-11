@@ -20,6 +20,43 @@ const EDIFICE_STATUS: Record<BgaEdificeView["status"], { label: string; cls: str
   failed: { label: "Failed", cls: "border-rose-500/40 bg-rose-500/5" },
 };
 
+function HandView({ hand }: { hand: BgaPlayerView["hand"] }) {
+  if (!hand || hand.size === 0) return null;
+  const exact = hand.cards.length === hand.size && !hand.deduced;
+  const surplus = hand.cards.length - hand.size; // candidates buried under wonders
+  const missing = hand.size - hand.cards.length; // unidentified (elimination gaps)
+
+  let note = "";
+  if (hand.deduced) note = hand.uncertain ? " · deduced, guilds uncertain" : " · deduced";
+  else if (surplus > 0) note = ` · ${surplus} buried under wonder`;
+  else if (missing > 0) note = ` · ${missing} unknown`;
+
+  return (
+    <div className="mt-0.5 rounded border border-sky-500/25 bg-sky-500/5 px-1 py-0.5">
+      <div className="flex items-center gap-1 text-4xs text-sky-300">
+        <span>🂠 hand ({hand.size})</span>
+        {exact ? (
+          <span className="text-emerald-400">known</span>
+        ) : (
+          <span className="text-amber-300/80">{note.replace(/^ · /, "")}</span>
+        )}
+      </div>
+      <div className="flex flex-wrap gap-0.5 pt-0.5">
+        {hand.cards.map((name, i) => (
+          <span
+            // biome-ignore lint/suspicious/noArrayIndexKey: candidate list with legit duplicate names
+            key={`${name}-${i}`}
+            className="rounded bg-surface-800/80 px-1 py-px text-4xs leading-tight text-sky-100"
+            title={name}
+          >
+            {name}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function PlayerCard({ player }: { player: BgaPlayerView }) {
   const military = player.militaryTokens.reduce((a, b) => a + b, 0);
   const sci = player.science;
@@ -94,6 +131,8 @@ function PlayerCard({ player }: { player: BgaPlayerView }) {
           <span className="text-4xs italic text-fg-disabled">no cards yet</span>
         )}
       </div>
+
+      <HandView hand={player.hand} />
     </div>
   );
 }

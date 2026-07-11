@@ -1,5 +1,14 @@
 import { CARD_BY_NAME } from "../cards";
 import type { ScienceSymbol } from "../types";
+import type { CardTypeInfo, HandTrackState } from "./hand-tracker";
+import {
+  computeHand,
+  initHandTrack,
+  recordDiscard,
+  recordMyHand,
+  recordReveal,
+  setCardTypes,
+} from "./hand-tracker";
 import type { BgaEdificeStatus, BgaEdificeView, BgaPlayerView, BgaSpectatorView } from "./types";
 
 /**
@@ -179,6 +188,8 @@ export interface BgaFoldState {
   /** Distinct card-reveal uids this age — one per turn. */
   revealUids: Set<string>;
   unknownTypes: Set<string>;
+  /** Hand deduction (opponents' hands via rotation tracking + elimination). */
+  handTrack: HandTrackState;
 }
 
 export function initBgaFold(): BgaFoldState {
@@ -197,6 +208,7 @@ export function initBgaFold(): BgaFoldState {
     seenUids: new Set(),
     revealUids: new Set(),
     unknownTypes: new Set(),
+    handTrack: initHandTrack(),
   };
 }
 
@@ -247,12 +259,16 @@ function applyGamedatas(payload: unknown): BgaFoldState {
   const next = initBgaFold();
   next.gamedatasSeen = true;
 
+  const trackTypes = new Map<string, CardTypeInfo>();
   for (const [id, raw] of Object.entries(asRecord(gd.card_types))) {
     const c = asRecord(raw);
-    next.cardTypes.set(id, {
-      name: String(c.name ?? id),
-      category: String(c.category ?? ""),
-    });
+    const name = String(c.name ?? id);
+    const category = String(c.category ?? "");
+    next.cardTypes.set(id, { name, category });
+    const qtRaw = asRecord(c.qt);
+    const qt: Record<string, number> = {};
+    for (const [k, v] of Object.entries(qtRaw)) qt[k] = num(v) ?? 0;
+    trackTypes.set(id, { name, category, age: num(c.age) ?? 0, qt });
   }
   for (const [id, raw] of Object.entries(asRecord(gd.wonders))) {
     const w = asRecord(raw);
@@ -310,6 +326,25 @@ function applyGamedatas(payload: unknown): BgaFoldState {
 
   next.age = num(gd.age) ?? 1;
   next.discardCount = num(gd.discardCount) ?? 0;
+
+  // Seed hand tracking. My hand + card ids arrive via `newHand`/`cardsPlayed`.
+  next.handTrack.seatOrder = [...next.seatOrder];
+  next.handTrack.age = next.age;
+  setCardTypes(next.handTrack, trackTypes);
+  // gamedatas may already carry my hand (rejoining mid-game).
+  const myHand = Array.isArray(gd.hand) ? gd.hand : [];
+  if (myHand.length > 0) {
+    const ids: number[] = [];
+    for (const raw of myHand) {
+      const c = asRecord(raw);
+      const id = num(c.id);
+      if (id === null) continue;
+      ids.push(id);
+      next.handTrack.typeById.set(id, String(c.type));
+      next.handTrack.myPlayerId ??= c.locationArg !== undefined ? String(c.locationArg) : null;
+    }
+    recordMyHand(next.handTrack, ids);
+  }
   return next;
 }
 
@@ -332,18 +367,44 @@ function applyNotif(state: BgaFoldState, notif: RawNotif): void {
           e.status = "failed";
         }
       }
-      if (age !== null) state.age = age;
+      if (age !== null) {
+        state.age = age;
+        state.handTrack.age = age;
+      }
       state.turn = 1;
       state.revealUids.clear();
       break;
     }
 
+    case "newHand": {
+      const cards = Array.isArray(args.cards) ? args.cards : [];
+      const ids: number[] = [];
+      for (const raw of cards) {
+        const card = asRecord(raw);
+        const id = num(card.id);
+        if (id === null) continue;
+        ids.push(id);
+        state.handTrack.typeById.set(id, String(card.type));
+        state.handTrack.myPlayerId ??=
+          card.locationArg !== undefined ? String(card.locationArg) : null;
+      }
+      recordMyHand(state.handTrack, ids);
+      break;
+    }
+
     case "cardsPlayed": {
       const cards = asRecord(args.cards);
+      const newReveal = uid !== undefined && !state.revealUids.has(uid);
+      const plays: Array<{ playerId: string; id: number }> = [];
       for (const raw of Object.values(cards)) {
         const card = asRecord(raw);
         const cardId = String(card.id ?? "");
         const pid = String(card.locationArg ?? "");
+        const idNum = num(card.id);
+        if (idNum !== null) {
+          state.handTrack.typeById.set(idNum, String(card.type));
+          plays.push({ playerId: pid, id: idNum });
+        }
         const player = players.get(pid);
         if (!player || player.tableauCardIds.has(cardId)) continue;
         player.tableauCardIds.add(cardId);
@@ -351,10 +412,17 @@ function applyNotif(state: BgaFoldState, notif: RawNotif): void {
         player.tableauNames.push(def?.name ?? `#${card.type}`);
       }
       // One reveal = one turn; count each distinct reveal once (fires twice).
-      if (uid && !state.revealUids.has(uid)) {
+      if (newReveal) {
         state.revealUids.add(uid);
         state.turn += 1;
+        recordReveal(state.handTrack, plays);
       }
+      break;
+    }
+
+    case "discard": {
+      const id = num(args.card_id);
+      if (id !== null) recordDiscard(state.handTrack, id);
       break;
     }
 
@@ -503,6 +571,7 @@ export function toSpectatorView(state: BgaFoldState): BgaSpectatorView | null {
         tableau: [],
         science: { gear: 0, compass: 0, tablet: 0, wild: 0 },
         edificePawns: [],
+        hand: null,
       };
     }
     const wonder = state.wonders.get(acc.wonderId);
@@ -525,6 +594,7 @@ export function toSpectatorView(state: BgaFoldState): BgaSpectatorView | null {
       tableau: acc.tableauNames.map((name) => ({ name, category: categoryOf(name) })),
       science: scienceOf(acc),
       edificePawns: [...acc.edificePawns].sort(),
+      hand: state.finished ? null : computeHand(state.handTrack, seat),
     };
   });
 
