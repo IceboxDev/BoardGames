@@ -25,6 +25,23 @@ const DEBUG_LOG =
     ? (process.env.BGA_DEBUG_LOG ?? "bga-ingest-debug.jsonl")
     : null;
 
+// Dev-only entry trace: records EVERY hit (even ones that fail validation/auth)
+// with its final status, so a silent bridge can be diagnosed live.
+const REQUEST_LOG = process.env.NODE_ENV !== "production" ? "bga-ingest-requests.log" : null;
+if (REQUEST_LOG) {
+  bgaIngestRoutes.use("*", async (c, next) => {
+    const len = c.req.header("content-length") ?? "?";
+    const origin = c.req.header("origin") ?? "-";
+    await next();
+    try {
+      appendFileSync(
+        REQUEST_LOG,
+        `${new Date().toISOString()} ${c.req.method} len=${len} origin=${origin} -> ${c.res.status}\n`,
+      );
+    } catch {}
+  });
+}
+
 function logEvents(sessionId: string, events: BgaEvent[]): void {
   if (!DEBUG_LOG) return;
   try {

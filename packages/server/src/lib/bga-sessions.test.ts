@@ -27,10 +27,25 @@ describe("bga-sessions", () => {
     expect(getBgaSessionByCode(first.session.code.toLowerCase())?.id).toBe(first.session.id);
   });
 
-  it("rejects an unknown ingest token", () => {
-    const result = ingestBgaEvents("not-a-real-token-at-all-1234", [ev(0)]);
-    expect(result.ok).toBe(false);
-    if (!result.ok) expect(result.status).toBe(401);
+  it("rejects an unknown or forged ingest token", () => {
+    expect(ingestBgaEvents("not-a-real-token-at-all-1234", [ev(0)])).toMatchObject({
+      ok: false,
+      status: 401,
+    });
+    // Well-formed shape but a bad signature must not verify.
+    const forged = `${Buffer.from('{"u":"attacker","g":"7-wonders"}').toString("base64url")}.deadbeef`;
+    expect(ingestBgaEvents(forged, [ev(0)])).toMatchObject({ ok: false, status: 401 });
+  });
+
+  it("self-heals: a valid token re-ingests into a stable session across reconnects", () => {
+    // Deterministic credentials mean a second create (e.g. after a restart)
+    // yields the same token/id, and that token keeps ingesting.
+    const first = createOrReuseBgaSession("user-heal", "7-wonders");
+    ingestBgaEvents(first.ingestToken, [ev(0, "gamedatas"), ev(1)]);
+    const again = createOrReuseBgaSession("user-heal", "7-wonders");
+    expect(again.session.id).toBe(first.session.id);
+    expect(again.ingestToken).toBe(first.ingestToken);
+    expect(ingestBgaEvents(again.ingestToken, [ev(2)])).toMatchObject({ ok: true, nextSeq: 3 });
   });
 
   it("ingests in order, dedupes replayed seqs and reports nextSeq", () => {
