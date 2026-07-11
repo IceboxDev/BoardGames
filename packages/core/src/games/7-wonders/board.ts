@@ -39,7 +39,7 @@ export function countShields(player: PlayerState): number {
   for (const effect of builtStageEffects(player)) {
     if (effect.kind === "shields") shields += effect.amount;
   }
-  return shields;
+  return shields + player.bonusShields; // Edifice shield rewards
 }
 
 export interface ScienceProfile {

@@ -54,6 +54,11 @@ export function getOwnProduction(state: GameState, playerIndex: number): Product
   for (const effect of builtStageEffects(player)) {
     entries.push(...entriesFromEffect(effect));
   }
+  // Edifice production rewards (each a choose-one set). Not tradeable to
+  // neighbours (getTradeableProduction omits them), like yellow/stage output.
+  for (const set of player.bonusProduction) {
+    entries.push({ mask: set.reduce((m, r) => m | RESOURCE_BIT[r], 0) });
+  }
   return entries;
 }
 

@@ -2,7 +2,7 @@ import { createRng } from "../../lib/rng";
 import { getCardDef } from "./cards";
 import { buildAgeDeck } from "./deck";
 import type { CardId, GameState, PlayerState, WonderId } from "./types";
-import { makeCardId } from "./types";
+import { emptyEdificeFields, makeCardId } from "./types";
 
 /** Hand-built states for engine tests. Not part of the shipped game surface. */
 
@@ -39,6 +39,7 @@ export function makeTestState(
     tableau: idsFor(s.tableau ?? []),
     militaryTokens: s.militaryTokens ?? [],
     freeBuildUsedThisAge: false,
+    ...emptyEdificeFields(),
   }));
   const rng = createRng(1234);
   return {

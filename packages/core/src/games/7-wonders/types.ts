@@ -129,6 +129,15 @@ export interface PlayerState {
   militaryTokens: number[];
   /** Olympia A once-per-age free build. */
   freeBuildUsedThisAge: boolean;
+  // ── Edifice expansion (all empty/0 in a base game) ──
+  /** VP-token values gained from constructed Edifices. */
+  victoryTokens: number[];
+  /** Debt-token values (negative VP) from failed Edifices. */
+  debtTokens: number[];
+  /** Extra shields from Edifice rewards (added to military strength). */
+  bonusShields: number;
+  /** Extra production (choice-of-one sets) from Edifice rewards. */
+  bonusProduction: ResourceType[][];
 }
 
 /**
@@ -141,13 +150,17 @@ export type Payment =
   | { kind: "chain" }
   | { kind: "free-build" };
 
+export interface BuildWonderAction {
+  type: "build-wonder";
+  cardId: CardId;
+  payment: { kind: "resources"; left: number; right: number };
+  /** Edifice: also participate in this Age's project (pay its coin cost, take a pawn). */
+  participate?: boolean;
+}
+
 export type SevenWondersAction =
   | { type: "play-card"; cardId: CardId; payment: Payment }
-  | {
-      type: "build-wonder";
-      cardId: CardId;
-      payment: { kind: "resources"; left: number; right: number };
-    }
+  | BuildWonderAction
   | { type: "discard"; cardId: CardId }
   // Pending-phase actions (turn-based, not simultaneous):
   | { type: "pick-discard"; cardId: CardId }
@@ -156,11 +169,7 @@ export type SevenWondersAction =
       type: "play-seventh";
       action:
         | { type: "play-card"; cardId: CardId; payment: Payment }
-        | {
-            type: "build-wonder";
-            cardId: CardId;
-            payment: { kind: "resources"; left: number; right: number };
-          }
+        | BuildWonderAction
         | { type: "discard"; cardId: CardId };
     };
 
@@ -203,6 +212,14 @@ export type LogEntry =
     }
   | { type: "military"; age: Age; outcomes: MilitaryOutcome[] }
   | { type: "age-start"; age: Age }
+  | {
+      type: "edifice";
+      age: Age;
+      card: string;
+      outcome: "built" | "failed";
+      /** Player indices who participated. */
+      participants: number[];
+    }
   | { type: "game-end"; totals: number[]; winner: number };
 
 // ── Game state ──────────────────────────────────────────────────────────────
@@ -211,6 +228,21 @@ export interface SevenWondersConfig {
   playerCount: number;
   seed: number;
   sideMode: "A" | "B" | "random";
+  /** Enable the Edifice expansion (communal projects). */
+  edifice?: boolean;
+}
+
+export type EdificeSlotStatus = "project" | "built" | "failed";
+
+export interface EdificeSlot {
+  age: Age;
+  /** Edifice card name (key into EDIFICES). */
+  card: string;
+  pawnsTotal: number;
+  pawnsLeft: number;
+  status: EdificeSlotStatus;
+  /** Player indices holding a participation pawn for this project. */
+  participants: number[];
 }
 
 export interface GameState {
@@ -229,8 +261,18 @@ export interface GameState {
   pendingQueue: PendingAction[];
   /** Pre-shuffled at setup so the whole game is a pure function of (seed, actions). */
   ageDecks: { 2: CardId[]; 3: CardId[] };
+  /** Edifice projects, one per Age (index 0 = Age I). Absent in a base game. */
+  edifices?: EdificeSlot[];
   lastRevealed: RevealedPlay[];
   actionLog: LogEntry[];
+}
+
+/** Zeroed Edifice-related PlayerState fields (base games leave these untouched). */
+export function emptyEdificeFields(): Pick<
+  PlayerState,
+  "victoryTokens" | "debtTokens" | "bonusShields" | "bonusProduction"
+> {
+  return { victoryTokens: [], debtTokens: [], bonusShields: 0, bonusProduction: [] };
 }
 
 export const STARTING_COINS = 3;

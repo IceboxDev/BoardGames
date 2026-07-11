@@ -1,5 +1,6 @@
 import { builtStageEffects, countColor, scienceProfile } from "./board";
 import { getCardDef } from "./cards";
+import { getEdificeDef } from "./edifice";
 import type { CardEffect, GameState, PlayerState, ScienceSymbol, WonderStageEffect } from "./types";
 import { cardIdName, leftOf, rightOf, SCIENCE_SYMBOLS } from "./types";
 
@@ -11,6 +12,8 @@ export interface ScoreBreakdown {
   commercial: number;
   guilds: number;
   science: number;
+  /** Edifice expansion: victory tokens + end-game rewards + debt tokens. 0 otherwise. */
+  edifice: number;
   total: number;
 }
 
@@ -165,9 +168,72 @@ export function scoreFinal(state: GameState): ScoreBreakdown[] {
     const { counts, wildcards } = scienceProfile(player);
     const science = scoreScience(counts, wildcards);
 
-    const total = military + coins + wonder + civilian + commercial + guilds + science;
-    return { military, coins, wonder, civilian, commercial, guilds, science, total };
+    const edifice = scoreEdifice(state, i);
+
+    const total = military + coins + wonder + civilian + commercial + guilds + science + edifice;
+    return { military, coins, wonder, civilian, commercial, guilds, science, edifice, total };
   });
+}
+
+/** Best end-game value of any single guild the player OWNS (for Agora's duplicate). */
+function bestOwnGuildValue(state: GameState, playerIndex: number): number {
+  const player = state.players[playerIndex];
+  let best = 0;
+  for (const id of player.tableau) {
+    const def = getCardDef(cardIdName(id));
+    if (def.color !== "purple") continue;
+    let value = 0;
+    for (const effect of def.effects) {
+      if (effect.kind === "science-wildcard") {
+        const { counts, wildcards } = scienceProfile(player);
+        value += scoreScience(counts, wildcards + 1) - scoreScience(counts, wildcards);
+      } else {
+        value += endGamePoints(effect, state, playerIndex);
+      }
+    }
+    best = Math.max(best, value);
+  }
+  return best;
+}
+
+/** Edifice expansion scoring: VP tokens + built-project end-game rewards + debt. */
+export function scoreEdifice(state: GameState, playerIndex: number): number {
+  const player = state.players[playerIndex];
+  let points = player.victoryTokens.reduce((a, b) => a + b, 0);
+  points += player.debtTokens.reduce((a, b) => a + b, 0);
+
+  for (const slot of state.edifices ?? []) {
+    if (slot.status !== "built" || !slot.participants.includes(playerIndex)) continue;
+    for (const reward of getEdificeDef(slot.card).reward) {
+      switch (reward.kind) {
+        case "points-per-wonder-stage":
+          points += player.stagesBuilt;
+          break;
+        case "points-per-blue":
+          points += countColor(player, "blue");
+          break;
+        case "points-per-color":
+          points += distinctColors(player);
+          break;
+        case "points-per-brown-grey-set":
+          points +=
+            reward.amount * Math.min(countColor(player, "brown"), countColor(player, "grey"));
+          break;
+        case "duplicate-guild":
+          points += bestOwnGuildValue(state, playerIndex);
+          break;
+        // coins/shield/victory-token/production/remove-defeats resolved on construction.
+        default:
+          break;
+      }
+    }
+  }
+  return points;
+}
+
+function distinctColors(player: PlayerState): number {
+  const colors = new Set(player.tableau.map((id) => getCardDef(cardIdName(id)).color));
+  return colors.size;
 }
 
 /** Winner: highest total, ties broken by most coins, then lowest seat index. */

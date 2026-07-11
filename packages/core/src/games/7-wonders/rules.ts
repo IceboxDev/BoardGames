@@ -1,7 +1,8 @@
 import { hasBuiltStageEffect, tableauNames } from "./board";
 import { getCardDef } from "./cards";
+import { getEdificeDef } from "./edifice";
 import { solvePayments } from "./payment";
-import type { CardId, GameState, Payment, SevenWondersAction } from "./types";
+import type { BuildWonderAction, CardId, GameState, Payment, SevenWondersAction } from "./types";
 import { cardIdName } from "./types";
 import { getWonderDef } from "./wonders";
 
@@ -15,11 +16,7 @@ export function getActivePlayer(state: GameState): number {
 
 type BuildAction =
   | { type: "play-card"; cardId: CardId; payment: Payment }
-  | {
-      type: "build-wonder";
-      cardId: CardId;
-      payment: { kind: "resources"; left: number; right: number };
-    }
+  | BuildWonderAction
   | { type: "discard"; cardId: CardId };
 
 /** Every way `playerIndex` could resolve one card: play (chain/pay/free), wonder stage, discard. */
@@ -50,9 +47,24 @@ function buildActionsForCard(state: GameState, playerIndex: number, cardId: Card
   if (player.stagesBuilt < side.stages.length) {
     const stageCost = side.stages[player.stagesBuilt].cost;
     const payments = solvePayments(state, playerIndex, stageCost);
+
+    // Edifice: may also participate in the current Age's project when it's an
+    // open project, this player hasn't joined it yet, and they can afford the
+    // stage payment plus the participation coin cost.
+    const edifice = state.edifices?.[state.age - 1];
+    const canParticipate =
+      edifice !== undefined &&
+      edifice.status === "project" &&
+      !edifice.participants.includes(playerIndex);
+    const participationCost = canParticipate ? getEdificeDef(edifice.card).cost : 0;
+
+    const stageCoinCost = stageCost.coins ?? 0;
     for (const payment of payments ?? []) {
-      if (payment.kind === "resources") {
-        actions.push({ type: "build-wonder", cardId, payment });
+      if (payment.kind !== "resources") continue;
+      actions.push({ type: "build-wonder", cardId, payment });
+      const coinsLeft = player.coins - payment.left - payment.right - stageCoinCost;
+      if (canParticipate && coinsLeft >= participationCost) {
+        actions.push({ type: "build-wonder", cardId, payment, participate: true });
       }
     }
   }

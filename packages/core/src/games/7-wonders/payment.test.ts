@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { getCardDef } from "./cards";
 import { getOwnProduction, getTradeableProduction, getTradeCost, solvePayments } from "./payment";
 import type { GameState, Payment, PlayerState, WonderId } from "./types";
-import { makeCardId } from "./types";
+import { emptyEdificeFields, makeCardId } from "./types";
 
 interface PlayerSetup {
   wonder: WonderId;
@@ -26,6 +26,7 @@ function makeState(setups: [PlayerSetup, PlayerSetup, PlayerSetup]): GameState {
     tableau: tableauIds(s.tableau ?? []),
     militaryTokens: [],
     freeBuildUsedThisAge: false,
+    ...emptyEdificeFields(),
   }));
   return {
     seed: 0,

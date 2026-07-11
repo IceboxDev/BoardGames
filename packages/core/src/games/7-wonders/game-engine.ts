@@ -3,10 +3,13 @@ import { createRng } from "../../lib/rng";
 import { countShields, hasBuiltStageEffect, instantCoins } from "./board";
 import { getCardDef } from "./cards";
 import { assignWonders, buildAgeDeck, dealHands } from "./deck";
+import type { EdificeCardDef } from "./edifice";
+import { chooseEdifices, DEBT_TOKEN_VALUE, getEdificeDef, participationPawnCount } from "./edifice";
 import { getLegalActions } from "./rules";
 import { determineWinner, scoreFinal } from "./scoring";
 import type {
   Age,
+  EdificeSlot,
   GameState,
   MilitaryOutcome,
   PendingAction,
@@ -19,6 +22,7 @@ import type {
 import {
   cardIdName,
   DISCARD_COIN_VALUE,
+  emptyEdificeFields,
   leftOf,
   MILITARY_DEFEAT_POINTS,
   MILITARY_VICTORY_POINTS,
@@ -45,6 +49,7 @@ export function createInitialState(config: SevenWondersConfig, rng?: Rng): GameS
     tableau: [],
     militaryTokens: [],
     freeBuildUsedThisAge: false,
+    ...emptyEdificeFields(),
   }));
 
   // All three decks are shuffled up front so the whole game is a pure
@@ -54,6 +59,21 @@ export function createInitialState(config: SevenWondersConfig, rng?: Rng): GameS
     2: buildAgeDeck(2, playerCount, rand),
     3: buildAgeDeck(3, playerCount, rand),
   };
+
+  const edifices = config.edifice
+    ? chooseEdifices(rand).map((card, i) => {
+        const age = (i + 1) as Age;
+        const pawns = participationPawnCount(playerCount);
+        return {
+          age,
+          card,
+          pawnsTotal: pawns,
+          pawnsLeft: pawns,
+          status: "project" as const,
+          participants: [] as number[],
+        };
+      })
+    : undefined;
 
   return {
     seed,
@@ -67,6 +87,7 @@ export function createInitialState(config: SevenWondersConfig, rng?: Rng): GameS
     discard: [],
     pendingQueue: [],
     ageDecks,
+    edifices,
     lastRevealed: [],
     actionLog: [{ type: "age-start", age: 1 }],
   };
@@ -83,7 +104,7 @@ function actionKey(a: SevenWondersAction): string {
     case "play-card":
       return `play|${a.cardId}|${paymentKey(a.payment)}`;
     case "build-wonder":
-      return `wonder|${a.cardId}|${paymentKey(a.payment)}`;
+      return `wonder|${a.cardId}|${paymentKey(a.payment)}|${a.participate ? "p" : ""}`;
     case "discard":
       return `discard|${a.cardId}`;
     case "pick-discard":
@@ -129,7 +150,14 @@ function clonePlayers(players: PlayerState[]): PlayerState[] {
     ...p,
     tableau: [...p.tableau],
     militaryTokens: [...p.militaryTokens],
+    victoryTokens: [...p.victoryTokens],
+    debtTokens: [...p.debtTokens],
+    bonusProduction: p.bonusProduction.map((set) => [...set]),
   }));
+}
+
+function cloneEdifices(edifices: EdificeSlot[] | undefined): EdificeSlot[] | undefined {
+  return edifices?.map((e) => ({ ...e, participants: [...e.participants] }));
 }
 
 /**
@@ -145,6 +173,8 @@ export function applyReveal(state: GameState): GameState {
   const players = clonePlayers(state.players);
   const hands = state.hands.map((h) => [...h]);
   const discard = [...state.discard];
+  const edifices = cloneEdifices(state.edifices);
+  const currentEdifice = edifices?.[state.age - 1];
   const plays: RevealedPlay[] = [];
   const halikarnassos: PendingAction[] = [];
 
@@ -170,6 +200,10 @@ export function applyReveal(state: GameState): GameState {
         players[i].stagesBuilt
       ];
       deltas[i] -= stage.cost.coins ?? 0;
+      // Edifice participation cost, paid alongside the Wonder-stage cost.
+      if (sel.participate && currentEdifice) {
+        deltas[i] -= getEdificeDef(currentEdifice.card).cost;
+      }
     }
   }
   for (let i = 0; i < n; i++) players[i].coins += deltas[i];
@@ -219,6 +253,39 @@ export function applyReveal(state: GameState): GameState {
     }
   }
 
+  // 3b. Edifice participation. Everyone who chose to participate this turn
+  //     takes a pawn (from the box if the card runs out — the official
+  //     same-turn rule); the project is constructed once its last pawn is
+  //     taken, immediately paying rewards to all participants.
+  const actionLog = [...state.actionLog];
+  if (currentEdifice && currentEdifice.status === "project") {
+    const joined: number[] = [];
+    for (let i = 0; i < n; i++) {
+      const sel = state.selections[i] as Selection;
+      if (
+        sel.type === "build-wonder" &&
+        sel.participate &&
+        !currentEdifice.participants.includes(i)
+      ) {
+        currentEdifice.participants.push(i);
+        joined.push(i);
+      }
+    }
+    if (joined.length > 0) {
+      currentEdifice.pawnsLeft = Math.max(0, currentEdifice.pawnsLeft - joined.length);
+      if (currentEdifice.pawnsLeft === 0) {
+        constructEdifice(currentEdifice, players);
+        actionLog.push({
+          type: "edifice",
+          age: currentEdifice.age,
+          card: currentEdifice.card,
+          outcome: "built",
+          participants: [...currentEdifice.participants],
+        });
+      }
+    }
+  }
+
   // 4. Turn 6: leftover cards are discarded, except for a Babylon-B player
   //    with the 7th-card stage built, who resolves it as a pending action
   //    (before any Halikarnassos pick, so its discard is available).
@@ -242,14 +309,47 @@ export function applyReveal(state: GameState): GameState {
     players,
     hands,
     discard,
+    edifices,
     selections: state.selections.map(() => null),
     pendingQueue,
     lastRevealed: plays,
     phase: "pending",
-    actionLog: [...state.actionLog, { type: "reveal", age: state.age, turn: state.turn, plays }],
+    actionLog: [...actionLog, { type: "reveal", age: state.age, turn: state.turn, plays }],
   };
 
   return pendingQueue.length > 0 ? next : finishTurn(next);
+}
+
+/** Flip an Edifice to built and immediately pay its rewards to every participant. */
+function constructEdifice(edifice: EdificeSlot, players: PlayerState[]): void {
+  edifice.status = "built";
+  edifice.pawnsLeft = 0;
+  const def = getEdificeDef(edifice.card);
+  for (const i of edifice.participants) {
+    const player = players[i];
+    for (const reward of def.reward) {
+      switch (reward.kind) {
+        case "coins":
+          player.coins += reward.amount;
+          break;
+        case "shield":
+          player.bonusShields += reward.amount;
+          break;
+        case "victory-token":
+          player.victoryTokens.push(reward.value);
+          break;
+        case "remove-defeat-tokens":
+          player.militaryTokens = player.militaryTokens.filter((t) => t >= 0);
+          break;
+        case "production":
+          player.bonusProduction.push([...reward.resources]);
+          break;
+        // End-game point rewards are computed at scoring from the participant list.
+        default:
+          break;
+      }
+    }
+  }
 }
 
 // ── Pending actions (Babylon 7th card, Halikarnassos discard build) ────────
@@ -366,7 +466,105 @@ function finishTurn(state: GameState): GameState {
     });
     return { ...state, hands, turn: state.turn + 1, phase: "selecting" };
   }
-  return advanceAge(resolveMilitary(state));
+  // Edifice failures resolve BEFORE military conflicts, per the rules.
+  return advanceAge(resolveMilitary(resolveEdificeEndOfAge(state)));
+}
+
+/**
+ * End of Age: if the current Age's Edifice was not constructed, it fails.
+ * Every player WITHOUT a participation pawn for it suffers the penalty; if a
+ * player cannot pay the penalty in full they lose nothing and take a Debt
+ * token instead. (Which card a discard-penalty removes is auto-resolved to the
+ * lowest-value card of that colour — the rules let the player choose.)
+ */
+export function resolveEdificeEndOfAge(state: GameState): GameState {
+  const edifice = state.edifices?.[state.age - 1];
+  if (!edifice || edifice.status !== "project") return state;
+
+  const edifices = cloneEdifices(state.edifices) as EdificeSlot[];
+  const failed = edifices[state.age - 1];
+  failed.status = "failed";
+  const def = getEdificeDef(failed.card);
+  const players = clonePlayers(state.players);
+
+  for (let i = 0; i < state.playerCount; i++) {
+    if (failed.participants.includes(i)) continue; // participants are exempt
+    applyEdificePenalty(players[i], def.penalty, state.age);
+  }
+
+  return {
+    ...state,
+    players,
+    edifices,
+    actionLog: [
+      ...state.actionLog,
+      {
+        type: "edifice",
+        age: failed.age,
+        card: failed.card,
+        outcome: "failed",
+        participants: [...failed.participants],
+      },
+    ],
+  };
+}
+
+function applyEdificePenalty(
+  player: PlayerState,
+  penalty: EdificeCardDef["penalty"],
+  age: Age,
+): void {
+  const takeDebt = () => player.debtTokens.push(DEBT_TOKEN_VALUE[age]);
+
+  switch (penalty.kind) {
+    case "coins": {
+      if (player.coins >= penalty.amount) player.coins -= penalty.amount;
+      else takeDebt();
+      break;
+    }
+    case "discard-color": {
+      const candidates = player.tableau.filter(
+        (id) => getCardDef(cardIdName(id)).color === penalty.color,
+      );
+      if (candidates.length === 0) {
+        takeDebt();
+        break;
+      }
+      // Discard the lowest-value card of that colour (fewest fixed VP).
+      const worst = candidates.reduce((lo, id) =>
+        cardPointValue(id) < cardPointValue(lo) ? id : lo,
+      );
+      player.tableau = player.tableau.filter((id) => id !== worst);
+      break;
+    }
+    case "lose-victory-tokens": {
+      // "Military Victory tokens" = positive conflict tokens + Edifice VP tokens.
+      const total = player.militaryTokens.filter((t) => t > 0).length + player.victoryTokens.length;
+      if (total < penalty.amount) {
+        takeDebt();
+        break;
+      }
+      let toRemove = penalty.amount;
+      // Remove the smallest-valued tokens first.
+      const positives = player.militaryTokens.filter((t) => t > 0).sort((a, b) => a - b);
+      const kept: number[] = [...player.militaryTokens.filter((t) => t <= 0)];
+      for (const t of positives) {
+        if (toRemove > 0) toRemove--;
+        else kept.push(t);
+      }
+      player.militaryTokens = kept;
+      player.victoryTokens = [...player.victoryTokens].sort((a, b) => a - b).slice(toRemove);
+      break;
+    }
+  }
+}
+
+function cardPointValue(cardId: string): number {
+  let points = 0;
+  for (const effect of getCardDef(cardIdName(cardId)).effects) {
+    if (effect.kind === "points") points += effect.amount;
+  }
+  return points;
 }
 
 /** End-of-age conflicts: each adjacent pair compares shields once. */
