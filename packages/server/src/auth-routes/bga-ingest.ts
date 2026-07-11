@@ -3,8 +3,10 @@
 // sits OUTSIDE the requireAuth umbrella (precedent: /api/ical) and is gated
 // by the opaque ingest token minted with the bridge session instead.
 
+import { appendFileSync } from "node:fs";
 import {
   BGA_EVENT_PAYLOAD_MAX,
+  type BgaEvent,
   IngestBgaEventsRequestSchema,
   IngestBgaEventsResponseSchema,
 } from "@boardgames/core/protocol";
@@ -14,6 +16,24 @@ import { ingestBgaEvents } from "../lib/bga-sessions.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 
 export const bgaIngestRoutes = publicApp();
+
+// Dev-only durable capture of every ingested BGA event, so a bridged game can
+// be replayed for debugging (the in-memory session buffer is ephemeral). Off
+// in production; path overridable via BGA_DEBUG_LOG.
+const DEBUG_LOG =
+  process.env.NODE_ENV !== "production"
+    ? (process.env.BGA_DEBUG_LOG ?? "bga-ingest-debug.jsonl")
+    : null;
+
+function logEvents(sessionId: string, events: BgaEvent[]): void {
+  if (!DEBUG_LOG) return;
+  try {
+    const lines = events.map((event) => `${JSON.stringify({ sessionId, ...event })}\n`).join("");
+    appendFileSync(DEBUG_LOG, lines);
+  } catch {
+    // Never let debug logging affect ingest.
+  }
+}
 
 bgaIngestRoutes.post(
   "/",
@@ -41,6 +61,8 @@ bgaIngestRoutes.post(
             : "PAYLOAD_TOO_LARGE";
       return errorResponse(c, result.status, result.error, code);
     }
+
+    logEvents(result.sessionId, events);
 
     return c.json(
       IngestBgaEventsResponseSchema.parse({
