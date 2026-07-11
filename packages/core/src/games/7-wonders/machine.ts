@@ -10,6 +10,7 @@ import { determineWinner, scoreFinal } from "./scoring";
 import type {
   Age,
   CardId,
+  EdificeSlot,
   GamePhase,
   GameState,
   LogEntry,
@@ -39,6 +40,7 @@ export type SevenWondersEvent =
       humanPlayers?: number[];
       seed?: number;
       sideMode?: "A" | "B" | "random";
+      edifice?: boolean;
     }
   | { type: "PLAYER_ACTION"; playerIndex: number; action: SevenWondersAction }
   | { type: "RESET" };
@@ -62,6 +64,13 @@ export interface SevenWondersPlayerBoardView {
   hasSelected: boolean;
 }
 
+export interface SevenWondersPlayerBoardEdifice {
+  victoryTokens: number[];
+  debtTokens: number[];
+  /** Ages this player holds a participation pawn for. */
+  participation: Age[];
+}
+
 export interface SevenWondersPlayerView {
   phase: GamePhase;
   age: Age;
@@ -74,6 +83,10 @@ export interface SevenWondersPlayerView {
   /** Only present for the Halikarnassos player while their pick is pending. */
   discardCards?: CardId[];
   pending: PendingAction | null;
+  /** Edifice projects, one per Age. Absent in a base game. */
+  edifices?: EdificeSlot[];
+  /** Per-player Edifice holdings (tokens/pawns), aligned with `players`. */
+  playerEdifice?: SevenWondersPlayerBoardEdifice[];
   lastRevealed: RevealedPlay[];
   actionLog: LogEntry[];
 }
@@ -171,6 +184,7 @@ export const sevenWondersMachine = setup({
         playerCount: event.playerCount,
         seed: event.seed ?? randomSeed(),
         sideMode: event.sideMode ?? "random",
+        edifice: event.edifice,
       });
       const humanPlayers =
         event.humanPlayers ?? Array.from({ length: event.playerCount }, (_, i) => i);
@@ -398,6 +412,18 @@ export function buildPlayerView(ctx: SevenWondersContext, player: number): Seven
     discardCount: gs.discard.length,
     ...(showDiscard ? { discardCards: gs.discard } : {}),
     pending,
+    ...(gs.edifices
+      ? {
+          edifices: gs.edifices,
+          playerEdifice: gs.players.map((p, i) => ({
+            victoryTokens: p.victoryTokens,
+            debtTokens: p.debtTokens,
+            participation: (gs.edifices ?? [])
+              .filter((slot) => slot.participants.includes(i))
+              .map((slot) => slot.age),
+          })),
+        }
+      : {}),
     lastRevealed: gs.lastRevealed,
     actionLog: gs.actionLog,
   };

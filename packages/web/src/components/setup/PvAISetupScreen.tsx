@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from "react";
+import { type ReactNode, useCallback, useMemo, useState } from "react";
 import { MinusIcon, PlusIcon } from "../icons";
 import { Button } from "../ui/Button";
 import { IconButton } from "../ui/IconButton";
@@ -32,6 +32,8 @@ export interface PvAISetupScreenProps {
   defaultStrategy?: string;
   /** Called when user clicks Start. */
   onStart: (playerCount: number, strategyId: string) => void;
+  /** Optional extra controls (e.g. an expansion toggle) shown above Start. */
+  extraControls?: ReactNode;
 }
 
 // ---------------------------------------------------------------------------
@@ -117,6 +119,7 @@ export function PvAISetupScreen({
   strategies: strategiesProp,
   defaultStrategy,
   onStart,
+  extraControls,
 }: PvAISetupScreenProps) {
   const initialPlayerCount = defaultPlayerCount ?? playerCounts?.[0] ?? 2;
   const [playerCount, setPlayerCount] = useState(initialPlayerCount);
@@ -210,6 +213,8 @@ export function PvAISetupScreen({
           );
         })}
       </div>
+
+      {extraControls && <div className="mb-6 flex justify-center">{extraControls}</div>}
 
       <div className="flex justify-center pt-2">
         <Button variant="primary" size="lg" onClick={handleStart}>

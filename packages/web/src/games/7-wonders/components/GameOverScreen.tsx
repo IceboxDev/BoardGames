@@ -9,6 +9,7 @@ const CATEGORIES = [
   { key: "commercial", label: "🏺 Commercial" },
   { key: "guilds", label: "👥 Guilds" },
   { key: "science", label: "⚙️ Science" },
+  { key: "edifice", label: "🏛 Edifice" },
 ] as const;
 
 interface GameOverScreenProps {
@@ -30,6 +31,10 @@ export default function GameOverScreen({
     seat: i,
     label: i === myIndex ? "You" : `P${i + 1}`,
   }));
+  // Hide the Edifice row entirely in a base game (all zero).
+  const categories = CATEGORIES.filter(
+    (c) => c.key !== "edifice" || result.breakdowns.some((b) => b.edifice !== 0),
+  );
 
   return (
     <GameOverLayout
@@ -62,7 +67,7 @@ export default function GameOverScreen({
             </tr>
           </thead>
           <tbody>
-            {CATEGORIES.map(({ key, label }) => (
+            {categories.map(({ key, label }) => (
               <tr key={key} className="border-t border-white/5 text-fg-primary">
                 <td className="px-3 py-1 text-left text-fg-secondary">{label}</td>
                 {columns.map((col) => (

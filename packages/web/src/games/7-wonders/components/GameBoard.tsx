@@ -9,11 +9,12 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import ActionLog from "../../../components/action-log/ActionLog";
 import { CardFan } from "../../../components/card-fan";
 import GameScreen from "../../../components/game-layout/GameScreen";
-import { Button } from "../../../components/ui";
+import { Button, Chip } from "../../../components/ui";
 import { AGE_LABEL, SCIENCE_GLYPH } from "../card-utils";
 import { mapSevenWondersLog } from "../log-mapper";
 import { CardFaceHand } from "./CardFace";
 import DiscardPickerOverlay from "./DiscardPickerOverlay";
+import EdificePanel from "./EdificePanel";
 import MilitaryBanner from "./MilitaryBanner";
 import PaymentModal from "./PaymentModal";
 import PlayerPanel from "./PlayerPanel";
@@ -26,6 +27,7 @@ type InnerAction =
       type: "build-wonder";
       cardId: CardId;
       payment: { kind: "resources"; left: number; right: number };
+      participate?: boolean;
     }
   | { type: "discard"; cardId: CardId };
 
@@ -47,10 +49,12 @@ export default function GameBoard({
   onShowResults,
 }: GameBoardProps) {
   const [selectedCardId, setSelectedCardId] = useState<CardId | null>(null);
+  const [participateNext, setParticipateNext] = useState(false);
   const [paymentPick, setPaymentPick] = useState<{
     cardId: CardId;
     intent: "play" | "wonder";
     options: Payment[];
+    participate: boolean;
   } | null>(null);
 
   const me = view.me;
@@ -114,27 +118,41 @@ export default function GameBoard({
         a.type === "play-card" && a.cardId === selectedCardId ? [a.payment] : [],
       )
     : [];
+  // Distinct wonder-stage payments (both participate and non-participate build
+  // actions share a payment; dedupe so the option list isn't doubled).
   const wonderOptions = selectedCardId
-    ? effectiveActions.flatMap((a) =>
-        a.type === "build-wonder" && a.cardId === selectedCardId ? [a.payment] : [],
+    ? dedupePayments(
+        effectiveActions.flatMap((a) =>
+          a.type === "build-wonder" && a.cardId === selectedCardId ? [a.payment] : [],
+        ),
       )
     : [];
+  const currentEdifice = view.edifices?.[view.age - 1];
+  const alreadyJoined =
+    currentEdifice !== undefined &&
+    (view.playerEdifice?.[myIndex]?.participation ?? []).includes(currentEdifice.age);
+  const canParticipate =
+    !!selectedCardId &&
+    effectiveActions.some(
+      (a) => a.type === "build-wonder" && a.cardId === selectedCardId && a.participate,
+    );
   const canDiscard = selectedCardId
     ? effectiveActions.some((a) => a.type === "discard" && a.cardId === selectedCardId)
     : false;
 
   const pickWithOptions = (intent: "play" | "wonder", options: Payment[]) => {
     if (!selectedCardId) return;
+    const participate = intent === "wonder" && participateNext && canParticipate;
     if (options.length === 1) {
       const payment = options[0];
       if (intent === "play") {
         sendInner({ type: "play-card", cardId: selectedCardId, payment });
       } else if (payment.kind === "resources") {
-        sendInner({ type: "build-wonder", cardId: selectedCardId, payment });
+        sendInner({ type: "build-wonder", cardId: selectedCardId, payment, participate });
       }
       return;
     }
-    setPaymentPick({ cardId: selectedCardId, intent, options });
+    setPaymentPick({ cardId: selectedCardId, intent, options, participate });
   };
 
   const opponents = Array.from({ length: n - 1 }, (_, k) => {
@@ -236,6 +254,19 @@ export default function GameBoard({
                 >
                   Wonder stage
                 </Button>
+                {currentEdifice && currentEdifice.status === "project" && !alreadyJoined && (
+                  <Chip
+                    pressed={participateNext}
+                    tone="amber"
+                    variant="outlined"
+                    size="sm"
+                    disabled={!canParticipate}
+                    onClick={() => setParticipateNext((v) => !v)}
+                    title={`Participate in ${currentEdifice.card}`}
+                  >
+                    🏛 Join{participateNext ? " ✓" : ""}
+                  </Chip>
+                )}
                 <Button
                   variant="secondary"
                   size="xs"
@@ -256,6 +287,7 @@ export default function GameBoard({
           </div>
         }
       >
+        {view.edifices && <EdificePanel view={view} myIndex={myIndex} />}
         <div className="flex flex-wrap gap-2">
           {opponents.map(({ idx, neighborSide }) => (
             <PlayerPanel
@@ -296,7 +328,12 @@ export default function GameBoard({
             if (paymentPick.intent === "play") {
               sendInner({ type: "play-card", cardId: paymentPick.cardId, payment });
             } else if (payment.kind === "resources") {
-              sendInner({ type: "build-wonder", cardId: paymentPick.cardId, payment });
+              sendInner({
+                type: "build-wonder",
+                cardId: paymentPick.cardId,
+                payment,
+                participate: paymentPick.participate,
+              });
             }
           }}
           onClose={() => setPaymentPick(null)}
@@ -320,4 +357,17 @@ export default function GameBoard({
       )}
     </>
   );
+}
+
+/** Distinct resource-payment splits (drops participate/non-participate dupes). */
+function dedupePayments(payments: Payment[]): Payment[] {
+  const seen = new Set<string>();
+  const out: Payment[] = [];
+  for (const p of payments) {
+    const key = p.kind === "resources" ? `r:${p.left}:${p.right}` : p.kind;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(p);
+  }
+  return out;
 }

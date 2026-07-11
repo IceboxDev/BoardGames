@@ -22,6 +22,7 @@ export default function SevenWonders({ source }: GameComponentProps) {
   >();
 
   const [lastPlayerCount, setLastPlayerCount] = useState(3);
+  const [lastEdifice, setLastEdifice] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const lastViewRef = useRef<SevenWondersPlayerView | null>(null);
 
@@ -36,9 +37,10 @@ export default function SevenWonders({ source }: GameComponentProps) {
   }, [source, mp.reset, game.reset, def.slug, navigate]);
 
   const handleSoloStart = useCallback(
-    (playerCount: number) => {
+    (playerCount: number, edifice: boolean) => {
       setLastPlayerCount(playerCount);
-      game.start({ playerCount, humanPlayers: [0] });
+      setLastEdifice(edifice);
+      game.start({ playerCount, humanPlayers: [0], edifice });
     },
     [game.start],
   );
@@ -74,7 +76,7 @@ export default function SevenWonders({ source }: GameComponentProps) {
           onMenu={backToMenu}
           onPlayAgain={() => {
             setShowResults(false);
-            handleSoloStart(lastPlayerCount);
+            handleSoloStart(lastPlayerCount, lastEdifice);
           }}
         />
       );
