@@ -256,6 +256,17 @@ function parseCoop(v: Record<string, unknown>): ParseResult<MatchOutcomeCoop> {
   const difficulty = asOptionalString(v.difficulty, 64);
   const details = asOptionalString(v.details, 1000);
   const scenario = asOptionalString(v.scenario, 64);
+  // Optional D&D Dungeon Master — non-competing, mirrors the teams moderator.
+  let moderator: MatchOutcomeCoop["moderator"];
+  if (v.moderator !== undefined && v.moderator !== null) {
+    const m = parseParticipant(v.moderator, "moderator");
+    if (!m.ok) return m;
+    const role =
+      isPlainObject(v.moderator) && v.moderator.role !== undefined
+        ? asOptionalString(v.moderator.role, 64)
+        : undefined;
+    moderator = { ...m.value, ...(role !== undefined ? { role } : {}) };
+  }
   return {
     ok: true,
     value: {
@@ -267,6 +278,7 @@ function parseCoop(v: Record<string, unknown>): ParseResult<MatchOutcomeCoop> {
       ...(details !== undefined ? { details } : {}),
       ...(scenario !== undefined ? { scenario } : {}),
       ...(campaign !== undefined ? { campaign } : {}),
+      ...(moderator ? { moderator } : {}),
     },
   };
 }
@@ -341,6 +353,7 @@ export function collectUserIds(outcome: MatchOutcome): Set<string> {
       break;
     case "coop":
       for (const p of outcome.participants) ids.add(p.userId);
+      if (outcome.moderator) ids.add(outcome.moderator.userId);
       break;
     case "one-vs-many":
       ids.add(outcome.solo.userId);
@@ -383,7 +396,13 @@ export function refreshDisplayNames(
         players: outcome.players.map((p) => ({ ...p, ...fresh(p) })),
       };
     case "coop":
-      return { ...outcome, participants: outcome.participants.map(fresh) };
+      return {
+        ...outcome,
+        participants: outcome.participants.map((p) => ({ ...p, ...fresh(p) })),
+        ...(outcome.moderator
+          ? { moderator: { ...outcome.moderator, ...fresh(outcome.moderator) } }
+          : {}),
+      };
     case "one-vs-many":
       return {
         ...outcome,

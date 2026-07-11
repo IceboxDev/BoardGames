@@ -3,6 +3,7 @@ import { useId } from "react";
 import { Chip } from "../../ui/Chip";
 import { Field, FieldGroup } from "../../ui/Field";
 import { Input } from "../../ui/Input";
+import { Select } from "../../ui/Select";
 import { Surface } from "../../ui/Surface";
 import { DND_CONDITIONS, type DndCondition, resolutionOf } from "../dnd";
 import { ParticipantPicker } from "../ParticipantPicker";
@@ -31,13 +32,39 @@ function withCondition(p: CoopPlayer, condition: DndCondition | undefined): Coop
  *     so a multi-session story isn't retyped each sitting;
  *   - a three-state resolution (Ongoing / Party won / Party lost) — "Ongoing" is
  *     a session that doesn't conclude the story (a two-shot's first sitting);
- *   - a per-player condition (Down / Died) — the only per-player datum.
+ *   - a per-player condition (Down / Died) — the only per-player datum;
+ *   - a Dungeon Master, the non-competing player who runs the game (the same
+ *     `moderator` slot Blood on the Clocktower uses for the Storyteller). The DM
+ *     is NOT one of the adventurers, so they don't count toward the party.
  */
 export function DndForm({ users, value, onChange, openCampaigns }: Props) {
   const campaignId = useId();
   const listId = useId();
+  const dmId = useId();
   const selectedIds = value.participants.map((p) => p.userId);
   const resolution = resolutionOf(value);
+
+  function setDm(userId: string) {
+    // "" clears the DM and returns them to the party.
+    if (!userId) {
+      if (!value.moderator) return;
+      const back = { userId: value.moderator.userId, displayName: value.moderator.displayName };
+      const { moderator: _drop, ...rest } = value;
+      onChange({ ...rest, participants: [...value.participants, back] });
+      return;
+    }
+    const user = users.find((u) => u.id === userId);
+    if (!user) return;
+    // Pull the new DM out of the party; return any previous DM to it.
+    let participants = value.participants.filter((p) => p.userId !== user.id);
+    if (value.moderator && value.moderator.userId !== user.id) {
+      participants = [
+        ...participants,
+        { userId: value.moderator.userId, displayName: value.moderator.displayName },
+      ];
+    }
+    onChange({ ...value, participants, moderator: { userId: user.id, displayName: user.name } });
+  }
 
   function setParticipants(participants: Participant[]) {
     // Keep each surviving player's condition; new players start unscathed.
@@ -118,6 +145,25 @@ export function DndForm({ users, value, onChange, openCampaigns }: Props) {
 
       <Field label="Players" htmlFor="dnd-players">
         <ParticipantPicker users={users} selectedIds={selectedIds} onChange={setParticipants} />
+      </Field>
+
+      <Field label="Dungeon Master" htmlFor={dmId} hint="Runs the game — not counted in the party">
+        <Select
+          id={dmId}
+          compact
+          value={value.moderator?.userId ?? ""}
+          onChange={(e) => setDm(e.target.value)}
+        >
+          <option value="">— none —</option>
+          {value.moderator && !users.some((u) => u.id === value.moderator?.userId) && (
+            <option value={value.moderator.userId}>{value.moderator.displayName}</option>
+          )}
+          {users.map((u) => (
+            <option key={u.id} value={u.id}>
+              {u.name}
+            </option>
+          ))}
+        </Select>
       </Field>
 
       {value.participants.length > 0 && (

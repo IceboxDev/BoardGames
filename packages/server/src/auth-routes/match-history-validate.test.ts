@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { parseOutcome } from "./match-history-validate.ts";
+import { collectUserIds, parseOutcome, refreshDisplayNames } from "./match-history-validate.ts";
 
 describe("parseOutcome — free-for-all role round-trip", () => {
   it("preserves each player's role (Villainous villain) and the winner's rank", () => {
@@ -153,5 +153,55 @@ describe("parseOutcome — D&D co-op (campaign + condition)", () => {
         participants: [{ userId: "u1", displayName: "Alice", condition: "stunned" }],
       }).ok,
     ).toBe(false);
+  });
+
+  it("parses the Dungeon Master (moderator) and keeps them out of the party", () => {
+    const result = parseOutcome({
+      kind: "coop",
+      campaign: "Curse of Strahd",
+      participants: [{ userId: "u1", displayName: "Alice" }],
+      moderator: { userId: "u2", displayName: "Bob" },
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "coop") {
+      expect(result.value.moderator?.userId).toBe("u2");
+      expect(result.value.participants).toHaveLength(1);
+    }
+  });
+
+  it("collectUserIds includes the DM so their name refreshes", () => {
+    const outcome = parseOutcome({
+      kind: "coop",
+      campaign: "x",
+      participants: [{ userId: "u1", displayName: "Alice" }],
+      moderator: { userId: "u2", displayName: "Bob" },
+    });
+    if (outcome.ok) {
+      expect(collectUserIds(outcome.value)).toEqual(new Set(["u1", "u2"]));
+    }
+  });
+
+  it("refreshDisplayNames preserves per-player condition and updates the DM name", () => {
+    const parsed = parseOutcome({
+      kind: "coop",
+      campaign: "x",
+      outcome: "loss",
+      participants: [{ userId: "u1", displayName: "old", condition: "dead" }],
+      moderator: { userId: "u2", displayName: "old" },
+    });
+    if (!parsed.ok) throw new Error("expected ok");
+    const refreshed = refreshDisplayNames(
+      parsed.value,
+      new Map([
+        ["u1", "Alice"],
+        ["u2", "Bob"],
+      ]),
+    );
+    if (refreshed.kind === "coop") {
+      // Regression: the condition must survive the name-refresh round-trip.
+      expect(refreshed.participants[0].condition).toBe("dead");
+      expect(refreshed.participants[0].displayName).toBe("Alice");
+      expect(refreshed.moderator?.displayName).toBe("Bob");
+    }
   });
 });

@@ -164,6 +164,22 @@ describe("MatchOutcomeSchema", () => {
     ).toThrow();
   });
 
+  it("keeps the D&D Dungeon Master (moderator) separate from the party", () => {
+    const parsed = MatchOutcomeSchema.parse({
+      kind: "coop",
+      campaign: "Curse of Strahd",
+      outcome: "win",
+      participants: [sampleParticipant("u1", "Alice"), sampleParticipant("u2", "Bob")],
+      moderator: sampleParticipant("u3", "Cara"),
+    });
+    if (parsed.kind === "coop") {
+      expect(parsed.participants).toHaveLength(2);
+      expect(parsed.moderator?.userId).toBe("u3");
+      // The DM is not one of the adventurers.
+      expect(parsed.participants.some((p) => p.userId === "u3")).toBe(false);
+    }
+  });
+
   it("rejects teams with a winner index out of range", () => {
     expect(() => MatchOutcomeSchema.parse({ ...sampleTeams, winnerTeamIndices: [5] })).toThrow(
       /out of range/,

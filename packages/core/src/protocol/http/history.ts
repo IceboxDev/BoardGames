@@ -134,6 +134,11 @@ const MatchOutcomeCoopSchema = z.object({
   // concludes, the final session is recorded with `outcome` win/loss. The
   // refinement below accepts `campaign` in lieu of an outcome/score.
   campaign: z.string().min(1).max(120).optional(),
+  // D&D Dungeon Master — the non-competing player who runs the game, exactly
+  // like Blood on the Clocktower's Storyteller (`moderator` on `teams`). NOT one
+  // of the `participants`, so the party count excludes them. Reuses the same
+  // shape/field name as teams for a single moderator concept across kinds.
+  moderator: ModeratorSchema.optional(),
 });
 export type MatchOutcomeCoop = z.infer<typeof MatchOutcomeCoopSchema>;
 

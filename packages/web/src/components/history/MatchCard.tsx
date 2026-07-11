@@ -538,7 +538,42 @@ function DndInline({
           </span>
         );
       })}
+      {outcome.moderator && (
+        <DungeonMaster moderator={outcome.moderator} currentUserId={currentUserId} />
+      )}
     </div>
+  );
+}
+
+// The Dungeon Master, shown exactly like Blood on the Clocktower's Storyteller:
+// a muted avatar with a book-icon overlay marking "runs the game", set off from
+// the party by a divider. Reuses the same visual language as {@link Storyteller}.
+function DungeonMaster({
+  moderator,
+  currentUserId,
+}: {
+  moderator: NonNullable<MatchOutcomeCoop["moderator"]>;
+  currentUserId: string | null;
+}) {
+  const title = `${moderator.displayName} — Dungeon Master`;
+  return (
+    <span className="inline-flex items-center gap-1 border-l border-white/5 pl-2" title={title}>
+      <span className="relative inline-flex">
+        <AvatarBubble
+          name={moderator.displayName}
+          tone="muted"
+          title={title}
+          isMe={moderator.userId === currentUserId}
+        />
+        <span
+          aria-hidden="true"
+          className="absolute -right-1 -bottom-1 inline-grid h-3.5 w-3.5 place-items-center rounded-full bg-surface-900 text-accent-300 ring-1 ring-white/10"
+        >
+          <BookIcon className="h-2.5 w-2.5" />
+        </span>
+      </span>
+      <MicroLabel>DM</MicroLabel>
+    </span>
   );
 }
 

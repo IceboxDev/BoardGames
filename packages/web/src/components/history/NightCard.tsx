@@ -66,9 +66,11 @@ export function NightCard({
           </Button>
         )}
       </header>
-      {/* Reorder is admin-only and pointless with fewer than two matches — every
-          other case (incl. standalone day-buckets) renders the plain list. */}
-      {isAdmin && onReorder && matches.length >= 2 ? (
+      {/* Reorder is admin-only. A single match can't actually move, but it still
+          renders through ReorderableMatches so its grip column keeps it aligned
+          with multi-match nights (a lone standalone game looked indented before).
+          Non-admins get the plain list with no grip. */}
+      {isAdmin && onReorder && matches.length >= 1 ? (
         <ReorderableMatches
           matches={matches}
           isAdmin={isAdmin}
