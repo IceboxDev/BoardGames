@@ -152,9 +152,12 @@ Games with non-card-style spatial layouts (maps, instrument panels, hex grids, d
 
 **For a catalog-only entry** (browse + RSVP voting, no playable surface — covers most additions):
 
-1. Run `pnpm bgg-sync --add` after adding `{ slug, bggId, displayTitle? }` to `scripts/bgg-new-games.json`. The script downloads the thumbnail, optimizes it, computes the accent hex, and appends a new entry to `packages/core/src/games/catalog.json`.
-2. Optional: run `pnpm gen-descriptions --slug <slug>` to populate `packages/web/src/games/<slug>/descriptions.generated.ts`. Catalog entries without this file fall back to BGG's raw description.
-3. No code changes needed — the registry picks it up.
+1. Run `pnpm bgg-sync --add` after adding `{ slug, bggId, displayTitle? }` to `scripts/bgg-new-games.json`. It downloads a BGG image, optimizes it, computes the accent hex, and appends a new entry to `packages/core/src/games/catalog.json`.
+2. **Thumbnail (required).** The downloaded BGG image is a raw box photo — a *placeholder*, not the finished thumbnail. Add a prompt to the root `PROMPTS.md` (mirror a sibling entry; reuse a family's shared style block if the game belongs to one), generate the 16:9 house-style art, and replace `assets/thumbnail.png`.
+3. **Descriptions (required).** Run `pnpm gen-descriptions --slug <slug>` to write the three length variants. Without them the game falls back to BGG's raw HTML description, which reads nothing like the rest of the catalog.
+4. No code changes needed — the registry picks it up.
+
+Steps 2 and 3 are not optional: `catalog-completeness.test.ts` fails the build for any catalog game missing its descriptions file or its `PROMPTS.md` prompt, and `bgg-sync --add` prints the same checklist on completion.
 
 **For a playable game**: do the catalog-entry steps above, then:
 

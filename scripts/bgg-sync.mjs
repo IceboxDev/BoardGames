@@ -410,6 +410,23 @@ async function main() {
 
   console.log(`[bgg-sync] wrote ${written} entry/entries to snapshot + db`);
   if (missing > 0) console.warn(`[bgg-sync] ${missing} entries missing from BGG response`);
+
+  // A scaffolded game is NOT finished: the downloaded thumbnail is a raw BGG box
+  // photo (usually square, with logos/promo stickers), not the 16:9 house-style
+  // art, and it has no length-variant descriptions yet. The
+  // `catalog-completeness` test blocks a commit that skips these — spell out the
+  // steps here so they aren't discovered as a red CI run.
+  if (flags.add && newCatalogEntries.length > 0) {
+    console.log("\n[bgg-sync] ⚠ scaffolded games are placeholders — before committing, per slug:");
+    for (const e of newCatalogEntries) {
+      console.log(`\n  ${e.slug}:`);
+      console.log(`    1. Add a thumbnail prompt to PROMPTS.md (mirror a sibling; share a`);
+      console.log(`       family's style block if it belongs to one), generate the 16:9 art,`);
+      console.log(`       and replace assets/thumbnail.png (the BGG box photo is a placeholder).`);
+      console.log(`    2. pnpm gen-descriptions --slug ${e.slug}`);
+    }
+    console.log("");
+  }
 }
 
 main().catch((err) => {
