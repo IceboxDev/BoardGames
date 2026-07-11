@@ -732,6 +732,14 @@ Every prompt includes the same style directive so the four images form a visuall
 
 ---
 
+## 92. Intarsia
+
+**File:** `packages/web/src/games/intarsia/assets/thumbnail.png`
+
+> A top-down view of an elegant Café de Paris mid-renovation, its herringbone parquet floor spread across the frame like a game board and lit by a warm brass chandelier overhead. Across the honey-toned wood, several personal floor-boards hold half-finished intarsia ornaments — filigree inlays puzzled together from the outside inwards: square outer frames of dark walnut, nested midsections of amber maple and rosewood, and tiny turned center-tables of pale birch, each ornament a little concentric jewel of marquetry, some complete and some with an empty core waiting for its last piece. Loose wooden elements rest at the edges in sorted heaps by grain and hue, alongside neat stacks of colored material cards — teal, crimson, ochre, and forest green — with a bright fan curling in at the bottom edge and one card poised mid-play. A row of face-up tool tiles runs along one side, each stamped with a target inlay pattern to match, and a reward-track of little wooden discs curves nearby. Scattered craftsman's touches dress the scene: a fine chisel and wooden mallet, a curl of pale wood shavings, a brass compass, a glass of red wine catching the light, and a single café demitasse at the periphery. The mood is warm and exacting — the quiet satisfaction of precise woodcraft, beauty assembled piece by piece. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
 # Background Image Prompts
 
 All backgrounds were generated with **ChatGPT (image generation)** on March 18, 2026.
