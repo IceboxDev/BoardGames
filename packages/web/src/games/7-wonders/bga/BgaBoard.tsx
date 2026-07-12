@@ -3,6 +3,9 @@ import type {
   BgaPlayerView,
   BgaSpectatorView,
 } from "@boardgames/core/games/7-wonders/bga/types";
+import CardSprite from "./CardSprite";
+
+type ImgMap = BgaSpectatorView["cardImg"];
 
 const CATEGORY_HEX: Record<string, string> = {
   raw: "#92603a",
@@ -20,44 +23,39 @@ const EDIFICE_STATUS: Record<BgaEdificeView["status"], { label: string; cls: str
   failed: { label: "Failed", cls: "border-rose-500/40 bg-rose-500/5" },
 };
 
-function HandView({ hand }: { hand: BgaPlayerView["hand"] }) {
+function HandView({ hand, cardImg }: { hand: BgaPlayerView["hand"]; cardImg: ImgMap }) {
   if (!hand || hand.size === 0) return null;
   const exact = hand.cards.length === hand.size && !hand.deduced;
   const surplus = hand.cards.length - hand.size; // candidates buried under wonders
   const missing = hand.size - hand.cards.length; // unidentified (elimination gaps)
 
-  let note = "";
-  if (hand.deduced) note = hand.uncertain ? " · deduced, guilds uncertain" : " · deduced";
-  else if (surplus > 0) note = ` · ${surplus} buried under wonder`;
-  else if (missing > 0) note = ` · ${missing} unknown`;
+  let note = "known";
+  if (hand.deduced) note = hand.uncertain ? "deduced · guilds uncertain" : "deduced";
+  else if (surplus > 0) note = `${surplus} buried under wonder`;
+  else if (missing > 0) note = `${missing} unknown`;
 
   return (
-    <div className="mt-0.5 rounded border border-sky-500/25 bg-sky-500/5 px-1 py-0.5">
-      <div className="flex items-center gap-1 text-4xs text-sky-300">
+    <div className="mt-0.5 rounded border border-sky-500/25 bg-sky-500/5 px-1 py-1">
+      <div className="flex items-center gap-1 pb-0.5 text-4xs text-sky-300">
         <span>🂠 hand ({hand.size})</span>
-        {exact ? (
-          <span className="text-emerald-400">known</span>
-        ) : (
-          <span className="text-amber-300/80">{note.replace(/^ · /, "")}</span>
-        )}
+        <span className={exact ? "text-emerald-400" : "text-amber-300/80"}>{note}</span>
       </div>
-      <div className="flex flex-wrap gap-0.5 pt-0.5">
+      <div className="flex flex-wrap gap-0.5">
         {hand.cards.map((name, i) => (
-          <span
+          <CardSprite
             // biome-ignore lint/suspicious/noArrayIndexKey: candidate list with legit duplicate names
             key={`${name}-${i}`}
-            className="rounded bg-surface-800/80 px-1 py-px text-4xs leading-tight text-sky-100"
-            title={name}
-          >
-            {name}
-          </span>
+            img={cardImg[name]}
+            name={name}
+            width={40}
+          />
         ))}
       </div>
     </div>
   );
 }
 
-function PlayerCard({ player }: { player: BgaPlayerView }) {
+function PlayerCard({ player, cardImg }: { player: BgaPlayerView; cardImg: ImgMap }) {
   const military = player.militaryTokens.reduce((a, b) => a + b, 0);
   const sci = player.science;
   const byCategory = new Map<string, string[]>();
@@ -109,21 +107,23 @@ function PlayerCard({ player }: { player: BgaPlayerView }) {
       </div>
 
       {/* Tableau grouped by category */}
-      <div className="flex flex-col gap-0.5">
+      <div className="flex flex-col gap-1">
         {order
           .filter((cat) => byCategory.has(cat))
           .map((cat) => (
-            <div key={cat || "other"} className="flex flex-wrap gap-0.5">
+            <div
+              key={cat || "other"}
+              className="flex flex-wrap gap-0.5 border-l-2 pl-1"
+              style={{ borderColor: `${CATEGORY_HEX[cat] ?? "#666"}90` }}
+            >
               {(byCategory.get(cat) ?? []).map((name, i) => (
-                <span
+                <CardSprite
                   // biome-ignore lint/suspicious/noArrayIndexKey: append-only tableau with legit duplicate card names
                   key={`${name}-${i}`}
-                  className="rounded border px-1 py-px text-4xs leading-tight text-fg-primary"
-                  style={{ borderColor: `${CATEGORY_HEX[cat] ?? "#666"}90` }}
-                  title={name}
-                >
-                  {name}
-                </span>
+                  img={cardImg[name]}
+                  name={name}
+                  width={38}
+                />
               ))}
             </div>
           ))}
@@ -132,7 +132,7 @@ function PlayerCard({ player }: { player: BgaPlayerView }) {
         )}
       </div>
 
-      <HandView hand={player.hand} />
+      <HandView hand={player.hand} cardImg={cardImg} />
     </div>
   );
 }
@@ -187,7 +187,7 @@ export default function BgaBoard({ view }: { view: BgaSpectatorView }) {
 
       <div className="flex flex-wrap gap-2">
         {view.players.map((player) => (
-          <PlayerCard key={player.id} player={player} />
+          <PlayerCard key={player.id} player={player} cardImg={view.cardImg} />
         ))}
       </div>
     </div>

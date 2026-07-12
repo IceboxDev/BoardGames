@@ -175,6 +175,8 @@ interface EdificeAcc {
 export interface BgaFoldState {
   gamedatasSeen: boolean;
   cardTypes: Map<string, CardTypeDef>;
+  /** Card name -> spritesheet cell index (BGA `img`, 0-76 row-major). */
+  cardImg: Map<string, number>;
   wonders: Map<string, WonderDef>;
   edificeMeta: Map<string, EdificeMetaDef>;
   seatOrder: string[];
@@ -196,6 +198,7 @@ export function initBgaFold(): BgaFoldState {
   return {
     gamedatasSeen: false,
     cardTypes: new Map(),
+    cardImg: new Map(),
     wonders: new Map(),
     edificeMeta: new Map(),
     seatOrder: [],
@@ -269,6 +272,10 @@ function applyGamedatas(payload: unknown): BgaFoldState {
     const qt: Record<string, number> = {};
     for (const [k, v] of Object.entries(qtRaw)) qt[k] = num(v) ?? 0;
     trackTypes.set(id, { name, category, age: num(c.age) ?? 0, qt });
+    // BGA's `img` is a unique 0-76 sprite index (across imgtypes) matching the
+    // card spritesheet's row-major cells — see bga/CardSprite.
+    const img = num(c.img);
+    if (img !== null) next.cardImg.set(name, img);
   }
   for (const [id, raw] of Object.entries(asRecord(gd.wonders))) {
     const w = asRecord(raw);
@@ -620,6 +627,7 @@ export function toSpectatorView(state: BgaFoldState): BgaSpectatorView | null {
     discardCount: state.discardCount,
     players,
     edifices,
+    cardImg: Object.fromEntries(state.cardImg),
     finished: state.finished,
   };
 }

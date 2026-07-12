@@ -87,6 +87,8 @@ export interface BgaSpectatorView {
   players: BgaPlayerView[];
   /** Edifice slots (present only in an Edifice game). */
   edifices: BgaEdificeView[];
+  /** Card name -> spritesheet cell index (0-76). Absent names have no sprite. */
+  cardImg: Record<string, number>;
   /** True once the game has ended (results notif seen). */
   finished: boolean;
 }
