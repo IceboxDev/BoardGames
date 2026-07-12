@@ -135,6 +135,8 @@ function categoryLabel(cat: string): string {
 interface CardTypeDef {
   name: string;
   category: string;
+  /** BGA `science` symbol index (1 tablet, 2 gear, 3 compass); 0 if none. */
+  science: number;
 }
 interface WonderDef {
   name: string;
@@ -267,7 +269,7 @@ function applyGamedatas(payload: unknown): BgaFoldState {
     const c = asRecord(raw);
     const name = String(c.name ?? id);
     const category = String(c.category ?? "");
-    next.cardTypes.set(id, { name, category });
+    next.cardTypes.set(id, { name, category, science: num(c.science) ?? 0 });
     const qtRaw = asRecord(c.qt);
     const qt: Record<string, number> = {};
     for (const [k, v] of Object.entries(qtRaw)) qt[k] = num(v) ?? 0;
@@ -547,12 +549,17 @@ export function applyBgaEvent(
 
 // ── Projection ──────────────────────────────────────────────────────────────
 
-function scienceOf(acc: PlayerAcc): BgaPlayerView["science"] {
+// BGA's per-card `science` index → our symbol (derived from real card_types).
+const SCIENCE_SYMBOL: Record<number, ScienceSymbol> = { 1: "tablet", 2: "gear", 3: "compass" };
+
+function scienceOf(
+  acc: PlayerAcc,
+  scienceByName: Map<string, ScienceSymbol>,
+): BgaPlayerView["science"] {
   const counts: Record<ScienceSymbol, number> = { gear: 0, compass: 0, tablet: 0 };
   for (const name of acc.tableauNames) {
-    for (const effect of CARD_BY_NAME.get(name)?.effects ?? []) {
-      if (effect.kind === "science") counts[effect.symbol]++;
-    }
+    const symbol = scienceByName.get(name);
+    if (symbol) counts[symbol]++;
   }
   return { ...counts, wild: acc.wildScience };
 }
@@ -563,8 +570,11 @@ export function toSpectatorView(state: BgaFoldState): BgaSpectatorView | null {
   // BGA's own per-card category is the source of truth (covers any expansion
   // card); our engine card DB is only a fallback for the rare missing entry.
   const categoryByName = new Map<string, string>();
+  const scienceByName = new Map<string, ScienceSymbol>();
   for (const info of state.cardTypes.values()) {
     if (info.category) categoryByName.set(info.name, info.category);
+    const symbol = SCIENCE_SYMBOL[info.science];
+    if (symbol) scienceByName.set(info.name, symbol);
   }
 
   const players: BgaPlayerView[] = state.seatOrder.map((pid, seat) => {
@@ -609,7 +619,7 @@ export function toSpectatorView(state: BgaFoldState): BgaSpectatorView | null {
         name,
         category: categoryByName.get(name) ?? categoryOf(name),
       })),
-      science: scienceOf(acc),
+      science: scienceOf(acc, scienceByName),
       edificePawns: [...acc.edificePawns].sort(),
       hand: state.finished ? null : computeHand(state.handTrack, seat),
     };
