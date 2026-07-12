@@ -75,6 +75,37 @@ describe("hand tracker — rotation & elimination", () => {
     expect(b?.cards.sort()).toEqual(names([9, 10, 11, 12, 13, 14]).sort());
   });
 
+  it("does not run ahead when BGA deals my next hand before the reveal lands", () => {
+    // BGA deals the next turn's hand BEFORE the current reveal finishes. The
+    // pick clock must follow completed reveals, not dealt hands — otherwise
+    // every projected hand shows size+1 and unknowable hands appear early.
+    const s = setup();
+    recordMyHand(s, [1, 2, 3, 4, 5, 6, 7]); // turn 1
+    recordMyHand(s, [16, 17, 18, 19, 20, 21]); // turn 2 arrives early, no reveal yet
+
+    // Still turn 1: my hand is my 7 cards, exactly (not the turn-2 hand, not size 6).
+    const me = computeHand(s, 0);
+    expect(me?.size).toBe(7);
+    expect(me?.cards.length).toBe(7);
+    expect(me?.cards.sort()).toEqual(names([1, 2, 3, 4, 5, 6, 7]).sort());
+    // Neighbours are unknowable at turn 1 — must not be projected from a future hand.
+    expect(computeHand(s, 1)).toBeNull();
+    expect(computeHand(s, 2)).toBeNull();
+
+    // Once the turn-1 reveal lands, the clock advances and stays consistent.
+    recordReveal(s, [
+      { playerId: "M", id: 1 },
+      { playerId: "A", id: 8 },
+      { playerId: "B", id: 15 },
+    ]);
+    const meT2 = computeHand(s, 0);
+    expect(meT2?.size).toBe(6);
+    expect(meT2?.cards.length).toBe(6);
+    const a = computeHand(s, 1);
+    expect(a?.size).toBe(6);
+    expect(a?.cards.length).toBe(6); // consistent, no size+1
+  });
+
   it("reports surplus candidates when a holder buries a card under a Wonder", () => {
     const s = setup();
     recordMyHand(s, [1, 2, 3, 4, 5, 6, 7]);

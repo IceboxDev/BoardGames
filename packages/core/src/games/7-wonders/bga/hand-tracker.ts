@@ -180,10 +180,14 @@ export function recordDiscard(s: HandTrackState, id: number): void {
   if (age !== null) ageTrack(s, age).removedIds.add(id);
 }
 
+// The current pick number is the reveal clock: after R completed reveals every
+// hand holds handStartSize − R cards and play is on pick R+1. This MUST match
+// the adapter's `state.turn` (also reveal-driven). Deriving it from my dealt
+// hands instead (max myHandByTurn key) runs a turn ahead, because BGA deals my
+// next hand before the current reveal lands — which showed size+1 cards in every
+// projected hand and surfaced opponents' turn-1 hands before they were knowable.
 function currentTurn(t: AgeTrack): number {
-  let max = 0;
-  for (const turn of t.myHandByTurn.keys()) if (turn > max) max = turn;
-  return max;
+  return t.revealCount + 1;
 }
 
 function passesLeft(age: number): boolean {
