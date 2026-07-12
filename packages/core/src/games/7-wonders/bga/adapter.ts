@@ -560,6 +560,13 @@ function scienceOf(acc: PlayerAcc): BgaPlayerView["science"] {
 export function toSpectatorView(state: BgaFoldState): BgaSpectatorView | null {
   if (!state.gamedatasSeen || state.seatOrder.length === 0) return null;
 
+  // BGA's own per-card category is the source of truth (covers any expansion
+  // card); our engine card DB is only a fallback for the rare missing entry.
+  const categoryByName = new Map<string, string>();
+  for (const info of state.cardTypes.values()) {
+    if (info.category) categoryByName.set(info.name, info.category);
+  }
+
   const players: BgaPlayerView[] = state.seatOrder.map((pid, seat) => {
     const acc = state.players.get(pid);
     if (!acc) {
@@ -598,7 +605,10 @@ export function toSpectatorView(state: BgaFoldState): BgaSpectatorView | null {
         built: i < acc.stagesBuilt,
       })),
       stagesBuilt: acc.stagesBuilt,
-      tableau: acc.tableauNames.map((name) => ({ name, category: categoryOf(name) })),
+      tableau: acc.tableauNames.map((name) => ({
+        name,
+        category: categoryByName.get(name) ?? categoryOf(name),
+      })),
       science: scienceOf(acc),
       edificePawns: [...acc.edificePawns].sort(),
       hand: state.finished ? null : computeHand(state.handTrack, seat),
