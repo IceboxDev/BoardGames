@@ -51,17 +51,26 @@ export interface BgaPlayerView {
 
 export interface BgaHand {
   /**
-   * Candidate/known card names. When `cards.length === size` the hand is known
-   * exactly; when larger, some candidates were buried under Wonders (unknown
-   * which); when smaller, the remainder is unidentified.
+   * Known/identified card names. Together with `guildSlots` these account for
+   * the whole hand: `cards.length + guildSlots === size` for a clean deduction.
+   * When `cards.length` alone exceeds `size`, some candidates were buried under
+   * Wonders (unknown which).
    */
   cards: string[];
   /** Actual number of cards in the hand right now. */
   size: number;
   /** Filled by deck elimination rather than direct observation. */
   deduced: boolean;
-  /** Residual uncertainty (e.g. Age III guilds under elimination). */
+  /** Residual uncertainty (i.e. `guildSlots > 0`). */
   uncertain: boolean;
+  /**
+   * Number of cards in the hand known to be guilds but not which ones — an
+   * eliminated Age III hand, where the guild subset in play is random. Rendered
+   * as this many face-down guild slots, with `possibleGuilds` as the shortlist.
+   */
+  guildSlots: number;
+  /** The guilds any `guildSlots` could be (more names than slots). */
+  possibleGuilds: string[];
 }
 
 export type BgaEdificeStatus = "project" | "built" | "failed";

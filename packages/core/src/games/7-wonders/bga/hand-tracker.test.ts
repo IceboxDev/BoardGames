@@ -106,6 +106,50 @@ describe("hand tracker — rotation & elimination", () => {
     expect(a?.cards.length).toBe(6); // consistent, no size+1
   });
 
+  it("splits an eliminated Age III hand into known cards + guild slots", () => {
+    // Age III: the deck lists more guilds (a random subset is dealt) than any
+    // one hand holds. An eliminated hand must show its known cards exactly, plus
+    // one guild slot for the single guild it holds — not every candidate guild.
+    const s = initHandTrack();
+    s.seatOrder = ["M", "A", "B"];
+    s.myPlayerId = "M";
+    s.age = 3;
+    const types = new Map<string, CardTypeInfo>();
+    for (let id = 1; id <= 21; id++) {
+      const isGuild = id === 14; // one real guild lives in B's deduced hand
+      types.set(String(id), {
+        name: isGuild ? "Guild-A" : `Card${id}`,
+        age: 3,
+        category: isGuild ? "gui" : "raw",
+        qt: { "3": 1 },
+      });
+      s.typeById.set(id, String(id));
+    }
+    // Guilds present in the deck dictionary but never dealt (no id in play).
+    for (const g of ["Guild-B", "Guild-C", "Guild-D"]) {
+      types.set(g, { name: g, age: 3, category: "gui", qt: { "3": 1 } });
+    }
+    setCardTypes(s, types);
+
+    recordMyHand(s, [1, 2, 3, 4, 5, 6, 7]);
+    recordReveal(s, [
+      { playerId: "M", id: 1 },
+      { playerId: "A", id: 8 },
+      { playerId: "B", id: 15 },
+    ]);
+    recordMyHand(s, [16, 17, 18, 19, 20, 21]);
+
+    const b = computeHand(s, 2);
+    expect(b?.deduced).toBe(true);
+    expect(b?.size).toBe(6);
+    expect(b?.uncertain).toBe(true);
+    // 5 known cards (ids 9–13) + 1 guild slot == size 6.
+    expect(b?.cards.sort()).toEqual(names([9, 10, 11, 12, 13]).sort());
+    expect(b?.guildSlots).toBe(1);
+    // The slot could be any of the four guilds still unaccounted for.
+    expect(b?.possibleGuilds).toEqual(["Guild-A", "Guild-B", "Guild-C", "Guild-D"]);
+  });
+
   it("reports surplus candidates when a holder buries a card under a Wonder", () => {
     const s = setup();
     recordMyHand(s, [1, 2, 3, 4, 5, 6, 7]);

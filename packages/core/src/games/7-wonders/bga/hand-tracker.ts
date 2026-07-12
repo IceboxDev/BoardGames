@@ -202,14 +202,18 @@ function distanceToSeat(s: HandTrackState, age: number, index: number): number {
 }
 
 export interface TrackedHand {
-  /** Candidate/known card names. */
+  /** Known/identified card names (excludes unidentified guild slots). */
   cards: string[];
   /** Actual number of cards in the hand right now. */
   size: number;
   /** Filled by deck elimination rather than direct observation. */
   deduced: boolean;
-  /** Residual uncertainty (e.g. Age III guilds under elimination). */
+  /** Residual uncertainty (i.e. `guildSlots > 0`). */
   uncertain: boolean;
+  /** Cards known to be guilds but not which ones (random Age III subset). */
+  guildSlots: number;
+  /** The guilds those slots could be (more names than slots). */
+  possibleGuilds: string[];
 }
 
 /** Compute the current hand for the seat at `index`, in the current age. */
@@ -221,7 +225,15 @@ export function computeHand(s: HandTrackState, index: number): TrackedHand | nul
   if (turn === 0) return null;
   const n = s.seatOrder.length;
   const size = t.handStartSize - (turn - 1);
-  if (size <= 0) return { cards: [], size: 0, deduced: false, uncertain: false };
+  if (size <= 0)
+    return {
+      cards: [],
+      size: 0,
+      deduced: false,
+      uncertain: false,
+      guildSlots: 0,
+      possibleGuilds: [],
+    };
 
   const d = distanceToSeat(s, age, index);
   const sourceTurn = turn - d;
@@ -239,8 +251,9 @@ export function computeHand(s: HandTrackState, index: number): TrackedHand | nul
     for (const id of [...set]) if (t.removedIds.has(id)) set.delete(id);
     const cards = [...set].map((id) => nameOfId(s, id));
     // cards.length > size ⇒ some candidates were buried under Wonders (unknown
-    // which). cards.length == size ⇒ exact hand.
-    return { cards, size, deduced: false, uncertain: false };
+    // which). cards.length == size ⇒ exact hand. A tracked hand's guilds are
+    // real observed ids, so there is never guild ambiguity here.
+    return { cards, size, deduced: false, uncertain: false, guildSlots: 0, possibleGuilds: [] };
   }
 
   // Elimination: only when this is the single hand I have never held.
@@ -263,11 +276,50 @@ function eliminateHand(s: HandTrackState, t: AgeTrack, size: number): TrackedHan
     const h = computeHand(s, i);
     if (h) for (const name of h.cards) dec(name);
   }
-  const cards: string[] = [];
-  let uncertain = false;
+
+  // Non-guilds have fixed per-count copies, so elimination pins them exactly.
+  // Guilds are a random Age III subset: BGA's deck lists more guilds than were
+  // dealt, so the guild remainder over-counts. Show only as many guild slots as
+  // the hand actually has room for (size − known cards), and expose the rest as
+  // a shortlist rather than pretending every guild is in hand.
+  const certain: string[] = [];
+  const guildPool: string[] = [];
   for (const [name, count] of remaining) {
-    for (let c = 0; c < count; c++) cards.push(name);
-    if (count > 0 && s.guildNames.has(name)) uncertain = true;
+    if (count <= 0) continue;
+    const bucket = s.guildNames.has(name) ? guildPool : certain;
+    for (let c = 0; c < count; c++) bucket.push(name);
   }
-  return { cards, size, deduced: true, uncertain };
+
+  const guildSlots = Math.max(0, size - certain.length);
+  if (guildSlots === 0) {
+    // No room for any guild — the identified cards already fill the hand.
+    return {
+      cards: certain,
+      size,
+      deduced: true,
+      uncertain: false,
+      guildSlots: 0,
+      possibleGuilds: [],
+    };
+  }
+  if (guildPool.length <= guildSlots) {
+    // As many (or fewer) candidate guilds as slots ⇒ they're all in this hand.
+    return {
+      cards: [...certain, ...guildPool],
+      size,
+      deduced: true,
+      uncertain: false,
+      guildSlots: 0,
+      possibleGuilds: [],
+    };
+  }
+  // More candidate guilds than slots ⇒ genuinely ambiguous which fill them.
+  return {
+    cards: certain,
+    size,
+    deduced: true,
+    uncertain: true,
+    guildSlots,
+    possibleGuilds: guildPool.slice().sort(),
+  };
 }

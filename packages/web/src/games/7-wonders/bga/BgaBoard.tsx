@@ -23,15 +23,33 @@ const EDIFICE_STATUS: Record<BgaEdificeView["status"], { label: string; cls: str
   failed: { label: "Failed", cls: "border-rose-500/40 bg-rose-500/5" },
 };
 
+function GuildSlot({ width = 40 }: { width?: number }) {
+  const height = Math.round((width * 393) / 255);
+  return (
+    <span
+      className="inline-flex shrink-0 items-center justify-center rounded-sm text-sm font-bold text-fuchsia-200/90 ring-1 ring-black/30"
+      style={{ width, height, background: `${CATEGORY_HEX.gui}55` }}
+      title="A guild — which one is uncertain"
+      aria-label="unknown guild"
+      role="img"
+    >
+      ?
+    </span>
+  );
+}
+
 function HandView({ hand, cardImg }: { hand: BgaPlayerView["hand"]; cardImg: ImgMap }) {
   if (!hand || hand.size === 0) return null;
-  const exact = hand.cards.length === hand.size && !hand.deduced;
-  const surplus = hand.cards.length - hand.size; // candidates buried under wonders
-  const missing = hand.size - hand.cards.length; // unidentified (elimination gaps)
+  // `cards` are the identified cards; `guildSlots` are known-guild-but-unknown-
+  // which, so cards.length + guildSlots === size for a clean deduction.
+  const surplus = hand.cards.length + hand.guildSlots - hand.size; // buried under wonders
+  const missing = hand.size - hand.cards.length - hand.guildSlots; // unidentified
+  const exact = surplus === 0 && missing === 0 && !hand.uncertain && !hand.deduced;
 
   let note = "known";
-  if (hand.deduced) note = hand.uncertain ? "deduced · guilds uncertain" : "deduced";
-  else if (surplus > 0) note = `${surplus} buried under wonder`;
+  if (surplus > 0) note = `${surplus} buried under wonder`;
+  else if (hand.uncertain) note = `${hand.guildSlots} guild slot${hand.guildSlots > 1 ? "s" : ""}`;
+  else if (hand.deduced) note = "deduced";
   else if (missing > 0) note = `${missing} unknown`;
 
   return (
@@ -50,7 +68,16 @@ function HandView({ hand, cardImg }: { hand: BgaPlayerView["hand"]; cardImg: Img
             width={40}
           />
         ))}
+        {Array.from({ length: hand.guildSlots }, (_, i) => (
+          // biome-ignore lint/suspicious/noArrayIndexKey: fixed-count identical placeholders
+          <GuildSlot key={`guild-${i}`} />
+        ))}
       </div>
+      {hand.possibleGuilds.length > 0 && (
+        <div className="pt-0.5 text-4xs text-fuchsia-300/80">
+          possible: {hand.possibleGuilds.join(", ")}
+        </div>
+      )}
     </div>
   );
 }
