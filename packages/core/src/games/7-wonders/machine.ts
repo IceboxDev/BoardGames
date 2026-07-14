@@ -1,7 +1,7 @@
 import { assign, fromPromise, setup } from "xstate";
 import { randomSeed } from "../../lib/rng";
 import type { GameMachineSpec } from "../../machines/types";
-import { randomLegalAction } from "./ai/random";
+import { chooseAiAction } from "./ai/agent";
 import { countShields, scienceProfile } from "./board";
 import { applyPendingAction, applyReveal, applySelection, createInitialState } from "./game-engine";
 import { getActivePlayer, getLegalActions } from "./rules";
@@ -110,7 +110,7 @@ function computeAiSelectionsPure(gs: GameState, humanPlayers: number[]): (Select
   const selections: (Selection | null)[] = new Array(gs.playerCount).fill(null);
   for (let i = 0; i < gs.playerCount; i++) {
     if (!humanPlayers.includes(i) && gs.selections[i] === null && gs.hands[i].length > 0) {
-      selections[i] = randomLegalAction(gs, i);
+      selections[i] = chooseAiAction(gs, i);
     }
   }
   return selections;
@@ -145,7 +145,7 @@ export const sevenWondersMachine = setup({
     computePendingAction: fromPromise(
       async ({ input }: { input: { gameState: GameState; playerIndex: number } }) => {
         await new Promise((resolve) => setTimeout(resolve, 0));
-        return { action: randomLegalAction(input.gameState, input.playerIndex) };
+        return { action: chooseAiAction(input.gameState, input.playerIndex) };
       },
     ),
   },

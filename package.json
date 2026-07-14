@@ -11,6 +11,7 @@
     "extract-accents": "node scripts/extract-accents.mjs",
     "bgg-sync": "node --env-file=packages/server/.env scripts/bgg-sync.mjs",
     "gen-descriptions": "node --env-file=packages/server/.env scripts/gen-descriptions/index.mjs",
+    "gen-cpp-7wonders": "tsx scripts/gen-cpp-7wonders.ts",
     "prebuild": "pnpm extract-accents",
     "lint": "biome check packages/ && node scripts/lint-styles.mjs",
     "lint:styles": "node scripts/lint-styles.mjs",

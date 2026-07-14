@@ -13,6 +13,9 @@ import { app, injectWebSocket } from "./server.ts";
 import { markStaleRunning } from "./tournament/manager.ts";
 
 import "./sessions/machine-registry.ts";
+import { maybeEnableCppAgent } from "./sessions/cpp-agent.ts";
+
+maybeEnableCppAgent(); // opt-in via SW7_ENABLE=1; otherwise the random stub stays
 
 const PORT = Number(process.env.PORT ?? 3001);
 
