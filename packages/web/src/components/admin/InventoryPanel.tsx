@@ -31,6 +31,13 @@ export function InventoryPanel({ userId }: Props) {
     onSuccess: (_data, slugs) => {
       queryClient.setQueryData(qk.adminUserInventory(userId), slugs);
       void queryClient.invalidateQueries({ queryKey: qk.inventory(userId) });
+      // The target user's public profile (owned library + count) and the players
+      // directory (owned count per player) are separate query caches keyed by
+      // profile/players, not by inventory. Without these, a 5-minute staleTime
+      // (see query-client.ts) means an admin's collection edit doesn't appear on
+      // the profile until the cache expires or the tab is hard-reloaded.
+      void queryClient.invalidateQueries({ queryKey: qk.profile(userId) });
+      void queryClient.invalidateQueries({ queryKey: qk.players() });
     },
   });
 
