@@ -28,7 +28,25 @@ export type FamilyInfo = {
  */
 export type PresentationUnit =
   | { kind: "single"; game: GameDefinition }
-  | { kind: "family"; family: FamilyInfo; visibleMembers: GameDefinition[] };
+  | {
+      kind: "family";
+      family: FamilyInfo;
+      visibleMembers: GameDefinition[];
+      /**
+       * The member that earned the family its position — the first one seen
+       * in input order, which is where the unit is anchored.
+       *
+       * This is NOT always the canonical member. When the input is sorted
+       * (the RSVP carousel sorts by New → best-at-headcount → rating), the
+       * winning sibling is the one that pulled the family forward: Codenames
+       * Duet is what makes the Codenames family lead a 2-player night, not
+       * Codenames itself. A view that opens on `canonical` there would show
+       * "fits 2" on a card that is sitting at the front precisely because a
+       * *different* sibling is "best at 2" — so views that sort their input
+       * should default to the anchor, not the canonical.
+       */
+      anchor: GameDefinition;
+    };
 
 const familyMap = new Map<string, FamilyInfo>();
 const slugToFamilyId = new Map<string, string>();
@@ -105,7 +123,10 @@ export function groupForPresentation(input: GameDefinition[]): PresentationUnit[
     seenFamilies.add(fam.id);
     const visible = fam.members.filter((m) => inputSet.has(m.slug));
     if (visible.length >= 2) {
-      units.push({ kind: "family", family: fam, visibleMembers: visible });
+      // `visible` is in canonical-first family order (stable chip order for
+      // the variant strip); `g` is the first member in INPUT order, which is
+      // what decided where this unit lands. Keep both.
+      units.push({ kind: "family", family: fam, visibleMembers: visible, anchor: g });
     } else if (visible.length === 1) {
       units.push({ kind: "single", game: visible[0] });
     }

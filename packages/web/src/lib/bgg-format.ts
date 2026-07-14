@@ -76,6 +76,42 @@ export function coversWindow(game: GameDefinition, lo: number, hi: number): bool
   return min <= lo && max >= hi;
 }
 
+/**
+ * Is this game the BGG community's "best at exactly `lo`" pick? `lo` is the
+ * confirmed-yes headcount — the strongest game-fit signal we have, and what
+ * drives the amber "Best at N" badge and the card's fire treatment.
+ */
+export function isBestForHeadcount(game: GameDefinition, lo: number): boolean {
+  return lo > 0 && game.bgg.bestPlayerCount !== null && game.bgg.bestPlayerCount === lo;
+}
+
+/**
+ * Ranking used to order the RSVP game carousel for a night with `lo` confirmed
+ * attendees. Precedence (mirrors the card's badge/border precedence — see
+ * `CarouselCardFrame`):
+ *   1. "New" cohort (freshly-added games) leads the whole list.
+ *   2. "Best at N" cohort (BGG poll matches the confirmed headcount).
+ *   3. Within each cohort, higher averageRating wins.
+ *   4. Title alphabetical as a final stable tiebreak.
+ *
+ * This ranks games INDIVIDUALLY, including siblings of the same family. A
+ * family therefore rides to the front on its single best-ranked member, and
+ * that member — not the family's canonical — is the one the card must open on.
+ * `groupForPresentation` records it as the unit's `anchor`.
+ */
+export function compareForHeadcount(a: GameDefinition, b: GameDefinition, lo: number): number {
+  const aNew = a.isNew === true ? 0 : 1;
+  const bNew = b.isNew === true ? 0 : 1;
+  if (aNew !== bNew) return aNew - bNew;
+  const aBest = isBestForHeadcount(a, lo) ? 0 : 1;
+  const bBest = isBestForHeadcount(b, lo) ? 0 : 1;
+  if (aBest !== bBest) return aBest - bBest;
+  const aRating = a.bgg.averageRating ?? 0;
+  const bRating = b.bgg.averageRating ?? 0;
+  if (aRating !== bRating) return bRating - aRating;
+  return a.title.localeCompare(b.title);
+}
+
 /** "4" when lo===hi, otherwise "3–5". Used in the carousel's fits badge. */
 export function fitsLabel(lo: number, hi: number): string {
   if (lo === hi) return String(lo);

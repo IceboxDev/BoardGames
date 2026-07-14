@@ -8,7 +8,7 @@ import {
 import { useMemo } from "react";
 import { games as gameRegistry } from "../../games/registry";
 import type { GameDefinition } from "../../games/types.ts";
-import { coversWindow } from "../../lib/bgg-format";
+import { compareForHeadcount, coversWindow } from "../../lib/bgg-format";
 import {
   type Attendee,
   type AvailableGames,
@@ -107,24 +107,11 @@ export function useRsvpAvailability({
     // the pick, so it's filtered out here even though `fitsRange` would
     // have allowed it (carousel cards use the looser overlap test).
     const filtered = gameRegistry.filter((g) => ownedSet.has(g.slug) && coversWindow(g, lo, hi));
-    // Sort precedence (mirrors the carousel card's badge/border precedence:
-    //   New > Best-at-N > default — see CarouselCardFrame):
-    //   1. "New" cohort (freshly-added games) leads the whole list.
-    //   2. "Best at N" cohort (BGG poll matches the confirmed headcount).
-    //   3. Within each cohort, higher averageRating wins.
-    //   4. Title alphabetical as a final stable tiebreak.
-    return filtered.sort((a, b) => {
-      const aNew = a.isNew === true ? 0 : 1;
-      const bNew = b.isNew === true ? 0 : 1;
-      if (aNew !== bNew) return aNew - bNew;
-      const aBest = a.bgg.bestPlayerCount === lo && lo > 0 ? 0 : 1;
-      const bBest = b.bgg.bestPlayerCount === lo && lo > 0 ? 0 : 1;
-      if (aBest !== bBest) return aBest - bBest;
-      const aRating = a.bgg.averageRating ?? 0;
-      const bRating = b.bgg.averageRating ?? 0;
-      if (aRating !== bRating) return bRating - aRating;
-      return a.title.localeCompare(b.title);
-    });
+    // Ranks each game individually — see `compareForHeadcount`. Family members
+    // compete separately here, so a family's position is won by its single
+    // best-ranked sibling; `groupForPresentation` records that sibling as the
+    // unit's anchor and the carousel opens the card on it.
+    return filtered.sort((a, b) => compareForHeadcount(a, b, lo));
   }, [gamesQuery.data]);
 
   const hypedCount = useMemo(

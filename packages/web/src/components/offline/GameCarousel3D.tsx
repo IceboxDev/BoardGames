@@ -2,7 +2,7 @@ import { motion, type PanInfo } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { groupForPresentation, type PresentationUnit } from "../../games/families";
 import type { GameDefinition } from "../../games/types";
-import { fitsLabel, fitsRange } from "../../lib/bgg-format";
+import { fitsLabel, fitsRange, isBestForHeadcount } from "../../lib/bgg-format";
 import type { ReactionAggregate } from "../../lib/calendar-games";
 import {
   ASPECT,
@@ -62,7 +62,12 @@ export default function GameCarousel3D({
   const [center, setCenter] = useState(0);
   const atEnd = center >= units.length - 1;
   // Per-family active member, persisted across center changes so the
-  // user's last variant pick survives swiping away and back.
+  // user's last variant pick survives swiping away and back. Until the user
+  // picks, the active member is the unit's ANCHOR — the sibling that won the
+  // caller's sort and pulled the family to this position. Defaulting to the
+  // family's canonical instead would open Codenames on a 2-player night
+  // showing "Codenames · fits 2" while Codenames Duet — the "best at 2" that
+  // put the card up front — sat hidden behind a variant chip.
   const [activeByFamily, setActiveByFamily] = useState<Map<string, string>>(() => new Map());
   const rootRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
@@ -231,11 +236,7 @@ export default function GameCarousel3D({
                 />
               );
             }
-            const activeSlug =
-              activeByFamily.get(unit.family.id) ??
-              unit.visibleMembers.find((m) => m === unit.family.canonical)?.slug ??
-              unit.visibleMembers[0]?.slug ??
-              unit.family.canonical.slug;
+            const activeSlug = activeByFamily.get(unit.family.id) ?? unit.anchor.slug;
             return (
               <FamilyCarouselCard
                 key={`family:${unit.family.id}`}
@@ -279,11 +280,7 @@ export default function GameCarousel3D({
           const absOff = Math.abs(offset);
           const hidden = absOff > 5;
           const isCenter = offset === 0;
-          const activeSlug =
-            activeByFamily.get(unit.family.id) ??
-            unit.visibleMembers.find((m) => m === unit.family.canonical)?.slug ??
-            unit.visibleMembers[0]?.slug ??
-            unit.family.canonical.slug;
+          const activeSlug = activeByFamily.get(unit.family.id) ?? unit.anchor.slug;
           return (
             <motion.div
               key={`chips:${unit.family.id}`}
@@ -391,11 +388,7 @@ function SingleCarouselCard({
   const hidden = absOff > 5;
   const isCenter = offset === 0;
   const fits = fitsRange(game, minPlayers, maxPlayers);
-  // BGG community-voted "best at N" matches the confirmed RSVP-yes count
-  // — the strongest game-fit signal we have. Triggers the amber/fire
-  // treatment.
-  const isBestForHeadcount =
-    game.bgg.bestPlayerCount !== null && minPlayers > 0 && game.bgg.bestPlayerCount === minPlayers;
+  const isBest = isBestForHeadcount(game, minPlayers);
   // Freshly-added games take precedence over the headcount treatment.
   const isNew = game.isNew === true;
 
@@ -408,7 +401,7 @@ function SingleCarouselCard({
       isCenter={isCenter}
       accentHex={game.accentHex}
       isNew={isNew}
-      isBestForHeadcount={isBestForHeadcount}
+      isBestForHeadcount={isBest}
       ariaLabel={isCenter ? `${game.title}, current selection` : `Show ${game.title}`}
       onClick={onClick}
       spreadMax={spreadMax}
@@ -425,7 +418,7 @@ function SingleCarouselCard({
         badgeTopLeft={
           isNew ? (
             <NewBadge />
-          ) : isBestForHeadcount ? (
+          ) : isBest ? (
             <BestForHeadcountBadge count={minPlayers} />
           ) : fits && (minPlayers > 0 || maxPlayers > 0) ? (
             <FitsBadge label={fitsLabel(minPlayers, maxPlayers)} />
@@ -450,7 +443,7 @@ function SingleCarouselCard({
         accentHex={game.accentHex}
         title={game.title}
         bgg={game.bgg}
-        bestForHeadcount={isBestForHeadcount ? minPlayers : null}
+        bestForHeadcount={isBest ? minPlayers : null}
         description={game.descriptions.default}
         compact={compact}
       />

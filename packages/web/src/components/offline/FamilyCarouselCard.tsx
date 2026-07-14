@@ -1,6 +1,6 @@
 import type { FamilyInfo } from "../../games/families";
 import type { GameDefinition } from "../../games/types";
-import { fitsLabel, fitsRange } from "../../lib/bgg-format";
+import { fitsLabel, fitsRange, isBestForHeadcount } from "../../lib/bgg-format";
 import type { ReactionAggregate } from "../../lib/calendar-games";
 import {
   BestForHeadcountBadge,
@@ -75,13 +75,11 @@ export default function FamilyCarouselCard({
   const active =
     visibleMembers.find((m) => m.slug === activeSlug) ?? visibleMembers[0] ?? family.canonical;
   const fits = fitsRange(active, minPlayers, maxPlayers);
-  const isBestForHeadcount =
-    active.bgg.bestPlayerCount !== null &&
-    minPlayers > 0 &&
-    active.bgg.bestPlayerCount === minPlayers;
-  // Per-variant: the "New" highlighter shows only when the active member
-  // is the freshly-added one (e.g. switching to "Introduction to Evil"
-  // within the Villainous family). Takes precedence over best-for-headcount.
+  const isBest = isBestForHeadcount(active, minPlayers);
+  // Per-variant: the "New" highlighter shows only when the active member is
+  // the freshly-added one — "The Worst Takes it All" is new, its sibling
+  // "Introduction to Evil" is not, so the badge follows the chip you're on.
+  // Takes precedence over best-for-headcount.
   const isNew = active.isNew === true;
   const aggregate = reactions[active.slug];
 
@@ -94,7 +92,7 @@ export default function FamilyCarouselCard({
       isCenter={isCenter}
       accentHex={active.accentHex}
       isNew={isNew}
-      isBestForHeadcount={isBestForHeadcount}
+      isBestForHeadcount={isBest}
       ariaLabel={
         isCenter
           ? `${active.title} (${family.displayName} family), current selection`
@@ -119,7 +117,7 @@ export default function FamilyCarouselCard({
         badgeTopLeft={
           isNew ? (
             <NewBadge />
-          ) : isBestForHeadcount ? (
+          ) : isBest ? (
             <BestForHeadcountBadge count={minPlayers} />
           ) : fits && (minPlayers > 0 || maxPlayers > 0) ? (
             <FitsBadge label={fitsLabel(minPlayers, maxPlayers)} />
@@ -144,7 +142,7 @@ export default function FamilyCarouselCard({
         accentHex={active.accentHex}
         title={active.title}
         bgg={active.bgg}
-        bestForHeadcount={isBestForHeadcount ? minPlayers : null}
+        bestForHeadcount={isBest ? minPlayers : null}
         description={active.descriptions.default}
         compact={compact}
       />
