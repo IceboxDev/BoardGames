@@ -127,7 +127,20 @@ function ReorderableMatches({
   useEffect(() => {
     const incoming = idsOf(matches);
     committedRef.current = incoming;
-    if (incoming !== idsOf(orderRef.current)) setOrder(matches);
+    if (incoming !== idsOf(orderRef.current)) {
+      setOrder(matches);
+      return;
+    }
+    // Same ids in the same order — but an EDIT changes row content without
+    // touching ids, so re-point every row at the fresh record. Skipping this
+    // kept rendering the pre-edit outcome (and handed the stale record back
+    // to the edit modal) until an id changed or the page reloaded. Preserves
+    // object identity when nothing changed so drags don't re-render.
+    const byId = new Map(matches.map((m) => [m.id, m] as const));
+    setOrder((prev) => {
+      const next = prev.map((m) => byId.get(m.id) ?? m);
+      return next.every((m, i) => m === prev[i]) ? prev : next;
+    });
   }, [matches]);
 
   function commit() {
