@@ -1,6 +1,7 @@
 import type { MatchOutcomeFreeForAll, Participant } from "@boardgames/core/history/types";
 import { useEffect } from "react";
-import { villainsForGame } from "../../../games/villainous/villains";
+import { parseMultiVariant } from "../../../games/match-variants";
+import { villainsForBoxes } from "../../../games/villainous/villains";
 import { Chip } from "../../ui/Chip";
 import { Field } from "../../ui/Field";
 import { Surface } from "../../ui/Surface";
@@ -22,17 +23,19 @@ type Props = {
  * Match-history form for Villainous — a point-less free-for-all where exactly
  * one player wins by completing their villain's objective. We don't track
  * scores; instead each player is tagged with the villain they played (`role`)
- * and the sole winner is marked with `rank: 1`. The box being played (the game
- * slug) decides which villains are offered — see `villainous/villains.ts`.
+ * and the sole winner is marked with `rank: 1`. The boxes in play (picked in
+ * the GameVariantPicker above and stored in `scenario`) decide which villains
+ * are offered, falling back to the catalog game's own roster while no box is
+ * checked — see `villainous/villains.ts`.
  */
 export function VillainousForm({ users, gameSlug, value, onChange }: Props) {
   const selectedIds = value.players.map((p) => p.userId);
-  const roster = villainsForGame(gameSlug);
+  const roster = villainsForBoxes(parseMultiVariant(value.scenario), gameSlug);
 
-  // When the admin switches to a narrower box (The Worst Takes it All →
-  // Introduction to Evil, which drops Jafar / Queen of Hearts), clear any
-  // now-invalid villain so a saved record can never reference a villain outside
-  // its box. Guarded so it only writes when something is actually stale.
+  // When the boxes in play narrow (e.g. unchecking The Worst Takes It All,
+  // which drops Jafar / Queen of Hearts), clear any now-invalid villain so a
+  // saved record can never reference a villain outside its boxes. Guarded so
+  // it only writes when something is actually stale.
   useEffect(() => {
     const valid = new Set(roster);
     if (!value.players.some((p) => p.role !== undefined && !valid.has(p.role))) return;

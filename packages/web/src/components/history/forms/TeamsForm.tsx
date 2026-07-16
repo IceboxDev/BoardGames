@@ -1,5 +1,10 @@
 import type { MatchOutcomeTeams, Participant } from "@boardgames/core/history/types";
-import { teamConfigForSlug } from "../../../games/team-config";
+import {
+  allowsMultipleRoles,
+  joinMemberRoles,
+  splitMemberRoles,
+  teamConfigForSlug,
+} from "../../../games/team-config";
 import { Button } from "../../ui/Button";
 import { Chip } from "../../ui/Chip";
 import { IconButton } from "../../ui/IconButton";
@@ -48,20 +53,22 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
   }
 
   function setMembers(idx: number, participants: Participant[]) {
-    // Make sure the same player isn't on two teams.
-    const otherTeamIds = new Set<string>();
-    for (let i = 0; i < value.teams.length; i++) {
-      if (i === idx) continue;
-      for (const m of value.teams[i].members) otherTeamIds.add(m.userId);
-    }
-    const filtered = participants.filter((p) => !otherTeamIds.has(p.userId));
-    // Carry over existing roles for members that survive the picker change.
-    const roleByUserId = new Map(value.teams[idx].members.map((m) => [m.userId, m.role] as const));
-    const members: TeamMember[] = filtered.map((p) => {
-      const role = roleByUserId.get(p.userId);
-      return role !== undefined ? { ...p, role } : p;
+    // Selecting a player who already sits on another team MOVES them here —
+    // their chip on the other team un-presses instead of the click being
+    // swallowed. Roles (and elimination marks) travel with the player.
+    const pickedIds = new Set(participants.map((p) => p.userId));
+    const memberByUserId = new Map(
+      value.teams.flatMap((t) => t.members.map((m) => [m.userId, m] as const)),
+    );
+    const teams = value.teams.map((t, i) => {
+      if (i !== idx) return { ...t, members: t.members.filter((m) => !pickedIds.has(m.userId)) };
+      const members: TeamMember[] = participants.map((p) => {
+        const prev = memberByUserId.get(p.userId);
+        return prev ? { ...prev, ...p } : p;
+      });
+      return { ...t, members };
     });
-    updateTeam(idx, { members });
+    commit({ ...value, teams });
   }
 
   function setMemberRole(teamIdx: number, userId: string, role: string | undefined) {
@@ -176,6 +183,7 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
                       key={m.userId}
                       member={m}
                       roleOptions={memberRoles}
+                      multi={allowsMultipleRoles(config, team.members.length)}
                       onRoleChange={(role) => setMemberRole(idx, m.userId, role)}
                     />
                   ))}
@@ -200,30 +208,43 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
 
 // Rendered only when the game config defines `memberRoles` — games without
 // named seats (Wavelength, Resistance, etc.) don't render this row at all.
+// `multi` (undermanned team, e.g. a 2-player Captain Sonar sub) lets one
+// member hold several seats; the seats are stored joined in the same `role`
+// string.
 function MemberRoleRow({
   member,
   roleOptions,
+  multi,
   onRoleChange,
 }: {
   member: TeamMember;
   roleOptions: string[];
+  multi: boolean;
   onRoleChange: (role: string | undefined) => void;
 }) {
-  const role = member.role ?? "";
+  const selected = splitMemberRoles(member.role);
+  function toggle(opt: string, active: boolean) {
+    if (!multi) {
+      onRoleChange(active ? undefined : opt);
+      return;
+    }
+    const next = active ? selected.filter((r) => r !== opt) : [...selected, opt];
+    onRoleChange(joinMemberRoles(next, roleOptions));
+  }
   return (
     <PlayerRow
       name={member.displayName}
       right={
         <div className="flex flex-wrap gap-1">
           {roleOptions.map((opt) => {
-            const active = role === opt;
+            const active = multi ? selected.includes(opt) : member.role === opt;
             return (
               <Chip
                 key={opt}
                 pressed={active}
                 tone="accent"
                 size="xs"
-                onClick={() => onRoleChange(active ? undefined : opt)}
+                onClick={() => toggle(opt, active)}
               >
                 {opt}
               </Chip>

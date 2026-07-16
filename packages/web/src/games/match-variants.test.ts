@@ -31,11 +31,36 @@ describe("variantConfigForSlug", () => {
     expect(config?.options.length).toBe(5);
   });
 
-  // Villainous has no edition picker: each box is its own catalog game, so the
-  // chosen game already names the edition.
-  it("returns no config for either Villainous box", () => {
-    expect(variantConfigForSlug("villainous")).toBeNull();
-    expect(variantConfigForSlug("villainous-introduction-to-evil")).toBeNull();
+  // Villainous: each box is its own catalog game, but villains get mixed
+  // across boxes, so both slugs share a "Boxes in play" multiselect that
+  // pre-checks the slug's own box.
+  it("returns the Villainous boxes config (multi, own box pre-checked)", () => {
+    const base = variantConfigForSlug("villainous");
+    expect(base?.label).toBe("Boxes in play");
+    expect(base?.mode).toBe("multi");
+    expect(base?.options.map((o) => o.value)).toEqual([
+      "Introduction to Evil",
+      "The Worst Takes It All",
+    ]);
+    expect(base?.default).toBe("The Worst Takes It All");
+    expect(variantConfigForSlug("villainous-introduction-to-evil")?.default).toBe(
+      "Introduction to Evil",
+    );
+  });
+
+  it("returns the Intarsia side config (single, Standard/Pro)", () => {
+    const config = variantConfigForSlug("intarsia");
+    expect(config?.label).toBe("Side");
+    expect(config?.mode).toBe("single");
+    expect(config?.options.map((o) => o.value)).toEqual(["Standard", "Pro"]);
+  });
+
+  it("returns the Not Enough Mana alcohol config (multi, no default)", () => {
+    const config = variantConfigForSlug("not-enough-mana");
+    expect(config?.label).toBe("Alcohol in play");
+    expect(config?.mode).toBe("multi");
+    expect(config?.options.map((o) => o.value)).toEqual(["Limoncello", "Soju"]);
+    expect(config?.default).toBeUndefined();
   });
 
   it("returns the Dungeon Mayhem sets config (multi-select, three sets)", () => {
@@ -63,6 +88,13 @@ describe("variantConfigForSlug", () => {
     expect(config?.options.map((o) => o.value)).toEqual(["Standard", "Discardless"]);
   });
 
+  it("returns the Captain Sonar mode config (single, Real-time / Turn-based)", () => {
+    const config = variantConfigForSlug("captain-sonar");
+    expect(config?.label).toBe("Mode");
+    expect(config?.mode).toBe("single");
+    expect(config?.options.map((o) => o.value)).toEqual(["Real-time", "Turn-based"]);
+  });
+
   it("returns the Resistance edition config (single, Standard / The Plot Thickens)", () => {
     const config = variantConfigForSlug("the-resistance");
     expect(config?.label).toBe("Edition");
@@ -75,7 +107,6 @@ describe("defaultVariantValue", () => {
   it("returns undefined for a game with no variants", () => {
     expect(defaultVariantValue(null)).toBeUndefined();
     expect(defaultVariantValue("not-a-real-game")).toBeUndefined();
-    expect(defaultVariantValue("villainous")).toBeUndefined();
   });
 
   it("single-select games default to their first option", () => {
@@ -83,6 +114,8 @@ describe("defaultVariantValue", () => {
     expect(defaultVariantValue("wavelength")).toBe("Standard");
     expect(defaultVariantValue("codenames")).toBe("English");
     expect(defaultVariantValue("just-one")).toBe("Standard");
+    expect(defaultVariantValue("captain-sonar")).toBe("Real-time");
+    expect(defaultVariantValue("intarsia")).toBe("Standard");
   });
 
   it("fixed single-option games default to that option", () => {
@@ -94,6 +127,9 @@ describe("defaultVariantValue", () => {
     expect(defaultVariantValue("7-wonders")).toBe("Base");
     expect(defaultVariantValue("dungeon-mayhem")).toBe("Standard");
     expect(defaultVariantValue("exploding-kittens")).toBeUndefined();
+    expect(defaultVariantValue("not-enough-mana")).toBeUndefined();
+    expect(defaultVariantValue("villainous")).toBe("The Worst Takes It All");
+    expect(defaultVariantValue("villainous-introduction-to-evil")).toBe("Introduction to Evil");
   });
 });
 

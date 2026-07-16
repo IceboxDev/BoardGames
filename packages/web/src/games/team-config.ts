@@ -59,3 +59,37 @@ export function teamConfigForSlug(slug: string | null): TeamGameConfig {
   if (!slug) return {};
   return TEAM_GAME_CONFIG[slug] ?? {};
 }
+
+// An undermanned team (fewer members than named seats) forces someone to
+// cover several seats — Captain Sonar with 2 players per sub is the motivating
+// case. The member's `role` string then stores the combined seats joined with
+// " + " (same separator as multi-select variants in `match-variants.ts`).
+const ROLE_JOIN = " + ";
+
+/** Whether the role chips should multi-select for a team of this size. */
+export function allowsMultipleRoles(config: TeamGameConfig, teamSize: number): boolean {
+  const roles = config.memberRoles ?? [];
+  // leadRole games (Codenames) keep single-select — the lead/fallback auto-fill
+  // only makes sense when each member holds exactly one seat.
+  if (config.leadRole) return false;
+  return roles.length > 0 && teamSize < roles.length;
+}
+
+/** Split a stored member role back into individual seats. */
+export function splitMemberRoles(role: string | undefined): string[] {
+  if (!role) return [];
+  return role
+    .split(ROLE_JOIN)
+    .map((s) => s.trim())
+    .filter(Boolean);
+}
+
+/** Join selected seats into the stored role string, in config order. */
+export function joinMemberRoles(
+  selected: ReadonlyArray<string>,
+  roleOptions: ReadonlyArray<string>,
+): string | undefined {
+  const set = new Set(selected);
+  const ordered = roleOptions.filter((r) => set.has(r));
+  return ordered.length === 0 ? undefined : ordered.join(ROLE_JOIN);
+}

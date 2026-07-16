@@ -45,3 +45,35 @@ export function villainsForGame(slug: string | null | undefined): readonly strin
     ? VILLAINOUS_ROSTERS[slug]
     : VILLAINOUS_ROSTERS[VILLAINOUS_BASE_SLUG];
 }
+
+// Display labels for the "Boxes in play" variant multiselect. The group owns
+// both boxes and mixes villains across them, so a match records which boxes
+// were on the table (stored joined in `scenario`, like Dungeon Mayhem's sets).
+export const VILLAINOUS_BOX_OPTIONS = [
+  { label: "Introduction to Evil", slug: VILLAINOUS_INTRO_SLUG },
+  { label: "The Worst Takes It All", slug: VILLAINOUS_BASE_SLUG },
+] as const;
+
+/** The box label the picked catalog game should pre-check. */
+export function defaultBoxLabelForGame(slug: VillainousSlug): string {
+  const match = VILLAINOUS_BOX_OPTIONS.find((b) => b.slug === slug);
+  return match?.label ?? VILLAINOUS_BOX_OPTIONS[1].label;
+}
+
+/**
+ * Union roster for the boxes in play (deduped — Introduction to Evil's four
+ * villains all reappear in The Worst Takes It All), in base-roster order.
+ * With no boxes picked yet, falls back to the catalog game's own roster so
+ * the form is never empty.
+ */
+export function villainsForBoxes(
+  boxLabels: ReadonlyArray<string>,
+  fallbackSlug: string | null | undefined,
+): readonly string[] {
+  const slugs = VILLAINOUS_BOX_OPTIONS.filter((b) => boxLabels.includes(b.label)).map(
+    (b) => b.slug,
+  );
+  if (slugs.length === 0) return villainsForGame(fallbackSlug);
+  const union = new Set(slugs.flatMap((s) => VILLAINOUS_ROSTERS[s]));
+  return VILLAINOUS_ROSTERS[VILLAINOUS_BASE_SLUG].filter((v) => union.has(v));
+}

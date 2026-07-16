@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { TEAM_GAME_CONFIG, teamConfigForSlug } from "./team-config";
+import {
+  allowsMultipleRoles,
+  joinMemberRoles,
+  splitMemberRoles,
+  TEAM_GAME_CONFIG,
+  teamConfigForSlug,
+} from "./team-config";
 
 describe("teamConfigForSlug", () => {
   it("returns an empty config when slug is null", () => {
@@ -50,5 +56,55 @@ describe("teamConfigForSlug", () => {
       if (!config.autoWinner) continue;
       expect(["highest", "lowest"], `${slug}.autoWinner`).toContain(config.autoWinner);
     }
+  });
+});
+
+describe("allowsMultipleRoles", () => {
+  const sonar = teamConfigForSlug("captain-sonar");
+
+  it("is on for an undermanned Captain Sonar sub (fewer members than seats)", () => {
+    expect(allowsMultipleRoles(sonar, 1)).toBe(true);
+    expect(allowsMultipleRoles(sonar, 2)).toBe(true);
+    expect(allowsMultipleRoles(sonar, 3)).toBe(true);
+  });
+
+  it("is off once every seat can be individually crewed", () => {
+    expect(allowsMultipleRoles(sonar, 4)).toBe(false);
+    expect(allowsMultipleRoles(sonar, 5)).toBe(false);
+  });
+
+  it("stays off for leadRole games (Codenames) regardless of team size", () => {
+    expect(allowsMultipleRoles(teamConfigForSlug("codenames"), 1)).toBe(false);
+  });
+
+  it("is off for games without role chips", () => {
+    expect(allowsMultipleRoles(teamConfigForSlug("decrypto"), 1)).toBe(false);
+    expect(allowsMultipleRoles({}, 1)).toBe(false);
+  });
+});
+
+describe("splitMemberRoles / joinMemberRoles", () => {
+  const SEATS = ["Captain", "First Mate", "Engineer", "Radio Operator"];
+
+  it("round-trips a multi-seat selection in config order", () => {
+    const joined = joinMemberRoles(["Engineer", "Captain"], SEATS);
+    expect(joined).toBe("Captain + Engineer");
+    expect(splitMemberRoles(joined)).toEqual(["Captain", "Engineer"]);
+  });
+
+  it("splits undefined/empty to no seats and joins no seats to undefined", () => {
+    expect(splitMemberRoles(undefined)).toEqual([]);
+    expect(splitMemberRoles("")).toEqual([]);
+    expect(joinMemberRoles([], SEATS)).toBeUndefined();
+  });
+
+  it("treats a plain single role as a one-seat selection", () => {
+    expect(splitMemberRoles("Captain")).toEqual(["Captain"]);
+  });
+
+  it("all four Captain Sonar seats joined stay within the 64-char role cap", () => {
+    const all = joinMemberRoles(SEATS, SEATS);
+    expect(all).toBe("Captain + First Mate + Engineer + Radio Operator");
+    expect(all?.length ?? 0).toBeLessThanOrEqual(64);
   });
 });

@@ -1,9 +1,12 @@
 import { describe, expect, it } from "vitest";
 import {
+  defaultBoxLabelForGame,
   isVillainousSlug,
   VILLAINOUS_BASE_SLUG,
+  VILLAINOUS_BOX_OPTIONS,
   VILLAINOUS_INTRO_SLUG,
   VILLAINOUS_ROSTERS,
+  villainsForBoxes,
   villainsForGame,
 } from "./villains";
 
@@ -33,6 +36,51 @@ describe("villainsForGame", () => {
     expect(villainsForGame(undefined)).toEqual(superset);
     expect(villainsForGame(null)).toEqual(superset);
     expect(villainsForGame("lost-cities")).toEqual(superset);
+  });
+});
+
+describe("villainsForBoxes", () => {
+  it("one box in play yields exactly that box's roster", () => {
+    expect(villainsForBoxes(["Introduction to Evil"], VILLAINOUS_BASE_SLUG)).toEqual(
+      VILLAINOUS_ROSTERS[VILLAINOUS_INTRO_SLUG],
+    );
+    expect(villainsForBoxes(["The Worst Takes It All"], VILLAINOUS_INTRO_SLUG)).toEqual(
+      VILLAINOUS_ROSTERS[VILLAINOUS_BASE_SLUG],
+    );
+  });
+
+  it("both boxes union to the six-villain superset without duplicates", () => {
+    const both = villainsForBoxes(
+      ["Introduction to Evil", "The Worst Takes It All"],
+      VILLAINOUS_INTRO_SLUG,
+    );
+    expect(both).toEqual(VILLAINOUS_ROSTERS[VILLAINOUS_BASE_SLUG]);
+  });
+
+  it("no boxes picked falls back to the catalog game's own roster", () => {
+    expect(villainsForBoxes([], VILLAINOUS_INTRO_SLUG)).toEqual(
+      VILLAINOUS_ROSTERS[VILLAINOUS_INTRO_SLUG],
+    );
+    expect(villainsForBoxes([], null)).toEqual(VILLAINOUS_ROSTERS[VILLAINOUS_BASE_SLUG]);
+  });
+
+  it("ignores labels that are not Villainous boxes", () => {
+    expect(villainsForBoxes(["Made Up Box"], VILLAINOUS_INTRO_SLUG)).toEqual(
+      VILLAINOUS_ROSTERS[VILLAINOUS_INTRO_SLUG],
+    );
+  });
+});
+
+describe("defaultBoxLabelForGame", () => {
+  it("pre-checks the slug's own box", () => {
+    expect(defaultBoxLabelForGame(VILLAINOUS_BASE_SLUG)).toBe("The Worst Takes It All");
+    expect(defaultBoxLabelForGame(VILLAINOUS_INTRO_SLUG)).toBe("Introduction to Evil");
+  });
+
+  it("every box option maps to a known roster", () => {
+    for (const box of VILLAINOUS_BOX_OPTIONS) {
+      expect(VILLAINOUS_ROSTERS[box.slug]).toBeDefined();
+    }
   });
 });
 

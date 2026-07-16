@@ -8,6 +8,12 @@
 //               (7 Wonders expansions, Exploding Kittens death/revival modes).
 
 import { DUNGEON_MAYHEM_SET_LABELS } from "./dungeon-mayhem/characters";
+import {
+  defaultBoxLabelForGame,
+  VILLAINOUS_BASE_SLUG,
+  VILLAINOUS_BOX_OPTIONS,
+  VILLAINOUS_INTRO_SLUG,
+} from "./villainous/villains";
 
 export type VariantOption = {
   value: string;
@@ -89,10 +95,23 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       { value: "Armada", label: "Armada" },
     ],
   },
-  // Villainous has NO variant picker: its two editions are two separate catalog
-  // games (`villainous`, `villainous-introduction-to-evil`) because they are
-  // separate boxes seating different party sizes. The chosen game already names
-  // the edition, and it drives the villain roster — see `villainous/villains.ts`.
+  // Villainous: the two boxes are separate catalog games (different party
+  // sizes), but the group mixes villains across them, so either slug records
+  // WHICH boxes were on the table (multi-select, like Dungeon Mayhem's sets).
+  // The selection drives the villain roster in VillainousForm — see
+  // `villainous/villains.ts`. Each slug pre-checks its own box.
+  [VILLAINOUS_BASE_SLUG]: {
+    label: "Boxes in play",
+    mode: "multi",
+    default: defaultBoxLabelForGame(VILLAINOUS_BASE_SLUG),
+    options: VILLAINOUS_BOX_OPTIONS.map((b) => ({ value: b.label, label: b.label })),
+  },
+  [VILLAINOUS_INTRO_SLUG]: {
+    label: "Boxes in play",
+    mode: "multi",
+    default: defaultBoxLabelForGame(VILLAINOUS_INTRO_SLUG),
+    options: VILLAINOUS_BOX_OPTIONS.map((b) => ({ value: b.label, label: b.label })),
+  },
   // Lovecraft Letter is a point-less free-for-all with a single ruleset, so the
   // version is a fixed "Standard" subtitle (like Bandit). HOW the winner won (the
   // win condition) is recorded on the winner's `role` in LovecraftLetterForm and
@@ -122,6 +141,38 @@ const VARIANTS: Record<string, GameVariantConfig> = {
     mode: "multi",
     default: "Standard",
     options: DUNGEON_MAYHEM_SET_LABELS.map((s) => ({ value: s, label: s })),
+  },
+  // Intarsia's player boards are double-sided — the Standard side and the
+  // trickier Pro side. Standard is first so a fresh match defaults to it.
+  intarsia: {
+    label: "Side",
+    mode: "single",
+    options: [
+      { value: "Standard", label: "Standard" },
+      { value: "Pro", label: "Pro" },
+    ],
+  },
+  // Not Enough Mana house rule: the drink on the table is part of the match.
+  // Multi-select with no default — a dry game just leaves both unchecked.
+  // Extend the list as new bottles show up.
+  "not-enough-mana": {
+    label: "Alcohol in play",
+    mode: "multi",
+    options: [
+      { value: "Limoncello", label: "Limoncello" },
+      { value: "Soju", label: "Soju" },
+    ],
+  },
+  // Captain Sonar ships two rulesets: the signature simultaneous real-time
+  // mode and the calmer turn-by-turn variant. Real-time is first so a fresh
+  // match defaults to it.
+  "captain-sonar": {
+    label: "Mode",
+    mode: "single",
+    options: [
+      { value: "Real-time", label: "Real-time" },
+      { value: "Turn-based", label: "Turn-based" },
+    ],
   },
   "exploding-kittens": {
     label: "Modes in play",
