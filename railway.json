@@ -13,7 +13,8 @@
     ]
   },
   "deploy": {
-    "startCommand": "node packages/server/dist/migrations/cli.js && node packages/server/dist/index.js",
+    "preDeployCommand": "node packages/server/dist/migrations/cli.js",
+    "startCommand": "node packages/server/dist/index.js",
     "healthcheckPath": "/api/health",
     "healthcheckTimeout": 30,
     "restartPolicyType": "ON_FAILURE"

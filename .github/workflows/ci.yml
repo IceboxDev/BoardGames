@@ -1,0 +1,126 @@
+name: CI
+
+# Until now the ONLY gate was a local lefthook pre-commit hook, which
+# `git commit -n` skips and which nothing server-side re-runs. Vercel and
+# Railway build straight from a push, so untested code could ship.
+#
+# To make this an actual gate rather than a report, mark `verify`, `migrations`,
+# `codegen-drift` and `cpp` as REQUIRED STATUS CHECKS on `master`
+# (Settings → Branches → Branch protection) and require a PR to merge. Both
+# hosts deploy on push to master, so a protected master is what keeps a red
+# build out of production.
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  # Keep CI hermetic: no job here may reach the production database. The
+  # migration suites build their own `:memory:` databases.
+  CI: "true"
+
+jobs:
+  verify:
+    name: Lint, typecheck, test
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          # LFS holds the game art. Skip it — nothing in this job renders
+          # images, and pulling it burns the same bandwidth budget that has
+          # already blocked a deploy once.
+          lfs: false
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: package.json
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Lint (biome + style guard)
+        run: pnpm lint
+
+      - name: Typecheck
+        run: pnpm -r typecheck
+
+      - name: Test
+        run: pnpm test
+
+  migrations:
+    name: Migration safety
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          lfs: false
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: package.json
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      # Replays the whole chain on an in-memory database with foreign keys ON
+      # and fails if any migration drops a referenced table — the rebuild
+      # pattern silently cascades inside a batch. See
+      # docs/database-operations.md.
+      #
+      # `migrate:dry-run` is deliberately NOT run here: it reads the production
+      # database and CI has no credentials for it. Run it locally before
+      # opening a PR that changes the schema.
+      - name: Migration test suite
+        run: pnpm --filter @boardgames/server exec vitest run src/migrations
+
+  codegen-drift:
+    name: C++ codegen is in sync
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          lfs: false
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: package.json
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+
+      # cpp/seven-wonders/src/*.gen.cpp are generated FROM the TypeScript rules
+      # and committed. Editing cards.ts without re-running the generator makes
+      # the two engines disagree silently — exactly what the codegen exists to
+      # prevent.
+      - name: Regenerate and diff
+        run: |
+          pnpm gen-cpp-7wonders
+          if ! git diff --exit-code --stat -- cpp/seven-wonders/src; then
+            echo "::error::Generated C++ is stale. Run 'pnpm gen-cpp-7wonders' and commit the result."
+            exit 1
+          fi
+
+  cpp:
+    name: C++ engine tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          lfs: false
+
+      # The parity suite compares the C++ engine against fixtures dumped from
+      # the TypeScript rules. It has never run automatically — `make test` was
+      # something a human had to remember.
+      # `make test` builds at -O2 without -march=native (only the `agent`
+      # target uses that), so the binary is portable across runners.
+      - name: Build and run parity tests
+        working-directory: cpp/seven-wonders
+        run: make test
