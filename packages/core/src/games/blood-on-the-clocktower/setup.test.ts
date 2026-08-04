@@ -1,6 +1,13 @@
 import { describe, expect, it } from "vitest";
 import { CHARACTERS } from "./characters.ts";
-import { baronAdjusted, baseDistribution, dealSetup, describeDistribution } from "./setup.ts";
+import {
+  baronAdjusted,
+  baseDistribution,
+  dealBag,
+  dealSetup,
+  describeDistribution,
+  setupFromDraws,
+} from "./setup.ts";
 
 // Deterministic LCG so every draw is reproducible.
 function seededRng(seed: number): () => number {
@@ -123,6 +130,54 @@ describe("dealSetup", () => {
         expect(setup.redHerringSeat).toBeUndefined();
       }
     }
+  });
+});
+
+describe("dealBag + setupFromDraws (physical draw flow)", () => {
+  it("bag has one token per player; the Drunk's token is their believed Townsfolk", () => {
+    for (let seed = 1; seed < 300; seed++) {
+      const bag = dealBag(9, seededRng(seed));
+      expect(bag.bagTokens).toHaveLength(9);
+      expect(bag.charactersInPlay).toHaveLength(9);
+      if (!bag.charactersInPlay.includes("drunk")) {
+        expect(bag.believedCharacter).toBeUndefined();
+        expect(bag.bagTokens).toEqual(bag.charactersInPlay);
+        continue;
+      }
+      const believed = bag.believedCharacter;
+      expect(believed).toBeDefined();
+      if (!believed) continue;
+      expect(CHARACTERS[believed].type).toBe("townsfolk");
+      // The physical bag holds the believed token, never the word "Drunk",
+      // and the believed token is not otherwise in play.
+      expect(bag.bagTokens).not.toContain("drunk");
+      expect(bag.bagTokens).toContain(believed);
+      expect(bag.charactersInPlay).not.toContain(believed);
+      return;
+    }
+    throw new Error("no Drunk dealt in 300 seeds");
+  });
+
+  it("maps the believed token back to the Drunk when recording draws", () => {
+    for (let seed = 1; seed < 300; seed++) {
+      const bag = dealBag(9, seededRng(seed));
+      if (!bag.believedCharacter) continue;
+      const setup = setupFromDraws(names(9), bag, [...bag.bagTokens], seededRng(seed + 1));
+      const drunkSeat = bag.bagTokens.indexOf(bag.believedCharacter);
+      expect(setup.seats[drunkSeat].character).toBe("drunk");
+      expect(setup.seats[drunkSeat].believedCharacter).toBe(bag.believedCharacter);
+      // Everyone else got exactly the token they drew.
+      for (const s of setup.seats) {
+        if (s.seat !== drunkSeat) expect(s.character).toBe(bag.bagTokens[s.seat]);
+      }
+      return;
+    }
+    throw new Error("no Drunk dealt in 300 seeds");
+  });
+
+  it("rejects a draw record that does not cover every seat", () => {
+    const bag = dealBag(7, seededRng(1));
+    expect(() => setupFromDraws(names(7), bag, bag.bagTokens.slice(0, 6))).toThrow();
   });
 });
 

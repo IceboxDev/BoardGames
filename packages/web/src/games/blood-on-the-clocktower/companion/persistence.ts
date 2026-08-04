@@ -2,10 +2,25 @@
 // CompanionState is JSON-serializable by design (see core companion.ts), so a
 // running game survives refreshes, phone locks, and accidental navigation.
 
+import type { CharacterId } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import type { CompanionState } from "@boardgames/core/games/blood-on-the-clocktower/companion";
+import type { BagSetup } from "@boardgames/core/games/blood-on-the-clocktower/setup";
 
 const GAME_KEY = "botc-companion-game-v1";
 const ROSTER_KEY = "botc-companion-roster-v1";
+const BAG_KEY = "botc-companion-bag-v1";
+
+/**
+ * The in-between stage: the bag has been rolled and players are drawing
+ * physical tokens; `draws[i]` is what seat `i` pulled (null until recorded).
+ * Persisted so a locked phone mid-draw loses nothing.
+ */
+export type BagDraft = {
+  names: string[];
+  storyteller?: string;
+  bag: BagSetup;
+  draws: (CharacterId | null)[];
+};
 
 export function loadGame(): CompanionState | null {
   try {
@@ -32,6 +47,35 @@ export function saveGame(state: CompanionState | null): void {
     else localStorage.setItem(GAME_KEY, JSON.stringify(state));
   } catch {
     // Storage full/unavailable — the game keeps running in memory.
+  }
+}
+
+export function loadBagDraft(): BagDraft | null {
+  try {
+    const raw = localStorage.getItem(BAG_KEY);
+    if (!raw) return null;
+    const parsed: unknown = JSON.parse(raw);
+    if (
+      typeof parsed === "object" &&
+      parsed !== null &&
+      Array.isArray((parsed as { names?: unknown }).names) &&
+      Array.isArray((parsed as { draws?: unknown }).draws) &&
+      typeof (parsed as { bag?: unknown }).bag === "object"
+    ) {
+      return parsed as BagDraft;
+    }
+    return null;
+  } catch {
+    return null;
+  }
+}
+
+export function saveBagDraft(draft: BagDraft | null): void {
+  try {
+    if (draft === null) localStorage.removeItem(BAG_KEY);
+    else localStorage.setItem(BAG_KEY, JSON.stringify(draft));
+  } catch {
+    // Best-effort only.
   }
 }
 

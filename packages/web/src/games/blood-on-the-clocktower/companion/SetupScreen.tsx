@@ -1,8 +1,6 @@
-import type { CompanionState } from "@boardgames/core/games/blood-on-the-clocktower/companion";
-import { createGame } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import {
   baseDistribution,
-  dealSetup,
+  dealBag,
   describeDistribution,
   MAX_PLAYERS,
   MIN_PLAYERS,
@@ -17,7 +15,7 @@ import { dateKey } from "../../../lib/offline-availability";
 import { fetchPlayers } from "../../../lib/profile";
 import { qk } from "../../../lib/query-keys";
 import { Panel, Screen } from "./common";
-import { loadRoster, saveRoster } from "./persistence";
+import { type BagDraft, loadRoster, saveRoster } from "./persistence";
 
 /**
  * Roster entry. Names go in SEATING ORDER (clockwise around the circle) —
@@ -31,9 +29,11 @@ function toEntries(names: string[]): RosterEntry[] {
   return names.map((name) => ({ id: nextEntryId++, name }));
 }
 
-export default function SetupScreen({ onStart }: { onStart: (state: CompanionState) => void }) {
+export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => void }) {
   const [entries, setEntries] = useState<RosterEntry[]>(() => toEntries(loadRoster()));
   const [draft, setDraft] = useState("");
+  // One attendee runs the game instead of playing — they hold this phone.
+  const [storyteller, setStoryteller] = useState<string | undefined>();
   const names = entries.map((e) => e.name);
 
   const countOk = names.length >= MIN_PLAYERS && names.length <= MAX_PLAYERS;
@@ -84,7 +84,33 @@ export default function SetupScreen({ onStart }: { onStart: (state: CompanionSta
 
   function applyNightRoster(includeMaybes: boolean) {
     const roster = includeMaybes ? [...going, ...maybes] : going;
-    setEntries(toEntries(roster.map((a) => a.name).slice(0, MAX_PLAYERS)));
+    // Dedupe case-insensitively — names double as React keys downstream.
+    const seen = new Set<string>();
+    const unique = roster
+      .map((a) => a.name)
+      .filter((n) => {
+        const key = n.toLowerCase();
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    setEntries(toEntries(unique.slice(0, MAX_PLAYERS + 1)));
+    setStoryteller(undefined);
+  }
+
+  function makeStoryteller(entry: RosterEntry) {
+    setEntries((prev) => {
+      const rest = prev.filter((e) => e.id !== entry.id);
+      // A previous Storyteller returns to the players.
+      return storyteller ? [...rest, { id: nextEntryId++, name: storyteller }] : rest;
+    });
+    setStoryteller(entry.name);
+  }
+
+  function returnStoryteller() {
+    if (!storyteller) return;
+    setEntries((prev) => [...prev, { id: nextEntryId++, name: storyteller }]);
+    setStoryteller(undefined);
   }
 
   function move(index: number, delta: -1 | 1) {
@@ -98,7 +124,12 @@ export default function SetupScreen({ onStart }: { onStart: (state: CompanionSta
   function deal() {
     if (!countOk) return;
     saveRoster(names);
-    onStart(createGame(dealSetup(names)));
+    onDeal({
+      names,
+      ...(storyteller ? { storyteller } : {}),
+      bag: dealBag(names.length),
+      draws: names.map(() => null),
+    });
   }
 
   return (
@@ -115,7 +146,8 @@ export default function SetupScreen({ onStart }: { onStart: (state: CompanionSta
         <Panel tone="gold" title="Board game night tonight">
           <p className="text-sm text-fg-primary">
             {going.length} going{maybes.length > 0 && <> · {maybes.length} maybe</>} — pull the
-            guest list straight in, then reorder to match the circle.
+            guest list straight in, tap <b>DM</b> on whoever runs the game, then reorder to match
+            the circle.
           </p>
           <div className="mt-2 flex flex-col gap-2 sm:flex-row">
             <Button variant="primary" block onClick={() => applyNightRoster(false)}>
@@ -126,6 +158,19 @@ export default function SetupScreen({ onStart }: { onStart: (state: CompanionSta
                 Include maybes (+{maybes.length})
               </Button>
             )}
+          </div>
+        </Panel>
+      )}
+
+      {storyteller && (
+        <Panel tone="danger">
+          <div className="flex items-center justify-between gap-2">
+            <p className="min-w-0 truncate text-sm text-fg-primary">
+              Storyteller: <b>{storyteller}</b> — runs the game, doesn't play.
+            </p>
+            <Button variant="ghost" size="xs" onClick={returnStoryteller}>
+              Return to players
+            </Button>
           </div>
         </Panel>
       )}
@@ -141,6 +186,15 @@ export default function SetupScreen({ onStart }: { onStart: (state: CompanionSta
                 {i + 1}
               </span>
               <span className="min-w-0 flex-1 truncate text-sm text-fg-primary">{entry.name}</span>
+              <Button
+                variant="ghost"
+                size="xs"
+                aria-label={`Make ${entry.name} the Storyteller`}
+                title="Make them the Storyteller (they won't play)"
+                onClick={() => makeStoryteller(entry)}
+              >
+                DM
+              </Button>
               <Button variant="ghost" size="xs" disabled={i === 0} onClick={() => move(i, -1)}>
                 ↑
               </Button>
@@ -211,7 +265,7 @@ export default function SetupScreen({ onStart }: { onStart: (state: CompanionSta
       )}
 
       <Button variant="primary" size="lg" block disabled={!countOk} onClick={deal}>
-        Deal characters
+        Roll the bag
       </Button>
       {!countOk && names.length > 0 && (
         <p className="text-center text-xs text-fg-muted">

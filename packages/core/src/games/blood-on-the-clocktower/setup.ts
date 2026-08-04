@@ -76,17 +76,33 @@ function draw<T>(pool: T[], count: number, rng: () => number): T[] {
 }
 
 /**
- * Deal a full Trouble Brewing setup for the named players (in seating order).
- *
- * - Applies the Baron adjustment when the Baron is drawn.
- * - When the Drunk is in play, picks a not-in-play Townsfolk as the character
- *   the Drunk player believes they are (that token is then also excluded from
- *   the Demon's bluffs).
- * - Picks the Fortune Teller's red herring among good players (the Fortune
- *   Teller themself is a legal red herring).
+ * The bag the Storyteller physically prepares. The phone never leaves the
+ * ST's hands: the app names the tokens to drop in the bag, players draw them
+ * at the table, and the draw is recorded afterwards via `setupFromDraws`.
  */
-export function dealSetup(names: string[], rng: () => number = Math.random): GameSetup {
-  const dist = baseDistribution(names.length);
+export type BagSetup = {
+  /** The actual characters in play — includes "drunk" when dealt. */
+  charactersInPlay: CharacterId[];
+  /**
+   * The physical tokens for the bag: identical to `charactersInPlay` except
+   * the Drunk is replaced by their believed Townsfolk token. Whoever draws
+   * that token IS the Drunk — they never learn it.
+   */
+  bagTokens: CharacterId[];
+  /** Set when the Drunk is in play: the not-in-play Townsfolk token they drew. */
+  believedCharacter?: CharacterId;
+  distribution: Distribution;
+  /** Three not-in-play good characters to show the Demon as safe bluffs. */
+  demonBluffs: CharacterId[];
+};
+
+/**
+ * Roll the bag composition for a player count (rulebook SETUP steps 6–8):
+ * the right number of each type, the Baron's [+2 Outsiders] swap, the Drunk's
+ * believed-Townsfolk stand-in token, and the Demon's three bluffs.
+ */
+export function dealBag(playerCount: number, rng: () => number = Math.random): BagSetup {
+  const dist = baseDistribution(playerCount);
   const townsfolkPool = charactersOfType("townsfolk").map((c) => c.id);
   const outsiderPool = charactersOfType("outsider").map((c) => c.id);
   const minionPool = charactersOfType("minion").map((c) => c.id);
@@ -96,21 +112,11 @@ export function dealSetup(names: string[], rng: () => number = Math.random): Gam
 
   const outsiders = draw(outsiderPool, finalDist.outsiders, rng);
   const townsfolk = draw(townsfolkPool, finalDist.townsfolk, rng);
-
-  const bag = shuffled([...townsfolk, ...outsiders, ...minions, "imp" as CharacterId], rng);
+  const charactersInPlay = [...townsfolk, ...outsiders, ...minions, "imp" as CharacterId];
 
   const notInPlayTownsfolk = townsfolkPool.filter((id) => !townsfolk.includes(id));
   const believed = outsiders.includes("drunk") ? draw(notInPlayTownsfolk, 1, rng)[0] : undefined;
-
-  const seats: SeatSetup[] = names.map((name, seat) => {
-    const character = bag[seat];
-    return {
-      seat,
-      name,
-      character,
-      ...(character === "drunk" && believed ? { believedCharacter: believed } : {}),
-    };
-  });
+  const bagTokens = charactersInPlay.map((id) => (id === "drunk" && believed ? believed : id));
 
   // Demon bluffs: three good characters neither in play nor claimed by the
   // Drunk's believed token. Prefer two Townsfolk + one Outsider (the
@@ -125,18 +131,63 @@ export function dealSetup(names: string[], rng: () => number = Math.random): Gam
     bluffs.push(extra);
   }
 
+  return {
+    charactersInPlay,
+    bagTokens,
+    ...(believed !== undefined ? { believedCharacter: believed } : {}),
+    distribution: finalDist,
+    demonBluffs: bluffs.slice(0, 3),
+  };
+}
+
+/**
+ * Build the seated setup from a recorded physical draw: `drawnTokens[i]` is
+ * the token the player in seat `i` pulled from the bag. Whoever drew the
+ * believed-Townsfolk token becomes the Drunk. The Fortune Teller's red
+ * herring is rolled here, once the seats are known.
+ */
+export function setupFromDraws(
+  names: string[],
+  bag: BagSetup,
+  drawnTokens: CharacterId[],
+  rng: () => number = Math.random,
+): GameSetup {
+  if (drawnTokens.length !== names.length) {
+    throw new Error("every seat needs exactly one drawn token");
+  }
+  const seats: SeatSetup[] = names.map((name, seat) => {
+    const token = drawnTokens[seat];
+    const isDrunk = bag.believedCharacter !== undefined && token === bag.believedCharacter;
+    return {
+      seat,
+      name,
+      character: isDrunk ? ("drunk" as CharacterId) : token,
+      ...(isDrunk ? { believedCharacter: bag.believedCharacter } : {}),
+    };
+  });
+
   const fortuneTellerInPlay = seats.some((s) => s.character === "fortune-teller");
-  const goodSeats = seats.filter(
-    (s) => !["poisoner", "spy", "scarlet-woman", "baron", "imp"].includes(s.character),
+  const goodSeats = seats.filter((s) =>
+    ["townsfolk", "outsider"].includes(CHARACTERS[s.character].type),
   );
   const redHerringSeat = fortuneTellerInPlay ? draw(goodSeats, 1, rng)[0]?.seat : undefined;
 
   return {
     seats,
-    distribution: finalDist,
-    demonBluffs: bluffs.slice(0, 3),
+    distribution: bag.distribution,
+    demonBluffs: bag.demonBluffs,
     ...(redHerringSeat !== undefined ? { redHerringSeat } : {}),
   };
+}
+
+/**
+ * Deal a full Trouble Brewing setup in one step (bag + simulated draw).
+ * The companion's physical flow uses `dealBag` + `setupFromDraws` instead;
+ * this remains for tests and any future fully-digital mode.
+ */
+export function dealSetup(names: string[], rng: () => number = Math.random): GameSetup {
+  const bag = dealBag(names.length, rng);
+  return setupFromDraws(names, bag, shuffled(bag.bagTokens, rng), rng);
 }
 
 /** Human-readable "3 Townsfolk · 1 Outsider · 1 Minion · 1 Demon". */
