@@ -206,6 +206,12 @@
     "accentHex": "#c87a2a"
   },
   {
+    "slug": "electropolis",
+    "bggId": 286431,
+    "accentHex": "#247aa8",
+    "isNew": true
+  },
+  {
     "slug": "elements-of-truth",
     "bggId": 0,
     "accentHex": "#ac5824"
@@ -277,6 +283,12 @@
       "id": "dark-cities",
       "variant": "Hollywood 1947"
     }
+  },
+  {
+    "slug": "hot-pot-holic",
+    "bggId": 427904,
+    "accentHex": "#b4db53",
+    "isNew": true
   },
   {
     "slug": "intarsia",
@@ -367,7 +379,23 @@
   {
     "slug": "parks",
     "bggId": 437306,
-    "accentHex": "#f2b05a"
+    "accentHex": "#f2b05a",
+    "family": {
+      "id": "parks",
+      "canonical": true,
+      "name": "Parks",
+      "variant": "Original"
+    }
+  },
+  {
+    "slug": "parks-europe",
+    "bggId": 458651,
+    "accentHex": "#f2d259",
+    "family": {
+      "id": "parks",
+      "variant": "Europe"
+    },
+    "isNew": true
   },
   {
     "slug": "phase-10",
@@ -378,6 +406,13 @@
     "slug": "poker",
     "bggId": 1115,
     "accentHex": "#e5b366"
+  },
+  {
+    "slug": "publish-or-perish",
+    "bggId": 414078,
+    "accentHex": "#e41c1c",
+    "displayTitle": "Publish or Perish",
+    "isNew": true
   },
   {
     "slug": "quiztopia",

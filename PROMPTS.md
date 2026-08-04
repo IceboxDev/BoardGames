@@ -740,6 +740,38 @@ Every prompt includes the same style directive so the four images form a visuall
 
 ---
 
+## 93. Publish or Perish
+
+**File:** `packages/web/src/games/publish-or-perish/assets/thumbnail.png`
+
+> A top-down view of a scholar's desk covered in immaculate academic manuscripts — crisp white pages in flawless two-column journal typesetting, dense justified type implied as fine grey lines, elegant equation squiggles, numbered figure boxes — every page laid out with reverent precision, no people and no hands in frame. The comedy lives entirely inside the pristine documents: one paper's stately Figure 1 is a scatterplot of hopelessly random dots through which a confident straight trend line has been ruled anyway, the ruler and red pen still lying across it as the culprits; another's centerpiece is a pie chart that is one enormous slice and one sliver; a third displays a line graph plunging so steeply it exits the figure box and continues down the margin of the page. A returned manuscript sits perfectly squared to the desk grid, its margins filled edge-to-edge with tidy, relentless red annotations that visibly outweigh the manuscript's own type, and beneath it a second review page bears nothing but a single large, beautifully calligraphed red question mark. A conspiracy web of red string and pins connects a circle of published papers to each other — and one string loops elegantly from a paper straight back to itself. To one side, a foot-high tower of near-identical drafts rises in tree-ring strata of dog-eared corners, dwarfing a single pristine acceptance letter sealed with a gold sticker, no bigger than an index card. Deadpan props complete the scene: a pair of dice resting on a statistics appendix, coffee-ring stains on the blotter forming a perfect three-circle Venn diagram, and an hourglass with almost no sand left standing calmly beside the tallest stack. The mood is dry, scholarly wit — every object rendered with total academic seriousness, every detail quietly ridiculous. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 94. Electropolis
+
+**File:** `packages/web/src/games/electropolis/assets/thumbnail.png`
+
+> A top-down view of a city-planner's drafting table at dusk, a blueprint-blue surface gridded with faint zoning lines. In the center, a personal city grows as a neat mosaic of square district tiles — rows of amber-windowed apartment blocks, leafy park squares, and factory lots — with power-plant tiles anchoring its corners: a coal plant exhaling a curl of grey smoke, a nuclear cooling tower with a soft steam plume, a solar farm glinting deep blue, and a hillside of white wind turbines mid-spin. Thin luminous power lines thread from the plants through the districts, making windows glow warm as electricity reaches them. A circular ring of face-up tiles waits at one edge mid-draft, one tile lifted just above the surface as if freshly chosen, beside a turn-order track of numbered wooden discs. Small green approval cubes cluster near the parks while a smudge of smog haze drifts off the coal stacks toward a pollution track. Scattered around: a mechanical pencil, a drafting compass, a folded demand chart, and a cooling cup of oolong tea at the periphery. The mood is quietly electric and civic-minded — a growing skyline humming between smokestacks and windmills. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 95. Hot Pot Holic
+
+**File:** `packages/web/src/games/hot-pot-holic/assets/thumbnail.png`
+
+> A top-down view of a round lacquered restaurant table crowned by a bubbling divided hot pot — one half fiery red mala broth crowded with chilies, the other half milky-white herbal broth with goji berries and scallions — steam curling up in soft ribbons that catch the lantern light. Radiating around the pot like spokes, cheerful ingredient cards float mid-simmer, each painted in appetizing kawaii style: a blushing shrimp, a springy fish ball with a grin, ribboned slices of marbled beef, a wobbly tofu cube, a fan of napa cabbage, a cluster of enoki mushrooms, and a nest of glass noodles. A pair of chopsticks reaches in from one edge, triumphantly lifting a dumpling card out of the steam, while a small ceramic plate nearby holds a tidy row of claimed cards and a second "stomach" stack sits face-down beside a contented porcelain cat figurine. Numbered rank cards from a just-played trick lie overlapping at one side, deciding who scoops first. Scattered around: a dish of sesame dipping sauce mid-swirl, a saucer of chili oil, a glass of iced plum tea, and a stray bean sprout on the lacquer. The mood is gleeful, ravenous, and communal — steam-wreathed feast-night joy one trick from overeating. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 96. Parks Europe
+
+**File:** `packages/web/src/games/parks-europe/assets/thumbnail.png`
+
+> A top-down view of a hiker's leather field journal lying open on a weathered alpine-chalet table, lit by golden afternoon sun slanting through a shuttered window — a European companion scene to the Parks journal. A row of stylized trail-tiles curves like a switchback path across one open page — Dolomiti limestone spires, a via-ferrata ladder of iron rungs pinned to a cliff face, tidal flats of the Wadden Sea shimmering at low tide, a black-forest ridge and a turquoise alpine lake — with a small carved wooden hiker meeple clipped mid-climb onto the via-ferrata rung. A fan of park cards spreads across the journal's other page, each a miniature travel-poster of a European national park rendered in flat poster blocks: chalk sea-cliffs, a glacial fjord, lavender headlands, snow-dusted peaks above a mountain chalet. Translucent gem-shaped resource tokens (sun, water, mountain, forest) glint along the spine beside a vintage camera with a fresh photograph still developing at its lip, and a small conservation-project card sits tucked under a sprig of edelweiss and a spotted ibex-shaped wooden token. Beyond the journal's edge, the table dissolves into a soft-focus painted vista of the Alps in poster-flat blocks, as though the continent's wild places were rising from the pages. The mood is reverent and wandering — golden-hour wilderness hush with an alpine heartbeat. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
 # Background Image Prompts
 
 All backgrounds were generated with **ChatGPT (image generation)** on March 18, 2026.
