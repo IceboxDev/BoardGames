@@ -207,6 +207,12 @@ export interface PlayableGame extends GameBase {
   backgroundImage?: string;
   /** Label for the solo/AI button on the mode-picker (e.g. "Play vs AI", "Trainer"). */
   soloLabel?: string;
+  /**
+   * The game has no online rooms yet: the mode-picker still shows the
+   * Multiplayer card (so the layout matches every other game) but renders it
+   * inert with a "coming soon" note instead of routing to `mp/join`.
+   */
+  multiplayerComingSoon?: boolean;
   /** Whether the game has a match history screen accessible from the mode-picker. */
   hasMatchHistory?: boolean;
   /** Whether the game has a tournament screen accessible from the mode-picker. */

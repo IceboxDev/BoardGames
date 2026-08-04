@@ -19,6 +19,8 @@ interface ModeSelectProps {
   onRules?: () => void;
   onSolo?: () => void;
   onMultiplayer: () => void;
+  /** Render the Multiplayer card inert with a "coming soon" note. */
+  multiplayerComingSoon?: boolean;
   /** Companion-device card (e.g. beamer display) shown INSTEAD of Multiplayer. */
   companion?: { label: string; description: string; onClick: () => void };
   onMatchHistory?: () => void;
@@ -49,6 +51,12 @@ function soloMode(label: string): { icon: ReactNode; tone: SegmentedTone; descri
         tone: "amber",
         description: "Run the campaign as Dungeon Master",
       };
+    case "Companion":
+      return {
+        icon: <BookIcon className="h-7 w-7" />,
+        tone: "rose",
+        description: "Run the game as the Storyteller",
+      };
     default:
       return {
         icon: <BotIcon className="h-7 w-7" />,
@@ -65,6 +73,7 @@ export function ModeSelect({
   onRules,
   onSolo,
   onMultiplayer,
+  multiplayerComingSoon = false,
   companion,
   onMatchHistory,
   onTournament,
@@ -110,6 +119,15 @@ export function ModeSelect({
             description={companion.description}
             onClick={companion.onClick}
             animationDelay={60}
+          />
+        ) : multiplayerComingSoon ? (
+          <SelectableCard
+            tone="emerald"
+            icon={<UsersIcon className="h-7 w-7" />}
+            title="Multiplayer"
+            description="Online rooms — coming soon"
+            animationDelay={60}
+            className="opacity-50 saturate-50"
           />
         ) : (
           <SelectableCard
