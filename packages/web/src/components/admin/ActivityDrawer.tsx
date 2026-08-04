@@ -192,6 +192,8 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
       return "Signed in";
     case "visit":
       return "Visited the site";
+    case "page-view":
+      return describePageView(meta);
     case "rsvp": {
       const status = str(meta.status) === "no" ? "no" : "yes";
       const previous = str(meta.previous);
@@ -250,10 +252,37 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
   }
 }
 
+/** Human line for a `page-view` beacon. Unknown pages degrade to "Viewed <page>". */
+function describePageView(meta: Record<string, unknown>): string {
+  const page = str(meta.page) ?? "a page";
+  const detail = str(meta.detail);
+  switch (page) {
+    case "home":
+      return "Viewed their dashboard";
+    case "calendar":
+      return "Viewed the calendar";
+    case "night":
+      return `Opened game night${detail ? ` ${formatDayKey(detail)}` : ""}`;
+    case "games":
+      return "Browsed the games catalog";
+    case "players":
+      return "Viewed the players list";
+    case "history":
+      return "Viewed the match history";
+    case "admin":
+      return "Viewed the admin dashboard";
+    case "play":
+      return `Opened ${gameTitle(detail) ?? "a game"}`;
+    default:
+      return `Viewed ${page}${detail ? ` (${detail})` : ""}`;
+  }
+}
+
 function dotClass(type: string): string {
   switch (type) {
     case "login":
     case "visit":
+    case "page-view":
       return "bg-sky-400/70";
     case "rsvp":
     case "rsvp-cleared":

@@ -3,6 +3,7 @@ import {
   ActivityEntrySchema,
   ActivityLogQuerySchema,
   ActivityLogResponseSchema,
+  PageViewBodySchema,
 } from "./activity.ts";
 
 const validEntry = {
@@ -61,6 +62,20 @@ describe("ActivityLogQuerySchema", () => {
     if (!result.success) {
       expect(result.error.issues[0]?.path).toEqual(["limit"]);
     }
+  });
+});
+
+describe("PageViewBodySchema", () => {
+  it("accepts page alone and page+detail", () => {
+    expect(() => PageViewBodySchema.parse({ page: "calendar" })).not.toThrow();
+    expect(() => PageViewBodySchema.parse({ page: "night", detail: "2026-08-04" })).not.toThrow();
+  });
+
+  it("rejects an empty page and an oversized detail", () => {
+    expect(PageViewBodySchema.safeParse({ page: "" }).success).toBe(false);
+    expect(PageViewBodySchema.safeParse({ page: "night", detail: "x".repeat(101) }).success).toBe(
+      false,
+    );
   });
 });
 

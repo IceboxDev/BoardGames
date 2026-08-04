@@ -33,3 +33,13 @@ export const ActivityLogResponseSchema = z.object({
   nextBefore: z.number().int().positive().nullable(),
 });
 export type ActivityLogResponse = z.infer<typeof ActivityLogResponseSchema>;
+
+// `POST /api/activity/view` — client-side page-view beacon. `page` is a
+// client-owned vocabulary ("calendar", "night", "games", "players", "play",
+// …); `detail` optionally narrows it (a date key for "night", a game slug
+// for "play"). The client deduplicates per session; the server just records.
+export const PageViewBodySchema = z.object({
+  page: z.string().min(1).max(64),
+  detail: z.string().min(1).max(100).optional(),
+});
+export type PageViewBody = z.input<typeof PageViewBodySchema>;

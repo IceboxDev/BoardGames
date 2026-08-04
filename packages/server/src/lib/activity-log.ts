@@ -13,6 +13,7 @@ import { getDb } from "../db.ts";
 export type ActivityType =
   | "login"
   | "visit"
+  | "page-view"
   | "rsvp"
   | "rsvp-cleared"
   | "rsvp-kick"

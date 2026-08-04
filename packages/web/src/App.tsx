@@ -11,6 +11,7 @@ import {
 import { AuthGuard } from "./components/AuthGuard";
 import { AuthInvalidator } from "./components/AuthInvalidator";
 import Layout from "./components/Layout";
+import { PageViewTracker } from "./components/PageViewTracker";
 import { RouteErrorBoundary } from "./components/RouteErrorBoundary";
 import { queryClient } from "./lib/query-client";
 import { queryPersistBuster, queryPersister } from "./lib/query-persister";
@@ -86,6 +87,7 @@ function RootShell() {
   return (
     <>
       <AuthInvalidator />
+      <PageViewTracker />
       <RouteErrorBoundary>
         <Suspense fallback={null}>
           <Outlet />

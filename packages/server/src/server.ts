@@ -10,6 +10,7 @@ import {
   requireOnline,
   requireWsAuth,
 } from "./auth/index.ts";
+import { activityRoutes } from "./auth-routes/activity.ts";
 import { adminActivityRoutes } from "./auth-routes/admin-activity.ts";
 import {
   adminAvailabilityAllRoutes,
@@ -167,6 +168,9 @@ app.route("/api/admin/history", adminMatchHistoryRoutes);
 app.use("/api/user/*", requireAuth);
 app.route("/api/user", userAvailabilityRoutes);
 app.route("/api/user", userInventoryRoutes);
+
+app.use("/api/activity/*", requireAuth);
+app.route("/api/activity", activityRoutes);
 
 app.use("/api/availability/*", requireAuth);
 app.route("/api/availability", availabilityCountsRoutes);

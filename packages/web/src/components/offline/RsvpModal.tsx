@@ -4,6 +4,7 @@ import type { CalendarLocks } from "../../lib/calendar-locks";
 import type { RsvpStatus } from "../../lib/calendar-rsvps";
 import { formatDayKey } from "../../lib/date-format.ts";
 import { DND_SLUG } from "../../lib/dnd-night";
+import { reportPageView } from "../../lib/page-views";
 import { ClockIcon, HostIcon, PadlockIcon, PinIcon } from "../icons";
 import {
   EmptyState,
@@ -29,6 +30,11 @@ type Props = {
 export default function RsvpModal({ date, locks, onClose }: Props) {
   const { user, isAdmin } = useCurrentUser();
   const userId = user?.id ?? null;
+
+  // Opening a night's card is a view worth trailing (deduped per session).
+  useEffect(() => {
+    if (userId) reportPageView("night", date);
+  }, [userId, date]);
 
   const lock = locks?.[date];
   const viewerRsvp: RsvpStatus | undefined = userId ? lock?.rsvps[userId] : undefined;
