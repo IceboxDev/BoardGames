@@ -39,6 +39,17 @@ describe("extractParticipantIds", () => {
     expect(participatedIn(coop, "a")).toBe(true);
     expect(participatedIn(coop, "z")).toBe(false);
   });
+
+  it("coop: includes the moderator (D&D DM)", () => {
+    const coop: MatchOutcome = {
+      kind: "coop",
+      participants: [p("a"), p("b")],
+      moderator: p("dm"),
+      campaign: "Curse of Strahd",
+    };
+    expect(new Set(extractParticipantIds(coop))).toEqual(new Set(["a", "b", "dm"]));
+    expect(participatedIn(coop, "dm")).toBe(true);
+  });
 });
 
 describe("deriveParticipantResult", () => {
@@ -120,6 +131,16 @@ describe("deriveParticipantResult", () => {
     expect(deriveParticipantResult(o, "b")).toBe("win");
     expect(deriveParticipantResult(o, "a")).toBe("loss");
     expect(deriveParticipantResult(o, "c")).toBe("loss");
+  });
+
+  it("coop: the moderator (DM) is non-competing, not absent", () => {
+    const session: MatchOutcome = {
+      kind: "coop",
+      participants: [p("a"), p("b")],
+      moderator: p("dm"),
+      outcome: "win",
+    };
+    expect(deriveParticipantResult(session, "dm")).toBe("moderator");
   });
 
   it("coop: everyone shares the outcome", () => {

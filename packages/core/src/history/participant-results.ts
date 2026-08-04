@@ -44,6 +44,10 @@ export function extractParticipantIds(outcome: MatchOutcome): string[] {
       break;
     case "coop":
       for (const p of outcome.participants) ids.add(p.userId);
+      // The D&D DM (and any future moderator-led co-op) participates too —
+      // without this, a DM'd session neither shows in their match history
+      // nor credits the night as attended.
+      if (outcome.moderator) ids.add(outcome.moderator.userId);
       break;
     case "one-vs-many":
       ids.add(outcome.solo.userId);
@@ -118,6 +122,7 @@ export function deriveParticipantResult(
       return me.survivorRank === bestRank ? "win" : "loss";
     }
     case "coop": {
+      if (outcome.moderator?.userId === userId) return "moderator";
       if (!outcome.participants.some((p) => p.userId === userId)) return null;
       // Scored co-ops (Just One) have no win/loss — present, but excluded from
       // win-rate math.
