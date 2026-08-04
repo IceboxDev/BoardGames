@@ -2,6 +2,7 @@ import type { OnlineMode } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import {
+  ActivityDrawer,
   type AdminUser,
   AvailabilityDrawer,
   GuestPlayersCard,
@@ -42,6 +43,7 @@ export default function AdminPage() {
 
   const [expandedUserId, setExpandedUserId] = useState<string | null>(null);
   const [calendarUser, setCalendarUser] = useState<AdminUser | null>(null);
+  const [activityUser, setActivityUser] = useState<AdminUser | null>(null);
   const [deleteMode, setDeleteMode] = useState(false);
   const [confirmDeleteUserId, setConfirmDeleteUserId] = useState<string | null>(null);
   const [confirmEmail, setConfirmEmail] = useState("");
@@ -156,7 +158,7 @@ export default function AdminPage() {
   return (
     <PageShell
       topNav={
-        <TopNav>
+        <TopNav width="7xl">
           <TopNavBackButton to="/" label="Dashboard" />
         </TopNav>
       }
@@ -220,6 +222,7 @@ export default function AdminPage() {
                 setOnlineModeMutation.isPending && setOnlineModeMutation.variables?.userId === u.id
               }
               onOpenCalendar={() => setCalendarUser(u)}
+              onOpenActivity={() => setActivityUser(u)}
               deleteMode={deleteMode}
               isSelf={u.id === currentUserId}
               confirmingDelete={confirmDeleteUserId === u.id}
@@ -242,6 +245,7 @@ export default function AdminPage() {
         </UsersTable>
       </PageMain>
 
+      {activityUser && <ActivityDrawer user={activityUser} onClose={() => setActivityUser(null)} />}
       {calendarUser && (
         <AvailabilityDrawer user={calendarUser} onClose={() => setCalendarUser(null)} />
       )}

@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { type FamilyInfo, groupForPresentation } from "../games/families";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
+import { CheckIcon } from "./icons";
 
 type Props = {
   /** Currently-checked slugs. */
@@ -43,9 +44,9 @@ export default function InventoryGrid({ selected, onToggle, games: input = games
         const owned = members.filter((m) => selectedSet.has(m.slug)).length;
         return (
           <section key={family.id}>
-            <h3 className="mb-2 flex items-baseline gap-2 px-1 text-2xs font-bold uppercase tracking-[0.18em] text-fg-secondary">
+            <h3 className="mb-2 flex items-baseline gap-2 px-1 text-2xs font-bold uppercase tracking-pill text-fg-secondary">
               <span>{family.displayName}</span>
-              <span className="text-3xs font-normal tracking-[0.14em] text-fg-muted">
+              <span className="text-3xs font-normal tracking-label text-fg-muted">
                 {owned} / {members.length} owned
               </span>
             </h3>
@@ -110,20 +111,7 @@ function InventoryCell({
         <span className="block truncate font-semibold text-fg-primary">{game.title}</span>
         <span className="block truncate text-3xs text-fg-muted">{game.slug}</span>
       </span>
-      {checked && (
-        <svg
-          viewBox="0 0 20 20"
-          fill="currentColor"
-          className="h-4 w-4 shrink-0 text-accent-300"
-          aria-hidden="true"
-        >
-          <path
-            fillRule="evenodd"
-            d="M16.704 5.29a1 1 0 010 1.42l-7.5 7.5a1 1 0 01-1.41 0l-3.5-3.5a1 1 0 011.41-1.42L8.5 12.08l6.79-6.79a1 1 0 011.414 0z"
-            clipRule="evenodd"
-          />
-        </svg>
-      )}
+      {checked && <CheckIcon className="h-4 w-4 shrink-0 text-accent-300" />}
     </label>
   );
 }

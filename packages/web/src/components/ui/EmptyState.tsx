@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { ElementType, ReactNode } from "react";
 
 // The single empty-state primitive. Replaces the dozen hand-rolled
 // dashed-border "Nothing here yet" / "No matches" / "Guest list is locked"
@@ -18,6 +18,9 @@ type EmptyStateTone = "neutral" | "amber" | "rose";
 type EmptyStateProps = {
   icon?: ReactNode;
   title: ReactNode;
+  /** Element for the title — pass "h2" when the empty state IS the screen
+   *  (a full-page placeholder) so the document keeps a real heading. */
+  titleAs?: ElementType;
   description?: ReactNode;
   /** CTA element (e.g. a Button). Rendered centered below the description. */
   action?: ReactNode;
@@ -47,6 +50,7 @@ const TONE: Record<EmptyStateTone, { border: string; bubble: string; title: stri
 export function EmptyState({
   icon,
   title,
+  titleAs: TitleTag = "p",
   description,
   action,
   tone = "neutral",
@@ -63,7 +67,7 @@ export function EmptyState({
           {icon}
         </div>
       )}
-      <p className={`text-sm font-medium ${t.title}`}>{title}</p>
+      <TitleTag className={`text-sm font-medium ${t.title}`}>{title}</TitleTag>
       {description && <p className="mt-1 text-xs leading-relaxed text-fg-muted">{description}</p>}
       {action && <div className="mt-3 flex justify-center">{action}</div>}
     </div>

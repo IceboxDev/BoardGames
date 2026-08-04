@@ -36,6 +36,8 @@ type QueryBoundaryProps<T> = {
   loadingLabel?: string;
   /** Override the default `<ErrorAlert>`. */
   errorFallback?: (error: unknown) => ReactNode;
+  /** Fallback message for the default ErrorAlert (ignored when `errorFallback` is set). */
+  errorLabel?: string;
   /** Rendered instead of `children` when `isEmpty(data)` is true. */
   empty?: ReactNode;
   isEmpty?: (data: T) => boolean;
@@ -47,6 +49,7 @@ export function QueryBoundary<T>({
   loading,
   loadingLabel,
   errorFallback,
+  errorLabel = "Something went wrong",
   empty,
   isEmpty,
 }: QueryBoundaryProps<T>) {
@@ -54,7 +57,7 @@ export function QueryBoundary<T>({
   // already-loaded data keeps the data branch.
   if (query.isError && query.data === undefined) {
     if (errorFallback) return <>{errorFallback(query.error)}</>;
-    const message = errorMessageOf(query.error, "Something went wrong") ?? "Something went wrong";
+    const message = errorMessageOf(query.error, errorLabel) ?? errorLabel;
     return <ErrorAlert message={message} />;
   }
 

@@ -13,6 +13,7 @@ import {
   SITE_LABELS,
 } from "@boardgames/core/games/parks/types";
 import type { ReactNode } from "react";
+import { PromptRow } from "../../../components/game-layout/PromptRow";
 import { AiThinkingIndicator, SelectableCard } from "../../../components/ui";
 import { Button } from "../../../components/ui/Button";
 
@@ -48,30 +49,6 @@ interface ActionPanelProps {
   isMyTurn: boolean;
   isAiThinking: boolean;
   onAction: (action: Action) => void;
-}
-
-/** Standard "Title · message" row used by every game's action bar. */
-function Prompt({
-  title,
-  message,
-  children,
-}: {
-  title: string;
-  message?: string;
-  children?: ReactNode;
-}) {
-  return (
-    <div className="flex flex-wrap items-center justify-center gap-2">
-      <span className="text-xs font-semibold text-cyan-400">{title}</span>
-      {message && (
-        <>
-          <span className="text-fg-muted">&middot;</span>
-          <span className="text-xs text-fg-secondary">{message}</span>
-        </>
-      )}
-      {children}
-    </div>
-  );
 }
 
 function PrimaryButton({
@@ -131,7 +108,7 @@ export default function ActionPanel({
     if (!pid) return null;
     return (
       <div className="flex flex-col items-center gap-2">
-        <Prompt
+        <PromptRow
           title="Goal met"
           message={`${PASSION_LABELS[pid]} — pick ONE reward (locked for the rest of the game)`}
         />
@@ -161,7 +138,7 @@ export default function ActionPanel({
 
   // Pick a canteen to draw — handled by the always-visible CanteenDisplay panel.
   if (view.phase === "awaiting-canteen-draw") {
-    return <Prompt title="Your turn" message="Draw a canteen from the display above" />;
+    return <PromptRow title="Your turn" message="Draw a canteen from the display above" />;
   }
 
   // Drew a canteen — pick which row to place it on.
@@ -171,7 +148,7 @@ export default function ActionPanel({
     );
     const effect = view.pendingCanteenEffect;
     return (
-      <Prompt
+      <PromptRow
         title="Place canteen"
         message={effect ? `${CANTEEN_LABELS[effect]} — pick a row` : "Pick a row"}
       >
@@ -180,7 +157,7 @@ export default function ActionPanel({
             Row {a.row + 1}
           </PrimaryButton>
         ))}
-      </Prompt>
+      </PromptRow>
     );
   }
 
@@ -189,14 +166,14 @@ export default function ActionPanel({
     const pl = view.pendingLanding;
     const weatherLabel = pl.weather === "S" ? "Sun" : "Water";
     return (
-      <Prompt title="Resolve in order" message="Pick what to do first">
+      <PromptRow title="Resolve in order" message="Pick what to do first">
         <PrimaryButton onClick={() => onAction({ type: "landing-choice", first: "weather" })}>
           Take {weatherLabel} first
         </PrimaryButton>
         <PrimaryButton onClick={() => onAction({ type: "landing-choice", first: "site" })}>
           Trigger {SITE_LABELS[pl.site]} first
         </PrimaryButton>
-      </Prompt>
+      </PromptRow>
     );
   }
 
@@ -206,7 +183,7 @@ export default function ActionPanel({
     );
     const canPass = legalActions.some((a) => a.type === "pass");
     return (
-      <Prompt title="Trade for Wildlife" message="Spend 1 resource">
+      <PromptRow title="Trade for Wildlife" message="Spend 1 resource">
         {exchangeActions.map((a) => (
           <PrimaryButton key={a.resource} onClick={() => onAction(a)}>
             Spend {RESOURCE_LABELS[a.resource as ResourceType]}
@@ -215,7 +192,7 @@ export default function ActionPanel({
         {canPass && (
           <SecondaryButton onClick={() => onAction({ type: "pass" })}>Skip</SecondaryButton>
         )}
-      </Prompt>
+      </PromptRow>
     );
   }
 
@@ -233,7 +210,7 @@ export default function ActionPanel({
       (a) => a.type === "canteen-or-photo-choice" && a.choice === "canteen",
     );
     return (
-      <Prompt title="Choose" message="Take a canteen or pay 1 resource for a photo">
+      <PromptRow title="Choose" message="Take a canteen or pay 1 resource for a photo">
         {canTakeCanteen && (
           <PrimaryButton
             onClick={() => onAction({ type: "canteen-or-photo-choice", choice: "canteen" })}
@@ -246,7 +223,7 @@ export default function ActionPanel({
             Pay {RESOURCE_LABELS[a.payWith as ResourceType]}
           </PrimaryButton>
         ))}
-      </Prompt>
+      </PromptRow>
     );
   }
 
@@ -261,7 +238,7 @@ export default function ActionPanel({
     );
     const remaining = view.pendingWaterPlacements;
     return (
-      <Prompt title="Place water" message={`${remaining} remaining — pick a row or keep`}>
+      <PromptRow title="Place water" message={`${remaining} remaining — pick a row or keep`}>
         {placeActions.map((a) => (
           <PrimaryButton key={`gap-${a.placement}`} onClick={() => onAction(a)}>
             Row {a.placement + 1}
@@ -270,7 +247,7 @@ export default function ActionPanel({
         {keepAction && (
           <SecondaryButton onClick={() => onAction(keepAction)}>Keep in backpack</SecondaryButton>
         )}
-      </Prompt>
+      </PromptRow>
     );
   }
 
@@ -286,7 +263,7 @@ export default function ActionPanel({
     );
     const canPass = legalActions.some((a) => a.type === "pass");
     return (
-      <Prompt title="Snap photo" message="Pay 1 resource">
+      <PromptRow title="Snap photo" message="Pay 1 resource">
         {photoActions.map((a) => (
           <PrimaryButton key={a.payWith} onClick={() => onAction(a)}>
             Pay {RESOURCE_LABELS[a.payWith as ResourceType]}
@@ -295,7 +272,7 @@ export default function ActionPanel({
         {canPass && (
           <SecondaryButton onClick={() => onAction({ type: "pass" })}>Skip</SecondaryButton>
         )}
-      </Prompt>
+      </PromptRow>
     );
   }
 
@@ -312,13 +289,13 @@ export default function ActionPanel({
         ? "Activate a Gear chip in your tray — or pass to end your turn"
         : "End of turn";
     return (
-      <Prompt title="Your turn" message={message}>
+      <PromptRow title="Your turn" message={message}>
         {canPass && (
           <SecondaryButton onClick={() => onAction({ type: "pass" })}>
             {canBuyAny || canActivateAny ? "Pass / End turn" : "End turn"}
           </SecondaryButton>
         )}
-      </Prompt>
+      </PromptRow>
     );
   }
 
@@ -330,7 +307,7 @@ export default function ActionPanel({
     const gearKind = view.pendingGearActivation?.kind;
     const canPass = legalActions.some((a) => a.type === "pass");
     return (
-      <Prompt
+      <PromptRow
         title={gearKind ? GEAR_LABELS[gearKind] : "Photo"}
         message="Pay 1 resource for a photo"
       >
@@ -342,7 +319,7 @@ export default function ActionPanel({
         {canPass && (
           <SecondaryButton onClick={() => onAction({ type: "pass" })}>Cancel</SecondaryButton>
         )}
-      </Prompt>
+      </PromptRow>
     );
   }
 
@@ -358,7 +335,7 @@ export default function ActionPanel({
     const gearKind = view.pendingGearActivation?.kind;
     const canPass = legalActions.some((a) => a.type === "pass");
     return (
-      <Prompt
+      <PromptRow
         title={gearKind ? GEAR_LABELS[gearKind] : "Reserve"}
         message="Reserve a park — pick a source"
       >
@@ -376,7 +353,7 @@ export default function ActionPanel({
         {canPass && (
           <SecondaryButton onClick={() => onAction({ type: "pass" })}>Cancel</SecondaryButton>
         )}
-      </Prompt>
+      </PromptRow>
     );
   }
 
@@ -386,14 +363,14 @@ export default function ActionPanel({
         a.type === "shutterbug-photo-pay",
     );
     return (
-      <Prompt title="Shutterbug bonus" message="Pay 1 resource for an extra photo, or skip">
+      <PromptRow title="Shutterbug bonus" message="Pay 1 resource for an extra photo, or skip">
         {payActions.map((a) => (
           <PrimaryButton key={a.payWith} onClick={() => onAction(a)}>
             Pay {RESOURCE_LABELS[a.payWith as ResourceType]}
           </PrimaryButton>
         ))}
         <SecondaryButton onClick={() => onAction({ type: "pass" })}>Skip</SecondaryButton>
-      </Prompt>
+      </PromptRow>
     );
   }
 
@@ -406,13 +383,13 @@ export default function ActionPanel({
     const total =
       me.resources.M + me.resources.F + me.resources.S + me.resources.W + me.resources.A;
     return (
-      <Prompt title="Over the cap" message={`Discard down to 12 (you have ${total})`}>
+      <PromptRow title="Over the cap" message={`Discard down to 12 (you have ${total})`}>
         {discardActions.map((a) => (
           <PrimaryButton key={a.resource} onClick={() => onAction(a)}>
             Discard {RESOURCE_LABELS[a.resource as ResourceType]}
           </PrimaryButton>
         ))}
-      </Prompt>
+      </PromptRow>
     );
   }
 
@@ -433,7 +410,7 @@ export default function ActionPanel({
         a.type === "reserve-park" && a.source === "deck-top",
     );
     return (
-      <Prompt title="Park Action" message="Buy or reserve a park, or skip">
+      <PromptRow title="Park Action" message="Buy or reserve a park, or skip">
         {buyDisplayActions.map((a) => {
           const park = view.parksDisplay.find((p) => p.id === a.parkId);
           return (
@@ -461,17 +438,17 @@ export default function ActionPanel({
           </SecondaryButton>
         )}
         <SecondaryButton onClick={() => onAction({ type: "pass" })}>Skip</SecondaryButton>
-      </Prompt>
+      </PromptRow>
     );
   }
 
   // Standard playing phase — flat row matching lost-cities/sushi-go style.
   const canPass = legalActions.some((a) => a.type === "pass");
   return (
-    <Prompt title="Your turn" message="Pick a hiker to move, use a canteen, or buy a park">
+    <PromptRow title="Your turn" message="Pick a hiker to move, use a canteen, or buy a park">
       {canPass && (
         <SecondaryButton onClick={() => onAction({ type: "pass" })}>Pass</SecondaryButton>
       )}
-    </Prompt>
+    </PromptRow>
   );
 }

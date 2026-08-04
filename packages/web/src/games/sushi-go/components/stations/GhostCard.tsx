@@ -1,3 +1,4 @@
+import "../sushi-go.css";
 import type { CardSize } from "../card-utils";
 import { SIZE_CLASSES } from "../card-utils";
 import type { StationTheme } from "./StationShell";

@@ -3,11 +3,11 @@ import { authClient } from "../../lib/auth-client";
 import { formatAuthError } from "../../pages/admin-coverage";
 import { TrashIcon } from "../icons";
 import { Button } from "../ui/Button";
-import { Chip } from "../ui/Chip";
 import { ErrorAlert } from "../ui/ErrorAlert";
 import { Field } from "../ui/Field";
 import { IconButton } from "../ui/IconButton";
 import { Input } from "../ui/Input";
+import { ExpandableAdminCard } from "./ExpandableAdminCard";
 import { synthesizeGuestEmail } from "./guest-email";
 import type { AdminUser } from "./types";
 
@@ -84,99 +84,86 @@ export function GuestPlayersCard({ guests, onChanged }: Props) {
   }
 
   return (
-    <div className="mb-6 overflow-hidden rounded-xl border border-amber-500/20 bg-surface-900">
-      <div className="flex items-center justify-between gap-3 px-4 py-3">
-        <div className="min-w-0">
-          <p className="text-3xs font-semibold uppercase tracking-eyebrow text-amber-400">
-            Guest players
-          </p>
-          <p className="mt-1 text-sm text-fg-secondary">
-            {guests.length === 0
-              ? "No guests yet — add stub accounts for people who never signed up."
-              : `${guests.length} guest${guests.length === 1 ? "" : "s"} — pickable in match history.`}
-          </p>
-        </div>
-        <Chip
-          pressed={expanded}
-          tone="amber"
-          size="xs"
-          onClick={() => setExpanded((v) => !v)}
-          className="shrink-0"
-        >
-          {expanded ? "Close" : "Manage"}
-        </Chip>
-      </div>
-      {expanded && (
-        <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
-          {error && <ErrorAlert message={error} />}
-          <form onSubmit={addGuest} className="flex flex-wrap items-end gap-2">
-            <Field label="First name" htmlFor={firstId}>
-              <Input
-                id={firstId}
-                value={first}
-                onChange={(e) => setFirst(e.target.value)}
-                disabled={busy}
-                width="auto"
-                className="w-40"
-              />
-            </Field>
-            <Field label="Last name" htmlFor={lastId}>
-              <Input
-                id={lastId}
-                value={last}
-                onChange={(e) => setLast(e.target.value)}
-                disabled={busy}
-                width="auto"
-                className="w-40"
-              />
-            </Field>
-            <Button type="submit" variant="primary" size="sm" loading={busy} disabled={busy}>
-              Add guest
-            </Button>
-          </form>
-          {guests.length > 0 && (
-            <ul className="flex flex-col gap-1 pt-1">
-              {guests.map((g) => (
-                <li
-                  key={g.id}
-                  className="flex items-center gap-2 rounded-md bg-surface-900/60 px-2.5 py-1.5"
-                >
-                  <span className="flex-1 truncate text-sm text-fg-primary">{g.name}</span>
-                  {pendingDeleteId === g.id ? (
-                    <>
-                      <span className="text-xs text-rose-300">Delete?</span>
-                      <Button
-                        variant="danger"
-                        size="xs"
-                        onClick={() => removeGuest(g.id)}
-                        disabled={busy}
-                      >
-                        Yes
-                      </Button>
-                      <Button
-                        variant="secondary"
-                        size="xs"
-                        onClick={() => setPendingDeleteId(null)}
-                        disabled={busy}
-                      >
-                        No
-                      </Button>
-                    </>
-                  ) : (
-                    <IconButton
+    <ExpandableAdminCard
+      tone="amber"
+      eyebrow="Guest players"
+      summary={
+        guests.length === 0
+          ? "No guests yet — add stub accounts for people who never signed up."
+          : `${guests.length} guest${guests.length === 1 ? "" : "s"} — pickable in match history.`
+      }
+      expanded={expanded}
+      onToggle={() => setExpanded((v) => !v)}
+    >
+      <>
+        {error && <ErrorAlert message={error} />}
+        <form onSubmit={addGuest} className="flex flex-wrap items-end gap-2">
+          <Field label="First name" htmlFor={firstId}>
+            <Input
+              id={firstId}
+              value={first}
+              onChange={(e) => setFirst(e.target.value)}
+              disabled={busy}
+              width="auto"
+              className="w-40"
+            />
+          </Field>
+          <Field label="Last name" htmlFor={lastId}>
+            <Input
+              id={lastId}
+              value={last}
+              onChange={(e) => setLast(e.target.value)}
+              disabled={busy}
+              width="auto"
+              className="w-40"
+            />
+          </Field>
+          <Button type="submit" variant="primary" size="sm" loading={busy} disabled={busy}>
+            Add guest
+          </Button>
+        </form>
+        {guests.length > 0 && (
+          <ul className="flex flex-col gap-1 pt-1">
+            {guests.map((g) => (
+              <li
+                key={g.id}
+                className="flex items-center gap-2 rounded-md bg-surface-900/60 px-2.5 py-1.5"
+              >
+                <span className="flex-1 truncate text-sm text-fg-primary">{g.name}</span>
+                {pendingDeleteId === g.id ? (
+                  <>
+                    <span className="text-xs text-rose-300">Delete?</span>
+                    <Button
                       variant="danger"
                       size="xs"
-                      aria-label={`Delete guest ${g.name}`}
-                      onClick={() => setPendingDeleteId(g.id)}
-                      icon={<TrashIcon className="h-3.5 w-3.5" />}
-                    />
-                  )}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-      )}
-    </div>
+                      onClick={() => removeGuest(g.id)}
+                      disabled={busy}
+                    >
+                      Yes
+                    </Button>
+                    <Button
+                      variant="secondary"
+                      size="xs"
+                      onClick={() => setPendingDeleteId(null)}
+                      disabled={busy}
+                    >
+                      No
+                    </Button>
+                  </>
+                ) : (
+                  <IconButton
+                    variant="danger"
+                    size="xs"
+                    aria-label={`Delete guest ${g.name}`}
+                    onClick={() => setPendingDeleteId(g.id)}
+                    icon={<TrashIcon className="h-3.5 w-3.5" />}
+                  />
+                )}
+              </li>
+            ))}
+          </ul>
+        )}
+      </>
+    </ExpandableAdminCard>
   );
 }

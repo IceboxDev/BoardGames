@@ -1,5 +1,6 @@
 import type { CardType } from "@boardgames/core/games/sushi-go/types";
 import { CARD_LABELS } from "@boardgames/core/games/sushi-go/types";
+import { cardChrome } from "../../../components/card-fan/card-chrome";
 import type { CardSize } from "./card-utils";
 import { getCardImageUrl, SIZE_CLASSES } from "./card-utils";
 
@@ -24,24 +25,19 @@ export default function CardFace({
 }: CardFaceProps) {
   const imageUrl = getCardImageUrl(type);
 
-  const ringClass = selected
-    ? "ring-2 ring-white ring-offset-1 ring-offset-gray-900 scale-105"
-    : wasabiBoosted
-      ? "ring-2 ring-green-400/60"
-      : "";
-
-  const interactionClass = disabled
-    ? "opacity-50 cursor-default"
-    : onClick
-      ? "hover:scale-105 cursor-pointer"
-      : "";
-
   return (
     <button
       type="button"
       onClick={disabled ? undefined : onClick}
       disabled={disabled && !selected}
-      className={`${SIZE_CLASSES[size]} relative overflow-hidden rounded-lg border-2 border-gray-700/60 shadow-md transition-all ${ringClass} ${interactionClass} ${className ?? ""}`}
+      className={cardChrome({
+        size: SIZE_CLASSES[size],
+        selected,
+        glowClass: wasabiBoosted ? "ring-2 ring-green-400/60" : "",
+        disabled,
+        hover: onClick ? "scale" : "none",
+        className: `border-2 border-gray-700/60 ${className ?? ""}`,
+      })}
     >
       {imageUrl ? (
         <img

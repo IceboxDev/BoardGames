@@ -3,6 +3,7 @@ import { useCallback, useMemo, useState } from "react";
 import { ActionLog } from "../../../components/action-log";
 import { CardDeck } from "../../../components/CardDeck";
 import { GameScreen } from "../../../components/game-layout";
+import { PromptRow } from "../../../components/game-layout/PromptRow";
 import { type PlayerEntry, PlayerListPanel } from "../../../components/SidePanel";
 import { Button } from "../../../components/ui/Button";
 import { DEBUG_LAYOUT } from "../../../lib/debug";
@@ -116,7 +117,6 @@ export default function GameBoard({
 
   return (
     <GameScreen
-      contentClassName=""
       sidebar={<ActionLog blocks={mapDurakLog(view.actionLog, view.players)} />}
       leftSidebar={
         <PlayerListPanel
@@ -196,15 +196,12 @@ export default function GameBoard({
             )}
           </div>
         ) : (
-          <div className="flex items-center gap-2">
-            <span
-              className={`text-xs font-semibold ${isMyTurn ? "text-cyan-400" : "text-amber-400"}`}
-            >
-              {isMyTurn ? "Your turn" : isAiThinking ? "AI" : "Opponent"}
-            </span>
-            <span className="text-fg-muted">&middot;</span>
-            <span className="text-xs text-fg-secondary">
-              {isAiThinking
+          <PromptRow
+            title={isMyTurn ? "Your turn" : isAiThinking ? "AI" : "Opponent"}
+            tone={isMyTurn ? "active" : "waiting"}
+            pulse={isAiThinking || !isMyTurn}
+            message={
+              isAiThinking
                 ? "Thinking..."
                 : !isMyTurn
                   ? view.phase === "attacking"
@@ -216,12 +213,9 @@ export default function GameBoard({
                         : "Waiting..."
                   : view.phase === "defending"
                     ? "Select a card, then click the attack to beat"
-                    : "Play a card to attack"}
-            </span>
-            {(isAiThinking || !isMyTurn) && (
-              <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-amber-400" />
-            )}
-          </div>
+                    : "Play a card to attack"
+            }
+          />
         )
       }
     >

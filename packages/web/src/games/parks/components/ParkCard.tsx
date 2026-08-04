@@ -18,7 +18,7 @@ function CostPills({ park }: { park: Park }) {
       {pills.map(({ r, count }) => (
         <span
           key={r}
-          className="inline-flex items-center gap-0.5 rounded-full px-1 py-0.5 text-[9px] font-bold text-white ring-1 ring-white/10"
+          className="inline-flex items-center gap-0.5 rounded-full px-1 py-0.5 text-4xs font-bold text-white ring-1 ring-white/10"
           style={{ backgroundColor: `${RESOURCE_COLORS[r]}33` }}
           title={`${count} × ${r}`}
         >
@@ -38,11 +38,11 @@ function RefundPills({ park }: { park: Park }) {
   if (pills.length === 0 && !park.endGameDividedBonus) return null;
   return (
     <div className="flex flex-wrap items-center gap-0.5">
-      <span className="text-[9px] font-bold text-emerald-400">+</span>
+      <span className="text-4xs font-bold text-emerald-400">+</span>
       {pills.map(({ r, count }) => (
         <span
           key={r}
-          className="inline-flex items-center gap-0.5 rounded-full px-1 py-0.5 text-[9px] font-bold text-white ring-1 ring-white/10"
+          className="inline-flex items-center gap-0.5 rounded-full px-1 py-0.5 text-4xs font-bold text-white ring-1 ring-white/10"
           style={{ backgroundColor: `${RESOURCE_COLORS[r]}33` }}
         >
           <span>{RESOURCE_EMOJI[r]}</span>
@@ -51,7 +51,7 @@ function RefundPills({ park }: { park: Park }) {
       ))}
       {park.endGameDividedBonus && (
         <span
-          className="inline-flex items-center rounded-full bg-violet-900/40 px-1 py-0.5 text-[9px] font-bold text-violet-200"
+          className="inline-flex items-center rounded-full bg-violet-900/40 px-1 py-0.5 text-4xs font-bold text-violet-200"
           title="End-game scoring bonus"
         >
           ★

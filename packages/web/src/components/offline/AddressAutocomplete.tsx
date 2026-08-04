@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Input } from "../ui/Input";
 
 type Props = {
   value: string;
@@ -161,11 +162,8 @@ export default function AddressAutocomplete({
     };
   }, []);
 
-  const baseClass =
-    "w-full rounded-xl border border-white/10 bg-surface-900 px-3 py-2 text-sm text-white placeholder:text-fg-muted focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/20 disabled:cursor-not-allowed disabled:opacity-50";
-
   return (
-    <input
+    <Input
       ref={inputRef}
       id={id}
       type="text"
@@ -174,7 +172,7 @@ export default function AddressAutocomplete({
       placeholder={placeholder ?? "Address"}
       autoComplete="off"
       disabled={disabled}
-      className={className ? `${baseClass} ${className}` : baseClass}
+      className={className}
     />
   );
 }

@@ -18,6 +18,7 @@ import type { ReactNode } from "react";
 import { useEffect, useRef, useState } from "react";
 import { CardDeck } from "../../../components/CardDeck";
 import { GameScreen } from "../../../components/game-layout";
+import { PromptRow } from "../../../components/game-layout/PromptRow";
 import { type ExpeditionScoreEntry, ScoreGridPanel } from "../../../components/SidePanel";
 import { AiThinkingIndicator, WaitingIndicator } from "../../../components/ui";
 import { Button } from "../../../components/ui/Button";
@@ -238,7 +239,6 @@ export default function GameBoard(props: GameBoardProps) {
 
   return (
     <GameScreen
-      contentClassName=""
       sidebar={sidebar}
       leftSidebar={<ScoreGridPanel turnCount={state.turnCount + 1} {...buildScoreData(state)} />}
       fan={
@@ -262,23 +262,17 @@ export default function GameBoard(props: GameBoardProps) {
             </Button>
           </div>
         ) : isHumanTurn && state.phase !== "game-over" ? (
-          <div className="flex items-center gap-2">
-            <span className="text-xs font-semibold text-cyan-400">Your turn</span>
-            <span className="text-fg-muted">&middot;</span>
-            <span className="text-xs text-fg-secondary">
-              {isPlayPhase
+          <PromptRow
+            title="Your turn"
+            message={
+              isPlayPhase
                 ? "Select a card to play or discard"
-                : "Draw a card from the pile or discard"}
-            </span>
-          </div>
+                : "Draw a card from the pile or discard"
+            }
+          />
         ) : !isHumanTurn && state.phase !== "game-over" ? (
           isMultiplayer ? (
-            <div className="flex items-center gap-2">
-              <span className="text-xs font-semibold text-amber-400">Opponent</span>
-              <span className="text-fg-muted">&middot;</span>
-              <span className="text-xs text-fg-secondary">Waiting for opponent&hellip;</span>
-              <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-amber-400" />
-            </div>
+            <PromptRow title="Opponent" tone="waiting" message="Waiting for opponent…" pulse />
           ) : (
             <AiThinkingIndicator
               message="IS-MCTS computing best move"

@@ -1,4 +1,4 @@
-import type { ButtonHTMLAttributes, Ref } from "react";
+import type { AnchorHTMLAttributes, ButtonHTMLAttributes, Ref } from "react";
 import { Spinner } from "./Spinner";
 
 // The single text-button primitive. Owns disabled, focus-visible ring, the
@@ -156,6 +156,37 @@ function colorFor(variant: Variant, tone: ButtonTone | undefined): string {
   }
 }
 
+// The full visual skin for a given prop combination — shared by `Button` and
+// `ButtonLink` so a link-shaped CTA can never drift from the button palette.
+type VisualProps = {
+  variant: Variant;
+  tone: ButtonTone | undefined;
+  size: Size;
+  shape: Shape;
+  align: Align;
+  block: boolean;
+  fill: boolean;
+};
+
+function visualClasses({ variant, tone, size, shape, align, block, fill }: VisualProps): string {
+  const colorCls = colorFor(variant, tone);
+  const alignCls = align === "start" ? "justify-start" : "justify-center";
+
+  // `link` strips chrome so text sits in the surrounding flow; `fill` turns the
+  // control into a padding-less, shape-less surface that fills its parent cell.
+  let layoutCls: string;
+  if (fill) {
+    layoutCls = `flex h-full w-full p-0 ${SIZE_TEXT[size]} ${alignCls}`;
+  } else if (variant === "link") {
+    layoutCls = `inline-flex gap-2 text-xs ${alignCls}`;
+  } else {
+    layoutCls = `inline-flex gap-2 ${SIZE_PAD[size]} ${SIZE_TEXT[size]} ${SHAPES[shape]} ${alignCls}`;
+  }
+
+  const widthCls = block && !fill ? "w-full" : "";
+  return [BASE, colorCls, layoutCls, widthCls].filter(Boolean).join(" ");
+}
+
 export function Button({
   variant = "primary",
   tone,
@@ -177,21 +208,7 @@ export function Button({
   ref,
   ...rest
 }: Props) {
-  const colorCls = colorFor(variant, tone);
-  const alignCls = align === "start" ? "justify-start" : "justify-center";
-
-  // `link` strips chrome so text sits in the surrounding flow; `fill` turns the
-  // button into a padding-less, shape-less surface that fills its parent cell.
-  let layoutCls: string;
-  if (fill) {
-    layoutCls = `flex h-full w-full p-0 ${SIZE_TEXT[size]} ${alignCls}`;
-  } else if (variant === "link") {
-    layoutCls = `inline-flex gap-2 text-xs ${alignCls}`;
-  } else {
-    layoutCls = `inline-flex gap-2 ${SIZE_PAD[size]} ${SIZE_TEXT[size]} ${SHAPES[shape]} ${alignCls}`;
-  }
-
-  const widthCls = block && !fill ? "w-full" : "";
+  const visualCls = visualClasses({ variant, tone, size, shape, align, block, fill });
 
   return (
     <button
@@ -199,7 +216,7 @@ export function Button({
       type={type}
       disabled={disabled || loading}
       aria-busy={loading || undefined}
-      className={`${BASE} ${colorCls} ${layoutCls} ${widthCls} ${className}`}
+      className={`${visualCls} ${className}`}
       {...rest}
     >
       {loading && (
@@ -214,5 +231,56 @@ export function Button({
         {children}
       </span>
     </button>
+  );
+}
+
+// ── ButtonLink ───────────────────────────────────────────────────────────
+//
+// An <a> wearing the Button skin. Exists because `Button` is (deliberately)
+// not polymorphic — before this, every link-shaped CTA ("View on BGG", the
+// calendar deep-links, profile link pills) hand-copied an approximation of
+// `variant="secondary"` and each copy drifted. Same visual props as Button;
+// no `loading`/`disabled` (anchors have neither state).
+//
+// `external` opens in a new tab with the standard rel hardening. In-app
+// navigation should keep using react-router's <Link> (or TopNavLink) — this
+// is for real hrefs.
+
+type ButtonLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: string;
+  variant?: Variant;
+  tone?: ButtonTone;
+  size?: Size;
+  shape?: Shape;
+  align?: Align;
+  block?: boolean;
+  /** Open in a new tab (adds target="_blank" rel="noreferrer"). */
+  external?: boolean;
+  ref?: Ref<HTMLAnchorElement>;
+};
+
+export function ButtonLink({
+  variant = "secondary",
+  tone,
+  size = "md",
+  shape = "rounded",
+  align = "center",
+  block = false,
+  external = false,
+  className = "",
+  children,
+  ref,
+  ...rest
+}: ButtonLinkProps) {
+  const visualCls = visualClasses({ variant, tone, size, shape, align, block, fill: false });
+  return (
+    <a
+      ref={ref}
+      className={`${visualCls} ${className}`}
+      {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
+      {...rest}
+    >
+      {children}
+    </a>
   );
 }

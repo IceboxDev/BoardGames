@@ -3,10 +3,8 @@ import { useEffect } from "react";
 import { lowScoreWinsForSlug } from "../../../games/score-config";
 import { ordinal } from "../../../lib/match-result-badge";
 import { ChevronDownIcon } from "../../icons";
-import { Field } from "../../ui/Field";
 import { IconButton } from "../../ui/IconButton";
 import { Input } from "../../ui/Input";
-import { ParticipantPicker } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
 import {
   breakTie,
@@ -15,6 +13,7 @@ import {
   ranksEqual,
   reconcileRanks,
 } from "./free-for-all-placement";
+import { GroupLabel, OutcomeFormShell } from "./shared";
 
 type User = { id: string; name: string };
 
@@ -84,15 +83,12 @@ export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
   const tie = value.players.some((p) => p.score !== 0) && hasScoreTie(value.players);
 
   return (
-    <div className="flex flex-col gap-3">
-      <Field label="Players" htmlFor="ffa-players">
-        <ParticipantPicker users={users} selectedIds={selectedIds} onChange={setParticipants} />
-      </Field>
+    <OutcomeFormShell users={users} selectedIds={selectedIds} onParticipants={setParticipants}>
       {value.players.length > 0 && (
         <div className="flex flex-col gap-1.5">
-          <span className="text-xs font-medium uppercase tracking-wide text-fg-secondary">
+          <GroupLabel>
             Enter each player's score. {lowestWins ? "Lowest" : "Highest"} wins.
-          </span>
+          </GroupLabel>
           {value.players.map((p) => {
             const isLeading = winningScore !== null && p.score === winningScore;
             return (
@@ -173,6 +169,6 @@ export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
           </div>
         </div>
       )}
-    </div>
+    </OutcomeFormShell>
   );
 }

@@ -34,6 +34,7 @@ import {
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { logActivity } from "../lib/activity-log.ts";
 import { computeAvailableGamesPayload } from "../lib/available-games.ts";
 import { jsonColumn, parseRow, parseRows, RowParseError } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
@@ -42,6 +43,7 @@ import {
   findNextNightForUser,
   todayDateKey,
 } from "../lib/next-night.ts";
+import { countNightsAttended } from "../lib/nights-attended.ts";
 import { fetchNameMap, MatchResultRowSchema, rowToMatchRecord } from "./match-history.ts";
 
 export const profileRoutes = authedApp();
@@ -52,6 +54,9 @@ const RECENT_MATCH_COUNT = 10;
 const PER_GAME_MAX = 30;
 
 // ── Row projections ────────────────────────────────────────────────────
+
+/** `SELECT date_key FROM …` — shared shape for the nights-attended sets. */
+const DateKeyOnlyRowSchema = z.object({ date_key: z.string() });
 
 const UserRowSchema = z.object({
   id: z.string(),
@@ -265,6 +270,12 @@ profileRoutes.get("/:userId/matches", async (c) => {
 
 profileRoutes.get("/:userId", async (c) => {
   const userId = c.req.param("userId");
+  const viewer = c.get("user");
+  // Own-profile loads are navigation noise; only cross-member views are
+  // interesting in the activity trail.
+  if (viewer.id !== userId) {
+    logActivity(viewer.id, "profile-view", { targetUserId: userId });
+  }
   const db = getDb();
   const today = todayDateKey();
 
@@ -273,8 +284,9 @@ profileRoutes.get("/:userId", async (c) => {
     profileResult,
     inventoryResult,
     matchResult,
-    nightsResult,
-    nightsTotalResult,
+    rsvpYesNightsResult,
+    pastNightsResult,
+    matchNightsResult,
     nextRef,
   ] = await Promise.all([
     db.execute({
@@ -301,14 +313,18 @@ profileRoutes.get("/:userId", async (c) => {
       args: [likePattern(userId)],
     }),
     db.execute({
-      sql: `SELECT COUNT(*) AS n FROM rsvps r
+      sql: `SELECT r.date_key FROM rsvps r
               JOIN locked_dates l ON l.date_key = r.date_key
               WHERE r.user_id = ? AND r.status = 'yes' AND r.date_key < ?`,
       args: [userId, today],
     }),
     db.execute({
-      sql: "SELECT COUNT(*) AS n FROM locked_dates WHERE date_key < ?",
+      sql: "SELECT date_key FROM locked_dates WHERE date_key < ?",
       args: [today],
+    }),
+    db.execute({
+      sql: "SELECT DISTINCT date_key FROM match_results WHERE date_key IS NOT NULL",
+      args: [],
     }),
     findNextNightForUser(db, userId, today),
   ]);
@@ -330,6 +346,18 @@ profileRoutes.get("/:userId", async (c) => {
   const matchRows = parseRows(MatchResultRowSchema, matchResult.rows, "match_results").filter((r) =>
     extractParticipantIds(r.outcome_json).includes(userId),
   );
+
+  // Nights attended: played-a-match beats RSVP; an RSVP only stands when the
+  // night has no matches to contradict it. See lib/nights-attended.ts.
+  const dateKeyRows = (result: { rows: Parameters<typeof parseRows>[1] }, table: string) =>
+    parseRows(DateKeyOnlyRowSchema, result.rows, table).map((r) => r.date_key);
+  const pastNights = dateKeyRows(pastNightsResult, "locked_dates");
+  const nightsAttended = countNightsAttended({
+    pastNights,
+    rsvpYesNights: new Set(dateKeyRows(rsvpYesNightsResult, "rsvps")),
+    nightsWithMatches: new Set(dateKeyRows(matchNightsResult, "match_results")),
+    playedNights: new Set(matchRows.map((r) => r.date_key).filter((d): d is string => d !== null)),
+  });
   let wins = 0;
   let losses = 0;
   // Scheme-A performance: placement-weighted credit averaged over competitive
@@ -440,8 +468,8 @@ profileRoutes.get("/:userId", async (c) => {
     performance: perfCount > 0 ? perfSum / perfCount : null,
     gamesOwned: library.length,
     distinctGames: distinctSlugs.size,
-    nightsAttended: Number(nightsResult.rows[0]?.n ?? 0),
-    nightsTotal: Number(nightsTotalResult.rows[0]?.n ?? 0),
+    nightsAttended,
+    nightsTotal: pastNights.length,
     favoriteGameSlug: perGame[0]?.slug ?? null,
     perGame,
   };
@@ -502,6 +530,7 @@ profileRoutes.put("/:userId", zJsonBody(ProfileUpdateInputSchema), async (c) => 
       JSON.stringify(normalized.links),
     ],
   });
+  logActivity(user.id, "profile-update", {});
 
   return c.json(ProfileEditableSchema.parse(normalized));
 });

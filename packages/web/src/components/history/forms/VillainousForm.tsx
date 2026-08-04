@@ -3,13 +3,17 @@ import { useEffect } from "react";
 import { parseMultiVariant } from "../../../games/match-variants";
 import { villainsForBoxes } from "../../../games/villainous/villains";
 import { Chip } from "../../ui/Chip";
-import { Field } from "../../ui/Field";
 import { Surface } from "../../ui/Surface";
-import { ParticipantPicker } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
+import {
+  GroupLabel,
+  mergeParticipants,
+  OutcomeFormShell,
+  RoleChipRow,
+  withOptional,
+} from "./shared";
 
 type User = { id: string; name: string };
-type FfaPlayer = MatchOutcomeFreeForAll["players"][number];
 
 type Props = {
   users: User[];
@@ -42,46 +46,38 @@ export function VillainousForm({ users, gameSlug, value, onChange }: Props) {
     onChange({
       ...value,
       players: value.players.map((p) =>
-        p.role !== undefined && !valid.has(p.role) ? withRole(p, undefined) : p,
+        p.role !== undefined && !valid.has(p.role) ? withOptional(p, "role", undefined) : p,
       ),
     });
   }, [value, onChange, roster]);
 
   function setParticipants(participants: Participant[]) {
-    const byId = new Map(value.players.map((p) => [p.userId, p] as const));
-    const players = participants.map((p) => {
-      const prev = byId.get(p.userId);
-      // Keep score/role/rank for players that stay; new ones start point-less.
-      return prev ? { ...prev, ...p } : { ...p, score: 0 };
-    });
+    // Keep score/role/rank for players that stay; new ones start point-less.
+    const players = mergeParticipants(value.players, participants, (p) => ({ ...p, score: 0 }));
     onChange({ ...value, players });
   }
 
   function setVillain(userId: string, villain: string) {
     const players = value.players.map((p) =>
-      p.userId === userId ? withRole(p, p.role === villain ? undefined : villain) : p,
+      p.userId === userId ? withOptional(p, "role", p.role === villain ? undefined : villain) : p,
     );
     onChange({ ...value, players });
   }
 
   function setWinner(userId: string) {
     const players = value.players.map((p) =>
-      p.userId === userId ? withRank(p, p.rank === 1 ? undefined : 1) : withRank(p, undefined),
+      p.userId === userId
+        ? withOptional(p, "rank", p.rank === 1 ? undefined : 1)
+        : withOptional(p, "rank", undefined),
     );
     onChange({ ...value, players });
   }
 
   return (
-    <div className="flex flex-col gap-3">
-      <Field label="Players" htmlFor="villainous-players">
-        <ParticipantPicker users={users} selectedIds={selectedIds} onChange={setParticipants} />
-      </Field>
-
+    <OutcomeFormShell users={users} selectedIds={selectedIds} onParticipants={setParticipants}>
       {value.players.length > 0 && (
         <div className="flex flex-col gap-2">
-          <span className="text-xs font-medium uppercase tracking-wide text-fg-secondary">
-            Tap each player's villain, then crown the one who won.
-          </span>
+          <GroupLabel>Tap each player's villain, then crown the one who won.</GroupLabel>
           {value.players.map((p) => {
             const isWinner = p.rank === 1;
             return (
@@ -101,45 +97,16 @@ export function VillainousForm({ users, gameSlug, value, onChange }: Props) {
                     </Chip>
                   }
                 />
-                <div className="flex flex-wrap gap-1.5">
-                  {roster.map((villain) => (
-                    <Chip
-                      key={villain}
-                      pressed={p.role === villain}
-                      tone="accent"
-                      variant="outlined"
-                      size="xs"
-                      onClick={() => setVillain(p.userId, villain)}
-                    >
-                      {villain}
-                    </Chip>
-                  ))}
-                </div>
+                <RoleChipRow
+                  roster={roster}
+                  current={p.role}
+                  onToggle={(villain) => setVillain(p.userId, villain)}
+                />
               </Surface>
             );
           })}
         </div>
       )}
-    </div>
+    </OutcomeFormShell>
   );
-}
-
-// ── Helpers ────────────────────────────────────────────────────────────
-// Set or clear the optional `role` / `rank` keys without leaving `undefined`
-// values on the wire object (the schema and MatchCard both key off presence).
-
-function withRole(p: FfaPlayer, role: string | undefined): FfaPlayer {
-  if (role === undefined) {
-    const { role: _drop, ...rest } = p;
-    return rest;
-  }
-  return { ...p, role };
-}
-
-function withRank(p: FfaPlayer, rank: number | undefined): FfaPlayer {
-  if (rank === undefined) {
-    const { rank: _drop, ...rest } = p;
-    return rest;
-  }
-  return { ...p, rank };
 }

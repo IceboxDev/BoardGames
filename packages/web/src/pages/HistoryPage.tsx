@@ -40,13 +40,9 @@ function dayLabelOf(playedAt: string): { day: string; label: string } {
   if (Number.isNaN(d.getTime()))
     return { day: playedAt.slice(0, 10), label: playedAt.slice(0, 10) };
   const day = d.toISOString().slice(0, 10);
-  const label = d.toLocaleDateString(undefined, {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-  return { day, label };
+  // Label from the group's day key (not the raw timestamp) so the heading can
+  // never disagree with the day the match is grouped under.
+  return { day, label: formatDayKey(day, "full") };
 }
 
 export default function HistoryPage() {
@@ -172,7 +168,7 @@ export default function HistoryPage() {
   return (
     <PageShell
       topNav={
-        <TopNav>
+        <TopNav width="wide">
           <TopNavBackButton to="/offline" label="Calendar" />
         </TopNav>
       }

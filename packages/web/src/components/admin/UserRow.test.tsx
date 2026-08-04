@@ -32,6 +32,7 @@ function defaultProps() {
     onSetOnlineMode: vi.fn(),
     pending: false,
     onOpenCalendar: vi.fn(),
+    onOpenActivity: vi.fn(),
     deleteMode: false,
     isSelf: false,
     confirmingDelete: false,
@@ -83,6 +84,13 @@ describe("UserRow — main row", () => {
     renderRow({ onOpenCalendar });
     await userEvent.click(screen.getByRole("button", { name: /availability calendar/i }));
     expect(onOpenCalendar).toHaveBeenCalledOnce();
+  });
+
+  it("invokes onOpenActivity when the name is clicked", async () => {
+    const onOpenActivity = vi.fn();
+    renderRow({ onOpenActivity });
+    await userEvent.click(screen.getByRole("button", { name: /Lina Smith's activity/i }));
+    expect(onOpenActivity).toHaveBeenCalledOnce();
   });
 
   it("invokes onToggleInventory on the Manage chip; label flips when expanded", () => {

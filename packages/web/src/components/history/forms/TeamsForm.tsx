@@ -12,6 +12,7 @@ import { Input } from "../../ui/Input";
 import { Surface } from "../../ui/Surface";
 import { ParticipantPicker } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
+import { GroupLabel, OutcomeFormShell } from "./shared";
 
 type User = { id: string; name: string };
 type TeamMember = MatchOutcomeTeams["teams"][number]["members"][number];
@@ -114,7 +115,7 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
   }
 
   return (
-    <div className="flex flex-col gap-3">
+    <OutcomeFormShell>
       <div className="flex flex-col gap-3">
         {value.teams.map((team, idx) => {
           const isWinner = value.winnerTeamIndices.includes(idx);
@@ -128,9 +129,7 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
               className="flex flex-col gap-2"
             >
               <div className="flex items-center gap-2">
-                <span className="text-xs font-semibold uppercase tracking-wider text-fg-secondary">
-                  Team {idx + 1}
-                </span>
+                <GroupLabel>Team {idx + 1}</GroupLabel>
                 <span className="flex-1" />
                 {showScores && (
                   <Input
@@ -202,7 +201,7 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
       >
         + Add team
       </Button>
-    </div>
+    </OutcomeFormShell>
   );
 }
 

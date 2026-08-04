@@ -1,3 +1,4 @@
+import "./sushi-go.css";
 import type { Card } from "@boardgames/core/games/sushi-go/types";
 import { makiCount } from "@boardgames/core/games/sushi-go/types";
 import { AnimatePresence, motion } from "framer-motion";

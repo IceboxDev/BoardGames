@@ -9,8 +9,10 @@ import type {
 } from "../../lib/calendar-locks";
 import { formatDayKey } from "../../lib/date-format.ts";
 import { Button } from "../ui/Button";
+import { Checkbox } from "../ui/Checkbox";
 import { ErrorAlert } from "../ui/ErrorAlert";
 import { Field } from "../ui/Field";
+import { Input } from "../ui/Input";
 import { Modal, ModalBody, ModalFooter } from "../ui/Modal";
 import { Select } from "../ui/Select";
 import AddressAutocomplete from "./AddressAutocomplete";
@@ -111,13 +113,13 @@ export default function LockInModal({
           </Field>
 
           <Field label="Time" htmlFor={timeId}>
-            <input
+            <Input
               id={timeId}
               type="time"
               value={eventTime}
               onChange={(e) => setEventTime(e.target.value)}
               disabled={busy}
-              className="w-full rounded-xl border border-white/10 bg-surface-900 px-3 py-2 text-sm text-white focus:border-white/30 focus:outline-none focus:ring-1 focus:ring-white/20 disabled:cursor-not-allowed disabled:opacity-50 [&::-webkit-calendar-picker-indicator]:invert [&::-webkit-calendar-picker-indicator]:opacity-60"
+              className="[&::-webkit-calendar-picker-indicator]:invert [&::-webkit-calendar-picker-indicator]:opacity-60"
             />
           </Field>
 
@@ -136,13 +138,13 @@ export default function LockInModal({
               htmlFor={hostAtHomeId}
               className="flex cursor-pointer items-start gap-3 rounded-xl border border-white/10 bg-surface-900 px-3 py-2.5 text-sm text-white"
             >
-              <input
+              <Checkbox
                 id={hostAtHomeId}
-                type="checkbox"
+                tone="emerald"
                 checked={hostAtHome}
                 onChange={(e) => setHostAtHome(e.target.checked)}
                 disabled={busy}
-                className="mt-0.5 h-4 w-4 cursor-pointer accent-emerald-500 disabled:cursor-not-allowed disabled:opacity-50"
+                className="mt-0.5 cursor-pointer"
               />
               <span className="flex flex-1 flex-col gap-0.5">
                 <span className="font-medium">Hosting at home</span>

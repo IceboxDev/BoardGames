@@ -1,4 +1,5 @@
 import type { Action, GameState } from "@boardgames/core/games/exploding-kittens/types";
+import { GameDialogPanel } from "../../../components/game-layout";
 import { Button } from "../../../components/ui/Button";
 import Card from "./Card";
 
@@ -12,12 +13,12 @@ export default function PeekOverlay({ state, onAction }: PeekOverlayProps) {
   if (!pc) return null;
 
   return (
-    <div className="rounded-xl border border-purple-700/50 bg-purple-950/40 p-4 text-center">
-      <p className="mb-1 text-sm font-medium text-purple-300">🔮 See the Future</p>
-      <p className="mb-3 text-xs text-fg-secondary">
-        Top {pc.cards.length} cards of the draw pile (left = top):
-      </p>
-
+    <GameDialogPanel
+      tone="arcane"
+      center
+      title="🔮 See the Future"
+      subtitle={`Top ${pc.cards.length} cards of the draw pile (left = top):`}
+    >
       <div className="mb-4 flex justify-center gap-3">
         {pc.cards.map((card, i) => (
           <div key={card.id} className="flex flex-col items-center gap-1">
@@ -37,6 +38,6 @@ export default function PeekOverlay({ state, onAction }: PeekOverlayProps) {
       >
         Got it
       </Button>
-    </div>
+    </GameDialogPanel>
   );
 }

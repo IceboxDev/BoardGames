@@ -4,6 +4,7 @@ import { betterAuth } from "better-auth";
 import { admin } from "better-auth/plugins";
 import { z } from "zod";
 import { getDb, getDbConnectionConfig } from "../db.ts";
+import { logActivity, markSeen } from "../lib/activity-log.ts";
 import { jsonColumn, parseRow } from "../lib/db-rows.ts";
 import { captureResetToken } from "./reset-link.ts";
 
@@ -91,6 +92,17 @@ export const auth = betterAuth({
   },
   plugins: [admin()],
   databaseHooks: {
+    // A new session row = a sign-in (email/password or Google). `markSeen`
+    // suppresses the redundant "visit" the very next authenticated request
+    // would otherwise log.
+    session: {
+      create: {
+        after: async (session) => {
+          markSeen(session.userId);
+          logActivity(session.userId, "login");
+        },
+      },
+    },
     user: {
       create: {
         before: async (user) => {

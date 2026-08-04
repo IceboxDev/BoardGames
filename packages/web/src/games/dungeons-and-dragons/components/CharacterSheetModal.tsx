@@ -614,7 +614,7 @@ export function CharacterSheetModal({ character, onClose }: Props) {
                   className="flex flex-col items-center rounded-xl border border-amber-400/25 bg-dnd-ink/70 px-2 py-2"
                 >
                   <span className="font-fantasy text-xl font-bold text-amber-100">{v.value}</span>
-                  <span className="font-serif-body mt-0.5 text-center text-4xs font-bold uppercase tracking-label text-amber-300/60">
+                  <span className="font-serif-body mt-0.5 text-center text-5xs font-bold uppercase tracking-label text-amber-300/60">
                     {v.label}
                   </span>
                 </div>

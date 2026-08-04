@@ -35,9 +35,7 @@ export function BggInline({ bgg, compact }: { bgg: BggGame; compact: boolean }) 
       )}
       {hasWeight && bgg.averageWeight !== null && (
         <div className="flex items-center gap-2">
-          <span className="shrink-0 text-3xs uppercase tracking-[0.18em] text-fg-muted">
-            Weight
-          </span>
+          <span className="shrink-0 text-3xs uppercase tracking-pill text-fg-muted">Weight</span>
           <div className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-white/[0.06]">
             <div
               className="absolute inset-y-0 left-0 rounded-full"
@@ -50,7 +48,7 @@ export function BggInline({ bgg, compact }: { bgg: BggGame; compact: boolean }) 
           <span className="shrink-0 font-semibold text-fg-primary tabular-nums">
             {bgg.averageWeight.toFixed(1)}
           </span>
-          <span className="shrink-0 text-3xs uppercase tracking-[0.14em] text-fg-muted">
+          <span className="shrink-0 text-3xs uppercase tracking-label text-fg-muted">
             {weightLabel(bgg.averageWeight)}
           </span>
         </div>

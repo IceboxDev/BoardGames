@@ -1,10 +1,17 @@
 import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/Button";
+import { PAGE_WIDTH_CLASSES, type PageMainWidth } from "./ui/PageShell";
 
 type TopNavProps = {
   /** Where the "Board Game Lab" logo links to. Defaults to "/". */
   homeHref?: string;
+  /**
+   * Width cap for the nav's inner bar — pass the SAME value as the page's
+   * `<PageMain width>` so the nav edges align with the content below
+   * (admin is "7xl", History is "wide"). Defaults to "6xl".
+   */
+  width?: PageMainWidth;
   /** Right-side content — back button, page actions, badges, etc. */
   children?: ReactNode;
 };
@@ -13,10 +20,12 @@ type TopNavProps = {
  * The unified top nav used by every full-page screen.
  * Sticky, with the "Board Game Lab" logo on the left and any actions on the right.
  */
-export function TopNav({ homeHref = "/", children }: TopNavProps) {
+export function TopNav({ homeHref = "/", width = "6xl", children }: TopNavProps) {
   return (
-    <nav className="sticky top-0 z-50 shrink-0 border-b nav-border bg-surface-950/90 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3">
+    <nav className="sticky top-0 z-nav shrink-0 border-b nav-border bg-surface-950/90 backdrop-blur-xl">
+      <div
+        className={`mx-auto flex items-center justify-between px-6 py-3 ${PAGE_WIDTH_CLASSES[width]}`.trimEnd()}
+      >
         <Link to={homeHref} className="group flex items-center gap-2.5">
           <svg
             aria-hidden="true"

@@ -49,3 +49,22 @@ export function formatShortDate(value: string): string {
   if (Number.isNaN(date.getTime())) return value;
   return date.toLocaleDateString(undefined, { month: "short", day: "numeric", year: "numeric" });
 }
+
+/**
+ * "just now" / "5 minutes ago" / "3 hours ago" / "2 days ago" from a SQLite
+ * "YYYY-MM-DD HH:MM:SS" (UTC) or any parseable timestamp. Unparseable input
+ * degrades to "recently".
+ */
+export function formatRelativeTime(stamp: string): string {
+  // SQLite returns "YYYY-MM-DD HH:MM:SS" (UTC-ish). Treat as UTC for parsing.
+  const d = new Date(stamp.includes(" ") ? `${stamp.replace(" ", "T")}Z` : stamp);
+  if (Number.isNaN(d.getTime())) return "recently";
+  const sec = Math.round((Date.now() - d.getTime()) / 1000);
+  const min = Math.round(sec / 60);
+  const hr = Math.round(min / 60);
+  const day = Math.round(hr / 24);
+  if (sec < 60) return "just now";
+  if (min < 60) return `${min} minute${min === 1 ? "" : "s"} ago`;
+  if (hr < 24) return `${hr} hour${hr === 1 ? "" : "s"} ago`;
+  return `${day} day${day === 1 ? "" : "s"} ago`;
+}

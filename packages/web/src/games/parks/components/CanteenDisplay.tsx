@@ -55,7 +55,7 @@ export default function CanteenDisplay({
           Canteens
         </span>
         {isDrawing && (
-          <span className="text-[9px] text-emerald-400" title="Pick a canteen to take">
+          <span className="text-4xs text-emerald-400" title="Pick a canteen to take">
             {"\u2713"}
           </span>
         )}
@@ -80,7 +80,7 @@ export default function CanteenDisplay({
             >
               <span>{CANTEEN_ICONS[c]}</span>
               {CANTEEN_BADGE[c] && (
-                <span className="absolute -bottom-0.5 -right-0.5 rounded bg-stone-900/90 px-0.5 text-4xs font-bold text-violet-200">
+                <span className="absolute -bottom-0.5 -right-0.5 rounded bg-stone-900/90 px-0.5 text-5xs font-bold text-violet-200">
                   {CANTEEN_BADGE[c]}
                 </span>
               )}
@@ -99,7 +99,7 @@ export default function CanteenDisplay({
           }`}
         >
           <span>{"\uD83C\uDCA0"}</span>
-          <span className="absolute -bottom-0.5 -right-0.5 rounded bg-stone-900/90 px-0.5 text-4xs font-bold text-stone-300">
+          <span className="absolute -bottom-0.5 -right-0.5 rounded bg-stone-900/90 px-0.5 text-5xs font-bold text-stone-300">
             {view.canteenPoolCount}
           </span>
         </button>

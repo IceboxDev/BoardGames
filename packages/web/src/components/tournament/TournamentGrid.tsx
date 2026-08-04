@@ -291,16 +291,16 @@ export default function TournamentGrid({
             gridTemplateColumns: `3.5rem 10rem repeat(${strategies.length}, 1fr)`,
           }}
         >
-          <div className="px-1 text-center text-4xs font-semibold uppercase tracking-wider text-fg-muted">
+          <div className="px-1 text-center text-5xs font-semibold uppercase tracking-wider text-fg-muted">
             ELO
           </div>
-          <div className="px-2 text-left text-4xs font-semibold uppercase tracking-wider text-fg-muted">
+          <div className="px-2 text-left text-5xs font-semibold uppercase tracking-wider text-fg-muted">
             Row vs Col
           </div>
           {strategies.map((col) => (
             <div
               key={col.id}
-              className="px-1 text-center text-4xs font-semibold uppercase leading-snug tracking-wide text-fg-muted"
+              className="px-1 text-center text-5xs font-semibold uppercase leading-snug tracking-wide text-fg-muted"
             >
               <span className="line-clamp-2">{col.label}</span>
             </div>

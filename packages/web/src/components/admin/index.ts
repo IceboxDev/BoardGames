@@ -1,3 +1,4 @@
+export { ActivityDrawer } from "./ActivityDrawer";
 export { AvailabilityDrawer } from "./AvailabilityDrawer";
 export { CoverageCell } from "./CoverageCell";
 export { GuestPlayersCard } from "./GuestPlayersCard";

@@ -2,6 +2,16 @@ import { useQuery } from "@tanstack/react-query";
 import { useCallback, useMemo } from "react";
 import { apiClient } from "../../lib/api-client";
 import { qk } from "../../lib/query-keys";
+import {
+  formatDiff,
+  type MatchColumn,
+  type MatchOutcome,
+  MatchResultsLayout,
+  MatchResultsTable,
+  MatchTally,
+  ResultText,
+  scoreToneClass,
+} from "../match-history/MatchResultsTable";
 import { Button } from "../ui/Button";
 import { EmptyState } from "../ui/EmptyState";
 import { LoadingState } from "../ui/LoadingState";
@@ -99,21 +109,89 @@ export default function TournamentMatchHistory({
     URL.revokeObjectURL(url);
   }, [rawGames, games, exportLogFn, strategyAId, strategyBId]);
 
-  return (
-    <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-4 py-8">
-      <div className="text-center">
-        <h2 className="text-2xl font-extrabold text-white">
-          {labelA} vs {labelB}
-        </h2>
-        {gamesQuery.data && (
-          <p className="mt-2 text-sm text-fg-secondary">
-            {games.length} games &middot; <span className="text-emerald-400">{stats.aWins}W</span> /{" "}
-            <span className="text-rose-400">{stats.bWins}L</span> /{" "}
-            <span className="text-fg-secondary">{stats.draws}D</span> for {labelA}
-          </p>
-        )}
-      </div>
+  const outcomeOf = (g: GameRecord): MatchOutcome =>
+    g.scoreA > g.scoreB ? "win" : g.scoreB > g.scoreA ? "loss" : "draw";
+  const invert = (o: MatchOutcome): MatchOutcome =>
+    o === "win" ? "loss" : o === "loss" ? "win" : "draw";
 
+  const columns: MatchColumn<GameRecord>[] = [
+    {
+      id: "n",
+      header: "#",
+      cellClassName: "tabular-nums text-fg-secondary",
+      cell: (_g, i) => i + 1,
+    },
+    {
+      id: "first",
+      header: "First Player",
+      align: "center",
+      cellClassName: "text-xs text-fg-secondary",
+      cell: (g) => (g.aPlaysFirst != null ? (g.aPlaysFirst ? labelA : labelB) : "—"),
+    },
+    {
+      id: "scoreA",
+      header: labelA,
+      align: "right",
+      cellClassName: (g) => `tabular-nums font-semibold ${scoreToneClass(outcomeOf(g))}`,
+      cell: (g) => g.scoreA,
+    },
+    {
+      id: "scoreB",
+      header: labelB,
+      align: "right",
+      cellClassName: (g) => `tabular-nums font-semibold ${scoreToneClass(invert(outcomeOf(g)))}`,
+      cell: (g) => g.scoreB,
+    },
+    {
+      id: "diff",
+      header: "Diff",
+      align: "right",
+      cellClassName: "tabular-nums text-fg-muted",
+      cell: (g) => formatDiff(g.scoreA - g.scoreB),
+    },
+    {
+      id: "winner",
+      header: "Winner",
+      align: "center",
+      cellClassName: "text-xs",
+      cell: (g) => {
+        const o = outcomeOf(g);
+        return (
+          <ResultText outcome={o}>
+            {o === "win" ? labelA : o === "loss" ? labelB : "Draw"}
+          </ResultText>
+        );
+      },
+    },
+  ];
+
+  return (
+    <MatchResultsLayout
+      title={`${labelA} vs ${labelB}`}
+      tally={
+        gamesQuery.data && (
+          <MatchTally
+            total={games.length}
+            wins={stats.aWins}
+            losses={stats.bWins}
+            draws={stats.draws}
+            suffix={<> for {labelA}</>}
+          />
+        )
+      }
+      footer={
+        <div className="mt-2 flex gap-4">
+          {exportLogFn && rawGames.length > 0 && (
+            <Button variant="secondary" size="md" onClick={handleDownload}>
+              Download all logs (ZIP)
+            </Button>
+          )}
+          <Button variant="link" onClick={onBack} className="text-sm">
+            Back to Tournament
+          </Button>
+        </div>
+      }
+    >
       <QueryBoundary
         query={gamesQuery}
         loading={<LoadingState />}
@@ -121,88 +199,19 @@ export default function TournamentMatchHistory({
         empty={<EmptyState title="No game logs found" description="Run the tournament first." />}
       >
         {() => (
-          <div className="w-full overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="border-b border-white/10 text-xs font-medium uppercase tracking-wider text-fg-muted">
-                  <th className="p-2.5 text-left">#</th>
-                  <th className="p-2.5 text-center">First Player</th>
-                  <th className="p-2.5 text-right">{labelA}</th>
-                  <th className="p-2.5 text-right">{labelB}</th>
-                  <th className="p-2.5 text-right">Diff</th>
-                  <th className="p-2.5 text-center">Winner</th>
-                </tr>
-              </thead>
-              <tbody>
-                {games.map((game, i) => {
-                  const diff = game.scoreA - game.scoreB;
-                  const aWon = diff > 0;
-                  const bWon = diff < 0;
-                  // Each tournament row carries its own `gameIndex` from the
-                  // server; we prefer that over the table position so the
-                  // index in the replay URL points at the exact game even
-                  // when the table is filtered or partially loaded.
-                  const idx = game.gameIndex ?? i;
-
-                  return (
-                    <tr
-                      // biome-ignore lint/suspicious/noArrayIndexKey: static tournament game list
-                      key={i}
-                      onClick={() => onSelectGameIndex?.(idx)}
-                      className={`border-b border-white/10 transition-colors ${
-                        onSelectGameIndex ? "cursor-pointer hover:bg-surface-800/50" : ""
-                      }`}
-                    >
-                      <td className="p-2.5 tabular-nums text-fg-secondary">{i + 1}</td>
-                      <td className="p-2.5 text-center text-xs text-fg-secondary">
-                        {game.aPlaysFirst != null ? (game.aPlaysFirst ? labelA : labelB) : "—"}
-                      </td>
-                      <td
-                        className={`p-2.5 text-right tabular-nums font-semibold ${
-                          aWon ? "text-emerald-400" : bWon ? "text-rose-400" : "text-fg-secondary"
-                        }`}
-                      >
-                        {game.scoreA}
-                      </td>
-                      <td
-                        className={`p-2.5 text-right tabular-nums font-semibold ${
-                          bWon ? "text-emerald-400" : aWon ? "text-rose-400" : "text-fg-secondary"
-                        }`}
-                      >
-                        {game.scoreB}
-                      </td>
-                      <td className="p-2.5 text-right tabular-nums text-fg-muted">
-                        {diff > 0 ? "+" : ""}
-                        {diff}
-                      </td>
-                      <td className="p-2.5 text-center text-xs">
-                        {aWon ? (
-                          <span className="text-emerald-400">{labelA}</span>
-                        ) : bWon ? (
-                          <span className="text-rose-400">{labelB}</span>
-                        ) : (
-                          <span className="text-fg-muted">Draw</span>
-                        )}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+          <MatchResultsTable
+            columns={columns}
+            rows={games}
+            // Static tournament list — position is the identity. Each row still
+            // carries its server `gameIndex` for the replay URL (preferred over
+            // table position so filtering can't desync the link).
+            rowKey={(_g, i) => i}
+            onSelectRow={
+              onSelectGameIndex ? (g, i) => onSelectGameIndex(g.gameIndex ?? i) : undefined
+            }
+          />
         )}
       </QueryBoundary>
-
-      <div className="mt-2 flex gap-4">
-        {exportLogFn && rawGames.length > 0 && (
-          <Button variant="secondary" size="md" onClick={handleDownload}>
-            Download all logs (ZIP)
-          </Button>
-        )}
-        <Button variant="link" onClick={onBack} className="text-sm">
-          Back to Tournament
-        </Button>
-      </div>
-    </div>
+    </MatchResultsLayout>
   );
 }

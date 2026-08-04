@@ -1,4 +1,6 @@
 import {
+  type ActivityLogResponse,
+  ActivityLogResponseSchema,
   type AdminResetLinkResponse,
   AdminResetLinkResponseSchema,
   OkResponseSchema,
@@ -24,5 +26,18 @@ export async function adminGenerateResetLink(userId: string): Promise<AdminReset
   return apiFetch(`/api/admin/users/${userId}/reset-link`, {
     method: "POST",
     response: AdminResetLinkResponseSchema,
+  });
+}
+
+/** One page of a member's activity trail, newest first (keyset-paged on id). */
+export async function adminFetchActivity(
+  userId: string,
+  before: number | undefined,
+  signal?: AbortSignal,
+): Promise<ActivityLogResponse> {
+  const query = before !== undefined ? `?before=${before}` : "";
+  return apiFetch(`/api/admin/users/${userId}/activity${query}`, {
+    response: ActivityLogResponseSchema,
+    signal,
   });
 }

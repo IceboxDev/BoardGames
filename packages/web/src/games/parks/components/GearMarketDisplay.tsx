@@ -56,7 +56,7 @@ function GearCardTile({
           <span>{"\u2600\uFE0F"}</span>
         </span>
       </div>
-      <p className="text-[9px] leading-snug text-stone-300">{GEAR_DESCRIPTIONS[card.kind]}</p>
+      <p className="text-4xs leading-snug text-stone-300">{GEAR_DESCRIPTIONS[card.kind]}</p>
     </button>
   );
 }
@@ -92,7 +92,7 @@ export default function GearMarketDisplay({
           Trading Post
         </span>
         {inShop && (
-          <span className="text-[9px] text-emerald-400" title="Buy a gear card">
+          <span className="text-4xs text-emerald-400" title="Buy a gear card">
             {"\u2713"} Buy gear
           </span>
         )}
@@ -125,14 +125,12 @@ export default function GearMarketDisplay({
             }`}
           >
             <div className="text-lg">{"\uD83C\uDCA0"}</div>
-            <div className="text-[9px] font-bold uppercase tracking-wider text-stone-300">
-              Blind
-            </div>
-            <div className="flex items-center gap-0.5 text-[9px] text-amber-300">
+            <div className="text-4xs font-bold uppercase tracking-wider text-stone-300">Blind</div>
+            <div className="flex items-center gap-0.5 text-4xs text-amber-300">
               <span>{GEAR_BLIND_COST}</span>
               <span>{"\u2600\uFE0F"}</span>
             </div>
-            <div className="text-[9px] text-stone-500">{view.gearDeckCount}</div>
+            <div className="text-4xs text-stone-500">{view.gearDeckCount}</div>
           </button>
         )}
         {view.gearMarketVisible.length === 0 && view.gearDeckCount === 0 && (

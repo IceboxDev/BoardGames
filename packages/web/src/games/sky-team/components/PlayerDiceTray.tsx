@@ -44,7 +44,7 @@ export default function PlayerDiceTray({
       {/* LEFT: opponent dice — small + hidden. Stack of indicators showing
           how many of the opponent's dice are still unplaced. */}
       <aside className="flex w-28 shrink-0 flex-col items-center justify-center gap-2 rounded bg-surface-900/40 p-2">
-        <span className="text-[9px] font-semibold uppercase tracking-wider text-fg-muted">
+        <span className="text-4xs font-semibold uppercase tracking-wider text-fg-muted">
           Opponent ({view.opponentDiceCount})
         </span>
         <div className="flex max-w-full flex-wrap justify-center gap-1">

@@ -4,10 +4,11 @@ import {
   hasActiveFilters,
   PLAYERS_MAX_PLUS,
 } from "../lib/game-filters";
-import { ChevronDownIcon, SearchIcon, XIcon } from "./icons";
+import { SearchIcon, XIcon } from "./icons";
 import { Button } from "./ui/Button";
 import { Chip } from "./ui/Chip";
 import { Input } from "./ui/Input";
+import { Select } from "./ui/Select";
 
 // One thin top-row filter bar for the Board Game Lab library. Everything
 // lives on a single horizontal line: search grows to fill, the three range
@@ -141,8 +142,7 @@ export default function GameLibraryFilters({
   );
 }
 
-// Compact dark-themed select sharing the search input's chrome (rounded-lg,
-// border-white/10, surface-900, h-9) so the whole bar reads as one family.
+// Thin typed wrapper over the kit `Select` (chevron + active-tint variants).
 // Fixed width so selecting a value doesn't resize the native control (which
 // would shift its neighbours). Generic over the option value, so each call
 // site gets a typed `onChange` — `T` is the union of the option `value`s
@@ -159,24 +159,22 @@ function FilterSelect<T extends string>({
   options: ReadonlyArray<{ value: T; label: string }>;
   onChange: (value: T) => void;
 }) {
-  const active = value !== "";
   return (
-    <div className={`relative shrink-0 ${CONTROL_W}`}>
-      <select
+    <div className={`shrink-0 ${CONTROL_W}`}>
+      <Select
+        chevron
+        active={value !== ""}
         value={value}
         onChange={(e) => onChange(e.target.value as T)}
         aria-label={label}
-        className={`h-9 w-full appearance-none truncate rounded-lg border bg-surface-900 pl-2.5 pr-7 text-sm focus:outline-none focus:ring-2 focus:ring-accent-400/30 ${
-          active ? "border-accent-400/50 text-accent-100" : "border-white/10 text-fg-primary"
-        }`}
+        className="h-9 py-0"
       >
         {options.map((o) => (
           <option key={o.value} value={o.value}>
             {o.label}
           </option>
         ))}
-      </select>
-      <ChevronDownIcon className="pointer-events-none absolute right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-fg-muted" />
+      </Select>
     </div>
   );
 }

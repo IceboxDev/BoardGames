@@ -96,13 +96,13 @@ export default function StationShell({
     >
       <div className={`flex items-center gap-2 ${compact ? "mb-0.5" : "mb-1.5"}`}>
         <span
-          className={`${compact ? "text-[9px]" : "text-3xs"} font-semibold uppercase tracking-wider ${t.label}`}
+          className={`${compact ? "text-4xs" : "text-3xs"} font-semibold uppercase tracking-wider ${t.label}`}
         >
           {emoji} {label}
         </span>
         {badge && (
           <span
-            className={`rounded-full px-1.5 py-px ${compact ? "text-[9px]" : "text-3xs"} font-bold tabular-nums ${t.badgeBg} ${t.badgeText} ${badgeDimmed ? "opacity-40" : ""}`}
+            className={`rounded-full px-1.5 py-px ${compact ? "text-4xs" : "text-3xs"} font-bold tabular-nums ${t.badgeBg} ${t.badgeText} ${badgeDimmed ? "opacity-40" : ""}`}
           >
             {badge}
           </span>

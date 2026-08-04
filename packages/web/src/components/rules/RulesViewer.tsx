@@ -1,8 +1,12 @@
 import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Document, Page, pdfjs } from "react-pdf";
 import { XIcon } from "../icons";
-import { useBodyScrollLock, useFocusTrap } from "../ui/dialog-a11y";
+import { DialogBackdrop } from "../ui/DialogBackdrop";
+import { useBodyScrollLock, useDialogEscape, useFocusTrap } from "../ui/dialog-a11y";
+import { ErrorAlert } from "../ui/ErrorAlert";
 import { IconButton } from "../ui/IconButton";
+import { LoadingState } from "../ui/LoadingState";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -33,10 +37,9 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
   const dialogRef = useRef<HTMLDivElement>(null);
   const [closing, setClosing] = useState(false);
 
-  // Same dialog contract as Modal: lock background scroll and trap focus
-  // inside the reader while it's open. Escape is handled below (it carries the
-  // bespoke closing-fade guard, so it stays local rather than using the shared
-  // useDialogEscape).
+  // Full dialog contract, same hooks as Modal: scroll lock, focus trap,
+  // Escape. `handleClose` is idempotent (closingRef), so a double Escape
+  // during the fade can never pop navigation twice.
   useBodyScrollLock();
   useFocusTrap(dialogRef);
 
@@ -66,15 +69,6 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
-  // Close on Escape
-  useEffect(() => {
-    function handleKey(e: KeyboardEvent) {
-      if (e.key === "Escape") handleClose();
-    }
-    window.addEventListener("keydown", handleKey);
-    return () => window.removeEventListener("keydown", handleKey);
-  });
-
   const closingRef = useRef(false);
   const handleClose = useCallback(() => {
     if (closingRef.current) return;
@@ -83,21 +77,17 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
     setTimeout(onClose, 200);
   }, [onClose]);
 
+  useDialogEscape(handleClose);
+
   const onDocumentLoadSuccess = useCallback(({ numPages: n }: { numPages: number }) => {
     setNumPages(n);
   }, []);
 
-  return (
+  const overlay = (
     <div
       className={`fixed inset-0 z-modal flex flex-col transition-opacity duration-200 ${closing ? "opacity-0" : "opacity-100"}`}
     >
-      {/* Backdrop */}
-      {/* biome-ignore lint/a11y/noStaticElementInteractions: backdrop dismiss */}
-      <div
-        className="absolute inset-0 bg-surface-950/90 backdrop-blur-sm"
-        onClick={handleClose}
-        role="presentation"
-      />
+      <DialogBackdrop onDismiss={handleClose} label="Dismiss rules" />
 
       {/* Content */}
       <div
@@ -179,16 +169,12 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
               key={activeTab}
               file={tabs[activeTab].url}
               onLoadSuccess={onDocumentLoadSuccess}
-              loading={
-                <div className="flex items-center gap-2 py-20 text-sm text-fg-muted">
-                  <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-amber-400" />
-                  Loading rules...
-                </div>
-              }
+              loading={<LoadingState label="Loading rules…" className="py-20" />}
               error={
-                <div className="py-20 text-center text-sm text-rose-400">
-                  Failed to load PDF. Please try again.
-                </div>
+                <ErrorAlert
+                  message="Failed to load PDF. Please try again."
+                  className="mx-auto my-20 max-w-md"
+                />
               }
             >
               {Array.from({ length: numPages }, (_, i) => (
@@ -211,4 +197,7 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
       </div>
     </div>
   );
+
+  if (typeof document === "undefined") return null;
+  return createPortal(overlay, document.body);
 }

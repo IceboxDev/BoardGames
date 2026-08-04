@@ -20,7 +20,7 @@ export default function DrawPile({ count, onClick, glowing = false }: DrawPilePr
       ].join(" ")}
     >
       <div className="w-7 h-10 rounded border border-gray-500 bg-gray-600 opacity-50" />
-      <span className="text-[0.6rem] font-bold text-fg-secondary tabular-nums">{count}</span>
+      <span className="text-4xs font-bold text-fg-secondary tabular-nums">{count}</span>
     </button>
   );
 }

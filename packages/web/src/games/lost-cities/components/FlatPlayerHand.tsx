@@ -32,7 +32,7 @@ export default function FlatPlayerHand({
         >
           {label}
         </span>
-        <span className={`text-fg-disabled tabular-nums ${compact ? "text-[9px]" : "text-3xs"}`}>
+        <span className={`text-fg-disabled tabular-nums ${compact ? "text-4xs" : "text-3xs"}`}>
           {cards.length}
         </span>
       </div>

@@ -5,6 +5,7 @@ import {
   CARD_EMOJI,
   CARD_LABELS,
 } from "@boardgames/core/games/exploding-kittens/types";
+import { GameDialogPanel } from "../../../components/game-layout";
 import { Button } from "../../../components/ui/Button";
 import { getCardImageUrl, getSkinsForType } from "../assets/card-art";
 
@@ -59,18 +60,17 @@ export default function StealDialog({ state, onAction }: StealDialogProps) {
     const isNamed = state.stealContext?.isNamedSteal ?? false;
 
     return (
-      <div className="rounded-xl border border-purple-700/50 bg-purple-950/40 p-4">
-        <p className="mb-1 text-sm font-medium text-purple-300">
-          {isForFavor
+      <GameDialogPanel
+        tone="arcane"
+        title={
+          isForFavor
             ? "🙏 Choose Favor Target"
             : isNamed
               ? "🎯 Choose Steal Target (Named)"
-              : "🎯 Choose Steal Target"}
-        </p>
-        <p className="mb-3 text-xs text-fg-secondary">
-          Select a player to {isForFavor ? "demand a favor from" : "steal from"}
-        </p>
-
+              : "🎯 Choose Steal Target"
+        }
+        subtitle={`Select a player to ${isForFavor ? "demand a favor from" : "steal from"}`}
+      >
         <div className="flex gap-3">
           {targets.map((t) => {
             const player = state.players[t.targetIndex];
@@ -93,7 +93,7 @@ export default function StealDialog({ state, onAction }: StealDialogProps) {
             );
           })}
         </div>
-      </div>
+      </GameDialogPanel>
     );
   }
 
@@ -103,10 +103,11 @@ export default function StealDialog({ state, onAction }: StealDialogProps) {
     );
 
     return (
-      <div className="rounded-xl border border-purple-700/50 bg-purple-950/40 p-4">
-        <p className="mb-1 text-sm font-medium text-purple-300">🎯 Name a Card</p>
-        <p className="mb-3 text-xs text-fg-secondary">If the target has this card, you steal it.</p>
-
+      <GameDialogPanel
+        tone="arcane"
+        title="🎯 Name a Card"
+        subtitle="If the target has this card, you steal it."
+      >
         <div className="flex flex-wrap gap-1 overflow-x-auto">
           {nameActions.map((a) => (
             <CardButton
@@ -116,7 +117,7 @@ export default function StealDialog({ state, onAction }: StealDialogProps) {
             />
           ))}
         </div>
-      </div>
+      </GameDialogPanel>
     );
   }
 

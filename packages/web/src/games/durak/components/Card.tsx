@@ -1,5 +1,6 @@
 import type { Card as CardData, Suit } from "@boardgames/core/games/durak/types";
 import { RANK_LABELS } from "@boardgames/core/games/durak/types";
+import { cardChrome } from "../../../components/card-fan/card-chrome";
 import { getCardSvg } from "../card-svg";
 
 interface CardProps {
@@ -32,24 +33,19 @@ export default function Card({
   const isTrump = trumpSuit != null && card.suit === trumpSuit;
   const src = getCardSvg(card.rank, card.suit);
 
-  const ringClass = selected
-    ? "ring-2 ring-white ring-offset-2 ring-offset-gray-900 scale-105"
-    : glowing
-      ? "ring-2 ring-emerald-400/80 shadow-lg shadow-emerald-500/30"
-      : "";
-
-  const interactionClass = disabled
-    ? "opacity-40 cursor-not-allowed"
-    : onClick
-      ? "hover:shadow-xl hover:-translate-y-1 cursor-pointer"
-      : "";
-
   return (
     <button
       type="button"
       onClick={disabled ? undefined : onClick}
       disabled={disabled}
-      className={`${sizeClass} relative overflow-hidden rounded-lg bg-white px-[4%] shadow-md transition-all ${ringClass} ${interactionClass}`}
+      className={cardChrome({
+        size: sizeClass,
+        selected,
+        glowClass: glowing ? "ring-2 ring-emerald-400/80 shadow-lg shadow-emerald-500/30" : "",
+        disabled,
+        hover: onClick ? "lift" : "none",
+        className: "bg-white px-[4%]",
+      })}
     >
       <img
         src={src}
@@ -59,7 +55,7 @@ export default function Card({
       />
 
       {isTrump && (
-        <div className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-amber-400 text-4xs font-bold text-amber-900 shadow">
+        <div className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-amber-400 text-5xs font-bold text-amber-900 shadow">
           T
         </div>
       )}

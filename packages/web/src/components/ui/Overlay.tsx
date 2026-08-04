@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import type { ReactNode } from "react";
 import { useEffect } from "react";
 import { createPortal } from "react-dom";
+import { DialogBackdrop } from "./DialogBackdrop";
 
 // Lighter sibling of Modal for passive previews (card hover-zoom, action-log
 // art tooltips). Mounted = visible. No focus trap, no role="dialog" — the
@@ -50,15 +51,7 @@ export function Overlay({
         exit={{ opacity: 0 }}
         transition={{ duration: 0.18 }}
       >
-        <button
-          type="button"
-          aria-label="Close preview"
-          tabIndex={-1}
-          onClick={closeOnClick ? onClose : undefined}
-          className={`absolute inset-0 bg-surface-950/85 backdrop-blur-sm ${
-            closeOnClick ? "cursor-default" : "cursor-default pointer-events-none"
-          }`}
-        />
+        <DialogBackdrop onDismiss={closeOnClick ? onClose : undefined} label="Close preview" />
         <motion.div
           className={`pointer-events-none relative z-10${contentClassName ? ` ${contentClassName}` : ""}`}
           initial={{ scale: 0.85, opacity: 0 }}

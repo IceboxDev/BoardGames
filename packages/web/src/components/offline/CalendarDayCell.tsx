@@ -1,3 +1,4 @@
+import "./calendar-fire.css";
 import type { RsvpStatus } from "../../lib/calendar-rsvps";
 import type { Availability, AvailabilityEntry } from "../../lib/offline-availability";
 import { D20Die } from "./D20Die";
@@ -104,7 +105,7 @@ export function DayCell({
       ? "text-base sm:text-lg md:text-xl 3xl:text-2xl"
       : "text-lg sm:text-xl md:text-2xl 3xl:text-3xl";
   const monthLabelPos = compact ? "left-1 top-1" : "left-1.5 top-1.5";
-  const monthLabelSize = compact ? "text-5xs" : "text-4xs sm:text-3xs";
+  const monthLabelSize = compact ? "text-6xs" : "text-5xs sm:text-3xs";
   const todayDotPos = compact ? "right-1 top-1" : "right-2 top-2";
   const aspectClass = compact ? "aspect-square" : "";
   const layoutClass = compact ? "items-center justify-center" : "";
@@ -464,7 +465,7 @@ function DndNightLayer({ compact, viewerRsvp }: { compact: boolean; viewerRsvp?:
       {/* Deep dungeon base — blood-crimson fading to obsidian. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#3b0a0a] via-[#1a0606] to-black"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-dnd-blood via-dnd-ink to-black"
       />
       {/* Warm torchlight glow rising from the center, behind the die. */}
       <span
@@ -528,12 +529,12 @@ function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
   //
   // The bracketed letter-spacing below is a deliberate hold-out from the
   // tracking-label/pill/eyebrow token scale (pinned in scripts/style-baseline.json).
-  // These glyphs are 7px (`text-5xs`) inside a pill only a few px wider: the
+  // These glyphs are 7px (`text-6xs`) inside a pill only a few px wider: the
   // spacing is per-breakpoint optical tuning to stop "RSVP" overflowing its own
   // pill, not the label-typography role the tokens describe. Applying the pill
   // token (0.18em) at the phone size overflows the cell.
   const pillBase =
-    "pointer-events-none absolute inset-x-1 bottom-1 z-10 inline-flex min-h-3 items-center justify-center gap-0.5 rounded-md px-0.5 py-0 text-5xs font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:min-h-5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-4xs sm:tracking-[0.18em]";
+    "pointer-events-none absolute inset-x-1 bottom-1 z-10 inline-flex min-h-3 items-center justify-center gap-0.5 rounded-md px-0.5 py-0 text-6xs font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:min-h-5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-5xs sm:tracking-pill";
   if (viewerRsvp === "yes") {
     return (
       <span
@@ -622,7 +623,7 @@ function PersonalMarkChip({ value }: { value: Availability }) {
   return (
     <span
       aria-hidden="true"
-      className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-5xs font-extrabold uppercase leading-none tracking-[0.1em] text-white ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-3xs sm:tracking-[0.15em] md:text-xs ${
+      className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-6xs font-extrabold uppercase leading-none tracking-[0.1em] text-white ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-3xs sm:tracking-[0.15em] md:text-xs ${
         isCan
           ? "ring-accent-300 shadow-[0_0_10px_rgba(129,140,248,0.6)]"
           : "ring-amber-300 shadow-[0_0_10px_rgba(252,211,77,0.55)]"
@@ -644,7 +645,7 @@ function HeatBadge({ heat }: { heat: Heat }) {
   // one is shown.
   return (
     <span
-      className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-5xs font-extrabold leading-none ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-3xs md:text-xs ${
+      className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-6xs font-extrabold leading-none ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-3xs md:text-xs ${
         isFire
           ? "text-orange-200 ring-orange-300/70 shadow-[0_0_10px_rgba(249,115,22,0.55)]"
           : "text-amber-200 ring-amber-300/70 shadow-[0_0_10px_rgba(252,211,77,0.4)]"
@@ -683,7 +684,7 @@ function DayLabels({ entries, heated }: { entries: AvailabilityEntry[]; heated: 
   const maybes = entries.filter((e) => e.status === "maybe");
   const textShadow = heated ? { textShadow: "0 1px 2px rgba(0,0,0,0.85)" } : undefined;
   return (
-    <div className="relative z-10 mt-0.5 flex min-h-0 flex-1 flex-col overflow-hidden">
+    <div className="relative z-10 mt-0.5 flex min-h-0 flex-1 flex-col overflow-hidden tall:mt-1.5 tall:gap-1.5">
       {cans.length > 0 && (
         <NameRow entries={cans} dotColor="bg-accent-300" textShadow={textShadow} />
       )}
@@ -704,17 +705,17 @@ function NameRow({
   textShadow: React.CSSProperties | undefined;
 }) {
   return (
-    <div className="flex flex-wrap items-center gap-x-0.5 gap-y-0 sm:gap-x-1 sm:gap-y-0.5 3xl:gap-x-1.5 3xl:gap-y-1">
+    <div className="flex flex-wrap items-center gap-x-0.5 gap-y-0 sm:gap-x-1 sm:gap-y-0.5 3xl:gap-x-1.5 3xl:gap-y-1 tall:flex-col tall:flex-nowrap tall:items-start tall:gap-y-0.5">
       {entries.map((e) => (
         <span
           key={e.userId}
           title={`${e.name} — ${e.status}`}
           style={textShadow}
-          className="inline-flex max-w-full items-center gap-0 truncate text-6xs font-medium leading-tight text-white sm:gap-1 sm:text-3xs sm:leading-none md:text-2xs lg:text-xs 3xl:text-base 3xl:leading-snug"
+          className="inline-flex max-w-full items-center gap-0 truncate text-7xs font-medium leading-tight text-white sm:gap-1 sm:text-3xs sm:leading-none md:text-2xs lg:text-xs 3xl:text-base 3xl:leading-snug tall:gap-1.5 tall:text-base tall:leading-snug"
         >
           <span
             aria-hidden="true"
-            className={`inline-block h-0.5 w-0.5 shrink-0 rounded-full sm:h-1.5 sm:w-1.5 md:h-2 md:w-2 3xl:h-2.5 3xl:w-2.5 ${dotColor}`}
+            className={`inline-block h-0.5 w-0.5 shrink-0 rounded-full sm:h-1.5 sm:w-1.5 md:h-2 md:w-2 3xl:h-2.5 3xl:w-2.5 tall:h-2.5 tall:w-2.5 ${dotColor}`}
           />
           <span className="truncate">{firstName(e.name)}</span>
         </span>

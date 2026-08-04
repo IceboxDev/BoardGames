@@ -15,6 +15,7 @@ import { IconButton } from "../../ui/IconButton";
 import { Select } from "../../ui/Select";
 import { ParticipantPicker } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
+import { GroupLabel, OutcomeFormShell } from "./shared";
 
 type User = { id: string; name: string };
 
@@ -141,7 +142,7 @@ export function WerewolfForm({ users, value, onChange }: Props) {
   );
 
   return (
-    <div className="flex flex-col gap-3">
+    <OutcomeFormShell>
       <ScenarioPicker scenarioId={scenarioId} onPick={pickScenario} />
 
       <PoolEditor pool={pool} onAdjust={adjustPoolCount} />
@@ -162,13 +163,13 @@ export function WerewolfForm({ users, value, onChange }: Props) {
       )}
 
       <div>
-        <Label>Players</Label>
+        <GroupLabel>Players</GroupLabel>
         <ParticipantPicker users={users} selectedIds={selectedIds} onChange={setPlayers} />
       </div>
 
       {roster.length > 0 && (
         <div className="flex flex-col gap-1.5">
-          <Label>Final teams</Label>
+          <GroupLabel>Final teams</GroupLabel>
           <div className="flex flex-col gap-1.5">
             {roster.map((slot) => (
               <TeamRow
@@ -185,7 +186,7 @@ export function WerewolfForm({ users, value, onChange }: Props) {
 
       {roster.length > 0 && (
         <div>
-          <Label>Voted out</Label>
+          <GroupLabel>Voted out</GroupLabel>
           <div className="flex flex-wrap gap-1.5">
             {roster.map((slot) => (
               <VotedOutChip
@@ -202,7 +203,7 @@ export function WerewolfForm({ users, value, onChange }: Props) {
       )}
 
       <div>
-        <Label>Winners (auto)</Label>
+        <GroupLabel>Winners (auto)</GroupLabel>
         <div className="flex gap-2">
           <WinnerChip team="village" active={winners.includes("village")} />
           <WinnerChip team="werewolf" active={winners.includes("werewolf")} />
@@ -218,7 +219,7 @@ export function WerewolfForm({ users, value, onChange }: Props) {
           </p>
         )}
       </div>
-    </div>
+    </OutcomeFormShell>
   );
 }
 
@@ -233,7 +234,7 @@ function ScenarioPicker({
 }) {
   return (
     <div>
-      <Label>Scenario</Label>
+      <GroupLabel>Scenario</GroupLabel>
       <Select compact value={scenarioId} onChange={(e) => onPick(e.target.value as ScenarioId)}>
         <option value="custom">Custom — pick roles manually</option>
         {SCENARIOS.map((s) => (
@@ -255,7 +256,7 @@ function PoolEditor({
 }) {
   return (
     <div>
-      <Label>Card pool (informational)</Label>
+      <GroupLabel>Card pool (informational)</GroupLabel>
       <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-3">
         {WEREWOLF_ROLES.map((role) => {
           const count = pool[role.id] ?? 0;
@@ -415,14 +416,6 @@ function TeamDot({ team }: { team: WerewolfTeam }) {
   const color =
     team === "village" ? "bg-emerald-400" : team === "werewolf" ? "bg-rose-400" : "bg-amber-400";
   return <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${color}`} aria-hidden="true" />;
-}
-
-function Label({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-fg-secondary">
-      {children}
-    </div>
-  );
 }
 
 // ── Helpers ────────────────────────────────────────────────────────────

@@ -98,3 +98,39 @@ describe("matchResultBadge — binary co-op + absent player", () => {
     expect(matchResultBadge(won, "z", "pandemic")).toBeNull();
   });
 });
+
+describe("matchResultBadge — last-standing with survivorRanks (poker)", () => {
+  const lsp = (
+    userId: string,
+    extra: { survivorRank?: number; eliminationOrder?: number } = {},
+  ) => ({
+    userId,
+    displayName: userId,
+    ...extra,
+  });
+  const ranked: MatchOutcome = {
+    kind: "last-standing",
+    players: [
+      lsp("a", { survivorRank: 2 }),
+      lsp("b", { survivorRank: 1 }),
+      lsp("c", { eliminationOrder: 0 }),
+    ],
+  };
+  it("chip leader → Won (emerald)", () => {
+    expect(matchResultBadge(ranked, "b", "poker")).toEqual({ label: "Won", tone: "emerald" });
+  });
+  it("ranked runner-up → ordinal (amber), not Won", () => {
+    expect(matchResultBadge(ranked, "a", "poker")).toEqual({ label: "2nd", tone: "amber" });
+  });
+  it("eliminated → Lost (rose)", () => {
+    expect(matchResultBadge(ranked, "c", "poker")).toEqual({ label: "Lost", tone: "rose" });
+  });
+  it("unranked survivors keep the legacy co-winner badge", () => {
+    const unranked: MatchOutcome = {
+      kind: "last-standing",
+      players: [lsp("a"), lsp("b"), lsp("c", { eliminationOrder: 0 })],
+    };
+    expect(matchResultBadge(unranked, "a", "poker")).toEqual({ label: "Won", tone: "emerald" });
+    expect(matchResultBadge(unranked, "b", "poker")).toEqual({ label: "Won", tone: "emerald" });
+  });
+});

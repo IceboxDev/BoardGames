@@ -7,6 +7,7 @@ import {
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { logActivity } from "../lib/activity-log.ts";
 import { jsonColumn, parseRow, RowParseError } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 
@@ -88,6 +89,7 @@ calendarRsvpsRoutes.post("/rsvp", zJsonBody(SetRsvpBodySchema), async (c) => {
             auto = excluded.auto`,
     args: [date, user.id, status, autoFlag],
   });
+  logActivity(user.id, "rsvp", { date, status, ...(auto ? { auto: true } : {}) });
 
   return c.json(OkResponseSchema.parse({ ok: true }));
 });
@@ -132,6 +134,7 @@ calendarRsvpsRoutes.post("/rsvp/kick", zJsonBody(KickRsvpBodySchema), async (c) 
             auto = 0`,
     args: [date, userId],
   });
+  logActivity(user.id, "rsvp-kick", { date, targetUserId: userId });
 
   return c.json(OkResponseSchema.parse({ ok: true }));
 });
@@ -144,6 +147,7 @@ calendarRsvpsRoutes.delete("/rsvp", zJsonBody(ClearRsvpBodySchema), async (c) =>
     sql: "DELETE FROM rsvps WHERE date_key = ? AND user_id = ?",
     args: [date, user.id],
   });
+  logActivity(user.id, "rsvp-cleared", { date });
 
   return c.json(OkResponseSchema.parse({ ok: true }));
 });

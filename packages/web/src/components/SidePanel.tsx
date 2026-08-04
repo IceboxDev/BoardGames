@@ -71,7 +71,7 @@ export function PlayerListPanel({ turnCount, players, extra }: PlayerListPanelPr
               <span className="w-7 shrink-0 text-center">
                 {p.role && (
                   <span
-                    className={`rounded-full px-1 py-0.5 text-4xs font-semibold uppercase leading-none ring-1 ring-inset ${ROLE_STYLE[p.role]}`}
+                    className={`rounded-full px-1 py-0.5 text-5xs font-semibold uppercase leading-none ring-1 ring-inset ${ROLE_STYLE[p.role]}`}
                   >
                     {p.role === "attacker" ? "ATK" : "DEF"}
                   </span>

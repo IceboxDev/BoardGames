@@ -37,7 +37,7 @@ export default function PuddingStation({ count, currentRoundCards, compact }: Pu
         {count === 0 && <GhostCard theme="pudding" size={size} label="0" />}
       </div>
       {!compact && (
-        <span className="mt-1 text-[9px] text-pink-400/40 italic">Scored at game end</span>
+        <span className="mt-1 text-4xs text-pink-400/40 italic">Scored at game end</span>
       )}
     </StationShell>
   );

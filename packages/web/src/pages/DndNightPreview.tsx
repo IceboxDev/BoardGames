@@ -3,6 +3,7 @@ import Calendar from "../components/offline/Calendar";
 import { D20Die } from "../components/offline/D20Die";
 import DndNightPanel from "../components/offline/DndNightPanel";
 import { PageMain, PageShell } from "../components/ui/PageShell";
+import { Section } from "../components/ui/Section";
 import type { Attendee } from "../lib/calendar-games";
 import { DND_SLUG } from "../lib/dnd-night";
 import type { AvailabilityCounts, AvailabilityMap } from "../lib/offline-availability";
@@ -123,10 +124,7 @@ export default function DndNightPreview() {
           </p>
         </header>
 
-        <section className="flex flex-col gap-3">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-fg-muted">
-            Calendar grid (full)
-          </h2>
+        <Section title="Calendar grid (full)">
           <div className="h-[680px] rounded-2xl border border-white/10 bg-surface-900/40 p-4">
             <Calendar
               weekStart={weekStart}
@@ -137,12 +135,9 @@ export default function DndNightPreview() {
               onLockedClick={() => {}}
             />
           </div>
-        </section>
+        </Section>
 
-        <section className="flex flex-col gap-3">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-fg-muted">
-            Calendar grid (compact / side-drawer)
-          </h2>
+        <Section title="Calendar grid (compact / side-drawer)">
           <div className="w-72 rounded-2xl border border-white/10 bg-surface-900/40 p-3">
             <Calendar
               weekStart={weekStart}
@@ -154,27 +149,21 @@ export default function DndNightPreview() {
               compact
             />
           </div>
-        </section>
+        </Section>
 
-        <section className="flex flex-col gap-3">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-fg-muted">
-            Bare dice (counts 1 / 4 / 12 / 20)
-          </h2>
+        <Section title="Bare dice (counts 1 / 4 / 12 / 20)">
           <div className="flex items-end gap-6 rounded-2xl border border-white/10 bg-surface-900/40 p-6">
             {[1, 4, 12, 20].map((n) => (
               <D20Die key={n} count={n} className="dnd-die h-20 w-20" />
             ))}
           </div>
-        </section>
+        </Section>
 
-        <section className="flex flex-col gap-3">
-          <h2 className="text-sm font-semibold uppercase tracking-wide text-fg-muted">
-            Modal panel
-          </h2>
+        <Section title="Modal panel">
           <div className="mx-auto h-[640px] w-full max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-surface-950 p-4">
             <DndNightPanel attendees={ATTENDEES} partyCount={4} />
           </div>
-        </section>
+        </Section>
       </PageMain>
     </PageShell>
   );

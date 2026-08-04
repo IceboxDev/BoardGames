@@ -1,5 +1,6 @@
 import { sortHand } from "@boardgames/core/games/exploding-kittens/deck";
 import type { Action, GameState } from "@boardgames/core/games/exploding-kittens/types";
+import { GameDialogPanel } from "../../../components/game-layout";
 import Card from "./Card";
 
 interface FavorDialogProps {
@@ -17,12 +18,11 @@ export default function FavorDialog({ state, onAction }: FavorDialogProps) {
   const hand = sortHand(target.hand);
 
   return (
-    <div className="rounded-xl border border-amber-700/50 bg-amber-950/40 p-4">
-      <p className="mb-1 text-sm font-medium text-amber-300">🙏 Favor</p>
-      <p className="mb-3 text-xs text-fg-secondary">
-        {fromName} demands a favor. Choose a card to give.
-      </p>
-
+    <GameDialogPanel
+      tone="warning"
+      title="🙏 Favor"
+      subtitle={`${fromName} demands a favor. Choose a card to give.`}
+    >
       <div className="flex flex-wrap gap-2">
         {hand.map((card) => (
           <Card
@@ -33,6 +33,6 @@ export default function FavorDialog({ state, onAction }: FavorDialogProps) {
           />
         ))}
       </div>
-    </div>
+    </GameDialogPanel>
   );
 }

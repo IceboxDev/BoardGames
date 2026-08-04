@@ -44,7 +44,7 @@ export function CarouselBody({
       >
         {title}
       </h3>
-      <p className="text-3xs uppercase tracking-[0.18em] text-fg-secondary sm:text-2xs xl:text-xs">
+      <p className="text-3xs uppercase tracking-pill text-fg-secondary sm:text-2xs xl:text-xs">
         <span className={bestForHeadcount !== null ? "text-amber-300" : undefined}>
           {playerRange(bgg)}
           {bestForHeadcount !== null && ` · best at ${bestForHeadcount}`}

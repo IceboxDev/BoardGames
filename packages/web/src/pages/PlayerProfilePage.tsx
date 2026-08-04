@@ -25,6 +25,7 @@ import { Button } from "../components/ui/Button.tsx";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
 import { LoadingState } from "../components/ui/LoadingState.tsx";
 import { PageMain, PageShell } from "../components/ui/PageShell.tsx";
+import { QueryBoundary } from "../components/ui/QueryBoundary.tsx";
 import { Section } from "../components/ui/Section.tsx";
 import { Stack } from "../components/ui/Stack.tsx";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
@@ -67,67 +68,70 @@ export default function PlayerProfilePage() {
     </TopNav>
   );
 
-  if (profileQuery.isLoading) {
-    return (
-      <PageShell topNav={topNav}>
-        <PageMain width="6xl" padding="spacious" fillHeight>
-          <LoadingState fill label="Loading profile…" />
-        </PageMain>
-      </PageShell>
-    );
-  }
-
-  if (profileQuery.isError || !profileQuery.data) {
-    const notFound = profileQuery.error instanceof ApiError && profileQuery.error.status === 404;
-    return (
-      <PageShell topNav={topNav}>
-        <PageMain width="6xl" padding="spacious">
-          <EmptyState
-            tone="rose"
-            title={notFound ? "Player not found" : "Couldn't load this profile"}
-            description={
-              notFound
-                ? "This player doesn't exist or has been removed."
-                : "Something went wrong fetching the profile. Try again."
-            }
-            action={
-              <Button variant="secondary" onClick={() => profileQuery.refetch()}>
-                Retry
-              </Button>
-            }
-          />
-        </PageMain>
-      </PageShell>
-    );
-  }
-
-  const profile = profileQuery.data;
-  const firstName = profile.user.name.split(" ")[0] || "This player";
-
-  const allMatches = showAllMatches
-    ? (matchesQuery.data?.pages.flatMap((p) => p.matches) ?? profile.recentMatches)
-    : profile.recentMatches;
-
-  const matchFooter: ReactNode = showAllMatches ? (
-    matchesQuery.hasNextPage ? (
-      <Button
-        variant="secondary"
-        size="sm"
-        block
-        loading={matchesQuery.isFetchingNextPage}
-        onClick={() => matchesQuery.fetchNextPage()}
-      >
-        Load more
-      </Button>
-    ) : null
-  ) : profile.recentMatches.length >= 10 ? (
-    <Button variant="ghost" size="sm" block onClick={() => setShowAllMatches(true)}>
-      View all matches
-    </Button>
-  ) : null;
-
   return (
     <PageShell topNav={topNav}>
+      <QueryBoundary
+        query={profileQuery}
+        loading={
+          <PageMain width="6xl" padding="spacious" fillHeight>
+            <LoadingState fill label="Loading profile…" />
+          </PageMain>
+        }
+        errorFallback={(error) => {
+          const notFound = error instanceof ApiError && error.status === 404;
+          return (
+            <PageMain width="6xl" padding="spacious">
+              <EmptyState
+                tone="rose"
+                title={notFound ? "Player not found" : "Couldn't load this profile"}
+                description={
+                  notFound
+                    ? "This player doesn't exist or has been removed."
+                    : "Something went wrong fetching the profile. Try again."
+                }
+                action={
+                  <Button variant="secondary" onClick={() => profileQuery.refetch()}>
+                    Retry
+                  </Button>
+                }
+              />
+            </PageMain>
+          );
+        }}
+      >
+        {(profile) => renderProfileBody(profile)}
+      </QueryBoundary>
+    </PageShell>
+  );
+
+  // Plain render helper (NOT a component — a nested component definition would
+  // get a fresh identity every render and remount its whole subtree).
+  function renderProfileBody(profile: NonNullable<typeof profileQuery.data>) {
+    const firstName = profile.user.name.split(" ")[0] || "This player";
+
+    const allMatches = showAllMatches
+      ? (matchesQuery.data?.pages.flatMap((p) => p.matches) ?? profile.recentMatches)
+      : profile.recentMatches;
+
+    const matchFooter: ReactNode = showAllMatches ? (
+      matchesQuery.hasNextPage ? (
+        <Button
+          variant="secondary"
+          size="sm"
+          block
+          loading={matchesQuery.isFetchingNextPage}
+          onClick={() => matchesQuery.fetchNextPage()}
+        >
+          Load more
+        </Button>
+      ) : null
+    ) : profile.recentMatches.length >= 10 ? (
+      <Button variant="ghost" size="sm" block onClick={() => setShowAllMatches(true)}>
+        View all matches
+      </Button>
+    ) : null;
+
+    return (
       <PageMain width="6xl" padding="spacious">
         <Stack gap="lg">
           <ProfileHeader
@@ -215,23 +219,23 @@ export default function PlayerProfilePage() {
             />
           </Section>
         </Stack>
+
+        {editing && isSelf && (
+          <EditProfileModal
+            userId={profile.user.id}
+            initial={profile.profile}
+            onClose={() => setEditing(false)}
+          />
+        )}
+
+        {changingAvatar && canManageAvatar && (
+          <GenerateAvatarModal
+            userId={profile.user.id}
+            targetName={isSelf ? undefined : profile.user.name}
+            onClose={() => setChangingAvatar(false)}
+          />
+        )}
       </PageMain>
-
-      {editing && isSelf && (
-        <EditProfileModal
-          userId={profile.user.id}
-          initial={profile.profile}
-          onClose={() => setEditing(false)}
-        />
-      )}
-
-      {changingAvatar && canManageAvatar && (
-        <GenerateAvatarModal
-          userId={profile.user.id}
-          targetName={isSelf ? undefined : profile.user.name}
-          onClose={() => setChangingAvatar(false)}
-        />
-      )}
-    </PageShell>
-  );
+    );
+  }
 }

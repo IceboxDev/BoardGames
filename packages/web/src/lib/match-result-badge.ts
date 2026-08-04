@@ -13,8 +13,11 @@ import {
 //     (amber). Point-less FFA (Villainous) has no placement → Won/Lost.
 //   - Scored co-op (Just One): the team score as `score / max` (e.g. "6 / 13"),
 //     green at the game's max else amber.
-//   - Everything else (teams, last-standing, one-vs-many, binary co-op): Won/Lost
-//     (+ "Ran it" for a non-competing moderator).
+//   - Last-standing with recorded `survivorRank`s (poker chip standings): the
+//     chip leader = "Won" (green), ranked runners-up = "2nd"/"3rd" (amber), the
+//     eliminated = "Lost" (red).
+//   - Everything else (teams, unranked last-standing, one-vs-many, binary
+//     co-op): Won/Lost (+ "Ran it" for a non-competing moderator).
 
 export type MatchResultBadge = { label: string; tone: BadgeTone };
 
@@ -102,9 +105,16 @@ export function matchResultBadge(
     case "last-standing": {
       const me = outcome.players.find((p) => p.userId === userId);
       if (!me) return null;
-      return me.eliminationOrder === undefined
+      if (me.eliminationOrder !== undefined) return { label: "Lost", tone: "rose" };
+      // Ranked survivors (poker chip standings): only the chip leader "Won";
+      // the rest place. Unranked survivors keep the legacy co-winner badge.
+      if (me.survivorRank === undefined) return { label: "Won", tone: "emerald" };
+      const bestRank = Math.min(
+        ...outcome.players.map((p) => p.survivorRank).filter((r): r is number => r !== undefined),
+      );
+      return me.survivorRank === bestRank
         ? { label: "Won", tone: "emerald" }
-        : { label: "Lost", tone: "rose" };
+        : { label: ordinal(me.survivorRank), tone: "amber" };
     }
     case "one-vs-many": {
       if (outcome.solo.userId === userId) {

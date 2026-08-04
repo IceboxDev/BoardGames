@@ -122,7 +122,10 @@ type PageMainProps = Omit<HTMLAttributes<HTMLElement>, "children"> & {
   children: ReactNode;
 };
 
-const WIDTH_CLASSES: Record<PageMainWidth, string> = {
+// Exported so TopNav can cap its inner bar with the *same* scale as the page
+// body below it. Before this, TopNav hardcoded `max-w-6xl` and desynced from
+// `width="7xl"` (admin) and `width="wide"` (History) pages at large viewports.
+export const PAGE_WIDTH_CLASSES: Record<PageMainWidth, string> = {
   md: "max-w-md",
   "2xl": "max-w-2xl",
   "3xl": "max-w-3xl",
@@ -148,7 +151,7 @@ export function PageMain({
   children,
   ...rest
 }: PageMainProps) {
-  const widthCls = WIDTH_CLASSES[width];
+  const widthCls = PAGE_WIDTH_CLASSES[width];
   const paddingCls = PADDING_CLASSES[padding];
   const heightCls = fillHeight ? "flex min-h-0 flex-1 flex-col" : "flex-1";
   const classes = ["mx-auto w-full", widthCls, heightCls, paddingCls, className]

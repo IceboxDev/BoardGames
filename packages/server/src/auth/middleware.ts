@@ -1,4 +1,5 @@
 import type { MiddlewareHandler } from "hono";
+import { noteVisit } from "../lib/activity-log.ts";
 import { verifyWsTicket } from "../sessions/ws-ticket.ts";
 import { auth } from "./config.ts";
 import type { AdminEnv, AdminUser, AppEnv, WsEnv } from "./types.ts";
@@ -8,6 +9,7 @@ export const requireAuth: MiddlewareHandler<AppEnv> = async (c, next) => {
   if (!result?.user) {
     return c.json({ error: "unauthorized" }, 401);
   }
+  noteVisit(result.user.id);
   c.set("user", result.user);
   c.set("session", result.session);
   await next();
@@ -21,6 +23,7 @@ export const requireAdmin: MiddlewareHandler<AdminEnv> = async (c, next) => {
   if (result.user.role !== "admin") {
     return c.json({ error: "forbidden" }, 403);
   }
+  noteVisit(result.user.id);
   c.set("user", result.user as AdminUser);
   c.set("session", result.session);
   await next();
@@ -47,6 +50,7 @@ export const requireWsAuth: MiddlewareHandler<WsEnv> = async (c, next) => {
   if (!result?.user) {
     return c.json({ error: "unauthorized" }, 401);
   }
+  noteVisit(result.user.id);
   c.set("wsUserId", result.user.id);
   await next();
 };

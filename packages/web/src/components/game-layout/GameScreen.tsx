@@ -74,8 +74,11 @@ export default function GameScreen({
         </div>
         {fan != null && (
           <div className="flex shrink-0 flex-col gap-2 px-4 pb-4 pt-2">
+            {/* min-h (not h) — reserves one button-row of height so the board
+                doesn't jump when actions appear/disappear, but never clips a
+                taller control a game passes in. */}
             <div
-              className={`flex h-9 items-center justify-center${DEBUG_LAYOUT ? " border-2 border-yellow-400 bg-yellow-400/10" : ""}`}
+              className={`flex min-h-9 items-center justify-center${DEBUG_LAYOUT ? " border-2 border-yellow-400 bg-yellow-400/10" : ""}`}
             >
               {fanActions}
             </div>

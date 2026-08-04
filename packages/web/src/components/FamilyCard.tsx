@@ -106,7 +106,7 @@ export default function FamilyCard({
             );
           })}
           {overflow > 0 && (
-            <span className="ml-1 text-3xs font-semibold uppercase tracking-[0.16em] text-fg-muted">
+            <span className="ml-1 text-3xs font-semibold uppercase tracking-pill text-fg-muted">
               +{overflow}
             </span>
           )}

@@ -74,7 +74,7 @@ export default function BeamerScreen() {
   // The one job: the image, edge to edge, covering every scrap of chrome.
   if (session && display.kind === "image") {
     return (
-      <div className="fixed inset-0 z-50 bg-black">
+      <div className="fixed inset-0 z-takeover bg-black">
         <img src={display.url} alt="" className="h-full w-full object-contain" />
       </div>
     );
@@ -82,7 +82,7 @@ export default function BeamerScreen() {
 
   if (session) {
     return (
-      <div className="fixed inset-0 z-50 flex flex-col items-center justify-center gap-6 bg-gradient-to-b from-dnd-ink via-surface-950 to-black px-6 text-center">
+      <div className="fixed inset-0 z-takeover flex flex-col items-center justify-center gap-6 bg-gradient-to-b from-dnd-ink via-surface-950 to-black px-6 text-center">
         <span aria-hidden="true">
           <D20Die
             count={20}

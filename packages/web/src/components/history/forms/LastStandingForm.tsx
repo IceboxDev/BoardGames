@@ -1,8 +1,7 @@
 import type { MatchOutcomeLastStanding, Participant } from "@boardgames/core/history/types";
 import { Button } from "../../ui/Button";
-import { Field } from "../../ui/Field";
-import { ParticipantPicker } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
+import { GroupLabel, nextEliminationOrder, OutcomeFormShell, SurvivalBadge } from "./shared";
 
 type User = { id: string; name: string };
 
@@ -83,10 +82,7 @@ export function LastStandingForm({ users, value, onChange, gameSlug }: Props) {
     } else {
       // Eliminate: append to the elimination order; a chip standing no longer
       // applies to a player who busted out.
-      const usedOrders = value.players
-        .map((p) => p.eliminationOrder)
-        .filter((o): o is number => o !== undefined);
-      const nextOrder = usedOrders.length === 0 ? 0 : Math.max(...usedOrders) + 1;
+      const nextOrder = nextEliminationOrder(value.players);
       const players = value.players.map(({ survivorRank, ...p }) =>
         p.userId === userId
           ? { ...p, eliminationOrder: nextOrder }
@@ -113,15 +109,10 @@ export function LastStandingForm({ users, value, onChange, gameSlug }: Props) {
   }
 
   return (
-    <div className="flex flex-col gap-3">
-      <Field label="Players" htmlFor="ls-players">
-        <ParticipantPicker users={users} selectedIds={selectedIds} onChange={setParticipants} />
-      </Field>
+    <OutcomeFormShell users={users} selectedIds={selectedIds} onParticipants={setParticipants}>
       {value.players.length > 0 && (
         <div className="flex flex-col gap-1.5">
-          <span className="text-xs font-medium uppercase tracking-wide text-fg-secondary">
-            Eliminate each player in order. Whoever's left standing wins.
-          </span>
+          <GroupLabel>Eliminate each player in order. Whoever's left standing wins.</GroupLabel>
           {chipOrdering && survivorOrder.length > 1 && (
             <span className="text-xs text-fg-muted">
               Use ↑/↓ to order the players still holding chips — 1st ended the night with the most.
@@ -138,17 +129,14 @@ export function LastStandingForm({ users, value, onChange, gameSlug }: Props) {
                 nameClassName={eliminated ? "text-fg-muted line-through" : "text-amber-100"}
                 right={
                   <>
-                    {eliminated ? (
-                      <span className="text-xs text-fg-muted">
-                        out #{(p.eliminationOrder ?? 0) + 1}
-                      </span>
-                    ) : (
-                      <span className="rounded bg-amber-400/20 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wide text-amber-200">
-                        {showChipControls && p.survivorRank !== undefined
+                    <SurvivalBadge
+                      eliminationOrder={p.eliminationOrder}
+                      label={
+                        showChipControls && p.survivorRank !== undefined
                           ? `${ordinal(p.survivorRank)} in chips`
-                          : "Surviving"}
-                      </span>
-                    )}
+                          : undefined
+                      }
+                    />
                     {showChipControls && (
                       <>
                         <Button
@@ -185,6 +173,6 @@ export function LastStandingForm({ users, value, onChange, gameSlug }: Props) {
           })}
         </div>
       )}
-    </div>
+    </OutcomeFormShell>
   );
 }

@@ -4,7 +4,7 @@ import { JUST_ONE_SCORES, justOneTier } from "../../../games/just-one/scoring";
 import { Chip } from "../../ui/Chip";
 import { Field } from "../../ui/Field";
 import { Surface } from "../../ui/Surface";
-import { ParticipantPicker } from "../ParticipantPicker";
+import { OutcomeFormShell } from "./shared";
 
 type User = { id: string; name: string };
 
@@ -42,11 +42,7 @@ export function JustOneForm({ users, value, onChange }: Props) {
   }
 
   return (
-    <div className="flex flex-col gap-3">
-      <Field label="Players" htmlFor="just-one-players">
-        <ParticipantPicker users={users} selectedIds={selectedIds} onChange={setParticipants} />
-      </Field>
-
+    <OutcomeFormShell users={users} selectedIds={selectedIds} onParticipants={setParticipants}>
       <Field label="Score" htmlFor="just-one-score" hint="Cards guessed correctly (0–13)">
         <div className="flex flex-wrap gap-1.5">
           {JUST_ONE_SCORES.map((n) => (
@@ -76,6 +72,6 @@ export function JustOneForm({ users, value, onChange }: Props) {
           <span className="text-sm text-fg-secondary">{justOneTier(value.score)}</span>
         </Surface>
       )}
-    </div>
+    </OutcomeFormShell>
   );
 }

@@ -1,6 +1,7 @@
 import { getLegalActions } from "@boardgames/core/games/exploding-kittens/rules";
 import type { Action, CardType, GameState } from "@boardgames/core/games/exploding-kittens/types";
 import { CARD_LABELS } from "@boardgames/core/games/exploding-kittens/types";
+import { GameDialogPanel } from "../../../components/game-layout";
 import { Button } from "../../../components/ui/Button";
 import { getCardImageUrl, getSkinsForType } from "../assets/card-art";
 
@@ -27,7 +28,7 @@ function PendingCardPreview({ cardType }: { cardType: CardType }) {
           <span className="text-lg">{CARD_LABELS[cardType]?.[0] ?? "?"}</span>
         </div>
       )}
-      <span className="max-w-[54px] truncate text-center text-[9px] text-fg-secondary">
+      <span className="max-w-[54px] truncate text-center text-4xs text-fg-secondary">
         {CARD_LABELS[cardType]}
       </span>
     </div>
@@ -61,19 +62,22 @@ export default function NopeWindow({ state, onAction }: NopeWindowProps) {
     .filter((t): t is CardType => t !== null);
 
   return (
-    <div className="rounded-xl border border-yellow-700/50 bg-yellow-950/40 p-4">
-      <div className="mb-3 text-center">
-        <p className="text-sm font-medium text-yellow-300">✋ Nope Window</p>
-        <p className="mt-1 text-xs text-fg-secondary">
+    <GameDialogPanel
+      tone="interrupt"
+      center
+      title="✋ Nope Window"
+      subtitle={
+        <>
           {sourceName} played <span className="font-semibold text-white">{effectLabel}</span>
+        </>
+      }
+    >
+      {nw.nopeChain.length > 0 && (
+        <p className="mb-3 text-xs text-yellow-400">
+          Nope chain: {nw.nopeChain.length}x (action will be{" "}
+          {nw.nopeChain.length % 2 === 0 ? "resolved" : "cancelled"} if no more Nopes)
         </p>
-        {nw.nopeChain.length > 0 && (
-          <p className="mt-1 text-xs text-yellow-400">
-            Nope chain: {nw.nopeChain.length}x (action will be{" "}
-            {nw.nopeChain.length % 2 === 0 ? "resolved" : "cancelled"} if no more Nopes)
-          </p>
-        )}
-      </div>
+      )}
 
       {pendingCardTypes.length > 0 && (
         <div className="mb-3 flex justify-center gap-1.5">
@@ -94,6 +98,6 @@ export default function NopeWindow({ state, onAction }: NopeWindowProps) {
           Pass
         </Button>
       </div>
-    </div>
+    </GameDialogPanel>
   );
 }

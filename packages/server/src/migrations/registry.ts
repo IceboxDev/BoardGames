@@ -27,6 +27,7 @@ import { dndCombats } from "./0019-dnd-combats.ts";
 import { dndNodeLinks } from "./0020-dnd-node-links.ts";
 import { dndCampaignKindCharacterState } from "./0021-dnd-campaign-kind-character-state.ts";
 import { villainousSplit } from "./0022-villainous-split.ts";
+import { activityLog } from "./0023-activity-log.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -52,6 +53,7 @@ export const migrations: readonly Migration[] = [
   dndNodeLinks,
   dndCampaignKindCharacterState,
   villainousSplit,
+  activityLog,
 ];
 
 /**

@@ -89,7 +89,7 @@ export default function DeckPreview() {
           <div className="w-full space-y-6 lg:w-64 lg:shrink-0">
             {/* Card count */}
             <div>
-              <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-fg-secondary">
+              <span className="mb-2 block text-xs font-medium uppercase tracking-label text-fg-secondary">
                 Cards remaining
               </span>
               <div className="flex items-center gap-3">
@@ -99,7 +99,7 @@ export default function DeckPreview() {
                   max={36}
                   value={count}
                   onChange={(e) => setCount(Number(e.target.value))}
-                  className="flex-1 accent-indigo-500"
+                  className="flex-1 accent-accent-500"
                 />
                 <span className="w-8 text-right text-sm font-bold tabular-nums">{count}</span>
               </div>
@@ -122,7 +122,7 @@ export default function DeckPreview() {
 
             {/* Trump toggle */}
             <div>
-              <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-fg-secondary">
+              <span className="mb-2 block text-xs font-medium uppercase tracking-label text-fg-secondary">
                 Trump card
               </span>
               <Chip
@@ -138,7 +138,7 @@ export default function DeckPreview() {
 
             {/* Glow toggle */}
             <div>
-              <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-fg-secondary">
+              <span className="mb-2 block text-xs font-medium uppercase tracking-label text-fg-secondary">
                 Glow (selected)
               </span>
               <Chip
@@ -154,7 +154,7 @@ export default function DeckPreview() {
 
             {/* Back style */}
             <div>
-              <span className="mb-2 block text-xs font-semibold uppercase tracking-wider text-fg-secondary">
+              <span className="mb-2 block text-xs font-medium uppercase tracking-label text-fg-secondary">
                 Card back style
               </span>
               <div className="flex gap-2">
@@ -178,7 +178,7 @@ export default function DeckPreview() {
           <div className="flex flex-1 flex-col gap-10">
             {/* All sizes side by side */}
             <div>
-              <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-fg-secondary">
+              <h2 className="mb-4 text-sm font-bold uppercase tracking-label text-fg-secondary">
                 All sizes
               </h2>
               <div className="flex items-end gap-10 rounded-xl border border-white/10 bg-surface-900/50 p-8">
@@ -195,7 +195,7 @@ export default function DeckPreview() {
                           : undefined
                       }
                     />
-                    <span className="text-3xs font-semibold uppercase tracking-wider text-fg-muted">
+                    <span className="text-3xs font-semibold uppercase tracking-label text-fg-muted">
                       {sz}
                     </span>
                   </div>
@@ -205,7 +205,7 @@ export default function DeckPreview() {
 
             {/* Low count gallery */}
             <div>
-              <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-fg-secondary">
+              <h2 className="mb-4 text-sm font-bold uppercase tracking-label text-fg-secondary">
                 Low count visualization (0-6)
               </h2>
               <div className="flex items-end gap-6 rounded-xl border border-white/10 bg-surface-900/50 p-8">
@@ -229,7 +229,7 @@ export default function DeckPreview() {
 
             {/* Without trump */}
             <div>
-              <h2 className="mb-4 text-sm font-semibold uppercase tracking-wider text-fg-secondary">
+              <h2 className="mb-4 text-sm font-bold uppercase tracking-label text-fg-secondary">
                 Without trump (Lost Cities style)
               </h2>
               <div className="flex items-end gap-6 rounded-xl border border-white/10 bg-surface-900/50 p-8">

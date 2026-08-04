@@ -14,8 +14,6 @@ import { D20Die } from "./D20Die";
 // and the party roster (host badged as Dungeon Master) — no bringing list,
 // because nobody needs to bring anything but their dice.
 
-const SERIF = { fontFamily: "ui-serif, Georgia, serif" } as const;
-
 type Props = {
   attendees: Attendee[];
   /** Confirmed (definite) headcount — the party size on the die. */
@@ -38,7 +36,7 @@ export default function DndNightPanel({ attendees, partyCount }: Props) {
   return (
     <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col gap-4 overflow-y-auto px-1 py-2">
       {/* Hero */}
-      <div className="dnd-hero-glow relative shrink-0 overflow-hidden rounded-3xl border border-amber-400/30 bg-gradient-to-br from-[#3b0a0a] via-[#1a0606] to-black p-6 text-center">
+      <div className="dnd-hero-glow relative shrink-0 overflow-hidden rounded-3xl border border-amber-400/30 bg-gradient-to-br from-dnd-blood via-dnd-ink to-black p-6 text-center">
         <span
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_60%_at_50%_28%,rgba(220,38,38,0.5),transparent_72%)]"
@@ -56,10 +54,7 @@ export default function DndNightPanel({ attendees, partyCount }: Props) {
             <Eyebrow tone="amber" className="text-amber-300/80">
               Tonight's quest
             </Eyebrow>
-            <h2
-              className="mt-1.5 text-3xl font-bold text-amber-100 sm:text-4xl"
-              style={{ ...SERIF, textShadow: "0 2px 14px rgba(0,0,0,0.7)" }}
-            >
+            <h2 className="dnd-hero-title mt-1.5 font-serif-body text-3xl font-bold text-amber-100 sm:text-4xl">
               Dungeons &amp; Dragons
             </h2>
             <p className="mt-2 text-sm text-amber-200/75">
@@ -92,7 +87,7 @@ export default function DndNightPanel({ attendees, partyCount }: Props) {
 
       {/* The party — no bringing assignments on a D&D night. */}
       <div className="shrink-0">
-        <Eyebrow tone="amber" className="px-2" style={SERIF}>
+        <Eyebrow tone="amber" className="px-2 font-serif-body">
           The party
         </Eyebrow>
         {attendees.length === 0 ? (

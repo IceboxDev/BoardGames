@@ -54,7 +54,7 @@ function HandView({ hand, cardImg }: { hand: BgaPlayerView["hand"]; cardImg: Img
 
   return (
     <div className="mt-0.5 rounded border border-sky-500/25 bg-sky-500/5 px-1 py-1">
-      <div className="flex items-center gap-1 pb-0.5 text-4xs text-sky-300">
+      <div className="flex items-center gap-1 pb-0.5 text-5xs text-sky-300">
         <span>🂠 hand ({hand.size})</span>
         <span className={exact ? "text-emerald-400" : "text-amber-300/80"}>{note}</span>
       </div>
@@ -74,7 +74,7 @@ function HandView({ hand, cardImg }: { hand: BgaPlayerView["hand"]; cardImg: Img
         ))}
       </div>
       {hand.possibleGuilds.length > 0 && (
-        <div className="pt-0.5 text-4xs text-fuchsia-300/80">
+        <div className="pt-0.5 text-5xs text-fuchsia-300/80">
           possible: {hand.possibleGuilds.join(", ")}
         </div>
       )}
@@ -121,7 +121,7 @@ function PlayerCard({ player, cardImg }: { player: BgaPlayerView; cardImg: ImgMa
           <div
             // biome-ignore lint/suspicious/noArrayIndexKey: fixed-length stage track, never reorders
             key={`stage-${i}`}
-            className={`flex-1 rounded border px-1 py-0.5 text-4xs leading-tight ${
+            className={`flex-1 rounded border px-1 py-0.5 text-5xs leading-tight ${
               stage.built
                 ? "border-amber-400/60 bg-amber-400/10 text-amber-100"
                 : "border-white/10 text-fg-disabled"
@@ -155,7 +155,7 @@ function PlayerCard({ player, cardImg }: { player: BgaPlayerView; cardImg: ImgMa
             </div>
           ))}
         {player.tableau.length === 0 && (
-          <span className="text-4xs italic text-fg-disabled">no cards yet</span>
+          <span className="text-5xs italic text-fg-disabled">no cards yet</span>
         )}
       </div>
 
@@ -172,11 +172,11 @@ function EdificeCard({ edifice }: { edifice: BgaEdificeView }) {
         <span className="text-xs font-semibold text-fg-primary">
           Age {edifice.slot}: {edifice.name}
         </span>
-        <span className="shrink-0 text-4xs uppercase tracking-wide text-fg-secondary">
+        <span className="shrink-0 text-5xs uppercase tracking-wide text-fg-secondary">
           {status.label}
         </span>
       </div>
-      <div className="grid grid-cols-2 gap-x-2 text-4xs text-fg-secondary">
+      <div className="grid grid-cols-2 gap-x-2 text-5xs text-fg-secondary">
         <span>
           <span className="text-emerald-300">Reward:</span> {edifice.reward}
         </span>
@@ -185,10 +185,10 @@ function EdificeCard({ edifice }: { edifice: BgaEdificeView }) {
         </span>
       </div>
       {edifice.status === "project" && (
-        <span className="text-4xs text-fg-disabled">{edifice.tokensLeft} pawns left</span>
+        <span className="text-5xs text-fg-disabled">{edifice.tokensLeft} pawns left</span>
       )}
       {edifice.participants.length > 0 && (
-        <span className="text-4xs text-fg-secondary">
+        <span className="text-5xs text-fg-secondary">
           Participants: {edifice.participants.join(", ")}
         </span>
       )}

@@ -4,7 +4,7 @@ import { familyOf } from "../../games/families.ts";
 import type { GameDefinition } from "../../games/types.ts";
 import { compactSummary } from "../../lib/bgg-format.ts";
 import { BggMeta } from "../game/BggMeta.tsx";
-import { Button } from "../ui/Button.tsx";
+import { Button, ButtonLink } from "../ui/Button.tsx";
 import { MicroLabel } from "../ui/Label.tsx";
 import { Modal, ModalBody, ModalFooter } from "../ui/Modal.tsx";
 
@@ -61,14 +61,9 @@ export function GameDetailModal({ game, onClose }: GameDetailModalProps) {
 
       <ModalFooter>
         {bggUrl && (
-          <a
-            href={bggUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-lg border border-white/10 px-3 py-1.5 text-sm font-medium text-fg-secondary transition hover:border-accent-400/40 hover:text-accent-200"
-          >
+          <ButtonLink href={bggUrl} external size="sm">
             View on BGG
-          </a>
+          </ButtonLink>
         )}
         {game.kind === "playable" && (
           <Button size="sm" onClick={() => navigate(`/play/${game.slug}`)}>

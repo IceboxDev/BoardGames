@@ -3,6 +3,7 @@ import { formatDayKey } from "../../lib/date-format.ts";
 import { ClockIcon, HostIcon, PinIcon, UsersIcon } from "../icons";
 import { Badge } from "../ui/Badge.tsx";
 import { EmptyState } from "../ui/EmptyState.tsx";
+import { Eyebrow } from "../ui/Label.tsx";
 
 // The highlighted "next board game night this player is attending" card. Reads
 // the aggregated `nextNight` (date + host/time/address + headcount + the
@@ -33,9 +34,7 @@ export function NextNightCard({ nextNight, firstName, isSelf }: NextNightCardPro
     <div className="rounded-2xl border border-accent-400/25 bg-accent-500/[0.07] p-4 sm:p-5">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <p className="text-3xs font-semibold uppercase tracking-eyebrow text-accent-300">
-            Next game night
-          </p>
+          <Eyebrow className="text-accent-300">Next game night</Eyebrow>
           <p className="mt-1 text-lg font-bold text-white">{formatDayKey(nextNight.dateKey)}</p>
         </div>
         <Badge tone={nextNight.status === "definite" ? "emerald" : "amber"} size="sm">

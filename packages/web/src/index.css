@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+/* Height-based variant for genuinely TALL viewports — a portrait 4K monitor
+   (1440×2473 CSS px at 150% scale) hits only the `xl` width tier, yet its six
+   calendar rows leave day cells ~370px tall. Width breakpoints can't see that
+   axis at all, so height-driven layout (calendar name lists) keys off this
+   instead. Landscape laptop (~800px), 4K landscape (~1300–1400px) and phones
+   (≤ ~950px) all sit far below 1600px, so they are untouched. */
+@custom-variant tall (@media (min-height: 1600px));
+
 @theme {
   /* Tailwind's default 2xl is 1536px — exactly the laptop viewport at 200%
      scale — so adding a 3xl above it lets us scale type up for genuinely
@@ -34,20 +42,24 @@
   --color-neon-cyan: #22d3ee;
   --color-neon-purple: #a855f7;
   --color-neon-pink: #ec4899;
-  /* Micro type scale below Tailwind's text-xs (12px). Replaces ad-hoc
-     `text-[11px]` / `text-[10px]` / `text-[8px]` brackets in app chrome. */
+  /* Micro type scale below Tailwind's text-xs (12px), one token per pixel
+     step: 2xs=11px, 3xs=10px, 4xs=9px, 5xs=8px, 6xs=7px, 7xs=6px. Replaces
+     ad-hoc `text-[11px]`…`text-[6px]` brackets everywhere. The scale is
+     deliberately gapless — 9px used to be missing, which bred 31 `text-[9px]`
+     brackets in game boards. Sub-8px steps exist for the dense calendar day
+     cells (heat counts, month ticks). */
   --text-2xs: 0.6875rem;
   --text-2xs--line-height: 1rem;
   --text-3xs: 0.625rem;
   --text-3xs--line-height: 0.875rem;
-  --text-4xs: 0.5rem;
-  --text-4xs--line-height: 0.75rem;
-  /* Sub-8px micro labels for the dense calendar day cells (heat counts, month
-     ticks). Replaces the `text-[7px]` / `text-[6px]` brackets in Calendar. */
-  --text-5xs: 0.4375rem;
-  --text-5xs--line-height: 0.625rem;
-  --text-6xs: 0.375rem;
-  --text-6xs--line-height: 0.5rem;
+  --text-4xs: 0.5625rem;
+  --text-4xs--line-height: 0.8125rem;
+  --text-5xs: 0.5rem;
+  --text-5xs--line-height: 0.75rem;
+  --text-6xs: 0.4375rem;
+  --text-6xs--line-height: 0.625rem;
+  --text-7xs: 0.375rem;
+  --text-7xs--line-height: 0.5rem;
   /* Uppercase-label letter-spacing. The app-shell had drifted to NINE distinct
      one-off values (0.1 / 0.12 / 0.14 / 0.15 / 0.16 / 0.18 / 0.2 / 0.25 /
      0.35em) for what is really three roles. Consumed via `tracking-label`,
@@ -69,10 +81,6 @@
   --shadow-glow-emerald: 0 0 12px -4px rgb(16 185 129 / 0.5);
   --shadow-glow-rose: 0 0 12px -4px rgb(244 63 94 / 0.5);
   --shadow-glow-cyan: 0 0 12px rgb(34 211 238 / 0.5);
-  /* Layout constants. The sticky TopNav is ~45px tall; fixed-height game
-     surfaces subtract it from the dynamic viewport via the `h-below-nav`
-     utility instead of re-typing `calc(100dvh-45px)`. */
-  --layout-nav-height: 45px;
   --font-display: "Inter Variable", "Inter", sans-serif;
   --font-body: "Inter Variable", "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
@@ -105,17 +113,27 @@
   --color-dnd-ember-deep: #641212;
   --color-dnd-ember: #b91c1c;
   /* Stacking layers. Keep this list as the single source of truth.
-     overlay — in-content overlays portaled into #app-main (board peek
-               overlays); local to that stacking context, above board content
-               but below body-portaled dialogs.
-     modal   — body-portaled dialogs (Modal).
-     tooltip — hover previews (Overlay), above an open modal. */
+     nav      — sticky app chrome (TopNav); above page content, below every
+                portaled layer.
+     overlay  — in-content overlays portaled into #app-main (board peek
+                overlays); local to that stacking context, above board content
+                but below body-portaled dialogs.
+     modal    — body-portaled dialogs (Modal).
+     tooltip  — hover previews (Overlay), above an open modal.
+     takeover — full-screen surface replacements (the D&D beamer screen);
+                nothing may paint over one. */
+  --z-nav: 50;
   --z-overlay: 100;
   --z-modal: 200;
   --z-tooltip: 300;
+  --z-takeover: 400;
 }
 
 /* Stacking utilities — Tailwind v4 doesn't auto-derive `z-*` from theme. */
+@utility z-nav {
+  z-index: var(--z-nav);
+}
+
 @utility z-modal {
   z-index: var(--z-modal);
 }
@@ -128,9 +146,8 @@
   z-index: var(--z-overlay);
 }
 
-/* Fixed-height game surfaces: full dynamic viewport minus the sticky nav. */
-@utility h-below-nav {
-  height: calc(100dvh - var(--layout-nav-height));
+@utility z-takeover {
+  z-index: var(--z-takeover);
 }
 
 /* ── Base ────────────────────────────────────────── */
@@ -228,36 +245,6 @@ input[type="number"]::-webkit-inner-spin-button {
   }
 }
 
-/* ── Game card effects ───────────────────────────── */
-
-.card-shine {
-  position: relative;
-  overflow: hidden;
-}
-.card-shine::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: linear-gradient(
-    45deg,
-    transparent 40%,
-    rgba(255, 255, 255, 0.02) 45%,
-    rgba(255, 255, 255, 0.04) 50%,
-    rgba(255, 255, 255, 0.02) 55%,
-    transparent 60%
-  );
-  transform: translateX(-100%);
-  transition: transform 0.8s ease;
-  z-index: 10;
-  pointer-events: none;
-}
-.card-shine:hover::before {
-  transform: translateX(100%);
-}
-
 /* ── Staggered card entrance ─────────────────────── */
 
 @keyframes card-fade-up {
@@ -312,283 +299,6 @@ input[type="number"]::-webkit-inner-spin-button {
   animation: card-enter 0.4s ease-out both;
 }
 
-@keyframes pulse-glow {
-  0%,
-  100% {
-    box-shadow: 0 0 8px rgba(99, 102, 241, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 24px rgba(99, 102, 241, 0.8);
-  }
-}
-.animate-pulse-glow {
-  animation: pulse-glow 1.5s ease-in-out infinite;
-}
-
-@keyframes card-slide-up {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.animate-card-slide-up {
-  animation: card-slide-up 0.3s ease-out both;
-}
-
-@keyframes card-slide-down {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.animate-card-slide-down {
-  animation: card-slide-down 0.3s ease-out both;
-}
-
-@keyframes ai-think-pulse {
-  0%,
-  100% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-.animate-ai-think {
-  animation: ai-think-pulse 1s ease-in-out infinite;
-}
-
-/* ── Sushi Go bamboo mat texture ────────────────── */
-
-.bamboo-mat {
-  background:
-    repeating-linear-gradient(
-      0deg,
-      transparent,
-      transparent 7px,
-      rgba(139, 90, 43, 0.04) 7px,
-      rgba(139, 90, 43, 0.04) 8px
-    ),
-    repeating-linear-gradient(
-      90deg,
-      transparent,
-      transparent 23px,
-      rgba(139, 90, 43, 0.03) 23px,
-      rgba(139, 90, 43, 0.03) 24px
-    );
-}
-
-/* ── Ghost card breathing animation ─────────────── */
-
-@keyframes breathe {
-  0%,
-  100% {
-    opacity: 0.15;
-  }
-  50% {
-    opacity: 0.35;
-  }
-}
-.animate-breathe {
-  animation: breathe 2.5s ease-in-out infinite;
-}
-
-/* ── Calendar fire / ember effects ──────────────── */
-
-/* Single ember particle drifting upward and fading. Position via --x; cycle via --dur; phase via --delay. */
-.ember {
-  position: absolute;
-  bottom: 8%;
-  left: var(--x, 50%);
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background: radial-gradient(circle, #fde68a 0%, #f97316 60%, transparent 100%);
-  filter: blur(0.4px);
-  opacity: 0;
-  pointer-events: none;
-  animation: ember-rise var(--dur, 3.2s) ease-out infinite;
-  animation-delay: var(--delay, 0s);
-}
-@keyframes ember-rise {
-  0% {
-    opacity: 0;
-    transform: translate(0, 0) scale(1);
-  }
-  18% {
-    opacity: 0.95;
-  }
-  100% {
-    opacity: 0;
-    transform: translate(var(--drift, 0px), -120%) scale(0.4);
-  }
-}
-
-/* Slow inset glow + faint halo pulse for "warming up" cells. */
-@keyframes ember-ring {
-  0%,
-  100% {
-    box-shadow:
-      0 0 0 0 rgba(251, 191, 36, 0),
-      inset 0 0 14px -8px rgba(251, 146, 60, 0.5);
-  }
-  50% {
-    box-shadow:
-      0 0 0 2px rgba(251, 191, 36, 0.18),
-      inset 0 0 18px -6px rgba(251, 146, 60, 0.7);
-  }
-}
-.animate-ember-ring {
-  animation: ember-ring 3.2s ease-in-out infinite;
-}
-
-/* Heat shimmer on the date number for "on fire" cells. */
-@keyframes heat-haze {
-  0%,
-  100% {
-    text-shadow: 0 0 12px rgba(251, 146, 60, 0.4);
-  }
-  50% {
-    text-shadow:
-      0 0 18px rgba(251, 146, 60, 0.7),
-      0 1px 0 rgba(220, 38, 38, 0.3);
-  }
-}
-.animate-heat-haze {
-  animation: heat-haze 2.4s ease-in-out infinite;
-}
-
-/* Cell-level breathing for "on fire" cells. Tiny scale, stays inside grid gaps. */
-@keyframes fire-breathe {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.012);
-  }
-}
-.animate-fire-breathe {
-  animation: fire-breathe 4s ease-in-out infinite;
-}
-
-/* "On fire" cell — layered radial gradients that breathe on independent
-   periods. No SVG turbulence (that produces hard rectangle edges); no shared
-   keyframes across cells (that produces lockstep). Each layer uses
-   mix-blend-mode: screen so brights add up the way real fire compositing does. */
-
-/* Layer 1 — molten dome at bottom-center. The "heart" of the fire. */
-.fire-bloom {
-  background: radial-gradient(
-    ellipse 75% 85% at 50% 108%,
-    rgba(254, 240, 138, 0.95) 0%,
-    rgba(251, 146, 60, 0.7) 20%,
-    rgba(234, 88, 12, 0.45) 42%,
-    rgba(127, 29, 29, 0.18) 68%,
-    transparent 92%
-  );
-  mix-blend-mode: screen;
-  transform-origin: 50% 100%;
-}
-@keyframes fire-bloom {
-  0%,
-  100% {
-    transform: scale(1, 0.96);
-    opacity: 0.86;
-  }
-  50% {
-    transform: scale(1.04, 1.08);
-    opacity: 1;
-  }
-}
-.animate-fire-bloom {
-  animation: fire-bloom 3.4s ease-in-out infinite;
-}
-
-/* Layer 2 — left flame petal. Asymmetric, drifts and breathes. */
-.fire-petal-left {
-  background: radial-gradient(
-    ellipse 42% 58% at 28% 96%,
-    rgba(252, 211, 77, 0.65) 0%,
-    rgba(249, 115, 22, 0.42) 35%,
-    transparent 78%
-  );
-  mix-blend-mode: screen;
-  transform-origin: 28% 100%;
-}
-@keyframes fire-petal-left {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1, 1);
-    opacity: 0.7;
-  }
-  35% {
-    transform: translate(-2px, -3px) scale(1.05, 1.12);
-    opacity: 0.95;
-  }
-  70% {
-    transform: translate(1px, -1px) scale(0.96, 0.95);
-    opacity: 0.55;
-  }
-}
-.animate-fire-petal-left {
-  animation: fire-petal-left 2.1s ease-in-out infinite;
-}
-
-/* Layer 3 — right flame petal. Different period (2.7s vs 2.1s) so the two
-   petals never sync, and the whole cell never repeats on a clean cycle. */
-.fire-petal-right {
-  background: radial-gradient(
-    ellipse 38% 52% at 72% 98%,
-    rgba(254, 215, 170, 0.6) 0%,
-    rgba(220, 38, 38, 0.4) 38%,
-    transparent 80%
-  );
-  mix-blend-mode: screen;
-  transform-origin: 72% 100%;
-}
-@keyframes fire-petal-right {
-  0%,
-  100% {
-    transform: translate(0, 0) scale(1, 1);
-    opacity: 0.62;
-  }
-  42% {
-    transform: translate(2px, -4px) scale(1.06, 1.14);
-    opacity: 0.92;
-  }
-  76% {
-    transform: translate(-1px, -2px) scale(0.97, 0.96);
-    opacity: 0.5;
-  }
-}
-.animate-fire-petal-right {
-  animation: fire-petal-right 2.7s ease-in-out infinite;
-}
-
-/* Layer 4 — outer rim glow. Slow opacity breathe (4.3s) so the cell as a whole
-   doesn't lock to the petals' faster cycles. */
-@keyframes fire-glow {
-  0%,
-  100% {
-    opacity: 0.82;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-.animate-fire-glow {
-  animation: fire-glow 4.3s ease-in-out infinite;
-}
-
 /* Soft 2.2s opacity pulse for attention-seeking pills (RSVP, etc). */
 @keyframes pulse-soft {
   0%,
@@ -624,74 +334,7 @@ input[type="number"]::-webkit-inner-spin-button {
   animation: seal-shimmer 8s ease-in-out infinite;
 }
 
-/* ── "New" game highlighter — cyan-fiery-blue ─────── */
-
-/* Carousel card frame treatment for freshly-added games. A pulsing
-   cyan→blue glow that reads as "fiery" without the warm-tone fire
-   palette. Takes precedence over the amber "Best at N" border. The
-   animation drives both border-color (cyan ↔ sky) and a layered
-   box-shadow (tight cyan rim → wider blue bloom → base depth shadow). */
-@keyframes new-fiery-glow {
-  0%,
-  100% {
-    border-color: rgba(34, 211, 238, 0.85);
-    box-shadow:
-      0 0 0 1px rgba(34, 211, 238, 0.45),
-      0 0 18px -3px rgba(34, 211, 238, 0.6),
-      0 0 44px -10px rgba(59, 130, 246, 0.5),
-      0 18px 40px -12px rgba(0, 0, 0, 0.5);
-  }
-  50% {
-    border-color: rgba(125, 211, 252, 1);
-    box-shadow:
-      0 0 0 1px rgba(56, 189, 248, 0.7),
-      0 0 28px 0 rgba(34, 211, 238, 0.9),
-      0 0 66px -6px rgba(59, 130, 246, 0.7),
-      0 18px 40px -12px rgba(0, 0, 0, 0.5);
-  }
-}
-.card-frame-new {
-  border-color: rgba(34, 211, 238, 0.85);
-  animation: new-fiery-glow 2.4s ease-in-out infinite;
-}
-@media (prefers-reduced-motion: reduce) {
-  .card-frame-new {
-    animation: none;
-    box-shadow:
-      0 0 0 1px rgba(34, 211, 238, 0.5),
-      0 0 22px -4px rgba(34, 211, 238, 0.7),
-      0 0 52px -10px rgba(59, 130, 246, 0.55),
-      0 18px 40px -12px rgba(0, 0, 0, 0.5);
-  }
-}
-
 /* ── Dungeons & Dragons night ─────────────────────── */
-
-/* Day-card frame for a sealed D&D night: a crimson→gold rim that breathes,
-   the colors of a wax-sealed adventurer's tome catching torchlight. */
-@keyframes dnd-glow {
-  0%,
-  100% {
-    border-color: rgba(252, 211, 77, 0.45);
-    box-shadow:
-      0 0 0 1px rgba(220, 38, 38, 0.4),
-      0 0 18px -4px rgba(220, 38, 38, 0.55),
-      0 0 40px -12px rgba(252, 211, 77, 0.4),
-      inset 0 0 26px -10px rgba(0, 0, 0, 0.7);
-  }
-  50% {
-    border-color: rgba(253, 224, 71, 0.85);
-    box-shadow:
-      0 0 0 1px rgba(248, 113, 113, 0.7),
-      0 0 26px -2px rgba(239, 68, 68, 0.7),
-      0 0 60px -8px rgba(252, 211, 77, 0.65),
-      inset 0 0 26px -10px rgba(0, 0, 0, 0.7);
-  }
-}
-.dnd-night-cell {
-  border-color: rgba(252, 211, 77, 0.5);
-  animation: dnd-glow 4.5s ease-in-out infinite;
-}
 
 /* The d20 itself: a slow torch-lit pulse + the faintest bob, so the die feels
    like it's hovering, freshly rolled. */
@@ -721,48 +364,11 @@ input[type="number"]::-webkit-inner-spin-button {
 .dnd-hero-title {
   text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
 }
-/* The crimson bloom INSIDE a hero banner — an overlay span, not the banner's
-   own box-shadow. `strong` is the campaign hall's full-page banner; the softer
-   default suits the smaller campaign/party headers. Both were
-   `bg-[radial-gradient(ellipse_55%_60%_at_50%_…)]` literals. */
-.dnd-hero-bloom {
-  background: radial-gradient(ellipse 55% 60% at 50% 20%, rgba(220, 38, 38, 0.4), transparent 72%);
-}
-.dnd-hero-bloom-strong {
-  background: radial-gradient(ellipse 55% 60% at 50% 28%, rgba(220, 38, 38, 0.5), transparent 72%);
-}
 .dnd-die-animated {
   animation: d20-pulse 5s ease-in-out infinite;
   transform-origin: 50% 50%;
 }
-/* Quest-progress bar (DM tool campaign hall): the rail is a torch-lit path,
-   each checkpoint a wax-seal diamond. Named tokens (not ad-hoc Tailwind
-   shadow literals) per the D&D-night convention above. */
-.dnd-quest-rail {
-  box-shadow:
-    inset 0 1px 3px rgba(0, 0, 0, 0.7),
-    0 0 12px -4px rgba(252, 211, 77, 0.35);
-}
-.dnd-checkpoint-seal {
-  box-shadow:
-    0 0 8px -1px rgba(252, 211, 77, 0.45),
-    0 2px 6px rgba(0, 0, 0, 0.6);
-}
-.dnd-checkpoint-seal-finale {
-  box-shadow:
-    0 0 14px 0 rgba(252, 211, 77, 0.75),
-    0 2px 8px rgba(0, 0, 0, 0.6);
-}
 @media (prefers-reduced-motion: reduce) {
-  .dnd-night-cell {
-    animation: none;
-    border-color: rgba(253, 224, 71, 0.7);
-    box-shadow:
-      0 0 0 1px rgba(239, 68, 68, 0.6),
-      0 0 24px -4px rgba(220, 38, 38, 0.6),
-      0 0 52px -10px rgba(252, 211, 77, 0.55),
-      inset 0 0 26px -10px rgba(0, 0, 0, 0.7);
-  }
   .dnd-die-animated {
     animation: none;
   }

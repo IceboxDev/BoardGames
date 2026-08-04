@@ -16,6 +16,7 @@ import {
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { logActivity } from "../lib/activity-log.ts";
 import { generateRawToken } from "../lib/calendar-feed-token.ts";
 import { parseRow } from "../lib/db-rows.ts";
 
@@ -90,6 +91,7 @@ calendarFeedRoutes.post("/feed/token", async (c) => {
     ? parseRow(CreatedAtRowSchema, readback.rows[0], "calendar_feed_tokens").created_at
     : "";
 
+  logActivity(user.id, "calendar-feed-subscribe", {});
   const { subscribeUrl, webcalUrl } = buildSubscribeUrls(rawToken);
   return c.json(
     CalendarFeedTokenResponseSchema.parse({
@@ -112,6 +114,7 @@ calendarFeedRoutes.delete("/feed/token", async (c) => {
     sql: "DELETE FROM calendar_feed_tokens WHERE user_id = ?",
     args: [user.id],
   });
+  logActivity(user.id, "calendar-feed-unsubscribe", {});
   return c.json(OkResponseSchema.parse({ ok: true }));
 });
 

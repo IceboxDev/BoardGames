@@ -11,6 +11,7 @@ import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SetupHeader, SetupLayout } from "../../../components/setup";
 import { Button, ErrorAlert, Field } from "../../../components/ui";
+import { useCopyToClipboard } from "../../../hooks/useCopyToClipboard";
 import { useGameShell } from "../../../hooks/useGameShell";
 import {
   bgaSessionByCode,
@@ -172,7 +173,7 @@ function BgaSpectateView({
   const foldRef = useRef<BgaFoldState>(initBgaFold());
   const [view, setView] = useState<BgaSpectatorView | null>(null);
   const [connected, setConnected] = useState(false);
-  const [copied, setCopied] = useState(false);
+  const { copied, copy } = useCopyToClipboard();
 
   useEffect(() => {
     let source: EventSource | null = null;
@@ -224,7 +225,7 @@ function BgaSpectateView({
       <div className="flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-3">
           <h1 className="text-lg font-bold text-fg-primary">BGA bridge</h1>
-          <span className="rounded bg-surface-800 px-2 py-0.5 font-mono text-sm tracking-[0.25em] text-emerald-300">
+          <span className="rounded bg-surface-800 px-2 py-0.5 font-mono text-sm tracking-eyebrow text-emerald-300">
             {session.code}
           </span>
           <span className={`text-xs ${connected ? "text-emerald-400" : "text-rose-400"}`}>
@@ -246,16 +247,8 @@ function BgaSpectateView({
           <div className="mt-1 flex flex-wrap items-center gap-2 font-mono text-xs">
             <span className="rounded bg-surface-800 px-2 py-1">{ingestUrl}</span>
             <span className="rounded bg-surface-800 px-2 py-1">{ingestToken}</span>
-            <Button
-              variant="secondary"
-              size="xs"
-              onClick={() => {
-                void navigator.clipboard.writeText(ingestToken);
-                setCopied(true);
-                setTimeout(() => setCopied(false), 1500);
-              }}
-            >
-              {copied ? "Copied!" : "Copy token"}
+            <Button variant="secondary" size="xs" onClick={() => void copy(ingestToken)}>
+              {copied ? "Copied" : "Copy token"}
             </Button>
           </div>
           <p className="mt-1">

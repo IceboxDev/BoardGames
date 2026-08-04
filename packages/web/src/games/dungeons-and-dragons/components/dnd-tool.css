@@ -1,0 +1,33 @@
+/* Split out of index.css: single-owner styles ship with their consumer's
+   chunk instead of the global stylesheet. Theme tokens (var(--color-*)) stay
+   global, so plain var() references keep working here. */
+
+/* The crimson bloom INSIDE a hero banner — an overlay span, not the banner's
+   own box-shadow. `strong` is the campaign hall's full-page banner; the softer
+   default suits the smaller campaign/party headers. Both were
+   `bg-[radial-gradient(ellipse_55%_60%_at_50%_…)]` literals. */
+.dnd-hero-bloom {
+  background: radial-gradient(ellipse 55% 60% at 50% 20%, rgba(220, 38, 38, 0.4), transparent 72%);
+}
+.dnd-hero-bloom-strong {
+  background: radial-gradient(ellipse 55% 60% at 50% 28%, rgba(220, 38, 38, 0.5), transparent 72%);
+}
+
+/* Quest-progress bar (DM tool campaign hall): the rail is a torch-lit path,
+   each checkpoint a wax-seal diamond. Named tokens (not ad-hoc Tailwind
+   shadow literals) per the D&D-night convention above. */
+.dnd-quest-rail {
+  box-shadow:
+    inset 0 1px 3px rgba(0, 0, 0, 0.7),
+    0 0 12px -4px rgba(252, 211, 77, 0.35);
+}
+.dnd-checkpoint-seal {
+  box-shadow:
+    0 0 8px -1px rgba(252, 211, 77, 0.45),
+    0 2px 6px rgba(0, 0, 0, 0.6);
+}
+.dnd-checkpoint-seal-finale {
+  box-shadow:
+    0 0 14px 0 rgba(252, 211, 77, 0.75),
+    0 2px 8px rgba(0, 0, 0, 0.6);
+}

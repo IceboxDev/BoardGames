@@ -1,5 +1,6 @@
 import type { ProfilePerGameStat, ProfileStats } from "@boardgames/core/protocol";
 import { coopMaxScoreForSlug } from "../../games/score-config.ts";
+import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { resolveGame } from "../../lib/games-by-slug.ts";
 import { EmptyState } from "../ui/EmptyState.tsx";
 
@@ -56,7 +57,7 @@ export function ProfileStatsPanel({ stats }: { stats: ProfileStats }) {
                 <span
                   aria-hidden="true"
                   className="h-1.5 w-1.5 shrink-0 rounded-full"
-                  style={{ backgroundColor: game?.accentHex ?? "#6366f1" }}
+                  style={{ backgroundColor: game?.accentHex ?? DEFAULT_ACCENT }}
                 />
                 <span className="truncate font-semibold text-fg-primary">{row.title}</span>
               </span>

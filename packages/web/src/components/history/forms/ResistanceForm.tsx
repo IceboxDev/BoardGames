@@ -2,6 +2,7 @@ import type { MatchOutcomeTeams, Participant } from "@boardgames/core/history/ty
 import { Chip } from "../../ui/Chip";
 import { ParticipantPicker } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
+import { GroupLabel, OutcomeFormShell } from "./shared";
 
 type User = { id: string; name: string };
 type Side = "resistance" | "spy";
@@ -69,16 +70,16 @@ export function ResistanceForm({ users, value, onChange }: Props) {
   const spyCount = roster.filter((s) => s.side === "spy").length;
 
   return (
-    <div className="flex flex-col gap-3">
+    <OutcomeFormShell>
       <div>
-        <Label>Players</Label>
+        <GroupLabel>Players</GroupLabel>
         <ParticipantPicker users={users} selectedIds={selectedIds} onChange={setPlayers} />
       </div>
 
       {roster.length > 0 && (
         <div className="flex flex-col gap-1.5">
           <div className="flex items-center justify-between">
-            <Label>Assign sides</Label>
+            <GroupLabel>Assign sides</GroupLabel>
             <span className="text-2xs text-fg-muted">
               <span className="text-emerald-300">Resistance {resistanceCount}</span>
               <span className="px-1 text-fg-disabled">·</span>
@@ -98,7 +99,7 @@ export function ResistanceForm({ users, value, onChange }: Props) {
       )}
 
       <div>
-        <Label>Winner</Label>
+        <GroupLabel>Winner</GroupLabel>
         <div className="flex gap-2">
           <WinnerButton
             active={winnerSide === "resistance"}
@@ -112,7 +113,7 @@ export function ResistanceForm({ users, value, onChange }: Props) {
           </WinnerButton>
         </div>
       </div>
-    </div>
+    </OutcomeFormShell>
   );
 }
 
@@ -156,14 +157,6 @@ function WinnerButton({
     <Chip pressed={active} tone={tone} size="md" block onClick={onClick} className="flex-1">
       {children}
     </Chip>
-  );
-}
-
-function Label({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-fg-secondary">
-      {children}
-    </div>
   );
 }
 

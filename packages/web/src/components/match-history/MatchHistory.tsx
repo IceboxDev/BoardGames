@@ -1,11 +1,22 @@
 import { useQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
 import { apiClient } from "../../lib/api-client";
+import { formatShortDate } from "../../lib/date-format.ts";
 import { qk } from "../../lib/query-keys";
 import { Button } from "../ui/Button";
 import { EmptyState } from "../ui/EmptyState";
 import { LoadingState } from "../ui/LoadingState";
 import { QueryBoundary } from "../ui/QueryBoundary";
+import {
+  formatDiff,
+  type MatchColumn,
+  type MatchOutcome,
+  MatchResultsLayout,
+  MatchResultsTable,
+  MatchTally,
+  ResultText,
+  scoreToneClass,
+} from "./MatchResultsTable";
 
 interface MatchHistoryProps {
   gameSlug: string;
@@ -39,28 +50,88 @@ export default function MatchHistory({
     queryFn: ({ signal }) => apiClient.getGameReplays(gameSlug, signal),
   });
   const replays = useMemo(() => replaysQuery.data ?? [], [replaysQuery.data]);
+  type Replay = (typeof replays)[number];
 
   const wins = replays.filter((r) => r.winner === "p0").length;
   const losses = replays.filter((r) => r.winner === "p1").length;
   const draws = replays.filter((r) => r.winner === "draw").length;
 
-  return (
-    // `relative z-10` lifts this above the fixed `def.backgroundImage` at
-    // `z-0` in `GameShellLayoutInner` — without a stacking context, the
-    // positioned bg paints over our static block content (same fix as
-    // `GameScreen` / sky-team `GameOverScreen`).
-    <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-6 px-4 py-8">
-      <div className="text-center">
-        <h2 className="text-2xl font-extrabold text-white">Match History</h2>
-        {replaysQuery.data && (
-          <p className="mt-2 text-sm text-fg-secondary">
-            {replays.length} games &middot; <span className="text-emerald-400">{wins}W</span> /{" "}
-            <span className="text-rose-400">{losses}L</span> /{" "}
-            <span className="text-fg-secondary">{draws}D</span>
-          </p>
-        )}
-      </div>
+  const outcomeOf = (r: Replay): MatchOutcome =>
+    r.winner === "p0" ? "win" : r.winner === "p1" ? "loss" : "draw";
+  const invert = (o: MatchOutcome): MatchOutcome =>
+    o === "win" ? "loss" : o === "loss" ? "win" : "draw";
 
+  const columns: MatchColumn<Replay>[] = [
+    {
+      id: "n",
+      header: "#",
+      cellClassName: "tabular-nums text-fg-secondary",
+      cell: (_r, i) => i + 1,
+    },
+    {
+      id: "opponent",
+      header: opponentLabel,
+      cellClassName: "text-xs text-fg-secondary",
+      cell: (r) => (r.aiEngine ? labelResolver(r.aiEngine) : "Human"),
+    },
+    {
+      id: "you",
+      header: "You",
+      align: "right",
+      cellClassName: (r) => `tabular-nums font-semibold ${scoreToneClass(outcomeOf(r))}`,
+      cell: (r) => r.scoreP0 ?? "—",
+    },
+    {
+      id: "opp",
+      header: "Opp",
+      align: "right",
+      cellClassName: (r) => `tabular-nums font-semibold ${scoreToneClass(invert(outcomeOf(r)))}`,
+      cell: (r) => r.scoreP1 ?? "—",
+    },
+    {
+      id: "diff",
+      header: "Diff",
+      align: "right",
+      cellClassName: "tabular-nums text-fg-muted",
+      cell: (r) => formatDiff((r.scoreP0 ?? 0) - (r.scoreP1 ?? 0)),
+    },
+    {
+      id: "result",
+      header: "Result",
+      align: "center",
+      cellClassName: "text-xs",
+      cell: (r) => {
+        const o = outcomeOf(r);
+        return (
+          <ResultText outcome={o}>
+            {o === "win" ? "Win" : o === "loss" ? "Loss" : "Draw"}
+          </ResultText>
+        );
+      },
+    },
+    {
+      id: "date",
+      header: "Date",
+      align: "right",
+      cellClassName: "text-xs text-fg-muted",
+      cell: (r) => formatShortDate(r.createdAt),
+    },
+  ];
+
+  return (
+    <MatchResultsLayout
+      title="Match History"
+      tally={
+        replaysQuery.data && (
+          <MatchTally total={replays.length} wins={wins} losses={losses} draws={draws} />
+        )
+      }
+      footer={
+        <Button variant="link" onClick={onBack} className="mt-2 text-sm">
+          Back
+        </Button>
+      }
+    >
       <QueryBoundary
         query={replaysQuery}
         loading={<LoadingState />}
@@ -68,79 +139,14 @@ export default function MatchHistory({
         empty={<EmptyState title="No games played yet" description="Play a game first." />}
       >
         {(rows) => (
-          <div className="w-full overflow-x-auto">
-            <table className="w-full border-collapse text-sm">
-              <thead>
-                <tr className="border-b border-white/10 text-xs font-medium uppercase tracking-wider text-fg-muted">
-                  <th className="p-2.5 text-left">#</th>
-                  <th className="p-2.5 text-left">{opponentLabel}</th>
-                  <th className="p-2.5 text-right">You</th>
-                  <th className="p-2.5 text-right">Opp</th>
-                  <th className="p-2.5 text-right">Diff</th>
-                  <th className="p-2.5 text-center">Result</th>
-                  <th className="p-2.5 text-right">Date</th>
-                </tr>
-              </thead>
-              <tbody>
-                {rows.map((r, i) => {
-                  const diff = (r.scoreP0 ?? 0) - (r.scoreP1 ?? 0);
-                  const won = r.winner === "p0";
-                  const lost = r.winner === "p1";
-
-                  return (
-                    <tr
-                      key={r.id}
-                      onClick={() => onSelectReplay?.(r.id)}
-                      className={`border-b border-white/10 transition-colors ${
-                        onSelectReplay ? "cursor-pointer hover:bg-surface-800/50" : ""
-                      }`}
-                    >
-                      <td className="p-2.5 tabular-nums text-fg-secondary">{i + 1}</td>
-                      <td className="p-2.5 text-xs text-fg-secondary">
-                        {r.aiEngine ? labelResolver(r.aiEngine) : "Human"}
-                      </td>
-                      <td
-                        className={`p-2.5 text-right tabular-nums font-semibold ${
-                          won ? "text-emerald-400" : lost ? "text-rose-400" : "text-fg-secondary"
-                        }`}
-                      >
-                        {r.scoreP0 ?? "—"}
-                      </td>
-                      <td
-                        className={`p-2.5 text-right tabular-nums font-semibold ${
-                          lost ? "text-emerald-400" : won ? "text-rose-400" : "text-fg-secondary"
-                        }`}
-                      >
-                        {r.scoreP1 ?? "—"}
-                      </td>
-                      <td className="p-2.5 text-right tabular-nums text-fg-muted">
-                        {diff > 0 ? "+" : ""}
-                        {diff}
-                      </td>
-                      <td className="p-2.5 text-center text-xs">
-                        {won ? (
-                          <span className="text-emerald-400">Win</span>
-                        ) : lost ? (
-                          <span className="text-rose-400">Loss</span>
-                        ) : (
-                          <span className="text-fg-muted">Draw</span>
-                        )}
-                      </td>
-                      <td className="p-2.5 text-right text-xs text-fg-muted">
-                        {new Date(r.createdAt).toLocaleDateString()}
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+          <MatchResultsTable
+            columns={columns}
+            rows={rows}
+            rowKey={(r) => r.id}
+            onSelectRow={onSelectReplay ? (r) => onSelectReplay(r.id) : undefined}
+          />
         )}
       </QueryBoundary>
-
-      <Button variant="link" onClick={onBack} className="mt-2 text-sm">
-        Back
-      </Button>
-    </div>
+    </MatchResultsLayout>
   );
 }

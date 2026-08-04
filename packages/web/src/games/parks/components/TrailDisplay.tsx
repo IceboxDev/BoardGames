@@ -227,14 +227,14 @@ export default function TrailDisplay({
                 {weather === "S" ? "☀️" : "💧"}
               </div>
             )}
-            <div className="text-[9px] uppercase tracking-wider text-fg-secondary">
+            <div className="text-4xs uppercase tracking-wider text-fg-secondary">
               {isStart ? "Start" : `#${pos + 1}`}
             </div>
             <div className="flex flex-1 flex-col items-center justify-center text-center">
               {isSite && site ? (
                 <>
                   <div className="text-xl">{SITE_ICONS[site]}</div>
-                  <div className="mt-1 text-4xs leading-tight text-fg-secondary">
+                  <div className="mt-1 text-5xs leading-tight text-fg-secondary">
                     {SITE_LABELS[site]}
                   </div>
                 </>

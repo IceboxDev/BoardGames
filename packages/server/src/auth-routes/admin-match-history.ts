@@ -3,6 +3,7 @@ import { MatchReorderInputSchema, MatchReorderResponseSchema } from "@boardgames
 import { z } from "zod";
 import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { logActivity } from "../lib/activity-log.ts";
 import { parseRow, parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 import { MatchResultRowSchema, rowToMatchRecord } from "./match-history.ts";
@@ -206,6 +207,10 @@ adminMatchHistoryRoutes.post("/", async (c) => {
       "match_results.client_id",
     ).id;
   }
+  logActivity(user.id, "match-recorded", {
+    gameTitle,
+    ...(dateKey ? { date: dateKey } : {}),
+  });
   const record = await fetchAndShape(insertedId);
   return c.json(record);
 });
@@ -267,6 +272,7 @@ adminMatchHistoryRoutes.delete("/:id{[0-9]+}", async (c) => {
     args: [id],
   });
   if (result.rowsAffected === 0) return c.json({ error: "not found" }, 404);
+  logActivity(c.get("user").id, "match-deleted", { matchId: id });
   return c.json({ ok: true });
 });
 

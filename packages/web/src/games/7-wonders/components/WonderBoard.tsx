@@ -20,7 +20,7 @@ export default function WonderBoard({ player, size = "md" }: WonderBoardProps) {
         <span className={`font-semibold text-fg-primary ${compact ? "text-2xs" : "text-sm"}`}>
           {def.name}
         </span>
-        <span className="rounded bg-surface-700 px-1 text-4xs font-bold text-fg-secondary">
+        <span className="rounded bg-surface-700 px-1 text-5xs font-bold text-fg-secondary">
           {player.side}
         </span>
         <span className={compact ? "text-2xs" : "text-sm"}>
@@ -40,11 +40,11 @@ export default function WonderBoard({ player, size = "md" }: WonderBoardProps) {
               }`}
               title={stage.effects.map(effectLabel).join(", ")}
             >
-              <p className={`leading-tight text-fg-secondary ${compact ? "text-4xs" : "text-3xs"}`}>
+              <p className={`leading-tight text-fg-secondary ${compact ? "text-5xs" : "text-3xs"}`}>
                 {costText(stage.cost)}
               </p>
               <p
-                className={`leading-tight ${compact ? "text-4xs" : "text-2xs"} ${
+                className={`leading-tight ${compact ? "text-5xs" : "text-2xs"} ${
                   built ? "text-amber-200" : "text-fg-primary"
                 }`}
               >

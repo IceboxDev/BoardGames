@@ -1,6 +1,7 @@
 import { getLegalActions } from "@boardgames/core/games/exploding-kittens/rules";
 import type { Action, GameState } from "@boardgames/core/games/exploding-kittens/types";
 import { useState } from "react";
+import { GameDialogPanel } from "../../../components/game-layout";
 import { Button } from "../../../components/ui/Button";
 
 interface DefuseDialogProps {
@@ -20,7 +21,7 @@ export default function DefuseDialog({ state, onAction }: DefuseDialogProps) {
 
   if (state.phase === "exploding") {
     return (
-      <div className="rounded-xl border border-red-700/50 bg-red-950/50 p-6 text-center">
+      <GameDialogPanel tone="danger" center spacious>
         <div className="mb-4">
           <span className="text-5xl">💣</span>
         </div>
@@ -49,7 +50,7 @@ export default function DefuseDialog({ state, onAction }: DefuseDialogProps) {
             </Button>
           )}
         </div>
-      </div>
+      </GameDialogPanel>
     );
   }
 
@@ -67,13 +68,14 @@ export function ReinsertDialog({
   const deckSize = state.drawPile.length;
 
   return (
-    <div className="rounded-xl border border-emerald-700/50 bg-emerald-950/40 p-6 text-center">
-      <p className="text-sm font-medium text-emerald-300">🔧 Kitten Defused!</p>
-      <p className="mt-1 text-xs text-fg-secondary">
-        Choose where to secretly reinsert the Exploding Kitten.
-      </p>
-
-      <div className="mt-4 flex flex-col items-center gap-3">
+    <GameDialogPanel
+      tone="success"
+      center
+      spacious
+      title="🔧 Kitten Defused!"
+      subtitle="Choose where to secretly reinsert the Exploding Kitten."
+    >
+      <div className="mt-1 flex flex-col items-center gap-3">
         <div className="flex items-center gap-3 w-full max-w-xs">
           <span className="text-xs text-fg-muted w-8">Top</span>
           <input
@@ -99,6 +101,6 @@ export function ReinsertDialog({
           Place Kitten Here
         </Button>
       </div>
-    </div>
+    </GameDialogPanel>
   );
 }

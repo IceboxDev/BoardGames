@@ -8,7 +8,7 @@
 // user only ever sees their URL right after generation).
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   buildCalendarDeepLinks,
   type CalendarFeedTokenResponse,
@@ -16,8 +16,10 @@ import {
   fetchCalendarFeedStatus,
   generateCalendarFeedToken,
 } from "../../lib/calendar-feed.ts";
+import { formatRelativeTime } from "../../lib/date-format.ts";
 import { qk } from "../../lib/query-keys.ts";
-import { Button } from "../ui/Button.tsx";
+import { Button, ButtonLink } from "../ui/Button.tsx";
+import { CopyField } from "../ui/CopyField.tsx";
 import { ErrorAlert } from "../ui/ErrorAlert.tsx";
 import { Modal } from "../ui/Modal.tsx";
 
@@ -168,12 +170,18 @@ function StateTokenInMemory({
         This is your private URL. We won't show it again — keep it somewhere safe, or just paste it
         into your calendar now.
       </p>
-      <CopyableUrl url={minted.subscribeUrl} />
+      <CopyField value={minted.subscribeUrl} ariaLabel="Calendar subscription URL" />
 
       <div className="flex flex-wrap gap-2">
-        <DeepLinkButton href={links.google} label="Add to Google" />
-        <DeepLinkButton href={links.apple} label="Add to Apple" />
-        <DeepLinkButton href={links.outlook} label="Add to Outlook" />
+        <ButtonLink href={links.google} external size="sm">
+          Add to Google
+        </ButtonLink>
+        <ButtonLink href={links.apple} external size="sm">
+          Add to Apple
+        </ButtonLink>
+        <ButtonLink href={links.outlook} external size="sm">
+          Add to Outlook
+        </ButtonLink>
       </div>
 
       <div className="flex items-center justify-between gap-2 pt-2">
@@ -232,9 +240,9 @@ function StateConnected({
       <div className="rounded-lg border border-emerald-400/30 bg-emerald-400/[0.06] px-4 py-3 text-sm text-emerald-100">
         <p className="font-semibold">Connected</p>
         <p className="mt-1 text-xs text-emerald-200/80">
-          {status.createdAt ? `Set up ${friendlyTime(status.createdAt)}.` : ""}{" "}
+          {status.createdAt ? `Set up ${formatRelativeTime(status.createdAt)}.` : ""}{" "}
           {status.lastAccessedAt
-            ? `Your calendar last fetched it ${friendlyTime(status.lastAccessedAt)}.`
+            ? `Your calendar last fetched it ${formatRelativeTime(status.lastAccessedAt)}.`
             : "Your calendar hasn't fetched it yet."}
         </p>
       </div>
@@ -281,65 +289,3 @@ function StateConnected({
 }
 
 // ── Small helpers ─────────────────────────────────────────────────────
-
-function CopyableUrl({ url }: { url: string }) {
-  const [copied, setCopied] = useState(false);
-  useEffect(() => {
-    if (!copied) return;
-    const t = window.setTimeout(() => setCopied(false), 2000);
-    return () => window.clearTimeout(t);
-  }, [copied]);
-
-  async function handleCopy() {
-    try {
-      await navigator.clipboard.writeText(url);
-      setCopied(true);
-    } catch {
-      // Browser blocked clipboard write — leave the URL selectable manually.
-    }
-  }
-
-  return (
-    <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-surface-950/60 px-2 py-2">
-      <input
-        type="text"
-        value={url}
-        readOnly
-        onFocus={(e) => e.currentTarget.select()}
-        className="flex-1 truncate bg-transparent px-2 text-xs text-fg-primary outline-none"
-      />
-      <Button variant="secondary" size="sm" onClick={handleCopy}>
-        {copied ? "✓ Copied" : "Copy"}
-      </Button>
-    </div>
-  );
-}
-
-function DeepLinkButton({ href, label }: { href: string; label: string }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer noopener"
-      className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/10 bg-surface-800 px-3 py-1.5 text-sm font-medium text-fg-primary transition-all hover:border-white/20 hover:bg-surface-700"
-    >
-      {label}
-    </a>
-  );
-}
-
-function friendlyTime(stamp: string): string {
-  // SQLite returns "YYYY-MM-DD HH:MM:SS" (UTC-ish). Treat as UTC for parsing.
-  const d = new Date(`${stamp.replace(" ", "T")}Z`);
-  if (Number.isNaN(d.getTime())) return "recently";
-  const now = Date.now();
-  const diffMs = now - d.getTime();
-  const sec = Math.round(diffMs / 1000);
-  const min = Math.round(sec / 60);
-  const hr = Math.round(min / 60);
-  const day = Math.round(hr / 24);
-  if (sec < 60) return "just now";
-  if (min < 60) return `${min} minute${min === 1 ? "" : "s"} ago`;
-  if (hr < 24) return `${hr} hour${hr === 1 ? "" : "s"} ago`;
-  return `${day} day${day === 1 ? "" : "s"} ago`;
-}

@@ -10,6 +10,7 @@ import {
 } from "@boardgames/core/protocol";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { type CSSProperties, useId, useState } from "react";
+import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { ApiError, SchemaError } from "../../lib/api-fetch.ts";
 import { updateMyProfile } from "../../lib/profile.ts";
 import { qk } from "../../lib/query-keys.ts";
@@ -30,7 +31,7 @@ import { Textarea } from "../ui/Textarea.tsx";
 // data is never editable here — it's generated elsewhere.
 
 const PRESET_ACCENTS = [
-  "#6366f1",
+  DEFAULT_ACCENT,
   "#8b5cf6",
   "#ec4899",
   "#ef4444",

@@ -244,7 +244,7 @@ export function CardPlaceholder({
       }}
     >
       {label && (
-        <span className="text-4xs font-medium opacity-40" style={{ color: hex }}>
+        <span className="text-5xs font-medium opacity-40" style={{ color: hex }}>
           {label}
         </span>
       )}

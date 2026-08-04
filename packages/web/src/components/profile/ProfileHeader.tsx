@@ -1,10 +1,11 @@
 import type { ProfileEditable, ProfileStats, ProfileUserSummary } from "@boardgames/core/protocol";
 import type { CSSProperties } from "react";
+import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { formatMonthYear } from "../../lib/date-format.ts";
 import { CameraIcon, EditIcon, PinIcon } from "../icons";
 import { Avatar } from "../ui/Avatar.tsx";
 import { Badge } from "../ui/Badge.tsx";
-import { Button } from "../ui/Button.tsx";
+import { Button, ButtonLink } from "../ui/Button.tsx";
 import { Surface } from "../ui/Surface.tsx";
 import { StatTile } from "./StatTile.tsx";
 
@@ -46,7 +47,7 @@ export function ProfileHeader({
   onEdit,
   onChangeAvatar,
 }: ProfileHeaderProps) {
-  const accent = profile.accentHex ?? "#6366f1";
+  const accent = profile.accentHex ?? DEFAULT_ACCENT;
   const style = { "--accent": accent } as CSSProperties;
 
   return (
@@ -132,15 +133,16 @@ export function ProfileHeader({
         {profile.links.length > 0 && (
           <div className="mt-3 flex flex-wrap gap-2">
             {profile.links.map((link) => (
-              <a
+              <ButtonLink
                 key={`${link.label}-${link.url}`}
                 href={link.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-full border border-white/10 bg-surface-800/60 px-3 py-1 text-xs font-medium text-fg-secondary transition hover:border-accent-400/40 hover:text-accent-200"
+                external
+                size="xs"
+                shape="pill"
+                className="bg-surface-800/60 hover:text-accent-200"
               >
                 {link.label}
-              </a>
+              </ButtonLink>
             ))}
           </div>
         )}

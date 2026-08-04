@@ -1,4 +1,5 @@
 import type { PlayerIndex, TurnPhase } from "@boardgames/core/games/lost-cities/types";
+import { PromptRow } from "../../../components/game-layout/PromptRow";
 
 interface TurnIndicatorProps {
   currentPlayer: PlayerIndex;
@@ -59,19 +60,11 @@ export default function TurnIndicator({
       : "AI is thinking\u2026";
 
   return (
-    <div className="flex items-center gap-2">
-      <span
-        className={["text-xs font-semibold", isHuman ? "text-cyan-400" : "text-amber-400"].join(
-          " ",
-        )}
-      >
-        {isHuman ? "Your turn" : `${opponentLabel} turn`}
-      </span>
-      <span className="text-fg-muted">&middot;</span>
-      <span className="text-xs text-fg-secondary">{message}</span>
-      {!isHuman && (
-        <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-amber-400" />
-      )}
-    </div>
+    <PromptRow
+      title={isHuman ? "Your turn" : `${opponentLabel} turn`}
+      tone={isHuman ? "active" : "waiting"}
+      pulse={!isHuman}
+      message={message}
+    />
   );
 }

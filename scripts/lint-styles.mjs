@@ -91,6 +91,7 @@ const CHECK_BASELINE = process.argv.includes("--check-baseline");
 const RED_ALLOWLIST = new Set([
   "pages/DeckPreview.tsx", // playing-card suit + card-back art
   "components/offline/CalendarDayCell.tsx", // fire-heat effect (red→orange gradient)
+  "components/offline/D20Die.tsx", // crimson d20 facet art (red ramp = gem shading)
 ]);
 
 const RED_RE =

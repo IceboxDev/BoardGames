@@ -16,6 +16,7 @@ import {
 } from "@boardgames/core/protocol";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { logActivity } from "../lib/activity-log.ts";
 import {
   AvatarConfigError,
   dataUriToBuffer,
@@ -102,6 +103,7 @@ avatarRoutes.put("/:userId/avatar", zJsonBody(SaveAvatarRequestSchema), async (c
     sql: "UPDATE user SET image = ? WHERE id = ?",
     args: [clean, userId],
   });
+  logActivity(user.id, "avatar-save", user.id === userId ? {} : { targetUserId: userId });
 
   return c.json(SaveAvatarResponseSchema.parse({ ok: true, image: clean }));
 });

@@ -6,11 +6,10 @@ import { Input } from "../../ui/Input";
 import { Select } from "../../ui/Select";
 import { Surface } from "../../ui/Surface";
 import { DND_CONDITIONS, type DndCondition, resolutionOf } from "../dnd";
-import { ParticipantPicker } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
+import { mergeParticipants, OutcomeFormShell, withOptional } from "./shared";
 
 type User = { id: string; name: string };
-type CoopPlayer = MatchOutcomeCoop["participants"][number];
 
 type Props = {
   users: User[];
@@ -19,11 +18,6 @@ type Props = {
   /** Recorded-but-unresolved campaign names, offered in the dropdown. */
   openCampaigns: string[];
 };
-
-function withCondition(p: CoopPlayer, condition: DndCondition | undefined): CoopPlayer {
-  const { condition: _drop, ...rest } = p;
-  return condition === undefined ? rest : { ...rest, condition };
-}
 
 /**
  * Match-history form for Dungeons & Dragons — recorded as a co-op (the party
@@ -68,9 +62,7 @@ export function DndForm({ users, value, onChange, openCampaigns }: Props) {
 
   function setParticipants(participants: Participant[]) {
     // Keep each surviving player's condition; new players start unscathed.
-    const byId = new Map(value.participants.map((p) => [p.userId, p] as const));
-    const next = participants.map((p) => byId.get(p.userId) ?? p);
-    onChange({ ...value, participants: next });
+    onChange({ ...value, participants: mergeParticipants(value.participants, participants) });
   }
 
   function setResolution(next: "ongoing" | "win" | "loss") {
@@ -84,13 +76,15 @@ export function DndForm({ users, value, onChange, openCampaigns }: Props) {
 
   function toggleCondition(userId: string, condition: DndCondition) {
     const next = value.participants.map((p) =>
-      p.userId === userId ? withCondition(p, p.condition === condition ? undefined : condition) : p,
+      p.userId === userId
+        ? withOptional(p, "condition", p.condition === condition ? undefined : condition)
+        : p,
     );
     onChange({ ...value, participants: next });
   }
 
   return (
-    <div className="flex flex-col gap-3">
+    <OutcomeFormShell users={users} selectedIds={selectedIds} onParticipants={setParticipants}>
       <Field
         label="Campaign / one-shot"
         htmlFor={campaignId}
@@ -143,10 +137,6 @@ export function DndForm({ users, value, onChange, openCampaigns }: Props) {
         </div>
       </FieldGroup>
 
-      <Field label="Players" htmlFor="dnd-players">
-        <ParticipantPicker users={users} selectedIds={selectedIds} onChange={setParticipants} />
-      </Field>
-
       <Field label="Dungeon Master" htmlFor={dmId} hint="Runs the game — not counted in the party">
         <Select
           id={dmId}
@@ -195,6 +185,6 @@ export function DndForm({ users, value, onChange, openCampaigns }: Props) {
           </div>
         </FieldGroup>
       )}
-    </div>
+    </OutcomeFormShell>
   );
 }

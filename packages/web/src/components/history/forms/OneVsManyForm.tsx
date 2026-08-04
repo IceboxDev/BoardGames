@@ -4,6 +4,7 @@ import { Chip } from "../../ui/Chip";
 import { Field } from "../../ui/Field";
 import { Input } from "../../ui/Input";
 import { ParticipantPicker } from "../ParticipantPicker";
+import { OutcomeFormShell } from "./shared";
 
 type User = { id: string; name: string };
 
@@ -41,7 +42,7 @@ export function OneVsManyForm({ users, value, onChange }: Props) {
   const soloEmpty = value.solo.userId === "";
 
   return (
-    <div className="flex flex-col gap-3">
+    <OutcomeFormShell>
       <Field
         label={value.solo.roleLabel ? `Solo (${value.solo.roleLabel})` : "Solo player"}
         htmlFor="ovm-solo"
@@ -114,6 +115,6 @@ export function OneVsManyForm({ users, value, onChange }: Props) {
           </Chip>
         </div>
       </Field>
-    </div>
+    </OutcomeFormShell>
   );
 }

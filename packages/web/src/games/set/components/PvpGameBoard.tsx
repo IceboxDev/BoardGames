@@ -1,9 +1,12 @@
 import type { PvpGameEvent, SetPvpPlayerView } from "@boardgames/core/games/set/pvp-machine";
 import type { PlayerId } from "@boardgames/core/games/set/pvp-types";
 import { useEffect } from "react";
+import { GameScreen } from "../../../components/game-layout";
+import { Button } from "../../../components/ui/Button";
 import CardGrid from "./CardGrid";
 import SelectionTimer from "./SelectionTimer";
 import type { SelectionColor } from "./SetCard";
+import StatRow from "./StatRow";
 
 interface PvpGameBoardProps {
   view: SetPvpPlayerView;
@@ -36,134 +39,101 @@ export default function PvpGameBoard({ view, playerIndex, opponentName, send }: 
     return () => window.removeEventListener("keydown", handler);
   }, [canCallSet, send, me]);
 
-  // Lock scroll
-  useEffect(() => {
-    const html = document.documentElement;
-    const body = document.body;
-    html.style.overflow = "hidden";
-    body.style.overflow = "hidden";
-    return () => {
-      html.style.overflow = "";
-      body.style.overflow = "";
-    };
-  }, []);
-
   const selectionColor: SelectionColor = iAmSelecting ? "yellow" : "emerald";
 
   return (
-    <div className="flex h-below-nav overflow-hidden">
-      {/* Center — card grid */}
-      <div className="flex min-h-0 min-w-0 flex-1 flex-col p-2 gap-2">
-        {/* Opponent bar */}
-        <div
-          className={`flex items-center justify-between rounded-lg px-4 py-2 shrink-0 ${
-            oppIsSelecting ? "bg-emerald-900/30 border border-emerald-500/40" : "bg-surface-800/60"
-          }`}
-        >
-          <div className="flex items-center gap-3">
-            <span className="text-sm font-semibold text-fg-secondary">{opponentName}</span>
-            {oppIsSelecting && (
-              <span className="text-xs font-semibold text-emerald-400 animate-pulse">
-                Selecting...
-              </span>
-            )}
-          </div>
-          <div className="flex items-center gap-4 text-sm">
-            <span className="text-green-400 font-bold">{oppState.score} SETs</span>
-            <span className="text-red-400 font-bold">{oppState.penalties} Pen</span>
-            <span className="text-fg-secondary font-semibold">
-              Net {oppState.score - oppState.penalties}
+    <GameScreen
+      leftSidebarTitle="You"
+      leftSidebar={
+        <div className="flex min-h-0 flex-1 flex-col gap-3">
+          <StatRow label="SETs" value={String(myState.score)} color="text-green-400" />
+          <StatRow label="Penalties" value={String(myState.penalties)} color="text-red-400" />
+          <StatRow label="Net" value={String(myState.score - myState.penalties)} />
+          <StatRow label="Deck" value={String(view.deckRemaining)} color="text-fg-muted" />
+
+          {iAmSelecting && (
+            <div className="border-t border-white/10 pt-3">
+              <p className="text-xs font-semibold leading-snug text-yellow-300">Select 3 cards</p>
+            </div>
+          )}
+
+          <div className="flex-1" />
+
+          <Button
+            variant="solid"
+            tone="accent"
+            size="lg"
+            block
+            disabled={!canCallSet}
+            onClick={() => send({ type: "CALL_SET", playerIndex: me })}
+            className="text-lg font-extrabold tracking-wider active:scale-95"
+          >
+            SET!
+          </Button>
+
+          <p className="text-center text-3xs text-fg-disabled">
+            or press{" "}
+            <kbd className="rounded bg-surface-700 px-1.5 py-0.5 font-mono text-fg-secondary">
+              Space
+            </kbd>
+          </p>
+        </div>
+      }
+    >
+      {/* Opponent bar */}
+      <div
+        className={`flex shrink-0 items-center justify-between rounded-lg px-4 py-2 ${
+          oppIsSelecting ? "border border-emerald-500/40 bg-emerald-900/30" : "bg-surface-800/60"
+        }`}
+      >
+        <div className="flex items-center gap-3">
+          <span className="text-sm font-semibold text-fg-secondary">{opponentName}</span>
+          {oppIsSelecting && (
+            <span className="animate-pulse text-xs font-semibold text-emerald-400">
+              Selecting...
             </span>
-          </div>
+          )}
         </div>
-
-        {/* Timer bar (shown when anyone is selecting) */}
-        {isSelecting && view.selectionDeadline > 0 && (
-          <div className="shrink-0">
-            <SelectionTimer deadline={view.selectionDeadline} />
-          </div>
-        )}
-
-        {/* Message */}
-        {view.message && (
-          <div className="shrink-0 text-center">
-            <p
-              className={`text-xs font-semibold ${
-                view.message.includes("found") ? "text-green-400" : "text-red-400"
-              }`}
-            >
-              {view.message}
-            </p>
-          </div>
-        )}
-
-        {/* Card grid */}
-        <div className="flex-1 min-h-0">
-          <CardGrid
-            slots={view.slots}
-            selected={view.selected}
-            onToggle={(id) => send({ type: "SELECT_CARD", cardId: id, playerIndex: me })}
-            disabled={!iAmSelecting}
-            hintedCardId={null}
-            selectionColor={selectionColor}
-          />
+        <div className="flex items-center gap-4 text-sm">
+          <span className="font-bold text-green-400">{oppState.score} SETs</span>
+          <span className="font-bold text-red-400">{oppState.penalties} Pen</span>
+          <span className="font-semibold text-fg-secondary">
+            Net {oppState.score - oppState.penalties}
+          </span>
         </div>
       </div>
 
-      {/* Right sidebar — your stats & SET button */}
-      <div className="flex flex-col gap-3 px-5 py-4 shrink-0 w-44 border-l border-white/10">
-        <p className="text-xs text-fg-muted uppercase tracking-wide">You</p>
-        <StatRow label="SETs" value={String(myState.score)} color="text-green-400" />
-        <StatRow label="Penalties" value={String(myState.penalties)} color="text-red-400" />
-        <StatRow label="Net" value={String(myState.score - myState.penalties)} />
-        <StatRow label="Deck" value={String(view.deckRemaining)} color="text-fg-muted" />
+      {/* Timer bar (shown when anyone is selecting) */}
+      {isSelecting && view.selectionDeadline > 0 && (
+        <div className="shrink-0">
+          <SelectionTimer deadline={view.selectionDeadline} />
+        </div>
+      )}
 
-        {iAmSelecting && (
-          <div className="pt-3 border-t border-white/10">
-            <p className="text-xs text-yellow-300 font-semibold leading-snug">Select 3 cards</p>
-          </div>
-        )}
+      {/* Message */}
+      {view.message && (
+        <div className="shrink-0 text-center">
+          <p
+            className={`text-xs font-semibold ${
+              view.message.includes("found") ? "text-green-400" : "text-red-400"
+            }`}
+          >
+            {view.message}
+          </p>
+        </div>
+      )}
 
-        <div className="flex-1" />
-
-        <button
-          type="button"
-          onClick={() => send({ type: "CALL_SET", playerIndex: me })}
-          disabled={!canCallSet}
-          className={[
-            "rounded-xl px-5 py-3 text-lg font-extrabold tracking-wider text-white transition-all duration-200 w-full",
-            canCallSet
-              ? "bg-indigo-600 hover:bg-accent-500 active:scale-95 cursor-pointer"
-              : "bg-surface-700 opacity-40 cursor-not-allowed",
-          ].join(" ")}
-        >
-          SET!
-        </button>
-
-        <p className="text-center text-3xs text-fg-disabled">
-          or press{" "}
-          <kbd className="rounded bg-surface-700 px-1.5 py-0.5 font-mono text-fg-secondary">
-            Space
-          </kbd>
-        </p>
+      {/* Card grid */}
+      <div className="min-h-0 flex-1">
+        <CardGrid
+          slots={view.slots}
+          selected={view.selected}
+          onToggle={(id) => send({ type: "SELECT_CARD", cardId: id, playerIndex: me })}
+          disabled={!iAmSelecting}
+          hintedCardId={null}
+          selectionColor={selectionColor}
+        />
       </div>
-    </div>
-  );
-}
-
-function StatRow({
-  label,
-  value,
-  color = "text-white",
-}: {
-  label: string;
-  value: string;
-  color?: string;
-}) {
-  return (
-    <div className="flex items-baseline justify-between gap-2">
-      <span className="text-xs text-fg-muted uppercase tracking-wide">{label}</span>
-      <span className={`text-base font-bold tabular-nums ${color}`}>{value}</span>
-    </div>
+    </GameScreen>
   );
 }

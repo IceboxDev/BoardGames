@@ -207,7 +207,7 @@ function StrategyCard({
       <div className="flex items-center justify-between gap-2">
         <span className="text-sm font-bold text-white">{option.label}</span>
         <span
-          className={`inline-flex items-center rounded-full px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wider ring-1 ring-inset ${option.badgeClass}`}
+          className={`inline-flex items-center rounded-full px-1.5 py-0.5 text-4xs font-semibold uppercase tracking-wider ring-1 ring-inset ${option.badgeClass}`}
         >
           {option.difficulty}
         </span>

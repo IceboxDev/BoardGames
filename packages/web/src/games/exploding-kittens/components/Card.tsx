@@ -4,6 +4,7 @@ import {
   CARD_EMOJI,
   CARD_LABELS,
 } from "@boardgames/core/games/exploding-kittens/types";
+import { cardChrome } from "../../../components/card-fan/card-chrome";
 import { getCardImageUrl, getCardSkin } from "../assets/card-art";
 
 interface CardProps {
@@ -45,15 +46,14 @@ export default function Card({
     );
   }
 
-  const ringClass = selected
-    ? "ring-2 ring-white ring-offset-2 ring-offset-gray-900 scale-105"
-    : glowing
-      ? "ring-2 ring-yellow-400 animate-pulse"
-      : "";
-
-  const interactionClass = disabled
-    ? "opacity-50 cursor-not-allowed"
-    : "hover:shadow-xl cursor-pointer";
+  const chromeOpts = {
+    size: sizeClass,
+    rounded: "xl",
+    selected,
+    glowClass: glowing ? "ring-2 ring-yellow-400 animate-pulse" : "",
+    disabled,
+    hover: "shadow",
+  } as const;
 
   if (skin) {
     return (
@@ -61,7 +61,7 @@ export default function Card({
         type="button"
         onClick={onClick}
         disabled={disabled}
-        className={`${sizeClass} relative overflow-hidden rounded-xl shadow-md transition ${ringClass} ${interactionClass}`}
+        className={cardChrome(chromeOpts)}
       >
         <img
           src={getCardImageUrl(skin.file)}
@@ -80,7 +80,11 @@ export default function Card({
       type="button"
       onClick={onClick}
       disabled={disabled}
-      className={`${sizeClass} relative flex flex-col items-center justify-center rounded-xl p-1.5 font-semibold text-white shadow-md transition text-xs ${ringClass} ${interactionClass}`}
+      className={cardChrome({
+        ...chromeOpts,
+        className:
+          "flex flex-col items-center justify-center p-1.5 text-xs font-semibold text-white",
+      })}
       style={{ backgroundColor: color }}
     >
       <span className="text-xl leading-none mb-1">{CARD_EMOJI[card.type]}</span>

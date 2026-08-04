@@ -3,7 +3,7 @@ import { useId } from "react";
 import { Chip } from "../../ui/Chip";
 import { Field } from "../../ui/Field";
 import { Input } from "../../ui/Input";
-import { ParticipantPicker } from "../ParticipantPicker";
+import { OutcomeFormShell } from "./shared";
 
 type User = { id: string; name: string };
 
@@ -23,10 +23,7 @@ export function CoopForm({ users, value, onChange }: Props) {
   }
 
   return (
-    <div className="flex flex-col gap-3">
-      <Field label="Players" htmlFor="coop-players">
-        <ParticipantPicker users={users} selectedIds={selectedIds} onChange={setParticipants} />
-      </Field>
+    <OutcomeFormShell users={users} selectedIds={selectedIds} onParticipants={setParticipants}>
       <Field label="Outcome" htmlFor="coop-outcome">
         <div className="flex gap-2">
           <Chip
@@ -65,6 +62,6 @@ export function CoopForm({ users, value, onChange }: Props) {
           placeholder="e.g. lost to outbreak chain in Asia"
         />
       </Field>
-    </div>
+    </OutcomeFormShell>
   );
 }

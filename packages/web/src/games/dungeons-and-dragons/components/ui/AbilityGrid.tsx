@@ -58,7 +58,7 @@ export function AbilityGrid({
         const modifier = mod(score);
         return (
           <div key={key} className={box}>
-            <span className="font-serif-body text-4xs font-bold uppercase tracking-eyebrow text-amber-300/70">
+            <span className="font-serif-body text-5xs font-bold uppercase tracking-eyebrow text-amber-300/70">
               {labels[key]}
             </span>
             {emphasis === "modifier" ? (

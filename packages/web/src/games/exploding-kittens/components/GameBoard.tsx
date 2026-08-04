@@ -18,6 +18,7 @@ import { useMemo, useState } from "react";
 import { ActionLog } from "../../../components/action-log";
 import { CardDeck } from "../../../components/CardDeck";
 import { GameScreen } from "../../../components/game-layout";
+import { PromptRow } from "../../../components/game-layout/PromptRow";
 import { type PlayerEntry, PlayerListPanel } from "../../../components/SidePanel";
 import { AiThinkingIndicator } from "../../../components/ui";
 import { Button } from "../../../components/ui/Button";
@@ -201,20 +202,12 @@ export default function GameBoard({
             )}
           </div>
         ) : (
-          <div className="flex items-center gap-2">
-            <span
-              className={`text-xs font-semibold ${isHumanTurn ? "text-cyan-400" : "text-amber-400"}`}
-            >
-              {isHumanTurn ? "Your turn" : `AI ${activeDecider}'s turn`}
-            </span>
-            <span className="text-fg-muted">&middot;</span>
-            <span className="text-xs text-fg-secondary">
-              {isHumanTurn ? "Respond to the dialog above" : "Waiting for AI..."}
-            </span>
-            {!isHumanTurn && (
-              <span className="inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-amber-400" />
-            )}
-          </div>
+          <PromptRow
+            title={isHumanTurn ? "Your turn" : `AI ${activeDecider}'s turn`}
+            tone={isHumanTurn ? "active" : "waiting"}
+            pulse={!isHumanTurn}
+            message={isHumanTurn ? "Respond to the dialog above" : "Waiting for AI..."}
+          />
         )
       }
     >
@@ -340,7 +333,7 @@ export default function GameBoard({
                           style={{ backgroundColor: CARD_COLORS[topCard.type] }}
                         >
                           <span className="text-lg leading-none">{CARD_EMOJI[topCard.type]}</span>
-                          <span className="mt-0.5 text-4xs font-semibold leading-tight">
+                          <span className="mt-0.5 text-5xs font-semibold leading-tight">
                             {CARD_LABELS[topCard.type]}
                           </span>
                         </div>

@@ -1,9 +1,14 @@
 import type { MatchOutcomeFreeForAll, Participant } from "@boardgames/core/history/types";
 import { Chip } from "../../ui/Chip";
-import { Field } from "../../ui/Field";
 import { Surface } from "../../ui/Surface";
-import { ParticipantPicker } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
+import {
+  GroupLabel,
+  mergeParticipants,
+  OutcomeFormShell,
+  RoleChipRow,
+  withOptional,
+} from "./shared";
 
 type User = { id: string; name: string };
 type FfaPlayer = MatchOutcomeFreeForAll["players"][number];
@@ -28,11 +33,7 @@ export function LovecraftLetterForm({ users, value, onChange }: Props) {
   const selectedIds = value.players.map((p) => p.userId);
 
   function setParticipants(participants: Participant[]) {
-    const byId = new Map(value.players.map((p) => [p.userId, p] as const));
-    const players = participants.map((p) => {
-      const prev = byId.get(p.userId);
-      return prev ? { ...prev, ...p } : { ...p, score: 0 };
-    });
+    const players = mergeParticipants(value.players, participants, (p) => ({ ...p, score: 0 }));
     onChange({ ...value, players });
   }
 
@@ -46,22 +47,18 @@ export function LovecraftLetterForm({ users, value, onChange }: Props) {
 
   function setWinCondition(userId: string, condition: string) {
     const players = value.players.map((p) =>
-      p.userId === userId ? withRole(p, p.role === condition ? undefined : condition) : p,
+      p.userId === userId
+        ? withOptional(p, "role", p.role === condition ? undefined : condition)
+        : p,
     );
     onChange({ ...value, players });
   }
 
   return (
-    <div className="flex flex-col gap-3">
-      <Field label="Players" htmlFor="lovecraft-players">
-        <ParticipantPicker users={users} selectedIds={selectedIds} onChange={setParticipants} />
-      </Field>
-
+    <OutcomeFormShell users={users} selectedIds={selectedIds} onParticipants={setParticipants}>
       {value.players.length > 0 && (
         <div className="flex flex-col gap-2">
-          <span className="text-xs font-medium uppercase tracking-wide text-fg-secondary">
-            Crown the winner, then pick how they won.
-          </span>
+          <GroupLabel>Crown the winner, then pick how they won.</GroupLabel>
           {value.players.map((p) => {
             const isWinner = p.rank === 1;
             return (
@@ -82,38 +79,22 @@ export function LovecraftLetterForm({ users, value, onChange }: Props) {
                   }
                 />
                 {isWinner && (
-                  <div className="flex flex-wrap gap-1.5">
-                    {WIN_CONDITIONS.map((c) => (
-                      <Chip
-                        key={c}
-                        pressed={p.role === c}
-                        tone="accent"
-                        variant="outlined"
-                        size="xs"
-                        onClick={() => setWinCondition(p.userId, c)}
-                      >
-                        {c}
-                      </Chip>
-                    ))}
-                  </div>
+                  <RoleChipRow
+                    roster={WIN_CONDITIONS}
+                    current={p.role}
+                    onToggle={(c) => setWinCondition(p.userId, c)}
+                  />
                 )}
               </Surface>
             );
           })}
         </div>
       )}
-    </div>
+    </OutcomeFormShell>
   );
 }
 
 // ── Helpers ────────────────────────────────────────────────────────────
-function withRole(p: FfaPlayer, role: string | undefined): FfaPlayer {
-  if (role === undefined) {
-    const { role: _drop, ...rest } = p;
-    return rest;
-  }
-  return { ...p, role };
-}
 
 /** Strip both winner markers — a non-winner has neither a rank nor a win condition. */
 function clearWin(p: FfaPlayer): FfaPlayer {

@@ -14,6 +14,7 @@ import {
 import { z } from "zod";
 import { adminApp, authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { logActivity } from "../lib/activity-log.ts";
 import {
   computeAvailableGamesPayload,
   computePlayableSlugs,
@@ -193,6 +194,7 @@ calendarLocksRoutes.post("/lock-picks", zJsonBody(PicksLockBodySchema), async (c
       args: [date],
     });
   }
+  logActivity(user.id, "picks-locked", { date, on });
   return c.json(OkResponseSchema.parse({ ok: true }));
 });
 
@@ -222,6 +224,7 @@ calendarLocksRoutes.post("/games/reaction", zJsonBody(GameReactionBodySchema), a
     });
   }
 
+  logActivity(user.id, "game-vote", { date, slug, reaction, on });
   return c.json(OkResponseSchema.parse({ ok: true }));
 });
 
@@ -519,11 +522,13 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
     });
   }
   await getDb().batch(stmts, "write");
+  logActivity(user.id, "night-locked", { date, ...(hostName ? { hostName } : {}) });
 
   return c.json(LockInResponseSchema.parse({ ok: true, expectedUserIds: expected }));
 });
 
 adminCalendarLocksRoutes.delete("/lock", zJsonBody(UnlockBodySchema), async (c) => {
+  const user = c.get("user");
   const { date } = c.req.valid("json");
 
   // Cascade: drop the lock row, its RSVPs, and any game reactions for the
@@ -554,6 +559,7 @@ adminCalendarLocksRoutes.delete("/lock", zJsonBody(UnlockBodySchema), async (c) 
     ],
     "write",
   );
+  logActivity(user.id, "night-unlocked", { date });
 
   return c.json(OkResponseSchema.parse({ ok: true }));
 });

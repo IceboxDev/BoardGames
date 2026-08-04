@@ -3,14 +3,19 @@ import { useEffect } from "react";
 import { heroesForSets } from "../../../games/dungeon-mayhem/characters";
 import { parseMultiVariant } from "../../../games/match-variants";
 import { Button } from "../../ui/Button";
-import { Chip } from "../../ui/Chip";
-import { Field } from "../../ui/Field";
 import { Surface } from "../../ui/Surface";
-import { ParticipantPicker } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
+import {
+  GroupLabel,
+  mergeParticipants,
+  nextEliminationOrder,
+  OutcomeFormShell,
+  RoleChipRow,
+  SurvivalBadge,
+  withOptional,
+} from "./shared";
 
 type User = { id: string; name: string };
-type LsPlayer = MatchOutcomeLastStanding["players"][number];
 
 type Props = {
   users: User[];
@@ -40,24 +45,19 @@ export function DungeonMayhemForm({ users, value, onChange }: Props) {
     onChange({
       ...value,
       players: value.players.map((p) =>
-        p.role !== undefined && !valid.has(p.role) ? withRole(p, undefined) : p,
+        p.role !== undefined && !valid.has(p.role) ? withOptional(p, "role", undefined) : p,
       ),
     });
   }, [value, onChange]);
 
   function setParticipants(participants: Participant[]) {
-    const byId = new Map(value.players.map((p) => [p.userId, p] as const));
     // Keep hero/elimination state for players who stay; new ones start clean.
-    const players = participants.map((p) => {
-      const prev = byId.get(p.userId);
-      return prev ? { ...prev, ...p } : p;
-    });
-    onChange({ ...value, players });
+    onChange({ ...value, players: mergeParticipants(value.players, participants) });
   }
 
   function setHero(userId: string, hero: string) {
     const players = value.players.map((p) =>
-      p.userId === userId ? withRole(p, p.role === hero ? undefined : hero) : p,
+      p.userId === userId ? withOptional(p, "role", p.role === hero ? undefined : hero) : p,
     );
     onChange({ ...value, players });
   }
@@ -67,30 +67,27 @@ export function DungeonMayhemForm({ users, value, onChange }: Props) {
     if (!player) return;
     if (player.eliminationOrder !== undefined) {
       // Revive: drop the elimination order so this player counts as a survivor.
-      const players = value.players.map((p) => (p.userId === userId ? withElim(p, undefined) : p));
+      const players = value.players.map((p) =>
+        p.userId === userId ? withOptional(p, "eliminationOrder", undefined) : p,
+      );
       onChange({ ...value, players });
     } else {
       // Eliminate: append to the elimination order.
-      const usedOrders = value.players
-        .map((p) => p.eliminationOrder)
-        .filter((o): o is number => o !== undefined);
-      const nextOrder = usedOrders.length === 0 ? 0 : Math.max(...usedOrders) + 1;
-      const players = value.players.map((p) => (p.userId === userId ? withElim(p, nextOrder) : p));
+      const nextOrder = nextEliminationOrder(value.players);
+      const players = value.players.map((p) =>
+        p.userId === userId ? withOptional(p, "eliminationOrder", nextOrder) : p,
+      );
       onChange({ ...value, players });
     }
   }
 
   return (
-    <div className="flex flex-col gap-3">
-      <Field label="Players" htmlFor="dm-players">
-        <ParticipantPicker users={users} selectedIds={selectedIds} onChange={setParticipants} />
-      </Field>
-
+    <OutcomeFormShell users={users} selectedIds={selectedIds} onParticipants={setParticipants}>
       {value.players.length > 0 && (
         <div className="flex flex-col gap-2">
-          <span className="text-xs font-medium uppercase tracking-wide text-fg-secondary">
+          <GroupLabel>
             Tap each player's hero, then eliminate them in order. Whoever's left standing wins.
-          </span>
+          </GroupLabel>
           {value.players.map((p) => {
             const eliminated = p.eliminationOrder !== undefined;
             return (
@@ -100,15 +97,7 @@ export function DungeonMayhemForm({ users, value, onChange }: Props) {
                   nameClassName={eliminated ? "text-fg-muted line-through" : "text-amber-100"}
                   right={
                     <>
-                      {eliminated ? (
-                        <span className="text-xs text-fg-muted">
-                          out #{(p.eliminationOrder ?? 0) + 1}
-                        </span>
-                      ) : (
-                        <span className="rounded bg-amber-400/20 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wide text-amber-200">
-                          Surviving
-                        </span>
-                      )}
+                      <SurvivalBadge eliminationOrder={p.eliminationOrder} />
                       <Button
                         variant="secondary"
                         size="xs"
@@ -119,46 +108,16 @@ export function DungeonMayhemForm({ users, value, onChange }: Props) {
                     </>
                   }
                 />
-                <div className="flex flex-wrap gap-1.5">
-                  {roster.map((hero) => (
-                    <Chip
-                      key={hero}
-                      pressed={p.role === hero}
-                      tone="accent"
-                      variant="outlined"
-                      size="xs"
-                      onClick={() => setHero(p.userId, hero)}
-                    >
-                      {hero}
-                    </Chip>
-                  ))}
-                </div>
+                <RoleChipRow
+                  roster={roster}
+                  current={p.role}
+                  onToggle={(hero) => setHero(p.userId, hero)}
+                />
               </Surface>
             );
           })}
         </div>
       )}
-    </div>
+    </OutcomeFormShell>
   );
-}
-
-// ── Helpers ────────────────────────────────────────────────────────────
-// Set or clear the optional `role` / `eliminationOrder` keys without leaving
-// `undefined` values on the wire object (the schema and MatchCard both key off
-// presence).
-
-function withRole(p: LsPlayer, role: string | undefined): LsPlayer {
-  if (role === undefined) {
-    const { role: _drop, ...rest } = p;
-    return rest;
-  }
-  return { ...p, role };
-}
-
-function withElim(p: LsPlayer, eliminationOrder: number | undefined): LsPlayer {
-  if (eliminationOrder === undefined) {
-    const { eliminationOrder: _drop, ...rest } = p;
-    return rest;
-  }
-  return { ...p, eliminationOrder };
 }

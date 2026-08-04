@@ -119,30 +119,32 @@ Every game board uses `GameScreen` from `web/src/components/game-layout/`. This 
 
 **Props:**
 - `background` — class on root container (e.g. `"bg-black"`)
-- `contentClassName` — extra classes on content area (e.g. `"mx-auto max-w-2xl"`). Gap-2 and padding are built-in.
-- `sidebar` — history log content. GameScreen provides the sidebar chrome (aside, heading, scroll).
+- `contentClassName` — extra classes on content area (e.g. `"mx-auto max-w-2xl"`). Gap and padding are built-in.
+- `sidebar` — history log content (right aside). GameScreen provides the sidebar chrome (aside, "History" heading, scroll).
+- `leftSidebar` / `leftSidebarTitle` — always-visible left panel spanning the board height (score, player list, status track). Used by lost-cities, durak, exploding-kittens, 7-wonders, sky-team, set, dnd.
 - `fan` — card hand component (CardFan, PlayerHand). Pinned to bottom.
-- `fanActions` — controls above the card fan (Confirm, Pass/Take, status). Spaced with gap-2.
+- `fanActions` — controls above the card fan (Confirm, Pass/Take, status). The row reserves `min-h-9` so the board doesn't jump when actions appear.
 - `noPadding` — skip padding and flex-col (for edge-to-edge SVG boards)
 
 **DOM structure (enforced by GameScreen):**
 ```
-GameScreen outer        flex min-h-0 flex-1 [+ background]
-├── Content wrapper     flex min-h-0 min-w-0 flex-1 flex-col gap-2 px-2 pt-2 sm:px-4 sm:pt-4 [+ contentClassName]
-│   ├── Board area      flex min-h-0 flex-1 flex-col gap-2     ← only when fan is set
-│   │   └── {children}
-│   └── Fan area        shrink-0 flex flex-col gap-2            ← only when fan is set
-│       ├── {fanActions}
+GameScreen outer        relative z-10 flex min-h-0 flex-1 [+ background]
+├── Column              flex min-h-0 min-w-0 flex-1 flex-col
+│   ├── Board row       flex min-h-0 flex-1 px-4
+│   │   ├── <aside>     w-64 shrink-0 bg-surface-900/60 p-4     ← only when leftSidebar is set
+│   │   └── Content     flex min-h-0 min-w-0 flex-1 flex-col gap-2 px-4 pt-4 [+ contentClassName]
+│   │       └── {children}
+│   └── Fan area        shrink-0 flex flex-col gap-2 px-4 pb-4 pt-2   ← only when fan is set
+│       ├── {fanActions}   flex min-h-9 items-center justify-center
 │       └── {fan}
-└── <aside>             w-72 shrink-0 rounded-xl my-2 mr-2     ← only when sidebar is set
+└── <aside>             w-72 shrink-0 rounded-xl my-2 mr-2 bg-surface-900/60   ← only when sidebar is set
 ```
-
-When `fan` is omitted, children go directly into the content wrapper (no board/fan split).
 
 **Rules:**
 - `GameBoard` renders `<GameScreen>` as its root element. Games must NOT add outer wrappers, spacing, or padding — `GameScreen` owns all of it.
 - `fan` is ONLY the card hand component. Controls (buttons, status) go in `fanActions`.
 - For edge-to-edge SVG boards (Pandemic, Sky Team), pass `noPadding` to skip padding and flex-col so the board fills the content area.
+- Shared in-game primitives live beside GameScreen in `game-layout/`: `PromptRow` (the "Title · message" action-bar status row, with the cyan/amber turn tones and the pulsing waiting dot) and `GameDialogPanel` (tinted resolve-now panels — defuse/favor/steal-style dialogs). Card faces compose `cardChrome()` from `components/card-fan/card-chrome.ts` for the shared selected-ring/hover/disabled formula. Do not re-hand-roll any of these.
 
 ### Intricate-board rendering standard
 

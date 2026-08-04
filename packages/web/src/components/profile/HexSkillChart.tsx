@@ -1,6 +1,7 @@
 import type { SkillChart } from "@boardgames/core/protocol";
 import { motion } from "framer-motion";
 import type { CSSProperties } from "react";
+import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { polyline } from "../board/svg-paths.ts";
 import type { BoardPoint } from "../board/types.ts";
 import { SparkleIcon } from "../icons";
@@ -40,7 +41,7 @@ type HexSkillChartProps = {
 export function HexSkillChart({ skill, accentHex }: HexSkillChartProps) {
   const axes = skill?.axes ?? null;
   const count = axes?.length ?? GHOST_AXES;
-  const style = { "--accent": accentHex ?? "#6366f1" } as CSSProperties;
+  const style = { "--accent": accentHex ?? DEFAULT_ACCENT } as CSSProperties;
 
   const valuePoints = axes?.map((axis, i) => vertex(i, count, RADIUS * axis.value)) ?? [];
 
@@ -113,7 +114,7 @@ export function HexSkillChart({ skill, accentHex }: HexSkillChartProps) {
                   y={labelPoint.y}
                   textAnchor={anchor}
                   dominantBaseline="middle"
-                  className="fill-fg-muted text-4xs font-semibold"
+                  className="fill-fg-muted text-5xs font-semibold"
                 >
                   {axis.label}
                 </text>

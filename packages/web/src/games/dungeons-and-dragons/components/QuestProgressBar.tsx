@@ -1,3 +1,4 @@
+import "./dnd-tool.css";
 import type { CampaignCheckpoint, CampaignCheckpointKind } from "@boardgames/core/protocol";
 import { useState } from "react";
 

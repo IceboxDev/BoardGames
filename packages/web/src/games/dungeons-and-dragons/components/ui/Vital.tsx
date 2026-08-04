@@ -23,7 +23,7 @@ export function Vital({ label, value, tone, padded = false }: VitalProps) {
       } ${tone}`}
     >
       <span className="font-fantasy text-sm font-bold leading-tight">{value}</span>
-      <span className="text-4xs font-bold uppercase tracking-label opacity-60">{label}</span>
+      <span className="text-5xs font-bold uppercase tracking-label opacity-60">{label}</span>
     </span>
   );
 }

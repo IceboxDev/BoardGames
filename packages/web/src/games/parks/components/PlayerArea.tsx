@@ -118,7 +118,7 @@ function GearChip({
     >
       <span>{"\uD83C\uDF92"}</span>
       <span className="leading-tight">{GEAR_LABELS[gear.kind]}</span>
-      <span className="rounded bg-stone-800 px-0.5 text-[9px]">
+      <span className="rounded bg-stone-800 px-0.5 text-4xs">
         {GEAR_TRIGGER_ICONS[gear.trigger]}
       </span>
     </button>
@@ -140,7 +140,7 @@ function CanteenSlot({
 }) {
   if (!canteen) {
     return (
-      <div className="flex h-9 w-16 items-center justify-center rounded-md border border-dashed border-stone-700 bg-stone-900/30 text-[9px] italic text-stone-600">
+      <div className="flex h-9 w-16 items-center justify-center rounded-md border border-dashed border-stone-700 bg-stone-900/30 text-4xs italic text-stone-600">
         empty
       </div>
     );
@@ -285,7 +285,7 @@ export default function PlayerArea({
           {isMe ? "You" : "Opponent"}
         </span>
         {isActive && (
-          <span className="rounded-full bg-emerald-500/30 px-1.5 py-0.5 text-[9px] font-bold uppercase text-emerald-300">
+          <span className="rounded-full bg-emerald-500/30 px-1.5 py-0.5 text-4xs font-bold uppercase text-emerald-300">
             Turn
           </span>
         )}
@@ -347,7 +347,7 @@ export default function PlayerArea({
       {/* Gear tray */}
       {player.gear.length > 0 && (
         <div className="flex flex-wrap items-center gap-1 rounded-md bg-stone-900/30 p-1">
-          <span className="text-[9px] font-bold uppercase tracking-wider text-amber-300">Gear</span>
+          <span className="text-4xs font-bold uppercase tracking-wider text-amber-300">Gear</span>
           {player.gear.map((g) => {
             const used = player.usedGearThisTurn.includes(g.id);
             const action = activateActionByGearId.get(g.id);

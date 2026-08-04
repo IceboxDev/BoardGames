@@ -141,7 +141,7 @@ function ChatPanel({
 
   return (
     <div className="flex w-full flex-col gap-2 rounded-xl border border-white/10 bg-surface-950/40 p-3 text-left">
-      <span className="text-3xs font-bold uppercase tracking-[0.25em] text-fg-secondary">
+      <span className="text-3xs font-bold uppercase tracking-eyebrow text-fg-secondary">
         Crew Chat
       </span>
       <div
@@ -160,7 +160,7 @@ function ChatPanel({
                 key={`${m.fromSlot}-${m.timestampMs}`}
                 className={`flex flex-col ${isMine ? "items-end" : "items-start"}`}
               >
-                <span className="text-[9px] uppercase tracking-wider text-fg-muted">
+                <span className="text-4xs uppercase tracking-wider text-fg-muted">
                   {m.fromName}
                 </span>
                 <span

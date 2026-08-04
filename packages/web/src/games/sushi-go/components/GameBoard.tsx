@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { ActionLog } from "../../../components/action-log";
 import { CardFan } from "../../../components/card-fan";
 import { GameScreen } from "../../../components/game-layout";
+import { PromptRow } from "../../../components/game-layout/PromptRow";
 import { AiThinkingIndicator } from "../../../components/ui";
 import { Button } from "../../../components/ui/Button";
 import { Chip } from "../../../components/ui/Chip";
@@ -201,23 +202,22 @@ export default function GameBoard({
                     🥢 Chopsticks{useChopsticks ? " (ON)" : ""}
                   </Chip>
                 )}
-                <span className="text-xs font-semibold text-cyan-400">Your turn</span>
-                <span className="text-fg-muted">&middot;</span>
-                <span className="text-xs text-fg-secondary">
-                  {useChopsticks
-                    ? selectedCardId !== null
-                      ? "Select one more card"
-                      : "Select two cards to play"
-                    : "Select a card to play"}
-                </span>
+                <PromptRow
+                  title="Your turn"
+                  message={
+                    useChopsticks
+                      ? selectedCardId !== null
+                        ? "Select one more card"
+                        : "Select two cards to play"
+                      : "Select a card to play"
+                  }
+                />
               </div>
             )}
             {!isGameOver && !canAct && !aiWaiting && (
-              <div className="flex items-center gap-2">
-                <span className="text-xs text-fg-secondary">
-                  {view.phase === "revealing" ? "Revealing cards..." : "Waiting..."}
-                </span>
-              </div>
+              <PromptRow
+                message={view.phase === "revealing" ? "Revealing cards..." : "Waiting..."}
+              />
             )}
             {aiWaiting && (
               <AiThinkingIndicator

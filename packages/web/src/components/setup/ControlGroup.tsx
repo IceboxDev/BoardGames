@@ -9,7 +9,7 @@ import { Surface } from "../ui/Surface";
  */
 export function SectionHeading({ children }: { children: ReactNode }) {
   return (
-    <h2 className="shrink-0 text-3xs font-bold uppercase tracking-[0.25em] text-fg-secondary">
+    <h2 className="shrink-0 text-3xs font-bold uppercase tracking-eyebrow text-fg-secondary">
       {children}
     </h2>
   );

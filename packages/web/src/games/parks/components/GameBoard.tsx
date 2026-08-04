@@ -247,10 +247,10 @@ export default function GameBoard({
                 title="Park deck"
               >
                 <div className="text-lg">{"\uD83C\uDFDE\uFE0F"}</div>
-                <div className="text-[9px] font-bold uppercase tracking-wider text-stone-300">
+                <div className="text-4xs font-bold uppercase tracking-wider text-stone-300">
                   Deck
                 </div>
-                <div className="text-[9px] text-stone-500">{view.parksDeckCount}</div>
+                <div className="text-4xs text-stone-500">{view.parksDeckCount}</div>
               </div>
             )}
             {view.parksDisplay.length === 0 && view.parksDeckCount === 0 && (

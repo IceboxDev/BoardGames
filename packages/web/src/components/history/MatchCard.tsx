@@ -369,6 +369,14 @@ function LastStandingInline({
   const eliminated = outcome.players
     .filter((p) => p.eliminationOrder !== undefined)
     .sort((a, b) => (b.eliminationOrder ?? 0) - (a.eliminationOrder ?? 0));
+  // With recorded standings only the chip leader reads as the winner; ranked
+  // runners-up survived but didn't win the night.
+  const ranks = outcome.players
+    .map((p) => p.survivorRank)
+    .filter((r): r is number => r !== undefined);
+  const bestRank = ranks.length > 0 ? Math.min(...ranks) : undefined;
+  const isChipLeader = (p: MatchOutcomeLastStanding["players"][number]) =>
+    p.survivorRank === undefined || p.survivorRank === bestRank;
   const standingTitle = (p: MatchOutcomeLastStanding["players"][number]) =>
     p.survivorRank === undefined
       ? p.displayName
@@ -380,7 +388,7 @@ function LastStandingInline({
           <AvatarBubble
             key={p.userId}
             name={p.displayName}
-            tone="winner"
+            tone={isChipLeader(p) ? "winner" : "loser"}
             isMe={p.userId === currentUserId}
             title={standingTitle(p)}
           />

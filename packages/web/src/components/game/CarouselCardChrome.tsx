@@ -1,3 +1,4 @@
+import "./carousel-frame.css";
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 import { CAROUSEL_TRANSITION, carouselAnimate } from "./carousel-3d-constants";

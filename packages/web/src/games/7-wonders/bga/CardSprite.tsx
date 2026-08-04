@@ -22,7 +22,7 @@ export default function CardSprite({ img, name, width = 46, className }: CardSpr
     // No sprite for this card (unknown/expansion not in the sheet) — name chip.
     return (
       <span
-        className={`inline-flex items-center justify-center rounded border border-white/15 bg-surface-800/80 px-1 text-center text-4xs leading-tight text-fg-primary ${className ?? ""}`}
+        className={`inline-flex items-center justify-center rounded border border-white/15 bg-surface-800/80 px-1 text-center text-5xs leading-tight text-fg-primary ${className ?? ""}`}
         style={{ width, height }}
         title={name}
       >

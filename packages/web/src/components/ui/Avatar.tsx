@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { initialsFromName } from "../../lib/names.ts";
 
 // Avatar primitive: renders the user's `image` when present, otherwise an
@@ -47,7 +48,7 @@ export function Avatar({
   const ringCls = ring
     ? "ring-2 ring-[var(--avatar-accent)]/60 ring-offset-2 ring-offset-surface-950"
     : "";
-  const style = { "--avatar-accent": accentHex ?? "#6366f1" } as CSSProperties;
+  const style = { "--avatar-accent": accentHex ?? DEFAULT_ACCENT } as CSSProperties;
 
   if (image) {
     return (

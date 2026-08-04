@@ -179,7 +179,7 @@ export function PvAISetupScreen({
             >
               <div className="mb-1.5 flex items-start justify-between gap-0.5 sm:mb-3">
                 <span
-                  className={`inline-flex max-w-[4.5rem] items-center truncate rounded-full px-1 py-0.5 text-4xs font-semibold uppercase tracking-tight ring-1 ring-inset sm:max-w-none sm:px-2.5 sm:text-3xs sm:tracking-wider ${strat.badgeClass}`}
+                  className={`inline-flex max-w-[4.5rem] items-center truncate rounded-full px-1 py-0.5 text-5xs font-semibold uppercase tracking-tight ring-1 ring-inset sm:max-w-none sm:px-2.5 sm:text-3xs sm:tracking-wider ${strat.badgeClass}`}
                 >
                   {strat.difficulty}
                 </span>

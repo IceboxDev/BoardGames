@@ -4,6 +4,7 @@
 // here so call sites stay tidy.
 
 export * from "./common.ts";
+export * from "./http/activity.ts";
 export * from "./http/auth.ts";
 export * from "./http/availability.ts";
 export * from "./http/avatar.ts";

@@ -13,6 +13,7 @@ import { Chip } from "../../ui/Chip";
 import { Select } from "../../ui/Select";
 import { ParticipantPicker } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
+import { GroupLabel, OutcomeFormShell } from "./shared";
 
 type User = { id: string; name: string };
 
@@ -128,7 +129,7 @@ export function ClocktowerForm({ users, value, onChange }: Props) {
     : users;
 
   return (
-    <div className="flex flex-col gap-3">
+    <OutcomeFormShell>
       <EditionPicker edition={edition} onChange={setEdition} />
 
       <StorytellerPicker
@@ -139,14 +140,14 @@ export function ClocktowerForm({ users, value, onChange }: Props) {
       />
 
       <div>
-        <Label>Players</Label>
+        <GroupLabel>Players</GroupLabel>
         <ParticipantPicker users={playerUsers} selectedIds={selectedIds} onChange={setPlayers} />
       </div>
 
       {roster.length > 0 && (
         <div className="flex flex-col gap-1.5">
           <div className="flex items-center justify-between">
-            <Label>Assign characters</Label>
+            <GroupLabel>Assign characters</GroupLabel>
             <span className="text-2xs text-fg-muted">
               <span className="text-emerald-300">Good {goodCount}</span>
               <span className="px-1 text-fg-disabled">·</span>
@@ -173,7 +174,7 @@ export function ClocktowerForm({ users, value, onChange }: Props) {
       )}
 
       <div>
-        <Label>Winner</Label>
+        <GroupLabel>Winner</GroupLabel>
         <div className="flex gap-2">
           <WinnerButton
             active={winnerSide === "good"}
@@ -191,7 +192,7 @@ export function ClocktowerForm({ users, value, onChange }: Props) {
           </WinnerButton>
         </div>
       </div>
-    </div>
+    </OutcomeFormShell>
   );
 }
 
@@ -211,7 +212,7 @@ function StorytellerPicker({
   const groups = fabledByGroup();
   return (
     <div>
-      <Label>Storyteller</Label>
+      <GroupLabel>Storyteller</GroupLabel>
       <div className="flex flex-wrap items-center gap-2">
         <Select
           compact
@@ -267,7 +268,7 @@ function EditionPicker({
 }) {
   return (
     <div>
-      <Label>Edition</Label>
+      <GroupLabel>Edition</GroupLabel>
       <div className="grid grid-cols-1 gap-2 sm:grid-cols-3">
         {CLOCKTOWER_EDITIONS.map((opt) => (
           <Chip
@@ -370,14 +371,6 @@ function WinnerButton({
     >
       {children}
     </Chip>
-  );
-}
-
-function Label({ children }: { children: React.ReactNode }) {
-  return (
-    <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-fg-secondary">
-      {children}
-    </div>
   );
 }
 

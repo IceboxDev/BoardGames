@@ -79,7 +79,7 @@ function MCTSDecisionPanel({
       {actions.map((a) => (
         <div key={a.key} className="flex items-center gap-2">
           <div
-            className={`flex-1 min-w-0 rounded px-2 py-1 text-[0.65rem] ${
+            className={`flex-1 min-w-0 rounded px-2 py-1 text-3xs ${
               a.chosen
                 ? "bg-accent-500/30 text-accent-200 font-semibold"
                 : "bg-surface-800/60 text-fg-secondary"
@@ -102,7 +102,7 @@ function MCTSDecisionPanel({
             </div>
           </div>
           {a.chosen && (
-            <span className="text-accent-400 text-[0.6rem] shrink-0" title="Chosen">
+            <span className="text-accent-400 text-4xs shrink-0" title="Chosen">
               ✓
             </span>
           )}
@@ -115,7 +115,7 @@ function MCTSDecisionPanel({
     <div className="flex flex-col gap-3">
       {playActions && playActions.length > 0 && (
         <div>
-          <span className="text-[0.6rem] font-semibold uppercase tracking-wider text-fg-muted block mb-1.5">
+          <span className="text-4xs font-semibold uppercase tracking-wider text-fg-muted block mb-1.5">
             MCTS Play
           </span>
           {renderActions(playActions, formatPlayActionLabel)}
@@ -123,7 +123,7 @@ function MCTSDecisionPanel({
       )}
       {drawActions && drawActions.length > 0 && (
         <div>
-          <span className="text-[0.6rem] font-semibold uppercase tracking-wider text-fg-muted block mb-1.5">
+          <span className="text-4xs font-semibold uppercase tracking-wider text-fg-muted block mb-1.5">
             MCTS Draw
           </span>
           {renderActions(drawActions, formatDrawActionLabel)}
@@ -199,7 +199,7 @@ export default function GameReplay({ game }: GameReplayProps) {
 
         <aside className="hidden xl:flex w-52 shrink-0 flex-col min-h-0 self-stretch overflow-hidden rounded-lg border border-white/10 bg-surface-900/70">
           <div className="px-2 py-1.5 border-b border-white/10 shrink-0 space-y-0.5">
-            <span className="text-[0.65rem] font-semibold uppercase tracking-widest text-fg-muted">
+            <span className="text-3xs font-semibold uppercase tracking-widest text-fg-muted">
               MCTS
             </span>
             <p className="text-3xs text-fg-secondary leading-snug">
@@ -226,10 +226,10 @@ export default function GameReplay({ game }: GameReplayProps) {
 
       <div className="xl:hidden shrink-0 flex flex-col h-[28vh] min-h-0 overflow-hidden rounded-lg border border-white/10 bg-surface-900/70">
         <div className="px-2 py-1 border-b border-white/10 shrink-0 flex items-center justify-between gap-2">
-          <span className="text-[0.65rem] font-semibold uppercase tracking-widest text-fg-muted">
+          <span className="text-3xs font-semibold uppercase tracking-widest text-fg-muted">
             MCTS
           </span>
-          <span className="text-[9px] text-fg-disabled truncate">
+          <span className="text-4xs text-fg-disabled truncate">
             G{game.gameIndex + 1} · {game.scoreA}–{game.scoreB}
           </span>
         </div>

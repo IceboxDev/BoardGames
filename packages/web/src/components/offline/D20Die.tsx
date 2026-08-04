@@ -10,21 +10,23 @@ import { useId } from "react";
 // up-triangle radius 22. The three triangle vertices point at alternating
 // hexagon corners (spokes); the three edges face the other corners (kites).
 
-const FACETS: { points: string; fill: string }[] = [
+// Facet shading rides the red ramp plus the two D&D ember tokens — no raw
+// hexes, so the die re-tints with the palette.
+const FACETS: { points: string; className: string }[] = [
   // Top kite (catches the most light) → brightest.
-  { points: "50,28 90.7,26.5 50,3 9.3,26.5", fill: "#f87171" },
+  { points: "50,28 90.7,26.5 50,3 9.3,26.5", className: "fill-red-400" },
   // Upper-left facet.
-  { points: "30.95,61 9.3,26.5 50,28", fill: "#ef4444" },
+  { points: "30.95,61 9.3,26.5 50,28", className: "fill-red-500" },
   // Upper-right facet.
-  { points: "50,28 90.7,26.5 69.05,61", fill: "#dc2626" },
+  { points: "50,28 90.7,26.5 69.05,61", className: "fill-red-600" },
   // Lower-left kite.
-  { points: "30.95,61 9.3,26.5 9.3,73.5 50,97", fill: "#991b1b" },
+  { points: "30.95,61 9.3,26.5 9.3,73.5 50,97", className: "fill-red-800" },
   // Lower-right kite.
-  { points: "69.05,61 90.7,26.5 90.7,73.5 50,97", fill: "#7f1d1d" },
+  { points: "69.05,61 90.7,26.5 90.7,73.5 50,97", className: "fill-red-900" },
   // Bottom facet (deepest shadow).
-  { points: "69.05,61 50,97 30.95,61", fill: "#641212" },
+  { points: "69.05,61 50,97 30.95,61", className: "fill-dnd-ember-deep" },
   // Central face (number lives here) — drawn last so its edges sit on top.
-  { points: "50,28 69.05,61 30.95,61", fill: "#b91c1c" },
+  { points: "50,28 69.05,61 30.95,61", className: "fill-dnd-ember" },
 ];
 
 // Every facet edge, stroked thin in gold so the cut catches light.
@@ -62,7 +64,7 @@ export function D20Die({ count, className }: Props) {
       </defs>
 
       {FACETS.map((f) => (
-        <polygon key={f.points} points={f.points} fill={f.fill} />
+        <polygon key={f.points} points={f.points} className={f.className} />
       ))}
 
       {/* Sheen sits above the facet fills but below the gold edges + number. */}
@@ -72,11 +74,17 @@ export function D20Die({ count, className }: Props) {
       />
 
       {/* Inner facet edges (thin) then the outer rim (bright). */}
-      <path d={SPOKES} fill="none" stroke="#fde68a" strokeOpacity="0.4" strokeWidth="0.9" />
+      <path
+        d={SPOKES}
+        fill="none"
+        className="stroke-amber-200"
+        strokeOpacity="0.4"
+        strokeWidth="0.9"
+      />
       <path
         d={EDGES}
         fill="none"
-        stroke="#fcd34d"
+        className="stroke-amber-300"
         strokeOpacity="0.95"
         strokeWidth="2"
         strokeLinejoin="round"
@@ -89,8 +97,7 @@ export function D20Die({ count, className }: Props) {
         dominantBaseline="central"
         fontSize={fontSize}
         fontWeight={800}
-        fill="#fde68a"
-        stroke="#4a0a0a"
+        className="fill-amber-200 stroke-dnd-blood"
         strokeWidth="1.1"
         paintOrder="stroke"
         style={{ fontFamily: "ui-sans-serif, system-ui, sans-serif" }}

@@ -3,12 +3,14 @@ import { formatTime } from "@boardgames/core/games/set/metrics";
 import type { GamePhase } from "@boardgames/core/games/set/types";
 import { useEffect, useRef, useState } from "react";
 import type { SnapshotFrom } from "xstate";
+import { GameScreen } from "../../../components/game-layout";
 import { Button } from "../../../components/ui/Button";
 import { useLocalGame } from "../../../hooks/useLocalGame";
 import { useSetHistory } from "../hooks/useSetHistory";
 import CardGrid from "./CardGrid";
 import GameOverScreen from "./GameOverScreen";
 import LiveMetrics from "./LiveMetrics";
+import StatRow from "./StatRow";
 
 function toGamePhase(state: SnapshotFrom<typeof setGameMachine>): GamePhase {
   if (state.matches("idle")) return "idle";
@@ -73,18 +75,6 @@ export default function TrainerGame({ onViewHistory }: TrainerGameProps) {
     }
   }, [state, send]);
 
-  useEffect(() => {
-    if (!isActive) return;
-    const html = document.documentElement;
-    const body = document.body;
-    html.style.overflow = "hidden";
-    body.style.overflow = "hidden";
-    return () => {
-      html.style.overflow = "";
-      body.style.overflow = "";
-    };
-  }, [isActive]);
-
   if (state.matches("gameOver") && ctx.gameRecord) {
     return (
       <div className="mx-auto max-w-3xl px-6">
@@ -102,9 +92,80 @@ export default function TrainerGame({ onViewHistory }: TrainerGameProps) {
   const isSelecting = state.matches("selecting");
 
   return (
-    <div className="flex h-below-nav overflow-hidden">
-      {/* Center — card grid */}
-      <div className="flex-1 min-h-0 min-w-0 p-2">
+    <GameScreen
+      leftSidebarTitle="Trainer"
+      leftSidebar={
+        <div className="flex min-h-0 flex-1 flex-col gap-3">
+          <StatRow label="Time" value={formatTime(elapsed)} mono />
+          <StatRow label="SETs" value={String(ctx.score)} color="text-green-400" />
+          <StatRow label="Penalties" value={String(ctx.penalties)} color="text-red-400" />
+          <StatRow label="Net" value={String(ctx.score - ctx.penalties)} />
+          <StatRow label="Deck" value={String(ctx.deck.length)} color="text-fg-muted" />
+
+          {(isSelecting || message) && (
+            <div className="border-t border-white/10 pt-3">
+              {isSelecting ? (
+                <p className="text-xs font-semibold leading-snug text-yellow-300">Select 3 cards</p>
+              ) : message ? (
+                <p
+                  className={`text-xs font-semibold leading-snug ${
+                    message.startsWith("Valid")
+                      ? "text-green-400"
+                      : message.startsWith("Hint")
+                        ? "text-amber-400"
+                        : "text-red-400"
+                  }`}
+                >
+                  {message}
+                </p>
+              ) : null}
+            </div>
+          )}
+
+          <div className="flex-1" />
+
+          {isActive && ctx.perSetRecords.length > 0 && (
+            <LiveMetrics
+              perSetRecords={ctx.perSetRecords}
+              gameStartTime={ctx.gameStartTime}
+              score={ctx.score}
+              earlyCallCount={ctx.perSetRecords.filter((r) => r.calledDuringDeal).length}
+            />
+          )}
+
+          <div className="flex flex-col gap-2 border-t border-white/10 pt-3">
+            <Button
+              variant="secondary"
+              size="xs"
+              block
+              onClick={() => send({ type: "PLUS_THREE" })}
+              disabled={!(state.matches("playing") && ctx.deck.length >= 3)}
+            >
+              +3 Cards
+            </Button>
+            <Button
+              variant="warning"
+              size="xs"
+              block
+              onClick={() => send({ type: "USE_HINT" })}
+              disabled={!state.matches("playing")}
+              title="Highlights one card from a valid SET (costs 3 penalties)"
+            >
+              Hint
+            </Button>
+            <Button
+              variant="secondary"
+              size="xs"
+              block
+              onClick={() => send({ type: "START_GAME" })}
+            >
+              New Game
+            </Button>
+          </div>
+        </div>
+      }
+    >
+      <div className="min-h-0 flex-1">
         <CardGrid
           slots={ctx.slots}
           selected={ctx.selected}
@@ -113,92 +174,6 @@ export default function TrainerGame({ onViewHistory }: TrainerGameProps) {
           hintedCardId={ctx.hintedCardId}
         />
       </div>
-
-      {/* Right sidebar — stats, actions & metrics */}
-      <div className="flex flex-col gap-3 px-5 py-4 shrink-0 w-44 border-l border-white/10">
-        <StatRow label="Time" value={formatTime(elapsed)} mono />
-        <StatRow label="SETs" value={String(ctx.score)} color="text-green-400" />
-        <StatRow label="Penalties" value={String(ctx.penalties)} color="text-red-400" />
-        <StatRow label="Net" value={String(ctx.score - ctx.penalties)} />
-        <StatRow label="Deck" value={String(ctx.deck.length)} color="text-fg-muted" />
-
-        {(isSelecting || message) && (
-          <div className="pt-3 border-t border-white/10">
-            {isSelecting ? (
-              <p className="text-xs text-yellow-300 font-semibold leading-snug">Select 3 cards</p>
-            ) : message ? (
-              <p
-                className={`text-xs font-semibold leading-snug ${
-                  message.startsWith("Valid")
-                    ? "text-green-400"
-                    : message.startsWith("Hint")
-                      ? "text-amber-400"
-                      : "text-red-400"
-                }`}
-              >
-                {message}
-              </p>
-            ) : null}
-          </div>
-        )}
-
-        <div className="flex-1" />
-
-        {isActive && ctx.perSetRecords.length > 0 && (
-          <LiveMetrics
-            perSetRecords={ctx.perSetRecords}
-            gameStartTime={ctx.gameStartTime}
-            score={ctx.score}
-            earlyCallCount={ctx.perSetRecords.filter((r) => r.calledDuringDeal).length}
-          />
-        )}
-
-        <div className="flex flex-col gap-2 pt-3 border-t border-white/10">
-          <Button
-            variant="secondary"
-            size="xs"
-            block
-            onClick={() => send({ type: "PLUS_THREE" })}
-            disabled={!(state.matches("playing") && ctx.deck.length >= 3)}
-          >
-            +3 Cards
-          </Button>
-          <Button
-            variant="warning"
-            size="xs"
-            block
-            onClick={() => send({ type: "USE_HINT" })}
-            disabled={!state.matches("playing")}
-            title="Highlights one card from a valid SET (costs 3 penalties)"
-          >
-            Hint
-          </Button>
-          <Button variant="secondary" size="xs" block onClick={() => send({ type: "START_GAME" })}>
-            New Game
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function StatRow({
-  label,
-  value,
-  color = "text-white",
-  mono,
-}: {
-  label: string;
-  value: string;
-  color?: string;
-  mono?: boolean;
-}) {
-  return (
-    <div className="flex items-baseline justify-between gap-2">
-      <span className="text-xs text-fg-muted uppercase tracking-wide">{label}</span>
-      <span className={`text-base font-bold tabular-nums ${color} ${mono ? "font-mono" : ""}`}>
-        {value}
-      </span>
-    </div>
+    </GameScreen>
   );
 }

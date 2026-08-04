@@ -2,6 +2,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { type CSSProperties, type HTMLAttributes, type ReactNode, useId, useRef } from "react";
 import { createPortal } from "react-dom";
 import { XIcon } from "../icons";
+import { DialogBackdrop } from "./DialogBackdrop";
 import { useBodyScrollLock, useDialogEscape, useFocusTrap } from "./dialog-a11y";
 
 // Single dialog primitive. Owns: portal, backdrop, panel chrome, close X,
@@ -125,15 +126,7 @@ export function Modal({
         exit={{ opacity: 0 }}
         transition={{ duration: 0.18 }}
       >
-        <button
-          type="button"
-          aria-label="Close"
-          tabIndex={-1}
-          onClick={closeOnBackdrop ? onClose : undefined}
-          className={`absolute inset-0 bg-surface-950/85 backdrop-blur-sm ${
-            closeOnBackdrop ? "cursor-default" : "cursor-default pointer-events-none"
-          }`}
-        />
+        <DialogBackdrop onDismiss={closeOnBackdrop ? onClose : undefined} />
 
         <motion.div
           ref={panelRef}

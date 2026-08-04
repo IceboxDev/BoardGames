@@ -9,18 +9,34 @@ import type { InputHTMLAttributes, ReactNode, Ref } from "react";
 // Matches `Input`'s border/focus idiom so checkboxes and text fields read as one
 // family.
 
+type CheckboxTone = "accent" | "emerald";
+
+const TONES: Record<CheckboxTone, string> = {
+  accent: "accent-accent-500",
+  emerald: "accent-emerald-500",
+};
+
 type CheckboxProps = Omit<InputHTMLAttributes<HTMLInputElement>, "type"> & {
   label?: ReactNode;
+  /** Check color. `emerald` for affirmative toggles (hosting at home). */
+  tone?: CheckboxTone;
   ref?: Ref<HTMLInputElement>;
 };
 
-export function Checkbox({ label, className = "", id, ref, ...rest }: CheckboxProps) {
+export function Checkbox({
+  label,
+  tone = "accent",
+  className = "",
+  id,
+  ref,
+  ...rest
+}: CheckboxProps) {
   const box = (
     <input
       ref={ref}
       type="checkbox"
       id={id}
-      className={`h-4 w-4 shrink-0 rounded border border-white/15 bg-surface-900 accent-accent-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/40 disabled:opacity-50 ${className}`}
+      className={`h-4 w-4 shrink-0 rounded border border-white/15 bg-surface-900 ${TONES[tone]} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/40 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
       {...rest}
     />
   );

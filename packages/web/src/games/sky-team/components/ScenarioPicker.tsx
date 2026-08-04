@@ -107,7 +107,7 @@ function ScenarioCardTile({
         {available ? (
           selected ? (
             <span
-              className="shrink-0 rounded-full bg-white/15 px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wider text-white ring-1 ring-inset ring-white/20"
+              className="shrink-0 rounded-full bg-white/15 px-1.5 py-0.5 text-4xs font-bold uppercase tracking-wider text-white ring-1 ring-inset ring-white/20"
               aria-hidden="true"
             >
               ✓
@@ -115,7 +115,7 @@ function ScenarioCardTile({
           ) : null
         ) : (
           <span
-            className="shrink-0 rounded bg-surface-700/60 px-1.5 py-0.5 text-4xs font-semibold uppercase tracking-wider text-fg-secondary ring-1 ring-inset ring-white/10"
+            className="shrink-0 rounded bg-surface-700/60 px-1.5 py-0.5 text-5xs font-semibold uppercase tracking-wider text-fg-secondary ring-1 ring-inset ring-white/10"
             aria-hidden="true"
           >
             Soon

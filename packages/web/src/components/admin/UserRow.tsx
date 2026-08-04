@@ -4,6 +4,7 @@ import { KeyIcon } from "../icons";
 import { Button } from "../ui/Button";
 import { Chip } from "../ui/Chip";
 import { IconButton } from "../ui/IconButton";
+import { Input } from "../ui/Input";
 import { SegmentedControl } from "../ui/SegmentedControl";
 import { CoverageCell } from "./CoverageCell";
 import { InventoryPanel } from "./InventoryPanel";
@@ -24,6 +25,8 @@ export type UserRowProps = {
   pending: boolean;
   /** Calendar drawer trigger. */
   onOpenCalendar: () => void;
+  /** Activity drawer trigger (clicking the user's name). */
+  onOpenActivity: () => void;
   /** Delete mode is a page-level switch — when on, the Online column shows
    *  a Delete chip instead of the mode picker and the row can drop into
    *  the email-confirm sub-row.
@@ -58,6 +61,7 @@ export function UserRow({
   onSetOnlineMode,
   pending,
   onOpenCalendar,
+  onOpenActivity,
   deleteMode,
   isSelf,
   confirmingDelete,
@@ -84,7 +88,17 @@ export function UserRow({
             <CoverageCell coverage={coverage} />
           </button>
         </td>
-        <td className="px-5 py-3 font-medium">{user.name || "—"}</td>
+        <td className="px-5 py-3 font-medium">
+          {/* biome-ignore lint/correctness/noRestrictedElements: bespoke clickable name — opens the user's activity trail */}
+          <button
+            type="button"
+            onClick={onOpenActivity}
+            aria-label={`View ${user.name || user.email}'s activity`}
+            className="-mx-1 cursor-pointer rounded-md px-1 py-0.5 text-left font-medium transition-colors hover:bg-white/5 hover:text-accent-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+          >
+            {user.name || "—"}
+          </button>
+        </td>
         <td className="px-5 py-3 text-fg-secondary">{user.email}</td>
         <td className="px-5 py-3 text-center">
           <RoleBadge role={user.role ?? null} />
@@ -259,9 +273,9 @@ function DeleteConfirm({
         to confirm permanent deletion.
       </p>
       <div className="flex flex-col gap-2 sm:flex-row sm:items-center">
-        <input
+        <Input
           type="text"
-          // biome-ignore lint/a11y/noAutofocus: focus on the active confirmation input
+          invalid
           autoFocus
           value={confirmEmail}
           onChange={(e) => onConfirmEmailChange(e.target.value)}
@@ -269,7 +283,7 @@ function DeleteConfirm({
           disabled={deleting}
           spellCheck={false}
           autoComplete="off"
-          className="w-full flex-1 rounded-md border border-rose-500/30 bg-surface-950 px-3 py-1.5 text-sm text-white placeholder:text-fg-disabled focus:border-rose-400 focus:outline-none disabled:opacity-50"
+          className="flex-1"
         />
         <div className="flex items-center justify-end gap-2">
           <Button variant="ghost" size="sm" onClick={onCancelDelete} disabled={deleting}>

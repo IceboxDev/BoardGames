@@ -105,7 +105,7 @@ export default function SeasonMissionsPanel({ view, myIndex }: SeasonMissionsPan
       <div className="mb-1 flex items-center justify-between">
         <span className="text-3xs font-bold uppercase tracking-wider text-amber-300">Missions</span>
         <span
-          className="text-[9px] italic text-stone-500"
+          className="text-4xs italic text-stone-500"
           title="Strict majority each season — ties earn nothing"
         >
           {"\u2139\uFE0F"}
@@ -143,7 +143,7 @@ export default function SeasonMissionsPanel({ view, myIndex }: SeasonMissionsPan
                 <span className="truncate text-3xs font-semibold text-stone-200">
                   {SEASON_MISSION_LABELS[mission]}
                 </span>
-                <span className="text-[9px] italic text-stone-500">
+                <span className="text-4xs italic text-stone-500">
                   {REWARD_ICON[mission]} {REWARD_SHORT[mission]}
                 </span>
               </div>
@@ -168,7 +168,7 @@ export default function SeasonMissionsPanel({ view, myIndex }: SeasonMissionsPan
               )}
               {pastResult && (
                 <span
-                  className={`rounded px-1 text-[9px] font-bold ${
+                  className={`rounded px-1 text-4xs font-bold ${
                     pastResult.winner === -1
                       ? "bg-stone-700 text-stone-400"
                       : pastResult.winner === myIndex

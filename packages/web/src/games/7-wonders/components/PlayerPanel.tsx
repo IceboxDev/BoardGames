@@ -26,7 +26,7 @@ export default function PlayerPanel({
         <span className="truncate text-xs font-semibold text-fg-primary">{label}</span>
         <span className="flex items-center gap-1">
           {neighborSide && (
-            <span className="rounded bg-surface-700 px-1 text-4xs text-fg-secondary">
+            <span className="rounded bg-surface-700 px-1 text-5xs text-fg-secondary">
               {neighborSide === "left" ? "← left" : "right →"}
             </span>
           )}

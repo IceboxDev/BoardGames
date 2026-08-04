@@ -80,13 +80,13 @@ function EdificeCard({
         <span className="text-xs font-semibold text-fg-primary">
           Age {slot.age}: {slot.card}
         </span>
-        <span className="shrink-0 text-4xs uppercase tracking-wide text-fg-secondary">
+        <span className="shrink-0 text-5xs uppercase tracking-wide text-fg-secondary">
           {status.label}
         </span>
       </div>
       <span className="text-3xs text-emerald-300">✓ {rewardText(slot.card)}</span>
       <span className="text-3xs text-rose-300">✗ {penaltyText(slot.card)}</span>
-      <div className="flex items-center justify-between text-4xs text-fg-secondary">
+      <div className="flex items-center justify-between text-5xs text-fg-secondary">
         <span>
           {slot.status === "project"
             ? `${slot.pawnsLeft} pawn${slot.pawnsLeft === 1 ? "" : "s"} left`

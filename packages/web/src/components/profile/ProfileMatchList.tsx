@@ -1,6 +1,7 @@
 import { extractParticipantIds } from "@boardgames/core/history/participant-results";
 import type { MatchRecord } from "@boardgames/core/protocol";
 import type { CSSProperties, ReactNode } from "react";
+import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { formatShortDate } from "../../lib/date-format.ts";
 import { resolveGame } from "../../lib/games-by-slug.ts";
 import { matchResultBadge } from "../../lib/match-result-badge.ts";
@@ -45,7 +46,7 @@ export function ProfileMatchList({ matches, userId, firstName, footer }: Profile
               key={match.id}
               variant="raised"
               padding="none"
-              style={{ "--accent": game?.accentHex ?? "#6366f1" } as CSSProperties}
+              style={{ "--accent": game?.accentHex ?? DEFAULT_ACCENT } as CSSProperties}
               className="flex items-center gap-3 p-2.5"
             >
               <div className="h-11 w-11 shrink-0 overflow-hidden rounded-lg bg-surface-800 ring-1 ring-[var(--accent)]/30">

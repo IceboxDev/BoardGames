@@ -7,6 +7,7 @@ import {
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { logActivity } from "../lib/activity-log.ts";
 import {
   applyRsvpNoToAvailability,
   fetchRsvpNoDatesForUser,
@@ -76,6 +77,10 @@ userAvailabilityRoutes.put("/availability", zJsonBody(PushAvailabilityBodySchema
     ],
     "write",
   );
+  logActivity(user.id, "availability", {
+    can: entries.filter(([, s]) => s === "can").length,
+    maybe: entries.filter(([, s]) => s === "maybe").length,
+  });
 
   return c.json(OkResponseSchema.parse({ ok: true }));
 });

@@ -82,7 +82,7 @@ function Stat({ label, value }: { label: string; value: number }) {
   return (
     <div className="rounded bg-stone-900/60 p-1 text-center">
       <div className="text-sm font-bold text-white">{value}</div>
-      <div className="text-[9px] uppercase">{label}</div>
+      <div className="text-4xs uppercase">{label}</div>
     </div>
   );
 }

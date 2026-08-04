@@ -6,6 +6,7 @@ import {
   variantConfigForSlug,
 } from "../../games/match-variants";
 import { Chip } from "../ui/Chip";
+import { GroupLabel } from "./forms/shared";
 import { applyScenario } from "./outcome";
 
 type Props = {
@@ -41,8 +42,8 @@ export function GameVariantPicker({ gameSlug, outcome, onChange }: Props) {
 
   return (
     <div>
-      <div className="mb-1 text-xs font-semibold uppercase tracking-wider text-fg-secondary">
-        {config.label}
+      <div className="mb-1">
+        <GroupLabel>{config.label}</GroupLabel>
       </div>
       {config.mode === "single" ? (
         <SinglePicker config={config} value={stored} onChange={setScenario} />

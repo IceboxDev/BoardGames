@@ -1,4 +1,5 @@
 import type { CardId } from "@boardgames/core/games/7-wonders/types";
+import { cardChrome } from "../../../components/card-fan/card-chrome";
 import { COLOR_HEX, costText, defOf, effectLabel } from "../card-utils";
 
 interface CardFaceProps {
@@ -24,21 +25,17 @@ export default function CardFace({
   const hex = COLOR_HEX[def.color];
   const cost = costText(def.cost);
 
-  const ringClass = selected
-    ? "ring-2 ring-white ring-offset-1 ring-offset-gray-900 scale-105"
-    : "";
-  const interactionClass = disabled
-    ? "opacity-50 cursor-default"
-    : onClick
-      ? "hover:scale-105 cursor-pointer"
-      : "";
-
   return (
     <button
       type="button"
       onClick={disabled ? undefined : onClick}
       disabled={disabled && !selected}
-      className={`relative flex h-full w-full flex-col overflow-hidden rounded-lg border border-white/15 bg-surface-800 text-left shadow-md transition-all ${ringClass} ${interactionClass} ${className ?? ""}`}
+      className={cardChrome({
+        selected,
+        disabled,
+        hover: onClick ? "scale" : "none",
+        className: `flex h-full w-full flex-col border border-white/15 bg-surface-800 text-left ${className ?? ""}`,
+      })}
     >
       <div
         className="px-1.5 py-1 text-3xs font-bold leading-tight text-white"
@@ -53,7 +50,7 @@ export default function CardFace({
           </span>
         ))}
         {def.chainFrom && (
-          <span className="text-4xs italic leading-tight text-fg-disabled">
+          <span className="text-5xs italic leading-tight text-fg-disabled">
             ⛓ {def.chainFrom.join(" / ")}
           </span>
         )}
