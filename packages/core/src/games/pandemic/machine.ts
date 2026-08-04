@@ -1,4 +1,5 @@
 import { assign, setup } from "xstate";
+import { envelopeActionValidator, safeApply } from "../../machines/action-validation";
 import type { GameMachineSpec } from "../../machines/types";
 import {
   advanceTurn,
@@ -85,93 +86,105 @@ export const pandemicMachine = setup({
   actions: {
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
-      const seed = event.config.seed ?? randomSeed();
-      const rng = createRng(seed);
-      const gs = createGame(event.config, rng);
-      return {
-        gameState: gs,
-        seed,
-        rng,
-        replaySteps: [makeInitialStep(gs)],
-      };
+      return safeApply("pandemic", () => {
+        const seed = event.config.seed ?? randomSeed();
+        const rng = createRng(seed);
+        const gs = createGame(event.config, rng);
+        return {
+          gameState: gs,
+          seed,
+          rng,
+          replaySteps: [makeInitialStep(gs)],
+        };
+      });
     }),
 
     applyPlayerAction: assign(({ context, event }) => {
       if (event.type !== "PLAYER_ACTION") return {};
       if (context.gameState === null) return {};
       const preState = context.gameState;
-      try {
-        const postState = applyAction(preState, event.action);
-        return {
-          gameState: postState,
-          replaySteps: [
-            ...context.replaySteps,
-            makePlayerActionStep(context.replaySteps, event.action, preState, postState),
-          ],
-        };
-      } catch (err) {
-        // The UI is expected to only dispatch actions derived from
-        // getLegalActions; hitting this path means the UI and engine
-        // disagree about legality. Log loudly and keep the old state so
-        // the user can retry with a legal move.
-        if (err instanceof InvalidActionError) {
-          console.error(err.message, err.action);
-          return {};
+      return safeApply("pandemic", () => {
+        try {
+          const postState = applyAction(preState, event.action);
+          return {
+            gameState: postState,
+            replaySteps: [
+              ...context.replaySteps,
+              makePlayerActionStep(context.replaySteps, event.action, preState, postState),
+            ],
+          };
+        } catch (err) {
+          // The UI is expected to only dispatch actions derived from
+          // getLegalActions; hitting this path means the UI and engine
+          // disagree about legality. Log loudly and keep the old state so
+          // the user can retry with a legal move.
+          if (err instanceof InvalidActionError) {
+            console.error(err.message, err.action);
+            return {};
+          }
+          throw err;
         }
-        throw err;
-      }
+      });
     }),
 
     runDrawPhase: assign(({ context }) => {
       if (context.gameState === null) return {};
       const preState = context.gameState;
-      const postState = applyDrawPhase(preState);
-      return {
-        gameState: postState,
-        replaySteps: [
-          ...context.replaySteps,
-          makeAutomatedStep(context.replaySteps, "draw", preState, postState),
-        ],
-      };
+      return safeApply("pandemic", () => {
+        const postState = applyDrawPhase(preState);
+        return {
+          gameState: postState,
+          replaySteps: [
+            ...context.replaySteps,
+            makeAutomatedStep(context.replaySteps, "draw", preState, postState),
+          ],
+        };
+      });
     }),
 
     runEpidemic: assign(({ context }) => {
       if (context.gameState === null) return {};
       const preState = context.gameState;
-      const postState = resolveEpidemic(preState, context.rng);
-      return {
-        gameState: postState,
-        replaySteps: [
-          ...context.replaySteps,
-          makeAutomatedStep(context.replaySteps, "epidemic", preState, postState),
-        ],
-      };
+      return safeApply("pandemic", () => {
+        const postState = resolveEpidemic(preState, context.rng);
+        return {
+          gameState: postState,
+          replaySteps: [
+            ...context.replaySteps,
+            makeAutomatedStep(context.replaySteps, "epidemic", preState, postState),
+          ],
+        };
+      });
     }),
 
     runInfectPhase: assign(({ context }) => {
       if (context.gameState === null) return {};
       const preState = context.gameState;
-      const postState = applyInfectPhase(preState);
-      return {
-        gameState: postState,
-        replaySteps: [
-          ...context.replaySteps,
-          makeAutomatedStep(context.replaySteps, "infect", preState, postState),
-        ],
-      };
+      return safeApply("pandemic", () => {
+        const postState = applyInfectPhase(preState);
+        return {
+          gameState: postState,
+          replaySteps: [
+            ...context.replaySteps,
+            makeAutomatedStep(context.replaySteps, "infect", preState, postState),
+          ],
+        };
+      });
     }),
 
     runAdvanceTurn: assign(({ context }) => {
       if (context.gameState === null) return {};
       const preState = context.gameState;
-      const postState = advanceTurn(preState);
-      return {
-        gameState: postState,
-        replaySteps: [
-          ...context.replaySteps,
-          makeAutomatedStep(context.replaySteps, "advance_turn", preState, postState),
-        ],
-      };
+      return safeApply("pandemic", () => {
+        const postState = advanceTurn(preState);
+        return {
+          gameState: postState,
+          replaySteps: [
+            ...context.replaySteps,
+            makeAutomatedStep(context.replaySteps, "advance_turn", preState, postState),
+          ],
+        };
+      });
     }),
   },
 }).createMachine({
@@ -301,6 +314,14 @@ export const pandemicSpec: GameMachineSpec<
     if (gs === null) return [];
     return getLegalActions(gs);
   },
+
+  // Pandemic's UI does not drive from `legalActions` (multi-step actions such
+  // as `share_knowledge` and event cards are composed client-side), so strict
+  // enumeration matching would reject legal moves. Well-formedness is checked
+  // here and `applyAction` — wrapped in `safeApply` — adjudicates legality.
+  validateAction: envelopeActionValidator<typeof pandemicMachine, PandemicEvent>({
+    toEvent: (action) => ({ type: "PLAYER_ACTION", action: action as GameAction }),
+  }),
 
   getActivePlayer(snapshot) {
     return snapshot.context.gameState?.currentPlayerIndex ?? 0;

@@ -1,4 +1,5 @@
-import { and, assign, fromCallback, not, setup } from "xstate";
+import { and, assign, fromCallback, not, type SnapshotFrom, setup } from "xstate";
+import { directEventValidator, safeApply } from "../../machines/action-validation";
 import type { GameMachineSpec } from "../../machines/types";
 import {
   buildFullDeck,
@@ -195,12 +196,14 @@ export const setPvpMachine = setup({
       };
     }),
 
-    dealOneCard: assign(({ context }) => {
-      const [next, ...rest] = context.dealQueue;
-      const slots = [...context.slots];
-      slots[next.slotIndex] = next.card;
-      return { slots, dealQueue: rest };
-    }),
+    dealOneCard: assign(({ context }) =>
+      safeApply("set-pvp", () => {
+        const [next, ...rest] = context.dealQueue;
+        const slots = [...context.slots];
+        slots[next.slotIndex] = next.card;
+        return { slots, dealQueue: rest };
+      }),
+    ),
 
     updateSetTimers: assign(({ context }) => ({
       setTimers: computeUpdatedTimers(context.slots, context.setTimers),
@@ -224,98 +227,100 @@ export const setPvpMachine = setup({
 
     resolveValidPvpSet: assign(({ context, event }) => {
       if (event.type !== "SELECT_CARD" || context.activePlayer === null) return {};
-
-      const ids = [...context.selected, event.cardId];
-      const now = Date.now();
       const pid = context.activePlayer;
 
-      const timerKey = setKey(ids[0], ids[1], ids[2]);
-      const visibilityTime = context.setTimers[timerKey] ?? context.gameStartTime;
-      const reactionTimeMs = Math.max(0, context.setCallTime - visibilityTime);
-      const selectionTimeMs = now - context.setCallTime;
+      return safeApply("set-pvp", () => {
+        const ids = [...context.selected, event.cardId];
+        const now = Date.now();
 
-      const visible = visibleCards(context.slots);
-      const record: PerSetRecord = {
-        reactionTimeMs,
-        selectionTimeMs,
-        totalFindTimeMs: reactionTimeMs + selectionTimeMs,
-        boardSize: visible.length,
-        calledDuringDeal: context.calledDuringDeal,
-        cardsDealtWhenCalled: context.cardsDealtWhenCalled,
-      };
+        const timerKey = setKey(ids[0], ids[1], ids[2]);
+        const visibilityTime = context.setTimers[timerKey] ?? context.gameStartTime;
+        const reactionTimeMs = Math.max(0, context.setCallTime - visibilityTime);
+        const selectionTimeMs = now - context.setCallTime;
 
-      // Update the calling player's state
-      const newPlayers = [...context.players] as [PvpPlayerState, PvpPlayerState];
-      newPlayers[pid] = {
-        ...newPlayers[pid],
-        score: newPlayers[pid].score + 1,
-        perSetRecords: [...newPlayers[pid].perSetRecords, record],
-        streakEvents: [...newPlayers[pid].streakEvents, true],
-      };
+        const visible = visibleCards(context.slots);
+        const record: PerSetRecord = {
+          reactionTimeMs,
+          selectionTimeMs,
+          totalFindTimeMs: reactionTimeMs + selectionTimeMs,
+          boardSize: visible.length,
+          calledDuringDeal: context.calledDuringDeal,
+          cardsDealtWhenCalled: context.cardsDealtWhenCalled,
+        };
 
-      // Remove set timer keys that involve removed cards
-      const removedIdSet = new Set(ids);
-      const newTimers: Record<string, number> = {};
-      for (const [tk, tv] of Object.entries(context.setTimers)) {
-        if (!tk.split("-").some((x) => removedIdSet.has(Number(x)))) {
-          newTimers[tk] = tv;
+        // Update the calling player's state
+        const newPlayers = [...context.players] as [PvpPlayerState, PvpPlayerState];
+        newPlayers[pid] = {
+          ...newPlayers[pid],
+          score: newPlayers[pid].score + 1,
+          perSetRecords: [...newPlayers[pid].perSetRecords, record],
+          streakEvents: [...newPlayers[pid].streakEvents, true],
+        };
+
+        // Remove set timer keys that involve removed cards
+        const removedIdSet = new Set(ids);
+        const newTimers: Record<string, number> = {};
+        for (const [tk, tv] of Object.entries(context.setTimers)) {
+          if (!tk.split("-").some((x) => removedIdSet.has(Number(x)))) {
+            newTimers[tk] = tv;
+          }
         }
-      }
 
-      // Replace cards on the board
-      const removeIndices = ids.map((cid) =>
-        context.slots.findIndex((s) => s !== null && s.id === cid),
-      );
-      const nonNullCount = visible.length;
-      const remainingQueue = [...context.dealQueue];
+        // Replace cards on the board
+        const removeIndices = ids.map((cid) =>
+          context.slots.findIndex((s) => s !== null && s.id === cid),
+        );
+        const nonNullCount = visible.length;
+        const remainingQueue = [...context.dealQueue];
 
-      let newSlots: (SetCardData | null)[];
-      let newDeck = context.deck;
-      let dealQueue: DealEntry[] = [];
-      let resolveDelayMs = 300;
+        let newSlots: (SetCardData | null)[];
+        let newDeck = context.deck;
+        let dealQueue: DealEntry[] = [];
+        let resolveDelayMs = 300;
 
-      if (nonNullCount <= 12 && context.deck.length >= 3) {
-        const newCards = context.deck.slice(0, 3);
-        newDeck = context.deck.slice(3);
-        newSlots = [...context.slots];
-        for (const idx of removeIndices) {
-          newSlots[idx] = null;
-        }
-        const replacementQueue: DealEntry[] = removeIndices.map((idx, i) => ({
-          slotIndex: idx,
-          card: newCards[i],
-        }));
-        dealQueue = [...remainingQueue, ...replacementQueue];
-        resolveDelayMs = 300;
-      } else {
-        newSlots = context.slots
-          .map((s) => (s && removedIdSet.has(s.id) ? null : s))
-          .filter((s): s is SetCardData => s !== null);
-
-        if (newDeck.length === 0 && !tableHasSet(newSlots as SetCardData[])) {
-          resolveDelayMs = 500;
-          dealQueue = [];
-        } else if (remainingQueue.length > 0) {
-          dealQueue = remainingQueue;
+        if (nonNullCount <= 12 && context.deck.length >= 3) {
+          const newCards = context.deck.slice(0, 3);
+          newDeck = context.deck.slice(3);
+          newSlots = [...context.slots];
+          for (const idx of removeIndices) {
+            newSlots[idx] = null;
+          }
+          const replacementQueue: DealEntry[] = removeIndices.map((idx, i) => ({
+            slotIndex: idx,
+            card: newCards[i],
+          }));
+          dealQueue = [...remainingQueue, ...replacementQueue];
           resolveDelayMs = 300;
         } else {
-          dealQueue = [];
-          resolveDelayMs = 0;
-        }
-      }
+          newSlots = context.slots
+            .map((s) => (s && removedIdSet.has(s.id) ? null : s))
+            .filter((s): s is SetCardData => s !== null);
 
-      return {
-        selected: new Set<number>(),
-        activePlayer: null,
-        selectionDeadline: 0,
-        message: `Player ${pid + 1} found a SET!`,
-        players: newPlayers,
-        setTimers: newTimers,
-        slots: newSlots,
-        deck: newDeck,
-        dealQueue,
-        resolveDelayMs,
-      };
+          if (newDeck.length === 0 && !tableHasSet(newSlots as SetCardData[])) {
+            resolveDelayMs = 500;
+            dealQueue = [];
+          } else if (remainingQueue.length > 0) {
+            dealQueue = remainingQueue;
+            resolveDelayMs = 300;
+          } else {
+            dealQueue = [];
+            resolveDelayMs = 0;
+          }
+        }
+
+        return {
+          selected: new Set<number>(),
+          activePlayer: null,
+          selectionDeadline: 0,
+          message: `Player ${pid + 1} found a SET!`,
+          players: newPlayers,
+          setTimers: newTimers,
+          slots: newSlots,
+          deck: newDeck,
+          dealQueue,
+          resolveDelayMs,
+        };
+      });
     }),
 
     resolveInvalidPvpSet: assign(({ context }) => {
@@ -369,26 +374,28 @@ export const setPvpMachine = setup({
       return { selected: newSelected };
     }),
 
-    finalizePvpGame: assign(({ context }) => {
-      const durationMs = Date.now() - context.gameStartTime;
-      const p0 = buildPlayerRecord(context.players[0]);
-      const p1 = buildPlayerRecord(context.players[1]);
+    finalizePvpGame: assign(({ context }) =>
+      safeApply("set-pvp", () => {
+        const durationMs = Date.now() - context.gameStartTime;
+        const p0 = buildPlayerRecord(context.players[0]);
+        const p1 = buildPlayerRecord(context.players[1]);
 
-      let winner: 0 | 1 | "draw";
-      if (p0.netScore > p1.netScore) winner = 0;
-      else if (p1.netScore > p0.netScore) winner = 1;
-      else winner = "draw";
+        let winner: 0 | 1 | "draw";
+        if (p0.netScore > p1.netScore) winner = 0;
+        else if (p1.netScore > p0.netScore) winner = 1;
+        else winner = "draw";
 
-      return {
-        gameResult: {
-          players: [p0, p1] as [PvpPlayerRecordEntry, PvpPlayerRecordEntry],
-          winner,
-          durationMs,
-          scoreA: p0.netScore,
-          scoreB: p1.netScore,
-        },
-      };
-    }),
+        return {
+          gameResult: {
+            players: [p0, p1] as [PvpPlayerRecordEntry, PvpPlayerRecordEntry],
+            winner,
+            durationMs,
+            scoreA: p0.netScore,
+            scoreB: p1.netScore,
+          },
+        };
+      }),
+    ),
   },
 }).createMachine({
   id: "setPvp",
@@ -555,6 +562,31 @@ export interface SetPvpPlayerView {
 // Spec export
 // ---------------------------------------------------------------------------
 
+/**
+ * Every entry carries `playerIndex` built from the authenticated `player`, so
+ * a payload naming another seat can never match.
+ */
+function buildPvpLegalActions(
+  snapshot: SnapshotFrom<typeof setPvpMachine>,
+  player: number,
+): PvpGameEvent[] {
+  const events: PvpGameEvent[] = [];
+  const ctx = snapshot.context;
+
+  if (snapshot.matches({ dealing: "active" }) || snapshot.matches("playing")) {
+    events.push({ type: "CALL_SET", playerIndex: player as PlayerId });
+  }
+
+  if (snapshot.matches("selecting") && ctx.activePlayer === player) {
+    const visible = visibleCards(ctx.slots);
+    for (const card of visible) {
+      events.push({ type: "SELECT_CARD", cardId: card.id, playerIndex: player as PlayerId });
+    }
+  }
+
+  return events;
+}
+
 export const setPvpSpec: GameMachineSpec<
   typeof setPvpMachine,
   SetPvpPlayerView,
@@ -578,22 +610,14 @@ export const setPvpSpec: GameMachineSpec<
   },
 
   getLegalActions(snapshot, player) {
-    const events: PvpGameEvent[] = [];
-    const ctx = snapshot.context;
-
-    if (snapshot.matches({ dealing: "active" }) || snapshot.matches("playing")) {
-      events.push({ type: "CALL_SET", playerIndex: player as PlayerId });
-    }
-
-    if (snapshot.matches("selecting") && ctx.activePlayer === player) {
-      const visible = visibleCards(ctx.slots);
-      for (const card of visible) {
-        events.push({ type: "SELECT_CARD", cardId: card.id, playerIndex: player as PlayerId });
-      }
-    }
-
-    return events;
+    return buildPvpLegalActions(snapshot, player);
   },
+
+  validateAction: directEventValidator<typeof setPvpMachine, PvpGameEvent, PvpGameEvent>({
+    legalActions: buildPvpLegalActions,
+    toCandidate: (event) => event,
+    toEvent: (event) => event,
+  }),
 
   getActivePlayer(snapshot) {
     // -1 = simultaneous (both can CALL_SET)

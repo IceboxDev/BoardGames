@@ -11,20 +11,31 @@ import { serve } from "@hono/node-server";
 import { initDb } from "./db.ts";
 import { markStaleProcessingCampaigns } from "./lib/dnd-campaigns-db.ts";
 import { markStaleProcessingCharacters } from "./lib/dnd-characters-db.ts";
+import { installProcessGuards } from "./lib/process-guards.ts";
 import { app, injectWebSocket } from "./server.ts";
 import { markStaleRunning } from "./tournament/manager.ts";
 
 import "./sessions/machine-registry.ts";
 import { maybeEnableCppAgent } from "./sessions/cpp-agent.ts";
+import { shutdownAllSessions } from "./sessions/manager.ts";
 
 maybeEnableCppAgent(); // opt-in via SW7_ENABLE=1; otherwise the random stub stays
 
 const PORT = Number(process.env.PORT ?? 3001);
+const SHUTDOWN_GRACE_MS = 10_000;
 
-await initDb();
-await markStaleRunning();
-await markStaleProcessingCampaigns();
-await markStaleProcessingCharacters();
+// Boot failures must be loud and non-zero. A top-level `await` that rejects
+// produces an unhandled rejection whose exit code and message depend on Node's
+// defaults — not something a healthcheck can reason about.
+try {
+  await initDb();
+  await markStaleRunning();
+  await markStaleProcessingCampaigns();
+  await markStaleProcessingCharacters();
+} catch (err) {
+  console.error("[boot] initialisation failed — refusing to start:", err);
+  process.exit(1);
+}
 
 // Production (Railway) requires IPv6 wildcard `::` so the IPv6-first internal
 // network can reach the container. In dev, Vite's proxy connects to
@@ -39,3 +50,37 @@ const server = serve({ fetch: app.fetch, port: PORT, hostname: HOSTNAME }, (info
 });
 
 injectWebSocket(server);
+
+// ---------------------------------------------------------------------------
+// Shutdown
+// ---------------------------------------------------------------------------
+
+let shuttingDown = false;
+
+/**
+ * Drain and exit.
+ *
+ * Railway sends SIGTERM on every redeploy. Live games are actors in process
+ * memory and are never snapshotted, so they cannot survive — but they can at
+ * least END VISIBLY. Without this the socket just goes dark and the board
+ * freezes with no explanation.
+ */
+function shutdown(reason: string, code: number): void {
+  if (shuttingDown) return;
+  shuttingDown = true;
+  console.log(`[shutdown] ${reason}`);
+
+  const drained = shutdownAllSessions("The server is restarting — this game has ended.");
+  if (drained > 0) console.log(`[shutdown] ended ${drained} live session(s)`);
+
+  server.close(() => process.exit(code));
+  // Never let a hung socket hold the deploy open past the grace period.
+  setTimeout(() => process.exit(code), SHUTDOWN_GRACE_MS).unref();
+}
+
+installProcessGuards({
+  onFatal: (reason) => shutdown(reason, 1),
+});
+
+process.on("SIGTERM", () => shutdown("received SIGTERM", 0));
+process.on("SIGINT", () => shutdown("received SIGINT", 0));

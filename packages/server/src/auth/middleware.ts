@@ -1,5 +1,6 @@
 import type { MiddlewareHandler } from "hono";
 import { noteVisit } from "../lib/activity-log.ts";
+import { isTrustedOrigin } from "../lib/origins.ts";
 import { verifyWsTicket } from "../sessions/ws-ticket.ts";
 import { auth } from "./config.ts";
 import type { AdminEnv, AdminUser, AppEnv, WsEnv } from "./types.ts";
@@ -38,6 +39,15 @@ export const requireAdmin: MiddlewareHandler<AdminEnv> = async (c, next) => {
  * failed".
  */
 export const requireWsAuth: MiddlewareHandler<WsEnv> = async (c, next) => {
+  // Cross-Site WebSocket Hijacking guard. WebSocket handshakes are NOT subject
+  // to CORS, so the `/api/*` cors() middleware does nothing here — and with
+  // production cookies set `SameSite=None`, the cookie fallback below would
+  // otherwise let ANY page a logged-in member visits open an authenticated
+  // socket as them and drive their games.
+  if (!isTrustedOrigin(c.req.header("origin"))) {
+    return c.json({ error: "forbidden" }, 403);
+  }
+
   const ticket = c.req.query("ticket");
   if (ticket) {
     const userId = verifyWsTicket(ticket);

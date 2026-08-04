@@ -64,7 +64,7 @@ All HTTP, WebSocket, and SSE messages exchanged between `packages/web` and `pack
 
 - **`packages/core`** — Game logic, rules, AI, and state machines. No UI dependencies. Exports via path-mapped subpaths (e.g. `@boardgames/core/games/lost-cities/types`).
 - **`packages/web`** — React + Vite + Tailwind v4 frontend. Each game lives in `src/games/<slug>/` with a `GameDefinition` export in `index.ts`. Games auto-register via `registry.ts` using `import.meta.glob`.
-- **`packages/server`** — Hono HTTP/WebSocket server with better-sqlite3 for persistence. Hosts tournament runners and game sessions.
+- **`packages/server`** — Hono HTTP/WebSocket server persisting to **Turso/libsql** (`@libsql/client`, remote-only — there is no local SQLite file and no `better-sqlite3`). Hosts tournament runners and game sessions. Schema changes, backups and the migration workflow: [`docs/database-operations.md`](docs/database-operations.md).
 
 ### Game structure pattern
 
@@ -112,6 +112,23 @@ All 8 playable games are **server-authoritative** (`mode: "remote"`, registered 
 | Set | — (PvP / trainer) |
 
 > Note: ISMCTS searches currently run on the server's **main thread**, so a heavy search blocks the Node event loop for all sessions. A worker-thread AI pool is a known scaling improvement.
+
+### Untrusted actions (server-authoritative safety)
+
+The WS envelope types a game action as `z.unknown()`, so **the spec is what stands between a hostile frame and the engine**. Engines signal an illegal move by throwing, and an XState action that throws with no error observer is re-raised on a macrotask — which is how one malformed frame used to kill the process and every concurrent game with it.
+
+Four layers, outermost first. Adding a game means participating in the first two:
+
+1. **`GameMachineSpec.validateAction(snapshot, player, raw)`** (required) turns an untrusted payload into a machine event or rejects it with a reason. Build it with the helpers in `packages/core/src/machines/action-validation.ts`:
+   - `playerActionValidator` — **preferred**. The action must be structurally equal to one the engine enumerated via `getLegalActions`, and the event is rebuilt from the *engine's own object*, so no client bytes reach game logic. Used by durak, parks, exploding-kittens, sushi-go, 7-wonders, sky-team.
+   - `directEventValidator` — same guarantee for machines whose client events *are* the actions (lost-cities, set).
+   - `envelopeActionValidator` — well-formedness only; the engine adjudicates. Used by **pandemic**, whose UI doesn't drive from `legalActions`.
+   `player` is the authenticated seat — build any seat field in the event from it, never from `raw`.
+2. **`safeApply(label, fn)`** wraps every engine call inside an `assign`, so an engine throw becomes "move rejected, state unchanged" instead of a dead actor.
+3. The session manager subscribes with an **observer object carrying an `error` handler** (`sessions/manager.ts`), so a residual throw ends one session, not the process.
+4. `lib/process-guards.ts` catches `uncaughtException` / `unhandledRejection`, surviving isolated faults and exiting only on a burst.
+
+Legality checks are not a substitute for `getLegalActions` being complete: if the UI can construct a legal move the enumeration doesn't list, `playerActionValidator` will reject it. Sky Team's `spend-reroll` and Sushi Go's chopsticks pair are worked examples of handling that in the validator.
 
 ### Game board layout structure
 
@@ -166,4 +183,5 @@ Steps 2 and 3 are not optional: `catalog-completeness.test.ts` fails the build f
 1. Create `packages/web/src/games/<slug>/index.ts` exporting `satisfies PlayableModule` (component, mode, tournament strategies, etc. — see `types.ts` for the full shape). No base fields (`slug`, `bggId`, `accentHex`, `family`, `displayTitle`, `bggOverrides`) here — those live in `catalog.json` only.
 2. If the game has non-trivial logic, put it in `packages/core/src/games/<slug>/` and add exports to core's `package.json`.
 3. Register the server-side state machine in `packages/server/src/sessions/machine-registry.ts` (REQUIRED — the server runs every game's machine, including solo-vs-AI) and add the room config in `packages/core/src/protocol/room-config.ts` (for multiplayer rooms / AI seating).
+   Registering means your `GameMachineSpec` must implement **`validateAction`** — see "Untrusted actions" below. It is a required member, so this is enforced at compile time; `packages/server/src/sessions/action-validation.test.ts` then fuzzes your game automatically.
 4. Use `GameScreen` for the board layout — see "Game board layout structure" above.

@@ -7,7 +7,7 @@
 // in-memory (like avatar jobs): a server restart drops sessions and the DM's
 // screen simply re-creates one on next mount — nothing durable is lost.
 
-import { randomUUID } from "node:crypto";
+import { randomBytes, randomUUID } from "node:crypto";
 import type { BeamerEvent, DndSession } from "@boardgames/core/protocol";
 import { BeamerEventSchema } from "@boardgames/core/protocol";
 
@@ -26,11 +26,15 @@ const byCode = new Map<string, SessionEntry>();
 // No 0/O/1/I — the code is read aloud across the table.
 const CODE_ALPHABET = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
 
+// A join code is a bearer capability for the session's SSE stream, so it is
+// drawn from a CSPRNG. `Math.random()` is a recoverable PRNG: observing a few
+// codes reveals the generator state and hence every later code.
 function newCode(): string {
   for (;;) {
+    const bytes = randomBytes(6);
     let code = "";
     for (let i = 0; i < 6; i++) {
-      code += CODE_ALPHABET[Math.floor(Math.random() * CODE_ALPHABET.length)];
+      code += CODE_ALPHABET[(bytes[i] as number) % CODE_ALPHABET.length];
     }
     if (!byCode.has(code)) return code;
   }

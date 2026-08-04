@@ -1,10 +1,17 @@
-import { assign, fromPromise, setup } from "xstate";
+import { assign, fromPromise, type SnapshotFrom, setup } from "xstate";
+import {
+  type ActionValidation,
+  acceptAction,
+  parseActionSync,
+  playerActionValidator,
+  rejectAction,
+  safeApply,
+} from "../../machines/action-validation";
 import type { GameMachineSpec } from "../../machines/types";
 import { getStrategy } from "./ai-strategies";
 import {
   applyAction,
   applyEndRound,
-  InvalidActionError,
   placementsExhausted,
   rollDice,
   shouldRollDice,
@@ -22,12 +29,13 @@ import { createRng, type Rng, randomSeed } from "./rng";
 import { getLegalActionsForPlayer } from "./rules";
 import { getScenario } from "./scenarios";
 import { createGame } from "./setup";
-import type {
-  PlayerIndex,
-  SkyTeamAction,
-  SkyTeamGameState,
-  SkyTeamPlayerView,
-  SkyTeamResult,
+import {
+  type PlayerIndex,
+  type SkyTeamAction,
+  SkyTeamActionSchema,
+  type SkyTeamGameState,
+  type SkyTeamPlayerView,
+  type SkyTeamResult,
 } from "./types";
 
 export interface SkyTeamContext {
@@ -166,36 +174,40 @@ export const skyTeamMachine = setup({
   actions: {
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
-      const scenario = getScenario(event.scenarioId);
-      const seed = event.seed ?? randomSeed();
-      const rng = createRng(seed);
-      const gs = createGame({ scenario, seed }, rng);
-      return {
-        gameState: gs,
-        seed,
-        rng,
-        humanPlayers: event.humanPlayers ?? [0, 1],
-        aiStrategy: event.aiStrategy ?? null,
-        replaySteps: [makeInitialStep(gs)],
-      };
+      return safeApply("sky-team", () => {
+        const scenario = getScenario(event.scenarioId);
+        const seed = event.seed ?? randomSeed();
+        const rng = createRng(seed);
+        const gs = createGame({ scenario, seed }, rng);
+        return {
+          gameState: gs,
+          seed,
+          rng,
+          humanPlayers: event.humanPlayers ?? [0, 1],
+          aiStrategy: event.aiStrategy ?? null,
+          replaySteps: [makeInitialStep(gs)],
+        };
+      });
     }),
 
     rollPhase: assign(({ context }) => {
-      if (!context.gameState) return {};
-      const next = rollDice(context.gameState, context.rng);
-      return {
-        gameState: next,
-        replaySteps: [...context.replaySteps, makeAutomatedStep(context.replaySteps, next)],
-      };
+      const gs = context.gameState;
+      if (!gs) return {};
+      return safeApply("sky-team", () => {
+        const next = rollDice(gs, context.rng);
+        return {
+          gameState: next,
+          replaySteps: [...context.replaySteps, makeAutomatedStep(context.replaySteps, next)],
+        };
+      });
     }),
 
     applyPlayerAction: assign(({ context, event }) => {
       if (event.type !== "PLAYER_ACTION") return {};
-      if (!context.gameState) return {};
-      try {
-        const next = applyAction(context.gameState, event.player, event.action, {
-          rng: context.rng,
-        });
+      const gs = context.gameState;
+      if (!gs) return {};
+      return safeApply("sky-team", () => {
+        const next = applyAction(gs, event.player, event.action, { rng: context.rng });
         return {
           gameState: next,
           replaySteps: [
@@ -203,24 +215,19 @@ export const skyTeamMachine = setup({
             makePlayerActionStep(context.replaySteps, event.player, event.action, next),
           ],
         };
-      } catch (err) {
-        if (err instanceof InvalidActionError) {
-          if (typeof console !== "undefined") {
-            console.error("Sky Team illegal action:", err.message);
-          }
-          return {};
-        }
-        throw err;
-      }
+      });
     }),
 
     applyEndRound: assign(({ context }) => {
-      if (!context.gameState) return {};
-      const next = applyEndRound(context.gameState);
-      return {
-        gameState: next,
-        replaySteps: [...context.replaySteps, makeAutomatedStep(context.replaySteps, next)],
-      };
+      const gs = context.gameState;
+      if (!gs) return {};
+      return safeApply("sky-team", () => {
+        const next = applyEndRound(gs);
+        return {
+          gameState: next,
+          replaySteps: [...context.replaySteps, makeAutomatedStep(context.replaySteps, next)],
+        };
+      });
     }),
   },
 }).createMachine({
@@ -296,11 +303,10 @@ export const skyTeamMachine = setup({
               target: "routing",
               actions: assign(({ context, event }) => {
                 const { player, action } = event.output;
-                if (!context.gameState) return {};
-                try {
-                  const next = applyAction(context.gameState, player, action, {
-                    rng: context.rng,
-                  });
+                const gs = context.gameState;
+                if (!gs) return {};
+                return safeApply("sky-team", () => {
+                  const next = applyAction(gs, player, action, { rng: context.rng });
                   return {
                     gameState: next,
                     replaySteps: [
@@ -308,15 +314,7 @@ export const skyTeamMachine = setup({
                       makePlayerActionStep(context.replaySteps, player, action, next),
                     ],
                   };
-                } catch (err) {
-                  if (err instanceof InvalidActionError) {
-                    if (typeof console !== "undefined") {
-                      console.error("Sky Team AI illegal action:", err.message);
-                    }
-                    return {};
-                  }
-                  throw err;
-                }
+                });
               }),
             },
             onError: { target: "routing" },
@@ -393,6 +391,60 @@ function toResult(gs: SkyTeamGameState): SkyTeamResult {
   };
 }
 
+type SkyTeamSnapshot = SnapshotFrom<typeof skyTeamMachine>;
+
+function legalActionsFor(snapshot: SkyTeamSnapshot, player: number): SkyTeamAction[] {
+  const gs = snapshot.context.gameState;
+  if (!gs) return [];
+  return getLegalActionsForPlayer(gs, player as PlayerIndex);
+}
+
+function toPlayerActionEvent(action: SkyTeamAction, player: number): SkyTeamMachineEvent {
+  return { type: "PLAYER_ACTION", player: player as PlayerIndex, action };
+}
+
+const validateMatchedAction = playerActionValidator<
+  typeof skyTeamMachine,
+  SkyTeamAction,
+  SkyTeamMachineEvent
+>({
+  legalActions: legalActionsFor,
+  toEvent: toPlayerActionEvent,
+});
+
+/** The `spend-reroll` payload of an otherwise well-formed PLAYER_ACTION. */
+function rerollPayload(raw: unknown): unknown {
+  if (typeof raw !== "object" || raw === null) return null;
+  if (!("type" in raw) || raw.type !== "PLAYER_ACTION") return null;
+  if (!("action" in raw)) return null;
+  const action = raw.action;
+  if (typeof action !== "object" || action === null) return null;
+  if (!("kind" in action) || action.kind !== "spend-reroll") return null;
+  return action;
+}
+
+/**
+ * `spend-reroll` is advertised with empty die lists that the client fills in,
+ * so it is the one action that cannot be matched structurally. Its shape is
+ * schema-checked here and the engine adjudicates which dice may be rerolled.
+ */
+const validateSkyTeamAction = (
+  snapshot: SkyTeamSnapshot,
+  player: number,
+  raw: unknown,
+): ActionValidation<SkyTeamMachineEvent> => {
+  const matched = validateMatchedAction(snapshot, player, raw);
+  if (matched.ok) return matched;
+
+  const reroll = rerollPayload(raw);
+  if (reroll === null) return matched;
+  if (!legalActionsFor(snapshot, player).some((a) => a.kind === "spend-reroll")) return matched;
+
+  const parsed = parseActionSync(SkyTeamActionSchema, reroll);
+  if (!parsed.ok) return rejectAction(parsed.reason);
+  return acceptAction(toPlayerActionEvent(parsed.value, player));
+};
+
 export const skyTeamSpec: GameMachineSpec<
   typeof skyTeamMachine,
   SkyTeamPlayerView,
@@ -410,9 +462,11 @@ export const skyTeamSpec: GameMachineSpec<
   },
 
   getLegalActions(snapshot, player) {
-    const gs = snapshot.context.gameState;
-    if (!gs) return [];
-    return getLegalActionsForPlayer(gs, player as PlayerIndex);
+    return legalActionsFor(snapshot, player);
+  },
+
+  validateAction(snapshot, player, raw) {
+    return validateSkyTeamAction(snapshot, player, raw);
   },
 
   getActivePlayer(snapshot) {

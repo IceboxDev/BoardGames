@@ -1,4 +1,5 @@
-import { assign, fromPromise, setup } from "xstate";
+import { assign, fromPromise, type SnapshotFrom, setup } from "xstate";
+import { playerActionValidator, safeApply } from "../../machines/action-validation";
 import type { GameMachineSpec } from "../../machines/types";
 import { getAILegalActions, getStrategy } from "./ai-strategies";
 import { applyActionPure, createInitialState } from "./game-engine";
@@ -75,17 +76,21 @@ export const parksMachine = setup({
   actions: {
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
-      return { gameState: createInitialState(event.strategies) };
+      return safeApply("parks", () => ({ gameState: createInitialState(event.strategies) }));
     }),
 
     applyPlayerAction: assign(({ context, event }) => {
       if (event.type !== "PLAYER_ACTION") return {};
-      return { gameState: applyActionPure(context.gameState, event.action) };
+      return safeApply("parks", () => ({
+        gameState: applyActionPure(context.gameState, event.action),
+      }));
     }),
 
     applyAiAction: assign(({ context, event }) => {
       const action = (event as unknown as { output: Action }).output;
-      return { gameState: applyActionPure(context.gameState, action) };
+      return safeApply("parks", () => ({
+        gameState: applyActionPure(context.gameState, action),
+      }));
     }),
   },
 }).createMachine({
@@ -237,6 +242,17 @@ function computeResult(gs: GameState): ParksResult | null {
 }
 
 // ---------------------------------------------------------------------------
+// Legal actions (single source of truth for the spec and the validator)
+// ---------------------------------------------------------------------------
+
+function legalActionsFor(snapshot: SnapshotFrom<typeof parksMachine>, player: number): Action[] {
+  const gs = snapshot.context.gameState;
+  // Context holds a placeholder until START, so a pre-game snapshot has no state.
+  if (!gs) return [];
+  return getLegalActions(gs, player);
+}
+
+// ---------------------------------------------------------------------------
 // Spec export
 // ---------------------------------------------------------------------------
 
@@ -249,8 +265,13 @@ export const parksSpec: GameMachineSpec<typeof parksMachine, ParksPlayerView, Ac
     },
 
     getLegalActions(snapshot, player) {
-      return getLegalActions(snapshot.context.gameState, player);
+      return legalActionsFor(snapshot, player);
     },
+
+    validateAction: playerActionValidator({
+      legalActions: legalActionsFor,
+      toEvent: (action) => ({ type: "PLAYER_ACTION", action }) as const,
+    }),
 
     getActivePlayer(snapshot) {
       return getActivePlayer(snapshot.context.gameState);

@@ -1,4 +1,5 @@
 import { assign, fromPromise, setup } from "xstate";
+import { directEventValidator, safeApply } from "../../machines/action-validation";
 import type { GameMachineSpec } from "../../machines/types";
 import { getStrategy } from "./ai-strategies";
 import { applyDraw, applyPlay, createInitialState } from "./game-engine";
@@ -141,126 +142,134 @@ export const lostCitiesMachine = setup({
 
     applyPlayerPlay: assign(({ context, event }) => {
       if (event.type !== "PLAY_TO_EXPEDITION" && event.type !== "DISCARD") return {};
-      const cp = context.gameState.currentPlayer;
-      const card = findCard(context.gameState.hands[cp], event.cardId);
-      const action: PlayAction =
-        event.type === "PLAY_TO_EXPEDITION"
-          ? { kind: "expedition", card }
-          : { kind: "discard", card };
-      const entry: ActionLogEntry = {
-        turn: context.gameState.turnCount,
-        player: cp,
-        action: action.kind === "expedition" ? "play-expedition" : "play-discard",
-        card,
-      };
-      const newGs = applyPlay(context.gameState, action);
-      const step: ReplayStepV2 = {
-        turn: context.replaySteps.length,
-        phase: "play",
-        player: cp,
-        state: gameStateToSnapshot(newGs),
-        action: {
-          cardId: card.id,
-          kind: action.kind === "expedition" ? 0 : 1,
-          ...(action.kind === "discard" ? { color: EXPEDITION_COLORS.indexOf(card.color) } : {}),
-        },
-      };
-      return {
-        gameState: newGs,
-        actionLog: [...context.actionLog, entry],
-        replaySteps: [...context.replaySteps, step],
-      };
+      return safeApply("lost-cities", () => {
+        const cp = context.gameState.currentPlayer;
+        const card = findCard(context.gameState.hands[cp], event.cardId);
+        const action: PlayAction =
+          event.type === "PLAY_TO_EXPEDITION"
+            ? { kind: "expedition", card }
+            : { kind: "discard", card };
+        const entry: ActionLogEntry = {
+          turn: context.gameState.turnCount,
+          player: cp,
+          action: action.kind === "expedition" ? "play-expedition" : "play-discard",
+          card,
+        };
+        const newGs = applyPlay(context.gameState, action);
+        const step: ReplayStepV2 = {
+          turn: context.replaySteps.length,
+          phase: "play",
+          player: cp,
+          state: gameStateToSnapshot(newGs),
+          action: {
+            cardId: card.id,
+            kind: action.kind === "expedition" ? 0 : 1,
+            ...(action.kind === "discard" ? { color: EXPEDITION_COLORS.indexOf(card.color) } : {}),
+          },
+        };
+        return {
+          gameState: newGs,
+          actionLog: [...context.actionLog, entry],
+          replaySteps: [...context.replaySteps, step],
+        };
+      });
     }),
 
-    applyPlayerDraw: assign(({ context, event }) => {
-      const gs = context.gameState;
-      const cp = gs.currentPlayer;
-      const action: DrawAction =
-        event.type === "DRAW_FROM_DISCARD"
-          ? { kind: "discard-pile", color: event.color }
-          : { kind: "draw-pile" };
-      const drawnCard =
-        action.kind === "draw-pile"
-          ? gs.drawPile[gs.drawPile.length - 1]
-          : gs.discardPiles[action.color][gs.discardPiles[action.color].length - 1];
-      const entry: ActionLogEntry = {
-        turn: gs.turnCount,
-        player: cp,
-        action: action.kind === "draw-pile" ? "draw-pile" : "draw-discard",
-        card: drawnCard,
-        color: action.kind === "discard-pile" ? action.color : undefined,
-      };
-      const newGs = applyDraw(gs, action);
-      const step: ReplayStepV2 = {
-        turn: context.replaySteps.length,
-        phase: "draw",
-        player: cp,
-        state: gameStateToSnapshot(newGs),
-        action: {
-          cardId: drawnCard.id,
-          kind: action.kind === "draw-pile" ? 0 : 1,
-          ...(action.kind === "discard-pile"
-            ? { color: EXPEDITION_COLORS.indexOf(action.color) }
-            : {}),
-        },
-      };
-      return {
-        gameState: newGs,
-        actionLog: [...context.actionLog, entry],
-        replaySteps: [...context.replaySteps, step],
-      };
-    }),
+    applyPlayerDraw: assign(({ context, event }) =>
+      safeApply("lost-cities", () => {
+        const gs = context.gameState;
+        const cp = gs.currentPlayer;
+        const action: DrawAction =
+          event.type === "DRAW_FROM_DISCARD"
+            ? { kind: "discard-pile", color: event.color }
+            : { kind: "draw-pile" };
+        const drawnCard =
+          action.kind === "draw-pile"
+            ? gs.drawPile[gs.drawPile.length - 1]
+            : gs.discardPiles[action.color][gs.discardPiles[action.color].length - 1];
+        const entry: ActionLogEntry = {
+          turn: gs.turnCount,
+          player: cp,
+          action: action.kind === "draw-pile" ? "draw-pile" : "draw-discard",
+          card: drawnCard,
+          color: action.kind === "discard-pile" ? action.color : undefined,
+        };
+        const newGs = applyDraw(gs, action);
+        const step: ReplayStepV2 = {
+          turn: context.replaySteps.length,
+          phase: "draw",
+          player: cp,
+          state: gameStateToSnapshot(newGs),
+          action: {
+            cardId: drawnCard.id,
+            kind: action.kind === "draw-pile" ? 0 : 1,
+            ...(action.kind === "discard-pile"
+              ? { color: EXPEDITION_COLORS.indexOf(action.color) }
+              : {}),
+          },
+        };
+        return {
+          gameState: newGs,
+          actionLog: [...context.actionLog, entry],
+          replaySteps: [...context.replaySteps, step],
+        };
+      }),
+    ),
 
-    applyAiDraw: assign(({ context }) => {
-      const gs = context.gameState;
-      const draw = context.pendingAiDraw;
-      if (!draw) throw new Error("applyAiDraw called without pendingAiDraw");
-      const hiddenCard: Card = { id: -1, color: "yellow", type: "number", value: 0 };
-      const discardCard =
-        draw.kind === "discard-pile"
-          ? gs.discardPiles[draw.color][gs.discardPiles[draw.color].length - 1]
-          : hiddenCard;
-      const entry: ActionLogEntry = {
-        turn: gs.turnCount,
-        player: 1,
-        action: draw.kind === "draw-pile" ? "draw-pile" : "draw-discard",
-        card: draw.kind === "draw-pile" ? hiddenCard : discardCard,
-        color: draw.kind === "discard-pile" ? draw.color : undefined,
-      };
-      const drawnCardId =
-        draw.kind === "draw-pile"
-          ? gs.drawPile[gs.drawPile.length - 1].id
-          : gs.discardPiles[draw.color][gs.discardPiles[draw.color].length - 1].id;
-      const newGs = applyDraw(gs, draw);
-      const drawMcts: MCTSActionStats[] = context.lastAiStats
-        ? context.lastAiStats.drawActions.map((a) => ({
-            key: a.key,
-            kind: a.kind,
-            color: a.color,
-            visits: a.visits,
-            meanNormalizedReward: a.meanNormalizedReward,
-            chosen: a.key === context.lastAiStats?.chosenDrawKey,
-          }))
-        : [];
-      const step: ReplayStepV2 = {
-        turn: context.replaySteps.length,
-        phase: "draw",
-        player: 1,
-        state: gameStateToSnapshot(newGs),
-        action: {
-          cardId: drawnCardId,
-          kind: draw.kind === "draw-pile" ? 0 : 1,
-          ...(draw.kind === "discard-pile" ? { color: EXPEDITION_COLORS.indexOf(draw.color) } : {}),
-        },
-        mcts: { draw: { actions: drawMcts } },
-      };
-      return {
-        gameState: newGs,
-        pendingAiDraw: null,
-        actionLog: [...context.actionLog, entry],
-        replaySteps: [...context.replaySteps, step],
-      };
-    }),
+    applyAiDraw: assign(({ context }) =>
+      safeApply("lost-cities", () => {
+        const gs = context.gameState;
+        const draw = context.pendingAiDraw;
+        if (!draw) throw new Error("applyAiDraw called without pendingAiDraw");
+        const hiddenCard: Card = { id: -1, color: "yellow", type: "number", value: 0 };
+        const discardCard =
+          draw.kind === "discard-pile"
+            ? gs.discardPiles[draw.color][gs.discardPiles[draw.color].length - 1]
+            : hiddenCard;
+        const entry: ActionLogEntry = {
+          turn: gs.turnCount,
+          player: 1,
+          action: draw.kind === "draw-pile" ? "draw-pile" : "draw-discard",
+          card: draw.kind === "draw-pile" ? hiddenCard : discardCard,
+          color: draw.kind === "discard-pile" ? draw.color : undefined,
+        };
+        const drawnCardId =
+          draw.kind === "draw-pile"
+            ? gs.drawPile[gs.drawPile.length - 1].id
+            : gs.discardPiles[draw.color][gs.discardPiles[draw.color].length - 1].id;
+        const newGs = applyDraw(gs, draw);
+        const drawMcts: MCTSActionStats[] = context.lastAiStats
+          ? context.lastAiStats.drawActions.map((a) => ({
+              key: a.key,
+              kind: a.kind,
+              color: a.color,
+              visits: a.visits,
+              meanNormalizedReward: a.meanNormalizedReward,
+              chosen: a.key === context.lastAiStats?.chosenDrawKey,
+            }))
+          : [];
+        const step: ReplayStepV2 = {
+          turn: context.replaySteps.length,
+          phase: "draw",
+          player: 1,
+          state: gameStateToSnapshot(newGs),
+          action: {
+            cardId: drawnCardId,
+            kind: draw.kind === "draw-pile" ? 0 : 1,
+            ...(draw.kind === "discard-pile"
+              ? { color: EXPEDITION_COLORS.indexOf(draw.color) }
+              : {}),
+          },
+          mcts: { draw: { actions: drawMcts } },
+        };
+        return {
+          gameState: newGs,
+          pendingAiDraw: null,
+          actionLog: [...context.actionLog, entry],
+          replaySteps: [...context.replaySteps, step],
+        };
+      }),
+    ),
   },
 }).createMachine({
   id: "lostCities",
@@ -325,45 +334,48 @@ export const lostCitiesMachine = setup({
                 }),
                 onDone: {
                   target: "playApplied",
-                  actions: assign(({ context, event }) => {
-                    const { move, stats } = event.output;
-                    const entry: ActionLogEntry = {
-                      turn: context.gameState.turnCount,
-                      player: 1,
-                      action: move.play.kind === "expedition" ? "play-expedition" : "play-discard",
-                      card: move.play.card,
-                    };
-                    const newGs = applyPlay(context.gameState, move.play);
-                    const playMcts: MCTSActionStats[] = stats.playActions.map((a) => ({
-                      key: a.key,
-                      cardId: a.cardId,
-                      kind: a.kind,
-                      visits: a.visits,
-                      meanNormalizedReward: a.meanNormalizedReward,
-                      chosen: a.key === stats.chosenPlayKey,
-                    }));
-                    const step: ReplayStepV2 = {
-                      turn: context.replaySteps.length,
-                      phase: "play",
-                      player: 1,
-                      state: gameStateToSnapshot(newGs),
-                      action: {
-                        cardId: move.play.card.id,
-                        kind: move.play.kind === "expedition" ? 0 : 1,
-                        ...(move.play.kind === "discard"
-                          ? { color: EXPEDITION_COLORS.indexOf(move.play.card.color) }
-                          : {}),
-                      },
-                      mcts: { play: { actions: playMcts } },
-                    };
-                    return {
-                      gameState: newGs,
-                      lastAiStats: stats,
-                      pendingAiDraw: move.draw,
-                      actionLog: [...context.actionLog, entry],
-                      replaySteps: [...context.replaySteps, step],
-                    };
-                  }),
+                  actions: assign(({ context, event }) =>
+                    safeApply("lost-cities", () => {
+                      const { move, stats } = event.output;
+                      const entry: ActionLogEntry = {
+                        turn: context.gameState.turnCount,
+                        player: 1,
+                        action:
+                          move.play.kind === "expedition" ? "play-expedition" : "play-discard",
+                        card: move.play.card,
+                      };
+                      const newGs = applyPlay(context.gameState, move.play);
+                      const playMcts: MCTSActionStats[] = stats.playActions.map((a) => ({
+                        key: a.key,
+                        cardId: a.cardId,
+                        kind: a.kind,
+                        visits: a.visits,
+                        meanNormalizedReward: a.meanNormalizedReward,
+                        chosen: a.key === stats.chosenPlayKey,
+                      }));
+                      const step: ReplayStepV2 = {
+                        turn: context.replaySteps.length,
+                        phase: "play",
+                        player: 1,
+                        state: gameStateToSnapshot(newGs),
+                        action: {
+                          cardId: move.play.card.id,
+                          kind: move.play.kind === "expedition" ? 0 : 1,
+                          ...(move.play.kind === "discard"
+                            ? { color: EXPEDITION_COLORS.indexOf(move.play.card.color) }
+                            : {}),
+                        },
+                        mcts: { play: { actions: playMcts } },
+                      };
+                      return {
+                        gameState: newGs,
+                        lastAiStats: stats,
+                        pendingAiDraw: move.draw,
+                        actionLog: [...context.actionLog, entry],
+                        replaySteps: [...context.replaySteps, step],
+                      };
+                    }),
+                  ),
                 },
                 onError: { target: "#lostCities.active.routing" },
               },
@@ -446,6 +458,18 @@ function buildLegalActions(ctx: LostCitiesContext, player: number): LostCitiesLe
   }));
 }
 
+/** The event a client sends for a given engine-enumerated legal action. */
+function toClientEvent(legal: LostCitiesLegalAction): LostCitiesEvent {
+  if (legal.phase === "play") {
+    return legal.action.kind === "expedition"
+      ? { type: "PLAY_TO_EXPEDITION", cardId: legal.action.card.id }
+      : { type: "DISCARD", cardId: legal.action.card.id };
+  }
+  return legal.action.kind === "draw-pile"
+    ? { type: "DRAW_FROM_PILE" }
+    : { type: "DRAW_FROM_DISCARD", color: legal.action.color };
+}
+
 // ---------------------------------------------------------------------------
 // Spec export
 // ---------------------------------------------------------------------------
@@ -465,6 +489,16 @@ export const lostCitiesSpec: GameMachineSpec<
   getLegalActions(snapshot, player) {
     return buildLegalActions(snapshot.context, player);
   },
+
+  validateAction: directEventValidator<
+    typeof lostCitiesMachine,
+    LostCitiesLegalAction,
+    LostCitiesEvent
+  >({
+    legalActions: (snapshot, player) => buildLegalActions(snapshot.context, player),
+    toCandidate: (legal) => toClientEvent(legal),
+    toEvent: (legal) => toClientEvent(legal),
+  }),
 
   getActivePlayer(snapshot) {
     return snapshot.context.gameState.currentPlayer;

@@ -7,10 +7,12 @@
 //   GET  /api/profiles/:userId/matches → that user's match history (paginated)
 //   PUT  /api/profiles/:userId         → update own editable profile (self only)
 //
-// Per-user match filtering uses `outcome_json LIKE '%"userId":"<id>"%'` then
-// re-validates membership with `extractParticipantIds` (better-auth ids are
-// alphanumeric; the re-check makes the rare LIKE over-match harmless). Win/loss
-// derivation is the shared core helper so stats and the web's result badges
+// Per-user match filtering joins `match_participants` (migration 0024), the
+// materialized index of `extractParticipantIds`. It replaced an unindexable
+// `outcome_json LIKE '%"userId":"<id>"%'` — a full scan of every match ever
+// recorded on every profile view — plus a JS re-check of membership that, on the
+// paginated route, ran AFTER the LIMIT and so under-filled pages. Win/loss
+// derivation stays the shared core helper so stats and the web's result badges
 // never disagree.
 
 import {
@@ -38,6 +40,7 @@ import { logActivity } from "../lib/activity-log.ts";
 import { computeAvailableGamesPayload } from "../lib/available-games.ts";
 import { jsonColumn, parseRow, parseRows, RowParseError } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
+import { userMatchesQuery } from "../lib/match-participants.ts";
 import {
   findNextNightDateKeysForUsers,
   findNextNightForUser,
@@ -135,10 +138,6 @@ function clampLimit(raw: string | undefined): number {
 /** `accent_hex` is validated on write; coerce anything unexpected to null. */
 function safeAccent(value: string | null): string | null {
   return value && /^#[0-9a-fA-F]{6}$/.test(value) ? value : null;
-}
-
-function likePattern(userId: string): string {
-  return `%"userId":"${userId}"%`;
 }
 
 function readEditableRow(row: z.infer<typeof ProfileRowSchema>): {
@@ -239,21 +238,8 @@ profileRoutes.get("/:userId/matches", async (c) => {
   const before = c.req.query("before");
   const db = getDb();
 
-  const cols = `id, date_key, played_at, game_slug, game_title, outcome_json, notes,
-                recorded_by, recorded_at, updated_at, sort_order`;
-  const sql = before
-    ? `SELECT ${cols} FROM match_results
-       WHERE outcome_json LIKE ? AND played_at < ?
-       ORDER BY played_at DESC, id DESC LIMIT ?`
-    : `SELECT ${cols} FROM match_results
-       WHERE outcome_json LIKE ?
-       ORDER BY played_at DESC, id DESC LIMIT ?`;
-  const args = before ? [likePattern(userId), before, limit + 1] : [likePattern(userId), limit + 1];
-
-  const { rows } = await db.execute({ sql, args });
-  const parsed = parseRows(MatchResultRowSchema, rows, "match_results").filter((r) =>
-    extractParticipantIds(r.outcome_json).includes(userId),
-  );
+  const { rows } = await db.execute(userMatchesQuery({ userId, before, limit: limit + 1 }));
+  const parsed = parseRows(MatchResultRowSchema, rows, "match_results");
   const hasMore = parsed.length > limit;
   const page = hasMore ? parsed.slice(0, limit) : parsed;
 
@@ -304,14 +290,9 @@ profileRoutes.get("/:userId", async (c) => {
       sql: "SELECT game_slugs_json FROM user_inventory WHERE user_id = ?",
       args: [userId],
     }),
-    db.execute({
-      sql: `SELECT id, date_key, played_at, game_slug, game_title, outcome_json, notes,
-                     recorded_by, recorded_at, updated_at, sort_order
-              FROM match_results
-              WHERE outcome_json LIKE ?
-              ORDER BY played_at DESC, id DESC`,
-      args: [likePattern(userId)],
-    }),
+    // Unbounded by design — see userMatchesQuery: the stats below aggregate
+    // over this user's entire history.
+    db.execute(userMatchesQuery({ userId })),
     db.execute({
       sql: `SELECT r.date_key FROM rsvps r
               JOIN locked_dates l ON l.date_key = r.date_key
@@ -342,10 +323,7 @@ profileRoutes.get("/:userId", async (c) => {
     ? parseRow(ViewerInventoryRowSchema, inventoryResult.rows[0], "user_inventory").game_slugs_json
     : [];
 
-  // Stats + recent matches from the user's matches (membership re-checked).
-  const matchRows = parseRows(MatchResultRowSchema, matchResult.rows, "match_results").filter((r) =>
-    extractParticipantIds(r.outcome_json).includes(userId),
-  );
+  const matchRows = parseRows(MatchResultRowSchema, matchResult.rows, "match_results");
 
   // Nights attended: played-a-match beats RSVP; an RSVP only stands when the
   // night has no matches to contradict it. See lib/nights-attended.ts.

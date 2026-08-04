@@ -148,20 +148,23 @@ matchHistoryRoutes.get("/", async (c) => {
 
 // Open D&D campaigns: names with at least one recorded session but no resolved
 // one (no session carries a win/loss). Feeds the record-match campaign dropdown.
+//
+// Not a participant query, so `match_participants` doesn't apply here. It used
+// to scan the D&D rows twice (a `NOT IN` sub-select over the same predicate);
+// one grouped pass answers it — "resolved" is just whether any session in the
+// group carries an outcome.
 matchHistoryRoutes.get("/dnd-campaigns", async (c) => {
   const db = getDb();
   const { rows } = await db.execute(
-    `SELECT DISTINCT json_extract(outcome_json, '$.campaign') AS campaign
-       FROM match_results
-      WHERE game_slug = 'dungeons-and-dragons'
-        AND json_extract(outcome_json, '$.campaign') IS NOT NULL
-        AND json_extract(outcome_json, '$.campaign') NOT IN (
-          SELECT json_extract(outcome_json, '$.campaign')
-            FROM match_results
-           WHERE game_slug = 'dungeons-and-dragons'
-             AND json_extract(outcome_json, '$.campaign') IS NOT NULL
-             AND json_extract(outcome_json, '$.outcome') IS NOT NULL
-        )
+    `SELECT campaign FROM (
+       SELECT json_extract(outcome_json, '$.campaign') AS campaign,
+              MAX(json_extract(outcome_json, '$.outcome') IS NOT NULL) AS resolved
+         FROM match_results
+        WHERE game_slug = 'dungeons-and-dragons'
+          AND json_extract(outcome_json, '$.campaign') IS NOT NULL
+        GROUP BY campaign
+     )
+      WHERE resolved = 0
       ORDER BY campaign COLLATE NOCASE`,
   );
   const campaigns = parseRows(CampaignRowSchema, rows, "dnd-campaigns").map((r) => r.campaign);

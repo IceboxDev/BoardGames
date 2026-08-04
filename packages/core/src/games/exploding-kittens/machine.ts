@@ -1,4 +1,5 @@
-import { assign, fromPromise, setup } from "xstate";
+import { assign, fromPromise, type SnapshotFrom, setup } from "xstate";
+import { playerActionValidator, safeApply } from "../../machines/action-validation";
 import type { GameMachineSpec } from "../../machines/types";
 import { getStrategy } from "./ai-strategies";
 import { applyActionPure, createInitialState } from "./game-engine";
@@ -133,52 +134,58 @@ export const explodingKittensMachine = setup({
   actions: {
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
-      const seed = randomSeed();
-      const rng = createRng(seed);
-      const gs = createInitialState(event.playerCount, event.strategies, rng);
-      const step0: EKReplayStep = {
-        stepIndex: 0,
-        player: gs.currentPlayerIndex,
-        state: gameStateToSnapshot(gs),
-        description: "Game started",
-      };
-      return { gameState: gs, seed, rng, replaySteps: [step0] };
+      return safeApply("exploding-kittens", () => {
+        const seed = randomSeed();
+        const rng = createRng(seed);
+        const gs = createInitialState(event.playerCount, event.strategies, rng);
+        const step0: EKReplayStep = {
+          stepIndex: 0,
+          player: gs.currentPlayerIndex,
+          state: gameStateToSnapshot(gs),
+          description: "Game started",
+        };
+        return { gameState: gs, seed, rng, replaySteps: [step0] };
+      });
     }),
 
     applyPlayerAction: assign(({ context, event }) => {
       if (event.type !== "PLAYER_ACTION") return {};
-      const decider = getActiveDecider(context.gameState);
-      const desc = describeAction(event.action, context.gameState);
-      const newGs = applyActionPure(context.gameState, event.action, context.rng);
-      const step: EKReplayStep = {
-        stepIndex: context.replaySteps.length,
-        player: decider,
-        state: gameStateToSnapshot(newGs),
-        action: actionToReplayAction(event.action),
-        description: desc,
-      };
-      return {
-        gameState: newGs,
-        replaySteps: [...context.replaySteps, step],
-      };
+      return safeApply("exploding-kittens", () => {
+        const decider = getActiveDecider(context.gameState);
+        const desc = describeAction(event.action, context.gameState);
+        const newGs = applyActionPure(context.gameState, event.action, context.rng);
+        const step: EKReplayStep = {
+          stepIndex: context.replaySteps.length,
+          player: decider,
+          state: gameStateToSnapshot(newGs),
+          action: actionToReplayAction(event.action),
+          description: desc,
+        };
+        return {
+          gameState: newGs,
+          replaySteps: [...context.replaySteps, step],
+        };
+      });
     }),
 
     applyAiAction: assign(({ context, event }) => {
       const action = (event as unknown as { output: Action }).output;
-      const decider = getActiveDecider(context.gameState);
-      const desc = describeAction(action, context.gameState);
-      const newGs = applyActionPure(context.gameState, action, context.rng);
-      const step: EKReplayStep = {
-        stepIndex: context.replaySteps.length,
-        player: decider,
-        state: gameStateToSnapshot(newGs),
-        action: actionToReplayAction(action),
-        description: desc,
-      };
-      return {
-        gameState: newGs,
-        replaySteps: [...context.replaySteps, step],
-      };
+      return safeApply("exploding-kittens", () => {
+        const decider = getActiveDecider(context.gameState);
+        const desc = describeAction(action, context.gameState);
+        const newGs = applyActionPure(context.gameState, action, context.rng);
+        const step: EKReplayStep = {
+          stepIndex: context.replaySteps.length,
+          player: decider,
+          state: gameStateToSnapshot(newGs),
+          action: actionToReplayAction(action),
+          description: desc,
+        };
+        return {
+          gameState: newGs,
+          replaySteps: [...context.replaySteps, step],
+        };
+      });
     }),
   },
 }).createMachine({
@@ -339,6 +346,22 @@ function buildPlayerView(ctx: EKContext, player: number): EKPlayerView {
 }
 
 // ---------------------------------------------------------------------------
+// Legal actions (single source of truth for the spec and the validator)
+// ---------------------------------------------------------------------------
+
+function legalActionsFor(
+  snapshot: SnapshotFrom<typeof explodingKittensMachine>,
+  player: number,
+): Action[] {
+  const gs = snapshot.context.gameState;
+  // Context holds a placeholder until START, so a pre-game snapshot has no state.
+  if (!gs) return [];
+  const active = getActiveDecider(gs);
+  if (active !== player) return [];
+  return getLegalActions(gs);
+}
+
+// ---------------------------------------------------------------------------
 // Spec export
 // ---------------------------------------------------------------------------
 
@@ -355,11 +378,13 @@ export const explodingKittensSpec: GameMachineSpec<
   },
 
   getLegalActions(snapshot, player) {
-    const gs = snapshot.context.gameState;
-    const active = getActiveDecider(gs);
-    if (active !== player) return [];
-    return getLegalActions(gs);
+    return legalActionsFor(snapshot, player);
   },
+
+  validateAction: playerActionValidator({
+    legalActions: legalActionsFor,
+    toEvent: (action) => ({ type: "PLAYER_ACTION", action }) as const,
+  }),
 
   getActivePlayer(snapshot) {
     return getActiveDecider(snapshot.context.gameState);

@@ -1,4 +1,5 @@
-import { and, assign, fromCallback, not, setup } from "xstate";
+import { and, assign, fromCallback, not, type SnapshotFrom, setup } from "xstate";
+import { directEventValidator, safeApply } from "../../machines/action-validation";
 import type { GameMachineSpec } from "../../machines/types";
 import {
   buildFullDeck,
@@ -218,12 +219,14 @@ export const setGameMachine = setup({
       };
     }),
 
-    dealOneCard: assign(({ context }) => {
-      const [next, ...rest] = context.dealQueue;
-      const slots = [...context.slots];
-      slots[next.slotIndex] = next.card;
-      return { slots, dealQueue: rest };
-    }),
+    dealOneCard: assign(({ context }) =>
+      safeApply("set", () => {
+        const [next, ...rest] = context.dealQueue;
+        const slots = [...context.slots];
+        slots[next.slotIndex] = next.card;
+        return { slots, dealQueue: rest };
+      }),
+    ),
 
     updateSetTimers: assign(({ context }) => ({
       setTimers: computeUpdatedTimers(context.slots, context.setTimers),
@@ -246,88 +249,90 @@ export const setGameMachine = setup({
     resolveValidSet: assign(({ context, event }) => {
       if (event.type !== "SELECT_CARD") return {};
 
-      const ids = [...context.selected, event.cardId];
-      const now = Date.now();
+      return safeApply("set", () => {
+        const ids = [...context.selected, event.cardId];
+        const now = Date.now();
 
-      const timerKey = setKey(ids[0], ids[1], ids[2]);
-      const visibilityTime = context.setTimers[timerKey] ?? context.gameStartTime;
-      const reactionTimeMs = Math.max(0, context.setCallTime - visibilityTime);
-      const selectionTimeMs = now - context.setCallTime;
+        const timerKey = setKey(ids[0], ids[1], ids[2]);
+        const visibilityTime = context.setTimers[timerKey] ?? context.gameStartTime;
+        const reactionTimeMs = Math.max(0, context.setCallTime - visibilityTime);
+        const selectionTimeMs = now - context.setCallTime;
 
-      const visible = visibleCards(context.slots);
-      const record: PerSetRecord = {
-        reactionTimeMs,
-        selectionTimeMs,
-        totalFindTimeMs: reactionTimeMs + selectionTimeMs,
-        boardSize: visible.length,
-        calledDuringDeal: context.calledDuringDeal,
-        cardsDealtWhenCalled: context.cardsDealtWhenCalled,
-      };
+        const visible = visibleCards(context.slots);
+        const record: PerSetRecord = {
+          reactionTimeMs,
+          selectionTimeMs,
+          totalFindTimeMs: reactionTimeMs + selectionTimeMs,
+          boardSize: visible.length,
+          calledDuringDeal: context.calledDuringDeal,
+          cardsDealtWhenCalled: context.cardsDealtWhenCalled,
+        };
 
-      const newRecords = [...context.perSetRecords, record];
-      const newStreak = [...context.streakEvents, true];
+        const newRecords = [...context.perSetRecords, record];
+        const newStreak = [...context.streakEvents, true];
 
-      const removedIdSet = new Set(ids);
-      const newTimers: Record<string, number> = {};
-      for (const [tk, tv] of Object.entries(context.setTimers)) {
-        if (!tk.split("-").some((x) => removedIdSet.has(Number(x)))) {
-          newTimers[tk] = tv;
+        const removedIdSet = new Set(ids);
+        const newTimers: Record<string, number> = {};
+        for (const [tk, tv] of Object.entries(context.setTimers)) {
+          if (!tk.split("-").some((x) => removedIdSet.has(Number(x)))) {
+            newTimers[tk] = tv;
+          }
         }
-      }
 
-      const removeIndices = ids.map((cid) =>
-        context.slots.findIndex((s) => s !== null && s.id === cid),
-      );
-      const nonNullCount = visible.length;
-      const remainingQueue = [...context.dealQueue];
+        const removeIndices = ids.map((cid) =>
+          context.slots.findIndex((s) => s !== null && s.id === cid),
+        );
+        const nonNullCount = visible.length;
+        const remainingQueue = [...context.dealQueue];
 
-      let newSlots: (SetCardData | null)[];
-      let newDeck = context.deck;
-      let dealQueue: DealEntry[] = [];
-      let resolveDelayMs = 300;
+        let newSlots: (SetCardData | null)[];
+        let newDeck = context.deck;
+        let dealQueue: DealEntry[] = [];
+        let resolveDelayMs = 300;
 
-      if (nonNullCount <= 12 && context.deck.length >= 3) {
-        const newCards = context.deck.slice(0, 3);
-        newDeck = context.deck.slice(3);
-        newSlots = [...context.slots];
-        for (const idx of removeIndices) {
-          newSlots[idx] = null;
-        }
-        const replacementQueue: DealEntry[] = removeIndices.map((idx, i) => ({
-          slotIndex: idx,
-          card: newCards[i],
-        }));
-        dealQueue = [...remainingQueue, ...replacementQueue];
-        resolveDelayMs = 300;
-      } else {
-        newSlots = context.slots
-          .map((s) => (s && removedIdSet.has(s.id) ? null : s))
-          .filter((s): s is SetCardData => s !== null);
-
-        if (newDeck.length === 0 && !tableHasSet(newSlots as SetCardData[])) {
-          resolveDelayMs = 500;
-          dealQueue = [];
-        } else if (remainingQueue.length > 0) {
-          dealQueue = remainingQueue;
+        if (nonNullCount <= 12 && context.deck.length >= 3) {
+          const newCards = context.deck.slice(0, 3);
+          newDeck = context.deck.slice(3);
+          newSlots = [...context.slots];
+          for (const idx of removeIndices) {
+            newSlots[idx] = null;
+          }
+          const replacementQueue: DealEntry[] = removeIndices.map((idx, i) => ({
+            slotIndex: idx,
+            card: newCards[i],
+          }));
+          dealQueue = [...remainingQueue, ...replacementQueue];
           resolveDelayMs = 300;
         } else {
-          dealQueue = [];
-          resolveDelayMs = 0;
-        }
-      }
+          newSlots = context.slots
+            .map((s) => (s && removedIdSet.has(s.id) ? null : s))
+            .filter((s): s is SetCardData => s !== null);
 
-      return {
-        selected: new Set<number>(),
-        score: context.score + 1,
-        message: "Valid SET!",
-        perSetRecords: newRecords,
-        streakEvents: newStreak,
-        setTimers: newTimers,
-        slots: newSlots,
-        deck: newDeck,
-        dealQueue,
-        resolveDelayMs,
-      };
+          if (newDeck.length === 0 && !tableHasSet(newSlots as SetCardData[])) {
+            resolveDelayMs = 500;
+            dealQueue = [];
+          } else if (remainingQueue.length > 0) {
+            dealQueue = remainingQueue;
+            resolveDelayMs = 300;
+          } else {
+            dealQueue = [];
+            resolveDelayMs = 0;
+          }
+        }
+
+        return {
+          selected: new Set<number>(),
+          score: context.score + 1,
+          message: "Valid SET!",
+          perSetRecords: newRecords,
+          streakEvents: newStreak,
+          setTimers: newTimers,
+          slots: newSlots,
+          deck: newDeck,
+          dealQueue,
+          resolveDelayMs,
+        };
+      });
     }),
 
     resolveInvalidSet: assign(({ context }) => ({
@@ -379,32 +384,36 @@ export const setGameMachine = setup({
       message: "No more cards in the deck!",
     }),
 
-    applyHint: assign(({ context }) => {
-      const visible = visibleCards(context.slots);
-      const sets = findAllSets(visible);
-      if (sets.length === 0) return {};
-      return {
-        hintedCardId: sets[0][0].id,
-        penalties: context.penalties + 3,
-        hintCount: context.hintCount + 1,
-        message: "Hint used — 3 penalties!",
-        streakEvents: [...context.streakEvents, false],
-      };
-    }),
+    applyHint: assign(({ context }) =>
+      safeApply("set", () => {
+        const visible = visibleCards(context.slots);
+        const sets = findAllSets(visible);
+        if (sets.length === 0) return {};
+        return {
+          hintedCardId: sets[0][0].id,
+          penalties: context.penalties + 3,
+          hintCount: context.hintCount + 1,
+          message: "Hint used — 3 penalties!",
+          streakEvents: [...context.streakEvents, false],
+        };
+      }),
+    ),
 
-    finalizeGame: assign(({ context }) => {
-      const record = computeGameMetrics(
-        context.perSetRecords,
-        context.gameStartTime,
-        Date.now(),
-        context.penalties,
-        context.plusThreeCount,
-        context.deck.length,
-        context.hintCount,
-      );
-      record.longestStreak = computeLongestStreak(context.streakEvents);
-      return { gameRecord: record };
-    }),
+    finalizeGame: assign(({ context }) =>
+      safeApply("set", () => {
+        const record = computeGameMetrics(
+          context.perSetRecords,
+          context.gameStartTime,
+          Date.now(),
+          context.penalties,
+          context.plusThreeCount,
+          context.deck.length,
+          context.hintCount,
+        );
+        record.longestStreak = computeLongestStreak(context.streakEvents);
+        return { gameRecord: record };
+      }),
+    ),
 
     persistGame: () => {
       // Persistence is handled externally by the host (web hook or server)
@@ -584,6 +593,23 @@ export interface SetPlayerView {
   perSetRecords: PerSetRecord[];
 }
 
+function buildSetLegalActions(snapshot: SnapshotFrom<typeof setGameMachine>): GameEvent[] {
+  const events: GameEvent[] = [];
+  if (snapshot.matches("idle") || snapshot.matches("gameOver")) {
+    events.push({ type: "START_GAME" });
+  }
+  if (snapshot.matches({ dealing: "active" }) || snapshot.matches("playing")) {
+    events.push({ type: "CALL_SET" });
+  }
+  if (snapshot.matches("playing") && snapshot.context.deck.length >= 3) {
+    events.push({ type: "PLUS_THREE" });
+  }
+  if (snapshot.matches("playing")) {
+    events.push({ type: "USE_HINT" });
+  }
+  return events;
+}
+
 export const setSpec: GameMachineSpec<
   typeof setGameMachine,
   SetPlayerView,
@@ -609,21 +635,14 @@ export const setSpec: GameMachineSpec<
   },
 
   getLegalActions(snapshot, _player) {
-    const events: GameEvent[] = [];
-    if (snapshot.matches("idle") || snapshot.matches("gameOver")) {
-      events.push({ type: "START_GAME" });
-    }
-    if (snapshot.matches({ dealing: "active" }) || snapshot.matches("playing")) {
-      events.push({ type: "CALL_SET" });
-    }
-    if (snapshot.matches("playing") && snapshot.context.deck.length >= 3) {
-      events.push({ type: "PLUS_THREE" });
-    }
-    if (snapshot.matches("playing")) {
-      events.push({ type: "USE_HINT" });
-    }
-    return events;
+    return buildSetLegalActions(snapshot);
   },
+
+  validateAction: directEventValidator<typeof setGameMachine, GameEvent, GameEvent>({
+    legalActions: (snapshot) => buildSetLegalActions(snapshot),
+    toCandidate: (event) => event,
+    toEvent: (event) => event,
+  }),
 
   getActivePlayer(_snapshot) {
     return 0;

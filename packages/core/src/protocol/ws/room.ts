@@ -1,5 +1,14 @@
 import { z } from "zod";
 
+/**
+ * Length of a multiplayer room code.
+ *
+ * Shared so the generator (server) and the join form (web) cannot drift — the
+ * join button used to hardcode `length === 4` in its own file, which silently
+ * rejects every code the moment the server's length changes.
+ */
+export const ROOM_CODE_LENGTH = 6;
+
 export const RoomSlotKindSchema = z.enum(["human", "ai", "open"]);
 export type RoomSlotKind = z.infer<typeof RoomSlotKindSchema>;
 

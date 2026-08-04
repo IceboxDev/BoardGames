@@ -1,3 +1,4 @@
+import { randomUUID } from "node:crypto";
 import type { GameMachineSpec } from "@boardgames/core/machines/types";
 import type { WSContext } from "hono/ws";
 import type { AnyActorLogic, AnyActorRef } from "xstate";
@@ -24,11 +25,23 @@ export const wsAuth = {
   },
 };
 
-let nextId = 1;
-
+/**
+ * Session ids must be UNGUESSABLE, not merely unique. They used to be
+ * `session-${Date.now()}-${counter}`, which any client could enumerate — and
+ * `leave-session` acted on the id alone, so walking the space terminated every
+ * game on the server. Ownership is enforced below too; this closes the
+ * enumeration half.
+ */
 function generateId(): string {
-  return `session-${Date.now()}-${nextId++}`;
+  return `session-${randomUUID()}`;
 }
+
+/**
+ * A socket only ever renders one game at a time, so this is generous. It caps
+ * the memory an authenticated client can allocate by looping `create-session`,
+ * which previously had no bound at all.
+ */
+const MAX_SESSIONS_PER_SOCKET = 8;
 
 // ---------------------------------------------------------------------------
 // Types
@@ -58,7 +71,15 @@ const wsSessions = new Map<WSContext, Set<string>>();
 // ---------------------------------------------------------------------------
 
 function send(ws: WSContext, msg: ServerToClientMessage): void {
-  ws.send(JSON.stringify(msg));
+  // A closed or closing socket still accepts `send()` in some ws builds and
+  // throws in others; either way the write is pointless. Checking keeps a
+  // teardown race from turning into an exception on the emit path.
+  if (ws.readyState !== 1 /* OPEN */) return;
+  try {
+    ws.send(JSON.stringify(msg));
+  } catch (err) {
+    console.error("[ws] send failed:", err);
+  }
 }
 
 function sendToAllPlayers(
@@ -151,10 +172,46 @@ async function persistReplay(
 // Session subscription — fan out state updates to all connected players
 // ---------------------------------------------------------------------------
 
+/**
+ * Tear a session down and tell whoever is still connected why.
+ *
+ * Used both for an explicit `leave-session` and for the error path below,
+ * so a dying actor can never leave orphaned entries in `sessions`.
+ */
+function destroySession(active: ActiveSession, reason?: string): void {
+  if (reason) {
+    sendToAllPlayers(active, () => ({
+      type: "error",
+      sessionId: active.id,
+      message: reason,
+    }));
+  }
+  try {
+    active.actor.stop();
+  } catch (err) {
+    console.error(`[session ${active.id}] actor.stop() threw during teardown:`, err);
+  }
+  sessions.delete(active.id);
+  for (const ids of wsSessions.values()) ids.delete(active.id);
+}
+
 function subscribeSession(active: ActiveSession): void {
   let isFirstGameUpdate = true;
 
-  active.actor.subscribe((snapshot) => {
+  // An OBSERVER OBJECT, not a bare function. With no `error` handler XState
+  // re-raises a failed transition on a macrotask (`setTimeout(() => { throw
+  // err })`), which is an uncaught exception — one bad action used to kill the
+  // process and every concurrent game with it. Supplying `error` keeps the
+  // blast radius at this one session.
+  const fail = (err: unknown, what: string): void => {
+    console.error(`[session ${active.id}] ${active.gameSlug} ${what}:`, err);
+    gameLog(active.gameSlug, active.id, "machine error", {
+      message: err instanceof Error ? err.message : String(err),
+    });
+    destroySession(active, "The game hit an internal error and had to stop.");
+  };
+
+  const emit = (snapshot: ReturnType<ActiveSession["actor"]["getSnapshot"]>): void => {
     const phase =
       typeof snapshot.value === "string" ? snapshot.value : JSON.stringify(snapshot.value);
 
@@ -174,6 +231,11 @@ function subscribeSession(active: ActiveSession): void {
             console.error("Failed to persist replay:", err);
           }
         }
+        // Persisting the replay is a round trip to Turso. Everyone can have
+        // disconnected in the meantime, in which case `handleWsClose` already
+        // stopped the actor and dropped the session — sending here would be a
+        // write to closed sockets.
+        if (!sessions.has(active.id)) return;
         sendToAllPlayers(active, (p) => ({
           type: "game-over",
           sessionId: active.id,
@@ -234,6 +296,23 @@ function subscribeSession(active: ActiveSession): void {
       playerIndex: p.playerIndex,
       phase,
     }));
+  };
+
+  // An OBSERVER OBJECT, not a bare function. With no `error` handler XState
+  // re-raises a failed transition on a macrotask (`setTimeout(() => { throw
+  // err })`) — an uncaught exception that used to take down the process and
+  // every concurrent game with it. Supplying `error` keeps the blast radius at
+  // this one session. `next` is wrapped for the same reason: the player-view
+  // projection runs inside the observer, and a throw there escapes identically.
+  active.actor.subscribe({
+    next: (snapshot) => {
+      try {
+        emit(snapshot);
+      } catch (err) {
+        fail(err, "failed to project a snapshot");
+      }
+    },
+    error: (err) => fail(err, "machine transition failed"),
   });
 }
 
@@ -248,6 +327,12 @@ function handleCreateSession(
   const spec = getMachineSpec(msg.gameSlug);
   if (!spec) {
     send(ws, { type: "error", message: `Unknown game: ${msg.gameSlug}` });
+    return;
+  }
+
+  const existing = wsSessions.get(ws)?.size ?? 0;
+  if (existing >= MAX_SESSIONS_PER_SOCKET) {
+    send(ws, { type: "error", message: "Too many open sessions on this connection" });
     return;
   }
 
@@ -403,35 +488,49 @@ function handleAction(
     action: msg.action,
   });
 
-  // For multi-client sessions, validate it's this player's turn
+  const snapshot = active.actor.getSnapshot();
+  const seat = resolveSeat(active, player, msg.action);
+
+  // Turn validation for multi-client sessions. `-1` means simultaneous play,
+  // where every seat may act at once.
   if (active.players.length > 1) {
-    const snapshot = active.actor.getSnapshot();
     const activePlayer = active.spec.getActivePlayer(snapshot);
-    if (activePlayer === -1) {
-      // Simultaneous play — inject playerIndex, skip turn validation
-      try {
-        active.actor.send({
-          ...(msg.action as Record<string, unknown>),
-          playerIndex: player.playerIndex,
-        });
-      } catch (err) {
-        const message = err instanceof Error ? err.message : "Invalid action";
-        send(ws, { type: "error", sessionId: active.id, message });
-      }
-      return;
-    }
-    if (activePlayer !== player.playerIndex) {
+    if (activePlayer !== -1 && activePlayer !== player.playerIndex) {
       send(ws, { type: "error", sessionId: msg.sessionId, message: "Not your turn" });
       return;
     }
   }
 
-  try {
-    active.actor.send(msg.action as Record<string, unknown>);
-  } catch (err) {
-    const message = err instanceof Error ? err.message : "Invalid action";
-    send(ws, { type: "error", sessionId: active.id, message });
+  // The spec turns the untrusted payload into a machine event, or refuses.
+  // Nothing client-controlled reaches `actor.send` any more: validators built
+  // on `playerActionValidator` hand back an event carrying the ENGINE's own
+  // legal-action object.
+  const validated = active.spec.validateAction(snapshot, seat, msg.action);
+  if (!validated.ok) {
+    gameLog(active.gameSlug, active.id, "action rejected", { reason: validated.reason });
+    send(ws, { type: "error", sessionId: active.id, message: validated.reason });
+    return;
   }
+
+  active.actor.send(validated.event as Parameters<typeof active.actor.send>[0]);
+}
+
+/**
+ * Which seat is this action played for?
+ *
+ * Multiplayer: always the authenticated seat — a client cannot name another.
+ * Solo: the socket owns the entire table (co-op games such as Sky Team drive
+ * several seats from one client, and Pandemic solo plays every role), so an
+ * explicitly requested seat is honoured. There is no one to impersonate.
+ */
+function resolveSeat(active: ActiveSession, player: PlayerConnection, raw: unknown): number {
+  if (active.players.length > 1) return player.playerIndex;
+  if (typeof raw !== "object" || raw === null) return player.playerIndex;
+  const claimed =
+    (raw as Record<string, unknown>).player ?? (raw as Record<string, unknown>).playerIndex;
+  return typeof claimed === "number" && Number.isInteger(claimed) && claimed >= 0
+    ? claimed
+    : player.playerIndex;
 }
 
 // ---------------------------------------------------------------------------
@@ -439,14 +538,22 @@ function handleAction(
 // ---------------------------------------------------------------------------
 
 function handleLeaveSession(
-  _ws: WSContext,
+  ws: WSContext,
   msg: Extract<ClientToServerMessage, { type: "leave-session" }>,
 ): void {
   const active = sessions.get(msg.sessionId);
-  if (active) {
-    active.actor.stop();
-    sessions.delete(msg.sessionId);
+  if (!active) return;
+
+  // Only a socket actually seated in this session may end it. This used to
+  // act on the id alone, so any authenticated socket — or any web page, via
+  // the unauthenticated WebSocket upgrade — could terminate every game on the
+  // server by walking the id space.
+  if (!active.players.some((p) => p.ws === ws)) {
+    send(ws, { type: "error", sessionId: msg.sessionId, message: "Not your session" });
+    return;
   }
+
+  destroySession(active);
 }
 
 /**
@@ -490,6 +597,20 @@ export function handleWsMessage(ws: WSContext, msg: ClientToServerMessage): void
       // Room messages are handled by the room manager — delegate from server.ts
       return;
   }
+}
+
+/**
+ * Stop every live session, telling players why. Used by the SIGTERM path so a
+ * deploy produces an explicit "server restarting" message instead of sockets
+ * that simply go dark and a board that silently freezes.
+ *
+ * Live games do not survive a restart — actors are process memory and are
+ * never snapshotted. Draining is the honest version of that, not a fix for it.
+ */
+export function shutdownAllSessions(reason: string): number {
+  const count = sessions.size;
+  for (const active of [...sessions.values()]) destroySession(active, reason);
+  return count;
 }
 
 export function handleWsClose(ws: WSContext): void {

@@ -1,3 +1,4 @@
+import { ROOM_CODE_LENGTH } from "@boardgames/core/protocol/ws/room";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { SetupHeader, SetupLayout } from "../setup";
 import { Button, ErrorAlert, Field } from "../ui";
@@ -16,7 +17,7 @@ interface JoinRoomProps {
  * Multiplayer entry point — pick "Create" or "Join" (plus "Connect to BGA"
  * for games with a bridge). The player's name is already known from the auth
  * session (every visitor is signed in), so there's no name prompt. The host
- * clicks Create; joiners type the 4-letter code their host shared.
+ * clicks Create; joiners type the code their host shared.
  */
 export function JoinRoom({
   title,
@@ -37,11 +38,11 @@ export function JoinRoom({
 
   const handleJoin = useCallback(() => {
     const code = roomCode.trim().toUpperCase();
-    if (code.length !== 4) return;
+    if (code.length !== ROOM_CODE_LENGTH) return;
     onJoinRoom(code);
   }, [roomCode, onJoinRoom]);
 
-  const canJoin = roomCode.trim().length === 4;
+  const canJoin = roomCode.trim().length === ROOM_CODE_LENGTH;
 
   return (
     <SetupLayout>
@@ -76,12 +77,12 @@ export function JoinRoom({
               id={codeId}
               type="text"
               value={roomCode}
-              onChange={(e) => setRoomCode(e.target.value.toUpperCase().slice(0, 4))}
+              onChange={(e) => setRoomCode(e.target.value.toUpperCase().slice(0, ROOM_CODE_LENGTH))}
               onKeyDown={(e) => {
                 if (e.key === "Enter" && canJoin) handleJoin();
               }}
-              placeholder="ABCD"
-              maxLength={4}
+              placeholder="ABCDEF"
+              maxLength={ROOM_CODE_LENGTH}
               className="w-full rounded-lg border border-white/10 bg-surface-800/60 px-4 py-3 text-center text-2xl font-bold uppercase tracking-[0.3em] text-white placeholder:text-fg-disabled outline-none transition-colors focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30"
             />
           </Field>

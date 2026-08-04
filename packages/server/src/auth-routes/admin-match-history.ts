@@ -6,6 +6,12 @@ import { getDb } from "../db.ts";
 import { logActivity } from "../lib/activity-log.ts";
 import { parseRow, parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
+import {
+  matchIdOf,
+  matchIdOfClientId,
+  newestMatchId,
+  participantSyncStatements,
+} from "../lib/match-participants.ts";
 import { MatchResultRowSchema, rowToMatchRecord } from "./match-history.ts";
 import {
   collectUserIds,
@@ -164,25 +170,38 @@ adminMatchHistoryRoutes.post("/", async (c) => {
   // reusing the same id conflicts on the partial unique index and DOES NOTHING;
   // we then return the already-recorded row instead of a duplicate. A null
   // client_id (older clients) isn't in the partial index, so it always inserts.
-  const result = await getDb().execute({
-    sql: `INSERT INTO match_results
+  //
+  // The participant index (match_participants) is written in the SAME batch so
+  // it can never diverge from the row it indexes. On the DO NOTHING path it
+  // re-syncs the already-recorded row, which is a no-op.
+  const [result] = await getDb().batch(
+    [
+      {
+        sql: `INSERT INTO match_results
             (date_key, played_at, game_slug, game_title, outcome_json, notes, recorded_by, recorded_at, sort_order, client_id)
           VALUES (?, ?, ?, ?, ?, ?, ?, datetime('now'),
                   COALESCE((SELECT MIN(sort_order) - 1 FROM match_results WHERE date_key IS ?), 0), ?)
           ON CONFLICT(client_id) WHERE client_id IS NOT NULL DO NOTHING
           RETURNING id`,
-    args: [
-      dateKey,
-      playedAt,
-      gameSlug,
-      gameTitle,
-      JSON.stringify(outcome),
-      notes,
-      user.id,
-      dateKey,
-      clientId,
+        args: [
+          dateKey,
+          playedAt,
+          gameSlug,
+          gameTitle,
+          JSON.stringify(outcome),
+          notes,
+          user.id,
+          dateKey,
+          clientId,
+        ],
+      },
+      ...participantSyncStatements(
+        clientId === null ? newestMatchId() : matchIdOfClientId(clientId),
+        outcome,
+      ),
     ],
-  });
+    "write",
+  );
 
   let insertedId: number;
   if (result.rows[0]) {
@@ -237,8 +256,13 @@ adminMatchHistoryRoutes.patch("/:id{[0-9]+}", async (c) => {
   // otherwise the correlated subquery computes MIN(sort_order)-1 of the
   // destination (excluding this row). The previous read-then-update version
   // could race two concurrent night-moves onto the same computed slot.
-  const result = await db.execute({
-    sql: `UPDATE match_results
+  //
+  // An edit can add or drop players, so the participant index is rebuilt from
+  // the new outcome inside the same batch as the row it indexes.
+  const [result] = await db.batch(
+    [
+      {
+        sql: `UPDATE match_results
           SET date_key = ?, played_at = ?, game_slug = ?, game_title = ?,
               outcome_json = ?, notes = ?, updated_at = datetime('now'),
               sort_order = CASE
@@ -248,18 +272,22 @@ adminMatchHistoryRoutes.patch("/:id{[0-9]+}", async (c) => {
                    WHERE m2.date_key IS ? AND m2.id <> match_results.id), 0)
               END
           WHERE id = ?`,
-    args: [
-      dateKey,
-      playedAt,
-      gameSlug,
-      gameTitle,
-      JSON.stringify(outcome),
-      notes,
-      dateKey, // CASE WHEN date_key IS ? (unchanged night → keep position)
-      dateKey, // subquery: MIN(sort_order) of the destination night
-      id,
+        args: [
+          dateKey,
+          playedAt,
+          gameSlug,
+          gameTitle,
+          JSON.stringify(outcome),
+          notes,
+          dateKey, // CASE WHEN date_key IS ? (unchanged night → keep position)
+          dateKey, // subquery: MIN(sort_order) of the destination night
+          id,
+        ],
+      },
+      ...participantSyncStatements(matchIdOf(id), outcome, { replace: true }),
     ],
-  });
+    "write",
+  );
   if (result.rowsAffected === 0) return c.json({ error: "not found" }, 404);
   const record = await fetchAndShape(id);
   return c.json(record);
@@ -267,10 +295,16 @@ adminMatchHistoryRoutes.patch("/:id{[0-9]+}", async (c) => {
 
 adminMatchHistoryRoutes.delete("/:id{[0-9]+}", async (c) => {
   const id = Number.parseInt(c.req.param("id"), 10);
-  const result = await getDb().execute({
-    sql: "DELETE FROM match_results WHERE id = ?",
-    args: [id],
-  });
+  // ON DELETE CASCADE already clears the participant index, but only where
+  // `PRAGMA foreign_keys` is on; dropping it explicitly in the same batch keeps
+  // the index correct regardless.
+  const [, result] = await getDb().batch(
+    [
+      { sql: "DELETE FROM match_participants WHERE match_id = ?", args: [id] },
+      { sql: "DELETE FROM match_results WHERE id = ?", args: [id] },
+    ],
+    "write",
+  );
   if (result.rowsAffected === 0) return c.json({ error: "not found" }, 404);
   logActivity(c.get("user").id, "match-deleted", { matchId: id });
   return c.json({ ok: true });

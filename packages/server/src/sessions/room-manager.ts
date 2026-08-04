@@ -1,3 +1,4 @@
+import { randomBytes } from "node:crypto";
 import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
 import { gameRoomConfigs } from "@boardgames/core/protocol/room-config";
 import type { WSContext } from "hono/ws";
@@ -16,13 +17,26 @@ import {
 
 // Exclude ambiguous characters: O, I, L
 const CODE_CHARS = "ABCDEFGHJKMNPQRSTUVWXYZ";
+const CODE_LENGTH = 6;
 
+/**
+ * Room codes are a capability — possessing one lets you take a seat — so they
+ * are generated with a CSPRNG, not `Math.random()`. V8's xorshift128+ state is
+ * recoverable from a handful of observed outputs, which would have made every
+ * subsequent code predictable.
+ *
+ * Six characters over a 23-symbol alphabet is ~148M codes (the previous four
+ * gave ~280k, walkable in seconds).
+ */
 function generateRoomCode(): string {
   let code: string;
   do {
+    const bytes = randomBytes(CODE_LENGTH);
     code = "";
-    for (let i = 0; i < 4; i++) {
-      code += CODE_CHARS[Math.floor(Math.random() * CODE_CHARS.length)];
+    for (let i = 0; i < CODE_LENGTH; i++) {
+      // Modulo bias is negligible here (256 % 23 = 3) and codes are not secrets
+      // in the cryptographic sense — unguessability at this scale is enough.
+      code += CODE_CHARS[(bytes[i] as number) % CODE_CHARS.length];
     }
   } while (rooms.has(code));
   return code;

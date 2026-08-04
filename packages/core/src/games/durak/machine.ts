@@ -1,4 +1,5 @@
-import { assign, fromPromise, setup } from "xstate";
+import { assign, fromPromise, type SnapshotFrom, setup } from "xstate";
+import { playerActionValidator, safeApply } from "../../machines/action-validation";
 import type { GameMachineSpec } from "../../machines/types";
 import { getStrategy } from "./ai-strategies";
 import { applyActionPure, createInitialState } from "./game-engine";
@@ -72,19 +73,23 @@ export const durakMachine = setup({
   actions: {
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
-      return {
+      return safeApply("durak", () => ({
         gameState: createInitialState(event.playerCount, event.strategies),
-      };
+      }));
     }),
 
     applyPlayerAction: assign(({ context, event }) => {
       if (event.type !== "PLAYER_ACTION") return {};
-      return { gameState: applyActionPure(context.gameState, event.action) };
+      return safeApply("durak", () => ({
+        gameState: applyActionPure(context.gameState, event.action),
+      }));
     }),
 
     applyAiAction: assign(({ context, event }) => {
       const action = (event as unknown as { output: Action }).output;
-      return { gameState: applyActionPure(context.gameState, action) };
+      return safeApply("durak", () => ({
+        gameState: applyActionPure(context.gameState, action),
+      }));
     }),
   },
 }).createMachine({
@@ -197,6 +202,19 @@ function buildPlayerView(ctx: DurakContext, player: number): DurakPlayerView {
 }
 
 // ---------------------------------------------------------------------------
+// Legal actions (single source of truth for the spec and the validator)
+// ---------------------------------------------------------------------------
+
+function legalActionsFor(snapshot: SnapshotFrom<typeof durakMachine>, player: number): Action[] {
+  const gs = snapshot.context.gameState;
+  // Context holds a placeholder until START, so a pre-game snapshot has no state.
+  if (!gs) return [];
+  const active = getActivePlayer(gs);
+  if (active !== player) return [];
+  return getLegalActions(gs);
+}
+
+// ---------------------------------------------------------------------------
 // Spec export
 // ---------------------------------------------------------------------------
 
@@ -209,11 +227,13 @@ export const durakSpec: GameMachineSpec<typeof durakMachine, DurakPlayerView, Ac
     },
 
     getLegalActions(snapshot, player) {
-      const gs = snapshot.context.gameState;
-      const active = getActivePlayer(gs);
-      if (active !== player) return [];
-      return getLegalActions(gs);
+      return legalActionsFor(snapshot, player);
     },
+
+    validateAction: playerActionValidator({
+      legalActions: legalActionsFor,
+      toEvent: (action) => ({ type: "PLAYER_ACTION", action }) as const,
+    }),
 
     getActivePlayer(snapshot) {
       return getActivePlayer(snapshot.context.gameState);

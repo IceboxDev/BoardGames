@@ -1,5 +1,6 @@
-import { assign, fromPromise, setup } from "xstate";
+import { assign, fromPromise, type SnapshotFrom, setup } from "xstate";
 import { randomSeed } from "../../lib/rng";
+import { playerActionValidator, safeApply } from "../../machines/action-validation";
 import type { GameMachineSpec } from "../../machines/types";
 import { chooseAiAction } from "./ai/agent";
 import { countShields, scienceProfile } from "./board";
@@ -180,46 +181,50 @@ export const sevenWondersMachine = setup({
   actions: {
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
-      const gs = createInitialState({
-        playerCount: event.playerCount,
-        seed: event.seed ?? randomSeed(),
-        sideMode: event.sideMode ?? "random",
-        edifice: event.edifice,
+      return safeApply("7-wonders", () => {
+        const gs = createInitialState({
+          playerCount: event.playerCount,
+          seed: event.seed ?? randomSeed(),
+          sideMode: event.sideMode ?? "random",
+          edifice: event.edifice,
+        });
+        const humanPlayers =
+          event.humanPlayers ?? Array.from({ length: event.playerCount }, (_, i) => i);
+        return { gameState: gs, humanPlayers, pendingAiSelections: null };
       });
-      const humanPlayers =
-        event.humanPlayers ?? Array.from({ length: event.playerCount }, (_, i) => i);
-      return { gameState: gs, humanPlayers, pendingAiSelections: null };
     }),
 
     applyPlayerSelection: assign(({ context, event }) => {
       if (event.type !== "PLAYER_ACTION") return {};
-      return {
+      return safeApply("7-wonders", () => ({
         gameState: applySelection(context.gameState, event.playerIndex, event.action),
-      };
+      }));
     }),
 
     applyCachedAiSelections: assign(({ context }) => {
       const cached = context.pendingAiSelections;
       if (!cached) return { pendingAiSelections: null };
-      let state = context.gameState;
-      for (let i = 0; i < state.playerCount; i++) {
-        const sel = cached[i];
-        if (sel !== null && state.selections[i] === null) {
-          state = applySelection(state, i, sel);
+      return safeApply("7-wonders", () => {
+        let state = context.gameState;
+        for (let i = 0; i < state.playerCount; i++) {
+          const sel = cached[i];
+          if (sel !== null && state.selections[i] === null) {
+            state = applySelection(state, i, sel);
+          }
         }
-      }
-      return { gameState: state, pendingAiSelections: null };
+        return { gameState: state, pendingAiSelections: null };
+      });
     }),
 
     applyReveal: assign(({ context }) => {
-      return { gameState: applyReveal(context.gameState) };
+      return safeApply("7-wonders", () => ({ gameState: applyReveal(context.gameState) }));
     }),
 
     applyHumanPending: assign(({ context, event }) => {
       if (event.type !== "PLAYER_ACTION") return {};
-      return {
+      return safeApply("7-wonders", () => ({
         gameState: applyPendingAction(context.gameState, event.playerIndex, event.action),
-      };
+      }));
     }),
   },
 }).createMachine({
@@ -334,9 +339,9 @@ export const sevenWondersMachine = setup({
                     const pending = context.gameState.pendingQueue[0];
                     const action = event.output.action;
                     if (!pending || !action) return {};
-                    return {
+                    return safeApply("7-wonders", () => ({
                       gameState: applyPendingAction(context.gameState, pending.playerIndex, action),
-                    };
+                    }));
                   }),
                 },
                 onError: { target: "#sevenWonders.active.routing" },
@@ -430,6 +435,49 @@ export function buildPlayerView(ctx: SevenWondersContext, player: number): Seven
 }
 
 // ---------------------------------------------------------------------------
+// Action validation
+// ---------------------------------------------------------------------------
+
+type SevenWondersSnapshot = SnapshotFrom<typeof sevenWondersMachine>;
+
+function legalActionsFor(snapshot: SevenWondersSnapshot, player: number): SevenWondersAction[] {
+  const gs = snapshot.context.gameState;
+  if (!gs) return [];
+  return getLegalActions(gs, player);
+}
+
+/**
+ * The engine leaves `participate` off an ordinary wonder build while the UI
+ * always sends the flag; `participate: false` means the same move.
+ */
+function withExplicitParticipate(actions: SevenWondersAction[]): SevenWondersAction[] {
+  const out: SevenWondersAction[] = [];
+  for (const action of actions) {
+    out.push(action);
+    if (action.type === "build-wonder" && action.participate === undefined) {
+      out.push({ ...action, participate: false });
+    }
+    if (
+      action.type === "play-seventh" &&
+      action.action.type === "build-wonder" &&
+      action.action.participate === undefined
+    ) {
+      out.push({ ...action, action: { ...action.action, participate: false } });
+    }
+  }
+  return out;
+}
+
+const validateSevenWondersAction = playerActionValidator<
+  typeof sevenWondersMachine,
+  SevenWondersAction,
+  SevenWondersEvent
+>({
+  legalActions: (snapshot, player) => withExplicitParticipate(legalActionsFor(snapshot, player)),
+  toEvent: (action, player) => ({ type: "PLAYER_ACTION", playerIndex: player, action }),
+});
+
+// ---------------------------------------------------------------------------
 // Spec export
 // ---------------------------------------------------------------------------
 
@@ -446,7 +494,11 @@ export const sevenWondersSpec: GameMachineSpec<
   },
 
   getLegalActions(snapshot, player) {
-    return getLegalActions(snapshot.context.gameState, player);
+    return legalActionsFor(snapshot, player);
+  },
+
+  validateAction(snapshot, player, raw) {
+    return validateSevenWondersAction(snapshot, player, raw);
   },
 
   getActivePlayer(snapshot) {

@@ -34,7 +34,10 @@ import { matchHistoryRoutes } from "./auth-routes/match-history.ts";
 import { profileRoutes } from "./auth-routes/profile.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
+import { requireTrustedOrigin } from "./lib/csrf.ts";
 import { probeOpenAI } from "./lib/dnd-extract.ts";
+import { allowedOrigins } from "./lib/origins.ts";
+import { clientIp, rateLimit } from "./lib/rate-limit.ts";
 import { persistenceRoutes } from "./persistence/routes.ts";
 import { getRegisteredSlugs } from "./sessions/machine-registry.ts";
 import { handleWsClose, handleWsMessage, wsAuth } from "./sessions/manager.ts";
@@ -58,29 +61,49 @@ const app = new Hono();
 
 const { injectWebSocket, upgradeWebSocket } = createNodeWebSocket({ app });
 
-function normalizeOrigin(raw: string): string {
-  const trimmed = raw.trim().replace(/\/+$/, "");
-  if (!trimmed) return "";
-  if (/^https?:\/\//.test(trimmed)) return trimmed;
-  return `https://${trimmed}`;
-}
-
-const webOrigins = (process.env.WEB_ORIGIN ?? "").split(",").map(normalizeOrigin).filter(Boolean);
-
-const allowedOrigins = [
-  "http://localhost:5173",
-  "http://localhost:3001",
-  "http://127.0.0.1:5173",
-  ...webOrigins,
-];
-
 app.use(
   "/api/*",
   cors({
-    origin: allowedOrigins,
+    origin: allowedOrigins(),
     credentials: true,
     allowHeaders: ["Content-Type", "Authorization"],
     allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+  }),
+);
+
+// CORS above does not stop a forged request from EXECUTING — it only hides the
+// response. This does. Must sit ahead of every mutating route.
+app.use("/api/*", requireTrustedOrigin);
+
+// Credential stuffing / password guessing. Keyed by IP because the whole point
+// is that the attacker has no session yet.
+app.use(
+  "/api/auth/sign-in/*",
+  rateLimit({
+    name: "auth-signin",
+    windowMs: 5 * 60_000,
+    max: 20,
+    key: (c) => `ip:${clientIp(c)}`,
+    message: "Too many sign-in attempts. Try again in a few minutes.",
+  }),
+);
+app.use(
+  "/api/auth/sign-up/*",
+  rateLimit({
+    name: "auth-signup",
+    windowMs: 60 * 60_000,
+    max: 5,
+    key: (c) => `ip:${clientIp(c)}`,
+    message: "Too many accounts created from this address.",
+  }),
+);
+app.use(
+  "/api/auth/forget-password",
+  rateLimit({
+    name: "auth-forgot",
+    windowMs: 60 * 60_000,
+    max: 10,
+    key: (c) => `ip:${clientIp(c)}`,
   }),
 );
 
@@ -90,10 +113,19 @@ app.get("/api/auth-config", (c) =>
   c.json(AuthConfigSchema.parse({ googleEnabled: Boolean(process.env.GOOGLE_CLIENT_ID) })),
 );
 
-// OpenAI reachability from THIS host (`?gen=1` exercises the referee's
-// exact background+poll transport with a one-word generation).
+// OpenAI reachability from THIS host. `?gen=1` runs a REAL generation and
+// therefore costs money on every call, so it is admin-only — it was previously
+// unauthenticated, i.e. anyone on the internet could bill the owner's account
+// in a loop. The free reachability check stays open so uptime probes work.
 app.get("/api/health/openai", async (c) => {
-  const result = await probeOpenAI(c.req.query("gen") === "1");
+  const wantsGeneration = c.req.query("gen") === "1";
+  if (wantsGeneration) {
+    const session = await auth.api.getSession({ headers: c.req.raw.headers });
+    if (session?.user?.role !== "admin") {
+      return c.json({ error: "forbidden", code: "admin_required" }, 403);
+    }
+  }
+  const result = await probeOpenAI(wantsGeneration);
   return c.json(result, result.ok ? 200 : 502);
 });
 
@@ -148,7 +180,13 @@ app.use("/api/history/*", requireAuth);
 app.route("/api/history", matchHistoryRoutes);
 
 // Profiles are an offline-players feature: online-only users are blocked.
-app.use("/api/profiles/*", requireAuth, requireOffline);
+// Avatar generation is an image-model call, hence the mutating-only limit.
+app.use(
+  "/api/profiles/*",
+  requireAuth,
+  requireOffline,
+  rateLimit({ name: "profiles-write", windowMs: 60_000, max: 20, skipSafeMethods: true }),
+);
 app.route("/api/profiles", profileRoutes);
 app.route("/api/profiles", avatarRoutes);
 
@@ -162,7 +200,22 @@ app.use("/api/tournaments/*", requireAuth, requireOnline);
 app.route("/api/tournaments", tournamentRoutes);
 
 // D&D DM tool (campaign hall). Lives in the play area, so gated like it.
-app.use("/api/dnd/*", requireAuth, requireOnline);
+// Nearly every mutating route here triggers an OpenAI call, and several
+// (`npcs/retrigger`, `combats/:id/turn`, `characters/:id/actions`) can be
+// replayed against rows that already exist, so the per-campaign caps do not
+// bound spend. Reads are unmetered.
+app.use(
+  "/api/dnd/*",
+  requireAuth,
+  requireOnline,
+  rateLimit({
+    name: "dnd-generate",
+    windowMs: 60_000,
+    max: 20,
+    skipSafeMethods: true,
+    message: "You're generating too quickly — give it a minute.",
+  }),
+);
 app.route("/api/dnd", dndCampaignRoutes);
 
 // BGA bridge sessions (create / join-by-code / SSE spectate). Play-area
@@ -247,8 +300,19 @@ app.get(
           return;
         }
 
-        if (handleRoomMessage(ws, msg)) return;
-        handleWsMessage(ws, msg);
+        // Envelope parsing is validated above and per-game payloads are
+        // validated in the session manager, but a handler bug must not escape
+        // into the socket callback — an uncaught throw here is exactly the
+        // shape that used to take the process down.
+        try {
+          if (handleRoomMessage(ws, msg)) return;
+          handleWsMessage(ws, msg);
+        } catch (err) {
+          console.error("[ws] handler threw:", err);
+          ws.send(
+            JSON.stringify({ type: "error", message: "Internal error handling that action" }),
+          );
+        }
       },
       onClose(_event, ws) {
         wsAuth.delete(ws);
@@ -257,5 +321,15 @@ app.get(
     };
   }),
 );
+
+// A route that throws otherwise surfaces as Hono's bare 500 with no log line,
+// which makes production failures invisible. Keep the response body generic:
+// error text has a habit of carrying SQL and user data.
+app.onError((err, c) => {
+  console.error(`[http] ${c.req.method} ${new URL(c.req.url).pathname} failed:`, err);
+  return c.json({ error: "Internal server error" }, 500);
+});
+
+app.notFound((c) => c.json({ error: "Not found" }, 404));
 
 export { app, injectWebSocket };

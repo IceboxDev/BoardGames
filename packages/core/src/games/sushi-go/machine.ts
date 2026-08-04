@@ -1,4 +1,5 @@
-import { assign, fromPromise, setup } from "xstate";
+import { assign, fromPromise, type SnapshotFrom, setup } from "xstate";
+import { playerActionValidator, safeApply } from "../../machines/action-validation";
 import type { GameMachineSpec } from "../../machines/types";
 import type { NashAnalysis } from "./ai/nash";
 import { getLastNashAnalysis } from "./ai/nash";
@@ -162,20 +163,22 @@ export const sushiGoMachine = setup({
   actions: {
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
-      const gs = createInitialState(event.playerCount);
-      const humanPlayers =
-        event.humanPlayers ?? Array.from({ length: event.playerCount }, (_, i) => i);
-      const stratId = (event.strategyId ?? "nash") as StrategyId;
-      const strategy = createStrategy(stratId);
-      return {
-        gameState: gs,
-        humanPlayers,
-        strategy,
-        strategyId: stratId,
-        nashAnalysis: null,
-        pendingAiSelections: null,
-        pendingNashAnalysis: null,
-      };
+      return safeApply("sushi-go", () => {
+        const gs = createInitialState(event.playerCount);
+        const humanPlayers =
+          event.humanPlayers ?? Array.from({ length: event.playerCount }, (_, i) => i);
+        const stratId = (event.strategyId ?? "nash") as StrategyId;
+        const strategy = createStrategy(stratId);
+        return {
+          gameState: gs,
+          humanPlayers,
+          strategy,
+          strategyId: stratId,
+          nashAnalysis: null,
+          pendingAiSelections: null,
+          pendingNashAnalysis: null,
+        };
+      });
     }),
 
     applyPlayerSelection: assign(({ context, event }) => {
@@ -188,9 +191,9 @@ export const sushiGoMachine = setup({
               cardId: action.cardId,
               secondCardId: action.secondCardId,
             };
-      return {
+      return safeApply("sushi-go", () => ({
         gameState: applySelection(context.gameState, playerIndex, selection),
-      };
+      }));
     }),
 
     applyCachedAiSelections: assign(({ context }) => {
@@ -198,23 +201,27 @@ export const sushiGoMachine = setup({
       if (!cached) {
         return { pendingAiSelections: null, pendingNashAnalysis: null };
       }
-      let state = context.gameState;
-      for (let i = 0; i < state.playerCount; i++) {
-        const sel = cached[i];
-        if (sel !== null && state.selections[i] === null) {
-          state = applySelection(state, i, sel);
+      return safeApply("sushi-go", () => {
+        let state = context.gameState;
+        for (let i = 0; i < state.playerCount; i++) {
+          const sel = cached[i];
+          if (sel !== null && state.selections[i] === null) {
+            state = applySelection(state, i, sel);
+          }
         }
-      }
-      return {
-        gameState: state,
-        nashAnalysis: context.pendingNashAnalysis,
-        pendingAiSelections: null,
-        pendingNashAnalysis: null,
-      };
+        return {
+          gameState: state,
+          nashAnalysis: context.pendingNashAnalysis,
+          pendingAiSelections: null,
+          pendingNashAnalysis: null,
+        };
+      });
     }),
 
     applyReveal: assign(({ context }) => {
-      return { gameState: applyRevealAndRotate(context.gameState) };
+      return safeApply("sushi-go", () => ({
+        gameState: applyRevealAndRotate(context.gameState),
+      }));
     }),
   },
 }).createMachine({
@@ -376,6 +383,41 @@ function buildPlayerView(ctx: SushiGoContext, player: number): SushiGoPlayerView
 }
 
 // ---------------------------------------------------------------------------
+// Action validation
+// ---------------------------------------------------------------------------
+
+type SushiGoSnapshot = SnapshotFrom<typeof sushiGoMachine>;
+
+function legalActionsFor(snapshot: SushiGoSnapshot, player: number): SushiGoAction[] {
+  const gs = snapshot.context.gameState;
+  if (!gs) return [];
+  return getLegalActions(gs, player);
+}
+
+/**
+ * Chopstick pairs are enumerated in hand order, but the UI emits them in the
+ * order the two cards were tapped — both spellings are the same move.
+ */
+function withChopstickOrderings(actions: SushiGoAction[]): SushiGoAction[] {
+  const out = [...actions];
+  for (const action of actions) {
+    if (action.type === "select-with-chopsticks") {
+      out.push({ ...action, cardId: action.secondCardId, secondCardId: action.cardId });
+    }
+  }
+  return out;
+}
+
+const validateSushiGoAction = playerActionValidator<
+  typeof sushiGoMachine,
+  SushiGoAction,
+  SushiGoEvent
+>({
+  legalActions: (snapshot, player) => withChopstickOrderings(legalActionsFor(snapshot, player)),
+  toEvent: (action, player) => ({ type: "PLAYER_ACTION", playerIndex: player, action }),
+});
+
+// ---------------------------------------------------------------------------
 // Spec export
 // ---------------------------------------------------------------------------
 
@@ -392,7 +434,11 @@ export const sushiGoSpec: GameMachineSpec<
   },
 
   getLegalActions(snapshot, player) {
-    return getLegalActions(snapshot.context.gameState, player);
+    return legalActionsFor(snapshot, player);
+  },
+
+  validateAction(snapshot, player, raw) {
+    return validateSushiGoAction(snapshot, player, raw);
   },
 
   getActivePlayer(snapshot) {
