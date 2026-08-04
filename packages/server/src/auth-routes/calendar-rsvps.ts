@@ -28,6 +28,9 @@ const LockStateRowSchema = z.object({
 /** `SELECT host_user_id FROM locked_dates`. */
 const HostUserIdRowSchema = z.object({ host_user_id: z.string().nullable() });
 
+/** `SELECT status FROM rsvps` — pre-upsert read for change-aware logging. */
+const RsvpStatusRowSchema = z.object({ status: z.enum(["yes", "no"]) });
+
 async function loadLockState(date: string): Promise<{
   locked: boolean;
   picksLocked: boolean;
@@ -76,6 +79,19 @@ calendarRsvpsRoutes.post("/rsvp", zJsonBody(SetRsvpBodySchema), async (c) => {
     return errorResponse(c, 403, "guest list is locked", "GUEST_LIST_LOCKED");
   }
 
+  // Current status BEFORE the upsert, so activity logging can tell a real
+  // change from a no-op re-send. Re-sends are routine: RsvpModal silently
+  // re-POSTs "yes" every time a non-"no" viewer opens a night's card (to
+  // promote lock-batch auto-yes rows to manual), which would otherwise spam
+  // the activity trail with phantom "RSVP'd yes" entries.
+  const existingResult = await getDb().execute({
+    sql: "SELECT status FROM rsvps WHERE date_key = ? AND user_id = ? LIMIT 1",
+    args: [date, user.id],
+  });
+  const previous = existingResult.rows[0]
+    ? parseRow(RsvpStatusRowSchema, existingResult.rows[0], "rsvps").status
+    : null;
+
   // The auto flag tracks whether this came from a real button click
   // (auto=0) vs an automated mechanism (auto=1). Important: a manual click
   // that overwrites a prior auto row must reset auto to 0 so the attendees
@@ -89,7 +105,16 @@ calendarRsvpsRoutes.post("/rsvp", zJsonBody(SetRsvpBodySchema), async (c) => {
             auto = excluded.auto`,
     args: [date, user.id, status, autoFlag],
   });
-  logActivity(user.id, "rsvp", { date, status, ...(auto ? { auto: true } : {}) });
+  // Only status CHANGES are activity; a re-confirmation of the same answer
+  // is not. `previous` lets the drawer render "Changed RSVP from yes to no".
+  if (previous !== status) {
+    logActivity(user.id, "rsvp", {
+      date,
+      status,
+      ...(previous ? { previous } : {}),
+      ...(auto ? { auto: true } : {}),
+    });
+  }
 
   return c.json(OkResponseSchema.parse({ ok: true }));
 });
@@ -143,11 +168,14 @@ calendarRsvpsRoutes.delete("/rsvp", zJsonBody(ClearRsvpBodySchema), async (c) =>
   const user = c.get("user");
   const { date } = c.req.valid("json");
 
-  await getDb().execute({
+  const result = await getDb().execute({
     sql: "DELETE FROM rsvps WHERE date_key = ? AND user_id = ?",
     args: [date, user.id],
   });
-  logActivity(user.id, "rsvp-cleared", { date });
+  // Deleting nothing isn't activity.
+  if (result.rowsAffected > 0) {
+    logActivity(user.id, "rsvp-cleared", { date });
+  }
 
   return c.json(OkResponseSchema.parse({ ok: true }));
 });

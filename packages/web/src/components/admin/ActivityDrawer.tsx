@@ -194,8 +194,12 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
       return "Visited the site";
     case "rsvp": {
       const status = str(meta.status) === "no" ? "no" : "yes";
+      const previous = str(meta.previous);
       const auto = meta.auto === true ? " (auto)" : "";
-      return `RSVP'd ${status}${forDay ? ` for ${forDay}` : ""}${auto}`;
+      // `previous` is only logged on an actual status change; without it this
+      // was the user's first answer for the night.
+      const verb = previous ? `Changed RSVP from ${previous} to ${status}` : `RSVP'd ${status}`;
+      return `${verb}${forDay ? ` for ${forDay}` : ""}${auto}`;
     }
     case "rsvp-cleared":
       return `Cleared their RSVP${forDay ? ` for ${forDay}` : ""}`;
