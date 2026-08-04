@@ -1,9 +1,10 @@
 import { describe, expect, it } from "vitest";
-import type { MatchOutcome } from "../protocol/http/history.ts";
+import type { MatchOutcome, MatchOutcomeLastStanding } from "../protocol/http/history.ts";
 import {
   deriveParticipantResult,
   extractParticipantIds,
   freeForAllPlacement,
+  lastStandingPlacement,
   participantPerformanceCredit,
   participatedIn,
 } from "./participant-results.ts";
@@ -107,6 +108,20 @@ describe("deriveParticipantResult", () => {
     expect(deriveParticipantResult(o, "b")).toBe("loss");
   });
 
+  it("last-standing with survivorRanks (poker): only the chip leader wins", () => {
+    const o: MatchOutcome = {
+      kind: "last-standing",
+      players: [
+        { ...p("a"), survivorRank: 2 },
+        { ...p("b"), survivorRank: 1 },
+        { ...p("c"), eliminationOrder: 0 },
+      ],
+    };
+    expect(deriveParticipantResult(o, "b")).toBe("win");
+    expect(deriveParticipantResult(o, "a")).toBe("loss");
+    expect(deriveParticipantResult(o, "c")).toBe("loss");
+  });
+
   it("coop: everyone shares the outcome", () => {
     const win: MatchOutcome = { kind: "coop", participants: [p("a"), p("b")], outcome: "win" };
     const loss: MatchOutcome = { kind: "coop", participants: [p("a")], outcome: "loss" };
@@ -158,6 +173,35 @@ describe("freeForAllPlacement", () => {
   });
 });
 
+describe("lastStandingPlacement", () => {
+  // Poker night: b led the chips, a came 2nd; d busted first, c busted last.
+  const ranked: MatchOutcomeLastStanding = {
+    kind: "last-standing",
+    players: [
+      { ...p("a"), survivorRank: 2 },
+      { ...p("b"), survivorRank: 1 },
+      { ...p("c"), eliminationOrder: 1 },
+      { ...p("d"), eliminationOrder: 0 },
+    ],
+  };
+
+  it("survivors place by chip rank, the eliminated by reverse knockout order", () => {
+    expect(lastStandingPlacement(ranked, "b")).toEqual({ place: 1, total: 4 });
+    expect(lastStandingPlacement(ranked, "a")).toEqual({ place: 2, total: 4 });
+    expect(lastStandingPlacement(ranked, "c")).toEqual({ place: 3, total: 4 });
+    expect(lastStandingPlacement(ranked, "d")).toEqual({ place: 4, total: 4 });
+  });
+
+  it("returns null without survivor ranks or for an absent user", () => {
+    const unranked: MatchOutcomeLastStanding = {
+      kind: "last-standing",
+      players: [{ ...p("a") }, { ...p("b"), eliminationOrder: 0 }],
+    };
+    expect(lastStandingPlacement(unranked, "a")).toBeNull();
+    expect(lastStandingPlacement(ranked, "absent")).toBeNull();
+  });
+});
+
 describe("participantPerformanceCredit (Scheme A)", () => {
   it("win = 1, free-for-all loss = linear placement credit", () => {
     const o: MatchOutcome = {
@@ -200,6 +244,28 @@ describe("participantPerformanceCredit (Scheme A)", () => {
     const scoredCoop: MatchOutcome = { kind: "coop", participants: [p("a")], score: 9 };
     expect(participantPerformanceCredit(scoredCoop, "a")).toBeNull();
     expect(participantPerformanceCredit(mod, "absent")).toBeNull();
+  });
+
+  it("ranked last-standing (poker) grades the full finishing order; unranked stays 0", () => {
+    const ranked: MatchOutcome = {
+      kind: "last-standing",
+      players: [
+        { ...p("a"), survivorRank: 2 },
+        { ...p("b"), survivorRank: 1 },
+        { ...p("c"), eliminationOrder: 1 },
+        { ...p("d"), eliminationOrder: 0 },
+      ],
+    };
+    expect(participantPerformanceCredit(ranked, "b", "poker")).toBe(1); // chip leader
+    expect(participantPerformanceCredit(ranked, "a", "poker")).toBeCloseTo(2 / 3); // 2nd of 4
+    expect(participantPerformanceCredit(ranked, "c", "poker")).toBeCloseTo(1 / 3); // 3rd of 4
+    expect(participantPerformanceCredit(ranked, "d", "poker")).toBe(0); // first out
+    const unranked: MatchOutcome = {
+      kind: "last-standing",
+      players: [{ ...p("a") }, { ...p("b"), eliminationOrder: 0 }],
+    };
+    expect(participantPerformanceCredit(unranked, "a", "poker")).toBe(1);
+    expect(participantPerformanceCredit(unranked, "b", "poker")).toBe(0);
   });
 
   it("team / point-less losses are a flat 0", () => {

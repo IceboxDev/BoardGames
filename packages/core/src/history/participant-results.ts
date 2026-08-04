@@ -6,7 +6,11 @@
 // stats) and the web (match-list result badges) need the exact same answer.
 // Centralising it here keeps the two from ever disagreeing.
 
-import type { MatchOutcome, MatchOutcomeFreeForAll } from "../protocol/http/history.ts";
+import type {
+  MatchOutcome,
+  MatchOutcomeFreeForAll,
+  MatchOutcomeLastStanding,
+} from "../protocol/http/history.ts";
 import { isPointlessFreeForAll, lowScoreWinsForSlug } from "./score-config.ts";
 
 /**
@@ -67,7 +71,10 @@ export function participatedIn(outcome: MatchOutcome, userId: string): boolean {
  *   a tie at the top is a `"win"` for each.
  * - **teams** — win iff the player's team index is in `winnerTeamIndices`; the
  *   moderator slot returns `"moderator"`.
- * - **last-standing** — survivors (no `eliminationOrder`) win, the eliminated lose.
+ * - **last-standing** — survivors (no `eliminationOrder`) win, the eliminated
+ *   lose. When survivors carry a `survivorRank` (poker chip standings), only the
+ *   best-ranked survivor wins — a ranked runner-up finished the night, but below
+ *   the chip leader. An unranked survivor keeps the legacy co-winner semantics.
  * - **coop** — every participant shares the single win/loss `outcome`; a scored
  *   co-op with no `outcome` (Just One) is `"played"` for everyone.
  * - **one-vs-many** — the side named by `winnerSide` wins.
@@ -102,7 +109,13 @@ export function deriveParticipantResult(
     case "last-standing": {
       const me = outcome.players.find((p) => p.userId === userId);
       if (!me) return null;
-      return me.eliminationOrder === undefined ? "win" : "loss";
+      if (me.eliminationOrder !== undefined) return "loss";
+      // Ranked survivors (poker chip standings): only the chip leader won.
+      if (me.survivorRank === undefined) return "win";
+      const bestRank = Math.min(
+        ...outcome.players.map((p) => p.survivorRank).filter((r): r is number => r !== undefined),
+      );
+      return me.survivorRank === bestRank ? "win" : "loss";
     }
     case "coop": {
       if (!outcome.participants.some((p) => p.userId === userId)) return null;
@@ -146,6 +159,33 @@ export function freeForAllPlacement(
 }
 
 /**
+ * A player's 1-based finishing position in a last-standing match whose
+ * survivors carry explicit `survivorRank`s (poker chip standings), plus the
+ * field size. Survivors place by rank (1 = chip leader); the eliminated follow
+ * in reverse knockout order (last out places just below the worst survivor).
+ * Returns null when the match has no survivor ranks (survivors are plain
+ * co-winners with no meaningful order) or the user isn't in it.
+ */
+export function lastStandingPlacement(
+  outcome: MatchOutcomeLastStanding,
+  userId: string,
+): { place: number; total: number } | null {
+  const me = outcome.players.find((p) => p.userId === userId);
+  if (!me) return null;
+  if (!outcome.players.some((p) => p.survivorRank !== undefined)) return null;
+  const total = outcome.players.length;
+  const survivorCount = outcome.players.filter((p) => p.eliminationOrder === undefined).length;
+  if (me.eliminationOrder === undefined) {
+    // An unranked survivor in a ranked match keeps co-winner semantics: top spot.
+    return { place: me.survivorRank ?? 1, total };
+  }
+  const outlasted = outcome.players.filter(
+    (p) => p.eliminationOrder !== undefined && p.eliminationOrder > (me.eliminationOrder as number),
+  ).length;
+  return { place: survivorCount + outlasted + 1, total };
+}
+
+/**
  * "Scheme A" performance credit in [0,1] for one match, or null when the match
  * is non-competitive for this user (moderator, scored co-op, or not present) and
  * should be excluded from the performance average entirely.
@@ -154,7 +194,10 @@ export function freeForAllPlacement(
  * - free-for-all loss → linear placement credit `(N - place) / (N - 1)` (2nd of
  *   5 = 0.75, last = 0). Point-less free-for-alls have no placement, so a loss
  *   there is a flat 0.
- * - every other loss (teams, last-standing, binary co-op, one-vs-many) → 0
+ * - last-standing loss with recorded `survivorRank`s (poker chip standings) →
+ *   the same linear placement credit over the full finishing order (survivors by
+ *   rank, then the eliminated in reverse knockout order).
+ * - every other loss (teams, unranked last-standing, binary co-op, one-vs-many) → 0
  *
  * `slug` selects the game's scoring direction / point-less-ness via the shared
  * score-config; pass the match's `gameSlug`.
@@ -171,6 +214,11 @@ export function participantPerformanceCredit(
   // loss
   if (outcome.kind === "free-for-all" && !isPointlessFreeForAll(slug)) {
     const pl = freeForAllPlacement(outcome, userId, lowestWins);
+    if (!pl || pl.total <= 1) return 0;
+    return (pl.total - pl.place) / (pl.total - 1);
+  }
+  if (outcome.kind === "last-standing") {
+    const pl = lastStandingPlacement(outcome, userId);
     if (!pl || pl.total <= 1) return 0;
     return (pl.total - pl.place) / (pl.total - 1);
   }
