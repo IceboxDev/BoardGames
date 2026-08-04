@@ -105,7 +105,25 @@ export function matchResultBadge(
     case "last-standing": {
       const me = outcome.players.find((p) => p.userId === userId);
       if (!me) return null;
-      if (me.eliminationOrder !== undefined) return { label: "Lost", tone: "rose" };
+      if (me.eliminationOrder !== undefined) {
+        // Knockout order IS a finishing order (Not Enough Mana, Exploding
+        // Kittens, …): place below every survivor, above everyone knocked out
+        // earlier — same placement treatment as score-based FFA, where only
+        // the actual last place reads "Last" in red.
+        const survivorCount = outcome.players.filter(
+          (p) => p.eliminationOrder === undefined,
+        ).length;
+        const myOrder = me.eliminationOrder;
+        // Eliminated LATER (higher order) = outlasted me = places above me.
+        const outlastedMe = outcome.players.filter(
+          (p) => p.eliminationOrder !== undefined && p.eliminationOrder > myOrder,
+        ).length;
+        const someoneBelow = outcome.players.some(
+          (p) => p.eliminationOrder !== undefined && p.eliminationOrder < myOrder,
+        );
+        if (!someoneBelow) return { label: "Last", tone: "rose" };
+        return { label: ordinal(survivorCount + outlastedMe + 1), tone: "amber" };
+      }
       // Ranked survivors (poker chip standings): only the chip leader "Won";
       // the rest place. Unranked survivors keep the legacy co-winner badge.
       if (me.survivorRank === undefined) return { label: "Won", tone: "emerald" };

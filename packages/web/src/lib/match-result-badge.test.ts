@@ -122,8 +122,8 @@ describe("matchResultBadge — last-standing with survivorRanks (poker)", () => 
   it("ranked runner-up → ordinal (amber), not Won", () => {
     expect(matchResultBadge(ranked, "a", "poker")).toEqual({ label: "2nd", tone: "amber" });
   });
-  it("eliminated → Lost (rose)", () => {
-    expect(matchResultBadge(ranked, "c", "poker")).toEqual({ label: "Lost", tone: "rose" });
+  it("first eliminated (nobody below) → Last (rose)", () => {
+    expect(matchResultBadge(ranked, "c", "poker")).toEqual({ label: "Last", tone: "rose" });
   });
   it("unranked survivors keep the legacy co-winner badge", () => {
     const unranked: MatchOutcome = {
@@ -132,5 +132,34 @@ describe("matchResultBadge — last-standing with survivorRanks (poker)", () => 
     };
     expect(matchResultBadge(unranked, "a", "poker")).toEqual({ label: "Won", tone: "emerald" });
     expect(matchResultBadge(unranked, "b", "poker")).toEqual({ label: "Won", tone: "emerald" });
+  });
+  it("eliminated players place by knockout order (Not Enough Mana)", () => {
+    // 4 players, one survivor: knockout order 1-2-3 → survivor Won, the last
+    // one out placed 2nd, then 3rd, and the first out reads Last.
+    const nem: MatchOutcome = {
+      kind: "last-standing",
+      players: [
+        lsp("winner"),
+        lsp("first-out", { eliminationOrder: 1 }),
+        lsp("second-out", { eliminationOrder: 2 }),
+        lsp("third-out", { eliminationOrder: 3 }),
+      ],
+    };
+    expect(matchResultBadge(nem, "winner", "not-enough-mana")).toEqual({
+      label: "Won",
+      tone: "emerald",
+    });
+    expect(matchResultBadge(nem, "third-out", "not-enough-mana")).toEqual({
+      label: "2nd",
+      tone: "amber",
+    });
+    expect(matchResultBadge(nem, "second-out", "not-enough-mana")).toEqual({
+      label: "3rd",
+      tone: "amber",
+    });
+    expect(matchResultBadge(nem, "first-out", "not-enough-mana")).toEqual({
+      label: "Last",
+      tone: "rose",
+    });
   });
 });
