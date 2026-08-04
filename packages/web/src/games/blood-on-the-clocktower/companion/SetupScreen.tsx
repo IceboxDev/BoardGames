@@ -22,12 +22,14 @@ import { type BagDraft, loadRoster, saveRoster } from "./persistence";
  * neighbour-based abilities (Chef, Empath) depend on it, so the screen says so
  * loudly. Dealing shuffles characters, never seats.
  */
-type RosterEntry = { id: number; name: string };
+type RosterEntry = { id: number; name: string; traveller?: boolean };
 
 let nextEntryId = 1;
 function toEntries(names: string[]): RosterEntry[] {
   return names.map((name) => ({ id: nextEntryId++, name }));
 }
+
+const MAX_TRAVELLERS = 5;
 
 // Fictitious villagers for test mode — clearly not real members (so name
 // autocomplete and the match-history port can't silently match them), in
@@ -63,7 +65,18 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
     setStoryteller(undefined);
   }
 
-  const countOk = names.length >= MIN_PLAYERS && names.length <= MAX_PLAYERS;
+  // Travellers sit in the circle but never draw from the bag — only the
+  // RESIDENT count must fit the 5–15 setup sheet.
+  const residents = entries.filter((e) => !e.traveller);
+  const travellerCount = entries.length - residents.length;
+  const countOk = residents.length >= MIN_PLAYERS && residents.length <= MAX_PLAYERS;
+
+  function toggleTraveller(entry: RosterEntry) {
+    if (!entry.traveller && travellerCount >= MAX_TRAVELLERS) return;
+    setEntries((prev) =>
+      prev.map((e) => (e.id === entry.id ? { ...e, traveller: !e.traveller } : e)),
+    );
+  }
 
   // Tonight's board game night (if one is locked for today): one tap pulls the
   // RSVP roster in instead of typing everyone by hand.
@@ -152,10 +165,13 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
     if (!countOk) return;
     saveRoster(names);
     onDeal({
-      names,
+      seats: entries.map((e) => ({
+        name: e.name,
+        ...(e.traveller ? { traveller: { character: null, alignment: "good" as const } } : {}),
+      })),
       ...(storyteller ? { storyteller } : {}),
-      bag: dealBag(names.length),
-      draws: names.map(() => null),
+      bag: dealBag(residents.length),
+      draws: entries.map(() => null),
     });
   }
 
@@ -212,7 +228,29 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
               <span className="w-6 shrink-0 text-center text-xs font-bold text-fg-muted">
                 {i + 1}
               </span>
-              <span className="min-w-0 flex-1 truncate text-sm text-fg-primary">{entry.name}</span>
+              <span
+                className={`min-w-0 flex-1 truncate text-sm ${
+                  entry.traveller ? "text-purple-300" : "text-fg-primary"
+                }`}
+              >
+                {entry.name}
+                {entry.traveller && (
+                  <span className="ml-1.5 rounded bg-purple-400/15 px-1 py-0.5 text-3xs font-bold uppercase tracking-pill text-purple-300">
+                    Traveller
+                  </span>
+                )}
+              </span>
+              <Button
+                variant="ghost"
+                size="xs"
+                aria-label={`Toggle ${entry.name} as a Traveller`}
+                title="Traveller: sits in the circle but doesn't draw from the bag"
+                className={entry.traveller ? "text-purple-300" : ""}
+                disabled={!entry.traveller && travellerCount >= MAX_TRAVELLERS}
+                onClick={() => toggleTraveller(entry)}
+              >
+                Trav
+              </Button>
               <Button
                 variant="ghost"
                 size="xs"
@@ -282,11 +320,19 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
       {countOk && (
         <Panel title="This game will have" tone="night">
           <p className="text-sm font-semibold text-fg-primary">
-            {describeDistribution(baseDistribution(names.length))}
+            {describeDistribution(baseDistribution(residents.length))}
+            {travellerCount > 0 && (
+              <span className="text-purple-300">
+                {" "}
+                · {travellerCount} Traveller{travellerCount === 1 ? "" : "s"}
+              </span>
+            )}
           </p>
           <p className="mt-1 text-xs text-fg-muted">
             Dealt secretly at random. If the Baron is dealt, two Townsfolk become two extra
             Outsiders; if the Drunk is dealt, they'll be shown a Townsfolk they believe they are.
+            {travellerCount > 0 &&
+              " Travellers don't draw from the bag — you'll pick their character next."}
           </p>
         </Panel>
       )}
@@ -294,11 +340,13 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
       <Button variant="primary" size="lg" block disabled={!countOk} onClick={deal}>
         Roll the bag
       </Button>
-      {!countOk && names.length > 0 && (
+      {!countOk && entries.length > 0 && (
         <p className="text-center text-xs text-fg-muted">
-          {names.length < MIN_PLAYERS
-            ? `Add ${MIN_PLAYERS - names.length} more to start.`
-            : "Too many players — Trouble Brewing seats at most 15."}
+          {residents.length < MIN_PLAYERS
+            ? `Add ${MIN_PLAYERS - residents.length} more non-traveller player${
+                MIN_PLAYERS - residents.length === 1 ? "" : "s"
+              } to start.`
+            : "Too many players — Trouble Brewing seats at most 15 (travellers aside)."}
         </p>
       )}
 

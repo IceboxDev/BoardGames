@@ -1,6 +1,6 @@
-import type { CharacterId } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import type { CompanionState } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import { beginNight, createGame } from "@boardgames/core/games/blood-on-the-clocktower/companion";
+import type { RecordedSeat } from "@boardgames/core/games/blood-on-the-clocktower/setup";
 import { setupFromDraws } from "@boardgames/core/games/blood-on-the-clocktower/setup";
 import { useCallback, useState } from "react";
 import BagScreen from "./BagScreen";
@@ -38,10 +38,26 @@ export default function Companion() {
 
   const beginFromDraft = useCallback(
     (d: BagDraft) => {
-      const draws = d.draws.filter((x): x is CharacterId => x !== null);
-      if (draws.length !== d.names.length) return;
+      const recorded: RecordedSeat[] = [];
+      for (let i = 0; i < d.seats.length; i++) {
+        const seat = d.seats[i];
+        if (seat.traveller) {
+          if (seat.traveller.character === null) return; // incomplete
+          recorded.push({
+            name: seat.name,
+            traveller: {
+              character: seat.traveller.character,
+              alignment: seat.traveller.alignment,
+            },
+          });
+        } else {
+          const token = d.draws[i];
+          if (token === null) return; // incomplete
+          recorded.push({ name: seat.name, token });
+        }
+      }
       const game = beginNight(
-        createGame(setupFromDraws(d.names, d.bag, draws), { storyteller: d.storyteller }),
+        createGame(setupFromDraws(recorded, d.bag), { storyteller: d.storyteller }),
       );
       saveGame(game);
       changeDraft(null);

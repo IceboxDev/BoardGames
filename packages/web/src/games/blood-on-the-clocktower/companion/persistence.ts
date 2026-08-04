@@ -4,22 +4,33 @@
 
 import type { CharacterId } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import type { CompanionState } from "@boardgames/core/games/blood-on-the-clocktower/companion";
-import type { BagSetup } from "@boardgames/core/games/blood-on-the-clocktower/setup";
+import type { BagSetup, DemonSkill } from "@boardgames/core/games/blood-on-the-clocktower/setup";
 
 const GAME_KEY = "botc-companion-game-v1";
 const ROSTER_KEY = "botc-companion-roster-v1";
-const BAG_KEY = "botc-companion-bag-v1";
+const BAG_KEY = "botc-companion-bag-v2";
+
+/** One chair in circle order. Traveller seats never draw from the bag. */
+export type BagDraftSeat = {
+  name: string;
+  /** Set when this seat was marked a traveller at setup; the character is
+   * picked (or rolled) on the Bag screen, alignment is the ST's call. */
+  traveller?: { character: CharacterId | null; alignment: "good" | "evil" };
+};
 
 /**
  * The in-between stage: the bag has been rolled and players are drawing
- * physical tokens; `draws[i]` is what seat `i` pulled (null until recorded).
- * Persisted so a locked phone mid-draw loses nothing.
+ * physical tokens; `draws[i]` is what seat `i` pulled (null until recorded;
+ * traveller seats stay null). Persisted so a locked phone mid-draw loses
+ * nothing.
  */
 export type BagDraft = {
-  names: string[];
+  seats: BagDraftSeat[];
   storyteller?: string;
   bag: BagSetup;
   draws: (CharacterId | null)[];
+  /** Bluff weighting for the eventual demon; toggled on the Bag screen. */
+  demonSkill?: DemonSkill;
 };
 
 export function loadGame(): CompanionState | null {
@@ -58,7 +69,7 @@ export function loadBagDraft(): BagDraft | null {
     if (
       typeof parsed === "object" &&
       parsed !== null &&
-      Array.isArray((parsed as { names?: unknown }).names) &&
+      Array.isArray((parsed as { seats?: unknown }).seats) &&
       Array.isArray((parsed as { draws?: unknown }).draws) &&
       typeof (parsed as { bag?: unknown }).bag === "object"
     ) {

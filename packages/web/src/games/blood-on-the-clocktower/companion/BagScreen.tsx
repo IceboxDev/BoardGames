@@ -5,10 +5,15 @@ import type {
 import {
   CHARACTER_SHEET_ORDER,
   CHARACTERS,
+  TRAVELLERS,
 } from "@boardgames/core/games/blood-on-the-clocktower/characters";
-import { dealBag } from "@boardgames/core/games/blood-on-the-clocktower/setup";
+import {
+  chooseDemonBluffs,
+  type DemonSkill,
+  dealBag,
+} from "@boardgames/core/games/blood-on-the-clocktower/setup";
 import { useId } from "react";
-import { Button, Select, useConfirm } from "../../../components/ui";
+import { Button, Chip, SegmentedControl, Select, useConfirm } from "../../../components/ui";
 import { CharacterIcon, Panel, Screen } from "./common";
 import { TYPE_LABEL, TYPE_TEXT } from "./labels";
 import type { BagDraft } from "./persistence";
@@ -18,6 +23,8 @@ import type { BagDraft } from "./persistence";
  * The app names the tokens to drop in the bag; players draw them at the
  * table; the Storyteller records who pulled what, then starts the night.
  * Whoever draws the Drunk's stand-in Townsfolk token is secretly the Drunk.
+ * Traveller seats never draw: their public character is rolled/picked here
+ * and their alignment is the Storyteller's secret call.
  */
 export default function BagScreen({
   draft,
@@ -30,12 +37,19 @@ export default function BagScreen({
   onCancel: () => void;
   onBegin: () => void;
 }) {
-  const { names, bag, draws, storyteller } = draft;
+  const { seats, bag, draws, storyteller } = draft;
+  const demonSkill = draft.demonSkill ?? "new";
   const { confirm, confirmDialog } = useConfirm();
   const fieldId = useId();
 
   const taken = new Set(draws.filter((d): d is CharacterId => d !== null));
-  const complete = draws.every((d) => d !== null);
+  const takenTravellers = new Set(
+    seats.map((s) => s.traveller?.character).filter((c): c is CharacterId => c != null),
+  );
+  const residentCount = seats.filter((s) => !s.traveller).length;
+  const complete = seats.every((s, i) =>
+    s.traveller ? s.traveller.character !== null : draws[i] !== null,
+  );
 
   // Bag tokens in character-sheet order, grouped by the TOKEN's own type (the
   // Drunk's stand-in shows under Townsfolk — that's what the players see).
@@ -57,11 +71,47 @@ export default function BagScreen({
     onChange({ ...draft, draws });
   }
 
-  function redeal() {
+  function setTraveller(
+    seat: number,
+    patch: Partial<{ character: CharacterId | null; alignment: "good" | "evil" }>,
+  ) {
     onChange({
       ...draft,
-      bag: dealBag(names.length),
-      draws: names.map(() => null),
+      seats: seats.map((s, i) =>
+        i === seat && s.traveller ? { ...s, traveller: { ...s.traveller, ...patch } } : s,
+      ),
+    });
+  }
+
+  function rollTraveller(seat: number) {
+    const current = seats[seat].traveller?.character;
+    const pool = TRAVELLERS.filter((t) => t === current || !takenTravellers.has(t));
+    if (pool.length === 0) return;
+    setTraveller(seat, { character: pool[Math.floor(Math.random() * pool.length)] });
+  }
+
+  function redeal() {
+    // A fresh bag for the residents; traveller picks are independent and kept.
+    onChange({
+      ...draft,
+      bag: dealBag(residentCount, Math.random, demonSkill),
+      draws: seats.map(() => null),
+    });
+  }
+
+  function setDemonSkill(skill: DemonSkill) {
+    // Re-weight the bluffs for the new skill level; the bag itself is kept.
+    onChange({
+      ...draft,
+      demonSkill: skill,
+      bag: {
+        ...bag,
+        demonBluffs: chooseDemonBluffs({
+          charactersInPlay: bag.charactersInPlay,
+          believedCharacter: bag.believedCharacter,
+          skill,
+        }),
+      },
     });
   }
 
@@ -113,24 +163,133 @@ export default function BagScreen({
             </p>
           )}
           {baronInPlay && <p>Baron in play: two Townsfolk were swapped for two extra Outsiders.</p>}
+          {seats.some((s) => s.traveller) && (
+            <p className="text-purple-300">
+              Traveller seats don't draw — their token stays out of the bag; hand it to them openly
+              once recorded below.
+            </p>
+          )}
         </div>
         <Button className="mt-2" variant="secondary" size="sm" onClick={redeal}>
           Roll a different bag
         </Button>
       </Panel>
 
+      <Panel tone="night" title="Demon bluffs (shown on night 1)">
+        <div className="flex flex-wrap gap-1.5">
+          {bag.demonBluffs.map((id) => (
+            <span
+              key={id}
+              className={`flex items-center gap-1.5 rounded-lg border border-white/15 bg-surface-950/60 px-2 py-1 text-sm font-semibold ${TYPE_TEXT[CHARACTERS[id].type]}`}
+            >
+              <CharacterIcon character={id} size="sm" />
+              {CHARACTERS[id].name}
+            </span>
+          ))}
+        </div>
+        <div className="mt-2">
+          <SegmentedControl<DemonSkill>
+            options={[
+              { value: "new", label: "New demon" },
+              { value: "experienced", label: "Experienced demon" },
+            ]}
+            value={demonSkill}
+            onChange={setDemonSkill}
+            shape="rect"
+            size="xs"
+            fullWidth
+            selectionMode="toggle"
+            tone="rose"
+            aria-label="Demon bluff weighting"
+          />
+        </div>
+        <p className="mt-2 text-xs text-fg-muted">
+          Three safe not-in-play claims for whoever draws the Imp, weighted for how practised they
+          are: a new demon gets low-proof claims (Soldier, Monk…), an experienced one gets
+          ongoing-info claims they can fabricate daily (Empath, Fortune Teller…). The Virgin and
+          claims your game would expose are never offered. Toggling re-rolls them.
+        </p>
+      </Panel>
+
       <Panel title="Record the draw" tone="night">
         <p className="mb-2 text-xs text-fg-muted">
-          Let each player draw one token and look at it secretly. Then record who drew what — only
-          you see this screen.
+          Let each resident draw one token and look at it secretly, then record who drew what — only
+          you see this screen. Pick each traveller's character and secret alignment here too.
         </p>
         <div className="flex flex-col gap-1.5">
-          {names.map((name, seat) => {
+          {seats.map((seatEntry, seat) => {
+            const { name, traveller } = seatEntry;
+            if (traveller) {
+              const options = TRAVELLERS.filter(
+                (t) => t === traveller.character || !takenTravellers.has(t),
+              );
+              return (
+                // Names are unique (setup dedupes on add/import) → stable keys.
+                <div
+                  key={name}
+                  className="flex flex-col gap-1.5 rounded-lg border border-purple-400/25 bg-purple-400/5 p-1.5"
+                >
+                  <div className="flex min-h-9 items-center gap-2">
+                    <span className="w-6 shrink-0 text-center text-xs font-bold text-fg-muted">
+                      {seat + 1}
+                    </span>
+                    <span className="min-w-0 flex-1 truncate text-sm font-semibold text-purple-300">
+                      {name}
+                    </span>
+                    {traveller.character && (
+                      <CharacterIcon character={traveller.character} size="sm" />
+                    )}
+                    <Select
+                      id={`${fieldId}-seat-${seat}`}
+                      aria-label={`Traveller character for ${name}`}
+                      block={false}
+                      compact
+                      value={traveller.character ?? ""}
+                      onChange={(e) =>
+                        setTraveller(seat, {
+                          character: e.target.value ? (e.target.value as CharacterId) : null,
+                        })
+                      }
+                      className="w-40 shrink-0"
+                    >
+                      <option value="">— traveller…</option>
+                      {options.map((t) => (
+                        <option key={t} value={t}>
+                          {CHARACTERS[t].name}
+                        </option>
+                      ))}
+                    </Select>
+                  </div>
+                  <div className="flex items-center gap-2 pl-8">
+                    <Button variant="secondary" size="xs" onClick={() => rollTraveller(seat)}>
+                      Roll
+                    </Button>
+                    <Chip
+                      pressed={traveller.alignment === "good"}
+                      tone="sky"
+                      size="sm"
+                      onClick={() => setTraveller(seat, { alignment: "good" })}
+                    >
+                      Good
+                    </Chip>
+                    <Chip
+                      pressed={traveller.alignment === "evil"}
+                      tone="rose"
+                      size="sm"
+                      onClick={() => setTraveller(seat, { alignment: "evil" })}
+                    >
+                      Evil
+                    </Chip>
+                    <span className="text-3xs text-fg-muted">
+                      character public · alignment secret
+                    </span>
+                  </div>
+                </div>
+              );
+            }
             const current = draws[seat];
             const options = sortedTokens.filter((t) => t === current || !taken.has(t));
             return (
-              // Names are unique (setup dedupes on add/import), so they are
-              // stable keys; seats never reorder on this screen anyway.
               <div key={name} className="flex min-h-11 items-center gap-2">
                 <span className="w-6 shrink-0 text-center text-xs font-bold text-fg-muted">
                   {seat + 1}
@@ -166,7 +325,7 @@ export default function BagScreen({
       </Button>
       {!complete && (
         <p className="text-center text-xs text-fg-muted">
-          Record every player's token to continue.
+          Record every resident's token and every traveller's character to continue.
         </p>
       )}
       {confirmDialog}

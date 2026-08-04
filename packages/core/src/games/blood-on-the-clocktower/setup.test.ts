@@ -3,6 +3,7 @@ import { CHARACTERS } from "./characters.ts";
 import {
   baronAdjusted,
   baseDistribution,
+  chooseDemonBluffs,
   dealBag,
   dealSetup,
   describeDistribution,
@@ -164,7 +165,8 @@ describe("dealBag + setupFromDraws (physical draw flow)", () => {
     for (let seed = 1; seed < 300; seed++) {
       const bag = dealBag(9, seededRng(seed));
       if (!bag.believedCharacter) continue;
-      const setup = setupFromDraws(names(9), bag, [...bag.bagTokens], seededRng(seed + 1));
+      const recorded = names(9).map((name, i) => ({ name, token: bag.bagTokens[i] }));
+      const setup = setupFromDraws(recorded, bag, seededRng(seed + 1));
       const drunkSeat = bag.bagTokens.indexOf(bag.believedCharacter);
       expect(setup.seats[drunkSeat].character).toBe("drunk");
       expect(setup.seats[drunkSeat].believedCharacter).toBe(bag.believedCharacter);
@@ -177,9 +179,119 @@ describe("dealBag + setupFromDraws (physical draw flow)", () => {
     throw new Error("no Drunk dealt in 300 seeds");
   });
 
-  it("rejects a draw record that does not cover every seat", () => {
+  it("rejects a draw record that does not cover every resident seat", () => {
     const bag = dealBag(7, seededRng(1));
-    expect(() => setupFromDraws(names(7), bag, bag.bagTokens.slice(0, 6))).toThrow();
+    const recorded = names(6).map((name, i) => ({ name, token: bag.bagTokens[i] }));
+    expect(() => setupFromDraws(recorded, bag, seededRng(2))).toThrow();
+  });
+
+  it("seats setup-time travellers in place without a bag draw", () => {
+    const bag = dealBag(7, seededRng(3));
+    // 8 chairs: seat 2 is a traveller; the 7 residents drew the 7 bag tokens.
+    let t = 0;
+    const recorded = names(8).map((name, i) =>
+      i === 2
+        ? { name, traveller: { character: "thief" as const, alignment: "evil" as const } }
+        : { name, token: bag.bagTokens[t++] },
+    );
+    const setup = setupFromDraws(recorded, bag, seededRng(4));
+    expect(setup.seats).toHaveLength(8);
+    expect(setup.seats[2]).toMatchObject({
+      seat: 2,
+      character: "thief",
+      alignment: "evil",
+    });
+    // Residents around the traveller keep their tokens and circle positions.
+    expect(setup.seats[1].character).toBe(bag.bagTokens[1]);
+    expect(setup.seats[3].character).toBe(bag.bagTokens[2]);
+    // The traveller can never be the red herring.
+    expect(setup.redHerringSeat).not.toBe(2);
+  });
+
+  it("rejects duplicate or non-traveller characters on traveller seats", () => {
+    const bag = dealBag(5, seededRng(5));
+    const base = names(5).map((name, i) => ({ name, token: bag.bagTokens[i] }));
+    expect(() =>
+      setupFromDraws(
+        [
+          ...base,
+          { name: "T", traveller: { character: "monk" as const, alignment: "good" as const } },
+        ],
+        bag,
+        seededRng(6),
+      ),
+    ).toThrow();
+    expect(() =>
+      setupFromDraws(
+        [
+          ...base,
+          { name: "T1", traveller: { character: "thief" as const, alignment: "good" as const } },
+          { name: "T2", traveller: { character: "thief" as const, alignment: "evil" as const } },
+        ],
+        bag,
+        seededRng(7),
+      ),
+    ).toThrow();
+  });
+});
+
+describe("chooseDemonBluffs", () => {
+  // A 7-player game (no outsiders in the base 7p distribution) with the
+  // Virgin NOT in play, so it is always in the candidate pool.
+  const noOutsiderGame: Parameters<typeof chooseDemonBluffs>[0] = {
+    charactersInPlay: ["washerwoman", "chef", "empath", "soldier", "mayor", "poisoner", "imp"],
+  };
+  const withOutsiderGame: Parameters<typeof chooseDemonBluffs>[0] = {
+    charactersInPlay: ["washerwoman", "chef", "empath", "soldier", "butler", "poisoner", "imp"],
+  };
+
+  it("returns three unique, good, not-in-play characters", () => {
+    for (let seed = 1; seed <= 100; seed++) {
+      const bluffs = chooseDemonBluffs(withOutsiderGame, seededRng(seed));
+      expect(bluffs).toHaveLength(3);
+      expect(new Set(bluffs).size).toBe(3);
+      for (const b of bluffs) {
+        expect(["townsfolk", "outsider"]).toContain(CHARACTERS[b].type);
+        expect(withOutsiderGame.charactersInPlay).not.toContain(b);
+      }
+    }
+  });
+
+  it("never suggests the Virgin — the claim is publicly testable", () => {
+    for (let seed = 1; seed <= 300; seed++) {
+      expect(chooseDemonBluffs(noOutsiderGame, seededRng(seed))).not.toContain("virgin");
+      expect(
+        chooseDemonBluffs({ ...noOutsiderGame, skill: "experienced" }, seededRng(seed)),
+      ).not.toContain("virgin");
+    }
+  });
+
+  it("skips Outsider bluffs entirely when the Librarian would learn zero", () => {
+    const trap: Parameters<typeof chooseDemonBluffs>[0] = {
+      charactersInPlay: ["librarian", "chef", "empath", "soldier", "mayor", "poisoner", "imp"],
+    };
+    for (let seed = 1; seed <= 200; seed++) {
+      for (const b of chooseDemonBluffs(trap, seededRng(seed))) {
+        expect(CHARACTERS[b].type).toBe("townsfolk");
+      }
+    }
+  });
+
+  it("prefers passive bluffs for a new demon and info bluffs for an experienced one", () => {
+    // Slayer/Soldier/Monk out of play alongside Fortune Teller/Undertaker —
+    // count which tier each skill level favours over many seeded rolls.
+    const game: Parameters<typeof chooseDemonBluffs>[0] = {
+      charactersInPlay: ["washerwoman", "chef", "empath", "virgin", "butler", "poisoner", "imp"],
+    };
+    const count = (skill: "new" | "experienced", id: string) => {
+      let n = 0;
+      for (let seed = 1; seed <= 400; seed++) {
+        if (chooseDemonBluffs({ ...game, skill }, seededRng(seed)).includes(id as never)) n++;
+      }
+      return n;
+    };
+    expect(count("new", "soldier")).toBeGreaterThan(count("new", "undertaker"));
+    expect(count("experienced", "undertaker")).toBeGreaterThan(count("experienced", "soldier"));
   });
 });
 

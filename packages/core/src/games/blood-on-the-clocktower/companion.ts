@@ -129,6 +129,8 @@ export function createGame(setup: GameSetup, opts?: { storyteller?: string }): C
     name: s.name,
     character: s.character,
     ...(s.believedCharacter ? { believedCharacter: s.believedCharacter } : {}),
+    // Traveller seats carry their Storyteller-assigned alignment from setup.
+    ...(s.alignment ? { alignment: s.alignment } : {}),
     alive: true,
     ghostVote: true,
     poisoned: false,
