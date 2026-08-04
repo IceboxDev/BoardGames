@@ -213,12 +213,26 @@ describe("lastStandingPlacement", () => {
     expect(lastStandingPlacement(ranked, "d")).toEqual({ place: 4, total: 4 });
   });
 
-  it("returns null without survivor ranks or for an absent user", () => {
+  it("without survivor ranks: survivors co-win, the eliminated place by knockout order", () => {
+    // Not Enough Mana night: one survivor, five knocked out in order 1..5.
     const unranked: MatchOutcomeLastStanding = {
       kind: "last-standing",
-      players: [{ ...p("a") }, { ...p("b"), eliminationOrder: 0 }],
+      players: [
+        { ...p("winner") },
+        { ...p("out1"), eliminationOrder: 1 },
+        { ...p("out2"), eliminationOrder: 2 },
+        { ...p("out3"), eliminationOrder: 3 },
+        { ...p("out4"), eliminationOrder: 4 },
+        { ...p("out5"), eliminationOrder: 5 },
+      ],
     };
-    expect(lastStandingPlacement(unranked, "a")).toBeNull();
+    expect(lastStandingPlacement(unranked, "winner")).toEqual({ place: 1, total: 6 });
+    expect(lastStandingPlacement(unranked, "out5")).toEqual({ place: 2, total: 6 });
+    expect(lastStandingPlacement(unranked, "out2")).toEqual({ place: 5, total: 6 });
+    expect(lastStandingPlacement(unranked, "out1")).toEqual({ place: 6, total: 6 });
+  });
+
+  it("returns null for an absent user", () => {
     expect(lastStandingPlacement(ranked, "absent")).toBeNull();
   });
 });
@@ -267,7 +281,7 @@ describe("participantPerformanceCredit (Scheme A)", () => {
     expect(participantPerformanceCredit(mod, "absent")).toBeNull();
   });
 
-  it("ranked last-standing (poker) grades the full finishing order; unranked stays 0", () => {
+  it("ranked last-standing (poker) grades the full finishing order", () => {
     const ranked: MatchOutcome = {
       kind: "last-standing",
       players: [
@@ -286,7 +300,28 @@ describe("participantPerformanceCredit (Scheme A)", () => {
       players: [{ ...p("a") }, { ...p("b"), eliminationOrder: 0 }],
     };
     expect(participantPerformanceCredit(unranked, "a", "poker")).toBe(1);
+    // Last of 2 → 0 via placement math (not the old null path).
     expect(participantPerformanceCredit(unranked, "b", "poker")).toBe(0);
+  });
+
+  it("unranked knockout games grade the eliminated by knockout order", () => {
+    // Not Enough Mana, 6 players: 5th place earns (6-5)/(6-1) = 0.2 — the same
+    // linear credit a 5th-of-6 score in a placement FFA would earn, not a flat 0.
+    const nem: MatchOutcome = {
+      kind: "last-standing",
+      players: [
+        { ...p("winner") },
+        { ...p("out1"), eliminationOrder: 1 },
+        { ...p("out2"), eliminationOrder: 2 },
+        { ...p("out3"), eliminationOrder: 3 },
+        { ...p("out4"), eliminationOrder: 4 },
+        { ...p("out5"), eliminationOrder: 5 },
+      ],
+    };
+    expect(participantPerformanceCredit(nem, "winner", "not-enough-mana")).toBe(1);
+    expect(participantPerformanceCredit(nem, "out5", "not-enough-mana")).toBeCloseTo(0.8); // 2nd
+    expect(participantPerformanceCredit(nem, "out2", "not-enough-mana")).toBeCloseTo(0.2); // 5th
+    expect(participantPerformanceCredit(nem, "out1", "not-enough-mana")).toBe(0); // last
   });
 
   it("team / point-less losses are a flat 0", () => {

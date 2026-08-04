@@ -164,12 +164,13 @@ export function freeForAllPlacement(
 }
 
 /**
- * A player's 1-based finishing position in a last-standing match whose
- * survivors carry explicit `survivorRank`s (poker chip standings), plus the
- * field size. Survivors place by rank (1 = chip leader); the eliminated follow
- * in reverse knockout order (last out places just below the worst survivor).
- * Returns null when the match has no survivor ranks (survivors are plain
- * co-winners with no meaningful order) or the user isn't in it.
+ * A player's 1-based finishing position in a last-standing match, plus the
+ * field size. Survivors place by explicit `survivorRank` when one was recorded
+ * (poker chip standings); unranked survivors are co-winners sharing the top
+ * spot. The eliminated follow in reverse knockout order (last out places just
+ * below the worst survivor) — knockout order IS a finishing order, so this
+ * works with or without ranked survivors (Not Enough Mana, Exploding
+ * Kittens, …). Returns null only when the user isn't in the match.
  */
 export function lastStandingPlacement(
   outcome: MatchOutcomeLastStanding,
@@ -177,11 +178,10 @@ export function lastStandingPlacement(
 ): { place: number; total: number } | null {
   const me = outcome.players.find((p) => p.userId === userId);
   if (!me) return null;
-  if (!outcome.players.some((p) => p.survivorRank !== undefined)) return null;
   const total = outcome.players.length;
   const survivorCount = outcome.players.filter((p) => p.eliminationOrder === undefined).length;
   if (me.eliminationOrder === undefined) {
-    // An unranked survivor in a ranked match keeps co-winner semantics: top spot.
+    // Ranked survivor → their standing; unranked survivor → co-winner top spot.
     return { place: me.survivorRank ?? 1, total };
   }
   const outlasted = outcome.players.filter(
@@ -199,10 +199,12 @@ export function lastStandingPlacement(
  * - free-for-all loss → linear placement credit `(N - place) / (N - 1)` (2nd of
  *   5 = 0.75, last = 0). Point-less free-for-alls have no placement, so a loss
  *   there is a flat 0.
- * - last-standing loss with recorded `survivorRank`s (poker chip standings) →
- *   the same linear placement credit over the full finishing order (survivors by
- *   rank, then the eliminated in reverse knockout order).
- * - every other loss (teams, unranked last-standing, binary co-op, one-vs-many) → 0
+ * - last-standing loss → the same linear placement credit over the full
+ *   finishing order: survivors by `survivorRank` when recorded (poker chip
+ *   standings), then the eliminated in reverse knockout order. Elimination
+ *   games without ranked survivors (Not Enough Mana, Exploding Kittens, …)
+ *   place their eliminated exactly the same way.
+ * - every other loss (teams, binary co-op, one-vs-many) → 0
  *
  * `slug` selects the game's scoring direction / point-less-ness via the shared
  * score-config; pass the match's `gameSlug`.
