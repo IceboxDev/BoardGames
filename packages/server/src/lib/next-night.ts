@@ -19,11 +19,27 @@ export interface NextNightRef {
   status: NextNightStatus;
 }
 
-const pad = (n: number, width = 2): string => String(n).padStart(width, "0");
+/**
+ * The group's home timezone. Date keys mark calendar days as the group
+ * experiences them, so "today" must roll over at midnight in Munich — not at
+ * midnight UTC, which is 1-2 hours later and left last night's game night
+ * showing as "Next game night" (and excluded from nights-attended) until 1-2am
+ * local. The web client already uses browser-local dates, so this also keeps
+ * server and client agreeing on what "today" is.
+ */
+const CALENDAR_TIME_ZONE = process.env.CALENDAR_TIME_ZONE ?? "Europe/Berlin";
 
-/** Today's date key (YYYY-MM-DD) in UTC — the calendar's date-key convention. */
+// en-CA formats as YYYY-MM-DD — exactly the date-key convention.
+const dateKeyFormat = new Intl.DateTimeFormat("en-CA", {
+  timeZone: CALENDAR_TIME_ZONE,
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+
+/** Today's date key (YYYY-MM-DD) in the group's home timezone. */
 export function todayDateKey(now: Date = new Date()): string {
-  return `${pad(now.getUTCFullYear(), 4)}-${pad(now.getUTCMonth() + 1)}-${pad(now.getUTCDate())}`;
+  return dateKeyFormat.format(now);
 }
 
 const DateKeyOnlyRowSchema = z.object({ date_key: z.string() });
