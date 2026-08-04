@@ -16,14 +16,16 @@ import {
   recordDemonKill,
   setButlerMaster,
   setMonkProtection,
+  setNegativeVote,
   setNightStep,
   setPoison,
+  setTripleVote,
   undertakerInfo,
 } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import { useState } from "react";
 import { Button } from "../../../components/ui";
 import type { UpdateState } from "./Companion";
-import { CharacterTag, Panel, SeatPicker } from "./common";
+import { CharacterIcon, CharacterTag, Panel, SeatPicker } from "./common";
 
 /**
  * Step-by-step night runner following the boxed night sheet. Each step tells
@@ -107,14 +109,17 @@ function WakeHeader({
   const p = playerAt(state, step.seat);
   const c = CHARACTERS[step.character];
   return (
-    <div className="flex flex-col gap-1">
-      <p className="text-sm text-fg-secondary">
-        Wake <b className="text-white">{p.name}</b> — <CharacterTag character={step.character} />
-        {step.isDrunk && <span className="text-amber-300"> (really the Drunk)</span>}
-      </p>
-      {(night(c, state) ?? c.ability) && (
-        <p className="text-xs leading-relaxed text-fg-muted">{night(c, state) ?? c.ability}</p>
-      )}
+    <div className="flex items-start gap-3">
+      <CharacterIcon character={step.character} size="lg" />
+      <div className="flex min-w-0 flex-col gap-1">
+        <p className="text-sm text-fg-secondary">
+          Wake <b className="text-white">{p.name}</b> — <CharacterTag character={step.character} />
+          {step.isDrunk && <span className="text-amber-300"> (really the Drunk)</span>}
+        </p>
+        {(night(c, state) ?? c.ability) && (
+          <p className="text-xs leading-relaxed text-fg-muted">{night(c, state) ?? c.ability}</p>
+        )}
+      </div>
     </div>
   );
 }
@@ -141,10 +146,13 @@ function StepBody({
     case "you-are-imp":
       return (
         <Panel tone="danger" title="New Demon">
-          <p className="text-sm text-fg-primary">
-            Wake <b>{playerAt(state, step.seat).name}</b>. Show the YOU ARE info and the{" "}
-            <CharacterTag character="imp" /> token, then put them back to sleep.
-          </p>
+          <div className="flex items-center gap-3">
+            <CharacterIcon character="imp" size="lg" />
+            <p className="text-sm text-fg-primary">
+              Wake <b>{playerAt(state, step.seat).name}</b>. Show the YOU ARE info and the{" "}
+              <CharacterTag character="imp" /> token, then put them back to sleep.
+            </p>
+          </div>
         </Panel>
       );
     case "dawn":
@@ -165,9 +173,12 @@ function MinionInfo({ state }: { state: CompanionState }) {
       </p>
       <ul className="mt-2 flex flex-col gap-1 text-sm">
         {minions.map((p) => (
-          <li key={p.seat} className="flex justify-between gap-2">
+          <li key={p.seat} className="flex items-center justify-between gap-2">
             <span className="text-fg-primary">{p.name}</span>
-            <CharacterTag character={p.character} />
+            <span className="flex items-center gap-1.5">
+              <CharacterIcon character={p.character} size="sm" />
+              <CharacterTag character={p.character} />
+            </span>
           </li>
         ))}
       </ul>
@@ -185,16 +196,17 @@ function DemonInfo({ state }: { state: CompanionState }) {
         {minions.map((m) => m.name).join(", ")}. Then show THESE CHARACTERS ARE NOT IN PLAY with the
         three bluffs:
       </p>
-      <p className="mt-2 flex flex-wrap gap-1.5">
+      <div className="mt-2 flex flex-wrap gap-1.5">
         {state.demonBluffs.map((id) => (
           <span
             key={id}
-            className="rounded-lg border border-white/15 bg-surface-950/60 px-2 py-1 text-sm"
+            className="flex items-center gap-1.5 rounded-lg border border-white/15 bg-surface-950/60 px-2 py-1 text-sm"
           >
+            <CharacterIcon character={id} size="sm" />
             <CharacterTag character={id} />
           </span>
         ))}
-      </p>
+      </div>
     </Panel>
   );
 }
@@ -301,6 +313,14 @@ function WakeBody({
       );
     case "imp":
       return <ImpStep state={state} update={update} step={step} voided={voided} />;
+    case "thief":
+      return (
+        <VoteMarkStep state={state} update={update} step={step} voided={voided} kind="thief" />
+      );
+    case "bureaucrat":
+      return (
+        <VoteMarkStep state={state} update={update} step={step} voided={voided} kind="bureaucrat" />
+      );
     case "ravenkeeper":
       return <RavenkeeperStep state={state} voided={voided} />;
     case "undertaker":
@@ -392,12 +412,15 @@ function PairInfoStep({
   }
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-sm text-fg-primary">
-        {voided ? "A plausible FAKE to show:" : "Suggested true info:"} show the{" "}
-        <CharacterTag character={current.character} /> token, then point at{" "}
-        <b>{playerAt(state, current.realSeat).name}</b> and{" "}
-        <b>{playerAt(state, current.decoySeat).name}</b>.
-      </p>
+      <div className="flex items-start gap-3">
+        <CharacterIcon character={current.character} size="lg" />
+        <p className="text-sm text-fg-primary">
+          {voided ? "A plausible FAKE to show:" : "Suggested true info:"} show the{" "}
+          <CharacterTag character={current.character} /> token, then point at{" "}
+          <b>{playerAt(state, current.realSeat).name}</b> and{" "}
+          <b>{playerAt(state, current.decoySeat).name}</b>.
+        </p>
+      </div>
       {!voided && (
         <p className="text-xs text-fg-muted">
           {playerAt(state, current.realSeat).name} really is the{" "}
@@ -652,6 +675,49 @@ function ImpStep({
   );
 }
 
+/** Thief (−1 vote) and Bureaucrat (×3 votes) share the same pick-a-player shape. */
+function VoteMarkStep({
+  state,
+  update,
+  step,
+  voided,
+  kind,
+}: {
+  state: CompanionState;
+  update: UpdateState;
+  step: Extract<NightStep, { kind: "wake" }>;
+  voided: boolean;
+  kind: "thief" | "bureaucrat";
+}) {
+  const current = state.players.find((p) =>
+    kind === "thief" ? p.negativeVote : p.tripleVote,
+  )?.seat;
+  const setter = kind === "thief" ? setNegativeVote : setTripleVote;
+  if (voided) {
+    return (
+      <p className="text-sm text-fg-primary">
+        Let them point at a player as usual — but record <b>no mark</b>: their ability is void
+        tonight.
+      </p>
+    );
+  }
+  return (
+    <div className="flex flex-col gap-2">
+      <p className="text-xs text-fg-muted">
+        Tap who they point at (not themself — dead players are allowed). Tomorrow that player's vote
+        counts {kind === "thief" ? "NEGATIVELY (−1)" : "as 3 votes"}.
+      </p>
+      <SeatPicker
+        state={state}
+        selected={current !== undefined ? [current] : []}
+        disabledSeats={[step.seat]}
+        deadSelectable
+        onToggle={(seat) => update((s) => setter(s, seat === current ? undefined : seat))}
+      />
+    </div>
+  );
+}
+
 function RavenkeeperStep({ state, voided }: { state: CompanionState; voided: boolean }) {
   const [picked, setPicked] = useState<number | undefined>();
   const player = picked !== undefined ? playerAt(state, picked) : undefined;
@@ -667,6 +733,7 @@ function RavenkeeperStep({ state, voided }: { state: CompanionState; voided: boo
       {player && (
         <div className="flex flex-col items-center gap-1 py-1 text-center">
           <p className="text-sm text-fg-secondary">Show the token:</p>
+          <CharacterIcon character={player.character} size="xl" />
           <p className="text-2xl font-bold">
             <CharacterTag character={player.character} />
           </p>
@@ -702,6 +769,7 @@ function UndertakerStep({ state, voided }: { state: CompanionState; voided: bool
   return (
     <div className="flex flex-col items-center gap-1 py-1 text-center">
       <p className="text-sm text-fg-secondary">{executedName} was executed — show the token:</p>
+      <CharacterIcon character={executed} size="xl" />
       <p className="text-2xl font-bold">
         <CharacterTag character={executed} />
       </p>

@@ -9,7 +9,7 @@ import {
 import { dealBag } from "@boardgames/core/games/blood-on-the-clocktower/setup";
 import { useId } from "react";
 import { Button, Select, useConfirm } from "../../../components/ui";
-import { Panel, Screen } from "./common";
+import { CharacterIcon, Panel, Screen } from "./common";
 import { TYPE_LABEL, TYPE_TEXT } from "./labels";
 import type { BagDraft } from "./persistence";
 
@@ -96,8 +96,9 @@ export default function BagScreen({
               {g.tokens.map((t) => (
                 <span
                   key={t}
-                  className={`rounded-lg border border-white/15 bg-surface-950/60 px-2 py-1 text-sm font-semibold ${TYPE_TEXT[CHARACTERS[t].type]}`}
+                  className={`flex items-center gap-1.5 rounded-lg border border-white/15 bg-surface-950/60 px-2 py-1 text-sm font-semibold ${TYPE_TEXT[CHARACTERS[t].type]}`}
                 >
+                  <CharacterIcon character={t} size="sm" />
                   {CHARACTERS[t].name}
                 </span>
               ))}

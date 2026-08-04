@@ -2,13 +2,18 @@ import { CHARACTERS } from "@boardgames/core/games/blood-on-the-clocktower/chara
 import type { CompanionState } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import {
   aliveCount,
+  aliveResidents,
   canBeNominated,
   canNominate,
   endDay,
   endGame,
   executeAboutToDie,
+  executeScapegoatInstead,
+  giveBeggarToken,
+  isEvilPlayer,
   nameAt,
   playerAt,
+  recordGunslingerShot,
   recordNomination,
   recordSlayerShot,
   recordVirginTrigger,
@@ -52,6 +57,14 @@ export default function DayPanel({
           )}
           . Dead players vote with their one ghost vote; the Butler only votes if their master does.
         </p>
+        {state.players
+          .filter((p) => p.tripleVote || p.negativeVote)
+          .map((p) => (
+            <p key={p.seat} className="mt-1 text-xs font-semibold text-purple-300">
+              {p.name}'s vote counts {p.tripleVote ? "as 3 votes" : "NEGATIVELY (−1)"} today — count
+              it aloud accordingly.
+            </p>
+          ))}
       </Panel>
 
       {executed === undefined ? (
@@ -74,9 +87,100 @@ export default function DayPanel({
         />
       )}
 
+      <GunslingerPanel state={state} update={update} />
+      <BeggarPanel state={state} update={update} />
       <SlayerPanel state={state} update={update} />
       <EndDayPanel state={state} update={update} />
     </>
+  );
+}
+
+/** The Gunslinger may kill one voter per day, after the first vote is tallied. */
+function GunslingerPanel({ state, update }: { state: CompanionState; update: UpdateState }) {
+  const gunslinger = state.players.find((p) => p.alive && p.character === "gunslinger");
+  const [target, setTarget] = useState<number | undefined>();
+  if (!gunslinger) return null;
+  if (state.day.gunslingerUsed) {
+    return (
+      <Panel title="Gunslinger" tone="day">
+        <p className="text-sm text-fg-muted">The Gunslinger has already fired today.</p>
+      </Panel>
+    );
+  }
+  const noVoteYet = state.day.nominations.length === 0;
+  return (
+    <Panel title="Gunslinger" tone="day">
+      <p className="text-xs text-fg-muted">
+        After the FIRST vote of the day is tallied, {gunslinger.name} may publicly choose a player
+        that voted — they die. Not an execution: the day continues and the Undertaker learns
+        nothing.
+        {noVoteYet && " No vote has been tallied yet."}
+      </p>
+      <div className="mt-2 flex flex-col gap-2">
+        <SeatPicker
+          state={state}
+          selected={target !== undefined ? [target] : []}
+          disabledSeats={[gunslinger.seat]}
+          onToggle={(seat) => setTarget(seat === target ? undefined : seat)}
+        />
+        <Button
+          variant="danger"
+          block
+          disabled={target === undefined}
+          onClick={() => {
+            if (target === undefined) return;
+            update((s) => recordGunslingerShot(s, target));
+            setTarget(undefined);
+          }}
+        >
+          {target !== undefined ? `${nameAt(state, target)} is shot` : "Pick who they shoot"}
+        </Button>
+      </div>
+    </Panel>
+  );
+}
+
+/** A dead player hands the Beggar their ghost-vote token. */
+function BeggarPanel({ state, update }: { state: CompanionState; update: UpdateState }) {
+  const beggar = state.players.find((p) => p.alive && p.character === "beggar");
+  const [donor, setDonor] = useState<number | undefined>();
+  if (!beggar) return null;
+  const donors = state.players.filter((p) => !p.left && !p.alive && p.ghostVote);
+  if (donors.length === 0) return null;
+  const donorPlayer = donor !== undefined ? playerAt(state, donor) : undefined;
+  return (
+    <Panel title="Beggar" tone="day">
+      <p className="text-xs text-fg-muted">
+        A dead player may give {beggar.name} their vote token — the Beggar then learns their
+        alignment (whisper it to them). The donor can no longer vote.
+      </p>
+      <div className="mt-2 flex flex-col gap-2">
+        <SeatPicker
+          state={state}
+          selected={donor !== undefined ? [donor] : []}
+          disabledSeats={state.players.filter((p) => p.alive || !p.ghostVote).map((p) => p.seat)}
+          deadSelectable
+          onToggle={(seat) => setDonor(seat === donor ? undefined : seat)}
+        />
+        {donorPlayer && (
+          <p className="text-xs font-semibold text-purple-300">
+            Tell the Beggar: {donorPlayer.name} is {isEvilPlayer(donorPlayer) ? "EVIL" : "GOOD"}.
+          </p>
+        )}
+        <Button
+          variant="secondary"
+          block
+          disabled={donor === undefined}
+          onClick={() => {
+            if (donor === undefined) return;
+            update((s) => giveBeggarToken(s, donor));
+            setDonor(undefined);
+          }}
+        >
+          Record the token hand-over
+        </Button>
+      </div>
+    </Panel>
   );
 }
 
@@ -271,6 +375,13 @@ function ExecutePanel({
   votes: number;
 }) {
   const saintLoss = saintExecuted(state, seat);
+  const nominee = playerAt(state, seat);
+  // Scapegoat redirect: an alive Scapegoat of the nominee's alignment may be
+  // executed instead — the Storyteller's call.
+  const scapegoat = state.players.find(
+    (p) =>
+      p.alive && p.character === "scapegoat" && (p.alignment === "evil") === isEvilPlayer(nominee),
+  );
   return (
     <Panel tone="danger" title="About to die">
       <p className="text-sm text-fg-primary">
@@ -297,6 +408,23 @@ function ExecutePanel({
       >
         Execute {nameAt(state, seat)}
       </Button>
+      {scapegoat && (
+        <>
+          <Button
+            className="mt-2"
+            variant="warning"
+            block
+            onClick={() => update((s) => executeScapegoatInstead(s, seat))}
+          >
+            Execute {scapegoat.name} (Scapegoat) instead
+          </Button>
+          <p className="mt-1 text-xs text-fg-muted">
+            {scapegoat.name} shares {nameAt(state, seat)}'s alignment — you MAY execute the
+            Scapegoat in their place. It still counts as today's execution; the Undertaker sees a
+            Scapegoat.
+          </p>
+        </>
+      )}
     </Panel>
   );
 }
@@ -392,7 +520,8 @@ function SlayerPanel({ state, update }: { state: CompanionState; update: UpdateS
 function EndDayPanel({ state, update }: { state: CompanionState; update: UpdateState }) {
   const noExecution = state.day.executed === undefined;
   const mayor = state.players.find((p) => p.alive && p.character === "mayor" && !p.poisoned);
-  const mayorWin = noExecution && aliveCount(state) === 3 && mayor !== undefined;
+  // "Only 3 players live" — travellers don't count toward the Mayor's three.
+  const mayorWin = noExecution && aliveResidents(state) === 3 && mayor !== undefined;
 
   return (
     <Panel tone="night" title="End the day">

@@ -11,6 +11,7 @@ import { recordMatch } from "../../../lib/match-history";
 import { dateKey } from "../../../lib/offline-availability";
 import { qk } from "../../../lib/query-keys";
 import type { UpdateState } from "./Companion";
+import { CharacterIcon } from "./common";
 import { TYPE_TEXT } from "./labels";
 
 const NOBODY = "";
@@ -121,7 +122,8 @@ export default function PortToHistoryModal({
           <div className="flex flex-col gap-1.5">
             {state.players.map((p) => (
               <div key={p.seat} className="flex min-h-11 items-center gap-2">
-                <span className="min-w-0 flex-1 truncate text-sm">
+                <span className="flex min-w-0 flex-1 items-center gap-1.5 truncate text-sm">
+                  <CharacterIcon character={p.character} size="sm" />
                   <span className="text-fg-primary">{p.name}</span>{" "}
                   <span className={`text-xs ${TYPE_TEXT[CHARACTERS[p.character].type]}`}>
                     {CHARACTERS[p.character].name}

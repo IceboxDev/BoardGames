@@ -60,8 +60,10 @@ describe("dealSetup", () => {
       for (let seed = 1; seed <= 10; seed++) {
         const setup = dealSetup(names(n), seededRng(seed * 97 + n));
         expect(setup.seats).toHaveLength(n);
-        const byType = { townsfolk: 0, outsider: 0, minion: 0, demon: 0 };
+        // Travellers never come out of the bag — the counter would throw on one.
+        const byType = { townsfolk: 0, outsider: 0, minion: 0, demon: 0, traveller: 0 };
         for (const s of setup.seats) byType[CHARACTERS[s.character].type]++;
+        expect(byType.traveller).toBe(0);
         expect(byType.townsfolk).toBe(setup.distribution.townsfolk);
         expect(byType.outsider).toBe(setup.distribution.outsiders);
         expect(byType.minion).toBe(setup.distribution.minions);

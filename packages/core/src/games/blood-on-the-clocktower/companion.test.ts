@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import type { CharacterId } from "./characters.ts";
 import {
+  addTraveller,
+  aliveResidents,
   beginNight,
   changeCharacter,
   chefNumber,
@@ -9,17 +11,26 @@ import {
   empathNumber,
   endDay,
   executeAboutToDie,
+  executeScapegoatInstead,
+  exileTraveller,
+  exileVotesRequired,
   firstNightPairSuggestion,
   fortuneTellerPing,
+  giveBeggarToken,
+  isEvilPlayer,
   kill,
   nightQueue,
   recordDemonKill,
+  recordGunslingerShot,
   recordNomination,
   recordSlayerShot,
   recordVirginTrigger,
+  removeTraveller,
   saintExecuted,
   setMonkProtection,
+  setNegativeVote,
   setPoison,
+  setTripleVote,
   undertakerInfo,
   votesRequired,
   winPrompts,
@@ -337,3 +348,134 @@ describe("win prompts", () => {
     expect(saintExecuted(state, 6)).toBe(false);
   });
 });
+
+describe("travellers", () => {
+  function gameWithTraveller(character: CharacterId, alignment: "good" | "evil") {
+    let state = freshGame();
+    state = dawn(state); // day 1
+    state = addTraveller(state, "Trav", character, alignment);
+    return state;
+  }
+
+  it("addTraveller appends a seated player with the assigned alignment", () => {
+    const state = gameWithTraveller("thief", "evil");
+    const trav = state.players[7];
+    expect(trav.name).toBe("Trav");
+    expect(trav.character).toBe("thief");
+    expect(trav.alignment).toBe("evil");
+    expect(trav.alive).toBe(true);
+    expect(state.players).toHaveLength(8);
+  });
+
+  it("rejects non-travellers and duplicate travellers", () => {
+    const state = gameWithTraveller("scapegoat", "good");
+    expect(() => addTraveller(state, "X", "monk", "good")).toThrow();
+    expect(() => addTraveller(state, "X", "scapegoat", "evil")).toThrow();
+  });
+
+  it("an evil traveller counts as evil for info; a good one does not", () => {
+    const evil = gameWithTraveller("thief", "evil");
+    expect(isEvilPlayerAt(evil, 7)).toBe(true);
+    const good = gameWithTraveller("thief", "good");
+    expect(isEvilPlayerAt(good, 7)).toBe(false);
+  });
+
+  it("travellers count for the execution threshold but not the win thresholds", () => {
+    const state = gameWithTraveller("beggar", "good");
+    expect(votesRequired(state)).toBe(4); // 8 alive incl traveller
+    expect(aliveResidents(state)).toBe(7); // residents only
+    expect(exileVotesRequired(state)).toBe(4); // ceil(8 present / 2)
+  });
+
+  it("evil-win prompt fires on two RESIDENTS left even with travellers alive", () => {
+    let state = gameWithTraveller("beggar", "good");
+    for (const seat of [1, 2, 3, 4, 5]) state = kill(state, seat, "storyteller");
+    // 2 residents (Imp + one) + 1 alive traveller = 3 alive total.
+    expect(winPrompts(state)).toEqual([{ kind: "evil-wins", reason: "only two players live" }]);
+  });
+
+  it("thief & bureaucrat wake at dusk, before everything else", () => {
+    let state = gameWithTraveller("thief", "evil");
+    state = addTraveller(state, "Buro", "bureaucrat", "good");
+    state = endDay(state); // night 2
+    const kinds = nightQueue(state).map((s) => (s.kind === "wake" ? s.character : s.kind));
+    expect(kinds.slice(0, 2)).toEqual(["thief", "bureaucrat"]);
+  });
+
+  it("vote marks expire at next dusk and when their traveller dies", () => {
+    let state = gameWithTraveller("bureaucrat", "good");
+    state = setTripleVote(state, 2);
+    expect(state.players[2].tripleVote).toBe(true);
+    // Dusk clears the mark.
+    const afterDusk = endDay(state);
+    expect(afterDusk.players[2].tripleVote).toBeUndefined();
+    // The Bureaucrat dying clears it immediately too (ability lost).
+    const afterDeath = exileTraveller(state, 7);
+    expect(afterDeath.players[2].tripleVote).toBeUndefined();
+    expect(afterDeath.players[7].alive).toBe(false);
+    expect(afterDeath.players[7].ghostVote).toBe(true);
+  });
+
+  it("exile is not an execution — the day continues and the Undertaker learns nothing", () => {
+    let state = gameWithTraveller("thief", "evil");
+    state = setNegativeVote(state, 3);
+    state = exileTraveller(state, 7);
+    expect(state.day.executed).toBeUndefined();
+    expect(state.lastExecution).toBeUndefined();
+    expect(state.players[3].negativeVote).toBeUndefined(); // thief's mark gone
+  });
+
+  it("removeTraveller takes them out entirely — no ghost vote, excluded from counts", () => {
+    let state = gameWithTraveller("beggar", "good");
+    state = removeTraveller(state, 7);
+    expect(state.players[7].left).toBe(true);
+    expect(state.players[7].ghostVote).toBe(false);
+    expect(exileVotesRequired(state)).toBe(4); // 7 present again
+  });
+
+  it("beggar collects tokens from the dead and learns alignments; death wipes them", () => {
+    let state = gameWithTraveller("beggar", "good");
+    state = kill(state, 1, "storyteller"); // Bob (Poisoner) dies
+    state = giveBeggarToken(state, 1);
+    expect(state.players[7].beggarTokens).toBe(1);
+    expect(state.players[1].ghostVote).toBe(false);
+    expect(state.log.at(-1)?.text).toContain("EVIL");
+    // A dead Beggar loses accumulated tokens but keeps a normal ghost vote.
+    state = kill(state, 7, "storyteller");
+    expect(state.players[7].beggarTokens).toBeUndefined();
+    expect(state.players[7].ghostVote).toBe(true);
+  });
+
+  it("the beggar cannot be poisoned", () => {
+    let state = gameWithTraveller("beggar", "good");
+    state = setPoison(state, 7);
+    expect(state.players[7].poisoned).toBe(false);
+  });
+
+  it("gunslinger shot kills without ending the day, once per day", () => {
+    let state = gameWithTraveller("gunslinger", "good");
+    state = recordGunslingerShot(state, 2);
+    expect(state.players[2].alive).toBe(false);
+    expect(state.day.executed).toBeUndefined();
+    expect(state.lastExecution).toBeUndefined();
+    expect(state.day.gunslingerUsed).toBe(true);
+    // Resets with the next day.
+    state = endDay(state);
+    state = dawn(state);
+    expect(state.day.gunslingerUsed).toBeUndefined();
+  });
+
+  it("scapegoat is executed in place of the saved player — and it IS the execution", () => {
+    let state = gameWithTraveller("scapegoat", "evil");
+    state = recordNomination(state, 2, 1, 5); // Bob (Poisoner, evil) about to die
+    state = executeScapegoatInstead(state, 1);
+    expect(state.players[1].alive).toBe(true); // saved
+    expect(state.players[7].alive).toBe(false); // scapegoat dead
+    expect(state.day.executed).toBe(7);
+    expect(state.lastExecution).toMatchObject({ seat: 7, character: "scapegoat" });
+  });
+});
+
+function isEvilPlayerAt(state: ReturnType<typeof freshGame>, seat: number): boolean {
+  return isEvilPlayer(state.players[seat]);
+}

@@ -10,6 +10,7 @@ import type {
 } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import type { ReactNode } from "react";
 import { Chip } from "../../../components/ui";
+import { characterIconUrl } from "./icons";
 import { TYPE_TEXT, trueCharacterLabel } from "./labels";
 
 /** Scroll container + backdrop, following the D&D tool's screen-owns-scroll pattern. */
@@ -58,6 +59,29 @@ export function CharacterTag({ character }: { character: CharacterId }) {
   return <span className={`font-semibold ${TYPE_TEXT[c.type]}`}>{c.name}</span>;
 }
 
+/** The character's token art. Sized for inline (sm/md) up to token-display (xl). */
+export function CharacterIcon({
+  character,
+  size = "md",
+  className = "",
+}: {
+  character: CharacterId;
+  size?: "sm" | "md" | "lg" | "xl";
+  className?: string;
+}) {
+  const url = characterIconUrl(character);
+  if (!url) return null;
+  const sizeCls = { sm: "h-6 w-6", md: "h-9 w-9", lg: "h-14 w-14", xl: "h-28 w-28" }[size];
+  return (
+    <img
+      src={url}
+      alt={CHARACTERS[character].name}
+      draggable={false}
+      className={`${sizeCls} shrink-0 select-none drop-shadow-[0_2px_6px_rgba(0,0,0,0.6)] ${className}`}
+    />
+  );
+}
+
 /**
  * Tappable seat grid — the companion's main input surface. Phone-first: two
  * columns of large chips so a thumb can hit them while holding the Grimoire.
@@ -82,6 +106,8 @@ export function SeatPicker({
   return (
     <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-3">
       {state.players.map((p) => {
+        // Travellers who left town are gone entirely — never pickable.
+        if (p.left) return null;
         // Players who died THIS night are not yet announced — the town still
         // believes they are alive, so night choices (the Butler picking a
         // master after the Imp killed someone) must be able to target them.
@@ -118,10 +144,20 @@ export function SeatPicker({
 /** Compact status chips shown next to a player everywhere in the tool. */
 export function StatusChips({ p }: { p: CompanionPlayer }) {
   const chips: { label: string; cls: string }[] = [];
-  if (!p.alive) {
+  if (p.left) {
+    chips.push({ label: "Left town", cls: "bg-white/10 text-fg-muted" });
+  } else if (!p.alive) {
     chips.push({
       label: p.ghostVote ? "Dead · ghost vote" : "Dead · no vote",
       cls: "bg-white/10 text-fg-secondary",
+    });
+  }
+  if (p.tripleVote) chips.push({ label: "×3 vote", cls: "bg-purple-400/15 text-purple-300" });
+  if (p.negativeVote) chips.push({ label: "−1 vote", cls: "bg-purple-400/15 text-purple-300" });
+  if (p.beggarTokens) {
+    chips.push({
+      label: `${p.beggarTokens} token${p.beggarTokens === 1 ? "" : "s"}`,
+      cls: "bg-purple-400/15 text-purple-300",
     });
   }
   if (p.poisoned) chips.push({ label: "Poisoned", cls: "bg-emerald-400/15 text-emerald-300" });

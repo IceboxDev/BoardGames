@@ -10,6 +10,7 @@ export const TYPE_LABEL: Record<CharacterType, string> = {
   outsider: "Outsider",
   minion: "Minion",
   demon: "Demon",
+  traveller: "Traveller",
 };
 
 export const TYPE_TEXT: Record<CharacterType, string> = {
@@ -17,10 +18,18 @@ export const TYPE_TEXT: Record<CharacterType, string> = {
   outsider: "text-cyan-300",
   minion: "text-rose-300",
   demon: "text-red-400",
+  traveller: "text-purple-300",
 };
 
-/** "Imp", or "Drunk (thinks Monk)" — the Storyteller-facing character label. */
+/**
+ * "Imp", "Drunk (thinks Monk)", or "Thief · evil" — the Storyteller-facing
+ * character label (traveller alignments are ST-assigned and secret).
+ */
 export function trueCharacterLabel(p: CompanionPlayer): string {
   const base = CHARACTERS[p.character].name;
-  return p.believedCharacter ? `${base} (thinks ${CHARACTERS[p.believedCharacter].name})` : base;
+  if (p.believedCharacter) return `${base} (thinks ${CHARACTERS[p.believedCharacter].name})`;
+  if (CHARACTERS[p.character].type === "traveller" && p.alignment) {
+    return `${base} · ${p.alignment}`;
+  }
+  return base;
 }

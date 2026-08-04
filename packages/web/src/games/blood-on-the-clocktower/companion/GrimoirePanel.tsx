@@ -2,25 +2,41 @@ import type { CharacterId } from "@boardgames/core/games/blood-on-the-clocktower
 import {
   CHARACTER_SHEET_ORDER,
   CHARACTERS,
+  TRAVELLERS,
 } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import type {
   CompanionPlayer,
   CompanionState,
 } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import {
+  addTraveller,
   changeCharacter,
+  exileTraveller,
+  exileVotesRequired,
+  isTraveller,
   kill,
   nameAt,
+  removeTraveller,
   restoreGhostVote,
   revive,
   setNote,
   setPoison,
+  setTravellerAlignment,
   spendGhostVote,
 } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import { useId, useState } from "react";
-import { Button, Field, Modal, ModalBody, Select, Textarea } from "../../../components/ui";
+import {
+  Button,
+  Chip,
+  Field,
+  Input,
+  Modal,
+  ModalBody,
+  Select,
+  Textarea,
+} from "../../../components/ui";
 import type { UpdateState } from "./Companion";
-import { Panel, StatusChips } from "./common";
+import { CharacterIcon, Panel, StatusChips } from "./common";
 import { TYPE_TEXT, trueCharacterLabel } from "./labels";
 
 /**
@@ -49,7 +65,7 @@ export default function GrimoirePanel({
                 onClick={() => setOpenSeat(p.seat)}
                 className="flex min-h-11 w-full flex-col gap-0.5 rounded-lg border border-white/5 bg-surface-950/50 px-2 py-1.5 text-left transition hover:border-white/20"
               >
-                <span className="flex w-full items-baseline justify-between gap-2">
+                <span className="flex w-full items-center justify-between gap-2">
                   <span
                     className={`min-w-0 truncate text-sm font-semibold ${
                       p.alive ? "text-fg-primary" : "text-fg-muted line-through"
@@ -57,10 +73,17 @@ export default function GrimoirePanel({
                   >
                     {p.seat + 1}. {p.name}
                   </span>
-                  <span
-                    className={`shrink-0 text-sm font-semibold ${TYPE_TEXT[CHARACTERS[p.character].type]}`}
-                  >
-                    {trueCharacterLabel(p)}
+                  <span className="flex shrink-0 items-center gap-1.5">
+                    <CharacterIcon
+                      character={p.character}
+                      size="sm"
+                      className={p.alive ? "" : "opacity-40 saturate-50"}
+                    />
+                    <span
+                      className={`text-sm font-semibold ${TYPE_TEXT[CHARACTERS[p.character].type]}`}
+                    >
+                      {trueCharacterLabel(p)}
+                    </span>
                   </span>
                 </span>
                 <span className="flex w-full items-center justify-between gap-2">
@@ -82,6 +105,7 @@ export default function GrimoirePanel({
           Seats are the table's clockwise order. Tap a player for manual overrides.
         </p>
       </Panel>
+      <TravellersPanel state={state} update={update} />
       {openSeat !== undefined && (
         <PlayerSheet
           state={state}
@@ -91,6 +115,121 @@ export default function GrimoirePanel({
         />
       )}
     </>
+  );
+}
+
+/**
+ * Travellers join and leave mid-game (any day — or right at the start). The
+ * character is rolled at random (rerollable, overridable); the alignment is
+ * the Storyteller's secret pick.
+ */
+function TravellersPanel({ state, update }: { state: CompanionState; update: UpdateState }) {
+  const inPlay = new Set(state.players.filter((p) => !p.left).map((p) => p.character));
+  const available = TRAVELLERS.filter((t) => !inPlay.has(t));
+  const [name, setName] = useState("");
+  const [alignment, setAlignment] = useState<"good" | "evil">("good");
+  const [rolled, setRolled] = useState<CharacterId | undefined>();
+  const character = rolled && available.includes(rolled) ? rolled : available[0];
+
+  function roll() {
+    if (available.length === 0) return;
+    setRolled(available[Math.floor(Math.random() * available.length)]);
+  }
+
+  function add() {
+    const trimmed = name.trim();
+    if (!trimmed || !character) return;
+    if (state.players.some((p) => !p.left && p.name.toLowerCase() === trimmed.toLowerCase())) {
+      return;
+    }
+    update((s) => addTraveller(s, trimmed, character, alignment));
+    setName("");
+    setRolled(undefined);
+  }
+
+  return (
+    <Panel title="Travellers" tone="neutral">
+      <p className="text-xs text-fg-muted">
+        A latecomer can join any time as a Traveller: their character is public, their alignment is
+        your secret call. Seat them between {state.players.at(-1)?.name} and{" "}
+        {state.players[0]?.name} — or wherever they physically sit.
+      </p>
+      {available.length === 0 ? (
+        <p className="mt-2 text-sm text-fg-muted">All five travellers are in play.</p>
+      ) : (
+        <div className="mt-2 flex flex-col gap-2">
+          <Input
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            placeholder="Traveller's name"
+            aria-label="Traveller's name"
+            autoComplete="off"
+          />
+          <div className="flex items-center gap-2">
+            <span className="flex min-w-0 flex-1 items-center gap-1.5 truncate text-sm">
+              {character && (
+                <>
+                  <CharacterIcon character={character} size="md" />
+                  <span className="font-semibold text-purple-300">
+                    {CHARACTERS[character].name}
+                  </span>
+                </>
+              )}
+            </span>
+            <Button variant="secondary" size="sm" onClick={roll}>
+              Roll character
+            </Button>
+            <Select
+              aria-label="Traveller character override"
+              block={false}
+              compact
+              value={character ?? ""}
+              onChange={(e) => setRolled(e.target.value as CharacterId)}
+              className="w-32 shrink-0"
+            >
+              {available.map((t) => (
+                <option key={t} value={t}>
+                  {CHARACTERS[t].name}
+                </option>
+              ))}
+            </Select>
+          </div>
+          {character && (
+            <p className="text-xs leading-relaxed text-fg-muted">{CHARACTERS[character].ability}</p>
+          )}
+          <div className="flex items-center gap-2">
+            <Chip
+              pressed={alignment === "good"}
+              tone="sky"
+              size="md"
+              onClick={() => setAlignment("good")}
+            >
+              Good
+            </Chip>
+            <Chip
+              pressed={alignment === "evil"}
+              tone="rose"
+              size="md"
+              onClick={() => setAlignment("evil")}
+            >
+              Evil
+            </Chip>
+            <Button
+              variant="primary"
+              className="flex-1"
+              disabled={!name.trim() || !character}
+              onClick={add}
+            >
+              Joins town
+            </Button>
+          </div>
+        </div>
+      )}
+      <p className="mt-2 text-xs text-fg-muted">
+        Exile ({exileVotesRequired(state)}+ votes of ALL players, dead included) and “leaves town”
+        live on the traveller's player sheet above.
+      </p>
+    </Panel>
   );
 }
 
@@ -119,7 +258,10 @@ function PlayerSheet({
     >
       <ModalBody>
         <div className="flex flex-col gap-3">
-          <p className="text-sm leading-relaxed text-fg-secondary">{character.ability}</p>
+          <div className="flex items-start gap-3">
+            <CharacterIcon character={p.character} size="lg" />
+            <p className="text-sm leading-relaxed text-fg-secondary">{character.ability}</p>
+          </div>
           <StatusChips p={p} />
 
           <div className="grid grid-cols-2 gap-2">
@@ -149,6 +291,56 @@ function PlayerSheet({
               </Button>
             )}
           </div>
+
+          {isTraveller(p) && !p.left && (
+            <div className="flex flex-col gap-2 rounded-lg border border-purple-400/25 bg-purple-400/5 p-2">
+              <div className="flex items-center gap-2">
+                <span className="text-xs font-semibold text-fg-secondary">Alignment</span>
+                <Chip
+                  pressed={p.alignment !== "evil"}
+                  tone="sky"
+                  size="sm"
+                  onClick={() => update((s) => setTravellerAlignment(s, seat, "good"))}
+                >
+                  Good
+                </Chip>
+                <Chip
+                  pressed={p.alignment === "evil"}
+                  tone="rose"
+                  size="sm"
+                  onClick={() => update((s) => setTravellerAlignment(s, seat, "evil"))}
+                >
+                  Evil
+                </Chip>
+              </div>
+              {p.alive && (
+                <div className="grid grid-cols-2 gap-2">
+                  <Button
+                    variant="danger"
+                    onClick={() => {
+                      update((s) => exileTraveller(s, seat));
+                      onClose();
+                    }}
+                  >
+                    Exile ({exileVotesRequired(state)}+ votes)
+                  </Button>
+                  <Button
+                    variant="secondary"
+                    onClick={() => {
+                      update((s) => removeTraveller(s, seat));
+                      onClose();
+                    }}
+                  >
+                    Leaves town
+                  </Button>
+                </div>
+              )}
+              <p className="text-3xs text-fg-muted">
+                Exile kills them (not an execution — the day continues). Leaving town removes them
+                entirely.
+              </p>
+            </div>
+          )}
 
           <Field label="Change character" htmlFor={`${fieldId}-character`}>
             <Select

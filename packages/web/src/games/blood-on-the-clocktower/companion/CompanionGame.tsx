@@ -10,7 +10,7 @@ import { useState } from "react";
 import { Button, SegmentedControl, useConfirm } from "../../../components/ui";
 import { useCurrentUser } from "../../../hooks/useCurrentUser";
 import type { UpdateState } from "./Companion";
-import { Panel, Screen } from "./common";
+import { CharacterIcon, Panel, Screen } from "./common";
 import DayPanel from "./DayPanel";
 import GrimoirePanel from "./GrimoirePanel";
 import LogPanel from "./LogPanel";
@@ -62,16 +62,17 @@ export default function CompanionGame({
         <Panel title="The truth of Ravenswood Bluff">
           <ul className="flex flex-col gap-1">
             {state.players.map((p) => (
-              <li key={p.seat} className="flex items-baseline justify-between gap-2 text-sm">
+              <li key={p.seat} className="flex items-center justify-between gap-2 text-sm">
                 <span
                   className={`min-w-0 truncate ${p.alive ? "text-fg-primary" : "text-fg-muted line-through"}`}
                 >
                   {p.name}
                 </span>
-                <span
-                  className={`shrink-0 font-semibold ${TYPE_TEXT[CHARACTERS[p.character].type]}`}
-                >
-                  {trueCharacterLabel(p)}
+                <span className="flex shrink-0 items-center gap-1.5">
+                  <CharacterIcon character={p.character} size="sm" />
+                  <span className={`font-semibold ${TYPE_TEXT[CHARACTERS[p.character].type]}`}>
+                    {trueCharacterLabel(p)}
+                  </span>
                 </span>
               </li>
             ))}

@@ -29,12 +29,39 @@ function toEntries(names: string[]): RosterEntry[] {
   return names.map((name) => ({ id: nextEntryId++, name }));
 }
 
+// Fictitious villagers for test mode — clearly not real members (so name
+// autocomplete and the match-history port can't silently match them), in
+// alphabetical order so seat numbering is easy to eyeball while debugging.
+const TEST_NAMES = [
+  "Abigail Vale",
+  "Barnaby Crank",
+  "Cordelia Ash",
+  "Dorian Pluck",
+  "Esme Thistle",
+  "Fergus Moth",
+  "Greta Willow",
+  "Hugo Marsh",
+  "Isolde Fern",
+  "Jasper Reed",
+  "Lavinia Snow",
+  "Mortimer Bligh",
+  "Nellie Tuck",
+  "Osric Vane",
+  "Petunia Crow",
+];
+
 export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => void }) {
   const [entries, setEntries] = useState<RosterEntry[]>(() => toEntries(loadRoster()));
   const [draft, setDraft] = useState("");
   // One attendee runs the game instead of playing — they hold this phone.
   const [storyteller, setStoryteller] = useState<string | undefined>();
+  const [testCount, setTestCount] = useState(8);
   const names = entries.map((e) => e.name);
+
+  function fillTestPlayers() {
+    setEntries(toEntries(TEST_NAMES.slice(0, testCount)));
+    setStoryteller(undefined);
+  }
 
   const countOk = names.length >= MIN_PLAYERS && names.length <= MAX_PLAYERS;
 
@@ -274,6 +301,38 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
             : "Too many players — Trouble Brewing seats at most 15."}
         </p>
       )}
+
+      <Panel title="Test mode">
+        <p className="text-xs text-fg-muted">
+          Test-run the companion without a real table: replace the roster with fictitious players.
+        </p>
+        <div className="mt-2 flex items-center gap-2">
+          <Button
+            variant="secondary"
+            size="sm"
+            aria-label="Fewer test players"
+            disabled={testCount <= MIN_PLAYERS}
+            onClick={() => setTestCount(Math.max(MIN_PLAYERS, testCount - 1))}
+          >
+            −
+          </Button>
+          <span className="w-8 text-center text-sm font-bold tabular-nums text-fg-primary">
+            {testCount}
+          </span>
+          <Button
+            variant="secondary"
+            size="sm"
+            aria-label="More test players"
+            disabled={testCount >= MAX_PLAYERS}
+            onClick={() => setTestCount(Math.min(MAX_PLAYERS, testCount + 1))}
+          >
+            +
+          </Button>
+          <Button variant="secondary" size="sm" className="flex-1" onClick={fillTestPlayers}>
+            Fill with {testCount} test players
+          </Button>
+        </div>
+      </Panel>
     </Screen>
   );
 }

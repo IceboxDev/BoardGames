@@ -17,7 +17,14 @@ import type { GameSetup } from "./setup.ts";
 
 export type Alignment = "good" | "evil";
 
-export type DeathCause = "execution" | "demon" | "slayer" | "virgin" | "storyteller";
+export type DeathCause =
+  | "execution"
+  | "demon"
+  | "slayer"
+  | "virgin"
+  | "gunslinger"
+  | "exile"
+  | "storyteller";
 
 export type CompanionPlayer = {
   seat: number;
@@ -40,6 +47,16 @@ export type CompanionPlayer = {
   usedAbility: boolean;
   /** Died during the current night; announced and cleared at dawn. */
   diedTonight: boolean;
+  /** Travellers only: their Storyteller-assigned alignment. */
+  alignment?: Alignment;
+  /** Bureaucrat's mark — this player's vote counts as 3 today. */
+  tripleVote?: boolean;
+  /** Thief's mark — this player's vote counts as −1 today. */
+  negativeVote?: boolean;
+  /** Beggar only: donated vote tokens currently held. */
+  beggarTokens?: number;
+  /** Traveller left town entirely (not dead — gone; no ghost vote). */
+  left?: boolean;
   note?: string;
 };
 
@@ -70,6 +87,8 @@ export type DayState = {
    */
   highestVotes: number;
   executed?: number;
+  /** The Gunslinger may kill only once per day. */
+  gunslingerUsed?: boolean;
 };
 
 export type LogEntry = { id: number; when: string; text: string };
@@ -145,12 +164,38 @@ export function apparentCharacter(p: CompanionPlayer): CharacterId {
   return p.believedCharacter ?? p.character;
 }
 
+export function isTraveller(p: CompanionPlayer): boolean {
+  return CHARACTERS[p.character].type === "traveller";
+}
+
+/** Travellers are whatever alignment the Storyteller assigned them. */
 export function isEvilPlayer(p: CompanionPlayer): boolean {
+  if (isTraveller(p)) return p.alignment === "evil";
   return isEvil(CHARACTERS[p.character].type);
 }
 
+/** Every alive player, travellers included — the execution-vote threshold. */
 export function aliveCount(state: CompanionState): number {
   return state.players.filter((p) => p.alive).length;
+}
+
+/**
+ * Alive NON-traveller players. Travellers don't count for the game-ending
+ * thresholds: evil's two-players-left win, the Scarlet Woman's 5+, and the
+ * Mayor's three-alive win.
+ */
+export function aliveResidents(state: CompanionState): number {
+  return state.players.filter((p) => p.alive && !isTraveller(p)).length;
+}
+
+/** Everyone still at the table (alive or dead) — the exile-vote base. */
+export function presentCount(state: CompanionState): number {
+  return state.players.filter((p) => !p.left).length;
+}
+
+/** Exile needs at least half of ALL players (dead included, no ghost vote spent). */
+export function exileVotesRequired(state: CompanionState): number {
+  return Math.ceil(presentCount(state) / 2);
 }
 
 export function demonAlive(state: CompanionState): boolean {
@@ -242,8 +287,15 @@ export function nightQueue(state: CompanionState): NightStep[] {
   const wakers = (id: CharacterId) =>
     state.players.filter((p) => p.alive && apparentCharacter(p) === id);
 
+  // Travellers that act (Thief, Bureaucrat) wake at DUSK, before everything
+  // else on the sheet — every night, including the first.
+  for (const id of ["thief", "bureaucrat"] as const) {
+    for (const p of wakers(id)) steps.push(wakeStep(p));
+  }
+
   if (night === 1) {
-    if (state.players.length >= 7) {
+    // The 7+ threshold counts seated residents, not travellers.
+    if (state.players.filter((p) => !isTraveller(p)).length >= 7) {
       steps.push({ kind: "minion-info" }, { kind: "demon-info" });
     }
     for (const id of FIRST_NIGHT_ORDER) {
@@ -287,10 +339,16 @@ export function beginNight(state: CompanionState): CompanionState {
     state.phase.kind === "day" ? state.phase.day + 1 : state.phase.kind === "reveal" ? 1 : 0;
   if (night === 0) return state;
   // Poison from last night expires at dusk (it lasted "tonight and tomorrow
-  // day"). The Poisoner will pick a fresh target in tonight's queue.
+  // day"), and so do the Bureaucrat's ×3 / Thief's −1 vote marks ("tomorrow").
+  // The Poisoner / Thief / Bureaucrat pick fresh targets in tonight's queue.
   let next: CompanionState = {
     ...state,
-    players: state.players.map((p) => ({ ...p, poisoned: false })),
+    players: state.players.map((p) => ({
+      ...p,
+      poisoned: false,
+      tripleVote: undefined,
+      negativeVote: undefined,
+    })),
     phase: { kind: "night", night },
     nightStep: 0,
     day: EMPTY_DAY,
@@ -341,6 +399,8 @@ const CAUSE_LABEL: Record<DeathCause, string> = {
   demon: "killed by the Demon",
   slayer: "slain by the Slayer",
   virgin: "executed by the Virgin's ability",
+  gunslinger: "shot by the Gunslinger",
+  exile: "exiled",
   storyteller: "died",
 };
 
@@ -354,7 +414,17 @@ export function kill(state: CompanionState, seat: number, cause: DeathCause): Co
     diedTonight: atNight,
     poisoned: false,
     protectedTonight: false,
+    // A dead Beggar loses all accumulated tokens (they get a normal ghost vote).
+    beggarTokens: undefined,
   }));
+  // Death removes abilities immediately: a dead Bureaucrat/Thief's vote mark
+  // vanishes from whoever carries it (exile included).
+  if (p.character === "bureaucrat") {
+    next = { ...next, players: next.players.map((x) => ({ ...x, tripleVote: undefined })) };
+  }
+  if (p.character === "thief") {
+    next = { ...next, players: next.players.map((x) => ({ ...x, negativeVote: undefined })) };
+  }
   next = logNow(next, `${p.name} ${CAUSE_LABEL[cause]}.`);
   if (cause === "execution" || cause === "virgin") {
     const day = state.phase.kind === "day" ? state.phase.day : 0;
@@ -376,6 +446,13 @@ export function revive(state: CompanionState, seat: number): CompanionState {
 }
 
 export function setPoison(state: CompanionState, seat: number | undefined): CompanionState {
+  // "You are sober and healthy" — the Beggar cannot be poisoned.
+  if (seat !== undefined && playerAt(state, seat).character === "beggar") {
+    return logNow(
+      state,
+      `The Poisoner chose ${nameAt(state, seat)} — but the Beggar cannot be poisoned.`,
+    );
+  }
   let next: CompanionState = {
     ...state,
     players: state.players.map((p) => ({ ...p, poisoned: p.seat === seat })),
@@ -407,6 +484,172 @@ export function setButlerMaster(
     next,
     `${nameAt(state, butlerSeat)} chose ${nameAt(state, masterSeat)} as their master.`,
   );
+  return next;
+}
+
+/** Bureaucrat's nightly pick — that player's vote counts as 3 tomorrow. */
+export function setTripleVote(state: CompanionState, seat: number | undefined): CompanionState {
+  let next: CompanionState = {
+    ...state,
+    players: state.players.map((p) => ({ ...p, tripleVote: p.seat === seat ? true : undefined })),
+  };
+  if (seat !== undefined) {
+    next = logNow(next, `${nameAt(state, seat)}'s vote counts as 3 votes tomorrow (Bureaucrat).`);
+  }
+  return next;
+}
+
+/** Thief's nightly pick — that player's vote counts as −1 tomorrow. */
+export function setNegativeVote(state: CompanionState, seat: number | undefined): CompanionState {
+  let next: CompanionState = {
+    ...state,
+    players: state.players.map((p) => ({
+      ...p,
+      negativeVote: p.seat === seat ? true : undefined,
+    })),
+  };
+  if (seat !== undefined) {
+    next = logNow(next, `${nameAt(state, seat)}'s vote counts NEGATIVELY tomorrow (Thief).`);
+  }
+  return next;
+}
+
+// ── Travellers ────────────────────────────────────────────────────────
+
+/**
+ * A traveller joins mid-game (or right at the start). Their character is
+ * public; their alignment is the Storyteller's secret call. They take the
+ * seat between the current last seat and seat 1 — the physical chair decides
+ * the real neighbours, so seat them there (or note otherwise).
+ */
+export function addTraveller(
+  state: CompanionState,
+  name: string,
+  character: CharacterId,
+  alignment: Alignment,
+): CompanionState {
+  if (CHARACTERS[character].type !== "traveller") {
+    throw new Error(`${character} is not a traveller`);
+  }
+  // A dead traveller's token is still in play — only a departed one frees it.
+  if (state.players.some((p) => !p.left && p.character === character)) {
+    throw new Error(`the ${CHARACTERS[character].name} is already in play`);
+  }
+  const player: CompanionPlayer = {
+    seat: state.players.length,
+    name,
+    character,
+    alive: true,
+    ghostVote: true,
+    poisoned: false,
+    protectedTonight: false,
+    redHerring: false,
+    usedAbility: false,
+    diedTonight: false,
+    alignment,
+  };
+  const next: CompanionState = { ...state, players: [...state.players, player] };
+  return logNow(
+    next,
+    `${name} joins town as the ${CHARACTERS[character].name} (${alignment}) — seated between ${
+      state.players[state.players.length - 1].name
+    } and ${state.players[0].name}.`,
+  );
+}
+
+/** Flip a traveller's secret alignment (Storyteller override). */
+export function setTravellerAlignment(
+  state: CompanionState,
+  seat: number,
+  alignment: Alignment,
+): CompanionState {
+  const p = playerAt(state, seat);
+  if (!isTraveller(p)) return state;
+  let next = mapPlayer(state, seat, (x) => ({ ...x, alignment }));
+  next = logNow(next, `${p.name} is now ${alignment}.`);
+  return next;
+}
+
+/**
+ * Exile: the town votes a traveller out (≥ half of ALL players; not an
+ * execution — the day continues, the Undertaker learns nothing, and any
+ * number of exiles can happen per day). The exiled traveller is dead and
+ * keeps a ghost vote like anyone else.
+ */
+export function exileTraveller(state: CompanionState, seat: number): CompanionState {
+  return kill(state, seat, "exile");
+}
+
+/**
+ * A traveller leaves town entirely (the player goes home). Unlike death they
+ * are gone: no ghost vote, no votes, excluded from every count and picker.
+ */
+export function removeTraveller(state: CompanionState, seat: number): CompanionState {
+  const p = playerAt(state, seat);
+  let next = mapPlayer(state, seat, (x) => ({
+    ...x,
+    alive: false,
+    left: true,
+    ghostVote: false,
+    diedTonight: false,
+    poisoned: false,
+    protectedTonight: false,
+    beggarTokens: undefined,
+  }));
+  if (p.character === "bureaucrat") {
+    next = { ...next, players: next.players.map((x) => ({ ...x, tripleVote: undefined })) };
+  }
+  if (p.character === "thief") {
+    next = { ...next, players: next.players.map((x) => ({ ...x, negativeVote: undefined })) };
+  }
+  return logNow(next, `${p.name} leaves town.`);
+}
+
+/**
+ * A dead player hands the Beggar their ghost vote token. The Beggar gains a
+ * token and (via the Storyteller) learns the donor's alignment; the donor can
+ * no longer vote.
+ */
+export function giveBeggarToken(state: CompanionState, donorSeat: number): CompanionState {
+  const beggar = state.players.find((p) => p.alive && p.character === "beggar");
+  const donor = playerAt(state, donorSeat);
+  if (!beggar || donor.alive || !donor.ghostVote) return state;
+  let next = mapPlayer(state, donorSeat, (x) => ({ ...x, ghostVote: false }));
+  next = mapPlayer(next, beggar.seat, (x) => ({
+    ...x,
+    beggarTokens: (x.beggarTokens ?? 0) + 1,
+  }));
+  next = logNow(
+    next,
+    `${donor.name} gave their vote token to the Beggar, who learns they are ${
+      isEvilPlayer(donor) ? "EVIL" : "GOOD"
+    }.`,
+  );
+  return next;
+}
+
+/**
+ * The Gunslinger's public day kill: after the first vote is tallied they may
+ * choose a player that voted — that player dies. NOT an execution: the day
+ * continues and the Undertaker learns nothing. Once per day.
+ */
+export function recordGunslingerShot(state: CompanionState, target: number): CompanionState {
+  let next = kill(state, target, "gunslinger");
+  next = { ...next, day: { ...next.day, gunslingerUsed: true } };
+  return next;
+}
+
+/**
+ * The Scapegoat's redirect: a player of their alignment is about to be
+ * executed and the Storyteller executes the Scapegoat instead. This IS the
+ * day's one execution (the Undertaker sees a Scapegoat), and the saved player
+ * lives.
+ */
+export function executeScapegoatInstead(state: CompanionState, savedSeat: number): CompanionState {
+  const scapegoat = state.players.find((p) => p.alive && p.character === "scapegoat");
+  if (!scapegoat) return state;
+  let next = logNow(state, `The Scapegoat is executed in place of ${nameAt(state, savedSeat)}.`);
+  next = kill(next, scapegoat.seat, "execution");
   return next;
 }
 
@@ -699,13 +942,15 @@ export function winPrompts(state: CompanionState): WinPrompt[] {
   const prompts: WinPrompt[] = [];
   if (!demonAlive(state)) {
     const scarletWoman = state.players.find((p) => p.alive && p.character === "scarlet-woman");
-    if (scarletWoman && aliveCount(state) >= 5) {
+    // "5 or more players alive (Travellers don't count)".
+    if (scarletWoman && aliveResidents(state) >= 5) {
       prompts.push({ kind: "scarlet-woman", seat: scarletWoman.seat });
     } else {
       prompts.push({ kind: "good-wins", reason: "the Demon is dead" });
     }
   }
-  if (aliveCount(state) <= 2 && demonAlive(state)) {
+  // Travellers don't count toward evil's two-players-left win either.
+  if (aliveResidents(state) <= 2 && demonAlive(state)) {
     prompts.push({ kind: "evil-wins", reason: "only two players live" });
   }
   return prompts;

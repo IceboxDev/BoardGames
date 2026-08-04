@@ -5,7 +5,7 @@
 // sheet. Only Trouble Brewing is implemented; the types leave room for other
 // editions later.
 
-export type CharacterType = "townsfolk" | "outsider" | "minion" | "demon";
+export type CharacterType = "townsfolk" | "outsider" | "minion" | "demon" | "traveller";
 
 export type CharacterId =
   | "washerwoman"
@@ -29,7 +29,12 @@ export type CharacterId =
   | "spy"
   | "scarlet-woman"
   | "baron"
-  | "imp";
+  | "imp"
+  | "scapegoat"
+  | "gunslinger"
+  | "beggar"
+  | "bureaucrat"
+  | "thief";
 
 export type Character = {
   id: CharacterId;
@@ -221,7 +226,60 @@ export const CHARACTERS: Record<CharacterId, Character> = {
     otherNightsAction:
       "They point to a player: that player dies (unless protected). A self-kill passes the Imp to a Minion.",
   },
+  // ── Travellers ──────────────────────────────────────────────────────
+  // Join and leave mid-game; their character is PUBLIC, their alignment is
+  // assigned secretly by the Storyteller. Exile (≥ half of ALL players'
+  // votes) kills them without counting as the day's execution.
+  scapegoat: {
+    id: "scapegoat",
+    name: "Scapegoat",
+    type: "traveller",
+    ability: "If a player of your alignment is executed, you might be executed instead.",
+  },
+  gunslinger: {
+    id: "gunslinger",
+    name: "Gunslinger",
+    type: "traveller",
+    ability:
+      "Each day, after the 1st vote has been tallied, you may choose a player that voted: they die.",
+  },
+  beggar: {
+    id: "beggar",
+    name: "Beggar",
+    type: "traveller",
+    ability:
+      "You must use a vote token to vote. If a dead player gives you theirs, you learn their alignment. You are sober and healthy.",
+  },
+  bureaucrat: {
+    id: "bureaucrat",
+    name: "Bureaucrat",
+    type: "traveller",
+    ability: "Each night, choose a player (not yourself): their vote counts as 3 votes tomorrow.",
+    firstNightAction:
+      "They point to a player (not themself): that player's vote counts as 3 votes tomorrow.",
+    otherNightsAction:
+      "They point to a player (not themself): that player's vote counts as 3 votes tomorrow.",
+  },
+  thief: {
+    id: "thief",
+    name: "Thief",
+    type: "traveller",
+    ability: "Each night, choose a player (not yourself): their vote counts negatively tomorrow.",
+    firstNightAction:
+      "They point to a player (not themself): that player's vote counts NEGATIVELY tomorrow.",
+    otherNightsAction:
+      "They point to a player (not themself): that player's vote counts NEGATIVELY tomorrow.",
+  },
 };
+
+/** The five Trouble Brewing travellers, in sheet order. */
+export const TRAVELLERS: readonly CharacterId[] = [
+  "scapegoat",
+  "gunslinger",
+  "beggar",
+  "bureaucrat",
+  "thief",
+];
 
 /** Character sheet display order (as printed, by type). */
 export const CHARACTER_SHEET_ORDER: readonly CharacterId[] = [
@@ -247,12 +305,19 @@ export const CHARACTER_SHEET_ORDER: readonly CharacterId[] = [
   "scarlet-woman",
   "baron",
   "imp",
+  "scapegoat",
+  "gunslinger",
+  "beggar",
+  "bureaucrat",
+  "thief",
 ];
 
 /**
  * The boxed Trouble Brewing night sheet, FIRST NIGHT side, top to bottom.
  * The MINION INFO / DEMON INFO steps (7+ players) are inserted by the night
- * queue in companion.ts — they are not characters.
+ * queue in companion.ts — they are not characters. Travellers that wake
+ * (Thief, Bureaucrat) act at dusk, BEFORE everything here — the night queue
+ * inserts them explicitly.
  */
 export const FIRST_NIGHT_ORDER: readonly CharacterId[] = [
   "poisoner",
