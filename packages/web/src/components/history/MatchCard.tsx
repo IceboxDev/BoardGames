@@ -167,7 +167,7 @@ function CompactOutcome({ outcome, gameSlug, currentUserId }: OutcomeProps) {
       return gameSlug === "dungeon-mayhem" ? (
         <DungeonMayhemInline outcome={outcome} currentUserId={currentUserId} />
       ) : (
-        <LastStandingInline outcome={outcome} currentUserId={currentUserId} />
+        <LastStandingInline outcome={outcome} gameSlug={gameSlug} currentUserId={currentUserId} />
       );
     case "coop":
       return isDndSlug(gameSlug) ? (
@@ -351,15 +351,28 @@ function Storyteller({
 
 function LastStandingInline({
   outcome,
+  gameSlug,
   currentUserId,
 }: {
   outcome: MatchOutcomeLastStanding;
+  gameSlug: string | null;
   currentUserId: string | null;
 }) {
-  const survivors = outcome.players.filter((p) => p.eliminationOrder === undefined);
+  // Survivors sorted by their explicit standing when one was recorded (poker
+  // chip order — 1 = most chips), otherwise kept in list order.
+  const survivors = outcome.players
+    .filter((p) => p.eliminationOrder === undefined)
+    .sort(
+      (a, b) =>
+        (a.survivorRank ?? Number.POSITIVE_INFINITY) - (b.survivorRank ?? Number.POSITIVE_INFINITY),
+    );
   const eliminated = outcome.players
     .filter((p) => p.eliminationOrder !== undefined)
     .sort((a, b) => (b.eliminationOrder ?? 0) - (a.eliminationOrder ?? 0));
+  const standingTitle = (p: MatchOutcomeLastStanding["players"][number]) =>
+    p.survivorRank === undefined
+      ? p.displayName
+      : `${p.displayName} — #${p.survivorRank}${gameSlug === "poker" ? " in chips" : ""}`;
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
       <span className="inline-flex -space-x-1.5">
@@ -369,6 +382,7 @@ function LastStandingInline({
             name={p.displayName}
             tone="winner"
             isMe={p.userId === currentUserId}
+            title={standingTitle(p)}
           />
         ))}
       </span>

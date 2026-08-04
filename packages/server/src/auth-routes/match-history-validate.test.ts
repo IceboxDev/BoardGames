@@ -67,6 +67,64 @@ describe("parseOutcome — last-standing role round-trip", () => {
   });
 });
 
+describe("parseOutcome — last-standing survivorRank (poker chip standings)", () => {
+  it("preserves survivorRank on surviving players and omits it elsewhere", () => {
+    const result = parseOutcome({
+      kind: "last-standing",
+      players: [
+        { userId: "u1", displayName: "Alice", survivorRank: 2 },
+        { userId: "u2", displayName: "Bob", survivorRank: 1 },
+        { userId: "u3", displayName: "Cara", eliminationOrder: 0 },
+      ],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "last-standing") {
+      expect(result.value.players[0]).toMatchObject({ survivorRank: 2 });
+      expect(result.value.players[1]).toMatchObject({ survivorRank: 1 });
+      expect("survivorRank" in result.value.players[2]).toBe(false);
+    }
+  });
+
+  it("rejects survivorRank on an eliminated player", () => {
+    const result = parseOutcome({
+      kind: "last-standing",
+      players: [
+        { userId: "u1", displayName: "Alice", survivorRank: 1 },
+        { userId: "u2", displayName: "Bob", eliminationOrder: 0, survivorRank: 2 },
+      ],
+    });
+    expect(result).toEqual({
+      ok: false,
+      error: "players[1]: survivorRank is only allowed on survivors",
+    });
+  });
+
+  it("rejects duplicate survivorRank values", () => {
+    const result = parseOutcome({
+      kind: "last-standing",
+      players: [
+        { userId: "u1", displayName: "Alice", survivorRank: 1 },
+        { userId: "u2", displayName: "Bob", survivorRank: 1 },
+      ],
+    });
+    expect(result).toEqual({
+      ok: false,
+      error: "last-standing: survivorRank values must be unique",
+    });
+  });
+
+  it("rejects a survivorRank below 1", () => {
+    const result = parseOutcome({
+      kind: "last-standing",
+      players: [
+        { userId: "u1", displayName: "Alice", survivorRank: 0 },
+        { userId: "u2", displayName: "Bob", eliminationOrder: 0 },
+      ],
+    });
+    expect(result).toEqual({ ok: false, error: "players[0]: invalid survivorRank" });
+  });
+});
+
 describe("parseOutcome — coop score (Just One)", () => {
   it("accepts a scored co-op with no win/loss and preserves the score", () => {
     const result = parseOutcome({

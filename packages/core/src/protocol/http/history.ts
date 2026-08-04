@@ -93,6 +93,12 @@ const LastStandingPlayerSchema = ParticipantSchema.extend({
   // last hero un-eliminated wins. Same shape and intent as `FreeForAllPlayer.role`
   // / `TeamMember.role`.
   role: z.string().max(64).optional(),
+  // Optional 1-based standing among the SURVIVORS (1 = best). Motivating case:
+  // poker — a night can end with several players still holding chips, and this
+  // orders them by final chip count. Only meaningful on players without an
+  // `eliminationOrder` (enforced on the union below). Survivors all still count
+  // as winners; this is purely a finishing order among them.
+  survivorRank: z.number().int().min(1).optional(),
 });
 
 const MatchOutcomeLastStandingSchema = z.object({
@@ -183,6 +189,26 @@ export const MatchOutcomeSchema = z
           code: "custom",
           path: ["players"],
           message: "at least one player must survive",
+        });
+      }
+      const eliminatedWithRank = v.players.findIndex(
+        (p) => p.eliminationOrder !== undefined && p.survivorRank !== undefined,
+      );
+      if (eliminatedWithRank !== -1) {
+        ctx.addIssue({
+          code: "custom",
+          path: ["players", eliminatedWithRank, "survivorRank"],
+          message: "survivorRank is only allowed on surviving players",
+        });
+      }
+      const ranks = v.players
+        .map((p) => p.survivorRank)
+        .filter((r): r is number => r !== undefined);
+      if (new Set(ranks).size !== ranks.length) {
+        ctx.addIssue({
+          code: "custom",
+          path: ["players"],
+          message: "survivorRank values must be unique",
         });
       }
     } else if (v.kind === "coop") {

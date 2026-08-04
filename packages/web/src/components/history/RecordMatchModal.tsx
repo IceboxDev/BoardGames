@@ -382,6 +382,7 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
                 users={allUsers}
                 value={outcome as MatchOutcomeLastStanding}
                 onChange={setOutcome}
+                gameSlug={gameSlug}
               />
             ))}
           {kind === "coop" &&

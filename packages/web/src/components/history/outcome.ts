@@ -300,15 +300,19 @@ export function applyParticipants(
     }
     case "last-standing": {
       const ls = base as MatchOutcomeLastStanding;
-      const elimById = new Map(ls.players.map((p) => [p.userId, p.eliminationOrder]));
+      const prevById = new Map(ls.players.map((p) => [p.userId, p] as const));
       return {
         ...ls,
-        players: participants.map((p) => ({
-          ...p,
-          ...(elimById.get(p.userId) !== undefined
-            ? { eliminationOrder: elimById.get(p.userId) }
-            : {}),
-        })),
+        players: participants.map((p) => {
+          const prev = prevById.get(p.userId);
+          return {
+            ...p,
+            ...(prev?.eliminationOrder !== undefined
+              ? { eliminationOrder: prev.eliminationOrder }
+              : {}),
+            ...(prev?.survivorRank !== undefined ? { survivorRank: prev.survivorRank } : {}),
+          };
+        }),
       };
     }
     case "coop":

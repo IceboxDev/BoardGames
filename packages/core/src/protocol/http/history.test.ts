@@ -230,6 +230,59 @@ describe("MatchOutcomeSchema", () => {
     ).toThrow();
   });
 
+  it("keeps the optional survivorRank (poker chip standings) on surviving players", () => {
+    const parsed = MatchOutcomeSchema.parse({
+      kind: "last-standing",
+      players: [
+        { ...sampleParticipant("u1", "Alice"), survivorRank: 2 },
+        { ...sampleParticipant("u2", "Bob"), survivorRank: 1 },
+        { ...sampleParticipant("u3", "Cara"), eliminationOrder: 0 },
+      ],
+    });
+    expect(parsed.kind).toBe("last-standing");
+    if (parsed.kind === "last-standing") {
+      expect(parsed.players[0].survivorRank).toBe(2);
+      expect(parsed.players[1].survivorRank).toBe(1);
+      expect(parsed.players[2].survivorRank).toBeUndefined();
+    }
+  });
+
+  it("rejects a survivorRank on an eliminated player", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        kind: "last-standing",
+        players: [
+          { ...sampleParticipant("u1", "Alice"), survivorRank: 1 },
+          { ...sampleParticipant("u2", "Bob"), eliminationOrder: 0, survivorRank: 2 },
+        ],
+      }),
+    ).toThrow(/only allowed on surviving players/);
+  });
+
+  it("rejects duplicate survivorRank values", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        kind: "last-standing",
+        players: [
+          { ...sampleParticipant("u1", "Alice"), survivorRank: 1 },
+          { ...sampleParticipant("u2", "Bob"), survivorRank: 1 },
+        ],
+      }),
+    ).toThrow(/must be unique/);
+  });
+
+  it("rejects a survivorRank below 1", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        kind: "last-standing",
+        players: [
+          { ...sampleParticipant("u1", "Alice"), survivorRank: 0 },
+          { ...sampleParticipant("u2", "Bob"), eliminationOrder: 0 },
+        ],
+      }),
+    ).toThrow();
+  });
+
   it("rejects last-standing with no survivor", () => {
     expect(() =>
       MatchOutcomeSchema.parse({

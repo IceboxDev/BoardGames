@@ -181,11 +181,27 @@ function parseLastStanding(v: Record<string, unknown>): ParseResult<MatchOutcome
     // Optional per-player role label (Dungeon Mayhem hero, etc.) — mirrors the
     // free-for-all/team-member `role` handling so it survives the write round-trip.
     const role = raw.role !== undefined ? asOptionalString(raw.role, 64) : undefined;
+    // Optional 1-based standing among survivors (poker chip order). Mirrors
+    // LastStandingPlayerSchema: survivors only, >= 1.
+    const rank = raw.survivorRank === undefined ? undefined : asInteger(raw.survivorRank);
+    if (rank === null || (rank !== undefined && rank < 1)) {
+      return { ok: false, error: `players[${i}]: invalid survivorRank` };
+    }
+    if (rank !== undefined && elim !== undefined) {
+      return { ok: false, error: `players[${i}]: survivorRank is only allowed on survivors` };
+    }
     players.push({
       ...p.value,
       ...(elim !== undefined ? { eliminationOrder: elim } : {}),
       ...(role !== undefined ? { role } : {}),
+      ...(rank !== undefined ? { survivorRank: rank } : {}),
     });
+  }
+  const survivorRanks = players
+    .map((p) => p.survivorRank)
+    .filter((r): r is number => r !== undefined);
+  if (new Set(survivorRanks).size !== survivorRanks.length) {
+    return { ok: false, error: "last-standing: survivorRank values must be unique" };
   }
   // No explicit winnerUserIds for last-standing — every player without an
   // eliminationOrder is a survivor, and survivors are the winners by definition.

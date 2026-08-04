@@ -259,6 +259,23 @@ describe("applyParticipants", () => {
     }
   });
 
+  it("last-standing preserves survivorRank (poker chip standings) for participants that remain", () => {
+    const base: MatchOutcomeLastStanding = {
+      kind: "last-standing",
+      players: [
+        { ...p("a"), survivorRank: 2 },
+        { ...p("b"), survivorRank: 1 },
+        { ...p("c"), eliminationOrder: 0 },
+      ],
+    };
+    const applied = applyParticipants("last-standing", base, [p("a"), p("b"), p("d")]);
+    if (applied.kind === "last-standing") {
+      expect(applied.players[0]).toMatchObject({ userId: "a", survivorRank: 2 });
+      expect(applied.players[1]).toMatchObject({ userId: "b", survivorRank: 1 });
+      expect(applied.players[2].survivorRank).toBeUndefined();
+    }
+  });
+
   it("coop swaps the participants array wholesale", () => {
     const base = coop("a");
     const applied = applyParticipants("coop", base, [p("x"), p("y")]);
