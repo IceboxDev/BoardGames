@@ -7,9 +7,15 @@ import {
   MAX_PLAYERS,
   MIN_PLAYERS,
 } from "@boardgames/core/games/blood-on-the-clocktower/setup";
-import { useState } from "react";
+import { useQuery } from "@tanstack/react-query";
+import { useMemo, useState } from "react";
 import { TrashIcon } from "../../../components/icons";
 import { Button, IconButton, Input } from "../../../components/ui";
+import { fetchAvailableGames } from "../../../lib/calendar-games";
+import { fetchCalendarLocks } from "../../../lib/calendar-locks";
+import { dateKey } from "../../../lib/offline-availability";
+import { fetchPlayers } from "../../../lib/profile";
+import { qk } from "../../../lib/query-keys";
 import { Panel, Screen } from "./common";
 import { loadRoster, saveRoster } from "./persistence";
 
@@ -32,11 +38,53 @@ export default function SetupScreen({ onStart }: { onStart: (state: CompanionSta
 
   const countOk = names.length >= MIN_PLAYERS && names.length <= MAX_PLAYERS;
 
-  function add() {
-    const name = draft.trim();
+  // Tonight's board game night (if one is locked for today): one tap pulls the
+  // RSVP roster in instead of typing everyone by hand.
+  const todayKey = dateKey(new Date());
+  const locksQuery = useQuery({
+    queryKey: qk.calendarLocks(),
+    queryFn: ({ signal }) => fetchCalendarLocks(signal),
+  });
+  const nightTonight = Boolean(locksQuery.data?.[todayKey]);
+  const gamesQuery = useQuery({
+    queryKey: qk.availableGames(todayKey),
+    queryFn: ({ signal }) => fetchAvailableGames(todayKey, signal),
+    enabled: nightTonight,
+  });
+  const attendees = gamesQuery.data?.attendees ?? [];
+  const going = attendees.filter((a) => a.status === "definite");
+  const maybes = attendees.filter((a) => a.status === "tentative");
+
+  // Registered members feed the name suggestions while typing.
+  const playersQuery = useQuery({
+    queryKey: qk.players(),
+    queryFn: ({ signal }) => fetchPlayers(signal),
+  });
+  const suggestions = useMemo(() => {
+    const q = draft.trim().toLowerCase();
+    if (!q) return [];
+    const taken = new Set(names.map((n) => n.toLowerCase()));
+    const members = (playersQuery.data?.players ?? []).filter(
+      (p) => !taken.has(p.name.toLowerCase()),
+    );
+    const starts = members.filter((p) => p.name.toLowerCase().startsWith(q));
+    const contains = members.filter(
+      (p) => !p.name.toLowerCase().startsWith(q) && p.name.toLowerCase().includes(q),
+    );
+    return [...starts, ...contains].slice(0, 5);
+  }, [draft, names, playersQuery.data]);
+
+  function addName(raw: string) {
+    const name = raw.trim();
     if (!name || entries.length >= MAX_PLAYERS) return;
-    setEntries([...entries, { id: nextEntryId++, name }]);
+    if (names.some((n) => n.toLowerCase() === name.toLowerCase())) return;
+    setEntries((prev) => [...prev, { id: nextEntryId++, name }]);
     setDraft("");
+  }
+
+  function applyNightRoster(includeMaybes: boolean) {
+    const roster = includeMaybes ? [...going, ...maybes] : going;
+    setEntries(toEntries(roster.map((a) => a.name).slice(0, MAX_PLAYERS)));
   }
 
   function move(index: number, delta: -1 | 1) {
@@ -62,6 +110,25 @@ export default function SetupScreen({ onStart }: { onStart: (state: CompanionSta
           clockwise around the circle.
         </p>
       </header>
+
+      {nightTonight && attendees.length > 0 && (
+        <Panel tone="gold" title="Board game night tonight">
+          <p className="text-sm text-fg-primary">
+            {going.length} going{maybes.length > 0 && <> · {maybes.length} maybe</>} — pull the
+            guest list straight in, then reorder to match the circle.
+          </p>
+          <div className="mt-2 flex flex-col gap-2 sm:flex-row">
+            <Button variant="primary" block onClick={() => applyNightRoster(false)}>
+              Use tonight's roster ({going.length})
+            </Button>
+            {maybes.length > 0 && (
+              <Button variant="secondary" block onClick={() => applyNightRoster(true)}>
+                Include maybes (+{maybes.length})
+              </Button>
+            )}
+          </div>
+        </Panel>
+      )}
 
       <Panel title={`Players (${names.length})`}>
         <div className="flex flex-col gap-1.5">
@@ -97,20 +164,37 @@ export default function SetupScreen({ onStart }: { onStart: (state: CompanionSta
               value={draft}
               onChange={(e) => setDraft(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === "Enter") add();
+                if (e.key === "Enter") addName(draft);
               }}
               placeholder="Player name"
               aria-label="Player name"
               className="flex-1"
+              autoComplete="off"
             />
             <Button
               variant="secondary"
-              onClick={add}
+              onClick={() => addName(draft)}
               disabled={!draft.trim() || names.length >= MAX_PLAYERS}
             >
               Add
             </Button>
           </div>
+          {suggestions.length > 0 && (
+            <div className="flex flex-col gap-1">
+              {suggestions.map((p) => (
+                <Button
+                  key={p.id}
+                  variant="secondary"
+                  size="sm"
+                  align="start"
+                  block
+                  onClick={() => addName(p.name)}
+                >
+                  {p.name}
+                </Button>
+              ))}
+            </div>
+          )}
         </div>
       </Panel>
 
