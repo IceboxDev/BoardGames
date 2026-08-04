@@ -163,6 +163,17 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       { value: "Soju", label: "Soju" },
     ],
   },
+  // The three most-played poker variants; Hold'em first so a fresh match
+  // defaults to the game the night almost certainly was.
+  poker: {
+    label: "Variant",
+    mode: "single",
+    options: [
+      { value: "Texas Hold'em", label: "Texas Hold'em" },
+      { value: "Omaha", label: "Omaha" },
+      { value: "Seven-Card Stud", label: "Seven-Card Stud" },
+    ],
+  },
   // Captain Sonar ships two rulesets: the signature simultaneous real-time
   // mode and the calmer turn-by-turn variant. Real-time is first so a fresh
   // match defaults to it.
