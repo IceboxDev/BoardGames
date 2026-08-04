@@ -40,7 +40,9 @@ export default function Companion() {
     (d: BagDraft) => {
       const draws = d.draws.filter((x): x is CharacterId => x !== null);
       if (draws.length !== d.names.length) return;
-      const game = beginNight(createGame(setupFromDraws(d.names, d.bag, draws)));
+      const game = beginNight(
+        createGame(setupFromDraws(d.names, d.bag, draws), { storyteller: d.storyteller }),
+      );
       saveGame(game);
       changeDraft(null);
       setState(game);

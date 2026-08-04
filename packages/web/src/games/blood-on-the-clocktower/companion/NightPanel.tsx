@@ -493,13 +493,15 @@ function ButlerStep({
   return (
     <div className="flex flex-col gap-2">
       <p className="text-xs text-fg-muted">
-        Tap their chosen master — tomorrow the Butler may only vote if that player votes.
+        Tap their chosen master — tomorrow the Butler may only vote if that player votes. Dead
+        players are a legal pick: a ghost vote still counts as the master voting.
         {voided && " (Poisoned: the restriction won't actually bind them.)"}
       </p>
       <SeatPicker
         state={state}
         selected={current !== undefined ? [current] : []}
         disabledSeats={[step.seat]}
+        deadSelectable
         onToggle={(seat) => update((s) => setButlerMaster(s, step.seat, seat))}
       />
     </div>

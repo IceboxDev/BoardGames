@@ -8,6 +8,7 @@ import {
 } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import { useState } from "react";
 import { Button, SegmentedControl, useConfirm } from "../../../components/ui";
+import { useCurrentUser } from "../../../hooks/useCurrentUser";
 import type { UpdateState } from "./Companion";
 import { Panel, Screen } from "./common";
 import DayPanel from "./DayPanel";
@@ -15,6 +16,7 @@ import GrimoirePanel from "./GrimoirePanel";
 import LogPanel from "./LogPanel";
 import { TYPE_TEXT, trueCharacterLabel } from "./labels";
 import NightPanel from "./NightPanel";
+import PortToHistoryModal from "./PortToHistoryModal";
 
 type Tab = "phase" | "grimoire" | "log";
 
@@ -33,7 +35,9 @@ export default function CompanionGame({
   onAbandon: () => void;
 }) {
   const [tab, setTab] = useState<Tab>("phase");
+  const [portOpen, setPortOpen] = useState(false);
   const { confirm, confirmDialog } = useConfirm();
+  const { isAdmin } = useCurrentUser();
 
   const phase = state.phase;
   const phaseLabel =
@@ -74,9 +78,22 @@ export default function CompanionGame({
           </ul>
         </Panel>
         <LogPanel state={state} />
+        {isAdmin &&
+          (state.historyMatchId !== undefined ? (
+            <p className="text-center text-sm font-semibold text-emerald-300">
+              ✓ Recorded to match history
+            </p>
+          ) : (
+            <Button variant="secondary" size="lg" block onClick={() => setPortOpen(true)}>
+              Record to match history
+            </Button>
+          ))}
         <Button variant="primary" size="lg" block onClick={onAbandon}>
           Start a new game
         </Button>
+        {portOpen && (
+          <PortToHistoryModal state={state} update={update} onClose={() => setPortOpen(false)} />
+        )}
       </Screen>
     );
   }

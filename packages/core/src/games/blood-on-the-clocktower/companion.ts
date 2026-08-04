@@ -87,6 +87,10 @@ export type CompanionState = {
   lastExecution?: { day: number; seat: number; character: CharacterId };
   /** Seat that became the Imp today (Scarlet Woman / star pass) — gets a "you are" step tonight. */
   pendingImpInfo?: number;
+  /** The non-playing Storyteller running the game (match-history moderator). */
+  storyteller?: string;
+  /** Set once the finished game is ported to match history (blocks double-posts). */
+  historyMatchId?: number;
   log: LogEntry[];
   nextLogId: number;
 };
@@ -100,7 +104,7 @@ const EMPTY_DAY: DayState = {
 
 // ── Construction ──────────────────────────────────────────────────────
 
-export function createGame(setup: GameSetup): CompanionState {
+export function createGame(setup: GameSetup, opts?: { storyteller?: string }): CompanionState {
   const players: CompanionPlayer[] = setup.seats.map((s) => ({
     seat: s.seat,
     name: s.name,
@@ -122,10 +126,17 @@ export function createGame(setup: GameSetup): CompanionState {
     phase: { kind: "reveal" },
     nightStep: 0,
     day: EMPTY_DAY,
+    ...(opts?.storyteller ? { storyteller: opts.storyteller } : {}),
     log: [],
     nextLogId: 1,
   };
-  return log(state, "Setup", "Characters dealt.");
+  return log(
+    state,
+    "Setup",
+    opts?.storyteller
+      ? `Characters dealt. ${opts.storyteller} runs the game as the Storyteller.`
+      : "Characters dealt.",
+  );
 }
 
 // ── Small helpers ─────────────────────────────────────────────────────

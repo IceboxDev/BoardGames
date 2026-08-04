@@ -82,7 +82,11 @@ export function SeatPicker({
   return (
     <div className="grid grid-cols-2 gap-1.5 sm:grid-cols-3">
       {state.players.map((p) => {
-        const disabled = disabledSeats.includes(p.seat) || (!p.alive && !deadSelectable);
+        // Players who died THIS night are not yet announced — the town still
+        // believes they are alive, so night choices (the Butler picking a
+        // master after the Imp killed someone) must be able to target them.
+        const disabled =
+          disabledSeats.includes(p.seat) || (!p.alive && !p.diedTonight && !deadSelectable);
         return (
           <Chip
             key={p.seat}
