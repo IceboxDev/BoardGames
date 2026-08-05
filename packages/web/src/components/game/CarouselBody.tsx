@@ -30,8 +30,11 @@ export function CarouselBody({
   compact,
 }: Props) {
   return (
+    // `overflow-hidden` so an over-budget body can never spill past the card's
+    // rounded clip edge with a mid-line text cut — the clamps below make that
+    // rare, this makes it impossible.
     <div
-      className={`flex flex-col ${compact ? "gap-1.5 px-3 py-3" : "gap-2.5 px-5 py-4"}`}
+      className={`flex flex-col overflow-hidden ${compact ? "gap-1.5 px-3 py-3" : "gap-2.5 px-5 py-4"}`}
       style={{ height: bodyHeight }}
     >
       <span
@@ -55,16 +58,19 @@ export function CarouselBody({
 
       <BggInline bgg={bgg} compact={compact} />
 
-      {!compact && description && (
-        // Pinned layout: line-clamp-7 is the deterministic truncation
+      {description && (
+        // Pinned layout: the line-clamp is the deterministic truncation
         // boundary across every viewport. Font sizes still scale with
         // breakpoint for readability on big screens, but `leading-snug` is
-        // pinned so line-height stays predictable, and `flex-1` /
-        // `overflow-hidden` are dropped — `line-clamp-7` handles both
-        // height-capping and overflow itself. The generated `default`
+        // pinned so line-height stays predictable. The generated `default`
         // variant is char-budgeted (~240 chars) to fit within 7 lines
-        // even at the smallest cardW + biggest text combination.
-        <p className="line-clamp-7 text-3xs leading-snug text-fg-secondary sm:text-2xs xl:text-xs 3xl:text-sm">
+        // even at the smallest full-size card + biggest text combination.
+        // Compact (height-bound) cards keep a 3-line teaser — the slot
+        // left after title + rating is ~2–5 lines, and clamp-3 fills it
+        // without ever pushing past the body's overflow-hidden edge.
+        <p
+          className={`${compact ? "line-clamp-3" : "line-clamp-7"} text-3xs leading-snug text-fg-secondary sm:text-2xs xl:text-xs 3xl:text-sm`}
+        >
           {stripBggHtml(description)}
         </p>
       )}

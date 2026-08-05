@@ -9,6 +9,11 @@
 #   scripts/screenshot-smoke.sh capture <out-dir> [base-url]
 #   scripts/screenshot-smoke.sh diff <dir-a> <dir-b> [report-dir]
 #
+# CAVEAT — headless Chromium clamps the window to a MINIMUM 500px width:
+# a 411/360 "phone" window lays out at 500 CSS px and the capture is a crop.
+# For true phone-width layout use a route that supports the ?frame=WxH iframe
+# mode (see /dev/rsvp-preview) — the iframe gets a real narrow viewport.
+#
 # Auth: public routes (/login, /dev/*) work out of the box. To capture
 # authed pages (/, /history, /games), export SMOKE_COOKIE with a valid
 # session cookie header value (e.g. 'better-auth.session_token=…') before
@@ -32,6 +37,8 @@ ROUTES=(
   "deck-preview:/dev/deck-preview"
   "dnd-preview:/dev/dnd-preview"
   "dnd-tool-preview:/dev/dnd-tool-preview"
+  "rsvp-preview:/dev/rsvp-preview"
+  "rsvp-preview-phone360:/dev/rsvp-preview?frame=360x644"
   "dashboard:/"
   "history:/history"
   "games:/games"

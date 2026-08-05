@@ -11,9 +11,9 @@ import {
   CarouselBody,
   CarouselCardChrome,
   CarouselThumb,
-  COMPACT_THRESHOLD,
   carouselAnimate,
   FitsBadge,
+  FLOOR_CARD_W,
   MAX_CARD_W,
   MIN_CARD_W,
   NewBadge,
@@ -145,13 +145,21 @@ export default function GameCarousel3D({
   // card's own top/bottom edges.
   const measured = size.w > 0 && size.h > 0;
   const heightBudget = Math.max(0, size.h - VERTICAL_BREATHING);
+  // Width picks the card size up to MIN_CARD_W…MAX_CARD_W; the height budget
+  // is a HARD cap on top. The old formula applied MIN_CARD_W after the height
+  // cap, which force-inflated the card past a short container (360×644-class
+  // phones) and clipped its top and bottom against the masked wrapper.
+  const widthDriven = Math.max(MIN_CARD_W, Math.min(MAX_CARD_W, size.w * 0.92));
   const cardW = measured
-    ? Math.max(MIN_CARD_W, Math.min(MAX_CARD_W, size.w * 0.92, heightBudget / ASPECT))
+    ? Math.max(FLOOR_CARD_W, Math.min(widthDriven, heightBudget / ASPECT))
     : REF_CARD_W;
   const cardH = cardW * ASPECT;
   const thumbH = cardH * (270 / REF_CARD_H);
   const bodyH = cardH * (290 / REF_CARD_H);
-  const compact = cardW < COMPACT_THRESHOLD;
+  // Below the design minimum the full body (description + weight bar) no
+  // longer fits its height share — drop to the compact layout instead of
+  // letting the body overflow the card's clip edge.
+  const compact = cardW < MIN_CARD_W;
 
   // 3D constants scale with cardW so the spread/depth stay visually
   // coherent.

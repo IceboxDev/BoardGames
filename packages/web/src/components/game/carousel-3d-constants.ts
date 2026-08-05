@@ -45,10 +45,12 @@ export const ROTATE_MAX = 65; // dimensionless angle
 export const SCALE_MIN = 0.55; // dimensionless ratio
 export const OPACITY_MIN = 0.45; // dimensionless ratio
 
-// Defensive floor — only triggers on extremely tight slots. With the 0.92
-// width factor a typical phone produces a ≥320px card, so description
-// stays visible. Drops description + weight bar below this width.
-export const COMPACT_THRESHOLD = 230;
+// Absolute floor — only guards against degenerate slots (a collapsed
+// container mid-layout). Unlike the old MIN_CARD_W floor, this is far below
+// any real phone so it can never inflate the card past its container: a
+// card forced LARGER than the height budget gets its top and bottom clipped
+// by the masked wrapper, which is strictly worse than a smaller card.
+export const FLOOR_CARD_W = 200;
 
 /**
  * Tanh asymptote shared by every animated axis (x offset, z depth,

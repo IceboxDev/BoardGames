@@ -159,7 +159,12 @@ export function Modal({
           )}
 
           {(title || eyebrow || subheader) && (
-            <header className="flex min-w-0 flex-col items-start gap-1 pr-20">
+            // pr clears the absolute close-X (and headerExtra when present) on
+            // the title's first line — pay for exactly the controls rendered;
+            // phone headers need every pixel.
+            <header
+              className={`flex min-w-0 max-w-full flex-col items-start gap-1 ${headerExtra ? "pr-20" : hideCloseButton ? "" : "pr-14"}`}
+            >
               {eyebrow && (
                 <p
                   className={`text-2xs font-semibold uppercase tracking-eyebrow ${eyebrowClassName}`}

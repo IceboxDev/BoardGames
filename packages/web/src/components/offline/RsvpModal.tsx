@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { CalendarLocks } from "../../lib/calendar-locks";
 import type { RsvpStatus } from "../../lib/calendar-rsvps";
+import { compactAddress } from "../../lib/compact-address.ts";
 import { formatDayKey } from "../../lib/date-format.ts";
 import { DND_SLUG } from "../../lib/dnd-night";
 import { reportPageView } from "../../lib/page-views";
@@ -170,7 +171,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
 
   const subheader =
     lock && (lock.host || lock.eventTime || lock.address) ? (
-      <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-fg-secondary">
+      <div className="flex max-w-full flex-wrap items-center gap-x-3 gap-y-1 text-xs text-fg-secondary">
         {lock.host && <HostLine name={lock.host.name} />}
         {lock.eventTime && <TimeLine value={lock.eventTime} />}
         {lock.address && <AddressLink address={lock.address} />}
@@ -184,7 +185,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
       panelClassName="gap-2 sm:gap-4 sm:p-7"
       eyebrow={eyebrow}
       title={headingDate}
-      titleClassName="text-2xl font-bold tracking-tight text-white sm:text-3xl"
+      titleClassName="text-xl font-bold tracking-tight text-white xs2:text-2xl sm:text-3xl"
       subheader={subheader}
       headerExtra={picksLockToggle}
     >
@@ -302,18 +303,27 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
 // p-6 modal panel. Title attribute + sr-only span keep the button
 // accessible to screen readers and tooltip-on-hover when the visible label
 // is hidden.
-const RSVP_OPTIONS: SegmentedOption<RsvpStatus>[] = [
+// Exported for the /dev/rsvp-preview page.
+export const RSVP_OPTIONS: SegmentedOption<RsvpStatus>[] = [
   {
     value: "yes",
-    label: <span className="sr-only xs2:not-sr-only">Going</span>,
-    icon: <span aria-hidden="true">✓</span>,
+    label: (
+      <>
+        <span aria-hidden="true">✓</span>
+        <span className="sr-only xs2:not-sr-only xs2:ml-1">Going</span>
+      </>
+    ),
     tone: "emerald",
     title: "Going",
   },
   {
     value: "no",
-    label: <span className="sr-only xs2:not-sr-only">Not going</span>,
-    icon: <span aria-hidden="true">✗</span>,
+    label: (
+      <>
+        <span aria-hidden="true">✗</span>
+        <span className="sr-only xs2:not-sr-only xs2:ml-1">Not going</span>
+      </>
+    ),
     tone: "rose",
     title: "Not going",
   },
@@ -370,7 +380,7 @@ function buildViewOptions(
   return out;
 }
 
-function HostLine({ name }: { name: string }) {
+export function HostLine({ name }: { name: string }) {
   return (
     <span className="inline-flex items-center gap-1.5 text-fg-secondary">
       <HostIcon className="h-3.5 w-3.5 shrink-0" />
@@ -382,7 +392,7 @@ function HostLine({ name }: { name: string }) {
   );
 }
 
-function TimeLine({ value }: { value: string }) {
+export function TimeLine({ value }: { value: string }) {
   return (
     <span className="inline-flex items-center gap-1.5 text-fg-secondary">
       <ClockIcon className="h-3.5 w-3.5 shrink-0" />
@@ -391,17 +401,22 @@ function TimeLine({ value }: { value: string }) {
   );
 }
 
-function AddressLink({ address }: { address: string }) {
+export function AddressLink({ address }: { address: string }) {
+  // Maps link keeps the FULL address (postal + country make geocoding exact);
+  // the display drops them for phone-width headers. `min-w-0` on both the
+  // link and the text span is load-bearing: without it, flex `min-width:auto`
+  // propagates the address's full width up through the header and pushes the
+  // whole modal panel wider than a phone viewport.
   const mapHref = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
   return (
     <a
       href={mapHref}
       target="_blank"
       rel="noreferrer noopener"
-      className="inline-flex max-w-full items-center gap-1.5 truncate text-emerald-300 underline-offset-2 hover:text-emerald-200 hover:underline"
+      className="inline-flex min-w-0 max-w-full items-center gap-1.5 text-emerald-300 underline-offset-2 hover:text-emerald-200 hover:underline"
     >
       <PinIcon className="h-3.5 w-3.5 shrink-0" />
-      <span className="truncate">{address}</span>
+      <span className="min-w-0 truncate">{compactAddress(address)}</span>
     </a>
   );
 }
