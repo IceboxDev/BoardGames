@@ -5,6 +5,9 @@ import {
   AdminDevicesResponseSchema,
   type AdminResetLinkResponse,
   AdminResetLinkResponseSchema,
+  MergeGuestBodySchema,
+  type MergeGuestResponse,
+  MergeGuestResponseSchema,
   OkResponseSchema,
   type OnlineMode,
   SetOnlineModeBodySchema,
@@ -28,6 +31,22 @@ export async function adminGenerateResetLink(userId: string): Promise<AdminReset
   return apiFetch(`/api/admin/users/${userId}/reset-link`, {
     method: "POST",
     response: AdminResetLinkResponseSchema,
+  });
+}
+
+/**
+ * Merge a guest stub into a real account: match outcomes are rewritten to the
+ * target's id + name and the guest is deleted. Returns the rewrite count.
+ */
+export async function adminMergeGuest(
+  guestUserId: string,
+  targetUserId: string,
+): Promise<MergeGuestResponse> {
+  return apiFetch("/api/admin/users/merge-guest", {
+    method: "POST",
+    body: { guestUserId, targetUserId },
+    request: MergeGuestBodySchema,
+    response: MergeGuestResponseSchema,
   });
 }
 

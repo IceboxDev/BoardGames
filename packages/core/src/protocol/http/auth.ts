@@ -107,6 +107,26 @@ export const AdminResetLinkResponseSchema = z.object({
 });
 export type AdminResetLinkResponse = z.infer<typeof AdminResetLinkResponseSchema>;
 
+/**
+ * `POST /api/admin/users/merge-guest` — fold a guest player stub into a real
+ * account: every match outcome naming the guest is rewritten to the target's
+ * id + display name, the participant index is resynced, and the guest user is
+ * deleted. Stats then accrue to the real account automatically (they're
+ * derived from outcomes at read time).
+ */
+export const MergeGuestBodySchema = z.object({
+  guestUserId: z.string().min(1),
+  targetUserId: z.string().min(1),
+});
+export type MergeGuestBody = z.infer<typeof MergeGuestBodySchema>;
+
+export const MergeGuestResponseSchema = z.object({
+  ok: z.literal(true),
+  /** Match rows whose outcome named the guest and got rewritten. */
+  matchesUpdated: z.number().int().nonnegative(),
+});
+export type MergeGuestResponse = z.infer<typeof MergeGuestResponseSchema>;
+
 // ── WebSocket ticket ────────────────────────────────────────────────────
 
 /**

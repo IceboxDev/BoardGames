@@ -28,7 +28,8 @@ export type ActivityType =
   | "night-locked"
   | "night-unlocked"
   | "match-recorded"
-  | "match-deleted";
+  | "match-deleted"
+  | "guest-merged";
 
 /** Insert one activity row. Never throws; never awaited by callers. */
 export function logActivity(

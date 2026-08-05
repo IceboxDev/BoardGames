@@ -344,6 +344,13 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
       const id = num(meta.matchId);
       return `Deleted a match${id !== undefined ? ` (#${id})` : ""}`;
     }
+    case "guest-merged": {
+      const guestName = str(meta.guestName) ?? "a guest";
+      const n = num(meta.matchesUpdated);
+      return `Merged guest ${guestName} into ${targetName ?? "an account"}${
+        n !== undefined ? ` (${n} match${n === 1 ? "" : "es"})` : ""
+      }`;
+    }
     default:
       // Unknown/future event kinds still render a readable line.
       return type.replace(/-/g, " ");

@@ -200,7 +200,13 @@ export default function AdminPage() {
         <PreRegisterCard />
         <GuestPlayersCard
           guests={guests}
-          onChanged={() => queryClient.invalidateQueries({ queryKey: qk.adminUsers() })}
+          members={users}
+          onChanged={() => {
+            void queryClient.invalidateQueries({ queryKey: qk.adminUsers() });
+            // A merge rewrites match outcomes — refresh everything derived.
+            void queryClient.invalidateQueries({ queryKey: qk.history() });
+            void queryClient.invalidateQueries({ queryKey: qk.players() });
+          }}
         />
 
         {errorMessage && <ErrorAlert message={errorMessage} className="mb-4" />}

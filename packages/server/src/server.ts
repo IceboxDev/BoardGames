@@ -18,6 +18,7 @@ import {
 } from "./auth-routes/admin-availability.ts";
 import { adminInventoryRoutes } from "./auth-routes/admin-inventory.ts";
 import { adminMatchHistoryRoutes } from "./auth-routes/admin-match-history.ts";
+import { adminMergeGuestRoutes } from "./auth-routes/admin-merge-guest.ts";
 import { adminOnlineRoutes } from "./auth-routes/admin-online.ts";
 import { adminPasswordResetRoutes } from "./auth-routes/admin-password-reset.ts";
 import { adminPendingInventoryRoutes } from "./auth-routes/admin-pending-inventory.ts";
@@ -158,6 +159,7 @@ app.route("/api/admin/users", adminOnlineRoutes);
 app.route("/api/admin/users", adminInventoryRoutes);
 app.route("/api/admin/users", adminAvailabilityRoutes);
 app.route("/api/admin/users", adminActivityRoutes);
+app.route("/api/admin/users", adminMergeGuestRoutes);
 app.route("/api/admin/users", adminPasswordResetRoutes);
 app.route("/api/admin", adminAvailabilityAllRoutes);
 app.route("/api/admin", adminPendingInventoryRoutes);
