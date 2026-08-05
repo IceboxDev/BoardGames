@@ -52,6 +52,20 @@ userAvailabilityRoutes.put("/availability", zJsonBody(PushAvailabilityBodySchema
     return errorResponse(c, 400, "too many entries", "TOO_MANY_ENTRIES");
   }
 
+  // Previous stored days, read before the replace so activity logging can
+  // record the actual DIFF (which days were added/removed/flipped) instead of
+  // opaque totals — and skip logging entirely on a no-op re-PUT.
+  const prevResult = await getDb().execute({
+    sql: "SELECT date_key, status FROM user_availability_days WHERE user_id = ?",
+    args: [user.id],
+  });
+  const prev = new Map(
+    parseRows(AvailabilityDayRowSchema, prevResult.rows, "user_availability_days").map((r) => [
+      r.date_key,
+      r.status,
+    ]),
+  );
+
   // Dual-write during the `user_availability_days` EXPAND phase (migration
   // 0010): the legacy JSON blob is kept in sync as a rollback backstop while
   // the normalized table is the read source. Both commit atomically in one
@@ -77,10 +91,28 @@ userAvailabilityRoutes.put("/availability", zJsonBody(PushAvailabilityBodySchema
     ],
     "write",
   );
-  logActivity(user.id, "availability", {
-    can: entries.filter(([, s]) => s === "can").length,
-    maybe: entries.filter(([, s]) => s === "maybe").length,
-  });
+  // Diff against the previous map: `added`/`changed` carry the new status per
+  // day, `removed` the unmarked days. Only changes are activity — a re-PUT of
+  // an identical map (open calendar, close calendar) logs nothing.
+  const added: Record<string, Availability> = {};
+  const changed: Record<string, Availability> = {};
+  const removed: string[] = [];
+  for (const [dateKey, status] of entries) {
+    const before = prev.get(dateKey);
+    if (before === undefined) added[dateKey] = status;
+    else if (before !== status) changed[dateKey] = status;
+  }
+  for (const dateKey of prev.keys()) {
+    if (!(dateKey in body)) removed.push(dateKey);
+  }
+  removed.sort();
+  if (Object.keys(added).length > 0 || Object.keys(changed).length > 0 || removed.length > 0) {
+    logActivity(user.id, "availability", {
+      ...(Object.keys(added).length > 0 ? { added } : {}),
+      ...(Object.keys(changed).length > 0 ? { changed } : {}),
+      ...(removed.length > 0 ? { removed } : {}),
+    });
+  }
 
   return c.json(OkResponseSchema.parse({ ok: true }));
 });

@@ -239,6 +239,30 @@ function day(meta: Record<string, unknown>): string | undefined {
   return date ? formatDayKey(date) : undefined;
 }
 
+// Availability-diff meta: `{ "2026-08-12": "can", … }` maps and date lists,
+// rendered as capped day lists so a 40-day first marking stays one line.
+const DAY_LIST_CAP = 4;
+
+function dayStatusEntries(v: unknown): [string, string][] | null {
+  if (v === null || typeof v !== "object" || Array.isArray(v)) return null;
+  const entries = Object.entries(v as Record<string, unknown>)
+    .filter((e): e is [string, string] => e[1] === "can" || e[1] === "maybe")
+    .sort(([a], [b]) => a.localeCompare(b));
+  return entries.length > 0 ? entries : null;
+}
+
+function dayStatusList(entries: [string, string][]): string {
+  const shown = entries.slice(0, DAY_LIST_CAP).map(([d, s]) => `${formatDayKey(d)} (${s})`);
+  const more = entries.length - DAY_LIST_CAP;
+  return shown.join(", ") + (more > 0 ? ` +${more} more` : "");
+}
+
+function dayList(days: string[]): string {
+  const shown = days.slice(0, DAY_LIST_CAP).map((d) => formatDayKey(d));
+  const more = days.length - DAY_LIST_CAP;
+  return shown.join(", ") + (more > 0 ? ` +${more} more` : "");
+}
+
 function gameTitle(slug: string | undefined): string | undefined {
   return slug ? (titleBySlug.get(slug) ?? slug) : undefined;
 }
@@ -276,6 +300,18 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
       return `${verb} ${reaction} ${meta.on === false ? "vote " : ""}for ${title}${forDay ? ` on ${forDay}` : ""}`;
     }
     case "availability": {
+      // Diff format (current): which days were added / flipped / unmarked.
+      const parts: string[] = [];
+      const added = dayStatusEntries(meta.added);
+      const changed = dayStatusEntries(meta.changed);
+      const removed = Array.isArray(meta.removed)
+        ? meta.removed.filter((d): d is string => typeof d === "string")
+        : [];
+      if (added) parts.push(`added ${dayStatusList(added)}`);
+      if (changed) parts.push(`changed ${dayStatusList(changed)}`);
+      if (removed.length > 0) parts.push(`removed ${dayList(removed)}`);
+      if (parts.length > 0) return `Availability: ${parts.join("; ")}`;
+      // Legacy entries from before diff logging carried opaque totals.
       const can = num(meta.can) ?? 0;
       const maybe = num(meta.maybe) ?? 0;
       return `Updated availability (${can} can, ${maybe} maybe)`;
