@@ -1,10 +1,10 @@
-import type { ActivityEntry } from "@boardgames/core/protocol";
-import { useInfiniteQuery } from "@tanstack/react-query";
+import type { ActivityEntry, AdminDevice } from "@boardgames/core/protocol";
+import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
 import { games } from "../../games/registry";
 import { useAdminUsers } from "../../hooks/useAdminUsers";
-import { adminFetchActivity } from "../../lib/admin";
-import { formatDayKey } from "../../lib/date-format";
+import { adminFetchActivity, adminFetchDevices } from "../../lib/admin";
+import { formatDayKey, formatRelativeTime } from "../../lib/date-format";
 import { qk } from "../../lib/query-keys";
 import { Button } from "../ui/Button";
 import { Drawer } from "../ui/Drawer";
@@ -53,6 +53,7 @@ export function ActivityDrawer({ user, onClose }: Props) {
       title={user.name || user.email}
       subheader={<p className="mt-0.5 truncate text-xs text-fg-muted">{user.email}</p>}
     >
+      <DevicesSection userId={user.id} />
       <QueryBoundary
         query={{ ...activityQuery, data: flat }}
         loading={<LoadingState />}
@@ -84,6 +85,67 @@ export function ActivityDrawer({ user, onClose }: Props) {
         )}
       </QueryBoundary>
     </Drawer>
+  );
+}
+
+// ── Devices ───────────────────────────────────────────────────────────
+//
+// Every distinct setup this member has browsed on — the reproduction recipe
+// for their layout issues: screen, DPR, zoom, and the CSS viewport to set the
+// dev-tools emulator to. Silently absent until the member's client reports.
+
+function DevicesSection({ userId }: { userId: string }) {
+  const devicesQuery = useQuery({
+    queryKey: qk.adminUserDevices(userId),
+    queryFn: ({ signal }) => adminFetchDevices(userId, signal),
+  });
+  const devices = devicesQuery.data?.devices ?? [];
+  if (devices.length === 0) return null;
+  return (
+    <section className="shrink-0">
+      <h3 className="py-1 text-2xs font-semibold uppercase tracking-wide text-fg-muted">Devices</h3>
+      <ul className="space-y-1.5">
+        {devices.map((d) => (
+          <li key={d.id} className="rounded-lg bg-surface-800/60 px-2.5 py-1.5">
+            <DeviceLine device={d} />
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
+
+const DEVICE_GLYPH: Record<AdminDevice["info"]["deviceType"], string> = {
+  phone: "📱",
+  tablet: "📲",
+  desktop: "🖥",
+};
+
+function DeviceLine({ device }: { device: AdminDevice }) {
+  const { info } = device;
+  const ratio = (info.viewportWidth / info.viewportHeight).toFixed(2);
+  const label = `${info.deviceType[0]?.toUpperCase()}${info.deviceType.slice(1)}`;
+  return (
+    <>
+      <p className="text-xs text-fg-primary">
+        <span aria-hidden className="mr-1">
+          {DEVICE_GLYPH[info.deviceType]}
+        </span>
+        {label} · {info.screenWidth}×{info.screenHeight} @{info.devicePixelRatio}×
+        {info.zoomPercent !== undefined && info.zoomPercent !== 100
+          ? ` · zoom ~${info.zoomPercent}%`
+          : ""}
+        {info.pinchScale !== undefined && info.pinchScale !== 1
+          ? ` · pinch ${info.pinchScale.toFixed(2)}×`
+          : ""}
+      </p>
+      <p className="text-2xs text-fg-muted">
+        viewport {info.viewportWidth}×{info.viewportHeight} ({ratio}:1 {info.orientation})
+        {info.browser ? ` · ${info.browser}` : ""}
+        {info.os ? ` / ${info.os}` : ""} · seen {device.hits}×, last{" "}
+        {formatRelativeTime(device.lastSeen)}
+      </p>
+    </>
   );
 }
 

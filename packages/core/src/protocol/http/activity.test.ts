@@ -3,6 +3,8 @@ import {
   ActivityEntrySchema,
   ActivityLogQuerySchema,
   ActivityLogResponseSchema,
+  AdminDevicesResponseSchema,
+  DeviceInfoSchema,
   PageViewBodySchema,
 } from "./activity.ts";
 
@@ -76,6 +78,58 @@ describe("PageViewBodySchema", () => {
     expect(PageViewBodySchema.safeParse({ page: "night", detail: "x".repeat(101) }).success).toBe(
       false,
     );
+  });
+});
+
+describe("DeviceInfoSchema", () => {
+  const desktop = {
+    deviceType: "desktop",
+    viewportWidth: 1536,
+    viewportHeight: 695,
+    screenWidth: 1920,
+    screenHeight: 1080,
+    devicePixelRatio: 1.25,
+    zoomPercent: 125,
+    orientation: "landscape",
+    browser: "Chrome",
+    os: "Windows",
+  };
+
+  it("accepts a desktop report and a minimal phone report", () => {
+    expect(() => DeviceInfoSchema.parse(desktop)).not.toThrow();
+    expect(() =>
+      DeviceInfoSchema.parse({
+        deviceType: "phone",
+        viewportWidth: 411,
+        viewportHeight: 731,
+        screenWidth: 411,
+        screenHeight: 823,
+        devicePixelRatio: 2.625,
+        pinchScale: 1,
+        orientation: "portrait",
+      }),
+    ).not.toThrow();
+  });
+
+  it("rejects an unknown device type and a zero viewport", () => {
+    expect(DeviceInfoSchema.safeParse({ ...desktop, deviceType: "watch" }).success).toBe(false);
+    expect(DeviceInfoSchema.safeParse({ ...desktop, viewportWidth: 0 }).success).toBe(false);
+  });
+
+  it("AdminDevicesResponse wraps entries with seen timestamps and hits", () => {
+    expect(() =>
+      AdminDevicesResponseSchema.parse({
+        devices: [
+          {
+            id: 1,
+            info: desktop,
+            firstSeen: "2026-08-01 10:00:00",
+            lastSeen: "2026-08-05 09:00:00",
+            hits: 12,
+          },
+        ],
+      }),
+    ).not.toThrow();
   });
 });
 

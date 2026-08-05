@@ -30,6 +30,7 @@ import { villainousSplit } from "./0022-villainous-split.ts";
 import { activityLog } from "./0023-activity-log.ts";
 import { matchParticipants } from "./0024-match-participants.ts";
 import { campaignResultBackfill } from "./0025-campaign-result-backfill.ts";
+import { userDevices } from "./0026-user-devices.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -58,6 +59,7 @@ export const migrations: readonly Migration[] = [
   activityLog,
   matchParticipants,
   campaignResultBackfill,
+  userDevices,
 ];
 
 /**

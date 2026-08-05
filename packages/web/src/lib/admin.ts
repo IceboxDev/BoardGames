@@ -1,6 +1,8 @@
 import {
   type ActivityLogResponse,
   ActivityLogResponseSchema,
+  type AdminDevicesResponse,
+  AdminDevicesResponseSchema,
   type AdminResetLinkResponse,
   AdminResetLinkResponseSchema,
   OkResponseSchema,
@@ -26,6 +28,17 @@ export async function adminGenerateResetLink(userId: string): Promise<AdminReset
   return apiFetch(`/api/admin/users/${userId}/reset-link`, {
     method: "POST",
     response: AdminResetLinkResponseSchema,
+  });
+}
+
+/** Every distinct device/viewport a member has reported, most recent first. */
+export async function adminFetchDevices(
+  userId: string,
+  signal?: AbortSignal,
+): Promise<AdminDevicesResponse> {
+  return apiFetch(`/api/admin/users/${userId}/devices`, {
+    response: AdminDevicesResponseSchema,
+    signal,
   });
 }
 

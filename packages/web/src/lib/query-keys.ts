@@ -11,6 +11,7 @@ export const qk = {
   adminUserAvailability: (targetUserId: string) =>
     ["admin", "user-availability", targetUserId] as const,
   adminUserActivity: (targetUserId: string) => ["admin", "user-activity", targetUserId] as const,
+  adminUserDevices: (targetUserId: string) => ["admin", "user-devices", targetUserId] as const,
   adminAggregateAvailability: () => ["admin", "availability", "all"] as const,
   history: () => ["history"] as const,
   historyByNight: (dateKey: string) => ["history", "by-night", dateKey] as const,
