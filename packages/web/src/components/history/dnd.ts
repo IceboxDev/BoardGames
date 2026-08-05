@@ -15,19 +15,15 @@ export function isDndSlug(slug: string | null | undefined): boolean {
 }
 
 /**
- * The resolution of a session. "campaign-win"/"campaign-loss" mark a session
- * that carried no result itself but whose campaign has since concluded
- * (`campaignResult` back-filled) — no longer ongoing, yet not a session
- * win/loss of its own.
+ * The three-state resolution of a session, derived from the coop `outcome` as
+ * recorded that night. Deliberately blind to `campaignResult`: the history
+ * card shows the session as it was lived ("Ongoing" — nobody knew the
+ * campaign's fate yet); only the profile STATS are campaign-aware.
  */
-export type DndResolution = "ongoing" | "win" | "loss" | "campaign-win" | "campaign-loss";
+export type DndResolution = "ongoing" | "win" | "loss";
 
 export function resolutionOf(outcome: MatchOutcomeCoop): DndResolution {
-  if (outcome.outcome) return outcome.outcome;
-  if (outcome.campaignResult) {
-    return outcome.campaignResult === "win" ? "campaign-win" : "campaign-loss";
-  }
-  return "ongoing";
+  return outcome.outcome ?? "ongoing";
 }
 
 export type DndCondition = NonNullable<MatchOutcomeCoop["participants"][number]["condition"]>;

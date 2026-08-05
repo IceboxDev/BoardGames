@@ -522,19 +522,9 @@ function DndInline({
       ? { text: "Won", cls: "bg-emerald-500/15 text-emerald-300" }
       : resolution === "loss"
         ? { text: "Lost", cls: "bg-rose-500/15 text-rose-300" }
-        : resolution === "campaign-win"
-          ? { text: "Campaign won", cls: "bg-emerald-500/15 text-emerald-300" }
-          : resolution === "campaign-loss"
-            ? { text: "Campaign lost", cls: "bg-rose-500/15 text-rose-300" }
-            : { text: "Ongoing", cls: "bg-sky-500/15 text-sky-300" };
-  // Avatar tone: winners glow, a wipe dims the party; an ongoing session is
-  // muted. A concluded campaign colors its earlier sessions by the final fate.
-  const tone =
-    resolution === "win" || resolution === "campaign-win"
-      ? "winner"
-      : resolution === "loss" || resolution === "campaign-loss"
-        ? "loser"
-        : "muted";
+        : { text: "Ongoing", cls: "bg-sky-500/15 text-sky-300" };
+  // Avatar tone: winners glow, a wipe dims the party; an ongoing session is muted.
+  const tone = resolution === "win" ? "winner" : resolution === "loss" ? "loser" : "muted";
   const casualties = outcome.participants.filter((p) => p.condition);
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">

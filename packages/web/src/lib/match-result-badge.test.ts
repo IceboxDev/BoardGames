@@ -114,14 +114,14 @@ describe("matchResultBadge — D&D campaign sessions", () => {
       tone: "sky",
     });
   });
-  it("session of a since-concluded campaign → Campaign won/lost, not Ongoing", () => {
+  it("a session stays Ongoing even after its campaign concluded — the badge reflects record time", () => {
     expect(matchResultBadge(session(undefined, "win"), "a", "dungeons-and-dragons")).toEqual({
-      label: "Campaign won",
-      tone: "emerald",
+      label: "Ongoing",
+      tone: "sky",
     });
     expect(matchResultBadge(session(undefined, "loss"), "a", "dungeons-and-dragons")).toEqual({
-      label: "Campaign lost",
-      tone: "rose",
+      label: "Ongoing",
+      tone: "sky",
     });
   });
   it("the DM → Ran it, regardless of the session's outcome", () => {

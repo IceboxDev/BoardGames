@@ -15,11 +15,7 @@
 // derivation stays the shared core helper so stats and the web's result badges
 // never disagree.
 
-import {
-  deriveParticipantResult,
-  extractParticipantIds,
-  participantPerformanceCredit,
-} from "@boardgames/core/history/participant-results";
+import { extractParticipantIds } from "@boardgames/core/history/participant-results";
 import { lowScoreWinsForSlug } from "@boardgames/core/history/score-config";
 import {
   HistoryListResponseSchema,
@@ -41,6 +37,7 @@ import { computeAvailableGamesPayload } from "../lib/available-games.ts";
 import { jsonColumn, parseRow, parseRows, RowParseError } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 import { userMatchesQuery } from "../lib/match-participants.ts";
+import { groupMatchUnits, unitResult } from "../lib/match-units.ts";
 import {
   findNextNightDateKeysForUsers,
   findNextNightForUser,
@@ -363,28 +360,26 @@ profileRoutes.get("/:userId", async (c) => {
     coopCount: number;
   };
   const playsBySlug = new Map<string, PerGameAgg>();
-  for (const r of matchRows) {
+  // A multi-session campaign is ONE game spanning several nights: sessions
+  // group into a unit represented by the concluding session (or, when the
+  // user missed the finale, the back-filled `campaignResult` stands in). All
+  // counting below is per unit, so W+L+ran+ongoing+scored sums to gamesPlayed.
+  const units = groupMatchUnits(matchRows);
+  for (const unit of units) {
+    const r = unit.rep;
     // Direction matters: penalty games (Phase 10 / Bandit) are lowest-wins, so
     // pass the slug's direction or the highest-score player is wrongly credited.
     const lowestWins = lowScoreWinsForSlug(r.game_slug);
-    const result = deriveParticipantResult(r.outcome_json, userId, lowestWins);
-    const credit = participantPerformanceCredit(r.outcome_json, userId, r.game_slug);
+    const { result, credit } = unitResult(r.outcome_json, userId, lowestWins, r.game_slug);
     if (credit !== null) {
       perfSum += credit;
       perfCount += 1;
     }
-    // "played" splits three ways: a scored co-op (Just One), an unresolved
-    // campaign session that's still genuinely open, or a session whose
-    // campaign has since concluded (`campaignResult` back-filled) — the last
-    // contributes to no bucket at all: the campaign's single win/loss already
-    // lives on the concluding session, and it isn't ongoing either.
+    // Residual "played" splits two ways: a scored co-op (Just One) or a
+    // campaign still genuinely awaiting its conclusion.
     const o = r.outcome_json;
     const isScoredCoop = result === "played" && o.kind === "coop" && o.score !== undefined;
-    const isOngoing =
-      result === "played" &&
-      o.kind === "coop" &&
-      o.score === undefined &&
-      o.campaignResult === undefined;
+    const isOngoing = result === "played" && o.kind === "coop" && o.score === undefined;
     if (result === "win") wins += 1;
     else if (result === "loss") losses += 1;
     else if (result === "moderator") moderated += 1;
@@ -468,7 +463,7 @@ profileRoutes.get("/:userId", async (c) => {
   }
 
   const stats = {
-    gamesPlayed: matchRows.length,
+    gamesPlayed: units.length,
     wins,
     losses,
     winRate: wins + losses > 0 ? wins / (wins + losses) : null,

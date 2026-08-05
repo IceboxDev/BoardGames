@@ -92,17 +92,11 @@ export function matchResultBadge(
         const label = max !== undefined ? `${outcome.score} / ${max}` : String(outcome.score);
         return { label, tone: perfect ? "emerald" : "amber" };
       }
-      // No outcome and no score = a campaign session. If the campaign has
-      // since concluded, show its fate ("Campaign won" — distinct from a
-      // session "Won" so the W isn't double-counted); otherwise it's ongoing.
-      if (outcome.outcome === undefined) {
-        if (outcome.campaignResult !== undefined) {
-          return outcome.campaignResult === "win"
-            ? { label: "Campaign won", tone: "emerald" }
-            : { label: "Campaign lost", tone: "rose" };
-        }
-        return { label: "Ongoing", tone: "sky" };
-      }
+      // No outcome and no score = a campaign session. The badge reflects the
+      // session as it was RECORDED — nobody knew the campaign's fate that
+      // night, so it reads "Ongoing" even after the story concludes. Stats are
+      // the campaign-aware side (`campaignResult` groups sessions server-side).
+      if (outcome.outcome === undefined) return { label: "Ongoing", tone: "sky" };
       return outcome.outcome === "win"
         ? { label: "Won", tone: "emerald" }
         : { label: "Lost", tone: "rose" };
