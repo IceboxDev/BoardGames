@@ -164,6 +164,21 @@ export function StatusChips({ p }: { p: CompanionPlayer }) {
   if (p.protectedTonight) chips.push({ label: "Protected", cls: "bg-sky-400/15 text-sky-300" });
   if (p.redHerring) chips.push({ label: "Red herring", cls: "bg-rose-400/15 text-rose-300" });
   if (p.usedAbility) chips.push({ label: "Ability spent", cls: "bg-amber-400/15 text-amber-300" });
+  if ((p.drunkNights ?? 0) > 0) {
+    chips.push({
+      label: `Drunk${p.drunkSource ? ` (${CHARACTERS[p.drunkSource].name})` : ""}${
+        (p.drunkNights ?? 0) > 1 ? ` ·${p.drunkNights}` : ""
+      }`,
+      cls: "bg-emerald-400/15 text-emerald-300",
+    });
+  }
+  if (p.safeTonight) chips.push({ label: "Safe tonight", cls: "bg-sky-400/15 text-sky-300" });
+  if (p.survivesExecution) {
+    chips.push({ label: "Survives execution", cls: "bg-sky-400/15 text-sky-300" });
+  }
+  if (p.registersDead) {
+    chips.push({ label: "UNDEAD — secretly alive", cls: "bg-rose-400/15 text-rose-300" });
+  }
   if (chips.length === 0) return null;
   return (
     <span className="flex flex-wrap gap-1">

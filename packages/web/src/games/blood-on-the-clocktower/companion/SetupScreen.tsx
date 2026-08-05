@@ -1,3 +1,5 @@
+import type { Edition } from "@boardgames/core/games/blood-on-the-clocktower/characters";
+import { EDITION_NAME } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import {
   baseDistribution,
   dealBag,
@@ -8,7 +10,7 @@ import {
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { TrashIcon } from "../../../components/icons";
-import { Button, IconButton, Input } from "../../../components/ui";
+import { Button, IconButton, Input, SegmentedControl } from "../../../components/ui";
 import { fetchAvailableGames } from "../../../lib/calendar-games";
 import { fetchCalendarLocks } from "../../../lib/calendar-locks";
 import { dateKey } from "../../../lib/offline-availability";
@@ -55,6 +57,7 @@ const TEST_NAMES = [
 export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => void }) {
   const [entries, setEntries] = useState<RosterEntry[]>(() => toEntries(loadRoster()));
   const [draft, setDraft] = useState("");
+  const [edition, setEdition] = useState<Edition>("trouble-brewing");
   // One attendee runs the game instead of playing — they hold this phone.
   const [storyteller, setStoryteller] = useState<string | undefined>();
   const [testCount, setTestCount] = useState(8);
@@ -165,12 +168,13 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
     if (!countOk) return;
     saveRoster(names);
     onDeal({
+      edition,
       seats: entries.map((e) => ({
         name: e.name,
         ...(e.traveller ? { traveller: { character: null, alignment: "good" as const } } : {}),
       })),
       ...(storyteller ? { storyteller } : {}),
-      bag: dealBag(residents.length),
+      bag: dealBag(residents.length, Math.random, "new", edition),
       draws: entries.map(() => null),
     });
   }
@@ -180,9 +184,23 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
       <header className="flex flex-col gap-1">
         <h1 className="text-xl font-bold text-white">Storyteller Companion</h1>
         <p className="text-sm text-fg-secondary">
-          Trouble Brewing · add {MIN_PLAYERS}–{MAX_PLAYERS} players <b>in seating order</b>,
+          {EDITION_NAME[edition]} · add {MIN_PLAYERS}–{MAX_PLAYERS} players <b>in seating order</b>,
           clockwise around the circle.
         </p>
+        <SegmentedControl<Edition>
+          options={[
+            { value: "trouble-brewing", label: "Trouble Brewing" },
+            { value: "bad-moon-rising", label: "Bad Moon Rising" },
+          ]}
+          value={edition}
+          onChange={setEdition}
+          shape="rect"
+          size="sm"
+          fullWidth
+          selectionMode="toggle"
+          tone="rose"
+          aria-label="Edition"
+        />
       </header>
 
       {nightTonight && attendees.length > 0 && (
@@ -329,8 +347,9 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
             )}
           </p>
           <p className="mt-1 text-xs text-fg-muted">
-            Dealt secretly at random. If the Baron is dealt, two Townsfolk become two extra
-            Outsiders; if the Drunk is dealt, they'll be shown a Townsfolk they believe they are.
+            {edition === "trouble-brewing"
+              ? "Dealt secretly at random. If the Baron is dealt, two Townsfolk become two extra Outsiders; if the Drunk is dealt, they'll be shown a Townsfolk they believe they are."
+              : "Dealt secretly at random, with one of four Demons. If the Godfather is dealt, an Outsider is added or removed; if the Lunatic is dealt, the Demon and Lunatic draws are secretly swapped."}
             {travellerCount > 0 &&
               " Travellers don't draw from the bag — you'll pick their character next."}
           </p>
@@ -346,7 +365,7 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
             ? `Add ${MIN_PLAYERS - residents.length} more non-traveller player${
                 MIN_PLAYERS - residents.length === 1 ? "" : "s"
               } to start.`
-            : "Too many players — Trouble Brewing seats at most 15 (travellers aside)."}
+            : "Too many players — the game seats at most 15 (travellers aside)."}
         </p>
       )}
 

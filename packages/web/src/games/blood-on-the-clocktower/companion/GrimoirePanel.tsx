@@ -1,8 +1,9 @@
 import type { CharacterId } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import {
-  CHARACTER_SHEET_ORDER,
   CHARACTERS,
-  TRAVELLERS,
+  charactersOfType,
+  sheetOrderOf,
+  travellersOf,
 } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import type {
   CompanionPlayer,
@@ -11,6 +12,7 @@ import type {
 import {
   addTraveller,
   changeCharacter,
+  clearDrunk,
   exileTraveller,
   exileVotesRequired,
   isTraveller,
@@ -19,10 +21,13 @@ import {
   removeTraveller,
   restoreGhostVote,
   revive,
+  setApprenticeAbility,
+  setDrunk,
   setNote,
   setPoison,
   setTravellerAlignment,
   spendGhostVote,
+  swapSeats,
 } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import { useId, useState } from "react";
 import {
@@ -93,6 +98,11 @@ export default function GrimoirePanel({
                       master: {nameAt(state, p.butlerMaster)}
                     </span>
                   )}
+                  {p.grandchild !== undefined && (
+                    <span className="text-3xs text-fg-muted">
+                      grandchild: {nameAt(state, p.grandchild)}
+                    </span>
+                  )}
                   {p.note && (
                     <span className="min-w-0 truncate text-3xs text-fg-muted">📝 {p.note}</span>
                   )}
@@ -106,6 +116,7 @@ export default function GrimoirePanel({
         </p>
       </Panel>
       <TravellersPanel state={state} update={update} />
+      <SwapSeatsPanel state={state} update={update} />
       {openSeat !== undefined && (
         <PlayerSheet
           state={state}
@@ -125,7 +136,7 @@ export default function GrimoirePanel({
  */
 function TravellersPanel({ state, update }: { state: CompanionState; update: UpdateState }) {
   const inPlay = new Set(state.players.filter((p) => !p.left).map((p) => p.character));
-  const available = TRAVELLERS.filter((t) => !inPlay.has(t));
+  const available = travellersOf(state.script).filter((t) => !inPlay.has(t));
   const [name, setName] = useState("");
   const [alignment, setAlignment] = useState<"good" | "evil">("good");
   const [rolled, setRolled] = useState<CharacterId | undefined>();
@@ -227,8 +238,70 @@ function TravellersPanel({ state, update }: { state: CompanionState; update: Upd
       )}
       <p className="mt-2 text-xs text-fg-muted">
         Exile ({exileVotesRequired(state)}+ votes of ALL players, dead included) and “leaves town”
-        live on the traveller's player sheet above.
+        live on the traveller's player sheet above. Abilities never affect exile votes: the dead
+        don't spend their ghost vote
+        {state.script === "trouble-brewing" && ", and the Butler votes freely"}.
       </p>
+    </Panel>
+  );
+}
+
+/**
+ * Chair swaps (the BMR Matron's ability — or just fixing a mis-entered
+ * seating order). Players keep their identity; neighbours change.
+ */
+function SwapSeatsPanel({ state, update }: { state: CompanionState; update: UpdateState }) {
+  const [a, setA] = useState<number | undefined>();
+  const [b, setB] = useState<number | undefined>();
+  const matron = state.players.find((p) => p.alive && !p.left && p.character === "matron");
+  const seated = state.players.filter((p) => !p.left);
+  const fieldId = useId();
+  return (
+    <Panel title="Swap seats" tone="neutral">
+      <p className="text-xs text-fg-muted">
+        {matron
+          ? `${matron.name} (Matron) may swap up to 3 pairs of players each day — and nobody may leave their seat to talk in private.`
+          : "Swap two players' chairs (seating-order fix). Neighbour-based abilities follow the physical table."}
+      </p>
+      <div className="mt-2 flex items-center gap-2">
+        {([a, b] as const).map((value, i) => (
+          <Select
+            // Two fixed selects — index key is stable here.
+            // biome-ignore lint/suspicious/noArrayIndexKey: fixed-size pair
+            key={i}
+            id={`${fieldId}-swap-${i === 0 ? "a" : "b"}`}
+            aria-label={`Swap seat ${i === 0 ? "A" : "B"}`}
+            block={false}
+            compact
+            value={value ?? ""}
+            onChange={(e) => {
+              const v = e.target.value === "" ? undefined : Number(e.target.value);
+              if (i === 0) setA(v);
+              else setB(v);
+            }}
+            className="min-w-0 flex-1"
+          >
+            <option value="">— player…</option>
+            {seated.map((p) => (
+              <option key={p.seat} value={p.seat}>
+                {p.seat + 1}. {p.name}
+              </option>
+            ))}
+          </Select>
+        ))}
+        <Button
+          variant="secondary"
+          disabled={a === undefined || b === undefined || a === b}
+          onClick={() => {
+            if (a === undefined || b === undefined) return;
+            update((s) => swapSeats(s, a, b));
+            setA(undefined);
+            setB(undefined);
+          }}
+        >
+          Swap
+        </Button>
+      </div>
     </Panel>
   );
 }
@@ -280,6 +353,20 @@ function PlayerSheet({
             >
               {p.poisoned ? "Cure poison" : "Poison"}
             </Button>
+            {state.script === "bad-moon-rising" && (
+              <Button
+                variant="secondary"
+                onClick={() =>
+                  update((s) =>
+                    (p.drunkNights ?? 0) > 0
+                      ? clearDrunk(s, seat)
+                      : setDrunk(s, seat, 1, p.character),
+                  )
+                }
+              >
+                {(p.drunkNights ?? 0) > 0 ? "Sober up" : "Make drunk"}
+              </Button>
+            )}
             {!p.alive && (
               <Button
                 variant="secondary"
@@ -292,10 +379,12 @@ function PlayerSheet({
             )}
           </div>
 
-          {isTraveller(p) && !p.left && (
+          {(isTraveller(p) || p.character === "goon") && !p.left && (
             <div className="flex flex-col gap-2 rounded-lg border border-purple-400/25 bg-purple-400/5 p-2">
               <div className="flex items-center gap-2">
-                <span className="text-xs font-semibold text-fg-secondary">Alignment</span>
+                <span className="text-xs font-semibold text-fg-secondary">
+                  Alignment{p.character === "goon" && " (the Goon flips at night)"}
+                </span>
                 <Chip
                   pressed={p.alignment !== "evil"}
                   tone="sky"
@@ -313,7 +402,7 @@ function PlayerSheet({
                   Evil
                 </Chip>
               </div>
-              {p.alive && (
+              {p.alive && isTraveller(p) && (
                 <div className="grid grid-cols-2 gap-2">
                   <Button
                     variant="danger"
@@ -335,11 +424,35 @@ function PlayerSheet({
                   </Button>
                 </div>
               )}
-              <p className="text-3xs text-fg-muted">
-                Exile kills them (not an execution — the day continues). Leaving town removes them
-                entirely.
-              </p>
+              {isTraveller(p) && (
+                <p className="text-3xs text-fg-muted">
+                  Exile kills them (not an execution — the day continues). Leaving town removes them
+                  entirely.
+                </p>
+              )}
             </div>
+          )}
+
+          {p.character === "apprentice" && !p.left && (
+            <Field label="Apprentice's gained ability" htmlFor={`${fieldId}-apprentice`}>
+              <Select
+                id={`${fieldId}-apprentice`}
+                value={p.apprenticeAbility ?? ""}
+                onChange={(e) =>
+                  update((s) => setApprenticeAbility(s, seat, e.target.value as CharacterId))
+                }
+              >
+                <option value="">— not gained yet…</option>
+                {charactersOfType(
+                  p.alignment === "evil" ? "minion" : "townsfolk",
+                  state.script,
+                ).map((c) => (
+                  <option key={c.id} value={c.id}>
+                    {c.name}
+                  </option>
+                ))}
+              </Select>
+            </Field>
           )}
 
           <Field label="Change character" htmlFor={`${fieldId}-character`}>
@@ -350,7 +463,7 @@ function PlayerSheet({
                 update((s) => changeCharacter(s, seat, e.target.value as CharacterId))
               }
             >
-              {CHARACTER_SHEET_ORDER.map((id) => (
+              {sheetOrderOf(state.script).map((id) => (
                 <option key={id} value={id}>
                   {CHARACTERS[id].name} ({CHARACTERS[id].type})
                 </option>

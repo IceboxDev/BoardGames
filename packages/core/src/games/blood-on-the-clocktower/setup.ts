@@ -1,12 +1,13 @@
-// Trouble Brewing setup: character-count distribution and the secret bag draw.
+// Edition setup: character-count distribution and the secret bag draw.
 //
 // Mirrors the rulebook's SETUP steps 6–9: choose the right number of each
-// character type for the player count, apply orange-flower adjustments (the
-// Baron's [+2 Outsiders]; the Drunk's believed-Townsfolk token), then deal one
-// character per seat. All randomness goes through an injected `rng` so tests
-// are deterministic.
+// character type for the player count, apply orange-flower adjustments (TB:
+// the Baron's [+2 Outsiders] and the Drunk's believed-Townsfolk token; BMR:
+// the Godfather's [−1 or +1 Outsider] and the Lunatic/Demon token swap), then
+// deal one character per seat. All randomness goes through an injected `rng`
+// so tests are deterministic.
 
-import type { CharacterId } from "./characters.ts";
+import type { CharacterId, Edition } from "./characters.ts";
 import { CHARACTERS, charactersOfType } from "./characters.ts";
 
 export const MIN_PLAYERS = 5;
@@ -36,7 +37,7 @@ const DISTRIBUTIONS: Record<number, Distribution> = {
 
 export function baseDistribution(playerCount: number): Distribution {
   const d = DISTRIBUTIONS[playerCount];
-  if (!d) throw new Error(`Trouble Brewing needs ${MIN_PLAYERS}–${MAX_PLAYERS} players`);
+  if (!d) throw new Error(`the game needs ${MIN_PLAYERS}–${MAX_PLAYERS} players`);
   return d;
 }
 
@@ -56,6 +57,8 @@ export type SeatSetup = {
 };
 
 export type GameSetup = {
+  /** Defaults to Trouble Brewing when absent (pre-BMR saves). */
+  edition?: Edition;
   seats: SeatSetup[];
   distribution: Distribution;
   /** Three not-in-play good characters to show the Demon as safe bluffs. */
@@ -161,6 +164,55 @@ const BLUFF_WEIGHTS: Record<DemonSkill, Partial<Record<CharacterId, number>>> = 
 };
 
 /**
+ * Bad Moon Rising bluff weights. No hard zero like TB's Virgin — but the
+ * Sailor and Fool "can't die" claims are execution-testable, and nightly-info
+ * claims (Chambermaid, Gambler, Gossip) demand confident daily fabrication,
+ * so they invert between skill levels the same way the TB table does:
+ * passive, nothing-to-invent claims (Fool, Minstrel, Pacifist, Grandmother)
+ * for a new demon; ongoing-fabrication claims for an experienced one.
+ */
+const BMR_BLUFF_WEIGHTS: Record<DemonSkill, Partial<Record<CharacterId, number>>> = {
+  new: {
+    fool: 4,
+    minstrel: 4,
+    pacifist: 3,
+    grandmother: 3,
+    "tea-lady": 2,
+    sailor: 2,
+    courtier: 2,
+    professor: 2,
+    gossip: 1,
+    gambler: 1,
+    chambermaid: 1,
+    exorcist: 1,
+    innkeeper: 1,
+    tinker: 3,
+    moonchild: 2,
+    goon: 2,
+    lunatic: 1,
+  },
+  experienced: {
+    chambermaid: 4,
+    gambler: 4,
+    gossip: 4,
+    exorcist: 3,
+    innkeeper: 3,
+    courtier: 3,
+    sailor: 2,
+    grandmother: 2,
+    professor: 2,
+    "tea-lady": 2,
+    minstrel: 2,
+    pacifist: 2,
+    fool: 1,
+    tinker: 2,
+    moonchild: 2,
+    goon: 2,
+    lunatic: 1,
+  },
+};
+
+/**
  * Pick the three not-in-play good characters shown to the Demon as safe
  * bluffs. Aims for the rulebook's two-Townsfolk-plus-one-Outsider mix, then
  * layers Storyteller wisdom on top:
@@ -178,25 +230,37 @@ export function chooseDemonBluffs(
     charactersInPlay: CharacterId[];
     believedCharacter?: CharacterId;
     skill?: DemonSkill;
+    edition?: Edition;
   },
   rng: () => number = Math.random,
 ): CharacterId[] {
   const { charactersInPlay, believedCharacter, skill = "new" } = opts;
+  const edition = opts.edition ?? "trouble-brewing";
   const inPlay = new Set(charactersInPlay);
-  const weights = BLUFF_WEIGHTS[skill];
+  const weights = (edition === "bad-moon-rising" ? BMR_BLUFF_WEIGHTS : BLUFF_WEIGHTS)[skill];
   const weightOf = (id: CharacterId, factor = 1) => (weights[id] ?? 1) * factor;
 
-  const townsfolkPool = charactersOfType("townsfolk")
+  const townsfolkPool = charactersOfType("townsfolk", edition)
     .map((c) => c.id)
     .filter((id) => !inPlay.has(id) && id !== believedCharacter);
-  const outsiderPool = charactersOfType("outsider")
+  const outsiderPool = charactersOfType("outsider", edition)
     .map((c) => c.id)
     .filter((id) => !inPlay.has(id) && id !== "drunk");
 
   const outsidersInPlay = charactersInPlay.filter(
     (id) => CHARACTERS[id].type === "outsider",
   ).length;
-  const outsiderFactor = outsidersInPlay > 0 ? 1 : inPlay.has("librarian") ? 0 : 0.3;
+  // TB: a zero-Outsider game makes Outsider claims imply a Baron (and the
+  // Librarian would truthfully learn "zero" — a trap). BMR: the Godfather's
+  // ±1 keeps the Outsider count ambiguous, so the penalty is milder.
+  const outsiderFactor =
+    outsidersInPlay > 0
+      ? 1
+      : edition === "bad-moon-rising"
+        ? 0.5
+        : inPlay.has("librarian")
+          ? 0
+          : 0.3;
 
   const bluffs = [
     ...weightedDraw(townsfolkPool, (id) => weightOf(id), 2, rng),
@@ -219,16 +283,24 @@ export function chooseDemonBluffs(
  * at the table, and the draw is recorded afterwards via `setupFromDraws`.
  */
 export type BagSetup = {
-  /** The actual characters in play — includes "drunk" when dealt. */
+  edition: Edition;
+  /** The actual characters in play — includes "drunk"/"lunatic" when dealt. */
   charactersInPlay: CharacterId[];
   /**
    * The physical tokens for the bag: identical to `charactersInPlay` except
-   * the Drunk is replaced by their believed Townsfolk token. Whoever draws
-   * that token IS the Drunk — they never learn it.
+   * the TB Drunk is replaced by their believed Townsfolk token. Whoever draws
+   * that token IS the Drunk — they never learn it. In BMR the Lunatic and the
+   * Demon token both go in as-is, and the DRAWS are swapped: whoever draws
+   * the Demon token is secretly the Lunatic, and whoever draws the Lunatic
+   * token is the real Demon (they learn so on the first night).
    */
   bagTokens: CharacterId[];
-  /** Set when the Drunk is in play: the not-in-play Townsfolk token they drew. */
+  /** TB: set when the Drunk is in play — the not-in-play Townsfolk token they drew. */
   believedCharacter?: CharacterId;
+  /** BMR: set when the Lunatic is in play — the Demon they believe they are. */
+  lunaticDemon?: CharacterId;
+  /** BMR: the Godfather's setup swap that was applied. */
+  godfatherAdjustment?: 1 | -1;
   distribution: Distribution;
   /** Three not-in-play good characters to show the Demon as safe bluffs. */
   demonBluffs: CharacterId[];
@@ -236,37 +308,59 @@ export type BagSetup = {
 
 /**
  * Roll the bag composition for a player count (rulebook SETUP steps 6–8):
- * the right number of each type, the Baron's [+2 Outsiders] swap, the Drunk's
- * believed-Townsfolk stand-in token, and the Demon's three bluffs.
+ * the right number of each type, the edition's orange-flower adjustments
+ * (TB: Baron +2 Outsiders, Drunk stand-in token; BMR: Godfather ±1 Outsider,
+ * Lunatic/Demon draw swap), and the Demon's three bluffs.
  */
 export function dealBag(
   playerCount: number,
   rng: () => number = Math.random,
   demonSkill: DemonSkill = "new",
+  edition: Edition = "trouble-brewing",
 ): BagSetup {
   const dist = baseDistribution(playerCount);
-  const townsfolkPool = charactersOfType("townsfolk").map((c) => c.id);
-  const outsiderPool = charactersOfType("outsider").map((c) => c.id);
-  const minionPool = charactersOfType("minion").map((c) => c.id);
+  const townsfolkPool = charactersOfType("townsfolk", edition).map((c) => c.id);
+  const outsiderPool = charactersOfType("outsider", edition).map((c) => c.id);
+  const minionPool = charactersOfType("minion", edition).map((c) => c.id);
+  const demonPool = charactersOfType("demon", edition).map((c) => c.id);
 
   const minions = draw(minionPool, dist.minions, rng);
-  const finalDist = minions.includes("baron") ? baronAdjusted(dist) : dist;
+  let finalDist = minions.includes("baron") ? baronAdjusted(dist) : dist;
+  // The Godfather's [−1 or +1 Outsider], clamped to what the pools allow.
+  let godfatherAdjustment: 1 | -1 | undefined;
+  if (minions.includes("godfather")) {
+    const canAdd = finalDist.outsiders < outsiderPool.length && finalDist.townsfolk > 0;
+    const canRemove = finalDist.outsiders > 0;
+    godfatherAdjustment = canAdd && (!canRemove || rng() < 0.5) ? 1 : canRemove ? -1 : undefined;
+    if (godfatherAdjustment) {
+      finalDist = {
+        ...finalDist,
+        townsfolk: finalDist.townsfolk - godfatherAdjustment,
+        outsiders: finalDist.outsiders + godfatherAdjustment,
+      };
+    }
+  }
 
+  const demon = draw(demonPool, 1, rng)[0];
   const outsiders = draw(outsiderPool, finalDist.outsiders, rng);
   const townsfolk = draw(townsfolkPool, finalDist.townsfolk, rng);
-  const charactersInPlay = [...townsfolk, ...outsiders, ...minions, "imp" as CharacterId];
+  const charactersInPlay = [...townsfolk, ...outsiders, ...minions, demon];
 
   const notInPlayTownsfolk = townsfolkPool.filter((id) => !townsfolk.includes(id));
   const believed = outsiders.includes("drunk") ? draw(notInPlayTownsfolk, 1, rng)[0] : undefined;
   const bagTokens = charactersInPlay.map((id) => (id === "drunk" && believed ? believed : id));
+  const lunaticDemon = outsiders.includes("lunatic") ? demon : undefined;
 
   return {
+    edition,
     charactersInPlay,
     bagTokens,
     ...(believed !== undefined ? { believedCharacter: believed } : {}),
+    ...(lunaticDemon !== undefined ? { lunaticDemon } : {}),
+    ...(godfatherAdjustment !== undefined ? { godfatherAdjustment } : {}),
     distribution: finalDist,
     demonBluffs: chooseDemonBluffs(
-      { charactersInPlay, believedCharacter: believed, skill: demonSkill },
+      { charactersInPlay, believedCharacter: believed, skill: demonSkill, edition },
       rng,
     ),
   };
@@ -320,13 +414,33 @@ export function setupFromDraws(
       };
     }
     const token = r.token;
+    // TB: whoever drew the Drunk's believed-Townsfolk stand-in IS the Drunk.
     const isDrunk = bag.believedCharacter !== undefined && token === bag.believedCharacter;
-    return {
-      seat,
-      name: r.name,
-      character: isDrunk ? ("drunk" as CharacterId) : token,
-      ...(isDrunk ? { believedCharacter: bag.believedCharacter } : {}),
-    };
+    if (isDrunk) {
+      return {
+        seat,
+        name: r.name,
+        character: "drunk" as CharacterId,
+        believedCharacter: bag.believedCharacter,
+      };
+    }
+    // BMR: the Lunatic/Demon grimoire swap — whoever drew the Demon token is
+    // secretly the Lunatic (believing they're that Demon), and whoever drew
+    // the Lunatic token is the real Demon (they learn so on night one).
+    if (bag.lunaticDemon !== undefined) {
+      if (token === bag.lunaticDemon) {
+        return {
+          seat,
+          name: r.name,
+          character: "lunatic" as CharacterId,
+          believedCharacter: bag.lunaticDemon,
+        };
+      }
+      if (token === "lunatic") {
+        return { seat, name: r.name, character: bag.lunaticDemon };
+      }
+    }
+    return { seat, name: r.name, character: token };
   });
 
   const fortuneTellerInPlay = seats.some((s) => s.character === "fortune-teller");
@@ -337,6 +451,7 @@ export function setupFromDraws(
   const redHerringSeat = fortuneTellerInPlay ? draw(goodSeats, 1, rng)[0]?.seat : undefined;
 
   return {
+    edition: bag.edition ?? "trouble-brewing",
     seats,
     distribution: bag.distribution,
     demonBluffs: bag.demonBluffs,
@@ -349,8 +464,12 @@ export function setupFromDraws(
  * The companion's physical flow uses `dealBag` + `setupFromDraws` instead;
  * this remains for tests and any future fully-digital mode.
  */
-export function dealSetup(names: string[], rng: () => number = Math.random): GameSetup {
-  const bag = dealBag(names.length, rng);
+export function dealSetup(
+  names: string[],
+  rng: () => number = Math.random,
+  edition: Edition = "trouble-brewing",
+): GameSetup {
+  const bag = dealBag(names.length, rng, "new", edition);
   const tokens = shuffled(bag.bagTokens, rng);
   return setupFromDraws(
     names.map((name, i) => ({ name, token: tokens[i] })),

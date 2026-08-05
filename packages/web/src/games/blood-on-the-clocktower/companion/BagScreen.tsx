@@ -5,7 +5,7 @@ import type {
 import {
   CHARACTER_SHEET_ORDER,
   CHARACTERS,
-  TRAVELLERS,
+  travellersOf,
 } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import {
   chooseDemonBluffs,
@@ -38,6 +38,8 @@ export default function BagScreen({
   onBegin: () => void;
 }) {
   const { seats, bag, draws, storyteller } = draft;
+  const edition = draft.edition ?? "trouble-brewing";
+  const travellerPool = travellersOf(edition);
   const demonSkill = draft.demonSkill ?? "new";
   const { confirm, confirmDialog } = useConfirm();
   const fieldId = useId();
@@ -85,7 +87,7 @@ export default function BagScreen({
 
   function rollTraveller(seat: number) {
     const current = seats[seat].traveller?.character;
-    const pool = TRAVELLERS.filter((t) => t === current || !takenTravellers.has(t));
+    const pool = travellerPool.filter((t) => t === current || !takenTravellers.has(t));
     if (pool.length === 0) return;
     setTraveller(seat, { character: pool[Math.floor(Math.random() * pool.length)] });
   }
@@ -94,7 +96,7 @@ export default function BagScreen({
     // A fresh bag for the residents; traveller picks are independent and kept.
     onChange({
       ...draft,
-      bag: dealBag(residentCount, Math.random, demonSkill),
+      bag: dealBag(residentCount, Math.random, demonSkill, edition),
       draws: seats.map(() => null),
     });
   }
@@ -110,6 +112,7 @@ export default function BagScreen({
           charactersInPlay: bag.charactersInPlay,
           believedCharacter: bag.believedCharacter,
           skill,
+          edition,
         }),
       },
     });
@@ -162,6 +165,24 @@ export default function BagScreen({
               is their stand-in. Whoever draws it is secretly the Drunk and must never find out.
             </p>
           )}
+          {bag.lunaticDemon && (
+            <p>
+              <b>The Lunatic is in play</b> — both the {CHARACTERS[bag.lunaticDemon].name} and
+              Lunatic tokens go in the bag, and the roles are secretly SWAPPED: whoever draws the{" "}
+              {CHARACTERS[bag.lunaticDemon].name} token is really the Lunatic, and whoever draws the
+              Lunatic token is the real {CHARACTERS[bag.lunaticDemon].name} (they learn so on the
+              first night). Record who drew which token as drawn — the app does the swap.
+            </p>
+          )}
+          {bag.godfatherAdjustment !== undefined && (
+            <p>
+              Godfather in play:{" "}
+              {bag.godfatherAdjustment === 1
+                ? "one Townsfolk was swapped for an extra Outsider"
+                : "one Outsider was swapped for an extra Townsfolk"}
+              .
+            </p>
+          )}
           {baronInPlay && <p>Baron in play: two Townsfolk were swapped for two extra Outsiders.</p>}
           {seats.some((s) => s.traveller) && (
             <p className="text-purple-300">
@@ -209,6 +230,13 @@ export default function BagScreen({
           ongoing-info claims they can fabricate daily (Empath, Fortune Teller…). The Virgin and
           claims your game would expose are never offered. Toggling re-rolls them.
         </p>
+        {residentCount <= 6 && (
+          <p className="mt-2 text-xs font-semibold text-amber-200">
+            Teensyville ({residentCount} players): there is no Minion/Demon info step at night — the
+            Demon never learns these bluffs (nor who their Minion is). Keep them for your own
+            reference only.
+          </p>
+        )}
       </Panel>
 
       <Panel title="Record the draw" tone="night">
@@ -220,7 +248,7 @@ export default function BagScreen({
           {seats.map((seatEntry, seat) => {
             const { name, traveller } = seatEntry;
             if (traveller) {
-              const options = TRAVELLERS.filter(
+              const options = travellerPool.filter(
                 (t) => t === traveller.character || !takenTravellers.has(t),
               );
               return (
@@ -311,6 +339,12 @@ export default function BagScreen({
                     <option key={t} value={t}>
                       {CHARACTERS[t].name}
                       {t === bag.believedCharacter ? " (the Drunk)" : ""}
+                      {bag.lunaticDemon !== undefined && t === bag.lunaticDemon
+                        ? " (really the Lunatic)"
+                        : ""}
+                      {bag.lunaticDemon !== undefined && t === "lunatic"
+                        ? ` (really the ${CHARACTERS[bag.lunaticDemon].name})`
+                        : ""}
                     </option>
                   ))}
                 </Select>

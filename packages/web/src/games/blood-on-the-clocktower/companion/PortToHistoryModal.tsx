@@ -1,4 +1,7 @@
-import { CHARACTERS } from "@boardgames/core/games/blood-on-the-clocktower/characters";
+import {
+  CHARACTERS,
+  EDITION_NAME,
+} from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import type { CompanionState } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import { isEvilPlayer } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import type { MatchOutcomeTeams } from "@boardgames/core/history/types";
@@ -88,7 +91,7 @@ export default function PortToHistoryModal({
               },
             }
           : {}),
-        scenario: "Trouble Brewing",
+        scenario: EDITION_NAME[state.script],
       };
       return recordMatch({
         dateKey: nightKey,
@@ -114,7 +117,7 @@ export default function PortToHistoryModal({
             <b className={winner === "good" ? "text-sky-300" : "text-rose-300"}>
               {winner === "good" ? "Good" : "Evil"} won
             </b>{" "}
-            · Trouble Brewing ·{" "}
+            · {EDITION_NAME[state.script]} ·{" "}
             {nightKey ? "attached to tonight's game night" : "not attached to a game night"}. Match
             each player to their account:
           </p>

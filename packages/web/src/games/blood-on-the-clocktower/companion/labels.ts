@@ -22,14 +22,15 @@ export const TYPE_TEXT: Record<CharacterType, string> = {
 };
 
 /**
- * "Imp", "Drunk (thinks Monk)", or "Thief · evil" — the Storyteller-facing
- * character label (traveller alignments are ST-assigned and secret).
+ * "Imp", "Drunk (thinks Monk)", "Lunatic (thinks Zombuul)", "Apprentice
+ * (Assassin) · evil" — the Storyteller-facing character label (traveller and
+ * Goon alignments are ST-assigned and secret).
  */
 export function trueCharacterLabel(p: CompanionPlayer): string {
-  const base = CHARACTERS[p.character].name;
+  let base = CHARACTERS[p.character].name;
   if (p.believedCharacter) return `${base} (thinks ${CHARACTERS[p.believedCharacter].name})`;
-  if (CHARACTERS[p.character].type === "traveller" && p.alignment) {
-    return `${base} · ${p.alignment}`;
-  }
+  if (p.apprenticeAbility) base = `${base} (${CHARACTERS[p.apprenticeAbility].name})`;
+  const alignmentShown = CHARACTERS[p.character].type === "traveller" || p.character === "goon";
+  if (alignmentShown && p.alignment) return `${base} · ${p.alignment}`;
   return base;
 }

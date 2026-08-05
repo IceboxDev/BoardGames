@@ -1,11 +1,17 @@
-// Blood on the Clocktower — Trouble Brewing character data.
+// Blood on the Clocktower — Trouble Brewing & Bad Moon Rising character data.
 //
-// Source: the official Trouble Brewing character sheet (2021-10-27 Ben Finney
-// print, © Steven Medway / The Pandemonium Institute) and the boxed night
-// sheet. Only Trouble Brewing is implemented; the types leave room for other
-// editions later.
+// Source: the official character sheets (© Steven Medway / The Pandemonium
+// Institute) and the boxed night sheets (BMR night positions cross-checked
+// against the official script-tool night ordering).
 
 export type CharacterType = "townsfolk" | "outsider" | "minion" | "demon" | "traveller";
+
+export type Edition = "trouble-brewing" | "bad-moon-rising";
+
+export const EDITION_NAME: Record<Edition, string> = {
+  "trouble-brewing": "Trouble Brewing",
+  "bad-moon-rising": "Bad Moon Rising",
+};
 
 export type CharacterId =
   | "washerwoman"
@@ -34,7 +40,38 @@ export type CharacterId =
   | "gunslinger"
   | "beggar"
   | "bureaucrat"
-  | "thief";
+  | "thief"
+  // ── Bad Moon Rising ─────────────────────────────────────────────────
+  | "grandmother"
+  | "sailor"
+  | "chambermaid"
+  | "exorcist"
+  | "innkeeper"
+  | "gambler"
+  | "gossip"
+  | "courtier"
+  | "professor"
+  | "minstrel"
+  | "tea-lady"
+  | "pacifist"
+  | "fool"
+  | "goon"
+  | "lunatic"
+  | "tinker"
+  | "moonchild"
+  | "godfather"
+  | "devils-advocate"
+  | "assassin"
+  | "mastermind"
+  | "zombuul"
+  | "pukka"
+  | "shabaloth"
+  | "po"
+  | "apprentice"
+  | "matron"
+  | "voudon"
+  | "judge"
+  | "bishop";
 
 export type Character = {
   id: CharacterId;
@@ -270,6 +307,254 @@ export const CHARACTERS: Record<CharacterId, Character> = {
     otherNightsAction:
       "They point to a player (not themself): that player's vote counts NEGATIVELY tomorrow.",
   },
+  // ── Bad Moon Rising — Townsfolk ─────────────────────────────────────
+  grandmother: {
+    id: "grandmother",
+    name: "Grandmother",
+    type: "townsfolk",
+    ability:
+      "You start knowing a good player & their character. If the Demon kills them, you die too.",
+    firstNightAction: "Show the grandchild's character token, then point at the grandchild player.",
+  },
+  sailor: {
+    id: "sailor",
+    name: "Sailor",
+    type: "townsfolk",
+    ability:
+      "Each night, choose an alive player: either you or they are drunk until dusk. You can't die.",
+    firstNightAction:
+      "They point at an alive player. Either the Sailor or that player is drunk until dusk — your choice.",
+    otherNightsAction:
+      "They point at an alive player. Either the Sailor or that player is drunk until dusk — your choice.",
+  },
+  chambermaid: {
+    id: "chambermaid",
+    name: "Chambermaid",
+    type: "townsfolk",
+    ability:
+      "Each night, choose 2 alive players (not yourself): you learn how many woke tonight due to their ability.",
+    firstNightAction:
+      "They point at two alive players (not themself). Show fingers: how many woke tonight due to their ability.",
+    otherNightsAction:
+      "They point at two alive players (not themself). Show fingers: how many woke tonight due to their ability.",
+  },
+  exorcist: {
+    id: "exorcist",
+    name: "Exorcist",
+    type: "townsfolk",
+    ability:
+      "Each night*, choose a player (different to last night): the Demon, if chosen, learns who you are then doesn't wake tonight.",
+    otherNightsAction:
+      "They point at a player (different to last night). If it's the Demon: wake the Demon, show them the Exorcist, and the Demon doesn't act tonight.",
+  },
+  innkeeper: {
+    id: "innkeeper",
+    name: "Innkeeper",
+    type: "townsfolk",
+    ability: "Each night*, choose 2 players: they can't die tonight, but 1 is drunk until dusk.",
+    otherNightsAction:
+      "They point at two players. Both are safe from death tonight; one of them (your choice) is drunk until dusk.",
+  },
+  gambler: {
+    id: "gambler",
+    name: "Gambler",
+    type: "townsfolk",
+    ability: "Each night*, choose a player & guess their character: if you guess wrong, you die.",
+    otherNightsAction:
+      "They point at a player, then at a character on the sheet. If the guess is wrong, the Gambler dies. Never say whether it was right.",
+  },
+  gossip: {
+    id: "gossip",
+    name: "Gossip",
+    type: "townsfolk",
+    ability: "Each day, you may make a public statement. Tonight, if it was true, a player dies.",
+  },
+  courtier: {
+    id: "courtier",
+    name: "Courtier",
+    type: "townsfolk",
+    ability: "Once per game, at night, choose a character: they are drunk for 3 nights & 3 days.",
+    firstNightAction:
+      "They shake their head no, or point at a character on the sheet. If in play, that player is drunk for 3 nights & 3 days.",
+    otherNightsAction:
+      "They shake their head no, or point at a character on the sheet. If in play, that player is drunk for 3 nights & 3 days.",
+  },
+  professor: {
+    id: "professor",
+    name: "Professor",
+    type: "townsfolk",
+    ability:
+      "Once per game, at night*, choose a dead player: if they are a Townsfolk, they are resurrected.",
+    otherNightsAction:
+      "They shake their head no, or point at a dead player. If that player is a Townsfolk, they are resurrected.",
+  },
+  minstrel: {
+    id: "minstrel",
+    name: "Minstrel",
+    type: "townsfolk",
+    ability:
+      "When a Minion dies by execution, all other players (except Travellers) are drunk until dusk tomorrow.",
+  },
+  "tea-lady": {
+    id: "tea-lady",
+    name: "Tea Lady",
+    type: "townsfolk",
+    ability: "If both your alive neighbors are good, they can't die.",
+  },
+  pacifist: {
+    id: "pacifist",
+    name: "Pacifist",
+    type: "townsfolk",
+    ability: "Executed good players might not die.",
+  },
+  fool: {
+    id: "fool",
+    name: "Fool",
+    type: "townsfolk",
+    ability: "The 1st time you die, you don't.",
+  },
+  // ── Bad Moon Rising — Outsiders ─────────────────────────────────────
+  goon: {
+    id: "goon",
+    name: "Goon",
+    type: "outsider",
+    ability:
+      "Each night, the 1st player to choose you with their ability is drunk until dusk. You become their alignment.",
+  },
+  lunatic: {
+    id: "lunatic",
+    name: "Lunatic",
+    type: "outsider",
+    ability:
+      "You think you are a Demon, but you are not. The Demon knows who you are & who you choose at night.",
+    setup: "Swap the Lunatic and Demon tokens in the Grimoire after the draw.",
+  },
+  tinker: {
+    id: "tinker",
+    name: "Tinker",
+    type: "outsider",
+    ability: "You might die at any time.",
+  },
+  moonchild: {
+    id: "moonchild",
+    name: "Moonchild",
+    type: "outsider",
+    ability:
+      "When you learn that you died, publicly choose 1 alive player. Tonight, if it was a good player, they die.",
+  },
+  // ── Bad Moon Rising — Minions ───────────────────────────────────────
+  godfather: {
+    id: "godfather",
+    name: "Godfather",
+    type: "minion",
+    ability:
+      "You start knowing which Outsiders are in play. If 1 died today, choose a player tonight: they die. [−1 or +1 Outsider]",
+    setup: "[−1 or +1 Outsider] — one Outsider is swapped for a Townsfolk, or vice versa.",
+    firstNightAction: "Show the character tokens of all Outsiders in play.",
+    otherNightsAction: "An Outsider died today — they point at any player. That player dies.",
+  },
+  "devils-advocate": {
+    id: "devils-advocate",
+    name: "Devil's Advocate",
+    type: "minion",
+    ability:
+      "Each night, choose a living player (different to last night): if executed tomorrow, they don't die.",
+    firstNightAction:
+      "They point at a living player. If executed tomorrow, that player doesn't die.",
+    otherNightsAction:
+      "They point at a living player (different to last night). If executed tomorrow, that player doesn't die.",
+  },
+  assassin: {
+    id: "assassin",
+    name: "Assassin",
+    type: "minion",
+    ability:
+      "Once per game, at night*, choose a player: they die, even if for some reason they could not.",
+    otherNightsAction:
+      "They shake their head no, or point at a player. That player dies — no protection prevents it.",
+  },
+  mastermind: {
+    id: "mastermind",
+    name: "Mastermind",
+    type: "minion",
+    ability:
+      "If the Demon dies by execution (ending the game), play for 1 more day. If a player is then executed, their team loses.",
+  },
+  // ── Bad Moon Rising — Demons ────────────────────────────────────────
+  zombuul: {
+    id: "zombuul",
+    name: "Zombuul",
+    type: "demon",
+    ability:
+      "Each night*, if no-one died today, choose a player: they die. The 1st time you die, you live but register as dead.",
+    otherNightsAction: "Nobody died today — they point at a player. That player dies.",
+  },
+  pukka: {
+    id: "pukka",
+    name: "Pukka",
+    type: "demon",
+    ability:
+      "Each night, choose a player: they are poisoned. The previously poisoned player dies then becomes healthy.",
+    firstNightAction: "They point at a player. That player is poisoned.",
+    otherNightsAction:
+      "The previously poisoned player dies. Then they point at a player, who is poisoned.",
+  },
+  shabaloth: {
+    id: "shabaloth",
+    name: "Shabaloth",
+    type: "demon",
+    ability:
+      "Each night*, choose 2 players: they die. A dead player you chose last night might be regurgitated.",
+    otherNightsAction:
+      "You may first regurgitate one of last night's chosen players. Then they point at two players, one at a time: they die.",
+  },
+  po: {
+    id: "po",
+    name: "Po",
+    type: "demon",
+    ability:
+      "Each night*, you may choose a player: they die. If your last choice was no-one, choose 3 players tonight.",
+    otherNightsAction:
+      "They shake their head no (charging up), or point at a player: they die. If they charged last night, they point at THREE players.",
+  },
+  // ── Bad Moon Rising — Travellers ────────────────────────────────────
+  apprentice: {
+    id: "apprentice",
+    name: "Apprentice",
+    type: "traveller",
+    ability:
+      "On your 1st night, you gain a Townsfolk ability (if good) or a Minion ability (if evil).",
+    firstNightAction:
+      "Show YOU ARE, then a Townsfolk token (if good) or Minion token (if evil). They gain that ability.",
+  },
+  matron: {
+    id: "matron",
+    name: "Matron",
+    type: "traveller",
+    ability:
+      "Each day, you may choose up to 3 sets of 2 players to swap seats. Players may not leave their seats to talk in private.",
+  },
+  voudon: {
+    id: "voudon",
+    name: "Voudon",
+    type: "traveller",
+    ability:
+      "Only you & the dead can vote. They don't need a vote token to do so. A 50% majority isn't required.",
+  },
+  judge: {
+    id: "judge",
+    name: "Judge",
+    type: "traveller",
+    ability:
+      "Once per game, if another player nominated, you may choose to force the current execution to pass or fail.",
+  },
+  bishop: {
+    id: "bishop",
+    name: "Bishop",
+    type: "traveller",
+    ability:
+      "Only the Storyteller can nominate. At least 1 opposing player must be nominated each day.",
+  },
 };
 
 /** The five Trouble Brewing travellers, in sheet order. */
@@ -281,8 +566,21 @@ export const TRAVELLERS: readonly CharacterId[] = [
   "thief",
 ];
 
-/** Character sheet display order (as printed, by type). */
-export const CHARACTER_SHEET_ORDER: readonly CharacterId[] = [
+/** The five Bad Moon Rising travellers, in sheet order. */
+export const BMR_TRAVELLERS: readonly CharacterId[] = [
+  "apprentice",
+  "matron",
+  "voudon",
+  "judge",
+  "bishop",
+];
+
+export function travellersOf(edition: Edition): readonly CharacterId[] {
+  return edition === "bad-moon-rising" ? BMR_TRAVELLERS : TRAVELLERS;
+}
+
+/** Trouble Brewing sheet display order (as printed, by type). */
+export const TB_SHEET_ORDER: readonly CharacterId[] = [
   "washerwoman",
   "librarian",
   "investigator",
@@ -310,6 +608,54 @@ export const CHARACTER_SHEET_ORDER: readonly CharacterId[] = [
   "beggar",
   "bureaucrat",
   "thief",
+];
+
+/** Bad Moon Rising sheet display order (as printed, by type). */
+export const BMR_SHEET_ORDER: readonly CharacterId[] = [
+  "grandmother",
+  "sailor",
+  "chambermaid",
+  "exorcist",
+  "innkeeper",
+  "gambler",
+  "gossip",
+  "courtier",
+  "professor",
+  "minstrel",
+  "tea-lady",
+  "pacifist",
+  "fool",
+  "goon",
+  "lunatic",
+  "tinker",
+  "moonchild",
+  "godfather",
+  "devils-advocate",
+  "assassin",
+  "mastermind",
+  "zombuul",
+  "pukka",
+  "shabaloth",
+  "po",
+  "apprentice",
+  "matron",
+  "voudon",
+  "judge",
+  "bishop",
+];
+
+export function sheetOrderOf(edition: Edition): readonly CharacterId[] {
+  return edition === "bad-moon-rising" ? BMR_SHEET_ORDER : TB_SHEET_ORDER;
+}
+
+export function editionOf(id: CharacterId): Edition {
+  return BMR_SHEET_ORDER.includes(id) ? "bad-moon-rising" : "trouble-brewing";
+}
+
+/** All characters across editions, TB first — stable global display order. */
+export const CHARACTER_SHEET_ORDER: readonly CharacterId[] = [
+  ...TB_SHEET_ORDER,
+  ...BMR_SHEET_ORDER,
 ];
 
 /**
@@ -345,10 +691,55 @@ export const OTHER_NIGHTS_ORDER: readonly CharacterId[] = [
   "spy",
 ];
 
+/**
+ * Bad Moon Rising, FIRST NIGHT (official night-sheet ordering). The Lunatic's
+ * fake demon info sits between MINION INFO and DEMON INFO and is inserted by
+ * the night queue; the Apprentice's "gain an ability" step goes first when
+ * one is seated.
+ */
+export const BMR_FIRST_NIGHT_ORDER: readonly CharacterId[] = [
+  "sailor",
+  "courtier",
+  "godfather",
+  "devils-advocate",
+  "pukka",
+  "grandmother",
+  "chambermaid",
+];
+
+/**
+ * Bad Moon Rising, OTHER NIGHTS (official night-sheet ordering). Gossip,
+ * Tinker, Moonchild and Grandmother don't wake — they are Storyteller
+ * kill-reminders resolved at these positions by the night queue. The four
+ * Demons occupy consecutive slots; only the one in play gets a step.
+ */
+export const BMR_OTHER_NIGHTS_ORDER: readonly CharacterId[] = [
+  "sailor",
+  "courtier",
+  "innkeeper",
+  "gambler",
+  "devils-advocate",
+  "lunatic",
+  "exorcist",
+  "zombuul",
+  "pukka",
+  "shabaloth",
+  "po",
+  "assassin",
+  "godfather",
+  "gossip",
+  "professor",
+  "tinker",
+  "moonchild",
+  "grandmother",
+  "chambermaid",
+];
+
 export function isEvil(type: CharacterType): boolean {
   return type === "minion" || type === "demon";
 }
 
-export function charactersOfType(type: CharacterType): Character[] {
-  return CHARACTER_SHEET_ORDER.map((id) => CHARACTERS[id]).filter((c) => c.type === type);
+export function charactersOfType(type: CharacterType, edition?: Edition): Character[] {
+  const order = edition ? sheetOrderOf(edition) : CHARACTER_SHEET_ORDER;
+  return order.map((id) => CHARACTERS[id]).filter((c) => c.type === type);
 }

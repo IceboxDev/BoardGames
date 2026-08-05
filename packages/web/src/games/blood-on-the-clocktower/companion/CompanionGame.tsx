@@ -1,6 +1,7 @@
 import { CHARACTERS } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import type { CompanionState } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import {
+  beginMastermindDay,
   changeCharacter,
   endGame,
   nameAt,
@@ -139,6 +140,26 @@ export default function CompanionGame({
                   onClick={() => update((s) => changeCharacter(s, p.seat, "imp"))}
                 >
                   She becomes the Imp
+                </Button>
+                <Button
+                  variant="secondary"
+                  block
+                  onClick={() => update((s) => endGame(s, "good", "the Demon is dead"))}
+                >
+                  Good wins anyway
+                </Button>
+              </div>
+            </div>
+          ) : p.kind === "mastermind" ? (
+            <div className="flex flex-col gap-2">
+              <p className="text-sm text-fg-primary">
+                The Demon died by execution — but <b>{nameAt(state, p.seat)}</b> is the sober
+                Mastermind. Say NOTHING: the game secretly continues for one more day. If a good
+                player is then executed, evil wins; if an evil player (or nobody) is, good wins.
+              </p>
+              <div className="flex flex-col gap-2 sm:flex-row">
+                <Button variant="danger" block onClick={() => update(beginMastermindDay)}>
+                  Play one more day (Mastermind)
                 </Button>
                 <Button
                   variant="secondary"

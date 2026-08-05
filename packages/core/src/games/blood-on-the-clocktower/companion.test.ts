@@ -332,6 +332,40 @@ describe("win prompts", () => {
     expect(state.pendingImpInfo).toBe(1);
   });
 
+  it("scarlet woman takes over at exactly 5 alive just before the demon dies", () => {
+    const setup = sevenPlayerSetup();
+    setup.seats[1] = { seat: 1, name: "Bob", character: "scarlet-woman" };
+    let state = beginNight(createGame(setup));
+    state = dawn(state);
+    // Down to 5 alive, then the Imp is executed (4 left after the death).
+    state = kill(state, 2, "storyteller");
+    state = kill(state, 3, "storyteller");
+    state = kill(state, 0, "execution");
+    expect(winPrompts(state)).toEqual([{ kind: "scarlet-woman", seat: 1 }]);
+  });
+
+  it("no takeover with only 4 alive before the demon dies", () => {
+    const setup = sevenPlayerSetup();
+    setup.seats[1] = { seat: 1, name: "Bob", character: "scarlet-woman" };
+    let state = beginNight(createGame(setup));
+    state = dawn(state);
+    state = kill(state, 2, "storyteller");
+    state = kill(state, 3, "storyteller");
+    state = kill(state, 4, "storyteller");
+    state = kill(state, 0, "execution");
+    expect(winPrompts(state)).toEqual([{ kind: "good-wins", reason: "the Demon is dead" }]);
+  });
+
+  it("a poisoned scarlet woman cannot take over", () => {
+    const setup = sevenPlayerSetup();
+    setup.seats[1] = { seat: 1, name: "Bob", character: "scarlet-woman" };
+    let state = beginNight(createGame(setup));
+    state = setPoison(state, 1);
+    state = dawn(state);
+    state = kill(state, 0, "execution");
+    expect(winPrompts(state)).toEqual([{ kind: "good-wins", reason: "the Demon is dead" }]);
+  });
+
   it("evil wins at two players alive", () => {
     let state = freshGame();
     state = dawn(state);
@@ -346,6 +380,43 @@ describe("win prompts", () => {
     expect(saintExecuted(state, 6)).toBe(true);
     state = setPoison(state, 6);
     expect(saintExecuted(state, 6)).toBe(false);
+  });
+});
+
+describe("ability-linked effects end with their source", () => {
+  it("poison ends immediately when the poisoner dies", () => {
+    let state = freshGame();
+    state = setPoison(state, 4);
+    expect(state.players[4].poisoned).toBe(true);
+    state = kill(state, 1, "storyteller"); // Bob the Poisoner
+    expect(state.players[4].poisoned).toBe(false);
+  });
+
+  it("poison ends when the poisoner becomes the imp (star pass)", () => {
+    let state = freshGame();
+    state = setPoison(state, 4);
+    state = changeCharacter(state, 1, "imp");
+    expect(state.players[4].poisoned).toBe(false);
+  });
+
+  it("monk protection ends when the monk dies", () => {
+    let state = freshGame();
+    state = dawn(state);
+    state = endDay(state); // night 2
+    state = setMonkProtection(state, 3);
+    expect(state.players[3].protectedTonight).toBe(true);
+    state = kill(state, 4, "demon"); // Eve the Monk
+    expect(state.players[3].protectedTonight).toBe(false);
+  });
+
+  it("first-night pair suggestion never points the learner at themself", () => {
+    const state = freshGame();
+    for (let i = 0; i < 50; i++) {
+      const s = firstNightPairSuggestion(state, 2, "townsfolk");
+      expect(s).toBeDefined();
+      expect(s?.realSeat).not.toBe(2);
+      expect(s?.decoySeat).not.toBe(2);
+    }
   });
 });
 

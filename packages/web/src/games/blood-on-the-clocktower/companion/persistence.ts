@@ -2,7 +2,10 @@
 // CompanionState is JSON-serializable by design (see core companion.ts), so a
 // running game survives refreshes, phone locks, and accidental navigation.
 
-import type { CharacterId } from "@boardgames/core/games/blood-on-the-clocktower/characters";
+import type {
+  CharacterId,
+  Edition,
+} from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import type { CompanionState } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import type { BagSetup, DemonSkill } from "@boardgames/core/games/blood-on-the-clocktower/setup";
 
@@ -25,6 +28,8 @@ export type BagDraftSeat = {
  * nothing.
  */
 export type BagDraft = {
+  /** Which edition is being played (absent in pre-BMR drafts = Trouble Brewing). */
+  edition?: Edition;
   seats: BagDraftSeat[];
   storyteller?: string;
   bag: BagSetup;
