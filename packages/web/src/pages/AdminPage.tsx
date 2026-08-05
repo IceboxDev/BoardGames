@@ -203,9 +203,13 @@ export default function AdminPage() {
           members={users}
           onChanged={() => {
             void queryClient.invalidateQueries({ queryKey: qk.adminUsers() });
-            // A merge rewrites match outcomes — refresh everything derived.
+            // A merge rewrites match outcomes — refresh everything derived,
+            // including every cached profile (stats + match lists live under
+            // the ["profile", …] prefix and are otherwise fresh for 5 min,
+            // which made a just-merged member's profile look empty).
             void queryClient.invalidateQueries({ queryKey: qk.history() });
             void queryClient.invalidateQueries({ queryKey: qk.players() });
+            void queryClient.invalidateQueries({ queryKey: ["profile"] });
           }}
         />
 
