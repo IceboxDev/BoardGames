@@ -95,6 +95,7 @@ describe("PublicProfileSchema", () => {
         performance: 0.75,
         moderated: 0,
         ongoing: 0,
+        scored: 0,
         gamesOwned: 1,
         distinctGames: 2,
         nightsAttended: 4,

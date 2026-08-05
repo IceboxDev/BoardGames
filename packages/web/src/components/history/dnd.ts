@@ -14,11 +14,20 @@ export function isDndSlug(slug: string | null | undefined): boolean {
   return slug === DND_SLUG;
 }
 
-/** The three-state resolution of a session, derived from the coop `outcome`. */
-export type DndResolution = "ongoing" | "win" | "loss";
+/**
+ * The resolution of a session. "campaign-win"/"campaign-loss" mark a session
+ * that carried no result itself but whose campaign has since concluded
+ * (`campaignResult` back-filled) — no longer ongoing, yet not a session
+ * win/loss of its own.
+ */
+export type DndResolution = "ongoing" | "win" | "loss" | "campaign-win" | "campaign-loss";
 
 export function resolutionOf(outcome: MatchOutcomeCoop): DndResolution {
-  return outcome.outcome ?? "ongoing";
+  if (outcome.outcome) return outcome.outcome;
+  if (outcome.campaignResult) {
+    return outcome.campaignResult === "win" ? "campaign-win" : "campaign-loss";
+  }
+  return "ongoing";
 }
 
 export type DndCondition = NonNullable<MatchOutcomeCoop["participants"][number]["condition"]>;

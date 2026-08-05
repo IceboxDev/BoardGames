@@ -150,6 +150,34 @@ async function fetchAndShape(id: number): Promise<MatchRecord | null> {
   return rowToMatchRecord(parsed, nameById);
 }
 
+/**
+ * A coop session recorded WITH an `outcome` concludes its campaign: stamp
+ * `campaignResult` onto every earlier unresolved session of the same
+ * (game, campaign), so those sittings stop reading "Ongoing" on every surface
+ * while the campaign's single win/loss stays on this concluding session.
+ * Fire-and-forget mirror of the activity log — a failed back-fill must not
+ * fail the record call.
+ */
+function resolveCampaignSessions(
+  gameSlug: string | null,
+  outcome: { kind: string; campaign?: string; outcome?: "win" | "loss" },
+): void {
+  if (!gameSlug || outcome.kind !== "coop" || !outcome.campaign || !outcome.outcome) return;
+  getDb()
+    .execute({
+      sql: `UPDATE match_results
+            SET outcome_json = json_set(outcome_json, '$.campaignResult', ?)
+            WHERE game_slug = ?
+              AND json_extract(outcome_json, '$.kind') = 'coop'
+              AND json_extract(outcome_json, '$.campaign') = ?
+              AND json_extract(outcome_json, '$.outcome') IS NULL`,
+      args: [outcome.outcome, gameSlug, outcome.campaign],
+    })
+    .catch((err) => {
+      console.error(`[history] campaignResult back-fill failed for ${gameSlug}:`, err);
+    });
+}
+
 adminMatchHistoryRoutes.post("/", async (c) => {
   const body = await c.req.json().catch(() => null);
   const parsed = parseInput(body);
@@ -230,6 +258,7 @@ adminMatchHistoryRoutes.post("/", async (c) => {
     gameTitle,
     ...(dateKey ? { date: dateKey } : {}),
   });
+  resolveCampaignSessions(gameSlug, outcome);
   const record = await fetchAndShape(insertedId);
   return c.json(record);
 });
@@ -289,6 +318,7 @@ adminMatchHistoryRoutes.patch("/:id{[0-9]+}", async (c) => {
     "write",
   );
   if (result.rowsAffected === 0) return c.json({ error: "not found" }, 404);
+  resolveCampaignSessions(gameSlug, outcome);
   const record = await fetchAndShape(id);
   return c.json(record);
 });

@@ -118,6 +118,26 @@ describe("MatchOutcomeSchema", () => {
     }
   });
 
+  it("accepts an unresolved session stamped with its campaign's eventual result", () => {
+    const parsed = MatchOutcomeSchema.parse({
+      kind: "coop",
+      campaign: "Curse of Strahd",
+      campaignResult: "win",
+      participants: [sampleParticipant("u1", "Alice")],
+    });
+    expect(parsed.kind === "coop" && parsed.campaignResult).toBe("win");
+  });
+
+  it("rejects an invalid campaignResult value", () => {
+    const result = MatchOutcomeSchema.safeParse({
+      kind: "coop",
+      campaign: "Curse of Strahd",
+      campaignResult: "draw",
+      participants: [sampleParticipant("u1", "Alice")],
+    });
+    expect(result.success).toBe(false);
+  });
+
   it("accepts a RESOLVED D&D session with a campaign and a win", () => {
     const parsed = MatchOutcomeSchema.parse({
       kind: "coop",

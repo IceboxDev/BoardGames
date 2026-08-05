@@ -32,14 +32,14 @@ function formatPercent(value: number | null): string {
 
 // Raw W/L split under the (placement-weighted) win-rate headline. Non-W/L
 // plays are named for what they are — moderated (Storyteller / DM), ongoing
-// (unresolved campaign session), scored (Just One-style co-op) — instead of
-// the old catch-all "N/A". The parts still sum to gamesPlayed.
+// (campaign still open), scored (Just One-style co-op) — all explicit server
+// counts, never a remainder. Sessions of a concluded campaign appear in no
+// bucket: the campaign's single win/loss sits on its concluding session.
 function winLossSub(stats: ProfileStats): string {
-  const scored = stats.gamesPlayed - stats.wins - stats.losses - stats.moderated - stats.ongoing;
   const parts = [`${stats.wins}W`, `${stats.losses}L`];
   if (stats.moderated > 0) parts.push(`${stats.moderated} ran`);
   if (stats.ongoing > 0) parts.push(`${stats.ongoing} ongoing`);
-  if (scored > 0) parts.push(`${scored} scored`);
+  if (stats.scored > 0) parts.push(`${stats.scored} scored`);
   return parts.join(" · ");
 }
 

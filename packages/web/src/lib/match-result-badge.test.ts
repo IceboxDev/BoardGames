@@ -100,17 +100,28 @@ describe("matchResultBadge — binary co-op + absent player", () => {
 });
 
 describe("matchResultBadge — D&D campaign sessions", () => {
-  const session = (outcome?: "win" | "loss"): MatchOutcome => ({
+  const session = (outcome?: "win" | "loss", campaignResult?: "win" | "loss"): MatchOutcome => ({
     kind: "coop",
     participants: [{ userId: "a", displayName: "A" }],
     moderator: { userId: "dm", displayName: "DM" },
     campaign: "The Wound of the Forest",
     ...(outcome ? { outcome } : {}),
+    ...(campaignResult ? { campaignResult } : {}),
   });
   it("unresolved session → Ongoing (sky), never Lost", () => {
     expect(matchResultBadge(session(), "a", "dungeons-and-dragons")).toEqual({
       label: "Ongoing",
       tone: "sky",
+    });
+  });
+  it("session of a since-concluded campaign → Campaign won/lost, not Ongoing", () => {
+    expect(matchResultBadge(session(undefined, "win"), "a", "dungeons-and-dragons")).toEqual({
+      label: "Campaign won",
+      tone: "emerald",
+    });
+    expect(matchResultBadge(session(undefined, "loss"), "a", "dungeons-and-dragons")).toEqual({
+      label: "Campaign lost",
+      tone: "rose",
     });
   });
   it("the DM → Ran it, regardless of the session's outcome", () => {

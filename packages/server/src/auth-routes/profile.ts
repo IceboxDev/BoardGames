@@ -344,6 +344,7 @@ profileRoutes.get("/:userId", async (c) => {
   // campaign session that simply has no result yet.
   let moderated = 0;
   let ongoing = 0;
+  let scored = 0;
   // Scheme-A performance: placement-weighted credit averaged over competitive
   // matches (moderator + scored co-ops excluded — they return null).
   let perfSum = 0;
@@ -372,13 +373,22 @@ profileRoutes.get("/:userId", async (c) => {
       perfSum += credit;
       perfCount += 1;
     }
-    // "played" with no score = an unresolved campaign session; "played" WITH a
-    // score is a scored co-op (Just One), tracked separately below.
+    // "played" splits three ways: a scored co-op (Just One), an unresolved
+    // campaign session that's still genuinely open, or a session whose
+    // campaign has since concluded (`campaignResult` back-filled) — the last
+    // contributes to no bucket at all: the campaign's single win/loss already
+    // lives on the concluding session, and it isn't ongoing either.
     const o = r.outcome_json;
-    const isOngoing = result === "played" && o.kind === "coop" && o.score === undefined;
+    const isScoredCoop = result === "played" && o.kind === "coop" && o.score !== undefined;
+    const isOngoing =
+      result === "played" &&
+      o.kind === "coop" &&
+      o.score === undefined &&
+      o.campaignResult === undefined;
     if (result === "win") wins += 1;
     else if (result === "loss") losses += 1;
     else if (result === "moderator") moderated += 1;
+    else if (isScoredCoop) scored += 1;
     else if (isOngoing) ongoing += 1;
     if (r.game_slug) {
       distinctSlugs.add(r.game_slug);
@@ -465,6 +475,7 @@ profileRoutes.get("/:userId", async (c) => {
     performance: perfCount > 0 ? perfSum / perfCount : null,
     moderated,
     ongoing,
+    scored,
     gamesOwned: library.length,
     distinctGames: distinctSlugs.size,
     nightsAttended,

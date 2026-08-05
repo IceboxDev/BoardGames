@@ -140,6 +140,13 @@ const MatchOutcomeCoopSchema = z.object({
   // concludes, the final session is recorded with `outcome` win/loss. The
   // refinement below accepts `campaign` in lieu of an outcome/score.
   campaign: z.string().min(1).max(120).optional(),
+  // How this session's CAMPAIGN eventually ended, back-filled onto unresolved
+  // sessions once a later session of the same campaign records an `outcome`
+  // (see admin-match-history's resolveCampaignSessions + migration 0024). Keeps
+  // an early sitting from reading "Ongoing" forever after the story concluded,
+  // without double-counting the campaign's single win/loss (which stays on the
+  // concluding session's `outcome`). Only meaningful when `outcome` is absent.
+  campaignResult: z.enum(["win", "loss"]).optional(),
   // D&D Dungeon Master — the non-competing player who runs the game, exactly
   // like Blood on the Clocktower's Storyteller (`moderator` on `teams`). NOT one
   // of the `participants`, so the party count excludes them. Reuses the same

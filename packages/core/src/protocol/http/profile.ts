@@ -112,8 +112,14 @@ export const ProfileStatsSchema = z.object({
   performance: z.number().min(0).max(1).nullable(),
   /** Plays in the non-competing moderator slot (Storyteller, D&D DM). */
   moderated: z.number().int().nonnegative(),
-  /** Unresolved campaign sessions (D&D "continues next time") — no result yet. */
+  /**
+   * Campaign sessions still awaiting a result. Sessions of a campaign that has
+   * SINCE concluded (`campaignResult` back-filled) count in no bucket — the
+   * campaign's single win/loss lives on its concluding session.
+   */
   ongoing: z.number().int().nonnegative(),
+  /** Scored-coop plays (Just One) — a team score, no win/loss. */
+  scored: z.number().int().nonnegative(),
   gamesOwned: z.number().int().nonnegative(),
   distinctGames: z.number().int().nonnegative(),
   /** Organized (locked) past nights the user RSVP'd yes to. */
