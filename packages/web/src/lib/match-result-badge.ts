@@ -82,6 +82,8 @@ export function matchResultBadge(
     case "free-for-all":
       return freeForAllBadge(outcome, userId, gameSlug);
     case "coop": {
+      // The D&D DM mirrors the teams moderator: present, but not competing.
+      if (outcome.moderator?.userId === userId) return { label: "Ran it", tone: "neutral" };
       if (!outcome.participants.some((p) => p.userId === userId)) return null;
       if (outcome.score !== undefined) {
         const max = coopMaxScoreForSlug(gameSlug);
@@ -90,6 +92,9 @@ export function matchResultBadge(
         const label = max !== undefined ? `${outcome.score} / ${max}` : String(outcome.score);
         return { label, tone: perfect ? "emerald" : "amber" };
       }
+      // No outcome and no score = an unresolved campaign session ("continues
+      // next time") — NOT a loss. Mirrors DndInline's "Ongoing" treatment.
+      if (outcome.outcome === undefined) return { label: "Ongoing", tone: "sky" };
       return outcome.outcome === "win"
         ? { label: "Won", tone: "emerald" }
         : { label: "Lost", tone: "rose" };

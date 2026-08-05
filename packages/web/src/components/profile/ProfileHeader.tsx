@@ -30,12 +30,17 @@ function formatPercent(value: number | null): string {
   return value === null ? "—" : `${Math.round(value * 100)}%`;
 }
 
-// Raw W/L split under the (placement-weighted) win-rate headline. "N/A" covers
-// games that are neither a win nor a loss — moderator slots and scored co-ops
-// (Just One) — so the three numbers always sum to gamesPlayed.
+// Raw W/L split under the (placement-weighted) win-rate headline. Non-W/L
+// plays are named for what they are — moderated (Storyteller / DM), ongoing
+// (unresolved campaign session), scored (Just One-style co-op) — instead of
+// the old catch-all "N/A". The parts still sum to gamesPlayed.
 function winLossSub(stats: ProfileStats): string {
-  const na = stats.gamesPlayed - stats.wins - stats.losses;
-  return `${stats.wins}W · ${stats.losses}L${na > 0 ? ` · ${na} N/A` : ""}`;
+  const scored = stats.gamesPlayed - stats.wins - stats.losses - stats.moderated - stats.ongoing;
+  const parts = [`${stats.wins}W`, `${stats.losses}L`];
+  if (stats.moderated > 0) parts.push(`${stats.moderated} ran`);
+  if (stats.ongoing > 0) parts.push(`${stats.ongoing} ongoing`);
+  if (scored > 0) parts.push(`${scored} scored`);
+  return parts.join(" · ");
 }
 
 export function ProfileHeader({

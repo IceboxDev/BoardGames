@@ -338,6 +338,12 @@ profileRoutes.get("/:userId", async (c) => {
   });
   let wins = 0;
   let losses = 0;
+  // Non-W/L plays, counted explicitly so the client never has to infer them
+  // from a remainder (which used to mislabel an unresolved D&D session as
+  // "moderated"): the moderator slot (Storyteller / DM) vs an unresolved
+  // campaign session that simply has no result yet.
+  let moderated = 0;
+  let ongoing = 0;
   // Scheme-A performance: placement-weighted credit averaged over competitive
   // matches (moderator + scored co-ops excluded — they return null).
   let perfSum = 0;
@@ -348,6 +354,8 @@ profileRoutes.get("/:userId", async (c) => {
     plays: number;
     wins: number;
     losses: number;
+    moderated: number;
+    ongoing: number;
     perfSum: number;
     perfCount: number;
     coopSum: number;
@@ -364,8 +372,14 @@ profileRoutes.get("/:userId", async (c) => {
       perfSum += credit;
       perfCount += 1;
     }
+    // "played" with no score = an unresolved campaign session; "played" WITH a
+    // score is a scored co-op (Just One), tracked separately below.
+    const o = r.outcome_json;
+    const isOngoing = result === "played" && o.kind === "coop" && o.score === undefined;
     if (result === "win") wins += 1;
     else if (result === "loss") losses += 1;
+    else if (result === "moderator") moderated += 1;
+    else if (isOngoing) ongoing += 1;
     if (r.game_slug) {
       distinctSlugs.add(r.game_slug);
       let agg = playsBySlug.get(r.game_slug);
@@ -375,6 +389,8 @@ profileRoutes.get("/:userId", async (c) => {
           plays: 0,
           wins: 0,
           losses: 0,
+          moderated: 0,
+          ongoing: 0,
           perfSum: 0,
           perfCount: 0,
           coopSum: 0,
@@ -385,13 +401,14 @@ profileRoutes.get("/:userId", async (c) => {
       agg.plays += 1;
       if (result === "win") agg.wins += 1;
       else if (result === "loss") agg.losses += 1;
+      else if (result === "moderator") agg.moderated += 1;
+      else if (isOngoing) agg.ongoing += 1;
       if (credit !== null) {
         agg.perfSum += credit;
         agg.perfCount += 1;
       }
       // Scored co-op (Just One): banks a team score with no win/loss. Tracked
       // separately so the panel shows "avg x / max" instead of a 0W record.
-      const o = r.outcome_json;
       if (o.kind === "coop" && o.outcome === undefined && o.score !== undefined) {
         agg.coopSum += o.score;
         agg.coopCount += 1;
@@ -407,6 +424,8 @@ profileRoutes.get("/:userId", async (c) => {
       plays: a.plays,
       wins: a.wins,
       losses: a.losses,
+      moderated: a.moderated,
+      ongoing: a.ongoing,
       performance: a.perfCount > 0 ? a.perfSum / a.perfCount : null,
       coopScoreAvg: a.coopCount > 0 ? a.coopSum / a.coopCount : null,
       coopPlays: a.coopCount,
@@ -444,6 +463,8 @@ profileRoutes.get("/:userId", async (c) => {
     losses,
     winRate: wins + losses > 0 ? wins / (wins + losses) : null,
     performance: perfCount > 0 ? perfSum / perfCount : null,
+    moderated,
+    ongoing,
     gamesOwned: library.length,
     distinctGames: distinctSlugs.size,
     nightsAttended,

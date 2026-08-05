@@ -88,6 +88,10 @@ export const ProfilePerGameStatSchema = z.object({
   coopScoreAvg: z.number().nonnegative().nullable(),
   /** Number of scored-coop plays (the denominator behind `coopScoreAvg`). */
   coopPlays: z.number().int().nonnegative(),
+  /** Plays in the non-competing moderator slot (Storyteller, D&D DM). */
+  moderated: z.number().int().nonnegative(),
+  /** Unresolved campaign sessions (D&D "continues next time") — no result yet. */
+  ongoing: z.number().int().nonnegative(),
 });
 export type ProfilePerGameStat = z.infer<typeof ProfilePerGameStatSchema>;
 
@@ -106,6 +110,10 @@ export const ProfileStatsSchema = z.object({
    * results.
    */
   performance: z.number().min(0).max(1).nullable(),
+  /** Plays in the non-competing moderator slot (Storyteller, D&D DM). */
+  moderated: z.number().int().nonnegative(),
+  /** Unresolved campaign sessions (D&D "continues next time") — no result yet. */
+  ongoing: z.number().int().nonnegative(),
   gamesOwned: z.number().int().nonnegative(),
   distinctGames: z.number().int().nonnegative(),
   /** Organized (locked) past nights the user RSVP'd yes to. */

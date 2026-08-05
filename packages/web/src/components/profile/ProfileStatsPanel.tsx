@@ -49,7 +49,10 @@ export function ProfileStatsPanel({ stats }: { stats: ProfileStats }) {
         const game = resolveGame(row.slug);
         const max = coopMaxScoreForSlug(row.slug);
         const isCoop = row.coopScoreAvg !== null;
-        const ran = row.plays - row.wins - row.losses - row.coopPlays;
+        // Explicit server-side counts — never inferred from a plays remainder,
+        // which used to mislabel unresolved campaign sessions as "ran".
+        const ran = row.moderated;
+        const ongoing = row.ongoing;
         return (
           <li key={row.slug}>
             <div className="mb-1 flex items-baseline justify-between gap-2 text-xs">
@@ -73,10 +76,13 @@ export function ProfileStatsPanel({ stats }: { stats: ProfileStats }) {
                     <span className="font-bold text-fg-primary">{Math.round(perf * 100)}%</span>{" "}
                     <span className="text-fg-muted">
                       {row.wins}W·{row.losses}L{ran > 0 ? ` · ${ran} ran` : ""}
+                      {ongoing > 0 ? ` · ${ongoing} ongoing` : ""}
                     </span>
                   </>
                 ) : (
-                  <span className="text-fg-muted">{ran > 0 ? `ran ${ran}×` : "—"}</span>
+                  <span className="text-fg-muted">
+                    {ran > 0 ? `ran ${ran}×` : ongoing > 0 ? `${ongoing} ongoing` : "—"}
+                  </span>
                 )}
               </span>
             </div>

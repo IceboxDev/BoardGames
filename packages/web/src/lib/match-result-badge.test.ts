@@ -99,6 +99,42 @@ describe("matchResultBadge — binary co-op + absent player", () => {
   });
 });
 
+describe("matchResultBadge — D&D campaign sessions", () => {
+  const session = (outcome?: "win" | "loss"): MatchOutcome => ({
+    kind: "coop",
+    participants: [{ userId: "a", displayName: "A" }],
+    moderator: { userId: "dm", displayName: "DM" },
+    campaign: "The Wound of the Forest",
+    ...(outcome ? { outcome } : {}),
+  });
+  it("unresolved session → Ongoing (sky), never Lost", () => {
+    expect(matchResultBadge(session(), "a", "dungeons-and-dragons")).toEqual({
+      label: "Ongoing",
+      tone: "sky",
+    });
+  });
+  it("the DM → Ran it, regardless of the session's outcome", () => {
+    expect(matchResultBadge(session(), "dm", "dungeons-and-dragons")).toEqual({
+      label: "Ran it",
+      tone: "neutral",
+    });
+    expect(matchResultBadge(session("win"), "dm", "dungeons-and-dragons")).toEqual({
+      label: "Ran it",
+      tone: "neutral",
+    });
+  });
+  it("a resolved session still reads Won/Lost for players", () => {
+    expect(matchResultBadge(session("win"), "a", "dungeons-and-dragons")).toEqual({
+      label: "Won",
+      tone: "emerald",
+    });
+    expect(matchResultBadge(session("loss"), "a", "dungeons-and-dragons")).toEqual({
+      label: "Lost",
+      tone: "rose",
+    });
+  });
+});
+
 describe("matchResultBadge — last-standing with survivorRanks (poker)", () => {
   const lsp = (
     userId: string,
