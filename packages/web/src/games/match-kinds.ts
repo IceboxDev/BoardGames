@@ -49,6 +49,9 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   // Elimination / last-standing
   chess: "last-standing",
   "chess-for-three": "last-standing",
+  // Win/lose/draw like chess — winner stands, loser eliminated, draw = both
+  // standing. Without this it fell back to the score-based free-for-all form.
+  "connect-4": "last-standing",
   "dungeon-mayhem": "last-standing",
   durak: "last-standing",
   "exploding-kittens": "last-standing",
