@@ -79,12 +79,21 @@ function parseFreeForAll(v: Record<string, unknown>): ParseResult<MatchOutcomeFr
   // implicit co-winners. Point-less variants (Villainous) instead mark the sole
   // winner with `rank: 1` and keep every score at 0.
   const scenario = asOptionalString(v.scenario, 64);
+  // Drawn duel (chess / Connect 4): `draw: true` means no winner, so a crowned
+  // rank alongside it would be a contradiction — mirrors the schema refinement.
+  if (v.draw !== undefined && v.draw !== true) {
+    return { ok: false, error: "free-for-all: draw must be true when present" };
+  }
+  if (v.draw === true && players.some((p) => p.rank !== undefined)) {
+    return { ok: false, error: "free-for-all: a drawn match cannot have a ranked winner" };
+  }
   return {
     ok: true,
     value: {
       kind: "free-for-all",
       players,
       ...(scenario !== undefined ? { scenario } : {}),
+      ...(v.draw === true ? { draw: true as const } : {}),
     },
   };
 }

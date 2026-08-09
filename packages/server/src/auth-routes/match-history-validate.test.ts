@@ -34,6 +34,61 @@ describe("parseOutcome — free-for-all role round-trip", () => {
   });
 });
 
+describe("parseOutcome — free-for-all drawn duel (chess / Connect 4)", () => {
+  it("preserves draw: true on a drawn duel", () => {
+    const result = parseOutcome({
+      kind: "free-for-all",
+      draw: true,
+      players: [
+        { userId: "u1", displayName: "Alice", score: 0 },
+        { userId: "u2", displayName: "Bob", score: 0 },
+      ],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "free-for-all") {
+      expect(result.value.draw).toBe(true);
+    }
+  });
+
+  it("omits draw entirely on a decisive game", () => {
+    const result = parseOutcome({
+      kind: "free-for-all",
+      players: [
+        { userId: "u1", displayName: "Alice", score: 0, rank: 1 },
+        { userId: "u2", displayName: "Bob", score: 0 },
+      ],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "free-for-all") {
+      expect("draw" in result.value).toBe(false);
+    }
+  });
+
+  it("rejects a drawn match with a ranked winner", () => {
+    const result = parseOutcome({
+      kind: "free-for-all",
+      draw: true,
+      players: [
+        { userId: "u1", displayName: "Alice", score: 0, rank: 1 },
+        { userId: "u2", displayName: "Bob", score: 0 },
+      ],
+    });
+    expect(result.ok).toBe(false);
+  });
+
+  it("rejects a non-true draw flag", () => {
+    const result = parseOutcome({
+      kind: "free-for-all",
+      draw: false,
+      players: [
+        { userId: "u1", displayName: "Alice", score: 0 },
+        { userId: "u2", displayName: "Bob", score: 0 },
+      ],
+    });
+    expect(result.ok).toBe(false);
+  });
+});
+
 describe("parseOutcome — last-standing role round-trip", () => {
   it("preserves each player's role (Dungeon Mayhem hero) and elimination order", () => {
     const result = parseOutcome({

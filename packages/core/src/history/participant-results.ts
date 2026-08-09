@@ -21,9 +21,12 @@ import { isPointlessFreeForAll, lowScoreWinsForSlug } from "./score-config.ts";
  *   math, but the person was still *present*.
  * - `"played"` is a participant in a scored co-op with no win/loss (Just One):
  *   counts as a play, excluded from win-rate, and carries no Won/Lost badge.
+ * - `"draw"` is a drawn win/draw/loss duel (chess, Connect 4 — `draw: true` on
+ *   a free-for-all outcome): a real competitive result shared by every player.
+ *   Sits out of the win rate but counts as half a win in performance.
  * - `null` means the user did not take part in this match at all.
  */
-export type ParticipantResult = "win" | "loss" | "moderator" | "played" | null;
+export type ParticipantResult = "win" | "loss" | "moderator" | "played" | "draw" | null;
 
 /**
  * Every distinct `userId` referenced by an outcome, across all five kinds.
@@ -66,9 +69,10 @@ export function participatedIn(outcome: MatchOutcome, userId: string): boolean {
  * Resolve a single participant's win/loss disposition. The per-kind winner
  * rules:
  *
- * - **free-for-all** — explicit `rank` wins when any player carries one (covers
- *   point-less games like Villainous where the sole winner is `rank: 1` and
- *   every score is 0); otherwise the best `score` wins — **highest by default,
+ * - **free-for-all** — a drawn duel (`draw: true`; chess / Connect 4) is a
+ *   `"draw"` for every player. Otherwise explicit `rank` wins when any player
+ *   carries one (covers point-less games like Villainous where the sole winner
+ *   is `rank: 1` and every score is 0); otherwise the best `score` wins — **highest by default,
  *   lowest when `lowestWins` is set** (penalty games like Phase 10 / Bandit; the
  *   caller passes `lowScoreWinsForSlug(slug)`). Best rank / best score is shared
  *   by co-winners ("implicit co-winners", matching the write-path validator), so
@@ -94,6 +98,7 @@ export function deriveParticipantResult(
     case "free-for-all": {
       const me = outcome.players.find((p) => p.userId === userId);
       if (!me) return null;
+      if (outcome.draw) return "draw";
       const ranked = outcome.players.filter((p) => p.rank !== undefined);
       if (ranked.length > 0) {
         if (me.rank === undefined) return "loss";
@@ -196,6 +201,7 @@ export function lastStandingPlacement(
  * should be excluded from the performance average entirely.
  *
  * - win → 1
+ * - draw (chess / Connect 4 drawn duel) → 0.5, the chess-scoring convention
  * - free-for-all loss → linear placement credit `(N - place) / (N - 1)` (2nd of
  *   5 = 0.75, last = 0). Point-less free-for-alls have no placement, so a loss
  *   there is a flat 0.
@@ -218,6 +224,7 @@ export function participantPerformanceCredit(
   const result = deriveParticipantResult(outcome, userId, lowestWins);
   if (result === null || result === "moderator" || result === "played") return null;
   if (result === "win") return 1;
+  if (result === "draw") return 0.5;
   // loss
   if (outcome.kind === "free-for-all" && !isPointlessFreeForAll(slug)) {
     const pl = freeForAllPlacement(outcome, userId, lowestWins);

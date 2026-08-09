@@ -18,6 +18,7 @@ import {
   describeResistanceError,
   describeVillainousError,
   describeWerewolfError,
+  describeWinDrawLossError,
   emptyOutcome,
   flatParticipants,
   getScenario,
@@ -435,6 +436,29 @@ describe("describeOutcomeError", () => {
     expect(
       describeOutcomeError(ffa({ id: "a", score: 0 }, { id: "b", score: 0 }), "uno"),
     ).toBeNull();
+  });
+
+  it("win/draw/loss duel (chess / Connect 4): crowned winner or draw required", () => {
+    const nobody = ffa({ id: "a", score: 0 }, { id: "b", score: 0 });
+    expect(describeOutcomeError(nobody, "connect-4")).toBe("Crown the winner — or call it a draw");
+    expect(describeOutcomeError({ ...nobody, draw: true }, "connect-4")).toBeNull();
+    const crowned: MatchOutcomeFreeForAll = {
+      kind: "free-for-all",
+      players: [
+        { ...p("a"), score: 0, rank: 1 },
+        { ...p("b"), score: 0 },
+      ],
+    };
+    expect(describeOutcomeError(crowned, "chess")).toBeNull();
+    expect(describeWinDrawLossError(ffa({ id: "a", score: 0 }))).toBe("Add at least two players");
+    const twoCrowns: MatchOutcomeFreeForAll = {
+      kind: "free-for-all",
+      players: [
+        { ...p("a"), score: 0, rank: 1 },
+        { ...p("b"), score: 0, rank: 1 },
+      ],
+    };
+    expect(describeWinDrawLossError(twoCrowns)).toBe("Only one player can win");
   });
 
   it("last-standing needs ≥2 players and at least one survivor", () => {

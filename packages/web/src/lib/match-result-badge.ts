@@ -46,6 +46,10 @@ function freeForAllBadge(
   const me = outcome.players.find((p) => p.userId === userId);
   if (!me) return null;
 
+  // Drawn duel (chess / Connect 4) — a real competitive result in the neutral
+  // gray the tournament table already uses for draws.
+  if (outcome.draw) return { label: "Draw", tone: "neutral" };
+
   // Point-less FFA: winner marked rank 1 (no scores) → Won/Lost only.
   if (isPointlessFreeForAll(gameSlug)) {
     const hasRank = outcome.players.some((p) => p.rank === 1);

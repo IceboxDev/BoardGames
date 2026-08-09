@@ -13,6 +13,7 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { defaultKindForSlug } from "../../games/match-kinds";
 import { defaultVariantValue, variantConfigForSlug } from "../../games/match-variants";
+import { isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
 import { useAdminUsers } from "../../hooks/useAdminUsers.ts";
 import { fetchCalendarLocks } from "../../lib/calendar-locks";
@@ -41,6 +42,7 @@ import { ResistanceForm } from "./forms/ResistanceForm";
 import { TeamsForm } from "./forms/TeamsForm";
 import { VillainousForm } from "./forms/VillainousForm";
 import { WerewolfForm } from "./forms/WerewolfForm";
+import { WinDrawLossForm } from "./forms/WinDrawLossForm";
 import { GamePicker } from "./GamePicker";
 import { GameVariantPicker } from "./GameVariantPicker";
 import {
@@ -331,6 +333,12 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
               />
             ) : gameSlug === "lovecraft-letter" ? (
               <LovecraftLetterForm
+                users={allUsers}
+                value={outcome as MatchOutcomeFreeForAll}
+                onChange={setOutcome}
+              />
+            ) : isWinDrawLossFfa(gameSlug) ? (
+              <WinDrawLossForm
                 users={allUsers}
                 value={outcome as MatchOutcomeFreeForAll}
                 onChange={setOutcome}

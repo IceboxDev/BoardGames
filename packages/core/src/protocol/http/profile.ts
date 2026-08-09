@@ -77,6 +77,8 @@ export const ProfilePerGameStatSchema = z.object({
   plays: z.number().int().nonnegative(),
   wins: z.number().int().nonnegative(),
   losses: z.number().int().nonnegative(),
+  /** Drawn win/draw/loss duels (chess, Connect 4). Defaulted for cached payloads. */
+  draws: z.number().int().nonnegative().default(0),
   /**
    * Scheme-A performance (0..1) over this game's COMPETITIVE plays — wins plus
    * placement-graded free-for-all losses (other losses = 0). Null when the game
@@ -100,7 +102,12 @@ export const ProfileStatsSchema = z.object({
   gamesPlayed: z.number().int().nonnegative(),
   wins: z.number().int().nonnegative(),
   losses: z.number().int().nonnegative(),
-  /** wins / (wins + losses); null when the user has no competitive results. */
+  /** Drawn win/draw/loss duels (chess, Connect 4). Defaulted for cached payloads. */
+  draws: z.number().int().nonnegative().default(0),
+  /**
+   * wins / (wins + losses); null when the user has no decisive results. Draws
+   * sit out of both sides — their half-win credit shows up in `performance`.
+   */
   winRate: z.number().min(0).max(1).nullable(),
   /**
    * Placement-weighted "performance" in [0,1] (Scheme A): wins = 1, free-for-all

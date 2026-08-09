@@ -13,6 +13,7 @@ import type {
   MatchOutcomeTeams,
   Participant,
 } from "@boardgames/core/history/types";
+import { isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
 import { isDndSlug } from "./dnd";
 
@@ -140,6 +141,7 @@ export function describeOutcomeError(
     case "free-for-all":
       if (isVillainousSlug(gameSlug)) return describeVillainousError(outcome);
       if (gameSlug === "lovecraft-letter") return describeLovecraftLetterError(outcome);
+      if (isWinDrawLossFfa(gameSlug)) return describeWinDrawLossError(outcome);
       if (outcome.players.length < 2) return "Add at least two players";
       return null;
     case "teams":
@@ -201,6 +203,20 @@ export function describeLovecraftLetterError(outcome: MatchOutcomeFreeForAll): s
   if (winners.length === 0) return "Crown the player who won";
   if (winners.length > 1) return "Only one player can win";
   if (!winners[0].role) return `Pick how ${winners[0].displayName} won`;
+  return null;
+}
+
+/**
+ * Chess / Connect 4: a point-less duel recorded as win/draw/loss. Either
+ * exactly one player is crowned (`rank: 1`) or the game is a draw — never
+ * neither, never both (the form clears ranks when the draw is toggled on).
+ */
+export function describeWinDrawLossError(outcome: MatchOutcomeFreeForAll): string | null {
+  if (outcome.players.length < 2) return "Add at least two players";
+  if (outcome.draw) return null;
+  const winners = outcome.players.filter((p) => p.rank === 1);
+  if (winners.length === 0) return "Crown the winner — or call it a draw";
+  if (winners.length > 1) return "Only one player can win";
   return null;
 }
 

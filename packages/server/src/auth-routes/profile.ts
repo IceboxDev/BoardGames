@@ -335,6 +335,9 @@ profileRoutes.get("/:userId", async (c) => {
   });
   let wins = 0;
   let losses = 0;
+  // Drawn win/draw/loss duels (chess, Connect 4). Out of the win rate; their
+  // 0.5 performance credit flows through `credit` below.
+  let draws = 0;
   // Non-W/L plays, counted explicitly so the client never has to infer them
   // from a remainder (which used to mislabel an unresolved D&D session as
   // "moderated"): the moderator slot (Storyteller / DM) vs an unresolved
@@ -352,6 +355,7 @@ profileRoutes.get("/:userId", async (c) => {
     plays: number;
     wins: number;
     losses: number;
+    draws: number;
     moderated: number;
     ongoing: number;
     perfSum: number;
@@ -382,6 +386,7 @@ profileRoutes.get("/:userId", async (c) => {
     const isOngoing = result === "played" && o.kind === "coop" && o.score === undefined;
     if (result === "win") wins += 1;
     else if (result === "loss") losses += 1;
+    else if (result === "draw") draws += 1;
     else if (result === "moderator") moderated += 1;
     else if (isScoredCoop) scored += 1;
     else if (isOngoing) ongoing += 1;
@@ -394,6 +399,7 @@ profileRoutes.get("/:userId", async (c) => {
           plays: 0,
           wins: 0,
           losses: 0,
+          draws: 0,
           moderated: 0,
           ongoing: 0,
           perfSum: 0,
@@ -406,6 +412,7 @@ profileRoutes.get("/:userId", async (c) => {
       agg.plays += 1;
       if (result === "win") agg.wins += 1;
       else if (result === "loss") agg.losses += 1;
+      else if (result === "draw") agg.draws += 1;
       else if (result === "moderator") agg.moderated += 1;
       else if (isOngoing) agg.ongoing += 1;
       if (credit !== null) {
@@ -429,6 +436,7 @@ profileRoutes.get("/:userId", async (c) => {
       plays: a.plays,
       wins: a.wins,
       losses: a.losses,
+      draws: a.draws,
       moderated: a.moderated,
       ongoing: a.ongoing,
       performance: a.perfCount > 0 ? a.perfSum / a.perfCount : null,
@@ -466,6 +474,7 @@ profileRoutes.get("/:userId", async (c) => {
     gamesPlayed: units.length,
     wins,
     losses,
+    draws,
     winRate: wins + losses > 0 ? wins / (wins + losses) : null,
     performance: perfCount > 0 ? perfSum / perfCount : null,
     moderated,

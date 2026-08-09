@@ -75,7 +75,8 @@ export function ProfileStatsPanel({ stats }: { stats: ProfileStats }) {
                   <>
                     <span className="font-bold text-fg-primary">{Math.round(perf * 100)}%</span>{" "}
                     <span className="text-fg-muted">
-                      {row.wins}W·{row.losses}L{ran > 0 ? ` · ${ran} ran` : ""}
+                      {row.wins}W·{row.losses}L{row.draws > 0 ? `·${row.draws}D` : ""}
+                      {ran > 0 ? ` · ${ran} ran` : ""}
                       {ongoing > 0 ? ` · ${ongoing} ongoing` : ""}
                     </span>
                   </>

@@ -91,6 +91,47 @@ describe("MatchOutcomeSchema", () => {
     }
   });
 
+  // ── Win/draw/loss duels (chess, Connect 4) ────────────────────────────
+
+  it("accepts a drawn duel — draw: true, no ranks, zero scores", () => {
+    const parsed = MatchOutcomeSchema.parse({
+      kind: "free-for-all",
+      draw: true,
+      players: [
+        { ...sampleParticipant("u1", "Alice"), score: 0 },
+        { ...sampleParticipant("u2", "Bob"), score: 0 },
+      ],
+    });
+    expect(parsed.kind).toBe("free-for-all");
+    if (parsed.kind === "free-for-all") expect(parsed.draw).toBe(true);
+  });
+
+  it("rejects a drawn duel with a ranked winner", () => {
+    const bad = () =>
+      MatchOutcomeSchema.parse({
+        kind: "free-for-all",
+        draw: true,
+        players: [
+          { ...sampleParticipant("u1", "Alice"), score: 0, rank: 1 },
+          { ...sampleParticipant("u2", "Bob"), score: 0 },
+        ],
+      });
+    expect(bad).toThrow(/drawn match cannot have a ranked winner/);
+  });
+
+  it("rejects draw: false — the flag is literal true or absent", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        kind: "free-for-all",
+        draw: false,
+        players: [
+          { ...sampleParticipant("u1", "Alice"), score: 0 },
+          { ...sampleParticipant("u2", "Bob"), score: 0 },
+        ],
+      }),
+    ).toThrow();
+  });
+
   it("rejects a free-for-all role longer than 64 chars", () => {
     expect(() =>
       MatchOutcomeSchema.parse({

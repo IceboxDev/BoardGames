@@ -15,6 +15,12 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   // conditions ended it (the scenario), no scores. Listed explicitly for the
   // same reason as villainous.
   "lovecraft-letter": "free-for-all",
+  // Classic head-to-head duels — win/draw/loss, no points and no elimination.
+  // Point-less free-for-alls with the dedicated Win/Draw/Loss form (see
+  // isWinDrawLossFfa in core's score-config); a draw is `draw: true` on the
+  // outcome, not two co-survivors.
+  chess: "free-for-all",
+  "connect-4": "free-for-all",
 
   // Cooperative — players share a single win/loss
   "aeons-end": "coop",
@@ -47,11 +53,7 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   "wo-wars": "teams",
 
   // Elimination / last-standing
-  chess: "last-standing",
   "chess-for-three": "last-standing",
-  // Win/lose/draw like chess — winner stands, loser eliminated, draw = both
-  // standing. Without this it fell back to the score-based free-for-all form.
-  "connect-4": "last-standing",
   "dungeon-mayhem": "last-standing",
   durak: "last-standing",
   "exploding-kittens": "last-standing",

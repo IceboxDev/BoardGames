@@ -37,6 +37,7 @@ function formatPercent(value: number | null): string {
 // bucket: the campaign's single win/loss sits on its concluding session.
 function winLossSub(stats: ProfileStats): string {
   const parts = [`${stats.wins}W`, `${stats.losses}L`];
+  if (stats.draws > 0) parts.push(`${stats.draws}D`);
   if (stats.moderated > 0) parts.push(`${stats.moderated} ran`);
   if (stats.ongoing > 0) parts.push(`${stats.ongoing} ongoing`);
   if (stats.scored > 0) parts.push(`${stats.scored} scored`);

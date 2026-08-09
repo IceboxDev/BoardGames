@@ -156,7 +156,9 @@ type OutcomeProps = {
 function CompactOutcome({ outcome, gameSlug, currentUserId }: OutcomeProps) {
   switch (outcome.kind) {
     case "free-for-all":
-      return isPointlessFreeForAll(gameSlug) ? (
+      // `outcome.draw` routes to the point-less rendering too: a drawn duel has
+      // no scores worth showing regardless of how the slug is configured.
+      return isPointlessFreeForAll(gameSlug) || outcome.draw ? (
         <PointlessFfaInline outcome={outcome} currentUserId={currentUserId} />
       ) : (
         <FreeForAllInline outcome={outcome} gameSlug={gameSlug} currentUserId={currentUserId} />
@@ -230,6 +232,23 @@ function PointlessFfaInline({
   outcome: MatchOutcomeFreeForAll;
   currentUserId: string | null;
 }) {
+  // Drawn duel (chess / Connect 4): nobody won — muted bubbles + a "Draw" tag
+  // instead of gold-vs-dark, which would falsely crown everyone.
+  if (outcome.draw) {
+    return (
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+        {outcome.players.map((p) => (
+          <AvatarBubble
+            key={p.userId}
+            name={p.displayName}
+            tone="muted"
+            isMe={p.userId === currentUserId}
+          />
+        ))}
+        <span className="text-xs text-fg-muted">Draw</span>
+      </div>
+    );
+  }
   // New records mark the sole winner with `rank: 1`. Legacy score-based records
   // (from before Villainous went point-less) fall back to highest score so they
   // still surface a winner.

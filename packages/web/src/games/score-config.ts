@@ -5,7 +5,11 @@ import { JUST_ONE_MAX_SCORE } from "./just-one/scoring";
 // Villainous) now live in core so the server's profile win/loss + performance
 // stats read the exact same rules the web does. Re-exported here so existing web
 // call sites (forms, read-side cards, result badges) keep importing from one place.
-export { isPointlessFreeForAll, lowScoreWinsForSlug } from "@boardgames/core/history/score-config";
+export {
+  isPointlessFreeForAll,
+  isWinDrawLossFfa,
+  lowScoreWinsForSlug,
+} from "@boardgames/core/history/score-config";
 
 /**
  * Maximum attainable score for scored co-ops (Just One banks up to 13). Lets the

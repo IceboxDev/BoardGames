@@ -17,8 +17,9 @@ describe("defaultKindForSlug", () => {
     ["sky-team", "coop"],
     ["gloomhaven", "coop"],
     ["codenames", "teams"],
-    ["chess", "last-standing"],
-    ["connect-4", "last-standing"],
+    ["chess", "free-for-all"],
+    ["connect-4", "free-for-all"],
+    ["chess-for-three", "last-standing"],
     ["dungeon-mayhem", "last-standing"],
     ["exploding-kittens", "last-standing"],
     // Players are knocked out as they run dry; the survivor wins — same shape

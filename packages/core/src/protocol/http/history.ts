@@ -49,6 +49,11 @@ const MatchOutcomeFreeForAllSchema = z.object({
   // Optional per-game variant tag (e.g. 7 Wonders expansions). Same shape and
   // intent as the `scenario` field on teams matches.
   scenario: z.string().max(64).optional(),
+  // Drawn game marker for win/draw/loss duels (chess, Connect 4 — see
+  // `isWinDrawLossFfa` in history/score-config): the match ended with no
+  // winner. Point-less by construction — every score stays 0 and no player may
+  // carry a rank alongside it (enforced on the union below).
+  draw: z.literal(true).optional(),
 });
 export type MatchOutcomeFreeForAll = z.infer<typeof MatchOutcomeFreeForAllSchema>;
 
@@ -179,7 +184,16 @@ export const MatchOutcomeSchema = z
     MatchOutcomeOneVsManySchema,
   ])
   .superRefine((v, ctx) => {
-    if (v.kind === "teams") {
+    if (v.kind === "free-for-all" && v.draw) {
+      const ranked = v.players.findIndex((p) => p.rank !== undefined);
+      if (ranked !== -1) {
+        ctx.addIssue({
+          code: "custom",
+          path: ["players", ranked, "rank"],
+          message: "a drawn match cannot have a ranked winner",
+        });
+      }
+    } else if (v.kind === "teams") {
       for (const idx of v.winnerTeamIndices) {
         if (idx >= v.teams.length) {
           ctx.addIssue({

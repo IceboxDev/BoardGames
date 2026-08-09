@@ -97,6 +97,20 @@ describe("deriveParticipantResult", () => {
     expect(deriveParticipantResult(o, "b")).toBe("loss");
   });
 
+  it("free-for-all: a drawn duel (chess / Connect 4) is a draw for every player", () => {
+    const o: MatchOutcome = {
+      kind: "free-for-all",
+      draw: true,
+      players: [
+        { ...p("a"), score: 0 },
+        { ...p("b"), score: 0 },
+      ],
+    };
+    expect(deriveParticipantResult(o, "a")).toBe("draw");
+    expect(deriveParticipantResult(o, "b")).toBe("draw");
+    expect(deriveParticipantResult(o, "stranger")).toBeNull();
+  });
+
   it("teams: win by winning team index; moderator is non-competing", () => {
     const o: MatchOutcome = {
       kind: "teams",
@@ -322,6 +336,20 @@ describe("participantPerformanceCredit (Scheme A)", () => {
     expect(participantPerformanceCredit(nem, "out5", "not-enough-mana")).toBeCloseTo(0.8); // 2nd
     expect(participantPerformanceCredit(nem, "out2", "not-enough-mana")).toBeCloseTo(0.2); // 5th
     expect(participantPerformanceCredit(nem, "out1", "not-enough-mana")).toBe(0); // last
+  });
+
+  it("a drawn duel (chess / Connect 4) earns half a win", () => {
+    const o: MatchOutcome = {
+      kind: "free-for-all",
+      draw: true,
+      players: [
+        { ...p("a"), score: 0 },
+        { ...p("b"), score: 0 },
+      ],
+    };
+    expect(participantPerformanceCredit(o, "a", "connect-4")).toBe(0.5);
+    expect(participantPerformanceCredit(o, "b", "chess")).toBe(0.5);
+    expect(participantPerformanceCredit(o, "absent", "chess")).toBeNull();
   });
 
   it("team / point-less losses are a flat 0", () => {
