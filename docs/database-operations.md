@@ -23,8 +23,14 @@ with `UPDATE`, `DELETE`, or `DROP` is not.
 ## Backups
 
 ```bash
-pnpm --filter @boardgames/server db:backup                 # → ./backups/boardgames-<iso>.sql
-pnpm --filter @boardgames/server db:backup -- --out /some/dir
+# Backs up whatever TURSO_DATABASE_URL points at — locally that is STAGING.
+pnpm --filter @boardgames/server db:backup
+
+# Backs up PRODUCTION, via the separate PROD_TURSO_* credential pair.
+pnpm --filter @boardgames/server db:backup -- --prod
+
+pnpm --filter @boardgames/server db:backup -- --prod --out /some/dir
+# → packages/server/backups/boardgames-<iso>.sql
 ```
 
 A plain-SQL logical dump: schema, then paged `INSERT`s, wrapped in a
@@ -38,8 +44,25 @@ sqlite3 /tmp/restore-check.db < backups/boardgames-<iso>.sql
 sqlite3 /tmp/restore-check.db "PRAGMA foreign_key_check;"   # must print nothing
 ```
 
-Turso may also have point-in-time recovery enabled on the account. Nothing in
-this repo verifies that, so do not rely on it without checking the dashboard.
+**Point-in-time recovery works** (verified 2026-08-05 on the `starter` plan) —
+this is your real safety net for a bad migration:
+
+```bash
+turso db create boardgames-recovery --from-db boardgames \
+  --timestamp 2026-08-05T20:00:00Z      # RFC3339
+```
+It restores into a NEW database; inspect it, then copy the good rows back.
+Retention on `starter` is short, so it covers "the migration I ran an hour ago",
+not "the data we lost last month". Production also has **delete protection**
+enabled, so `turso db destroy boardgames` refuses without disabling it first.
+
+**A dump contains personal data** — member emails and the home addresses on
+locked nights. `backups/` is gitignored at every depth, and **this repository is
+public**, so that ignore rule is the only thing standing between a dump and the
+internet. Never commit one, never attach one to an issue, and do not upload one
+as a GitHub Actions artifact: artifacts on a public repo are downloadable by
+anyone. If you automate backups to CI, encrypt the file before it leaves the
+runner.
 
 ## Changing the schema
 
@@ -47,12 +70,14 @@ this repo verifies that, so do not rely on it without checking the dashboard.
 # 1. Write the migration: packages/server/src/migrations/00NN-<name>.ts
 #    Register it in migrations/registry.ts. One statement per array entry.
 
-# 2. Prove it against real data. Read-only: copies prod into :memory:,
-#    applies pending migrations with foreign keys ON, diffs foreign_key_check.
+# 2. Prove it against real data. Read-only: copies the configured database
+#    (staging) into :memory:, applies pending migrations with foreign keys ON,
+#    and diffs foreign_key_check before/after.
 pnpm --filter @boardgames/server migrate:dry-run
 
-# 3. Back up if the migration writes data.
-pnpm --filter @boardgames/server db:backup
+# 3. Back up PRODUCTION if the migration writes data — plain `db:backup`
+#    would only dump staging.
+pnpm --filter @boardgames/server db:backup -- --prod
 
 # 4. Open a PR. CI re-runs the dry-run and the migration test suite.
 
@@ -78,32 +103,40 @@ referenced those tables at the time. That is no longer generally true —
 migration drops a referenced table. If you hit it, don't work around it: add
 columns in place, or introduce a new table and migrate readers.
 
-## Local development points at production
+## Local development used to point at production
 
-`packages/server/.env` sets `NODE_ENV=production` and
-`TURSO_DATABASE_URL` to the **live** database. There is no staging database, so
-every `pnpm dev`, every ad-hoc script in `src/scripts/`, and any test that
-forgets `:memory:` reads and writes production data.
+**Fixed on 2026-08-05** — kept here because it shaped the tooling.
+`packages/server/.env` used to set `NODE_ENV=production` with
+`TURSO_DATABASE_URL` pointing at the **live** database, so every `pnpm dev`,
+every ad-hoc script in `src/scripts/`, and any test that forgot `:memory:` read
+and wrote production data. It now points at staging (see below).
 
-Two consequences worth internalising:
+Two consequences that outlived it:
 
-- `migrate:dry-run` exists because there is nowhere else to rehearse.
-- `NODE_ENV=production` locally is why the CORS/WebSocket origin allowlist keys
+- `migrate:dry-run` was built because there was nowhere else to rehearse. It is
+  still the fastest check, and now runs against staging rather than production.
+- `NODE_ENV=production` was locally set, which is why the CORS/WebSocket origin allowlist keys
   off *"am I deployed"* (Railway's env vars) rather than `NODE_ENV` — see
   `lib/origins.ts`. Otherwise every developer would be locked out of their own
   dev server.
 
-### Recommended: create a staging database
+### The staging database
+
+**This is set up** (2026-08-05). `packages/server/.env` points at
+`boardgames-staging` with `NODE_ENV=development`; production lives only in
+Railway's environment and in the `PROD_TURSO_*` pair used by `--prod` backups.
+The previous production-pointing file is kept at `.env.prod-backup`.
+
+Staging is a disposable full copy. Refresh it whenever it drifts:
 
 ```bash
-turso db create boardgames-staging --from-db boardgames-iceboxdev
-turso db tokens create boardgames-staging
+turso db destroy boardgames-staging
+turso db create boardgames-staging --from-db boardgames
+turso db tokens create boardgames-staging   # paste into TURSO_AUTH_TOKEN
 ```
 
-Point your local `packages/server/.env` at it and set `NODE_ENV=development`.
-Keep the production URL only in Railway's environment. This removes the largest
-single operational risk in the project — it is not a refactor, it is two
-commands and an env edit.
+Note the database is named `boardgames`; `boardgames-iceboxdev` is only the
+URL host.
 
 Preview deployments have the same problem from the other direction:
 `vercel.json` rewrites `/api/*` to the production Railway URL, so **every

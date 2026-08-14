@@ -43,10 +43,24 @@ function argValue(flag: string): string | undefined {
 }
 
 async function main(): Promise<void> {
-  const url = process.env.TURSO_DATABASE_URL;
-  if (!url) throw new Error("TURSO_DATABASE_URL is required");
+  // Local development points at STAGING, so "back up the database in .env"
+  // would dump a throwaway copy — precisely the backup you don't need. `--prod`
+  // targets production explicitly via its own credential pair, so the thing
+  // worth protecting is never backed up by accident or by default.
+  const useProd = process.argv.includes("--prod");
+  const url = useProd ? process.env.PROD_TURSO_DATABASE_URL : process.env.TURSO_DATABASE_URL;
+  const authToken = useProd ? process.env.PROD_TURSO_AUTH_TOKEN : process.env.TURSO_AUTH_TOKEN;
 
-  const db = createClient({ url, authToken: process.env.TURSO_AUTH_TOKEN });
+  if (!url) {
+    throw new Error(
+      useProd
+        ? "PROD_TURSO_DATABASE_URL is required for --prod (see packages/server/.env.example)"
+        : "TURSO_DATABASE_URL is required",
+    );
+  }
+  console.log(`Backing up ${useProd ? "PRODUCTION" : "the configured database"}: ${url}`);
+
+  const db = createClient({ url, authToken });
 
   const outDir = resolve(argValue("--out") ?? "backups");
   await mkdir(outDir, { recursive: true });
