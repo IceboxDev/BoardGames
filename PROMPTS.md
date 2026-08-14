@@ -772,6 +772,46 @@ Every prompt includes the same style directive so the four images form a visuall
 
 ---
 
+## 97. Medical Mysteries: NYC Emergency Room
+
+**File:** `packages/web/src/games/medical-mysteries-nyc/assets/thumbnail.png`
+
+> A top-down view of a hospital diagnostics workstation strewn with open patient case files, lit by the cold glow of a lightbox mounted along the desk's far edge. Clipped chest X-rays and CT scan printouts hang half over the lightbox, their bones and shadows glowing blue-white, while lab-result strips, an ECG readout curling off its roll, and a stethoscope coiled like a question mark crowd the desk between them. One case folder lies open in the center with symptom cards fanned beside a blood-pressure cuff and a pen resting mid-note. This is a New York night shift: through a rain-streaked window at the desk's edge, the amber and red bokeh of Manhattan traffic and neon signage bleeds into the room, and a paper coffee cup with a plastic lid stands beside a half-eaten bagel on a napkin. A wall clock face reflects in the lightbox glass, smeared toward 3 a.m. The mood is urgent but methodical — a diagnosis hiding somewhere in the paperwork. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 98. Medical Mysteries: Miami Flatline
+
+**File:** `packages/web/src/games/medical-mysteries-miami/assets/thumbnail.png`
+
+> A top-down view of a hospital diagnostics workstation strewn with open patient case files, lit by the cold glow of a lightbox mounted along the desk's far edge. Clipped chest X-rays and CT scan printouts hang half over the lightbox, their bones and shadows glowing blue-white, while lab-result strips, an ECG readout curling off its roll — its final trace flattening into a single ominous line — and a stethoscope coiled like a question mark crowd the desk between them. One case folder lies open in the center with symptom cards fanned beside defibrillator paddles resting on their charging cradle. This is Miami at dusk: hot pink and turquoise neon washes in through venetian blinds at the desk's edge, striping the files with tropical light, and a sweating glass of iced café con leche stands on a cork coaster beside a pair of sunglasses folded on a folder. The blurred silhouette of a palm frond sways against the window glow. The mood is urgent but methodical — a diagnosis hiding somewhere in the paperwork. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 99. Kings in the Corner
+
+**File:** `packages/web/src/games/kings-in-the-corner/assets/thumbnail.png`
+
+> A top-down view of a worn wooden card-table in a dimly lit farmhouse kitchen, lit by a single warm pendant bulb on a brass chain. A fan of standard playing cards spreads from the bottom edge — red hearts and diamonds mixed with black spades and clubs in a classic poker-face design. In the center, the game's signature cross layout is mid-play: a draw pile in the middle with four foundation cards laid out to its north, south, east, and west, and kings turned proudly into the diagonal corners, each corner anchoring a cascading run of alternating red and black cards in descending order. One hand hovers frozen in the act of moving a red queen onto a black king. A folded score sheet rests to one side with two columns of running tallies in pencil. Around the cards, the table dissolves into the warm bokeh of a family kitchen — a chipped enamel mug of cocoa, a plate of shortbread cookies, a pair of reading glasses folded on a magazine, and a gingham dish towel draped over a chair back at the periphery. The mood is timeless and quietly competitive — late-evening farmhouse warmth. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 100. Go
+
+**File:** `packages/web/src/games/go/assets/thumbnail.png`
+
+> A top-down view of a kaya-wood goban glowing honey-gold under low paper-lantern light, its grid of fine dark lines holding a mid-game position — constellations of glossy black slate stones and luminous white clamshell stones curling around each other in living, breathing groups, a capture unfolding in one corner where white stones have nearly encircled a black cluster. Two carved wooden bowls sit at opposite edges, lids set aside, one brimming with black stones and the other with white, a few captured prisoners resting on each upturned lid. A single stone hovers at the moment of placement, held between two fingers entering the frame's edge. Around the board, the scene dissolves into a tatami-floored study at night — a cast-iron teapot with a thread of steam, a folded fan, an ink brush resting on a stone inkwell, and the soft silhouette of a shoji screen at the periphery. The mood is ancient and meditative — ten thousand years of quiet contemplation in a single evening. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 101. EXIT: The Game
+
+**File:** `packages/web/src/games/exit/assets/thumbnail.png`
+
+> A top-down view of a scarred oak table in a candle-lit cellar, mid-escape: a weathered journal lies open in the center, its pages dense with cryptic diagrams, and a brass three-ring decoder disk rests on top with its windows aligned to a half-solved combination. Around it, the room's puzzle detritus sprawls — strange die-cut paper shapes that have been folded and torn, a pair of scissors lying open across a card sliced deliberately in half, a length of knotted twine, an old iron key, and a padlocked wooden box waiting in the upper corner with three numbered dials. A small UV torch casts an eerie violet pool across one page, revealing ghostly hidden markings that vanish beyond the light's edge, while a stub of red candle throws warm flicker over the rest. A pocket watch lies face-up near the table's edge, its hands frozen at one minute to midnight. The mood is claustrophobic ingenuity — the delicious panic of a ticking clock and a lock that almost, almost clicks open. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
 # Background Image Prompts
 
 All backgrounds were generated with **ChatGPT (image generation)** on March 18, 2026.

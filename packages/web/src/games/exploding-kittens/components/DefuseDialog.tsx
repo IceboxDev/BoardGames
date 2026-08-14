@@ -78,6 +78,7 @@ export function ReinsertDialog({
       <div className="mt-1 flex flex-col items-center gap-3">
         <div className="flex items-center gap-3 w-full max-w-xs">
           <span className="text-xs text-fg-muted w-8">Top</span>
+          {/* biome-ignore lint/correctness/noRestrictedElements: range slider — no ui Slider primitive exists */}
           <input
             type="range"
             min={0}

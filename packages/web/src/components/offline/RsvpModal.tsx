@@ -5,6 +5,7 @@ import type { RsvpStatus } from "../../lib/calendar-rsvps";
 import { compactAddress } from "../../lib/compact-address.ts";
 import { formatDayKey } from "../../lib/date-format.ts";
 import { DND_SLUG } from "../../lib/dnd-night";
+import { EXIT_CATALOG_SLUG } from "../../lib/exit-night";
 import { reportPageView } from "../../lib/page-views";
 import { ClockIcon, HostIcon, PadlockIcon, PinIcon } from "../icons";
 import {
@@ -18,6 +19,7 @@ import {
 } from "../ui";
 import AttendeesView from "./AttendeesView";
 import DndNightPanel from "./DndNightPanel";
+import ExitNightPanel from "./ExitNightPanel";
 import GameCarousel3D from "./GameCarousel3D";
 import RankedGameList from "./RankedGameList";
 import { useRsvpAvailability } from "./useRsvpAvailability.ts";
@@ -83,6 +85,9 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   // the table, a party roster, no bringing. Gated on picks-locked so the normal
   // pick/vote flow runs right up until the guest list is sealed.
   const isDnd = picksLocked && topSlugs[0] === DND_SLUG;
+  // Likewise for EXIT — except the winner is a franchise, so the takeover is a
+  // second-stage vote narrowing down which box to play (ExitNightPanel).
+  const isExit = picksLocked && topSlugs[0] === EXIT_CATALOG_SLUG;
 
   // When picks are locked, the modal contents are inaccessible to anyone who
   // wasn't in the expected (RSVP yes / maybe) snapshot at lock-in time. The
@@ -126,7 +131,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
 
   const picksLockToggle = canTogglePicksLock ? (
     <IconButton
-      variant={picksLocked ? "warning" : "ghost"}
+      tone={picksLocked ? "amber" : "neutral"}
       size="sm"
       pressed={picksLocked}
       aria-label={picksLocked ? "Unlock guest list" : "Lock guest list"}
@@ -147,7 +152,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   // inherit the eyebrow's uppercase / wide-letter-spacing rules.
   const eyebrow = (
     <span className="inline-flex flex-wrap items-baseline gap-x-2">
-      <span>{isDnd ? "D&D night" : "Game night"}</span>
+      <span>{isDnd ? "D&D night" : isExit ? "EXIT night" : "Game night"}</span>
       {(definiteCount > 0 || tentativeCount > 0) && (
         <span className="inline-flex items-baseline gap-1 tracking-normal normal-case">
           <span aria-hidden="true" className="text-white/30">
@@ -193,7 +198,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
 
       {lockedOut && (
         <EmptyState
-          fill
+          fillHeight
           tone="amber"
           icon={<PadlockIcon closed />}
           title="Guest list is locked"
@@ -209,7 +214,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
         // going) fits at ~250px of content width — see `RsvpSwitch` and the
         // tightened sm padding in SegmentedControl.
         <div className="flex items-center justify-between gap-2">
-          {showViewToggle && viewerRsvp !== "no" && !isDnd ? (
+          {showViewToggle && viewerRsvp !== "no" && !isDnd && !isExit ? (
             <SegmentedControl
               shape="pill"
               size="sm"
@@ -252,6 +257,8 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
             <LoadingState label="Finding games…" />
           ) : isDnd ? (
             <DndNightPanel attendees={attendees} partyCount={definiteCount} />
+          ) : isExit ? (
+            <ExitNightPanel date={date} attendees={attendees} partyCount={definiteCount} />
           ) : effectiveView === "attendees" ? (
             <AttendeesView
               attendees={attendees}

@@ -8,6 +8,7 @@ export const qk = {
   calendarLocks: () => ["calendar", "locks"] as const,
   hostStats: () => ["calendar", "host-stats"] as const,
   availableGames: (date: string | null) => ["calendar", "games", date] as const,
+  exitNight: (date: string | null) => ["calendar", "exit", date] as const,
   adminUserAvailability: (targetUserId: string) =>
     ["admin", "user-availability", targetUserId] as const,
   adminUserActivity: (targetUserId: string) => ["admin", "user-activity", targetUserId] as const,

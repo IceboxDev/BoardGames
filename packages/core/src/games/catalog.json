@@ -225,6 +225,16 @@
     "accentHex": "#bf7428"
   },
   {
+    "slug": "exit",
+    "bggId": 203420,
+    "accentHex": "#782ccd",
+    "displayTitle": "EXIT: The Game",
+    "isNew": true,
+    "bggOverrides": {
+      "description": "Cooperative escape-room series in a box: each EXIT case seals the group inside a different story — an abandoned cabin, a pharaoh's tomb, a polar station, a stormy flight — and you crack its chain of riddles with a decoder disk, folding, cutting, and scribbling on components in a one-shot race to break out. Vote it in for the night, then pick the exact box together."
+    }
+  },
+  {
     "slug": "exploding-kittens",
     "bggId": 172225,
     "bggOverrides": {
@@ -259,6 +269,12 @@
       "id": "gloomhaven",
       "variant": "Jaws of the Lion"
     }
+  },
+  {
+    "slug": "go",
+    "bggId": 188,
+    "accentHex": "#b55b17",
+    "isNew": true
   },
   {
     "slug": "hell-of-a-deal",
@@ -315,6 +331,16 @@
     "accentHex": "#c77c2a"
   },
   {
+    "slug": "kings-in-the-corner",
+    "bggId": 4376,
+    "accentHex": "#bd6e28",
+    "isNew": true,
+    "family": {
+      "id": "card-games",
+      "variant": "Kings in the Corner"
+    }
+  },
+  {
     "slug": "last-one-drunk",
     "bggId": 0,
     "accentHex": "#d57b37",
@@ -343,6 +369,28 @@
     "slug": "magic-the-gathering",
     "bggId": 463,
     "accentHex": "#a82724"
+  },
+  {
+    "slug": "medical-mysteries-miami",
+    "bggId": 419293,
+    "accentHex": "#dd61ce",
+    "isNew": true,
+    "family": {
+      "id": "medical-mysteries",
+      "variant": "Miami Flatline"
+    }
+  },
+  {
+    "slug": "medical-mysteries-nyc",
+    "bggId": 415036,
+    "accentHex": "#a84524",
+    "isNew": true,
+    "family": {
+      "id": "medical-mysteries",
+      "canonical": true,
+      "name": "Medical Mysteries",
+      "variant": "NYC Emergency Room"
+    }
   },
   {
     "slug": "monopoly",
@@ -464,11 +512,7 @@
   {
     "slug": "schafkopf",
     "bggId": 6817,
-    "accentHex": "#d48732",
-    "family": {
-      "id": "card-games",
-      "variant": "Schafkopf"
-    }
+    "accentHex": "#d48732"
   },
   {
     "slug": "scotland-yard",

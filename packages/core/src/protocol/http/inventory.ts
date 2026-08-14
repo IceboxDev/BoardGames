@@ -1,5 +1,7 @@
 import { z } from "zod";
+import { isDeckGameSlug, isDeckSlug } from "../../games/card-decks.ts";
 import { isCatalogSlug } from "../../games/catalog.ts";
+import { EXIT_CATALOG_SLUG, isExitGameSlug } from "../../games/exit-games.ts";
 import { GameSlugSchema } from "../common.ts";
 import { OnlineModeSchema } from "./auth.ts";
 
@@ -14,15 +16,38 @@ export const SlugListSchema = z.array(GameSlugSchema).max(200);
 export type SlugList = z.infer<typeof SlugListSchema>;
 
 /**
- * A slug list where every entry must name a game in the catalog. Use it for
- * request bodies: a slug that resolves to no game is silently dropped from
- * availability, so an inventory holding `villainous-introduction-to-evil` (an
- * *edition*, not a game) means its owner never shows as owning Villainous.
- * Reject it at the boundary instead of storing an unresolvable reference.
+ * A slug list where every entry must name a game in the catalog, or an
+ * individual EXIT box (`games/exit-games.ts` — ownable but deliberately not a
+ * catalog entry). Use it for request bodies: a slug that resolves to no game is
+ * silently dropped from availability, so an inventory holding
+ * `villainous-introduction-to-evil` (an *edition*, not a game) means its owner
+ * never shows as owning Villainous. Reject it at the boundary instead of
+ * storing an unresolvable reference.
+ *
+ * Two groups of catalog slugs are NOT directly ownable, because their
+ * ownership is *derived* (`games/ownership.ts`):
+ *   - the EXIT anchor ("exit") — derived from owning at least one box
+ *     (`withExitAnchor`); storing it directly would let EXIT win a night no
+ *     attendee can actually put a box on the table for.
+ *   - traditional-deck card games (Durak, Rummy, Kings in the Corner,
+ *     Schafkopf) — derived from owning the French-/Bavarian-suited deck
+ *     (`withDeckGames`); the deck pseudo-slugs are what inventories store.
  */
 export const CatalogSlugListSchema = SlugListSchema.superRefine((slugs, ctx) => {
   slugs.forEach((slug, i) => {
-    if (!isCatalogSlug(slug)) {
+    if (slug === EXIT_CATALOG_SLUG) {
+      ctx.addIssue({
+        code: "custom",
+        path: [i],
+        message: `"${EXIT_CATALOG_SLUG}" is not ownable — mark the individual EXIT box(es) instead`,
+      });
+    } else if (isDeckGameSlug(slug)) {
+      ctx.addIssue({
+        code: "custom",
+        path: [i],
+        message: `"${slug}" is owned via its card deck — mark the French- or Bavarian-suited deck instead`,
+      });
+    } else if (!isCatalogSlug(slug) && !isExitGameSlug(slug) && !isDeckSlug(slug)) {
       ctx.addIssue({
         code: "custom",
         path: [i],

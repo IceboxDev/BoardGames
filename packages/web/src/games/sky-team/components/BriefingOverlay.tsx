@@ -178,6 +178,7 @@ function ChatPanel({
         )}
       </div>
       <div className="flex gap-2">
+        {/* biome-ignore lint/correctness/noRestrictedElements: cockpit-styled callsign input — instrument-panel art, not app form chrome */}
         <input
           type="text"
           value={draft}

@@ -27,6 +27,7 @@ import { avatarRoutes } from "./auth-routes/avatar.ts";
 import { bgaIngestRoutes } from "./auth-routes/bga-ingest.ts";
 import { bgaSessionRoutes } from "./auth-routes/bga-sessions.ts";
 import { bggRoutes } from "./auth-routes/bgg.ts";
+import { calendarExitRoutes } from "./auth-routes/calendar-exit.ts";
 import { calendarFeedRoutes } from "./auth-routes/calendar-feed.ts";
 import { calendarFeedPublicRoutes } from "./auth-routes/calendar-feed-public.ts";
 import { adminCalendarLocksRoutes, calendarLocksRoutes } from "./auth-routes/calendar-locks.ts";
@@ -179,6 +180,7 @@ app.route("/api/availability", availabilityCountsRoutes);
 
 app.use("/api/calendar/*", requireAuth);
 app.route("/api/calendar", calendarLocksRoutes);
+app.route("/api/calendar", calendarExitRoutes);
 app.route("/api/calendar", calendarRsvpsRoutes);
 app.route("/api/calendar", calendarFeedRoutes);
 

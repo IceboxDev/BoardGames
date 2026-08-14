@@ -9,8 +9,6 @@ const STRATEGIES: StrategyOption[] = [
     label: "Random",
     description: "Bots pick a random legal move — trades, wonders and all.",
     difficulty: "Easy",
-    accentColor: "#22c55e",
-    badgeClass: "bg-green-500/15 text-green-400 ring-green-500/30",
   },
 ];
 

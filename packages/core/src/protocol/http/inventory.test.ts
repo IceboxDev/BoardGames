@@ -50,6 +50,18 @@ describe("CatalogSlugListSchema", () => {
     ).not.toThrow();
   });
 
+  it("accepts individual EXIT box slugs", () => {
+    expect(() => CatalogSlugListSchema.parse(["exit-abandoned-cabin"])).not.toThrow();
+  });
+
+  // Owning "exit" is derived from owning boxes; storing the anchor directly
+  // would let EXIT win a night nobody can bring a box to.
+  it("rejects the EXIT anchor itself", () => {
+    const r = CatalogSlugListSchema.safeParse(["lost-cities", "exit"]);
+    expect(r.success).toBe(false);
+    if (!r.success) expect(r.error.issues[0]?.path).toEqual([1]);
+  });
+
   it("reports the offending index and slug", () => {
     const result = CatalogSlugListSchema.safeParse(["set", "ghost-game"]);
     expect(result.success).toBe(false);

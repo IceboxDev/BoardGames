@@ -7,7 +7,7 @@ interface Props {
   viewBox: BoardViewBox;
   /** Accessibility label for the whole board. */
   "aria-label"?: string;
-  /** Wrapper class (sizing belongs here — `w-full max-w-[720px] aspect-[720/1000]`). */
+  /** Wrapper class (sizing belongs here — e.g. w-full, a max width, an aspect ratio). */
   className?: string;
   /** Children inside the <svg> (purely geometric content). */
   children: ReactNode;

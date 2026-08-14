@@ -1,13 +1,22 @@
+import { CARD_DECKS, isDeckGameSlug } from "@boardgames/core/games/card-decks";
+import { EXIT_CATALOG_SLUG, EXIT_GAMES } from "@boardgames/core/games/exit-games";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { games } from "../../games/registry";
 import { useEditableList } from "../../hooks/useEditableList";
 import { errorMessageOf } from "../../lib/error-message";
 import { adminFetchInventory, adminSaveInventory } from "../../lib/inventory";
 import { qk } from "../../lib/query-keys";
+import CardDeckList from "../CardDeckList";
+import ExitBoxList from "../ExitBoxList";
 import InventoryGrid from "../InventoryGrid";
 import { Button, ErrorAlert, LoadingState } from "../ui";
 
 type Props = { userId: string };
+
+// Derived-ownership entries are not toggleable cells here: the EXIT anchor is
+// owned via boxes (`ExitBoxList`), and traditional-deck card games are owned
+// via the French-/Bavarian-suited deck (`CardDeckList`).
+const ownableGames = games.filter((g) => g.slug !== EXIT_CATALOG_SLUG && !isDeckGameSlug(g.slug));
 
 /**
  * Per-user owned-games editor. Drafts a slug list locally via
@@ -52,10 +61,13 @@ export function InventoryPanel({ userId }: Props) {
   return (
     <div className="space-y-3">
       {error && <ErrorAlert message={error} />}
-      <InventoryGrid selected={list.draft} onToggle={list.toggle} />
+      <InventoryGrid selected={list.draft} onToggle={list.toggle} games={ownableGames} />
+      <CardDeckList selected={list.draft} onToggle={list.toggle} />
+      <ExitBoxList selected={list.draft} onToggle={list.toggle} />
       <div className="flex items-center justify-end gap-2">
         <span className="text-xs text-fg-muted">
-          {list.draft.length} of {games.length} selected
+          {list.draft.length} of {ownableGames.length + CARD_DECKS.length + EXIT_GAMES.length}{" "}
+          selected
         </span>
         <Button
           variant="primary"

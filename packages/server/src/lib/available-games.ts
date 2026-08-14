@@ -12,6 +12,7 @@
 // fields) without leaking them into the public JSON.
 
 import { getBggBySlug, maxPlayersAsNumber } from "@boardgames/core/bgg";
+import { expandOwnedSlugs } from "@boardgames/core/games/ownership";
 import { type AvailableGames, SlugListSchema } from "@boardgames/core/protocol";
 import type { Client } from "@libsql/client";
 import { z } from "zod";
@@ -327,7 +328,7 @@ export async function computeAvailableGamesPayload(opts: {
         if (!(err instanceof RowParseError)) throw err;
         continue;
       }
-      const set = new Set(inv.game_slugs_json);
+      const set = expandOwnedSlugs(new Set(inv.game_slugs_json));
       for (const slug of set) ownedUnion.add(slug);
       inventoryByUser.set(inv.user_id, set);
     }

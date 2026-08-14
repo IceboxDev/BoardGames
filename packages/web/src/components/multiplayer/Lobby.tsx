@@ -139,7 +139,7 @@ export function Lobby({
         <section className="grid shrink-0 grid-cols-1 gap-3 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.3fr)_minmax(0,1fr)]">
           <ControlGroup label="Room Code">
             <div className="flex h-full flex-col items-center justify-center gap-1">
-              <span className="font-mono text-3xl font-black tracking-[0.35em] text-emerald-400">
+              <span className="font-mono text-3xl font-black tracking-code text-emerald-400">
                 {roomCode}
               </span>
               <span className="text-center text-3xs text-fg-muted">
@@ -188,7 +188,7 @@ export function Lobby({
           Room Code
         </div>
         <div className="inline-block rounded-xl border border-white/10 bg-surface-800/60 px-8 py-4">
-          <span className="text-4xl font-bold tracking-[0.4em] text-emerald-400 sm:text-5xl">
+          <span className="text-4xl font-bold tracking-code text-emerald-400 sm:text-5xl">
             {roomCode}
           </span>
         </div>

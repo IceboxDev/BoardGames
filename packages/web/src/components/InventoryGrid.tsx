@@ -99,6 +99,7 @@ function InventoryCell({
           : "border-white/10 bg-surface-800/50 hover:border-white/20"
       }`}
     >
+      {/* biome-ignore lint/correctness/noRestrictedElements: sr-only checkbox behind a custom swatch surface — no visible chrome to drift */}
       <input type="checkbox" checked={checked} onChange={onToggle} className="sr-only" />
       <img
         src={game.thumbnail}

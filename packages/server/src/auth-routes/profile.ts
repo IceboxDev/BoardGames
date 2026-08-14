@@ -15,6 +15,7 @@
 // derivation stays the shared core helper so stats and the web's result badges
 // never disagree.
 
+import { ownedCatalogSlugs } from "@boardgames/core/games/ownership";
 import { extractParticipantIds } from "@boardgames/core/history/participant-results";
 import { lowScoreWinsForSlug } from "@boardgames/core/history/score-config";
 import {
@@ -209,7 +210,10 @@ profileRoutes.get("/", async (c) => {
   for (const row of inventoryResult.rows) {
     try {
       const inv = parseRow(InventoryRowSchema, row, "user_inventory");
-      ownedByUser.set(inv.user_id, inv.game_slugs_json.length);
+      // Count catalog games, not stored rows: a deck counts as the games it
+      // unlocks, EXIT boxes collapse into the one "exit" entry. Matches the
+      // profile page's library, which renders the same derived set.
+      ownedByUser.set(inv.user_id, ownedCatalogSlugs(inv.game_slugs_json).size);
     } catch (err) {
       if (!(err instanceof RowParseError)) throw err;
     }
@@ -316,8 +320,16 @@ profileRoutes.get("/:userId", async (c) => {
     ? readEditableRow(parseRow(ProfileRowSchema, profileResult.rows[0], "user_profiles"))
     : { editable: EMPTY_EDITABLE, skill: null };
 
+  // Library = the catalog games the stored inventory amounts to: a card deck
+  // shows as its games, EXIT boxes fold into the "exit" entry, and the deck /
+  // box pseudo-slugs never reach the wire.
   const library = inventoryResult.rows[0]
-    ? parseRow(ViewerInventoryRowSchema, inventoryResult.rows[0], "user_inventory").game_slugs_json
+    ? [
+        ...ownedCatalogSlugs(
+          parseRow(ViewerInventoryRowSchema, inventoryResult.rows[0], "user_inventory")
+            .game_slugs_json,
+        ),
+      ].sort()
     : [];
 
   const matchRows = parseRows(MatchResultRowSchema, matchResult.rows, "match_results");

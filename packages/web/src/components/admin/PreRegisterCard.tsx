@@ -1,3 +1,5 @@
+import { CARD_DECKS, isDeckGameSlug } from "@boardgames/core/games/card-decks";
+import { EXIT_CATALOG_SLUG, EXIT_GAMES } from "@boardgames/core/games/exit-games";
 import type { OnlineMode } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useRef, useState } from "react";
@@ -6,12 +8,19 @@ import { useEditableList } from "../../hooks/useEditableList";
 import { errorMessageOf } from "../../lib/error-message";
 import { adminFetchPendingInventory, adminSavePendingInventory } from "../../lib/inventory";
 import { qk } from "../../lib/query-keys";
+import CardDeckList from "../CardDeckList";
+import ExitBoxList from "../ExitBoxList";
 import InventoryGrid from "../InventoryGrid";
 import { Button } from "../ui/Button";
 import { ErrorAlert } from "../ui/ErrorAlert";
 import { SegmentedControl } from "../ui/SegmentedControl";
 import { ExpandableAdminCard } from "./ExpandableAdminCard";
 import { ONLINE_MODE_OPTIONS } from "./online-mode-options";
+
+// Derived-ownership entries can't be stamped directly: the EXIT anchor is
+// owned via boxes and traditional-deck card games via their deck, so the
+// queue offers `CardDeckList` / `ExitBoxList` toggles instead of grid cells.
+const ownableGames = games.filter((g) => g.slug !== EXIT_CATALOG_SLUG && !isDeckGameSlug(g.slug));
 
 /**
  * Admin-only "pre-register" queue — a slug list + online mode that gets
@@ -111,10 +120,17 @@ export function PreRegisterCard() {
               aria-label="Pre-register online mode"
             />
           </div>
-          <InventoryGrid selected={slugList.draft} onToggle={slugList.toggle} />
+          <InventoryGrid
+            selected={slugList.draft}
+            onToggle={slugList.toggle}
+            games={ownableGames}
+          />
+          <CardDeckList selected={slugList.draft} onToggle={slugList.toggle} />
+          <ExitBoxList selected={slugList.draft} onToggle={slugList.toggle} />
           <div className="flex items-center justify-between gap-2">
             <span className="text-xs text-fg-muted">
-              {slugList.draft.length} of {games.length} selected
+              {slugList.draft.length} of{" "}
+              {ownableGames.length + CARD_DECKS.length + EXIT_GAMES.length} selected
             </span>
             <div className="flex items-center gap-2">
               {(queued > 0 || committedMode !== "offline") && (

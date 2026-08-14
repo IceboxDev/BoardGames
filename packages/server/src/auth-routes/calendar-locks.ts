@@ -1,3 +1,4 @@
+import { expandOwnedSlugs } from "@boardgames/core/games/ownership";
 import {
   AvailableGamesQuerySchema,
   AvailableGamesSchema,
@@ -258,7 +259,7 @@ calendarLocksRoutes.get("/locks", async (c) => {
       if (!(err instanceof RowParseError)) throw err;
       continue;
     }
-    inventoryByUser.set(inv.user_id, new Set(inv.game_slugs_json));
+    inventoryByUser.set(inv.user_id, expandOwnedSlugs(new Set(inv.game_slugs_json)));
   }
 
   // date_key → raw reaction rows, grouped for the per-night ranking below.

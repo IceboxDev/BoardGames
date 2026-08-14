@@ -1,7 +1,7 @@
 import { ROOM_CODE_LENGTH } from "@boardgames/core/protocol/ws/room";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { SetupHeader, SetupLayout } from "../setup";
-import { Button, ErrorAlert, Field } from "../ui";
+import { Button, ErrorAlert, Field, Input } from "../ui";
 
 interface JoinRoomProps {
   title: string;
@@ -70,9 +70,11 @@ export function JoinRoom({
       ) : (
         <div className="mx-auto flex w-full max-w-sm flex-col gap-3">
           <Field label="Room Code" htmlFor={codeId}>
-            {/* Bespoke display input (oversized, centered, wide letter-spacing
-                for a 4-char code) — intentionally not the standard <Input>. */}
-            <input
+            {/* The standard <Input> wearing a display treatment (oversized,
+                centered, `tracking-code`). It keeps the app-wide accent focus
+                ring — this field used to be the only input in the app with an
+                emerald ring-1 focus. */}
+            <Input
               ref={codeInputRef}
               id={codeId}
               type="text"
@@ -83,7 +85,7 @@ export function JoinRoom({
               }}
               placeholder="ABCDEF"
               maxLength={ROOM_CODE_LENGTH}
-              className="w-full rounded-lg border border-white/10 bg-surface-800/60 px-4 py-3 text-center text-2xl font-bold uppercase tracking-[0.3em] text-white placeholder:text-fg-disabled outline-none transition-colors focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30"
+              className="bg-surface-800/60 px-4 py-3 text-center text-2xl font-bold uppercase tracking-code text-white placeholder:text-fg-disabled"
             />
           </Field>
           <Button variant="primary" size="lg" disabled={!canJoin} onClick={handleJoin}>

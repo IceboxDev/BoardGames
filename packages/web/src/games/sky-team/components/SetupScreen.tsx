@@ -1,5 +1,10 @@
 import { useMemo, useState } from "react";
-import { ControlGroup, SectionHeading } from "../../../components/setup";
+import {
+  ControlGroup,
+  DIFFICULTY,
+  type DifficultyTier,
+  SectionHeading,
+} from "../../../components/setup";
 import { Button } from "../../../components/ui/Button";
 import { SCENARIO_CARDS } from "../scenarios";
 import ScenarioPicker from "./ScenarioPicker";
@@ -25,9 +30,8 @@ interface StrategyOption {
   id: string;
   label: string;
   description: string;
-  difficulty: string;
-  accentColor: string;
-  badgeClass: string;
+  /** Shared tier — colors derive from `DIFFICULTY` (components/setup). */
+  difficulty: DifficultyTier;
 }
 
 const SEATS: SeatOption[] = [
@@ -52,8 +56,6 @@ const STRATEGIES: StrategyOption[] = [
     description:
       "Rule-based AI: safe placements, advances under pressure, spends coffee sparingly.",
     difficulty: "Medium",
-    accentColor: "#f59e0b",
-    badgeClass: "bg-amber-500/15 text-amber-300 ring-amber-500/30",
   },
 ];
 
@@ -201,13 +203,13 @@ function StrategyCard({
           ? "border-white/30 bg-surface-800 shadow-md"
           : "border-white/10 hover:bg-surface-800 hover:border-white/10"
       }`}
-      style={{ borderLeftWidth: "4px", borderLeftColor: option.accentColor }}
+      style={{ borderLeftWidth: "4px", borderLeftColor: DIFFICULTY[option.difficulty].accentColor }}
       aria-pressed={selected}
     >
       <div className="flex items-center justify-between gap-2">
         <span className="text-sm font-bold text-white">{option.label}</span>
         <span
-          className={`inline-flex items-center rounded-full px-1.5 py-0.5 text-4xs font-semibold uppercase tracking-wider ring-1 ring-inset ${option.badgeClass}`}
+          className={`inline-flex items-center rounded-full px-1.5 py-0.5 text-4xs font-semibold uppercase tracking-wider ring-1 ring-inset ${DIFFICULTY[option.difficulty].badgeClass}`}
         >
           {option.difficulty}
         </span>

@@ -31,6 +31,8 @@ import { activityLog } from "./0023-activity-log.ts";
 import { matchParticipants } from "./0024-match-participants.ts";
 import { campaignResultBackfill } from "./0025-campaign-result-backfill.ts";
 import { userDevices } from "./0026-user-devices.ts";
+import { exitGameVotes } from "./0027-exit-game-votes.ts";
+import { cardDeckInventory } from "./0028-card-deck-inventory.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -60,6 +62,8 @@ export const migrations: readonly Migration[] = [
   matchParticipants,
   campaignResultBackfill,
   userDevices,
+  exitGameVotes,
+  cardDeckInventory,
 ];
 
 /**

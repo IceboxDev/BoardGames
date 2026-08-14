@@ -10,7 +10,7 @@ import { BgaStreamEventSchema } from "@boardgames/core/protocol";
 import { useCallback, useEffect, useId, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { SetupHeader, SetupLayout } from "../../../components/setup";
-import { Button, ErrorAlert, Field } from "../../../components/ui";
+import { Button, ErrorAlert, Field, Input } from "../../../components/ui";
 import { useCopyToClipboard } from "../../../hooks/useCopyToClipboard";
 import { useGameShell } from "../../../hooks/useGameShell";
 import {
@@ -120,7 +120,9 @@ export default function BgaScreen() {
             Bridge my BGA table
           </Button>
           <Field label="…or spectate with a code" htmlFor={codeId}>
-            <input
+            {/* Same display-Input treatment as JoinRoom's room-code field —
+                shared accent focus ring, `tracking-code` display spacing. */}
+            <Input
               id={codeId}
               type="text"
               value={code}
@@ -130,7 +132,7 @@ export default function BgaScreen() {
               }}
               placeholder="K7XMPQ"
               maxLength={8}
-              className="w-full rounded-lg border border-white/10 bg-surface-800/60 px-4 py-3 text-center text-2xl font-bold uppercase tracking-[0.3em] text-white placeholder:text-fg-disabled outline-none transition-colors focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/30"
+              className="bg-surface-800/60 px-4 py-3 text-center text-2xl font-bold uppercase tracking-code text-white placeholder:text-fg-disabled"
             />
           </Field>
           <Button

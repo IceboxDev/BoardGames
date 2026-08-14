@@ -13,6 +13,7 @@ export * from "./http/bgg.ts";
 export * from "./http/calendar.ts";
 export * from "./http/calendar-feed.ts";
 export * from "./http/dnd.ts";
+export * from "./http/exit.ts";
 export * from "./http/games.ts";
 export * from "./http/history.ts";
 export * from "./http/inventory.ts";
