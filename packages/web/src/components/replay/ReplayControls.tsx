@@ -66,6 +66,7 @@ export function ReplayControls({ playback, description, className = "" }: Replay
         <Button variant="ghost" size="xs" onClick={() => goTo(last)} disabled={isLast} title="Last">
           ⟩⟩
         </Button>
+        {/* biome-ignore lint/correctness/noRestrictedElements: range slider — no ui Slider primitive exists (2 call sites app-wide) */}
         <input
           type="range"
           min={0}
@@ -80,7 +81,7 @@ export function ReplayControls({ playback, description, className = "" }: Replay
         </span>
         <Select
           block={false}
-          compact
+          size="sm"
           value={speed}
           onChange={(e) => setSpeed(Number(e.target.value))}
           aria-label="Playback speed"

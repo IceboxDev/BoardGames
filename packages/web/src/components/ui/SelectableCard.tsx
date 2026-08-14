@@ -1,5 +1,6 @@
 import type { CSSProperties, ReactNode } from "react";
-import type { SegmentedTone } from "./SegmentedControl";
+import { cn } from "../../lib/cn";
+import type { CoreTone } from "./tones";
 
 // ── SelectableCard ───────────────────────────────────────────────────────
 //
@@ -22,16 +23,17 @@ import type { SegmentedTone } from "./SegmentedControl";
 // omit it for navigation cards. Tone maps mirror SegmentedControl / Chip so a
 // card and a segmented option at the same tone read identically.
 
-export type SelectableCardPadding = "default" | "compact";
+export type SelectableCardPadding = "md" | "sm";
 
 type SelectableCardProps = {
   variant?: "tile" | "stripe";
   /** System tone driving tile hover border, glow, icon tint, selected ring. */
-  tone?: SegmentedTone;
+  tone?: CoreTone;
   /** Raw accent (hex/css color) for the `stripe` left bar + top hover line. */
   accentColor?: string;
   orientation?: "vertical" | "horizontal";
-  /** Padding density. `compact` tightens the card for dense grids / list rows. */
+  /** Padding density — `md` (default) or `sm` for dense grids / list rows.
+   *  Same scale words as every other primitive's size axis. */
   padding?: SelectableCardPadding;
   icon?: ReactNode;
   title?: ReactNode;
@@ -50,7 +52,7 @@ type SelectableCardProps = {
   "aria-label"?: string;
 };
 
-const TILE_HOVER_BORDER: Record<SegmentedTone, string> = {
+const TILE_HOVER_BORDER: Record<CoreTone, string> = {
   accent: "hover:border-accent-400/50",
   amber: "hover:border-amber-400/50",
   sky: "hover:border-sky-400/50",
@@ -58,7 +60,7 @@ const TILE_HOVER_BORDER: Record<SegmentedTone, string> = {
   rose: "hover:border-rose-400/50",
 };
 
-const TILE_HOVER_GLOW: Record<SegmentedTone, string> = {
+const TILE_HOVER_GLOW: Record<CoreTone, string> = {
   accent: "hover:shadow-glow-accent",
   amber: "hover:shadow-glow-amber",
   sky: "hover:shadow-glow-sky",
@@ -66,7 +68,7 @@ const TILE_HOVER_GLOW: Record<SegmentedTone, string> = {
   rose: "hover:shadow-glow-rose",
 };
 
-const TILE_SELECTED: Record<SegmentedTone, string> = {
+const TILE_SELECTED: Record<CoreTone, string> = {
   accent: "border-accent-400/60 bg-surface-800/80 ring-1 ring-accent-400/40",
   amber: "border-amber-400/60 bg-surface-800/80 ring-1 ring-amber-400/40",
   sky: "border-sky-400/60 bg-surface-800/80 ring-1 ring-sky-400/40",
@@ -75,7 +77,7 @@ const TILE_SELECTED: Record<SegmentedTone, string> = {
 };
 
 // Always-tinted icon tile (vertical tiles).
-const TILE_ICON: Record<SegmentedTone, string> = {
+const TILE_ICON: Record<CoreTone, string> = {
   accent: "bg-accent-500/10 text-accent-300 group-hover:bg-accent-500/20",
   amber: "bg-amber-500/10 text-amber-300 group-hover:bg-amber-500/20",
   sky: "bg-sky-500/10 text-sky-300 group-hover:bg-sky-500/20",
@@ -84,7 +86,7 @@ const TILE_ICON: Record<SegmentedTone, string> = {
 };
 
 // Neutral-until-hover icon tint (horizontal rows).
-const TILE_ICON_HOVER: Record<SegmentedTone, string> = {
+const TILE_ICON_HOVER: Record<CoreTone, string> = {
   accent: "group-hover:bg-accent-500/10 group-hover:text-accent-300",
   amber: "group-hover:bg-amber-500/10 group-hover:text-amber-300",
   sky: "group-hover:bg-sky-500/10 group-hover:text-sky-300",
@@ -92,7 +94,7 @@ const TILE_ICON_HOVER: Record<SegmentedTone, string> = {
   rose: "group-hover:bg-rose-500/10 group-hover:text-rose-300",
 };
 
-const TILE_TITLE_HOVER: Record<SegmentedTone, string> = {
+const TILE_TITLE_HOVER: Record<CoreTone, string> = {
   accent: "group-hover:text-accent-200",
   amber: "group-hover:text-amber-200",
   sky: "group-hover:text-sky-200",
@@ -105,7 +107,7 @@ export function SelectableCard({
   tone = "accent",
   accentColor,
   orientation = "vertical",
-  padding = "default",
+  padding = "md",
   icon,
   title,
   description,
@@ -122,20 +124,20 @@ export function SelectableCard({
   const isToggle = selected !== undefined;
   const animated = animationDelay !== undefined;
 
-  // Padding lives here (not in caller `className`) so call sites never need an
-  // `!important` to beat the default px/py. `compact` is orientation-aware.
+  // Padding lives here (not in caller `className`) so call sites keep the
+  // density decision on the named scale. `sm` is orientation-aware.
   const pad =
     variant === "stripe"
-      ? padding === "compact"
+      ? padding === "sm"
         ? orientation === "horizontal"
           ? "px-4 py-2.5"
           : "px-2 py-3 sm:px-4 sm:py-5"
         : "px-5 py-5"
       : orientation === "horizontal"
-        ? padding === "compact"
+        ? padding === "sm"
           ? "px-3 py-2.5"
           : "px-5 py-3.5"
-        : padding === "compact"
+        : padding === "sm"
           ? "px-3 py-4"
           : "px-6 py-8";
 
@@ -198,40 +200,34 @@ export function SelectableCard({
 
   let cls: string;
   if (variant === "stripe") {
-    cls = [
+    cls = cn(
       `group relative flex overflow-hidden rounded-xl border bg-surface-800/50 ${pad} text-left transition-all duration-200`,
       orientation === "horizontal" ? "items-center gap-3" : "flex-col",
       isToggle && selected
         ? "border-white/20 bg-surface-800/80 shadow-lg"
         : "border-surface-600/80 hover:-translate-y-0.5 hover:bg-surface-800/80 hover:shadow-lg hover:shadow-black/20",
-      animated ? "animate-card-fade-up" : "",
-      onClick ? "disabled:pointer-events-none disabled:opacity-50" : "",
+      animated && "animate-card-fade-up",
+      onClick && "disabled:pointer-events-none disabled:opacity-50",
       className,
-    ]
-      .filter(Boolean)
-      .join(" ");
+    );
   } else if (orientation === "horizontal") {
-    cls = [
+    cls = cn(
       `group flex items-center gap-3 rounded-xl border bg-surface-800/30 ${pad} text-left transition-all duration-200 hover:bg-surface-800/60`,
       isToggle && selected ? TILE_SELECTED[tone] : `border-white/10 ${TILE_HOVER_BORDER[tone]}`,
-      animated ? "animate-card-fade-up" : "",
-      onClick ? "disabled:pointer-events-none disabled:opacity-50" : "",
+      animated && "animate-card-fade-up",
+      onClick && "disabled:pointer-events-none disabled:opacity-50",
       className,
-    ]
-      .filter(Boolean)
-      .join(" ");
+    );
   } else {
-    cls = [
+    cls = cn(
       `group flex flex-col items-center gap-4 rounded-2xl border bg-surface-800/40 ${pad} text-center shadow-lg shadow-transparent transition-all duration-300 hover:-translate-y-1 hover:bg-surface-800/70 hover:shadow-xl`,
       isToggle && selected
         ? TILE_SELECTED[tone]
         : `border-white/10 ${TILE_HOVER_BORDER[tone]} ${TILE_HOVER_GLOW[tone]}`,
-      animated ? "animate-card-fade-up" : "",
-      onClick ? "disabled:pointer-events-none disabled:opacity-50" : "",
+      animated && "animate-card-fade-up",
+      onClick && "disabled:pointer-events-none disabled:opacity-50",
       className,
-    ]
-      .filter(Boolean)
-      .join(" ");
+    );
   }
 
   return (

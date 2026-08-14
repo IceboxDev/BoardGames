@@ -175,6 +175,7 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
           {/* 1. Reference image */}
           <FieldGroup label="Reference photo">
             <label className="flex cursor-pointer items-center gap-3 rounded-lg border border-dashed border-white/15 bg-surface-900/60 p-3 transition hover:border-accent-400/40">
+              {/* biome-ignore lint/correctness/noRestrictedElements: sr-only file input behind the styled dropzone — no visible chrome to drift */}
               <input type="file" accept="image/*" onChange={handleFile} className="sr-only" />
               {referenceImage ? (
                 <img

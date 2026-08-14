@@ -9,6 +9,7 @@ import {
   fabledByGroup,
   findClocktowerCharacter,
 } from "../../../games/blood-on-the-clocktower/characters";
+import { Badge } from "../../ui/Badge";
 import { Chip } from "../../ui/Chip";
 import { Select } from "../../ui/Select";
 import { ParticipantPicker } from "../ParticipantPicker";
@@ -215,7 +216,7 @@ function StorytellerPicker({
       <GroupLabel>Storyteller</GroupLabel>
       <div className="flex flex-wrap items-center gap-2">
         <Select
-          compact
+          size="sm"
           block={false}
           value={moderator?.userId ?? ""}
           onChange={(e) => {
@@ -233,7 +234,7 @@ function StorytellerPicker({
         {moderator && (
           <>
             <Select
-              compact
+              size="sm"
               block={false}
               value={moderator.role ?? ""}
               onChange={(e) => onChangeFabled(e.target.value || undefined)}
@@ -306,7 +307,7 @@ function CharacterRow({
         <>
           <AlignmentBadge align={align} />
           <Select
-            compact
+            size="sm"
             block={false}
             className="w-44"
             id={id}
@@ -333,20 +334,12 @@ function CharacterRow({
 function AlignmentBadge({ align }: { align: "good" | "evil" | null }) {
   if (!align) {
     return (
-      <span className="rounded px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wide text-fg-disabled">
+      <span className="px-1.5 py-0.5 text-3xs font-semibold uppercase tracking-pill text-fg-disabled">
         —
       </span>
     );
   }
-  return (
-    <span
-      className={`rounded px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wide ${
-        align === "good" ? "bg-emerald-500/15 text-emerald-300" : "bg-rose-500/15 text-rose-300"
-      }`}
-    >
-      {align}
-    </span>
-  );
+  return <Badge tone={align === "good" ? "emerald" : "rose"}>{align}</Badge>;
 }
 
 function WinnerButton({

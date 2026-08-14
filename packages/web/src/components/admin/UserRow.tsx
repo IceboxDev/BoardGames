@@ -208,7 +208,7 @@ function DeleteOrOnlineCell({
         ) : confirmingDelete ? (
           <span className="inline-flex h-6 items-center text-xs text-rose-300">Confirm below…</span>
         ) : (
-          <Chip pressed tone="rose" size="xs" ring={false} onClick={onStartDelete}>
+          <Chip pressed tone="rose" size="xs" flat onClick={onStartDelete}>
             Delete
           </Chip>
         )

@@ -1,4 +1,6 @@
 import type { ElementType, HTMLAttributes, ReactNode } from "react";
+import { cn } from "../../lib/cn";
+import { type CoreTone, TONE_TEXT } from "./tones";
 
 // ── Eyebrow / MicroLabel ─────────────────────────────────────────────────
 //
@@ -8,7 +10,10 @@ import type { ElementType, HTMLAttributes, ReactNode } from "react";
 // with nine different `tracking-[…]` values across ~20 files.
 //
 //   <Eyebrow>    the kicker ABOVE a title or section. Widest tracking
-//                (`tracking-eyebrow`), `text-2xs`, tone-colored.
+//                (`tracking-eyebrow`), tone-colored. `size` covers the three
+//                real densities: sm (text-3xs, drawers/dense chrome),
+//                md (text-2xs, the default kicker), lg (text-xs, section
+//                labels above whole setup columns).
 //                e.g. "Who's coming", "Tonight's quest", "History".
 //
 //   <MicroLabel> the dense in-row caption. Tighter (`tracking-label`),
@@ -20,37 +25,47 @@ import type { ElementType, HTMLAttributes, ReactNode } from "react";
 // it owns `tracking-pill` plus the pill shape and tone fill.
 //
 // Both are polymorphic via `as` so they can be a <p>, <span>, <h2>, or <dt>
-// without losing the typography.
+// without losing the typography. Tones come from the shared vocabulary in
+// `tones.ts`; the no-color member is `"neutral"` (like every other primitive).
 
-export type EyebrowTone = "accent" | "amber" | "sky" | "emerald" | "rose" | "muted";
+export type EyebrowTone = CoreTone | "neutral";
+export type EyebrowSize = "sm" | "md" | "lg";
 
-const EYEBROW_TONE: Record<EyebrowTone, string> = {
-  accent: "text-accent-400",
-  amber: "text-amber-300",
-  sky: "text-sky-300",
-  emerald: "text-emerald-300",
-  rose: "text-rose-300",
-  muted: "text-fg-muted",
+const EYEBROW_SIZE: Record<EyebrowSize, string> = {
+  sm: "text-3xs",
+  md: "text-2xs",
+  lg: "text-xs",
 };
 
 type EyebrowProps = HTMLAttributes<HTMLElement> & {
   as?: ElementType;
   tone?: EyebrowTone;
+  size?: EyebrowSize;
+  /** Drop the tone color so the caller can color it (e.g. a per-game
+   *  `text-[var(--accent)]`). Mirrors MicroLabel's prop of the same name. */
+  inheritColor?: boolean;
   children: ReactNode;
 };
 
 export function Eyebrow({
   as: Tag = "p",
   tone = "accent",
-  className = "",
+  size = "md",
+  inheritColor = false,
+  className,
   children,
   ...rest
 }: EyebrowProps) {
-  const cls = ["text-2xs font-semibold uppercase tracking-eyebrow", EYEBROW_TONE[tone], className]
-    .filter(Boolean)
-    .join(" ");
   return (
-    <Tag className={cls} {...rest}>
+    <Tag
+      className={cn(
+        "font-semibold uppercase tracking-eyebrow",
+        EYEBROW_SIZE[size],
+        !inheritColor && TONE_TEXT[tone],
+        className,
+      )}
+      {...rest}
+    >
       {children}
     </Tag>
   );
@@ -66,15 +81,19 @@ type MicroLabelProps = HTMLAttributes<HTMLElement> & {
 export function MicroLabel({
   as: Tag = "span",
   inheritColor = false,
-  className = "",
+  className,
   children,
   ...rest
 }: MicroLabelProps) {
-  const cls = ["text-3xs uppercase tracking-label", inheritColor ? "" : "text-fg-muted", className]
-    .filter(Boolean)
-    .join(" ");
   return (
-    <Tag className={cls} {...rest}>
+    <Tag
+      className={cn(
+        "text-3xs uppercase tracking-label",
+        !inheritColor && "text-fg-muted",
+        className,
+      )}
+      {...rest}
+    >
       {children}
     </Tag>
   );

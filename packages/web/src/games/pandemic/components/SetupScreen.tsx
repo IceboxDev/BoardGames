@@ -79,7 +79,7 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
           <div>
             <SectionLabel>Players</SectionLabel>
             <SegmentedControl
-              shape="rect"
+              shape="rounded"
               selectionMode="toggle"
               aria-label="Number of players"
               options={PLAYER_OPTIONS}
@@ -99,7 +99,7 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
                   accentColor={d.accent}
                   selected={difficulty === d.value}
                   onClick={() => setDifficulty(d.value)}
-                  padding="compact"
+                  padding="sm"
                 >
                   {/* Epidemic count */}
                   <div

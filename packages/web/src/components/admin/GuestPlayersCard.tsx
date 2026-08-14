@@ -196,7 +196,7 @@ export function GuestPlayersCard({ guests, members, onChanged }: Props) {
                         Merge…
                       </Button>
                       <IconButton
-                        variant="danger"
+                        tone="rose"
                         size="xs"
                         aria-label={`Delete guest ${g.name}`}
                         onClick={() => setPendingDeleteId(g.id)}
@@ -209,7 +209,7 @@ export function GuestPlayersCard({ guests, members, onChanged }: Props) {
                   <div className="mt-1.5 flex flex-wrap items-center gap-2 border-t border-white/5 pt-1.5">
                     <span className="text-xs text-fg-secondary">Merge into</span>
                     <Select
-                      compact
+                      size="sm"
                       block={false}
                       value={mergeTargetId}
                       onChange={(e) => setMergeTargetId(e.target.value)}

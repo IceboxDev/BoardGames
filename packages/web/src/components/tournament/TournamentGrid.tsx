@@ -384,7 +384,7 @@ export default function TournamentGrid({
                         <Button
                           variant="plain"
                           size="xs"
-                          fill
+                          bleed
                           onClick={() =>
                             onViewMatchHistory?.(matchup.strategyA, matchup.strategyB, tournamentId)
                           }
@@ -417,7 +417,7 @@ export default function TournamentGrid({
                         <Button
                           variant="plain"
                           size="xs"
-                          fill
+                          bleed
                           onClick={() => {
                             const aId = row.id < col.id ? row.id : col.id;
                             const bId = row.id < col.id ? col.id : row.id;

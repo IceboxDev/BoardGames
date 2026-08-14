@@ -140,7 +140,7 @@ export function DndForm({ users, value, onChange, openCampaigns }: Props) {
       <Field label="Dungeon Master" htmlFor={dmId} hint="Runs the game — not counted in the party">
         <Select
           id={dmId}
-          compact
+          size="sm"
           value={value.moderator?.userId ?? ""}
           onChange={(e) => setDm(e.target.value)}
         >

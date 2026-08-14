@@ -83,7 +83,7 @@ function useCampaign(campaignId: string | undefined) {
 function PendingScreen() {
   return (
     <div className={`relative z-10 flex h-full ${BG}`}>
-      <LoadingState fill label="Opening the tome…" />
+      <LoadingState fillHeight label="Opening the tome…" />
     </div>
   );
 }

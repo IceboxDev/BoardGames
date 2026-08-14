@@ -71,6 +71,9 @@
   --tracking-label: 0.14em;
   --tracking-pill: 0.18em;
   --tracking-eyebrow: 0.25em;
+  /* code — oversized room/lobby code displays (JoinRoom input, the BGA
+     bridge screen). A display role, not a label role, hence its own step. */
+  --tracking-code: 0.3em;
   /* Glow shadows. Each carries its palette's exact rgb so call sites stop
      hand-duplicating `shadow-[0_0_12px_-4px_rgba(99,102,241,0.5)]` — which is
      just accent-500. Consumed by SegmentedControl/Chip emphasis + selectable
@@ -151,6 +154,15 @@
 }
 
 /* ── Base ────────────────────────────────────────── */
+
+/* Reserve the scrollbar gutter even when no scrollbar renders. Without this,
+   centered (`mx-auto`) chrome shifts ~half a scrollbar width between pages
+   that scroll the body, pages that scroll inside <main> (layout="fixed"),
+   and short pages with no scrollbar at all — the TopNav logo visibly jumped
+   on every such transition on classic-scrollbar platforms. */
+html {
+  scrollbar-gutter: stable;
+}
 
 body {
   font-family: var(--font-body);

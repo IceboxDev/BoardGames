@@ -80,10 +80,14 @@ export function AvailabilityActionBar({
         </div>
       ) : (
         <div className="flex w-full flex-col items-center gap-2 sm:max-w-md">
+          {/* `solid`+amber is the real recipe — this used to hand-paint
+              `bg-amber-500` over `variant="primary"`, whose gradient
+              (background-image) silently painted over the amber anyway. */}
           <Button
-            variant="primary"
+            variant="solid"
+            tone="amber"
             onClick={onExitLockMode}
-            className="w-full whitespace-nowrap bg-amber-500 px-4 py-2 text-sm hover:bg-amber-400 sm:px-5 sm:py-3 sm:text-base"
+            className="w-full whitespace-nowrap px-4 py-2 text-sm sm:px-5 sm:py-3 sm:text-base"
           >
             Exit lock-in mode
           </Button>
@@ -117,7 +121,7 @@ function LockInButton({ onClick }: { onClick: () => void }) {
       tone="amber"
       variant="outlined"
       size="sm"
-      ring={false}
+      flat
       onClick={onClick}
       aria-label="Enter lock-in mode"
       icon={<PadlockIcon closed className="h-3.5 w-3.5" />}

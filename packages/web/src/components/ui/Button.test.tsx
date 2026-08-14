@@ -87,7 +87,7 @@ describe("Button — rendering", () => {
   });
 });
 
-describe("Button — tone / fill / align", () => {
+describe("Button — tone / bleed / align", () => {
   it("variant=tinted uses the tone's tinted palette", () => {
     render(
       <Button variant="tinted" tone="purple">
@@ -97,7 +97,7 @@ describe("Button — tone / fill / align", () => {
     expect(screen.getByRole("button").className).toMatch(/border-purple-400/);
   });
 
-  it("variant=solid uses the tone's solid fill", () => {
+  it("variant=solid uses the tone’s solid fill", () => {
     render(
       <Button variant="solid" tone="emerald">
         X
@@ -117,9 +117,9 @@ describe("Button — tone / fill / align", () => {
     expect(cls).not.toMatch(/bg-rose-500/);
   });
 
-  it("fill stretches to the parent and drops size padding + shape", () => {
+  it("bleed stretches to the parent and drops size padding + shape", () => {
     render(
-      <Button fill size="md">
+      <Button bleed size="md">
         X
       </Button>,
     );

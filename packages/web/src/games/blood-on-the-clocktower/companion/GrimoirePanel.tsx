@@ -66,7 +66,7 @@ export default function GrimoirePanel({
             <li key={p.seat}>
               <Button
                 variant="plain"
-                fill
+                bleed
                 onClick={() => setOpenSeat(p.seat)}
                 className="flex min-h-11 w-full flex-col gap-0.5 rounded-lg border border-white/5 bg-surface-950/50 px-2 py-1.5 text-left transition hover:border-white/20"
               >
@@ -193,7 +193,7 @@ function TravellersPanel({ state, update }: { state: CompanionState; update: Upd
             <Select
               aria-label="Traveller character override"
               block={false}
-              compact
+              size="sm"
               value={character ?? ""}
               onChange={(e) => setRolled(e.target.value as CharacterId)}
               className="w-32 shrink-0"
@@ -272,7 +272,7 @@ function SwapSeatsPanel({ state, update }: { state: CompanionState; update: Upda
             id={`${fieldId}-swap-${i === 0 ? "a" : "b"}`}
             aria-label={`Swap seat ${i === 0 ? "A" : "B"}`}
             block={false}
-            compact
+            size="sm"
             value={value ?? ""}
             onChange={(e) => {
               const v = e.target.value === "" ? undefined : Number(e.target.value);

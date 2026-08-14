@@ -126,7 +126,7 @@ export default function BagScreen({
           variant="ghost"
           size="xs"
           onClick={async () => {
-            if (await confirm({ title: "Back to setup?", tone: "danger" })) onCancel();
+            if (await confirm({ title: "Back to setup?", variant: "danger" })) onCancel();
           }}
         >
           Back to setup
@@ -216,7 +216,7 @@ export default function BagScreen({
             ]}
             value={demonSkill}
             onChange={setDemonSkill}
-            shape="rect"
+            shape="rounded"
             size="xs"
             fullWidth
             selectionMode="toggle"
@@ -271,7 +271,7 @@ export default function BagScreen({
                       id={`${fieldId}-seat-${seat}`}
                       aria-label={`Traveller character for ${name}`}
                       block={false}
-                      compact
+                      size="sm"
                       value={traveller.character ?? ""}
                       onChange={(e) =>
                         setTraveller(seat, {
@@ -327,7 +327,7 @@ export default function BagScreen({
                   id={`${fieldId}-seat-${seat}`}
                   aria-label={`Token drawn by ${name}`}
                   block={false}
-                  compact
+                  size="sm"
                   value={current ?? ""}
                   onChange={(e) =>
                     setDraw(seat, e.target.value ? (e.target.value as CharacterId) : null)

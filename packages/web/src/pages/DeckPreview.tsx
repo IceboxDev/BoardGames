@@ -1,7 +1,10 @@
 import { useState } from "react";
 import { CardDeck } from "../components/CardDeck";
 import { Chip } from "../components/ui/Chip";
+import { LABEL_CLS } from "../components/ui/Field";
 import { PageMain, PageShell } from "../components/ui/PageShell";
+import { Section } from "../components/ui/Section";
+import { Surface } from "../components/ui/Surface";
 
 // ---------------------------------------------------------------------------
 // Sample card backs
@@ -89,10 +92,9 @@ export default function DeckPreview() {
           <div className="w-full space-y-6 lg:w-64 lg:shrink-0">
             {/* Card count */}
             <div>
-              <span className="mb-2 block text-xs font-medium uppercase tracking-label text-fg-secondary">
-                Cards remaining
-              </span>
+              <span className={`mb-2 block ${LABEL_CLS}`}>Cards remaining</span>
               <div className="flex items-center gap-3">
+                {/* biome-ignore lint/correctness/noRestrictedElements: range slider — no ui Slider primitive exists (2 call sites app-wide) */}
                 <input
                   type="range"
                   min={0}
@@ -111,7 +113,7 @@ export default function DeckPreview() {
                     pressed={count === n}
                     tone="accent"
                     size="xs"
-                    ring={false}
+                    flat
                     onClick={() => setCount(n)}
                   >
                     {n}
@@ -122,14 +124,12 @@ export default function DeckPreview() {
 
             {/* Trump toggle */}
             <div>
-              <span className="mb-2 block text-xs font-medium uppercase tracking-label text-fg-secondary">
-                Trump card
-              </span>
+              <span className={`mb-2 block ${LABEL_CLS}`}>Trump card</span>
               <Chip
                 pressed={showTrump}
                 tone="accent"
                 size="md"
-                ring={false}
+                flat
                 onClick={() => setShowTrump(!showTrump)}
               >
                 {showTrump ? "Showing" : "Hidden"}
@@ -138,14 +138,12 @@ export default function DeckPreview() {
 
             {/* Glow toggle */}
             <div>
-              <span className="mb-2 block text-xs font-medium uppercase tracking-label text-fg-secondary">
-                Glow (selected)
-              </span>
+              <span className={`mb-2 block ${LABEL_CLS}`}>Glow (selected)</span>
               <Chip
                 pressed={isGlowing}
                 tone="amber"
                 size="md"
-                ring={false}
+                flat
                 onClick={() => setIsGlowing(!isGlowing)}
               >
                 {isGlowing ? "Glowing" : "Off"}
@@ -154,9 +152,7 @@ export default function DeckPreview() {
 
             {/* Back style */}
             <div>
-              <span className="mb-2 block text-xs font-medium uppercase tracking-label text-fg-secondary">
-                Card back style
-              </span>
+              <span className={`mb-2 block ${LABEL_CLS}`}>Card back style</span>
               <div className="flex gap-2">
                 {BACKS.map((b, i) => (
                   <Chip
@@ -164,7 +160,7 @@ export default function DeckPreview() {
                     pressed={backIndex === i}
                     tone="accent"
                     size="sm"
-                    ring={false}
+                    flat
                     onClick={() => setBackIndex(i)}
                   >
                     {b.name}
@@ -177,11 +173,12 @@ export default function DeckPreview() {
           {/* Preview area */}
           <div className="flex flex-1 flex-col gap-10">
             {/* All sizes side by side */}
-            <div>
-              <h2 className="mb-4 text-sm font-bold uppercase tracking-label text-fg-secondary">
-                All sizes
-              </h2>
-              <div className="flex items-end gap-10 rounded-xl border border-white/10 bg-surface-900/50 p-8">
+            <Section title="All sizes">
+              <Surface
+                radius="xl"
+                padding="none"
+                className="flex items-end gap-10 bg-surface-900/50 p-8"
+              >
                 {(["sm", "md", "lg"] as const).map((sz) => (
                   <div key={sz} className="flex flex-col items-center gap-3">
                     <CardDeck
@@ -200,15 +197,16 @@ export default function DeckPreview() {
                     </span>
                   </div>
                 ))}
-              </div>
-            </div>
+              </Surface>
+            </Section>
 
             {/* Low count gallery */}
-            <div>
-              <h2 className="mb-4 text-sm font-bold uppercase tracking-label text-fg-secondary">
-                Low count visualization (0-6)
-              </h2>
-              <div className="flex items-end gap-6 rounded-xl border border-white/10 bg-surface-900/50 p-8">
+            <Section title="Low count visualization (0-6)">
+              <Surface
+                radius="xl"
+                padding="none"
+                className="flex items-end gap-6 bg-surface-900/50 p-8"
+              >
                 {[0, 1, 2, 3, 4, 5, 6].map((n) => (
                   <div key={n} className="flex flex-col items-center gap-3">
                     <CardDeck
@@ -224,23 +222,24 @@ export default function DeckPreview() {
                     <span className="text-xs font-bold tabular-nums text-fg-secondary">{n}</span>
                   </div>
                 ))}
-              </div>
-            </div>
+              </Surface>
+            </Section>
 
             {/* Without trump */}
-            <div>
-              <h2 className="mb-4 text-sm font-bold uppercase tracking-label text-fg-secondary">
-                Without trump (Lost Cities style)
-              </h2>
-              <div className="flex items-end gap-6 rounded-xl border border-white/10 bg-surface-900/50 p-8">
+            <Section title="Without trump (Lost Cities style)">
+              <Surface
+                radius="xl"
+                padding="none"
+                className="flex items-end gap-6 bg-surface-900/50 p-8"
+              >
                 {[1, 5, 15, 30].map((n) => (
                   <div key={n} className="flex flex-col items-center gap-3">
                     <CardDeck count={n} size="md" renderBack={back.render} />
                     <span className="text-xs font-bold tabular-nums text-fg-secondary">{n}</span>
                   </div>
                 ))}
-              </div>
-            </div>
+              </Surface>
+            </Section>
           </div>
         </div>
       </PageMain>

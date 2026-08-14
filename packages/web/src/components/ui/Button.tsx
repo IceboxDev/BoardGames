@@ -1,5 +1,7 @@
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, Ref } from "react";
+import { cn } from "../../lib/cn";
 import { Spinner } from "./Spinner";
+import type { Tone } from "./tones";
 
 // The single text-button primitive. Owns disabled, focus-visible ring, the
 // palette, sizes, and an optional pill shape. Every catalog/admin/form/game
@@ -23,24 +25,19 @@ import { Spinner } from "./Spinner";
 // purple, a "sushi" orange). Those are tones — `variant="tinted" tone="purple"`
 // — so the global primitive never accretes per-game vocabulary.
 //
-//   fill  — strip padding/shape/gap and stretch to fill the parent (h/w-full).
+//   bleed — strip padding/shape/gap and stretch to fill the parent (h/w-full).
 //           For grid/matrix cells that are themselves the clickable surface
 //           (the tournament matrix). Compose multi-line content with a child
 //           wrapper; the button just provides the full-bleed hit area.
+//           (Named `bleed`, not `fill` — `fillHeight` on EmptyState/
+//           LoadingState/PageMain means "center in available height".)
 //   align — `center` (default) or `start` for left-aligned menu-row buttons.
 
 type StructuralVariant = "primary" | "secondary" | "ghost" | "link";
 type TintedAlias = "danger" | "warning" | "success";
 type Variant = StructuralVariant | TintedAlias | "tinted" | "solid" | "plain";
-export type ButtonTone =
-  | "accent"
-  | "emerald"
-  | "rose"
-  | "amber"
-  | "purple"
-  | "orange"
-  | "sky"
-  | "cyan";
+/** Colored tones only — `neutral` has no tinted/solid recipe; use `secondary`/`ghost`. */
+export type ButtonTone = Exclude<Tone, "neutral">;
 type Size = "xs" | "sm" | "md" | "lg";
 type Shape = "rounded" | "pill" | "square";
 type Align = "center" | "start";
@@ -58,13 +55,19 @@ type Props = ButtonHTMLAttributes<HTMLButtonElement> & {
   /** Stretch to fill the parent — convenience over `className="w-full"`. */
   block?: boolean;
   /** Full-bleed clickable cell: fill parent, drop padding/shape/gap. */
-  fill?: boolean;
+  bleed?: boolean;
   ref?: Ref<HTMLButtonElement>;
 };
 
 // `relative` anchors the loading spinner, which is absolutely centered over the
 // (still-laid-out but invisible) label. Swapping the label for a "…" glyph — as
 // this used to — collapsed the button's width mid-submit and jumped the row.
+//
+// COROLLARY: never pass `absolute`/`fixed` through `className` to pin a Button
+// somewhere — position a wrapper element instead. Overriding the position here
+// un-anchors the spinner, and before cn() the two position classes silently
+// fought in the stylesheet (the profile "Edit profile" button ended up in-flow
+// on top of the avatar that way).
 const BASE =
   "relative items-center font-medium transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/60 disabled:cursor-not-allowed disabled:opacity-50";
 
@@ -165,17 +168,17 @@ type VisualProps = {
   shape: Shape;
   align: Align;
   block: boolean;
-  fill: boolean;
+  bleed: boolean;
 };
 
-function visualClasses({ variant, tone, size, shape, align, block, fill }: VisualProps): string {
+function visualClasses({ variant, tone, size, shape, align, block, bleed }: VisualProps): string {
   const colorCls = colorFor(variant, tone);
   const alignCls = align === "start" ? "justify-start" : "justify-center";
 
-  // `link` strips chrome so text sits in the surrounding flow; `fill` turns the
-  // control into a padding-less, shape-less surface that fills its parent cell.
+  // `link` strips chrome so text sits in the surrounding flow; `bleed` turns
+  // the control into a padding-less, shape-less surface filling its parent.
   let layoutCls: string;
-  if (fill) {
+  if (bleed) {
     layoutCls = `flex h-full w-full p-0 ${SIZE_TEXT[size]} ${alignCls}`;
   } else if (variant === "link") {
     layoutCls = `inline-flex gap-2 text-xs ${alignCls}`;
@@ -183,8 +186,7 @@ function visualClasses({ variant, tone, size, shape, align, block, fill }: Visua
     layoutCls = `inline-flex gap-2 ${SIZE_PAD[size]} ${SIZE_TEXT[size]} ${SHAPES[shape]} ${alignCls}`;
   }
 
-  const widthCls = block && !fill ? "w-full" : "";
-  return [BASE, colorCls, layoutCls, widthCls].filter(Boolean).join(" ");
+  return cn(BASE, colorCls, layoutCls, block && !bleed && "w-full");
 }
 
 export function Button({
@@ -195,7 +197,7 @@ export function Button({
   align = "center",
   loading = false,
   block = false,
-  fill = false,
+  bleed = false,
   className = "",
   // Default to "button", NOT the native "submit". A bare <button> inside a
   // <form> implicitly submits it, so an action button (Cancel / Remove)
@@ -208,7 +210,7 @@ export function Button({
   ref,
   ...rest
 }: Props) {
-  const visualCls = visualClasses({ variant, tone, size, shape, align, block, fill });
+  const visualCls = visualClasses({ variant, tone, size, shape, align, block, bleed });
 
   return (
     <button
@@ -216,7 +218,7 @@ export function Button({
       type={type}
       disabled={disabled || loading}
       aria-busy={loading || undefined}
-      className={`${visualCls} ${className}`}
+      className={cn(visualCls, className)}
       {...rest}
     >
       {loading && (
@@ -272,11 +274,11 @@ export function ButtonLink({
   ref,
   ...rest
 }: ButtonLinkProps) {
-  const visualCls = visualClasses({ variant, tone, size, shape, align, block, fill: false });
+  const visualCls = visualClasses({ variant, tone, size, shape, align, block, bleed: false });
   return (
     <a
       ref={ref}
-      className={`${visualCls} ${className}`}
+      className={cn(visualCls, className)}
       {...(external ? { target: "_blank", rel: "noreferrer" } : {})}
       {...rest}
     >

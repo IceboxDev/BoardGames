@@ -1,17 +1,18 @@
 import type { ReactNode } from "react";
+import { Eyebrow } from "../ui/Label";
 import { Surface } from "../ui/Surface";
 
 /**
  * Micro section heading used by the full-viewport setup/lobby screens
- * (Sky Team's SetupScreen and the wide Lobby layout). Tighter and
- * smaller than `SectionLabel` — these screens stack several labelled
- * strips and can't afford its mb-5.
+ * (Sky Team's SetupScreen and the wide Lobby layout). The shared `Eyebrow`
+ * at its `sm` density, margin-free — these screens stack several labelled
+ * strips and can't afford `SectionLabel`'s mb-5.
  */
 export function SectionHeading({ children }: { children: ReactNode }) {
   return (
-    <h2 className="shrink-0 text-3xs font-bold uppercase tracking-eyebrow text-fg-secondary">
+    <Eyebrow as="h2" size="sm" inheritColor className="shrink-0 text-fg-secondary">
       {children}
-    </h2>
+    </Eyebrow>
   );
 }
 

@@ -62,8 +62,7 @@ export default function PlayerProfilePage() {
   });
 
   const topNav = (
-    <TopNav>
-      <TopNavBackButton to="/" label="Dashboard" />
+    <TopNav back={<TopNavBackButton to="/" label="Dashboard" />}>
       <TopNavLink to="/players">Players</TopNavLink>
     </TopNav>
   );
@@ -74,7 +73,7 @@ export default function PlayerProfilePage() {
         query={profileQuery}
         loading={
           <PageMain width="6xl" padding="spacious" fillHeight>
-            <LoadingState fill label="Loading profile…" />
+            <LoadingState fillHeight label="Loading profile…" />
           </PageMain>
         }
         errorFallback={(error) => {

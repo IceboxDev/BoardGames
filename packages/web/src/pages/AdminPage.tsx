@@ -156,13 +156,7 @@ export default function AdminPage() {
   }
 
   return (
-    <PageShell
-      topNav={
-        <TopNav width="7xl">
-          <TopNavBackButton to="/" label="Dashboard" />
-        </TopNav>
-      }
-    >
+    <PageShell topNav={<TopNav back={<TopNavBackButton to="/" label="Dashboard" />} />}>
       <PageMain width="7xl" padding="dense">
         <PageHeader
           title="Users"

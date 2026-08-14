@@ -8,6 +8,9 @@
 # Usage:
 #   scripts/screenshot-smoke.sh capture <out-dir> [base-url]
 #   scripts/screenshot-smoke.sh diff <dir-a> <dir-b> [report-dir]
+#   scripts/screenshot-smoke.sh nav-check <dir> [report-dir]
+#     — asserts the TopNav logo renders at the identical position on every
+#       captured route (the cross-page guard for the nav-width regression).
 #
 # CAVEAT — headless Chromium clamps the window to a MINIMUM 500px width:
 # a 411/360 "phone" window lays out at 500 CSS px and the capture is a crop.
@@ -34,6 +37,7 @@ BASE_URL_DEFAULT="http://localhost:5173"
 # route-name:path — extend as screens stabilize.
 ROUTES=(
   "login:/login"
+  "ui-gallery:/dev/ui"
   "deck-preview:/dev/deck-preview"
   "dnd-preview:/dev/dnd-preview"
   "dnd-tool-preview:/dev/dnd-tool-preview"
@@ -110,8 +114,48 @@ diff_runs() {
   echo "no visual changes"
 }
 
+# ── Nav stability check ───────────────────────────────────────────────────
+# Asserts the "Board Game Lab" logo sits at the IDENTICAL position on every
+# captured route (per viewport) by cropping the nav's logo region (top-left
+# 300x56 — left of any page actions) and pairwise-diffing routes against the
+# first. This is the regression guard for the per-page nav-width bug: a capped
+# or shifted nav moves the logo's hard glyph edges, which lights this up far
+# beyond the threshold, while backdrop-blur bleed-through stays below it.
+nav_check() {
+  local dir="$1" report="${2:-/tmp/screenshot-smoke-nav}"
+  mkdir -p "$report"
+  local failures=0
+  for vp in "${VIEWPORTS[@]}"; do
+    local vpname="${vp%%:*}"
+    local ref="" refname=""
+    for f in "$dir"/*--"${vpname}".png; do
+      [[ -f "$f" ]] || continue
+      local crop="$report/$(basename "${f%.png}")--nav.png"
+      convert "$f" -crop 300x56+0+0 +repage "$crop"
+      if [[ -z "$ref" ]]; then
+        ref="$crop"; refname="$(basename "$f")"
+        continue
+      fi
+      local metric
+      metric=$(compare -metric AE -fuzz 5% "$ref" "$crop" null: 2>&1 || true)
+      if [[ "${metric%%.*}" =~ ^[0-9]+$ ]] && (( ${metric%%.*} > 2000 )); then
+        echo "NAV SHIFT [$vpname] $(basename "$f") vs $refname — $metric px differ in the logo region"
+        failures=$((failures + 1))
+      else
+        echo "nav ok   [$vpname] $(basename "$f")"
+      fi
+    done
+  done
+  if (( failures > 0 )); then
+    echo "$failures route(s) render the nav logo at a different position — the nav must be full-bleed and identical everywhere"
+    exit 1
+  fi
+  echo "nav logo is stable across all captured routes"
+}
+
 case "${1:-}" in
   capture) shift; capture "$@" ;;
   diff) shift; diff_runs "$@" ;;
+  nav-check) shift; nav_check "$@" ;;
   *) sed -n '2,20p' "$0"; exit 1 ;;
 esac

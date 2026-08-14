@@ -30,8 +30,7 @@ export default function PlayersDirectoryPage() {
   }, [playersQuery.data, search]);
 
   const topNav = (
-    <TopNav>
-      <TopNavBackButton to="/" label="Dashboard" />
+    <TopNav back={<TopNavBackButton to="/" label="Dashboard" />}>
       {user && <TopNavLink to={`/u/${user.id}`}>My profile</TopNavLink>}
     </TopNav>
   );

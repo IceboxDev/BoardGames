@@ -36,6 +36,7 @@ export function PdfDropField({ file, onFileSelected, emptyTitle, emptyHint }: Pr
           : "border-amber-400/30 bg-dnd-ink/60 hover:border-amber-300/60 hover:bg-amber-400/[0.06]"
       }`}
     >
+      {/* biome-ignore lint/correctness/noRestrictedElements: sr-only file input behind the styled dropzone — no visible chrome to drift */}
       <input
         type="file"
         accept="application/pdf,.pdf"

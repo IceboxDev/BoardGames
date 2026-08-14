@@ -465,6 +465,7 @@ export function DndGameScreen({ campaign, party }: Props) {
       fan={
         screen === "main" && (!branchingBlocked || combatHere) ? (
           <div className="flex gap-2" style={{ height: 190 }}>
+            {/* biome-ignore lint/correctness/noRestrictedElements: D&D-tool themed textarea — parchment palette, not the app form chrome */}
             <textarea
               value={message}
               maxLength={NODE_MESSAGE_MAX}
@@ -560,7 +561,7 @@ export function DndGameScreen({ campaign, party }: Props) {
             />
           </DndPanel>
           {nodesQuery.isPending ? (
-            <LoadingState fill label="Unrolling the story tree…" />
+            <LoadingState fillHeight label="Unrolling the story tree…" />
           ) : combatHere ? (
             <CombatPanel
               combat={combatHere}
@@ -604,11 +605,11 @@ export function DndGameScreen({ campaign, party }: Props) {
       {screen === "players" && (
         <div className="min-h-0 flex-1 overflow-y-auto pt-3">
           {charactersQuery.isPending ? (
-            <LoadingState fill label="Opening the party ledger…" />
+            <LoadingState fillHeight label="Opening the party ledger…" />
           ) : partyMembers.length === 0 ? (
             <EmptyState
               tone="amber"
-              fill
+              fillHeight
               icon={<D20Die count={20} className="h-6 w-6" />}
               title="No adventurers in the party"
               description="Recruit them from the party setup before the session."
@@ -646,7 +647,7 @@ export function DndGameScreen({ campaign, party }: Props) {
       {screen === "history" && (
         <div className="min-h-0 flex-1 overflow-y-auto pt-3">
           {historyQuery.isPending ? (
-            <LoadingState fill label="Opening the chronicle…" />
+            <LoadingState fillHeight label="Opening the chronicle…" />
           ) : (
             <HistoryLog
               entries={history}

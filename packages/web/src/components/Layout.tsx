@@ -46,11 +46,7 @@ export default function Layout() {
     <PageShell
       layout="fixed"
       background="none"
-      topNav={
-        <TopNav homeHref="/games">
-          <TopNavBackButton to={href} label={label} />
-        </TopNav>
-      }
+      topNav={<TopNav homeHref="/games" back={<TopNavBackButton to={href} label={label} />} />}
     >
       {/* `id="app-main"` is a singleton portal target — `PassionPickOverlay`
           (and any future game overlays) call `getElementById("app-main")` to

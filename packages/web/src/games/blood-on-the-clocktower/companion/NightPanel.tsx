@@ -1290,7 +1290,7 @@ function CourtierStep({
           id={`${fieldId}-courtier`}
           aria-label="Character the Courtier chose"
           block={false}
-          compact
+          size="sm"
           value={choice}
           onChange={(e) => setChoice(e.target.value as CharacterId | "")}
           className="min-w-0 flex-1"
@@ -1358,7 +1358,7 @@ function GamblerStep({
           <Select
             id={`${fieldId}-guess`}
             aria-label="Character the Gambler guessed"
-            compact
+            size="sm"
             value={guess}
             onChange={(e) => setGuess(e.target.value as CharacterId | "")}
           >
@@ -1918,7 +1918,7 @@ function ApprenticeStep({
             id={`${fieldId}-apprentice`}
             aria-label="Ability gained by the Apprentice"
             block={false}
-            compact
+            size="sm"
             value={choice}
             onChange={(e) => setChoice(e.target.value as CharacterId | "")}
             className="min-w-0 flex-1"

@@ -1,9 +1,12 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { type CSSProperties, type HTMLAttributes, type ReactNode, useId, useRef } from "react";
 import { createPortal } from "react-dom";
+import { cn } from "../../lib/cn";
 import { XIcon } from "../icons";
 import { DialogBackdrop } from "./DialogBackdrop";
 import { useBodyScrollLock, useDialogEscape, useFocusTrap } from "./dialog-a11y";
+import { IconButton } from "./IconButton";
+import { Eyebrow } from "./Label";
 
 // Single dialog primitive. Owns: portal, backdrop, panel chrome, close X,
 // focus trap, body-scroll lock, escape, role=dialog, aria-modal,
@@ -30,10 +33,10 @@ import { useBodyScrollLock, useDialogEscape, useFocusTrap } from "./dialog-a11y"
 // past the viewport. Pair it with `ModalBody` (which owns `min-h-0 flex-1
 // overflow-y-auto`) and `ModalFooter` (which pins itself with `shrink-0`).
 //
-// `panelClassName` remains for non-sizing chrome (a tinted border) and for the
-// not-yet-migrated game modals. Do NOT put `max-w-*`/`max-h-*` in it: when
-// `size` is set, the two classes collide in the same CSS layer and the winner
-// is decided by Tailwind's generated order, not by string order.
+// `panelClassName` remains for non-sizing chrome (e.g. a tinted border).
+// Still do NOT put `max-w-*`/`max-h-*` in it: `cn()` now guarantees the caller
+// class would win deterministically, but width belongs on the `size` axis so
+// dialogs stay on the shared scale.
 
 export type ModalSize = "xs" | "sm" | "md" | "lg" | "xl" | "full";
 
@@ -54,7 +57,8 @@ type ModalProps = {
   size?: ModalSize;
   /** Pre-title eyebrow text (uppercase tracked). */
   eyebrow?: ReactNode;
-  /** Color class for the eyebrow. */
+  /** Color-class override for the eyebrow (e.g. `text-[var(--accent)]`).
+   *  When set it REPLACES the default amber tone rather than merging with it. */
   eyebrowClassName?: string;
   /** Visible heading. Rendered as <h2>; doubles as aria-labelledby target. */
   title?: ReactNode;
@@ -135,7 +139,7 @@ export function Modal({
           aria-labelledby={labelledBy}
           aria-label={labelledBy ? undefined : ariaLabel}
           tabIndex={-1}
-          className={[PANEL_BASE, sizeCls, panelClassName].filter(Boolean).join(" ")}
+          className={cn(PANEL_BASE, sizeCls, panelClassName)}
           style={style}
           initial={{ y: 16, scale: 0.96, opacity: 0 }}
           animate={{ y: 0, scale: 1, opacity: 1 }}
@@ -146,14 +150,10 @@ export function Modal({
             <div className="absolute right-4 top-4 z-20 flex items-center gap-1">
               {headerExtra}
               {!hideCloseButton && (
-                <button
-                  type="button"
-                  onClick={onClose}
-                  aria-label="Close"
-                  className="rounded-md p-1.5 text-fg-secondary transition hover:bg-white/5 hover:text-white"
-                >
-                  <XIcon />
-                </button>
+                // IconButton (not a raw <button>) so the close-X carries the
+                // focus-visible ring — Drawer's close-X always had one and a
+                // keyboard user tabbing to "Close" here got nothing.
+                <IconButton size="sm" aria-label="Close" onClick={onClose} icon={<XIcon />} />
               )}
             </div>
           )}
@@ -166,11 +166,15 @@ export function Modal({
               className={`flex min-w-0 max-w-full flex-col items-start gap-1 ${headerExtra ? "pr-20" : hideCloseButton ? "" : "pr-14"}`}
             >
               {eyebrow && (
-                <p
-                  className={`text-2xs font-semibold uppercase tracking-eyebrow ${eyebrowClassName}`}
+                // The shared Eyebrow primitive — Modal and Drawer used to
+                // spell this slot at two different type sizes by hand.
+                <Eyebrow
+                  tone="amber"
+                  inheritColor={!!eyebrowClassName}
+                  className={eyebrowClassName}
                 >
                   {eyebrow}
-                </p>
+                </Eyebrow>
               )}
               {title && (
                 <h2 id={titleId} className={titleClassName}>
@@ -213,13 +217,11 @@ type ModalBodyProps = HTMLAttributes<HTMLDivElement> & {
 const BODY_GAPS = { sm: "gap-3", md: "gap-4" } as const;
 
 export function ModalBody({ gap = "sm", className = "", children, ...rest }: ModalBodyProps) {
-  const cls = [
+  const cls = cn(
     "scrollbar-thin -mr-2 flex min-h-0 flex-1 flex-col overflow-y-auto pr-2",
     BODY_GAPS[gap],
     className,
-  ]
-    .filter(Boolean)
-    .join(" ");
+  );
   return (
     <div className={cls} {...rest}>
       {children}
@@ -249,12 +251,10 @@ type ModalFooterProps = {
 };
 
 export function ModalFooter({ start, children, className = "" }: ModalFooterProps) {
-  const cls = [
+  const cls = cn(
     "flex shrink-0 items-center justify-between gap-2 border-t border-white/10 pt-3",
     className,
-  ]
-    .filter(Boolean)
-    .join(" ");
+  );
   return (
     <footer className={cls}>
       <div className="min-w-0">{start}</div>

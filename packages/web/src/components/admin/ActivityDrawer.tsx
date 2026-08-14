@@ -4,7 +4,7 @@ import { useMemo } from "react";
 import { games } from "../../games/registry";
 import { useAdminUsers } from "../../hooks/useAdminUsers";
 import { adminFetchActivity, adminFetchDevices } from "../../lib/admin";
-import { formatDayKey, formatRelativeTime } from "../../lib/date-format";
+import { formatDayKey, formatRelativeTime, parseUtcStamp } from "../../lib/date-format";
 import { qk } from "../../lib/query-keys";
 import { Button } from "../ui/Button";
 import { Drawer } from "../ui/Drawer";
@@ -186,12 +186,6 @@ function ActivityList({
       ))}
     </div>
   );
-}
-
-/** Parse SQLite UTC "YYYY-MM-DD HH:MM:SS" into a local Date. */
-function parseUtcStamp(stamp: string): Date | null {
-  const d = new Date(stamp.includes(" ") ? `${stamp.replace(" ", "T")}Z` : stamp);
-  return Number.isNaN(d.getTime()) ? null : d;
 }
 
 function localTime(stamp: string): string {

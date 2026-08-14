@@ -12,13 +12,14 @@ import {
   TrophyIcon,
   UsersIcon,
 } from "../icons";
+import { TONE_BUBBLE, type Tone } from "../ui/tones";
 
 // Achievement badges, derived entirely from the public `ProfileStats` (no stored
 // data). Every badge is shown — earned ones in full color, not-yet-earned ones
 // muted — with a one-line description of the criterion so each is self
 // explanatory. Rendered as its own "Achievements" section on the profile.
 
-type BadgeTone = "accent" | "amber" | "emerald" | "sky";
+type BadgeTone = Extract<Tone, "accent" | "amber" | "emerald" | "sky">;
 
 type BadgeDef = {
   key: string;
@@ -117,24 +118,26 @@ const BADGES: BadgeDef[] = [
   },
 ];
 
+// Bubble fills come from the shared tone recipe; only the card chrome and
+// name tint are achievement-specific.
 const TONE: Record<BadgeTone, { bubble: string; card: string; name: string }> = {
   accent: {
-    bubble: "bg-accent-500/15 text-accent-300",
+    bubble: TONE_BUBBLE.accent,
     card: "border-accent-400/30 bg-accent-500/[0.06]",
     name: "text-accent-100",
   },
   amber: {
-    bubble: "bg-amber-500/15 text-amber-300",
+    bubble: TONE_BUBBLE.amber,
     card: "border-amber-400/30 bg-amber-500/[0.06]",
     name: "text-amber-100",
   },
   emerald: {
-    bubble: "bg-emerald-500/15 text-emerald-300",
+    bubble: TONE_BUBBLE.emerald,
     card: "border-emerald-400/30 bg-emerald-500/[0.06]",
     name: "text-emerald-100",
   },
   sky: {
-    bubble: "bg-sky-500/15 text-sky-300",
+    bubble: TONE_BUBBLE.sky,
     card: "border-sky-400/30 bg-sky-500/[0.06]",
     name: "text-sky-100",
   },

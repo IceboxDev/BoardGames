@@ -80,7 +80,7 @@ export default function LoginPage() {
         }
       >
         <SegmentedControl<Mode>
-          shape="rect"
+          shape="rounded"
           aria-label="Sign in or create an account"
           value={mode}
           onChange={setMode}

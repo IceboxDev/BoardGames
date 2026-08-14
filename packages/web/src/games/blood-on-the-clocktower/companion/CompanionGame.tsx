@@ -114,7 +114,7 @@ export default function CompanionGame({
               await confirm({
                 title: "Abandon this game?",
                 description: "The current game is deleted and you return to setup.",
-                tone: "danger",
+                variant: "danger",
               })
             ) {
               onAbandon();
@@ -197,7 +197,7 @@ export default function CompanionGame({
         ]}
         value={tab}
         onChange={setTab}
-        shape="rect"
+        shape="rounded"
         size="sm"
         fullWidth
         selectionMode="tabs"

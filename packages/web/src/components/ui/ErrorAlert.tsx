@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { cn } from "../../lib/cn";
 
 // The single inline error banner. One rose tone, one geometry. It is the ONLY
 // sanctioned way to surface an error string in app chrome: a hand-rolled rose
@@ -21,7 +22,10 @@ export function ErrorAlert({ title, message, className = "" }: ErrorAlertProps) 
   return (
     <div
       role="alert"
-      className={`rounded-lg border border-rose-500/30 bg-rose-500/10 px-4 py-2.5 text-sm text-rose-300 ${className}`}
+      className={cn(
+        "rounded-lg border border-rose-500/30 bg-rose-500/10 px-4 py-2.5 text-sm text-rose-300",
+        className,
+      )}
     >
       {title && <p className="font-semibold text-rose-200">{title}</p>}
       <p className={title ? "mt-0.5 text-rose-300/90" : ""}>{message}</p>

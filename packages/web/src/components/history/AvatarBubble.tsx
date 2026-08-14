@@ -33,7 +33,7 @@
 
 import { initialsFromName } from "../../lib/names.ts";
 
-type Tone = "winner" | "loser" | "muted";
+type Tone = "winner" | "loser" | "neutral";
 type Accent = "good" | "evil" | "village" | "wolf" | "tanner" | "neutral";
 type TeamAccent = Exclude<Accent, "neutral">;
 
@@ -70,7 +70,7 @@ const MUTED_BG = "bg-surface-900";
 const TONE_TEXT: Record<Tone, string> = {
   winner: "text-amber-50",
   loser: "text-fg-primary",
-  muted: "text-fg-muted",
+  neutral: "text-fg-muted",
 };
 
 // Ring colour expresses team affiliation; falls back to a neutral tone ring
@@ -86,7 +86,7 @@ const TEAM_RING: Record<TeamAccent, string> = {
 const TONE_RING_FALLBACK: Record<Tone, string> = {
   winner: "ring-1 ring-amber-400/60",
   loser: "ring-1 ring-white/15",
-  muted: "ring-1 ring-white/5",
+  neutral: "ring-1 ring-white/5",
 };
 
 type Props = {

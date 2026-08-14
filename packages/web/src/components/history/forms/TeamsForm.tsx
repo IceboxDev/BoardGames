@@ -162,7 +162,7 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
                 )}
                 {value.teams.length > 2 && (
                   <IconButton
-                    variant="danger"
+                    tone="rose"
                     size="xs"
                     aria-label={`Remove team ${idx + 1}`}
                     onClick={() => removeTeam(idx)}

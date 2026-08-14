@@ -135,7 +135,7 @@ export default function PortToHistoryModal({
                 <Select
                   aria-label={`Account for ${p.name}`}
                   block={false}
-                  compact
+                  size="sm"
                   value={resolved(p.seat, p.name)}
                   onChange={(e) => setMapping((m) => ({ ...m, [p.seat]: e.target.value }))}
                   className="w-40 shrink-0"
@@ -158,7 +158,7 @@ export default function PortToHistoryModal({
                 <Select
                   aria-label={`Account for Storyteller ${state.storyteller}`}
                   block={false}
-                  compact
+                  size="sm"
                   value={resolvedStoryteller}
                   onChange={(e) => setStorytellerId(e.target.value)}
                   className="w-40 shrink-0"

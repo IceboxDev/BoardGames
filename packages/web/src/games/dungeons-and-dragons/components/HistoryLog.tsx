@@ -24,7 +24,7 @@ export function HistoryLog({ entries, party, npcs, onOpenCharacter, onOpenNpc }:
     return (
       <EmptyState
         tone="amber"
-        fill
+        fillHeight
         icon={<D20Die count={20} className="h-6 w-6" />}
         title="The chronicle is unwritten"
         description="Press Log on any spoken text — arrivals, node narrations, combat — and it is recorded here, in order, as the party lived it."

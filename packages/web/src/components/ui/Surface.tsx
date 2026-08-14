@@ -1,4 +1,5 @@
 import type { ElementType, HTMLAttributes, ReactNode } from "react";
+import { cn } from "../../lib/cn";
 
 // ── Surface ──────────────────────────────────────────────────────────────
 //
@@ -22,11 +23,17 @@ import type { ElementType, HTMLAttributes, ReactNode } from "react";
 
 export type SurfaceVariant = "panel" | "tile" | "raised";
 export type SurfacePadding = "none" | "sm" | "md" | "lg" | "xl";
+export type SurfaceRadius = "md" | "lg" | "xl" | "2xl";
 
 type SurfaceProps = HTMLAttributes<HTMLElement> & {
   as?: ElementType;
   variant?: SurfaceVariant;
   padding?: SurfacePadding;
+  /** Override the variant's default radius. Exists because real panels
+   *  cluster on all four steps (rounded-xl alone had six hand-rolled
+   *  spellings before this prop) — without it, callers route around the
+   *  primitive entirely just to change a corner. */
+  radius?: SurfaceRadius;
   children: ReactNode;
 };
 
@@ -34,6 +41,13 @@ const VARIANTS: Record<SurfaceVariant, string> = {
   tile: "rounded-md border border-white/5 bg-surface-900/40",
   panel: "rounded-lg border border-white/10 bg-surface-900",
   raised: "rounded-2xl border border-white/[0.06] bg-surface-900/60",
+};
+
+const RADII: Record<SurfaceRadius, string> = {
+  md: "rounded-md",
+  lg: "rounded-lg",
+  xl: "rounded-xl",
+  "2xl": "rounded-2xl",
 };
 
 const PADDINGS: Record<SurfacePadding, string> = {
@@ -48,11 +62,12 @@ export function Surface({
   as: Tag = "div",
   variant = "panel",
   padding = "md",
+  radius,
   className = "",
   children,
   ...rest
 }: SurfaceProps) {
-  const cls = [VARIANTS[variant], PADDINGS[padding], className].filter(Boolean).join(" ");
+  const cls = cn(VARIANTS[variant], radius && RADII[radius], PADDINGS[padding], className);
   return (
     <Tag className={cls} {...rest}>
       {children}

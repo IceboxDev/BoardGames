@@ -30,7 +30,7 @@ type QueryLike<T> = {
 type QueryBoundaryProps<T> = {
   query: QueryLike<T>;
   children: (data: T) => ReactNode;
-  /** Override the default `<LoadingState fill />`. */
+  /** Override the default `<LoadingState fillHeight />`. */
   loading?: ReactNode;
   /** Label for the default LoadingState (ignored when `loading` is set). */
   loadingLabel?: string;
@@ -62,7 +62,7 @@ export function QueryBoundary<T>({
   }
 
   if (query.isPending || query.data === undefined) {
-    return <>{loading ?? <LoadingState fill label={loadingLabel} />}</>;
+    return <>{loading ?? <LoadingState fillHeight label={loadingLabel} />}</>;
   }
 
   if (empty !== undefined && isEmpty?.(query.data)) {

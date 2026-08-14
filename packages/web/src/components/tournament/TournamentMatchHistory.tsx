@@ -4,6 +4,7 @@ import { apiClient } from "../../lib/api-client";
 import { qk } from "../../lib/query-keys";
 import {
   formatDiff,
+  invertOutcome,
   type MatchColumn,
   type MatchOutcome,
   MatchResultsLayout,
@@ -111,8 +112,6 @@ export default function TournamentMatchHistory({
 
   const outcomeOf = (g: GameRecord): MatchOutcome =>
     g.scoreA > g.scoreB ? "win" : g.scoreB > g.scoreA ? "loss" : "draw";
-  const invert = (o: MatchOutcome): MatchOutcome =>
-    o === "win" ? "loss" : o === "loss" ? "win" : "draw";
 
   const columns: MatchColumn<GameRecord>[] = [
     {
@@ -139,7 +138,8 @@ export default function TournamentMatchHistory({
       id: "scoreB",
       header: labelB,
       align: "right",
-      cellClassName: (g) => `tabular-nums font-semibold ${scoreToneClass(invert(outcomeOf(g)))}`,
+      cellClassName: (g) =>
+        `tabular-nums font-semibold ${scoreToneClass(invertOutcome(outcomeOf(g)))}`,
       cell: (g) => g.scoreB,
     },
     {

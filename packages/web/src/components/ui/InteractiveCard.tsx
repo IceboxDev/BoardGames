@@ -1,4 +1,5 @@
 import type { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
+import { cn } from "../../lib/cn";
 
 // ── InteractiveCard ──────────────────────────────────────────────────────
 //
@@ -57,7 +58,7 @@ export function InteractiveCard<T extends ElementType = "button">({
   ...rest
 }: InteractiveCardProps<T>) {
   const Tag = (as ?? "button") as ElementType;
-  const cls = [CHROME, PADDINGS[padding], className].filter(Boolean).join(" ");
+  const cls = cn(CHROME, PADDINGS[padding], className);
   // Default a real button to type="button" so it never submits an enclosing
   // form by accident; callers can still pass `type` to override.
   const typeProp = Tag === "button" ? { type: "button" as const } : {};

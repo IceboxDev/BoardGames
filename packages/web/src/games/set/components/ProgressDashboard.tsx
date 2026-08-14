@@ -233,7 +233,7 @@ export default function ProgressDashboard({ history }: ProgressDashboardProps) {
               pressed={chartTab === tab.key}
               tone="accent"
               size="sm"
-              ring={false}
+              flat
               onClick={() => setChartTab(tab.key)}
             >
               {tab.label}

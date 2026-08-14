@@ -3,6 +3,7 @@ import { MinusIcon, PlusIcon } from "../icons";
 import { Button } from "../ui/Button";
 import { IconButton } from "../ui/IconButton";
 import { SelectableCard } from "../ui/SelectableCard";
+import { DIFFICULTY, type DifficultyTier } from "./difficulty";
 import { SectionLabel } from "./SectionLabel";
 import { SetupHeader } from "./SetupHeader";
 import { SetupLayout } from "./SetupLayout";
@@ -15,9 +16,9 @@ export interface StrategyOption {
   id: string;
   label: string;
   description: string;
-  difficulty: string;
-  accentColor: string;
-  badgeClass: string;
+  /** Names a shared tier — stripe color + badge classes derive from
+   *  `DIFFICULTY`, so games never re-declare the color table. */
+  difficulty: DifficultyTier;
 }
 
 export interface PvAISetupScreenProps {
@@ -74,7 +75,7 @@ function PlayerCountStepper({
       <div className="flex items-center gap-1">
         <IconButton
           variant="bordered"
-          shape="circle"
+          shape="pill"
           size="md"
           aria-label="Decrease player count"
           disabled={!canDecrement}
@@ -91,7 +92,7 @@ function PlayerCountStepper({
 
         <IconButton
           variant="bordered"
-          shape="circle"
+          shape="pill"
           size="md"
           aria-label="Increase player count"
           disabled={!canIncrement}
@@ -167,19 +168,20 @@ export function PvAISetupScreen({
       >
         {currentStrategies.map((strat, index) => {
           const stars = index + 1;
+          const diff = DIFFICULTY[strat.difficulty];
           return (
             <SelectableCard
               key={strat.id}
               variant="stripe"
-              accentColor={strat.accentColor}
+              accentColor={diff.accentColor}
               selected={effectiveId === strat.id}
-              padding="compact"
+              padding="sm"
               className="min-w-0"
               onClick={() => setSelectedId(strat.id)}
             >
               <div className="mb-1.5 flex items-start justify-between gap-0.5 sm:mb-3">
                 <span
-                  className={`inline-flex max-w-[4.5rem] items-center truncate rounded-full px-1 py-0.5 text-5xs font-semibold uppercase tracking-tight ring-1 ring-inset sm:max-w-none sm:px-2.5 sm:text-3xs sm:tracking-wider ${strat.badgeClass}`}
+                  className={`inline-flex max-w-18 items-center truncate rounded-full px-1 py-0.5 text-5xs font-semibold uppercase tracking-tight ring-1 ring-inset sm:max-w-none sm:px-2.5 sm:text-3xs sm:tracking-wider ${diff.badgeClass}`}
                 >
                   {strat.difficulty}
                 </span>
@@ -189,7 +191,7 @@ export function PvAISetupScreen({
                       key={n}
                       viewBox="0 0 20 20"
                       aria-hidden="true"
-                      fill={n <= stars ? strat.accentColor : "currentColor"}
+                      fill={n <= stars ? diff.accentColor : "currentColor"}
                       className={`h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 ${n <= stars ? "" : "text-fg-disabled"}`}
                     >
                       <path

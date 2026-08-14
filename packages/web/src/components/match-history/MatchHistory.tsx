@@ -9,6 +9,7 @@ import { LoadingState } from "../ui/LoadingState";
 import { QueryBoundary } from "../ui/QueryBoundary";
 import {
   formatDiff,
+  invertOutcome,
   type MatchColumn,
   type MatchOutcome,
   MatchResultsLayout,
@@ -58,8 +59,6 @@ export default function MatchHistory({
 
   const outcomeOf = (r: Replay): MatchOutcome =>
     r.winner === "p0" ? "win" : r.winner === "p1" ? "loss" : "draw";
-  const invert = (o: MatchOutcome): MatchOutcome =>
-    o === "win" ? "loss" : o === "loss" ? "win" : "draw";
 
   const columns: MatchColumn<Replay>[] = [
     {
@@ -85,7 +84,8 @@ export default function MatchHistory({
       id: "opp",
       header: "Opp",
       align: "right",
-      cellClassName: (r) => `tabular-nums font-semibold ${scoreToneClass(invert(outcomeOf(r)))}`,
+      cellClassName: (r) =>
+        `tabular-nums font-semibold ${scoreToneClass(invertOutcome(outcomeOf(r)))}`,
       cell: (r) => r.scoreP1 ?? "—",
     },
     {

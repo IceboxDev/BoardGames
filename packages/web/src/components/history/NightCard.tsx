@@ -3,6 +3,7 @@ import { Reorder, useDragControls } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import type { LockedDate } from "../../lib/calendar-locks";
 import { GripVerticalIcon } from "../icons";
+import { Badge } from "../ui/Badge";
 import { Button } from "../ui/Button";
 import { MatchCard } from "./MatchCard";
 
@@ -49,11 +50,7 @@ export function NightCard({
               {subtitleBits.join(" · ")}
             </span>
           )}
-          {!dateKey && (
-            <span className="rounded bg-white/5 px-1.5 py-0.5 text-3xs uppercase tracking-wider text-fg-muted">
-              standalone
-            </span>
-          )}
+          {!dateKey && <Badge className="text-fg-muted">standalone</Badge>}
         </div>
         {isAdmin && onAddMatch && (
           <Button

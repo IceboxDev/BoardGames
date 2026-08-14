@@ -61,7 +61,7 @@ export function DevicesScreen() {
   });
 
   if (sessionQuery.isPending) {
-    return <LoadingState fill label="Lighting the signal fires…" />;
+    return <LoadingState fillHeight label="Lighting the signal fires…" />;
   }
 
   return (
@@ -122,6 +122,7 @@ export function DevicesScreen() {
               )}
             </div>
           </div>
+          {/* biome-ignore lint/correctness/noRestrictedElements: hidden file input triggered by a styled Button — no visible chrome to drift */}
           <input
             ref={fileInput}
             type="file"

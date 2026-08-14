@@ -184,16 +184,19 @@ function AttendeeRow({
         <BringingList attendee={attendee} slugToGame={slugToGame} />
       </div>
 
+      {/* Kick button: `sm` box with `xs` padding — the old spelling was
+          size="xs" plus an h-7 w-7 override that only worked by Tailwind
+          output-order luck. */}
       {canKick && (
         <IconButton
-          variant="danger"
-          shape="circle"
-          size="xs"
+          tone="rose"
+          shape="pill"
+          size="sm"
           aria-label={`Remove ${attendee.name} from this game night`}
           title={`Remove ${attendee.name} — sets their RSVP to "Not going"`}
           disabled={isKicking}
           onClick={handleKick}
-          className="h-7 w-7 bg-white/[0.04]"
+          className="p-1 bg-white/[0.04]"
           icon={isKicking ? <Spinner size="xs" /> : <XIcon className="h-3.5 w-3.5" />}
         />
       )}

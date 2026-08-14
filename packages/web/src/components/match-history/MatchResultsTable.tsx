@@ -68,6 +68,12 @@ export function MatchTally({
 
 export type MatchOutcome = "win" | "loss" | "draw";
 
+/** The opposing side's outcome — was pasted byte-identically into both
+ *  match-history consumers before living here beside `scoreToneClass`. */
+export function invertOutcome(o: MatchOutcome): MatchOutcome {
+  return o === "win" ? "loss" : o === "loss" ? "win" : "draw";
+}
+
 /** Cell class for a score belonging to the given outcome's side. */
 export function scoreToneClass(outcome: MatchOutcome): string {
   if (outcome === "win") return "text-emerald-400";

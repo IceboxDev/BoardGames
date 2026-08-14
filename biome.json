@@ -41,7 +41,10 @@
           "level": "error",
           "options": {
             "elements": {
-              "button": "Use <Button>, <IconButton>, or <Chip> from components/ui instead. Raw <button> is permitted only in: ui/Button.tsx (the primitive itself), ui/Modal.tsx (portal-internal close-X), ui/DialogBackdrop.tsx (the shared backdrop), ui/SegmentedControl.tsx (segmented options), game/GameCardChrome.tsx (clickable card surface), game/VariantStrip.tsx (radio thumb-discs), offline/CalendarDayCell.tsx (day cells), offline/GameCarousel3D.tsx (chevrons), and the game-piece files in games/*/components/ (Card / Slot / Die / DrawPile / Table / piece trays). For any other intentional bespoke control, add a `biome-ignore lint/correctness/noRestrictedElements` comment with a one-line reason."
+              "button": "Use <Button>, <IconButton>, or <Chip> from components/ui instead. Raw <button> is permitted only in: ui/Button.tsx (the primitive itself), ui/DialogBackdrop.tsx (the shared backdrop), ui/SegmentedControl.tsx (segmented options), game/GameCardChrome.tsx (clickable card surface), game/VariantStrip.tsx (radio thumb-discs), offline/CalendarDayCell.tsx (day cells), offline/GameCarousel3D.tsx (chevrons), and the game-piece files in games/*/components/ (Card / Slot / Die / DrawPile / Table / piece trays). For any other intentional bespoke control, add a `biome-ignore lint/correctness/noRestrictedElements` comment with a one-line reason.",
+              "input": "Use <Input> or <Checkbox> from components/ui instead — raw inputs drift on focus rings and chrome (the room-code field grew the app's only emerald ring this way). Legit exceptions (the ui/ primitives themselves, sr-only file/checkbox inputs, range sliders with no primitive yet) carry a `biome-ignore lint/correctness/noRestrictedElements` comment with a one-line reason.",
+              "select": "Use <Select> from components/ui instead. The primitive itself is allowlisted; anything else needs a `biome-ignore lint/correctness/noRestrictedElements` comment with a one-line reason.",
+              "textarea": "Use <Textarea> from components/ui instead. The primitive itself is allowlisted; anything else needs a `biome-ignore lint/correctness/noRestrictedElements` comment with a one-line reason."
             }
           }
         }
@@ -70,9 +73,13 @@
         "packages/web/src/components/ui/Button.tsx",
         "packages/web/src/components/ui/Chip.tsx",
         "packages/web/src/components/ui/IconButton.tsx",
-        "packages/web/src/components/ui/Modal.tsx",
         "packages/web/src/components/ui/DialogBackdrop.tsx",
         "packages/web/src/components/ui/SegmentedControl.tsx",
+        "packages/web/src/components/ui/Input.tsx",
+        "packages/web/src/components/ui/Select.tsx",
+        "packages/web/src/components/ui/Textarea.tsx",
+        "packages/web/src/components/ui/Checkbox.tsx",
+        "packages/web/src/components/ui/CopyField.tsx",
         "packages/web/src/components/game/GameCardChrome.tsx",
         "packages/web/src/components/game/VariantStrip.tsx",
         "packages/web/src/components/offline/CalendarDayCell.tsx",

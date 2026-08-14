@@ -235,7 +235,7 @@ function ScenarioPicker({
   return (
     <div>
       <GroupLabel>Scenario</GroupLabel>
-      <Select compact value={scenarioId} onChange={(e) => onPick(e.target.value as ScenarioId)}>
+      <Select size="sm" value={scenarioId} onChange={(e) => onPick(e.target.value as ScenarioId)}>
         <option value="custom">Custom — pick roles manually</option>
         {SCENARIOS.map((s) => (
           <option key={s.id} value={s.id}>
@@ -376,7 +376,7 @@ function TeamButton({
       tone={tone}
       size="xs"
       shape="square"
-      ring={false}
+      flat
       disabled={disabled}
       onClick={onClick}
     >

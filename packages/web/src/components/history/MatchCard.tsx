@@ -15,6 +15,7 @@ import { variantConfigForSlug } from "../../games/match-variants";
 import { games } from "../../games/registry";
 import { isPointlessFreeForAll, lowScoreWinsForSlug } from "../../games/score-config";
 import { BookIcon, EditIcon, XIcon } from "../icons";
+import { Badge } from "../ui/Badge";
 import { IconButton } from "../ui/IconButton";
 import { MicroLabel } from "../ui/Label";
 import { AvatarBubble } from "./AvatarBubble";
@@ -82,7 +83,7 @@ export function MatchCard({ match, isAdmin, currentUserId, onEdit, onDelete }: P
           )}
           {onDelete && (
             <IconButton
-              variant="danger"
+              tone="rose"
               size="xs"
               aria-label="Delete"
               onClick={() => onDelete(match)}
@@ -241,7 +242,7 @@ function PointlessFfaInline({
           <AvatarBubble
             key={p.userId}
             name={p.displayName}
-            tone="muted"
+            tone="neutral"
             isMe={p.userId === currentUserId}
           />
         ))}
@@ -349,7 +350,7 @@ function Storyteller({
       <span className="relative inline-flex">
         <AvatarBubble
           name={moderator.displayName}
-          tone="muted"
+          tone="neutral"
           title={title}
           isMe={moderator.userId === currentUserId}
         />
@@ -421,7 +422,7 @@ function LastStandingInline({
               <AvatarBubble
                 key={p.userId}
                 name={p.displayName}
-                tone="muted"
+                tone="neutral"
                 isMe={p.userId === currentUserId}
               />
             ))}
@@ -497,23 +498,19 @@ function CoopInline({
             />
           ))}
         </span>
-        <span className="rounded bg-amber-500/15 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wider text-amber-300">
+        <Badge tone="amber">
           {outcome.score}
           {gameSlug === "just-one" ? " / 13" : ""}
-        </span>
+        </Badge>
       </div>
     );
   }
   const won = outcome.outcome === "win";
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-      <span
-        className={`rounded px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wider ${
-          won ? "bg-emerald-500/15 text-emerald-300" : "bg-rose-500/15 text-rose-300"
-        }`}
-      >
-        {won ? "Won" : "Lost"}
-      </span>
+      {/* Badge, not a hand-rolled pill — the Profile page's result pill is a
+          Badge, and the two used to differ in weight and letter-spacing. */}
+      <Badge tone={won ? "emerald" : "rose"}>{won ? "Won" : "Lost"}</Badge>
       <span className="inline-flex -space-x-1.5">
         {outcome.participants.map((p) => (
           <AvatarBubble
@@ -538,20 +535,16 @@ function DndInline({
   const resolution = resolutionOf(outcome);
   const badge =
     resolution === "win"
-      ? { text: "Won", cls: "bg-emerald-500/15 text-emerald-300" }
+      ? { text: "Won", tone: "emerald" as const }
       : resolution === "loss"
-        ? { text: "Lost", cls: "bg-rose-500/15 text-rose-300" }
-        : { text: "Ongoing", cls: "bg-sky-500/15 text-sky-300" };
+        ? { text: "Lost", tone: "rose" as const }
+        : { text: "Ongoing", tone: "sky" as const };
   // Avatar tone: winners glow, a wipe dims the party; an ongoing session is muted.
-  const tone = resolution === "win" ? "winner" : resolution === "loss" ? "loser" : "muted";
+  const tone = resolution === "win" ? "winner" : resolution === "loss" ? "loser" : "neutral";
   const casualties = outcome.participants.filter((p) => p.condition);
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-      <span
-        className={`rounded px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wider ${badge.cls}`}
-      >
-        {badge.text}
-      </span>
+      <Badge tone={badge.tone}>{badge.text}</Badge>
       <span className="inline-flex -space-x-1.5">
         {outcome.participants.map((p) => {
           const cond = p.condition ? conditionMeta(p.condition) : null;
@@ -602,7 +595,7 @@ function DungeonMaster({
       <span className="relative inline-flex">
         <AvatarBubble
           name={moderator.displayName}
-          tone="muted"
+          tone="neutral"
           title={title}
           isMe={moderator.userId === currentUserId}
         />

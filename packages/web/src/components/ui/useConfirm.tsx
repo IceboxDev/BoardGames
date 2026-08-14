@@ -19,7 +19,7 @@ import { Modal, ModalFooter } from "./Modal";
 //       title: `Delete this ${m.gameTitle} match?`,
 //       description: "This cannot be undone.",
 //       confirmLabel: "Delete match",
-//       tone: "danger",
+//       variant: "danger",
 //     });
 //     if (ok) deleteMutation.mutate(m.id);
 //   }
@@ -37,9 +37,11 @@ export type ConfirmOptions = {
   confirmLabel?: string;
   /** Label of the dismissing action. Defaults to "Cancel". */
   cancelLabel?: string;
-  /** `danger` paints the confirming button rose. Defaults to `danger`, since
-   *  a confirmation almost always guards something destructive. */
-  tone?: "danger" | "primary";
+  /** Variant of the confirming Button. `danger` paints it rose; defaults to
+   *  `danger`, since a confirmation almost always guards something
+   *  destructive. (Named `variant` because the values ARE Button variants —
+   *  `tone` is reserved for the shared color vocabulary in `tones.ts`.) */
+  variant?: "danger" | "primary";
 };
 
 type Pending = ConfirmOptions & { resolve: (ok: boolean) => void };
@@ -81,7 +83,7 @@ export function useConfirm(): {
           {pending.cancelLabel ?? "Cancel"}
         </Button>
         <Button
-          variant={pending.tone === "primary" ? "primary" : "danger"}
+          variant={pending.variant === "primary" ? "primary" : "danger"}
           size="sm"
           onClick={() => settle(true)}
         >

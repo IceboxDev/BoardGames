@@ -1,4 +1,5 @@
 import type { ElementType, HTMLAttributes, ReactNode } from "react";
+import { cn } from "../../lib/cn";
 
 // ── Stack ────────────────────────────────────────────────────────────────
 //
@@ -9,6 +10,10 @@ import type { ElementType, HTMLAttributes, ReactNode } from "react";
 // named choice instead of a per-page decision.
 //
 // Gap scale (maps to Tailwind `gap-*`):
+//   2xs gap-1.5 the densest in-card rhythm (label + value + caption rows).
+//               On the scale because it is the app's single most common
+//               vertical gap — without it callers fell back to raw
+//               `flex flex-col gap-1.5` and Stack lost by default.
 //   xs  gap-2   tight clusters (chips, inline controls)
 //   sm  gap-3   form fields / list rows
 //   md  gap-4   default — cards within a section
@@ -20,9 +25,10 @@ import type { ElementType, HTMLAttributes, ReactNode } from "react";
 // titled section use `Section`; for the page's outer width/padding use
 // `PageMain`.
 
-export type StackGap = "xs" | "sm" | "md" | "lg" | "xl";
+export type StackGap = "2xs" | "xs" | "sm" | "md" | "lg" | "xl";
 
 const GAPS: Record<StackGap, string> = {
+  "2xs": "gap-1.5",
   xs: "gap-2",
   sm: "gap-3",
   md: "gap-4",
@@ -43,7 +49,7 @@ export function Stack({
   children,
   ...rest
 }: StackProps) {
-  const cls = ["flex flex-col", GAPS[gap], className].filter(Boolean).join(" ");
+  const cls = cn("flex flex-col", GAPS[gap], className);
   return (
     <Tag className={cls} {...rest}>
       {children}

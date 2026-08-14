@@ -1,4 +1,5 @@
 import type { HTMLAttributes, ReactNode } from "react";
+import { cn } from "../../lib/cn";
 
 // ── PageShell ────────────────────────────────────────────────────────────
 //
@@ -32,6 +33,11 @@ type PageShellProps = {
   background?: PageShellBackground;
   /** Top navigation slot. Pass `<TopNav>...</TopNav>` or omit. */
   topNav?: ReactNode;
+  /** `layout="centered"` only: width-cap the centered column on the shared
+   *  `PageMainWidth` scale. Exists because the centered layout owns its own
+   *  `<main>` (so callers can't use `PageMain`) — without this, centered
+   *  pages hand-rolled `<div className="w-full max-w-3xl">` wrappers. */
+  centeredWidth?: PageMainWidth;
   children: ReactNode;
 };
 
@@ -51,6 +57,7 @@ export function PageShell({
   layout = "scroll",
   background = "grid",
   topNav,
+  centeredWidth,
   children,
 }: PageShellProps) {
   const bgCls = BACKGROUND_CLASSES[background];
@@ -65,7 +72,13 @@ export function PageShell({
     return (
       <div className={`${SCROLL_OUTER}${bgSuffix}`}>
         {topNav}
-        <main className="flex flex-1 items-center justify-center px-4 py-6">{children}</main>
+        <main className="flex flex-1 items-center justify-center px-4 py-6">
+          {centeredWidth ? (
+            <div className={cn("w-full", PAGE_WIDTH_CLASSES[centeredWidth])}>{children}</div>
+          ) : (
+            children
+          )}
+        </main>
       </div>
     );
   }
@@ -122,10 +135,10 @@ type PageMainProps = Omit<HTMLAttributes<HTMLElement>, "children"> & {
   children: ReactNode;
 };
 
-// Exported so TopNav can cap its inner bar with the *same* scale as the page
-// body below it. Before this, TopNav hardcoded `max-w-6xl` and desynced from
-// `width="7xl"` (admin) and `width="wide"` (History) pages at large viewports.
-export const PAGE_WIDTH_CLASSES: Record<PageMainWidth, string> = {
+// Module-private on purpose. TopNav used to import this to cap its inner bar
+// per-page, which moved the logo's x-position between pages — the nav is now
+// full-bleed and must never couple to a page's content width again.
+const PAGE_WIDTH_CLASSES: Record<PageMainWidth, string> = {
   md: "max-w-md",
   "2xl": "max-w-2xl",
   "3xl": "max-w-3xl",
@@ -154,9 +167,7 @@ export function PageMain({
   const widthCls = PAGE_WIDTH_CLASSES[width];
   const paddingCls = PADDING_CLASSES[padding];
   const heightCls = fillHeight ? "flex min-h-0 flex-1 flex-col" : "flex-1";
-  const classes = ["mx-auto w-full", widthCls, heightCls, paddingCls, className]
-    .filter(Boolean)
-    .join(" ");
+  const classes = cn("mx-auto w-full", widthCls, heightCls, paddingCls, className);
 
   return (
     <main className={classes} {...rest}>

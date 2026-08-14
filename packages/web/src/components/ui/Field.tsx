@@ -16,7 +16,9 @@ import type { ReactNode } from "react";
 // Both share one label style, so a "Tagline" input and an "Accent color" swatch
 // grid sit on the same typographic baseline.
 
-const LABEL_CLS = "text-xs font-medium uppercase tracking-label text-fg-secondary";
+// Exported: GroupLabel (history forms) and the preview pages render the same
+// label role outside a Field — they import this instead of re-spelling it.
+export const LABEL_CLS = "text-xs font-medium uppercase tracking-label text-fg-secondary";
 
 type FieldProps = {
   label: string;

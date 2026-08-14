@@ -108,11 +108,17 @@ const UTIL =
 // The APP SHELL: the non-game, non-primitive product surface. These are the
 // screens a new feature is most likely to be copy-pasted from, so the
 // primitive-adoption rules below are enforced here and nowhere else. Outside it
-// live (a) `components/ui/` — the primitives that DEFINE the tokens, (b)
-// `games/` — bespoke board art, (c) `components/{game,setup,multiplayer}/` —
-// display typography such as the oversized room code, whose letter-spacing is
-// art, not a label token.
-const APP_SHELL = /^(?:pages\/|components\/(?:offline|profile|history|admin|match-history)\/)/;
+// live (a) `components/ui/` — the primitives that DEFINE the tokens, and
+// (b) `games/` — bespoke board art.
+//
+// ALL of `components/` (except `ui/`) is in scope. The old allowlist of five
+// subdirectories left `components/` root, `multiplayer/`, `game/`,
+// `tournament/`, `setup/`, and `game-layout/` outside every adoption rule —
+// which is exactly where the un-migrated duplicates accumulated (SidePanel's
+// hand-rolled Surface, the Lobby's tracked headings, the room-code input).
+// Anything that is genuinely display art gets a baseline entry, not a scope
+// hole.
+const APP_SHELL = /^(?:pages\/|components\/(?!ui\/))/;
 const inAppShell = (rel) => APP_SHELL.test(rel);
 
 // The D&D DM tool is inside `games/`, but it is not a board — it is a second

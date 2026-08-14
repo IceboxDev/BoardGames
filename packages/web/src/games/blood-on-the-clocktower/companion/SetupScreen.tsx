@@ -194,7 +194,7 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
           ]}
           value={edition}
           onChange={setEdition}
-          shape="rect"
+          shape="rounded"
           size="sm"
           fullWidth
           selectionMode="toggle"

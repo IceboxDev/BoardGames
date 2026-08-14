@@ -112,6 +112,7 @@ export function RestPanel({ party, onLog, logPending, onStateUpdates }: Props) {
               }`}
             >
               <label className="flex min-w-0 flex-1 cursor-pointer items-center gap-2">
+                {/* biome-ignore lint/correctness/noRestrictedElements: D&D-tool themed checkbox — the crimson palette has no ui/Checkbox tone */}
                 <input
                   type="checkbox"
                   checked={row.resting}

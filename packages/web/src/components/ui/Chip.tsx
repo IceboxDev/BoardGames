@@ -1,4 +1,6 @@
 import type { ReactNode, Ref } from "react";
+import { cn } from "../../lib/cn";
+import { type CoreTone, TONE_ACTIVE, TONE_RING } from "./tones";
 
 // Toggle / picker chip primitive. The single source of truth for the
 // "pressed / unpressed" pill-or-rect chip pattern that appears in every
@@ -6,18 +8,20 @@ import type { ReactNode, Ref } from "react";
 // ParticipantPicker user pills, the GameVariantPicker tags, the team
 // winner toggles, the role chips, and the AdminPage delete-mode toggle.
 //
-// The active state is colored by `tone` so a row of mixed-tone chips
-// (village/wolf/tanner) stays consistent; the inactive state is always
-// neutral. `variant="filled"` (default) uses the surface-800 inactive
-// background; `variant="outlined"` keeps a border-only inactive look,
-// useful for VotedOutChip-style "additive" pickers where the inactive
-// state should read as "not yet selected" rather than "available
-// option".
+// The active state is colored by `tone` (shared `CoreTone` vocabulary, so a
+// Chip and a SegmentedControl option at the same tone render the identical
+// fill); the inactive state is always neutral. `variant="filled"` (default)
+// uses the surface-800 inactive background; `variant="outlined"` keeps a
+// border-only inactive look, useful for VotedOutChip-style "additive" pickers
+// where the inactive state should read as "not yet selected" rather than
+// "available option".
 //
-// `ring` toggles whether the active state adds a ring outline (most chips
-// do; some — TeamButton in WerewolfForm — opt out for a flatter feel).
+// `flat` drops the active-state ring outline (most chips keep it; some —
+// TeamButton in WerewolfForm — opt out for a flatter feel). Named positively
+// for what it *does*: `ring` used to mean "drop the ring" with an inverted
+// default, the opposite of what `ring` means on Badge/Avatar.
 
-export type ChipTone = "accent" | "amber" | "emerald" | "rose" | "sky";
+export type ChipTone = CoreTone;
 
 type Variant = "filled" | "outlined";
 type Size = "xs" | "sm" | "md";
@@ -25,12 +29,12 @@ type Shape = "rounded" | "pill" | "square";
 
 type Props = {
   pressed: boolean;
-  tone?: ChipTone;
+  tone?: CoreTone;
   variant?: Variant;
   size?: Size;
   shape?: Shape;
-  /** Drop the active-state ring outline. Defaults to `true`. */
-  ring?: boolean;
+  /** Drop the active-state ring outline for a flatter pressed look. */
+  flat?: boolean;
   /** Optional leading icon / glyph (e.g. flag, X, +). */
   icon?: ReactNode;
   /** Block-width — stretch to fill the parent. */
@@ -66,29 +70,10 @@ const SHAPES: Record<Shape, string> = {
   square: "rounded-none",
 };
 
-// Active background + text per tone. Mirrors SegmentedControl's TONE_*
-// maps so a Chip and a SegmentedControl option at the same tone read
-// identically.
-const TONE_ACTIVE_BG: Record<ChipTone, string> = {
-  accent: "bg-accent-500/20 text-accent-100",
-  amber: "bg-amber-500/20 text-amber-200",
-  emerald: "bg-emerald-500/20 text-emerald-100",
-  rose: "bg-rose-500/20 text-rose-100",
-  sky: "bg-sky-400/20 text-sky-100",
-};
-
-const TONE_ACTIVE_RING: Record<ChipTone, string> = {
-  accent: "ring-1 ring-accent-400/40",
-  amber: "ring-1 ring-amber-400/40",
-  emerald: "ring-1 ring-emerald-400/40",
-  rose: "ring-1 ring-rose-400/60",
-  sky: "ring-1 ring-sky-300/40",
-};
-
 // Outlined "active" uses a colored border instead of a tinted background
 // — slightly subtler look. Used for "additive" pickers where rows of
 // chips should not be filled when checked.
-const TONE_ACTIVE_BORDER: Record<ChipTone, string> = {
+const TONE_ACTIVE_BORDER: Record<CoreTone, string> = {
   accent: "border border-accent-400/50 bg-accent-500/15 text-accent-100",
   amber: "border border-amber-400/50 bg-amber-500/15 text-amber-200",
   emerald: "border border-emerald-400/50 bg-emerald-500/15 text-emerald-100",
@@ -108,7 +93,7 @@ export function Chip({
   variant = "filled",
   size = "sm",
   shape = "rounded",
-  ring = true,
+  flat = false,
   icon,
   block = false,
   title,
@@ -117,24 +102,22 @@ export function Chip({
   asStatic = false,
   children,
   ref,
-  className = "",
+  className,
   ...aria
 }: Props) {
   const activeCls =
     variant === "outlined"
       ? TONE_ACTIVE_BORDER[tone]
-      : `${TONE_ACTIVE_BG[tone]}${ring ? ` ${TONE_ACTIVE_RING[tone]}` : ""}`;
+      : cn(TONE_ACTIVE[tone], !flat && TONE_RING[tone]);
   const inactiveCls = variant === "outlined" ? INACTIVE_OUTLINED : INACTIVE_FILLED;
-  const cls = [
+  const cls = cn(
     BASE,
     SIZES[size],
     SHAPES[shape],
     pressed ? activeCls : inactiveCls,
-    block ? "w-full" : "",
+    block && "w-full",
     className,
-  ]
-    .filter(Boolean)
-    .join(" ");
+  );
 
   if (asStatic) {
     return (

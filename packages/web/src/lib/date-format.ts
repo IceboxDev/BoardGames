@@ -51,14 +51,24 @@ export function formatShortDate(value: string): string {
 }
 
 /**
+ * Parse a SQLite "YYYY-MM-DD HH:MM:SS" (UTC) — or any parseable timestamp —
+ * into a local Date, or null. THE single UTC-stamp coercion; callers that
+ * need their own formatting (ActivityDrawer's time-of-day) build on this
+ * instead of re-implementing the `replace(" ", "T") + "Z"` idiom.
+ */
+export function parseUtcStamp(stamp: string): Date | null {
+  const d = new Date(stamp.includes(" ") ? `${stamp.replace(" ", "T")}Z` : stamp);
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
+/**
  * "just now" / "5 minutes ago" / "3 hours ago" / "2 days ago" from a SQLite
  * "YYYY-MM-DD HH:MM:SS" (UTC) or any parseable timestamp. Unparseable input
  * degrades to "recently".
  */
 export function formatRelativeTime(stamp: string): string {
-  // SQLite returns "YYYY-MM-DD HH:MM:SS" (UTC-ish). Treat as UTC for parsing.
-  const d = new Date(stamp.includes(" ") ? `${stamp.replace(" ", "T")}Z` : stamp);
-  if (Number.isNaN(d.getTime())) return "recently";
+  const d = parseUtcStamp(stamp);
+  if (!d) return "recently";
   const sec = Math.round((Date.now() - d.getTime()) / 1000);
   const min = Math.round(sec / 60);
   const hr = Math.round(min / 60);

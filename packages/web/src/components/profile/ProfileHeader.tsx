@@ -71,15 +71,18 @@ export function ProfileHeader({
       <div className="h-24 bg-gradient-to-br from-[var(--accent)]/45 via-[var(--accent)]/15 to-surface-900 sm:h-32" />
 
       {isSelf && (
-        <Button
-          variant="secondary"
-          size="sm"
-          onClick={onEdit}
-          className="absolute right-3 top-3 z-20 gap-1.5"
-        >
-          <EditIcon />
-          Edit profile
-        </Button>
+        // Positioning lives on a wrapper, never on the Button itself: Button's
+        // base is `relative` (its loading-spinner anchor), and passing
+        // `absolute` through className made the two position classes fight in
+        // the stylesheet — `relative` won by generated-CSS order and the
+        // button fell into normal flow at the card's left edge, floating over
+        // the avatar. A wrapper owns the placement; the primitive stays whole.
+        <div className="absolute right-3 top-3 z-20">
+          <Button variant="secondary" size="sm" onClick={onEdit} className="gap-1.5">
+            <EditIcon />
+            Edit profile
+          </Button>
+        </div>
       )}
 
       <div className="relative z-10 px-4 pb-5 sm:px-6">

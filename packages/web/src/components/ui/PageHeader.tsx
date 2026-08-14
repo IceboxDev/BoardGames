@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import { cn } from "../../lib/cn";
+import { Eyebrow } from "./Label";
 
 // ── PageHeader ───────────────────────────────────────────────────────────
 //
@@ -58,22 +60,22 @@ export function PageHeader({
 }: PageHeaderProps) {
   const center = align === "center";
 
-  const outer = [
+  const outer = cn(
     center
       ? "flex flex-col items-center gap-3 text-center"
       : "flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4",
     className,
-  ]
-    .filter(Boolean)
-    .join(" ");
+  );
 
   return (
     <header className={outer}>
       <div className={center ? "" : "min-w-0"}>
         {eyebrow && (
-          <p className="mb-1.5 text-xs font-semibold uppercase tracking-widest text-accent-400">
+          // The shared Eyebrow at `lg` density — this was the one uppercase
+          // kicker in `ui/` still hand-spelling its own tracking.
+          <Eyebrow size="lg" className="mb-1.5">
             {eyebrow}
-          </p>
+          </Eyebrow>
         )}
         <div className={`flex items-center gap-3 ${center ? "justify-center" : ""}`}>
           <h1 className={`${TITLE_SIZE[size]} tracking-tight text-white`}>{title}</h1>

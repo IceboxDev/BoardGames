@@ -74,7 +74,7 @@ export function CompendiumScreen({
         {nothing && (
           <EmptyState
             tone="amber"
-            fill
+            fillHeight
             icon={<D20Die count={20} className="h-6 w-6" />}
             title="Nothing in the stacks"
             description="No entry matches that search — try a shorter fragment."

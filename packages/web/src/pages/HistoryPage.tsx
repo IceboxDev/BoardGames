@@ -166,13 +166,7 @@ export default function HistoryPage() {
   }
 
   return (
-    <PageShell
-      topNav={
-        <TopNav width="wide">
-          <TopNavBackButton to="/offline" label="Calendar" />
-        </TopNav>
-      }
-    >
+    <PageShell topNav={<TopNav back={<TopNavBackButton to="/offline" label="Calendar" />} />}>
       <PageMain width="wide">
         <PageHeader
           size="sm"

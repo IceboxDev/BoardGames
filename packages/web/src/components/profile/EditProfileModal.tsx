@@ -133,7 +133,7 @@ export function EditProfileModal({ userId, initial, onClose }: EditProfileModalP
         options={TABS}
         value={tab}
         onChange={setTab}
-        shape="rect"
+        shape="rounded"
         size="sm"
         aria-label="Profile editor sections"
       />

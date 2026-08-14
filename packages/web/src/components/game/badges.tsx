@@ -5,11 +5,15 @@ import { CheckIcon, FlameIcon, StackIcon, StarIcon } from "../icons";
 // rounded-full + backdrop-blur + uppercase + tracking-wider treatment so
 // the surface chrome reads identically across catalog and carousel cards.
 
+// Both bases sit on `tracking-pill` — the shared pill letter-spacing token.
+// Individual badges must NOT re-tune tracking (four of them used to carry
+// inline `letterSpacing` at 0.15/0.18/0.2em — three off-token spellings of
+// the same role, invisible to the tracking lint because they were styles).
 const BADGE_BASE =
   "inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-3xs font-bold uppercase tracking-pill backdrop-blur-sm";
 
 const BADGE_BASE_TIGHT =
-  "inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-3xs font-bold uppercase tracking-label backdrop-blur-sm";
+  "inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-3xs font-bold uppercase tracking-pill backdrop-blur-sm";
 
 /**
  * "+N variants" / "{N} variants" stack pill. Used by every family card
@@ -51,14 +55,7 @@ export function VariantsBadge({
  * badge but with reduced contrast since it's a passive indicator.
  */
 export function ComingSoonBadge() {
-  return (
-    <span
-      className={`${BADGE_BASE_TIGHT} bg-black/65 text-white/75`}
-      style={{ letterSpacing: "0.2em" }}
-    >
-      Coming soon
-    </span>
-  );
+  return <span className={`${BADGE_BASE_TIGHT} bg-black/65 text-white/75`}>Coming soon</span>;
 }
 
 /** "2008" year pill, top-right of carousel cards. */
@@ -76,10 +73,7 @@ export function YearBadge({ year }: { year: number | string }) {
  */
 export function FitsBadge({ label }: { label: string }) {
   return (
-    <span
-      className={`${BADGE_BASE_TIGHT} bg-emerald-500/30 text-emerald-100`}
-      style={{ letterSpacing: "0.15em" }}
-    >
+    <span className={`${BADGE_BASE_TIGHT} bg-emerald-500/30 text-emerald-100`}>
       <CheckIcon className="h-3 w-3" />
       Fits {label}
     </span>
@@ -95,7 +89,6 @@ export function NewBadge() {
   return (
     <span
       className={`${BADGE_BASE_TIGHT} bg-gradient-to-r from-cyan-400 to-blue-600 text-white shadow-md shadow-cyan-500/50`}
-      style={{ letterSpacing: "0.18em" }}
     >
       <StarIcon className="h-3 w-3" />
       New
@@ -112,7 +105,6 @@ export function BestForHeadcountBadge({ count }: { count: number }) {
   return (
     <span
       className={`${BADGE_BASE_TIGHT} bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-md shadow-amber-500/40`}
-      style={{ letterSpacing: "0.15em" }}
     >
       <FlameIcon className="h-3 w-3" />
       Best at {count}

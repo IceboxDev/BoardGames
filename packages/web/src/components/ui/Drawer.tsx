@@ -5,6 +5,7 @@ import { XIcon } from "../icons";
 import { DialogBackdrop } from "./DialogBackdrop";
 import { useBodyScrollLock, useDialogEscape, useFocusTrap } from "./dialog-a11y";
 import { IconButton } from "./IconButton";
+import { Eyebrow } from "./Label";
 
 // The edge-anchored sibling of Modal: a right-side sliding panel dialog.
 // Owns the portal, scrim, panel chrome, slide animation, close X, and the
@@ -74,9 +75,9 @@ export function Drawer({
           <header className="flex shrink-0 items-start justify-between gap-3 border-b border-white/5 px-5 py-4">
             <div className="min-w-0">
               {eyebrow && (
-                <p className="text-3xs font-semibold uppercase tracking-eyebrow text-accent-400">
-                  {eyebrow}
-                </p>
+                // Shared Eyebrow primitive at its `sm` density — same slot as
+                // Modal's, one type ramp between them.
+                <Eyebrow size="sm">{eyebrow}</Eyebrow>
               )}
               {title && (
                 <h2 id={titleId} className="mt-1 truncate text-base font-semibold text-white">

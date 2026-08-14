@@ -20,7 +20,7 @@ export default function TournamentComingSoon({
     // (same stacking fix as MatchResultsLayout).
     <div className="relative z-10 flex min-h-full flex-1 flex-col px-6 py-16">
       <EmptyState
-        fill
+        fillHeight
         tone="amber"
         icon={<TrophyIcon className="h-5 w-5" />}
         title="AI Tournament"

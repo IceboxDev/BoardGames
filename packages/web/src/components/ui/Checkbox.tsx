@@ -1,4 +1,5 @@
 import type { InputHTMLAttributes, ReactNode, Ref } from "react";
+import { cn } from "../../lib/cn";
 
 // ── Checkbox ───────────────────────────────────────────────────────────────
 //
@@ -36,7 +37,12 @@ export function Checkbox({
       ref={ref}
       type="checkbox"
       id={id}
-      className={`h-4 w-4 shrink-0 rounded border border-white/15 bg-surface-900 ${TONES[tone]} focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/40 disabled:cursor-not-allowed disabled:opacity-50 ${className}`}
+      className={cn(
+        "h-4 w-4 shrink-0 rounded border border-white/15 bg-surface-900",
+        TONES[tone],
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/40 disabled:cursor-not-allowed disabled:opacity-50",
+        className,
+      )}
       {...rest}
     />
   );

@@ -1,5 +1,6 @@
 import type { CSSProperties } from "react";
 import { DEFAULT_ACCENT } from "../../lib/accent.ts";
+import { cn } from "../../lib/cn";
 import { initialsFromName } from "../../lib/names.ts";
 
 // Avatar primitive: renders the user's `image` when present, otherwise an
@@ -58,7 +59,7 @@ export function Avatar({
         loading="lazy"
         decoding="async"
         style={style}
-        className={`${sizeCls} ${ringCls} shrink-0 rounded-full object-cover ${className}`}
+        className={cn(sizeCls, ringCls, "shrink-0 rounded-full object-cover", className)}
       />
     );
   }
@@ -68,7 +69,12 @@ export function Avatar({
       role="img"
       aria-label={name}
       style={style}
-      className={`${sizeCls} ${ringCls} inline-flex shrink-0 items-center justify-center rounded-full bg-[var(--avatar-accent)]/20 font-bold uppercase text-[var(--avatar-accent)] ${className}`}
+      className={cn(
+        sizeCls,
+        ringCls,
+        "inline-flex shrink-0 items-center justify-center rounded-full bg-[var(--avatar-accent)]/20 font-bold uppercase text-[var(--avatar-accent)]",
+        className,
+      )}
     >
       {initialsFromName(name)}
     </span>

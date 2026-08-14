@@ -35,6 +35,7 @@ export default function ProfilePage() {
   return (
     <PageShell
       layout="centered"
+      centeredWidth="3xl"
       topNav={
         <TopNav>
           {isAdmin && <TopNavLink to="/admin">Admin</TopNavLink>}
@@ -42,11 +43,9 @@ export default function ProfilePage() {
         </TopNav>
       }
     >
-      {/* `centered` layout owns the <main> and the vertical centering, so the
-          hub sits in a width-capped column here — deliberately NOT <PageMain>,
-          which is its own <main>: nesting it double-wraps the landmark and
-          top-anchors the page (killing the vertical centering). */}
-      <div className="w-full max-w-3xl">
+      {/* Width cap + centering come from PageShell's `centeredWidth` — the
+          shell owns the <main>, so pages never hand-roll a max-w wrapper. */}
+      <>
         <PageHeader
           align="center"
           size="xl"
@@ -96,7 +95,7 @@ export default function ProfilePage() {
             administrator can grant access from the admin panel.
           </p>
         )}
-      </div>
+      </>
 
       {syncModalOpen && <CalendarSyncModal onClose={() => setSyncModalOpen(false)} />}
     </PageShell>

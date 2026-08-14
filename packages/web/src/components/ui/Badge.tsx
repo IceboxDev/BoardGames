@@ -1,4 +1,6 @@
 import type { ReactNode } from "react";
+import { cn } from "../../lib/cn";
+import { TONE_BUBBLE, TONE_RING, type Tone } from "./tones";
 
 // Display-only status pill — the "Host" / "You" / "Maybe" / "Dungeon Master" /
 // "Ready" / "AI" micro-labels. Distinct from `Chip` (which is an interactive
@@ -12,17 +14,17 @@ import type { ReactNode } from "react";
 // `ring` adds a hairline outline in the tone's hue, for pills that must read as
 // advisory rather than decorative ("Hasn't RSVP'd yet").
 //
-// Tones mirror the rest of the design system so a Badge and a Chip at the same
-// tone match. The text ramp deliberately sits at -200/-300 (not -400): these
-// pills always sit on a dark, low-opacity fill of their own hue.
+// Tones come from the shared `Tone` vocabulary (`tones.ts`) so a Badge and a
+// Chip at the same tone match by construction. Sizes mirror Chip's xs/sm/md so
+// a Badge can sit beside a Chip at any density.
 
-export type BadgeTone = "accent" | "amber" | "emerald" | "rose" | "sky" | "neutral";
+export type BadgeTone = Tone;
 
 type BadgeProps = {
-  tone?: BadgeTone;
+  tone?: Tone;
   /** Optional leading glyph/icon. */
   icon?: ReactNode;
-  size?: "xs" | "sm";
+  size?: "xs" | "sm" | "md";
   shape?: "rounded" | "pill";
   /** Hairline outline in the tone's hue. */
   ring?: boolean;
@@ -32,27 +34,11 @@ type BadgeProps = {
   children: ReactNode;
 };
 
-const TONE: Record<BadgeTone, string> = {
-  accent: "bg-accent-500/15 text-accent-300",
-  amber: "bg-amber-400/20 text-amber-200",
-  emerald: "bg-emerald-500/15 text-emerald-300",
-  rose: "bg-rose-500/15 text-rose-300",
-  sky: "bg-sky-400/15 text-sky-200",
-  neutral: "bg-white/[0.06] text-fg-secondary",
-};
-
-const RING: Record<BadgeTone, string> = {
-  accent: "ring-1 ring-accent-400/40",
-  amber: "ring-1 ring-amber-400/60",
-  emerald: "ring-1 ring-emerald-400/40",
-  rose: "ring-1 ring-rose-400/40",
-  sky: "ring-1 ring-sky-400/40",
-  neutral: "ring-1 ring-white/10",
-};
-
 const SIZES = {
   xs: "px-1.5 py-0.5 text-3xs",
   sm: "px-2 py-0.5 text-2xs",
+  // md matches Chip's md height so mixed Badge/Chip rows align.
+  md: "px-2.5 py-1 text-xs",
 };
 
 const SHAPES = {
@@ -67,21 +53,21 @@ export function Badge({
   shape = "rounded",
   ring = false,
   title,
-  className = "",
+  className,
   children,
 }: BadgeProps) {
-  const cls = [
-    "inline-flex shrink-0 items-center gap-1 font-semibold uppercase tracking-pill",
-    TONE[tone],
-    SIZES[size],
-    SHAPES[shape],
-    ring ? RING[tone] : "",
-    className,
-  ]
-    .filter(Boolean)
-    .join(" ");
   return (
-    <span title={title} className={cls}>
+    <span
+      title={title}
+      className={cn(
+        "inline-flex shrink-0 items-center gap-1 font-semibold uppercase tracking-pill",
+        TONE_BUBBLE[tone],
+        SIZES[size],
+        SHAPES[shape],
+        ring && TONE_RING[tone],
+        className,
+      )}
+    >
       {icon}
       {children}
     </span>

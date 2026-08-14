@@ -7,6 +7,7 @@ import Calendar from "../components/offline/Calendar";
 import LockInModal from "../components/offline/LockInModal";
 import RsvpModal from "../components/offline/RsvpModal";
 import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
+import { ErrorAlert } from "../components/ui/ErrorAlert";
 import { PageMain, PageShell } from "../components/ui/PageShell";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import {
@@ -77,6 +78,18 @@ export default function OfflineDashboard() {
   const allAvailability = aggregateQuery.data ?? null;
   const counts = countsQuery.data ?? undefined;
   const locks = locksQuery.data ?? undefined;
+
+  // A failed fetch must NOT render as a silently-empty calendar — an empty
+  // grid is indistinguishable from "nobody RSVP'd". Surface the first
+  // failure as a banner (data stays whatever the cache still has). Only
+  // no-data failures count: a background refetch error atop cached data is
+  // reported by the affected control, not a page banner.
+  const failedQuery = [
+    { q: availabilityQuery, what: "your availability" },
+    { q: countsQuery, what: "group availability" },
+    { q: locksQuery, what: "locked-in nights" },
+    { q: aggregateQuery, what: "the admin availability view" },
+  ].find(({ q }) => q.isError && q.data === undefined);
 
   // Locked cells hide the people list and heat ring, so the three overlays
   // are mutually exclusive per cell. The `/api/calendar/locks` route is the
@@ -313,13 +326,18 @@ export default function OfflineDashboard() {
     <PageShell
       layout="fixed"
       topNav={
-        <TopNav>
+        <TopNav back={<TopNavBackButton to="/" label="Dashboard" />}>
           <TopNavLink to="/history">History</TopNavLink>
-          <TopNavBackButton to="/" label="Dashboard" />
         </TopNav>
       }
     >
       <PageMain width="full" padding="tight" fillHeight className="gap-2">
+        {failedQuery && (
+          <ErrorAlert
+            className="shrink-0"
+            message={`Couldn't load ${failedQuery.what} — the calendar below may look emptier than it is. Retry?`}
+          />
+        )}
         <p
           className={`shrink-0 text-center text-2xs text-fg-secondary ${mode === "edit" ? "" : "invisible"}`}
           aria-hidden={mode !== "edit"}

@@ -1,7 +1,8 @@
 import type { Participant } from "@boardgames/core/history/types";
 import type { ReactNode } from "react";
+import { Badge } from "../../ui/Badge";
 import { Chip } from "../../ui/Chip";
-import { FieldGroup } from "../../ui/Field";
+import { FieldGroup, LABEL_CLS } from "../../ui/Field";
 import { ParticipantPicker } from "../ParticipantPicker";
 
 // Shared building blocks for the match-outcome forms. Every form used to
@@ -49,16 +50,11 @@ export function OutcomeFormShell({
 // ── GroupLabel ───────────────────────────────────────────────────────────
 //
 // Instruction/label line above a composite block ("Tap each player's villain,
-// then crown the one who won."). Matches Field/FieldGroup's LABEL_CLS exactly
-// — this used to exist as five pasted `Label` components and half a dozen
-// inline spans across the forms, in two drifted spellings.
+// then crown the one who won."). Renders Field/FieldGroup's exported
+// LABEL_CLS — the string itself lives in exactly one place.
 
 export function GroupLabel({ children }: { children: ReactNode }) {
-  return (
-    <span className="text-xs font-medium uppercase tracking-label text-fg-secondary">
-      {children}
-    </span>
-  );
+  return <span className={LABEL_CLS}>{children}</span>;
 }
 
 // ── mergeParticipants ────────────────────────────────────────────────────
@@ -118,11 +114,7 @@ export function SurvivalBadge({
   if (eliminationOrder !== undefined) {
     return <span className="text-xs text-fg-muted">out #{eliminationOrder + 1}</span>;
   }
-  return (
-    <span className="rounded bg-amber-400/20 px-1.5 py-0.5 text-3xs font-bold uppercase tracking-wide text-amber-200">
-      {label}
-    </span>
-  );
+  return <Badge tone="amber">{label}</Badge>;
 }
 
 // ── RoleChipRow ──────────────────────────────────────────────────────────
