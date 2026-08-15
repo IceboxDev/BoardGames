@@ -11,7 +11,7 @@ import {
 import type { GameMachineSpec } from "../../machines/types";
 import type { EncryptInput, GuessInput } from "./ai/agent";
 import { getDecryptoAgent } from "./ai/agent";
-import { fallbackClues, fallbackGuess } from "./ai/fallback";
+import { fallbackGuess } from "./ai/fallback";
 import { DEFAULT_DECRYPTO_MODEL } from "./ai/models";
 import { buildPlayerView } from "./player-view";
 import {
@@ -25,7 +25,9 @@ import {
   buildTeams,
   chatAllowed,
   checkClueLegality,
+  codesEqual,
   currentTransmission,
+  decodeMistakesFor,
   defaultTeamPlayers,
   eligibleSeats,
   evaluateRoundEnd,
@@ -71,11 +73,16 @@ import { ChatActionSchema, DEFAULT_BEATS, MAX_CLUE_LENGTH, SubmitCluesActionSche
 // ---------------------------------------------------------------------------
 
 /**
- * Per-decision budget for an injected agent before the fallback answers.
- * Sized for a frontier model at medium reasoning effort on the encrypt task
- * (~40-70s worst case); the server agent's own call budgets sit below this.
+ * Per-decision budgets for an injected agent. Sized for a frontier model at
+ * medium reasoning effort — encrypt is the heavyweight task (~40-80s on
+ * gpt-5.5); the server agent's own call budgets sit below these. When an
+ * encrypt still misses its deadline (or throws, or returns illegal clues
+ * twice), the transmission is SKIPPED like a timer expiry — an honest
+ * miscommunication token — rather than published as garbage clues nobody
+ * should be asked to decode or intercept.
  */
-export const AI_DEADLINE_MS = 90_000;
+export const AI_ENCRYPT_DEADLINE_MS = 120_000;
+export const AI_GUESS_DEADLINE_MS = 60_000;
 
 function raceWithFallback<T>(run: () => Promise<T>, fallback: () => T, ms: number): Promise<T> {
   return new Promise<T>((resolve) => {
@@ -98,6 +105,11 @@ function raceWithFallback<T>(run: () => Promise<T>, fallback: () => T, ms: numbe
   });
 }
 
+/** Like raceWithFallback but resolves null on timeout or error — "no answer". */
+function raceOrNull<T>(run: () => Promise<T>, ms: number): Promise<T | null> {
+  return raceWithFallback<T | null>(run, () => null, ms);
+}
+
 function modelForSeat(ctx: DecryptoContext, seat: number): string {
   return ctx.aiModels[seat] ?? DEFAULT_DECRYPTO_MODEL;
 }
@@ -115,6 +127,7 @@ function buildEncryptInput(ctx: DecryptoContext, tx: Transmission): EncryptInput
     ownRevealedClues: revealedCluesFor(ctx, tx.team),
     oppRevealedClues: revealedCluesFor(ctx, (1 - tx.team) as Team),
     forbiddenClues: [...team.usedClues],
+    ownDecodeMistakes: decodeMistakesFor(ctx, tx.team),
     tokens: {
       own: { interceptions: team.interceptions, miscommunications: team.miscommunications },
       opp: {
@@ -138,23 +151,23 @@ function buildGuessInput(
     keywords: purpose === "decode" ? ctx.teams[tx.team].keywords : null,
     currentClues: [...(tx.clues ?? ["", "", ""])] as GuessInput["currentClues"],
     targetRevealedClues: revealedCluesFor(ctx, tx.team),
+    pastDecodeMistakes: purpose === "decode" ? decodeMistakesFor(ctx, tx.team) : [],
     round: ctx.round,
   };
 }
 
-/** AI clue output → guaranteed-legal clue triple. */
-function sanitizeClues(
+/** AI clue output → legal clue triple, or null (→ the transmission is skipped). */
+function sanitizeCluesOrNull(
   ctx: DecryptoContext,
   tx: Transmission,
   raw: unknown,
-): [string, string, string] {
-  const fallback = () => fallbackClues(buildEncryptInput(ctx, tx));
-  if (!Array.isArray(raw) || raw.length !== 3) return fallback();
+): [string, string, string] | null {
+  if (!Array.isArray(raw) || raw.length !== 3) return null;
   const clues = raw.map((c) => (typeof c === "string" ? c.trim().slice(0, MAX_CLUE_LENGTH) : ""));
   const triple = clues as [string, string, string];
   const team = ctx.teams[tx.team];
   const legality = checkClueLegality(team.keywords, team.usedClues, triple);
-  return legality.ok ? triple : fallback();
+  return legality.ok ? triple : null;
 }
 
 function sanitizeGuess(
@@ -179,7 +192,8 @@ function pendingAiGuessPurposes(ctx: DecryptoContext): GuessPurpose[] {
 
 interface AiClueResult {
   team: Team;
-  clues: [string, string, string];
+  /** Null = the agent failed to produce legal clues in time → skip the transmission. */
+  clues: [string, string, string] | null;
 }
 
 interface AiGuessResult {
@@ -221,7 +235,17 @@ export const decryptoMachine = setup({
   delays: {
     roundStartBeat: ({ context }) => context.beats.roundStart,
     aiBeat: ({ context }) => context.beats.aiBeat,
-    revealBeat: ({ context }) => context.beats.reveal,
+    // A token-awarding reveal (interception / miscommunication) holds three
+    // beats so the digit-by-digit breakdown can actually be read; a clean
+    // transmission moves on after one. Derived from the guesses rather than
+    // `resolved` so evaluation order vs the entry action can't bite.
+    revealBeat: ({ context }) => {
+      const tx = currentTransmission(context);
+      if (!tx) return context.beats.reveal;
+      const intercepted = tx.interceptRequired && codesEqual(tx.interceptGuess, tx.code);
+      const miscommunicated = tx.skipped || !codesEqual(tx.decodeGuess, tx.code);
+      return context.beats.reveal * (intercepted || miscommunicated ? 3 : 1);
+    },
     roundEndBeat: ({ context }) => context.beats.roundEnd,
     clueTimeout: ({ context }) => context.beats.clueTimeout,
   },
@@ -236,12 +260,14 @@ export const decryptoMachine = setup({
         return Promise.all(
           pendingAiClueTransmissions(ctx).map(async (tx) => {
             const encryptInput = buildEncryptInput(ctx, tx);
-            const raw = await raceWithFallback(
+            const raw = await raceOrNull(
               () => getDecryptoAgent().encrypt(encryptInput),
-              () => fallbackClues(encryptInput),
-              AI_DEADLINE_MS,
+              AI_ENCRYPT_DEADLINE_MS,
             );
-            return { team: tx.team, clues: sanitizeClues(ctx, tx, raw) };
+            return {
+              team: tx.team,
+              clues: raw === null ? null : sanitizeCluesOrNull(ctx, tx, raw),
+            };
           }),
         );
       },
@@ -259,7 +285,7 @@ export const decryptoMachine = setup({
             const raw = await raceWithFallback(
               () => getDecryptoAgent().guess(guessInput),
               () => fallbackGuess(guessInput),
-              AI_DEADLINE_MS,
+              AI_GUESS_DEADLINE_MS,
             );
             return { purpose, code: sanitizeGuess(ctx, tx, purpose, raw) };
           }),
@@ -381,7 +407,7 @@ export const decryptoMachine = setup({
     skipLateTransmission: assign(({ context }) => ({
       clueTimerDeadlineTs: null,
       current: context.current.map((t) =>
-        !t.skipped && t.clues === null ? { ...t, skipped: true } : t,
+        !t.skipped && t.clues === null ? { ...t, skipped: true, skipReason: "timer" as const } : t,
       ),
     })),
 
@@ -391,10 +417,23 @@ export const decryptoMachine = setup({
       const output = (event as { output?: AiClueResult[] }).output ?? [];
       let patch: DecryptoContext = context;
       for (const item of output) {
-        const tx = patch.current.find(
+        const idx = patch.current.findIndex(
           (t) => t.team === item.team && !t.skipped && t.clues === null,
         );
+        const tx = patch.current[idx];
         if (!tx) continue; // skipped or already recorded — late result no-ops
+        if (item.clues === null) {
+          // The agent failed to produce legal clues in time: skip the
+          // transmission like a timer expiry (honest miscommunication) rather
+          // than publishing noise for humans to "decode".
+          patch = {
+            ...patch,
+            current: patch.current.map((t, i) =>
+              i === idx ? { ...t, skipped: true, skipReason: "ai" as const } : t,
+            ),
+          };
+          continue;
+        }
         try {
           patch = { ...patch, ...applySubmitClues(patch, tx.encryptor, item.clues) };
         } catch {
@@ -404,20 +443,17 @@ export const decryptoMachine = setup({
       return { current: patch.current, teams: patch.teams };
     }),
 
-    // onError belt — the actors are built to always resolve, but if one ever
-    // rejects, answer for every pending AI encryptor deterministically so the
-    // barrier still completes.
+    // onError belt — the actor is built to always resolve, but if it ever
+    // rejects, skip every pending AI transmission so the barrier completes.
     recordFallbackClues: assign(({ context }) => {
-      let patch: DecryptoContext = context;
-      for (const tx of pendingAiClueTransmissions(patch)) {
-        try {
-          const clues = fallbackClues(buildEncryptInput(patch, tx));
-          patch = { ...patch, ...applySubmitClues(patch, tx.encryptor, clues) };
-        } catch {
-          // unreachable by construction
-        }
-      }
-      return { current: patch.current, teams: patch.teams };
+      const pendingTeams = new Set(pendingAiClueTransmissions(context).map((t) => t.team));
+      return {
+        current: context.current.map((t) =>
+          pendingTeams.has(t.team) && !t.skipped && t.clues === null
+            ? { ...t, skipped: true, skipReason: "ai" as const }
+            : t,
+        ),
+      };
     }),
 
     commitAiGuesses: assign(({ context, event }) => {

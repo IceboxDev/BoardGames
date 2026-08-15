@@ -17,7 +17,12 @@ export function mapDecryptoLog(view: DecryptoPlayerView): LogBlock[] {
         actions.push({
           key: `${summary.round}-${t.team}-skip`,
           icon: "⏱",
-          spans: [{ text: who, bold: true }, " ran out of time — transmission skipped"],
+          spans: [
+            { text: who, bold: true },
+            t.skipReason === "ai"
+              ? " — GPT encryptor failed, transmission skipped (1 miscommunication)"
+              : " ran out of time — transmission skipped (1 miscommunication)",
+          ],
           variant: "warning",
         });
         continue;
@@ -43,6 +48,7 @@ export function mapDecryptoLog(view: DecryptoPlayerView): LogBlock[] {
           variant: "danger",
         });
       }
+      const wrongSlots = ([0, 1, 2] as const).filter((i) => t.decodeGuess?.[i] !== t.code[i]);
       actions.push(
         t.miscommunicated
           ? {
@@ -50,7 +56,9 @@ export function mapDecryptoLog(view: DecryptoPlayerView): LogBlock[] {
               icon: "✗",
               spans: [
                 { text: who, bold: true },
-                ` decoded ${t.decodeGuess?.join("-") ?? "nothing"} — miscommunication`,
+                ` decoded ${t.decodeGuess?.join("-") ?? "nothing"} — misread clue ${wrongSlots
+                  .map((s) => s + 1)
+                  .join(" & ")} (miscommunication)`,
               ],
               variant: "warning",
             }

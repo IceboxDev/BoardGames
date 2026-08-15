@@ -10,7 +10,7 @@
  * rules, so an injected agent may be slow or throw — but the fallback itself
  * must be synchronous-fast, throw-free, and always legal.
  */
-import type { Code, Digit } from "../types";
+import type { Code, DecodeMistake, Digit } from "../types";
 import { fallbackDecryptoAgent } from "./fallback";
 
 export interface RevealedClue {
@@ -18,6 +18,8 @@ export interface RevealedClue {
   clue: string;
   digit: Digit;
 }
+
+export type { DecodeMistake } from "../types";
 
 export interface EncryptInput {
   /** GPT model id driving this seat (the seat's strategy string). */
@@ -31,6 +33,12 @@ export interface EncryptInput {
   oppRevealedClues: RevealedClue[];
   /** Normalized clues this team has already used — reuse is illegal. */
   forbiddenClues: string[];
+  /**
+   * Where this team's own decoding went wrong before — the content behind each
+   * miscommunication token. Shows the encryptor exactly which keywords the
+   * decoder confuses, so those can be disambiguated harder.
+   */
+  ownDecodeMistakes: DecodeMistake[];
   tokens: {
     own: { interceptions: number; miscommunications: number };
     opp: { interceptions: number; miscommunications: number };
@@ -50,6 +58,11 @@ export interface GuessInput {
   currentClues: [string, string, string];
   /** The ENCRYPTING team's revealed clue↔digit history — the deduction material. */
   targetRevealedClues: RevealedClue[];
+  /**
+   * Decode only (empty for intercepts): this team's own past misreads, so the
+   * decoder can recalibrate keyword pairs it has already confused once.
+   */
+  pastDecodeMistakes: DecodeMistake[];
   round: number;
 }
 

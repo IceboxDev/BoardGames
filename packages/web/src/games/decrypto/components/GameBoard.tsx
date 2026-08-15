@@ -30,6 +30,31 @@ interface GameBoardProps {
   error: string | null;
 }
 
+/**
+ * Shown once a side has already reached a winning/losing threshold mid-round.
+ * The rulebook checks victory only AFTER both transmissions of the round
+ * resolve (simultaneous results force the points tiebreak), which reads as a
+ * bug when it happens silently — so say it out loud.
+ */
+function ThresholdNotice({ view }: { view: DecryptoPlayerView }) {
+  if (view.phase === "gameOver") return null;
+  const reached: string[] = [];
+  view.tokens.forEach((t, team) => {
+    const label = teamLabel(view.variant, team as 0 | 1);
+    if (t.interceptions >= 2) reached.push(`${label} has 2 interceptions`);
+    if (view.variant === "standard" && t.miscommunications >= 2) {
+      reached.push(`${label} has 2 miscommunications`);
+    }
+  });
+  if (reached.length === 0) return null;
+  return (
+    <p className="mx-auto w-full max-w-xl rounded-lg bg-amber-500/10 px-3 py-1.5 text-center text-3xs font-semibold text-amber-300">
+      {reached.join(" · ")} — the round still plays out: a simultaneous result would force the
+      points tiebreak.
+    </p>
+  );
+}
+
 function CluesBanner({ view }: { view: DecryptoPlayerView }) {
   const tx = view.transmissions[view.txIdx];
   if (!tx?.clues) return null;
@@ -130,6 +155,8 @@ export default function GameBoard({ view, playerNames, onAction, error }: GameBo
         {statusRow(view)}
         {view.clueTimerDeadlineTs !== null && <ClueTimer deadlineTs={view.clueTimerDeadlineTs} />}
       </div>
+
+      <ThresholdNotice view={view} />
 
       {view.phase === "clueWriting" && myEncryptTx && (
         <EncryptorPanel

@@ -8,6 +8,7 @@ import {
   chatAllowed,
   checkClueLegality,
   codesEqual,
+  decodeMistakesFor,
   defaultTeamPlayers,
   drawCode,
   eligibleSeats,
@@ -296,6 +297,34 @@ describe("resolution", () => {
     const next = resolveWith(base, { decode: wrong, intercept: [...code] as Code });
     expect(next.teams[1].interceptions).toBe(2); // both award paths in one round
     expect(next.teams[0].miscommunications).toBe(1);
+  });
+});
+
+describe("decode mistakes", () => {
+  it("extracts only the wrongly-decoded positions of miscommunicated rounds", () => {
+    const ctx = makeCtx({ round: 2 });
+    const t = tx(ctx);
+    t.clues = ["alpha", "beta", "gamma"];
+    const code = t.code;
+    // Wrong in exactly the positions where the guess differs from the code.
+    const wrong = ALL_CODES.find((c) => c[0] !== code[0] && c[1] === code[1]) as Code;
+    t.decodeGuess = [...wrong] as Code;
+    t.resolved = { intercepted: false, miscommunicated: true };
+    const mistakes = decodeMistakesFor(ctx, 0);
+    expect(mistakes.length).toBeGreaterThan(0);
+    for (const m of mistakes) {
+      expect(m.decodedAs).not.toBe(m.meantDigit);
+      expect(["alpha", "beta", "gamma"]).toContain(m.clue);
+    }
+    expect(mistakes.some((m) => m.clue === "beta")).toBe(false); // position 1 was right
+    // A clean transmission contributes nothing.
+    t.resolved = { intercepted: false, miscommunicated: false };
+    expect(decodeMistakesFor(ctx, 0)).toHaveLength(0);
+    // Skipped transmissions (no guess at all) contribute nothing either.
+    t.clues = null;
+    t.skipped = true;
+    t.resolved = { intercepted: false, miscommunicated: true };
+    expect(decodeMistakesFor(ctx, 0)).toHaveLength(0);
   });
 });
 

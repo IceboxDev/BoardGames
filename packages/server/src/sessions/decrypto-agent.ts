@@ -1,4 +1,5 @@
 import type {
+  DecodeMistake,
   DecryptoAiAgent,
   EncryptInput,
   GuessInput,
@@ -171,6 +172,19 @@ function digitTable(clues: RevealedClue[]): string {
     .join("\n");
 }
 
+/** Past decode failures, one line each: what the clue meant vs what was guessed. */
+function mistakesText(mistakes: DecodeMistake[]): string {
+  if (mistakes.length === 0) return "(none — every decode so far was exact)";
+  return mistakes
+    .map(
+      (m) =>
+        `  r${m.round}: "${m.clue}" meant #${m.meantDigit}, decoded as ${
+          m.decodedAs === null ? "nothing (skipped)" : `#${m.decodedAs}`
+        }`,
+    )
+    .join("\n");
+}
+
 function encryptSystem(): string {
   return `You are an expert Decrypto player acting as your team's ENCRYPTOR.
 
@@ -202,10 +216,20 @@ For EVERY clue, work through this checklist:
 5. CROSS-KEYWORD TEST: make sure the clue doesn't fit one of your OTHER three
    keywords better, or your own team will mis-assign it.
 
+LEARN FROM MISCOMMUNICATIONS: the past-misreads list shows exactly where your
+decoder's mental model diverges from yours. A clue meant for #3 that was
+decoded as #2 means those two keywords overlap in your decoder's mind — when
+cluing EITHER of them again, pick a facet that clearly excludes the other one.
+Never repeat the kind of association that already got misread.
+
 Score awareness: if the enemy already holds an interception token, obliqueness
 is survival. If your team already holds a miscommunication token, clarity is
-survival. With both, prefer a clear clue on an empty-ish column and an oblique
-one where history is thick.
+survival — one more wrong decode loses the game outright, so favor the
+teammate test over the interceptor test. With both, prefer a clear clue on an
+empty-ish column and an oblique one where history is thick.
+
+Keep every reasoning field to one terse sentence — spend your thinking on the
+clues, not on prose.
 
 HARD RULES (mechanically enforced — a violation wastes the attempt):
 - Clues reference MEANING only: never spelling, letter count, position, or
@@ -232,7 +256,14 @@ three DIFFERENT keyword numbers:
 2. Resolve globally: digits are distinct. If two clues both point at one
    keyword, keep the stronger fit and reassign the weaker by elimination.
 3. A clue that seems to fit nothing usually belongs to the remaining keyword
-   — trust the elimination, not a forced surface match.`;
+   — trust the elimination, not a forced surface match.
+4. Learn from your team's past misreads (listed if any): if you previously
+   confused two keywords, your encryptor KNOWS that and is now deliberately
+   disambiguating exactly that pair — weigh the less-obvious reading of a
+   clue that touches either of them. A second identical confusion loses the
+   game.
+
+Keep every reasoning field to one terse sentence.`;
 }
 
 function interceptSystem(): string {
@@ -253,7 +284,9 @@ clue narrows it. Method, for the three new clues in order:
    elimination from the strong ones.
 3. Columns with little or no history are live candidates — a clue matching
    nothing known often belongs to the emptiest column.
-Always commit a full guess: a structured best guess beats no attempt.`;
+Always commit a full guess: a structured best guess beats no attempt.
+
+Keep every reasoning field to one terse sentence.`;
 }
 
 function encryptUser(input: EncryptInput, violation?: string): string {
@@ -266,6 +299,7 @@ function encryptUser(input: EncryptInput, violation?: string): string {
     `FORBIDDEN CLUES (already used by your team): ${
       input.forbiddenClues.length > 0 ? input.forbiddenClues.join(", ") : "(none)"
     }`,
+    `YOUR TEAM'S PAST MISREADS (disambiguate these confusions):\n${mistakesText(input.ownDecodeMistakes)}`,
     `SCORE: you ${input.tokens.own.interceptions} interceptions / ${input.tokens.own.miscommunications} miscommunications — enemy ${input.tokens.opp.interceptions} / ${input.tokens.opp.miscommunications}`,
   ];
   if (violation) {
@@ -287,6 +321,9 @@ function guessUser(input: GuessInput, violation?: string): string {
       1,
       0,
       `YOUR TEAM'S KEYWORDS:\n  #1: ${input.keywords[0]}\n  #2: ${input.keywords[1]}\n  #3: ${input.keywords[2]}\n  #4: ${input.keywords[3]}`,
+    );
+    sections.push(
+      `YOUR TEAM'S PAST MISREADS (don't repeat these confusions):\n${mistakesText(input.pastDecodeMistakes)}`,
     );
   }
   if (violation) {

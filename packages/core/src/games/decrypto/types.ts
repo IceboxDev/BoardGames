@@ -43,8 +43,10 @@ export interface Transmission {
   code: Code;
   /** Null until the encryptor submits. Public once submitted. */
   clues: [string, string, string] | null;
-  /** True when the clue timer expired before submission — no clues this round. */
+  /** True when no clues arrived — timer expiry or a failed AI encryptor. */
   skipped: boolean;
+  /** Why the transmission was skipped ("timer" | "ai"); null when not skipped. */
+  skipReason: "timer" | "ai" | null;
   /** Collaborative scratch state, visible to the eligible guessers only. */
   decodeDraft: DraftCode;
   interceptDraft: DraftCode;
@@ -202,6 +204,7 @@ export interface TransmissionView {
   /** Public once submitted; null while the encryptor is still writing. */
   clues: [string, string, string] | null;
   skipped: boolean;
+  skipReason: "timer" | "ai" | null;
   /** The secret code: present for the encryptor pre-reveal, for everyone post-reveal. */
   code: Code | null;
   /** Present only for seats eligible to edit it. */
@@ -218,6 +221,18 @@ export interface TransmissionView {
   } | null;
 }
 
+/**
+ * One position of a past decode failure: what the clue actually meant vs what
+ * the team guessed. `decodedAs` is null when the transmission was skipped
+ * (timer expiry — nothing was guessed at all).
+ */
+export interface DecodeMistake {
+  round: number;
+  clue: string;
+  meantDigit: Digit;
+  decodedAs: Digit | null;
+}
+
 /** A fully-revealed transmission, for history feeds — everything is public post-reveal. */
 export interface RoundSummaryView {
   round: number;
@@ -226,6 +241,7 @@ export interface RoundSummaryView {
     encryptor: number;
     clues: [string, string, string] | null;
     skipped: boolean;
+    skipReason: "timer" | "ai" | null;
     code: Code;
     decodeGuess: Code | null;
     interceptGuess: Code | null;

@@ -1,6 +1,7 @@
 import { type Rng, shuffle } from "../../lib/rng";
 import type {
   Code,
+  DecodeMistake,
   DecryptoAction,
   DecryptoContext,
   DecryptoResult,
@@ -116,6 +117,7 @@ export function buildRoundTransmissions(ctx: DecryptoContext, round: number): Tr
     code: drawCode(ctx.rng),
     clues: null,
     skipped: false,
+    skipReason: null,
     decodeDraft: [null, null, null],
     interceptDraft: [null, null, null],
     decodeGuess: null,
@@ -342,6 +344,30 @@ export function revealedCluesFor(ctx: DecryptoContext, team: Team): RevealedClue
       if (t.team !== team || t.resolved === null || t.clues === null) continue;
       t.clues.forEach((clue, i) => {
         out.push({ round, clue, digit: t.code[i] as Digit });
+      });
+    }
+  };
+  for (const record of ctx.history) scan(record.transmissions, record.round);
+  scan(ctx.current, ctx.round);
+  return out;
+}
+
+/**
+ * Every position where `team` decoded its own transmission wrongly, oldest
+ * first — the content behind each miscommunication token. Feeds the agents
+ * (an encryptor disambiguates exactly the keywords its decoder confused) and
+ * is derivable by every player at the table, so it leaks nothing.
+ */
+export function decodeMistakesFor(ctx: DecryptoContext, team: Team): DecodeMistake[] {
+  const out: DecodeMistake[] = [];
+  const scan = (transmissions: Transmission[], round: number) => {
+    for (const t of transmissions) {
+      if (t.team !== team || t.resolved === null || t.clues === null) continue;
+      if (!t.resolved.miscommunicated) continue;
+      t.clues.forEach((clue, i) => {
+        const meant = t.code[i] as Digit;
+        const guessed = t.decodeGuess?.[i] ?? null;
+        if (guessed !== meant) out.push({ round, clue, meantDigit: meant, decodedAs: guessed });
       });
     }
   };

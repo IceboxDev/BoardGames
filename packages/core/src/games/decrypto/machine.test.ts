@@ -289,6 +289,40 @@ describe("decrypto machine — human flow", () => {
   });
 });
 
+describe("decrypto machine — AI encrypt failure", () => {
+  it("skips the transmission (honest miscommunication) when the agent throws", async () => {
+    setDecryptoAgent({
+      encrypt: () => Promise.reject(new Error("model exploded")),
+      guess: (input) => scriptedAgent.guess(input),
+    });
+    const actor = startActor({ humanPlayers: [] });
+    await waitFor(actor, (s) => s.context.history.length === 1, { timeout: 5000 });
+    const round1 = actor.getSnapshot().context.history[0];
+    for (const t of round1?.transmissions ?? []) {
+      expect(t.skipped).toBe(true);
+      expect(t.skipReason).toBe("ai");
+      expect(t.clues).toBeNull(); // no noise was ever published
+      expect(t.resolved?.miscommunicated).toBe(true);
+    }
+    // Both teams eat miscommunications every round → the game still ends.
+    await waitForGameOver(actor);
+    expect(decryptoSpec.getResult(actor.getSnapshot())?.rounds).toBe(2);
+    actor.stop();
+  });
+
+  it("skips when the agent returns illegal clues (contains a keyword)", async () => {
+    setDecryptoAgent({
+      encrypt: (input) => Promise.resolve([input.keywords[0], "beta", "gamma"]),
+      guess: (input) => scriptedAgent.guess(input),
+    });
+    const actor = startActor({ humanPlayers: [] });
+    await waitFor(actor, (s) => s.context.history.length === 1, { timeout: 5000 });
+    const round1 = actor.getSnapshot().context.history[0];
+    expect(round1?.transmissions.every((t) => t.skipped && t.skipReason === "ai")).toBe(true);
+    actor.stop();
+  });
+});
+
 describe("decrypto machine — clue timer", () => {
   it("skips the slow human encryptor and charges a miscommunication", async () => {
     // Seats 0 and 2 are the round-1 encryptors, both human; AI fills 1 and 3.
@@ -305,6 +339,7 @@ describe("decrypto machine — clue timer", () => {
     const ctx = actor.getSnapshot().context;
     const black = ctx.history[0]?.transmissions.find((t) => t.team === 1);
     expect(black?.skipped).toBe(true);
+    expect(black?.skipReason).toBe("timer");
     expect(black?.resolved?.miscommunicated).toBe(true);
     expect(ctx.teams[1].miscommunications).toBe(1);
     actor.stop();

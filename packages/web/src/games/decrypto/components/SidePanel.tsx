@@ -55,6 +55,16 @@ function TeamRow({
           </span>
         )}
       </div>
+      {tokens.interceptions === 1 && (
+        <p className="mt-1 text-3xs font-semibold text-emerald-300/90">
+          1 {interceptorRow ? "token" : "interception"} from victory
+        </p>
+      )}
+      {!interceptorRow && tokens.miscommunications === 1 && (
+        <p className="mt-1 text-3xs font-semibold text-rose-300/90">
+          1 miscommunication from defeat
+        </p>
+      )}
       <ul className="mt-1.5 flex flex-col gap-0.5">
         {view.seats
           .filter((s) => s.team === team)
