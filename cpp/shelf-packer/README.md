@@ -9,7 +9,9 @@ problem. Self-contained C++17, no dependencies (its own PNG encoder).
 - Every box (`width × length × height`, mm) shows a **front face** of either
   `width×height` or `length×height`, optionally rotated 90° — so a box can
   also stand on its edge, spine-out like a book. The remaining dimension goes
-  **into** the shelf and must fit `--depth-max`.
+  **into** the shelf and must fit `--depth-max`. Pass `--flat` to forbid the
+  rotated (spine-out) placements: every box then lies flat with its own
+  height staying vertical.
 - The packing is a row of **piles** standing flush on the floor. A pile is a
   stack of layers; a layer is 1–3 boxes side by side whose face heights match
   within tolerance. Every layer in a pile shares the pile width (± tolerance),

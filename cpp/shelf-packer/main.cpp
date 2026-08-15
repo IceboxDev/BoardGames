@@ -49,6 +49,7 @@ struct Params {
   int depthMax = 325;     // max depth into the shelf
   int tolPerBox = 1;      // per-box measurement tolerance (±mm)
   int spillCost = 50;     // reserve-spill penalty: % of full-depth volume per spilled mm²
+  bool flatOnly = false;  // --flat: boxes lie flat only — no rotated (spine-out) faces
   int solutions = 8;      // how many solutions to emit
   std::string out = "out";
   std::vector<std::string> require;  // --require NAME (or PREFIX*): must be packed,
@@ -156,9 +157,12 @@ static std::vector<Orient> buildOrients(const std::vector<Box>& boxes, const Par
   for (int i = 0; i < (int)boxes.size(); i++) {
     const Box& b = boxes[i];
     // (face pair, depth): w×h with depth l; l×h with depth w — each rotatable.
+    // --flat drops the rotated variants: the box's own height stays vertical.
     int cand[4][3] = {{b.w, b.h, b.l}, {b.h, b.w, b.l}, {b.l, b.h, b.w}, {b.h, b.l, b.w}};
     std::set<std::tuple<int, int, int>> seen;
-    for (auto& c : cand) {
+    for (int k = 0; k < 4; k++) {
+      if (p.flatOnly && (k == 1 || k == 3)) continue;
+      auto& c = cand[k];
       int fw = c[0], fh = c[1], d = c[2];
       if (d > p.depthMax) continue;
       if (fh > p.maxHeight() + p.tolPerBox) continue;
@@ -904,6 +908,7 @@ int main(int argc, char** argv) {
     else if (a == "--spill-cost") next(p.spillCost);
     else if (a == "--require") p.require.push_back(argv[++i]);
     else if (a == "--together") p.together.push_back(argv[++i]);
+    else if (a == "--flat") p.flatOnly = true;
     else if (a == "--solutions") next(p.solutions);
     else if (a == "--out") p.out = argv[++i];
     else input = a;
