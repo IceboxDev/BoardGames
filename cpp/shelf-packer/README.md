@@ -14,13 +14,15 @@ problem. Self-contained C++17, no dependencies (its own PNG encoder).
   stack of layers; a layer is 1–3 boxes side by side whose face heights match
   within tolerance. Every layer in a pile shares the pile width (± tolerance),
   so all vertical seams are flush.
-- Piles must reach the nominal height and may overshoot the top by the
-  allowed overflow; pile widths sum to the nominal width plus the left+right
-  overflow allowance. Measurement tolerance (±1 mm/box) is applied per layer,
-  never banked across a whole pile.
-- Objective: **maximize packed volume**, tie-broken by depth used (deeper
-  boxes waste less shelf). Emitted solutions are diversified — two solutions
-  must differ by at least 6 boxes.
+- Piles must reach the nominal height; the overflow allowances (30 mm per
+  side, 35 mm up top) are RESERVE, not budget — spilling into them is allowed
+  but penalized: each spilled mm² of front face costs `--spill-cost`% (default
+  50) of what that area could hold at full shelf depth, so a spill only wins
+  when it packs denser than that bar. Measurement tolerance (±1 mm/box) is
+  applied per layer, never banked across a whole pile.
+- Objective: **maximize packed volume minus the spill penalty**, tie-broken by
+  depth used (deeper boxes waste less shelf). Emitted solutions are
+  diversified — two solutions must differ by at least 6 boxes.
 
 Search: exhaustive layer/pile enumeration (deduped by box-set), then several
 beam-search passes over pile candidates plus 20k density-biased greedy
@@ -33,12 +35,15 @@ make                       # builds ./shelf-packer
 ./shelf-packer boxes.csv --out out
 ```
 
-Outputs `out/solutions.txt` plus one `out/solution_NN.png` per solution
-(front view: floor line, shelf outline, dashed overflow bounds, one colored
-rectangle per box labeled `name W×H dDEPTH`).
+Outputs `out/solutions.txt` plus one `out/solution_NN.png` per solution:
+front view with floor line, shelf outline, and dashed reserve bounds; every
+box is numbered, and a legend below the diagram lists each number with the
+full name, placed face (`W×H dDEPTH`), and the raw box dimensions.
 
 Flags (all mm): `--width 850 --height 250 --over-left 30 --over-right 30
---over-top 35 --depth-max 325 --tol 1 --solutions 8 --out DIR`.
+--over-top 35 --depth-max 325 --tol 1 --spill-cost 50 --solutions 8
+--out DIR`. Raise `--spill-cost` toward 100 to keep packings inside the
+nominal window unless a spill is nearly free volume.
 
 ## Input
 

@@ -37,13 +37,18 @@
 
 // ── Parameters (mm) ────────────────────────────────────────────────────
 struct Params {
+  // The overflow allowances are PADDING, not budget: spilling into them is
+  // allowed up to the full 30/30/35 mm, but penalized — every mm² of front
+  // face outside the nominal window costs half of what that area could hold
+  // at full depth, so a spill only wins when it packs denser than 50%.
   int widthBase = 850;    // nominal rectangle width
-  int overLeft = 30;      // left side may exceed by this
-  int overRight = 30;     // right side may exceed by this
+  int overLeft = 30;      // hard left overflow limit (reserve — penalized)
+  int overRight = 30;     // hard right overflow limit (reserve — penalized)
   int heightBase = 250;   // nominal rectangle height (must be reached)
-  int overTop = 35;       // piles may overshoot the top by this
+  int overTop = 35;       // hard top overflow limit (reserve — penalized)
   int depthMax = 325;     // max depth into the shelf
   int tolPerBox = 1;      // per-box measurement tolerance (±mm)
+  int spillCost = 50;     // reserve-spill penalty: % of full-depth volume per spilled mm²
   int solutions = 8;      // how many solutions to emit
   std::string out = "out";
   int maxWidth() const { return widthBase + overLeft + overRight; }
@@ -117,14 +122,27 @@ struct Pile {
   std::vector<int> cells;  // indices into the cell list
 };
 
+// Front-face area a pile pushes above the nominal height.
+static long long topOverArea(const Pile& pile, int heightBase) {
+  return (long long)pile.width * std::max(0, pile.height - heightBase);
+}
+
 // A full packing.
 struct Solution {
   uint64_t mask = 0;
   int width = 0;
   long long vol = 0;
   long long depthSum = 0;
+  long long overArea = 0;  // front area spilled into the reserve (mm²)
   std::vector<int> piles;  // indices into the pile list
 };
+
+// Reserve spill is discouraged, not forbidden: each mm² of spilled front
+// face costs half of what that area could hold at full shelf depth.
+static long long solutionScore(long long vol, long long widthOverArea, long long topOverArea,
+                               const Params& p) {
+  return vol - (widthOverArea + topOverArea) * p.depthMax * p.spillCost / 100;
+}
 
 static std::vector<Orient> buildOrients(const std::vector<Box>& boxes, const Params& p) {
   std::vector<Orient> out;
@@ -286,25 +304,38 @@ struct State {
   int width = 0;
   long long vol = 0;
   long long depthSum = 0;
+  long long topOver = 0;  // Σ pile width × top overshoot
   std::vector<int> piles;
 };
 
+static long long stateScore(const State& s, const Params& p) {
+  long long widthOverArea = (long long)std::max(0, s.width - p.widthBase) * p.heightBase;
+  return solutionScore(s.vol, widthOverArea, s.topOver, p);
+}
+
 static bool betterSolution(const Solution& a, const Solution& b) {
+  // Both carry precomputed score in `overArea` slot? No — compare on score.
+  // (score recomputed by caller into the sort lambda; here: volume tiebreak.)
   if (a.vol != b.vol) return a.vol > b.vol;
   return a.depthSum > b.depthSum;
 }
 
-static void collect(std::map<uint64_t, Solution>& pool, const State& s,
-                    const std::vector<Pile>& piles) {
+static void collect(std::map<uint64_t, Solution>& pool, const State& s, const Params& p) {
   Solution sol;
   sol.mask = s.mask;
   sol.width = s.width;
   sol.vol = s.vol;
   sol.depthSum = s.depthSum;
+  sol.overArea = (long long)std::max(0, s.width - p.widthBase) * p.heightBase + s.topOver;
   sol.piles = s.piles;
   auto it = pool.find(s.mask);
-  if (it == pool.end() || betterSolution(sol, it->second)) pool[s.mask] = std::move(sol);
-  (void)piles;
+  if (it == pool.end()) {
+    pool[s.mask] = std::move(sol);
+    return;
+  }
+  long long a = solutionScore(sol.vol, sol.overArea, 0, p);
+  long long b = solutionScore(it->second.vol, it->second.overArea, 0, p);
+  if (a > b || (a == b && sol.depthSum > it->second.depthSum)) pool[s.mask] = std::move(sol);
 }
 
 static void beamSearch(const std::vector<Pile>& piles, std::vector<int> order, const Params& p,
@@ -321,18 +352,21 @@ static void beamSearch(const std::vector<Pile>& piles, std::vector<int> order, c
       t.width += pile.width;
       t.vol += pile.vol;
       t.depthSum += pile.depthSum;
+      t.topOver += topOverArea(pile, p.heightBase);
       t.piles.push_back(pi);
       next.push_back(std::move(t));
     }
-    std::sort(next.begin(), next.end(), [](const State& a, const State& b) {
-      if (a.vol != b.vol) return a.vol > b.vol;
+    std::sort(next.begin(), next.end(), [&](const State& a, const State& b) {
+      long long sa = stateScore(a, p), sb = stateScore(b, p);
+      if (sa != sb) return sa > sb;
       return a.depthSum > b.depthSum;
     });
     if (next.size() > beamWidth) next.resize(beamWidth);
     beam = std::move(next);
   }
   for (const State& s : beam)
-    if (s.width > 0) collect(pool, s, piles);
+    if (s.width > 0) collect(pool, s, p);
+  (void)piles;
 }
 
 static void greedyRestarts(const std::vector<Pile>& piles, const Params& p,
@@ -358,9 +392,10 @@ static void greedyRestarts(const std::vector<Pile>& piles, const Params& p,
       s.width += pile.width;
       s.vol += pile.vol;
       s.depthSum += pile.depthSum;
+      s.topOver += topOverArea(pile, p.heightBase);
       s.piles.push_back(pi);
     }
-    if (s.width > 0) collect(pool, s, piles);
+    if (s.width > 0) collect(pool, s, p);
   }
 }
 
@@ -511,10 +546,18 @@ static void hsv2rgb(double hue, double s, double v, int& r, int& g, int& b) {
 static void renderSolution(const Solution& sol, const std::vector<Pile>& piles,
                            const std::vector<Cell>& cells, const std::vector<Box>& boxes,
                            const Params& p, const std::string& path, int rank) {
-  const int M = 40, TITLE = 26;
-  int W = p.maxWidth() + 2 * M, H = p.maxHeight() + 2 * M + TITLE;
+  // Legend: every placed box gets a number; full name + face + depth + raw
+  // box dims are listed below the diagram, three columns.
+  int nPlaced = __builtin_popcountll(sol.mask);
+  const int LEGEND_COLS = 3;
+  int legendRows = (nPlaced + LEGEND_COLS - 1) / LEGEND_COLS;
+  const int M = 40, TITLE = 26, LEGEND_ROW_H = 11;
+  int legendH = legendRows * LEGEND_ROW_H + 18;
+  int W = std::max(p.maxWidth() + 2 * M, 1020);
+  int H = p.maxHeight() + 2 * M + TITLE + legendH;
   Canvas cv(W, H);
-  int baseY = H - M;  // floor line (y grows downward)
+  int baseY = H - M - legendH;  // floor line (y grows downward)
+  std::vector<std::string> legend;
   int x0 = M + (p.widthBase - sol.width) / 2;  // center the overhang
   if (x0 < M - p.overLeft) x0 = M - p.overLeft;
 
@@ -543,15 +586,28 @@ static void renderSolution(const Solution& sol, const std::vector<Pile>& piles,
         hsv2rgb(std::fmod(47.0 * pl.box, 360.0), 0.35, 0.95, r, g, b);
         cv.fill(bx, by, bx + pl.fw, y, r, g, b);
         cv.rect(bx, by, bx + pl.fw, y, 60, 60, 60);
+        int num = (int)legend.size() + 1;
+        char entry[128];
+        snprintf(entry, sizeof entry, "%2d %s %dx%d d%d (box %dx%dx%d)", num,
+                 boxes[pl.box].name.c_str(), pl.fw, pl.fh, pl.d, boxes[pl.box].w,
+                 boxes[pl.box].l, boxes[pl.box].h);
+        legend.push_back(entry);
+        // The number goes on EVERY box; name + face dims too when they fit.
+        char numText[16];
+        snprintf(numText, sizeof numText, "%d", num);
         std::string name = boxes[pl.box].name;
-        if ((int)name.size() * 6 > pl.fw - 6) name = name.substr(0, std::max(1, (pl.fw - 6) / 6));
         char dims[64];
         snprintf(dims, sizeof dims, "%dx%d d%d", pl.fw, pl.fh, pl.d);
-        if (pl.fh >= 20 && pl.fw >= 40) {
-          cv.text(bx + 4, by + 3, name, 30, 30, 30);
-          cv.text(bx + 4, by + 12, dims, 90, 90, 90);
-        } else if (pl.fh >= 10 && pl.fw >= 40) {
-          cv.text(bx + 4, by + 2, name, 30, 30, 30);
+        int nameW = 6 * (int)(name.size() + strlen(numText) + 1);
+        if (pl.fh >= 22 && pl.fw >= nameW + 8) {
+          cv.text(bx + 4, by + 3, std::string(numText) + " " + name, 30, 30, 30);
+          cv.text(bx + 4, by + 13, dims, 90, 90, 90);
+        } else if (pl.fh >= 11 && pl.fw >= nameW + 8) {
+          cv.text(bx + 4, by + 2, std::string(numText) + " " + name, 30, 30, 30);
+        } else {
+          // Tiny or narrow box: centered number only — the legend carries it.
+          int tw = 6 * (int)strlen(numText);
+          cv.text(bx + (pl.fw - tw) / 2, by + std::max(1, (pl.fh - 7) / 2), numText, 30, 30, 30);
         }
       }
       y -= cell.height;
@@ -569,10 +625,17 @@ static void renderSolution(const Solution& sol, const std::vector<Pile>& piles,
 
   char title[160];
   snprintf(title, sizeof title, "SOLUTION %d  VOL %.1f L  WIDTH %d MM  BOXES %d  AVG DEPTH %lld MM",
-           rank, (double)sol.vol / 1e6, sol.width,
-           (int)__builtin_popcountll(sol.mask),
-           sol.depthSum / std::max(1, (int)__builtin_popcountll(sol.mask)));
+           rank, (double)sol.vol / 1e6, sol.width, nPlaced,
+           sol.depthSum / std::max(1, nPlaced));
   cv.text(M, 12, title, 20, 20, 20, 2);
+
+  // Legend below the diagram.
+  int ly0 = baseY + 16;
+  int colW = (W - 2 * M) / LEGEND_COLS;
+  for (size_t i = 0; i < legend.size(); i++) {
+    int col = (int)i / legendRows, row = (int)i % legendRows;
+    cv.text(M + col * colW, ly0 + row * LEGEND_ROW_H, legend[i], 40, 40, 40);
+  }
   png::write(path, W, H, cv.rgb);
 }
 
@@ -581,7 +644,8 @@ static void report(std::ostream& os, const Solution& sol, const std::vector<Pile
                    const std::vector<Cell>& cells, const std::vector<Box>& boxes, int rank) {
   os << "── Solution " << rank << ": volume " << (double)sol.vol / 1e6 << " L, width " << sol.width
      << " mm, boxes " << __builtin_popcountll(sol.mask) << ", avg depth "
-     << sol.depthSum / std::max(1, (int)__builtin_popcountll(sol.mask)) << " mm\n";
+     << sol.depthSum / std::max(1, (int)__builtin_popcountll(sol.mask))
+     << " mm, reserve spill " << (double)sol.overArea / 100.0 << " cm2\n";
   std::vector<int> ordered = sol.piles;
   std::sort(ordered.begin(), ordered.end(),
             [&](int a, int b) { return piles[a].width > piles[b].width; });
@@ -624,6 +688,7 @@ int main(int argc, char** argv) {
     else if (a == "--over-top") next(p.overTop);
     else if (a == "--depth-max") next(p.depthMax);
     else if (a == "--tol") next(p.tolPerBox);
+    else if (a == "--spill-cost") next(p.spillCost);
     else if (a == "--solutions") next(p.solutions);
     else if (a == "--out") p.out = argv[++i];
     else input = a;
@@ -670,7 +735,12 @@ int main(int argc, char** argv) {
   std::vector<Solution> ranked;
   ranked.reserve(pool.size());
   for (auto& [_, s] : pool) ranked.push_back(std::move(s));
-  std::sort(ranked.begin(), ranked.end(), betterSolution);
+  std::sort(ranked.begin(), ranked.end(), [&](const Solution& a, const Solution& b) {
+    long long sa = solutionScore(a.vol, a.overArea, 0, p);
+    long long sb = solutionScore(b.vol, b.overArea, 0, p);
+    if (sa != sb) return sa > sb;
+    return betterSolution(a, b);
+  });
   // Diversify: skip solutions that differ from an already-picked one by
   // fewer than 6 boxes (pandemic-1 ↔ pandemic-2 swaps are not "another
   // solution" to a human).
