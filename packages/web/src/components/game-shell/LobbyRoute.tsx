@@ -129,6 +129,13 @@ export default function LobbyRoute() {
       }}
       onKick={(i) => mp.kickPlayer(i)}
       onToggleReady={() => mp.toggleReady()}
+      // Host edits one slot (add/remove/reconfigure an AI); the wire message
+      // replaces the whole slot array. This prop was historically never
+      // passed, which left the lobby's "Add AI" chip inert.
+      onConfigureSlot={(i, slot) => {
+        const slots = mp.roomState?.slots.map((s, idx) => (idx === i ? slot : s));
+        if (slots) mp.configureRoom(slots);
+      }}
       onSwapSeats={(a, b) => mp.swapSeats(a, b)}
       error={mp.error}
     >

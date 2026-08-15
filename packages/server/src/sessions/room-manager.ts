@@ -460,6 +460,22 @@ export function handleStartRoom(ws: WSContext, msg: { roomCode: string; config: 
     return;
   }
 
+  // Decrypto's seats carry team meaning (0-1 White, 2-3 Black; seats 0-2 with
+  // the last left open = the 3-player Interceptor variant), so only those two
+  // fill shapes are startable.
+  if (room.gameSlug === "decrypto") {
+    const filled = room.slots.map((s) => s.kind !== "open");
+    const standard = filled.every(Boolean);
+    const interceptor = filled[0] && filled[1] && filled[2] && !filled[3];
+    if (!standard && !interceptor) {
+      sendError(
+        ws,
+        "Decrypto needs all 4 seats filled (2v2), or just the first 3 for the Interceptor variant",
+      );
+      return;
+    }
+  }
+
   // Build player connections for the session. The in-game seat comes from
   // `seatOrder`, not the slot index — the host may have swapped roles.
   const players: PlayerConnection[] = [];
@@ -547,6 +563,27 @@ function buildGameConfig(room: Room, extra: Record<string, unknown>): Record<str
         .filter((i) => i >= 0);
       const playerCount = room.slots.filter((s) => s.kind !== "open").length;
       return { playerCount, humanPlayers: humanIndices, ...extra };
+    }
+
+    case "decrypto": {
+      // Seat convention: 0-1 White, 2-3 Black; 3 filled seats = the
+      // Interceptor variant (seat 2 is the solo interceptor). AI slots carry
+      // a GPT model id in `aiStrategy`.
+      const humanIndices = room.slots
+        .map((s, i) => (s.kind === "human" ? (room.seatOrder[i] ?? i) : -1))
+        .filter((i) => i >= 0);
+      const filledCount = room.slots.filter((s) => s.kind !== "open").length;
+      const aiModels: (string | null)[] = [];
+      room.slots.forEach((s, i) => {
+        const seat = room.seatOrder[i] ?? i;
+        aiModels[seat] = s.kind === "ai" ? (s.aiStrategy ?? null) : null;
+      });
+      return {
+        variant: filledCount === 3 ? "interceptor" : "standard",
+        humanPlayers: humanIndices,
+        aiModels,
+        ...extra,
+      };
     }
 
     case "sky-team": {

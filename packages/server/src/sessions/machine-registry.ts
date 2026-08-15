@@ -1,4 +1,5 @@
 import { sevenWondersSpec } from "@boardgames/core/games/7-wonders/machine";
+import { decryptoSpec } from "@boardgames/core/games/decrypto/machine";
 import { durakSpec } from "@boardgames/core/games/durak/machine";
 import { explodingKittensSpec } from "@boardgames/core/games/exploding-kittens/machine";
 import { lostCitiesSpec } from "@boardgames/core/games/lost-cities/machine";
@@ -12,6 +13,7 @@ import type { AnyActorLogic } from "xstate";
 
 const registry = new Map<string, GameMachineSpec<AnyActorLogic, unknown, unknown, unknown>>();
 registry.set("7-wonders", sevenWondersSpec);
+registry.set("decrypto", decryptoSpec);
 registry.set("durak", durakSpec);
 registry.set("lost-cities", lostCitiesSpec);
 registry.set("exploding-kittens", explodingKittensSpec);

@@ -1,7 +1,7 @@
 import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
 import type { GameRoomConfig } from "@boardgames/core/protocol/room-config";
 import { ControlGroup, SetupLayout } from "../setup";
-import { Badge, Button, Chip, ErrorAlert } from "../ui";
+import { Badge, Button, Chip, ErrorAlert, Select } from "../ui";
 
 interface LobbyProps {
   roomCode: string;
@@ -62,19 +62,24 @@ export function Lobby({
       seatName={roomConfig.seatNames?.[roomState.seatOrder?.[i] ?? i]}
       canKick={isHost && i !== 0 && slot.kind === "human"}
       canToggle={isHost && i !== 0 && roomConfig.supportsAI}
+      botStrategies={roomConfig.botStrategies}
       onKick={() => onKick(i)}
       onToggle={() => {
         if (!onConfigureSlot) return;
         if (slot.kind === "open") {
           onConfigureSlot(i, {
             kind: "ai",
-            aiStrategy: "heuristic-v1",
+            aiStrategy: roomConfig.botStrategies?.[0]?.id ?? "heuristic-v1",
             ready: false,
             connected: false,
           });
         } else if (slot.kind === "ai") {
           onConfigureSlot(i, { kind: "open", ready: false, connected: false });
         }
+      }}
+      onSetStrategy={(id) => {
+        if (!onConfigureSlot || slot.kind !== "ai") return;
+        onConfigureSlot(i, { ...slot, aiStrategy: id });
       }}
     />
   ));
@@ -232,8 +237,10 @@ function SlotRow({
   seatName,
   canKick,
   canToggle,
+  botStrategies,
   onKick,
   onToggle,
+  onSetStrategy,
 }: {
   slot: RoomSlot;
   index: number;
@@ -242,8 +249,11 @@ function SlotRow({
   seatName?: string;
   canKick: boolean;
   canToggle: boolean;
+  /** Selectable AI engines (see `GameRoomConfig.botStrategies`). */
+  botStrategies?: GameRoomConfig["botStrategies"];
   onKick: () => void;
   onToggle: () => void;
+  onSetStrategy: (id: string) => void;
 }) {
   const isSlotHost = index === 0;
 
@@ -282,7 +292,27 @@ function SlotRow({
             {isMe && !isSlotHost && <Badge tone="emerald">You</Badge>}
           </div>
         ) : slot.kind === "ai" ? (
-          <span className="text-sm text-sky-400">AI ({slot.aiStrategy})</span>
+          botStrategies && canToggle ? (
+            <div className="flex items-center gap-2">
+              <span className="shrink-0 text-sm text-sky-400">AI</span>
+              <Select
+                size="sm"
+                value={slot.aiStrategy ?? botStrategies[0]?.id}
+                onChange={(e) => onSetStrategy(e.target.value)}
+                aria-label="AI model"
+              >
+                {botStrategies.map((s) => (
+                  <option key={s.id} value={s.id}>
+                    {s.label}
+                  </option>
+                ))}
+              </Select>
+            </div>
+          ) : (
+            <span className="text-sm text-sky-400">
+              AI ({botStrategies?.find((s) => s.id === slot.aiStrategy)?.label ?? slot.aiStrategy})
+            </span>
+          )
         ) : (
           <span className="text-sm italic text-fg-muted">Waiting for player...</span>
         )}

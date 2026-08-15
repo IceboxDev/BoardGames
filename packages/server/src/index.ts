@@ -17,9 +17,11 @@ import { markStaleRunning } from "./tournament/manager.ts";
 
 import "./sessions/machine-registry.ts";
 import { maybeEnableCppAgent } from "./sessions/cpp-agent.ts";
+import { maybeEnableDecryptoAgent } from "./sessions/decrypto-agent.ts";
 import { shutdownAllSessions } from "./sessions/manager.ts";
 
 maybeEnableCppAgent(); // opt-in via SW7_ENABLE=1; otherwise the random stub stays
+maybeEnableDecryptoAgent(); // needs OPENAI_API_KEY; otherwise the deterministic fallback stays
 
 const PORT = Number(process.env.PORT ?? 3001);
 const SHUTDOWN_GRACE_MS = 10_000;
