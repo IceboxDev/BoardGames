@@ -2,8 +2,8 @@ import { formatTime } from "@boardgames/core/games/set/metrics";
 import type { GameRecord } from "@boardgames/core/games/set/types";
 import { useMemo, useState } from "react";
 import { Button } from "../../../components/ui/Button";
+import { Sparkline } from "../../../components/ui/charts";
 import { SegmentedControl } from "../../../components/ui/SegmentedControl";
-import Sparkline from "./charts/Sparkline";
 import GameDetailModal from "./GameDetailModal";
 import ProgressDashboard from "./ProgressDashboard";
 

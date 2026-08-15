@@ -12,9 +12,8 @@ import { formatTime } from "@boardgames/core/games/set/metrics";
 import type { GameRecord } from "@boardgames/core/games/set/types";
 import { useMemo, useState } from "react";
 import { Chip } from "../../../components/ui/Chip";
-import LineChart from "./charts/LineChart";
+import { LineChart, Sparkline } from "../../../components/ui/charts";
 import RadarChart from "./charts/RadarChart";
-import Sparkline from "./charts/Sparkline";
 
 interface ProgressDashboardProps {
   history: GameRecord[];
@@ -242,6 +241,7 @@ export default function ProgressDashboard({ history }: ProgressDashboardProps) {
         </div>
         <div className="rounded-xl bg-surface-800/60 p-4 overflow-x-auto">
           <LineChart
+            color="#818cf8"
             data={chartData}
             rollingAvgData={rollingAvg}
             yLabel={activeChart.label}

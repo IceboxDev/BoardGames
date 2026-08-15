@@ -2,6 +2,7 @@ import type { ProfilePerGameStat, ProfileStats } from "@boardgames/core/protocol
 import { coopMaxScoreForSlug } from "../../games/score-config.ts";
 import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { resolveGame } from "../../lib/games-by-slug.ts";
+import { perfColor } from "../ui/charts";
 import { EmptyState } from "../ui/EmptyState.tsx";
 
 // Per-game performance, best → worst. "Performance" is Scheme-A for competitive
@@ -20,13 +21,6 @@ function rowPerformance(row: ProfilePerGameStat): number | null {
     if (max && max > 0) return Math.min(1, row.coopScoreAvg / max);
   }
   return null;
-}
-
-/** Red (0) → amber (.5) → green (1); muted grey for no-performance rows. */
-function perfColor(perf: number | null): string {
-  if (perf === null) return "#6b7387";
-  const hue = 8 + perf * 132; // 8 ≈ red-orange … 140 ≈ green
-  return `hsl(${hue}deg 68% 47%)`;
 }
 
 export function ProfileStatsPanel({ stats }: { stats: ProfileStats }) {

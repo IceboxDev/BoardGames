@@ -156,21 +156,34 @@ export function ProfileHeader({
           </div>
         )}
 
+        {/* Tiles 1/3/4 navigate to the profile sub-pages; tile 2's skill /
+            leaderboard page isn't built yet, so it wears the uniform "Soon"
+            slot instead of a CTA. */}
         <div className="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-4">
           <StatTile
             label="Games played"
             value={stats.gamesPlayed}
             sub={`${stats.distinctGames} different`}
+            to={`/u/${user.id}/matches`}
+            cta="View history"
           />
           <StatTile
             label="Win rate"
             value={formatPercent(stats.performance)}
             sub={winLossSub(stats)}
+            soon
           />
-          <StatTile label="Games owned" value={stats.gamesOwned} />
+          <StatTile
+            label="Games owned"
+            value={stats.gamesOwned}
+            to={`/u/${user.id}/collection`}
+            cta="View collection"
+          />
           <StatTile
             label="Nights attended"
             value={`${stats.nightsAttended} / ${stats.nightsTotal}`}
+            to={`/u/${user.id}/nights`}
+            cta="View nights"
           />
         </div>
       </div>

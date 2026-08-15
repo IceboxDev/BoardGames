@@ -11,6 +11,10 @@ import {
   ProfileDirectoryResponseSchema,
   type ProfileEditable,
   ProfileEditableSchema,
+  type ProfileMatchSummaryResponse,
+  ProfileMatchSummaryResponseSchema,
+  type ProfileNightsResponse,
+  ProfileNightsResponseSchema,
   type ProfileUpdateInput,
   ProfileUpdateInputSchema,
   type PublicProfile,
@@ -42,6 +46,28 @@ export async function fetchProfileMatches(
   return apiFetch(`/api/profiles/${encodeURIComponent(userId)}/matches${qs ? `?${qs}` : ""}`, {
     response: HistoryListResponseSchema,
     signal: opts.signal,
+  });
+}
+
+/** The user's whole pre-derived match history (unpaginated; see server route). */
+export async function fetchProfileMatchSummary(
+  userId: string,
+  signal?: AbortSignal,
+): Promise<ProfileMatchSummaryResponse> {
+  return apiFetch(`/api/profiles/${encodeURIComponent(userId)}/match-summary`, {
+    response: ProfileMatchSummaryResponseSchema,
+    signal,
+  });
+}
+
+/** Every past locked night with the user's attendance attribution. */
+export async function fetchProfileNights(
+  userId: string,
+  signal?: AbortSignal,
+): Promise<ProfileNightsResponse> {
+  return apiFetch(`/api/profiles/${encodeURIComponent(userId)}/nights`, {
+    response: ProfileNightsResponseSchema,
+    signal,
   });
 }
 

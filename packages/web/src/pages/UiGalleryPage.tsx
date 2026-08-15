@@ -31,6 +31,7 @@ import {
   Textarea,
   type Tone,
 } from "../components/ui";
+import { BarChartH, ColumnChart, DonutChart, LineChart, Sparkline } from "../components/ui/charts";
 
 // ── UI Gallery ───────────────────────────────────────────────────────────
 //
@@ -300,6 +301,76 @@ export default function UiGalleryPage() {
               <Avatar name="Ada Lovelace" size="md" />
               <Avatar name="Grace Hopper" size="lg" ring accentHex="#22d3ee" />
             </Swatch>
+          </Section>
+
+          <Section title="Charts">
+            <Stack gap="sm">
+              <Swatch label="DonutChart">
+                <DonutChart
+                  size={110}
+                  segments={[
+                    { value: 9, tone: "emerald", label: "Won" },
+                    { value: 4, tone: "rose", label: "Lost" },
+                    { value: 2, tone: "neutral", label: "Other" },
+                  ]}
+                >
+                  <span className="text-xl font-bold tabular-nums text-white">15</span>
+                  <MicroLabel>games</MicroLabel>
+                </DonutChart>
+              </Swatch>
+              <Swatch label="Sparkline (tone / color)">
+                <Sparkline data={[3, 5, 4, 8, 6, 9, 7, 10]} />
+                <Sparkline data={[9, 6, 7, 4, 5, 2]} tone="rose" />
+                <Sparkline data={[1, 4, 2, 6, 5, 8]} color="#22d3ee" />
+              </Swatch>
+              <Swatch label="BarChartH">
+                <div className="w-full max-w-md">
+                  <BarChartH
+                    labelWidthClassName="w-10"
+                    bars={[
+                      {
+                        label: "Mon",
+                        segments: [
+                          { value: 4, tone: "emerald", label: "attended" },
+                          { value: 1, tone: "neutral", label: "missed" },
+                        ],
+                      },
+                      {
+                        label: "Fri",
+                        segments: [
+                          { value: 7, tone: "emerald", label: "attended" },
+                          { value: 2, tone: "neutral", label: "missed" },
+                        ],
+                      },
+                    ]}
+                  />
+                </div>
+              </Swatch>
+              <Swatch label="ColumnChart">
+                <div className="w-full max-w-md">
+                  <ColumnChart
+                    height={90}
+                    columns={["Mar", "Apr", "May", "Jun", "Jul", "Aug"].map((label, i) => ({
+                      label,
+                      segments: [
+                        { value: (i % 3) + 1, tone: "emerald", label: "won" },
+                        { value: i % 2, tone: "rose", label: "lost" },
+                      ],
+                    }))}
+                  />
+                </div>
+              </Swatch>
+              <Swatch label="LineChart (rolling avg)">
+                <div className="w-full max-w-xl">
+                  <LineChart
+                    height={160}
+                    data={[4, 7, 5, 9, 8, 11, 9, 12].map((y, x) => ({ x, y, label: `#${x + 1}` }))}
+                    rollingAvgData={[5, 6, 6.5, 8, 9, 10].map((y, i) => ({ x: i + 2, y }))}
+                    yLabel="score"
+                  />
+                </div>
+              </Swatch>
+            </Stack>
           </Section>
         </Stack>
       </PageMain>

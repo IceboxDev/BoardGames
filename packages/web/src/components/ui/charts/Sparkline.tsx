@@ -1,21 +1,32 @@
+import { useId } from "react";
+import type { Tone } from "../tones";
+import { resolveChartColor } from "./tone-hex";
+
 interface SparklineProps {
   data: number[];
   width?: number;
   height?: number;
+  /** Explicit hex/hsl stroke; wins over `tone`. */
   color?: string;
+  /** Tone-vocabulary stroke (default `accent`). */
+  tone?: Tone;
   highlightLast?: boolean;
   invertY?: boolean;
 }
 
-export default function Sparkline({
+/** Tiny inline trend line with a soft gradient fill under the stroke. */
+export function Sparkline({
   data,
   width = 120,
   height = 32,
-  color = "#818cf8",
+  color,
+  tone,
   highlightLast = true,
   invertY = false,
 }: SparklineProps) {
+  const gradientId = useId();
   if (data.length < 2) return null;
+  const stroke = resolveChartColor(color, tone);
 
   const pad = 4;
   const w = width - pad * 2;
@@ -42,14 +53,12 @@ export default function Sparkline({
   const lastX = pad + w;
   const lastY = pad + (1 - lastYNorm) * h;
 
-  const gradientId = `spark-grad-${Math.random().toString(36).slice(2, 8)}`;
-
   return (
     <svg aria-hidden="true" width={width} height={height} className="block">
       <defs>
         <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor={color} stopOpacity={0.3} />
-          <stop offset="100%" stopColor={color} stopOpacity={0} />
+          <stop offset="0%" stopColor={stroke} stopOpacity={0.3} />
+          <stop offset="100%" stopColor={stroke} stopOpacity={0} />
         </linearGradient>
       </defs>
       <polygon
@@ -59,12 +68,12 @@ export default function Sparkline({
       <polyline
         points={points.join(" ")}
         fill="none"
-        stroke={color}
+        stroke={stroke}
         strokeWidth={1.5}
         strokeLinejoin="round"
         strokeLinecap="round"
       />
-      {highlightLast && <circle cx={lastX} cy={lastY} r={2.5} fill={color} />}
+      {highlightLast && <circle cx={lastX} cy={lastY} r={2.5} fill={stroke} />}
     </svg>
   );
 }

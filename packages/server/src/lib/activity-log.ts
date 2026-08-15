@@ -29,7 +29,11 @@ export type ActivityType =
   | "night-unlocked"
   | "match-recorded"
   | "match-deleted"
-  | "guest-merged";
+  | "guest-merged"
+  | "ownership-announced"
+  | "ownership-resolved"
+  | "ownership-removed"
+  | "played-through";
 
 /** Insert one activity row. Never throws; never awaited by callers. */
 export function logActivity(

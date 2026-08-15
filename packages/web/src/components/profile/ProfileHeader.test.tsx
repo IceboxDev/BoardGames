@@ -1,5 +1,6 @@
 import type { ProfileEditable, ProfileStats, ProfileUserSummary } from "@boardgames/core/protocol";
 import { render, screen } from "@testing-library/react";
+import { MemoryRouter } from "react-router-dom";
 import { describe, expect, it } from "vitest";
 import { ProfileHeader } from "./ProfileHeader";
 
@@ -51,16 +52,19 @@ const stats: ProfileStats = {
 };
 
 function renderHeader(overrides: { isSelf?: boolean } = {}) {
+  // MemoryRouter: the stat tiles are router <Link> cards to the sub-pages.
   return render(
-    <ProfileHeader
-      user={user}
-      profile={profile}
-      stats={stats}
-      isSelf={overrides.isSelf ?? true}
-      canChangeAvatar
-      onEdit={() => {}}
-      onChangeAvatar={() => {}}
-    />,
+    <MemoryRouter>
+      <ProfileHeader
+        user={user}
+        profile={profile}
+        stats={stats}
+        isSelf={overrides.isSelf ?? true}
+        canChangeAvatar
+        onEdit={() => {}}
+        onChangeAvatar={() => {}}
+      />
+    </MemoryRouter>,
   );
 }
 

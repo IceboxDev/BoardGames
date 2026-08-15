@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import {
   ActivityDrawer,
   type AdminUser,
+  AnnouncementsCard,
   AvailabilityDrawer,
   GuestPlayersCard,
   PreRegisterCard,
@@ -17,6 +18,7 @@ import { useAdminUsers } from "../hooks/useAdminUsers.ts";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { adminGenerateResetLink, adminSetOnlineMode } from "../lib/admin";
 import { authClient } from "../lib/auth-client";
+import { adminFetchAnnouncements } from "../lib/collection.ts";
 import { errorMessageOf } from "../lib/error-message";
 import {
   type AggregateAvailabilityMap,
@@ -56,6 +58,20 @@ export default function AdminPage() {
     queryKey: qk.adminAggregateAvailability(),
     queryFn: ({ signal }) => adminFetchAllAvailability(signal),
   });
+
+  // Shared with AnnouncementsCard via the cache key; here it feeds the
+  // per-user pending badge in the users table.
+  const announcementsQuery = useQuery({
+    queryKey: qk.adminAnnouncements(),
+    queryFn: ({ signal }) => adminFetchAnnouncements(signal),
+  });
+  const pendingAnnouncementsByUser = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const a of announcementsQuery.data?.announcements ?? []) {
+      counts.set(a.userId, (counts.get(a.userId) ?? 0) + 1);
+    }
+    return counts;
+  }, [announcementsQuery.data]);
 
   // Editable window = the 42-day grid the dashboard exposes, minus past days.
   const editableDateKeys = useMemo(() => {
@@ -192,6 +208,7 @@ export default function AdminPage() {
         )}
 
         <PreRegisterCard />
+        <AnnouncementsCard />
         <GuestPlayersCard
           guests={guests}
           members={users}
@@ -219,6 +236,7 @@ export default function AdminPage() {
               key={u.id}
               user={u}
               coverage={computeCoverage(aggregate, u.id, editableDateKeys)}
+              pendingAnnouncements={pendingAnnouncementsByUser.get(u.id) ?? 0}
               expanded={expandedUserId === u.id}
               onToggleInventory={() => setExpandedUserId((prev) => (prev === u.id ? null : u.id))}
               onSetOnlineMode={(mode) => setOnlineModeMutation.mutate({ userId: u.id, mode })}

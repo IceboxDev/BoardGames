@@ -23,19 +23,36 @@ export type NightsAttendedInput = {
   playedNights: ReadonlySet<string>;
 };
 
-export function countNightsAttended({
+/** How a night's attendance credit was earned. */
+export type AttendanceVia = "played" | "rsvp";
+
+/**
+ * Per-night attribution over the same rule set: `"played"` (rule 1),
+ * `"rsvp"` (rule 2), or `null` (no credit). Keys follow `pastNights` order.
+ */
+export function attributeNightsAttended({
   pastNights,
   rsvpYesNights,
   nightsWithMatches,
   playedNights,
-}: NightsAttendedInput): number {
-  let attended = 0;
+}: NightsAttendedInput): Map<string, AttendanceVia | null> {
+  const byNight = new Map<string, AttendanceVia | null>();
   for (const night of pastNights) {
     if (playedNights.has(night)) {
-      attended++;
+      byNight.set(night, "played");
     } else if (rsvpYesNights.has(night) && !nightsWithMatches.has(night)) {
-      attended++;
+      byNight.set(night, "rsvp");
+    } else {
+      byNight.set(night, null);
     }
+  }
+  return byNight;
+}
+
+export function countNightsAttended(input: NightsAttendedInput): number {
+  let attended = 0;
+  for (const via of attributeNightsAttended(input).values()) {
+    if (via !== null) attended++;
   }
   return attended;
 }

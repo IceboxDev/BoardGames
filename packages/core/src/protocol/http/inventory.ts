@@ -33,27 +33,39 @@ export type SlugList = z.infer<typeof SlugListSchema>;
  *     Schafkopf) — derived from owning the French-/Bavarian-suited deck
  *     (`withDeckGames`); the deck pseudo-slugs are what inventories store.
  */
+/**
+ * Why a slug can't be stored as owned, or null when it can. One place for the
+ * ownability rules so the list schema, the scalar `OwnableSlugSchema`, and any
+ * future write path agree exactly.
+ */
+export function ownableSlugIssue(slug: string): string | null {
+  if (slug === EXIT_CATALOG_SLUG) {
+    return `"${EXIT_CATALOG_SLUG}" is not ownable — mark the individual EXIT box(es) instead`;
+  }
+  if (isDeckGameSlug(slug)) {
+    return `"${slug}" is owned via its card deck — mark the French- or Bavarian-suited deck instead`;
+  }
+  if (!isCatalogSlug(slug) && !isExitGameSlug(slug) && !isDeckSlug(slug)) {
+    return `Unknown game slug "${slug}" — not present in the catalog`;
+  }
+  return null;
+}
+
+/**
+ * A single directly-ownable slug (catalog game, EXIT box, or card deck) —
+ * the scalar counterpart of `CatalogSlugListSchema`, for bodies that carry
+ * one slug (announcements, collection-item upserts, played-through, …).
+ */
+export const OwnableSlugSchema = GameSlugSchema.superRefine((slug, ctx) => {
+  const message = ownableSlugIssue(slug);
+  if (message) ctx.addIssue({ code: "custom", message });
+});
+export type OwnableSlug = z.infer<typeof OwnableSlugSchema>;
+
 export const CatalogSlugListSchema = SlugListSchema.superRefine((slugs, ctx) => {
   slugs.forEach((slug, i) => {
-    if (slug === EXIT_CATALOG_SLUG) {
-      ctx.addIssue({
-        code: "custom",
-        path: [i],
-        message: `"${EXIT_CATALOG_SLUG}" is not ownable — mark the individual EXIT box(es) instead`,
-      });
-    } else if (isDeckGameSlug(slug)) {
-      ctx.addIssue({
-        code: "custom",
-        path: [i],
-        message: `"${slug}" is owned via its card deck — mark the French- or Bavarian-suited deck instead`,
-      });
-    } else if (!isCatalogSlug(slug) && !isExitGameSlug(slug) && !isDeckSlug(slug)) {
-      ctx.addIssue({
-        code: "custom",
-        path: [i],
-        message: `Unknown game slug "${slug}" — not present in the catalog`,
-      });
-    }
+    const message = ownableSlugIssue(slug);
+    if (message) ctx.addIssue({ code: "custom", path: [i], message });
   });
 });
 export type CatalogSlugList = z.infer<typeof CatalogSlugListSchema>;

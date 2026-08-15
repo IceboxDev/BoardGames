@@ -12,6 +12,7 @@ import {
 } from "./auth/index.ts";
 import { activityRoutes } from "./auth-routes/activity.ts";
 import { adminActivityRoutes } from "./auth-routes/admin-activity.ts";
+import { adminAnnouncementRoutes } from "./auth-routes/admin-announcements.ts";
 import {
   adminAvailabilityAllRoutes,
   adminAvailabilityRoutes,
@@ -22,6 +23,7 @@ import { adminMergeGuestRoutes } from "./auth-routes/admin-merge-guest.ts";
 import { adminOnlineRoutes } from "./auth-routes/admin-online.ts";
 import { adminPasswordResetRoutes } from "./auth-routes/admin-password-reset.ts";
 import { adminPendingInventoryRoutes } from "./auth-routes/admin-pending-inventory.ts";
+import { announcementRoutes } from "./auth-routes/announcements.ts";
 import { availabilityCountsRoutes } from "./auth-routes/availability-counts.ts";
 import { avatarRoutes } from "./auth-routes/avatar.ts";
 import { bgaIngestRoutes } from "./auth-routes/bga-ingest.ts";
@@ -32,9 +34,12 @@ import { calendarFeedRoutes } from "./auth-routes/calendar-feed.ts";
 import { calendarFeedPublicRoutes } from "./auth-routes/calendar-feed-public.ts";
 import { adminCalendarLocksRoutes, calendarLocksRoutes } from "./auth-routes/calendar-locks.ts";
 import { calendarRsvpsRoutes } from "./auth-routes/calendar-rsvps.ts";
+import { collectionRoutes } from "./auth-routes/collection.ts";
+import { collectionVocabRoutes } from "./auth-routes/collection-vocab.ts";
 import { dndCampaignRoutes } from "./auth-routes/dnd-campaigns.ts";
 import { matchHistoryRoutes } from "./auth-routes/match-history.ts";
 import { profileRoutes } from "./auth-routes/profile.ts";
+import { profileInsightsRoutes } from "./auth-routes/profile-insights.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
 import { requireTrustedOrigin } from "./lib/csrf.ts";
@@ -164,6 +169,7 @@ app.route("/api/admin/users", adminMergeGuestRoutes);
 app.route("/api/admin/users", adminPasswordResetRoutes);
 app.route("/api/admin", adminAvailabilityAllRoutes);
 app.route("/api/admin", adminPendingInventoryRoutes);
+app.route("/api/admin", adminAnnouncementRoutes);
 app.route("/api/admin/calendar", adminCalendarLocksRoutes);
 app.route("/api/admin/history", adminMatchHistoryRoutes);
 
@@ -196,7 +202,17 @@ app.use(
   rateLimit({ name: "profiles-write", windowMs: 60_000, max: 20, skipSafeMethods: true }),
 );
 app.route("/api/profiles", profileRoutes);
+app.route("/api/profiles", profileInsightsRoutes);
 app.route("/api/profiles", avatarRoutes);
+
+// Collection manager + ownership announcements: offline-player features like
+// profiles (a collection page is a profile sub-page).
+app.use("/api/collection/*", requireAuth, requireOffline);
+app.route("/api/collection", collectionRoutes);
+app.route("/api/collection", collectionVocabRoutes);
+
+app.use("/api/announcements/*", requireAuth, requireOffline);
+app.route("/api/announcements", announcementRoutes);
 
 app.use("/api/bgg/*", requireAuth);
 app.route("/api/bgg", bggRoutes);

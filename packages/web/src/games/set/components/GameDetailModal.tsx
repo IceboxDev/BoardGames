@@ -7,8 +7,8 @@ import {
 import { formatTime } from "@boardgames/core/games/set/metrics";
 import type { GameRecord } from "@boardgames/core/games/set/types";
 import { Button } from "../../../components/ui/Button";
+import { BarChartH } from "../../../components/ui/charts";
 import { Modal } from "../../../components/ui/Modal";
-import BarChartH from "./charts/BarChartH";
 import RadarChart from "./charts/RadarChart";
 
 interface GameDetailModalProps {
@@ -190,7 +190,7 @@ export default function GameDetailModal({ record, history, onClose }: GameDetail
           <h4 className="text-xs text-fg-muted uppercase tracking-wide mb-2">
             Per-SET Timeline (reaction + selection)
           </h4>
-          <BarChartH bars={bars} />
+          <BarChartH bars={bars} formatValue={(v) => `${(v / 1000).toFixed(1)}s`} />
           <div className="flex gap-4 mt-2 text-xs text-fg-disabled justify-end">
             <span className="flex items-center gap-1">
               <span

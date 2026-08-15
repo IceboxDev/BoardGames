@@ -1,4 +1,6 @@
 import { useState } from "react";
+import type { Tone } from "../tones";
+import { resolveChartColor } from "./tone-hex";
 
 interface DataPoint {
   x: number;
@@ -10,20 +12,26 @@ interface LineChartProps {
   data: DataPoint[];
   rollingAvgData?: DataPoint[];
   yLabel?: string;
+  /** Explicit hex/hsl stroke; wins over `tone`. */
   color?: string;
+  /** Tone-vocabulary stroke (default `accent`). */
+  tone?: Tone;
   height?: number;
   invertY?: boolean;
 }
 
-export default function LineChart({
+/** Line chart with hover points, optional dashed rolling-average overlay. */
+export function LineChart({
   data,
   rollingAvgData,
   yLabel,
-  color = "#818cf8",
+  color,
+  tone,
   height = 200,
   invertY = false,
 }: LineChartProps) {
   const [hoverIdx, setHoverIdx] = useState<number | null>(null);
+  const stroke = resolveChartColor(color, tone);
 
   if (data.length < 2) {
     return (
@@ -109,7 +117,7 @@ export default function LineChart({
       <polyline
         points={linePoints}
         fill="none"
-        stroke={color}
+        stroke={stroke}
         strokeWidth={1.5}
         strokeLinejoin="round"
       />
@@ -133,8 +141,8 @@ export default function LineChart({
           cx={toX(i)}
           cy={toY(d.y)}
           r={hoverIdx === i ? 4 : 2}
-          fill={hoverIdx === i ? "#fff" : color}
-          stroke={color}
+          fill={hoverIdx === i ? "#fff" : stroke}
+          stroke={stroke}
           strokeWidth={1}
           onMouseEnter={() => setHoverIdx(i)}
           onMouseLeave={() => setHoverIdx(null)}

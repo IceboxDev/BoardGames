@@ -23,6 +23,9 @@ const AdminPage = lazy(() => import("./pages/AdminPage"));
 const OfflineDashboard = lazy(() => import("./pages/OfflineDashboard"));
 const HistoryPage = lazy(() => import("./pages/HistoryPage"));
 const PlayerProfilePage = lazy(() => import("./pages/PlayerProfilePage"));
+const PlayerMatchHistoryPage = lazy(() => import("./pages/PlayerMatchHistoryPage"));
+const PlayerNightsPage = lazy(() => import("./pages/PlayerNightsPage"));
+const GamesManagerPage = lazy(() => import("./pages/GamesManagerPage"));
 const PlayersDirectoryPage = lazy(() => import("./pages/PlayersDirectoryPage"));
 const DeckPreview = lazy(() => import("./pages/DeckPreview"));
 const DndNightPreview = lazy(() => import("./pages/DndNightPreview"));
@@ -173,6 +176,34 @@ const router = createBrowserRouter(
         element={
           <AuthGuard mode="offline">
             <PlayerProfilePage />
+          </AuthGuard>
+        }
+      />
+
+      {/* Profile sub-pages, reachable from the header's stat tiles. Static
+          segments outrank the param in v6 route ranking, so these never
+          collide with `/u/:userId` — nor with the group `/history` page. */}
+      <Route
+        path="/u/:userId/matches"
+        element={
+          <AuthGuard mode="offline">
+            <PlayerMatchHistoryPage />
+          </AuthGuard>
+        }
+      />
+      <Route
+        path="/u/:userId/collection"
+        element={
+          <AuthGuard mode="offline">
+            <GamesManagerPage />
+          </AuthGuard>
+        }
+      />
+      <Route
+        path="/u/:userId/nights"
+        element={
+          <AuthGuard mode="offline">
+            <PlayerNightsPage />
           </AuthGuard>
         }
       />

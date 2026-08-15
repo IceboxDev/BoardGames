@@ -1,0 +1,276 @@
+import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { AnnounceModal } from "../components/collection/AnnounceModal.tsx";
+import { BoxManagerModal } from "../components/collection/BoxManagerModal.tsx";
+import {
+  applyViewState,
+  CollectionFilters,
+  type CollectionViewState,
+  DEFAULT_VIEW_STATE,
+} from "../components/collection/CollectionFilters.tsx";
+import { CollectionTable } from "../components/collection/CollectionTable.tsx";
+import { collectionToCsv, downloadCsv } from "../components/collection/collection-csv.ts";
+import { buildCollectionRows } from "../components/collection/collection-rows.ts";
+import { PendingAnnouncements } from "../components/collection/PendingAnnouncements.tsx";
+import { VocabManagerModal } from "../components/collection/VocabManagerModal.tsx";
+import { GalleryIcon } from "../components/icons";
+import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
+import { Button } from "../components/ui/Button.tsx";
+import { EmptyState } from "../components/ui/EmptyState.tsx";
+import { LoadingState } from "../components/ui/LoadingState.tsx";
+import { PageHeader } from "../components/ui/PageHeader.tsx";
+import { PageMain, PageShell } from "../components/ui/PageShell.tsx";
+import { QueryBoundary } from "../components/ui/QueryBoundary.tsx";
+import { Select } from "../components/ui/Select.tsx";
+import { Stack } from "../components/ui/Stack.tsx";
+import { ApiError } from "../lib/api-fetch.ts";
+import { fetchCollection, upsertCollectionItem } from "../lib/collection.ts";
+import { fetchProfile } from "../lib/profile.ts";
+import { qk } from "../lib/query-keys.ts";
+
+// "Games owned" profile sub-page: the Games Manager. A functionality-first
+// table over the raw stored inventory (catalog games, EXIT boxes, card decks,
+// custom items) with per-copy metadata, storage-box grouping, per-user
+// vocabularies, played-through records, announcements, and CSV export.
+// Any member can view any collection; the owner and admins can edit.
+
+export default function GamesManagerPage() {
+  const { userId } = useParams<{ userId: string }>();
+  const queryClient = useQueryClient();
+  const [viewState, setViewState] = useState<CollectionViewState>(DEFAULT_VIEW_STATE);
+  const [selection, setSelection] = useState<ReadonlySet<string>>(new Set());
+  const [assignBoxId, setAssignBoxId] = useState("");
+  const [modal, setModal] = useState<"announce" | "boxes" | "vocab" | null>(null);
+
+  const profileQuery = useQuery({
+    queryKey: qk.profile(userId),
+    queryFn: ({ signal }) => fetchProfile(userId as string, signal),
+    enabled: !!userId,
+  });
+  const collectionQuery = useQuery({
+    queryKey: qk.collection(userId as string),
+    queryFn: ({ signal }) => fetchCollection(userId as string, signal),
+    enabled: !!userId,
+  });
+
+  // "Merge into one box": apply the chosen box to every selected row.
+  const assignMutation = useMutation({
+    mutationFn: async ({ keys, boxId }: { keys: string[]; boxId: string }) => {
+      const data = collectionQuery.data;
+      for (const key of keys) {
+        const row = data?.items.find((i) => i.id === key && i.slug === null);
+        await upsertCollectionItem(
+          userId as string,
+          row ? { itemId: row.id, boxId } : { slug: key, boxId },
+        );
+      }
+    },
+    onSuccess: () => {
+      setSelection(new Set());
+      void queryClient.invalidateQueries({ queryKey: qk.collection(userId as string) });
+    },
+  });
+
+  const topNav = (
+    <TopNav back={<TopNavBackButton to={`/u/${userId}`} label="Profile" />}>
+      <TopNavLink to={`/u/${userId}/matches`}>Matches</TopNavLink>
+    </TopNav>
+  );
+
+  return (
+    <PageShell topNav={topNav}>
+      <QueryBoundary
+        query={collectionQuery}
+        loading={
+          <PageMain width="7xl" padding="spacious" fillHeight>
+            <LoadingState fillHeight label="Loading collection…" />
+          </PageMain>
+        }
+        errorFallback={(error) => {
+          const notFound = error instanceof ApiError && error.status === 404;
+          return (
+            <PageMain width="7xl" padding="spacious">
+              <EmptyState
+                tone="rose"
+                title={notFound ? "Player not found" : "Couldn't load the collection"}
+                description={
+                  notFound
+                    ? "This player doesn't exist or has been removed."
+                    : "Something went wrong fetching the collection. Try again."
+                }
+                action={
+                  <Button variant="secondary" onClick={() => collectionQuery.refetch()}>
+                    Retry
+                  </Button>
+                }
+              />
+            </PageMain>
+          );
+        }}
+      >
+        {(collection) => renderBody(collection)}
+      </QueryBoundary>
+    </PageShell>
+  );
+
+  // Plain render helper (NOT a component — a nested component definition would
+  // get a fresh identity every render and remount its whole subtree).
+  function renderBody(collection: NonNullable<typeof collectionQuery.data>) {
+    const firstName = profileQuery.data?.user.name.split(" ")[0] ?? "This player";
+    const rows = buildCollectionRows(collection);
+    const playedThroughCount = rows.filter((r) => r.playedThrough).length;
+    const filtered = applyViewState(rows, viewState);
+    const editable = collection.editable;
+    const ownedCount = rows.length - playedThroughCount;
+
+    return (
+      <PageMain width="7xl" padding="spacious">
+        <Stack gap="lg">
+          <PageHeader
+            size="lg"
+            eyebrow="Collection"
+            title={editable ? "Games manager" : `${firstName}'s collection`}
+            subtitle={`${ownedCount} owned${
+              playedThroughCount > 0 ? ` · ${playedThroughCount} played through` : ""
+            } · ${collection.boxes.length} storage box${collection.boxes.length === 1 ? "" : "es"}`}
+            actions={
+              editable ? (
+                <div className="flex flex-wrap items-center gap-2">
+                  <Button variant="secondary" size="sm" onClick={() => setModal("boxes")}>
+                    Manage boxes
+                  </Button>
+                  <Button variant="secondary" size="sm" onClick={() => setModal("vocab")}>
+                    Sleeves & statuses
+                  </Button>
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    onClick={() =>
+                      downloadCsv(`collection-${userId}.csv`, collectionToCsv(rows, collection))
+                    }
+                  >
+                    Export CSV
+                  </Button>
+                  <Button variant="primary" size="sm" onClick={() => setModal("announce")}>
+                    Announce a game
+                  </Button>
+                </div>
+              ) : undefined
+            }
+          />
+
+          {editable && (
+            <PendingAnnouncements
+              userId={userId as string}
+              announcements={collection.announcements}
+            />
+          )}
+
+          {rows.length === 0 ? (
+            <EmptyState
+              icon={<GalleryIcon className="h-4 w-4" />}
+              title="No games in this collection"
+              description={
+                editable
+                  ? "Announce your first acquisition — an admin will confirm it."
+                  : `${firstName} doesn't own any games yet.`
+              }
+              action={
+                editable ? (
+                  <Button variant="primary" size="sm" onClick={() => setModal("announce")}>
+                    Announce a game
+                  </Button>
+                ) : undefined
+              }
+            />
+          ) : (
+            <>
+              <CollectionFilters
+                collection={collection}
+                state={viewState}
+                onChange={setViewState}
+                playedThroughCount={playedThroughCount}
+              />
+
+              {editable && selection.size > 0 && (
+                <div className="flex flex-wrap items-center gap-2 rounded-xl border border-accent-400/30 bg-accent-500/[0.06] px-3 py-2">
+                  <span className="text-xs text-fg-secondary">
+                    {selection.size} selected — put them in the same box:
+                  </span>
+                  <Select
+                    aria-label="Assign selected games to a box"
+                    size="sm"
+                    block={false}
+                    value={assignBoxId}
+                    onChange={(e) => setAssignBoxId(e.target.value)}
+                  >
+                    <option value="">Choose a box…</option>
+                    {collection.boxes.map((b) => (
+                      <option key={b.id} value={b.id}>
+                        {b.name}
+                      </option>
+                    ))}
+                  </Select>
+                  <Button
+                    variant="primary"
+                    size="sm"
+                    disabled={!assignBoxId}
+                    loading={assignMutation.isPending}
+                    onClick={() =>
+                      assignMutation.mutate({ keys: [...selection], boxId: assignBoxId })
+                    }
+                  >
+                    Assign
+                  </Button>
+                  <Button variant="ghost" size="sm" onClick={() => setSelection(new Set())}>
+                    Clear
+                  </Button>
+                </div>
+              )}
+
+              <CollectionTable
+                userId={userId as string}
+                rows={filtered}
+                collection={collection}
+                editable={editable}
+                groupByBox={viewState.view === "by-box"}
+                selection={selection}
+                onToggleSelect={(key) =>
+                  setSelection((prev) => {
+                    const next = new Set(prev);
+                    if (next.has(key)) next.delete(key);
+                    else next.add(key);
+                    return next;
+                  })
+                }
+              />
+            </>
+          )}
+        </Stack>
+
+        {modal === "announce" && (
+          <AnnounceModal
+            userId={userId as string}
+            collection={collection}
+            onClose={() => setModal(null)}
+          />
+        )}
+        {modal === "boxes" && (
+          <BoxManagerModal
+            userId={userId as string}
+            collection={collection}
+            onClose={() => setModal(null)}
+          />
+        )}
+        {modal === "vocab" && (
+          <VocabManagerModal
+            userId={userId as string}
+            collection={collection}
+            onClose={() => setModal(null)}
+          />
+        )}
+      </PageMain>
+    );
+  }
+}

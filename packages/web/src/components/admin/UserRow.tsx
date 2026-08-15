@@ -17,6 +17,8 @@ const COLUMN_COUNT = 6;
 export type UserRowProps = {
   user: AdminUser;
   coverage: Coverage;
+  /** Pending ownership announcements from this user (amber badge on the name). */
+  pendingAnnouncements?: number;
   /** Inventory expansion (renders a second `<tr>` with the editor). */
   expanded: boolean;
   onToggleInventory: () => void;
@@ -56,6 +58,7 @@ export type UserRowProps = {
 export function UserRow({
   user,
   coverage,
+  pendingAnnouncements = 0,
   expanded,
   onToggleInventory,
   onSetOnlineMode,
@@ -89,15 +92,25 @@ export function UserRow({
           </button>
         </td>
         <td className="px-5 py-3 font-medium">
-          {/* biome-ignore lint/correctness/noRestrictedElements: bespoke clickable name — opens the user's activity trail */}
-          <button
-            type="button"
-            onClick={onOpenActivity}
-            aria-label={`View ${user.name || user.email}'s activity`}
-            className="-mx-1 cursor-pointer rounded-md px-1 py-0.5 text-left font-medium transition-colors hover:bg-white/5 hover:text-accent-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
-          >
-            {user.name || "—"}
-          </button>
+          <span className="flex items-center gap-1.5">
+            {/* biome-ignore lint/correctness/noRestrictedElements: bespoke clickable name — opens the user's activity trail */}
+            <button
+              type="button"
+              onClick={onOpenActivity}
+              aria-label={`View ${user.name || user.email}'s activity`}
+              className="-mx-1 cursor-pointer rounded-md px-1 py-0.5 text-left font-medium transition-colors hover:bg-white/5 hover:text-accent-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+            >
+              {user.name || "—"}
+            </button>
+            {pendingAnnouncements > 0 && (
+              <span
+                className="inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-amber-400/20 px-1 text-3xs font-bold tabular-nums text-amber-200"
+                title={`${pendingAnnouncements} pending ownership announcement${pendingAnnouncements === 1 ? "" : "s"}`}
+              >
+                {pendingAnnouncements}
+              </span>
+            )}
+          </span>
         </td>
         <td className="px-5 py-3 text-fg-secondary">{user.email}</td>
         <td className="px-5 py-3 text-center">

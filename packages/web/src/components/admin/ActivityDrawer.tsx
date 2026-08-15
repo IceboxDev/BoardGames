@@ -345,6 +345,25 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
         n !== undefined ? ` (${n} match${n === 1 ? "" : "es"})` : ""
       }`;
     }
+    case "ownership-announced": {
+      const what =
+        str(meta.slug) ?? (str(meta.freeTextName) ? `"${str(meta.freeTextName)}"` : "a game");
+      return `Announced owning ${what}`;
+    }
+    case "ownership-resolved": {
+      const action = str(meta.action);
+      const slug = str(meta.slug);
+      if (action === "dismiss") return "Ownership announcement dismissed";
+      return `Ownership announcement approved${slug ? ` (${slug})` : action === "approve-custom" ? " (custom game)" : ""}`;
+    }
+    case "ownership-removed":
+      return `Removed ${str(meta.slug) ?? "a game"} from their collection`;
+    case "played-through": {
+      const slug = str(meta.slug) ?? "a legacy game";
+      return meta.playedThrough === false
+        ? `Restored ${slug} to owned`
+        : `Marked ${slug} played through`;
+    }
     default:
       // Unknown/future event kinds still render a readable line.
       return type.replace(/-/g, " ");
@@ -402,6 +421,11 @@ function dotClass(type: string): string {
     case "match-recorded":
     case "match-deleted":
       return "bg-teal-400/70";
+    case "ownership-announced":
+    case "ownership-resolved":
+    case "ownership-removed":
+    case "played-through":
+      return "bg-orange-400/70";
     default:
       return "bg-white/40";
   }
