@@ -16,7 +16,12 @@ export {
  * match-history badge show a perfect game in green. Undefined → no known max.
  * Web-only — depends on the per-game scoring module.
  */
-const COOP_MAX_SCORE: Record<string, number> = { "just-one": JUST_ONE_MAX_SCORE };
+const COOP_MAX_SCORE: Record<string, number> = {
+  "just-one": JUST_ONE_MAX_SCORE,
+  // Medical Mysteries cases score the investigation out of 100 points.
+  "medical-mysteries-nyc": 100,
+  "medical-mysteries-miami": 100,
+};
 
 export function coopMaxScoreForSlug(slug: string | null): number | undefined {
   return slug ? COOP_MAX_SCORE[slug] : undefined;

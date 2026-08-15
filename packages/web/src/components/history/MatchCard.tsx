@@ -13,7 +13,11 @@ import {
 } from "../../games/blood-on-the-clocktower/characters";
 import { variantConfigForSlug } from "../../games/match-variants";
 import { games } from "../../games/registry";
-import { isPointlessFreeForAll, lowScoreWinsForSlug } from "../../games/score-config";
+import {
+  coopMaxScoreForSlug,
+  isPointlessFreeForAll,
+  lowScoreWinsForSlug,
+} from "../../games/score-config";
 import { BookIcon, EditIcon, XIcon } from "../icons";
 import { Badge } from "../ui/Badge";
 import { IconButton } from "../ui/IconButton";
@@ -500,7 +504,7 @@ function CoopInline({
         </span>
         <Badge tone="amber">
           {outcome.score}
-          {gameSlug === "just-one" ? " / 13" : ""}
+          {coopMaxScoreForSlug(gameSlug) !== undefined ? ` / ${coopMaxScoreForSlug(gameSlug)}` : ""}
         </Badge>
       </div>
     );

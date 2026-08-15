@@ -13,7 +13,7 @@ import type {
   MatchOutcomeTeams,
   Participant,
 } from "@boardgames/core/history/types";
-import { isWinDrawLossFfa } from "../../games/score-config";
+import { coopMaxScoreForSlug, isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
 import { isDndSlug } from "./dnd";
 
@@ -157,7 +157,15 @@ export function describeOutcomeError(
     case "coop":
       if (isDndSlug(gameSlug)) return describeDndError(outcome);
       if (outcome.participants.length < 1) return "Add at least one participant";
-      if (gameSlug === "just-one" && outcome.score === undefined) return "Pick your score (0–13)";
+      {
+        // Scored co-ops (Just One, Medical Mysteries) bank a team score
+        // instead of a win/loss — require it and keep it within the game's max.
+        const max = coopMaxScoreForSlug(gameSlug);
+        if (max !== undefined) {
+          if (outcome.score === undefined) return `Enter the team score (0–${max})`;
+          if (outcome.score < 0 || outcome.score > max) return `Score must be between 0 and ${max}`;
+        }
+      }
       return null;
     case "one-vs-many":
       if (!outcome.solo.userId) return "Pick the solo player";

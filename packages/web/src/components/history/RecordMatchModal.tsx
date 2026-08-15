@@ -13,7 +13,7 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { defaultKindForSlug } from "../../games/match-kinds";
 import { defaultVariantValue, variantConfigForSlug } from "../../games/match-variants";
-import { isWinDrawLossFfa } from "../../games/score-config";
+import { coopMaxScoreForSlug, isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
 import { useAdminUsers } from "../../hooks/useAdminUsers.ts";
 import { fetchCalendarLocks } from "../../lib/calendar-locks";
@@ -39,6 +39,7 @@ import { LastStandingForm } from "./forms/LastStandingForm";
 import { LovecraftLetterForm } from "./forms/LovecraftLetterForm";
 import { OneVsManyForm } from "./forms/OneVsManyForm";
 import { ResistanceForm } from "./forms/ResistanceForm";
+import { ScoredCoopForm } from "./forms/ScoredCoopForm";
 import { TeamsForm } from "./forms/TeamsForm";
 import { VillainousForm } from "./forms/VillainousForm";
 import { WerewolfForm } from "./forms/WerewolfForm";
@@ -406,6 +407,13 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
                 users={allUsers}
                 value={outcome as MatchOutcomeCoop}
                 onChange={setOutcome}
+              />
+            ) : coopMaxScoreForSlug(gameSlug) !== undefined ? (
+              <ScoredCoopForm
+                users={allUsers}
+                value={outcome as MatchOutcomeCoop}
+                onChange={setOutcome}
+                maxScore={coopMaxScoreForSlug(gameSlug) as number}
               />
             ) : (
               <CoopForm

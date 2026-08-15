@@ -35,6 +35,10 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   gloomhaven: "coop",
   "gloomhaven-jaws-of-the-lion": "coop",
   "just-one": "coop",
+  // Medical Mysteries: co-op case-solving with a 0–100 team score (scored
+  // co-op like Just One — no binary win/loss).
+  "medical-mysteries-nyc": "coop",
+  "medical-mysteries-miami": "coop",
   pandemic: "coop",
   quiztopia: "coop",
   "sky-team": "coop",
