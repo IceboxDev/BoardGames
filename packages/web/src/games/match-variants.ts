@@ -132,6 +132,19 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       { value: "Discardless", label: "Discardless" },
     ],
   },
+  // Medical Mysteries: each session solves one patient's case — record which.
+  // Cases are usually played in order, so the first patient is the default for
+  // a fresh match. Miami's cases go on its own slug once the box is opened.
+  "medical-mysteries-nyc": {
+    label: "Patient",
+    mode: "single",
+    options: [
+      { value: "Shyla Patel", label: "Shyla Patel" },
+      { value: "Adrian Alexopoulos", label: "Adrian Alexopoulos" },
+      { value: "Gabriela Ferrera", label: "Gabriela Ferrera" },
+      { value: "Pete Johnson", label: "Pete Johnson" },
+    ],
+  },
   // Dungeon Mayhem is recorded as an elimination match; the sets in play are
   // picked here (multi-select, like 7 Wonders expansions) and drive which heroes
   // the per-player picker offers — see `dungeon-mayhem/characters.ts`. Standard
