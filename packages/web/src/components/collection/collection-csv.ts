@@ -17,8 +17,9 @@ const HEADER = [
   "Sleeves",
   "Sleeve type",
   "Width (mm)",
-  "Depth (mm)",
+  "Length (mm)",
   "Height (mm)",
+  "Extra boxes",
   "Weight (g)",
   "Language",
   "Acquired",
@@ -50,6 +51,14 @@ export function collectionToCsv(
         item?.widthMm != null ? String(item.widthMm) : "",
         item?.depthMm != null ? String(item.depthMm) : "",
         item?.heightMm != null ? String(item.heightMm) : "",
+        (item?.extraBoxes ?? [])
+          .map((b) => {
+            const dims = [b.widthMm, b.depthMm, b.heightMm]
+              .map((v) => (v == null ? "?" : String(v)))
+              .join("×");
+            return b.label ? `${b.label} ${dims}` : dims;
+          })
+          .join("; "),
         item?.weightG != null ? String(item.weightG) : "",
         item?.language ?? "",
         item?.acquiredOn ? formatDayKey(item.acquiredOn, "compact") : "",

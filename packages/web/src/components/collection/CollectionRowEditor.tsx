@@ -1,7 +1,12 @@
-import type { CollectionResponse, UpsertItemBody } from "@boardgames/core/protocol";
+import type { CollectionResponse, ExtraBox, UpsertItemBody } from "@boardgames/core/protocol";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
-import { removeOwnedGame, setPlayedThrough, upsertCollectionItem } from "../../lib/collection.ts";
+import {
+  deleteCustomItem,
+  removeOwnedGame,
+  setPlayedThrough,
+  upsertCollectionItem,
+} from "../../lib/collection.ts";
 import { errorMessageOf } from "../../lib/error-message.ts";
 import { qk } from "../../lib/query-keys.ts";
 import { Button } from "../ui/Button.tsx";
@@ -19,10 +24,13 @@ import { buildCollectionRows, type CollectionRow } from "./collection-rows.ts";
 // remove) sit at the bottom behind confirms. Ownership-mutating calls also
 // invalidate the profile/players caches so counts update everywhere.
 
+type DraftBox = { label: string; widthMm: string; depthMm: string; heightMm: string };
+
 type Draft = {
   sleeveStatus: "none" | "sleeved" | "missing";
   sleeveTypeId: string;
   containerKey: string;
+  extraBoxes: DraftBox[];
   statusId: string;
   widthMm: string;
   depthMm: string;
@@ -44,6 +52,12 @@ function draftFromRow(row: CollectionRow): Draft {
     widthMm: item?.widthMm != null ? String(item.widthMm) : "",
     depthMm: item?.depthMm != null ? String(item.depthMm) : "",
     heightMm: item?.heightMm != null ? String(item.heightMm) : "",
+    extraBoxes: (item?.extraBoxes ?? []).map((b) => ({
+      label: b.label ?? "",
+      widthMm: b.widthMm != null ? String(b.widthMm) : "",
+      depthMm: b.depthMm != null ? String(b.depthMm) : "",
+      heightMm: b.heightMm != null ? String(b.heightMm) : "",
+    })),
     weightG: item?.weightG != null ? String(item.weightG) : "",
     language: item?.language ?? "",
     acquiredOn: item?.acquiredOn ?? "",
@@ -104,6 +118,16 @@ export function CollectionRowEditor({
         widthMm: intOrNull(draft.widthMm),
         depthMm: intOrNull(draft.depthMm),
         heightMm: intOrNull(draft.heightMm),
+        extraBoxes: draft.extraBoxes
+          .filter((b) => b.label.trim() || b.widthMm || b.depthMm || b.heightMm)
+          .map(
+            (b): ExtraBox => ({
+              label: b.label.trim() || null,
+              widthMm: intOrNull(b.widthMm),
+              depthMm: intOrNull(b.depthMm),
+              heightMm: intOrNull(b.heightMm),
+            }),
+          ),
         weightG: intOrNull(draft.weightG),
         language: draft.language.trim() || null,
         acquiredOn: /^\d{4}-\d{2}-\d{2}$/.test(draft.acquiredOn) ? draft.acquiredOn : null,
@@ -128,10 +152,27 @@ export function CollectionRowEditor({
     onSuccess: invalidateOwnership,
   });
 
+  const deleteCustomMutation = useMutation({
+    mutationFn: () => deleteCustomItem(userId, row.item?.id as string),
+    onSuccess: invalidateCollection,
+  });
+
+  function updateExtraBox(index: number, next: Partial<DraftBox>) {
+    setDraft({
+      ...draft,
+      extraBoxes: draft.extraBoxes.map((b, i) => (i === index ? { ...b, ...next } : b)),
+    });
+  }
+
+  function removeExtraBox(index: number) {
+    setDraft({ ...draft, extraBoxes: draft.extraBoxes.filter((_, i) => i !== index) });
+  }
+
   const error =
     errorMessageOf(save.error, "Save failed") ??
     errorMessageOf(playedThroughMutation.error, "Update failed") ??
-    errorMessageOf(removeMutation.error, "Remove failed");
+    errorMessageOf(removeMutation.error, "Remove failed") ??
+    errorMessageOf(deleteCustomMutation.error, "Delete failed");
 
   return (
     <div className="space-y-3">
@@ -209,7 +250,7 @@ export function CollectionRowEditor({
             onChange={(e) => setDraft({ ...draft, widthMm: e.target.value.replace(/\D/g, "") })}
           />
         </Field>
-        <Field label="Depth mm" htmlFor={`ed-d-${row.key}`}>
+        <Field label="Length mm" htmlFor={`ed-d-${row.key}`}>
           <Input
             id={`ed-d-${row.key}`}
             inputMode="numeric"
@@ -273,6 +314,61 @@ export function CollectionRowEditor({
         </div>
       </div>
 
+      {/* Multi-box games (Pandemic ×2, base + expansions box): each extra
+          physical box gets its own W×L×H and an optional name. */}
+      <div className="space-y-1.5">
+        <span className="block text-2xs font-bold uppercase tracking-pill text-fg-secondary">
+          Additional boxes
+        </span>
+        {draft.extraBoxes.map((box, i) => (
+          <div
+            // biome-ignore lint/suspicious/noArrayIndexKey: positional draft rows — index IS the identity
+            key={i}
+            className="flex flex-wrap items-center gap-2"
+          >
+            <Input
+              aria-label={`Extra box ${i + 1} name`}
+              placeholder="Box name (optional)"
+              maxLength={60}
+              width="auto"
+              className="w-44"
+              value={box.label}
+              onChange={(e) => updateExtraBox(i, { label: e.target.value })}
+            />
+            {(["widthMm", "depthMm", "heightMm"] as const).map((dim) => (
+              <Input
+                key={dim}
+                aria-label={`Extra box ${i + 1} ${dim === "widthMm" ? "width" : dim === "depthMm" ? "length" : "height"} in mm`}
+                placeholder={dim === "widthMm" ? "W" : dim === "depthMm" ? "L" : "H"}
+                inputMode="numeric"
+                width="auto"
+                className="w-16 text-right tabular-nums"
+                value={box[dim]}
+                onChange={(e) => updateExtraBox(i, { [dim]: e.target.value.replace(/\D/g, "") })}
+              />
+            ))}
+            <Button variant="ghost" size="xs" onClick={() => removeExtraBox(i)}>
+              Remove
+            </Button>
+          </div>
+        ))}
+        <Button
+          variant="ghost"
+          size="xs"
+          onClick={() =>
+            setDraft({
+              ...draft,
+              extraBoxes: [
+                ...draft.extraBoxes,
+                { label: "", widthMm: "", depthMm: "", heightMm: "" },
+              ],
+            })
+          }
+        >
+          + Add another box
+        </Button>
+      </div>
+
       <Field label="Note" htmlFor={`ed-note-${row.key}`}>
         <Textarea
           id={`ed-note-${row.key}`}
@@ -312,6 +408,24 @@ export function CollectionRowEditor({
               loading={playedThroughMutation.isPending}
             >
               Restore to owned
+            </Button>
+          )}
+          {row.kind === "custom" && row.item && (
+            <Button
+              variant="ghost"
+              size="sm"
+              className="text-rose-300"
+              onClick={async () => {
+                const ok = await confirm({
+                  title: `Delete "${row.title}"?`,
+                  description: "Removes this manually-added box and its details.",
+                  confirmLabel: "Delete",
+                });
+                if (ok) deleteCustomMutation.mutate();
+              }}
+              loading={deleteCustomMutation.isPending}
+            >
+              Delete box
             </Button>
           )}
           {!row.legacy && row.slug && !row.playedThrough && (

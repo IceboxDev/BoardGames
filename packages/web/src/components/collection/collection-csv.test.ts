@@ -35,6 +35,7 @@ describe("collectionToCsv", () => {
             slug: "lost-cities",
             customTitle: null,
             containerKey: "codenames, deluxe",
+            extraBoxes: [{ label: "Second box", widthMm: 100, depthMm: 200, heightMm: 30 }],
             sleeveStatus: "sleeved",
             sleeveTypeId: "st1",
             statusId: "cs1",
@@ -59,6 +60,7 @@ describe("collectionToCsv", () => {
     expect(line).toContain("Lost Cities,In rotation");
     // Comma inside the container title forces quoting.
     expect(line).toContain('"Codenames, Deluxe"');
+    expect(line).toContain("Second box 100×200×30");
     expect(line).toContain("24.99");
   });
 

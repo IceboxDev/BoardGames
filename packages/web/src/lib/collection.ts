@@ -9,6 +9,10 @@ import {
   CreateAnnouncementBodySchema,
   type CreateAnnouncementResponse,
   CreateAnnouncementResponseSchema,
+  type CreateCustomItemBody,
+  CreateCustomItemBodySchema,
+  type CreateCustomItemResponse,
+  CreateCustomItemResponseSchema,
   type CreateSleeveTypeBody,
   CreateSleeveTypeBodySchema,
   type CreateStatusBody,
@@ -81,6 +85,28 @@ export async function removeOwnedGame(
     body: { slug },
     request: RemoveOwnedGameBodySchema,
     response: RemoveOwnedGameResponseSchema,
+  });
+}
+
+export async function createCustomItem(
+  userId: string,
+  body: CreateCustomItemBody,
+): Promise<CreateCustomItemResponse> {
+  return apiFetch(`${base(userId)}/custom-item`, {
+    method: "POST",
+    body,
+    request: CreateCustomItemBodySchema,
+    response: CreateCustomItemResponseSchema,
+  });
+}
+
+export async function deleteCustomItem(
+  userId: string,
+  itemId: string,
+): Promise<CollectionOkResponse> {
+  return apiFetch(`${base(userId)}/items/${encodeURIComponent(itemId)}`, {
+    method: "DELETE",
+    response: CollectionOkResponseSchema,
   });
 }
 

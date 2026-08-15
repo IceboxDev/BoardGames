@@ -1,6 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
+import { AddCustomItemModal } from "../components/collection/AddCustomItemModal.tsx";
 import { AnnounceModal } from "../components/collection/AnnounceModal.tsx";
 import {
   applyViewState,
@@ -40,7 +41,7 @@ export default function GamesManagerPage() {
   const [viewState, setViewState] = useState<CollectionViewState>(DEFAULT_VIEW_STATE);
   const [selection, setSelection] = useState<ReadonlySet<string>>(new Set());
   const [assignContainerKey, setAssignContainerKey] = useState("");
-  const [modal, setModal] = useState<"announce" | "vocab" | null>(null);
+  const [modal, setModal] = useState<"announce" | "vocab" | "custom-box" | null>(null);
 
   const profileQuery = useQuery({
     queryKey: qk.profile(userId),
@@ -141,6 +142,9 @@ export default function GamesManagerPage() {
             actions={
               editable ? (
                 <div className="flex flex-wrap items-center gap-2">
+                  <Button variant="secondary" size="sm" onClick={() => setModal("custom-box")}>
+                    Add unlisted box
+                  </Button>
                   <Button variant="secondary" size="sm" onClick={() => setModal("vocab")}>
                     Sleeves & statuses
                   </Button>
@@ -260,6 +264,9 @@ export default function GamesManagerPage() {
             collection={collection}
             onClose={() => setModal(null)}
           />
+        )}
+        {modal === "custom-box" && (
+          <AddCustomItemModal userId={userId as string} onClose={() => setModal(null)} />
         )}
         {modal === "vocab" && (
           <VocabManagerModal

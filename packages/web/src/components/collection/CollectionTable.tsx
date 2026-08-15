@@ -182,7 +182,8 @@ export function CollectionTable({
     const i = row.item;
     if (!i || (i.widthMm == null && i.depthMm == null && i.heightMm == null)) return "—";
     const dim = (v: number | null) => (v == null ? "?" : String(v));
-    return `${dim(i.widthMm)}×${dim(i.depthMm)}×${dim(i.heightMm)}`;
+    const extra = i.extraBoxes.length > 0 ? ` +${i.extraBoxes.length}` : "";
+    return `${dim(i.widthMm)}×${dim(i.depthMm)}×${dim(i.heightMm)}${extra}`;
   }
 
   return (

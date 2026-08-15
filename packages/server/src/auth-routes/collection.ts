@@ -24,7 +24,11 @@ import { randomUUID } from "node:crypto";
 import {
   type Announcement,
   type CollectionItem,
+  CollectionOkResponseSchema,
   CollectionResponseSchema,
+  CreateCustomItemBodySchema,
+  CreateCustomItemResponseSchema,
+  ExtraBoxSchema,
   RemoveOwnedGameBodySchema,
   RemoveOwnedGameResponseSchema,
   SetPlayedThroughBodySchema,
@@ -62,6 +66,7 @@ export const CollectionItemRowSchema = z.object({
   width_mm: z.number().nullable(),
   depth_mm: z.number().nullable(),
   height_mm: z.number().nullable(),
+  extra_boxes_json: jsonColumn(z.array(ExtraBoxSchema)).nullable(),
   weight_g: z.number().nullable(),
   language: z.string().nullable(),
   acquired_on: z.string().nullable(),
@@ -124,6 +129,7 @@ export function rowToItem(row: CollectionItemRow): CollectionItem {
     widthMm: row.width_mm,
     depthMm: row.depth_mm,
     heightMm: row.height_mm,
+    extraBoxes: row.extra_boxes_json ?? [],
     weightG: row.weight_g,
     language: row.language,
     acquiredOn: row.acquired_on,
@@ -180,7 +186,7 @@ async function fetchItemRow(
   const bySlug = "slug" in target;
   const { rows } = await db.execute({
     sql: `SELECT id, slug, custom_title, container_key, sleeve_status, sleeve_type_id, status_id,
-                 width_mm, depth_mm, height_mm, weight_g, language, acquired_on,
+                 width_mm, depth_mm, height_mm, extra_boxes_json, weight_g, language, acquired_on,
                  price_paid_cents, note, played_through_at, updated_at
             FROM collection_items
            WHERE user_id = ? AND ${bySlug ? "slug = ?" : "id = ?"} LIMIT 1`,
@@ -258,7 +264,7 @@ collectionRoutes.get("/users/:userId", async (c) => {
       fetchInventorySlugs(db, userId),
       db.execute({
         sql: `SELECT id, slug, custom_title, container_key, sleeve_status, sleeve_type_id, status_id,
-                     width_mm, depth_mm, height_mm, weight_g, language, acquired_on,
+                     width_mm, depth_mm, height_mm, extra_boxes_json, weight_g, language, acquired_on,
                      price_paid_cents, note, played_through_at, updated_at
                 FROM collection_items WHERE user_id = ? ORDER BY created_at ASC`,
         args: [userId],
@@ -399,6 +405,14 @@ collectionRoutes.put("/users/:userId/item", zJsonBody(UpsertItemBodySchema), asy
     width_mm: body.widthMm !== undefined ? body.widthMm : (existing?.width_mm ?? null),
     depth_mm: body.depthMm !== undefined ? body.depthMm : (existing?.depth_mm ?? null),
     height_mm: body.heightMm !== undefined ? body.heightMm : (existing?.height_mm ?? null),
+    extra_boxes_json:
+      body.extraBoxes !== undefined
+        ? body.extraBoxes.length > 0
+          ? JSON.stringify(body.extraBoxes)
+          : null
+        : existing?.extra_boxes_json?.length
+          ? JSON.stringify(existing.extra_boxes_json)
+          : null,
     weight_g: body.weightG !== undefined ? body.weightG : (existing?.weight_g ?? null),
     language: body.language !== undefined ? body.language : (existing?.language ?? null),
     acquired_on: body.acquiredOn !== undefined ? body.acquiredOn : (existing?.acquired_on ?? null),
@@ -416,7 +430,7 @@ collectionRoutes.put("/users/:userId/item", zJsonBody(UpsertItemBodySchema), asy
     await db.execute({
       sql: `UPDATE collection_items SET
               container_key = ?, sleeve_status = ?, sleeve_type_id = ?, status_id = ?,
-              width_mm = ?, depth_mm = ?, height_mm = ?, weight_g = ?,
+              width_mm = ?, depth_mm = ?, height_mm = ?, extra_boxes_json = ?, weight_g = ?,
               language = ?, acquired_on = ?, price_paid_cents = ?, note = ?,
               updated_at = datetime('now')
             WHERE id = ? AND user_id = ?`,
@@ -428,6 +442,7 @@ collectionRoutes.put("/users/:userId/item", zJsonBody(UpsertItemBodySchema), asy
         merged.width_mm,
         merged.depth_mm,
         merged.height_mm,
+        merged.extra_boxes_json,
         merged.weight_g,
         merged.language,
         merged.acquired_on,
@@ -441,9 +456,9 @@ collectionRoutes.put("/users/:userId/item", zJsonBody(UpsertItemBodySchema), asy
     await db.execute({
       sql: `INSERT INTO collection_items
               (id, user_id, slug, container_key, sleeve_status, sleeve_type_id, status_id,
-               width_mm, depth_mm, height_mm, weight_g, language, acquired_on,
+               width_mm, depth_mm, height_mm, extra_boxes_json, weight_g, language, acquired_on,
                price_paid_cents, note)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
       args: [
         id,
         userId,
@@ -455,6 +470,7 @@ collectionRoutes.put("/users/:userId/item", zJsonBody(UpsertItemBodySchema), asy
         merged.width_mm,
         merged.depth_mm,
         merged.height_mm,
+        merged.extra_boxes_json,
         merged.weight_g,
         merged.language,
         merged.acquired_on,
@@ -558,4 +574,57 @@ collectionRoutes.post("/users/:userId/remove", zJsonBody(RemoveOwnedGameBodySche
   logActivity(userId, "ownership-removed", { slug, by: viewer.id });
 
   return c.json(RemoveOwnedGameResponseSchema.parse({ ok: true, slugs: newSlugs }));
+});
+
+// ── Custom (unlisted) boxes ────────────────────────────────────────────
+
+collectionRoutes.post(
+  "/users/:userId/custom-item",
+  zJsonBody(CreateCustomItemBodySchema),
+  async (c) => {
+    const userId = c.req.param("userId");
+    const viewer = c.get("user");
+    if (!canEditCollection(viewer, userId)) {
+      return errorResponse(c, 403, "cannot edit another member's collection", "FORBIDDEN");
+    }
+    const { title } = c.req.valid("json");
+    const db = getDb();
+    const id = randomUUID();
+    await db.execute({
+      sql: "INSERT INTO collection_items (id, user_id, custom_title) VALUES (?, ?, ?)",
+      args: [id, userId, title.trim()],
+    });
+    const saved = await fetchItemRow(db, userId, { itemId: id });
+    if (!saved) return errorResponse(c, 500, "item write failed", "WRITE_FAILED");
+    return c.json(CreateCustomItemResponseSchema.parse({ ok: true, item: rowToItem(saved) }));
+  },
+);
+
+collectionRoutes.delete("/users/:userId/items/:itemId", async (c) => {
+  const userId = c.req.param("userId");
+  const itemId = c.req.param("itemId");
+  const viewer = c.get("user");
+  if (!canEditCollection(viewer, userId)) {
+    return errorResponse(c, 403, "cannot edit another member's collection", "FORBIDDEN");
+  }
+  const db = getDb();
+  const existing = await fetchItemRow(db, userId, { itemId });
+  if (!existing) return errorResponse(c, 404, "collection item not found", "NOT_FOUND");
+  // Slug-backed rows leave through self-remove / played-through, which keep
+  // `user_inventory` in sync — deleting them here would desync ownership.
+  if (existing.slug !== null) {
+    return errorResponse(c, 400, "only custom boxes can be deleted here", "NOT_CUSTOM");
+  }
+  await db.batch(
+    [
+      { sql: "DELETE FROM collection_items WHERE id = ? AND user_id = ?", args: [itemId, userId] },
+      // Anything packed inside the deleted box becomes loose again.
+      {
+        sql: "UPDATE collection_items SET container_key = NULL WHERE user_id = ? AND container_key = ?",
+        args: [userId, itemId],
+      },
+    ],
+    "write",
+  );
+  return c.json(CollectionOkResponseSchema.parse({ ok: true }));
 });

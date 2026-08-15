@@ -40,6 +40,19 @@ export type CollectionStatus = z.infer<typeof CollectionStatusSchema>;
 // ── Items ──────────────────────────────────────────────────────────────
 
 /**
+ * An additional physical box a multi-box game ships in (Pandemic's second
+ * box, 7 Wonders' expansions box). Measurements are width × length × height
+ * in mm; `label` names the box when the copies differ.
+ */
+export const ExtraBoxSchema = z.object({
+  label: z.string().max(60).nullable(),
+  widthMm: z.number().int().positive().max(2000).nullable(),
+  depthMm: z.number().int().positive().max(2000).nullable(),
+  heightMm: z.number().int().positive().max(2000).nullable(),
+});
+export type ExtraBox = z.infer<typeof ExtraBoxSchema>;
+
+/**
  * Per-item metadata row. Exactly one of `slug` / `customTitle` is set:
  * `slug` for anything ownable, `customTitle` for a free-text game an admin
  * approved as custom. `playedThroughAt` marks a destroyed legacy game whose
@@ -61,6 +74,8 @@ export const CollectionItemSchema = z.object({
   widthMm: z.number().int().positive().nullable(),
   depthMm: z.number().int().positive().nullable(),
   heightMm: z.number().int().positive().nullable(),
+  /** Additional boxes beyond the primary one (defaulted for cached payloads). */
+  extraBoxes: z.array(ExtraBoxSchema).default([]),
   weightG: z.number().int().positive().nullable(),
   language: z.string().nullable(),
   acquiredOn: DateKeyStringSchema.nullable(),
@@ -128,6 +143,8 @@ const ItemPatchSchema = z.object({
   widthMm: z.number().int().positive().max(2000).nullable().optional(),
   depthMm: z.number().int().positive().max(2000).nullable().optional(),
   heightMm: z.number().int().positive().max(2000).nullable().optional(),
+  /** Full replacement of the extra-box list; `[]` clears it. */
+  extraBoxes: z.array(ExtraBoxSchema).max(8).optional(),
   weightG: z.number().int().positive().max(50_000).nullable().optional(),
   language: z.string().max(40).nullable().optional(),
   acquiredOn: DateKeyStringSchema.nullable().optional(),
@@ -202,6 +219,25 @@ export const RemoveOwnedGameResponseSchema = z.object({
   slugs: SlugListSchema,
 });
 export type RemoveOwnedGameResponse = z.infer<typeof RemoveOwnedGameResponseSchema>;
+
+// ── Custom (unlisted) boxes ────────────────────────────────────────────
+
+/**
+ * `POST /users/:userId/custom-item` — a manually-added box for a game or
+ * accessory the site doesn't list (storage inserts, unlisted titles). Owner
+ * self-service by design: this never touches `user_inventory`, so catalog
+ * ownership still only enters through the announce → approve flow.
+ */
+export const CreateCustomItemBodySchema = z.object({
+  title: z.string().min(1).max(120),
+});
+export type CreateCustomItemBody = z.infer<typeof CreateCustomItemBodySchema>;
+
+export const CreateCustomItemResponseSchema = z.object({
+  ok: z.literal(true),
+  item: CollectionItemSchema,
+});
+export type CreateCustomItemResponse = z.infer<typeof CreateCustomItemResponseSchema>;
 
 // ── Vocabulary CRUD (per-user) ─────────────────────────────────────────
 
