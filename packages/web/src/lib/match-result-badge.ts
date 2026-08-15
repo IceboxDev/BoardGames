@@ -9,15 +9,15 @@ import {
 // One viewer's result in a match, as a colored badge for the profile match list.
 // Game-aware, mirroring the read-side conventions in `MatchCard`:
 //   - Score-based free-for-all (7 Wonders highest-wins, Bandit lowest-wins, …):
-//     placement — 1st = "Won" (green), everyone else their ordinal ("2nd"/"3rd",
-//     amber; actual last place in rose). A DUEL (field of 2) reads "Lost" —
-//     "2nd of 2" would dress up a defeat. Point-less FFA (Villainous) has no
-//     placement → Won/Lost.
+//     placement — 1st = "Won" (green), last = "Last" (red), middle = "2nd"/"3rd"
+//     (amber). Point-less FFA (Villainous) has no placement → Won/Lost.
 //   - Scored co-op (Just One): the team score as `score / max` (e.g. "6 / 13"),
 //     green at the game's max else amber.
-//   - Last-standing: same placement treatment over the knockout/chip order.
-//   - Everything else (teams, one-vs-many, binary co-op): Won/Lost (+ "Ran it"
-//     for a non-competing moderator).
+//   - Last-standing with recorded `survivorRank`s (poker chip standings): the
+//     chip leader = "Won" (green), ranked runners-up = "2nd"/"3rd" (amber), the
+//     eliminated = "Lost" (red).
+//   - Everything else (teams, unranked last-standing, one-vs-many, binary
+//     co-op): Won/Lost (+ "Ran it" for a non-competing moderator).
 
 export type MatchResultBadge = { label: string; tone: BadgeTone };
 
@@ -73,17 +73,8 @@ function freeForAllBadge(
   const someoneBelow = outcome.players.some((p) => better(me, p));
 
   if (placement === 1) return { label: "Won", tone: "emerald" };
-  return placementBadge(placement, outcome.players.length, someoneBelow);
-}
-
-/**
- * Non-winner placement label: the ordinal, amber for the middle of the field
- * and rose for actual last place. A duel (field of 2) is a plain "Lost" —
- * "2nd of 2" would dress up a defeat.
- */
-function placementBadge(place: number, total: number, someoneBelow: boolean): MatchResultBadge {
-  if (total <= 2) return { label: "Lost", tone: "rose" };
-  return { label: ordinal(place), tone: someoneBelow ? "amber" : "rose" };
+  if (!someoneBelow) return { label: "Last", tone: "rose" };
+  return { label: ordinal(placement), tone: "amber" };
 }
 
 export function matchResultBadge(
@@ -141,11 +132,8 @@ export function matchResultBadge(
         const someoneBelow = outcome.players.some(
           (p) => p.eliminationOrder !== undefined && p.eliminationOrder < myOrder,
         );
-        return placementBadge(
-          survivorCount + outlastedMe + 1,
-          outcome.players.length,
-          someoneBelow,
-        );
+        if (!someoneBelow) return { label: "Last", tone: "rose" };
+        return { label: ordinal(survivorCount + outlastedMe + 1), tone: "amber" };
       }
       // Ranked survivors (poker chip standings): only the chip leader "Won";
       // the rest place. Unranked survivors keep the legacy co-winner badge.

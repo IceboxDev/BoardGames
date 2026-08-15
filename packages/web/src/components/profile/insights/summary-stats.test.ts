@@ -35,15 +35,27 @@ const newestFirst = (items: ProfileMatchSummaryItem[]) =>
   [...items].sort((a, b) => b.playedAt.localeCompare(a.playedAt));
 
 describe("recordCounts", () => {
-  it("splits wins / losses / other, with draws counted in other", () => {
+  it("splits wins / placed / losses / other, with draws counted in other", () => {
     const counts = recordCounts([
       item({ result: "win" }),
-      item({ result: "loss" }),
+      // Mid-field in a 5-player game → the friendly "placed" bucket.
+      item({ result: "loss", place: 2, fieldSize: 5, gameSlug: "7-wonders" }),
+      // Last place and duel losses stay plain losses.
+      item({ result: "loss", place: 5, fieldSize: 5, gameSlug: "7-wonders" }),
+      item({ result: "loss", place: 2, fieldSize: 2 }),
       item({ result: "draw" }),
       item({ result: "moderator" }),
       item({ result: "played" }),
     ]);
-    expect(counts).toEqual({ total: 5, wins: 1, losses: 1, draws: 1, other: 3 });
+    expect(counts).toEqual({ total: 7, wins: 1, placed: 1, losses: 2, draws: 1, other: 3 });
+  });
+
+  it("never counts point-less FFA losses as placed (Villainous)", () => {
+    const counts = recordCounts([
+      item({ result: "loss", place: 2, fieldSize: 4, gameSlug: "villainous" }),
+    ]);
+    expect(counts.placed).toBe(0);
+    expect(counts.losses).toBe(1);
   });
 });
 

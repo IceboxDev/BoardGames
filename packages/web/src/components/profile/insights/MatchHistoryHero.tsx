@@ -46,6 +46,7 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
             thickness={10}
             segments={[
               { value: counts.wins, tone: "emerald", label: "Won" },
+              { value: counts.placed, tone: "amber", label: "Placed" },
               { value: counts.losses, tone: "rose", label: "Lost" },
               { value: counts.other, tone: "neutral", label: "Other" },
             ]}
@@ -56,6 +57,11 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
             <p className="text-emerald-300">
               <span className="font-bold tabular-nums">{counts.wins}</span> won
             </p>
+            {counts.placed > 0 && (
+              <p className="text-amber-300" title="Finished mid-field — beaten, but far from last">
+                <span className="font-bold tabular-nums">{counts.placed}</span> placed
+              </p>
+            )}
             <p className="text-rose-300">
               <span className="font-bold tabular-nums">{counts.losses}</span> lost
             </p>
@@ -119,12 +125,20 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
                     className={`flex h-4.5 w-4.5 items-center justify-center rounded text-4xs font-bold ${
                       result === "win"
                         ? "bg-emerald-500/20 text-emerald-300"
-                        : result === "loss"
-                          ? "bg-rose-500/20 text-rose-300"
-                          : "bg-white/[0.08] text-fg-secondary"
+                        : result === "placed"
+                          ? "bg-amber-400/20 text-amber-300"
+                          : result === "loss"
+                            ? "bg-rose-500/20 text-rose-300"
+                            : "bg-white/[0.08] text-fg-secondary"
                     }`}
                   >
-                    {result === "win" ? "W" : result === "loss" ? "L" : "D"}
+                    {result === "win"
+                      ? "W"
+                      : result === "placed"
+                        ? "P"
+                        : result === "loss"
+                          ? "L"
+                          : "D"}
                   </span>
                 ))}
               </div>

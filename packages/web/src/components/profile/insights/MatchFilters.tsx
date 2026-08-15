@@ -16,6 +16,7 @@ import {
 const RESULT_OPTIONS: { value: ResultFilter; label: string }[] = [
   { value: "all", label: "All" },
   { value: "won", label: "Won" },
+  { value: "placed", label: "Placed" },
   { value: "lost", label: "Lost" },
   { value: "other", label: "Other" },
 ];

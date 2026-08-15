@@ -6,8 +6,21 @@
 // that once); this module only counts and slices.
 
 import type { ProfileMatchSummaryItem } from "@boardgames/core/protocol";
+import { isPointlessFreeForAll } from "../../../games/score-config.ts";
 
-export type ResultFilter = "all" | "won" | "lost" | "other";
+export type ResultFilter = "all" | "won" | "placed" | "lost" | "other";
+
+/**
+ * A loss that reads friendlier than "lost": the player finished mid-field in
+ * a placement game — not last, and not a duel (where 2nd of 2 IS the loss).
+ * Point-less free-for-alls (Villainous) carry no real placement and stay
+ * plain losses. The fourth Record bucket between won and lost.
+ */
+export function isPlacedLoss(item: ProfileMatchSummaryItem): boolean {
+  if (item.result !== "loss" || item.place === null || item.fieldSize === null) return false;
+  if (item.kind === "free-for-all" && isPointlessFreeForAll(item.gameSlug)) return false;
+  return item.fieldSize > 2 && item.place > 1 && item.place < item.fieldSize;
+}
 
 export interface SummaryFilters {
   result: ResultFilter;
@@ -34,8 +47,10 @@ export function applyFilters(
     switch (filters.result) {
       case "won":
         return item.result === "win";
+      case "placed":
+        return isPlacedLoss(item);
       case "lost":
-        return item.result === "loss";
+        return item.result === "loss" && !isPlacedLoss(item);
       case "other":
         return item.result !== "win" && item.result !== "loss";
       default:
@@ -57,6 +72,9 @@ export function summaryYears(items: readonly ProfileMatchSummaryItem[]): number[
 export interface RecordCounts {
   total: number;
   wins: number;
+  /** Mid-field finishes in placement games — between won and lost. */
+  placed: number;
+  /** Outright losses: last place, duels, teams/co-op/one-vs-many defeats. */
   losses: number;
   draws: number;
   /** Everything non-decisive: draws + moderated + scored/ongoing plays. */
@@ -65,14 +83,24 @@ export interface RecordCounts {
 
 export function recordCounts(items: readonly ProfileMatchSummaryItem[]): RecordCounts {
   let wins = 0;
+  let placed = 0;
   let losses = 0;
   let draws = 0;
   for (const item of items) {
     if (item.result === "win") wins++;
-    else if (item.result === "loss") losses++;
-    else if (item.result === "draw") draws++;
+    else if (item.result === "loss") {
+      if (isPlacedLoss(item)) placed++;
+      else losses++;
+    } else if (item.result === "draw") draws++;
   }
-  return { total: items.length, wins, losses, draws, other: items.length - wins - losses };
+  return {
+    total: items.length,
+    wins,
+    placed,
+    losses,
+    draws,
+    other: items.length - wins - placed - losses,
+  };
 }
 
 export interface StreakInfo {
@@ -108,18 +136,21 @@ export function streaks(items: readonly ProfileMatchSummaryItem[]): StreakInfo {
   return { current: run, bestWin };
 }
 
-/** The last `n` decisive results (win/loss/draw), chronological. */
-export function recentForm(
-  items: readonly ProfileMatchSummaryItem[],
-  n = 10,
-): ("win" | "loss" | "draw")[] {
-  const decisive: ("win" | "loss" | "draw")[] = [];
+export type FormResult = "win" | "placed" | "loss" | "draw";
+
+/** The last `n` decisive results (won/placed/lost/drawn), chronological. */
+export function recentForm(items: readonly ProfileMatchSummaryItem[], n = 10): FormResult[] {
+  const decisive: FormResult[] = [];
   for (const item of items) {
     // Items are newest first; collect until the window is full.
-    if (item.result === "win" || item.result === "loss" || item.result === "draw") {
+    if (item.result === "win" || item.result === "draw") {
       decisive.push(item.result);
-      if (decisive.length === n) break;
+    } else if (item.result === "loss") {
+      decisive.push(isPlacedLoss(item) ? "placed" : "loss");
+    } else {
+      continue;
     }
+    if (decisive.length === n) break;
   }
   return decisive.reverse();
 }
@@ -130,6 +161,7 @@ export interface MonthBucket {
   /** Column label ("Mar", with "’26" on year boundaries). */
   label: string;
   wins: number;
+  placed: number;
   losses: number;
   other: number;
 }
@@ -162,12 +194,14 @@ export function monthlyBuckets(items: readonly ProfileMatchSummaryItem[]): Month
     if (!maxKey || key > maxKey) maxKey = key;
     let bucket = byKey.get(key);
     if (!bucket) {
-      bucket = { key, label: "", wins: 0, losses: 0, other: 0 };
+      bucket = { key, label: "", wins: 0, placed: 0, losses: 0, other: 0 };
       byKey.set(key, bucket);
     }
     if (item.result === "win") bucket.wins++;
-    else if (item.result === "loss") bucket.losses++;
-    else bucket.other++;
+    else if (item.result === "loss") {
+      if (isPlacedLoss(item)) bucket.placed++;
+      else bucket.losses++;
+    } else bucket.other++;
   }
   if (!minKey) return [];
 
@@ -176,7 +210,7 @@ export function monthlyBuckets(items: readonly ProfileMatchSummaryItem[]): Month
   const [maxY, maxM] = maxKey.split("-").map((s) => Number.parseInt(s, 10));
   while (y < maxY || (y === maxY && m <= maxM)) {
     const key = `${y}-${String(m).padStart(2, "0")}`;
-    const bucket = byKey.get(key) ?? { key, label: "", wins: 0, losses: 0, other: 0 };
+    const bucket = byKey.get(key) ?? { key, label: "", wins: 0, placed: 0, losses: 0, other: 0 };
     // Year marker on January and on the very first column.
     bucket.label =
       m === 1 || out.length === 0

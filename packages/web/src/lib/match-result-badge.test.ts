@@ -20,12 +20,8 @@ describe("matchResultBadge — score-based free-for-all (7 Wonders)", () => {
   it("middle place → ordinal (amber)", () => {
     expect(matchResultBadge(outcome, "b", "7-wonders")).toEqual({ label: "2nd", tone: "amber" });
   });
-  it("last place → its ordinal in rose", () => {
-    expect(matchResultBadge(outcome, "c", "7-wonders")).toEqual({ label: "3rd", tone: "rose" });
-  });
-  it("a duel loss reads Lost, not 2nd — no dressing up a defeat", () => {
-    const duel: MatchOutcome = { kind: "free-for-all", players: [p("a", 30), p("b", 20)] };
-    expect(matchResultBadge(duel, "b", "lost-cities")).toEqual({ label: "Lost", tone: "rose" });
+  it("last place → Last (rose)", () => {
+    expect(matchResultBadge(outcome, "c", "7-wonders")).toEqual({ label: "Last", tone: "rose" });
   });
 });
 
@@ -41,8 +37,8 @@ describe("matchResultBadge — tie broken by explicit rank (7 Wonders)", () => {
   it("tie-break loser → distinct 2nd despite the equal score", () => {
     expect(matchResultBadge(outcome, "b", "7-wonders")).toEqual({ label: "2nd", tone: "amber" });
   });
-  it("lowest rank → last-place ordinal in rose", () => {
-    expect(matchResultBadge(outcome, "c", "7-wonders")).toEqual({ label: "3rd", tone: "rose" });
+  it("lowest rank → Last", () => {
+    expect(matchResultBadge(outcome, "c", "7-wonders")).toEqual({ label: "Last", tone: "rose" });
   });
 });
 
@@ -54,7 +50,7 @@ describe("matchResultBadge — lowest-wins free-for-all (Bandit)", () => {
   it("lowest score wins", () => {
     expect(matchResultBadge(outcome, "a", "bandit")).toEqual({ label: "Won", tone: "emerald" });
     expect(matchResultBadge(outcome, "b", "bandit")).toEqual({ label: "2nd", tone: "amber" });
-    expect(matchResultBadge(outcome, "c", "bandit")).toEqual({ label: "3rd", tone: "rose" });
+    expect(matchResultBadge(outcome, "c", "bandit")).toEqual({ label: "Last", tone: "rose" });
   });
 });
 
@@ -173,8 +169,8 @@ describe("matchResultBadge — last-standing with survivorRanks (poker)", () => 
   it("ranked runner-up → ordinal (amber), not Won", () => {
     expect(matchResultBadge(ranked, "a", "poker")).toEqual({ label: "2nd", tone: "amber" });
   });
-  it("first eliminated (nobody below) → last-place ordinal in rose", () => {
-    expect(matchResultBadge(ranked, "c", "poker")).toEqual({ label: "3rd", tone: "rose" });
+  it("first eliminated (nobody below) → Last (rose)", () => {
+    expect(matchResultBadge(ranked, "c", "poker")).toEqual({ label: "Last", tone: "rose" });
   });
   it("unranked survivors keep the legacy co-winner badge", () => {
     const unranked: MatchOutcome = {
@@ -209,7 +205,7 @@ describe("matchResultBadge — last-standing with survivorRanks (poker)", () => 
       tone: "amber",
     });
     expect(matchResultBadge(nem, "first-out", "not-enough-mana")).toEqual({
-      label: "4th",
+      label: "Last",
       tone: "rose",
     });
   });

@@ -13,6 +13,7 @@ export function MonthlyActivityChart({ items }: { items: readonly ProfileMatchSu
         label: b.label,
         segments: [
           { value: b.wins, tone: "emerald", label: "won" },
+          { value: b.placed, tone: "amber", label: "placed" },
           { value: b.losses, tone: "rose", label: "lost" },
           { value: b.other, tone: "neutral", label: "other" },
         ],
