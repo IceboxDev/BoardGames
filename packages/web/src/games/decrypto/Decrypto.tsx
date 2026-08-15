@@ -19,17 +19,21 @@ interface SoloConfig {
 }
 
 function soloStartConfig({ mode, modelId, timerEnabled }: SoloConfig) {
+  // `aiEngine` is redundant with aiModels but persistReplay sniffs that key
+  // for the match-history "AI" column.
   return mode === "interceptor"
     ? {
         variant: "interceptor",
         humanPlayers: [2],
         aiModels: [modelId, modelId, null],
+        aiEngine: modelId,
         timerEnabled,
       }
     : {
         variant: "standard",
         humanPlayers: [0],
         aiModels: [null, modelId, modelId, modelId],
+        aiEngine: modelId,
         timerEnabled,
       };
 }

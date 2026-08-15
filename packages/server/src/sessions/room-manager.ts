@@ -582,6 +582,8 @@ function buildGameConfig(room: Room, extra: Record<string, unknown>): Record<str
         variant: filledCount === 3 ? "interceptor" : "standard",
         humanPlayers: humanIndices,
         aiModels,
+        // persistReplay sniffs `aiEngine` for the match-history AI column.
+        aiEngine: aiModels.find((m) => m !== null) ?? undefined,
         ...extra,
       };
     }

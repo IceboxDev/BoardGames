@@ -70,8 +70,12 @@ import { ChatActionSchema, DEFAULT_BEATS, MAX_CLUE_LENGTH, SubmitCluesActionSche
 // (the sky-team thinking-loop failure mode).
 // ---------------------------------------------------------------------------
 
-/** Per-decision budget for an injected agent before the fallback answers. */
-export const AI_DEADLINE_MS = 45_000;
+/**
+ * Per-decision budget for an injected agent before the fallback answers.
+ * Sized for a frontier model at medium reasoning effort on the encrypt task
+ * (~40-70s worst case); the server agent's own call budgets sit below this.
+ */
+export const AI_DEADLINE_MS = 90_000;
 
 function raceWithFallback<T>(run: () => Promise<T>, fallback: () => T, ms: number): Promise<T> {
   return new Promise<T>((resolve) => {
@@ -714,6 +718,9 @@ interface DecryptoReplayLog {
   result: DecryptoResult;
   playerCount: number;
   scores: [number, number];
+  /** Duplicated into scoreA/scoreB — persistReplay's summary columns read those names. */
+  scoreA: number;
+  scoreB: number;
   winner?: Team;
 }
 
@@ -768,6 +775,8 @@ export const decryptoSpec: GameMachineSpec<
       result: ctx.result,
       playerCount: playerCount(ctx.variant),
       scores: ctx.result.points,
+      scoreA: ctx.result.points[0],
+      scoreB: ctx.result.points[1],
       winner: ctx.result.winner,
     };
   },

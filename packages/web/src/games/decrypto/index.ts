@@ -7,6 +7,9 @@ export default {
   mode: "remote",
   soloLabel: "Solo vs GPT agents",
   hasMatchHistory: true,
+  // Team game — p0/p1 are the SIDES, not "you vs opponent", so the generic
+  // history table misreads every row. The bespoke view names the winning side.
+  matchHistoryComponent: lazy(() => import("./components/DecryptoMatchHistory")),
   matchHistoryLabelResolver: (id: string) =>
     DECRYPTO_AI_MODELS.find((m) => m.id === id)?.label ?? id,
   defaultMpConfig: { timerEnabled: false },
