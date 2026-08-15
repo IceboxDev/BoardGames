@@ -32,8 +32,10 @@ export default function GameOverScreen({
       : `${teamLabel(view.variant, result.winner)} wins`;
 
   return (
-    <div className="relative z-10 flex min-h-0 flex-1 items-center justify-center p-4">
-      <Surface variant="raised" padding="lg" className="w-full max-w-2xl">
+    // `my-auto` (not items-center) so a card taller than a phone viewport
+    // scrolls from the top instead of clipping both ends.
+    <div className="relative z-10 flex min-h-0 flex-1 justify-center overflow-y-auto p-3 sm:p-4">
+      <Surface variant="raised" padding="lg" className="my-auto h-fit w-full max-w-2xl">
         <div className="mb-4 text-center">
           <h1
             className={`text-3xl font-black ${
@@ -52,7 +54,7 @@ export default function GameOverScreen({
           </p>
         </div>
 
-        <div className="mb-5 grid grid-cols-2 gap-3">
+        <div className="mb-5 grid grid-cols-1 gap-3 xs2:grid-cols-2">
           {([0, 1] as const).map((team) => {
             const tokens = view.tokens[team];
             const keywords = result.keywords[team];
@@ -87,7 +89,7 @@ export default function GameOverScreen({
           })}
         </div>
 
-        <div className="flex justify-center gap-3">
+        <div className="flex flex-wrap justify-center gap-3">
           {onPlayAgain && (
             <Button variant="primary" onClick={onPlayAgain}>
               Play again

@@ -32,6 +32,7 @@ const DndNightPreview = lazy(() => import("./pages/DndNightPreview"));
 const ExitNightPreview = lazy(() => import("./pages/ExitNightPreview"));
 const DndToolPreview = lazy(() => import("./pages/DndToolPreview"));
 const RsvpPreview = lazy(() => import("./pages/RsvpPreview"));
+const DecryptoPreview = lazy(() => import("./pages/DecryptoPreview"));
 const UiGalleryPage = lazy(() => import("./pages/UiGalleryPage"));
 
 // `GameMenu` is the dashboard's entry point into the games catalog.
@@ -252,6 +253,7 @@ const router = createBrowserRouter(
       <Route path="dev/exit-preview" element={<ExitNightPreview />} />
       <Route path="dev/dnd-tool-preview" element={<DndToolPreview />} />
       <Route path="dev/rsvp-preview" element={<RsvpPreview />} />
+      <Route path="dev/decrypto-preview" element={<DecryptoPreview />} />
       {/* The design-system gallery: every ui/ primitive in its variants.
           Captured by scripts/screenshot-smoke.sh as the per-primitive
           visual-regression surface. */}

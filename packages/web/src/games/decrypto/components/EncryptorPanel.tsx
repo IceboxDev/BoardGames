@@ -49,8 +49,11 @@ export function EncryptorPanel({
         {code.map((digit, slot) => (
           // The three rows ARE the code's ordered slots — position is identity.
           // biome-ignore lint/suspicious/noArrayIndexKey: slots are positional
-          <div key={slot} className="flex items-center gap-3">
-            <label htmlFor={`${uid}-clue-${slot}`} className="w-28 shrink-0 text-right">
+          <div key={slot} className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-3">
+            <label
+              htmlFor={`${uid}-clue-${slot}`}
+              className="shrink-0 text-left sm:w-28 sm:text-right"
+            >
               <span className="mr-1.5 text-sm font-black text-accent-300">{digit}</span>
               <span className="text-2xs font-semibold uppercase tracking-tight text-fg-secondary">
                 {view.myKeywords?.[digit - 1]}

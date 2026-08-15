@@ -43,14 +43,14 @@ export function GuessPanel({
       <div className="flex flex-col gap-2.5">
         {clues.map((clue, slot) => (
           // biome-ignore lint/suspicious/noArrayIndexKey: guess slots are positional
-          <div key={slot} className="flex items-center gap-3">
+          <div key={slot} className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-3">
             <span
-              className="min-w-0 flex-1 truncate text-right text-sm font-semibold text-white"
+              className="min-w-0 truncate text-center text-sm font-semibold text-white sm:flex-1 sm:text-right"
               title={clue}
             >
               “{clue}”
             </span>
-            <div className="flex shrink-0 gap-1">
+            <div className="flex shrink-0 justify-center gap-1.5 sm:justify-end sm:gap-1">
               {DIGITS.map((digit) => {
                 const selected = draft[slot] === digit;
                 const usedElsewhere = !selected && draft.includes(digit);
@@ -62,7 +62,8 @@ export function GuessPanel({
                     size="sm"
                     onClick={() => onDraft(purpose, slot as 0 | 1 | 2, selected ? null : digit)}
                     className={cn(
-                      "h-8 w-8 justify-center px-0 text-sm font-bold",
+                      // Bigger tap targets on touch-first widths.
+                      "h-10 w-10 justify-center px-0 text-sm font-bold sm:h-8 sm:w-8",
                       usedElsewhere && "opacity-40",
                     )}
                   >

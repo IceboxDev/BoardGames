@@ -12,6 +12,7 @@ import { mapDecryptoLog } from "../logic/log-mapper";
 import { ClueTimer } from "./ClueTimer";
 import { EncryptorPanel } from "./EncryptorPanel";
 import { GuessPanel } from "./GuessPanel";
+import { MobileDock, MobileKeywords, MobileScoreStrip } from "./MobilePanels";
 import { NoteSheet } from "./NoteSheet";
 import { RevealCard } from "./RevealCard";
 import { SidePanel } from "./SidePanel";
@@ -140,7 +141,8 @@ export default function GameBoard({ view, playerNames, onAction, error }: GameBo
   return (
     <GameScreen
       background="bg-surface-950"
-      contentClassName="mx-auto w-full max-w-4xl"
+      contentClassName="mx-auto w-full max-w-4xl pb-3"
+      collapsibleSidebars
       leftSidebarTitle="Decrypto"
       leftSidebar={
         <SidePanel
@@ -151,12 +153,17 @@ export default function GameBoard({ view, playerNames, onAction, error }: GameBo
       }
       sidebar={<ActionLog blocks={mapDecryptoLog(view)} />}
     >
-      <div className="flex items-center justify-center gap-3">
+      <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
         {statusRow(view)}
         {view.clueTimerDeadlineTs !== null && <ClueTimer deadlineTs={view.clueTimerDeadlineTs} />}
       </div>
 
       <ThresholdNotice view={view} />
+
+      {/* Below lg both sidebars are hidden — score, keywords, chat, and the
+          history log live here instead. */}
+      <MobileScoreStrip view={view} />
+      <MobileKeywords view={view} />
 
       {view.phase === "clueWriting" && myEncryptTx && (
         <EncryptorPanel
@@ -188,6 +195,12 @@ export default function GameBoard({ view, playerNames, onAction, error }: GameBo
       {view.phase === "reveal" && currentTx && <RevealCard view={view} tx={currentTx} />}
 
       <NoteSheet view={view} />
+
+      <MobileDock
+        view={view}
+        playerNames={playerNames}
+        onChat={(text) => onAction({ kind: "chat", text })}
+      />
     </GameScreen>
   );
 }

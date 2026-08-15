@@ -21,6 +21,14 @@ interface GameScreenProps {
   children: ReactNode;
   /** Skip content-area padding and flex-col (for edge-to-edge canvas games). */
   noPadding?: boolean;
+  /**
+   * Opt-in phone mode: below `lg` both sidebars are hidden and the content
+   * padding tightens. A game that opts in MUST re-surface the sidebar
+   * content (score, chat, history) inside its board for small screens —
+   * GameScreen only frees the width. Games that don't pass this render
+   * exactly as before on every viewport.
+   */
+  collapsibleSidebars?: boolean;
 }
 
 export default function GameScreen({
@@ -33,7 +41,15 @@ export default function GameScreen({
   fanActions,
   children,
   noPadding,
+  collapsibleSidebars,
 }: GameScreenProps) {
+  const asideVisibility = collapsibleSidebars ? "hidden lg:flex" : "flex";
+  const rowPad = collapsibleSidebars ? "px-1 sm:px-4" : "px-4";
+  // Phone boards are taller than the viewport — the content column must
+  // scroll (desktop boards are built to fit, so the default stays visible).
+  const contentPad = collapsibleSidebars
+    ? "overflow-y-auto px-2 pt-3 sm:px-4 sm:pt-4"
+    : "px-4 pt-4";
   return (
     // `relative z-10` is load-bearing: `GameShellLayoutInner` renders a fixed
     // `def.backgroundImage` at `z-0` over the entire main area. Without a
@@ -49,10 +65,10 @@ export default function GameScreen({
           sidebar). History itself spans the complete height on the right and
           is always visible. */}
       <div className="flex min-h-0 min-w-0 flex-1 flex-col">
-        <div className="flex min-h-0 flex-1 px-4">
+        <div className={`flex min-h-0 flex-1 ${rowPad}`}>
           {leftSidebar && (
             <aside
-              className={`flex w-64 shrink-0 flex-col overflow-y-auto bg-surface-900/60 p-4${DEBUG_LAYOUT ? " border-2 border-fuchsia-400 bg-fuchsia-400/10" : ""}`}
+              className={`${asideVisibility} w-64 shrink-0 flex-col overflow-y-auto bg-surface-900/60 p-4${DEBUG_LAYOUT ? " border-2 border-fuchsia-400 bg-fuchsia-400/10" : ""}`}
             >
               {leftSidebarTitle && (
                 <h3 className="mb-3 shrink-0 text-xs font-bold uppercase tracking-wider text-fg-muted">
@@ -66,7 +82,7 @@ export default function GameScreen({
             <div className="min-h-0 min-w-0 flex-1">{children}</div>
           ) : (
             <div
-              className={`flex min-h-0 min-w-0 flex-1 flex-col gap-2 px-4 pt-4${contentClassName ? ` ${contentClassName}` : ""}`}
+              className={`flex min-h-0 min-w-0 flex-1 flex-col gap-2 ${contentPad}${contentClassName ? ` ${contentClassName}` : ""}`}
             >
               {children}
             </div>
@@ -90,7 +106,7 @@ export default function GameScreen({
       </div>
       {sidebar && (
         <aside
-          className={`my-2 mr-2 flex w-72 shrink-0 flex-col overflow-y-auto rounded-xl bg-surface-900/60 p-4${DEBUG_LAYOUT ? " border-2 border-cyan-400 bg-cyan-400/10" : ""}`}
+          className={`my-2 mr-2 ${asideVisibility} w-72 shrink-0 flex-col overflow-y-auto rounded-xl bg-surface-900/60 p-4${DEBUG_LAYOUT ? " border-2 border-cyan-400 bg-cyan-400/10" : ""}`}
         >
           <h3 className="mb-3 text-xs font-bold uppercase tracking-wider text-fg-muted">History</h3>
           {sidebar}

@@ -26,12 +26,12 @@ function TeamSheet({ view, team }: { view: DecryptoPlayerView; team: Team }) {
           {isMine && " (your team)"}
         </h3>
       </div>
-      <div className="grid grid-cols-4 gap-1.5">
+      <div className="grid grid-cols-4 gap-1 sm:gap-1.5">
         {columns.map((clues, digitIdx) => (
           <div
             // biome-ignore lint/suspicious/noArrayIndexKey: columns ARE the digits 1-4
             key={digitIdx}
-            className="min-w-0 rounded-lg bg-surface-800/50 p-1.5"
+            className="min-w-0 rounded-lg bg-surface-800/50 p-1 sm:p-1.5"
           >
             <div className="mb-1 border-b border-white/10 pb-1 text-center">
               <span className="text-sm font-black text-white">{digitIdx + 1}</span>

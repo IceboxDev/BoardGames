@@ -1,8 +1,8 @@
 import type { DecryptoPlayerView, Team } from "@boardgames/core/games/decrypto/types";
-import { useState } from "react";
-import { Badge, Button, Input } from "../../../components/ui";
+import { Badge } from "../../../components/ui";
 import { cn } from "../../../lib/cn";
 import { seatLabel, teamShortLabel } from "../logic/labels";
+import { TeamChat } from "./TeamChat";
 
 // Left sidebar: round tracker, token tallies, seat roster, and the team chat.
 // Chat content arrives pre-redacted (own team only; a locked-out encryptor's
@@ -98,18 +98,8 @@ export function SidePanel({
   playerNames: (string | null)[];
   onChat: (text: string) => void;
 }) {
-  const [draft, setDraft] = useState("");
-  const me = view.seats.find((s) => s.seat === view.seat);
   const teamSize = view.seats.filter((s) => s.team === view.team).length;
-  const chatLocked = me?.isEncryptor === true;
   const canChat = teamSize >= 2 && view.phase !== "gameOver";
-
-  const submitChat = () => {
-    const text = draft.trim();
-    if (!text) return;
-    onChat(text);
-    setDraft("");
-  };
 
   return (
     <div className="flex h-full min-h-0 flex-col gap-2">
@@ -144,49 +134,7 @@ export function SidePanel({
       {canChat && (
         <div className="flex min-h-0 flex-1 flex-col gap-1.5">
           <p className="text-2xs font-semibold uppercase tracking-label text-fg-muted">Team chat</p>
-          <div className="min-h-0 flex-1 overflow-y-auto rounded-lg bg-surface-800/40 p-2">
-            <ul className="flex flex-col gap-1">
-              {view.chat.map((m, i) => (
-                <li
-                  // biome-ignore lint/suspicious/noArrayIndexKey: append-only log
-                  key={i}
-                  className="text-3xs leading-snug text-fg-secondary"
-                >
-                  <span className="font-semibold text-fg-primary">
-                    {seatLabel(view, m.seat, playerNames)}:
-                  </span>{" "}
-                  {m.text}
-                </li>
-              ))}
-              {view.chat.length === 0 && (
-                <li className="text-3xs italic text-fg-disabled">Talk it out with your team…</li>
-              )}
-            </ul>
-          </div>
-          {chatLocked ? (
-            <p className="text-3xs italic leading-snug text-amber-300/80">
-              You're encrypting — no table talk until your code is revealed.
-            </p>
-          ) : (
-            <form
-              className="flex gap-1"
-              onSubmit={(e) => {
-                e.preventDefault();
-                submitChat();
-              }}
-            >
-              <Input
-                value={draft}
-                onChange={(e) => setDraft(e.target.value)}
-                placeholder="Message your team"
-                maxLength={300}
-                className="min-w-0 flex-1 px-2 py-1 text-xs"
-              />
-              <Button type="submit" variant="secondary" size="xs" disabled={!draft.trim()}>
-                Send
-              </Button>
-            </form>
-          )}
+          <TeamChat view={view} playerNames={playerNames} onChat={onChat} />
         </div>
       )}
     </div>

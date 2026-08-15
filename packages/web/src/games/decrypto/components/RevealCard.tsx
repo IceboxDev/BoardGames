@@ -94,20 +94,20 @@ export function RevealCard({ view, tx }: { view: DecryptoPlayerView; tx: Transmi
                 return (
                   <tr key={`${slot}-${clue}`}>
                     <td
-                      className="max-w-40 truncate pr-3 text-sm font-semibold text-white"
+                      className="max-w-24 truncate pr-2 text-sm font-semibold text-white sm:max-w-40 sm:pr-3"
                       title={clue}
                     >
                       “{clue}”
                     </td>
-                    <td className="pr-3 text-sm">
+                    <td className="pr-2 text-sm sm:pr-3">
                       <span className="font-black text-accent-300">{meant}</span>
                       {myKeywords && (
-                        <span className="ml-1.5 text-2xs font-semibold uppercase tracking-tight text-fg-secondary">
+                        <span className="block text-2xs font-semibold uppercase tracking-tight text-fg-secondary sm:ml-1.5 sm:inline">
                           {myKeywords[meant - 1]}
                         </span>
                       )}
                     </td>
-                    <td className="pr-3 text-center">
+                    <td className="pr-2 text-center sm:pr-3">
                       <DigitCell
                         digit={resolved.decodeGuess?.[slot] ?? null}
                         correct={correctness(resolved.decodeGuess, slot)}
