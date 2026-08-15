@@ -1,0 +1,50 @@
+# shelf-packer
+
+Offline optimizer that packs the group's board game boxes into a flush,
+front-facing rectangle on a shelf — the "how do I fill 85×25 cm perfectly"
+problem. Self-contained C++17, no dependencies (its own PNG encoder).
+
+## Model
+
+- Every box (`width × length × height`, mm) shows a **front face** of either
+  `width×height` or `length×height`, optionally rotated 90° — so a box can
+  also stand on its edge, spine-out like a book. The remaining dimension goes
+  **into** the shelf and must fit `--depth-max`.
+- The packing is a row of **piles** standing flush on the floor. A pile is a
+  stack of layers; a layer is 1–3 boxes side by side whose face heights match
+  within tolerance. Every layer in a pile shares the pile width (± tolerance),
+  so all vertical seams are flush.
+- Piles must reach the nominal height and may overshoot the top by the
+  allowed overflow; pile widths sum to the nominal width plus the left+right
+  overflow allowance. Measurement tolerance (±1 mm/box) is applied per layer,
+  never banked across a whole pile.
+- Objective: **maximize packed volume**, tie-broken by depth used (deeper
+  boxes waste less shelf). Emitted solutions are diversified — two solutions
+  must differ by at least 6 boxes.
+
+Search: exhaustive layer/pile enumeration (deduped by box-set), then several
+beam-search passes over pile candidates plus 20k density-biased greedy
+restarts. Runs in ~2 s for ~46 boxes.
+
+## Usage
+
+```bash
+make                       # builds ./shelf-packer
+./shelf-packer boxes.csv --out out
+```
+
+Outputs `out/solutions.txt` plus one `out/solution_NN.png` per solution
+(front view: floor line, shelf outline, dashed overflow bounds, one colored
+rectangle per box labeled `name W×H dDEPTH`).
+
+Flags (all mm): `--width 850 --height 250 --over-left 30 --over-right 30
+--over-top 35 --depth-max 325 --tol 1 --solutions 8 --out DIR`.
+
+## Input
+
+`boxes.csv`: `name,width_mm,length_mm,height_mm`, one physical box per line,
+`#` comments allowed. Multi-box games are separate lines (pandemic-1/-2, the
+7 Wonders expansions box, …). The checked-in file mirrors the measured
+collection in the Games Manager — regenerate it from
+`/u/<id>/collection` → Export CSV (primary dims + the "Extra boxes" column)
+when measurements change.
