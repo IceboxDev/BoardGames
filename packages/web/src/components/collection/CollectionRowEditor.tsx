@@ -1,6 +1,6 @@
 import type { CollectionResponse, UpsertItemBody } from "@boardgames/core/protocol";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { removeOwnedGame, setPlayedThrough, upsertCollectionItem } from "../../lib/collection.ts";
 import { errorMessageOf } from "../../lib/error-message.ts";
 import { qk } from "../../lib/query-keys.ts";
@@ -12,7 +12,7 @@ import { SegmentedControl } from "../ui/SegmentedControl.tsx";
 import { Select } from "../ui/Select.tsx";
 import { Textarea } from "../ui/Textarea.tsx";
 import { useConfirm } from "../ui/useConfirm.tsx";
-import type { CollectionRow } from "./collection-rows.ts";
+import { buildCollectionRows, type CollectionRow } from "./collection-rows.ts";
 
 // Full per-item editor inside the table's expansion row. Draft-then-save for
 // the typed fields; the destructive affordances (played-through, restore,
@@ -22,7 +22,7 @@ import type { CollectionRow } from "./collection-rows.ts";
 type Draft = {
   sleeveStatus: "none" | "sleeved" | "missing";
   sleeveTypeId: string;
-  boxId: string;
+  containerKey: string;
   statusId: string;
   widthMm: string;
   depthMm: string;
@@ -39,7 +39,7 @@ function draftFromRow(row: CollectionRow): Draft {
   return {
     sleeveStatus: item?.sleeveStatus ?? "none",
     sleeveTypeId: item?.sleeveTypeId ?? "",
-    boxId: item?.boxId ?? "",
+    containerKey: item?.containerKey ?? "",
     statusId: item?.statusId ?? "",
     widthMm: item?.widthMm != null ? String(item.widthMm) : "",
     depthMm: item?.depthMm != null ? String(item.depthMm) : "",
@@ -70,6 +70,19 @@ export function CollectionRowEditor({
   const { confirm, confirmDialog } = useConfirm();
   const [draft, setDraft] = useState<Draft>(() => draftFromRow(row));
 
+  // Games whose physical box this copy could live in: any other owned row
+  // that isn't destroyed and isn't itself packed away (single-level packing).
+  const containerOptions = useMemo(
+    () =>
+      buildCollectionRows(collection).filter(
+        (candidate) =>
+          candidate.key !== row.key &&
+          !candidate.playedThrough &&
+          candidate.item?.containerKey == null,
+      ),
+    [collection, row.key],
+  );
+
   const invalidateCollection = () =>
     void queryClient.invalidateQueries({ queryKey: qk.collection(userId) });
   const invalidateOwnership = () => {
@@ -86,7 +99,7 @@ export function CollectionRowEditor({
         sleeveStatus: draft.sleeveStatus,
         sleeveTypeId:
           draft.sleeveStatus === "none" ? null : draft.sleeveTypeId ? draft.sleeveTypeId : null,
-        boxId: draft.boxId || null,
+        containerKey: draft.containerKey || null,
         statusId: draft.statusId || null,
         widthMm: intOrNull(draft.widthMm),
         depthMm: intOrNull(draft.depthMm),
@@ -140,17 +153,17 @@ export function CollectionRowEditor({
             ))}
           </Select>
         </Field>
-        <Field label="Storage box" htmlFor={`ed-box-${row.key}`}>
+        <Field label="Stored inside" htmlFor={`ed-container-${row.key}`}>
           <Select
-            id={`ed-box-${row.key}`}
+            id={`ed-container-${row.key}`}
             size="sm"
-            value={draft.boxId}
-            onChange={(e) => setDraft({ ...draft, boxId: e.target.value })}
+            value={draft.containerKey}
+            onChange={(e) => setDraft({ ...draft, containerKey: e.target.value })}
           >
-            <option value="">Unassigned</option>
-            {collection.boxes.map((b) => (
-              <option key={b.id} value={b.id}>
-                {b.name}
+            <option value="">Its own box</option>
+            {containerOptions.map((option) => (
+              <option key={option.key} value={option.key}>
+                {option.title}
               </option>
             ))}
           </Select>

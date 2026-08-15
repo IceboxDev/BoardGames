@@ -2,7 +2,6 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { AnnounceModal } from "../components/collection/AnnounceModal.tsx";
-import { BoxManagerModal } from "../components/collection/BoxManagerModal.tsx";
 import {
   applyViewState,
   CollectionFilters,
@@ -40,8 +39,8 @@ export default function GamesManagerPage() {
   const queryClient = useQueryClient();
   const [viewState, setViewState] = useState<CollectionViewState>(DEFAULT_VIEW_STATE);
   const [selection, setSelection] = useState<ReadonlySet<string>>(new Set());
-  const [assignBoxId, setAssignBoxId] = useState("");
-  const [modal, setModal] = useState<"announce" | "boxes" | "vocab" | null>(null);
+  const [assignContainerKey, setAssignContainerKey] = useState("");
+  const [modal, setModal] = useState<"announce" | "vocab" | null>(null);
 
   const profileQuery = useQuery({
     queryKey: qk.profile(userId),
@@ -54,15 +53,17 @@ export default function GamesManagerPage() {
     enabled: !!userId,
   });
 
-  // "Merge into one box": apply the chosen box to every selected row.
+  // "Same box": pack every selected game into the chosen game's physical
+  // packaging (the container may be among the selection — it skips itself).
   const assignMutation = useMutation({
-    mutationFn: async ({ keys, boxId }: { keys: string[]; boxId: string }) => {
+    mutationFn: async ({ keys, containerKey }: { keys: string[]; containerKey: string }) => {
       const data = collectionQuery.data;
       for (const key of keys) {
+        if (key === containerKey) continue;
         const row = data?.items.find((i) => i.id === key && i.slug === null);
         await upsertCollectionItem(
           userId as string,
-          row ? { itemId: row.id, boxId } : { slug: key, boxId },
+          row ? { itemId: row.id, containerKey } : { slug: key, containerKey },
         );
       }
     },
@@ -123,6 +124,9 @@ export default function GamesManagerPage() {
     const filtered = applyViewState(rows, viewState);
     const editable = collection.editable;
     const ownedCount = rows.length - playedThroughCount;
+    const packedCount = rows.filter((r) => r.item?.containerKey != null).length;
+    // Any owned, un-destroyed, un-packed game can host others in its box.
+    const containerOptions = rows.filter((r) => !r.playedThrough && r.item?.containerKey == null);
 
     return (
       <PageMain width="7xl" padding="spacious">
@@ -133,13 +137,10 @@ export default function GamesManagerPage() {
             title={editable ? "Games manager" : `${firstName}'s collection`}
             subtitle={`${ownedCount} owned${
               playedThroughCount > 0 ? ` · ${playedThroughCount} played through` : ""
-            } · ${collection.boxes.length} storage box${collection.boxes.length === 1 ? "" : "es"}`}
+            }${packedCount > 0 ? ` · ${packedCount} packed in shared boxes` : ""}`}
             actions={
               editable ? (
                 <div className="flex flex-wrap items-center gap-2">
-                  <Button variant="secondary" size="sm" onClick={() => setModal("boxes")}>
-                    Manage boxes
-                  </Button>
                   <Button variant="secondary" size="sm" onClick={() => setModal("vocab")}>
                     Sleeves & statuses
                   </Button>
@@ -196,32 +197,35 @@ export default function GamesManagerPage() {
               {editable && selection.size > 0 && (
                 <div className="flex flex-wrap items-center gap-2 rounded-xl border border-accent-400/30 bg-accent-500/[0.06] px-3 py-2">
                   <span className="text-xs text-fg-secondary">
-                    {selection.size} selected — put them in the same box:
+                    {selection.size} selected — pack them into one game's box:
                   </span>
                   <Select
-                    aria-label="Assign selected games to a box"
+                    aria-label="Pack selected games into a game's box"
                     size="sm"
                     block={false}
-                    value={assignBoxId}
-                    onChange={(e) => setAssignBoxId(e.target.value)}
+                    value={assignContainerKey}
+                    onChange={(e) => setAssignContainerKey(e.target.value)}
                   >
-                    <option value="">Choose a box…</option>
-                    {collection.boxes.map((b) => (
-                      <option key={b.id} value={b.id}>
-                        {b.name}
+                    <option value="">Whose box…</option>
+                    {containerOptions.map((r) => (
+                      <option key={r.key} value={r.key}>
+                        {r.title}
                       </option>
                     ))}
                   </Select>
                   <Button
                     variant="primary"
                     size="sm"
-                    disabled={!assignBoxId}
+                    disabled={!assignContainerKey}
                     loading={assignMutation.isPending}
                     onClick={() =>
-                      assignMutation.mutate({ keys: [...selection], boxId: assignBoxId })
+                      assignMutation.mutate({
+                        keys: [...selection],
+                        containerKey: assignContainerKey,
+                      })
                     }
                   >
-                    Assign
+                    Pack together
                   </Button>
                   <Button variant="ghost" size="sm" onClick={() => setSelection(new Set())}>
                     Clear
@@ -232,9 +236,10 @@ export default function GamesManagerPage() {
               <CollectionTable
                 userId={userId as string}
                 rows={filtered}
+                allRows={rows}
                 collection={collection}
                 editable={editable}
-                groupByBox={viewState.view === "by-box"}
+                groupByContainer={viewState.view === "by-box"}
                 selection={selection}
                 onToggleSelect={(key) =>
                   setSelection((prev) => {
@@ -251,13 +256,6 @@ export default function GamesManagerPage() {
 
         {modal === "announce" && (
           <AnnounceModal
-            userId={userId as string}
-            collection={collection}
-            onClose={() => setModal(null)}
-          />
-        )}
-        {modal === "boxes" && (
-          <BoxManagerModal
             userId={userId as string}
             collection={collection}
             onClose={() => setModal(null)}

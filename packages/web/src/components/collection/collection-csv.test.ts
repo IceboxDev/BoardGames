@@ -3,7 +3,6 @@ import { collectionToCsv } from "./collection-csv.ts";
 import type { CollectionRow } from "./collection-rows.ts";
 
 const vocab = {
-  boxes: [{ id: "b1", name: "Kallax, top shelf", note: null }],
   sleeveTypes: [{ id: "st1", name: "Standard Euro", widthMm: 59, heightMm: 92, brand: null }],
   statuses: [{ id: "cs1", label: "In rotation", sortOrder: 1 }],
 };
@@ -29,12 +28,13 @@ describe("collectionToCsv", () => {
   it("serializes metadata through the vocab name maps", () => {
     const csv = collectionToCsv(
       [
+        row({ key: "codenames, deluxe", slug: "codenames, deluxe", title: "Codenames, Deluxe" }),
         row({
           item: {
             id: "i1",
             slug: "lost-cities",
             customTitle: null,
-            boxId: "b1",
+            containerKey: "codenames, deluxe",
             sleeveStatus: "sleeved",
             sleeveTypeId: "st1",
             statusId: "cs1",
@@ -53,11 +53,12 @@ describe("collectionToCsv", () => {
       ],
       vocab,
     );
-    const [header, line] = csv.split("\n");
-    expect(header.startsWith("Title,Status,Box,Sleeves")).toBe(true);
+    const lines = csv.split("\n");
+    const line = lines[2];
+    expect(lines[0]?.startsWith("Title,Status,Stored in,Sleeves")).toBe(true);
     expect(line).toContain("Lost Cities,In rotation");
-    // Comma inside the box name forces quoting.
-    expect(line).toContain('"Kallax, top shelf"');
+    // Comma inside the container title forces quoting.
+    expect(line).toContain('"Codenames, Deluxe"');
     expect(line).toContain("24.99");
   });
 

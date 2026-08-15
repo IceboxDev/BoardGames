@@ -4,13 +4,17 @@
 //   PUT  /api/collection/users/:userId/item           → upsert item metadata
 //   POST /api/collection/users/:userId/played-through → destroy/restore a legacy game
 //   POST /api/collection/users/:userId/remove         → self-remove (sold/gifted)
-//   POST/PUT/DELETE /api/collection/users/:userId/boxes(/:boxId)
 //
 // Ownership stays in `user_inventory.game_slugs_json`; `collection_items` is
 // decoration, lazily materialized on first metadata write. The two writes that
 // touch ownership (played-through, remove) rewrite the inventory JSON and the
 // item row in one `db.batch(..., "write")`, so ownership readers
 // (`expandOwnedSlugs` callers) never see a half-applied state.
+//
+// Physical grouping is expansion-style packing: `container_key` points at the
+// OWNED GAME whose box a copy lives in (a slug, or an item id for custom
+// items) — single-level, validated here, and cleared on the container's
+// removal in the same batch.
 //
 // Visibility: any member may view any collection; only the owner and admins
 // may edit. Private fields (acquired date, price, note) are stripped for
@@ -19,16 +23,12 @@
 import { randomUUID } from "node:crypto";
 import {
   type Announcement,
-  BoxWriteResponseSchema,
   type CollectionItem,
-  CollectionOkResponseSchema,
   CollectionResponseSchema,
-  CreateBoxBodySchema,
   RemoveOwnedGameBodySchema,
   RemoveOwnedGameResponseSchema,
   SetPlayedThroughBodySchema,
   SetPlayedThroughResponseSchema,
-  UpdateBoxBodySchema,
   UpsertItemBodySchema,
   UpsertItemResponseSchema,
 } from "@boardgames/core/protocol";
@@ -55,7 +55,7 @@ export const CollectionItemRowSchema = z.object({
   id: z.string(),
   slug: z.string().nullable(),
   custom_title: z.string().nullable(),
-  box_id: z.string().nullable(),
+  container_key: z.string().nullable(),
   sleeve_status: z.enum(["none", "sleeved", "missing"]),
   sleeve_type_id: z.string().nullable(),
   status_id: z.string().nullable(),
@@ -71,12 +71,6 @@ export const CollectionItemRowSchema = z.object({
   updated_at: z.string(),
 });
 type CollectionItemRow = z.infer<typeof CollectionItemRowSchema>;
-
-const StorageBoxRowSchema = z.object({
-  id: z.string(),
-  name: z.string(),
-  note: z.string().nullable(),
-});
 
 const SleeveTypeRowSchema = z.object({
   id: z.string(),
@@ -123,7 +117,7 @@ export function rowToItem(row: CollectionItemRow): CollectionItem {
     id: row.id,
     slug: row.slug,
     customTitle: row.custom_title,
-    boxId: row.box_id,
+    containerKey: row.container_key,
     sleeveStatus: row.sleeve_status,
     sleeveTypeId: row.sleeve_type_id,
     statusId: row.status_id,
@@ -185,7 +179,7 @@ async function fetchItemRow(
 ): Promise<CollectionItemRow | null> {
   const bySlug = "slug" in target;
   const { rows } = await db.execute({
-    sql: `SELECT id, slug, custom_title, box_id, sleeve_status, sleeve_type_id, status_id,
+    sql: `SELECT id, slug, custom_title, container_key, sleeve_status, sleeve_type_id, status_id,
                  width_mm, depth_mm, height_mm, weight_g, language, acquired_on,
                  price_paid_cents, note, played_through_at, updated_at
             FROM collection_items
@@ -196,10 +190,10 @@ async function fetchItemRow(
   return parseRow(CollectionItemRowSchema, rows[0], "collection_items");
 }
 
-/** Whether a vocab/box row exists AND belongs to this user (FKs don't scope). */
+/** Whether a vocab row exists AND belongs to this user (FKs don't scope). */
 async function belongsToUser(
   db: Client,
-  table: "storage_boxes" | "sleeve_types" | "collection_statuses",
+  table: "sleeve_types" | "collection_statuses",
   id: string,
   userId: string,
 ): Promise<boolean> {
@@ -210,6 +204,46 @@ async function belongsToUser(
   return rows.length > 0;
 }
 
+/**
+ * Why `containerKey` can't be stored, or null when it can. A container is
+ * another row of this collection (an owned slug, or an item id for custom
+ * items); packing is single-level, so a contained game can't be a container
+ * and a container can't itself be contained.
+ */
+async function containerIssue(
+  db: Client,
+  userId: string,
+  itemKey: string | null,
+  containerKey: string,
+): Promise<string | null> {
+  if (itemKey !== null && containerKey === itemKey) {
+    return "a game cannot be stored inside its own box";
+  }
+  const [slugs, byId] = await Promise.all([
+    fetchInventorySlugs(db, userId),
+    fetchItemRow(db, userId, { itemId: containerKey }),
+  ]);
+  const isOwnedSlug = slugs.includes(containerKey);
+  const isCustomItem = byId !== null && byId.slug === null;
+  if (!isOwnedSlug && !isCustomItem) {
+    return "container game is not in this collection";
+  }
+  const containerRow = isOwnedSlug ? await fetchItemRow(db, userId, { slug: containerKey }) : byId;
+  if (containerRow?.container_key != null) {
+    return "that game is itself stored inside another box";
+  }
+  if (itemKey !== null) {
+    const children = await db.execute({
+      sql: "SELECT 1 FROM collection_items WHERE user_id = ? AND container_key = ? LIMIT 1",
+      args: [userId, itemKey],
+    });
+    if (children.rows.length > 0) {
+      return "this game's box holds other games — move them out first";
+    }
+  }
+  return null;
+}
+
 // ── GET /users/:userId ─────────────────────────────────────────────────
 
 collectionRoutes.get("/users/:userId", async (c) => {
@@ -218,19 +252,15 @@ collectionRoutes.get("/users/:userId", async (c) => {
   const editable = canEditCollection(viewer, userId);
   const db = getDb();
 
-  const [userResult, slugs, itemsResult, boxesResult, sleevesResult, statusesResult, playsResult] =
+  const [userResult, slugs, itemsResult, sleevesResult, statusesResult, playsResult] =
     await Promise.all([
       db.execute({ sql: `SELECT 1 FROM "user" WHERE id = ? LIMIT 1`, args: [userId] }),
       fetchInventorySlugs(db, userId),
       db.execute({
-        sql: `SELECT id, slug, custom_title, box_id, sleeve_status, sleeve_type_id, status_id,
+        sql: `SELECT id, slug, custom_title, container_key, sleeve_status, sleeve_type_id, status_id,
                      width_mm, depth_mm, height_mm, weight_g, language, acquired_on,
                      price_paid_cents, note, played_through_at, updated_at
                 FROM collection_items WHERE user_id = ? ORDER BY created_at ASC`,
-        args: [userId],
-      }),
-      db.execute({
-        sql: "SELECT id, name, note FROM storage_boxes WHERE user_id = ? ORDER BY name COLLATE NOCASE",
         args: [userId],
       }),
       db.execute({
@@ -285,7 +315,6 @@ collectionRoutes.get("/users/:userId", async (c) => {
       editable,
       slugs,
       items,
-      boxes: parseRows(StorageBoxRowSchema, boxesResult.rows, "storage_boxes"),
       sleeveTypes: parseRows(SleeveTypeRowSchema, sleevesResult.rows, "sleeve_types").map((r) => ({
         id: r.id,
         name: r.name,
@@ -345,7 +374,6 @@ collectionRoutes.put("/users/:userId/item", zJsonBody(UpsertItemBodySchema), asy
 
   // FKs don't scope references to the user; reject cross-user ids explicitly.
   const refChecks: Promise<boolean>[] = [];
-  if (body.boxId != null) refChecks.push(belongsToUser(db, "storage_boxes", body.boxId, userId));
   if (body.sleeveTypeId != null) {
     refChecks.push(belongsToUser(db, "sleeve_types", body.sleeveTypeId, userId));
   }
@@ -353,11 +381,17 @@ collectionRoutes.put("/users/:userId/item", zJsonBody(UpsertItemBodySchema), asy
     refChecks.push(belongsToUser(db, "collection_statuses", body.statusId, userId));
   }
   if ((await Promise.all(refChecks)).includes(false)) {
-    return errorResponse(c, 400, "referenced box/sleeve/status does not exist", "BAD_REFERENCE");
+    return errorResponse(c, 400, "referenced sleeve/status does not exist", "BAD_REFERENCE");
+  }
+  if (body.containerKey != null) {
+    const itemKey = "slug" in target ? target.slug : (existing?.slug ?? existing?.id ?? null);
+    const issue = await containerIssue(db, userId, itemKey, body.containerKey);
+    if (issue) return errorResponse(c, 400, issue, "BAD_CONTAINER");
   }
 
   const merged = {
-    box_id: body.boxId !== undefined ? body.boxId : (existing?.box_id ?? null),
+    container_key:
+      body.containerKey !== undefined ? body.containerKey : (existing?.container_key ?? null),
     sleeve_status: body.sleeveStatus ?? existing?.sleeve_status ?? "none",
     sleeve_type_id:
       body.sleeveTypeId !== undefined ? body.sleeveTypeId : (existing?.sleeve_type_id ?? null),
@@ -381,13 +415,13 @@ collectionRoutes.put("/users/:userId/item", zJsonBody(UpsertItemBodySchema), asy
   if (existing) {
     await db.execute({
       sql: `UPDATE collection_items SET
-              box_id = ?, sleeve_status = ?, sleeve_type_id = ?, status_id = ?,
+              container_key = ?, sleeve_status = ?, sleeve_type_id = ?, status_id = ?,
               width_mm = ?, depth_mm = ?, height_mm = ?, weight_g = ?,
               language = ?, acquired_on = ?, price_paid_cents = ?, note = ?,
               updated_at = datetime('now')
             WHERE id = ? AND user_id = ?`,
       args: [
-        merged.box_id,
+        merged.container_key,
         merged.sleeve_status,
         merged.sleeve_type_id,
         merged.status_id,
@@ -406,7 +440,7 @@ collectionRoutes.put("/users/:userId/item", zJsonBody(UpsertItemBodySchema), asy
   } else {
     await db.execute({
       sql: `INSERT INTO collection_items
-              (id, user_id, slug, box_id, sleeve_status, sleeve_type_id, status_id,
+              (id, user_id, slug, container_key, sleeve_status, sleeve_type_id, status_id,
                width_mm, depth_mm, height_mm, weight_g, language, acquired_on,
                price_paid_cents, note)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
@@ -414,7 +448,7 @@ collectionRoutes.put("/users/:userId/item", zJsonBody(UpsertItemBodySchema), asy
         id,
         userId,
         "slug" in target ? target.slug : null,
-        merged.box_id,
+        merged.container_key,
         merged.sleeve_status,
         merged.sleeve_type_id,
         merged.status_id,
@@ -513,68 +547,15 @@ collectionRoutes.post("/users/:userId/remove", zJsonBody(RemoveOwnedGameBodySche
         sql: "DELETE FROM collection_items WHERE user_id = ? AND slug = ?",
         args: [userId, slug],
       },
+      // Games packed inside the removed game's box become loose again.
+      {
+        sql: "UPDATE collection_items SET container_key = NULL WHERE user_id = ? AND container_key = ?",
+        args: [userId, slug],
+      },
     ],
     "write",
   );
   logActivity(userId, "ownership-removed", { slug, by: viewer.id });
 
   return c.json(RemoveOwnedGameResponseSchema.parse({ ok: true, slugs: newSlugs }));
-});
-
-// ── Boxes ──────────────────────────────────────────────────────────────
-
-collectionRoutes.post("/users/:userId/boxes", zJsonBody(CreateBoxBodySchema), async (c) => {
-  const userId = c.req.param("userId");
-  const viewer = c.get("user");
-  if (!canEditCollection(viewer, userId)) {
-    return errorResponse(c, 403, "cannot edit another member's collection", "FORBIDDEN");
-  }
-  const { name, note } = c.req.valid("json");
-  const id = randomUUID();
-  await getDb().execute({
-    sql: "INSERT INTO storage_boxes (id, user_id, name, note) VALUES (?, ?, ?, ?)",
-    args: [id, userId, name, note ?? null],
-  });
-  return c.json(BoxWriteResponseSchema.parse({ ok: true, box: { id, name, note: note ?? null } }));
-});
-
-collectionRoutes.put("/users/:userId/boxes/:boxId", zJsonBody(UpdateBoxBodySchema), async (c) => {
-  const userId = c.req.param("userId");
-  const boxId = c.req.param("boxId");
-  const viewer = c.get("user");
-  if (!canEditCollection(viewer, userId)) {
-    return errorResponse(c, 403, "cannot edit another member's collection", "FORBIDDEN");
-  }
-  const body = c.req.valid("json");
-  const db = getDb();
-
-  const { rows } = await db.execute({
-    sql: "SELECT id, name, note FROM storage_boxes WHERE id = ? AND user_id = ? LIMIT 1",
-    args: [boxId, userId],
-  });
-  if (rows.length === 0) return errorResponse(c, 404, "box not found", "NOT_FOUND");
-  const current = parseRow(StorageBoxRowSchema, rows[0], "storage_boxes");
-
-  const name = body.name ?? current.name;
-  const note = body.note !== undefined ? body.note : current.note;
-  await db.execute({
-    sql: "UPDATE storage_boxes SET name = ?, note = ? WHERE id = ? AND user_id = ?",
-    args: [name, note, boxId, userId],
-  });
-  return c.json(BoxWriteResponseSchema.parse({ ok: true, box: { id: boxId, name, note } }));
-});
-
-collectionRoutes.delete("/users/:userId/boxes/:boxId", async (c) => {
-  const userId = c.req.param("userId");
-  const boxId = c.req.param("boxId");
-  const viewer = c.get("user");
-  if (!canEditCollection(viewer, userId)) {
-    return errorResponse(c, 403, "cannot edit another member's collection", "FORBIDDEN");
-  }
-  // Items referencing the box fall back to unassigned via ON DELETE SET NULL.
-  await getDb().execute({
-    sql: "DELETE FROM storage_boxes WHERE id = ? AND user_id = ?",
-    args: [boxId, userId],
-  });
-  return c.json(CollectionOkResponseSchema.parse({ ok: true }));
 });

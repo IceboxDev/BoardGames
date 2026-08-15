@@ -13,7 +13,6 @@ export type CollectionView = "all" | "by-box" | "played-through";
 export interface CollectionViewState {
   search: string;
   statusId: string | null;
-  boxId: string | null;
   sleeve: SleeveStatus | null;
   view: CollectionView;
 }
@@ -21,7 +20,6 @@ export interface CollectionViewState {
 export const DEFAULT_VIEW_STATE: CollectionViewState = {
   search: "",
   statusId: null,
-  boxId: null,
   sleeve: null,
   view: "all",
 };
@@ -40,7 +38,6 @@ export function applyViewState(
     }
     if (query && !row.title.toLowerCase().includes(query)) return false;
     if (state.statusId !== null && row.item?.statusId !== state.statusId) return false;
-    if (state.boxId !== null && row.item?.boxId !== state.boxId) return false;
     if (state.sleeve !== null && (row.item?.sleeveStatus ?? "none") !== state.sleeve) return false;
     return true;
   });
@@ -81,22 +78,6 @@ export function CollectionFilters({
           {collection.statuses.map((s) => (
             <option key={s.id} value={s.id}>
               {s.label}
-            </option>
-          ))}
-        </Select>
-      )}
-      {collection.boxes.length > 0 && (
-        <Select
-          aria-label="Filter by box"
-          size="sm"
-          block={false}
-          value={state.boxId ?? ""}
-          onChange={(e) => onChange({ ...state, boxId: e.target.value || null })}
-        >
-          <option value="">Any box</option>
-          {collection.boxes.map((b) => (
-            <option key={b.id} value={b.id}>
-              {b.name}
             </option>
           ))}
         </Select>

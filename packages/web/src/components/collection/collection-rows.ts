@@ -80,3 +80,8 @@ export function buildCollectionRows(data: CollectionResponse): CollectionRow[] {
   }
   return rows;
 }
+
+/** Row-key → display title, for resolving `containerKey` references. */
+export function rowTitleByKey(rows: readonly CollectionRow[]): Map<string, string> {
+  return new Map(rows.map((r) => [r.key, r.title]));
+}

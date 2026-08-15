@@ -34,13 +34,20 @@ describe("summaryBadge", () => {
     });
   });
 
-  it("places free-for-all losses: middle = ordinal amber, last = red", () => {
+  it("places free-for-all losses: middle = ordinal amber, last = ordinal rose", () => {
     expect(summaryBadge(item({ result: "loss", place: 2, fieldSize: 4 }))).toEqual({
       label: "2nd",
       tone: "amber",
     });
     expect(summaryBadge(item({ result: "loss", place: 4, fieldSize: 4 }))).toEqual({
-      label: "Last",
+      label: "4th",
+      tone: "rose",
+    });
+  });
+
+  it("a duel loss reads Lost, not 2nd", () => {
+    expect(summaryBadge(item({ result: "loss", place: 2, fieldSize: 2 }))).toEqual({
+      label: "Lost",
       tone: "rose",
     });
   });

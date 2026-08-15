@@ -108,6 +108,22 @@ export function streaks(items: readonly ProfileMatchSummaryItem[]): StreakInfo {
   return { current: run, bestWin };
 }
 
+/** The last `n` decisive results (win/loss/draw), chronological. */
+export function recentForm(
+  items: readonly ProfileMatchSummaryItem[],
+  n = 10,
+): ("win" | "loss" | "draw")[] {
+  const decisive: ("win" | "loss" | "draw")[] = [];
+  for (const item of items) {
+    // Items are newest first; collect until the window is full.
+    if (item.result === "win" || item.result === "loss" || item.result === "draw") {
+      decisive.push(item.result);
+      if (decisive.length === n) break;
+    }
+  }
+  return decisive.reverse();
+}
+
 export interface MonthBucket {
   /** "YYYY-MM". */
   key: string;

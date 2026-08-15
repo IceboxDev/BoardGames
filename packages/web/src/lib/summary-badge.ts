@@ -31,11 +31,22 @@ export function summaryBadge(item: ProfileMatchSummaryItem): SummaryBadge {
     }
     case "loss": {
       // Point-less FFAs (Villainous, chess-style duels) have no meaningful
-      // placement — flat "Lost", mirroring `matchResultBadge`.
+      // placement — flat "Lost", mirroring `matchResultBadge`. Duels (field of
+      // 2) also read "Lost": "2nd of 2" dresses up a defeat. Everything placed
+      // shows its ordinal — finishing 2nd of 5 is not "Lost" — with rose
+      // reserved for actual last place.
       const placeless = item.kind === "free-for-all" && isPointlessFreeForAll(item.gameSlug);
-      if (!placeless && item.place !== null && item.fieldSize !== null && item.place > 1) {
-        if (item.place === item.fieldSize) return { label: "Last", tone: "rose" };
-        return { label: ordinal(item.place), tone: "amber" };
+      if (
+        !placeless &&
+        item.place !== null &&
+        item.fieldSize !== null &&
+        item.fieldSize > 2 &&
+        item.place > 1
+      ) {
+        return {
+          label: ordinal(item.place),
+          tone: item.place === item.fieldSize ? "rose" : "amber",
+        };
       }
       return { label: "Lost", tone: "rose" };
     }

@@ -1,8 +1,6 @@
 import {
   type AdminAnnouncementsResponse,
   AdminAnnouncementsResponseSchema,
-  type BoxWriteResponse,
-  BoxWriteResponseSchema,
   type CollectionOkResponse,
   CollectionOkResponseSchema,
   type CollectionResponse,
@@ -11,8 +9,6 @@ import {
   CreateAnnouncementBodySchema,
   type CreateAnnouncementResponse,
   CreateAnnouncementResponseSchema,
-  type CreateBoxBody,
-  CreateBoxBodySchema,
   type CreateSleeveTypeBody,
   CreateSleeveTypeBodySchema,
   type CreateStatusBody,
@@ -32,8 +28,6 @@ import {
   SleeveTypeWriteResponseSchema,
   type StatusWriteResponse,
   StatusWriteResponseSchema,
-  type UpdateBoxBody,
-  UpdateBoxBodySchema,
   type UpdateSleeveTypeBody,
   UpdateSleeveTypeBodySchema,
   type UpdateStatusBody,
@@ -87,37 +81,6 @@ export async function removeOwnedGame(
     body: { slug },
     request: RemoveOwnedGameBodySchema,
     response: RemoveOwnedGameResponseSchema,
-  });
-}
-
-// ── Boxes ──────────────────────────────────────────────────────────────
-
-export async function createBox(userId: string, body: CreateBoxBody): Promise<BoxWriteResponse> {
-  return apiFetch(`${base(userId)}/boxes`, {
-    method: "POST",
-    body,
-    request: CreateBoxBodySchema,
-    response: BoxWriteResponseSchema,
-  });
-}
-
-export async function updateBox(
-  userId: string,
-  boxId: string,
-  body: UpdateBoxBody,
-): Promise<BoxWriteResponse> {
-  return apiFetch(`${base(userId)}/boxes/${encodeURIComponent(boxId)}`, {
-    method: "PUT",
-    body,
-    request: UpdateBoxBodySchema,
-    response: BoxWriteResponseSchema,
-  });
-}
-
-export async function deleteBox(userId: string, boxId: string): Promise<CollectionOkResponse> {
-  return apiFetch(`${base(userId)}/boxes/${encodeURIComponent(boxId)}`, {
-    method: "DELETE",
-    response: CollectionOkResponseSchema,
   });
 }
 

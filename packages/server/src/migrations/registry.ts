@@ -35,6 +35,7 @@ import { exitGameVotes } from "./0027-exit-game-votes.ts";
 import { cardDeckInventory } from "./0028-card-deck-inventory.ts";
 import { collectionManager } from "./0029-collection-manager.ts";
 import { ownershipAnnouncements } from "./0030-ownership-announcements.ts";
+import { collectionContainers } from "./0031-collection-containers.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -68,6 +69,7 @@ export const migrations: readonly Migration[] = [
   cardDeckInventory,
   collectionManager,
   ownershipAnnouncements,
+  collectionContainers,
 ];
 
 /**

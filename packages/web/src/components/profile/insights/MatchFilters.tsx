@@ -57,10 +57,15 @@ export function MatchFilters({
           ))}
       </div>
       {topGames.length > 1 && (
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-1">
+        // -m/p pair: give the scroll container breathing room so chip rings and
+        // hover states don't get clipped at its edges; scrollbar hidden — the
+        // row still scrolls by touch/wheel and every game is reachable via the
+        // chips themselves.
+        <div className="-m-1 flex items-center gap-1.5 overflow-x-auto p-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <Chip
             pressed={filters.gameSlug === null}
             onClick={() => onChange({ ...filters, gameSlug: null })}
+            className="shrink-0 whitespace-nowrap"
           >
             All games
           </Chip>
@@ -75,7 +80,7 @@ export function MatchFilters({
                 }
                 className="shrink-0"
               >
-                <span className="flex items-center gap-1.5">
+                <span className="flex items-center gap-1.5 whitespace-nowrap">
                   {thumb && <img src={thumb} alt="" className="h-4 w-7 rounded-sm object-cover" />}
                   {g.title}
                 </span>

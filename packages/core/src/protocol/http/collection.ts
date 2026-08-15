@@ -7,10 +7,12 @@ import { OwnableSlugSchema, SlugListSchema } from "./inventory.ts";
 // owned-games list, plus the "announce new ownership" queue.
 //
 // Ownership itself stays in `user_inventory.game_slugs_json`; the tables
-// behind these schemas (`collection_items`, `storage_boxes`, per-user
-// `sleeve_types` / `collection_statuses`, `ownership_announcements`) only
-// decorate it. Read shapes are LENIENT on slugs (a retired slug must not make
-// a stored row unreadable); write bodies use `OwnableSlugSchema`.
+// behind these schemas (`collection_items`, per-user `sleeve_types` /
+// `collection_statuses`, `ownership_announcements`) only decorate it.
+// Physical grouping is expansion-style packing: an item's `containerKey`
+// points at the OWNED GAME whose box it lives in. Read shapes are LENIENT on
+// slugs (a retired slug must not make a stored row unreadable); write bodies
+// use `OwnableSlugSchema`.
 
 const DateKeyStringSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Expected YYYY-MM-DD");
 
@@ -35,13 +37,6 @@ export const CollectionStatusSchema = z.object({
 });
 export type CollectionStatus = z.infer<typeof CollectionStatusSchema>;
 
-export const StorageBoxSchema = z.object({
-  id: z.string().min(1),
-  name: z.string().min(1).max(80),
-  note: z.string().max(500).nullable(),
-});
-export type StorageBox = z.infer<typeof StorageBoxSchema>;
-
 // ── Items ──────────────────────────────────────────────────────────────
 
 /**
@@ -56,7 +51,10 @@ export const CollectionItemSchema = z.object({
   id: z.string().min(1),
   slug: GameSlugSchema.nullable(),
   customTitle: z.string().nullable(),
-  boxId: z.string().nullable(),
+  /** Row key of the game whose physical box this copy lives in (expansion-
+   *  style packing) — a slug, or an item id for custom items. Null = its own
+   *  box. Single-level: a container is never itself contained. */
+  containerKey: z.string().nullable(),
   sleeveStatus: SleeveStatusSchema,
   sleeveTypeId: z.string().nullable(),
   statusId: z.string().nullable(),
@@ -112,7 +110,6 @@ export const CollectionResponseSchema = z.object({
   /** The raw stored inventory (catalog slugs, EXIT boxes, deck pseudo-slugs). */
   slugs: SlugListSchema,
   items: z.array(CollectionItemSchema),
-  boxes: z.array(StorageBoxSchema),
   sleeveTypes: z.array(SleeveTypeSchema),
   statuses: z.array(CollectionStatusSchema),
   playStats: z.array(PlayStatSchema),
@@ -124,7 +121,7 @@ export type CollectionResponse = z.infer<typeof CollectionResponseSchema>;
 // ── Item upsert ────────────────────────────────────────────────────────
 
 const ItemPatchSchema = z.object({
-  boxId: z.string().min(1).nullable().optional(),
+  containerKey: z.string().min(1).nullable().optional(),
   sleeveStatus: SleeveStatusSchema.optional(),
   sleeveTypeId: z.string().min(1).nullable().optional(),
   statusId: z.string().min(1).nullable().optional(),
@@ -205,23 +202,6 @@ export const RemoveOwnedGameResponseSchema = z.object({
   slugs: SlugListSchema,
 });
 export type RemoveOwnedGameResponse = z.infer<typeof RemoveOwnedGameResponseSchema>;
-
-// ── Boxes ──────────────────────────────────────────────────────────────
-
-export const CreateBoxBodySchema = z.object({
-  name: z.string().min(1).max(80),
-  note: z.string().max(500).nullable().optional(),
-});
-export type CreateBoxBody = z.infer<typeof CreateBoxBodySchema>;
-
-export const UpdateBoxBodySchema = CreateBoxBodySchema.partial();
-export type UpdateBoxBody = z.infer<typeof UpdateBoxBodySchema>;
-
-export const BoxWriteResponseSchema = z.object({
-  ok: z.literal(true),
-  box: StorageBoxSchema,
-});
-export type BoxWriteResponse = z.infer<typeof BoxWriteResponseSchema>;
 
 // ── Vocabulary CRUD (per-user) ─────────────────────────────────────────
 

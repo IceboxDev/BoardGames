@@ -8,6 +8,7 @@ import { Surface } from "../../ui/Surface.tsx";
 import {
   gamesByPlays,
   meanPerformance,
+  recentForm,
   recordCounts,
   rollingPerformance,
   streaks,
@@ -31,6 +32,7 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
   const perf = meanPerformance(items);
   const trend = rollingPerformance(items);
   const streak = streaks(items);
+  const form = recentForm(items);
   const topGames = gamesByPlays(items);
   const favorite = topGames[0];
   const favoriteGame = favorite ? resolveGame(favorite.slug) : undefined;
@@ -82,20 +84,51 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
 
       <HeroCard label="Streaks">
         <div className="flex flex-1 flex-col justify-between gap-1">
-          {streak.current ? (
-            <span
-              className={`flex items-center gap-1.5 text-2xl font-bold tabular-nums ${
-                streak.current.type === "win" ? "text-emerald-300" : "text-rose-300"
-              }`}
-            >
-              {streak.current.length}
-              {streak.current.type === "win" ? "W" : "L"}
-              {streak.current.type === "win" && streak.current.length >= 2 && (
-                <FlameIcon className="h-5 w-5 text-amber-300" />
-              )}
+          <div className="flex items-baseline gap-2">
+            {streak.current ? (
+              <span
+                className={`flex items-center gap-1.5 text-2xl font-bold tabular-nums ${
+                  streak.current.type === "win" ? "text-emerald-300" : "text-rose-300"
+                }`}
+              >
+                {streak.current.length}
+                {streak.current.type === "win" ? "W" : "L"}
+                {streak.current.type === "win" && streak.current.length >= 2 && (
+                  <FlameIcon className="h-5 w-5 text-amber-300" />
+                )}
+              </span>
+            ) : (
+              <span className="text-2xl font-bold text-fg-muted">—</span>
+            )}
+            <span className="text-3xs text-fg-muted">
+              {streak.current
+                ? streak.current.type === "win"
+                  ? "win streak"
+                  : "loss streak"
+                : "no streak yet"}
             </span>
-          ) : (
-            <span className="text-2xl font-bold text-fg-muted">—</span>
+          </div>
+          {form.length > 0 && (
+            <div className="flex flex-col gap-1">
+              <span className="text-3xs text-fg-muted">Last {form.length} results</span>
+              <div className="flex items-center gap-1">
+                {form.map((result, i) => (
+                  <span
+                    // biome-ignore lint/suspicious/noArrayIndexKey: fixed-window form strip, order never changes
+                    key={i}
+                    className={`flex h-4.5 w-4.5 items-center justify-center rounded text-4xs font-bold ${
+                      result === "win"
+                        ? "bg-emerald-500/20 text-emerald-300"
+                        : result === "loss"
+                          ? "bg-rose-500/20 text-rose-300"
+                          : "bg-white/[0.08] text-fg-secondary"
+                    }`}
+                  >
+                    {result === "win" ? "W" : result === "loss" ? "L" : "D"}
+                  </span>
+                ))}
+              </div>
+            </div>
           )}
           <span className="text-3xs text-fg-muted">
             {streak.bestWin > 0

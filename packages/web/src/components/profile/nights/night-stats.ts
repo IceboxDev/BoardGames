@@ -146,8 +146,8 @@ export interface HostGroup {
   key: string;
   hostUserId: string | null;
   name: string;
-  /** Address of the group's most recent night (compact-format upstream). */
-  latestAddress: string | null;
+  /** The host's USUAL venue: their most frequent address (ties → most recent). */
+  usualAddress: string | null;
   attended: number;
   total: number;
 }
@@ -155,7 +155,10 @@ export interface HostGroup {
 /** Nights grouped by host ("location" = host + address; no locations table). */
 export function hostGroups(items: readonly ProfileNightItem[]): HostGroup[] {
   const byKey = new Map<string, HostGroup>();
-  for (const night of items) {
+  // Per group: address → [count, most-recent index] (items are newest first,
+  // so a LOWER index is more recent — the tiebreaker).
+  const addressStats = new Map<string, Map<string, [number, number]>>();
+  items.forEach((night, index) => {
     const key = night.host ? (night.host.userId ?? `name:${night.host.name}`) : "no-host";
     let group = byKey.get(key);
     if (!group) {
@@ -163,17 +166,31 @@ export function hostGroups(items: readonly ProfileNightItem[]): HostGroup[] {
         key,
         hostUserId: night.host?.userId ?? null,
         name: night.host?.name ?? "No host recorded",
-        latestAddress: night.address, // newest-first ⇒ first seen is latest
+        usualAddress: null,
         attended: 0,
         total: 0,
       };
       byKey.set(key, group);
+      addressStats.set(key, new Map());
     }
     group.total++;
     if (night.attended) group.attended++;
-    if (group.latestAddress === null && night.address !== null) {
-      group.latestAddress = night.address;
+    if (night.address !== null) {
+      const stats = addressStats.get(key) as Map<string, [number, number]>;
+      const entry = stats.get(night.address);
+      if (entry) entry[0] += 1;
+      else stats.set(night.address, [1, index]);
     }
+  });
+  // A host can move (or host elsewhere once) — show where they USUALLY host.
+  for (const [key, group] of byKey) {
+    let best: [string, number, number] | null = null;
+    for (const [address, [count, recency]] of addressStats.get(key) ?? []) {
+      if (!best || count > best[1] || (count === best[1] && recency < best[2])) {
+        best = [address, count, recency];
+      }
+    }
+    group.usualAddress = best ? best[0] : null;
   }
   return [...byKey.values()].sort((a, b) => b.total - a.total || a.name.localeCompare(b.name));
 }

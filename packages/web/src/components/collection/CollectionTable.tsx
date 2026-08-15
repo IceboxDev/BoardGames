@@ -9,15 +9,16 @@ import { Badge } from "../ui/Badge.tsx";
 import { Checkbox } from "../ui/Checkbox.tsx";
 import { Select } from "../ui/Select.tsx";
 import { CollectionRowEditor } from "./CollectionRowEditor.tsx";
-import type { CollectionRow } from "./collection-rows.ts";
+import { type CollectionRow, rowTitleByKey } from "./collection-rows.ts";
 
-// The collection table: sortable columns, optional by-box grouping, checkbox
-// multi-select (the merge-into-box mechanism), inline status dropdown, and a
+// The collection table: sortable columns, optional packed-together grouping
+// (children shown under the game whose box they live in), checkbox
+// multi-select (the pack-into-a-box mechanism), inline status dropdown, and a
 // per-row expansion carrying the full editor (owner/admin) or a read-only
 // detail line (other members). Table chrome follows the admin UsersTable
 // idiom: real <table> inside overflow-x-auto, uppercase micro headers.
 
-type SortKey = "title" | "status" | "box" | "plays" | "acquired" | "size";
+type SortKey = "title" | "status" | "container" | "plays" | "acquired" | "size";
 type SortDir = "asc" | "desc";
 
 function sizeVolume(row: CollectionRow): number | null {
@@ -29,17 +30,20 @@ function sizeVolume(row: CollectionRow): number | null {
 export function CollectionTable({
   userId,
   rows,
+  allRows,
   collection,
   editable,
-  groupByBox,
+  groupByContainer,
   selection,
   onToggleSelect,
 }: {
   userId: string;
   rows: readonly CollectionRow[];
+  /** The unfiltered row set — container references may point outside `rows`. */
+  allRows: readonly CollectionRow[];
   collection: CollectionResponse;
   editable: boolean;
-  groupByBox: boolean;
+  groupByContainer: boolean;
   selection: ReadonlySet<string>;
   onToggleSelect: (key: string) => void;
 }) {
@@ -52,10 +56,7 @@ export function CollectionTable({
     () => new Map(collection.statuses.map((s) => [s.id, s.label])),
     [collection.statuses],
   );
-  const boxName = useMemo(
-    () => new Map(collection.boxes.map((b) => [b.id, b.name])),
-    [collection.boxes],
-  );
+  const containerTitle = useMemo(() => rowTitleByKey(allRows), [allRows]);
   const sleeveName = useMemo(
     () => new Map(collection.sleeveTypes.map((s) => [s.id, s.name])),
     [collection.sleeveTypes],
@@ -79,8 +80,8 @@ export function CollectionTable({
           return row.title.toLowerCase();
         case "status":
           return row.item?.statusId ? (statusLabel.get(row.item.statusId) ?? "") : "￿";
-        case "box":
-          return row.item?.boxId ? (boxName.get(row.item.boxId) ?? "") : "￿";
+        case "container":
+          return row.item?.containerKey ? (containerTitle.get(row.item.containerKey) ?? "") : "￿";
         case "plays":
           return row.playCount;
         case "acquired":
@@ -97,25 +98,36 @@ export function CollectionTable({
       if (va > vb) return dir;
       return a.title.localeCompare(b.title);
     });
-  }, [rows, sortKey, sortDir, statusLabel, boxName]);
+  }, [rows, sortKey, sortDir, statusLabel, containerTitle]);
 
-  // "By box" view: stable groups (each box in name order, unassigned last).
+  // "By box" view: a container and everything packed inside it share one
+  // group, titled after the container game; loose games close the list.
   const groups = useMemo(() => {
-    if (!groupByBox) return [{ key: "all", label: null as string | null, rows: sorted }];
-    const byBox = new Map<string, CollectionRow[]>();
-    for (const row of sorted) {
-      const key = row.item?.boxId ?? "unassigned";
-      const list = byBox.get(key) ?? [];
-      list.push(row);
-      byBox.set(key, list);
+    if (!groupByContainer) return [{ key: "all", label: null as string | null, rows: sorted }];
+    const containerKeys = new Set<string>();
+    for (const row of allRows) {
+      if (row.item?.containerKey) containerKeys.add(row.item.containerKey);
     }
-    const ordered = [...collection.boxes]
-      .filter((b) => byBox.has(b.id))
-      .map((b) => ({ key: b.id, label: b.name, rows: byBox.get(b.id) as CollectionRow[] }));
-    const unassigned = byBox.get("unassigned");
-    if (unassigned) ordered.push({ key: "unassigned", label: "Not in a box", rows: unassigned });
+    const byContainer = new Map<string, CollectionRow[]>();
+    for (const row of sorted) {
+      const key = row.item?.containerKey ?? (containerKeys.has(row.key) ? row.key : "loose");
+      const list = byContainer.get(key) ?? [];
+      list.push(row);
+      byContainer.set(key, list);
+    }
+    const ordered = [...byContainer.entries()]
+      .filter(([key]) => key !== "loose")
+      .map(([key, groupRows]) => ({
+        key,
+        label: `${containerTitle.get(key) ?? key} box` as string | null,
+        // The container itself leads its group.
+        rows: [...groupRows].sort((a, b) => Number(b.key === key) - Number(a.key === key)),
+      }))
+      .sort((a, b) => (a.label ?? "").localeCompare(b.label ?? ""));
+    const loose = byContainer.get("loose");
+    if (loose) ordered.push({ key: "loose", label: "In their own boxes", rows: loose });
     return ordered;
-  }, [groupByBox, sorted, collection.boxes]);
+  }, [groupByContainer, sorted, allRows, containerTitle]);
 
   const columnCount = 6 + (editable ? 2 : 0); // +checkbox +acquired
 
@@ -181,7 +193,7 @@ export function CollectionTable({
             {editable && <th className="w-8 p-2.5" aria-label="Select" />}
             {header("Title", "title")}
             {header("Status", "status")}
-            {!groupByBox && header("Box", "box")}
+            {!groupByContainer && header("Stored in", "container")}
             <th className="p-2.5 text-left text-2xs font-bold uppercase tracking-pill text-fg-muted">
               Sleeves
             </th>
@@ -303,9 +315,11 @@ export function CollectionTable({
                         </span>
                       )}
                     </td>
-                    {!groupByBox && (
+                    {!groupByContainer && (
                       <td className="p-2.5 text-xs text-fg-secondary">
-                        {row.item?.boxId ? (boxName.get(row.item.boxId) ?? "—") : "—"}
+                        {row.item?.containerKey
+                          ? (containerTitle.get(row.item.containerKey) ?? "—")
+                          : "—"}
                       </td>
                     )}
                     <td className="p-2.5">{sleeveBadge(row)}</td>

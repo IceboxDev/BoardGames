@@ -97,28 +97,20 @@ export default function PlayerNightsPage() {
     return (
       <PageMain width="6xl" padding="spacious">
         <Stack gap="lg" style={style}>
-          <div>
-            <PageHeader
-              size="lg"
-              eyebrow="Game nights"
-              title={`${firstName}'s attendance`}
-              subtitle={
-                items.length > 0
-                  ? `${attended.length} of ${items.length} nights${
-                      firstAttended
-                        ? ` · first night ${formatDayKey(firstAttended.dateKey, "compact")}`
-                        : ""
-                    }`
-                  : "No game nights held yet"
-              }
-            />
-            {items.length > 0 && (
-              <p className="mt-1 text-2xs text-fg-muted">
-                A night counts when {firstName} appears in a recorded match — or RSVP'd yes on a
-                night with no recorded games.
-              </p>
-            )}
-          </div>
+          <PageHeader
+            size="lg"
+            eyebrow="Game nights"
+            title={`${firstName}'s attendance`}
+            subtitle={
+              items.length > 0
+                ? `${attended.length} of ${items.length} nights${
+                    firstAttended
+                      ? ` · first night ${formatDayKey(firstAttended.dateKey, "compact")}`
+                      : ""
+                  }`
+                : "No game nights held yet"
+            }
+          />
 
           {items.length === 0 ? (
             <EmptyState

@@ -4,7 +4,7 @@
 
 import type { CollectionResponse } from "@boardgames/core/protocol";
 import { formatDayKey, formatShortDate } from "../../lib/date-format.ts";
-import type { CollectionRow } from "./collection-rows.ts";
+import { type CollectionRow, rowTitleByKey } from "./collection-rows.ts";
 
 function csvCell(value: string): string {
   return /[",\n]/.test(value) ? `"${value.replace(/"/g, '""')}"` : value;
@@ -13,7 +13,7 @@ function csvCell(value: string): string {
 const HEADER = [
   "Title",
   "Status",
-  "Box",
+  "Stored in",
   "Sleeves",
   "Sleeve type",
   "Width (mm)",
@@ -31,9 +31,9 @@ const HEADER = [
 
 export function collectionToCsv(
   rows: readonly CollectionRow[],
-  data: Pick<CollectionResponse, "boxes" | "sleeveTypes" | "statuses">,
+  data: Pick<CollectionResponse, "sleeveTypes" | "statuses">,
 ): string {
-  const boxName = new Map(data.boxes.map((b) => [b.id, b.name]));
+  const containerTitle = rowTitleByKey(rows);
   const sleeveName = new Map(data.sleeveTypes.map((s) => [s.id, s.name]));
   const statusLabel = new Map(data.statuses.map((s) => [s.id, s.label]));
 
@@ -44,7 +44,7 @@ export function collectionToCsv(
       [
         row.title,
         item?.statusId ? (statusLabel.get(item.statusId) ?? "") : "",
-        item?.boxId ? (boxName.get(item.boxId) ?? "") : "",
+        item?.containerKey ? (containerTitle.get(item.containerKey) ?? item.containerKey) : "",
         item?.sleeveStatus ?? "none",
         item?.sleeveTypeId ? (sleeveName.get(item.sleeveTypeId) ?? "") : "",
         item?.widthMm != null ? String(item.widthMm) : "",

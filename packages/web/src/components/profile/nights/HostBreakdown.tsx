@@ -25,10 +25,10 @@ export function HostBreakdown({ items }: { items: readonly ProfileNightItem[] })
                 attended {group.attended} of {group.total}
               </span>
             </p>
-            {group.latestAddress && (
+            {group.usualAddress && (
               <p className="flex items-center gap-1 truncate text-3xs text-fg-muted">
                 <PinIcon className="h-3 w-3 shrink-0" />
-                <span className="truncate">{compactAddress(group.latestAddress)}</span>
+                <span className="truncate">{compactAddress(group.usualAddress)}</span>
               </p>
             )}
             <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-surface-800">

@@ -52,16 +52,19 @@ export function StatTile({
     </>
   );
 
+  // The grid stretches every tile to the tallest sibling; `h-full` + `mt-auto`
+  // on the bottom row pins each CTA/Soon slot to the same baseline no matter
+  // whether the tile above it carries a sub line.
   if (to) {
     return (
       <InteractiveCard
         as={Link}
         to={to}
         padding="none"
-        className={`${TILE_LAYOUT} hover:-translate-y-0.5`}
+        className={`${TILE_LAYOUT} h-full hover:-translate-y-0.5`}
       >
         {metric}
-        <span className="mt-0.5 flex items-center gap-1 text-3xs font-semibold text-accent-300">
+        <span className="mt-auto flex items-center gap-1 pt-1 text-3xs font-semibold text-accent-300">
           {cta}
           <ArrowRightIcon className="h-2.5 w-2.5 transition-transform group-hover:translate-x-0.5" />
         </span>
@@ -70,10 +73,10 @@ export function StatTile({
   }
 
   return (
-    <Surface variant="raised" padding="none" className={TILE_LAYOUT}>
+    <Surface variant="raised" padding="none" className={`${TILE_LAYOUT} h-full`}>
       {metric}
       {soon && (
-        <span className="mt-0.5 text-3xs font-semibold uppercase tracking-pill text-fg-muted">
+        <span className="mt-auto pt-1 text-3xs font-semibold uppercase tracking-pill text-fg-muted">
           Soon
         </span>
       )}

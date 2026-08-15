@@ -97,25 +97,43 @@ describe("weekdayBreakdown", () => {
 });
 
 describe("hostGroups", () => {
-  it("groups by host and keeps the latest address", () => {
+  it("groups by host and picks the MOST FREQUENT address, not the latest", () => {
+    // Newest first: hosted once at a new place, twice at the usual one.
     const groups = hostGroups([
       night({ host: { userId: "h1", name: "Mantas" }, address: "New Street 2" }),
       night({
         dateKey: "2026-06-10",
         host: { userId: "h1", name: "Mantas" },
-        address: "Old Street 1",
+        address: "Usual Street 1",
         attended: false,
         attendedVia: null,
+      }),
+      night({
+        dateKey: "2026-05-20",
+        host: { userId: "h1", name: "Mantas" },
+        address: "Usual Street 1",
       }),
       night({ dateKey: "2026-05-10", host: null, address: null }),
     ]);
     expect(groups[0]).toMatchObject({
       name: "Mantas",
-      latestAddress: "New Street 2",
-      attended: 1,
-      total: 2,
+      usualAddress: "Usual Street 1",
+      attended: 2,
+      total: 3,
     });
     expect(groups[1]).toMatchObject({ name: "No host recorded", total: 1 });
+  });
+
+  it("breaks address-frequency ties toward the most recent", () => {
+    const groups = hostGroups([
+      night({ host: { userId: "h1", name: "Mantas" }, address: "Newer Place" }),
+      night({
+        dateKey: "2026-06-10",
+        host: { userId: "h1", name: "Mantas" },
+        address: "Older Place",
+      }),
+    ]);
+    expect(groups[0]?.usualAddress).toBe("Newer Place");
   });
 });
 
