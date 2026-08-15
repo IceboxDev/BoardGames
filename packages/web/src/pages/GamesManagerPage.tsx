@@ -154,7 +154,7 @@ export default function GamesManagerPage() {
                     Export CSV
                   </Button>
                   <Button variant="primary" size="sm" onClick={() => setModal("announce")}>
-                    Announce a game
+                    Announce new ownership
                   </Button>
                 </div>
               ) : undefined
@@ -180,7 +180,7 @@ export default function GamesManagerPage() {
               action={
                 editable ? (
                   <Button variant="primary" size="sm" onClick={() => setModal("announce")}>
-                    Announce a game
+                    Announce new ownership
                   </Button>
                 ) : undefined
               }

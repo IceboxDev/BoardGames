@@ -89,7 +89,7 @@ export function AnnouncementsCard() {
             >
               <span className="min-w-0 flex-1 text-sm">
                 <span className="font-semibold text-fg-primary">{a.userName ?? a.userId}</span>
-                <span className="text-fg-secondary"> announced </span>
+                <span className="text-fg-secondary"> announced acquiring </span>
                 <span className="font-semibold text-fg-primary">{announcedTitle(a)}</span>
                 {a.note && <span className="block text-2xs text-fg-muted">{a.note}</span>}
                 <span className="block text-3xs text-fg-muted">

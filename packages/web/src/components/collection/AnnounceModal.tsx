@@ -60,7 +60,13 @@ export function AnnounceModal({
   const canSubmit = source === "catalog" ? pickedSlug !== null : freeText.trim().length >= 2;
 
   return (
-    <Modal onClose={onClose} eyebrow="Collection" title="Announce a new game" size="md">
+    <Modal
+      onClose={onClose}
+      eyebrow="Collection"
+      title="Announce new ownership"
+      subheader="You've acquired a game — once an admin confirms it, it joins your collection."
+      size="md"
+    >
       <ModalBody className="space-y-3">
         {mutation.error && (
           <ErrorAlert message={errorMessageOf(mutation.error, "Couldn't announce") ?? ""} />
