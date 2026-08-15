@@ -54,6 +54,10 @@ struct Params {
   std::vector<std::string> require;  // --require NAME (or PREFIX*): must be packed,
                                      // and required boxes must form one touching cluster
   uint64_t requiredMask = 0;         // resolved after the boxes are loaded
+  // --together A,B[,C…]: all-or-none companion groups (one game shipped as
+  // several boxes). When present, the group's boxes must touch each other.
+  std::vector<std::string> together;
+  std::vector<uint64_t> togetherMasks;
   int maxWidth() const { return widthBase + overLeft + overRight; }
   int maxHeight() const { return heightBase + overTop; }
 };
@@ -317,6 +321,12 @@ static long long stateScore(const State& s, const Params& p) {
   // Required boxes carry a bonus far above any volume trade-off, so the beam
   // never drops them for ordinary gains.
   score += (long long)__builtin_popcountll(s.mask & p.requiredMask) * 8'000'000LL;
+  // A half-included companion group is a dead end (final filter rejects it):
+  // nudge the beam toward completing the group or leaving it out entirely.
+  for (uint64_t g : p.togetherMasks) {
+    uint64_t inter = s.mask & g;
+    if (inter && inter != g) score -= 4'000'000LL;
+  }
   return score;
 }
 
@@ -455,54 +465,93 @@ static std::vector<int> identityBoxOrder(const Cell& cell) {
 }
 
 /**
- * Produce a concrete layout for a solution. When required boxes exist, they
- * must end up as one touching cluster: required-carrying piles are placed
- * consecutively (at the right end), required cells sink to the pile bottoms,
- * and we enumerate pile order plus box order inside required-carrying
- * side-by-side cells until the geometric connectivity check passes.
+ * Produce a concrete layout for a solution and prove its cluster constraints.
+ * Clusters = the --require set plus every fully-present --together group.
+ * Cluster-carrying piles are grouped into consecutive blocks (clusters that
+ * share a pile merge into one block), cluster cells sink to the pile bottoms,
+ * and we enumerate pile order within blocks plus box order inside
+ * cluster-carrying side-by-side cells until EVERY cluster passes the
+ * geometric touching check. Also rejects half-included companion groups.
  */
 static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
                             const std::vector<Cell>& cells, const Params& p,
                             std::vector<PlacedRect>& out) {
-  std::vector<int> reqPiles, otherPiles;
-  for (int pi : sol.piles)
-    ((piles[pi].mask & p.requiredMask) ? reqPiles : otherPiles).push_back(pi);
-  std::sort(otherPiles.begin(), otherPiles.end(),
-            [&](int a, int b) { return piles[a].width > piles[b].width; });
+  // Hard membership rules first.
+  if (p.requiredMask && (sol.mask & p.requiredMask) != p.requiredMask) return false;
+  for (uint64_t g : p.togetherMasks) {
+    uint64_t inter = sol.mask & g;
+    if (inter && inter != g) return false;  // all-or-none
+  }
+  std::vector<uint64_t> clusters;
+  if (p.requiredMask) clusters.push_back(p.requiredMask);
+  for (uint64_t g : p.togetherMasks)
+    if ((sol.mask & g) == g) clusters.push_back(g);
+
+  uint64_t clusterUnion = 0;
+  for (uint64_t g : clusters) clusterUnion |= g;
 
   auto defaultBoxOrder = [&](int ci) { return identityBoxOrder(cells[ci]); };
 
-  if (p.requiredMask == 0 || reqPiles.empty()) {
+  std::vector<int> freePiles, clusterPiles;
+  for (int pi : sol.piles)
+    ((piles[pi].mask & clusterUnion) ? clusterPiles : freePiles).push_back(pi);
+  std::sort(freePiles.begin(), freePiles.end(),
+            [&](int a, int b) { return piles[a].width > piles[b].width; });
+
+  if (clusters.empty() || clusterPiles.empty()) {
     out.clear();
     int x = 0;
-    for (int pi : otherPiles) {
+    for (int pi : freePiles) {
       emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells), defaultBoxOrder, x, out);
       x += piles[pi].width;
     }
-    return p.requiredMask == 0;  // required boxes entirely missing → infeasible
+    return clusters.empty();
   }
-  if ((sol.mask & p.requiredMask) != p.requiredMask) return false;
 
-  // Cell order inside required piles: required cells at the BOTTOM.
-  auto reqCellOrder = [&](const Pile& pile) {
+  // Blocks: clusters sharing a pile merge (their piles must interleave).
+  size_t nc = clusters.size();
+  std::vector<int> cparent(nc);
+  for (size_t i = 0; i < nc; i++) cparent[i] = (int)i;
+  std::function<int(int)> cfind = [&](int v) {
+    return cparent[v] == v ? v : cparent[v] = cfind(cparent[v]);
+  };
+  for (int pi : clusterPiles) {
+    int first = -1;
+    for (size_t c = 0; c < nc; c++)
+      if (piles[pi].mask & clusters[c]) {
+        if (first < 0) first = (int)c;
+        else cparent[cfind((int)c)] = cfind(first);
+      }
+  }
+  std::map<int, std::vector<int>> blockPiles;  // block root → its piles
+  for (int pi : clusterPiles) {
+    for (size_t c = 0; c < nc; c++)
+      if (piles[pi].mask & clusters[c]) {
+        blockPiles[cfind((int)c)].push_back(pi);
+        break;
+      }
+  }
+
+  // Cluster cells sink to the pile bottom.
+  auto clusterCellOrder = [&](const Pile& pile) {
     std::vector<int> cs = cellOrderByHeight(pile, cells);
     std::stable_sort(cs.begin(), cs.end(), [&](int a, int b) {
-      bool ra = cells[a].mask & p.requiredMask, rb = cells[b].mask & p.requiredMask;
+      bool ra = cells[a].mask & clusterUnion, rb = cells[b].mask & clusterUnion;
       return ra > rb;
     });
     return cs;
   };
 
-  // Multi-box cells carrying required boxes: enumerate their box orders.
+  // Box-order permutations for cluster-carrying side-by-side cells.
   struct PermCell {
     int ci;
     std::vector<std::vector<int>> perms;
   };
   std::vector<PermCell> permCells;
-  for (int pi : reqPiles)
+  for (int pi : clusterPiles)
     for (int ci : piles[pi].cells) {
       const Cell& cell = cells[ci];
-      if (!(cell.mask & p.requiredMask) || cell.boxes.size() < 2) continue;
+      if (!(cell.mask & clusterUnion) || cell.boxes.size() < 2) continue;
       PermCell pc{ci, {}};
       std::vector<int> order = identityBoxOrder(cell);
       std::sort(order.begin(), order.end());
@@ -512,55 +561,81 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
       permCells.push_back(std::move(pc));
     }
 
-  std::sort(reqPiles.begin(), reqPiles.end());
+  std::vector<std::vector<int>> blocks;
+  for (auto& [_, bp] : blockPiles) {
+    std::sort(bp.begin(), bp.end());
+    blocks.push_back(bp);
+  }
+
   long long tries = 0;
-  do {
+  std::vector<PlacedRect> layout;
+
+  auto testArrangement = [&](void) -> bool {
     std::vector<size_t> counter(permCells.size(), 0);
     while (true) {
-      if (++tries > 50000) return false;
+      if (++tries > 100000) return false;
       auto boxOrderOf = [&](int ci) {
         for (size_t k = 0; k < permCells.size(); k++)
           if (permCells[k].ci == ci) return permCells[k].perms[counter[k]];
         return identityBoxOrder(cells[ci]);
       };
-      // Build: non-required piles left, required block consecutive at right.
-      out.clear();
+      layout.clear();
       int x = 0;
-      for (int pi : otherPiles) {
-        emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells), defaultBoxOrder, x, out);
+      for (int pi : freePiles) {
+        emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells), defaultBoxOrder, x, layout);
         x += piles[pi].width;
       }
-      for (int pi : reqPiles) {
-        emitPile(piles[pi], cells, reqCellOrder(piles[pi]), boxOrderOf, x, out);
-        x += piles[pi].width;
+      for (const auto& block : blocks)
+        for (int pi : block) {
+          emitPile(piles[pi], cells, clusterCellOrder(piles[pi]), boxOrderOf, x, layout);
+          x += piles[pi].width;
+        }
+      // Every cluster must be internally connected.
+      bool allOk = true;
+      for (uint64_t g : clusters) {
+        std::vector<int> idx;
+        for (size_t i = 0; i < layout.size(); i++)
+          if (g & (1ULL << layout[i].box)) idx.push_back((int)i);
+        std::vector<int> parent(idx.size());
+        for (size_t i = 0; i < parent.size(); i++) parent[i] = (int)i;
+        std::function<int(int)> find = [&](int v) {
+          return parent[v] == v ? v : parent[v] = find(parent[v]);
+        };
+        for (size_t i = 0; i < idx.size(); i++)
+          for (size_t j = i + 1; j < idx.size(); j++)
+            if (touches(layout[idx[i]], layout[idx[j]])) parent[find((int)i)] = find((int)j);
+        for (size_t i = 1; i < idx.size(); i++)
+          if (find((int)i) != find(0)) allOk = false;
+        if (!allOk) break;
       }
-      // Connectivity of required boxes (union-find over touching rects).
-      std::vector<int> reqIdx;
-      for (size_t i = 0; i < out.size(); i++)
-        if (p.requiredMask & (1ULL << out[i].box)) reqIdx.push_back((int)i);
-      std::vector<int> parent(reqIdx.size());
-      for (size_t i = 0; i < parent.size(); i++) parent[i] = (int)i;
-      std::function<int(int)> find = [&](int v) {
-        return parent[v] == v ? v : parent[v] = find(parent[v]);
-      };
-      for (size_t i = 0; i < reqIdx.size(); i++)
-        for (size_t j = i + 1; j < reqIdx.size(); j++)
-          if (touches(out[reqIdx[i]], out[reqIdx[j]])) parent[find((int)i)] = find((int)j);
-      bool connected = true;
-      for (size_t i = 1; i < reqIdx.size(); i++)
-        if (find((int)i) != find(0)) connected = false;
-      if (connected) return true;
-
-      // Advance the mixed-radix permutation counter.
+      if (allOk) return true;
+      if (permCells.empty()) return false;
       size_t k = 0;
       for (; k < counter.size(); k++) {
         if (++counter[k] < permCells[k].perms.size()) break;
         counter[k] = 0;
       }
-      if (k == counter.size()) break;
-      if (permCells.empty()) break;
+      if (k == counter.size()) return false;
     }
-  } while (std::next_permutation(reqPiles.begin(), reqPiles.end()));
+  };
+
+  // Odometer over per-block pile permutations.
+  std::function<bool(size_t)> permuteBlocks = [&](size_t bi) -> bool {
+    if (tries > 100000) return false;
+    if (bi == blocks.size()) return testArrangement();
+    std::vector<int>& block = blocks[bi];
+    std::sort(block.begin(), block.end());
+    do {
+      if (permuteBlocks(bi + 1)) return true;
+      if (tries > 100000) return false;
+    } while (std::next_permutation(block.begin(), block.end()));
+    return false;
+  };
+
+  if (permuteBlocks(0)) {
+    out = layout;
+    return true;
+  }
   return false;
 }
 
@@ -828,6 +903,7 @@ int main(int argc, char** argv) {
     else if (a == "--tol") next(p.tolPerBox);
     else if (a == "--spill-cost") next(p.spillCost);
     else if (a == "--require") p.require.push_back(argv[++i]);
+    else if (a == "--together") p.together.push_back(argv[++i]);
     else if (a == "--solutions") next(p.solutions);
     else if (a == "--out") p.out = argv[++i];
     else input = a;
@@ -851,6 +927,21 @@ int main(int argc, char** argv) {
       }
     }
     if (!hit) std::cerr << "warning: --require matched nothing: " << req << "\n";
+  }
+  for (const std::string& group : p.together) {
+    uint64_t mask = 0;
+    std::stringstream gss(group);
+    std::string name;
+    while (std::getline(gss, name, ',')) {
+      bool hit = false;
+      for (size_t i = 0; i < boxes.size(); i++)
+        if (boxes[i].name == name) {
+          mask |= 1ULL << i;
+          hit = true;
+        }
+      if (!hit) std::cerr << "warning: --together member matched nothing: " << name << "\n";
+    }
+    if (__builtin_popcountll(mask) >= 2) p.togetherMasks.push_back(mask);
   }
   std::vector<Orient> orients = buildOrients(boxes, p);
   std::vector<Cell> cells = buildCells(boxes, orients, p);

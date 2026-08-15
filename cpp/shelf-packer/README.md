@@ -25,10 +25,13 @@ problem. Self-contained C++17, no dependencies (its own PNG encoder).
   diversified — two solutions must differ by at least 6 boxes.
 - `--require NAME` (repeatable, `PREFIX*` globs) marks must-pack boxes that
   additionally have to form ONE touching cluster (side or corner contact).
-  The arranger places required piles consecutively, sinks required cells to
-  the pile bottoms, and permutes pile order + side-by-side box order until a
-  geometric connectivity check passes; solutions that can't be arranged are
-  dropped.
+- `--together A,B[,C…]` (repeatable) declares a companion group — one game
+  shipped as several boxes: either NONE of them is packed, or ALL are, and
+  they must touch each other.
+  For both, the arranger places cluster-carrying piles consecutively, sinks
+  cluster cells to the pile bottoms, and permutes pile order + side-by-side
+  box order until a geometric connectivity check passes for every cluster;
+  solutions that can't be arranged are dropped.
 
 Search: exhaustive layer/pile enumeration (deduped by box-set), then several
 beam-search passes over pile candidates plus 20k density-biased greedy
@@ -38,7 +41,7 @@ restarts. Runs in ~2 s for ~46 boxes.
 
 ```bash
 make                       # builds ./shelf-packer
-./shelf-packer boxes.csv --out out --require 'exit-*'
+./shelf-packer boxes.csv --out out --require 'exit-*' --together publish,campus
 ```
 
 Outputs `out/solutions.txt` plus one `out/solution_NN.png` per solution:

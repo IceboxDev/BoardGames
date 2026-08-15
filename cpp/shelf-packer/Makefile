@@ -5,7 +5,7 @@ shelf-packer: main.cpp
 	$(CXX) $(CXXFLAGS) -o $@ $<
 
 run: shelf-packer
-	./shelf-packer boxes.csv --out out --require 'exit-*'
+	./shelf-packer boxes.csv --out out --require 'exit-*' --together publish,campus
 
 clean:
 	rm -rf shelf-packer out
