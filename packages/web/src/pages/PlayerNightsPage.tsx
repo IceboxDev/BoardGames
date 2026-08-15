@@ -124,8 +124,10 @@ export default function PlayerNightsPage() {
 
               <MonthlyAttendanceChart items={items} />
 
+              {/* min-w-0: keep the mobile grid track from sizing to nowrap
+                  content (truncated rows) and overflowing the viewport. */}
               <div className="grid gap-6 lg:grid-cols-3">
-                <Stack gap="lg" className="lg:col-span-2">
+                <Stack gap="lg" className="min-w-0 lg:col-span-2">
                   <Section title="Where we play" icon={<PinIcon className="h-3.5 w-3.5" />}>
                     <HostBreakdown items={items} />
                   </Section>
@@ -137,7 +139,7 @@ export default function PlayerNightsPage() {
                     <NightLog items={items} userId={userId as string} />
                   </Section>
                 </Stack>
-                <Stack gap="lg" className="lg:col-span-1">
+                <Stack gap="lg" className="min-w-0 lg:col-span-1">
                   <Section title="Weekdays" icon={<HostIcon className="h-3.5 w-3.5" />}>
                     <WeekdayBreakdown items={items} />
                   </Section>

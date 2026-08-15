@@ -135,8 +135,10 @@ export default function PlayerMatchHistoryPage() {
 
               <MonthlyActivityChart items={filtered} />
 
+              {/* min-w-0: keep the mobile grid track from sizing to nowrap
+                  content (truncated titles) and overflowing the viewport. */}
               <div className="grid gap-6 lg:grid-cols-3">
-                <Stack gap="lg" className="lg:col-span-2">
+                <Stack gap="lg" className="min-w-0 lg:col-span-2">
                   <Section title="Personal records" icon={<TrophyIcon className="h-3.5 w-3.5" />}>
                     <RecordsStrip items={items} />
                   </Section>
@@ -148,7 +150,7 @@ export default function PlayerMatchHistoryPage() {
                     <MatchTimeline items={filtered} filtered={isFiltered} />
                   </Section>
                 </Stack>
-                <Stack gap="lg" className="lg:col-span-1">
+                <Stack gap="lg" className="min-w-0 lg:col-span-1">
                   <Section title="Played with" icon={<UsersIcon className="h-3.5 w-3.5" />}>
                     <PlayedWithPanel items={items} players={summary.players} />
                   </Section>

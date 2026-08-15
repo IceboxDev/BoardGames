@@ -9,7 +9,7 @@ import { attendanceStreaks, nightTotals } from "./night-stats.ts";
 
 function HeroCard({ label, children }: { label: string; children: ReactNode }) {
   return (
-    <Surface variant="raised" padding="none" className="flex flex-col gap-2 p-4">
+    <Surface variant="raised" padding="none" className="flex min-w-0 flex-col gap-2 p-4">
       <MicroLabel className="font-semibold">{label}</MicroLabel>
       {children}
     </Surface>

@@ -145,9 +145,12 @@ export default function PlayerProfilePage() {
 
           <NextNightCard nextNight={profile.nextNight} firstName={firstName} isSelf={isSelf} />
 
+          {/* min-w-0 on the grid items: grid tracks size to an item's
+              intrinsic width, and a nowrap/truncate line inside would blow the
+              single mobile column past the viewport. */}
           <div className="grid gap-6 lg:grid-cols-3">
             {/* Main column */}
-            <Stack gap="lg" className="lg:col-span-2">
+            <Stack gap="lg" className="min-w-0 lg:col-span-2">
               <Section title="Match history" icon={<BookIcon className="h-4 w-4" />}>
                 <ProfileMatchList
                   matches={allMatches}
@@ -159,7 +162,7 @@ export default function PlayerProfilePage() {
             </Stack>
 
             {/* Side rail */}
-            <Stack gap="lg" className="lg:col-span-1">
+            <Stack gap="lg" className="min-w-0 lg:col-span-1">
               <Section title="Skill profile" icon={<SparkleIcon className="h-3.5 w-3.5" />}>
                 <HexSkillChart skill={profile.skill} accentHex={profile.profile.accentHex} />
               </Section>
