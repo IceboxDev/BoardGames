@@ -51,6 +51,9 @@ struct Params {
   int spillCost = 50;     // reserve-spill penalty: % of full-depth volume per spilled mm²
   int solutions = 8;      // how many solutions to emit
   std::string out = "out";
+  std::vector<std::string> require;  // --require NAME (or PREFIX*): must be packed,
+                                     // and required boxes must form one touching cluster
+  uint64_t requiredMask = 0;         // resolved after the boxes are loaded
   int maxWidth() const { return widthBase + overLeft + overRight; }
   int maxHeight() const { return heightBase + overTop; }
 };
@@ -310,7 +313,11 @@ struct State {
 
 static long long stateScore(const State& s, const Params& p) {
   long long widthOverArea = (long long)std::max(0, s.width - p.widthBase) * p.heightBase;
-  return solutionScore(s.vol, widthOverArea, s.topOver, p);
+  long long score = solutionScore(s.vol, widthOverArea, s.topOver, p);
+  // Required boxes carry a bonus far above any volume trade-off, so the beam
+  // never drops them for ordinary gains.
+  score += (long long)__builtin_popcountll(s.mask & p.requiredMask) * 8'000'000LL;
+  return score;
 }
 
 static bool betterSolution(const Solution& a, const Solution& b) {
@@ -380,7 +387,10 @@ static void greedyRestarts(const std::vector<Pile>& piles, const Params& p,
     std::uniform_real_distribution<double> noise(0.75, 1.25);
     for (size_t i = 0; i < order.size(); i++) {
       const Pile& pile = piles[i];
-      keyed[i] = {-(double)pile.vol / pile.width * noise(rng), (int)i};
+      double key = -(double)pile.vol / pile.width * noise(rng);
+      // Piles carrying required boxes sort first.
+      key -= 1e9 * __builtin_popcountll(pile.mask & p.requiredMask);
+      keyed[i] = {key, (int)i};
     }
     std::sort(keyed.begin(), keyed.end());
     State s;
@@ -397,6 +407,161 @@ static void greedyRestarts(const std::vector<Pile>& piles, const Params& p,
     }
     if (s.width > 0) collect(pool, s, p);
   }
+}
+
+// ── Layout & required-cluster arrangement ──────────────────────────────
+struct PlacedRect {
+  int box, fw, fh, d, x0, y0;  // y0 measured up from the floor
+};
+
+// Closed-rectangle contact (shared side or corner). Interiors never overlap
+// by construction, so interval intersection in both axes means touching.
+static bool touches(const PlacedRect& a, const PlacedRect& b) {
+  return a.x0 <= b.x0 + b.fw && b.x0 <= a.x0 + a.fw && a.y0 <= b.y0 + b.fh && b.y0 <= a.y0 + a.fh;
+}
+
+static std::vector<int> cellOrderByHeight(const Pile& pile, const std::vector<Cell>& cells) {
+  std::vector<int> cs = pile.cells;
+  std::sort(cs.begin(), cs.end(), [&](int a, int b) {
+    if (cells[a].height != cells[b].height) return cells[a].height > cells[b].height;
+    return cells[a].depthSum * (long long)cells[b].boxes.size() >
+           cells[b].depthSum * (long long)cells[a].boxes.size();
+  });
+  return cs;
+}
+
+static void emitPile(const Pile& pile, const std::vector<Cell>& cells,
+                     const std::vector<int>& cellOrder,
+                     const std::function<std::vector<int>(int)>& boxOrderOf, int x,
+                     std::vector<PlacedRect>& out) {
+  int y = 0;
+  for (int ci : cellOrder) {
+    const Cell& cell = cells[ci];
+    int xOff = 0;
+    for (int bi : boxOrderOf(ci)) {
+      const Placement& pl = cell.boxes[bi];
+      out.push_back({pl.box, pl.fw, pl.fh, pl.d, x + xOff, y});
+      xOff += pl.fw;
+    }
+    y += cell.height;
+  }
+  (void)pile;
+}
+
+static std::vector<int> identityBoxOrder(const Cell& cell) {
+  std::vector<int> o(cell.boxes.size());
+  for (size_t i = 0; i < o.size(); i++) o[i] = (int)i;
+  return o;
+}
+
+/**
+ * Produce a concrete layout for a solution. When required boxes exist, they
+ * must end up as one touching cluster: required-carrying piles are placed
+ * consecutively (at the right end), required cells sink to the pile bottoms,
+ * and we enumerate pile order plus box order inside required-carrying
+ * side-by-side cells until the geometric connectivity check passes.
+ */
+static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
+                            const std::vector<Cell>& cells, const Params& p,
+                            std::vector<PlacedRect>& out) {
+  std::vector<int> reqPiles, otherPiles;
+  for (int pi : sol.piles)
+    ((piles[pi].mask & p.requiredMask) ? reqPiles : otherPiles).push_back(pi);
+  std::sort(otherPiles.begin(), otherPiles.end(),
+            [&](int a, int b) { return piles[a].width > piles[b].width; });
+
+  auto defaultBoxOrder = [&](int ci) { return identityBoxOrder(cells[ci]); };
+
+  if (p.requiredMask == 0 || reqPiles.empty()) {
+    out.clear();
+    int x = 0;
+    for (int pi : otherPiles) {
+      emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells), defaultBoxOrder, x, out);
+      x += piles[pi].width;
+    }
+    return p.requiredMask == 0;  // required boxes entirely missing → infeasible
+  }
+  if ((sol.mask & p.requiredMask) != p.requiredMask) return false;
+
+  // Cell order inside required piles: required cells at the BOTTOM.
+  auto reqCellOrder = [&](const Pile& pile) {
+    std::vector<int> cs = cellOrderByHeight(pile, cells);
+    std::stable_sort(cs.begin(), cs.end(), [&](int a, int b) {
+      bool ra = cells[a].mask & p.requiredMask, rb = cells[b].mask & p.requiredMask;
+      return ra > rb;
+    });
+    return cs;
+  };
+
+  // Multi-box cells carrying required boxes: enumerate their box orders.
+  struct PermCell {
+    int ci;
+    std::vector<std::vector<int>> perms;
+  };
+  std::vector<PermCell> permCells;
+  for (int pi : reqPiles)
+    for (int ci : piles[pi].cells) {
+      const Cell& cell = cells[ci];
+      if (!(cell.mask & p.requiredMask) || cell.boxes.size() < 2) continue;
+      PermCell pc{ci, {}};
+      std::vector<int> order = identityBoxOrder(cell);
+      std::sort(order.begin(), order.end());
+      do {
+        pc.perms.push_back(order);
+      } while (std::next_permutation(order.begin(), order.end()));
+      permCells.push_back(std::move(pc));
+    }
+
+  std::sort(reqPiles.begin(), reqPiles.end());
+  long long tries = 0;
+  do {
+    std::vector<size_t> counter(permCells.size(), 0);
+    while (true) {
+      if (++tries > 50000) return false;
+      auto boxOrderOf = [&](int ci) {
+        for (size_t k = 0; k < permCells.size(); k++)
+          if (permCells[k].ci == ci) return permCells[k].perms[counter[k]];
+        return identityBoxOrder(cells[ci]);
+      };
+      // Build: non-required piles left, required block consecutive at right.
+      out.clear();
+      int x = 0;
+      for (int pi : otherPiles) {
+        emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells), defaultBoxOrder, x, out);
+        x += piles[pi].width;
+      }
+      for (int pi : reqPiles) {
+        emitPile(piles[pi], cells, reqCellOrder(piles[pi]), boxOrderOf, x, out);
+        x += piles[pi].width;
+      }
+      // Connectivity of required boxes (union-find over touching rects).
+      std::vector<int> reqIdx;
+      for (size_t i = 0; i < out.size(); i++)
+        if (p.requiredMask & (1ULL << out[i].box)) reqIdx.push_back((int)i);
+      std::vector<int> parent(reqIdx.size());
+      for (size_t i = 0; i < parent.size(); i++) parent[i] = (int)i;
+      std::function<int(int)> find = [&](int v) {
+        return parent[v] == v ? v : parent[v] = find(parent[v]);
+      };
+      for (size_t i = 0; i < reqIdx.size(); i++)
+        for (size_t j = i + 1; j < reqIdx.size(); j++)
+          if (touches(out[reqIdx[i]], out[reqIdx[j]])) parent[find((int)i)] = find((int)j);
+      bool connected = true;
+      for (size_t i = 1; i < reqIdx.size(); i++)
+        if (find((int)i) != find(0)) connected = false;
+      if (connected) return true;
+
+      // Advance the mixed-radix permutation counter.
+      size_t k = 0;
+      for (; k < counter.size(); k++) {
+        if (++counter[k] < permCells[k].perms.size()) break;
+        counter[k] = 0;
+      }
+      if (k == counter.size()) break;
+      if (permCells.empty()) break;
+    }
+  } while (std::next_permutation(reqPiles.begin(), reqPiles.end()));
+  return false;
 }
 
 // ── PNG writer (truecolor, uncompressed deflate — no dependencies) ─────
@@ -543,11 +708,9 @@ static void hsv2rgb(double hue, double s, double v, int& r, int& g, int& b) {
   r = (int)((rr + m) * 255), g = (int)((gg + m) * 255), b = (int)((bb + m) * 255);
 }
 
-static void renderSolution(const Solution& sol, const std::vector<Pile>& piles,
-                           const std::vector<Cell>& cells, const std::vector<Box>& boxes,
-                           const Params& p, const std::string& path, int rank) {
-  // Legend: every placed box gets a number; full name + face + depth + raw
-  // box dims are listed below the diagram, three columns.
+static void renderSolution(const Solution& sol, const std::vector<PlacedRect>& layout,
+                           const std::vector<Box>& boxes, const Params& p,
+                           const std::string& path, int rank) {
   int nPlaced = __builtin_popcountll(sol.mask);
   const int LEGEND_COLS = 3;
   int legendRows = (nPlaced + LEGEND_COLS - 1) / LEGEND_COLS;
@@ -558,61 +721,37 @@ static void renderSolution(const Solution& sol, const std::vector<Pile>& piles,
   Canvas cv(W, H);
   int baseY = H - M - legendH;  // floor line (y grows downward)
   std::vector<std::string> legend;
+
   int x0 = M + (p.widthBase - sol.width) / 2;  // center the overhang
   if (x0 < M - p.overLeft) x0 = M - p.overLeft;
 
-  // Stable pile order: widest first reads best.
-  std::vector<int> ordered = sol.piles;
-  std::sort(ordered.begin(), ordered.end(),
-            [&](int a, int b) { return piles[a].width > piles[b].width; });
-
-  int x = x0;
-  for (int pi : ordered) {
-    const Pile& pile = piles[pi];
-    // Tallest (heaviest) cells at the bottom, deeper first on ties —
-    // steadier in real life, nicer to read.
-    std::vector<int> cs = pile.cells;
-    std::sort(cs.begin(), cs.end(), [&](int a, int b) {
-      if (cells[a].height != cells[b].height) return cells[a].height > cells[b].height;
-      return cells[a].depthSum * (long long)cells[b].boxes.size() >
-             cells[b].depthSum * (long long)cells[a].boxes.size();
-    });
-    int y = baseY;
-    for (int ci : cs) {
-      const Cell& cell = cells[ci];
-      for (const Placement& pl : cell.boxes) {
-        int bx = x + pl.xOff, by = y - pl.fh;
-        int r, g, b;
-        hsv2rgb(std::fmod(47.0 * pl.box, 360.0), 0.35, 0.95, r, g, b);
-        cv.fill(bx, by, bx + pl.fw, y, r, g, b);
-        cv.rect(bx, by, bx + pl.fw, y, 60, 60, 60);
-        int num = (int)legend.size() + 1;
-        char entry[128];
-        snprintf(entry, sizeof entry, "%2d %s %dx%d d%d (box %dx%dx%d)", num,
-                 boxes[pl.box].name.c_str(), pl.fw, pl.fh, pl.d, boxes[pl.box].w,
-                 boxes[pl.box].l, boxes[pl.box].h);
-        legend.push_back(entry);
-        // The number goes on EVERY box; name + face dims too when they fit.
-        char numText[16];
-        snprintf(numText, sizeof numText, "%d", num);
-        std::string name = boxes[pl.box].name;
-        char dims[64];
-        snprintf(dims, sizeof dims, "%dx%d d%d", pl.fw, pl.fh, pl.d);
-        int nameW = 6 * (int)(name.size() + strlen(numText) + 1);
-        if (pl.fh >= 22 && pl.fw >= nameW + 8) {
-          cv.text(bx + 4, by + 3, std::string(numText) + " " + name, 30, 30, 30);
-          cv.text(bx + 4, by + 13, dims, 90, 90, 90);
-        } else if (pl.fh >= 11 && pl.fw >= nameW + 8) {
-          cv.text(bx + 4, by + 2, std::string(numText) + " " + name, 30, 30, 30);
-        } else {
-          // Tiny or narrow box: centered number only — the legend carries it.
-          int tw = 6 * (int)strlen(numText);
-          cv.text(bx + (pl.fw - tw) / 2, by + std::max(1, (pl.fh - 7) / 2), numText, 30, 30, 30);
-        }
-      }
-      y -= cell.height;
+  for (const PlacedRect& r : layout) {
+    int bx = x0 + r.x0, by = baseY - r.y0 - r.fh;
+    int cr, cg, cb;
+    hsv2rgb(std::fmod(47.0 * r.box, 360.0), 0.35, 0.95, cr, cg, cb);
+    cv.fill(bx, by, bx + r.fw, baseY - r.y0, cr, cg, cb);
+    cv.rect(bx, by, bx + r.fw, baseY - r.y0, 60, 60, 60);
+    int num = (int)legend.size() + 1;
+    char entry[160];
+    snprintf(entry, sizeof entry, "%2d %s %dx%d d%d (box %dx%dx%d)", num,
+             boxes[r.box].name.c_str(), r.fw, r.fh, r.d, boxes[r.box].w, boxes[r.box].l,
+             boxes[r.box].h);
+    legend.push_back(entry);
+    char numText[16];
+    snprintf(numText, sizeof numText, "%d", num);
+    std::string name = boxes[r.box].name;
+    char dims[64];
+    snprintf(dims, sizeof dims, "%dx%d d%d", r.fw, r.fh, r.d);
+    int nameW = 6 * (int)(name.size() + strlen(numText) + 1);
+    if (r.fh >= 22 && r.fw >= nameW + 8) {
+      cv.text(bx + 4, by + 3, std::string(numText) + " " + name, 30, 30, 30);
+      cv.text(bx + 4, by + 13, dims, 90, 90, 90);
+    } else if (r.fh >= 11 && r.fw >= nameW + 8) {
+      cv.text(bx + 4, by + 2, std::string(numText) + " " + name, 30, 30, 30);
+    } else {
+      int tw = 6 * (int)strlen(numText);
+      cv.text(bx + (r.fw - tw) / 2, by + std::max(1, (r.fh - 7) / 2), numText, 30, 30, 30);
     }
-    x += pile.width;
   }
 
   // Guides ON TOP of the boxes so they stay visible: shelf edges (solid
@@ -629,7 +768,6 @@ static void renderSolution(const Solution& sol, const std::vector<Pile>& piles,
            sol.depthSum / std::max(1, nPlaced));
   cv.text(M, 12, title, 20, 20, 20, 2);
 
-  // Legend below the diagram.
   int ly0 = baseY + 16;
   int colW = (W - 2 * M) / LEGEND_COLS;
   for (size_t i = 0; i < legend.size(); i++) {
@@ -689,6 +827,7 @@ int main(int argc, char** argv) {
     else if (a == "--depth-max") next(p.depthMax);
     else if (a == "--tol") next(p.tolPerBox);
     else if (a == "--spill-cost") next(p.spillCost);
+    else if (a == "--require") p.require.push_back(argv[++i]);
     else if (a == "--solutions") next(p.solutions);
     else if (a == "--out") p.out = argv[++i];
     else input = a;
@@ -701,6 +840,18 @@ int main(int argc, char** argv) {
   }
 
   std::vector<Box> boxes = loadBoxes(input);
+  for (const std::string& req : p.require) {
+    bool prefix = !req.empty() && req.back() == '*';
+    std::string stem = prefix ? req.substr(0, req.size() - 1) : req;
+    bool hit = false;
+    for (size_t i = 0; i < boxes.size(); i++) {
+      if (prefix ? boxes[i].name.rfind(stem, 0) == 0 : boxes[i].name == stem) {
+        p.requiredMask |= 1ULL << i;
+        hit = true;
+      }
+    }
+    if (!hit) std::cerr << "warning: --require matched nothing: " << req << "\n";
+  }
   std::vector<Orient> orients = buildOrients(boxes, p);
   std::vector<Cell> cells = buildCells(boxes, orients, p);
   std::vector<Pile> piles = buildPiles(cells, p);
@@ -745,7 +896,13 @@ int main(int argc, char** argv) {
   // fewer than 6 boxes (pandemic-1 ↔ pandemic-2 swaps are not "another
   // solution" to a human).
   std::vector<Solution> sols;
+  std::vector<std::vector<PlacedRect>> layouts;
+  int rejectedRequired = 0, rejectedCluster = 0;
   for (const Solution& s : ranked) {
+    if ((s.mask & p.requiredMask) != p.requiredMask) {
+      rejectedRequired++;
+      continue;
+    }
     bool similar = false;
     for (const Solution& kept : sols) {
       if (__builtin_popcountll(s.mask ^ kept.mask) < 6) {
@@ -753,8 +910,20 @@ int main(int argc, char** argv) {
         break;
       }
     }
-    if (!similar) sols.push_back(s);
+    if (similar) continue;
+    std::vector<PlacedRect> layout;
+    if (!arrangeSolution(s, piles, cells, p, layout)) {
+      rejectedCluster++;
+      continue;
+    }
+    sols.push_back(s);
+    layouts.push_back(std::move(layout));
     if ((int)sols.size() >= p.solutions) break;
+  }
+  if (p.requiredMask) {
+    std::cerr << "required-box filter: " << rejectedRequired
+              << " solutions missing boxes, " << rejectedCluster
+              << " not arrangeable as a touching cluster\n";
   }
 
   std::string mk = "mkdir -p " + p.out;
@@ -765,7 +934,7 @@ int main(int argc, char** argv) {
     report(rep, sols[i], piles, cells, boxes, (int)i + 1);
     char path[256];
     snprintf(path, sizeof path, "%s/solution_%02d.png", p.out.c_str(), (int)i + 1);
-    renderSolution(sols[i], piles, cells, boxes, p, path, (int)i + 1);
+    renderSolution(sols[i], layouts[i], boxes, p, path, (int)i + 1);
   }
   std::cerr << "wrote " << sols.size() << " solutions to " << p.out << "/\n";
   return 0;

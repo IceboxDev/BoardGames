@@ -23,6 +23,12 @@ problem. Self-contained C++17, no dependencies (its own PNG encoder).
 - Objective: **maximize packed volume minus the spill penalty**, tie-broken by
   depth used (deeper boxes waste less shelf). Emitted solutions are
   diversified — two solutions must differ by at least 6 boxes.
+- `--require NAME` (repeatable, `PREFIX*` globs) marks must-pack boxes that
+  additionally have to form ONE touching cluster (side or corner contact).
+  The arranger places required piles consecutively, sinks required cells to
+  the pile bottoms, and permutes pile order + side-by-side box order until a
+  geometric connectivity check passes; solutions that can't be arranged are
+  dropped.
 
 Search: exhaustive layer/pile enumeration (deduped by box-set), then several
 beam-search passes over pile candidates plus 20k density-biased greedy
@@ -32,7 +38,7 @@ restarts. Runs in ~2 s for ~46 boxes.
 
 ```bash
 make                       # builds ./shelf-packer
-./shelf-packer boxes.csv --out out
+./shelf-packer boxes.csv --out out --require 'exit-*'
 ```
 
 Outputs `out/solutions.txt` plus one `out/solution_NN.png` per solution:
