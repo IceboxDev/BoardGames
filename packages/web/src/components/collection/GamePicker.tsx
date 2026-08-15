@@ -49,12 +49,15 @@ export function GamePicker({
 }) {
   const [search, setSearch] = useState("");
 
+  // No result cap: an arbitrary top-N reads as a broken list (it once cut the
+  // EXIT boxes to whichever ~10 fell inside the alphabetical window). The
+  // full set is ~160 rows inside a scroll container — trivial to render.
   const options = useMemo(() => {
     const query = search.trim().toLowerCase();
     return ALL_OPTIONS.filter((option) => {
       if (excludeSlugs?.has(option.slug)) return false;
       return query === "" || option.title.toLowerCase().includes(query);
-    }).slice(0, 40);
+    });
   }, [search, excludeSlugs]);
 
   return (
