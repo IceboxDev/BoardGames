@@ -318,3 +318,71 @@ describe("parseOutcome — D&D co-op (campaign + condition)", () => {
     }
   });
 });
+
+describe("parseOutcome — Decrypto token rounds", () => {
+  const teams = [
+    { members: [{ userId: "u1", displayName: "Mantas" }] },
+    { members: [{ userId: "u2", displayName: "Aydan" }] },
+  ];
+  const round = (wi: boolean, wm: boolean, bi: boolean, bm: boolean) => ({
+    interception: [wi, bi],
+    miscommunication: [wm, bm],
+  });
+  const blackWins = [round(false, true, false, false), round(false, true, false, false)];
+
+  it("round-trips a coherent token record", () => {
+    const result = parseOutcome({
+      kind: "teams",
+      teams,
+      winnerTeamIndices: [1],
+      decryptoRounds: blackWins,
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "teams") {
+      expect(result.value.decryptoRounds).toEqual(blackWins);
+      expect(result.value.decryptoTiebreak).toBeUndefined();
+    }
+  });
+
+  it("rejects a winner that contradicts the tokens", () => {
+    const result = parseOutcome({
+      kind: "teams",
+      teams,
+      winnerTeamIndices: [0],
+      decryptoRounds: blackWins,
+    });
+    expect(result.ok).toBe(false);
+    if (!result.ok) expect(result.error).toContain("doesn't match");
+  });
+
+  it("preserves a shared-victory tiebreak and rejects malformed rounds", () => {
+    const tied = [round(false, true, false, true), round(false, true, false, true)];
+    const shared = parseOutcome({
+      kind: "teams",
+      teams,
+      winnerTeamIndices: [0, 1],
+      decryptoRounds: tied,
+      decryptoTiebreak: "shared",
+    });
+    expect(shared.ok).toBe(true);
+    if (shared.ok && shared.value.kind === "teams") {
+      expect(shared.value.decryptoTiebreak).toBe("shared");
+    }
+
+    const bad = parseOutcome({
+      kind: "teams",
+      teams,
+      winnerTeamIndices: [0],
+      decryptoRounds: [{ interception: [true], miscommunication: [false, false] }],
+    });
+    expect(bad.ok).toBe(false);
+  });
+
+  it("plain teams outcomes are untouched by the decrypto gate", () => {
+    const result = parseOutcome({ kind: "teams", teams, winnerTeamIndices: [0] });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "teams") {
+      expect("decryptoRounds" in result.value).toBe(false);
+    }
+  });
+});

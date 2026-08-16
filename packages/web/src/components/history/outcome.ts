@@ -3,6 +3,7 @@
 // tested without spinning up the modal itself. Nothing here touches React,
 // the query cache, or the network — every function is a pure transform.
 
+import { describeDecryptoRecordError } from "@boardgames/core/history/decrypto-tokens";
 import type {
   MatchKind,
   MatchOutcome,
@@ -148,6 +149,7 @@ export function describeOutcomeError(
       if (gameSlug === "blood-on-the-clocktower") return describeClocktowerError(outcome);
       if (gameSlug === "one-night-ultimate-werewolf") return describeWerewolfError(outcome);
       if (gameSlug === "the-resistance") return describeResistanceError(outcome);
+      if (gameSlug === "decrypto") return describeDecryptoError(outcome);
       return describeGenericTeamsError(outcome);
     case "last-standing":
       if (outcome.players.length < 2) return "Add at least two players";
@@ -239,6 +241,23 @@ export function describeGenericTeamsError(outcome: MatchOutcomeTeams): string | 
  * The Resistance: team 0 is the Resistance Operatives, team 1 the Spies. Both
  * sides need at least one player and exactly one side wins.
  */
+/**
+ * Decrypto: two teams (White = 0, Black = 1) and a round-by-round token
+ * record from which the winner is DERIVED — nothing is picked by hand except
+ * the keyword-guess tiebreaker when the points tie. The heavy lifting lives
+ * in core (`describeDecryptoRecordError`) so client, wire schema, and server
+ * agree.
+ */
+export function describeDecryptoError(outcome: MatchOutcomeTeams): string | null {
+  const [white, black] = outcome.teams;
+  if (!white || white.members.length === 0) return "Add at least one White-team player";
+  if (!black || black.members.length === 0) return "Add at least one Black-team player";
+  if (!outcome.decryptoRounds || outcome.decryptoRounds.length === 0) {
+    return "Record the tokens round by round";
+  }
+  return describeDecryptoRecordError(outcome);
+}
+
 export function describeResistanceError(outcome: MatchOutcomeTeams): string | null {
   const [resistance, spies] = outcome.teams;
   if (!resistance || resistance.members.length === 0)

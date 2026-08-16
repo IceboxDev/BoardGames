@@ -1,3 +1,7 @@
+import {
+  DECRYPTO_RECORD_MAX_ROUNDS,
+  describeDecryptoRecordError,
+} from "@boardgames/core/history/decrypto-tokens";
 import type {
   MatchOutcome,
   MatchOutcomeCoop,
@@ -162,16 +166,58 @@ function parseTeams(v: Record<string, unknown>): ParseResult<MatchOutcomeTeams> 
     moderator = { ...m.value, ...(role !== undefined ? { role } : {}) };
   }
   const scenario = asOptionalString(v.scenario, 64);
-  return {
-    ok: true,
-    value: {
-      kind: "teams",
-      teams,
-      winnerTeamIndices,
-      ...(moderator ? { moderator } : {}),
-      ...(scenario !== undefined ? { scenario } : {}),
-    },
+
+  // Decrypto's round-by-round token record. Rebuilt boolean-by-boolean like
+  // everything else in this allowlist, then cross-checked against the winner:
+  // for Decrypto the winner is DERIVED from the tokens, never free-entered.
+  let decryptoRounds: MatchOutcomeTeams["decryptoRounds"];
+  if (v.decryptoRounds !== undefined && v.decryptoRounds !== null) {
+    if (!Array.isArray(v.decryptoRounds) || v.decryptoRounds.length === 0) {
+      return { ok: false, error: "decryptoRounds: must be a non-empty array" };
+    }
+    if (v.decryptoRounds.length > DECRYPTO_RECORD_MAX_ROUNDS) {
+      return { ok: false, error: `decryptoRounds: max ${DECRYPTO_RECORD_MAX_ROUNDS} rounds` };
+    }
+    const parsed: NonNullable<MatchOutcomeTeams["decryptoRounds"]> = [];
+    for (let i = 0; i < v.decryptoRounds.length; i++) {
+      const round = v.decryptoRounds[i];
+      if (!isPlainObject(round)) return { ok: false, error: `decryptoRounds[${i}]: not an object` };
+      const pair = (value: unknown): [boolean, boolean] | null =>
+        Array.isArray(value) &&
+        value.length === 2 &&
+        typeof value[0] === "boolean" &&
+        typeof value[1] === "boolean"
+          ? [value[0], value[1]]
+          : null;
+      const interception = pair(round.interception);
+      const miscommunication = pair(round.miscommunication);
+      if (!interception || !miscommunication) {
+        return { ok: false, error: `decryptoRounds[${i}]: expected two boolean pairs` };
+      }
+      parsed.push({ interception, miscommunication });
+    }
+    decryptoRounds = parsed;
+  }
+  let decryptoTiebreak: MatchOutcomeTeams["decryptoTiebreak"];
+  if (v.decryptoTiebreak !== undefined && v.decryptoTiebreak !== null) {
+    if (v.decryptoTiebreak !== 0 && v.decryptoTiebreak !== 1 && v.decryptoTiebreak !== "shared") {
+      return { ok: false, error: 'decryptoTiebreak: expected 0, 1, or "shared"' };
+    }
+    decryptoTiebreak = v.decryptoTiebreak;
+  }
+
+  const value: MatchOutcomeTeams = {
+    kind: "teams",
+    teams,
+    winnerTeamIndices,
+    ...(moderator ? { moderator } : {}),
+    ...(scenario !== undefined ? { scenario } : {}),
+    ...(decryptoRounds !== undefined ? { decryptoRounds } : {}),
+    ...(decryptoTiebreak !== undefined ? { decryptoTiebreak } : {}),
   };
+  const decryptoError = describeDecryptoRecordError(value);
+  if (decryptoError) return { ok: false, error: `decryptoRounds: ${decryptoError}` };
+  return { ok: true, value };
 }
 
 function parseLastStanding(v: Record<string, unknown>): ParseResult<MatchOutcomeLastStanding> {

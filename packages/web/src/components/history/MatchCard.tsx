@@ -187,6 +187,36 @@ function CompactOutcome({ outcome, gameSlug, currentUserId }: OutcomeProps) {
   }
 }
 
+/**
+ * Decrypto: per-team token tallies instead of a bare score — the tokens ARE
+ * the result (2 white interceptions win, 2 black miscommunications lose).
+ */
+function DecryptoTokens({
+  rounds,
+  team,
+}: {
+  rounds: NonNullable<MatchOutcomeTeams["decryptoRounds"]>;
+  team: number;
+}) {
+  let interceptions = 0;
+  let miscommunications = 0;
+  for (const r of rounds) {
+    if (r.interception[team as 0 | 1]) interceptions += 1;
+    if (r.miscommunication[team as 0 | 1]) miscommunications += 1;
+  }
+  if (interceptions === 0 && miscommunications === 0) return null;
+  return (
+    <span
+      className="text-2xs tabular-nums text-fg-muted"
+      title={`${interceptions} interception${interceptions === 1 ? "" : "s"}, ${miscommunications} miscommunication${miscommunications === 1 ? "" : "s"}`}
+    >
+      {interceptions > 0 && <span className="text-emerald-300">{interceptions}⚪</span>}
+      {interceptions > 0 && miscommunications > 0 && " "}
+      {miscommunications > 0 && <span className="text-rose-300">{miscommunications}⚫</span>}
+    </span>
+  );
+}
+
 function FreeForAllInline({
   outcome,
   gameSlug,
@@ -321,8 +351,13 @@ function TeamsInline({
                 />
               ))}
             </span>
-            {hasScore && typeof t.score === "number" && (
-              <span className="text-xs tabular-nums text-fg-muted">{t.score}</span>
+            {outcome.decryptoRounds ? (
+              <DecryptoTokens rounds={outcome.decryptoRounds} team={i} />
+            ) : (
+              hasScore &&
+              typeof t.score === "number" && (
+                <span className="text-xs tabular-nums text-fg-muted">{t.score}</span>
+              )
             )}
             {i < outcome.teams.length - 1 && (
               <MicroLabel className="text-fg-disabled" inheritColor>

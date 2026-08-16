@@ -1,4 +1,8 @@
 import { z } from "zod";
+import {
+  DECRYPTO_RECORD_MAX_ROUNDS,
+  describeDecryptoRecordError,
+} from "../../history/decrypto-tokens";
 
 // ── Primitives ─────────────────────────────────────────────────────────
 // `playedAt` is the user-supplied wall-clock time the match happened.
@@ -79,6 +83,15 @@ const ModeratorSchema = ParticipantSchema.extend({
   role: z.string().max(64).optional(),
 });
 
+// Decrypto-only: one round's token awards, indexed by team (0 = White,
+// 1 = Black). interception = the physical WHITE token, miscommunication = the
+// BLACK one. A team can earn both in the same round (they intercepted the
+// enemy AND misread their own encryptor).
+const DecryptoRoundSchema = z.object({
+  interception: z.tuple([z.boolean(), z.boolean()]),
+  miscommunication: z.tuple([z.boolean(), z.boolean()]),
+});
+
 const MatchOutcomeTeamsSchema = z.object({
   kind: z.literal("teams"),
   teams: z.array(TeamSchema).min(2).max(8),
@@ -88,6 +101,13 @@ const MatchOutcomeTeamsSchema = z.object({
   // Werewolf scenario label ("Moonstruck"), etc. Free-text so games can use
   // it however they need; capped at 64 chars for the same reason `role` is.
   scenario: z.string().max(64).optional(),
+  // Decrypto: the round-by-round token record. When present it must derive
+  // `winnerTeamIndices` exactly (enforced by the superRefine below) — the
+  // winner is never free-entered for Decrypto, it falls out of the tokens.
+  decryptoRounds: z.array(DecryptoRoundSchema).min(1).max(DECRYPTO_RECORD_MAX_ROUNDS).optional(),
+  // Answer to the keyword-guess tiebreaker (team index or a shared victory);
+  // legal exactly when the token walk ends on tied points.
+  decryptoTiebreak: z.union([z.literal(0), z.literal(1), z.literal("shared")]).optional(),
 });
 export type MatchOutcomeTeams = z.infer<typeof MatchOutcomeTeamsSchema>;
 
@@ -203,6 +223,10 @@ export const MatchOutcomeSchema = z
           });
           return;
         }
+      }
+      const decryptoError = describeDecryptoRecordError(v);
+      if (decryptoError) {
+        ctx.addIssue({ code: "custom", path: ["decryptoRounds"], message: decryptoError });
       }
     } else if (v.kind === "last-standing") {
       if (v.players.every((p) => p.eliminationOrder !== undefined)) {

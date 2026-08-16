@@ -31,6 +31,7 @@ import { Textarea } from "../ui/Textarea";
 import { isDndSlug } from "./dnd";
 import { ClocktowerForm } from "./forms/ClocktowerForm";
 import { CoopForm } from "./forms/CoopForm";
+import { DecryptoForm } from "./forms/DecryptoForm";
 import { DndForm } from "./forms/DndForm";
 import { DungeonMayhemForm } from "./forms/DungeonMayhemForm";
 import { FreeForAllForm } from "./forms/FreeForAllForm";
@@ -367,6 +368,12 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
               />
             ) : gameSlug === "the-resistance" ? (
               <ResistanceForm
+                users={allUsers}
+                value={outcome as MatchOutcomeTeams}
+                onChange={setOutcome}
+              />
+            ) : gameSlug === "decrypto" ? (
+              <DecryptoForm
                 users={allUsers}
                 value={outcome as MatchOutcomeTeams}
                 onChange={setOutcome}
