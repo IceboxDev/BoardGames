@@ -286,8 +286,9 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
   };
   std::vector<int> chosen;
 
+  long long nodeBudget = 60'000'000;
   std::function<void(size_t, size_t, Frame)> dfs = [&](size_t anchor, size_t idx, Frame f) {
-    if (best.size() > PILE_CAP) return;
+    if (best.size() > PILE_CAP || --nodeBudget < 0) return;
     // Record when the pile plausibly reaches the nominal height. Tolerance
     // accrues once per stacked layer (a layer is as tall as its tallest box),
     // so a many-box pile cannot bank per-box slack into extra overshoot.
@@ -962,18 +963,27 @@ static bool clusterFrontOk(uint64_t maskA, uint64_t maskB, const Params& p) {
     if ((maskA & p.requiredMask) != p.requiredMask && (maskB & p.requiredMask) != p.requiredMask)
       return false;
   }
-  for (uint64_t g : p.togetherMasks)
+  for (uint64_t g : p.togetherMasks) {
+    if (((maskA | maskB) & g) == 0) continue;  // all-or-none: absent is fine
     if ((maskA & g) != g && (maskB & g) != g) return false;
+  }
   return true;
 }
 
 static long long gIncomplete = 0, gCluster = 0, gOk = 0;
+int gBestA = 0, gBestB = 0;
 
 static void collectTwo(std::map<std::pair<uint64_t, uint64_t>, TwoSol>& pool, const TwoState& s,
                        const ShelfSet sets[2], const std::vector<Box>& boxes, uint64_t allMask,
                        const Params& p, const std::vector<int>& shelfDepths) {
   if (s.wA < p.widthBase || s.wB < p.widthBase) {
     gIncomplete++;
+    extern int gBestA, gBestB;
+    if (std::min(s.wA, p.widthBase) + std::min(s.wB, p.widthBase) >
+        std::min(gBestA, p.widthBase) + std::min(gBestB, p.widthBase)) {
+      gBestA = s.wA;
+      gBestB = s.wB;
+    }
     return;
   }
   if (!clusterFrontOk(s.maskA, s.maskB, p)) {
@@ -1066,6 +1076,9 @@ static void twoGreedy(const ShelfSet sets[2], const Params& p, const std::vector
     for (size_t i = 0; i < sets[sh].piles.size(); i++) cands.push_back({sh, (int)i});
   std::uniform_real_distribution<double> noise(0.7, 1.3);
   for (int it = 0; it < iterations; it++) {
+    int reqShelf = (int)(rng() & 1);
+    std::vector<int> togShelf(p.togetherMasks.size());
+    for (auto& ts : togShelf) ts = (int)(rng() & 1);
     std::vector<std::pair<double, int>> keyed(cands.size());
     for (size_t i = 0; i < cands.size(); i++) {
       const Pile& pile = sets[cands[i].first].piles[cands[i].second];
@@ -1082,6 +1095,12 @@ static void twoGreedy(const ShelfSet sets[2], const Params& p, const std::vector
       auto [sh, pi] = cands[ci];
       const Pile& pile = sets[sh].piles[pi];
       if ((s.maskA | s.maskB) & pile.mask) continue;
+      // Cluster piles only go to their designated shelf this restart.
+      if ((pile.mask & p.requiredMask) && sh != reqShelf) continue;
+      bool pinned = false;
+      for (size_t gi = 0; gi < p.togetherMasks.size(); gi++)
+        if ((pile.mask & p.togetherMasks[gi]) && sh != togShelf[gi]) pinned = true;
+      if (pinned) continue;
       int& w = sh == 0 ? s.wA : s.wB;
       if (w + pile.width > p.maxWidth()) continue;
       (sh == 0 ? s.maskA : s.maskB) |= pile.mask;
@@ -1118,10 +1137,12 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
         return (double)a.holes / a.width < (double)b.holes / b.width;
       });
       std::vector<Pile> kept;
-      size_t plain = 0;
+      size_t plain = 0, spec = 0;
       for (auto& pile : v) {
-        if (pile.mask & special) kept.push_back(std::move(pile));
-        else if (plain < 5000) {
+        if ((pile.mask & special) && spec < 4000) {
+          kept.push_back(std::move(pile));
+          spec++;
+        } else if (!(pile.mask & special) && plain < 5000) {
           kept.push_back(std::move(pile));
           plain++;
         }
@@ -1144,19 +1165,51 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
     const Pile& y = sets[b.first].piles[b.second];
     return (double)x.holes / x.width < (double)y.holes / y.width;
   });
-  twoBeam(sets, byCleanliness, p, boxes, allMask, shelfDepths, pool, 1200);
+  twoBeam(sets, byCleanliness, p, boxes, allMask, shelfDepths, pool, 1500);
+  auto byWidth = order;
+  std::sort(byWidth.begin(), byWidth.end(), [&](auto a, auto b) {
+    return sets[a.first].piles[a.second].width > sets[b.first].piles[b.second].width;
+  });
+  twoBeam(sets, byWidth, p, boxes, allMask, shelfDepths, pool, 1500);
   std::mt19937_64 rng(7);
-  for (int pass = 0; pass < 4; pass++) {
+  for (int pass = 0; pass < 8; pass++) {
     auto shuffled = order;
     std::shuffle(shuffled.begin(), shuffled.end(), rng);
-    twoBeam(sets, shuffled, p, boxes, allMask, shelfDepths, pool, 700);
+    twoBeam(sets, shuffled, p, boxes, allMask, shelfDepths, pool, 800);
   }
-  twoGreedy(sets, p, boxes, allMask, shelfDepths, pool, 40000, 987654321);
+  twoGreedy(sets, p, boxes, allMask, shelfDepths, pool, 150000, 987654321);
+  twoGreedy(sets, p, boxes, allMask, shelfDepths, pool, 150000, 555000111);
+  twoGreedy(sets, p, boxes, allMask, shelfDepths, pool, 150000, 42424242);
+
+  // Pinned passes: restrict cluster-carrying piles to a designated shelf so
+  // complete-width states stop dying on the cluster-split check.
+  for (int reqShelf = 0; reqShelf < 2; reqShelf++)
+    for (int togShelf = 0; togShelf < 2; togShelf++) {
+      uint64_t clusterBits = p.requiredMask;
+      for (uint64_t g : p.togetherMasks) clusterBits |= g;
+      auto pinFilter = [&](const std::vector<std::pair<int, int>>& src) {
+        std::vector<std::pair<int, int>> v;
+        for (auto c : src) {
+          const Pile& pile = sets[c.first].piles[c.second];
+          if ((pile.mask & p.requiredMask) && c.first != reqShelf) continue;
+          bool bad = false;
+          for (uint64_t g : p.togetherMasks)
+            if ((pile.mask & g) && c.first != togShelf) bad = true;
+          if (bad) continue;
+          v.push_back(c);
+        }
+        return v;
+      };
+      twoBeam(sets, pinFilter(byCleanliness), p, boxes, allMask, shelfDepths, pool, 800);
+      twoBeam(sets, pinFilter(byWidth), p, boxes, allMask, shelfDepths, pool, 800);
+    }
 
   std::cerr << pool.size() << " complete double-fill packings (" << gOk << " collected, "
             << gIncomplete << " incomplete, " << gCluster << " cluster-split)\n";
   if (pool.empty()) {
-    std::cerr << "no packing fills both rectangles under the given constraints\n";
+    std::cerr << "no packing fills both rectangles under the given constraints\n"
+              << "closest attempt: shelf A " << gBestA << " mm, shelf B " << gBestB
+              << " mm (need " << p.widthBase << " each)\n";
     return 1;
   }
 
@@ -1202,7 +1255,11 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
         if ((ss.mask & g) == g) pk.togetherMasks.push_back(g);
       ok = arrangeSolution(ss, sets[sh].piles, sets[sh].cells, pk, layouts[sh]);
     }
-    if (!ok) continue;
+    if (!ok) {
+      extern long long gArrangeFail;
+      gArrangeFail++;
+      continue;
+    }
     kept.push_back({s.maskA, s.maskB});
     emitted++;
 
@@ -1255,9 +1312,14 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
     }
     if (emitted >= p.solutions) break;
   }
+  extern long long gArrangeFail;
+  if (gArrangeFail)
+    std::cerr << gArrangeFail << " complete packings dropped: cluster arrangement failed\n";
   std::cerr << "wrote " << emitted << " fill-all solutions to " << p.out << "/\n";
   return 0;
 }
+
+long long gArrangeFail = 0;
 
 int main(int argc, char** argv) {
   Params p;

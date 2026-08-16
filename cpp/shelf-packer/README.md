@@ -59,7 +59,10 @@ don't help simply stay out (fitting EVERY box is provably impossible: of the
 five 297x297 boxes only three can ever complete a pile). Clusters must sit
 wholly on one shelf. Output: `solution_NN_A.png` / `solution_NN_B.png` per
 solution. `--width-slack MM` / `--height-slack MM` optionally legalize larger
-mismatches as counted holes.
+mismatches as counted holes — required for `--flat` double-fills: strict
+flat-only tops out ~35 mm short of filling both rectangles, while
+`--flat --width-slack 6 --height-slack 15` completes them at ~30 cm2 of
+holes (vs ~6.4 cm2 unrestricted). Expect ~7 min runtime with width slack.
 
 Outputs `out/solutions.txt` plus one `out/solution_NN.png` per solution:
 front view with floor line, shelf outline, and dashed reserve bounds; every
