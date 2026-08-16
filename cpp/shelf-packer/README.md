@@ -44,7 +44,22 @@ restarts. Runs in ~2 s for ~46 boxes.
 ```bash
 make                       # builds ./shelf-packer
 ./shelf-packer boxes.csv --out out --require 'exit-*' --together publish,campus
+make fill                  # two-shelf double-fill mode (below)
 ```
+
+### Double-fill mode (`--fill-all`)
+
+`--fill-all --shelf 325 --shelf 470` packs TWO shelves of the same front
+rectangle (different depths) at once, with a different objective: both
+rectangles must be completely filled (every pile reaches nominal height,
+total width >= nominal), and the ranking minimizes **mismatch holes** — the
+slivers left inside each pile by unequal widths/heights, tolerance included —
+with reserve spill as the tie-break. Volume no longer matters and boxes that
+don't help simply stay out (fitting EVERY box is provably impossible: of the
+five 297x297 boxes only three can ever complete a pile). Clusters must sit
+wholly on one shelf. Output: `solution_NN_A.png` / `solution_NN_B.png` per
+solution. `--width-slack MM` / `--height-slack MM` optionally legalize larger
+mismatches as counted holes.
 
 Outputs `out/solutions.txt` plus one `out/solution_NN.png` per solution:
 front view with floor line, shelf outline, and dashed reserve bounds; every

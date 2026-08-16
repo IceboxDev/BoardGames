@@ -11,3 +11,6 @@ clean:
 	rm -rf shelf-packer out
 
 .PHONY: run clean
+
+fill: shelf-packer
+	./shelf-packer boxes.csv --out out-fill --fill-all --shelf 325 --shelf 470 --require 'exit-*' --together publish,campus

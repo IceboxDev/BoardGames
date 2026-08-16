@@ -50,6 +50,16 @@ struct Params {
   int tolPerBox = 1;      // per-box measurement tolerance (±mm)
   int spillCost = 50;     // reserve-spill penalty: % of full-depth volume per spilled mm²
   bool flatOnly = false;  // --flat: boxes lie flat only — no rotated (spine-out) faces
+  // --shelf D (repeatable): shelf depths for multi-shelf fill-all mode.
+  // --fill-all: every box must be placed; both rectangles completely filled;
+  // objective flips to MINIMIZING mismatch holes (then reserve spill).
+  std::vector<int> shelfDepths;
+  bool fillAll = false;
+  // Fill-all relaxations: mismatches become COUNTED HOLES instead of hard
+  // failures. widthSlack = how much narrower than the pile a cell may be;
+  // heightSlack = how far below nominal a pile top may stop.
+  int widthSlack = 0;
+  int heightSlack = 0;
   int solutions = 8;      // how many solutions to emit
   std::string out = "out";
   std::vector<std::string> require;  // --require NAME (or PREFIX*): must be packed,
@@ -118,6 +128,8 @@ struct Cell {
   int width, height;  // height = max face height of members
   long long vol;
   int depthSum;
+  long long faceArea = 0;  // Σ fw×fh of members (for the hole metric)
+  int maxDepth = 0;
   std::vector<Placement> boxes;
 };
 
@@ -127,6 +139,8 @@ struct Pile {
   int width, height;
   long long vol;
   int depthSum;
+  long long holes = 0;  // pile rect area − Σ member face areas (mismatch gaps)
+  int maxDepth = 0;
   std::vector<int> cells;  // indices into the cell list
 };
 
@@ -184,6 +198,8 @@ static std::vector<Cell> buildCells(const std::vector<Box>& boxes, const std::ve
     c.height = o.fh;
     c.vol = boxes[o.box].vol;
     c.depthSum = o.d;
+    c.faceArea = (long long)o.fw * o.fh;
+    c.maxDepth = o.d;
     c.boxes.push_back({o.box, o.fw, o.fh, o.d, 0});
     cells.push_back(std::move(c));
   }
@@ -202,6 +218,8 @@ static std::vector<Cell> buildCells(const std::vector<Box>& boxes, const std::ve
       c.height = std::max(a.fh, b.fh);
       c.vol = boxes[a.box].vol + boxes[b.box].vol;
       c.depthSum = a.d + b.d;
+      c.faceArea = (long long)a.fw * a.fh + (long long)b.fw * b.fh;
+      c.maxDepth = std::max(a.d, b.d);
       c.boxes.push_back({a.box, a.fw, a.fh, a.d, 0});
       c.boxes.push_back({b.box, b.fw, b.fh, b.d, a.fw});
       cells.push_back(std::move(c));
@@ -228,6 +246,8 @@ static std::vector<Cell> buildCells(const std::vector<Box>& boxes, const std::ve
       c.height = std::max(pc.height, o.fh);
       c.vol = pc.vol + boxes[o.box].vol;
       c.depthSum = pc.depthSum + o.d;
+      c.faceArea = pc.faceArea + (long long)o.fw * o.fh;
+      c.maxDepth = std::max(pc.maxDepth, o.d);
       c.boxes = pc.boxes;
       c.boxes.push_back({o.box, o.fw, o.fh, o.d, pc.width});
       auto key = std::make_pair(c.mask, c.width);
@@ -252,7 +272,7 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
 
   // Dedup piles by box-set; keep the best (volume, depth, narrower width).
   std::unordered_map<uint64_t, Pile> best;
-  const int wTol = 2 * p.tolPerBox;
+  const int wTol = 2 * p.tolPerBox + p.widthSlack;
   const size_t PILE_CAP = 400000;
 
   struct Frame {
@@ -260,6 +280,8 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
     int height;
     long long vol;
     int depthSum;
+    long long faceArea;
+    int maxDepth;
     int nLayers;  // stacked cells — height tolerance accrues per LAYER
   };
   std::vector<int> chosen;
@@ -269,9 +291,11 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
     // Record when the pile plausibly reaches the nominal height. Tolerance
     // accrues once per stacked layer (a layer is as tall as its tallest box),
     // so a many-box pile cannot bank per-box slack into extra overshoot.
-    if (f.height + f.nLayers * p.tolPerBox >= p.heightBase) {
+    if (f.height + f.nLayers * p.tolPerBox >= p.heightBase - p.heightSlack) {
       int width = cells[order[anchor]].width;
-      Pile pile{f.mask, width, f.height, f.vol, f.depthSum, {}};
+      Pile pile{f.mask, width, f.height, f.vol, f.depthSum, 0, f.maxDepth, {}};
+      pile.holes = (long long)width * f.height - f.faceArea +
+                   (long long)width * std::max(0, p.heightBase - f.height);
       pile.cells.reserve(chosen.size());
       for (int ci : chosen) pile.cells.push_back(ci);
       auto it = best.find(f.mask);
@@ -292,7 +316,9 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
       int h = f.height + c.height;
       if (h - nl * p.tolPerBox > p.maxHeight()) continue;
       chosen.push_back(order[k]);
-      dfs(anchor, k + 1, {f.mask | c.mask, h, f.vol + c.vol, f.depthSum + c.depthSum, nl});
+      dfs(anchor, k + 1,
+          {f.mask | c.mask, h, f.vol + c.vol, f.depthSum + c.depthSum, f.faceArea + c.faceArea,
+           std::max(f.maxDepth, c.maxDepth), nl});
       chosen.pop_back();
     }
   };
@@ -300,7 +326,7 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
   for (size_t a = 0; a < order.size(); a++) {
     const Cell& c = cells[order[a]];
     chosen.assign(1, order[a]);
-    dfs(a, a + 1, {c.mask, c.height, c.vol, c.depthSum, 1});
+    dfs(a, a + 1, {c.mask, c.height, c.vol, c.depthSum, c.faceArea, c.maxDepth, 1});
   }
 
   std::vector<Pile> piles;
@@ -789,10 +815,12 @@ static void hsv2rgb(double hue, double s, double v, int& r, int& g, int& b) {
 
 static void renderSolution(const Solution& sol, const std::vector<PlacedRect>& layout,
                            const std::vector<Box>& boxes, const Params& p,
-                           const std::string& path, int rank) {
+                           const std::string& path, int rank,
+                           const std::vector<std::string>& extraLegend = {},
+                           const std::string& titleSuffix = "") {
   int nPlaced = __builtin_popcountll(sol.mask);
   const int LEGEND_COLS = 3;
-  int legendRows = (nPlaced + LEGEND_COLS - 1) / LEGEND_COLS;
+  int legendRows = (nPlaced + (int)extraLegend.size() + LEGEND_COLS - 1) / LEGEND_COLS;
   const int M = 40, TITLE = 26, LEGEND_ROW_H = 11;
   int legendH = legendRows * LEGEND_ROW_H + 18;
   int W = std::max(p.maxWidth() + 2 * M, 1020);
@@ -841,12 +869,14 @@ static void renderSolution(const Solution& sol, const std::vector<PlacedRect>& l
   cv.dashedV(M + p.widthBase + p.overRight, baseY - p.maxHeight(), baseY, 200, 40, 40);
   cv.fill(M - p.overLeft, baseY, M + p.widthBase + p.overRight, baseY + 3, 0, 0, 0);
 
-  char title[160];
-  snprintf(title, sizeof title, "SOLUTION %d  VOL %.1f L  WIDTH %d MM  BOXES %d  AVG DEPTH %lld MM",
-           rank, (double)sol.vol / 1e6, sol.width, nPlaced,
+  char title[200];
+  snprintf(title, sizeof title,
+           "SOLUTION %d%s  VOL %.1f L  WIDTH %d MM  BOXES %d  AVG DEPTH %lld MM", rank,
+           titleSuffix.c_str(), (double)sol.vol / 1e6, sol.width, nPlaced,
            sol.depthSum / std::max(1, nPlaced));
   cv.text(M, 12, title, 20, 20, 20, 2);
 
+  for (const std::string& e : extraLegend) legend.push_back(e);
   int ly0 = baseY + 16;
   int colW = (W - 2 * M) / LEGEND_COLS;
   for (size_t i = 0; i < legend.size(); i++) {
@@ -892,6 +922,343 @@ static void report(std::ostream& os, const Solution& sol, const std::vector<Pile
   os << "\n\n";
 }
 
+// ── Fill-all mode: two shelves completely filled, minimal mismatch holes ─
+//
+// Criteria (strict order):
+//   1. binary  — both rectangles completely filled: total width >= nominal,
+//                every pile reaches nominal height (already enforced). Boxes
+//                that don't make the cut simply stay out — packing every
+//                game is provably impossible (the five 297x297 boxes alone
+//                cannot all complete piles).
+//   2. minimize — mismatch holes: for each pile, rect area minus the summed
+//                face areas of its members (captures the +-1 mm tolerance
+//                slivers too). Reserve spill is the tie-break after holes.
+
+struct ShelfSet {
+  Params prm;               // per-shelf params (depthMax differs)
+  std::vector<Orient> orients;
+  std::vector<Cell> cells;
+  std::vector<Pile> piles;
+};
+
+struct TwoSol {
+  uint64_t maskA = 0, maskB = 0;
+  int wA = 0, wB = 0;
+  long long holes = 0, spill = 0, vol = 0, depthSum = 0;
+  std::vector<int> pA, pB;
+};
+
+struct TwoState {
+  uint64_t maskA = 0, maskB = 0;
+  int wA = 0, wB = 0;
+  long long holes = 0, topOver = 0;
+  std::vector<int> pA, pB;  // pile indices per shelf
+};
+
+static bool clusterFrontOk(uint64_t maskA, uint64_t maskB, const Params& p) {
+  // The required cluster and every companion group must live wholly in ONE
+  // shelf's FRONT row (hidden boxes can't visibly touch).
+  if (p.requiredMask) {
+    if ((maskA & p.requiredMask) != p.requiredMask && (maskB & p.requiredMask) != p.requiredMask)
+      return false;
+  }
+  for (uint64_t g : p.togetherMasks)
+    if ((maskA & g) != g && (maskB & g) != g) return false;
+  return true;
+}
+
+static long long gIncomplete = 0, gCluster = 0, gOk = 0;
+
+static void collectTwo(std::map<std::pair<uint64_t, uint64_t>, TwoSol>& pool, const TwoState& s,
+                       const ShelfSet sets[2], const std::vector<Box>& boxes, uint64_t allMask,
+                       const Params& p, const std::vector<int>& shelfDepths) {
+  if (s.wA < p.widthBase || s.wB < p.widthBase) {
+    gIncomplete++;
+    return;
+  }
+  if (!clusterFrontOk(s.maskA, s.maskB, p)) {
+    gCluster++;
+    return;
+  }
+  (void)boxes;
+  (void)allMask;
+  (void)shelfDepths;
+  gOk++;
+  TwoSol sol;
+  sol.maskA = s.maskA;
+  sol.maskB = s.maskB;
+  sol.wA = s.wA;
+  sol.wB = s.wB;
+  sol.holes = s.holes;
+  sol.spill = (long long)(s.wA - p.widthBase + s.wB - p.widthBase) * p.heightBase + s.topOver;
+  for (int sh = 0; sh < 2; sh++)
+    for (int pi : (sh == 0 ? s.pA : s.pB)) {
+      const Pile& pile = sets[sh].piles[pi];
+      sol.vol += pile.vol;
+      sol.depthSum += pile.depthSum;
+    }
+  sol.pA = s.pA;
+  sol.pB = s.pB;
+  auto key = std::make_pair(s.maskA, s.maskB);
+  auto it = pool.find(key);
+  if (it == pool.end() || sol.holes < it->second.holes ||
+      (sol.holes == it->second.holes && sol.spill < it->second.spill))
+    pool[key] = std::move(sol);
+}
+
+static long long twoScore(const TwoState& s, const Params& p) {
+  long long covered = std::min(s.wA, p.widthBase) + std::min(s.wB, p.widthBase);
+  long long score = covered * 1'000'000LL - s.holes * 800 - s.topOver * 2;
+  uint64_t front = s.maskA | s.maskB;
+  uint64_t rA = s.maskA & p.requiredMask, rB = s.maskB & p.requiredMask;
+  score += (long long)__builtin_popcountll(front & p.requiredMask) * 6'000'000LL;
+  if (rA && rB) score -= 50'000'000LL;  // cluster split across shelves = fatal
+  for (uint64_t g : p.togetherMasks) {
+    uint64_t fA = s.maskA & g, fB = s.maskB & g;
+    if (fA && fB) score -= 30'000'000LL;
+    else {
+      uint64_t inter = fA | fB;
+      if (inter && inter != g) score -= 2'000'000LL;
+      if (inter == g) score += 4'000'000LL;
+    }
+  }
+  return score;
+}
+
+static void twoBeam(const ShelfSet sets[2], const std::vector<std::pair<int, int>>& order,
+                    const Params& p, const std::vector<Box>& boxes, uint64_t allMask,
+                    const std::vector<int>& shelfDepths,
+                    std::map<std::pair<uint64_t, uint64_t>, TwoSol>& pool, size_t beamWidth,
+                    const TwoState& init = {}) {
+  std::vector<TwoState> beam(1, init);
+  for (auto [sh, pi] : order) {
+    const Pile& pile = sets[sh].piles[pi];
+    std::vector<TwoState> next = beam;
+    for (const TwoState& s : beam) {
+      uint64_t used = s.maskA | s.maskB;
+      if (used & pile.mask) continue;
+      int w = sh == 0 ? s.wA : s.wB;
+      if (w + pile.width > p.maxWidth()) continue;
+      TwoState t = s;
+      (sh == 0 ? t.maskA : t.maskB) |= pile.mask;
+      (sh == 0 ? t.wA : t.wB) += pile.width;
+      t.holes += pile.holes;
+      t.topOver += topOverArea(pile, p.heightBase);
+      (sh == 0 ? t.pA : t.pB).push_back(pi);
+      next.push_back(std::move(t));
+    }
+    std::sort(next.begin(), next.end(), [&](const TwoState& a, const TwoState& b) {
+      return twoScore(a, p) > twoScore(b, p);
+    });
+    if (next.size() > beamWidth) next.resize(beamWidth);
+    beam = std::move(next);
+  }
+  for (const TwoState& s : beam) collectTwo(pool, s, sets, boxes, allMask, p, shelfDepths);
+}
+
+static void twoGreedy(const ShelfSet sets[2], const Params& p, const std::vector<Box>& boxes,
+                      uint64_t allMask, const std::vector<int>& shelfDepths,
+                      std::map<std::pair<uint64_t, uint64_t>, TwoSol>& pool, int iterations,
+                      uint64_t seed) {
+  std::mt19937_64 rng(seed);
+  std::vector<std::pair<int, int>> cands;
+  for (int sh = 0; sh < 2; sh++)
+    for (size_t i = 0; i < sets[sh].piles.size(); i++) cands.push_back({sh, (int)i});
+  std::uniform_real_distribution<double> noise(0.7, 1.3);
+  for (int it = 0; it < iterations; it++) {
+    std::vector<std::pair<double, int>> keyed(cands.size());
+    for (size_t i = 0; i < cands.size(); i++) {
+      const Pile& pile = sets[cands[i].first].piles[cands[i].second];
+      // Cleanest piles (fewest holes per mm of width) first, with noise.
+      double key = (double)(pile.holes + 200) / pile.width * noise(rng);
+      key /= 1.0 + 0.15 * __builtin_popcountll(pile.mask & p.requiredMask);
+      for (uint64_t g : p.togetherMasks)
+        if (pile.mask & g) key /= 1.2;
+      keyed[i] = {key, (int)i};
+    }
+    std::sort(keyed.begin(), keyed.end());
+    TwoState s;
+    for (auto& [_, ci] : keyed) {
+      auto [sh, pi] = cands[ci];
+      const Pile& pile = sets[sh].piles[pi];
+      if ((s.maskA | s.maskB) & pile.mask) continue;
+      int& w = sh == 0 ? s.wA : s.wB;
+      if (w + pile.width > p.maxWidth()) continue;
+      (sh == 0 ? s.maskA : s.maskB) |= pile.mask;
+      w += pile.width;
+      s.holes += pile.holes;
+      s.topOver += topOverArea(pile, p.heightBase);
+      (sh == 0 ? s.pA : s.pB).push_back(pi);
+    }
+    collectTwo(pool, s, sets, boxes, allMask, p, shelfDepths);
+  }
+}
+
+static int runFillAll(const std::vector<Box>& boxes, Params& p) {
+  std::vector<int> shelfDepths = p.shelfDepths;
+  if (shelfDepths.empty()) shelfDepths = {p.depthMax, 470};
+  if (shelfDepths.size() != 2) {
+    std::cerr << "--fill-all needs exactly two --shelf depths\n";
+    return 1;
+  }
+  static ShelfSet sets[2];
+  for (int sh = 0; sh < 2; sh++) {
+    sets[sh].prm = p;
+    sets[sh].prm.depthMax = shelfDepths[sh];
+    sets[sh].orients = buildOrients(boxes, sets[sh].prm);
+    sets[sh].cells = buildCells(boxes, sets[sh].orients, sets[sh].prm);
+    sets[sh].piles = buildPiles(sets[sh].cells, sets[sh].prm);
+    // Prune for search tractability: keep every pile carrying a required or
+    // companion box, plus the cleanest of the rest.
+    {
+      uint64_t special = p.requiredMask;
+      for (uint64_t g : p.togetherMasks) special |= g;
+      auto& v = sets[sh].piles;
+      std::stable_sort(v.begin(), v.end(), [](const Pile& a, const Pile& b) {
+        return (double)a.holes / a.width < (double)b.holes / b.width;
+      });
+      std::vector<Pile> kept;
+      size_t plain = 0;
+      for (auto& pile : v) {
+        if (pile.mask & special) kept.push_back(std::move(pile));
+        else if (plain < 5000) {
+          kept.push_back(std::move(pile));
+          plain++;
+        }
+      }
+      v = std::move(kept);
+    }
+    std::cerr << "shelf " << (sh ? "B" : "A") << " (depth " << shelfDepths[sh]
+              << "): " << sets[sh].orients.size() << " orientations, " << sets[sh].cells.size()
+              << " cells, " << sets[sh].piles.size() << " piles\n";
+  }
+  uint64_t allMask = boxes.size() >= 64 ? ~0ULL : ((1ULL << boxes.size()) - 1);
+
+  std::map<std::pair<uint64_t, uint64_t>, TwoSol> pool;
+  std::vector<std::pair<int, int>> order;
+  for (int sh = 0; sh < 2; sh++)
+    for (size_t i = 0; i < sets[sh].piles.size(); i++) order.push_back({sh, (int)i});
+  auto byCleanliness = order;
+  std::sort(byCleanliness.begin(), byCleanliness.end(), [&](auto a, auto b) {
+    const Pile& x = sets[a.first].piles[a.second];
+    const Pile& y = sets[b.first].piles[b.second];
+    return (double)x.holes / x.width < (double)y.holes / y.width;
+  });
+  twoBeam(sets, byCleanliness, p, boxes, allMask, shelfDepths, pool, 1200);
+  std::mt19937_64 rng(7);
+  for (int pass = 0; pass < 4; pass++) {
+    auto shuffled = order;
+    std::shuffle(shuffled.begin(), shuffled.end(), rng);
+    twoBeam(sets, shuffled, p, boxes, allMask, shelfDepths, pool, 700);
+  }
+  twoGreedy(sets, p, boxes, allMask, shelfDepths, pool, 40000, 987654321);
+
+  std::cerr << pool.size() << " complete double-fill packings (" << gOk << " collected, "
+            << gIncomplete << " incomplete, " << gCluster << " cluster-split)\n";
+  if (pool.empty()) {
+    std::cerr << "no packing fills both rectangles under the given constraints\n";
+    return 1;
+  }
+
+  std::vector<TwoSol> ranked;
+  for (auto& [_, s] : pool) ranked.push_back(std::move(s));
+  std::sort(ranked.begin(), ranked.end(), [](const TwoSol& a, const TwoSol& b) {
+    if (a.holes != b.holes) return a.holes < b.holes;
+    if (a.spill != b.spill) return a.spill < b.spill;
+    return a.depthSum > b.depthSum;
+  });
+
+  std::string mk = "mkdir -p " + p.out;
+  if (system(mk.c_str()) != 0) std::cerr << "warning: could not create " << p.out << "\n";
+  std::ofstream rep(p.out + "/solutions.txt");
+  int emitted = 0;
+  std::vector<std::pair<uint64_t, uint64_t>> kept;
+  for (const TwoSol& s : ranked) {
+    bool similar = false;
+    for (auto& [ka, kb] : kept)
+      if (__builtin_popcountll(s.maskA ^ ka) + __builtin_popcountll(s.maskB ^ kb) < 6) {
+        similar = true;
+        break;
+      }
+    if (similar) continue;
+    // Arrange + render each shelf; clusters live wholly in one shelf.
+    Solution shelfSol[2];
+    std::vector<PlacedRect> layouts[2];
+    bool ok = true;
+    for (int sh = 0; sh < 2 && ok; sh++) {
+      Solution& ss = shelfSol[sh];
+      ss.mask = sh == 0 ? s.maskA : s.maskB;
+      ss.width = sh == 0 ? s.wA : s.wB;
+      for (int pi : (sh == 0 ? s.pA : s.pB)) {
+        const Pile& pile = sets[sh].piles[pi];
+        ss.vol += pile.vol;
+        ss.depthSum += pile.depthSum;
+        ss.piles.push_back(pi);
+      }
+      Params pk = sets[sh].prm;
+      pk.requiredMask = (ss.mask & p.requiredMask) == p.requiredMask ? p.requiredMask : 0;
+      pk.togetherMasks.clear();
+      for (uint64_t g : p.togetherMasks)
+        if ((ss.mask & g) == g) pk.togetherMasks.push_back(g);
+      ok = arrangeSolution(ss, sets[sh].piles, sets[sh].cells, pk, layouts[sh]);
+    }
+    if (!ok) continue;
+    kept.push_back({s.maskA, s.maskB});
+    emitted++;
+
+    for (std::ostream* os : {(std::ostream*)&std::cout, (std::ostream*)&rep}) {
+      *os << "── Solution " << emitted << ": holes " << (double)s.holes / 100.0
+          << " cm2, reserve spill " << (double)s.spill / 100.0 << " cm2, vol "
+          << (double)s.vol / 1e6 << " L, widths A=" << s.wA << " B=" << s.wB << " mm, boxes "
+          << __builtin_popcountll(s.maskA | s.maskB) << "\n";
+      for (int sh = 0; sh < 2; sh++) {
+        *os << "  shelf " << (sh ? "B" : "A") << " (depth " << shelfDepths[sh] << "):\n";
+        const auto& pv = sh == 0 ? s.pA : s.pB;
+        for (size_t k = 0; k < pv.size(); k++) {
+          const Pile& pile = sets[sh].piles[pv[k]];
+          *os << "    pile " << k + 1 << " w=" << pile.width << " h=" << pile.height
+              << " holes=" << pile.holes / 100.0 << "cm2:";
+          for (int ci : pile.cells) {
+            const Cell& cell = sets[sh].cells[ci];
+            *os << " [";
+            for (size_t j = 0; j < cell.boxes.size(); j++) {
+              const Placement& pl = cell.boxes[j];
+              if (j) *os << " | ";
+              *os << boxes[pl.box].name << " " << pl.fw << "x" << pl.fh << " d" << pl.d;
+            }
+            *os << "]";
+          }
+          *os << "\n";
+        }
+      }
+      *os << "  left out:";
+      bool anyOut = false;
+      for (size_t i = 0; i < boxes.size(); i++)
+        if (!((s.maskA | s.maskB) & (1ULL << i))) {
+          *os << " " << boxes[i].name;
+          anyOut = true;
+        }
+      if (!anyOut) *os << " (none)";
+      *os << "\n\n";
+    }
+
+    for (int sh = 0; sh < 2; sh++) {
+      std::vector<std::string> extra;
+      char path[256];
+      snprintf(path, sizeof path, "%s/solution_%02d_%c.png", p.out.c_str(), emitted,
+               sh ? 'B' : 'A');
+      char suffix[64];
+      snprintf(suffix, sizeof suffix, " SHELF %c  HOLES %.0f CM2", sh ? 'B' : 'A',
+               (double)s.holes / 100.0);
+      renderSolution(shelfSol[sh], layouts[sh], boxes, sets[sh].prm, path, emitted, extra,
+                     suffix);
+    }
+    if (emitted >= p.solutions) break;
+  }
+  std::cerr << "wrote " << emitted << " fill-all solutions to " << p.out << "/\n";
+  return 0;
+}
+
 int main(int argc, char** argv) {
   Params p;
   std::string input;
@@ -909,6 +1276,13 @@ int main(int argc, char** argv) {
     else if (a == "--require") p.require.push_back(argv[++i]);
     else if (a == "--together") p.together.push_back(argv[++i]);
     else if (a == "--flat") p.flatOnly = true;
+    else if (a == "--shelf") {
+      int d = 0;
+      next(d);
+      p.shelfDepths.push_back(d);
+    } else if (a == "--fill-all") p.fillAll = true;
+    else if (a == "--width-slack") next(p.widthSlack);
+    else if (a == "--height-slack") next(p.heightSlack);
     else if (a == "--solutions") next(p.solutions);
     else if (a == "--out") p.out = argv[++i];
     else input = a;
@@ -948,6 +1322,7 @@ int main(int argc, char** argv) {
     }
     if (__builtin_popcountll(mask) >= 2) p.togetherMasks.push_back(mask);
   }
+  if (p.fillAll) return runFillAll(boxes, p);
   std::vector<Orient> orients = buildOrients(boxes, p);
   std::vector<Cell> cells = buildCells(boxes, orients, p);
   std::vector<Pile> piles = buildPiles(cells, p);
