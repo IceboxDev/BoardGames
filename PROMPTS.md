@@ -812,6 +812,86 @@ Every prompt includes the same style directive so the four images form a visuall
 
 ---
 
+## 102. Choose Your Own Adventure: War with the Evil Power Master
+
+**File:** `packages/web/src/games/war-with-the-evil-power-master/assets/thumbnail.png`
+
+> A top-down view of a retro-futuristic starship command console doubling as a game table, bathed in the glow of a crackling holographic star map. Story cards fan out across the brushed-metal surface in branching forked paths, each junction marked by a small chrome decision token, the trails splitting and reconverging like a flowchart of destinies. One path ends at a card scorched with a laser burn; another glows with a triumphant golden edge. Three pulp-paperback-styled character standees — a young pilot, a navigator, an engineer — stand at the live junction, and a translucent red danger die rests mid-roll near a klaxon lamp tinting one corner crimson. Around the cards, the console dissolves into deep-space bokeh — a porthole full of streaking stars, a toggle-switch panel with glowing amber lights, a coiled headset cable, and the faint silhouette of a menacing battle station hologram rising at the periphery. The mood is Saturday-matinee space opera — your story, your peril, one page-turn from doom. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 103. Forbidden Island
+
+**File:** `packages/web/src/games/forbidden-island/assets/thumbnail.png`
+
+> A top-down view of a grid of lush illustrated island tiles floating on a table that has become a dark, rising sea. Several tiles glow with intact temples, jungles, and stone gardens; others are tinted a drowning blue and half-submerged, water lapping over their edges, and one gap in the grid shows a tile already lost to the depths. Four carved treasure figurines anchor the corners — a crystal flame, an earth stone, an ornate chalice, and a coiled wind statue — each catching its own colored glint. Small wooden adventurer pawns in red, blue, green, and yellow cluster on the safest tiles, one caught mid-dash across a flooding causeway. A brass water-level gauge stands at one edge, its needle creeping ominously upward, beside a fan of flood cards. Around the tiles, the scene dissolves into storm bokeh — churning waves, a torn rope bridge, scattered gold coins sinking into the blue, and a helicopter's searchlight cutting through mist at the periphery. The mood is heroic and waterlogged — grab the treasures and fly before the island swallows everything. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 104. Calico
+
+**File:** `packages/web/src/games/calico/assets/thumbnail.png`
+
+> A top-down view of a sun-faded sewing room worktable holding a hexagonal quilt board mid-assembly, its interlocking fabric hex tiles forming cozy patchwork patterns in mustard, teal, plum, and cream — polka dots, stripes, ferns, and tiny florals nestling into color runs and pattern clusters. Wooden buttons in rainbow shades sit stitched onto completed color groups, and two contented cats — one plump tabby curled directly across a corner of the quilt, one black kitten batting at a loose hex tile — claim their favorite patches. A pincushion bristling with pearl-headed pins, a wooden spool of thread, brass scissors, and a shallow dish of spare fabric hexes surround the board. The scene dissolves at the edges into golden-hour craft-room bokeh — a rocking chair arm draped with yarn, a steaming teacup, a basket of fabric bolts, and dust motes floating in a warm window beam. The mood is snug and quietly puzzling — grandmother's parlor with a competitive streak. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 105. Project L
+
+**File:** `packages/web/src/games/project-l/assets/thumbnail.png`
+
+> A top-down view of a sleek matte-black designer table lit like a gallery installation. Crisp white puzzle cards with die-cut geometric recesses lie in a neat engineering row, several mid-completion — glossy acrylic polyomino pieces in vivid yellow, cyan, magenta, orange, and green click into the white voids like precision instruments, their edges catching sharp studio light. One completed puzzle card sits finished and luminous, its filled shape glowing softly, while a fresh piece hovers a centimeter above its destined slot, casting a clean colored shadow. To one side, a personal supply of pieces is arranged in a tidy gradient spectrum; a small stack of un-attempted puzzle cards waits with minimalist patience. The background dissolves into cool architectural bokeh — a drafting lamp's arc, faint blueprint grid lines etched in the table's surface, and reflections pooling like liquid neon. The mood is precise and satisfying — industrial-design zen with an engine-building hum. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 106. Coup
+
+**File:** `packages/web/src/games/coup/assets/thumbnail.png`
+
+> A top-down view of a gilded council table in a dystopian-renaissance palace, lit by a low crystal chandelier whose light pools on dark lacquered wood. Two face-down influence cards sit before each seat, their ornate art-deco backs promising hidden identities, while one card lies dramatically flipped mid-reveal — an aristocratic figure in embroidered court dress caught in the act. Neat stacks of hexagonal golden coins tower at some seats and dwindle to a single desperate coin at another; a small pile slides across the center where a tax is being seized. A discarded card lies face-up and defeated at the table's edge, its influence lost. Around the play area, the scene dissolves into palace-intrigue bokeh — a wine goblet tipped and bleeding red across velvet, a ceremonial dagger acting as a paperweight, a signet ring, wax-sealed letters, and the shadowed silhouettes of courtiers leaning in from the frame's edge. The mood is silk-gloved menace — everyone is lying and everyone knows it. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 107. Bananagrams
+
+**File:** `packages/web/src/games/bananagrams/assets/thumbnail.png`
+
+> A top-down view of a bright kitchen table caught mid-frenzy, a plump yellow banana-shaped zippered cloth pouch lying open at the center and spilling a river of smooth ivory letter tiles across the wood. In front of it, a personal crossword grid grows organically — interlocking words like "PEEL", "SPLIT", and "GRAPE" built from crisp black-lettered tiles, one word visibly mid-rearrangement with tiles shoved askew and two tiles pinched mid-swap by a hand entering from the frame's edge. A face-down reserve of unclaimed tiles pools near the pouch, and a single discarded Q tile sits exiled far from the action. Around the grids, the table dissolves into sunny breakfast-nook bokeh — a fruit bowl with real bananas for company, a glass of orange juice, a kitchen timer, and a crumb-scattered plate at the periphery. The mood is caffeinated and gleeful — a spelling race where the fastest hands win. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 108. Joking Hazard
+
+**File:** `packages/web/src/games/joking-hazard/assets/thumbnail.png`
+
+> A top-down view of a late-night apartment coffee table mid-party, where three comic-panel cards sit aligned in the center forming an unfinished three-panel strip — each card a bold, crudely-drawn stick-figure cartoon with round blank faces and expressive flailing limbs, the first two panels setting up a scene while the third slot waits empty and expectant. A hand from the frame's edge slaps down a candidate final panel with visible glee. Fans of face-down comic cards spread before each surrounding seat, their backs a wall of tiny cartoon faces, and a chaotic judged pile of rejected punchline cards sprawls to one side. Around the strip, the table dissolves into party bokeh — craft beer bottles with peeling labels, a bowl of popcorn mid-avalanche, a phone lighting up ignored, and a friend's hand frozen mid-laugh-slap on the table's edge. The mood is tears-in-your-eyes irreverent — the terrible punchline everyone saw coming and loved anyway. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 109. Happy Little Dinosaurs
+
+**File:** `packages/web/src/games/happy-little-dinosaurs/assets/thumbnail.png`
+
+> A top-down view of a pastel game table where four adorable round-eyed cartoon dinosaurs — a mint T-rex, a lavender triceratops, a peach stegosaurus, and a baby-blue pterodactyl — stand as chunky kawaii meeples on a winding numbered escape trail, one dino comically far ahead and one teetering at the start. Above them, disaster looms in the cutest way possible: a card flipped face-up in the center shows a smiling meteor streaking down with sparkle trails, while other face-up cards hint at heartbreak, tar pits, and a volcano puffing candy-pink smoke. Each dino's home zone holds a small tableau of survival point cards and one hopeful umbrella token raised against the falling sky. Around the trail, the table dissolves into apocalypse-brunch bokeh — a spilled juice box, cupcake crumbs, tiny cactus pots, and a rubber-duck-sized asteroid rolling off the frame. The mood is cheerfully doomed — it's the end of the world and the dinosaurs have never been happier. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 110. Letter Jam
+
+**File:** `packages/web/src/games/letter-jam/assets/thumbnail.png`
+
+> A top-down view of a warm café table set for a cooperative word puzzle, where five wooden card-stands ring the table's center, each holding a single letter card facing outward — away from its owner's empty seat — so every seat can read everyone's letter but its own. In the center, a spiral of numbered wooden clue chips lies mid-clue: chips resting beside several of the stands spell out an unseen word by pointing from letter to letter, with the number-one chip gleaming brightest. A jar of strawberry jam with a gingham lid anchors one corner, a butter knife resting across a toast slice beside it, leaning into the game's namesake pun. Face-down letter cards wait in neat personal stacks, and a small flower-shaped token tray holds the team's remaining green and red clue tokens. The scene dissolves at the edges into cozy café bokeh — a cappuccino with latte art, reading glasses, a pencil resting on a folded napkin of scribbled guesses, and fairy lights strung past the periphery. The mood is heads-together and hopeful — a team spelling its way out, one clue at a time. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 111. Monikers
+
+**File:** `packages/web/src/games/monikers/assets/thumbnail.png`
+
+> A top-down view of a living-room table transformed into a party-game arena, a thick well-shuffled deck of cream name-cards sitting square in the center with one card held aloft by a hand entering from the frame's edge, angled so only the table's far side could read it. A generous discard pile of already-guessed cards sprawls in a triumphant fan, while a small hoard of kept cards is stacked like points beside one team's coffee mugs. A vintage hourglass runs low in the corner, its sand nearly gone, and a hand-drawn score sheet with two team tally columns curls beside it. All around, the evidence of escalating rounds: one guesser's cocktail napkin folded into an improvised charades prop, a feather boa flung across a chair arm, and a single sock inexplicably on the table. The scene dissolves into house-party bokeh — string lights, mismatched wine glasses, a laughing crowd's silhouettes leaning in from the dark periphery. The mood is breathless and ridiculous — the same forty names getting funnier every round. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
 # Background Image Prompts
 
 All backgrounds were generated with **ChatGPT (image generation)** on March 18, 2026.
