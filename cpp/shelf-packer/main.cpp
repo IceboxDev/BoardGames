@@ -471,14 +471,24 @@ static std::vector<int> cellOrderByHeight(const Pile& pile, const std::vector<Ce
   return cs;
 }
 
+/**
+ * `slackLeft`: cells narrower than the pile push their mismatch slack to the
+ * pile's LEFT side (cells right-aligned) instead of the default right side.
+ * Callers set it for piles in the left half of the shelf so slack migrates
+ * toward the nearer edge — boxes press flush against their inward neighbors
+ * and the outermost sliver falls into the overflow padding, not between
+ * piles.
+ */
 static void emitPile(const Pile& pile, const std::vector<Cell>& cells,
                      const std::vector<int>& cellOrder,
-                     const std::function<std::vector<int>(int)>& boxOrderOf, int x,
+                     const std::function<std::vector<int>(int)>& boxOrderOf, int x, bool slackLeft,
                      std::vector<PlacedRect>& out) {
   int y = 0;
   for (int ci : cellOrder) {
     const Cell& cell = cells[ci];
-    int xOff = 0;
+    int cellW = 0;
+    for (const Placement& pl : cell.boxes) cellW += pl.fw;
+    int xOff = slackLeft ? pile.width - cellW : 0;
     for (int bi : boxOrderOf(ci)) {
       const Placement& pl = cell.boxes[bi];
       out.push_back({pl.box, pl.fw, pl.fh, pl.d, x + xOff, y});
@@ -486,7 +496,6 @@ static void emitPile(const Pile& pile, const std::vector<Cell>& cells,
     }
     y += cell.height;
   }
-  (void)pile;
 }
 
 static std::vector<int> identityBoxOrder(const Cell& cell) {
@@ -529,11 +538,14 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
   std::sort(freePiles.begin(), freePiles.end(),
             [&](int a, int b) { return piles[a].width > piles[b].width; });
 
+  auto slackLeftAt = [&](int x, int pileWidth) { return 2 * x + pileWidth < sol.width; };
+
   if (clusters.empty() || clusterPiles.empty()) {
     out.clear();
     int x = 0;
     for (int pi : freePiles) {
-      emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells), defaultBoxOrder, x, out);
+      emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells), defaultBoxOrder, x,
+               slackLeftAt(x, piles[pi].width), out);
       x += piles[pi].width;
     }
     return clusters.empty();
@@ -613,12 +625,14 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
       layout.clear();
       int x = 0;
       for (int pi : freePiles) {
-        emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells), defaultBoxOrder, x, layout);
+        emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells), defaultBoxOrder, x,
+                 slackLeftAt(x, piles[pi].width), layout);
         x += piles[pi].width;
       }
       for (const auto& block : blocks)
         for (int pi : block) {
-          emitPile(piles[pi], cells, clusterCellOrder(piles[pi]), boxOrderOf, x, layout);
+          emitPile(piles[pi], cells, clusterCellOrder(piles[pi]), boxOrderOf, x,
+                   slackLeftAt(x, piles[pi].width), layout);
           x += piles[pi].width;
         }
       // Every cluster must be internally connected.
@@ -1185,8 +1199,6 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
   // complete-width states stop dying on the cluster-split check.
   for (int reqShelf = 0; reqShelf < 2; reqShelf++)
     for (int togShelf = 0; togShelf < 2; togShelf++) {
-      uint64_t clusterBits = p.requiredMask;
-      for (uint64_t g : p.togetherMasks) clusterBits |= g;
       auto pinFilter = [&](const std::vector<std::pair<int, int>>& src) {
         std::vector<std::pair<int, int>> v;
         for (auto c : src) {
