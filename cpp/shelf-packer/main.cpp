@@ -472,17 +472,18 @@ static std::vector<int> cellOrderByHeight(const Pile& pile, const std::vector<Ce
 }
 
 /**
- * `slackLeft`: cells narrower than the pile push their mismatch slack to the
- * pile's LEFT side (cells right-aligned) instead of the default right side.
- * Callers set it for piles in the left half of the shelf so slack migrates
- * toward the nearer edge — boxes press flush against their inward neighbors
- * and the outermost sliver falls into the overflow padding, not between
- * piles.
+ * Cells narrower than the pile push their mismatch slack toward the nearer
+ * shelf edge: the leftmost pile fully left, the rightmost fully right, and
+ * interior piles by half-rule. Edge slack lands in the overhang, where the
+ * nominal window can slide off it entirely.
  */
 static void emitPile(const Pile& pile, const std::vector<Cell>& cells,
                      const std::vector<int>& cellOrder,
-                     const std::function<std::vector<int>(int)>& boxOrderOf, int x, bool slackLeft,
+                     const std::function<std::vector<int>(int)>& boxOrderOf, int x, int solWidth,
                      std::vector<PlacedRect>& out) {
+  bool slackLeft = x == 0                          ? true
+                   : x + pile.width == solWidth ? false
+                                                : 2 * x + pile.width < solWidth;
   int y = 0;
   for (int ci : cellOrder) {
     const Cell& cell = cells[ci];
@@ -505,6 +506,33 @@ static std::vector<int> identityBoxOrder(const Cell& cell) {
 }
 
 /**
+ * Holes INSIDE the nominal widthBase x heightBase window, minimized over the
+ * window's position along the layout (the layout may overhang each side by
+ * the overflow allowance, so edge slack can escape the window entirely).
+ */
+static long long interiorHolesOf(const std::vector<PlacedRect>& layout, int W, const Params& p,
+                                 int& bestOffset) {
+  int aLo = std::max(0, W - p.widthBase - p.overRight);
+  int aHi = std::min(p.overLeft, std::max(0, W - p.widthBase));
+  long long best = -1;
+  bestOffset = 0;
+  for (int a = aLo; a <= aHi; a++) {
+    long long covered = 0;
+    for (const PlacedRect& r : layout) {
+      int x0 = std::max(r.x0, a), x1 = std::min(r.x0 + r.fw, a + p.widthBase);
+      int y1 = std::min(r.y0 + r.fh, p.heightBase);
+      if (x1 > x0 && y1 > r.y0) covered += (long long)(x1 - x0) * (y1 - r.y0);
+    }
+    long long holes = (long long)p.widthBase * p.heightBase - covered;
+    if (best < 0 || holes < best) {
+      best = holes;
+      bestOffset = a;
+    }
+  }
+  return best;
+}
+
+/**
  * Produce a concrete layout for a solution and prove its cluster constraints.
  * Clusters = the --require set plus every fully-present --together group.
  * Cluster-carrying piles are grouped into consecutive blocks (clusters that
@@ -515,7 +543,8 @@ static std::vector<int> identityBoxOrder(const Cell& cell) {
  */
 static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
                             const std::vector<Cell>& cells, const Params& p,
-                            std::vector<PlacedRect>& out) {
+                            std::vector<PlacedRect>& out, int* windowOffset = nullptr,
+                            long long* interiorOut = nullptr) {
   // Hard membership rules first.
   if (p.requiredMask && (sol.mask & p.requiredMask) != p.requiredMask) return false;
   for (uint64_t g : p.togetherMasks) {
@@ -538,18 +567,46 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
   std::sort(freePiles.begin(), freePiles.end(),
             [&](int a, int b) { return piles[a].width > piles[b].width; });
 
-  auto slackLeftAt = [&](int x, int pileWidth) { return 2 * x + pileWidth < sol.width; };
-
-  if (clusters.empty() || clusterPiles.empty()) {
-    out.clear();
-    int x = 0;
-    for (int pi : freePiles) {
-      emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells), defaultBoxOrder, x,
-               slackLeftAt(x, piles[pi].width), out);
-      x += piles[pi].width;
-    }
-    return clusters.empty();
+  if (clusters.empty() && !sol.piles.empty() && clusterPiles.empty()) {
+    // No cluster constraints: pick the pile order + window offset minimizing
+    // interior holes directly.
+    auto emitOrder = [&](const std::vector<int>& seq, std::vector<PlacedRect>& layout) {
+      layout.clear();
+      int x = 0;
+      for (int pi : seq) {
+        emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells), defaultBoxOrder, x,
+                 sol.width, layout);
+        x += piles[pi].width;
+      }
+    };
+    std::vector<PlacedRect> layout, bestLayout;
+    long long bestHoles = -1;
+    int bestOff = 0;
+    size_t n = freePiles.size();
+    for (size_t l = 0; l < n; l++)
+      for (size_t r = 0; r < n; r++) {
+        if (n > 1 && l == r) continue;
+        std::vector<int> seq;
+        seq.push_back(freePiles[l]);
+        for (size_t k = 0; k < n; k++)
+          if (k != l && k != r) seq.push_back(freePiles[k]);
+        if (r != l) seq.push_back(freePiles[r]);
+        emitOrder(seq, layout);
+        int off = 0;
+        long long holes = interiorHolesOf(layout, sol.width, p, off);
+        if (bestHoles < 0 || holes < bestHoles) {
+          bestHoles = holes;
+          bestOff = off;
+          bestLayout = layout;
+        }
+        if (n <= 1) break;
+      }
+    out = bestLayout;
+    if (windowOffset) *windowOffset = bestOff;
+    if (interiorOut) *interiorOut = bestHoles;
+    return true;
   }
+  if (clusterPiles.empty()) return clusters.empty();
 
   // Blocks: clusters sharing a pile merge (their piles must interleave).
   size_t nc = clusters.size();
@@ -613,6 +670,34 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
   long long tries = 0;
   std::vector<PlacedRect> layout;
 
+  // Units: free piles individually + each block as an unmovable run. The
+  // final order is chosen to minimize interior holes: try edge-pair
+  // placements ranked by a quick unverified layout, then verify clusters.
+  size_t nFree = freePiles.size(), nUnits = nFree + blocks.size();
+  std::vector<int> unitOrder(nUnits);
+  auto seqOf = [&](const std::vector<int>& uo) {
+    std::vector<int> seq;
+    for (int u : uo) {
+      if (u < (int)nFree) seq.push_back(freePiles[u]);
+      else
+        for (int pi : blocks[u - nFree]) seq.push_back(pi);
+    }
+    return seq;
+  };
+  auto emitSeq = [&](const std::vector<int>& seq,
+                     const std::function<std::vector<int>(int)>& boxOrderOf,
+                     std::vector<PlacedRect>& lo) {
+    lo.clear();
+    int x = 0;
+    for (int pi : seq) {
+      bool isCluster = (piles[pi].mask & clusterUnion) != 0;
+      emitPile(piles[pi], cells,
+               isCluster ? clusterCellOrder(piles[pi]) : cellOrderByHeight(piles[pi], cells),
+               boxOrderOf, x, sol.width, lo);
+      x += piles[pi].width;
+    }
+  };
+
   auto testArrangement = [&](void) -> bool {
     std::vector<size_t> counter(permCells.size(), 0);
     while (true) {
@@ -622,19 +707,7 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
           if (permCells[k].ci == ci) return permCells[k].perms[counter[k]];
         return identityBoxOrder(cells[ci]);
       };
-      layout.clear();
-      int x = 0;
-      for (int pi : freePiles) {
-        emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells), defaultBoxOrder, x,
-                 slackLeftAt(x, piles[pi].width), layout);
-        x += piles[pi].width;
-      }
-      for (const auto& block : blocks)
-        for (int pi : block) {
-          emitPile(piles[pi], cells, clusterCellOrder(piles[pi]), boxOrderOf, x,
-                   slackLeftAt(x, piles[pi].width), layout);
-          x += piles[pi].width;
-        }
+      emitSeq(seqOf(unitOrder), boxOrderOf, layout);
       // Every cluster must be internally connected.
       bool allOk = true;
       for (uint64_t g : clusters) {
@@ -677,9 +750,42 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
     return false;
   };
 
-  if (permuteBlocks(0)) {
-    out = layout;
-    return true;
+  // Rank candidate unit orders by unverified interior holes.
+  std::vector<int> baseOrder(nUnits);
+  for (size_t i = 0; i < nUnits; i++) baseOrder[i] = (int)i;
+  std::vector<std::pair<long long, std::vector<int>>> cands;
+  auto scoreOrder = [&](const std::vector<int>& uo) {
+    std::vector<PlacedRect> lo;
+    emitSeq(seqOf(uo), defaultBoxOrder, lo);
+    int off = 0;
+    cands.push_back({interiorHolesOf(lo, sol.width, p, off), uo});
+  };
+  scoreOrder(baseOrder);
+  for (size_t l = 0; l < nUnits && nUnits > 1; l++)
+    for (size_t r = 0; r < nUnits; r++) {
+      if (l == r) continue;
+      std::vector<int> uo;
+      uo.push_back((int)l);
+      for (size_t k = 0; k < nUnits; k++)
+        if (k != l && k != r) uo.push_back((int)k);
+      uo.push_back((int)r);
+      scoreOrder(uo);
+    }
+  std::stable_sort(cands.begin(), cands.end(),
+                   [](const auto& a, const auto& b) { return a.first < b.first; });
+
+  size_t tried = 0;
+  for (auto& [_, uo] : cands) {
+    if (++tried > 16 || tries > 100000) break;
+    unitOrder = uo;
+    if (permuteBlocks(0)) {
+      out = layout;
+      int off = 0;
+      long long holes = interiorHolesOf(layout, sol.width, p, off);
+      if (windowOffset) *windowOffset = off;
+      if (interiorOut) *interiorOut = holes;
+      return true;
+    }
   }
   return false;
 }
@@ -830,7 +936,7 @@ static void hsv2rgb(double hue, double s, double v, int& r, int& g, int& b) {
 
 static void renderSolution(const Solution& sol, const std::vector<PlacedRect>& layout,
                            const std::vector<Box>& boxes, const Params& p,
-                           const std::string& path, int rank,
+                           const std::string& path, int rank, int windowOffset = 0,
                            const std::vector<std::string>& extraLegend = {},
                            const std::string& titleSuffix = "") {
   int nPlaced = __builtin_popcountll(sol.mask);
@@ -844,8 +950,9 @@ static void renderSolution(const Solution& sol, const std::vector<PlacedRect>& l
   int baseY = H - M - legendH;  // floor line (y grows downward)
   std::vector<std::string> legend;
 
-  int x0 = M + (p.widthBase - sol.width) / 2;  // center the overhang
-  if (x0 < M - p.overLeft) x0 = M - p.overLeft;
+  // The nominal window sits at layout coord `windowOffset`; canvas M is the
+  // window's left edge, so the layout origin lands at M - offset.
+  int x0 = M - windowOffset;
 
   for (const PlacedRect& r : layout) {
     int bx = x0 + r.x0, by = baseY - r.y0 - r.fh;
@@ -1233,25 +1340,25 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
     return a.depthSum > b.depthSum;
   });
 
-  std::string mk = "mkdir -p " + p.out;
-  if (system(mk.c_str()) != 0) std::cerr << "warning: could not create " << p.out << "\n";
-  std::ofstream rep(p.out + "/solutions.txt");
-  int emitted = 0;
-  std::vector<std::pair<uint64_t, uint64_t>> kept;
-  for (const TwoSol& s : ranked) {
-    bool similar = false;
-    for (auto& [ka, kb] : kept)
-      if (__builtin_popcountll(s.maskA ^ ka) + __builtin_popcountll(s.maskB ^ kb) < 6) {
-        similar = true;
-        break;
-      }
-    if (similar) continue;
-    // Arrange + render each shelf; clusters live wholly in one shelf.
+  // Exact pass: arrange the strongest candidates and score the holes that
+  // actually remain INSIDE the nominal windows (edge slack that escapes into
+  // the overhang no longer counts). Re-rank on that.
+  struct Evald {
+    const TwoSol* s;
+    long long exact;
     Solution shelfSol[2];
     std::vector<PlacedRect> layouts[2];
+    int offsets[2];
+  };
+  std::vector<Evald> evald;
+  for (size_t i = 0; i < ranked.size() && evald.size() < 250; i++) {
+    const TwoSol& s = ranked[i];
+    Evald e;
+    e.s = &s;
+    e.exact = 0;
     bool ok = true;
     for (int sh = 0; sh < 2 && ok; sh++) {
-      Solution& ss = shelfSol[sh];
+      Solution& ss = e.shelfSol[sh];
       ss.mask = sh == 0 ? s.maskA : s.maskB;
       ss.width = sh == 0 ? s.wA : s.wB;
       for (int pi : (sh == 0 ? s.pA : s.pB)) {
@@ -1265,19 +1372,47 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
       pk.togetherMasks.clear();
       for (uint64_t g : p.togetherMasks)
         if ((ss.mask & g) == g) pk.togetherMasks.push_back(g);
-      ok = arrangeSolution(ss, sets[sh].piles, sets[sh].cells, pk, layouts[sh]);
+      long long holes = 0;
+      ok = arrangeSolution(ss, sets[sh].piles, sets[sh].cells, pk, e.layouts[sh], &e.offsets[sh],
+                           &holes);
+      e.exact += holes;
     }
     if (!ok) {
       extern long long gArrangeFail;
       gArrangeFail++;
       continue;
     }
+    evald.push_back(std::move(e));
+  }
+  std::stable_sort(evald.begin(), evald.end(), [](const Evald& a, const Evald& b) {
+    if (a.exact != b.exact) return a.exact < b.exact;
+    return a.s->spill < b.s->spill;
+  });
+
+  std::string mk = "mkdir -p " + p.out;
+  if (system(mk.c_str()) != 0) std::cerr << "warning: could not create " << p.out << "\n";
+  std::ofstream rep(p.out + "/solutions.txt");
+  int emitted = 0;
+  std::vector<std::pair<uint64_t, uint64_t>> kept;
+  for (Evald& e : evald) {
+    const TwoSol& s = *e.s;
+    bool similar = false;
+    for (auto& [ka, kb] : kept)
+      if (__builtin_popcountll(s.maskA ^ ka) + __builtin_popcountll(s.maskB ^ kb) < 6) {
+        similar = true;
+        break;
+      }
+    if (similar) continue;
+    Solution* shelfSol = e.shelfSol;
+    std::vector<PlacedRect>* layouts = e.layouts;
     kept.push_back({s.maskA, s.maskB});
     emitted++;
 
     for (std::ostream* os : {(std::ostream*)&std::cout, (std::ostream*)&rep}) {
-      *os << "── Solution " << emitted << ": holes " << (double)s.holes / 100.0
-          << " cm2, reserve spill " << (double)s.spill / 100.0 << " cm2, vol "
+      *os << "── Solution " << emitted << ": holes in rect " << (double)e.exact / 100.0
+          << " cm2 (raw slack " << (double)s.holes / 100.0 << " cm2, escaped "
+          << (double)(s.holes - e.exact) / 100.0 << "), reserve spill "
+          << (double)s.spill / 100.0 << " cm2, vol "
           << (double)s.vol / 1e6 << " L, widths A=" << s.wA << " B=" << s.wB << " mm, boxes "
           << __builtin_popcountll(s.maskA | s.maskB) << "\n";
       for (int sh = 0; sh < 2; sh++) {
@@ -1317,10 +1452,10 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
       snprintf(path, sizeof path, "%s/solution_%02d_%c.png", p.out.c_str(), emitted,
                sh ? 'B' : 'A');
       char suffix[64];
-      snprintf(suffix, sizeof suffix, " SHELF %c  HOLES %.0f CM2", sh ? 'B' : 'A',
-               (double)s.holes / 100.0);
-      renderSolution(shelfSol[sh], layouts[sh], boxes, sets[sh].prm, path, emitted, extra,
-                     suffix);
+      snprintf(suffix, sizeof suffix, " SHELF %c  HOLES IN RECT %.0f CM2", sh ? 'B' : 'A',
+               (double)e.exact / 100.0);
+      renderSolution(shelfSol[sh], layouts[sh], boxes, sets[sh].prm, path, emitted,
+                     e.offsets[sh], extra, suffix);
     }
     if (emitted >= p.solutions) break;
   }
@@ -1442,6 +1577,7 @@ int main(int argc, char** argv) {
   // solution" to a human).
   std::vector<Solution> sols;
   std::vector<std::vector<PlacedRect>> layouts;
+  std::vector<int> offsets;
   int rejectedRequired = 0, rejectedCluster = 0;
   for (const Solution& s : ranked) {
     if ((s.mask & p.requiredMask) != p.requiredMask) {
@@ -1457,12 +1593,14 @@ int main(int argc, char** argv) {
     }
     if (similar) continue;
     std::vector<PlacedRect> layout;
-    if (!arrangeSolution(s, piles, cells, p, layout)) {
+    int off = 0;
+    if (!arrangeSolution(s, piles, cells, p, layout, &off)) {
       rejectedCluster++;
       continue;
     }
     sols.push_back(s);
     layouts.push_back(std::move(layout));
+    offsets.push_back(off);
     if ((int)sols.size() >= p.solutions) break;
   }
   if (p.requiredMask) {
@@ -1479,7 +1617,7 @@ int main(int argc, char** argv) {
     report(rep, sols[i], piles, cells, boxes, (int)i + 1);
     char path[256];
     snprintf(path, sizeof path, "%s/solution_%02d.png", p.out.c_str(), (int)i + 1);
-    renderSolution(sols[i], layouts[i], boxes, p, path, (int)i + 1);
+    renderSolution(sols[i], layouts[i], boxes, p, path, (int)i + 1, offsets[i]);
   }
   std::cerr << "wrote " << sols.size() << " solutions to " << p.out << "/\n";
   return 0;
