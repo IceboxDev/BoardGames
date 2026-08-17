@@ -26,20 +26,33 @@ export function traitArt(trait: SkillTraitId): string | undefined {
 }
 
 /**
- * The hue the TRAIT background set was generated around (indigo #6366f1 glows
- * on near-black — measured ≈229–239° across the set). Because the images are
- * essentially monochromatic light-on-black, a single CSS hue-rotate re-hues
- * every glow, spark and beam to the profile accent while black stays black.
+ * Custom claim-card emblems (hand-made artwork, like the trophies and the
+ * flame) — drop `emblem-coop.svg`, `emblem-variety.svg` and
+ * `emblem-dedication.svg` into assets/ and they replace the stock icons.
+ * Rendered as-is (no re-hue), same as the trophies.
  */
-const ART_BASE_HUE = 232;
+const emblems = import.meta.glob("./assets/emblem-*.{svg,webp,png}", {
+  eager: true,
+  query: "?url",
+  import: "default",
+}) as Record<string, string>;
+
+export function claimEmblemArt(kind: "coop" | "variety" | "dedication"): string | undefined {
+  return (
+    emblems[`./assets/emblem-${kind}.svg`] ??
+    emblems[`./assets/emblem-${kind}.webp`] ??
+    emblems[`./assets/emblem-${kind}.png`]
+  );
+}
 
 /**
- * The non-podium CLAIM set (streak/winrate/coop/form/variety/dedication) was
- * generated around a warm ember-gold glow instead — measured ≈19–27° across
- * the six images — so its accent re-hue rotates from here. The podium set
- * (gold/silver/bronze trophies) is NEVER re-hued: the metal IS the meaning.
+ * The indigo the generated background sets are ambient in (#6366f1 glows on
+ * near-black — measured ≈229–239° across the trait set; the claim set shares
+ * the same indigo ambience under its warm glow). A single CSS hue-rotate from
+ * here re-hues the scene to the profile accent while black stays black — and
+ * an indigo-accent profile keeps the untouched original.
  */
-const CLAIM_ART_BASE_HUE = 22;
+const ART_BASE_HUE = 232;
 
 function hexToHue(hex: string): number | null {
   const m = /^#([0-9a-f]{6})$/i.exec(hex);
@@ -61,16 +74,13 @@ function hexToHue(hex: string): number | null {
 
 /**
  * CSS filter that re-hues generated card art to the profile accent. Undefined
- * when the accent is missing, grey, or already close to the art's base hue.
+ * when the accent is missing, grey, or already indigo-ish.
  */
-export function artHueFilter(
-  accentHex: string | null | undefined,
-  baseHue: number = ART_BASE_HUE,
-): string | undefined {
+export function artHueFilter(accentHex: string | null | undefined): string | undefined {
   if (!accentHex) return undefined;
   const hue = hexToHue(accentHex);
   if (hue === null) return undefined;
-  let delta = Math.round(hue - baseHue);
+  let delta = Math.round(hue - ART_BASE_HUE);
   if (delta > 180) delta -= 360;
   if (delta < -180) delta += 360;
   if (Math.abs(delta) < 8) return undefined;
@@ -78,15 +88,19 @@ export function artHueFilter(
 }
 
 /**
- * Accent re-hue for the claim card's art: applies to the warm ember claim set
- * only — podium (trophy-metal) art always returns undefined.
+ * Accent re-hue for the claim card's art. Podium (trophy-metal) art always
+ * returns undefined — the metal IS the meaning. The other six claim images
+ * rotate from the SAME indigo base as the trait set: their scenes are
+ * indigo-ambient with a warm glow, and anchoring to the ambience keeps an
+ * indigo-accent profile on the untouched original (anchoring to the warm glow
+ * instead spun the ambience green — Aydan's bug).
  */
 export function claimArtFilter(
   claim: ClaimFact,
   accentHex: string | null | undefined,
 ): string | undefined {
   if (claim.kind === "highlight") return undefined;
-  return artHueFilter(accentHex, CLAIM_ART_BASE_HUE);
+  return artHueFilter(accentHex);
 }
 
 export function claimArt(claim: ClaimFact): string | undefined {

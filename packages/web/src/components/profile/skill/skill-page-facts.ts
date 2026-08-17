@@ -82,8 +82,14 @@ export function claimFact(
   bestGameSlug: string | null,
   bestSkillTrait: SkillTraitId | null = null,
 ): ClaimFact | null {
+  // trait-strong is excluded too: "Strong Perception · score 41" is vague, can
+  // read as faint praise, and restates what the Best-skill card already does
+  // better — the ego-safe ladder below always has something concrete instead.
   const candidates = skill.highlights.filter(
-    (h) => h.kind !== "top-trait" && !(h.kind === "game-first" && h.slug === bestGameSlug),
+    (h) =>
+      h.kind !== "top-trait" &&
+      h.kind !== "trait-strong" &&
+      !(h.kind === "game-first" && h.slug === bestGameSlug),
   );
   const fresh =
     candidates.find((h) => !("trait" in h) || h.trait !== bestSkillTrait) ?? candidates[0];

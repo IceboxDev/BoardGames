@@ -10,7 +10,7 @@ import { Surface } from "../ui/Surface.tsx";
 
 // Non-editable radar/spider chart of a player's skill profile. Axis labels AND
 // values are data-driven — they come from `skill` (generated later by a trusted
-// job). While `skill` is null we render a ghosted grid + "coming soon" caption
+// job). While `skill` is null we render a ghosted grid + an unlock caption
 // in the same footprint so the layout never shifts when it lands.
 //
 // SVG with a fixed viewBox scales fluidly, so the chart is responsive by
@@ -61,9 +61,9 @@ export function HexSkillChart({ skill, accentHex, axisDetails }: HexSkillChartPr
         // right extremes ("Dexterity", "Perception") and must not clip.
         className={`w-full overflow-visible ${axes ? "" : "opacity-40"}`}
         role="img"
-        aria-label={axes ? "Skill profile chart" : "Skill profile not yet generated"}
+        aria-label={axes ? "Skill profile chart" : "Skill profile locked"}
       >
-        <title>{axes ? "Skill profile" : "Skill profile coming soon"}</title>
+        <title>{axes ? "Skill profile" : "Skill profile locked"}</title>
 
         {/* Grid rings */}
         {RINGS.map((factor) => (
@@ -201,7 +201,9 @@ export function HexSkillChart({ skill, accentHex, axisDetails }: HexSkillChartPr
           <p className="text-2xs font-semibold uppercase tracking-pill text-fg-secondary">
             Skill profile
           </p>
-          <p className="text-3xs text-fg-muted">Coming soon</p>
+          {/* Not "coming soon" — unlocking it is entirely in the player's
+              hands (play more rated games), never a missing feature. */}
+          <p className="text-3xs text-fg-muted">Unlocks with more rated games</p>
         </div>
       )}
     </div>

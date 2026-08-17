@@ -28,14 +28,28 @@ const PlayerNightsPage = lazy(() => import("./pages/PlayerNightsPage"));
 const PlayerSkillPage = lazy(() => import("./pages/PlayerSkillPage"));
 const GamesManagerPage = lazy(() => import("./pages/GamesManagerPage"));
 const PlayersDirectoryPage = lazy(() => import("./pages/PlayersDirectoryPage"));
-const DeckPreview = lazy(() => import("./pages/DeckPreview"));
-const DndNightPreview = lazy(() => import("./pages/DndNightPreview"));
-const ExitNightPreview = lazy(() => import("./pages/ExitNightPreview"));
-const DndToolPreview = lazy(() => import("./pages/DndToolPreview"));
-const RsvpPreview = lazy(() => import("./pages/RsvpPreview"));
-const DecryptoPreview = lazy(() => import("./pages/DecryptoPreview"));
-const SkillPreview = lazy(() => import("./pages/SkillPreview"));
-const UiGalleryPage = lazy(() => import("./pages/UiGalleryPage"));
+// Dev-only preview/gallery pages: guarded by `import.meta.env.DEV`, which is
+// statically `false` in production builds — the routes below vanish AND the
+// dead dynamic imports (and their chunks) are dropped by the bundler, so
+// nothing under /dev/* ships to prod.
+const DeckPreview = import.meta.env.DEV ? lazy(() => import("./pages/DeckPreview")) : () => null;
+const DndNightPreview = import.meta.env.DEV
+  ? lazy(() => import("./pages/DndNightPreview"))
+  : () => null;
+const ExitNightPreview = import.meta.env.DEV
+  ? lazy(() => import("./pages/ExitNightPreview"))
+  : () => null;
+const DndToolPreview = import.meta.env.DEV
+  ? lazy(() => import("./pages/DndToolPreview"))
+  : () => null;
+const RsvpPreview = import.meta.env.DEV ? lazy(() => import("./pages/RsvpPreview")) : () => null;
+const DecryptoPreview = import.meta.env.DEV
+  ? lazy(() => import("./pages/DecryptoPreview"))
+  : () => null;
+const SkillPreview = import.meta.env.DEV ? lazy(() => import("./pages/SkillPreview")) : () => null;
+const UiGalleryPage = import.meta.env.DEV
+  ? lazy(() => import("./pages/UiGalleryPage"))
+  : () => null;
 
 // `GameMenu` is the dashboard's entry point into the games catalog.
 // `GameShellLayout` mounts under `/play/:slug` and pulls in the games
@@ -258,17 +272,22 @@ const router = createBrowserRouter(
         </Route>
       </Route>
 
-      <Route path="dev/deck-preview" element={<DeckPreview />} />
-      <Route path="dev/dnd-preview" element={<DndNightPreview />} />
-      <Route path="dev/exit-preview" element={<ExitNightPreview />} />
-      <Route path="dev/dnd-tool-preview" element={<DndToolPreview />} />
-      <Route path="dev/rsvp-preview" element={<RsvpPreview />} />
-      <Route path="dev/decrypto-preview" element={<DecryptoPreview />} />
-      <Route path="dev/skill-preview" element={<SkillPreview />} />
-      {/* The design-system gallery: every ui/ primitive in its variants.
-          Captured by scripts/screenshot-smoke.sh as the per-primitive
-          visual-regression surface. */}
-      <Route path="dev/ui" element={<UiGalleryPage />} />
+      {/* Dev-only: none of these are registered in production builds. */}
+      {import.meta.env.DEV && (
+        <>
+          <Route path="dev/deck-preview" element={<DeckPreview />} />
+          <Route path="dev/dnd-preview" element={<DndNightPreview />} />
+          <Route path="dev/exit-preview" element={<ExitNightPreview />} />
+          <Route path="dev/dnd-tool-preview" element={<DndToolPreview />} />
+          <Route path="dev/rsvp-preview" element={<RsvpPreview />} />
+          <Route path="dev/decrypto-preview" element={<DecryptoPreview />} />
+          <Route path="dev/skill-preview" element={<SkillPreview />} />
+          {/* The design-system gallery: every ui/ primitive in its variants.
+              Captured by scripts/screenshot-smoke.sh as the per-primitive
+              visual-regression surface. */}
+          <Route path="dev/ui" element={<UiGalleryPage />} />
+        </>
+      )}
     </Route>,
   ),
 );

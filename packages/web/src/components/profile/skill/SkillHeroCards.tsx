@@ -7,7 +7,13 @@ import { FlameArt } from "../../ui/FlameArt.tsx";
 import { MicroLabel } from "../../ui/Label.tsx";
 import { Surface } from "../../ui/Surface.tsx";
 import { Medal } from "./Medal.tsx";
-import { artHueFilter, claimArt, claimArtFilter, traitArt } from "./skill-card-art.ts";
+import {
+  artHueFilter,
+  claimArt,
+  claimArtFilter,
+  claimEmblemArt,
+  traitArt,
+} from "./skill-card-art.ts";
 import { bestGameFact, bestSkillFact, type ClaimFact, claimFact } from "./skill-page-facts.ts";
 import { TraitIcon } from "./TraitIcon.tsx";
 import { highlightCopy, ordinal, TRAIT_COPY } from "./trait-copy.ts";
@@ -165,23 +171,27 @@ export function SkillHeroCards({
           art={claimArt(claim)}
           artFilter={claimArtFilter(claim, accentHex)}
         >
-          {/* Emblem rides top-right so the title owns the full card width and
-              stays on ONE line even for "Sophistication Champion". */}
-          <div className="absolute right-0 top-0">
+          <div className="mt-auto flex items-end justify-between gap-3">
+            <div className="min-w-0">
+              {/* Long titles step the type down rather than moving the emblem
+                  out of its bottom-right seat. */}
+              <p
+                className={cn(
+                  "font-black leading-tight text-white",
+                  claimCopy(claim).title.length > 19
+                    ? "text-base sm:text-lg"
+                    : claimCopy(claim).title.length > 13
+                      ? "text-lg sm:text-xl"
+                      : "text-xl sm:text-2xl",
+                )}
+              >
+                {claimCopy(claim).title}
+              </p>
+              <p className="mt-1 text-2xs font-semibold uppercase tracking-pill text-fg-secondary">
+                {claimCopy(claim).detail}
+              </p>
+            </div>
             <ClaimEmblem claim={claim} accentHex={accentHex} />
-          </div>
-          <div className="mt-auto">
-            <p
-              className={cn(
-                "font-black leading-tight text-white",
-                claimCopy(claim).title.length > 16 ? "text-lg lg:text-xl" : "text-xl sm:text-2xl",
-              )}
-            >
-              {claimCopy(claim).title}
-            </p>
-            <p className="mt-1 text-2xs font-semibold uppercase tracking-pill text-fg-secondary">
-              {claimCopy(claim).detail}
-            </p>
           </div>
         </HeroCard>
       )}
@@ -204,11 +214,13 @@ function claimCopy(claim: ClaimFact): { title: string; detail: string } {
     case "coop-wins":
       return { title: "Team player", detail: `${claim.wins} co-op victories` };
     case "coop-score":
+      // Game title goes in the detail line — inside the big title it blows
+      // past one line for names like "Medical Mysteries: NYC Emergency Room".
       return {
         title: claim.max
-          ? `${claim.score}/${claim.max} in ${claim.title}`
-          : `Scored ${claim.score} in ${claim.title}`,
-        detail: "Best team score on record",
+          ? `${claim.score}/${claim.max} team score`
+          : `${claim.score}-point team score`,
+        detail: `Best ${claim.title} run on record`,
       };
     case "form":
       return {
@@ -223,8 +235,13 @@ function claimCopy(claim: ClaimFact): { title: string; detail: string } {
 }
 
 /** The claim card's right-side emblem — trophy for podium claims, the
- *  accent-tinted flame for hot facts, themed icons for the rest. */
+ *  accent-tinted flame for hot facts, hand-made emblem art for the rest
+ *  (stock icons only until the artwork lands in assets/). */
 function ClaimEmblem({ claim, accentHex }: { claim: ClaimFact; accentHex?: string | null }) {
+  const custom = (kind: "coop" | "variety" | "dedication", fallback: ReactNode) => {
+    const art = claimEmblemArt(kind);
+    return art ? <img src={art} alt="" className="h-12 w-12 shrink-0" /> : fallback;
+  };
   switch (claim.kind) {
     case "highlight":
       return <Medal highlight={claim.highlight} size="lg" />;
@@ -234,10 +251,13 @@ function ClaimEmblem({ claim, accentHex }: { claim: ClaimFact; accentHex?: strin
       return <FlameArt className="h-12 w-12" accentHex={accentHex} />;
     case "coop-wins":
     case "coop-score":
-      return <UsersIcon className="h-10 w-10 shrink-0 text-[var(--accent)]" />;
+      return custom("coop", <UsersIcon className="h-10 w-10 shrink-0 text-[var(--accent)]" />);
     case "variety":
-      return <GalleryIcon className="h-10 w-10 shrink-0 text-[var(--accent)]" />;
+      return custom("variety", <GalleryIcon className="h-10 w-10 shrink-0 text-[var(--accent)]" />);
     case "dedication":
-      return <ClockIcon className="h-10 w-10 shrink-0 text-[var(--accent)]" />;
+      return custom(
+        "dedication",
+        <ClockIcon className="h-10 w-10 shrink-0 text-[var(--accent)]" />,
+      );
   }
 }

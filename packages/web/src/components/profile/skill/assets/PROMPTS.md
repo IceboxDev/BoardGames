@@ -1,3 +1,19 @@
+# Showcase-card emblem art
+
+Three square emblems for the claim card's bottom-right seat, in the same
+hand-made sticker style as the trophies (`trophy-{1,2,3}.svg`) and the flame
+(`web/src/assets/flame.svg`). Drop them in this folder with these exact
+filenames (svg preferred; webp/png also picked up) — `skill-card-art.ts`
+discovers them automatically and they replace the stock line icons. Rendered
+~48×48 on a dark card, as-is (no re-tinting), so give each its own vivid
+colours with a transparent background.
+
+| File | Theme |
+|---|---|
+| `emblem-coop.svg` | Teamwork — a tight huddle of colourful meeples (for "Team player" and best-team-score claims) |
+| `emblem-variety.svg` | Exploration — a compass rose or fanned hand of tiny game boards (for "The Explorer") |
+| `emblem-dedication.svg` | Devotion — a warm lantern or well-worn d20 with a small heart (for "N games strong") |
+
 # Showcase-card background art
 
 Nine wide backgrounds for the stats page's hero cards. Drop the generated
