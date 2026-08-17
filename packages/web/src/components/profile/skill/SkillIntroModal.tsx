@@ -117,7 +117,7 @@ export function SkillIntroModalView({
     >
       <ModalBody gap="md">
         {/* Achievement banner — game art backdrop when the claim is a game. */}
-        <Surface variant="tile" padding="none" className="relative overflow-hidden">
+        <Surface variant="tile" padding="none" className="relative shrink-0 overflow-hidden">
           {game && (
             <>
               <img
@@ -147,7 +147,7 @@ export function SkillIntroModalView({
         </Surface>
 
         {/* The proof: their own hexagon + the board backing the claim. */}
-        <div className="grid gap-4 sm:grid-cols-5">
+        <div className="grid shrink-0 gap-4 sm:grid-cols-5">
           <Surface
             variant="tile"
             padding="none"
