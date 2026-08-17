@@ -366,7 +366,7 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
     case "visit":
       return "Visited the site";
     case "page-view":
-      return describePageView(meta);
+      return describePageView(meta, nameById);
     case "rsvp": {
       const status = str(meta.status) === "no" ? "no" : "yes";
       const previous = str(meta.previous);
@@ -468,9 +468,12 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
 }
 
 /** Human line for a `page-view` beacon. Unknown pages degrade to "Viewed <page>". */
-function describePageView(meta: Record<string, unknown>): string {
+function describePageView(meta: Record<string, unknown>, nameById: Map<string, string>): string {
   const page = str(meta.page) ?? "a page";
   const detail = str(meta.detail);
+  // Profile sub-pages carry the viewed member's userId as the detail.
+  const whose = detail ? nameById.get(detail) : undefined;
+  const owner = whose ? `${whose}'s` : "a member's";
   switch (page) {
     case "home":
       return "Viewed their dashboard";
@@ -488,16 +491,14 @@ function describePageView(meta: Record<string, unknown>): string {
       return "Viewed the admin dashboard";
     case "play":
       return `Opened ${gameTitle(detail) ?? "a game"}`;
-    // Profile sub-pages: detail is the viewed member's userId — kept in the
-    // meta but not echoed (raw ids read as noise in the trail).
     case "profile-matches":
-      return "Viewed a member's match history page";
+      return `Viewed ${owner} match history page`;
     case "profile-collection":
-      return "Viewed a member's collection page";
+      return `Viewed ${owner} collection page`;
     case "profile-nights":
-      return "Viewed a member's nights page";
+      return `Viewed ${owner} nights page`;
     case "profile-skill":
-      return "Viewed a member's stats / hall-of-fame page";
+      return `Viewed ${owner} stats / hall-of-fame page`;
     case "skill-intro":
       return "Was greeted by the skill-profiles intro";
     case "skill-board": {
