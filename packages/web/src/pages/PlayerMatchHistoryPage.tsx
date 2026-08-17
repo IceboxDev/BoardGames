@@ -51,6 +51,7 @@ export default function PlayerMatchHistoryPage() {
 
   const topNav = (
     <TopNav back={<TopNavBackButton to={`/u/${userId}`} label="Profile" />}>
+      <TopNavLink to={`/u/${userId}/skill`}>Stats</TopNavLink>
       <TopNavLink to={`/u/${userId}/nights`}>Nights</TopNavLink>
     </TopNav>
   );

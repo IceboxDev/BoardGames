@@ -1,4 +1,5 @@
 import type { BggGame } from "@boardgames/core/bgg";
+import type { SkillWeights } from "@boardgames/core/protocol";
 import type { ComponentType, LazyExoticComponent } from "react";
 
 export type { BggGame };
@@ -321,6 +322,12 @@ export type CatalogEntry = {
   bggId: number;
   /** Dominant accent color extracted by `pnpm extract-accents`. */
   accentHex: string;
+  /**
+   * Six-trait skill weights (integers summing to 100) — how much a result
+   * in this game says about each trait. Editorial constants consumed by the
+   * server's rating engine and the skill-profile UI.
+   */
+  skills: SkillWeights;
   /** Optional family membership for visual grouping in browse views. */
   family?: GameFamily;
   /**

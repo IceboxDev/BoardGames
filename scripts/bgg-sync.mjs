@@ -17,6 +17,7 @@
 //   TURSO_AUTH_TOKEN    — same as the running server (optional for local libsql)
 
 import { createClient } from "@libsql/client";
+import { spawnSync } from "node:child_process";
 import { existsSync } from "node:fs";
 import { mkdir, readFile, readdir, rename, writeFile } from "node:fs/promises";
 import { join } from "node:path";
@@ -237,7 +238,10 @@ async function scaffoldSlug({ slug, bggId, displayTitle }, parsed) {
     if (hex !== null) accentHex = hex;
   }
 
-  const entry = { slug, bggId, accentHex };
+  // Placeholder skill weights — `skills` is required by the strict catalog
+  // schema (must sum to 100), so scaffold an even competitive-default split
+  // that the author replaces with the game's real editorial vector.
+  const entry = { slug, bggId, accentHex, skills: { int: 40, pln: 40, per: 20, soph: 0, soc: 0, dex: 0 } };
   if (displayTitle) entry.displayTitle = displayTitle;
   return entry;
 }
@@ -417,6 +421,23 @@ async function main() {
   // `catalog-completeness` test blocks a commit that skips these — spell out the
   // steps here so they aren't discovered as a red CI run.
   if (flags.add && newCatalogEntries.length > 0) {
+    // Skill weights are AI-filled, never hand-written: replace the scaffold
+    // placeholder immediately with a generated vector. Best-effort — a
+    // missing key / API failure keeps the placeholder and the checklist
+    // below still calls it out.
+    try {
+      const args = newCatalogEntries.flatMap((e) => ["--slug", e.slug]);
+      const res = spawnSync("node", ["scripts/gen-skills.mjs", ...args], {
+        stdio: "inherit",
+        env: process.env,
+      });
+      if (res.status !== 0) {
+        console.warn("[bgg-sync] gen-skills failed — placeholder skills kept (see checklist)");
+      }
+    } catch (err) {
+      console.warn("[bgg-sync] gen-skills failed — placeholder skills kept:", err?.message ?? err);
+    }
+
     console.log("\n[bgg-sync] ⚠ scaffolded games are placeholders — before committing, per slug:");
     for (const e of newCatalogEntries) {
       console.log(`\n  ${e.slug}:`);
@@ -424,6 +445,8 @@ async function main() {
       console.log(`       family's style block if it belongs to one), generate the 16:9 art,`);
       console.log(`       and replace assets/thumbnail.png (the BGG box photo is a placeholder).`);
       console.log(`    2. pnpm gen-descriptions --slug ${e.slug}`);
+      console.log(`    3. Sanity-check the AI-generated \`skills\` vector in catalog.json`);
+      console.log(`       (auto-filled above; if generation failed, run: pnpm gen-skills --slug ${e.slug}).`);
     }
     console.log("");
   }

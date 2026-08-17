@@ -9,7 +9,7 @@
 // `satisfies CatalogEntry` assertion at the bottom of this file is
 // the first thing a developer sees.
 
-import { BggGameSchema, GameSlugSchema } from "@boardgames/core/protocol";
+import { BggGameSchema, GameSlugSchema, SkillWeightsSchema } from "@boardgames/core/protocol";
 import { z } from "zod";
 import type { CatalogEntry } from "./types";
 
@@ -27,6 +27,7 @@ export const CatalogEntrySchema = z
     slug: GameSlugSchema,
     bggId: z.number().int().min(0),
     accentHex: z.string().regex(HEX_COLOR_RE, "accentHex must be #rrggbb"),
+    skills: SkillWeightsSchema,
     family: GameFamilySchema.optional(),
     displayTitle: z.string().min(1).optional(),
     bggOverrides: BggGameSchema.partial().optional(),

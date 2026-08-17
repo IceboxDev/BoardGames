@@ -25,6 +25,7 @@ const HistoryPage = lazy(() => import("./pages/HistoryPage"));
 const PlayerProfilePage = lazy(() => import("./pages/PlayerProfilePage"));
 const PlayerMatchHistoryPage = lazy(() => import("./pages/PlayerMatchHistoryPage"));
 const PlayerNightsPage = lazy(() => import("./pages/PlayerNightsPage"));
+const PlayerSkillPage = lazy(() => import("./pages/PlayerSkillPage"));
 const GamesManagerPage = lazy(() => import("./pages/GamesManagerPage"));
 const PlayersDirectoryPage = lazy(() => import("./pages/PlayersDirectoryPage"));
 const DeckPreview = lazy(() => import("./pages/DeckPreview"));
@@ -33,6 +34,7 @@ const ExitNightPreview = lazy(() => import("./pages/ExitNightPreview"));
 const DndToolPreview = lazy(() => import("./pages/DndToolPreview"));
 const RsvpPreview = lazy(() => import("./pages/RsvpPreview"));
 const DecryptoPreview = lazy(() => import("./pages/DecryptoPreview"));
+const SkillPreview = lazy(() => import("./pages/SkillPreview"));
 const UiGalleryPage = lazy(() => import("./pages/UiGalleryPage"));
 
 // `GameMenu` is the dashboard's entry point into the games catalog.
@@ -208,6 +210,14 @@ const router = createBrowserRouter(
           </AuthGuard>
         }
       />
+      <Route
+        path="/u/:userId/skill"
+        element={
+          <AuthGuard mode="offline">
+            <PlayerSkillPage />
+          </AuthGuard>
+        }
+      />
 
       {/* Online-gated branch: dashboard + per-game shell. The
           `<Layout>` element owns the page chrome (top nav, back
@@ -254,6 +264,7 @@ const router = createBrowserRouter(
       <Route path="dev/dnd-tool-preview" element={<DndToolPreview />} />
       <Route path="dev/rsvp-preview" element={<RsvpPreview />} />
       <Route path="dev/decrypto-preview" element={<DecryptoPreview />} />
+      <Route path="dev/skill-preview" element={<SkillPreview />} />
       {/* The design-system gallery: every ui/ primitive in its variants.
           Captured by scripts/screenshot-smoke.sh as the per-primitive
           visual-regression surface. */}

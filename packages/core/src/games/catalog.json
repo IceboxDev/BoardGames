@@ -3,33 +3,81 @@
     "slug": "7-wonders",
     "bggId": 316377,
     "accentHex": "#a86f24",
-    "displayTitle": "7 Wonders"
+    "displayTitle": "7 Wonders",
+    "skills": {
+      "int": 35,
+      "pln": 50,
+      "per": 15,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "a-game-of-thrones-the-card-game",
     "bggId": 39953,
     "accentHex": "#a85924",
-    "displayTitle": "A Game of Thrones: The Card Game"
+    "displayTitle": "A Game of Thrones: The Card Game",
+    "skills": {
+      "int": 30,
+      "pln": 35,
+      "per": 10,
+      "soph": 10,
+      "soc": 15,
+      "dex": 0
+    }
   },
   {
     "slug": "aeons-end",
     "bggId": 191189,
-    "accentHex": "#a8242c"
+    "accentHex": "#a8242c",
+    "skills": {
+      "int": 35,
+      "pln": 45,
+      "per": 10,
+      "soph": 5,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "ark-nova",
     "bggId": 342942,
-    "accentHex": "#d2892c"
+    "accentHex": "#d2892c",
+    "skills": {
+      "int": 35,
+      "pln": 55,
+      "per": 10,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "azul",
     "bggId": 230802,
-    "accentHex": "#a85424"
+    "accentHex": "#a85424",
+    "skills": {
+      "int": 45,
+      "pln": 40,
+      "per": 15,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "bananagrams",
     "bggId": 27225,
-    "accentHex": "#eeb45e"
+    "accentHex": "#eeb45e",
+    "skills": {
+      "int": 10,
+      "pln": 5,
+      "per": 15,
+      "soph": 65,
+      "soc": 0,
+      "dex": 5
+    }
   },
   {
     "slug": "bandit",
@@ -37,17 +85,41 @@
     "accentHex": "#bb6e28",
     "bggOverrides": {
       "averageRating": 7.9
+    },
+    "skills": {
+      "int": 5,
+      "pln": 5,
+      "per": 30,
+      "soph": 0,
+      "soc": 5,
+      "dex": 55
     }
   },
   {
     "slug": "betrayal-at-house-on-the-hill",
     "bggId": 10547,
-    "accentHex": "#a87b24"
+    "accentHex": "#a87b24",
+    "skills": {
+      "int": 25,
+      "pln": 25,
+      "per": 10,
+      "soph": 15,
+      "soc": 25,
+      "dex": 0
+    }
   },
   {
     "slug": "blood-on-the-clocktower",
     "bggId": 240980,
-    "accentHex": "#cd752b"
+    "accentHex": "#cd752b",
+    "skills": {
+      "int": 20,
+      "pln": 5,
+      "per": 10,
+      "soph": 15,
+      "soc": 50,
+      "dex": 0
+    }
   },
   {
     "slug": "brass-birmingham",
@@ -58,6 +130,14 @@
       "canonical": true,
       "name": "Brass",
       "variant": "Birmingham"
+    },
+    "skills": {
+      "int": 40,
+      "pln": 50,
+      "per": 10,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
     }
   },
   {
@@ -67,6 +147,14 @@
     "family": {
       "id": "brass",
       "variant": "Lancashire"
+    },
+    "skills": {
+      "int": 40,
+      "pln": 50,
+      "per": 10,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
     }
   },
   {
@@ -76,6 +164,14 @@
     "family": {
       "id": "brass",
       "variant": "Pittsburgh"
+    },
+    "skills": {
+      "int": 40,
+      "pln": 50,
+      "per": 10,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
     }
   },
   {
@@ -85,27 +181,67 @@
     "family": {
       "id": "dark-cities",
       "variant": "Bristol 1350"
+    },
+    "skills": {
+      "int": 20,
+      "pln": 15,
+      "per": 10,
+      "soph": 5,
+      "soc": 50,
+      "dex": 0
     }
   },
   {
     "slug": "calico",
     "bggId": 283155,
-    "accentHex": "#bd600f"
+    "accentHex": "#bd600f",
+    "skills": {
+      "int": 30,
+      "pln": 35,
+      "per": 35,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "captain-sonar",
     "bggId": 171131,
-    "accentHex": "#a83f24"
+    "accentHex": "#a83f24",
+    "skills": {
+      "int": 20,
+      "pln": 15,
+      "per": 25,
+      "soph": 15,
+      "soc": 20,
+      "dex": 5
+    }
   },
   {
     "slug": "cascadia",
     "bggId": 295947,
-    "accentHex": "#c28329"
+    "accentHex": "#c28329",
+    "skills": {
+      "int": 30,
+      "pln": 35,
+      "per": 35,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "catan",
     "bggId": 13,
-    "accentHex": "#2487a8"
+    "accentHex": "#2487a8",
+    "skills": {
+      "int": 25,
+      "pln": 30,
+      "per": 5,
+      "soph": 5,
+      "soc": 35,
+      "dex": 0
+    }
   },
   {
     "slug": "chess",
@@ -115,6 +251,14 @@
       "id": "chess",
       "canonical": true,
       "variant": "Classical"
+    },
+    "skills": {
+      "int": 50,
+      "pln": 40,
+      "per": 10,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
     }
   },
   {
@@ -124,6 +268,14 @@
     "family": {
       "id": "chess",
       "variant": "Bughouse"
+    },
+    "skills": {
+      "int": 40,
+      "pln": 25,
+      "per": 15,
+      "soph": 5,
+      "soc": 5,
+      "dex": 10
     }
   },
   {
@@ -134,7 +286,15 @@
       "id": "chess",
       "variant": "For Three"
     },
-    "displayTitle": "Chess for Three"
+    "displayTitle": "Chess for Three",
+    "skills": {
+      "int": 45,
+      "pln": 35,
+      "per": 10,
+      "soph": 0,
+      "soc": 10,
+      "dex": 0
+    }
   },
   {
     "slug": "codenames",
@@ -147,6 +307,14 @@
     },
     "bggOverrides": {
       "maxPlayers": "infinity"
+    },
+    "skills": {
+      "int": 15,
+      "pln": 5,
+      "per": 5,
+      "soph": 70,
+      "soc": 5,
+      "dex": 0
     }
   },
   {
@@ -156,6 +324,14 @@
     "family": {
       "id": "codenames",
       "variant": "Duet"
+    },
+    "skills": {
+      "int": 20,
+      "pln": 10,
+      "per": 5,
+      "soph": 65,
+      "soc": 0,
+      "dex": 0
     }
   },
   {
@@ -168,18 +344,42 @@
     },
     "bggOverrides": {
       "maxPlayers": "infinity"
+    },
+    "skills": {
+      "int": 20,
+      "pln": 10,
+      "per": 25,
+      "soph": 40,
+      "soc": 5,
+      "dex": 0
     }
   },
   {
     "slug": "connect-4",
     "bggId": 2719,
     "accentHex": "#be4e0e",
-    "displayTitle": "Connect 4"
+    "displayTitle": "Connect 4",
+    "skills": {
+      "int": 45,
+      "pln": 40,
+      "per": 15,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "coup",
     "bggId": 131357,
-    "accentHex": "#d0822c"
+    "accentHex": "#d0822c",
+    "skills": {
+      "int": 15,
+      "pln": 10,
+      "per": 5,
+      "soph": 5,
+      "soc": 65,
+      "dex": 0
+    }
   },
   {
     "slug": "deadwood-1876",
@@ -188,6 +388,14 @@
     "family": {
       "id": "dark-cities",
       "variant": "Deadwood 1876"
+    },
+    "skills": {
+      "int": 25,
+      "pln": 20,
+      "per": 10,
+      "soph": 5,
+      "soc": 40,
+      "dex": 0
     }
   },
   {
@@ -196,23 +404,55 @@
     "accentHex": "#b87927",
     "bggOverrides": {
       "maxPlayers": "infinity"
+    },
+    "skills": {
+      "int": 15,
+      "pln": 10,
+      "per": 5,
+      "soph": 65,
+      "soc": 5,
+      "dex": 0
     }
   },
   {
     "slug": "dorfromantik",
     "bggId": 370591,
     "accentHex": "#ab9121",
-    "displayTitle": "Dorfromantik"
+    "displayTitle": "Dorfromantik",
+    "skills": {
+      "int": 30,
+      "pln": 35,
+      "per": 30,
+      "soph": 5,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "dungeon-mayhem",
     "bggId": 260300,
-    "accentHex": "#d67b3f"
+    "accentHex": "#d67b3f",
+    "skills": {
+      "int": 35,
+      "pln": 30,
+      "per": 10,
+      "soph": 5,
+      "soc": 20,
+      "dex": 0
+    }
   },
   {
     "slug": "dungeons-and-dragons",
     "bggId": 0,
-    "accentHex": "#d2782c"
+    "accentHex": "#d2782c",
+    "skills": {
+      "int": 20,
+      "pln": 10,
+      "per": 5,
+      "soph": 40,
+      "soc": 25,
+      "dex": 0
+    }
   },
   {
     "slug": "durak",
@@ -221,23 +461,55 @@
       "id": "card-games",
       "variant": "Durak"
     },
-    "accentHex": "#c87a2a"
+    "accentHex": "#c87a2a",
+    "skills": {
+      "int": 35,
+      "pln": 35,
+      "per": 15,
+      "soph": 0,
+      "soc": 15,
+      "dex": 0
+    }
   },
   {
     "slug": "electropolis",
     "bggId": 286431,
     "accentHex": "#a86124",
-    "isNew": true
+    "isNew": true,
+    "skills": {
+      "int": 40,
+      "pln": 45,
+      "per": 10,
+      "soph": 0,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "elements-of-truth",
     "bggId": 0,
-    "accentHex": "#ac5824"
+    "accentHex": "#ac5824",
+    "skills": {
+      "int": 25,
+      "pln": 10,
+      "per": 0,
+      "soph": 65,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "escape-tales-the-awakening",
     "bggId": 253214,
-    "accentHex": "#bf7428"
+    "accentHex": "#bf7428",
+    "skills": {
+      "int": 50,
+      "pln": 10,
+      "per": 15,
+      "soph": 25,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "exit",
@@ -247,6 +519,14 @@
     "isNew": true,
     "bggOverrides": {
       "description": "Cooperative escape-room series in a box: each EXIT case seals the group inside a different story — an abandoned cabin, a pharaoh's tomb, a polar station, a stormy flight — and you crack its chain of riddles with a decoder disk, folding, cutting, and scribbling on components in a one-shot race to break out. Vote it in for the night, then pick the exact box together."
+    },
+    "skills": {
+      "int": 55,
+      "pln": 10,
+      "per": 20,
+      "soph": 15,
+      "soc": 0,
+      "dex": 0
     }
   },
   {
@@ -255,12 +535,28 @@
     "bggOverrides": {
       "maxPlayers": "infinity"
     },
-    "accentHex": "#f5af57"
+    "accentHex": "#f5af57",
+    "skills": {
+      "int": 35,
+      "pln": 30,
+      "per": 15,
+      "soph": 0,
+      "soc": 20,
+      "dex": 0
+    }
   },
   {
     "slug": "forbidden-island",
     "bggId": 65244,
-    "accentHex": "#24a898"
+    "accentHex": "#24a898",
+    "skills": {
+      "int": 35,
+      "pln": 45,
+      "per": 10,
+      "soph": 5,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "frosthaven",
@@ -269,6 +565,14 @@
     "family": {
       "id": "gloomhaven",
       "variant": "Frosthaven"
+    },
+    "skills": {
+      "int": 40,
+      "pln": 45,
+      "per": 10,
+      "soph": 5,
+      "soc": 0,
+      "dex": 0
     }
   },
   {
@@ -279,6 +583,14 @@
       "id": "gloomhaven",
       "canonical": true,
       "variant": "Original"
+    },
+    "skills": {
+      "int": 40,
+      "pln": 45,
+      "per": 10,
+      "soph": 5,
+      "soc": 0,
+      "dex": 0
     }
   },
   {
@@ -288,18 +600,42 @@
     "family": {
       "id": "gloomhaven",
       "variant": "Jaws of the Lion"
+    },
+    "skills": {
+      "int": 40,
+      "pln": 45,
+      "per": 10,
+      "soph": 5,
+      "soc": 0,
+      "dex": 0
     }
   },
   {
     "slug": "go",
     "bggId": 188,
     "accentHex": "#b55b17",
-    "isNew": true
+    "isNew": true,
+    "skills": {
+      "int": 45,
+      "pln": 45,
+      "per": 10,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "happy-little-dinosaurs",
     "bggId": 325414,
-    "accentHex": "#d6913b"
+    "accentHex": "#d6913b",
+    "skills": {
+      "int": 30,
+      "pln": 25,
+      "per": 15,
+      "soph": 5,
+      "soc": 25,
+      "dex": 0
+    }
   },
   {
     "slug": "hell-of-a-deal",
@@ -307,17 +643,41 @@
     "accentHex": "#ca6f2b",
     "bggOverrides": {
       "averageRating": 7.32
+    },
+    "skills": {
+      "int": 35,
+      "pln": 15,
+      "per": 10,
+      "soph": 0,
+      "soc": 40,
+      "dex": 0
     }
   },
   {
     "slug": "heroquest",
     "bggId": 699,
-    "accentHex": "#d38530"
+    "accentHex": "#d38530",
+    "skills": {
+      "int": 40,
+      "pln": 30,
+      "per": 10,
+      "soph": 10,
+      "soc": 10,
+      "dex": 0
+    }
   },
   {
     "slug": "hitster",
     "bggId": 318243,
-    "accentHex": "#8e24a8"
+    "accentHex": "#8e24a8",
+    "skills": {
+      "int": 5,
+      "pln": 0,
+      "per": 10,
+      "soph": 80,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "hollywood-1947",
@@ -326,39 +686,95 @@
     "family": {
       "id": "dark-cities",
       "variant": "Hollywood 1947"
+    },
+    "skills": {
+      "int": 15,
+      "pln": 10,
+      "per": 10,
+      "soph": 10,
+      "soc": 55,
+      "dex": 0
     }
   },
   {
     "slug": "hot-pot-holic",
     "bggId": 427904,
     "accentHex": "#c32609",
-    "isNew": true
+    "isNew": true,
+    "skills": {
+      "int": 35,
+      "pln": 35,
+      "per": 15,
+      "soph": 0,
+      "soc": 15,
+      "dex": 0
+    }
   },
   {
     "slug": "intarsia",
     "bggId": 422126,
     "accentHex": "#aa5822",
-    "isNew": true
+    "isNew": true,
+    "skills": {
+      "int": 35,
+      "pln": 40,
+      "per": 25,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "jaipur",
     "bggId": 54043,
-    "accentHex": "#ad5d1f"
+    "accentHex": "#ad5d1f",
+    "skills": {
+      "int": 40,
+      "pln": 40,
+      "per": 10,
+      "soph": 0,
+      "soc": 10,
+      "dex": 0
+    }
   },
   {
     "slug": "joking-hazard",
     "bggId": 193621,
-    "accentHex": "#a85524"
+    "accentHex": "#a85524",
+    "skills": {
+      "int": 10,
+      "pln": 5,
+      "per": 5,
+      "soph": 55,
+      "soc": 25,
+      "dex": 0
+    }
   },
   {
     "slug": "just-one",
     "bggId": 254640,
-    "accentHex": "#b95213"
+    "accentHex": "#b95213",
+    "skills": {
+      "int": 15,
+      "pln": 5,
+      "per": 5,
+      "soph": 70,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "keltis",
     "bggId": 34585,
-    "accentHex": "#c77c2a"
+    "accentHex": "#c77c2a",
+    "skills": {
+      "int": 40,
+      "pln": 40,
+      "per": 15,
+      "soph": 0,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "kings-in-the-corner",
@@ -368,18 +784,42 @@
     "family": {
       "id": "card-games",
       "variant": "Kings in the Corner"
+    },
+    "skills": {
+      "int": 40,
+      "pln": 30,
+      "per": 25,
+      "soph": 0,
+      "soc": 5,
+      "dex": 0
     }
   },
   {
     "slug": "last-one-drunk",
     "bggId": 0,
     "accentHex": "#d57b37",
-    "displayTitle": "Last One Drunk"
+    "displayTitle": "Last One Drunk",
+    "skills": {
+      "int": 15,
+      "pln": 5,
+      "per": 10,
+      "soph": 15,
+      "soc": 25,
+      "dex": 30
+    }
   },
   {
     "slug": "letter-jam",
     "bggId": 275467,
-    "accentHex": "#d2772c"
+    "accentHex": "#d2772c",
+    "skills": {
+      "int": 25,
+      "pln": 10,
+      "per": 5,
+      "soph": 60,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "liars-uno",
@@ -388,22 +828,54 @@
     "family": {
       "id": "uno",
       "variant": "Liars"
+    },
+    "skills": {
+      "int": 20,
+      "pln": 15,
+      "per": 10,
+      "soph": 5,
+      "soc": 50,
+      "dex": 0
     }
   },
   {
     "slug": "lost-cities",
     "bggId": 50,
-    "accentHex": "#eeb05e"
+    "accentHex": "#eeb05e",
+    "skills": {
+      "int": 40,
+      "pln": 45,
+      "per": 10,
+      "soph": 0,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "lovecraft-letter",
     "bggId": 198740,
-    "accentHex": "#24a89d"
+    "accentHex": "#24a89d",
+    "skills": {
+      "int": 35,
+      "pln": 25,
+      "per": 15,
+      "soph": 5,
+      "soc": 20,
+      "dex": 0
+    }
   },
   {
     "slug": "magic-the-gathering",
     "bggId": 463,
-    "accentHex": "#a82724"
+    "accentHex": "#a82724",
+    "skills": {
+      "int": 30,
+      "pln": 30,
+      "per": 10,
+      "soph": 25,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "medical-mysteries-miami",
@@ -413,6 +885,14 @@
     "family": {
       "id": "medical-mysteries",
       "variant": "Miami Flatline"
+    },
+    "skills": {
+      "int": 60,
+      "pln": 10,
+      "per": 15,
+      "soph": 15,
+      "soc": 0,
+      "dex": 0
     }
   },
   {
@@ -425,17 +905,41 @@
       "canonical": true,
       "name": "Medical Mysteries",
       "variant": "NYC Emergency Room"
+    },
+    "skills": {
+      "int": 60,
+      "pln": 10,
+      "per": 15,
+      "soph": 15,
+      "soc": 0,
+      "dex": 0
     }
   },
   {
     "slug": "monikers",
     "bggId": 156546,
-    "accentHex": "#bf480d"
+    "accentHex": "#bf480d",
+    "skills": {
+      "int": 10,
+      "pln": 5,
+      "per": 5,
+      "soph": 60,
+      "soc": 15,
+      "dex": 5
+    }
   },
   {
     "slug": "monopoly",
     "bggId": 1406,
-    "accentHex": "#bf660d"
+    "accentHex": "#bf660d",
+    "skills": {
+      "int": 20,
+      "pln": 30,
+      "per": 5,
+      "soph": 5,
+      "soc": 40,
+      "dex": 0
+    }
   },
   {
     "slug": "my-first-uno",
@@ -445,27 +949,67 @@
     "family": {
       "id": "uno",
       "variant": "My First"
+    },
+    "skills": {
+      "int": 25,
+      "pln": 15,
+      "per": 50,
+      "soph": 0,
+      "soc": 10,
+      "dex": 0
     }
   },
   {
     "slug": "mysterium",
     "bggId": 181304,
-    "accentHex": "#a85d24"
+    "accentHex": "#a85d24",
+    "skills": {
+      "int": 15,
+      "pln": 5,
+      "per": 25,
+      "soph": 45,
+      "soc": 10,
+      "dex": 0
+    }
   },
   {
     "slug": "not-enough-mana",
     "bggId": 343990,
-    "accentHex": "#d46e32"
+    "accentHex": "#d46e32",
+    "skills": {
+      "int": 25,
+      "pln": 15,
+      "per": 10,
+      "soph": 10,
+      "soc": 30,
+      "dex": 10
+    }
   },
   {
     "slug": "one-night-ultimate-werewolf",
     "bggId": 147949,
-    "accentHex": "#d37c2f"
+    "accentHex": "#d37c2f",
+    "skills": {
+      "int": 20,
+      "pln": 5,
+      "per": 10,
+      "soph": 5,
+      "soc": 60,
+      "dex": 0
+    }
   },
   {
     "slug": "pandemic",
     "bggId": 30549,
-    "accentHex": "#24a8a8"
+    "accentHex": "#24a8a8",
+    "skills": {
+      "int": 35,
+      "pln": 45,
+      "per": 10,
+      "soph": 5,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "parks",
@@ -476,6 +1020,14 @@
       "canonical": true,
       "name": "Parks",
       "variant": "Original"
+    },
+    "skills": {
+      "int": 30,
+      "pln": 45,
+      "per": 15,
+      "soph": 5,
+      "soc": 5,
+      "dex": 0
     }
   },
   {
@@ -486,34 +1038,82 @@
       "id": "parks",
       "variant": "Europe"
     },
-    "isNew": true
+    "isNew": true,
+    "skills": {
+      "int": 30,
+      "pln": 45,
+      "per": 15,
+      "soph": 5,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "phase-10",
     "bggId": 1258,
-    "accentHex": "#c1430b"
+    "accentHex": "#c1430b",
+    "skills": {
+      "int": 40,
+      "pln": 35,
+      "per": 20,
+      "soph": 0,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "poker",
     "bggId": 1115,
-    "accentHex": "#e5b366"
+    "accentHex": "#e5b366",
+    "skills": {
+      "int": 35,
+      "pln": 15,
+      "per": 10,
+      "soph": 0,
+      "soc": 40,
+      "dex": 0
+    }
   },
   {
     "slug": "project-l",
     "bggId": 260180,
-    "accentHex": "#a85824"
+    "accentHex": "#a85824",
+    "skills": {
+      "int": 35,
+      "pln": 40,
+      "per": 25,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "publish-or-perish",
     "bggId": 414078,
     "accentHex": "#de9762",
     "displayTitle": "Publish or Perish",
-    "isNew": true
+    "isNew": true,
+    "skills": {
+      "int": 35,
+      "pln": 35,
+      "per": 10,
+      "soph": 10,
+      "soc": 10,
+      "dex": 0
+    }
   },
   {
     "slug": "quiztopia",
     "bggId": 269970,
-    "accentHex": "#c97324"
+    "accentHex": "#c97324",
+    "skills": {
+      "int": 10,
+      "pln": 0,
+      "per": 5,
+      "soph": 80,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "roma-xli",
@@ -525,12 +1125,28 @@
     },
     "bggOverrides": {
       "averageRating": 7.32
+    },
+    "skills": {
+      "int": 20,
+      "pln": 10,
+      "per": 10,
+      "soph": 5,
+      "soc": 55,
+      "dex": 0
     }
   },
   {
     "slug": "rummikub",
     "bggId": 811,
-    "accentHex": "#b71915"
+    "accentHex": "#b71915",
+    "skills": {
+      "int": 40,
+      "pln": 25,
+      "per": 35,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "rummy",
@@ -541,6 +1157,14 @@
       "canonical": true,
       "name": "Card Games",
       "variant": "Rummy"
+    },
+    "skills": {
+      "int": 40,
+      "pln": 30,
+      "per": 25,
+      "soph": 0,
+      "soc": 5,
+      "dex": 0
     }
   },
   {
@@ -552,47 +1176,119 @@
       "canonical": true,
       "name": "Dark Cities",
       "variant": "Salem 1692"
+    },
+    "skills": {
+      "int": 20,
+      "pln": 10,
+      "per": 10,
+      "soph": 5,
+      "soc": 55,
+      "dex": 0
     }
   },
   {
     "slug": "schafkopf",
     "bggId": 6817,
-    "accentHex": "#d48732"
+    "accentHex": "#d48732",
+    "skills": {
+      "int": 40,
+      "pln": 30,
+      "per": 20,
+      "soph": 0,
+      "soc": 10,
+      "dex": 0
+    }
   },
   {
     "slug": "scotland-yard",
     "bggId": 438,
-    "accentHex": "#d38d2d"
+    "accentHex": "#d38d2d",
+    "skills": {
+      "int": 40,
+      "pln": 35,
+      "per": 15,
+      "soph": 0,
+      "soc": 10,
+      "dex": 0
+    }
   },
   {
     "slug": "secret-hitler",
     "bggId": 188834,
-    "accentHex": "#bf5529"
+    "accentHex": "#bf5529",
+    "skills": {
+      "int": 15,
+      "pln": 10,
+      "per": 10,
+      "soph": 5,
+      "soc": 60,
+      "dex": 0
+    }
   },
   {
     "slug": "senso-battle-for-japan",
     "bggId": 354219,
-    "accentHex": "#d78a44"
+    "accentHex": "#d78a44",
+    "skills": {
+      "int": 35,
+      "pln": 40,
+      "per": 10,
+      "soph": 5,
+      "soc": 10,
+      "dex": 0
+    }
   },
   {
     "slug": "set",
     "bggId": 1198,
-    "accentHex": "#a84524"
+    "accentHex": "#a84524",
+    "skills": {
+      "int": 10,
+      "pln": 0,
+      "per": 80,
+      "soph": 0,
+      "soc": 0,
+      "dex": 10
+    }
   },
   {
     "slug": "skip-bo",
     "bggId": 1269,
-    "accentHex": "#c97c09"
+    "accentHex": "#c97c09",
+    "skills": {
+      "int": 35,
+      "pln": 30,
+      "per": 30,
+      "soph": 0,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "sky-team",
     "bggId": 373106,
-    "accentHex": "#a85424"
+    "accentHex": "#a85424",
+    "skills": {
+      "int": 40,
+      "pln": 35,
+      "per": 10,
+      "soph": 0,
+      "soc": 15,
+      "dex": 0
+    }
   },
   {
     "slug": "slay-the-spire",
     "bggId": 338960,
-    "accentHex": "#a86424"
+    "accentHex": "#a86424",
+    "skills": {
+      "int": 40,
+      "pln": 45,
+      "per": 10,
+      "soph": 5,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "stadt-land-vollpfosten-christmas",
@@ -602,28 +1298,68 @@
     "bggOverrides": {
       "averageRating": 6.96,
       "averageWeight": 1.1
+    },
+    "skills": {
+      "int": 10,
+      "pln": 0,
+      "per": 5,
+      "soph": 80,
+      "soc": 0,
+      "dex": 5
     }
   },
   {
     "slug": "sushi-go",
     "bggId": 133473,
-    "accentHex": "#ecac60"
+    "accentHex": "#ecac60",
+    "skills": {
+      "int": 40,
+      "pln": 30,
+      "per": 20,
+      "soph": 0,
+      "soc": 10,
+      "dex": 0
+    }
   },
   {
     "slug": "take-5",
     "bggId": 432,
     "accentHex": "#da964f",
-    "displayTitle": "Take 5"
+    "displayTitle": "Take 5",
+    "skills": {
+      "int": 40,
+      "pln": 35,
+      "per": 20,
+      "soph": 0,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "targi",
     "bggId": 118048,
-    "accentHex": "#d2842c"
+    "accentHex": "#d2842c",
+    "skills": {
+      "int": 40,
+      "pln": 45,
+      "per": 10,
+      "soph": 0,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "tellstones-kings-gambit",
     "bggId": 298477,
-    "accentHex": "#d48536"
+    "accentHex": "#d48536",
+    "skills": {
+      "int": 15,
+      "pln": 5,
+      "per": 40,
+      "soph": 5,
+      "soc": 35,
+      "dex": 0
+    }
   },
   {
     "slug": "the-crew-mission-deep-sea",
@@ -632,6 +1368,14 @@
     "family": {
       "id": "the-crew",
       "variant": "Mission Deep Sea"
+    },
+    "skills": {
+      "int": 40,
+      "pln": 25,
+      "per": 20,
+      "soph": 5,
+      "soc": 10,
+      "dex": 0
     }
   },
   {
@@ -643,28 +1387,68 @@
       "canonical": true,
       "name": "The Crew",
       "variant": "Quest for Planet Nine"
+    },
+    "skills": {
+      "int": 40,
+      "pln": 25,
+      "per": 20,
+      "soph": 5,
+      "soc": 10,
+      "dex": 0
     }
   },
   {
     "slug": "the-fox-in-the-forest",
     "bggId": 221965,
-    "accentHex": "#d3772f"
+    "accentHex": "#d3772f",
+    "skills": {
+      "int": 40,
+      "pln": 35,
+      "per": 20,
+      "soph": 0,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "the-old-kings-crown",
     "bggId": 357873,
     "accentHex": "#cf822c",
-    "isNew": true
+    "isNew": true,
+    "skills": {
+      "int": 35,
+      "pln": 45,
+      "per": 10,
+      "soph": 5,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "the-resistance",
     "bggId": 41114,
-    "accentHex": "#b26926"
+    "accentHex": "#b26926",
+    "skills": {
+      "int": 20,
+      "pln": 5,
+      "per": 10,
+      "soph": 5,
+      "soc": 60,
+      "dex": 0
+    }
   },
   {
     "slug": "thurn-and-taxis",
     "bggId": 21790,
-    "accentHex": "#a86724"
+    "accentHex": "#a86724",
+    "skills": {
+      "int": 35,
+      "pln": 45,
+      "per": 20,
+      "soph": 0,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "tortuga-1667",
@@ -673,13 +1457,29 @@
     "family": {
       "id": "dark-cities",
       "variant": "Tortuga 1667"
+    },
+    "skills": {
+      "int": 20,
+      "pln": 15,
+      "per": 10,
+      "soph": 5,
+      "soc": 50,
+      "dex": 0
     }
   },
   {
     "slug": "trivial-pursuit",
     "bggId": 2952,
     "accentHex": "#ea702d",
-    "displayTitle": "Trivial Pursuit"
+    "displayTitle": "Trivial Pursuit",
+    "skills": {
+      "int": 5,
+      "pln": 0,
+      "per": 5,
+      "soph": 90,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "uno",
@@ -689,6 +1489,14 @@
       "id": "uno",
       "canonical": true,
       "variant": "Classic"
+    },
+    "skills": {
+      "int": 30,
+      "pln": 25,
+      "per": 20,
+      "soph": 0,
+      "soc": 25,
+      "dex": 0
     }
   },
   {
@@ -698,6 +1506,14 @@
     "family": {
       "id": "uno",
       "variant": "Flip"
+    },
+    "skills": {
+      "int": 30,
+      "pln": 30,
+      "per": 15,
+      "soph": 0,
+      "soc": 25,
+      "dex": 0
     }
   },
   {
@@ -707,12 +1523,28 @@
     "family": {
       "id": "uno",
       "variant": "Show 'Em No Mercy"
+    },
+    "skills": {
+      "int": 30,
+      "pln": 30,
+      "per": 15,
+      "soph": 0,
+      "soc": 25,
+      "dex": 0
     }
   },
   {
     "slug": "upwords",
     "bggId": 1515,
-    "accentHex": "#b95713"
+    "accentHex": "#b95713",
+    "skills": {
+      "int": 20,
+      "pln": 15,
+      "per": 5,
+      "soph": 60,
+      "soc": 0,
+      "dex": 0
+    }
   },
   {
     "slug": "villainous",
@@ -725,6 +1557,14 @@
       "canonical": true,
       "name": "Villainous",
       "variant": "The Worst Takes it All"
+    },
+    "skills": {
+      "int": 35,
+      "pln": 45,
+      "per": 10,
+      "soph": 10,
+      "soc": 0,
+      "dex": 0
     }
   },
   {
@@ -735,12 +1575,28 @@
     "family": {
       "id": "villainous",
       "variant": "Introduction to Evil"
+    },
+    "skills": {
+      "int": 35,
+      "pln": 45,
+      "per": 10,
+      "soph": 10,
+      "soc": 0,
+      "dex": 0
     }
   },
   {
     "slug": "war-with-the-evil-power-master",
     "bggId": 278297,
-    "accentHex": "#247fa8"
+    "accentHex": "#247fa8",
+    "skills": {
+      "int": 25,
+      "pln": 10,
+      "per": 10,
+      "soph": 45,
+      "soc": 10,
+      "dex": 0
+    }
   },
   {
     "slug": "wavelength",
@@ -748,23 +1604,55 @@
     "accentHex": "#a83124",
     "bggOverrides": {
       "maxPlayers": "infinity"
+    },
+    "skills": {
+      "int": 10,
+      "pln": 0,
+      "per": 5,
+      "soph": 65,
+      "soc": 20,
+      "dex": 0
     }
   },
   {
     "slug": "wer-wars",
     "bggId": 33643,
     "accentHex": "#d9694d",
-    "displayTitle": "Who Was It?"
+    "displayTitle": "Who Was It?",
+    "skills": {
+      "int": 40,
+      "pln": 15,
+      "per": 30,
+      "soph": 10,
+      "soc": 5,
+      "dex": 0
+    }
   },
   {
     "slug": "wizard",
     "bggId": 1465,
-    "accentHex": "#a82435"
+    "accentHex": "#a82435",
+    "skills": {
+      "int": 40,
+      "pln": 30,
+      "per": 20,
+      "soph": 0,
+      "soc": 10,
+      "dex": 0
+    }
   },
   {
     "slug": "wo-wars",
     "bggId": 53279,
     "accentHex": "#a86924",
-    "displayTitle": "Where Was It?"
+    "displayTitle": "Where Was It?",
+    "skills": {
+      "int": 30,
+      "pln": 15,
+      "per": 50,
+      "soph": 0,
+      "soc": 5,
+      "dex": 0
+    }
   }
 ]

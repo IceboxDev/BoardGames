@@ -23,7 +23,6 @@ import { Textarea } from "../ui/Textarea.tsx";
 // the client just collects inputs and previews/saves the webp it returns.
 
 const COMMENTS_MAX = 500;
-const GAME_LIST_LIMIT = 60;
 
 type Phase = "form" | "generating" | "preview";
 
@@ -54,8 +53,7 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
 
   const filteredGames = useMemo(() => {
     const q = gameSearch.trim().toLowerCase();
-    const list = q ? games.filter((g) => g.title.toLowerCase().includes(q)) : games;
-    return list.slice(0, GAME_LIST_LIMIT);
+    return q ? games.filter((g) => g.title.toLowerCase().includes(q)) : games;
   }, [gameSearch]);
 
   const selectedGame = useMemo(() => games.find((g) => g.slug === gameSlug), [gameSlug]);

@@ -12,6 +12,7 @@ import { initDb } from "./db.ts";
 import { markStaleProcessingCampaigns } from "./lib/dnd-campaigns-db.ts";
 import { markStaleProcessingCharacters } from "./lib/dnd-characters-db.ts";
 import { installProcessGuards } from "./lib/process-guards.ts";
+import { triggerSkillRecompute } from "./lib/skill-ratings.ts";
 import { app, injectWebSocket } from "./server.ts";
 import { markStaleRunning } from "./tournament/manager.ts";
 
@@ -34,6 +35,10 @@ try {
   await markStaleRunning();
   await markStaleProcessingCampaigns();
   await markStaleProcessingCharacters();
+  // Skill ratings self-heal at boot: a deploy that changed the engine config,
+  // catalog weights, or slipped past a mutation trigger recomputes here, so
+  // profile hex charts are fresh without waiting for a skills-route hit.
+  triggerSkillRecompute();
 } catch (err) {
   console.error("[boot] initialisation failed — refusing to start:", err);
   process.exit(1);

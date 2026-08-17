@@ -12,6 +12,7 @@ import {
   newestMatchId,
   participantSyncStatements,
 } from "../lib/match-participants.ts";
+import { triggerSkillRecompute } from "../lib/skill-ratings.ts";
 import { MatchResultRowSchema, rowToMatchRecord } from "./match-history.ts";
 import {
   collectUserIds,
@@ -161,18 +162,24 @@ async function fetchAndShape(id: number): Promise<MatchRecord | null> {
 function resolveCampaignSessions(
   gameSlug: string | null,
   outcome: { kind: string; campaign?: string; outcome?: "win" | "loss" },
-): void {
-  if (!gameSlug || outcome.kind !== "coop" || !outcome.campaign || !outcome.outcome) return;
-  getDb()
+): Promise<void> {
+  if (!gameSlug || outcome.kind !== "coop" || !outcome.campaign || !outcome.outcome) {
+    return Promise.resolve();
+  }
+  // `updated_at` must move with the back-fill — the skill-rating fingerprint
+  // watches it, and a silent rewrite would leave stale ratings undetected.
+  return getDb()
     .execute({
       sql: `UPDATE match_results
-            SET outcome_json = json_set(outcome_json, '$.campaignResult', ?)
+            SET outcome_json = json_set(outcome_json, '$.campaignResult', ?),
+                updated_at = datetime('now')
             WHERE game_slug = ?
               AND json_extract(outcome_json, '$.kind') = 'coop'
               AND json_extract(outcome_json, '$.campaign') = ?
               AND json_extract(outcome_json, '$.outcome') IS NULL`,
       args: [outcome.outcome, gameSlug, outcome.campaign],
     })
+    .then(() => undefined)
     .catch((err) => {
       console.error(`[history] campaignResult back-fill failed for ${gameSlug}:`, err);
     });
@@ -258,7 +265,9 @@ adminMatchHistoryRoutes.post("/", async (c) => {
     gameTitle,
     ...(dateKey ? { date: dateKey } : {}),
   });
-  resolveCampaignSessions(gameSlug, outcome);
+  // Recompute ratings after the campaign back-fill lands, so the fit never
+  // reads a half-written history. Fire-and-forget like the back-fill itself.
+  resolveCampaignSessions(gameSlug, outcome).finally(() => triggerSkillRecompute());
   const record = await fetchAndShape(insertedId);
   return c.json(record);
 });
@@ -318,7 +327,7 @@ adminMatchHistoryRoutes.patch("/:id{[0-9]+}", async (c) => {
     "write",
   );
   if (result.rowsAffected === 0) return c.json({ error: "not found" }, 404);
-  resolveCampaignSessions(gameSlug, outcome);
+  resolveCampaignSessions(gameSlug, outcome).finally(() => triggerSkillRecompute());
   const record = await fetchAndShape(id);
   return c.json(record);
 });
@@ -337,6 +346,7 @@ adminMatchHistoryRoutes.delete("/:id{[0-9]+}", async (c) => {
   );
   if (result.rowsAffected === 0) return c.json({ error: "not found" }, 404);
   logActivity(c.get("user").id, "match-deleted", { matchId: id });
+  triggerSkillRecompute();
   return c.json({ ok: true });
 });
 

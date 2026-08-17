@@ -35,6 +35,14 @@ export type ProfileLink = z.infer<typeof ProfileLinkSchema>;
 export const SkillAxisSchema = z.object({
   label: z.string().min(1).max(24),
   value: z.number().min(0).max(1),
+  /**
+   * True when the axis rests on too little evidence to rank confidently
+   * (exposure below the engine's `minExposure`). Renderers grey the axis;
+   * absent means confident.
+   */
+  provisional: z.boolean().optional(),
+  /** Win probability (%) vs an average-rated member — hover tooltips only. */
+  winChance: z.number().int().min(1).max(99).optional(),
 });
 export type SkillAxis = z.infer<typeof SkillAxisSchema>;
 

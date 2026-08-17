@@ -44,6 +44,7 @@ export default function PlayerNightsPage() {
   const topNav = (
     <TopNav back={<TopNavBackButton to={`/u/${userId}`} label="Profile" />}>
       <TopNavLink to={`/u/${userId}/matches`}>Matches</TopNavLink>
+      <TopNavLink to={`/u/${userId}/skill`}>Stats</TopNavLink>
     </TopNav>
   );
 

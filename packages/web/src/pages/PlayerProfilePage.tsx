@@ -9,7 +9,6 @@ import {
   SparkleIcon,
   StarIcon,
   TrophyIcon,
-  UsersIcon,
 } from "../components/icons";
 import { EditProfileModal } from "../components/profile/EditProfileModal.tsx";
 import { GameSlugGrid } from "../components/profile/GameSlugGrid.tsx";
@@ -19,7 +18,6 @@ import { NextNightCard } from "../components/profile/NextNightCard.tsx";
 import { ProfileBadges } from "../components/profile/ProfileBadges.tsx";
 import { ProfileHeader } from "../components/profile/ProfileHeader.tsx";
 import { ProfileMatchList } from "../components/profile/ProfileMatchList.tsx";
-import { ProfileStatsPanel } from "../components/profile/ProfileStatsPanel.tsx";
 import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
 import { Button } from "../components/ui/Button.tsx";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
@@ -194,12 +192,6 @@ export default function PlayerProfilePage() {
               </Section>
             </Stack>
           </div>
-
-          {/* Full width: by the time the eye reaches this, the side rail
-              (skill / favorites / wishlist) has ended, so it gets the whole row. */}
-          <Section title="Performance by game" icon={<UsersIcon className="h-3.5 w-3.5" />}>
-            <ProfileStatsPanel stats={profile.stats} />
-          </Section>
 
           {SHOW_ACHIEVEMENTS && (
             <Section title="Achievements" icon={<TrophyIcon className="h-4 w-4" />}>

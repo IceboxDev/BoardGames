@@ -12,10 +12,11 @@
 // shape. This module deliberately stays narrow: slugs, and the lookup built
 // from them.
 
+import type { SkillWeights } from "../protocol/http/skills.ts";
 import catalogRaw from "./catalog.json" with { type: "json" };
 
 /** Structural view of a catalog entry — only the fields core needs. */
-export type CatalogSlugEntry = { slug: string };
+export type CatalogSlugEntry = { slug: string; skills: SkillWeights };
 
 /** The raw catalog array, as committed. Validated downstream by web. */
 export const CATALOG: readonly CatalogSlugEntry[] = catalogRaw;

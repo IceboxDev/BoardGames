@@ -1,10 +1,12 @@
 import type { SkillChart } from "@boardgames/core/protocol";
 import { motion } from "framer-motion";
-import type { CSSProperties } from "react";
+import type { CSSProperties, ReactNode } from "react";
+import { useState } from "react";
 import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { polyline } from "../board/svg-paths.ts";
 import type { BoardPoint } from "../board/types.ts";
 import { SparkleIcon } from "../icons";
+import { Surface } from "../ui/Surface.tsx";
 
 // Non-editable radar/spider chart of a player's skill profile. Axis labels AND
 // values are data-driven — they come from `skill` (generated later by a trusted
@@ -36,9 +38,15 @@ function ringPath(count: number, factor: number): string {
 type HexSkillChartProps = {
   skill: SkillChart;
   accentHex?: string | null;
+  /**
+   * Extra per-axis tooltip content (same order as `skill.axes`) — e.g. rank
+   * and which games train the trait. Rendered under the default line.
+   */
+  axisDetails?: readonly (ReactNode | null)[];
 };
 
-export function HexSkillChart({ skill, accentHex }: HexSkillChartProps) {
+export function HexSkillChart({ skill, accentHex, axisDetails }: HexSkillChartProps) {
+  const [hovered, setHovered] = useState<number | null>(null);
   const axes = skill?.axes ?? null;
   const count = axes?.length ?? GHOST_AXES;
   const style = { "--accent": accentHex ?? DEFAULT_ACCENT } as CSSProperties;
@@ -49,7 +57,9 @@ export function HexSkillChart({ skill, accentHex }: HexSkillChartProps) {
     <div className="relative mx-auto w-full max-w-70" style={style}>
       <svg
         viewBox={`0 0 ${SIZE} ${SIZE}`}
-        className={`w-full ${axes ? "" : "opacity-40"}`}
+        // overflow-visible: axis labels sit outside the viewBox at the left/
+        // right extremes ("Dexterity", "Perception") and must not clip.
+        className={`w-full overflow-visible ${axes ? "" : "opacity-40"}`}
         role="img"
         aria-label={axes ? "Skill profile chart" : "Skill profile not yet generated"}
       >
@@ -101,7 +111,14 @@ export function HexSkillChart({ skill, accentHex }: HexSkillChartProps) {
               style={{ transformOrigin: `${CENTER}px ${CENTER}px` }}
             />
             {valuePoints.map((p, i) => (
-              <circle key={`dot-${axes[i].label}`} cx={p.x} cy={p.y} r={3} fill="var(--accent)" />
+              <circle
+                key={`dot-${axes[i].label}`}
+                cx={p.x}
+                cy={p.y}
+                r={hovered === i ? 4.5 : 3}
+                fill="var(--accent)"
+                fillOpacity={axes[i].provisional ? 0.35 : 1}
+              />
             ))}
             {axes.map((axis, i) => {
               const labelPoint = vertex(i, count, RADIUS + 18);
@@ -114,15 +131,66 @@ export function HexSkillChart({ skill, accentHex }: HexSkillChartProps) {
                   y={labelPoint.y}
                   textAnchor={anchor}
                   dominantBaseline="middle"
-                  className="fill-fg-muted text-5xs font-semibold"
+                  // Provisional axes (too little evidence to rank) read dimmer.
+                  className={`fill-fg-muted text-5xs font-semibold ${axis.provisional ? "opacity-50" : ""} ${hovered === i ? "fill-fg-primary" : ""}`}
                 >
                   {axis.label}
                 </text>
               );
             })}
+            {/* Invisible hover/tap lanes covering each FULL axis — center to
+                past the label — so the value dot (which sits at value·RADIUS,
+                well inside the hexagon) is always inside its lane. Kept last
+                so they sit above every painted layer. */}
+            {axes.map((axis, i) => {
+              const reach = vertex(i, count, RADIUS + 24);
+              return (
+                // biome-ignore lint/a11y/noStaticElementInteractions: decorative hover/tap hotspot — the same data renders accessibly in the trait rows
+                <line
+                  key={`hit-${axis.label}`}
+                  x1={CENTER}
+                  y1={CENTER}
+                  x2={reach.x}
+                  y2={reach.y}
+                  stroke="transparent"
+                  strokeWidth={34}
+                  strokeLinecap="round"
+                  onMouseEnter={() => setHovered(i)}
+                  onMouseLeave={() => setHovered(null)}
+                  onClick={() => setHovered(hovered === i ? null : i)}
+                />
+              );
+            })}
           </>
         )}
       </svg>
+
+      {/* Hover tooltip — HTML so it never scales with the SVG. Positioned by
+          the hovered axis' value point in viewBox-percent coordinates. */}
+      {axes && hovered !== null && axes[hovered] && (
+        <Surface
+          variant="raised"
+          padding="none"
+          className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-full whitespace-nowrap px-2.5 py-1.5 text-center shadow-xl shadow-black/40"
+          style={{
+            left: `${(valuePoints[hovered].x / SIZE) * 100}%`,
+            top: `${(valuePoints[hovered].y / SIZE) * 100 - 3}%`,
+          }}
+        >
+          <p className="text-2xs font-semibold text-fg-primary">{axes[hovered].label}</p>
+          <p className="text-3xs tabular-nums text-fg-muted">
+            {axes[hovered].provisional
+              ? "not rated yet — needs more games"
+              : `Score ${Math.round(axes[hovered].value * 100)} of 100`}
+          </p>
+          {!axes[hovered].provisional && axes[hovered].winChance !== undefined && (
+            <p className="text-3xs tabular-nums text-fg-muted">
+              beats the average player {axes[hovered].winChance}% of the time
+            </p>
+          )}
+          {axisDetails?.[hovered]}
+        </Surface>
+      )}
 
       {!axes && (
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-1 text-center">

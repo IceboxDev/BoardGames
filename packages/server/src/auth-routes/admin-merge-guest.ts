@@ -12,6 +12,7 @@ import { logActivity } from "../lib/activity-log.ts";
 import { parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 import { matchIdOf, participantSyncStatements } from "../lib/match-participants.ts";
+import { triggerSkillRecompute } from "../lib/skill-ratings.ts";
 
 export const adminMergeGuestRoutes = adminApp();
 
@@ -95,5 +96,7 @@ adminMergeGuestRoutes.post("/merge-guest", zJsonBody(MergeGuestBodySchema), asyn
     targetUserId,
     matchesUpdated,
   });
+  // A merge rewrites history retroactively — ratings must follow the rewrite.
+  triggerSkillRecompute();
   return c.json(MergeGuestResponseSchema.parse({ ok: true, matchesUpdated }));
 });

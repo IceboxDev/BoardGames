@@ -40,6 +40,7 @@ import { dndCampaignRoutes } from "./auth-routes/dnd-campaigns.ts";
 import { matchHistoryRoutes } from "./auth-routes/match-history.ts";
 import { profileRoutes } from "./auth-routes/profile.ts";
 import { profileInsightsRoutes } from "./auth-routes/profile-insights.ts";
+import { skillsRoutes } from "./auth-routes/skills.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
 import { requireTrustedOrigin } from "./lib/csrf.ts";
@@ -204,6 +205,12 @@ app.use(
 app.route("/api/profiles", profileRoutes);
 app.route("/api/profiles", profileInsightsRoutes);
 app.route("/api/profiles", avatarRoutes);
+
+// Skill ratings + hall of fame: an offline-players feature like profiles —
+// every member sees every board. Own prefix (not /api/profiles) so the
+// static segments never race the `/:userId` param routes.
+app.use("/api/skills/*", requireAuth, requireOffline);
+app.route("/api/skills", skillsRoutes);
 
 // Collection manager + ownership announcements: offline-player features like
 // profiles (a collection page is a profile sub-page).
