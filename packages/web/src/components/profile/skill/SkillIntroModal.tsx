@@ -14,11 +14,12 @@ import type {
 } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import type { CSSProperties, ReactNode } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCurrentUser } from "../../../hooks/useCurrentUser.ts";
 import { DEFAULT_ACCENT } from "../../../lib/accent.ts";
 import { resolveGame } from "../../../lib/games-by-slug.ts";
+import { reportPageView } from "../../../lib/page-views.ts";
 import { fetchProfile } from "../../../lib/profile.ts";
 import { qk } from "../../../lib/query-keys.ts";
 import {
@@ -221,6 +222,12 @@ export default function SkillIntroModal({ userId }: { userId: string }) {
     queryFn: ({ signal }) => fetchSkillIntro(signal),
   });
   const show = !dismissed && introQuery.data?.show === true;
+
+  // Activity beacon: the one-time greeting actually rendering is a real
+  // "view" — mirrors the RsvpModal pattern for non-route surfaces.
+  useEffect(() => {
+    if (show) reportPageView("skill-intro");
+  }, [show]);
 
   // The unveil needs the target's axes + the boards; fetched only once the
   // intro is actually due, and both stay warm for the stats page.

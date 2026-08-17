@@ -5,6 +5,7 @@ import type {
 } from "@boardgames/core/protocol";
 import { useState } from "react";
 import { cn } from "../../../lib/cn.ts";
+import { reportPageView } from "../../../lib/page-views.ts";
 import { ChevronDownIcon } from "../../icons";
 import { LeaderboardList, type LeaderboardRow } from "./LeaderboardList.tsx";
 import { TraitIcon } from "./TraitIcon.tsx";
@@ -60,7 +61,10 @@ export function TraitBreakdown({
               type="button"
               disabled={!expandable}
               aria-expanded={isOpen}
-              onClick={() => setOpen(isOpen ? null : t.trait)}
+              onClick={() => {
+                if (!isOpen) reportPageView("skill-board", t.trait);
+                setOpen(isOpen ? null : t.trait);
+              }}
               className={cn(
                 "flex w-full items-center gap-3 rounded-xl px-2.5 py-2 text-left",
                 expandable && "transition hover:bg-white/5",

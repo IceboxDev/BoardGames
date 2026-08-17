@@ -15,7 +15,7 @@ import { buildCollectionRows } from "../components/collection/collection-rows.ts
 import { PendingAnnouncements } from "../components/collection/PendingAnnouncements.tsx";
 import { VocabManagerModal } from "../components/collection/VocabManagerModal.tsx";
 import { GalleryIcon } from "../components/icons";
-import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
+import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button.tsx";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
 import { LoadingState } from "../components/ui/LoadingState.tsx";
@@ -74,11 +74,7 @@ export default function GamesManagerPage() {
     },
   });
 
-  const topNav = (
-    <TopNav back={<TopNavBackButton to={`/u/${userId}`} label="Profile" />}>
-      <TopNavLink to={`/u/${userId}/matches`}>Matches</TopNavLink>
-    </TopNav>
-  );
+  const topNav = <TopNav back={<TopNavBackButton to={`/u/${userId}`} />}></TopNav>;
 
   return (
     <PageShell topNav={topNav}>

@@ -2,6 +2,7 @@ import type { PlayerSkillResponse, SkillLeaderboardsResponse } from "@boardgames
 import { useState } from "react";
 import { cn } from "../../../lib/cn.ts";
 import { resolveGame } from "../../../lib/games-by-slug.ts";
+import { reportPageView } from "../../../lib/page-views.ts";
 import { ChevronDownIcon } from "../../icons";
 import { Badge } from "../../ui/Badge.tsx";
 import { LeaderboardList, type LeaderboardRow } from "./LeaderboardList.tsx";
@@ -70,7 +71,10 @@ export function GameRankings({
             <button
               type="button"
               aria-expanded={isOpen}
-              onClick={() => setOpen(isOpen ? null : slug)}
+              onClick={() => {
+                if (!isOpen) reportPageView("skill-board", slug);
+                setOpen(isOpen ? null : slug);
+              }}
               className="flex w-full items-center gap-2.5 rounded-xl px-2.5 py-2 text-left transition hover:bg-white/5"
             >
               {game && (

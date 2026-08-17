@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { cn } from "../lib/cn";
 import { Button } from "./ui/Button";
 
@@ -78,8 +78,26 @@ type BackButtonProps = {
 
 /** The standard left-arrow Back / Dashboard button. Pass via `<TopNav back={…}>`. */
 export function TopNavBackButton({ to, label = "Back", onClick }: BackButtonProps) {
+  const navigate = useNavigate();
   return (
-    <Link to={to} onClick={onClick} className={NAV_ACTION_CLS}>
+    <Link
+      to={to}
+      onClick={(e) => {
+        onClick?.(e);
+        if (e.defaultPrevented) return;
+        // A plain left-click goes ONE step back through in-app history.
+        // `to` stays as the href (new-tab/middle-click keep working) and as
+        // the destination when this page was the entry point (idx 0 —
+        // deep link / fresh tab, where "back" would leave the app).
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        const idx = (window.history.state as { idx?: number } | null)?.idx ?? 0;
+        if (idx > 0) {
+          e.preventDefault();
+          navigate(-1);
+        }
+      }}
+      className={NAV_ACTION_CLS}
+    >
       <svg aria-hidden="true" viewBox="0 0 20 20" className="h-3.5 w-3.5" fill="currentColor">
         <path
           fillRule="evenodd"

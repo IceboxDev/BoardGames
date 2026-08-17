@@ -66,7 +66,7 @@ export default function UiGalleryPage() {
   return (
     <PageShell
       topNav={
-        <TopNav back={<TopNavBackButton to="/" label="Dashboard" />}>
+        <TopNav back={<TopNavBackButton to="/" />}>
           <TopNavLink to="/login">Action</TopNavLink>
         </TopNav>
       }

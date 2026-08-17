@@ -2,19 +2,17 @@ import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { SearchIcon, UsersIcon } from "../components/icons";
 import { PlayerCard } from "../components/profile/PlayerCard.tsx";
-import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
+import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
 import { Input } from "../components/ui/Input.tsx";
 import { LoadingState } from "../components/ui/LoadingState.tsx";
 import { PageHeader } from "../components/ui/PageHeader.tsx";
 import { PageMain, PageShell } from "../components/ui/PageShell.tsx";
 import { QueryBoundary } from "../components/ui/QueryBoundary.tsx";
-import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { fetchPlayers } from "../lib/profile.ts";
 import { qk } from "../lib/query-keys.ts";
 
 export default function PlayersDirectoryPage() {
-  const { user } = useCurrentUser();
   const [search, setSearch] = useState("");
 
   const playersQuery = useQuery({
@@ -29,11 +27,7 @@ export default function PlayersDirectoryPage() {
     return all.filter((p) => p.name.toLowerCase().includes(q));
   }, [playersQuery.data, search]);
 
-  const topNav = (
-    <TopNav back={<TopNavBackButton to="/" label="Dashboard" />}>
-      {user && <TopNavLink to={`/u/${user.id}`}>My profile</TopNavLink>}
-    </TopNav>
-  );
+  const topNav = <TopNav back={<TopNavBackButton to="/" />}></TopNav>;
 
   return (
     <PageShell topNav={topNav}>

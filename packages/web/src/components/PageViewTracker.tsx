@@ -57,5 +57,9 @@ function classify(pathname: string): { page: string; detail?: string } | null {
   if (pathname === "/games") return { page: "games" };
   const play = pathname.match(/^\/play\/([^/]+)/);
   if (play) return { page: "play", detail: play[1] };
+  // Profile sub-pages: detail = whose page was viewed. (`/u/:id` itself is
+  // logged server-side with viewer AND target, so it stays out of this map.)
+  const sub = pathname.match(/^\/u\/([^/]+)\/(matches|collection|nights|skill)$/);
+  if (sub) return { page: `profile-${sub[2]}`, detail: sub[1] };
   return null;
 }

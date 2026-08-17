@@ -8,7 +8,7 @@ import { NightLog } from "../components/profile/nights/NightLog.tsx";
 import { NightsHero } from "../components/profile/nights/NightsHero.tsx";
 import { RsvpBehaviorPanel } from "../components/profile/nights/RsvpBehaviorPanel.tsx";
 import { WeekdayBreakdown } from "../components/profile/nights/WeekdayBreakdown.tsx";
-import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
+import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button.tsx";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
 import { LoadingState } from "../components/ui/LoadingState.tsx";
@@ -41,12 +41,7 @@ export default function PlayerNightsPage() {
     enabled: !!userId,
   });
 
-  const topNav = (
-    <TopNav back={<TopNavBackButton to={`/u/${userId}`} label="Profile" />}>
-      <TopNavLink to={`/u/${userId}/matches`}>Matches</TopNavLink>
-      <TopNavLink to={`/u/${userId}/skill`}>Stats</TopNavLink>
-    </TopNav>
-  );
+  const topNav = <TopNav back={<TopNavBackButton to={`/u/${userId}`} />}></TopNav>;
 
   return (
     <PageShell topNav={topNav}>

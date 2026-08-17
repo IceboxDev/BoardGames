@@ -395,6 +395,31 @@ function describePageView(meta: Record<string, unknown>): string {
       return "Viewed the admin dashboard";
     case "play":
       return `Opened ${gameTitle(detail) ?? "a game"}`;
+    // Profile sub-pages: detail is the viewed member's userId — kept in the
+    // meta but not echoed (raw ids read as noise in the trail).
+    case "profile-matches":
+      return "Viewed a member's match history page";
+    case "profile-collection":
+      return "Viewed a member's collection page";
+    case "profile-nights":
+      return "Viewed a member's nights page";
+    case "profile-skill":
+      return "Viewed a member's stats / hall-of-fame page";
+    case "skill-intro":
+      return "Was greeted by the skill-profiles intro";
+    case "skill-board": {
+      // Detail is a trait id (trait boards) or a game slug (game boards).
+      const traitNames: Record<string, string> = {
+        int: "Intelligence",
+        pln: "Planning",
+        per: "Perception",
+        soph: "Sophistication",
+        soc: "Social",
+        dex: "Dexterity",
+      };
+      const name = (detail ? traitNames[detail] : undefined) ?? gameTitle(detail) ?? "a skill";
+      return `Opened the ${name} leaderboard`;
+    }
     default:
       return `Viewed ${page}${detail ? ` (${detail})` : ""}`;
   }

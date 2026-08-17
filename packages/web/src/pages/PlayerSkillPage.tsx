@@ -9,7 +9,7 @@ import {
   SkillPageContent,
   SkillProgressCard,
 } from "../components/profile/skill/SkillPageContent.tsx";
-import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
+import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button.tsx";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
 import { LoadingState } from "../components/ui/LoadingState.tsx";
@@ -55,12 +55,7 @@ export default function PlayerSkillPage() {
     enabled: !!userId,
   });
 
-  const topNav = (
-    <TopNav back={<TopNavBackButton to={`/u/${userId}`} label="Profile" />}>
-      <TopNavLink to={`/u/${userId}/matches`}>Matches</TopNavLink>
-      <TopNavLink to={`/u/${userId}/nights`}>Nights</TopNavLink>
-    </TopNav>
-  );
+  const topNav = <TopNav back={<TopNavBackButton to={`/u/${userId}`} />}></TopNav>;
 
   return (
     <PageShell topNav={topNav}>

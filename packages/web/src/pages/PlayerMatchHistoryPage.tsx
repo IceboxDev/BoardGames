@@ -14,7 +14,7 @@ import {
   applyFilters,
   type SummaryFilters,
 } from "../components/profile/insights/summary-stats.ts";
-import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
+import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button.tsx";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
 import { LoadingState } from "../components/ui/LoadingState.tsx";
@@ -49,12 +49,7 @@ export default function PlayerMatchHistoryPage() {
     enabled: !!userId,
   });
 
-  const topNav = (
-    <TopNav back={<TopNavBackButton to={`/u/${userId}`} label="Profile" />}>
-      <TopNavLink to={`/u/${userId}/skill`}>Stats</TopNavLink>
-      <TopNavLink to={`/u/${userId}/nights`}>Nights</TopNavLink>
-    </TopNav>
-  );
+  const topNav = <TopNav back={<TopNavBackButton to={`/u/${userId}`} />}></TopNav>;
 
   return (
     <PageShell topNav={topNav}>

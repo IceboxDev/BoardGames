@@ -18,7 +18,7 @@ import { NextNightCard } from "../components/profile/NextNightCard.tsx";
 import { ProfileBadges } from "../components/profile/ProfileBadges.tsx";
 import { ProfileHeader } from "../components/profile/ProfileHeader.tsx";
 import { ProfileMatchList } from "../components/profile/ProfileMatchList.tsx";
-import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
+import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button.tsx";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
 import { LoadingState } from "../components/ui/LoadingState.tsx";
@@ -59,11 +59,7 @@ export default function PlayerProfilePage() {
     enabled: !!userId && showAllMatches,
   });
 
-  const topNav = (
-    <TopNav back={<TopNavBackButton to="/" label="Dashboard" />}>
-      <TopNavLink to="/players">Players</TopNavLink>
-    </TopNav>
-  );
+  const topNav = <TopNav back={<TopNavBackButton to="/" />}></TopNav>;
 
   return (
     <PageShell topNav={topNav}>

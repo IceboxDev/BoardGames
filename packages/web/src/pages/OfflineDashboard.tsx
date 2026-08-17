@@ -326,7 +326,7 @@ export default function OfflineDashboard() {
     <PageShell
       layout="fixed"
       topNav={
-        <TopNav back={<TopNavBackButton to="/" label="Dashboard" />}>
+        <TopNav back={<TopNavBackButton to="/" />}>
           <TopNavLink to="/history">History</TopNavLink>
         </TopNav>
       }
