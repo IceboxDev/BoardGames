@@ -3,6 +3,7 @@ import {
   ActivityLogResponseSchema,
   type AdminDevicesResponse,
   AdminDevicesResponseSchema,
+  AdminNightGuestBodySchema,
   type AdminResetLinkResponse,
   AdminResetLinkResponseSchema,
   MergeGuestBodySchema,
@@ -31,6 +32,20 @@ export async function adminGenerateResetLink(userId: string): Promise<AdminReset
   return apiFetch(`/api/admin/users/${userId}/reset-link`, {
     method: "POST",
     response: AdminResetLinkResponseSchema,
+  });
+}
+
+/**
+ * Add (`on: true`) or remove (`on: false`) a guest player on a locked game
+ * night. The server RSVPs "yes" on the guest's behalf — they then appear in
+ * the night's attendee list like any member.
+ */
+export async function adminSetNightGuest(date: string, guestUserId: string, on: boolean) {
+  await apiFetch("/api/admin/calendar/night-guest", {
+    method: "POST",
+    body: { date, guestUserId, on },
+    request: AdminNightGuestBodySchema,
+    response: OkResponseSchema,
   });
 }
 

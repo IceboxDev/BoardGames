@@ -18,7 +18,7 @@ export function BggInline({ bgg, compact }: { bgg: BggGame; compact: boolean }) 
   if (!hasRating && !hasWeight) return null;
 
   return (
-    <div className="flex flex-col gap-1.5 border-y border-white/[0.05] py-2 text-2xs text-fg-secondary">
+    <div className="flex shrink-0 flex-col gap-1.5 border-y border-white/[0.05] py-2 text-2xs text-fg-secondary">
       {hasRating && bgg.averageRating !== null && (
         <div className="flex items-center gap-2">
           <StarIcon className="h-3.5 w-3.5 text-amber-400" />

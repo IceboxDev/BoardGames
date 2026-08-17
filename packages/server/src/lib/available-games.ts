@@ -77,12 +77,20 @@ const UserInventoryRowSchema = z.object({
   game_slugs_json: jsonColumn(SlugListSchema),
 });
 
-/** `SELECT id, name, email, role FROM user WHERE id IN (...)`. */
+/** `SELECT id, name, email, role, guest, image FROM user WHERE id IN (...)`. */
 const UserDisplayRowSchema = z.object({
   id: z.string(),
   name: z.string().nullable(),
   email: z.string().nullable(),
   role: z.string().nullable(),
+  guest: z.union([z.number(), z.boolean()]).nullable(),
+  image: z.string().nullable(),
+});
+
+/** `SELECT user_id, accent_hex FROM user_profiles WHERE user_id IN (...)`. */
+const ProfileAccentRowSchema = z.object({
+  user_id: z.string(),
+  accent_hex: z.string().nullable(),
 });
 
 /** Single-column `SELECT date_key FROM …` projection. */
@@ -377,16 +385,30 @@ export async function computeAvailableGamesPayload(opts: {
   const allAttendeeIds = [...new Set([...definiteIds, ...tentativeIds])];
   const userNames = new Map<string, string>();
   const adminIds = new Set<string>();
+  const guestIds = new Set<string>();
+  const userImages = new Map<string, string | null>();
+  const userAccents = new Map<string, string | null>();
   if (allAttendeeIds.length > 0) {
     const placeholders = allAttendeeIds.map(() => "?").join(",");
-    const userResult = await db.execute({
-      sql: `SELECT id, name, email, role FROM user WHERE id IN (${placeholders})`,
-      args: allAttendeeIds,
-    });
+    const [userResult, accentResult] = await Promise.all([
+      db.execute({
+        sql: `SELECT id, name, email, role, guest, image FROM user WHERE id IN (${placeholders})`,
+        args: allAttendeeIds,
+      }),
+      db.execute({
+        sql: `SELECT user_id, accent_hex FROM user_profiles WHERE user_id IN (${placeholders})`,
+        args: allAttendeeIds,
+      }),
+    ]);
+    for (const p of parseRows(ProfileAccentRowSchema, accentResult.rows, "user_profiles")) {
+      userAccents.set(p.user_id, p.accent_hex);
+    }
     for (const u of parseRows(UserDisplayRowSchema, userResult.rows, "user")) {
       const raw = ((u.name ?? "") || (u.email ?? "") || "—").trim() || "—";
       userNames.set(u.id, raw);
       if (u.role === "admin") adminIds.add(u.id);
+      if (u.guest) guestIds.add(u.id);
+      userImages.set(u.id, u.image);
     }
   }
 
@@ -438,6 +460,9 @@ export async function computeAvailableGamesPayload(opts: {
     isAdmin: boolean;
     status: "definite" | "tentative";
     hasRsvped: boolean;
+    isGuest: boolean;
+    image: string | null;
+    accentHex: string | null;
     votes: { hype: number; teach: number; learn: number };
     bringing: string[];
   };
@@ -456,6 +481,9 @@ export async function computeAvailableGamesPayload(opts: {
       isAdmin: adminIds.has(id),
       status: "definite",
       hasRsvped: manuallyRsvpedYes.has(id),
+      isGuest: guestIds.has(id),
+      image: userImages.get(id) ?? null,
+      accentHex: userAccents.get(id) ?? null,
       votes: votesByUser.get(id) ?? { hype: 0, teach: 0, learn: 0 },
       bringing: list,
     });
@@ -468,6 +496,9 @@ export async function computeAvailableGamesPayload(opts: {
       isAdmin: adminIds.has(id),
       status: "tentative",
       hasRsvped: manuallyRsvpedYes.has(id),
+      isGuest: guestIds.has(id),
+      image: userImages.get(id) ?? null,
+      accentHex: userAccents.get(id) ?? null,
       votes: votesByUser.get(id) ?? { hype: 0, teach: 0, learn: 0 },
       bringing: [],
     });

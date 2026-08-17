@@ -7,6 +7,7 @@ import {
   AnnouncementsCard,
   AvailabilityDrawer,
   GuestPlayersCard,
+  NightGuestsCard,
   PreRegisterCard,
   ResetLinkModal,
   UserRow,
@@ -209,6 +210,7 @@ export default function AdminPage() {
 
         <PreRegisterCard />
         <AnnouncementsCard />
+        <NightGuestsCard guests={guests} />
         <GuestPlayersCard
           guests={guests}
           members={users}

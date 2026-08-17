@@ -187,7 +187,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
     <Modal
       onClose={onClose}
       size="full"
-      panelClassName="gap-2 sm:gap-4 sm:p-7"
+      panelClassName="gap-2 p-4 sm:gap-4 sm:p-7"
       eyebrow={eyebrow}
       title={headingDate}
       titleClassName="text-xl font-bold tracking-tight text-white xs2:text-2xl sm:text-3xl"
@@ -289,7 +289,6 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
               maxPlayers={definiteCount + tentativeCount}
               date={date}
               reactions={reactions}
-              onPastEnd={canShowResults ? () => setView("results") : undefined}
             />
           )}
         </div>

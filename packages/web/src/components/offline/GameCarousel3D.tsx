@@ -1,4 +1,3 @@
-import { motion, type PanInfo } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { groupForPresentation, type PresentationUnit } from "../../games/families";
 import type { GameDefinition } from "../../games/types";
@@ -7,11 +6,12 @@ import type { ReactionAggregate } from "../../lib/calendar-games";
 import {
   ASPECT,
   BestForHeadcountBadge,
-  CAROUSEL_TRANSITION,
+  CAROUSEL_TRANSITION_CSS,
+  CAROUSEL_WINDOW,
   CarouselBody,
   CarouselCardChrome,
   CarouselThumb,
-  carouselAnimate,
+  carouselPose,
   FitsBadge,
   FLOOR_CARD_W,
   MAX_CARD_W,
@@ -36,31 +36,25 @@ type Props = {
   /** Date key — used as the scope for reactions. Empty string = no reactions UI. */
   date: string;
   reactions: Record<string, ReactionAggregate>;
-  /**
-   * Fires when the user navigates past the rightmost card (right-arrow
-   * key, right chevron click, or swipe-left at the end). When provided,
-   * the carousel does not clamp at the last card — it hands off to the
-   * caller, which lets `RsvpModal` use this as the natural way to flip
-   * into the results view.
-   */
-  onPastEnd?: () => void;
 };
 
-export default function GameCarousel3D({
-  games,
-  minPlayers,
-  maxPlayers,
-  date,
-  reactions,
-  onPastEnd,
-}: Props) {
+// Swipe thresholds — distance OR flick velocity advances the carousel.
+const SWIPE_DISTANCE_PX = 60;
+const SWIPE_VELOCITY_PX_S = 400;
+// Finger-follow resistance while dragging the stack sideways.
+const DRAG_FOLLOW = 0.55;
+
+export default function GameCarousel3D({ games, minPlayers, maxPlayers, date, reactions }: Props) {
   // Project games into presentation units — families collapse to one
   // card, singletons stay as-is. The carousel navigates over UNITS, not
   // games.
   const units = useMemo<PresentationUnit[]>(() => groupForPresentation(games), [games]);
+  const count = units.length;
 
   const [center, setCenter] = useState(0);
-  const atEnd = center >= units.length - 1;
+  // True for the render(s) of an end-to-end jump: transitions are suppressed
+  // so the strip snaps instead of flying every card across the carousel.
+  const [instant, setInstant] = useState(false);
   // Per-family active member, persisted across center changes so the
   // user's last variant pick survives swiping away and back. Until the user
   // picks, the active member is the unit's ANCHOR — the sibling that won the
@@ -70,6 +64,7 @@ export default function GameCarousel3D({
   // put the card up front — sat hidden behind a variant chip.
   const [activeByFamily, setActiveByFamily] = useState<Map<string, string>>(() => new Map());
   const rootRef = useRef<HTMLDivElement>(null);
+  const stackRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({ w: 0, h: 0 });
 
   useEffect(() => {
@@ -84,19 +79,41 @@ export default function GameCarousel3D({
     return () => ro.disconnect();
   }, []);
 
+  // Stepping past either end JUMPS to the other end (an instant snap, not a
+  // scroll through the whole strip). Offsets stay linear (`i - center`), so
+  // the first card never shows anything to its left and the last nothing to
+  // its right — reaching an edge stays visually unambiguous.
   const goPrev = useCallback(() => {
-    setCenter((c) => Math.max(0, c - 1));
-  }, []);
+    if (center === 0) {
+      setInstant(true);
+      setCenter(count - 1);
+    } else {
+      setCenter(center - 1);
+    }
+  }, [center, count]);
 
   const goNext = useCallback(() => {
-    setCenter((c) => {
-      if (c >= units.length - 1) {
-        if (onPastEnd) onPastEnd();
-        return c;
-      }
-      return c + 1;
+    if (center === count - 1) {
+      setInstant(true);
+      setCenter(0);
+    } else {
+      setCenter(center + 1);
+    }
+  }, [center, count]);
+
+  // Re-enable transitions one frame after the jump landed — double rAF so
+  // the snapped styles are committed before the transition property returns.
+  useEffect(() => {
+    if (!instant) return;
+    let id2 = 0;
+    const id1 = requestAnimationFrame(() => {
+      id2 = requestAnimationFrame(() => setInstant(false));
     });
-  }, [units.length, onPastEnd]);
+    return () => {
+      cancelAnimationFrame(id1);
+      cancelAnimationFrame(id2);
+    };
+  }, [instant]);
 
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
@@ -112,15 +129,89 @@ export default function GameCarousel3D({
     return () => window.removeEventListener("keydown", handleKey);
   }, [goPrev, goNext]);
 
-  function handleDragEnd(_: unknown, info: PanInfo) {
-    const threshold = 60;
-    const velocity = info.velocity.x;
-    const offset = info.offset.x;
-    if (offset > threshold || velocity > 400) goPrev();
-    else if (offset < -threshold || velocity < -400) goNext();
+  // ── Pointer swipe ─────────────────────────────────────────────────
+  //
+  // Hand-rolled so dragging costs ONE style write per pointer event (the
+  // stack container's translateX via ref) and zero React renders — the
+  // previous framer-motion drag+springs re-styled every card from JS each
+  // frame, which is what chopped on phones. Release snaps the stack back
+  // via the same CSS transition the cards use, so the two motions read as
+  // one spring.
+  const dragRef = useRef({
+    active: false,
+    moved: false,
+    pointerId: -1,
+    startX: 0,
+    lastX: 0,
+    lastT: 0,
+    vx: 0,
+  });
+
+  function onPointerDown(e: React.PointerEvent<HTMLDivElement>) {
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+    const d = dragRef.current;
+    d.active = true;
+    d.moved = false;
+    d.pointerId = e.pointerId;
+    d.startX = e.clientX;
+    d.lastX = e.clientX;
+    d.lastT = performance.now();
+    d.vx = 0;
   }
 
-  if (units.length === 0) return null;
+  function onPointerMove(e: React.PointerEvent<HTMLDivElement>) {
+    const d = dragRef.current;
+    if (!d.active || e.pointerId !== d.pointerId) return;
+    const dx = e.clientX - d.startX;
+    if (!d.moved && Math.abs(dx) > 8) {
+      d.moved = true;
+      e.currentTarget.setPointerCapture(e.pointerId);
+    }
+    const now = performance.now();
+    const dt = now - d.lastT;
+    if (dt > 0) d.vx = 0.8 * d.vx + 0.2 * (((e.clientX - d.lastX) / dt) * 1000);
+    d.lastX = e.clientX;
+    d.lastT = now;
+    const el = stackRef.current;
+    if (el && d.moved) {
+      el.style.transition = "none";
+      el.style.transform = `translateX(${dx * DRAG_FOLLOW}px)`;
+    }
+  }
+
+  function settleStack() {
+    const el = stackRef.current;
+    if (!el) return;
+    el.style.transition = CAROUSEL_TRANSITION_CSS;
+    el.style.transform = "translateX(0px)";
+  }
+
+  function onPointerUp(e: React.PointerEvent<HTMLDivElement>) {
+    const d = dragRef.current;
+    if (!d.active || e.pointerId !== d.pointerId) return;
+    d.active = false;
+    settleStack();
+    if (!d.moved) return;
+    const dx = e.clientX - d.startX;
+    if (dx < -SWIPE_DISTANCE_PX || d.vx < -SWIPE_VELOCITY_PX_S) goNext();
+    else if (dx > SWIPE_DISTANCE_PX || d.vx > SWIPE_VELOCITY_PX_S) goPrev();
+  }
+
+  function onPointerCancel() {
+    dragRef.current.active = false;
+    settleStack();
+  }
+
+  // A real drag must not double as a click on whichever card it ends over.
+  function onClickCapture(e: React.MouseEvent<HTMLDivElement>) {
+    if (dragRef.current.moved) {
+      dragRef.current.moved = false;
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }
+
+  if (count === 0) return null;
 
   function setActiveForFamily(familyId: string, slug: string) {
     setActiveByFamily((prev) => {
@@ -141,7 +232,7 @@ export default function GameCarousel3D({
   // flush against the masked wrapper's hard-clip edges. Without it,
   // intermediate height-bound viewports (1366×768, 1440×900, laptops
   // with browser chrome taking a chunk of vertical space) crop the amber
-  // "best at" shadow at the bottom and pull the 20px fade ramp into the
+  // "best at" shadow at the bottom and pull the fade ramp into the
   // card's own top/bottom edges.
   const measured = size.w > 0 && size.h > 0;
   const heightBudget = Math.max(0, size.h - VERTICAL_BREATHING);
@@ -168,20 +259,31 @@ export default function GameCarousel3D({
   const perspective = cardW * (1600 / REF_CARD_W);
 
   // Shared chrome for the two edge nav buttons; only the side (left/right) and
-  // each button's handler / disabled / aria-label / icon / style differ.
+  // each button's handler / aria-label / icon differ. No backdrop-blur:
+  // backdrop-filter re-samples the animating cards behind the button every
+  // frame, which is disproportionately expensive on phones.
   const navBtnCls =
-    "absolute top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/80 text-white backdrop-blur-sm transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:h-12 sm:w-12";
+    "absolute top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/90 text-white transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:h-12 sm:w-12";
+
+  // Render only the units within the cull window. Everything further out is
+  // invisible behind the edge fade anyway, and every mounted card is a
+  // composited 3D layer.
+  const visible = units
+    .map((unit, i) => ({ unit, i, offset: i - center }))
+    .filter(({ offset }) => Math.abs(offset) <= CAROUSEL_WINDOW);
 
   return (
     <div
       ref={rootRef}
-      className="relative flex h-full w-full items-center justify-center"
+      className={`relative flex h-full w-full items-center justify-center ${
+        instant ? "carousel-no-anim" : ""
+      }`}
       style={{ perspective: `${perspective}px`, opacity: measured ? 1 : 0 }}
     >
       <button
         type="button"
         onClick={goPrev}
-        disabled={center === 0}
+        disabled={count < 2}
         aria-label="Previous game"
         className={`${navBtnCls} left-2 sm:left-4`}
       >
@@ -191,44 +293,52 @@ export default function GameCarousel3D({
       {/* Cards are clipped by their own container with a soft-edge mask
           composed of two linear gradients combined via `mask-composite:
           intersect` (WebKit `source-in`).
-          - Horizontal ramp is the wider 56px — side cards bunch at high
-            rotation angles and the wider ramp dissolves them gracefully.
-          - Vertical ramp is shorter (20px). It exists only to soften the
-            amber "best at" glow that extends a few px past the top/bottom
-            edges of the centered card. At intermediate viewport heights
-            (e.g. 1440×900) where the card sizes up to exactly fill the
-            container, a wider vertical ramp would visually clip the card's
-            own thumbnail at the top and the reaction row at the bottom.
-            20px is enough headroom for the glow and short enough that the
-            card content stays intact at any height in our target range.
+          - Horizontal ramp is up to 56px — side cards bunch at high
+            rotation angles and the wide ramp dissolves them gracefully —
+            but never wider than the centered card's actual side margin.
+            On phones the card spans ~92% of the container, so a fixed
+            56px ramp used to fade the center card's own left and right
+            edges; clamping to the real margin keeps the card fully
+            opaque at every width.
+          - Vertical ramp is shorter (≤20px, same margin clamp). It exists
+            only to soften the amber "best at" glow that extends a few px
+            past the top/bottom edges of the centered card; the
+            VERTICAL_BREATHING subtraction guarantees ≥16px of true
+            margin, so the ramp never touches the card itself.
           Chevrons and the lifted variant chip strips stay outside this
           masked wrapper so they render at full opacity. */}
       <div
         className="relative flex h-full w-full items-center justify-center overflow-hidden"
-        style={{
-          WebkitMaskImage:
-            "linear-gradient(to right, transparent 0, black 56px, black calc(100% - 56px), transparent 100%), linear-gradient(to bottom, transparent 0, black 20px, black calc(100% - 20px), transparent 100%)",
-          WebkitMaskComposite: "source-in",
-          maskImage:
-            "linear-gradient(to right, transparent 0, black 56px, black calc(100% - 56px), transparent 100%), linear-gradient(to bottom, transparent 0, black 20px, black calc(100% - 20px), transparent 100%)",
-          maskComposite: "intersect",
-        }}
+        style={(() => {
+          const sideRamp = Math.round(Math.min(56, Math.max(0, (size.w - cardW) / 2)));
+          const vertRamp = Math.round(Math.min(20, Math.max(0, (size.h - cardH) / 2)));
+          const mask = `linear-gradient(to right, transparent 0, black ${sideRamp}px, black calc(100% - ${sideRamp}px), transparent 100%), linear-gradient(to bottom, transparent 0, black ${vertRamp}px, black calc(100% - ${vertRamp}px), transparent 100%)`;
+          return {
+            WebkitMaskImage: mask,
+            WebkitMaskComposite: "source-in",
+            maskImage: mask,
+            maskComposite: "intersect",
+            touchAction: "pan-y",
+          };
+        })()}
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={onPointerUp}
+        onPointerCancel={onPointerCancel}
+        onClickCapture={onClickCapture}
       >
-        <motion.div
+        <div
+          ref={stackRef}
           className="relative mx-auto"
           style={{ width: cardW, height: cardH, transformStyle: "preserve-3d" }}
-          drag="x"
-          dragConstraints={{ left: 0, right: 0 }}
-          dragElastic={0.15}
-          onDragEnd={handleDragEnd}
         >
-          {units.map((unit, i) => {
+          {visible.map(({ unit, i, offset }) => {
             if (unit.kind === "single") {
               return (
                 <SingleCarouselCard
                   key={unit.game.slug}
                   game={unit.game}
-                  offset={i - center}
+                  offset={offset}
                   minPlayers={minPlayers}
                   maxPlayers={maxPlayers}
                   date={date}
@@ -251,7 +361,7 @@ export default function GameCarousel3D({
                 family={unit.family}
                 visibleMembers={unit.visibleMembers}
                 activeSlug={activeSlug}
-                offset={i - center}
+                offset={offset}
                 minPlayers={minPlayers}
                 maxPlayers={maxPlayers}
                 date={date}
@@ -267,59 +377,41 @@ export default function GameCarousel3D({
               />
             );
           })}
-        </motion.div>
+        </div>
       </div>
 
-      {/* Lifted variant chip strips — one motion.div per family unit,
-          rendered OUTSIDE the masked wrapper above so chips render at
-          full opacity even when their card sits flush against the
-          carousel fade. Each shadow motion.div is a card-sized container
-          at the card's static position and animates with the *exact same*
-          transforms (x, z, rotateY, scale, opacity) and spring as its
-          actual card, so the chips visually attach to the card during
-          transitions instead of popping into existence at the static
-          center after the card finishes moving. Only the centered
-          family's chips are visible (others animate to opacity 0); chips
-          are interactive only when isCenter. */}
+      {/* Lifted variant chip strips — one shadow div per visible family
+          unit, rendered OUTSIDE the masked wrapper above so chips render
+          at full opacity even when their card sits flush against the
+          carousel fade. Each shadow div is a card-sized container at the
+          card's static position and carries the *exact same* transform
+          and transition as its actual card, so the chips visually attach
+          to the card during navigation. Only the centered family's chips
+          are visible (others fade to opacity 0); chips are interactive
+          only when isCenter. */}
       {measured &&
-        units.map((unit, i) => {
+        visible.map(({ unit, offset }) => {
           if (unit.kind !== "family") return null;
-          const offset = i - center;
-          const absOff = Math.abs(offset);
-          const hidden = absOff > 5;
           const isCenter = offset === 0;
           const activeSlug = activeByFamily.get(unit.family.id) ?? unit.anchor.slug;
+          const pose = carouselPose({ offset, spreadMax, zMax });
           return (
-            <motion.div
+            <div
               key={`chips:${unit.family.id}`}
-              className="pointer-events-none absolute z-30 origin-center"
-              style={{
-                width: cardW,
-                height: cardH,
-                left: "50%",
-                top: "50%",
-                marginLeft: -cardW / 2,
-                marginTop: -cardH / 2,
-                transformStyle: "preserve-3d",
-              }}
-              animate={{
-                ...carouselAnimate({
-                  offset,
-                  spreadMax,
-                  zMax,
-                  hidden,
-                  forceHidden: !isCenter,
-                }),
-                // This container is card-sized (cardW × cardH) and sits at
-                // z-30 over the card. carouselAnimate sets pointerEvents:
-                // "auto" for any non-hidden card, which would override the
-                // `pointer-events-none` class and let the empty container
-                // swallow clicks meant for the card beneath (e.g. the heart
-                // reaction). Only the inner shrink-wrapped strip should be
-                // interactive, so force the container itself transparent.
-                pointerEvents: "none",
-              }}
-              transition={CAROUSEL_TRANSITION}
+              className="carousel-pose pointer-events-none absolute z-30 origin-center"
+              style={
+                {
+                  width: cardW,
+                  height: cardH,
+                  left: "50%",
+                  top: "50%",
+                  marginLeft: -cardW / 2,
+                  marginTop: -cardH / 2,
+                  transformStyle: "preserve-3d",
+                  transform: pose.transform,
+                  "--pose-opacity": isCenter ? pose.opacity : 0,
+                } as React.CSSProperties
+              }
             >
               <div
                 className={`absolute ${isCenter ? "pointer-events-auto" : "pointer-events-none"}`}
@@ -335,21 +427,16 @@ export default function GameCarousel3D({
                   />
                 </div>
               </div>
-            </motion.div>
+            </div>
           );
         })}
 
       <button
         type="button"
         onClick={goNext}
-        disabled={atEnd && !onPastEnd}
-        aria-label={atEnd && onPastEnd ? "Switch to results" : "Next game"}
+        disabled={count < 2}
+        aria-label="Next game"
         className={`${navBtnCls} right-2 sm:right-4`}
-        style={
-          atEnd && onPastEnd
-            ? { borderColor: "rgb(251 191 36 / 0.6)", color: "rgb(253 230 138)" }
-            : undefined
-        }
       >
         <ChevronRightIcon />
       </button>
@@ -392,8 +479,6 @@ function SingleCarouselCard({
   zMax,
   compact,
 }: SingleCardProps) {
-  const absOff = Math.abs(offset);
-  const hidden = absOff > 5;
   const isCenter = offset === 0;
   const fits = fitsRange(game, minPlayers, maxPlayers);
   const isBest = isBestForHeadcount(game, minPlayers);
@@ -405,7 +490,6 @@ function SingleCarouselCard({
       cardW={cardW}
       cardH={cardH}
       offset={offset}
-      hidden={hidden}
       isCenter={isCenter}
       accentHex={game.accentHex}
       isNew={isNew}

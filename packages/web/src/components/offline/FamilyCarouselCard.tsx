@@ -68,8 +68,6 @@ export default function FamilyCarouselCard({
   thumbHeight,
   bodyHeight,
 }: Props) {
-  const absOff = Math.abs(offset);
-  const hidden = absOff > 5;
   const isCenter = offset === 0;
 
   const active =
@@ -88,7 +86,6 @@ export default function FamilyCarouselCard({
       cardW={cardW}
       cardH={cardH}
       offset={offset}
-      hidden={hidden}
       isCenter={isCenter}
       accentHex={active.accentHex}
       isNew={isNew}

@@ -131,6 +131,21 @@ export const KickRsvpBodySchema = z.object({
 });
 export type KickRsvpBody = z.infer<typeof KickRsvpBodySchema>;
 
+/**
+ * `POST /api/admin/calendar/night-guest` — admin-only: add (`on: true`) or
+ * remove (`on: false`) a guest player on a locked night. Guests are stub
+ * accounts that can't sign in, so an admin RSVPs on their behalf: adding
+ * upserts an RSVP "yes" (joining them to the attendee list through the
+ * normal pipeline), removing deletes the row. Only works for users with the
+ * guest flag — real members manage their own RSVPs.
+ */
+export const AdminNightGuestBodySchema = z.object({
+  date: DateKeySchema,
+  guestUserId: z.string().min(1),
+  on: z.boolean(),
+});
+export type AdminNightGuestBody = z.infer<typeof AdminNightGuestBodySchema>;
+
 // ── Available games (per-date pick screen) ─────────────────────────────
 
 export const ReactionKindSchema = z.enum(["hype", "teach", "learn"]);
@@ -168,6 +183,20 @@ export const AttendeeSchema = z.object({
    * Default false on older payloads to keep cached responses parseable.
    */
   hasRsvped: z.boolean().default(false),
+  /**
+   * True when this attendee is a guest stub (no login) added to the night by
+   * an admin. The attendees view badges them so the table knows who's a
+   * plus-one. Default false so legacy payloads parse.
+   */
+  isGuest: z.boolean().default(false),
+  /**
+   * The user's avatar (`user.image`, a small webp data URI) and profile
+   * accent, so attendee rosters can show real faces instead of initials
+   * monograms. Optional: absent on legacy payloads, null when the user has
+   * neither. `<Avatar>` falls back to the monogram either way.
+   */
+  image: z.string().nullable().optional(),
+  accentHex: z.string().nullable().optional(),
   votes: z.object({
     hype: z.number().int().min(0),
     teach: z.number().int().min(0),

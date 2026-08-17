@@ -1,7 +1,7 @@
 import type { ProfileNightItem } from "@boardgames/core/protocol";
 import { cn } from "../../../lib/cn.ts";
 import { compactAddress } from "../../../lib/compact-address.ts";
-import { formatDayKey } from "../../../lib/date-format.ts";
+import { formatDayKey, isoWeek } from "../../../lib/date-format.ts";
 import { CheckIcon } from "../../icons";
 import { Badge } from "../../ui/Badge.tsx";
 import { MicroLabel } from "../../ui/Label.tsx";
@@ -51,6 +51,7 @@ export function NightLog({
           <ul className="space-y-1">
             {group.items.map((night) => {
               const chip = rsvpChip(night);
+              const week = isoWeek(night.dateKey);
               return (
                 <Surface
                   as="li"
@@ -78,6 +79,14 @@ export function NightLog({
                     }
                   >
                     {night.attended ? <CheckIcon className="h-3.5 w-3.5" /> : <span>–</span>}
+                  </span>
+                  {/* ISO calendar week — nights run ~weekly, so a fixed-width
+                      week column makes streaks and skipped weeks skimmable. */}
+                  <span
+                    className="w-7 shrink-0 text-center text-3xs font-semibold tabular-nums text-fg-disabled"
+                    title={week !== null ? `Calendar week ${week}` : undefined}
+                  >
+                    {week !== null ? `W${week}` : ""}
                   </span>
                   <div className="min-w-0 flex-1">
                     <p className="flex flex-wrap items-center gap-x-2 gap-y-0.5 text-sm font-semibold text-fg-primary">

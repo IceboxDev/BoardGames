@@ -20,6 +20,14 @@ type Props = {
   compact: boolean;
 };
 
+// Px budget of everything above the description (paddings, gaps, accent
+// line, title, meta, BggInline), measured at the largest pre-3xl font tier
+// so the derived line count is safe at every breakpoint. 3xl's taller
+// description lines are covered by slack: 3xl only renders on MAX-width
+// cards whose body has ~200px to spare.
+const FIXED_STACK_PX = { full: 175, compact: 135 };
+const DESC_LINE_PX = 16;
+
 export function CarouselBody({
   bodyHeight,
   accentHex,
@@ -29,6 +37,18 @@ export function CarouselBody({
   description,
   compact,
 }: Props) {
+  // Clamp the description to the whole lines that actually fit the body's
+  // fixed height. This is what keeps the flex column from over-filling —
+  // critical because an over-full flex column shrinks exactly its
+  // overflow-hidden children (the truncated title, the clamped
+  // description), which is how phone-width cards used to slice off the
+  // title's bottom half and cut the description mid-line. The fixed rows
+  // below are additionally `shrink-0` so no future budget miss can ever
+  // squeeze them again.
+  const descLines = Math.min(
+    compact ? 3 : 7,
+    Math.floor((bodyHeight - FIXED_STACK_PX[compact ? "compact" : "full"]) / DESC_LINE_PX),
+  );
   return (
     // `overflow-hidden` so an over-budget body can never spill past the card's
     // rounded clip edge with a mid-line text cut — the clamps below make that
@@ -38,16 +58,16 @@ export function CarouselBody({
       style={{ height: bodyHeight }}
     >
       <span
-        className="block h-0.5 w-12 rounded-full"
+        className="block h-0.5 w-12 shrink-0 rounded-full"
         style={{ backgroundColor: accentHex }}
         aria-hidden="true"
       />
       <h3
-        className={`truncate font-bold leading-tight text-white ${compact ? "text-lg" : "text-xl"}`}
+        className={`shrink-0 truncate font-bold leading-tight text-white ${compact ? "text-lg" : "text-xl"}`}
       >
         {title}
       </h3>
-      <p className="text-3xs uppercase tracking-pill text-fg-secondary sm:text-2xs xl:text-xs">
+      <p className="shrink-0 text-3xs uppercase tracking-pill text-fg-secondary sm:text-2xs xl:text-xs">
         <span className={bestForHeadcount !== null ? "text-amber-300" : undefined}>
           {playerRange(bgg)}
           {bestForHeadcount !== null && ` · best at ${bestForHeadcount}`}
@@ -58,18 +78,18 @@ export function CarouselBody({
 
       <BggInline bgg={bgg} compact={compact} />
 
-      {description && (
-        // Pinned layout: the line-clamp is the deterministic truncation
-        // boundary across every viewport. Font sizes still scale with
-        // breakpoint for readability on big screens, but `leading-snug` is
-        // pinned so line-height stays predictable. The generated `default`
-        // variant is char-budgeted (~240 chars) to fit within 7 lines
-        // even at the smallest full-size card + biggest text combination.
-        // Compact (height-bound) cards keep a 3-line teaser — the slot
-        // left after title + rating is ~2–5 lines, and clamp-3 fills it
-        // without ever pushing past the body's overflow-hidden edge.
+      {description && descLines >= 2 && (
+        // The line-clamp class supplies the -webkit-box scaffolding; the
+        // actual line count is the height-derived `descLines` (inline
+        // override), so truncation always lands on a whole-line ellipsis.
+        // Font sizes still scale with breakpoint for readability on big
+        // screens, but `leading-snug` is pinned so line-height stays
+        // predictable. On a full-size (380px+) card this resolves to the
+        // original 7-line budget; phone-width cards get the 3–5 lines
+        // they truly have room for.
         <p
-          className={`${compact ? "line-clamp-3" : "line-clamp-7"} text-3xs leading-snug text-fg-secondary sm:text-2xs xl:text-xs 3xl:text-sm`}
+          className="line-clamp-7 text-3xs leading-snug text-fg-secondary sm:text-2xs xl:text-xs 3xl:text-sm"
+          style={{ WebkitLineClamp: descLines }}
         >
           {stripBggHtml(description)}
         </p>

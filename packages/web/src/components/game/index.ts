@@ -14,8 +14,9 @@ export { CarouselThumb } from "./CarouselThumb";
 export {
   ASPECT,
   asymptote,
-  CAROUSEL_TRANSITION,
-  carouselAnimate,
+  CAROUSEL_TRANSITION_CSS,
+  CAROUSEL_WINDOW,
+  carouselPose,
   FLOOR_CARD_W,
   MAX_CARD_W,
   MIN_CARD_W,

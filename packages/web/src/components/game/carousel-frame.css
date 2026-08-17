@@ -2,6 +2,38 @@
    chunk instead of the global stylesheet. Theme tokens (var(--color-*)) stay
    global, so plain var() references keep working here. */
 
+/* ── Carousel pose — compositor-driven card animation ─────── */
+
+/* Cards and chip strips animate ONLY transform + opacity, both
+   compositor-capable, so navigation never touches the main thread. The
+   timing mirrors CAROUSEL_TRANSITION_CSS in carousel-3d-constants.ts.
+   Opacity rides a CSS variable so @starting-style can fade a freshly
+   mounted card in (culled cards re-enter at the masked edge when the
+   loop wraps); browsers without @starting-style just pop the card in
+   behind the edge fade, which is where it appears anyway. */
+.carousel-pose {
+  opacity: var(--pose-opacity, 1);
+  transition:
+    transform 550ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 350ms ease;
+  will-change: transform, opacity;
+}
+@starting-style {
+  .carousel-pose {
+    opacity: 0;
+  }
+}
+/* End-to-end jump: the carousel root wears this for one frame so the whole
+   strip snaps to the other end instead of flying every card across. */
+.carousel-no-anim .carousel-pose {
+  transition: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-pose {
+    transition: none;
+  }
+}
+
 /* ── "New" game highlighter — cyan-fiery-blue ─────── */
 
 /* Carousel card frame treatment for freshly-added games. A pulsing

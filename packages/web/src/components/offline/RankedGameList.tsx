@@ -81,8 +81,14 @@ function RankedRow({ game, aggregate, date, rank }: RowProps) {
   const isTop = rank === 1;
   const meta = formatMeta(game);
   return (
+    // `flex-wrap` + the text column's min-width is the phone strategy: when
+    // thumb + title + reactions can't share one line, the reactions wrap to
+    // their own right-aligned line instead of crushing the title down to a
+    // three-letter ellipsis (the old fixed row left ~60px for the title on a
+    // 360px screen). On sm+ everything fits on one line and the wrap never
+    // engages.
     <div
-      className="flex items-center gap-3 rounded-2xl border bg-surface-900/80 p-2 pr-3 transition"
+      className="flex flex-wrap items-center gap-x-2 gap-y-1 rounded-2xl border bg-surface-900/80 p-2 transition sm:gap-x-3 sm:pr-3"
       style={{
         borderColor: isTop ? game.accentHex : "color-mix(in srgb, white 8%, transparent)",
         boxShadow: isTop
@@ -90,7 +96,7 @@ function RankedRow({ game, aggregate, date, rank }: RowProps) {
           : undefined,
       }}
     >
-      <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl">
+      <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-xl sm:h-16 sm:w-16">
         <img
           src={game.thumbnail}
           alt=""
@@ -102,7 +108,7 @@ function RankedRow({ game, aggregate, date, rank }: RowProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
       </div>
 
-      <div className="flex min-w-0 flex-1 flex-col gap-0.5">
+      <div className="flex min-w-36 flex-1 flex-col gap-0.5">
         <div className="flex items-center gap-2">
           <span
             className="inline-flex h-5 min-w-5 shrink-0 items-center justify-center rounded-full px-1.5 text-3xs font-bold tabular-nums"
@@ -114,23 +120,15 @@ function RankedRow({ game, aggregate, date, rank }: RowProps) {
             <span className="sr-only">Rank </span>
             {rank}
           </span>
+          {/* No "Top pick" chip — the #1 row already reads as the winner via
+              its accent border, glow, and colored rank badge, and on phone
+              widths the chip stole the room the title needs. */}
           <h3 className="truncate text-sm font-semibold text-white">{game.title}</h3>
-          {isTop && (
-            <span
-              className="shrink-0 rounded-full px-1.5 py-0.5 text-3xs font-bold uppercase tracking-pill"
-              style={{
-                backgroundColor: `color-mix(in srgb, ${game.accentHex} 22%, transparent)`,
-                color: game.accentHex,
-              }}
-            >
-              Top pick
-            </span>
-          )}
         </div>
         {meta && <p className="truncate text-2xs text-fg-secondary">{meta}</p>}
       </div>
 
-      <div className="shrink-0">
+      <div className="ml-auto shrink-0">
         <GameReactions
           date={date}
           slug={game.slug}

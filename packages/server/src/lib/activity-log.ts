@@ -17,6 +17,7 @@ export type ActivityType =
   | "rsvp"
   | "rsvp-cleared"
   | "rsvp-kick"
+  | "night-guest"
   | "game-vote"
   | "availability"
   | "profile-view"

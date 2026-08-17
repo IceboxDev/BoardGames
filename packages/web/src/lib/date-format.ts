@@ -36,6 +36,24 @@ export function formatDayKey(dateKey: string, style: DayKeyStyle = "short"): str
   return date.toLocaleDateString(undefined, DAY_KEY_OPTIONS[style]);
 }
 
+/**
+ * ISO-8601 week number (1–53) for a "YYYY-MM-DD" date key, or null if
+ * malformed. Weeks start Monday; week 1 is the week containing the year's
+ * first Thursday (so Jan 1–3 can belong to the previous year's week 52/53).
+ */
+export function isoWeek(dateKey: string): number | null {
+  const parsed = parseDateKey(dateKey);
+  if (!parsed) return null;
+  // Compute in UTC so DST transitions can't shift a midnight across days.
+  const date = new Date(Date.UTC(parsed.getFullYear(), parsed.getMonth(), parsed.getDate()));
+  const day = (date.getUTCDay() + 6) % 7; // Mon=0 … Sun=6
+  date.setUTCDate(date.getUTCDate() - day + 3); // this week's Thursday
+  const firstThursday = new Date(Date.UTC(date.getUTCFullYear(), 0, 4));
+  const ftDay = (firstThursday.getUTCDay() + 6) % 7;
+  firstThursday.setUTCDate(firstThursday.getUTCDate() - ftDay + 3);
+  return 1 + Math.round((date.getTime() - firstThursday.getTime()) / (7 * 86_400_000));
+}
+
 /** "Jul 2026" from any parseable timestamp string (member-since). */
 export function formatMonthYear(value: string): string {
   const date = new Date(value);

@@ -143,7 +143,12 @@ function AttendeeRow({
 
   return (
     <Surface variant="raised" padding="none" className="flex items-start gap-3 px-3 py-3 sm:px-4">
-      <Avatar name={attendee.name} size="sm" />
+      <Avatar
+        name={attendee.name}
+        image={attendee.image}
+        accentHex={attendee.accentHex}
+        size="sm"
+      />
 
       <div className="flex min-w-0 flex-1 flex-col gap-1">
         <div className="flex flex-wrap items-center gap-2">
@@ -151,6 +156,16 @@ function AttendeeRow({
           {attendee.isHost && (
             <Badge tone="amber" shape="pill" size="xs">
               Host
+            </Badge>
+          )}
+          {attendee.isGuest && (
+            <Badge
+              tone="neutral"
+              shape="pill"
+              size="xs"
+              title="Guest player without an account — added by an admin"
+            >
+              Guest
             </Badge>
           )}
           {attendee.status === "tentative" && (

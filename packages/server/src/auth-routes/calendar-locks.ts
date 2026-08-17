@@ -1,5 +1,6 @@
 import { expandOwnedSlugs } from "@boardgames/core/games/ownership";
 import {
+  AdminNightGuestBodySchema,
   AvailableGamesQuerySchema,
   AvailableGamesSchema,
   CalendarLocksSchema,
@@ -561,6 +562,104 @@ adminCalendarLocksRoutes.delete("/lock", zJsonBody(UnlockBodySchema), async (c) 
     "write",
   );
   logActivity(user.id, "night-unlocked", { date });
+
+  return c.json(OkResponseSchema.parse({ ok: true }));
+});
+
+// ── Admin: guest players on a night ───────────────────────────────────
+//
+// Guests are stub accounts (user.guest = 1) that can't sign in, so an admin
+// RSVPs on their behalf. Adding upserts an RSVP "yes" — the guest then flows
+// through the normal attendee pipeline (attendee list, headcounts,
+// nights-attended) with zero special cases. Removing deletes the RSVP row
+// outright (not a "no": a guest never RSVPs themselves, so a tombstone "no"
+// would only pollute their RSVP-behavior stats). When the picks are already
+// locked, the expected snapshot is kept in sync both ways so re-locks and
+// sealed-night math see the guest exactly like any committed member.
+
+/** `SELECT guest FROM "user" WHERE id = ?`. */
+const UserGuestFlagRowSchema = z.object({
+  guest: z.union([z.number(), z.boolean()]).nullable(),
+});
+
+adminCalendarLocksRoutes.post("/night-guest", zJsonBody(AdminNightGuestBodySchema), async (c) => {
+  const admin = c.get("user");
+  const { date, guestUserId, on } = c.req.valid("json");
+  const db = getDb();
+
+  const [lockResult, userResult] = await Promise.all([
+    db.execute({
+      sql: "SELECT expected_user_ids_json, picks_locked_at FROM locked_dates WHERE date_key = ? LIMIT 1",
+      args: [date],
+    }),
+    db.execute({
+      sql: `SELECT guest FROM "user" WHERE id = ? LIMIT 1`,
+      args: [guestUserId],
+    }),
+  ]);
+  if (lockResult.rows.length === 0) {
+    return errorResponse(c, 400, "date is not locked");
+  }
+  if (userResult.rows.length === 0) {
+    return errorResponse(c, 404, "guest user not found", "NOT_FOUND");
+  }
+  const { guest } = parseRow(UserGuestFlagRowSchema, userResult.rows[0], "user");
+  // Only guest stubs ride this route — real members manage their own RSVPs
+  // (and get kicked via /rsvp/kick, which leaves an explicit "no").
+  if (!guest) {
+    return errorResponse(c, 400, "user is not a guest", "NOT_A_GUEST");
+  }
+
+  // Keep the expected snapshot in sync when the guest list is sealed.
+  // Degrade a malformed snapshot to [] (same tolerance as the RSVP route).
+  let expected: string[] = [];
+  let picksLocked = false;
+  try {
+    const lock = parseRow(
+      z.object({
+        expected_user_ids_json: jsonColumn(ExpectedUserIdsSchema),
+        picks_locked_at: z.string().nullable(),
+      }),
+      lockResult.rows[0],
+      "locked_dates",
+    );
+    expected = lock.expected_user_ids_json;
+    picksLocked = lock.picks_locked_at !== null;
+  } catch (err) {
+    if (!(err instanceof RowParseError)) throw err;
+  }
+
+  const stmts = [];
+  if (on) {
+    stmts.push({
+      sql: `INSERT INTO rsvps (date_key, user_id, status, rsvped_at, auto)
+              VALUES (?, ?, 'yes', datetime('now'), 0)
+              ON CONFLICT(date_key, user_id) DO UPDATE SET
+                status = 'yes',
+                rsvped_at = excluded.rsvped_at,
+                auto = 0`,
+      args: [date, guestUserId],
+    });
+    if (picksLocked && !expected.includes(guestUserId)) {
+      stmts.push({
+        sql: "UPDATE locked_dates SET expected_user_ids_json = ? WHERE date_key = ?",
+        args: [JSON.stringify([...expected, guestUserId]), date],
+      });
+    }
+  } else {
+    stmts.push({
+      sql: "DELETE FROM rsvps WHERE date_key = ? AND user_id = ?",
+      args: [date, guestUserId],
+    });
+    if (expected.includes(guestUserId)) {
+      stmts.push({
+        sql: "UPDATE locked_dates SET expected_user_ids_json = ? WHERE date_key = ?",
+        args: [JSON.stringify(expected.filter((id) => id !== guestUserId)), date],
+      });
+    }
+  }
+  await db.batch(stmts, "write");
+  logActivity(admin.id, "night-guest", { date, targetUserId: guestUserId, on });
 
   return c.json(OkResponseSchema.parse({ ok: true }));
 });

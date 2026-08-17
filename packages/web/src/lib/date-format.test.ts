@@ -1,5 +1,11 @@
 import { describe, expect, it } from "vitest";
-import { formatDayKey, formatMonthYear, formatShortDate, parseDateKey } from "./date-format";
+import {
+  formatDayKey,
+  formatMonthYear,
+  formatShortDate,
+  isoWeek,
+  parseDateKey,
+} from "./date-format";
 
 describe("parseDateKey", () => {
   it("parses a valid key as local midnight", () => {
@@ -34,6 +40,20 @@ describe("formatDayKey", () => {
     expect(formatDayKey("2026-07-11", "compact")).toContain("2026");
     expect(formatDayKey("2026-07-11", "short")).not.toContain("2026");
     expect(formatDayKey("2026-07-11", "weekday")).not.toContain("2026");
+  });
+});
+
+describe("isoWeek", () => {
+  it("computes ISO-8601 week numbers, including year boundaries", () => {
+    expect(isoWeek("2026-08-16")).toBe(33); // a mid-year Sunday
+    expect(isoWeek("2026-01-01")).toBe(1); // 2026 starts on a Thursday → week 1
+    expect(isoWeek("2027-01-01")).toBe(53); // Friday → still 2026's week 53
+    expect(isoWeek("2024-12-30")).toBe(1); // Monday → already 2025's week 1
+    expect(isoWeek("2026-12-28")).toBe(53); // Monday of the final ISO week
+  });
+
+  it("returns null for a malformed key", () => {
+    expect(isoWeek("not-a-date")).toBeNull();
   });
 });
 

@@ -64,41 +64,46 @@ export function asymptote(offset: number, max: number): number {
 }
 
 /**
- * Framer-motion `animate` block for a carousel card at the given offset.
- * Shared by `CarouselCardChrome` (single + family) and the lifted variant
- * chip-strip motion in `GameCarousel3D` so all three nodes follow the
- * exact same transform path during transitions.
+ * Cards further than this many slots from center are NOT rendered at all.
+ * Every mounted card is a composited 3D layer the GPU must hold, so this
+ * caps the worst case at 9 cards. It must stay ≥4: the receding cascade of
+ * bunched cards at offsets 3-4 IS the carousel's "3D bent" depth look — a
+ * tighter window amputates the tail and the coverflow reads flat.
  */
-export function carouselAnimate({
+export const CAROUSEL_WINDOW = 4;
+
+/**
+ * CSS pose for a carousel card at the given offset — the compositor-driven
+ * replacement for the old framer-motion spring block. Transform and opacity
+ * both transition via `CAROUSEL_TRANSITION_CSS` (see `.carousel-pose` in
+ * carousel-frame.css), so navigation animates entirely off the main thread:
+ * no per-frame JS, which is what made the springs chop on phones. Shared by
+ * `CarouselCardChrome` and the lifted variant chip strip so both follow the
+ * exact same transform path.
+ */
+export function carouselPose({
   offset,
   spreadMax,
   zMax,
-  hidden,
-  forceHidden = false,
 }: {
   offset: number;
   spreadMax: number;
   zMax: number;
-  hidden: boolean;
-  /**
-   * Caller can force opacity to 0 regardless of hidden. Used by the
-   * lifted variant chip strip so off-center families' chips vanish even
-   * before the absOff > 5 hard-cut kicks in.
-   */
-  forceHidden?: boolean;
-}) {
+}): { transform: string; opacity: number } {
+  const x = asymptote(offset, spreadMax);
+  const z = -Math.abs(asymptote(offset, zMax));
+  const rotateY = -asymptote(offset, ROTATE_MAX);
+  const scale = Math.max(SCALE_MIN, 1 - Math.abs(asymptote(offset, 1 - SCALE_MIN)));
   return {
-    x: asymptote(offset, spreadMax),
-    z: -Math.abs(asymptote(offset, zMax)),
-    rotateY: -asymptote(offset, ROTATE_MAX),
-    scale: Math.max(SCALE_MIN, 1 - Math.abs(asymptote(offset, 1 - SCALE_MIN))),
-    opacity:
-      hidden || forceHidden
-        ? 0
-        : Math.max(OPACITY_MIN, 1 - Math.abs(asymptote(offset, 1 - OPACITY_MIN))),
-    pointerEvents: (hidden ? "none" : "auto") as "none" | "auto",
+    transform: `translate3d(${x}px, 0px, ${z}px) rotateY(${rotateY}deg) scale(${scale})`,
+    opacity: Math.max(OPACITY_MIN, 1 - Math.abs(asymptote(offset, 1 - OPACITY_MIN))),
   };
 }
 
-/** Spring transition used by every carousel card and lifted overlay. */
-export const CAROUSEL_TRANSITION = { type: "spring" as const, stiffness: 220, damping: 28 };
+/**
+ * Transition timing shared by the cards, the chip strips, and the drag
+ * snap-back — an ease-out-quint-style curve tuned to feel like the old
+ * stiffness-220/damping-28 spring without its JS driver.
+ */
+export const CAROUSEL_TRANSITION_CSS =
+  "transform 550ms cubic-bezier(0.22, 1, 0.36, 1), opacity 350ms ease";

@@ -1,17 +1,24 @@
 import "./carousel-frame.css";
-import { motion } from "framer-motion";
 import type { ReactNode } from "react";
-import { CAROUSEL_TRANSITION, carouselAnimate } from "./carousel-3d-constants";
+import { carouselPose } from "./carousel-3d-constants";
 
-// Pixel-positioned + framer-motion card frame for the 3D coverflow
-// carousel. Shared by single-game cards (`GameCarousel3D`) and family
-// cards (`FamilyCarouselCard`). Owns:
-//   - absolute centering inside the parent's motion stack
+// Pixel-positioned card frame for the 3D coverflow carousel. Shared by
+// single-game cards (`GameCarousel3D`) and family cards
+// (`FamilyCarouselCard`). Owns:
+//   - absolute centering inside the parent's 3D stack
 //   - cardW × cardH dimensioning + the rounded-2xl frame
 //   - `isBestForHeadcount` amber-glow border state
 //   - keyboard-clickable role="button" (with Enter / Space handlers)
-//   - the spring-animated transform path (x, z, rotateY, scale, opacity)
+//   - the CSS-transitioned transform path (x, z, rotateY, scale, opacity)
 //   - backface-hidden + per-card z-index stacking
+//
+// Animation is deliberately plain CSS (`.carousel-pose` transitions
+// transform + opacity): both properties are compositor-driven, so swiping
+// never runs per-frame JS — the framer-motion springs this replaced were
+// re-styling every card from the main thread each frame, which chopped on
+// phones. Cards outside `CAROUSEL_WINDOW` are culled by the caller;
+// `@starting-style` in carousel-frame.css fades a freshly mounted card in
+// at the masked edge instead of popping.
 //
 // Children should be the thumb + body inner blocks (typically
 // `<CarouselThumb>` + `<CarouselBody>`); the chrome owns the outer frame
@@ -21,10 +28,8 @@ import { CAROUSEL_TRANSITION, carouselAnimate } from "./carousel-3d-constants";
 type Props = {
   cardW: number;
   cardH: number;
-  /** Offset from carousel center; 0 = focused. */
+  /** Wrapped offset from carousel center; 0 = focused. */
   offset: number;
-  /** True when |offset| > 5 — card is far off-screen, hide entirely. */
-  hidden: boolean;
   /** True when offset === 0 (focused card). */
   isCenter: boolean;
   /** Per-card accent color, exposed as the `--accent` CSS variable to children. */
@@ -36,7 +41,7 @@ type Props = {
   isNew: boolean;
   /** Bumps the frame to a brighter amber border + shadow. */
   isBestForHeadcount: boolean;
-  /** Accessible label for the role=button motion.div. */
+  /** Accessible label for the role=button div. */
   ariaLabel: string;
   /** Centering this card (consumer logic typically: clicking off-center cards focuses them). */
   onClick: () => void;
@@ -52,7 +57,6 @@ export function CarouselCardChrome({
   cardW,
   cardH,
   offset,
-  hidden,
   isCenter,
   accentHex,
   isNew,
@@ -63,9 +67,10 @@ export function CarouselCardChrome({
   zMax,
   children,
 }: Props) {
-  const absOff = Math.abs(offset);
+  const pose = carouselPose({ offset, spreadMax, zMax });
   return (
-    <motion.div
+    // biome-ignore lint/a11y/useSemanticElements: the card hosts nested interactive controls (reaction buttons, variant chips), which a real <button> cannot legally contain
+    <div
       role="button"
       onClick={onClick}
       onKeyDown={(e) => {
@@ -74,16 +79,14 @@ export function CarouselCardChrome({
           onClick();
         }
       }}
-      tabIndex={hidden ? -1 : 0}
-      aria-hidden={hidden}
+      tabIndex={0}
       aria-label={ariaLabel}
-      // The chrome itself is just position + dims + accent variable. The
-      // visible border / shadow / rounded frame live on the inner
-      // `<div className="rounded-2xl …">` rendered by the consumer (see
-      // CarouselCardFrame below). Splitting the two lets consumers put
-      // the variant chip strip OUTSIDE the rounded-clip frame while
-      // staying inside this positioned/scaled wrapper.
-      className="absolute left-1/2 top-1/2 origin-center cursor-pointer text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
+      // The chrome itself is just position + dims + pose + accent variable.
+      // The visible border / shadow / rounded frame live on the inner
+      // `<CarouselCardFrame>` so consumers can put the variant chip strip
+      // OUTSIDE the rounded-clip frame while staying inside this
+      // positioned/scaled wrapper.
+      className="carousel-pose absolute left-1/2 top-1/2 origin-center cursor-pointer text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)]"
       style={
         {
           width: cardW,
@@ -91,32 +94,32 @@ export function CarouselCardChrome({
           marginLeft: -cardW / 2,
           marginTop: -cardH / 2,
           backfaceVisibility: "hidden",
-          zIndex: 100 - absOff,
+          zIndex: 100 - Math.abs(offset),
+          transform: pose.transform,
+          "--pose-opacity": pose.opacity,
           "--accent": accentHex,
         } as React.CSSProperties
       }
-      animate={carouselAnimate({ offset, spreadMax, zMax, hidden })}
-      transition={CAROUSEL_TRANSITION}
     >
       <CarouselCardFrame isCenter={isCenter} isNew={isNew} isBestForHeadcount={isBestForHeadcount}>
         {children}
       </CarouselCardFrame>
-    </motion.div>
+    </div>
   );
 }
 
 /**
  * Inner visible card body — the rounded-2xl frame with surface-900
  * background, border, and the amber best-for-headcount glow. Split from
- * the motion wrapper so consumers can render absolutely-positioned
- * widgets (variant chip strip) at the motion-wrapper level without
- * sitting inside the overflow-hidden frame.
+ * the pose wrapper so consumers can render absolutely-positioned widgets
+ * (variant chip strip) at the wrapper level without sitting inside the
+ * overflow-hidden frame.
  *
  * Exported because `FamilyCarouselCard` opts to render the frame
  * directly while keeping its chip-strip OUTSIDE the frame; that
- * structure is `<motion.div from CarouselCardChrome>` →
- * `<CarouselCardFrame>` → `<thumb + body>`, with the chip-strip rendered
- * by `GameCarousel3D` at a sibling level above the motion.div.
+ * structure is `<div from CarouselCardChrome>` → `<CarouselCardFrame>` →
+ * `<thumb + body>`, with the chip-strip rendered by `GameCarousel3D` at a
+ * sibling level above the pose wrapper.
  */
 export function CarouselCardFrame({
   isCenter,

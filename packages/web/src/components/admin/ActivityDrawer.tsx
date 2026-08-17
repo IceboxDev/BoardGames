@@ -287,6 +287,10 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
       return `Cleared their RSVP${forDay ? ` for ${forDay}` : ""}`;
     case "rsvp-kick":
       return `Removed ${targetName ?? "an attendee"} from ${forDay ?? "a night"}`;
+    case "night-guest":
+      return meta.on === false
+        ? `Removed guest ${targetName ?? "player"} from ${forDay ?? "a night"}`
+        : `Added guest ${targetName ?? "player"} to ${forDay ?? "a night"}`;
     case "game-vote": {
       const title = gameTitle(str(meta.slug)) ?? "a game";
       const reaction = str(meta.reaction) ?? "hype";
@@ -405,6 +409,7 @@ function dotClass(type: string): string {
     case "rsvp":
     case "rsvp-cleared":
     case "rsvp-kick":
+    case "night-guest":
       return "bg-emerald-400/70";
     case "game-vote":
       return "bg-amber-400/70";

@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  AdminNightGuestBodySchema,
   CalendarLocksSchema,
   HostStatsMapSchema,
   KickRsvpBodySchema,
@@ -171,6 +172,32 @@ describe("KickRsvpBodySchema", () => {
 
   it("rejects malformed date", () => {
     expect(() => KickRsvpBodySchema.parse({ date: "May 5", userId: "user-2" })).toThrow();
+  });
+});
+
+describe("AdminNightGuestBodySchema", () => {
+  it("accepts add and remove bodies", () => {
+    expect(() =>
+      AdminNightGuestBodySchema.parse({ date: "2026-05-05", guestUserId: "g1", on: true }),
+    ).not.toThrow();
+    expect(() =>
+      AdminNightGuestBodySchema.parse({ date: "2026-05-05", guestUserId: "g1", on: false }),
+    ).not.toThrow();
+  });
+
+  it("rejects a missing on flag", () => {
+    expect(() =>
+      AdminNightGuestBodySchema.parse({ date: "2026-05-05", guestUserId: "g1" }),
+    ).toThrow();
+  });
+
+  it("rejects empty guestUserId and malformed date", () => {
+    expect(() =>
+      AdminNightGuestBodySchema.parse({ date: "2026-05-05", guestUserId: "", on: true }),
+    ).toThrow();
+    expect(() =>
+      AdminNightGuestBodySchema.parse({ date: "May 5", guestUserId: "g1", on: true }),
+    ).toThrow();
   });
 });
 

@@ -1,9 +1,11 @@
 import { useState } from "react";
 import GameCarousel3D from "../components/offline/GameCarousel3D";
+import RankedGameList from "../components/offline/RankedGameList";
 import { AddressLink, HostLine, RSVP_OPTIONS, TimeLine } from "../components/offline/RsvpModal";
 import { Modal } from "../components/ui/Modal";
 import { SegmentedControl } from "../components/ui/SegmentedControl";
 import { games } from "../games/registry";
+import type { ReactionAggregate } from "../lib/calendar-games";
 
 // Dev-only visual preview of the RSVP modal shell + game carousel — the
 // exact surface behind /offline's day cards, but with static data and no
@@ -25,9 +27,22 @@ const PREVIEW_SLUGS = new Set([
   "cascadia",
 ]);
 
+// Reaction fixtures for the results view — counts high enough to render the
+// per-button count bubbles that crowd the ranked rows on phone widths.
+const PREVIEW_REACTIONS: Record<string, ReactionAggregate> = {
+  "captain-sonar": { hype: 6, teach: 1, learn: 1, viewer: [] },
+  codenames: { hype: 6, teach: 0, learn: 1, viewer: [] },
+  wavelength: { hype: 5, teach: 1, learn: 1, viewer: [] },
+  "sushi-go": { hype: 3, teach: 1, learn: 1, viewer: [] },
+  "7-wonders": { hype: 2, teach: 1, learn: 1, viewer: [] },
+};
+const PREVIEW_TOP = ["captain-sonar", "codenames", "wavelength", "sushi-go", "7-wonders"];
+
 export default function RsvpPreview() {
   const [rsvp, setRsvp] = useState<"yes" | "no">("yes");
-  const [view, setView] = useState<"pick" | "results" | "attendees">("pick");
+  const [view, setView] = useState<"pick" | "results" | "attendees">(() =>
+    new URLSearchParams(window.location.search).get("view") === "results" ? "results" : "pick",
+  );
   const previewGames = games
     .filter((g) => PREVIEW_SLUGS.has(g.slug))
     // Captain Sonar first — the long-title regression case sits centered.
@@ -65,10 +80,15 @@ export default function RsvpPreview() {
 
   if (frame) {
     const [w, h] = frame.split("x").map(Number);
+    // Drop only the frame param, keeping the rest (?view=…) intact
+    // regardless of parameter order.
+    const inner = new URLSearchParams(window.location.search);
+    inner.delete("frame");
+    const qs = inner.toString();
     return (
       <iframe
         title="preview-frame"
-        src={window.location.pathname + window.location.search.replace(/[?&]frame=[^&]*/, "")}
+        src={window.location.pathname + (qs ? `?${qs}` : "")}
         style={{ width: w || 360, height: h || 644, border: "1px solid #333" }}
       />
     );
@@ -78,7 +98,7 @@ export default function RsvpPreview() {
     <Modal
       onClose={() => {}}
       size="full"
-      panelClassName="gap-2 sm:gap-4 sm:p-7"
+      panelClassName="gap-2 p-4 sm:gap-4 sm:p-7"
       eyebrow={eyebrow}
       title={HEADING_DATE}
       titleClassName="text-xl font-bold tracking-tight text-white xs2:text-2xl sm:text-3xl"
@@ -112,7 +132,22 @@ export default function RsvpPreview() {
       </div>
 
       <div className="flex min-h-0 flex-1 items-center justify-center">
-        <GameCarousel3D games={previewGames} minPlayers={5} maxPlayers={7} date="" reactions={{}} />
+        {view === "results" ? (
+          <RankedGameList
+            date="2026-08-16"
+            games={previewGames}
+            reactions={PREVIEW_REACTIONS}
+            topSlugs={PREVIEW_TOP}
+          />
+        ) : (
+          <GameCarousel3D
+            games={previewGames}
+            minPlayers={5}
+            maxPlayers={7}
+            date="2026-08-16"
+            reactions={PREVIEW_REACTIONS}
+          />
+        )}
       </div>
     </Modal>
   );
