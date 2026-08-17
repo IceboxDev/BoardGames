@@ -171,7 +171,10 @@ export function HexSkillChart({ skill, accentHex, axisDetails }: HexSkillChartPr
         <Surface
           variant="raised"
           padding="none"
-          className="pointer-events-none absolute z-10 -translate-x-1/2 -translate-y-full whitespace-nowrap px-2.5 py-1.5 text-center shadow-xl shadow-black/40"
+          // Solid background (readable over the chart) and a width cap so
+          // long "sharpened by" game titles wrap instead of blowing the
+          // bubble past the card.
+          className="pointer-events-none absolute z-10 w-max max-w-52 -translate-x-1/2 -translate-y-full bg-surface-900 px-2.5 py-1.5 text-center shadow-xl shadow-black/40"
           style={{
             left: `${(valuePoints[hovered].x / SIZE) * 100}%`,
             top: `${(valuePoints[hovered].y / SIZE) * 100 - 3}%`,

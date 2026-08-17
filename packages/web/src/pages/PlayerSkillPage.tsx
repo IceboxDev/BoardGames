@@ -125,7 +125,10 @@ export default function PlayerSkillPage() {
             title={`${firstName}'s stats`}
             subtitle={
               eligibility.eligible
-                ? `Ranked · ${eligibility.ratedMatches} rated games across ${eligibility.distinctGames} titles`
+                ? // "Rated" < "played": moderated nights, scored co-ops and
+                  // unresolved campaigns count as plays but carry no
+                  // competitive evidence, so they don't rate.
+                  `Ranked · ${eligibility.ratedMatches} of ${profile?.stats.gamesPlayed ?? "…"} games rated across ${eligibility.distinctGames} titles`
                 : "Not ranked yet — the skill profile unlocks with more recorded games"
             }
           />

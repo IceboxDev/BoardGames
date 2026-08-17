@@ -1,8 +1,9 @@
 import type { ProfileNightItem } from "@boardgames/core/protocol";
 import type { ReactNode } from "react";
 import { formatDayKey } from "../../../lib/date-format.ts";
-import { FlameIcon, HostIcon, TrophyIcon } from "../../icons";
+import { HostIcon, TrophyIcon } from "../../icons";
 import { DonutChart } from "../../ui/charts";
+import { FlameArt } from "../../ui/FlameArt.tsx";
 import { MicroLabel } from "../../ui/Label.tsx";
 import { Surface } from "../../ui/Surface.tsx";
 import { attendanceStreaks, nightTotals } from "./night-stats.ts";
@@ -55,7 +56,7 @@ export function NightsHero({
         <div className="flex flex-1 flex-col justify-between gap-1">
           <span className="flex items-center gap-1.5 text-2xl font-bold tabular-nums text-fg-primary">
             {streaks.current}
-            {streaks.current >= 3 && <FlameIcon className="h-5 w-5 text-amber-300" />}
+            {streaks.current >= 3 && <FlameArt className="h-5 w-5" />}
           </span>
           <span className="text-3xs text-fg-muted">
             nights in a row · longest {streaks.longest}

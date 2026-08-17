@@ -1,4 +1,5 @@
-import { CheckIcon, FlameIcon, StackIcon, StarIcon } from "../icons";
+import { CheckIcon, StackIcon, StarIcon } from "../icons";
+import { FlameArt } from "../ui/FlameArt.tsx";
 
 // Pill-style badges placed inside the `badgeTopLeft` / `badgeTopRight`
 // slots of `GameCardThumb` or `CarouselCardChrome`. All share the same
@@ -106,7 +107,7 @@ export function BestForHeadcountBadge({ count }: { count: number }) {
     <span
       className={`${BADGE_BASE_TIGHT} bg-gradient-to-r from-amber-500 to-orange-600 text-white shadow-md shadow-amber-500/40`}
     >
-      <FlameIcon className="h-3 w-3" />
+      <FlameArt className="h-3 w-3" />
       Best at {count}
     </span>
   );

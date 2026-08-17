@@ -1,8 +1,9 @@
 import type { ProfileMatchSummaryItem } from "@boardgames/core/protocol";
 import type { ReactNode } from "react";
 import { resolveGame } from "../../../lib/games-by-slug.ts";
-import { FlameIcon, TrophyIcon } from "../../icons";
+import { TrophyIcon } from "../../icons";
 import { DonutChart, perfColor, Sparkline } from "../../ui/charts";
+import { FlameArt } from "../../ui/FlameArt.tsx";
 import { MicroLabel } from "../../ui/Label.tsx";
 import { Surface } from "../../ui/Surface.tsx";
 import {
@@ -100,7 +101,7 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
                 {streak.current.length}
                 {streak.current.type === "win" ? "W" : "L"}
                 {streak.current.type === "win" && streak.current.length >= 2 && (
-                  <FlameIcon className="h-5 w-5 text-amber-300" />
+                  <FlameArt className="h-5 w-5" />
                 )}
               </span>
             ) : (

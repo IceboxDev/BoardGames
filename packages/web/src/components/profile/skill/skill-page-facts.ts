@@ -8,7 +8,8 @@ import type {
   SkillHighlightWire,
   SkillTraitId,
 } from "@boardgames/core/protocol";
-import { gamesByPlays, streaks } from "../insights/summary-stats.ts";
+import { coopMaxScoreForSlug } from "../../../games/score-config.ts";
+import { gamesByPlays, recentForm, streaks } from "../insights/summary-stats.ts";
 
 export type BestGameFact =
   | { kind: "ranked"; slug: string; rank: number; of: number; matches: number }
@@ -59,14 +60,21 @@ export function bestSkillFact(skill: PlayerSkillResponse): BestSkillFact | null 
 export type ClaimFact =
   | { kind: "highlight"; highlight: SkillHighlightWire }
   | { kind: "streak"; length: number }
-  | { kind: "winrate"; pct: number; wins: number; losses: number };
+  | { kind: "winrate"; pct: number; wins: number; losses: number }
+  | { kind: "coop-wins"; wins: number }
+  | { kind: "coop-score"; title: string; score: number; max: number | null }
+  | { kind: "form"; wins: number; window: number }
+  | { kind: "variety"; games: number }
+  | { kind: "dedication"; games: number };
 
 /**
- * The third card: the strongest claim that doesn't just repeat the other two
- * cards. Highlights about a *different* subject than the best-game/best-skill
- * cards lead; `top-trait` (a pure restatement of the best-skill card) never
- * shows. Falls back to a real win streak, then a win rate, then whatever
- * non-redundant highlight is left.
+ * The third card: the strongest TRUE claim that doesn't just repeat the other
+ * two cards — and NEVER a demoralizing one. Podium/strong highlights lead;
+ * `top-trait` (a pure restatement of the best-skill card) never shows. Then a
+ * ladder of ego-safe facts: win streak, a WINNING record (never a losing
+ * one), co-op victories, a best team score, current form, breadth of games —
+ * and, as the guaranteed floor, sheer dedication. Everyone eligible gets
+ * something that feels good AND is checkable.
  */
 export function claimFact(
   skill: PlayerSkillResponse,
@@ -81,19 +89,49 @@ export function claimFact(
     candidates.find((h) => !("trait" in h) || h.trait !== bestSkillTrait) ?? candidates[0];
   if (fresh) return { kind: "highlight", highlight: fresh };
 
-  if (summaryItems && summaryItems.length > 0) {
-    const { bestWin } = streaks(summaryItems);
-    if (bestWin >= 3) return { kind: "streak", length: bestWin };
-    let wins = 0;
-    let losses = 0;
-    for (const item of summaryItems) {
-      if (item.result === "win") wins++;
-      else if (item.result === "loss") losses++;
-    }
-    if (wins + losses >= 5) {
-      return { kind: "winrate", pct: Math.round((wins / (wins + losses)) * 100), wins, losses };
+  const items = summaryItems ?? [];
+  if (items.length === 0) return null;
+
+  const { bestWin } = streaks(items);
+  if (bestWin >= 3) return { kind: "streak", length: bestWin };
+
+  let wins = 0;
+  let losses = 0;
+  let coopWins = 0;
+  let bestCoop: { title: string; score: number; max: number | null } | null = null;
+  for (const item of items) {
+    if (item.result === "win") {
+      wins++;
+      if (item.kind === "coop") coopWins++;
+    } else if (item.result === "loss") losses++;
+    if (item.kind === "coop" && item.score !== null && item.gameSlug) {
+      const max = coopMaxScoreForSlug(item.gameSlug) ?? null;
+      const ratio = max ? item.score / max : 0;
+      const bestRatio = bestCoop?.max ? bestCoop.score / bestCoop.max : 0;
+      if (!bestCoop || ratio > bestRatio) {
+        bestCoop = { title: item.gameTitle, score: item.score, max };
+      }
     }
   }
 
-  return null;
+  // A win RATE only ever brags — losing records stay off the podium.
+  if (wins + losses >= 5 && wins / (wins + losses) >= 0.55) {
+    return { kind: "winrate", pct: Math.round((wins / (wins + losses)) * 100), wins, losses };
+  }
+  if (coopWins >= 2) return { kind: "coop-wins", wins: coopWins };
+  if (bestCoop && (!bestCoop.max || bestCoop.score / bestCoop.max >= 0.5)) {
+    return { kind: "coop-score", ...bestCoop };
+  }
+
+  const form = recentForm(items, 10);
+  const formWins = form.filter((r) => r === "win").length;
+  if (form.length >= 6 && formWins >= Math.ceil(form.length / 2)) {
+    return { kind: "form", wins: formWins, window: form.length };
+  }
+
+  const distinct = gamesByPlays(items).length;
+  if (distinct >= 8) return { kind: "variety", games: distinct };
+
+  // The floor: showing up is itself a claim, and it's always true.
+  return { kind: "dedication", games: items.length };
 }

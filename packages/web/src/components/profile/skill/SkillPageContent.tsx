@@ -173,6 +173,8 @@ export function SkillPageContent({
               </div>
             </div>
           </Section>
+
+          <HonestNumbers items={summaryItems} />
         </Stack>
 
         <Stack gap="lg" className="min-w-0 lg:col-span-1">
@@ -185,8 +187,6 @@ export function SkillPageContent({
               />
             </Section>
           )}
-
-          <HonestNumbers items={summaryItems} />
         </Stack>
       </div>
     </>

@@ -40,23 +40,24 @@ function gameTitle(slug: string): string {
   return resolveGame(slug)?.title ?? slug;
 }
 
-/** Headline + supporting line for one highlight. */
+/** Headline + supporting line for one highlight — short enough to hold one
+ *  line in the claim card, and unapologetically flattering. */
 export function highlightCopy(h: SkillHighlightWire): { title: string; detail: string } {
   switch (h.kind) {
     case "trait-first":
       return {
-        title: `Best ${traitLabel(h.trait)} in the group`,
-        detail: `#1 on the ${traitLabel(h.trait)} leaderboard`,
+        title: `${traitLabel(h.trait)} Champion`,
+        detail: `#1 in the group`,
       };
     case "trait-top3":
       return {
         title: `Top in ${traitLabel(h.trait)}`,
-        detail: `#${h.rank} on the ${traitLabel(h.trait)} leaderboard`,
+        detail: `#${h.rank} in the group`,
       };
     case "game-first":
       return {
-        title: `Best ${gameTitle(h.slug)} player`,
-        detail: `#1 rated over ${h.matches} recorded matches`,
+        title: `${gameTitle(h.slug)} Champion`,
+        detail: `#1 · ${h.matches} games`,
       };
     case "trait-strong":
       return {

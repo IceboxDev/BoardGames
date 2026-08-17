@@ -6,7 +6,8 @@
 //   bg-int.webp  bg-pln.webp  bg-per.webp  bg-soph.webp  bg-soc.webp  bg-dex.webp
 //   bg-claim-gold.webp  bg-claim-silver.webp  bg-claim-bronze.webp
 
-import type { SkillHighlightWire, SkillTraitId } from "@boardgames/core/protocol";
+import type { SkillTraitId } from "@boardgames/core/protocol";
+import type { ClaimFact } from "./skill-page-facts.ts";
 
 const art = import.meta.glob("./assets/bg-*.{webp,png,jpg}", {
   eager: true,
@@ -63,14 +64,27 @@ export function artHueFilter(accentHex: string | null | undefined): string | und
   return `hue-rotate(${delta}deg)`;
 }
 
-export function claimArt(highlight: SkillHighlightWire): string | undefined {
-  const tier =
-    highlight.kind === "trait-first" || highlight.kind === "game-first"
-      ? "gold"
-      : highlight.kind === "trait-top3"
-        ? highlight.rank === 2
-          ? "silver"
-          : "bronze"
-        : "gold";
-  return find(`bg-claim-${tier}`);
+export function claimArt(claim: ClaimFact): string | undefined {
+  if (claim.kind === "highlight") {
+    const h = claim.highlight;
+    const tier =
+      h.kind === "trait-first" || h.kind === "game-first"
+        ? "gold"
+        : h.kind === "trait-top3"
+          ? h.rank === 2
+            ? "silver"
+            : "bronze"
+          : "gold";
+    return find(`bg-claim-${tier}`);
+  }
+  const key: Record<Exclude<ClaimFact["kind"], "highlight">, string> = {
+    streak: "streak",
+    winrate: "winrate",
+    "coop-wins": "coop",
+    "coop-score": "coop",
+    form: "form",
+    variety: "variety",
+    dedication: "dedication",
+  };
+  return find(`bg-claim-${key[claim.kind]}`);
 }

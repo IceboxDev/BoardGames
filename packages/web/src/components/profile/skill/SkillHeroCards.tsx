@@ -1,12 +1,13 @@
 import type { PlayerSkillResponse, ProfileMatchSummaryItem } from "@boardgames/core/protocol";
 import type { ReactNode } from "react";
 import { resolveGame } from "../../../lib/games-by-slug.ts";
-import { FlameIcon } from "../../icons";
+import { ClockIcon, GalleryIcon, UsersIcon } from "../../icons";
+import { FlameArt } from "../../ui/FlameArt.tsx";
 import { MicroLabel } from "../../ui/Label.tsx";
 import { Surface } from "../../ui/Surface.tsx";
 import { Medal } from "./Medal.tsx";
 import { artHueFilter, claimArt, traitArt } from "./skill-card-art.ts";
-import { bestGameFact, bestSkillFact, claimFact } from "./skill-page-facts.ts";
+import { bestGameFact, bestSkillFact, type ClaimFact, claimFact } from "./skill-page-facts.ts";
 import { TraitIcon } from "./TraitIcon.tsx";
 import { highlightCopy, ordinal, TRAIT_COPY } from "./trait-copy.ts";
 
@@ -131,7 +132,7 @@ export function SkillHeroCards({
             </p>
             <p className="mt-1 text-2xs font-semibold uppercase tracking-pill text-fg-secondary">
               {game.kind === "ranked"
-                ? `${ordinal(game.rank)} in the group · ${game.matches} games`
+                ? `${game.rank === 1 ? "Best" : `${ordinal(game.rank)} best`} in the group · ${game.matches} games`
                 : `Most played · ${game.plays} games`}
             </p>
           </div>
@@ -156,52 +157,73 @@ export function SkillHeroCards({
       )}
 
       {claim && (
-        <HeroCard
-          label="Claim to fame"
-          art={claim.kind === "highlight" ? claimArt(claim.highlight) : undefined}
-          artFilter={hueFilter}
-        >
+        <HeroCard label="Claim to fame" art={claimArt(claim)}>
           <div className="mt-auto flex items-end justify-between gap-3">
-            {claim.kind === "highlight" ? (
-              <>
-                <div className="min-w-0">
-                  <p className="text-xl font-black leading-tight text-white sm:text-2xl">
-                    {highlightCopy(claim.highlight).title}
-                  </p>
-                  <p className="mt-1 text-2xs font-semibold uppercase tracking-pill text-fg-secondary">
-                    {highlightCopy(claim.highlight).detail}
-                  </p>
-                </div>
-                <Medal highlight={claim.highlight} size="lg" />
-              </>
-            ) : claim.kind === "streak" ? (
-              <>
-                <div className="min-w-0">
-                  <p className="text-xl font-black leading-tight text-white sm:text-2xl">
-                    {claim.length}-game win streak
-                  </p>
-                  <p className="mt-1 text-2xs font-semibold uppercase tracking-pill text-fg-secondary">
-                    Longest run of straight wins
-                  </p>
-                </div>
-                <FlameIcon className="h-12 w-12 shrink-0 text-orange-300" />
-              </>
-            ) : (
-              <>
-                <div className="min-w-0">
-                  <p className="text-xl font-black leading-tight text-white sm:text-2xl">
-                    {claim.pct}% win rate
-                  </p>
-                  <p className="mt-1 text-2xs font-semibold uppercase tracking-pill text-fg-secondary">
-                    {claim.wins} wins · {claim.losses} losses
-                  </p>
-                </div>
-                <FlameIcon className="h-12 w-12 shrink-0 text-emerald-300" />
-              </>
-            )}
+            <div className="min-w-0">
+              <p className="text-xl font-black leading-tight text-white sm:text-2xl">
+                {claimCopy(claim).title}
+              </p>
+              <p className="mt-1 text-2xs font-semibold uppercase tracking-pill text-fg-secondary">
+                {claimCopy(claim).detail}
+              </p>
+            </div>
+            <ClaimEmblem claim={claim} accentHex={accentHex} />
           </div>
         </HeroCard>
       )}
     </div>
   );
+}
+
+/** One-line, unapologetically flattering copy for every claim kind. */
+function claimCopy(claim: ClaimFact): { title: string; detail: string } {
+  switch (claim.kind) {
+    case "highlight":
+      return highlightCopy(claim.highlight);
+    case "streak":
+      return { title: `${claim.length}-win streak`, detail: "Straight wins, no mercy" };
+    case "winrate":
+      return {
+        title: `${claim.pct}% win rate`,
+        detail: `${claim.wins} wins · a winning record`,
+      };
+    case "coop-wins":
+      return { title: "Team player", detail: `${claim.wins} co-op victories` };
+    case "coop-score":
+      return {
+        title: claim.max
+          ? `${claim.score}/${claim.max} in ${claim.title}`
+          : `Scored ${claim.score} in ${claim.title}`,
+        detail: "Best team score on record",
+      };
+    case "form":
+      return {
+        title: "On fire right now",
+        detail: `${claim.wins} of the last ${claim.window} won`,
+      };
+    case "variety":
+      return { title: "The Explorer", detail: `${claim.games} different games played` };
+    case "dedication":
+      return { title: `${claim.games} games strong`, detail: "Always at the table" };
+  }
+}
+
+/** The claim card's right-side emblem — trophy for podium claims, the
+ *  accent-tinted flame for hot facts, themed icons for the rest. */
+function ClaimEmblem({ claim, accentHex }: { claim: ClaimFact; accentHex?: string | null }) {
+  switch (claim.kind) {
+    case "highlight":
+      return <Medal highlight={claim.highlight} size="lg" />;
+    case "streak":
+    case "form":
+    case "winrate":
+      return <FlameArt className="h-12 w-12" accentHex={accentHex} />;
+    case "coop-wins":
+    case "coop-score":
+      return <UsersIcon className="h-10 w-10 shrink-0 text-[var(--accent)]" />;
+    case "variety":
+      return <GalleryIcon className="h-10 w-10 shrink-0 text-[var(--accent)]" />;
+    case "dedication":
+      return <ClockIcon className="h-10 w-10 shrink-0 text-[var(--accent)]" />;
+  }
 }

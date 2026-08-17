@@ -3,7 +3,6 @@ import type { ReactNode } from "react";
 import {
   BookIcon,
   CheckIcon,
-  FlameIcon,
   GalleryIcon,
   HostIcon,
   SparkleIcon,
@@ -12,6 +11,7 @@ import {
   TrophyIcon,
   UsersIcon,
 } from "../icons";
+import { FlameArt } from "../ui/FlameArt.tsx";
 import { TONE_BUBBLE, type Tone } from "../ui/tones";
 
 // Achievement badges, derived entirely from the public `ProfileStats` (no stored
@@ -97,7 +97,7 @@ const BADGES: BadgeDef[] = [
     label: "Specialist",
     description: "One game 12+ times",
     tone: "sky",
-    icon: <FlameIcon className={ICON} />,
+    icon: <FlameArt className={ICON} />,
     earned: (s) => (s.perGame[0]?.plays ?? 0) >= 12,
   },
   {

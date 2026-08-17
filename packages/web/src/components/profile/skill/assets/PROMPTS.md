@@ -30,3 +30,9 @@ focus, atmospheric depth of field.
 | `bg-claim-gold.webp` | A golden laurel wreath and confetti embers over a dark podium's first-place step, warm gold rim light |
 | `bg-claim-silver.webp` | A silver laurel wreath over the second step of a dark podium, cool moonlit silver rim light |
 | `bg-claim-bronze.webp` | A bronze laurel wreath over the third step of a dark podium, ember-orange rim light |
+| `bg-claim-streak.webp` | A comet of stylized flame streaking across a dark table scattering embers over game pieces, fiery orange rim light |
+| `bg-claim-winrate.webp` | A rising column of glowing victory chips stacking ever higher over a dark felt table, a small upward arrow motif in embers |
+| `bg-claim-coop.webp` | Four stylized meeples shoulder to shoulder lifting one glowing star together, warm united glow on a dark board |
+| `bg-claim-form.webp` | A dark scoreboard whose last few tally marks burn bright and hot, heat-shimmer rising off the freshest mark |
+| `bg-claim-variety.webp` | A sprawling dark atlas of many tiny glowing board-game boards fanned out like constellation cards, one lantern lighting them |
+| `bg-claim-dedication.webp` | A well-worn wooden game table under a warm lamp, dice and sleeves showing years of loving use, quiet steady glow |
