@@ -11,6 +11,7 @@ import { Input } from "../ui/Input";
 import { Select } from "../ui/Select";
 import { ExpandableAdminCard } from "./ExpandableAdminCard";
 import { synthesizeGuestEmail } from "./guest-email";
+import { NightGuestsPanel } from "./NightGuestsCard";
 import type { AdminUser } from "./types";
 
 type Props = {
@@ -121,7 +122,7 @@ export function GuestPlayersCard({ guests, members, onChanged }: Props) {
       summary={
         guests.length === 0
           ? "No guests yet — add stub accounts for people who never signed up."
-          : `${guests.length} guest${guests.length === 1 ? "" : "s"} — pickable in match history.`
+          : `${guests.length} guest${guests.length === 1 ? "" : "s"} — pickable in match history, seatable on nights.`
       }
       expanded={expanded}
       onToggle={() => setExpanded((v) => !v)}
@@ -241,6 +242,7 @@ export function GuestPlayersCard({ guests, members, onChanged }: Props) {
             ))}
           </ul>
         )}
+        <NightGuestsPanel guests={guests} active={expanded} />
       </>
     </ExpandableAdminCard>
   );

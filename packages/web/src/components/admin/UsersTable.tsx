@@ -38,14 +38,19 @@ export function UsersTable({ loading, empty, deleteMode, children }: Props) {
     <Surface variant="panel" padding="none" className="overflow-hidden">
       <table className="w-full table-fixed text-sm">
         <thead className="bg-surface-800 text-xs uppercase tracking-wider text-fg-muted">
+          {/* Phones deliberately show only Coverage + Name (both clickable —
+              calendar and activity). The management columns need a desktop;
+              horizontal table scrolling on touch is not a real affordance. */}
           <tr>
             <th className="w-24 pl-5 pr-3 py-3 text-left font-medium" aria-label="Coverage" />
-            <th className="w-64 px-5 py-3 text-left font-medium">Name</th>
-            <th className="px-5 py-3 text-left font-medium">Email</th>
-            <th className="w-24 px-5 py-3 text-center font-medium">Role</th>
-            <th className="w-32 px-5 py-3 text-center font-medium">Inventory</th>
+            <th className="md:w-64 px-5 py-3 text-left font-medium">Name</th>
+            <th className="hidden md:table-cell px-5 py-3 text-left font-medium">Email</th>
+            <th className="hidden md:table-cell w-24 px-5 py-3 text-center font-medium">Role</th>
+            <th className="hidden md:table-cell w-32 px-5 py-3 text-center font-medium">
+              Inventory
+            </th>
             <th
-              className={`w-40 px-3 py-3 text-center font-medium ${
+              className={`hidden md:table-cell w-40 px-3 py-3 text-center font-medium ${
                 deleteMode ? "text-rose-300" : ""
               }`}
             >

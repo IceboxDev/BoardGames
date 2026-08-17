@@ -70,6 +70,13 @@ export const DeviceInfoSchema = z.object({
   orientation: z.enum(["portrait", "landscape"]),
   browser: z.string().min(1).max(40).optional(),
   os: z.string().min(1).max(40).optional(),
+  /**
+   * Stable physical-device hash (platform, rotation-invariant screen, input/
+   * CPU/memory class, timezone, language, WebGL renderer) — everything
+   * viewport/zoom-dependent is deliberately excluded, so all resolution rows
+   * from one device share it. Absent on rows recorded before it existed.
+   */
+  fingerprint: z.string().min(1).max(32).optional(),
 });
 export type DeviceInfo = z.infer<typeof DeviceInfoSchema>;
 

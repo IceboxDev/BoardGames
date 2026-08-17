@@ -25,6 +25,65 @@ function osOf(ua: string): string | undefined {
   return undefined;
 }
 
+/**
+ * Stable PHYSICAL-DEVICE fingerprint — deliberately excludes everything that
+ * changes per session on the same machine (viewport, orientation, page zoom,
+ * pinch, DPR-as-zoomed) so the admin drawer can cluster the pile of
+ * resolution rows one device produces. Signals: platform + browser/OS, the
+ * rotation-invariant screen size, input/CPU/memory class, timezone,
+ * language, and the WebGL renderer string (the heaviest discriminator —
+ * distinguishes machines with identical screens).
+ */
+function webglRenderer(): string {
+  try {
+    const gl =
+      document.createElement("canvas").getContext("webgl") ??
+      document.createElement("canvas").getContext("experimental-webgl");
+    if (!(gl instanceof WebGLRenderingContext)) return "";
+    const ext = gl.getExtension("WEBGL_debug_renderer_info");
+    const renderer = ext
+      ? String(gl.getParameter(ext.UNMASKED_RENDERER_WEBGL))
+      : String(gl.getParameter(gl.RENDERER));
+    return renderer;
+  } catch {
+    return "";
+  }
+}
+
+/** FNV-1a 32-bit — clustering key, not a security primitive. */
+function fnv1a(input: string): string {
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < input.length; i++) {
+    hash ^= input.charCodeAt(i);
+    hash = Math.imul(hash, 0x01000193);
+  }
+  return (hash >>> 0).toString(16).padStart(8, "0");
+}
+
+let cachedFingerprint: string | null = null;
+
+export function deviceFingerprint(): string {
+  if (cachedFingerprint) return cachedFingerprint;
+  const screenLong = Math.max(screen.width, screen.height);
+  const screenShort = Math.min(screen.width, screen.height);
+  const nav = navigator as Navigator & { deviceMemory?: number };
+  const parts = [
+    navigator.platform ?? "",
+    browserOf(navigator.userAgent) ?? "",
+    osOf(navigator.userAgent) ?? "",
+    `${screenLong}x${screenShort}`,
+    `depth${screen.colorDepth}`,
+    `touch${navigator.maxTouchPoints}`,
+    `cpu${navigator.hardwareConcurrency ?? 0}`,
+    `mem${nav.deviceMemory ?? 0}`,
+    Intl.DateTimeFormat().resolvedOptions().timeZone ?? "",
+    navigator.language ?? "",
+    webglRenderer(),
+  ];
+  cachedFingerprint = fnv1a(parts.join("|"));
+  return cachedFingerprint;
+}
+
 export function collectDeviceInfo(): DeviceInfo {
   const touch = navigator.maxTouchPoints > 0;
   const screenMin = Math.min(screen.width, screen.height);
@@ -59,6 +118,7 @@ export function collectDeviceInfo(): DeviceInfo {
     orientation: viewportWidth >= viewportHeight ? "landscape" : "portrait",
     ...(browserOf(navigator.userAgent) ? { browser: browserOf(navigator.userAgent) } : {}),
     ...(osOf(navigator.userAgent) ? { os: osOf(navigator.userAgent) } : {}),
+    fingerprint: deviceFingerprint(),
   };
 }
 

@@ -1,6 +1,6 @@
 import type { ActivityEntry, AdminDevice } from "@boardgames/core/protocol";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { games } from "../../games/registry";
 import { useAdminUsers } from "../../hooks/useAdminUsers";
 import { adminFetchActivity, adminFetchDevices } from "../../lib/admin";
@@ -94,24 +94,117 @@ export function ActivityDrawer({ user, onClose }: Props) {
 // for their layout issues: screen, DPR, zoom, and the CSS viewport to set the
 // dev-tools emulator to. Silently absent until the member's client reports.
 
+/**
+ * Cluster key: the reported physical-device fingerprint when present; a
+ * rotation-invariant heuristic (type + sorted screen + browser/OS) for rows
+ * recorded before fingerprinting existed. One device's pile of viewport /
+ * zoom / rotation rows collapses to a single expandable entry.
+ */
+function clusterKeyOf(info: AdminDevice["info"]): string {
+  if (info.fingerprint) return `fp:${info.fingerprint}`;
+  const long = Math.max(info.screenWidth, info.screenHeight);
+  const short = Math.min(info.screenWidth, info.screenHeight);
+  return `legacy:${info.deviceType}|${long}x${short}|${info.browser ?? "?"}|${info.os ?? "?"}`;
+}
+
+type DeviceCluster = {
+  key: string;
+  devices: AdminDevice[];
+  totalHits: number;
+  lastSeen: string;
+};
+
+function clusterDevices(devices: AdminDevice[]): DeviceCluster[] {
+  const byKey = new Map<string, AdminDevice[]>();
+  for (const d of devices) {
+    const key = clusterKeyOf(d.info);
+    const list = byKey.get(key) ?? [];
+    list.push(d);
+    byKey.set(key, list);
+  }
+  return [...byKey.entries()]
+    .map(([key, list]) => ({
+      key,
+      // Most recent setup first within the cluster.
+      devices: [...list].sort((a, b) => b.lastSeen.localeCompare(a.lastSeen)),
+      totalHits: list.reduce((s, d) => s + d.hits, 0),
+      lastSeen: list.reduce((m, d) => (d.lastSeen > m ? d.lastSeen : m), ""),
+    }))
+    .sort((a, b) => b.lastSeen.localeCompare(a.lastSeen));
+}
+
 function DevicesSection({ userId }: { userId: string }) {
   const devicesQuery = useQuery({
     queryKey: qk.adminUserDevices(userId),
     queryFn: ({ signal }) => adminFetchDevices(userId, signal),
   });
+  const [openKey, setOpenKey] = useState<string | null>(null);
   const devices = devicesQuery.data?.devices ?? [];
   if (devices.length === 0) return null;
+  const clusters = clusterDevices(devices);
   return (
     <section className="shrink-0">
-      <h3 className="py-1 text-2xs font-semibold uppercase tracking-wide text-fg-muted">Devices</h3>
+      <h3 className="py-1 text-2xs font-semibold uppercase tracking-wide text-fg-muted">
+        Devices ({clusters.length})
+      </h3>
       <ul className="space-y-1.5">
-        {devices.map((d) => (
-          <li key={d.id} className="rounded-lg bg-surface-800/60 px-2.5 py-1.5">
-            <DeviceLine device={d} />
+        {clusters.map((cluster) => (
+          <li key={cluster.key} className="rounded-lg bg-surface-800/60 px-2.5 py-1.5">
+            {cluster.devices.length === 1 ? (
+              <DeviceLine device={cluster.devices[0]} />
+            ) : (
+              <>
+                {/* biome-ignore lint/correctness/noRestrictedElements: full-row cluster toggle — Button chrome doesn't fit the telemetry list */}
+                <button
+                  type="button"
+                  aria-expanded={openKey === cluster.key}
+                  onClick={() => setOpenKey(openKey === cluster.key ? null : cluster.key)}
+                  className="w-full text-left"
+                >
+                  <ClusterHeader cluster={cluster} open={openKey === cluster.key} />
+                </button>
+                {openKey === cluster.key && (
+                  <ul className="mt-1.5 space-y-1.5 border-l border-white/10 pl-2.5">
+                    {cluster.devices.map((d) => (
+                      <li key={d.id}>
+                        <DeviceLine device={d} />
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </>
+            )}
           </li>
         ))}
       </ul>
     </section>
+  );
+}
+
+/** Collapsed cluster row: the physical device, its setup count, and recency. */
+function ClusterHeader({ cluster, open }: { cluster: DeviceCluster; open: boolean }) {
+  const info = cluster.devices[0].info;
+  const label = `${info.deviceType[0]?.toUpperCase()}${info.deviceType.slice(1)}`;
+  const long = Math.max(info.screenWidth, info.screenHeight);
+  const short = Math.min(info.screenWidth, info.screenHeight);
+  return (
+    <>
+      <p className="flex items-center gap-1 text-xs text-fg-primary">
+        <span aria-hidden>{DEVICE_GLYPH[info.deviceType]}</span>
+        <span className="min-w-0 flex-1 truncate">
+          {label} · {short}×{long}
+          {info.browser ? ` · ${info.browser}` : ""}
+          {info.os ? ` / ${info.os}` : ""}
+        </span>
+        <span aria-hidden className="text-fg-muted">
+          {open ? "▾" : "▸"}
+        </span>
+      </p>
+      <p className="text-2xs text-fg-muted">
+        {cluster.devices.length} setups · seen {cluster.totalHits}× · last{" "}
+        {formatRelativeTime(cluster.lastSeen)}
+      </p>
+    </>
   );
 }
 

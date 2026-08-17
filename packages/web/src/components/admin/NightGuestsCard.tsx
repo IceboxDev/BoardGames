@@ -13,7 +13,6 @@ import { Field } from "../ui/Field";
 import { IconButton } from "../ui/IconButton";
 import { QueryBoundary } from "../ui/QueryBoundary";
 import { Select } from "../ui/Select";
-import { ExpandableAdminCard } from "./ExpandableAdminCard";
 import type { AdminUser } from "./types";
 
 type Props = {
@@ -22,14 +21,17 @@ type Props = {
 };
 
 /**
- * Lets the admin put guest players (stub accounts with no login) on a game
- * night's attendee list — including nights that haven't happened yet. The
- * server RSVPs "yes" on the guest's behalf, so they flow through the normal
+ * Seats guest players (stub accounts with no login) on a game night's
+ * attendee list — including nights that haven't happened yet. The server
+ * RSVPs "yes" on the guest's behalf, so they flow through the normal
  * attendee pipeline; removing deletes the RSVP row again. The attendee list
  * badges them as "Guest".
+ *
+ * Rendered INSIDE the Guest players card (it is a sub-function of guests,
+ * not a page-level block of its own), so queries only fire while that card
+ * is expanded — `active` mirrors its expansion.
  */
-export function NightGuestsCard({ guests }: Props) {
-  const [expanded, setExpanded] = useState(false);
+export function NightGuestsPanel({ guests, active }: Props & { active: boolean }) {
   const [date, setDate] = useState("");
   const [guestId, setGuestId] = useState("");
   const nightId = useId();
@@ -39,7 +41,7 @@ export function NightGuestsCard({ guests }: Props) {
   const locksQuery = useQuery({
     queryKey: qk.calendarLocks(),
     queryFn: ({ signal }) => fetchCalendarLocks(signal),
-    enabled: expanded,
+    enabled: active,
   });
   // Upcoming (or today's) locked nights, soonest first. Past nights are
   // deliberately hidden: retroactive guest credit belongs in match history.
@@ -51,7 +53,7 @@ export function NightGuestsCard({ guests }: Props) {
   const gamesQuery = useQuery({
     queryKey: qk.availableGames(date || null),
     queryFn: ({ signal }) => fetchAvailableGames(date, signal),
-    enabled: expanded && date !== "",
+    enabled: active && date !== "",
   });
   const nightGuests = (gamesQuery.data?.attendees ?? []).filter((a) => a.isGuest);
   const attendingIds = new Set(nightGuests.map((a) => a.userId));
@@ -70,19 +72,14 @@ export function NightGuestsCard({ guests }: Props) {
 
   const addableGuests = guests.filter((g) => !attendingIds.has(g.id));
 
+  if (guests.length === 0) return null;
+
   return (
-    <ExpandableAdminCard
-      tone="accent"
-      eyebrow="Night guests"
-      summary={
-        guests.length === 0
-          ? "Add guest players first — then you can seat them on a game night."
-          : "Put guest players on a night's attendee list — no account needed."
-      }
-      expanded={expanded}
-      onToggle={() => setExpanded((v) => !v)}
-    >
-      <>
+    <div className="border-t border-white/10 pt-3">
+      <p className="mb-2 text-2xs font-semibold uppercase tracking-pill text-fg-secondary">
+        Seat guests on a game night
+      </p>
+      <div className="flex flex-col gap-3">
         {mutation.error && (
           <ErrorAlert
             message={
@@ -183,7 +180,7 @@ export function NightGuestsCard({ guests }: Props) {
             </QueryBoundary>
           </div>
         )}
-      </>
-    </ExpandableAdminCard>
+      </div>
+    </div>
   );
 }

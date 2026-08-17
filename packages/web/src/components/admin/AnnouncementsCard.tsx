@@ -61,11 +61,11 @@ export function AnnouncementsCard() {
     errorMessageOf(query.error, "Failed to load") ??
     errorMessageOf(resolveMutation.error, "Resolve failed");
 
-  // Summary line without a raw async ladder — the expandable-card chrome has
-  // no QueryBoundary slot, so the states resolve in statements instead.
-  let summary = `${announcements.length} pending — new acquisitions awaiting approval.`;
-  if (query.isPending) summary = "Loading…";
-  else if (announcements.length === 0) summary = "No pending announcements.";
+  // The card only exists while there is something to act on — an empty
+  // approvals queue is not worth a permanent block on the admin page.
+  if (announcements.length === 0) return null;
+
+  const summary = `${announcements.length} pending — new acquisitions awaiting approval.`;
 
   return (
     <>

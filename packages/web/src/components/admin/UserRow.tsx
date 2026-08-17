@@ -112,16 +112,16 @@ export function UserRow({
             )}
           </span>
         </td>
-        <td className="px-5 py-3 text-fg-secondary">{user.email}</td>
-        <td className="px-5 py-3 text-center">
+        <td className="hidden md:table-cell px-5 py-3 text-fg-secondary">{user.email}</td>
+        <td className="hidden md:table-cell px-5 py-3 text-center">
           <RoleBadge role={user.role ?? null} />
         </td>
-        <td className="px-5 py-3 text-center">
+        <td className="hidden md:table-cell px-5 py-3 text-center">
           <Chip pressed={expanded} tone="accent" size="xs" onClick={onToggleInventory}>
             {expanded ? "Close" : "Manage"}
           </Chip>
         </td>
-        <td className="px-3 py-3 text-center">
+        <td className="hidden md:table-cell px-3 py-3 text-center">
           <DeleteOrOnlineCell
             deleteMode={deleteMode}
             isSelf={isSelf}
