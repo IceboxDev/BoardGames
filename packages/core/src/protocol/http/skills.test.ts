@@ -53,6 +53,7 @@ describe("PlayerSkillResponseSchema", () => {
     eligibility: { eligible: true, ratedMatches: 14, distinctGames: 5, minMatches: 8, minGames: 3 },
     traits: ["int", "pln", "per", "soph", "soc", "dex"].map(standing),
     games: [{ slug: "codenames", rank: 1, of: 6, matches: 7 }],
+    ratedSlugs: ["codenames", "durak"],
     highlights: [{ kind: "game-first", slug: "codenames", matches: 7 }],
   };
 

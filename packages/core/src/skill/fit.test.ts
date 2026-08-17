@@ -191,3 +191,61 @@ describe("fitSkillRatings — bookkeeping", () => {
     expect(r.converged).toBe(true);
   });
 });
+
+describe("fitSkillRatings — scored co-ops (cross-session)", () => {
+  const scoredCoop = (
+    members: string[],
+    score: number,
+    playedAt = "2026-08-01T17:00:00.000Z",
+  ): SkillMatchInput => ({
+    slug: "just-one",
+    playedAt,
+    outcome: { kind: "coop", participants: members.map(p), score },
+  });
+
+  it("rates a higher-scoring team above a lower-scoring one", () => {
+    const matches = [
+      ...repeat(4, () => scoredCoop(["a", "b"], 12)),
+      ...repeat(4, () => scoredCoop(["c", "d"], 4)),
+    ];
+    const r = fitSkillRatings(matches);
+    // just-one is soph-dominant (70) — the signal lands there.
+    expect(r.players.a.traits.soph.theta).toBeGreaterThan(r.players.c.traits.soph.theta);
+    expect(r.skippedNoEvidence).toBe(0);
+  });
+
+  it("counts each comparable session once toward eligibility and exposure", () => {
+    const r = fitSkillRatings([scoredCoop(["a"], 12), scoredCoop(["b"], 5)]);
+    expect(r.players.a.ratedMatches).toBe(1);
+    expect(r.players.a.distinctGames).toBe(1);
+    expect(r.players.a.games["just-one"]?.matches).toBe(1);
+    expect(r.players.a.traits.soph.exposure).toBeCloseTo(0.7, 6);
+  });
+
+  it("treats an identical-roster-only pool as unrated", () => {
+    const r = fitSkillRatings([scoredCoop(["a", "b"], 12), scoredCoop(["b", "a"], 5)]);
+    expect(r.skippedNoEvidence).toBe(2);
+    expect(r.players.a?.ratedMatches ?? 0).toBe(0);
+  });
+
+  it("never double-counts a co-op that carries both an outcome and a score", () => {
+    const both: SkillMatchInput = {
+      slug: "just-one",
+      playedAt: "2026-08-01T17:00:00.000Z",
+      outcome: { kind: "coop", participants: [p("a")], outcome: "win", score: 12 },
+    };
+    const r = fitSkillRatings([both, scoredCoop(["b"], 5)]);
+    expect(r.players.a.ratedMatches).toBe(1);
+    // …but the score comparison still exists: a's 12 beat b's 5.
+    expect(r.players.a.traits.soph.theta).toBeGreaterThan(r.players.b.traits.soph.theta);
+  });
+
+  it("keeps the fit deterministic with scored pools in the mix", () => {
+    const matches = [
+      duel("chess", "a", "b"),
+      scoredCoop(["a", "c"], 10),
+      scoredCoop(["b", "d"], 7, "2026-07-01T17:00:00.000Z"),
+    ];
+    expect(fitSkillRatings(matches)).toEqual(fitSkillRatings([...matches].reverse()));
+  });
+});

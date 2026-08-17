@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { MatchOutcome } from "../protocol/http/history.ts";
-import { matchEvidence } from "./comparisons.ts";
+import { matchEvidence, scoredCoopEvidence } from "./comparisons.ts";
 
 const p = (id: string) => ({ userId: id, displayName: id });
 
@@ -138,7 +138,7 @@ describe("matchEvidence — one-vs-many and coop", () => {
     ]);
   });
 
-  it("carries no evidence for scored or unresolved co-ops", () => {
+  it("carries no stand-alone evidence for scored or unresolved co-ops", () => {
     const scored: MatchOutcome = {
       kind: "coop",
       participants: [p("a")],
@@ -151,5 +151,47 @@ describe("matchEvidence — one-vs-many and coop", () => {
       campaign: "Curse of Strahd",
     };
     expect(matchEvidence("dungeons-and-dragons", unresolved)).toBeNull();
+  });
+});
+
+describe("scoredCoopEvidence — cross-session score comparisons", () => {
+  const session = (members: string[], score: number, lambda = 1) => ({ members, score, lambda });
+
+  it("orders sessions by team score with FFA-style 2/S weights", () => {
+    const out = scoredCoopEvidence("just-one", [
+      session(["a", "b"], 12),
+      session(["c", "d"], 5),
+      session(["e"], 9),
+    ]);
+    expect(out).toEqual([
+      { a: ["a", "b"], b: ["c", "d"], score: 1, weight: 2 / 3 },
+      { a: ["a", "b"], b: ["e"], score: 1, weight: 2 / 3 },
+      { a: ["c", "d"], b: ["e"], score: 0, weight: 2 / 3 },
+    ]);
+  });
+
+  it("ties equal scores and decays each pair by its older session's λ", () => {
+    const out = scoredCoopEvidence("just-one", [session(["a"], 7, 1), session(["b"], 7, 0.5)]);
+    expect(out).toEqual([{ a: ["a"], b: ["b"], score: 0.5, weight: 1 * 0.5 }]);
+  });
+
+  it("respects lowest-wins scoring", () => {
+    const out = scoredCoopEvidence("phase-10", [session(["a"], 10), session(["b"], 50)]);
+    expect(out[0]).toMatchObject({ a: ["a"], b: ["b"], score: 1 });
+  });
+
+  it("skips pairs between identical rosters (zero pairwise information)", () => {
+    const out = scoredCoopEvidence("just-one", [
+      session(["a", "b"], 12),
+      session(["b", "a"], 5),
+      session(["c"], 9),
+    ]);
+    expect(out).toHaveLength(2);
+    expect(out.every((c) => c.a.includes("c") || c.b?.includes("c"))).toBe(true);
+  });
+
+  it("yields nothing for fewer than two sessions", () => {
+    expect(scoredCoopEvidence("just-one", [session(["a"], 12)])).toEqual([]);
+    expect(scoredCoopEvidence("just-one", [])).toEqual([]);
   });
 });

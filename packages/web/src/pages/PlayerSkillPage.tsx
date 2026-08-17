@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import type { CSSProperties } from "react";
 import { useParams } from "react-router-dom";
 import { UsersIcon } from "../components/icons";
+import { HexSkillChart } from "../components/profile/HexSkillChart.tsx";
 import { ProfileStatsPanel } from "../components/profile/ProfileStatsPanel.tsx";
 import {
   HonestNumbers,
@@ -125,9 +126,11 @@ export default function PlayerSkillPage() {
             title={`${firstName}'s stats`}
             subtitle={
               eligibility.eligible
-                ? // "Rated" < "played": moderated nights, scored co-ops and
-                  // unresolved campaigns count as plays but carry no
-                  // competitive evidence, so they don't rate.
+                ? // "Rated" < "played": moderated nights, unresolved campaigns
+                  // and a game's ONLY scored co-op session count as plays but
+                  // carry no competitive evidence, so they don't rate. (Scored
+                  // co-ops with ≥2 comparable sessions DO rate — score vs
+                  // score across sessions.)
                   `Ranked · ${eligibility.ratedMatches} of ${profile?.stats.gamesPlayed ?? "…"} games rated across ${eligibility.distinctGames} titles`
                 : "Not ranked yet — the skill profile unlocks with more recorded games"
             }
@@ -141,12 +144,15 @@ export default function PlayerSkillPage() {
               accentHex={accent}
             />
           ) : (
-            <>
-              <SkillProgressCard eligibility={eligibility} />
-              <div className="max-w-xl">
-                <HonestNumbers items={summaryQuery.data?.items} />
+            // Un-ranked: one centered column — the ghosted chart shows what's
+            // coming, the progress card shows how close it is.
+            <div className="mx-auto flex w-full max-w-md flex-col gap-6">
+              <div className="mx-auto w-full max-w-70">
+                <HexSkillChart skill={null} accentHex={accent} />
               </div>
-            </>
+              <SkillProgressCard eligibility={eligibility} />
+              <HonestNumbers items={summaryQuery.data?.items} />
+            </div>
           )}
 
           {/* Migrated from the profile page: the full per-game performance

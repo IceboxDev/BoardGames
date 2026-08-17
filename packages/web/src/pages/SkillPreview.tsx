@@ -5,6 +5,7 @@ import type {
 } from "@boardgames/core/protocol";
 import { MotionGlobalConfig } from "framer-motion";
 import type { CSSProperties } from "react";
+import { HexSkillChart } from "../components/profile/HexSkillChart.tsx";
 import { SkillIntroModalView } from "../components/profile/skill/SkillIntroModal.tsx";
 import {
   HonestNumbers,
@@ -95,6 +96,7 @@ const RANKED: PlayerSkillResponse = {
     { trait: "dex", percentile: 50, score: 0, winChance: 50, rank: 6, of: 11, provisional: true },
   ],
   games: [{ slug: "7-wonders", rank: 1, of: 5, matches: 12 }],
+  ratedSlugs: ["7-wonders", "codenames", "durak", "lost-cities", "parks"],
   highlights: [
     { kind: "trait-first", trait: "int" },
     { kind: "game-first", slug: "7-wonders", matches: 12 },
@@ -108,6 +110,7 @@ const LOCKED: PlayerSkillResponse = {
   eligibility: { eligible: false, ratedMatches: 5, distinctGames: 2, minMatches: 8, minGames: 3 },
   traits: null,
   games: [],
+  ratedSlugs: ["codenames", "durak"],
   highlights: [],
 };
 
@@ -167,9 +170,58 @@ const SUMMARY: ProfileMatchSummaryItem[] = Array.from({ length: 18 }, (_, i) => 
   coPlayerIds: [],
 }));
 
+// ?claim=<kind> (ranked view only): strip the highlight ladder and hand the
+// claim picker a match summary crafted to land on exactly that ego-safe rung —
+// lets every generated claim background be screenshotted. Newest-first, like
+// the real payload.
+const CLAIM_SUMMARIES: Record<string, ProfileMatchSummaryItem[]> = {
+  streak: seq("wwwwlwlw"),
+  winrate: seq("wwlwwlwwlw"),
+  coop: seq("llllWW"),
+  form: seq("wlwlwwllwl"),
+  variety: seq("wllwllwll", true),
+  dedication: seq("lllll"),
+};
+
+function seq(pattern: string, distinctSlugs = false): ProfileMatchSummaryItem[] {
+  const slugs = [
+    ["7-wonders", "7 Wonders"],
+    ["durak", "Durak"],
+    ["codenames", "Codenames"],
+    ["parks", "Parks"],
+    ["sushi-go", "Sushi Go"],
+    ["lost-cities", "Lost Cities"],
+    ["decrypto", "Decrypto"],
+    ["just-one", "Just One"],
+    ["azul", "Azul"],
+    ["jaipur", "Jaipur"],
+  ];
+  return [...pattern].map((ch, i) => {
+    const [slug, title] = distinctSlugs ? slugs[i % slugs.length] : slugs[0];
+    const coop = ch === "W";
+    const result = ch === "l" ? "loss" : "win";
+    return {
+      matchId: i + 1,
+      dateKey: "2026-08-01",
+      playedAt: "2026-08-01T17:00:00.000Z",
+      gameSlug: slug,
+      gameTitle: title,
+      kind: coop ? "coop" : "free-for-all",
+      result,
+      credit: result === "win" ? 1 : 0.4,
+      place: result === "win" ? 1 : 3,
+      fieldSize: 4,
+      score: null,
+      sessions: 1,
+      coPlayerIds: [],
+    };
+  });
+}
+
 export default function SkillPreview() {
   const params = new URLSearchParams(window.location.search);
   const view = params.get("view") ?? "ranked";
+  const claimSummary = CLAIM_SUMMARIES[params.get("claim") ?? ""];
 
   // ?frame=WxH — re-render this page inside an iframe of that CSS size so a
   // headless browser (whose window has a 500px minimum width) can still lay
@@ -189,7 +241,7 @@ export default function SkillPreview() {
     );
   }
 
-  const style = { "--accent": DEFAULT_ACCENT } as CSSProperties;
+  const style = { "--accent": params.get("accent") ?? DEFAULT_ACCENT } as CSSProperties;
 
   return (
     <PageShell>
@@ -222,8 +274,12 @@ export default function SkillPreview() {
                 title="Linda's stats"
                 subtitle="Not ranked yet — the skill profile unlocks with more recorded games"
               />
-              <SkillProgressCard eligibility={LOCKED.eligibility} />
-              <div className="max-w-xl">
+              {/* Mirrors PlayerSkillPage's centered un-ranked column. */}
+              <div className="mx-auto flex w-full max-w-md flex-col gap-6">
+                <div className="mx-auto w-full max-w-70">
+                  <HexSkillChart skill={null} accentHex={DEFAULT_ACCENT} />
+                </div>
+                <SkillProgressCard eligibility={LOCKED.eligibility} />
                 <HonestNumbers items={SUMMARY.slice(0, 5)} />
               </div>
             </>
@@ -236,10 +292,10 @@ export default function SkillPreview() {
                 subtitle="Ranked · 49 rated games across 17 titles"
               />
               <SkillPageContent
-                skill={RANKED}
+                skill={claimSummary ? { ...RANKED, highlights: [], games: [] } : RANKED}
                 boards={BOARDS}
-                summaryItems={SUMMARY}
-                accentHex={DEFAULT_ACCENT}
+                summaryItems={claimSummary ?? SUMMARY}
+                accentHex={params.get("accent") ?? DEFAULT_ACCENT}
                 previewOpen={params.get("open") === "1"}
               />
             </>

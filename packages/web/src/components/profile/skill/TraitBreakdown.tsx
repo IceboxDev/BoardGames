@@ -114,12 +114,6 @@ export function TraitBreakdown({
           </div>
         );
       })}
-      <p className="mt-1 px-2.5 text-3xs text-fg-muted">
-        Scores run 0–100: the group's strongest skill rating sets the 100 and everyone scales below
-        it. Computed from every recorded match — each result counts toward the skills the game
-        actually exercises, with game-specific advantage factored out. Greyed skills aren't computed
-        yet. Tap a skill for its leaderboard; hover the chart for win chances.
-      </p>
     </div>
   );
 }

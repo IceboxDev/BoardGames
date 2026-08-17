@@ -140,6 +140,12 @@ export const PlayerSkillResponseSchema = z.object({
   traits: z.array(PlayerTraitStandingSchema).length(6).nullable(),
   /** The player's rows on per-game leaderboards they appear on. */
   games: z.array(PlayerGameStandingSchema),
+  /**
+   * Every game that actually fed this player's rating (sorted slugs) — the
+   * honest source for "sharpened by …" copy. A played game missing here
+   * carried no competitive evidence (moderated seat, lone scored co-op…).
+   */
+  ratedSlugs: z.array(GameSlugStringSchema),
   /** Highlight ladder, strongest claim first; empty until eligible. */
   highlights: z.array(SkillHighlightSchema),
 });

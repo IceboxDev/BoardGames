@@ -43,7 +43,7 @@ export type SkillConfig = {
 };
 
 export const SKILL_CONFIG_V1: SkillConfig = Object.freeze({
-  version: 4,
+  version: 5,
   scoreFloorTheta: -0.35,
   kTheta: 1.0,
   kGame: 0.25,

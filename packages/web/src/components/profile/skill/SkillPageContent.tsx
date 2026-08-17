@@ -36,7 +36,7 @@ export function SkillProgressCard({
   ];
   const remaining = Math.max(0, e.minMatches - e.ratedMatches);
   return (
-    <Surface variant="raised" className="max-w-xl">
+    <Surface variant="raised">
       <MicroLabel className="mb-2 flex items-center gap-1.5 font-semibold">
         <SparkleIcon className="h-4 w-4 text-accent-300" />
         Skill profile unlock
@@ -67,11 +67,14 @@ export function SkillProgressCard({
   );
 }
 
-/** The unvarnished numbers — wins AND losses, exact, below the fold. */
+/** The unvarnished numbers — wins AND losses, exact, below the fold.
+ *  `rail` lays the tiles two-up for the narrow column under the hex chart. */
 export function HonestNumbers({
   items,
+  rail = false,
 }: {
   items: readonly ProfileMatchSummaryItem[] | undefined;
+  rail?: boolean;
 }): ReactNode {
   if (!items || items.length === 0) return null;
   const counts = recordCounts(items);
@@ -91,7 +94,7 @@ export function HonestNumbers({
   ];
   return (
     <Section title="By the numbers" icon={<TrophyIcon className="h-3.5 w-3.5" />}>
-      <div className="grid grid-cols-3 gap-2">
+      <div className={rail ? "grid grid-cols-3 gap-2 sm:grid-cols-2" : "grid grid-cols-3 gap-2"}>
         {cells.map((cell) => (
           <Surface key={cell.label} variant="tile" padding="none" className="p-2.5 text-center">
             <p className="text-base font-bold tabular-nums text-white">{cell.value}</p>
@@ -121,6 +124,11 @@ export function SkillPageContent({
   /** Dev preview only: pre-expand one trait and one game for screenshots. */
   previewOpen?: boolean;
 }) {
+  // Only games that actually fed the fit may claim to have "sharpened" a
+  // skill — a played-but-unrated game (moderated seat, lone scored co-op)
+  // trained nothing.
+  const ratedSet = new Set<string>(skill.ratedSlugs);
+
   return (
     <>
       <SkillHeroCards skill={skill} summaryItems={summaryItems} accentHex={accentHex} />
@@ -128,8 +136,12 @@ export function SkillPageContent({
       <div className="grid gap-6 lg:grid-cols-3">
         <Stack gap="lg" className="min-w-0 lg:col-span-2">
           <Section title="Skill profile" icon={<SparkleIcon className="h-4 w-4" />}>
-            <div className="flex flex-col items-center gap-6 sm:flex-row sm:items-start">
-              <div className="w-56 shrink-0 sm:sticky sm:top-4">
+            {/* Two columns from sm up: the left rail stacks chart → caption →
+                the by-the-numbers tiles so it runs as tall as the six trait
+                rows beside it — no dead space under the chart. On phones the
+                grid stacks chart, traits, numbers (DOM order). */}
+            <div className="grid gap-x-8 gap-y-6 sm:grid-cols-[minmax(0,18rem)_1fr] sm:grid-rows-[auto_1fr]">
+              <div className="mx-auto flex w-full max-w-80 flex-col gap-4 sm:col-start-1">
                 <HexSkillChart
                   skill={
                     skill.traits && {
@@ -144,9 +156,10 @@ export function SkillPageContent({
                   accentHex={accentHex}
                   axisDetails={skill.traits?.map((t) => {
                     if (t.provisional) return null;
-                    // The games from THEIR history that lean hardest on this
-                    // trait — genuinely new info, not a restatement.
+                    // The RATED games from their history that lean hardest on
+                    // this trait — genuinely new info, not a restatement.
                     const trained = gamesByPlays(summaryItems ?? [])
+                      .filter((g) => ratedSet.has(g.slug))
                       .map((g) => ({ ...g, w: skillProfileBySlug(g.slug)?.[t.trait] ?? 0 }))
                       .filter((g) => g.w >= 25)
                       .sort((a, b) => b.w - a.w || b.plays - a.plays)
@@ -160,8 +173,15 @@ export function SkillPageContent({
                     );
                   })}
                 />
+                <p className="text-3xs leading-relaxed text-fg-muted">
+                  Scores run 0–100: the group's strongest skill rating sets the 100 and everyone
+                  scales below it. Computed from every rated match — each result counts toward the
+                  skills the game actually exercises, with game-specific advantage factored out.
+                  Greyed skills aren't computed yet. Tap a skill for its leaderboard; hover the
+                  chart for win chances.
+                </p>
               </div>
-              <div className="w-full min-w-0 flex-1">
+              <div className="min-w-0 sm:col-start-2 sm:row-span-2 sm:row-start-1">
                 {skill.traits && (
                   <TraitBreakdown
                     traits={skill.traits}
@@ -171,10 +191,11 @@ export function SkillPageContent({
                   />
                 )}
               </div>
+              <div className="sm:col-start-1">
+                <HonestNumbers items={summaryItems} rail />
+              </div>
             </div>
           </Section>
-
-          <HonestNumbers items={summaryItems} />
         </Stack>
 
         <Stack gap="lg" className="min-w-0 lg:col-span-1">

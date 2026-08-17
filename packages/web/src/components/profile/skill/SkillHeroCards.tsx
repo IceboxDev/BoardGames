@@ -1,12 +1,13 @@
 import type { PlayerSkillResponse, ProfileMatchSummaryItem } from "@boardgames/core/protocol";
 import type { ReactNode } from "react";
+import { cn } from "../../../lib/cn.ts";
 import { resolveGame } from "../../../lib/games-by-slug.ts";
 import { ClockIcon, GalleryIcon, UsersIcon } from "../../icons";
 import { FlameArt } from "../../ui/FlameArt.tsx";
 import { MicroLabel } from "../../ui/Label.tsx";
 import { Surface } from "../../ui/Surface.tsx";
 import { Medal } from "./Medal.tsx";
-import { artHueFilter, claimArt, traitArt } from "./skill-card-art.ts";
+import { artHueFilter, claimArt, claimArtFilter, traitArt } from "./skill-card-art.ts";
 import { bestGameFact, bestSkillFact, type ClaimFact, claimFact } from "./skill-page-facts.ts";
 import { TraitIcon } from "./TraitIcon.tsx";
 import { highlightCopy, ordinal, TRAIT_COPY } from "./trait-copy.ts";
@@ -123,7 +124,9 @@ export function SkillHeroCards({
   const hueFilter = artHueFilter(accentHex);
 
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+    // md, not sm: three-up below ~768px leaves too little width for the
+    // one-line claim titles.
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
       {game && (
         <HeroCard label="Best game" art={gameDef?.thumbnail} artDim="opacity-40">
           <div className="mt-auto">
@@ -157,17 +160,28 @@ export function SkillHeroCards({
       )}
 
       {claim && (
-        <HeroCard label="Claim to fame" art={claimArt(claim)}>
-          <div className="mt-auto flex items-end justify-between gap-3">
-            <div className="min-w-0">
-              <p className="text-xl font-black leading-tight text-white sm:text-2xl">
-                {claimCopy(claim).title}
-              </p>
-              <p className="mt-1 text-2xs font-semibold uppercase tracking-pill text-fg-secondary">
-                {claimCopy(claim).detail}
-              </p>
-            </div>
+        <HeroCard
+          label="Claim to fame"
+          art={claimArt(claim)}
+          artFilter={claimArtFilter(claim, accentHex)}
+        >
+          {/* Emblem rides top-right so the title owns the full card width and
+              stays on ONE line even for "Sophistication Champion". */}
+          <div className="absolute right-0 top-0">
             <ClaimEmblem claim={claim} accentHex={accentHex} />
+          </div>
+          <div className="mt-auto">
+            <p
+              className={cn(
+                "font-black leading-tight text-white",
+                claimCopy(claim).title.length > 16 ? "text-lg lg:text-xl" : "text-xl sm:text-2xl",
+              )}
+            >
+              {claimCopy(claim).title}
+            </p>
+            <p className="mt-1 text-2xs font-semibold uppercase tracking-pill text-fg-secondary">
+              {claimCopy(claim).detail}
+            </p>
           </div>
         </HeroCard>
       )}

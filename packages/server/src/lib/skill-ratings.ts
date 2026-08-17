@@ -167,6 +167,7 @@ async function recompute(rows: readonly MatchRow[], fingerprint: string): Promis
       },
       traits: eligible ? traitRows : null,
       games: eligible ? games : [],
+      ratedSlugs: Object.keys(p.games).sort(),
       highlights: eligible ? highlightsFor(id, standings, boards, config) : [],
     });
   }
