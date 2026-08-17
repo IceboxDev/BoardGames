@@ -72,16 +72,30 @@ export default function PlayerSkillPage() {
           </PageMain>
         }
         errorFallback={(error) => {
-          const notFound = error instanceof ApiError && error.status === 404;
+          // A REAL missing player carries the route's NOT_FOUND envelope. A
+          // bare 404 (no code) means the /api/skills routes themselves don't
+          // exist — a mid-deploy web/server version skew, not a bad player.
+          const notFound =
+            error instanceof ApiError && error.status === 404 && error.code === "NOT_FOUND";
+          const routeMissing =
+            error instanceof ApiError && error.status === 404 && error.code === undefined;
           return (
             <PageMain width="6xl" padding="spacious">
               <EmptyState
                 tone="rose"
-                title={notFound ? "Player not found" : "Couldn't load the stats"}
+                title={
+                  notFound
+                    ? "Player not found"
+                    : routeMissing
+                      ? "Stats are still rolling out"
+                      : "Couldn't load the stats"
+                }
                 description={
                   notFound
                     ? "This player doesn't exist or has been removed."
-                    : "Something went wrong fetching the skill data. Try again."
+                    : routeMissing
+                      ? "The server is still updating to the newest version — give it a minute and retry."
+                      : "Something went wrong fetching the skill data. Try again."
                 }
                 action={
                   <Button variant="secondary" onClick={() => skillQuery.refetch()}>

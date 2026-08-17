@@ -5,7 +5,8 @@ import "./env.ts";
 // Railway watch paths live in railway.json (server + core + lockfiles) —
 // core-only protocol changes must rebuild this server too. Note: an empty
 // commit does NOT re-trigger Railway (no watched file changes) — touch a
-// watched file to force a rebuild.
+// watched file to force a rebuild (this comment has served that duty:
+// 2026-08-17, skills deploy).
 
 import { serve } from "@hono/node-server";
 import { initDb } from "./db.ts";
