@@ -13,12 +13,12 @@ import {
   SkillIntroResponseSchema,
   SkillLeaderboardsResponseSchema,
 } from "@boardgames/core/protocol";
-import { SKILL_CONFIG_V1 } from "@boardgames/core/skill/config";
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { parseRows } from "../lib/db-rows.ts";
 import { errorResponse } from "../lib/error-response.ts";
+import { unratedPayload } from "../lib/skill-payload.ts";
 import { ensureSkillState, introHighlightFor } from "../lib/skill-ratings.ts";
 
 export const skillsRoutes = authedApp();
@@ -79,21 +79,7 @@ skillsRoutes.get("/players/:userId", async (c) => {
   if (userRes.rows.length === 0) return errorResponse(c, 404, "user not found", "NOT_FOUND");
   if (!state) return errorResponse(c, 500, "skill state unavailable", "INTERNAL");
 
-  // A member with no rated history simply hasn't unlocked a profile yet.
-  const payload = state.players[userId] ?? {
-    userId,
-    eligibility: {
-      eligible: false,
-      ratedMatches: 0,
-      distinctGames: 0,
-      minMatches: SKILL_CONFIG_V1.minMatches,
-      minGames: SKILL_CONFIG_V1.minGames,
-    },
-    traits: null,
-    games: [],
-    highlights: [],
-  };
-  return c.json(PlayerSkillResponseSchema.parse(payload));
+  return c.json(PlayerSkillResponseSchema.parse(state.players[userId] ?? unratedPayload(userId)));
 });
 
 // ── GET /api/skills/intro ──────────────────────────────────────────────
