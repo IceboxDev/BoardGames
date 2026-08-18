@@ -60,6 +60,12 @@ struct Params {
   // heightSlack = how far below nominal a pile top may stop.
   int widthSlack = 0;
   int heightSlack = 0;
+  // --vert-inside: rotated (spine-out) placements are allowed ONLY when the
+  // box top stays within the nominal rectangle (y + face height <= 250).
+  bool vertInside = false;
+  // --pin-a NAME/GLOB (repeatable): these boxes may only stand in shelf A.
+  std::vector<std::string> pinA;
+  uint64_t pinAMask = 0;
   int solutions = 8;      // how many solutions to emit
   std::string out = "out";
   std::vector<std::string> require;  // --require NAME (or PREFIX*): must be packed,
@@ -114,12 +120,14 @@ static std::vector<Box> loadBoxes(const std::string& path) {
 struct Orient {
   int box;
   int fw, fh, d;  // face width, face height, depth into shelf
+  bool vert;      // rotated: the box's own height lies horizontal
 };
 
 struct Placement {
   int box;
   int fw, fh, d;
   int xOff;  // within the cell
+  bool vert;
 };
 
 // A cell: one box, or two side-by-side boxes with matching face heights.
@@ -130,6 +138,7 @@ struct Cell {
   int depthSum;
   long long faceArea = 0;  // Σ fw×fh of members (for the hole metric)
   int maxDepth = 0;
+  int vertTop = 0;  // max face height among rotated members (0 = none)
   std::vector<Placement> boxes;
 };
 
@@ -166,22 +175,28 @@ static long long solutionScore(long long vol, long long widthOverArea, long long
   return vol - (widthOverArea + topOverArea) * p.depthMax * p.spillCost / 100;
 }
 
-static std::vector<Orient> buildOrients(const std::vector<Box>& boxes, const Params& p) {
+static std::vector<Orient> buildOrients(const std::vector<Box>& boxes, const Params& p,
+                                        uint64_t excludeMask = 0) {
   std::vector<Orient> out;
   for (int i = 0; i < (int)boxes.size(); i++) {
+    if (excludeMask & (1ULL << i)) continue;
     const Box& b = boxes[i];
     // (face pair, depth): w×h with depth l; l×h with depth w — each rotatable.
     // --flat drops the rotated variants: the box's own height stays vertical.
+    // --vert-inside keeps them only when the standing box can fit under the
+    // nominal top line (position is enforced at pile build + arrangement).
     int cand[4][3] = {{b.w, b.h, b.l}, {b.h, b.w, b.l}, {b.l, b.h, b.w}, {b.h, b.l, b.w}};
     std::set<std::tuple<int, int, int>> seen;
     for (int k = 0; k < 4; k++) {
-      if (p.flatOnly && (k == 1 || k == 3)) continue;
+      bool vert = k == 1 || k == 3;
+      if (p.flatOnly && vert) continue;
       auto& c = cand[k];
       int fw = c[0], fh = c[1], d = c[2];
+      if (p.vertInside && vert && fh > p.heightBase) continue;
       if (d > p.depthMax) continue;
       if (fh > p.maxHeight() + p.tolPerBox) continue;
       if (fw > p.maxWidth()) continue;
-      if (seen.insert({fw, fh, d}).second) out.push_back({i, fw, fh, d});
+      if (seen.insert({fw, fh, d}).second) out.push_back({i, fw, fh, d, vert});
     }
   }
   return out;
@@ -200,7 +215,8 @@ static std::vector<Cell> buildCells(const std::vector<Box>& boxes, const std::ve
     c.depthSum = o.d;
     c.faceArea = (long long)o.fw * o.fh;
     c.maxDepth = o.d;
-    c.boxes.push_back({o.box, o.fw, o.fh, o.d, 0});
+    c.vertTop = o.vert ? o.fh : 0;
+    c.boxes.push_back({o.box, o.fw, o.fh, o.d, 0, o.vert});
     cells.push_back(std::move(c));
   }
   // Side-by-side pairs with matching heights (each box has ±tol slack).
@@ -220,8 +236,9 @@ static std::vector<Cell> buildCells(const std::vector<Box>& boxes, const std::ve
       c.depthSum = a.d + b.d;
       c.faceArea = (long long)a.fw * a.fh + (long long)b.fw * b.fh;
       c.maxDepth = std::max(a.d, b.d);
-      c.boxes.push_back({a.box, a.fw, a.fh, a.d, 0});
-      c.boxes.push_back({b.box, b.fw, b.fh, b.d, a.fw});
+      c.vertTop = std::max(a.vert ? a.fh : 0, b.vert ? b.fh : 0);
+      c.boxes.push_back({a.box, a.fw, a.fh, a.d, 0, a.vert});
+      c.boxes.push_back({b.box, b.fw, b.fh, b.d, a.fw, b.vert});
       cells.push_back(std::move(c));
     }
   }
@@ -248,8 +265,9 @@ static std::vector<Cell> buildCells(const std::vector<Box>& boxes, const std::ve
       c.depthSum = pc.depthSum + o.d;
       c.faceArea = pc.faceArea + (long long)o.fw * o.fh;
       c.maxDepth = std::max(pc.maxDepth, o.d);
+      c.vertTop = std::max(pc.vertTop, o.vert ? o.fh : 0);
       c.boxes = pc.boxes;
-      c.boxes.push_back({o.box, o.fw, o.fh, o.d, pc.width});
+      c.boxes.push_back({o.box, o.fw, o.fh, o.d, pc.width, o.vert});
       auto key = std::make_pair(c.mask, c.width);
       auto it = tripleBest.find(key);
       if (it == tripleBest.end()) {
@@ -264,6 +282,34 @@ static std::vector<Cell> buildCells(const std::vector<Box>& boxes, const std::ve
 }
 
 // Enumerate piles: DFS over cells inside a ±width-tolerance window.
+/**
+ * Standing (rotated) boxes must keep their tops under the nominal line, so
+ * cells carrying them sink to the pile bottom. Returns a feasible order of
+ * JUST the vert cells (base of each = summed heights of the vert cells below
+ * it), or nullopt if none exists.
+ */
+static bool vertOrderFor(const std::vector<Cell>& cells, const std::vector<int>& vertCells,
+                         int heightBase, std::vector<int>& out) {
+  std::vector<int> perm = vertCells;
+  std::sort(perm.begin(), perm.end());
+  do {
+    int base = 0;
+    bool ok = true;
+    for (int ci : perm) {
+      if (base + cells[ci].vertTop > heightBase) {
+        ok = false;
+        break;
+      }
+      base += cells[ci].height;
+    }
+    if (ok) {
+      out = perm;
+      return true;
+    }
+  } while (std::next_permutation(perm.begin(), perm.end()));
+  return false;
+}
+
 static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params& p) {
   std::vector<int> order(cells.size());
   for (size_t i = 0; i < order.size(); i++) order[i] = (int)i;
@@ -293,6 +339,10 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
     // accrues once per stacked layer (a layer is as tall as its tallest box),
     // so a many-box pile cannot bank per-box slack into extra overshoot.
     if (f.height + f.nLayers * p.tolPerBox >= p.heightBase - p.heightSlack) {
+      std::vector<int> vertCells, vo;
+      for (int ci : chosen)
+        if (cells[ci].vertTop > 0) vertCells.push_back(ci);
+      if (!vertCells.empty() && !vertOrderFor(cells, vertCells, p.heightBase, vo)) return;
       int width = cells[order[anchor]].width;
       Pile pile{f.mask, width, f.height, f.vol, f.depthSum, 0, f.maxDepth, {}};
       pile.holes = (long long)width * f.height - f.faceArea +
@@ -453,6 +503,7 @@ static void greedyRestarts(const std::vector<Pile>& piles, const Params& p,
 // ── Layout & required-cluster arrangement ──────────────────────────────
 struct PlacedRect {
   int box, fw, fh, d, x0, y0;  // y0 measured up from the floor
+  bool vert;
 };
 
 // Closed-rectangle contact (shared side or corner). Interiors never overlap
@@ -461,13 +512,26 @@ static bool touches(const PlacedRect& a, const PlacedRect& b) {
   return a.x0 <= b.x0 + b.fw && b.x0 <= a.x0 + a.fw && a.y0 <= b.y0 + b.fh && b.y0 <= a.y0 + a.fh;
 }
 
-static std::vector<int> cellOrderByHeight(const Pile& pile, const std::vector<Cell>& cells) {
+static std::vector<int> cellOrderByHeight(const Pile& pile, const std::vector<Cell>& cells,
+                                          int heightBase) {
   std::vector<int> cs = pile.cells;
   std::sort(cs.begin(), cs.end(), [&](int a, int b) {
     if (cells[a].height != cells[b].height) return cells[a].height > cells[b].height;
     return cells[a].depthSum * (long long)cells[b].boxes.size() >
            cells[b].depthSum * (long long)cells[a].boxes.size();
   });
+  // Standing boxes must stay under the nominal line: their cells go to the
+  // bottom, ordered by the same feasibility search used at pile build.
+  std::vector<int> vertCells, vo;
+  for (int ci : cs)
+    if (cells[ci].vertTop > 0) vertCells.push_back(ci);
+  if (!vertCells.empty() && vertOrderFor(cells, vertCells, heightBase, vo)) {
+    std::vector<int> rest;
+    for (int ci : cs)
+      if (cells[ci].vertTop == 0) rest.push_back(ci);
+    cs = vo;
+    cs.insert(cs.end(), rest.begin(), rest.end());
+  }
   return cs;
 }
 
@@ -492,7 +556,7 @@ static void emitPile(const Pile& pile, const std::vector<Cell>& cells,
     int xOff = slackLeft ? pile.width - cellW : 0;
     for (int bi : boxOrderOf(ci)) {
       const Placement& pl = cell.boxes[bi];
-      out.push_back({pl.box, pl.fw, pl.fh, pl.d, x + xOff, y});
+      out.push_back({pl.box, pl.fw, pl.fh, pl.d, x + xOff, y, pl.vert});
       xOff += pl.fw;
     }
     y += cell.height;
@@ -574,8 +638,8 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
       layout.clear();
       int x = 0;
       for (int pi : seq) {
-        emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells), defaultBoxOrder, x,
-                 sol.width, layout);
+        emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells, p.heightBase),
+                 defaultBoxOrder, x, sol.width, layout);
         x += piles[pi].width;
       }
     };
@@ -634,11 +698,14 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
 
   // Cluster cells sink to the pile bottom.
   auto clusterCellOrder = [&](const Pile& pile) {
-    std::vector<int> cs = cellOrderByHeight(pile, cells);
-    std::stable_sort(cs.begin(), cs.end(), [&](int a, int b) {
-      bool ra = cells[a].mask & clusterUnion, rb = cells[b].mask & clusterUnion;
-      return ra > rb;
-    });
+    std::vector<int> cs = cellOrderByHeight(pile, cells, p.heightBase);
+    // Rank: standing cells stay at the very bottom (hard constraint), then
+    // cluster cells (adjacency), then the rest.
+    auto rank = [&](int ci) {
+      if (cells[ci].vertTop > 0) return 0;
+      return (cells[ci].mask & clusterUnion) ? 1 : 2;
+    };
+    std::stable_sort(cs.begin(), cs.end(), [&](int a, int b) { return rank(a) < rank(b); });
     return cs;
   };
 
@@ -692,7 +759,8 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
     for (int pi : seq) {
       bool isCluster = (piles[pi].mask & clusterUnion) != 0;
       emitPile(piles[pi], cells,
-               isCluster ? clusterCellOrder(piles[pi]) : cellOrderByHeight(piles[pi], cells),
+               isCluster ? clusterCellOrder(piles[pi])
+                          : cellOrderByHeight(piles[pi], cells, p.heightBase),
                boxOrderOf, x, sol.width, lo);
       x += piles[pi].width;
     }
@@ -708,9 +776,13 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
         return identityBoxOrder(cells[ci]);
       };
       emitSeq(seqOf(unitOrder), boxOrderOf, layout);
-      // Every cluster must be internally connected.
+      // Standing boxes must not poke above the nominal line; every cluster
+      // must be internally connected.
       bool allOk = true;
+      for (const PlacedRect& r : layout)
+        if (r.vert && r.y0 + r.fh > p.heightBase) allOk = false;
       for (uint64_t g : clusters) {
+        if (!allOk) break;
         std::vector<int> idx;
         for (size_t i = 0; i < layout.size(); i++)
           if (g & (1ULL << layout[i].box)) idx.push_back((int)i);
@@ -1245,7 +1317,7 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
   for (int sh = 0; sh < 2; sh++) {
     sets[sh].prm = p;
     sets[sh].prm.depthMax = shelfDepths[sh];
-    sets[sh].orients = buildOrients(boxes, sets[sh].prm);
+    sets[sh].orients = buildOrients(boxes, sets[sh].prm, sh == 1 ? p.pinAMask : 0);
     sets[sh].cells = buildCells(boxes, sets[sh].orients, sets[sh].prm);
     sets[sh].piles = buildPiles(sets[sh].cells, sets[sh].prm);
     // Prune for search tractability: keep every pile carrying a required or
@@ -1492,6 +1564,8 @@ int main(int argc, char** argv) {
     } else if (a == "--fill-all") p.fillAll = true;
     else if (a == "--width-slack") next(p.widthSlack);
     else if (a == "--height-slack") next(p.heightSlack);
+    else if (a == "--vert-inside") p.vertInside = true;
+    else if (a == "--pin-a") p.pinA.push_back(argv[++i]);
     else if (a == "--solutions") next(p.solutions);
     else if (a == "--out") p.out = argv[++i];
     else input = a;
@@ -1515,6 +1589,18 @@ int main(int argc, char** argv) {
       }
     }
     if (!hit) std::cerr << "warning: --require matched nothing: " << req << "\n";
+  }
+  for (const std::string& req : p.pinA) {
+    bool prefix = !req.empty() && req.back() == '*';
+    std::string stem = prefix ? req.substr(0, req.size() - 1) : req;
+    bool hit = false;
+    for (size_t i = 0; i < boxes.size(); i++) {
+      if (prefix ? boxes[i].name.rfind(stem, 0) == 0 : boxes[i].name == stem) {
+        p.pinAMask |= 1ULL << i;
+        hit = true;
+      }
+    }
+    if (!hit) std::cerr << "warning: --pin-a matched nothing: " << req << "\n";
   }
   for (const std::string& group : p.together) {
     uint64_t mask = 0;

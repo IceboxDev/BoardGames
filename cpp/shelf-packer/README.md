@@ -27,6 +27,10 @@ problem. Self-contained C++17, no dependencies (its own PNG encoder).
   diversified — two solutions must differ by at least 6 boxes.
 - `--require NAME` (repeatable, `PREFIX*` globs) marks must-pack boxes that
   additionally have to form ONE touching cluster (side or corner contact).
+- `--vert-inside` allows rotated (spine-out) placements only where the
+  standing box's top stays inside the nominal rectangle; such cells are
+  forced to the pile bottom and re-verified on the final geometry.
+- `--pin-a NAME/GLOB` (repeatable, fill-all only) restricts boxes to shelf A.
 - `--together A,B[,C…]` (repeatable) declares a companion group — one game
   shipped as several boxes: either NONE of them is packed, or ALL are, and
   they must touch each other.
