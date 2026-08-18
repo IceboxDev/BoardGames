@@ -4,11 +4,11 @@ import { games } from "../../games/registry";
 import { compareForHeadcount, coversWindow } from "../../lib/bgg-format";
 import GameCarousel3D from "./GameCarousel3D";
 
-// Regression for a locked two-player night: Codenames / Gloomhaven /
-// Villainous were sorted to the FRONT of the carousel because each owns a
-// sibling BGG rates "best at 2" — but the card that rendered was the family's
-// canonical (best at 6 / 3 / 3), so it advertised a limp "Fits 2" in a slot
-// its sibling had earned. The card must open on the sibling that won the sort.
+// Regression for a locked two-player night: Codenames / Gloomhaven were sorted
+// to the FRONT of the carousel because each owns a sibling BGG rates "best at
+// 2" — but the card that rendered was the family's canonical (best at 6 / 3),
+// so it advertised a limp "Fits 2" in a slot its sibling had earned. The card
+// must open on the sibling that won the sort.
 //
 // This pins the carousel's *default active member*. `families.test.ts` pins
 // the `anchor` that feeds it; without this test, reverting the carousel back
@@ -55,10 +55,14 @@ describe("GameCarousel3D — family card opens on the member that won the sort",
     expect(screen.getAllByText(/best at 2/i).length).toBeGreaterThan(0);
   });
 
-  it("shows the New base game for Villainous, whose New flag outranks best-at-2", () => {
-    renderAt(2, 2, ["villainous", "villainous-introduction-to-evil"]);
+  it("opens a family on its `New` member over a better-fitting sibling", () => {
+    // Parks Europe carries the catalog's New flag; base Parks is the better
+    // fit at 3 (BGG best-at-3) — New still wins. Kept catalog-driven on
+    // purpose: if the flag moves, this fails loudly rather than passing for
+    // the wrong reason. The rule has fixture coverage in bgg-format.test.ts.
+    renderAt(3, 3, ["parks", "parks-europe"]);
 
-    expect(screen.getByText("Villainous: The Worst Takes it All")).toBeInTheDocument();
+    expect(screen.getByText("Parks Europe")).toBeInTheDocument();
     expect(screen.getByText(/^New$/i)).toBeInTheDocument();
   });
 

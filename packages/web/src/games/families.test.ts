@@ -172,15 +172,17 @@ describe("two-player night (RSVP carousel ordering)", () => {
     expect(unit.anchor.bgg.bestPlayerCount).toBe(LO);
   });
 
-  it("a `New` sibling outranks a best-at-2 one, so Villainous anchors on the new base game", () => {
-    const unit = rank().find((u) => u.kind === "family" && u.family.id === "villainous");
-    if (unit?.kind !== "family") throw new Error("expected villainous to be a family unit");
-    // Introduction to Evil is best at 2, but the base game is flagged New —
-    // and New leads the whole list (see `compareForHeadcount`).
-    expect(unit.anchor.slug).toBe("villainous");
-    expect(unit.anchor.isNew).toBe(true);
-    expect(unit.family.displayName).toBe("Villainous");
-    expect(unit.anchor.title).toBe("Villainous: The Worst Takes it All");
+  it("anchors every family that owns a `New` member on that member", () => {
+    // Subject comes from the catalog's CURRENT `isNew` flags rather than a
+    // pinned game: flags are editorial and get cleared once a game stops
+    // being a fresh arrival, which must never break this test. The rule
+    // itself (New outranks best-at-N) is pinned with fixtures in
+    // `lib/bgg-format.test.ts:compareForHeadcount`.
+    for (const unit of rank()) {
+      if (unit.kind !== "family") continue;
+      if (!unit.visibleMembers.some((m) => m.isNew === true)) continue;
+      expect(unit.anchor.isNew).toBe(true);
+    }
   });
 
   it("every family unit anchors on its best-ranked visible member", () => {

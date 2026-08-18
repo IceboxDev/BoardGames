@@ -2,6 +2,7 @@ import type { BggGame } from "@boardgames/core/bgg";
 import { describe, expect, it } from "vitest";
 import {
   compactSummary,
+  compareForHeadcount,
   coversWindow,
   fitsLabel,
   fitsRange,
@@ -186,5 +187,40 @@ describe("stripBggHtml", () => {
 
   it("collapses runs of whitespace and trims edges", () => {
     expect(stripBggHtml("  hello   <br/>   world  ")).toBe("hello world");
+  });
+});
+
+describe("compareForHeadcount", () => {
+  // Minimal GameDefinition-shaped stubs — the comparator only reads
+  // `isNew`, `bgg.bestPlayerCount`, `bgg.averageRating` and `title`.
+  const game = (title: string, over: { isNew?: boolean; best?: number; rating?: number } = {}) =>
+    ({
+      slug: title.toLowerCase(),
+      title,
+      ...(over.isNew ? { isNew: true } : {}),
+      bgg: bgg({ bestPlayerCount: over.best ?? null, averageRating: over.rating ?? 7 }),
+    }) as unknown as Parameters<typeof compareForHeadcount>[0];
+
+  it("ranks a New game above one that is a better fit for the headcount", () => {
+    const fresh = game("Fresh", { isNew: true });
+    const bestAtTwo = game("BestAtTwo", { best: 2, rating: 9 });
+    expect(compareForHeadcount(fresh, bestAtTwo, 2)).toBeLessThan(0);
+    expect(compareForHeadcount(bestAtTwo, fresh, 2)).toBeGreaterThan(0);
+  });
+
+  it("falls through to best-at-N when neither game is New", () => {
+    const bestAtTwo = game("BestAtTwo", { best: 2 });
+    const other = game("Other", { best: 5, rating: 9 });
+    expect(compareForHeadcount(bestAtTwo, other, 2)).toBeLessThan(0);
+  });
+
+  it("falls through to rating when both are New", () => {
+    const strong = game("Strong", { isNew: true, rating: 8 });
+    const weak = game("Weak", { isNew: true, rating: 6 });
+    expect(compareForHeadcount(strong, weak, 3)).toBeLessThan(0);
+  });
+
+  it("breaks exact ties alphabetically", () => {
+    expect(compareForHeadcount(game("Alpha"), game("Beta"), 3)).toBeLessThan(0);
   });
 });

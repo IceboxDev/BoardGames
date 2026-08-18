@@ -1,4 +1,5 @@
 import "./carousel-frame.css";
+import "./new-highlight.css";
 import type { ReactNode } from "react";
 import { carouselPose } from "./carousel-3d-constants";
 
