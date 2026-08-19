@@ -87,7 +87,10 @@ struct Params {
   // --together A,B[,C…]: all-or-none companion groups (one game shipped as
   // several boxes). When present, the group's boxes must touch each other.
   std::vector<std::string> together;
+  std::vector<std::string> stack;  // like together, but contacts must be
+                                   // long-edge on BOTH sides (mutual)
   std::vector<uint64_t> togetherMasks;
+  std::vector<char> togetherMutual;  // aligned with togetherMasks
   int maxWidth() const { return widthBase + overLeft + overRight; }
   int maxHeight() const { return heightBase + overTop; }
 };
@@ -876,10 +879,10 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
     clusters.push_back(p.requiredMask);
     clusterMutual.push_back(0);
   }
-  for (uint64_t g : p.togetherMasks)
-    if ((sol.mask & g) == g) {
-      clusters.push_back(g);
-      clusterMutual.push_back(0);
+  for (size_t gi = 0; gi < p.togetherMasks.size(); gi++)
+    if ((sol.mask & p.togetherMasks[gi]) == p.togetherMasks[gi]) {
+      clusters.push_back(p.togetherMasks[gi]);
+      clusterMutual.push_back(gi < p.togetherMutual.size() ? p.togetherMutual[gi] : 0);
     }
   for (auto& [dep, prov] : p.companions)
     if ((sol.mask & (dep | prov)) == (dep | prov)) {
@@ -1024,9 +1027,11 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
       // standing boxes must not poke above the nominal line, and every
       // cluster must be internally connected ON THE SETTLED geometry.
       settleLayout(layout);
+      extern long long gFailVert, gFailClusterIdx[8];
       bool allOk = true;
       for (const PlacedRect& r : layout)
         if (r.vert && r.y0 + r.fh > p.heightBase) allOk = false;
+      if (!allOk) gFailVert++;
       for (size_t ci = 0; ci < clusters.size(); ci++) {
         if (!allOk) break;
         uint64_t g = clusters[ci];
@@ -1051,7 +1056,10 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
             if (edgeOk(layout[idx[i]], layout[idx[j]])) parent[find((int)i)] = find((int)j);
         for (size_t i = 1; i < idx.size(); i++)
           if (find((int)i) != find(0)) allOk = false;
-        if (!allOk) break;
+        if (!allOk) {
+          if (ci < 8) gFailClusterIdx[ci]++;
+          break;
+        }
       }
       if (allOk) return true;
       if (permCells.empty()) return false;
@@ -1457,6 +1465,32 @@ static void collectTwo(std::map<std::pair<uint64_t, uint64_t>, TwoSol>& pool, co
     gCluster++;
     return;
   }
+  // Stack groups chain via mutual long-edge contacts. Cheap necessary
+  // conditions before the expensive arrangement pass: the group must sit in
+  // ONE pile, or across exactly TWO piles with every member standing
+  // (vertical long edges meet at the seam) — flat members can only chain
+  // within their own pile.
+  for (size_t gi = 0; gi < p.togetherMasks.size(); gi++) {
+    if (gi >= p.togetherMutual.size() || !p.togetherMutual[gi]) continue;
+    uint64_t g = p.togetherMasks[gi];
+    if (((s.maskA | s.maskB) & g) != g) continue;
+    for (int sh = 0; sh < 2; sh++) {
+      int count = 0;
+      bool anyFlat = false;
+      for (int pi : (sh == 0 ? s.pA : s.pB)) {
+        const Pile& pile = sets[sh].piles[pi];
+        if (!(pile.mask & g)) continue;
+        count++;
+        for (int ci : pile.cells)
+          for (const Placement& pl : sets[sh].cells[ci].boxes)
+            if ((g & (1ULL << pl.box)) && pl.fw >= pl.fh) anyFlat = true;
+      }
+      if (count > 2 || (count == 2 && anyFlat)) {
+        gCluster++;
+        return;
+      }
+    }
+  }
   if (p.useAll) {
     uint64_t placed = s.maskA | s.maskB;
     int n = __builtin_popcountll(placed);
@@ -1681,6 +1715,23 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
         if (take[i]) kept.push_back(std::move(v[i]));
       v = std::move(kept);
     }
+    // Stack groups must chain long-edge internally, which realistically means
+    // living in ONE pile: ban piles carrying a proper subset of a stack.
+    {
+      auto& v = sets[sh].piles;
+      v.erase(std::remove_if(v.begin(), v.end(),
+                             [&](const Pile& pile) {
+                               for (size_t gi = 0; gi < p.togetherMasks.size(); gi++) {
+                                 if (gi >= p.togetherMutual.size() || !p.togetherMutual[gi])
+                                   continue;
+                                 uint64_t g = p.togetherMasks[gi];
+                                 uint64_t inter = pile.mask & g;
+                                 if (inter && inter != g) return true;
+                               }
+                               return false;
+                             }),
+              v.end());
+    }
     std::cerr << "shelf " << (sh ? "B" : "A") << " (depth " << shelfDepths[sh]
               << "): " << sets[sh].orients.size() << " orientations, " << sets[sh].cells.size()
               << " cells, " << sets[sh].piles.size() << " piles\n";
@@ -1775,7 +1826,7 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
     int offsets[2];
   };
   std::vector<Evald> evald;
-  for (size_t i = 0; i < ranked.size() && evald.size() < 250; i++) {
+  for (size_t i = 0; i < ranked.size() && evald.size() < 400; i++) {
     const TwoSol& s = ranked[i];
     Evald e;
     e.s = &s;
@@ -1794,8 +1845,12 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
       Params pk = sets[sh].prm;
       pk.requiredMask = (ss.mask & p.requiredMask) == p.requiredMask ? p.requiredMask : 0;
       pk.togetherMasks.clear();
-      for (uint64_t g : p.togetherMasks)
-        if ((ss.mask & g) == g) pk.togetherMasks.push_back(g);
+      pk.togetherMutual.clear();
+      for (size_t gi = 0; gi < p.togetherMasks.size(); gi++)
+        if ((ss.mask & p.togetherMasks[gi]) == p.togetherMasks[gi]) {
+          pk.togetherMasks.push_back(p.togetherMasks[gi]);
+          pk.togetherMutual.push_back(gi < p.togetherMutual.size() ? p.togetherMutual[gi] : 0);
+        }
       long long holes = 0;
       ok = arrangeSolution(ss, sets[sh].piles, sets[sh].cells, pk, e.layouts[sh], &e.offsets[sh],
                            &holes);
@@ -1888,14 +1943,19 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
     }
     if (emitted >= p.solutions) break;
   }
-  extern long long gArrangeFail;
-  if (gArrangeFail)
+  extern long long gArrangeFail, gFailVert, gFailClusterIdx[8];
+  if (gArrangeFail) {
     std::cerr << gArrangeFail << " complete packings dropped: cluster arrangement failed\n";
+    std::cerr << "  fail causes: vert=" << gFailVert << " clusters:";
+    for (int i = 0; i < 8; i++) std::cerr << " [" << i << "]=" << gFailClusterIdx[i];
+    std::cerr << "\n";
+  }
   std::cerr << "wrote " << emitted << " fill-all solutions to " << p.out << "/\n";
   return 0;
 }
 
 long long gArrangeFail = 0;
+long long gFailVert = 0, gFailClusterIdx[8] = {};
 
 int main(int argc, char** argv) {
   Params p;
@@ -1913,6 +1973,7 @@ int main(int argc, char** argv) {
     else if (a == "--spill-cost") next(p.spillCost);
     else if (a == "--require") p.require.push_back(argv[++i]);
     else if (a == "--together") p.together.push_back(argv[++i]);
+    else if (a == "--stack") p.stack.push_back(argv[++i]);
     else if (a == "--flat") p.flatOnly = true;
     else if (a == "--shelf") {
       int d = 0;
@@ -1997,21 +2058,28 @@ int main(int argc, char** argv) {
     }
     if (!hit) std::cerr << "warning: --pin-a matched nothing: " << req << "\n";
   }
-  for (const std::string& group : p.together) {
-    uint64_t mask = 0;
-    std::stringstream gss(group);
-    std::string name;
-    while (std::getline(gss, name, ',')) {
-      bool hit = false;
-      for (size_t i = 0; i < boxes.size(); i++)
-        if (boxes[i].name == name) {
-          mask |= 1ULL << i;
-          hit = true;
-        }
-      if (!hit) std::cerr << "warning: --together member matched nothing: " << name << "\n";
+  auto parseGroups = [&](const std::vector<std::string>& raw, char mutual, const char* flag) {
+    for (const std::string& group : raw) {
+      uint64_t mask = 0;
+      std::stringstream gss(group);
+      std::string name;
+      while (std::getline(gss, name, ',')) {
+        bool hit = false;
+        for (size_t i = 0; i < boxes.size(); i++)
+          if (boxes[i].name == name) {
+            mask |= 1ULL << i;
+            hit = true;
+          }
+        if (!hit) std::cerr << "warning: " << flag << " member matched nothing: " << name << "\n";
+      }
+      if (__builtin_popcountll(mask) >= 2) {
+        p.togetherMasks.push_back(mask);
+        p.togetherMutual.push_back(mutual);
+      }
     }
-    if (__builtin_popcountll(mask) >= 2) p.togetherMasks.push_back(mask);
-  }
+  };
+  parseGroups(p.together, 0, "--together");
+  parseGroups(p.stack, 1, "--stack");
   if (p.fillAll) return runFillAll(boxes, p);
   std::vector<Orient> orients = buildOrients(boxes, p);
   std::vector<Cell> cells = buildCells(boxes, orients, p);
