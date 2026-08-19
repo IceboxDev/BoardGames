@@ -13,8 +13,13 @@ problem. Self-contained C++17, no dependencies (its own PNG encoder).
   rotated (spine-out) placements: every box then lies flat with its own
   height staying vertical.
 - The packing is a row of **piles** standing flush on the floor. A pile is a
-  stack of layers; a layer is 1–3 boxes side by side whose face heights match
-  within tolerance. Every layer in a pile shares the pile width (± tolerance),
+  stack of layers; a layer is 1–3 side-by-side UNITS whose heights match
+  within tolerance — a unit is a single box or a 2-box COLUMN (upper box no
+  wider than its support), so A+B and C+D with matching totals form a flush
+  2-story block. Every box off the floor must rest on at least one flush
+  supporter (partial overhang is fine, floating on a tolerance dip is not);
+  the arranger permutes unit order inside mixed-height layers to satisfy
+  this and drops arrangements that cannot. Every layer in a pile shares the pile width (± tolerance),
   so all vertical seams are flush.
 - Piles must reach the nominal height; the overflow allowances (30 mm per
   side, 35 mm up top) are RESERVE, not budget — spilling into them is allowed

@@ -139,16 +139,30 @@ struct Orient {
 struct Placement {
   int box;
   int fw, fh, d;
-  int xOff;  // within the cell
+  int xOff, yOff;  // within the unit / stacked within the column
+  int unit;        // which side-by-side unit of the cell this box belongs to
   bool vert;
+};
+
+// A unit: one box, or a 2-box COLUMN (one stacked on the other, the upper
+// box no wider than its support + tolerance). Units stand side by side in a
+// cell when their total heights match — so two columns A+B and C+D with
+// A+B == C+D form a flush-topped 2-story block ("hole in the middle" waists
+// are counted as mismatch holes like everything else).
+struct Unit {
+  uint64_t mask = 0;
+  int width = 0, height = 0;
+  long long vol = 0, faceArea = 0;
+  int depthSum = 0, maxDepth = 0, vertTop = 0;
+  std::vector<Placement> boxes;
 };
 
 // A cell: one box, or two side-by-side boxes with matching face heights.
 struct Cell {
-  uint64_t mask;
-  int width, height;  // height = max face height of members
-  long long vol;
-  int depthSum;
+  uint64_t mask = 0;
+  int width = 0, height = 0;  // height = max face height of members
+  long long vol = 0;
+  int depthSum = 0;
   long long faceArea = 0;  // Σ fw×fh of members (for the hole metric)
   int maxDepth = 0;
   int vertTop = 0;  // max face height among rotated members (0 = none)
@@ -215,53 +229,110 @@ static std::vector<Orient> buildOrients(const std::vector<Box>& boxes, const Par
   return out;
 }
 
-static std::vector<Cell> buildCells(const std::vector<Box>& boxes, const std::vector<Orient>& os,
+static std::vector<Unit> buildUnits(const std::vector<Box>& boxes, const std::vector<Orient>& os,
                                     const Params& p) {
-  std::vector<Cell> cells;
-  // Singles.
-  for (const Orient& o : os) {
-    Cell c;
-    c.mask = 1ULL << o.box;
-    c.width = o.fw;
-    c.height = o.fh;
-    c.vol = boxes[o.box].vol;
-    c.depthSum = o.d;
-    c.faceArea = (long long)o.fw * o.fh;
-    c.maxDepth = o.d;
-    c.vertTop = o.vert ? o.fh : 0;
-    c.boxes.push_back({o.box, o.fw, o.fh, o.d, 0, o.vert});
-    cells.push_back(std::move(c));
-  }
-  // Side-by-side pairs with matching heights (each box has ±tol slack).
-  int hTol = 2 * p.tolPerBox;
-  for (size_t i = 0; i < os.size(); i++) {
-    for (size_t j = i + 1; j < os.size(); j++) {
-      const Orient &a = os[i], &b = os[j];
-      if (a.box == b.box) continue;
-      if (std::abs(a.fh - b.fh) > hTol) continue;
-      int width = a.fw + b.fw;
-      if (width > p.maxWidth()) continue;
-      Cell c;
-      c.mask = (1ULL << a.box) | (1ULL << b.box);
-      c.width = width;
-      c.height = std::max(a.fh, b.fh);
-      c.vol = boxes[a.box].vol + boxes[b.box].vol;
-      c.depthSum = a.d + b.d;
-      c.faceArea = (long long)a.fw * a.fh + (long long)b.fw * b.fh;
-      c.maxDepth = std::max(a.d, b.d);
-      c.vertTop = std::max(a.vert ? a.fh : 0, b.vert ? b.fh : 0);
-      c.boxes.push_back({a.box, a.fw, a.fh, a.d, 0, a.vert});
-      c.boxes.push_back({b.box, b.fw, b.fh, b.d, a.fw, b.vert});
-      cells.push_back(std::move(c));
+  std::vector<Unit> units;
+  auto single = [&](const Orient& o) {
+    Unit u;
+    u.mask = 1ULL << o.box;
+    u.width = o.fw;
+    u.height = o.fh;
+    u.vol = boxes[o.box].vol;
+    u.faceArea = (long long)o.fw * o.fh;
+    u.depthSum = u.maxDepth = o.d;
+    u.vertTop = o.vert ? o.fh : 0;
+    u.boxes.push_back({o.box, o.fw, o.fh, o.d, 0, 0, 0, o.vert});
+    return u;
+  };
+  for (const Orient& o : os) units.push_back(single(o));
+
+  // Columns: one box stacked on another, the upper no wider than its support
+  // (+ tolerance), centered. Kept lean: best few thousand by mismatch.
+  std::vector<Unit> cols;
+  int wTol = 2 * p.tolPerBox;
+  for (const Orient& b : os) {
+    for (const Orient& u : os) {
+      if (b.box == u.box) continue;
+      if (u.fw > b.fw + wTol) continue;
+      int h = b.fh + u.fh;
+      if (h > 200) continue;  // taller stacks arise as stacked CELLS instead
+      if (p.vertInside && u.vert && h > p.heightBase) continue;
+      Unit c;
+      c.mask = (1ULL << b.box) | (1ULL << u.box);
+      c.width = std::max(b.fw, u.fw);
+      c.height = h;
+      c.vol = boxes[b.box].vol + boxes[u.box].vol;
+      c.faceArea = (long long)b.fw * b.fh + (long long)u.fw * u.fh;
+      c.depthSum = b.d + u.d;
+      c.maxDepth = std::max(b.d, u.d);
+      c.vertTop = std::max(b.vert ? b.fh : 0, u.vert ? h : 0);
+      c.boxes.push_back({b.box, b.fw, b.fh, b.d, 0, 0, 0, b.vert});
+      c.boxes.push_back({u.box, u.fw, u.fh, u.d, std::max(0, (b.fw - u.fw) / 2), b.fh, 0, u.vert});
+      cols.push_back(std::move(c));
     }
   }
-  // Triples: a pair plus one more height-matching box. Only worth it for the
-  // wide piles nothing else can partner with (Blood on the Clocktower's
-  // 366 mm face, Connect 4's 342, King's Crown's 336), so require a minimum
-  // combined width to keep the candidate set lean.
+  std::stable_sort(cols.begin(), cols.end(), [](const Unit& a, const Unit& b) {
+    long long ma = (long long)a.width * a.height - a.faceArea;
+    long long mb = (long long)b.width * b.height - b.faceArea;
+    return ma * b.width < mb * a.width;  // mismatch density ascending
+  });
+  if (cols.size() > 3000) cols.resize(3000);
+  for (auto& c : cols) units.push_back(std::move(c));
+  return units;
+}
+
+static Cell cellOf(const std::vector<const Unit*>& parts) {
+  Cell c;
+  int x = 0;
+  for (size_t k = 0; k < parts.size(); k++) {
+    const Unit& u = *parts[k];
+    c.mask |= u.mask;
+    c.height = std::max(c.height, u.height);
+    c.vol += u.vol;
+    c.faceArea += u.faceArea;
+    c.depthSum += u.depthSum;
+    c.maxDepth = std::max(c.maxDepth, u.maxDepth);
+    c.vertTop = std::max(c.vertTop, u.vertTop);
+    for (Placement pl : u.boxes) {
+      pl.xOff += x;
+      pl.unit = (int)k;
+      c.boxes.push_back(pl);
+    }
+    x += u.width;
+  }
+  c.width = x;
+  return c;
+}
+
+static std::vector<Cell> buildCells(const std::vector<Box>& boxes, const std::vector<Orient>& os,
+                                    const Params& p) {
+  std::vector<Unit> units = buildUnits(boxes, os, p);
+  std::vector<Cell> cells;
+  for (const Unit& u : units) cells.push_back(cellOf({&u}));
+ 
+  // Side-by-side pairs of units with matching heights (±tol each).
+  int hTol = 2 * p.tolPerBox;
+  std::vector<int> byH(units.size());
+  for (size_t i = 0; i < byH.size(); i++) byH[i] = (int)i;
+  std::sort(byH.begin(), byH.end(),
+            [&](int a, int b) { return units[a].height < units[b].height; });
+  size_t pairStart = cells.size();
+  for (size_t i = 0; i < byH.size(); i++) {
+    const Unit& a = units[byH[i]];
+    for (size_t j = i + 1; j < byH.size(); j++) {
+      const Unit& b = units[byH[j]];
+      if (b.height - a.height > hTol) break;
+      if (a.mask & b.mask) continue;
+      if (a.width + b.width > p.maxWidth()) continue;
+      cells.push_back(cellOf({&a, &b}));
+    }
+  }
   size_t pairEnd = cells.size();
+
+  // Triples: single-box units only (wide-pile partners), min combined width.
   std::map<std::pair<uint64_t, int>, size_t> tripleBest;
-  for (size_t ci = os.size(); ci < pairEnd; ci++) {
+  for (size_t ci = pairStart; ci < pairEnd; ci++) {
+    if (cells[ci].boxes.size() != 2) continue;
     for (const Orient& o : os) {
       const Cell& pc = cells[ci];
       if (pc.mask & (1ULL << o.box)) continue;
@@ -270,17 +341,16 @@ static std::vector<Cell> buildCells(const std::vector<Box>& boxes, const std::ve
       if (hi - lo > hTol) continue;
       int width = pc.width + o.fw;
       if (width > p.maxWidth() || width < 250) continue;
-      Cell c;
-      c.mask = pc.mask | (1ULL << o.box);
+      Cell c = pc;
+      c.mask |= 1ULL << o.box;
       c.width = width;
       c.height = std::max(pc.height, o.fh);
-      c.vol = pc.vol + boxes[o.box].vol;
-      c.depthSum = pc.depthSum + o.d;
-      c.faceArea = pc.faceArea + (long long)o.fw * o.fh;
+      c.vol += boxes[o.box].vol;
+      c.depthSum += o.d;
+      c.faceArea += (long long)o.fw * o.fh;
       c.maxDepth = std::max(pc.maxDepth, o.d);
       c.vertTop = std::max(pc.vertTop, o.vert ? o.fh : 0);
-      c.boxes = pc.boxes;
-      c.boxes.push_back({o.box, o.fw, o.fh, o.d, pc.width, o.vert});
+      c.boxes.push_back({o.box, o.fw, o.fh, o.d, pc.width, 0, 2, o.vert});
       auto key = std::make_pair(c.mask, c.width);
       auto it = tripleBest.find(key);
       if (it == tripleBest.end()) {
@@ -290,6 +360,59 @@ static std::vector<Cell> buildCells(const std::vector<Box>& boxes, const std::ve
         cells[it->second] = std::move(c);
       }
     }
+  }
+
+  // Dedup: one cell per (box set, width, height) — the lowest-mismatch one.
+  {
+    std::stable_sort(cells.begin(), cells.end(), [](const Cell& a, const Cell& b) {
+      long long ma = (long long)a.width * a.height - a.faceArea;
+      long long mb = (long long)b.width * b.height - b.faceArea;
+      return ma * b.width < mb * a.width;
+    });
+    std::set<std::tuple<uint64_t, int, int>> seen;
+    std::vector<Cell> uniq;
+    for (auto& c : cells)
+      if (seen.insert({c.mask, c.width, c.height}).second) uniq.push_back(std::move(c));
+    cells = std::move(uniq);
+  }
+  // Cap for tractability: bucketed by width AND height class, mismatch
+  // density ascending, plus a per-box coverage floor. Height in the bucket
+  // key is what keeps the short workhorse cells alive next to tall columns.
+  if (cells.size() > 5000) {
+    std::vector<char> take(cells.size(), 0);
+    std::map<std::pair<int, int>, std::vector<size_t>> byW;
+    for (size_t i = 0; i < cells.size(); i++)
+      byW[{cells[i].width / 25, cells[i].height / 25}].push_back(i);
+    size_t got = 0;
+    for (size_t round = 0; got < 5000; round++) {
+      bool any = false;
+      for (auto& [_, bucket] : byW)
+        if (round < bucket.size() && got < 5000) {
+          take[bucket[round]] = 1;
+          got++;
+          any = true;
+        }
+      if (!any) break;
+    }
+    std::vector<int> perBox(64, 0);
+    for (size_t i = 0; i < cells.size(); i++)
+      if (take[i])
+        for (int b = 0; b < 64; b++)
+          if (cells[i].mask & (1ULL << b)) perBox[b]++;
+    for (size_t i = 0; i < cells.size(); i++) {
+      if (take[i]) continue;
+      bool needed = false;
+      for (int b = 0; b < 64 && !needed; b++)
+        if ((cells[i].mask & (1ULL << b)) && perBox[b] < 60) needed = true;
+      if (!needed) continue;
+      take[i] = 1;
+      for (int b = 0; b < 64; b++)
+        if (cells[i].mask & (1ULL << b)) perBox[b]++;
+    }
+    std::vector<Cell> kept;
+    for (size_t i = 0; i < cells.size(); i++)
+      if (take[i]) kept.push_back(std::move(cells[i]));
+    cells = std::move(kept);
   }
   return cells;
 }
@@ -399,18 +522,32 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
     }
   };
 
-  for (size_t a = 0; a < order.size(); a++) {
-    const Cell& c = cells[order[a]];
-    chosen.assign(1, order[a]);
-    anchorBudget = 1'000'000;
-    anchorRecorded = 0;
-    dfs(a, a + 1, {c.mask, c.height, c.vol, c.depthSum, c.faceArea, c.maxDepth, 1});
+  {
+    std::map<int, std::vector<size_t>> anchorBuckets;
+    for (size_t a = 0; a < order.size(); a++)
+      anchorBuckets[cells[order[a]].width / 25].push_back(a);
+    std::vector<size_t> anchorSeq;
+    for (size_t round = 0;; round++) {
+      bool any = false;
+      for (auto& [_, bucket] : anchorBuckets)
+        if (round < bucket.size()) {
+          anchorSeq.push_back(bucket[round]);
+          any = true;
+        }
+      if (!any) break;
+    }
+    for (size_t a : anchorSeq) {
+      const Cell& c = cells[order[a]];
+      chosen.assign(1, order[a]);
+      anchorBudget = 1'000'000;
+      anchorRecorded = 0;
+      dfs(a, a + 1, {c.mask, c.height, c.vol, c.depthSum, c.faceArea, c.maxDepth, 1});
+    }
   }
 
   std::vector<Pile> piles;
   piles.reserve(best.size());
   for (auto& [_, pile] : best) piles.push_back(std::move(pile));
-  std::cerr << "  [buildPiles] raw=" << piles.size() << " nodeBudgetLeft=" << nodeBudget << "\n";
   return piles;
 }
 
@@ -576,15 +713,37 @@ static std::vector<int> cellOrderByHeight(const Pile& pile, const std::vector<Ce
   return cs;
 }
 
+static int unitCountOf(const Cell& cell) {
+  int n = 0;
+  for (const Placement& pl : cell.boxes) n = std::max(n, pl.unit + 1);
+  return n;
+}
+
+static int unitLeftOf(const Cell& cell, int u) {
+  int lo = 1 << 30;
+  for (const Placement& pl : cell.boxes)
+    if (pl.unit == u) lo = std::min(lo, pl.xOff);
+  return lo;
+}
+
+static int unitWidthOf(const Cell& cell, int u) {
+  int lo = unitLeftOf(cell, u), w = 0;
+  for (const Placement& pl : cell.boxes)
+    if (pl.unit == u) w = std::max(w, pl.xOff - lo + pl.fw);
+  return w;
+}
+
 /**
  * Cells narrower than the pile push their mismatch slack toward the nearer
  * shelf edge: the leftmost pile fully left, the rightmost fully right, and
  * interior piles by half-rule. Edge slack lands in the overhang, where the
- * nominal window can slide off it entirely.
+ * nominal window can slide off it entirely. Units are emitted in
+ * `unitOrderOf` order (permutable); a unit's boxes keep their internal
+ * column layout, including stacked yOff.
  */
 static void emitPile(const Pile& pile, const std::vector<Cell>& cells,
                      const std::vector<int>& cellOrder,
-                     const std::function<std::vector<int>(int)>& boxOrderOf, int x, int solWidth,
+                     const std::function<std::vector<int>(int)>& unitOrderOf, int x, int solWidth,
                      std::vector<PlacedRect>& out) {
   bool slackLeft = x == 0                          ? true
                    : x + pile.width == solWidth ? false
@@ -592,20 +751,21 @@ static void emitPile(const Pile& pile, const std::vector<Cell>& cells,
   int y = 0;
   for (int ci : cellOrder) {
     const Cell& cell = cells[ci];
-    int cellW = 0;
-    for (const Placement& pl : cell.boxes) cellW += pl.fw;
-    int xOff = slackLeft ? pile.width - cellW : 0;
-    for (int bi : boxOrderOf(ci)) {
-      const Placement& pl = cell.boxes[bi];
-      out.push_back({pl.box, pl.fw, pl.fh, pl.d, x + xOff, y, pl.vert});
-      xOff += pl.fw;
+    int xOff = slackLeft ? pile.width - cell.width : 0;
+    for (int u : unitOrderOf(ci)) {
+      int lo = unitLeftOf(cell, u);
+      for (const Placement& pl : cell.boxes)
+        if (pl.unit == u)
+          out.push_back(
+              {pl.box, pl.fw, pl.fh, pl.d, x + xOff + (pl.xOff - lo), y + pl.yOff, pl.vert});
+      xOff += unitWidthOf(cell, u);
     }
     y += cell.height;
   }
 }
 
-static std::vector<int> identityBoxOrder(const Cell& cell) {
-  std::vector<int> o(cell.boxes.size());
+static std::vector<int> identityUnitOrder(const Cell& cell) {
+  std::vector<int> o(unitCountOf(cell));
   for (size_t i = 0; i < o.size(); i++) o[i] = (int)i;
   return o;
 }
@@ -679,7 +839,7 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
   uint64_t clusterUnion = 0;
   for (uint64_t g : clusters) clusterUnion |= g;
 
-  auto defaultBoxOrder = [&](int ci) { return identityBoxOrder(cells[ci]); };
+  auto defaultBoxOrder = [&](int ci) { return identityUnitOrder(cells[ci]); };
 
   std::vector<int> freePiles, clusterPiles;
   for (int pi : sol.piles)
@@ -687,46 +847,7 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
   std::sort(freePiles.begin(), freePiles.end(),
             [&](int a, int b) { return piles[a].width > piles[b].width; });
 
-  if (clusters.empty() && !sol.piles.empty() && clusterPiles.empty()) {
-    // No cluster constraints: pick the pile order + window offset minimizing
-    // interior holes directly.
-    auto emitOrder = [&](const std::vector<int>& seq, std::vector<PlacedRect>& layout) {
-      layout.clear();
-      int x = 0;
-      for (int pi : seq) {
-        emitPile(piles[pi], cells, cellOrderByHeight(piles[pi], cells, p.heightBase),
-                 defaultBoxOrder, x, sol.width, layout);
-        x += piles[pi].width;
-      }
-    };
-    std::vector<PlacedRect> layout, bestLayout;
-    long long bestHoles = -1;
-    int bestOff = 0;
-    size_t n = freePiles.size();
-    for (size_t l = 0; l < n; l++)
-      for (size_t r = 0; r < n; r++) {
-        if (n > 1 && l == r) continue;
-        std::vector<int> seq;
-        seq.push_back(freePiles[l]);
-        for (size_t k = 0; k < n; k++)
-          if (k != l && k != r) seq.push_back(freePiles[k]);
-        if (r != l) seq.push_back(freePiles[r]);
-        emitOrder(seq, layout);
-        int off = 0;
-        long long holes = interiorHolesOf(layout, sol.width, p, off);
-        if (bestHoles < 0 || holes < bestHoles) {
-          bestHoles = holes;
-          bestOff = off;
-          bestLayout = layout;
-        }
-        if (n <= 1) break;
-      }
-    out = bestLayout;
-    if (windowOffset) *windowOffset = bestOff;
-    if (interiorOut) *interiorOut = bestHoles;
-    return true;
-  }
-  if (clusterPiles.empty()) return clusters.empty();
+  if (!clusters.empty() && clusterPiles.empty()) return false;
 
   // Blocks: clusters sharing a pile merge (their piles must interleave).
   size_t nc = clusters.size();
@@ -771,18 +892,34 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
     std::vector<std::vector<int>> perms;
   };
   std::vector<PermCell> permCells;
+  std::set<int> permSeen;
+  auto addPermCell = [&](int ci) {
+    const Cell& cell = cells[ci];
+    if (unitCountOf(cell) < 2 || permSeen.count(ci)) return;
+    permSeen.insert(ci);
+    PermCell pc{ci, {}};
+    std::vector<int> order = identityUnitOrder(cell);
+    do {
+      pc.perms.push_back(order);
+    } while (std::next_permutation(order.begin(), order.end()));
+    permCells.push_back(std::move(pc));
+  };
   for (int pi : clusterPiles)
+    for (int ci : piles[pi].cells)
+      if (cells[ci].mask & clusterUnion) addPermCell(ci);
+  // Support repair: piles holding a cell whose units differ in height leave
+  // dips; every multi-unit cell of such a pile becomes permutable so a
+  // full-height supporter can be shuffled under a floating box above.
+  for (int pi : sol.piles) {
+    bool mismatch = false;
     for (int ci : piles[pi].cells) {
       const Cell& cell = cells[ci];
-      if (!(cell.mask & clusterUnion) || cell.boxes.size() < 2) continue;
-      PermCell pc{ci, {}};
-      std::vector<int> order = identityBoxOrder(cell);
-      std::sort(order.begin(), order.end());
-      do {
-        pc.perms.push_back(order);
-      } while (std::next_permutation(order.begin(), order.end()));
-      permCells.push_back(std::move(pc));
+      for (const Placement& pl : cell.boxes)
+        if (pl.yOff + pl.fh < cell.height) mismatch = true;
     }
+    if (!mismatch) continue;
+    for (int ci : piles[pi].cells) addPermCell(ci);
+  }
 
   std::vector<std::vector<int>> blocks;
   for (auto& [_, bp] : blockPiles) {
@@ -829,14 +966,32 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
       auto boxOrderOf = [&](int ci) {
         for (size_t k = 0; k < permCells.size(); k++)
           if (permCells[k].ci == ci) return permCells[k].perms[counter[k]];
-        return identityBoxOrder(cells[ci]);
+        return identityUnitOrder(cells[ci]);
       };
       emitSeq(seqOf(unitOrder), boxOrderOf, layout);
-      // Standing boxes must not poke above the nominal line; every cluster
+      // Standing boxes must not poke above the nominal line; every box off
+      // the floor needs at least one flush supporter directly beneath it
+      // (partial gaps are fine, floating on a dip is not); every cluster
       // must be internally connected.
       bool allOk = true;
       for (const PlacedRect& r : layout)
         if (r.vert && r.y0 + r.fh > p.heightBase) allOk = false;
+      if (allOk)
+        for (const PlacedRect& r : layout) {
+          if (r.y0 == 0) continue;
+          bool supported = false;
+          for (const PlacedRect& o : layout) {
+            if (o.y0 + o.fh != r.y0) continue;
+            if (std::min(r.x0 + r.fw, o.x0 + o.fw) - std::max(r.x0, o.x0) > 0) {
+              supported = true;
+              break;
+            }
+          }
+          if (!supported) {
+            allOk = false;
+            break;
+          }
+        }
       for (size_t ci = 0; ci < clusters.size(); ci++) {
         if (!allOk) break;
         uint64_t g = clusters[ci];
@@ -1161,10 +1316,15 @@ static void report(std::ostream& os, const Solution& sol, const std::vector<Pile
     for (int ci : pile.cells) {
       const Cell& cell = cells[ci];
       os << " [";
-      for (size_t k = 0; k < cell.boxes.size(); k++) {
-        const Placement& pl = cell.boxes[k];
-        if (k) os << " | ";
-        os << boxes[pl.box].name << " " << pl.fw << "x" << pl.fh << " d" << pl.d;
+      for (int u = 0; u < unitCountOf(cell); u++) {
+        if (u) os << " | ";
+        bool first = true;
+        for (const Placement& pl : cell.boxes) {
+          if (pl.unit != u) continue;
+          if (!first) os << " + ";
+          first = false;
+          os << boxes[pl.box].name << " " << pl.fw << "x" << pl.fh << " d" << pl.d;
+        }
       }
       os << "]";
     }
@@ -1641,10 +1801,15 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
           for (int ci : pile.cells) {
             const Cell& cell = sets[sh].cells[ci];
             *os << " [";
-            for (size_t j = 0; j < cell.boxes.size(); j++) {
-              const Placement& pl = cell.boxes[j];
-              if (j) *os << " | ";
-              *os << boxes[pl.box].name << " " << pl.fw << "x" << pl.fh << " d" << pl.d;
+            for (int u = 0; u < unitCountOf(cell); u++) {
+              if (u) *os << " | ";
+              bool first = true;
+              for (const Placement& pl : cell.boxes) {
+                if (pl.unit != u) continue;
+                if (!first) *os << " + ";
+                first = false;
+                *os << boxes[pl.box].name << " " << pl.fw << "x" << pl.fh << " d" << pl.d;
+              }
             }
             *os << "]";
           }
