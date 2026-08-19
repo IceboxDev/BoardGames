@@ -44,9 +44,11 @@ problem. Self-contained C++17, no dependencies (its own PNG encoder).
 - `--requires DEP,PROV` (repeatable): DEP may only be packed if PROV is too
   (PROV alone is fine), on the same shelf, touching along BOTH long edges.
 - `--stack A,B[,C…]` (repeatable): all-or-none like `--together`, but the
-  group must chain long-side-to-long-side (every internal contact lies on a
-  long edge of BOTH boxes — flat rows stacked, or standing side by side).
-  Piles carrying a proper subset of a stack group are pruned outright.
+  group must form a strict RUN: a vertical tower (equal face widths, each box
+  directly on the previous) or a standing side-by-side row. Piles carrying a
+  proper subset of a stack group are pruned outright, and canonical tower
+  piles (group + near-width cap cells) are injected directly so enumeration
+  caps can never starve them.
 - `--use-all` (fill-all only) demands EVERY box be placed; when that is
   infeasible the run reports the closest width-complete attempt and which
   boxes stayed out, instead of emitting solutions.

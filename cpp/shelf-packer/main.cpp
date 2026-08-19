@@ -63,6 +63,7 @@ struct Params {
   // --vert-inside: rotated (spine-out) placements are allowed ONLY when the
   // box top stays within the nominal rectangle (y + face height <= 250).
   bool vertInside = false;
+  bool pilesOnly = false;  // debug: stop after pile construction
   // --pin-a NAME/GLOB (repeatable): these boxes may only stand in shelf A.
   std::vector<std::string> pinA;
   uint64_t pinAMask = 0;
@@ -174,10 +175,10 @@ struct Cell {
 
 // A pile: stacked cells sharing one width.
 struct Pile {
-  uint64_t mask;
-  int width, height;
-  long long vol;
-  int depthSum;
+  uint64_t mask = 0;
+  int width = 0, height = 0;
+  long long vol = 0;
+  int depthSum = 0;
   long long holes = 0;  // pile rect area − Σ member face areas (mismatch gaps)
   int maxDepth = 0;
   std::vector<int> cells;  // indices into the cell list
@@ -1035,17 +1036,44 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
       for (size_t ci = 0; ci < clusters.size(); ci++) {
         if (!allOk) break;
         uint64_t g = clusters[ci];
-        bool mutual = clusterMutual[ci];
+        int mode = clusterMutual[ci];  // 0 touch, 1 mutual pair, 2 strict run
         std::vector<int> idx;
         for (size_t i = 0; i < layout.size(); i++)
           if (g & (1ULL << layout[i].box)) idx.push_back((int)i);
+        if (mode == 2) {
+          // Strict run: a vertical tower (equal x-extents, y contiguous) or a
+          // horizontal row (equal y-extents, x contiguous) — nothing between.
+          std::vector<PlacedRect> rs;
+          for (int i : idx) rs.push_back(layout[i]);
+          auto byY = rs, byX = rs;
+          std::sort(byY.begin(), byY.end(),
+                    [](const PlacedRect& a, const PlacedRect& b) { return a.y0 < b.y0; });
+          std::sort(byX.begin(), byX.end(),
+                    [](const PlacedRect& a, const PlacedRect& b) { return a.x0 < b.x0; });
+          bool tower = true, row = true;
+          for (size_t i = 0; i < byY.size(); i++) {
+            if (byY[i].x0 != byY[0].x0 || byY[i].fw != byY[0].fw) tower = false;
+            if (i && byY[i].y0 != byY[i - 1].y0 + byY[i - 1].fh) tower = false;
+          }
+          for (size_t i = 0; i < byX.size(); i++) {
+            // Rows tolerate small settle offsets — the vertical long sides
+            // still meet in full; contiguity in x stays exact.
+            if (std::abs(byX[i].y0 - byX[0].y0) > 3 || byX[i].fh != byX[0].fh) row = false;
+            if (i && byX[i].x0 != byX[i - 1].x0 + byX[i - 1].fw) row = false;
+          }
+          if (!tower && !row) {
+            if (ci < 8) gFailClusterIdx[ci]++;
+            allOk = false;
+          }
+          continue;
+        }
         std::vector<int> parent(idx.size());
         for (size_t i = 0; i < parent.size(); i++) parent[i] = (int)i;
         std::function<int(int)> find = [&](int v) {
           return parent[v] == v ? v : parent[v] = find(parent[v]);
         };
         auto edgeOk = [&](const PlacedRect& A, const PlacedRect& B) {
-          if (mutual) return longEdgeContact(A, B) && longEdgeContact(B, A);
+          if (mode == 1) return longEdgeContact(A, B) && longEdgeContact(B, A);
           bool aC = p.longEdgeMask & (1ULL << A.box), bC = p.longEdgeMask & (1ULL << B.box);
           if (aC && !longEdgeContact(A, B)) return false;
           if (bC && !longEdgeContact(B, A)) return false;
@@ -1439,6 +1467,8 @@ static bool clusterFrontOk(uint64_t maskA, uint64_t maskB, const Params& p) {
 
 static long long gIncomplete = 0, gCluster = 0, gMissingBoxes = 0, gOk = 0;
 int gBestA = 0, gBestB = 0;
+long long gRejReq = 0, gRejTog = 0, gRejComp = 0, gRejSpan = 0;
+long long gInjected = 0, gInjectRejected = 0;
 uint64_t gBestPlacedMask = 0;
 int gBestPlaced = -1;
 std::vector<int> gBestPilesA, gBestPilesB;
@@ -1446,7 +1476,11 @@ std::vector<int> gBestPilesA, gBestPilesB;
 static void collectTwo(std::map<std::pair<uint64_t, uint64_t>, TwoSol>& pool, const TwoState& s,
                        const ShelfSet sets[2], const std::vector<Box>& boxes, uint64_t allMask,
                        const Params& p, const std::vector<int>& shelfDepths) {
-  if (s.wA < p.widthBase || s.wB < p.widthBase) {
+  // Width tolerance mirrors the height rule: each pile's ±tol measurement
+  // slack counts toward reaching the nominal width; any real shortfall is
+  // charged as in-rect holes by the settled metric anyway.
+  if (s.wA + (int)s.pA.size() * p.tolPerBox < p.widthBase ||
+      s.wB + (int)s.pB.size() * p.tolPerBox < p.widthBase) {
     gIncomplete++;
     extern int gBestA, gBestB;
     if (std::min(s.wA, p.widthBase) + std::min(s.wB, p.widthBase) >
@@ -1461,19 +1495,44 @@ static void collectTwo(std::map<std::pair<uint64_t, uint64_t>, TwoSol>& pool, co
     }
     return;
   }
-  if (!clusterFrontOk(s.maskA, s.maskB, p)) {
-    gCluster++;
-    return;
+  extern long long gRejReq, gRejTog, gRejComp, gRejSpan;
+  {
+    bool bad = false;
+    if (p.requiredMask && (s.maskA & p.requiredMask) != p.requiredMask &&
+        (s.maskB & p.requiredMask) != p.requiredMask) {
+      gRejReq++;
+      bad = true;
+    }
+    if (!bad)
+      for (uint64_t g : p.togetherMasks) {
+        if (((s.maskA | s.maskB) & g) == 0) continue;
+        if ((s.maskA & g) != g && (s.maskB & g) != g) {
+          gRejTog++;
+          bad = true;
+          break;
+        }
+      }
+    if (!bad)
+      for (auto& [dep, prov] : p.companions) {
+        if (!((s.maskA | s.maskB) & dep)) continue;
+        uint64_t shelf = (s.maskA & dep) ? s.maskA : s.maskB;
+        if (!(shelf & prov)) {
+          gRejComp++;
+          bad = true;
+          break;
+        }
+      }
+    if (bad) {
+      gCluster++;
+      return;
+    }
   }
   // Stack groups chain via mutual long-edge contacts. Cheap necessary
   // conditions before the expensive arrangement pass: the group must sit in
   // ONE pile, or across exactly TWO piles with every member standing
   // (vertical long edges meet at the seam) — flat members can only chain
   // within their own pile.
-  for (size_t gi = 0; gi < p.togetherMasks.size(); gi++) {
-    if (gi >= p.togetherMutual.size() || !p.togetherMutual[gi]) continue;
-    uint64_t g = p.togetherMasks[gi];
-    if (((s.maskA | s.maskB) & g) != g) continue;
+  auto groupSpanBad = [&](uint64_t g) {
     for (int sh = 0; sh < 2; sh++) {
       int count = 0;
       bool anyFlat = false;
@@ -1485,10 +1544,29 @@ static void collectTwo(std::map<std::pair<uint64_t, uint64_t>, TwoSol>& pool, co
           for (const Placement& pl : sets[sh].cells[ci].boxes)
             if ((g & (1ULL << pl.box)) && pl.fw >= pl.fh) anyFlat = true;
       }
-      if (count > 2 || (count == 2 && anyFlat)) {
-        gCluster++;
-        return;
-      }
+      if (count > 2 || (count == 2 && anyFlat)) return true;
+    }
+    return false;
+  };
+  for (size_t gi = 0; gi < p.togetherMasks.size(); gi++) {
+    if (gi >= p.togetherMutual.size() || !p.togetherMutual[gi]) continue;
+    uint64_t g = p.togetherMasks[gi];
+    if (((s.maskA | s.maskB) & g) != g) continue;
+    if (groupSpanBad(g)) {
+      gRejSpan++;
+      gCluster++;
+      return;
+    }
+  }
+  // Companion pairs must meet long-edge-to-long-edge too: when both are
+  // present they need to share a pile (or both stand at a seam).
+  for (auto& [dep, prov] : p.companions) {
+    uint64_t g = dep | prov;
+    if (((s.maskA | s.maskB) & g) != g) continue;
+    if (groupSpanBad(g)) {
+      gRejSpan++;
+      gCluster++;
+      return;
     }
   }
   if (p.useAll) {
@@ -1647,6 +1725,94 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
     sets[sh].orients = buildOrients(boxes, sets[sh].prm, sh == 1 ? p.pinAMask : 0);
     sets[sh].cells = buildCells(boxes, sets[sh].orients, sets[sh].prm);
     sets[sh].piles = buildPiles(sets[sh].cells, sets[sh].prm);
+    // Stack groups must form a strict RUN (tower), which means: the whole
+    // group in ONE pile, every member in the same orientation (equal face
+    // width), and no two members side-by-side in different units of a cell —
+    // members may share a unit (a column of two IS a partial tower).
+    {
+      auto& v = sets[sh].piles;
+      auto& cellsRef = sets[sh].cells;
+      v.erase(std::remove_if(v.begin(), v.end(),
+                             [&](const Pile& pile) {
+                               for (size_t gi = 0; gi < p.togetherMasks.size(); gi++) {
+                                 if (gi >= p.togetherMutual.size() || !p.togetherMutual[gi])
+                                   continue;
+                                 uint64_t g = p.togetherMasks[gi];
+                                 uint64_t inter = pile.mask & g;
+                                 if (!inter) continue;
+                                 if (inter != g) return true;
+                                 // Side-by-side members in one cell only work
+                                 // STANDING (vertical long edges meet); flat
+                                 // members must share a unit (column).
+                                 for (int ci : pile.cells) {
+                                   std::set<int> us;
+                                   bool flat = false;
+                                   for (const Placement& pl : cellsRef[ci].boxes) {
+                                     if (!(g & (1ULL << pl.box))) continue;
+                                     us.insert(pl.unit);
+                                     if (pl.fw >= pl.fh) flat = true;
+                                   }
+                                   if (us.size() >= 2 && flat) return true;
+                                 }
+                                 // One cell holding the WHOLE group = a
+                                 // horizontal run candidate; otherwise the
+                                 // group must tower: uniform orientation and
+                                 // never side-by-side within a cell.
+                                 bool oneCell = false;
+                                 for (int ci : pile.cells) {
+                                   uint64_t cm = cellsRef[ci].mask & g;
+                                   if (cm == g) oneCell = true;
+                                 }
+                                 if (oneCell) continue;
+                                 int fw = -1;
+                                 for (int ci : pile.cells) {
+                                   int unitSeen = -1;
+                                   for (const Placement& pl : cellsRef[ci].boxes) {
+                                     if (!(g & (1ULL << pl.box))) continue;
+                                     if (fw < 0) fw = pl.fw;
+                                     if (pl.fw != fw) return true;  // mixed orientation
+                                     if (unitSeen >= 0 && pl.unit != unitSeen)
+                                       return true;  // side-by-side members
+                                     unitSeen = pl.unit;
+                                   }
+                                 }
+                               }
+                               // Companion pairs: same flat-side-by-side ban.
+                               for (auto& [dep, prov] : p.companions) {
+                                 uint64_t g = dep | prov;
+                                 for (int ci : pile.cells) {
+                                   std::set<int> us;
+                                   bool flat = false;
+                                   for (const Placement& pl : cellsRef[ci].boxes) {
+                                     if (!(g & (1ULL << pl.box))) continue;
+                                     us.insert(pl.unit);
+                                     if (pl.fw >= pl.fh) flat = true;
+                                   }
+                                   if (us.size() >= 2 && flat) return true;
+                                 }
+                               }
+                               // A --long-edge box placed HORIZONTALLY can
+                               // only meet its required cluster above/below,
+                               // i.e. inside the cluster's own pile: demand
+                               // the rest of the required set be present.
+                               // Standing placements stay free — they touch
+                               // across pile seams with their long edge.
+                               for (int b = 0; b < 64; b++) {
+                                 if (!(p.longEdgeMask & (1ULL << b))) continue;
+                                 if (!(pile.mask & (1ULL << b))) continue;
+                                 if (!(p.requiredMask & (1ULL << b))) continue;
+                                 bool horizontal = false;
+                                 for (int ci : pile.cells)
+                                   for (const Placement& pl : cellsRef[ci].boxes)
+                                     if (pl.box == b && pl.fw >= pl.fh) horizontal = true;
+                                 if (!horizontal) continue;
+                                 uint64_t rest = p.requiredMask & ~(1ULL << b);
+                                 if ((pile.mask & rest) != rest) return true;
+                               }
+                               return false;
+                             }),
+              v.end());
+    }
     // Prune for search tractability: keep every pile carrying a required or
     // companion box, plus the cleanest of the rest.
     {
@@ -1715,27 +1881,75 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
         if (take[i]) kept.push_back(std::move(v[i]));
       v = std::move(kept);
     }
-    // Stack groups must chain long-edge internally, which realistically means
-    // living in ONE pile: ban piles carrying a proper subset of a stack.
-    {
-      auto& v = sets[sh].piles;
-      v.erase(std::remove_if(v.begin(), v.end(),
-                             [&](const Pile& pile) {
-                               for (size_t gi = 0; gi < p.togetherMasks.size(); gi++) {
-                                 if (gi >= p.togetherMutual.size() || !p.togetherMutual[gi])
-                                   continue;
-                                 uint64_t g = p.togetherMasks[gi];
-                                 uint64_t inter = pile.mask & g;
-                                 if (inter && inter != g) return true;
-                               }
-                               return false;
-                             }),
-              v.end());
+    // Canonical stack towers: enumeration caps can starve the exact pile a
+    // stack group needs (all members towered + the long-edge box capping
+    // it), so construct those piles directly and inject them.
+    for (size_t gi = 0; gi < p.togetherMasks.size(); gi++) {
+      if (gi >= p.togetherMutual.size() || p.togetherMutual[gi] != 2) continue;
+      uint64_t g = p.togetherMasks[gi];
+      auto& cellsRef = sets[sh].cells;
+      // Single-box cells of group members, grouped by face width.
+      std::map<int, std::map<int, int>> byFwBox;  // fw -> box -> cell index
+      for (size_t ci = 0; ci < cellsRef.size(); ci++) {
+        const Cell& c = cellsRef[ci];
+        if (c.boxes.size() != 1) continue;
+        const Placement& pl = c.boxes[0];
+        if (!(g & (1ULL << pl.box))) continue;
+        byFwBox[pl.fw][pl.box] = (int)ci;
+      }
+      int nMembers = __builtin_popcountll(g);
+      for (auto& [fw, boxCells] : byFwBox) {
+        if ((int)boxCells.size() != nMembers) continue;
+        auto makePile = [&](std::vector<int> extraCells) {
+          Pile pile;
+          std::vector<int> cs;
+          for (auto& [b, ci] : boxCells) cs.push_back(ci);
+          for (int ci : extraCells) cs.push_back(ci);
+          int width = 0;
+          for (int ci : cs) {
+            const Cell& c = cellsRef[ci];
+            pile.mask |= c.mask;
+            pile.height += c.height;
+            pile.vol += c.vol;
+            pile.depthSum += c.depthSum;
+            pile.maxDepth = std::max(pile.maxDepth, c.maxDepth);
+            width = std::max(width, c.width);
+          }
+          pile.width = width;
+          for (int ci : cs) {
+            const Cell& c = cellsRef[ci];
+            pile.holes += (long long)width * c.height - c.faceArea;
+          }
+          pile.holes += (long long)width * std::max(0, p.heightBase - pile.height);
+          pile.cells = cs;
+          int nl = (int)cs.size();
+          if (pile.height + nl * p.tolPerBox >= p.heightBase - p.heightSlack &&
+              pile.height - nl * p.tolPerBox <= p.maxHeight()) {
+            extern long long gInjected;
+            gInjected++;
+            sets[sh].piles.push_back(std::move(pile));
+          } else {
+            extern long long gInjectRejected;
+            gInjectRejected++;
+          }
+        };
+        // Tower alone (if tall enough), and tower + each compatible cap cell
+        // (the --long-edge boxes first, then any near-width single).
+        makePile({});
+        for (size_t ci = 0; ci < cellsRef.size(); ci++) {
+          const Cell& c = cellsRef[ci];
+          if (c.mask & g) continue;
+          if (std::abs(c.width - fw) > 2 * p.tolPerBox + p.widthSlack) continue;
+          if (c.boxes.size() != 1) continue;
+          makePile({(int)ci});
+        }
+      }
     }
     std::cerr << "shelf " << (sh ? "B" : "A") << " (depth " << shelfDepths[sh]
               << "): " << sets[sh].orients.size() << " orientations, " << sets[sh].cells.size()
               << " cells, " << sets[sh].piles.size() << " piles\n";
   }
+  if (p.pilesOnly) return 0;
   uint64_t allMask = boxes.size() >= 64 ? ~0ULL : ((1ULL << boxes.size()) - 1);
 
   std::map<std::pair<uint64_t, uint64_t>, TwoSol> pool;
@@ -1755,7 +1969,7 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
   });
   twoBeam(sets, byWidth, p, boxes, allMask, shelfDepths, pool, 1500);
   std::mt19937_64 rng(7);
-  for (int pass = 0; pass < 8; pass++) {
+  for (int pass = 0; pass < 14; pass++) {
     auto shuffled = order;
     std::shuffle(shuffled.begin(), shuffled.end(), rng);
     twoBeam(sets, shuffled, p, boxes, allMask, shelfDepths, pool, 800);
@@ -1763,6 +1977,9 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
   twoGreedy(sets, p, boxes, allMask, shelfDepths, pool, 150000, 987654321);
   twoGreedy(sets, p, boxes, allMask, shelfDepths, pool, 150000, 555000111);
   twoGreedy(sets, p, boxes, allMask, shelfDepths, pool, 150000, 42424242);
+  twoGreedy(sets, p, boxes, allMask, shelfDepths, pool, 150000, 31415926);
+  twoGreedy(sets, p, boxes, allMask, shelfDepths, pool, 150000, 27182818);
+  twoGreedy(sets, p, boxes, allMask, shelfDepths, pool, 150000, 16180339);
 
   // Pinned passes: restrict cluster-carrying piles to a designated shelf so
   // complete-width states stop dying on the cluster-split check.
@@ -1785,6 +2002,11 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
       twoBeam(sets, pinFilter(byWidth), p, boxes, allMask, shelfDepths, pool, 800);
     }
 
+  {
+    extern long long gRejReq, gRejTog, gRejComp, gRejSpan;
+    std::cerr << "front rejects: required=" << gRejReq << " together=" << gRejTog
+              << " companion=" << gRejComp << " span=" << gRejSpan << "\n";
+  }
   std::cerr << pool.size() << " complete double-fill packings (" << gOk << " collected, "
             << gIncomplete << " incomplete, " << gCluster << " cluster-split, " << gMissingBoxes
             << " missing-boxes)\n";
@@ -1980,6 +2202,7 @@ int main(int argc, char** argv) {
       next(d);
       p.shelfDepths.push_back(d);
     } else if (a == "--fill-all") p.fillAll = true;
+    else if (a == "--piles-only") p.pilesOnly = true;
     else if (a == "--width-slack") next(p.widthSlack);
     else if (a == "--height-slack") next(p.heightSlack);
     else if (a == "--vert-inside") p.vertInside = true;
@@ -2079,7 +2302,7 @@ int main(int argc, char** argv) {
     }
   };
   parseGroups(p.together, 0, "--together");
-  parseGroups(p.stack, 1, "--stack");
+  parseGroups(p.stack, 2, "--stack");
   if (p.fillAll) return runFillAll(boxes, p);
   std::vector<Orient> orients = buildOrients(boxes, p);
   std::vector<Cell> cells = buildCells(boxes, orients, p);
