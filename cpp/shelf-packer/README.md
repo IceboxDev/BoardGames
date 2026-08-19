@@ -31,6 +31,11 @@ problem. Self-contained C++17, no dependencies (its own PNG encoder).
   standing box's top stays inside the nominal rectangle; such cells are
   forced to the pile bottom and re-verified on the final geometry.
 - `--pin-a NAME/GLOB` (repeatable, fill-all only) restricts boxes to shelf A.
+- `--exclude NAME/GLOB` (repeatable) drops boxes from the pool entirely.
+- `--long-edge NAME` (repeatable): this box's cluster contacts only count
+  along its LONG edge with positive overlap (corner contact never counts).
+- `--requires DEP,PROV` (repeatable): DEP may only be packed if PROV is too
+  (PROV alone is fine), on the same shelf, touching along BOTH long edges.
 - `--use-all` (fill-all only) demands EVERY box be placed; when that is
   infeasible the run reports the closest width-complete attempt and which
   boxes stayed out, instead of emitting solutions.

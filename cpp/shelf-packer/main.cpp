@@ -69,6 +69,16 @@ struct Params {
   // --use-all (fill-all only): EVERY box must be placed, or the run reports
   // the closest attempt instead of a solution.
   bool useAll = false;
+  // --exclude NAME/GLOB (repeatable): drop boxes from the pool entirely.
+  std::vector<std::string> exclude;
+  // --long-edge NAME (repeatable): this box's cluster contacts only count
+  // along its LONG edge (with positive overlap, corners don't qualify).
+  std::vector<std::string> longEdge;
+  uint64_t longEdgeMask = 0;
+  // --requires DEP,PROV (repeatable): DEP may only be packed if PROV is too
+  // (PROV alone is fine), same shelf, touching along BOTH boxes' long edges.
+  std::vector<std::pair<std::string, std::string>> requiresRaw;
+  std::vector<std::pair<uint64_t, uint64_t>> companions;  // (dep bit, prov bit)
   int solutions = 8;      // how many solutions to emit
   std::string out = "out";
   std::vector<std::string> require;  // --require NAME (or PREFIX*): must be packed,
@@ -322,7 +332,7 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
   // Dedup piles by box-set; keep the best (volume, depth, narrower width).
   std::unordered_map<uint64_t, Pile> best;
   const int wTol = 2 * p.tolPerBox + p.widthSlack;
-  const size_t PILE_CAP = 400000;
+  const size_t PILE_CAP = 500000;
 
   struct Frame {
     uint64_t mask;
@@ -335,9 +345,18 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
   };
   std::vector<int> chosen;
 
-  long long nodeBudget = 60'000'000;
+  // Budgets: a global cap keeps slack-widened enumeration bounded, and a
+  // per-anchor cap stops the widest anchors from starving the narrow ones
+  // (narrow piles are what completes shelf widths).
+  long long nodeBudget = 400'000'000;
+  long long anchorBudget = 0;
+  // Fair recording: without a per-anchor cap the widest anchors flood the
+  // dedup map to PILE_CAP before narrow anchors (where e.g. the EXIT piles
+  // live) ever run — the map fills with mega-piles and the search starves.
+  int anchorRecorded = 0;
   std::function<void(size_t, size_t, Frame)> dfs = [&](size_t anchor, size_t idx, Frame f) {
-    if (best.size() > PILE_CAP || --nodeBudget < 0) return;
+    if (best.size() > PILE_CAP || --nodeBudget < 0 || --anchorBudget < 0) return;
+    if (anchorRecorded > 400) return;
     // Record when the pile plausibly reaches the nominal height. Tolerance
     // accrues once per stacked layer (a layer is as tall as its tallest box),
     // so a many-box pile cannot bank per-box slack into extra overshoot.
@@ -353,11 +372,14 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
       pile.cells.reserve(chosen.size());
       for (int ci : chosen) pile.cells.push_back(ci);
       auto it = best.find(f.mask);
-      if (it == best.end() || pile.vol > it->second.vol ||
-          (pile.vol == it->second.vol &&
-           (pile.depthSum > it->second.depthSum ||
-            (pile.depthSum == it->second.depthSum && pile.width < it->second.width)))) {
+      if (it == best.end()) {
         best[f.mask] = pile;
+        anchorRecorded++;
+      } else if (pile.vol > it->second.vol ||
+                 (pile.vol == it->second.vol &&
+                  (pile.depthSum > it->second.depthSum ||
+                   (pile.depthSum == it->second.depthSum && pile.width < it->second.width)))) {
+        it->second = pile;
       }
     }
     if ((int)chosen.size() >= 6) return;
@@ -380,12 +402,15 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
   for (size_t a = 0; a < order.size(); a++) {
     const Cell& c = cells[order[a]];
     chosen.assign(1, order[a]);
+    anchorBudget = 1'000'000;
+    anchorRecorded = 0;
     dfs(a, a + 1, {c.mask, c.height, c.vol, c.depthSum, c.faceArea, c.maxDepth, 1});
   }
 
   std::vector<Pile> piles;
   piles.reserve(best.size());
   for (auto& [_, pile] : best) piles.push_back(std::move(pile));
+  std::cerr << "  [buildPiles] raw=" << piles.size() << " nodeBudgetLeft=" << nodeBudget << "\n";
   return piles;
 }
 
@@ -515,6 +540,19 @@ static bool touches(const PlacedRect& a, const PlacedRect& b) {
   return a.x0 <= b.x0 + b.fw && b.x0 <= a.x0 + a.fw && a.y0 <= b.y0 + b.fh && b.y0 <= a.y0 + a.fh;
 }
 
+// Does the contact between c and o lie along one of c's LONG edges, with a
+// strictly positive shared segment (a corner point does not qualify)?
+static bool longEdgeContact(const PlacedRect& c, const PlacedRect& o) {
+  if (c.fw >= c.fh) {  // long edges are the horizontal ones
+    int ov = std::min(c.x0 + c.fw, o.x0 + o.fw) - std::max(c.x0, o.x0);
+    if (ov <= 0) return false;
+    return o.y0 + o.fh == c.y0 || c.y0 + c.fh == o.y0;
+  }
+  int ov = std::min(c.y0 + c.fh, o.y0 + o.fh) - std::max(c.y0, o.y0);
+  if (ov <= 0) return false;
+  return o.x0 + o.fw == c.x0 || c.x0 + c.fw == o.x0;
+}
+
 static std::vector<int> cellOrderByHeight(const Pile& pile, const std::vector<Cell>& cells,
                                           int heightBase) {
   std::vector<int> cs = pile.cells;
@@ -618,10 +656,25 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
     uint64_t inter = sol.mask & g;
     if (inter && inter != g) return false;  // all-or-none
   }
+  for (auto& [dep, prov] : p.companions)
+    if ((sol.mask & dep) && !(sol.mask & prov)) return false;
+
   std::vector<uint64_t> clusters;
-  if (p.requiredMask) clusters.push_back(p.requiredMask);
+  std::vector<char> clusterMutual;  // 1 = every contact long-edge for BOTH boxes
+  if (p.requiredMask) {
+    clusters.push_back(p.requiredMask);
+    clusterMutual.push_back(0);
+  }
   for (uint64_t g : p.togetherMasks)
-    if ((sol.mask & g) == g) clusters.push_back(g);
+    if ((sol.mask & g) == g) {
+      clusters.push_back(g);
+      clusterMutual.push_back(0);
+    }
+  for (auto& [dep, prov] : p.companions)
+    if ((sol.mask & (dep | prov)) == (dep | prov)) {
+      clusters.push_back(dep | prov);
+      clusterMutual.push_back(1);
+    }
 
   uint64_t clusterUnion = 0;
   for (uint64_t g : clusters) clusterUnion |= g;
@@ -784,8 +837,10 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
       bool allOk = true;
       for (const PlacedRect& r : layout)
         if (r.vert && r.y0 + r.fh > p.heightBase) allOk = false;
-      for (uint64_t g : clusters) {
+      for (size_t ci = 0; ci < clusters.size(); ci++) {
         if (!allOk) break;
+        uint64_t g = clusters[ci];
+        bool mutual = clusterMutual[ci];
         std::vector<int> idx;
         for (size_t i = 0; i < layout.size(); i++)
           if (g & (1ULL << layout[i].box)) idx.push_back((int)i);
@@ -794,9 +849,16 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
         std::function<int(int)> find = [&](int v) {
           return parent[v] == v ? v : parent[v] = find(parent[v]);
         };
+        auto edgeOk = [&](const PlacedRect& A, const PlacedRect& B) {
+          if (mutual) return longEdgeContact(A, B) && longEdgeContact(B, A);
+          bool aC = p.longEdgeMask & (1ULL << A.box), bC = p.longEdgeMask & (1ULL << B.box);
+          if (aC && !longEdgeContact(A, B)) return false;
+          if (bC && !longEdgeContact(B, A)) return false;
+          return aC || bC ? true : touches(A, B);
+        };
         for (size_t i = 0; i < idx.size(); i++)
           for (size_t j = i + 1; j < idx.size(); j++)
-            if (touches(layout[idx[i]], layout[idx[j]])) parent[find((int)i)] = find((int)j);
+            if (edgeOk(layout[idx[i]], layout[idx[j]])) parent[find((int)i)] = find((int)j);
         for (size_t i = 1; i < idx.size(); i++)
           if (find((int)i) != find(0)) allOk = false;
         if (!allOk) break;
@@ -1163,6 +1225,11 @@ static bool clusterFrontOk(uint64_t maskA, uint64_t maskB, const Params& p) {
     if (((maskA | maskB) & g) == 0) continue;  // all-or-none: absent is fine
     if ((maskA & g) != g && (maskB & g) != g) return false;
   }
+  for (auto& [dep, prov] : p.companions) {
+    if (!((maskA | maskB) & dep)) continue;  // dependent absent: fine
+    uint64_t shelf = (maskA & dep) ? maskA : maskB;
+    if (!(shelf & prov)) return false;  // provider missing or on the other shelf
+  }
   return true;
 }
 
@@ -1170,6 +1237,7 @@ static long long gIncomplete = 0, gCluster = 0, gMissingBoxes = 0, gOk = 0;
 int gBestA = 0, gBestB = 0;
 uint64_t gBestPlacedMask = 0;
 int gBestPlaced = -1;
+std::vector<int> gBestPilesA, gBestPilesB;
 
 static void collectTwo(std::map<std::pair<uint64_t, uint64_t>, TwoSol>& pool, const TwoState& s,
                        const ShelfSet sets[2], const std::vector<Box>& boxes, uint64_t allMask,
@@ -1181,6 +1249,11 @@ static void collectTwo(std::map<std::pair<uint64_t, uint64_t>, TwoSol>& pool, co
         std::min(gBestA, p.widthBase) + std::min(gBestB, p.widthBase)) {
       gBestA = s.wA;
       gBestB = s.wB;
+      extern std::vector<int> gBestPilesA, gBestPilesB;
+      gBestPilesA.clear();
+      for (int pi : s.pA) gBestPilesA.push_back(sets[0].piles[pi].width);
+      gBestPilesB.clear();
+      for (int pi : s.pB) gBestPilesB.push_back(sets[1].piles[pi].width);
     }
     return;
   }
@@ -1242,6 +1315,11 @@ static long long twoScore(const TwoState& s, const Params& p) {
       if (inter && inter != g) score -= 2'000'000LL;
       if (inter == g) score += 4'000'000LL;
     }
+  }
+  for (auto& [dep, prov] : p.companions) {
+    if (!((s.maskA | s.maskB) & dep)) continue;
+    uint64_t shelf = (s.maskA & dep) ? s.maskA : s.maskB;
+    if (!(shelf & prov)) score -= 8'000'000LL;
   }
   return score;
 }
@@ -1342,23 +1420,57 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
     // Prune for search tractability: keep every pile carrying a required or
     // companion box, plus the cleanest of the rest.
     {
-      uint64_t special = p.requiredMask;
+      uint64_t special = p.requiredMask | p.longEdgeMask;
       for (uint64_t g : p.togetherMasks) special |= g;
+      for (auto& [dep, prov] : p.companions) special |= dep | prov;
       auto& v = sets[sh].piles;
       std::stable_sort(v.begin(), v.end(), [](const Pile& a, const Pile& b) {
         return (double)a.holes / a.width < (double)b.holes / b.width;
       });
-      std::vector<Pile> kept;
-      size_t plain = 0, spec = 0;
-      for (auto& pile : v) {
-        if ((pile.mask & special) && spec < 4000) {
-          kept.push_back(std::move(pile));
-          spec++;
-        } else if (!(pile.mask & special) && plain < 5000) {
-          kept.push_back(std::move(pile));
-          plain++;
+      // Keep the cleanest piles PER WIDTH CLASS (round-robin over 25 mm
+      // buckets) — a flat cleanliness cut-off keeps thousands of near-twin
+      // wide piles and starves the narrow widths a shelf needs to finish.
+      // Then a COVERAGE floor: every box keeps a minimum number of its
+      // cleanest piles, so leftover boxes always have somewhere to go.
+      std::vector<char> take(v.size(), 0);
+      auto quota = [&](bool wantSpecial, size_t cap) {
+        std::map<int, std::vector<size_t>> byW;
+        for (size_t i = 0; i < v.size(); i++)
+          if (bool(v[i].mask & special) == wantSpecial) byW[v[i].width / 25].push_back(i);
+        size_t got = 0;
+        for (size_t round = 0; got < cap; round++) {
+          bool any = false;
+          for (auto& [_, bucket] : byW)
+            if (round < bucket.size() && got < cap) {
+              take[bucket[round]] = 1;
+              got++;
+              any = true;
+            }
+          if (!any) break;
+        }
+      };
+      quota(true, 4000);
+      quota(false, 5000);
+      {
+        std::vector<int> perBox(64, 0);
+        for (size_t i = 0; i < v.size(); i++)
+          if (take[i])
+            for (int b = 0; b < 64; b++)
+              if (v[i].mask & (1ULL << b)) perBox[b]++;
+        for (size_t i = 0; i < v.size(); i++) {
+          if (take[i]) continue;
+          bool needed = false;
+          for (int b = 0; b < 64 && !needed; b++)
+            if ((v[i].mask & (1ULL << b)) && perBox[b] < 40) needed = true;
+          if (!needed) continue;
+          take[i] = 1;
+          for (int b = 0; b < 64; b++)
+            if (v[i].mask & (1ULL << b)) perBox[b]++;
         }
       }
+      std::vector<Pile> kept;
+      for (size_t i = 0; i < v.size(); i++)
+        if (take[i]) kept.push_back(std::move(v[i]));
       v = std::move(kept);
     }
     std::cerr << "shelf " << (sh ? "B" : "A") << " (depth " << shelfDepths[sh]
@@ -1421,6 +1533,11 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
     std::cerr << "no packing fills both rectangles under the given constraints\n"
               << "closest widths: shelf A " << gBestA << " mm, shelf B " << gBestB << " mm (need "
               << p.widthBase << " each)\n";
+    std::cerr << "  A piles:";
+    for (int w : gBestPilesA) std::cerr << " " << w;
+    std::cerr << "\n  B piles:";
+    for (int w : gBestPilesB) std::cerr << " " << w;
+    std::cerr << "\n";
     if (p.useAll && gBestPlaced >= 0) {
       std::cerr << "best width-complete attempt placed " << gBestPlaced << "/" << boxes.size()
                 << " boxes; still out:";
@@ -1593,6 +1710,13 @@ int main(int argc, char** argv) {
     else if (a == "--height-slack") next(p.heightSlack);
     else if (a == "--vert-inside") p.vertInside = true;
     else if (a == "--use-all") p.useAll = true;
+    else if (a == "--exclude") p.exclude.push_back(argv[++i]);
+    else if (a == "--long-edge") p.longEdge.push_back(argv[++i]);
+    else if (a == "--requires") {
+      std::string v = argv[++i];
+      size_t comma = v.find(',');
+      p.requiresRaw.push_back({v.substr(0, comma), v.substr(comma + 1)});
+    }
     else if (a == "--pin-a") p.pinA.push_back(argv[++i]);
     else if (a == "--solutions") next(p.solutions);
     else if (a == "--out") p.out = argv[++i];
@@ -1606,6 +1730,36 @@ int main(int argc, char** argv) {
   }
 
   std::vector<Box> boxes = loadBoxes(input);
+  auto nameMatch = [&](const std::string& pat, const std::string& name) {
+    bool prefix = !pat.empty() && pat.back() == '*';
+    return prefix ? name.rfind(pat.substr(0, pat.size() - 1), 0) == 0 : name == pat;
+  };
+  for (const std::string& ex : p.exclude) {
+    size_t before = boxes.size();
+    boxes.erase(std::remove_if(boxes.begin(), boxes.end(),
+                               [&](const Box& b) { return nameMatch(ex, b.name); }),
+                boxes.end());
+    if (boxes.size() == before) std::cerr << "warning: --exclude matched nothing: " << ex << "\n";
+  }
+  for (const std::string& le : p.longEdge) {
+    bool hit = false;
+    for (size_t i = 0; i < boxes.size(); i++)
+      if (nameMatch(le, boxes[i].name)) {
+        p.longEdgeMask |= 1ULL << i;
+        hit = true;
+      }
+    if (!hit) std::cerr << "warning: --long-edge matched nothing: " << le << "\n";
+  }
+  for (auto& [dep, prov] : p.requiresRaw) {
+    uint64_t dm = 0, pm = 0;
+    for (size_t i = 0; i < boxes.size(); i++) {
+      if (boxes[i].name == dep) dm = 1ULL << i;
+      if (boxes[i].name == prov) pm = 1ULL << i;
+    }
+    if (!dm || !pm) std::cerr << "warning: --requires member missing: " << dep << "," << prov
+                              << "\n";
+    else p.companions.push_back({dm, pm});
+  }
   for (const std::string& req : p.require) {
     bool prefix = !req.empty() && req.back() == '*';
     std::string stem = prefix ? req.substr(0, req.size() - 1) : req;
