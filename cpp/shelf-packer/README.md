@@ -31,6 +31,9 @@ problem. Self-contained C++17, no dependencies (its own PNG encoder).
   standing box's top stays inside the nominal rectangle; such cells are
   forced to the pile bottom and re-verified on the final geometry.
 - `--pin-a NAME/GLOB` (repeatable, fill-all only) restricts boxes to shelf A.
+- `--use-all` (fill-all only) demands EVERY box be placed; when that is
+  infeasible the run reports the closest width-complete attempt and which
+  boxes stayed out, instead of emitting solutions.
 - `--together A,B[,C…]` (repeatable) declares a companion group — one game
   shipped as several boxes: either NONE of them is packed, or ALL are, and
   they must touch each other.

@@ -66,6 +66,9 @@ struct Params {
   // --pin-a NAME/GLOB (repeatable): these boxes may only stand in shelf A.
   std::vector<std::string> pinA;
   uint64_t pinAMask = 0;
+  // --use-all (fill-all only): EVERY box must be placed, or the run reports
+  // the closest attempt instead of a solution.
+  bool useAll = false;
   int solutions = 8;      // how many solutions to emit
   std::string out = "out";
   std::vector<std::string> require;  // --require NAME (or PREFIX*): must be packed,
@@ -1163,8 +1166,10 @@ static bool clusterFrontOk(uint64_t maskA, uint64_t maskB, const Params& p) {
   return true;
 }
 
-static long long gIncomplete = 0, gCluster = 0, gOk = 0;
+static long long gIncomplete = 0, gCluster = 0, gMissingBoxes = 0, gOk = 0;
 int gBestA = 0, gBestB = 0;
+uint64_t gBestPlacedMask = 0;
+int gBestPlaced = -1;
 
 static void collectTwo(std::map<std::pair<uint64_t, uint64_t>, TwoSol>& pool, const TwoState& s,
                        const ShelfSet sets[2], const std::vector<Box>& boxes, uint64_t allMask,
@@ -1182,6 +1187,18 @@ static void collectTwo(std::map<std::pair<uint64_t, uint64_t>, TwoSol>& pool, co
   if (!clusterFrontOk(s.maskA, s.maskB, p)) {
     gCluster++;
     return;
+  }
+  if (p.useAll) {
+    uint64_t placed = s.maskA | s.maskB;
+    int n = __builtin_popcountll(placed);
+    if (n > gBestPlaced) {
+      gBestPlaced = n;
+      gBestPlacedMask = placed;
+    }
+    if (placed != allMask) {
+      gMissingBoxes++;
+      return;
+    }
   }
   (void)boxes;
   (void)allMask;
@@ -1212,6 +1229,7 @@ static void collectTwo(std::map<std::pair<uint64_t, uint64_t>, TwoSol>& pool, co
 static long long twoScore(const TwoState& s, const Params& p) {
   long long covered = std::min(s.wA, p.widthBase) + std::min(s.wB, p.widthBase);
   long long score = covered * 1'000'000LL - s.holes * 800 - s.topOver * 2;
+  if (p.useAll) score += (long long)__builtin_popcountll(s.maskA | s.maskB) * 3'000'000LL;
   uint64_t front = s.maskA | s.maskB;
   uint64_t rA = s.maskA & p.requiredMask, rB = s.maskB & p.requiredMask;
   score += (long long)__builtin_popcountll(front & p.requiredMask) * 6'000'000LL;
@@ -1278,6 +1296,7 @@ static void twoGreedy(const ShelfSet sets[2], const Params& p, const std::vector
       // Cleanest piles (fewest holes per mm of width) first, with noise.
       double key = (double)(pile.holes + 200) / pile.width * noise(rng);
       key /= 1.0 + 0.15 * __builtin_popcountll(pile.mask & p.requiredMask);
+      if (p.useAll) key /= 1.0 + 0.1 * __builtin_popcountll(pile.mask);
       for (uint64_t g : p.togetherMasks)
         if (pile.mask & g) key /= 1.2;
       keyed[i] = {key, (int)i};
@@ -1396,11 +1415,19 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
     }
 
   std::cerr << pool.size() << " complete double-fill packings (" << gOk << " collected, "
-            << gIncomplete << " incomplete, " << gCluster << " cluster-split)\n";
+            << gIncomplete << " incomplete, " << gCluster << " cluster-split, " << gMissingBoxes
+            << " missing-boxes)\n";
   if (pool.empty()) {
     std::cerr << "no packing fills both rectangles under the given constraints\n"
-              << "closest attempt: shelf A " << gBestA << " mm, shelf B " << gBestB
-              << " mm (need " << p.widthBase << " each)\n";
+              << "closest widths: shelf A " << gBestA << " mm, shelf B " << gBestB << " mm (need "
+              << p.widthBase << " each)\n";
+    if (p.useAll && gBestPlaced >= 0) {
+      std::cerr << "best width-complete attempt placed " << gBestPlaced << "/" << boxes.size()
+                << " boxes; still out:";
+      for (size_t i = 0; i < boxes.size(); i++)
+        if (!(gBestPlacedMask & (1ULL << i))) std::cerr << " " << boxes[i].name;
+      std::cerr << "\n";
+    }
     return 1;
   }
 
@@ -1565,6 +1592,7 @@ int main(int argc, char** argv) {
     else if (a == "--width-slack") next(p.widthSlack);
     else if (a == "--height-slack") next(p.heightSlack);
     else if (a == "--vert-inside") p.vertInside = true;
+    else if (a == "--use-all") p.useAll = true;
     else if (a == "--pin-a") p.pinA.push_back(argv[++i]);
     else if (a == "--solutions") next(p.solutions);
     else if (a == "--out") p.out = argv[++i];
