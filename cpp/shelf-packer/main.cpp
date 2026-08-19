@@ -375,15 +375,25 @@ static std::vector<Cell> buildCells(const std::vector<Box>& boxes, const std::ve
       if (seen.insert({c.mask, c.width, c.height}).second) uniq.push_back(std::move(c));
     cells = std::move(uniq);
   }
-  // Cap for tractability: bucketed by width AND height class, mismatch
-  // density ascending, plus a per-box coverage floor. Height in the bucket
-  // key is what keeps the short workhorse cells alive next to tall columns.
+  // Cap for tractability: PLAIN (column-free) cells are always kept — the
+  // pre-column solution space must remain a subset — then column cells fill
+  // the remaining budget, bucketed by width AND height class, mismatch
+  // density ascending, plus a per-box coverage floor.
+  auto isPlainCell = [](const Cell& c) {
+    for (const Placement& pl : c.boxes)
+      if (pl.yOff > 0) return false;
+    return true;
+  };
   if (cells.size() > 5000) {
     std::vector<char> take(cells.size(), 0);
+    for (size_t i = 0; i < cells.size(); i++)
+      if (isPlainCell(cells[i])) take[i] = 1;
     std::map<std::pair<int, int>, std::vector<size_t>> byW;
     for (size_t i = 0; i < cells.size(); i++)
-      byW[{cells[i].width / 25, cells[i].height / 25}].push_back(i);
+      if (!take[i]) byW[{cells[i].width / 25, cells[i].height / 25}].push_back(i);
     size_t got = 0;
+    for (size_t i = 0; i < take.size(); i++)
+      if (take[i]) got++;
     for (size_t round = 0; got < 5000; round++) {
       bool any = false;
       for (auto& [_, bucket] : byW)
@@ -477,9 +487,10 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
   // dedup map to PILE_CAP before narrow anchors (where e.g. the EXIT piles
   // live) ever run — the map fills with mega-piles and the search starves.
   int anchorRecorded = 0;
+  int anchorRecordCap = 400;
   std::function<void(size_t, size_t, Frame)> dfs = [&](size_t anchor, size_t idx, Frame f) {
     if (best.size() > PILE_CAP || --nodeBudget < 0 || --anchorBudget < 0) return;
-    if (anchorRecorded > 400) return;
+    if (anchorRecorded > anchorRecordCap) return;
     // Record when the pile plausibly reaches the nominal height. Tolerance
     // accrues once per stacked layer (a layer is as tall as its tallest box),
     // so a many-box pile cannot bank per-box slack into extra overshoot.
@@ -522,7 +533,7 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
     }
   };
 
-  {
+  auto runAnchors = [&](long long perAnchor, int recordCap) {
     std::map<int, std::vector<size_t>> anchorBuckets;
     for (size_t a = 0; a < order.size(); a++)
       anchorBuckets[cells[order[a]].width / 25].push_back(a);
@@ -539,11 +550,28 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
     for (size_t a : anchorSeq) {
       const Cell& c = cells[order[a]];
       chosen.assign(1, order[a]);
-      anchorBudget = 1'000'000;
+      anchorBudget = perAnchor;
       anchorRecorded = 0;
+      anchorRecordCap = recordCap;
       dfs(a, a + 1, {c.mask, c.height, c.vol, c.depthSum, c.faceArea, c.maxDepth, 1});
     }
+  };
+  // Pass 1: plain cells only — exhaustive, so every pre-column pile exists.
+  auto fullOrder = order;
+  {
+    std::vector<int> plainOrder;
+    for (int ci : fullOrder) {
+      bool plain = true;
+      for (const Placement& pl : cells[ci].boxes)
+        if (pl.yOff > 0) plain = false;
+      if (plain) plainOrder.push_back(ci);
+    }
+    order = std::move(plainOrder);
+    runAnchors(5'000'000, 1 << 28);
   }
+  // Pass 2: everything, budgeted.
+  order = std::move(fullOrder);
+  runAnchors(1'000'000, 400);
 
   std::vector<Pile> piles;
   piles.reserve(best.size());
@@ -1601,10 +1629,21 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
       // Then a COVERAGE floor: every box keeps a minimum number of its
       // cleanest piles, so leftover boxes always have somewhere to go.
       std::vector<char> take(v.size(), 0);
-      auto quota = [&](bool wantSpecial, size_t cap) {
+      // Categories: cluster-carrying piles, then COLUMN-FREE piles (the
+      // pre-column pile space — reserved seats so columns can't crowd them
+      // out), then column piles.
+      auto hasColumn = [&](const Pile& pile) {
+        for (int ci : pile.cells)
+          for (const Placement& pl : sets[sh].cells[ci].boxes)
+            if (pl.yOff > 0) return true;
+        return false;
+      };
+      auto quota = [&](int wantCat, size_t cap) {
         std::map<int, std::vector<size_t>> byW;
-        for (size_t i = 0; i < v.size(); i++)
-          if (bool(v[i].mask & special) == wantSpecial) byW[v[i].width / 25].push_back(i);
+        for (size_t i = 0; i < v.size(); i++) {
+          int cat = (v[i].mask & special) ? 0 : hasColumn(v[i]) ? 2 : 1;
+          if (cat == wantCat) byW[v[i].width / 25].push_back(i);
+        }
         size_t got = 0;
         for (size_t round = 0; got < cap; round++) {
           bool any = false;
@@ -1617,8 +1656,9 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
           if (!any) break;
         }
       };
-      quota(true, 4000);
-      quota(false, 5000);
+      quota(0, 4000);
+      quota(1, 5000);
+      quota(2, 2500);
       {
         std::vector<int> perBox(64, 0);
         for (size_t i = 0; i < v.size(); i++)
