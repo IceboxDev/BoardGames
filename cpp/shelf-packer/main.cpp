@@ -677,6 +677,29 @@ static bool touches(const PlacedRect& a, const PlacedRect& b) {
   return a.x0 <= b.x0 + b.fw && b.x0 <= a.x0 + a.fw && a.y0 <= b.y0 + b.fh && b.y0 <= a.y0 + a.fh;
 }
 
+/**
+ * Gravity: every box drops to its lowest straight resting height — the
+ * highest settled top among lower boxes it overlaps in x, or the floor.
+ * Boxes stay level (a box on unequal supporters rests on the tallest one,
+ * leaving a wedge of air that the hole metric charges honestly).
+ */
+static void settleLayout(std::vector<PlacedRect>& layout) {
+  std::vector<int> idx(layout.size());
+  for (size_t i = 0; i < idx.size(); i++) idx[i] = (int)i;
+  std::stable_sort(idx.begin(), idx.end(),
+                   [&](int a, int b) { return layout[a].y0 < layout[b].y0; });
+  for (size_t k = 0; k < idx.size(); k++) {
+    PlacedRect& r = layout[idx[k]];
+    int rest = 0;
+    for (size_t j = 0; j < k; j++) {
+      const PlacedRect& o = layout[idx[j]];
+      if (std::min(r.x0 + r.fw, o.x0 + o.fw) - std::max(r.x0, o.x0) > 0)
+        rest = std::max(rest, o.y0 + o.fh);
+    }
+    r.y0 = rest;
+  }
+}
+
 // Does the contact between c and o lie along one of c's LONG edges, with a
 // strictly positive shared segment (a corner point does not qualify)?
 static bool longEdgeContact(const PlacedRect& c, const PlacedRect& o) {
@@ -969,29 +992,13 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
         return identityUnitOrder(cells[ci]);
       };
       emitSeq(seqOf(unitOrder), boxOrderOf, layout);
-      // Standing boxes must not poke above the nominal line; every box off
-      // the floor needs at least one flush supporter directly beneath it
-      // (partial gaps are fine, floating on a dip is not); every cluster
-      // must be internally connected.
+      // Gravity first: boxes settle to their true resting heights. Then:
+      // standing boxes must not poke above the nominal line, and every
+      // cluster must be internally connected ON THE SETTLED geometry.
+      settleLayout(layout);
       bool allOk = true;
       for (const PlacedRect& r : layout)
         if (r.vert && r.y0 + r.fh > p.heightBase) allOk = false;
-      if (allOk)
-        for (const PlacedRect& r : layout) {
-          if (r.y0 == 0) continue;
-          bool supported = false;
-          for (const PlacedRect& o : layout) {
-            if (o.y0 + o.fh != r.y0) continue;
-            if (std::min(r.x0 + r.fw, o.x0 + o.fw) - std::max(r.x0, o.x0) > 0) {
-              supported = true;
-              break;
-            }
-          }
-          if (!supported) {
-            allOk = false;
-            break;
-          }
-        }
       for (size_t ci = 0; ci < clusters.size(); ci++) {
         if (!allOk) break;
         uint64_t g = clusters[ci];
@@ -1049,6 +1056,7 @@ static bool arrangeSolution(const Solution& sol, const std::vector<Pile>& piles,
   auto scoreOrder = [&](const std::vector<int>& uo) {
     std::vector<PlacedRect> lo;
     emitSeq(seqOf(uo), defaultBoxOrder, lo);
+    settleLayout(lo);
     int off = 0;
     cands.push_back({interiorHolesOf(lo, sol.width, p, off), uo});
   };
