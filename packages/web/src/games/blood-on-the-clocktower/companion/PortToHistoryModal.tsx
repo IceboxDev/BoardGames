@@ -16,8 +16,7 @@ import { qk } from "../../../lib/query-keys";
 import type { UpdateState } from "./Companion";
 import { CharacterIcon } from "./common";
 import { TYPE_TEXT } from "./labels";
-
-const NOBODY = "";
+import { hasDuplicateAccounts, NOBODY } from "./port-helpers";
 
 /**
  * Ports a finished companion game into match history (admin-only — the write
@@ -63,7 +62,7 @@ export default function PortToHistoryModal({
 
   const chosenIds = state.players.map((p) => resolved(p.seat, p.name));
   const allMapped = chosenIds.every((id) => id !== NOBODY);
-  const hasDuplicates = new Set(chosenIds).size !== chosenIds.length;
+  const hasDuplicates = hasDuplicateAccounts(chosenIds);
   const winner = state.phase.kind === "ended" ? state.phase.winner : "good";
 
   const mutation = useMutation({
@@ -125,11 +124,15 @@ export default function PortToHistoryModal({
           <div className="flex flex-col gap-1.5">
             {state.players.map((p) => (
               <div key={p.seat} className="flex min-h-11 items-center gap-2">
-                <span className="flex min-w-0 flex-1 items-center gap-1.5 truncate text-sm">
+                <span className="flex min-w-0 flex-1 items-center gap-1.5 text-sm">
                   <CharacterIcon character={p.character} size="sm" />
-                  <span className="text-fg-primary">{p.name}</span>{" "}
-                  <span className={`text-xs ${TYPE_TEXT[CHARACTERS[p.character].type]}`}>
-                    {CHARACTERS[p.character].name}
+                  {/* Name over character: each line truncates with an ellipsis
+                      instead of raw-clipping against the fixed-width select. */}
+                  <span className="flex min-w-0 flex-col leading-tight">
+                    <span className="truncate text-fg-primary">{p.name}</span>
+                    <span className={`truncate text-xs ${TYPE_TEXT[CHARACTERS[p.character].type]}`}>
+                      {CHARACTERS[p.character].name}
+                    </span>
                   </span>
                 </span>
                 <Select

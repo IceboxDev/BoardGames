@@ -75,10 +75,22 @@ export default function NightPanel({
 
   return (
     <>
-      <div className="flex items-center justify-between gap-2">
+      <StepBody
+        key={`${night}-${idx}-${stepKey(step)}`}
+        state={state}
+        update={update}
+        step={step}
+      />
+      {/* Step navigation lives in a bar stuck to the bottom of the Screen
+          scroll container — the thumb zone. Sticky (not fixed) so it can
+          never cover the last row of a tall step: at scroll end it sits in
+          normal flow below the card. The step counter rides along, so
+          progress is always visible without a duplicate label up top. */}
+      <div className="sticky bottom-[max(0.5rem,env(safe-area-inset-bottom))] z-20 flex items-center justify-between gap-2 rounded-xl border border-white/10 bg-surface-900/95 px-2 py-1.5 shadow-lg shadow-black/40">
         <Button
           variant="secondary"
-          size="sm"
+          size="md"
+          className="min-h-10"
           disabled={idx === 0}
           onClick={() => update((s) => setNightStep(s, idx - 1))}
         >
@@ -89,19 +101,14 @@ export default function NightPanel({
         </span>
         <Button
           variant="secondary"
-          size="sm"
+          size="md"
+          className="min-h-10"
           disabled={idx >= queue.length - 1}
           onClick={() => update((s) => setNightStep(s, idx + 1))}
         >
           Next →
         </Button>
       </div>
-      <StepBody
-        key={`${night}-${idx}-${stepKey(step)}`}
-        state={state}
-        update={update}
-        step={step}
-      />
     </>
   );
 }

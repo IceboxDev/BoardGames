@@ -28,6 +28,7 @@ import {
   teaLadyProtectedSeats,
   votesRequired,
   voudonActive,
+  winPrompts,
 } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import { useState } from "react";
 import { Button } from "../../../components/ui";
@@ -49,7 +50,6 @@ export default function DayPanel({
   const required = votesRequired(state);
   const alive = aliveCount(state);
   const executed = state.day.executed;
-  const aboutToDie = state.day.aboutToDie;
   const tb = state.script === "trouble-brewing";
   const voudon = voudonActive(state);
   const bishop = state.players.find((p) => p.alive && !p.left && p.character === "bishop");
@@ -122,15 +122,6 @@ export default function DayPanel({
             day is effectively over.
           </p>
         </Panel>
-      )}
-
-      {aboutToDie && executed === undefined && (
-        <ExecutePanel
-          state={state}
-          update={update}
-          seat={aboutToDie.seat}
-          votes={aboutToDie.votes}
-        />
       )}
 
       <JudgePanel state={state} update={update} />
@@ -421,11 +412,45 @@ function DawnRecap({ state }: { state: CompanionState }) {
   );
 }
 
+/**
+ * A confirmed pick, collapsed to one 44px row so the panel never stacks two
+ * identical seat grids and the counter stays inside the viewport.
+ */
+function ChosenRow({
+  label,
+  name,
+  onChange,
+}: {
+  label: string;
+  name: string;
+  onChange: () => void;
+}) {
+  return (
+    <div className="flex min-h-11 items-center gap-2 rounded-lg border border-white/10 bg-surface-950/60 px-2">
+      <span className="w-20 shrink-0 text-3xs font-bold uppercase tracking-pill text-fg-muted">
+        {label}
+      </span>
+      <span className="min-w-0 flex-1 truncate text-sm font-semibold text-fg-primary">{name}</span>
+      <Button variant="ghost" size="xs" onClick={onChange}>
+        Change
+      </Button>
+    </div>
+  );
+}
+
+/**
+ * One stable panel for the whole nomination ritual. Each pick collapses to a
+ * ChosenRow, so exactly one seat grid is ever visible and the vote counter
+ * renders in the freed space — on a 390×844 phone the full flow (pick, pick,
+ * tally, record) fits without scrolling. The about-to-die resolution renders
+ * INSIDE this panel too: content swaps, position doesn't.
+ */
 function NominationComposer({ state, update }: { state: CompanionState; update: UpdateState }) {
   const [nominator, setNominator] = useState<number | undefined>();
   const [nominee, setNominee] = useState<number | undefined>();
   const [votes, setVotes] = useState(0);
   const required = votesRequired(state);
+  const aboutToDie = state.day.aboutToDie;
 
   const nomineePlayer = nominee !== undefined ? playerAt(state, nominee) : undefined;
   const virginCase =
@@ -451,31 +476,67 @@ function NominationComposer({ state, update }: { state: CompanionState; update: 
   return (
     <Panel title="Nomination" tone="day">
       <div className="flex flex-col gap-3">
-        <div>
-          <p className="mb-1.5 text-xs font-semibold text-fg-secondary">
-            Nominator (alive, one nomination each)
-          </p>
-          <SeatPicker
+        {aboutToDie && (
+          <ExecuteBlock
             state={state}
-            selected={nominator !== undefined ? [nominator] : []}
-            disabledSeats={nominatorDisabled}
-            onToggle={(seat) => setNominator(seat === nominator ? undefined : seat)}
+            update={update}
+            seat={aboutToDie.seat}
+            votes={aboutToDie.votes}
           />
-        </div>
-        {nominator !== undefined && (
+        )}
+
+        {nominator === undefined ? (
           <div>
             <p className="mb-1.5 text-xs font-semibold text-fg-secondary">
-              Nominee (each player nominated once per day — the dead may be nominated)
+              Nominator (alive, one nomination each)
             </p>
             <SeatPicker
               state={state}
-              selected={nominee !== undefined ? [nominee] : []}
-              disabledSeats={nomineeDisabled}
-              deadSelectable
-              onToggle={(seat) => setNominee(seat === nominee ? undefined : seat)}
+              selected={[]}
+              disabledSeats={nominatorDisabled}
+              onToggle={(seat) => {
+                setNominator(seat);
+                // A player can't nominate themself — a stale nominee pick
+                // that matches the new nominator is cleared.
+                if (seat === nominee) setNominee(undefined);
+              }}
             />
           </div>
+        ) : (
+          <ChosenRow
+            label="Nominator"
+            name={nameAt(state, nominator)}
+            onChange={() => {
+              setNominator(undefined);
+              setVotes(0);
+            }}
+          />
         )}
+
+        {nominator !== undefined &&
+          (nominee === undefined ? (
+            <div>
+              <p className="mb-1.5 text-xs font-semibold text-fg-secondary">
+                Nominee (each player nominated once per day — the dead may be nominated)
+              </p>
+              <SeatPicker
+                state={state}
+                selected={[]}
+                disabledSeats={nomineeDisabled}
+                deadSelectable
+                onToggle={(seat) => setNominee(seat)}
+              />
+            </div>
+          ) : (
+            <ChosenRow
+              label="Nominee"
+              name={nameAt(state, nominee)}
+              onChange={() => {
+                setNominee(undefined);
+                setVotes(0);
+              }}
+            />
+          ))}
 
         {virginCase && nominator !== undefined && nominee !== undefined && (
           <VirginIntercept
@@ -591,7 +652,13 @@ function VirginIntercept({
   );
 }
 
-function ExecutePanel({
+/**
+ * The about-to-die resolution. Renders as a danger inset INSIDE the
+ * Nomination panel (not a separate panel below it), so the Execute action
+ * appears where the Record button just was — content swaps, position holds —
+ * while further overtaking nominations stay available beneath it.
+ */
+function ExecuteBlock({
   state,
   update,
   seat,
@@ -653,8 +720,9 @@ function ExecutePanel({
   };
 
   return (
-    <Panel tone="danger" title="About to die">
-      <p className="text-sm text-fg-primary">
+    <div className="rounded-lg border border-rose-400/35 bg-rose-950/40 p-2">
+      <p className="text-3xs font-bold uppercase tracking-pill text-rose-300">About to die</p>
+      <p className="mt-1 text-sm text-fg-primary">
         <b>{nameAt(state, seat)}</b> is about to die with {votes} votes. Call a last round of
         nominations first — a later nominee can still overtake.
       </p>
@@ -720,7 +788,7 @@ function ExecutePanel({
           </p>
         </>
       )}
-    </Panel>
+    </div>
   );
 }
 
@@ -814,6 +882,7 @@ function SlayerPanel({ state, update }: { state: CompanionState; update: UpdateS
 
 function EndDayPanel({ state, update }: { state: CompanionState; update: UpdateState }) {
   const noExecution = state.day.executed === undefined;
+  const promptsPending = winPrompts(state).length > 0;
   if (state.mastermindExtraDay && noExecution) {
     return (
       <Panel tone="night" title="End the day">
@@ -871,9 +940,29 @@ function EndDayPanel({ state, update }: { state: CompanionState; update: UpdateS
       <p className="text-xs text-fg-muted">
         Take thirty seconds to think about the coming night, then send everyone to sleep.
       </p>
-      <Button className="mt-2" variant="primary" size="lg" block onClick={() => update(endDay)}>
-        {noExecution ? "End day without execution — night falls" : "Night falls"}
-      </Button>
+      {/* While a victory prompt is pending, exactly one button on this screen
+          may be loud — the declaration. Ending the day stays possible (the
+          Storyteller always has the final call) but steps back to secondary. */}
+      {promptsPending ? (
+        <>
+          <Button
+            className="mt-2"
+            variant="secondary"
+            size="lg"
+            block
+            onClick={() => update(endDay)}
+          >
+            {noExecution ? "End day without execution — night falls" : "Night falls"}
+          </Button>
+          <p className="mt-1 text-center text-xs text-fg-muted">
+            A victory prompt is waiting above — declare it, or continue at your own call.
+          </p>
+        </>
+      ) : (
+        <Button className="mt-2" variant="primary" size="lg" block onClick={() => update(endDay)}>
+          {noExecution ? "End day without execution — night falls" : "Night falls"}
+        </Button>
+      )}
     </Panel>
   );
 }

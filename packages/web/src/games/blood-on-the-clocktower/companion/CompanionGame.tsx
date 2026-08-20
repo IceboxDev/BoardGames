@@ -125,6 +125,23 @@ export default function CompanionGame({
         </Button>
       </header>
 
+      <SegmentedControl<Tab>
+        options={[
+          { value: "phase", label: phaseLabel, tone: phase.kind === "night" ? "accent" : "amber" },
+          { value: "grimoire", label: "Grimoire", tone: "rose" },
+          { value: "log", label: "Log", tone: "sky" },
+        ]}
+        value={tab}
+        onChange={setTab}
+        shape="rounded"
+        size="sm"
+        fullWidth
+        selectionMode="tabs"
+        aria-label="Companion sections"
+      />
+
+      {/* Win prompts sit BELOW the tab bar so persistent navigation never
+          jumps at the game's most stressful moment. */}
       {prompts.map((p) => (
         <Panel key={p.kind} tone={p.kind === "evil-wins" ? "danger" : "gold"}>
           {p.kind === "scarlet-woman" ? (
@@ -188,21 +205,6 @@ export default function CompanionGame({
           )}
         </Panel>
       ))}
-
-      <SegmentedControl<Tab>
-        options={[
-          { value: "phase", label: phaseLabel, tone: phase.kind === "night" ? "accent" : "amber" },
-          { value: "grimoire", label: "Grimoire", tone: "rose" },
-          { value: "log", label: "Log", tone: "sky" },
-        ]}
-        value={tab}
-        onChange={setTab}
-        shape="rounded"
-        size="sm"
-        fullWidth
-        selectionMode="tabs"
-        aria-label="Companion sections"
-      />
 
       {tab === "phase" && phase.kind === "night" && <NightPanel state={state} update={update} />}
       {tab === "phase" && phase.kind === "day" && <DayPanel state={state} update={update} />}

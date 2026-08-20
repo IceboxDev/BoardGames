@@ -8,9 +8,17 @@ import {
   MIN_PLAYERS,
 } from "@boardgames/core/games/blood-on-the-clocktower/setup";
 import { useQuery } from "@tanstack/react-query";
+import { Reorder, useDragControls } from "framer-motion";
 import { useMemo, useState } from "react";
-import { TrashIcon } from "../../../components/icons";
-import { Button, IconButton, Input, SegmentedControl } from "../../../components/ui";
+import { GripVerticalIcon, TrashIcon } from "../../../components/icons";
+import {
+  Button,
+  IconButton,
+  Input,
+  Modal,
+  ModalBody,
+  SegmentedControl,
+} from "../../../components/ui";
 import { fetchAvailableGames } from "../../../lib/calendar-games";
 import { fetchCalendarLocks } from "../../../lib/calendar-locks";
 import { dateKey } from "../../../lib/offline-availability";
@@ -54,8 +62,91 @@ const TEST_NAMES = [
   "Petunia Crow",
 ];
 
+/**
+ * One roster row: drag handle → seat number → tappable name (opens the
+ * per-player sheet with Traveller toggle and keyboard-friendly move buttons)
+ * → inline DM + remove. Drag reorders the circle directly; the handle is the
+ * only drag surface so the name stays a plain tap target.
+ */
+function RosterRow({
+  entry,
+  index,
+  onOpenSheet,
+  onMakeDm,
+  onRemove,
+}: {
+  entry: RosterEntry;
+  index: number;
+  onOpenSheet: () => void;
+  onMakeDm: () => void;
+  onRemove: () => void;
+}) {
+  const controls = useDragControls();
+  return (
+    <Reorder.Item
+      value={entry}
+      as="div"
+      dragListener={false}
+      dragControls={controls}
+      whileDrag={{ scale: 1.02, zIndex: 10, boxShadow: "0 8px 24px rgba(0,0,0,0.55)" }}
+      className="relative flex min-h-11 items-center gap-1 rounded-lg border border-white/10 bg-surface-950/60 pr-1"
+    >
+      {/* Pointer-only affordance; keyboard users reorder via the sheet's
+          move buttons. touch-none so a touch drag doesn't scroll the page. */}
+      <div
+        aria-hidden="true"
+        onPointerDown={(e) => controls.start(e)}
+        className="flex min-h-11 w-8 shrink-0 cursor-grab touch-none select-none items-center justify-center text-fg-muted active:cursor-grabbing"
+      >
+        <GripVerticalIcon className="h-4 w-4" />
+      </div>
+      <span className="w-5 shrink-0 text-center text-xs font-bold tabular-nums text-fg-muted">
+        {index + 1}
+      </span>
+      <Button
+        variant="plain"
+        bleed
+        onClick={onOpenSheet}
+        className="flex min-h-11 min-w-0 flex-1 items-center justify-start gap-1.5 text-left"
+        aria-label={`Options for ${entry.name}`}
+      >
+        <span
+          className={`min-w-0 truncate text-sm font-normal ${
+            entry.traveller ? "text-purple-300" : "text-fg-primary"
+          }`}
+        >
+          {entry.name}
+        </span>
+        {entry.traveller && (
+          <span className="shrink-0 rounded bg-purple-400/15 px-1 py-0.5 text-3xs font-bold uppercase tracking-pill text-purple-300">
+            Traveller
+          </span>
+        )}
+      </Button>
+      <Button
+        variant="ghost"
+        size="sm"
+        className="min-h-10"
+        aria-label={`Make ${entry.name} the Storyteller`}
+        title="Make them the Storyteller (they won't play)"
+        onClick={onMakeDm}
+      >
+        DM
+      </Button>
+      <IconButton
+        icon={<TrashIcon className="h-4 w-4" />}
+        size="lg"
+        aria-label={`Remove ${entry.name}`}
+        onClick={onRemove}
+      />
+    </Reorder.Item>
+  );
+}
+
 export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => void }) {
   const [entries, setEntries] = useState<RosterEntry[]>(() => toEntries(loadRoster()));
+  // Entry id whose per-player sheet (Traveller toggle, keyboard reorder) is open.
+  const [sheetFor, setSheetFor] = useState<number | undefined>();
   const [draft, setDraft] = useState("");
   const [edition, setEdition] = useState<Edition>("trouble-brewing");
   // One attendee runs the game instead of playing — they hold this phone.
@@ -164,6 +255,12 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
     setEntries(next);
   }
 
+  // The open sheet's entry, resolved fresh each render so Traveller toggles
+  // and moves reflect immediately; a removed/DM'd entry closes it via the
+  // render guard below.
+  const sheetIndex = entries.findIndex((e) => e.id === sheetFor);
+  const sheetEntry = sheetIndex >= 0 ? entries[sheetIndex] : undefined;
+
   function deal() {
     if (!countOk) return;
     saveRoster(names);
@@ -238,64 +335,29 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
 
       <Panel title={`Players (${names.length})`}>
         <div className="flex flex-col gap-1.5">
-          {entries.map((entry, i) => (
-            <div
-              key={entry.id}
-              className="flex min-h-11 items-center gap-2 rounded-lg border border-white/10 bg-surface-950/60 px-2"
-            >
-              <span className="w-6 shrink-0 text-center text-xs font-bold text-fg-muted">
-                {i + 1}
-              </span>
-              <span
-                className={`min-w-0 flex-1 truncate text-sm ${
-                  entry.traveller ? "text-purple-300" : "text-fg-primary"
-                }`}
-              >
-                {entry.name}
-                {entry.traveller && (
-                  <span className="ml-1.5 rounded bg-purple-400/15 px-1 py-0.5 text-3xs font-bold uppercase tracking-pill text-purple-300">
-                    Traveller
-                  </span>
-                )}
-              </span>
-              <Button
-                variant="ghost"
-                size="xs"
-                aria-label={`Toggle ${entry.name} as a Traveller`}
-                title="Traveller: sits in the circle but doesn't draw from the bag"
-                className={entry.traveller ? "text-purple-300" : ""}
-                disabled={!entry.traveller && travellerCount >= MAX_TRAVELLERS}
-                onClick={() => toggleTraveller(entry)}
-              >
-                Trav
-              </Button>
-              <Button
-                variant="ghost"
-                size="xs"
-                aria-label={`Make ${entry.name} the Storyteller`}
-                title="Make them the Storyteller (they won't play)"
-                onClick={() => makeStoryteller(entry)}
-              >
-                DM
-              </Button>
-              <Button variant="ghost" size="xs" disabled={i === 0} onClick={() => move(i, -1)}>
-                ↑
-              </Button>
-              <Button
-                variant="ghost"
-                size="xs"
-                disabled={i === entries.length - 1}
-                onClick={() => move(i, 1)}
-              >
-                ↓
-              </Button>
-              <IconButton
-                icon={<TrashIcon className="h-3.5 w-3.5" />}
-                aria-label={`Remove ${entry.name}`}
-                onClick={() => setEntries(entries.filter((e) => e.id !== entry.id))}
+          {entries.length > 0 && (
+            <p className="text-xs text-fg-muted">
+              Drag the handle to match the circle's seating order · tap a name for more.
+            </p>
+          )}
+          <Reorder.Group
+            as="div"
+            axis="y"
+            values={entries}
+            onReorder={setEntries}
+            className="flex flex-col gap-1.5"
+          >
+            {entries.map((entry, i) => (
+              <RosterRow
+                key={entry.id}
+                entry={entry}
+                index={i}
+                onOpenSheet={() => setSheetFor(entry.id)}
+                onMakeDm={() => makeStoryteller(entry)}
+                onRemove={() => setEntries(entries.filter((e) => e.id !== entry.id))}
               />
-            </div>
-          ))}
+            ))}
+          </Reorder.Group>
           <div className="mt-1 flex gap-2">
             <Input
               value={draft}
@@ -400,6 +462,54 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
           </Button>
         </div>
       </Panel>
+
+      {sheetEntry && (
+        <Modal
+          size="sm"
+          onClose={() => setSheetFor(undefined)}
+          eyebrow={`Seat ${sheetIndex + 1}`}
+          title={sheetEntry.name}
+        >
+          <ModalBody>
+            <div className="flex flex-col gap-2">
+              <Button
+                variant="secondary"
+                block
+                className="min-h-11"
+                disabled={!sheetEntry.traveller && travellerCount >= MAX_TRAVELLERS}
+                onClick={() => toggleTraveller(sheetEntry)}
+              >
+                {sheetEntry.traveller ? "No longer a Traveller" : "Mark as Traveller"}
+              </Button>
+              <p className="text-xs text-fg-muted">
+                Travellers sit in the circle but don't draw from the bag — you'll pick their
+                character on the next screen.
+              </p>
+              {/* Keyboard-accessible reorder — the drag handle is pointer-only. */}
+              <div className="grid grid-cols-2 gap-2">
+                <Button
+                  variant="secondary"
+                  block
+                  className="min-h-11"
+                  disabled={sheetIndex === 0}
+                  onClick={() => move(sheetIndex, -1)}
+                >
+                  ↑ Move up
+                </Button>
+                <Button
+                  variant="secondary"
+                  block
+                  className="min-h-11"
+                  disabled={sheetIndex === entries.length - 1}
+                  onClick={() => move(sheetIndex, 1)}
+                >
+                  ↓ Move down
+                </Button>
+              </div>
+            </div>
+          </ModalBody>
+        </Modal>
+      )}
     </Screen>
   );
 }
