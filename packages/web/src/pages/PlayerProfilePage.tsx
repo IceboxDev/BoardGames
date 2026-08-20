@@ -1,3 +1,4 @@
+import { nightAwareDisplayOrder } from "@boardgames/core/history/display-order";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import type { ReactNode } from "react";
 import { useState } from "react";
@@ -102,9 +103,14 @@ export default function PlayerProfilePage() {
   function renderProfileBody(profile: NonNullable<typeof profileQuery.data>) {
     const firstName = profile.user.name.split(" ")[0] || "This player";
 
-    const allMatches = showAllMatches
-      ? (matchesQuery.data?.pages.flatMap((p) => p.matches) ?? profile.recentMatches)
-      : profile.recentMatches;
+    // The API pages by played_at; re-sort to the curated per-night order so
+    // this list agrees with the global history page (see display-order.ts).
+    const allMatches = nightAwareDisplayOrder(
+      showAllMatches
+        ? (matchesQuery.data?.pages.flatMap((p) => p.matches) ?? profile.recentMatches)
+        : profile.recentMatches,
+      (m) => m,
+    );
 
     const matchFooter: ReactNode = showAllMatches ? (
       matchesQuery.hasNextPage ? (

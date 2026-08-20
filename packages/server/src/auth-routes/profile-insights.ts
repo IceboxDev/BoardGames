@@ -8,6 +8,7 @@
 // the full series, so the server derives once — with the SAME helpers the
 // profile stats use — and the client slices locally.
 
+import { nightAwareDisplayOrder } from "@boardgames/core/history/display-order";
 import {
   extractParticipantIds,
   freeForAllPlacement,
@@ -108,7 +109,13 @@ profileInsightsRoutes.get("/:userId/match-summary", async (c) => {
   ]);
   if (!exists) return errorResponse(c, 404, "user not found", "NOT_FOUND");
 
-  const rows = parseRows(MatchResultRowSchema, matchResult.rows, "match_results");
+  // The query returns played_at order; re-sort to the curated display order
+  // (per-night sortOrder) BEFORE grouping, so the timeline agrees with the
+  // global history page and campaign units take their first display position.
+  const rows = nightAwareDisplayOrder(
+    parseRows(MatchResultRowSchema, matchResult.rows, "match_results"),
+    (r) => ({ dateKey: r.date_key, playedAt: r.played_at, sortOrder: r.sort_order, id: r.id }),
+  );
   const units = groupMatchUnits(rows);
 
   const items: ProfileMatchSummaryItem[] = [];
