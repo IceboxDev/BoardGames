@@ -79,6 +79,35 @@ export function getDbConnectionConfig(): { url: string; authToken: string | unde
 }
 
 /**
+ * Refuse to serve traffic unless the connection enforces foreign keys.
+ *
+ * Every cascade in the schema is load-bearing, not decorative: deleting a user
+ * is how their rsvps, votes, availability, inventory, profile and participant
+ * index are removed (migrations 0011-0013, 0024, 0029-0030, 0034), and
+ * `admin-match-history.ts` names `ON DELETE CASCADE` as the mechanism that
+ * keeps the participant index honest. SQLite defaults this pragma to OFF per
+ * connection; Turso turns it on server-side (verified `= 1` on the live
+ * databases), which is exactly the kind of ambient guarantee that disappears
+ * silently under a platform change, a self-hosted sqld, or a restore from a
+ * dump — leaving every cascade a no-op and orphans accumulating with no signal.
+ *
+ * Checking costs one round trip at boot. Not checking costs a data-integrity
+ * incident nobody notices for months.
+ */
+async function assertForeignKeysEnforced(client: Client): Promise<void> {
+  const { rows } = await client.execute("PRAGMA foreign_keys");
+  // libsql reports the pragma as a single row/column; be liberal about which.
+  const raw = rows[0] === undefined ? undefined : Object.values(rows[0])[0];
+  if (Number(raw) === 1) return;
+  throw new Error(
+    `[db] refusing to start: PRAGMA foreign_keys is ${raw === undefined ? "unavailable" : String(raw)}, expected 1. ` +
+      "Every ON DELETE CASCADE in this schema would silently become a no-op — deleting a user would leave " +
+      "their rsvps, votes, availability, inventory, profile and match_participants rows behind as orphans. " +
+      "Enable foreign-key enforcement on the database before serving traffic.",
+  );
+}
+
+/**
  * Open the database client and verify the schema is current. Migrations are NOT
  * run here — that is the dedicated `migrate` command's job (src/migrations/cli.ts).
  * Boot fails fast with an actionable message if the database isn't at the latest
@@ -88,5 +117,9 @@ export async function initDb(): Promise<Client> {
   const { url, authToken } = getDbConnectionConfig();
   db = withTiming(createClient({ url, authToken }));
   await assertAtLatestVersion(db);
+  await assertForeignKeysEnforced(db);
   return db;
 }
+
+// Exported for tests.
+export const __test__ = { assertForeignKeysEnforced };

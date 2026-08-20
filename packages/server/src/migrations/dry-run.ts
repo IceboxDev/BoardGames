@@ -2,15 +2,26 @@
 //
 //   pnpm --filter @boardgames/server migrate:dry-run
 //
-// Copies the production database (SELECT/PRAGMA reads ONLY — never writes to
-// prod) into a throwaway in-memory DB, then runs the pending migrations against
-// that copy with foreign-key enforcement ON. Reports what would be applied, how
-// long it took, and — critically — whether the result has any FK violations.
+// Copies whatever `TURSO_DATABASE_URL` points at (SELECT/PRAGMA reads ONLY —
+// it never writes to the source) into a throwaway in-memory DB, then runs the
+// pending migrations against that copy with foreign-key enforcement ON. Reports
+// what would be applied, how long it took, and — critically — whether the
+// result has any FK violations.
 //
-// This is the rehearsal the review calls for: because the local .env points at
-// the live database and there is no staging DB, this script is how you prove a
-// schema change (especially the FK table-rebuilds) works against real data
-// BEFORE running `migrate` for real at deploy time.
+// LOCALLY THAT SOURCE IS STAGING, not production. Staging is a manual copy
+// (`turso db create boardgames-staging --from-db boardgames`) of whatever date
+// it was last refreshed, so a migration proved here is proved against data of
+// unknown age — fine for schema shape, not sufficient for a migration whose
+// safety depends on current rows. To rehearse against live production data,
+// point the source at the read-only prod credentials for one run:
+//
+//   cd packages/server && set -a && . ./.env && set +a && \
+//     TURSO_DATABASE_URL="$PROD_TURSO_DATABASE_URL" \
+//     TURSO_AUTH_TOKEN="$PROD_TURSO_AUTH_TOKEN" \
+//     pnpm exec tsx src/migrations/dry-run.ts
+//
+// CI does not run this at all (no database credentials), so it remains a manual
+// gate before opening a schema PR.
 
 // Must be first: populates process.env before getDbConnectionConfig reads it.
 import "../env.ts";

@@ -227,7 +227,7 @@ export async function computeAvailableGamesPayload(opts: {
   const lockedRow = await db.execute({
     sql: `SELECT host_user_id, host_name, event_time, address, picks_locked_at,
                  expected_user_ids_json, locked_at, host_at_home
-          FROM locked_dates WHERE date_key = ? LIMIT 1`,
+          FROM locked_dates WHERE date_key = ? AND unlocked_at IS NULL LIMIT 1`,
     args: [date],
   });
   if (lockedRow.rows.length === 0) return null;
@@ -579,7 +579,7 @@ export async function listLockedDatesForViewer(opts: {
   const lockedRows = await db.execute({
     sql: `SELECT DISTINCT ld.date_key
           FROM locked_dates ld
-          WHERE ld.date_key >= ? AND ld.date_key < ?
+          WHERE ld.date_key >= ? AND ld.date_key < ? AND ld.unlocked_at IS NULL
             AND (
                  EXISTS (SELECT 1 FROM rsvps r
                          WHERE r.date_key = ld.date_key AND r.user_id = ?)

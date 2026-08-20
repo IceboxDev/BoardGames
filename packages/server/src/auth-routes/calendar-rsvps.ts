@@ -37,7 +37,7 @@ async function loadLockState(date: string): Promise<{
   expected: Set<string>;
 } | null> {
   const { rows } = await getDb().execute({
-    sql: "SELECT expected_user_ids_json, picks_locked_at FROM locked_dates WHERE date_key = ? LIMIT 1",
+    sql: "SELECT expected_user_ids_json, picks_locked_at FROM locked_dates WHERE date_key = ? AND unlocked_at IS NULL LIMIT 1",
     args: [date],
   });
   if (rows.length === 0) return { locked: false, picksLocked: false, expected: new Set() };
@@ -130,7 +130,7 @@ calendarRsvpsRoutes.post("/rsvp/kick", zJsonBody(KickRsvpBodySchema), async (c) 
   const { date, userId } = c.req.valid("json");
 
   const lockedRow = await getDb().execute({
-    sql: "SELECT host_user_id FROM locked_dates WHERE date_key = ? LIMIT 1",
+    sql: "SELECT host_user_id FROM locked_dates WHERE date_key = ? AND unlocked_at IS NULL LIMIT 1",
     args: [date],
   });
   if (lockedRow.rows.length === 0) {

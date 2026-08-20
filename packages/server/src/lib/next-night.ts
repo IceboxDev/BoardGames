@@ -8,10 +8,14 @@
 // The "next night" is the earliest future locked date (today inclusive) where
 // the user is definite or tentative.
 
-import { type Availability, AvailabilityMapSchema } from "@boardgames/core/protocol";
 import type { Client } from "@libsql/client";
 import { z } from "zod";
-import { jsonColumn, parseRow, parseRows, RowParseError } from "./db-rows.ts";
+import {
+  type AvailabilityRecord,
+  fetchAllAvailabilityDays,
+  fetchAvailabilityDaysForUser,
+} from "./availability-merge.ts";
+import { parseRows } from "./db-rows.ts";
 
 export type NextNightStatus = "definite" | "tentative";
 export interface NextNightRef {
@@ -43,13 +47,6 @@ export function todayDateKey(now: Date = new Date()): string {
 }
 
 const DateKeyOnlyRowSchema = z.object({ date_key: z.string() });
-const AvailabilityRowSchema = z.object({
-  user_id: z.string(),
-  availability_json: jsonColumn(AvailabilityMapSchema),
-});
-const ViewerAvailabilityRowSchema = z.object({
-  availability_json: jsonColumn(AvailabilityMapSchema),
-});
 const RsvpRowSchema = z.object({
   date_key: z.string(),
   user_id: z.string(),
@@ -63,7 +60,7 @@ const ViewerRsvpRowSchema = z.object({
 /** First date in `futureDates` (ascending) the user is attending, or null. */
 function computeNextNight(
   futureDates: readonly string[],
-  availability: Record<string, Availability> | undefined,
+  availability: AvailabilityRecord | undefined,
   rsvpByDate: Map<string, "yes" | "no"> | undefined,
 ): NextNightRef | null {
   for (const dateKey of futureDates) {
@@ -78,7 +75,7 @@ function computeNextNight(
 
 async function loadFutureLockedDates(db: Client, today: string): Promise<string[]> {
   const { rows } = await db.execute({
-    sql: "SELECT date_key FROM locked_dates WHERE date_key >= ? ORDER BY date_key ASC",
+    sql: "SELECT date_key FROM locked_dates WHERE date_key >= ? AND unlocked_at IS NULL ORDER BY date_key ASC",
     args: [today],
   });
   return parseRows(DateKeyOnlyRowSchema, rows, "locked_dates").map((r) => r.date_key);
@@ -93,29 +90,14 @@ export async function findNextNightForUser(
   const futureDates = await loadFutureLockedDates(db, today);
   if (futureDates.length === 0) return null;
 
-  const [availResult, rsvpResult] = await Promise.all([
-    db.execute({
-      sql: "SELECT availability_json FROM user_availability WHERE user_id = ?",
-      args: [userId],
-    }),
+  const [availability, rsvpResult] = await Promise.all([
+    fetchAvailabilityDaysForUser(db, userId),
     db.execute({
       sql: "SELECT date_key, status FROM rsvps WHERE user_id = ? AND date_key >= ?",
       args: [userId, today],
     }),
   ]);
 
-  let availability: Record<string, Availability> | undefined;
-  if (availResult.rows[0]) {
-    try {
-      availability = parseRow(
-        ViewerAvailabilityRowSchema,
-        availResult.rows[0],
-        "user_availability",
-      ).availability_json;
-    } catch (err) {
-      if (!(err instanceof RowParseError)) throw err;
-    }
-  }
   const rsvpByDate = new Map<string, "yes" | "no">();
   for (const r of parseRows(ViewerRsvpRowSchema, rsvpResult.rows, "rsvps")) {
     rsvpByDate.set(r.date_key, r.status);
@@ -135,27 +117,18 @@ export async function findNextNightDateKeysForUsers(
   if (futureDates.length === 0) return out;
 
   const wanted = new Set(userIds);
-  const availByUser = new Map<string, Record<string, Availability>>();
   const rsvpByUser = new Map<string, Map<string, "yes" | "no">>();
 
-  const [availResult, rsvpResult] = await Promise.all([
-    db.execute("SELECT user_id, availability_json FROM user_availability"),
+  // Only future days can decide a "next night", so the scan is bounded by
+  // `today` rather than reading every day anyone has ever marked.
+  const [availByUser, rsvpResult] = await Promise.all([
+    fetchAllAvailabilityDays(db, { fromDateKey: today }),
     db.execute({
       sql: "SELECT date_key, user_id, status FROM rsvps WHERE date_key >= ?",
       args: [today],
     }),
   ]);
 
-  for (const row of availResult.rows) {
-    let parsed: { user_id: string; availability_json: Record<string, Availability> };
-    try {
-      parsed = parseRow(AvailabilityRowSchema, row, "user_availability");
-    } catch (err) {
-      if (!(err instanceof RowParseError)) throw err;
-      continue;
-    }
-    if (wanted.has(parsed.user_id)) availByUser.set(parsed.user_id, parsed.availability_json);
-  }
   for (const r of parseRows(RsvpRowSchema, rsvpResult.rows, "rsvps")) {
     if (!wanted.has(r.user_id)) continue;
     let m = rsvpByUser.get(r.user_id);

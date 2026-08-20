@@ -129,7 +129,7 @@ calendarLocksRoutes.post("/lock-picks", zJsonBody(PicksLockBodySchema), async (c
   const { date, on } = c.req.valid("json");
 
   const lockedRow = await getDb().execute({
-    sql: "SELECT host_user_id FROM locked_dates WHERE date_key = ? LIMIT 1",
+    sql: "SELECT host_user_id FROM locked_dates WHERE date_key = ? AND unlocked_at IS NULL LIMIT 1",
     args: [date],
   });
   if (lockedRow.rows.length === 0) {
@@ -156,7 +156,7 @@ calendarLocksRoutes.post("/lock-picks", zJsonBody(PicksLockBodySchema), async (c
     // time actually reflects who has committed to the night.
     const [{ rows: lockRows }, { rows: yesRows }] = await Promise.all([
       getDb().execute({
-        sql: "SELECT expected_user_ids_json FROM locked_dates WHERE date_key = ?",
+        sql: "SELECT expected_user_ids_json FROM locked_dates WHERE date_key = ? AND unlocked_at IS NULL",
         args: [date],
       }),
       getDb().execute({
@@ -187,12 +187,12 @@ calendarLocksRoutes.post("/lock-picks", zJsonBody(PicksLockBodySchema), async (c
       sql: `UPDATE locked_dates
               SET picks_locked_at = datetime('now'),
                   expected_user_ids_json = ?
-            WHERE date_key = ?`,
+            WHERE date_key = ? AND unlocked_at IS NULL`,
       args: [JSON.stringify([...expected]), date],
     });
   } else {
     await getDb().execute({
-      sql: "UPDATE locked_dates SET picks_locked_at = NULL WHERE date_key = ?",
+      sql: "UPDATE locked_dates SET picks_locked_at = NULL WHERE date_key = ? AND unlocked_at IS NULL",
       args: [date],
     });
   }
@@ -205,7 +205,7 @@ calendarLocksRoutes.post("/games/reaction", zJsonBody(GameReactionBodySchema), a
   const { date, slug, reaction, on } = c.req.valid("json");
 
   const lockedRow = await getDb().execute({
-    sql: "SELECT 1 FROM locked_dates WHERE date_key = ? LIMIT 1",
+    sql: "SELECT 1 FROM locked_dates WHERE date_key = ? AND unlocked_at IS NULL LIMIT 1",
     args: [date],
   });
   if (lockedRow.rows.length === 0) {
@@ -234,17 +234,17 @@ calendarLocksRoutes.get("/locks", async (c) => {
   const [locksResult, rsvpsResult, availabilityResult, reactionsResult, inventoryResult] =
     await Promise.all([
       getDb().execute(
-        "SELECT date_key, locked_by, locked_at, expected_user_ids_json, host_user_id, host_name, event_time, address, picks_locked_at, host_at_home FROM locked_dates",
+        "SELECT date_key, locked_by, locked_at, expected_user_ids_json, host_user_id, host_name, event_time, address, picks_locked_at, host_at_home FROM locked_dates WHERE unlocked_at IS NULL",
       ),
       getDb().execute("SELECT date_key, user_id, status FROM rsvps"),
       getDb().execute(
-        "SELECT user_id, date_key, status FROM user_availability_days WHERE date_key IN (SELECT date_key FROM locked_dates)",
+        "SELECT user_id, date_key, status FROM user_availability_days WHERE date_key IN (SELECT date_key FROM locked_dates WHERE unlocked_at IS NULL)",
       ),
       // Reactions for locked nights only — feeds each night's vote-winner.
       // Scoped to locked dates so the scan grows with game nights, not with
       // the whole reaction history.
       getDb().execute(
-        "SELECT date_key, user_id, game_slug, reaction FROM game_requests WHERE date_key IN (SELECT date_key FROM locked_dates)",
+        "SELECT date_key, user_id, game_slug, reaction FROM game_requests WHERE date_key IN (SELECT date_key FROM locked_dates WHERE unlocked_at IS NULL)",
       ),
       getDb().execute("SELECT user_id, game_slugs_json FROM user_inventory"),
     ]);
@@ -406,7 +406,7 @@ adminCalendarLocksRoutes.get("/host-stats", async (c) => {
   const { rows } = await getDb().execute(
     `SELECT host_user_id, COUNT(*) AS total, MAX(date_key) AS last_date
        FROM locked_dates
-      WHERE host_user_id IS NOT NULL
+      WHERE host_user_id IS NOT NULL AND unlocked_at IS NULL
       GROUP BY host_user_id`,
   );
   const stats: Record<string, { totalHosts: number; lastHostedDate: string | null }> = {};
@@ -438,6 +438,11 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
       sql: "SELECT user_id, status FROM user_availability_days WHERE date_key = ?",
       args: [date],
     }),
+    // DELIBERATELY NOT filtered on `unlocked_at IS NULL`, unlike every other
+    // read of this table. This is the revive path: re-locking a night that was
+    // called off has to see the guest list it had, or the people who had
+    // already committed would be dropped on the way back. The upsert below
+    // clears the mark.
     getDb().execute({
       sql: "SELECT expected_user_ids_json FROM locked_dates WHERE date_key = ?",
       args: [date],
@@ -485,6 +490,10 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
   // for auto rows so the host can ping them in real life.
   // OR IGNORE preserves any explicit choice (e.g. a can who later flipped to
   // "no" survives a re-lock).
+  //
+  // The upsert also clears `unlocked_at`, reviving a soft-unlocked night
+  // (migration 0035). Its rsvps, game votes and exit votes were never deleted,
+  // so they come back with it — which is the whole point of the mark.
   const stmts: { sql: string; args: (string | number | null)[] }[] = [
     {
       sql: `INSERT INTO locked_dates
@@ -499,7 +508,8 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
               host_name = excluded.host_name,
               event_time = excluded.event_time,
               address = excluded.address,
-              host_at_home = COALESCE(excluded.host_at_home, locked_dates.host_at_home)`,
+              host_at_home = COALESCE(excluded.host_at_home, locked_dates.host_at_home),
+              unlocked_at = NULL`,
       args: [
         date,
         user.id,
@@ -533,17 +543,27 @@ adminCalendarLocksRoutes.delete("/lock", zJsonBody(UnlockBodySchema), async (c) 
   const user = c.get("user");
   const { date } = c.req.valid("json");
 
-  // Cascade: drop the lock row, its RSVPs, and any game reactions for the
-  // date. We used to keep RSVPs and reactions across unlock so an explicit
-  // "no" (or hype vote) survived an unlock+re-lock cycle, but that left
-  // orphans pointing at no game night — and once the availability views
-  // started honoring `rsvp.yes` as an implicit "can", those orphans turned
-  // into ghost availability that snapped back over the user's edits.
+  // Unlock MARKS the night; it no longer deletes it (migration 0035).
   //
-  // Before the delete, copy the lock metadata into a tombstone row so the
-  // iCalendar feed can emit STATUS:CANCELLED for ~30 days. Without this,
-  // calendars that already saw the event would keep it forever — clients
-  // only act on what they see; absence doesn't trigger cleanup.
+  // This used to be three deletes, and the last one cascaded into `rsvps`,
+  // `game_requests` and `exit_game_votes`. That erased who had committed to the
+  // night and every vote cast for it — permanently, with no undo, and with
+  // attendance statistics silently rewritten behind it (see
+  // `lib/nights-attended.ts`, which reads both tables). Re-locking could not
+  // bring any of it back.
+  //
+  // Setting `unlocked_at` makes the night exactly as invisible as deleting it
+  // did — every read that means "is this night on?" filters
+  // `unlocked_at IS NULL` — while keeping the rows, so `POST /lock` restores
+  // the guest list, the RSVPs and the votes as they stood. The old worry that
+  // motivated the deletes (orphan `rsvp.yes` rows bleeding back in as "ghost
+  // availability") is handled by that same filter: `availability-merge.ts` only
+  // honours RSVPs on nights that are currently locked.
+  //
+  // The tombstone copy stays: the iCalendar feed needs it to emit
+  // STATUS:CANCELLED for ~30 days, because calendar clients only act on what
+  // they see and absence doesn't trigger cleanup. It is written BEFORE the mark
+  // so it captures the metadata as it stood.
   await getDb().batch(
     [
       {
@@ -552,12 +572,14 @@ adminCalendarLocksRoutes.delete("/lock", zJsonBody(UnlockBodySchema), async (c) 
                  event_time, address, unlocked_at)
               SELECT date_key, expected_user_ids_json, host_user_id, host_name,
                      event_time, address, datetime('now')
-              FROM locked_dates WHERE date_key = ?`,
+              FROM locked_dates WHERE date_key = ? AND unlocked_at IS NULL`,
         args: [date],
       },
-      { sql: "DELETE FROM rsvps WHERE date_key = ?", args: [date] },
-      { sql: "DELETE FROM game_requests WHERE date_key = ?", args: [date] },
-      { sql: "DELETE FROM locked_dates WHERE date_key = ?", args: [date] },
+      {
+        sql: `UPDATE locked_dates SET unlocked_at = datetime('now')
+              WHERE date_key = ? AND unlocked_at IS NULL`,
+        args: [date],
+      },
     ],
     "write",
   );
@@ -589,7 +611,7 @@ adminCalendarLocksRoutes.post("/night-guest", zJsonBody(AdminNightGuestBodySchem
 
   const [lockResult, userResult] = await Promise.all([
     db.execute({
-      sql: "SELECT expected_user_ids_json, picks_locked_at FROM locked_dates WHERE date_key = ? LIMIT 1",
+      sql: "SELECT expected_user_ids_json, picks_locked_at FROM locked_dates WHERE date_key = ? AND unlocked_at IS NULL LIMIT 1",
       args: [date],
     }),
     db.execute({
@@ -642,7 +664,7 @@ adminCalendarLocksRoutes.post("/night-guest", zJsonBody(AdminNightGuestBodySchem
     });
     if (picksLocked && !expected.includes(guestUserId)) {
       stmts.push({
-        sql: "UPDATE locked_dates SET expected_user_ids_json = ? WHERE date_key = ?",
+        sql: "UPDATE locked_dates SET expected_user_ids_json = ? WHERE date_key = ? AND unlocked_at IS NULL",
         args: [JSON.stringify([...expected, guestUserId]), date],
       });
     }
@@ -653,7 +675,7 @@ adminCalendarLocksRoutes.post("/night-guest", zJsonBody(AdminNightGuestBodySchem
     });
     if (expected.includes(guestUserId)) {
       stmts.push({
-        sql: "UPDATE locked_dates SET expected_user_ids_json = ? WHERE date_key = ?",
+        sql: "UPDATE locked_dates SET expected_user_ids_json = ? WHERE date_key = ? AND unlocked_at IS NULL",
         args: [JSON.stringify(expected.filter((id) => id !== guestUserId)), date],
       });
     }

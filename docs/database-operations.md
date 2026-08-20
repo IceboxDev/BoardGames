@@ -149,12 +149,34 @@ before relying on them for anything destructive.
   `outcome_json` remains the source of truth for who played in a match; the
   table exists so "matches for user X" is an index seek instead of a
   leading-wildcard `LIKE` scan. Both are written in the same batch.
-- **`user_availability` vs `user_availability_days`** — migration 0010 declared
-  an EXPAND phase with a promised CONTRACT that has not happened. Both are
-  live, kept in sync by a dual-write, and **different endpoints read different
-  ones** (`next-night.ts` reads the legacy blob; the calendar reads the
-  normalized table). Any write that isn't the dual-writing `PUT` desynchronizes
-  them silently. Finishing the CONTRACT is outstanding work.
+- **`user_availability` vs `user_availability_days`** — migration 0010's EXPAND
+  phase. **Every read now goes through the normalized table**; the last three
+  legacy-blob readers (the calendar heat map, the next-night banner, both admin
+  coverage views) were repointed alongside migration 0035. The blob is still
+  written by `PUT /api/user/availability` as a rollback backstop, so reverting
+  the read paths stays a code-only change.
+  **The CONTRACT — `DROP TABLE user_availability` — is still outstanding and
+  must be its own deploy.** Gate it on a clean run of
+  `pnpm --filter @boardgames/server exec tsx src/scripts/check-availability-drift.ts --prod`
+  (read-only; compares the two sources row by row and exits non-zero on any
+  disagreement), taken immediately before the drop, plus a `db:backup --prod`.
+- **`locked_dates.unlocked_at` (migration 0035)** — unlocking a night is a MARK,
+  not a delete. It used to `DELETE FROM locked_dates`, which cascaded through
+  `rsvps`, `game_requests` and `exit_game_votes` and permanently erased who had
+  committed to a night and every vote cast for it — silently rewriting
+  `nights-attended` for everyone, with no way back. Every read that means "is
+  this night on?" filters `unlocked_at IS NULL`; `POST /lock` clears the mark,
+  so re-locking restores the night whole.
+  **If you add a query against `locked_dates`, it almost certainly needs that
+  filter.** The one deliberate exception is the re-lock read in
+  `calendar-locks.ts`, which must see a marked row to revive it (commented in
+  place). `auth-routes/calendar-unlock.test.ts` asserts an unlocked night stays
+  invisible to each live query shape.
 - **JSON stored as TEXT is validated on read**, via `jsonColumn()` /
   `parseRow()` in `lib/db-rows.ts`. Use them; do not hand-roll `JSON.parse` at
   a row boundary.
+- **Foreign keys are asserted at boot.** `initDb()` refuses to start unless
+  `PRAGMA foreign_keys` reads 1 (`db.ts`). Turso enforces it server-side, but
+  every cascade in this schema is the delete mechanism for something, so the
+  guarantee is checked rather than assumed — a restore or a platform change that
+  silently turned it off would otherwise leave orphans accumulating unnoticed.

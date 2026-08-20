@@ -19,7 +19,7 @@ import { getDb } from "../db.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 import { nextGreetingFor } from "../lib/greetings.ts";
 import { unratedPayload } from "../lib/skill-payload.ts";
-import { ensureSkillState, skillComputedAt } from "../lib/skill-ratings.ts";
+import { ensureSkillState } from "../lib/skill-ratings.ts";
 import { greetingUserIds } from "../lib/spotlight-payload.ts";
 import { playerRefs } from "../lib/user-refs.ts";
 
@@ -28,8 +28,12 @@ export const skillsRoutes = authedApp();
 // ── GET /api/skills/leaderboards ───────────────────────────────────────
 
 skillsRoutes.get("/leaderboards", async (c) => {
-  const state = await ensureSkillState();
-  if (!state) return errorResponse(c, 500, "skill state unavailable", "INTERNAL");
+  // One read for the numbers AND the timestamp. This used to call
+  // `skillComputedAt()` as well, which re-read the same (large) row purely to
+  // fetch `computed_at`.
+  const snapshot = await ensureSkillState();
+  if (!snapshot) return errorResponse(c, 500, "skill state unavailable", "INTERNAL");
+  const { state, computedAt } = snapshot;
 
   const ids = new Set<string>();
   for (const board of state.leaderboards.traits) for (const e of board.entries) ids.add(e.userId);
@@ -38,7 +42,7 @@ skillsRoutes.get("/leaderboards", async (c) => {
   return c.json(
     SkillLeaderboardsResponseSchema.parse({
       eligibleCount: state.eligibleCount,
-      computedAt: await skillComputedAt(),
+      computedAt,
       traits: state.leaderboards.traits,
       games: state.leaderboards.games,
       players: await playerRefs(ids),
@@ -50,21 +54,23 @@ skillsRoutes.get("/leaderboards", async (c) => {
 
 skillsRoutes.get("/players/:userId", async (c) => {
   const userId = c.req.param("userId");
-  const [state, userRes] = await Promise.all([
+  const [snapshot, userRes] = await Promise.all([
     ensureSkillState(),
     getDb().execute({ sql: `SELECT 1 FROM "user" WHERE id = ? LIMIT 1`, args: [userId] }),
   ]);
   if (userRes.rows.length === 0) return errorResponse(c, 404, "user not found", "NOT_FOUND");
-  if (!state) return errorResponse(c, 500, "skill state unavailable", "INTERNAL");
+  if (!snapshot) return errorResponse(c, 500, "skill state unavailable", "INTERNAL");
 
-  return c.json(PlayerSkillResponseSchema.parse(state.players[userId] ?? unratedPayload(userId)));
+  return c.json(
+    PlayerSkillResponseSchema.parse(snapshot.state.players[userId] ?? unratedPayload(userId)),
+  );
 });
 
 // ── GET /api/skills/greeting ───────────────────────────────────────────
 
 skillsRoutes.get("/greeting", async (c) => {
   const viewer = c.get("user");
-  const greeting = await nextGreetingFor(viewer.id, await ensureSkillState());
+  const greeting = await nextGreetingFor(viewer.id, (await ensureSkillState())?.state ?? null);
   return c.json(
     GreetingResponseSchema.parse({
       greeting,

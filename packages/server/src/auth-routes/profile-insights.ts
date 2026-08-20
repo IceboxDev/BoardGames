@@ -168,7 +168,8 @@ profileInsightsRoutes.get("/:userId/nights", async (c) => {
     userExists(db, userId),
     db.execute({
       sql: `SELECT date_key, host_user_id, host_name, event_time, address
-              FROM locked_dates WHERE date_key < ? ORDER BY date_key DESC`,
+              FROM locked_dates WHERE date_key < ? AND unlocked_at IS NULL
+             ORDER BY date_key DESC`,
       args: [today],
     }),
     db.execute({

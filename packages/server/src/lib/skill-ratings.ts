@@ -63,22 +63,39 @@ export const StoredSkillStateSchema = z.object({
 });
 export type StoredSkillState = z.infer<typeof StoredSkillStateSchema>;
 
+/**
+ * The CURRENT state, without its predecessor.
+ *
+ * `payload_json` and `prev_payload_json` are ~28 KB each at a dozen ranked
+ * members and grow with the group, so the split is not cosmetic: every
+ * `/api/skills/*` request reads this row, and only the admin card and the
+ * spotlight diff ever need the baseline. Selecting both everywhere meant a
+ * leaderboard page load pulled ~112 KB across the wire (two reads × two blobs)
+ * to render numbers that live entirely in the first one.
+ */
 const StateRowSchema = z.object({
   payload_json: jsonColumn(StoredSkillStateSchema),
   input_fingerprint: z.string(),
   engine_fingerprint: z.string().nullable(),
   config_version: z.number(),
   computed_at: z.string(),
+});
+type StateRow = z.infer<typeof StateRowSchema>;
+
+const STATE_COLUMNS = `payload_json, input_fingerprint, engine_fingerprint,
+   config_version, computed_at`;
+
+/** The predecessor half, read only where a diff is actually being built. */
+const BaselineRowSchema = z.object({
   // Read raw: a baseline written by an older payload schema must degrade to
   // "no baseline", never to a failed read of the CURRENT state.
   prev_payload_json: z.string().nullable(),
   prev_computed_at: z.string().nullable(),
   prev_config_version: z.number().nullable(),
 });
-type StateRow = z.infer<typeof StateRowSchema>;
+type BaselineRow = z.infer<typeof BaselineRowSchema>;
 
-const STATE_COLUMNS = `payload_json, input_fingerprint, engine_fingerprint, config_version,
-   computed_at, prev_payload_json, prev_computed_at, prev_config_version`;
+const BASELINE_COLUMNS = "prev_payload_json, prev_computed_at, prev_config_version";
 
 const MatchRowSchema = z.object({
   id: z.number(),
@@ -89,6 +106,19 @@ const MatchRowSchema = z.object({
   recorded_at: z.string(),
 });
 type MatchRow = z.infer<typeof MatchRowSchema>;
+
+/**
+ * Everything the staleness report needs and nothing else. `dataFingerprint`
+ * reads only (id, last-write time) and the admin card wants a count, so the
+ * status path has no business decoding every stored `outcome_json` through
+ * `MatchOutcomeSchema` just to throw the result away.
+ */
+const MatchStampRowSchema = z.object({
+  id: z.number(),
+  updated_at: z.string().nullable(),
+  recorded_at: z.string(),
+});
+type MatchStamp = z.infer<typeof MatchStampRowSchema>;
 
 const UserRowSchema = z.object({
   id: z.string(),
@@ -115,7 +145,7 @@ function engineFingerprint(): string {
  * change the row set, so they flip it too. Flipping this means the ratings are
  * behind the history — reported to the admin, never acted on automatically.
  */
-function dataFingerprint(rows: readonly MatchRow[]): string {
+function dataFingerprint(rows: readonly MatchStamp[]): string {
   const h = createHash("sha256");
   for (const r of rows) h.update(`|${r.id}:${r.updated_at ?? r.recorded_at}`);
   return h.digest("hex");
@@ -189,6 +219,14 @@ async function loadMatchRows(): Promise<MatchRow[]> {
   return parseRows(MatchRowSchema, rows, "match_results.skill");
 }
 
+/** Just the columns the fingerprint and the match count need. */
+async function loadMatchStamps(): Promise<MatchStamp[]> {
+  const { rows } = await getDb().execute(
+    "SELECT id, updated_at, recorded_at FROM match_results ORDER BY id",
+  );
+  return parseRows(MatchStampRowSchema, rows, "match_results.skill-stamps");
+}
+
 /**
  * How the run treats the baseline the spotlight diff compares against.
  *
@@ -197,6 +235,8 @@ async function loadMatchRows(): Promise<MatchRow[]> {
  * - `reset` — an engine heal: the freshly computed state becomes its own
  *   baseline. Rank moves caused by a config bump are the maths changing, not
  *   anyone playing, and announcing them would be a lie.
+ *
+ * The choice is made INSIDE the upsert, not in JS around it — see `recompute`.
  */
 type BaselineMode = "rotate" | "reset";
 
@@ -288,11 +328,7 @@ export function buildSkillState(
   return state;
 }
 
-async function recompute(
-  rows: readonly MatchRow[],
-  previous: StateRow | null,
-  mode: BaselineMode,
-): Promise<void> {
+async function recompute(rows: readonly MatchRow[], mode: BaselineMode): Promise<void> {
   const db = getDb();
   const userRows = parseRows(
     UserRowSchema,
@@ -330,12 +366,24 @@ async function recompute(
   const notEligiblePlaceholders = eligibleIds.map(() => "?").join(",");
 
   const payload = JSON.stringify(state);
-  // Rotate only across a like-for-like engine; otherwise the new state is its
-  // own baseline and the next admin run gets a comparable diff.
-  const rotate =
-    mode === "rotate" && previous !== null && previous.config_version === config.version;
-  const prevPayload = rotate ? JSON.stringify(previous.payload_json) : payload;
-  const prevComputedAt = rotate ? previous.computed_at : null;
+  // Rotation happens INSIDE the upsert.
+  //
+  // It used to be decided in JS from a row read in an earlier round trip, which
+  // made the baseline a classic lost update: a boot-time engine heal (which
+  // resets the baseline on purpose) overlapping an admin recompute could land
+  // second and blank the "before" picture the admin was about to diff against.
+  // The failure mode was silent and indistinguishable from "nobody moved".
+  //
+  // Expressed here, the row's own pre-update values are the input, so the
+  // decision cannot be stale and no second process can interleave:
+  //
+  //   rotate + same config version → the row being replaced becomes the baseline
+  //   reset, or a config-version change → the new state is its own baseline
+  //
+  // The config-version guard is what keeps a config bump from being blamed on a
+  // player: a diff across two different engines is not a diff, it is noise.
+  const rotateGuard =
+    mode === "rotate" ? "skill_rating_state.config_version = excluded.config_version" : "0";
 
   await db.batch(
     [
@@ -343,23 +391,27 @@ async function recompute(
         sql: `INSERT INTO skill_rating_state (
                 id, payload_json, input_fingerprint, engine_fingerprint, config_version,
                 computed_at, prev_payload_json, prev_computed_at, prev_config_version)
-              VALUES (1, ?, ?, ?, ?, datetime('now'), ?, COALESCE(?, datetime('now')), ?)
+              VALUES (1, ?, ?, ?, ?, datetime('now'), ?, datetime('now'), ?)
               ON CONFLICT(id) DO UPDATE SET
+                prev_payload_json = CASE WHEN ${rotateGuard}
+                  THEN skill_rating_state.payload_json ELSE excluded.payload_json END,
+                prev_computed_at = CASE WHEN ${rotateGuard}
+                  THEN skill_rating_state.computed_at ELSE excluded.computed_at END,
+                prev_config_version = CASE WHEN ${rotateGuard}
+                  THEN skill_rating_state.config_version ELSE excluded.config_version END,
                 payload_json = excluded.payload_json,
                 input_fingerprint = excluded.input_fingerprint,
                 engine_fingerprint = excluded.engine_fingerprint,
                 config_version = excluded.config_version,
-                computed_at = excluded.computed_at,
-                prev_payload_json = excluded.prev_payload_json,
-                prev_computed_at = excluded.prev_computed_at,
-                prev_config_version = excluded.prev_config_version`,
+                computed_at = excluded.computed_at`,
         args: [
           payload,
           dataFingerprint(rows),
           engineFingerprint(),
           config.version,
-          prevPayload,
-          prevComputedAt,
+          // On a fresh INSERT there is nothing to rotate: the new state is its
+          // own baseline either way.
+          payload,
           config.version,
         ],
       },
@@ -413,12 +465,24 @@ async function readStateRow(): Promise<StateRow | null> {
   }
 }
 
+async function readBaselineRow(): Promise<BaselineRow | null> {
+  const { rows } = await getDb().execute(
+    `SELECT ${BASELINE_COLUMNS} FROM skill_rating_state WHERE id = 1`,
+  );
+  if (rows.length === 0) return null;
+  try {
+    return parseRow(BaselineRowSchema, rows[0], "skill_rating_state.baseline");
+  } catch {
+    return null;
+  }
+}
+
 /**
  * The stored baseline, or null when there isn't a comparable one. Refuses a
  * baseline fitted under a different config version and one that no longer
  * parses — in both cases the honest answer is "nothing to compare against".
  */
-export function baselineOf(row: StateRow | null): StoredSkillState | null {
+export function baselineOf(row: BaselineRow | null): StoredSkillState | null {
   if (!row?.prev_payload_json || row.prev_config_version !== config.version) return null;
   try {
     return StoredSkillStateSchema.parse(JSON.parse(row.prev_payload_json));
@@ -427,15 +491,21 @@ export function baselineOf(row: StateRow | null): StoredSkillState | null {
   }
 }
 
-let inFlight: Promise<StoredSkillState | null> | null = null;
+/** The state plus when it was fitted — one read, because every caller that
+ *  renders the numbers also wants to say how old they are. */
+export type SkillStateSnapshot = { state: StoredSkillState; computedAt: string };
 
-async function runRecompute(mode: BaselineMode): Promise<StoredSkillState | null> {
+let inFlight: Promise<SkillStateSnapshot | null> | null = null;
+
+async function runRecompute(mode: BaselineMode): Promise<SkillStateSnapshot | null> {
   if (inFlight) return inFlight;
   inFlight = (async () => {
     try {
-      const rows = await loadMatchRows();
-      await recompute(rows, await readStateRow(), mode);
-      return (await readStateRow())?.payload_json ?? null;
+      // No pre-read of the state row: `recompute` rotates the baseline inside
+      // its own upsert, so there is nothing to carry across a round trip.
+      await recompute(await loadMatchRows(), mode);
+      const row = await readStateRow();
+      return row === null ? null : { state: row.payload_json, computedAt: row.computed_at };
     } finally {
       inFlight = null;
     }
@@ -449,15 +519,17 @@ async function runRecompute(mode: BaselineMode): Promise<StoredSkillState | null
  * A history change deliberately does NOT recompute here — the ratings stay on
  * the last published fit until an admin runs one.
  */
-export async function ensureSkillState(): Promise<StoredSkillState | null> {
+export async function ensureSkillState(): Promise<SkillStateSnapshot | null> {
   if (inFlight) return inFlight;
   const row = await readStateRow();
-  if (row && row.engine_fingerprint === engineFingerprint()) return row.payload_json;
+  if (row && row.engine_fingerprint === engineFingerprint()) {
+    return { state: row.payload_json, computedAt: row.computed_at };
+  }
   return runRecompute("reset");
 }
 
 /** Refit from scratch and rotate the baseline. The admin button's one job. */
-export async function forceSkillRecompute(): Promise<StoredSkillState | null> {
+export async function forceSkillRecompute(): Promise<SkillStateSnapshot | null> {
   return runRecompute("rotate");
 }
 
@@ -474,21 +546,32 @@ export type SkillRatingStatus = {
   matchesChangedSince: number;
 };
 
-/** Everything the admin card needs to explain what a recompute would do. */
+/**
+ * Everything the admin card needs to explain what a recompute would do.
+ *
+ * This is the one caller that legitimately wants the baseline, so it is the one
+ * that pays for reading it. Note it loads match STAMPS, not full rows: the
+ * fingerprint hashes (id, last-write time) and the card shows a count, so
+ * decoding every stored `outcome_json` here was pure waste.
+ */
 export async function skillRatingStatus(): Promise<SkillRatingStatus> {
-  const [rows, row] = await Promise.all([loadMatchRows(), readStateRow()]);
+  const [stamps, row, baselineRow] = await Promise.all([
+    loadMatchStamps(),
+    readStateRow(),
+    readBaselineRow(),
+  ]);
   const computedAt = row?.computed_at ?? null;
   const changed = computedAt
-    ? rows.filter((r) => (r.updated_at ?? r.recorded_at) > computedAt).length
-    : rows.length;
+    ? stamps.filter((r) => (r.updated_at ?? r.recorded_at) > computedAt).length
+    : stamps.length;
   return {
     state: row?.payload_json ?? null,
-    baseline: baselineOf(row),
+    baseline: baselineOf(baselineRow),
     computedAt,
-    baselineComputedAt: row?.prev_computed_at ?? null,
+    baselineComputedAt: baselineRow?.prev_computed_at ?? null,
     configVersion: row?.config_version ?? null,
-    stale: row === null || row.input_fingerprint !== dataFingerprint(rows),
-    matchesTotal: rows.length,
+    stale: row === null || row.input_fingerprint !== dataFingerprint(stamps),
+    matchesTotal: stamps.length,
     matchesChangedSince: changed,
   };
 }
@@ -503,7 +586,7 @@ export function triggerSkillRecompute(): void {
   });
 }
 
-/** When the current ratings were fitted — shown wherever they are rendered. */
-export async function skillComputedAt(): Promise<string | null> {
-  return (await readStateRow())?.computed_at ?? null;
-}
+// `skillComputedAt()` is deliberately gone: it existed only so the leaderboards
+// route could stamp its response, and it did that by reading the whole state
+// row a SECOND time. `ensureSkillState()` now returns the timestamp alongside
+// the state, so that read is free.

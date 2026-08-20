@@ -2,7 +2,9 @@ import {
   BulkSaveResultsBodySchema,
   BulkSaveResultsResponseSchema,
   GameResultListSchema,
+  GameResultsQuerySchema,
   OkResponseSchema,
+  ReplayListQuerySchema,
   ReplayLogSchema,
   ReplaySummaryListSchema,
   SaveResultBodySchema,
@@ -12,7 +14,7 @@ import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { jsonColumn, parseRow, parseRows } from "../lib/db-rows.ts";
-import { errorResponse, zJsonBody } from "../lib/error-response.ts";
+import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 
 export const persistenceRoutes = authedApp();
 
@@ -94,10 +96,10 @@ persistenceRoutes.post("/:slug/results/bulk", zJsonBody(BulkSaveResultsBodySchem
   return c.json(BulkSaveResultsResponseSchema.parse({ ok: true, inserted, skipped }), 201);
 });
 
-persistenceRoutes.get("/:slug/results", async (c) => {
+persistenceRoutes.get("/:slug/results", zQuery(GameResultsQuerySchema), async (c) => {
   const slug = c.req.param("slug");
   const db = getDb();
-  const limit = Number(c.req.query("limit") ?? 10000);
+  const { limit } = c.req.valid("query");
 
   const { rows } = await db.execute({
     sql: "SELECT result_json, created_at FROM game_results WHERE game_slug = ? ORDER BY created_at DESC LIMIT ?",
@@ -126,10 +128,10 @@ persistenceRoutes.delete("/:slug/results", async (c) => {
   return c.json(OkResponseSchema.parse({ ok: true }));
 });
 
-persistenceRoutes.get("/:slug/replays", async (c) => {
+persistenceRoutes.get("/:slug/replays", zQuery(ReplayListQuerySchema), async (c) => {
   const slug = c.req.param("slug");
   const db = getDb();
-  const limit = Number(c.req.query("limit") ?? 50);
+  const { limit } = c.req.valid("query");
 
   const { rows } = await db.execute({
     sql: "SELECT id, ai_engine, score_p0, score_p1, winner, created_at, scores_json, player_count FROM session_replays WHERE game_slug = ? ORDER BY created_at DESC LIMIT ?",

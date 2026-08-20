@@ -1,6 +1,7 @@
 import { AuthConfigSchema, WsTicketResponseSchema } from "@boardgames/core/protocol";
 import { createNodeWebSocket } from "@hono/node-ws";
 import { Hono } from "hono";
+import { bodyLimit } from "hono/body-limit";
 import { cors } from "hono/cors";
 import {
   auth,
@@ -46,6 +47,7 @@ import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
 import { requireTrustedOrigin } from "./lib/csrf.ts";
 import { probeOpenAI } from "./lib/dnd-extract.ts";
+import { errorResponse } from "./lib/error-response.ts";
 import { allowedOrigins } from "./lib/origins.ts";
 import { clientIp, rateLimit } from "./lib/rate-limit.ts";
 import { persistenceRoutes } from "./persistence/routes.ts";
@@ -256,7 +258,20 @@ app.route("/api/dnd", dndCampaignRoutes);
 app.use("/api/bga/*", requireAuth, requireOnline);
 app.route("/api/bga", bgaSessionRoutes);
 
-app.use("/api/games/*", requireAuth);
+// Solo-game result/replay persistence. `game_results` carries no `user_id`, so
+// nothing in the row records who wrote it — which made this the one write path
+// where any authenticated member could push unbounded, unattributable rows into
+// production. The wire schema now caps a bulk request's record count; these two
+// bound the request itself. Reads stay unmetered.
+app.use(
+  "/api/games/*",
+  requireAuth,
+  bodyLimit({
+    maxSize: 4 * 1024 * 1024,
+    onError: (c) => errorResponse(c, 413, "Body too large", "PAYLOAD_TOO_LARGE"),
+  }),
+  rateLimit({ name: "game-results-write", windowMs: 60_000, max: 60, skipSafeMethods: true }),
+);
 app.route("/api/games", persistenceRoutes);
 
 // Issues a short-lived ticket for the cross-origin WebSocket handshake. The

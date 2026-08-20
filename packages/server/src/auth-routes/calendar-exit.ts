@@ -54,7 +54,7 @@ calendarExitRoutes.get("/exit", zQuery(ExitNightQuerySchema), async (c) => {
   const { date } = c.req.valid("query");
 
   const lockedRow = await getDb().execute({
-    sql: "SELECT expected_user_ids_json FROM locked_dates WHERE date_key = ? LIMIT 1",
+    sql: "SELECT expected_user_ids_json FROM locked_dates WHERE date_key = ? AND unlocked_at IS NULL LIMIT 1",
     args: [date],
   });
   if (lockedRow.rows.length === 0) {
@@ -140,7 +140,7 @@ calendarExitRoutes.post("/exit/vote", zJsonBody(ExitVoteBodySchema), async (c) =
   const { date, slug, on } = c.req.valid("json");
 
   const lockedRow = await getDb().execute({
-    sql: "SELECT 1 FROM locked_dates WHERE date_key = ? LIMIT 1",
+    sql: "SELECT 1 FROM locked_dates WHERE date_key = ? AND unlocked_at IS NULL LIMIT 1",
     args: [date],
   });
   if (lockedRow.rows.length === 0) {

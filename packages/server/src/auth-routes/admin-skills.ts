@@ -75,8 +75,8 @@ adminSkillsRoutes.get("/", async (c) => c.json(await buildState()));
 // response carries the candidate ranking for the admin to read first.
 
 adminSkillsRoutes.post("/recompute", async (c) => {
-  const state = await forceSkillRecompute();
-  if (!state) return errorResponse(c, 500, "recompute produced no state", "INTERNAL");
+  const snapshot = await forceSkillRecompute();
+  if (!snapshot) return errorResponse(c, 500, "recompute produced no state", "INTERNAL");
   const payload = await buildState();
   logActivity(c.get("user").id, "skill-recomputed", {
     matches: payload.matchesTotal,

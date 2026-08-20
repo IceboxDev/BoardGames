@@ -296,12 +296,12 @@ profileRoutes.get("/:userId", async (c) => {
     db.execute(userMatchesQuery({ userId })),
     db.execute({
       sql: `SELECT r.date_key FROM rsvps r
-              JOIN locked_dates l ON l.date_key = r.date_key
+              JOIN locked_dates l ON l.date_key = r.date_key AND l.unlocked_at IS NULL
               WHERE r.user_id = ? AND r.status = 'yes' AND r.date_key < ?`,
       args: [userId, today],
     }),
     db.execute({
-      sql: "SELECT date_key FROM locked_dates WHERE date_key < ?",
+      sql: "SELECT date_key FROM locked_dates WHERE date_key < ? AND unlocked_at IS NULL",
       args: [today],
     }),
     db.execute({

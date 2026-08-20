@@ -1,4 +1,5 @@
 import type { GameRecord } from "@boardgames/core/games/set/types";
+import { MAX_BULK_RESULT_RECORDS } from "@boardgames/core/protocol";
 import { apiUrl } from "../../../lib/api-base";
 
 const STORAGE_KEY = "set-game-history-v3";
@@ -52,22 +53,39 @@ export async function postGameRecordToServer(record: GameRecord): Promise<boolea
   }
 }
 
+/**
+ * Upload unsynced records, chunked to the server's per-request cap.
+ *
+ * The endpoint turns every record into one statement in a single
+ * `db.batch(..., "write")`, so the wire schema caps a request at
+ * `MAX_BULK_RESULT_RECORDS`. A long-running trainer accumulates more than that
+ * in localStorage, so chunk here rather than let a big backlog 400. Each chunk
+ * is independently idempotent (records carry a client `id`), so a mid-way
+ * failure just leaves the rest unsynced for the next attempt.
+ */
 export async function postBulkRecordsToServer(
   records: GameRecord[],
 ): Promise<{ inserted: number; skipped: number } | null> {
   if (records.length === 0) return { inserted: 0, skipped: 0 };
-  try {
-    const res = await fetch(url("/results/bulk"), {
-      ...credOpts,
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ records }),
-    });
-    if (!res.ok) return null;
-    return (await res.json()) as { inserted: number; skipped: number };
-  } catch {
-    return null;
+  const total = { inserted: 0, skipped: 0 };
+  for (let i = 0; i < records.length; i += MAX_BULK_RESULT_RECORDS) {
+    const chunk = records.slice(i, i + MAX_BULK_RESULT_RECORDS);
+    try {
+      const res = await fetch(url("/results/bulk"), {
+        ...credOpts,
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ records: chunk }),
+      });
+      if (!res.ok) return null;
+      const page = (await res.json()) as { inserted: number; skipped: number };
+      total.inserted += page.inserted;
+      total.skipped += page.skipped;
+    } catch {
+      return null;
+    }
   }
+  return total;
 }
 
 export async function fetchServerHistory(): Promise<GameRecord[]> {

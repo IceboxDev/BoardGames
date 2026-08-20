@@ -4,55 +4,47 @@ import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import {
   applyRsvpNoToAvailability,
+  fetchAllAvailabilityDays,
   fetchAllRsvpNoByUser,
   fetchAllRsvpYesByUser,
+  fetchAvailabilityDaysForUser,
   fetchRsvpNoDatesForUser,
   fetchRsvpYesDatesForUser,
   mergeRsvpYesIntoAvailability,
-  parseAvailabilityJson,
 } from "../lib/availability-merge.ts";
-import { parseRow, parseRows } from "../lib/db-rows.ts";
+import { parseRows } from "../lib/db-rows.ts";
 
 export const adminAvailabilityRoutes = adminApp();
 
+// Admin coverage views. Both used to read the legacy `user_availability` JSON
+// blob while the member-facing calendar read `user_availability_days`, so an
+// admin and a member could be looking at different answers to the same
+// question with nothing to reconcile them. Both now read the normalized table
+// through the shared helpers in `lib/availability-merge.ts`.
+
 // ── Row projections ───────────────────────────────────────────────────
-//
-// `availability_json` is read as a raw string and handed to
-// `parseAvailabilityJson` so per-entry leniency is preserved (a single
-// stray status value doesn't blank a user's whole calendar).
-
-const AvailabilityJsonOnlyRowSchema = z.object({
-  availability_json: z.string(),
-});
-
-const UserAvailabilityJoinedRowSchema = z.object({
-  user_id: z.string(),
-  availability_json: z.string(),
-  name: z.string().nullable(),
-  email: z.string().nullable(),
-});
 
 const UserNameEmailRowSchema = z.object({
+  id: z.string(),
   name: z.string().nullable(),
   email: z.string().nullable(),
 });
+
+/** Display name for the admin lists. Falls back to the email only as a last
+ *  resort — this is an admin-only surface, unlike the member-facing payloads. */
+function displayName(row: { name: string | null; email: string | null } | undefined): string {
+  return ((row?.name ?? "") || (row?.email ?? "") || "—").trim() || "—";
+}
 
 // ── Routes ────────────────────────────────────────────────────────────
 
 adminAvailabilityRoutes.get("/:id/availability", async (c) => {
   const userId = c.req.param("id");
-  const [{ rows }, rsvpYesDates, rsvpNoDates] = await Promise.all([
-    getDb().execute({
-      sql: "SELECT availability_json FROM user_availability WHERE user_id = ?",
-      args: [userId],
-    }),
+  const [stored, rsvpYesDates, rsvpNoDates] = await Promise.all([
+    fetchAvailabilityDaysForUser(getDb(), userId),
     fetchRsvpYesDatesForUser(getDb(), userId),
     fetchRsvpNoDatesForUser(getDb(), userId),
   ]);
-  const firstRow = rows[0]
-    ? parseRow(AvailabilityJsonOnlyRowSchema, rows[0], "user_availability")
-    : null;
-  const stored = parseAvailabilityJson(firstRow?.availability_json);
   const withYes = mergeRsvpYesIntoAvailability(stored, rsvpYesDates);
   const merged = applyRsvpNoToAvailability(withYes, rsvpNoDates);
   return c.json(AvailabilityMapSchema.parse(merged));
@@ -61,14 +53,11 @@ adminAvailabilityRoutes.get("/:id/availability", async (c) => {
 export const adminAvailabilityAllRoutes = adminApp();
 
 adminAvailabilityAllRoutes.get("/availability/all", async (c) => {
-  const [{ rows }, rsvpYesByUser, rsvpNoByUser] = await Promise.all([
-    getDb().execute(
-      `SELECT ua.user_id, ua.availability_json, u.name, u.email
-       FROM user_availability ua
-       JOIN user u ON u.id = ua.user_id`,
-    ),
-    fetchAllRsvpYesByUser(getDb()),
-    fetchAllRsvpNoByUser(getDb()),
+  const db = getDb();
+  const [availabilityByUser, rsvpYesByUser, rsvpNoByUser] = await Promise.all([
+    fetchAllAvailabilityDays(db),
+    fetchAllRsvpYesByUser(db),
+    fetchAllRsvpNoByUser(db),
   ]);
 
   // Build per-user, per-date status (can wins over maybe; rsvp:yes promotes
@@ -76,46 +65,53 @@ adminAvailabilityAllRoutes.get("/availability/all", async (c) => {
   // for the aggregate map. Walking user-by-user keeps the (userId, date)
   // dedupe natural — a person with both "can" and rsvp:yes still appears once.
   type Status = "can" | "maybe";
-  const perUser = new Map<
-    string,
-    { userId: string; name: string; statuses: Map<string, Status> }
-  >();
-  for (const row of parseRows(UserAvailabilityJoinedRowSchema, rows, "user_availability+user")) {
-    const name = ((row.name ?? "") || (row.email ?? "") || "—").trim() || "—";
-    const statuses = new Map<string, Status>();
-    const map = parseAvailabilityJson(row.availability_json);
-    for (const [date, status] of Object.entries(map)) statuses.set(date, status);
-    perUser.set(row.user_id, { userId: row.user_id, name, statuses });
-  }
-  for (const [userId, dates] of rsvpYesByUser) {
-    let entry = perUser.get(userId);
+  const statusesByUser = new Map<string, Map<string, Status>>();
+  const ensure = (userId: string) => {
+    let entry = statusesByUser.get(userId);
     if (!entry) {
-      // RSVP-yes without any availability row — fetch a display name. Rare
-      // but possible if the user RSVPed and never marked availability.
-      const userResult = await getDb().execute({
-        sql: "SELECT name, email FROM user WHERE id = ?",
-        args: [userId],
-      });
-      const r = userResult.rows[0]
-        ? parseRow(UserNameEmailRowSchema, userResult.rows[0], "user")
-        : null;
-      const name = ((r?.name ?? "") || (r?.email ?? "") || "—").trim() || "—";
-      entry = { userId, name, statuses: new Map() };
-      perUser.set(userId, entry);
+      entry = new Map<string, Status>();
+      statusesByUser.set(userId, entry);
     }
-    for (const date of dates) entry.statuses.set(date, "can");
+    return entry;
+  };
+
+  for (const [userId, map] of availabilityByUser) {
+    const statuses = ensure(userId);
+    for (const [date, status] of Object.entries(map)) statuses.set(date, status);
+  }
+  // An RSVP-yes with no availability row at all is normal (someone who RSVPed
+  // through the modal and never touched the calendar). This used to issue one
+  // `SELECT name, email FROM user WHERE id = ?` per such person, sequentially,
+  // inside the loop; names are now resolved in a single round trip below.
+  for (const [userId, dates] of rsvpYesByUser) {
+    const statuses = ensure(userId);
+    for (const date of dates) statuses.set(date, "can");
   }
   // RSVP-no wins last — it overrides both stored availability and any
   // yes promotion (which can't co-exist anyway given the rsvps PK, but
   // applying after keeps the override semantics unambiguous).
   for (const [userId, dates] of rsvpNoByUser) {
-    const entry = perUser.get(userId);
-    if (!entry) continue;
-    for (const date of dates) entry.statuses.delete(date);
+    const statuses = statusesByUser.get(userId);
+    if (!statuses) continue;
+    for (const date of dates) statuses.delete(date);
+  }
+
+  const userIds = [...statusesByUser.keys()];
+  const nameById = new Map<string, string>();
+  if (userIds.length > 0) {
+    const placeholders = userIds.map(() => "?").join(",");
+    const { rows } = await db.execute({
+      sql: `SELECT id, name, email FROM "user" WHERE id IN (${placeholders})`,
+      args: userIds,
+    });
+    for (const r of parseRows(UserNameEmailRowSchema, rows, "user.id-name-email")) {
+      nameById.set(r.id, displayName(r));
+    }
   }
 
   const aggregate: Record<string, Array<{ userId: string; name: string; status: string }>> = {};
-  for (const { userId, name, statuses } of perUser.values()) {
+  for (const [userId, statuses] of statusesByUser) {
+    const name = nameById.get(userId) ?? "—";
     for (const [date, status] of statuses) {
       let list = aggregate[date];
       if (!list) {

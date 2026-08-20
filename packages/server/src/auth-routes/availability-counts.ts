@@ -1,28 +1,22 @@
 import { AvailabilityCountsSchema } from "@boardgames/core/protocol";
-import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import {
+  fetchAllAvailabilityDays,
   fetchAllRsvpNoByUser,
   fetchAllRsvpYesByUser,
-  parseAvailabilityJson,
 } from "../lib/availability-merge.ts";
-import { parseRows } from "../lib/db-rows.ts";
 
 export const availabilityCountsRoutes = authedApp();
 
-/**
- * `SELECT user_id, availability_json FROM user_availability` — raw blob
- * handed to `parseAvailabilityJson` for per-entry leniency.
- */
-const UserAvailabilityRowSchema = z.object({
-  user_id: z.string(),
-  availability_json: z.string(),
-});
+// Calendar heat. This read the legacy `user_availability` JSON blob while the
+// calendar CELLS beside it (`/api/calendar/locks`) read
+// `user_availability_days` — two sources for the same fact, on the same screen.
+// Both now read the normalized table.
 
 availabilityCountsRoutes.get("/counts", async (c) => {
-  const [availabilityResult, rsvpYesByUser, rsvpNoByUser] = await Promise.all([
-    getDb().execute("SELECT user_id, availability_json FROM user_availability"),
+  const [availabilityByUser, rsvpYesByUser, rsvpNoByUser] = await Promise.all([
+    fetchAllAvailabilityDays(getDb()),
     fetchAllRsvpYesByUser(getDb()),
     fetchAllRsvpNoByUser(getDb()),
   ]);
@@ -41,15 +35,10 @@ availabilityCountsRoutes.get("/counts", async (c) => {
     set.add(userId);
   };
 
-  for (const row of parseRows(
-    UserAvailabilityRowSchema,
-    availabilityResult.rows,
-    "user_availability",
-  )) {
-    const map = parseAvailabilityJson(row.availability_json);
+  for (const [userId, map] of availabilityByUser) {
     for (const [date, status] of Object.entries(map)) {
-      if (status === "can") addTo(canByDate, date, row.user_id);
-      else if (status === "maybe") addTo(maybeByDate, date, row.user_id);
+      if (status === "can") addTo(canByDate, date, userId);
+      else if (status === "maybe") addTo(maybeByDate, date, userId);
     }
   }
 
