@@ -68,6 +68,12 @@ struct Params {
   // re-inject its exact columns and full solutions — guarantees the new run
   // can never rank below an already-found packing (monotonic upgrades).
   std::vector<std::string> warm;
+  // --library FILE: persistent, demand-agnostic column library. Loaded into
+  // the candidate pool at start (validated against the current shelf rules);
+  // at the end the union of old library + this run's discoveries is re-mined
+  // for coverage (best columns per box PAIR that touches, per single box,
+  // plus all emitted-solution columns) and written back. Compounds forever.
+  std::string library;
   // --pin-a NAME/GLOB (repeatable): these boxes may only stand in shelf A.
   std::vector<std::string> pinA;
   uint64_t pinAMask = 0;
@@ -1721,6 +1727,102 @@ struct WarmSol {
   std::vector<int> pA, pB;
 };
 
+/**
+ * Parse the bracketed cell list of one pile ("[a 180x57 d260 | b ... + c ...]
+ * [...]") starting at `from`, appending cells + the pile to shelf `S`.
+ * Returns the new pile index, or -1 (with no partial appends) on failure.
+ */
+static int parsePileBody(const std::string& line, size_t from, ShelfSet& S,
+                         const std::vector<Box>& boxes, const Params& p) {
+  auto boxIdx = [&](const std::string& name) {
+    for (size_t i = 0; i < boxes.size(); i++)
+      if (boxes[i].name == name) return (int)i;
+    return -1;
+  };
+  auto& cellsRef = S.cells;
+  size_t cellsBefore = cellsRef.size();
+  Pile pile;
+  std::vector<int> cellIdxs;
+  size_t pos = from;
+  bool bad = false;
+  while (!bad) {
+    size_t lb = line.find('[', pos);
+    if (lb == std::string::npos) break;
+    size_t rb = line.find(']', lb);
+    if (rb == std::string::npos) break;
+    std::string body = line.substr(lb + 1, rb - lb - 1);
+    pos = rb + 1;
+    Cell cell;
+    int xBase = 0, unit = 0;
+    size_t uStart = 0;
+    while (uStart <= body.size() && !bad) {
+      size_t uEnd = body.find(" | ", uStart);
+      std::string ub =
+          body.substr(uStart, uEnd == std::string::npos ? std::string::npos : uEnd - uStart);
+      int yOff = 0, unitW = 0, mStart = 0;
+      std::vector<Placement> ups;
+      while (mStart <= (int)ub.size() && !bad) {
+        size_t mEnd = ub.find(" + ", mStart);
+        std::string mb =
+            ub.substr(mStart, mEnd == std::string::npos ? std::string::npos : mEnd - mStart);
+        char nameBuf[96];
+        int fw, fh, d;
+        if (sscanf(mb.c_str(), "%95s %dx%d d%d", nameBuf, &fw, &fh, &d) != 4) {
+          bad = true;
+          break;
+        }
+        int b = boxIdx(nameBuf);
+        if (b < 0 || (cell.mask & (1ULL << b)) || (pile.mask & (1ULL << b))) {
+          bad = true;
+          break;
+        }
+        bool vert = fh > fw;
+        ups.push_back({b, fw, fh, d, 0, yOff, unit, vert});
+        cell.mask |= 1ULL << b;
+        cell.vol += boxes[b].vol;
+        cell.faceArea += (long long)fw * fh;
+        cell.depthSum += d;
+        cell.maxDepth = std::max(cell.maxDepth, d);
+        if (vert) cell.vertTop = std::max(cell.vertTop, yOff + fh);
+        yOff += fh;
+        unitW = std::max(unitW, fw);
+        if (mEnd == std::string::npos) break;
+        mStart = (int)mEnd + 3;
+      }
+      for (auto& pl : ups) {
+        pl.xOff = xBase;
+        if (pl.yOff > 0) pl.xOff = xBase + (unitW - pl.fw) / 2;
+        cell.boxes.push_back(pl);
+      }
+      cell.height = std::max(cell.height, yOff);
+      xBase += unitW;
+      unit++;
+      if (uEnd == std::string::npos) break;
+      uStart = uEnd + 3;
+    }
+    if (bad) break;
+    cell.width = xBase;
+    cellIdxs.push_back((int)cellsRef.size());
+    pile.mask |= cell.mask;
+    pile.height += cell.height;
+    pile.vol += cell.vol;
+    pile.depthSum += cell.depthSum;
+    pile.maxDepth = std::max(pile.maxDepth, cell.maxDepth);
+    pile.width = std::max(pile.width, cell.width);
+    cellsRef.push_back(std::move(cell));
+  }
+  if (bad || cellIdxs.empty()) {
+    cellsRef.resize(cellsBefore);
+    return -1;
+  }
+  for (int ci : cellIdxs)
+    pile.holes += (long long)pile.width * cellsRef[ci].height - cellsRef[ci].faceArea;
+  pile.holes += (long long)pile.width * std::max(0, p.heightBase - pile.height);
+  pile.cells = cellIdxs;
+  S.piles.push_back(std::move(pile));
+  return (int)S.piles.size() - 1;
+}
+
 static std::vector<WarmSol> loadWarm(const std::string& dir, ShelfSet sets[2],
                                      const std::vector<Box>& boxes, const Params& p) {
   std::vector<WarmSol> out;
@@ -1729,22 +1831,16 @@ static std::vector<WarmSol> loadWarm(const std::string& dir, ShelfSet sets[2],
     std::cerr << "warning: --warm " << dir << ": no solutions.txt\n";
     return out;
   }
-  auto boxIdx = [&](const std::string& name) {
-    for (size_t i = 0; i < boxes.size(); i++)
-      if (boxes[i].name == name) return (int)i;
-    return -1;
-  };
   std::string line;
   int shelf = -1;
   WarmSol cur;
-  bool open = false, solBad = false;
+  bool open = false;
   auto flush = [&]() {
-    if (open && !solBad && (!cur.pA.empty() || !cur.pB.empty())) out.push_back(cur);
+    if (open && (!cur.pA.empty() || !cur.pB.empty())) out.push_back(cur);
     cur = WarmSol{};
-    solBad = false;
   };
   while (std::getline(in, line)) {
-    if (line.rfind("\u2500\u2500 Solution", 0) == 0 || line.rfind("── Solution", 0) == 0) {
+    if (line.rfind("── Solution", 0) == 0) {
       flush();
       open = true;
       shelf = -1;
@@ -1756,93 +1852,135 @@ static std::vector<WarmSol> loadWarm(const std::string& dir, ShelfSet sets[2],
     if (!open || shelf < 0 || pilePos == std::string::npos) continue;
     size_t colon = line.find(':', pilePos);
     if (colon == std::string::npos) continue;
-    // Cells in [...]; units split by " | "; column members by " + ".
-    Pile pile;
-    std::vector<int> cellIdxs;
-    size_t pos = colon;
-    bool bad = false;
-    auto& cellsRef = sets[shelf].cells;
-    while (true) {
-      size_t lb = line.find('[', pos);
-      if (lb == std::string::npos) break;
-      size_t rb = line.find(']', lb);
-      if (rb == std::string::npos) break;
-      std::string body = line.substr(lb + 1, rb - lb - 1);
-      pos = rb + 1;
-      Cell cell;
-      int xBase = 0, unit = 0;
-      size_t uStart = 0;
-      while (uStart <= body.size() && !bad) {
-        size_t uEnd = body.find(" | ", uStart);
-        std::string ub = body.substr(uStart, uEnd == std::string::npos ? std::string::npos
-                                                                       : uEnd - uStart);
-        int yOff = 0, unitW = 0, mStart = 0;
-        std::vector<Placement> ups;
-        while (mStart <= (int)ub.size() && !bad) {
-          size_t mEnd = ub.find(" + ", mStart);
-          std::string mb = ub.substr(mStart, mEnd == std::string::npos ? std::string::npos
-                                                                       : mEnd - mStart);
-          // "name FWxFH dD"
-          char nameBuf[96];
-          int fw, fh, d;
-          if (sscanf(mb.c_str(), "%95s %dx%d d%d", nameBuf, &fw, &fh, &d) != 4) {
-            bad = true;
-            break;
-          }
-          int b = boxIdx(nameBuf);
-          if (b < 0 || (cell.mask & (1ULL << b))) {
-            bad = true;
-            break;
-          }
-          bool vert = fh > fw;
-          ups.push_back({b, fw, fh, d, 0, yOff, unit, vert});
-          cell.mask |= 1ULL << b;
-          cell.vol += boxes[b].vol;
-          cell.faceArea += (long long)fw * fh;
-          cell.depthSum += d;
-          cell.maxDepth = std::max(cell.maxDepth, d);
-          if (vert) cell.vertTop = std::max(cell.vertTop, yOff + fh);
-          yOff += fh;
-          unitW = std::max(unitW, fw);
-          if (mEnd == std::string::npos) break;
-          mStart = (int)mEnd + 3;
-        }
-        for (auto& pl : ups) {
-          pl.xOff = xBase + (unitW - pl.fw) / 2 * (pl.yOff > 0 ? 1 : 0);
-          if (pl.yOff == 0) pl.xOff = xBase;
-          cell.boxes.push_back(pl);
-        }
-        cell.height = std::max(cell.height, yOff);
-        xBase += unitW;
-        unit++;
-        if (uEnd == std::string::npos) break;
-        uStart = uEnd + 3;
-      }
-      if (bad) break;
-      cell.width = xBase;
-      cellIdxs.push_back((int)cellsRef.size());
-      pile.mask |= cell.mask;
-      pile.height += cell.height;
-      pile.vol += cell.vol;
-      pile.depthSum += cell.depthSum;
-      pile.maxDepth = std::max(pile.maxDepth, cell.maxDepth);
-      pile.width = std::max(pile.width, cell.width);
-      cellsRef.push_back(std::move(cell));
-    }
-    if (bad || cellIdxs.empty()) {
-      solBad = true;
-      continue;
-    }
-    for (int ci : cellIdxs)
-      pile.holes += (long long)pile.width * cellsRef[ci].height - cellsRef[ci].faceArea;
-    pile.holes += (long long)pile.width * std::max(0, p.heightBase - pile.height);
-    pile.cells = cellIdxs;
-    (shelf == 0 ? cur.pA : cur.pB).push_back((int)sets[shelf].piles.size());
-    sets[shelf].piles.push_back(std::move(pile));
+    int pi = parsePileBody(line, colon, sets[shelf], boxes, p);
+    if (pi >= 0) (shelf == 0 ? cur.pA : cur.pB).push_back(pi);
   }
   flush();
   std::cerr << "warm-start " << dir << ": " << out.size() << " solutions reloaded\n";
   return out;
+}
+
+// Canonical one-line form of a pile (cells in stored order) — the library's
+// unit of storage and its dedup key.
+static std::string pileLine(const Pile& pile, const std::vector<Cell>& cells,
+                            const std::vector<Box>& boxes, const Params& p) {
+  std::ostringstream os;
+  os << "L ws=" << p.widthSlack << " hs=" << p.heightSlack << " :";
+  for (int ci : pile.cells) {
+    const Cell& cell = cells[ci];
+    os << " [";
+    for (int u = 0; u < unitCountOf(cell); u++) {
+      if (u) os << " | ";
+      bool first = true;
+      for (const Placement& pl : cell.boxes) {
+        if (pl.unit != u) continue;
+        if (!first) os << " + ";
+        first = false;
+        os << boxes[pl.box].name << " " << pl.fw << "x" << pl.fh << " d" << pl.d;
+      }
+    }
+    os << "]";
+  }
+  return os.str();
+}
+
+static void loadLibrary(const std::string& file, ShelfSet sets[2], const std::vector<Box>& boxes,
+                        const Params& p) {
+  std::ifstream in(file);
+  if (!in) {
+    std::cerr << "library " << file << ": starting fresh\n";
+    return;
+  }
+  int loaded[2] = {0, 0};
+  std::string line;
+  while (std::getline(in, line)) {
+    if (line.rfind("L ", 0) != 0) continue;
+    int ws = 0, hs = 0;
+    if (sscanf(line.c_str(), "L ws=%d hs=%d", &ws, &hs) != 2) continue;
+    if (ws > p.widthSlack || hs > p.heightSlack) continue;  // built looser than allowed now
+    size_t colon = line.find(" :");
+    if (colon == std::string::npos) continue;
+    for (int sh = 0; sh < 2; sh++) {
+      size_t cellsBefore = sets[sh].cells.size();
+      int pi = parsePileBody(line, colon, sets[sh], boxes, p);
+      if (pi < 0) continue;
+      const Pile& pile = sets[sh].piles[pi];
+      int nl = (int)pile.cells.size();
+      bool ok = pile.maxDepth <= sets[sh].prm.depthMax &&
+                pile.height + nl * p.tolPerBox >= p.heightBase - p.heightSlack &&
+                pile.height - nl * p.tolPerBox <= p.maxHeight() &&
+                !(sh == 1 && (pile.mask & p.pinAMask));
+      if (!ok) {
+        sets[sh].piles.pop_back();
+        sets[sh].cells.resize(cellsBefore);
+      } else {
+        loaded[sh]++;
+      }
+    }
+  }
+  std::cerr << "library " << file << ": " << loaded[0] << " columns for shelf A, " << loaded[1]
+            << " for shelf B\n";
+}
+
+/**
+ * Re-mine the union of everything this run knows (generated + warm + library
+ * piles on both shelves) into a curated library: the cleanest columns per
+ * TOUCHING BOX PAIR (settled geometry, so any future "these two must touch"
+ * demand has ready blocks), per single box, plus every emitted-solution
+ * column. Written fresh — the library is self-maintaining, never hoards.
+ */
+static void saveLibrary(const std::string& file, ShelfSet sets[2], const std::vector<Box>& boxes,
+                        const Params& p, const std::vector<std::string>& emittedLines) {
+  struct Cand {
+    int sh, pi;
+    double density;
+  };
+  std::vector<Cand> cands;
+  for (int sh = 0; sh < 2; sh++)
+    for (size_t i = 0; i < sets[sh].piles.size(); i++) {
+      const Pile& pile = sets[sh].piles[i];
+      cands.push_back({sh, (int)i, (double)pile.holes / std::max(1, pile.width)});
+    }
+  std::stable_sort(cands.begin(), cands.end(),
+                   [](const Cand& a, const Cand& b) { return a.density < b.density; });
+  std::map<std::pair<int, int>, int> pairCount;
+  std::vector<int> boxCount(64, 0);
+  std::set<std::string> lines(emittedLines.begin(), emittedLines.end());
+  for (const Cand& cd : cands) {
+    const Pile& pile = sets[cd.sh].piles[cd.pi];
+    const auto& cells = sets[cd.sh].cells;
+    // Settled contact pairs of this column.
+    std::vector<PlacedRect> lo;
+    std::function<std::vector<int>(int)> unitOrder = [&](int ci) {
+      return identityUnitOrder(cells[ci]);
+    };
+    emitPile(pile, cells, cellOrderByHeight(pile, cells, p.heightBase), unitOrder, 0, pile.width,
+             lo);
+    settleLayout(lo);
+    bool needed = false;
+    for (size_t i = 0; i < lo.size() && !needed; i++)
+      if (boxCount[lo[i].box] < 10) needed = true;
+    for (size_t i = 0; i < lo.size() && !needed; i++)
+      for (size_t j = i + 1; j < lo.size() && !needed; j++) {
+        if (!touches(lo[i], lo[j])) continue;
+        auto key = std::minmax(lo[i].box, lo[j].box);
+        if (pairCount[{key.first, key.second}] < 3) needed = true;
+      }
+    if (!needed) continue;
+    for (size_t i = 0; i < lo.size(); i++) {
+      boxCount[lo[i].box]++;
+      for (size_t j = i + 1; j < lo.size(); j++) {
+        if (!touches(lo[i], lo[j])) continue;
+        auto key = std::minmax(lo[i].box, lo[j].box);
+        pairCount[{key.first, key.second}]++;
+      }
+    }
+    lines.insert(pileLine(pile, cells, boxes, p));
+  }
+  std::ofstream outf(file);
+  outf << "# shelf-packer column library (auto-curated; do not edit by hand)\n";
+  for (const std::string& l : lines) outf << l << "\n";
+  std::cerr << "library " << file << ": " << lines.size() << " columns saved\n";
 }
 
 static int runFillAll(const std::vector<Box>& boxes, Params& p) {
@@ -2122,6 +2260,7 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
   std::vector<WarmSol> warmSols;
   for (const std::string& dir : p.warm)
     for (WarmSol& ws : loadWarm(dir, sets, boxes, p)) warmSols.push_back(std::move(ws));
+  if (!p.library.empty()) loadLibrary(p.library, sets, boxes, p);
 
   if (p.pilesOnly) return 0;
   uint64_t allMask = boxes.size() >= 64 ? ~0ULL : ((1ULL << boxes.size()) - 1);
@@ -2363,6 +2502,14 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
     }
     if (emitted >= p.solutions) break;
   }
+  if (!p.library.empty()) {
+    std::vector<std::string> emittedLines;
+    for (Evald& e : evald)
+      for (int sh = 0; sh < 2; sh++)
+        for (int pi : e.shelfSol[sh].piles)
+          emittedLines.push_back(pileLine(sets[sh].piles[pi], sets[sh].cells, boxes, p));
+    saveLibrary(p.library, sets, boxes, p, emittedLines);
+  }
   extern long long gArrangeFail, gFailVert, gFailClusterIdx[8];
   if (gArrangeFail) {
     std::cerr << gArrangeFail << " complete packings dropped: cluster arrangement failed\n";
@@ -2402,6 +2549,7 @@ int main(int argc, char** argv) {
     } else if (a == "--fill-all") p.fillAll = true;
     else if (a == "--piles-only") p.pilesOnly = true;
     else if (a == "--warm") p.warm.push_back(argv[++i]);
+    else if (a == "--library") p.library = argv[++i];
     else if (a == "--width-slack") next(p.widthSlack);
     else if (a == "--height-slack") next(p.heightSlack);
     else if (a == "--vert-inside") p.vertInside = true;
