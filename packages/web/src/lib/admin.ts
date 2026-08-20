@@ -6,11 +6,14 @@ import {
   AdminNightGuestBodySchema,
   type AdminResetLinkResponse,
   AdminResetLinkResponseSchema,
+  type AdminSkillStateResponse,
+  AdminSkillStateResponseSchema,
   MergeGuestBodySchema,
   type MergeGuestResponse,
   MergeGuestResponseSchema,
   OkResponseSchema,
   type OnlineMode,
+  PublishGreetingBodySchema,
   SetOnlineModeBodySchema,
 } from "@boardgames/core/protocol";
 import { apiFetch } from "./api-fetch.ts";
@@ -86,5 +89,40 @@ export async function adminFetchActivity(
   return apiFetch(`/api/admin/users/${userId}/activity${query}`, {
     response: ActivityLogResponseSchema,
     signal,
+  });
+}
+
+// ── Skill ratings ─────────────────────────────────────────────────────
+//
+// Ratings only move when an admin asks them to, so all four calls return the
+// SAME state shape — the card re-renders from one payload after every action
+// instead of stitching together partial responses.
+
+export async function fetchAdminSkillState(signal?: AbortSignal): Promise<AdminSkillStateResponse> {
+  return apiFetch("/api/admin/skills", { response: AdminSkillStateResponseSchema, signal });
+}
+
+export async function adminRecomputeSkills(): Promise<AdminSkillStateResponse> {
+  return apiFetch("/api/admin/skills/recompute", {
+    method: "POST",
+    response: AdminSkillStateResponseSchema,
+  });
+}
+
+/** Publish one candidate as the group-wide spotlight. */
+export async function adminPublishGreeting(candidateKey: string): Promise<AdminSkillStateResponse> {
+  return apiFetch("/api/admin/skills/greeting", {
+    method: "POST",
+    request: PublishGreetingBodySchema,
+    body: { candidateKey },
+    response: AdminSkillStateResponseSchema,
+  });
+}
+
+/** Pull a published spotlight. Members who already dismissed it are unaffected. */
+export async function adminRetractGreeting(id: number): Promise<void> {
+  await apiFetch(`/api/admin/skills/greeting/${id}/retract`, {
+    method: "POST",
+    response: OkResponseSchema,
   });
 }

@@ -5,6 +5,7 @@ import { resolveGame } from "../../../lib/games-by-slug.ts";
 import { reportPageView } from "../../../lib/page-views.ts";
 import { ChevronDownIcon } from "../../icons";
 import { Badge } from "../../ui/Badge.tsx";
+import { toBoardRows } from "./board-rows.ts";
 import { LeaderboardList, type LeaderboardRow } from "./LeaderboardList.tsx";
 import { ordinal } from "./trait-copy.ts";
 
@@ -14,13 +15,7 @@ import { ordinal } from "./trait-copy.ts";
 
 function gameBoardRows(boards: SkillLeaderboardsResponse, slug: string): LeaderboardRow[] {
   const board = boards.games.find((b) => b.slug === slug);
-  return (board?.entries ?? []).map((e) => ({
-    userId: e.userId,
-    name: boards.players[e.userId]?.name ?? "Unknown player",
-    image: boards.players[e.userId]?.image ?? null,
-    rank: e.rank,
-    value: `${e.matches} games`,
-  }));
+  return toBoardRows(board?.entries ?? [], boards.players, (e) => `${e.matches} games`);
 }
 
 function rankTone(rank: number): "amber" | "orange" | "neutral" {

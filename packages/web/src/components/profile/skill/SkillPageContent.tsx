@@ -5,6 +5,7 @@ import type {
   SkillLeaderboardsResponse,
 } from "@boardgames/core/protocol";
 import type { ReactNode } from "react";
+import { formatRelativeTime } from "../../../lib/date-format.ts";
 import { SparkleIcon, StarIcon, TrophyIcon } from "../../icons";
 import { MicroLabel } from "../../ui/Label.tsx";
 import { Section } from "../../ui/Section.tsx";
@@ -210,6 +211,17 @@ export function SkillPageContent({
           )}
         </Stack>
       </div>
+
+      {/*
+        Ratings only move when an admin recomputes after a game night — so say
+        when that last happened. Without this line, "I won last night and my
+        score didn't move" reads as a bug instead of a schedule.
+      */}
+      {boards?.computedAt && (
+        <p className="text-center text-3xs text-fg-muted">
+          Ratings last updated {formatRelativeTime(boards.computedAt)}
+        </p>
+      )}
     </>
   );
 }

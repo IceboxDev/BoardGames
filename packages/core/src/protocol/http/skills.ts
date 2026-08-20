@@ -181,9 +181,17 @@ export const SkillPlayerRefSchema = z.object({
   name: z.string().min(1),
   image: z.string().nullable(),
 });
+export type SkillPlayerRef = z.infer<typeof SkillPlayerRefSchema>;
 
 export const SkillLeaderboardsResponseSchema = z.object({
   eligibleCount: z.number().int().min(0),
+  /**
+   * When the fit these boards come from was last run — SQLite
+   * `datetime('now')`, UTC, "YYYY-MM-DD HH:MM:SS". Ratings only move when an
+   * admin recomputes, so surfaces MUST show this: without it, "I won last
+   * night and nothing changed" reads as a bug rather than a schedule.
+   */
+  computedAt: z.string().min(1).nullable(),
   /** Only traits whose board cleared the exposure/count gates. */
   traits: z.array(TraitBoardSchema),
   games: z.array(GameBoardSchema),
@@ -192,14 +200,145 @@ export const SkillLeaderboardsResponseSchema = z.object({
 });
 export type SkillLeaderboardsResponse = z.infer<typeof SkillLeaderboardsResponseSchema>;
 
-// ── GET /api/skills/intro + POST /api/skills/intro-ack ─────────────────
+// ── Spotlights ─────────────────────────────────────────────────────────
+//
+// A spotlight is group news about one member's best move since the previous
+// rating run. Everything here is a RANK fact, checkable against the boards the
+// hall of fame renders — never a raw rating, and never framed as someone else
+// losing ground.
 
-export const SkillIntroResponseSchema = z.object({
-  /** True when the viewer is ranked and has not acknowledged the intro yet. */
-  show: z.boolean(),
-  /** Their best-axis headline fact; null whenever `show` is false. */
-  highlight: SkillHighlightSchema.nullable(),
+export const SpotlightEventSchema = z.discriminatedUnion("kind", [
+  z.object({
+    kind: z.literal("trait-climb"),
+    trait: SkillTraitIdSchema,
+    /** Null when they weren't on this board before. */
+    from: z.number().int().min(1).nullable(),
+    to: z.number().int().min(1),
+    fieldSize: z.number().int().min(1),
+  }),
+  z.object({
+    kind: z.literal("game-climb"),
+    slug: GameSlugStringSchema,
+    from: z.number().int().min(1).nullable(),
+    to: z.number().int().min(1),
+    fieldSize: z.number().int().min(1),
+  }),
+  z.object({
+    kind: z.literal("profile-unlocked"),
+    ratedMatches: z.number().int().min(0),
+    distinctGames: z.number().int().min(0),
+  }),
+  z.object({ kind: z.literal("streak-lead"), length: z.number().int().min(2) }),
+]);
+export type SpotlightEvent = z.infer<typeof SpotlightEventSchema>;
+
+export const SpotlightRunnerUpSchema = z.object({
+  userId: z.string().min(1),
+  event: SpotlightEventSchema,
 });
-export type SkillIntroResponse = z.infer<typeof SkillIntroResponseSchema>;
 
-export const SkillIntroAckResponseSchema = z.object({ ok: z.literal(true) });
+/**
+ * The board as it stood when the spotlight was published — the top few rows
+ * plus the subject's own. Snapshotted rather than looked up live, so a card
+ * published on Tuesday still shows the standing it was celebrating after
+ * Thursday's recompute moves everyone again. The heading is NOT stored: the
+ * client already resolves trait labels and game titles from the event.
+ */
+export const SpotlightProofSchema = z.object({
+  rows: z
+    .array(
+      z.object({
+        userId: z.string().min(1),
+        rank: z.number().int().min(1),
+        /** Pre-formatted right-hand value (a score, or "6×" plays). */
+        value: z.string(),
+      }),
+    )
+    .min(1),
+});
+
+export const SpotlightPayloadSchema = z.object({
+  event: SpotlightEventSchema,
+  runnersUp: z.array(SpotlightRunnerUpSchema).max(2),
+  proof: SpotlightProofSchema.nullable(),
+});
+export type SpotlightPayload = z.infer<typeof SpotlightPayloadSchema>;
+
+// ── GET /api/skills/greeting + POST /api/skills/greeting/ack ───────────
+//
+// One queue for every celebratory takeover the app can show, so exactly one
+// can be pending at a time and the client never has to arbitrate. The intro
+// outranks a spotlight: being told what a Planning leader IS has to come
+// before being told who the new one is.
+
+export const GreetingSchema = z.discriminatedUnion("kind", [
+  z.object({
+    kind: z.literal("skill-intro"),
+    /** The viewer's own headline fact. */
+    highlight: SkillHighlightSchema,
+  }),
+  z.object({
+    kind: z.literal("spotlight"),
+    id: z.number().int().positive(),
+    subjectUserId: z.string().min(1),
+    payload: SpotlightPayloadSchema,
+  }),
+]);
+export type Greeting = z.infer<typeof GreetingSchema>;
+
+export const GreetingResponseSchema = z.object({
+  /** Null when the viewer has nothing pending. */
+  greeting: GreetingSchema.nullable(),
+  /** Side-car name/image map for every userId the greeting references. */
+  players: z.record(z.string(), SkillPlayerRefSchema),
+});
+export type GreetingResponse = z.infer<typeof GreetingResponseSchema>;
+
+export const GreetingAckBodySchema = z.discriminatedUnion("kind", [
+  z.object({ kind: z.literal("skill-intro") }),
+  z.object({ kind: z.literal("spotlight"), id: z.number().int().positive() }),
+]);
+export type GreetingAckBody = z.infer<typeof GreetingAckBodySchema>;
+
+export const GreetingAckResponseSchema = z.object({ ok: z.literal(true) });
+
+// ── Admin: /api/admin/skills ───────────────────────────────────────────
+
+export const SpotlightCandidateSchema = z.object({
+  /** Stable id — what the admin publishes by. */
+  key: z.string().min(1),
+  subjectUserId: z.string().min(1),
+  event: SpotlightEventSchema,
+  score: z.number(),
+});
+export type SpotlightCandidate = z.infer<typeof SpotlightCandidateSchema>;
+
+export const PublishedGreetingSchema = z.object({
+  id: z.number().int().positive(),
+  createdAt: z.string().min(1),
+  subjectUserId: z.string().min(1),
+  payload: SpotlightPayloadSchema,
+  /** How many members have dismissed it. */
+  seenBy: z.number().int().min(0),
+});
+
+export const AdminSkillStateResponseSchema = z.object({
+  /** SQLite `datetime('now')`; null before the first run. */
+  computedAt: z.string().min(1).nullable(),
+  baselineComputedAt: z.string().min(1).nullable(),
+  configVersion: z.number().int().nullable(),
+  /** True when matches were recorded or edited since the last run. */
+  stale: z.boolean(),
+  matchesTotal: z.number().int().min(0),
+  matchesChangedSince: z.number().int().min(0),
+  eligibleCount: z.number().int().min(0),
+  /** Ranked best-first; empty when nothing moved or there is no baseline. */
+  candidates: z.array(SpotlightCandidateSchema),
+  /** The spotlight currently showing to the group, if any. */
+  live: PublishedGreetingSchema.nullable(),
+  players: z.record(z.string(), SkillPlayerRefSchema),
+});
+export type AdminSkillStateResponse = z.infer<typeof AdminSkillStateResponseSchema>;
+
+export const PublishGreetingBodySchema = z.object({ candidateKey: z.string().min(1) });
+export type PublishGreetingBody = z.infer<typeof PublishGreetingBodySchema>;

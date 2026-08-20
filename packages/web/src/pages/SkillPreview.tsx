@@ -1,10 +1,13 @@
 import type {
+  AdminSkillStateResponse,
   PlayerSkillResponse,
   ProfileMatchSummaryItem,
   SkillLeaderboardsResponse,
+  SpotlightPayload,
 } from "@boardgames/core/protocol";
 import { MotionGlobalConfig } from "framer-motion";
 import type { CSSProperties } from "react";
+import { SkillRatingsCardView } from "../components/admin/SkillRatingsCard.tsx";
 import { HexSkillChart } from "../components/profile/HexSkillChart.tsx";
 import { SkillIntroModalView } from "../components/profile/skill/SkillIntroModal.tsx";
 import {
@@ -12,6 +15,7 @@ import {
   SkillPageContent,
   SkillProgressCard,
 } from "../components/profile/skill/SkillPageContent.tsx";
+import { SpotlightModalView } from "../components/profile/skill/SpotlightModal.tsx";
 import { PageHeader } from "../components/ui/PageHeader.tsx";
 import { PageMain, PageShell } from "../components/ui/PageShell.tsx";
 import { Stack } from "../components/ui/Stack.tsx";
@@ -126,6 +130,7 @@ const board = (trait: "int" | "pln" | "soc", order: string[]) => ({
 
 const BOARDS: SkillLeaderboardsResponse = {
   eligibleCount: 11,
+  computedAt: "2026-08-19 21:04:11",
   traits: [
     board("int", ["u1", "u5", "u3", "u2", "u4", "u6"]),
     board("pln", ["u2", "u1", "u4", "u3", "u5", "u6"]),
@@ -150,6 +155,117 @@ const BOARDS: SkillLeaderboardsResponse = {
       ],
     },
   ],
+  players: PLAYERS,
+};
+
+// One fixture per spotlight event kind, so every arm of the card (podium
+// emblem, trait glyph, game cover art, no-board fallback) is screenshottable.
+const SPOTLIGHTS: Record<string, SpotlightPayload> = {
+  crown: {
+    event: { kind: "trait-climb", trait: "pln", from: 4, to: 1, fieldSize: 6 },
+    runnersUp: [
+      {
+        userId: "u4",
+        event: { kind: "game-climb", slug: "7-wonders", from: 3, to: 2, fieldSize: 3 },
+      },
+      { userId: "u6", event: { kind: "profile-unlocked", ratedMatches: 9, distinctGames: 3 } },
+    ],
+    proof: {
+      rows: [
+        { userId: "u2", rank: 1, value: "88" },
+        { userId: "u1", rank: 2, value: "81" },
+        { userId: "u4", rank: 3, value: "74" },
+      ],
+    },
+  },
+  climb: {
+    event: { kind: "trait-climb", trait: "per", from: 6, to: 4, fieldSize: 6 },
+    runnersUp: [{ userId: "u5", event: { kind: "streak-lead", length: 4 } }],
+    proof: {
+      rows: [
+        { userId: "u2", rank: 1, value: "88" },
+        { userId: "u1", rank: 2, value: "81" },
+        { userId: "u4", rank: 3, value: "74" },
+        { userId: "u3", rank: 4, value: "66" },
+      ],
+    },
+  },
+  game: {
+    event: { kind: "game-climb", slug: "blood-on-the-clocktower", from: 2, to: 1, fieldSize: 4 },
+    runnersUp: [],
+    proof: {
+      rows: [
+        { userId: "u5", rank: 1, value: "8×" },
+        { userId: "u6", rank: 2, value: "7×" },
+        { userId: "u3", rank: 3, value: "7×" },
+      ],
+    },
+  },
+  unlock: {
+    event: { kind: "profile-unlocked", ratedMatches: 9, distinctGames: 3 },
+    runnersUp: [
+      { userId: "u1", event: { kind: "trait-climb", trait: "int", from: 2, to: 1, fieldSize: 6 } },
+    ],
+    proof: null,
+  },
+  streak: {
+    event: { kind: "streak-lead", length: 5 },
+    runnersUp: [],
+    proof: null,
+  },
+};
+
+const SPOTLIGHT_SUBJECT: Record<string, string> = {
+  crown: "u2",
+  climb: "u3",
+  game: "u5",
+  unlock: "u6",
+  streak: "u4",
+};
+
+// The admin card, mid-decision: a recompute has produced four candidates and
+// an earlier spotlight is still on show.
+const ADMIN_STATE: AdminSkillStateResponse = {
+  computedAt: "2026-08-19 21:04:11",
+  baselineComputedAt: "2026-08-12 20:41:03",
+  configVersion: 5,
+  stale: true,
+  matchesTotal: 92,
+  matchesChangedSince: 6,
+  eligibleCount: 11,
+  candidates: [
+    {
+      key: "game-climb:blood-on-the-clocktower:u5",
+      subjectUserId: "u5",
+      event: { kind: "game-climb", slug: "blood-on-the-clocktower", from: 3, to: 1, fieldSize: 9 },
+      score: 96,
+    },
+    {
+      key: "profile-unlocked:u6",
+      subjectUserId: "u6",
+      event: { kind: "profile-unlocked", ratedMatches: 10, distinctGames: 5 },
+      score: 90,
+    },
+    {
+      key: "trait-climb:pln:u2",
+      subjectUserId: "u2",
+      event: { kind: "trait-climb", trait: "pln", from: 4, to: 1, fieldSize: 6 },
+      score: 87,
+    },
+    {
+      key: "trait-climb:soph:u3",
+      subjectUserId: "u3",
+      event: { kind: "trait-climb", trait: "soph", from: 7, to: 6, fieldSize: 9 },
+      score: 17,
+    },
+  ],
+  live: {
+    id: 4,
+    createdAt: "2026-08-13 09:12:44",
+    subjectUserId: "u4",
+    payload: { event: { kind: "streak-lead", length: 5 }, runnersUp: [], proof: null },
+    seenBy: 7,
+  },
   players: PLAYERS,
 };
 
@@ -241,16 +357,44 @@ export default function SkillPreview() {
     );
   }
 
-  const style = { "--accent": params.get("accent") ?? DEFAULT_ACCENT } as CSSProperties;
+  const accent = params.get("accent") ?? DEFAULT_ACCENT;
+  const style = { "--accent": accent } as CSSProperties;
 
   return (
     <PageShell>
       <PageMain width="6xl" padding="spacious">
         <Stack gap="lg" style={style}>
-          {view === "intro" || view === "intro-game" ? (
+          {view === "admin" ? (
+            <SkillRatingsCardView
+              state={ADMIN_STATE}
+              expanded
+              onToggle={() => {}}
+              onRecompute={() => {}}
+              onPublish={() => {}}
+              onRetract={() => {}}
+              notice="Ratings refreshed — 4 moves worth announcing."
+            />
+          ) : view === "spotlight" ? (
+            (() => {
+              const kind = params.get("event") ?? "crown";
+              const subjectId = SPOTLIGHT_SUBJECT[kind] ?? "u2";
+              return (
+                <SpotlightModalView
+                  payload={SPOTLIGHTS[kind] ?? SPOTLIGHTS.crown}
+                  subjectUserId={subjectId}
+                  // ?voice=you renders it as the subject sees it.
+                  viewerId={params.get("voice") === "you" ? subjectId : "u1"}
+                  players={PLAYERS}
+                  accentHex={accent}
+                  onDismiss={() => {}}
+                  onCta={() => {}}
+                />
+              );
+            })()
+          ) : view === "intro" || view === "intro-game" ? (
             <SkillIntroModalView
               firstName={view === "intro-game" ? "Riccardo" : "Mantas"}
-              accentHex={DEFAULT_ACCENT}
+              accentHex={accent}
               highlight={
                 view === "intro-game"
                   ? { kind: "game-first", slug: "blood-on-the-clocktower", matches: 8 }
@@ -295,7 +439,7 @@ export default function SkillPreview() {
                 skill={claimSummary ? { ...RANKED, highlights: [], games: [] } : RANKED}
                 boards={BOARDS}
                 summaryItems={claimSummary ?? SUMMARY}
-                accentHex={params.get("accent") ?? DEFAULT_ACCENT}
+                accentHex={accent}
                 previewOpen={params.get("open") === "1"}
               />
             </>

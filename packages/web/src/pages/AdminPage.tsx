@@ -9,6 +9,7 @@ import {
   GuestPlayersCard,
   PreRegisterCard,
   ResetLinkModal,
+  SkillRatingsCard,
   UserRow,
   UsersTable,
 } from "../components/admin";
@@ -209,6 +210,7 @@ export default function AdminPage() {
 
         <PreRegisterCard />
         <AnnouncementsCard />
+        <SkillRatingsCard />
         <GuestPlayersCard
           guests={guests}
           members={users}

@@ -1,9 +1,11 @@
 import {
+  type GreetingAckBody,
+  GreetingAckBodySchema,
+  GreetingAckResponseSchema,
+  type GreetingResponse,
+  GreetingResponseSchema,
   type PlayerSkillResponse,
   PlayerSkillResponseSchema,
-  SkillIntroAckResponseSchema,
-  type SkillIntroResponse,
-  SkillIntroResponseSchema,
   type SkillLeaderboardsResponse,
   SkillLeaderboardsResponseSchema,
 } from "@boardgames/core/protocol";
@@ -28,13 +30,16 @@ export async function fetchSkillLeaderboards(
   });
 }
 
-export async function fetchSkillIntro(signal?: AbortSignal): Promise<SkillIntroResponse> {
-  return apiFetch("/api/skills/intro", { response: SkillIntroResponseSchema, signal });
+/** The one celebratory takeover this viewer still owes a look at, if any. */
+export async function fetchGreeting(signal?: AbortSignal): Promise<GreetingResponse> {
+  return apiFetch("/api/skills/greeting", { response: GreetingResponseSchema, signal });
 }
 
-export async function ackSkillIntro(): Promise<void> {
-  await apiFetch("/api/skills/intro-ack", {
+export async function ackGreeting(body: GreetingAckBody): Promise<void> {
+  await apiFetch("/api/skills/greeting/ack", {
     method: "POST",
-    response: SkillIntroAckResponseSchema,
+    request: GreetingAckBodySchema,
+    body,
+    response: GreetingAckResponseSchema,
   });
 }

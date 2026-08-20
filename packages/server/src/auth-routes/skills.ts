@@ -1,52 +1,29 @@
-// Skill-rating endpoints — leaderboards, per-player detail, and the one-time
-// intro card. Mounted at `/api/skills` behind requireAuth + requireOffline
-// (same gate as profiles: every offline member sees every profile, and the
-// hall of fame is club-public in the same sense).
+// Skill-rating endpoints — leaderboards, per-player detail, and the greeting
+// queue. Mounted at `/api/skills` behind requireAuth + requireOffline (same
+// gate as profiles: every offline member sees every profile, and the hall of
+// fame is group-public in the same sense).
 //
 // All numbers are pre-derived by the recompute service (`lib/skill-ratings`)
 // from the stored fit; these handlers only slice the state and join display
 // names. Clients must never re-derive ranks or percentiles.
 
 import {
+  GreetingAckBodySchema,
+  GreetingAckResponseSchema,
+  GreetingResponseSchema,
   PlayerSkillResponseSchema,
-  SkillIntroAckResponseSchema,
-  SkillIntroResponseSchema,
   SkillLeaderboardsResponseSchema,
 } from "@boardgames/core/protocol";
-import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
-import { parseRows } from "../lib/db-rows.ts";
-import { errorResponse } from "../lib/error-response.ts";
+import { errorResponse, zJsonBody } from "../lib/error-response.ts";
+import { nextGreetingFor } from "../lib/greetings.ts";
 import { unratedPayload } from "../lib/skill-payload.ts";
-import { ensureSkillState, introHighlightFor } from "../lib/skill-ratings.ts";
+import { ensureSkillState, skillComputedAt } from "../lib/skill-ratings.ts";
+import { greetingUserIds } from "../lib/spotlight-payload.ts";
+import { playerRefs } from "../lib/user-refs.ts";
 
 export const skillsRoutes = authedApp();
-
-const NameRowSchema = z.object({
-  id: z.string(),
-  name: z.string(),
-  image: z.string().nullable(),
-});
-
-const IntroRowSchema = z.object({ skill_intro_seen_at: z.string().nullable() });
-
-async function playerRefs(
-  ids: ReadonlySet<string>,
-): Promise<Record<string, { name: string; image: string | null }>> {
-  if (ids.size === 0) return {};
-  const list = [...ids];
-  const placeholders = list.map(() => "?").join(",");
-  const { rows } = await getDb().execute({
-    sql: `SELECT id, name, image FROM user WHERE id IN (${placeholders})`,
-    args: list,
-  });
-  const out: Record<string, { name: string; image: string | null }> = {};
-  for (const r of parseRows(NameRowSchema, rows, "user.skill-refs")) {
-    out[r.id] = { name: r.name, image: r.image };
-  }
-  return out;
-}
 
 // ── GET /api/skills/leaderboards ───────────────────────────────────────
 
@@ -61,6 +38,7 @@ skillsRoutes.get("/leaderboards", async (c) => {
   return c.json(
     SkillLeaderboardsResponseSchema.parse({
       eligibleCount: state.eligibleCount,
+      computedAt: await skillComputedAt(),
       traits: state.leaderboards.traits,
       games: state.leaderboards.games,
       players: await playerRefs(ids),
@@ -82,39 +60,44 @@ skillsRoutes.get("/players/:userId", async (c) => {
   return c.json(PlayerSkillResponseSchema.parse(state.players[userId] ?? unratedPayload(userId)));
 });
 
-// ── GET /api/skills/intro ──────────────────────────────────────────────
+// ── GET /api/skills/greeting ───────────────────────────────────────────
 
-skillsRoutes.get("/intro", async (c) => {
+skillsRoutes.get("/greeting", async (c) => {
   const viewer = c.get("user");
-  const state = await ensureSkillState();
-  const player = state?.players[viewer.id];
-  if (!state || !player?.eligibility.eligible) {
-    return c.json(SkillIntroResponseSchema.parse({ show: false, highlight: null }));
-  }
-  const { rows } = await getDb().execute({
-    sql: "SELECT skill_intro_seen_at FROM user_profiles WHERE user_id = ? LIMIT 1",
-    args: [viewer.id],
-  });
-  const seen =
-    rows.length > 0 &&
-    parseRows(IntroRowSchema, rows, "user_profiles.skill-intro")[0].skill_intro_seen_at !== null;
+  const greeting = await nextGreetingFor(viewer.id, await ensureSkillState());
   return c.json(
-    SkillIntroResponseSchema.parse({
-      show: !seen,
-      highlight: seen ? null : introHighlightFor(state, viewer.id),
+    GreetingResponseSchema.parse({
+      greeting,
+      players: await playerRefs(greetingUserIds(greeting)),
     }),
   );
 });
 
-// ── POST /api/skills/intro-ack ─────────────────────────────────────────
+// ── POST /api/skills/greeting/ack ──────────────────────────────────────
+//
+// Acknowledging is idempotent and monotonic in both arms: the intro keeps its
+// first timestamp, and the seen id only ever moves forward, so a stale tab
+// acking an older spotlight can't re-open a newer one.
 
-skillsRoutes.post("/intro-ack", async (c) => {
+skillsRoutes.post("/greeting/ack", zJsonBody(GreetingAckBodySchema), async (c) => {
   const viewer = c.get("user");
-  await getDb().execute({
-    sql: `INSERT INTO user_profiles (user_id, skill_intro_seen_at, updated_at)
-          VALUES (?, datetime('now'), datetime('now'))
-          ON CONFLICT(user_id) DO UPDATE SET skill_intro_seen_at = COALESCE(user_profiles.skill_intro_seen_at, excluded.skill_intro_seen_at)`,
-    args: [viewer.id],
-  });
-  return c.json(SkillIntroAckResponseSchema.parse({ ok: true }));
+  const body = c.req.valid("json");
+  await getDb().execute(
+    body.kind === "skill-intro"
+      ? {
+          sql: `INSERT INTO user_profiles (user_id, skill_intro_seen_at, updated_at)
+                VALUES (?, datetime('now'), datetime('now'))
+                ON CONFLICT(user_id) DO UPDATE SET
+                  skill_intro_seen_at = COALESCE(user_profiles.skill_intro_seen_at, excluded.skill_intro_seen_at)`,
+          args: [viewer.id],
+        }
+      : {
+          sql: `INSERT INTO user_profiles (user_id, greeting_seen_id, updated_at)
+                VALUES (?, ?, datetime('now'))
+                ON CONFLICT(user_id) DO UPDATE SET
+                  greeting_seen_id = MAX(COALESCE(user_profiles.greeting_seen_id, 0), excluded.greeting_seen_id)`,
+          args: [viewer.id, body.id],
+        },
+  );
+  return c.json(GreetingAckResponseSchema.parse({ ok: true }));
 });

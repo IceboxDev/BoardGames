@@ -38,6 +38,7 @@ import { ownershipAnnouncements } from "./0030-ownership-announcements.ts";
 import { collectionContainers } from "./0031-collection-containers.ts";
 import { collectionExtraBoxes } from "./0032-collection-extra-boxes.ts";
 import { skillRatings } from "./0033-skill-ratings.ts";
+import { skillGreetings } from "./0034-skill-greetings.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -74,6 +75,7 @@ export const migrations: readonly Migration[] = [
   collectionContainers,
   collectionExtraBoxes,
   skillRatings,
+  skillGreetings,
 ];
 
 /**

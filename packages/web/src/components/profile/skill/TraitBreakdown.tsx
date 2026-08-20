@@ -7,6 +7,7 @@ import { useState } from "react";
 import { cn } from "../../../lib/cn.ts";
 import { reportPageView } from "../../../lib/page-views.ts";
 import { ChevronDownIcon } from "../../icons";
+import { toBoardRows } from "./board-rows.ts";
 import { LeaderboardList, type LeaderboardRow } from "./LeaderboardList.tsx";
 import { TraitIcon } from "./TraitIcon.tsx";
 import { TRAIT_COPY } from "./trait-copy.ts";
@@ -17,13 +18,7 @@ import { TRAIT_COPY } from "./trait-copy.ts";
 
 function traitBoardRows(boards: SkillLeaderboardsResponse, trait: SkillTraitId): LeaderboardRow[] {
   const board = boards.traits.find((b) => b.trait === trait);
-  return (board?.entries ?? []).map((e) => ({
-    userId: e.userId,
-    name: boards.players[e.userId]?.name ?? "Unknown player",
-    image: boards.players[e.userId]?.image ?? null,
-    rank: e.rank,
-    value: String(e.score),
-  }));
+  return toBoardRows(board?.entries ?? [], boards.players, (e) => String(e.score));
 }
 
 export function TraitBreakdown({

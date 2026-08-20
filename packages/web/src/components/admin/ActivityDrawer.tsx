@@ -461,6 +461,21 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
         ? `Restored ${slug} to owned`
         : `Marked ${slug} played through`;
     }
+    case "skill-recomputed": {
+      const ranked = num(meta.ranked);
+      const candidates = num(meta.candidates);
+      const moved =
+        candidates === undefined
+          ? ""
+          : candidates === 0
+            ? ", nothing moved"
+            : `, ${candidates} move${candidates === 1 ? "" : "s"} to announce`;
+      return `Recomputed skill ratings${ranked === undefined ? "" : ` (${ranked} ranked)`}${moved}`;
+    }
+    case "greeting-published":
+      return `Published a spotlight${targetName ? ` about ${targetName}` : ""}`;
+    case "greeting-retracted":
+      return "Retracted the group spotlight";
     default:
       // Unknown/future event kinds still render a readable line.
       return type.replace(/-/g, " ");
@@ -501,6 +516,8 @@ function describePageView(meta: Record<string, unknown>, nameById: Map<string, s
       return `Viewed ${owner} stats / hall-of-fame page`;
     case "skill-intro":
       return "Was greeted by the skill-profiles intro";
+    case "skill-spotlight":
+      return "Was shown the group spotlight";
     case "skill-board": {
       // Detail is a trait id (trait boards) or a game slug (game boards).
       const traitNames: Record<string, string> = {
@@ -545,6 +562,10 @@ function dotClass(type: string): string {
     case "match-recorded":
     case "match-deleted":
       return "bg-teal-400/70";
+    case "skill-recomputed":
+    case "greeting-published":
+    case "greeting-retracted":
+      return "bg-cyan-400/70";
     case "ownership-announced":
     case "ownership-resolved":
     case "ownership-removed":

@@ -1,11 +1,14 @@
 import { describe, expect, it } from "vitest";
 import {
+  GreetingAckBodySchema,
+  GreetingResponseSchema,
   PlayerSkillResponseSchema,
   SKILL_TRAIT_IDS,
   SKILL_TRAITS,
-  SkillIntroResponseSchema,
   SkillLeaderboardsResponseSchema,
   SkillWeightsSchema,
+  SpotlightEventSchema,
+  SpotlightPayloadSchema,
 } from "./skills.ts";
 
 describe("SkillWeightsSchema", () => {
@@ -92,6 +95,7 @@ describe("SkillLeaderboardsResponseSchema", () => {
   it("parses boards with a side-car player map", () => {
     const parsed = SkillLeaderboardsResponseSchema.parse({
       eligibleCount: 12,
+      computedAt: "2026-08-19 21:04:11",
       traits: [{ trait: "soc", entries: [{ userId: "u1", rank: 1, percentile: 95.8, score: 78 }] }],
       games: [{ slug: "durak", entries: [{ userId: "u1", rank: 1, matches: 4 }] }],
       players: { u1: { name: "Ada", image: null } },
@@ -102,6 +106,7 @@ describe("SkillLeaderboardsResponseSchema", () => {
   it("rejects an empty board", () => {
     const r = SkillLeaderboardsResponseSchema.safeParse({
       eligibleCount: 0,
+      computedAt: null,
       traits: [{ trait: "soc", entries: [] }],
       games: [],
       players: {},
@@ -110,15 +115,75 @@ describe("SkillLeaderboardsResponseSchema", () => {
   });
 });
 
-describe("SkillIntroResponseSchema", () => {
-  it("parses show/highlight pairs", () => {
-    expect(
-      SkillIntroResponseSchema.parse({
-        show: true,
-        highlight: { kind: "trait-first", trait: "per" },
-      }).show,
-    ).toBe(true);
-    expect(SkillIntroResponseSchema.parse({ show: false, highlight: null }).highlight).toBeNull();
+describe("GreetingResponseSchema", () => {
+  const proof = {
+    rows: [
+      { userId: "u1", rank: 1, value: "78" },
+      { userId: "u2", rank: 2, value: "71" },
+    ],
+  };
+
+  it("parses the intro arm", () => {
+    const parsed = GreetingResponseSchema.parse({
+      greeting: { kind: "skill-intro", highlight: { kind: "trait-first", trait: "per" } },
+      players: {},
+    });
+    expect(parsed.greeting?.kind).toBe("skill-intro");
+  });
+
+  it("parses a spotlight with runners-up and a proof board", () => {
+    const parsed = GreetingResponseSchema.parse({
+      greeting: {
+        kind: "spotlight",
+        id: 7,
+        subjectUserId: "u1",
+        payload: {
+          event: { kind: "trait-climb", trait: "pln", from: 4, to: 1, fieldSize: 12 },
+          runnersUp: [{ userId: "u2", event: { kind: "streak-lead", length: 4 } }],
+          proof,
+        },
+      },
+      players: { u1: { name: "Ada", image: null } },
+    });
+    expect(parsed.greeting).toMatchObject({ kind: "spotlight", id: 7 });
+  });
+
+  it("accepts an empty queue", () => {
+    expect(GreetingResponseSchema.parse({ greeting: null, players: {} }).greeting).toBeNull();
+  });
+
+  it("rejects a third runner-up", () => {
+    const runnerUp = { userId: "u2", event: { kind: "streak-lead", length: 4 } };
+    const r = SpotlightPayloadSchema.safeParse({
+      event: { kind: "profile-unlocked", ratedMatches: 9, distinctGames: 3 },
+      runnersUp: [runnerUp, runnerUp, runnerUp],
+      proof: null,
+    });
+    expect(r.success).toBe(false);
+  });
+
+  it("rejects an unknown spotlight event kind", () => {
+    const r = SpotlightEventSchema.safeParse({ kind: "vibes", trait: "int" });
+    expect(r.success).toBe(false);
+  });
+
+  it("rejects a rank of zero", () => {
+    const r = SpotlightEventSchema.safeParse({
+      kind: "game-climb",
+      slug: "durak",
+      from: null,
+      to: 0,
+      fieldSize: 5,
+    });
+    expect(r.success).toBe(false);
+  });
+});
+
+describe("GreetingAckBodySchema", () => {
+  it("requires an id for a spotlight ack but not for the intro", () => {
+    expect(GreetingAckBodySchema.parse({ kind: "skill-intro" }).kind).toBe("skill-intro");
+    expect(GreetingAckBodySchema.safeParse({ kind: "spotlight" }).success).toBe(false);
+    expect(GreetingAckBodySchema.safeParse({ kind: "spotlight", id: 3 }).success).toBe(true);
   });
 });
 

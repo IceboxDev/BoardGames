@@ -5,6 +5,7 @@
 // with each other. Results are NEVER re-derived from outcomes (the server did
 // that once); this module only counts and slices.
 
+import { type StreakInfo, type StreakResult, streakInfo } from "@boardgames/core/history/streaks";
 import type { ProfileMatchSummaryItem } from "@boardgames/core/protocol";
 import { isPointlessFreeForAll } from "../../../games/score-config.ts";
 
@@ -103,37 +104,21 @@ export function recordCounts(items: readonly ProfileMatchSummaryItem[]): RecordC
   };
 }
 
-export interface StreakInfo {
-  /** The live run of consecutive wins or losses; null when none (e.g. a draw
-   *  just broke it, or no decisive results yet). */
-  current: { type: "win" | "loss"; length: number } | null;
-  /** Longest win run ever. */
-  bestWin: number;
-}
+export type { StreakInfo } from "@boardgames/core/history/streaks";
 
 /**
  * Streaks over decisive results in chronological order. Draws BREAK streaks
  * (a run of wins ends on a draw); moderator/scored/ongoing plays are
- * transparent — they neither extend nor break a run.
+ * transparent — they neither extend nor break a run. The fold itself lives in
+ * core so a "five straight" on this page and a "five straight" in a spotlight
+ * greeting are the same five.
  */
 export function streaks(items: readonly ProfileMatchSummaryItem[]): StreakInfo {
   const decisive = [...items]
     .reverse() // chronological
-    .filter((i) => i.result === "win" || i.result === "loss" || i.result === "draw");
-
-  let bestWin = 0;
-  let run: { type: "win" | "loss"; length: number } | null = null;
-  for (const item of decisive) {
-    if (item.result !== "win" && item.result !== "loss") {
-      // Only draws reach here (pre-filtered above) — they reset the run.
-      run = null;
-      continue;
-    }
-    const type = item.result;
-    run = run && run.type === type ? { type, length: run.length + 1 } : { type, length: 1 };
-    if (type === "win" && run.length > bestWin) bestWin = run.length;
-  }
-  return { current: run, bestWin };
+    .map((i) => i.result)
+    .filter((r): r is StreakResult => r === "win" || r === "loss" || r === "draw");
+  return streakInfo(decisive);
 }
 
 export type FormResult = "win" | "placed" | "loss" | "draw";

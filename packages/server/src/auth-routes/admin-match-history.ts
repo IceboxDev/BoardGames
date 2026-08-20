@@ -12,7 +12,6 @@ import {
   newestMatchId,
   participantSyncStatements,
 } from "../lib/match-participants.ts";
-import { triggerSkillRecompute } from "../lib/skill-ratings.ts";
 import { MatchResultRowSchema, rowToMatchRecord } from "./match-history.ts";
 import {
   collectUserIds,
@@ -265,9 +264,10 @@ adminMatchHistoryRoutes.post("/", async (c) => {
     gameTitle,
     ...(dateKey ? { date: dateKey } : {}),
   });
-  // Recompute ratings after the campaign back-fill lands, so the fit never
-  // reads a half-written history. Fire-and-forget like the back-fill itself.
-  resolveCampaignSessions(gameSlug, outcome).finally(() => triggerSkillRecompute());
+  // Ratings are NOT recomputed here. Recording a ten-game night would run ten
+  // full fits, and the admin's Recompute button wants one before/after per
+  // night anyway — see `lib/skill-ratings.ts`.
+  void resolveCampaignSessions(gameSlug, outcome);
   const record = await fetchAndShape(insertedId);
   return c.json(record);
 });
@@ -327,7 +327,7 @@ adminMatchHistoryRoutes.patch("/:id{[0-9]+}", async (c) => {
     "write",
   );
   if (result.rowsAffected === 0) return c.json({ error: "not found" }, 404);
-  resolveCampaignSessions(gameSlug, outcome).finally(() => triggerSkillRecompute());
+  void resolveCampaignSessions(gameSlug, outcome);
   const record = await fetchAndShape(id);
   return c.json(record);
 });
@@ -346,7 +346,6 @@ adminMatchHistoryRoutes.delete("/:id{[0-9]+}", async (c) => {
   );
   if (result.rowsAffected === 0) return c.json({ error: "not found" }, 404);
   logActivity(c.get("user").id, "match-deleted", { matchId: id });
-  triggerSkillRecompute();
   return c.json({ ok: true });
 });
 

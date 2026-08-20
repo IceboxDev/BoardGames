@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRightIcon, LockIcon, UserIcon, UsersIcon } from "../components/icons";
 import CalendarSyncCard from "../components/profile/CalendarSyncCard";
 import CalendarSyncModal from "../components/profile/CalendarSyncModal";
-import SkillIntroModal from "../components/profile/skill/SkillIntroModal";
+import GreetingHost from "../components/profile/skill/GreetingHost";
 import { TopNav, TopNavLink } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
 import { InteractiveCard } from "../components/ui/InteractiveCard";
@@ -88,7 +88,7 @@ export default function ProfilePage() {
           </div>
         )}
 
-        {profilesVisible && userId && <SkillIntroModal userId={userId} />}
+        {profilesVisible && userId && <GreetingHost userId={userId} />}
 
         <CalendarSyncCard onClick={() => setSyncModalOpen(true)} />
 

@@ -36,9 +36,10 @@ try {
   await markStaleRunning();
   await markStaleProcessingCampaigns();
   await markStaleProcessingCharacters();
-  // Skill ratings self-heal at boot: a deploy that changed the engine config,
-  // catalog weights, or slipped past a mutation trigger recomputes here, so
-  // profile hex charts are fresh without waiting for a skills-route hit.
+  // Skill ratings self-heal at boot when the ENGINE moved — a deploy that
+  // changed the config version or a catalog weight vector refits here, so the
+  // hex charts never render numbers this build's maths disowns. A history
+  // change does not: that waits for the admin's Recompute button.
   triggerSkillRecompute();
 } catch (err) {
   console.error("[boot] initialisation failed — refusing to start:", err);

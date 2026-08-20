@@ -23,6 +23,7 @@ import { adminMergeGuestRoutes } from "./auth-routes/admin-merge-guest.ts";
 import { adminOnlineRoutes } from "./auth-routes/admin-online.ts";
 import { adminPasswordResetRoutes } from "./auth-routes/admin-password-reset.ts";
 import { adminPendingInventoryRoutes } from "./auth-routes/admin-pending-inventory.ts";
+import { adminSkillsRoutes } from "./auth-routes/admin-skills.ts";
 import { announcementRoutes } from "./auth-routes/announcements.ts";
 import { availabilityCountsRoutes } from "./auth-routes/availability-counts.ts";
 import { avatarRoutes } from "./auth-routes/avatar.ts";
@@ -173,6 +174,7 @@ app.route("/api/admin", adminPendingInventoryRoutes);
 app.route("/api/admin", adminAnnouncementRoutes);
 app.route("/api/admin/calendar", adminCalendarLocksRoutes);
 app.route("/api/admin/history", adminMatchHistoryRoutes);
+app.route("/api/admin/skills", adminSkillsRoutes);
 
 // --- Protected: any logged-in user ---
 app.use("/api/user/*", requireAuth);
