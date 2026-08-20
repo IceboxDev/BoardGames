@@ -1,5 +1,6 @@
 import { lazy } from "react";
 import type { PlayableModule } from "../types";
+import backgroundImage from "./assets/background.png";
 
 // Not a server-run game (yet) — the Storyteller companion is a purely
 // client-side Grimoire that runs the physical table game. The mode picker
@@ -7,6 +8,7 @@ import type { PlayableModule } from "../types";
 // until online rooms are implemented. No server-side machine exists for this
 // slug — see the D&D tool for the same pattern.
 export default {
+  backgroundImage,
   component: lazy(() => import("./ClocktowerGame")),
   mode: "remote",
   soloLabel: "Companion",

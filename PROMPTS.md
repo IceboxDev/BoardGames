@@ -978,6 +978,14 @@ These images are used as fixed full-viewport backgrounds behind the game UI. The
 
 ---
 
+## 10. Blood on the Clocktower (Storyteller Companion) — Background
+
+**File:** `packages/web/src/games/blood-on-the-clocktower/assets/background.png`
+
+> A moody, atmospheric view of a fog-bound Victorian town square at the dead of night, seen from above at a steep angle — the Storyteller's vantage. A wide ring of empty wooden chairs circles the lower third of the frame, their backs catching faint candlelight, the cobblestones between them slick with mist and barely visible through shadow. At the periphery, warm amber gas-lamps burn low along shuttered storefronts, and a single guttering candle on a lectern at the frame's edge spills light across a closed leather Grimoire, its brass clasps and satin ribbon glinting; a scatter of face-down character tokens lies blurred beside it, their art unreadable. Above the frame's upper edge, the crooked silhouette of the clocktower rises through the fog, its face a dim moonlit disc with the hands frozen just shy of midnight; a lone crow hunches on a wrought-iron lamp arm, and thin ribbons of mist curl between the chair legs. The center of the image is deep shadow and near-black — the empty heart of the circle where the town will gather, only the faintest sheen of wet cobblestone catching the lamplight. The mood is conspiratorial hush — a town asleep, an evil already among them, the first night about to begin. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. The scene should feel like ambient environmental art — more mood than detail. Soft painterly textures with film grain. Volumetric haze and warm rim lighting from below. The center must remain dark enough (near-black) to serve as a backdrop for white UI text. No text, no logos, no UI elements, no readable clock numerals or token faces. Landscape 3:2 aspect ratio (1536×1024).
+
+---
+
 Game-specific card/role prompts live alongside each game:
 
 - **Lost Cities card art** (60 cards): [`packages/web/src/games/lost-cities/CARD-PROMPTS.md`](packages/web/src/games/lost-cities/CARD-PROMPTS.md)
