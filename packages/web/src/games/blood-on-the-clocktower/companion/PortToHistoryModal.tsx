@@ -152,30 +152,44 @@ export default function PortToHistoryModal({
                 </Select>
               </div>
             ))}
-            {state.storyteller && (
-              <div className="flex min-h-11 items-center gap-2 border-t border-white/10 pt-1.5">
-                <span className="min-w-0 flex-1 truncate text-sm">
-                  <span className="text-fg-primary">{state.storyteller}</span>{" "}
-                  <span className="text-xs text-amber-300">Storyteller</span>
-                </span>
-                <Select
-                  aria-label={`Account for Storyteller ${state.storyteller}`}
-                  block={false}
-                  size="sm"
-                  value={resolvedStoryteller}
-                  onChange={(e) => setStorytellerId(e.target.value)}
-                  className="w-40 shrink-0"
-                >
-                  <option value={NOBODY}>— not recorded</option>
-                  {users.map((u) => (
-                    <option key={u.id} value={u.id}>
-                      {u.name}
-                    </option>
-                  ))}
-                </Select>
-              </div>
-            )}
+            {/* Always shown — even when nobody was marked DM during setup,
+                the Storyteller can still be attached to the match here. */}
+            <div className="flex min-h-11 items-center gap-2 border-t border-white/10 pt-1.5">
+              <span className="min-w-0 flex-1 truncate text-sm">
+                {state.storyteller ? (
+                  <>
+                    <span className="text-fg-primary">{state.storyteller}</span>{" "}
+                    <span className="text-xs text-amber-300">Storyteller</span>
+                  </>
+                ) : (
+                  <span className="text-amber-300">Storyteller</span>
+                )}
+              </span>
+              <Select
+                aria-label="Account for the Storyteller"
+                block={false}
+                size="sm"
+                value={resolvedStoryteller}
+                onChange={(e) => setStorytellerId(e.target.value)}
+                className="w-40 shrink-0"
+              >
+                <option value={NOBODY}>— not recorded</option>
+                {users.map((u) => (
+                  <option key={u.id} value={u.id}>
+                    {u.name}
+                  </option>
+                ))}
+              </Select>
+            </div>
           </div>
+
+          {resolvedStoryteller === NOBODY && (
+            <p className="text-xs font-semibold text-amber-200">
+              {state.storyteller
+                ? `${state.storyteller} ran this game but isn't matched to an account — the match will record no Storyteller.`
+                : "No Storyteller picked — the match will record nobody as running the game."}
+            </p>
+          )}
 
           {hasDuplicates && (
             <p className="text-xs font-semibold text-rose-300">

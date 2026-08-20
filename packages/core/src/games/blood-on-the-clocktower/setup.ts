@@ -7,7 +7,7 @@
 // deal one character per seat. All randomness goes through an injected `rng`
 // so tests are deterministic.
 
-import type { CharacterId, Edition } from "./characters.ts";
+import type { CharacterId, CharacterType, Edition } from "./characters.ts";
 import { CHARACTERS, charactersOfType } from "./characters.ts";
 
 export const MIN_PLAYERS = 5;
@@ -363,6 +363,290 @@ export function dealBag(
       { charactersInPlay, believedCharacter: believed, skill: demonSkill, edition },
       rng,
     ),
+  };
+}
+
+// ── Editing a rolled bag ──────────────────────────────────────────────
+// Storyteller adjustments after the roll: swap one character, change the
+// Drunk's stand-in, or seat a late arrival — all without re-rolling the
+// bag the ST has already physically prepared.
+
+/** Rebuild the physical tokens from the in-play characters (Drunk → stand-in). */
+function bagTokensFor(
+  charactersInPlay: CharacterId[],
+  believed: CharacterId | undefined,
+): CharacterId[] {
+  return charactersInPlay.map((id) => (id === "drunk" && believed ? believed : id));
+}
+
+/** Re-roll the demon bluffs only when a bag edit made a current bluff illegal. */
+function freshenedBluffs(
+  bag: Pick<BagSetup, "edition" | "demonBluffs">,
+  charactersInPlay: CharacterId[],
+  believed: CharacterId | undefined,
+  skill: DemonSkill,
+  rng: () => number,
+): CharacterId[] {
+  const inPlay = new Set(charactersInPlay);
+  const stale = bag.demonBluffs.some((b) => inPlay.has(b) || b === believed);
+  if (!stale) return bag.demonBluffs;
+  return chooseDemonBluffs(
+    { charactersInPlay, believedCharacter: believed, skill, edition: bag.edition },
+    rng,
+  );
+}
+
+/**
+ * The characters `oldChar` (in play) may be swapped for without re-rolling:
+ * same type, not already in play. Empty for the Baron and the Godfather —
+ * their orange-flower adjustments change the bag's TYPE COUNTS on the way in
+ * or out, so swapping them means rolling a fresh bag, not editing one token.
+ * (They're excluded as swap TARGETS for the same reason.)
+ */
+export function bagCharacterReplacements(bag: BagSetup, oldChar: CharacterId): CharacterId[] {
+  if (!bag.charactersInPlay.includes(oldChar)) return [];
+  if (oldChar === "baron" || oldChar === "godfather") return [];
+  const inPlay = new Set(bag.charactersInPlay);
+  return charactersOfType(CHARACTERS[oldChar].type, bag.edition)
+    .map((c) => c.id)
+    .filter(
+      (id) =>
+        !inPlay.has(id) && id !== bag.believedCharacter && id !== "baron" && id !== "godfather",
+    );
+}
+
+/**
+ * Swap one in-play character for a same-type replacement, keeping the rest of
+ * the bag. Handles the edge bookkeeping: the Drunk in (roll a stand-in) or
+ * out (retire it), the Lunatic in (they believe they're the current Demon) or
+ * out, a Demon swap (the Lunatic's believed Demon follows), and demon bluffs
+ * re-rolled only if the swap made one illegal.
+ */
+export function replaceCharacterInBag(
+  bag: BagSetup,
+  oldChar: CharacterId,
+  newChar: CharacterId,
+  opts: { rng?: () => number; demonSkill?: DemonSkill } = {},
+): BagSetup {
+  const rng = opts.rng ?? Math.random;
+  if (!bagCharacterReplacements(bag, oldChar).includes(newChar)) {
+    throw new Error(`cannot swap ${oldChar} for ${newChar}`);
+  }
+  const charactersInPlay = bag.charactersInPlay.map((id) => (id === oldChar ? newChar : id));
+
+  let believed = oldChar === "drunk" ? undefined : bag.believedCharacter;
+  if (newChar === "drunk") {
+    // Prefer a stand-in that doesn't stomp a current bluff, so the bluffs
+    // survive the swap unchanged whenever possible.
+    const inPlay = new Set(charactersInPlay);
+    const open = charactersOfType("townsfolk", bag.edition)
+      .map((c) => c.id)
+      .filter((id) => !inPlay.has(id));
+    const quiet = open.filter((id) => !bag.demonBluffs.includes(id));
+    believed = draw(quiet.length > 0 ? quiet : open, 1, rng)[0];
+    if (believed === undefined) throw new Error("no Townsfolk left for the Drunk's stand-in");
+  }
+
+  let lunaticDemon = oldChar === "lunatic" ? undefined : bag.lunaticDemon;
+  if (newChar === "lunatic") {
+    lunaticDemon = charactersInPlay.find((id) => CHARACTERS[id].type === "demon");
+  }
+  if (lunaticDemon !== undefined && CHARACTERS[oldChar].type === "demon") lunaticDemon = newChar;
+
+  return {
+    edition: bag.edition,
+    charactersInPlay,
+    bagTokens: bagTokensFor(charactersInPlay, believed),
+    ...(believed !== undefined ? { believedCharacter: believed } : {}),
+    ...(lunaticDemon !== undefined ? { lunaticDemon } : {}),
+    ...(bag.godfatherAdjustment !== undefined
+      ? { godfatherAdjustment: bag.godfatherAdjustment }
+      : {}),
+    distribution: bag.distribution,
+    demonBluffs: freshenedBluffs(bag, charactersInPlay, believed, opts.demonSkill ?? "new", rng),
+  };
+}
+
+/** Not-in-play Townsfolk the Drunk's stand-in token could become instead. */
+export function drunkStandInOptions(bag: BagSetup): CharacterId[] {
+  if (bag.believedCharacter === undefined) return [];
+  const inPlay = new Set(bag.charactersInPlay);
+  return charactersOfType("townsfolk", bag.edition)
+    .map((c) => c.id)
+    .filter((id) => !inPlay.has(id) && id !== bag.believedCharacter);
+}
+
+/** Change which Townsfolk token the Drunk draws; the Drunk stays in play. */
+export function replaceDrunkStandIn(
+  bag: BagSetup,
+  newStandIn: CharacterId,
+  opts: { rng?: () => number; demonSkill?: DemonSkill } = {},
+): BagSetup {
+  if (!drunkStandInOptions(bag).includes(newStandIn)) {
+    throw new Error(`${newStandIn} cannot be the Drunk's stand-in`);
+  }
+  return {
+    ...bag,
+    believedCharacter: newStandIn,
+    bagTokens: bagTokensFor(bag.charactersInPlay, newStandIn),
+    demonBluffs: freshenedBluffs(
+      bag,
+      bag.charactersInPlay,
+      newStandIn,
+      opts.demonSkill ?? "new",
+      opts.rng ?? Math.random,
+    ),
+  };
+}
+
+/**
+ * Grow a rolled bag by one resident (a late arrival who insists on a real
+ * token rather than joining as a Traveller). The setup sheet's distribution
+ * is NOT monotonic (6→7 players trades the Outsider for two Townsfolk), so
+ * this recomputes the target counts — keeping the Baron's +2 and the
+ * Godfather's ±1 where they still fit — and adjusts with the fewest possible
+ * swaps: surplus characters come out (preferring ones whose token nobody has
+ * drawn yet, via `avoidRemoving`), missing ones are drawn in at random.
+ * Auto-added characters never include the Baron, Godfather, Drunk, or
+ * Lunatic — each rewrites the setup on arrival; the ST can still swap one in
+ * deliberately afterwards. Returns the physical instructions alongside the
+ * new bag: which tokens to add and which to fish back out.
+ */
+export function addResidentToBag(
+  bag: BagSetup,
+  opts: {
+    rng?: () => number;
+    demonSkill?: DemonSkill;
+    /** Characters whose tokens are already in players' hands. */
+    avoidRemoving?: CharacterId[];
+  } = {},
+): {
+  bag: BagSetup;
+  added: CharacterId[];
+  removed: CharacterId[];
+  droppedGodfatherAdjustment: boolean;
+} {
+  const rng = opts.rng ?? Math.random;
+  const count = bag.bagTokens.length;
+  if (count >= MAX_PLAYERS) throw new Error(`the game seats at most ${MAX_PLAYERS} players`);
+
+  const outsiderPool = charactersOfType("outsider", bag.edition).map((c) => c.id);
+  let target = baseDistribution(count + 1);
+  if (bag.charactersInPlay.includes("baron")) target = baronAdjusted(target);
+  let droppedGodfatherAdjustment = false;
+  if (bag.godfatherAdjustment !== undefined) {
+    const adjusted = {
+      ...target,
+      townsfolk: target.townsfolk - bag.godfatherAdjustment,
+      outsiders: target.outsiders + bag.godfatherAdjustment,
+    };
+    if (
+      adjusted.outsiders >= 0 &&
+      adjusted.outsiders <= outsiderPool.length &&
+      adjusted.townsfolk >= 1
+    ) {
+      target = adjusted;
+    } else {
+      droppedGodfatherAdjustment = true;
+    }
+  }
+
+  const current: Distribution = { townsfolk: 0, outsiders: 0, minions: 0, demons: 0 };
+  for (const id of bag.charactersInPlay) {
+    const t = CHARACTERS[id].type;
+    if (t === "townsfolk") current.townsfolk++;
+    else if (t === "outsider") current.outsiders++;
+    else if (t === "minion") current.minions++;
+    else current.demons++;
+  }
+
+  const avoid = new Set(opts.avoidRemoving ?? []);
+  let inPlay = [...bag.charactersInPlay];
+  const added: CharacterId[] = [];
+  const removed: CharacterId[] = [];
+
+  function removeSome(type: CharacterType, n: number) {
+    const candidates = inPlay.filter((id) => CHARACTERS[id].type === type);
+    const toRemove = [
+      ...shuffled(
+        candidates.filter((id) => !avoid.has(id)),
+        rng,
+      ),
+      ...shuffled(
+        candidates.filter((id) => avoid.has(id)),
+        rng,
+      ),
+    ].slice(0, n);
+    inPlay = inPlay.filter((id) => !toRemove.includes(id));
+    removed.push(...toRemove);
+  }
+
+  // `soft` exclusions (Drunk, Lunatic) are avoided but allowed as a last
+  // resort when the pool runs dry — the bookkeeping below completes them.
+  // Baron/Godfather stay hard-excluded everywhere: their setup adjustments
+  // can't be applied to an already-rolled bag.
+  function addSome(type: CharacterType, n: number, soft: readonly CharacterId[]) {
+    const inSet = new Set(inPlay);
+    const open = charactersOfType(type, bag.edition)
+      .map((c) => c.id)
+      .filter(
+        (id) =>
+          !inSet.has(id) && id !== bag.believedCharacter && id !== "baron" && id !== "godfather",
+      );
+    // Prefer picks that don't stomp a current bluff, so bluffs stay stable.
+    const tiers = [
+      open.filter((id) => !soft.includes(id) && !bag.demonBluffs.includes(id)),
+      open.filter((id) => !soft.includes(id) && bag.demonBluffs.includes(id)),
+      open.filter((id) => soft.includes(id)),
+    ];
+    const picks: CharacterId[] = [];
+    for (const tier of tiers) {
+      if (picks.length >= n) break;
+      picks.push(...draw(tier, n - picks.length, rng));
+    }
+    if (picks.length < n) throw new Error(`not enough ${type} characters to grow the bag`);
+    inPlay.push(...picks);
+    added.push(...picks);
+  }
+
+  const deltas: { type: CharacterType; delta: number; soft: readonly CharacterId[] }[] = [
+    { type: "townsfolk", delta: target.townsfolk - current.townsfolk, soft: [] },
+    { type: "outsider", delta: target.outsiders - current.outsiders, soft: ["drunk", "lunatic"] },
+    { type: "minion", delta: target.minions - current.minions, soft: [] },
+  ];
+  for (const d of deltas) if (d.delta < 0) removeSome(d.type, -d.delta);
+  for (const d of deltas) if (d.delta > 0) addSome(d.type, d.delta, d.soft);
+
+  let believed = removed.includes("drunk") ? undefined : bag.believedCharacter;
+  if (added.includes("drunk") && believed === undefined) {
+    const inSet = new Set(inPlay);
+    const open = charactersOfType("townsfolk", bag.edition)
+      .map((c) => c.id)
+      .filter((id) => !inSet.has(id));
+    const quiet = open.filter((id) => !bag.demonBluffs.includes(id));
+    believed = draw(quiet.length > 0 ? quiet : open, 1, rng)[0];
+    if (believed === undefined) throw new Error("no Townsfolk left for the Drunk's stand-in");
+  }
+  let lunaticDemon = removed.includes("lunatic") ? undefined : bag.lunaticDemon;
+  if (added.includes("lunatic")) {
+    lunaticDemon = inPlay.find((id) => CHARACTERS[id].type === "demon");
+  }
+  const godfatherAdjustment = droppedGodfatherAdjustment ? undefined : bag.godfatherAdjustment;
+
+  return {
+    bag: {
+      edition: bag.edition,
+      charactersInPlay: inPlay,
+      bagTokens: bagTokensFor(inPlay, believed),
+      ...(believed !== undefined ? { believedCharacter: believed } : {}),
+      ...(lunaticDemon !== undefined ? { lunaticDemon } : {}),
+      ...(godfatherAdjustment !== undefined ? { godfatherAdjustment } : {}),
+      distribution: target,
+      demonBluffs: freshenedBluffs(bag, inPlay, believed, opts.demonSkill ?? "new", rng),
+    },
+    added,
+    removed,
+    droppedGodfatherAdjustment,
   };
 }
 

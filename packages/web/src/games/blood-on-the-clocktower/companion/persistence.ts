@@ -36,6 +36,17 @@ export type BagDraft = {
   draws: (CharacterId | null)[];
   /** Bluff weighting for the eventual demon; toggled on the Bag screen. */
   demonSkill?: DemonSkill;
+  /**
+   * One-level undo for the Bag screen's structural edits (reroll, token
+   * swap, late-player add): the full pre-edit snapshot plus a short label
+   * for the button ("Undo bag reroll"). Cleared once used or superseded.
+   */
+  undo?: {
+    label: string;
+    seats: BagDraftSeat[];
+    bag: BagSetup;
+    draws: (CharacterId | null)[];
+  };
 };
 
 export function loadGame(): CompanionState | null {
