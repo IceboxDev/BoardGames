@@ -469,7 +469,7 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
   // Dedup piles by box-set; keep the best (volume, depth, narrower width).
   std::unordered_map<uint64_t, Pile> best;
   const int wTol = 2 * p.tolPerBox + p.widthSlack;
-  const size_t PILE_CAP = 500000;
+  const size_t PILE_CAP = 1500000;
 
   struct Frame {
     uint64_t mask;
@@ -513,10 +513,10 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
       if (it == best.end()) {
         best[f.mask] = pile;
         anchorRecorded++;
-      } else if (pile.vol > it->second.vol ||
-                 (pile.vol == it->second.vol &&
-                  (pile.depthSum > it->second.depthSum ||
-                   (pile.depthSum == it->second.depthSum && pile.width < it->second.width)))) {
+      } else if (pile.holes < it->second.holes ||
+                 (pile.holes == it->second.holes &&
+                  (pile.vol > it->second.vol ||
+                   (pile.vol == it->second.vol && pile.depthSum > it->second.depthSum)))) {
         it->second = pile;
       }
     }
@@ -575,7 +575,7 @@ static std::vector<Pile> buildPiles(const std::vector<Cell>& cells, const Params
   }
   // Pass 2: everything, budgeted.
   order = std::move(fullOrder);
-  runAnchors(1'000'000, 400);
+  runAnchors(1'000'000, 800);
 
   std::vector<Pile> piles;
   piles.reserve(best.size());
@@ -1724,6 +1724,39 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
     sets[sh].prm.depthMax = shelfDepths[sh];
     sets[sh].orients = buildOrients(boxes, sets[sh].prm, sh == 1 ? p.pinAMask : 0);
     sets[sh].cells = buildCells(boxes, sets[sh].orients, sets[sh].prm);
+    // Canonical vertical-neighbor cells: for each --long-edge box, pair its
+    // STANDING orientation with every height-matched existing cell, so "the
+    // box on the side of a flush column" always exists in the pool.
+    {
+      auto& cellsRef = sets[sh].cells;
+      size_t nBase = cellsRef.size();
+      for (const Orient& o : sets[sh].orients) {
+        if (!o.vert || !(p.longEdgeMask & (1ULL << o.box))) continue;
+        for (size_t pi2 = 0; pi2 < nBase; pi2++) {
+          const Cell& pc = cellsRef[pi2];
+          if (pc.mask & (1ULL << o.box)) continue;
+          if (std::abs(pc.height - o.fh) > 2 * p.tolPerBox) continue;
+          if (o.fw + pc.width > p.maxWidth()) continue;
+          Cell c;
+          c.mask = pc.mask | (1ULL << o.box);
+          c.width = o.fw + pc.width;
+          c.height = std::max(o.fh, pc.height);
+          c.vol = pc.vol + boxes[o.box].vol;
+          c.faceArea = pc.faceArea + (long long)o.fw * o.fh;
+          c.depthSum = pc.depthSum + o.d;
+          c.maxDepth = std::max(pc.maxDepth, o.d);
+          c.vertTop = std::max(pc.vertTop, o.fh);
+          c.boxes.push_back({o.box, o.fw, o.fh, o.d, 0, 0, 0, true});
+          for (Placement pl : pc.boxes) {
+            pl.xOff += o.fw;
+            pl.unit += 1;
+            c.boxes.push_back(pl);
+          }
+          cellsRef.push_back(std::move(c));
+        }
+      }
+      std::cerr << "  [vert-neighbor] +" << (cellsRef.size() - nBase) << " cells\n";
+    }
     sets[sh].piles = buildPiles(sets[sh].cells, sets[sh].prm);
     // Stack groups must form a strict RUN (tower), which means: the whole
     // group in ONE pile, every member in the same orientation (equal face
