@@ -64,6 +64,10 @@ struct Params {
   // box top stays within the nominal rectangle (y + face height <= 250).
   bool vertInside = false;
   bool pilesOnly = false;  // debug: stop after pile construction
+  // --warm DIR (repeatable): parse DIR/solutions.txt from a previous run and
+  // re-inject its exact columns and full solutions — guarantees the new run
+  // can never rank below an already-found packing (monotonic upgrades).
+  std::vector<std::string> warm;
   // --pin-a NAME/GLOB (repeatable): these boxes may only stand in shelf A.
   std::vector<std::string> pinA;
   uint64_t pinAMask = 0;
@@ -1711,6 +1715,136 @@ static void twoGreedy(const ShelfSet sets[2], const Params& p, const std::vector
   }
 }
 
+// Parse one solutions.txt into per-shelf pile compositions. Returns, per
+// solution, the two lists of NEW pile indices (appended to sets[sh].piles).
+struct WarmSol {
+  std::vector<int> pA, pB;
+};
+
+static std::vector<WarmSol> loadWarm(const std::string& dir, ShelfSet sets[2],
+                                     const std::vector<Box>& boxes, const Params& p) {
+  std::vector<WarmSol> out;
+  std::ifstream in(dir + "/solutions.txt");
+  if (!in) {
+    std::cerr << "warning: --warm " << dir << ": no solutions.txt\n";
+    return out;
+  }
+  auto boxIdx = [&](const std::string& name) {
+    for (size_t i = 0; i < boxes.size(); i++)
+      if (boxes[i].name == name) return (int)i;
+    return -1;
+  };
+  std::string line;
+  int shelf = -1;
+  WarmSol cur;
+  bool open = false, solBad = false;
+  auto flush = [&]() {
+    if (open && !solBad && (!cur.pA.empty() || !cur.pB.empty())) out.push_back(cur);
+    cur = WarmSol{};
+    solBad = false;
+  };
+  while (std::getline(in, line)) {
+    if (line.rfind("\u2500\u2500 Solution", 0) == 0 || line.rfind("── Solution", 0) == 0) {
+      flush();
+      open = true;
+      shelf = -1;
+      continue;
+    }
+    if (line.find("shelf A") != std::string::npos) shelf = 0;
+    else if (line.find("shelf B") != std::string::npos) shelf = 1;
+    size_t pilePos = line.find("pile ");
+    if (!open || shelf < 0 || pilePos == std::string::npos) continue;
+    size_t colon = line.find(':', pilePos);
+    if (colon == std::string::npos) continue;
+    // Cells in [...]; units split by " | "; column members by " + ".
+    Pile pile;
+    std::vector<int> cellIdxs;
+    size_t pos = colon;
+    bool bad = false;
+    auto& cellsRef = sets[shelf].cells;
+    while (true) {
+      size_t lb = line.find('[', pos);
+      if (lb == std::string::npos) break;
+      size_t rb = line.find(']', lb);
+      if (rb == std::string::npos) break;
+      std::string body = line.substr(lb + 1, rb - lb - 1);
+      pos = rb + 1;
+      Cell cell;
+      int xBase = 0, unit = 0;
+      size_t uStart = 0;
+      while (uStart <= body.size() && !bad) {
+        size_t uEnd = body.find(" | ", uStart);
+        std::string ub = body.substr(uStart, uEnd == std::string::npos ? std::string::npos
+                                                                       : uEnd - uStart);
+        int yOff = 0, unitW = 0, mStart = 0;
+        std::vector<Placement> ups;
+        while (mStart <= (int)ub.size() && !bad) {
+          size_t mEnd = ub.find(" + ", mStart);
+          std::string mb = ub.substr(mStart, mEnd == std::string::npos ? std::string::npos
+                                                                       : mEnd - mStart);
+          // "name FWxFH dD"
+          char nameBuf[96];
+          int fw, fh, d;
+          if (sscanf(mb.c_str(), "%95s %dx%d d%d", nameBuf, &fw, &fh, &d) != 4) {
+            bad = true;
+            break;
+          }
+          int b = boxIdx(nameBuf);
+          if (b < 0 || (cell.mask & (1ULL << b))) {
+            bad = true;
+            break;
+          }
+          bool vert = fh > fw;
+          ups.push_back({b, fw, fh, d, 0, yOff, unit, vert});
+          cell.mask |= 1ULL << b;
+          cell.vol += boxes[b].vol;
+          cell.faceArea += (long long)fw * fh;
+          cell.depthSum += d;
+          cell.maxDepth = std::max(cell.maxDepth, d);
+          if (vert) cell.vertTop = std::max(cell.vertTop, yOff + fh);
+          yOff += fh;
+          unitW = std::max(unitW, fw);
+          if (mEnd == std::string::npos) break;
+          mStart = (int)mEnd + 3;
+        }
+        for (auto& pl : ups) {
+          pl.xOff = xBase + (unitW - pl.fw) / 2 * (pl.yOff > 0 ? 1 : 0);
+          if (pl.yOff == 0) pl.xOff = xBase;
+          cell.boxes.push_back(pl);
+        }
+        cell.height = std::max(cell.height, yOff);
+        xBase += unitW;
+        unit++;
+        if (uEnd == std::string::npos) break;
+        uStart = uEnd + 3;
+      }
+      if (bad) break;
+      cell.width = xBase;
+      cellIdxs.push_back((int)cellsRef.size());
+      pile.mask |= cell.mask;
+      pile.height += cell.height;
+      pile.vol += cell.vol;
+      pile.depthSum += cell.depthSum;
+      pile.maxDepth = std::max(pile.maxDepth, cell.maxDepth);
+      pile.width = std::max(pile.width, cell.width);
+      cellsRef.push_back(std::move(cell));
+    }
+    if (bad || cellIdxs.empty()) {
+      solBad = true;
+      continue;
+    }
+    for (int ci : cellIdxs)
+      pile.holes += (long long)pile.width * cellsRef[ci].height - cellsRef[ci].faceArea;
+    pile.holes += (long long)pile.width * std::max(0, p.heightBase - pile.height);
+    pile.cells = cellIdxs;
+    (shelf == 0 ? cur.pA : cur.pB).push_back((int)sets[shelf].piles.size());
+    sets[shelf].piles.push_back(std::move(pile));
+  }
+  flush();
+  std::cerr << "warm-start " << dir << ": " << out.size() << " solutions reloaded\n";
+  return out;
+}
+
 static int runFillAll(const std::vector<Box>& boxes, Params& p) {
   std::vector<int> shelfDepths = p.shelfDepths;
   if (shelfDepths.empty()) shelfDepths = {p.depthMax, 470};
@@ -1982,10 +2116,41 @@ static int runFillAll(const std::vector<Box>& boxes, Params& p) {
               << "): " << sets[sh].orients.size() << " orientations, " << sets[sh].cells.size()
               << " cells, " << sets[sh].piles.size() << " piles\n";
   }
+  // Warm-start: reload previous runs' solutions — their columns join the
+  // candidate pool AND the full packings are injected into the ranking, so
+  // this run can never score below what an earlier run already found.
+  std::vector<WarmSol> warmSols;
+  for (const std::string& dir : p.warm)
+    for (WarmSol& ws : loadWarm(dir, sets, boxes, p)) warmSols.push_back(std::move(ws));
+
   if (p.pilesOnly) return 0;
   uint64_t allMask = boxes.size() >= 64 ? ~0ULL : ((1ULL << boxes.size()) - 1);
 
   std::map<std::pair<uint64_t, uint64_t>, TwoSol> pool;
+  for (const WarmSol& ws : warmSols) {
+    TwoState s;
+    for (int pi : ws.pA) {
+      const Pile& pile = sets[0].piles[pi];
+      if (s.maskA & pile.mask) continue;
+      s.maskA |= pile.mask;
+      s.wA += pile.width;
+      s.holes += pile.holes;
+      s.topOver += topOverArea(pile, p.heightBase);
+      s.pA.push_back(pi);
+    }
+    for (int pi : ws.pB) {
+      const Pile& pile = sets[1].piles[pi];
+      if ((s.maskA | s.maskB) & pile.mask) continue;
+      s.maskB |= pile.mask;
+      s.wB += pile.width;
+      s.holes += pile.holes;
+      s.topOver += topOverArea(pile, p.heightBase);
+      s.pB.push_back(pi);
+    }
+    collectTwo(pool, s, sets, boxes, allMask, p, shelfDepths);
+  }
+  if (!warmSols.empty())
+    std::cerr << "warm-start pool: " << pool.size() << " packings pre-injected\n";
   std::vector<std::pair<int, int>> order;
   for (int sh = 0; sh < 2; sh++)
     for (size_t i = 0; i < sets[sh].piles.size(); i++) order.push_back({sh, (int)i});
@@ -2236,6 +2401,7 @@ int main(int argc, char** argv) {
       p.shelfDepths.push_back(d);
     } else if (a == "--fill-all") p.fillAll = true;
     else if (a == "--piles-only") p.pilesOnly = true;
+    else if (a == "--warm") p.warm.push_back(argv[++i]);
     else if (a == "--width-slack") next(p.widthSlack);
     else if (a == "--height-slack") next(p.heightSlack);
     else if (a == "--vert-inside") p.vertInside = true;
