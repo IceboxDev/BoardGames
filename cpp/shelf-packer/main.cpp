@@ -102,6 +102,10 @@ struct Params {
                                    // long-edge on BOTH sides (mutual)
   std::vector<uint64_t> togetherMasks;
   std::vector<char> togetherMutual;  // aligned with togetherMasks
+  std::vector<char> togetherForced;  // aligned: 1 = group MUST be packed
+  // --pair A,B[,C…]: like --together (touching cluster) but presence is
+  // mandatory — the direct "these games must sit together" demand.
+  std::vector<std::string> pairGroups;
   int maxWidth() const { return widthBase + overLeft + overRight; }
   int maxHeight() const { return heightBase + overTop; }
 };
@@ -1514,8 +1518,10 @@ static void collectTwo(std::map<std::pair<uint64_t, uint64_t>, TwoSol>& pool, co
       bad = true;
     }
     if (!bad)
-      for (uint64_t g : p.togetherMasks) {
-        if (((s.maskA | s.maskB) & g) == 0) continue;
+      for (size_t gi = 0; gi < p.togetherMasks.size(); gi++) {
+        uint64_t g = p.togetherMasks[gi];
+        bool forced = gi < p.togetherForced.size() && p.togetherForced[gi];
+        if (!forced && ((s.maskA | s.maskB) & g) == 0) continue;
         if ((s.maskA & g) != g && (s.maskB & g) != g) {
           gRejTog++;
           bad = true;
@@ -1625,13 +1631,16 @@ static long long twoScore(const TwoState& s, const Params& p) {
   uint64_t rA = s.maskA & p.requiredMask, rB = s.maskB & p.requiredMask;
   score += (long long)__builtin_popcountll(front & p.requiredMask) * 6'000'000LL;
   if (rA && rB) score -= 50'000'000LL;  // cluster split across shelves = fatal
-  for (uint64_t g : p.togetherMasks) {
+  for (size_t gi = 0; gi < p.togetherMasks.size(); gi++) {
+    uint64_t g = p.togetherMasks[gi];
+    bool forced = gi < p.togetherForced.size() && p.togetherForced[gi];
     uint64_t fA = s.maskA & g, fB = s.maskB & g;
     if (fA && fB) score -= 30'000'000LL;
     else {
       uint64_t inter = fA | fB;
       if (inter && inter != g) score -= 2'000'000LL;
       if (inter == g) score += 4'000'000LL;
+      if (forced) score += (long long)__builtin_popcountll(inter) * 6'000'000LL;
     }
   }
   for (auto& [dep, prov] : p.companions) {
@@ -2541,6 +2550,7 @@ int main(int argc, char** argv) {
     else if (a == "--require") p.require.push_back(argv[++i]);
     else if (a == "--together") p.together.push_back(argv[++i]);
     else if (a == "--stack") p.stack.push_back(argv[++i]);
+    else if (a == "--pair") p.pairGroups.push_back(argv[++i]);
     else if (a == "--flat") p.flatOnly = true;
     else if (a == "--shelf") {
       int d = 0;
@@ -2628,7 +2638,8 @@ int main(int argc, char** argv) {
     }
     if (!hit) std::cerr << "warning: --pin-a matched nothing: " << req << "\n";
   }
-  auto parseGroups = [&](const std::vector<std::string>& raw, char mutual, const char* flag) {
+  auto parseGroups = [&](const std::vector<std::string>& raw, char mutual, char forced,
+                         const char* flag) {
     for (const std::string& group : raw) {
       uint64_t mask = 0;
       std::stringstream gss(group);
@@ -2645,11 +2656,13 @@ int main(int argc, char** argv) {
       if (__builtin_popcountll(mask) >= 2) {
         p.togetherMasks.push_back(mask);
         p.togetherMutual.push_back(mutual);
+        p.togetherForced.push_back(forced);
       }
     }
   };
-  parseGroups(p.together, 0, "--together");
-  parseGroups(p.stack, 2, "--stack");
+  parseGroups(p.together, 0, 0, "--together");
+  parseGroups(p.stack, 2, 0, "--stack");
+  parseGroups(p.pairGroups, 0, 1, "--pair");
   if (p.fillAll) return runFillAll(boxes, p);
   std::vector<Orient> orients = buildOrients(boxes, p);
   std::vector<Cell> cells = buildCells(boxes, orients, p);

@@ -52,6 +52,9 @@ problem. Self-contained C++17, no dependencies (its own PNG encoder).
 - `--use-all` (fill-all only) demands EVERY box be placed; when that is
   infeasible the run reports the closest width-complete attempt and which
   boxes stayed out, instead of emitting solutions.
+- `--pair A,B[,C…]` (repeatable): the direct "these games must sit
+  together" demand — like `--together`, but presence is MANDATORY, so the
+  optimizer cannot satisfy it by leaving the group out.
 - `--together A,B[,C…]` (repeatable) declares a companion group — one game
   shipped as several boxes: either NONE of them is packed, or ALL are, and
   they must touch each other.
