@@ -53,16 +53,26 @@ const CODENAMES_LANGUAGE: GameVariantConfig = {
   ],
 };
 
+/**
+ * Single-ruleset games still get a subtitle row (matches Bandit/Lovecraft
+ * Letter): the picker stays hidden and every match — past ones included, since
+ * the fixed path wins at render time — reads "Standard".
+ */
+const FIXED_STANDARD: GameVariantConfig = {
+  label: "Ruleset",
+  mode: "single",
+  fixed: true,
+  options: [{ value: "Standard", label: "Standard" }],
+};
+
 const VARIANTS: Record<string, GameVariantConfig> = {
   codenames: CODENAMES_LANGUAGE,
+  "connect-4": FIXED_STANDARD,
+  "hot-pot-holic": FIXED_STANDARD,
+  set: FIXED_STANDARD,
   "codenames-pictures": CODENAMES_LANGUAGE,
   "codenames-duet": CODENAMES_LANGUAGE,
-  bandit: {
-    label: "Ruleset",
-    mode: "single",
-    fixed: true,
-    options: [{ value: "Standard", label: "Standard" }],
-  },
+  bandit: FIXED_STANDARD,
   wavelength: {
     label: "Mode",
     mode: "single",

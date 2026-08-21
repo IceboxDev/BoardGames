@@ -115,6 +115,12 @@ function deriveTitleSubtitle(outcome: MatchOutcome, gameSlug: string | null): st
   // 7 Wonders, Exploding Kittens, etc. Each match kind carries its own optional
   // `scenario` field on the wire.
   if (outcome.kind !== "one-vs-many" && outcome.scenario) return outcome.scenario;
+  // Decrypto's variant is implied by the table shape — a lone player on a
+  // team is the Interceptor. Derived at render time so online-persisted and
+  // legacy records get a subtitle without ever storing one.
+  if (outcome.kind === "teams" && gameSlug === "decrypto") {
+    return outcome.teams.some((t) => t.members.length === 1) ? "Interceptor" : "Standard";
+  }
   // BotC also derives the edition from assigned characters as a fallback for
   // legacy records that didn't persist `scenario`.
   if (outcome.kind === "teams" && gameSlug === "blood-on-the-clocktower") {

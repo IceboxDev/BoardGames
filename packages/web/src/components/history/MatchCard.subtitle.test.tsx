@@ -25,9 +25,57 @@ const intarsia: MatchRecord = {
   sortOrder: 0,
 };
 
+// A game with no variant axis and no stored scenario — the fixed-variant
+// config supplies "Standard" retroactively (prod rows had no subtitle).
+const connect4: MatchRecord = {
+  ...intarsia,
+  id: 70,
+  gameSlug: "connect-4",
+  gameTitle: "Connect 4",
+  outcome: {
+    kind: "free-for-all",
+    players: [
+      { userId: "u1", displayName: "Mantas", score: 3 },
+      { userId: "u2", displayName: "Jaqueline", score: 2 },
+    ],
+  },
+};
+
+const decryptoTeams = (sizes: number[]): MatchRecord => ({
+  ...intarsia,
+  id: 85,
+  gameSlug: "decrypto",
+  gameTitle: "Decrypto",
+  outcome: {
+    kind: "teams",
+    teams: sizes.map((n, t) => ({
+      members: Array.from({ length: n }, (_, i) => ({
+        userId: `t${t}p${i}`,
+        displayName: `Player ${t}${i}`,
+      })),
+    })),
+    winnerTeamIndices: [0],
+  },
+});
+
 describe("MatchCard subtitle", () => {
   it("shows the persisted scenario under the title", () => {
     render(<MatchCard match={intarsia} isAdmin={false} currentUserId={null} />);
     expect(screen.getByText("Standard")).toBeInTheDocument();
+  });
+
+  it("fixed-variant games subtitle legacy records with no stored scenario", () => {
+    render(<MatchCard match={connect4} isAdmin={false} currentUserId={null} />);
+    expect(screen.getByText("Standard")).toBeInTheDocument();
+  });
+
+  it("derives Decrypto's variant from the table shape", () => {
+    const { unmount } = render(
+      <MatchCard match={decryptoTeams([2, 3])} isAdmin={false} currentUserId={null} />,
+    );
+    expect(screen.getByText("Standard")).toBeInTheDocument();
+    unmount();
+    render(<MatchCard match={decryptoTeams([2, 1])} isAdmin={false} currentUserId={null} />);
+    expect(screen.getByText("Interceptor")).toBeInTheDocument();
   });
 });
