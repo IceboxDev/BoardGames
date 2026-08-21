@@ -34,8 +34,17 @@ function summarize(state: AdminSkillStateResponse | undefined): string {
   const when = formatRelativeTime(state.computedAt);
   const ranked = `${state.eligibleCount} ranked`;
   if (!state.stale) return `Up to date · ${ranked} · last run ${when}`;
-  const n = state.matchesChangedSince;
-  return `${n} match${n === 1 ? "" : "es"} recorded since the last run · ${ranked}`;
+  // Recorded vs edited are different admin stories (a moderator backfill is
+  // not a new game), so the stale line names what actually happened. Both
+  // zero + stale = rows were deleted, which only the fingerprint sees.
+  const rec = state.matchesRecordedSince;
+  const ed = state.matchesEditedSince;
+  const recPart = `${rec} match${rec === 1 ? "" : "es"} recorded`;
+  const edPart = `${ed} match${ed === 1 ? "" : "es"} edited`;
+  if (rec > 0 && ed > 0) return `${rec} recorded · ${ed} edited since the last run · ${ranked}`;
+  if (rec > 0) return `${recPart} since the last run · ${ranked}`;
+  if (ed > 0) return `${edPart} since the last run · ${ranked}`;
+  return `Match history changed since the last run · ${ranked}`;
 }
 
 function nameOf(state: AdminSkillStateResponse, userId: string): string {
@@ -184,10 +193,12 @@ export function SkillRatingsCard() {
   const [notice, setNotice] = useState<string | null>(null);
   const [publishingKey, setPublishingKey] = useState<string | null>(null);
 
+  // Always enabled: the collapsed summary line ("N recorded since the last
+  // run") needs the state too — gating on `expanded` left it on "Loading…"
+  // forever until the card was opened.
   const stateQuery = useQuery({
     queryKey: qk.adminSkills(),
     queryFn: ({ signal }) => fetchAdminSkillState(signal),
-    enabled: expanded,
   });
   const state = stateQuery.data;
 

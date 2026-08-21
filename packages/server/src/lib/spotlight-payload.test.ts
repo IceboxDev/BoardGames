@@ -48,7 +48,8 @@ function status(overrides: Partial<SkillRatingStatus> = {}): SkillRatingStatus {
     configVersion: 5,
     stale: false,
     matchesTotal: 90,
-    matchesChangedSince: 0,
+    matchesRecordedSince: 0,
+    matchesEditedSince: 0,
     ...overrides,
   };
 }

@@ -539,11 +539,14 @@ export type SkillRatingStatus = {
   computedAt: string | null;
   baselineComputedAt: string | null;
   configVersion: number | null;
-  /** True when matches have been recorded or edited since the last run. */
+  /** True when matches have been recorded, edited, or deleted since the last run. */
   stale: boolean;
   matchesTotal: number;
-  /** How many match rows were written or touched after the last run. */
-  matchesChangedSince: number;
+  /** New matches recorded after the last run. */
+  matchesRecordedSince: number;
+  /** Pre-existing matches edited after the last run. Split from the recorded
+   * count so the admin card never calls a moderator backfill "recorded". */
+  matchesEditedSince: number;
 };
 
 /**
@@ -561,9 +564,14 @@ export async function skillRatingStatus(): Promise<SkillRatingStatus> {
     readBaselineRow(),
   ]);
   const computedAt = row?.computed_at ?? null;
-  const changed = computedAt
-    ? stamps.filter((r) => (r.updated_at ?? r.recorded_at) > computedAt).length
+  const recorded = computedAt
+    ? stamps.filter((r) => r.recorded_at > computedAt).length
     : stamps.length;
+  const edited = computedAt
+    ? stamps.filter(
+        (r) => r.recorded_at <= computedAt && r.updated_at !== null && r.updated_at > computedAt,
+      ).length
+    : 0;
   return {
     state: row?.payload_json ?? null,
     baseline: baselineOf(baselineRow),
@@ -572,7 +580,8 @@ export async function skillRatingStatus(): Promise<SkillRatingStatus> {
     configVersion: row?.config_version ?? null,
     stale: row === null || row.input_fingerprint !== dataFingerprint(stamps),
     matchesTotal: stamps.length,
-    matchesChangedSince: changed,
+    matchesRecordedSince: recorded,
+    matchesEditedSince: edited,
   };
 }
 

@@ -231,7 +231,8 @@ const ADMIN_STATE: AdminSkillStateResponse = {
   configVersion: 5,
   stale: true,
   matchesTotal: 92,
-  matchesChangedSince: 6,
+  matchesRecordedSince: 5,
+  matchesEditedSince: 1,
   eligibleCount: 11,
   candidates: [
     {

@@ -199,7 +199,7 @@ describe("skill-rating baseline rotation", () => {
     });
 
     // `stale` is the load-bearing signal — it compares input fingerprints, so
-    // it is exact. (`matchesChangedSince` is a display count built on a strict
+    // it is exact. (`matchesRecordedSince` is a display count built on a strict
     // `>` over SQLite's second-resolution timestamps, so a match recorded in
     // the same second as the last run doesn't register. Not asserted here
     // because a test writes both within microseconds.)

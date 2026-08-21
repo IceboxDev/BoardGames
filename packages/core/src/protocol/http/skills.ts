@@ -327,10 +327,13 @@ export const AdminSkillStateResponseSchema = z.object({
   computedAt: z.string().min(1).nullable(),
   baselineComputedAt: z.string().min(1).nullable(),
   configVersion: z.number().int().nullable(),
-  /** True when matches were recorded or edited since the last run. */
+  /** True when the match history changed (recorded/edited/deleted) since the last run. */
   stale: z.boolean(),
   matchesTotal: z.number().int().min(0),
-  matchesChangedSince: z.number().int().min(0),
+  /** New matches recorded after the last run. */
+  matchesRecordedSince: z.number().int().min(0),
+  /** Pre-existing matches edited after the last run (a moderator backfill, a score fix). */
+  matchesEditedSince: z.number().int().min(0),
   eligibleCount: z.number().int().min(0),
   /** Ranked best-first; empty when nothing moved or there is no baseline. */
   candidates: z.array(SpotlightCandidateSchema),

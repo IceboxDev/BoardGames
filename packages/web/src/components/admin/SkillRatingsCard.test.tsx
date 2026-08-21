@@ -13,7 +13,8 @@ const BASE: AdminSkillStateResponse = {
   configVersion: 5,
   stale: false,
   matchesTotal: 92,
-  matchesChangedSince: 0,
+  matchesRecordedSince: 0,
+  matchesEditedSince: 0,
   eligibleCount: 11,
   candidates: [],
   live: null,
@@ -35,8 +36,23 @@ function renderCard(state: AdminSkillStateResponse | undefined, expanded = true)
 
 describe("SkillRatingsCardView", () => {
   it("counts the matches recorded since the last run when stale", () => {
-    renderCard({ ...BASE, stale: true, matchesChangedSince: 6 });
+    renderCard({ ...BASE, stale: true, matchesRecordedSince: 6 });
     expect(screen.getByText(/6 matches recorded since the last run/)).toBeInTheDocument();
+  });
+
+  it("calls an edit an edit, not a recording", () => {
+    renderCard({ ...BASE, stale: true, matchesEditedSince: 1 });
+    expect(screen.getByText(/1 match edited since the last run/)).toBeInTheDocument();
+  });
+
+  it("names both when matches were recorded and edited", () => {
+    renderCard({ ...BASE, stale: true, matchesRecordedSince: 2, matchesEditedSince: 1 });
+    expect(screen.getByText(/2 recorded · 1 edited since the last run/)).toBeInTheDocument();
+  });
+
+  it("falls back to a generic line when only deletions made it stale", () => {
+    renderCard({ ...BASE, stale: true });
+    expect(screen.getByText(/Match history changed since the last run/)).toBeInTheDocument();
   });
 
   it("says so plainly when nothing has changed", () => {
