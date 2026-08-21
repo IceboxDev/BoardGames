@@ -68,7 +68,17 @@ const FIXED_STANDARD: GameVariantConfig = {
 const VARIANTS: Record<string, GameVariantConfig> = {
   codenames: CODENAMES_LANGUAGE,
   "connect-4": FIXED_STANDARD,
-  "hot-pot-holic": FIXED_STANDARD,
+  // Hot Pot Holic's rulebook ships one optional twist — the Advanced Setup
+  // Variant (each player drafts their 2 plate cards from an 11-card hand
+  // instead of random deals). Standard first so a fresh match defaults to it.
+  "hot-pot-holic": {
+    label: "Setup",
+    mode: "single",
+    options: [
+      { value: "Standard", label: "Standard" },
+      { value: "Advanced Setup", label: "Advanced Setup" },
+    ],
+  },
   set: FIXED_STANDARD,
   "codenames-pictures": CODENAMES_LANGUAGE,
   "codenames-duet": CODENAMES_LANGUAGE,
