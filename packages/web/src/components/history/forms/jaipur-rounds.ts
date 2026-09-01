@@ -1,8 +1,11 @@
 import {
+  MAX_ROUND_SCORES,
+  MIN_ROUND_SCORES,
   resolveRound,
   roundScoreLeaders,
   roundWinCounts,
   roundWinLeaders,
+  roundWinnerIndex,
   tiebreakForRound,
 } from "@boardgames/core/history/round-scores";
 import type { MatchOutcomeFreeForAll } from "@boardgames/core/history/types";
@@ -17,22 +20,52 @@ type Player = MatchOutcomeFreeForAll["players"][number];
 type Tiebreak = NonNullable<MatchOutcomeFreeForAll["roundTiebreaks"]>[number];
 
 /**
- * Converge the outcome to a consistent round record:
+ * Converge the outcome to a consistent round record, INFERRING the round
+ * count — a best-of-three has a third round exactly when rounds 1 and 2
+ * split 1–1, so there is nothing for the recorder to pick:
  *
- * - pad/truncate every player's rounds to `rounds` and recompute the summed
- *   totals;
- * - keep a tiebreak entry for exactly the rupee-tied rounds (materialising
- *   zero token counts so the form has fields to render, dropping stale
- *   entries, and attaching/stripping `goodsTokens` as the bonus tokens tie or
- *   stop tying);
- * - derive seal-based ranks: with every round settled and a sole seal leader,
- *   ranks are 1..n (leader first, rest by seals); otherwise ranks clear —
- *   the untouched all-zero state included, so a fresh form doesn't nag.
+ * - the form starts at 2 rounds; round 3 materialises the moment the first
+ *   two rounds settle on different winners, and an UNTOUCHED (all-zero)
+ *   round 3 trims away again when they settle 2–0. A round 3 that already
+ *   holds scores is never trimmed — a mid-edit pass through a 2–0 state must
+ *   not destroy data (the save-time validator flags the impossible record
+ *   instead);
+ * - every player's rounds are padded/truncated to the inferred count and the
+ *   summed totals recomputed;
+ * - a tiebreak entry exists for exactly the rupee-tied rounds (zero token
+ *   counts materialised so the form has fields, stale entries dropped,
+ *   `goodsTokens` attached/stripped as the bonus tokens tie or stop tying);
+ * - seal-based ranks: with every round settled and a sole seal leader, ranks
+ *   are 1..n (leader first); otherwise ranks clear — the untouched all-zero
+ *   state included, so a fresh form doesn't nag.
  */
-export function normalizeJaipurOutcome(
-  outcome: MatchOutcomeFreeForAll,
-  rounds: number,
-): MatchOutcomeFreeForAll {
+export function normalizeJaipurOutcome(outcome: MatchOutcomeFreeForAll): MatchOutcomeFreeForAll {
+  const storedRounds = Math.min(
+    MAX_ROUND_SCORES,
+    Math.max(
+      MIN_ROUND_SCORES,
+      outcome.players.reduce((max, p) => Math.max(max, p.roundScores?.length ?? 0), 0),
+    ),
+  );
+  const normalized = normalizeAt(outcome, storedRounds);
+  const target = inferredRoundCount(normalized);
+  return target === storedRounds ? normalized : normalizeAt(normalized, target);
+}
+
+/** The round count the entered data implies — see normalizeJaipurOutcome. */
+function inferredRoundCount(outcome: MatchOutcomeFreeForAll): number {
+  const { players, roundTiebreaks } = outcome;
+  const current = players[0]?.roundScores?.length ?? MIN_ROUND_SCORES;
+  if (players.length === 0) return MIN_ROUND_SCORES;
+  const first = roundWinnerIndex(players, 0, roundTiebreaks);
+  const second = roundWinnerIndex(players, 1, roundTiebreaks);
+  if (first === null || second === null) return current; // undecided — leave as-is
+  if (first !== second) return MAX_ROUND_SCORES; // 1–1 → a third round happened
+  const thirdUntouched = players.every((p) => (p.roundScores?.[2] ?? 0) === 0);
+  return thirdUntouched ? MIN_ROUND_SCORES : current;
+}
+
+function normalizeAt(outcome: MatchOutcomeFreeForAll, rounds: number): MatchOutcomeFreeForAll {
   const players = outcome.players.map((p) => {
     const roundScores = (p.roundScores ?? []).slice(0, rounds);
     while (roundScores.length < rounds) roundScores.push(0);

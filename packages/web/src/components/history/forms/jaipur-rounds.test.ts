@@ -22,76 +22,71 @@ const outcome = (
   ...(roundTiebreaks ? { roundTiebreaks } : {}),
 });
 
-describe("normalizeJaipurOutcome", () => {
-  it("pads missing rounds, sums totals, and crowns the seal leader over a higher total", () => {
-    // A takes rounds 1+3 narrowly, B takes round 2 big — A wins 2–1 on seals
-    // despite 97 < 110 rupees.
-    const out = normalizeJaipurOutcome(outcome([jp("a", [52, 10, 35]), jp("b", [48, 60, 2])]), 3);
-    expect(out.players[0]).toMatchObject({ score: 97, rank: 1, roundScores: [52, 10, 35] });
-    expect(out.players[1]).toMatchObject({ score: 110, rank: 2, roundScores: [48, 60, 2] });
-    expect(out.roundTiebreaks).toBeUndefined();
-  });
-
-  it("pads a fresh player to the round count and truncates on a 3→2 flip", () => {
-    const padded = normalizeJaipurOutcome(outcome([jp("a", [52, 48]), jp("b")]), 2);
-    expect(padded.players[1].roundScores).toEqual([0, 0]);
-    const truncated = normalizeJaipurOutcome(
-      outcome([jp("a", [52, 10, 35]), jp("b", [48, 60, 2])]),
-      2,
-    );
-    expect(truncated.players[0]).toMatchObject({ score: 62, roundScores: [52, 10] });
-    // Dropping A's round-3 win leaves a 1–1 seal split — ranks clear until the
-    // deciding round comes back.
-    expect(truncated.players.every((p) => p.rank === undefined)).toBe(true);
-  });
-
-  it("leaves the untouched all-zero state unranked with no tiebreaks", () => {
-    const out = normalizeJaipurOutcome(outcome([jp("a", [0, 0, 0]), jp("b", [0, 0, 0])]), 3);
+describe("normalizeJaipurOutcome — round-count inference", () => {
+  it("starts a fresh record at two rounds, unranked, with no tiebreaks", () => {
+    const out = normalizeJaipurOutcome(outcome([jp("a"), jp("b")]));
+    expect(out.players[0].roundScores).toEqual([0, 0]);
     expect(out.players.every((p) => p.rank === undefined)).toBe(true);
     expect(out.roundTiebreaks).toBeUndefined();
   });
 
-  it("opens a zeroed tiebreak (bonus + goods, both tied at 0) for a rupee-tied round", () => {
-    const out = normalizeJaipurOutcome(outcome([jp("a", [50, 10, 30]), jp("b", [50, 60, 2])]), 3);
-    expect(out.roundTiebreaks).toEqual([{ round: 0, bonusTokens: [0, 0], goodsTokens: [0, 0] }]);
-    // Unresolved round → no seal → 1–1 → unranked until the tokens settle it.
+  it("grows to three rounds the moment rounds 1+2 split 1–1", () => {
+    const out = normalizeJaipurOutcome(outcome([jp("a", [52, 10]), jp("b", [48, 60])]));
+    expect(out.players[0].roundScores).toEqual([52, 10, 0]);
+    // Round 3 is still unplayed → no seal decision yet → unranked.
     expect(out.players.every((p) => p.rank === undefined)).toBe(true);
   });
 
-  it("settles the seal from bonus tokens and strips the goods fields once they're moot", () => {
-    const out = normalizeJaipurOutcome(
-      outcome(
-        [jp("a", [50, 10, 30]), jp("b", [50, 60, 2])],
-        [{ round: 0, bonusTokens: [3, 1], goodsTokens: [0, 0] }],
-      ),
-      3,
-    );
-    expect(out.roundTiebreaks).toEqual([{ round: 0, bonusTokens: [3, 1] }]);
-    // A takes round 1 by bonus tokens + round 3 by rupees — 2–1.
-    expect(out.players[0].rank).toBe(1);
+  it("stays at two rounds on a 2–0 sweep and crowns the sweeper", () => {
+    const out = normalizeJaipurOutcome(outcome([jp("a", [52, 48]), jp("b", [48, 40])]));
+    expect(out.players[0]).toMatchObject({ score: 100, rank: 1, roundScores: [52, 48] });
     expect(out.players[1].rank).toBe(2);
   });
 
-  it("keeps goods tokens while the bonus tokens tie, and resolves through them", () => {
-    const out = normalizeJaipurOutcome(
-      outcome(
-        [jp("a", [50, 10, 30]), jp("b", [50, 60, 2])],
-        [{ round: 0, bonusTokens: [2, 2], goodsTokens: [4, 7] }],
-      ),
-      3,
-    );
-    expect(out.roundTiebreaks).toEqual([{ round: 0, bonusTokens: [2, 2], goodsTokens: [4, 7] }]);
-    // B takes round 1 by goods tokens + round 2 by rupees — 2–1 for B.
-    expect(out.players[1].rank).toBe(1);
-    expect(out.players[0].rank).toBe(2);
+  it("crowns the seal leader of a full 2–1 record over a higher rupee total", () => {
+    const out = normalizeJaipurOutcome(outcome([jp("a", [52, 10, 35]), jp("b", [48, 60, 2])]));
+    expect(out.players[0]).toMatchObject({ score: 97, rank: 1 });
+    expect(out.players[1]).toMatchObject({ score: 110, rank: 2 });
   });
 
-  it("drops a stale tiebreak when the edited rupees no longer tie", () => {
-    const out = normalizeJaipurOutcome(
-      outcome([jp("a", [52, 10, 35]), jp("b", [48, 60, 2])], [{ round: 0, bonusTokens: [3, 1] }]),
-      3,
-    );
-    expect(out.roundTiebreaks).toBeUndefined();
+  it("trims an untouched round 3 when an edit turns rounds 1+2 into a sweep", () => {
+    const out = normalizeJaipurOutcome(outcome([jp("a", [52, 48, 0]), jp("b", [48, 40, 0])]));
+    expect(out.players[0].roundScores).toEqual([52, 48]);
     expect(out.players[0].rank).toBe(1);
+  });
+
+  it("never trims a round 3 that holds scores — a mid-edit 2–0 state keeps data", () => {
+    // The admin is correcting round 2; while typing, A briefly leads both
+    // early rounds. Round 3's real scores must survive the pass-through.
+    const out = normalizeJaipurOutcome(outcome([jp("a", [52, 48, 35]), jp("b", [48, 40, 2])]));
+    expect(out.players[0].roundScores).toEqual([52, 48, 35]);
+  });
+
+  it("opens a tiebreak for a rupee-tied round and grows to three once it resolves 1–1", () => {
+    const tied = normalizeJaipurOutcome(outcome([jp("a", [50, 10]), jp("b", [50, 60])]));
+    // Round 1 unresolved → two rounds, zeroed bonus+goods fields open.
+    expect(tied.players[0].roundScores).toEqual([50, 10]);
+    expect(tied.roundTiebreaks).toEqual([{ round: 0, bonusTokens: [0, 0], goodsTokens: [0, 0] }]);
+    const resolved = normalizeJaipurOutcome(
+      outcome([jp("a", [50, 10]), jp("b", [50, 60])], [{ round: 0, bonusTokens: [3, 1] }]),
+    );
+    // A takes round 1 by bonus tokens, B round 2 → 1–1 → round 3 appears.
+    expect(resolved.players[0].roundScores).toEqual([50, 10, 0]);
+    expect(resolved.roundTiebreaks).toEqual([{ round: 0, bonusTokens: [3, 1] }]);
+  });
+
+  it("settles a full record through goods tokens and drops a stale tiebreak", () => {
+    const byGoods = normalizeJaipurOutcome(
+      outcome(
+        [jp("a", [50, 10, 30]), jp("b", [50, 60, 2])],
+        [{ round: 0, bonusTokens: [2, 2], goodsTokens: [7, 4] }],
+      ),
+    );
+    // A takes round 1 by goods + round 3 by rupees — 2–1.
+    expect(byGoods.players[0].rank).toBe(1);
+    const stale = normalizeJaipurOutcome(
+      outcome([jp("a", [52, 10, 35]), jp("b", [48, 60, 2])], [{ round: 0, bonusTokens: [3, 1] }]),
+    );
+    expect(stale.roundTiebreaks).toBeUndefined();
   });
 });

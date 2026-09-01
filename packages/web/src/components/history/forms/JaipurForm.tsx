@@ -1,5 +1,4 @@
 import {
-  MAX_ROUND_SCORES,
   MIN_ROUND_SCORES,
   resolveRound,
   roundScoreLeaders,
@@ -8,7 +7,6 @@ import {
 import type { MatchOutcomeFreeForAll, Participant } from "@boardgames/core/history/types";
 import { useEffect } from "react";
 import { JAIPUR_BEST_OF_ONE } from "../../../games/match-variants";
-import { Chip } from "../../ui/Chip";
 import { Input } from "../../ui/Input";
 import { PlayerRow } from "../PlayerRow";
 import { FreeForAllForm } from "./FreeForAllForm";
@@ -52,22 +50,20 @@ export function JaipurForm({ users, value, onChange }: Props) {
 
 function JaipurRoundsForm({ users, value, onChange }: Props) {
   const selectedIds = value.players.map((p) => p.userId);
-  const roundCount = Math.min(
-    MAX_ROUND_SCORES,
-    Math.max(MIN_ROUND_SCORES, value.players[0]?.roundScores?.length ?? MAX_ROUND_SCORES),
-  );
+  const roundCount = value.players[0]?.roundScores?.length ?? MIN_ROUND_SCORES;
 
-  // Keep the outcome normalized (rounds padded, totals summed, tiebreak
-  // entries opened/closed as rounds tie, seals ranked) — covers players
-  // arriving from the night prefill without round records, and records opened
-  // for editing. Idempotent, so it converges in one pass.
+  // Keep the outcome normalized (round count inferred — a third column
+  // appears exactly when rounds 1+2 split 1–1 — rounds padded, totals summed,
+  // tiebreak entries opened/closed as rounds tie, seals ranked) — covers
+  // players arriving from the night prefill without round records, and
+  // records opened for editing. Idempotent, so it converges in one pass.
   useEffect(() => {
-    const normalized = normalizeJaipurOutcome(value, roundCount);
+    const normalized = normalizeJaipurOutcome(value);
     if (!jaipurOutcomesEqual(value, normalized)) onChange(normalized);
-  }, [value, onChange, roundCount]);
+  }, [value, onChange]);
 
-  function commit(next: MatchOutcomeFreeForAll, rounds = roundCount) {
-    onChange(normalizeJaipurOutcome(next, rounds));
+  function commit(next: MatchOutcomeFreeForAll) {
+    onChange(normalizeJaipurOutcome(next));
   }
 
   function setParticipants(participants: Participant[]) {
@@ -119,28 +115,6 @@ function JaipurRoundsForm({ users, value, onChange }: Props) {
 
   return (
     <OutcomeFormShell users={users} selectedIds={selectedIds} onParticipants={setParticipants}>
-      <div className="flex items-center gap-2">
-        <GroupLabel>Rounds played</GroupLabel>
-        <Chip
-          pressed={roundCount === 2}
-          tone="accent"
-          variant="outlined"
-          size="sm"
-          onClick={() => commit(value, 2)}
-        >
-          2 (swept)
-        </Chip>
-        <Chip
-          pressed={roundCount === 3}
-          tone="accent"
-          variant="outlined"
-          size="sm"
-          onClick={() => commit(value, 3)}
-        >
-          3
-        </Chip>
-      </div>
-
       {value.players.length > 0 && (
         <div className="flex flex-col gap-1.5">
           <GroupLabel>

@@ -193,12 +193,24 @@ describe("MatchOutcomeSchema", () => {
     const byGoods = {
       ...jaipurRounds,
       players: [
-        { ...sampleParticipant("u1", "Alice"), score: 90, rank: 2, roundScores: [50, 10, 30] },
-        { ...sampleParticipant("u2", "Bob"), score: 112, rank: 1, roundScores: [50, 60, 2] },
+        { ...sampleParticipant("u1", "Alice"), score: 90, rank: 1, roundScores: [50, 10, 30] },
+        { ...sampleParticipant("u2", "Bob"), score: 112, rank: 2, roundScores: [50, 60, 2] },
       ],
-      roundTiebreaks: [{ round: 0, bonusTokens: [2, 2], goodsTokens: [4, 7] }],
+      roundTiebreaks: [{ round: 0, bonusTokens: [2, 2], goodsTokens: [7, 4] }],
     };
     expect(() => MatchOutcomeSchema.parse(byGoods)).not.toThrow();
+  });
+
+  it("rejects a recorded third round after a 2–0 start — the match was already over", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        ...jaipurRounds,
+        players: [
+          { ...sampleParticipant("u1", "Alice"), score: 90, rank: 2, roundScores: [40, 10, 40] },
+          { ...sampleParticipant("u2", "Bob"), score: 112, rank: 1, roundScores: [50, 60, 2] },
+        ],
+      }),
+    ).toThrow(/ended 2–0 after round 2/);
   });
 
   it("rejects a tied round with no tiebreak, and a tiebreak that doesn't settle it", () => {

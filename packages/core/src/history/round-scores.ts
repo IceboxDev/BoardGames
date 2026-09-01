@@ -203,6 +203,16 @@ export function describeRoundScoresError(outcome: {
     }
   }
 
+  // A best-of-three ENDS the moment someone holds two seals, so a recorded
+  // third round is only possible after a 1–1 split — a 2–0 start with a
+  // round 3 on top never happened at the table.
+  if (rounds === MAX_ROUND_SCORES) {
+    const first = roundWinnerIndex(players, 0, tiebreaks);
+    if (first !== null && first === roundWinnerIndex(players, 1, tiebreaks)) {
+      return "the match ended 2–0 after round 2 — remove round 3";
+    }
+  }
+
   const leaders = roundWinLeaders(players, tiebreaks);
   if (leaders.length !== 1) return "the seals are split — record the deciding round";
 

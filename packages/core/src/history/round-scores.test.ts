@@ -89,11 +89,23 @@ describe("describeRoundScoresError", () => {
       roundTiebreaks: [{ round: 0, bonusTokens: [3, 1] }],
     };
     expect(describeRoundScoresError(byBonus)).toBeNull();
+    // A takes round 1 on goods tokens + round 3 on rupees — 2–1 despite the
+    // lower total. (Goods can't hand B rounds 1+2: a 2–0 ends the match, so a
+    // record with a third round would be rejected — see the test below.)
     const byGoods = {
-      players: [player(90, [50, 10, 30], 2), player(112, [50, 60, 2], 1)],
-      roundTiebreaks: [{ round: 0, bonusTokens: [2, 2], goodsTokens: [4, 7] }],
+      players: [player(90, [50, 10, 30], 1), player(112, [50, 60, 2], 2)],
+      roundTiebreaks: [{ round: 0, bonusTokens: [2, 2], goodsTokens: [7, 4] }],
     };
     expect(describeRoundScoresError(byGoods)).toBeNull();
+  });
+
+  it("rejects a third round after a 2–0 start — the match was already over", () => {
+    // B sweeps rounds 1+2; a recorded round 3 never happened at the table.
+    expect(
+      describeRoundScoresError({
+        players: [player(90, [40, 10, 40], 2), player(112, [50, 60, 2], 1)],
+      }),
+    ).toBe("the match ended 2–0 after round 2 — remove round 3");
   });
 
   it("walks the recorder through an unsettled tie, step by step", () => {
