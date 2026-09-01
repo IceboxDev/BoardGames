@@ -1,5 +1,9 @@
 import type { MatchOutcome, MatchRecord } from "@boardgames/core/history/types";
-import { MatchReorderInputSchema, MatchReorderResponseSchema } from "@boardgames/core/protocol";
+import {
+  AdminLastPlayedResponseSchema,
+  MatchReorderInputSchema,
+  MatchReorderResponseSchema,
+} from "@boardgames/core/protocol";
 import { z } from "zod";
 import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
@@ -409,4 +413,28 @@ adminMatchHistoryRoutes.post("/reorder", zJsonBody(MatchReorderInputSchema), asy
   );
 
   return c.json(MatchReorderResponseSchema.parse({ ok: true }));
+});
+
+// Date of each user's most recent recorded match, for the admin page's
+// inactivity clock — being at a night (any slot, moderators included via
+// match_participants) resets "days at 0% availability" like a marked calendar
+// day. `MAX(played_at)` over the mixed ISO formats is lexicographic, which is
+// day-accurate — good enough for a days-scale clock.
+const LastPlayedRowSchema = z.object({
+  user_id: z.string(),
+  last_played: z.string(),
+});
+
+adminMatchHistoryRoutes.get("/last-played", async (c) => {
+  const { rows } = await getDb().execute(
+    `SELECT mp.user_id AS user_id, substr(MAX(mr.played_at), 1, 10) AS last_played
+     FROM match_participants mp
+     JOIN match_results mr ON mr.id = mp.match_id
+     GROUP BY mp.user_id`,
+  );
+  const lastPlayedByUser: Record<string, string> = {};
+  for (const r of parseRows(LastPlayedRowSchema, rows, "match_participants.last-played")) {
+    lastPlayedByUser[r.user_id] = r.last_played;
+  }
+  return c.json(AdminLastPlayedResponseSchema.parse({ lastPlayedByUser }));
 });

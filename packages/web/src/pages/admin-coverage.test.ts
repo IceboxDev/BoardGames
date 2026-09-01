@@ -1,6 +1,12 @@
 import { describe, expect, it } from "vitest";
 import type { AggregateAvailabilityMap, AvailabilityMap } from "../lib/offline-availability";
-import { computeCoverage, countMarkedInWindow, formatAuthError } from "./admin-coverage";
+import {
+  computeCoverage,
+  countMarkedInWindow,
+  daysAtZeroCoverage,
+  formatAuthError,
+  latestMarkedDayByUser,
+} from "./admin-coverage";
 
 // ── countMarkedInWindow ─────────────────────────────────────────────────
 
@@ -79,6 +85,100 @@ describe("computeCoverage", () => {
 });
 
 // ── formatAuthError ─────────────────────────────────────────────────────
+
+describe("latestMarkedDayByUser", () => {
+  it("returns each user's latest can/maybe date, ignoring other statuses", () => {
+    const aggregate: AggregateAvailabilityMap = {
+      "2026-05-15": [
+        { userId: "u1", name: "A", status: "can" },
+        { userId: "u2", name: "B", status: "maybe" },
+      ],
+      "2026-08-02": [{ userId: "u1", name: "A", status: "maybe" }],
+    };
+    const latest = latestMarkedDayByUser(aggregate);
+    expect(latest.get("u1")).toBe("2026-08-02");
+    expect(latest.get("u2")).toBe("2026-05-15");
+    expect(latest.get("u3")).toBeUndefined();
+  });
+});
+
+describe("daysAtZeroCoverage", () => {
+  const zero = { can: 0, maybe: 0, total: 41 };
+  const todayKey = "2026-09-01";
+
+  it("is 0 whenever any coverage exists — the clock only runs at 0%", () => {
+    expect(
+      daysAtZeroCoverage({
+        coverage: { can: 1, maybe: 0, total: 41 },
+        latestMarkedDay: "2026-05-01",
+        lastPlayedDay: undefined,
+        createdAt: "2026-04-29T10:00:00.000Z",
+        todayKey,
+      }),
+    ).toBe(0);
+  });
+
+  it("counts days since the last marked day slid into the past", () => {
+    // Marked the far end of the window, then went quiet: at 0% only since
+    // that day passed — not since they last opened the calendar.
+    expect(
+      daysAtZeroCoverage({
+        coverage: zero,
+        latestMarkedDay: "2026-08-19",
+        lastPlayedDay: undefined,
+        createdAt: "2026-04-29T10:00:00.000Z",
+        todayKey,
+      }),
+    ).toBe(13);
+  });
+
+  it("a recorded match resets the clock like a marked day", () => {
+    expect(
+      daysAtZeroCoverage({
+        coverage: zero,
+        latestMarkedDay: "2026-08-02",
+        lastPlayedDay: "2026-08-20",
+        createdAt: "2026-04-29T10:00:00.000Z",
+        todayKey,
+      }),
+    ).toBe(12);
+  });
+
+  it("falls back to account creation when no signal exists at all", () => {
+    expect(
+      daysAtZeroCoverage({
+        coverage: zero,
+        latestMarkedDay: undefined,
+        lastPlayedDay: undefined,
+        createdAt: "2026-07-16T08:00:00.000Z",
+        todayKey,
+      }),
+    ).toBe(47);
+    // Date-typed createdAt (better-auth sometimes hands over Dates).
+    expect(
+      daysAtZeroCoverage({
+        coverage: zero,
+        latestMarkedDay: undefined,
+        lastPlayedDay: undefined,
+        createdAt: new Date("2026-07-16T08:00:00.000Z"),
+        todayKey,
+      }),
+    ).toBe(47);
+  });
+
+  it("clamps a future-dated signal to 0 instead of going negative", () => {
+    // A mark beyond the 42-day window: 0% coverage, but clearly not gone.
+    expect(
+      daysAtZeroCoverage({
+        coverage: zero,
+        latestMarkedDay: "2026-12-24",
+        lastPlayedDay: undefined,
+        createdAt: "2026-04-29T10:00:00.000Z",
+        todayKey,
+      }),
+    ).toBe(0);
+  });
+});
 
 describe("formatAuthError", () => {
   it("returns the fallback for null / undefined / non-object errors", () => {

@@ -47,6 +47,12 @@ const DecryptoPreview = import.meta.env.DEV
   ? lazy(() => import("./pages/DecryptoPreview"))
   : () => null;
 const SkillPreview = import.meta.env.DEV ? lazy(() => import("./pages/SkillPreview")) : () => null;
+const JaipurHistoryPreview = import.meta.env.DEV
+  ? lazy(() => import("./pages/JaipurHistoryPreview"))
+  : () => null;
+const AdminInactivePreview = import.meta.env.DEV
+  ? lazy(() => import("./pages/AdminInactivePreview"))
+  : () => null;
 const UiGalleryPage = import.meta.env.DEV
   ? lazy(() => import("./pages/UiGalleryPage"))
   : () => null;
@@ -282,6 +288,8 @@ const router = createBrowserRouter(
           <Route path="dev/rsvp-preview" element={<RsvpPreview />} />
           <Route path="dev/decrypto-preview" element={<DecryptoPreview />} />
           <Route path="dev/skill-preview" element={<SkillPreview />} />
+          <Route path="dev/jaipur-preview" element={<JaipurHistoryPreview />} />
+          <Route path="dev/admin-inactive-preview" element={<AdminInactivePreview />} />
           {/* The design-system gallery: every ui/ primitive in its variants.
               Captured by scripts/screenshot-smoke.sh as the per-primitive
               visual-regression surface. */}

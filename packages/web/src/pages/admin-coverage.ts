@@ -54,6 +54,67 @@ export function computeCoverage(
   return { can, maybe, total: editableDateKeys.length };
 }
 
+// ── Inactivity (archived players) ─────────────────────────────────────
+//
+// A player who has been at 0% coverage for this many days moves out of the
+// main admin table into the collapsible "Inactive players" card. The clock is
+// computed, never stored: it starts when the player's last availability
+// signal slides into the past, and any new signal revives them instantly.
+// Signals that reset it: a marked can/maybe day (RSVP-yes nights are already
+// merged into the aggregate as "can" by the admin availability endpoint) and
+// a recorded match (being at a night counts, even for players who never open
+// the app). Admins are never archived.
+export const INACTIVE_AFTER_DAYS = 14;
+
+/**
+ * All-time latest can/maybe date key per user, pivoted from the aggregate
+ * map. The admin endpoint returns the map unbounded — past dates included —
+ * which is what makes the "since when" question answerable client-side.
+ */
+export function latestMarkedDayByUser(aggregate: AggregateAvailabilityMap): Map<string, string> {
+  const out = new Map<string, string>();
+  for (const [date, entries] of Object.entries(aggregate)) {
+    for (const e of entries) {
+      if (e.status !== "can" && e.status !== "maybe") continue;
+      const prev = out.get(e.userId);
+      if (prev === undefined || date > prev) out.set(e.userId, date);
+    }
+  }
+  return out;
+}
+
+function daysBetweenKeys(fromKey: string, toKey: string): number {
+  return Math.round(
+    (new Date(`${toKey}T00:00Z`).getTime() - new Date(`${fromKey}T00:00Z`).getTime()) / 86_400_000,
+  );
+}
+
+/**
+ * How many days this user has been sitting at 0% coverage. Zero whenever any
+ * coverage exists (a single future mark keeps the clock parked); otherwise
+ * days since their latest signal — last marked day or last recorded match —
+ * and for players with no signal at all, days since the account was created.
+ * A future-dated signal (a mark beyond the coverage window) clamps to 0.
+ */
+export function daysAtZeroCoverage(opts: {
+  coverage: Coverage;
+  latestMarkedDay: string | undefined;
+  lastPlayedDay: string | undefined;
+  createdAt: string | Date;
+  todayKey: string;
+}): number {
+  if (opts.coverage.can + opts.coverage.maybe > 0) return 0;
+  const signals = [opts.latestMarkedDay, opts.lastPlayedDay].filter(
+    (s): s is string => s !== undefined,
+  );
+  const latest =
+    signals.length > 0
+      ? signals.sort().at(-1)
+      : new Date(opts.createdAt).toISOString().slice(0, 10);
+  if (!latest) return 0;
+  return Math.max(0, daysBetweenKeys(latest, opts.todayKey));
+}
+
 /**
  * Better Auth's client returns `{ error }` with a sometimes-sparse envelope —
  * `message` may be empty while `code` and `statusText` carry the actual cause.

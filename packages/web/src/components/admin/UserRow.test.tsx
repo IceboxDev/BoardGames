@@ -27,6 +27,7 @@ function defaultProps() {
   return {
     user: user(),
     coverage: { can: 3, maybe: 1, total: 10 },
+    zeroForDays: undefined as number | undefined,
     expanded: false,
     onToggleInventory: vi.fn(),
     onSetOnlineMode: vi.fn(),
@@ -77,6 +78,17 @@ describe("UserRow — main row", () => {
     renderRow({ user: user({ role: "admin" }) });
     const badge = screen.getByText("admin");
     expect(badge.className).toMatch(/accent-300/);
+  });
+
+  it("shows the days-at-0% tag only when zeroForDays is passed", () => {
+    const { unmount } = renderRow({
+      coverage: { can: 0, maybe: 0, total: 41 },
+      zeroForDays: 47,
+    });
+    expect(screen.getByText("47d at 0%")).toBeInTheDocument();
+    unmount();
+    renderRow();
+    expect(screen.queryByText(/at 0%/)).not.toBeInTheDocument();
   });
 
   it("invokes onOpenCalendar when the coverage pie is clicked", async () => {

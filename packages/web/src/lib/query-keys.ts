@@ -31,6 +31,7 @@ export const qk = {
   collection: (userId: string) => ["collection", userId] as const,
   adminAnnouncements: () => ["admin", "announcements"] as const,
   adminSkills: () => ["admin", "skills"] as const,
+  adminLastPlayed: () => ["admin", "last-played"] as const,
   dndCampaigns: () => ["dnd", "campaigns"] as const,
   dndCharacters: (partyId: string) => ["dnd", "characters", partyId] as const,
   dndParties: (campaignId: string) => ["dnd", "parties", campaignId] as const,

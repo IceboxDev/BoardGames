@@ -17,6 +17,11 @@ const COLUMN_COUNT = 6;
 export type UserRowProps = {
   user: AdminUser;
   coverage: Coverage;
+  /** Days this user has been at 0% coverage (see admin-coverage.ts). Renders
+   *  a muted "Nd at 0%" tag next to the name so the main table's staleness
+   *  sort and the Inactive card's ordering are both legible. Omit for users
+   *  with any coverage. */
+  zeroForDays?: number;
   /** Pending ownership announcements from this user (amber badge on the name). */
   pendingAnnouncements?: number;
   /** Inventory expansion (renders a second `<tr>` with the editor). */
@@ -58,6 +63,7 @@ export type UserRowProps = {
 export function UserRow({
   user,
   coverage,
+  zeroForDays,
   pendingAnnouncements = 0,
   expanded,
   onToggleInventory,
@@ -108,6 +114,14 @@ export function UserRow({
                 title={`${pendingAnnouncements} pending ownership announcement${pendingAnnouncements === 1 ? "" : "s"}`}
               >
                 {pendingAnnouncements}
+              </span>
+            )}
+            {zeroForDays !== undefined && (
+              <span
+                className="shrink-0 text-3xs tabular-nums text-fg-muted"
+                title="Days since this player's last availability mark, RSVP, or recorded match"
+              >
+                {zeroForDays}d at 0%
               </span>
             )}
           </span>
