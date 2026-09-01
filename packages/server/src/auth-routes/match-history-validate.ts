@@ -2,6 +2,11 @@ import {
   DECRYPTO_RECORD_MAX_ROUNDS,
   describeDecryptoRecordError,
 } from "@boardgames/core/history/decrypto-tokens";
+import {
+  describeRoundScoresError,
+  MAX_ROUND_SCORES,
+  MIN_ROUND_SCORES,
+} from "@boardgames/core/history/round-scores";
 import type {
   MatchOutcome,
   MatchOutcomeCoop,
@@ -72,11 +77,35 @@ function parseFreeForAll(v: Record<string, unknown>): ParseResult<MatchOutcomeFr
     // Optional per-player role label (Villainous villain, etc.) — mirrors the
     // team-member `role` handling so it survives the write round-trip.
     const role = raw.role !== undefined ? asOptionalString(raw.role, 64) : undefined;
+    // Optional best-of-three round record (Jaipur). Cross-field consistency
+    // (same rounds everywhere, totals, crowned winner) is checked below via
+    // the shared core validator.
+    let roundScores: number[] | undefined;
+    if (raw.roundScores !== undefined && raw.roundScores !== null) {
+      if (
+        !Array.isArray(raw.roundScores) ||
+        raw.roundScores.length < MIN_ROUND_SCORES ||
+        raw.roundScores.length > MAX_ROUND_SCORES
+      ) {
+        return {
+          ok: false,
+          error: `players[${i}]: roundScores must hold ${MIN_ROUND_SCORES}–${MAX_ROUND_SCORES} rounds`,
+        };
+      }
+      const parsedRounds: number[] = [];
+      for (const s of raw.roundScores) {
+        const n = asFiniteNumber(s);
+        if (n === null) return { ok: false, error: `players[${i}]: invalid round score` };
+        parsedRounds.push(n);
+      }
+      roundScores = parsedRounds;
+    }
     players.push({
       ...p.value,
       score,
       ...(rank !== undefined ? { rank } : {}),
       ...(role !== undefined ? { role } : {}),
+      ...(roundScores !== undefined ? { roundScores } : {}),
     });
   }
   // No explicit winnerUserIds — the player(s) with the highest score are
@@ -91,15 +120,57 @@ function parseFreeForAll(v: Record<string, unknown>): ParseResult<MatchOutcomeFr
   if (v.draw === true && players.some((p) => p.rank !== undefined)) {
     return { ok: false, error: "free-for-all: a drawn match cannot have a ranked winner" };
   }
-  return {
-    ok: true,
-    value: {
-      kind: "free-for-all",
-      players,
-      ...(scenario !== undefined ? { scenario } : {}),
-      ...(v.draw === true ? { draw: true as const } : {}),
-    },
+  // Jaipur's tied-round tiebreaks: rebuilt token-by-token; the semantics
+  // (only on tied rounds, must settle the seal) are cross-checked below by
+  // the shared core validator.
+  let roundTiebreaks: MatchOutcomeFreeForAll["roundTiebreaks"];
+  if (v.roundTiebreaks !== undefined && v.roundTiebreaks !== null) {
+    if (!Array.isArray(v.roundTiebreaks) || v.roundTiebreaks.length > MAX_ROUND_SCORES) {
+      return { ok: false, error: `roundTiebreaks: at most ${MAX_ROUND_SCORES} entries` };
+    }
+    const tokenCounts = (value: unknown): number[] | null => {
+      if (!Array.isArray(value) || value.length < 2 || value.length > 20) return null;
+      const counts: number[] = [];
+      for (const t of value) {
+        const n = asInteger(t);
+        if (n === null || n < 0 || n > 100) return null;
+        counts.push(n);
+      }
+      return counts;
+    };
+    const parsed: NonNullable<MatchOutcomeFreeForAll["roundTiebreaks"]> = [];
+    for (let i = 0; i < v.roundTiebreaks.length; i++) {
+      const tb = v.roundTiebreaks[i];
+      if (!isPlainObject(tb)) return { ok: false, error: `roundTiebreaks[${i}]: not an object` };
+      const round = asInteger(tb.round);
+      if (round === null || round < 0 || round >= MAX_ROUND_SCORES) {
+        return { ok: false, error: `roundTiebreaks[${i}]: invalid round` };
+      }
+      const bonusTokens = tokenCounts(tb.bonusTokens);
+      if (!bonusTokens) return { ok: false, error: `roundTiebreaks[${i}]: invalid bonusTokens` };
+      let goodsTokens: number[] | undefined;
+      if (tb.goodsTokens !== undefined && tb.goodsTokens !== null) {
+        const g = tokenCounts(tb.goodsTokens);
+        if (!g) return { ok: false, error: `roundTiebreaks[${i}]: invalid goodsTokens` };
+        goodsTokens = g;
+      }
+      parsed.push({ round, bonusTokens, ...(goodsTokens !== undefined ? { goodsTokens } : {}) });
+    }
+    roundTiebreaks = parsed;
+  }
+  const value: MatchOutcomeFreeForAll = {
+    kind: "free-for-all",
+    players,
+    ...(scenario !== undefined ? { scenario } : {}),
+    ...(v.draw === true ? { draw: true as const } : {}),
+    ...(roundTiebreaks !== undefined ? { roundTiebreaks } : {}),
   };
+  // Best-of-three round record (Jaipur): every tied round must be settled by
+  // its tiebreak and the crowned winner must fall out of the round wins —
+  // same shared-validator pattern as Decrypto's tokens.
+  const roundError = describeRoundScoresError(value);
+  if (roundError) return { ok: false, error: `free-for-all: ${roundError}` };
+  return { ok: true, value };
 }
 
 function parseTeams(v: Record<string, unknown>): ParseResult<MatchOutcomeTeams> {

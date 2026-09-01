@@ -89,6 +89,131 @@ describe("parseOutcome — free-for-all drawn duel (chess / Connect 4)", () => {
   });
 });
 
+describe("parseOutcome — free-for-all best-of-three rounds (Jaipur)", () => {
+  it("round-trips a coherent record — seal winner ranked 1 over a higher total", () => {
+    const result = parseOutcome({
+      kind: "free-for-all",
+      scenario: "Standard",
+      players: [
+        { userId: "u1", displayName: "Alice", score: 97, rank: 1, roundScores: [52, 10, 35] },
+        { userId: "u2", displayName: "Bob", score: 110, rank: 2, roundScores: [48, 60, 2] },
+      ],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "free-for-all") {
+      expect(result.value.players[0]).toMatchObject({ rank: 1, roundScores: [52, 10, 35] });
+      expect(result.value.players[1].roundScores).toEqual([48, 60, 2]);
+    }
+  });
+
+  it("omits roundScores entirely on a plain scored match", () => {
+    const result = parseOutcome({
+      kind: "free-for-all",
+      players: [
+        { userId: "u1", displayName: "Alice", score: 1 },
+        { userId: "u2", displayName: "Bob", score: 2 },
+      ],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "free-for-all") {
+      expect("roundScores" in result.value.players[0]).toBe(false);
+    }
+  });
+
+  it("rejects a crowned winner contradicting the round wins", () => {
+    const result = parseOutcome({
+      kind: "free-for-all",
+      players: [
+        { userId: "u1", displayName: "Alice", score: 97, rank: 2, roundScores: [52, 10, 35] },
+        { userId: "u2", displayName: "Bob", score: 110, rank: 1, roundScores: [48, 60, 2] },
+      ],
+    });
+    expect(result.ok).toBe(false);
+    if (!result.ok) expect(result.error).toMatch(/doesn't match the recorded round scores/);
+  });
+
+  it("rejects malformed round records — non-numeric entries or a bad round count", () => {
+    const nonNumeric = parseOutcome({
+      kind: "free-for-all",
+      players: [
+        { userId: "u1", displayName: "Alice", score: 97, rank: 1, roundScores: [52, "x", 35] },
+        { userId: "u2", displayName: "Bob", score: 110, rank: 2, roundScores: [48, 60, 2] },
+      ],
+    });
+    expect(nonNumeric.ok).toBe(false);
+    const fourRounds = parseOutcome({
+      kind: "free-for-all",
+      players: [
+        { userId: "u1", displayName: "Alice", score: 4, rank: 1, roundScores: [1, 1, 1, 1] },
+        { userId: "u2", displayName: "Bob", score: 0, rank: 2, roundScores: [0, 0, 0, 0] },
+      ],
+    });
+    expect(fourRounds.ok).toBe(false);
+  });
+
+  it("rejects a total that isn't the sum of that player's rounds", () => {
+    const result = parseOutcome({
+      kind: "free-for-all",
+      players: [
+        { userId: "u1", displayName: "Alice", score: 98, rank: 1, roundScores: [52, 10, 35] },
+        { userId: "u2", displayName: "Bob", score: 110, rank: 2, roundScores: [48, 60, 2] },
+      ],
+    });
+    expect(result.ok).toBe(false);
+    if (!result.ok) expect(result.error).toMatch(/sum of that player's round scores/);
+  });
+
+  // Round 1 ties at 50 — the rulebook tiebreak (bonus, then goods tokens).
+  const tiedPlayers = [
+    { userId: "u1", displayName: "Alice", score: 90, rank: 1, roundScores: [50, 10, 30] },
+    { userId: "u2", displayName: "Bob", score: 112, rank: 2, roundScores: [50, 60, 2] },
+  ];
+
+  it("round-trips a tied round settled by its tiebreak record", () => {
+    const result = parseOutcome({
+      kind: "free-for-all",
+      players: tiedPlayers,
+      roundTiebreaks: [{ round: 0, bonusTokens: [3, 1] }],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "free-for-all") {
+      expect(result.value.roundTiebreaks).toEqual([{ round: 0, bonusTokens: [3, 1] }]);
+      expect("goodsTokens" in (result.value.roundTiebreaks?.[0] ?? {})).toBe(false);
+    }
+  });
+
+  it("rejects a tied round without a tiebreak, and malformed tiebreak shapes", () => {
+    const missing = parseOutcome({
+      kind: "free-for-all",
+      players: tiedPlayers.map(({ rank: _drop, ...p }) => p),
+    });
+    expect(missing.ok).toBe(false);
+    if (!missing.ok) expect(missing.error).toMatch(/tied — record its bonus tokens/);
+    const badTokens = parseOutcome({
+      kind: "free-for-all",
+      players: tiedPlayers,
+      roundTiebreaks: [{ round: 0, bonusTokens: [3, "x"] }],
+    });
+    expect(badTokens.ok).toBe(false);
+    const badRound = parseOutcome({
+      kind: "free-for-all",
+      players: tiedPlayers,
+      roundTiebreaks: [{ round: -1, bonusTokens: [3, 1] }],
+    });
+    expect(badRound.ok).toBe(false);
+    const stale = parseOutcome({
+      kind: "free-for-all",
+      players: [
+        { userId: "u1", displayName: "Alice", score: 97, rank: 1, roundScores: [52, 10, 35] },
+        { userId: "u2", displayName: "Bob", score: 110, rank: 2, roundScores: [48, 60, 2] },
+      ],
+      roundTiebreaks: [{ round: 0, bonusTokens: [3, 1] }],
+    });
+    expect(stale.ok).toBe(false);
+    if (!stale.ok) expect(stale.error).toMatch(/isn't tied — remove its tiebreak/);
+  });
+});
+
 describe("parseOutcome — last-standing role round-trip", () => {
   it("preserves each player's role (Dungeon Mayhem hero) and elimination order", () => {
     const result = parseOutcome({

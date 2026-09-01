@@ -14,6 +14,7 @@ import {
   carryOverParticipants,
   describeClocktowerError,
   describeGenericTeamsError,
+  describeJaipurError,
   describeOutcomeError,
   describeResistanceError,
   describeVillainousError,
@@ -591,6 +592,79 @@ describe("describeVillainousError", () => {
       describeVillainousError(
         villainousFfa({ id: "a", role: "Jafar", winner: true }, { id: "b", role: "Ursula" }),
       ),
+    ).toBeNull();
+  });
+});
+
+describe("describeJaipurError", () => {
+  type JaipurPlayer = MatchOutcomeFreeForAll["players"][number];
+  const jp = (id: string, roundScores: number[] | undefined, rank?: number): JaipurPlayer => ({
+    ...p(id),
+    score: (roundScores ?? []).reduce((a, b) => a + b, 0),
+    ...(roundScores !== undefined ? { roundScores } : {}),
+    ...(rank !== undefined ? { rank } : {}),
+  });
+  const jaipur = (scenario: string, ...players: JaipurPlayer[]): MatchOutcomeFreeForAll => ({
+    kind: "free-for-all",
+    scenario,
+    players,
+  });
+
+  it("requires exactly two players", () => {
+    expect(describeJaipurError(jaipur("Standard", jp("a", [1, 2, 3], 1)))).toMatch(/two-player/);
+    expect(
+      describeJaipurError(
+        jaipur("Standard", jp("a", [1, 2, 3], 1), jp("b", [0, 0, 0], 2), jp("c", [0, 0, 0], 3)),
+      ),
+    ).toMatch(/two-player/);
+  });
+
+  it("Best of 1 falls back to plain free-for-all semantics", () => {
+    expect(
+      describeJaipurError({
+        kind: "free-for-all",
+        scenario: "Best of 1",
+        players: [
+          { ...p("a"), score: 60 },
+          { ...p("b"), score: 55 },
+        ],
+      }),
+    ).toBeNull();
+  });
+
+  it("asks for round entry while the record is empty", () => {
+    expect(describeJaipurError(jaipur("Standard", jp("a", [0, 0, 0]), jp("b", [0, 0, 0])))).toBe(
+      "Enter each round's rupees",
+    );
+    expect(
+      describeJaipurError({
+        kind: "free-for-all",
+        scenario: "Standard",
+        players: [
+          { ...p("a"), score: 0 },
+          { ...p("b"), score: 0 },
+        ],
+      }),
+    ).toBe("Enter each round's rupees");
+  });
+
+  it("walks a rupee-tied round through the rulebook tiebreak", () => {
+    const tied = jaipur("Standard", jp("a", [50, 10, 30]), jp("b", [50, 60, 2]));
+    expect(describeJaipurError(tied)).toBe("round 1 is tied — record its bonus tokens");
+    expect(
+      describeJaipurError({ ...tied, roundTiebreaks: [{ round: 0, bonusTokens: [2, 2] }] }),
+    ).toBe("round 1's bonus tokens are tied — record its goods tokens");
+  });
+
+  it("returns null for a coherent record — including a tie settled by tokens", () => {
+    expect(
+      describeJaipurError(jaipur("Standard", jp("a", [52, 10, 35], 1), jp("b", [48, 60, 2], 2))),
+    ).toBeNull();
+    expect(
+      describeJaipurError({
+        ...jaipur("Standard", jp("a", [50, 10, 30], 1), jp("b", [50, 60, 2], 2)),
+        roundTiebreaks: [{ round: 0, bonusTokens: [3, 1] }],
+      }),
     ).toBeNull();
   });
 });

@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
+  AdminLastPlayedResponseSchema,
   HistoryListQuerySchema,
   HistoryListResponseSchema,
   MatchCreateInputSchema,
@@ -142,6 +143,174 @@ describe("MatchOutcomeSchema", () => {
         ],
       }),
     ).toThrow();
+  });
+
+  // ── Best-of-three round records (Jaipur) ──────────────────────────────
+
+  // A comes back 2–1 on seals despite the lower rupee total — the exact case
+  // the round record exists for. Rank carries the match result.
+  const jaipurRounds = {
+    kind: "free-for-all",
+    scenario: "Standard",
+    players: [
+      { ...sampleParticipant("u1", "Alice"), score: 97, rank: 1, roundScores: [52, 10, 35] },
+      { ...sampleParticipant("u2", "Bob"), score: 110, rank: 2, roundScores: [48, 60, 2] },
+    ],
+  } as const;
+
+  it("accepts a best-of-three round record — seal winner ranked 1 over a higher total", () => {
+    const parsed = MatchOutcomeSchema.parse(jaipurRounds);
+    expect(parsed.kind).toBe("free-for-all");
+    if (parsed.kind === "free-for-all") {
+      expect(parsed.players[0].roundScores).toEqual([52, 10, 35]);
+      expect(parsed.players[0].rank).toBe(1);
+    }
+  });
+
+  it("accepts a two-round sweep", () => {
+    const swept = {
+      ...jaipurRounds,
+      players: [
+        { ...sampleParticipant("u1", "Alice"), score: 100, rank: 1, roundScores: [52, 48] },
+        { ...sampleParticipant("u2", "Bob"), score: 88, rank: 2, roundScores: [48, 40] },
+      ],
+    };
+    expect(() => MatchOutcomeSchema.parse(swept)).not.toThrow();
+  });
+
+  it("accepts a rupee-tied round settled by the rulebook tiebreak (bonus, then goods tokens)", () => {
+    const byBonus = MatchOutcomeSchema.parse({
+      ...jaipurRounds,
+      players: [
+        { ...sampleParticipant("u1", "Alice"), score: 90, rank: 1, roundScores: [50, 10, 30] },
+        { ...sampleParticipant("u2", "Bob"), score: 112, rank: 2, roundScores: [50, 60, 2] },
+      ],
+      roundTiebreaks: [{ round: 0, bonusTokens: [3, 1] }],
+    });
+    if (byBonus.kind === "free-for-all") {
+      expect(byBonus.roundTiebreaks).toEqual([{ round: 0, bonusTokens: [3, 1] }]);
+    }
+    const byGoods = {
+      ...jaipurRounds,
+      players: [
+        { ...sampleParticipant("u1", "Alice"), score: 90, rank: 2, roundScores: [50, 10, 30] },
+        { ...sampleParticipant("u2", "Bob"), score: 112, rank: 1, roundScores: [50, 60, 2] },
+      ],
+      roundTiebreaks: [{ round: 0, bonusTokens: [2, 2], goodsTokens: [4, 7] }],
+    };
+    expect(() => MatchOutcomeSchema.parse(byGoods)).not.toThrow();
+  });
+
+  it("rejects a tied round with no tiebreak, and a tiebreak that doesn't settle it", () => {
+    const tiedPlayers = [
+      { ...sampleParticipant("u1", "Alice"), score: 90, roundScores: [50, 10, 30] },
+      { ...sampleParticipant("u2", "Bob"), score: 112, roundScores: [50, 60, 2] },
+    ];
+    expect(() => MatchOutcomeSchema.parse({ ...jaipurRounds, players: tiedPlayers })).toThrow(
+      /round 1 is tied — record its bonus tokens/,
+    );
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        ...jaipurRounds,
+        players: tiedPlayers,
+        roundTiebreaks: [{ round: 0, bonusTokens: [2, 2] }],
+      }),
+    ).toThrow(/bonus tokens are tied — record its goods tokens/);
+  });
+
+  it("rejects malformed tiebreaks — stale round, negative tokens, misaligned arrays", () => {
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        ...jaipurRounds,
+        roundTiebreaks: [{ round: 0, bonusTokens: [3, 1] }],
+      }),
+    ).toThrow(/isn't tied — remove its tiebreak/);
+    const tiedPlayers = [
+      { ...sampleParticipant("u1", "Alice"), score: 90, rank: 1, roundScores: [50, 10, 30] },
+      { ...sampleParticipant("u2", "Bob"), score: 112, rank: 2, roundScores: [50, 60, 2] },
+    ];
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        ...jaipurRounds,
+        players: tiedPlayers,
+        roundTiebreaks: [{ round: 0, bonusTokens: [-1, 1] }],
+      }),
+    ).toThrow();
+    expect(() =>
+      MatchOutcomeSchema.parse({
+        ...jaipurRounds,
+        players: tiedPlayers,
+        roundTiebreaks: [{ round: 0, bonusTokens: [3, 1, 2] }],
+      }),
+    ).toThrow(/must cover every player/);
+  });
+
+  it("rejects a crowned winner who doesn't hold the most round wins", () => {
+    const bad = {
+      ...jaipurRounds,
+      players: [
+        { ...sampleParticipant("u1", "Alice"), score: 97, rank: 2, roundScores: [52, 10, 35] },
+        { ...sampleParticipant("u2", "Bob"), score: 110, rank: 1, roundScores: [48, 60, 2] },
+      ],
+    };
+    expect(() => MatchOutcomeSchema.parse(bad)).toThrow(/doesn't match the recorded round scores/);
+  });
+
+  it("rejects a total that isn't the sum of that player's rounds", () => {
+    const bad = {
+      ...jaipurRounds,
+      players: [
+        { ...sampleParticipant("u1", "Alice"), score: 98, rank: 1, roundScores: [52, 10, 35] },
+        { ...sampleParticipant("u2", "Bob"), score: 110, rank: 2, roundScores: [48, 60, 2] },
+      ],
+    };
+    expect(() => MatchOutcomeSchema.parse(bad)).toThrow(/sum of that player's round scores/);
+  });
+
+  it("rejects round records missing on one player or of unequal length", () => {
+    const missing = {
+      ...jaipurRounds,
+      players: [
+        { ...sampleParticipant("u1", "Alice"), score: 97, rank: 1, roundScores: [52, 10, 35] },
+        { ...sampleParticipant("u2", "Bob"), score: 110, rank: 2 },
+      ],
+    };
+    expect(() => MatchOutcomeSchema.parse(missing)).toThrow(/round scores recorded/);
+    const unequal = {
+      ...jaipurRounds,
+      players: [
+        { ...sampleParticipant("u1", "Alice"), score: 97, rank: 1, roundScores: [52, 10, 35] },
+        { ...sampleParticipant("u2", "Bob"), score: 108, rank: 2, roundScores: [48, 60] },
+      ],
+    };
+    expect(() => MatchOutcomeSchema.parse(unequal)).toThrow(/same number of rounds/);
+  });
+
+  it("rejects an unplaced round-scored match and out-of-bounds round counts", () => {
+    const unranked = {
+      ...jaipurRounds,
+      players: [
+        { ...sampleParticipant("u1", "Alice"), score: 97, roundScores: [52, 10, 35] },
+        { ...sampleParticipant("u2", "Bob"), score: 110, roundScores: [48, 60, 2] },
+      ],
+    };
+    expect(() => MatchOutcomeSchema.parse(unranked)).toThrow(/every player placed/);
+    const oneRound = {
+      ...jaipurRounds,
+      players: [
+        { ...sampleParticipant("u1", "Alice"), score: 52, rank: 1, roundScores: [52] },
+        { ...sampleParticipant("u2", "Bob"), score: 48, rank: 2, roundScores: [48] },
+      ],
+    };
+    expect(() => MatchOutcomeSchema.parse(oneRound)).toThrow();
+    const fourRounds = {
+      ...jaipurRounds,
+      players: [
+        { ...sampleParticipant("u1", "Alice"), score: 4, rank: 1, roundScores: [1, 1, 1, 1] },
+        { ...sampleParticipant("u2", "Bob"), score: 0, rank: 2, roundScores: [0, 0, 0, 0] },
+      ],
+    };
+    expect(() => MatchOutcomeSchema.parse(fourRounds)).toThrow();
   });
 
   // ── D&D co-op (campaign + resolution + per-player condition) ──────────
@@ -478,6 +647,24 @@ describe("MatchCreateInputSchema", () => {
         notes: null,
       }),
     ).toThrow();
+  });
+});
+
+describe("AdminLastPlayedResponseSchema", () => {
+  it("accepts a userId → dateKey map, empty included", () => {
+    expect(() =>
+      AdminLastPlayedResponseSchema.parse({
+        lastPlayedByUser: { u1: "2026-08-20", u2: "2026-05-15" },
+      }),
+    ).not.toThrow();
+    expect(() => AdminLastPlayedResponseSchema.parse({ lastPlayedByUser: {} })).not.toThrow();
+  });
+
+  it("rejects a non-dateKey value and a missing map", () => {
+    expect(() =>
+      AdminLastPlayedResponseSchema.parse({ lastPlayedByUser: { u1: "2026-08-20T19:00:00Z" } }),
+    ).toThrow();
+    expect(() => AdminLastPlayedResponseSchema.parse({})).toThrow();
   });
 });
 

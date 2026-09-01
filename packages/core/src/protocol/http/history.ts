@@ -3,6 +3,11 @@ import {
   DECRYPTO_RECORD_MAX_ROUNDS,
   describeDecryptoRecordError,
 } from "../../history/decrypto-tokens";
+import {
+  describeRoundScoresError,
+  MAX_ROUND_SCORES,
+  MIN_ROUND_SCORES,
+} from "../../history/round-scores";
 
 // ── Primitives ─────────────────────────────────────────────────────────
 // `playedAt` is the user-supplied wall-clock time the match happened.
@@ -45,6 +50,28 @@ const FreeForAllPlayerSchema = ParticipantSchema.extend({
   // (Maleficent, Jafar, …); the sole winner is marked with `rank: 1` and every
   // score stays 0. Same shape and intent as `TeamMember.role`.
   role: z.string().max(64).optional(),
+  // Best-of-three round record (Jaipur): the rupees banked per round, 2–3
+  // rounds. When present, `score` is the summed total and `rank` carries the
+  // match result — the round-win ("seal") leader must be rank 1, which is NOT
+  // always the rupee-total leader. Cross-field rules live in the superRefine
+  // below via `describeRoundScoresError`.
+  roundScores: z.array(z.number().finite()).min(MIN_ROUND_SCORES).max(MAX_ROUND_SCORES).optional(),
+});
+
+// Jaipur-only: one rupee-tied round settled the rulebook's way — the most
+// BONUS tokens takes the seal, still tied the most GOODS tokens. `round` is
+// the 0-based index into `roundScores`; the token arrays index-align with
+// `players` (only the tied leaders' entries matter). `goodsTokens` is legal
+// exactly when the bonus tokens tie too — enforced with the rest of the
+// round-record rules in the superRefine below.
+const RoundTiebreakSchema = z.object({
+  round: z
+    .number()
+    .int()
+    .min(0)
+    .max(MAX_ROUND_SCORES - 1),
+  bonusTokens: z.array(z.number().int().min(0).max(100)).min(2).max(20),
+  goodsTokens: z.array(z.number().int().min(0).max(100)).min(2).max(20).optional(),
 });
 
 const MatchOutcomeFreeForAllSchema = z.object({
@@ -58,6 +85,10 @@ const MatchOutcomeFreeForAllSchema = z.object({
   // winner. Point-less by construction — every score stays 0 and no player may
   // carry a rank alongside it (enforced on the union below).
   draw: z.literal(true).optional(),
+  // Jaipur-only: tiebreakers for rupee-tied rounds. When present, every tied
+  // round must be settled by its entry — the seal is DERIVED, never
+  // free-picked (enforced on the union below via `describeRoundScoresError`).
+  roundTiebreaks: z.array(RoundTiebreakSchema).max(MAX_ROUND_SCORES).optional(),
 });
 export type MatchOutcomeFreeForAll = z.infer<typeof MatchOutcomeFreeForAllSchema>;
 
@@ -204,14 +235,20 @@ export const MatchOutcomeSchema = z
     MatchOutcomeOneVsManySchema,
   ])
   .superRefine((v, ctx) => {
-    if (v.kind === "free-for-all" && v.draw) {
-      const ranked = v.players.findIndex((p) => p.rank !== undefined);
-      if (ranked !== -1) {
-        ctx.addIssue({
-          code: "custom",
-          path: ["players", ranked, "rank"],
-          message: "a drawn match cannot have a ranked winner",
-        });
+    if (v.kind === "free-for-all") {
+      if (v.draw) {
+        const ranked = v.players.findIndex((p) => p.rank !== undefined);
+        if (ranked !== -1) {
+          ctx.addIssue({
+            code: "custom",
+            path: ["players", ranked, "rank"],
+            message: "a drawn match cannot have a ranked winner",
+          });
+        }
+      }
+      const roundError = describeRoundScoresError(v);
+      if (roundError) {
+        ctx.addIssue({ code: "custom", path: ["players"], message: roundError });
       }
     } else if (v.kind === "teams") {
       for (const idx of v.winnerTeamIndices) {
@@ -351,6 +388,17 @@ export type DndOpenCampaignsResponse = z.infer<typeof DndOpenCampaignsResponseSc
 
 export const DeleteMatchResponseSchema = z.object({ ok: z.literal(true) });
 export type DeleteMatchResponse = z.infer<typeof DeleteMatchResponseSchema>;
+
+// ── Last played (admin) ───────────────────────────────────────────────
+// Date of each user's most recent recorded match (any slot — playing counts),
+// keyed by userId; users with no recorded match are absent. Feeds the admin
+// page's inactivity clock: a played match resets "days at 0% availability"
+// exactly like a marked calendar day, so people who show up and play but
+// never plan ahead in the app don't read as gone.
+export const AdminLastPlayedResponseSchema = z.object({
+  lastPlayedByUser: z.record(z.string(), DateKeyStringSchema),
+});
+export type AdminLastPlayedResponse = z.infer<typeof AdminLastPlayedResponseSchema>;
 
 // ── Reorder (admin) ───────────────────────────────────────────────────
 // Re-sort the matches inside one board game night. `orderedIds` is the full

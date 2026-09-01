@@ -44,6 +44,13 @@ export type GameVariantConfig = {
   default?: string;
 };
 
+/**
+ * Jaipur scenario value that collapses the best-of-three to a single
+ * plain-scored round. Shared by the variant options below, JaipurForm's mode
+ * switch, and the outcome validation in `history/outcome.ts`.
+ */
+export const JAIPUR_BEST_OF_ONE = "Best of 1";
+
 const CODENAMES_LANGUAGE: GameVariantConfig = {
   label: "Language",
   mode: "single",
@@ -174,6 +181,18 @@ const VARIANTS: Record<string, GameVariantConfig> = {
     mode: "multi",
     default: "Standard",
     options: DUNGEON_MAYHEM_SET_LABELS.map((s) => ({ value: s, label: s })),
+  },
+  // Jaipur is a best-of-three by the book — the round-by-round rupee record
+  // drives the JaipurForm (per-player `roundScores`, winner = most seals).
+  // "Best of 1" collapses it to a single plain-scored round for a quick game.
+  // Standard first so a fresh match defaults to the full format.
+  jaipur: {
+    label: "Format",
+    mode: "single",
+    options: [
+      { value: "Standard", label: "Standard (best of three)" },
+      { value: JAIPUR_BEST_OF_ONE, label: JAIPUR_BEST_OF_ONE },
+    ],
   },
   // Intarsia's player boards are double-sided — the Standard side and the
   // trickier Pro side. Standard is first so a fresh match defaults to it.

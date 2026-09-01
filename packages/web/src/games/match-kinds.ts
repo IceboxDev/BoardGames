@@ -21,6 +21,10 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   // outcome, not two co-survivors.
   chess: "free-for-all",
   "connect-4": "free-for-all",
+  // Best-of-three duel with the dedicated round-by-round JaipurForm — listed
+  // explicitly (like villainous) so switching to it from a non-FFA game resets
+  // the kind and surfaces that form.
+  jaipur: "free-for-all",
 
   // Cooperative — players share a single win/loss
   "aeons-end": "coop",

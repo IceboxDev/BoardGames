@@ -1,3 +1,4 @@
+import { roundWinnerIndex } from "@boardgames/core/history/round-scores";
 import type {
   MatchOutcome,
   MatchOutcomeCoop,
@@ -255,10 +256,49 @@ function FreeForAllInline({
             tone={isWinner(p) ? "winner" : "loser"}
             isMe={p.userId === currentUserId}
           />
-          <span className="text-xs tabular-nums text-fg-muted">{p.score}</span>
+          {p.roundScores ? (
+            <RoundScores player={p} outcome={outcome} />
+          ) : (
+            <span className="text-xs tabular-nums text-fg-muted">{p.score}</span>
+          )}
         </span>
       ))}
     </div>
+  );
+}
+
+/**
+ * Best-of-three round record (Jaipur): the per-round rupees instead of a bare
+ * total, with the rounds this player took the Seal of Excellence in picked out
+ * in gold — the seals ARE the result (two seals win the match, whatever the
+ * rupee totals say). A rupee-tied round's seal follows the recorded rulebook
+ * tiebreak (bonus then goods tokens) via `roundWinnerIndex`. The winner tone
+ * still comes from `rank` above.
+ */
+function RoundScores({
+  player,
+  outcome,
+}: {
+  player: MatchOutcomeFreeForAll["players"][number];
+  outcome: MatchOutcomeFreeForAll;
+}) {
+  const rounds = player.roundScores ?? [];
+  const myIndex = outcome.players.indexOf(player);
+  const wonRound = (r: number) =>
+    roundWinnerIndex(outcome.players, r, outcome.roundTiebreaks) === myIndex;
+  return (
+    <span
+      className="text-xs tabular-nums text-fg-muted"
+      title={`Rounds: ${rounds.join(", ")} — ${player.score} rupees total`}
+    >
+      {rounds.map((s, r) => (
+        // biome-ignore lint/suspicious/noArrayIndexKey: rounds are positional by nature.
+        <span key={r}>
+          {r > 0 && <span className="text-fg-disabled">·</span>}
+          <span className={wonRound(r) ? "text-amber-300" : undefined}>{s}</span>
+        </span>
+      ))}
+    </span>
   );
 }
 

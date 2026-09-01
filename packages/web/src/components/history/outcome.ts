@@ -4,6 +4,7 @@
 // the query cache, or the network — every function is a pure transform.
 
 import { describeDecryptoRecordError } from "@boardgames/core/history/decrypto-tokens";
+import { describeRoundScoresError } from "@boardgames/core/history/round-scores";
 import type {
   MatchKind,
   MatchOutcome,
@@ -14,6 +15,7 @@ import type {
   MatchOutcomeTeams,
   Participant,
 } from "@boardgames/core/history/types";
+import { JAIPUR_BEST_OF_ONE } from "../../games/match-variants";
 import { coopMaxScoreForSlug, isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
 import { isDndSlug } from "./dnd";
@@ -143,6 +145,7 @@ export function describeOutcomeError(
       if (isVillainousSlug(gameSlug)) return describeVillainousError(outcome);
       if (gameSlug === "lovecraft-letter") return describeLovecraftLetterError(outcome);
       if (isWinDrawLossFfa(gameSlug)) return describeWinDrawLossError(outcome);
+      if (gameSlug === "jaipur") return describeJaipurError(outcome);
       if (outcome.players.length < 2) return "Add at least two players";
       return null;
     case "teams":
@@ -214,6 +217,25 @@ export function describeLovecraftLetterError(outcome: MatchOutcomeFreeForAll): s
   if (winners.length > 1) return "Only one player can win";
   if (!winners[0].role) return `Pick how ${winners[0].displayName} won`;
   return null;
+}
+
+/**
+ * Jaipur: a strictly two-player game. The Standard format is a best-of-three
+ * recorded round by round (JaipurForm keeps `roundScores`/`score`/`rank`/
+ * `roundTiebreaks` in sync, so by save time the actionable gaps are "nothing
+ * entered yet" and the shared core validator's specific per-round messages —
+ * a round with no rupees, a tie missing its bonus/goods token counts, seals
+ * split 1–1 over two rounds). The "Best of 1" format is a plain scored round
+ * with the generic free-for-all semantics.
+ */
+export function describeJaipurError(outcome: MatchOutcomeFreeForAll): string | null {
+  if (outcome.players.length !== 2) return "Jaipur is a two-player game — pick exactly two";
+  if (outcome.scenario === JAIPUR_BEST_OF_ONE) return null;
+  const untouched = outcome.players.every((p) => (p.roundScores ?? []).every((s) => s === 0));
+  if (outcome.players.some((p) => p.roundScores === undefined) || untouched) {
+    return "Enter each round's rupees";
+  }
+  return describeRoundScoresError(outcome);
 }
 
 /**

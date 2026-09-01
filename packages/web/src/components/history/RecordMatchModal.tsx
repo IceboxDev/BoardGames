@@ -35,6 +35,7 @@ import { DecryptoForm } from "./forms/DecryptoForm";
 import { DndForm } from "./forms/DndForm";
 import { DungeonMayhemForm } from "./forms/DungeonMayhemForm";
 import { FreeForAllForm } from "./forms/FreeForAllForm";
+import { JaipurForm } from "./forms/JaipurForm";
 import { JustOneForm } from "./forms/JustOneForm";
 import { LastStandingForm } from "./forms/LastStandingForm";
 import { LovecraftLetterForm } from "./forms/LovecraftLetterForm";
@@ -341,6 +342,12 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
               />
             ) : isWinDrawLossFfa(gameSlug) ? (
               <WinDrawLossForm
+                users={allUsers}
+                value={outcome as MatchOutcomeFreeForAll}
+                onChange={setOutcome}
+              />
+            ) : gameSlug === "jaipur" ? (
+              <JaipurForm
                 users={allUsers}
                 value={outcome as MatchOutcomeFreeForAll}
                 onChange={setOutcome}
