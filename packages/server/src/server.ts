@@ -3,6 +3,7 @@ import { createNodeWebSocket } from "@hono/node-ws";
 import { Hono } from "hono";
 import { bodyLimit } from "hono/body-limit";
 import { cors } from "hono/cors";
+import { requireAgent } from "./auth/agent-auth.ts";
 import {
   auth,
   requireAdmin,
@@ -25,6 +26,7 @@ import { adminOnlineRoutes } from "./auth-routes/admin-online.ts";
 import { adminPasswordResetRoutes } from "./auth-routes/admin-password-reset.ts";
 import { adminPendingInventoryRoutes } from "./auth-routes/admin-pending-inventory.ts";
 import { adminSkillsRoutes } from "./auth-routes/admin-skills.ts";
+import { agentRoutes } from "./auth-routes/agent.ts";
 import { announcementRoutes } from "./auth-routes/announcements.ts";
 import { availabilityCountsRoutes } from "./auth-routes/availability-counts.ts";
 import { avatarRoutes } from "./auth-routes/avatar.ts";
@@ -164,6 +166,21 @@ app.route("/api/ical", calendarFeedPublicRoutes);
 app.route("/api/bga-ingest", bgaIngestRoutes);
 
 // --- Protected: admin only ---
+// Agent surface (vestauth-signed, read-only; dark unless
+// VESTAUTH_ALLOWED_AGENT_UIDS is set — see auth/agent-auth.ts). Rate-limited
+// by IP because every verification fetches the agent's key directory.
+app.use(
+  "/api/agent/*",
+  rateLimit({
+    name: "agent",
+    windowMs: 60_000,
+    max: 30,
+    key: (c) => `ip:${clientIp(c)}`,
+  }),
+);
+app.use("/api/agent/*", requireAgent);
+app.route("/api/agent", agentRoutes);
+
 app.use("/api/admin/*", requireAdmin);
 app.route("/api/admin/users", adminOnlineRoutes);
 app.route("/api/admin/users", adminInventoryRoutes);

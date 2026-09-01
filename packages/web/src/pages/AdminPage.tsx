@@ -35,6 +35,7 @@ import {
   computeCoverage,
   daysAtZeroCoverage,
   INACTIVE_AFTER_DAYS,
+  isInactiveMember,
   latestMarkedDayByUser,
 } from "./admin-coverage";
 
@@ -149,10 +150,7 @@ export default function AdminPage() {
       return (a.user.name || a.user.email).localeCompare(b.user.name || b.user.email);
     });
     const isInactive = (r: MemberRow) =>
-      lastPlayed !== undefined &&
-      r.user.role !== "admin" &&
-      r.coverage.can + r.coverage.maybe === 0 &&
-      r.zeroDays >= INACTIVE_AFTER_DAYS;
+      lastPlayed !== undefined && isInactiveMember(r.user.role, r.coverage, r.zeroDays);
     return {
       allMembers: rows.map((r) => r.user),
       activeRows: rows.filter((r) => !isInactive(r)),
