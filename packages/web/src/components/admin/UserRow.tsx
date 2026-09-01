@@ -18,9 +18,9 @@ export type UserRowProps = {
   user: AdminUser;
   coverage: Coverage;
   /** Days this user has been at 0% coverage (see admin-coverage.ts). Renders
-   *  a muted "Nd at 0%" tag next to the name so the main table's staleness
-   *  sort and the Inactive card's ordering are both legible. Omit for users
-   *  with any coverage. */
+   *  a muted "Nd at 0%" tag next to the name. Passed ONLY for archived rows
+   *  revealed by the show-inactive expander — active 0% players stay untagged
+   *  (their freshness already shows through the sort order). */
   zeroForDays?: number;
   /** Pending ownership announcements from this user (amber badge on the name). */
   pendingAnnouncements?: number;

@@ -6,8 +6,8 @@ import {
   type AdminUser,
   AnnouncementsCard,
   AvailabilityDrawer,
-  ExpandableAdminCard,
   GuestPlayersCard,
+  InactiveToggleRow,
   PreRegisterCard,
   ResetLinkModal,
   SkillRatingsCard,
@@ -34,14 +34,14 @@ import {
   type Coverage,
   computeCoverage,
   daysAtZeroCoverage,
-  INACTIVE_AFTER_DAYS,
   isInactiveMember,
   latestMarkedDayByUser,
 } from "./admin-coverage";
 
-/** One member's computed table row: the user plus their coverage and how many
- *  days they've been sitting at 0% (0 whenever any coverage exists). */
-type MemberRow = { user: AdminUser; coverage: Coverage; zeroDays: number };
+/** One member's computed table row: the user, their coverage, how many days
+ *  they've been sitting at 0% (0 whenever any coverage exists), and whether
+ *  that lands them behind the show-inactive expander. */
+type MemberRow = { user: AdminUser; coverage: Coverage; zeroDays: number; inactive: boolean };
 
 /**
  * The admin dashboard — users table + pre-register queue + guest-players
@@ -61,8 +61,8 @@ export default function AdminPage() {
   const [calendarUser, setCalendarUser] = useState<AdminUser | null>(null);
   const [activityUser, setActivityUser] = useState<AdminUser | null>(null);
   const [deleteMode, setDeleteMode] = useState(false);
-  // The "Inactive players" card at the bottom starts collapsed — its whole
-  // point is getting long-gone players out of the way.
+  // The show-inactive expander at the foot of the table starts collapsed —
+  // its whole point is getting long-gone players out of the way.
   const [showInactive, setShowInactive] = useState(false);
   const [confirmDeleteUserId, setConfirmDeleteUserId] = useState<string | null>(null);
   const [confirmEmail, setConfirmEmail] = useState("");
@@ -117,10 +117,12 @@ export default function AdminPage() {
 
   // Visible members: hide internal + guest accounts, sort admins first, then
   // by coverage % descending; within the 0% group the freshest lapse sorts
-  // first, so the stalest players sink toward the Inactive card below. Members
-  // at 0% for INACTIVE_AFTER_DAYS+ split off into that card — except admins,
-  // and only once last-played has loaded (before that, a player whose only
-  // signal is a recorded match would flash into the card and back out).
+  // first, so the stalest players sink toward the bottom. Members at 0% for
+  // INACTIVE_AFTER_DAYS+ hide behind the show-inactive expander at the foot
+  // of the table — except admins, and only once last-played has loaded
+  // (before that, a player whose only signal is a recorded match would flash
+  // behind the expander and back out). Both partitions keep the ONE sorted
+  // order, so expanding simply continues the list (stalest last).
   const { allMembers, activeRows, inactiveRows } = useMemo(() => {
     const visible = rawUsers.filter((u) => !u.internal && !u.guest);
     const latestMarked = latestMarkedDayByUser(aggregate);
@@ -135,7 +137,8 @@ export default function AdminPage() {
         createdAt: user.createdAt,
         todayKey,
       });
-      return { user, coverage, zeroDays };
+      const inactive = lastPlayed !== undefined && isInactiveMember(user.role, coverage, zeroDays);
+      return { user, coverage, zeroDays, inactive };
     });
     rows.sort((a, b) => {
       const aAdmin = a.user.role === "admin" ? 1 : 0;
@@ -149,13 +152,10 @@ export default function AdminPage() {
       if (a.zeroDays !== b.zeroDays) return a.zeroDays - b.zeroDays;
       return (a.user.name || a.user.email).localeCompare(b.user.name || b.user.email);
     });
-    const isInactive = (r: MemberRow) =>
-      lastPlayed !== undefined && isInactiveMember(r.user.role, r.coverage, r.zeroDays);
     return {
       allMembers: rows.map((r) => r.user),
-      activeRows: rows.filter((r) => !isInactive(r)),
-      // Longest-gone first — the card answers "who's been away the longest".
-      inactiveRows: rows.filter(isInactive).sort((a, b) => b.zeroDays - a.zeroDays),
+      activeRows: rows.filter((r) => !r.inactive),
+      inactiveRows: rows.filter((r) => r.inactive),
     };
   }, [rawUsers, aggregate, editableDateKeys, lastPlayedQuery.data]);
 
@@ -221,16 +221,16 @@ export default function AdminPage() {
     deleteMutation.reset();
   }
 
-  // One member row, shared verbatim between the main table and the Inactive
-  // card — archived players keep the full management surface (inventory,
-  // online mode, delete, reset link).
-  function renderMemberRow({ user: u, coverage, zeroDays }: MemberRow) {
+  // One member row for both partitions — archived rows revealed by the
+  // expander keep the full management surface (inventory, online mode,
+  // delete, reset link) and are the only ones carrying the "Nd at 0%" tag.
+  function renderMemberRow({ user: u, coverage, zeroDays, inactive }: MemberRow) {
     return (
       <UserRow
         key={u.id}
         user={u}
         coverage={coverage}
-        zeroForDays={coverage.can + coverage.maybe === 0 ? zeroDays : undefined}
+        zeroForDays={inactive ? zeroDays : undefined}
         pendingAnnouncements={pendingAnnouncementsByUser.get(u.id) ?? 0}
         expanded={expandedUserId === u.id}
         onToggleInventory={() => setExpandedUserId((prev) => (prev === u.id ? null : u.id))}
@@ -317,27 +317,19 @@ export default function AdminPage() {
 
         <UsersTable
           loading={usersQuery.isPending}
-          empty={activeRows.length === 0}
+          empty={activeRows.length + inactiveRows.length === 0}
           deleteMode={deleteMode}
         >
           {activeRows.map(renderMemberRow)}
-        </UsersTable>
-
-        {inactiveRows.length > 0 && (
-          <div className="mt-6">
-            <ExpandableAdminCard
-              tone="amber"
-              eyebrow="Inactive players"
-              summary={`${inactiveRows.length} player${inactiveRows.length === 1 ? "" : "s"} at 0% availability for ${INACTIVE_AFTER_DAYS}+ days — they return to the table on any new mark, RSVP, or recorded match`}
+          {inactiveRows.length > 0 && (
+            <InactiveToggleRow
+              count={inactiveRows.length}
               expanded={showInactive}
               onToggle={() => setShowInactive((v) => !v)}
-            >
-              <UsersTable loading={false} empty={false} deleteMode={deleteMode}>
-                {inactiveRows.map(renderMemberRow)}
-              </UsersTable>
-            </ExpandableAdminCard>
-          </div>
-        )}
+            />
+          )}
+          {showInactive && inactiveRows.map(renderMemberRow)}
+        </UsersTable>
       </PageMain>
 
       {activityUser && <ActivityDrawer user={activityUser} onClose={() => setActivityUser(null)} />}

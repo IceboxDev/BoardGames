@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { ExpandableAdminCard, UserRow, UsersTable } from "../components/admin";
+import { InactiveToggleRow, UserRow, UsersTable } from "../components/admin";
 import type { AdminUser } from "../components/admin/types";
-import { INACTIVE_AFTER_DAYS } from "./admin-coverage";
 
-// Dev-only preview of the admin page's inactivity split — the main users
-// table with 0% players carrying their days-at-0% tag, and the collapsible
-// "Inactive players" card below it — with mock rows, no auth/queries.
+// Dev-only preview of the admin table's inactive-players expander — active
+// rows untagged, a barely-there "Show N inactive players" text row at the
+// foot, and the archived rows (with their "Nd at 0%" tag) continuing the
+// same table and sort direction when expanded. Mock rows, no auth/queries.
 // /dev/admin-inactive-preview
 
 const noop = () => {};
@@ -49,36 +49,40 @@ function row(u: AdminUser, coverage: { can: number; maybe: number }, zeroForDays
   );
 }
 
-export default function AdminInactivePreview() {
-  const [showInactive, setShowInactive] = useState(true);
+function Demo({ title, expandedInitially }: { title: string; expandedInitially: boolean }) {
+  const [showInactive, setShowInactive] = useState(expandedInitially);
   return (
-    <div className="mx-auto flex max-w-7xl flex-col p-6">
+    <div className="flex flex-col gap-2">
+      <h2 className="text-sm font-semibold text-fg-primary">{title}</h2>
       <UsersTable loading={false} empty={false} deleteMode={false}>
         {row(mockUser("u1", "Mantas Kandratavičius", "admin"), { can: 1, maybe: 0 })}
         {row(mockUser("u2", "Jaqueline Binder"), { can: 15, maybe: 4 })}
-        {row(mockUser("u3", "Victor Fajardo"), { can: 12, maybe: 7 })}
-        {row(mockUser("u4", "Sarah Raines"), { can: 0, maybe: 0 }, 2)}
-        {row(mockUser("u5", "Juliane Franzen"), { can: 0, maybe: 0 }, 5)}
-        {row(mockUser("u6", "Eloïse Hosseini"), { can: 0, maybe: 0 }, 10)}
-      </UsersTable>
-
-      <div className="mt-6">
-        <ExpandableAdminCard
-          tone="amber"
-          eyebrow="Inactive players"
-          summary={`5 players at 0% availability for ${INACTIVE_AFTER_DAYS}+ days — they return to the table on any new mark, RSVP, or recorded match`}
+        {row(mockUser("u3", "Aydan Guliyeva"), { can: 12, maybe: 6 })}
+        {row(mockUser("u4", "Eloïse Hosseini"), { can: 0, maybe: 0 })}
+        {row(mockUser("u5", "Sarah Raines"), { can: 0, maybe: 0 })}
+        <InactiveToggleRow
+          count={4}
           expanded={showInactive}
           onToggle={() => setShowInactive((v) => !v)}
-        >
-          <UsersTable loading={false} empty={false} deleteMode={false}>
-            {row(mockUser("u7", "Linda Weiß"), { can: 0, maybe: 0 }, 119)}
-            {row(mockUser("u8", "Johanna Bodner"), { can: 0, maybe: 0 }, 113)}
-            {row(mockUser("u9", "Jens Schäfer"), { can: 0, maybe: 0 }, 47)}
-            {row(mockUser("u10", "Paul Keppner"), { can: 0, maybe: 0 }, 30)}
-            {row(mockUser("u11", "Aydan Guliyeva"), { can: 0, maybe: 0 }, 18)}
-          </UsersTable>
-        </ExpandableAdminCard>
-      </div>
+        />
+        {showInactive && (
+          <>
+            {row(mockUser("u6", "Paul Keppner"), { can: 0, maybe: 0 }, 30)}
+            {row(mockUser("u7", "Jens Schäfer"), { can: 0, maybe: 0 }, 47)}
+            {row(mockUser("u8", "Johanna Bodner"), { can: 0, maybe: 0 }, 65)}
+            {row(mockUser("u9", "Linda Weiß"), { can: 0, maybe: 0 }, 109)}
+          </>
+        )}
+      </UsersTable>
+    </div>
+  );
+}
+
+export default function AdminInactivePreview() {
+  return (
+    <div className="mx-auto flex max-w-7xl flex-col gap-8 p-6">
+      <Demo title="Collapsed (default)" expandedInitially={false} />
+      <Demo title="Expanded" expandedInitially />
     </div>
   );
 }

@@ -4,6 +4,7 @@ export { AvailabilityDrawer } from "./AvailabilityDrawer";
 export { CoverageCell } from "./CoverageCell";
 export { ExpandableAdminCard } from "./ExpandableAdminCard";
 export { GuestPlayersCard } from "./GuestPlayersCard";
+export { InactiveToggleRow } from "./InactiveToggleRow";
 export { InventoryPanel } from "./InventoryPanel";
 export { PreRegisterCard } from "./PreRegisterCard";
 export { ResetLinkModal } from "./ResetLinkModal";
