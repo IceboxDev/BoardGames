@@ -94,12 +94,14 @@ export function PurchaseCard({
   const multiWave = card.waves.length > 1;
   const thumb = resolveGame(card.slug)?.thumbnail;
 
-  // Meta line: the phone gets only the ETA and staleness; platform + pledge
-  // date are desktop-only. Wave names stay inside the expanded view — the
-  // collapsed subtext reads the same for every card.
-  const mobileMeta: string[] = [];
+  // Meta line: the phone gets only the ETA (with an inline slip delta) and
+  // staleness; platform + pledge date are desktop-only. Wave names stay
+  // inside the expanded view — the collapsed subtext reads the same for
+  // every card.
   const eta = etaFragment(rep);
-  if (eta) mobileMeta.push(eta);
+  // Slip at a glance, as a tinted "+26 mo" beside the ETA — no badge chrome;
+  // the "(was …)" context rides the tooltip and the expanded detail line.
+  const slip = rep.active && eta !== null && rep.slip !== null && rep.slip !== 0 ? rep.slip : null;
   const desktopMeta: string[] = [];
   if (p.platform) desktopMeta.push(p.platform);
   if (card.earliestPledgedOn) {
@@ -157,13 +159,22 @@ export function PurchaseCard({
             {desktopMeta.length > 0 && (
               <span className="hidden sm:inline">
                 {desktopMeta.join(" · ")}
-                {mobileMeta.length > 0 && " · "}
+                {(eta || showStale) && " · "}
               </span>
             )}
-            {mobileMeta.join(" · ")}
+            {eta}
+            {slip !== null && (
+              <span
+                title={slipText(rep) ?? undefined}
+                className={cn("font-medium", slip > 0 ? "text-amber-300" : "text-emerald-300")}
+              >
+                {" "}
+                {slip > 0 ? `+${slip} mo` : `−${-slip} mo`}
+              </span>
+            )}
             {showStale && (
               <>
-                {mobileMeta.length > 0 && " · "}
+                {eta && " · "}
                 <span
                   className={cn(
                     (card.staleDays as number) >= STALE_ALARM_DAYS && "text-rose-300",

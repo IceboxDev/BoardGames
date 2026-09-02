@@ -64,13 +64,20 @@ describe("PurchaseCard", () => {
     expect(screen.queryByText(/€/)).not.toBeInTheDocument();
   });
 
-  it("keeps overdue in the header but moves slip into the expanded detail", () => {
+  it("shows slip as an inline delta collapsed, the full wording expanded", () => {
     renderCard(purchase());
     expect(screen.getByText("overdue")).toBeInTheDocument();
+    // Neat tinted "+3 mo" beside the ETA — no badge, no "(was …)" up front.
+    expect(screen.getByText("+3 mo")).toBeInTheDocument();
     expect(screen.queryByText(/slipped/)).not.toBeInTheDocument();
     expect(screen.queryByText(/was May 2026/)).not.toBeInTheDocument();
     renderCard(purchase({ id: "p-slip", title: "PS" }), { expanded: true });
     expect(screen.getByText(/slipped 3 mo \(was May 2026\)/)).toBeInTheDocument();
+  });
+
+  it("marks an early ETA with a negative delta", () => {
+    renderCard(purchase({ originalEtaMonth: "2026-10", currentEtaMonth: "2026-08" }));
+    expect(screen.getByText("−2 mo")).toBeInTheDocument();
   });
 
   it("details an early ETA and stays quiet at zero slip", () => {
