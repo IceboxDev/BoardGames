@@ -102,6 +102,10 @@ export type PurchaseEvent = z.infer<typeof PurchaseEventSchema>;
 export const PurchaseSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1).max(140),
+  /** Clean display name for cards and tiles ("Frosthaven") — `title` keeps
+   *  the full pledge wording, surfaced in the expanded detail view. Null
+   *  falls back to a client-side compaction of `title`. */
+  shortTitle: z.string().min(1).max(60).nullable(),
   slug: GameSlugSchema.nullable(),
   kind: PurchaseKindSchema,
   status: PurchaseStatusSchema,

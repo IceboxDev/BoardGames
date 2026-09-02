@@ -10,6 +10,7 @@ const TODAY = "2026-09-02";
 const purchase = (overrides: Partial<Purchase> = {}): Purchase => ({
   id: "frosthaven",
   title: "Frosthaven",
+  shortTitle: null,
   slug: null,
   kind: "crowdfunding",
   status: "shipping",
@@ -75,17 +76,40 @@ describe("PurchaseCard", () => {
     expect(screen.queryByText(/slipped/)).not.toBeInTheDocument();
   });
 
-  it("hardens the external links and drops them when absent", () => {
+  it("hardens the single collapsed link; the pledge manager waits in the detail", () => {
     renderCard(purchase());
     const campaign = screen.getByRole("link", { name: "Campaign ↗" });
     expect(campaign).toHaveAttribute("target", "_blank");
     expect(campaign).toHaveAttribute("rel", "noreferrer");
+    expect(screen.queryByRole("link", { name: "Pledge manager ↗" })).not.toBeInTheDocument();
+    renderCard(purchase({ id: "p-x", title: "PX" }), { expanded: true });
+    expect(screen.getByRole("link", { name: "Pledge manager ↗" })).toBeInTheDocument();
+  });
+
+  it("promotes the pledge manager to primary when there is no campaign link", () => {
+    renderCard(purchase({ campaignUrl: null }));
+    expect(screen.getByRole("link", { name: "Pledge manager ↗" })).toBeInTheDocument();
+  });
+
+  it("labels a retail campaign link as the shop", () => {
+    renderCard(purchase({ kind: "retail", status: "preorder", pledgeManagerUrl: null }));
     expect(screen.getByRole("link", { name: "Shop ↗" })).toBeInTheDocument();
   });
 
   it("renders no links when the purchase has none", () => {
     renderCard(purchase({ campaignUrl: null, pledgeManagerUrl: null }));
     expect(screen.queryByRole("link")).not.toBeInTheDocument();
+  });
+
+  it("shows the short name collapsed and the full pledge wording expanded, no status badge", () => {
+    const p = purchase({ title: "Frosthaven — Big Box (All-In)", shortTitle: "Frosthaven" });
+    renderCard(p);
+    expect(screen.getByText("Frosthaven")).toBeInTheDocument();
+    expect(screen.queryByText("Frosthaven — Big Box (All-In)")).not.toBeInTheDocument();
+    // "Shipping" appears exactly once — the rail's stage label, no header badge.
+    expect(screen.getAllByText("Shipping")).toHaveLength(1);
+    renderCard(purchase({ ...p, id: "p-full" }), { expanded: true });
+    expect(screen.getByText("Frosthaven — Big Box (All-In)")).toBeInTheDocument();
   });
 
   it("dims a cancelled purchase", () => {

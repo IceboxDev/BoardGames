@@ -10,6 +10,7 @@ import { PurchasesView } from "../components/purchases/PurchasesTab";
 const TODAY = "2026-09-02";
 
 const base = {
+  shortTitle: null,
   slug: null,
   platform: null,
   campaignUrl: null,

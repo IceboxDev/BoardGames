@@ -135,6 +135,11 @@ export function compactTitle(title: string): string {
   return title.split(" — ")[0].split(" (")[0].split(" + ")[0].trim();
 }
 
+/** The name a card/tile shows: the hand-picked short name, else compacted. */
+export function displayPurchaseTitle(p: Pick<Purchase, "title" | "shortTitle">): string {
+  return p.shortTitle ?? compactTitle(p.title);
+}
+
 const CURRENCY_SYMBOL: Record<PurchaseCurrency, string> = { EUR: "€", USD: "$", GBP: "£" };
 
 /**
@@ -159,13 +164,6 @@ export function committedEurCents(
 export function formatApproxEur(cents: number): string {
   return `≈ ${formatMoneyCents(Math.round(cents / 100) * 100, "EUR")}`;
 }
-
-/** Chart hue per currency (spend columns; EUR keeps the brand accent). */
-export const CURRENCY_TONE: Record<PurchaseCurrency, Tone> = {
-  EUR: "accent",
-  USD: "sky",
-  GBP: "orange",
-};
 
 /** "€89" / "$89.99" / "€1,790" — minor units, deterministic (no Intl). */
 export function formatMoneyCents(cents: number, currency: PurchaseCurrency): string {
@@ -313,11 +311,13 @@ export interface PurchaseInsightsData {
   nextArrival: { etaMonth: string; title: string } | null;
   overdueCount: number;
   staleCount: number;
-  /** Visible pledge+shipping totals per currency (never mixed into one sum);
-   *  empty when no money is visible — a viewer payload. */
+  /** Visible pledge+shipping totals per currency (exact, never mixed);
+   *  empty when no money is visible — a viewer payload. The UI folds them
+   *  into one approximate figure via `committedEurCents`. */
   committed: { currency: PurchaseCurrency; cents: number }[];
-  /** Visible money grouped by pledge month (ascending), split by currency. */
-  spendByMonth: { month: string; amounts: { currency: PurchaseCurrency; cents: number }[] }[];
+  /** Visible money grouped by pledge month (ascending), converted to
+   *  approximate EUR cents via `EUR_RATE` — chart display only. */
+  spendByMonth: { month: string; eurCents: number }[];
 }
 
 export function buildInsights(
@@ -342,14 +342,12 @@ export function buildInsights(
     if (inCurrency.length === 0) return [];
     return [{ currency, cents: inCurrency.reduce((a, r) => a + (r.totalCents as number), 0) }];
   });
-  const spend = new Map<string, Map<PurchaseCurrency, number>>();
+  const spend = new Map<string, number>();
   for (const r of withMoney) {
     if (r.purchase.pledgedOn === null) continue;
     const month = r.purchase.pledgedOn.slice(0, 7);
-    const byCurrency = spend.get(month) ?? new Map<PurchaseCurrency, number>();
-    const currency = r.purchase.currency;
-    byCurrency.set(currency, (byCurrency.get(currency) ?? 0) + (r.totalCents as number));
-    spend.set(month, byCurrency);
+    const eur = (r.totalCents as number) * EUR_RATE[r.purchase.currency];
+    spend.set(month, (spend.get(month) ?? 0) + eur);
   }
 
   return {
@@ -359,20 +357,14 @@ export function buildInsights(
     nextArrival: upcoming
       ? {
           etaMonth: upcoming.purchase.currentEtaMonth as string,
-          title: upcoming.purchase.title,
+          title: displayPurchaseTitle(upcoming.purchase),
         }
       : null,
     overdueCount: rows.filter((r) => r.overdue).length,
     staleCount: rows.filter((r) => r.active && (r.staleDays ?? 0) >= STALE_WARN_DAYS).length,
     committed,
     spendByMonth: [...spend.entries()]
-      .map(([month, byCurrency]) => ({
-        month,
-        amounts: CURRENCIES.flatMap((currency) => {
-          const cents = byCurrency.get(currency);
-          return cents === undefined ? [] : [{ currency, cents }];
-        }),
-      }))
+      .map(([month, eur]) => ({ month, eurCents: Math.round(eur) }))
       .sort((a, b) => (a.month < b.month ? -1 : 1)),
   };
 }

@@ -6,9 +6,7 @@ import { MicroLabel } from "../ui/Label.tsx";
 import { Surface } from "../ui/Surface.tsx";
 import { TONE_TEXT } from "../ui/tones";
 import {
-  CURRENCY_TONE,
   committedEurCents,
-  compactTitle,
   formatApproxEur,
   formatEtaMonth,
   type PurchaseInsightsData,
@@ -120,9 +118,7 @@ export function PurchaseInsights({ insights }: { insights: PurchaseInsightsData 
         <InsightTile
           label="Next arrival"
           value={insights.nextArrival ? formatEtaMonth(insights.nextArrival.etaMonth) : "—"}
-          sub={
-            insights.nextArrival ? compactTitle(insights.nextArrival.title) : "nothing scheduled"
-          }
+          sub={insights.nextArrival?.title ?? "nothing scheduled"}
         />
         <InsightTile
           label="Overdue"
@@ -148,18 +144,14 @@ export function PurchaseInsights({ insights }: { insights: PurchaseInsightsData 
 
       {showMoney && insights.spendByMonth.length > 0 && (
         <Surface variant="panel" padding="md" className="flex flex-col gap-2">
-          <MicroLabel className="font-semibold">Spend by pledge month</MicroLabel>
+          <MicroLabel className="font-semibold">Spend by pledge month · ≈ EUR</MicroLabel>
           <ColumnChart
             height={96}
             columns={insights.spendByMonth.map((m) => ({
               label: formatEtaMonth(m.month),
-              segments: m.amounts.map((a) => ({
-                value: a.cents,
-                tone: CURRENCY_TONE[a.currency],
-                label: a.currency,
-              })),
+              segments: [{ value: m.eurCents, tone: "accent" as const }],
             }))}
-            formatValue={(cents) => (cents / 100).toFixed(2)}
+            formatValue={(cents) => formatApproxEur(cents)}
           />
         </Surface>
       )}

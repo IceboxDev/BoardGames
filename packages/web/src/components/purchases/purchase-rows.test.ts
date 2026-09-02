@@ -10,6 +10,7 @@ import {
   buildPurchaseRows,
   committedEurCents,
   compactTitle,
+  displayPurchaseTitle,
   EUR_RATE,
   EVENT_META,
   formatApproxEur,
@@ -27,6 +28,7 @@ const TODAY = "2026-09-02";
 
 const purchase = (overrides: Partial<Purchase> & { id: string }): Purchase => ({
   title: overrides.id,
+  shortTitle: null,
   slug: null,
   kind: "crowdfunding",
   status: "production",
@@ -92,7 +94,19 @@ describe("formatEtaMonth / formatMoneyCents", () => {
   });
 });
 
-describe("compactTitle", () => {
+describe("compactTitle / displayPurchaseTitle", () => {
+  it("prefers the hand-picked short name, else compacts the full title", () => {
+    expect(
+      displayPurchaseTitle({
+        title: "Gloomhaven Grand Festival — Miniatures",
+        shortTitle: "Gloomhaven Minis",
+      }),
+    ).toBe("Gloomhaven Minis");
+    expect(
+      displayPurchaseTitle({ title: "Elements of Truth — Einsteinium Edition", shortTitle: null }),
+    ).toBe("Elements of Truth");
+  });
+
   it("drops the edition/bundle tail, keeps plain names", () => {
     expect(compactTitle("Elements of Truth — Einsteinium Edition")).toBe("Elements of Truth");
     expect(compactTitle('Roma XLI — "Everything!" Dark Cities Bundle')).toBe("Roma XLI");
@@ -233,9 +247,7 @@ describe("buildInsights", () => {
     // The overdue August ETA is not "next arrival" — October is.
     expect(insights.nextArrival).toEqual({ etaMonth: "2026-10", title: "a-soon" });
     expect(insights.committed).toEqual([{ currency: "EUR", cents: 100 + 5000 + 500 + 200 }]);
-    expect(insights.spendByMonth).toEqual([
-      { month: "2026-01", amounts: [{ currency: "EUR", cents: 5700 }] },
-    ]);
+    expect(insights.spendByMonth).toEqual([{ month: "2026-01", eurCents: 5700 }]);
   });
 
   it("keeps currencies apart instead of summing dollars into euros", () => {
@@ -257,14 +269,9 @@ describe("buildInsights", () => {
       { currency: "EUR", cents: 9800 },
       { currency: "USD", cents: 31892 },
     ]);
+    // The chart series, unlike `committed`, folds both into approximate EUR.
     expect(insights.spendByMonth).toEqual([
-      {
-        month: "2026-05",
-        amounts: [
-          { currency: "EUR", cents: 9800 },
-          { currency: "USD", cents: 31892 },
-        ],
-      },
+      { month: "2026-05", eurCents: Math.round(9800 + 31892 * EUR_RATE.USD) },
     ]);
   });
 

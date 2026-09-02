@@ -8,21 +8,21 @@ import { Surface } from "../ui/Surface.tsx";
 import { PurchasePipelineRail } from "./PurchasePipelineRail.tsx";
 import { PurchaseTimeline } from "./PurchaseTimeline.tsx";
 import {
+  displayPurchaseTitle,
   formatEtaMonth,
   formatMoneyCents,
   type PurchaseRow,
   STALE_ALARM_DAYS,
   STALE_WARN_DAYS,
-  STATUS_LABEL,
-  STATUS_TONE,
 } from "./purchase-rows";
 
-// One tracked purchase: dense collapsed header (thumb, status, slip/overdue
-// badges, ETA + staleness meta, owner money), the pipeline rail with the
-// campaign/shop links beside it, and an expanded region holding the note,
-// the money breakdown, and the update timeline. The header is the expansion
-// toggle; the links live OUTSIDE it (nested interactive elements are invalid
-// HTML), on the rail row, so they stay one click away while collapsed.
+// One tracked purchase: clean collapsed header (thumb, short name, slip/
+// overdue badges, ETA + staleness meta, owner money), the pipeline rail with
+// ONE primary link beside it, and an expanded region holding the full pledge
+// wording, the note, the money breakdown, the secondary link, and the update
+// timeline. The status itself has no badge — the rail's position and color
+// already say it. The header is the expansion toggle; links live OUTSIDE it
+// (nested interactive elements are invalid HTML) so they stay one click away.
 
 function slipLabel(slip: number): string {
   const n = Math.abs(slip);
@@ -64,10 +64,18 @@ export function PurchaseCard({
         ? `${money(p.shippingCents)} ship`
         : null;
 
-  const links = [
-    p.campaignUrl ? { href: p.campaignUrl, label: "Campaign ↗" } : null,
-    p.pledgeManagerUrl ? { href: p.pledgeManagerUrl, label: "Shop ↗" } : null,
-  ].filter((l): l is { href: string; label: string } => l !== null);
+  // One link while collapsed — the campaign page (which links onward to the
+  // pledge manager anyway); the pledge manager gets its own link only in the
+  // expanded detail, or promotes to primary when it's all there is.
+  const pmLabel = p.kind === "retail" ? "Order ↗" : "Pledge manager ↗";
+  const primaryLink = p.campaignUrl
+    ? { href: p.campaignUrl, label: p.kind === "retail" ? "Shop ↗" : "Campaign ↗" }
+    : p.pledgeManagerUrl
+      ? { href: p.pledgeManagerUrl, label: pmLabel }
+      : null;
+  const secondaryLink =
+    p.campaignUrl && p.pledgeManagerUrl ? { href: p.pledgeManagerUrl, label: pmLabel } : null;
+  const displayTitle = displayPurchaseTitle(p);
 
   return (
     <Surface as="li" variant="tile" padding="none" className={cn(cancelled && "opacity-60")}>
@@ -88,10 +96,7 @@ export function PurchaseCard({
         )}
         <div className="min-w-0 flex-1">
           <p className="flex flex-wrap items-center gap-1.5 text-sm font-semibold text-fg-primary">
-            <span className="truncate">{p.title}</span>
-            <Badge tone={STATUS_TONE[p.status]} size="xs">
-              {STATUS_LABEL[p.status]}
-            </Badge>
+            <span className="truncate">{displayTitle}</span>
             {row.slip !== null && row.slip !== 0 && (
               <Badge tone={row.slip > 0 ? "amber" : "emerald"} size="xs">
                 {slipLabel(row.slip)}
@@ -139,22 +144,24 @@ export function PurchaseCard({
         <div className="min-w-0 flex-1">
           <PurchasePipelineRail kind={p.kind} status={p.status} />
         </div>
-        {links.map((link) => (
+        {primaryLink && (
           <ButtonLink
-            key={link.href}
-            href={link.href}
+            href={primaryLink.href}
             external
             variant="ghost"
             size="sm"
             className="shrink-0"
           >
-            {link.label}
+            {primaryLink.label}
           </ButtonLink>
-        ))}
+        )}
       </div>
 
       {expanded && (
         <div className="space-y-3 border-t border-white/[0.06] px-3 py-3">
+          {p.title !== displayTitle && (
+            <p className="text-2xs leading-snug text-fg-muted">{p.title}</p>
+          )}
           {p.note && <p className="text-xs leading-snug text-fg-secondary">{p.note}</p>}
           {moneyLine && (
             <p className="text-xs tabular-nums text-fg-secondary">
@@ -166,6 +173,11 @@ export function PurchaseCard({
                 .filter(Boolean)
                 .join(" · ")}
             </p>
+          )}
+          {secondaryLink && (
+            <ButtonLink href={secondaryLink.href} external variant="ghost" size="sm">
+              {secondaryLink.label}
+            </ButtonLink>
           )}
           <PurchaseTimeline events={p.events} />
         </div>

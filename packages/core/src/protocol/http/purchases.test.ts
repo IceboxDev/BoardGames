@@ -13,6 +13,7 @@ const event = {
 const purchase = {
   id: "frosthaven",
   title: "Frosthaven (2nd printing)",
+  shortTitle: "Frosthaven",
   slug: null,
   kind: "crowdfunding",
   status: "shipping",

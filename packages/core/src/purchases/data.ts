@@ -23,7 +23,9 @@ import { PurchaseSchema } from "../protocol/http/purchases.ts";
 //    existing entries, `kind` = crowdfunding (Kickstarter/Gamefound pledge)
 //    or retail (shop preorder), `currency` = what the pledge was billed in
 //    with money in its minor units (cents), `slug` only when the game
-//    already exists in the catalog.
+//    already exists in the catalog. `title` records the full pledge wording;
+//    `shortTitle` is the clean overview name shown on cards ("Frosthaven",
+//    "Gloomhaven Minis") — keep it unique among the owner's purchases.
 // 2. Append ONE event per distinct fact the post states: `occurredOn` = the
 //    post's own date (YYYY-MM-DD; ask the owner if the post doesn't say),
 //    `type` ∈ status-change | campaign-update | shipping-notice | delay |
@@ -48,6 +50,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "slay-the-spire-downfall",
     title: "Slay the Spire: Downfall — Collector's Bundle",
+    shortTitle: "Slay the Spire: Downfall",
     slug: "slay-the-spire",
     kind: "crowdfunding",
     status: "production",
@@ -120,6 +123,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "old-kings-crown-quick-delivery",
     title: "The Old King's Crown — Base Game (Quick Delivery)",
+    shortTitle: "Old King's Crown Base",
     slug: "the-old-kings-crown",
     kind: "crowdfunding",
     status: "delivered",
@@ -193,6 +197,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "old-kings-crown-all-in",
     title: "The Old King's Crown — All-In Add-on Bundle",
+    shortTitle: "Old King's Crown Add-ons",
     slug: "the-old-kings-crown",
     kind: "crowdfunding",
     status: "production",
@@ -273,6 +278,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "ark-nova-3dition",
     title: "Ark Nova 3Dition — Elephant Pledge (Sundrop)",
+    shortTitle: "Ark Nova 3Dition",
     slug: "ark-nova",
     kind: "crowdfunding",
     status: "production",
@@ -361,6 +367,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "brass-pittsburgh",
     title: "Brass Collector's Bundle (Pittsburgh + Birmingham + Lancashire) + Iron Coins 100",
+    shortTitle: "Brass Bundle",
     slug: "brass-pittsburgh",
     kind: "crowdfunding",
     status: "production",
@@ -449,6 +456,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "roma-xli",
     title: 'Roma XLI — "Everything!" Dark Cities Bundle',
+    shortTitle: "Roma XLI",
     slug: "roma-xli",
     kind: "crowdfunding",
     status: "production",
@@ -524,6 +532,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "hell-of-a-deal",
     title: "Hell of a Deal + Foil Poker Deck dual pack",
+    shortTitle: "Hell of a Deal",
     slug: "hell-of-a-deal",
     kind: "crowdfunding",
     status: "shipping",
@@ -631,6 +640,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "elements-of-truth",
     title: "Elements of Truth — Einsteinium Edition",
+    shortTitle: "Elements of Truth",
     slug: "elements-of-truth",
     kind: "crowdfunding",
     status: "production",
@@ -724,6 +734,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "parks-europe",
     title: "Parks Europe — Chalet Edition + Summit Edition",
+    shortTitle: "Parks Europe",
     slug: "parks-europe",
     kind: "crowdfunding",
     status: "production",
@@ -800,6 +811,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "gloomhaven-festival-frosthaven",
     title: "Gloomhaven Grand Festival — Frosthaven Wave (1–2)",
+    shortTitle: "Frosthaven",
     slug: "frosthaven",
     kind: "crowdfunding",
     status: "delivered",
@@ -875,6 +887,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "gloomhaven-festival-gloomhaven",
     title: "Gloomhaven Grand Festival — Gloomhaven 2E Wave (3)",
+    shortTitle: "Gloomhaven 2E",
     slug: "gloomhaven",
     kind: "crowdfunding",
     status: "delivered",
@@ -951,6 +964,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "gloomhaven-festival-rpg",
     title: "Gloomhaven Grand Festival — RPG Deluxe Box (Wave 4)",
+    shortTitle: "Gloomhaven RPG",
     slug: "gloomhaven",
     kind: "crowdfunding",
     status: "production",
@@ -1026,6 +1040,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "gloomhaven-festival-minis",
     title: "Gloomhaven Grand Festival — Miniatures Full Set (Wave 5)",
+    shortTitle: "Gloomhaven Minis",
     slug: "gloomhaven",
     kind: "crowdfunding",
     status: "production",

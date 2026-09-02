@@ -18,11 +18,13 @@ export function PurchaseFilters({
   counts: Record<PurchaseScope, number>;
   hasMoney: boolean;
 }) {
+  // No counts in the labels: the tiles and group headers already carry them,
+  // and the numbers are what pushed this row past a 360px viewport.
   const scopeOptions: { value: PurchaseScope; label: string }[] = [
-    { value: "all", label: `All (${counts.all})` },
-    { value: "active", label: `Active (${counts.active})` },
-    { value: "arrived", label: `Arrived (${counts.arrived})` },
-    ...(counts.ended > 0 ? [{ value: "ended" as const, label: `Ended (${counts.ended})` }] : []),
+    { value: "all", label: "All" },
+    { value: "active", label: "Active" },
+    { value: "arrived", label: "Arrived" },
+    ...(counts.ended > 0 ? [{ value: "ended" as const, label: "Ended" }] : []),
   ];
 
   return (
@@ -43,11 +45,13 @@ export function PurchaseFilters({
         value={state.sort}
         onChange={(e) => onChange({ ...state, sort: e.target.value as PurchaseSort })}
       >
-        <option value="eta">Soonest ETA</option>
-        <option value="updated">Recently updated</option>
-        <option value="pledged">Recently pledged</option>
-        <option value="title">Title A–Z</option>
-        {hasMoney && <option value="spend">Biggest spend</option>}
+        {/* Terse labels: the select sizes to its longest option, and wordy
+            ones push the row onto two lines at 360px. */}
+        <option value="eta">ETA</option>
+        <option value="updated">Updated</option>
+        <option value="pledged">Pledged</option>
+        <option value="title">Title</option>
+        {hasMoney && <option value="spend">Spend</option>}
       </Select>
     </div>
   );

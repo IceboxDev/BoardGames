@@ -24,6 +24,7 @@ const record: PurchaseRecord = {
   userId: "u1",
   id: "frosthaven",
   title: "Frosthaven (2nd printing)",
+  shortTitle: null,
   slug: null,
   kind: "crowdfunding",
   status: "shipping",
