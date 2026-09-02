@@ -269,6 +269,94 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
     ],
   },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "ark-nova-3dition",
+    title: "Ark Nova 3Dition — Elephant Pledge (Sundrop)",
+    slug: "ark-nova",
+    kind: "crowdfunding",
+    status: "production",
+    platform: "Gamefound",
+    campaignUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova",
+    pledgeManagerUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova/yourpledge",
+    // The timeline standing at pledge time (Nov '25 update): shipping
+    // Sep–Oct '26, worldwide fulfilment Oct '26. The July '26 per-component
+    // timeline moved every component to "start fulfilment end of 2026".
+    originalEtaMonth: "2026-10",
+    currentEtaMonth: "2026-12",
+    pledgedOn: "2026-03-29",
+    deliveredOn: null,
+    currency: "EUR",
+    pledgeCents: 40460, // €320.00 + €60.80 tax (Elephant Sundrop) + €10 + €1.90 (Map Ability PROMOs) + €10 + €1.90 (Arcade promo), paid
+    shippingCents: null, // charged once the pledge manager opens (not open yet)
+    note:
+      "Pledge 2130547W (late pledge — the campaign ran Aug 19–Sep 19 2025): Elephant Pledge " +
+      "in Sundrop (€320.00 + €60.80 tax) = everything in 3D (Big Box 1 with 40 special " +
+      "buildings + Big Box 2 with 200 enclosures/kiosks/pavilions), acrylic tiles set (incl. " +
+      "3D coffee mug), 4 deluxe playerboards + action tiles, 82 metal coins, 350 custom " +
+      "sleeves, 2 stitched playmats, 2× BGA map sets. Plus add-ons: Map Ability PROMOs " +
+      "(€10.00 + €1.90 — the upgraded 5-building pack) and the 3D Arcade promo building & " +
+      "card (€10.00 + €1.90); both get Sundrop free with a Sundrop main pledge. Total paid " +
+      "€404.60. NOTE: 3Dition contains NO base game — the retail copy is required. Shipping " +
+      "is charged when the pledge manager opens (still closed as of Aug 2026).",
+    events: [
+      {
+        id: "ark-nova-3dition-e01",
+        occurredOn: "2025-09-19",
+        type: "status-change",
+        title: "Campaign closed at €2M+ with 11,000+ backers",
+        details:
+          "The Gamefound-exclusive campaign ended via the Endgame phase as the most-funded " +
+          "German board game crowdfunding campaign ever (and 2025's 2nd biggest board game " +
+          "campaign overall).",
+        sourceUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova/updates/24",
+      },
+      {
+        id: "ark-nova-3dition-e02",
+        occurredOn: "2025-11-07",
+        type: "campaign-update",
+        title: "Late pledge opens — production timeline set",
+        details:
+          "Miniature molds started manufacturing in October '25 (the production bottleneck); " +
+          "plan: manufacturing Jan–Aug '26, shipping Sep–Oct '26, worldwide fulfilment " +
+          "Oct '26. The Map Ability promo pack gained two extra buildings (free for existing " +
+          "backers). Pledge manager to follow later for shipping and addresses.",
+        sourceUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova/updates/25",
+      },
+      {
+        id: "ark-nova-3dition-e03",
+        occurredOn: "2026-03-30",
+        type: "campaign-update",
+        title: "Mold tooling nearly complete",
+        details:
+          "Post-Chinese-New-Year production at full speed: the tooling design phase is nearly " +
+          "done with actual mold production starting on schedule; coin design advanced and " +
+          "deluxe player boards iterating.",
+        sourceUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova/updates/28",
+      },
+      {
+        id: "ark-nova-3dition-e04",
+        occurredOn: "2026-07-01",
+        type: "delay",
+        title: "Fulfilment slips to end of 2026",
+        details:
+          "The new per-component timeline shows every component (sleeves furthest along, " +
+          "coins and coffee cup furthest behind) starting fulfilment at the end of 2026 " +
+          'instead of October — "quality over speed", with miniature molds the bottleneck.',
+        sourceUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova/updates/31",
+      },
+      {
+        id: "ark-nova-3dition-e05",
+        occurredOn: "2026-08-02",
+        type: "campaign-update",
+        title: "Association board approved, arcade cards done in 17 languages",
+        details:
+          "Milestones completing weekly; the box layout is being finalized from the first " +
+          "serial test run to lock packaging weights and dimensions per pledge tier.",
+        sourceUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova/updates/32",
+      },
+    ],
+  },
 ] satisfies readonly PurchaseRecord[];
 
 export function purchasesForUser(userId: string): PurchaseRecord[] {
