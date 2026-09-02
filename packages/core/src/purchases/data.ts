@@ -627,6 +627,99 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
     ],
   },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "elements-of-truth",
+    title: "Elements of Truth — Einsteinium Edition",
+    slug: "elements-of-truth",
+    kind: "crowdfunding",
+    status: "production",
+    platform: "Kickstarter",
+    campaignUrl:
+      "https://www.kickstarter.com/projects/elements-of-truth/elements-of-truth-by-veritasium",
+    pledgeManagerUrl: null, // BackerKit survey; closed June 14 '26
+    // Kickstarter's reward estimate at pledge time: Sep 2026. Production
+    // finished Aug 31 with QC still ahead of freight, so September is tight
+    // but no later month has been stated — the recent updates name no dates.
+    originalEtaMonth: "2026-09",
+    currentEtaMonth: "2026-09",
+    pledgedOn: "2025-12-08",
+    deliveredOn: null,
+    currency: "USD",
+    pledgeCents: 9900, // $99.00 Einsteinium Edition, collected
+    shippingCents: 1500, // $15.00 worldwide shipping, collected with the pledge
+    note:
+      "Einsteinium Edition ($99.00, Kickstarter exclusive): the base game plus every " +
+      "expansion pack — Community Designed booster, Veritasium, Astronomy, Engineering, " +
+      "Physics and Technology question packs (800 questions total) — with neoprene mat, " +
+      "6 chip stands and the premium wooden box. $15.00 worldwide shipping collected with " +
+      "the pledge; any VAT collected later via BackerKit is not recorded. Campaign funded " +
+      "Dec 13, 2025. All editions gained an X bluffing tile and thicker number tiles " +
+      "during production.",
+    events: [
+      {
+        id: "elements-of-truth-e01",
+        occurredOn: "2026-01-26",
+        type: "campaign-update",
+        title: "Production design finalizing — first deliveries aimed at August",
+        details:
+          "Designs and fact-checked questions being finalized, full production set for late " +
+          "February, and the community deck's winning artwork revealed. Plan then: first " +
+          "deliveries in August, ahead of the September pledge estimate.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/elements-of-truth/elements-of-truth-by-veritasium/posts/4594832",
+      },
+      {
+        id: "elements-of-truth-e02",
+        occurredOn: "2026-05-18",
+        type: "campaign-update",
+        title: "X bluffing tile and thicker tiles added to all editions",
+        details:
+          "Production on track with freight from the manufacturer to fulfilment hubs aimed " +
+          "at June. A new X tile enables a bluffing variant, and all editions upgraded to " +
+          "thicker number tiles.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/elements-of-truth/elements-of-truth-by-veritasium/posts/4694174",
+      },
+      {
+        id: "elements-of-truth-e03",
+        occurredOn: "2026-05-29",
+        type: "campaign-update",
+        title: "BackerKit survey out — address + VAT, deadline extended to June 14",
+        details:
+          "The survey collects final addresses and location-dependent VAT; extra base " +
+          "copies could be added but no additional Veritasium/Einsteinium editions. The " +
+          "June 7 deadline was extended to June 14 after Apple Private Relay addresses " +
+          "blocked BackerKit's emails.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/elements-of-truth/elements-of-truth-by-veritasium/posts/4702499",
+      },
+      {
+        id: "elements-of-truth-e04",
+        occurredOn: "2026-07-08",
+        type: "campaign-update",
+        title: "Final stages of production — timeline details promised soon",
+        details:
+          "Production photos shared with the game in its final stretch; concrete timeline " +
+          "information promised for a later update, with the June freight plan no longer " +
+          "mentioned.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/elements-of-truth/elements-of-truth-by-veritasium/posts/4737811",
+      },
+      {
+        id: "elements-of-truth-e05",
+        occurredOn: "2026-08-31",
+        type: "campaign-update",
+        title: "Production complete — quality control underway",
+        details:
+          "The finished product passed into final quality control, the last stage before " +
+          "games head to the distribution centers and shipping begins. Next update promised " +
+          "when shipping is underway; no delivery month stated.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/elements-of-truth/elements-of-truth-by-veritasium/posts/4784662",
+      },
+    ],
+  },
 ] satisfies readonly PurchaseRecord[];
 
 export function purchasesForUser(userId: string): PurchaseRecord[] {
