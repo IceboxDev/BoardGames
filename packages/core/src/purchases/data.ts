@@ -720,6 +720,76 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
     ],
   },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "parks-europe",
+    title: "Parks Europe — Chalet Edition + Summit Edition",
+    slug: "parks-europe",
+    kind: "crowdfunding",
+    status: "production",
+    platform: "BackerKit",
+    campaignUrl:
+      "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion",
+    pledgeManagerUrl: null, // BackerKit survey; closed Aug 31 '26, cards charged Sep 1
+    // A BackerKit "Ready-to-Ship" campaign — printing ran during the campaign
+    // and the page promises "Estimated to ship by October 2026".
+    originalEtaMonth: "2026-10",
+    currentEtaMonth: "2026-10",
+    pledgedOn: "2026-08-03",
+    deliveredOn: null,
+    currency: "USD",
+    pledgeCents: 17998, // $89.99 Chalet Edition + $89.99 Parks Summit Edition add-on, charged Aug 5
+    shippingCents: null, // shipping + VAT charged Sep 1 via BackerKit; amount not recorded
+    note:
+      "Confirmation 1740949: Parks Europe Chalet Edition ($89.99, with the World Heritage " +
+      "Sites mini expansion included free) plus the Parks Summit Edition add-on ($89.99). " +
+      "Total $179.98 charged Aug 5, 2026; shipping + VAT charged separately Sep 1 via " +
+      "BackerKit (amount not recorded), delivered DDP to the EU (Germany address). " +
+      "Ready-to-Ship campaign: Panda printed during the campaign and community-reported " +
+      "typo errata were folded into the shipped copies. EU boxes carry two extra " +
+      "green-directive compliance stickers (same contents, same window).",
+    events: [
+      {
+        id: "parks-europe-e01",
+        occurredOn: "2026-08-03",
+        type: "campaign-update",
+        title: "Gen Con preview — errata folded into the print run",
+        details:
+          "Preview copies shown at Gen Con while the campaign ran; community-spotted typos " +
+          "and errata were sent to Panda for correction in every shipped copy. The box lid " +
+          "interior hides a map of all 48 featured Parks. (Date approximate.)",
+        sourceUrl:
+          "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion/updates/48416",
+      },
+      {
+        id: "parks-europe-e02",
+        occurredOn: "2026-08-06",
+        type: "status-change",
+        title: "Campaign funded — $582,182 from 5,249 backers, games already printing",
+        details:
+          "As a Ready-to-Ship campaign the files were done and printing underway before the " +
+          "campaign closed. An aggressive pledge-manager/freight/fulfilment timeline targets " +
+          "the promised October delivery; ~800 extra copies were offered to backers when the " +
+          "pledge manager opened. (Date approximate.)",
+        sourceUrl:
+          "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion/updates/49299",
+      },
+      {
+        id: "parks-europe-e03",
+        occurredOn: "2026-08-29",
+        type: "campaign-update",
+        title: "Pledge manager closed Aug 31 — cards charged Sep 1, containers load soon",
+        details:
+          "Shipping, taxes and add-ons were charged Tuesday Sep 1 (US time); that day's " +
+          "BackerKit data routes games from the manufacturer to each region's fulfilment " +
+          "hub, with assembly next and containers loading in the coming weeks. EU-bound " +
+          "boxes gain two compliance stickers for the EU green-transition directive — same " +
+          "ship window. (Date approximate.)",
+        sourceUrl:
+          "https://www.backerkit.com/c/projects/keymaster/parks-europe-chalet-edition-free-expansion/updates/50907",
+      },
+    ],
+  },
 ] satisfies readonly PurchaseRecord[];
 
 export function purchasesForUser(userId: string): PurchaseRecord[] {
