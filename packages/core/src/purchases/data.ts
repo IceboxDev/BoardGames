@@ -520,6 +520,113 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
     ],
   },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "hell-of-a-deal",
+    title: "Hell of a Deal + Foil Poker Deck dual pack",
+    slug: "hell-of-a-deal",
+    kind: "crowdfunding",
+    status: "shipping",
+    platform: "Kickstarter",
+    campaignUrl: "https://www.kickstarter.com/projects/smirkanddagger/hell-of-a-deal",
+    pledgeManagerUrl: null, // BackerKit; closed May 15 '26, addresses locked July 18 '26
+    // Kickstarter's reward estimate at pledge time: Sep 2026 (the creator's
+    // internal goal was July/August). The EU wave lands late September —
+    // vessel due in Rotterdam Sep 12, fulfilment ~1–2 weeks after.
+    originalEtaMonth: "2026-09",
+    currentEtaMonth: "2026-09",
+    pledgedOn: "2026-03-25",
+    deliveredOn: null,
+    currency: "USD",
+    pledgeCents: 8500, // $65.00 base game + $20.00 Deluxe Foil Poker Deck dual pack, collected
+    shippingCents: null, // shipping + VAT charged separately via BackerKit; amount not recorded
+    note:
+      "Base pledge ($65.00): premium 1–9p co-op poker game vs hell's bosses — 52 custom " +
+      "11.5g poker chips, 6 neoprene poker mats, custom poker deck, 35 Favor / 16 Curse / " +
+      "14 tarot-size Boss cards, wood Temptation tokens, gold-foil box, plus all unlocked " +
+      "stretch goals (incl. solo mode and 44 bosses, added late campaign). Add-on: Deluxe " +
+      "Foil Poker Deck dual pack ($20.00, gold + red). Total $85.00 collected; shipping and " +
+      "VAT went through the BackerKit pledge manager. EU copies fulfil via MeeplesNL from " +
+      "Rotterdam.",
+    events: [
+      {
+        id: "hell-of-a-deal-e01",
+        occurredOn: "2026-04-11",
+        type: "status-change",
+        title: "Campaign funded (3,735 backers) — straight to press",
+        details:
+          "The campaign closed April 10/11 and production started immediately: molds for " +
+          "dice, chips and wood components were already underway, with print files at the " +
+          "printer within days — aiming at one of the fastest Kickstarter turnarounds.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/smirkanddagger/hell-of-a-deal/posts/4660857",
+      },
+      {
+        id: "hell-of-a-deal-e02",
+        occurredOn: "2026-04-23",
+        type: "campaign-update",
+        title: "BackerKit pledge manager opens April 28",
+        details:
+          "BackerKit collects addresses, shipping fees and VAT. Chips and dice hit press " +
+          "first (longest lead times); the box was made deeper so the neoprene mats fit " +
+          "rolled inside.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/smirkanddagger/hell-of-a-deal/posts/4672316",
+      },
+      {
+        id: "hell-of-a-deal-e03",
+        occurredOn: "2026-05-11",
+        type: "campaign-update",
+        title: "Pledge manager closes early (May 15) — printing done end of May",
+        details:
+          "The pledge manager and late pledges closed May 15 so regional freight could be " +
+          "planned; printing was set to finish by the end of May. Address changes stayed " +
+          "possible through June/July.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/smirkanddagger/hell-of-a-deal/posts/4687816",
+      },
+      {
+        id: "hell-of-a-deal-e04",
+        occurredOn: "2026-06-12",
+        type: "delay",
+        title: "Box-cover misprint forces a full cover reprint",
+        details:
+          "Every printed box cover came out with the red frame oversaturated into muddy " +
+          "brown, so all covers were reprinted and the booked vessel was cancelled — killing " +
+          "the internal early-July goal, though the promised timeline still held. Everything " +
+          "inside the box (chips, mats, tray) passed inspection.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/smirkanddagger/hell-of-a-deal/posts/4718236",
+      },
+      {
+        id: "hell-of-a-deal-e05",
+        occurredOn: "2026-07-27",
+        type: "status-change",
+        title: "On the water — EU wave via Rotterdam (MeeplesNL)",
+        details:
+          "After three back-to-back setbacks (cover reprint in 9 days, a 10-day Chinese port " +
+          "closure, then getting bumped off the rebooked vessel), games shipped by region: " +
+          "US fulfilment from ~Aug 5, Canada in port Aug 20, EU/UK bound for the Netherlands " +
+          "with MeeplesNL as the new fulfilment partner. Addresses locked July 18.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/smirkanddagger/hell-of-a-deal/posts/4750032",
+      },
+      {
+        id: "hell-of-a-deal-e06",
+        occurredOn: "2026-08-14",
+        type: "campaign-update",
+        title: "US wave delivering — EU vessel due Rotterdam September 12",
+        details:
+          "US backers are receiving games; Canada ships from ~Aug 27. The EU/UK vessel is " +
+          "due in Rotterdam September 12, then about a week to the fulfilment centre and " +
+          "orders out days later (~late September). Damaged/missing-part replacements mail " +
+          "from end of August; the recommended starting boss lineup was revised (Boatman, " +
+          "Brothers Dreadful, Demona, Burnie).",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/smirkanddagger/hell-of-a-deal/posts/4771434",
+      },
+    ],
+  },
 ] satisfies readonly PurchaseRecord[];
 
 export function purchasesForUser(userId: string): PurchaseRecord[] {
