@@ -221,9 +221,11 @@ export const DEFAULT_PURCHASE_VIEW: PurchaseViewState = { scope: "all", sort: "e
 export interface PurchaseOrderCard {
   key: string;
   title: string;
-  /** All wave rows, in data (pledge) order. Length 1 for a plain purchase. */
+  /** Wave rows in attention order: still-moving waves (soonest ETA first),
+   *  then delivered (latest first), cancelled last. Length 1 for a plain
+   *  purchase. The expanded view renders them top-to-bottom as-is. */
   waves: PurchaseRow[];
-  /** The soonest-ETA active wave; else the latest-delivered; else the last. */
+  /** `waves[0]` — the wave that matters right now; drives the collapsed card. */
   rep: PurchaseRow;
   /** Any wave still moving. */
   active: boolean;
@@ -238,16 +240,19 @@ export interface PurchaseOrderCard {
   slug: string | null;
 }
 
-function pickRepresentative(waves: PurchaseRow[]): PurchaseRow {
-  const active = waves.filter((w) => w.active);
-  if (active.length > 0) return [...active].sort(compareBy("eta"))[0];
-  const delivered = waves.filter((w) => w.purchase.status === "delivered");
-  if (delivered.length > 0) {
-    return [...delivered].sort((a, b) =>
-      (a.purchase.deliveredOn ?? "") < (b.purchase.deliveredOn ?? "") ? 1 : -1,
-    )[0];
-  }
-  return waves[waves.length - 1];
+/** Attention order: active by soonest ETA → delivered latest-first → cancelled. */
+function waveRank(w: PurchaseRow): number {
+  if (w.active) return 0;
+  return w.purchase.status === "delivered" ? 1 : 2;
+}
+function sortWaves(waves: PurchaseRow[]): PurchaseRow[] {
+  const byEta = compareBy("eta");
+  return [...waves].sort((a, b) => {
+    const rank = waveRank(a) - waveRank(b);
+    if (rank !== 0) return rank;
+    if (waveRank(a) === 0) return byEta(a, b);
+    return (a.purchase.deliveredOn ?? "") < (b.purchase.deliveredOn ?? "") ? 1 : -1;
+  });
 }
 
 export function buildOrderCards(
@@ -265,8 +270,9 @@ export function buildOrderCards(
     entry.waves.push(row);
     byKey.set(key, entry);
   }
-  return [...byKey.entries()].map(([key, { title, waves }]) => {
-    const rep = pickRepresentative(waves);
+  return [...byKey.entries()].map(([key, { title, waves: rawWaves }]) => {
+    const waves = sortWaves(rawWaves);
+    const rep = waves[0];
     const money = waves.map((w) => w.totalCents).filter((c): c is number => c !== null);
     const latestEventOn = waves.reduce<string | null>(
       (max, w) =>
@@ -443,48 +449,53 @@ export interface PurchaseInsightsData {
   spendByMonth: { month: string; eurCents: number }[];
 }
 
+/**
+ * Everything counts ORDERS (cards), not wave records — an order's status is
+ * its representative wave's, so a half-delivered multi-wave pledge still
+ * reads as one thing in flight, matching the card list below the tiles.
+ */
 export function buildInsights(
-  rows: readonly PurchaseRow[],
+  cards: readonly PurchaseOrderCard[],
   todayKey: string,
 ): PurchaseInsightsData {
   const byStatus = Object.fromEntries(Object.keys(STATUS_LABEL).map((s) => [s, 0])) as Record<
     PurchaseStatus,
     number
   >;
-  for (const r of rows) byStatus[r.purchase.status] += 1;
+  for (const c of cards) byStatus[c.rep.purchase.status] += 1;
 
   const thisMonth = todayKey.slice(0, 7);
-  const upcoming = rows
-    .filter((r) => r.active && r.purchase.currentEtaMonth !== null)
-    .filter((r) => (r.purchase.currentEtaMonth as string) >= thisMonth)
-    .sort(compareBy("eta"))[0];
+  const upcoming = cards
+    .filter((c) => c.active && c.rep.purchase.currentEtaMonth !== null)
+    .filter((c) => (c.rep.purchase.currentEtaMonth as string) >= thisMonth)
+    .sort(compareCardsBy("eta"))[0];
 
-  const withMoney = rows.filter((r) => r.totalCents !== null);
+  const withMoney = cards.filter((c) => c.totalCents !== null);
   const committed = CURRENCIES.flatMap((currency) => {
-    const inCurrency = withMoney.filter((r) => r.purchase.currency === currency);
+    const inCurrency = withMoney.filter((c) => c.rep.purchase.currency === currency);
     if (inCurrency.length === 0) return [];
-    return [{ currency, cents: inCurrency.reduce((a, r) => a + (r.totalCents as number), 0) }];
+    return [{ currency, cents: inCurrency.reduce((a, c) => a + (c.totalCents as number), 0) }];
   });
   const spend = new Map<string, number>();
-  for (const r of withMoney) {
-    if (r.purchase.pledgedOn === null) continue;
-    const month = r.purchase.pledgedOn.slice(0, 7);
-    const eur = (r.totalCents as number) * EUR_RATE[r.purchase.currency];
+  for (const c of withMoney) {
+    if (c.earliestPledgedOn === null) continue;
+    const month = c.earliestPledgedOn.slice(0, 7);
+    const eur = (c.totalCents as number) * EUR_RATE[c.rep.purchase.currency];
     spend.set(month, (spend.get(month) ?? 0) + eur);
   }
 
   return {
-    total: rows.length,
-    activeCount: rows.filter((r) => r.active).length,
+    total: cards.length,
+    activeCount: cards.filter((c) => c.active).length,
     byStatus,
     nextArrival: upcoming
       ? {
-          etaMonth: upcoming.purchase.currentEtaMonth as string,
-          title: displayPurchaseTitle(upcoming.purchase),
+          etaMonth: upcoming.rep.purchase.currentEtaMonth as string,
+          title: upcoming.title,
         }
       : null,
-    overdueCount: rows.filter((r) => r.overdue).length,
-    staleCount: rows.filter((r) => r.active && (r.staleDays ?? 0) >= STALE_WARN_DAYS).length,
+    overdueCount: cards.filter((c) => c.overdue).length,
+    staleCount: cards.filter((c) => c.active && (c.staleDays ?? 0) >= STALE_WARN_DAYS).length,
     committed,
     spendByMonth: [...spend.entries()]
       .map(([month, eur]) => ({ month, eurCents: Math.round(eur) }))

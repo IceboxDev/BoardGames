@@ -153,10 +153,11 @@ describe("PurchaseCard", () => {
       }),
     ];
     renderCard(waves);
-    // One card, group title, the ACTIVE wave named in the meta line.
+    // One card, group title, the ACTIVE wave's ETA in the meta — no wave name.
     expect(screen.getAllByRole("listitem")).toHaveLength(1);
     expect(screen.getByText("Gloomhaven Grand Festival")).toBeInTheDocument();
-    expect(screen.getByText(/Gloomhaven Minis · ETA Feb 2027/)).toBeInTheDocument();
+    expect(screen.getByText(/ETA Feb 2027/)).toBeInTheDocument();
+    expect(screen.queryByText(/Gloomhaven Minis ·/)).not.toBeInTheDocument();
     // Money = sum of both waves.
     expect(screen.getByText("$595")).toBeInTheDocument();
     expect(screen.queryByText("Frosthaven")).not.toBeInTheDocument();

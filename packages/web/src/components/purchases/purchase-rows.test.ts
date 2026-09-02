@@ -277,7 +277,8 @@ describe("buildOrderCards", () => {
     expect(cards.map((c) => c.key)).toEqual(["big-pledge", "solo"]);
     const big = cards[0];
     expect(big.title).toBe("Big Pledge");
-    expect(big.waves.map((w) => w.purchase.id)).toEqual(["w1", "w2"]);
+    // Attention order: the active wave leads, the delivered one follows.
+    expect(big.waves.map((w) => w.purchase.id)).toEqual(["w2", "w1"]);
     // Representative = the active wave, not the delivered one.
     expect(big.rep.purchase.id).toBe("w2");
     expect(big.active).toBe(true);
@@ -318,7 +319,7 @@ describe("buildOrderCards", () => {
 
 describe("buildInsights", () => {
   it("derives counts, next arrival, and money sums", () => {
-    const insights = buildInsights(fixture(), TODAY);
+    const insights = buildInsights(cardsOf(fixture()), TODAY);
     expect(insights.total).toBe(5);
     expect(insights.activeCount).toBe(3);
     expect(insights.byStatus.shipping).toBe(1);
@@ -344,7 +345,7 @@ describe("buildInsights", () => {
       ],
       TODAY,
     );
-    const insights = buildInsights(rows, TODAY);
+    const insights = buildInsights(cardsOf(rows), TODAY);
     expect(insights.committed).toEqual([
       { currency: "EUR", cents: 9800 },
       { currency: "USD", cents: 31892 },
@@ -363,7 +364,7 @@ describe("buildInsights", () => {
       ],
       TODAY,
     );
-    const insights = buildInsights(rows, TODAY);
+    const insights = buildInsights(cardsOf(rows), TODAY);
     expect(insights.committed).toEqual([]);
     expect(insights.spendByMonth).toEqual([]);
   });

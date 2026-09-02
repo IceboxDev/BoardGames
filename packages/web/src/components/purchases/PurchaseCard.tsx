@@ -94,10 +94,10 @@ export function PurchaseCard({
   const multiWave = card.waves.length > 1;
   const thumb = resolveGame(card.slug)?.thumbnail;
 
-  // Meta line: the phone gets only what it needs (which wave the rail talks
-  // about, the ETA, staleness); platform + pledge date are desktop-only.
+  // Meta line: the phone gets only the ETA and staleness; platform + pledge
+  // date are desktop-only. Wave names stay inside the expanded view — the
+  // collapsed subtext reads the same for every card.
   const mobileMeta: string[] = [];
-  if (multiWave) mobileMeta.push(displayPurchaseTitle(p));
   const eta = etaFragment(rep);
   if (eta) mobileMeta.push(eta);
   const desktopMeta: string[] = [];

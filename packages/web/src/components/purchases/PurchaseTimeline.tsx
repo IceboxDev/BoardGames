@@ -79,7 +79,7 @@ export function PurchaseTimeline({ events }: { events: Purchase["events"] }) {
                       {meta.label}
                     </p>
                     {event.details && (
-                      <p className="mt-0.5 line-clamp-3 text-xs leading-snug text-fg-secondary">
+                      <p className="mt-0.5 text-xs leading-snug text-fg-secondary">
                         {event.details}
                       </p>
                     )}

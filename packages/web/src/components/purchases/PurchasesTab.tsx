@@ -86,7 +86,7 @@ export function PurchasesTab({
     >
       {(data) => {
         const rows = buildPurchaseRows(data.purchases, todayKey);
-        const insights = buildInsights(rows, todayKey);
+        const insights = buildInsights(buildOrderCards(rows, todayKey), todayKey);
         const subtitleParts = [
           `${insights.activeCount} in flight`,
           insights.nextArrival
@@ -129,7 +129,8 @@ export function PurchasesView({
   const [view, setView] = useState<PurchaseViewState>(DEFAULT_PURCHASE_VIEW);
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const rows = useMemo(() => buildPurchaseRows(data.purchases, todayKey), [data, todayKey]);
-  const insights = useMemo(() => buildInsights(rows, todayKey), [rows, todayKey]);
+  const allCards = useMemo(() => buildOrderCards(rows, todayKey), [rows, todayKey]);
+  const insights = useMemo(() => buildInsights(allCards, todayKey), [allCards, todayKey]);
 
   if (rows.length === 0) {
     return (
@@ -147,16 +148,12 @@ export function PurchasesView({
     );
   }
 
-  // The list deals in order cards (wave records folded into one entry per
-  // real order); the insight tiles above keep counting waves — a wave is a
-  // shipment, and "in flight" means shipments still coming.
-  const cards = buildOrderCards(rows, todayKey);
-  const groups = applyPurchaseView(cards, view);
+  const groups = applyPurchaseView(allCards, view);
   const counts = {
-    all: cards.length,
-    active: cards.filter((c) => c.active).length,
-    arrived: cards.filter((c) => c.allDelivered).length,
-    ended: cards.filter((c) => c.allCancelled).length,
+    all: allCards.length,
+    active: allCards.filter((c) => c.active).length,
+    arrived: allCards.filter((c) => c.allDelivered).length,
+    ended: allCards.filter((c) => c.allCancelled).length,
   };
 
   return (

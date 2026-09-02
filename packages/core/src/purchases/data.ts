@@ -25,7 +25,9 @@ import { PurchaseSchema } from "../protocol/http/purchases.ts";
 //    with money in its minor units (cents), `slug` only when the game
 //    already exists in the catalog. `title` records the full pledge wording;
 //    `shortTitle` is the clean overview name shown on cards ("Frosthaven",
-//    "Gloomhaven Minis") — keep it unique among the owner's purchases.
+//    "RPG Deluxe Box") — keep it unique among the owner's purchases, and
+//    for a wave record name WHAT THAT WAVE CONTAINS in the owner's own
+//    words, not a codename.
 //    When ONE pledge splits into shipping waves, keep one record per wave
 //    but give every wave the same `orderGroup` ({ id, title }) and the same
 //    `currency` — the UI folds them into a single card.
@@ -978,7 +980,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "gloomhaven-festival-rpg",
     title: "Gloomhaven Grand Festival — RPG Deluxe Box (Wave 4)",
-    shortTitle: "Gloomhaven RPG",
+    shortTitle: "RPG Deluxe Box",
     orderGroup: { id: "gloomhaven-festival", title: "Gloomhaven Grand Festival" },
     slug: "gloomhaven",
     kind: "crowdfunding",
@@ -1055,7 +1057,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
     id: "gloomhaven-festival-minis",
     title: "Gloomhaven Grand Festival — Miniatures Full Set (Wave 5)",
-    shortTitle: "Gloomhaven Minis",
+    shortTitle: "Miniatures",
     orderGroup: { id: "gloomhaven-festival", title: "Gloomhaven Grand Festival" },
     slug: "gloomhaven",
     kind: "crowdfunding",
