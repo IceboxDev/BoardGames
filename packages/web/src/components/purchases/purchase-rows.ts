@@ -1,5 +1,6 @@
 import type {
   Purchase,
+  PurchaseCurrency,
   PurchaseEventType,
   PurchaseKind,
   PurchaseStatus,
@@ -114,12 +115,17 @@ export function stalenessDays(events: Purchase["events"], todayKey: string): num
   return Math.max(0, Math.floor(diff / 86_400_000));
 }
 
-/** "€89" / "€89.99" / "€1,790" — EUR cents, deterministic (no Intl). */
-export function formatEuroCents(cents: number): string {
+const CURRENCY_SYMBOL: Record<PurchaseCurrency, string> = { EUR: "€", USD: "$" };
+
+/** Chart hue per currency (spend columns; EUR keeps the brand accent). */
+export const CURRENCY_TONE: Record<PurchaseCurrency, Tone> = { EUR: "accent", USD: "sky" };
+
+/** "€89" / "$89.99" / "€1,790" — minor units, deterministic (no Intl). */
+export function formatMoneyCents(cents: number, currency: PurchaseCurrency): string {
   const value = (cents / 100).toFixed(cents % 100 === 0 ? 0 : 2);
   const [int, frac] = value.split(".");
   const grouped = int.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  return `€${grouped}${frac ? `.${frac}` : ""}`;
+  return `${CURRENCY_SYMBOL[currency]}${grouped}${frac ? `.${frac}` : ""}`;
 }
 
 export interface PurchaseRow {
@@ -251,6 +257,8 @@ export function applyPurchaseView(
   return groups.filter((g) => g.rows.length > 0);
 }
 
+const CURRENCIES: readonly PurchaseCurrency[] = ["EUR", "USD"];
+
 export interface PurchaseInsightsData {
   total: number;
   activeCount: number;
@@ -258,10 +266,11 @@ export interface PurchaseInsightsData {
   nextArrival: { etaMonth: string; title: string } | null;
   overdueCount: number;
   staleCount: number;
-  /** Sum of every visible pledge+shipping; null when no money is visible. */
-  committedCents: number | null;
-  /** Visible money grouped by pledge month, ascending. */
-  spendByMonth: { month: string; cents: number }[];
+  /** Visible pledge+shipping totals per currency (never mixed into one sum);
+   *  empty when no money is visible — a viewer payload. */
+  committed: { currency: PurchaseCurrency; cents: number }[];
+  /** Visible money grouped by pledge month (ascending), split by currency. */
+  spendByMonth: { month: string; amounts: { currency: PurchaseCurrency; cents: number }[] }[];
 }
 
 export function buildInsights(
@@ -281,11 +290,19 @@ export function buildInsights(
     .sort(compareBy("eta"))[0];
 
   const withMoney = rows.filter((r) => r.totalCents !== null);
-  const spend = new Map<string, number>();
+  const committed = CURRENCIES.flatMap((currency) => {
+    const inCurrency = withMoney.filter((r) => r.purchase.currency === currency);
+    if (inCurrency.length === 0) return [];
+    return [{ currency, cents: inCurrency.reduce((a, r) => a + (r.totalCents as number), 0) }];
+  });
+  const spend = new Map<string, Map<PurchaseCurrency, number>>();
   for (const r of withMoney) {
     if (r.purchase.pledgedOn === null) continue;
     const month = r.purchase.pledgedOn.slice(0, 7);
-    spend.set(month, (spend.get(month) ?? 0) + (r.totalCents as number));
+    const byCurrency = spend.get(month) ?? new Map<PurchaseCurrency, number>();
+    const currency = r.purchase.currency;
+    byCurrency.set(currency, (byCurrency.get(currency) ?? 0) + (r.totalCents as number));
+    spend.set(month, byCurrency);
   }
 
   return {
@@ -300,10 +317,15 @@ export function buildInsights(
       : null,
     overdueCount: rows.filter((r) => r.overdue).length,
     staleCount: rows.filter((r) => r.active && (r.staleDays ?? 0) >= STALE_WARN_DAYS).length,
-    committedCents:
-      withMoney.length === 0 ? null : withMoney.reduce((a, r) => a + (r.totalCents as number), 0),
+    committed,
     spendByMonth: [...spend.entries()]
-      .map(([month, cents]) => ({ month, cents }))
+      .map(([month, byCurrency]) => ({
+        month,
+        amounts: CURRENCIES.flatMap((currency) => {
+          const cents = byCurrency.get(currency);
+          return cents === undefined ? [] : [{ currency, cents }];
+        }),
+      }))
       .sort((a, b) => (a.month < b.month ? -1 : 1)),
   };
 }

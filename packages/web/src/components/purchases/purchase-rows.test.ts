@@ -10,7 +10,7 @@ import {
   buildPurchaseRows,
   EVENT_META,
   formatEtaMonth,
-  formatEuroCents,
+  formatMoneyCents,
   isOverdue,
   railFor,
   STATUS_LABEL,
@@ -33,6 +33,7 @@ const purchase = (overrides: Partial<Purchase> & { id: string }): Purchase => ({
   currentEtaMonth: null,
   pledgedOn: null,
   deliveredOn: null,
+  currency: "EUR",
   pledgeCents: null,
   shippingCents: null,
   note: null,
@@ -74,14 +75,15 @@ describe("slipMonths", () => {
   });
 });
 
-describe("formatEtaMonth / formatEuroCents", () => {
+describe("formatEtaMonth / formatMoneyCents", () => {
   it("renders months and money deterministically", () => {
     expect(formatEtaMonth("2026-11")).toBe("Nov 2026");
-    expect(formatEuroCents(8900)).toBe("€89");
-    expect(formatEuroCents(8999)).toBe("€89.99");
-    expect(formatEuroCents(0)).toBe("€0");
-    expect(formatEuroCents(179000)).toBe("€1,790");
-    expect(formatEuroCents(123456)).toBe("€1,234.56");
+    expect(formatMoneyCents(8900, "EUR")).toBe("€89");
+    expect(formatMoneyCents(8999, "EUR")).toBe("€89.99");
+    expect(formatMoneyCents(0, "EUR")).toBe("€0");
+    expect(formatMoneyCents(179000, "EUR")).toBe("€1,790");
+    expect(formatMoneyCents(123456, "EUR")).toBe("€1,234.56");
+    expect(formatMoneyCents(31892, "USD")).toBe("$318.92");
   });
 });
 
@@ -194,8 +196,40 @@ describe("buildInsights", () => {
     expect(insights.staleCount).toBe(1); // b-late last moved in May
     // The overdue August ETA is not "next arrival" — October is.
     expect(insights.nextArrival).toEqual({ etaMonth: "2026-10", title: "a-soon" });
-    expect(insights.committedCents).toBe(100 + 5000 + 500 + 200);
-    expect(insights.spendByMonth).toEqual([{ month: "2026-01", cents: 5700 }]);
+    expect(insights.committed).toEqual([{ currency: "EUR", cents: 100 + 5000 + 500 + 200 }]);
+    expect(insights.spendByMonth).toEqual([
+      { month: "2026-01", amounts: [{ currency: "EUR", cents: 5700 }] },
+    ]);
+  });
+
+  it("keeps currencies apart instead of summing dollars into euros", () => {
+    const rows = buildPurchaseRows(
+      [
+        purchase({ id: "eur", status: "production", pledgedOn: "2026-05-01", pledgeCents: 9800 }),
+        purchase({
+          id: "usd",
+          status: "production",
+          currency: "USD",
+          pledgedOn: "2026-05-29",
+          pledgeCents: 31892,
+        }),
+      ],
+      TODAY,
+    );
+    const insights = buildInsights(rows, TODAY);
+    expect(insights.committed).toEqual([
+      { currency: "EUR", cents: 9800 },
+      { currency: "USD", cents: 31892 },
+    ]);
+    expect(insights.spendByMonth).toEqual([
+      {
+        month: "2026-05",
+        amounts: [
+          { currency: "EUR", cents: 9800 },
+          { currency: "USD", cents: 31892 },
+        ],
+      },
+    ]);
   });
 
   it("reports no money when every money field is nulled (viewer payload)", () => {
@@ -207,7 +241,7 @@ describe("buildInsights", () => {
       TODAY,
     );
     const insights = buildInsights(rows, TODAY);
-    expect(insights.committedCents).toBeNull();
+    expect(insights.committed).toEqual([]);
     expect(insights.spendByMonth).toEqual([]);
   });
 });

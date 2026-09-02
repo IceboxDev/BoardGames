@@ -7,8 +7,9 @@ import { MicroLabel } from "../ui/Label.tsx";
 import { Surface } from "../ui/Surface.tsx";
 import { TONE_TEXT } from "../ui/tones";
 import {
+  CURRENCY_TONE,
   formatEtaMonth,
-  formatEuroCents,
+  formatMoneyCents,
   type PurchaseInsightsData,
   STALE_WARN_DAYS,
   STATUS_LABEL,
@@ -52,7 +53,7 @@ export function PurchaseInsights({ insights }: { insights: PurchaseInsightsData 
   const statusesPresent = (Object.keys(STATUS_LABEL) as PurchaseStatus[]).filter(
     (s) => insights.byStatus[s] > 0,
   );
-  const showMoney = insights.committedCents !== null;
+  const showMoney = insights.committed.length > 0;
 
   return (
     <div className="flex flex-col gap-3">
@@ -88,7 +89,9 @@ export function PurchaseInsights({ insights }: { insights: PurchaseInsightsData 
           {showMoney && (
             <InsightTile
               label="Committed"
-              value={formatEuroCents(insights.committedCents as number)}
+              value={insights.committed
+                .map((c) => formatMoneyCents(c.cents, c.currency))
+                .join(" + ")}
               sub="pledges + shipping"
             />
           )}
@@ -130,9 +133,13 @@ export function PurchaseInsights({ insights }: { insights: PurchaseInsightsData 
             height={96}
             columns={insights.spendByMonth.map((m) => ({
               label: formatEtaMonth(m.month),
-              segments: [{ value: m.cents, tone: "accent" }],
+              segments: m.amounts.map((a) => ({
+                value: a.cents,
+                tone: CURRENCY_TONE[a.currency],
+                label: a.currency,
+              })),
             }))}
-            formatValue={formatEuroCents}
+            formatValue={(cents) => (cents / 100).toFixed(2)}
           />
         </Surface>
       )}

@@ -20,6 +20,7 @@ const purchase = (overrides: Partial<Purchase> = {}): Purchase => ({
   currentEtaMonth: "2026-08",
   pledgedOn: "2025-04-12",
   deliveredOn: null,
+  currency: "EUR",
   pledgeCents: 17900,
   shippingCents: 3400,
   note: "Split with Tomas.",
@@ -48,9 +49,11 @@ function renderCard(p: Purchase, { expanded = false } = {}) {
 }
 
 describe("PurchaseCard", () => {
-  it("shows the owner money line and hides it when the server nulled it", () => {
+  it("shows the owner money line in the purchase's own currency", () => {
     renderCard(purchase());
     expect(screen.getByText("€179 + €34 ship")).toBeInTheDocument();
+    renderCard(purchase({ id: "usd", title: "USD one", currency: "USD" }));
+    expect(screen.getByText("$179 + $34 ship")).toBeInTheDocument();
   });
 
   it("renders nothing money-shaped on a viewer payload", () => {

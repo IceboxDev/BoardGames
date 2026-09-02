@@ -18,6 +18,7 @@ const base = {
   currentEtaMonth: null,
   pledgedOn: null,
   deliveredOn: null,
+  currency: "EUR",
   pledgeCents: null,
   shippingCents: null,
   note: null,
@@ -142,6 +143,7 @@ const PURCHASES: Purchase[] = [
     originalEtaMonth: "2026-07",
     currentEtaMonth: "2026-08",
     pledgedOn: "2026-05-06",
+    currency: "USD",
     pledgeCents: 4900,
     events: [
       {

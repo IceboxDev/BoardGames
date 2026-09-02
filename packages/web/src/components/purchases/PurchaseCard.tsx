@@ -9,7 +9,7 @@ import { PurchasePipelineRail } from "./PurchasePipelineRail.tsx";
 import { PurchaseTimeline } from "./PurchaseTimeline.tsx";
 import {
   formatEtaMonth,
-  formatEuroCents,
+  formatMoneyCents,
   type PurchaseRow,
   STALE_ALARM_DAYS,
   STALE_WARN_DAYS,
@@ -56,13 +56,12 @@ export function PurchaseCard({
   }
 
   const showStale = row.active && row.staleDays !== null;
+  const money = (cents: number) => formatMoneyCents(cents, p.currency);
   const moneyLine =
     p.pledgeCents !== null
-      ? `${formatEuroCents(p.pledgeCents)}${
-          p.shippingCents !== null ? ` + ${formatEuroCents(p.shippingCents)} ship` : ""
-        }`
+      ? `${money(p.pledgeCents)}${p.shippingCents !== null ? ` + ${money(p.shippingCents)} ship` : ""}`
       : p.shippingCents !== null
-        ? `${formatEuroCents(p.shippingCents)} ship`
+        ? `${money(p.shippingCents)} ship`
         : null;
 
   const links = [
@@ -160,9 +159,9 @@ export function PurchaseCard({
           {moneyLine && (
             <p className="text-xs tabular-nums text-fg-secondary">
               {[
-                p.pledgeCents !== null ? `Pledge ${formatEuroCents(p.pledgeCents)}` : null,
-                p.shippingCents !== null ? `Shipping ${formatEuroCents(p.shippingCents)}` : null,
-                row.totalCents !== null ? `Total ${formatEuroCents(row.totalCents)}` : null,
+                p.pledgeCents !== null ? `Pledge ${money(p.pledgeCents)}` : null,
+                p.shippingCents !== null ? `Shipping ${money(p.shippingCents)}` : null,
+                row.totalCents !== null ? `Total ${money(row.totalCents)}` : null,
               ]
                 .filter(Boolean)
                 .join(" · ")}

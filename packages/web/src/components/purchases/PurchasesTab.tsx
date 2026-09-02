@@ -162,7 +162,7 @@ export function PurchasesView({
           state={view}
           onChange={setView}
           counts={counts}
-          hasMoney={insights.committedCents !== null}
+          hasMoney={insights.committed.length > 0}
         />
       )}
       {groups.length === 0 ? (

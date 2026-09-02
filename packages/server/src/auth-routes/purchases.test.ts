@@ -34,6 +34,7 @@ const record: PurchaseRecord = {
   currentEtaMonth: "2026-04",
   pledgedOn: "2025-05-02",
   deliveredOn: null,
+  currency: "EUR",
   pledgeCents: 17900,
   shippingCents: 3200,
   note: "Split shipping with Tomas.",

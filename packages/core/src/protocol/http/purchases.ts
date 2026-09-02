@@ -54,6 +54,14 @@ export const PurchaseStatusSchema = z.enum([
 ]);
 export type PurchaseStatus = z.infer<typeof PurchaseStatusSchema>;
 
+/**
+ * The currency a pledge was paid in — crowdfunding campaigns bill in their
+ * own currency, so money fields carry it explicitly (in minor units/cents)
+ * instead of pretending everything is EUR like `pricePaidCents` does.
+ */
+export const PurchaseCurrencySchema = z.enum(["EUR", "USD"]);
+export type PurchaseCurrency = z.infer<typeof PurchaseCurrencySchema>;
+
 export const PurchaseEventTypeSchema = z.enum([
   "status-change",
   "campaign-update",
@@ -107,7 +115,8 @@ export const PurchaseSchema = z.object({
   currentEtaMonth: EtaMonthSchema.nullable(),
   pledgedOn: DateStringSchema.nullable(),
   deliveredOn: DateStringSchema.nullable(),
-  /** EUR cents, like `pricePaidCents` on collection items. */
+  currency: PurchaseCurrencySchema,
+  /** Minor units (cents) of `currency`. */
   pledgeCents: z.number().int().nonnegative().max(10_000_000).nullable(),
   shippingCents: z.number().int().nonnegative().max(10_000_000).nullable(),
   note: z.string().max(2000).nullable(),
