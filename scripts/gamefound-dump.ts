@@ -52,10 +52,11 @@ const outDir = outDirArg ?? join("gamefound-dumps", projectSlug);
 
 // ── Fetch helpers ──────────────────────────────────────────────────────
 
-// Gamefound's WAF 403s Node's fetch outright (client fingerprinting) and is
-// even picky about curl's Accept header — adding `image/webp` to it flips a
-// 200 into a 403 (verified 2026-09-02). Shell out to curl with EXACTLY this
-// header set; don't "improve" it.
+// Gamefound's WAF 403s Node's fetch consistently, and even with curl +
+// browser headers it 403s roughly a third of requests AT RANDOM (measured
+// 2026-09-02: 4/12 rapid hits failed, independent of headers or URL). So:
+// curl transport, and every request retries through the 403 lottery with
+// backoff + jitter.
 const CURL_ARGS = [
   "-sS",
   "--fail",
@@ -70,7 +71,7 @@ const CURL_ARGS = [
   "Accept-Language: en-US,en;q=0.9",
 ];
 
-function curl(url: string): Promise<Buffer> {
+function curlOnce(url: string): Promise<Buffer> {
   return new Promise((resolve, reject) => {
     execFile(
       "curl",
@@ -82,6 +83,25 @@ function curl(url: string): Promise<Buffer> {
       },
     );
   });
+}
+
+const MAX_ATTEMPTS = 6;
+
+async function curl(url: string): Promise<Buffer> {
+  let lastError: unknown;
+  for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt++) {
+    try {
+      return await curlOnce(url);
+    } catch (err) {
+      lastError = err;
+      if (attempt < MAX_ATTEMPTS) {
+        const backoff = 1000 * 2 ** (attempt - 1) + Math.random() * 500;
+        process.stderr.write(`  retry ${attempt}/${MAX_ATTEMPTS - 1} in ${Math.round(backoff)}ms\n`);
+        await sleep(backoff);
+      }
+    }
+  }
+  throw lastError;
 }
 
 async function fetchText(url: string): Promise<string> {
