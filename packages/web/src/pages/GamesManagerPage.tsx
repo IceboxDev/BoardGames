@@ -105,6 +105,9 @@ export default function GamesManagerPage() {
       onChange={setTab}
       size="sm"
       shape="pill"
+      // Stack's column stretches children; without this the pill track spans
+      // the page with the two tabs huddled at its left end.
+      className="self-start"
     />
   );
 

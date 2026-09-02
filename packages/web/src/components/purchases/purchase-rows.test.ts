@@ -8,7 +8,11 @@ import {
   applyPurchaseView,
   buildInsights,
   buildPurchaseRows,
+  committedEurCents,
+  compactTitle,
+  EUR_RATE,
   EVENT_META,
+  formatApproxEur,
   formatEtaMonth,
   formatMoneyCents,
   isOverdue,
@@ -85,6 +89,37 @@ describe("formatEtaMonth / formatMoneyCents", () => {
     expect(formatMoneyCents(123456, "EUR")).toBe("€1,234.56");
     expect(formatMoneyCents(31892, "USD")).toBe("$318.92");
     expect(formatMoneyCents(25228, "GBP")).toBe("£252.28");
+  });
+});
+
+describe("compactTitle", () => {
+  it("drops the edition/bundle tail, keeps plain names", () => {
+    expect(compactTitle("Elements of Truth — Einsteinium Edition")).toBe("Elements of Truth");
+    expect(compactTitle('Roma XLI — "Everything!" Dark Cities Bundle')).toBe("Roma XLI");
+    expect(compactTitle("Brass Collector's Bundle (Pittsburgh + Birmingham)")).toBe(
+      "Brass Collector's Bundle",
+    );
+    expect(compactTitle("Hell of a Deal + Foil Poker Deck dual pack")).toBe("Hell of a Deal");
+    expect(compactTitle("Ark Nova")).toBe("Ark Nova");
+  });
+});
+
+describe("committedEurCents / formatApproxEur", () => {
+  it("folds per-currency totals into one approximate EUR figure", () => {
+    expect(committedEurCents([])).toBe(0);
+    expect(committedEurCents([{ currency: "EUR", cents: 40460 }])).toBe(40460);
+    const mixed = committedEurCents([
+      { currency: "EUR", cents: 40460 },
+      { currency: "USD", cents: 236340 },
+      { currency: "GBP", cents: 25228 },
+    ]);
+    const expected = Math.round(40460 + 236340 * EUR_RATE.USD + 25228 * EUR_RATE.GBP);
+    expect(mixed).toBe(expected);
+  });
+
+  it("rounds the estimate to whole euros for display", () => {
+    expect(formatApproxEur(273_969)).toBe("≈ €2,740");
+    expect(formatApproxEur(40_460)).toBe("≈ €405");
   });
 });
 

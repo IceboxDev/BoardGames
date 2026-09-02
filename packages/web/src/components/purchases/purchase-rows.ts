@@ -30,6 +30,17 @@ export const STATUS_LABEL: Record<PurchaseStatus, string> = {
   cancelled: "Cancelled",
 };
 
+/** Colored-text class per status — full literals (Tailwind), and a separate
+ *  map because `TONE_TEXT`'s CoreTone vocabulary has no purple. */
+export const STATUS_TEXT_CLASS: Record<PurchaseStatus, string> = {
+  fundraising: "text-purple-300",
+  preorder: "text-accent-400",
+  production: "text-amber-300",
+  shipping: "text-sky-300",
+  delivered: "text-emerald-300",
+  cancelled: "text-rose-300",
+};
+
 export const EVENT_META: Record<PurchaseEventType, { label: string; tone: Tone }> = {
   "status-change": { label: "Status change", tone: "accent" },
   "campaign-update": { label: "Campaign update", tone: "purple" },
@@ -115,7 +126,39 @@ export function stalenessDays(events: Purchase["events"], todayKey: string): num
   return Math.max(0, Math.floor(diff / 86_400_000));
 }
 
+/**
+ * The game's name without the edition/bundle tail — for tight spots like
+ * insight tiles where "Elements of Truth — Einsteinium Edition" truncates.
+ * Titles use " — " before the tail; " (" and " + " catch the bundle forms.
+ */
+export function compactTitle(title: string): string {
+  return title.split(" — ")[0].split(" (")[0].split(" + ")[0].trim();
+}
+
 const CURRENCY_SYMBOL: Record<PurchaseCurrency, string> = { EUR: "€", USD: "$", GBP: "£" };
+
+/**
+ * EUR per unit of each currency — ECB reference rates, 2026-09-02
+ * (frankfurter.dev). Display-level approximation for the committed tile
+ * only; refresh by hand when they drift, exact math stays per-currency.
+ */
+export const EUR_RATE: Record<PurchaseCurrency, number> = {
+  EUR: 1,
+  USD: 1 / 1.1578,
+  GBP: 1 / 0.8587,
+};
+
+/** Per-currency committed totals folded into one approximate EUR figure. */
+export function committedEurCents(
+  committed: readonly { currency: PurchaseCurrency; cents: number }[],
+): number {
+  return Math.round(committed.reduce((sum, c) => sum + c.cents * EUR_RATE[c.currency], 0));
+}
+
+/** "≈ €2,740" — the converted total is an estimate, so show whole euros. */
+export function formatApproxEur(cents: number): string {
+  return `≈ ${formatMoneyCents(Math.round(cents / 100) * 100, "EUR")}`;
+}
 
 /** Chart hue per currency (spend columns; EUR keeps the brand accent). */
 export const CURRENCY_TONE: Record<PurchaseCurrency, Tone> = {

@@ -21,6 +21,12 @@ interface DonutChartProps {
   thickness?: number;
   /** Centered content — the headline figure ("9 / 13", "62%"). */
   children?: ReactNode;
+  /**
+   * Makes each arc clickable (index into `segments`). Pointer-only
+   * affordance — pair it with an always-reachable rendering of the same
+   * data (tooltips, adjacent text) rather than gating anything behind it.
+   */
+  onSegmentClick?: (index: number) => void;
   className?: string;
 }
 
@@ -34,6 +40,7 @@ export function DonutChart({
   size = 120,
   thickness = 12,
   children,
+  onSegmentClick,
   className,
 }: DonutChartProps) {
   const r = (size - thickness) / 2;
@@ -42,12 +49,13 @@ export function DonutChart({
 
   let acc = 0;
   const arcs = segments
-    .filter((seg) => seg.value > 0)
-    .map((seg, i) => {
+    .map((seg, index) => ({ seg, index }))
+    .filter(({ seg }) => seg.value > 0)
+    .map(({ seg, index }) => {
       const frac = seg.value / total;
       const start = acc;
       acc += frac;
-      return { seg, frac, start, key: `${i}-${seg.label ?? ""}` };
+      return { seg, index, frac, start, key: `${index}-${seg.label ?? ""}` };
     });
 
   return (
@@ -65,7 +73,7 @@ export function DonutChart({
           strokeWidth={thickness}
         />
         {total > 0 &&
-          arcs.map(({ seg, frac, start, key }) => (
+          arcs.map(({ seg, index, frac, start, key }) => (
             <motion.circle
               key={key}
               cx={size / 2}
@@ -75,6 +83,8 @@ export function DonutChart({
               stroke={resolveChartColor(seg.color, seg.tone)}
               strokeWidth={thickness}
               strokeDashoffset={-start * circumference}
+              className={onSegmentClick ? "cursor-pointer" : undefined}
+              onClick={onSegmentClick ? () => onSegmentClick(index) : undefined}
               initial={{ strokeDasharray: `0 ${circumference}` }}
               animate={{ strokeDasharray: `${frac * circumference} ${circumference}` }}
               transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 + start * 0.3 }}
