@@ -790,6 +790,315 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
     ],
   },
+  // One BackerKit pledge (Gloomhaven Grand Festival, confirmation 182879,
+  // $905 charged up front on 2023-07-20), split into its four shipping waves
+  // so each carries an honest pipeline status. Per-wave shipping + taxes are
+  // charged separately when each wave freights; none of those amounts are
+  // recorded. Update dates are refined from post wording (the BackerKit feed
+  // only shows relative timestamps).
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "gloomhaven-festival-frosthaven",
+    title: "Gloomhaven Grand Festival — Frosthaven Wave (1–2)",
+    slug: "frosthaven",
+    kind: "crowdfunding",
+    status: "delivered",
+    platform: "BackerKit",
+    campaignUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven",
+    pledgeManagerUrl: null, // BackerKit pledge manager; waves 1–2 closed Sep 22 '23
+    // Campaign-time communications had wave-1 production starting end of
+    // July '23 (≈ delivery around end of 2023); by Sep '23 the stated plan
+    // was freight in early November with no Christmas guarantee. The EU wave
+    // actually landed spring 2024.
+    originalEtaMonth: "2023-12",
+    currentEtaMonth: "2024-05",
+    pledgedOn: "2023-07-20",
+    deliveredOn: "2024-05-31", // approximate — EU add-on orders finished May–early June '24
+    currency: "USD",
+    pledgeCents: 27000, // Frosthaven 2nd printing $180 + Play Surface Books $50 + FH Solo Scenarios $10 + Forteller $15 + Buttons & Bugs $15
+    shippingCents: null, // wave 1–2 shipping + taxes charged Sep 22 '23; amount not recorded
+    note:
+      "Waves 1–2 of pledge 182879: Frosthaven (Second Printing, $180), Frosthaven Play " +
+      "Surface Book Set ($50), Frosthaven Solo Scenarios ($10), Frosthaven Forteller audio " +
+      "narration ($15 — digital code, sent ahead in late Jan 2024) and Gloomhaven: Buttons & " +
+      "Bugs ($15). EU fulfilment ran Mar–Jun 2024 after Suez-rerouting freight delays, a DHL " +
+      "packaging issue for Buttons & Bugs, and a warehouse illness shutdown.",
+    events: [
+      {
+        id: "gloomhaven-festival-frosthaven-e01",
+        occurredOn: "2023-09-20",
+        type: "campaign-update",
+        title: "Pledge manager live — waves 1–2 charged September 22",
+        details:
+          "Fulfilment plan set as five waves (Frosthaven, Buttons & Bugs, Gloomhaven 2E, " +
+          "RPG, Miniatures), each charging shipping and taxes when it freights. Waves 1–2 " +
+          "were already ~2 months behind: production entering end of September, freight " +
+          "early November, nothing guaranteed by Christmas.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/2028",
+      },
+      {
+        id: "gloomhaven-festival-frosthaven-e02",
+        occurredOn: "2024-01-26",
+        type: "campaign-update",
+        title: "Waves 1–2 manufacturing complete — on the water",
+        details:
+          "All wave 1–2 product finished production and shipped; EU/UK/RoW arrivals were " +
+          "expected before the end of March, slowed by freight rerouting away from the Suez " +
+          "Canal. Forteller narration codes were sent out ahead of physical fulfilment.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/3290",
+      },
+      {
+        id: "gloomhaven-festival-frosthaven-e03",
+        occurredOn: "2024-03-08",
+        type: "shipping-notice",
+        title: "Frosthaven arrives in the EU — add-ons container trailing",
+        details:
+          "The Frosthaven containers reached the EU fulfilment partner and plain-Frosthaven " +
+          "orders began shipping; the container with Play Surface Books, Buttons & Bugs and " +
+          "other add-ons arrived ~2 weeks later, so orders containing add-ons waited.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/4065",
+      },
+      {
+        id: "gloomhaven-festival-frosthaven-e04",
+        occurredOn: "2024-06-04",
+        type: "status-change",
+        title: "EU fulfilment wraps — delivered",
+        details:
+          "After a DHL parcel-size issue forced new Buttons & Bugs mailers and a warehouse " +
+          "illness shut the EU facility for weeks, the last ~1,000 EU orders shipped in " +
+          "early June. US, Canada, UK and AU/NZ had completed earlier in the spring.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/7319",
+      },
+    ],
+  },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "gloomhaven-festival-gloomhaven",
+    title: "Gloomhaven Grand Festival — Gloomhaven 2E Wave (3)",
+    slug: "gloomhaven",
+    kind: "crowdfunding",
+    status: "delivered",
+    platform: "BackerKit",
+    campaignUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven",
+    pledgeManagerUrl: null, // BackerKit pledge manager; wave 3 closed Jun 7 '24
+    // The campaign's original Gloomhaven 2E estimate was ~March 2024 (the
+    // June '24 update admits being "almost a year behind" it). EU fulfilment
+    // actually ran Aug–Sep 2025 after a production-defect freight cancel.
+    originalEtaMonth: "2024-03",
+    currentEtaMonth: "2025-09",
+    pledgedOn: "2023-07-20",
+    deliveredOn: "2025-09-15", // approximate — EU wave-3 fulfilment ran through Aug–Sep '25
+    currency: "USD",
+    pledgeCents: 22000, // GH2E Class Upgrade Pack $75 + GH2E Solo Scenarios $10 + Frosthaven LaserOx Organizer (Monster Box) $135
+    shippingCents: null, // wave 3 shipping + taxes charged Jun 7 '24; amount not recorded
+    note:
+      "Wave 3 of pledge 182879: Gloomhaven (2nd Edition) Class Upgrade Pack ($75) and Solo " +
+      "Scenarios ($10), plus the Frosthaven LaserOx Organizer Monster Box ($135) — LaserOx " +
+      "organizers for all regions shipped directly from LaserOx in the wave-3 window " +
+      "(Aug 2025). No Gloomhaven 2E base game in this pledge. The wave ran ~18 months late: " +
+      "the first full production run was rejected for warped boards and badly assembled " +
+      "miniatures, cancelling booked ocean freight in Jan 2025.",
+    events: [
+      {
+        id: "gloomhaven-festival-gloomhaven-e01",
+        occurredOn: "2024-06-04",
+        type: "campaign-update",
+        title: "Wave 3 pledge manager closes June 7 — revised timeline",
+        details:
+          "Cards charged at close. The revised plan — production complete end of Nov '24, " +
+          "freight by end of Jan '25, fulfilment complete end of Mar '25 — was already " +
+          '"almost a year behind" the original ~March 2024 estimate, attributed to no ' +
+          "project manager being assigned after playtesting.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/7319",
+      },
+      {
+        id: "gloomhaven-festival-gloomhaven-e02",
+        occurredOn: "2025-01-28",
+        type: "delay",
+        title: "Ocean freight cancelled over production defects",
+        details:
+          "Advance copies from the finished print run showed warped map boards, warped " +
+          "scenario trackers, and poorly injected/assembled miniatures, so shipping was " +
+          "halted and the product returned for rework — pushed further by the Lunar New " +
+          "Year factory shutdown.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/16229",
+      },
+      {
+        id: "gloomhaven-festival-gloomhaven-e03",
+        occurredOn: "2025-05-06",
+        type: "shipping-notice",
+        title: "Reworked copies on the water for EU/UK/CA/AU",
+        details:
+          "Containers of reworked Gloomhaven loaded onto ships April 29 for the EU, UK, " +
+          "Canada and AU/NZ, with Asia following; US copies were deliberately held last " +
+          "while the tariff situation developed.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/22232",
+      },
+      {
+        id: "gloomhaven-festival-gloomhaven-e04",
+        occurredOn: "2025-08-06",
+        type: "status-change",
+        title: "EU fulfilment starts; LaserOx organizers ship direct — delivered",
+        details:
+          "EU/RoW orders started shipping in early August (after a missed logistics-queue " +
+          "slot), wrapping through September; completed LaserOx organizers for all regions " +
+          "shipped directly from LaserOx in the same window.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/26920",
+      },
+    ],
+  },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "gloomhaven-festival-rpg",
+    title: "Gloomhaven Grand Festival — RPG Deluxe Box (Wave 4)",
+    slug: "gloomhaven",
+    kind: "crowdfunding",
+    status: "production",
+    platform: "BackerKit",
+    campaignUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven",
+    pledgeManagerUrl: null, // final-wave BackerKit pledge manager reopened Jul 10 '26; closure not yet announced
+    // No wave-4 promise survives in the accessible updates; the earliest
+    // documented estimate (May '24) put RPG freight + fulfilment at Oct/Nov
+    // 2024, used here as a conservative original. The June '26 conservative
+    // timeline has RPG fulfilment Dec '26 with completion in Jan '27.
+    originalEtaMonth: "2024-11",
+    currentEtaMonth: "2027-01",
+    pledgedOn: "2023-07-20",
+    deliveredOn: null,
+    currency: "USD",
+    pledgeCents: 9000, // Gloomhaven RPG: Deluxe Box Set $90
+    shippingCents: null, // wave 4–5 shipping + taxes are charged when the waves freight — still outstanding
+    note:
+      "Wave 4 of pledge 182879: Gloomhaven RPG Deluxe Box Set ($90), which now also gets a " +
+      "free Gloomhaven Playing Cards deck ($12.99 value) added automatically at fulfilment. " +
+      "In mass production since July 2026 (a different factory from the miniatures; ships " +
+      "separately). Wave 4–5 shipping + taxes have NOT been charged yet — they hit when " +
+      "freight begins (~Sep/Oct 2026 per the standing timeline).",
+    events: [
+      {
+        id: "gloomhaven-festival-rpg-e01",
+        occurredOn: "2026-06-16",
+        type: "campaign-update",
+        title: "Conservative timeline set: RPG fulfilment Dec 2026 – Jan 2027",
+        details:
+          "With both remaining projects entering mass production, the factory-aligned " +
+          "estimate has RPG ocean freight in September, arrival at fulfilment centers in " +
+          "December, and fulfilment completing January 2027. Cephalofair committed to " +
+          "twice-monthly updates and in-advance freight booking.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/45907",
+      },
+      {
+        id: "gloomhaven-festival-rpg-e02",
+        occurredOn: "2026-07-07",
+        type: "campaign-update",
+        title: "Final-wave pledge manager reopens July 10 — PPC approved",
+        details:
+          "The last pledge-manager window opened for ~a month (closure to be announced with " +
+          "2 weeks' notice) for address updates and final add-ons. The RPG pre-production " +
+          "copy arrived dialed-in, and every Deluxe Box order gained the free Gloomhaven " +
+          "Playing Cards deck.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/47373",
+      },
+      {
+        id: "gloomhaven-festival-rpg-e03",
+        occurredOn: "2026-08-11",
+        type: "campaign-update",
+        title: "Mass production underway — Gen Con showcase",
+        details:
+          "RPG mass production proceeding without incident; the pre-production Deluxe Box " +
+          "Set was shown at Gen Con 2026 to strong feedback.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/49733",
+      },
+      {
+        id: "gloomhaven-festival-rpg-e04",
+        occurredOn: "2026-08-26",
+        type: "delay",
+        title: "Master proofing copies slip a couple of weeks (~Sep 15)",
+        details:
+          "The Deluxe Box Set is taking the factory longer than anticipated, moving the " +
+          "master-proofing-copy ready date to ~September 15; assembly begins after " +
+          "approval, with an updated timeline promised in the next update.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/50655",
+      },
+    ],
+  },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "gloomhaven-festival-minis",
+    title: "Gloomhaven Grand Festival — Miniatures Full Set (Wave 5)",
+    slug: "gloomhaven",
+    kind: "crowdfunding",
+    status: "production",
+    platform: "BackerKit",
+    campaignUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven",
+    pledgeManagerUrl: null, // final-wave BackerKit pledge manager reopened Jul 10 '26; closure not yet announced
+    // No wave-5 promise survives in the accessible updates; waves 4–5 were
+    // originally sequenced to follow wave 3 (orig. March '24) within 2024, so
+    // the wave-4 Oct/Nov '24 anchor is used as a conservative original here
+    // too. The June '26 timeline has minis fulfilment completing Feb 2027.
+    originalEtaMonth: "2024-11",
+    currentEtaMonth: "2027-02",
+    pledgedOn: "2023-07-20",
+    deliveredOn: null,
+    currency: "USD",
+    pledgeCents: 32500, // 🐉 Miniatures of Gloomhaven (Full) pledge level $325
+    shippingCents: null, // wave 4–5 shipping + taxes are charged when the waves freight — still outstanding
+    note:
+      "Wave 5 of pledge 182879 — the pledge level itself: Miniatures of Gloomhaven (Full, " +
+      "$325), every set in the line (Gloomhaven Core, Forgotten Circles, Jaws of the Lion, " +
+      "Gloomhaven Summons, Frosthaven, Frosthaven Summons) with base rings and flight " +
+      "stands; sets cover both Gloomhaven editions and suit the RPG. All sets ship " +
+      "together, separately from the RPG (different factory). Wave 4–5 shipping + taxes " +
+      "have NOT been charged yet — they hit when freight begins.",
+    events: [
+      {
+        id: "gloomhaven-festival-minis-e01",
+        occurredOn: "2026-06-16",
+        type: "campaign-update",
+        title: "Conservative timeline set: minis fulfilment Jan–Feb 2027",
+        details:
+          "The factory-aligned estimate: molds complete in June, mass production through " +
+          "the summer, assembly September, ocean freight October, fulfilment beginning " +
+          "January and completing February 2027 — deliberately padded for the Nov/Dec " +
+          "logistics dead zone.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/45907",
+      },
+      {
+        id: "gloomhaven-festival-minis-e02",
+        occurredOn: "2026-07-07",
+        type: "campaign-update",
+        title: "First mass-production samples reviewed",
+        details:
+          "White-box Core Set sample and first mass-production miniatures arrived: models " +
+          "solid with correct quantities and universal base-ring fit, but a few flying " +
+          "models needed mold adjustments, and embossed base-ring numbering was dropped " +
+          "for paint-only legibility.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/47373",
+      },
+      {
+        id: "gloomhaven-festival-minis-e03",
+        occurredOn: "2026-08-11",
+        type: "delay",
+        title: "Mass production paused ~2 weeks for flight-stand mold fixes",
+        details:
+          "The factory's engineers found inconsistent flight-stand fit across flying " +
+          "models even after earlier modifications, so production paused while every " +
+          "affected mold was corrected; new samples came back much improved.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/49733",
+      },
+      {
+        id: "gloomhaven-festival-minis-e04",
+        occurredOn: "2026-08-26",
+        type: "campaign-update",
+        title: "Production ramping back up — packaging files submitted",
+        details:
+          "The flight-stand and base-ring inconsistencies are solved and the factory was " +
+          "asked to ramp up to recover the lost time; all packaging and tray map files " +
+          "were being submitted for full-art samples.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/50655",
+      },
+    ],
+  },
 ] satisfies readonly PurchaseRecord[];
 
 export function purchasesForUser(userId: string): PurchaseRecord[] {
