@@ -12,7 +12,12 @@ import { PurchaseSchema } from "../protocol/http/purchases.ts";
 // the client bundle no matter what the API nulls. Server-only consumption is
 // what makes owner-only money real.
 //
-// ── How to fold a pasted campaign post into this file ──────────────────
+// ── How to fold a campaign post into this file ─────────────────────────
+// 0. For Gamefound campaigns, skip the pasting: run
+//    `npx tsx scripts/gamefound-dump.ts <campaign URL>` and read
+//    `gamefound-dumps/<slug>/updates.md` plus its `images/` (the
+//    infographics carry half the information). Pledge details stay manual —
+//    they're auth-gated.
 // 1. Find the purchase by `id` or `title` (the owner names it alongside the
 //    post). New purchase: short kebab `id`, `userId` copied from that owner's
 //    existing entries, `kind` = crowdfunding (Kickstarter/Gamefound pledge)
