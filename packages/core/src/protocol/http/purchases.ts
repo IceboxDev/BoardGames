@@ -106,6 +106,15 @@ export const PurchaseSchema = z.object({
    *  the full pledge wording, surfaced in the expanded detail view. Null
    *  falls back to a client-side compaction of `title`. */
   shortTitle: z.string().min(1).max(60).nullable(),
+  /**
+   * Set on every wave record of ONE real-world order (a single pledge split
+   * into shipping waves): the UI folds records sharing an `id` into a single
+   * card titled `title`, expanding to per-wave detail. Waves of a group must
+   * share a currency. Null for a purchase that ships as one piece.
+   */
+  orderGroup: z
+    .object({ id: z.string().min(1).max(60), title: z.string().min(1).max(60) })
+    .nullable(),
   slug: GameSlugSchema.nullable(),
   kind: PurchaseKindSchema,
   status: PurchaseStatusSchema,

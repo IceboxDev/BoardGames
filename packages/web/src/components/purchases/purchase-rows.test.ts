@@ -7,6 +7,7 @@ import { describe, expect, it } from "vitest";
 import {
   applyPurchaseView,
   buildInsights,
+  buildOrderCards,
   buildPurchaseRows,
   committedEurCents,
   compactTitle,
@@ -29,6 +30,7 @@ const TODAY = "2026-09-02";
 const purchase = (overrides: Partial<Purchase> & { id: string }): Purchase => ({
   title: overrides.id,
   shortTitle: null,
+  orderGroup: null,
   slug: null,
   kind: "crowdfunding",
   status: "production",
@@ -210,29 +212,107 @@ const fixture = () =>
     TODAY,
   );
 
+const cardsOf = (rows: ReturnType<typeof buildPurchaseRows>) => buildOrderCards(rows, TODAY);
+
 describe("applyPurchaseView", () => {
   it("groups all-scope attention-first: in flight, delivered, cancelled", () => {
-    const groups = applyPurchaseView(fixture(), { scope: "all", sort: "eta" });
+    const groups = applyPurchaseView(cardsOf(fixture()), { scope: "all", sort: "eta" });
     expect(groups.map((g) => g.label)).toEqual(["In flight", "Delivered", "Cancelled"]);
     // ETA ascending, missing ETA last.
-    expect(groups[0].rows.map((r) => r.purchase.id)).toEqual(["b-late", "a-soon", "c-no-eta"]);
+    expect(groups[0].cards.map((c) => c.key)).toEqual(["b-late", "a-soon", "c-no-eta"]);
   });
 
   it("narrow scopes are flat and honour the chosen sort", () => {
-    const active = applyPurchaseView(fixture(), { scope: "active", sort: "spend" });
+    const active = applyPurchaseView(cardsOf(fixture()), { scope: "active", sort: "spend" });
     expect(active).toHaveLength(1);
     expect(active[0].label).toBeNull();
-    expect(active[0].rows.map((r) => r.purchase.id)).toEqual(["a-soon", "c-no-eta", "b-late"]);
-    const ended = applyPurchaseView(fixture(), { scope: "ended", sort: "eta" });
-    expect(ended[0].rows.map((r) => r.purchase.id)).toEqual(["e-dead"]);
+    expect(active[0].cards.map((c) => c.key)).toEqual(["a-soon", "c-no-eta", "b-late"]);
+    const ended = applyPurchaseView(cardsOf(fixture()), { scope: "ended", sort: "eta" });
+    expect(ended[0].cards.map((c) => c.key)).toEqual(["e-dead"]);
   });
 
   it("drops empty groups", () => {
-    const rows = buildPurchaseRows([purchase({ id: "only", status: "production" })], TODAY);
-    expect(applyPurchaseView(rows, { scope: "all", sort: "eta" }).map((g) => g.key)).toEqual([
+    const cards = cardsOf(
+      buildPurchaseRows([purchase({ id: "only", status: "production" })], TODAY),
+    );
+    expect(applyPurchaseView(cards, { scope: "all", sort: "eta" }).map((g) => g.key)).toEqual([
       "active",
     ]);
-    expect(applyPurchaseView(rows, { scope: "arrived", sort: "eta" })).toEqual([]);
+    expect(applyPurchaseView(cards, { scope: "arrived", sort: "eta" })).toEqual([]);
+  });
+});
+
+describe("buildOrderCards", () => {
+  const GROUP = { id: "big-pledge", title: "Big Pledge" };
+  const waves = () =>
+    buildPurchaseRows(
+      [
+        purchase({
+          id: "w1",
+          orderGroup: GROUP,
+          status: "delivered",
+          deliveredOn: "2026-05-01",
+          slug: null,
+          pledgeCents: 10000,
+          pledgedOn: "2023-07-20",
+          events: [event("we1", "2026-05-01")],
+        }),
+        purchase({
+          id: "w2",
+          orderGroup: GROUP,
+          status: "production",
+          currentEtaMonth: "2027-01",
+          originalEtaMonth: "2024-11",
+          pledgeCents: 5000,
+          pledgedOn: "2023-07-20",
+          events: [event("we2", "2026-08-26")],
+        }),
+        purchase({ id: "solo", status: "shipping" }),
+      ],
+      TODAY,
+    );
+
+  it("folds wave records into one card and keeps plain purchases as singletons", () => {
+    const cards = buildOrderCards(waves(), TODAY);
+    expect(cards.map((c) => c.key)).toEqual(["big-pledge", "solo"]);
+    const big = cards[0];
+    expect(big.title).toBe("Big Pledge");
+    expect(big.waves.map((w) => w.purchase.id)).toEqual(["w1", "w2"]);
+    // Representative = the active wave, not the delivered one.
+    expect(big.rep.purchase.id).toBe("w2");
+    expect(big.active).toBe(true);
+    expect(big.allDelivered).toBe(false);
+    expect(big.totalCents).toBe(15000);
+    expect(big.earliestPledgedOn).toBe("2023-07-20");
+    // Staleness follows the freshest event across all waves.
+    expect(big.staleDays).toBe(7);
+  });
+
+  it("is arrived only when every wave has landed", () => {
+    const done = buildOrderCards(
+      buildPurchaseRows(
+        [
+          purchase({
+            id: "w1",
+            orderGroup: GROUP,
+            status: "delivered",
+            deliveredOn: "2026-05-01",
+          }),
+          purchase({
+            id: "w2",
+            orderGroup: GROUP,
+            status: "delivered",
+            deliveredOn: "2026-07-01",
+          }),
+        ],
+        TODAY,
+      ),
+      TODAY,
+    );
+    expect(done[0].allDelivered).toBe(true);
+    expect(done[0].active).toBe(false);
+    // Representative = the latest delivery.
+    expect(done[0].rep.purchase.id).toBe("w2");
   });
 });
 

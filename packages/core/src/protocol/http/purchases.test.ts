@@ -14,6 +14,7 @@ const purchase = {
   id: "frosthaven",
   title: "Frosthaven (2nd printing)",
   shortTitle: "Frosthaven",
+  orderGroup: { id: "gloomhaven-festival", title: "Gloomhaven Grand Festival" },
   slug: null,
   kind: "crowdfunding",
   status: "shipping",

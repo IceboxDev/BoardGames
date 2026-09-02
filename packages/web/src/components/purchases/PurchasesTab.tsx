@@ -19,6 +19,7 @@ import { PurchaseInsights } from "./PurchaseInsights.tsx";
 import {
   applyPurchaseView,
   buildInsights,
+  buildOrderCards,
   buildPurchaseRows,
   DEFAULT_PURCHASE_VIEW,
   formatEtaMonth,
@@ -146,12 +147,16 @@ export function PurchasesView({
     );
   }
 
-  const groups = applyPurchaseView(rows, view);
+  // The list deals in order cards (wave records folded into one entry per
+  // real order); the insight tiles above keep counting waves — a wave is a
+  // shipment, and "in flight" means shipments still coming.
+  const cards = buildOrderCards(rows, todayKey);
+  const groups = applyPurchaseView(cards, view);
   const counts = {
-    all: rows.length,
-    active: rows.filter((r) => r.active).length,
-    arrived: rows.filter((r) => r.purchase.status === "delivered").length,
-    ended: rows.filter((r) => r.purchase.status === "cancelled").length,
+    all: cards.length,
+    active: cards.filter((c) => c.active).length,
+    arrived: cards.filter((c) => c.allDelivered).length,
+    ended: cards.filter((c) => c.allCancelled).length,
   };
 
   return (
@@ -172,18 +177,16 @@ export function PurchasesView({
           <section key={group.key}>
             {group.label && (
               <MicroLabel className="mb-1.5 block font-semibold">
-                {group.label} ({group.rows.length})
+                {group.label} ({group.cards.length})
               </MicroLabel>
             )}
             <ul className="space-y-2">
-              {group.rows.map((row) => (
+              {group.cards.map((card) => (
                 <PurchaseCard
-                  key={row.purchase.id}
-                  row={row}
-                  expanded={expandedId === row.purchase.id}
-                  onToggle={() =>
-                    setExpandedId(expandedId === row.purchase.id ? null : row.purchase.id)
-                  }
+                  key={card.key}
+                  card={card}
+                  expanded={expandedId === card.key}
+                  onToggle={() => setExpandedId(expandedId === card.key ? null : card.key)}
                 />
               ))}
             </ul>

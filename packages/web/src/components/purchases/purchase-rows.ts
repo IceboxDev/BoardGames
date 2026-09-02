@@ -212,10 +212,96 @@ export interface PurchaseViewState {
 
 export const DEFAULT_PURCHASE_VIEW: PurchaseViewState = { scope: "all", sort: "eta" };
 
+/**
+ * One card in the list = one real-world order. Wave records sharing an
+ * `orderGroup` fold into a single card; everything the collapsed card reports
+ * (rail, ETA, overdue) comes from `rep` — the wave that matters right now —
+ * while money, staleness and scope membership aggregate over all waves.
+ */
+export interface PurchaseOrderCard {
+  key: string;
+  title: string;
+  /** All wave rows, in data (pledge) order. Length 1 for a plain purchase. */
+  waves: PurchaseRow[];
+  /** The soonest-ETA active wave; else the latest-delivered; else the last. */
+  rep: PurchaseRow;
+  /** Any wave still moving. */
+  active: boolean;
+  allDelivered: boolean;
+  allCancelled: boolean;
+  overdue: boolean;
+  latestEventOn: string | null;
+  staleDays: number | null;
+  /** Sum of visible wave money; null on viewer payloads. */
+  totalCents: number | null;
+  earliestPledgedOn: string | null;
+  slug: string | null;
+}
+
+function pickRepresentative(waves: PurchaseRow[]): PurchaseRow {
+  const active = waves.filter((w) => w.active);
+  if (active.length > 0) return [...active].sort(compareBy("eta"))[0];
+  const delivered = waves.filter((w) => w.purchase.status === "delivered");
+  if (delivered.length > 0) {
+    return [...delivered].sort((a, b) =>
+      (a.purchase.deliveredOn ?? "") < (b.purchase.deliveredOn ?? "") ? 1 : -1,
+    )[0];
+  }
+  return waves[waves.length - 1];
+}
+
+export function buildOrderCards(
+  rows: readonly PurchaseRow[],
+  todayKey: string,
+): PurchaseOrderCard[] {
+  const byKey = new Map<string, { title: string; waves: PurchaseRow[] }>();
+  for (const row of rows) {
+    const group = row.purchase.orderGroup;
+    const key = group?.id ?? row.purchase.id;
+    const entry = byKey.get(key) ?? {
+      title: group?.title ?? displayPurchaseTitle(row.purchase),
+      waves: [],
+    };
+    entry.waves.push(row);
+    byKey.set(key, entry);
+  }
+  return [...byKey.entries()].map(([key, { title, waves }]) => {
+    const rep = pickRepresentative(waves);
+    const money = waves.map((w) => w.totalCents).filter((c): c is number => c !== null);
+    const latestEventOn = waves.reduce<string | null>(
+      (max, w) =>
+        w.latestEventOn !== null && (max === null || w.latestEventOn > max) ? w.latestEventOn : max,
+      null,
+    );
+    const pledged = waves.map((w) => w.purchase.pledgedOn).filter((d): d is string => d !== null);
+    return {
+      key,
+      title,
+      waves,
+      rep,
+      active: waves.some((w) => w.active),
+      allDelivered: waves.every((w) => w.purchase.status === "delivered"),
+      allCancelled: waves.every((w) => w.purchase.status === "cancelled"),
+      overdue: waves.some((w) => w.overdue),
+      latestEventOn,
+      staleDays:
+        latestEventOn === null
+          ? null
+          : Math.max(
+              0,
+              Math.floor((Date.parse(todayKey) - Date.parse(latestEventOn)) / 86_400_000),
+            ),
+      totalCents: money.length === 0 ? null : money.reduce((a, b) => a + b, 0),
+      earliestPledgedOn: pledged.length === 0 ? null : pledged.reduce((a, b) => (a < b ? a : b)),
+      slug: rep.purchase.slug ?? waves.map((w) => w.purchase.slug).find((s) => s !== null) ?? null,
+    };
+  });
+}
+
 export interface PurchaseGroup {
   key: string;
   label: string | null;
-  rows: PurchaseRow[];
+  cards: PurchaseOrderCard[];
 }
 
 /** Comparator per sort key; ties (and missing values) fall back to title. */
@@ -251,55 +337,92 @@ function compareBy(sort: PurchaseSort): (a: PurchaseRow, b: PurchaseRow) => numb
   }
 }
 
+/** Card comparator per sort key; ties (and missing values) fall back to title. */
+function compareCardsBy(
+  sort: PurchaseSort,
+): (a: PurchaseOrderCard, b: PurchaseOrderCard) => number {
+  const byTitle = (a: PurchaseOrderCard, b: PurchaseOrderCard) => a.title.localeCompare(b.title);
+  const nullsLast = (
+    pick: (c: PurchaseOrderCard) => string | number | null,
+    dir: 1 | -1,
+  ): ((a: PurchaseOrderCard, b: PurchaseOrderCard) => number) => {
+    return (a, b) => {
+      const av = pick(a);
+      const bv = pick(b);
+      if (av === null && bv === null) return byTitle(a, b);
+      if (av === null) return 1;
+      if (bv === null) return -1;
+      if (av < bv) return -dir;
+      if (av > bv) return dir;
+      return byTitle(a, b);
+    };
+  };
+  switch (sort) {
+    case "eta":
+      return nullsLast((c) => c.rep.purchase.currentEtaMonth, 1);
+    case "updated":
+      return nullsLast((c) => c.latestEventOn, -1);
+    case "pledged":
+      return nullsLast((c) => c.earliestPledgedOn, -1);
+    case "spend":
+      return nullsLast((c) => c.totalCents, -1);
+    case "title":
+      return byTitle;
+  }
+}
+
 /**
- * Scope + sort + grouping. The "all" scope keeps attention-first order:
- * in-flight purchases (chosen sort) → delivered (latest first) → cancelled
- * last. Narrow scopes render one flat, sorted list (label omitted).
+ * Scope + sort + grouping over order cards. The "all" scope keeps
+ * attention-first order: in-flight orders (chosen sort) → delivered (latest
+ * first) → cancelled last. A multi-wave order counts as in flight while ANY
+ * wave still moves, and as arrived only when every wave has landed. Narrow
+ * scopes render one flat, sorted list (label omitted).
  */
 export function applyPurchaseView(
-  rows: readonly PurchaseRow[],
+  cards: readonly PurchaseOrderCard[],
   view: PurchaseViewState,
 ): PurchaseGroup[] {
-  const sorted = (subset: PurchaseRow[], sort: PurchaseSort) => [...subset].sort(compareBy(sort));
+  const sorted = (subset: PurchaseOrderCard[], sort: PurchaseSort) =>
+    [...subset].sort(compareCardsBy(sort));
   if (view.scope !== "all") {
-    const subset = rows.filter((r) =>
+    const subset = cards.filter((c) =>
       view.scope === "active"
-        ? r.active
+        ? c.active
         : view.scope === "arrived"
-          ? r.purchase.status === "delivered"
-          : r.purchase.status === "cancelled",
+          ? c.allDelivered
+          : c.allCancelled,
     );
     return subset.length === 0
       ? []
-      : [{ key: view.scope, label: null, rows: sorted(subset, view.sort) }];
+      : [{ key: view.scope, label: null, cards: sorted(subset, view.sort) }];
   }
   const groups: PurchaseGroup[] = [
     {
       key: "active",
       label: "In flight",
-      rows: sorted(
-        rows.filter((r) => r.active),
+      cards: sorted(
+        cards.filter((c) => c.active),
         view.sort,
       ),
     },
     {
       key: "delivered",
       label: "Delivered",
-      rows: sorted(
-        rows.filter((r) => r.purchase.status === "delivered"),
+      cards: sorted(
+        cards.filter((c) => !c.active && !c.allCancelled),
         "updated",
       ),
     },
     {
       key: "cancelled",
       label: "Cancelled",
-      rows: sorted(
-        rows.filter((r) => r.purchase.status === "cancelled"),
+      cards: sorted(
+        cards.filter((c) => c.allCancelled),
         "title",
       ),
     },
   ];
-  return groups.filter((g) => g.rows.length > 0);
+  return groups.filter((g) => g.cards.length > 0);
 }
 
 const CURRENCIES: readonly PurchaseCurrency[] = ["EUR", "USD", "GBP"];

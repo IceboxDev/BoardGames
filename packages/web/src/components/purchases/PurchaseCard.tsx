@@ -11,62 +11,104 @@ import {
   displayPurchaseTitle,
   formatEtaMonth,
   formatMoneyCents,
+  type PurchaseOrderCard,
   type PurchaseRow,
   STALE_ALARM_DAYS,
   STALE_WARN_DAYS,
 } from "./purchase-rows";
 
-// One tracked purchase: clean collapsed header (thumb, short name, slip/
-// overdue badges, ETA + staleness meta, owner money), the pipeline rail with
-// ONE primary link beside it, and an expanded region holding the full pledge
-// wording, the note, the money breakdown, the secondary link, and the update
-// timeline. The status itself has no badge — the rail's position and color
-// already say it. The header is the expansion toggle; links live OUTSIDE it
-// (nested interactive elements are invalid HTML) so they stay one click away.
+// One real-world order: a clean collapsed header (thumb, order name, overdue
+// badge, a one-line meta the phone can actually fit, owner money), the
+// representative wave's pipeline rail with ONE primary link beside it, and an
+// expanded region carrying everything that was trimmed from the overview —
+// the full pledge wording, platform + pledge date, ETA slip, per-wave detail
+// for multi-wave orders, the note, the money breakdown, the secondary link,
+// and the update timeline. Status has no badge (the rail says it) and slip
+// lives only in the detail. The header is the expansion toggle; links live
+// OUTSIDE it (nested interactive elements are invalid HTML).
 
-function slipLabel(slip: number): string {
-  const n = Math.abs(slip);
-  return slip > 0 ? `slipped ${n} mo` : `${n} mo early`;
+/** "ETA Nov 2026" / "Delivered Jun 15, 2026" / "Cancelled" — the one ETA-ish
+ *  fact a wave can state about itself. */
+function etaFragment(row: PurchaseRow): string | null {
+  const p = row.purchase;
+  if (p.status === "delivered" && p.deliveredOn) {
+    return `Delivered ${formatDayKey(p.deliveredOn, "compact")}`;
+  }
+  if (p.status === "cancelled") return "Cancelled";
+  if (p.currentEtaMonth) return `ETA ${formatEtaMonth(p.currentEtaMonth)}`;
+  return null;
+}
+
+/** "slipped 3 mo (was May 2026)" / "1 mo early (was Sep 2026)" — detail-only. */
+function slipText(row: PurchaseRow): string | null {
+  if (row.slip === null || row.slip === 0) return null;
+  const was = row.purchase.originalEtaMonth
+    ? ` (was ${formatEtaMonth(row.purchase.originalEtaMonth)})`
+    : "";
+  const n = Math.abs(row.slip);
+  return row.slip > 0 ? `slipped ${n} mo${was}` : `${n} mo early${was}`;
+}
+
+function ownerMoneyLine(row: PurchaseRow): string | null {
+  const p = row.purchase;
+  const money = (cents: number) => formatMoneyCents(cents, p.currency);
+  return [
+    p.pledgeCents !== null ? `Pledge ${money(p.pledgeCents)}` : null,
+    p.shippingCents !== null ? `Shipping ${money(p.shippingCents)}` : null,
+    row.totalCents !== null && p.shippingCents !== null ? `Total ${money(row.totalCents)}` : null,
+  ]
+    .filter(Boolean)
+    .join(" · ");
+}
+
+/** One wave's slice of a multi-wave order's expanded region. */
+function WaveDetail({ row }: { row: PurchaseRow }) {
+  const p = row.purchase;
+  const facts = [etaFragment(row), slipText(row)].filter(Boolean).join(" · ");
+  const money = ownerMoneyLine(row);
+  return (
+    <div className="space-y-2 border-t border-white/[0.06] pt-2.5 first:border-t-0 first:pt-0">
+      <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
+        <span className="text-xs font-semibold text-fg-primary">{displayPurchaseTitle(p)}</span>
+        {facts && <span className="text-2xs text-fg-muted">{facts}</span>}
+      </div>
+      <PurchasePipelineRail kind={p.kind} status={p.status} />
+      {money && <p className="text-2xs tabular-nums text-fg-secondary">{money}</p>}
+      {p.note && <p className="text-2xs leading-snug text-fg-secondary">{p.note}</p>}
+      <PurchaseTimeline events={p.events} />
+    </div>
+  );
 }
 
 export function PurchaseCard({
-  row,
+  card,
   expanded,
   onToggle,
 }: {
-  row: PurchaseRow;
+  card: PurchaseOrderCard;
   expanded: boolean;
   onToggle: () => void;
 }) {
-  const p = row.purchase;
-  const thumb = resolveGame(p.slug)?.thumbnail;
-  const cancelled = p.status === "cancelled";
+  const rep = card.rep;
+  const p = rep.purchase;
+  const multiWave = card.waves.length > 1;
+  const thumb = resolveGame(card.slug)?.thumbnail;
 
-  const meta: string[] = [];
-  if (p.platform) meta.push(p.platform);
-  if (p.pledgedOn) meta.push(`Pledged ${formatDayKey(p.pledgedOn, "compact")}`);
-  if (p.status === "delivered" && p.deliveredOn) {
-    meta.push(`Delivered ${formatDayKey(p.deliveredOn, "compact")}`);
-  } else if (p.currentEtaMonth) {
-    const was =
-      row.slip !== null && row.slip !== 0 && p.originalEtaMonth
-        ? ` (was ${formatEtaMonth(p.originalEtaMonth)})`
-        : "";
-    meta.push(`ETA ${formatEtaMonth(p.currentEtaMonth)}${was}`);
+  // Meta line: the phone gets only what it needs (which wave the rail talks
+  // about, the ETA, staleness); platform + pledge date are desktop-only.
+  const mobileMeta: string[] = [];
+  if (multiWave) mobileMeta.push(displayPurchaseTitle(p));
+  const eta = etaFragment(rep);
+  if (eta) mobileMeta.push(eta);
+  const desktopMeta: string[] = [];
+  if (p.platform) desktopMeta.push(p.platform);
+  if (card.earliestPledgedOn) {
+    desktopMeta.push(`Pledged ${formatDayKey(card.earliestPledgedOn, "compact")}`);
   }
+  const showStale = card.active && card.staleDays !== null;
 
-  const showStale = row.active && row.staleDays !== null;
-  const money = (cents: number) => formatMoneyCents(cents, p.currency);
-  const moneyLine =
-    p.pledgeCents !== null
-      ? `${money(p.pledgeCents)}${p.shippingCents !== null ? ` + ${money(p.shippingCents)} ship` : ""}`
-      : p.shippingCents !== null
-        ? `${money(p.shippingCents)} ship`
-        : null;
+  const moneyLine = card.totalCents !== null ? formatMoneyCents(card.totalCents, p.currency) : null;
 
-  // One link while collapsed — the campaign page (which links onward to the
-  // pledge manager anyway); the pledge manager gets its own link only in the
-  // expanded detail, or promotes to primary when it's all there is.
   const pmLabel = p.kind === "retail" ? "Order ↗" : "Pledge manager ↗";
   const primaryLink = p.campaignUrl
     ? { href: p.campaignUrl, label: p.kind === "retail" ? "Shop ↗" : "Campaign ↗" }
@@ -75,53 +117,62 @@ export function PurchaseCard({
       : null;
   const secondaryLink =
     p.campaignUrl && p.pledgeManagerUrl ? { href: p.pledgeManagerUrl, label: pmLabel } : null;
-  const displayTitle = displayPurchaseTitle(p);
+
+  const singleDetail = multiWave
+    ? null
+    : [...desktopMeta, etaFragment(rep), slipText(rep)].filter(Boolean).join(" · ");
 
   return (
-    <Surface as="li" variant="tile" padding="none" className={cn(cancelled && "opacity-60")}>
+    <Surface
+      as="li"
+      variant="tile"
+      padding="none"
+      className={cn(card.allCancelled && "opacity-60")}
+    >
       {/* biome-ignore lint/correctness/noRestrictedElements: full-width expansion toggle — Button chrome doesn't fit a card header */}
       <button
         type="button"
         onClick={onToggle}
         aria-expanded={expanded}
-        aria-label={`${expanded ? "Collapse" : "Expand"} details for ${p.title}`}
+        aria-label={`${expanded ? "Collapse" : "Expand"} details for ${card.title}`}
         className="flex w-full cursor-pointer items-center gap-3 rounded-t-xl px-3 pb-2 pt-2.5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
       >
         {thumb ? (
           <img src={thumb} alt="" className="h-9 w-16 shrink-0 rounded-md object-cover" />
         ) : (
           <span className="flex h-9 w-16 shrink-0 items-center justify-center rounded-md bg-surface-800 text-sm font-bold text-fg-muted">
-            {p.title.slice(0, 1).toUpperCase()}
+            {card.title.slice(0, 1).toUpperCase()}
           </span>
         )}
         <div className="min-w-0 flex-1">
           <p className="flex flex-wrap items-center gap-1.5 text-sm font-semibold text-fg-primary">
-            <span className="truncate">{displayTitle}</span>
-            {row.slip !== null && row.slip !== 0 && (
-              <Badge tone={row.slip > 0 ? "amber" : "emerald"} size="xs">
-                {slipLabel(row.slip)}
-              </Badge>
-            )}
-            {row.overdue && (
+            <span className="truncate">{card.title}</span>
+            {card.overdue && (
               <Badge tone="rose" size="xs" ring>
                 overdue
               </Badge>
             )}
           </p>
           <p className="truncate text-3xs text-fg-muted">
-            {meta.join(" · ")}
+            {desktopMeta.length > 0 && (
+              <span className="hidden sm:inline">
+                {desktopMeta.join(" · ")}
+                {mobileMeta.length > 0 && " · "}
+              </span>
+            )}
+            {mobileMeta.join(" · ")}
             {showStale && (
               <>
-                {meta.length > 0 && " · "}
+                {mobileMeta.length > 0 && " · "}
                 <span
                   className={cn(
-                    (row.staleDays as number) >= STALE_ALARM_DAYS && "text-rose-300",
-                    (row.staleDays as number) >= STALE_WARN_DAYS &&
-                      (row.staleDays as number) < STALE_ALARM_DAYS &&
+                    (card.staleDays as number) >= STALE_ALARM_DAYS && "text-rose-300",
+                    (card.staleDays as number) >= STALE_WARN_DAYS &&
+                      (card.staleDays as number) < STALE_ALARM_DAYS &&
                       "text-amber-300",
                   )}
                 >
-                  updated {row.staleDays} d ago
+                  updated {card.staleDays} d ago
                 </span>
               </>
             )}
@@ -159,27 +210,30 @@ export function PurchaseCard({
 
       {expanded && (
         <div className="space-y-3 border-t border-white/[0.06] px-3 py-3">
-          {p.title !== displayTitle && (
+          {!multiWave && p.title !== card.title && (
             <p className="text-2xs leading-snug text-fg-muted">{p.title}</p>
           )}
-          {p.note && <p className="text-xs leading-snug text-fg-secondary">{p.note}</p>}
-          {moneyLine && (
-            <p className="text-xs tabular-nums text-fg-secondary">
-              {[
-                p.pledgeCents !== null ? `Pledge ${money(p.pledgeCents)}` : null,
-                p.shippingCents !== null ? `Shipping ${money(p.shippingCents)}` : null,
-                row.totalCents !== null ? `Total ${money(row.totalCents)}` : null,
-              ]
-                .filter(Boolean)
-                .join(" · ")}
-            </p>
-          )}
+          {singleDetail && <p className="text-2xs text-fg-muted">{singleDetail}</p>}
           {secondaryLink && (
             <ButtonLink href={secondaryLink.href} external variant="ghost" size="sm">
               {secondaryLink.label}
             </ButtonLink>
           )}
-          <PurchaseTimeline events={p.events} />
+          {multiWave ? (
+            <div className="space-y-2.5">
+              {card.waves.map((wave) => (
+                <WaveDetail key={wave.purchase.id} row={wave} />
+              ))}
+            </div>
+          ) : (
+            <>
+              {p.note && <p className="text-xs leading-snug text-fg-secondary">{p.note}</p>}
+              {ownerMoneyLine(rep) && (
+                <p className="text-xs tabular-nums text-fg-secondary">{ownerMoneyLine(rep)}</p>
+              )}
+              <PurchaseTimeline events={p.events} />
+            </>
+          )}
         </div>
       )}
     </Surface>

@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
 import { PurchaseCard } from "./PurchaseCard";
-import { buildPurchaseRows } from "./purchase-rows";
+import { buildOrderCards, buildPurchaseRows } from "./purchase-rows";
 
 const TODAY = "2026-09-02";
 
@@ -11,6 +11,7 @@ const purchase = (overrides: Partial<Purchase> = {}): Purchase => ({
   id: "frosthaven",
   title: "Frosthaven",
   shortTitle: null,
+  orderGroup: null,
   slug: null,
   kind: "crowdfunding",
   status: "shipping",
@@ -38,23 +39,24 @@ const purchase = (overrides: Partial<Purchase> = {}): Purchase => ({
   ...overrides,
 });
 
-function renderCard(p: Purchase, { expanded = false } = {}) {
-  const row = buildPurchaseRows([p], TODAY)[0];
+function renderCard(purchases: Purchase | Purchase[], { expanded = false } = {}) {
+  const list = Array.isArray(purchases) ? purchases : [purchases];
+  const card = buildOrderCards(buildPurchaseRows(list, TODAY), TODAY)[0];
   const onToggle = vi.fn();
   render(
     <ul>
-      <PurchaseCard row={row} expanded={expanded} onToggle={onToggle} />
+      <PurchaseCard card={card} expanded={expanded} onToggle={onToggle} />
     </ul>,
   );
   return { onToggle };
 }
 
 describe("PurchaseCard", () => {
-  it("shows the owner money line in the purchase's own currency", () => {
+  it("shows the owner total in the purchase's own currency", () => {
     renderCard(purchase());
-    expect(screen.getByText("€179 + €34 ship")).toBeInTheDocument();
+    expect(screen.getByText("€213")).toBeInTheDocument();
     renderCard(purchase({ id: "usd", title: "USD one", currency: "USD" }));
-    expect(screen.getByText("$179 + $34 ship")).toBeInTheDocument();
+    expect(screen.getByText("$213")).toBeInTheDocument();
   });
 
   it("renders nothing money-shaped on a viewer payload", () => {
@@ -62,17 +64,23 @@ describe("PurchaseCard", () => {
     expect(screen.queryByText(/€/)).not.toBeInTheDocument();
   });
 
-  it("badges a slipped ETA and an overdue purchase", () => {
+  it("keeps overdue in the header but moves slip into the expanded detail", () => {
     renderCard(purchase());
-    expect(screen.getByText("slipped 3 mo")).toBeInTheDocument();
     expect(screen.getByText("overdue")).toBeInTheDocument();
-    expect(screen.getByText(/ETA Aug 2026 \(was May 2026\)/)).toBeInTheDocument();
+    expect(screen.queryByText(/slipped/)).not.toBeInTheDocument();
+    expect(screen.queryByText(/was May 2026/)).not.toBeInTheDocument();
+    renderCard(purchase({ id: "p-slip", title: "PS" }), { expanded: true });
+    expect(screen.getByText(/slipped 3 mo \(was May 2026\)/)).toBeInTheDocument();
   });
 
-  it("badges an early ETA and skips the badge at zero slip", () => {
-    renderCard(purchase({ originalEtaMonth: "2026-09", currentEtaMonth: "2026-08" }));
-    expect(screen.getByText("1 mo early")).toBeInTheDocument();
-    renderCard(purchase({ id: "p2", title: "P2", originalEtaMonth: "2026-08" }));
+  it("details an early ETA and stays quiet at zero slip", () => {
+    renderCard(purchase({ originalEtaMonth: "2026-09", currentEtaMonth: "2026-08" }), {
+      expanded: true,
+    });
+    expect(screen.getByText(/1 mo early \(was Sep 2026\)/)).toBeInTheDocument();
+    renderCard(purchase({ id: "p2", title: "P2", originalEtaMonth: "2026-08" }), {
+      expanded: true,
+    });
     expect(screen.queryByText(/slipped/)).not.toBeInTheDocument();
   });
 
@@ -115,6 +123,51 @@ describe("PurchaseCard", () => {
   it("dims a cancelled purchase", () => {
     renderCard(purchase({ status: "cancelled" }));
     expect(screen.getByRole("listitem").className).toContain("opacity-60");
+  });
+
+  it("folds wave records into one card that expands to per-wave detail", () => {
+    const group = { id: "big-pledge", title: "Gloomhaven Grand Festival" };
+    const waves = [
+      purchase({
+        id: "w1",
+        title: "Wave 1 — Frosthaven",
+        shortTitle: "Frosthaven",
+        orderGroup: group,
+        status: "delivered",
+        deliveredOn: "2026-05-31",
+        pledgeCents: 27000,
+        shippingCents: null,
+        currency: "USD",
+      }),
+      purchase({
+        id: "w2",
+        title: "Wave 2 — Minis",
+        shortTitle: "Gloomhaven Minis",
+        orderGroup: group,
+        status: "production",
+        originalEtaMonth: "2024-11",
+        currentEtaMonth: "2027-02",
+        pledgeCents: 32500,
+        shippingCents: null,
+        currency: "USD",
+      }),
+    ];
+    renderCard(waves);
+    // One card, group title, the ACTIVE wave named in the meta line.
+    expect(screen.getAllByRole("listitem")).toHaveLength(1);
+    expect(screen.getByText("Gloomhaven Grand Festival")).toBeInTheDocument();
+    expect(screen.getByText(/Gloomhaven Minis · ETA Feb 2027/)).toBeInTheDocument();
+    // Money = sum of both waves.
+    expect(screen.getByText("$595")).toBeInTheDocument();
+    expect(screen.queryByText("Frosthaven")).not.toBeInTheDocument();
+    renderCard(
+      waves.map((w) => ({ ...w, id: `x-${w.id}` })),
+      { expanded: true },
+    );
+    // Expanded: both waves with their own facts.
+    expect(screen.getByText("Frosthaven")).toBeInTheDocument();
+    expect(screen.getByText(/Delivered May 31, 2026/)).toBeInTheDocument();
+    expect(screen.getByText(/slipped 27 mo \(was Nov 2024\)/)).toBeInTheDocument();
   });
 
   it("toggles via the header button and reveals note + timeline when expanded", async () => {
