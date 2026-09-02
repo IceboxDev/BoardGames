@@ -445,6 +445,81 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
     ],
   },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "roma-xli",
+    title: 'Roma XLI — "Everything!" Dark Cities Bundle',
+    slug: "roma-xli",
+    kind: "crowdfunding",
+    status: "production",
+    platform: "Kickstarter",
+    campaignUrl: "https://www.kickstarter.com/projects/facadegames/roma-xli-game",
+    pledgeManagerUrl: "https://www.allplay.com/pledge-manager",
+    // The Kickstarter pledge itself promised "Estimated delivery Nov 2026";
+    // the Aug 25 '26 update still estimates October/November delivery.
+    originalEtaMonth: "2026-11",
+    currentEtaMonth: "2026-11",
+    pledgedOn: "2026-03-25",
+    deliveredOn: null,
+    currency: "USD",
+    pledgeCents: 22500, // $225.00 "Everything!" reward, collected
+    shippingCents: null, // Kickstarter estimated $0 worldwide; taxes/shipping confirm via the AllPlay pledge manager
+    note:
+      'The "Everything!" reward ($225.00, collected): all six Dark Cities deluxe games — ' +
+      "Salem 1692, Tortuga 1667, Deadwood 1876, Bristol 1350, Hollywood 1947 and Roma XLI — " +
+      "plus the Kickstarter-exclusive Spoils of War and Bounties of Peace mini-expansion " +
+      "boxes and Dark Cities Coaster Set, 2× Index book boxes, and the Mat Maximus mat. " +
+      "Campaign funded March 26, 2026 (8,000+ backers). Order, taxes and shipping are " +
+      "confirmed via the AllPlay pledge manager (live since Aug 2026, open into 2027).",
+    events: [
+      {
+        id: "roma-xli-e01",
+        occurredOn: "2026-04-02",
+        type: "status-change",
+        title: "Campaign funded (March 26) — production begins",
+        details:
+          "Facade Games moved to finalizing design files and the rulebook before mass " +
+          "production, aiming to have everything ready for shipping in late summer or early " +
+          "fall 2026. Shipping info to be collected in 3–5 months via a pledge manager that " +
+          "won't close early.",
+        sourceUrl: "https://www.kickstarter.com/projects/facadegames/roma-xli-game/posts/4652968",
+      },
+      {
+        id: "roma-xli-e02",
+        occurredOn: "2026-05-27",
+        type: "campaign-update",
+        title: "Production underway — files final, first samples in",
+        details:
+          "All files finalized, the rulebook proofed, and the first production samples of " +
+          "final components received; a couple of months of production remained, still on " +
+          "plan for late-summer/early-fall shipping readiness.",
+        sourceUrl: "https://www.kickstarter.com/projects/facadegames/roma-xli-game/posts/4702663",
+      },
+      {
+        id: "roma-xli-e03",
+        occurredOn: "2026-07-24",
+        type: "campaign-update",
+        title: "Pledge manager (AllPlay) announced for August 12",
+        details:
+          "Pledge-manager emails from AllPlay start rolling out August 12 to confirm orders, " +
+          "addresses and add-ons. The factory is scheduled to finish producing Roma XLI in " +
+          "early September, then everything goes on boats to the fulfilment warehouses.",
+        sourceUrl: "https://www.kickstarter.com/projects/facadegames/roma-xli-game/posts/4753396",
+      },
+      {
+        id: "roma-xli-e04",
+        occurredOn: "2026-08-25",
+        type: "campaign-update",
+        title: "Pledge manager live — delivery estimated Oct/Nov 2026",
+        details:
+          "Final advance copies arrived from the factory, with production complete in about " +
+          "a week and freight to fulfilment centres next. The AllPlay pledge manager is live " +
+          "(link retrievable at allplay.com/pledge-manager) and stays open until 2027; " +
+          "delivery currently estimated October/November 2026.",
+        sourceUrl: "https://www.kickstarter.com/projects/facadegames/roma-xli-game/posts/4779725",
+      },
+    ],
+  },
 ] satisfies readonly PurchaseRecord[];
 
 export function purchasesForUser(userId: string): PurchaseRecord[] {
