@@ -357,6 +357,94 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
     ],
   },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "brass-pittsburgh",
+    title: "Brass Collector's Bundle (Pittsburgh + Birmingham + Lancashire) + Iron Coins 100",
+    slug: "brass-pittsburgh",
+    kind: "crowdfunding",
+    status: "production",
+    platform: "Gamefound",
+    campaignUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh",
+    pledgeManagerUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh/yourpledge",
+    // First post-campaign timeline (May '26, #35, unchanged through July):
+    // Production Aug '26 → Freight Jan '27 → Fulfilment May '27. The
+    // Aug 14 '26 update moved fulfilment to July 2027 (solo-mode dev time).
+    originalEtaMonth: "2027-05",
+    currentEtaMonth: "2027-07",
+    pledgedOn: "2026-03-25",
+    deliveredOn: null,
+    currency: "USD",
+    pledgeCents: 53550, // $350.00 bundle + $66.50 tax + $100.00 Iron Coins 100 + $19.00 tax, paid
+    shippingCents: null, // settled in the pledge manager (open through Nov 30, 2026); not recorded yet
+    note:
+      "Pledge 166560Z: Brass Collector's Bundle ($350.00 + $66.50 tax, paid) = Pittsburgh CE " +
+      "(Steel Mill cover) + Birmingham CE + Lancashire CE, plus Iron Coins 100 ($100.00 + " +
+      "$19.00 tax) — no storage box, uses the CE cash carriage. Backed on day 2 of the live " +
+      "campaign, so every stretch goal applies (numbered CE boxes, hardwood money, birch " +
+      "hardwood tokens, dual-layer NoGlare boards) and the Pittsburgh CE includes the 20-print " +
+      "Curated Artfolio (live-campaign backers only). Shipping + final charges are settled in " +
+      "the pledge manager, open through Nov 30, 2026. CEs are campaign/Roxley-direct exclusive.",
+    events: [
+      {
+        id: "brass-pittsburgh-e01",
+        occurredOn: "2026-04-18",
+        type: "status-change",
+        title: "Campaign closed after a 5-day Endgame",
+        details:
+          "Set to close April 13, the campaign ran on through Gamefound's Endgame extensions " +
+          "until April 18, past $4M. Final unlocks landed along the way: numbered CE boxes and " +
+          "the full 20-print Curated Artfolio with cloth-wrapped gold-foil hardcover. Late " +
+          "pledge and pledge manager to follow.",
+        sourceUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh/updates/34",
+      },
+      {
+        id: "brass-pittsburgh-e02",
+        occurredOn: "2026-05-07",
+        type: "campaign-update",
+        title: "First production timeline — fulfilment May 2027",
+        details:
+          "The standing plan: Production August 2026 → Freight January 2027 → Fulfilment " +
+          "May 2027. Development at 85% (Pittsburgh solo mode and Birmingham 2P still in " +
+          "testing); pledge manager tentatively May 26, later moved to early July.",
+        sourceUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh/updates/35",
+      },
+      {
+        id: "brass-pittsburgh-e03",
+        occurredOn: "2026-07-03",
+        type: "campaign-update",
+        title: "Pledge manager opens July 6 — survey deadline August 31",
+        details:
+          "Confirm the pledge, add add-ons, and pay the remaining balance, shipping and taxes " +
+          "at submit; nothing ships until fulfilment in 2027. Refunds run at 90% until the " +
+          "pledge manager closes. The deadline was later extended to November 30.",
+        sourceUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh/updates/39",
+      },
+      {
+        id: "brass-pittsburgh-e04",
+        occurredOn: "2026-08-14",
+        type: "delay",
+        title: "Timeline slips a quarter — fulfilment now July 2027",
+        details:
+          "Pittsburgh's late-added solo mode (~60% through design and testing) needs more " +
+          "development time, moving everything back: freight January → April 2027, fulfilment " +
+          "May → July 2027. The pledge manager stays open through November 30, 2026, and a " +
+          "new Iron Coins 200 set (adds 50 and 500 denominations) joined the add-ons.",
+        sourceUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh/updates/43",
+      },
+      {
+        id: "brass-pittsburgh-e05",
+        occurredOn: "2026-08-26",
+        type: "campaign-update",
+        title: "Multiplayer complete, solo mode in design — manufacturing not started",
+        details:
+          "Latest chart: development 94% (multiplayer done, solo ongoing), art & graphic " +
+          "design 90% (solo cards/rulebooks remain), prepress 70% (final coin and clay " +
+          "samples ordered; Lancashire and Birmingham in final proofing), manufacturing 0%.",
+        sourceUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh/updates/44",
+      },
+    ],
+  },
 ] satisfies readonly PurchaseRecord[];
 
 export function purchasesForUser(userId: string): PurchaseRecord[] {
