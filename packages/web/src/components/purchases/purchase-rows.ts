@@ -115,10 +115,14 @@ export function stalenessDays(events: Purchase["events"], todayKey: string): num
   return Math.max(0, Math.floor(diff / 86_400_000));
 }
 
-const CURRENCY_SYMBOL: Record<PurchaseCurrency, string> = { EUR: "€", USD: "$" };
+const CURRENCY_SYMBOL: Record<PurchaseCurrency, string> = { EUR: "€", USD: "$", GBP: "£" };
 
 /** Chart hue per currency (spend columns; EUR keeps the brand accent). */
-export const CURRENCY_TONE: Record<PurchaseCurrency, Tone> = { EUR: "accent", USD: "sky" };
+export const CURRENCY_TONE: Record<PurchaseCurrency, Tone> = {
+  EUR: "accent",
+  USD: "sky",
+  GBP: "orange",
+};
 
 /** "€89" / "$89.99" / "€1,790" — minor units, deterministic (no Intl). */
 export function formatMoneyCents(cents: number, currency: PurchaseCurrency): string {
@@ -257,7 +261,7 @@ export function applyPurchaseView(
   return groups.filter((g) => g.rows.length > 0);
 }
 
-const CURRENCIES: readonly PurchaseCurrency[] = ["EUR", "USD"];
+const CURRENCIES: readonly PurchaseCurrency[] = ["EUR", "USD", "GBP"];
 
 export interface PurchaseInsightsData {
   total: number;

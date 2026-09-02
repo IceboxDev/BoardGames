@@ -114,6 +114,161 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
     ],
   },
+  // One Gamefound pledge (063695A), split into its two shipping waves so
+  // each carries an honest pipeline status.
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "old-kings-crown-quick-delivery",
+    title: "The Old King's Crown — Base Game (Quick Delivery)",
+    slug: "the-old-kings-crown",
+    kind: "crowdfunding",
+    status: "delivered",
+    platform: "Gamefound",
+    campaignUrl: "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown",
+    pledgeManagerUrl:
+      "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown/yourpledge",
+    // Campaign promise for English Quick Delivery was "approx May 2026";
+    // the EU wave landed early-to-mid June.
+    originalEtaMonth: "2026-05",
+    currentEtaMonth: "2026-06",
+    pledgedOn: "2026-03-28",
+    deliveredOn: "2026-06-15", // approximate — EU wave, exact arrival day not recorded
+    currency: "GBP",
+    pledgeCents: 6188, // £52.00 + £9.88 tax, paid
+    shippingCents: null, // paid separately via the pledge manager; amount not recorded
+    note:
+      'Pledge 063695A, wave 1 of 2 (order shows "partially shipped"): The Old King\'s Crown ' +
+      "base game, 2nd printing, English, Quick Delivery. £52.00 + £9.88 tax, paid; " +
+      "quick-delivery shipping was charged separately in the pledge manager (April 2026). " +
+      "Arrived ~mid-June 2026 with the EU wave (exact date approximate).",
+    events: [
+      {
+        id: "old-kings-crown-quick-delivery-e01",
+        occurredOn: "2026-03-31",
+        type: "status-change",
+        title: "Campaign closed — quick-delivery copies already on the water",
+        details:
+          "The campaign ended with English Quick Delivery base games pre-printed and on boats " +
+          "to regional fulfilment hubs; fulfilment promised for May–June 2026.",
+        sourceUrl:
+          "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown/updates/14",
+      },
+      {
+        id: "old-kings-crown-quick-delivery-e02",
+        occurredOn: "2026-04-20",
+        type: "campaign-update",
+        title: "Pledge manager live — quick-delivery addresses due by April 29",
+        details:
+          "The pledge manager opened (after a three-day tax-calculation delay). Quick Delivery " +
+          "backers had to submit address and pay shipping by April 29 to avoid delays; orders " +
+          'with add-ons would show as "partially shipped" once the base game leaves the hub.',
+        sourceUrl:
+          "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown/updates/17",
+      },
+      {
+        id: "old-kings-crown-quick-delivery-e03",
+        occurredOn: "2026-05-26",
+        type: "shipping-notice",
+        title: "EU fulfilment underway via Spiral Galaxy",
+        details:
+          "Games reached all fulfilment hubs; UK and EU copies (Spiral Galaxy) shipping that " +
+          "week and the next.",
+        sourceUrl:
+          "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown/updates/19",
+      },
+      {
+        id: "old-kings-crown-quick-delivery-e04",
+        occurredOn: "2026-06-10",
+        type: "status-change",
+        title: "All EU orders shipped — copy arrived shortly after",
+        details:
+          "Every EU/UK order with an on-time survey had left the fulfilment centre; the copy " +
+          "arrived in the days after (US and Asia waves ran later, into July–August).",
+        sourceUrl:
+          "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown/updates/20",
+      },
+    ],
+  },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "old-kings-crown-all-in",
+    title: "The Old King's Crown — All-In Add-on Bundle",
+    slug: "the-old-kings-crown",
+    kind: "crowdfunding",
+    status: "production",
+    platform: "Gamefound",
+    campaignUrl: "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown",
+    pledgeManagerUrl:
+      "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown/yourpledge",
+    // All expansions/add-ons were pitched for Q2 2027 during the campaign
+    // (the pre-campaign teaser said Q1 2027, but Q2 was the promise at
+    // pledge time) and that date still stands.
+    originalEtaMonth: "2027-04",
+    currentEtaMonth: "2027-04",
+    pledgedOn: "2026-03-28",
+    deliveredOn: null,
+    currency: "GBP",
+    pledgeCents: 19040, // £160.00 + £30.40 tax, paid
+    shippingCents: null, // charged before the 2027 wave ships (~Q1–Q2 2027)
+    note:
+      "Pledge 063695A, wave 2 of 2: Waking Kingdom expansion (renamed Wild Kingdom reprint), " +
+      "NEW Songs of Home expansion (+ Golden Ship metal coin gift), Annulet standalone game + " +
+      "its metal coins, enamel lore & wooden pieces upgrade, metal influence tokens & cloth " +
+      "bag, art print pack, and three sleeve packs — all English. £160.00 + £30.40 tax, paid; " +
+      "wave-2 shipping is charged just before dispatch (~Q1–Q2 2027). Pledge manager stays " +
+      "open for additions until roughly the end of 2026.",
+    events: [
+      {
+        id: "old-kings-crown-all-in-e01",
+        occurredOn: "2026-03-04",
+        type: "campaign-update",
+        title: "Funded on day one — add-on wave set for Q2 2027",
+        details:
+          "The campaign funded within a day and passed the first Kickstarter's total. All " +
+          "expansions and add-ons (Songs of Home, Waking Kingdom, Annulet, upgrades) were " +
+          "scheduled to deliver together in Q2 2027.",
+        sourceUrl:
+          "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown/updates/5",
+      },
+      {
+        id: "old-kings-crown-all-in-e02",
+        occurredOn: "2026-03-31",
+        type: "status-change",
+        title: "Campaign closed — Songs of Home & Annulet into full development",
+        details:
+          "Campaign ended March 31 with monthly progress updates promised. Songs of Home and " +
+          "Annulet entered their main development stretch (balancing, art, playtesting) ahead " +
+          "of manufacturing.",
+        sourceUrl:
+          "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown/updates/14",
+      },
+      {
+        id: "old-kings-crown-all-in-e03",
+        occurredOn: "2026-04-20",
+        type: "campaign-update",
+        title: "Pledge manager live — open for wave-2 additions until ~end of 2026",
+        details:
+          "Add-ons can still be added at campaign prices until final production quantities " +
+          "lock with the manufacturer; addresses stay editable until the 2027 content reaches " +
+          "fulfilment centres.",
+        sourceUrl:
+          "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown/updates/17",
+      },
+      {
+        id: "old-kings-crown-all-in-e04",
+        occurredOn: "2026-08-13",
+        type: "campaign-update",
+        title: "Development on track — Gen Con showcase, fulfilment partners under review",
+        details:
+          "Songs of Home and an expanded Annulet were demoed as prototypes at Gen Con 2026; a " +
+          "Tabletop Simulator preview of new Kingdom Cards is out via Discord. After the slow " +
+          "US/Asia quick-delivery experience, the team is reviewing fulfilment partners for " +
+          "the 2027 wave.",
+        sourceUrl:
+          "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown/updates/23",
+      },
+    ],
+  },
 ] satisfies readonly PurchaseRecord[];
 
 export function purchasesForUser(userId: string): PurchaseRecord[] {

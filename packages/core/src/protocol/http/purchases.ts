@@ -59,7 +59,7 @@ export type PurchaseStatus = z.infer<typeof PurchaseStatusSchema>;
  * own currency, so money fields carry it explicitly (in minor units/cents)
  * instead of pretending everything is EUR like `pricePaidCents` does.
  */
-export const PurchaseCurrencySchema = z.enum(["EUR", "USD"]);
+export const PurchaseCurrencySchema = z.enum(["EUR", "USD", "GBP"]);
 export type PurchaseCurrency = z.infer<typeof PurchaseCurrencySchema>;
 
 export const PurchaseEventTypeSchema = z.enum([

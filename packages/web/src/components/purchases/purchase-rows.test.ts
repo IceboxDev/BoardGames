@@ -84,6 +84,7 @@ describe("formatEtaMonth / formatMoneyCents", () => {
     expect(formatMoneyCents(179000, "EUR")).toBe("€1,790");
     expect(formatMoneyCents(123456, "EUR")).toBe("€1,234.56");
     expect(formatMoneyCents(31892, "USD")).toBe("$318.92");
+    expect(formatMoneyCents(25228, "GBP")).toBe("£252.28");
   });
 });
 
