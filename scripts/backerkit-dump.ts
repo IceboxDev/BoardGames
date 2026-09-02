@@ -295,6 +295,7 @@ async function main() {
     const pending: { name: string; url: string }[] = [];
     let inlineIdx = 0;
     const text = htmlToText(u.contentHtml, (src) => {
+      if (src.startsWith("data:")) return "[inline data-URI image — not downloadable]";
       inlineIdx += 1;
       const name = `u${u.number}-${String(inlineIdx).padStart(2, "0")}`;
       pending.push({ name, url: forceJpegUrl(decodeEntities(src)) });
