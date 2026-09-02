@@ -67,6 +67,8 @@ export function PurchaseTimeline({ events }: { events: Purchase["events"] }) {
                   >
                     {EVENT_ICON[event.type]}
                   </span>
+                  {/* Text owns the full tile width; the source link sits at
+                      the bottom right instead of eating a side column. */}
                   <div className="min-w-0 flex-1">
                     <p className="text-sm font-semibold leading-snug text-fg-primary">
                       {event.title}
@@ -81,18 +83,14 @@ export function PurchaseTimeline({ events }: { events: Purchase["events"] }) {
                         {event.details}
                       </p>
                     )}
+                    {event.sourceUrl && (
+                      <div className="-mb-1 -mr-1 flex justify-end">
+                        <ButtonLink href={event.sourceUrl} external variant="ghost" size="sm">
+                          Source ↗
+                        </ButtonLink>
+                      </div>
+                    )}
                   </div>
-                  {event.sourceUrl && (
-                    <ButtonLink
-                      href={event.sourceUrl}
-                      external
-                      variant="ghost"
-                      size="sm"
-                      className="shrink-0"
-                    >
-                      Source ↗
-                    </ButtonLink>
-                  )}
                 </Surface>
               );
             })}
