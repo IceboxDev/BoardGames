@@ -199,6 +199,37 @@ export function StackIcon({ className = "h-3 w-3" }: IconProps) {
   );
 }
 
+export function TruckIcon({ className = "h-3.5 w-3.5" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className={className}
+      strokeWidth={1.4}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M1.5 3.5h8v7h-8zM9.5 6h3l2 2.5V10.5h-5" />
+      <circle cx="4.5" cy="12" r="1.4" />
+      <circle cx="11.5" cy="12" r="1.4" />
+    </svg>
+  );
+}
+
+export function MegaphoneIcon({ className = "h-3.5 w-3.5" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className={className}
+      strokeWidth={1.4}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M2 6.5v3l7 3v-9l-7 3zM2 6.5h-.5v3H2M12 5a3.5 3.5 0 0 1 0 6" />
+      <path d="M4.5 10v2.5a1 1 0 0 0 1 1h1" />
+    </svg>
+  );
+}
+
 export function LockIcon({ className = "h-4 w-4 opacity-70" }: IconProps) {
   return (
     <svg

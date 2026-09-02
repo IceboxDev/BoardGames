@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import { AddCustomItemModal } from "../components/collection/AddCustomItemModal.tsx";
 import { AnnounceModal } from "../components/collection/AnnounceModal.tsx";
 import {
@@ -15,6 +15,7 @@ import { buildCollectionRows } from "../components/collection/collection-rows.ts
 import { PendingAnnouncements } from "../components/collection/PendingAnnouncements.tsx";
 import { VocabManagerModal } from "../components/collection/VocabManagerModal.tsx";
 import { GalleryIcon } from "../components/icons";
+import { PurchasesTab } from "../components/purchases/PurchasesTab.tsx";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button.tsx";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
@@ -22,6 +23,7 @@ import { LoadingState } from "../components/ui/LoadingState.tsx";
 import { PageHeader } from "../components/ui/PageHeader.tsx";
 import { PageMain, PageShell } from "../components/ui/PageShell.tsx";
 import { QueryBoundary } from "../components/ui/QueryBoundary.tsx";
+import { SegmentedControl } from "../components/ui/SegmentedControl.tsx";
 import { Select } from "../components/ui/Select.tsx";
 import { Stack } from "../components/ui/Stack.tsx";
 import { ApiError } from "../lib/api-fetch.ts";
@@ -34,6 +36,12 @@ import { qk } from "../lib/query-keys.ts";
 // custom items) with per-copy metadata, storage-box grouping, per-user
 // vocabularies, played-through records, announcements, and CSV export.
 // Any member can view any collection; the owner and admins can edit.
+//
+// A second tab — Purchases — sits on the same page (deep link
+// `?tab=purchases`): the read-only crowdfunding/preorder pipeline. It owns
+// its own query and boundary, so neither tab blocks on the other's fetch.
+
+type PageTab = "collection" | "purchases";
 
 export default function GamesManagerPage() {
   const { userId } = useParams<{ userId: string }>();
@@ -42,6 +50,16 @@ export default function GamesManagerPage() {
   const [selection, setSelection] = useState<ReadonlySet<string>>(new Set());
   const [assignContainerKey, setAssignContainerKey] = useState("");
   const [modal, setModal] = useState<"announce" | "vocab" | "custom-box" | null>(null);
+
+  // Tab state lives in the URL; the default tab keeps a clean one.
+  const [searchParams, setSearchParams] = useSearchParams();
+  const tab: PageTab = searchParams.get("tab") === "purchases" ? "purchases" : "collection";
+  function setTab(next: PageTab) {
+    const params = new URLSearchParams(searchParams);
+    if (next === "purchases") params.set("tab", "purchases");
+    else params.delete("tab");
+    setSearchParams(params, { replace: true });
+  }
 
   const profileQuery = useQuery({
     queryKey: qk.profile(userId),
@@ -75,6 +93,28 @@ export default function GamesManagerPage() {
   });
 
   const topNav = <TopNav back={<TopNavBackButton to={`/u/${userId}`} />}></TopNav>;
+  const firstName = profileQuery.data?.user.name.split(" ")[0] ?? "This player";
+  const tabBar = (
+    <SegmentedControl<PageTab>
+      aria-label="Collection sections"
+      options={[
+        { value: "collection", label: "Collection" },
+        { value: "purchases", label: "Purchases" },
+      ]}
+      value={tab}
+      onChange={setTab}
+      size="sm"
+      shape="pill"
+    />
+  );
+
+  if (tab === "purchases") {
+    return (
+      <PageShell topNav={topNav}>
+        <PurchasesTab userId={userId as string} firstName={firstName} tabBar={tabBar} />
+      </PageShell>
+    );
+  }
 
   return (
     <PageShell topNav={topNav}>
@@ -115,7 +155,6 @@ export default function GamesManagerPage() {
   // Plain render helper (NOT a component — a nested component definition would
   // get a fresh identity every render and remount its whole subtree).
   function renderBody(collection: NonNullable<typeof collectionQuery.data>) {
-    const firstName = profileQuery.data?.user.name.split(" ")[0] ?? "This player";
     const rows = buildCollectionRows(collection);
     const playedThroughCount = rows.filter((r) => r.playedThrough).length;
     const filtered = applyViewState(rows, viewState);
@@ -160,6 +199,8 @@ export default function GamesManagerPage() {
               ) : undefined
             }
           />
+
+          {tabBar}
 
           {editable && (
             <PendingAnnouncements

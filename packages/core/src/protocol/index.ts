@@ -21,6 +21,7 @@ export * from "./http/history.ts";
 export * from "./http/inventory.ts";
 export * from "./http/profile.ts";
 export * from "./http/profile-insights.ts";
+export * from "./http/purchases.ts";
 export * from "./http/skills.ts";
 export * from "./http/tournament.ts";
 export * from "./ws/client-messages.ts";

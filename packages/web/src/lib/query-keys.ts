@@ -29,6 +29,7 @@ export const qk = {
   skillLeaderboards: () => ["skills", "leaderboards"] as const,
   greeting: () => ["skills", "greeting"] as const,
   collection: (userId: string) => ["collection", userId] as const,
+  purchases: (userId: string) => ["purchases", userId] as const,
   adminAnnouncements: () => ["admin", "announcements"] as const,
   adminSkills: () => ["admin", "skills"] as const,
   adminLastPlayed: () => ["admin", "last-played"] as const,

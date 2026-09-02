@@ -44,6 +44,7 @@ import { dndCampaignRoutes } from "./auth-routes/dnd-campaigns.ts";
 import { matchHistoryRoutes } from "./auth-routes/match-history.ts";
 import { profileRoutes } from "./auth-routes/profile.ts";
 import { profileInsightsRoutes } from "./auth-routes/profile-insights.ts";
+import { purchaseRoutes } from "./auth-routes/purchases.ts";
 import { skillsRoutes } from "./auth-routes/skills.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
@@ -241,6 +242,11 @@ app.route("/api/collection", collectionVocabRoutes);
 
 app.use("/api/announcements/*", requireAuth, requireOffline);
 app.route("/api/announcements", announcementRoutes);
+
+// Purchase tracker: a read-only collection sub-tab (data ships in code —
+// see auth-routes/purchases.ts). Reads are unmetered like the collection's.
+app.use("/api/purchases/*", requireAuth, requireOffline);
+app.route("/api/purchases", purchaseRoutes);
 
 app.use("/api/bgg/*", requireAuth);
 app.route("/api/bgg", bggRoutes);
