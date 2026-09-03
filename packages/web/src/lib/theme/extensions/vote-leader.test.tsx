@@ -62,13 +62,13 @@ function keyFor(daysFromToday: number): string {
   return dateKey(d);
 }
 
-function renderAccent(seed?: CalendarLocks) {
+function renderAccent(seed?: CalendarLocks, active = true) {
   const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
   if (seed) qc.setQueryData(qk.calendarLocks(), seed);
   const wrapper = ({ children }: { children: ReactNode }) => (
     <QueryClientProvider client={qc}>{children}</QueryClientProvider>
   );
-  return renderHook(() => voteLeaderExtension.useAccentOverride(), { wrapper });
+  return renderHook(() => voteLeaderExtension.useAccentOverride(active), { wrapper });
 }
 
 // Real catalog entries — the extension resolves accents through the actual
@@ -99,6 +99,16 @@ describe("vote-leader extension", () => {
     loggedOut();
     const { result } = renderAccent();
     expect(result.current).toBeNull();
+    expect(fetchCalendarLocksMock).not.toHaveBeenCalled();
+  });
+
+  it("returns null and never fetches while inactive (accentMode is not night-sync)", () => {
+    // Even a cached winning lock must not tint a theme that isn't night-sync.
+    const seeded = renderAccent({ [keyFor(1)]: mkLock({ topGameSlug: gameA.slug }) }, false);
+    expect(seeded.result.current).toBeNull();
+    // And with a cold cache the disabled query must not hit the API.
+    const cold = renderAccent(undefined, false);
+    expect(cold.result.current).toBeNull();
     expect(fetchCalendarLocksMock).not.toHaveBeenCalled();
   });
 

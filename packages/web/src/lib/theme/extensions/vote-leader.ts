@@ -13,9 +13,10 @@ import { qk } from "../../query-keys.ts";
 // this accent deliberately tracks the *current* vote leader: a subtle tint
 // may shift while voting is still open, where a full-board takeover may
 // not. The engine discovers this module via
-// `import.meta.glob("./extensions/*.ts{,x}")` and calls `useAccentOverride`
-// on every provider render, applying the first non-null hex through its
-// color-ramp generator.
+// `import.meta.glob("./extensions/*.ts{,x}")` (excluding `*.test.*`) and
+// calls `useAccentOverride(config.accentMode === "night-sync")` on every
+// provider render — unconditionally, so rules-of-hooks hold in every mode —
+// applying the first non-null hex through its color-ramp generator.
 //
 // Deliberately reads only the night vote's `topGameSlug`. The purchase-poll
 // tally is hidden from non-admin clients while a poll is open, so it is not
@@ -24,10 +25,13 @@ import { qk } from "../../query-keys.ts";
 /**
  * Accent hex of the nearest locked night (today or later) that has a vote
  * leader, or null when there is no such night, the slug resolves to no
- * catalog game, the locks query hasn't produced data, or the user is logged
- * out (the query is disabled then, so public pages never hit the API).
+ * catalog game, the locks query hasn't produced data, the extension is
+ * inactive (`active: false` — the engine passes whether night-sync mode is
+ * on, so other accent modes never fetch), or the user is logged out. In the
+ * inactive and logged-out cases the query is disabled, so public pages and
+ * non-night-sync themes never hit the API.
  */
-function useAccentOverride(): string | null {
+function useAccentOverride(active: boolean = true): string | null {
   const { user } = useCurrentUser();
   const locksQuery = useQuery({
     queryKey: qk.calendarLocks(),
@@ -36,8 +40,10 @@ function useAccentOverride(): string | null {
     // (lib/query-client.ts). Restate it here so this always-mounted hook
     // keeps the same refetch cadence even under a different provider.
     staleTime: 5 * 60_000,
-    enabled: !!user,
+    enabled: !!user && active,
   });
+
+  if (!active) return null;
 
   const locks = locksQuery.data;
   if (!locks) return null;
