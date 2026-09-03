@@ -13,9 +13,10 @@
 //   2. The VARIANT is the longest of loose/default/tight that fits the
 //      slot COMPLETELY. Descriptions are never truncated by choice: a
 //      variant that would need an ellipsis falls back to the next shorter
-//      one, and when even tight can't fit whole the card shows no
-//      description at all (that's the three-variant pipeline's whole
-//      point — every length is a finished text).
+//      one. The floor is guaranteed, though — a card always shows at LEAST
+//      the tight text, clamped when even that can't fit whole (tights vary
+//      ~120–220 chars, and a phone-height slot sits right in that range,
+//      which used to leave some games with text and others with none).
 //
 // The estimate is deliberately rough (average glyph width), so
 // `CarouselBody` keeps a `-webkit-line-clamp` as a BACKSTOP for estimate
@@ -67,7 +68,7 @@ const TITLE_LEADING = 1.15;
 const BODY_PAD_PX = { full: 40, compact: 24 };
 
 // A text column taller than this many lines stops reading as a card blurb.
-const MAX_LINES = { full: 12, compact: 3 };
+const MAX_LINES = { full: 12, compact: 6 };
 
 /** Softened type scale for a card of this width (1 at/below the reference). */
 function bodyScale(cardW: number): number {
@@ -130,11 +131,10 @@ export function planDescription({
     return { text: null, fontPx, lineHeightPx, maxLines, titleFontPx };
 
   const charsPerLine = (cardW - BODY_PAD_PX[mode]) / (fontPx * AVG_CHAR_EM);
-  // Longest variant that fits WHOLE — never a chosen truncation. No fit at
-  // all → no description (title + meta carry the card).
-  const text =
-    [descriptions.loose, descriptions.default, descriptions.tight]
-      .map(stripBggHtml)
-      .find((t) => Math.ceil(t.length / charsPerLine) <= maxLines) ?? null;
+  // Longest variant that fits WHOLE — never a chosen truncation — with the
+  // clamped tight as the guaranteed floor: some text always beats an empty
+  // body band.
+  const ranked = [descriptions.loose, descriptions.default, descriptions.tight].map(stripBggHtml);
+  const text = ranked.find((t) => Math.ceil(t.length / charsPerLine) <= maxLines) ?? ranked[2];
   return { text, fontPx, lineHeightPx, maxLines, titleFontPx };
 }

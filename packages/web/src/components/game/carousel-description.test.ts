@@ -75,7 +75,7 @@ describe("planDescription", () => {
     expect(plan.text).toBe(d.tight);
   });
 
-  it("shows no description at all when even tight can't fit whole", () => {
+  it("guarantees at least the (clamped) tight text when nothing fits whole", () => {
     const tiny = { tight: "t".repeat(400), default: "d".repeat(450), loose: "l".repeat(500) };
     const plan = planDescription({
       cardW: 280,
@@ -84,13 +84,14 @@ describe("planDescription", () => {
       title,
       descriptions: tiny,
     });
-    expect(plan.text).toBeNull();
+    expect(plan.text).toBe(tiny.tight); // clamped by maxLines, never empty
+    expect(plan.maxLines).toBeGreaterThanOrEqual(2);
   });
 
-  it("renders nothing when the slot is under two lines", () => {
+  it("renders nothing only when the slot is under two lines", () => {
     const plan = planDescription({
       cardW: 220,
-      bodyHeight: 170,
+      bodyHeight: 150,
       compact: true,
       title,
       descriptions,
