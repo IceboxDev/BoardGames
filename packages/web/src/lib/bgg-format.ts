@@ -151,6 +151,17 @@ export function normalizeWeight(w: number): number {
 }
 
 /**
+ * Bar-width percentage for the complexity bar: `normalizeWeight` floored at
+ * a visible nub — the catalog's lightest game would otherwise render a
+ * 0-width bar, which reads as "no difficulty" instead of "lowest
+ * difficulty". Width-only: `weightColor` stays on the unfloored scale so
+ * the lightest game keeps its pure green.
+ */
+export function weightBarWidth(w: number): number {
+  return Math.max(8, normalizeWeight(w));
+}
+
+/**
  * Difficulty color for the complexity bar: green at the catalog's lightest
  * game through amber to red at its heaviest, on the same registry-derived
  * interval `normalizeWeight` uses — so "greenest" and "reddest" are defined

@@ -61,12 +61,14 @@ export const NARROW_CONTAINER_W = 640;
 // When a NARROW container is also height-bound (the purchase-vote modal on
 // phones: header + footer leave the carousel a short slot), the 380:560
 // tower aspect yields a card far below MIN_CARD_W — tiny, with the side
-// cards flooding the leftover width (see narrowSpread). Trading tower
-// height for width keeps the card big: same height, ~13% wider, always
-// paired with the compact body (whose thumb gets CLOSER to the art's 16:9
-// at this ratio, so it crops less, not more). Width-bound phone carousels
-// (the RSVP picker) never hit this — their card already spans 92% of the
-// container at the tower aspect.
+// cards flooding the leftover width. The carousel instead re-derives the
+// aspect to FILL the height budget at full width, clamped between this
+// floor and the tower ratio — so the card stretches to whatever vertical
+// space exists, and only genuinely short slots flatten all the way down
+// to this ratio (whose thumb gets CLOSER to the art's 16:9, so it crops
+// less, not more). Always paired with the compact body. Width-bound phone
+// carousels (the RSVP picker) never hit this — their card already spans
+// 92% of the container at the tower aspect.
 export const NARROW_ASPECT = 1.3;
 
 /**

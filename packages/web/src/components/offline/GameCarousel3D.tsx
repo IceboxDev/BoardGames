@@ -275,13 +275,16 @@ export default function GameCarousel3D({
   // letting the body overflow the card's clip edge.
   let compact = cardW < MIN_CARD_W;
   // A narrow container that is ALSO height-bound (the purchase-vote modal
-  // on phones) starves the tower aspect: re-derive at the shorter
-  // NARROW_ASPECT — same height, meaningfully wider — and force the
-  // compact body, whose 2-line title beats the full body's one-line
-  // truncate at these widths. Width-bound phone carousels (cardW ===
-  // widthDriven, i.e. the RSVP picker) never enter this branch.
+  // on phones) starves the tower aspect: re-derive at the exact aspect
+  // that fills the height budget at full width — clamped between
+  // NARROW_ASPECT and the tower ratio — so the card stretches to use ALL
+  // the vertical space it can get, and force the compact body. A container
+  // too short for even NARROW_ASPECT at full width falls back to
+  // height-bound at that floor ratio. Width-bound phone carousels
+  // (cardW === widthDriven at the tower ratio, i.e. the RSVP picker)
+  // never enter this branch.
   if (narrow && cardW < widthDriven) {
-    aspect = NARROW_ASPECT;
+    aspect = Math.min(ASPECT, Math.max(NARROW_ASPECT, heightBudget / widthDriven));
     cardW = Math.max(FLOOR_CARD_W, Math.min(widthDriven, heightBudget / aspect));
     compact = true;
   }

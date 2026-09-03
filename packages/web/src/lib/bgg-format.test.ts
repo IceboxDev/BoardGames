@@ -8,9 +8,11 @@ import {
   fitsLabel,
   fitsRange,
   formatCount,
+  normalizeWeight,
   playerRange,
   playTime,
   stripBggHtml,
+  weightBarWidth,
   weightColor,
   weightLabel,
 } from "./bgg-format";
@@ -151,6 +153,23 @@ describe("weightLabel", () => {
     expect(weightLabel(3.99)).toBe("Medium-heavy");
     expect(weightLabel(4.0)).toBe("Heavy");
     expect(weightLabel(5.0)).toBe("Heavy");
+  });
+});
+
+describe("weightBarWidth", () => {
+  it("keeps a visible nub for the catalog's lightest game", () => {
+    expect(normalizeWeight(weightStats.min)).toBe(0);
+    expect(weightBarWidth(weightStats.min)).toBe(8);
+  });
+
+  it("fills the bar at the catalog's heaviest game", () => {
+    expect(weightBarWidth(weightStats.max)).toBe(100);
+  });
+
+  it("lands mid-weights strictly between the nub and full", () => {
+    const mid = weightBarWidth((weightStats.min + weightStats.max) / 2);
+    expect(mid).toBeGreaterThan(8);
+    expect(mid).toBeLessThan(100);
   });
 });
 

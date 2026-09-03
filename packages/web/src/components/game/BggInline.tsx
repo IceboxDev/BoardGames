@@ -1,5 +1,5 @@
 import type { BggGame } from "../../games/types";
-import { formatCount, normalizeWeight, weightColor, weightLabel } from "../../lib/bgg-format";
+import { formatCount, weightBarWidth, weightColor, weightLabel } from "../../lib/bgg-format";
 import { StarIcon } from "../icons";
 
 // Compact rating + complexity strip used inside carousel cards. Renders
@@ -42,7 +42,7 @@ export function BggInline({ bgg, compact }: { bgg: BggGame; compact: boolean }) 
             <div
               className="absolute inset-y-0 left-0 rounded-full"
               style={{
-                width: `${normalizeWeight(bgg.averageWeight)}%`,
+                width: `${weightBarWidth(bgg.averageWeight)}%`,
                 backgroundColor: weightColor(bgg.averageWeight),
               }}
             />
