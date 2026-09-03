@@ -4,8 +4,10 @@ import {
   coopChallengeSteps,
   coopScorePoolKey,
   coopScorePoolValue,
+  inferQuiztopiaOutcome,
   isMarginCoop,
   QUIZTOPIA_SLUG,
+  quiztopiaLossAt,
 } from "./coop-challenge.ts";
 
 describe("challengeTierIndex", () => {
@@ -66,5 +68,29 @@ describe("coopScorePoolValue / coopScorePoolKey", () => {
     expect(normal).not.toBe(wahnsinn);
     expect(normal).not.toBe(expert);
     expect(coopScorePoolKey("just-one", { score: 11 })).toBe("just-one");
+  });
+});
+
+describe("inferQuiztopiaOutcome / quiztopiaLossAt", () => {
+  it("wins at the tier's required buildings, loses short of it", () => {
+    expect(inferQuiztopiaOutcome("Normal", 8, 3)).toBe("win");
+    expect(inferQuiztopiaOutcome("Normal", 6, 5)).toBe("loss"); // out at 5 lost
+    expect(inferQuiztopiaOutcome("Normal", 7, 2)).toBe("loss"); // questions ran out
+    expect(inferQuiztopiaOutcome("Hölle, Hölle, Hölle", 11, 1)).toBe("win");
+    expect(inferQuiztopiaOutcome("Hölle, Hölle, Hölle", 10, 2)).toBe("loss");
+  });
+
+  it("recognizes a whole-bakery run past the requirement as a win", () => {
+    expect(inferQuiztopiaOutcome("Normal", 12, 0)).toBe("win");
+  });
+
+  it("is null while the record is incomplete", () => {
+    expect(inferQuiztopiaOutcome(undefined, 8, 0)).toBeNull();
+    expect(inferQuiztopiaOutcome("Heroic", 8, 0)).toBeNull();
+    expect(inferQuiztopiaOutcome("Normal", undefined, 0)).toBeNull();
+  });
+
+  it("computes the losing threshold per tier (13 − required)", () => {
+    expect([0, 1, 2, 3].map(quiztopiaLossAt)).toEqual([5, 4, 3, 2]);
   });
 });

@@ -812,8 +812,11 @@ describe("describeOutcomeError — Quiztopia", () => {
     ...over,
   });
 
-  it("accepts a complete Quiztopia record", () => {
+  it("accepts a complete Quiztopia record with the implied outcome stamped", () => {
     expect(describeOutcomeError(quiz({}), "quiztopia")).toBeNull();
+    expect(
+      describeOutcomeError(quiz({ outcome: "loss", score: 6, opponentScore: 5 }), "quiztopia"),
+    ).toBeNull();
   });
 
   it("requires a recognized difficulty tier", () => {
@@ -825,13 +828,24 @@ describe("describeOutcomeError — Quiztopia", () => {
     );
   });
 
-  it("requires both building counts and caps their sum at 12", () => {
+  it("requires both building counts within the tier's real bounds", () => {
     expect(describeOutcomeError(quiz({ opponentScore: undefined }), "quiztopia")).toMatch(
       /buildings/i,
     );
     expect(describeOutcomeError(quiz({ score: 9, opponentScore: 4 }), "quiztopia")).toMatch(
       /exceed/i,
     );
+    // Normal ends lost at 5 buildings gone — 6 can never happen.
+    expect(describeOutcomeError(quiz({ score: 3, opponentScore: 6 }), "quiztopia")).toMatch(
+      /ends lost at 5/i,
+    );
+  });
+
+  it("rejects a stamped outcome that contradicts the counts", () => {
+    // 6 won at Normal is short of the required 8 — a "win" stamp is stale.
+    expect(
+      describeOutcomeError(quiz({ outcome: "win", score: 6, opponentScore: 5 }), "quiztopia"),
+    ).toMatch(/re-check/i);
   });
 
   it("leaves other co-ops untouched", () => {

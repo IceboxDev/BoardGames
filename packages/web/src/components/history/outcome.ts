@@ -5,8 +5,10 @@
 
 import {
   challengeTierIndex,
+  inferQuiztopiaOutcome,
   QUIZTOPIA_BUILDINGS,
   QUIZTOPIA_SLUG,
+  quiztopiaLossAt,
 } from "@boardgames/core/history/coop-challenge";
 import { describeDecryptoRecordError } from "@boardgames/core/history/decrypto-tokens";
 import { describeRoundScoresError } from "@boardgames/core/history/round-scores";
@@ -167,18 +169,26 @@ export function describeOutcomeError(
     case "coop":
       if (isDndSlug(gameSlug)) return describeDndError(outcome);
       if (outcome.participants.length < 1) return "Add at least one participant";
-      // Quiztopia: win/loss AND the buildings split are both required — the
-      // margin is what lets the rating engine compare two wins (or two
-      // losses). Tier thresholds are deliberately NOT enforced: challenges
-      // and the campaign change the win conditions.
+      // Quiztopia: only difficulty + the buildings split are entered; the
+      // win/loss is IMPLIED (reaching the tier's required count wins) and the
+      // form stamps it, so validation checks the counts are complete, within
+      // the tier's real bounds, and consistent with the stamped outcome.
       if (gameSlug === QUIZTOPIA_SLUG) {
-        if (outcome.outcome === undefined) return "Pick won or lost";
-        if (challengeTierIndex(QUIZTOPIA_SLUG, outcome.difficulty) === null)
-          return "Pick the difficulty";
+        const tier = challengeTierIndex(QUIZTOPIA_SLUG, outcome.difficulty);
+        if (tier === null) return "Pick the difficulty";
         if (outcome.score === undefined || outcome.opponentScore === undefined)
-          return `Enter buildings won and lost (0–${QUIZTOPIA_BUILDINGS})`;
+          return "Enter buildings won and lost";
         if (outcome.score + outcome.opponentScore > QUIZTOPIA_BUILDINGS)
           return `Won + lost can't exceed ${QUIZTOPIA_BUILDINGS} buildings`;
+        if (outcome.opponentScore > quiztopiaLossAt(tier))
+          return `The game ends lost at ${quiztopiaLossAt(tier)} buildings lost on this difficulty`;
+        const inferred = inferQuiztopiaOutcome(
+          outcome.difficulty,
+          outcome.score,
+          outcome.opponentScore,
+        );
+        if (inferred !== null && outcome.outcome !== inferred)
+          return "Buildings don't match the recorded result — re-check the counts";
       }
       {
         // Scored co-ops (Just One, Medical Mysteries) bank a team score
