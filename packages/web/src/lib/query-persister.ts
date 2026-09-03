@@ -7,7 +7,10 @@ import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persist
 //     payloads would render with empty Attendees and a hidden tab.
 // v3: the greeting queue moved to /api/greetings with a widened union —
 //     stale ["skills","greeting"] snapshots are dead weight.
-const BUSTER = "v3";
+// v4: admin purchase-vote tally rows gained a required `voterIds` — a
+//     rehydrated pre-v4 poll (validated only at fetch time) crashed the
+//     admin vote tab on `voterIds.length`.
+const BUSTER = "v4";
 
 export const queryPersister =
   typeof window === "undefined"
