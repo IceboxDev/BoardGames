@@ -71,24 +71,16 @@ export function PurchaseVoteModalView({
       eyebrow="Purchase vote"
       eyebrowClassName="text-accent-300"
       title="Vote for the next game purchase"
-      titleClassName="text-xl font-bold tracking-tight text-white xs2:text-2xl sm:text-3xl"
+      // One line on phones — every wrapped header line is carousel height
+      // lost, and the card's size is the whole game on small screens.
+      titleClassName="text-sm font-bold tracking-tight text-white xs2:text-lg sm:text-3xl"
       subheader={
-        <p className="text-xs text-fg-secondary">
-          {view === "saved" ? (
-            `${progress} — the winner is revealed the moment the vote closes.`
-          ) : (
-            <>
-              {/* On phones every subheader line is a line the carousel loses,
-                  so the "you can change your picks" reassurance is desktop-only
-                  and the phone gets the short form. */}
-              Pick up to {VOTES_PER_PLAYER} games, then submit.{" "}
-              <span className="hidden sm:inline">
-                You can change your picks any time until the vote closes —{" "}
-              </span>
-              <span className="sm:hidden">Change them any time — </span>
-              {progress}.
-            </>
-          )}
+        // Same reasoning: the explainer adds nothing a phone voter needs
+        // (the footer already counts picks), so it's desktop-only.
+        <p className="hidden text-xs text-fg-secondary sm:block">
+          {view === "saved"
+            ? `${progress} — the winner is revealed the moment the vote closes.`
+            : `Pick up to ${VOTES_PER_PLAYER} games, then submit. You can change your picks any time until the vote closes — ${progress}.`}
         </p>
       }
     >
@@ -143,7 +135,9 @@ export function PurchaseVoteModalView({
             />
           </div>
 
-          <div className="flex shrink-0 flex-wrap items-center justify-between gap-x-3 gap-y-2">
+          {/* Single row always — the pick tokens truncate before this wraps,
+              and Cancel is redundant with the header X on phones. */}
+          <div className="flex shrink-0 items-center justify-between gap-3">
             <div className="flex min-w-0 items-center gap-2">
               {Array.from({ length: VOTES_PER_PLAYER }, (_, i) => (
                 <span
@@ -164,8 +158,8 @@ export function PurchaseVoteModalView({
                     : `${votesLeft} pick${votesLeft === 1 ? "" : "s"} left`}
               </span>
             </div>
-            <div className="flex items-center gap-2">
-              <Button variant="ghost" size="sm" onClick={onClose}>
+            <div className="flex shrink-0 items-center gap-2">
+              <Button variant="ghost" size="sm" onClick={onClose} className="hidden sm:inline-flex">
                 Cancel
               </Button>
               {/* Gate only on "changed": submitting an EMPTY set is a valid

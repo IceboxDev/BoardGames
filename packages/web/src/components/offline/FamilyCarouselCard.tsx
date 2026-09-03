@@ -145,11 +145,12 @@ export default function FamilyCarouselCard({
       />
       <CarouselBody
         bodyHeight={bodyHeight}
+        cardW={cardW}
         accentHex={active.accentHex}
         title={active.title}
         bgg={active.bgg}
         bestForHeadcount={isBest ? minPlayers : null}
-        description={active.descriptions.default}
+        descriptions={active.descriptions}
         compact={compact}
       />
 

@@ -19,7 +19,6 @@ import {
   NARROW_ASPECT,
   NARROW_CONTAINER_W,
   NewBadge,
-  narrowSpread,
   REF_CARD_H,
   REF_CARD_W,
   VariantStrip,
@@ -291,12 +290,8 @@ export default function GameCarousel3D({
   const bodyH = cardH * (290 / REF_CARD_H);
 
   // 3D constants scale with cardW so the spread/depth stay visually
-  // coherent. On narrow containers the spread additionally gets a floor
-  // that parks the neighbors at the container edge (see narrowSpread) —
-  // a small height-bound card would otherwise leave its neighbors' text
-  // sitting in the leftover width beside it.
-  const spreadBase = cardW * (520 / REF_CARD_W);
-  const spreadMax = narrow ? Math.max(spreadBase, narrowSpread(size.w, cardW)) : spreadBase;
+  // coherent.
+  const spreadMax = cardW * (520 / REF_CARD_W);
   const zMax = cardW * (380 / REF_CARD_W);
   const perspective = cardW * (1600 / REF_CARD_W);
 
@@ -584,11 +579,12 @@ function SingleCarouselCard({
       />
       <CarouselBody
         bodyHeight={bodyHeight}
+        cardW={cardW}
         accentHex={game.accentHex}
         title={game.title}
         bgg={game.bgg}
         bestForHeadcount={isBest ? minPlayers : null}
-        description={game.descriptions.default}
+        descriptions={game.descriptions}
         compact={compact}
       />
     </CarouselCardChrome>

@@ -1,56 +1,48 @@
-import type { BggGame } from "../../games/types";
-import { playerRange, playTime, stripBggHtml } from "../../lib/bgg-format";
+import type { BggGame, GameDescriptions } from "../../games/types";
+import { playerRange, playTime } from "../../lib/bgg-format";
 import { BggInline } from "./BggInline";
+import { planDescription } from "./carousel-description";
 
 // Pixel-height body block for carousel cards. Renders the accent line,
-// title, meta line (player range + best-at + playtime), BggInline, and an
-// optional description with line-clamp-7. Single source of truth — shared
-// by `GameCarousel3D`'s single-game cards and `FamilyCarouselCard`.
+// title, meta line (player range + best-at + playtime), BggInline, and a
+// description sized by `planDescription` — the font scales with the card
+// and the variant (tight/default/loose) is the longest that fits the slot.
+// Single source of truth — shared by `GameCarousel3D`'s single-game cards
+// and `FamilyCarouselCard`.
 
 type Props = {
   bodyHeight: number;
+  /** Card width — drives the description's font scale + variant choice. */
+  cardW: number;
   accentHex: string;
   title: string;
   bgg: BggGame;
   /** When set, prefixes the player range with the amber "best at N" hint. */
   bestForHeadcount: number | null;
-  /** Pre-cleaned description text (caller picks the variant). */
-  description?: string;
+  /** All three length variants — `planDescription` picks the one that fits. */
+  descriptions?: GameDescriptions;
   /** Compact mode for very narrow cards: drop description + complexity bar. */
   compact: boolean;
 };
 
-// Px budget of everything above the description (paddings, gaps, accent
-// line, title, meta, BggInline), measured at the largest pre-3xl font tier
-// so the derived line count is safe at every breakpoint. 3xl's taller
-// description lines are covered by slack: 3xl only renders on MAX-width
-// cards whose body has ~200px to spare. Compact budgets for the 2-line
-// title clamp (~21px/line at text-lg) — a one-line title underuses the
-// slot by a line, which is the safe direction.
-const FIXED_STACK_PX = { full: 175, compact: 157 };
-const DESC_LINE_PX = 16;
-
 export function CarouselBody({
   bodyHeight,
+  cardW,
   accentHex,
   title,
   bgg,
   bestForHeadcount,
-  description,
+  descriptions,
   compact,
 }: Props) {
-  // Clamp the description to the whole lines that actually fit the body's
-  // fixed height. This is what keeps the flex column from over-filling —
+  // Type scale + variant + whole-line clamp for the slot below the fixed
+  // rows. The clamp is what keeps the flex column from over-filling —
   // critical because an over-full flex column shrinks exactly its
-  // overflow-hidden children (the truncated title, the clamped
-  // description), which is how phone-width cards used to slice off the
-  // title's bottom half and cut the description mid-line. The fixed rows
-  // below are additionally `shrink-0` so no future budget miss can ever
-  // squeeze them again.
-  const descLines = Math.min(
-    compact ? 3 : 7,
-    Math.floor((bodyHeight - FIXED_STACK_PX[compact ? "compact" : "full"]) / DESC_LINE_PX),
-  );
+  // overflow-hidden children, which is how phone-width cards used to slice
+  // off the title's bottom half and cut the description mid-line. The fixed
+  // rows are additionally `shrink-0` so no budget miss can ever squeeze
+  // them.
+  const plan = planDescription({ cardW, bodyHeight, compact, title, descriptions });
   return (
     // `overflow-hidden` so an over-budget body can never spill past the card's
     // rounded clip edge with a mid-line text cut — the clamps below make that
@@ -64,13 +56,16 @@ export function CarouselBody({
         style={{ backgroundColor: accentHex }}
         aria-hidden="true"
       />
-      {/* Compact cards are NARROW cards — a one-line truncate turns half the
-          catalog into "Dune: Imperium –…", so they wrap to two clamped lines
-          instead. Full-size cards keep the single-line look. */}
+      {/* Compact titles are FITTED to one line (the plan shrinks the font to
+          the title's length); the 2-line clamp only catches titles too long
+          for even the floor size. Full-size cards keep the single-line
+          truncate, with the size growing alongside the description on
+          larger-than-reference cards. */}
       <h3
         className={`shrink-0 font-bold leading-tight text-white ${
-          compact ? "line-clamp-2 text-lg" : "truncate text-xl"
+          compact ? "line-clamp-2" : "truncate"
         }`}
+        style={{ fontSize: plan.titleFontPx }}
       >
         {title}
       </h3>
@@ -85,20 +80,20 @@ export function CarouselBody({
 
       <BggInline bgg={bgg} compact={compact} />
 
-      {description && descLines >= 2 && (
-        // The line-clamp class supplies the -webkit-box scaffolding; the
-        // actual line count is the height-derived `descLines` (inline
-        // override), so truncation always lands on a whole-line ellipsis.
-        // Font sizes still scale with breakpoint for readability on big
-        // screens, but `leading-snug` is pinned so line-height stays
-        // predictable. On a full-size (380px+) card this resolves to the
-        // original 7-line budget; phone-width cards get the 3–5 lines
-        // they truly have room for.
+      {plan.text != null && (
+        // The line-clamp class supplies the -webkit-box scaffolding; count,
+        // font and leading come from the plan (inline overrides), so
+        // truncation always lands on a whole-line ellipsis and the text
+        // grows with the card instead of drowning in it.
         <p
-          className="line-clamp-7 text-3xs leading-snug text-fg-secondary sm:text-2xs xl:text-xs 3xl:text-sm"
-          style={{ WebkitLineClamp: descLines }}
+          className="line-clamp-7 text-fg-secondary"
+          style={{
+            WebkitLineClamp: plan.maxLines,
+            fontSize: plan.fontPx,
+            lineHeight: `${plan.lineHeightPx}px`,
+          }}
         >
-          {stripBggHtml(description)}
+          {plan.text}
         </p>
       )}
     </div>

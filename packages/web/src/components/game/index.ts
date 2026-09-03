@@ -22,7 +22,6 @@ export {
   MIN_CARD_W,
   NARROW_ASPECT,
   NARROW_CONTAINER_W,
-  narrowSpread,
   OPACITY_MIN,
   REF_CARD_H,
   REF_CARD_W,
