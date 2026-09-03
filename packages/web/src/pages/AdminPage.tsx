@@ -9,6 +9,7 @@ import {
   GuestPlayersCard,
   InactiveToggleRow,
   PreRegisterCard,
+  PurchaseVoteCard,
   ResetLinkModal,
   SkillRatingsCard,
   UserRow,
@@ -296,6 +297,7 @@ export default function AdminPage() {
         )}
 
         <PreRegisterCard />
+        <PurchaseVoteCard />
         <AnnouncementsCard />
         <SkillRatingsCard />
         <GuestPlayersCard

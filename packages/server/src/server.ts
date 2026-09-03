@@ -1,6 +1,6 @@
 import { AuthConfigSchema, WsTicketResponseSchema } from "@boardgames/core/protocol";
 import { createNodeWebSocket } from "@hono/node-ws";
-import { Hono } from "hono";
+import { type Context, Hono } from "hono";
 import { bodyLimit } from "hono/body-limit";
 import { cors } from "hono/cors";
 import { requireAgent } from "./auth/agent-auth.ts";
@@ -25,6 +25,7 @@ import { adminMergeGuestRoutes } from "./auth-routes/admin-merge-guest.ts";
 import { adminOnlineRoutes } from "./auth-routes/admin-online.ts";
 import { adminPasswordResetRoutes } from "./auth-routes/admin-password-reset.ts";
 import { adminPendingInventoryRoutes } from "./auth-routes/admin-pending-inventory.ts";
+import { adminPurchaseVoteRoutes } from "./auth-routes/admin-purchase-vote.ts";
 import { adminSkillsRoutes } from "./auth-routes/admin-skills.ts";
 import { agentRoutes } from "./auth-routes/agent.ts";
 import { announcementRoutes } from "./auth-routes/announcements.ts";
@@ -41,15 +42,17 @@ import { calendarRsvpsRoutes } from "./auth-routes/calendar-rsvps.ts";
 import { collectionRoutes } from "./auth-routes/collection.ts";
 import { collectionVocabRoutes } from "./auth-routes/collection-vocab.ts";
 import { dndCampaignRoutes } from "./auth-routes/dnd-campaigns.ts";
+import { greetingsRoutes } from "./auth-routes/greetings.ts";
 import { matchHistoryRoutes } from "./auth-routes/match-history.ts";
 import { profileRoutes } from "./auth-routes/profile.ts";
 import { profileInsightsRoutes } from "./auth-routes/profile-insights.ts";
+import { purchaseVoteRoutes } from "./auth-routes/purchase-vote.ts";
 import { purchaseRoutes } from "./auth-routes/purchases.ts";
 import { skillsRoutes } from "./auth-routes/skills.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
+import { probeAi } from "./lib/ai/index.ts";
 import { requireTrustedOrigin } from "./lib/csrf.ts";
-import { probeOpenAI } from "./lib/dnd-extract.ts";
 import { errorResponse } from "./lib/error-response.ts";
 import { allowedOrigins } from "./lib/origins.ts";
 import { clientIp, rateLimit } from "./lib/rate-limit.ts";
@@ -128,11 +131,11 @@ app.get("/api/auth-config", (c) =>
   c.json(AuthConfigSchema.parse({ googleEnabled: Boolean(process.env.GOOGLE_CLIENT_ID) })),
 );
 
-// OpenAI reachability from THIS host. `?gen=1` runs a REAL generation and
+// AI-gateway reachability from THIS host. `?gen=1` runs a REAL generation and
 // therefore costs money on every call, so it is admin-only — it was previously
 // unauthenticated, i.e. anyone on the internet could bill the owner's account
 // in a loop. The free reachability check stays open so uptime probes work.
-app.get("/api/health/openai", async (c) => {
+const aiHealthHandler = async (c: Context) => {
   const wantsGeneration = c.req.query("gen") === "1";
   if (wantsGeneration) {
     const session = await auth.api.getSession({ headers: c.req.raw.headers });
@@ -140,9 +143,12 @@ app.get("/api/health/openai", async (c) => {
       return c.json({ error: "forbidden", code: "admin_required" }, 403);
     }
   }
-  const result = await probeOpenAI(wantsGeneration);
+  const result = await probeAi(wantsGeneration);
   return c.json(result, result.ok ? 200 : 502);
-});
+};
+app.get("/api/health/ai", aiHealthHandler);
+// Legacy alias — keep until uptime monitors are repointed at /api/health/ai.
+app.get("/api/health/openai", aiHealthHandler);
 
 // `commit` verifies WHICH build is live (Railway injects the SHA) — deploy
 // races have burned us before ("the fix doesn't work" while it was rolling).
@@ -195,6 +201,7 @@ app.route("/api/admin", adminAnnouncementRoutes);
 app.route("/api/admin/calendar", adminCalendarLocksRoutes);
 app.route("/api/admin/history", adminMatchHistoryRoutes);
 app.route("/api/admin/skills", adminSkillsRoutes);
+app.route("/api/admin/purchase-vote", adminPurchaseVoteRoutes);
 
 // --- Protected: any logged-in user ---
 app.use("/api/user/*", requireAuth);
@@ -233,6 +240,21 @@ app.route("/api/profiles", avatarRoutes);
 // static segments never race the `/:userId` param routes.
 app.use("/api/skills/*", requireAuth, requireOffline);
 app.route("/api/skills", skillsRoutes);
+
+// The app-wide greeting queue: plain requireAuth — the route itself serves
+// null to online-only accounts (its kinds all point at offline features).
+app.use("/api/greetings/*", requireAuth);
+app.route("/api/greetings", greetingsRoutes);
+
+// Purchase vote: an offline-group feature like skills. Write-capped — a
+// player toggling votes is bursty but small.
+app.use(
+  "/api/purchase-vote/*",
+  requireAuth,
+  requireOffline,
+  rateLimit({ name: "purchase-vote-write", windowMs: 60_000, max: 30, skipSafeMethods: true }),
+);
+app.route("/api/purchase-vote", purchaseVoteRoutes);
 
 // Collection manager + ownership announcements: offline-player features like
 // profiles (a collection page is a profile sub-page).

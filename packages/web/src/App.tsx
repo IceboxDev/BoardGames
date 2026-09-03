@@ -1,3 +1,4 @@
+import { defaultShouldDehydrateQuery } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import { lazy, Suspense } from "react";
@@ -10,6 +11,7 @@ import {
 } from "react-router-dom";
 import { AuthGuard } from "./components/AuthGuard";
 import { AuthInvalidator } from "./components/AuthInvalidator";
+import { GreetingGate } from "./components/GreetingGate";
 import Layout from "./components/Layout";
 import { PageViewTracker } from "./components/PageViewTracker";
 import { RouteErrorBoundary } from "./components/RouteErrorBoundary";
@@ -43,6 +45,7 @@ const DndToolPreview = import.meta.env.DEV
   ? lazy(() => import("./pages/DndToolPreview"))
   : () => null;
 const RsvpPreview = import.meta.env.DEV ? lazy(() => import("./pages/RsvpPreview")) : () => null;
+const VotePreview = import.meta.env.DEV ? lazy(() => import("./pages/VotePreview")) : () => null;
 const DecryptoPreview = import.meta.env.DEV
   ? lazy(() => import("./pages/DecryptoPreview"))
   : () => null;
@@ -120,6 +123,7 @@ function RootShell() {
     <>
       <AuthInvalidator />
       <PageViewTracker />
+      <GreetingGate />
       <RouteErrorBoundary>
         <Suspense fallback={null}>
           <Outlet />
@@ -289,6 +293,7 @@ const router = createBrowserRouter(
           <Route path="dev/exit-preview" element={<ExitNightPreview />} />
           <Route path="dev/dnd-tool-preview" element={<DndToolPreview />} />
           <Route path="dev/rsvp-preview" element={<RsvpPreview />} />
+          <Route path="dev/vote-preview" element={<VotePreview />} />
           <Route path="dev/decrypto-preview" element={<DecryptoPreview />} />
           <Route path="dev/skill-preview" element={<SkillPreview />} />
           <Route path="dev/jaipur-preview" element={<JaipurHistoryPreview />} />
@@ -318,6 +323,12 @@ export default function App() {
         persister: queryPersister,
         maxAge: 24 * 60 * 60 * 1000,
         buster: queryPersistBuster,
+        // The greeting queue must never hydrate from disk: a nag popup has to
+        // re-evaluate against the server on every app open.
+        dehydrateOptions: {
+          shouldDehydrateQuery: (q) =>
+            defaultShouldDehydrateQuery(q) && q.queryKey[0] !== "greetings",
+        },
       }}
     >
       <RouterProvider router={router} />

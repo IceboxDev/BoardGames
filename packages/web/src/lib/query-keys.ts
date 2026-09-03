@@ -27,7 +27,12 @@ export const qk = {
   profileNights: (userId: string) => ["profile", userId, "nights"] as const,
   skillPlayer: (userId: string) => ["skills", "player", userId] as const,
   skillLeaderboards: () => ["skills", "leaderboards"] as const,
-  greeting: () => ["skills", "greeting"] as const,
+  // App-wide greeting queue. Root key "greetings" is matched by name in the
+  // persister exclusion (App.tsx) — a nag must re-evaluate every app open,
+  // never hydrate from disk.
+  greetings: () => ["greetings"] as const,
+  purchaseVote: () => ["purchase-vote"] as const,
+  adminPurchaseVote: () => ["admin", "purchase-vote"] as const,
   collection: (userId: string) => ["collection", userId] as const,
   purchases: (userId: string) => ["purchases", userId] as const,
   adminAnnouncements: () => ["admin", "announcements"] as const,

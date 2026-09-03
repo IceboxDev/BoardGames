@@ -1,9 +1,4 @@
 import {
-  type GreetingAckBody,
-  GreetingAckBodySchema,
-  GreetingAckResponseSchema,
-  type GreetingResponse,
-  GreetingResponseSchema,
   type PlayerSkillResponse,
   PlayerSkillResponseSchema,
   type SkillLeaderboardsResponse,
@@ -30,16 +25,5 @@ export async function fetchSkillLeaderboards(
   });
 }
 
-/** The one celebratory takeover this viewer still owes a look at, if any. */
-export async function fetchGreeting(signal?: AbortSignal): Promise<GreetingResponse> {
-  return apiFetch("/api/skills/greeting", { response: GreetingResponseSchema, signal });
-}
-
-export async function ackGreeting(body: GreetingAckBody): Promise<void> {
-  await apiFetch("/api/skills/greeting/ack", {
-    method: "POST",
-    request: GreetingAckBodySchema,
-    body,
-    response: GreetingAckResponseSchema,
-  });
-}
+// The greeting fetchers moved to `lib/greetings.ts` — the queue is app-wide
+// now (`/api/greetings`), not a skills feature.

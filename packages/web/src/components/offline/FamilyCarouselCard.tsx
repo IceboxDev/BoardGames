@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import type { FamilyInfo } from "../../games/families";
 import type { GameDefinition } from "../../games/types";
 import { fitsLabel, fitsRange, isBestForHeadcount } from "../../lib/bgg-format";
@@ -38,6 +39,10 @@ type Props = {
   maxPlayers: number;
   date: string;
   reactions: Record<string, ReactionAggregate>;
+  /** Overrides the reactions widget in the thumb overlay slot (see GameCarousel3D). */
+  renderThumbOverlay?: (game: GameDefinition, isCenter: boolean, compact: boolean) => ReactNode;
+  /** Paint the freshly-added treatment (see GameCarousel3D). */
+  highlightNew: boolean;
   onClick: () => void;
 
   cardW: number;
@@ -59,6 +64,8 @@ export default function FamilyCarouselCard({
   maxPlayers,
   date,
   reactions,
+  renderThumbOverlay,
+  highlightNew,
   onClick,
   cardW,
   cardH,
@@ -78,7 +85,7 @@ export default function FamilyCarouselCard({
   // the freshly-added one — "The Worst Takes it All" is new, its sibling
   // "Introduction to Evil" is not, so the badge follows the chip you're on.
   // Takes precedence over best-for-headcount.
-  const isNew = active.isNew === true;
+  const isNew = highlightNew && active.isNew === true;
   const aggregate = reactions[active.slug];
 
   return (
@@ -121,7 +128,9 @@ export default function FamilyCarouselCard({
           ) : undefined
         }
         overlay={
-          date ? (
+          renderThumbOverlay ? (
+            renderThumbOverlay(active, isCenter, compact)
+          ) : date ? (
             <GameReactions
               date={date}
               slug={active.slug}

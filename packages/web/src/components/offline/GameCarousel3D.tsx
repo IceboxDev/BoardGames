@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { type ReactNode, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { groupForPresentation, type PresentationUnit } from "../../games/families";
 import type { GameDefinition } from "../../games/types";
 import { fitsLabel, fitsRange, isBestForHeadcount } from "../../lib/bgg-format";
@@ -36,6 +36,20 @@ type Props = {
   /** Date key — used as the scope for reactions. Empty string = no reactions UI. */
   date: string;
   reactions: Record<string, ReactionAggregate>;
+  /**
+   * Replaces the default reactions widget in the thumb's bottom-center
+   * overlay slot (the purchase-vote carousel drops its Vote chip here).
+   * When set, `date`/`reactions` are ignored for the overlay. Note that
+   * family members collapse into one card — the overlay receives whichever
+   * member is active.
+   */
+  renderThumbOverlay?: (game: GameDefinition, isCenter: boolean, compact: boolean) => ReactNode;
+  /**
+   * Paint the freshly-added treatment (green ring + NEW badge). On by
+   * default; the purchase-vote carousel turns it off — every candidate is
+   * equally "on the ballot" and the highlight would read as an endorsement.
+   */
+  highlightNew?: boolean;
 };
 
 // Swipe thresholds — distance OR flick velocity advances the carousel.
@@ -44,7 +58,15 @@ const SWIPE_VELOCITY_PX_S = 400;
 // Finger-follow resistance while dragging the stack sideways.
 const DRAG_FOLLOW = 0.55;
 
-export default function GameCarousel3D({ games, minPlayers, maxPlayers, date, reactions }: Props) {
+export default function GameCarousel3D({
+  games,
+  minPlayers,
+  maxPlayers,
+  date,
+  reactions,
+  renderThumbOverlay,
+  highlightNew = true,
+}: Props) {
   // Project games into presentation units — families collapse to one
   // card, singletons stay as-is. The carousel navigates over UNITS, not
   // games.
@@ -343,6 +365,8 @@ export default function GameCarousel3D({ games, minPlayers, maxPlayers, date, re
                   maxPlayers={maxPlayers}
                   date={date}
                   aggregate={reactions[unit.game.slug]}
+                  renderThumbOverlay={renderThumbOverlay}
+                  highlightNew={highlightNew}
                   onClick={() => setCenter(i)}
                   cardW={cardW}
                   cardH={cardH}
@@ -366,6 +390,8 @@ export default function GameCarousel3D({ games, minPlayers, maxPlayers, date, re
                 maxPlayers={maxPlayers}
                 date={date}
                 reactions={reactions}
+                renderThumbOverlay={renderThumbOverlay}
+                highlightNew={highlightNew}
                 onClick={() => setCenter(i)}
                 cardW={cardW}
                 cardH={cardH}
@@ -453,6 +479,8 @@ type SingleCardProps = {
   maxPlayers: number;
   date: string;
   aggregate: ReactionAggregate | undefined;
+  renderThumbOverlay?: (game: GameDefinition, isCenter: boolean, compact: boolean) => ReactNode;
+  highlightNew: boolean;
   onClick: () => void;
   cardW: number;
   cardH: number;
@@ -470,6 +498,8 @@ function SingleCarouselCard({
   maxPlayers,
   date,
   aggregate,
+  renderThumbOverlay,
+  highlightNew,
   onClick,
   cardW,
   cardH,
@@ -483,7 +513,7 @@ function SingleCarouselCard({
   const fits = fitsRange(game, minPlayers, maxPlayers);
   const isBest = isBestForHeadcount(game, minPlayers);
   // Freshly-added games take precedence over the headcount treatment.
-  const isNew = game.isNew === true;
+  const isNew = highlightNew && game.isNew === true;
 
   return (
     <CarouselCardChrome
@@ -517,7 +547,9 @@ function SingleCarouselCard({
           ) : undefined
         }
         overlay={
-          date ? (
+          renderThumbOverlay ? (
+            renderThumbOverlay(game, isCenter, compact)
+          ) : date ? (
             <GameReactions
               date={date}
               slug={game.slug}

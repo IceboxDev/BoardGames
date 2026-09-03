@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { ArrowRightIcon, LockIcon, UserIcon, UsersIcon } from "../components/icons";
 import CalendarSyncCard from "../components/profile/CalendarSyncCard";
 import CalendarSyncModal from "../components/profile/CalendarSyncModal";
-import GreetingHost from "../components/profile/skill/GreetingHost";
 import { TopNav, TopNavLink } from "../components/TopNav";
 import { Button } from "../components/ui/Button";
 import { InteractiveCard } from "../components/ui/InteractiveCard";
@@ -46,59 +45,55 @@ export default function ProfilePage() {
     >
       {/* Width cap + centering come from PageShell's `centeredWidth` — the
           shell owns the <main>, so pages never hand-roll a max-w wrapper. */}
-      <>
-        <PageHeader
-          align="center"
-          size="xl"
-          eyebrow="Welcome"
-          title={user?.name ? user.name.split(" ")[0] : "Player"}
-          subtitle="Choose how you'd like to play."
-          className="mb-12"
-        />
+      <PageHeader
+        align="center"
+        size="xl"
+        eyebrow="Welcome"
+        title={user?.name ? user.name.split(" ")[0] : "Player"}
+        subtitle="Choose how you'd like to play."
+        className="mb-12"
+      />
 
-        <div className="grid gap-4 sm:grid-cols-2">
-          <ModeButton
-            title="Online"
-            subtitle={onlineUnlocked ? "Multiplayer & live games" : "Locked — ask the admin"}
-            locked={!onlineUnlocked}
-            onClick={() => navigate("/games")}
-            accent
+      <div className="grid gap-4 sm:grid-cols-2">
+        <ModeButton
+          title="Online"
+          subtitle={onlineUnlocked ? "Multiplayer & live games" : "Locked — ask the admin"}
+          locked={!onlineUnlocked}
+          onClick={() => navigate("/games")}
+          accent
+        />
+        <ModeButton
+          title="Offline"
+          subtitle="Plan in-person game nights"
+          onClick={() => navigate("/offline")}
+        />
+      </div>
+
+      {profilesVisible && (
+        <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          <NavCard
+            icon={<UserIcon className="h-4 w-4" />}
+            title="My profile"
+            subtitle="Library, stats & badges"
+            onClick={() => userId && navigate(`/u/${userId}`)}
           />
-          <ModeButton
-            title="Offline"
-            subtitle="Plan in-person game nights"
-            onClick={() => navigate("/offline")}
+          <NavCard
+            icon={<UsersIcon className="h-4 w-4" />}
+            title="Players"
+            subtitle="Browse the group"
+            onClick={() => navigate("/players")}
           />
         </div>
+      )}
 
-        {profilesVisible && (
-          <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-            <NavCard
-              icon={<UserIcon className="h-4 w-4" />}
-              title="My profile"
-              subtitle="Library, stats & badges"
-              onClick={() => userId && navigate(`/u/${userId}`)}
-            />
-            <NavCard
-              icon={<UsersIcon className="h-4 w-4" />}
-              title="Players"
-              subtitle="Browse the group"
-              onClick={() => navigate("/players")}
-            />
-          </div>
-        )}
+      <CalendarSyncCard onClick={() => setSyncModalOpen(true)} />
 
-        {profilesVisible && userId && <GreetingHost userId={userId} />}
-
-        <CalendarSyncCard onClick={() => setSyncModalOpen(true)} />
-
-        {!onlineUnlocked && (
-          <p className="mt-8 text-center text-xs text-fg-muted">
-            Your account is signed in but online play hasn't been unlocked for you yet. The
-            administrator can grant access from the admin panel.
-          </p>
-        )}
-      </>
+      {!onlineUnlocked && (
+        <p className="mt-8 text-center text-xs text-fg-muted">
+          Your account is signed in but online play hasn't been unlocked for you yet. The
+          administrator can grant access from the admin panel.
+        </p>
+      )}
 
       {syncModalOpen && <CalendarSyncModal onClose={() => setSyncModalOpen(false)} />}
     </PageShell>

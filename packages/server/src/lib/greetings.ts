@@ -79,6 +79,30 @@ const ViewerRowSchema = z.object({
   greeting_seen_id: z.number().nullable(),
 });
 
+// Acknowledgements are idempotent and monotonic in both arms: the intro keeps
+// its first timestamp, and the seen id only ever moves forward, so a stale tab
+// acking an older spotlight can't re-open a newer one.
+
+export async function ackSkillIntro(userId: string): Promise<void> {
+  await getDb().execute({
+    sql: `INSERT INTO user_profiles (user_id, skill_intro_seen_at, updated_at)
+          VALUES (?, datetime('now'), datetime('now'))
+          ON CONFLICT(user_id) DO UPDATE SET
+            skill_intro_seen_at = COALESCE(user_profiles.skill_intro_seen_at, excluded.skill_intro_seen_at)`,
+    args: [userId],
+  });
+}
+
+export async function ackSpotlight(userId: string, greetingId: number): Promise<void> {
+  await getDb().execute({
+    sql: `INSERT INTO user_profiles (user_id, greeting_seen_id, updated_at)
+          VALUES (?, ?, datetime('now'))
+          ON CONFLICT(user_id) DO UPDATE SET
+            greeting_seen_id = MAX(COALESCE(user_profiles.greeting_seen_id, 0), excluded.greeting_seen_id)`,
+    args: [userId, greetingId],
+  });
+}
+
 /**
  * The one greeting this viewer should see next, or null.
  *

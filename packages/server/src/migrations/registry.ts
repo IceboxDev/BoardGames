@@ -40,6 +40,7 @@ import { collectionExtraBoxes } from "./0032-collection-extra-boxes.ts";
 import { skillRatings } from "./0033-skill-ratings.ts";
 import { skillGreetings } from "./0034-skill-greetings.ts";
 import { lockedDatesSoftUnlock } from "./0035-locked-dates-soft-unlock.ts";
+import { purchasePolls } from "./0036-purchase-polls.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -78,6 +79,7 @@ export const migrations: readonly Migration[] = [
   skillRatings,
   skillGreetings,
   lockedDatesSoftUnlock,
+  purchasePolls,
 ];
 
 /**

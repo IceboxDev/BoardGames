@@ -5,7 +5,9 @@ import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persist
 // type). The persister discards any snapshot that doesn't match.
 // v2: AvailableGames gained `topSlugs` and `attendees` fields — old cached
 //     payloads would render with empty Attendees and a hidden tab.
-const BUSTER = "v2";
+// v3: the greeting queue moved to /api/greetings with a widened union —
+//     stale ["skills","greeting"] snapshots are dead weight.
+const BUSTER = "v3";
 
 export const queryPersister =
   typeof window === "undefined"

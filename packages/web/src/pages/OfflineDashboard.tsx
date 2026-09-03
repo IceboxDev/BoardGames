@@ -6,6 +6,7 @@ import { AvailabilityActionBar } from "../components/offline/AvailabilityActionB
 import Calendar from "../components/offline/Calendar";
 import LockInModal from "../components/offline/LockInModal";
 import RsvpModal from "../components/offline/RsvpModal";
+import { PurchaseVoteBanner } from "../components/purchase-vote/PurchaseVoteBanner";
 import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
 import { ErrorAlert } from "../components/ui/ErrorAlert";
 import { PageMain, PageShell } from "../components/ui/PageShell";
@@ -332,6 +333,7 @@ export default function OfflineDashboard() {
       }
     >
       <PageMain width="full" padding="tight" fillHeight className="gap-2">
+        <PurchaseVoteBanner />
         {failedQuery && (
           <ErrorAlert
             className="shrink-0"
