@@ -9,9 +9,12 @@
 import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
-  tight: "Euro-style tableau engine game where players play birds, run habitat actions to trigger row powers, and win on total points after four rounds.",
-  default: "Engine-building tableau game where each player builds three habitat rows of bird cards, mostly on their own board. On a turn, place a cube to gain food from dice, lay eggs, draw from the face-up birds, or pay food plus eggs to play a bird.",
-  loose: "Engine-building tableau game where each player builds three habitat rows of bird cards, mostly on their own board. On a turn, place a cube to gain food from dice, lay eggs, draw from the face-up birds, or pay food plus eggs to play a bird. Row actions trigger bird powers in order, and after four rounds the high score wins from birds, goals, bonus cards, eggs, cached food, and tucked cards. A birdhouse dice tower and pastel egg tokens are the signature table pieces.",
+  tight:
+    "Euro-style tableau engine game where players play birds, run habitat actions to trigger row powers, and win on total points after four rounds.",
+  default:
+    "Engine-building tableau game where each player builds three habitat rows of bird cards, mostly on their own board. On a turn, place a cube to gain food from dice, lay eggs, draw from the face-up birds, or pay food plus eggs to play a bird.",
+  loose:
+    "Engine-building tableau game where each player builds three habitat rows of bird cards, mostly on their own board. On a turn, place a cube to gain food from dice, lay eggs, draw from the face-up birds, or pay food plus eggs to play a bird. Row actions trigger bird powers in order, and after four rounds the high score wins from birds, goals, bonus cards, eggs, cached food, and tucked cards. A birdhouse dice tower and pastel egg tokens are the signature table pieces.",
 };
 
 export const meta = {
@@ -23,6 +26,6 @@ export const meta = {
     "https://arstechnica.com/gaming/2019/03/wingspan-review-a-gorgeous-birding-board-game-takes-flight/",
     "https://wingspan.rulepop.com/",
     "https://www.wargamer.com/wingspan/review",
-    "https://boardgamegeek.com/wiki/page/thing:266192"
+    "https://boardgamegeek.com/wiki/page/thing:266192",
   ],
 } as const;

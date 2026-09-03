@@ -9,9 +9,12 @@
 import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
-  tight: "Heavy asymmetric economic-politics strategy where players spend action cards to run companies, place workers, and steer policy votes for VP.",
-  default: "Heavy asymmetric politico-economic strategy about steering a social class in a modern nation. On a turn, play 1 card (or discard it) to assign workers, run/build companies, buy needs, or propose bills. After 5 rounds, most VP wins from policy positions, class goals, cash/resources, and loan penalties.",
-  loose: "Heavy asymmetric politico-economic simulation where each class fights over wages, taxes, and seven policy tracks. Turns use hand management: pick a card for its effect or pitch it for a basic action like assign workers, build/sell a company, strike, lobby, or add a bill. Production pays wages and makes goods/services, then elections vote on bills, and after 5 rounds the most VP wins. Elections pull 5 voting cubes from a bag, then players reveal spent influence to add extra votes.",
+  tight:
+    "Heavy asymmetric economic-politics strategy where players spend action cards to run companies, place workers, and steer policy votes for VP.",
+  default:
+    "Heavy asymmetric politico-economic strategy about steering a social class in a modern nation. On a turn, play 1 card (or discard it) to assign workers, run/build companies, buy needs, or propose bills. After 5 rounds, most VP wins from policy positions, class goals, cash/resources, and loan penalties.",
+  loose:
+    "Heavy asymmetric politico-economic simulation where each class fights over wages, taxes, and seven policy tracks. Turns use hand management: pick a card for its effect or pitch it for a basic action like assign workers, build/sell a company, strike, lobby, or add a bill. Production pays wages and makes goods/services, then elections vote on bills, and after 5 rounds the most VP wins. Elections pull 5 voting cubes from a bag, then players reveal spent influence to add extra votes.",
 };
 
 export const meta = {
@@ -23,6 +26,6 @@ export const meta = {
     "https://www.rulespal.com/hegemony/rulebook",
     "https://www.meeplemountain.com/reviews/hegemony-lead-your-class-to-victory/",
     "https://punchboard.co.uk/hegemony-board-game-review/",
-    "https://merchantsofplay.com/howtoplay/hegemony-lead-your-class-to-victory/"
+    "https://merchantsofplay.com/howtoplay/hegemony-lead-your-class-to-victory/",
   ],
 } as const;

@@ -9,9 +9,12 @@
 import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
-  tight: "Hand-management racing game where drivers pick speed cards in secret, then spend Heat to boost and survive corners to finish first.",
-  default: "Hand-management racing game about timing speed bursts without cooking the engine. Each round, drivers shift gears, play cards equal to gear, reveal and move, then spend Heat to boost and to pay for corner speed limits. First car across the finish line after the final lap wins.",
-  loose: "Hand-management racing game where the main puzzle is setting up the right hand for the next straight and the next corner. Each round, drivers shift gears, then choose and play that many cards face down before turns resolve from the front of the pack. Speed totals move the car, and corners force Heat payments; extra icons trigger boosts, cooldown, and slipstream jumps. Finish the last lap first to win, with Heat cards sitting dead in hand until cooldown returns them to the engine.",
+  tight:
+    "Hand-management racing game where drivers pick speed cards in secret, then spend Heat to boost and survive corners to finish first.",
+  default:
+    "Hand-management racing game about timing speed bursts without cooking the engine. Each round, drivers shift gears, play cards equal to gear, reveal and move, then spend Heat to boost and to pay for corner speed limits. First car across the finish line after the final lap wins.",
+  loose:
+    "Hand-management racing game where the main puzzle is setting up the right hand for the next straight and the next corner. Each round, drivers shift gears, then choose and play that many cards face down before turns resolve from the front of the pack. Speed totals move the car, and corners force Heat payments; extra icons trigger boosts, cooldown, and slipstream jumps. Finish the last lap first to win, with Heat cards sitting dead in hand until cooldown returns them to the engine.",
 };
 
 export const meta = {
@@ -22,6 +25,6 @@ export const meta = {
     "https://opinionatedgamers.com/2023/01/27/dale-yu-review-of-heat-pedal-to-the-metal/",
     "https://www.boardgamequest.com/heat-pedal-to-the-metal-review/",
     "https://shelfgamer.com/reviews/heat-pedal-to-the-metal/",
-    "https://en.wikipedia.org/wiki/Heat:_Pedal_to_the_Metal"
+    "https://en.wikipedia.org/wiki/Heat:_Pedal_to_the_Metal",
   ],
 } as const;

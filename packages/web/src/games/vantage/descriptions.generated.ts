@@ -9,9 +9,12 @@
 import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
-  tight: "Co-op open-world adventure where players pick one action, spend skill tokens, roll challenge dice, and park results on a 3x3 card grid to avoid penalties.",
-  default: "Co-op open-world adventure where separated explorers roam different locations and share intel aloud. Each turn, a player chooses one action, reads its storybook entry, and spends matching skill tokens to cut cost.",
-  loose: "Co-op open-world adventure where separated explorers roam different locations and share intel aloud. Each turn, a player chooses one action, reads its storybook entry, and spends matching skill tokens to cut cost. They roll challenge dice for the rest, cover results with matching slots on a 3x3 card grid, and lose time/morale/health for leftovers. The group wins by completing the mission, a found destiny, or both before any tracker hits 0; each location card stays hidden in a holder.",
+  tight:
+    "Co-op open-world adventure where players pick one action, spend skill tokens, roll challenge dice, and park results on a 3x3 card grid to avoid penalties.",
+  default:
+    "Co-op open-world adventure where separated explorers roam different locations and share intel aloud. Each turn, a player chooses one action, reads its storybook entry, and spends matching skill tokens to cut cost.",
+  loose:
+    "Co-op open-world adventure where separated explorers roam different locations and share intel aloud. Each turn, a player chooses one action, reads its storybook entry, and spends matching skill tokens to cut cost. They roll challenge dice for the rest, cover results with matching slots on a 3x3 card grid, and lose time/morale/health for leftovers. The group wins by completing the mission, a found destiny, or both before any tracker hits 0; each location card stays hidden in a holder.",
 };
 
 export const meta = {
@@ -25,6 +28,6 @@ export const meta = {
     "https://www.wargamer.com/vantage/board-game-review",
     "https://www.avclub.com/the-board-game-vantage-is-too-big-for-its-own-good",
     "https://meepleandthemoose.com/2026/04/29/vantage-board-game-review/",
-    "https://www.player2.net.au/2026/06/vantage-review-its-just-a-box-of-cards/"
+    "https://www.player2.net.au/2026/06/vantage-review-its-just-a-box-of-cards/",
   ],
 } as const;

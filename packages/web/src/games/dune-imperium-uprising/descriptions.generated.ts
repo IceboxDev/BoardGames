@@ -9,9 +9,12 @@
 import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
-  tight: "Deck-building worker-placement battle game: play a card to place an agent, then reveal hand to buy cards and fight.",
-  default: "Competitive deck-building worker-placement game with a Conflict battle each round. Play one card to place an agent; the chosen space pays resources, influence, troops, or a face-down Intrigue. Reveal leftover cards to buy new cards and add battle strength; when someone hits 10+ VP or the Conflict deck runs out, most VP wins.",
-  loose: "Competitive deck-building worker-placement game with a Conflict battle each round. Play one card to place an agent; the chosen space pays resources, influence, troops, or a face-down Intrigue. Reveal leftover cards to buy new cards and add battle strength; when someone hits 10+ VP or the Conflict deck runs out, most VP wins. Spies on observation posts let agents ignore blocking, and sandworms enter combat to double Conflict rewards.",
+  tight:
+    "Deck-building worker-placement battle game: play a card to place an agent, then reveal hand to buy cards and fight.",
+  default:
+    "Competitive deck-building worker-placement game with a Conflict battle each round. Play one card to place an agent; the chosen space pays resources, influence, troops, or a face-down Intrigue. Reveal leftover cards to buy new cards and add battle strength; when someone hits 10+ VP or the Conflict deck runs out, most VP wins.",
+  loose:
+    "Competitive deck-building worker-placement game with a Conflict battle each round. Play one card to place an agent; the chosen space pays resources, influence, troops, or a face-down Intrigue. Reveal leftover cards to buy new cards and add battle strength; when someone hits 10+ VP or the Conflict deck runs out, most VP wins. Spies on observation posts let agents ignore blocking, and sandworms enter combat to double Conflict rewards.",
 };
 
 export const meta = {
@@ -22,6 +25,6 @@ export const meta = {
     "https://www.rulespal.com/dune-imperium-uprising/rulebook",
     "https://news.direwolfdigital.com/dune-imperium-uprising-design-diary-2-sandworms-conflicts-and-the-shield-wall/",
     "https://news.direwolfdigital.com/dune-imperium-uprising-design-diary-3-spies/",
-    "https://www.gamesradar.com/games/board-games/dune-imperium-uprising-review/"
+    "https://www.gamesradar.com/games/board-games/dune-imperium-uprising-review/",
   ],
 } as const;

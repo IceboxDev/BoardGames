@@ -9,9 +9,12 @@
 import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
-  tight: "Thinky card-driven euro where one played card moves colonists, builds houses, triggers production, or buys scoring cards.",
-  default: "Thinky, low-luck economic euro about spreading colonists across a map to plant trading houses that make specific goods. Each turn, a player plays one hand card to move and build, trigger province-wide production, trade goods for coins, or buy new personality cards, then later plays Tribune to take all played cards back.",
-  loose: "Thinky, low-luck economic euro about spreading colonists across a map to plant trading houses that make specific goods. Each turn, a player plays one hand card to move and build, trigger province-wide production, trade goods for coins, or buy new personality cards, then later plays Tribune to take all played cards back. When the last house is built or the card display runs out, players score by applying each personality card’s end-game formula to the board state, and high score wins.",
+  tight:
+    "Thinky card-driven euro where one played card moves colonists, builds houses, triggers production, or buys scoring cards.",
+  default:
+    "Thinky, low-luck economic euro about spreading colonists across a map to plant trading houses that make specific goods. Each turn, a player plays one hand card to move and build, trigger province-wide production, trade goods for coins, or buy new personality cards, then later plays Tribune to take all played cards back.",
+  loose:
+    "Thinky, low-luck economic euro about spreading colonists across a map to plant trading houses that make specific goods. Each turn, a player plays one hand card to move and build, trigger province-wide production, trade goods for coins, or buy new personality cards, then later plays Tribune to take all played cards back. When the last house is built or the card display runs out, players score by applying each personality card’s end-game formula to the board state, and high score wins.",
 };
 
 export const meta = {
@@ -26,6 +29,6 @@ export const meta = {
     "https://forum.cwowd.com/t/concordia-special-edition-par-awaken-realms-livraison-en-juillet-2027/78705?page=3",
     "https://ludopedia.com.br/topico/99914/concordia-special-edition-o-que-ha-de-novo-na-nova-versao-pimpada",
     "https://www.pd-verlag.de/Concordia-Englisch",
-    "https://tabletopinfo.com/board-games/concordia/"
+    "https://tabletopinfo.com/board-games/concordia/",
   ],
 } as const;

@@ -9,9 +9,12 @@
 import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
-  tight: "Co-op deduction puzzle where players guess a teammate’s hidden wire tile value to cut matching pairs, clearing the racks before the detonator runs out or a red wire ends the mission.",
-  default: "Cooperative deduction game about defusing a bomb by cutting matching numbered wire tiles. On a turn, guess a teammate’s tile value; a hit cuts two matching tiles, a miss advances the detonator and places an info token. Cut all tiles to win; cut a red tile or run out of detonator spaces to lose.",
-  loose: "Cooperative deduction puzzle about cutting matching numbered wire tiles while avoiding red wires. On a turn, a player points at a teammate’s tile and names its value; correct guesses cut a matching pair, wrong guesses advance the detonator and add an info token that reveals a value. The team wins when every stand is empty, and loses if a red wire is cut or the detonator hits the end. Tiles sit sorted low-to-high on stands, so position clues matter as much as the revealed tokens.",
+  tight:
+    "Co-op deduction puzzle where players guess a teammate’s hidden wire tile value to cut matching pairs, clearing the racks before the detonator runs out or a red wire ends the mission.",
+  default:
+    "Cooperative deduction game about defusing a bomb by cutting matching numbered wire tiles. On a turn, guess a teammate’s tile value; a hit cuts two matching tiles, a miss advances the detonator and places an info token. Cut all tiles to win; cut a red tile or run out of detonator spaces to lose.",
+  loose:
+    "Cooperative deduction puzzle about cutting matching numbered wire tiles while avoiding red wires. On a turn, a player points at a teammate’s tile and names its value; correct guesses cut a matching pair, wrong guesses advance the detonator and add an info token that reveals a value. The team wins when every stand is empty, and loses if a red wire is cut or the detonator hits the end. Tiles sit sorted low-to-high on stands, so position clues matter as much as the revealed tokens.",
 };
 
 export const meta = {
@@ -22,6 +25,6 @@ export const meta = {
     "https://thegamerules.com/rulebooks/Bomb-Busters-Rulebook-en.pdf",
     "https://www.gamesradar.com/games/board-games/bomb-busters-review/",
     "https://www.wargamer.com/bomb-busters/review",
-    "https://manaworm.com/2025/09/01/bomb-busters-review/"
+    "https://manaworm.com/2025/09/01/bomb-busters-review/",
   ],
 } as const;

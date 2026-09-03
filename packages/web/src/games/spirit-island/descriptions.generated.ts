@@ -9,9 +9,12 @@
 import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
-  tight: "Heavy cooperative area-defense puzzle: choose Growth, spend energy on power cards, and stop invaders from Ravage/Build/Explore.",
-  default: "Heavy cooperative area-defense puzzle where spirits with unique decks defend an island from invaders. Each round, choose Growth to add Presence and gain energy, then play Fast and Slow power cards around the invaders’ Ravage/Build/Explore. Earn Fear to raise Terror Level and win by clearing invaders, then towns+cities, then only cities.",
-  loose: "Heavy cooperative area-defense puzzle where spirits with unique decks defend an island from invaders. Each round, choose Growth to add Presence and gain energy, then play Fast and Slow power cards, with Fast before Ravage/Build/Explore and Slow after. Earn Fear to raise Terror Level; win by clearing invaders, then towns+cities, then only cities. Lose if Blight runs out, the Invader deck empties on Explore, or any spirit has no Presence left.",
+  tight:
+    "Heavy cooperative area-defense puzzle: choose Growth, spend energy on power cards, and stop invaders from Ravage/Build/Explore.",
+  default:
+    "Heavy cooperative area-defense puzzle where spirits with unique decks defend an island from invaders. Each round, choose Growth to add Presence and gain energy, then play Fast and Slow power cards around the invaders’ Ravage/Build/Explore. Earn Fear to raise Terror Level and win by clearing invaders, then towns+cities, then only cities.",
+  loose:
+    "Heavy cooperative area-defense puzzle where spirits with unique decks defend an island from invaders. Each round, choose Growth to add Presence and gain energy, then play Fast and Slow power cards, with Fast before Ravage/Build/Explore and Slow after. Earn Fear to raise Terror Level; win by clearing invaders, then towns+cities, then only cities. Lose if Blight runs out, the Invader deck empties on Explore, or any spirit has no Presence left.",
 };
 
 export const meta = {
@@ -23,6 +26,6 @@ export const meta = {
     "https://www.rulespal.com/spirit-island/rulebook",
     "https://desktopgames.com.ua/games/5683/SpiritIsland_RulesReference_v1.2.pdf",
     "https://www.boardgamequest.com/spirit-island-review/",
-    "https://discussion.tekeli.li/t/su-sd-review-spirit-island/4252"
+    "https://discussion.tekeli.li/t/su-sd-review-spirit-island/4252",
   ],
 } as const;

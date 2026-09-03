@@ -9,9 +9,12 @@
 import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
-  tight: "Economic negotiation-and-auction game where players set prices, buy and resell containers, then ship loads to an island auction for cash.",
-  default: "Economic negotiation-and-auction game about setting prices, buying from rivals, and reading the market. Each turn takes two actions: build, produce-and-price containers, buy containers into a harbor, or sail a ship.",
-  loose: "Economic negotiation-and-auction game about setting prices, buying from rivals, and reading the market. Each turn takes two actions: build, produce-and-price containers, buy containers into a harbor, or sail a ship. Delivering to the island forces a blind-bid auction for the ship’s load; when two container colors run out, secret scoring cards value each player’s island stash and most total cash wins. Before valuing that stash, the most common color gets discarded for $0.",
+  tight:
+    "Economic negotiation-and-auction game where players set prices, buy and resell containers, then ship loads to an island auction for cash.",
+  default:
+    "Economic negotiation-and-auction game about setting prices, buying from rivals, and reading the market. Each turn takes two actions: build, produce-and-price containers, buy containers into a harbor, or sail a ship.",
+  loose:
+    "Economic negotiation-and-auction game about setting prices, buying from rivals, and reading the market. Each turn takes two actions: build, produce-and-price containers, buy containers into a harbor, or sail a ship. Delivering to the island forces a blind-bid auction for the ship’s load; when two container colors run out, secret scoring cards value each player’s island stash and most total cash wins. Before valuing that stash, the most common color gets discarded for $0.",
 };
 
 export const meta = {
@@ -24,6 +27,6 @@ export const meta = {
     "https://tbgd.blog/2018/12/06/container-jumbo-edition/",
     "https://elusivemeeple.com/2022/12/03/container-review/",
     "https://frogames.it/en/products/container",
-    "https://www.buzzverdict.com/board-games/container"
+    "https://www.buzzverdict.com/board-games/container",
   ],
 } as const;

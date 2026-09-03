@@ -9,9 +9,12 @@
 import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
-  tight: "High-interaction space strategy where trick-taking-style cards ration actions to move fleets, build bases, and declare what scores this chapter.",
-  default: "Competitive space-opera strategy game where card play controls actions and the table sets what scores each chapter. In a round, the leader plays a suit card for several pips of move/build/tax/battle, and others either surpass in-suit for full actions or pivot/copy for a single action, sometimes burning a second card to seize initiative.",
-  loose: "Competitive space-opera strategy game where card play controls actions and the table sets what scores each chapter. In a round, the leader plays a suit card for several pips of move/build/tax/battle, and others either surpass in-suit for full actions or pivot/copy for a single action, sometimes burning a second card to seize initiative. After hands empty, score Power only for the Ambitions that were declared, and when someone hits the end-game Power target the chapter finishes and highest Power wins.",
+  tight:
+    "High-interaction space strategy where trick-taking-style cards ration actions to move fleets, build bases, and declare what scores this chapter.",
+  default:
+    "Competitive space-opera strategy game where card play controls actions and the table sets what scores each chapter. In a round, the leader plays a suit card for several pips of move/build/tax/battle, and others either surpass in-suit for full actions or pivot/copy for a single action, sometimes burning a second card to seize initiative.",
+  loose:
+    "Competitive space-opera strategy game where card play controls actions and the table sets what scores each chapter. In a round, the leader plays a suit card for several pips of move/build/tax/battle, and others either surpass in-suit for full actions or pivot/copy for a single action, sometimes burning a second card to seize initiative. After hands empty, score Power only for the Ambitions that were declared, and when someone hits the end-game Power target the chapter finishes and highest Power wins.",
 };
 
 export const meta = {
@@ -23,6 +26,6 @@ export const meta = {
     "https://ledergames.com/blogs/news/arcs-designer-diary-3-the-trick-s-the-thing",
     "https://www.wargamer.com/arcs/board-game-review",
     "https://www.boardgamequest.com/arcs-review/",
-    "https://en.wikipedia.org/wiki/Arcs_(board_game)"
+    "https://en.wikipedia.org/wiki/Arcs_(board_game)",
   ],
 } as const;

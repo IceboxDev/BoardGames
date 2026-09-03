@@ -9,9 +9,12 @@
 import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
-  tight: "Head-to-head set-collection card game: draft goods from a shared market, trade with camels, then sell sets before values drop.",
-  default: "Competitive hand-management card game about timing set sales from a shared five-card market. On a turn, either take one goods card, take all camels, or swap 2+ cards with the market; or sell one goods type for coin tokens and possible bonuses. Win rounds by having the most money, and first to earn two Seals wins.",
-  loose: "Competitive hand-management card game about timing set sales from a shared five-card market. On a turn, either take one goods card, take all camels, or swap 2+ cards with the market; or sell one goods type for coin tokens and possible bonuses. A round ends when the deck runs out or three token stacks empty; the richer trader takes a Seal, and first to two Seals wins. Bonus tokens stay face-down until taken, so a big sale can flip a surprise payout.",
+  tight:
+    "Head-to-head set-collection card game: draft goods from a shared market, trade with camels, then sell sets before values drop.",
+  default:
+    "Competitive hand-management card game about timing set sales from a shared five-card market. On a turn, either take one goods card, take all camels, or swap 2+ cards with the market; or sell one goods type for coin tokens and possible bonuses. Win rounds by having the most money, and first to earn two Seals wins.",
+  loose:
+    "Competitive hand-management card game about timing set sales from a shared five-card market. On a turn, either take one goods card, take all camels, or swap 2+ cards with the market; or sell one goods type for coin tokens and possible bonuses. A round ends when the deck runs out or three token stacks empty; the richer trader takes a Seal, and first to two Seals wins. Bonus tokens stay face-down until taken, so a big sale can flip a surprise payout.",
 };
 
 export const meta = {
@@ -23,6 +26,6 @@ export const meta = {
     "https://www.meeplemountain.com/reviews/jaipur/",
     "https://www.tombell.net/board-game-review-jaipur/",
     "https://shelfgamer.com/reviews/jaipur/",
-    "https://en.wikipedia.org/wiki/Jaipur_(card_game)"
+    "https://en.wikipedia.org/wiki/Jaipur_(card_game)",
   ],
 } as const;
