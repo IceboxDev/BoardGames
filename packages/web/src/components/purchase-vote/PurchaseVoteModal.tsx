@@ -276,9 +276,12 @@ export function PurchaseVoteModal({ onClose }: { onClose: () => void }) {
   // quorum), keep the saved screen up until they dismiss it.
   if (poll.closedAt !== null && view !== "saved") return null;
 
+  // Alphabetical, not the admin's click order at poll creation — every
+  // voter browses the same neutral sequence.
   const candidates = poll.candidates
     .map((slug) => resolveGame(slug))
-    .filter((g): g is GameDefinition => g !== undefined);
+    .filter((g): g is GameDefinition => g !== undefined)
+    .sort((a, b) => a.title.localeCompare(b.title));
   if (candidates.length === 0) return null;
 
   return (

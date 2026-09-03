@@ -151,6 +151,19 @@ export function normalizeWeight(w: number): number {
 }
 
 /**
+ * Difficulty color for the complexity bar: green at the catalog's lightest
+ * game through amber to red at its heaviest, on the same registry-derived
+ * interval `normalizeWeight` uses — so "greenest" and "reddest" are defined
+ * by the games we actually track, not the theoretical 1–5 scale. The bar's
+ * COLOR carries the difficulty; per-game accent colors stay out of it (they
+ * made a light party game look as "hot" as a heavy euro).
+ */
+export function weightColor(w: number): string {
+  const hue = Math.round(120 * (1 - normalizeWeight(w) / 100));
+  return `hsl(${hue}, 70%, 48%)`;
+}
+
+/**
  * BGG descriptions ship as HTML with entity-encoded punctuation. Strip tags
  * and the handful of entities BGG actually emits so the text renders as
  * plain prose inside the card description block.

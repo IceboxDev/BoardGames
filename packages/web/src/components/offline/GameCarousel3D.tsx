@@ -580,7 +580,6 @@ function SingleCarouselCard({
       <CarouselBody
         bodyHeight={bodyHeight}
         cardW={cardW}
-        accentHex={game.accentHex}
         title={game.title}
         bgg={game.bgg}
         bestForHeadcount={isBest ? minPlayers : null}

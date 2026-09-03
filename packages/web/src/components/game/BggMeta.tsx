@@ -1,5 +1,5 @@
 import type { BggGame } from "../../games/types";
-import { formatCount, weightLabel } from "../../lib/bgg-format";
+import { formatCount, weightColor, weightLabel } from "../../lib/bgg-format";
 import { StarIcon } from "../icons";
 
 // Full catalog-card footer: rating row (star + value) over a complexity
@@ -37,9 +37,14 @@ export function BggMeta({ bgg }: { bgg: BggGame }) {
             Complexity
           </span>
           <div className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-white/[0.06]">
+            {/* Color = difficulty (green→red across the catalog's range),
+                not the game's accent — the accent made the bar misleading. */}
             <div
-              className="absolute inset-y-0 left-0 rounded-full bg-[var(--accent)] transition-[width] duration-500"
-              style={{ width: `${Math.min(100, (bgg.averageWeight / 5) * 100)}%` }}
+              className="absolute inset-y-0 left-0 rounded-full transition-[width] duration-500"
+              style={{
+                width: `${Math.min(100, (bgg.averageWeight / 5) * 100)}%`,
+                backgroundColor: weightColor(bgg.averageWeight),
+              }}
             />
           </div>
           <span className="shrink-0 font-semibold text-fg-primary tabular-nums">

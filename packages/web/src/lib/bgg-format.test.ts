@@ -1,5 +1,6 @@
 import type { BggGame } from "@boardgames/core/bgg";
 import { describe, expect, it } from "vitest";
+import { weightStats } from "../games/registry";
 import {
   compactSummary,
   compareForHeadcount,
@@ -10,6 +11,7 @@ import {
   playerRange,
   playTime,
   stripBggHtml,
+  weightColor,
   weightLabel,
 } from "./bgg-format";
 
@@ -149,6 +151,27 @@ describe("weightLabel", () => {
     expect(weightLabel(3.99)).toBe("Medium-heavy");
     expect(weightLabel(4.0)).toBe("Heavy");
     expect(weightLabel(5.0)).toBe("Heavy");
+  });
+});
+
+describe("weightColor", () => {
+  const hueOf = (color: string) => Number(color.match(/hsl\((\d+),/)?.[1]);
+
+  it("maps the catalog's lightest game to pure green and heaviest to pure red", () => {
+    expect(hueOf(weightColor(weightStats.min))).toBe(120);
+    expect(hueOf(weightColor(weightStats.max))).toBe(0);
+  });
+
+  it("descends monotonically from green toward red as weight rises", () => {
+    const mid = (weightStats.min + weightStats.max) / 2;
+    const hues = [weightStats.min, mid, weightStats.max].map((w) => hueOf(weightColor(w)));
+    expect(hues[0]).toBeGreaterThan(hues[1] ?? 0);
+    expect(hues[1]).toBeGreaterThan(hues[2] ?? 0);
+  });
+
+  it("clamps weights outside the catalog interval", () => {
+    expect(hueOf(weightColor(0))).toBe(120);
+    expect(hueOf(weightColor(5))).toBe(0);
   });
 });
 

@@ -1,5 +1,5 @@
 import type { BggGame } from "../../games/types";
-import { formatCount, normalizeWeight, weightLabel } from "../../lib/bgg-format";
+import { formatCount, normalizeWeight, weightColor, weightLabel } from "../../lib/bgg-format";
 import { StarIcon } from "../icons";
 
 // Compact rating + complexity strip used inside carousel cards. Renders
@@ -37,11 +37,13 @@ export function BggInline({ bgg, compact }: { bgg: BggGame; compact: boolean }) 
         <div className="flex items-center gap-2">
           <span className="shrink-0 text-3xs uppercase tracking-pill text-fg-muted">Weight</span>
           <div className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-white/[0.06]">
+            {/* Color = difficulty (green→red across the catalog's range),
+                not the game's accent — the accent made the bar misleading. */}
             <div
               className="absolute inset-y-0 left-0 rounded-full"
               style={{
                 width: `${normalizeWeight(bgg.averageWeight)}%`,
-                backgroundColor: "var(--accent)",
+                backgroundColor: weightColor(bgg.averageWeight),
               }}
             />
           </div>

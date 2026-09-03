@@ -14,7 +14,6 @@ type Props = {
   bodyHeight: number;
   /** Card width — drives the description's font scale + variant choice. */
   cardW: number;
-  accentHex: string;
   title: string;
   bgg: BggGame;
   /** When set, prefixes the player range with the amber "best at N" hint. */
@@ -28,7 +27,6 @@ type Props = {
 export function CarouselBody({
   bodyHeight,
   cardW,
-  accentHex,
   title,
   bgg,
   bestForHeadcount,
@@ -51,11 +49,9 @@ export function CarouselBody({
       className={`flex flex-col overflow-hidden ${compact ? "gap-1.5 px-3 py-3" : "gap-2.5 px-5 py-4"}`}
       style={{ height: bodyHeight }}
     >
-      <span
-        className="block h-0.5 w-12 shrink-0 rounded-full"
-        style={{ backgroundColor: accentHex }}
-        aria-hidden="true"
-      />
+      {/* One standard color for every game — the per-game accent here made
+          the line compete with the difficulty-colored complexity bar. */}
+      <span className="block h-0.5 w-12 shrink-0 rounded-full bg-accent-400" aria-hidden="true" />
       {/* Compact titles are FITTED to one line (the plan shrinks the font to
           the title's length); the 2-line clamp only catches titles too long
           for even the floor size. Full-size cards keep the single-line
