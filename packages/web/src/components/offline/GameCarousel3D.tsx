@@ -16,7 +16,10 @@ import {
   FLOOR_CARD_W,
   MAX_CARD_W,
   MIN_CARD_W,
+  NARROW_ASPECT,
+  NARROW_CONTAINER_W,
   NewBadge,
+  narrowSpread,
   REF_CARD_H,
   REF_CARD_W,
   VariantStrip,
@@ -257,26 +260,43 @@ export default function GameCarousel3D({
   // "best at" shadow at the bottom and pull the fade ramp into the
   // card's own top/bottom edges.
   const measured = size.w > 0 && size.h > 0;
+  const narrow = measured && size.w < NARROW_CONTAINER_W;
   const heightBudget = Math.max(0, size.h - VERTICAL_BREATHING);
   // Width picks the card size up to MIN_CARD_W…MAX_CARD_W; the height budget
   // is a HARD cap on top. The old formula applied MIN_CARD_W after the height
   // cap, which force-inflated the card past a short container (360×644-class
   // phones) and clipped its top and bottom against the masked wrapper.
   const widthDriven = Math.max(MIN_CARD_W, Math.min(MAX_CARD_W, size.w * 0.92));
-  const cardW = measured
-    ? Math.max(FLOOR_CARD_W, Math.min(widthDriven, heightBudget / ASPECT))
+  let aspect = ASPECT;
+  let cardW = measured
+    ? Math.max(FLOOR_CARD_W, Math.min(widthDriven, heightBudget / aspect))
     : REF_CARD_W;
-  const cardH = cardW * ASPECT;
-  const thumbH = cardH * (270 / REF_CARD_H);
-  const bodyH = cardH * (290 / REF_CARD_H);
   // Below the design minimum the full body (description + weight bar) no
   // longer fits its height share — drop to the compact layout instead of
   // letting the body overflow the card's clip edge.
-  const compact = cardW < MIN_CARD_W;
+  let compact = cardW < MIN_CARD_W;
+  // A narrow container that is ALSO height-bound (the purchase-vote modal
+  // on phones) starves the tower aspect: re-derive at the shorter
+  // NARROW_ASPECT — same height, meaningfully wider — and force the
+  // compact body, whose 2-line title beats the full body's one-line
+  // truncate at these widths. Width-bound phone carousels (cardW ===
+  // widthDriven, i.e. the RSVP picker) never enter this branch.
+  if (narrow && cardW < widthDriven) {
+    aspect = NARROW_ASPECT;
+    cardW = Math.max(FLOOR_CARD_W, Math.min(widthDriven, heightBudget / aspect));
+    compact = true;
+  }
+  const cardH = cardW * aspect;
+  const thumbH = cardH * (270 / REF_CARD_H);
+  const bodyH = cardH * (290 / REF_CARD_H);
 
   // 3D constants scale with cardW so the spread/depth stay visually
-  // coherent.
-  const spreadMax = cardW * (520 / REF_CARD_W);
+  // coherent. On narrow containers the spread additionally gets a floor
+  // that parks the neighbors at the container edge (see narrowSpread) —
+  // a small height-bound card would otherwise leave its neighbors' text
+  // sitting in the leftover width beside it.
+  const spreadBase = cardW * (520 / REF_CARD_W);
+  const spreadMax = narrow ? Math.max(spreadBase, narrowSpread(size.w, cardW)) : spreadBase;
   const zMax = cardW * (380 / REF_CARD_W);
   const perspective = cardW * (1600 / REF_CARD_W);
 

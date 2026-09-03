@@ -74,9 +74,21 @@ export function PurchaseVoteModalView({
       titleClassName="text-xl font-bold tracking-tight text-white xs2:text-2xl sm:text-3xl"
       subheader={
         <p className="text-xs text-fg-secondary">
-          {view === "saved"
-            ? `${progress} — the winner is revealed the moment the vote closes.`
-            : `Pick up to ${VOTES_PER_PLAYER} games, then submit. You can change your picks any time until the vote closes — ${progress}.`}
+          {view === "saved" ? (
+            `${progress} — the winner is revealed the moment the vote closes.`
+          ) : (
+            <>
+              {/* On phones every subheader line is a line the carousel loses,
+                  so the "you can change your picks" reassurance is desktop-only
+                  and the phone gets the short form. */}
+              Pick up to {VOTES_PER_PLAYER} games, then submit.{" "}
+              <span className="hidden sm:inline">
+                You can change your picks any time until the vote closes —{" "}
+              </span>
+              <span className="sm:hidden">Change them any time — </span>
+              {progress}.
+            </>
+          )}
         </p>
       }
     >

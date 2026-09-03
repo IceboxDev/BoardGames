@@ -24,8 +24,10 @@ type Props = {
 // line, title, meta, BggInline), measured at the largest pre-3xl font tier
 // so the derived line count is safe at every breakpoint. 3xl's taller
 // description lines are covered by slack: 3xl only renders on MAX-width
-// cards whose body has ~200px to spare.
-const FIXED_STACK_PX = { full: 175, compact: 135 };
+// cards whose body has ~200px to spare. Compact budgets for the 2-line
+// title clamp (~21px/line at text-lg) — a one-line title underuses the
+// slot by a line, which is the safe direction.
+const FIXED_STACK_PX = { full: 175, compact: 157 };
 const DESC_LINE_PX = 16;
 
 export function CarouselBody({
@@ -62,8 +64,13 @@ export function CarouselBody({
         style={{ backgroundColor: accentHex }}
         aria-hidden="true"
       />
+      {/* Compact cards are NARROW cards — a one-line truncate turns half the
+          catalog into "Dune: Imperium –…", so they wrap to two clamped lines
+          instead. Full-size cards keep the single-line look. */}
       <h3
-        className={`shrink-0 truncate font-bold leading-tight text-white ${compact ? "text-lg" : "text-xl"}`}
+        className={`shrink-0 font-bold leading-tight text-white ${
+          compact ? "line-clamp-2 text-lg" : "truncate text-xl"
+        }`}
       >
         {title}
       </h3>

@@ -52,6 +52,57 @@ export const OPACITY_MIN = 0.45; // dimensionless ratio
 // by the masked wrapper, which is strictly worse than a smaller card.
 export const FLOOR_CARD_W = 200;
 
+// ── Narrow-container (phone) handling ───────────────────────────────────
+//
+// Containers narrower than this get the phone treatment below. Matches the
+// `sm` breakpoint, so it can only ever apply to phone-class viewports.
+export const NARROW_CONTAINER_W = 640;
+
+// When a NARROW container is also height-bound (the purchase-vote modal on
+// phones: header + footer leave the carousel a short slot), the 380:560
+// tower aspect yields a card far below MIN_CARD_W — tiny, with the side
+// cards flooding the leftover width (see narrowSpread). Trading tower
+// height for width keeps the card big: same height, ~13% wider, always
+// paired with the compact body (whose thumb gets CLOSER to the art's 16:9
+// at this ratio, so it crops less, not more). Width-bound phone carousels
+// (the RSVP picker) never hit this — their card already spans 92% of the
+// container at the tower aspect.
+export const NARROW_ASPECT = 1.3;
+
+// How much of the offset-±1 card is allowed to peek past the centered
+// card's cover on narrow containers — enough to signal "swipe for more",
+// small enough that none of the neighbor's text survives the edge fade.
+// Must stay below the card's own ~12px content padding plus a few px of
+// perspective magnification headroom: at 28 the neighbor's title still
+// leaked its first characters into the strip.
+export const NEIGHBOR_PEEK = 14;
+
+/**
+ * On-screen half-width of the offset-±1 card: its geometric half-width
+ * after the pose's scale and rotateY foreshortening at |offset| = 1.
+ */
+export function neighborHalfWidth(cardW: number): number {
+  const t = Math.tanh(1 / SPREAD_K);
+  const scale = Math.max(SCALE_MIN, 1 - t * (1 - SCALE_MIN));
+  const rotateRad = (t * ROTATE_MAX * Math.PI) / 180;
+  return (cardW / 2) * scale * Math.cos(rotateRad);
+}
+
+/**
+ * Spread for narrow containers: parks the offset-±1 card so at most
+ * NEIGHBOR_PEEK px of its near edge reach the container edge. The default
+ * cardW-proportional spread was tuned for cards that either fill a phone's
+ * width (neighbors self-clip) or float in a wide desktop container
+ * (neighbors are the coverflow look) — a small card in a narrow container
+ * satisfies neither, and the default parks the neighbor's TEXT inside the
+ * visible strip. Callers take max(default, this), so it can only push
+ * neighbors out, never pull them in.
+ */
+export function narrowSpread(containerW: number, cardW: number): number {
+  const x1 = containerW / 2 - NEIGHBOR_PEEK + neighborHalfWidth(cardW);
+  return x1 / Math.tanh(1 / SPREAD_K);
+}
+
 /**
  * Tanh asymptote shared by every animated axis (x offset, z depth,
  * rotateY, scale, opacity). Same input/output relationship across cards
