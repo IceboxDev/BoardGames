@@ -89,6 +89,17 @@ export function matchResultBadge(
       // The D&D DM mirrors the teams moderator: present, but not competing.
       if (outcome.moderator?.userId === userId) return { label: "Ran it", tone: "neutral" };
       if (!outcome.participants.some((p) => p.userId === userId)) return null;
+      // A resolved win/loss outranks a riding-along score (Quiztopia records
+      // both) — the buildings split joins the label.
+      if (outcome.outcome !== undefined) {
+        const margin =
+          outcome.score !== undefined && outcome.opponentScore !== undefined
+            ? ` ${outcome.score}–${outcome.opponentScore}`
+            : "";
+        return outcome.outcome === "win"
+          ? { label: `Won${margin}`, tone: "emerald" }
+          : { label: `Lost${margin}`, tone: "rose" };
+      }
       if (outcome.score !== undefined) {
         const max = coopMaxScoreForSlug(gameSlug);
         const perfect = max !== undefined && outcome.score >= max;
@@ -100,10 +111,7 @@ export function matchResultBadge(
       // session as it was RECORDED — nobody knew the campaign's fate that
       // night, so it reads "Ongoing" even after the story concludes. Stats are
       // the campaign-aware side (`campaignResult` groups sessions server-side).
-      if (outcome.outcome === undefined) return { label: "Ongoing", tone: "sky" };
-      return outcome.outcome === "win"
-        ? { label: "Won", tone: "emerald" }
-        : { label: "Lost", tone: "rose" };
+      return { label: "Ongoing", tone: "sky" };
     }
     case "teams": {
       if (outcome.moderator?.userId === userId) return { label: "Ran it", tone: "neutral" };

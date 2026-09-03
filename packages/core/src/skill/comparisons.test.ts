@@ -195,3 +195,40 @@ describe("scoredCoopEvidence — cross-session score comparisons", () => {
     expect(scoredCoopEvidence("just-one", [])).toEqual([]);
   });
 });
+
+describe("matchEvidence — co-op challenge bias (Quiztopia)", () => {
+  it("carries challenge steps for difficulty tier + Expert mode", () => {
+    const outcome: MatchOutcome = {
+      kind: "coop",
+      participants: [p("a"), p("b")],
+      outcome: "win",
+      difficulty: "Wahnsinn",
+      scenario: "Expert",
+    };
+    expect(matchEvidence("quiztopia", outcome)?.comparisons).toEqual([
+      { a: ["a", "b"], b: null, score: 1, weight: 1, biasSteps: 3 },
+    ]);
+  });
+
+  it("omits biasSteps at the base tier and for other co-ops", () => {
+    const base: MatchOutcome = {
+      kind: "coop",
+      participants: [p("a")],
+      outcome: "loss",
+      difficulty: "Normal",
+    };
+    expect(matchEvidence("quiztopia", base)?.comparisons[0]).toEqual({
+      a: ["a"],
+      b: null,
+      score: 0,
+      weight: 1,
+    });
+    const pandemic: MatchOutcome = {
+      kind: "coop",
+      participants: [p("a")],
+      outcome: "win",
+      difficulty: "Heroic",
+    };
+    expect(matchEvidence("pandemic", pandemic)?.comparisons[0]).not.toHaveProperty("biasSteps");
+  });
+});

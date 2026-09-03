@@ -1,3 +1,4 @@
+import { awardLabel } from "@boardgames/core/history/awards";
 import { roundWinnerIndex } from "@boardgames/core/history/round-scores";
 import type {
   MatchOutcome,
@@ -112,6 +113,12 @@ function deriveTitleSubtitle(outcome: MatchOutcome, gameSlug: string | null): st
   if (outcome.kind === "coop" && isDndSlug(gameSlug) && outcome.campaign) return outcome.campaign;
   const variant = variantConfigForSlug(gameSlug);
   if (variant?.fixed && variant.options[0]) return variant.options[0].label;
+  // Co-op difficulty joins the subtitle next to the mode/variant tag —
+  // "Expert · Wahnsinn" (Quiztopia), or Sky Team's free-text level standing
+  // alone. difficulty used to be write-only data.
+  if (outcome.kind === "coop" && outcome.difficulty) {
+    return [outcome.scenario, outcome.difficulty].filter(Boolean).join(" · ");
+  }
   // Persisted scenario tag — used by Werewolf, Codenames, Wavelength,
   // 7 Wonders, Exploding Kittens, etc. Each match kind carries its own optional
   // `scenario` field on the wire.
@@ -260,6 +267,16 @@ function FreeForAllInline({
             <RoundScores player={p} outcome={outcome} />
           ) : (
             <span className="text-xs tabular-nums text-fg-muted">{p.score}</span>
+          )}
+          {p.awards && p.awards.length > 0 && (
+            // Table-voted award bonuses (Publish or Perish) — already inside
+            // the score; the trophy names them on hover.
+            <span
+              className="cursor-default text-xs"
+              title={p.awards.map((id) => awardLabel(gameSlug, id)).join(" · ")}
+            >
+              🏆
+            </span>
           )}
         </span>
       ))}
@@ -568,6 +585,32 @@ function CoopInline({
   gameSlug: string | null;
   currentUserId: string | null;
 }) {
+  // A resolved win/loss wins the display even when a score rides along
+  // (Quiztopia records both — the buildings split renders on the badge).
+  if (outcome.outcome !== undefined) {
+    const won = outcome.outcome === "win";
+    const margin =
+      outcome.score !== undefined && outcome.opponentScore !== undefined
+        ? ` ${outcome.score}–${outcome.opponentScore}`
+        : "";
+    return (
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
+        {/* Badge, not a hand-rolled pill — the Profile page's result pill is a
+            Badge, and the two used to differ in weight and letter-spacing. */}
+        <Badge tone={won ? "emerald" : "rose"}>{`${won ? "Won" : "Lost"}${margin}`}</Badge>
+        <span className="inline-flex -space-x-1.5">
+          {outcome.participants.map((p) => (
+            <AvatarBubble
+              key={p.userId}
+              name={p.displayName}
+              tone={won ? "winner" : "loser"}
+              isMe={p.userId === currentUserId}
+            />
+          ))}
+        </span>
+      </div>
+    );
+  }
   // Scored co-ops (Just One) have no win/loss — show the score + flavour tier.
   if (outcome.score !== undefined) {
     // Preview shows the score only; the flavour tier lives in the form / detail.

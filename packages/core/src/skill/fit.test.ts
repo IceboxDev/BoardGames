@@ -249,3 +249,88 @@ describe("fitSkillRatings — scored co-ops (cross-session)", () => {
     expect(fitSkillRatings(matches)).toEqual(fitSkillRatings([...matches].reverse()));
   });
 });
+
+describe("fitSkillRatings — co-op challenge bias (Quiztopia)", () => {
+  const quizCoop = (
+    members: string[],
+    outcome: "win" | "loss",
+    difficulty: string,
+    extras: { scenario?: string; score?: number; opponentScore?: number } = {},
+    playedAt = "2026-08-01T17:00:00.000Z",
+  ): SkillMatchInput => ({
+    slug: "quiztopia",
+    playedAt,
+    outcome: {
+      kind: "coop",
+      participants: members.map(p),
+      outcome,
+      difficulty,
+      ...extras,
+    },
+  });
+
+  it("rates a Hölle-tier win above an identical Normal-tier win", () => {
+    const r = fitSkillRatings([
+      quizCoop(["a", "b"], "win", "Normal"),
+      quizCoop(["c", "d"], "win", "Hölle, Hölle, Hölle"),
+    ]);
+    expect(r.converged).toBe(true);
+    expect(r.players.c.games.quiztopia?.rating ?? 0).toBeGreaterThan(
+      r.players.a.games.quiztopia?.rating ?? 0,
+    );
+  });
+
+  it("punishes a Normal-tier loss harder than a Hölle-tier loss", () => {
+    const r = fitSkillRatings([
+      quizCoop(["a", "b"], "loss", "Normal"),
+      quizCoop(["c", "d"], "loss", "Hölle, Hölle, Hölle"),
+    ]);
+    expect(r.players.a.games.quiztopia?.rating ?? 0).toBeLessThan(
+      r.players.c.games.quiztopia?.rating ?? 0,
+    );
+  });
+
+  it("Expert mode adds a step on top of the tier", () => {
+    const r = fitSkillRatings([
+      quizCoop(["a", "b"], "win", "Wahnsinn"),
+      quizCoop(["c", "d"], "win", "Wahnsinn", { scenario: "Expert" }),
+    ]);
+    expect(r.players.c.games.quiztopia?.rating ?? 0).toBeGreaterThan(
+      r.players.a.games.quiztopia?.rating ?? 0,
+    );
+  });
+
+  it("orders two same-tier wins by their building margin", () => {
+    const r = fitSkillRatings([
+      quizCoop(["a", "b"], "win", "Normal", { score: 12, opponentScore: 0 }),
+      quizCoop(["c", "d"], "win", "Normal", { score: 8, opponentScore: 4 }),
+    ]);
+    expect(r.converged).toBe(true);
+    expect(r.players.a.games.quiztopia?.rating ?? 0).toBeGreaterThan(
+      r.players.c.games.quiztopia?.rating ?? 0,
+    );
+  });
+
+  it("orders two same-tier losses by how close they came", () => {
+    const r = fitSkillRatings([
+      quizCoop(["a", "b"], "loss", "Schwer", { score: 7, opponentScore: 5 }),
+      quizCoop(["c", "d"], "loss", "Schwer", { score: 2, opponentScore: 10 }),
+    ]);
+    expect(r.players.a.games.quiztopia?.rating ?? 0).toBeGreaterThan(
+      r.players.c.games.quiztopia?.rating ?? 0,
+    );
+  });
+
+  it("never compares margins across different tiers or modes", () => {
+    // A crushing Normal win vs a narrow Wahnsinn win: if the pools leaked,
+    // the Normal duo would gain on the margin comparison and overtake —
+    // instead the tier bias alone decides, and Wahnsinn stays ahead.
+    const r = fitSkillRatings([
+      quizCoop(["a", "b"], "win", "Normal", { score: 12, opponentScore: 0 }),
+      quizCoop(["c", "d"], "win", "Wahnsinn", { score: 10, opponentScore: 2 }),
+    ]);
+    expect(r.players.c.games.quiztopia?.rating ?? 0).toBeGreaterThan(
+      r.players.a.games.quiztopia?.rating ?? 0,
+    );
+  });
+});

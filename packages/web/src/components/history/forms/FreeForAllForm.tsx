@@ -1,8 +1,10 @@
+import { awardPoints, awardsForSlug } from "@boardgames/core/history/awards";
 import type { MatchOutcomeFreeForAll, Participant } from "@boardgames/core/history/types";
 import { useEffect } from "react";
 import { lowScoreWinsForSlug } from "../../../games/score-config";
 import { ordinal } from "../../../lib/match-result-badge";
 import { ChevronDownIcon } from "../../icons";
+import { Chip } from "../../ui/Chip";
 import { IconButton } from "../../ui/IconButton";
 import { Input } from "../../ui/Input";
 import { PlayerRow } from "../PlayerRow";
@@ -30,6 +32,11 @@ type Props = {
 export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
   const selectedIds = value.players.map((p) => p.userId);
   const lowestWins = lowScoreWinsForSlug(gameSlug);
+  // Table-voted awards (Publish or Perish): the score INPUT edits the base
+  // (citations before awards); the stored `score` is always base + award
+  // points, so placement, stats, and the rating engine read finals unchanged.
+  const awardDefs = awardsForSlug(gameSlug);
+  const baseOf = (p: Player) => p.score - awardPoints(gameSlug, p.awards);
   const winningScore =
     value.players.length === 0
       ? null
@@ -75,8 +82,30 @@ export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
 
   function setScore(userId: string, raw: string) {
     const num = Number.parseFloat(raw);
-    const score = Number.isFinite(num) ? num : 0;
-    commit(value.players.map((p) => (p.userId === userId ? { ...p, score } : p)));
+    const base = Number.isFinite(num) ? num : 0;
+    commit(
+      value.players.map((p) =>
+        p.userId === userId ? { ...p, score: base + awardPoints(gameSlug, p.awards) } : p,
+      ),
+    );
+  }
+
+  function toggleAward(userId: string, awardId: string) {
+    commit(
+      value.players.map((p) => {
+        if (p.userId !== userId) return p;
+        const base = baseOf(p);
+        const has = p.awards?.includes(awardId) ?? false;
+        const awards = has
+          ? (p.awards ?? []).filter((id) => id !== awardId)
+          : [...(p.awards ?? []), awardId];
+        return {
+          ...p,
+          score: base + awardPoints(gameSlug, awards),
+          ...(awards.length > 0 ? { awards } : { awards: undefined }),
+        };
+      }),
+    );
   }
 
   const ranked = placementOrder(value.players, lowestWins);
@@ -87,7 +116,9 @@ export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
       {value.players.length > 0 && (
         <div className="flex flex-col gap-1.5">
           <GroupLabel>
-            Enter each player's score. {lowestWins ? "Lowest" : "Highest"} wins.
+            {awardDefs.length > 0
+              ? `Enter each player's score before awards. ${lowestWins ? "Lowest" : "Highest"} total wins.`
+              : `Enter each player's score. ${lowestWins ? "Lowest" : "Highest"} wins.`}
           </GroupLabel>
           {value.players.map((p) => {
             const isLeading = winningScore !== null && p.score === winningScore;
@@ -97,17 +128,48 @@ export function FreeForAllForm({ users, value, onChange, gameSlug }: Props) {
                 name={p.displayName}
                 highlight={isLeading}
                 right={
-                  <Input
-                    type="number"
-                    inputMode="numeric"
-                    value={p.score}
-                    onChange={(e) => setScore(p.userId, e.target.value)}
-                    width="score"
-                  />
+                  <span className="flex items-center gap-2">
+                    {awardDefs.length > 0 && (
+                      <span className="text-2xs tabular-nums text-fg-muted">= {p.score}</span>
+                    )}
+                    <Input
+                      type="number"
+                      inputMode="numeric"
+                      value={awardDefs.length > 0 ? baseOf(p) : p.score}
+                      onChange={(e) => setScore(p.userId, e.target.value)}
+                      width="score"
+                    />
+                  </span>
                 }
               />
             );
           })}
+        </div>
+      )}
+
+      {awardDefs.length > 0 && value.players.length > 0 && (
+        <div className="flex flex-col gap-2">
+          <GroupLabel>
+            Awards — table vote, points are added to the total. Ties may share an award.
+          </GroupLabel>
+          {awardDefs.map((award) => (
+            <div key={award.id} className="flex flex-wrap items-center gap-1.5">
+              <span className="w-44 shrink-0 text-2xs text-fg-secondary">
+                {award.label} <span className="tabular-nums text-fg-muted">(+{award.points})</span>
+              </span>
+              {value.players.map((p) => (
+                <Chip
+                  key={p.userId}
+                  pressed={p.awards?.includes(award.id) ?? false}
+                  tone="amber"
+                  size="xs"
+                  onClick={() => toggleAward(p.userId, award.id)}
+                >
+                  {p.displayName.split(" ")[0]}
+                </Chip>
+              ))}
+            </div>
+          ))}
         </div>
       )}
 

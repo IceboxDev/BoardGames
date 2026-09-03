@@ -802,3 +802,39 @@ describe("getScenario / applyScenario", () => {
     expect(applyScenario(out, "Standard")).toBe(out);
   });
 });
+
+describe("describeOutcomeError — Quiztopia", () => {
+  const quiz = (over: Partial<MatchOutcomeCoop>): MatchOutcomeCoop => ({
+    ...coop("a", "b"),
+    difficulty: "Normal",
+    score: 8,
+    opponentScore: 4,
+    ...over,
+  });
+
+  it("accepts a complete Quiztopia record", () => {
+    expect(describeOutcomeError(quiz({}), "quiztopia")).toBeNull();
+  });
+
+  it("requires a recognized difficulty tier", () => {
+    expect(describeOutcomeError(quiz({ difficulty: undefined }), "quiztopia")).toMatch(
+      /difficulty/i,
+    );
+    expect(describeOutcomeError(quiz({ difficulty: "Heroic" }), "quiztopia")).toMatch(
+      /difficulty/i,
+    );
+  });
+
+  it("requires both building counts and caps their sum at 12", () => {
+    expect(describeOutcomeError(quiz({ opponentScore: undefined }), "quiztopia")).toMatch(
+      /buildings/i,
+    );
+    expect(describeOutcomeError(quiz({ score: 9, opponentScore: 4 }), "quiztopia")).toMatch(
+      /exceed/i,
+    );
+  });
+
+  it("leaves other co-ops untouched", () => {
+    expect(describeOutcomeError(coop("a", "b"), "pandemic")).toBeNull();
+  });
+});

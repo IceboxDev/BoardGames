@@ -210,3 +210,24 @@ describe("matchResultBadge — last-standing with survivorRanks (poker)", () => 
     });
   });
 });
+
+describe("matchResultBadge — margin co-op (Quiztopia)", () => {
+  const quiz = (outcome: "win" | "loss", score: number, opponentScore: number): MatchOutcome => ({
+    kind: "coop",
+    participants: [{ userId: "a", displayName: "A" }],
+    outcome,
+    score,
+    opponentScore,
+    difficulty: "Wahnsinn",
+  });
+  it("win/loss outranks the riding score and shows the buildings split", () => {
+    expect(matchResultBadge(quiz("win", 10, 2), "a", "quiztopia")).toEqual({
+      label: "Won 10–2",
+      tone: "emerald",
+    });
+    expect(matchResultBadge(quiz("loss", 5, 7), "a", "quiztopia")).toEqual({
+      label: "Lost 5–7",
+      tone: "rose",
+    });
+  });
+});

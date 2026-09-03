@@ -7,6 +7,7 @@
 //   - "multi":  any subset, joined with " + " when stored as a single string
 //               (7 Wonders expansions, Exploding Kittens death/revival modes).
 
+import { QUIZTOPIA_MODES } from "@boardgames/core/history/coop-challenge";
 import { DUNGEON_MAYHEM_SET_LABELS } from "./dungeon-mayhem/characters";
 import {
   defaultBoxLabelForGame,
@@ -87,6 +88,14 @@ const VARIANTS: Record<string, GameVariantConfig> = {
     ],
   },
   set: FIXED_STANDARD,
+  // Quiztopia's two rulesets: Standard (free discussion) vs Expert (answer
+  // alone, tip cards). Expert additionally raises the rating engine's
+  // challenge bias — see core/history/coop-challenge.ts.
+  quiztopia: {
+    label: "Mode",
+    mode: "single",
+    options: QUIZTOPIA_MODES.map((mode) => ({ value: mode, label: mode })),
+  },
   "codenames-pictures": CODENAMES_LANGUAGE,
   "codenames-duet": CODENAMES_LANGUAGE,
   bandit: FIXED_STANDARD,

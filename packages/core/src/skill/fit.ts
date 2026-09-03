@@ -18,6 +18,7 @@
 // many games sharing a trait is cheapest via θ.
 
 import { skillProfileBySlug } from "../games/skill-profiles.ts";
+import { coopScorePoolKey, coopScorePoolValue } from "../history/coop-challenge.ts";
 import type { MatchOutcome } from "../protocol/http/history.ts";
 import { SKILL_TRAIT_IDS, type SkillTraitId } from "../protocol/http/skills.ts";
 import {
@@ -93,13 +94,19 @@ type PreparedMatch = {
   comparisons: SkillComparison[];
 };
 
-/** Sparse linear term: d = Σ coef_k · x_{idx_k}. */
+/** Sparse linear term: d = Σ coef_k · x_{idx_k} − bias. */
 type Term = {
   idx: number[];
   coef: number[];
   score: number;
   /** ω·λ — the term's total evidence weight. */
   w: number;
+  /**
+   * Constant added to side B's strength (challenge steps × config step): the
+   * co-op virtual opponent playing above its fitted baseline at higher
+   * difficulty tiers. A constant offset keeps the objective strictly concave.
+   */
+  bias: number;
 };
 
 function logSigmoid(x: number): number {
@@ -158,14 +165,18 @@ export function fitSkillRatings(
   let newestPlayedAt: string | null = null;
 
   const rawPrepared: (Omit<PreparedMatch, "lambda"> & { playedAtMs: number })[] = [];
-  // Scored co-op sessions, grouped by slug — their evidence is CROSS-session
-  // (score vs score within one game), so they're pooled here and reduced
-  // after the loop. `alsoRated` marks sessions that already produced their
-  // own evidence (a co-op carrying both outcome AND score) so they aren't
-  // double-counted in the per-player accounting.
+  // Scored co-op sessions, pooled by comparability key — plain scored co-ops
+  // pool by slug; margin co-ops (Quiztopia) additionally split by difficulty
+  // tier + mode, and their pooled scalar is the WIN MARGIN, so two wins (or
+  // two losses) of the same challenge get compared by how strongly they went
+  // (see history/coop-challenge.ts). Their evidence is CROSS-session, so
+  // pools reduce after the loop. `alsoRated` marks sessions that already
+  // produced their own evidence (a co-op carrying both outcome AND score) so
+  // they aren't double-counted in the per-player accounting.
   const scoredPools = new Map<
     string,
     {
+      slug: string;
       w: number[];
       sessions: (ScoredCoopSession & {
         playedAt: string;
@@ -184,21 +195,23 @@ export function fitSkillRatings(
     const playedAtMs = Date.parse(m.playedAt);
     const ms = Number.isNaN(playedAtMs) ? 0 : playedAtMs;
     const evidence = matchEvidence(m.slug, m.outcome);
-    const scored =
-      m.outcome.kind === "coop" &&
-      m.outcome.score !== undefined &&
-      m.outcome.participants.length > 0;
-    if (scored && m.outcome.kind === "coop" && m.outcome.score !== undefined) {
-      const pool = scoredPools.get(m.slug) ?? { w, sessions: [] };
+    const poolValue =
+      m.outcome.kind === "coop" && m.outcome.participants.length > 0
+        ? coopScorePoolValue(m.slug, m.outcome)
+        : null;
+    const scored = poolValue !== null;
+    if (scored && m.outcome.kind === "coop") {
+      const key = coopScorePoolKey(m.slug, m.outcome);
+      const pool = scoredPools.get(key) ?? { slug: m.slug, w, sessions: [] };
       pool.sessions.push({
         members: m.outcome.participants.map((p) => p.userId),
-        score: m.outcome.score,
+        score: poolValue,
         lambda: 1, // filled in once the decay anchor is known
         playedAt: m.playedAt,
         playedAtMs: ms,
         alsoRated: evidence !== null && evidence.comparisons.length > 0,
       });
-      scoredPools.set(m.slug, pool);
+      scoredPools.set(key, pool);
     }
     if (evidence === null || evidence.comparisons.length === 0) {
       if (!scored) skippedNoEvidence++;
@@ -222,9 +235,9 @@ export function fitSkillRatings(
   // identical roster (every pair is skipped as informationless). Pools that
   // yield real comparisons DO rate, and their sessions join the decay-anchor
   // pool.
-  for (const [slug, pool] of scoredPools) {
-    if (scoredCoopEvidence(slug, pool.sessions).length === 0) {
-      scoredPools.delete(slug);
+  for (const [key, pool] of scoredPools) {
+    if (scoredCoopEvidence(pool.slug, pool.sessions).length === 0) {
+      scoredPools.delete(key);
       skippedNoEvidence += pool.sessions.filter((s) => !s.alsoRated).length;
       continue;
     }
@@ -251,19 +264,25 @@ export function fitSkillRatings(
   // match and per-game counts — no comparisons of its own), then one synthetic
   // entry carrying the cross-session comparisons (pair decay is folded into
   // each comparison's weight, so its λ is 1).
-  for (const slug of [...scoredPools.keys()].sort()) {
-    const pool = scoredPools.get(slug) as NonNullable<ReturnType<typeof scoredPools.get>>;
+  for (const key of [...scoredPools.keys()].sort()) {
+    const pool = scoredPools.get(key) as NonNullable<ReturnType<typeof scoredPools.get>>;
     const sessions = pool.sessions.map((s) => ({ ...s, lambda: lambdaOf(s.playedAtMs) }));
     for (const s of sessions) {
       if (s.alsoRated) continue; // already accounted via its own outcome
-      prepared.push({ slug, w: pool.w, lambda: s.lambda, competitors: s.members, comparisons: [] });
+      prepared.push({
+        slug: pool.slug,
+        w: pool.w,
+        lambda: s.lambda,
+        competitors: s.members,
+        comparisons: [],
+      });
     }
     prepared.push({
-      slug,
+      slug: pool.slug,
       w: pool.w,
       lambda: 1,
       competitors: [],
-      comparisons: scoredCoopEvidence(slug, sessions),
+      comparisons: scoredCoopEvidence(pool.slug, sessions),
     });
   }
 
@@ -319,6 +338,7 @@ export function fitSkillRatings(
         coef: entries.map((e) => e[1]),
         score: c.score,
         w: c.weight * m.lambda,
+        bias: (c.biasSteps ?? 0) * config.coopChallengeStep,
       });
     }
   }
@@ -329,7 +349,7 @@ export function fitSkillRatings(
   const objective = (v: Float64Array): number => {
     let obj = 0;
     for (const t of terms) {
-      let d = 0;
+      let d = -t.bias;
       for (let k = 0; k < t.idx.length; k++) d += t.coef[k] * v[t.idx[k]];
       obj += t.w * (t.score * logSigmoid(d) + (1 - t.score) * logSigmoid(-d));
     }
@@ -341,7 +361,7 @@ export function fitSkillRatings(
     const grad = new Float64Array(n);
     h.fill(0);
     for (const t of terms) {
-      let d = 0;
+      let d = -t.bias;
       for (let k = 0; k < t.idx.length; k++) d += t.coef[k] * v[t.idx[k]];
       const p = sigmoid(d);
       const resid = t.w * (t.score - p);

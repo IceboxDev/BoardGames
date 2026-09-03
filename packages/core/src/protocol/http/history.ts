@@ -56,6 +56,10 @@ const FreeForAllPlayerSchema = ParticipantSchema.extend({
   // always the rupee-total leader. Cross-field rules live in the superRefine
   // below via `describeRoundScoresError`.
   roundScores: z.array(z.number().finite()).min(MIN_ROUND_SCORES).max(MAX_ROUND_SCORES).optional(),
+  // Table-voted end-of-match award ids (Publish or Perish: Snarkiest
+  // Reviewer, …). Ties put the same id on several players. The award points
+  // are already folded into `score` — see history/awards.ts.
+  awards: z.array(z.string().min(1).max(64)).max(8).optional(),
 });
 
 // Jaipur-only: one rupee-tied round settled the rulebook's way — the most
@@ -183,9 +187,15 @@ const MatchOutcomeCoopSchema = z.object({
   // below). A coop match must carry at least one of `outcome` / `score` /
   // `campaign` (enforced on the union below).
   outcome: z.enum(["win", "loss"]).optional(),
-  // Shared team score for scored co-ops (Just One). Independent of `outcome` — a
-  // game uses one or the other.
+  // Shared team score for scored co-ops (Just One), where it stands alone —
+  // OR the team's tally in a margin co-op (Quiztopia buildings won), where it
+  // accompanies `outcome` so the rating engine can weigh HOW strongly the
+  // team won or lost.
   score: z.number().int().min(0).max(1000).optional(),
+  // The game's own tally against the team (Quiztopia: buildings claimed by
+  // the dark side). Only meaningful next to `score`; `score - opponentScore`
+  // is the session's win margin (see history/coop-challenge.ts).
+  opponentScore: z.number().int().min(0).max(1000).optional(),
   difficulty: z.string().max(64).optional(),
   details: z.string().max(1000).optional(),
   // Optional per-game variant tag (e.g. Codenames Duet language).

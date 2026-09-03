@@ -40,6 +40,7 @@ import { JustOneForm } from "./forms/JustOneForm";
 import { LastStandingForm } from "./forms/LastStandingForm";
 import { LovecraftLetterForm } from "./forms/LovecraftLetterForm";
 import { OneVsManyForm } from "./forms/OneVsManyForm";
+import { QuiztopiaForm } from "./forms/QuiztopiaForm";
 import { ResistanceForm } from "./forms/ResistanceForm";
 import { ScoredCoopForm } from "./forms/ScoredCoopForm";
 import { TeamsForm } from "./forms/TeamsForm";
@@ -418,6 +419,12 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
               />
             ) : gameSlug === "just-one" ? (
               <JustOneForm
+                users={allUsers}
+                value={outcome as MatchOutcomeCoop}
+                onChange={setOutcome}
+              />
+            ) : gameSlug === "quiztopia" ? (
+              <QuiztopiaForm
                 users={allUsers}
                 value={outcome as MatchOutcomeCoop}
                 onChange={setOutcome}

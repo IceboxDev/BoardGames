@@ -511,3 +511,64 @@ describe("parseOutcome — Decrypto token rounds", () => {
     }
   });
 });
+
+describe("parseOutcome — coop margin (Quiztopia)", () => {
+  it("preserves outcome, score, opponentScore, and difficulty together", () => {
+    const result = parseOutcome({
+      kind: "coop",
+      participants: [
+        { userId: "u1", displayName: "Alice" },
+        { userId: "u2", displayName: "Bob" },
+      ],
+      outcome: "win",
+      score: 9,
+      opponentScore: 3,
+      difficulty: "Wahnsinn",
+      scenario: "Expert",
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "coop") {
+      expect(result.value.outcome).toBe("win");
+      expect(result.value.score).toBe(9);
+      expect(result.value.opponentScore).toBe(3);
+      expect(result.value.difficulty).toBe("Wahnsinn");
+    }
+  });
+
+  it("rejects an out-of-range opponentScore", () => {
+    expect(
+      parseOutcome({
+        kind: "coop",
+        participants: [{ userId: "u1", displayName: "Alice" }],
+        outcome: "loss",
+        opponentScore: 1001,
+      }).ok,
+    ).toBe(false);
+  });
+});
+
+describe("parseOutcome — free-for-all awards (Publish or Perish)", () => {
+  const players = [
+    { userId: "u1", displayName: "Alice", score: 9.9, awards: ["almost-there"] },
+    { userId: "u2", displayName: "Bob", score: 8 },
+  ];
+
+  it("round-trips per-player award ids", () => {
+    const result = parseOutcome({ kind: "free-for-all", players });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "free-for-all") {
+      expect(result.value.players[0].awards).toEqual(["almost-there"]);
+      expect(result.value.players[0].score).toBe(9.9);
+      expect("awards" in result.value.players[1]).toBe(false);
+    }
+  });
+
+  it("rejects malformed award lists", () => {
+    expect(
+      parseOutcome({
+        kind: "free-for-all",
+        players: [{ ...players[0], awards: [42] }, players[1]],
+      }).ok,
+    ).toBe(false);
+  });
+});

@@ -730,3 +730,47 @@ describe("HistoryListQuerySchema", () => {
     expect(() => HistoryListQuerySchema.parse({ limit: "-1" })).toThrow();
   });
 });
+
+describe("MatchOutcomeSchema — coop margin fields (Quiztopia)", () => {
+  it("accepts win/loss riding with score + opponentScore", () => {
+    const parsed = MatchOutcomeSchema.parse({
+      ...sampleCoop,
+      score: 9,
+      opponentScore: 3,
+      difficulty: "Wahnsinn",
+      scenario: "Expert",
+    });
+    if (parsed.kind === "coop") {
+      expect(parsed.score).toBe(9);
+      expect(parsed.opponentScore).toBe(3);
+    }
+  });
+
+  it("rejects a non-integer or out-of-range opponentScore", () => {
+    expect(MatchOutcomeSchema.safeParse({ ...sampleCoop, opponentScore: 3.5 }).success).toBe(false);
+    expect(MatchOutcomeSchema.safeParse({ ...sampleCoop, opponentScore: -1 }).success).toBe(false);
+  });
+});
+
+describe("MatchOutcomeSchema — free-for-all awards (Publish or Perish)", () => {
+  it("accepts per-player award ids (ties may share one)", () => {
+    const parsed = MatchOutcomeSchema.parse({
+      ...sampleFreeForAll,
+      players: sampleFreeForAll.players.map((p, i) => ({
+        ...p,
+        awards: i === 0 ? ["snarkiest-reviewer", "almost-there"] : ["snarkiest-reviewer"],
+      })),
+    });
+    if (parsed.kind === "free-for-all") {
+      expect(parsed.players[0].awards).toEqual(["snarkiest-reviewer", "almost-there"]);
+    }
+  });
+
+  it("rejects empty award ids", () => {
+    const bad = {
+      ...sampleFreeForAll,
+      players: sampleFreeForAll.players.map((p) => ({ ...p, awards: [""] })),
+    };
+    expect(MatchOutcomeSchema.safeParse(bad).success).toBe(false);
+  });
+});

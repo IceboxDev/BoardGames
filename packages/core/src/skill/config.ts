@@ -16,6 +16,15 @@ export type SkillConfig = {
   kGame: number;
   /** L2 prior on per-co-op-game difficulty d. */
   kCoop: number;
+  /**
+   * Strength (log-odds) each co-op CHALLENGE STEP adds to the virtual
+   * opponent above its fitted baseline d_G — one step per difficulty tier
+   * above the easiest, plus mode handicaps (history/coop-challenge.ts). At
+   * 0.4/step, Quiztopia's Hölle tier in Expert mode plays 1.6 logits above
+   * baseline (~5:1 odds), so beating it moves ratings far more than a
+   * Normal-tier win.
+   */
+  coopChallengeStep: number;
   /** Evidence half-life. Age is relative to the NEWEST match, not wall clock. */
   halfLifeDays: number;
   /** Profile eligibility: minimum rated match-units. */
@@ -43,11 +52,12 @@ export type SkillConfig = {
 };
 
 export const SKILL_CONFIG_V1: SkillConfig = Object.freeze({
-  version: 5,
+  version: 6,
   scoreFloorTheta: -0.35,
   kTheta: 1.0,
   kGame: 0.25,
   kCoop: 0.5,
+  coopChallengeStep: 0.4,
   halfLifeDays: 730,
   minMatches: 8,
   minGames: 3,

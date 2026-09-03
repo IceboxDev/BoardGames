@@ -3,6 +3,11 @@
 // tested without spinning up the modal itself. Nothing here touches React,
 // the query cache, or the network — every function is a pure transform.
 
+import {
+  challengeTierIndex,
+  QUIZTOPIA_BUILDINGS,
+  QUIZTOPIA_SLUG,
+} from "@boardgames/core/history/coop-challenge";
 import { describeDecryptoRecordError } from "@boardgames/core/history/decrypto-tokens";
 import { describeRoundScoresError } from "@boardgames/core/history/round-scores";
 import type {
@@ -162,6 +167,19 @@ export function describeOutcomeError(
     case "coop":
       if (isDndSlug(gameSlug)) return describeDndError(outcome);
       if (outcome.participants.length < 1) return "Add at least one participant";
+      // Quiztopia: win/loss AND the buildings split are both required — the
+      // margin is what lets the rating engine compare two wins (or two
+      // losses). Tier thresholds are deliberately NOT enforced: challenges
+      // and the campaign change the win conditions.
+      if (gameSlug === QUIZTOPIA_SLUG) {
+        if (outcome.outcome === undefined) return "Pick won or lost";
+        if (challengeTierIndex(QUIZTOPIA_SLUG, outcome.difficulty) === null)
+          return "Pick the difficulty";
+        if (outcome.score === undefined || outcome.opponentScore === undefined)
+          return `Enter buildings won and lost (0–${QUIZTOPIA_BUILDINGS})`;
+        if (outcome.score + outcome.opponentScore > QUIZTOPIA_BUILDINGS)
+          return `Won + lost can't exceed ${QUIZTOPIA_BUILDINGS} buildings`;
+      }
       {
         // Scored co-ops (Just One, Medical Mysteries) bank a team score
         // instead of a win/loss — require it and keep it within the game's max.

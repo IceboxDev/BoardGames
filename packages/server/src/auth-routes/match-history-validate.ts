@@ -100,12 +100,30 @@ function parseFreeForAll(v: Record<string, unknown>): ParseResult<MatchOutcomeFr
       }
       roundScores = parsedRounds;
     }
+    // Optional table-voted award ids (Publish or Perish) — points are already
+    // folded into `score`; the ids survive for round-trips and display.
+    // Mirrors FreeForAllPlayerSchema.
+    let awards: string[] | undefined;
+    if (raw.awards !== undefined && raw.awards !== null) {
+      if (!Array.isArray(raw.awards) || raw.awards.length > 8) {
+        return { ok: false, error: `players[${i}]: awards must be a list of at most 8 ids` };
+      }
+      const parsedAwards: string[] = [];
+      for (const id of raw.awards) {
+        if (typeof id !== "string" || id.length === 0 || id.length > 64) {
+          return { ok: false, error: `players[${i}]: invalid award id` };
+        }
+        parsedAwards.push(id);
+      }
+      awards = parsedAwards;
+    }
     players.push({
       ...p.value,
       score,
       ...(rank !== undefined ? { rank } : {}),
       ...(role !== undefined ? { role } : {}),
       ...(roundScores !== undefined ? { roundScores } : {}),
+      ...(awards !== undefined ? { awards } : {}),
     });
   }
   // No explicit winnerUserIds — the player(s) with the highest score are
@@ -389,6 +407,17 @@ function parseCoop(v: Record<string, unknown>): ParseResult<MatchOutcomeCoop> {
     }
     score = n;
   }
+  // The game's own tally against the team (Quiztopia: buildings lost to the
+  // dark side) — `score - opponentScore` is the win margin. Mirrors
+  // MatchOutcomeCoopSchema.
+  let opponentScore: number | undefined;
+  if (v.opponentScore !== undefined) {
+    const n = asInteger(v.opponentScore);
+    if (n === null || n < 0 || n > 1000) {
+      return { ok: false, error: "coop: opponentScore must be an integer in 0..1000" };
+    }
+    opponentScore = n;
+  }
   // A D&D campaign session may be unresolved (no outcome/score yet). Its name is
   // what makes that legal. Mirrors MatchOutcomeCoopSchema's union refinement.
   const campaign = asOptionalString(v.campaign, 120);
@@ -416,6 +445,7 @@ function parseCoop(v: Record<string, unknown>): ParseResult<MatchOutcomeCoop> {
       participants,
       ...(outcome !== undefined ? { outcome } : {}),
       ...(score !== undefined ? { score } : {}),
+      ...(opponentScore !== undefined ? { opponentScore } : {}),
       ...(difficulty !== undefined ? { difficulty } : {}),
       ...(details !== undefined ? { details } : {}),
       ...(scenario !== undefined ? { scenario } : {}),
