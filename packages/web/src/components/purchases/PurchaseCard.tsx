@@ -10,6 +10,7 @@ import { PurchaseTimeline } from "./PurchaseTimeline.tsx";
 import {
   displayPurchaseTitle,
   formatEtaMonth,
+  formatEurTotal,
   formatMoneyCents,
   type PurchaseOrderCard,
   type PurchaseRow,
@@ -53,7 +54,9 @@ function ownerMoneyLine(row: PurchaseRow): string | null {
   const p = row.purchase;
   const money = (cents: number) => formatMoneyCents(cents, p.currency);
   return [
-    p.pledgeCents !== null ? `Pledge ${money(p.pledgeCents)}` : null,
+    p.pledgeCents !== null
+      ? `${p.kind === "retail" ? "Price" : "Pledge"} ${money(p.pledgeCents)}`
+      : null,
     p.shippingCents !== null ? `Shipping ${money(p.shippingCents)}` : null,
     row.totalCents !== null && p.shippingCents !== null ? `Total ${money(row.totalCents)}` : null,
   ]
@@ -105,20 +108,26 @@ export function PurchaseCard({
   const desktopMeta: string[] = [];
   if (p.platform) desktopMeta.push(p.platform);
   if (card.earliestPledgedOn) {
-    desktopMeta.push(`Pledged ${formatDayKey(card.earliestPledgedOn, "compact")}`);
+    const verb = p.kind === "retail" ? "Ordered" : "Pledged";
+    desktopMeta.push(`${verb} ${formatDayKey(card.earliestPledgedOn, "compact")}`);
   }
   const showStale = card.active && card.staleDays !== null;
 
-  const moneyLine = card.totalCents !== null ? formatMoneyCents(card.totalCents, p.currency) : null;
+  // List money speaks one currency: exact euros, or "≈ €514" converted.
+  const moneyLine = card.totalCents !== null ? formatEurTotal(card.totalCents, p.currency) : null;
 
-  const pmLabel = p.kind === "retail" ? "Order ↗" : "Pledge manager ↗";
+  // The primary link sits beside the rail on EVERY card, so its label must
+  // fit the shared fixed-width slot ("Pledge ↗", not "Pledge manager ↗") —
+  // otherwise the rail's length varies card to card.
   const primaryLink = p.campaignUrl
     ? { href: p.campaignUrl, label: p.kind === "retail" ? "Shop ↗" : "Campaign ↗" }
     : p.pledgeManagerUrl
-      ? { href: p.pledgeManagerUrl, label: pmLabel }
+      ? { href: p.pledgeManagerUrl, label: p.kind === "retail" ? "Order ↗" : "Pledge ↗" }
       : null;
   const secondaryLink =
-    p.campaignUrl && p.pledgeManagerUrl ? { href: p.pledgeManagerUrl, label: pmLabel } : null;
+    p.campaignUrl && p.pledgeManagerUrl
+      ? { href: p.pledgeManagerUrl, label: p.kind === "retail" ? "Order ↗" : "Pledge manager ↗" }
+      : null;
 
   const singleDetail = multiWave
     ? null
@@ -206,16 +215,19 @@ export function PurchaseCard({
         <div className="min-w-0 flex-1">
           <PurchasePipelineRail kind={p.kind} status={p.status} />
         </div>
-        {primaryLink && (
+        {primaryLink ? (
           <ButtonLink
             href={primaryLink.href}
             external
             variant="ghost"
             size="sm"
-            className="shrink-0"
+            className="w-28 shrink-0"
           >
             {primaryLink.label}
           </ButtonLink>
+        ) : (
+          // Linkless cards keep the same rail length as everyone else.
+          <span aria-hidden className="w-28 shrink-0" />
         )}
       </div>
 

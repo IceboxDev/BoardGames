@@ -52,11 +52,12 @@ function renderCard(purchases: Purchase | Purchase[], { expanded = false } = {})
 }
 
 describe("PurchaseCard", () => {
-  it("shows the owner total in the purchase's own currency", () => {
+  it("speaks one currency in the list: exact EUR, ≈ converted for the rest", () => {
     renderCard(purchase());
     expect(screen.getByText("€213")).toBeInTheDocument();
     renderCard(purchase({ id: "usd", title: "USD one", currency: "USD" }));
-    expect(screen.getByText("$213")).toBeInTheDocument();
+    expect(screen.getByText("≈ €184")).toBeInTheDocument();
+    expect(screen.queryByText(/\$/)).not.toBeInTheDocument();
   });
 
   it("renders nothing money-shaped on a viewer payload", () => {
@@ -101,14 +102,22 @@ describe("PurchaseCard", () => {
     expect(screen.getByRole("link", { name: "Pledge manager ↗" })).toBeInTheDocument();
   });
 
-  it("promotes the pledge manager to primary when there is no campaign link", () => {
+  it("promotes the pledge manager to primary with a slot-sized label", () => {
     renderCard(purchase({ campaignUrl: null }));
-    expect(screen.getByRole("link", { name: "Pledge manager ↗" })).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Pledge ↗" })).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: "Pledge manager ↗" })).not.toBeInTheDocument();
   });
 
   it("labels a retail campaign link as the shop", () => {
     renderCard(purchase({ kind: "retail", status: "preorder", pledgeManagerUrl: null }));
     expect(screen.getByRole("link", { name: "Shop ↗" })).toBeInTheDocument();
+  });
+
+  it("speaks shop language on retail orders — no pledge vocabulary", () => {
+    renderCard(purchase({ kind: "retail", status: "preorder" }), { expanded: true });
+    expect(screen.getByText("Price €179 · Shipping €34 · Total €213")).toBeInTheDocument();
+    expect(screen.getAllByText(/Ordered Apr 12, 2025/).length).toBeGreaterThan(0);
+    expect(screen.queryByText(/Pledge/)).not.toBeInTheDocument();
   });
 
   it("renders no links when the purchase has none", () => {
@@ -165,8 +174,8 @@ describe("PurchaseCard", () => {
     expect(screen.getByText("Gloomhaven Grand Festival")).toBeInTheDocument();
     expect(screen.getByText(/ETA Feb 2027/)).toBeInTheDocument();
     expect(screen.queryByText(/Gloomhaven Minis ·/)).not.toBeInTheDocument();
-    // Money = sum of both waves.
-    expect(screen.getByText("$595")).toBeInTheDocument();
+    // Money = sum of both waves, converted for the list.
+    expect(screen.getByText("≈ €514")).toBeInTheDocument();
     expect(screen.queryByText("Frosthaven")).not.toBeInTheDocument();
     renderCard(
       waves.map((w) => ({ ...w, id: `x-${w.id}` })),

@@ -1132,6 +1132,145 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
     ],
   },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "publish-or-perish",
+    title:
+      "Publish or Perish — All-in Bundle: base game + all 3 expansion packs + 3 Enchanted Charms",
+    shortTitle: "Publish or Perish",
+    orderGroup: null,
+    slug: "publish-or-perish",
+    kind: "retail",
+    status: "delivered",
+    platform: "Publisher webshop",
+    campaignUrl: "https://publishorperish.games/",
+    pledgeManagerUrl: null, // webshop order page link not recorded
+    originalEtaMonth: null, // in-stock shop order — no stated ETA
+    currentEtaMonth: null,
+    pledgedOn: "2026-08-03",
+    deliveredOn: "2026-08-06",
+    currency: "EUR",
+    pledgeCents: 7046, // €70.46 All-in Bundle, paid with the order
+    shippingCents: 572, // €5.72 "Standard Academic Pace" shipping
+    note:
+      "Order #6486 at the publisher's webshop (publishorperish.games): All-in Bundle — The " +
+      "Publish or Perish Game + all 3 expansion packs + 3 Enchanted Charms. €70.46 + €5.72 " +
+      'shipping ("Standard Academic Pace"), no tax — €76.18 total.',
+    events: [
+      {
+        id: "publish-or-perish-e01",
+        occurredOn: "2026-08-03",
+        type: "note",
+        title: "Order placed at the publisher's webshop",
+        details:
+          "Order #6486: All-in Bundle (base game + all 3 expansion packs + 3 Enchanted " +
+          'Charms), €70.46 + €5.72 "Standard Academic Pace" shipping — €76.18 total. The ' +
+          "confirmation says the order is being prepared for dispatch.",
+        sourceUrl: null,
+      },
+      {
+        id: "publish-or-perish-e02",
+        occurredOn: "2026-08-06",
+        type: "status-change",
+        title: "Delivered",
+        details: "Arrived three days after the order.",
+        sourceUrl: null,
+      },
+    ],
+  },
+  // One KOSMOS webshop order (#287225, Aug 11 '26) containing two Medical
+  // Mysteries cases shipped together — split per game so each carries its own
+  // catalog slug; the UI folds them into a single card.
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "medical-mysteries-miami",
+    title: "Medical Mysteries — Miami Flatline",
+    shortTitle: "Miami Flatline",
+    orderGroup: { id: "medical-mysteries", title: "Medical Mysteries" },
+    slug: "medical-mysteries-miami",
+    kind: "retail",
+    status: "delivered",
+    platform: "KOSMOS Shop",
+    campaignUrl: "https://www.kosmos.de/de/medical-mysteries-miami-flatline-17641",
+    pledgeManagerUrl: null, // webshop order page link not recorded
+    originalEtaMonth: null, // in-stock shop order — no stated ETA
+    currentEtaMonth: null,
+    pledgedOn: "2026-08-11",
+    deliveredOn: "2026-08-14", // approximate — standard shipping within Germany, exact day not recorded
+    currency: "EUR",
+    pledgeCents: 2499, // €24.99, paid with the order
+    shippingCents: 0, // free standard shipping on the order
+    note:
+      "Order #287225 at the KOSMOS webshop, together with New York Emergency Room: €24.99 " +
+      "each, €49.98 total (incl. €7.98 VAT), free standard shipping. Arrived within the " +
+      "week (exact date approximate).",
+    events: [
+      {
+        id: "medical-mysteries-miami-e01",
+        occurredOn: "2026-08-11",
+        type: "note",
+        title: "Order placed at the KOSMOS webshop",
+        details:
+          "Order #287225: Miami Flatline + New York Emergency Room, €24.99 each — €49.98 " +
+          "total (incl. €7.98 VAT), free standard shipping. The confirmation says the order " +
+          "is being prepared for dispatch.",
+        sourceUrl: null,
+      },
+      {
+        id: "medical-mysteries-miami-e02",
+        occurredOn: "2026-08-14",
+        type: "status-change",
+        title: "Delivered",
+        details: "Arrived a few days after the order (exact date approximate).",
+        sourceUrl: null,
+      },
+    ],
+  },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "medical-mysteries-nyc",
+    title: "Medical Mysteries — New York Emergency Room",
+    shortTitle: "New York Emergency Room",
+    orderGroup: { id: "medical-mysteries", title: "Medical Mysteries" },
+    slug: "medical-mysteries-nyc",
+    kind: "retail",
+    status: "delivered",
+    platform: "KOSMOS Shop",
+    campaignUrl: "https://www.kosmos.de/de/medical-mysteries-new-york-emergency-room-17640",
+    pledgeManagerUrl: null, // webshop order page link not recorded
+    originalEtaMonth: null, // in-stock shop order — no stated ETA
+    currentEtaMonth: null,
+    pledgedOn: "2026-08-11",
+    deliveredOn: "2026-08-14", // approximate — standard shipping within Germany, exact day not recorded
+    currency: "EUR",
+    pledgeCents: 2499, // €24.99, paid with the order
+    shippingCents: 0, // free standard shipping on the order
+    note:
+      "Order #287225 at the KOSMOS webshop, together with Miami Flatline: €24.99 each, " +
+      "€49.98 total (incl. €7.98 VAT), free standard shipping. Arrived within the week " +
+      "(exact date approximate).",
+    events: [
+      {
+        id: "medical-mysteries-nyc-e01",
+        occurredOn: "2026-08-11",
+        type: "note",
+        title: "Order placed at the KOSMOS webshop",
+        details:
+          "Order #287225: New York Emergency Room + Miami Flatline, €24.99 each — €49.98 " +
+          "total (incl. €7.98 VAT), free standard shipping. The confirmation says the order " +
+          "is being prepared for dispatch.",
+        sourceUrl: null,
+      },
+      {
+        id: "medical-mysteries-nyc-e02",
+        occurredOn: "2026-08-14",
+        type: "status-change",
+        title: "Delivered",
+        details: "Arrived a few days after the order (exact date approximate).",
+        sourceUrl: null,
+      },
+    ],
+  },
 ] satisfies readonly PurchaseRecord[];
 
 export function purchasesForUser(userId: string): PurchaseRecord[] {

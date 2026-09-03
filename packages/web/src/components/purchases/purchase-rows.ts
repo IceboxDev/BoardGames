@@ -165,12 +165,20 @@ export function formatApproxEur(cents: number): string {
   return `≈ ${formatMoneyCents(Math.round(cents / 100) * 100, "EUR")}`;
 }
 
-/** "€89" / "$89.99" / "€1,790" — minor units, deterministic (no Intl). */
+/** "€89" / "$905" / "€1,790" — ONE money shape everywhere: whole units,
+ *  comma grouping, never decimals (exact cents live in the data, not the
+ *  display). Deterministic (no Intl). */
 export function formatMoneyCents(cents: number, currency: PurchaseCurrency): string {
-  const value = (cents / 100).toFixed(cents % 100 === 0 ? 0 : 2);
-  const [int, frac] = value.split(".");
-  const grouped = int.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-  return `${CURRENCY_SYMBOL[currency]}${grouped}${frac ? `.${frac}` : ""}`;
+  const grouped = String(Math.round(cents / 100)).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return `${CURRENCY_SYMBOL[currency]}${grouped}`;
+}
+
+/** The card list's money: exact euros for EUR orders, "≈ €514" converted via
+ *  EUR_RATE for everything else — one currency down the whole column. The
+ *  expanded detail keeps the billed currency. */
+export function formatEurTotal(cents: number, currency: PurchaseCurrency): string {
+  if (currency === "EUR") return formatMoneyCents(cents, "EUR");
+  return formatApproxEur(cents * EUR_RATE[currency]);
 }
 
 export interface PurchaseRow {

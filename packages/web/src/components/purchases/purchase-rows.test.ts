@@ -16,6 +16,7 @@ import {
   EVENT_META,
   formatApproxEur,
   formatEtaMonth,
+  formatEurTotal,
   formatMoneyCents,
   isOverdue,
   railFor,
@@ -83,16 +84,22 @@ describe("slipMonths", () => {
   });
 });
 
-describe("formatEtaMonth / formatMoneyCents", () => {
-  it("renders months and money deterministically", () => {
+describe("formatEtaMonth / formatMoneyCents / formatEurTotal", () => {
+  it("renders months and money deterministically — whole units, one shape", () => {
     expect(formatEtaMonth("2026-11")).toBe("Nov 2026");
     expect(formatMoneyCents(8900, "EUR")).toBe("€89");
-    expect(formatMoneyCents(8999, "EUR")).toBe("€89.99");
+    expect(formatMoneyCents(8999, "EUR")).toBe("€90");
     expect(formatMoneyCents(0, "EUR")).toBe("€0");
     expect(formatMoneyCents(179000, "EUR")).toBe("€1,790");
-    expect(formatMoneyCents(123456, "EUR")).toBe("€1,234.56");
-    expect(formatMoneyCents(31892, "USD")).toBe("$318.92");
-    expect(formatMoneyCents(25228, "GBP")).toBe("£252.28");
+    expect(formatMoneyCents(123456, "EUR")).toBe("€1,235");
+    expect(formatMoneyCents(31892, "USD")).toBe("$319");
+    expect(formatMoneyCents(25228, "GBP")).toBe("£252");
+  });
+
+  it("speaks EUR down the list: exact for EUR, ≈ converted otherwise", () => {
+    expect(formatEurTotal(21300, "EUR")).toBe("€213");
+    expect(formatEurTotal(21300, "USD")).toBe(`≈ €${Math.round((21300 * EUR_RATE.USD) / 100)}`);
+    expect(formatEurTotal(25228, "GBP")).toBe(`≈ €${Math.round((25228 * EUR_RATE.GBP) / 100)}`);
   });
 });
 
