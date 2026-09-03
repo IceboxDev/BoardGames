@@ -7,7 +7,14 @@ let db: Client | null = null;
 // is the only DB observability we have on a single-process server that also
 // runs blocking AI on the main thread — without it, a slow request is
 // indistinguishable from the event loop being pinned by an ISMCTS search.
-const SLOW_QUERY_MS = Number(process.env.SLOW_QUERY_MS ?? 200);
+//
+// The default must sit ABOVE Turso's idle-reconnect band: the starter-tier
+// database tears down connection state after ~5-15s of idle, and the next
+// query pays 200-450ms to re-establish it (measured 2026-09-03, identical
+// over ws and http transports — it's server-side, not ours). Sporadic
+// traffic like the iCal feed pollers pays that on every hit, so a threshold
+// inside the band logs the deployment's steady state, not a problem.
+const SLOW_QUERY_MS = Number(process.env.SLOW_QUERY_MS ?? 500);
 
 /** One-line, log-safe description of a statement (SQL only — never bound args,
  *  which can contain user data). Accepts a string or a `{ sql }` object. */
