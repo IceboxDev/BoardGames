@@ -25,9 +25,9 @@ import { ErrorAlert } from "../ui/ErrorAlert.tsx";
 import { MicroLabel } from "../ui/Label.tsx";
 import { Surface } from "../ui/Surface.tsx";
 import { useConfirm } from "../ui/useConfirm.tsx";
-import { ExpandableAdminCard } from "./ExpandableAdminCard.tsx";
+import { AdminSection } from "./AdminSection.tsx";
 
-/** One-line status for the collapsed card. */
+/** One-line status for the section header. */
 function summarize(state: AdminSkillStateResponse | undefined): string {
   if (!state) return "Loading…";
   if (!state.computedAt) return "Never computed — run it once to light up the hall of fame";
@@ -79,8 +79,6 @@ function CandidateRow({
 
 export function SkillRatingsCardView({
   state,
-  expanded,
-  onToggle,
   onRecompute,
   onPublish,
   onRetract,
@@ -91,8 +89,6 @@ export function SkillRatingsCardView({
   error = null,
 }: {
   state: AdminSkillStateResponse | undefined;
-  expanded: boolean;
-  onToggle: () => void;
   onRecompute: () => void;
   onPublish: (candidateKey: string) => void;
   onRetract: (id: number) => void;
@@ -103,13 +99,7 @@ export function SkillRatingsCardView({
   error?: string | null;
 }) {
   return (
-    <ExpandableAdminCard
-      tone="accent"
-      eyebrow="Skill ratings"
-      summary={summarize(state)}
-      expanded={expanded}
-      onToggle={onToggle}
-    >
+    <AdminSection tone="accent" eyebrow="Skill ratings" summary={summarize(state)}>
       <div className="space-y-3">
         <div className="flex flex-wrap items-center gap-3">
           <Button size="sm" onClick={onRecompute} loading={recomputing}>
@@ -180,7 +170,7 @@ export function SkillRatingsCardView({
           </Surface>
         )}
       </div>
-    </ExpandableAdminCard>
+    </AdminSection>
   );
 }
 
@@ -189,13 +179,11 @@ export function SkillRatingsCardView({
 export function SkillRatingsCard() {
   const queryClient = useQueryClient();
   const { confirm, confirmDialog } = useConfirm();
-  const [expanded, setExpanded] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
   const [publishingKey, setPublishingKey] = useState<string | null>(null);
 
-  // Always enabled: the collapsed summary line ("N recorded since the last
-  // run") needs the state too — gating on `expanded` left it on "Loading…"
-  // forever until the card was opened.
+  // The header summary line ("N recorded since the last run") needs the
+  // state as much as the body does, so the query is unconditional.
   const stateQuery = useQuery({
     queryKey: qk.adminSkills(),
     queryFn: ({ signal }) => fetchAdminSkillState(signal),
@@ -253,8 +241,6 @@ export function SkillRatingsCard() {
     <>
       <SkillRatingsCardView
         state={state}
-        expanded={expanded}
-        onToggle={() => setExpanded((v) => !v)}
         onRecompute={() => {
           setNotice(null);
           recomputeMutation.mutate();

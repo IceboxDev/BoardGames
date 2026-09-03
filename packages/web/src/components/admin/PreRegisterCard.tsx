@@ -14,7 +14,7 @@ import InventoryGrid from "../InventoryGrid";
 import { Button } from "../ui/Button";
 import { ErrorAlert } from "../ui/ErrorAlert";
 import { SegmentedControl } from "../ui/SegmentedControl";
-import { ExpandableAdminCard } from "./ExpandableAdminCard";
+import { AdminSection } from "./AdminSection";
 import { ONLINE_MODE_OPTIONS } from "./online-mode-options";
 
 // Derived-ownership entries can't be stamped directly: the EXIT anchor is
@@ -25,13 +25,11 @@ const ownableGames = games.filter((g) => g.slug !== EXIT_CATALOG_SLUG && !isDeck
 /**
  * Admin-only "pre-register" queue — a slug list + online mode that gets
  * stamped onto the next user who registers. Same draft/save model as
- * `InventoryPanel`, with an extra "Clear queue" affordance and an
- * expand/collapse chrome so the card doesn't dominate the admin page when
- * nothing is queued.
+ * `InventoryPanel`, with an extra "Clear queue" affordance. Fills its own
+ * admin tab, so it renders open.
  */
 export function PreRegisterCard() {
   const queryClient = useQueryClient();
-  const [expanded, setExpanded] = useState(false);
 
   const pendingQuery = useQuery({
     queryKey: qk.adminPendingInventory(),
@@ -89,7 +87,7 @@ export function PreRegisterCard() {
   }
 
   return (
-    <ExpandableAdminCard
+    <AdminSection
       tone="accent"
       eyebrow="Pre-register"
       summary={
@@ -99,9 +97,6 @@ export function PreRegisterCard() {
             ? "No collection queued — the next signup will start with no games."
             : `${queued} ${queued === 1 ? "game" : "games"} queued — assigned to the next user who registers.`
       }
-      expanded={expanded}
-      onToggle={() => setExpanded((v) => !v)}
-      toggleDisabled={loading}
     >
       {!loading && slugList.draft !== null ? (
         <>
@@ -157,6 +152,6 @@ export function PreRegisterCard() {
           </div>
         </>
       ) : null}
-    </ExpandableAdminCard>
+    </AdminSection>
   );
 }

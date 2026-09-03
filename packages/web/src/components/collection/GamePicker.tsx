@@ -72,7 +72,7 @@ export function GamePicker({
           aria-label="Search ownable games"
         />
       </div>
-      <ul className="max-h-64 space-y-0.5 overflow-y-auto pr-1">
+      <ul className="scrollbar-thin max-h-64 space-y-0.5 overflow-y-auto pr-1">
         {options.map((option) => {
           const entry = resolveInventoryEntry(option.slug);
           const picked = pickedSlug === option.slug;

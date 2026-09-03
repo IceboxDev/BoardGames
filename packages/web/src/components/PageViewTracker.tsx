@@ -53,7 +53,10 @@ function classify(pathname: string, search: string): { page: string; detail?: st
   if (pathname === "/offline") return { page: "calendar" };
   if (pathname === "/history") return { page: "history" };
   if (pathname === "/players") return { page: "players" };
-  if (pathname === "/admin") return { page: "admin" };
+  // Admin is tabbed (?tab=vote etc.) — log which tab, "users" being the default.
+  if (pathname === "/admin") {
+    return { page: "admin", detail: new URLSearchParams(search).get("tab") ?? "users" };
+  }
   if (pathname === "/games") return { page: "games" };
   const play = pathname.match(/^\/play\/([^/]+)/);
   if (play) return { page: "play", detail: play[1] };

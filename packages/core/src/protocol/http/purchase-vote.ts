@@ -73,7 +73,17 @@ export const PurchaseVoteWriteResponseSchema = z.object({ ok: z.literal(true) })
 export const PurchaseVoterSchema = z.object({
   id: z.string().min(1),
   name: z.string().min(1),
+  /** Avatar as a webp data URI (see avatar.ts), or null for the monogram. */
+  image: z.string().nullable(),
 });
+
+/** Admin-only tally row: voter ids in vote-time order, so the card can show
+ * WHO voted. Deliberately not on the shared entry — the player-facing reveal
+ * and the result greeting must never carry voter identity. */
+export const AdminPurchaseTallyEntrySchema = PurchaseTallyEntrySchema.extend({
+  voterIds: z.array(z.string().min(1)),
+});
+export type AdminPurchaseTallyEntry = z.infer<typeof AdminPurchaseTallyEntrySchema>;
 
 export const AdminPurchasePollSchema = z.object({
   id: z.number().int().positive(),
@@ -84,7 +94,7 @@ export const AdminPurchasePollSchema = z.object({
   closedAt: z.string().min(1).nullable(),
   winnerSlug: z.string().min(1).nullable(),
   /** Live tally, open or closed — the admin always sees the numbers. */
-  tally: z.array(PurchaseTallyEntrySchema),
+  tally: z.array(AdminPurchaseTallyEntrySchema),
   voters: z.array(PurchaseVoterSchema),
 });
 export type AdminPurchasePoll = z.infer<typeof AdminPurchasePollSchema>;

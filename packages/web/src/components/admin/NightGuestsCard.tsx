@@ -27,11 +27,11 @@ type Props = {
  * attendee pipeline; removing deletes the RSVP row again. The attendee list
  * badges them as "Guest".
  *
- * Rendered INSIDE the Guest players card (it is a sub-function of guests,
- * not a page-level block of its own), so queries only fire while that card
- * is expanded — `active` mirrors its expansion.
+ * Rendered INSIDE the Guest players section (it is a sub-function of guests,
+ * not a page-level block of its own). The Guests tab only mounts while
+ * active, so the queries naturally fire on demand.
  */
-export function NightGuestsPanel({ guests, active }: Props & { active: boolean }) {
+export function NightGuestsPanel({ guests }: Props) {
   const [date, setDate] = useState("");
   const [guestId, setGuestId] = useState("");
   const nightId = useId();
@@ -41,7 +41,6 @@ export function NightGuestsPanel({ guests, active }: Props & { active: boolean }
   const locksQuery = useQuery({
     queryKey: qk.calendarLocks(),
     queryFn: ({ signal }) => fetchCalendarLocks(signal),
-    enabled: active,
   });
   // Upcoming (or today's) locked nights, soonest first. Past nights are
   // deliberately hidden: retroactive guest credit belongs in match history.
@@ -53,7 +52,7 @@ export function NightGuestsPanel({ guests, active }: Props & { active: boolean }
   const gamesQuery = useQuery({
     queryKey: qk.availableGames(date || null),
     queryFn: ({ signal }) => fetchAvailableGames(date, signal),
-    enabled: active && date !== "",
+    enabled: date !== "",
   });
   const nightGuests = (gamesQuery.data?.attendees ?? []).filter((a) => a.isGuest);
   const attendingIds = new Set(nightGuests.map((a) => a.userId));

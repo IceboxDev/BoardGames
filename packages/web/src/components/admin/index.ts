@@ -1,8 +1,8 @@
 export { ActivityDrawer } from "./ActivityDrawer";
+export { AdminSection } from "./AdminSection";
 export { AnnouncementsCard } from "./AnnouncementsCard";
 export { AvailabilityDrawer } from "./AvailabilityDrawer";
 export { CoverageCell } from "./CoverageCell";
-export { ExpandableAdminCard } from "./ExpandableAdminCard";
 export { GuestPlayersCard } from "./GuestPlayersCard";
 export { InactiveToggleRow } from "./InactiveToggleRow";
 export { InventoryPanel } from "./InventoryPanel";

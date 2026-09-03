@@ -6,7 +6,8 @@
 //   1. purchase-vote announce — one-time "voting is live" card (the same
 //      launch treatment the skill intro got). Ack flips it off forever.
 //   2. purchase-vote reminder — every later visit while the viewer still has
-//      votes to spend. Its ack is log-only, so it returns next app open.
+//      votes to spend (admins exempt — they run the vote). Its ack is
+//      log-only, so it returns next app open.
 //   3. purchase-vote result — one-time winner reveal after a poll closes.
 //   4. The skill queue (intro, then spotlights) exactly as before.
 //
@@ -45,16 +46,20 @@ import { playerRefs } from "../lib/user-refs.ts";
 
 export const greetingsRoutes = authedApp();
 
-const OfflineUserSchema = z.object({ onlineMode: OnlineModeSchema });
+const ViewerGateSchema = z.object({
+  onlineMode: OnlineModeSchema,
+  role: z.string().optional(),
+});
 
 // ── GET /api/greetings ─────────────────────────────────────────────────
 
 greetingsRoutes.get("/", async (c) => {
   const viewer = c.get("user");
-  const mode = OfflineUserSchema.safeParse(viewer);
-  if (!mode.success || mode.data.onlineMode === "online") {
+  const gate = ViewerGateSchema.safeParse(viewer);
+  if (!gate.success || gate.data.onlineMode === "online") {
     return c.json(AppGreetingResponseSchema.parse({ greeting: null, players: {} }));
   }
+  const isAdmin = gate.data.role === "admin";
 
   const poll = await latestPoll();
   if (poll) {
@@ -75,7 +80,9 @@ greetingsRoutes.get("/", async (c) => {
         }),
       );
     }
-    if (poll.closed_at === null && votesLeft > 0) {
+    // Admins run the vote — never nag the person who opened it. (The announce
+    // and result cards still serve; only the recurring reminder is skipped.)
+    if (poll.closed_at === null && votesLeft > 0 && !isAdmin) {
       return c.json(
         AppGreetingResponseSchema.parse({
           greeting: {

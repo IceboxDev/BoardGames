@@ -21,12 +21,10 @@ const BASE: AdminSkillStateResponse = {
   players: { u1: { name: "Riccardo Giordano", image: null } },
 };
 
-function renderCard(state: AdminSkillStateResponse | undefined, expanded = true) {
+function renderCard(state: AdminSkillStateResponse | undefined) {
   return render(
     <SkillRatingsCardView
       state={state}
-      expanded={expanded}
-      onToggle={() => {}}
       onRecompute={() => {}}
       onPublish={() => {}}
       onRetract={() => {}}

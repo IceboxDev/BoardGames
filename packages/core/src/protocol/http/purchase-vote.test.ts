@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   AdminCreatePollBodySchema,
+  AdminPurchasePollSchema,
   PurchasePollSchema,
   PurchaseVoteStateSchema,
   SetPurchaseVotesBodySchema,
@@ -52,6 +53,23 @@ describe("PurchaseVoteStateSchema", () => {
     expect(PurchaseVoteStateSchema.parse({ poll: null }).poll).toBeNull();
   });
 
+  it("strips admin-only voterIds from the player-facing reveal", () => {
+    // The server builds both payloads from the same computeTally output;
+    // the player schema must drop the voter identity, not echo it.
+    const parsed = PurchasePollSchema.parse({
+      id: 3,
+      candidates: ["wingspan"],
+      requiredVoters: 1,
+      voterCount: 1,
+      myVotes: [],
+      votesLeft: VOTES_PER_PLAYER,
+      closedAt: "2026-09-03 01:00:00",
+      winnerSlug: "wingspan",
+      results: { tally: [{ slug: "wingspan", votes: 1, voterIds: ["u1"] }] },
+    });
+    expect(parsed.results?.tally[0]).toEqual({ slug: "wingspan", votes: 1 });
+  });
+
   it("rejects more picks than the vote budget", () => {
     const r = PurchasePollSchema.safeParse({
       id: 1,
@@ -94,6 +112,51 @@ describe("SetPurchaseVotesBodySchema", () => {
     const r = SetPurchaseVotesBodySchema.safeParse({ slugs: ["Not A Slug!"] });
     expect(r.success).toBe(false);
     if (!r.success) expect(r.error.issues[0]?.path).toEqual(["slugs", 0]);
+  });
+});
+
+describe("AdminPurchasePollSchema", () => {
+  const base = {
+    id: 1,
+    createdAt: "2026-09-03 01:00:00",
+    candidates: ["arcs", "wingspan"],
+    requiredVoters: 2,
+    voterCount: 1,
+    closedAt: null,
+    winnerSlug: null,
+    voters: [{ id: "u1", name: "Simone", image: null }],
+  };
+
+  it("parses a tally with per-row voter ids and voter avatars", () => {
+    const parsed = AdminPurchasePollSchema.parse({
+      ...base,
+      tally: [
+        { slug: "arcs", votes: 1, voterIds: ["u1"] },
+        { slug: "wingspan", votes: 0, voterIds: [] },
+      ],
+      voters: [{ id: "u1", name: "Simone", image: "data:image/webp;base64,AA==" }],
+    });
+    expect(parsed.tally[0]?.voterIds).toEqual(["u1"]);
+    expect(parsed.voters[0]?.image).toContain("data:image/webp");
+  });
+
+  it("rejects a tally row without voterIds", () => {
+    const r = AdminPurchasePollSchema.safeParse({
+      ...base,
+      tally: [{ slug: "arcs", votes: 1 }],
+    });
+    expect(r.success).toBe(false);
+    if (!r.success) expect(r.error.issues[0]?.path).toEqual(["tally", 0, "voterIds"]);
+  });
+
+  it("rejects a voter without an image field", () => {
+    const r = AdminPurchasePollSchema.safeParse({
+      ...base,
+      tally: [],
+      voters: [{ id: "u1", name: "Simone" }],
+    });
+    expect(r.success).toBe(false);
+    if (!r.success) expect(r.error.issues[0]?.path).toEqual(["voters", 0, "image"]);
   });
 });
 

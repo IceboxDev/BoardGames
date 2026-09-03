@@ -9,7 +9,7 @@ import { Field } from "../ui/Field";
 import { IconButton } from "../ui/IconButton";
 import { Input } from "../ui/Input";
 import { Select } from "../ui/Select";
-import { ExpandableAdminCard } from "./ExpandableAdminCard";
+import { AdminSection } from "./AdminSection";
 import { synthesizeGuestEmail } from "./guest-email";
 import { NightGuestsPanel } from "./NightGuestsCard";
 import type { AdminUser } from "./types";
@@ -33,7 +33,6 @@ type Props = {
  * decoupled from React Query's policy.
  */
 export function GuestPlayersCard({ guests, members, onChanged }: Props) {
-  const [expanded, setExpanded] = useState(false);
   const [first, setFirst] = useState("");
   const [last, setLast] = useState("");
   const [error, setError] = useState<string | null>(null);
@@ -116,7 +115,7 @@ export function GuestPlayersCard({ guests, members, onChanged }: Props) {
   }
 
   return (
-    <ExpandableAdminCard
+    <AdminSection
       tone="amber"
       eyebrow="Guest players"
       summary={
@@ -124,126 +123,122 @@ export function GuestPlayersCard({ guests, members, onChanged }: Props) {
           ? "No guests yet — add stub accounts for people who never signed up."
           : `${guests.length} guest${guests.length === 1 ? "" : "s"} — pickable in match history, seatable on nights.`
       }
-      expanded={expanded}
-      onToggle={() => setExpanded((v) => !v)}
     >
-      <>
-        {error && <ErrorAlert message={error} />}
-        {mergeNotice && <p className="text-xs text-emerald-300">{mergeNotice}</p>}
-        <form onSubmit={addGuest} className="flex flex-wrap items-end gap-2">
-          <Field label="First name" htmlFor={firstId}>
-            <Input
-              id={firstId}
-              value={first}
-              onChange={(e) => setFirst(e.target.value)}
-              disabled={busy}
-              width="auto"
-              className="w-40"
-            />
-          </Field>
-          <Field label="Last name" htmlFor={lastId}>
-            <Input
-              id={lastId}
-              value={last}
-              onChange={(e) => setLast(e.target.value)}
-              disabled={busy}
-              width="auto"
-              className="w-40"
-            />
-          </Field>
-          <Button type="submit" variant="primary" size="sm" loading={busy} disabled={busy}>
-            Add guest
-          </Button>
-        </form>
-        {guests.length > 0 && (
-          <ul className="flex flex-col gap-1 pt-1">
-            {guests.map((g) => (
-              <li key={g.id} className="rounded-md bg-surface-900/60 px-2.5 py-1.5">
-                <div className="flex items-center gap-2">
-                  <span className="flex-1 truncate text-sm text-fg-primary">{g.name}</span>
-                  {pendingDeleteId === g.id ? (
-                    <>
-                      <span className="text-xs text-rose-300">Delete?</span>
-                      <Button
-                        variant="danger"
-                        size="xs"
-                        onClick={() => removeGuest(g.id)}
-                        disabled={busy}
-                      >
-                        Yes
-                      </Button>
-                      <Button
-                        variant="secondary"
-                        size="xs"
-                        onClick={() => setPendingDeleteId(null)}
-                        disabled={busy}
-                      >
-                        No
-                      </Button>
-                    </>
-                  ) : (
-                    <>
-                      <Button
-                        variant="secondary"
-                        size="xs"
-                        onClick={() => {
-                          setMergingId((cur) => (cur === g.id ? null : g.id));
-                          setMergeTargetId("");
-                          setMergeNotice(null);
-                        }}
-                        disabled={busy || members.length === 0}
-                        title="Move this guest's match history onto a real account"
-                      >
-                        Merge…
-                      </Button>
-                      <IconButton
-                        tone="rose"
-                        size="xs"
-                        aria-label={`Delete guest ${g.name}`}
-                        onClick={() => setPendingDeleteId(g.id)}
-                        icon={<TrashIcon className="h-3.5 w-3.5" />}
-                      />
-                    </>
-                  )}
-                </div>
-                {mergingId === g.id && (
-                  <div className="mt-1.5 flex flex-wrap items-center gap-2 border-t border-white/5 pt-1.5">
-                    <span className="text-xs text-fg-secondary">Merge into</span>
-                    <Select
-                      size="sm"
-                      block={false}
-                      value={mergeTargetId}
-                      onChange={(e) => setMergeTargetId(e.target.value)}
-                      disabled={busy}
-                      aria-label={`Merge target for ${g.name}`}
-                    >
-                      <option value="">Pick a member…</option>
-                      {members.map((m) => (
-                        <option key={m.id} value={m.id}>
-                          {m.name || m.email}
-                        </option>
-                      ))}
-                    </Select>
+      {error && <ErrorAlert message={error} />}
+      {mergeNotice && <p className="text-xs text-emerald-300">{mergeNotice}</p>}
+      <form onSubmit={addGuest} className="flex flex-wrap items-end gap-2">
+        <Field label="First name" htmlFor={firstId}>
+          <Input
+            id={firstId}
+            value={first}
+            onChange={(e) => setFirst(e.target.value)}
+            disabled={busy}
+            width="auto"
+            className="w-40"
+          />
+        </Field>
+        <Field label="Last name" htmlFor={lastId}>
+          <Input
+            id={lastId}
+            value={last}
+            onChange={(e) => setLast(e.target.value)}
+            disabled={busy}
+            width="auto"
+            className="w-40"
+          />
+        </Field>
+        <Button type="submit" variant="primary" size="sm" loading={busy} disabled={busy}>
+          Add guest
+        </Button>
+      </form>
+      {guests.length > 0 && (
+        <ul className="flex flex-col gap-1 pt-1">
+          {guests.map((g) => (
+            <li key={g.id} className="rounded-md bg-surface-900/60 px-2.5 py-1.5">
+              <div className="flex items-center gap-2">
+                <span className="flex-1 truncate text-sm text-fg-primary">{g.name}</span>
+                {pendingDeleteId === g.id ? (
+                  <>
+                    <span className="text-xs text-rose-300">Delete?</span>
                     <Button
-                      variant="primary"
+                      variant="danger"
                       size="xs"
-                      onClick={() => mergeGuest(g)}
-                      disabled={busy || !mergeTargetId}
-                      loading={busy}
+                      onClick={() => removeGuest(g.id)}
+                      disabled={busy}
                     >
-                      Merge
+                      Yes
                     </Button>
-                    <span className="text-2xs text-fg-muted">
-                      Rewrites their matches and deletes the guest. Not undoable.
-                    </span>
-                  </div>
+                    <Button
+                      variant="secondary"
+                      size="xs"
+                      onClick={() => setPendingDeleteId(null)}
+                      disabled={busy}
+                    >
+                      No
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Button
+                      variant="secondary"
+                      size="xs"
+                      onClick={() => {
+                        setMergingId((cur) => (cur === g.id ? null : g.id));
+                        setMergeTargetId("");
+                        setMergeNotice(null);
+                      }}
+                      disabled={busy || members.length === 0}
+                      title="Move this guest's match history onto a real account"
+                    >
+                      Merge…
+                    </Button>
+                    <IconButton
+                      tone="rose"
+                      size="xs"
+                      aria-label={`Delete guest ${g.name}`}
+                      onClick={() => setPendingDeleteId(g.id)}
+                      icon={<TrashIcon className="h-3.5 w-3.5" />}
+                    />
+                  </>
                 )}
-              </li>
-            ))}
-          </ul>
-        )}
-        <NightGuestsPanel guests={guests} active={expanded} />
-      </>
-    </ExpandableAdminCard>
+              </div>
+              {mergingId === g.id && (
+                <div className="mt-1.5 flex flex-wrap items-center gap-2 border-t border-white/5 pt-1.5">
+                  <span className="text-xs text-fg-secondary">Merge into</span>
+                  <Select
+                    size="sm"
+                    block={false}
+                    value={mergeTargetId}
+                    onChange={(e) => setMergeTargetId(e.target.value)}
+                    disabled={busy}
+                    aria-label={`Merge target for ${g.name}`}
+                  >
+                    <option value="">Pick a member…</option>
+                    {members.map((m) => (
+                      <option key={m.id} value={m.id}>
+                        {m.name || m.email}
+                      </option>
+                    ))}
+                  </Select>
+                  <Button
+                    variant="primary"
+                    size="xs"
+                    onClick={() => mergeGuest(g)}
+                    disabled={busy || !mergeTargetId}
+                    loading={busy}
+                  >
+                    Merge
+                  </Button>
+                  <span className="text-2xs text-fg-muted">
+                    Rewrites their matches and deletes the guest. Not undoable.
+                  </span>
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+      )}
+      <NightGuestsPanel guests={guests} />
+    </AdminSection>
   );
 }

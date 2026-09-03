@@ -12,13 +12,13 @@ import { ErrorAlert } from "../ui/ErrorAlert.tsx";
 import { Modal, ModalBody, ModalFooter } from "../ui/Modal.tsx";
 import { Surface } from "../ui/Surface.tsx";
 import { useConfirm } from "../ui/useConfirm.tsx";
-import { ExpandableAdminCard } from "./ExpandableAdminCard.tsx";
+import { AdminSection } from "./AdminSection.tsx";
 
 // Pending ownership announcements — the admin side of "Announce a game".
 // Approve stamps the (possibly re-mapped) slug onto the announcer's
 // inventory; approve-custom turns a free-text name into a custom collection
-// item; dismiss just closes it. Same expandable-card chrome as the
-// pre-register queue.
+// item; dismiss just closes it. Lives at the top of the Users tab (it's a
+// per-user queue) and only exists while something is pending.
 
 function announcedTitle(a: Announcement): string {
   if (a.slug) return resolveInventoryEntry(a.slug).title;
@@ -28,7 +28,6 @@ function announcedTitle(a: Announcement): string {
 export function AnnouncementsCard() {
   const queryClient = useQueryClient();
   const { confirm, confirmDialog } = useConfirm();
-  const [expanded, setExpanded] = useState(false);
   /** Announcement currently in the approve-with-picker flow. */
   const [approving, setApproving] = useState<Announcement | null>(null);
   const [pickedSlug, setPickedSlug] = useState<string | null>(null);
@@ -69,14 +68,7 @@ export function AnnouncementsCard() {
 
   return (
     <>
-      <ExpandableAdminCard
-        tone="amber"
-        eyebrow="Ownership announcements"
-        summary={summary}
-        expanded={expanded}
-        onToggle={() => setExpanded((v) => !v)}
-        toggleDisabled={query.isPending}
-      >
+      <AdminSection tone="amber" eyebrow="Ownership announcements" summary={summary}>
         {error && <ErrorAlert message={error} />}
         <ul className="space-y-2">
           {announcements.map((a) => (
@@ -140,7 +132,7 @@ export function AnnouncementsCard() {
             <li className="py-2 text-center text-xs text-fg-muted">Queue is empty.</li>
           )}
         </ul>
-      </ExpandableAdminCard>
+      </AdminSection>
 
       {approving && (
         <Modal

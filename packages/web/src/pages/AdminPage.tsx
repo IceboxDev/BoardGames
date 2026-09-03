@@ -1,6 +1,7 @@
 import type { OnlineMode } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import {
   ActivityDrawer,
   type AdminUser,
@@ -16,7 +17,14 @@ import {
   UsersTable,
 } from "../components/admin";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
-import { Chip, ErrorAlert, PageHeader, PageMain, PageShell } from "../components/ui";
+import {
+  Chip,
+  ErrorAlert,
+  PageHeader,
+  PageMain,
+  PageShell,
+  SegmentedControl,
+} from "../components/ui";
 import { useAdminUsers } from "../hooks/useAdminUsers.ts";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { adminGenerateResetLink, adminSetOnlineMode } from "../lib/admin";
@@ -44,9 +52,20 @@ import {
  *  that lands them behind the show-inactive expander. */
 type MemberRow = { user: AdminUser; coverage: Coverage; zeroDays: number; inactive: boolean };
 
+/** URL-backed tab set (`?tab=…`; Users is the bare default). */
+const ADMIN_TABS = ["users", "vote", "pre-register", "skills", "guests"] as const;
+type AdminTab = (typeof ADMIN_TABS)[number];
+
+function isAdminTab(v: string | null): v is AdminTab {
+  return v !== null && (ADMIN_TABS as readonly string[]).includes(v);
+}
+
 /**
- * The admin dashboard — users table + pre-register queue + guest-players
- * editor + per-user availability drawer.
+ * The admin dashboard, one tab per concern: the users table (plus the
+ * ownership-announcements queue — it's per-user work), the purchase vote,
+ * the pre-register queue, skill ratings, and guest players. Tabs are
+ * URL-backed like the collection page's `?tab=purchases`, and only the
+ * active tab's panel mounts, so each tab's queries fire on demand.
  *
  * Coordinates the queries / mutations and threads handlers through to the
  * sub-components in `components/admin/`. The page itself stays a thin shell:
@@ -57,6 +76,16 @@ export default function AdminPage() {
   const queryClient = useQueryClient();
   const { user: currentUser } = useCurrentUser();
   const currentUserId = currentUser?.id ?? null;
+
+  const [searchParams, setSearchParams] = useSearchParams();
+  const tabParam = searchParams.get("tab");
+  const tab: AdminTab = isAdminTab(tabParam) ? tabParam : "users";
+  function setTab(next: AdminTab) {
+    const params = new URLSearchParams(searchParams);
+    if (next === "users") params.delete("tab");
+    else params.set("tab", next);
+    setSearchParams(params, { replace: true });
+  }
 
   const [expandedUserId, setExpandedUserId] = useState<string | null>(null);
   const [calendarUser, setCalendarUser] = useState<AdminUser | null>(null);
@@ -263,75 +292,95 @@ export default function AdminPage() {
   return (
     <PageShell topNav={<TopNav back={<TopNavBackButton to="/" />} />}>
       <PageMain width="7xl" padding="dense">
-        <PageHeader
-          title="Users"
-          actions={
-            <Chip
-              pressed={deleteMode}
-              tone="rose"
-              variant="outlined"
-              size="sm"
-              onClick={toggleDeleteMode}
-            >
-              {deleteMode ? "Exit delete mode" : "Delete mode"}
-            </Chip>
-          }
-          className="mb-2"
+        <PageHeader title="Admin" className="mb-4" />
+        <SegmentedControl<AdminTab>
+          aria-label="Admin sections"
+          options={[
+            { value: "users", label: "Users" },
+            { value: "vote", label: "Purchase vote" },
+            { value: "pre-register", label: "Pre-register" },
+            { value: "skills", label: "Skill ratings" },
+            { value: "guests", label: "Guests" },
+          ]}
+          value={tab}
+          onChange={setTab}
+          shape="pill"
+          size="sm"
+          className="mb-6"
         />
-        {deleteMode ? (
-          <p className="mb-8 text-sm text-rose-300">
-            <span className="font-semibold">Delete mode is on.</span> Click{" "}
-            <span className="font-semibold">Delete</span> on a row, then type the user's email to
-            confirm. Deletion is permanent and wipes their inventory and availability.
-          </p>
-        ) : (
-          <p className="mb-8 text-sm text-fg-muted">
-            Set each user's <span className="font-medium text-fg-secondary">online mode</span> —{" "}
-            <span className="font-medium text-fg-secondary">Offline</span> for in-person only,{" "}
-            <span className="font-medium text-fg-secondary">Online</span> for multiplayer only, or{" "}
-            <span className="font-medium text-fg-secondary">Both</span>. Use{" "}
-            <span className="font-medium text-fg-secondary">Inventory</span> to set which games each
-            user owns. Click <span className="font-medium text-fg-secondary">Calendar</span> to
-            preview a user's offline availability.
-          </p>
+
+        {tab === "users" && (
+          <>
+            <div className="mb-5 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+              {deleteMode ? (
+                <p className="text-sm text-rose-300">
+                  <span className="font-semibold">Delete mode is on.</span> Click{" "}
+                  <span className="font-semibold">Delete</span> on a row, then type the user's email
+                  to confirm. Deletion is permanent and wipes their inventory and availability.
+                </p>
+              ) : (
+                <p className="text-sm text-fg-muted">
+                  Set each member's{" "}
+                  <span className="font-medium text-fg-secondary">online mode</span> and{" "}
+                  <span className="font-medium text-fg-secondary">inventory</span>; click a name for
+                  their activity, the pie for their calendar.
+                </p>
+              )}
+              <Chip
+                pressed={deleteMode}
+                tone="rose"
+                variant="outlined"
+                size="sm"
+                onClick={toggleDeleteMode}
+                className="ml-auto shrink-0"
+              >
+                {deleteMode ? "Exit delete mode" : "Delete mode"}
+              </Chip>
+            </div>
+
+            <div className="mb-6 empty:hidden">
+              <AnnouncementsCard />
+            </div>
+
+            {errorMessage && <ErrorAlert message={errorMessage} className="mb-4" />}
+
+            <UsersTable
+              loading={usersQuery.isPending}
+              empty={activeRows.length + inactiveRows.length === 0}
+              deleteMode={deleteMode}
+            >
+              {activeRows.map(renderMemberRow)}
+              {inactiveRows.length > 0 && (
+                <InactiveToggleRow
+                  count={inactiveRows.length}
+                  expanded={showInactive}
+                  onToggle={() => setShowInactive((v) => !v)}
+                />
+              )}
+              {showInactive && inactiveRows.map(renderMemberRow)}
+            </UsersTable>
+          </>
         )}
 
-        <PreRegisterCard />
-        <PurchaseVoteCard />
-        <AnnouncementsCard />
-        <SkillRatingsCard />
-        <GuestPlayersCard
-          guests={guests}
-          members={allMembers}
-          onChanged={() => {
-            void queryClient.invalidateQueries({ queryKey: qk.adminUsers() });
-            // A merge rewrites match outcomes — refresh everything derived,
-            // including every cached profile (stats + match lists live under
-            // the ["profile", …] prefix and are otherwise fresh for 5 min,
-            // which made a just-merged member's profile look empty).
-            void queryClient.invalidateQueries({ queryKey: qk.history() });
-            void queryClient.invalidateQueries({ queryKey: qk.players() });
-            void queryClient.invalidateQueries({ queryKey: ["profile"] });
-          }}
-        />
-
-        {errorMessage && <ErrorAlert message={errorMessage} className="mb-4" />}
-
-        <UsersTable
-          loading={usersQuery.isPending}
-          empty={activeRows.length + inactiveRows.length === 0}
-          deleteMode={deleteMode}
-        >
-          {activeRows.map(renderMemberRow)}
-          {inactiveRows.length > 0 && (
-            <InactiveToggleRow
-              count={inactiveRows.length}
-              expanded={showInactive}
-              onToggle={() => setShowInactive((v) => !v)}
-            />
-          )}
-          {showInactive && inactiveRows.map(renderMemberRow)}
-        </UsersTable>
+        {tab === "vote" && <PurchaseVoteCard />}
+        {tab === "pre-register" && <PreRegisterCard />}
+        {tab === "skills" && <SkillRatingsCard />}
+        {tab === "guests" && (
+          <GuestPlayersCard
+            guests={guests}
+            members={allMembers}
+            onChanged={() => {
+              void queryClient.invalidateQueries({ queryKey: qk.adminUsers() });
+              // A merge rewrites match outcomes — refresh everything derived,
+              // including every cached profile (stats + match lists live under
+              // the ["profile", …] prefix and are otherwise fresh for 5 min,
+              // which made a just-merged member's profile look empty).
+              void queryClient.invalidateQueries({ queryKey: qk.history() });
+              void queryClient.invalidateQueries({ queryKey: qk.players() });
+              void queryClient.invalidateQueries({ queryKey: ["profile"] });
+            }}
+          />
+        )}
       </PageMain>
 
       {activityUser && <ActivityDrawer user={activityUser} onClose={() => setActivityUser(null)} />}

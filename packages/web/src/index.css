@@ -164,6 +164,28 @@ html {
   scrollbar-gutter: stable;
 }
 
+/* The DOCUMENT scrollbar, themed to match `.scrollbar-thin` below — the
+   chunky native bar was the one scrollbar the dark UI never restyled.
+   Slightly wider than the inner 4px utility since it's the page's primary
+   scroll affordance. */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.12) transparent;
+}
+html::-webkit-scrollbar {
+  width: 6px;
+}
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+html::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 3px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.22);
+}
+
 body {
   font-family: var(--font-body);
   background: var(--color-surface-950);

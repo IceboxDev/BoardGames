@@ -6,6 +6,7 @@ import { useAdminUsers } from "../../hooks/useAdminUsers";
 import { adminFetchActivity, adminFetchDevices } from "../../lib/admin";
 import { formatDayKey, formatRelativeTime, parseUtcStamp } from "../../lib/date-format";
 import { qk } from "../../lib/query-keys";
+import { ChevronDownIcon } from "../icons";
 import { Button } from "../ui/Button";
 import { Drawer } from "../ui/Drawer";
 import { EmptyState } from "../ui/EmptyState";
@@ -67,7 +68,7 @@ export function ActivityDrawer({ user, onClose }: Props) {
         isEmpty={(entries) => entries.length === 0}
       >
         {(entries) => (
-          <div className="min-h-0 flex-1 overflow-y-auto pr-1">
+          <div className="scrollbar-thin min-h-0 flex-1 overflow-y-auto pr-1">
             <ActivityList entries={entries} nameById={nameById} />
             {activityQuery.hasNextPage && (
               <div className="flex justify-center py-3">
@@ -139,45 +140,75 @@ function DevicesSection({ userId }: { userId: string }) {
     queryFn: ({ signal }) => adminFetchDevices(userId, signal),
   });
   const [openKey, setOpenKey] = useState<string | null>(null);
+  // The whole section starts collapsed — many-device members were pushing the
+  // activity trail below the fold. The heading itself is the expander.
+  const [expanded, setExpanded] = useState(false);
   const devices = devicesQuery.data?.devices ?? [];
   if (devices.length === 0) return null;
   const clusters = clusterDevices(devices);
   return (
     <section className="shrink-0">
-      <h3 className="py-1 text-2xs font-semibold uppercase tracking-wide text-fg-muted">
-        Devices ({clusters.length})
+      <h3>
+        {/* biome-ignore lint/correctness/noRestrictedElements: bespoke text expander — same footnote weight as the users-table InactiveToggleRow */}
+        <button
+          type="button"
+          aria-expanded={expanded}
+          onClick={() => setExpanded((v) => !v)}
+          className="-mx-1 flex cursor-pointer items-center gap-1 rounded-md px-1 py-1 text-2xs font-semibold uppercase tracking-wide text-fg-muted transition-colors hover:text-fg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+        >
+          <ChevronDownIcon
+            className={`h-3 w-3 transition-transform ${expanded ? "" : "-rotate-90"}`}
+          />
+          Devices ({clusters.length})
+        </button>
       </h3>
-      <ul className="space-y-1.5">
-        {clusters.map((cluster) => (
-          <li key={cluster.key} className="rounded-lg bg-surface-800/60 px-2.5 py-1.5">
-            {cluster.devices.length === 1 ? (
-              <DeviceLine device={cluster.devices[0]} />
-            ) : (
-              <>
-                {/* biome-ignore lint/correctness/noRestrictedElements: full-row cluster toggle — Button chrome doesn't fit the telemetry list */}
-                <button
-                  type="button"
-                  aria-expanded={openKey === cluster.key}
-                  onClick={() => setOpenKey(openKey === cluster.key ? null : cluster.key)}
-                  className="w-full text-left"
-                >
-                  <ClusterHeader cluster={cluster} open={openKey === cluster.key} />
-                </button>
-                {openKey === cluster.key && (
-                  <ul className="mt-1.5 space-y-1.5 border-l border-white/10 pl-2.5">
-                    {cluster.devices.map((d) => (
-                      <li key={d.id}>
-                        <DeviceLine device={d} />
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </>
-            )}
-          </li>
-        ))}
-      </ul>
+      {!expanded ? null : (
+        <DevicesList clusters={clusters} openKey={openKey} setOpenKey={setOpenKey} />
+      )}
     </section>
+  );
+}
+
+function DevicesList({
+  clusters,
+  openKey,
+  setOpenKey,
+}: {
+  clusters: DeviceCluster[];
+  openKey: string | null;
+  setOpenKey: (next: string | null) => void;
+}) {
+  return (
+    <ul className="space-y-1.5">
+      {clusters.map((cluster) => (
+        <li key={cluster.key} className="rounded-lg bg-surface-800/60 px-2.5 py-1.5">
+          {cluster.devices.length === 1 ? (
+            <DeviceLine device={cluster.devices[0]} />
+          ) : (
+            <>
+              {/* biome-ignore lint/correctness/noRestrictedElements: full-row cluster toggle — Button chrome doesn't fit the telemetry list */}
+              <button
+                type="button"
+                aria-expanded={openKey === cluster.key}
+                onClick={() => setOpenKey(openKey === cluster.key ? null : cluster.key)}
+                className="w-full text-left"
+              >
+                <ClusterHeader cluster={cluster} open={openKey === cluster.key} />
+              </button>
+              {openKey === cluster.key && (
+                <ul className="mt-1.5 space-y-1.5 border-l border-white/10 pl-2.5">
+                  {cluster.devices.map((d) => (
+                    <li key={d.id}>
+                      <DeviceLine device={d} />
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </>
+          )}
+        </li>
+      ))}
+    </ul>
   );
 }
 
@@ -256,7 +287,10 @@ function ActivityList({
     <div className="space-y-4">
       {groups.map((group) => (
         <section key={group.key}>
-          <h3 className="sticky top-0 bg-surface-900/95 py-1 text-2xs font-semibold uppercase tracking-wide text-fg-muted backdrop-blur-sm">
+          {/* z-10: the row dots below are positioned too — without a stacking
+              raise, document order paints them over the stuck header. The bg
+              matches the DRAWER panel (surface-950), not the modal shade. */}
+          <h3 className="sticky top-0 z-10 bg-surface-950/95 py-1 text-2xs font-semibold uppercase tracking-wide text-fg-muted backdrop-blur-sm">
             {group.label}
           </h3>
           <ul className="mt-1 space-y-0.5">
@@ -549,7 +583,8 @@ function describePageView(meta: Record<string, unknown>, nameById: Map<string, s
     case "history":
       return "Viewed the match history";
     case "admin":
-      return "Viewed the admin dashboard";
+      // Detail is the admin tab (users / vote / pre-register / skills / guests).
+      return `Viewed the admin dashboard${detail ? ` (${detail} tab)` : ""}`;
     case "play":
       return `Opened ${gameTitle(detail) ?? "a game"}`;
     case "profile-matches":

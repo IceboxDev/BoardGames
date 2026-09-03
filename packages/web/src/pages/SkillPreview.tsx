@@ -368,8 +368,6 @@ export default function SkillPreview() {
           {view === "admin" ? (
             <SkillRatingsCardView
               state={ADMIN_STATE}
-              expanded
-              onToggle={() => {}}
               onRecompute={() => {}}
               onPublish={() => {}}
               onRetract={() => {}}

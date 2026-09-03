@@ -1,5 +1,5 @@
-// Admin panel card for the purchase vote: build and open a poll (candidate
-// list + required voter count), watch the live tally (admins see numbers
+// Admin tab for the purchase vote: build and open a poll (candidate list +
+// required voter count), watch the live tally (admins see who voted for what
 // while players don't), force-close, or delete an open poll.
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
@@ -15,17 +15,17 @@ import {
 } from "../../lib/purchase-vote";
 import { qk } from "../../lib/query-keys";
 import { CheckIcon, SearchIcon } from "../icons";
+import { Avatar } from "../ui/Avatar";
 import { Button } from "../ui/Button";
 import { ErrorAlert } from "../ui/ErrorAlert";
 import { Input } from "../ui/Input";
 import { QueryBoundary } from "../ui/QueryBoundary";
 import { useConfirm } from "../ui/useConfirm";
-import { ExpandableAdminCard } from "./ExpandableAdminCard";
+import { AdminSection } from "./AdminSection";
 
 export function PurchaseVoteCard() {
   const queryClient = useQueryClient();
   const { confirm, confirmDialog } = useConfirm();
-  const [expanded, setExpanded] = useState(false);
 
   const stateQuery = useQuery({
     queryKey: qk.adminPurchaseVote(),
@@ -59,14 +59,7 @@ export function PurchaseVoteCard() {
 
   return (
     <>
-      <ExpandableAdminCard
-        tone="accent"
-        eyebrow="Purchase vote"
-        summary={summary}
-        expanded={expanded}
-        onToggle={() => setExpanded((v) => !v)}
-        toggleDisabled={stateQuery.data === undefined}
-      >
+      <AdminSection tone="accent" eyebrow="Purchase vote" summary={summary}>
         {mutationError instanceof Error && <ErrorAlert message={mutationError.message} />}
         <QueryBoundary query={stateQuery} loadingLabel="Loading the vote…">
           {({ poll: current }) =>
@@ -107,7 +100,7 @@ export function PurchaseVoteCard() {
             )
           }
         </QueryBoundary>
-      </ExpandableAdminCard>
+      </AdminSection>
       {confirmDialog}
     </>
   );
@@ -115,13 +108,18 @@ export function PurchaseVoteCard() {
 
 type AdminPoll = NonNullable<Awaited<ReturnType<typeof fetchAdminPurchaseVote>>["poll"]>;
 
+/** Beyond this many voters on one game, the stack ends in a "+N" disc. */
+const TALLY_AVATAR_CAP = 8;
+
 function TallyRows({ poll }: { poll: AdminPoll }) {
   const maxVotes = Math.max(1, ...poll.tally.map((t) => t.votes));
+  const voterById = new Map(poll.voters.map((v) => [v.id, v]));
   return (
     <ul className="flex flex-col gap-1">
       {poll.tally.map((entry) => {
         const game = resolveGame(entry.slug);
         const isWinner = poll.winnerSlug === entry.slug;
+        const overflow = entry.voterIds.length - TALLY_AVATAR_CAP;
         return (
           <li
             key={entry.slug}
@@ -150,8 +148,27 @@ function TallyRows({ poll }: { poll: AdminPoll }) {
             >
               {game?.title ?? entry.slug}
             </span>
-            <span className="relative shrink-0 text-xs font-semibold tabular-nums text-fg-secondary">
-              {entry.votes}
+            {/* The voters themselves, oldest vote first, instead of a bare
+                count — the ring separates overlapping faces from the bar. */}
+            <span className="relative inline-flex shrink-0 -space-x-1.5">
+              {entry.voterIds.slice(0, TALLY_AVATAR_CAP).map((id) => {
+                const voter = voterById.get(id);
+                return (
+                  <span key={id} title={voter?.name ?? "Unknown member"}>
+                    <Avatar
+                      name={voter?.name ?? "?"}
+                      image={voter?.image}
+                      size="xs"
+                      className="h-6 w-6 text-3xs ring-2 ring-surface-900"
+                    />
+                  </span>
+                );
+              })}
+              {overflow > 0 && (
+                <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 text-3xs font-semibold tabular-nums text-fg-secondary ring-2 ring-surface-900">
+                  +{overflow}
+                </span>
+              )}
             </span>
           </li>
         );

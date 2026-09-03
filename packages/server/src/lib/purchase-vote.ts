@@ -27,7 +27,11 @@ export type PollRow = z.infer<typeof PollRowSchema>;
 const POLL_COLUMNS =
   "id, created_at, candidate_slugs_json, required_voters, closed_at, winner_slug";
 
-const VoteRowSchema = z.object({ user_id: z.string(), slug: z.string() });
+const VoteRowSchema = z.object({
+  user_id: z.string(),
+  slug: z.string(),
+  created_at: z.string(),
+});
 export type VoteRow = z.infer<typeof VoteRowSchema>;
 
 const SeenRowSchema = z.object({
@@ -44,9 +48,12 @@ export async function latestPoll(): Promise<PollRow | null> {
   return rows.length > 0 ? parseRow(PollRowSchema, rows[0], "purchase_polls.latest") : null;
 }
 
+/** All votes on a poll, oldest first. `rowid` breaks ties — `datetime('now')`
+ * is second-granular, so one submit's three inserts share a timestamp. */
 export async function pollVotes(pollId: number): Promise<VoteRow[]> {
   const { rows } = await getDb().execute({
-    sql: "SELECT user_id, slug FROM purchase_poll_votes WHERE poll_id = ?",
+    sql: `SELECT user_id, slug, created_at FROM purchase_poll_votes
+          WHERE poll_id = ? ORDER BY created_at, rowid`,
     args: [pollId],
   });
   return parseRows(VoteRowSchema, rows, "purchase_poll_votes");
@@ -56,16 +63,21 @@ export function distinctVoterCount(votes: readonly VoteRow[]): number {
   return new Set(votes.map((v) => v.user_id)).size;
 }
 
-/** Every candidate with its vote count, votes desc then slug asc. Votes on
+/** Every candidate with its vote count and voter ids (in vote-time order —
+ * `pollVotes` sorts, this preserves), votes desc then slug asc. Votes on
  * slugs no longer in the candidate list (shouldn't happen) still count rows. */
 export function computeTally(
   candidates: readonly string[],
   votes: readonly VoteRow[],
-): { slug: string; votes: number }[] {
-  const counts = new Map<string, number>(candidates.map((slug) => [slug, 0]));
-  for (const v of votes) counts.set(v.slug, (counts.get(v.slug) ?? 0) + 1);
-  return [...counts.entries()]
-    .map(([slug, n]) => ({ slug, votes: n }))
+): { slug: string; votes: number; voterIds: string[] }[] {
+  const bySlug = new Map<string, string[]>(candidates.map((slug) => [slug, []]));
+  for (const v of votes) {
+    const list = bySlug.get(v.slug);
+    if (list) list.push(v.user_id);
+    else bySlug.set(v.slug, [v.user_id]);
+  }
+  return [...bySlug.entries()]
+    .map(([slug, voterIds]) => ({ slug, votes: voterIds.length, voterIds }))
     .sort((a, b) => b.votes - a.votes || a.slug.localeCompare(b.slug));
 }
 

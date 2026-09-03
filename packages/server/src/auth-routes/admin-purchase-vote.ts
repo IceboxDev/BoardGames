@@ -40,7 +40,11 @@ adminPurchaseVoteRoutes.get("/", async (c) => {
         closedAt: poll.closed_at,
         winnerSlug: poll.winner_slug,
         tally: computeTally(poll.candidate_slugs_json, votes),
-        voters: [...voterIds].map((id) => ({ id, name: refs[id]?.name ?? "?" })),
+        voters: [...voterIds].map((id) => ({
+          id,
+          name: refs[id]?.name ?? "?",
+          image: refs[id]?.image ?? null,
+        })),
       },
     }),
   );
