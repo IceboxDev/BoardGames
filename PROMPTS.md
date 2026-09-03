@@ -892,6 +892,86 @@ Every prompt includes the same style directive so the four images form a visuall
 
 ---
 
+## 112. Dune: Imperium – Uprising
+
+**File:** `packages/web/src/games/dune-imperium-uprising/assets/thumbnail.png`
+
+> A top-down view of a war council table on a desert world, a great strategic map of dune seas and rock outcrops etched into burnished bronze. Cinnamon-orange spice dust drifts in glittering piles across contested territories where small faction armies of cube-like troops face off. A fan of intrigue cards spreads from the bottom edge beside a leader's ornate signet ring, a sealed contract scroll, and a precious flask of water beaded with condensation, while a hooded spy token watches from a shadowed observation post at the map's rim. In the far dunes, the colossal ridged silhouette of a sandworm breaches the sand, dwarfing a pair of riders crouched low on its back. Twin moons hang in a bruised violet sky, and the table's edges dissolve into blowing sand and the amber glow of a spice harvester's floodlights. The mood is ruthless political ambition under a desert's indifference. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 113. Heat: Pedal to the Metal
+
+**File:** `packages/web/src/games/heat-pedal-to-the-metal/assets/thumbnail.png`
+
+> A top-down view of a 1960s grand-prix table, a sweeping racetrack board curving through a hairpin where four toy-scale vintage formula cars in candy red, cobalt, cream, and racing green drift nose-to-tail, rubber scorch marks trailing behind them. A player's hand of speed cards fans from the bottom edge beside a gear dial clicked one notch too high, and a small pile of red heat cards smolders at the engine's limit. Checkered curbstones, hay bales, and a tiny grandstand of cheering silhouettes line the bend, while heat shimmer rises off the asphalt. Scattered pit gear — a chrome stopwatch, driving gloves, a dented fuel can — frames the scene. The mood is white-knuckle retro speed, one risky downshift from glory or a blown engine. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 114. Hegemony
+
+**File:** `packages/web/src/games/hegemony-lead-your-class-to-victory/assets/thumbnail.png`
+
+> A top-down view of a nation rendered as a great ledger-table of class struggle: factory rows with smoking stacks on one side, gleaming bank towers on the other, and crowded worker housing between them. Streams of small wooden figures — flat-capped workers, top-hatted capitalists, briefcase-carrying bureaucrats — push opposing lines across policy tracks inlaid in the board like sliding scales. Piles of coin and banknote tokens tilt one side of an enormous brass balance scale while a mass of raised wooden fists tilts the other. Voting chips, tax stamps, and a strike whistle lie scattered mid-negotiation. Warm lamplight from a government hall spills across the center as the edges dissolve into industrial haze. The mood is a whole society straining at the seams, every lever contested. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 115. Arcs
+
+**File:** `packages/web/src/games/arcs/assets/thumbnail.png`
+
+> A top-down view of a dark galactic map board, concentric rings of star systems connected by faint gate-lines glowing ember-red against deep space. Small fleets of angular starships in rival colors cluster at contested planets beside tiny starports and resource tokens of fuel, weapons, and relics. A trick-taking hand of action cards fans from the bottom edge, one card played to the table's center like a gauntlet thrown. Polished dice showing ship and explosion faces lie mid-tumble near a captured ambition marker. A ringed gas giant dominates one corner, its light rimming the ships in gold while the void swallows the board's edges. The mood is a cutthroat interstellar gambit — one bold declaration away from empire or ruin. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 116. Container
+
+**File:** `packages/web/src/games/container/assets/thumbnail.png`
+
+> A top-down view of a serene harbor rendered as a crisp economic playground: two broad-beamed toy-scale container ships glide across teal water, decks stacked with bright shipping containers in five saturated colors. Along the quay, miniature cranes lean over warehouses with neat rows of waiting containers, and small factories puff clean white steam beside their production lines. A spread of paper money and a brass auctioneer's gavel rest at the harbor master's desk in the foreground, an island port with hungry demand glowing warm at the horizon. Gentle wakes, mooring ropes, and gull silhouettes soften the commerce. The mood is calm water over cutthroat capitalism — every container priced, every voyage a gamble. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 117. Bomb Busters
+
+**File:** `packages/web/src/games/bomb-busters/assets/thumbnail.png`
+
+> A top-down view of a defusal table in a windowless room, a comically oversized movie-prop bomb at its center: a tangle of taut numbered blue wires snaking between terminals, threaded with a few ominous yellow special wires — and one dreaded red wire everyone knows must never be cut. A pair of precision wire cutters hovers mid-snip over one chosen blue wire, sparks of tension frozen in the air. Around the device, each teammate's rack of numbered tiles stands upright like dominoes, faces hidden from the others, while a walkie-talkie, a coil of spare wire, and a dog-eared defusal manual lie within reach. A chunky red countdown timer ticks low in the corner, its glow washing the scene in urgent crimson against cool workshop shadows. The mood is sweaty-palmed cooperative comedy — one wrong snip from disaster, one right one from high-fives. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 118. Vantage
+
+**File:** `packages/web/src/games/vantage/assets/thumbnail.png`
+
+> A top-down view of a survivor's makeshift camp beside a crashed intergalactic vessel, its hull half-buried in violet alien grass with a cargo ramp spilling salvaged supplies. Spread across a field crate, large first-person vista cards frame the same uncharted planet from different eyes — one looking down a jade canyon, one across a bioluminescent marsh at dusk, one up at twin moons over a ruin — like windows held up to the horizon. A crackling handheld communicator glows mid-transmission, the only link to companions scattered far across the world. Custom dice with unfamiliar icons lie beside a scorched character panel, a med-kit, and a mostly blank hand-sketched map. Beyond the crates, the planet's real skyline bleeds into aurora light. The mood is wide-eyed cooperative wonder with danger just out of frame — a whole sandbox world, and your friends somewhere out in it. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 119. Wingspan
+
+**File:** `packages/web/src/games/wingspan/assets/thumbnail.png`
+
+> A top-down view of a naturalist's desk at golden hour, a habitat board of forest, grassland, and wetland rows populated by exquisitely illustrated bird cards — a scarlet tanager, a great horned owl mid-blink, a heron poised over water. Pastel speckled egg miniatures nest in small cups beside caches of food tokens: berries, wheat, fish, mice, invertebrates. A birdhouse-shaped dice tower spills custom food dice across the linen mat, and a fan of unplayed bird cards waits at the bottom edge near a steaming cup of tea and pressed wildflowers. Soft morning light catches drifting feathers and dust motes over the scene. The mood is serene, studious delight — an engine of wings quietly gathering momentum. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 120. Concordia
+
+**File:** `packages/web/src/games/concordia-special-edition/assets/thumbnail.png`
+
+> A top-down view of a Mediterranean map table in a Roman villa, sea lanes and stone roads linking painted provinces from Hispania to Aegyptus. Wooden colonist ships and land settlers in rival colors thread the routes between cities crowned with small house tokens. Goods pile in tidy abundance — clay brick, golden wheat, iron tools, amphorae of wine, folded purple cloth — beside a fan of personality cards spread like a senator's hand. A laurel wreath, a marble column fragment, and a bronze coin purse anchor the corners, while oil lamps warm the map's parchment tones and the villa's mosaic floor blurs into shadow at the edges. The mood is prosperous, unhurried empire-building — peace as the sharpest strategy. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 121. Spirit Island
+
+**File:** `packages/web/src/games/spirit-island/assets/thumbnail.png`
+
+> A top-down view of a lush island rendered in vivid painted terrain — jungle, sands, wetlands, and mountain zones ringed by turquoise shallows. Translucent spirit presence discs glow like embers across the land, and above one region a half-materialized elemental spirit of leaf and lightning gathers storm energy. Below it, tiny colonial towns and explorer figures press inland from their ships while thatched island villages stand defiant. A hand of radiant power cards fans from the bottom edge, crackling with elemental sigils of sun, water, earth, and air, beside a small pile of bone-white fear tokens. Blight creeps at one beachhead, smoke rising where the invaders build. The mood is primal, rising fury — an island itself awakening to fight back. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
 # Background Image Prompts
 
 All backgrounds were generated with **ChatGPT (image generation)** on March 18, 2026.
