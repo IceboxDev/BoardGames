@@ -5,13 +5,14 @@
 // so this component has no priority logic of its own: it renders whatever
 // `GET /api/greetings` names, acknowledges on dismiss OR on the CTA (so it
 // never reappears on another device), and hides optimistically so the card
-// doesn't linger while the ack is in flight. Two deliberate exceptions:
-// the purchase-vote REMINDER is never acked ("Later" hides it for this visit
-// only — it returns next app open until the votes are spent), and the voting
-// modal itself is NOT a greeting: the vote cards open it via local state, so
-// submitting votes can't unmount the screen the player is standing on.
+// doesn't linger while the ack is in flight. Every ack carries the viewer's
+// response ("later" vs "cta") for the activity trail; the purchase-vote
+// REMINDER's ack is log-only server-side, so it returns next app open until
+// the votes are spent. The voting modal itself is NOT a greeting: the vote
+// cards open it via local state, so submitting votes can't unmount the
+// screen the player is standing on.
 
-import type { AppGreeting, AppGreetingAckBody } from "@boardgames/core/protocol";
+import type { AppGreeting, AppGreetingAckBody, GreetingAckAction } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -124,25 +125,26 @@ export default function GreetingHost({ userId }: { userId: string }) {
   if (!greeting) return null;
 
   const accentHex = profileQuery.data?.profile.accentHex;
-  // Null for the reminder: it has no ack on purpose — "Later" is per-visit.
-  const ackBody = (): AppGreetingAckBody | null => {
+  // Every ack carries the response ("later" = clicked away, "cta" = followed
+  // the button) so the admin activity trail shows outcomes, not just views.
+  // The reminder's ack is log-only server-side — it still returns next visit.
+  const ackBody = (action: GreetingAckAction): AppGreetingAckBody => {
     switch (greeting.kind) {
       case "spotlight":
-        return { kind: "spotlight", id: greeting.id };
+        return { kind: "spotlight", id: greeting.id, action };
       case "skill-intro":
-        return { kind: "skill-intro" };
+        return { kind: "skill-intro", action };
       case "purchase-vote-announce":
-        return { kind: "purchase-vote-announce", pollId: greeting.pollId };
+        return { kind: "purchase-vote-announce", pollId: greeting.pollId, action };
       case "purchase-vote-reminder":
-        return null;
+        return { kind: "purchase-vote-reminder", pollId: greeting.pollId, action };
       case "purchase-vote-result":
-        return { kind: "purchase-vote-result", pollId: greeting.pollId };
+        return { kind: "purchase-vote-result", pollId: greeting.pollId, action };
     }
   };
-  const close = (then?: () => void) => () => {
+  const close = (action: GreetingAckAction, then?: () => void) => () => {
     setDismissedKey(greetingKey(greeting));
-    const body = ackBody();
-    if (body) ackMutation.mutate(body);
+    ackMutation.mutate(ackBody(action));
     then?.();
   };
 
@@ -150,8 +152,8 @@ export default function GreetingHost({ userId }: { userId: string }) {
     return (
       <PurchaseVoteAnnounceModal
         greeting={greeting}
-        onDismiss={close()}
-        onCta={close(() => setVoteOpen(true))}
+        onDismiss={close("later")}
+        onCta={close("cta", () => setVoteOpen(true))}
       />
     );
   }
@@ -160,8 +162,8 @@ export default function GreetingHost({ userId }: { userId: string }) {
     return (
       <PurchaseVoteReminderModal
         greeting={greeting}
-        onDismiss={close()}
-        onCta={close(() => setVoteOpen(true))}
+        onDismiss={close("later")}
+        onCta={close("cta", () => setVoteOpen(true))}
       />
     );
   }
@@ -171,8 +173,8 @@ export default function GreetingHost({ userId }: { userId: string }) {
       <PurchaseVoteResultModal
         winnerSlug={greeting.winnerSlug}
         tally={greeting.tally}
-        onDismiss={close()}
-        onCta={close(() => navigate("/games"))}
+        onDismiss={close("later")}
+        onCta={close("cta", () => navigate("/games"))}
       />
     );
   }
@@ -185,8 +187,8 @@ export default function GreetingHost({ userId }: { userId: string }) {
         viewerId={userId}
         players={greetingQuery.data?.players ?? {}}
         accentHex={accentHex}
-        onDismiss={close()}
-        onCta={close(() => navigate(`/u/${greeting.subjectUserId}/skill`))}
+        onDismiss={close("later")}
+        onCta={close("cta", () => navigate(`/u/${greeting.subjectUserId}/skill`))}
       />
     );
   }
@@ -228,8 +230,8 @@ export default function GreetingHost({ userId }: { userId: string }) {
       skill={skill}
       boards={boards}
       switcher={switcher}
-      onDismiss={close()}
-      onCta={close(() => navigate(`/u/${targetId}/skill`))}
+      onDismiss={close("later")}
+      onCta={close("cta", () => navigate(`/u/${targetId}/skill`))}
     />
   );
 }

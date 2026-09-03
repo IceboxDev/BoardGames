@@ -88,10 +88,13 @@ purchaseVoteRoutes.put("/votes", zJsonBody(SetPurchaseVotesBodySchema), async (c
   }
 
   // Auto-close: re-read after the write so the submit that makes quorum is
-  // the one that seals the poll. `closePoll` is idempotent under a race.
+  // the one that seals the poll. `closePoll` is idempotent under a race and
+  // reports whether this call sealed it, so the trail logs the seal once.
   if (slugs.length > 0) {
     const after = await pollVotes(poll.id);
-    if (distinctVoterCount(after) >= poll.required_voters) await closePoll(poll);
+    if (distinctVoterCount(after) >= poll.required_voters && (await closePoll(poll))) {
+      logActivity(viewer.id, "purchase-vote-sealed", { pollId: poll.id });
+    }
   }
 
   logActivity(viewer.id, "purchase-vote", { pollId: poll.id, slugs });

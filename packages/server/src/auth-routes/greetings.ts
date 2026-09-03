@@ -6,7 +6,7 @@
 //   1. purchase-vote announce — one-time "voting is live" card (the same
 //      launch treatment the skill intro got). Ack flips it off forever.
 //   2. purchase-vote reminder — every later visit while the viewer still has
-//      votes to spend. No ack: "Later" is client-side, it returns next open.
+//      votes to spend. Its ack is log-only, so it returns next app open.
 //   3. purchase-vote result — one-time winner reveal after a poll closes.
 //   4. The skill queue (intro, then spotlights) exactly as before.
 //
@@ -28,6 +28,7 @@ import {
 } from "@boardgames/core/protocol";
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
+import { logActivity } from "../lib/activity-log.ts";
 import { zJsonBody } from "../lib/error-response.ts";
 import { ackSkillIntro, ackSpotlight, nextGreetingFor } from "../lib/greetings.ts";
 import {
@@ -115,8 +116,10 @@ greetingsRoutes.get("/", async (c) => {
 // ── POST /api/greetings/ack ────────────────────────────────────────────
 //
 // Every arm is idempotent; the vote arms are first-write-wins timestamps so
-// the announce card and the reveal each show exactly once. The reminder has
-// no ack on purpose — it comes back every visit until the votes are spent.
+// the announce card and the reveal each show exactly once. The reminder ack
+// writes NO seen-state on purpose — it comes back every visit until the
+// votes are spent. Every ack also lands in the activity trail with the
+// viewer's response ("later" = clicked away, "cta" = followed the button).
 
 greetingsRoutes.post("/ack", zJsonBody(AppGreetingAckBodySchema), async (c) => {
   const viewer = c.get("user");
@@ -125,6 +128,8 @@ greetingsRoutes.post("/ack", zJsonBody(AppGreetingAckBodySchema), async (c) => {
     case "purchase-vote-announce":
       await markPollSeen(body.pollId, viewer.id, "first_seen_at");
       break;
+    case "purchase-vote-reminder":
+      break; // log-only
     case "purchase-vote-result":
       await markPollSeen(body.pollId, viewer.id, "result_seen_at");
       break;
@@ -135,5 +140,11 @@ greetingsRoutes.post("/ack", zJsonBody(AppGreetingAckBodySchema), async (c) => {
       await ackSpotlight(viewer.id, body.id);
       break;
   }
+  logActivity(viewer.id, "greeting-response", {
+    kind: body.kind,
+    action: body.action,
+    ...("pollId" in body ? { pollId: body.pollId } : {}),
+    ...("id" in body ? { greetingId: body.id } : {}),
+  });
   return c.json(AppGreetingAckResponseSchema.parse({ ok: true }));
 });

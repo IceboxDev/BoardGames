@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { PurchaseTallyEntrySchema, VOTES_PER_PLAYER } from "./purchase-vote.ts";
-import { GreetingAckBodySchema, GreetingSchema, SkillPlayerRefSchema } from "./skills.ts";
+import { GreetingSchema, SkillPlayerRefSchema } from "./skills.ts";
 
 // ── App-wide greeting queue: GET /api/greetings + POST /api/greetings/ack
 //
@@ -58,14 +58,26 @@ export const AppGreetingResponseSchema = z.object({
 });
 export type AppGreetingResponse = z.infer<typeof AppGreetingResponseSchema>;
 
-// The reminder deliberately has NO ack arm: "Later" only hides it for the
-// current visit (client state) and it returns next app open — that IS the
-// reminder behavior. The announce ack is what flips a viewer from announce
-// to reminder.
+// Every ack carries HOW the card was answered — "later" (clicked away) or
+// "cta" (followed the button) — so the admin activity trail can show
+// responses, not just displays. The reminder's ack is LOG-ONLY server-side:
+// no seen-state is written, so it still returns every app open until the
+// votes are spent — that IS the reminder behavior. The announce ack is what
+// flips a viewer from announce to reminder.
+export const GreetingAckActionSchema = z.enum(["later", "cta"]);
+export type GreetingAckAction = z.infer<typeof GreetingAckActionSchema>;
+
+const pollId = z.number().int().positive();
 export const AppGreetingAckBodySchema = z.discriminatedUnion("kind", [
-  ...GreetingAckBodySchema.options,
-  z.object({ kind: z.literal("purchase-vote-announce"), pollId: z.number().int().positive() }),
-  z.object({ kind: z.literal("purchase-vote-result"), pollId: z.number().int().positive() }),
+  z.object({ kind: z.literal("skill-intro"), action: GreetingAckActionSchema }),
+  z.object({
+    kind: z.literal("spotlight"),
+    id: z.number().int().positive(),
+    action: GreetingAckActionSchema,
+  }),
+  z.object({ kind: z.literal("purchase-vote-announce"), pollId, action: GreetingAckActionSchema }),
+  z.object({ kind: z.literal("purchase-vote-reminder"), pollId, action: GreetingAckActionSchema }),
+  z.object({ kind: z.literal("purchase-vote-result"), pollId, action: GreetingAckActionSchema }),
 ]);
 export type AppGreetingAckBody = z.infer<typeof AppGreetingAckBodySchema>;
 

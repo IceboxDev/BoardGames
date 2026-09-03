@@ -69,24 +69,29 @@ describe("AppGreetingResponseSchema", () => {
 });
 
 describe("AppGreetingAckBodySchema", () => {
-  it("accepts vote acks and the legacy skill acks", () => {
-    expect(() =>
-      AppGreetingAckBodySchema.parse({ kind: "purchase-vote-announce", pollId: 2 }),
-    ).not.toThrow();
-    expect(() =>
-      AppGreetingAckBodySchema.parse({ kind: "purchase-vote-result", pollId: 2 }),
-    ).not.toThrow();
-    expect(() => AppGreetingAckBodySchema.parse({ kind: "skill-intro" })).not.toThrow();
-    expect(() => AppGreetingAckBodySchema.parse({ kind: "spotlight", id: 4 })).not.toThrow();
+  it("accepts every kind with a response action", () => {
+    for (const body of [
+      { kind: "purchase-vote-announce", pollId: 2, action: "cta" },
+      { kind: "purchase-vote-reminder", pollId: 2, action: "later" },
+      { kind: "purchase-vote-result", pollId: 2, action: "later" },
+      { kind: "skill-intro", action: "cta" },
+      { kind: "spotlight", id: 4, action: "later" },
+    ]) {
+      expect(() => AppGreetingAckBodySchema.parse(body)).not.toThrow();
+    }
   });
 
-  it("rejects a reminder ack — the reminder has no ack arm by design", () => {
-    const r = AppGreetingAckBodySchema.safeParse({ kind: "purchase-vote-reminder", pollId: 2 });
+  it("rejects an ack without a response action", () => {
+    const r = AppGreetingAckBodySchema.safeParse({ kind: "skill-intro" });
     expect(r.success).toBe(false);
+    if (!r.success) expect(r.error.issues[0]?.path).toEqual(["action"]);
   });
 
   it("rejects a vote ack without a poll id", () => {
-    const r = AppGreetingAckBodySchema.safeParse({ kind: "purchase-vote-announce" });
+    const r = AppGreetingAckBodySchema.safeParse({
+      kind: "purchase-vote-announce",
+      action: "later",
+    });
     expect(r.success).toBe(false);
     if (!r.success) expect(r.error.issues[0]?.path).toEqual(["pollId"]);
   });

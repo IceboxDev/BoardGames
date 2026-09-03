@@ -39,7 +39,9 @@ export type ActivityType =
   | "ownership-removed"
   | "played-through"
   | "purchase-vote"
-  | "purchase-vote-admin";
+  | "purchase-vote-sealed"
+  | "purchase-vote-admin"
+  | "greeting-response";
 
 /** Insert one activity row. Never throws; never awaited by callers. */
 export function logActivity(

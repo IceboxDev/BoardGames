@@ -75,14 +75,17 @@ export function computeWinner(tally: readonly { slug: string; votes: number }[])
   return top && top.votes > 0 ? top.slug : null;
 }
 
-/** Stamp `closed_at` + the winner. Idempotent: a second close is a no-op. */
-export async function closePoll(poll: PollRow): Promise<void> {
+/** Stamp `closed_at` + the winner. Idempotent: a second close is a no-op.
+ * Returns whether THIS call actually sealed the poll (false on the losing
+ * side of a race), so callers can log the seal exactly once. */
+export async function closePoll(poll: PollRow): Promise<boolean> {
   const winner = computeWinner(computeTally(poll.candidate_slugs_json, await pollVotes(poll.id)));
-  await getDb().execute({
+  const result = await getDb().execute({
     sql: `UPDATE purchase_polls SET closed_at = datetime('now'), winner_slug = ?
           WHERE id = ? AND closed_at IS NULL`,
     args: [winner, poll.id],
   });
+  return result.rowsAffected > 0;
 }
 
 export async function pollSeen(pollId: number, userId: string): Promise<SeenRow> {

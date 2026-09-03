@@ -18,6 +18,7 @@ import { useEffect, useState } from "react";
 import type { GameDefinition } from "../../games/types";
 import { cn } from "../../lib/cn";
 import { resolveGame } from "../../lib/games-by-slug";
+import { reportPageView } from "../../lib/page-views";
 import { fetchPurchaseVote, setPurchaseVotes } from "../../lib/purchase-vote";
 import { qk } from "../../lib/query-keys";
 import { CheckIcon, PlusIcon } from "../icons";
@@ -246,6 +247,12 @@ export function PurchaseVoteModal({ onClose }: { onClose: () => void }) {
   useEffect(() => {
     if (poll && selected === null) setSelected(poll.myVotes);
   }, [poll, selected]);
+
+  // Activity beacon: the voting screen is a non-route surface (opened from a
+  // greeting card or the banner) — mirrors the RsvpModal pattern.
+  useEffect(() => {
+    reportPageView("purchase-vote");
+  }, []);
 
   const submitMutation = useMutation({
     mutationFn: setPurchaseVotes,

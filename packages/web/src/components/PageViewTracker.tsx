@@ -16,9 +16,9 @@ export function PageViewTracker() {
 
   useEffect(() => {
     if (!user) return;
-    const view = classify(location.pathname);
+    const view = classify(location.pathname, location.search);
     if (view) reportPageView(view.page, view.detail);
-  }, [location.pathname, user]);
+  }, [location.pathname, location.search, user]);
 
   // Device/viewport telemetry: once on login/mount, again on real viewport
   // changes (rotation, window resize, zoom — all fire `resize`), debounced so
@@ -48,7 +48,7 @@ export function PageViewTracker() {
  * logged server-side with the viewer AND target; `/login`, dev previews,
  * and deep game sub-routes below the shell add nothing).
  */
-function classify(pathname: string): { page: string; detail?: string } | null {
+function classify(pathname: string, search: string): { page: string; detail?: string } | null {
   if (pathname === "/") return { page: "home" };
   if (pathname === "/offline") return { page: "calendar" };
   if (pathname === "/history") return { page: "history" };
@@ -60,6 +60,13 @@ function classify(pathname: string): { page: string; detail?: string } | null {
   // Profile sub-pages: detail = whose page was viewed. (`/u/:id` itself is
   // logged server-side with viewer AND target, so it stays out of this map.)
   const sub = pathname.match(/^\/u\/([^/]+)\/(matches|collection|nights|skill)$/);
-  if (sub) return { page: `profile-${sub[2]}`, detail: sub[1] };
+  if (sub) {
+    // The purchases pipeline lives as a tab inside the collection page —
+    // distinguish it, or every purchases look-in logs as a collection view.
+    if (sub[2] === "collection" && new URLSearchParams(search).get("tab") === "purchases") {
+      return { page: "profile-purchases", detail: sub[1] };
+    }
+    return { page: `profile-${sub[2]}`, detail: sub[1] };
+  }
   return null;
 }

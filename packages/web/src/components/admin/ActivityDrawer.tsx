@@ -354,6 +354,24 @@ function gameTitle(slug: string | undefined): string | undefined {
   return slug ? (titleBySlug.get(slug) ?? slug) : undefined;
 }
 
+/** Human name for a greeting kind, shared by the response + view lines. */
+function greetingLabel(kind: string | undefined): string {
+  switch (kind) {
+    case "skill-intro":
+      return "the skill-profiles intro";
+    case "spotlight":
+      return "the group spotlight";
+    case "purchase-vote-announce":
+      return "the purchase-vote announcement";
+    case "purchase-vote-reminder":
+      return "the purchase-vote reminder";
+    case "purchase-vote-result":
+      return "the purchase-vote results";
+    default:
+      return "a greeting";
+  }
+}
+
 function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): string {
   const { type, meta } = entry;
   const target = str(meta.targetUserId);
@@ -476,6 +494,34 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
       return `Published a spotlight${targetName ? ` about ${targetName}` : ""}`;
     case "greeting-retracted":
       return "Retracted the group spotlight";
+    case "greeting-response": {
+      const label = greetingLabel(str(meta.kind));
+      return str(meta.action) === "cta" ? `Followed ${label}` : `Clicked away ${label}`;
+    }
+    case "purchase-vote": {
+      const slugs = Array.isArray(meta.slugs)
+        ? meta.slugs.filter((s): s is string => typeof s === "string")
+        : [];
+      if (slugs.length === 0) return "Withdrew their purchase votes";
+      return `Voted for ${slugs.map((s) => gameTitle(s) ?? s).join(", ")} in the purchase vote`;
+    }
+    case "purchase-vote-sealed":
+      return "Cast the vote that sealed the purchase vote";
+    case "purchase-vote-admin": {
+      const action = str(meta.action);
+      if (action === "create") {
+        const candidates = Array.isArray(meta.candidates) ? meta.candidates.length : undefined;
+        const required = typeof meta.requiredVoters === "number" ? meta.requiredVoters : undefined;
+        const detail =
+          candidates === undefined
+            ? ""
+            : ` (${candidates} candidates${required === undefined ? "" : `, ${required} voters needed`})`;
+        return `Opened a purchase vote${detail}`;
+      }
+      if (action === "close") return "Closed the purchase vote";
+      if (action === "delete") return "Deleted the purchase vote";
+      return "Managed the purchase vote";
+    }
     default:
       // Unknown/future event kinds still render a readable line.
       return type.replace(/-/g, " ");
@@ -518,6 +564,16 @@ function describePageView(meta: Record<string, unknown>, nameById: Map<string, s
       return "Was greeted by the skill-profiles intro";
     case "skill-spotlight":
       return "Was shown the group spotlight";
+    case "purchase-vote":
+      return "Opened the purchase-vote screen";
+    case "purchase-vote-announce":
+      return "Was greeted by the purchase-vote announcement";
+    case "purchase-vote-reminder":
+      return "Was reminded about unspent purchase votes";
+    case "purchase-vote-result":
+      return "Was shown the purchase-vote results";
+    case "profile-purchases":
+      return `Viewed ${owner} purchases page`;
     case "skill-board": {
       // Detail is a trait id (trait boards) or a game slug (game boards).
       const traitNames: Record<string, string> = {
@@ -548,6 +604,9 @@ function dotClass(type: string): string {
     case "night-guest":
       return "bg-emerald-400/70";
     case "game-vote":
+    case "purchase-vote":
+    case "purchase-vote-sealed":
+    case "purchase-vote-admin":
       return "bg-amber-400/70";
     case "availability":
       return "bg-accent-400/70";
@@ -565,6 +624,7 @@ function dotClass(type: string): string {
     case "skill-recomputed":
     case "greeting-published":
     case "greeting-retracted":
+    case "greeting-response":
       return "bg-cyan-400/70";
     case "ownership-announced":
     case "ownership-resolved":
