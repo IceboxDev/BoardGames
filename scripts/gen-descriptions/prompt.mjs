@@ -66,6 +66,8 @@ If the 4th sentence in 'loose' won't fit in ~460 chars, omit it and stop. Better
 RESEARCH
 Always call web_search at least once. Prefer the publisher's page, the designer's interviews, top-voted BGG forum threads, written reviews from Shut Up & Sit Down, Watch It Played, No Pun Included, or Polygon/Wired board-game coverage. Read 1–8 pages. Report URLs you actually read in 'sources'. For drinking games, party games, and obscure titles, include reviews that confirm the genre / table feel — this is often the most decision-changing fact.
 
+URLs and citations belong ONLY in the 'sources' array. NEVER put a citation, link, markdown link, or domain name inside tight/default/loose — they are display prose, not annotated text.
+
 Return strictly the JSON object matching the schema. No commentary, no markdown.`;
 
 export function buildUserPrompt(game) {

@@ -12,7 +12,7 @@ import type { GameMachineSpec } from "../../machines/types";
 import type { EncryptInput, GuessInput } from "./ai/agent";
 import { getDecryptoAgent } from "./ai/agent";
 import { fallbackGuess } from "./ai/fallback";
-import { DEFAULT_DECRYPTO_MODEL } from "./ai/models";
+import { canonicalDecryptoModel, DEFAULT_DECRYPTO_MODEL } from "./ai/models";
 import { buildPlayerView } from "./player-view";
 import {
   allCluesDone,
@@ -62,7 +62,7 @@ import { ChatActionSchema, DEFAULT_BEATS, MAX_CLUE_LENGTH, SubmitCluesActionSche
 // (internal transitions for human events — they must never exit the state
 // hosting the sibling region's invoke, or the in-flight LLM promise would be
 // cancelled) and an `ai` region whose fromPromise actor Promise.alls every
-// pending GPT decision. Both regions reach `final` → `onDone` advances.
+// pending AI decision. Both regions reach `final` → `onDone` advances.
 //
 // SAFETY: there is no server watchdog around AI moves, so every actor call is
 // raced against a deadline and a deterministic fallback, then sanitized to an
@@ -75,7 +75,7 @@ import { ChatActionSchema, DEFAULT_BEATS, MAX_CLUE_LENGTH, SubmitCluesActionSche
 /**
  * Per-decision budgets for an injected agent. Sized for a frontier model at
  * medium reasoning effort — encrypt is the heavyweight task (~40-80s on
- * gpt-5.5); the server agent's own call budgets sit below these. When an
+ * a frontier reasoning model); the server agent's own call budgets sit below these. When an
  * encrypt still misses its deadline (or throws, or returns illegal clues
  * twice), the transmission is SKIPPED like a timer expiry — an honest
  * miscommunication token — rather than published as garbage clues nobody
@@ -111,7 +111,8 @@ function raceOrNull<T>(run: () => Promise<T>, ms: number): Promise<T | null> {
 }
 
 function modelForSeat(ctx: DecryptoContext, seat: number): string {
-  return ctx.aiModels[seat] ?? DEFAULT_DECRYPTO_MODEL;
+  // Canonicalize so legacy GPT ids persisted in old room state keep resolving.
+  return canonicalDecryptoModel(ctx.aiModels[seat] ?? DEFAULT_DECRYPTO_MODEL);
 }
 
 function buildEncryptInput(ctx: DecryptoContext, tx: Transmission): EncryptInput {

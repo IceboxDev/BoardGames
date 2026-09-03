@@ -1,4 +1,7 @@
-import { DECRYPTO_AI_MODELS } from "@boardgames/core/games/decrypto/ai/models";
+import {
+  canonicalDecryptoModel,
+  DECRYPTO_AI_MODELS,
+} from "@boardgames/core/games/decrypto/ai/models";
 import type { ReplaySummary } from "@boardgames/core/protocol/http/games";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo } from "react";
@@ -26,7 +29,9 @@ import { qk } from "../../../lib/query-keys";
 
 function modelLabel(id: string | null): string {
   if (!id) return "Humans only";
-  return DECRYPTO_AI_MODELS.find((m) => m.id === id)?.label ?? id;
+  // Old rows carry legacy GPT ids — canonicalize so they get the tier label.
+  const canonical = canonicalDecryptoModel(id);
+  return DECRYPTO_AI_MODELS.find((m) => m.id === canonical)?.label ?? id;
 }
 
 function isInterceptorRow(r: ReplaySummary): boolean {

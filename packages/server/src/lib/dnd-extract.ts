@@ -14,160 +14,41 @@ import {
   CHECKPOINT_TITLE_MAX,
   DND_SKILLS,
 } from "@boardgames/core/protocol";
-import OpenAI, { type ClientOptions } from "openai";
 import { z } from "zod";
+import type { AiUserContent } from "./ai";
+import { structuredGenerate } from "./ai";
 
-// Campaign extraction: send an adventure-module PDF to an OpenAI model and get
-// back the campaign's title, tagline, setting, level range, and the 5–12 most
-// significant story checkpoints. The PDF rides along as an `input_file` data
-// URI and never touches disk or the DB; a strict json_schema response format
-// keeps the model's output shape honest, and `normalizeExtraction` re-validates
-// and clamps it to the protocol's limits before anything is persisted.
+// Campaign extraction: send an adventure-module PDF to an LLM and get back
+// the campaign's title, tagline, setting, level range, and the 5–12 most
+// significant story checkpoints. The PDF rides along as a file part and never
+// touches disk or the DB; a strict json_schema response format keeps the
+// model's output shape honest, and `normalizeExtraction` re-validates and
+// clamps it to the protocol's limits before anything is persisted.
+//
+// Every call goes through `structuredGenerate` (lib/ai) — the provider, model
+// (AI_MODEL_DND / AI_MODEL_DND_EXTRACT) and transport (AI_TRANSPORT_*) are
+// env-configurable gateway settings; AiConfigError surfaces as 503
+// NOT_CONFIGURED at the routes.
 
-/** Thrown when the server isn't configured for extraction (missing key). */
-export class DndConfigError extends Error {
-  constructor(message: string) {
-    super(message);
-    this.name = "DndConfigError";
-  }
-}
+/** Referee text calls — seconds-to-a-minute generations. */
+const TEXT_BUDGET_MS = 3 * 60_000;
+/** Whole-module PDF extraction — the 15-minute monsters. */
+const PDF_BUDGET_MS = 15 * 60_000;
 
-function getClient(): OpenAI {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    throw new DndConfigError("Campaign extraction is not configured (OPENAI_API_KEY).");
-  }
-  // The SDK's default Node HTTP client is node-fetch@2, whose long-known
-  // "Premature close" bug fires systematically on Railway's egress path
-  // (FetchError [ERR_STREAM_PREMATURE_CLOSE] on every attempt). Node's
-  // built-in undici fetch doesn't have it.
-  return new OpenAI({ apiKey, fetch: globalThis.fetch as unknown as ClientOptions["fetch"] });
-}
-
-/**
- * Any long-lived HTTP connection to OpenAI eventually gets severed by
- * something between here and there ("Premature close") — a non-streaming
- * call waits silently for the model's full thinking time, and even an SSE
- * stream goes quiet for minutes while a reasoning model thinks, so both
- * transports died in prod. Background mode removes the long-lived
- * connection entirely: the create call returns as soon as the job is
- * queued, and completion is fetched with short, independent polls that are
- * individually retried. Nothing stays open long enough to be killed.
- */
-const TRANSIENT_ERROR =
-  /premature close|invalid response body|econnreset|econnrefused|etimedout|socket hang up|terminated|fetch failed|network|aborted|connection error/i;
-
-const POLL_INTERVAL_MS = 2_000;
-const POLL_BUDGET_MS = 15 * 60_000;
-
-function transientMessage(err: unknown): string {
-  if (!(err instanceof Error)) return "";
-  const cause = err.cause instanceof Error ? ` ${err.cause.message}` : "";
-  return `${err.message}${cause}`;
-}
-
-/** Full error→cause chain with codes, for Railway logs. */
-function causeChain(err: unknown): string {
-  const parts: string[] = [];
-  let cur: unknown = err;
-  for (let depth = 0; cur instanceof Error && depth < 5; depth++) {
-    const code = "code" in cur && typeof cur.code === "string" ? ` [${cur.code}]` : "";
-    parts.push(`${cur.name}: ${cur.message}${code}`);
-    cur = cur.cause;
-  }
-  return parts.join(" ← ") || String(err);
-}
-
-async function withTransientRetry<T>(run: () => Promise<T>): Promise<T> {
-  const attempts = 3;
-  let lastErr: unknown;
-  for (let attempt = 1; attempt <= attempts; attempt++) {
-    try {
-      return await run();
-    } catch (err) {
-      lastErr = err;
-      if (attempt === attempts || !TRANSIENT_ERROR.test(transientMessage(err))) {
-        console.error(
-          `[dnd] openai call failed permanently (attempt ${attempt}/${attempts}):`,
-          causeChain(err),
-        );
-        throw err;
-      }
-      console.warn(
-        `[dnd] openai transient error (attempt ${attempt}/${attempts}), retrying:`,
-        transientMessage(err),
-      );
-      await new Promise((resolve) => setTimeout(resolve, 1000 * attempt));
-    }
-  }
-  throw lastErr;
-}
-
-async function createWithRetry(
-  client: OpenAI,
-  params: Omit<OpenAI.Responses.ResponseCreateParamsNonStreaming, "stream">,
-): Promise<OpenAI.Responses.Response> {
-  let res = await withTransientRetry(() =>
-    client.responses.create({ ...params, background: true }),
-  );
-  const deadline = Date.now() + POLL_BUDGET_MS;
-  while (res.status === "queued" || res.status === "in_progress") {
-    if (Date.now() > deadline) {
-      throw new Error(`openai response ${res.id} still ${res.status} after 15 minutes`);
-    }
-    await new Promise((resolve) => setTimeout(resolve, POLL_INTERVAL_MS));
-    res = await withTransientRetry(() => client.responses.retrieve(res.id));
-  }
-  if (res.status !== "completed") {
-    const detail = res.error?.message ?? res.incomplete_details?.reason ?? "no detail";
-    throw new Error(`openai response ${res.status ?? "unknown"}: ${detail}`);
-  }
-  return res;
-}
-
-/**
- * Reachability probe for `/api/health/openai` — lets us verify the deploy
- * host's path to OpenAI without playing a combat turn. `gen: true` runs a
- * one-word generation through the exact background+poll transport the
- * referee uses; plain mode is a free models.list.
- */
-export async function probeOpenAI(
-  gen: boolean,
-): Promise<{ ok: true; detail: string } | { ok: false; error: string }> {
-  const t0 = Date.now();
-  try {
-    const client = getClient();
-    if (!gen) {
-      const models = await client.models.list();
-      return {
-        ok: true,
-        detail: `models.list ok (${models.data.length} models, ${Date.now() - t0}ms)`,
-      };
-    }
-    const res = await createWithRetry(client, {
-      model: process.env.OPENAI_MODEL ?? "gpt-5.5",
-      input: [{ role: "user", content: [{ type: "input_text", text: "Reply with exactly: OK" }] }],
-    });
-    const text = responseOutputText(res).slice(0, 40);
-    return { ok: true, detail: `background generation ok (${Date.now() - t0}ms): ${text}` };
-  } catch (err) {
-    return { ok: false, error: causeChain(err) };
-  }
-}
-
-/**
- * `output_text` is an SDK convenience that the non-streaming path adds; the
- * final response assembled from a stream carries only the raw `output`
- * items, so aggregate the text ourselves.
- */
-function responseOutputText(res: OpenAI.Responses.Response): string {
-  if (typeof res.output_text === "string" && res.output_text.length > 0) return res.output_text;
-  return res.output
-    .filter((item) => item.type === "message")
-    .flatMap((item) => item.content)
-    .filter((content) => content.type === "output_text")
-    .map((content) => content.text)
-    .join("");
+/** Text-only structured generation for the referee/story calls. */
+async function runTextGeneration(args: {
+  prompt: string;
+  schemaName: string;
+  jsonSchema: Record<string, unknown>;
+}): Promise<unknown> {
+  return structuredGenerate({
+    feature: "dnd",
+    label: "dnd",
+    user: args.prompt,
+    schemaName: args.schemaName,
+    jsonSchema: args.jsonSchema,
+    budgetMs: TEXT_BUDGET_MS,
+  });
 }
 
 export interface CampaignExtraction {
@@ -319,31 +200,22 @@ async function runPdfExtraction(args: {
   pdfDataUri: string;
   filename: string;
 }): Promise<unknown> {
-  const client = getClient();
-  const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
-
-  const res = await createWithRetry(client, {
-    model,
-    input: [
+  return structuredGenerate({
+    feature: "dnd-extract",
+    label: "dnd",
+    user: [
+      { type: "text", text: args.prompt },
       {
-        role: "user",
-        content: [
-          { type: "input_text", text: args.prompt },
-          { type: "input_file", filename: args.filename, file_data: args.pdfDataUri },
-        ],
+        type: "file",
+        mediaType: "application/pdf",
+        filename: args.filename,
+        dataUri: args.pdfDataUri,
       },
     ],
-    text: {
-      format: {
-        type: "json_schema",
-        name: args.schemaName,
-        strict: true,
-        schema: args.jsonSchema,
-      },
-    },
+    schemaName: args.schemaName,
+    jsonSchema: args.jsonSchema,
+    budgetMs: PDF_BUDGET_MS,
   });
-
-  return JSON.parse(responseOutputText(res));
 }
 
 /** Send the module PDF to OpenAI and return the normalized extraction. */
@@ -1256,23 +1128,13 @@ export function normalizeNode(raw: unknown): StoryNode {
 /** Text-only generation — no PDF, a few seconds instead of minutes.
  * Returns 1–5 structured branches (per-NPC splits, links, follow-ups). */
 export async function generateStoryNode(ctx: StoryNodeContext): Promise<SuggestedBranch[]> {
-  const client = getClient();
-  const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
-
-  const res = await createWithRetry(client, {
-    model,
-    input: [{ role: "user", content: [{ type: "input_text", text: buildNodePrompt(ctx) }] }],
-    text: {
-      format: {
-        type: "json_schema",
-        name: "story_branches",
-        strict: true,
-        schema: STORY_BRANCHES_JSON_SCHEMA as unknown as Record<string, unknown>,
-      },
-    },
+  const raw = await runTextGeneration({
+    prompt: buildNodePrompt(ctx),
+    schemaName: "story_branches",
+    jsonSchema: STORY_BRANCHES_JSON_SCHEMA as unknown as Record<string, unknown>,
   });
 
-  const parsed = RawSuggestionsSchema.parse(JSON.parse(responseOutputText(res)));
+  const parsed = RawSuggestionsSchema.parse(raw);
   return parsed.branches.slice(0, 5).map((branch, i) => ({
     node: normalizeNode(branch),
     linkTo: branch.link_to,
@@ -1344,25 +1206,16 @@ export function normalizeActionCards(raw: unknown): ActionCard[] {
 
 /** Distill a character sheet into a normalized combat action dashboard. */
 export async function generateActionCards(sheetJson: string): Promise<ActionCard[]> {
-  const client = getClient();
-  const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
   const prompt = `You are preparing a DM's combat dashboard for one D&D player character. From the character sheet JSON below, produce 6–10 action cards covering the MIX a DM needs at a glance during that character's turn: weapon attacks (one card per relevant weapon — when the sheet's 'attacks' array has a printed entry, use ITS numbers and carry its full rider text (weapon masteries like Cleave, special properties) into the card's roll/note; otherwise compute from abilities, proficiency, and weapon type), cantrips and the most combat-relevant prepared/known spells (attack roll or save DC, damage/effect), signature class/bonus-action features appropriate to the class and level (e.g. Cunning Action, Steady Aim, Sneak Attack dice, Second Wind, racial traits like Feline Agility), and — only when the character has few special options — 1–2 basics (Dash, Disengage, Dodge, Hide). Prioritize the most important options for characters with long lists; keep the set normalized so every character's dashboard reads the same way. Compute concrete numbers where the sheet allows; do not invent items or spells the sheet doesn't have.
 
 Character sheet JSON:
 ${sheetJson}`;
-  const res = await createWithRetry(client, {
-    model,
-    input: [{ role: "user", content: [{ type: "input_text", text: prompt }] }],
-    text: {
-      format: {
-        type: "json_schema",
-        name: "action_cards",
-        strict: true,
-        schema: ACTION_CARDS_JSON_SCHEMA as unknown as Record<string, unknown>,
-      },
-    },
+  const raw = await runTextGeneration({
+    prompt: prompt,
+    schemaName: "action_cards",
+    jsonSchema: ACTION_CARDS_JSON_SCHEMA as unknown as Record<string, unknown>,
   });
-  return normalizeActionCards(JSON.parse(responseOutputText(res)));
+  return normalizeActionCards(raw);
 }
 
 // ── Combat: the turn referee ───────────────────────────────────────────
@@ -1572,8 +1425,6 @@ export async function generateAftermath(ctx: {
   combatants: Combatant[];
   history: string[];
 }): Promise<{ readText: string; summary: string }> {
-  const client = getClient();
-  const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
   const lines: string[] = [];
   lines.push(
     "You are the narrator at a D&D table. The combat below has just ENDED (the DM called it). Write the read-aloud the DM speaks NOW — the moment AFTER the last logged action. Every turn in the log was already narrated at the table, so do NOT retell any of it: no replaying the final blow, no recap. Describe only what comes next — the scene settling, the quiet after, what the party sees, hears, and feels as they realize the fight is over. Also return a one-sentence DM-facing summary of the outcome.",
@@ -1591,19 +1442,12 @@ export async function generateAftermath(ctx: {
     lines.push("\nThe battle as logged, in order:");
     for (const h of ctx.history) lines.push(h);
   }
-  const res = await createWithRetry(client, {
-    model,
-    input: [{ role: "user", content: [{ type: "input_text", text: lines.join("\n") }] }],
-    text: {
-      format: {
-        type: "json_schema",
-        name: "combat_aftermath",
-        strict: true,
-        schema: AFTERMATH_JSON_SCHEMA as unknown as Record<string, unknown>,
-      },
-    },
+  const raw = await runTextGeneration({
+    prompt: lines.join("\n"),
+    schemaName: "combat_aftermath",
+    jsonSchema: AFTERMATH_JSON_SCHEMA as unknown as Record<string, unknown>,
   });
-  const parsed = RawAftermathSchema.parse(JSON.parse(responseOutputText(res)));
+  const parsed = RawAftermathSchema.parse(raw);
   return {
     readText: clamp(parsed.read_aloud, 1900),
     summary: clamp(parsed.summary, 160),
@@ -1689,9 +1533,6 @@ const RawSuggestionsSchema = z.object({
  * (from the attached PDF), then natural table moves (short rest, search).
  */
 export async function generateNodeSuggestions(ctx: SuggestionContext): Promise<SuggestedBranch[]> {
-  const client = getClient();
-  const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
-
   const lines: string[] = [];
   lines.push(
     "You are the Dungeon Master preparing UNPROMPTED developments — the world acting while the players catch their breath. Given the current position in the story below (and the adventure module PDF when attached), propose 2–5 branch options for what plausibly happens NEXT from this exact moment, without any player prompting. PRIORITIZE events the module itself scripts for this location and moment (an NPC arriving, a timed event, a consequence the text calls for) — quote or closely adapt the module's own read-aloud where it exists. Then add natural table moves a DM or the players would reach for in this situation (a short rest right after a fight, searching the area, pressing on). Each branch: a SHORT imperative trigger (max ~8 words, e.g. 'Marcus arrives', 'Take a short rest'), a one-sentence DM summary, and the read-aloud text spoken when it happens. Use node_type 'rest' for a short-rest branch. THREE structural tools: (1) never duplicate the existing sibling branches listed below; (2) when a branch would lead somewhere the tree ALREADY covers (see the existing-nodes list with ids), set link_to to that node's id instead of rewriting it — the branch converges there; (3) when a branch only makes sense AFTER another branch in this batch (a reaction to an arrival), set follows to that branch's 0-based index so it nests under it. Ground everything in the table history — it is the truth of what already happened.",
@@ -1722,30 +1563,25 @@ export async function generateNodeSuggestions(ctx: SuggestionContext): Promise<S
     for (const h of ctx.history) lines.push(h);
   }
 
-  const content: OpenAI.Responses.ResponseInputContent[] = [
-    { type: "input_text", text: lines.join("\n") },
-  ];
+  const content: AiUserContent = [{ type: "text", text: lines.join("\n") }];
   if (ctx.modulePdf) {
     content.push({
-      type: "input_file",
+      type: "file",
+      mediaType: "application/pdf",
       filename: ctx.modulePdf.filename,
-      file_data: ctx.modulePdf.dataUri,
+      dataUri: ctx.modulePdf.dataUri,
     });
   }
 
-  const res = await createWithRetry(client, {
-    model,
-    input: [{ role: "user", content }],
-    text: {
-      format: {
-        type: "json_schema",
-        name: "branch_suggestions",
-        strict: true,
-        schema: SUGGESTIONS_JSON_SCHEMA as unknown as Record<string, unknown>,
-      },
-    },
+  const raw = await structuredGenerate({
+    feature: "dnd",
+    label: "dnd",
+    user: content,
+    schemaName: "branch_suggestions",
+    jsonSchema: SUGGESTIONS_JSON_SCHEMA as unknown as Record<string, unknown>,
+    budgetMs: TEXT_BUDGET_MS,
   });
-  const parsed = RawSuggestionsSchema.parse(JSON.parse(responseOutputText(res)));
+  const parsed = RawSuggestionsSchema.parse(raw);
   return parsed.branches.slice(0, 5).map((branch, i) => ({
     node: normalizeNode(branch),
     linkTo: branch.link_to,
@@ -1777,8 +1613,6 @@ export async function generateQuickResolution(ctx: {
   history: string[];
   message: string;
 }): Promise<string> {
-  const client = getClient();
-  const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
   const lines: string[] = [];
   lines.push(
     "You are the narrator at a D&D table. The DM reports a small table event — an ability or skill check, a quick interaction, an examination — that should be RESOLVED IN PLACE without branching the story. Write the read-aloud that resolves it: when a check with a roll is reported, adjudicate it (choose a sensible DC for the difficulty, compare the roll, and reveal in proportion — a bare success gives partial insight, a high roll the useful truth, a failure is narrated as absence or confusion, never silence). Ground everything in the scene, the cast's nature and DM-only notes, and the table history. Purely in-fiction: no numbers, DCs, or rules vocabulary in the narration.",
@@ -1795,19 +1629,12 @@ export async function generateQuickResolution(ctx: {
     for (const h of ctx.history) lines.push(h);
   }
   lines.push(`\nThe DM reports: ${ctx.message}`);
-  const res = await createWithRetry(client, {
-    model,
-    input: [{ role: "user", content: [{ type: "input_text", text: lines.join("\n") }] }],
-    text: {
-      format: {
-        type: "json_schema",
-        name: "quick_resolution",
-        strict: true,
-        schema: QUICK_RESOLVE_JSON_SCHEMA as unknown as Record<string, unknown>,
-      },
-    },
+  const raw = await runTextGeneration({
+    prompt: lines.join("\n"),
+    schemaName: "quick_resolution",
+    jsonSchema: QUICK_RESOLVE_JSON_SCHEMA as unknown as Record<string, unknown>,
   });
-  const parsed = z.object({ narration: z.string() }).parse(JSON.parse(responseOutputText(res)));
+  const parsed = z.object({ narration: z.string() }).parse(raw);
   return clamp(parsed.narration, 1500);
 }
 
@@ -1848,19 +1675,10 @@ export function normalizeTurnResult(raw: unknown): CombatTurnResult {
 
 /** Referee one combat turn: legality → state updates → narration. */
 export async function resolveCombatTurn(ctx: CombatTurnContext): Promise<CombatTurnResult> {
-  const client = getClient();
-  const model = process.env.OPENAI_MODEL ?? "gpt-5.5";
-  const res = await createWithRetry(client, {
-    model,
-    input: [{ role: "user", content: [{ type: "input_text", text: buildTurnPrompt(ctx) }] }],
-    text: {
-      format: {
-        type: "json_schema",
-        name: "combat_turn",
-        strict: true,
-        schema: TURN_JSON_SCHEMA as unknown as Record<string, unknown>,
-      },
-    },
+  const raw = await runTextGeneration({
+    prompt: buildTurnPrompt(ctx),
+    schemaName: "combat_turn",
+    jsonSchema: TURN_JSON_SCHEMA as unknown as Record<string, unknown>,
   });
-  return normalizeTurnResult(JSON.parse(responseOutputText(res)));
+  return normalizeTurnResult(raw);
 }

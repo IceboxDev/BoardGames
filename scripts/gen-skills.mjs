@@ -7,7 +7,7 @@
 //   pnpm gen-skills --dry-run                         # log, don't write
 //
 // Required env (loaded from packages/server/.env via --env-file, same as
-// gen-descriptions): OPENAI_API_KEY (+ optional OPENAI_MODEL).
+// gen-descriptions): AI_GATEWAY_API_KEY (+ optional AI_MODEL_SKILLS / AI_MODEL).
 //
 // `bgg-sync --add` invokes this automatically after scaffolding, so new games
 // get a real editorial-quality vector instead of the placeholder — nobody
@@ -16,10 +16,11 @@
 
 import { readFile, writeFile } from "node:fs/promises";
 import { stripBggHtml } from "./gen-descriptions/strip-bgg-html.mjs";
+import { ensureAiUsable, resolveScriptModel, structuredScriptCall } from "./lib/ai.mjs";
 
 const CATALOG_PATH = "packages/core/src/games/catalog.json";
 const SNAPSHOT_PATH = "packages/core/src/bgg/snapshot.json";
-const MODEL = process.env.OPENAI_MODEL ?? "gpt-5.5";
+const MODEL = resolveScriptModel("AI_MODEL_SKILLS", "openai/gpt-5.2");
 /** The exact vector `bgg-sync --add` scaffolds (no real entry uses it). */
 export const PLACEHOLDER = { int: 40, pln: 40, per: 20, soph: 0, soc: 0, dex: 0 };
 
@@ -64,21 +65,16 @@ Blood on the Clocktower: int 20, pln 5, per 10, soph 15, soc 50, dex 0
 Pandemic (co-op): int 35, pln 45, per 10, soph 5, soc 5, dex 0
 Wavelength: int 10, pln 0, per 5, soph 65, soc 20, dex 0`;
 
-const RESPONSE_SCHEMA = {
-  type: "json_schema",
-  name: "skill_weights",
-  strict: true,
-  schema: {
-    type: "object",
-    additionalProperties: false,
-    required: ["int", "pln", "per", "soph", "soc", "dex"],
-    properties: Object.fromEntries(
-      ["int", "pln", "per", "soph", "soc", "dex"].map((k) => [
-        k,
-        { type: "integer", minimum: 0, maximum: 100 },
-      ]),
-    ),
-  },
+const WEIGHTS_SCHEMA = {
+  type: "object",
+  additionalProperties: false,
+  required: ["int", "pln", "per", "soph", "soc", "dex"],
+  properties: Object.fromEntries(
+    ["int", "pln", "per", "soph", "soc", "dex"].map((k) => [
+      k,
+      { type: "integer", minimum: 0, maximum: 100 },
+    ]),
+  ),
 };
 
 function validWeights(w) {
@@ -118,23 +114,20 @@ function buildUserPrompt(entry, bgg) {
   return lines.join("\n");
 }
 
-async function generateWeights(client, entry, bgg) {
-  const base = {
-    model: MODEL,
-    instructions: `You calibrate board games for a six-trait skill rating system.\n\n${TRAIT_DEFINITIONS}\n\n${CALIBRATION}`,
-    input: buildUserPrompt(entry, bgg),
-    text: { format: RESPONSE_SCHEMA },
-  };
+async function generateWeights(entry, bgg) {
+  const system = `You calibrate board games for a six-trait skill rating system.\n\n${TRAIT_DEFINITIONS}\n\n${CALIBRATION}`;
+  const user = buildUserPrompt(entry, bgg);
   for (let attempt = 0; attempt < 2; attempt++) {
-    const res = await client.responses.create(
-      attempt === 0
-        ? base
-        : {
-            ...base,
-            input: `${base.input}\n\nREMINDER: the six integers MUST sum to exactly 100, in steps of 5.`,
-          },
-    );
-    const parsed = JSON.parse(res.output_text);
+    const parsed = await structuredScriptCall({
+      model: MODEL,
+      system,
+      user:
+        attempt === 0
+          ? user
+          : `${user}\n\nREMINDER: the six integers MUST sum to exactly 100, in steps of 5.`,
+      schemaName: "skill_weights",
+      schema: WEIGHTS_SCHEMA,
+    });
     if (validWeights(parsed)) return parsed;
     console.warn(`[gen-skills] ${entry.slug}: weights invalid (attempt ${attempt + 1}), retrying`);
   }
@@ -168,18 +161,23 @@ async function main() {
     return;
   }
 
-  const { default: OpenAI } = await import("openai");
-  if (!process.env.OPENAI_API_KEY) {
-    console.error(
-      "[gen-skills] OPENAI_API_KEY not set (packages/server/.env) — placeholder vectors kept.",
-    );
-    process.exit(1);
-  }
-  const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+  ensureAiUsable("gen-skills");
 
   let wrote = 0;
+  let stoppedEarly = false;
   for (const entry of targets) {
-    const weights = await generateWeights(client, entry, snapshot[entry.slug]);
+    let weights;
+    try {
+      weights = await generateWeights(entry, snapshot[entry.slug]);
+    } catch (err) {
+      // A thrown call (gateway rate limit, network) would fail every later
+      // slug too — bank the successes so far and let a rerun resume where
+      // this one stopped (--placeholders is naturally idempotent).
+      const msg = String(err?.message ?? err).split("\n")[0];
+      console.error(`[gen-skills] ${entry.slug}: call failed (${msg}) — stopping, successes kept`);
+      stoppedEarly = true;
+      break;
+    }
     if (!weights) {
       console.error(`[gen-skills] ${entry.slug}: FAILED — placeholder kept, fill by hand`);
       continue;
@@ -194,6 +192,7 @@ async function main() {
     await writeFile(CATALOG_PATH, `${JSON.stringify(catalog, null, 2)}\n`);
     console.log(`[gen-skills] wrote ${wrote} vector(s) to ${CATALOG_PATH}`);
   }
+  if (stoppedEarly) process.exit(1);
 }
 
 main().catch((err) => {

@@ -39,9 +39,11 @@ Exactly one of `--slug`, `--all`, `--missing` is required.
 
 ## Required env (loaded from `packages/server/.env`)
 
-- `OPENAI_API_KEY` — your secret key.
-- `OPENAI_MODEL` — optional, defaults to `gpt-5.5`. Override if the API
-  exposes the model under a versioned id (e.g. `gpt-5.5-preview-2026`).
+- `AI_GATEWAY_API_KEY` — your Vercel AI Gateway key.
+- `AI_MODEL_DESCRIPTIONS` — optional gateway slug, defaults to
+  `openai/gpt-5.2` with OpenAI's hosted `web_search` tool attached. If you
+  override it to a non-OpenAI slug, pick a model that can ground itself in
+  live search results (the tool is only attached to `openai/*` slugs).
 
 ## Output shape
 

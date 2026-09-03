@@ -9,8 +9,10 @@
 //   pnpm gen-descriptions --dry-run              # log only, don't write files
 //
 // Required env (loaded from packages/server/.env via --env-file):
-//   OPENAI_API_KEY   — secret key for the OpenAI Responses API
-//   OPENAI_MODEL     — optional, defaults to "gpt-5.5"
+//   AI_GATEWAY_API_KEY — Vercel AI Gateway key
+//   AI_MODEL_DESCRIPTIONS — optional gateway slug; defaults to openai/gpt-5.2
+//   with OpenAI's hosted web_search tool (the pipeline's "browse before
+//   writing" semantics, routed through the AI Gateway)
 //
 // The script reads the BGG snapshot at packages/core/src/bgg/snapshot.json
 // (the same source the web bundle uses) so the model sees identical context
@@ -21,8 +23,8 @@ import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { runPool } from "./concurrency.mjs";
 import { writeGameDescriptions } from "./write-game-file.mjs";
-// `./openai-call.mjs` is imported lazily inside main() so --help and
-// --dry-run work without the `openai` package installed.
+// `./ai-call.mjs` is imported lazily inside main() so --help and
+// --dry-run work without the `ai` package installed.
 
 const SNAPSHOT_PATH = "packages/core/src/bgg/snapshot.json";
 const GAMES_ROOT = "packages/web/src/games";
@@ -122,14 +124,14 @@ async function main() {
     return;
   }
 
-  // Eagerly trip on missing env so we don't burn 30 minutes of partial runs.
-  if (!process.env.OPENAI_API_KEY) {
-    die("OPENAI_API_KEY not set in packages/server/.env");
-  }
+  // Eagerly trip on missing/suspended env so we don't burn 30 minutes of
+  // partial runs.
+  const { ensureAiUsable } = await import("../lib/ai.mjs");
+  ensureAiUsable("gen-descriptions");
 
-  // Lazy-import the OpenAI client so --help / --dry-run / missing-env paths
-  // don't require the `openai` package to be installed.
-  const { generateForGame } = await import("./openai-call.mjs");
+  // Lazy-import the AI wrapper so --help / --dry-run / missing-env paths
+  // don't require the `ai` package to be installed.
+  const { generateForGame } = await import("./ai-call.mjs");
 
   const startedAt = Date.now();
   const { succeeded, failed } = await runPool({

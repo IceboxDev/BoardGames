@@ -33,7 +33,7 @@ function makeCtx(overrides: Partial<DecryptoContext> = {}): DecryptoContext {
     seed: 42,
     rng,
     humanPlayers: [0],
-    aiModels: [null, "gpt-5.5", "gpt-5.5", "gpt-5.5"],
+    aiModels: [null, "decrypto-expert", "decrypto-expert", "decrypto-expert"],
     teams: buildTeams({ variant: "standard", teamPlayers: defaultTeamPlayers("standard"), rng }),
     round: 1,
     current: [],

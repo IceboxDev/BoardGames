@@ -58,6 +58,7 @@ import {
 } from "@boardgames/core/protocol";
 import { streamSSE } from "hono/streaming";
 import { authedApp } from "../auth/index.ts";
+import { AiConfigError } from "../lib/ai";
 import {
   countCampaignsForUser,
   deleteCampaign,
@@ -85,7 +86,6 @@ import {
 } from "../lib/dnd-characters-db.ts";
 import { getActiveCombat, getCombat, insertCombat, updateCombat } from "../lib/dnd-combats-db.ts";
 import {
-  DndConfigError,
   extractCampaign,
   extractCharacter,
   extractNpcs,
@@ -136,7 +136,7 @@ const MAX_CAMPAIGNS_PER_USER = 20;
 const MAX_CHARACTERS_PER_CAMPAIGN = 12;
 
 function extractionErrorMessage(err: unknown): string {
-  return err instanceof DndConfigError
+  return err instanceof AiConfigError
     ? err.message
     : `Extraction failed: ${err instanceof Error ? err.message : "unknown error"}`;
 }
@@ -595,7 +595,7 @@ dndCampaignRoutes.post("/parties/:id/nodes", zJsonBody(GenerateNodeRequestSchema
     }
     return c.json(GenerateNodeResponseSchema.parse({ nodes: inserted }), 201);
   } catch (err) {
-    if (err instanceof DndConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
+    if (err instanceof AiConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
     return errorResponse(
       c,
       502,
@@ -669,7 +669,7 @@ dndCampaignRoutes.post("/parties/:id/resolve", zJsonBody(ResolveEventRequestSche
     ]);
     return c.json(ResolveEventResponseSchema.parse({ narration }));
   } catch (err) {
-    if (err instanceof DndConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
+    if (err instanceof AiConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
     return errorResponse(
       c,
       502,
@@ -803,8 +803,7 @@ dndCampaignRoutes.post(
       }
       return c.json(SuggestNodesResponseSchema.parse({ nodes: inserted }), 201);
     } catch (err) {
-      if (err instanceof DndConfigError)
-        return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
+      if (err instanceof AiConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
       return errorResponse(
         c,
         502,
@@ -990,7 +989,7 @@ dndCampaignRoutes.post("/combats/:id/turn", zJsonBody(ResolveTurnRequestSchema),
       }),
     );
   } catch (err) {
-    if (err instanceof DndConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
+    if (err instanceof AiConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
     return errorResponse(
       c,
       502,
@@ -1089,7 +1088,7 @@ dndCampaignRoutes.post("/characters/:id/actions", async (c) => {
     await setCharacterActions(character.id, JSON.stringify(cards));
     return c.json(CharacterActionsResponseSchema.parse({ cards }));
   } catch (err) {
-    if (err instanceof DndConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
+    if (err instanceof AiConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");
     return errorResponse(
       c,
       502,

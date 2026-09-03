@@ -7,22 +7,27 @@ import type {
 } from "@boardgames/core/games/decrypto/ai/agent";
 import { setDecryptoAgent } from "@boardgames/core/games/decrypto/ai/agent";
 import { fallbackClues, fallbackGuess } from "@boardgames/core/games/decrypto/ai/fallback";
-import { DEFAULT_DECRYPTO_MODEL } from "@boardgames/core/games/decrypto/ai/models";
+import {
+  canonicalDecryptoModel,
+  DEFAULT_DECRYPTO_MODEL,
+} from "@boardgames/core/games/decrypto/ai/models";
 import { checkClueLegality, isValidCode } from "@boardgames/core/games/decrypto/rules";
 import type { Code } from "@boardgames/core/games/decrypto/types";
 import { z } from "zod";
-import { causeChain, getOpenAIClient, structuredCall } from "../lib/llm";
+import { aiAvailable, causeChain, structuredGenerate } from "../lib/ai";
 
 /**
- * OpenAI-backed Decrypto agent. Installed at boot by `maybeEnableDecryptoAgent`
- * when OPENAI_API_KEY is configured; otherwise the deterministic core fallback
- * stays and games remain playable (the AI team just communicates in noise).
+ * LLM-backed Decrypto agent. Installed at boot by `maybeEnableDecryptoAgent`
+ * when AI is available (gateway key or the OpenAI escape hatch); otherwise the
+ * deterministic core fallback stays and games remain playable (the AI team
+ * just communicates in noise).
  *
- * The model is the seat's strategy string, passed verbatim as the OpenAI
- * `model` parameter. Every entry point catches, re-prompts once on a rules
- * violation, and falls back deterministically — and the machine's own 90s
- * race + sanitize sits above this as the last belt, so nothing here can wedge
- * a session.
+ * The seat's strategy string is an abstract difficulty tier (decrypto-medium/
+ * hard/expert — legacy GPT ids canonicalize to those); `modelForTier` maps it
+ * to a concrete gateway model slug via DECRYPTO_MODEL_* env vars. Every entry
+ * point catches, re-prompts once on a rules violation, and falls back
+ * deterministically — and the machine's own 90s race + sanitize sits above
+ * this as the last belt, so nothing here can wedge a session.
  *
  * PROMPT DESIGN — the whole game is the clue-history table. Both roles get
  * the history GROUPED BY DIGIT (exactly the table a human keeps on the note
@@ -336,19 +341,31 @@ function guessUser(input: GuessInput, violation?: string): string {
 // Calls
 // ---------------------------------------------------------------------------
 
-function modelFor(input: { model: string }): string {
-  return input.model || process.env.OPENAI_MODEL || DEFAULT_DECRYPTO_MODEL;
+/** Tier id → concrete gateway model slug (env-overridable per tier). */
+const TIER_MODELS: Record<string, { env: string; fallback: string }> = {
+  // Free-tier OpenAI ladder: nano → newer nano → flagship.
+  "decrypto-medium": { env: "DECRYPTO_MODEL_MEDIUM", fallback: "openai/gpt-5-nano" },
+  "decrypto-hard": { env: "DECRYPTO_MODEL_HARD", fallback: "openai/gpt-5.4-nano" },
+  "decrypto-expert": { env: "DECRYPTO_MODEL_EXPERT", fallback: "openai/gpt-5.2" },
+};
+
+function modelForTier(raw: string): string {
+  // Unknown strategy strings (the wire accepts any ≤64 chars) resolve to the
+  // expert tier — a client can pick a tier, never an arbitrary billed model.
+  const tier = canonicalDecryptoModel(raw || DEFAULT_DECRYPTO_MODEL);
+  const entry = TIER_MODELS[tier] ?? TIER_MODELS["decrypto-expert"];
+  if (!entry) throw new Error("decrypto tier table is empty");
+  return process.env[entry.env]?.trim() || entry.fallback;
 }
 
 async function callEncrypt(
   input: EncryptInput,
   violation?: string,
 ): Promise<[string, string, string]> {
-  const client = getOpenAIClient();
-  if (!client) throw new Error("OPENAI_API_KEY not configured");
-  const raw = await structuredCall(client, {
+  const raw = await structuredGenerate({
+    feature: "decrypto",
     label: "decrypto",
-    model: modelFor(input),
+    modelOverride: modelForTier(input.model),
     system: encryptSystem(),
     user: encryptUser(input, violation),
     schemaName: "decrypto_clues",
@@ -368,11 +385,10 @@ async function callEncrypt(
 }
 
 async function callGuess(input: GuessInput, violation?: string): Promise<[number, number, number]> {
-  const client = getOpenAIClient();
-  if (!client) throw new Error("OPENAI_API_KEY not configured");
-  const raw = await structuredCall(client, {
+  const raw = await structuredGenerate({
+    feature: "decrypto",
     label: "decrypto",
-    model: modelFor(input),
+    modelOverride: modelForTier(input.model),
     system: input.purpose === "decode" ? decodeSystem() : interceptSystem(),
     user: guessUser(input, violation),
     schemaName: "decrypto_guess",
@@ -420,12 +436,14 @@ export const openAiDecryptoAgent: DecryptoAiAgent = {
   },
 };
 
-/** Install the OpenAI agent when the key is configured; otherwise keep the fallback. */
+/** Install the LLM agent when AI is available; otherwise keep the fallback. */
 export function maybeEnableDecryptoAgent(): void {
-  if (!process.env.OPENAI_API_KEY) {
-    console.log("[decrypto] OPENAI_API_KEY not set — AI seats use the deterministic fallback");
+  if (!aiAvailable()) {
+    console.log(
+      "[decrypto] AI unavailable (suspended or no AI_GATEWAY_API_KEY) — AI seats use the deterministic fallback",
+    );
     return;
   }
   setDecryptoAgent(openAiDecryptoAgent);
-  console.log("[decrypto] GPT agent enabled for AI seats");
+  console.log("[decrypto] LLM agent enabled for AI seats");
 }

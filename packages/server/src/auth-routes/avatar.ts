@@ -17,8 +17,8 @@ import {
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { logActivity } from "../lib/activity-log.ts";
+import { AiConfigError } from "../lib/ai";
 import {
-  AvatarConfigError,
   dataUriToBuffer,
   prepareReference,
   runAvatarGeneration,
@@ -62,7 +62,7 @@ avatarRoutes.post("/:userId/avatar/generate", zJsonBody(GenerateAvatarRequestSch
       completeAvatarJob(jobId, await toAvatarDataUri(generated));
     } catch (err) {
       const message =
-        err instanceof AvatarConfigError
+        err instanceof AiConfigError
           ? err.message
           : `Image generation failed: ${err instanceof Error ? err.message : "unknown error"}`;
       failAvatarJob(jobId, message);

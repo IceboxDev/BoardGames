@@ -41,7 +41,7 @@ function baseCtx(): DecryptoContext {
     seed: 7,
     rng,
     humanPlayers: [0, 2],
-    aiModels: [null, "gpt-5.5", null, "gpt-5-mini"],
+    aiModels: [null, "decrypto-expert", null, "decrypto-medium"],
     teams,
     round: 3,
     current: [],

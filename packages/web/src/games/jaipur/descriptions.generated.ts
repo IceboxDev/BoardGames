@@ -2,27 +2,27 @@
 // Edit by re-running the script for this slug:
 //   pnpm gen-descriptions --slug jaipur
 //
-// To override one description by hand, set `bggOverrides.description` in
-// this game's index.ts — it will replace all three variants uniformly.
+// To override one description by hand, set `bggOverrides.description` on
+// this game's entry in `packages/core/src/games/catalog.json` — it will
+// replace all three variants uniformly.
 
 import type { GameDescriptions } from "../types";
 
 export const descriptions: GameDescriptions = {
-  tight:
-    "Head-to-head trading card game where players draft goods and camels from a market, then sell sets for rupee tokens.",
-  default:
-    "Light head-to-head trading card game about timing market grabs and set sales for rupees. On a turn, take one goods card, take all camels, swap several cards with the market, or sell one goods type. Highest rupee total takes a seal each round, and two seals win.",
-  loose:
-    "Light head-to-head trading card game about timing market grabs and set sales for rupees. On a turn, take one goods card, scoop all camels, exchange several cards with the five-card market, or sell one goods type for tokens. A round ends when token piles run out or the deck cannot refill the market; highest rupee total takes a seal, and two seals win. The signature squeeze is selling early for high-value tokens or waiting for a larger sale bonus.",
+  tight: "Head-to-head set-collection card game: draft goods from a shared market, trade with camels, then sell sets before values drop.",
+  default: "Competitive hand-management card game about timing set sales from a shared five-card market. On a turn, either take one goods card, take all camels, or swap 2+ cards with the market; or sell one goods type for coin tokens and possible bonuses. Win rounds by having the most money, and first to earn two Seals wins.",
+  loose: "Competitive hand-management card game about timing set sales from a shared five-card market. On a turn, either take one goods card, take all camels, or swap 2+ cards with the market; or sell one goods type for coin tokens and possible bonuses. A round ends when the deck runs out or three token stacks empty; the richer trader takes a Seal, and first to two Seals wins. Bonus tokens stay face-down until taken, so a big sale can flip a surprise payout.",
 };
 
 export const meta = {
-  generatedAt: "2026-05-13T20:19:51.319Z",
-  model: "gpt-5.5",
-  durationMs: 14444,
+  generatedAt: "2026-09-02T21:50:24.577Z",
+  model: "openai/gpt-5.2",
+  durationMs: 49503,
   sources: [
-    "https://hobbygames.ru/download/rules/jaipur-rules.pdf",
-    "https://www.wargamer.com/jaipur/board-game-review",
-    "https://www.gamesradar.com/tabletop-gaming/jaipur-review/",
+    "https://www.goblins.net/files/downloads/JAIPUR.pdf",
+    "https://www.meeplemountain.com/reviews/jaipur/",
+    "https://www.tombell.net/board-game-review-jaipur/",
+    "https://shelfgamer.com/reviews/jaipur/",
+    "https://en.wikipedia.org/wiki/Jaipur_(card_game)"
   ],
 } as const;

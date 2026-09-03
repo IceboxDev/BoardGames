@@ -47,6 +47,15 @@ export const GeneratedDescriptionsSchema = z.object({
 // what we expect, no spurious fields, no $ref indirection. OpenAI's strict
 // mode requires `additionalProperties: false` and every property listed in
 // `required`.
+//
+// DECODER maxLength runs ~25% ABOVE the zod budget on purpose. Constrained
+// decoding hard-stops generation AT maxLength — a model that overruns gets
+// guillotined mid-sentence and can't tell; the sentence-terminator refine
+// then fails with a message the retry can't act on (dense games like Arcs
+// failed three straight runs this way). With decoder headroom the model
+// finishes its overlong sentence, zod's max() rejects it as "too long", and
+// the schema-failure re-prompt gives it a budget it can actually meet. Zod
+// stays the sole editorial arbiter of shipped lengths.
 export const RESPONSE_JSON_SCHEMA = {
   type: "object",
   additionalProperties: false,
@@ -54,21 +63,21 @@ export const RESPONSE_JSON_SCHEMA = {
     tight: {
       type: "string",
       minLength: 80,
-      maxLength: 220,
+      maxLength: 280,
       description:
         "One complete sentence ending in a period. Target ~130 chars; do not write more than ~160. Genre + how-you-play compressed.",
     },
     default: {
       type: "string",
       minLength: 160,
-      maxLength: 340,
+      maxLength: 430,
       description:
         "Three complete sentences ending with a period. Target ~220 chars; do not write more than ~280. Sentence 1: genre + core loop. Sentence 2: a turn or round. Sentence 3: win condition.",
     },
     loose: {
       type: "string",
       minLength: 280,
-      maxLength: 560,
+      maxLength: 700,
       description:
         "Four complete sentences ending with a period. Target ~380 chars; do not write more than ~460. Adds one concrete telling detail (component, signature moment, designer fact, expansion etc).",
     },

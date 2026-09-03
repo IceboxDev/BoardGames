@@ -16,7 +16,7 @@ export interface GameRoomConfig {
    * Selectable engines for AI slots. When present, the lobby renders a
    * picker on each AI slot instead of the historical hardcoded
    * "heuristic-v1"; the chosen id rides on `RoomSlot.aiStrategy` (for
-   * Decrypto the ids are GPT model names).
+   * Decrypto the ids are AI difficulty tiers).
    */
   botStrategies?: readonly { id: string; label: string }[];
 }
@@ -25,7 +25,7 @@ export const gameRoomConfigs: Record<string, GameRoomConfig> = {
   "7-wonders": { minPlayers: 3, maxPlayers: 7, supportsAI: true },
   // Fixed seat convention: 0-1 White, 2-3 Black. Filling only seats 0-2
   // (leaving the last open) starts the official 3-player Interceptor variant
-  // with seat 2 as the solo interceptor. AI slot ids are GPT model names.
+  // with seat 2 as the solo interceptor. AI slot ids are AI difficulty tiers.
   decrypto: {
     minPlayers: 1,
     maxPlayers: 4,

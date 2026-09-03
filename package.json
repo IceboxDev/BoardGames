@@ -29,7 +29,6 @@
     "fast-xml-parser": "^5.7.2",
     "lefthook": "^2.1.4",
     "node-vibrant": "^4.0.4",
-    "openai": "^4.85.0",
     "sharp": "^0.34.5",
     "tsx": "^4.21.0",
     "typescript": "~5.7.0",
@@ -46,5 +45,9 @@
     "overrides": {
       "zod": "^4"
     }
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^4.0.57",
+    "ai": "^7.0.91"
   }
 }

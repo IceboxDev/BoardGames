@@ -1,7 +1,7 @@
 /**
  * Deterministic fallback agent: synchronous-fast, throw-free, always legal.
  *
- * This is the floor under every AI seat — it answers when no OPENAI_API_KEY is
+ * This is the floor under every AI seat — it answers when no LLM agent is
  * configured, when the GPT call errors, and when the 45s deadline fires. It is
  * degenerate ON PURPOSE: a stalled LLM should cost the AI team the round (its
  * teammates can't read "signal 3.1"), never the session.
