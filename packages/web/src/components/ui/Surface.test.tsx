@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
+import { RADIUS_CARD_LG, RADIUS_CARD_MD } from "./radii";
 import { Surface } from "./Surface";
 
 describe("Surface", () => {
@@ -8,7 +9,7 @@ describe("Surface", () => {
     const el = screen.getByText("body");
     expect(el.tagName).toBe("DIV");
     expect(el.className).toMatch(/bg-surface-900/);
-    expect(el.className).toMatch(/rounded-lg/);
+    expect(el.className).toContain(RADIUS_CARD_LG);
   });
 
   it("renders the requested element via `as`", () => {
@@ -23,7 +24,7 @@ describe("Surface", () => {
       </Surface>,
     );
     const cls = screen.getByText("body").className;
-    expect(cls).toMatch(/rounded-md/);
+    expect(cls).toContain(RADIUS_CARD_MD);
     expect(cls).toMatch(/\bp-4\b/);
   });
 

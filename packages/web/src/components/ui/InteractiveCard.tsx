@@ -1,5 +1,6 @@
 import type { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
 import { cn } from "../../lib/cn";
+import { RADIUS_CARD_2XL } from "./radii";
 
 // ── InteractiveCard ──────────────────────────────────────────────────────
 //
@@ -34,8 +35,9 @@ const PADDINGS: Record<InteractiveCardPadding, string> = {
   lg: "px-5 py-4 sm:px-6 sm:py-5",
 };
 
+// Themable corner (RADIUS_CARD_2XL) — see radii.ts.
 const CHROME =
-  "group rounded-2xl border border-white/[0.06] bg-surface-900/60 transition-all duration-300 " +
+  `group ${RADIUS_CARD_2XL} border border-white/[0.06] bg-surface-900/60 transition-all duration-300 ` +
   "hover:border-white/15 hover:bg-surface-900 " +
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/60";
 

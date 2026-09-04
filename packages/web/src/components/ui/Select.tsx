@@ -1,6 +1,7 @@
 import type { Ref, SelectHTMLAttributes } from "react";
 import { cn } from "../../lib/cn";
 import { ChevronDownIcon } from "../icons";
+import { RADIUS_UI_LG, RADIUS_UI_MD } from "./radii";
 
 // `<select>` sibling of `Input` — same surface-token chrome, focus ring, and
 // `invalid` state. Use instead of hand-styling `<select className="rounded-md
@@ -29,8 +30,8 @@ type Props = Omit<SelectHTMLAttributes<HTMLSelectElement>, "size"> & {
 };
 
 const SIZES: Record<SelectSize, string> = {
-  sm: "rounded-md px-2 py-1 text-xs",
-  md: "rounded-lg px-3 py-2 text-sm",
+  sm: `${RADIUS_UI_MD} px-2 py-1 text-xs`,
+  md: `${RADIUS_UI_LG} px-3 py-2 text-sm`,
 };
 
 export function Select({

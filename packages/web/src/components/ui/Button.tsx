@@ -1,5 +1,6 @@
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes, Ref } from "react";
 import { cn } from "../../lib/cn";
+import { RADIUS_UI_LG } from "./radii";
 import { Spinner } from "./Spinner";
 import type { Tone } from "./tones";
 
@@ -131,7 +132,8 @@ const SIZE_TEXT: Record<Size, string> = {
 };
 
 const SHAPES: Record<Shape, string> = {
-  rounded: "rounded-lg",
+  // Themable corner — see radii.ts. Pills and squares are shape-identity.
+  rounded: RADIUS_UI_LG,
   pill: "rounded-full",
   // Square corners — abutting menu rows / segmented cells.
   square: "rounded-none",

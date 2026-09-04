@@ -1,5 +1,6 @@
 import type { ElementType, HTMLAttributes, ReactNode } from "react";
 import { cn } from "../../lib/cn";
+import { RADIUS_CARD_2XL, RADIUS_CARD_LG, RADIUS_CARD_MD, RADIUS_CARD_XL } from "./radii";
 
 // ── Surface ──────────────────────────────────────────────────────────────
 //
@@ -37,17 +38,18 @@ type SurfaceProps = HTMLAttributes<HTMLElement> & {
   children: ReactNode;
 };
 
+// Corners route through the card-radius theme hook — see radii.ts.
 const VARIANTS: Record<SurfaceVariant, string> = {
-  tile: "rounded-md border border-white/5 bg-surface-900/40",
-  panel: "rounded-lg border border-white/10 bg-surface-900",
-  raised: "rounded-2xl border border-white/[0.06] bg-surface-900/60",
+  tile: `${RADIUS_CARD_MD} border border-white/5 bg-surface-900/40`,
+  panel: `${RADIUS_CARD_LG} border border-white/10 bg-surface-900`,
+  raised: `${RADIUS_CARD_2XL} border border-white/[0.06] bg-surface-900/60`,
 };
 
 const RADII: Record<SurfaceRadius, string> = {
-  md: "rounded-md",
-  lg: "rounded-lg",
-  xl: "rounded-xl",
-  "2xl": "rounded-2xl",
+  md: RADIUS_CARD_MD,
+  lg: RADIUS_CARD_LG,
+  xl: RADIUS_CARD_XL,
+  "2xl": RADIUS_CARD_2XL,
 };
 
 const PADDINGS: Record<SurfacePadding, string> = {
