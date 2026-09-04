@@ -8,16 +8,31 @@
    (≤ ~950px) all sit far below 1600px, so they are untouched. */
 @custom-variant tall (@media (min-height: 1600px));
 
-@theme {
-  /* Tailwind's default 2xl is 1536px — exactly the laptop viewport at 200%
-     scale — so adding a 3xl above it lets us scale type up for genuinely
-     huge displays (4K monitors at 150% scale weigh in around 2560px) while
-     laptop and below stay at the 2xl rules. */
-  --breakpoint-3xl: 1920px;
-  /* Named small breakpoint at 420px — where a view-tab strip + a sibling
-     switch (RSVP Going/Not-going) and the admin online-mode picker widen out
-     of their ultra-tight phone layout. Replaces ad-hoc `min-[420px]:`. */
-  --breakpoint-xs2: 420px;
+/* ── The PALETTE ─────────────────────────────────────────────────────────
+   `@theme static` (not plain `@theme`) on purpose. Tailwind v4 tree-shakes a
+   theme block down to the tokens some utility actually references — and the
+   hand-written rules further down (`.bg-grid`, `.nav-border`, `.glow-accent`,
+   `.text-glow`, `.gradient-text`) read these tokens through `var()`, which the
+   scanner cannot see. Left tree-shakeable, dropping the last `text-neon-purple`
+   in the app would silently delete `--color-neon-purple` from `:root` and take
+   the gradient's third stop with it, with a `var()` fallback quietly masking
+   the hole. `static` pins the whole palette into `:root` unconditionally.
+
+   These are also the tokens the theme engine overrides at runtime
+   (lib/theme/apply.ts writes them inline on <html>), so they are a contract
+   surface, not an implementation detail.
+
+   COLOR SPACE: authored as sRGB hex, deliberately. Tailwind v4's own default
+   palette is OKLCH (`--color-amber-400: oklch(82.8% 0.189 84.429)`), but hex
+   is the canonical form here because the theme round-trips these values
+   through `<input type="color">` and the accent-ramp math (lib/theme/ramp.ts),
+   both of which are hex/HSL. Mixing the two spaces in one derived token gives
+   an approximation of the other, so keep derivations within one space.
+
+   COLOR-MIX BASELINE: alpha variants below (and across this batch) use
+   `color-mix(in srgb, …)` — Chrome 111 / Safari 16.2 / Firefox 113. The build
+   target in vite.config.ts is pinned to match; do not re-litigate per unit. */
+@theme static {
   --color-surface-950: #08090d;
   --color-surface-900: #0f1117;
   --color-surface-800: #171923;
@@ -42,6 +57,34 @@
   --color-neon-cyan: #22d3ee;
   --color-neon-purple: #a855f7;
   --color-neon-pink: #ec4899;
+  /* Glow shadows. Each is DERIVED from its palette token rather than carrying
+     a hand-copied rgb triplet, so `shadow-glow-accent` follows a themed accent
+     for free. That indirection is load-bearing: Tailwind compiles a shadow
+     utility by INLINING the token's value into the rule
+     (`--tw-shadow: 0 0 12px -4px var(--tw-shadow-color, <value>)`) instead of
+     emitting `var(--shadow-glow-accent)` at the call site — so overriding
+     `--shadow-glow-accent` at runtime does nothing, while a `var()` *inside*
+     the value gets inlined verbatim and resolves against the themed palette on
+     every paint. The status tones (amber/sky/emerald/rose) stay fixed by
+     design: a danger glow must read as danger under every theme. */
+  --shadow-glow-accent: 0 0 12px -4px color-mix(in srgb, var(--color-accent-500) 50%, transparent);
+  --shadow-glow-amber: 0 0 12px -4px rgb(251 191 36 / 0.5);
+  --shadow-glow-sky: 0 0 12px -4px rgb(56 189 248 / 0.5);
+  --shadow-glow-emerald: 0 0 12px -4px rgb(16 185 129 / 0.5);
+  --shadow-glow-rose: 0 0 12px -4px rgb(244 63 94 / 0.5);
+  --shadow-glow-cyan: 0 0 12px color-mix(in srgb, var(--color-neon-cyan) 50%, transparent);
+}
+
+@theme {
+  /* Tailwind's default 2xl is 1536px — exactly the laptop viewport at 200%
+     scale — so adding a 3xl above it lets us scale type up for genuinely
+     huge displays (4K monitors at 150% scale weigh in around 2560px) while
+     laptop and below stay at the 2xl rules. */
+  --breakpoint-3xl: 1920px;
+  /* Named small breakpoint at 420px — where a view-tab strip + a sibling
+     switch (RSVP Going/Not-going) and the admin online-mode picker widen out
+     of their ultra-tight phone layout. Replaces ad-hoc `min-[420px]:`. */
+  --breakpoint-xs2: 420px;
   /* Micro type scale below Tailwind's text-xs (12px), one token per pixel
      step: 2xs=11px, 3xs=10px, 4xs=9px, 5xs=8px, 6xs=7px, 7xs=6px. Replaces
      ad-hoc `text-[11px]`…`text-[6px]` brackets everywhere. The scale is
@@ -74,16 +117,6 @@
   /* code — oversized room/lobby code displays (JoinRoom input, the BGA
      bridge screen). A display role, not a label role, hence its own step. */
   --tracking-code: 0.3em;
-  /* Glow shadows. Each carries its palette's exact rgb so call sites stop
-     hand-duplicating `shadow-[0_0_12px_-4px_rgba(99,102,241,0.5)]` — which is
-     just accent-500. Consumed by SegmentedControl/Chip emphasis + selectable
-     surfaces. */
-  --shadow-glow-accent: 0 0 12px -4px rgb(99 102 241 / 0.5);
-  --shadow-glow-amber: 0 0 12px -4px rgb(251 191 36 / 0.5);
-  --shadow-glow-sky: 0 0 12px -4px rgb(56 189 248 / 0.5);
-  --shadow-glow-emerald: 0 0 12px -4px rgb(16 185 129 / 0.5);
-  --shadow-glow-rose: 0 0 12px -4px rgb(244 63 94 / 0.5);
-  --shadow-glow-cyan: 0 0 12px rgb(34 211 238 / 0.5);
   --font-display: "Inter Variable", "Inter", sans-serif;
   --font-body: "Inter Variable", "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
@@ -132,6 +165,16 @@
   --z-takeover: 400;
 }
 
+/* Theme-engine fallbacks that are NOT Tailwind theme tokens (no utility
+   derives from them). Overridden on :root by lib/theme/apply.ts.
+   Radius knobs are SCALE factors: primitives keep their distinct base radii
+   and multiply, e.g. `calc(0.75rem * var(--radius-card-scale, 1))`. */
+:root {
+  --radius-card-scale: 1;
+  --radius-ui-scale: 1;
+  --avatar-radius: 9999px;
+}
+
 /* Stacking utilities — Tailwind v4 doesn't auto-derive `z-*` from theme. */
 @utility z-nav {
   z-index: var(--z-nav);
@@ -167,10 +210,12 @@ html {
 /* The DOCUMENT scrollbar, themed to match `.scrollbar-thin` below — the
    chunky native bar was the one scrollbar the dark UI never restyled.
    Slightly wider than the inner 4px utility since it's the page's primary
-   scroll affordance. */
+   scroll affordance. The thumb follows the theme via --scrollbar-thumb
+   (set from the fg ramp by lib/theme/apply.ts); the fallbacks are the
+   stock white-on-dark values, unchanged. */
 html {
   scrollbar-width: thin;
-  scrollbar-color: rgba(255, 255, 255, 0.12) transparent;
+  scrollbar-color: var(--scrollbar-thumb, rgba(255, 255, 255, 0.12)) transparent;
 }
 html::-webkit-scrollbar {
   width: 6px;
@@ -179,11 +224,11 @@ html::-webkit-scrollbar-track {
   background: transparent;
 }
 html::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--scrollbar-thumb, rgba(255, 255, 255, 0.12));
   border-radius: 3px;
 }
 html::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.22);
+  background: var(--scrollbar-thumb-hover, rgba(255, 255, 255, 0.22));
 }
 
 body {
@@ -235,33 +280,55 @@ input[type="number"]::-webkit-inner-spin-button {
 
 /* ── Subtle dot grid ─────────────────────────────── */
 
+/* Layer 1 is the theme's optional pattern/wallpaper (none by default; set by
+   lib/theme/apply.ts); layer 2 is the accent dot grid. Both follow the theme
+   vars — with the stock values the color-mix resolves to the exact original
+   rgba(99, 102, 241, 0.06). */
 .bg-grid {
-  background-image: radial-gradient(rgba(99, 102, 241, 0.06) 1px, transparent 1px);
-  background-size: 24px 24px;
+  background-image:
+    var(--bg-pattern-image, none),
+    radial-gradient(
+      color-mix(in srgb, var(--color-accent-500) 6%, transparent) 1px,
+      transparent 1px
+    );
+  background-size:
+    var(--bg-pattern-size, auto),
+    24px 24px;
 }
 
 /* ── Navbar border gradient ──────────────────────── */
 
 .nav-border {
-  border-image: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.3), transparent) 1;
+  border-image: linear-gradient(
+      90deg,
+      transparent,
+      color-mix(in srgb, var(--color-accent-500) 30%, transparent),
+      transparent
+    )
+    1;
 }
 
 /* ── Glow effects ────────────────────────────────── */
 
 .glow-accent {
   box-shadow:
-    0 0 20px rgba(99, 102, 241, 0.12),
-    0 0 60px rgba(99, 102, 241, 0.04);
+    0 0 20px color-mix(in srgb, var(--color-accent-500) 12%, transparent),
+    0 0 60px color-mix(in srgb, var(--color-accent-500) 4%, transparent);
 }
 
 .text-glow {
-  text-shadow: 0 0 30px rgba(99, 102, 241, 0.3);
+  text-shadow: 0 0 30px color-mix(in srgb, var(--color-accent-500) 30%, transparent);
 }
 
 /* ── Gradient text ───────────────────────────────── */
 
 .gradient-text {
-  background: linear-gradient(135deg, #818cf8 0%, #22d3ee 50%, #a855f7 100%);
+  background: linear-gradient(
+    135deg,
+    var(--color-accent-400) 0%,
+    var(--color-neon-cyan) 50%,
+    var(--color-neon-purple) 100%
+  );
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

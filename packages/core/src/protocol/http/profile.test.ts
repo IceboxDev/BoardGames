@@ -4,7 +4,38 @@ import {
   ProfileUpdateInputSchema,
   PublicProfileSchema,
   SkillChartSchema,
+  ThemeConfigSchema,
 } from "./profile.ts";
+
+const validTheme = {
+  preset: "classic",
+  surface950: "#08090d",
+  surface900: "#0f1117",
+  surface800: "#171923",
+  surface700: "#1f2233",
+  surface600: "#2a2d42",
+  fgPrimary: "#e2e6ee",
+  fgSecondary: "#9aa3b4",
+  fgMuted: "#6b7387",
+  fgDisabled: "#495164",
+  accent: "#6366f1",
+  neonCyan: "#22d3ee",
+  neonPurple: "#a855f7",
+  neonPink: "#ec4899",
+  pattern: "none",
+  patternColor: "#6366f1",
+  patternOpacity: 0.4,
+  wallpaper: false,
+  radiusCard: 12,
+  radiusUi: 8,
+  avatarShape: "circle",
+  selectionStyle: "bar",
+  fontFamily: "inter",
+  baseFontSize: 16,
+  ambientMode: "auto",
+  ambientEffect: null,
+  accentMode: "custom",
+};
 
 const validEditable = {
   tagline: "Meeple enjoyer",
@@ -43,6 +74,46 @@ describe("ProfileUpdateInputSchema", () => {
       links: [{ label: "x", url: "not a url" }],
     });
     expect(r.success).toBe(false);
+  });
+});
+
+describe("ThemeConfigSchema", () => {
+  it("accepts a complete config", () => {
+    expect(ThemeConfigSchema.parse(validTheme)).toEqual(validTheme);
+  });
+
+  it("rejects a non-hex surface color", () => {
+    const r = ThemeConfigSchema.safeParse({ ...validTheme, surface900: "not-a-color" });
+    expect(r.success).toBe(false);
+    if (!r.success) expect(r.error.issues[0]?.path).toEqual(["surface900"]);
+  });
+
+  it("rejects an out-of-range pattern opacity", () => {
+    const r = ThemeConfigSchema.safeParse({ ...validTheme, patternOpacity: 1.5 });
+    expect(r.success).toBe(false);
+    if (!r.success) expect(r.error.issues[0]?.path).toEqual(["patternOpacity"]);
+  });
+
+  it("rejects a base font size outside 12–20", () => {
+    const r = ThemeConfigSchema.safeParse({ ...validTheme, baseFontSize: 24 });
+    expect(r.success).toBe(false);
+    if (!r.success) expect(r.error.issues[0]?.path).toEqual(["baseFontSize"]);
+  });
+
+  it("rejects an unknown selection style", () => {
+    const r = ThemeConfigSchema.safeParse({ ...validTheme, selectionStyle: "sparkle" });
+    expect(r.success).toBe(false);
+    if (!r.success) expect(r.error.issues[0]?.path).toEqual(["selectionStyle"]);
+  });
+
+  it("stays optional on the full-replace PUT body (legacy writers omit it)", () => {
+    // Absent → parses (server preserves the stored theme); explicit null and
+    // explicit object both parse too.
+    expect(ProfileUpdateInputSchema.parse(validEditable).theme).toBeUndefined();
+    expect(ProfileUpdateInputSchema.parse({ ...validEditable, theme: null }).theme).toBeNull();
+    expect(ProfileUpdateInputSchema.parse({ ...validEditable, theme: validTheme }).theme).toEqual(
+      validTheme,
+    );
   });
 });
 
