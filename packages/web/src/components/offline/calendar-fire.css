@@ -1,7 +1,11 @@
 /* Calendar day-cell fire/ember/D&D-night effects — consumed only by
    CalendarDayCell. Split out of index.css so single-owner styles ship with
-   their consumer's chunk instead of the global stylesheet. Theme tokens
-   (var(--color-*)) stay global, so var() references keep working here. */
+   their consumer's chunk instead of the global stylesheet.
+
+   Every color here is a literal by design: this is v3-era fire art tuned
+   against values that match no current theme token (OKLCH drift — see the
+   glow note in CalendarDayCell.tsx), and fire is thematically fixed anyway,
+   so it does not follow the palette. */
 
 /* ── Calendar fire / ember effects ──────────────── */
 

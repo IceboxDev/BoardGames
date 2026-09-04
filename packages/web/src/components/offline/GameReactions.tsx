@@ -128,7 +128,6 @@ export default function GameReactions({
           ? {
               borderColor: accentHex,
               backgroundColor: accentHex,
-              color: "#fff",
               boxShadow: `0 6px 16px -6px ${accentHex}aa`,
             }
           : undefined;
@@ -150,10 +149,19 @@ export default function GameReactions({
             aria-pressed={active}
             title={`${label} — ${description}${count ? ` · ${count}` : ""}`}
             style={activeStyle}
-            className={`relative inline-flex shrink-0 items-center justify-center rounded-full ${btnSize} backdrop-blur-md transition disabled:cursor-not-allowed disabled:opacity-40 ${
+            // The transition property list is spelled out rather than using
+            // bare `transition`: Tailwind's shorthand includes backdrop-filter,
+            // and since `backdrop-blur-md` now lives on ONE branch, toggling a
+            // reaction would animate the blur from 0 → 12px (a visible smear on
+            // the card art behind it). These four are the properties that
+            // actually change between the two branches.
+            className={`relative inline-flex shrink-0 items-center justify-center rounded-full ${btnSize} transition-[color,background-color,border-color,box-shadow] disabled:cursor-not-allowed disabled:opacity-40 ${
               active
-                ? "border"
-                : "border border-white/20 bg-black/45 text-white/85 hover:border-white/40 hover:bg-black/65 hover:text-white"
+                ? "border text-white"
+                : // backdrop-blur only here: the active branch paints an opaque
+                  // accentHex fill that fully hides the blur, yet would still
+                  // pay the per-frame backdrop re-sample during carousel moves.
+                  "border border-white/20 bg-black/45 text-white/85 backdrop-blur-md hover:border-white/40 hover:bg-black/65 hover:text-white"
             }`}
           >
             <span className={`${iconSize} flex items-center justify-center`}>

@@ -19,6 +19,17 @@ type Props = {
 const EMPTY: ReactionAggregate = { hype: 0, teach: 0, learn: 0, viewer: [] };
 const RESULT_CAP = 5;
 
+// Rank-number text on non-top rows. This is gray-300 (v4's cool grays are
+// within 1/255 of the v3 hexes — the OKLCH drift noted in CalendarDayCell.tsx
+// is a WARM-ramp problem and doesn't apply here). It stays literal because the
+// project's rule is that dark-surface text comes from the fg-* ramp, and no
+// fg-* step matches this value: adopting one is a deliberate visual change,
+// deferred to the post-batch pass rather than smuggled into a no-op sweep.
+const RANK_TEXT_DIM = "#d1d5db";
+// Hairline border / badge fill on non-top rows — 8% white. Plain `white` on
+// purpose: white never rethemes, so it takes no var() indirection.
+const DIM_CHROME = "color-mix(in srgb, white 8%, transparent)";
+
 export default function RankedGameList({ date, games, reactions, topSlugs }: Props) {
   const ranked = useMemo(() => {
     if (topSlugs && topSlugs.length > 0) {
@@ -90,7 +101,7 @@ function RankedRow({ game, aggregate, date, rank }: RowProps) {
     <div
       className="flex flex-wrap items-center gap-x-2 gap-y-1 rounded-2xl border bg-surface-900/80 p-2 transition sm:gap-x-3 sm:pr-3"
       style={{
-        borderColor: isTop ? game.accentHex : "color-mix(in srgb, white 8%, transparent)",
+        borderColor: isTop ? game.accentHex : DIM_CHROME,
         boxShadow: isTop
           ? `0 0 0 1px ${game.accentHex}55, 0 8px 24px -12px ${game.accentHex}55`
           : undefined,
@@ -113,8 +124,8 @@ function RankedRow({ game, aggregate, date, rank }: RowProps) {
           <span
             className="inline-flex h-5 min-w-5 shrink-0 items-center justify-center rounded-full px-1.5 text-3xs font-bold tabular-nums"
             style={{
-              backgroundColor: isTop ? game.accentHex : "color-mix(in srgb, white 8%, transparent)",
-              color: isTop ? "#000" : "#d1d5db",
+              backgroundColor: isTop ? game.accentHex : DIM_CHROME,
+              color: isTop ? "#000" : RANK_TEXT_DIM,
             }}
           >
             <span className="sr-only">Rank </span>

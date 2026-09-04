@@ -63,11 +63,27 @@ export function DayCell({
 
   // Personal-mark gradient layer — render only when no aggregate heat or lock overrides it.
   // "maybe" stays in yellow tones so it never reads as the orange/red of warming or fire.
+  //
+  // Glow-shadow colors in this file: glows that duplicate a THEME token ride
+  // Tailwind's shadow-color utilities (`shadow-[geometry] shadow-accent-500/60`)
+  // so they re-theme with the palette. That pair is a TWO-CLASS CONTRACT —
+  // keep the halves together: the geometry class resolves its color as
+  // `var(--tw-shadow-color, currentcolor)`, so dropping the color half doesn't
+  // remove the glow, it silently repaints it in the element's text color (a
+  // white-ish smear here, not a missing shadow — easy to miss). The
+  // amber/orange/yellow/red
+  // fire-and-gold glows match no token — Tailwind v4's palette is OKLCH and
+  // visibly off the v3-era values this art was tuned against — so those stay
+  // literal (calendar-fire.css, same call). Glow geometry stays bespoke
+  // (8–10px dot glows): none matches --shadow-glow-accent/-cyan (12px);
+  // candidates for future --shadow-glow-*-sm tokens. This gradient layer once
+  // carried a 24–30px outer glow as well, but the button's overflow-hidden
+  // clipped it entirely — it never painted, so it was deleted, not migrated.
   const personalStateClass =
     showPersonalGradient && value === "can"
-      ? "bg-gradient-to-br from-accent-500/40 via-accent-500/20 to-neon-cyan/15 shadow-[0_0_30px_-5px_rgba(99,102,241,0.45)]"
+      ? "bg-gradient-to-br from-accent-500/40 via-accent-500/20 to-neon-cyan/15"
       : showPersonalGradient && value === "maybe"
-        ? "bg-gradient-to-br from-yellow-400/35 via-yellow-300/22 to-yellow-200/10 shadow-[0_0_24px_-6px_rgba(234,179,8,0.4)]"
+        ? "bg-gradient-to-br from-yellow-400/35 via-yellow-300/22 to-yellow-200/10"
         : "";
 
   const borderClass = showDnd
@@ -157,13 +173,16 @@ export function DayCell({
       {/* Personal availability stripe — guarantees the user's own can/maybe
           mark stays visible against any background (fire, warming, locked
           gradients all override the cell's base color, so we draw a slim
-          color stripe on the leading edge that the heat layers can't drown). */}
+          color stripe on the leading edge that the heat layers can't drown).
+          Mixed on purpose: the `can` glow is tokenized (accent-500); the
+          `maybe` glow is a v3-yellow literal that matches no current token —
+          don't "unify" the two branches either direction. */}
       {value && !locked && !isAdminView && (
         <span
           aria-hidden="true"
           className={`pointer-events-none absolute inset-y-0 left-0 z-[5] w-1 sm:w-1.5 ${
             value === "can"
-              ? "bg-accent-400 shadow-[0_0_8px_rgba(99,102,241,0.6)]"
+              ? "bg-accent-400 shadow-[0_0_8px] shadow-accent-500/60"
               : "bg-yellow-400 shadow-[0_0_8px_rgba(234,179,8,0.55)]"
           }`}
         />
@@ -178,7 +197,7 @@ export function DayCell({
       )}
       {isToday && (
         <span
-          className={`pointer-events-none absolute h-1.5 w-1.5 animate-pulse rounded-full bg-neon-cyan shadow-[0_0_10px_2px_rgba(34,211,238,0.7)] ${todayDotPos}`}
+          className={`pointer-events-none absolute h-1.5 w-1.5 animate-pulse rounded-full bg-neon-cyan shadow-[0_0_10px_2px] shadow-neon-cyan/70 ${todayDotPos}`}
           aria-hidden="true"
         />
       )}
@@ -620,12 +639,14 @@ function LockGlyph({ small = false }: { small?: boolean }) {
 
 function PersonalMarkChip({ value }: { value: Availability }) {
   const isCan = value === "can";
+  // Mixed on purpose: the `can` ring-glow is tokenized (accent-400); the
+  // `maybe` gold is a v3 amber literal that matches no current token.
   return (
     <span
       aria-hidden="true"
       className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-6xs font-extrabold uppercase leading-none tracking-[0.1em] text-white ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-3xs sm:tracking-[0.15em] md:text-xs ${
         isCan
-          ? "ring-accent-300 shadow-[0_0_10px_rgba(129,140,248,0.6)]"
+          ? "ring-accent-300 shadow-[0_0_10px] shadow-accent-400/60"
           : "ring-amber-300 shadow-[0_0_10px_rgba(252,211,77,0.55)]"
       }`}
     >

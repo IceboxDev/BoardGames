@@ -93,7 +93,7 @@ export default function ExitNightPanel({ date, attendees, partyCount, previewSta
       <div className="relative shrink-0 overflow-hidden rounded-3xl border border-cyan-400/30 bg-gradient-to-br from-cyan-950 via-surface-950 to-black p-6 text-center">
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_60%_at_50%_28%,rgba(34,211,238,0.28),transparent_72%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_60%_at_50%_28%,color-mix(in_srgb,var(--color-neon-cyan,#22d3ee)_28%,transparent),transparent_72%)]"
         />
         <span
           aria-hidden="true"

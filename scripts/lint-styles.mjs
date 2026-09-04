@@ -166,8 +166,13 @@ const RATCHET_RULES = [
   },
   {
     name: "glow-shadow-literal",
-    re: /shadow-\[0_0_[^\]]*rgb/g,
-    hint: "use the shadow-glow-* tokens",
+    // A hand-rolled glow: a `shadow-[0_0_…]` whose color is an rgb()/rgba()
+    // LITERAL. The `\(` is load-bearing — matching the bare substring `rgb`
+    // also hit `color-mix(in_srgb, var(--color-accent-500) 60%, transparent)`,
+    // i.e. the correctly-tokenized form this rule exists to encourage, which
+    // would have pinned theme-driven glows into the baseline as permanent debt.
+    re: /shadow-\[0_0_[^\]]*rgba?\(/g,
+    hint: "use the shadow-glow-* tokens (or a shadow-<token>/<alpha> color utility)",
   },
   {
     name: "raw-heading-size",
