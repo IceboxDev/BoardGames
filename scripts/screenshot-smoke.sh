@@ -82,45 +82,150 @@ capture() {
       echo "captured $file"
     done
   done
+  # Theme fixtures (/dev/theme-preview): a single TALL window instead of the
+  # viewport matrix, so all nine palette sections land in one frame — per-
+  # preset routes × 3 viewports would be 27 near-identical shots for one
+  # surface. The `--tall` suffix matches no viewport glob, so nav-check
+  # skips it (the page renders no TopNav). Height carries deliberate headroom
+  # over the ~5.3k px the nine sections need today: a new fixture (or a taller
+  # collage) must not silently fall out of frame.
+  local themefile="$out/theme-preview--tall.png"
+  "$CHROMIUM" --headless=new --disable-gpu --hide-scrollbars \
+    --window-size=1536,7000 \
+    --virtual-time-budget=8000 \
+    --screenshot="$themefile" \
+    "$base/dev/theme-preview" 2>/dev/null
+  echo "captured $themefile"
 }
 
+# Extract the differing-pixel COUNT from an ImageMagick `-metric AE` result.
+#
+# IM7 prints AE as "<count> (<normalized>)" — e.g. "0 (0)" or "319042 (0.216364)"
+# — so the count is the first whitespace-delimited token, with any fractional
+# part trimmed. Echoes the metric unchanged when it isn't a number at all
+# (a `compare` failure), which callers test for.
+#
+# Both gates below MUST parse through here. Reading it as `${metric%%.*}` cuts
+# at the dot INSIDE the parenthesised figure, yielding "319042 (0" — which
+# matches no integer pattern, so the comparison silently fell through to the
+# pass branch. That defect made `diff` and `nav-check` report success for every
+# input, differing pages included.
+ae_count() {
+  local first="${1%% *}"
+  printf '%s' "${first%%.*}"
+}
+
+# Compares the UNION of both runs' shots. A name only in <dir-a> is a route
+# that vanished (MISSING — a failure). A name only in <dir-b> is a route that
+# was ADDED since the baseline: it has nothing to diff against, so it is
+# reported as a warning, not a failure — otherwise every run that adds a route
+# would have to re-capture the baseline just to go green.
+#
+# ADDED is a warning ONLY while the baseline is otherwise intact. A typo'd or
+# half-finished <dir-a> would otherwise turn every route into a cheerful ADDED
+# and report "no visual changes" having compared nothing — so an empty baseline
+# is a hard error, and a baseline covering less than half the union fails too.
 diff_runs() {
   local a="$1" b="$2" report="${3:-/tmp/screenshot-smoke-diff}"
   mkdir -p "$report"
-  local failures=0
-  for f in "$a"/*.png; do
-    local name
-    name="$(basename "$f")"
+  local failures=0 added=0 compared=0
+  local names=()
+  for f in "$a"/*.png "$b"/*.png; do
+    [[ -f "$f" ]] || continue
+    names+=("$(basename "$f")")
+  done
+  if (( ${#names[@]} == 0 )); then
+    echo "error: no .png captures in $a or $b" >&2
+    exit 1
+  fi
+  # shellcheck disable=SC2207
+  IFS=$'\n' names=($(printf '%s\n' "${names[@]}" | sort -u)); unset IFS
+  local baseline=0
+  for name in "${names[@]}"; do
+    [[ -f "$a/$name" ]] && baseline=$((baseline + 1))
+  done
+  if (( baseline == 0 )); then
+    echo "error: $a holds no .png captures — nothing to diff against (wrong path, or the baseline run never completed)" >&2
+    exit 1
+  fi
+  for name in "${names[@]}"; do
     if [[ ! -f "$b/$name" ]]; then
       echo "MISSING in $b: $name"
       failures=$((failures + 1))
       continue
     fi
+    if [[ ! -f "$a/$name" ]]; then
+      echo "ADDED $name — no baseline to diff against"
+      added=$((added + 1))
+      continue
+    fi
     # AE = absolute error pixel count; fuzz absorbs AA jitter.
-    local metric
-    metric=$(compare -metric AE -fuzz 2% "$f" "$b/$name" "$report/$name" 2>&1 || true)
-    if [[ "${metric%%.*}" =~ ^[0-9]+$ ]] && (( ${metric%%.*} > 500 )); then
-      echo "DIFF  $name — $metric changed pixels → $report/$name"
-      failures=$((failures + 1))
+    local metric count
+    metric=$(compare -metric AE -fuzz 2% "$a/$name" "$b/$name" "$report/$name" 2>&1 || true)
+    count="$(ae_count "$metric")"
+    if [[ "$count" =~ ^[0-9]+$ ]]; then
+      compared=$((compared + 1))
+      if (( count > 500 )); then
+        echo "DIFF  $name — $count changed pixels → $report/$name"
+        failures=$((failures + 1))
+      else
+        rm -f "$report/$name"
+        echo "ok    $name"
+      fi
     else
-      rm -f "$report/$name"
-      echo "ok    $name"
+      # Non-numeric output means `compare` itself failed — most often
+      # "image widths or heights differ" after a viewport/window-size change.
+      # Silently treating that as `ok` would hide the very shot most likely
+      # to have regressed.
+      echo "ERROR $name — compare failed: ${metric:-no output}"
+      failures=$((failures + 1))
     fi
   done
   if (( failures > 0 )); then
     echo "$failures screen(s) changed — inspect $report"
     exit 1
   fi
+  if (( added * 2 > ${#names[@]} )); then
+    echo "error: only $compared of ${#names[@]} shot(s) had a baseline to diff against — $a looks stale or incomplete" >&2
+    exit 1
+  fi
+  if (( added > 0 )); then
+    echo "no visual changes ($compared compared, $added new route(s) with no baseline)"
+    return
+  fi
   echo "no visual changes"
+}
+
+# Route names that deliberately render NO TopNav — the chrome-less /dev
+# fixture pages, which mount a bare modal/board/collage. Their top-left 300x56
+# is page content (or empty background), so diffing it against a nav-bearing
+# route measures nothing about nav stability. Excluded from nav_check only;
+# they are still captured and still diffed by diff_runs.
+NAV_EXEMPT=(
+  "deck-preview"
+  "dnd-preview"
+  "dnd-tool-preview"
+  "rsvp-preview"
+  "rsvp-preview-phone360"
+  "theme-preview"
+)
+
+nav_is_exempt() {
+  local name="$1" ex
+  for ex in "${NAV_EXEMPT[@]}"; do
+    [[ "$name" == "$ex" ]] && return 0
+  done
+  return 1
 }
 
 # ── Nav stability check ───────────────────────────────────────────────────
 # Asserts the "Board Game Lab" logo sits at the IDENTICAL position on every
-# captured route (per viewport) by cropping the nav's logo region (top-left
-# 300x56 — left of any page actions) and pairwise-diffing routes against the
-# first. This is the regression guard for the per-page nav-width bug: a capped
-# or shifted nav moves the logo's hard glyph edges, which lights this up far
-# beyond the threshold, while backdrop-blur bleed-through stays below it.
+# captured NAV-BEARING route (per viewport) by cropping the nav's logo region
+# (top-left 300x56 — left of any page actions) and pairwise-diffing routes
+# against the first. This is the regression guard for the per-page nav-width
+# bug: a capped or shifted nav moves the logo's hard glyph edges, which lights
+# this up far beyond the threshold, while backdrop-blur bleed-through stays
+# below it.
 nav_check() {
   local dir="$1" report="${2:-/tmp/screenshot-smoke-nav}"
   mkdir -p "$report"
@@ -130,16 +235,28 @@ nav_check() {
     local ref="" refname=""
     for f in "$dir"/*--"${vpname}".png; do
       [[ -f "$f" ]] || continue
+      local base route
+      base="$(basename "$f")"
+      route="${base%--*}"
+      if nav_is_exempt "$route"; then
+        echo "nav skip [$vpname] $base (renders no TopNav)"
+        continue
+      fi
       local crop="$report/$(basename "${f%.png}")--nav.png"
       convert "$f" -crop 300x56+0+0 +repage "$crop"
       if [[ -z "$ref" ]]; then
         ref="$crop"; refname="$(basename "$f")"
         continue
       fi
-      local metric
+      local metric count
       metric=$(compare -metric AE -fuzz 5% "$ref" "$crop" null: 2>&1 || true)
-      if [[ "${metric%%.*}" =~ ^[0-9]+$ ]] && (( ${metric%%.*} > 2000 )); then
-        echo "NAV SHIFT [$vpname] $(basename "$f") vs $refname — $metric px differ in the logo region"
+      count="$(ae_count "$metric")"
+      if [[ ! "$count" =~ ^[0-9]+$ ]]; then
+        # `compare` itself failed — never silently pass the gate.
+        echo "NAV ERROR [$vpname] $(basename "$f") — compare failed: ${metric:-no output}"
+        failures=$((failures + 1))
+      elif (( count > 2000 )); then
+        echo "NAV SHIFT [$vpname] $(basename "$f") vs $refname — $count px differ in the logo region"
         failures=$((failures + 1))
       else
         echo "nav ok   [$vpname] $(basename "$f")"

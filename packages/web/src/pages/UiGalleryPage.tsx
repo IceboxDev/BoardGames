@@ -1,4 +1,4 @@
-import { useId, useState } from "react";
+import { useEffect, useId, useState } from "react";
 import { StarIcon, XIcon } from "../components/icons";
 import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
 import {
@@ -32,6 +32,12 @@ import {
   type Tone,
 } from "../components/ui";
 import { BarChartH, ColumnChart, DonutChart, LineChart, Sparkline } from "../components/ui/charts";
+import {
+  applyThemeFixtureToRoot,
+  clearThemeFixtureFromRoot,
+  THEME_FIXTURES,
+  themeFixtureByKey,
+} from "./theme-preview-fixtures";
 
 // ── UI Gallery ───────────────────────────────────────────────────────────
 //
@@ -48,6 +54,45 @@ import { BarChartH, ColumnChart, DonutChart, LineChart, Sparkline } from "../com
 const CORE_TONES = ["accent", "amber", "sky", "emerald", "rose"] as const;
 const ALL_TONES: readonly Tone[] = [...CORE_TONES, "purple", "orange", "cyan", "neutral"];
 
+// Fixed theme-preset switcher: re-skins the whole gallery by writing the
+// fixture's CSS custom properties + data-select-style straight onto
+// document.documentElement (plain DOM, no theme-engine import) — vars inherit,
+// so every section below re-themes live. Mounted only under /dev/ui?themes=1
+// so the default gallery capture in screenshot-smoke stays pixel-identical;
+// even when mounted, the default state applies NO overrides.
+function ThemePresetToolbar() {
+  const [active, setActive] = useState<string | null>(null);
+
+  // ONE effect owns the root overrides: apply-or-clear tracks `active`, and
+  // the cleanup restores the pre-apply snapshot. Click handlers only set
+  // state, so a Fast Refresh re-run (which strips and re-applies the vars)
+  // can never desync from the pressed chip — and leaving the gallery always
+  // restores whatever inline theme the root carried before.
+  useEffect(() => {
+    const fixture = themeFixtureByKey(active);
+    if (fixture) applyThemeFixtureToRoot(fixture);
+    return clearThemeFixtureFromRoot;
+  }, [active]);
+
+  return (
+    <div className="fixed right-2 bottom-2 z-tooltip">
+      <Surface variant="raised" className="flex max-w-xs flex-col gap-2">
+        <MicroLabel>Theme fixtures</MicroLabel>
+        <div className="flex flex-wrap gap-1.5">
+          {THEME_FIXTURES.map((f) => (
+            <Chip key={f.key} pressed={active === f.key} onClick={() => setActive(f.key)}>
+              {f.label}
+            </Chip>
+          ))}
+          <Chip pressed={false} onClick={() => setActive(null)}>
+            reset
+          </Chip>
+        </div>
+      </Surface>
+    </div>
+  );
+}
+
 function Swatch({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="flex flex-col gap-2">
@@ -62,6 +107,7 @@ export default function UiGalleryPage() {
   const uid = useId();
   const [segment, setSegment] = useState<"a" | "b" | "c">("a");
   const [checked, setChecked] = useState(true);
+  const themesEnabled = new URLSearchParams(window.location.search).get("themes") === "1";
 
   return (
     <PageShell
@@ -374,6 +420,7 @@ export default function UiGalleryPage() {
           </Section>
         </Stack>
       </PageMain>
+      {themesEnabled && <ThemePresetToolbar />}
     </PageShell>
   );
 }
