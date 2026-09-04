@@ -213,10 +213,13 @@ export function EditProfileModal({ userId, initial, onClose }: EditProfileModalP
                   Default
                 </Chip>
               </div>
+              {/* This picker sets the PUBLIC accent — how your name, cards and
+                  banner read to everyone else. The private site theme is the
+                  other half, one button away on the same profile banner. */}
               <p className="mt-2 text-2xs text-fg-muted">
-                Full appearance settings live in{" "}
+                This is how others see you. To retheme the site for yourself, use{" "}
                 <Link to="/settings" className="text-accent-300 underline-offset-2 hover:underline">
-                  Settings
+                  Appearance
                 </Link>
                 .
               </p>

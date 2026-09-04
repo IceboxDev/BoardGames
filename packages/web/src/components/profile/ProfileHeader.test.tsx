@@ -51,7 +51,7 @@ const stats: ProfileStats = {
   perGame: [],
 };
 
-function renderHeader(overrides: { isSelf?: boolean } = {}) {
+function renderHeader(overrides: { isSelf?: boolean; onAppearance?: () => void } = {}) {
   // MemoryRouter: the stat tiles are router <Link> cards to the sub-pages.
   return render(
     <MemoryRouter>
@@ -63,6 +63,7 @@ function renderHeader(overrides: { isSelf?: boolean } = {}) {
         canChangeAvatar
         onEdit={() => {}}
         onChangeAvatar={() => {}}
+        onAppearance={overrides.onAppearance ?? (() => {})}
       />
     </MemoryRouter>,
   );
@@ -85,5 +86,25 @@ describe("ProfileHeader — edit-button placement", () => {
   it("renders no edit button for other players' profiles", () => {
     renderHeader({ isSelf: false });
     expect(screen.queryByRole("button", { name: /edit profile/i })).toBeNull();
+  });
+});
+
+// Appearance moved here from a home-dashboard nav card so that both halves of
+// personalization — public accent, private theme — live on the profile.
+describe("ProfileHeader — appearance entry point", () => {
+  it("offers Appearance beside Edit profile, on your own profile only", () => {
+    const calls: number[] = [];
+    const { unmount } = renderHeader({ onAppearance: () => calls.push(1) });
+    const appearance = screen.getByRole("button", { name: /appearance/i });
+    appearance.click();
+    expect(calls).toHaveLength(1);
+    // Same pinned wrapper as the edit button — one row, not two stacks.
+    expect(appearance.parentElement).toBe(
+      screen.getByRole("button", { name: /edit profile/i }).parentElement,
+    );
+    unmount();
+
+    renderHeader({ isSelf: false });
+    expect(screen.queryByRole("button", { name: /appearance/i })).toBeNull();
   });
 });

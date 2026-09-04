@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowRightIcon, LockIcon, SparkleIcon, UserIcon, UsersIcon } from "../components/icons";
+import { ArrowRightIcon, LockIcon, UserIcon, UsersIcon } from "../components/icons";
 import CalendarSyncCard from "../components/profile/CalendarSyncCard";
 import CalendarSyncModal from "../components/profile/CalendarSyncModal";
 import { TopNav, TopNavLink } from "../components/TopNav";
@@ -38,6 +38,11 @@ export default function ProfilePage() {
       centeredWidth="3xl"
       topNav={
         <TopNav>
+          {/* Online-only members never see the profile cards below, so the
+              profile page — appearance's home — is unreachable for them.
+              They get the one link here instead; everyone else finds it on
+              their profile. */}
+          {!profilesVisible && <TopNavLink to="/settings">Appearance</TopNavLink>}
           {isAdmin && <TopNavLink to="/admin">Admin</TopNavLink>}
           <TopNavLink onClick={handleSignOut}>Sign out</TopNavLink>
         </TopNav>
@@ -86,18 +91,10 @@ export default function ProfilePage() {
         </div>
       )}
 
-      {/* Deliberately OUTSIDE the `profilesVisible` gate above: appearance is
-          not a profile-visibility concern, and this card is the only route
-          into /settings — inside the gate, online-only members could never
-          reach their own theme settings. */}
-      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
-        <NavCard
-          icon={<SparkleIcon className="h-4 w-4" />}
-          title="Appearance"
-          subtitle="Themes, colors & effects"
-          onClick={() => navigate("/settings")}
-        />
-      </div>
+      {/* Appearance deliberately has NO card here. It lives with the rest of
+          personalization on your own profile (ProfileHeader's "Appearance"
+          button, beside "Edit profile") so the two halves — public accent,
+          private theme — sit together instead of on opposite screens. */}
 
       <CalendarSyncCard onClick={() => setSyncModalOpen(true)} />
 

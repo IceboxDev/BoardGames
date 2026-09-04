@@ -2,7 +2,7 @@ import type { ProfileEditable, ProfileStats, ProfileUserSummary } from "@boardga
 import type { CSSProperties } from "react";
 import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { formatMonthYear } from "../../lib/date-format.ts";
-import { CameraIcon, EditIcon, PinIcon } from "../icons";
+import { CameraIcon, EditIcon, PinIcon, SparkleIcon } from "../icons";
 import { Avatar } from "../ui/Avatar.tsx";
 import { Badge } from "../ui/Badge.tsx";
 import { Button, ButtonLink } from "../ui/Button.tsx";
@@ -24,6 +24,8 @@ type ProfileHeaderProps = {
   onEdit: () => void;
   /** Open the AI avatar generator (avatar becomes a click target). */
   onChangeAvatar: () => void;
+  /** Go to the appearance settings — the other half of personalization. */
+  onAppearance: () => void;
 };
 
 function formatPercent(value: number | null): string {
@@ -52,6 +54,7 @@ export function ProfileHeader({
   canChangeAvatar,
   onEdit,
   onChangeAvatar,
+  onAppearance,
 }: ProfileHeaderProps) {
   const accent = profile.accentHex ?? DEFAULT_ACCENT;
   const style = { "--accent": accent } as CSSProperties;
@@ -77,10 +80,22 @@ export function ProfileHeader({
         // the stylesheet — `relative` won by generated-CSS order and the
         // button fell into normal flow at the card's left edge, floating over
         // the avatar. A wrapper owns the placement; the primitive stays whole.
-        <div className="absolute right-3 top-3 z-20">
+        //
+        // Both halves of personalization sit in this one row: "Edit profile"
+        // owns the PUBLIC identity (accent, tagline, links), "Appearance" the
+        // PRIVATE theme — the latter used to be a card on the home dashboard,
+        // a screen away from everything it pairs with. Labels collapse to
+        // their glyphs on phones so the pair never crowds the avatar.
+        <div className="absolute right-3 top-3 z-20 flex items-center gap-2">
+          <Button variant="secondary" size="sm" onClick={onAppearance} className="gap-1.5">
+            <SparkleIcon className="h-4 w-4" />
+            <span className="hidden sm:inline">Appearance</span>
+            <span className="sr-only sm:hidden">Appearance</span>
+          </Button>
           <Button variant="secondary" size="sm" onClick={onEdit} className="gap-1.5">
             <EditIcon />
-            Edit profile
+            <span className="hidden sm:inline">Edit profile</span>
+            <span className="sr-only sm:hidden">Edit profile</span>
           </Button>
         </div>
       )}

@@ -2,7 +2,7 @@ import { nightAwareDisplayOrder } from "@boardgames/core/history/display-order";
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import type { ReactNode } from "react";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import {
   BookIcon,
   GalleryIcon,
@@ -38,6 +38,7 @@ const SHOW_ACHIEVEMENTS = false;
 
 export default function PlayerProfilePage() {
   const { userId } = useParams<{ userId: string }>();
+  const navigate = useNavigate();
   const { user, isAdmin } = useCurrentUser();
   const isSelf = !!userId && user?.id === userId;
   const canManageAvatar = isSelf || isAdmin;
@@ -141,6 +142,7 @@ export default function PlayerProfilePage() {
             canChangeAvatar={canManageAvatar}
             onEdit={() => setEditing(true)}
             onChangeAvatar={() => setChangingAvatar(true)}
+            onAppearance={() => navigate("/settings")}
           />
 
           <NextNightCard nextNight={profile.nextNight} firstName={firstName} isSelf={isSelf} />
