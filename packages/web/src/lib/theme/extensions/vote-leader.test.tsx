@@ -1,6 +1,6 @@
 import type { CalendarLocks, LockedDate, SessionUser } from "@boardgames/core/protocol";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { renderHook } from "@testing-library/react";
+import { renderHook, waitFor } from "@testing-library/react";
 import type { ReactNode } from "react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
@@ -112,28 +112,31 @@ describe("vote-leader extension", () => {
     expect(fetchCalendarLocksMock).not.toHaveBeenCalled();
   });
 
-  it("returns the accent of the nearest upcoming lock with a vote winner", () => {
+  it("returns the accent of the nearest upcoming lock with a vote winner", async () => {
     const { result } = renderAccent({
       [keyFor(7)]: mkLock({ topGameSlug: gameB.slug }),
       [keyFor(2)]: mkLock({ topGameSlug: gameA.slug }),
     });
-    expect(result.current).toBe(gameA.accentHex);
+    // the slug→accent lookup is a lazy import, so it lands a render later
+    await waitFor(() => expect(result.current).toBe(gameA.accentHex));
   });
 
-  it("counts tonight (today's lock) as the nearest night", () => {
+  it("counts tonight (today's lock) as the nearest night", async () => {
     const { result } = renderAccent({
       [keyFor(0)]: mkLock({ topGameSlug: gameA.slug }),
       [keyFor(3)]: mkLock({ topGameSlug: gameB.slug }),
     });
-    expect(result.current).toBe(gameA.accentHex);
+    // the slug→accent lookup is a lazy import, so it lands a render later
+    await waitFor(() => expect(result.current).toBe(gameA.accentHex));
   });
 
-  it("skips upcoming locks whose vote has no winner yet", () => {
+  it("skips upcoming locks whose vote has no winner yet", async () => {
     const { result } = renderAccent({
       [keyFor(1)]: mkLock(),
       [keyFor(4)]: mkLock({ topGameSlug: gameB.slug }),
     });
-    expect(result.current).toBe(gameB.accentHex);
+    // the slug→accent lookup is a lazy import, so it lands a render later
+    await waitFor(() => expect(result.current).toBe(gameB.accentHex));
   });
 
   it("returns null when only past locks have winners", () => {
