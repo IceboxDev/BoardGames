@@ -75,8 +75,12 @@ const BASE =
 // Color classes are written as full literals — Tailwind cannot see a class name
 // assembled at runtime (`bg-${tone}-500`), so every tone is spelled out.
 const STRUCTURAL: Record<StructuralVariant, string> = {
+  // `text-on-accent` (not `text-white`): the fill is the themed accent, so the
+  // ink has to be decided against it. The engine flips this token to near-black
+  // for a light or neon accent — Terminal's #00ff88 rendered white-on-mint
+  // before it existed. Stock indigo keeps white.
   primary:
-    "bg-gradient-to-r from-accent-500 to-neon-purple text-white shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 hover:brightness-110 active:scale-[0.98]",
+    "bg-gradient-to-r from-accent-500 to-neon-purple text-on-accent shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 hover:brightness-110 active:scale-[0.98]",
   secondary:
     "bg-surface-800 text-fg-primary border border-white/10 hover:bg-surface-700 hover:border-white/20",
   // text-only with a subtle background on hover — "Cancel" / "Close" / inline.
@@ -106,7 +110,7 @@ const TINTED: Record<ButtonTone, string> = {
 // accent has no -600 token, so it fills at -500; amber/cyan are bright enough
 // to need dark text.
 const SOLID: Record<ButtonTone, string> = {
-  accent: "bg-accent-500 text-white shadow-lg shadow-accent-500/20 hover:bg-accent-400",
+  accent: "bg-accent-500 text-on-accent shadow-lg shadow-accent-500/20 hover:bg-accent-400",
   emerald: "bg-emerald-600 text-white shadow-lg shadow-emerald-500/20 hover:bg-emerald-500",
   rose: "bg-rose-600 text-white shadow-lg shadow-rose-500/20 hover:bg-rose-500",
   amber: "bg-amber-500 text-surface-950 shadow-lg shadow-amber-500/20 hover:bg-amber-400",
