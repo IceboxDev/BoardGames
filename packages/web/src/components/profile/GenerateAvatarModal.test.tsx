@@ -16,6 +16,14 @@ vi.mock("../../lib/downscale-image.ts", () => ({
   fileToDownscaledDataUri: vi.fn().mockResolvedValue("data:image/webp;base64,reference"),
 }));
 
+// The upload path is ADMIN-ONLY: members have no prompt and no reason to know
+// avatars are pipelined, so a bare file picker would just erode the house
+// style. Tests drive this flag directly.
+let isAdmin = true;
+vi.mock("../../hooks/useCurrentUser.ts", () => ({
+  useCurrentUser: () => ({ user: { id: "u1" }, isAdmin }),
+}));
+
 const saveAvatarMock = vi.fn();
 const generateAvatarMock = vi.fn();
 vi.mock("../../lib/profile.ts", () => ({
@@ -38,6 +46,7 @@ function renderModal() {
 beforeEach(() => {
   // Call history leaks across tests otherwise, and the "must not save" and
   // "must not generate" assertions are the point of two of them.
+  isAdmin = true;
   fileToAvatarDataUriMock.mockReset();
   saveAvatarMock.mockReset();
   generateAvatarMock.mockReset();
@@ -82,6 +91,16 @@ describe("GenerateAvatarModal — upload a finished picture", () => {
 
     expect(await screen.findByRole("button", { name: /choose another/i })).toBeVisible();
     expect(screen.queryByRole("button", { name: /regenerate/i })).toBeNull();
+  });
+
+  it("is hidden from non-admin members entirely", () => {
+    isAdmin = false;
+    renderModal();
+    expect(screen.queryByText(/upload a finished profile picture/i)).toBeNull();
+    // The generator itself stays available to everyone. (Presence, not
+    // visibility: the button renders disabled until a photo + game are picked,
+    // which is orthogonal to the admin gate under test.)
+    expect(screen.getByRole("button", { name: /^generate$/i })).toBeTruthy();
   });
 
   // A browser with no webp canvas support silently yields PNG, which the save

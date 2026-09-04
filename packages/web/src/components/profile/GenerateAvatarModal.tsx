@@ -2,6 +2,7 @@ import { AVATAR_STYLES, type AvatarStyleId } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { type ChangeEvent, useEffect, useId, useMemo, useState } from "react";
 import { games } from "../../games/registry.ts";
+import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import { ApiError, SchemaError } from "../../lib/api-fetch.ts";
 import { fileToAvatarDataUri, fileToDownscaledDataUri } from "../../lib/downscale-image.ts";
 import { fetchAvatarJob, generateAvatar, saveAvatar } from "../../lib/profile.ts";
@@ -41,6 +42,7 @@ type GenerateAvatarModalProps = {
 export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAvatarModalProps) {
   const queryClient = useQueryClient();
   const commentsId = useId();
+  const { isAdmin } = useCurrentUser();
 
   const [phase, setPhase] = useState<Phase>("form");
   const [referenceImage, setReferenceImage] = useState<string | null>(null);
@@ -306,34 +308,41 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
             />
           </Field>
 
-          {/* Bring-your-own path. Generation runs on a paid image model, so it
-              can be unavailable (no gateway credits) while the rest of the app
-              is fine — and a picture made in ChatGPT, drawn by an illustrator,
-              or just a good photo is an equally valid avatar. Converted to the
-              webp the save route demands and dropped into the SAME preview
-              step, so confirming works identically either way. */}
-          <div className="flex items-center gap-3 pt-1">
-            <span className="h-px flex-1 bg-white/10" />
-            <span className="text-3xs uppercase tracking-label text-fg-muted">or</span>
-            <span className="h-px flex-1 bg-white/10" />
-          </div>
-          <FieldGroup label="Already have a picture?">
-            <label className="flex cursor-pointer items-center gap-3 rounded-lg border border-dashed border-white/15 bg-surface-900/60 p-3 transition hover:border-accent-400/40">
-              {/* biome-ignore lint/correctness/noRestrictedElements: sr-only file input behind the styled dropzone — no visible chrome to drift */}
-              <input
-                type="file"
-                accept="image/*"
-                onChange={handleFinishedUpload}
-                className="sr-only"
-              />
-              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-md bg-surface-800 text-fg-muted">
-                <CameraIcon />
-              </span>
-              <span className="text-sm text-fg-secondary">
-                Upload a finished profile picture — skips generation
-              </span>
-            </label>
-          </FieldGroup>
+          {/* ADMIN-ONLY bring-your-own path, and the gate is the point rather
+              than a permission detail: avatars are meant to come off the AI
+              pipeline in one house style, and a member has neither the prompt
+              nor any reason to know that — offering them a plain file picker
+              just invites arbitrary photos and quietly erodes the look. It
+              stays for admins as the escape hatch when generation is down
+              (no gateway credits), where whoever uses it does know the
+              pipeline. The server has ALWAYS accepted any webp on this route,
+              so this is a product gate, not a security boundary. */}
+          {isAdmin && (
+            <>
+              <div className="flex items-center gap-3 pt-1">
+                <span className="h-px flex-1 bg-white/10" />
+                <span className="text-3xs uppercase tracking-label text-fg-muted">or</span>
+                <span className="h-px flex-1 bg-white/10" />
+              </div>
+              <FieldGroup label="Already have a picture?">
+                <label className="flex cursor-pointer items-center gap-3 rounded-lg border border-dashed border-white/15 bg-surface-900/60 p-3 transition hover:border-accent-400/40">
+                  {/* biome-ignore lint/correctness/noRestrictedElements: sr-only file input behind the styled dropzone — no visible chrome to drift */}
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={handleFinishedUpload}
+                    className="sr-only"
+                  />
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-md bg-surface-800 text-fg-muted">
+                    <CameraIcon />
+                  </span>
+                  <span className="text-sm text-fg-secondary">
+                    Upload a finished profile picture — skips generation
+                  </span>
+                </label>
+              </FieldGroup>
+            </>
+          )}
         </ModalBody>
       )}
 
