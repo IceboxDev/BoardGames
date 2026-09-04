@@ -7,6 +7,7 @@ import {
   type AdminUser,
   AnnouncementsCard,
   AvailabilityDrawer,
+  coverageRatio,
   GuestPlayersCard,
   InactiveToggleRow,
   PreRegisterCard,
@@ -174,10 +175,10 @@ export default function AdminPage() {
       const aAdmin = a.user.role === "admin" ? 1 : 0;
       const bAdmin = b.user.role === "admin" ? 1 : 0;
       if (aAdmin !== bAdmin) return bAdmin - aAdmin;
-      const aPct =
-        a.coverage.total > 0 ? (a.coverage.can + a.coverage.maybe) / a.coverage.total : 0;
-      const bPct =
-        b.coverage.total > 0 ? (b.coverage.can + b.coverage.maybe) / b.coverage.total : 0;
+      // Sort on the full-precision ratio, the same helper the pie's label
+      // rounds — so the column never sorts by one formula and reads by another.
+      const aPct = coverageRatio(a.coverage);
+      const bPct = coverageRatio(b.coverage);
       if (aPct !== bPct) return bPct - aPct;
       if (a.zeroDays !== b.zeroDays) return a.zeroDays - b.zeroDays;
       return (a.user.name || a.user.email).localeCompare(b.user.name || b.user.email);
