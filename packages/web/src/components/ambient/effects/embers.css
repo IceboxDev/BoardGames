@@ -1,0 +1,151 @@
+/* Embers ambient effect. Every particle splits into a wrapper (opacity fade)
+   and an inner shape (transform rise); the smoke/spark blur is static on the
+   transform-only inner element, so it paints once and the GPU composites the
+   cached layer. Colors come off the site palette via color-mix.
+
+   Rise travel is in vh: the ambient layer mounts fixed inset-0, so the
+   viewport IS the container. */
+
+/* The root is a sealed, permanently-animated subtree: nothing inside affects
+   anything outside it. `contain: strict` (layout + paint + size + style) keeps
+   it out of the app's invalidation graph; size containment is safe because
+   `absolute inset-0` imposes the box's dimensions from outside. */
+.amb-embers {
+  contain: strict;
+}
+
+.amb-embers-glow {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 15%;
+  background: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--color-neon-pink) 35%, transparent),
+    transparent
+  );
+  opacity: 0.3;
+}
+
+.amb-ember {
+  position: absolute;
+  opacity: 0.5;
+}
+
+.amb-ember-spark {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background: var(--color-neon-pink);
+  filter: blur(1px);
+}
+
+.amb-ember-smoke {
+  position: absolute;
+  opacity: 0.06;
+}
+
+.amb-ember-smoke-puff {
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  background: var(--color-neon-purple);
+  filter: blur(6px);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .amb-ember {
+    animation: amb-ember-fade var(--amb-dur, 6s) ease-out var(--amb-delay, 0s) infinite;
+  }
+
+  .amb-ember-spark {
+    animation: amb-ember-rise var(--amb-dur, 6s) ease-out var(--amb-delay, 0s) infinite;
+  }
+
+  .amb-ember-smoke {
+    animation: amb-smoke-fade var(--amb-dur, 9s) ease-out var(--amb-delay, 0s) infinite;
+  }
+
+  .amb-ember-smoke-puff {
+    animation: amb-smoke-rise var(--amb-dur, 9s) ease-out var(--amb-delay, 0s) infinite;
+  }
+}
+
+/* Below the desktop breakpoint drop the blur-heavy smoke entirely and strip
+   the spark blur — the glow band + crisp rising embers stay as the remnant. */
+@media (max-width: 1023.98px) {
+  .amb-ember-smoke {
+    display: none;
+  }
+
+  .amb-ember-spark {
+    filter: none;
+  }
+}
+
+@keyframes amb-ember-rise {
+  0% {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  25% {
+    transform: translateY(-25vh) translateX(var(--amb-sway, 20px)) scale(0.9);
+  }
+  50% {
+    transform: translateY(-50vh) translateX(calc(var(--amb-sway, 20px) * -0.6)) scale(0.7);
+  }
+  75% {
+    transform: translateY(-75vh) translateX(var(--amb-sway, 20px)) scale(0.5);
+  }
+  100% {
+    transform: translateY(-100vh) translateX(0) scale(0.2);
+  }
+}
+
+@keyframes amb-ember-fade {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.8;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes amb-smoke-rise {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-40vh) scale(1.5);
+  }
+  100% {
+    transform: translateY(-80vh) scale(2);
+  }
+}
+
+@keyframes amb-smoke-fade {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 0.12;
+  }
+  50% {
+    opacity: 0.08;
+  }
+  100% {
+    opacity: 0;
+  }
+}

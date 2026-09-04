@@ -1,0 +1,108 @@
+/* Aurora ambient effect. Ribbons animate transform ONLY (X drift on the
+   wrapper, Y wave on the band); the 25–45px blur is static, so it paints once
+   and the GPU composites the cached layer. Sparkles animate opacity only. */
+
+/* The root is a sealed, permanently-animated subtree: nothing inside affects
+   anything outside it. `contain: strict` (layout + paint + size + style) keeps
+   it out of the app's invalidation graph; size containment is safe because
+   `absolute inset-0` imposes the box's dimensions from outside. */
+.amb-aurora {
+  contain: strict;
+}
+
+.amb-aurora-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 35%;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    color-mix(in srgb, var(--color-neon-cyan) 14%, transparent),
+    transparent 70%
+  );
+}
+
+/* 30% bleed each side (ribbon = 160% of the container). The drift keyframes
+   translate by ±15% of the ribbon's own width = ±24% of the container, so the
+   ribbon keeps covering the full frame at both extremes. */
+.amb-aurora-ribbon {
+  position: absolute;
+  left: -30%;
+  right: -30%;
+}
+
+.amb-aurora-band {
+  position: absolute;
+  inset: 0;
+  opacity: 0.15;
+}
+
+.amb-aurora-sparkle {
+  position: absolute;
+  border-radius: 9999px;
+  background: var(--color-neon-cyan);
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .amb-aurora-ribbon {
+    animation: amb-aurora-shift var(--amb-shift-dur, 8s) ease-in-out var(--amb-shift-delay, 0s)
+      infinite alternate;
+  }
+
+  .amb-aurora-band {
+    animation: amb-aurora-wave var(--amb-wave-dur, 10s) ease-in-out var(--amb-wave-delay, 0s)
+      infinite alternate;
+  }
+
+  .amb-aurora-sparkle {
+    animation: amb-aurora-sparkle 3s ease-in-out var(--amb-delay, 0s) infinite;
+  }
+}
+
+/* Below the desktop breakpoint the big blurs cost more than they give: drop
+   the ribbons entirely and keep the cheap glow + sparkles as the remnant. */
+@media (max-width: 1023.98px) {
+  .amb-aurora-ribbon {
+    display: none;
+  }
+}
+
+@keyframes amb-aurora-shift {
+  0% {
+    transform: translateX(-15%);
+  }
+  100% {
+    transform: translateX(15%);
+  }
+}
+
+@keyframes amb-aurora-wave {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(var(--amb-amp, 20px));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes amb-aurora-sparkle {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.7;
+  }
+  60% {
+    opacity: 0.5;
+  }
+  80% {
+    opacity: 0;
+  }
+}
