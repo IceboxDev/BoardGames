@@ -82,34 +82,108 @@ capture() {
       echo "captured $file"
     done
   done
+  # Theme fixtures (/dev/theme-preview): a single TALL window instead of the
+  # viewport matrix, so all nine palette sections land in one frame — per-
+  # preset routes × 3 viewports would be 27 near-identical shots for one
+  # surface. The `--tall` suffix matches no viewport glob, so nav-check
+  # skips it (the page renders no TopNav). Height carries deliberate headroom
+  # over the ~5.3k px the nine sections need today: a new fixture (or a taller
+  # collage) must not silently fall out of frame.
+  local themefile="$out/theme-preview--tall.png"
+  "$CHROMIUM" --headless=new --disable-gpu --hide-scrollbars \
+    --window-size=1536,7000 \
+    --virtual-time-budget=8000 \
+    --screenshot="$themefile" \
+    "$base/dev/theme-preview" 2>/dev/null
+  echo "captured $themefile"
 }
 
+# Compares the UNION of both runs' shots. A name only in <dir-a> is a route
+# that vanished (MISSING — a failure). A name only in <dir-b> is a route that
+# was ADDED since the baseline: it has nothing to diff against, so it is
+# reported as a warning, not a failure — otherwise every run that adds a route
+# would have to re-capture the baseline just to go green.
+#
+# ADDED is a warning ONLY while the baseline is otherwise intact. A typo'd or
+# half-finished <dir-a> would otherwise turn every route into a cheerful ADDED
+# and report "no visual changes" having compared nothing — so an empty baseline
+# is a hard error, and a baseline covering less than half the union fails too.
 diff_runs() {
   local a="$1" b="$2" report="${3:-/tmp/screenshot-smoke-diff}"
   mkdir -p "$report"
-  local failures=0
-  for f in "$a"/*.png; do
-    local name
-    name="$(basename "$f")"
+  local failures=0 added=0 compared=0
+  local names=()
+  for f in "$a"/*.png "$b"/*.png; do
+    [[ -f "$f" ]] || continue
+    names+=("$(basename "$f")")
+  done
+  if (( ${#names[@]} == 0 )); then
+    echo "error: no .png captures in $a or $b" >&2
+    exit 1
+  fi
+  # shellcheck disable=SC2207
+  IFS=$'\n' names=($(printf '%s\n' "${names[@]}" | sort -u)); unset IFS
+  local baseline=0
+  for name in "${names[@]}"; do
+    [[ -f "$a/$name" ]] && baseline=$((baseline + 1))
+  done
+  if (( baseline == 0 )); then
+    echo "error: $a holds no .png captures — nothing to diff against (wrong path, or the baseline run never completed)" >&2
+    exit 1
+  fi
+  for name in "${names[@]}"; do
     if [[ ! -f "$b/$name" ]]; then
       echo "MISSING in $b: $name"
       failures=$((failures + 1))
       continue
     fi
+    if [[ ! -f "$a/$name" ]]; then
+      echo "ADDED $name — no baseline to diff against"
+      added=$((added + 1))
+      continue
+    fi
     # AE = absolute error pixel count; fuzz absorbs AA jitter.
-    local metric
-    metric=$(compare -metric AE -fuzz 2% "$f" "$b/$name" "$report/$name" 2>&1 || true)
-    if [[ "${metric%%.*}" =~ ^[0-9]+$ ]] && (( ${metric%%.*} > 500 )); then
-      echo "DIFF  $name — $metric changed pixels → $report/$name"
-      failures=$((failures + 1))
+    #
+    # ImageMagick 7 prints AE as "<count> (<normalized>)" — e.g. "0 (0)" or
+    # "319042 (0.216364)". Take the FIRST whitespace-delimited token, then
+    # strip any fractional part. (Parsing this as `${metric%%.*}` cuts at the
+    # dot inside the parenthesised figure, yielding "319042 (0", which matches
+    # no integer pattern — so every comparison used to fall through to the
+    # `ok` branch and the gate silently passed everything, differing pages
+    # included.)
+    local metric count
+    metric=$(compare -metric AE -fuzz 2% "$a/$name" "$b/$name" "$report/$name" 2>&1 || true)
+    count="${metric%% *}"
+    count="${count%%.*}"
+    if [[ "$count" =~ ^[0-9]+$ ]]; then
+      compared=$((compared + 1))
+      if (( count > 500 )); then
+        echo "DIFF  $name — $count changed pixels → $report/$name"
+        failures=$((failures + 1))
+      else
+        rm -f "$report/$name"
+        echo "ok    $name"
+      fi
     else
-      rm -f "$report/$name"
-      echo "ok    $name"
+      # Non-numeric output means `compare` itself failed — most often
+      # "image widths or heights differ" after a viewport/window-size change.
+      # Silently treating that as `ok` would hide the very shot most likely
+      # to have regressed.
+      echo "ERROR $name — compare failed: ${metric:-no output}"
+      failures=$((failures + 1))
     fi
   done
   if (( failures > 0 )); then
     echo "$failures screen(s) changed — inspect $report"
     exit 1
+  fi
+  if (( added * 2 > ${#names[@]} )); then
+    echo "error: only $compared of ${#names[@]} shot(s) had a baseline to diff against — $a looks stale or incomplete" >&2
+    exit 1
+  fi
+  if (( added > 0 )); then
+    echo "no visual changes ($compared compared, $added new route(s) with no baseline)"
+    return
   fi
   echo "no visual changes"
 }

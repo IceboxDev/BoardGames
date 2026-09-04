@@ -62,6 +62,7 @@ const PurchasesPreview = import.meta.env.DEV
 const UiGalleryPage = import.meta.env.DEV
   ? lazy(() => import("./pages/UiGalleryPage"))
   : () => null;
+const ThemePreview = import.meta.env.DEV ? lazy(() => import("./pages/ThemePreview")) : () => null;
 
 // `GameMenu` is the dashboard's entry point into the games catalog.
 // `GameShellLayout` mounts under `/play/:slug` and pulls in the games
@@ -299,6 +300,7 @@ const router = createBrowserRouter(
           <Route path="dev/jaipur-preview" element={<JaipurHistoryPreview />} />
           <Route path="dev/admin-inactive-preview" element={<AdminInactivePreview />} />
           <Route path="dev/purchases-preview" element={<PurchasesPreview />} />
+          <Route path="dev/theme-preview" element={<ThemePreview />} />
           {/* The design-system gallery: every ui/ primitive in its variants.
               Captured by scripts/screenshot-smoke.sh as the per-primitive
               visual-regression surface. */}
