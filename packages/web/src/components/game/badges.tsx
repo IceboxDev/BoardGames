@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import { CheckIcon, StackIcon, StarIcon } from "../icons";
 import { FlameArt } from "../ui/FlameArt.tsx";
 
@@ -41,8 +42,8 @@ export function VariantsBadge({
   const label = mode === "plus" ? `+${count - 1} variants` : `${count} variants`;
   return (
     <span
-      className={`${tight ? BADGE_BASE_TIGHT : BADGE_BASE} bg-black/65`}
-      style={{ color: accentHex }}
+      className={`${tight ? BADGE_BASE_TIGHT : BADGE_BASE} bg-black/65 text-[var(--accent)]`}
+      style={{ "--accent": accentHex } as CSSProperties}
     >
       <StackIcon />
       {label}

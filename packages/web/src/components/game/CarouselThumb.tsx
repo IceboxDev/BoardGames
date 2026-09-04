@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 // Pixel-height thumbnail block for carousel cards. Same `<img>` + gradient
 // overlay treatment as the catalog `<GameCardThumb>` but driven by a fixed
@@ -30,7 +30,10 @@ export function CarouselThumb({
   overlay,
 }: Props) {
   return (
-    <div className="relative w-full overflow-hidden" style={{ height: thumbHeight }}>
+    <div
+      className="relative w-full overflow-hidden"
+      style={{ height: thumbHeight, "--accent": accentHex } as CSSProperties}
+    >
       <img
         src={src}
         alt=""
@@ -45,7 +48,9 @@ export function CarouselThumb({
         <span
           aria-hidden="true"
           className="absolute inset-0"
-          style={{ boxShadow: `inset 0 0 36px ${accentHex}55` }}
+          style={{
+            boxShadow: `inset 0 0 36px color-mix(in srgb, var(--accent, ${accentHex}) 33.33%, transparent)`,
+          }}
         />
       )}
       {badgeTopRight && <span className="absolute right-2 top-2">{badgeTopRight}</span>}

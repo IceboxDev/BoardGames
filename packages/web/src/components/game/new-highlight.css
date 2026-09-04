@@ -12,10 +12,10 @@
 @keyframes new-fiery-glow {
   0%,
   100% {
-    border-color: rgba(34, 211, 238, 0.85);
+    border-color: color-mix(in srgb, var(--color-neon-cyan, #22d3ee) 85%, transparent);
     box-shadow:
-      0 0 0 1px rgba(34, 211, 238, 0.45),
-      0 0 18px -3px rgba(34, 211, 238, 0.6),
+      0 0 0 1px color-mix(in srgb, var(--color-neon-cyan, #22d3ee) 45%, transparent),
+      0 0 18px -3px color-mix(in srgb, var(--color-neon-cyan, #22d3ee) 60%, transparent),
       0 0 44px -10px rgba(59, 130, 246, 0.5),
       0 18px 40px -12px rgba(0, 0, 0, 0.5);
   }
@@ -23,21 +23,21 @@
     border-color: rgba(125, 211, 252, 1);
     box-shadow:
       0 0 0 1px rgba(56, 189, 248, 0.7),
-      0 0 28px 0 rgba(34, 211, 238, 0.9),
+      0 0 28px 0 color-mix(in srgb, var(--color-neon-cyan, #22d3ee) 90%, transparent),
       0 0 66px -6px rgba(59, 130, 246, 0.7),
       0 18px 40px -12px rgba(0, 0, 0, 0.5);
   }
 }
 .card-frame-new {
-  border-color: rgba(34, 211, 238, 0.85);
+  border-color: color-mix(in srgb, var(--color-neon-cyan, #22d3ee) 85%, transparent);
   animation: new-fiery-glow 2.4s ease-in-out infinite;
 }
 @media (prefers-reduced-motion: reduce) {
   .card-frame-new {
     animation: none;
     box-shadow:
-      0 0 0 1px rgba(34, 211, 238, 0.5),
-      0 0 22px -4px rgba(34, 211, 238, 0.7),
+      0 0 0 1px color-mix(in srgb, var(--color-neon-cyan, #22d3ee) 50%, transparent),
+      0 0 22px -4px color-mix(in srgb, var(--color-neon-cyan, #22d3ee) 70%, transparent),
       0 0 52px -10px rgba(59, 130, 246, 0.55),
       0 18px 40px -12px rgba(0, 0, 0, 0.5);
   }
