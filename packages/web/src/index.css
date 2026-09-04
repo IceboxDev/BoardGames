@@ -57,6 +57,42 @@
   --color-neon-cyan: #22d3ee;
   --color-neon-purple: #a855f7;
   --color-neon-pink: #ec4899;
+  /* Ink that sits ON an accent fill (primary button, solid-accent). White for
+     the stock indigo; the engine flips it to near-black for a light or neon
+     accent, where white text all but vanishes. */
+  --color-on-accent: #ffffff;
+  /* ── SEMANTIC + ART tokens ────────────────────────────────────────────
+     Colors that carry a MEANING rather than an identity: the "connected"
+     green, the "maybe" yellow, the calendar's fire, and a sealed night's
+     regal base. lib/theme/semantic.ts retunes all of them around the themed
+     accent, and is pinned to these exact stock values.
+
+     Deliberately their OWN tokens rather than overrides of `--color-amber-*`
+     / `--color-red-*`: those palette families are also what game boards paint
+     with, and a red Pandemic cube has to stay red under every theme.
+
+     VALUES are the v3-era sRGB literals this art was authored against. Where
+     a call site previously used a raw palette CLASS (`from-orange-700`), that
+     class compiled to Tailwind v4's OKLCH palette instead — a few RGB units
+     off — so Classic's calendar art shifts very slightly, back toward its
+     intended hues. Call sites that replaced an rgba() literal (calendar-fire.css)
+     are exact. */
+  --color-ok: #6ee7b7;
+  --color-ok-strong: #34d399;
+  --color-warn: #fbbf24;
+  --color-warn-strong: #facc15;
+  --color-warn-soft: #fde047;
+  --color-warn-gold: #fcd34d;
+  --color-warn-pale: #fef3c7;
+  --color-heat-glow: #fde68a;
+  --color-heat-bright: #fb923c;
+  --color-heat: #f97316;
+  --color-heat-deep: #c2410c;
+  --color-heat-ember: #ef4444;
+  --color-heat-molten: #7f1d1d;
+  --color-sealed-base: #1e1b4b;
+  --color-sealed-mid: #4c1d95;
+  --color-sealed-edge: #312e81;
   /* Glow shadows. Each is DERIVED from its palette token rather than carrying
      a hand-copied rgb triplet, so `shadow-glow-accent` follows a themed accent
      for free. That indirection is load-bearing: Tailwind compiles a shadow

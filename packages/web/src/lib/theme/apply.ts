@@ -1,6 +1,7 @@
 import { isDefaultTheme, type ThemeConfig } from "./config.ts";
 import { deriveAccentRamp, hexToRgb } from "./ramp.ts";
 import { getFont, getPattern } from "./registry.ts";
+import { deriveSemanticTokens, inkForAccent, SEMANTIC_VAR_NAMES } from "./semantic.ts";
 import { loadWallpaper, saveResolvedVars } from "./storage.ts";
 
 // ── applyTheme ───────────────────────────────────────────────────────────
@@ -39,7 +40,12 @@ function formatScale(value: number): string {
 }
 
 /** Every var this module may set — the cleanup list for the Classic path. */
-const MANAGED_VARS = [
+const MANAGED_VARS: readonly string[] = [
+  // Semantic + calendar-art tokens (see semantic.ts). Listed via the module
+  // that owns them so a new token can't be added there and silently escape
+  // the Classic cleanup below.
+  ...SEMANTIC_VAR_NAMES,
+  "--color-on-accent",
   "--color-surface-950",
   "--color-surface-900",
   "--color-surface-800",
@@ -66,7 +72,7 @@ const MANAGED_VARS = [
   "--radius-ui-scale",
   "--scrollbar-thumb",
   "--scrollbar-thumb-hover",
-] as const;
+];
 
 function alphaRgb(hex: string, alpha: number): string {
   const { r, g, b } = hexToRgb(hex);
@@ -128,6 +134,13 @@ export function applyTheme(config: ThemeConfig): void {
     // The document scrollbar follows the text ramp (see index.css fallbacks).
     "--scrollbar-thumb": alphaRgb(config.fgPrimary, 0.12),
     "--scrollbar-thumb-hover": alphaRgb(config.fgPrimary, 0.22),
+    // Status greens/yellows and the calendar's fire + sealed-night art, all
+    // retuned around this accent. Derived rather than stored so every preset
+    // — and a hand-picked custom accent — gets a coherent set for free.
+    ...deriveSemanticTokens(config.accent),
+    // The primary button's fill runs accent-500 → neon-purple, so its ink is
+    // decided against both ends.
+    "--color-on-accent": inkForAccent(config.accent, config.neonPurple),
   };
 
   // At the stock radii the scale is exactly 1 — leave the vars unset so the

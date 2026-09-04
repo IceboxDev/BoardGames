@@ -22,7 +22,7 @@ const REFERENCE_RAMP: AccentRamp = {
   "100": "#e0e7ff",
 };
 
-interface Hsl {
+export interface Hsl {
   h: number; // 0..360
   s: number; // 0..1
   l: number; // 0..1
@@ -35,12 +35,12 @@ export function hexToRgb(hex: string): { r: number; g: number; b: number } {
   return { r: (n >> 16) & 0xff, g: (n >> 8) & 0xff, b: n & 0xff };
 }
 
-function rgbToHex(r: number, g: number, b: number): string {
+export function rgbToHex(r: number, g: number, b: number): string {
   const to2 = (v: number) => v.toString(16).padStart(2, "0");
   return `#${to2(r)}${to2(g)}${to2(b)}`;
 }
 
-function rgbToHsl(r: number, g: number, b: number): Hsl {
+export function rgbToHsl(r: number, g: number, b: number): Hsl {
   const rn = r / 255;
   const gn = g / 255;
   const bn = b / 255;
@@ -59,7 +59,7 @@ function rgbToHsl(r: number, g: number, b: number): Hsl {
   return { h, s, l };
 }
 
-function hslToRgb({ h, s, l }: Hsl): { r: number; g: number; b: number } {
+export function hslToRgb({ h, s, l }: Hsl): { r: number; g: number; b: number } {
   const hue = ((h % 360) + 360) % 360;
   const c = (1 - Math.abs(2 * l - 1)) * s;
   const x = c * (1 - Math.abs(((hue / 60) % 2) - 1));
@@ -80,7 +80,7 @@ function hslToRgb({ h, s, l }: Hsl): { r: number; g: number; b: number } {
   };
 }
 
-function clamp01(v: number): number {
+export function clamp01(v: number): number {
   return Math.min(1, Math.max(0, v));
 }
 
