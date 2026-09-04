@@ -29,6 +29,8 @@ import {
   PublicProfileSchema,
   SkillChartSchema,
   SlugListSchema,
+  type ThemeConfig,
+  ThemeConfigSchema,
 } from "@boardgames/core/protocol";
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
@@ -85,6 +87,7 @@ const ProfileRowSchema = z.object({
   wishlist_game_slugs_json: jsonColumn(SlugListSchema),
   links_json: jsonColumn(z.array(ProfileLinkSchema)),
   skill_json: z.string().nullable(),
+  theme_json: z.string().nullable(),
 });
 
 const DirectoryProfileRowSchema = z.object({
@@ -111,6 +114,7 @@ const EMPTY_EDITABLE: ProfileEditable = {
   favorites: [],
   wishlist: [],
   links: [],
+  theme: null,
 };
 
 // ── Helpers ────────────────────────────────────────────────────────────
@@ -150,6 +154,14 @@ function readEditableRow(row: z.infer<typeof ProfileRowSchema>): {
       skill = null; // generated later by a trusted job; tolerate bad/absent data
     }
   }
+  let theme: ThemeConfig | null = null;
+  if (row.theme_json) {
+    try {
+      theme = ThemeConfigSchema.parse(JSON.parse(row.theme_json));
+    } catch {
+      theme = null; // validated on write; a stale/incompatible blob reads as Classic
+    }
+  }
   return {
     editable: {
       tagline: row.tagline,
@@ -160,6 +172,7 @@ function readEditableRow(row: z.infer<typeof ProfileRowSchema>): {
       favorites: row.favorite_game_slugs_json,
       wishlist: row.wishlist_game_slugs_json,
       links: row.links_json,
+      theme,
     },
     skill,
   };
@@ -181,6 +194,8 @@ function normalizeEditable(input: ProfileEditable): ProfileEditable {
     favorites: dedupe(input.favorites),
     wishlist: dedupe(input.wishlist),
     links: input.links,
+    // `undefined` (field absent) is meaningful: preserve the stored theme.
+    theme: input.theme,
   };
 }
 
@@ -283,7 +298,8 @@ profileRoutes.get("/:userId", async (c) => {
     }),
     db.execute({
       sql: `SELECT tagline, bio, pronouns, location, accent_hex,
-                     favorite_game_slugs_json, wishlist_game_slugs_json, links_json, skill_json
+                     favorite_game_slugs_json, wishlist_game_slugs_json, links_json, skill_json,
+                     theme_json
               FROM user_profiles WHERE user_id = ? LIMIT 1`,
       args: [userId],
     }),
@@ -529,11 +545,49 @@ profileRoutes.put("/:userId", zJsonBody(ProfileUpdateInputSchema), async (c) => 
   }
   const normalized = normalizeEditable(c.req.valid("json"));
 
-  await getDb().execute({
+  // `theme` is the one field where "absent" ≠ "null" on this full-replace
+  // route: writers that predate the theme (the profile editor modal) omit it,
+  // and must not wipe a saved theme. The CASE keeps the stored value unless
+  // the body carried the field explicitly (object or null).
+  const themeProvided = normalized.theme !== undefined;
+  const themeJson = normalized.theme ? JSON.stringify(normalized.theme) : null;
+
+  const db = getDb();
+
+  // A theme edit rides this same full-replace route, and the appearance page
+  // saves on every 800ms pause — so logging unconditionally turned one
+  // colour-tweaking session into a dozen identical `profile-update` rows in
+  // the admin activity feed. Read the current row first and log only when a
+  // field OTHER than the theme actually moved. One PK lookup on a rare write.
+  let contentChanged = true;
+  if (themeProvided) {
+    const existing = await db.execute({
+      sql: `SELECT tagline, bio, pronouns, location, accent_hex,
+                     favorite_game_slugs_json, wishlist_game_slugs_json, links_json, skill_json,
+                     theme_json
+              FROM user_profiles WHERE user_id = ? LIMIT 1`,
+      args: [userId],
+    });
+    if (existing.rows[0]) {
+      try {
+        const before = readEditableRow(
+          parseRow(ProfileRowSchema, existing.rows[0], "user_profiles"),
+        ).editable;
+        const withoutTheme = ({ theme: _theme, ...rest }: ProfileEditable) => rest;
+        contentChanged =
+          JSON.stringify(withoutTheme(before)) !== JSON.stringify(withoutTheme(normalized));
+      } catch (err) {
+        if (!(err instanceof RowParseError)) throw err;
+        // Unreadable row — fall back to logging, which is the safe default.
+      }
+    }
+  }
+
+  await db.execute({
     sql: `INSERT INTO user_profiles
             (user_id, tagline, bio, pronouns, location, accent_hex,
-             favorite_game_slugs_json, wishlist_game_slugs_json, links_json, updated_at)
-          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
+             favorite_game_slugs_json, wishlist_game_slugs_json, links_json, theme_json, updated_at)
+          VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, datetime('now'))
           ON CONFLICT(user_id) DO UPDATE SET
             tagline = excluded.tagline,
             bio = excluded.bio,
@@ -543,6 +597,7 @@ profileRoutes.put("/:userId", zJsonBody(ProfileUpdateInputSchema), async (c) => 
             favorite_game_slugs_json = excluded.favorite_game_slugs_json,
             wishlist_game_slugs_json = excluded.wishlist_game_slugs_json,
             links_json = excluded.links_json,
+            theme_json = CASE WHEN ? THEN excluded.theme_json ELSE user_profiles.theme_json END,
             updated_at = datetime('now')`,
     args: [
       userId,
@@ -554,9 +609,11 @@ profileRoutes.put("/:userId", zJsonBody(ProfileUpdateInputSchema), async (c) => 
       JSON.stringify(normalized.favorites),
       JSON.stringify(normalized.wishlist),
       JSON.stringify(normalized.links),
+      themeJson,
+      themeProvided ? 1 : 0,
     ],
   });
-  logActivity(user.id, "profile-update", {});
+  if (contentChanged) logActivity(user.id, "profile-update", {});
 
   return c.json(ProfileEditableSchema.parse(normalized));
 });

@@ -51,6 +51,53 @@ export const SkillChartSchema = z
   .nullable();
 export type SkillChart = z.infer<typeof SkillChartSchema>;
 
+// ── Site theme (appearance personalization) ────────────────────────────
+// The full site-wide theme a member can compose on /settings: surface ramp,
+// foreground ramp, one accent (the 100..500 shades are derived client-side),
+// neon flourishes, background pattern, shape/typography knobs and the ambient
+// layer. Stored as one JSON blob (`user_profiles.theme_json`), mirrored in
+// localStorage for pre-paint application. `preset`/`pattern`/`fontFamily`/
+// `ambientEffect` are registry KEYS (the web resolves them; unknown keys
+// degrade gracefully), so they are capped strings, not enums.
+const ThemeKeySchema = z.string().min(1).max(40);
+
+export const THEME_BASE_FONT_SIZE_MIN = 12;
+export const THEME_BASE_FONT_SIZE_MAX = 20;
+
+export const ThemeConfigSchema = z.object({
+  preset: ThemeKeySchema,
+  surface950: HexColorSchema,
+  surface900: HexColorSchema,
+  surface800: HexColorSchema,
+  surface700: HexColorSchema,
+  surface600: HexColorSchema,
+  fgPrimary: HexColorSchema,
+  fgSecondary: HexColorSchema,
+  fgMuted: HexColorSchema,
+  fgDisabled: HexColorSchema,
+  accent: HexColorSchema,
+  neonCyan: HexColorSchema,
+  neonPurple: HexColorSchema,
+  neonPink: HexColorSchema,
+  /** Pattern registry key, or "none" for no pattern layer. */
+  pattern: ThemeKeySchema,
+  patternColor: HexColorSchema,
+  patternOpacity: z.number().min(0).max(1),
+  /** Wallpaper image data itself never hits the wire — it stays in localStorage. */
+  wallpaper: z.boolean(),
+  radiusCard: z.number().min(0).max(32),
+  radiusUi: z.number().min(0).max(24),
+  avatarShape: z.enum(["circle", "squircle", "square"]),
+  selectionStyle: z.enum(["bar", "glow", "border", "fill", "underline"]),
+  /** Font registry key (e.g. "inter"), not a raw CSS stack. */
+  fontFamily: ThemeKeySchema,
+  baseFontSize: z.number().int().min(THEME_BASE_FONT_SIZE_MIN).max(THEME_BASE_FONT_SIZE_MAX),
+  ambientMode: z.enum(["auto", "on", "off"]),
+  ambientEffect: ThemeKeySchema.nullable(),
+  accentMode: z.enum(["custom", "night-sync"]),
+});
+export type ThemeConfig = z.infer<typeof ThemeConfigSchema>;
+
 // ── Editable profile (read shape == PUT body) ──────────────────────────
 export const ProfileEditableSchema = z.object({
   tagline: z.string().max(PROFILE_TAGLINE_MAX).nullable(),
@@ -61,6 +108,14 @@ export const ProfileEditableSchema = z.object({
   favorites: z.array(GameSlugSchema).max(PROFILE_FAVORITES_MAX),
   wishlist: z.array(GameSlugSchema).max(PROFILE_WISHLIST_MAX),
   links: z.array(ProfileLinkSchema).max(PROFILE_LINKS_MAX),
+  /**
+   * Site theme; null = Classic (stock look). OPTIONAL on the wire so that
+   * pre-theme full-replace writers (the profile editor modal) can keep
+   * omitting it — the server preserves the stored theme when the field is
+   * absent and only overwrites on an explicit value/null. Reads always
+   * include it.
+   */
+  theme: ThemeConfigSchema.nullable().optional(),
 });
 export type ProfileEditable = z.infer<typeof ProfileEditableSchema>;
 

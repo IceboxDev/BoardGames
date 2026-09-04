@@ -10,7 +10,8 @@ import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persist
 // v4: admin purchase-vote tally rows gained a required `voterIds` — a
 //     rehydrated pre-v4 poll (validated only at fetch time) crashed the
 //     admin vote tab on `voterIds.length`.
-const BUSTER = "v4";
+// v5: persisted profile snapshots gained `profile.theme` (site theming).
+const BUSTER = "v5";
 
 export const queryPersister =
   typeof window === "undefined"

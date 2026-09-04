@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { ArrowRightIcon, LockIcon, UserIcon, UsersIcon } from "../components/icons";
+import { ArrowRightIcon, LockIcon, SparkleIcon, UserIcon, UsersIcon } from "../components/icons";
 import CalendarSyncCard from "../components/profile/CalendarSyncCard";
 import CalendarSyncModal from "../components/profile/CalendarSyncModal";
 import { TopNav, TopNavLink } from "../components/TopNav";
@@ -85,6 +85,19 @@ export default function ProfilePage() {
           />
         </div>
       )}
+
+      {/* Deliberately OUTSIDE the `profilesVisible` gate above: appearance is
+          not a profile-visibility concern, and this card is the only route
+          into /settings — inside the gate, online-only members could never
+          reach their own theme settings. */}
+      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+        <NavCard
+          icon={<SparkleIcon className="h-4 w-4" />}
+          title="Appearance"
+          subtitle="Themes, colors & effects"
+          onClick={() => navigate("/settings")}
+        />
+      </div>
 
       <CalendarSyncCard onClick={() => setSyncModalOpen(true)} />
 

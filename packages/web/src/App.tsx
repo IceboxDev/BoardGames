@@ -17,6 +17,7 @@ import { PageViewTracker } from "./components/PageViewTracker";
 import { RouteErrorBoundary } from "./components/RouteErrorBoundary";
 import { queryClient } from "./lib/query-client";
 import { queryPersistBuster, queryPersister } from "./lib/query-persister";
+import { ThemeProvider } from "./lib/theme/provider";
 
 const LoginPage = lazy(() => import("./pages/LoginPage"));
 const ResetPasswordPage = lazy(() => import("./pages/ResetPasswordPage"));
@@ -30,6 +31,7 @@ const PlayerNightsPage = lazy(() => import("./pages/PlayerNightsPage"));
 const PlayerSkillPage = lazy(() => import("./pages/PlayerSkillPage"));
 const GamesManagerPage = lazy(() => import("./pages/GamesManagerPage"));
 const PlayersDirectoryPage = lazy(() => import("./pages/PlayersDirectoryPage"));
+const SettingsPage = lazy(() => import("./pages/SettingsPage"));
 // Dev-only preview/gallery pages: guarded by `import.meta.env.DEV`, which is
 // statically `false` in production builds — the routes below vanish AND the
 // dead dynamic imports (and their chunks) are dropped by the bundler, so
@@ -121,7 +123,7 @@ const TournamentReplayRoute = lazy(() =>
  */
 function RootShell() {
   return (
-    <>
+    <ThemeProvider>
       <AuthInvalidator />
       <PageViewTracker />
       <GreetingGate />
@@ -130,7 +132,7 @@ function RootShell() {
           <Outlet />
         </Suspense>
       </RouteErrorBoundary>
-    </>
+    </ThemeProvider>
   );
 }
 
@@ -171,6 +173,15 @@ const router = createBrowserRouter(
         element={
           <AuthGuard mode="admin">
             <AdminPage />
+          </AuthGuard>
+        }
+      />
+
+      <Route
+        path="/settings"
+        element={
+          <AuthGuard mode="auth">
+            <SettingsPage />
           </AuthGuard>
         }
       />

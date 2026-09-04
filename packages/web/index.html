@@ -4,8 +4,57 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#0a0a0f" />
+    <!-- Follows the theme's surface-950; updated by the script below and by
+         lib/theme/apply.ts whenever the theme changes. -->
+    <meta name="theme-color" content="#08090d" />
     <title>Board Game Lab</title>
+    <script>
+      // Anti-flash: replay the saved theme onto :root BEFORE first paint so a
+      // themed session never flickers through the stock look. `bg-theme-v1`
+      // holds the config (absent = Classic = nothing to do); the resolved CSS
+      // vars it produces are mirrored under `bg-theme-vars-v1` by
+      // lib/theme/apply.ts, because this script cannot run the accent-ramp /
+      // pattern / font-registry resolution itself. Everything is best-effort:
+      // storage may be blocked, and React re-applies authoritatively on mount.
+      (() => {
+        try {
+          if (!localStorage.getItem("bg-theme-v1")) return;
+          const raw = localStorage.getItem("bg-theme-vars-v1");
+          if (!raw) return;
+          const saved = JSON.parse(raw);
+          if (!saved || typeof saved !== "object") return;
+          const root = document.documentElement;
+          const vars = saved.vars;
+          if (vars && typeof vars === "object") {
+            for (const name in vars) {
+              if (name.indexOf("--") === 0 && typeof vars[name] === "string") {
+                root.style.setProperty(name, vars[name]);
+              }
+            }
+          }
+          // The wallpaper image is stored once, under its own key, and is not
+          // duplicated into the vars payload — rebuild the layer from it.
+          if (saved.wallpaper === true) {
+            const img = localStorage.getItem("bg-theme-wallpaper-v1");
+            if (img && img.indexOf("data:image/") === 0) {
+              root.style.setProperty("--bg-pattern-image", `url("${img}")`);
+            }
+          }
+          if (typeof saved.fontSize === "string") root.style.fontSize = saved.fontSize;
+          const ds = saved.datasets;
+          if (ds && typeof ds === "object") {
+            if (typeof ds.selectStyle === "string") root.dataset.selectStyle = ds.selectStyle;
+            if (typeof ds.ambient === "string") root.dataset.ambient = ds.ambient;
+          }
+          if (typeof saved.themeColor === "string") {
+            const meta = document.querySelector('meta[name="theme-color"]');
+            if (meta) meta.setAttribute("content", saved.themeColor);
+          }
+        } catch {
+          /* storage blocked or corrupt — render the stock look */
+        }
+      })();
+    </script>
   </head>
   <body class="antialiased">
     <div id="root"></div>

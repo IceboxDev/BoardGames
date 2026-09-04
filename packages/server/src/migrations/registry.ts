@@ -41,6 +41,7 @@ import { skillRatings } from "./0033-skill-ratings.ts";
 import { skillGreetings } from "./0034-skill-greetings.ts";
 import { lockedDatesSoftUnlock } from "./0035-locked-dates-soft-unlock.ts";
 import { purchasePolls } from "./0036-purchase-polls.ts";
+import { userTheme } from "./0037-user-theme.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -80,6 +81,7 @@ export const migrations: readonly Migration[] = [
   skillGreetings,
   lockedDatesSoftUnlock,
   purchasePolls,
+  userTheme,
 ];
 
 /**
