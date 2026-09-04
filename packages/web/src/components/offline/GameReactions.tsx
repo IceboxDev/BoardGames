@@ -125,12 +125,13 @@ export default function GameReactions({
         const active = viewerSet.has(kind);
         const count = aggregate[kind];
         const activeStyle = active
-          ? {
-              borderColor: accentHex,
-              backgroundColor: accentHex,
-              color: "#fff",
-              boxShadow: `0 6px 16px -6px ${accentHex}aa`,
-            }
+          ? ({
+              "--accent": accentHex,
+              borderColor: `var(--accent, ${accentHex})`,
+              backgroundColor: `var(--accent, ${accentHex})`,
+              color: "white",
+              boxShadow: `0 6px 16px -6px color-mix(in srgb, var(--accent, ${accentHex}) 66.67%, transparent)`,
+            } as React.CSSProperties)
           : undefined;
         return (
           // Bespoke reaction widget — circular icon-toggle with a count

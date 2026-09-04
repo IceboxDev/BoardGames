@@ -1,3 +1,4 @@
+import type { CSSProperties } from "react";
 import type { GameDefinition } from "../../games/types";
 import { fitsRange } from "../../lib/bgg-format";
 
@@ -61,12 +62,15 @@ export function VariantStrip({
             className={`relative h-7 w-7 shrink-0 overflow-hidden rounded-full transition-transform ${
               isActive ? "scale-110" : "hover:scale-105"
             } ${interactive ? "" : "opacity-90"}`}
-            style={{
-              boxShadow: isActive
-                ? `0 0 0 2px ${m.accentHex}, 0 0 10px ${m.accentHex}99`
-                : "0 0 0 1px rgba(255,255,255,0.35), 0 0 6px rgba(0,0,0,0.6)",
-              opacity: isActive ? 1 : interactive ? 0.85 : 0.9,
-            }}
+            style={
+              {
+                "--accent": m.accentHex,
+                boxShadow: isActive
+                  ? `0 0 0 2px var(--accent, ${m.accentHex}), 0 0 10px color-mix(in srgb, var(--accent, ${m.accentHex}) 60%, transparent)`
+                  : "0 0 0 1px color-mix(in srgb, white 35%, transparent), 0 0 6px rgba(0,0,0,0.6)",
+                opacity: isActive ? 1 : interactive ? 0.85 : 0.9,
+              } as CSSProperties
+            }
           >
             <img
               src={m.thumbnail}

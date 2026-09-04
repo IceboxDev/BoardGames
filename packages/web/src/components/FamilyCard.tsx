@@ -1,4 +1,3 @@
-import type { CSSProperties } from "react";
 import type { FamilyInfo } from "../games/families";
 import type { GameDefinition } from "../games/types";
 import { GameCardBody, GameCardChrome, GameCardMeta, GameCardThumb, VariantsBadge } from "./game";
@@ -81,11 +80,6 @@ export default function FamilyCard({
                 className={`relative h-8 w-8 shrink-0 overflow-hidden rounded-md bg-surface-800 ${
                   isCanonical ? "ring-2" : "ring-1 ring-white/10"
                 }`}
-                style={
-                  isCanonical
-                    ? ({ "--accent-ring": canonical.accentHex } as CSSProperties)
-                    : undefined
-                }
               >
                 <img
                   src={m.thumbnail}
@@ -99,7 +93,7 @@ export default function FamilyCard({
                   <span
                     aria-hidden="true"
                     className="absolute inset-0 rounded-md ring-2"
-                    style={{ boxShadow: `inset 0 0 0 2px ${canonical.accentHex}` }}
+                    style={{ boxShadow: `inset 0 0 0 2px var(--accent, ${canonical.accentHex})` }}
                   />
                 )}
               </span>

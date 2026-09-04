@@ -10,6 +10,7 @@ import {
 } from "@boardgames/core/protocol";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { type CSSProperties, useId, useState } from "react";
+import { Link } from "react-router-dom";
 import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { ApiError, SchemaError } from "../../lib/api-fetch.ts";
 import { updateMyProfile } from "../../lib/profile.ts";
@@ -212,6 +213,13 @@ export function EditProfileModal({ userId, initial, onClose }: EditProfileModalP
                   Default
                 </Chip>
               </div>
+              <p className="mt-2 text-2xs text-fg-muted">
+                Full appearance settings live in{" "}
+                <Link to="/settings" className="text-accent-300 underline-offset-2 hover:underline">
+                  Settings
+                </Link>
+                .
+              </p>
             </FieldGroup>
 
             <FieldGroup
