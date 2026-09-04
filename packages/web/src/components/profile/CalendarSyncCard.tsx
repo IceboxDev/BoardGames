@@ -54,10 +54,12 @@ function SyncStatus({ connected }: { connected: boolean }) {
     );
   }
   return (
-    <span className="inline-flex min-w-0 items-center gap-2 text-xs text-emerald-300">
+    // `ok` rather than raw emerald: "connected" is a status, and a fixed neon
+    // green sat outside every themed palette (see lib/theme/semantic.ts).
+    <span className="inline-flex min-w-0 items-center gap-2 text-xs text-ok">
       <span
         aria-hidden="true"
-        className="h-2 w-2 shrink-0 rounded-full bg-emerald-400 shadow-glow-emerald"
+        className="h-2 w-2 shrink-0 rounded-full bg-ok-strong shadow-[0_0_12px_-4px] shadow-ok-strong/50"
       />
       <span className="truncate">
         Connected
