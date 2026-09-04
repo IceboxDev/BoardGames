@@ -58,6 +58,7 @@ function classify(pathname: string, search: string): { page: string; detail?: st
     return { page: "admin", detail: new URLSearchParams(search).get("tab") ?? "users" };
   }
   if (pathname === "/games") return { page: "games" };
+  if (pathname === "/settings") return { page: "appearance" };
   const play = pathname.match(/^\/play\/([^/]+)/);
   if (play) return { page: "play", detail: play[1] };
   // Profile sub-pages: detail = whose page was viewed. (`/u/:id` itself is

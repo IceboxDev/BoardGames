@@ -22,6 +22,7 @@ export type ActivityType =
   | "availability"
   | "profile-view"
   | "profile-update"
+  | "theme-update"
   | "avatar-save"
   | "calendar-feed-subscribe"
   | "calendar-feed-unsubscribe"

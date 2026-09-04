@@ -559,7 +559,14 @@ profileRoutes.put("/:userId", zJsonBody(ProfileUpdateInputSchema), async (c) => 
   // colour-tweaking session into a dozen identical `profile-update` rows in
   // the admin activity feed. Read the current row first and log only when a
   // field OTHER than the theme actually moved. One PK lookup on a rare write.
+  //
+  // The theme still earns its own trail entry, keyed on the PRESET rather than
+  // the config: that is the part worth reading back ("switched to Ocean"), and
+  // it self-throttles — dragging a colour slider re-saves a dozen times but
+  // lands on `custom` once. A null theme is Classic, the stock look.
+  const presetOf = (p: ProfileEditable): string => p.theme?.preset ?? "classic";
   let contentChanged = true;
+  let themePresetLog: string | null = null;
   if (themeProvided) {
     const existing = await db.execute({
       sql: `SELECT tagline, bio, pronouns, location, accent_hex,
@@ -576,10 +583,14 @@ profileRoutes.put("/:userId", zJsonBody(ProfileUpdateInputSchema), async (c) => 
         const withoutTheme = ({ theme: _theme, ...rest }: ProfileEditable) => rest;
         contentChanged =
           JSON.stringify(withoutTheme(before)) !== JSON.stringify(withoutTheme(normalized));
+        if (presetOf(before) !== presetOf(normalized)) themePresetLog = presetOf(normalized);
       } catch (err) {
         if (!(err instanceof RowParseError)) throw err;
         // Unreadable row — fall back to logging, which is the safe default.
       }
+    } else if (presetOf(normalized) !== "classic") {
+      // First-ever save. Classic is where everyone starts, so it is not news.
+      themePresetLog = presetOf(normalized);
     }
   }
 
@@ -614,6 +625,7 @@ profileRoutes.put("/:userId", zJsonBody(ProfileUpdateInputSchema), async (c) => 
     ],
   });
   if (contentChanged) logActivity(user.id, "profile-update", {});
+  if (themePresetLog) logActivity(user.id, "theme-update", { preset: themePresetLog });
 
   return c.json(ProfileEditableSchema.parse(normalized));
 });

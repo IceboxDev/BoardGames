@@ -463,6 +463,8 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
       return `Viewed ${targetName ?? "a member"}'s profile`;
     case "profile-update":
       return "Updated their profile";
+    case "theme-update":
+      return describeThemeUpdate(str(meta.preset));
     case "avatar-save":
       return targetName ? `Updated ${targetName}'s avatar` : "Updated their avatar";
     case "calendar-feed-subscribe":
@@ -562,6 +564,18 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
   }
 }
 
+/**
+ * Human line for a `theme-update`. The server logs the preset KEY, which the
+ * appearance page owns — a preset added there must not need an edit here, so
+ * an unknown key just title-cases (`solarized` → "Solarized").
+ */
+function describeThemeUpdate(preset: string | undefined): string {
+  if (!preset) return "Changed their theme";
+  if (preset === "classic") return "Went back to the Classic theme";
+  if (preset === "custom") return "Customized their theme";
+  return `Switched to the ${preset.charAt(0).toUpperCase()}${preset.slice(1)} theme`;
+}
+
 /** Human line for a `page-view` beacon. Unknown pages degrade to "Viewed <page>". */
 function describePageView(meta: Record<string, unknown>, nameById: Map<string, string>): string {
   const page = str(meta.page) ?? "a page";
@@ -580,6 +594,8 @@ function describePageView(meta: Record<string, unknown>, nameById: Map<string, s
       return "Browsed the games catalog";
     case "players":
       return "Viewed the players list";
+    case "appearance":
+      return "Opened appearance settings";
     case "history":
       return "Viewed the match history";
     case "admin":
@@ -647,6 +663,7 @@ function dotClass(type: string): string {
       return "bg-accent-400/70";
     case "profile-view":
     case "profile-update":
+    case "theme-update":
     case "avatar-save":
       return "bg-fuchsia-400/70";
     case "night-locked":
