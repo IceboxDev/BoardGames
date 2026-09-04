@@ -1,0 +1,167 @@
+/* Petals ambient effect — transform/opacity only, no blur. Each petal is a
+   wrapper (flutter fall: translate + rotate, transform-only) around an inner
+   shape that owns the fade and the optional perspective tumble. The wrapper's
+   opacity stays 1 — an animated (grouping) opacity there would flatten the
+   preserve-3d chain and turn the rotateX tumble into a flat squash.
+
+   Fall travel is in vh: the ambient layer mounts fixed inset-0, so the
+   viewport IS the container. */
+
+.amb-petals {
+  perspective: 800px;
+}
+
+.amb-petal {
+  position: absolute;
+  top: -25px;
+  transform-style: preserve-3d;
+}
+
+.amb-petal-shape {
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 50% 50% 0;
+  opacity: 0;
+  transform: rotate(var(--amb-rot, 0deg));
+}
+
+/* Settled petals rest at the bottom with no animation at all — they double as
+   the static remnant under prefers-reduced-motion. */
+.amb-petal-settled {
+  position: absolute;
+  bottom: 3%;
+  border-radius: 50% 50% 50% 0;
+  background: color-mix(in srgb, var(--color-neon-pink) 28%, transparent);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .amb-petal-a {
+    animation: amb-petal-flutter var(--amb-dur, 8s) ease-in-out var(--amb-delay, 0s) infinite;
+  }
+
+  .amb-petal-b {
+    animation: amb-petal-flutter-wide var(--amb-dur, 9s) ease-in-out var(--amb-delay, 0s) infinite;
+  }
+
+  .amb-petal-c {
+    animation: amb-petal-flutter-narrow var(--amb-dur, 11s) ease-in-out var(--amb-delay, 0s)
+      infinite;
+  }
+
+  .amb-petal-shape {
+    animation: amb-petal-fade var(--amb-dur, 8s) ease-in-out var(--amb-delay, 0s) infinite;
+  }
+}
+
+/* The tumble is a desktop garnish: below 1024px it is dropped entirely, and
+   the small-petal tier goes with it, roughly halving the phone's animation
+   count (mirroring the aurora/embers mobile trims). */
+@media (prefers-reduced-motion: no-preference) and (min-width: 1024px) {
+  .amb-petal-tumble {
+    animation:
+      amb-petal-fade var(--amb-dur, 8s) ease-in-out var(--amb-delay, 0s) infinite,
+      amb-petal-tumble var(--amb-tumble-dur, 3s) linear infinite;
+  }
+}
+
+@media (max-width: 1023.98px) {
+  .amb-petal-a {
+    display: none;
+  }
+}
+
+@keyframes amb-petal-fade {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.5;
+  }
+  40% {
+    opacity: 0.75;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes amb-petal-flutter {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  5% {
+    transform: translateY(5vh) translateX(8px) rotate(18deg);
+  }
+  20% {
+    transform: translateY(20vh) translateX(30px) rotate(72deg);
+  }
+  40% {
+    transform: translateY(40vh) translateX(-20px) rotate(144deg);
+  }
+  60% {
+    transform: translateY(60vh) translateX(25px) rotate(216deg);
+  }
+  80% {
+    transform: translateY(80vh) translateX(-15px) rotate(288deg);
+  }
+  100% {
+    transform: translateY(105vh) translateX(10px) rotate(360deg);
+  }
+}
+
+@keyframes amb-petal-flutter-wide {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  5% {
+    transform: translateY(5vh) translateX(12px) rotate(22deg);
+  }
+  20% {
+    transform: translateY(20vh) translateX(50px) rotate(90deg);
+  }
+  40% {
+    transform: translateY(40vh) translateX(-40px) rotate(180deg);
+  }
+  60% {
+    transform: translateY(60vh) translateX(45px) rotate(270deg);
+  }
+  80% {
+    transform: translateY(80vh) translateX(-30px) rotate(330deg);
+  }
+  100% {
+    transform: translateY(105vh) translateX(20px) rotate(400deg);
+  }
+}
+
+@keyframes amb-petal-flutter-narrow {
+  0% {
+    transform: translateY(0) translateX(0) rotate(0deg);
+  }
+  5% {
+    transform: translateY(5vh) translateX(3px) rotate(17deg);
+  }
+  25% {
+    transform: translateY(25vh) translateX(12px) rotate(60deg);
+  }
+  50% {
+    transform: translateY(50vh) translateX(-10px) rotate(140deg);
+  }
+  75% {
+    transform: translateY(75vh) translateX(8px) rotate(240deg);
+  }
+  100% {
+    transform: translateY(105vh) translateX(-5px) rotate(340deg);
+  }
+}
+
+@keyframes amb-petal-tumble {
+  0% {
+    transform: rotate(var(--amb-rot, 0deg)) rotateX(0deg);
+  }
+  100% {
+    transform: rotate(var(--amb-rot, 0deg)) rotateX(360deg);
+  }
+}

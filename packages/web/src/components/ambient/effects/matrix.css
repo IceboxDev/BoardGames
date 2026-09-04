@@ -1,0 +1,60 @@
+/* Matrix rain ambient effect — one animated element per column, transform
+   only. The vertical glyph gradient (tail in faded accent, head in neon cyan
+   at the bottom) and the alpha mask both paint once and ride the transform.
+
+   Fall travel is in vh: the ambient layer mounts fixed inset-0, so the
+   viewport IS the container. Under prefers-reduced-motion the columns are
+   hidden outright (frozen glyph strings pinned to the top read as a glitch,
+   not a remnant) and the static cyan wash below stands in for the effect. */
+
+.amb-matrix-wash {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--color-neon-cyan) 7%, transparent),
+    transparent 60%
+  );
+}
+
+.amb-matrix-col {
+  position: absolute;
+  top: 0;
+  white-space: pre;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  line-height: 14px;
+  opacity: 0.65;
+  color: transparent;
+  background-image: linear-gradient(
+    to bottom,
+    color-mix(in srgb, var(--color-accent-400) 40%, transparent),
+    var(--color-accent-400) 72%,
+    var(--color-neon-cyan)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-mask-image: linear-gradient(to bottom, transparent, rgb(0 0 0 / 0.9) 60%, black);
+  mask-image: linear-gradient(to bottom, transparent, rgb(0 0 0 / 0.9) 60%, black);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .amb-matrix-col {
+    animation: amb-matrix-fall var(--amb-dur, 8s) linear var(--amb-delay, 0s) infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .amb-matrix-col {
+    display: none;
+  }
+}
+
+@keyframes amb-matrix-fall {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
