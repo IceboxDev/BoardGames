@@ -1,0 +1,118 @@
+/* Ambient starfield (cheap tier).
+ *
+ * HOST: the theme engine mounts effects in a FIXED, inset-0, viewport-locked
+ * layer, so vh-based travel and full-bleed geometry are measured against the
+ * viewport by construction. `contain: strict` keeps this decorative subtree
+ * out of the page's layout and paint work.
+ *
+ * PERFORMANCE: transform/opacity only. The 62 stars are STATIC children of
+ * three animated tier containers, so the sky drifts as three parallax planes
+ * (3 animated layers, not 62); only the ~18 twinkling stars animate on their
+ * own. No filter, no background-position, no rAF.
+ *
+ * REDUCED MOTION: the static remnant is designed, not a frozen first frame —
+ * every star and both constellation elements (lines AND their vertex stars)
+ * render at full strength, so the composition reads as a complete night sky
+ * that simply isn't moving.
+ */
+
+.amb-starfield {
+  contain: strict;
+}
+
+.amb-constellation-star {
+  fill: var(--color-accent-400);
+  fill-opacity: 0.5;
+}
+
+.amb-star-tier {
+  position: absolute;
+  inset: 0;
+}
+
+.amb-star {
+  position: absolute;
+  border-radius: 9999px;
+  opacity: var(--amb-star-opacity, 0.5);
+}
+
+.amb-star-tier--slow .amb-star {
+  background: var(--color-fg-muted);
+}
+
+.amb-star-tier--med .amb-star {
+  background: var(--color-accent-400);
+}
+
+.amb-star-tier--fast .amb-star {
+  background: var(--color-neon-cyan);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .amb-star-tier--slow {
+    animation: amb-star-drift-slow 12s ease-in-out infinite alternate;
+  }
+
+  .amb-star-tier--med {
+    animation: amb-star-drift 7s ease-in-out infinite alternate;
+  }
+
+  .amb-star-tier--fast {
+    animation: amb-star-drift-fast 5s ease-in-out infinite alternate;
+  }
+
+  .amb-star--twinkle {
+    animation: amb-star-twinkle 4s ease-in-out var(--amb-twinkle-delay, 0s) infinite;
+  }
+}
+
+/* Phones composite fewer layers: below 1024px the dim tier (24 one-pixel
+   stars at 0.2 opacity) drops out as a single container — imperceptible at
+   that size, and it removes both a parallax plane and its children. */
+@media (max-width: 1023px) {
+  .amb-star-tier--slow {
+    display: none;
+  }
+}
+
+@keyframes amb-star-drift-slow {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(3px, -4px);
+  }
+}
+
+@keyframes amb-star-drift {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(8px, -12px);
+  }
+}
+
+@keyframes amb-star-drift-fast {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(14px, -20px);
+  }
+}
+
+/* Rest at the star's own base opacity and peak PROPORTIONALLY to it, so a
+   dim star brightens like a dim star instead of flashing to full white the
+   way an absolute peak of 1 would. (Values above 1 clamp, which is what caps
+   the brightest tier.) An opacity-only stand-in for the original's
+   brightness-filter twinkle. */
+@keyframes amb-star-twinkle {
+  0%,
+  100% {
+    opacity: var(--amb-star-opacity, 0.5);
+  }
+  50% {
+    opacity: calc(var(--amb-star-opacity, 0.5) * 1.8);
+  }
+}

@@ -1,0 +1,81 @@
+/* Ambient scanlines (cheap tier).
+ *
+ * HOST: the theme engine mounts effects in a FIXED, inset-0, viewport-locked
+ * layer, so the sweeps' vh-based travel is measured against the viewport by
+ * construction. `contain: strict` keeps this decorative subtree out of the
+ * page's layout and paint work.
+ *
+ * PERFORMANCE: transform/opacity only. The CRT line texture is a static
+ * repeating gradient that is never animated (no background-position loop),
+ * and the two sweep bands animate transform — the original animated `top`,
+ * which forces layout every frame.
+ *
+ * REDUCED MOTION: the static remnant is designed, not a frozen first frame —
+ * the bands rest at two different heights INSIDE the frame (a soft highlight
+ * high on the screen, the chroma band lower down) so the still composition
+ * reads as a CRT caught mid-refresh, rather than the empty texture you would
+ * get by parking them at the loop's off-screen start.
+ */
+
+.amb-scanlines {
+  contain: strict;
+}
+
+.amb-scanline-texture {
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    var(--color-accent-400) 2px,
+    var(--color-accent-400) 3px
+  );
+  opacity: 0.04;
+}
+
+.amb-scanline-band {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 8rem;
+  background: color-mix(in srgb, var(--color-accent-400) 5%, transparent);
+  transform: translateY(28vh);
+}
+
+.amb-scanline-chroma {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4rem;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--color-neon-pink) 4%, transparent),
+    color-mix(in srgb, var(--color-neon-cyan) 4%, transparent),
+    color-mix(in srgb, var(--color-neon-pink) 4%, transparent)
+  );
+  transform: translateY(64vh);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .amb-scanline-band {
+    animation: amb-sweep-down 3s linear infinite;
+  }
+
+  .amb-scanline-chroma {
+    animation: amb-sweep-down 5s linear infinite;
+  }
+}
+
+/* From just above the frame to just past its bottom; the root's
+   overflow-hidden clips the overshoot. */
+@keyframes amb-sweep-down {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
+}
