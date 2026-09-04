@@ -370,6 +370,22 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "serial test run to lock packaging weights and dimensions per pledge tier.",
         sourceUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova/updates/32",
       },
+      {
+        id: "ark-nova-3dition-e06",
+        occurredOn: "2026-09-03",
+        type: "campaign-update",
+        title: "Miniature tooling due this month; three components clear tool production",
+        details:
+          "The manufacturer expects the 3D-miniature tools — the stated bottleneck — finished " +
+          "this month, with the first pre-mass-production minis shown at Essen SPIEL 2026 " +
+          "(booth 3N410). Against July's table, prototype release is now done for the " +
+          "miniatures, arcade promo, acrylic tiles, BGA maps and deluxe player board, and " +
+          "tool production for sleeves, neoprene maps and the arcade promo; coins and the " +
+          "coffee cup are still in prototyping, with coin colours and the mug's green not " +
+          "final. Every component still starts fulfilment at the end of 2026 and nothing has " +
+          "entered series production.",
+        sourceUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova/updates/33",
+      },
     ],
   },
   {
