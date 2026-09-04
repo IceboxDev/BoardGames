@@ -3,7 +3,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { type ChangeEvent, useEffect, useId, useMemo, useState } from "react";
 import { games } from "../../games/registry.ts";
 import { ApiError, SchemaError } from "../../lib/api-fetch.ts";
-import { fileToDownscaledDataUri } from "../../lib/downscale-image.ts";
+import { fileToAvatarDataUri, fileToDownscaledDataUri } from "../../lib/downscale-image.ts";
 import { fetchAvatarJob, generateAvatar, saveAvatar } from "../../lib/profile.ts";
 import { qk } from "../../lib/query-keys.ts";
 import { CameraIcon, SearchIcon } from "../icons";
@@ -49,6 +49,9 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
   const [comments, setComments] = useState("");
   const [gameSearch, setGameSearch] = useState("");
   const [generated, setGenerated] = useState<string | null>(null);
+  // Which path produced the preview — the secondary button means "try the
+  // model again" for one and "pick a different file" for the other.
+  const [previewSource, setPreviewSource] = useState<"generated" | "uploaded">("generated");
   const [error, setError] = useState<string | null>(null);
 
   const filteredGames = useMemo(() => {
@@ -95,6 +98,7 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
     const data = jobQuery.data;
     if (data?.status === "done" && data.image) {
       setGenerated(data.image);
+      setPreviewSource("generated");
       setPhase("preview");
       setJobId(null);
     } else if (data?.status === "error") {
@@ -126,6 +130,23 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
       setReferenceImage(await fileToDownscaledDataUri(file));
     } catch {
       setError("Couldn't read that image — try a different file.");
+    }
+  }
+
+  // Upload path: a finished picture skips generation entirely and lands
+  // straight in the preview, so it shares the same confirm/save step.
+  async function handleFinishedUpload(e: ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setError(null);
+    try {
+      setGenerated(await fileToAvatarDataUri(file));
+      setPreviewSource("uploaded");
+      setPhase("preview");
+    } catch (err) {
+      setError(
+        err instanceof Error ? err.message : "Couldn't read that image — try a different file.",
+      );
     }
   }
 
@@ -164,7 +185,7 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
               onClick={() => setPhase("form")}
               disabled={saveMutation.isPending}
             >
-              Regenerate
+              {previewSource === "uploaded" ? "Choose another" : "Regenerate"}
             </Button>
           </div>
         </div>
@@ -284,6 +305,35 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
               onChange={(e) => setComments(e.target.value)}
             />
           </Field>
+
+          {/* Bring-your-own path. Generation runs on a paid image model, so it
+              can be unavailable (no gateway credits) while the rest of the app
+              is fine — and a picture made in ChatGPT, drawn by an illustrator,
+              or just a good photo is an equally valid avatar. Converted to the
+              webp the save route demands and dropped into the SAME preview
+              step, so confirming works identically either way. */}
+          <div className="flex items-center gap-3 pt-1">
+            <span className="h-px flex-1 bg-white/10" />
+            <span className="text-3xs uppercase tracking-label text-fg-muted">or</span>
+            <span className="h-px flex-1 bg-white/10" />
+          </div>
+          <FieldGroup label="Already have a picture?">
+            <label className="flex cursor-pointer items-center gap-3 rounded-lg border border-dashed border-white/15 bg-surface-900/60 p-3 transition hover:border-accent-400/40">
+              {/* biome-ignore lint/correctness/noRestrictedElements: sr-only file input behind the styled dropzone — no visible chrome to drift */}
+              <input
+                type="file"
+                accept="image/*"
+                onChange={handleFinishedUpload}
+                className="sr-only"
+              />
+              <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-md bg-surface-800 text-fg-muted">
+                <CameraIcon />
+              </span>
+              <span className="text-sm text-fg-secondary">
+                Upload a finished profile picture — skips generation
+              </span>
+            </label>
+          </FieldGroup>
         </ModalBody>
       )}
 
