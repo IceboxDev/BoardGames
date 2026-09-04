@@ -57,7 +57,11 @@ const STATUS: Follow = { hue: 0.45, sat: 0.55, light: 0.35 };
 // `driftSat` is what makes a far-travelled palette read as a banked ember
 // rather than a fire alarm: the further the accent moves, the more the flame
 // gives up its full-blast saturation.
-const HEAT: Follow = { hue: 0.35, sat: 0.4, light: 0.25, driftSat: 0.28, driftLight: 0.05 };
+// `hue: 0.12` is deliberately timid. At 0.35 a pink accent dragged the flame
+// from orange to 57° and Sakura burned yellow — fire reads as fire over a very
+// narrow hue range, so it barely tracks the palette on its own. The band's
+// swing (above) is what handles the real problem case, a warm accent.
+const HEAT: Follow = { hue: 0.12, sat: 0.4, light: 0.25, driftSat: 0.28, driftLight: 0.05 };
 // A sealed night is the accent family by construction — track it 1:1, but pull
 // the trio onto one hue and deepen it as the accent travels, so it lands on a
 // dark gold rather than a bright olive.
