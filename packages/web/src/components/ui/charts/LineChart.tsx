@@ -1,6 +1,7 @@
 import { useState } from "react";
 import type { Tone } from "../tones";
 import { resolveChartColor } from "./tone-hex";
+import { useThemeVersion } from "./use-theme-version";
 
 interface DataPoint {
   x: number;
@@ -30,6 +31,7 @@ export function LineChart({
   height = 200,
   invertY = false,
 }: LineChartProps) {
+  useThemeVersion(); // re-render on themechange so the stroke re-resolves
   const [hoverIdx, setHoverIdx] = useState<number | null>(null);
   const stroke = resolveChartColor(color, tone);
 

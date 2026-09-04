@@ -1,5 +1,6 @@
 import type { Tone } from "../tones";
 import { resolveChartColor } from "./tone-hex";
+import { useThemeVersion } from "./use-theme-version";
 
 interface Segment {
   value: number;
@@ -32,6 +33,7 @@ export function BarChartH({
   formatValue = String,
   labelWidthClassName = "w-8",
 }: BarChartHProps) {
+  useThemeVersion(); // re-render on themechange so segment fills re-resolve
   const computedMax =
     maxValue ?? Math.max(...bars.map((b) => b.segments.reduce((s, seg) => s + seg.value, 0)), 1);
 
