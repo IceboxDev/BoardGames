@@ -86,12 +86,21 @@ function injectPacStyles() {
   if (pacStylesInjected) return;
   pacStylesInjected = true;
   // The `pac-container` is appended to <body> by Google Places, outside the
-  // modal portal. Keep it above the modal (z-index 200) and themed dark to
-  // match the app.
+  // modal portal. Stack it above the modal layer via the --z-tooltip token —
+  // a runtime-injected <style> resolves :root vars fine, so --z-* works here.
+  //
+  // The COLORS stay literal, and NOT because they're off-palette: the item
+  // text is exactly gray-200, the border exactly white/10. This block never
+  // passes through Tailwind's compiler, so the palette vars it would
+  // reference are only emitted while some *compiled class elsewhere* happens
+  // to use them — a var this file alone depends on can vanish when an
+  // unrelated component drops a class. --z-* are hand-declared in index.css's
+  // @theme and always present, hence the asymmetry. (The bg is a near-miss
+  // anyway: 2/255 off surface-900.)
   const style = document.createElement("style");
   style.textContent = `
     .pac-container {
-      z-index: 300 !important;
+      z-index: var(--z-tooltip, 300) !important;
       background: rgb(15 17 21 / 0.96);
       border: 1px solid rgb(255 255 255 / 0.1);
       border-radius: 0.75rem;
