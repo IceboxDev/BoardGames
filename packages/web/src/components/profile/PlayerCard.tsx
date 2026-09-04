@@ -27,14 +27,25 @@ export function PlayerCard({ player }: PlayerCardProps) {
         {player.name}
       </p>
       {player.tagline && <p className="line-clamp-2 text-xs text-fg-muted">{player.tagline}</p>}
-      <div className="mt-auto flex flex-wrap items-center justify-center gap-1.5 pt-1">
+      {/* Two FIXED rows, never a wrapping one. The next-night badge only some
+          players have used to wrap onto a second line and make those tiles
+          taller than the rest of the grid row. The slot is always rendered and
+          merely hidden when empty, so its height comes from a real Badge and
+          can't drift if Badge's padding or type size changes. */}
+      <div className="mt-auto flex w-full flex-col items-center gap-1.5 pt-1">
         <Badge tone="neutral" size="xs" icon={<GalleryIcon className="h-3 w-3" />}>
           {player.gamesOwned} games
         </Badge>
-        {player.nextNightDateKey && (
+        {player.nextNightDateKey ? (
           <Badge tone="accent" size="xs">
             {formatDayKey(player.nextNightDateKey)}
           </Badge>
+        ) : (
+          <span aria-hidden="true" className="invisible">
+            <Badge tone="accent" size="xs">
+              —
+            </Badge>
+          </span>
         )}
       </div>
     </InteractiveCard>
