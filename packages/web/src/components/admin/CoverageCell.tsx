@@ -1,7 +1,4 @@
 import type { Coverage } from "../../pages/admin-coverage";
-// Leaf import: this file wants one tone→hex helper, not the chart primitives,
-// so it names the module that has it rather than the barrel.
-import { chartHex } from "../ui/charts/tone-hex";
 import { coverageBreakdown, coveragePercent } from "./coverage-summary";
 
 // Coverage colors. The dot echoes the calendar's two-status semantics —
@@ -9,15 +6,18 @@ import { coverageBreakdown, coveragePercent } from "./coverage-summary";
 // paints maybe in yellow-400/amber-300 and AvailabilityDrawer's legend uses
 // accent-300/amber-300.
 //   accent-400  → "can"
-//   chart amber → "maybe"  (NB: chartHex("accent") is accent-500 / #6366f1,
-//                           a darker step than this dot's accent-400 — do not
-//                           "symmetrize" COLOR_CAN to it.)
+//   warn        → "maybe"
 //   surface gray → unmarked
-// The var fallback mirrors --color-accent-400 in index.css — keep the two in
-// sync (same contract as lib/accent.ts's DEFAULT_ACCENT). It matters because a
-// bare var() that failed to resolve would void the whole conic-gradient.
+// Each var fallback mirrors index.css — keep the two in sync (same contract as
+// lib/accent.ts's DEFAULT_ACCENT). It matters because a bare var() that failed
+// to resolve would void the whole conic-gradient.
+//
+// "maybe" reads `--color-warn`, NOT a fixed amber: the two slices sit edge to
+// edge in a 14px disc, so on an amber-accented theme a hardcoded yellow beside
+// a yellow accent made the pie a single unreadable blob. semantic.ts keeps the
+// warn family at least 30° off the accent hue precisely for this pairing.
 const COLOR_CAN = "var(--color-accent-400, #818cf8)";
-const COLOR_MAYBE = chartHex("amber");
+const COLOR_MAYBE = "var(--color-warn, #fbbf24)";
 // The v3-era gray-700 the unmarked slice has always used. Deliberately NOT
 // `var(--color-gray-700)`: Tailwind v4's oklch palette resolves that variable
 // to rgb(54,65,83), not this exact value, and no surface/fg token matches it.
