@@ -2,7 +2,6 @@ import type { CSSProperties } from "react";
 import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { cn } from "../../lib/cn";
 import { initialsFromName } from "../../lib/names.ts";
-import { AVATAR_RADIUS } from "./radii";
 
 // Avatar primitive: renders the user's `image` when present, otherwise an
 // initials monogram (first + last initial, via the shared `initialsFromName`).
@@ -17,6 +16,11 @@ import { AVATAR_RADIUS } from "./radii";
 // Callers whose payload carries no `image` (the calendar `Attendee` wire type)
 // simply get the monogram; when the server starts sending `image` on those
 // endpoints, they light up here with no call-site change.
+//
+// The circle is NOT themable. Avatar art is generated pre-cropped to a circle,
+// so a squircle/square theme sliced the corners off real faces — the theme
+// engine used to drive this via `--avatar-radius` and no longer does. Every
+// other corner in the app still themes through radii.ts.
 
 export type AvatarSize = "xs" | "sm" | "md" | "lg" | "xl";
 
@@ -60,7 +64,7 @@ export function Avatar({
         loading="lazy"
         decoding="async"
         style={style}
-        className={cn(sizeCls, ringCls, AVATAR_RADIUS, "shrink-0 object-cover", className)}
+        className={cn(sizeCls, ringCls, "shrink-0 rounded-full object-cover", className)}
       />
     );
   }
@@ -73,8 +77,7 @@ export function Avatar({
       className={cn(
         sizeCls,
         ringCls,
-        AVATAR_RADIUS,
-        "inline-flex shrink-0 items-center justify-center bg-[var(--avatar-accent)]/20 font-bold uppercase text-[var(--avatar-accent)]",
+        "inline-flex shrink-0 items-center justify-center rounded-full bg-[var(--avatar-accent)]/20 font-bold uppercase text-[var(--avatar-accent)]",
         className,
       )}
     >

@@ -22,12 +22,10 @@ import { loadWallpaper, saveResolvedVars } from "./storage.ts";
 // byte-identical to the pre-theming app (clean :root, no datasets, stock root
 // font size).
 
-const AVATAR_RADIUS: Record<ThemeConfig["avatarShape"], string> = {
-  circle: "9999px",
-  squircle: "22%",
-  square: "4px",
-};
-
+// Avatar corners are deliberately absent from everything below: profile
+// pictures are generated pre-cropped to a circle, so they stay round under
+// every theme (see components/ui/Avatar.tsx).
+//
 // Radius knobs ship as SCALE factors, not absolute radii: primitives keep
 // their distinct base radii and multiply by the factor
 // (`calc(<base> * var(--radius-…-scale, 1))`), so one knob can't collapse
@@ -66,7 +64,6 @@ const MANAGED_VARS = [
   "--bg-pattern-size",
   "--radius-card-scale",
   "--radius-ui-scale",
-  "--avatar-radius",
   "--scrollbar-thumb",
   "--scrollbar-thumb-hover",
 ] as const;
@@ -128,7 +125,6 @@ export function applyTheme(config: ThemeConfig): void {
     "--color-neon-cyan": config.neonCyan,
     "--color-neon-purple": config.neonPurple,
     "--color-neon-pink": config.neonPink,
-    "--avatar-radius": AVATAR_RADIUS[config.avatarShape],
     // The document scrollbar follows the text ramp (see index.css fallbacks).
     "--scrollbar-thumb": alphaRgb(config.fgPrimary, 0.12),
     "--scrollbar-thumb-hover": alphaRgb(config.fgPrimary, 0.22),

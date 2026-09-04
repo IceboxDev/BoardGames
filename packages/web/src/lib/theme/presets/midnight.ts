@@ -32,7 +32,6 @@ const midnight = {
     wallpaper: false,
     radiusCard: 14,
     radiusUi: 10,
-    avatarShape: "circle",
     selectionStyle: "glow",
     fontFamily: "inter",
     baseFontSize: 16,

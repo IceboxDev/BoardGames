@@ -25,7 +25,6 @@ export default {
     wallpaper: false,
     radiusCard: 0,
     radiusUi: 0,
-    avatarShape: "square",
     selectionStyle: "glow",
     fontFamily: "jetbrains",
     baseFontSize: 16,

@@ -87,7 +87,6 @@ export const ThemeConfigSchema = z.object({
   wallpaper: z.boolean(),
   radiusCard: z.number().min(0).max(32),
   radiusUi: z.number().min(0).max(24),
-  avatarShape: z.enum(["circle", "squircle", "square"]),
   selectionStyle: z.enum(["bar", "glow", "border", "fill", "underline"]),
   /** Font registry key (e.g. "inter"), not a raw CSS stack. */
   fontFamily: ThemeKeySchema,

@@ -8,7 +8,10 @@
 //                        segmented tracks/options) proportionally.
 //   --radius-card-scale  scales card/panel corners (Surface, InteractiveCard,
 //                        SelectableCard) proportionally.
-//   --avatar-radius      swaps the avatar shape wholesale (e.g. 30% squircle).
+//
+// Avatars are deliberately NOT in this list: profile pictures are generated
+// pre-cropped to a circle, so they stay `rounded-full` under every theme (see
+// Avatar.tsx). A themable `--avatar-radius` existed briefly and was removed.
 //
 // Scale factors — not absolute radii — so each site keeps its own base value
 // and the md/lg/xl/2xl hierarchy survives theming (nested corners, like a
@@ -31,5 +34,3 @@ export const RADIUS_CARD_MD = "rounded-[calc(var(--radius-card-scale,1)*0.375rem
 export const RADIUS_CARD_LG = "rounded-[calc(var(--radius-card-scale,1)*0.5rem)]";
 export const RADIUS_CARD_XL = "rounded-[calc(var(--radius-card-scale,1)*0.75rem)]";
 export const RADIUS_CARD_2XL = "rounded-[calc(var(--radius-card-scale,1)*1rem)]";
-
-export const AVATAR_RADIUS = "rounded-[var(--avatar-radius,9999px)]";

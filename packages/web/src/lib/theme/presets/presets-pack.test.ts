@@ -37,7 +37,6 @@ const CONFIG_KEYS = [
   "wallpaper",
   "radiusCard",
   "radiusUi",
-  "avatarShape",
   "selectionStyle",
   "fontFamily",
   "baseFontSize",
@@ -75,7 +74,6 @@ const PATTERN_KEYS = [
   "diamonds",
   "none",
 ];
-const AVATAR_SHAPES = ["circle", "squircle", "square"];
 const SELECTION_STYLES = ["bar", "glow", "border", "fill", "underline"];
 const FONT_FAMILIES = ["inter", "jetbrains"];
 
@@ -122,7 +120,6 @@ describe("theme presets pack", () => {
 
       it("uses known enum values", () => {
         expect(PATTERN_KEYS).toContain(preset.config.pattern);
-        expect(AVATAR_SHAPES).toContain(preset.config.avatarShape);
         expect(SELECTION_STYLES).toContain(preset.config.selectionStyle);
         expect(FONT_FAMILIES).toContain(preset.config.fontFamily);
         expect(preset.config.wallpaper).toBe(false);

@@ -25,7 +25,6 @@ export default {
     wallpaper: false,
     radiusCard: 10,
     radiusUi: 8,
-    avatarShape: "squircle",
     selectionStyle: "bar",
     fontFamily: "inter",
     baseFontSize: 16,

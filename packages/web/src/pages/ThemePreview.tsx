@@ -34,9 +34,9 @@ import {
 //
 // INERT KNOBS on this branch — they change no pixel yet, by design, and that
 // is not evidence of broken propagation:
-//   • `--radius-card-scale` / `--radius-ui-scale` / `--avatar-radius` — no
-//     consumer until the primitives unit's components/ui/radii.ts lands
-//     (Avatar still hardcodes `rounded-full`).
+//   • `--radius-card-scale` / `--radius-ui-scale` — no consumer until the
+//     primitives unit's components/ui/radii.ts lands. (Avatars are round
+//     under every theme by design and were never part of this set.)
 //   • `data-select-style` — the attribute is set on every section and by the
 //     gallery toolbar, but nothing reads it yet; it is here so the selector
 //     contract is exercised the moment the engine ships a consumer.

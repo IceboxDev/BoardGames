@@ -24,7 +24,6 @@ export default {
     wallpaper: false,
     radiusCard: 16,
     radiusUi: 14,
-    avatarShape: "circle",
     selectionStyle: "fill",
     fontFamily: "inter",
     baseFontSize: 16,

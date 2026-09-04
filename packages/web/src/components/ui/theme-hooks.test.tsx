@@ -3,20 +3,22 @@ import { describe, expect, it } from "vitest";
 import { Avatar } from "./Avatar";
 import { Chip } from "./Chip";
 import { Input } from "./Input";
-import { AVATAR_RADIUS, RADIUS_UI_LG } from "./radii";
+import { RADIUS_UI_LG } from "./radii";
 import { SegmentedControl } from "./SegmentedControl";
 import { SelectableCard } from "./SelectableCard";
 
 // The personalization theme hooks: primitives route their radii through the
-// scale-factor classes in radii.ts (`--radius-ui-scale` / `--radius-card-scale`
-// / `--avatar-radius`; unset ⇒ factor 1 / full round ⇒ pixel-identical) and
-// mark selected/active states with the stable `ui-selected` class that
-// select-styles.css targets per data-select-style.
+// scale-factor classes in radii.ts (`--radius-ui-scale` / `--radius-card-scale`;
+// unset ⇒ factor 1 ⇒ pixel-identical) and mark selected/active states with the
+// stable `ui-selected` class that select-styles.css targets per
+// data-select-style.
 
 describe("radius theme hooks", () => {
-  it("Avatar routes its shape through --avatar-radius with a full-round fallback", () => {
+  it("Avatar stays a circle — its shape is not themable", () => {
     render(<Avatar name="Ada Lovelace" />);
-    expect(screen.getByRole("img").className).toContain(AVATAR_RADIUS);
+    const cls = screen.getByRole("img").className;
+    expect(cls).toContain("rounded-full");
+    expect(cls).not.toContain("--avatar-radius");
   });
 
   it("Input routes its radius through the ui radius scale at its rounded-lg base", () => {
@@ -69,5 +71,21 @@ describe("ui-selected marker", () => {
     expect(screen.getByRole("button").className).toContain("ui-selected");
     rerender(<SelectableCard title="Opt" selected={false} onClick={() => {}} />);
     expect(screen.getByRole("button").className).not.toContain("ui-selected");
+  });
+
+  // The overlay host is a `relative` UTILITY, never a `position` declaration in
+  // the unlayered select-styles.css — there it outranked Tailwind and dragged
+  // self-positioned controls back into flow under glow/border/fill/underline.
+  // AvailabilityActionBar's pinned ADMIN / LOCK-IN chips are the real case:
+  // their `sm:absolute` must survive alongside the marker.
+  it("hosts the overlay with a utility a caller's own position can override", () => {
+    render(
+      <Chip pressed tone="amber" className="sm:absolute sm:right-3">
+        Lock-in
+      </Chip>,
+    );
+    const cls = screen.getByRole("button").className;
+    expect(cls).toContain("relative");
+    expect(cls).toContain("sm:absolute");
   });
 });

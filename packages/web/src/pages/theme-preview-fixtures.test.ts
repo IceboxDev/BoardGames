@@ -14,7 +14,6 @@ import {
 // here instead of silently parsing as an invalid CSS declaration.
 const HEX = /^#[0-9a-f]{6}$/;
 const SCALE = /^(?:0|0\.\d+|[1-9]\d*(?:\.\d+)?)$/;
-const AVATAR_RADIUS = /^(?:0px|9999px|(?:0\.\d+|[1-9]\d*(?:\.\d+)?)rem)$/;
 const GLOW = /^0 0 12px -4px color-mix\(in srgb, #[0-9a-f]{6} 50%, transparent\)$/;
 
 // Vitest runs with cwd = packages/web (vite transforms import.meta.url into a
@@ -48,8 +47,6 @@ describe("theme fixtures", () => {
           expect(value, label).toMatch(HEX);
         } else if (name === "--shadow-glow-accent") {
           expect(value, label).toMatch(GLOW);
-        } else if (name === "--avatar-radius") {
-          expect(value, label).toMatch(AVATAR_RADIUS);
         } else {
           // The two unitless radius scale multipliers.
           expect(value, label).toMatch(SCALE);
@@ -60,11 +57,8 @@ describe("theme fixtures", () => {
 
   // Guard against the fixture var NAMES drifting from the real design tokens:
   // every index.css-owned custom property this page overrides must exist
-  // there. `--radius-card-scale` / `--radius-ui-scale` / `--avatar-radius`
-  // are consumed by the primitives unit's `components/ui/radii.ts` (merged as
-  // PR #5, not yet on this branch), so they are exempt here — extending this
-  // cross-check against radii.ts once the branches merge is a listed
-  // follow-up in the PR body.
+  // there. `--radius-card-scale` / `--radius-ui-scale` are consumed by
+  // `components/ui/radii.ts` instead, so they are exempt here.
   it("uses var names that exist in index.css", () => {
     const css = readIndexCss();
     for (const name of THEME_VAR_NAMES) {

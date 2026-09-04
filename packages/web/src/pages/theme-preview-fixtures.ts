@@ -15,10 +15,9 @@ import type { CSSProperties } from "react";
 // entire mechanism, and also the thing this page exists to eyeball.
 //
 // Radius knobs: `--radius-card-scale` / `--radius-ui-scale` are UNITLESS
-// multipliers over the primitives' default corner radii, and
-// `--avatar-radius` is the avatar corner length (`rounded-full` compiles to a
-// literal, so avatars need their own var). Their consumer is the primitives
-// unit's `components/ui/radii.ts` (merged as PR #5; not yet on this branch).
+// multipliers over the primitives' default corner radii. Their consumer is
+// `components/ui/radii.ts`. Avatars are absent on purpose — profile pictures
+// are generated pre-cropped to a circle and are not themable.
 //
 // `--shadow-glow-accent` mirrors the index.css glow token. NOTE the Tailwind
 // v4 gotcha: a `--shadow-*` declared in `@theme` is INLINED into its utility
@@ -52,7 +51,6 @@ export const THEME_VAR_NAMES = [
   "--color-neon-pink",
   "--radius-card-scale",
   "--radius-ui-scale",
-  "--avatar-radius",
   "--shadow-glow-accent",
 ] as const;
 
@@ -78,7 +76,6 @@ type PaletteShorthand = {
   neons: [string, string, string]; // cyan, purple, pink
   /** Unitless multiplier over the primitives' default radii; 0 = square. */
   radiusScale: number;
-  avatarRadius: string;
 };
 
 /** The index.css accent-glow token, rebuilt from the fixture's accent-500. */
@@ -107,7 +104,6 @@ function vars(p: PaletteShorthand): Record<ThemeVarName, string> {
     "--color-neon-pink": p.neons[2],
     "--radius-card-scale": String(p.radiusScale),
     "--radius-ui-scale": String(p.radiusScale),
-    "--avatar-radius": p.avatarRadius,
     "--shadow-glow-accent": glowFromAccent(p.accent[4]),
   };
 }
@@ -124,7 +120,6 @@ export const THEME_FIXTURES: ThemeFixture[] = [
       accent: ["#e0e7ff", "#c7d2fe", "#a5b4fc", "#818cf8", "#6366f1"],
       neons: ["#22d3ee", "#a855f7", "#ec4899"],
       radiusScale: 1,
-      avatarRadius: "9999px",
     }),
   },
   {
@@ -138,7 +133,6 @@ export const THEME_FIXTURES: ThemeFixture[] = [
       accent: ["#e4eefd", "#c8d9fb", "#a3c0f7", "#7da6f2", "#5b8dee"],
       neons: ["#38bdf8", "#818cf8", "#f472b6"],
       radiusScale: 1.25,
-      avatarRadius: "9999px",
     }),
   },
   {
@@ -152,7 +146,6 @@ export const THEME_FIXTURES: ThemeFixture[] = [
       accent: ["#d4f6fa", "#a5eaf3", "#67dbeb", "#26cbe0", "#00bcd4"],
       neons: ["#00e5ff", "#7c4dff", "#ff4081"],
       radiusScale: 1.5,
-      avatarRadius: "9999px",
     }),
   },
   {
@@ -166,7 +159,6 @@ export const THEME_FIXTURES: ThemeFixture[] = [
       accent: ["#f7efe2", "#eddcc5", "#e1c6a0", "#d5b07c", "#c89b5e"],
       neons: ["#5eead4", "#c084fc", "#fb7185"],
       radiusScale: 0.75,
-      avatarRadius: "0.5rem",
     }),
   },
   {
@@ -180,7 +172,6 @@ export const THEME_FIXTURES: ThemeFixture[] = [
       accent: ["#ccffe7", "#99ffcf", "#66ffb8", "#33ffa0", "#00ff88"],
       neons: ["#00ffee", "#9d00ff", "#ff0066"],
       radiusScale: 0,
-      avatarRadius: "0px",
     }),
   },
   {
@@ -194,7 +185,6 @@ export const THEME_FIXTURES: ThemeFixture[] = [
       accent: ["#ffe0ef", "#ffb3d9", "#ff85c2", "#ff57aa", "#ff2d95"],
       neons: ["#00f0ff", "#bf00ff", "#ff2d95"],
       radiusScale: 0.5,
-      avatarRadius: "0.25rem",
     }),
   },
   {
@@ -208,7 +198,6 @@ export const THEME_FIXTURES: ThemeFixture[] = [
       accent: ["#fce0ec", "#f8b3d0", "#f37fb1", "#ee4b92", "#e91e7a"],
       neons: ["#67e8f9", "#d8b4fe", "#f9a8d4"],
       radiusScale: 2,
-      avatarRadius: "9999px",
     }),
   },
   {
@@ -222,7 +211,6 @@ export const THEME_FIXTURES: ThemeFixture[] = [
       accent: ["#e2f1f5", "#cbe3ea", "#b4d7e1", "#9ecbd8", "#88c0d0"],
       neons: ["#8fbcbb", "#b48ead", "#bf616a"],
       radiusScale: 0.75,
-      avatarRadius: "9999px",
     }),
   },
   {
@@ -236,7 +224,6 @@ export const THEME_FIXTURES: ThemeFixture[] = [
       accent: ["#feeede", "#fcdbbd", "#fac897", "#f8b571", "#f6a24b"],
       neons: ["#7dd3fc", "#c4b5fd", "#fda4af"],
       radiusScale: 1.25,
-      avatarRadius: "9999px",
     }),
   },
 ];

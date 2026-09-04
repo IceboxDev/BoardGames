@@ -36,7 +36,6 @@ export const DEFAULT_THEME: ThemeConfig = {
   wallpaper: false,
   radiusCard: 12,
   radiusUi: 8,
-  avatarShape: "circle",
   selectionStyle: "bar",
   fontFamily: "inter",
   baseFontSize: 16,
@@ -78,7 +77,6 @@ export const THEME_IDENTITY_KEYS: readonly (keyof ThemeConfig)[] = [
   "patternOpacity",
   "radiusCard",
   "radiusUi",
-  "avatarShape",
   "selectionStyle",
   "fontFamily",
 ];

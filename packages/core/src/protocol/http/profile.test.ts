@@ -28,7 +28,6 @@ const validTheme = {
   wallpaper: false,
   radiusCard: 12,
   radiusUi: 8,
-  avatarShape: "circle",
   selectionStyle: "bar",
   fontFamily: "inter",
   baseFontSize: 16,

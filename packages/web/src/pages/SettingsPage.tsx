@@ -59,12 +59,6 @@ const COLOR_FIELDS: { key: ColorFieldKey; label: string }[] = [
   { key: "accent", label: "Accent" },
 ];
 
-const AVATAR_OPTIONS = [
-  { value: "circle" as const, label: "Circle" },
-  { value: "squircle" as const, label: "Squircle" },
-  { value: "square" as const, label: "Square" },
-];
-
 const SELECTION_OPTIONS = [
   { value: "bar" as const, label: "Bar" },
   { value: "glow" as const, label: "Glow" },
@@ -442,15 +436,9 @@ export default function SettingsPage() {
                   display={`${theme.radiusUi}px`}
                   onChange={(v) => updateTheme({ radiusUi: v })}
                 />
-                <FieldGroup label="Avatar shape">
-                  <SegmentedControl
-                    aria-label="Avatar shape"
-                    size="sm"
-                    options={AVATAR_OPTIONS}
-                    value={theme.avatarShape}
-                    onChange={(v) => updateTheme({ avatarShape: v })}
-                  />
-                </FieldGroup>
+                {/* No avatar-shape control on purpose: profile pictures are
+                    generated as circles, so a squircle/square theme cropped
+                    the artwork. Avatars are round site-wide, always. */}
                 <FieldGroup label="Selection style">
                   <SegmentedControl
                     aria-label="Selection style"
