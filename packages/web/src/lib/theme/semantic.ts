@@ -99,6 +99,73 @@ export const SEMANTIC_VAR_NAMES = Object.keys(SEMANTIC_TOKENS);
 const MIN_ACCENT_SEPARATION = 30;
 const SEPARATED_GROUPS: ReadonlySet<Group> = new Set<Group>(["ok", "warn"]);
 
+// ── Hue bands ────────────────────────────────────────────────────────────
+//
+// Some meanings are PHYSICAL and cannot be rotated freely. Fire is red →
+// orange → gold; a caution mark is orange → yellow. Left unbounded, an
+// amber accent (hue 38°) swung the flame +56° into chartreuse and the "maybe"
+// mark +70° into pure green — a calendar of vomit green.
+//
+// A band does a second job. `sealed` tracks the accent 1:1 by construction,
+// so on a WARM accent the locked-in night is warm too, and a warm flame
+// beside it collapses "on fire" and "locked in" into one colour. When the
+// accent crowds a banded group, `bandedRotation` swings that group to the far
+// END of its band instead — which is what keeps the two states legible.
+//
+// Stored as start + width so a band can wrap through 0°. Every stock value
+// sits inside its band, so Classic still resolves to its exact hexes.
+interface HueBand {
+  start: number;
+  width: number;
+}
+
+// Each width EXCEEDS 2 * MIN_ACCENT_SEPARATION on purpose. An accent parked
+// at a band's midpoint is the worst case for the swing below — both edges are
+// equally close — so a narrower band cannot satisfy the separation guard at
+// all. At width 62 the midpoint still leaves 31°.
+const GROUP_BANDS: Partial<Record<Group, HueBand>> = {
+  // Red (352°) → gold (54°). Fire is never green.
+  heat: { start: 352, width: 62 },
+  // Red-orange (8°) → yellow-gold (70°). "Maybe" is never green either.
+  warn: { start: 8, width: 62 },
+};
+
+// `ok` is deliberately unbanded: it drifts through green → teal → blue as the
+// accent moves, and none of that reads wrong for "connected".
+
+function normalizeHue(h: number): number {
+  return ((h % 360) + 360) % 360;
+}
+
+function bandEnd(band: HueBand): number {
+  return normalizeHue(band.start + band.width);
+}
+
+/** `h` if it already sits in the band, otherwise the nearer edge. */
+function foldIntoBand(h: number, band: HueBand): number {
+  const offset = normalizeHue(h - band.start);
+  if (offset <= band.width) return normalizeHue(h);
+  return offset - band.width <= 360 - offset ? bandEnd(band) : normalizeHue(band.start);
+}
+
+/**
+ * Extra rotation for a banded group: fold its anchor back inside the band,
+ * then — if the accent has landed on top of it — swing to whichever end is
+ * farthest from that accent. Returned as a delta so the whole group moves
+ * together and its internal ordering survives.
+ */
+function bandedRotation(group: Group, band: HueBand, accent: Hsl): number {
+  const spec = SEMANTIC_TOKENS[GROUP_ANCHOR[group]];
+  const shifted = shift(hslOf(spec.stock), accent, spec.follow, 0).h;
+  let anchor = foldIntoBand(shifted, band);
+  if (Math.abs(signedHueDelta(anchor, accent.h)) < MIN_ACCENT_SEPARATION) {
+    const startGap = Math.abs(signedHueDelta(normalizeHue(band.start), accent.h));
+    const endGap = Math.abs(signedHueDelta(bandEnd(band), accent.h));
+    anchor = startGap >= endGap ? normalizeHue(band.start) : bandEnd(band);
+  }
+  return signedHueDelta(anchor, shifted);
+}
+
 /** The anchor whose hue decides a group's separation nudge. */
 const GROUP_ANCHOR: Record<Group, string> = {
   ok: "--color-ok",
@@ -158,11 +225,20 @@ export function deriveSemanticTokens(accentHex: string): Record<string, string> 
   const accent = hslOf(accentHex);
   const nudges = {} as Record<Group, number>;
   for (const group of ["ok", "warn", "heat", "sealed"] as const) {
-    nudges[group] = separationNudge(group, accent);
+    const band = GROUP_BANDS[group];
+    // A banded group's rotation already folds in the separation guard.
+    nudges[group] = band ? bandedRotation(group, band, accent) : separationNudge(group, accent);
   }
   const out: Record<string, string> = {};
   for (const [name, spec] of Object.entries(SEMANTIC_TOKENS)) {
-    out[name] = hexOf(shift(hslOf(spec.stock), accent, spec.follow, nudges[spec.group]));
+    const shifted = shift(hslOf(spec.stock), accent, spec.follow, nudges[spec.group]);
+    // Per-token, not just per-anchor: a ramp spans tens of degrees, so a
+    // group rotation that leaves the anchor in band can still carry its
+    // outermost stop past the edge. Lightness carries the ramp's read anyway,
+    // so stops colliding on hue at the edge costs nothing.
+    const band = GROUP_BANDS[spec.group];
+    if (band) shifted.h = foldIntoBand(shifted.h, band);
+    out[name] = hexOf(shifted);
   }
   return out;
 }

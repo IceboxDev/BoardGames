@@ -18,6 +18,30 @@ function hueOf(hex: string): number {
   return rgbToHsl(r, g, b).h;
 }
 
+/** An `#rrggbb` at a given hue, for sweeping the wheel. */
+function hslHex(h: number, sat: number, light: number): string {
+  const c = (1 - Math.abs(2 * light - 1)) * sat;
+  const x = c * (1 - Math.abs(((h / 60) % 2) - 1));
+  const m = light - c / 2;
+  const [r, g, b] =
+    h < 60
+      ? [c, x, 0]
+      : h < 120
+        ? [x, c, 0]
+        : h < 180
+          ? [0, c, x]
+          : h < 240
+            ? [0, x, c]
+            : h < 300
+              ? [x, 0, c]
+              : [c, 0, x];
+  const to2 = (v: number) =>
+    Math.round((v + m) * 255)
+      .toString(16)
+      .padStart(2, "0");
+  return `#${to2(r)}${to2(g)}${to2(b)}`;
+}
+
 /** Shortest distance between two hues, 0..180. */
 function hueGap(a: string, b: string): number {
   const d = Math.abs(hueOf(a) - hueOf(b)) % 360;
@@ -102,6 +126,78 @@ describe("semantic token derivation", () => {
     // hex drifts a few tenths of a degree. A group that failed to rotate
     // together would be tens of degrees out.
     expect(hueGap(d["--color-warn"], d["--color-warn-gold"])).toBeCloseTo(stockGap, 0);
+  });
+
+  // ── The warm band ─────────────────────────────────────────────────────
+  // An amber accent (hue 38) used to rotate the flame +56° into chartreuse
+  // and paint the calendar vomit-green. Fire is physical: it may take the
+  // theme's cast but never leaves red→orange→gold.
+  const HEAT_TOKENS = Object.keys(SEMANTIC_TOKENS).filter((n) => n.startsWith("--color-heat"));
+
+  function isWarm(hex: string): boolean {
+    const h = hueOf(hex);
+    // The heat band, 352°→54°, wrapping through 0.
+    return h >= 351 || h <= 55;
+  }
+
+  const WARN_TOKENS = Object.keys(SEMANTIC_TOKENS).filter((n) => n.startsWith("--color-warn"));
+
+  function isCaution(hex: string): boolean {
+    const h = hueOf(hex);
+    // The warn band, 8°→70°.
+    return h >= 7 && h <= 71;
+  }
+
+  it("keeps every warn token in the caution band for every accent", () => {
+    for (let hue = 0; hue < 360; hue += 5) {
+      const accent = hslHex(hue, 0.8, 0.55);
+      const derived = deriveSemanticTokens(accent);
+      for (const name of WARN_TOKENS) {
+        expect(isCaution(derived[name]), `${name} at accent hue ${hue} = ${derived[name]}`).toBe(
+          true,
+        );
+      }
+    }
+  });
+
+  it("never lets the caution mark collapse onto the accent", () => {
+    for (let hue = 0; hue < 360; hue += 5) {
+      const accent = hslHex(hue, 0.8, 0.55);
+      const { "--color-warn": warn } = deriveSemanticTokens(accent);
+      expect(hueGap(warn, accent), `warn vs accent hue ${hue}`).toBeGreaterThanOrEqual(25);
+    }
+  });
+
+  it("keeps every heat token warm for every accent on the wheel", () => {
+    for (let hue = 0; hue < 360; hue += 5) {
+      const accent = hslHex(hue, 0.8, 0.55);
+      const derived = deriveSemanticTokens(accent);
+      for (const name of HEAT_TOKENS) {
+        expect(isWarm(derived[name]), `${name} at accent hue ${hue} = ${derived[name]}`).toBe(true);
+      }
+    }
+  });
+
+  it("never lets the flame collapse onto the accent", () => {
+    for (let hue = 0; hue < 360; hue += 5) {
+      const accent = hslHex(hue, 0.8, 0.55);
+      const { "--color-heat": heat } = deriveSemanticTokens(accent);
+      expect(hueGap(heat, accent), `heat vs accent hue ${hue}`).toBeGreaterThanOrEqual(25);
+    }
+  });
+
+  // The reported bug: `sealed` tracks the accent 1:1, so a WARM accent made
+  // the locked-in night warm too — and the flame beside it was the same
+  // yellow-green. The two states must stay tellable apart at every accent.
+  it("keeps fire and sealed nights distinguishable at every accent", () => {
+    for (let hue = 0; hue < 360; hue += 5) {
+      const accent = hslHex(hue, 0.8, 0.55);
+      const d = deriveSemanticTokens(accent);
+      expect(
+        hueGap(d["--color-heat"], d["--color-sealed-base"]),
+        `heat vs sealed at accent hue ${hue}`,
+      ).toBeGreaterThanOrEqual(25);
+    }
   });
 
   // Sealed nights ARE the accent family in Classic (indigo/violet), so they
