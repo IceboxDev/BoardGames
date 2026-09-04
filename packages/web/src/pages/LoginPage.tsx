@@ -163,6 +163,9 @@ export default function LoginPage() {
 }
 
 function GoogleIcon() {
+  // The Google "G" mark. The four fills are Google's official brand colors —
+  // fixed by brand guidelines, deliberately NOT theme tokens (a brand logo
+  // must never retheme).
   return (
     <svg viewBox="0 0 24 24" className="h-4 w-4" aria-hidden="true">
       <path

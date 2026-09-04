@@ -3,6 +3,7 @@ export { AdminSection } from "./AdminSection";
 export { AnnouncementsCard } from "./AnnouncementsCard";
 export { AvailabilityDrawer } from "./AvailabilityDrawer";
 export { CoverageCell } from "./CoverageCell";
+export { coveragePercent, coverageRatio } from "./coverage-summary";
 export { GuestPlayersCard } from "./GuestPlayersCard";
 export { InactiveToggleRow } from "./InactiveToggleRow";
 export { InventoryPanel } from "./InventoryPanel";

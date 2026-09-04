@@ -7,6 +7,7 @@ import { IconButton } from "../ui/IconButton";
 import { Input } from "../ui/Input";
 import { SegmentedControl } from "../ui/SegmentedControl";
 import { CoverageCell } from "./CoverageCell";
+import { coverageSpeech } from "./coverage-summary";
 import { InventoryPanel } from "./InventoryPanel";
 import { ONLINE_MODE_OPTIONS_COMPACT } from "./online-mode-options";
 import type { AdminUser } from "./types";
@@ -91,7 +92,9 @@ export function UserRow({
           <button
             type="button"
             onClick={onOpenCalendar}
-            aria-label={`View ${user.name || user.email}'s availability calendar`}
+            // This label OVERRIDES the inner "NN%" text for assistive tech, so
+            // it has to carry the coverage data itself (see coverageSpeech).
+            aria-label={`View ${user.name || user.email}'s availability calendar — ${coverageSpeech(coverage)}`}
             className="-mx-1 cursor-pointer rounded-md px-1 py-0.5 transition-colors hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
           >
             <CoverageCell coverage={coverage} />

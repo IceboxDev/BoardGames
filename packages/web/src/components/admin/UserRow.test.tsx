@@ -98,6 +98,26 @@ describe("UserRow — main row", () => {
     expect(onOpenCalendar).toHaveBeenCalledOnce();
   });
 
+  // The pie is aria-hidden and its breakdown sits in a `title`, so the
+  // button's aria-label is the only screen-reader route to the coverage data.
+  it("carries the coverage breakdown in the pie button's accessible name", () => {
+    renderRow({ coverage: { can: 3, maybe: 1, total: 10 } });
+    expect(
+      screen.getByRole("button", {
+        name: "View Lina Smith's availability calendar — 40% covered (3 can, 1 maybe of 10 editable days)",
+      }),
+    ).toBeInTheDocument();
+  });
+
+  it("says 'No editable days' in the pie button's name when the window is empty", () => {
+    renderRow({ coverage: { can: 0, maybe: 0, total: 0 } });
+    expect(
+      screen.getByRole("button", {
+        name: "View Lina Smith's availability calendar — No editable days",
+      }),
+    ).toBeInTheDocument();
+  });
+
   it("invokes onOpenActivity when the name is clicked", async () => {
     const onOpenActivity = vi.fn();
     renderRow({ onOpenActivity });
