@@ -136,8 +136,8 @@ describe("semantic token derivation", () => {
 
   function isWarm(hex: string): boolean {
     const h = hueOf(hex);
-    // The heat band, 352°→54°, wrapping through 0.
-    return h >= 351 || h <= 55;
+    // The heat band, 0°→62°.
+    return h <= 63 || h >= 359;
   }
 
   const WARN_TOKENS = Object.keys(SEMANTIC_TOKENS).filter((n) => n.startsWith("--color-warn"));
@@ -200,15 +200,58 @@ describe("semantic token derivation", () => {
     }
   });
 
-  // Sealed nights ARE the accent family in Classic (indigo/violet), so they
-  // track it 1:1 — a Sakura calendar must not keep an indigo locked cell.
-  it("tracks the accent 1:1 for the sealed-night family", () => {
+  // Sealed nights ARE the accent family in Classic (indigo/violet), so the
+  // family's BASE tracks the accent 1:1 — a Sakura calendar must not keep an
+  // indigo locked cell.
+  it("tracks the accent 1:1 for the sealed-night base", () => {
     const accent = "#e91e7a";
     const rotation = hueOf(accent) - hueOf(REFERENCE_ACCENT);
     const derived = deriveSemanticTokens(accent);
     const moved =
-      hueOf(derived["--color-sealed-mid"]) - hueOf(SEMANTIC_TOKENS["--color-sealed-mid"].stock);
+      hueOf(derived["--color-sealed-base"]) - hueOf(SEMANTIC_TOKENS["--color-sealed-base"].stock);
     expect(moved).toBeCloseTo(rotation, 0);
+  });
+
+  // …but the trio's 19° spread does NOT survive the trip. Rotated intact onto
+  // a gold accent it put the middle stop in yellow-green while its neighbours
+  // went gold — the puke-green locked-in cell. It must collapse onto one hue.
+  it("collapses the sealed trio onto one hue as the accent travels", () => {
+    const spreadFor = (accent: string) => {
+      const d = deriveSemanticTokens(accent);
+      return hueGap(d["--color-sealed-base"], d["--color-sealed-mid"]);
+    };
+    const stockSpread = hueGap(
+      SEMANTIC_TOKENS["--color-sealed-base"].stock,
+      SEMANTIC_TOKENS["--color-sealed-mid"].stock,
+    );
+    // Untouched at the reference accent…
+    expect(spreadFor(REFERENCE_ACCENT)).toBeCloseTo(stockSpread, 0);
+    // …and well under half of it on a gold accent, the reported case.
+    expect(spreadFor("#c89b5e")).toBeLessThan(stockSpread / 2);
+  });
+
+  // "Darker gold, not puke green": on a far-travelled accent the sealed family
+  // must end up deeper than stock, not merely re-hued.
+  it("deepens the sealed family on a far-travelled accent", () => {
+    const lightnessOf = (hex: string) => {
+      const { r, g, b } = hexToRgb(hex);
+      return rgbToHsl(r, g, b).l;
+    };
+    const d = deriveSemanticTokens("#c89b5e");
+    for (const name of ["--color-sealed-base", "--color-sealed-mid", "--color-sealed-edge"]) {
+      expect(lightnessOf(d[name]), name).toBeLessThan(lightnessOf(SEMANTIC_TOKENS[name].stock));
+    }
+  });
+
+  // "Less attacking red, more ember": the flame gives up saturation the
+  // further the palette travels from the stock indigo.
+  it("banks the flame's saturation on a far-travelled accent", () => {
+    const satOf = (hex: string) => {
+      const { r, g, b } = hexToRgb(hex);
+      return rgbToHsl(r, g, b).s;
+    };
+    const d = deriveSemanticTokens("#c89b5e");
+    expect(satOf(d["--color-heat"])).toBeLessThan(satOf(SEMANTIC_TOKENS["--color-heat"].stock));
   });
 });
 

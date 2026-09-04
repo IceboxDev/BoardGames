@@ -36,15 +36,36 @@ interface Follow {
   hue: number;
   sat: number;
   light: number;
+  /**
+   * How much of a group's internal hue SPREAD survives at maximum accent
+   * travel (1 = keep it all). The sealed trio is indigo/indigo/violet — 19°
+   * wide — and rotating that intact onto a gold accent left its middle stop in
+   * yellow-green while its neighbours went gold: a puke-green locked-in cell.
+   * Compressing the spread keeps the family on one colour.
+   */
+  minSpread?: number;
+  /** Desaturation applied in proportion to accent travel. */
+  driftSat?: number;
+  /** Darkening applied in proportion to accent travel. */
+  driftLight?: number;
 }
 
 // Status tones read as text/dots on a panel: follow the palette clearly, but
 // keep enough of their own hue that "connected" never reads as "warning".
 const STATUS: Follow = { hue: 0.45, sat: 0.55, light: 0.35 };
 // Fire is art. It tilts with the theme but keeps its internal hot→deep order.
-const HEAT: Follow = { hue: 0.35, sat: 0.4, light: 0.25 };
-// A sealed night is the accent family by construction — track it 1:1.
-const SEALED: Follow = { hue: 1, sat: 0.5, light: 0.3 };
+// `driftSat` is what makes a far-travelled palette read as a banked ember
+// rather than a fire alarm: the further the accent moves, the more the flame
+// gives up its full-blast saturation.
+const HEAT: Follow = { hue: 0.35, sat: 0.4, light: 0.25, driftSat: 0.28, driftLight: 0.05 };
+// A sealed night is the accent family by construction — track it 1:1, but pull
+// the trio onto one hue and deepen it as the accent travels, so it lands on a
+// dark gold rather than a bright olive.
+// NOTE the absent `driftSat`. Draining saturation here was a mistake: gold IS
+// a saturated hue, and a desaturated yellow is precisely olive — the muddy
+// "puke green" this was meant to cure. Depth comes from `driftLight` and the
+// spread collapse instead, which lands it on a dark bronze-gold.
+const SEALED: Follow = { hue: 1, sat: 0.3, light: 0.3, minSpread: 0.2, driftLight: 0.08 };
 
 /**
  * Groups exist for the separation guard below: a group rotates as one unit, so
@@ -124,8 +145,10 @@ interface HueBand {
 // equally close — so a narrower band cannot satisfy the separation guard at
 // all. At width 62 the midpoint still leaves 31°.
 const GROUP_BANDS: Partial<Record<Group, HueBand>> = {
-  // Red (352°) → gold (54°). Fire is never green.
-  heat: { start: 352, width: 62 },
+  // Red (0°) → gold (62°). Fire is never green — and the band starts at a
+  // TRUE red rather than 352°, which carried a pink cast and read as an alarm
+  // rather than an ember once a warm accent pushed the flame to this edge.
+  heat: { start: 0, width: 62 },
   // Red-orange (8°) → yellow-gold (70°). "Maybe" is never green either.
   warn: { start: 8, width: 62 },
 };
@@ -171,7 +194,7 @@ const GROUP_ANCHOR: Record<Group, string> = {
   ok: "--color-ok",
   warn: "--color-warn",
   heat: "--color-heat",
-  sealed: "--color-sealed-mid",
+  sealed: "--color-sealed-base",
 };
 
 function hslOf(hex: string): Hsl {
@@ -229,9 +252,31 @@ export function deriveSemanticTokens(accentHex: string): Record<string, string> 
     // A banded group's rotation already folds in the separation guard.
     nudges[group] = band ? bandedRotation(group, band, accent) : separationNudge(group, accent);
   }
+  // 0 at the reference accent, 1 at the opposite side of the wheel. Every
+  // drift-scaled term below multiplies by this, which is what keeps Classic an
+  // exact fixed point while letting distant palettes be treated differently.
+  const drift = Math.abs(signedHueDelta(accent.h, REFERENCE_HSL.h)) / 180;
   const out: Record<string, string> = {};
   for (const [name, spec] of Object.entries(SEMANTIC_TOKENS)) {
-    const shifted = shift(hslOf(spec.stock), accent, spec.follow, nudges[spec.group]);
+    const stock = hslOf(spec.stock);
+    const anchorStock = hslOf(SEMANTIC_TOKENS[GROUP_ANCHOR[spec.group]].stock);
+    const shifted = shift(anchorStock, accent, spec.follow, nudges[spec.group]);
+    // Place the token by its OFFSET from the group's anchor, optionally
+    // compressed. With no `minSpread` the factor is 1 and this is exactly
+    // `stock.h + rotation` — the previous behaviour, unchanged.
+    const spreadFactor =
+      spec.follow.minSpread === undefined ? 1 : 1 - (1 - spec.follow.minSpread) * drift;
+    shifted.h += (stock.h - anchorStock.h) * spreadFactor;
+    shifted.s = clamp01(
+      stock.s +
+        (accent.s - REFERENCE_HSL.s) * spec.follow.sat -
+        (spec.follow.driftSat ?? 0) * drift,
+    );
+    shifted.l = clamp01(
+      stock.l +
+        (accent.l - REFERENCE_HSL.l) * spec.follow.light -
+        (spec.follow.driftLight ?? 0) * drift,
+    );
     // Per-token, not just per-anchor: a ramp spans tens of degrees, so a
     // group rotation that leaves the anchor in band can still carry its
     // outermost stop past the edge. Lightness carries the ramp's read anyway,
