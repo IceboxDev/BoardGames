@@ -62,44 +62,53 @@ export function DayCell({
   const showDnd = dndNight && picksLocked && !!attendance;
 
   // Personal-mark gradient layer — render only when no aggregate heat or lock overrides it.
-  // "maybe" stays in yellow tones so it never reads as the orange/red of warming or fire.
+  // "maybe" stays in the warn tones so it never reads as the heat of warming or fire.
   //
-  // Glow-shadow colors in this file: glows that duplicate a THEME token ride
-  // Tailwind's shadow-color utilities (`shadow-[geometry] shadow-accent-500/60`)
-  // so they re-theme with the palette. That pair is a TWO-CLASS CONTRACT —
-  // keep the halves together: the geometry class resolves its color as
-  // `var(--tw-shadow-color, currentcolor)`, so dropping the color half doesn't
-  // remove the glow, it silently repaints it in the element's text color (a
-  // white-ish smear here, not a missing shadow — easy to miss). The
-  // amber/orange/yellow/red
-  // fire-and-gold glows match no token — Tailwind v4's palette is OKLCH and
-  // visibly off the v3-era values this art was tuned against — so those stay
-  // literal (calendar-fire.css, same call). Glow geometry stays bespoke
-  // (8–10px dot glows): none matches --shadow-glow-accent/-cyan (12px);
-  // candidates for future --shadow-glow-*-sm tokens. This gradient layer once
-  // carried a 24–30px outer glow as well, but the button's overflow-hidden
-  // clipped it entirely — it never painted, so it was deleted, not migrated.
+  // COLOR SOURCES: every art color in this file now routes through the
+  // semantic/art tokens (`warn-*`, `heat-*`, `sealed-*` — index.css, retuned
+  // per theme by lib/theme/semantic.ts). They exist because this art used to
+  // be fixed: a Sakura or Terminal palette repainted the whole app and left an
+  // orange bonfire burning in the middle of it. The D&D night treatment below
+  // stays literal on purpose — crimson-and-gold is that night's identity, not
+  // the calendar's palette.
+  //
+  // Classic shifts a few RGB units here, deliberately. The tokens carry the
+  // v3-era hexes this art was tuned against, while the `orange-*`/`red-*`/
+  // `yellow-*` classes they replaced resolved to Tailwind v4's OKLCH palette
+  // (`--color-orange-500` = oklch(70.5% 0.213 47.604), not #f97316). The move
+  // is toward the authored values, not away from them.
+  //
+  // Glows ride Tailwind's shadow-color utilities (`shadow-[geometry]
+  // shadow-warn-gold/55`) so they retheme too. That pair is a TWO-CLASS
+  // CONTRACT — keep the halves together: the geometry class resolves its color
+  // as `var(--tw-shadow-color, currentcolor)`, so dropping the color half
+  // doesn't remove the glow, it silently repaints it in the element's text
+  // color (a white-ish smear here, not a missing shadow — easy to miss). Glow
+  // geometry stays bespoke (8–10px dot glows): none matches
+  // --shadow-glow-accent/-cyan (12px). This gradient layer once carried a
+  // 24–30px outer glow as well, but the button's overflow-hidden clipped it
+  // entirely — it never painted, so it was deleted, not migrated.
   const personalStateClass =
     showPersonalGradient && value === "can"
       ? "bg-gradient-to-br from-accent-500/40 via-accent-500/20 to-neon-cyan/15"
       : showPersonalGradient && value === "maybe"
-        ? "bg-gradient-to-br from-yellow-400/35 via-yellow-300/22 to-yellow-200/10"
+        ? "bg-gradient-to-br from-warn-strong/35 via-warn-soft/22 to-warn-soft/10"
         : "";
 
   const borderClass = showDnd
     ? "" // `.dnd-night-cell` owns the animated crimson↔gold border + glow.
     : locked
-      ? "border-amber-300/40"
+      ? "border-warn-gold/40"
       : heat.kind === "fire"
-        ? "border-red-500/80"
+        ? "border-heat-ember/80"
         : heat.kind === "warming"
-          ? "border-orange-400/65"
+          ? "border-heat-bright/65"
           : value === "can"
             ? "border-accent-400/70"
             : value === "maybe"
-              ? "border-yellow-400/60"
+              ? "border-warn-strong/60"
               : lockMode
-                ? "border-amber-200/30 hover:border-amber-200/60"
+                ? "border-warn-gold/30 hover:border-warn-gold/60"
                 : "border-white/10 hover:border-white/25";
 
   const baseBgClass = !value && !heated && !locked ? "bg-surface-800/55" : "";
@@ -182,7 +191,7 @@ export function DayCell({
           className={`pointer-events-none absolute inset-y-0 left-0 z-[5] w-1 sm:w-1.5 ${
             value === "can"
               ? "bg-accent-400 shadow-[0_0_8px] shadow-accent-500/60"
-              : "bg-yellow-400 shadow-[0_0_8px_rgba(234,179,8,0.55)]"
+              : "bg-warn-strong shadow-[0_0_8px] shadow-warn-strong/55"
           }`}
         />
       )}
@@ -225,12 +234,12 @@ export function DayCell({
         // N1 = RSVP-yes (coming for sure), N2 = N1 plus maybes.
         <span className="relative flex flex-1 items-center justify-center">
           <span
-            className={`flex items-baseline gap-1 font-extrabold leading-none text-amber-100 drop-shadow ${
+            className={`flex items-baseline gap-1 font-extrabold leading-none text-warn-pale drop-shadow ${
               compact ? "text-base" : "text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
             }`}
           >
             <span className="tabular-nums">{attendance.definite}</span>
-            <span className="text-amber-200/60">/</span>
+            <span className="text-warn-pale/60">/</span>
             <span className="tabular-nums">{attendance.definite + attendance.tentative}</span>
           </span>
         </span>
@@ -291,7 +300,7 @@ function WarmingLayer({ compact }: { compact: boolean }) {
     <>
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-orange-700/45 via-orange-500/30 to-orange-400/15 shadow-[inset_0_-12px_18px_-12px_rgba(251,146,60,0.5)]"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-heat-deep/45 via-heat/30 to-heat-bright/15 shadow-[inset_0_-12px_18px_-12px] shadow-heat-bright/50"
       />
       {!compact && (
         <>
@@ -350,7 +359,7 @@ function FireLayer({ compact, cellSeed }: { compact: boolean; cellSeed: number }
           there's no hard horizon line. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-red-900/85 via-orange-700/40 to-transparent"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-t from-heat-molten/85 via-heat-deep/40 to-transparent"
       />
       {/* Heart of the fire — soft radial dome at the bottom, breathes. */}
       <span
@@ -372,7 +381,7 @@ function FireLayer({ compact, cellSeed }: { compact: boolean; cellSeed: number }
       {/* Outer rim glow — soft inset shadows, slow breathe. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 motion-safe:animate-fire-glow shadow-[inset_0_-22px_28px_-12px_rgba(251,146,60,0.55),inset_0_0_22px_-10px_rgba(220,38,38,0.5)]"
+        className="pointer-events-none absolute inset-0 motion-safe:animate-fire-glow shadow-[inset_0_-22px_28px_-12px_color-mix(in_srgb,var(--color-heat-bright)_55%,transparent),inset_0_0_22px_-10px_color-mix(in_srgb,var(--color-heat-ember)_50%,transparent)]"
         style={{ animationDelay: `-${phaseGlow}s` } as React.CSSProperties}
       />
       {!compact && (
@@ -432,17 +441,17 @@ function LockedLayer({
       {/* Deep regal base — feels weighty. No animation on the bg itself. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-indigo-950 via-violet-900/95 to-indigo-900 shadow-[inset_0_0_24px_-8px_rgba(0,0,0,0.6),0_0_24px_-6px_rgba(251,191,36,0.25)]"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-sealed-base via-sealed-mid/95 to-sealed-edge shadow-[inset_0_0_24px_-8px_rgba(0,0,0,0.6),0_0_24px_-6px_color-mix(in_srgb,var(--color-warn)_25%,transparent)]"
       />
       {/* Faint gold ring for the "sealed" feel. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-amber-300/35"
+        className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-warn-gold/35"
       />
       {/* Slow diagonal shimmer — light catching the seal. Idle most of cycle. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-y-0 -left-1/4 w-1/3 bg-gradient-to-r from-transparent via-amber-200/25 to-transparent motion-safe:animate-seal-shimmer"
+        className="pointer-events-none absolute inset-y-0 -left-1/4 w-1/3 bg-gradient-to-r from-transparent via-warn-gold/25 to-transparent motion-safe:animate-seal-shimmer"
       />
       {/* Wax-seal medallion + compact lock pip — visible only when picks are
           locked, communicating "guest list is sealed" rather than the date
@@ -557,7 +566,7 @@ function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
     return (
       <span
         aria-hidden="true"
-        className={`${pillBase} border border-emerald-300/45 bg-emerald-400/15 text-emerald-100 motion-safe:animate-pulse-soft`}
+        className={`${pillBase} border border-ok/45 bg-ok-strong/15 text-ok motion-safe:animate-pulse-soft`}
       >
         <CheckGlyphSmall />
         Going
@@ -578,7 +587,7 @@ function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
   return (
     <span
       aria-hidden="true"
-      className={`${pillBase} border border-amber-300/45 bg-amber-300/10 text-center text-amber-200 motion-safe:animate-pulse-soft`}
+      className={`${pillBase} border border-warn-gold/45 bg-warn-gold/10 text-center text-warn-gold motion-safe:animate-pulse-soft`}
     >
       RSVP
     </span>
@@ -638,19 +647,17 @@ function LockGlyph({ small = false }: { small?: boolean }) {
 
 function PersonalMarkChip({ value }: { value: Availability }) {
   const isCan = value === "can";
-  // Mixed on purpose: the `can` ring-glow is tokenized (accent-400); the
-  // `maybe` gold is a v3 amber literal that matches no current token.
   return (
     <span
       aria-hidden="true"
       className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-6xs font-extrabold uppercase leading-none tracking-[0.1em] text-white ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-3xs sm:tracking-[0.15em] md:text-xs ${
         isCan
           ? "ring-accent-300 shadow-[0_0_10px] shadow-accent-400/60"
-          : "ring-amber-300 shadow-[0_0_10px_rgba(252,211,77,0.55)]"
+          : "ring-warn-gold shadow-[0_0_10px] shadow-warn-gold/55"
       }`}
     >
       <span
-        className={`inline-block h-1 w-1 shrink-0 rounded-full sm:h-1.5 sm:w-1.5 ${isCan ? "bg-accent-300" : "bg-amber-300"}`}
+        className={`inline-block h-1 w-1 shrink-0 rounded-full sm:h-1.5 sm:w-1.5 ${isCan ? "bg-accent-300" : "bg-warn-gold"}`}
       />
       {value}
     </span>
@@ -667,8 +674,8 @@ function HeatBadge({ heat }: { heat: Heat }) {
     <span
       className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-6xs font-extrabold leading-none ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-3xs md:text-xs ${
         isFire
-          ? "text-orange-200 ring-orange-300/70 shadow-[0_0_10px_rgba(249,115,22,0.55)]"
-          : "text-amber-200 ring-amber-300/70 shadow-[0_0_10px_rgba(252,211,77,0.4)]"
+          ? "text-heat-glow ring-heat-bright/70 shadow-[0_0_10px] shadow-heat/55"
+          : "text-warn-soft ring-warn-gold/70 shadow-[0_0_10px] shadow-warn-gold/40"
       }`}
       aria-hidden="true"
     >
@@ -709,7 +716,7 @@ function DayLabels({ entries, heated }: { entries: AvailabilityEntry[]; heated: 
         <NameRow entries={cans} dotColor="bg-accent-300" textShadow={textShadow} />
       )}
       {maybes.length > 0 && (
-        <NameRow entries={maybes} dotColor="bg-yellow-400" textShadow={textShadow} />
+        <NameRow entries={maybes} dotColor="bg-warn-strong" textShadow={textShadow} />
       )}
     </div>
   );
