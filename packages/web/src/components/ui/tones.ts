@@ -85,14 +85,21 @@ export const TONE_ACTIVE: Record<CoreTone, string> = {
 // `select-styles.css` targets when the personalization engine sets
 // `data-select-style` on <html>, and pins the tone's -400 shade as
 // `--ui-sel` for those effects. With the attribute absent (or "bar",
-// today's look) no rule matches and nothing changes — both classes are
+// today's look) no rule matches and nothing changes — all three classes are
 // visually inert on their own.
+//
+// `relative` hosts the stylesheet's ::after overlay. It lives here, as an
+// ordinary utility, rather than as a `position` declaration in that unlayered
+// stylesheet: there it would outrank every Tailwind position utility and
+// yank self-positioned controls (`sm:absolute` chips) back into flow. As a
+// utility a caller's own `absolute` simply wins, and either position anchors
+// the overlay.
 export const TONE_SELECT_MARKER: Record<CoreTone, string> = {
-  accent: "ui-selected [--ui-sel:var(--color-accent-400)]",
-  amber: "ui-selected [--ui-sel:var(--color-amber-400)]",
-  sky: "ui-selected [--ui-sel:var(--color-sky-400)]",
-  emerald: "ui-selected [--ui-sel:var(--color-emerald-400)]",
-  rose: "ui-selected [--ui-sel:var(--color-rose-400)]",
+  accent: "ui-selected relative [--ui-sel:var(--color-accent-400)]",
+  amber: "ui-selected relative [--ui-sel:var(--color-amber-400)]",
+  sky: "ui-selected relative [--ui-sel:var(--color-sky-400)]",
+  emerald: "ui-selected relative [--ui-sel:var(--color-emerald-400)]",
+  rose: "ui-selected relative [--ui-sel:var(--color-rose-400)]",
 };
 
 // Glow shadow per tone — thin wrapper over the `--shadow-glow-*` tokens.

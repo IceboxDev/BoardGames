@@ -20,17 +20,19 @@
  * underneath. This stylesheet is unlayered, so its overlay rules win over
  * the @layer'd utilities without !important.
  *
+ * The overlay needs a positioned host, but that `position` does NOT belong
+ * here: an unlayered `position: relative` on `.ui-selected` outranks EVERY
+ * Tailwind position utility, so any caller that places a selected control
+ * itself (AvailabilityActionBar pins its ADMIN / LOCK-IN chips with
+ * `sm:absolute`) silently collapsed back into flow under four of the five
+ * selection styles. The marker class in tones.ts carries a plain `relative`
+ * utility instead, which a caller's `absolute` can override in the normal
+ * way — and an absolutely-positioned host anchors the ::after just as well.
+ *
  * Loaded via the components/ui barrel because src/index.css belongs to the
  * theme-engine unit; that unit may later relocate this file to an @import
  * beside @theme — the rules are self-contained either way.
  */
-
-:root[data-select-style="glow"] .ui-selected,
-:root[data-select-style="border"] .ui-selected,
-:root[data-select-style="fill"] .ui-selected,
-:root[data-select-style="underline"] .ui-selected {
-  position: relative;
-}
 
 :root[data-select-style="glow"] .ui-selected::after,
 :root[data-select-style="border"] .ui-selected::after,
