@@ -1,0 +1,118 @@
+/* Ambient waves (cheap tier).
+ *
+ * HOST: the theme engine mounts effects in a FIXED, inset-0, viewport-locked
+ * layer, so the bubbles' vh-based travel is measured against the viewport by
+ * construction. `contain: strict` keeps this decorative subtree out of the
+ * page's layout and paint work.
+ *
+ * PERFORMANCE: transform/opacity only. Each wave is 200% wide and slides
+ * exactly -50% (half its own width) on a LINEAR loop, so the periodic path
+ * wraps seamlessly — a conveyor, not a rocking motion.
+ *
+ * REDUCED MOTION: the static remnant is designed, not a frozen first frame —
+ * the four wave layers and the caustic render as a still seascape, and the
+ * bubbles are parked at curated mid-water heights at a visible opacity
+ * instead of collapsing to the invisible opacity:0 that starts their loop.
+ */
+
+.amb-waves {
+  contain: strict;
+}
+
+.amb-wave-caustic {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 60%;
+  height: 20%;
+  background: radial-gradient(ellipse, var(--color-accent-400), transparent 70%);
+  opacity: 0.03;
+  transform: translateX(-50%);
+}
+
+.amb-wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+}
+
+.amb-wave-bubble {
+  position: absolute;
+  bottom: -5px;
+  border-radius: 9999px;
+  background: color-mix(in srgb, var(--color-neon-cyan) 20%, transparent);
+  opacity: 0.35;
+  transform: translateY(var(--amb-bubble-rest-y, -30vh));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .amb-wave-caustic {
+    animation: amb-caustic-shift 8s ease-in-out infinite alternate;
+  }
+
+  .amb-wave {
+    animation: amb-wave-shift var(--amb-wave-duration, 12s) linear infinite;
+  }
+
+  .amb-wave-bubble {
+    animation: amb-bubble-rise var(--amb-bubble-duration, 6s) ease-out var(--amb-bubble-delay, 0s)
+      infinite;
+  }
+}
+
+/* Phones composite fewer layers: below 1024px the two faintest wave layers
+   (opacity 0.03 / 0.045, all but invisible at that size) drop out, halving
+   the animated SVG count while the two strongest still read as water. */
+@media (max-width: 1023px) {
+  .amb-wave--0,
+  .amb-wave--1 {
+    display: none;
+  }
+}
+
+/* Half the element's own width — exactly one period of every path above. */
+@keyframes amb-wave-shift {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes amb-bubble-rise {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+  5% {
+    transform: translate(1px, -5vh);
+    opacity: 0.3;
+  }
+  25% {
+    transform: translate(6px, -25vh);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-4px, -50vh);
+    opacity: 0.3;
+  }
+  75% {
+    transform: translate(5px, -75vh);
+    opacity: 0.15;
+  }
+  100% {
+    transform: translate(0, -100vh);
+    opacity: 0;
+  }
+}
+
+/* The first translateX centers the ellipse; the second is the drift. */
+@keyframes amb-caustic-shift {
+  0% {
+    transform: translateX(-50%) translateX(-20%);
+  }
+  100% {
+    transform: translateX(-50%) translateX(20%);
+  }
+}
