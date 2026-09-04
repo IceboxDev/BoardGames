@@ -1,5 +1,6 @@
 import type { ProfileDirectoryEntry } from "@boardgames/core/protocol";
 import { Link } from "react-router-dom";
+import { cn } from "../../lib/cn.ts";
 import { formatDayKey } from "../../lib/date-format.ts";
 import { GalleryIcon } from "../icons";
 import { Avatar } from "../ui/Avatar.tsx";
@@ -27,26 +28,28 @@ export function PlayerCard({ player }: PlayerCardProps) {
         {player.name}
       </p>
       {player.tagline && <p className="line-clamp-2 text-xs text-fg-muted">{player.tagline}</p>}
-      {/* Two FIXED rows, never a wrapping one. The next-night badge only some
-          players have used to wrap onto a second line and make those tiles
-          taller than the rest of the grid row. The slot is always rendered and
-          merely hidden when empty, so its height comes from a real Badge and
-          can't drift if Badge's padding or type size changes. */}
+      {/* Two FIXED rows, never a wrapping one: the next-night badge that only
+          some players have used to wrap onto a second line and make those
+          tiles taller than the rest of the grid row.
+          The empty state renders the SAME <Badge>, differing only by
+          `visibility` — never a wrapper around one. A wrapper span becomes the
+          flex item and demotes the badge to an inline-level child, which
+          establishes a line box and adds leading + descender space; that made
+          the placeholder TALLER than a real badge and inverted the bug.
+          One element, one box, equal height by construction.
+          `visibility: hidden` also keeps it out of the accessibility tree, so
+          it needs no aria-hidden. */}
       <div className="mt-auto flex w-full flex-col items-center gap-1.5 pt-1">
         <Badge tone="neutral" size="xs" icon={<GalleryIcon className="h-3 w-3" />}>
           {player.gamesOwned} games
         </Badge>
-        {player.nextNightDateKey ? (
-          <Badge tone="accent" size="xs">
-            {formatDayKey(player.nextNightDateKey)}
-          </Badge>
-        ) : (
-          <span aria-hidden="true" className="invisible">
-            <Badge tone="accent" size="xs">
-              —
-            </Badge>
-          </span>
-        )}
+        <Badge
+          tone="accent"
+          size="xs"
+          className={cn("whitespace-nowrap", !player.nextNightDateKey && "invisible")}
+        >
+          {player.nextNightDateKey ? formatDayKey(player.nextNightDateKey) : "—"}
+        </Badge>
       </div>
     </InteractiveCard>
   );
