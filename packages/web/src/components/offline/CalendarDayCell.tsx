@@ -111,15 +111,14 @@ export function DayCell({
       : "pointer-events-none";
 
   const padding = compact ? "p-1 sm:p-1.5" : "p-2 sm:p-3";
-  const hasNames = !compact && !locked && !!labels && labels.length > 0;
-  // Name-bearing cells use a smaller day number so the attendee list below gets
-  // the vertical room it needs (otherwise 6+ names clip on the laptop's shorter
-  // cells); empty cells keep the bold number and grow it on 4K monitors.
+  // Size depends on `compact` ALONE. Attendee names only ever render under the
+  // admin overlay, so a size that also keyed off "this cell has names" meant
+  // every day number visibly resized the instant the admin eye was toggled —
+  // the same date, redrawn a step smaller. The names area is `flex-1
+  // overflow-hidden`, so it absorbs the difference instead.
   const dayTextSize = compact
     ? "text-sm sm:text-base"
-    : hasNames
-      ? "text-base sm:text-lg md:text-xl 3xl:text-2xl"
-      : "text-lg sm:text-xl md:text-2xl 3xl:text-3xl";
+    : "text-lg sm:text-xl md:text-2xl 3xl:text-3xl";
   const monthLabelPos = compact ? "left-1 top-1" : "left-1.5 top-1.5";
   const monthLabelSize = compact ? "text-6xs" : "text-5xs sm:text-3xs";
   const todayDotPos = compact ? "right-1 top-1" : "right-2 top-2";
