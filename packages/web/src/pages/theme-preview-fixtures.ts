@@ -254,9 +254,18 @@ export function themeVarStyle(fixture: ThemeFixture): CSSProperties {
 // Post-merge, the theme engine applies the user's REAL theme through the same
 // documentElement inline vars — so clearing must restore what was there, not
 // strip everything, and must be a no-op if no fixture was ever applied.
+//
+// The restore is CONDITIONAL: a var is rolled back only while it still holds
+// the value this module wrote. If anything else (the engine reacting to the
+// user switching themes while a fixture chip is pressed) has since changed it,
+// that newer value wins and we leave it alone — blindly writing the snapshot
+// back would silently revert the user's real theme to whatever preceded the
+// preview, which is exactly the corruption this bookkeeping exists to avoid.
 type RootThemeSnapshot = {
   vars: Record<ThemeVarName, string>; // prior inline values ("" = unset)
   selectStyle: string | undefined;
+  applied: Record<ThemeVarName, string>; // what we wrote, for the equality test
+  appliedSelectStyle: string;
 };
 
 let rootSnapshot: RootThemeSnapshot | null = null;
@@ -273,7 +282,17 @@ export function applyThemeFixtureToRoot(fixture: ThemeFixture): void {
     for (const name of THEME_VAR_NAMES) {
       prior[name] = root.style.getPropertyValue(name);
     }
-    rootSnapshot = { vars: prior, selectStyle: root.dataset.selectStyle };
+    rootSnapshot = {
+      vars: prior,
+      selectStyle: root.dataset.selectStyle,
+      applied: { ...fixture.vars },
+      appliedSelectStyle: fixture.selectStyle,
+    };
+  } else {
+    // Switching presets: the baseline stays the original pre-fixture state,
+    // but what counts as "ours" becomes the newly applied fixture.
+    rootSnapshot.applied = { ...fixture.vars };
+    rootSnapshot.appliedSelectStyle = fixture.selectStyle;
   }
   for (const name of THEME_VAR_NAMES) {
     root.style.setProperty(name, fixture.vars[name]);
@@ -281,11 +300,16 @@ export function applyThemeFixtureToRoot(fixture: ThemeFixture): void {
   root.dataset.selectStyle = fixture.selectStyle;
 }
 
-/** Undo `applyThemeFixtureToRoot`, restoring the pre-apply inline state. */
+/**
+ * Undo `applyThemeFixtureToRoot`, restoring the pre-apply inline state — but
+ * only for vars still holding the value we wrote (see RootThemeSnapshot).
+ */
 export function clearThemeFixtureFromRoot(): void {
   if (!rootSnapshot) return;
   const root = document.documentElement;
   for (const name of THEME_VAR_NAMES) {
+    // Someone else changed it after us — their value stands.
+    if (root.style.getPropertyValue(name) !== rootSnapshot.applied[name]) continue;
     const prior = rootSnapshot.vars[name];
     if (prior) {
       root.style.setProperty(name, prior);
@@ -293,10 +317,12 @@ export function clearThemeFixtureFromRoot(): void {
       root.style.removeProperty(name);
     }
   }
-  if (rootSnapshot.selectStyle === undefined) {
-    delete root.dataset.selectStyle;
-  } else {
-    root.dataset.selectStyle = rootSnapshot.selectStyle;
+  if (root.dataset.selectStyle === rootSnapshot.appliedSelectStyle) {
+    if (rootSnapshot.selectStyle === undefined) {
+      delete root.dataset.selectStyle;
+    } else {
+      root.dataset.selectStyle = rootSnapshot.selectStyle;
+    }
   }
   rootSnapshot = null;
 }

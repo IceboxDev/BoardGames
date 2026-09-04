@@ -98,6 +98,23 @@ capture() {
   echo "captured $themefile"
 }
 
+# Extract the differing-pixel COUNT from an ImageMagick `-metric AE` result.
+#
+# IM7 prints AE as "<count> (<normalized>)" — e.g. "0 (0)" or "319042 (0.216364)"
+# — so the count is the first whitespace-delimited token, with any fractional
+# part trimmed. Echoes the metric unchanged when it isn't a number at all
+# (a `compare` failure), which callers test for.
+#
+# Both gates below MUST parse through here. Reading it as `${metric%%.*}` cuts
+# at the dot INSIDE the parenthesised figure, yielding "319042 (0" — which
+# matches no integer pattern, so the comparison silently fell through to the
+# pass branch. That defect made `diff` and `nav-check` report success for every
+# input, differing pages included.
+ae_count() {
+  local first="${1%% *}"
+  printf '%s' "${first%%.*}"
+}
+
 # Compares the UNION of both runs' shots. A name only in <dir-a> is a route
 # that vanished (MISSING — a failure). A name only in <dir-b> is a route that
 # was ADDED since the baseline: it has nothing to diff against, so it is
@@ -143,18 +160,9 @@ diff_runs() {
       continue
     fi
     # AE = absolute error pixel count; fuzz absorbs AA jitter.
-    #
-    # ImageMagick 7 prints AE as "<count> (<normalized>)" — e.g. "0 (0)" or
-    # "319042 (0.216364)". Take the FIRST whitespace-delimited token, then
-    # strip any fractional part. (Parsing this as `${metric%%.*}` cuts at the
-    # dot inside the parenthesised figure, yielding "319042 (0", which matches
-    # no integer pattern — so every comparison used to fall through to the
-    # `ok` branch and the gate silently passed everything, differing pages
-    # included.)
     local metric count
     metric=$(compare -metric AE -fuzz 2% "$a/$name" "$b/$name" "$report/$name" 2>&1 || true)
-    count="${metric%% *}"
-    count="${count%%.*}"
+    count="$(ae_count "$metric")"
     if [[ "$count" =~ ^[0-9]+$ ]]; then
       compared=$((compared + 1))
       if (( count > 500 )); then
@@ -188,13 +196,36 @@ diff_runs() {
   echo "no visual changes"
 }
 
+# Route names that deliberately render NO TopNav — the chrome-less /dev
+# fixture pages, which mount a bare modal/board/collage. Their top-left 300x56
+# is page content (or empty background), so diffing it against a nav-bearing
+# route measures nothing about nav stability. Excluded from nav_check only;
+# they are still captured and still diffed by diff_runs.
+NAV_EXEMPT=(
+  "deck-preview"
+  "dnd-preview"
+  "dnd-tool-preview"
+  "rsvp-preview"
+  "rsvp-preview-phone360"
+  "theme-preview"
+)
+
+nav_is_exempt() {
+  local name="$1" ex
+  for ex in "${NAV_EXEMPT[@]}"; do
+    [[ "$name" == "$ex" ]] && return 0
+  done
+  return 1
+}
+
 # ── Nav stability check ───────────────────────────────────────────────────
 # Asserts the "Board Game Lab" logo sits at the IDENTICAL position on every
-# captured route (per viewport) by cropping the nav's logo region (top-left
-# 300x56 — left of any page actions) and pairwise-diffing routes against the
-# first. This is the regression guard for the per-page nav-width bug: a capped
-# or shifted nav moves the logo's hard glyph edges, which lights this up far
-# beyond the threshold, while backdrop-blur bleed-through stays below it.
+# captured NAV-BEARING route (per viewport) by cropping the nav's logo region
+# (top-left 300x56 — left of any page actions) and pairwise-diffing routes
+# against the first. This is the regression guard for the per-page nav-width
+# bug: a capped or shifted nav moves the logo's hard glyph edges, which lights
+# this up far beyond the threshold, while backdrop-blur bleed-through stays
+# below it.
 nav_check() {
   local dir="$1" report="${2:-/tmp/screenshot-smoke-nav}"
   mkdir -p "$report"
@@ -204,16 +235,28 @@ nav_check() {
     local ref="" refname=""
     for f in "$dir"/*--"${vpname}".png; do
       [[ -f "$f" ]] || continue
+      local base route
+      base="$(basename "$f")"
+      route="${base%--*}"
+      if nav_is_exempt "$route"; then
+        echo "nav skip [$vpname] $base (renders no TopNav)"
+        continue
+      fi
       local crop="$report/$(basename "${f%.png}")--nav.png"
       convert "$f" -crop 300x56+0+0 +repage "$crop"
       if [[ -z "$ref" ]]; then
         ref="$crop"; refname="$(basename "$f")"
         continue
       fi
-      local metric
+      local metric count
       metric=$(compare -metric AE -fuzz 5% "$ref" "$crop" null: 2>&1 || true)
-      if [[ "${metric%%.*}" =~ ^[0-9]+$ ]] && (( ${metric%%.*} > 2000 )); then
-        echo "NAV SHIFT [$vpname] $(basename "$f") vs $refname — $metric px differ in the logo region"
+      count="$(ae_count "$metric")"
+      if [[ ! "$count" =~ ^[0-9]+$ ]]; then
+        # `compare` itself failed — never silently pass the gate.
+        echo "NAV ERROR [$vpname] $(basename "$f") — compare failed: ${metric:-no output}"
+        failures=$((failures + 1))
+      elif (( count > 2000 )); then
+        echo "NAV SHIFT [$vpname] $(basename "$f") vs $refname — $count px differ in the logo region"
         failures=$((failures + 1))
       else
         echo "nav ok   [$vpname] $(basename "$f")"

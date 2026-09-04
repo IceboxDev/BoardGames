@@ -32,10 +32,19 @@ import {
 // true phone-width layouts). Deliberately imports NOTHING from the theme
 // engine — the palettes here are frozen fixtures (see theme-preview-fixtures).
 //
-// Two knobs have no consumer on this branch and so look inert by design:
-// the radius scales (awaiting the primitives unit's components/ui/radii.ts)
-// and the `shadow-glow-accent` UTILITY (Tailwind v4 inlines `@theme` shadows —
-// the "Accent glow" swatch below reads the var explicitly to prove it works).
+// INERT KNOBS on this branch — they change no pixel yet, by design, and that
+// is not evidence of broken propagation:
+//   • `--radius-card-scale` / `--radius-ui-scale` / `--avatar-radius` — no
+//     consumer until the primitives unit's components/ui/radii.ts lands
+//     (Avatar still hardcodes `rounded-full`).
+//   • `data-select-style` — the attribute is set on every section and by the
+//     gallery toolbar, but nothing reads it yet; it is here so the selector
+//     contract is exercised the moment the engine ships a consumer.
+//   • the `shadow-glow-accent` UTILITY — Tailwind v4 inlines `@theme` shadows,
+//     so only an explicit `shadow-[var(--shadow-glow-accent)]` follows the
+//     palette; the "Accent glow" swatch below is that proof.
+// What IS live and must look right: every `--color-*` (surfaces, fg, accent
+// ramp, neons) across all nine sections.
 // Route: /dev/theme-preview
 //   ?preset=<key>                       one fixture, full-screen (screenshots)
 //   ?select=bar|glow|border|fill|underline   force data-select-style on all
