@@ -1,4 +1,4 @@
-import { type CSSProperties, type FC, useMemo } from "react";
+import type { CSSProperties, FC } from "react";
 import "./matrix.css";
 
 // CSS-only rewrite of the interval-driven original: each column is ONE div
@@ -14,28 +14,26 @@ function randomGlyph(): string {
     : String.fromCharCode(0x30a1 + Math.floor(Math.random() * 85)); // katakana
 }
 
+// Generated once at module scope: the glyph strings and per-column timings are
+// fixed for the session, so a remount never reshuffles the rain.
+const COLUMNS = Array.from({ length: COLUMN_COUNT }, (_, i) => {
+  const duration = 5 + Math.random() * 6;
+  const length = 10 + Math.floor(Math.random() * 14);
+  return {
+    id: `col-${i}`,
+    x: i * 6.25 + Math.random() * 2.5,
+    glyphs: Array.from({ length }, randomGlyph).join("\n"),
+    duration,
+    delay: -(Math.random() * duration),
+  };
+});
+
 // biome-ignore lint/style/useComponentExportOnlyModules: the component ships inside the default-exported effect definition the ambient registry discovers
 const MatrixEffect: FC = () => {
-  const columns = useMemo(
-    () =>
-      Array.from({ length: COLUMN_COUNT }, (_, i) => {
-        const duration = 5 + Math.random() * 6;
-        const length = 10 + Math.floor(Math.random() * 14);
-        return {
-          id: `col-${i}`,
-          x: i * 6.25 + Math.random() * 2.5,
-          glyphs: Array.from({ length }, randomGlyph).join("\n"),
-          duration,
-          delay: -(Math.random() * duration),
-        };
-      }),
-    [],
-  );
-
   return (
-    <div aria-hidden className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div aria-hidden className="amb-matrix absolute inset-0 overflow-hidden pointer-events-none">
       <div className="amb-matrix-wash" />
-      {columns.map((col) => (
+      {COLUMNS.map((col) => (
         <div
           key={col.id}
           className="amb-matrix-col"

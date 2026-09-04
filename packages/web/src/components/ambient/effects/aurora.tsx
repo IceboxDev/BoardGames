@@ -1,4 +1,4 @@
-import { type CSSProperties, type FC, useMemo } from "react";
+import type { CSSProperties, FC } from "react";
 import "./aurora.css";
 
 // Five gradient ribbons parameterized on the site's neon trio + accent (no
@@ -70,22 +70,19 @@ const RIBBONS = [
   },
 ];
 
+// Randomized once at module scope so a remount never reshuffles the scene.
+const SPARKLES = Array.from({ length: 20 }, (_, i) => ({
+  id: `sparkle-${i}`,
+  x: 5 + Math.random() * 90,
+  y: 5 + Math.random() * 40,
+  size: 1 + Math.random() * 2,
+  delay: -(Math.random() * 3),
+}));
+
 // biome-ignore lint/style/useComponentExportOnlyModules: the component ships inside the default-exported effect definition the ambient registry discovers
 const AuroraEffect: FC = () => {
-  const sparkles = useMemo(
-    () =>
-      Array.from({ length: 20 }, (_, i) => ({
-        id: `sparkle-${i}`,
-        x: 5 + Math.random() * 90,
-        y: 5 + Math.random() * 40,
-        size: 1 + Math.random() * 2,
-        delay: -(Math.random() * 3),
-      })),
-    [],
-  );
-
   return (
-    <div aria-hidden className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div aria-hidden className="amb-aurora absolute inset-0 overflow-hidden pointer-events-none">
       <div className="amb-aurora-glow" />
       {RIBBONS.map((r) => (
         <div
@@ -114,7 +111,7 @@ const AuroraEffect: FC = () => {
           />
         </div>
       ))}
-      {sparkles.map((s) => (
+      {SPARKLES.map((s) => (
         <div
           key={s.id}
           className="amb-aurora-sparkle"

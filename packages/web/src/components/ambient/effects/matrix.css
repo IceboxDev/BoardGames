@@ -7,6 +7,14 @@
    hidden outright (frozen glyph strings pinned to the top read as a glitch,
    not a remnant) and the static cyan wash below stands in for the effect. */
 
+/* The root is a sealed, permanently-animated subtree: nothing inside affects
+   anything outside it. `contain: strict` (layout + paint + size + style) keeps
+   it out of the app's invalidation graph; size containment is safe because
+   `absolute inset-0` imposes the box's dimensions from outside. */
+.amb-matrix {
+  contain: strict;
+}
+
 .amb-matrix-wash {
   position: absolute;
   inset: 0;

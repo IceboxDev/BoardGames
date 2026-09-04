@@ -2,6 +2,14 @@
    wrapper, Y wave on the band); the 25–45px blur is static, so it paints once
    and the GPU composites the cached layer. Sparkles animate opacity only. */
 
+/* The root is a sealed, permanently-animated subtree: nothing inside affects
+   anything outside it. `contain: strict` (layout + paint + size + style) keeps
+   it out of the app's invalidation graph; size containment is safe because
+   `absolute inset-0` imposes the box's dimensions from outside. */
+.amb-aurora {
+  contain: strict;
+}
+
 .amb-aurora-glow {
   position: absolute;
   top: 0;
