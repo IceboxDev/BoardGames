@@ -1,5 +1,9 @@
 // The shared tone vocabulary — import tone types from here, not per-component.
 
+// data-select-style selection variants (inert until the personalization
+// engine sets the attribute on <html>).
+import "./select-styles.css";
+
 export { AiThinkingIndicator, WaitingIndicator } from "./AiThinkingIndicator";
 export { AuthCard } from "./AuthCard";
 export { Avatar, type AvatarSize } from "./Avatar";

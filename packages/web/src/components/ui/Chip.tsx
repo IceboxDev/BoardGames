@@ -1,6 +1,7 @@
 import type { ReactNode, Ref } from "react";
 import { cn } from "../../lib/cn";
-import { type CoreTone, TONE_ACTIVE, TONE_RING } from "./tones";
+import { RADIUS_UI_MD } from "./radii";
+import { type CoreTone, TONE_ACTIVE, TONE_RING, TONE_SELECT_MARKER } from "./tones";
 
 // Toggle / picker chip primitive. The single source of truth for the
 // "pressed / unpressed" pill-or-rect chip pattern that appears in every
@@ -63,7 +64,8 @@ const SIZES: Record<Size, string> = {
 };
 
 const SHAPES: Record<Shape, string> = {
-  rounded: "rounded-md",
+  // Themable corner — see radii.ts. Pills and squares are shape-identity.
+  rounded: RADIUS_UI_MD,
   pill: "rounded-full",
   // Square corners — abutting chips inside a segmented group (e.g. the
   // WerewolfForm team picker) where rounded inner corners would break the row.
@@ -114,6 +116,10 @@ export function Chip({
     BASE,
     SIZES[size],
     SHAPES[shape],
+    // Selection-style theme marker (see tones.ts) — interactive chips only;
+    // an `asStatic` status pill is not a selection and must not pick up the
+    // engine's selected-state treatment.
+    !asStatic && pressed && TONE_SELECT_MARKER[tone],
     pressed ? activeCls : inactiveCls,
     block && "w-full",
     className,

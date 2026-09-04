@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { cn } from "../../lib/cn";
 import { initialsFromName } from "../../lib/names.ts";
+import { AVATAR_RADIUS } from "./radii";
 
 // Avatar primitive: renders the user's `image` when present, otherwise an
 // initials monogram (first + last initial, via the shared `initialsFromName`).
@@ -59,7 +60,7 @@ export function Avatar({
         loading="lazy"
         decoding="async"
         style={style}
-        className={cn(sizeCls, ringCls, "shrink-0 rounded-full object-cover", className)}
+        className={cn(sizeCls, ringCls, AVATAR_RADIUS, "shrink-0 object-cover", className)}
       />
     );
   }
@@ -72,7 +73,8 @@ export function Avatar({
       className={cn(
         sizeCls,
         ringCls,
-        "inline-flex shrink-0 items-center justify-center rounded-full bg-[var(--avatar-accent)]/20 font-bold uppercase text-[var(--avatar-accent)]",
+        AVATAR_RADIUS,
+        "inline-flex shrink-0 items-center justify-center bg-[var(--avatar-accent)]/20 font-bold uppercase text-[var(--avatar-accent)]",
         className,
       )}
     >

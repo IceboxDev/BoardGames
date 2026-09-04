@@ -80,6 +80,21 @@ export const TONE_ACTIVE: Record<CoreTone, string> = {
   rose: "bg-rose-500/20 text-rose-100",
 };
 
+// Selection-style theme hook. Marks an interactive control's selected /
+// pressed / active state with the stable `ui-selected` class that
+// `select-styles.css` targets when the personalization engine sets
+// `data-select-style` on <html>, and pins the tone's -400 shade as
+// `--ui-sel` for those effects. With the attribute absent (or "bar",
+// today's look) no rule matches and nothing changes — both classes are
+// visually inert on their own.
+export const TONE_SELECT_MARKER: Record<CoreTone, string> = {
+  accent: "ui-selected [--ui-sel:var(--color-accent-400)]",
+  amber: "ui-selected [--ui-sel:var(--color-amber-400)]",
+  sky: "ui-selected [--ui-sel:var(--color-sky-400)]",
+  emerald: "ui-selected [--ui-sel:var(--color-emerald-400)]",
+  rose: "ui-selected [--ui-sel:var(--color-rose-400)]",
+};
+
 // Glow shadow per tone — thin wrapper over the `--shadow-glow-*` tokens.
 export const TONE_GLOW: Record<CoreTone | "cyan", string> = {
   accent: "shadow-glow-accent",

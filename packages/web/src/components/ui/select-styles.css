@@ -1,0 +1,80 @@
+/* ── Selection-style theme variants ───────────────────────────────────────
+ *
+ * The personalization engine sets `data-select-style` on <html> with one of
+ * bar | glow | border | fill | underline. "bar" is today's look and is what
+ * the primitives' existing tone classes already render, so this file defines
+ * NO rule for it (nor for the attribute being absent) — with the engine
+ * unset, nothing here matches and the UI is pixel-identical.
+ *
+ * The hook is the stable `ui-selected` marker class that Chip (pressed,
+ * interactive only), SegmentedControl (active option), and SelectableCard
+ * (selected) add via TONE_SELECT_MARKER (tones.ts), which also pins the
+ * control's tone as `--ui-sel` (the tone's -400 theme var — a themed accent
+ * stays themed). `currentColor` is only a safety fallback for a marker
+ * without the var.
+ *
+ * Every effect lands on an ::after overlay rather than the element's own
+ * box-shadow/background: Tailwind rings (selected rings, focus-visible
+ * rings) compose through the element's box-shadow, and the element's layered
+ * bg-* utilities (hover feedback, caller overrides) must keep working
+ * underneath. This stylesheet is unlayered, so its overlay rules win over
+ * the @layer'd utilities without !important.
+ *
+ * Loaded via the components/ui barrel because src/index.css belongs to the
+ * theme-engine unit; that unit may later relocate this file to an @import
+ * beside @theme — the rules are self-contained either way.
+ */
+
+:root[data-select-style="glow"] .ui-selected,
+:root[data-select-style="border"] .ui-selected,
+:root[data-select-style="fill"] .ui-selected,
+:root[data-select-style="underline"] .ui-selected {
+  position: relative;
+}
+
+:root[data-select-style="glow"] .ui-selected::after,
+:root[data-select-style="border"] .ui-selected::after,
+:root[data-select-style="fill"] .ui-selected::after,
+:root[data-select-style="underline"] .ui-selected::after {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+}
+
+:root[data-select-style="glow"] .ui-selected::after,
+:root[data-select-style="border"] .ui-selected::after,
+:root[data-select-style="fill"] .ui-selected::after {
+  inset: 0;
+  border-radius: inherit;
+}
+
+/* glow — inset ring + inner wash (both survive an overflow-hidden container,
+ * e.g. stripe SelectableCards) plus an outer halo where clipping allows. */
+:root[data-select-style="glow"] .ui-selected::after {
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--ui-sel, currentColor) 45%, transparent),
+    inset 0 0 16px 0 color-mix(in srgb, var(--ui-sel, currentColor) 30%, transparent),
+    0 0 12px 0 color-mix(in srgb, var(--ui-sel, currentColor) 25%, transparent);
+}
+
+/* border — crisp 1.5px inset outline in the control's tone. */
+:root[data-select-style="border"] .ui-selected::after {
+  box-shadow: inset 0 0 0 1.5px var(--ui-sel, currentColor);
+}
+
+/* fill — a solid-reading tinted wash over the control. */
+:root[data-select-style="fill"] .ui-selected::after {
+  background-color: color-mix(in srgb, var(--ui-sel, currentColor) 22%, transparent);
+}
+
+/* underline — a short centered bar. Drawn as its own rounded box rather than
+ * an inset bottom shadow so it reads on pill-shaped controls too, where a
+ * full-width inset edge would be clipped to a sliver by the corner curve. */
+:root[data-select-style="underline"] .ui-selected::after {
+  left: 20%;
+  right: 20%;
+  bottom: 3px;
+  height: 2px;
+  border-radius: 9999px;
+  background-color: var(--ui-sel, currentColor);
+}

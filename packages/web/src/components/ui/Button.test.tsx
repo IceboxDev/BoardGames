@@ -3,6 +3,7 @@ import userEvent from "@testing-library/user-event";
 import type { FormEvent } from "react";
 import { describe, expect, it, vi } from "vitest";
 import { Button } from "./Button";
+import { RADIUS_UI_LG } from "./radii";
 
 describe("Button — rendering", () => {
   it("renders children as the button label", () => {
@@ -66,13 +67,13 @@ describe("Button — rendering", () => {
     expect(btn.className).not.toMatch(/px-4/);
   });
 
-  it("shape=pill is rounded-full; rounded is rounded-lg", () => {
+  it("shape=pill is rounded-full; rounded is the themable ui radius at its rounded-lg base", () => {
     const { rerender } = render(
       <Button shape="rounded" key="a">
         X
       </Button>,
     );
-    expect(screen.getByRole("button").className).toMatch(/rounded-lg/);
+    expect(screen.getByRole("button").className).toContain(RADIUS_UI_LG);
     rerender(
       <Button shape="pill" key="b">
         X
@@ -127,7 +128,7 @@ describe("Button — tone / bleed / align", () => {
     expect(cls).toMatch(/h-full/);
     expect(cls).toMatch(/w-full/);
     expect(cls).not.toMatch(/px-4/);
-    expect(cls).not.toMatch(/rounded-lg/);
+    expect(cls).not.toMatch(/rounded-/);
   });
 
   it("align=start left-aligns the content", () => {

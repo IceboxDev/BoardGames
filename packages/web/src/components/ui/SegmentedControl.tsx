@@ -1,6 +1,13 @@
 import type { ReactNode } from "react";
 import { cn } from "../../lib/cn";
-import { type CoreTone, TONE_ACTIVE, TONE_GLOW, TONE_RING_STRONG } from "./tones";
+import { RADIUS_UI_LG, RADIUS_UI_MD } from "./radii";
+import {
+  type CoreTone,
+  TONE_ACTIVE,
+  TONE_GLOW,
+  TONE_RING_STRONG,
+  TONE_SELECT_MARKER,
+} from "./tones";
 
 // ── SegmentedControl ─────────────────────────────────────────────────────
 //
@@ -66,14 +73,17 @@ type SegmentedControlProps<T extends string | number> = {
   className?: string;
 };
 
+// Themable corners — see radii.ts. The option's base stays one Tailwind step
+// below the track's, so the nested curve remains concentric at any scale.
+// Pills stay pills.
 const TRACK_SHAPE: Record<Shape, string> = {
   pill: "rounded-full border border-white/10 bg-surface-950/60 p-0.5 gap-0.5",
-  rounded: "rounded-lg border border-white/10 bg-surface-800 p-1",
+  rounded: `${RADIUS_UI_LG} border border-white/10 bg-surface-800 p-1`,
 };
 
 const OPTION_SHAPE: Record<Shape, string> = {
   pill: "rounded-full",
-  rounded: "rounded-md",
+  rounded: RADIUS_UI_MD,
 };
 
 const OPTION_SIZE: Record<"xs" | "sm" | "md", string> = {
@@ -128,6 +138,7 @@ export function SegmentedControl<T extends string | number>({
         const optTone = opt.tone ?? groupTone;
         const activeCls = isActive
           ? cn(
+              TONE_SELECT_MARKER[optTone],
               TONE_ACTIVE[optTone],
               emphasizeActive && TONE_RING_STRONG[optTone],
               emphasizeActive && TONE_GLOW[optTone],

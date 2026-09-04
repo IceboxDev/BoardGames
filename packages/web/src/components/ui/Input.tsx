@@ -1,5 +1,6 @@
 import type { InputHTMLAttributes, Ref } from "react";
 import { cn } from "../../lib/cn";
+import { RADIUS_UI_LG } from "./radii";
 
 // Width presets so call sites stop reaching for ad-hoc width + alignment
 // overrides on a numeric field:
@@ -28,7 +29,8 @@ export function Input({ invalid = false, width = "full", className = "", ref, ..
       ref={ref}
       className={cn(
         WIDTHS[width],
-        "rounded-lg border bg-surface-900 px-3 py-2 text-sm text-fg-primary placeholder:text-fg-muted focus:outline-none focus:ring-2 disabled:cursor-not-allowed disabled:opacity-50",
+        RADIUS_UI_LG,
+        "border bg-surface-900 px-3 py-2 text-sm text-fg-primary placeholder:text-fg-muted focus:outline-none focus:ring-2 disabled:cursor-not-allowed disabled:opacity-50",
         invalid
           ? "border-rose-500/50 focus:ring-rose-500/40"
           : "border-white/10 focus:border-accent-400/60 focus:ring-accent-400/30",
