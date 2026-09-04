@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { cn } from "../../../lib/cn";
 import type { Tone } from "../tones";
 import { resolveChartColor } from "./tone-hex";
+import { useThemeVersion } from "./use-theme-version";
 
 interface ColumnSegment {
   value: number;
@@ -39,6 +40,7 @@ export function ColumnChart({
   formatValue = String,
   className,
 }: ColumnChartProps) {
+  useThemeVersion(); // re-render on themechange so segment fills re-resolve
   const computedMax =
     maxValue ?? Math.max(...columns.map((c) => c.segments.reduce((s, seg) => s + seg.value, 0)), 1);
 

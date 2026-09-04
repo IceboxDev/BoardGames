@@ -1,6 +1,7 @@
 import { useId } from "react";
 import type { Tone } from "../tones";
 import { resolveChartColor } from "./tone-hex";
+import { useThemeVersion } from "./use-theme-version";
 
 interface SparklineProps {
   data: number[];
@@ -24,6 +25,7 @@ export function Sparkline({
   highlightLast = true,
   invertY = false,
 }: SparklineProps) {
+  useThemeVersion(); // re-render on themechange so the stroke re-resolves
   const gradientId = useId();
   if (data.length < 2) return null;
   const stroke = resolveChartColor(color, tone);

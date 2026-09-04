@@ -11,3 +11,4 @@ export { LineChart } from "./LineChart";
 export { perfColor } from "./perf-color";
 export { Sparkline } from "./Sparkline";
 export { chartHex } from "./tone-hex";
+export { useThemeVersion } from "./use-theme-version";

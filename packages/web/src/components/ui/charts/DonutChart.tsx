@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { cn } from "../../../lib/cn";
 import type { Tone } from "../tones";
 import { resolveChartColor } from "./tone-hex";
+import { useThemeVersion } from "./use-theme-version";
 
 interface DonutSegment {
   value: number;
@@ -43,6 +44,7 @@ export function DonutChart({
   onSegmentClick,
   className,
 }: DonutChartProps) {
+  useThemeVersion(); // re-render on themechange so arc strokes re-resolve
   const r = (size - thickness) / 2;
   const circumference = 2 * Math.PI * r;
   const total = segments.reduce((s, seg) => s + seg.value, 0);
