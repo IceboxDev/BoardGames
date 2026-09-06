@@ -10,7 +10,8 @@
 //   pnpm exec tsx src/scripts/curate-dnd-waypoint1.ts
 
 import "../env.ts";
-import { getDb, initDb } from "../db.ts";
+import { getDb } from "../db.ts";
+import { connectDbTarget } from "../lib/db-target.ts";
 import { getCampaignFileId, listCampaignsForUser } from "../lib/dnd-campaigns-db.ts";
 import { extractReadAloudNodes, type ReadAloudBlock } from "../lib/dnd-extract.ts";
 import { getFileBase64 } from "../lib/dnd-files-db.ts";
@@ -175,7 +176,7 @@ const WAYPOINT_0: ReadAloudBlock[] = [
   },
 ];
 
-await initDb();
+await connectDbTarget({ writes: true, purpose: "curate D&D waypoint 0" });
 
 const rows = await getDb().execute(
   "SELECT id, user_id FROM dnd_campaigns WHERE status = 'ready' AND source_filename LIKE '%754298838%'",

@@ -12,7 +12,8 @@
 import { readFile } from "node:fs/promises";
 import { basename } from "node:path";
 import "../env.ts";
-import { getDb, initDb } from "../db.ts";
+import { getDb } from "../db.ts";
+import { connectDbTarget } from "../lib/db-target.ts";
 import {
   getCampaignFileId,
   listCampaignsForUser,
@@ -33,7 +34,7 @@ if (!pdfPath || !filenameNeedle) {
   process.exit(1);
 }
 
-await initDb();
+await connectDbTarget({ writes: true, purpose: "backfill D&D campaign from PDF" });
 
 // Locate the campaign (any user) whose source filename matches.
 const rows = await getDb().execute({

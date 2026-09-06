@@ -13,7 +13,8 @@
 //   pnpm exec tsx src/scripts/rebuild-dnd-waypoints.ts <campaign-filename-substring>
 
 import "../env.ts";
-import { getDb, initDb } from "../db.ts";
+import { getDb } from "../db.ts";
+import { connectDbTarget } from "../lib/db-target.ts";
 import {
   getCampaignFileId,
   listCampaignsForUser,
@@ -61,7 +62,7 @@ function inModuleOrder(titles: string[]): boolean {
   return true;
 }
 
-await initDb();
+await connectDbTarget({ writes: true, purpose: "rebuild D&D waypoints" });
 
 const rows = await getDb().execute({
   sql: `SELECT id, user_id FROM dnd_campaigns

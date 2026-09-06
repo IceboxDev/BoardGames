@@ -5,9 +5,10 @@
 
 import "../env.ts";
 import { DangerTableSchema } from "@boardgames/core/protocol";
-import { getDb, initDb } from "../db.ts";
+import { getDb } from "../db.ts";
+import { connectDbTarget } from "../lib/db-target.ts";
 
-await initDb();
+await connectDbTarget({ writes: true, purpose: "backfill danger-table creatures" });
 
 const CREATURES: Record<string, { name: string; count: string }[]> = {
   "1": [{ name: "Swarm of Wasps", count: "1d4" }],

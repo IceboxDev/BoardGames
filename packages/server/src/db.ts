@@ -76,13 +76,53 @@ export function getDb(): Client {
   return db;
 }
 
-export function getDbConnectionConfig(): { url: string; authToken: string | undefined } {
+export interface DbConnectionConfig {
+  readonly url: string;
+  readonly authToken: string | undefined;
+}
+
+export function getDbConnectionConfig(): DbConnectionConfig {
   const url = process.env.TURSO_DATABASE_URL;
   if (!url) {
     throw new Error("TURSO_DATABASE_URL is required. Set it in packages/server/.env");
   }
   const authToken = process.env.TURSO_AUTH_TOKEN;
   return { url, authToken };
+}
+
+/** How long `/api/health` waits for the database before reporting it down. */
+const PROBE_TIMEOUT_MS = Number(process.env.DB_PROBE_TIMEOUT_MS ?? 2_000);
+
+export type DbProbe =
+  | { readonly ok: true; readonly ms: number }
+  | { readonly ok: false; readonly ms: number; readonly error: string };
+
+/**
+ * One cheap round trip, bounded by a deadline. The boot-time checks in
+ * `initDb` run once; a database that dies afterwards would otherwise leave
+ * the process answering "healthy" while every request fails. The healthcheck
+ * calls this so the orchestrator restarts (or pages) instead.
+ */
+export async function probeDb(client: Client = getDb()): Promise<DbProbe> {
+  const startedAt = Date.now();
+  let timer: NodeJS.Timeout | undefined;
+  const deadline = new Promise<never>((_, reject) => {
+    timer = setTimeout(
+      () => reject(new Error(`no response within ${PROBE_TIMEOUT_MS}ms`)),
+      PROBE_TIMEOUT_MS,
+    );
+  });
+  try {
+    await Promise.race([client.execute("SELECT 1"), deadline]);
+    return { ok: true, ms: Date.now() - startedAt };
+  } catch (err) {
+    // Some transport errors carry an empty message; the reason must never be
+    // blank in a health payload.
+    const reason = err instanceof Error ? err.message || err.name : String(err);
+    return { ok: false, ms: Date.now() - startedAt, error: reason || "unknown error" };
+  } finally {
+    clearTimeout(timer);
+  }
 }
 
 /**
@@ -119,9 +159,14 @@ async function assertForeignKeysEnforced(client: Client): Promise<void> {
  * run here — that is the dedicated `migrate` command's job (src/migrations/cli.ts).
  * Boot fails fast with an actionable message if the database isn't at the latest
  * version, so we never serve traffic against a stale or partially-migrated schema.
+ *
+ * `config` defaults to the environment; scripts pass the target that
+ * `lib/db-target.ts` resolved so the guard there decides what they connect to.
  */
-export async function initDb(): Promise<Client> {
-  const { url, authToken } = getDbConnectionConfig();
+export async function initDb(
+  config: DbConnectionConfig = getDbConnectionConfig(),
+): Promise<Client> {
+  const { url, authToken } = config;
   db = withTiming(createClient({ url, authToken }));
   await assertAtLatestVersion(db);
   await assertForeignKeysEnforced(db);

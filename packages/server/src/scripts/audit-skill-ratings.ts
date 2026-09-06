@@ -13,8 +13,9 @@ import { fitSkillRatings } from "@boardgames/core/skill/fit";
 import { highlightsFor } from "@boardgames/core/skill/highlights";
 import { gameLeaderboards, traitStandings } from "@boardgames/core/skill/percentiles";
 import { z } from "zod";
-import { getDb, initDb } from "../db.ts";
+import { getDb } from "../db.ts";
 import { jsonColumn, parseRows } from "../lib/db-rows.ts";
+import { connectDbTarget } from "../lib/db-target.ts";
 import { groupMatchUnits } from "../lib/match-units.ts";
 
 const MatchRowSchema = z.object({
@@ -32,7 +33,7 @@ const UserRowSchema = z.object({
 });
 
 async function main() {
-  await initDb();
+  await connectDbTarget({ writes: false, purpose: "audit skill ratings" });
   const db = getDb();
   const matchRows = parseRows(
     MatchRowSchema,

@@ -4,6 +4,7 @@
 // at top level — if dotenv loads later, those reads see empty values and
 // better-auth ends up pointing at the wrong database.
 import dotenv from "dotenv";
+import { isDeployedServer } from "./lib/origins.ts";
 
 dotenv.config({ path: ".env.local", quiet: true });
 dotenv.config({ quiet: true });
@@ -14,9 +15,17 @@ dotenv.config({ quiet: true });
 // hardcoded, publicly-known key (see sessions/ws-ticket.ts), and an absent
 // BETTER_AUTH_URL / WEB_ORIGIN leaves auth pointing at localhost in prod.
 // Refusing to boot is safer than serving traffic in that state.
-if (process.env.NODE_ENV === "production") {
+//
+// "Production" here means EITHER `NODE_ENV=production` OR a deployed server
+// (Railway's env vars, the same test `lib/origins.ts` uses for the origin
+// allowlist). Keying it off one of the two alone let a container that forgot
+// NODE_ENV get the deployed CORS behaviour while skipping this guard.
+if (process.env.NODE_ENV === "production" || isDeployedServer()) {
   const required = [
     "TURSO_DATABASE_URL",
+    // A remote libsql URL without its token fails at the first query with a
+    // network error, long after boot claimed success.
+    "TURSO_AUTH_TOKEN",
     "BETTER_AUTH_SECRET",
     "BETTER_AUTH_URL",
     "WEB_ORIGIN",
