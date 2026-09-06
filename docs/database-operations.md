@@ -207,24 +207,28 @@ instead of `initDb()`.
 
 ### Preview deployments fail closed
 
-`vercel.ts` (which replaced `vercel.json`) rewrites `/api/*` to whatever the
-`API_ORIGIN` environment variable holds, and Vercel scopes that variable per
-environment: Production carries the production Railway URL, Preview carries a
-host that never resolves — a preview with no API is safe; a preview on
-production (what every pull-request preview used to be) is not. The file is
-read statically by the platform, so it holds no logic; the branching IS the
-per-environment variable. The web bundle does the same for its WebSocket: a
-preview build uses `VITE_WS_URL_PREVIEW`, never `VITE_WS_URL`, and falls back
-to same-origin `/ws`, which does not upgrade on Vercel.
+`vercel.json` carries two `/api/*` rewrites and the first match wins. The
+first is conditioned on the request host looking like a preview
+(`board-games-server-…​.vercel.app` — every preview URL has a dash after the
+project name, the production alias and any custom domain do not) and sends
+`/api/*` to a host that never resolves. The second, unconditional one is the
+production Railway service. So a preview with no API is what you get, which
+is safe; a preview on production (what every pull-request preview used to be)
+is not. Neither `vercel.ts` nor environment variables can express this: the
+platform folds `vercel.ts` statically and drops computed values, and the
+rewrite destination cannot reference an environment variable. The web bundle
+does the same for its WebSocket: a preview build uses `VITE_WS_URL_PREVIEW`,
+never `VITE_WS_URL`, and falls back to same-origin `/ws`, which does not
+upgrade on Vercel.
 
 To give previews a working backend, once:
 
 1. Create a second Railway service from this repo with `TURSO_DATABASE_URL`
    and `TURSO_AUTH_TOKEN` pointing at `boardgames-staging`, its own
    `BETTER_AUTH_SECRET`, and `WEB_ORIGIN` set to the preview origins.
-2. In the Vercel project's **Preview** environment change `API_ORIGIN` to
-   that service's public URL and add `VITE_WS_URL_PREVIEW` with its
-   `wss://…/ws`.
+2. Replace the `.invalid` destination in `vercel.json` with that service's
+   URL, and add `VITE_WS_URL_PREVIEW` with its `wss://…/ws` to the Vercel
+   project's **Preview** environment.
 
 Staging is a disposable copy, so previews can then be as destructive as they
 like.
