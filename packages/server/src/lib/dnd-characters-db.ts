@@ -2,8 +2,12 @@
 // row doubles as the extraction job (status: processing → ready | error).
 // Rows are scoped by user_id (the campaign's DM) — characters are only ever
 // read in the context of a campaign the same user owns.
+//
+// Every write takes an `OwnedRef` and binds `user_id` in its WHERE clause.
+// The owner check lives in the statement, not in the caller: a route that
+// forgets to verify ownership still cannot touch another DM's row.
 
-import type { CharacterSheet, DndCharacter } from "@boardgames/core/protocol";
+import type { CharacterSheet, CharacterState, DndCharacter } from "@boardgames/core/protocol";
 import {
   CharacterSheetSchema,
   CharacterStateSchema,
@@ -12,6 +16,7 @@ import {
 import { z } from "zod";
 import { getDb } from "../db.ts";
 import { jsonColumn, parseRow, parseRows } from "./db-rows.ts";
+import type { OwnedRef } from "./owned-ref.ts";
 
 const CharacterRowSchema = z.object({
   id: z.string(),
@@ -86,11 +91,12 @@ export async function listCharactersForParty(
 }
 
 /** Link the stored PDF once the background job has persisted it. */
-export async function setCharacterFile(id: string, fileId: string): Promise<void> {
-  await getDb().execute({
-    sql: "UPDATE dnd_characters SET file_id = ? WHERE id = ?",
-    args: [fileId, id],
+export async function setCharacterFile(ref: OwnedRef, fileId: string): Promise<boolean> {
+  const result = await getDb().execute({
+    sql: "UPDATE dnd_characters SET file_id = ? WHERE id = ? AND user_id = ?",
+    args: [fileId, ref.id, ref.userId],
   });
+  return result.rowsAffected > 0;
 }
 
 export async function listCharactersForCampaign(
@@ -126,46 +132,50 @@ export async function countCharactersForCampaign(
   return Number(result.rows[0]?.n ?? 0);
 }
 
-export async function setCharacterReady(id: string, sheet: CharacterSheet): Promise<void> {
-  await getDb().execute({
+export async function setCharacterReady(ref: OwnedRef, sheet: CharacterSheet): Promise<boolean> {
+  const result = await getDb().execute({
     sql: `UPDATE dnd_characters
           SET status = 'ready', sheet_json = ?, error = NULL
-          WHERE id = ?`,
-    args: [JSON.stringify(sheet), id],
+          WHERE id = ? AND user_id = ?`,
+    args: [JSON.stringify(sheet), ref.id, ref.userId],
   });
+  return result.rowsAffected > 0;
 }
 
-export async function setCharacterState(
-  id: string,
-  state: import("@boardgames/core/protocol").CharacterState,
-): Promise<void> {
-  await getDb().execute({
-    sql: "UPDATE dnd_characters SET state_json = ? WHERE id = ?",
-    args: [JSON.stringify(state), id],
-  });
-}
-
-export async function getCharacterActions(id: string): Promise<string | null> {
+export async function setCharacterState(ref: OwnedRef, state: CharacterState): Promise<boolean> {
   const result = await getDb().execute({
-    sql: "SELECT actions_json FROM dnd_characters WHERE id = ?",
-    args: [id],
+    sql: "UPDATE dnd_characters SET state_json = ? WHERE id = ? AND user_id = ?",
+    args: [JSON.stringify(state), ref.id, ref.userId],
+  });
+  return result.rowsAffected > 0;
+}
+
+export async function getCharacterActions(ref: OwnedRef): Promise<string | null> {
+  const result = await getDb().execute({
+    sql: "SELECT actions_json FROM dnd_characters WHERE id = ? AND user_id = ?",
+    args: [ref.id, ref.userId],
   });
   const raw = result.rows[0]?.actions_json;
   return typeof raw === "string" ? raw : null;
 }
 
-export async function setCharacterActions(id: string, actionsJson: string | null): Promise<void> {
-  await getDb().execute({
-    sql: "UPDATE dnd_characters SET actions_json = ? WHERE id = ?",
-    args: [actionsJson, id],
+export async function setCharacterActions(
+  ref: OwnedRef,
+  actionsJson: string | null,
+): Promise<boolean> {
+  const result = await getDb().execute({
+    sql: "UPDATE dnd_characters SET actions_json = ? WHERE id = ? AND user_id = ?",
+    args: [actionsJson, ref.id, ref.userId],
   });
+  return result.rowsAffected > 0;
 }
 
-export async function setCharacterError(id: string, error: string): Promise<void> {
-  await getDb().execute({
-    sql: "UPDATE dnd_characters SET status = 'error', error = ? WHERE id = ?",
-    args: [error, id],
+export async function setCharacterError(ref: OwnedRef, error: string): Promise<boolean> {
+  const result = await getDb().execute({
+    sql: "UPDATE dnd_characters SET status = 'error', error = ? WHERE id = ? AND user_id = ?",
+    args: [error, ref.id, ref.userId],
   });
+  return result.rowsAffected > 0;
 }
 
 export async function deleteCharacter(id: string, userId: string): Promise<boolean> {

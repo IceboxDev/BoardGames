@@ -4,6 +4,13 @@ import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
 
 export default defineConfig({
+  define: {
+    // Which Vercel environment this bundle was built for. The WebSocket
+    // client uses it to keep preview deployments off the production socket
+    // (`src/lib/ws-client.ts`). Vitest evaluates this too, so tests see
+    // "development".
+    __DEPLOY_ENV__: JSON.stringify(process.env.VERCEL_ENV ?? "development"),
+  },
   plugins: [
     react(),
     tailwindcss(),

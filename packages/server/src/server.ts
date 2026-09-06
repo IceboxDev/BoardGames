@@ -51,11 +51,13 @@ import { purchaseRoutes } from "./auth-routes/purchases.ts";
 import { skillsRoutes } from "./auth-routes/skills.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
+import { probeDb } from "./db.ts";
 import { probeAi } from "./lib/ai/index.ts";
 import { requireTrustedOrigin } from "./lib/csrf.ts";
 import { errorResponse } from "./lib/error-response.ts";
 import { allowedOrigins } from "./lib/origins.ts";
 import { clientIp, rateLimit } from "./lib/rate-limit.ts";
+import { LATEST_VERSION } from "./migrations/registry.ts";
 import { persistenceRoutes } from "./persistence/routes.ts";
 import { getRegisteredSlugs } from "./sessions/machine-registry.ts";
 import { handleWsClose, handleWsMessage, wsAuth } from "./sessions/manager.ts";
@@ -152,13 +154,24 @@ app.get("/api/health/openai", aiHealthHandler);
 
 // `commit` verifies WHICH build is live (Railway injects the SHA) — deploy
 // races have burned us before ("the fix doesn't work" while it was rolling).
-app.get("/api/health", (c) =>
-  c.json({
-    ok: true,
+// `schemaVersion` says which migration chain this build expects, so a
+// web/server skew can be read off the two health payloads.
+//
+// The database is probed on every call. This is Railway's healthcheck: a
+// build whose database went away after boot must fail it, so the platform
+// restarts (and, with an alert on the check, pages) instead of the process
+// answering "healthy" while every real request fails.
+app.get("/api/health", async (c) => {
+  const db = await probeDb();
+  const body = {
+    ok: db.ok,
     commit: process.env.RAILWAY_GIT_COMMIT_SHA?.slice(0, 7) ?? "dev",
+    schemaVersion: LATEST_VERSION,
     games: getRegisteredSlugs(),
-  }),
-);
+    db,
+  };
+  return c.json(body, db.ok ? 200 : 503);
+});
 
 // Public iCalendar feed. Path-token authentication (see auth/feed-token.ts),
 // no session cookie required — calendar clients are external. Mounted on

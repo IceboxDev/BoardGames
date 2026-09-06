@@ -10,6 +10,7 @@
     "migrate": "tsx src/migrations/cli.ts",
     "migrate:status": "tsx src/migrations/cli.ts --status",
     "migrate:dry-run": "tsx src/migrations/dry-run.ts",
+    "migrate:dry-run:prod": "tsx src/migrations/dry-run.ts --prod",
     "db:backup": "tsx src/scripts/backup-db.ts"
   },
   "dependencies": {

@@ -7,6 +7,11 @@
   "rewrites": [
     {
       "source": "/api/:path*",
+      "has": [{ "type": "host", "value": { "pre": "board-games-server-", "suf": ".vercel.app" } }],
+      "destination": "https://preview-api-not-configured.invalid/api/:path*"
+    },
+    {
+      "source": "/api/:path*",
       "destination": "https://boardgamesserver-production.up.railway.app/api/:path*"
     },
     {

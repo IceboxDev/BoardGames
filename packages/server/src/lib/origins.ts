@@ -37,7 +37,7 @@ const LOCAL_ORIGINS = ["http://localhost:5173", "http://localhost:3001", "http:/
  * won't be detected and would keep the loopback origins. Set
  * `ALLOW_LOCALHOST_ORIGINS=0` explicitly on any such host.
  */
-function isDeployedServer(): boolean {
+export function isDeployedServer(): boolean {
   return Boolean(process.env.RAILWAY_ENVIRONMENT || process.env.RAILWAY_GIT_COMMIT_SHA);
 }
 

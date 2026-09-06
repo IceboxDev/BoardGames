@@ -7,6 +7,7 @@ import { CampaignCheckpointSchema, CampaignStatusSchema } from "@boardgames/core
 import { z } from "zod";
 import { getDb } from "../db.ts";
 import { jsonColumn, parseRow, parseRows } from "./db-rows.ts";
+import type { OwnedRef } from "./owned-ref.ts";
 
 const CampaignRowSchema = z.object({
   id: z.string(),
@@ -90,7 +91,7 @@ export async function countCampaignsForUser(userId: string): Promise<number> {
 }
 
 export async function setCampaignReady(
-  id: string,
+  ref: OwnedRef,
   extracted: {
     title: string;
     tagline: string | null;
@@ -99,12 +100,12 @@ export async function setCampaignReady(
     kind: "campaign" | "one-shot";
     checkpoints: CampaignCheckpoint[];
   },
-): Promise<void> {
-  await getDb().execute({
+): Promise<boolean> {
+  const result = await getDb().execute({
     sql: `UPDATE dnd_campaigns
           SET status = 'ready', title = ?, tagline = ?, setting = ?, level_range = ?, kind = ?,
               checkpoints_json = ?, error = NULL
-          WHERE id = ?`,
+          WHERE id = ? AND user_id = ?`,
     args: [
       extracted.title,
       extracted.tagline,
@@ -112,17 +113,20 @@ export async function setCampaignReady(
       extracted.levelRange,
       extracted.kind,
       JSON.stringify(extracted.checkpoints),
-      id,
+      ref.id,
+      ref.userId,
     ],
   });
+  return result.rowsAffected > 0;
 }
 
 /** Link the stored module PDF once the background job has persisted it. */
-export async function setCampaignFile(id: string, fileId: string): Promise<void> {
-  await getDb().execute({
-    sql: "UPDATE dnd_campaigns SET file_id = ? WHERE id = ?",
-    args: [fileId, id],
+export async function setCampaignFile(ref: OwnedRef, fileId: string): Promise<boolean> {
+  const result = await getDb().execute({
+    sql: "UPDATE dnd_campaigns SET file_id = ? WHERE id = ? AND user_id = ?",
+    args: [fileId, ref.id, ref.userId],
   });
+  return result.rowsAffected > 0;
 }
 
 export async function getCampaignFileId(id: string, userId: string): Promise<string | null> {
@@ -134,11 +138,12 @@ export async function getCampaignFileId(id: string, userId: string): Promise<str
   return typeof fileId === "string" ? fileId : null;
 }
 
-export async function setCampaignError(id: string, error: string): Promise<void> {
-  await getDb().execute({
-    sql: "UPDATE dnd_campaigns SET status = 'error', error = ? WHERE id = ?",
-    args: [error, id],
+export async function setCampaignError(ref: OwnedRef, error: string): Promise<boolean> {
+  const result = await getDb().execute({
+    sql: "UPDATE dnd_campaigns SET status = 'error', error = ? WHERE id = ? AND user_id = ?",
+    args: [error, ref.id, ref.userId],
   });
+  return result.rowsAffected > 0;
 }
 
 export async function deleteCampaign(id: string, userId: string): Promise<boolean> {

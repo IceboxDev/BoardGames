@@ -10,6 +10,9 @@ import { defineConfig } from "vitest/config";
 // require a full browser. Tests that need WebSocket use `mock-socket` to
 // stand in for the global; everything else jsdom provides natively.
 export default defineConfig({
+  // Mirrors the build-time constant vite.config.ts injects; tests run as a
+  // development bundle (see `src/lib/ws-client.ts`).
+  define: { __DEPLOY_ENV__: JSON.stringify("development") },
   plugins: [react()],
   test: {
     include: ["src/**/*.test.{ts,tsx}"],

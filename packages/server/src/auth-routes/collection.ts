@@ -166,15 +166,50 @@ export async function fetchInventorySlugs(db: Client, userId: string): Promise<s
   return parseRow(InventoryRowSchema, rows[0], "user_inventory").game_slugs_json;
 }
 
-/** Upsert statement persisting a rewritten inventory slug list. */
-export function inventoryWriteStatement(userId: string, slugs: readonly string[]): InStatement {
+/** The exact JSON text `inventoryWriteStatement` stores for `slugs`. */
+export function inventorySlugsJson(slugs: readonly string[]): string {
+  return JSON.stringify(slugs);
+}
+
+/**
+ * Upsert statement persisting a rewritten inventory slug list.
+ *
+ * `game_slugs_json` is a read-modify-write blob, so a plain upsert lets two
+ * overlapping writers silently drop each other's change. Pass `expect` (the
+ * JSON the caller READ before rewriting) and the update becomes a
+ * compare-and-set: it only lands if the row still holds that text, and the
+ * caller can detect the lost race from `rowsAffected` and re-read. Omit it
+ * only for a deliberate full replace (the admin PUT).
+ */
+export function inventoryWriteStatement(
+  userId: string,
+  slugs: readonly string[],
+  options: { readonly expect?: string } = {},
+): InStatement {
+  const next = inventorySlugsJson(slugs);
+  if (options.expect === undefined) {
+    return {
+      sql: `INSERT INTO user_inventory (user_id, game_slugs_json, updated_at)
+            VALUES (?, ?, datetime('now'))
+            ON CONFLICT(user_id) DO UPDATE SET
+              game_slugs_json = excluded.game_slugs_json,
+              updated_at = excluded.updated_at`,
+      args: [userId, next],
+    };
+  }
+  // A fresh INSERT can only happen when the caller read "no row" (`[]`); any
+  // row that appeared since is a conflict, and the CAS in the DO UPDATE then
+  // decides. The SELECT-with-WHERE form is what lets an upsert be conditional.
   return {
     sql: `INSERT INTO user_inventory (user_id, game_slugs_json, updated_at)
-          VALUES (?, ?, datetime('now'))
+          SELECT ?, ?, datetime('now')
+           WHERE NOT EXISTS (SELECT 1 FROM user_inventory WHERE user_id = ?)
+              OR EXISTS (SELECT 1 FROM user_inventory WHERE user_id = ? AND game_slugs_json = ?)
           ON CONFLICT(user_id) DO UPDATE SET
             game_slugs_json = excluded.game_slugs_json,
-            updated_at = excluded.updated_at`,
-    args: [userId, JSON.stringify(slugs)],
+            updated_at = excluded.updated_at
+          WHERE user_inventory.game_slugs_json = ?`,
+    args: [userId, next, userId, userId, options.expect, options.expect],
   };
 }
 

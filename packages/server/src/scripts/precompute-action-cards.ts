@@ -5,10 +5,11 @@
 //   pnpm --filter @boardgames/server exec tsx src/scripts/precompute-action-cards.ts
 
 import "../env.ts";
-import { getDb, initDb } from "../db.ts";
+import { getDb } from "../db.ts";
+import { connectDbTarget } from "../lib/db-target.ts";
 import { generateActionCards } from "../lib/dnd-extract.ts";
 
-await initDb();
+await connectDbTarget({ writes: true, purpose: "precompute action cards" });
 
 const result = await getDb().execute(
   `SELECT id, source_filename, sheet_json FROM dnd_characters

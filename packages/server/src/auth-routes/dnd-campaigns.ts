@@ -126,6 +126,7 @@ import {
   subscribeToSession,
 } from "../lib/dnd-sessions.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
+import type { OwnedRef } from "../lib/owned-ref.ts";
 
 /** Strip the `data:application/pdf;base64,` header for chunked storage. */
 function dataUriBase64(pdfDataUri: string): string {
@@ -186,7 +187,7 @@ dndCampaignRoutes.post("/campaigns", zJsonBody(CreateCampaignRequestSchema), asy
         base64: dataUriBase64(body.pdf),
         sizeBytes,
       });
-      await setCampaignFile(campaign.id, fileId);
+      await setCampaignFile({ id: campaign.id, userId: user.id }, fileId);
     } catch (err) {
       console.error("[dnd] failed to persist module PDF (campaign continues)", err);
     }
@@ -202,12 +203,14 @@ dndCampaignRoutes.post("/campaigns", zJsonBody(CreateCampaignRequestSchema), asy
           return [];
         }),
       ]);
-      await setCampaignReady(campaign.id, extracted);
+      await setCampaignReady({ id: campaign.id, userId: user.id }, extracted);
       // The stored tome now carries the adventure's real name, not the
       // filesystem name it was uploaded under.
       try {
         const storedFileId = await getCampaignFileId(campaign.id, user.id);
-        if (storedFileId) await renameFile(storedFileId, `${extracted.title}.pdf`);
+        if (storedFileId) {
+          await renameFile({ id: storedFileId, userId: user.id }, `${extracted.title}.pdf`);
+        }
       } catch (err) {
         console.error("[dnd] module rename failed (continuing)", err);
       }
@@ -220,7 +223,7 @@ dndCampaignRoutes.post("/campaigns", zJsonBody(CreateCampaignRequestSchema), asy
       }
     } catch (err) {
       try {
-        await setCampaignError(campaign.id, extractionErrorMessage(err));
+        await setCampaignError({ id: campaign.id, userId: user.id }, extractionErrorMessage(err));
       } catch (dbErr) {
         console.error("[dnd] failed to record campaign error", dbErr);
       }
@@ -378,19 +381,22 @@ dndCampaignRoutes.post(
           base64: dataUriBase64(body.pdf),
           sizeBytes,
         });
-        await setCharacterFile(character.id, fileId);
+        await setCharacterFile({ id: character.id, userId: user.id }, fileId);
       } catch (err) {
         console.error("[dnd] failed to persist character PDF (extraction continues)", err);
       }
       try {
         const sheet = await extractCharacter(body.pdf, body.filename);
-        await setCharacterReady(character.id, sheet);
+        await setCharacterReady({ id: character.id, userId: user.id }, sheet);
         // Precompute the combat action dashboard now, while nobody is
         // waiting — a fight is the worst moment for a cold LLM call.
-        await cacheActionCards(character.id, sheet);
+        await cacheActionCards({ id: character.id, userId: user.id }, sheet);
       } catch (err) {
         try {
-          await setCharacterError(character.id, extractionErrorMessage(err));
+          await setCharacterError(
+            { id: character.id, userId: user.id },
+            extractionErrorMessage(err),
+          );
         } catch (dbErr) {
           console.error("[dnd] failed to record character error", dbErr);
         }
@@ -419,10 +425,10 @@ function defeatTrigger(combatants: Combatant[]): string {
 
 /** Generate and cache a character's action dashboard; failure is non-fatal
  * (the combat-time endpoint regenerates on cache miss). */
-async function cacheActionCards(characterId: string, sheet: unknown): Promise<void> {
+async function cacheActionCards(character: OwnedRef, sheet: unknown): Promise<void> {
   try {
     const cards = await generateActionCards(JSON.stringify(sheet));
-    await setCharacterActions(characterId, JSON.stringify(cards));
+    await setCharacterActions(character, JSON.stringify(cards));
   } catch (err) {
     console.error("[dnd] action card precompute failed (will retry on demand)", err);
   }
@@ -442,11 +448,12 @@ dndCampaignRoutes.put("/characters/:id", zJsonBody(UpdateCharacterRequestSchema)
     return errorResponse(c, 404, "character not found", "NOT_FOUND");
   }
   const sheet = c.req.valid("json").sheet;
-  await setCharacterReady(id, sheet);
+  const ref: OwnedRef = { id, userId: user.id };
+  await setCharacterReady(ref, sheet);
   // The dashboard math is derived from the sheet — stale cards are worse
   // than none. Drop the cache and rebuild it in the background.
-  await setCharacterActions(id, null);
-  void cacheActionCards(id, sheet);
+  await setCharacterActions(ref, null);
+  void cacheActionCards(ref, sheet);
   const character = await getCharacter(id, user.id);
   return c.json(UpdateCharacterResponseSchema.parse({ character }));
 });
@@ -859,6 +866,21 @@ dndCampaignRoutes.post("/parties/:id/combat", zJsonBody(StartCombatRequestSchema
   const partyState = new Map(
     (await listCharactersForParty(partyId, user.id)).map((ch) => [ch.id, ch.state]),
   );
+  // A combatant may only reference a character in THIS party. The id comes
+  // from the request body, and it is later used to write that character's
+  // persistent state when the fight ends — an unchecked id would let the
+  // caller pick any row in the table.
+  const foreign = body.combatants.find(
+    (entry) => entry.characterId !== null && !partyState.has(entry.characterId),
+  );
+  if (foreign?.characterId) {
+    return errorResponse(
+      c,
+      400,
+      `character "${foreign.characterId}" is not in this party`,
+      "UNKNOWN_CHARACTER",
+    );
+  }
   const sorted = [...body.combatants].sort((a, b) => b.initiative - a.initiative);
   const combatants: Combatant[] = sorted.map((entry, i) => {
     const state = entry.characterId ? (partyState.get(entry.characterId) ?? null) : null;
@@ -912,7 +934,7 @@ dndCampaignRoutes.post("/combats/:id/turn", zJsonBody(ResolveTurnRequestSchema),
         .map(async (ch) => {
           const sheet = ch.sheet;
           if (!sheet) return "";
-          const cardsJson = await getCharacterActions(ch.id);
+          const cardsJson = await getCharacterActions({ id: ch.id, userId: user.id });
           const cards = cardsJson ? (JSON.parse(cardsJson) as ActionCard[]) : [];
           const options = cards
             .map((card) => `${card.name}${card.note ? ` — ${card.note.slice(0, 120)}` : ""}`)
@@ -1023,10 +1045,10 @@ dndCampaignRoutes.post("/combats/:id/end", async (c) => {
   for (const combatant of combat.combatants) {
     if (combatant.kind !== "pc" || !combatant.characterId) continue;
     try {
-      await setCharacterState(combatant.characterId, {
-        hp: combatant.hp,
-        notes: combatant.notes.slice(0, 400),
-      });
+      await setCharacterState(
+        { id: combatant.characterId, userId: user.id },
+        { hp: combatant.hp, notes: combatant.notes.slice(0, 400) },
+      );
     } catch (err) {
       console.error("[dnd] failed to persist character state", err);
     }
@@ -1066,7 +1088,7 @@ dndCampaignRoutes.put(
     if (!character || character.status !== "ready") {
       return errorResponse(c, 404, "character not found", "NOT_FOUND");
     }
-    await setCharacterState(character.id, c.req.valid("json").state);
+    await setCharacterState({ id: character.id, userId: user.id }, c.req.valid("json").state);
     const updated = await getCharacter(character.id, user.id);
     return c.json(UpdateCharacterResponseSchema.parse({ character: updated }));
   },
@@ -1079,13 +1101,14 @@ dndCampaignRoutes.post("/characters/:id/actions", async (c) => {
   if (!character || character.status !== "ready" || !character.sheet) {
     return errorResponse(c, 404, "character not found", "NOT_FOUND");
   }
-  const cached = await getCharacterActions(character.id);
+  const ref: OwnedRef = { id: character.id, userId: user.id };
+  const cached = await getCharacterActions(ref);
   if (cached !== null) {
     return c.json(CharacterActionsResponseSchema.parse({ cards: JSON.parse(cached) }));
   }
   try {
     const cards = await generateActionCards(JSON.stringify(character.sheet));
-    await setCharacterActions(character.id, JSON.stringify(cards));
+    await setCharacterActions(ref, JSON.stringify(cards));
     return c.json(CharacterActionsResponseSchema.parse({ cards }));
   } catch (err) {
     if (err instanceof AiConfigError) return errorResponse(c, 503, err.message, "NOT_CONFIGURED");

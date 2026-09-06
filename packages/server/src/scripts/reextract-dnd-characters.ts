@@ -9,12 +9,13 @@
 //   pnpm exec tsx src/scripts/reextract-dnd-characters.ts
 
 import "../env.ts";
-import { getDb, initDb } from "../db.ts";
+import { getDb } from "../db.ts";
+import { connectDbTarget } from "../lib/db-target.ts";
 import { setCharacterReady } from "../lib/dnd-characters-db.ts";
 import { extractCharacter } from "../lib/dnd-extract.ts";
 import { getFileBase64 } from "../lib/dnd-files-db.ts";
 
-await initDb();
+await connectDbTarget({ writes: true, purpose: "re-extract D&D characters" });
 
 const rows = await getDb().execute(
   `SELECT id, user_id, source_filename, file_id FROM dnd_characters
@@ -36,7 +37,7 @@ for (const row of rows.rows) {
   }
   try {
     const sheet = await extractCharacter(`data:application/pdf;base64,${base64}`, filename);
-    await setCharacterReady(id, sheet);
+    await setCharacterReady({ id, userId: String(row.user_id) }, sheet);
     const perception = sheet.skills.find((s) => s.name === "Perception");
     const pp = perception ? 10 + perception.modifier : "?";
     console.log(

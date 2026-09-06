@@ -495,12 +495,33 @@ export function baselineOf(row: BaselineRow | null): StoredSkillState | null {
  *  renders the numbers also wants to say how old they are. */
 export type SkillStateSnapshot = { state: StoredSkillState; computedAt: string };
 
-let inFlight: Promise<SkillStateSnapshot | null> | null = null;
+interface InFlightRecompute {
+  readonly mode: BaselineMode;
+  readonly promise: Promise<SkillStateSnapshot | null>;
+}
 
+let inFlight: InFlightRecompute | null = null;
+
+/** Test hook: every recompute that actually ran, in order. */
+const runLog: BaselineMode[] = [];
+
+/**
+ * One recompute at a time, but the MODE is part of the contract. A `reset`
+ * (engine heal) may join whatever is running. A `rotate` (the admin's
+ * Recompute) must not be satisfied by a running `reset` — that returns
+ * "done" without rotating the baseline, and the spotlight then diffs the new
+ * state against itself. So a rotate asked during a reset is queued behind it
+ * and runs as its own rotate once the reset lands; further rotates join that.
+ */
 async function runRecompute(mode: BaselineMode): Promise<SkillStateSnapshot | null> {
-  if (inFlight) return inFlight;
-  inFlight = (async () => {
+  if (inFlight) {
+    if (mode === "reset" || inFlight.mode === "rotate") return inFlight.promise;
+    const queued = () => runRecompute("rotate");
+    return inFlight.promise.then(queued, queued);
+  }
+  const promise = (async () => {
     try {
+      runLog.push(mode);
       // No pre-read of the state row: `recompute` rotates the baseline inside
       // its own upsert, so there is nothing to carry across a round trip.
       await recompute(await loadMatchRows(), mode);
@@ -510,8 +531,15 @@ async function runRecompute(mode: BaselineMode): Promise<SkillStateSnapshot | nu
       inFlight = null;
     }
   })();
-  return inFlight;
+  inFlight = { mode, promise };
+  return promise;
 }
+
+// Exported for tests.
+export const __test__ = {
+  runLog,
+  inFlightMode: (): BaselineMode | null => inFlight?.mode ?? null,
+};
 
 /**
  * The current skill state, healing it first only when the ENGINE moved out
@@ -520,7 +548,7 @@ async function runRecompute(mode: BaselineMode): Promise<SkillStateSnapshot | nu
  * the last published fit until an admin runs one.
  */
 export async function ensureSkillState(): Promise<SkillStateSnapshot | null> {
-  if (inFlight) return inFlight;
+  if (inFlight) return inFlight.promise;
   const row = await readStateRow();
   if (row && row.engine_fingerprint === engineFingerprint()) {
     return { state: row.payload_json, computedAt: row.computed_at };

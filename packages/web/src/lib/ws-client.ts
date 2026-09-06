@@ -125,11 +125,28 @@ export interface GameSession<TPlayerView, TAction, TResult> {
   sendChat: (text: string) => void;
 }
 
-const WS_URL =
-  (import.meta.env.VITE_WS_URL as string | undefined) ??
-  (typeof window !== "undefined"
+/** Same-origin `/ws`: the Vite dev proxy in development; nothing on Vercel. */
+function sameOriginWsUrl(): string {
+  return typeof window !== "undefined"
     ? `${window.location.protocol === "https:" ? "wss:" : "ws:"}//${window.location.host}/ws`
-    : "ws://localhost:3001/ws");
+    : "ws://localhost:3001/ws";
+}
+
+/**
+ * The socket origin is chosen per deployment environment. `VITE_WS_URL` is
+ * the production socket; a PREVIEW bundle must never use it (previews used
+ * to open live game sessions against the production server). Previews take
+ * `VITE_WS_URL_PREVIEW` — a staging backend — and otherwise fall back to
+ * same-origin `/ws`, which does not upgrade on Vercel: a preview with no
+ * socket is safe, a preview on the production socket is not.
+ */
+function resolveWsUrl(): string {
+  const env = import.meta.env as Record<string, string | undefined>;
+  if (__DEPLOY_ENV__ === "preview") return env.VITE_WS_URL_PREVIEW ?? sameOriginWsUrl();
+  return env.VITE_WS_URL ?? sameOriginWsUrl();
+}
+
+const WS_URL = resolveWsUrl();
 
 export const RECONNECT_BASE_DELAY_MS = 1000;
 export const RECONNECT_MAX_DELAY_MS = 30_000;

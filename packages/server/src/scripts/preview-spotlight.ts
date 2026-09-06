@@ -14,8 +14,9 @@ import "../env.ts";
 import { MatchOutcomeSchema } from "@boardgames/core/protocol";
 import { spotlightCandidates } from "@boardgames/core/skill/greetings";
 import { z } from "zod";
-import { getDb, initDb } from "../db.ts";
+import { getDb } from "../db.ts";
 import { jsonColumn, parseRows } from "../lib/db-rows.ts";
+import { connectDbTarget } from "../lib/db-target.ts";
 import { buildSkillState } from "../lib/skill-ratings.ts";
 
 const MatchRowSchema = z.object({
@@ -53,7 +54,7 @@ async function main() {
   const nightsArg = process.argv.indexOf("--nights");
   const nights = nightsArg === -1 ? 1 : Number(process.argv[nightsArg + 1] ?? 1);
 
-  await initDb();
+  await connectDbTarget({ writes: false, purpose: "preview spotlight" });
   const db = getDb();
   const rows = parseRows(
     MatchRowSchema,
