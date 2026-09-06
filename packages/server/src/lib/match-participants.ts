@@ -82,27 +82,52 @@ export function newestMatchId(): MatchIdExpr {
  * Statements that make the participant index for one match exactly
  * `extractParticipantIds(outcome)`. `replace` is required whenever the outcome
  * may have changed (an edit can drop a player), and harmless on insert.
+ *
+ * `onlyIfOutcomeJson` ties the sync to a compare-and-set on the match row:
+ * every statement is a no-op unless `match_results.outcome_json` currently
+ * equals that exact text. Pass the JSON the caller just wrote (or expects to
+ * be there) and the index can never be resynced from an outcome that lost
+ * a concurrent write — a lost CAS leaves both the row and its index alone.
  */
 export function participantSyncStatements(
   match: MatchIdExpr,
   outcome: MatchOutcome,
-  options: { readonly replace?: boolean } = {},
+  options: { readonly replace?: boolean; readonly onlyIfOutcomeJson?: string } = {},
 ): InStatement[] {
   const statements: InStatement[] = [];
+  const guard = options.onlyIfOutcomeJson;
   if (options.replace) {
-    statements.push({
-      sql: `DELETE FROM match_participants WHERE match_id = ${match.sql}`,
-      args: [...match.args],
-    });
+    statements.push(
+      guard === undefined
+        ? {
+            sql: `DELETE FROM match_participants WHERE match_id = ${match.sql}`,
+            args: [...match.args],
+          }
+        : {
+            sql: `DELETE FROM match_participants
+                   WHERE match_id = ${match.sql}
+                     AND EXISTS (SELECT 1 FROM match_results
+                                  WHERE id = ${match.sql} AND outcome_json = ?)`,
+            args: [...match.args, ...match.args, guard],
+          },
+    );
   }
   for (const userId of extractParticipantIds(outcome)) {
     // The `SELECT … FROM match_results` guard keeps a non-existent match (a
     // client_id that resolved to NULL) from tripping the foreign key.
-    statements.push({
-      sql: `INSERT OR IGNORE INTO match_participants (match_id, user_id)
-            SELECT id, ? FROM match_results WHERE id = ${match.sql}`,
-      args: [userId, ...match.args],
-    });
+    statements.push(
+      guard === undefined
+        ? {
+            sql: `INSERT OR IGNORE INTO match_participants (match_id, user_id)
+                  SELECT id, ? FROM match_results WHERE id = ${match.sql}`,
+            args: [userId, ...match.args],
+          }
+        : {
+            sql: `INSERT OR IGNORE INTO match_participants (match_id, user_id)
+                  SELECT id, ? FROM match_results WHERE id = ${match.sql} AND outcome_json = ?`,
+            args: [userId, ...match.args, guard],
+          },
+    );
   }
   return statements;
 }
