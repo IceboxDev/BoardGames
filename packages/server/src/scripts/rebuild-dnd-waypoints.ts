@@ -112,7 +112,7 @@ extraction.checkpoints.forEach((cp, i) => {
   );
 });
 
-await setCampaignReady(campaignId, extraction);
+await setCampaignReady({ id: campaignId, userId }, extraction);
 
 console.log("\nrecharting read-aloud templates against the new waypoints…");
 const blocks = await extractReadAloudNodes(

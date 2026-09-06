@@ -9,6 +9,7 @@ import { DndFileKindSchema } from "@boardgames/core/protocol";
 import { z } from "zod";
 import { getDb } from "../db.ts";
 import { parseRow, parseRows } from "./db-rows.ts";
+import type { OwnedRef } from "./owned-ref.ts";
 
 const CHUNK_SIZE = 750_000;
 
@@ -81,13 +82,13 @@ export async function getFileMeta(id: string, userId: string): Promise<DndFile |
   return rowToFile(parseRow(FileRowSchema, row, "dnd_files"));
 }
 
-/** Reassemble a stored file's base64 payload, chunk by chunk. */
 /** Post-extraction rename: the ugly upload filename becomes the title. */
-export async function renameFile(id: string, filename: string): Promise<void> {
-  await getDb().execute({
-    sql: "UPDATE dnd_files SET filename = ? WHERE id = ?",
-    args: [filename, id],
+export async function renameFile(ref: OwnedRef, filename: string): Promise<boolean> {
+  const result = await getDb().execute({
+    sql: "UPDATE dnd_files SET filename = ? WHERE id = ? AND user_id = ?",
+    args: [filename, ref.id, ref.userId],
   });
+  return result.rowsAffected > 0;
 }
 
 export async function getFileBase64(id: string, userId: string): Promise<string | null> {

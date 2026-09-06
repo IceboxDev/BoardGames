@@ -36,7 +36,7 @@ for (const row of rows.rows) {
   }
   try {
     const sheet = await extractCharacter(`data:application/pdf;base64,${base64}`, filename);
-    await setCharacterReady(id, sheet);
+    await setCharacterReady({ id, userId: String(row.user_id) }, sheet);
     const perception = sheet.skills.find((s) => s.name === "Perception");
     const pp = perception ? 10 + perception.modifier : "?";
     console.log(

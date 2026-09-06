@@ -71,7 +71,7 @@ if (existingFileId) {
     base64,
     sizeBytes: pdfBytes.length,
   });
-  await setCampaignFile(campaignId, fileId);
+  await setCampaignFile({ id: campaignId, userId }, fileId);
   console.log(`stored module PDF as ${fileId} (${pdfBytes.length} bytes)`);
 }
 
