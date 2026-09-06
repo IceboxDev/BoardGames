@@ -1,4 +1,6 @@
-// The migration-safety CI gate.
+// The migration chain from an EMPTY database — the CI gate that needs no
+// credentials. (The rehearsal against a real snapshot is `rehearsal.ts`, run
+// locally as `migrate:dry-run` and covered by `rehearsal.test.ts`.)
 //
 // Runs the ENTIRE registry against a fresh in-memory database with foreign-key
 // enforcement ON (matching Turso's default — verified live), proving that:

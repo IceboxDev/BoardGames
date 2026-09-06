@@ -1,0 +1,71 @@
+name: Database backup
+
+# Nightly logical backup of PRODUCTION, verified by a restore round-trip and
+# encrypted before it leaves the runner. This is the one workflow that may
+# touch the production database, and it may only READ it: the token in
+# `PROD_TURSO_AUTH_TOKEN` should be a read-only one
+# (`turso db tokens create boardgames --read-only`).
+#
+# Why encrypt: a dump holds member emails and the home addresses on locked
+# nights, and artifacts on a public repository are downloadable by anyone
+# who is signed in to GitHub. The plaintext never touches disk here.
+#
+# Required repository secrets:
+#   PROD_TURSO_DATABASE_URL   libsql://boardgames-<org>.turso.io
+#   PROD_TURSO_AUTH_TOKEN     read-only token for that database
+#   BACKUP_PASSPHRASE         ≥12 characters; the ONLY way to open the files.
+#                             Keep a copy outside GitHub — a lost passphrase
+#                             is a lost backup.
+#
+# Restore: download the artifact, then
+#   BACKUP_PASSPHRASE=… pnpm --filter @boardgames/server db:backup -- \
+#     --decrypt boardgames-<stamp>.sql.enc --out /tmp
+#   sqlite3 /tmp/restore.db < /tmp/boardgames-<stamp>.sql
+# Turso's point-in-time recovery remains the first resort for a bad
+# migration; this covers the window PITR retention does not.
+on:
+  schedule:
+    - cron: "17 3 * * *" # 03:17 UTC daily; off the hour to dodge the queue
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: db-backup
+  cancel-in-progress: false
+
+jobs:
+  backup:
+    name: Verified, encrypted dump of production
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          lfs: false
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version-file: package.json
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile --filter @boardgames/server... --ignore-scripts
+
+      - name: Dump, verify, encrypt
+        working-directory: packages/server
+        env:
+          PROD_TURSO_DATABASE_URL: ${{ secrets.PROD_TURSO_DATABASE_URL }}
+          PROD_TURSO_AUTH_TOKEN: ${{ secrets.PROD_TURSO_AUTH_TOKEN }}
+          BACKUP_PASSPHRASE: ${{ secrets.BACKUP_PASSPHRASE }}
+        run: pnpm exec tsx src/scripts/backup-db.ts --prod --verify --encrypt --out "$RUNNER_TEMP/backup"
+
+      - name: Keep the encrypted file
+        uses: actions/upload-artifact@v4
+        with:
+          name: boardgames-db-backup-${{ github.run_id }}
+          path: ${{ runner.temp }}/backup/*.sql.enc
+          if-no-files-found: error
+          retention-days: 30

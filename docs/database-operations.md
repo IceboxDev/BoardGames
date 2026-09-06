@@ -29,15 +29,38 @@ pnpm --filter @boardgames/server db:backup
 # Backs up PRODUCTION, via the separate PROD_TURSO_* credential pair.
 pnpm --filter @boardgames/server db:backup -- --prod
 
-pnpm --filter @boardgames/server db:backup -- --prod --out /some/dir
-# → packages/server/backups/boardgames-<iso>.sql
+# The form worth running before a data-writing migration: restore-verified,
+# encrypted, and pruned to the newest 14 files in the output directory.
+BACKUP_PASSPHRASE=… pnpm --filter @boardgames/server db:backup -- --prod --verify --encrypt --keep 14
+# → packages/server/backups/boardgames-<iso>.sql.enc
+
+# Open an encrypted backup (writes the .sql next to it, or into --out).
+BACKUP_PASSPHRASE=… pnpm --filter @boardgames/server db:backup -- --decrypt backups/boardgames-<iso>.sql.enc
 ```
 
-A plain-SQL logical dump: schema, then paged `INSERT`s, wrapped in a
-transaction with foreign keys deferred so table order can't break the restore.
-Restore into a fresh database with the libsql or sqlite shell.
+A plain-SQL logical dump (`lib/backup.ts`): schema, then `INSERT`s in `rowid`
+order, wrapped in a transaction with foreign keys deferred so table order can't
+break the restore. Against Turso every read runs inside ONE read transaction,
+so the file is a single consistent snapshot even while the server is writing.
+The same data always produces the same file below the three header lines.
 
-Verify a backup by restoring it — an unverified backup is a guess:
+**`--verify` is the difference between a backup and a guess.** It replays the
+dump into an in-memory database, checks `PRAGMA foreign_key_check` there,
+dumps that database again and compares the two files line by line. A dump
+that fails is not written and the command exits non-zero. The same round trip
+runs in CI on every migrated schema (`lib/backup.test.ts`), so the dump format
+cannot drift away from what a restore accepts.
+
+**Backups run nightly without anyone remembering** —
+`.github/workflows/backup.yml` dumps production at 03:17 UTC with
+`--prod --verify --encrypt` and keeps the encrypted file as a 30-day artifact.
+It is the only workflow allowed to reach production, and it should only be
+able to read it: give it a read-only token
+(`turso db tokens create boardgames --read-only`). The three repository
+secrets it needs are listed at the top of the workflow. **The passphrase is the
+only way to open those files**; keep a copy outside GitHub.
+
+Restore a dump into a fresh database with the libsql or sqlite shell:
 
 ```bash
 sqlite3 /tmp/restore-check.db < backups/boardgames-<iso>.sql
@@ -71,20 +94,51 @@ runner.
 #    Register it in migrations/registry.ts. One statement per array entry.
 
 # 2. Prove it against real data. Read-only: copies the configured database
-#    (staging) into :memory:, applies pending migrations with foreign keys ON,
-#    and diffs foreign_key_check before/after.
+#    (staging) into :memory:, applies the pending migrations with foreign
+#    keys ON, and FAILS on any of: a migration erroring on real rows, a
+#    table losing rows, a foreign-key violation being introduced (compared
+#    by identity, so a fix and a regression cannot cancel out), or the
+#    result differing in structure from a database migrated from empty.
 pnpm --filter @boardgames/server migrate:dry-run
+#    Against CURRENT production rows (read-only, through PROD_TURSO_*):
+pnpm --filter @boardgames/server migrate:dry-run:prod
+#    A migration whose job is deleting rows must say so: --allow-row-loss.
 
 # 3. Back up PRODUCTION if the migration writes data — plain `db:backup`
 #    would only dump staging.
-pnpm --filter @boardgames/server db:backup -- --prod
+BACKUP_PASSPHRASE=… pnpm --filter @boardgames/server db:backup -- --prod --verify --encrypt
 
-# 4. Open a PR. CI re-runs the dry-run and the migration test suite.
+# 4. Open a PR. CI runs the migration test suite: the whole chain from an
+#    empty database, the drop-table cascade guard, and the rehearsal's own
+#    unit tests. CI does NOT run the dry-run — it holds no database
+#    credentials by design — so step 2 is a gate only you can run.
 
 # 5. Merge. Railway's preDeployCommand applies it; a failure aborts the deploy.
 ```
 
 `pnpm --filter @boardgames/server migrate:status` shows the applied chain.
+
+### There is no rollback — roll forward
+
+`assertAtLatestVersion` (boot) and the runner both refuse a database that is
+AHEAD of the build, so once a migration has applied, redeploying the previous
+server image crash-loops on purpose: an older build would misread the schema.
+That leaves exactly one recovery path for a bad release that shipped with a
+migration:
+
+1. Fix the code (or add a migration that undoes the data change) on a new
+   commit and push it. Never edit the applied migration — its checksum is
+   recorded and the runner refuses a changed one.
+2. If the migration itself damaged data, restore from Turso point-in-time
+   recovery into a NEW database (below) or from the last verified backup, and
+   copy the good rows back with a script that announces its target.
+
+Two windows to know about during every deploy: the old container keeps
+serving against the already-migrated schema until the new one passes its
+healthcheck, and the Vercel build usually finishes first, so a new web bundle
+may briefly talk to the old server. `/api/health` reports both `commit` and
+`schemaVersion`, so the skew can be read off the two ends. Keep migrations
+additive and tolerant of the previous code for that window.
 
 ### Never `DROP TABLE` a table something references
 
@@ -138,10 +192,40 @@ turso db tokens create boardgames-staging   # paste into TURSO_AUTH_TOKEN
 Note the database is named `boardgames`; `boardgames-iceboxdev` is only the
 URL host.
 
-Preview deployments have the same problem from the other direction:
-`vercel.json` rewrites `/api/*` to the production Railway URL, so **every
-Vercel preview writes to production**. Point previews at a staging backend
-before relying on them for anything destructive.
+### Scripts announce their target and refuse to write outside staging
+
+Every script under `src/scripts/` resolves its database through
+`lib/db-target.ts` and prints `[db-target] <purpose>: staging (<host>)` before
+its first query. A script that writes is refused unless the host contains
+`-staging`; production is reachable only by passing `--prod`, which selects
+the `PROD_TURSO_*` pair and prints a warning banner. So the "which database
+am I on" convention no longer lives in a gitignored file: pointing
+`TURSO_DATABASE_URL` at production makes every write script stop with an
+explanation. (`--unsafe-target` exists for a local file database and nothing
+else.) Ad-hoc scripts should call `connectDbTarget({ writes, purpose })`
+instead of `initDb()`.
+
+### Preview deployments fail closed
+
+`vercel.ts` (which replaced `vercel.json`) rewrites `/api/*` to the production
+Railway service ONLY for production deployments. A preview rewrites to the
+`PREVIEW_API_ORIGIN` environment variable, and when that is unset, to a host
+that never resolves — a preview with no API is safe; a preview on production
+(what every pull-request preview used to be) is not. The web bundle does the
+same for its WebSocket: a preview build uses `VITE_WS_URL_PREVIEW`, never
+`VITE_WS_URL`, and falls back to same-origin `/ws`, which does not upgrade
+on Vercel.
+
+To give previews a working backend, once:
+
+1. Create a second Railway service from this repo with `TURSO_DATABASE_URL`
+   and `TURSO_AUTH_TOKEN` pointing at `boardgames-staging`, its own
+   `BETTER_AUTH_SECRET`, and `WEB_ORIGIN` set to the preview origins.
+2. In the Vercel project's **Preview** environment set `PREVIEW_API_ORIGIN`
+   to that service's public URL and `VITE_WS_URL_PREVIEW` to its `wss://…/ws`.
+
+Staging is a disposable copy, so previews can then be as destructive as they
+like.
 
 ## Schema notes worth knowing
 
@@ -180,3 +264,15 @@ before relying on them for anything destructive.
   every cascade in this schema is the delete mechanism for something, so the
   guarantee is checked rather than assumed — a restore or a platform change that
   silently turned it off would otherwise leave orphans accumulating unnoticed.
+- **`/api/health` probes the database on every call** and answers 503 when it
+  cannot reach it within two seconds. It is Railway's healthcheck, so a
+  database that dies after boot restarts the container instead of leaving a
+  process that reports healthy while every request fails. Point an uptime
+  monitor at it; that is the alert.
+- **Merging a guest moves history, it does not delete it.** Guests get real
+  `rsvps` rows and appear in sealed guest lists via `POST /night-guest`, so
+  `admin-merge-guest.ts` re-points every user-keyed row onto the target,
+  substitutes the id inside `expected_user_ids_json`, and only then deletes the
+  guest — and only if no match still names it (a 409 means "retry"). Every
+  foreign key onto `user` is classified in `GUEST_MERGE_COVERAGE`; the test
+  fails when a new one appears unclassified.

@@ -74,9 +74,11 @@ jobs:
       # pattern silently cascades inside a batch. See
       # docs/database-operations.md.
       #
-      # `migrate:dry-run` is deliberately NOT run here: it reads the production
-      # database and CI has no credentials for it. Run it locally before
-      # opening a PR that changes the schema.
+      # `migrate:dry-run` (the rehearsal against a REAL snapshot: row loss,
+      # introduced FK violations, schema drift) is deliberately NOT run here:
+      # it reads a live database and CI holds no database credentials by
+      # design. Its logic is unit-tested in `rehearsal.test.ts`; run the
+      # command itself locally before opening a PR that changes the schema.
       - name: Migration test suite
         run: pnpm --filter @boardgames/server exec vitest run src/migrations
 

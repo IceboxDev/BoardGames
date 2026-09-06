@@ -1,130 +1,121 @@
 /**
- * Full logical backup of the Turso database to a timestamped `.sql` file.
+ * Full logical backup of a Turso database to a timestamped `.sql` file.
  *
  * Why this exists: migrations are forward-only BY DESIGN (see
  * migrations/types.ts — a "rollback" is a new migration), and they apply
- * automatically as Railway's pre-deploy step. Without a restorable copy, one
- * bad `UPDATE` in a migration is permanent. Turso's own point-in-time recovery
- * may also be enabled on the account, but nothing in this repo verified it, so
- * this is the copy we control.
+ * automatically as Railway's pre-deploy step. Turso's point-in-time recovery
+ * is the primary net; this is the copy we hold ourselves.
  *
- *   pnpm --filter @boardgames/server db:backup
- *   pnpm --filter @boardgames/server db:backup -- --out /path/to/dir
+ *   pnpm --filter @boardgames/server db:backup                # staging (the .env target)
+ *   pnpm --filter @boardgames/server db:backup -- --prod      # production, via PROD_TURSO_*
+ *   pnpm --filter @boardgames/server db:backup -- --prod --verify --encrypt --keep 14
+ *   pnpm --filter @boardgames/server db:backup -- --decrypt backups/boardgames-<stamp>.sql.enc
  *
- * Output is plain SQL: schema first, then INSERTs, wrapped in a transaction
- * with foreign keys deferred so table order can't break the restore. Restore
- * into a fresh database with the libsql/sqlite shell.
+ *   --out DIR     where to write (default: packages/server/backups)
+ *   --verify      replay the dump into memory and compare it to the source
+ *                 before keeping it; a dump that fails is deleted and the
+ *                 command exits non-zero. An unverified backup is a guess.
+ *   --encrypt     AES-256-GCM with BACKUP_PASSPHRASE; the plaintext never
+ *                 touches disk. Required for any copy that leaves this machine.
+ *   --keep N      after writing, delete all but the newest N backups in DIR.
+ *   --decrypt F   write the plaintext of an encrypted backup next to it.
  *
- * This is a point-in-time logical dump, not a consistent snapshot across a
- * running write load — take it before a migration, not during peak traffic.
+ * The dump is one read-transaction snapshot (see lib/backup.ts), so it is
+ * consistent across tables even while the server is writing.
  */
 
-import { createWriteStream } from "node:fs";
-import { mkdir } from "node:fs/promises";
-import { resolve } from "node:path";
+import { mkdir, readdir, readFile, unlink, writeFile } from "node:fs/promises";
+import { basename, resolve } from "node:path";
 import { createClient } from "@libsql/client";
 import "../env.ts";
+import { dumpToString, redactSource, verifyDump } from "../lib/backup.ts";
+import { BACKUP_ENCRYPTED_EXTENSION, decryptBackup, encryptBackup } from "../lib/backup-crypto.ts";
+import { describeDbTarget, resolveDbTarget } from "../lib/db-target.ts";
 
-const PAGE_SIZE = 500;
-
-function quote(value: unknown): string {
-  if (value === null || value === undefined) return "NULL";
-  if (typeof value === "number") return Number.isFinite(value) ? String(value) : "NULL";
-  if (typeof value === "bigint") return String(value);
-  if (value instanceof ArrayBuffer) {
-    return `X'${Buffer.from(value).toString("hex")}'`;
-  }
-  return `'${String(value).replace(/'/g, "''")}'`;
-}
+const FILE_PREFIX = "boardgames-";
 
 function argValue(flag: string): string | undefined {
   const index = process.argv.indexOf(flag);
   return index >= 0 ? process.argv[index + 1] : undefined;
 }
 
+function passphrase(): string {
+  const value = process.env.BACKUP_PASSPHRASE?.trim();
+  if (!value) throw new Error("BACKUP_PASSPHRASE is required for --encrypt / --decrypt");
+  return value;
+}
+
+async function prune(outDir: string, keep: number): Promise<string[]> {
+  const entries = (await readdir(outDir))
+    .filter((f) => f.startsWith(FILE_PREFIX) && (f.endsWith(".sql") || f.endsWith(".sql.enc")))
+    .sort();
+  const stale = entries.slice(0, Math.max(0, entries.length - keep));
+  await Promise.all(stale.map((f) => unlink(resolve(outDir, f))));
+  return stale;
+}
+
+async function decryptMode(file: string, outDir: string): Promise<void> {
+  const plaintext = decryptBackup(await readFile(file), passphrase());
+  const outPath = resolve(outDir, basename(file).replace(/\.enc$/, ""));
+  await writeFile(outPath, plaintext);
+  console.log(`[backup] decrypted → ${outPath}`);
+}
+
 async function main(): Promise<void> {
-  // Local development points at STAGING, so "back up the database in .env"
-  // would dump a throwaway copy — precisely the backup you don't need. `--prod`
-  // targets production explicitly via its own credential pair, so the thing
-  // worth protecting is never backed up by accident or by default.
-  const useProd = process.argv.includes("--prod");
-  const url = useProd ? process.env.PROD_TURSO_DATABASE_URL : process.env.TURSO_DATABASE_URL;
-  const authToken = useProd ? process.env.PROD_TURSO_AUTH_TOKEN : process.env.TURSO_AUTH_TOKEN;
-
-  if (!url) {
-    throw new Error(
-      useProd
-        ? "PROD_TURSO_DATABASE_URL is required for --prod (see packages/server/.env.example)"
-        : "TURSO_DATABASE_URL is required",
-    );
-  }
-  console.log(`Backing up ${useProd ? "PRODUCTION" : "the configured database"}: ${url}`);
-
-  const db = createClient({ url, authToken });
-
   const outDir = resolve(argValue("--out") ?? "backups");
   await mkdir(outDir, { recursive: true });
 
+  const decryptTarget = argValue("--decrypt");
+  if (decryptTarget) return decryptMode(resolve(decryptTarget), outDir);
+
+  // Read-only: the target guard only needs to route --prod to its own pair.
+  const target = resolveDbTarget({ argv: process.argv, env: process.env, writes: false });
+  console.log(describeDbTarget(target, "backup"));
+  const db = createClient({ url: target.url, authToken: target.authToken });
+
+  const encrypt = process.argv.includes("--encrypt");
+  const verify = process.argv.includes("--verify");
+  const keep = argValue("--keep");
+  if (encrypt) passphrase(); // fail before doing the work, not after
+
   // `new Date()` is fine here: this is a CLI, not a workflow script.
-  const stamp = new Date().toISOString().replace(/[:.]/g, "-");
-  const outPath = resolve(outDir, `boardgames-${stamp}.sql`);
-  const out = createWriteStream(outPath, { encoding: "utf8" });
-  const write = (line: string) => out.write(`${line}\n`);
+  const takenAt = new Date().toISOString();
+  const stamp = takenAt.replace(/[:.]/g, "-");
+  const sql = await dumpToString(db, { source: redactSource(target.url), takenAt });
+  const tables = (sql.match(/^CREATE TABLE/gm) ?? []).length;
+  const rows = (sql.match(/^INSERT INTO/gm) ?? []).length;
 
-  write(`-- boardgames logical backup`);
-  write(`-- source: ${url.replace(/\?.*$/, "")}`);
-  write(`-- taken:  ${stamp}`);
-  write("PRAGMA foreign_keys = OFF;");
-  write("BEGIN TRANSACTION;");
+  if (verify) {
+    const verification = await verifyDump(sql, db);
+    if (!verification.ok) {
+      db.close();
+      console.error("[backup] ❌ the dump does not restore to the source; nothing was written:");
+      for (const problem of verification.problems) console.error(`  - ${problem}`);
+      process.exit(1);
+    }
+    console.log("[backup] ✅ verified: the dump restores to an identical database");
+  }
+  db.close();
 
-  const objects = await db.execute(
-    `SELECT type, name, sql FROM sqlite_master
-      WHERE sql IS NOT NULL AND name NOT LIKE 'sqlite_%'
-      ORDER BY CASE type WHEN 'table' THEN 0 WHEN 'index' THEN 1 ELSE 2 END, name`,
+  const outPath = resolve(
+    outDir,
+    `${FILE_PREFIX}${stamp}${encrypt ? BACKUP_ENCRYPTED_EXTENSION : ".sql"}`,
+  );
+  const payload = Buffer.from(sql, "utf8");
+  await writeFile(outPath, encrypt ? encryptBackup(payload, passphrase()) : payload);
+  console.log(
+    `[backup] ${tables} tables / ${rows} rows → ${outPath}${encrypt ? " (encrypted)" : ""}`,
   );
 
-  const tables: string[] = [];
-  for (const row of objects.rows) {
-    write(`${String(row.sql)};`);
-    if (String(row.type) === "table") tables.push(String(row.name));
+  if (keep !== undefined) {
+    const n = Number(keep);
+    if (!Number.isInteger(n) || n < 1) throw new Error("--keep expects a positive integer");
+    const removed = await prune(outDir, n);
+    if (removed.length > 0) console.log(`[backup] pruned ${removed.length} older backup(s)`);
   }
-
-  let totalRows = 0;
-  for (const table of tables) {
-    const { rows: countRows } = await db.execute(`SELECT COUNT(*) AS n FROM "${table}"`);
-    const count = Number(countRows[0]?.n ?? 0);
-    if (count === 0) continue;
-
-    write(`-- ${table} (${count} rows)`);
-    // Paged so a large table never has to be materialised in one response.
-    for (let offset = 0; offset < count; offset += PAGE_SIZE) {
-      const page = await db.execute({
-        sql: `SELECT * FROM "${table}" LIMIT ? OFFSET ?`,
-        args: [PAGE_SIZE, offset],
-      });
-      for (const row of page.rows) {
-        const columns = Object.keys(row);
-        const values = columns.map((c) => quote((row as Record<string, unknown>)[c]));
-        write(
-          `INSERT INTO "${table}" (${columns.map((c) => `"${c}"`).join(", ")}) VALUES (${values.join(", ")});`,
-        );
-      }
-    }
-    totalRows += count;
-  }
-
-  write("COMMIT;");
-  write("PRAGMA foreign_keys = ON;");
-
-  await new Promise<void>((done, fail) => {
-    out.end(() => done());
-    out.on("error", fail);
-  });
-
-  console.log(`Backed up ${tables.length} tables / ${totalRows} rows → ${outPath}`);
 }
 
 main().catch((err) => {
-  console.error("[backup] failed:", err);
+  console.error("[backup] failed:", err instanceof Error ? err.message : err);
   process.exit(1);
 });
