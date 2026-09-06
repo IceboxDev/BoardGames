@@ -21,7 +21,6 @@
   },
   "no-raw-indigo": {
     "components/SidePanel.tsx": 1,
-    "components/offline/CalendarDayCell.tsx": 2,
     "games/durak/components/Card.tsx": 2,
     "games/exploding-kittens/components/Card.tsx": 1,
     "games/exploding-kittens/components/DrawPile.tsx": 2,
@@ -32,7 +31,6 @@
     "components/action-log/ActionLog.tsx": 1
   },
   "glow-shadow-literal": {
-    "components/offline/CalendarDayCell.tsx": 4,
     "games/parks/components/PassionPickOverlay.tsx": 1,
     "games/set/components/SetCard.tsx": 1,
     "games/sky-team/components/BriefingOverlay.tsx": 2,
@@ -43,10 +41,11 @@
     "components/profile/ProfileHeader.tsx": 1,
     "components/tournament/TournamentGrid.tsx": 1
   },
-  "raw-card-chrome": {
+  "raw-panel-chrome": {
     "components/FamilyCard.tsx": 2,
     "components/RouteErrorBoundary.tsx": 2,
     "components/SidePanel.tsx": 1,
+    "components/admin/UserRow.tsx": 1,
     "components/game/GameCardChrome.tsx": 1,
     "components/history/GamePicker.tsx": 1,
     "components/history/NightCard.tsx": 1,
@@ -54,7 +53,8 @@
     "components/offline/DndNightPanel.tsx": 1,
     "components/offline/RankedGameList.tsx": 1,
     "components/profile/GenerateAvatarModal.tsx": 1,
-    "pages/DndNightPreview.tsx": 4
+    "pages/DndNightPreview.tsx": 4,
+    "pages/DndToolPreview.tsx": 3
   },
   "raw-async-ladder": {
     "components/offline/RsvpModal.tsx": 2
@@ -62,7 +62,46 @@
   "arbitrary-tracking": {
     "components/offline/CalendarDayCell.tsx": 3
   },
-  "arbitrary-modal-size": {
-    "components/rules/RulesViewer.tsx": 1
+  "arbitrary-size-cap": {
+    "components/rules/RulesViewer.tsx": 1,
+    "games/exploding-kittens/components/NopeWindow.tsx": 1,
+    "games/lost-cities/components/GameReplay.tsx": 1,
+    "games/pandemic/components/CureCardSelectionModal.tsx": 1,
+    "games/parks/components/GearMarketDisplay.tsx": 1,
+    "games/set/components/GameDetailModal.tsx": 1,
+    "games/sky-team/components/BriefingOverlay.tsx": 1,
+    "games/sushi-go/components/NashMatrixModal.tsx": 1
+  },
+  "stock-tracking": {
+    "components/TopNav.tsx": 1,
+    "games/7-wonders/bga/BgaBoard.tsx": 1,
+    "games/7-wonders/components/EdificePanel.tsx": 1,
+    "games/decrypto/components/EncryptorPanel.tsx": 1,
+    "games/dungeons-and-dragons/CampaignSetup.tsx": 1,
+    "games/dungeons-and-dragons/components/CharacterSheetModal.tsx": 5,
+    "games/durak/components/GameBoard.tsx": 2,
+    "games/exploding-kittens/components/GameBoard.tsx": 2,
+    "games/lost-cities/components/FlatPlayerHand.tsx": 1,
+    "games/lost-cities/components/GameReplay.tsx": 4,
+    "games/pandemic/PandemicLobbyConfig.tsx": 1,
+    "games/pandemic/components/InfoBar.tsx": 1,
+    "games/pandemic/components/TrackPanel.tsx": 3,
+    "games/parks/components/CanteenDisplay.tsx": 1,
+    "games/parks/components/GameBoard.tsx": 3,
+    "games/parks/components/GearMarketDisplay.tsx": 2,
+    "games/parks/components/PlayerArea.tsx": 1,
+    "games/parks/components/SeasonMissionsPanel.tsx": 1,
+    "games/parks/components/TrailDisplay.tsx": 1,
+    "games/set/components/GameDetailModal.tsx": 4,
+    "games/set/components/GameOverScreen.tsx": 3,
+    "games/set/components/LiveMetrics.tsx": 1,
+    "games/set/components/PvpGameBoard.tsx": 1,
+    "games/sky-team/components/ApproachTrack.tsx": 1,
+    "games/sky-team/components/BriefingOverlay.tsx": 2,
+    "games/sky-team/components/PlayerDiceTray.tsx": 2,
+    "games/sky-team/components/ScenarioPicker.tsx": 4,
+    "games/sky-team/components/SetupScreen.tsx": 2,
+    "games/sushi-go/components/GameOverScreen.tsx": 1,
+    "games/sushi-go/components/stations/StationShell.tsx": 1
   }
 }

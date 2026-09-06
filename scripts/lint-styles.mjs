@@ -4,9 +4,15 @@
 // Enforces design-system invariants that Biome can't express. Two tiers:
 //
 //   STRICT (zero tolerance — fail on any hit):
-//     • STACKING — overlay/modal files (*Modal*.tsx / *Overlay*.tsx) use the
-//       z-overlay / z-modal / z-tooltip tokens, never raw z-30/40/50 / z-[…].
-//       index.css owns the stacking order as a single source of truth.
+//     • STACKING — every file uses the named z layers (z-lift / z-raised(-2/-3)
+//       for local stacking; z-nav / z-overlay / z-modal / z-tooltip / z-takeover
+//       for the portaled ones), never a raw z-10/20/30/40/50 or z-[…]. `z-0`
+//       is allowed — it names the bottom, not a layer. index.css owns the
+//       stacking order as a single source of truth. This used to fire only in
+//       *Modal*/*Overlay* files, which is how a `fixed top-16 z-40` banner one
+//       step under the nav slipped through.
+//     • CARD ASPECT — a playing card is `aspect-card` (index.css), never a
+//       per-game `aspect-[2/3]`.
 //     • DANGER COLOR — app chrome (everything under packages/web/src except
 //       games/) uses the rose danger tone, never Tailwind red-*. Files where
 //       red is a *literal* color (card art, the calendar fire) are allowlisted.
@@ -24,9 +30,11 @@
 //                            shadow-[0_0_…rgb(…)].
 //     • raw-heading-size     use <PageHeader> (or its SetupHeader preset), not a
 //                            hand-rolled <h1>/<h2> carrying text-3xl/4xl/5xl.
-//     • raw-card-chrome      use <Surface> (static) / <SelectableCard>
+//     • raw-panel-chrome     use <Surface> (static) / <SelectableCard>
 //                            (interactive), not a hand-rolled rounded + border +
-//                            bg-surface panel.
+//                            fill panel. Any fill counts (surface-*, black/…,
+//                            fill*), and the radius may already be a role
+//                            (rounded-card-*) — the panel is still hand-rolled.
 //     • raw-async-ladder     wrap a React Query result in <QueryBoundary>, not a
 //                            hand-rolled `isLoading ?` / `isPending ?` ternary.
 //     • raw-form-field       use <Input> inside a <Field>, not a raw <input>
@@ -34,10 +42,28 @@
 //     • arbitrary-tracking   use the tracking-label/pill/eyebrow tokens (or the
 //                            <Eyebrow>/<MicroLabel>/<Badge> primitives), not a
 //                            one-off tracking-[0.NNem].
-//     • arbitrary-modal-size use <Modal size=…> and <PageMain width=…>, not a
+//     • arbitrary-size-cap   use <Modal size=…> and <PageMain width=…>, not a
 //                            hand-written max-w-[…]/max-h-[…] escape hatch. Two
 //                            competing max-w classes collide in the same CSS
 //                            layer and Tailwind's ordering picks the winner.
+//                            App-wide: a game's `max-h-[90vh]` dialog is still
+//                            a dialog.
+//     • stock-tracking       use tracking-label/pill/eyebrow (or <Eyebrow> /
+//                            <MicroLabel>), not Tailwind's stock
+//                            tracking-wide/wider/widest — the one spelling the
+//                            arbitrary-tracking rule could not see, and the
+//                            way 77 captions escaped the tokens.
+//     • stock-radius         use the radius roles (rounded-card-* / rounded-ui-*,
+//                            see radii.ts), not a static rounded-md/lg/xl/2xl/3xl:
+//                            a static corner ignores the theme's radius knob.
+//     • raw-strong-ink       use text-fg-strong for emphasis ON a surface, not
+//                            text-white; text-white is only ink ON a colored
+//                            fill (a solid button, a gradient badge).
+//     • alpha-white-chrome   use the line-*/fill-* tokens, not border-white/10,
+//                            ring-white/10, bg-white/5, …: a color no theme
+//                            variable can reach.
+//     • raw-error-text       use <ErrorAlert> for an error string, not a loose
+//                            rose <p> binding a variable (drops role="alert").
 //     • raw-error-box        use <ErrorAlert>, not a hand-drawn rose border+fill
 //                            box (rose TEXT is a legit loss/evil-team color).
 //     • dnd-raw-hex          (DM tool) use the dnd-* colour tokens, not a raw
@@ -96,7 +122,9 @@ const RED_ALLOWLIST = new Set([
 
 const RED_RE =
   /\b(?:text|bg|border|ring|from|via|to|placeholder|divide|shadow|outline|fill|stroke|decoration|accent)-red-\d/;
-const STACK_RE = /\bz-(?:30|40|50)\b|\bz-\[/;
+// Any positive numeric z or bracket z. `z-0` (the bottom) is not a layer.
+const STACK_RE = /\bz-(?:[1-9]\d*)\b|\bz-\[/;
+const CARD_ASPECT_RE = /aspect-\[2\/3\]/;
 
 // ── Ratchet rules ─────────────────────────────────────────────────────────
 
@@ -187,7 +215,7 @@ const RATCHET_RULES = [
     scope: (rel) => !rel.startsWith("games/") && !rel.startsWith("components/ui/"),
   },
   {
-    name: "raw-card-chrome",
+    name: "raw-panel-chrome",
     // A hand-rolled bordered panel: one class string carrying rounded + border +
     // bg-surface together. The negative lookahead lets genuinely-interactive
     // surfaces through (hover:/focus:/cursor-/group-hover:) — those are
@@ -196,8 +224,8 @@ const RATCHET_RULES = [
     // live under components/ui/ and games/ is exempt; both are scoped out.
     // Double-quoted class strings only — the static-panel norm; dynamic
     // template-literal chrome is rare and almost always interactive.
-    re: /"(?=[^"]*\brounded-(?:md|lg|xl|2xl|3xl|full)\b)(?=[^"]*\bborder\b)(?=[^"]*\bbg-surface-\d)(?![^"]*(?:hover:|focus:|focus-visible:|cursor-|group-hover:))[^"]*"/g,
-    hint: "use <Surface> for a static panel (or <SelectableCard> if interactive), not a hand-rolled rounded+border+bg-surface chain",
+    re: /"(?=[^"]*\brounded-(?:card-)?(?:md|lg|xl|2xl|3xl|full)\b)(?=[^"]*\bborder\b)(?=[^"]*\bbg-(?:surface-\d|black\/|fill\b|fill-))(?![^"]*(?:hover:|focus:|focus-visible:|cursor-|group-hover:))[^"]*"/g,
+    hint: "use <Surface> for a static panel (or <SelectableCard> if interactive), not a hand-rolled rounded+border+fill chain",
     scope: (rel) => !rel.startsWith("games/") && !rel.startsWith("components/ui/"),
   },
   {
@@ -238,14 +266,60 @@ const RATCHET_RULES = [
     scope: inTokenScope,
   },
   {
-    name: "arbitrary-modal-size",
+    name: "arbitrary-size-cap",
     // A hand-written width/height cap. `Modal size=…` and `PageMain width=…`
     // own dialog and page sizing; an arbitrary `max-w-[…]` here both re-invents
     // the scale AND risks silently losing to a primitive's own `max-w-*`, since
     // the two land in the same CSS layer and Tailwind's generated order — not
     // the class string's order — decides which wins.
     re: /\b(?:max-w|max-h)-\[[^\]]+\]/g,
-    hint: "use <Modal size=…> / <PageMain width=…>, not a hand-written max-w-[…] / max-h-[…]",
+    hint: "use <Modal size=…> / <PageMain width=…> (or a --container-* token), not a hand-written max-w-[…] / max-h-[…]",
+    // App-wide: the primitives that own sizing live under components/ui/.
+    scope: (rel) => !rel.startsWith("components/ui/"),
+  },
+  {
+    name: "stock-tracking",
+    // Tailwind's own letter-spacing steps, which `arbitrary-tracking` could not
+    // see: one caption role, spelled at 0.025/0.05/0.1em instead of the three
+    // tokens. Everywhere — game boards included — since the tokens are the
+    // only sanctioned spellings.
+    re: /\btracking-(?:wide|wider|widest)\b/g,
+    hint: "use tracking-label / tracking-pill / tracking-eyebrow (or <Eyebrow> / <MicroLabel>), not the stock tracking-wide/wider/widest",
+  },
+  {
+    name: "stock-radius",
+    // A static corner. The theme's radius knobs (`--radius-card-scale` /
+    // `--radius-ui-scale`) reach only the role utilities in index.css, so a
+    // bare rounded-lg is a corner the user's appearance settings cannot touch.
+    // `rounded-full` stays literal (a pill is a pill), and the smaller
+    // `rounded`/`rounded-sm` steps are decoration, not chrome.
+    re: /\brounded-(?:md|lg|xl|2xl|3xl)\b/g,
+    hint: "use a radius role (rounded-card-md…3xl for panels/thumbs, rounded-ui-md/lg for controls; see components/ui/radii.ts), not a static rounded-*",
+    scope: inTokenScope,
+  },
+  {
+    name: "raw-strong-ink",
+    // `text-white` in a class string that paints NO colored fill: that is ink
+    // on the surface, i.e. the `fg-strong` token. The negative lookahead lets
+    // ink on a fill through (a solid button, a gradient badge, a black HUD).
+    re: /"(?![^"\n]*\b(?:hover:|group-hover:|active:)?(?:bg|from|via|to)-(?:accent|amber|sky|emerald|rose|purple|orange|cyan|neon|red|green|yellow|blue|indigo|violet|fuchsia|pink|teal|lime|stone|black|white|dnd-(?:ember|blood)|warn|ok|heat|sealed|\[))[^"\n]*\btext-white\b[^"\n]*"/g,
+    hint: "use text-fg-strong for emphasis on a surface; text-white is only for ink ON a colored fill",
+    scope: inTokenScope,
+  },
+  {
+    name: "alpha-white-chrome",
+    // A hairline or fill spelled as a white alpha — a color no theme variable
+    // reaches. The line-*/fill-* tokens are the same values at the stock ramp.
+    re: /\b(?:border|ring|divide|bg)-white\/(?:\[[^\]]+\]|\d+)/g,
+    hint: "use border-line(-soft/-strong), ring-line, divide-line, bg-fill(-soft/-strong), not a white alpha",
+  },
+  {
+    name: "raw-error-text",
+    // A loose rose paragraph binding a variable — an error string rendered
+    // without <ErrorAlert>'s box and role="alert". The `{` keeps static rose
+    // prose (a loss line, a warning sentence) out of it.
+    re: /<p[^>]*className="[^"]*\btext-rose-(?:300|400)\b[^"]*"[^>]*>\s*\{/g,
+    hint: "use <ErrorAlert message={…}> — it owns the rose geometry, the tone, and role=alert",
     scope: inTokenScope,
   },
   {
@@ -366,16 +440,19 @@ for (const rule of RATCHET_RULES) nextBaseline[rule.name] = {};
 
 for (const file of walk(WEB)) {
   const rel = relative(WEB, file).split("\\").join("/");
-  const base = rel.split("/").pop();
   const isGame = rel.startsWith("games/");
-  const isOverlayFile = /(?:Modal|Overlay)\.tsx$/.test(base);
   const text = readFileSync(file, "utf8");
   const lines = text.split("\n");
 
-  // Strict rules — per line.
+  // Strict rules — per line. Comment lines are skipped so prose that MENTIONS
+  // a banned class ("used to be z-40") never trips a strict rule.
   lines.forEach((line, i) => {
-    if (isOverlayFile && STACK_RE.test(line)) {
+    if (/^\s*(?:\/\/|\*|\/\*)/.test(line)) return;
+    if (STACK_RE.test(line)) {
       strictViolations.push({ rel, line: i + 1, rule: "stacking", text: line.trim() });
+    }
+    if (CARD_ASPECT_RE.test(line)) {
+      strictViolations.push({ rel, line: i + 1, rule: "card-aspect", text: line.trim() });
     }
     if (!isGame && !RED_ALLOWLIST.has(rel) && RED_RE.test(line)) {
       strictViolations.push({ rel, line: i + 1, rule: "red", text: line.trim() });
@@ -435,8 +512,10 @@ if (strictViolations.length > 0) {
   for (const v of strictViolations) {
     const hint =
       v.rule === "stacking"
-        ? "use z-overlay / z-modal / z-tooltip (index.css owns the stacking order)"
-        : "use the rose danger tone, not Tailwind red-* (allowlist literal-red files in scripts/lint-styles.mjs)";
+        ? "use the named z layers: z-lift / z-raised(-2/-3) locally, z-nav / z-overlay / z-modal / z-tooltip / z-takeover above (index.css owns the order)"
+        : v.rule === "card-aspect"
+          ? "use aspect-card (index.css) — a playing card's ratio is one token"
+          : "use the rose danger tone, not Tailwind red-* (allowlist literal-red files in scripts/lint-styles.mjs)";
     console.error(`  ${v.rel}:${v.line}  [${v.rule}] ${hint}`);
     console.error(`    ${v.text}`);
   }
