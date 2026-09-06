@@ -59,7 +59,11 @@ purchaseVoteRoutes.get("/", async (c) => {
 //
 // Replace the viewer's whole vote set. Delete-then-insert rather than a
 // diff: at ≤3 rows the simplicity wins, and the composite PK makes the
-// inserts safe regardless.
+// inserts safe regardless. The delete and the inserts are ONE batch, so a
+// reader (including the quorum check below) never sees the empty window
+// between them, and a failure leaves the previous set intact. Every
+// statement is guarded on the poll still being open, so a vote cannot land
+// on a poll that sealed between the check above and the write.
 
 purchaseVoteRoutes.put("/votes", zJsonBody(SetPurchaseVotesBodySchema), async (c) => {
   const viewer = c.get("user");
@@ -76,15 +80,25 @@ purchaseVoteRoutes.put("/votes", zJsonBody(SetPurchaseVotesBodySchema), async (c
   }
 
   const db = getDb();
-  await db.execute({
-    sql: "DELETE FROM purchase_poll_votes WHERE poll_id = ? AND user_id = ?",
-    args: [poll.id, viewer.id],
-  });
-  for (const slug of slugs) {
-    await db.execute({
-      sql: "INSERT OR IGNORE INTO purchase_poll_votes (poll_id, user_id, slug) VALUES (?, ?, ?)",
-      args: [poll.id, viewer.id, slug],
-    });
+  const stillOpen = "EXISTS (SELECT 1 FROM purchase_polls WHERE id = ? AND closed_at IS NULL)";
+  const results = await db.batch(
+    [
+      {
+        sql: `DELETE FROM purchase_poll_votes WHERE poll_id = ? AND user_id = ? AND ${stillOpen}`,
+        args: [poll.id, viewer.id, poll.id],
+      },
+      ...slugs.map((slug) => ({
+        sql: `INSERT OR IGNORE INTO purchase_poll_votes (poll_id, user_id, slug)
+              SELECT ?, ?, ? WHERE ${stillOpen}`,
+        args: [poll.id, viewer.id, slug, poll.id],
+      })),
+    ],
+    "write",
+  );
+  if (slugs.length > 0 && results.every((r) => r.rowsAffected === 0)) {
+    // Nothing landed: the only guard that can silence an INSERT is the poll
+    // having closed since we checked.
+    return errorResponse(c, 409, "the vote has closed", "POLL_CLOSED");
   }
 
   // Auto-close: re-read after the write so the submit that makes quorum is

@@ -380,8 +380,30 @@ async function bumpSequence(
     ? canonicalizeView(view, status)
     : JSON.stringify({ status, tombstoneStamp });
   const digest = createHash("sha256").update(digestPayload).digest("hex");
+  return recordEventVersion(viewerId, dateKey, digest);
+}
 
-  const { rows } = await getDb().execute({
+/**
+ * The iCalendar SEQUENCE for one (subscriber, night) pair, advanced whenever
+ * the event's digest changes.
+ *
+ * SEQUENCE must never go backwards: RFC 5545 clients ignore an update whose
+ * SEQUENCE is not higher than the one they hold, so a regressed number
+ * silently freezes the night in the user's calendar. Feed pollers are the
+ * one workload that issues genuinely concurrent requests for the same URL,
+ * so the increment is done IN SQL against the stored value — never computed
+ * from a value read a round trip earlier. Two concurrent bumps therefore
+ * produce two distinct, ascending numbers; the last digest wins.
+ *
+ * Unchanged content is the common case and stays a single read.
+ */
+export async function recordEventVersion(
+  viewerId: string,
+  dateKey: string,
+  digest: string,
+): Promise<number> {
+  const db = getDb();
+  const { rows } = await db.execute({
     sql: "SELECT state_digest, sequence FROM calendar_feed_event_versions WHERE user_id = ? AND date_key = ?",
     args: [viewerId, dateKey],
   });
@@ -391,18 +413,27 @@ async function bumpSequence(
   if (row && row.state_digest === digest) {
     return row.sequence;
   }
-  const nextSequence = (row?.sequence ?? -1) + 1;
-  await getDb().execute({
+  const bumped = await db.execute({
     sql: `INSERT INTO calendar_feed_event_versions
             (user_id, date_key, state_digest, sequence, updated_at)
-          VALUES (?, ?, ?, ?, datetime('now'))
+          VALUES (?, ?, ?, 0, datetime('now'))
           ON CONFLICT(user_id, date_key) DO UPDATE SET
+            sequence = calendar_feed_event_versions.sequence + 1,
             state_digest = excluded.state_digest,
-            sequence = excluded.sequence,
-            updated_at = excluded.updated_at`,
-    args: [viewerId, dateKey, digest, nextSequence],
+            updated_at = excluded.updated_at
+          WHERE calendar_feed_event_versions.state_digest <> excluded.state_digest
+          RETURNING sequence`,
+    args: [viewerId, dateKey, digest],
   });
-  return nextSequence;
+  const sequence = bumped.rows[0]?.sequence;
+  if (sequence !== undefined && sequence !== null) return Number(sequence);
+  // The upsert's WHERE excluded the row: a concurrent fetch already stored
+  // this exact digest. Its number is the right one to reuse.
+  const { rows: settled } = await db.execute({
+    sql: "SELECT sequence FROM calendar_feed_event_versions WHERE user_id = ? AND date_key = ?",
+    args: [viewerId, dateKey],
+  });
+  return Number(settled[0]?.sequence ?? 0);
 }
 
 function canonicalizeView(view: AvailableGamesView, status: "CONFIRMED" | "CANCELLED"): string {
