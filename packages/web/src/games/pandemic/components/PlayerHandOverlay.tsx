@@ -73,7 +73,7 @@ export default function PlayerHandOverlay({
   }
 
   return (
-    <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-10">
+    <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-raised">
       {/* Toggle bar */}
       <div className="pointer-events-auto flex items-center justify-center gap-3 pb-1">
         {/* Player tabs */}
@@ -109,14 +109,14 @@ export default function PlayerHandOverlay({
         <button
           type="button"
           onClick={() => setHandVisible((v) => !v)}
-          className="flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1 text-xs text-white/80 backdrop-blur-sm transition-colors hover:text-white"
+          className="flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1 text-xs text-fg-strong/80 backdrop-blur-sm transition-colors hover:text-white"
         >
           {handVisible ? "Hide" : "Show"} Hand
           <span className="text-sm">{handVisible ? "\u25BC" : "\u25B2"}</span>
         </button>
 
         {/* Deck info */}
-        <div className="rounded-full bg-black/60 px-3 py-1 text-xs text-white/60 backdrop-blur-sm">
+        <div className="rounded-full bg-black/60 px-3 py-1 text-xs text-fg-strong/60 backdrop-blur-sm">
           Deck: {state.playerDeck.length} | Infection: {state.infectionDeck.length}
         </div>
       </div>

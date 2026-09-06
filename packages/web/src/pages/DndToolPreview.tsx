@@ -619,7 +619,7 @@ export default function DndToolPreview() {
 
       <div className="mx-auto max-w-6xl px-3 pb-8">
         <SectionTitle>Session — game screen</SectionTitle>
-        <div className="mt-3 flex h-[860px] overflow-hidden rounded-2xl border border-white/10">
+        <div className="mt-3 flex h-[860px] overflow-hidden rounded-card-2xl border border-line">
           <DndGameScreen campaign={STRAHD} party={PARTY_META} />
         </div>
       </div>
@@ -643,7 +643,7 @@ export default function DndToolPreview() {
         />
 
         <SectionTitle>Combat — action dashboard (PC turn, Shortbow spent)</SectionTitle>
-        <div className="flex h-[440px] overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-3">
+        <div className="flex h-[440px] overflow-hidden rounded-card-2xl border border-line bg-black/40 p-3">
           <CombatPanel
             combat={{ ...COMBAT, turnIndex: 0 }}
             party={PARTY}
@@ -653,7 +653,7 @@ export default function DndToolPreview() {
         </div>
 
         <SectionTitle>Combat — enemy turn + read-aloud narration</SectionTitle>
-        <div className="flex h-[440px] overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-3">
+        <div className="flex h-[440px] overflow-hidden rounded-card-2xl border border-line bg-black/40 p-3">
           <CombatPanel
             combat={{ ...COMBAT, turnIndex: 2 }}
             party={PARTY}
@@ -669,7 +669,7 @@ export default function DndToolPreview() {
         </div>
 
         <SectionTitle>Combat — referee alert (illegal turn)</SectionTitle>
-        <div className="flex h-[440px] overflow-hidden rounded-2xl border border-white/10 bg-black/40 p-3">
+        <div className="flex h-[440px] overflow-hidden rounded-card-2xl border border-line bg-black/40 p-3">
           <CombatPanel
             combat={COMBAT}
             party={PARTY}

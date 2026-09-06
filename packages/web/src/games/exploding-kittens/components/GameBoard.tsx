@@ -145,6 +145,7 @@ export default function GameBoard({
   return (
     <GameScreen
       sidebar={<ActionLog blocks={mapEKLog(state.actionLog ?? [], state.players)} />}
+      leftSidebarLabel="Players"
       leftSidebar={
         <PlayerListPanel
           turnCount={state.turnCount}
@@ -329,7 +330,7 @@ export default function GameBoard({
                       }
                       return (
                         <div
-                          className={`${cls} flex flex-col items-center justify-center text-white`}
+                          className={`${cls} flex flex-col items-center justify-center text-fg-strong`}
                           style={{ backgroundColor: CARD_COLORS[topCard.type] }}
                         >
                           <span className="text-lg leading-none">{CARD_EMOJI[topCard.type]}</span>

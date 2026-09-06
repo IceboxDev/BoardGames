@@ -65,7 +65,7 @@ function HallRoute() {
   return (
     // The play-area Layout is fixed-height with overflow hidden, so each
     // scrolling screen owns its scroll container.
-    <div className={`relative z-10 h-full overflow-y-auto ${BG}`}>
+    <div className={`relative z-raised h-full overflow-y-auto ${BG}`}>
       <CampaignHall onOpenCampaign={(campaignId) => navigate(`campaign/${campaignId}`)} />
     </div>
   );
@@ -82,7 +82,7 @@ function useCampaign(campaignId: string | undefined) {
 
 function PendingScreen() {
   return (
-    <div className={`relative z-10 flex h-full ${BG}`}>
+    <div className={`relative z-raised flex h-full ${BG}`}>
       <LoadingState fillHeight label="Opening the tome…" />
     </div>
   );
@@ -101,7 +101,7 @@ function CampaignRoute() {
 
   if (!campaign) return <PendingScreen />;
   return (
-    <div className={`relative z-10 h-full overflow-y-auto ${BG}`}>
+    <div className={`relative z-raised h-full overflow-y-auto ${BG}`}>
       <CampaignSetup
         campaign={campaign}
         onOpenParty={(partyId) => navigate(`party/${partyId}`)}
@@ -135,7 +135,7 @@ function PartyRoute({ screen }: { screen: "setup" | "game" }) {
 
   if (screen === "setup") {
     return (
-      <div className={`relative z-10 h-full overflow-y-auto ${BG}`}>
+      <div className={`relative z-raised h-full overflow-y-auto ${BG}`}>
         <PartySetup campaign={campaign} party={party} onStart={() => navigate("game")} />
       </div>
     );

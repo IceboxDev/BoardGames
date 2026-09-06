@@ -1,6 +1,7 @@
 import type { CSSProperties, ReactNode } from "react";
 import { cn } from "../../lib/cn";
-import { RADIUS_CARD_2XL, RADIUS_CARD_XL } from "./radii";
+import { OPTION_ROW_BASE, OPTION_ROW_GHOST, OPTION_ROW_SELECTED } from "./option-row-chrome";
+import { RADIUS_CARD_2XL, RADIUS_CARD_LG, RADIUS_CARD_XL } from "./radii";
 import { type CoreTone, TONE_SELECT_MARKER } from "./tones";
 
 // ── SelectableCard ───────────────────────────────────────────────────────
@@ -17,6 +18,10 @@ import { type CoreTone, TONE_SELECT_MARKER } from "./tones";
 //   stripe — left accent-bar option row taking a raw `accentColor` (for
 //            per-option game colors outside the 5 system tones) plus custom
 //            `children`. This is the old OptionCard shape.
+//   row    — a dense single-pick LIST row (thumbnail + title inside a
+//            scrolling picker). Flat until hovered, the shared option-row
+//            accent pair when selected — the same pair CheckRow draws, so a
+//            picked row and a checked row read identically.
 //
 // Renders a real <button> only when `onClick` is set (else a <div>), via a
 // dynamic element so it stays a single focusable control. Pass `selected`
@@ -27,7 +32,7 @@ import { type CoreTone, TONE_SELECT_MARKER } from "./tones";
 export type SelectableCardPadding = "md" | "sm";
 
 type SelectableCardProps = {
-  variant?: "tile" | "stripe";
+  variant?: "tile" | "stripe" | "row";
   /** System tone driving tile hover border, glow, icon tint, selected ring. */
   tone?: CoreTone;
   /** Raw accent (hex/css color) for the `stripe` left bar + top hover line. */
@@ -156,14 +161,14 @@ export function SelectableCard({
       <>
         {icon && (
           <div
-            className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-700/40 text-fg-secondary transition-colors ${TILE_ICON_HOVER[tone]}`}
+            className={`flex h-9 w-9 shrink-0 items-center justify-center ${RADIUS_CARD_LG} bg-surface-700/40 text-fg-secondary transition-colors ${TILE_ICON_HOVER[tone]}`}
           >
             {icon}
           </div>
         )}
         <div className="min-w-0 flex-1">
           {title && (
-            <div className="text-sm font-medium text-fg-secondary transition-colors group-hover:text-white">
+            <div className="text-sm font-medium text-fg-secondary transition-colors group-hover:text-fg-strong">
               {title}
             </div>
           )}
@@ -179,7 +184,7 @@ export function SelectableCard({
       <>
         {icon && (
           <div
-            className={`flex h-14 w-14 items-center justify-center rounded-2xl transition-colors duration-300 ${TILE_ICON[tone]}`}
+            className={`flex h-14 w-14 items-center justify-center ${RADIUS_CARD_2XL} transition-colors duration-300 ${TILE_ICON[tone]}`}
           >
             {icon}
           </div>
@@ -187,7 +192,7 @@ export function SelectableCard({
         <div>
           {title && (
             <div
-              className={`text-base font-semibold text-white transition-colors ${TILE_TITLE_HOVER[tone]}`}
+              className={`text-base font-semibold text-fg-strong transition-colors ${TILE_TITLE_HOVER[tone]}`}
             >
               {title}
             </div>
@@ -210,19 +215,27 @@ export function SelectableCard({
   );
 
   let cls: string;
-  if (variant === "stripe") {
+  if (variant === "row") {
+    cls = cn(
+      OPTION_ROW_BASE,
+      "w-full",
+      padding === "sm" ? "gap-2.5 px-2 py-1.5" : "gap-3 px-3 py-2",
+      isToggle && selected ? OPTION_ROW_SELECTED : OPTION_ROW_GHOST,
+      sharedTail,
+    );
+  } else if (variant === "stripe") {
     cls = cn(
       `group relative flex overflow-hidden ${RADIUS_CARD_XL} border bg-surface-800/50 ${pad} text-left transition-all duration-200`,
       orientation === "horizontal" ? "items-center gap-3" : "flex-col",
       isToggle && selected
-        ? "border-white/20 bg-surface-800/80 shadow-lg"
+        ? "border-line-strong bg-surface-800/80 shadow-lg"
         : "border-surface-600/80 hover:-translate-y-0.5 hover:bg-surface-800/80 hover:shadow-lg hover:shadow-black/20",
       sharedTail,
     );
   } else if (orientation === "horizontal") {
     cls = cn(
       `group flex items-center gap-3 ${RADIUS_CARD_XL} border bg-surface-800/30 ${pad} text-left transition-all duration-200 hover:bg-surface-800/60`,
-      isToggle && selected ? TILE_SELECTED[tone] : `border-white/10 ${TILE_HOVER_BORDER[tone]}`,
+      isToggle && selected ? TILE_SELECTED[tone] : `border-line ${TILE_HOVER_BORDER[tone]}`,
       sharedTail,
     );
   } else {
@@ -230,7 +243,7 @@ export function SelectableCard({
       `group flex flex-col items-center gap-4 ${RADIUS_CARD_2XL} border bg-surface-800/40 ${pad} text-center shadow-lg shadow-transparent transition-all duration-300 hover:-translate-y-1 hover:bg-surface-800/70 hover:shadow-xl`,
       isToggle && selected
         ? TILE_SELECTED[tone]
-        : `border-white/10 ${TILE_HOVER_BORDER[tone]} ${TILE_HOVER_GLOW[tone]}`,
+        : `border-line ${TILE_HOVER_BORDER[tone]} ${TILE_HOVER_GLOW[tone]}`,
       sharedTail,
     );
   }

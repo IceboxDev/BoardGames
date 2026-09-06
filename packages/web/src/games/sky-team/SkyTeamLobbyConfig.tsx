@@ -43,9 +43,9 @@ export default function SkyTeamLobbyConfig({ value, onChange, isHost }: LobbyCon
     return (
       <>
         <SectionHeading>Destination</SectionHeading>
-        <div className="flex min-h-0 flex-1 items-center justify-center rounded-2xl border border-white/10 bg-surface-900/40">
+        <div className="flex min-h-0 flex-1 items-center justify-center rounded-2xl border border-line bg-surface-900/40">
           <div className="px-6 text-center">
-            <div className="text-sm font-semibold text-white">
+            <div className="text-sm font-semibold text-fg-strong">
               The host is choosing the destination
             </div>
             <p className="mt-1 text-xs text-fg-secondary">

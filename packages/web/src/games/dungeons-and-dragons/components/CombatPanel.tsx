@@ -8,7 +8,7 @@ import type {
 } from "@boardgames/core/protocol";
 import { ABILITY_KEYS } from "@boardgames/core/protocol";
 import { useQuery } from "@tanstack/react-query";
-import { Badge, Button } from "../../../components/ui";
+import { Badge, Button, ErrorAlert } from "../../../components/ui";
 import { characterActions } from "../../../lib/dnd-campaigns";
 import { errorMessageOf } from "../../../lib/error-message";
 import { qk } from "../../../lib/query-keys";
@@ -48,7 +48,7 @@ function armorClassOf(c: Combatant, party: DndCharacter[], npcs: DndNpc[]): numb
 function CombatantRow({ c, active, ac }: { c: Combatant; active: boolean; ac: number | null }) {
   return (
     <li
-      className={`rounded-xl border px-3 py-2 transition-colors ${
+      className={`rounded-card-xl border px-3 py-2 transition-colors ${
         active ? "border-rose-400/50 bg-rose-950/30" : "border-amber-400/10 bg-black/20 opacity-80"
       }`}
     >
@@ -117,7 +117,7 @@ function CurrentPcStats({
           padded
           label="Speed"
           value={sheet.speed ? shortSpeed(sheet.speed) : "—"}
-          tone="border-white/10 bg-white/[0.04] text-fg-secondary"
+          tone="border-line bg-fill-soft text-fg-secondary"
         />
         <Vital
           padded
@@ -160,7 +160,7 @@ function CurrentPcStats({
               className={`rounded-full px-1.5 py-0.5 text-3xs font-semibold ring-1 ${
                 skill.proficiency === "expertise"
                   ? "bg-amber-400/15 text-amber-100 ring-amber-400/40"
-                  : "bg-white/[0.05] text-amber-200/80 ring-white/10"
+                  : "bg-fill text-amber-200/80 ring-line"
               }`}
             >
               {skill.name} {fmt(skill.modifier)}
@@ -185,11 +185,11 @@ function ActionCardTile({
   const style = KIND_STYLE[card.kind];
   return (
     <li
-      className={`rounded-xl border px-3 py-2 ${
+      className={`rounded-card-xl border px-3 py-2 ${
         granted
           ? "border-amber-300/50 bg-amber-400/10"
           : unavailable
-            ? "border-white/5 bg-black/15 opacity-45"
+            ? "border-line-soft bg-black/15 opacity-45"
             : "border-amber-400/15 bg-black/25"
       }`}
     >
@@ -256,12 +256,12 @@ function ActionDashboard({
   if (actionsQuery.isError || !actionsQuery.data) {
     return (
       <div className="flex flex-col items-center gap-2 px-1 py-4">
-        <p className="font-serif-body text-center text-xs text-rose-300">
-          {errorMessageOf(
+        <ErrorAlert
+          message={errorMessageOf(
             actionsQuery.error,
             "The action cards could not be drawn — resolve from the character sheet.",
           )}
-        </p>
+        />
         <Button
           variant="tinted"
           tone="amber"
@@ -304,7 +304,7 @@ function EnemyDashboard({ combatant, npcs }: { combatant: Combatant; npcs: DndNp
   const abilities = card?.abilities ?? null;
   return (
     <div className="flex flex-col gap-2">
-      <div className="rounded-xl border border-rose-400/20 bg-rose-950/15 px-3.5 py-3">
+      <div className="rounded-card-xl border border-rose-400/20 bg-rose-950/15 px-3.5 py-3">
         <div className="flex flex-wrap items-center gap-1.5">
           {ac !== null && (
             <StatPill tone="ac" className="px-2 text-2xs">
@@ -317,7 +317,7 @@ function EnemyDashboard({ combatant, npcs }: { combatant: Combatant; npcs: DndNp
             </StatPill>
           )}
           {card?.kind && (
-            <span className="rounded-full bg-white/[0.05] px-2 py-0.5 text-2xs text-amber-200/70 ring-1 ring-white/10">
+            <span className="rounded-full bg-fill px-2 py-0.5 text-2xs text-amber-200/70 ring-1 ring-line">
               {card.kind}
             </span>
           )}
@@ -383,7 +383,7 @@ export function CombatPanel({ combat, party, npcs, turnResult }: Props) {
 
   return (
     <div className="flex min-h-0 flex-1 gap-3">
-      <div className="flex w-64 shrink-0 flex-col rounded-2xl border border-rose-400/25 bg-gradient-to-b from-dnd-ash/70 to-black/60 p-3">
+      <div className="flex w-64 shrink-0 flex-col rounded-card-2xl border border-rose-400/25 bg-gradient-to-b from-dnd-ash/70 to-black/60 p-3">
         <SectionEyebrow tone="rose">Round {combat.round} · turn order</SectionEyebrow>
         <ol className="scrollbar-hide mt-2 flex min-h-0 flex-1 flex-col gap-1.5 overflow-y-auto">
           {rotated.map((c, i) => (

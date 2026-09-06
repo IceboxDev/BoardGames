@@ -164,7 +164,7 @@ export default function GameBoard(props: GameBoardProps) {
                   <ExpeditionArea expeditions={state.expeditions[1]} isPlayer={false} />
                 </div>
 
-                <div className="flex flex-1 items-center justify-center border-y border-white/10 my-1.5">
+                <div className="flex flex-1 items-center justify-center border-y border-line my-1.5">
                   <DiscardArea discardPiles={state.discardPiles} />
                 </div>
 
@@ -294,7 +294,7 @@ export default function GameBoard(props: GameBoardProps) {
                 <ExpeditionArea expeditions={state.expeditions[1]} isPlayer={false} />
               </div>
 
-              <div className="flex flex-1 items-center justify-center border-y border-white/10 my-1.5">
+              <div className="flex flex-1 items-center justify-center border-y border-line my-1.5">
                 <DiscardArea
                   discardPiles={state.discardPiles}
                   onPickDiscard={isDrawPhase ? onDrawFromDiscard : undefined}

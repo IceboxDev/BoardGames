@@ -4,6 +4,7 @@ import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { resolveGame } from "../../lib/games-by-slug.ts";
 import { perfColor } from "../ui/charts";
 import { EmptyState } from "../ui/EmptyState.tsx";
+import { ProgressBar } from "../ui/ProgressBar.tsx";
 
 // Per-game performance, best → worst. "Performance" is Scheme-A for competitive
 // games (free-for-all losses graded by placement, not a flat 0), and the team
@@ -81,15 +82,11 @@ export function ProfileStatsPanel({ stats }: { stats: ProfileStats }) {
                 )}
               </span>
             </div>
-            <div className="h-1.5 overflow-hidden rounded-full bg-surface-800">
-              <div
-                className="h-full rounded-full transition-[width]"
-                style={{
-                  width: `${Math.round((perf ?? 0) * 100)}%`,
-                  backgroundColor: perfColor(perf),
-                }}
-              />
-            </div>
+            <ProgressBar
+              label={`${row.title} performance`}
+              value={perf ?? 0}
+              color={perfColor(perf)}
+            />
           </li>
         );
       })}

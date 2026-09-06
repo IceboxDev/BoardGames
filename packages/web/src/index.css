@@ -42,9 +42,11 @@
      dark surfaces. primary = body + emphasized labels (the `text-gray-100/200`
      replacement and the document base); secondary = default labels
      (`text-gray-300/400`); muted = hints/captions (`text-gray-500`); disabled
-     = faint/inactive (`text-gray-600`). `text-white` stays reserved for the
-     brightest emphasis (headings, text on colored CTAs). App chrome must use
-     these tokens, never raw `text-gray-*`. */
+     = faint/inactive (`text-gray-600`); strong (below) = the brightest
+     emphasis tier (headings, hero numbers). `text-white` is reserved for ink
+     ON a colored fill (a solid button, a gradient badge). App chrome must use
+     these tokens, never raw `text-gray-*` or a bare `text-white` on a
+     surface. */
   --color-fg-primary: #e2e6ee;
   --color-fg-secondary: #9aa3b4;
   --color-fg-muted: #6b7387;
@@ -61,6 +63,33 @@
      the stock indigo; the engine flips it to near-black for a light or neon
      accent, where white text all but vanishes. */
   --color-on-accent: #ffffff;
+  /* The brightest emphasis tier of the text ramp — page titles, hero
+     numbers, the one bold word in a row. The old rule was "`text-white`
+     stays reserved for the brightest emphasis", which made every heading a
+     literal that no theme could touch. lib/theme/apply.ts derives this from
+     the themed `fgPrimary` (white for every dark ramp, near-black for a
+     light one), so a heading is themable ink and a `bg-rose-600 text-white`
+     button — ink ON a colored fill — stays literally white. */
+  --color-fg-strong: #ffffff;
+  /* ── LINE + FILL tokens ───────────────────────────────────────────────
+     The hairline borders and low-alpha fills that draw every panel, row and
+     divider. They used to be `border-white/10` / `bg-white/5` — a color no
+     theme variable could reach, spelled at ~40 different alphas. Derived
+     from the foreground ramp so a warm or light preset gets warm or dark
+     hairlines for free; at the stock ramp they resolve to within one RGB
+     unit of the white-alpha literals they replace.
+       line-soft   5%   inset tiles, dividers inside a card
+       line       10%   the standard panel / row border
+       line-strong 20%  hover borders, emphasised rows
+       fill-soft   4%   quiet hover fills, table row tints
+       fill        6%   neutral pills, pressed-state fills
+       fill-strong 10%  progress tracks, stronger hover fills */
+  --color-line-soft: color-mix(in srgb, var(--color-fg-primary) 5%, transparent);
+  --color-line: color-mix(in srgb, var(--color-fg-primary) 10%, transparent);
+  --color-line-strong: color-mix(in srgb, var(--color-fg-primary) 20%, transparent);
+  --color-fill-soft: color-mix(in srgb, var(--color-fg-primary) 4%, transparent);
+  --color-fill: color-mix(in srgb, var(--color-fg-primary) 6%, transparent);
+  --color-fill-strong: color-mix(in srgb, var(--color-fg-primary) 10%, transparent);
   /* ── SEMANTIC + ART tokens ────────────────────────────────────────────
      Colors that carry a MEANING rather than an identity: the "connected"
      green, the "maybe" yellow, the calendar's fire, and a sealed night's
@@ -199,6 +228,102 @@
   --z-modal: 200;
   --z-tooltip: 300;
   --z-takeover: 400;
+  /* raised / raised-2 / raised-3 — LOCAL stacking tiers only: a sticky
+     heading above its own list rows, a badge above a thumbnail, carousel
+     chevrons above the cards. They order siblings INSIDE one component's
+     stacking context and never a portaled or fixed surface; those take a
+     named layer above. Exist so `z-10`/`z-20`/`z-30` stop being spelled
+     ~55 times, and so the stacking lint can be strict everywhere. `lift` is
+     the half-step under `raised`: a cell's own accent bar and body pulled
+     above its painted fire/lock layers but still under any raised chip. */
+  --z-lift: 5;
+  --z-raised: 10;
+  --z-raised-2: 20;
+  --z-raised-3: 30;
+  /* ── Layout constants ─────────────────────────────────────────────────
+     The handful of chrome dimensions other elements must agree with. Each
+     was a magic number split across files: the nav's height as `top-16` on
+     a fixed banner and `pt-14`+`calc(100dvh - 3.5rem)` on a preview; the
+     board rails as `w-64`/`w-72` in GameScreen. Consumed through the
+     `@utility` blocks below (Tailwind has no `--layout-*` namespace). */
+  --layout-nav-h: 3rem;
+  --layout-board-rail-w: 16rem;
+  --layout-history-rail-w: 18rem;
+  --layout-fan-h: 11.875rem;
+  /* A playing card's face. Six games each declared `aspect-[2/3]` for
+     themselves. */
+  --aspect-card: 2 / 3;
+  /* The RSVP canvas dialog: fills the viewport height and keeps widening on
+     very large displays instead of stranding the game carousel in a 42rem
+     column. `--container-*` drives `max-w-*`, so these are `max-w-modal-full`
+     … `max-w-modal-full-2xl`. */
+  --container-modal-full: 80rem;
+  --container-modal-full-xl: 92rem;
+  --container-modal-full-2xl: 110rem;
+}
+
+/* ── Radius roles ────────────────────────────────────────────────────────
+   Every themable corner is one of these six. `card-*` corners scale with
+   `--radius-card-scale` (panels, tiles, thumbnails, dialogs); `ui-*` with
+   `--radius-ui-scale` (buttons, inputs, chips, segmented tracks). Bases
+   follow the Tailwind scale (md 0.375rem … 3xl 1.5rem), so with the knobs
+   unset each renders exactly as the static `rounded-*` it replaces.
+
+   These are utilities rather than `--radius-*` theme tokens on purpose: a
+   theme token would inline the base value into every utility and lose the
+   runtime `var()` multiplication. The constants in ui/radii.ts name them for
+   primitives; hand-written chrome uses the class directly. `rounded-full`
+   stays literal — a pill is a pill under every theme. */
+@utility rounded-card-md {
+  border-radius: calc(var(--radius-card-scale, 1) * 0.375rem);
+}
+@utility rounded-card-lg {
+  border-radius: calc(var(--radius-card-scale, 1) * 0.5rem);
+}
+@utility rounded-card-xl {
+  border-radius: calc(var(--radius-card-scale, 1) * 0.75rem);
+}
+@utility rounded-card-2xl {
+  border-radius: calc(var(--radius-card-scale, 1) * 1rem);
+}
+@utility rounded-card-3xl {
+  border-radius: calc(var(--radius-card-scale, 1) * 1.5rem);
+}
+/* A bottom sheet's top corners (Drawer side="bottom"). */
+@utility rounded-t-card-3xl {
+  border-top-left-radius: calc(var(--radius-card-scale, 1) * 1.5rem);
+  border-top-right-radius: calc(var(--radius-card-scale, 1) * 1.5rem);
+}
+@utility rounded-ui-md {
+  border-radius: calc(var(--radius-ui-scale, 1) * 0.375rem);
+}
+@utility rounded-ui-lg {
+  border-radius: calc(var(--radius-ui-scale, 1) * 0.5rem);
+}
+
+/* ── Layout utilities ────────────────────────────────────────────────────
+   One utility per (constant × property) actually needed — add a pair here
+   rather than reaching for `h-[3rem]` at a call site. */
+@utility h-nav {
+  height: var(--layout-nav-h);
+}
+@utility pt-nav {
+  padding-top: var(--layout-nav-h);
+}
+@utility top-below-nav {
+  top: calc(var(--layout-nav-h) + --spacing(2));
+}
+@utility min-h-below-nav {
+  min-height: calc(100dvh - var(--layout-nav-h));
+}
+@utility w-board-rail {
+  width: var(--layout-board-rail-w);
+}
+@utility w-history-rail {
+  width: var(--layout-history-rail-w);
+}
+@utility h-fan {
+  height: var(--layout-fan-h);
 }
 
 /* Theme-engine fallbacks that are NOT Tailwind theme tokens (no utility
@@ -229,6 +354,22 @@
 
 @utility z-takeover {
   z-index: var(--z-takeover);
+}
+
+@utility z-lift {
+  z-index: var(--z-lift);
+}
+
+@utility z-raised {
+  z-index: var(--z-raised);
+}
+
+@utility z-raised-2 {
+  z-index: var(--z-raised-2);
+}
+
+@utility z-raised-3 {
+  z-index: var(--z-raised-3);
 }
 
 /* ── Base ────────────────────────────────────────── */
@@ -379,6 +520,23 @@ input[type="number"]::-webkit-inner-spin-button {
   50% {
     background-position: 100% 50%;
   }
+}
+
+/* ── Route-transition progress bar ───────────────── */
+
+/* NavigationProgress: a short accent segment sweeping the top edge while the
+   data router resolves the next page's module. */
+@keyframes nav-progress {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(300%);
+  }
+}
+
+.animate-nav-progress {
+  animation: nav-progress 1.1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 /* ── Staggered card entrance ─────────────────────── */

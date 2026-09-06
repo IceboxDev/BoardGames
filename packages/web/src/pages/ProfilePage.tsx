@@ -151,11 +151,11 @@ type NavCardProps = {
 function NavCard({ icon, title, subtitle, onClick }: NavCardProps) {
   return (
     <InteractiveCard onClick={onClick} className="flex items-center gap-3 text-left">
-      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-surface-800 text-fg-secondary transition-colors group-hover:text-white">
+      <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-card-lg bg-surface-800 text-fg-secondary transition-colors group-hover:text-fg-strong">
         {icon}
       </span>
       <span className="min-w-0 flex-1">
-        <span className="block text-sm font-semibold text-fg-primary group-hover:text-white">
+        <span className="block text-sm font-semibold text-fg-primary group-hover:text-fg-strong">
           {title}
         </span>
         <span className="block text-xs text-fg-muted">{subtitle}</span>

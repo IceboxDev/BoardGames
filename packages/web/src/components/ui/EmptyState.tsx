@@ -1,5 +1,6 @@
 import type { ElementType, ReactNode } from "react";
 import { cn } from "../../lib/cn";
+import { RADIUS_CARD_2XL } from "./radii";
 import { TONE_BUBBLE } from "./tones";
 
 // The single empty-state primitive. Replaces the dozen hand-rolled
@@ -37,7 +38,7 @@ type EmptyStateProps = {
 // per-tone bubble recipe from `tones.ts`.
 const TONE: Record<EmptyStateTone, { border: string; bubble: string; title: string }> = {
   neutral: {
-    border: "border-dashed border-white/10",
+    border: "border-dashed border-line",
     bubble: "bg-surface-800 text-fg-secondary",
     title: "text-fg-secondary",
   },
@@ -65,7 +66,7 @@ export function EmptyState({
 }: EmptyStateProps) {
   const t = TONE[tone];
   const box = (
-    <div className={cn("rounded-2xl border px-8 py-10 text-center", t.border)}>
+    <div className={cn(RADIUS_CARD_2XL, "border px-8 py-10 text-center", t.border)}>
       {icon && (
         <div
           className={cn(

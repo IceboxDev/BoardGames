@@ -65,7 +65,7 @@ export function ColumnChart({
                   bottom-aligned flex column. */}
               <div className="flex flex-col justify-end" style={{ height }}>
                 {total === 0 ? (
-                  <div className="h-px rounded-full bg-white/10" />
+                  <div className="h-px rounded-full bg-fill-strong" />
                 ) : (
                   [...col.segments]
                     .filter((seg) => seg.value > 0)

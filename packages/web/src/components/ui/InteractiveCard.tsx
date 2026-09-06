@@ -9,8 +9,8 @@ import { RADIUS_CARD_2XL } from "./radii";
 // the chrome that three sites had copy-pasted verbatim (ProfilePage's mode/nav
 // cards, CalendarSyncCard, PlayerCard):
 //
-//   group rounded-2xl border border-white/[0.06] bg-surface-900/60
-//   transition-all duration-300 hover:border-white/15 hover:bg-surface-900
+//   group rounded-2xl border border-line-soft bg-surface-900/60
+//   transition-all duration-300 hover:border-line-strong hover:bg-surface-900
 //
 // plus a focus-visible ring the hand-rolled versions all forgot. Inner layout
 // (flex direction, gap, text alignment, icon/title slots) is the caller's job
@@ -37,8 +37,8 @@ const PADDINGS: Record<InteractiveCardPadding, string> = {
 
 // Themable corner (RADIUS_CARD_2XL) — see radii.ts.
 const CHROME =
-  `group ${RADIUS_CARD_2XL} border border-white/[0.06] bg-surface-900/60 transition-all duration-300 ` +
-  "hover:border-white/15 hover:bg-surface-900 " +
+  `group ${RADIUS_CARD_2XL} border border-line-soft bg-surface-900/60 transition-all duration-300 ` +
+  "hover:border-line-strong hover:bg-surface-900 " +
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/60";
 
 type InteractiveCardOwnProps<T extends ElementType> = {

@@ -38,7 +38,7 @@ export function AvailabilityActionBar({
   onExitLockMode,
 }: Props) {
   return (
-    <div className="relative shrink-0 flex flex-col items-center gap-2 border-t border-white/5 bg-surface-950/90 px-2 py-2 backdrop-blur sm:px-4">
+    <div className="relative shrink-0 flex flex-col items-center gap-2 border-t border-line-soft bg-surface-950/90 px-2 py-2 backdrop-blur sm:px-4">
       {error && <ErrorAlert message={error} />}
       {mode === "view" ? (
         <div className="flex w-full items-center gap-2 sm:max-w-md">

@@ -1,7 +1,7 @@
 import { isDefaultTheme, type ThemeConfig } from "./config.ts";
 import { deriveAccentRamp, hexToRgb } from "./ramp.ts";
 import { getFont, getPattern } from "./registry.ts";
-import { deriveSemanticTokens, inkForAccent, SEMANTIC_VAR_NAMES } from "./semantic.ts";
+import { deriveSemanticTokens, inkForAccent, SEMANTIC_VAR_NAMES, strongInk } from "./semantic.ts";
 import { loadWallpaper, saveResolvedVars } from "./storage.ts";
 
 // ── applyTheme ───────────────────────────────────────────────────────────
@@ -46,6 +46,7 @@ const MANAGED_VARS: readonly string[] = [
   // the Classic cleanup below.
   ...SEMANTIC_VAR_NAMES,
   "--color-on-accent",
+  "--color-fg-strong",
   "--color-surface-950",
   "--color-surface-900",
   "--color-surface-800",
@@ -128,6 +129,10 @@ export function applyTheme(config: ThemeConfig): void {
     "--color-fg-secondary": config.fgSecondary,
     "--color-fg-muted": config.fgMuted,
     "--color-fg-disabled": config.fgDisabled,
+    // Headings and hero numbers: white on every dark ramp, black on a light
+    // one. The line/fill hairline tokens need no entry — index.css derives
+    // them from `--color-fg-primary` with color-mix at paint time.
+    "--color-fg-strong": strongInk(config.fgPrimary),
     "--color-neon-cyan": config.neonCyan,
     "--color-neon-purple": config.neonPurple,
     "--color-neon-pink": config.neonPink,

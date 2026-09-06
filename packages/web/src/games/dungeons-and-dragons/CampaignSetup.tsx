@@ -3,7 +3,14 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useId, useState } from "react";
 import { ArrowRightIcon, PlusIcon, TrashIcon } from "../../components/icons";
 import { D20Die } from "../../components/offline/D20Die";
-import { Button, EmptyState, Input, QueryBoundary, useConfirm } from "../../components/ui";
+import {
+  Button,
+  EmptyState,
+  ErrorAlert,
+  Input,
+  QueryBoundary,
+  useConfirm,
+} from "../../components/ui";
 import {
   createDndSession,
   createParty,
@@ -194,9 +201,9 @@ export function CampaignSetup({ campaign, onOpenParty, onBurned }: Props) {
         </Button>
       </div>
       {createMutation.isError && (
-        <p className="text-xs text-rose-300">
-          {errorMessageOf(createMutation.error, "The party could not be gathered.")}
-        </p>
+        <ErrorAlert
+          message={errorMessageOf(createMutation.error, "The party could not be gathered.")}
+        />
       )}
 
       {/* Quiet campaign-removal path. */}

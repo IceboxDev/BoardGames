@@ -3,7 +3,7 @@
 export default function StatRow({
   label,
   value,
-  color = "text-white",
+  color = "text-fg-strong",
   mono = false,
 }: {
   label: string;

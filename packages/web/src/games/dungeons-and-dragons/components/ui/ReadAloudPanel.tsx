@@ -56,7 +56,7 @@ export function ReadAloudPanel({
   if (surface === "inset") {
     return (
       <div
-        className={`rounded-xl border px-4 py-3 ${
+        className={`rounded-card-xl border px-4 py-3 ${
           tone === "rose" ? "border-rose-400/40 bg-rose-950/30" : "border-amber-400/30 bg-black/30"
         }`}
       >

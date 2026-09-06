@@ -3,8 +3,8 @@ import { EXIT_CATALOG_SLUG, EXIT_GAMES, exitGameTitle } from "@boardgames/core/g
 import { useMemo, useState } from "react";
 import { games } from "../../games/registry";
 import { resolveInventoryEntry } from "../../lib/resolve-inventory-entry.ts";
-import { SearchIcon } from "../icons";
-import { Input } from "../ui/Input.tsx";
+import { SearchInput } from "../ui/SearchInput.tsx";
+import { SelectableCard } from "../ui/SelectableCard.tsx";
 
 // Searchable picker over every directly-ownable slug: catalog games (minus
 // the derived-ownership entries — the EXIT anchor and deck-unlocked card
@@ -62,31 +62,23 @@ export function GamePicker({
 
   return (
     <div className="flex flex-col gap-2">
-      <div className="relative">
-        <SearchIcon className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-fg-muted" />
-        <Input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search games, EXIT boxes, decks…"
-          className="pl-8"
-          aria-label="Search ownable games"
-        />
-      </div>
+      <SearchInput
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        placeholder="Search games, EXIT boxes, decks…"
+        aria-label="Search ownable games"
+      />
       <ul className="scrollbar-thin max-h-64 space-y-0.5 overflow-y-auto pr-1">
         {options.map((option) => {
           const entry = resolveInventoryEntry(option.slug);
           const picked = pickedSlug === option.slug;
           return (
             <li key={option.slug}>
-              {/* biome-ignore lint/correctness/noRestrictedElements: bespoke picker row — Button's chrome doesn't fit a thumbnail list row */}
-              <button
-                type="button"
+              <SelectableCard
+                variant="row"
+                padding="sm"
+                selected={picked}
                 onClick={() => onPick(option.slug)}
-                className={`flex w-full items-center gap-2.5 rounded-lg border px-2 py-1.5 text-left transition ${
-                  picked
-                    ? "border-accent-400/50 bg-accent-500/10"
-                    : "border-transparent hover:bg-white/[0.04]"
-                }`}
               >
                 {entry.thumbnail ? (
                   <img src={entry.thumbnail} alt="" className="h-7 w-12 rounded object-cover" />
@@ -101,7 +93,7 @@ export function GamePicker({
                     <span className="block text-3xs text-fg-muted">{option.detail}</span>
                   )}
                 </span>
-              </button>
+              </SelectableCard>
             </li>
           );
         })}

@@ -426,7 +426,7 @@ function ChosenRow({
   onChange: () => void;
 }) {
   return (
-    <div className="flex min-h-11 items-center gap-2 rounded-lg border border-white/10 bg-surface-950/60 px-2">
+    <div className="flex min-h-11 items-center gap-2 rounded-lg border border-line bg-surface-950/60 px-2">
       <span className="w-20 shrink-0 text-3xs font-bold uppercase tracking-pill text-fg-muted">
         {label}
       </span>
@@ -563,7 +563,7 @@ function NominationComposer({ state, update }: { state: CompanionState; update: 
               </Button>
               <span
                 className={`w-16 text-center text-4xl font-bold tabular-nums ${
-                  votes >= required ? "text-rose-300" : "text-white"
+                  votes >= required ? "text-rose-300" : "text-fg-strong"
                 }`}
               >
                 {votes}

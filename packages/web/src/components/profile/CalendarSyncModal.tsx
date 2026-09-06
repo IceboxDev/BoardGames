@@ -21,7 +21,7 @@ import { qk } from "../../lib/query-keys.ts";
 import { Button, ButtonLink } from "../ui/Button.tsx";
 import { CopyField } from "../ui/CopyField.tsx";
 import { ErrorAlert } from "../ui/ErrorAlert.tsx";
-import { Modal } from "../ui/Modal.tsx";
+import { Modal, ModalFooter } from "../ui/Modal.tsx";
 
 type Props = {
   onClose: () => void;
@@ -131,11 +131,11 @@ function StateNeverConnected({
         Calendars refresh on their own schedule — Apple within ~1 hour, Google can take up to a day.
         Your URL is private; we'll show it once.
       </p>
-      <div className="flex justify-end">
+      <ModalFooter>
         <Button variant="primary" onClick={onGenerate} loading={loading} disabled={loading}>
           Generate my calendar URL
         </Button>
-      </div>
+      </ModalFooter>
     </div>
   );
 }
@@ -184,32 +184,35 @@ function StateTokenInMemory({
         </ButtonLink>
       </div>
 
-      <div className="flex items-center justify-between gap-2 pt-2">
-        {confirmingRegen ? (
-          <div className="flex items-center gap-2 text-xs text-amber-200">
-            <span>Confirm — the URL above will stop working.</span>
-            <Button variant="ghost" size="sm" onClick={onRegenCancel}>
-              Cancel
-            </Button>
-            <Button
-              variant="danger"
-              size="sm"
-              onClick={onRegenConfirm}
-              loading={regenLoading}
-              disabled={regenLoading}
-            >
+      <ModalFooter
+        start={
+          confirmingRegen ? (
+            <div className="flex items-center gap-2 text-xs text-amber-200">
+              <span>Confirm — the URL above will stop working.</span>
+              <Button variant="ghost" size="sm" onClick={onRegenCancel}>
+                Cancel
+              </Button>
+              <Button
+                variant="danger"
+                size="sm"
+                onClick={onRegenConfirm}
+                loading={regenLoading}
+                disabled={regenLoading}
+              >
+                Regenerate
+              </Button>
+            </div>
+          ) : (
+            <Button variant="ghost" size="sm" onClick={onRegenStart}>
               Regenerate
             </Button>
-          </div>
-        ) : (
-          <Button variant="ghost" size="sm" onClick={onRegenStart}>
-            Regenerate
-          </Button>
-        )}
+          )
+        }
+      >
         <Button variant="primary" size="sm" onClick={onDone}>
           I've saved it — done
         </Button>
-      </div>
+      </ModalFooter>
     </div>
   );
 }
@@ -237,7 +240,7 @@ function StateConnected({
 }) {
   return (
     <div className="flex flex-col gap-4">
-      <div className="rounded-lg border border-emerald-400/30 bg-emerald-400/[0.06] px-4 py-3 text-sm text-emerald-100">
+      <div className="rounded-card-lg border border-emerald-400/30 bg-emerald-400/[0.06] px-4 py-3 text-sm text-emerald-100">
         <p className="font-semibold">Connected</p>
         <p className="mt-1 text-xs text-emerald-200/80">
           {status.createdAt ? `Set up ${formatRelativeTime(status.createdAt)}.` : ""}{" "}
@@ -252,28 +255,31 @@ function StateConnected({
         within a few hours.
       </p>
 
-      <div className="flex items-center justify-between gap-2 pt-2">
-        {confirmingRegen ? (
-          <div className="flex items-center gap-2 text-xs text-amber-200">
-            <span>Confirm — your current URL will stop working.</span>
-            <Button variant="ghost" size="sm" onClick={onRegenCancel}>
-              Cancel
+      <ModalFooter
+        start={
+          confirmingRegen ? (
+            <div className="flex items-center gap-2 text-xs text-amber-200">
+              <span>Confirm — your current URL will stop working.</span>
+              <Button variant="ghost" size="sm" onClick={onRegenCancel}>
+                Cancel
+              </Button>
+              <Button
+                variant="danger"
+                size="sm"
+                onClick={onRegenConfirm}
+                loading={regenLoading}
+                disabled={regenLoading}
+              >
+                Regenerate
+              </Button>
+            </div>
+          ) : (
+            <Button variant="ghost" size="sm" onClick={onRegenStart}>
+              Regenerate URL
             </Button>
-            <Button
-              variant="danger"
-              size="sm"
-              onClick={onRegenConfirm}
-              loading={regenLoading}
-              disabled={regenLoading}
-            >
-              Regenerate
-            </Button>
-          </div>
-        ) : (
-          <Button variant="ghost" size="sm" onClick={onRegenStart}>
-            Regenerate URL
-          </Button>
-        )}
+          )
+        }
+      >
         <Button
           variant="danger"
           size="sm"
@@ -283,7 +289,7 @@ function StateConnected({
         >
           Disconnect
         </Button>
-      </div>
+      </ModalFooter>
     </div>
   );
 }

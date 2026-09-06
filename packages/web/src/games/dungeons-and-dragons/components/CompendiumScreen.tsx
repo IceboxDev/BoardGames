@@ -1,7 +1,7 @@
 import type { DndNpc } from "@boardgames/core/protocol";
 import { useMemo, useState } from "react";
 import { D20Die } from "../../../components/offline/D20Die";
-import { Button, EmptyState, Input } from "../../../components/ui";
+import { Button, EmptyState, ErrorAlert, Input } from "../../../components/ui";
 import { getCompendiumEntry, listCompendiumTerms } from "../logic/compendium";
 import { listMonsterEntries } from "../logic/monsters";
 import { getSpellEntry, listSpellNames, spellLevelLabel } from "../logic/spellbook";
@@ -103,7 +103,7 @@ export function CompendiumScreen({
                 </Button>
               </div>
             </div>
-            {recharterError && <p className="px-1 text-xs text-rose-300">{recharterError}</p>}
+            {recharterError && <ErrorAlert message={recharterError} />}
             <ul className="grid grid-cols-1 gap-2.5 lg:grid-cols-2 2xl:grid-cols-3">
               {cast.map((npc) => (
                 <li key={npc.id}>
@@ -149,7 +149,7 @@ export function CompendiumScreen({
               {beasts.map((m) => (
                 <li
                   key={m.name}
-                  className="flex items-center gap-2 rounded-xl border border-emerald-400/15 bg-black/25 px-3 py-2"
+                  className="flex items-center gap-2 rounded-card-xl border border-emerald-400/15 bg-black/25 px-3 py-2"
                 >
                   <span className="font-fantasy min-w-0 flex-1 truncate text-sm font-bold text-amber-100">
                     {m.name}
@@ -169,7 +169,7 @@ export function CompendiumScreen({
               {knownSpells.map((spell) => (
                 <li
                   key={spell.name}
-                  className="flex flex-col gap-1 rounded-xl border border-purple-400/15 bg-black/25 px-3 py-2.5"
+                  className="flex flex-col gap-1 rounded-card-xl border border-purple-400/15 bg-black/25 px-3 py-2.5"
                 >
                   <div className="flex items-baseline gap-2">
                     <span className="font-fantasy min-w-0 flex-1 truncate text-sm font-bold text-amber-100">
@@ -199,7 +199,7 @@ export function CompendiumScreen({
               {gear.map((entry) => (
                 <li
                   key={entry.title}
-                  className="flex flex-col gap-1 rounded-xl border border-amber-400/15 bg-black/25 px-3 py-2.5"
+                  className="flex flex-col gap-1 rounded-card-xl border border-amber-400/15 bg-black/25 px-3 py-2.5"
                 >
                   <div className="flex items-baseline gap-2">
                     <span className="font-fantasy min-w-0 flex-1 truncate text-sm font-bold text-amber-100">

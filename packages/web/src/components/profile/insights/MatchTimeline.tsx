@@ -15,10 +15,10 @@ import { Surface } from "../../ui/Surface.tsx";
 function GameThumb({ slug, title }: { slug: string | null; title: string }) {
   const thumb = slug ? resolveGame(slug)?.thumbnail : undefined;
   if (thumb) {
-    return <img src={thumb} alt="" className="h-9 w-16 shrink-0 rounded-md object-cover" />;
+    return <img src={thumb} alt="" className="h-9 w-16 shrink-0 rounded-card-md object-cover" />;
   }
   return (
-    <span className="flex h-9 w-16 shrink-0 items-center justify-center rounded-md bg-surface-800 text-sm font-bold text-fg-muted">
+    <span className="flex h-9 w-16 shrink-0 items-center justify-center rounded-card-md bg-surface-800 text-sm font-bold text-fg-muted">
       {title.slice(0, 1).toUpperCase()}
     </span>
   );

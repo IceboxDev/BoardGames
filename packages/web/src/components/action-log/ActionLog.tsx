@@ -127,7 +127,7 @@ export default function ActionLog({
         <div key={block.key}>
           {/* Block separator — label + hairline */}
           <div className="mb-2 flex items-center gap-2">
-            <span className="text-2xs font-semibold uppercase tracking-wider text-fg-muted">
+            <span className="text-2xs font-semibold uppercase tracking-label text-fg-muted">
               {block.label}
             </span>
             <div className="h-px flex-1 bg-surface-800" />

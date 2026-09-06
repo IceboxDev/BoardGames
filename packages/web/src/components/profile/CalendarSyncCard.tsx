@@ -25,7 +25,7 @@ export default function CalendarSyncCard({ onClick }: Props) {
       padding="lg"
       className="mt-6 flex w-full items-center gap-4 text-left"
     >
-      <div className="flex shrink-0 items-center gap-2 text-fg-secondary transition-colors group-hover:text-white">
+      <div className="flex shrink-0 items-center gap-2 text-fg-secondary transition-colors group-hover:text-fg-strong">
         <CalendarSyncIcon />
         <span className="text-xs font-semibold uppercase tracking-eyebrow">Calendar Sync</span>
       </div>

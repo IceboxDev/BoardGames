@@ -6,10 +6,9 @@ import {
   exitGameTitle,
 } from "@boardgames/core/games/exit-games";
 import { useMemo, useState } from "react";
-import { cn } from "../lib/cn";
-import { CheckIcon } from "./icons";
-import { Button } from "./ui";
-import { TONE_BUBBLE, type Tone } from "./ui/tones";
+import { Badge, Button } from "./ui";
+import { CheckRow } from "./ui/CheckRow";
+import type { Tone } from "./ui/tones";
 
 type Props = {
   /** Currently-checked box slugs (may contain non-EXIT slugs; they're ignored). */
@@ -107,34 +106,24 @@ function ExitBoxCell({
   onToggle: () => void;
 }) {
   return (
-    <label
-      className={cn(
-        "flex cursor-pointer items-center gap-2.5 rounded-lg border px-2.5 py-1.5 transition",
-        checked
-          ? "border-accent-400/50 bg-accent-500/10"
-          : "border-white/10 bg-surface-800/50 hover:border-white/20",
-      )}
-    >
-      {/* biome-ignore lint/correctness/noRestrictedElements: sr-only checkbox behind a custom row surface — no visible chrome to drift */}
-      <input type="checkbox" checked={checked} onChange={onToggle} className="sr-only" />
-      <span className="min-w-0 flex-1 text-xs">
-        <span className="block truncate font-semibold text-fg-primary">{exitGameTitle(game)}</span>
-        <span className="block truncate text-3xs text-fg-muted">
+    <CheckRow
+      padding="sm"
+      checked={checked}
+      onChange={onToggle}
+      title={exitGameTitle(game)}
+      description={
+        <>
           {game.year}
           {game.titleEn !== null && ` · ${game.titleDe}`}
-        </span>
-      </span>
-      {game.difficulty && (
-        <span
-          className={cn(
-            "shrink-0 rounded-full px-1.5 py-0.5 text-3xs font-semibold",
-            TONE_BUBBLE[EXIT_DIFFICULTY_TONE[game.difficulty]],
-          )}
-        >
-          {EXIT_DIFFICULTY_LABEL[game.difficulty]}
-        </span>
-      )}
-      {checked && <CheckIcon className="h-4 w-4 shrink-0 text-accent-300" />}
-    </label>
+        </>
+      }
+      trailing={
+        game.difficulty && (
+          <Badge tone={EXIT_DIFFICULTY_TONE[game.difficulty]} shape="pill">
+            {EXIT_DIFFICULTY_LABEL[game.difficulty]}
+          </Badge>
+        )
+      }
+    />
   );
 }

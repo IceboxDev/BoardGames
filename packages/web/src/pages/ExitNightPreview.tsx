@@ -76,7 +76,7 @@ export default function ExitNightPreview() {
     <PageShell background="plain">
       <PageMain width="6xl" padding="spacious" className="flex flex-col gap-10 text-fg-primary">
         <header>
-          <h1 className="text-2xl font-bold text-white">EXIT Night — visual preview</h1>
+          <h1 className="text-2xl font-bold text-fg-strong">EXIT Night — visual preview</h1>
           <p className="mt-1 text-sm text-fg-secondary">
             The sealed-night narrowing vote: owned boxes ranked by votes, the full release list
             behind the toggle.

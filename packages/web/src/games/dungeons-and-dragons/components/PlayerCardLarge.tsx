@@ -102,7 +102,7 @@ export function PlayerCardLarge({ character, onView }: Props) {
         <Vital
           label="Speed"
           value={sheet.speed ? shortSpeed(sheet.speed) : "—"}
-          tone="border-white/10 bg-white/[0.04] text-fg-secondary"
+          tone="border-line bg-fill-soft text-fg-secondary"
         />
         <Vital
           label="Pass. P"
@@ -126,7 +126,7 @@ export function PlayerCardLarge({ character, onView }: Props) {
               className={`rounded-full px-1.5 py-0.5 text-3xs font-semibold ring-1 ${
                 skill.proficiency === "expertise"
                   ? "bg-amber-400/15 text-amber-100 ring-amber-400/40"
-                  : "bg-white/[0.05] text-amber-200/80 ring-white/10"
+                  : "bg-fill text-amber-200/80 ring-line"
               }`}
             >
               {skill.name} {fmt(skill.modifier)}

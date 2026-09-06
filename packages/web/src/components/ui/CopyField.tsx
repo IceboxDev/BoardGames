@@ -1,5 +1,6 @@
 import { useCopyToClipboard } from "../../hooks/useCopyToClipboard";
 import { Button } from "./Button";
+import { RADIUS_CARD_LG } from "./radii";
 
 // Read-only copy-to-clipboard field: a selectable URL/token plus a Copy
 // button with a self-resetting "Copied" state. The admin reset-link modal and
@@ -19,7 +20,9 @@ type CopyFieldProps = {
 export function CopyField({ value, ariaLabel, mono = false }: CopyFieldProps) {
   const { copied, copy } = useCopyToClipboard();
   return (
-    <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-surface-950/60 px-2 py-1.5">
+    <div
+      className={`flex items-center gap-2 ${RADIUS_CARD_LG} border border-line bg-surface-950/60 px-2 py-1.5`}
+    >
       <input
         type="text"
         readOnly

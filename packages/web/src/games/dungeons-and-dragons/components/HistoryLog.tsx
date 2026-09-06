@@ -66,7 +66,7 @@ export function HistoryLog({ entries, party, npcs, onOpenCharacter, onOpenNpc }:
           return (
             <div
               key={entry.id}
-              className="rounded-xl border border-rose-400/30 bg-rose-950/20 px-3.5 py-2.5"
+              className="rounded-card-xl border border-rose-400/30 bg-rose-950/20 px-3.5 py-2.5"
             >
               <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-rose-300/80">
                 Combat

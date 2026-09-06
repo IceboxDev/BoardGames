@@ -52,15 +52,15 @@ export function PurchaseVoteResultModal({
             <li
               key={entry.slug}
               className={cn(
-                "relative flex items-center gap-2 overflow-hidden rounded-md px-2.5 py-1.5",
+                "relative flex items-center gap-2 overflow-hidden rounded-card-md px-2.5 py-1.5",
                 isWinner ? "bg-[var(--accent)]/10" : "bg-surface-900/60",
               )}
             >
               <span
                 aria-hidden="true"
                 className={cn(
-                  "absolute inset-y-0 left-0 rounded-md",
-                  isWinner ? "bg-[var(--accent)]/15" : "bg-white/5",
+                  "absolute inset-y-0 left-0 rounded-card-md",
+                  isWinner ? "bg-[var(--accent)]/15" : "bg-fill",
                 )}
                 style={{ width: `${(entry.votes / maxVotes) * 100}%` }}
               />
@@ -70,7 +70,7 @@ export function PurchaseVoteResultModal({
               <span
                 className={cn(
                   "relative min-w-0 flex-1 truncate text-xs",
-                  isWinner ? "font-semibold text-white" : "text-fg-secondary",
+                  isWinner ? "font-semibold text-fg-strong" : "text-fg-secondary",
                 )}
               >
                 {game?.title ?? entry.slug}

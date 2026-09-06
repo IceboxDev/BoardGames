@@ -88,7 +88,7 @@ function FormPane({ title, initial }: { title: string; initial: MatchOutcomeFree
       <Surface variant="tile" padding="md">
         <JaipurForm users={USERS} value={outcome} onChange={setOutcome} />
       </Surface>
-      <pre className="overflow-x-auto rounded-lg bg-surface-900/60 p-2 text-3xs text-fg-muted">
+      <pre className="overflow-x-auto rounded-card-lg bg-surface-900/60 p-2 text-3xs text-fg-muted">
         {JSON.stringify(
           { players: outcome.players, roundTiebreaks: outcome.roundTiebreaks },
           null,

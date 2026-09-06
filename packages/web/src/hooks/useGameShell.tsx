@@ -114,7 +114,7 @@ function GameShellLayoutInner({ def, children }: { def: PlayableGame; children?:
       <RoomLeaveGuardMount />
       {/* Game-themed backdrop behind every /play/:slug screen (mode select,
           rules, lobby, board). Fixed at z-0 with darkening overlays; all
-          screen content sits at z-10 (see SetupLayout). */}
+          screen content sits at z-raised (see SetupLayout). */}
       {def.backgroundImage && (
         <div
           className="pointer-events-none fixed inset-0 z-0 animate-bg-fade-in"

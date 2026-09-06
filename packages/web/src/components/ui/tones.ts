@@ -44,7 +44,7 @@ export const TONE_BUBBLE: Record<Tone, string> = {
   purple: "bg-purple-500/15 text-purple-300",
   orange: "bg-orange-500/15 text-orange-300",
   cyan: "bg-cyan-500/15 text-cyan-300",
-  neutral: "bg-white/[0.06] text-fg-secondary",
+  neutral: "bg-fill text-fg-secondary",
 };
 
 // Hairline advisory ring in the tone's hue (Badge `ring`, Chip active ring).
@@ -57,7 +57,7 @@ export const TONE_RING: Record<Tone, string> = {
   purple: "ring-1 ring-purple-400/40",
   orange: "ring-1 ring-orange-400/40",
   cyan: "ring-1 ring-cyan-400/40",
-  neutral: "ring-1 ring-white/10",
+  neutral: "ring-1 ring-line",
 };
 
 // Strong emphasis ring — SegmentedControl's `emphasizeActive` switches.

@@ -17,7 +17,7 @@ export type LeaderboardRow = {
 
 const RANK_TONES: Record<number, string> = {
   1: "bg-amber-400/20 text-amber-200",
-  2: "bg-white/10 text-fg-secondary",
+  2: "bg-fill-strong text-fg-secondary",
   3: "bg-orange-400/15 text-orange-200",
 };
 
@@ -27,7 +27,7 @@ function Row({ row, highlight }: { row: LeaderboardRow; highlight: boolean }) {
       <Link
         to={`/u/${row.userId}`}
         className={cn(
-          "flex items-center gap-2.5 rounded-lg px-2 py-1.5 transition hover:bg-white/5",
+          "flex items-center gap-2.5 rounded-card-lg px-2 py-1.5 transition hover:bg-fill",
           highlight && "bg-[var(--accent)]/10 ring-1 ring-[var(--accent)]/30",
         )}
       >

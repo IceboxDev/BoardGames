@@ -75,16 +75,16 @@ const BASE =
 // Color classes are written as full literals — Tailwind cannot see a class name
 // assembled at runtime (`bg-${tone}-500`), so every tone is spelled out.
 const STRUCTURAL: Record<StructuralVariant, string> = {
-  // `text-on-accent` (not `text-white`): the fill is the themed accent, so the
+  // `text-on-accent` (not `text-fg-strong`): the fill is the themed accent, so the
   // ink has to be decided against it. The engine flips this token to near-black
   // for a light or neon accent — Terminal's #00ff88 rendered white-on-mint
   // before it existed. Stock indigo keeps white.
   primary:
     "bg-gradient-to-r from-accent-500 to-neon-purple text-on-accent shadow-lg shadow-accent-500/20 hover:shadow-accent-500/40 hover:brightness-110 active:scale-[0.98]",
   secondary:
-    "bg-surface-800 text-fg-primary border border-white/10 hover:bg-surface-700 hover:border-white/20",
+    "bg-surface-800 text-fg-primary border border-line hover:bg-surface-700 hover:border-line-strong",
   // text-only with a subtle background on hover — "Cancel" / "Close" / inline.
-  ghost: "text-fg-secondary hover:bg-white/5 hover:text-white",
+  ghost: "text-fg-secondary hover:bg-fill hover:text-fg-strong",
   // Pure text link — no background, just color hover. "Leave Room" / "Back".
   link: "text-fg-muted transition-colors hover:text-fg-secondary",
 };

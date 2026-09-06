@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useRef, useState } from "react";
-import { Button, LoadingState } from "../../../components/ui";
+import { Button, ErrorAlert, LoadingState } from "../../../components/ui";
 import { fetchActiveDndSession, setBeamerImage, triggerBeamer } from "../../../lib/dnd-campaigns";
 import { errorMessageOf } from "../../../lib/error-message";
 import { qk } from "../../../lib/query-keys";
@@ -88,7 +88,7 @@ export function DevicesScreen() {
           )}
         </DndPanel>
 
-        <div className="rounded-2xl border border-amber-400/20 bg-black/25 p-4">
+        <div className="rounded-card-2xl border border-amber-400/20 bg-black/25 p-4">
           <div className="flex items-center justify-between gap-2">
             <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-amber-300/60">
               On the beamer now
@@ -135,20 +135,18 @@ export function DevicesScreen() {
             }}
           />
           {(uploadMutation.isError || fileError) && (
-            <p className="mt-2 text-xs text-rose-300">
-              {fileError ?? errorMessageOf(uploadMutation.error, "The upload failed.")}
-            </p>
+            <ErrorAlert
+              message={fileError ?? errorMessageOf(uploadMutation.error, "The upload failed.")}
+            />
           )}
           {clearMutation.isError && (
-            <p className="mt-2 text-xs text-rose-300">
-              {errorMessageOf(clearMutation.error, "Clearing failed.")}
-            </p>
+            <ErrorAlert message={errorMessageOf(clearMutation.error, "Clearing failed.")} />
           )}
           {preview ? (
             <img
               src={preview}
               alt="Currently on the beamer"
-              className="mt-3 max-h-80 w-full rounded-xl object-contain"
+              className="mt-3 max-h-80 w-full rounded-card-xl object-contain"
             />
           ) : (
             <p className="font-serif-body mt-3 py-8 text-center text-xs text-amber-200/40">

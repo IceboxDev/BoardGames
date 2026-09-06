@@ -79,7 +79,7 @@ function ScoreRing({ score }: { score: number }) {
         r={r}
         fill="none"
         stroke="currentColor"
-        className="text-white/10"
+        className="text-fg-strong/10"
         strokeWidth="6"
       />
       <circle
@@ -136,7 +136,7 @@ export function SkillHeroCards({
       {game && (
         <HeroCard label="Best game" art={gameDef?.thumbnail} artDim="opacity-40">
           <div className="mt-auto">
-            <p className="text-xl font-black leading-tight text-white sm:text-2xl">
+            <p className="text-xl font-black leading-tight text-fg-strong sm:text-2xl">
               {gameDef?.title ?? (game.kind === "most-played" ? game.title : game.slug)}
             </p>
             <p className="mt-1 text-2xs font-semibold uppercase tracking-pill text-fg-secondary">
@@ -152,7 +152,7 @@ export function SkillHeroCards({
         <HeroCard label="Best skill" art={traitArt(best.trait)} artFilter={hueFilter}>
           <div className="mt-auto flex items-end justify-between gap-3">
             <div className="min-w-0">
-              <p className="flex items-center gap-2 text-xl font-black leading-tight text-white sm:text-2xl">
+              <p className="flex items-center gap-2 text-xl font-black leading-tight text-fg-strong sm:text-2xl">
                 <TraitIcon trait={best.trait} className="h-5 w-5 shrink-0 text-[var(--accent)]" />
                 {TRAIT_COPY[best.trait].label}
               </p>
@@ -177,7 +177,7 @@ export function SkillHeroCards({
                   out of its bottom-right seat. */}
               <p
                 className={cn(
-                  "font-black leading-tight text-white",
+                  "font-black leading-tight text-fg-strong",
                   claimCopy(claim).title.length > 19
                     ? "text-base sm:text-lg"
                     : claimCopy(claim).title.length > 13

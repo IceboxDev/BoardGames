@@ -45,7 +45,7 @@ export function GuessPanel({
           // biome-ignore lint/suspicious/noArrayIndexKey: guess slots are positional
           <div key={slot} className="flex flex-col gap-1.5 sm:flex-row sm:items-center sm:gap-3">
             <span
-              className="min-w-0 truncate text-center text-sm font-semibold text-white sm:flex-1 sm:text-right"
+              className="min-w-0 truncate text-center text-sm font-semibold text-fg-strong sm:flex-1 sm:text-right"
               title={clue}
             >
               “{clue}”

@@ -27,7 +27,7 @@ export default function PandemicCard({ card, selected }: PandemicCardProps) {
       >
         <div className="shrink-0" style={{ width: 16, backgroundColor: DISEASE_CSS[card.color] }} />
         <div className="flex flex-1 items-center p-2">
-          <span className="text-xs leading-tight font-medium text-white">{name}</span>
+          <span className="text-xs leading-tight font-medium text-fg-strong">{name}</span>
         </div>
       </div>
     );
@@ -45,7 +45,7 @@ export default function PandemicCard({ card, selected }: PandemicCardProps) {
         <span className="text-xs font-bold" style={{ color: "#daa520" }}>
           EVENT
         </span>
-        <span className="mt-1 text-center text-xs leading-tight text-white">
+        <span className="mt-1 text-center text-xs leading-tight text-fg-strong">
           {getEventName(card.event)}
         </span>
       </div>

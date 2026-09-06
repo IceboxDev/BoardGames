@@ -31,9 +31,9 @@ export default function CityTooltip({ state, cityId }: Props) {
   return (
     <div
       role="tooltip"
-      className="pointer-events-none w-44 rounded-md border border-white/15 bg-black/90 p-2 text-xs text-white shadow-lg shadow-black/60 backdrop-blur-sm"
+      className="pointer-events-none w-44 rounded-md border border-line-strong bg-black/90 p-2 text-xs text-white shadow-lg shadow-black/60 backdrop-blur-sm"
     >
-      <p className="text-sm font-semibold text-white">{city.name}</p>
+      <p className="text-sm font-semibold text-fg-strong">{city.name}</p>
       {cubeRows.length > 0 && (
         <ul className="mt-1 space-y-0.5">
           {cubeRows.map((color) => (

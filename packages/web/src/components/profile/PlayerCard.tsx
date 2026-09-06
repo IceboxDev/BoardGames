@@ -24,7 +24,7 @@ export function PlayerCard({ player }: PlayerCardProps) {
       className="flex flex-col items-center gap-2 text-center"
     >
       <Avatar name={player.name} image={player.image} accentHex={player.accentHex} size="lg" ring />
-      <p className="mt-1 w-full truncate text-sm font-semibold text-fg-primary group-hover:text-white">
+      <p className="mt-1 w-full truncate text-sm font-semibold text-fg-primary group-hover:text-fg-strong">
         {player.name}
       </p>
       {player.tagline && <p className="line-clamp-2 text-xs text-fg-muted">{player.tagline}</p>}

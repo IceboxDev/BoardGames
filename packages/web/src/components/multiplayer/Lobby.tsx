@@ -129,9 +129,9 @@ export function Lobby({
         : "Ready up when you're set.";
 
     return (
-      <div className="relative z-10 flex h-full min-h-0 w-full flex-col overflow-hidden px-4 pb-4 pt-3 sm:px-6 sm:pb-5 sm:pt-4">
+      <div className="relative z-raised flex h-full min-h-0 w-full flex-col overflow-hidden px-4 pb-4 pt-3 sm:px-6 sm:pb-5 sm:pt-4">
         <header className="mb-3 flex shrink-0 flex-wrap items-baseline gap-3">
-          <h1 className="text-xl font-bold text-white sm:text-2xl">{title ?? "Multiplayer"}</h1>
+          <h1 className="text-xl font-bold text-fg-strong sm:text-2xl">{title ?? "Multiplayer"}</h1>
           <p className="text-xs text-fg-secondary sm:text-sm">
             Share the room code with a friend, ready up, and launch
           </p>
@@ -163,7 +163,7 @@ export function Lobby({
           <ControlGroup label="Launch">
             <div className="flex h-full flex-col justify-between gap-2">
               <div className="flex flex-col gap-0.5">
-                <span className="text-sm font-bold text-white">
+                <span className="text-sm font-bold text-fg-strong">
                   {canStart ? "Cleared for departure" : "Pre-flight checks"}
                 </span>
                 <span className="text-3xs leading-tight text-fg-secondary">{launchStatus}</span>
@@ -189,10 +189,10 @@ export function Lobby({
     <SetupLayout>
       {/* Room code */}
       <div className="mb-8 text-center">
-        <div className="mb-2 text-xs font-medium uppercase tracking-wider text-fg-secondary">
+        <div className="mb-2 text-xs font-medium uppercase tracking-label text-fg-secondary">
           Room Code
         </div>
-        <div className="inline-block rounded-xl border border-white/10 bg-surface-800/60 px-8 py-4">
+        <div className="inline-block rounded-card-xl border border-line bg-surface-800/60 px-8 py-4">
           <span className="text-4xl font-bold tracking-code text-emerald-400 sm:text-5xl">
             {roomCode}
           </span>
@@ -204,7 +204,7 @@ export function Lobby({
 
       {/* Player slots */}
       <div className="mx-auto mb-6 flex w-full max-w-md flex-col gap-2">
-        <div className="text-xs font-medium uppercase tracking-wider text-fg-secondary">
+        <div className="text-xs font-medium uppercase tracking-label text-fg-secondary">
           Players
         </div>
         {slotRows}
@@ -259,8 +259,8 @@ function SlotRow({
 
   return (
     <div
-      className={`flex items-center gap-3 rounded-lg border px-4 py-3 ${
-        isMe ? "border-emerald-500/30 bg-emerald-500/5" : "border-white/10 bg-surface-800/30"
+      className={`flex items-center gap-3 rounded-card-lg border px-4 py-3 ${
+        isMe ? "border-emerald-500/30 bg-emerald-500/5" : "border-line bg-surface-800/30"
       }`}
     >
       {/* Status indicator */}
@@ -287,7 +287,7 @@ function SlotRow({
       <div className="min-w-0 flex-1">
         {slot.kind === "human" ? (
           <div className="flex items-center gap-2">
-            <span className="truncate text-sm font-medium text-white">{slot.playerName}</span>
+            <span className="truncate text-sm font-medium text-fg-strong">{slot.playerName}</span>
             {isSlotHost && <Badge tone="amber">Host</Badge>}
             {isMe && !isSlotHost && <Badge tone="emerald">You</Badge>}
           </div>

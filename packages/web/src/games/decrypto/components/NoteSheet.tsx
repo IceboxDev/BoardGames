@@ -33,8 +33,8 @@ function TeamSheet({ view, team }: { view: DecryptoPlayerView; team: Team }) {
             key={digitIdx}
             className="min-w-0 rounded-lg bg-surface-800/50 p-1 sm:p-1.5"
           >
-            <div className="mb-1 border-b border-white/10 pb-1 text-center">
-              <span className="text-sm font-black text-white">{digitIdx + 1}</span>
+            <div className="mb-1 border-b border-line pb-1 text-center">
+              <span className="text-sm font-black text-fg-strong">{digitIdx + 1}</span>
               {isMine && view.myKeywords && (
                 <p className="truncate text-3xs font-semibold uppercase tracking-tight text-accent-200">
                   {view.myKeywords[digitIdx]}

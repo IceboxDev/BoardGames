@@ -31,7 +31,7 @@ export default function InfoBar({ state }: Props) {
   const phaseColor = state.phase === "epidemic" ? "text-red-400" : "text-amber-300";
 
   return (
-    <header className="pointer-events-auto flex items-center gap-3 rounded-lg border border-white/10 bg-black/80 px-3 py-2 text-xs text-white backdrop-blur-sm">
+    <header className="pointer-events-auto flex items-center gap-3 rounded-lg border border-line bg-black/80 px-3 py-2 text-xs text-white backdrop-blur-sm">
       <div className="min-w-0 flex-1">
         <p className="font-semibold leading-tight">
           Player {player.id + 1}: <span style={{ color: roleDef.pawnColor }}>{roleDef.name}</span>
@@ -67,7 +67,7 @@ export default function InfoBar({ state }: Props) {
                   draggable={false}
                 />
                 <span
-                  className={`tabular-nums ${isActive ? "text-white" : "text-fg-muted"}`}
+                  className={`tabular-nums ${isActive ? "text-fg-strong" : "text-fg-muted"}`}
                   style={{ fontSize: 9, lineHeight: 1.2 }}
                 >
                   {p.hand.length}

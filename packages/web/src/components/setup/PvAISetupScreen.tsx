@@ -85,7 +85,7 @@ function PlayerCountStepper({
         />
 
         <div className="flex w-20 flex-col items-center justify-center">
-          <span className="text-3xl font-extrabold tabular-nums tracking-tight text-white">
+          <span className="text-3xl font-extrabold tabular-nums tracking-tight text-fg-strong">
             {value}
           </span>
         </div>
@@ -181,7 +181,7 @@ export function PvAISetupScreen({
             >
               <div className="mb-1.5 flex items-start justify-between gap-0.5 sm:mb-3">
                 <span
-                  className={`inline-flex max-w-18 items-center truncate rounded-full px-1 py-0.5 text-5xs font-semibold uppercase tracking-tight ring-1 ring-inset sm:max-w-none sm:px-2.5 sm:text-3xs sm:tracking-wider ${diff.badgeClass}`}
+                  className={`inline-flex max-w-18 items-center truncate rounded-full px-1 py-0.5 text-5xs font-semibold uppercase tracking-tight ring-1 ring-inset sm:max-w-none sm:px-2.5 sm:text-3xs sm:tracking-label ${diff.badgeClass}`}
                 >
                   {strat.difficulty}
                 </span>
@@ -204,7 +204,7 @@ export function PvAISetupScreen({
                 </div>
               </div>
 
-              <span className="mb-0.5 block text-2xs font-bold leading-tight text-white transition-colors group-hover:text-white sm:mb-1 sm:text-lg">
+              <span className="mb-0.5 block text-2xs font-bold leading-tight text-fg-strong transition-colors group-hover:text-fg-strong sm:mb-1 sm:text-lg">
                 {strat.label}
               </span>
 

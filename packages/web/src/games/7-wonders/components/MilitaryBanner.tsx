@@ -14,7 +14,7 @@ export default function MilitaryBanner({ entry, labelFor, onDismiss }: MilitaryB
     <button
       type="button"
       onClick={onDismiss}
-      className="fixed inset-x-0 top-16 z-40 mx-auto w-fit max-w-[90vw] cursor-pointer rounded-xl border border-rose-500/40 bg-surface-900/95 px-5 py-3 shadow-xl backdrop-blur"
+      className="fixed inset-x-4 top-below-nav z-overlay mx-auto w-fit max-w-full cursor-pointer rounded-xl border border-rose-500/40 bg-surface-900/95 px-5 py-3 shadow-xl backdrop-blur"
     >
       <p className="mb-1 text-center text-sm font-bold text-rose-300">
         ⚔️ {AGE_LABEL[entry.age]} — War!

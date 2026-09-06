@@ -28,9 +28,9 @@ export default function ActionButtons({
   return (
     <aside
       aria-label="Player actions"
-      className="pointer-events-auto flex w-44 flex-col gap-1.5 rounded-lg border border-white/10 bg-black/75 p-2 text-xs backdrop-blur-sm"
+      className="pointer-events-auto flex w-44 flex-col gap-1.5 rounded-lg border border-line bg-black/75 p-2 text-xs backdrop-blur-sm"
     >
-      <header className="text-center text-2xs font-semibold text-white">
+      <header className="text-center text-2xs font-semibold text-fg-strong">
         Actions: {actionsRemaining}/4
       </header>
       {buttons.map((b) => (

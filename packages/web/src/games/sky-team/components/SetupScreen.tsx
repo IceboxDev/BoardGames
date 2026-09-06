@@ -97,9 +97,9 @@ export default function SetupScreen({ onStart }: Props) {
   const seatLabel = seat === 0 ? "Pilot" : "Co-Pilot";
 
   return (
-    <div className="relative z-10 flex h-full min-h-0 w-full flex-col overflow-hidden px-4 pb-4 pt-3 sm:px-6 sm:pb-5 sm:pt-4">
+    <div className="relative z-raised flex h-full min-h-0 w-full flex-col overflow-hidden px-4 pb-4 pt-3 sm:px-6 sm:pb-5 sm:pt-4">
       <header className="mb-3 flex shrink-0 items-baseline gap-3">
-        <h1 className="text-xl font-bold text-white sm:text-2xl">Sky Team</h1>
+        <h1 className="text-xl font-bold text-fg-strong sm:text-2xl">Sky Team</h1>
         <p className="text-xs text-fg-secondary sm:text-sm">
           Pick a destination, your seat, and an AI partner
         </p>
@@ -172,13 +172,13 @@ function SeatCard({
       onClick={onSelect}
       className={`group relative flex flex-col justify-center gap-1 overflow-hidden rounded-lg border bg-surface-800/60 px-3 py-2 text-left transition-all duration-150 ${
         selected
-          ? "border-white/30 bg-surface-800 shadow-md"
-          : "border-white/10 hover:bg-surface-800 hover:border-white/10"
+          ? "border-fg-strong/30 bg-surface-800 shadow-md"
+          : "border-line hover:bg-surface-800 hover:border-line"
       }`}
       style={{ borderLeftWidth: "4px", borderLeftColor: option.accentColor }}
       aria-pressed={selected}
     >
-      <span className="text-sm font-bold text-white">{option.label}</span>
+      <span className="text-sm font-bold text-fg-strong">{option.label}</span>
       <span className="text-3xs leading-tight text-fg-secondary">{option.description}</span>
     </button>
   );
@@ -200,14 +200,14 @@ function StrategyCard({
       onClick={onSelect}
       className={`group relative flex h-full flex-col gap-1 overflow-hidden rounded-lg border bg-surface-800/60 px-3 py-2 text-left transition-all duration-150 ${
         selected
-          ? "border-white/30 bg-surface-800 shadow-md"
-          : "border-white/10 hover:bg-surface-800 hover:border-white/10"
+          ? "border-fg-strong/30 bg-surface-800 shadow-md"
+          : "border-line hover:bg-surface-800 hover:border-line"
       }`}
       style={{ borderLeftWidth: "4px", borderLeftColor: DIFFICULTY[option.difficulty].accentColor }}
       aria-pressed={selected}
     >
       <div className="flex items-center justify-between gap-2">
-        <span className="text-sm font-bold text-white">{option.label}</span>
+        <span className="text-sm font-bold text-fg-strong">{option.label}</span>
         <span
           className={`inline-flex items-center rounded-full px-1.5 py-0.5 text-4xs font-semibold uppercase tracking-wider ring-1 ring-inset ${DIFFICULTY[option.difficulty].badgeClass}`}
         >
@@ -241,7 +241,7 @@ function LaunchSummary({
   return (
     <div className="flex h-full flex-col justify-between gap-2">
       <div className="flex flex-col gap-0.5">
-        <span className="font-mono text-base font-black tracking-wider text-white">
+        <span className="font-mono text-base font-black tracking-wider text-fg-strong">
           {airportCode}
         </span>
         <span className="line-clamp-1 text-2xs text-fg-secondary">{airportName}</span>

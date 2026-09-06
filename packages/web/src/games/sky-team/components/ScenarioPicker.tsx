@@ -22,9 +22,9 @@ export default function ScenarioPicker({ selectedSlug, onSelect }: Props) {
         return (
           <section
             key={color}
-            className="flex min-h-0 flex-col gap-2 rounded-2xl border border-white/10 bg-surface-900/40 p-3"
+            className="flex min-h-0 flex-col gap-2 rounded-2xl border border-line bg-surface-900/40 p-3"
           >
-            <header className="flex flex-col gap-1 border-b border-white/10 pb-2">
+            <header className="flex flex-col gap-1 border-b border-line pb-2">
               <span
                 className={`inline-flex w-fit items-center gap-1.5 rounded-full px-2.5 py-0.5 text-3xs font-bold uppercase tracking-wider ring-1 ring-inset ${theme.pill}`}
               >
@@ -76,10 +76,10 @@ function ScenarioCardTile({
     "group relative flex min-h-0 flex-1 flex-col justify-center overflow-hidden rounded-lg border bg-surface-800/60 px-3 py-2.5 text-left transition-all duration-150";
 
   const stateCls = !available
-    ? "border-white/10 opacity-50 cursor-not-allowed"
+    ? "border-line opacity-50 cursor-not-allowed"
     : selected
-      ? `border-white/30 bg-surface-800 shadow-md ${airportTheme.ring}`
-      : "border-white/10 hover:bg-surface-800 hover:border-white/10 cursor-pointer";
+      ? `border-fg-strong/30 bg-surface-800 shadow-md ${airportTheme.ring}`
+      : "border-line hover:bg-surface-800 hover:border-line cursor-pointer";
 
   const className = `${baseCls} ${stateCls}`;
 
@@ -93,7 +93,7 @@ function ScenarioCardTile({
       />
 
       <div className="flex items-center gap-3">
-        <span className="font-mono text-base font-black tracking-wider text-white sm:text-lg">
+        <span className="font-mono text-base font-black tracking-wider text-fg-strong sm:text-lg">
           {card.airportCode}
         </span>
         <div className="flex min-w-0 flex-1 flex-col gap-0.5">
@@ -107,7 +107,7 @@ function ScenarioCardTile({
         {available ? (
           selected ? (
             <span
-              className="shrink-0 rounded-full bg-white/15 px-1.5 py-0.5 text-4xs font-bold uppercase tracking-wider text-white ring-1 ring-inset ring-white/20"
+              className="shrink-0 rounded-full bg-fg-strong/15 px-1.5 py-0.5 text-4xs font-bold uppercase tracking-wider text-white ring-1 ring-inset ring-line-strong"
               aria-hidden="true"
             >
               ✓
@@ -115,7 +115,7 @@ function ScenarioCardTile({
           ) : null
         ) : (
           <span
-            className="shrink-0 rounded bg-surface-700/60 px-1.5 py-0.5 text-5xs font-semibold uppercase tracking-wider text-fg-secondary ring-1 ring-inset ring-white/10"
+            className="shrink-0 rounded bg-surface-700/60 px-1.5 py-0.5 text-5xs font-semibold uppercase tracking-wider text-fg-secondary ring-1 ring-inset ring-line"
             aria-hidden="true"
           >
             Soon

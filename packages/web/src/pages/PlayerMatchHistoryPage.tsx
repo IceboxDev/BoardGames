@@ -14,17 +14,13 @@ import {
   applyFilters,
   type SummaryFilters,
 } from "../components/profile/insights/summary-stats.ts";
-import { TopNav, TopNavBackButton } from "../components/TopNav";
-import { Button } from "../components/ui/Button.tsx";
+import { PlayerPageFrame } from "../components/profile/PlayerPageFrame.tsx";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
-import { LoadingState } from "../components/ui/LoadingState.tsx";
 import { PageHeader } from "../components/ui/PageHeader.tsx";
-import { PageMain, PageShell } from "../components/ui/PageShell.tsx";
-import { QueryBoundary } from "../components/ui/QueryBoundary.tsx";
+import { PageMain } from "../components/ui/PageShell.tsx";
 import { Section } from "../components/ui/Section.tsx";
 import { Stack } from "../components/ui/Stack.tsx";
 import { DEFAULT_ACCENT } from "../lib/accent.ts";
-import { ApiError } from "../lib/api-fetch.ts";
 import { formatMonthYear } from "../lib/date-format.ts";
 import { fetchProfile, fetchProfileMatchSummary } from "../lib/profile.ts";
 import { qk } from "../lib/query-keys.ts";
@@ -49,42 +45,16 @@ export default function PlayerMatchHistoryPage() {
     enabled: !!userId,
   });
 
-  const topNav = <TopNav back={<TopNavBackButton to={`/u/${userId}`} />}></TopNav>;
-
   return (
-    <PageShell topNav={topNav}>
-      <QueryBoundary
-        query={summaryQuery}
-        loading={
-          <PageMain width="6xl" padding="spacious" fillHeight>
-            <LoadingState fillHeight label="Loading match history…" />
-          </PageMain>
-        }
-        errorFallback={(error) => {
-          const notFound = error instanceof ApiError && error.status === 404;
-          return (
-            <PageMain width="6xl" padding="spacious">
-              <EmptyState
-                tone="rose"
-                title={notFound ? "Player not found" : "Couldn't load the match history"}
-                description={
-                  notFound
-                    ? "This player doesn't exist or has been removed."
-                    : "Something went wrong fetching the history. Try again."
-                }
-                action={
-                  <Button variant="secondary" onClick={() => summaryQuery.refetch()}>
-                    Retry
-                  </Button>
-                }
-              />
-            </PageMain>
-          );
-        }}
-      >
-        {(summary) => renderBody(summary)}
-      </QueryBoundary>
-    </PageShell>
+    <PlayerPageFrame
+      query={summaryQuery}
+      back={`/u/${userId}`}
+      loadingLabel="Loading match history…"
+      errorTitle="Couldn't load the match history"
+      errorDescription="Something went wrong fetching the history. Try again."
+    >
+      {(data) => renderBody(data)}
+    </PlayerPageFrame>
   );
 
   // Plain render helper (NOT a component — a nested component definition would

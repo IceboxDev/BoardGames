@@ -54,7 +54,7 @@ function ColorDot({ name }: { name: string }) {
   return (
     <span
       title={name}
-      className="h-5 w-8 rounded border border-white/15"
+      className="h-5 w-8 rounded border border-line-strong"
       style={{ background: `var(${name})` }}
     />
   );
@@ -104,7 +104,7 @@ function ThemeCollage({ fixture }: { fixture: ThemeFixture }) {
               `@theme` --shadow-* into its utility, so `shadow-glow-accent`
               would stay indigo here — see the fixtures header. This swatch is
               the proof the var itself propagates. */}
-          <span className="h-8 w-24 rounded-lg bg-accent-500 shadow-[var(--shadow-glow-accent)]" />
+          <span className="h-8 w-24 rounded-card-lg bg-accent-500 shadow-[var(--shadow-glow-accent)]" />
           <span className="text-3xs text-fg-muted">shadow-[var(--shadow-glow-accent)]</span>
         </div>
       </div>
@@ -181,14 +181,13 @@ function FixtureSection({
   return (
     <section
       data-select-style={selectOverride ?? fixture.selectStyle}
-      className="px-6 py-8"
+      // Preset mode fills the rest of the viewport below the blank nav-height
+      // strip — 100dvh alone would push the page past one screen.
+      className={full ? "min-h-below-nav px-6 py-8" : "px-6 py-8"}
       style={{
         ...themeVarStyle(fixture),
         background: "var(--color-surface-950)",
         color: "var(--color-fg-primary)",
-        // Preset mode fills the rest of the viewport below the blank pt-14
-        // strip — 100dvh alone would push the page past one screen.
-        ...(full ? { minHeight: "calc(100dvh - 3.5rem)" } : null),
       }}
     >
       <div className="mx-auto w-full max-w-5xl">
@@ -219,10 +218,10 @@ export default function ThemePreview() {
     return <div className="px-6 pt-20 text-sm text-fg-secondary">{badParam}</div>;
   }
 
-  // The pt-14 strip keeps the top-left nav-check crop region blank (the body's
-  // default background), matching the other chrome-less /dev previews.
+  // The nav-height strip keeps the top-left nav-check crop region blank (the
+  // body's default background), matching the other chrome-less /dev previews.
   return (
-    <div className="min-h-screen pt-14">
+    <div className="min-h-dvh pt-nav">
       {preset ? (
         <FixtureSection fixture={preset} selectOverride={selectOverride} full />
       ) : (

@@ -85,7 +85,7 @@ describe("Modal — sizing", () => {
     );
     const cls = panelOf().className;
     expect(cls).toContain("h-full");
-    expect(cls).toContain("2xl:max-w-[110rem]");
+    expect(cls).toContain("2xl:max-w-modal-full-2xl");
     expect(cls).not.toContain("max-h-[90dvh]");
   });
 

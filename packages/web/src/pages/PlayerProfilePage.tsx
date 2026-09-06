@@ -16,19 +16,15 @@ import { GameSlugGrid } from "../components/profile/GameSlugGrid.tsx";
 import { GenerateAvatarModal } from "../components/profile/GenerateAvatarModal.tsx";
 import { HexSkillChart } from "../components/profile/HexSkillChart.tsx";
 import { NextNightCard } from "../components/profile/NextNightCard.tsx";
+import { PlayerPageFrame } from "../components/profile/PlayerPageFrame.tsx";
 import { ProfileBadges } from "../components/profile/ProfileBadges.tsx";
 import { ProfileHeader } from "../components/profile/ProfileHeader.tsx";
 import { ProfileMatchList } from "../components/profile/ProfileMatchList.tsx";
-import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button.tsx";
-import { EmptyState } from "../components/ui/EmptyState.tsx";
-import { LoadingState } from "../components/ui/LoadingState.tsx";
-import { PageMain, PageShell } from "../components/ui/PageShell.tsx";
-import { QueryBoundary } from "../components/ui/QueryBoundary.tsx";
+import { PageMain } from "../components/ui/PageShell.tsx";
 import { Section } from "../components/ui/Section.tsx";
 import { Stack } from "../components/ui/Stack.tsx";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
-import { ApiError } from "../lib/api-fetch.ts";
 import { fetchProfile, fetchProfileMatches } from "../lib/profile.ts";
 import { qk } from "../lib/query-keys.ts";
 
@@ -61,42 +57,16 @@ export default function PlayerProfilePage() {
     enabled: !!userId && showAllMatches,
   });
 
-  const topNav = <TopNav back={<TopNavBackButton to="/" />}></TopNav>;
-
   return (
-    <PageShell topNav={topNav}>
-      <QueryBoundary
-        query={profileQuery}
-        loading={
-          <PageMain width="6xl" padding="spacious" fillHeight>
-            <LoadingState fillHeight label="Loading profile…" />
-          </PageMain>
-        }
-        errorFallback={(error) => {
-          const notFound = error instanceof ApiError && error.status === 404;
-          return (
-            <PageMain width="6xl" padding="spacious">
-              <EmptyState
-                tone="rose"
-                title={notFound ? "Player not found" : "Couldn't load this profile"}
-                description={
-                  notFound
-                    ? "This player doesn't exist or has been removed."
-                    : "Something went wrong fetching the profile. Try again."
-                }
-                action={
-                  <Button variant="secondary" onClick={() => profileQuery.refetch()}>
-                    Retry
-                  </Button>
-                }
-              />
-            </PageMain>
-          );
-        }}
-      >
-        {(profile) => renderProfileBody(profile)}
-      </QueryBoundary>
-    </PageShell>
+    <PlayerPageFrame
+      query={profileQuery}
+      back={"/"}
+      loadingLabel="Loading profile…"
+      errorTitle="Couldn't load this profile"
+      errorDescription="Something went wrong fetching the profile. Try again."
+    >
+      {(profile) => renderProfileBody(profile)}
+    </PlayerPageFrame>
   );
 
   // Plain render helper (NOT a component — a nested component definition would

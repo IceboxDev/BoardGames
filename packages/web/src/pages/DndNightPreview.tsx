@@ -123,14 +123,14 @@ export default function DndNightPreview() {
     <PageShell background="plain">
       <PageMain width="6xl" padding="spacious" className="flex flex-col gap-10 text-fg-primary">
         <header>
-          <h1 className="text-2xl font-bold text-white">D&amp;D Night — visual preview</h1>
+          <h1 className="text-2xl font-bold text-fg-strong">D&amp;D Night — visual preview</h1>
           <p className="mt-1 text-sm text-fg-secondary">
             Mock calendar with two D&amp;D nights, a plain picks-locked night, and heat days.
           </p>
         </header>
 
         <Section title="Calendar grid (full)">
-          <div className="h-[680px] rounded-2xl border border-white/10 bg-surface-900/40 p-4">
+          <div className="h-[680px] rounded-card-2xl border border-line bg-surface-900/40 p-4">
             <Calendar
               weekStart={weekStart}
               availability={availability}
@@ -143,7 +143,7 @@ export default function DndNightPreview() {
         </Section>
 
         <Section title="Calendar grid (compact / side-drawer)">
-          <div className="w-72 rounded-2xl border border-white/10 bg-surface-900/40 p-3">
+          <div className="w-72 rounded-card-2xl border border-line bg-surface-900/40 p-3">
             <Calendar
               weekStart={weekStart}
               availability={availability}
@@ -157,7 +157,7 @@ export default function DndNightPreview() {
         </Section>
 
         <Section title="Bare dice (counts 1 / 4 / 12 / 20)">
-          <div className="flex items-end gap-6 rounded-2xl border border-white/10 bg-surface-900/40 p-6">
+          <div className="flex items-end gap-6 rounded-card-2xl border border-line bg-surface-900/40 p-6">
             {[1, 4, 12, 20].map((n) => (
               <D20Die key={n} count={n} className="dnd-die h-20 w-20" />
             ))}
@@ -165,7 +165,7 @@ export default function DndNightPreview() {
         </Section>
 
         <Section title="Modal panel">
-          <div className="mx-auto h-[640px] w-full max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-surface-950 p-4">
+          <div className="mx-auto h-[640px] w-full max-w-2xl overflow-hidden rounded-card-2xl border border-line bg-surface-950 p-4">
             <DndNightPanel attendees={ATTENDEES} partyCount={4} />
           </div>
         </Section>

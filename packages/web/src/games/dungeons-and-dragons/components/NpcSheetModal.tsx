@@ -44,7 +44,7 @@ export function NpcSheetModal({ npc, onClose }: Props) {
         </p>
 
         {npc.secrets && (
-          <div className="rounded-xl border border-rose-400/25 bg-rose-950/30 p-3">
+          <div className="rounded-card-xl border border-rose-400/25 bg-rose-950/30 p-3">
             <SectionEyebrow tone="rose">For the DM's eyes only</SectionEyebrow>
             <p className="font-serif-body mt-1.5 text-sm leading-relaxed text-rose-100/80">
               {npc.secrets}

@@ -263,8 +263,8 @@ function PoolEditor({
           return (
             <div
               key={role.id}
-              className={`flex items-center justify-between gap-1 rounded-md border px-2 py-1 text-xs ${
-                count > 0 ? "border-white/10 bg-surface-900" : "border-white/5 bg-surface-900/40"
+              className={`flex items-center justify-between gap-1 rounded-card-md border px-2 py-1 text-xs ${
+                count > 0 ? "border-line bg-surface-900" : "border-line-soft bg-surface-900/40"
               }`}
             >
               <span className="flex items-center gap-1.5">
@@ -317,7 +317,7 @@ function TeamRow({
     <PlayerRow
       name={slot.displayName}
       right={
-        <div className="flex shrink-0 overflow-hidden rounded-md border border-white/10">
+        <div className="flex shrink-0 overflow-hidden rounded-card-md border border-line">
           <TeamButton
             team="village"
             active={slot.team === "village"}

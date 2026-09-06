@@ -220,13 +220,13 @@ export default function GameBoard({ state, dispatch }: Props) {
         {/* Floating HUD overlays. `pointer-events-none` on the wrappers so
             the SVG below stays interactive everywhere not covered by a
             specific widget; widgets re-enable pointer events themselves. */}
-        <div className="pointer-events-none absolute inset-x-2 top-2 z-10">
+        <div className="pointer-events-none absolute inset-x-2 top-2 z-raised">
           <InfoBar state={state} />
         </div>
-        <div className="pointer-events-none absolute left-2 top-16 z-10">
+        <div className="pointer-events-none absolute left-2 top-16 z-raised">
           <PlayerStrip players={state.players} currentPlayerIndex={state.currentPlayerIndex} />
         </div>
-        <div className="pointer-events-none absolute right-2 top-16 z-10">
+        <div className="pointer-events-none absolute right-2 top-16 z-raised">
           <ActionButtons
             buttons={buttons}
             actionsRemaining={state.actionsRemaining}
@@ -234,11 +234,11 @@ export default function GameBoard({ state, dispatch }: Props) {
             onAction={handleAction}
           />
         </div>
-        <div className="pointer-events-none absolute bottom-32 left-2 z-10">
+        <div className="pointer-events-none absolute bottom-32 left-2 z-raised">
           <TrackPanel state={state} />
         </div>
         {hoveredCityId && (
-          <div className="pointer-events-none absolute bottom-32 right-2 z-10">
+          <div className="pointer-events-none absolute bottom-32 right-2 z-raised">
             <CityTooltip state={state} cityId={hoveredCityId} />
           </div>
         )}

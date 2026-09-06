@@ -200,7 +200,7 @@ export function EditProfileModal({ userId, initial, onClose }: EditProfileModalP
                     className={`h-7 w-7 rounded-full bg-[var(--swatch)] transition ${
                       accentHex === hex
                         ? "ring-2 ring-white ring-offset-2 ring-offset-surface-900"
-                        : "ring-1 ring-white/10 hover:ring-white/40"
+                        : "ring-1 ring-line hover:ring-fg-strong/40"
                     }`}
                   />
                 ))}

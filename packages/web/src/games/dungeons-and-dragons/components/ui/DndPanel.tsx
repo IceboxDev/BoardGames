@@ -4,7 +4,7 @@ import type { ComponentPropsWithoutRef, ElementType, ReactNode } from "react";
 //
 // The DM tool's bordered panel. The one chain
 //
-//   rounded-2xl border border-amber-400/20
+//   rounded-card-2xl border border-amber-400/20
 //   bg-gradient-to-br from-dnd-ash/80 via-surface-900/90 to-black/80 p-3
 //
 // was hand-spelled ~17 times across 7 files, in TWELVE variants that differed
@@ -90,7 +90,7 @@ export function DndPanel<T extends ElementType = "div">({
   const Tag = (as ?? "div") as ElementType;
   const borderTone = border ?? tone;
   const cls = [
-    radius === "2xl" ? "rounded-2xl" : "rounded-xl",
+    radius === "2xl" ? "rounded-card-2xl" : "rounded-card-xl",
     "border",
     BORDERS[borderTone],
     FILLS[tone],

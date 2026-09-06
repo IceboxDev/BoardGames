@@ -4,10 +4,10 @@ import {
   hasActiveFilters,
   PLAYERS_MAX_PLUS,
 } from "../lib/game-filters";
-import { SearchIcon, XIcon } from "./icons";
+import { XIcon } from "./icons";
 import { Button } from "./ui/Button";
 import { Chip } from "./ui/Chip";
-import { Input } from "./ui/Input";
+import { SearchInput } from "./ui/SearchInput";
 import { Select } from "./ui/Select";
 
 // One thin top-row filter bar for the Board Game Lab library. Everything
@@ -70,19 +70,14 @@ export default function GameLibraryFilters({
 
   return (
     <div className="scrollbar-hide flex w-full items-center gap-2 overflow-x-auto py-0.5">
-      <div className="relative min-w-[8rem] flex-1">
-        <span className="pointer-events-none absolute left-2.5 top-1/2 -translate-y-1/2 text-fg-muted">
-          <SearchIcon className="h-4 w-4" />
-        </span>
-        <Input
-          type="search"
-          value={filters.query}
-          onChange={(e) => onChange({ ...filters, query: e.target.value })}
-          placeholder="Search games, designers, mechanics…"
-          aria-label="Search games"
-          className="h-9 pl-8"
-        />
-      </div>
+      <SearchInput
+        containerClassName="min-w-32 flex-1"
+        value={filters.query}
+        onChange={(e) => onChange({ ...filters, query: e.target.value })}
+        placeholder="Search games, designers, mechanics…"
+        aria-label="Search games"
+        className="h-9"
+      />
 
       <FilterSelect
         label="Players"
@@ -112,7 +107,7 @@ export default function GameLibraryFilters({
           pressed={filters.playableOnly}
           onClick={() => onChange({ ...filters, playableOnly: !filters.playableOnly })}
           title="Show only implemented games"
-          className="h-9 shrink-0 whitespace-nowrap rounded-lg"
+          className="h-9 shrink-0 whitespace-nowrap rounded-card-lg"
         >
           Playable
         </Chip>

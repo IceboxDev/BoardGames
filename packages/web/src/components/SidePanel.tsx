@@ -12,7 +12,7 @@ interface TurnHeaderProps {
 function TurnHeader({ turnCount, extra }: TurnHeaderProps) {
   return (
     <div className="flex items-center justify-between px-1">
-      <span className="text-3xs font-bold uppercase tracking-widest text-fg-muted">
+      <span className="text-3xs font-bold uppercase tracking-pill text-fg-muted">
         Turn {turnCount}
       </span>
       {extra}
@@ -57,7 +57,7 @@ export function PlayerListPanel({ turnCount, players, extra }: PlayerListPanelPr
         {players.map((p) => (
           <div
             key={p.index}
-            className={`flex w-full items-center gap-1.5 rounded-lg px-2 py-1.5 text-xs transition-colors ${
+            className={`flex w-full items-center gap-1.5 rounded-card-lg px-2 py-1.5 text-xs transition-colors ${
               p.alive === false
                 ? "bg-surface-800/50 text-fg-disabled line-through"
                 : p.isActive
@@ -132,9 +132,9 @@ export function ScoreGridPanel({
 
       <div className="flex flex-1 flex-col justify-center gap-2">
         {/* Grid */}
-        <div className="flex w-full flex-col gap-px overflow-hidden rounded-lg border border-white/10 bg-surface-700/30 text-3xs">
+        <div className="flex w-full flex-col gap-px overflow-hidden rounded-card-lg border border-line bg-surface-700/30 text-3xs">
           {/* Header row */}
-          <div className="grid grid-cols-[1rem_1fr_1fr] bg-surface-800/80 px-2 py-1 font-semibold uppercase tracking-wider text-fg-muted">
+          <div className="grid grid-cols-[1rem_1fr_1fr] bg-surface-800/80 px-2 py-1 font-semibold uppercase tracking-label text-fg-muted">
             <span />
             <span className="text-center">{playerName}</span>
             <span className="text-center">{opponentName}</span>
@@ -179,8 +179,8 @@ export function ScoreGridPanel({
           {/* Total row */}
           <div className="grid grid-cols-[1rem_1fr_1fr] items-center bg-surface-800/80 px-2 py-1.5 font-bold">
             <span />
-            <span className="text-center tabular-nums text-white">{playerTotal}</span>
-            <span className="text-center tabular-nums text-white">{opponentTotal}</span>
+            <span className="text-center tabular-nums text-fg-strong">{playerTotal}</span>
+            <span className="text-center tabular-nums text-fg-strong">{opponentTotal}</span>
           </div>
         </div>
       </div>

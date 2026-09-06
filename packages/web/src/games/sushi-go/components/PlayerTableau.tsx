@@ -143,7 +143,7 @@ function OpponentBoard({
   return (
     // biome-ignore lint/a11y/noStaticElementInteractions: hover-to-preview is decorative
     <div
-      className="rounded-lg border border-white/10 bg-surface-900/50 p-1.5"
+      className="rounded-lg border border-line bg-surface-900/50 p-1.5"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -185,7 +185,7 @@ function OpponentBoard({
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
             className="overflow-hidden"
           >
-            <div className="bamboo-mat mt-2 rounded-xl border border-white/10 p-2">
+            <div className="bamboo-mat mt-2 rounded-xl border border-line p-2">
               <StationGrid groups={groups} compact />
             </div>
           </motion.div>

@@ -65,11 +65,11 @@ export function GameSlugGrid({
                 type="button"
                 onClick={() => setSelected(game)}
                 className={cn(
-                  "group block w-full overflow-hidden rounded-xl bg-surface-900/60 text-left transition-colors",
+                  "group block w-full overflow-hidden rounded-card-xl bg-surface-900/60 text-left transition-colors",
                   isNew
                     ? // The accent ring is dropped so the cyan glow reads clean.
                       "border-2 card-frame-new"
-                    : "border border-white/[0.06] ring-1 ring-[var(--accent)]/20 hover:ring-[var(--accent)]/60",
+                    : "border border-line-soft ring-1 ring-[var(--accent)]/20 hover:ring-[var(--accent)]/60",
                 )}
               >
                 <div className="relative aspect-square overflow-hidden bg-surface-800">
@@ -86,7 +86,7 @@ export function GameSlugGrid({
                     </span>
                   )}
                 </div>
-                <p className="truncate px-2.5 py-2 text-xs font-semibold text-fg-primary group-hover:text-white">
+                <p className="truncate px-2.5 py-2 text-xs font-semibold text-fg-primary group-hover:text-fg-strong">
                   {game.title}
                 </p>
               </button>

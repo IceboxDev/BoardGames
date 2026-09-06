@@ -68,7 +68,7 @@ export function NightLog({
                       "flex h-7 w-7 shrink-0 items-center justify-center rounded-full",
                       night.attended
                         ? "bg-emerald-500/15 text-emerald-300"
-                        : "bg-white/[0.04] text-fg-disabled",
+                        : "bg-fill-soft text-fg-disabled",
                     )}
                     title={
                       night.attended

@@ -96,20 +96,20 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
         aria-modal="true"
         aria-label="Game rules"
         tabIndex={-1}
-        className="relative z-10 flex min-h-0 flex-1 flex-col outline-none"
+        className="relative z-raised flex min-h-0 flex-1 flex-col outline-none"
       >
         {/* Header bar — three zones (title • tabs • close). The middle is a
             flex-1 spacer when there's only one booklet, so the title and X
             still anchor to opposite ends; when there are multiple booklets,
             the tab pills live in that same slot, horizontally centered. */}
-        <div className="flex shrink-0 items-center border-b border-white/[0.06] bg-surface-950/80 px-6 py-3 backdrop-blur-md">
+        <div className="flex shrink-0 items-center border-b border-line-soft bg-surface-950/80 px-6 py-3 backdrop-blur-md">
           <div className="flex shrink-0 items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-amber-500/10 text-amber-400">
+            <div className="flex h-8 w-8 items-center justify-center rounded-card-lg bg-amber-500/10 text-amber-400">
               <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden="true">
                 <path d="M10.75 16.82A7.462 7.462 0 0115 15.5c.71 0 1.396.098 2.046.282A.75.75 0 0018 15.06V3.56a.75.75 0 00-.546-.722A9.006 9.006 0 0015 2.5a9.006 9.006 0 00-4.25 1.065v13.255zM9.25 4.565A9.006 9.006 0 005 2.5a9.006 9.006 0 00-2.454.338A.75.75 0 002 3.56v11.5a.75.75 0 00.954.722A7.462 7.462 0 015 15.5a7.462 7.462 0 014.25 1.32V4.565z" />
               </svg>
             </div>
-            <span className="text-sm font-semibold text-white">Game Rules</span>
+            <span className="text-sm font-semibold text-fg-strong">Game Rules</span>
             {numPages > 0 && (
               <span className="text-xs tabular-nums text-fg-muted">
                 {numPages} {numPages === 1 ? "page" : "pages"}
@@ -136,7 +136,7 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
                     className={
                       active
                         ? "rounded-full bg-amber-500/15 px-3 py-1 text-xs font-medium text-amber-300 ring-1 ring-amber-400/30 transition-colors"
-                        : "rounded-full px-3 py-1 text-xs text-fg-secondary transition-colors hover:bg-white/[0.04] hover:text-fg-primary"
+                        : "rounded-full px-3 py-1 text-xs text-fg-secondary transition-colors hover:bg-fill-soft hover:text-fg-primary"
                     }
                   >
                     {t.label}
@@ -181,7 +181,7 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
                 <div
                   // biome-ignore lint/suspicious/noArrayIndexKey: PDF pages are positional
                   key={i}
-                  className="mb-3 last:mb-0 overflow-hidden rounded-lg shadow-2xl shadow-black/40 ring-1 ring-white/[0.06]"
+                  className="mb-3 last:mb-0 overflow-hidden rounded-card-lg shadow-2xl shadow-black/40 ring-1 ring-line-soft"
                 >
                   <Page
                     pageNumber={i + 1}

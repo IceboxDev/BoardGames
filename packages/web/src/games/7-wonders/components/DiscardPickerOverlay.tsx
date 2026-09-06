@@ -28,7 +28,7 @@ export default function DiscardPickerOverlay({
         ) : (
           <div className="grid grid-cols-3 gap-2 sm:grid-cols-4 md:grid-cols-5">
             {pickActions.map((action) => (
-              <div key={action.cardId} className="aspect-[2/3]">
+              <div key={action.cardId} className="aspect-card">
                 <CardFace cardId={action.cardId} onClick={() => onPick(action)} />
               </div>
             ))}

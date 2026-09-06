@@ -35,4 +35,33 @@ describe("StatTile", () => {
     expect(screen.getByText("50")).toBeTruthy();
     expect(screen.getByText("3 boxes")).toBeTruthy();
   });
+
+  it("types the figure on the size scale and colors it by tone", () => {
+    const { rerender } = render(<StatTile label="Overdue" value={3} tone="rose" size="2xl" />);
+    const figure = screen.getByText("3");
+    expect(figure.className).toContain("text-2xl");
+    expect(figure.className).toContain("text-rose-300");
+    rerender(<StatTile label="Overdue" value={3} />);
+    expect(screen.getByText("3").className).toContain("text-fg-strong");
+  });
+
+  it("can put the caption under the figure and drop the card chrome", () => {
+    const { container } = render(
+      <StatTile label="Wins" value={12} variant="plain" labelPosition="bottom" />,
+    );
+    const root = container.firstChild as HTMLElement;
+    expect(root.className).not.toMatch(/border|bg-surface/);
+    const order = Array.from(root.querySelectorAll("span")).map((s) => s.textContent);
+    expect(order.indexOf("12")).toBeLessThan(order.indexOf("Wins"));
+  });
+
+  it("renders a free-form body in place of the figure (hero-card form)", () => {
+    render(
+      <StatTile label="Record" align="start" padding="lg">
+        <p>donut goes here</p>
+      </StatTile>,
+    );
+    expect(screen.getByText("Record")).toBeInTheDocument();
+    expect(screen.getByText("donut goes here")).toBeInTheDocument();
+  });
 });

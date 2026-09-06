@@ -30,7 +30,7 @@ export default function LiveMetrics({
   ];
 
   return (
-    <div className="flex flex-col gap-1.5 border-t border-white/10 pt-3">
+    <div className="flex flex-col gap-1.5 border-t border-line pt-3">
       {stats.map((s) => (
         <div key={s.label} className="flex items-baseline justify-between gap-2">
           <span className="text-xs text-fg-disabled uppercase tracking-wide">{s.label}</span>

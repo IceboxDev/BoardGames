@@ -42,7 +42,7 @@ export function CoverageCell({ coverage }: Props) {
       <span
         aria-hidden="true"
         title={coverageBreakdown(coverage)}
-        className="h-3.5 w-3.5 shrink-0 rounded-full ring-1 ring-white/10"
+        className="h-3.5 w-3.5 shrink-0 rounded-full ring-1 ring-line"
         style={{
           background: `conic-gradient(${COLOR_CAN} 0 ${canEnd}%, ${COLOR_MAYBE} ${canEnd}% ${maybeEnd}%, ${COLOR_UNMARKED} ${maybeEnd}% 100%)`,
         }}

@@ -1,6 +1,5 @@
 import type { CollectionResponse, SleeveStatus } from "@boardgames/core/protocol";
-import { SearchIcon } from "../icons";
-import { Input } from "../ui/Input.tsx";
+import { SearchInput } from "../ui/SearchInput.tsx";
 import { SegmentedControl } from "../ui/SegmentedControl.tsx";
 import { Select } from "../ui/Select.tsx";
 import type { CollectionRow } from "./collection-rows.ts";
@@ -56,16 +55,13 @@ export function CollectionFilters({
 }) {
   return (
     <div className="flex flex-wrap items-center gap-2">
-      <div className="relative min-w-44 flex-1 sm:max-w-xs">
-        <SearchIcon className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-fg-muted" />
-        <Input
-          value={state.search}
-          onChange={(e) => onChange({ ...state, search: e.target.value })}
-          placeholder="Search the collection…"
-          className="pl-8"
-          aria-label="Search the collection"
-        />
-      </div>
+      <SearchInput
+        containerClassName="min-w-44 flex-1 sm:max-w-xs"
+        value={state.search}
+        onChange={(e) => onChange({ ...state, search: e.target.value })}
+        placeholder="Search the collection…"
+        aria-label="Search the collection"
+      />
       {collection.statuses.length > 0 && (
         <Select
           aria-label="Filter by status"

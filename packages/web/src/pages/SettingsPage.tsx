@@ -15,6 +15,7 @@ import {
   Stack,
   Surface,
 } from "../components/ui";
+import { ErrorAlert } from "../components/ui/ErrorAlert.tsx";
 import { Section } from "../components/ui/Section";
 import { THEME_IDENTITY_KEYS, type ThemeConfig } from "../lib/theme/config";
 import { useTheme } from "../lib/theme/provider";
@@ -110,7 +111,7 @@ function ColorRow({
           aria-label={label}
           value={value}
           onChange={(e) => onChange(e.target.value)}
-          className="h-7 w-9 cursor-pointer rounded-md border border-white/10 bg-transparent"
+          className="h-7 w-9 cursor-pointer rounded-card-md border border-line bg-transparent"
         />
       </div>
     </div>
@@ -188,12 +189,12 @@ function PresetCard({
       <div style={previewVars} className="bg-surface-950 p-3">
         {/* Miniature mock, not app chrome: vars above repaint the token
             utilities, so this must stay a bespoke ring'd tile, not Surface. */}
-        <div className="rounded-lg bg-surface-900 p-2.5 ring-1 ring-white/10">
+        <div className="rounded-card-lg bg-surface-900 p-2.5 ring-1 ring-line">
           <div className="flex items-center gap-2">
             <span className="h-5 w-5 shrink-0 rounded-full bg-accent-500" />
             <span className="h-2 w-full max-w-16 rounded bg-surface-700" />
           </div>
-          <div className="mt-2 rounded-md bg-surface-800 px-2 py-1.5">
+          <div className="mt-2 rounded-card-md bg-surface-800 px-2 py-1.5">
             <span className="text-xs font-semibold text-fg-primary">Aa</span>
             <span className="ml-2 text-xs text-fg-secondary">Board night</span>
           </div>
@@ -294,7 +295,7 @@ export default function SettingsPage() {
 
           <Section title="Colors">
             <Surface padding="md">
-              <div className="divide-y divide-white/5">
+              <div className="divide-y divide-line-soft">
                 {COLOR_FIELDS.map((field) => (
                   <ColorRow
                     key={field.key}
@@ -336,11 +337,11 @@ export default function SettingsPage() {
                         }
                         className={
                           !wallpaperActive && theme.pattern === pattern.key
-                            ? "relative h-16 w-20 overflow-hidden rounded-lg ring-2 ring-accent-400/80"
-                            : "relative h-16 w-20 overflow-hidden rounded-lg ring-1 ring-white/10 hover:ring-white/30"
+                            ? "relative h-16 w-20 overflow-hidden rounded-card-lg ring-2 ring-accent-400/80"
+                            : "relative h-16 w-20 overflow-hidden rounded-card-lg ring-1 ring-line hover:ring-fg-strong/30"
                         }
                       >
-                        <span className="absolute inset-x-0 bottom-0 bg-black/45 py-0.5 text-center text-3xs font-medium text-white/85">
+                        <span className="absolute inset-x-0 bottom-0 bg-black/45 py-0.5 text-center text-3xs font-medium text-fg-strong/85">
                           {pattern.label}
                         </span>
                       </button>
@@ -387,7 +388,7 @@ export default function SettingsPage() {
                       <div
                         aria-hidden
                         style={{ backgroundImage: `url("${wallpaperImage}")` } as CSSProperties}
-                        className="h-16 w-24 rounded-lg bg-cover bg-center ring-1 ring-white/10"
+                        className="h-16 w-24 rounded-card-lg bg-cover bg-center ring-1 ring-line"
                       />
                       <div className="flex flex-col gap-1.5">
                         <Button
@@ -411,7 +412,7 @@ export default function SettingsPage() {
                       Upload image
                     </Button>
                   )}
-                  {wallpaperError && <p className="text-xs text-rose-400">{wallpaperError}</p>}
+                  {wallpaperError && <ErrorAlert message={wallpaperError} />}
                 </FieldGroup>
               </Stack>
             </Surface>

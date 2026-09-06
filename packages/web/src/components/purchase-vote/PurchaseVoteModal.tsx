@@ -26,7 +26,7 @@ import GameCarousel3D from "../offline/GameCarousel3D";
 import { Button } from "../ui/Button";
 import { Chip } from "../ui/Chip";
 import { ErrorAlert } from "../ui/ErrorAlert";
-import { Modal } from "../ui/Modal";
+import { Modal, ModalFooter } from "../ui/Modal";
 
 export function PurchaseVoteModalView({
   candidates,
@@ -67,13 +67,13 @@ export function PurchaseVoteModalView({
     <Modal
       onClose={onClose}
       size="full"
-      panelClassName="gap-2 p-4 sm:gap-4 sm:p-7"
+      density="compact"
       eyebrow="Purchase vote"
       eyebrowClassName="text-accent-300"
       title="Vote for the next game purchase"
       // One line on phones — every wrapped header line is carousel height
       // lost, and the card's size is the whole game on small screens.
-      titleClassName="text-sm font-bold tracking-tight text-white xs2:text-lg sm:text-3xl"
+      titleClassName="text-sm font-bold tracking-tight text-fg-strong xs2:text-lg sm:text-3xl"
       subheader={
         // Same reasoning: the explainer adds nothing a phone voter needs
         // (the footer already counts picks), so it's desktop-only.
@@ -137,46 +137,47 @@ export function PurchaseVoteModalView({
 
           {/* Single row always — the pick tokens truncate before this wraps,
               and Cancel is redundant with the header X on phones. */}
-          <div className="flex shrink-0 items-center justify-between gap-3">
-            <div className="flex min-w-0 items-center gap-2">
-              {Array.from({ length: VOTES_PER_PLAYER }, (_, i) => (
-                <span
-                  // biome-ignore lint/suspicious/noArrayIndexKey: fixed-length token row
-                  key={i}
-                  aria-hidden="true"
-                  className={cn(
-                    "h-2.5 w-2.5 rounded-full transition",
-                    i < selected.length ? "bg-emerald-400" : "border border-white/25",
-                  )}
-                />
-              ))}
-              <span className="truncate text-2xs text-fg-muted">
-                {selected.length === 0
-                  ? `${VOTES_PER_PLAYER} picks to place`
-                  : votesLeft === 0
-                    ? "All picks placed — submit to save them"
-                    : `${votesLeft} pick${votesLeft === 1 ? "" : "s"} left`}
-              </span>
-            </div>
-            <div className="flex shrink-0 items-center gap-2">
-              <Button variant="ghost" size="sm" onClick={onClose} className="hidden sm:inline-flex">
-                Cancel
-              </Button>
-              {/* Gate only on "changed": submitting an EMPTY set is a valid
+          <ModalFooter
+            start={
+              <div className="flex min-w-0 items-center gap-2">
+                {Array.from({ length: VOTES_PER_PLAYER }, (_, i) => (
+                  <span
+                    // biome-ignore lint/suspicious/noArrayIndexKey: fixed-length token row
+                    key={i}
+                    aria-hidden="true"
+                    className={cn(
+                      "h-2.5 w-2.5 rounded-full transition",
+                      i < selected.length ? "bg-emerald-400" : "border border-fg-strong/25",
+                    )}
+                  />
+                ))}
+                <span className="truncate text-2xs text-fg-muted">
+                  {selected.length === 0
+                    ? `${VOTES_PER_PLAYER} picks to place`
+                    : votesLeft === 0
+                      ? "All picks placed — submit to save them"
+                      : `${votesLeft} pick${votesLeft === 1 ? "" : "s"} left`}
+                </span>
+              </div>
+            }
+          >
+            <Button variant="ghost" size="sm" onClick={onClose} className="hidden sm:inline-flex">
+              Cancel
+            </Button>
+            {/* Gate only on "changed": submitting an EMPTY set is a valid
                   action (withdrawing your votes) — the empty-selection case
                   that must stay disabled is the pristine no-votes-yet one,
                   which `dirty` already covers. */}
-              <Button size="sm" disabled={!dirty || saving} onClick={onSubmit}>
-                {saving
-                  ? "Saving…"
-                  : savedVotes.length > 0
-                    ? selected.length === 0
-                      ? "Withdraw votes"
-                      : "Update votes"
-                    : "Submit votes"}
-              </Button>
-            </div>
-          </div>
+            <Button size="sm" disabled={!dirty || saving} onClick={onSubmit}>
+              {saving
+                ? "Saving…"
+                : savedVotes.length > 0
+                  ? selected.length === 0
+                    ? "Withdraw votes"
+                    : "Update votes"
+                  : "Submit votes"}
+            </Button>
+          </ModalFooter>
         </>
       )}
     </Modal>
@@ -205,7 +206,7 @@ function SavedScreen({
         <CheckIcon className="h-7 w-7 text-emerald-300" />
       </span>
       <div className="max-w-md">
-        <h3 className="text-lg font-bold text-white">
+        <h3 className="text-lg font-bold text-fg-strong">
           {picks.length === 0 ? "Your votes are withdrawn" : "Your votes are in"}
         </h3>
         <p className="mt-1 text-xs text-fg-secondary">
@@ -222,7 +223,7 @@ function SavedScreen({
             <img
               src={g.thumbnail}
               alt=""
-              className="aspect-video w-full rounded-lg border border-white/10 object-cover"
+              className="aspect-video w-full rounded-card-lg border border-line object-cover"
             />
             <p className="mt-1.5 truncate text-2xs font-semibold text-fg-secondary">{g.title}</p>
           </div>

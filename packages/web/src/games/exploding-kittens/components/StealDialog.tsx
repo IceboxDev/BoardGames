@@ -24,24 +24,24 @@ function CardButton({ cardType, onClick }: { cardType: CardType; onClick: () => 
     <button
       type="button"
       onClick={onClick}
-      className="group flex w-[90px] flex-col items-center gap-1 rounded-xl p-1.5 transition hover:scale-105 hover:bg-white/10"
+      className="group flex w-[90px] flex-col items-center gap-1 rounded-xl p-1.5 transition hover:scale-105 hover:bg-fill-strong"
     >
       {skin ? (
         <img
           src={getCardImageUrl(skin.file)}
           alt={CARD_LABELS[cardType]}
-          className="h-[120px] w-full rounded-lg object-cover ring-1 ring-white/20 transition group-hover:ring-2 group-hover:ring-purple-400"
+          className="h-[120px] w-full rounded-lg object-cover ring-1 ring-line-strong transition group-hover:ring-2 group-hover:ring-purple-400"
           draggable={false}
         />
       ) : (
         <div
-          className="flex h-[120px] w-full flex-col items-center justify-center rounded-lg ring-1 ring-white/20 transition group-hover:ring-2 group-hover:ring-purple-400"
+          className="flex h-[120px] w-full flex-col items-center justify-center rounded-lg ring-1 ring-line-strong transition group-hover:ring-2 group-hover:ring-purple-400"
           style={{ backgroundColor: CARD_COLORS[cardType] }}
         >
           <span className="text-2xl">{CARD_EMOJI[cardType]}</span>
         </div>
       )}
-      <span className="text-center text-3xs font-medium leading-tight text-fg-secondary group-hover:text-white">
+      <span className="text-center text-3xs font-medium leading-tight text-fg-secondary group-hover:text-fg-strong">
         {CARD_LABELS[cardType]}
       </span>
     </button>

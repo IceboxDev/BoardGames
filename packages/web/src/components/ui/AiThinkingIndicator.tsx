@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { RADIUS_CARD_LG } from "./radii";
 
 interface AiThinkingIndicatorProps {
   message: string;
@@ -21,7 +22,9 @@ export function AiThinkingIndicator({ message, showTimer, startTime }: AiThinkin
   const secs = (elapsed / 1000).toFixed(1);
 
   return (
-    <div className="rounded-lg bg-amber-500/10 px-3 py-1.5 text-center text-xs font-medium text-amber-400">
+    <div
+      className={`${RADIUS_CARD_LG} bg-amber-500/10 px-3 py-1.5 text-center text-xs font-medium text-amber-400`}
+    >
       <span className="mr-1.5 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-amber-400" />
       <span>{message}</span>
       {showTimer && startTime ? (
@@ -33,7 +36,9 @@ export function AiThinkingIndicator({ message, showTimer, startTime }: AiThinkin
 
 export function WaitingIndicator({ message = "Waiting for opponent..." }: { message?: string }) {
   return (
-    <div className="rounded-lg bg-amber-500/10 px-3 py-1.5 text-center text-xs font-medium text-amber-400">
+    <div
+      className={`${RADIUS_CARD_LG} bg-amber-500/10 px-3 py-1.5 text-center text-xs font-medium text-amber-400`}
+    >
       {message}
     </div>
   );

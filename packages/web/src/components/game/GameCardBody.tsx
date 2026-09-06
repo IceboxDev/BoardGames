@@ -41,7 +41,7 @@ export function GameCardBody({ title, affordance = null, children }: GameCardBod
 function GameCardHeader({ title, affordance }: { title: string; affordance: Affordance }) {
   return (
     <div className="flex items-baseline justify-between gap-2">
-      <h3 className="text-lg font-semibold text-fg-primary transition-colors group-hover:text-white">
+      <h3 className="text-lg font-semibold text-fg-primary transition-colors group-hover:text-fg-strong">
         {title}
       </h3>
       {affordance === "arrow" && (
@@ -59,7 +59,7 @@ function GameCardHeader({ title, affordance }: { title: string; affordance: Affo
 }
 
 /**
- * Uppercase tracking-wider meta line under the title — used for the
+ * Uppercase tracking-label meta line under the title — used for the
  * "{year} · {players} · {time}" summary or "{family} · {variant}" kicker.
  * Lives here so all three card variants render meta lines at exactly the
  * same size and weight.

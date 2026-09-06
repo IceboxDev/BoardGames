@@ -41,7 +41,7 @@ export function NightCard({
   if (lock?.eventTime) subtitleBits.push(lock.eventTime);
 
   return (
-    <section className="rounded-xl border border-white/5 bg-surface-900/30 p-2.5">
+    <section className="rounded-card-xl border border-line-soft bg-surface-900/30 p-2.5">
       <header className="mb-1.5 flex items-baseline justify-between gap-3 px-1">
         <div className="flex min-w-0 flex-col items-start gap-y-0.5 sm:flex-row sm:items-baseline sm:gap-2">
           <h3 className="max-w-full truncate text-sm font-semibold text-fg-primary">{dayLabel}</h3>
@@ -202,7 +202,7 @@ function ReorderableRow({
         aria-label="Drag to reorder"
         // `touch-none` stops a touch-drag on the handle from scrolling the page.
         onPointerDown={(e) => controls.start(e)}
-        className="flex w-6 shrink-0 touch-none cursor-grab items-center justify-center rounded-md text-fg-disabled transition-colors hover:bg-white/5 hover:text-fg-muted active:cursor-grabbing"
+        className="flex w-6 shrink-0 touch-none cursor-grab items-center justify-center rounded-ui-md text-fg-disabled transition-colors hover:bg-fill hover:text-fg-muted active:cursor-grabbing"
       >
         <GripVerticalIcon className="h-4 w-4" />
       </button>

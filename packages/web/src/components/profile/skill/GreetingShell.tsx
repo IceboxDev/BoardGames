@@ -79,15 +79,17 @@ export function GreetingShell({
           ) : (
             <div className="pointer-events-none absolute -right-8 -top-10 h-36 w-36 rounded-full bg-[var(--accent)]/25 blur-2xl" />
           )}
-          <SparkleIcon className="absolute right-3 top-3 h-4 w-4 text-white/50" />
-          <SparkleIcon className="absolute right-9 top-8 h-2.5 w-2.5 text-white/30" />
+          <SparkleIcon className="absolute right-3 top-3 h-4 w-4 text-fg-strong/50" />
+          <SparkleIcon className="absolute right-9 top-8 h-2.5 w-2.5 text-fg-strong/30" />
 
           <div className="relative flex items-center gap-4 p-4">
             {emblem}
             {/* pr-8 keeps long tracked-caps eyebrows clear of the sparkles. */}
             <div className="min-w-0 flex-1 pr-8">
               <MicroLabel className="font-semibold text-[var(--accent)]">{heroEyebrow}</MicroLabel>
-              <div className="mt-0.5 text-lg font-black leading-tight text-white">{heroTitle}</div>
+              <div className="mt-0.5 text-lg font-black leading-tight text-fg-strong">
+                {heroTitle}
+              </div>
               <p className="mt-0.5 text-2xs text-fg-secondary">{heroDetail}</p>
             </div>
           </div>

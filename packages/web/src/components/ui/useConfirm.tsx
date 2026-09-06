@@ -73,7 +73,7 @@ export function useConfirm(): {
       size="xs"
       onClose={() => settle(false)}
       title={pending.title}
-      titleClassName="text-lg font-bold tracking-tight text-white"
+      titleClassName="text-lg font-bold tracking-tight text-fg-strong"
     >
       {pending.description && (
         <p className="text-sm leading-relaxed text-fg-secondary">{pending.description}</p>

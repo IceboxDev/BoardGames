@@ -152,7 +152,7 @@ function AttendeeRow({
 
       <div className="flex min-w-0 flex-1 flex-col gap-1">
         <div className="flex flex-wrap items-center gap-2">
-          <span className="truncate text-sm font-semibold text-white">{attendee.name}</span>
+          <span className="truncate text-sm font-semibold text-fg-strong">{attendee.name}</span>
           {attendee.isHost && (
             <Badge tone="amber" shape="pill" size="xs">
               Host
@@ -211,7 +211,7 @@ function AttendeeRow({
           title={`Remove ${attendee.name} — sets their RSVP to "Not going"`}
           disabled={isKicking}
           onClick={handleKick}
-          className="p-1 bg-white/[0.04]"
+          className="p-1 bg-fill-soft"
           icon={isKicking ? <Spinner size="xs" /> : <XIcon className="h-3.5 w-3.5" />}
         />
       )}
@@ -283,7 +283,7 @@ function VoteChip({ kind, count }: { kind: "hype" | "teach" | "learn"; count: nu
   return (
     <span
       className={`inline-flex items-center gap-1 rounded-full px-1.5 py-0.5 ${
-        dim ? "bg-white/[0.03] text-fg-disabled" : "bg-white/[0.06] text-fg-primary"
+        dim ? "bg-fill-soft text-fg-disabled" : "bg-fill text-fg-primary"
       }`}
       title={`${meta.label}: ${count}`}
     >
@@ -315,7 +315,7 @@ function CoverageFooter({
     slugs.map((slug) => slugToGame.get(slug)?.title ?? slug).join(", ");
   return (
     <div
-      className={`mt-1 rounded-2xl border px-3 py-2.5 text-2xs sm:px-4 ${
+      className={`mt-1 rounded-card-2xl border px-3 py-2.5 text-2xs sm:px-4 ${
         allCovered
           ? "border-emerald-400/30 bg-emerald-400/[0.06] text-emerald-100"
           : "border-amber-400/30 bg-amber-400/[0.06] text-amber-100"

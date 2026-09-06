@@ -85,8 +85,8 @@ const TEAM_RING: Record<TeamAccent, string> = {
 
 const TONE_RING_FALLBACK: Record<Tone, string> = {
   winner: "ring-1 ring-amber-400/60",
-  loser: "ring-1 ring-white/15",
-  neutral: "ring-1 ring-white/5",
+  loser: "ring-1 ring-line-strong",
+  neutral: "ring-1 ring-line-soft",
 };
 
 type Props = {
@@ -126,7 +126,7 @@ export function AvatarBubble({
         <svg
           aria-hidden="true"
           viewBox="0 0 8 6"
-          className="pointer-events-none absolute -bottom-[6px] left-1/2 h-1.5 w-2 -translate-x-1/2 text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]"
+          className="pointer-events-none absolute -bottom-[6px] left-1/2 h-1.5 w-2 -translate-x-1/2 text-fg-strong drop-shadow-[0_1px_1px_rgba(0,0,0,0.6)]"
           fill="currentColor"
         >
           <polygon points="4,0 8,6 0,6" />

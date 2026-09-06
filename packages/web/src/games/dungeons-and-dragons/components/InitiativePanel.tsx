@@ -234,7 +234,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
 
       <div className="grid min-h-0 grid-cols-1 gap-3 lg:grid-cols-2">
         {/* The party — the DM enters their raw d20 rolls. */}
-        <div className="rounded-2xl border border-amber-400/20 bg-black/25 p-3">
+        <div className="rounded-card-2xl border border-amber-400/20 bg-black/25 p-3">
           <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-amber-300/60">
             The party — enter their d20 rolls
           </p>
@@ -271,7 +271,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
         </div>
 
         {/* The opposition — one roll per creature group. */}
-        <div className="rounded-2xl border border-rose-400/20 bg-black/25 p-3">
+        <div className="rounded-card-2xl border border-rose-400/20 bg-black/25 p-3">
           <div className="flex items-center justify-between gap-2">
             <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-rose-300/60">
               The opposition — one roll per group
@@ -384,7 +384,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
 
       {/* The module's escalation table, when the encounter carries one. */}
       {node.dangerTable && (
-        <div className="shrink-0 rounded-2xl border border-rose-400/30 bg-gradient-to-br from-dnd-blood/70 via-black/30 to-black/40 p-3">
+        <div className="shrink-0 rounded-card-2xl border border-rose-400/30 bg-gradient-to-br from-dnd-blood/70 via-black/30 to-black/40 p-3">
           <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-rose-300/80">
             Further danger — roll {node.dangerTable.die}
           </p>
@@ -418,7 +418,7 @@ export function InitiativePanel({ node, party, npcs, onOrderChange }: Props) {
       )}
 
       {/* Live turn order. */}
-      <div className="shrink-0 rounded-2xl border border-amber-400/20 bg-black/25 p-3">
+      <div className="shrink-0 rounded-card-2xl border border-amber-400/20 bg-black/25 p-3">
         <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-amber-300/60">
           Turn order
         </p>

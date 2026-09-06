@@ -20,11 +20,11 @@ function PendingCardPreview({ cardType }: { cardType: CardType }) {
         <img
           src={getCardImageUrl(skin.file)}
           alt={CARD_LABELS[cardType]}
-          className="h-[72px] w-[50px] rounded object-cover ring-1 ring-white/20"
+          className="h-[72px] w-[50px] rounded object-cover ring-1 ring-line-strong"
           draggable={false}
         />
       ) : (
-        <div className="flex h-[72px] w-[50px] items-center justify-center rounded bg-surface-700 ring-1 ring-white/20">
+        <div className="flex h-[72px] w-[50px] items-center justify-center rounded bg-surface-700 ring-1 ring-line-strong">
           <span className="text-lg">{CARD_LABELS[cardType]?.[0] ?? "?"}</span>
         </div>
       )}
@@ -68,7 +68,7 @@ export default function NopeWindow({ state, onAction }: NopeWindowProps) {
       title="✋ Nope Window"
       subtitle={
         <>
-          {sourceName} played <span className="font-semibold text-white">{effectLabel}</span>
+          {sourceName} played <span className="font-semibold text-fg-strong">{effectLabel}</span>
         </>
       }
     >

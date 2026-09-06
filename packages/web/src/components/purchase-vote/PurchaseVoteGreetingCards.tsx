@@ -58,11 +58,11 @@ export function PurchaseVoteAnnounceModal({
             src={g.thumbnail}
             alt={g.title}
             title={g.title}
-            className="h-10 w-16 rounded-md border border-white/10 object-cover"
+            className="h-10 w-16 rounded-card-md border border-line object-cover"
           />
         ))}
         {extra > 0 && (
-          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-surface-800 text-2xs font-semibold text-fg-secondary">
+          <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-card-md bg-surface-800 text-2xs font-semibold text-fg-secondary">
             +{extra}
           </span>
         )}

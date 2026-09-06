@@ -2,12 +2,17 @@ import { useEffect, useId, useState } from "react";
 import { StarIcon, XIcon } from "../components/icons";
 import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
 import {
+  AiThinkingIndicator,
+  AuthCard,
   Avatar,
   Badge,
   Button,
   ButtonLink,
   Checkbox,
+  CheckRow,
   Chip,
+  CopyField,
+  Drawer,
   EmptyState,
   ErrorAlert,
   Eyebrow,
@@ -18,18 +23,28 @@ import {
   InteractiveCard,
   LoadingState,
   MicroLabel,
+  Modal,
+  ModalBody,
+  ModalFooter,
+  Overlay,
   PageHeader,
   PageMain,
   PageShell,
+  ProgressBar,
+  QueryBoundary,
+  SearchInput,
   Section,
   SegmentedControl,
   Select,
   SelectableCard,
   Spinner,
   Stack,
+  StatTile,
   Surface,
   Textarea,
   type Tone,
+  useConfirm,
+  WaitingIndicator,
 } from "../components/ui";
 import { BarChartH, ColumnChart, DonutChart, LineChart, Sparkline } from "../components/ui/charts";
 import {
@@ -107,6 +122,14 @@ export default function UiGalleryPage() {
   const uid = useId();
   const [segment, setSegment] = useState<"a" | "b" | "c">("a");
   const [checked, setChecked] = useState(true);
+  const [search, setSearch] = useState("");
+  const [rowChecked, setRowChecked] = useState(true);
+  const [rowPicked, setRowPicked] = useState(false);
+  const [dialog, setDialog] = useState<
+    "modal" | "modal-compact" | "drawer" | "sheet" | "overlay" | null
+  >(null);
+  const closeDialog = () => setDialog(null);
+  const { confirm, confirmDialog } = useConfirm();
   const themesEnabled = new URLSearchParams(window.location.search).get("themes") === "1";
 
   return (
@@ -349,6 +372,233 @@ export default function UiGalleryPage() {
             </Swatch>
           </Section>
 
+          <Section title="StatTile">
+            <Stack gap="sm">
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
+                <StatTile
+                  label="Games played"
+                  value={42}
+                  sub="12 different"
+                  to="/players"
+                  cta="View history"
+                />
+                <StatTile label="Win rate" value="62%" sub="26W · 16L" soon />
+                <StatTile
+                  label="Overdue"
+                  value={3}
+                  sub="past their ETA"
+                  tone="rose"
+                  align="start"
+                />
+                <StatTile
+                  label="Wins"
+                  value={12}
+                  variant="tile"
+                  size="md"
+                  labelPosition="bottom"
+                  padding="md"
+                />
+              </div>
+              <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                <StatTile label="Record (hero form)" align="start" padding="lg">
+                  <span className="text-2xl font-bold tabular-nums text-fg-strong">7 / 9</span>
+                  <span className="text-3xs text-fg-muted">free-form body under the label</span>
+                </StatTile>
+                <StatTile
+                  label="Best score"
+                  value="18 ★"
+                  variant="filled"
+                  size="lg"
+                  padding="md"
+                  tone="amber"
+                />
+                <Surface variant="raised" className="grid grid-cols-2 gap-x-4 gap-y-3">
+                  <StatTile
+                    label="Plain cell"
+                    value="in a Surface"
+                    variant="plain"
+                    padding="none"
+                    align="start"
+                    size="sm"
+                  />
+                  <StatTile
+                    label="Second cell"
+                    value="—"
+                    variant="plain"
+                    padding="none"
+                    align="start"
+                    size="sm"
+                  />
+                </Surface>
+              </div>
+            </Stack>
+          </Section>
+
+          <Section title="ProgressBar">
+            <Stack gap="sm" className="max-w-md">
+              <ProgressBar label="accent" value={0.62} />
+              <ProgressBar
+                label="emerald inside an extent"
+                value={0.35}
+                extent={0.8}
+                tone="emerald"
+              />
+              <ProgressBar label="computed color, md" value={0.5} color="#f97316" size="md" />
+            </Stack>
+          </Section>
+
+          <Section title="SearchInput / CheckRow / SelectableCard row">
+            <div className="grid max-w-2xl gap-3 sm:grid-cols-2">
+              <SearchInput
+                aria-label="Search games"
+                placeholder="Search games…"
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+              <SelectableCard
+                variant="row"
+                padding="sm"
+                selected={rowPicked}
+                onClick={() => setRowPicked((v) => !v)}
+              >
+                <span className="text-sm text-fg-primary">Single-pick row</span>
+              </SelectableCard>
+              <CheckRow
+                checked={rowChecked}
+                onChange={() => setRowChecked((v) => !v)}
+                title="Catan"
+                description="2017 · 3–4 players"
+                trailing={
+                  <Badge tone="amber" shape="pill">
+                    Expert
+                  </Badge>
+                }
+              />
+              <CheckRow
+                checked={false}
+                onChange={() => {}}
+                padding="sm"
+                title="EXIT: The Abandoned Cabin"
+                description="2016"
+              />
+            </div>
+          </Section>
+
+          <Section title="Dialogs">
+            <Swatch label="Modal / Drawer / Overlay / useConfirm">
+              <Button size="sm" variant="secondary" onClick={() => setDialog("modal")}>
+                Modal
+              </Button>
+              <Button size="sm" variant="secondary" onClick={() => setDialog("modal-compact")}>
+                Compact modal
+              </Button>
+              <Button size="sm" variant="secondary" onClick={() => setDialog("drawer")}>
+                Drawer
+              </Button>
+              <Button size="sm" variant="secondary" onClick={() => setDialog("sheet")}>
+                Bottom sheet
+              </Button>
+              <Button size="sm" variant="secondary" onClick={() => setDialog("overlay")}>
+                Overlay
+              </Button>
+              <Button
+                size="sm"
+                variant="danger"
+                onClick={() =>
+                  void confirm({ title: "Delete this?", description: "It cannot be undone." })
+                }
+              >
+                useConfirm
+              </Button>
+            </Swatch>
+            {(dialog === "modal" || dialog === "modal-compact") && (
+              <Modal
+                onClose={closeDialog}
+                size="sm"
+                density={dialog === "modal-compact" ? "compact" : "comfortable"}
+                eyebrow="Eyebrow"
+                title="Modal title"
+              >
+                <ModalBody>
+                  <p className="text-sm text-fg-secondary">Body scrolls; the footer stays put.</p>
+                </ModalBody>
+                <ModalFooter start={<span className="text-xs text-fg-muted">start slot</span>}>
+                  <Button variant="ghost" size="sm" onClick={closeDialog}>
+                    Cancel
+                  </Button>
+                  <Button size="sm" onClick={closeDialog}>
+                    Confirm
+                  </Button>
+                </ModalFooter>
+              </Modal>
+            )}
+            {dialog === "drawer" && (
+              <Drawer onClose={closeDialog} eyebrow="Inspector" title="Right drawer">
+                <p className="text-sm text-fg-secondary">Drawer body.</p>
+              </Drawer>
+            )}
+            {dialog === "sheet" && (
+              <Drawer side="bottom" onClose={closeDialog} title="Bottom sheet">
+                <p className="text-sm text-fg-secondary">The phone rail sheet.</p>
+              </Drawer>
+            )}
+            {dialog === "overlay" && (
+              <Overlay onClose={closeDialog} contentClassName="w-80">
+                <Surface>Overlay content — click anywhere to close.</Surface>
+              </Overlay>
+            )}
+            {confirmDialog}
+          </Section>
+
+          <Section title="CopyField / indicators / AuthCard">
+            <Stack gap="sm">
+              <div className="max-w-md">
+                <CopyField
+                  value="https://example.com/calendar/abc123"
+                  ariaLabel="Example link"
+                  mono
+                />
+              </div>
+              <Swatch label="AiThinkingIndicator / WaitingIndicator">
+                <AiThinkingIndicator message="AI is thinking…" />
+                <WaitingIndicator />
+              </Swatch>
+              <AuthCard title="Board Game Lab" subtitle="AuthCard specimen">
+                <p className="text-sm text-fg-secondary">
+                  The auth screens' card + gradient title.
+                </p>
+              </AuthCard>
+            </Stack>
+          </Section>
+
+          <Section title="QueryBoundary">
+            <div className="grid gap-3 sm:grid-cols-3">
+              <QueryBoundary
+                query={{ data: undefined, isPending: true, isError: false, error: null }}
+                loadingLabel="Pending…"
+              >
+                {() => null}
+              </QueryBoundary>
+              <QueryBoundary
+                query={{
+                  data: undefined,
+                  isPending: false,
+                  isError: true,
+                  error: new Error("Server said no"),
+                }}
+              >
+                {() => null}
+              </QueryBoundary>
+              <QueryBoundary
+                query={{ data: [] as string[], isPending: false, isError: false, error: null }}
+                isEmpty={(d) => d.length === 0}
+                empty={<EmptyState title="Empty via QueryBoundary" />}
+              >
+                {() => null}
+              </QueryBoundary>
+            </div>
+          </Section>
+
           <Section title="Charts">
             <Stack gap="sm">
               <Swatch label="DonutChart">
@@ -360,7 +610,7 @@ export default function UiGalleryPage() {
                     { value: 2, tone: "neutral", label: "Other" },
                   ]}
                 >
-                  <span className="text-xl font-bold tabular-nums text-white">15</span>
+                  <span className="text-xl font-bold tabular-nums text-fg-strong">15</span>
                   <MicroLabel>games</MicroLabel>
                 </DonutChart>
               </Swatch>

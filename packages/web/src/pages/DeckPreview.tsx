@@ -81,8 +81,8 @@ export default function DeckPreview() {
 
   return (
     <PageShell background="plain">
-      <PageMain width="full" padding="none" className="flex flex-1 flex-col text-white">
-        <div className="border-b border-white/10 px-6 py-4">
+      <PageMain width="full" padding="none" className="flex flex-1 flex-col text-fg-strong">
+        <div className="border-b border-line px-6 py-4">
           <h1 className="text-xl font-bold tracking-tight">CardDeck Preview</h1>
           <p className="mt-1 text-sm text-fg-muted">Reusable card deck component for all games</p>
         </div>

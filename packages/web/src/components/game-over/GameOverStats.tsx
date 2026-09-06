@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { StatTile } from "../ui/StatTile";
 import { Surface } from "../ui/Surface";
 
 interface GameOverStatsProps {
@@ -30,7 +31,7 @@ export function StatItem({
 }) {
   return (
     <div className="text-center">
-      <div className={`text-2xl font-bold ${highlight ? "text-amber-300" : "text-white"}`}>
+      <div className={`text-2xl font-bold ${highlight ? "text-amber-300" : "text-fg-strong"}`}>
         {value}
         {highlight && " ★"}
       </div>
@@ -54,13 +55,15 @@ export function StatCell({
   className?: string;
 }) {
   return (
-    <div className={`rounded-lg bg-surface-800 p-3 text-center ${className}`.trimEnd()}>
-      <p className="text-xs uppercase tracking-wide text-fg-muted">{label}</p>
-      <p className={`mt-1 text-lg font-bold ${best ? "text-amber-300" : "text-white"}`}>
-        {value}
-        {best && " ★"}
-      </p>
-    </div>
+    <StatTile
+      variant="filled"
+      padding="md"
+      size="lg"
+      tone={best ? "amber" : "neutral"}
+      label={label}
+      value={best ? <>{value} ★</> : value}
+      className={className}
+    />
   );
 }
 
@@ -79,9 +82,11 @@ export function LabelValueRow({
 }) {
   return (
     <div className={`flex items-center justify-between gap-3 text-sm ${className}`.trimEnd()}>
-      <span className={highlight ? "font-semibold text-white" : "text-fg-secondary"}>{label}</span>
+      <span className={highlight ? "font-semibold text-fg-strong" : "text-fg-secondary"}>
+        {label}
+      </span>
       <span
-        className={`tabular-nums ${highlight ? "font-semibold text-white" : "text-fg-primary"}`}
+        className={`tabular-nums ${highlight ? "font-semibold text-fg-strong" : "text-fg-primary"}`}
       >
         {value}
       </span>

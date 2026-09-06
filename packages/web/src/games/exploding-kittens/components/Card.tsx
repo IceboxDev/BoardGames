@@ -21,7 +21,7 @@ const SIZE_CLASSES = {
   sm: "h-24 w-16",
   md: "h-36 w-24",
   lg: "h-44 w-28",
-  hand: "w-full aspect-[2/3]",
+  hand: "w-full aspect-card",
 };
 
 export default function Card({
@@ -83,7 +83,7 @@ export default function Card({
       className={cardChrome({
         ...chromeOpts,
         className:
-          "flex flex-col items-center justify-center p-1.5 text-xs font-semibold text-white",
+          "flex flex-col items-center justify-center p-1.5 text-xs font-semibold text-fg-strong",
       })}
       style={{ backgroundColor: color }}
     >

@@ -15,5 +15,5 @@ export const SIZE_CLASSES: Record<CardSize, string> = {
   sm: "h-14 w-10",
   tableau: "h-[4.5rem] w-[3.125rem]",
   md: "h-24 w-16",
-  hand: "w-full aspect-[2/3]",
+  hand: "w-full aspect-card",
 };

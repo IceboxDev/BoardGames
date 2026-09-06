@@ -4,19 +4,15 @@ import type { CSSProperties } from "react";
 import { useParams } from "react-router-dom";
 import { UsersIcon } from "../components/icons";
 import { HexSkillChart } from "../components/profile/HexSkillChart.tsx";
+import { PlayerPageFrame } from "../components/profile/PlayerPageFrame.tsx";
 import { ProfileStatsPanel } from "../components/profile/ProfileStatsPanel.tsx";
 import {
   HonestNumbers,
   SkillPageContent,
   SkillProgressCard,
 } from "../components/profile/skill/SkillPageContent.tsx";
-import { TopNav, TopNavBackButton } from "../components/TopNav";
-import { Button } from "../components/ui/Button.tsx";
-import { EmptyState } from "../components/ui/EmptyState.tsx";
-import { LoadingState } from "../components/ui/LoadingState.tsx";
 import { PageHeader } from "../components/ui/PageHeader.tsx";
-import { PageMain, PageShell } from "../components/ui/PageShell.tsx";
-import { QueryBoundary } from "../components/ui/QueryBoundary.tsx";
+import { PageMain } from "../components/ui/PageShell.tsx";
 import { Section } from "../components/ui/Section.tsx";
 import { Stack } from "../components/ui/Stack.tsx";
 import { DEFAULT_ACCENT } from "../lib/accent.ts";
@@ -56,56 +52,28 @@ export default function PlayerSkillPage() {
     enabled: !!userId,
   });
 
-  const topNav = <TopNav back={<TopNavBackButton to={`/u/${userId}`} />}></TopNav>;
-
   return (
-    <PageShell topNav={topNav}>
-      <QueryBoundary
-        query={skillQuery}
-        loading={
-          <PageMain width="6xl" padding="spacious" fillHeight>
-            <LoadingState fillHeight label="Computing the hall of fame…" />
-          </PageMain>
-        }
-        errorFallback={(error) => {
-          // A REAL missing player carries the route's NOT_FOUND envelope. A
-          // bare 404 (no code) means the /api/skills routes themselves don't
-          // exist — a mid-deploy web/server version skew, not a bad player.
-          const notFound =
-            error instanceof ApiError && error.status === 404 && error.code === "NOT_FOUND";
-          const routeMissing =
-            error instanceof ApiError && error.status === 404 && error.code === undefined;
-          return (
-            <PageMain width="6xl" padding="spacious">
-              <EmptyState
-                tone="rose"
-                title={
-                  notFound
-                    ? "Player not found"
-                    : routeMissing
-                      ? "Stats are still rolling out"
-                      : "Couldn't load the stats"
-                }
-                description={
-                  notFound
-                    ? "This player doesn't exist or has been removed."
-                    : routeMissing
-                      ? "The server is still updating to the newest version — give it a minute and retry."
-                      : "Something went wrong fetching the skill data. Try again."
-                }
-                action={
-                  <Button variant="secondary" onClick={() => skillQuery.refetch()}>
-                    Retry
-                  </Button>
-                }
-              />
-            </PageMain>
-          );
-        }}
-      >
-        {(skill) => renderBody(skill)}
-      </QueryBoundary>
-    </PageShell>
+    <PlayerPageFrame
+      query={skillQuery}
+      back={`/u/${userId}`}
+      loadingLabel="Computing the hall of fame…"
+      errorTitle="Couldn't load the stats"
+      errorDescription="Something went wrong fetching the skill data. Try again."
+      resolveError={(error) =>
+        // A REAL missing player carries the route's NOT_FOUND envelope (the
+        // frame's default). A bare 404 (no code) means the /api/skills routes
+        // themselves don't exist — a mid-deploy web/server version skew.
+        error instanceof ApiError && error.status === 404 && error.code === undefined
+          ? {
+              title: "Stats are still rolling out",
+              description:
+                "The server is still updating to the newest version — give it a minute and retry.",
+            }
+          : null
+      }
+    >
+      {(skill) => renderBody(skill)}
+    </PlayerPageFrame>
   );
 
   // Plain render helper (NOT a component — a nested component definition would

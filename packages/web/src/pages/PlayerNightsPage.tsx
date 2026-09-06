@@ -8,17 +8,13 @@ import { NightLog } from "../components/profile/nights/NightLog.tsx";
 import { NightsHero } from "../components/profile/nights/NightsHero.tsx";
 import { RsvpBehaviorPanel } from "../components/profile/nights/RsvpBehaviorPanel.tsx";
 import { WeekdayBreakdown } from "../components/profile/nights/WeekdayBreakdown.tsx";
-import { TopNav, TopNavBackButton } from "../components/TopNav";
-import { Button } from "../components/ui/Button.tsx";
+import { PlayerPageFrame } from "../components/profile/PlayerPageFrame.tsx";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
-import { LoadingState } from "../components/ui/LoadingState.tsx";
 import { PageHeader } from "../components/ui/PageHeader.tsx";
-import { PageMain, PageShell } from "../components/ui/PageShell.tsx";
-import { QueryBoundary } from "../components/ui/QueryBoundary.tsx";
+import { PageMain } from "../components/ui/PageShell.tsx";
 import { Section } from "../components/ui/Section.tsx";
 import { Stack } from "../components/ui/Stack.tsx";
 import { DEFAULT_ACCENT } from "../lib/accent.ts";
-import { ApiError } from "../lib/api-fetch.ts";
 import { formatDayKey } from "../lib/date-format.ts";
 import { fetchProfile, fetchProfileNights } from "../lib/profile.ts";
 import { qk } from "../lib/query-keys.ts";
@@ -41,42 +37,16 @@ export default function PlayerNightsPage() {
     enabled: !!userId,
   });
 
-  const topNav = <TopNav back={<TopNavBackButton to={`/u/${userId}`} />}></TopNav>;
-
   return (
-    <PageShell topNav={topNav}>
-      <QueryBoundary
-        query={nightsQuery}
-        loading={
-          <PageMain width="6xl" padding="spacious" fillHeight>
-            <LoadingState fillHeight label="Loading game nights…" />
-          </PageMain>
-        }
-        errorFallback={(error) => {
-          const notFound = error instanceof ApiError && error.status === 404;
-          return (
-            <PageMain width="6xl" padding="spacious">
-              <EmptyState
-                tone="rose"
-                title={notFound ? "Player not found" : "Couldn't load the nights"}
-                description={
-                  notFound
-                    ? "This player doesn't exist or has been removed."
-                    : "Something went wrong fetching attendance. Try again."
-                }
-                action={
-                  <Button variant="secondary" onClick={() => nightsQuery.refetch()}>
-                    Retry
-                  </Button>
-                }
-              />
-            </PageMain>
-          );
-        }}
-      >
-        {(nights) => renderBody(nights)}
-      </QueryBoundary>
-    </PageShell>
+    <PlayerPageFrame
+      query={nightsQuery}
+      back={`/u/${userId}`}
+      loadingLabel="Loading game nights…"
+      errorTitle="Couldn't load the nights"
+      errorDescription="Something went wrong fetching attendance. Try again."
+    >
+      {(data) => renderBody(data)}
+    </PlayerPageFrame>
   );
 
   // Plain render helper (NOT a component — a nested component definition would

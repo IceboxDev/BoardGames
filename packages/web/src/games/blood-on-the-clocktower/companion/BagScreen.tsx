@@ -196,7 +196,7 @@ function AddLatePlayerModal({
                 {result.addTokens.map((t) => (
                   <span
                     key={t}
-                    className={`flex items-center gap-1.5 rounded-lg border border-white/15 bg-surface-950/60 px-2 py-1 text-sm font-semibold ${TYPE_TEXT[CHARACTERS[t].type]}`}
+                    className={`flex items-center gap-1.5 rounded-lg border border-line-strong bg-surface-950/60 px-2 py-1 text-sm font-semibold ${TYPE_TEXT[CHARACTERS[t].type]}`}
                   >
                     <CharacterIcon character={t} size="sm" />
                     {CHARACTERS[t].name}
@@ -213,7 +213,7 @@ function AddLatePlayerModal({
                   {result.removeTokens.map((t) => (
                     <span
                       key={t}
-                      className={`flex items-center gap-1.5 rounded-lg border border-white/15 bg-surface-950/60 px-2 py-1 text-sm font-semibold ${TYPE_TEXT[CHARACTERS[t].type]}`}
+                      className={`flex items-center gap-1.5 rounded-lg border border-line-strong bg-surface-950/60 px-2 py-1 text-sm font-semibold ${TYPE_TEXT[CHARACTERS[t].type]}`}
                     >
                       <CharacterIcon character={t} size="sm" />
                       {CHARACTERS[t].name}
@@ -494,7 +494,7 @@ export default function BagScreen({
   return (
     <Screen>
       <header className="flex items-center justify-between gap-2">
-        <h1 className="text-lg font-bold text-white">Prepare the bag</h1>
+        <h1 className="text-lg font-bold text-fg-strong">Prepare the bag</h1>
         <Button
           variant="ghost"
           size="xs"
@@ -527,7 +527,7 @@ export default function BagScreen({
                   title={`Change the ${CHARACTERS[t].name} token`}
                   aria-label={`Change the ${CHARACTERS[t].name} token`}
                   onClick={() => setChanging(t)}
-                  className={`gap-1.5 border border-white/15 bg-surface-950/60 text-sm font-semibold transition-colors hover:border-white/40 hover:bg-surface-900 ${TYPE_TEXT[CHARACTERS[t].type]}`}
+                  className={`gap-1.5 border border-line-strong bg-surface-950/60 text-sm font-semibold transition-colors hover:border-fg-strong/40 hover:bg-surface-900 ${TYPE_TEXT[CHARACTERS[t].type]}`}
                 >
                   <CharacterIcon character={t} size="sm" />
                   {CHARACTERS[t].name}
@@ -589,7 +589,7 @@ export default function BagScreen({
           {bag.demonBluffs.map((id) => (
             <span
               key={id}
-              className={`flex items-center gap-1.5 rounded-lg border border-white/15 bg-surface-950/60 px-2 py-1 text-sm font-semibold ${TYPE_TEXT[CHARACTERS[id].type]}`}
+              className={`flex items-center gap-1.5 rounded-lg border border-line-strong bg-surface-950/60 px-2 py-1 text-sm font-semibold ${TYPE_TEXT[CHARACTERS[id].type]}`}
             >
               <CharacterIcon character={id} size="sm" />
               {CHARACTERS[id].name}

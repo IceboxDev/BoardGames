@@ -319,3 +319,17 @@ export function inkForAccent(accentHex: string, gradientEndHex: string): string 
   // text, and the darker ink is the app's own near-black rather than #000.
   return luminance > 0.42 ? "#0b0d12" : "#ffffff";
 }
+
+// ── Strongest ink on the surface ─────────────────────────────────────────
+
+/**
+ * `--color-fg-strong`: the brightest emphasis tier of the text ramp (page
+ * titles, hero numbers). Decided from the ramp's own primary ink rather than
+ * stored per preset: every dark ramp gets pure white — exactly the
+ * `text-fg-strong` literal this token replaced, so Classic is byte-identical —
+ * and a light ramp (dark `fgPrimary`) gets pure black, so a future light
+ * preset never ships white headings on a cream page.
+ */
+export function strongInk(fgPrimaryHex: string): string {
+  return relativeLuminance(fgPrimaryHex) >= 0.5 ? "#ffffff" : "#000000";
+}

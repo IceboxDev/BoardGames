@@ -21,7 +21,7 @@ export default function PlayerPanel({
   const militarySum = player.militaryTokens.reduce((a, b) => a + b, 0);
 
   return (
-    <div className="flex min-w-44 flex-1 flex-col gap-1 rounded-lg border border-white/10 bg-surface-900/70 p-2">
+    <div className="flex min-w-44 flex-1 flex-col gap-1 rounded-lg border border-line bg-surface-900/70 p-2">
       <div className="flex items-center justify-between gap-1">
         <span className="truncate text-xs font-semibold text-fg-primary">{label}</span>
         <span className="flex items-center gap-1">

@@ -107,12 +107,12 @@ export default function CardTag({ label, color, imageUrl, tooltipContent }: Card
             className="pointer-events-none fixed z-tooltip"
             style={{ left: tooltipPos.left, top: tooltipPos.top }}
           >
-            <div className="flex w-[150px] flex-col items-center gap-1 rounded-xl bg-surface-900 p-1.5 shadow-2xl ring-1 ring-white/20">
+            <div className="flex w-[150px] flex-col items-center gap-1 rounded-card-xl bg-surface-900 p-1.5 shadow-2xl ring-1 ring-line-strong">
               {tooltipContent ?? (
                 <img
                   src={imageUrl}
                   alt={label}
-                  className={`w-full rounded-lg ${isSvg ? "h-[220px] bg-white object-contain p-2" : "h-[220px] object-cover"}`}
+                  className={`w-full rounded-card-lg ${isSvg ? "h-[220px] bg-white object-contain p-2" : "h-[220px] object-cover"}`}
                   draggable={false}
                 />
               )}
@@ -131,11 +131,11 @@ export default function CardTag({ label, color, imageUrl, tooltipContent }: Card
                 <img
                   src={imageUrl}
                   alt={label}
-                  className={`w-full rounded-2xl shadow-2xl ${isSvg ? "bg-white object-contain p-4" : "object-cover"}`}
+                  className={`w-full rounded-card-2xl shadow-2xl ${isSvg ? "bg-white object-contain p-4" : "object-cover"}`}
                   draggable={false}
                 />
               )}
-              <div className="mt-2 text-center text-sm font-medium text-white/80">{label}</div>
+              <div className="mt-2 text-center text-sm font-medium text-fg-strong/80">{label}</div>
             </div>
           </div>,
           document.body,

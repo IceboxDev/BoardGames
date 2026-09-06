@@ -197,8 +197,8 @@ export default function GameReplay({ game }: GameReplayProps) {
           />
         </div>
 
-        <aside className="hidden xl:flex w-52 shrink-0 flex-col min-h-0 self-stretch overflow-hidden rounded-lg border border-white/10 bg-surface-900/70">
-          <div className="px-2 py-1.5 border-b border-white/10 shrink-0 space-y-0.5">
+        <aside className="hidden xl:flex w-52 shrink-0 flex-col min-h-0 self-stretch overflow-hidden rounded-lg border border-line bg-surface-900/70">
+          <div className="px-2 py-1.5 border-b border-line shrink-0 space-y-0.5">
             <span className="text-3xs font-semibold uppercase tracking-widest text-fg-muted">
               MCTS
             </span>
@@ -224,8 +224,8 @@ export default function GameReplay({ game }: GameReplayProps) {
         </aside>
       </div>
 
-      <div className="xl:hidden shrink-0 flex flex-col h-[28vh] min-h-0 overflow-hidden rounded-lg border border-white/10 bg-surface-900/70">
-        <div className="px-2 py-1 border-b border-white/10 shrink-0 flex items-center justify-between gap-2">
+      <div className="xl:hidden shrink-0 flex flex-col h-[28vh] min-h-0 overflow-hidden rounded-lg border border-line bg-surface-900/70">
+        <div className="px-2 py-1 border-b border-line shrink-0 flex items-center justify-between gap-2">
           <span className="text-3xs font-semibold uppercase tracking-widest text-fg-muted">
             MCTS
           </span>

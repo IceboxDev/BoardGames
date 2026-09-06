@@ -16,9 +16,9 @@ export default function TournamentComingSoon({
   onBack: () => void;
 }) {
   return (
-    // `relative z-10` lifts the block above the fixed game background image
+    // `relative z-raised` lifts the block above the fixed game background image
     // (same stacking fix as MatchResultsLayout).
-    <div className="relative z-10 flex min-h-full flex-1 flex-col px-6 py-16">
+    <div className="relative z-raised flex min-h-full flex-1 flex-col px-6 py-16">
       <EmptyState
         fillHeight
         tone="amber"

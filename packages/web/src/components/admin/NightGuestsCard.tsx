@@ -74,7 +74,7 @@ export function NightGuestsPanel({ guests }: Props) {
   if (guests.length === 0) return null;
 
   return (
-    <div className="border-t border-white/10 pt-3">
+    <div className="border-t border-line pt-3">
       <p className="mb-2 text-2xs font-semibold uppercase tracking-pill text-fg-secondary">
         Seat guests on a game night
       </p>
@@ -160,7 +160,7 @@ export function NightGuestsPanel({ guests }: Props) {
                     .map((g) => (
                       <li
                         key={g.userId}
-                        className="flex items-center gap-2 rounded-md bg-surface-900/60 px-2.5 py-1.5"
+                        className="flex items-center gap-2 rounded-card-md bg-surface-900/60 px-2.5 py-1.5"
                       >
                         <span className="flex-1 truncate text-sm text-fg-primary">{g.name}</span>
                         <IconButton

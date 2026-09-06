@@ -24,9 +24,9 @@ export interface CardDeckProps {
 }
 
 const SIZES = {
-  sm: { w: 56, h: 80, cls: "w-14 h-20", radius: "rounded-md" },
-  md: { w: 80, h: 112, cls: "w-20 h-28", radius: "rounded-lg" },
-  lg: { w: 96, h: 140, cls: "w-24 h-35", radius: "rounded-lg" },
+  sm: { w: 56, h: 80, cls: "w-14 h-20", radius: "rounded-card-md" },
+  md: { w: 80, h: 112, cls: "w-20 h-28", radius: "rounded-card-lg" },
+  lg: { w: 96, h: 140, cls: "w-24 h-35", radius: "rounded-card-lg" },
 };
 
 // How many physical card layers to render for each count (1-5 are exact, 6+ get 6 layers)
@@ -110,7 +110,7 @@ export function CardDeck({
         <div
           className={`${s.cls} flex items-center justify-center ${s.radius} border-2 border-dashed border-gray-700/50`}
         >
-          <span className="text-3xs font-medium uppercase tracking-wider text-fg-disabled">
+          <span className="text-3xs font-medium uppercase tracking-label text-fg-disabled">
             Empty
           </span>
         </div>
@@ -119,9 +119,9 @@ export function CardDeck({
       {/* Trump alone — spacer for container sizing + count badge */}
       {trump && count > 0 && layers === 0 && (
         <div className="relative" style={{ width: s.w, height: s.h }}>
-          <div className="absolute inset-0 z-10 flex items-center justify-center">
-            <div className="flex h-8 min-w-8 items-center justify-center rounded-full bg-black/60 px-2 shadow-lg backdrop-blur-sm ring-1 ring-white/10">
-              <span className="text-xs font-bold tabular-nums text-white">{count}</span>
+          <div className="absolute inset-0 z-raised flex items-center justify-center">
+            <div className="flex h-8 min-w-8 items-center justify-center rounded-full bg-black/60 px-2 shadow-lg backdrop-blur-sm ring-1 ring-line">
+              <span className="text-xs font-bold tabular-nums text-fg-strong">{count}</span>
             </div>
           </div>
         </div>
@@ -129,7 +129,7 @@ export function CardDeck({
 
       {/* Card stack layers */}
       {layers > 0 && (
-        <div className="relative z-10" style={{ width: s.w, height: s.h }}>
+        <div className="relative z-raised" style={{ width: s.w, height: s.h }}>
           {LAYER_KEYS.slice(0, layers).map((key, i) => {
             const isTop = i === layers - 1;
             const yOffset = (layers - 1 - i) * offsetPx;
@@ -161,9 +161,12 @@ export function CardDeck({
 
           {/* Card count badge */}
           {count > 0 && (
-            <div className="absolute z-20 flex items-center justify-center" style={{ inset: 0 }}>
-              <div className="flex h-8 min-w-8 items-center justify-center rounded-full bg-black/60 px-2 shadow-lg backdrop-blur-sm ring-1 ring-white/10">
-                <span className="text-xs font-bold tabular-nums text-white">{count}</span>
+            <div
+              className="absolute z-raised-2 flex items-center justify-center"
+              style={{ inset: 0 }}
+            >
+              <div className="flex h-8 min-w-8 items-center justify-center rounded-full bg-black/60 px-2 shadow-lg backdrop-blur-sm ring-1 ring-line">
+                <span className="text-xs font-bold tabular-nums text-fg-strong">{count}</span>
               </div>
             </div>
           )}

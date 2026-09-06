@@ -56,7 +56,7 @@ export function GamePicker({ slug, title, onChange }: Props) {
       {open && matches.length > 0 && (
         <ul
           id={listId}
-          className="absolute z-10 mt-1 max-h-60 w-full overflow-auto rounded-lg border border-white/10 bg-surface-900 shadow-xl"
+          className="absolute z-raised mt-1 max-h-60 w-full overflow-auto rounded-card-lg border border-line bg-surface-900 shadow-xl"
         >
           {matches.map((m) => (
             <li key={m.slug}>

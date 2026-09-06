@@ -154,7 +154,7 @@ export function GuestPlayersCard({ guests, members, onChanged }: Props) {
       {guests.length > 0 && (
         <ul className="flex flex-col gap-1 pt-1">
           {guests.map((g) => (
-            <li key={g.id} className="rounded-md bg-surface-900/60 px-2.5 py-1.5">
+            <li key={g.id} className="rounded-card-md bg-surface-900/60 px-2.5 py-1.5">
               <div className="flex items-center gap-2">
                 <span className="flex-1 truncate text-sm text-fg-primary">{g.name}</span>
                 {pendingDeleteId === g.id ? (
@@ -203,7 +203,7 @@ export function GuestPlayersCard({ guests, members, onChanged }: Props) {
                 )}
               </div>
               {mergingId === g.id && (
-                <div className="mt-1.5 flex flex-wrap items-center gap-2 border-t border-white/5 pt-1.5">
+                <div className="mt-1.5 flex flex-wrap items-center gap-2 border-t border-line-soft pt-1.5">
                   <span className="text-xs text-fg-secondary">Merge into</span>
                   <Select
                     size="sm"

@@ -109,7 +109,7 @@ export function DayCell({
               ? "border-warn-strong/60"
               : lockMode
                 ? "border-warn-gold/30 hover:border-warn-gold/60"
-                : "border-white/10 hover:border-white/25";
+                : "border-line hover:border-fg-strong/25";
 
   const baseBgClass = !value && !heated && !locked ? "bg-surface-800/55" : "";
   const baseHover = !value && !heated && !locked && interactive ? "hover:bg-surface-800/80" : "";
@@ -158,7 +158,7 @@ export function DayCell({
         showDnd ? " — Dungeons & Dragons night" : ""
       }`}
       aria-pressed={value !== undefined}
-      className={`group relative flex flex-col overflow-hidden rounded-xl border transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${layoutClass} ${aspectClass} ${padding} ${baseBgClass} ${borderClass} ${showDnd ? "dnd-night-cell" : ""} ${baseHover} ${lockedDisplayClass} ${heatAnim}`}
+      className={`group relative flex flex-col overflow-hidden rounded-card-xl border transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${layoutClass} ${aspectClass} ${padding} ${baseBgClass} ${borderClass} ${showDnd ? "dnd-night-cell" : ""} ${baseHover} ${lockedDisplayClass} ${heatAnim}`}
     >
       <span
         className={`pointer-events-none absolute inset-0 ${monthTintClass(monthBucket)}`}
@@ -188,7 +188,7 @@ export function DayCell({
       {value && !locked && !isAdminView && (
         <span
           aria-hidden="true"
-          className={`pointer-events-none absolute inset-y-0 left-0 z-[5] w-1 sm:w-1.5 ${
+          className={`pointer-events-none absolute inset-y-0 left-0 z-lift w-1 sm:w-1.5 ${
             value === "can"
               ? "bg-accent-400 shadow-[0_0_8px] shadow-accent-500/60"
               : "bg-warn-strong shadow-[0_0_8px] shadow-warn-strong/55"
@@ -197,7 +197,7 @@ export function DayCell({
       )}
       {monthLabel && (
         <span
-          className={`pointer-events-none absolute font-bold uppercase tracking-pill text-white/40 ${monthLabelPos} ${monthLabelSize}`}
+          className={`pointer-events-none absolute font-bold uppercase tracking-pill text-fg-strong/40 ${monthLabelPos} ${monthLabelSize}`}
           aria-hidden="true"
         >
           {monthLabel}
@@ -212,7 +212,7 @@ export function DayCell({
       {showDnd && attendance ? (
         // D&D night: a glowing d20 replaces the headcount, the party size
         // rolled onto its face. The grid position still tells you the date.
-        <span className="relative z-[5] flex min-h-0 flex-1 items-center justify-center p-1">
+        <span className="relative z-lift flex min-h-0 flex-1 items-center justify-center p-1">
           {/* The die fills whatever space the cell row gives it (rows are
               flex-sized, so they're shorter on a 1080p screen than on 4K) and
               its SVG `meet` aspect-fit keeps it centered. Caps mirror the old
@@ -246,7 +246,7 @@ export function DayCell({
       ) : (
         <span
           className={`relative font-bold leading-none ${dayTextSize} ${dayNumberClass} ${
-            value || heated ? "text-white" : "text-fg-primary"
+            value || heated ? "text-fg-strong" : "text-fg-primary"
           }`}
         >
           {day}
@@ -266,7 +266,7 @@ export function DayCell({
           chip's `ring-1` glow doesn't ride below the cell border anymore
           because the pill chrome itself extends down to match. */}
       {!compact && !locked && !isAdminView && (value || heated) && (
-        <div className="pointer-events-none absolute inset-x-1 bottom-1 z-10 flex flex-col items-center gap-0.5 sm:hidden">
+        <div className="pointer-events-none absolute inset-x-1 bottom-1 z-raised flex flex-col items-center gap-0.5 sm:hidden">
           {value && <PersonalMarkChip value={value} />}
           {heated && <HeatBadge heat={heat} />}
         </div>
@@ -274,12 +274,12 @@ export function DayCell({
       {/* sm+: pinned to opposite corners, stable slots regardless of which
           badge is present. */}
       {!compact && !locked && !isAdminView && value && (
-        <span className="pointer-events-none absolute z-10 hidden sm:bottom-1.5 sm:left-2 sm:inline-flex">
+        <span className="pointer-events-none absolute z-raised hidden sm:bottom-1.5 sm:left-2 sm:inline-flex">
           <PersonalMarkChip value={value} />
         </span>
       )}
       {!compact && !locked && !isAdminView && heated && (
-        <span className="pointer-events-none absolute z-10 hidden sm:right-2 sm:bottom-1.5 sm:inline-flex">
+        <span className="pointer-events-none absolute z-raised hidden sm:right-2 sm:bottom-1.5 sm:inline-flex">
           <HeatBadge heat={heat} />
         </span>
       )}
@@ -287,7 +287,7 @@ export function DayCell({
           surface the viewer's own mark as a small chip so admins can still
           see what they marked without dropping back to player view. */}
       {!compact && !locked && isAdminView && value && (
-        <span className="pointer-events-none absolute right-1.5 bottom-1.5 z-10">
+        <span className="pointer-events-none absolute right-1.5 bottom-1.5 z-raised">
           <PersonalMarkChip value={value} />
         </span>
       )}
@@ -446,7 +446,7 @@ function LockedLayer({
       {/* Faint gold ring for the "sealed" feel. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-warn-gold/35"
+        className="pointer-events-none absolute inset-0 rounded-card-xl ring-1 ring-warn-gold/35"
       />
       {/* Slow diagonal shimmer — light catching the seal. Idle most of cycle. */}
       <span
@@ -460,7 +460,7 @@ function LockedLayer({
       {showMedallion && !compact && (
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-1.5 z-10 flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-700 shadow-[0_2px_8px_rgba(0,0,0,0.5),inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3)]"
+          className="pointer-events-none absolute left-1/2 top-1.5 z-raised flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-700 shadow-[0_2px_8px_rgba(0,0,0,0.5),inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3)]"
         >
           <LockGlyph />
         </span>
@@ -468,7 +468,7 @@ function LockedLayer({
       {showMedallion && compact && (
         <span
           aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-0.5 z-10 flex h-3 w-3 -translate-x-1/2 items-center justify-center rounded-full bg-amber-400 shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
+          className="pointer-events-none absolute left-1/2 top-0.5 z-raised flex h-3 w-3 -translate-x-1/2 items-center justify-center rounded-full bg-amber-400 shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
         >
           <LockGlyph small />
         </span>
@@ -502,7 +502,7 @@ function DndNightLayer({ compact, viewerRsvp }: { compact: boolean; viewerRsvp?:
       {/* Gold inner hairline — the gilt edge of a sealed tome. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-amber-300/30"
+        className="pointer-events-none absolute inset-0 rounded-card-xl ring-1 ring-amber-300/30"
       />
       {/* Slow gold shimmer sweep (shared with the locked wax-seal cell). */}
       <span
@@ -561,7 +561,7 @@ function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
   // pill, not the label-typography role the tokens describe. Applying the pill
   // token (0.18em) at the phone size overflows the cell.
   const pillBase =
-    "pointer-events-none absolute inset-x-1 bottom-1 z-10 inline-flex min-h-3 items-center justify-center gap-0.5 rounded-md px-0.5 py-0 text-6xs font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:min-h-5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-5xs sm:tracking-pill";
+    "pointer-events-none absolute inset-x-1 bottom-1 z-raised inline-flex min-h-3 items-center justify-center gap-0.5 rounded-card-md px-0.5 py-0 text-6xs font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:min-h-5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-5xs sm:tracking-pill";
   if (viewerRsvp === "yes") {
     return (
       <span
@@ -577,7 +577,7 @@ function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
     return (
       <span
         aria-hidden="true"
-        className={`${pillBase} border border-white/10 bg-white/[0.04] text-fg-secondary`}
+        className={`${pillBase} border border-line bg-fill-soft text-fg-secondary`}
       >
         <CrossGlyphSmall />
         Pass
@@ -650,7 +650,7 @@ function PersonalMarkChip({ value }: { value: Availability }) {
   return (
     <span
       aria-hidden="true"
-      className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-6xs font-extrabold uppercase leading-none tracking-[0.1em] text-white ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-3xs sm:tracking-[0.15em] md:text-xs ${
+      className={`pointer-events-none inline-flex min-h-3 items-center gap-0.5 rounded-full bg-surface-950/95 px-1 py-0 text-6xs font-extrabold uppercase leading-none tracking-[0.1em] text-fg-strong ring-1 sm:min-h-5 sm:gap-1 sm:px-2 sm:py-0.5 sm:text-3xs sm:tracking-[0.15em] md:text-xs ${
         isCan
           ? "ring-accent-300 shadow-[0_0_10px] shadow-accent-400/60"
           : "ring-warn-gold shadow-[0_0_10px] shadow-warn-gold/55"
@@ -711,7 +711,7 @@ function DayLabels({ entries, heated }: { entries: AvailabilityEntry[]; heated: 
   const maybes = entries.filter((e) => e.status === "maybe");
   const textShadow = heated ? { textShadow: "0 1px 2px rgba(0,0,0,0.85)" } : undefined;
   return (
-    <div className="relative z-10 mt-0.5 flex min-h-0 flex-1 flex-col overflow-hidden tall:mt-1.5 tall:gap-1.5">
+    <div className="relative z-raised mt-0.5 flex min-h-0 flex-1 flex-col overflow-hidden tall:mt-1.5 tall:gap-1.5">
       {cans.length > 0 && (
         <NameRow entries={cans} dotColor="bg-accent-300" textShadow={textShadow} />
       )}
@@ -738,7 +738,7 @@ function NameRow({
           key={e.userId}
           title={`${e.name} — ${e.status}`}
           style={textShadow}
-          className="inline-flex max-w-full items-center gap-0 truncate text-7xs font-medium leading-tight text-white sm:gap-1 sm:text-3xs sm:leading-none md:text-2xs lg:text-xs 3xl:text-base 3xl:leading-snug tall:gap-1.5 tall:text-base tall:leading-snug"
+          className="inline-flex max-w-full items-center gap-0 truncate text-7xs font-medium leading-tight text-fg-strong sm:gap-1 sm:text-3xs sm:leading-none md:text-2xs lg:text-xs 3xl:text-base 3xl:leading-snug tall:gap-1.5 tall:text-base tall:leading-snug"
         >
           <span
             aria-hidden="true"

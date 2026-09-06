@@ -58,7 +58,7 @@ export function CarouselBody({
           truncate, with the size growing alongside the description on
           larger-than-reference cards. */}
       <h3
-        className={`shrink-0 font-bold leading-tight text-white ${
+        className={`shrink-0 font-bold leading-tight text-fg-strong ${
           compact ? "line-clamp-2" : "truncate"
         }`}
         style={{ fontSize: plan.titleFontPx }}

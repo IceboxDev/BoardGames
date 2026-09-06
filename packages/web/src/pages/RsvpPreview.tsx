@@ -56,12 +56,12 @@ export default function RsvpPreview() {
     <span className="inline-flex flex-wrap items-baseline gap-x-2">
       <span>Game night</span>
       <span className="inline-flex items-baseline gap-1 tracking-normal normal-case">
-        <span aria-hidden="true" className="text-white/30">
+        <span aria-hidden="true" className="text-fg-strong/30">
           ·
         </span>
         <span className="font-bold text-emerald-300 tabular-nums">5</span>
         <span className="text-fg-secondary">going</span>
-        <span aria-hidden="true" className="text-white/30">
+        <span aria-hidden="true" className="text-fg-strong/30">
           +
         </span>
         <span className="font-bold text-amber-300 tabular-nums">2</span>
@@ -98,10 +98,10 @@ export default function RsvpPreview() {
     <Modal
       onClose={() => {}}
       size="full"
-      panelClassName="gap-2 p-4 sm:gap-4 sm:p-7"
+      density="compact"
       eyebrow={eyebrow}
       title={HEADING_DATE}
-      titleClassName="text-xl font-bold tracking-tight text-white xs2:text-2xl sm:text-3xl"
+      titleClassName="text-xl font-bold tracking-tight text-fg-strong xs2:text-2xl sm:text-3xl"
       subheader={subheader}
     >
       <div className="flex items-center justify-between gap-2">

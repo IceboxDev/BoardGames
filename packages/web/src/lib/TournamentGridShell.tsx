@@ -144,7 +144,7 @@ export function TournamentGridShell<TResult>({
         <Button variant="secondary" size="sm" onClick={onBack}>
           ← Back
         </Button>
-        <h2 className="text-xl font-bold text-white">Tournament Grid</h2>
+        <h2 className="text-xl font-bold text-fg-strong">Tournament Grid</h2>
       </div>
 
       {renderHeader?.()}

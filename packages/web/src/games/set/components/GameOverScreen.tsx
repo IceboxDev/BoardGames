@@ -198,7 +198,7 @@ export default function GameOverScreen({
                 return (
                   <div key={c.label} className="rounded-lg bg-surface-800 p-3 text-center">
                     <p className="text-xs text-fg-muted">{c.label}</p>
-                    <p className="text-sm font-bold text-white">{c.format(c.value)}</p>
+                    <p className="text-sm font-bold text-fg-strong">{c.format(c.value)}</p>
                     <p className={`text-xs font-semibold ${color}`}>
                       {absDiff < 0.01 ? "= avg" : `${diffStr} vs avg`}
                     </p>

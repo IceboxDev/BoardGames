@@ -132,7 +132,7 @@ export default function BgaScreen() {
               }}
               placeholder="K7XMPQ"
               maxLength={8}
-              className="bg-surface-800/60 px-4 py-3 text-center text-2xl font-bold uppercase tracking-code text-white placeholder:text-fg-disabled"
+              className="bg-surface-800/60 px-4 py-3 text-center text-2xl font-bold uppercase tracking-code text-fg-strong placeholder:text-fg-disabled"
             />
           </Field>
           <Button
@@ -264,7 +264,7 @@ function BgaSpectateView({
       {view ? (
         <BgaBoard view={view} />
       ) : (
-        <div className="flex h-48 items-center justify-center rounded-lg border border-white/10 bg-surface-900/60">
+        <div className="flex h-48 items-center justify-center rounded-lg border border-line bg-surface-900/60">
           <p className="text-sm italic text-fg-disabled">
             Waiting for the first game snapshot from BGA…
           </p>

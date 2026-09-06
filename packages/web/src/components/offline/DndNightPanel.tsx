@@ -36,7 +36,7 @@ export default function DndNightPanel({ attendees, partyCount }: Props) {
   return (
     <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col gap-4 overflow-y-auto px-1 py-2">
       {/* Hero */}
-      <div className="dnd-hero-glow relative shrink-0 overflow-hidden rounded-3xl border border-amber-400/30 bg-gradient-to-br from-dnd-blood via-dnd-ink to-black p-6 text-center">
+      <div className="dnd-hero-glow relative shrink-0 overflow-hidden rounded-card-3xl border border-amber-400/30 bg-gradient-to-br from-dnd-blood via-dnd-ink to-black p-6 text-center">
         <span
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_60%_at_50%_28%,rgba(220,38,38,0.5),transparent_72%)]"
@@ -67,16 +67,16 @@ export default function DndNightPanel({ attendees, partyCount }: Props) {
 
       {/* The one and only game on the table tonight. */}
       {game && (
-        <div className="flex shrink-0 items-center gap-3 rounded-2xl border border-amber-400/25 bg-surface-900/80 p-3">
+        <div className="flex shrink-0 items-center gap-3 rounded-card-2xl border border-amber-400/25 bg-surface-900/80 p-3">
           <img
             src={game.thumbnail}
             alt=""
             loading="lazy"
             decoding="async"
-            className="h-16 w-16 shrink-0 rounded-xl object-cover ring-1 ring-amber-400/30"
+            className="h-16 w-16 shrink-0 rounded-card-xl object-cover ring-1 ring-amber-400/30"
           />
           <div className="min-w-0 flex-1">
-            <h3 className="truncate text-base font-semibold text-white">{game.title}</h3>
+            <h3 className="truncate text-base font-semibold text-fg-strong">{game.title}</h3>
             <p className="mt-0.5 text-2xs leading-relaxed text-fg-secondary">
               The only thing on the table tonight. Bring nothing but your dice, your character
               sheet, and your courage — the Dungeon Master has the rest.
@@ -103,7 +103,7 @@ export default function DndNightPanel({ attendees, partyCount }: Props) {
                 className="flex items-center gap-3 px-3 py-2.5"
               >
                 <Avatar name={a.name} image={a.image} accentHex={a.accentHex} size="sm" />
-                <span className="min-w-0 flex-1 truncate text-sm font-semibold text-white">
+                <span className="min-w-0 flex-1 truncate text-sm font-semibold text-fg-strong">
                   {a.name}
                   {a.userId === viewerId && (
                     <span className="font-normal text-fg-muted"> (you)</span>

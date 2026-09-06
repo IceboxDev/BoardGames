@@ -8,8 +8,10 @@ import type { ReactNode } from "react";
 import { formatRelativeTime } from "../../../lib/date-format.ts";
 import { SparkleIcon, StarIcon, TrophyIcon } from "../../icons";
 import { MicroLabel } from "../../ui/Label.tsx";
+import { ProgressBar } from "../../ui/ProgressBar.tsx";
 import { Section } from "../../ui/Section.tsx";
 import { Stack } from "../../ui/Stack.tsx";
+import { StatTile } from "../../ui/StatTile.tsx";
 import { Surface } from "../../ui/Surface.tsx";
 import { HexSkillChart } from "../HexSkillChart.tsx";
 import { gamesByPlays, meanPerformance, recordCounts, streaks } from "../insights/summary-stats.ts";
@@ -51,12 +53,13 @@ export function SkillProgressCard({
                 {Math.min(b.have, b.need)} / {b.need}
               </span>
             </div>
-            <div className="mt-1 h-2 overflow-hidden rounded bg-surface-800">
-              <div
-                className="h-full rounded bg-[var(--accent)]/80"
-                style={{ width: `${Math.min(100, (b.have / b.need) * 100)}%` }}
-              />
-            </div>
+            <ProgressBar
+              className="mt-1"
+              size="md"
+              label={b.label}
+              value={b.have / b.need}
+              color="var(--accent)"
+            />
           </div>
         ))}
         <p className="text-2xs text-fg-muted">
@@ -97,10 +100,15 @@ export function HonestNumbers({
     <Section title="By the numbers" icon={<TrophyIcon className="h-3.5 w-3.5" />}>
       <div className={rail ? "grid grid-cols-3 gap-2 sm:grid-cols-2" : "grid grid-cols-3 gap-2"}>
         {cells.map((cell) => (
-          <Surface key={cell.label} variant="tile" padding="none" className="p-2.5 text-center">
-            <p className="text-base font-bold tabular-nums text-white">{cell.value}</p>
-            <p className="text-3xs text-fg-muted">{cell.label}</p>
-          </Surface>
+          <StatTile
+            key={cell.label}
+            variant="tile"
+            padding="md"
+            size="md"
+            labelPosition="bottom"
+            label={cell.label}
+            value={cell.value}
+          />
         ))}
       </div>
       <p className="mt-2 text-3xs text-fg-muted">

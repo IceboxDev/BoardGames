@@ -52,7 +52,7 @@ export default function GameOverScreen({
         <div className="flex justify-center gap-8 text-center">
           <div>
             <div className="text-sm text-fg-secondary">Your Score</div>
-            <div className="text-3xl font-bold text-white">{playerScore.total}</div>
+            <div className="text-3xl font-bold text-fg-strong">{playerScore.total}</div>
           </div>
           <div className="flex items-end pb-2">
             <span
@@ -67,7 +67,7 @@ export default function GameOverScreen({
           </div>
           <div>
             <div className="text-sm text-fg-secondary">AI Score</div>
-            <div className="text-3xl font-bold text-white">{aiScore.total}</div>
+            <div className="text-3xl font-bold text-fg-strong">{aiScore.total}</div>
           </div>
         </div>
 
@@ -75,7 +75,7 @@ export default function GameOverScreen({
         <div className="w-full">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-white/10 text-fg-muted">
+              <tr className="border-b border-line text-fg-muted">
                 <th className="py-1 text-left font-medium">Expedition</th>
                 <th className="py-1 text-right font-medium">You</th>
                 <th className="w-12 py-1 text-center font-medium" />
@@ -90,7 +90,7 @@ export default function GameOverScreen({
                 const hex = COLOR_HEX[color];
 
                 return (
-                  <tr key={color} className="border-b border-white/10">
+                  <tr key={color} className="border-b border-line">
                     <td className="py-1.5">
                       <span className="flex items-center gap-2">
                         <span
@@ -102,7 +102,7 @@ export default function GameOverScreen({
                     </td>
                     <td className="py-1.5 text-right tabular-nums">
                       {pe.started ? (
-                        <span className="font-medium text-white">
+                        <span className="font-medium text-fg-strong">
                           {pe.total}
                           {pe.wagerMultiplier > 1 && (
                             <span className="ml-1 text-xs text-fg-muted">
@@ -135,7 +135,7 @@ export default function GameOverScreen({
                     </td>
                     <td className="py-1.5 text-right tabular-nums">
                       {ae.started ? (
-                        <span className="font-medium text-white">
+                        <span className="font-medium text-fg-strong">
                           {ae.total}
                           {ae.wagerMultiplier > 1 && (
                             <span className="ml-1 text-xs text-fg-muted">
@@ -155,9 +155,9 @@ export default function GameOverScreen({
               })}
               <tr className="font-bold">
                 <td className="py-2 text-fg-secondary">Total</td>
-                <td className="py-2 text-right text-white">{playerScore.total}</td>
+                <td className="py-2 text-right text-fg-strong">{playerScore.total}</td>
                 <td />
-                <td className="py-2 text-right text-white">{aiScore.total}</td>
+                <td className="py-2 text-right text-fg-strong">{aiScore.total}</td>
               </tr>
             </tbody>
           </table>

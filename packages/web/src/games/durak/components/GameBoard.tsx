@@ -118,6 +118,7 @@ export default function GameBoard({
   return (
     <GameScreen
       sidebar={<ActionLog blocks={mapDurakLog(view.actionLog, view.players)} />}
+      leftSidebarLabel="Players"
       leftSidebar={
         <PlayerListPanel
           turnCount={view.turnCount + 1}

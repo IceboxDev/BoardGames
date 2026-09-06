@@ -154,7 +154,7 @@ function DevicesSection({ userId }: { userId: string }) {
           type="button"
           aria-expanded={expanded}
           onClick={() => setExpanded((v) => !v)}
-          className="-mx-1 flex cursor-pointer items-center gap-1 rounded-md px-1 py-1 text-2xs font-semibold uppercase tracking-wide text-fg-muted transition-colors hover:text-fg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+          className="-mx-1 flex cursor-pointer items-center gap-1 rounded-ui-md px-1 py-1 text-2xs font-semibold uppercase tracking-label text-fg-muted transition-colors hover:text-fg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
         >
           <ChevronDownIcon
             className={`h-3 w-3 transition-transform ${expanded ? "" : "-rotate-90"}`}
@@ -181,7 +181,7 @@ function DevicesList({
   return (
     <ul className="space-y-1.5">
       {clusters.map((cluster) => (
-        <li key={cluster.key} className="rounded-lg bg-surface-800/60 px-2.5 py-1.5">
+        <li key={cluster.key} className="rounded-card-lg bg-surface-800/60 px-2.5 py-1.5">
           {cluster.devices.length === 1 ? (
             <DeviceLine device={cluster.devices[0]} />
           ) : (
@@ -196,7 +196,7 @@ function DevicesList({
                 <ClusterHeader cluster={cluster} open={openKey === cluster.key} />
               </button>
               {openKey === cluster.key && (
-                <ul className="mt-1.5 space-y-1.5 border-l border-white/10 pl-2.5">
+                <ul className="mt-1.5 space-y-1.5 border-l border-line pl-2.5">
                   {cluster.devices.map((d) => (
                     <li key={d.id}>
                       <DeviceLine device={d} />
@@ -287,15 +287,15 @@ function ActivityList({
     <div className="space-y-4">
       {groups.map((group) => (
         <section key={group.key}>
-          {/* z-10: the row dots below are positioned too — without a stacking
+          {/* z-raised: the row dots below are positioned too — without a stacking
               raise, document order paints them over the stuck header. The bg
               matches the DRAWER panel (surface-950), not the modal shade. */}
-          <h3 className="sticky top-0 z-10 bg-surface-950/95 py-1 text-2xs font-semibold uppercase tracking-wide text-fg-muted backdrop-blur-sm">
+          <h3 className="sticky top-0 z-raised bg-surface-950/95 py-1 text-2xs font-semibold uppercase tracking-label text-fg-muted backdrop-blur-sm">
             {group.label}
           </h3>
           <ul className="mt-1 space-y-0.5">
             {group.entries.map((entry) => (
-              <li key={entry.id} className="flex items-baseline gap-2.5 rounded-md px-1 py-1">
+              <li key={entry.id} className="flex items-baseline gap-2.5 rounded-card-md px-1 py-1">
                 <span className="w-10 shrink-0 text-right text-2xs tabular-nums text-fg-muted">
                   {localTime(entry.createdAt)}
                 </span>
@@ -684,6 +684,6 @@ function dotClass(type: string): string {
     case "played-through":
       return "bg-orange-400/70";
     default:
-      return "bg-white/40";
+      return "bg-fg-strong/40";
   }
 }

@@ -125,7 +125,7 @@ export default function GameReactions({
         const active = viewerSet.has(kind);
         const count = aggregate[kind];
         const activeStyle = active
-          ? // The text color rides the `text-white` class below, not this
+          ? // The text color rides the `text-fg-strong` class below, not this
             // object, so a future per-accent contrast tweak has one home.
             ({
               "--accent": accentHex,
@@ -160,11 +160,11 @@ export default function GameReactions({
             // actually change between the two branches.
             className={`relative inline-flex shrink-0 items-center justify-center rounded-full ${btnSize} transition-[color,background-color,border-color,box-shadow] disabled:cursor-not-allowed disabled:opacity-40 ${
               active
-                ? "border text-white"
+                ? "border text-fg-strong"
                 : // backdrop-blur only here: the active branch paints an opaque
                   // accentHex fill that fully hides the blur, yet would still
                   // pay the per-frame backdrop re-sample during carousel moves.
-                  "border border-white/20 bg-black/45 text-white/85 backdrop-blur-md hover:border-white/40 hover:bg-black/65 hover:text-white"
+                  "border border-line-strong bg-black/45 text-fg-strong/85 backdrop-blur-md hover:border-fg-strong/40 hover:bg-black/65 hover:text-white"
             }`}
           >
             <span className={`${iconSize} flex items-center justify-center`}>

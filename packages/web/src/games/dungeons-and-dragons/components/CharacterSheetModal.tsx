@@ -611,7 +611,7 @@ export function CharacterSheetModal({ character, onClose }: Props) {
               {vitals.map((v) => (
                 <div
                   key={v.label}
-                  className="flex flex-col items-center rounded-xl border border-amber-400/25 bg-dnd-ink/70 px-2 py-2"
+                  className="flex flex-col items-center rounded-card-xl border border-amber-400/25 bg-dnd-ink/70 px-2 py-2"
                 >
                   <span className="font-fantasy text-xl font-bold text-amber-100">{v.value}</span>
                   <span className="font-serif-body mt-0.5 text-center text-5xs font-bold uppercase tracking-label text-amber-300/60">
@@ -635,7 +635,7 @@ export function CharacterSheetModal({ character, onClose }: Props) {
 
               {/* Saving throws + skills — the sheet's middle column. */}
               <div className="flex flex-col gap-4 md:col-span-4">
-                <div className="rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                <div className="rounded-card-xl border border-amber-400/20 bg-black/25 p-3">
                   <SectionHeading>Saving Throws</SectionHeading>
                   <ul className="mt-2 flex flex-col gap-1">
                     {savingThrowRows.map((row) => (
@@ -650,7 +650,7 @@ export function CharacterSheetModal({ character, onClose }: Props) {
                   </ul>
                 </div>
 
-                <div className="rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                <div className="rounded-card-xl border border-amber-400/20 bg-black/25 p-3">
                   <SectionHeading>Skills</SectionHeading>
                   <ul className="mt-2 flex flex-col gap-1">
                     {skillRows.map((row) => (
@@ -678,7 +678,7 @@ export function CharacterSheetModal({ character, onClose }: Props) {
 
               {/* Proficiencies, gear, story — the sheet's right column. */}
               <div className="flex min-w-0 flex-col gap-4 md:col-span-5">
-                <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                <div className="flex flex-col gap-1.5 rounded-card-xl border border-amber-400/20 bg-black/25 p-3">
                   <SectionHeading>Proficiencies & Languages</SectionHeading>
                   <div className="mt-1 flex flex-col gap-1">
                     <LabeledTerms label="Armor" terms={sheet.armorProficiencies} />
@@ -696,7 +696,7 @@ export function CharacterSheetModal({ character, onClose }: Props) {
                 </div>
 
                 {sheet.attacks.length > 0 && (
-                  <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                  <div className="flex flex-col gap-1.5 rounded-card-xl border border-amber-400/20 bg-black/25 p-3">
                     <SectionHeading>Attacks</SectionHeading>
                     <ul className="mt-1 flex flex-col gap-1.5">
                       {sheet.attacks.map((attack) => (
@@ -709,7 +709,7 @@ export function CharacterSheetModal({ character, onClose }: Props) {
                 )}
 
                 {sheet.equipment.length > 0 && (
-                  <div className="flex flex-col gap-1.5 rounded-xl border border-amber-400/20 bg-black/25 p-3">
+                  <div className="flex flex-col gap-1.5 rounded-card-xl border border-amber-400/20 bg-black/25 p-3">
                     <SectionHeading>Equipment</SectionHeading>
                     <p className="mt-1 text-xs leading-relaxed text-amber-200/75">
                       {sheet.equipment.map((item, i) => (

@@ -2,6 +2,7 @@ import { computeElo } from "@boardgames/core/tournament/elo";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { apiClient } from "../../lib/api-client";
 import { Button } from "../ui/Button";
+import { ProgressBar } from "../ui/ProgressBar";
 
 interface TournamentResult {
   id: string;
@@ -240,7 +241,7 @@ export default function TournamentGrid({
     <div className="mx-auto flex min-h-0 w-full max-w-6xl flex-1 flex-col px-4 py-6">
       {/* Header */}
       <div className="shrink-0 text-center">
-        <h2 className="text-3xl font-extrabold text-white">AI Tournament</h2>
+        <h2 className="text-3xl font-extrabold text-fg-strong">AI Tournament</h2>
         <p className="mt-2 text-sm text-fg-secondary">
           {gamesPerMatchup} games per matchup &middot; alternating first player
         </p>
@@ -255,12 +256,11 @@ export default function TournamentGrid({
             {" — "}
             {running.completed} / {running.total}
           </div>
-          <div className="h-2 w-full overflow-hidden rounded-full bg-surface-800">
-            <div
-              className="h-full bg-accent-500 transition-all duration-150"
-              style={{ width: `${(running.completed / running.total) * 100}%` }}
-            />
-          </div>
+          <ProgressBar
+            size="md"
+            label="Tournament progress"
+            value={running.completed / running.total}
+          />
           <div className="mt-2 flex gap-2">
             {running.completed > 0 && onViewMatchHistory && (
               <Button
@@ -286,21 +286,21 @@ export default function TournamentGrid({
       <div className="mt-6 flex w-full flex-1 flex-col text-sm">
         {/* Header row */}
         <div
-          className="grid h-10 shrink-0 items-center border-b border-white/10"
+          className="grid h-10 shrink-0 items-center border-b border-line"
           style={{
             gridTemplateColumns: `3.5rem 10rem repeat(${strategies.length}, 1fr)`,
           }}
         >
-          <div className="px-1 text-center text-5xs font-semibold uppercase tracking-wider text-fg-muted">
+          <div className="px-1 text-center text-5xs font-semibold uppercase tracking-label text-fg-muted">
             ELO
           </div>
-          <div className="px-2 text-left text-5xs font-semibold uppercase tracking-wider text-fg-muted">
+          <div className="px-2 text-left text-5xs font-semibold uppercase tracking-label text-fg-muted">
             Row vs Col
           </div>
           {strategies.map((col) => (
             <div
               key={col.id}
-              className="px-1 text-center text-5xs font-semibold uppercase leading-snug tracking-wide text-fg-muted"
+              className="px-1 text-center text-5xs font-semibold uppercase leading-snug tracking-label text-fg-muted"
             >
               <span className="line-clamp-2">{col.label}</span>
             </div>
@@ -322,16 +322,16 @@ export default function TournamentGrid({
                   gridTemplateColumns: `3.5rem 10rem repeat(${strategies.length}, 1fr)`,
                 }}
               >
-                <div className="flex items-center justify-center border-b border-white/10 px-1">
+                <div className="flex items-center justify-center border-b border-line px-1">
                   {hasResults ? (
-                    <span className="tabular-nums text-xs font-semibold text-white">{elo}</span>
+                    <span className="tabular-nums text-xs font-semibold text-fg-strong">{elo}</span>
                   ) : (
                     <span className="text-fg-disabled">—</span>
                   )}
                 </div>
-                <div className="flex min-w-0 items-center border-b border-white/10 px-2">
+                <div className="flex min-w-0 items-center border-b border-line px-2">
                   <span
-                    className="line-clamp-2 text-sm font-semibold leading-snug text-white"
+                    className="line-clamp-2 text-sm font-semibold leading-snug text-fg-strong"
                     title={row.label}
                   >
                     {row.label}
@@ -342,7 +342,7 @@ export default function TournamentGrid({
                     return (
                       <div
                         key={col.id}
-                        className="flex items-center justify-center border-b border-white/10 text-fg-disabled"
+                        className="flex items-center justify-center border-b border-line text-fg-disabled"
                       >
                         —
                       </div>
@@ -379,7 +379,7 @@ export default function TournamentGrid({
                   const matchup = direct ?? inverse;
 
                   return (
-                    <div key={col.id} className="border-b border-white/10 p-0.5">
+                    <div key={col.id} className="border-b border-line p-0.5">
                       {winRate !== null && tournamentId && matchup ? (
                         <Button
                           variant="plain"

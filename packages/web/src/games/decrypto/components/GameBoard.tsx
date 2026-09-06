@@ -67,7 +67,7 @@ function CluesBanner({ view }: { view: DecryptoPlayerView }) {
       <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1">
         {tx.clues.map((clue, i) => (
           // biome-ignore lint/suspicious/noArrayIndexKey: clue order IS the code order
-          <span key={i} className="text-lg font-bold text-white">
+          <span key={i} className="text-lg font-bold text-fg-strong">
             <span className="mr-1 text-2xs font-semibold text-fg-muted">{i + 1}.</span>
             {clue}
           </span>
@@ -142,7 +142,7 @@ export default function GameBoard({ view, playerNames, onAction, error }: GameBo
     <GameScreen
       background="bg-surface-950"
       contentClassName="mx-auto w-full max-w-4xl pb-3"
-      collapsibleSidebars
+      mobileRails="none"
       leftSidebarTitle="Decrypto"
       leftSidebar={
         <SidePanel

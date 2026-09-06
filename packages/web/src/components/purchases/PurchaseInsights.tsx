@@ -3,8 +3,8 @@ import { type ReactNode, useState } from "react";
 import { cn } from "../../lib/cn";
 import { ColumnChart, DonutChart } from "../ui/charts";
 import { MicroLabel } from "../ui/Label.tsx";
+import { StatTile } from "../ui/StatTile.tsx";
 import { Surface } from "../ui/Surface.tsx";
-import { TONE_TEXT } from "../ui/tones";
 import {
   committedEurCents,
   formatApproxEur,
@@ -34,20 +34,7 @@ function InsightTile({
   sub?: ReactNode;
   tone?: "neutral" | "rose" | "amber";
 }) {
-  return (
-    <Surface variant="raised" padding="none" className="flex flex-col gap-0.5 px-3 py-2.5">
-      <MicroLabel className="font-semibold">{label}</MicroLabel>
-      <span
-        className={cn(
-          "text-xl font-bold tabular-nums",
-          tone === "neutral" ? "text-white" : TONE_TEXT[tone],
-        )}
-      >
-        {value}
-      </span>
-      {sub && <span className="truncate text-3xs text-fg-muted">{sub}</span>}
-    </Surface>
-  );
+  return <StatTile align="start" label={label} value={value} sub={sub} tone={tone} />;
 }
 
 /**
@@ -64,8 +51,7 @@ function ByStageTile({ insights }: { insights: PurchaseInsightsData }) {
   const active = selected !== null && insights.byStatus[selected] > 0 ? selected : null;
 
   return (
-    <Surface variant="raised" padding="none" className="flex flex-col gap-0.5 px-3 py-2.5">
-      <MicroLabel className="font-semibold">By stage</MicroLabel>
+    <StatTile align="start" label="By stage">
       <div className="flex min-w-0 items-center gap-2.5">
         <DonutChart
           size={44}
@@ -82,7 +68,7 @@ function ByStageTile({ insights }: { insights: PurchaseInsightsData }) {
           }}
         />
         <div className="flex min-w-0 flex-col gap-0.5">
-          <span className="text-xl font-bold leading-none tabular-nums text-white">
+          <span className="text-xl font-bold leading-none tabular-nums text-fg-strong">
             {active ? insights.byStatus[active] : insights.activeCount}
           </span>
           <span
@@ -95,7 +81,7 @@ function ByStageTile({ insights }: { insights: PurchaseInsightsData }) {
           </span>
         </div>
       </div>
-    </Surface>
+    </StatTile>
   );
 }
 

@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 // Tinted in-board dialog panel — the "resolve this now" surface a game shows
 // above the fan (defuse, favor, steal, nope window, peek). Exploding Kittens
-// had six hand-spelled copies of the same `rounded-xl border border-{hue}-700/50
+// had six hand-spelled copies of the same `rounded-card-xl border border-{hue}-700/50
 // bg-{hue}-950/40` chrome, one hue apart. Tone communicates stakes:
 //
 //   danger    — rose: you are about to explode.
@@ -49,7 +49,7 @@ export function GameDialogPanel({
 }: GameDialogPanelProps) {
   const t = TONES[tone];
   const cls = [
-    "rounded-xl border",
+    "rounded-card-xl border",
     t.panel,
     spacious ? "p-6" : "p-4",
     center ? "text-center" : "",

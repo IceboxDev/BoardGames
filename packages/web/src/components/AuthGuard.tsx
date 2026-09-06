@@ -1,27 +1,30 @@
 import type { ReactNode } from "react";
 import { Navigate, useLocation } from "react-router-dom";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
-import { LoadingState } from "./ui/LoadingState";
-import { PageShell } from "./ui/PageShell";
+import { RouteFallback } from "./RouteFallback";
 
-type Mode = "auth" | "unauth" | "online" | "offline" | "admin";
+export type AuthMode = "auth" | "unauth" | "online" | "offline" | "admin";
 
 type Props = {
-  mode: Mode;
+  mode: AuthMode;
   children: ReactNode;
 };
 
+// The session gate. Mounted once per auth mode as a layout route (see
+// `AuthLayout` and App.tsx) so a page never wraps itself; the modes:
+//
+//   unauth   — must be signed OUT (login).
+//   auth     — must be signed in.
+//   online   — signed in AND may play online (onlineMode !== "offline").
+//   offline  — signed in AND takes part in game nights (onlineMode !== "online").
+//   admin    — signed in AND admin.
 export function AuthGuard({ mode, children }: Props) {
   const { user, isLoading, isAdmin } = useCurrentUser();
   const location = useLocation();
 
-  if (isLoading) {
-    return (
-      <PageShell layout="centered" background="plain">
-        <LoadingState />
-      </PageShell>
-    );
-  }
+  // The same screen the router shows while a lazy route resolves, so a cold
+  // load reads as ONE wait rather than two differently-drawn ones.
+  if (isLoading) return <RouteFallback />;
 
   if (mode === "unauth") {
     if (user) return <Navigate to="/" replace />;

@@ -103,7 +103,7 @@ export default function TrainerGame({ onViewHistory }: TrainerGameProps) {
           <StatRow label="Deck" value={String(ctx.deck.length)} color="text-fg-muted" />
 
           {(isSelecting || message) && (
-            <div className="border-t border-white/10 pt-3">
+            <div className="border-t border-line pt-3">
               {isSelecting ? (
                 <p className="text-xs font-semibold leading-snug text-yellow-300">Select 3 cards</p>
               ) : message ? (
@@ -133,7 +133,7 @@ export default function TrainerGame({ onViewHistory }: TrainerGameProps) {
             />
           )}
 
-          <div className="flex flex-col gap-2 border-t border-white/10 pt-3">
+          <div className="flex flex-col gap-2 border-t border-line pt-3">
             <Button
               variant="secondary"
               size="xs"

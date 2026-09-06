@@ -56,7 +56,7 @@ export default function OnlineFamilyCard({
         // the overflow-hidden card frame; the absolute overlay matches
         // the thumbnail's 16:9 box so flex-center aligns the strip on its
         // midline.
-        <div className="pointer-events-none absolute left-0 top-0 z-20 aspect-[16/9] w-full">
+        <div className="pointer-events-none absolute left-0 top-0 z-raised-2 aspect-[16/9] w-full">
           <div className="flex h-full items-center">
             <div className="-translate-x-2 pointer-events-auto sm:-translate-x-3.5">
               <VariantStrip

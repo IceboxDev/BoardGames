@@ -42,7 +42,7 @@ function GearCardTile({
       }`}
     >
       <div className="flex items-start justify-between gap-1">
-        <span className="flex items-center gap-1 text-2xs font-bold leading-tight text-white">
+        <span className="flex items-center gap-1 text-2xs font-bold leading-tight text-fg-strong">
           <span>{GEAR_LABELS[card.kind]}</span>
           <span
             className="rounded bg-stone-800 px-1 text-3xs"

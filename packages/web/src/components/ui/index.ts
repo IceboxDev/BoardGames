@@ -11,10 +11,11 @@ export { Badge, type BadgeTone } from "./Badge";
 export { BoardOverlay } from "./BoardOverlay";
 export { Button, ButtonLink } from "./Button";
 export { Checkbox } from "./Checkbox";
+export { CheckRow } from "./CheckRow";
 export { Chip, type ChipTone } from "./Chip";
 export { CopyField } from "./CopyField";
 export { DialogBackdrop } from "./DialogBackdrop";
-export { Drawer } from "./Drawer";
+export { Drawer, type DrawerSide } from "./Drawer";
 export { EmptyState, type EmptyStateTone } from "./EmptyState";
 export { ErrorAlert } from "./ErrorAlert";
 export { Field, FieldGroup } from "./Field";
@@ -23,7 +24,7 @@ export { Input } from "./Input";
 export { InteractiveCard, type InteractiveCardPadding } from "./InteractiveCard";
 export { Eyebrow, type EyebrowSize, type EyebrowTone, MicroLabel } from "./Label";
 export { LoadingState } from "./LoadingState";
-export { Modal, ModalBody, ModalFooter, type ModalSize } from "./Modal";
+export { Modal, ModalBody, type ModalDensity, ModalFooter, type ModalSize } from "./Modal";
 export { Overlay } from "./Overlay";
 export type { PageHeaderAlign, PageHeaderSize } from "./PageHeader";
 export { PageHeader } from "./PageHeader";
@@ -34,7 +35,9 @@ export type {
   PageShellLayout,
 } from "./PageShell";
 export { PageMain, PageShell } from "./PageShell";
+export { ProgressBar, type ProgressBarSize, type ProgressBarTone } from "./ProgressBar";
 export { QueryBoundary } from "./QueryBoundary";
+export { SearchInput } from "./SearchInput";
 export { Section } from "./Section";
 export type { SegmentedOption, SegmentedTone } from "./SegmentedControl";
 export { SegmentedControl } from "./SegmentedControl";
@@ -42,6 +45,7 @@ export { Select, type SelectSize } from "./Select";
 export { SelectableCard, type SelectableCardPadding } from "./SelectableCard";
 export { Spinner } from "./Spinner";
 export { Stack, type StackGap } from "./Stack";
+export { StatTile, type StatTileSize, type StatTileTone, type StatTileVariant } from "./StatTile";
 export {
   Surface,
   type SurfacePadding,

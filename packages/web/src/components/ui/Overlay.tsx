@@ -53,7 +53,7 @@ export function Overlay({
       >
         <DialogBackdrop onDismiss={closeOnClick ? onClose : undefined} label="Close preview" />
         <motion.div
-          className={`pointer-events-none relative z-10${contentClassName ? ` ${contentClassName}` : ""}`}
+          className={`pointer-events-none relative z-raised${contentClassName ? ` ${contentClassName}` : ""}`}
           initial={{ scale: 0.85, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.85, opacity: 0 }}

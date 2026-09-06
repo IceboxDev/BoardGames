@@ -47,7 +47,7 @@ export function cardChrome({
   return [
     size,
     "relative overflow-hidden shadow-md transition-all",
-    rounded === "xl" ? "rounded-xl" : "rounded-lg",
+    rounded === "xl" ? "rounded-card-xl" : "rounded-card-lg",
     ring,
     interaction,
     className,

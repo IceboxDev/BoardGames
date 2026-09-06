@@ -37,7 +37,7 @@ export function UsersTable({ loading, empty, deleteMode, children }: Props) {
   return (
     <Surface variant="panel" padding="none" className="overflow-hidden">
       <table className="w-full table-fixed text-sm">
-        <thead className="bg-surface-800 text-xs uppercase tracking-wider text-fg-muted">
+        <thead className="bg-surface-800 text-xs uppercase tracking-label text-fg-muted">
           {/* Phones deliberately show only Coverage + Name (both clickable —
               calendar and activity). The management columns need a desktop;
               horizontal table scrolling on touch is not a real affordance. */}
@@ -58,7 +58,7 @@ export function UsersTable({ loading, empty, deleteMode, children }: Props) {
             </th>
           </tr>
         </thead>
-        <tbody className="divide-y divide-white/5">{children}</tbody>
+        <tbody className="divide-y divide-line-soft">{children}</tbody>
       </table>
     </Surface>
   );

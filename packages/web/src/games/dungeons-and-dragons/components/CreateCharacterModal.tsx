@@ -1,6 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useState } from "react";
-import { Button, Modal } from "../../../components/ui";
+import { Button, ErrorAlert, Modal } from "../../../components/ui";
 import { createCharacter, fileToPdfDataUri, pdfValidationError } from "../../../lib/dnd-campaigns";
 import { errorMessageOf } from "../../../lib/error-message";
 import { qk } from "../../../lib/query-keys";
@@ -67,10 +67,12 @@ export function CreateCharacterModal({ campaignId, partyId, onClose }: Props) {
       </p>
 
       {(fileError || submitMutation.isError) && (
-        <p className="text-xs text-rose-300">
-          {fileError ??
-            errorMessageOf(submitMutation.error, "The scribes could not accept the sheet.")}
-        </p>
+        <ErrorAlert
+          message={
+            fileError ??
+            errorMessageOf(submitMutation.error, "The scribes could not accept the sheet.")
+          }
+        />
       )}
 
       <div className="flex justify-end gap-2">

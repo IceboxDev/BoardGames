@@ -155,14 +155,14 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
       <span>{isDnd ? "D&D night" : isExit ? "EXIT night" : "Game night"}</span>
       {(definiteCount > 0 || tentativeCount > 0) && (
         <span className="inline-flex items-baseline gap-1 tracking-normal normal-case">
-          <span aria-hidden="true" className="text-white/30">
+          <span aria-hidden="true" className="text-fg-strong/30">
             ·
           </span>
           <span className="font-bold text-emerald-300 tabular-nums">{definiteCount}</span>
           <span className="text-fg-secondary">going</span>
           {tentativeCount > 0 && (
             <>
-              <span aria-hidden="true" className="text-white/30">
+              <span aria-hidden="true" className="text-fg-strong/30">
                 +
               </span>
               <span className="font-bold text-amber-300 tabular-nums">{tentativeCount}</span>
@@ -187,10 +187,10 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
     <Modal
       onClose={onClose}
       size="full"
-      panelClassName="gap-2 p-4 sm:gap-4 sm:p-7"
+      density="compact"
       eyebrow={eyebrow}
       title={headingDate}
-      titleClassName="text-xl font-bold tracking-tight text-white xs2:text-2xl sm:text-3xl"
+      titleClassName="text-xl font-bold tracking-tight text-fg-strong xs2:text-2xl sm:text-3xl"
       subheader={subheader}
       headerExtra={picksLockToggle}
     >
@@ -392,7 +392,7 @@ export function HostLine({ name }: { name: string }) {
       <HostIcon className="h-3.5 w-3.5 shrink-0" />
       <span>
         <span className="text-fg-muted">Host </span>
-        <span className="font-semibold text-white">{name}</span>
+        <span className="font-semibold text-fg-strong">{name}</span>
       </span>
     </span>
   );
@@ -402,7 +402,7 @@ export function TimeLine({ value }: { value: string }) {
   return (
     <span className="inline-flex items-center gap-1.5 text-fg-secondary">
       <ClockIcon className="h-3.5 w-3.5 shrink-0" />
-      <span className="font-semibold tabular-nums text-white">{value}</span>
+      <span className="font-semibold tabular-nums text-fg-strong">{value}</span>
     </span>
   );
 }

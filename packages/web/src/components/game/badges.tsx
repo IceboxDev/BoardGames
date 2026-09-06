@@ -4,7 +4,7 @@ import { FlameArt } from "../ui/FlameArt.tsx";
 
 // Pill-style badges placed inside the `badgeTopLeft` / `badgeTopRight`
 // slots of `GameCardThumb` or `CarouselCardChrome`. All share the same
-// rounded-full + backdrop-blur + uppercase + tracking-wider treatment so
+// rounded-full + backdrop-blur + uppercase + tracking-label treatment so
 // the surface chrome reads identically across catalog and carousel cards.
 
 // Both bases sit on `tracking-pill` — the shared pill letter-spacing token.
@@ -57,13 +57,13 @@ export function VariantsBadge({
  * badge but with reduced contrast since it's a passive indicator.
  */
 export function ComingSoonBadge() {
-  return <span className={`${BADGE_BASE_TIGHT} bg-black/65 text-white/75`}>Coming soon</span>;
+  return <span className={`${BADGE_BASE_TIGHT} bg-black/65 text-fg-strong/75`}>Coming soon</span>;
 }
 
 /** "2008" year pill, top-right of carousel cards. */
 export function YearBadge({ year }: { year: number | string }) {
   return (
-    <span className="inline-flex items-center rounded-full bg-black/55 px-2 py-0.5 text-3xs font-semibold text-white/85 backdrop-blur-sm">
+    <span className="inline-flex items-center rounded-full bg-black/55 px-2 py-0.5 text-3xs font-semibold text-fg-strong/85 backdrop-blur-sm">
       {year}
     </span>
   );

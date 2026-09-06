@@ -16,7 +16,7 @@ const SIZE_CLASSES = {
   sm: "w-12 h-[4.5rem]",
   md: "w-16 h-24",
   lg: "w-20 h-[7.5rem]",
-  hand: "w-full aspect-[2/3]",
+  hand: "w-full aspect-card",
 } as const;
 
 const HEADER_HEIGHT: Record<string, string> = {
@@ -185,7 +185,7 @@ export default function Card({
       ].join(" ")}
     >
       <div
-        className={`${HEADER_HEIGHT[size]} w-full flex items-center justify-between px-1.5 shrink-0 relative z-10 bg-black`}
+        className={`${HEADER_HEIGHT[size]} w-full flex items-center justify-between px-1.5 shrink-0 relative z-raised bg-black`}
       >
         <CornerBadge card={card} size={size} color={hex} />
         <ExpeditionIcon color={card.color} size={size} />

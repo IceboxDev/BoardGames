@@ -17,7 +17,7 @@ const SIZE_CLASSES = {
   sm: "h-20 w-14",
   md: "h-28 w-20",
   lg: "h-36 w-24",
-  hand: "w-full aspect-[2/3]",
+  hand: "w-full aspect-card",
 };
 
 export default function Card({

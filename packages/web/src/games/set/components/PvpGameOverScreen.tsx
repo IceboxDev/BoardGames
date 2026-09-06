@@ -60,7 +60,7 @@ function PlayerColumn({
           label="Net Score"
           value={String(stats.netScore)}
           bold
-          color={stats.netScore > 0 ? "text-green-400" : "text-white"}
+          color={stats.netScore > 0 ? "text-green-400" : "text-fg-strong"}
         />
         {stats.avgFindTimeMs > 0 && (
           <Stat label="Avg Find Time" value={formatTime(stats.avgFindTimeMs)} />
@@ -77,7 +77,7 @@ function Stat({
   label,
   value,
   bold,
-  color = "text-white",
+  color = "text-fg-strong",
 }: {
   label: string;
   value: string;

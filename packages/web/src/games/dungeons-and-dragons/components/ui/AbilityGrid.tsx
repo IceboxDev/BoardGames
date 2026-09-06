@@ -47,8 +47,8 @@ export function AbilityGrid({
         : "grid grid-cols-3 gap-2 sm:grid-cols-6";
   const box =
     size === "sm"
-      ? "flex flex-col items-center rounded-lg border border-amber-400/20 bg-dnd-ink/70 py-1"
-      : "flex flex-col items-center justify-center rounded-xl border border-amber-400/25 bg-dnd-ink/70 px-2 py-2";
+      ? "flex flex-col items-center rounded-card-lg border border-amber-400/20 bg-dnd-ink/70 py-1"
+      : "flex flex-col items-center justify-center rounded-card-xl border border-amber-400/25 bg-dnd-ink/70 px-2 py-2";
 
   return (
     <div className={[grid, className].filter(Boolean).join(" ")}>

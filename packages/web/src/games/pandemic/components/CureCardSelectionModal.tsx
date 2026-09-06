@@ -100,9 +100,9 @@ export default function CureCardSelectionModal({
     <Modal
       onClose={onCancel}
       title="Discover a Cure"
-      titleClassName="text-lg font-semibold text-white"
+      titleClassName="text-lg font-semibold text-fg-strong"
       subheader={
-        <div className="text-sm text-white/60">
+        <div className="text-sm text-fg-strong/60">
           Select {needed} cards — {pick.selected.size}/{needed} chosen
         </div>
       }

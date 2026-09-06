@@ -7,14 +7,14 @@ import { ApiError, SchemaError } from "../../lib/api-fetch.ts";
 import { fileToAvatarDataUri, fileToDownscaledDataUri } from "../../lib/downscale-image.ts";
 import { fetchAvatarJob, generateAvatar, saveAvatar } from "../../lib/profile.ts";
 import { qk } from "../../lib/query-keys.ts";
-import { CameraIcon, SearchIcon } from "../icons";
+import { CameraIcon } from "../icons";
 import { Button } from "../ui/Button.tsx";
 import { Chip } from "../ui/Chip.tsx";
 import { ErrorAlert } from "../ui/ErrorAlert.tsx";
 import { Field, FieldGroup } from "../ui/Field.tsx";
-import { Input } from "../ui/Input.tsx";
 import { LoadingState } from "../ui/LoadingState.tsx";
 import { Modal, ModalBody, ModalFooter } from "../ui/Modal.tsx";
+import { SearchInput } from "../ui/SearchInput.tsx";
 import { Textarea } from "../ui/Textarea.tsx";
 
 // AI profile-picture generator. Flow: upload reference photo → pick game →
@@ -195,17 +195,17 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
         <ModalBody gap="md">
           {/* 1. Reference image */}
           <FieldGroup label="Reference photo">
-            <label className="flex cursor-pointer items-center gap-3 rounded-lg border border-dashed border-white/15 bg-surface-900/60 p-3 transition hover:border-accent-400/40">
+            <label className="flex cursor-pointer items-center gap-3 rounded-card-lg border border-dashed border-line-strong bg-surface-900/60 p-3 transition hover:border-accent-400/40">
               {/* biome-ignore lint/correctness/noRestrictedElements: sr-only file input behind the styled dropzone — no visible chrome to drift */}
               <input type="file" accept="image/*" onChange={handleFile} className="sr-only" />
               {referenceImage ? (
                 <img
                   src={referenceImage}
                   alt="Reference"
-                  className="h-14 w-14 shrink-0 rounded-md object-cover"
+                  className="h-14 w-14 shrink-0 rounded-card-md object-cover"
                 />
               ) : (
-                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-md bg-surface-800 text-fg-muted">
+                <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-card-md bg-surface-800 text-fg-muted">
                   <CameraIcon />
                 </span>
               )}
@@ -220,7 +220,7 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
             {selectedGame ? (
               // Selected: collapse the picker to just the chosen game + a way to
               // re-pick. (Showing the search + list here duplicated the game 3×.)
-              <div className="flex items-center gap-2.5 rounded-lg border border-accent-400/50 bg-accent-500/15 px-3 py-2.5">
+              <div className="flex items-center gap-2.5 rounded-card-lg border border-accent-400/50 bg-accent-500/15 px-3 py-2.5">
                 <img
                   src={selectedGame.thumbnail}
                   alt=""
@@ -242,19 +242,13 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
               </div>
             ) : (
               <>
-                <div className="relative">
-                  <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-fg-muted">
-                    <SearchIcon />
-                  </span>
-                  <Input
-                    value={gameSearch}
-                    onChange={(e) => setGameSearch(e.target.value)}
-                    placeholder="Search games…"
-                    aria-label="Search games"
-                    className="pl-9"
-                  />
-                </div>
-                <ul className="max-h-44 overflow-y-auto rounded-lg border border-white/10 bg-surface-900/40">
+                <SearchInput
+                  value={gameSearch}
+                  onChange={(e) => setGameSearch(e.target.value)}
+                  placeholder="Search games…"
+                  aria-label="Search games"
+                />
+                <ul className="max-h-44 overflow-y-auto rounded-card-lg border border-line bg-surface-900/40">
                   {filteredGames.map((game) => (
                     <li key={game.slug}>
                       {/* biome-ignore lint/correctness/noRestrictedElements: row-select option in a custom list */}
@@ -264,7 +258,7 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
                           setGameSlug(game.slug);
                           setGameSearch("");
                         }}
-                        className="flex w-full items-center gap-2.5 px-2.5 py-2 text-left text-fg-secondary transition hover:bg-white/5 hover:text-fg-primary active:scale-[0.99]"
+                        className="flex w-full items-center gap-2.5 px-2.5 py-2 text-left text-fg-secondary transition hover:bg-fill hover:text-fg-primary active:scale-[0.99]"
                       >
                         <img
                           src={game.thumbnail}
@@ -320,12 +314,12 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
           {isAdmin && (
             <>
               <div className="flex items-center gap-3 pt-1">
-                <span className="h-px flex-1 bg-white/10" />
+                <span className="h-px flex-1 bg-fill-strong" />
                 <span className="text-3xs uppercase tracking-label text-fg-muted">or</span>
-                <span className="h-px flex-1 bg-white/10" />
+                <span className="h-px flex-1 bg-fill-strong" />
               </div>
               <FieldGroup label="Already have a picture?">
-                <label className="flex cursor-pointer items-center gap-3 rounded-lg border border-dashed border-white/15 bg-surface-900/60 p-3 transition hover:border-accent-400/40">
+                <label className="flex cursor-pointer items-center gap-3 rounded-card-lg border border-dashed border-line-strong bg-surface-900/60 p-3 transition hover:border-accent-400/40">
                   {/* biome-ignore lint/correctness/noRestrictedElements: sr-only file input behind the styled dropzone — no visible chrome to drift */}
                   <input
                     type="file"
@@ -333,7 +327,7 @@ export function GenerateAvatarModal({ userId, targetName, onClose }: GenerateAva
                     onChange={handleFinishedUpload}
                     className="sr-only"
                   />
-                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-md bg-surface-800 text-fg-muted">
+                  <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-card-md bg-surface-800 text-fg-muted">
                     <CameraIcon />
                   </span>
                   <span className="text-sm text-fg-secondary">

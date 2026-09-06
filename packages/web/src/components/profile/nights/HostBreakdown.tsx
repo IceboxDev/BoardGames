@@ -1,6 +1,7 @@
 import type { ProfileNightItem } from "@boardgames/core/protocol";
 import { compactAddress } from "../../../lib/compact-address.ts";
 import { HostIcon, PinIcon } from "../../icons";
+import { ProgressBar } from "../../ui/ProgressBar.tsx";
 import { hostGroups } from "./night-stats.ts";
 
 // "Where we play": nights grouped by host. There is no locations table —
@@ -31,17 +32,13 @@ export function HostBreakdown({ items }: { items: readonly ProfileNightItem[] })
                 <span className="truncate">{compactAddress(group.usualAddress)}</span>
               </p>
             )}
-            <div className="mt-1 h-1.5 overflow-hidden rounded-full bg-surface-800">
-              <div className="flex h-full" style={{ width: `${(group.total / max) * 100}%` }}>
-                <div
-                  className="h-full bg-emerald-500/80"
-                  style={{
-                    width: `${group.total > 0 ? (group.attended / group.total) * 100 : 0}%`,
-                  }}
-                />
-                <div className="h-full flex-1 bg-white/10" />
-              </div>
-            </div>
+            <ProgressBar
+              className="mt-1"
+              label={`Attended at ${group.name}`}
+              value={group.attended / max}
+              extent={group.total / max}
+              tone="emerald"
+            />
           </div>
         </li>
       ))}

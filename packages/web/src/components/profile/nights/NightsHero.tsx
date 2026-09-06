@@ -1,21 +1,10 @@
 import type { ProfileNightItem } from "@boardgames/core/protocol";
-import type { ReactNode } from "react";
 import { formatDayKey } from "../../../lib/date-format.ts";
 import { HostIcon, TrophyIcon } from "../../icons";
 import { DonutChart } from "../../ui/charts";
 import { FlameArt } from "../../ui/FlameArt.tsx";
-import { MicroLabel } from "../../ui/Label.tsx";
-import { Surface } from "../../ui/Surface.tsx";
+import { StatTile } from "../../ui/StatTile.tsx";
 import { attendanceStreaks, nightTotals } from "./night-stats.ts";
-
-function HeroCard({ label, children }: { label: string; children: ReactNode }) {
-  return (
-    <Surface variant="raised" padding="none" className="flex min-w-0 flex-col gap-2 p-4">
-      <MicroLabel className="font-semibold">{label}</MicroLabel>
-      {children}
-    </Surface>
-  );
-}
 
 /** Hero strip: attendance ring, streaks, hosted nights, games per night. */
 export function NightsHero({
@@ -31,7 +20,7 @@ export function NightsHero({
 
   return (
     <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-      <HeroCard label="Attendance">
+      <StatTile align="start" padding="lg" label="Attendance">
         <div className="flex items-center gap-4">
           <DonutChart
             size={84}
@@ -41,7 +30,7 @@ export function NightsHero({
               { value: totals.total - totals.attended, tone: "neutral", label: "Missed" },
             ]}
           >
-            <span className="text-sm font-bold tabular-nums text-white">
+            <span className="text-sm font-bold tabular-nums text-fg-strong">
               {totals.attended} / {totals.total}
             </span>
           </DonutChart>
@@ -50,9 +39,9 @@ export function NightsHero({
             <p className="text-3xs text-fg-muted">of all nights</p>
           </div>
         </div>
-      </HeroCard>
+      </StatTile>
 
-      <HeroCard label="Streaks">
+      <StatTile align="start" padding="lg" label="Streaks">
         <div className="flex flex-1 flex-col justify-between gap-1">
           <span className="flex items-center gap-1.5 text-2xl font-bold tabular-nums text-fg-primary">
             {streaks.current}
@@ -62,9 +51,9 @@ export function NightsHero({
             nights in a row · longest {streaks.longest}
           </span>
         </div>
-      </HeroCard>
+      </StatTile>
 
-      <HeroCard label="Hosted">
+      <StatTile align="start" padding="lg" label="Hosted">
         <div className="flex flex-1 flex-col justify-between gap-1">
           <span className="flex items-center gap-1.5 text-2xl font-bold tabular-nums text-fg-primary">
             {totals.hosted}
@@ -76,9 +65,9 @@ export function NightsHero({
               : "never hosted yet"}
           </span>
         </div>
-      </HeroCard>
+      </StatTile>
 
-      <HeroCard label="Games per night">
+      <StatTile align="start" padding="lg" label="Games per night">
         <div className="flex flex-1 flex-col justify-between gap-1">
           <span className="flex items-center gap-1.5 text-2xl font-bold tabular-nums text-fg-primary">
             {totals.avgGamesPerAttendedNight === null
@@ -90,7 +79,7 @@ export function NightsHero({
             {totals.gamesPlayed} recorded games across all nights
           </span>
         </div>
-      </HeroCard>
+      </StatTile>
     </div>
   );
 }

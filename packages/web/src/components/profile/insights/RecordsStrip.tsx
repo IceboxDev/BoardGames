@@ -1,6 +1,6 @@
 import type { ProfileMatchSummaryItem } from "@boardgames/core/protocol";
 import { formatDayKey, formatShortDate } from "../../../lib/date-format.ts";
-import { MicroLabel } from "../../ui/Label.tsx";
+import { StatTile } from "../../ui/StatTile.tsx";
 import { Surface } from "../../ui/Surface.tsx";
 import { personalRecords } from "./summary-stats.ts";
 
@@ -36,10 +36,15 @@ export function RecordsStrip({ items }: { items: readonly ProfileMatchSummaryIte
       className="grid grid-cols-2 gap-x-4 gap-y-3 p-4 sm:grid-cols-3"
     >
       {rows.map((row) => (
-        <div key={row.label} className="flex flex-col gap-0.5">
-          <MicroLabel>{row.label}</MicroLabel>
-          <span className="text-sm font-semibold tabular-nums text-fg-primary">{row.value}</span>
-        </div>
+        <StatTile
+          key={row.label}
+          variant="plain"
+          padding="none"
+          align="start"
+          size="sm"
+          label={row.label}
+          value={row.value}
+        />
       ))}
     </Surface>
   );

@@ -55,7 +55,7 @@ export default function CompanionGame({
           tone={phase.winner === "good" ? "gold" : "danger"}
           className="flex flex-col items-center gap-2 py-8 text-center"
         >
-          <p className="text-3xl font-bold text-white">
+          <p className="text-3xl font-bold text-fg-strong">
             {phase.winner === "good" ? "Good wins!" : "Evil wins!"}
           </p>
           <p className="text-sm text-fg-secondary">{phase.reason}</p>
@@ -105,7 +105,7 @@ export default function CompanionGame({
   return (
     <Screen>
       <header className="flex items-center justify-between gap-2">
-        <h1 className="text-lg font-bold text-white">{phaseLabel}</h1>
+        <h1 className="text-lg font-bold text-fg-strong">{phaseLabel}</h1>
         <Button
           variant="ghost"
           size="xs"

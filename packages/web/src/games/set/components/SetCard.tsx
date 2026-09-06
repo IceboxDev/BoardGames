@@ -41,7 +41,7 @@ function ShapeSVG({
     <svg
       aria-hidden="true"
       viewBox="0 0 40 60"
-      className="h-[70%] shrink-0 aspect-[2/3] overflow-visible"
+      className="h-[70%] shrink-0 aspect-card overflow-visible"
     >
       {fill === "striped" && (
         <defs>

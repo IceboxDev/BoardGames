@@ -89,7 +89,7 @@ export function QuestProgressBar({
 
       {/* Selected waypoint detail. */}
       {showDetail && current && (
-        <div className="rounded-xl border border-amber-400/15 bg-black/25 px-3 py-2.5">
+        <div className="rounded-card-xl border border-amber-400/15 bg-black/25 px-3 py-2.5">
           <div className="flex flex-wrap items-center gap-2">
             <span
               className={`font-serif-body shrink-0 rounded-full px-2 py-0.5 text-3xs font-bold uppercase tracking-label ring-1 ${KIND_CHIP[current.kind]}`}

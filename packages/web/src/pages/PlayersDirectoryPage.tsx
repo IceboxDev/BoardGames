@@ -1,14 +1,14 @@
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
-import { SearchIcon, UsersIcon } from "../components/icons";
+import { UsersIcon } from "../components/icons";
 import { PlayerCard } from "../components/profile/PlayerCard.tsx";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
-import { Input } from "../components/ui/Input.tsx";
 import { LoadingState } from "../components/ui/LoadingState.tsx";
 import { PageHeader } from "../components/ui/PageHeader.tsx";
 import { PageMain, PageShell } from "../components/ui/PageShell.tsx";
 import { QueryBoundary } from "../components/ui/QueryBoundary.tsx";
+import { SearchInput } from "../components/ui/SearchInput.tsx";
 import { fetchPlayers } from "../lib/profile.ts";
 import { qk } from "../lib/query-keys.ts";
 
@@ -42,18 +42,13 @@ export default function PlayersDirectoryPage() {
           }
           subtitle="Browse the group and peek at everyone's library, favorites, and stats."
           actions={
-            <div className="relative w-full sm:w-64">
-              <span className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-fg-muted">
-                <SearchIcon />
-              </span>
-              <Input
-                value={search}
-                onChange={(e) => setSearch(e.target.value)}
-                placeholder="Search players…"
-                aria-label="Search players"
-                className="pl-9"
-              />
-            </div>
+            <SearchInput
+              containerClassName="w-full sm:w-64"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder="Search players…"
+              aria-label="Search players"
+            />
           }
         />
 

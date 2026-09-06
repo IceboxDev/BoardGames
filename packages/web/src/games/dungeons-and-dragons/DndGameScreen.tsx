@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { GameScreen } from "../../components/game-layout";
 import { BookIcon } from "../../components/icons";
 import { D20Die } from "../../components/offline/D20Die";
-import { Button, EmptyState, LoadingState, Modal } from "../../components/ui";
+import { Button, EmptyState, ErrorAlert, LoadingState, Modal } from "../../components/ui";
 import {
   activeCombatQueryFn,
   advanceCombat,
@@ -372,7 +372,7 @@ export function DndGameScreen({ campaign, party }: Props) {
               {recap.map((entry) => (
                 <li
                   key={entry.id}
-                  className={`rounded-lg border px-2.5 py-1.5 text-xs leading-relaxed ${
+                  className={`rounded-card-lg border px-2.5 py-1.5 text-xs leading-relaxed ${
                     entry.kind === "player-action"
                       ? "border-amber-400/15 bg-black/10 italic text-amber-300/70"
                       : entry.kind === "combat"
@@ -464,7 +464,7 @@ export function DndGameScreen({ campaign, party }: Props) {
       }
       fan={
         screen === "main" && (!branchingBlocked || combatHere) ? (
-          <div className="flex gap-2" style={{ height: 190 }}>
+          <div className="flex h-fan gap-2">
             {/* biome-ignore lint/correctness/noRestrictedElements: D&D-tool themed textarea — parchment palette, not the app form chrome */}
             <textarea
               value={message}
@@ -481,26 +481,26 @@ export function DndGameScreen({ campaign, party }: Props) {
                   ? 'What happened this turn? — e.g. "Victor darts behind the vine and stabs: 19 to hit, 8 piercing."'
                   : 'What do the players say or do? — e.g. "We pry open the crypt door as quietly as we can."'
               }
-              className="h-full min-w-0 flex-1 resize-none rounded-2xl border border-amber-400/25 bg-dnd-ink/70 p-3 text-sm text-amber-100 placeholder:text-amber-200/30 focus:border-amber-300/60 focus:outline-none"
+              className="h-full min-w-0 flex-1 resize-none rounded-card-2xl border border-amber-400/25 bg-dnd-ink/70 p-3 text-sm text-amber-100 placeholder:text-amber-200/30 focus:border-amber-300/60 focus:outline-none"
             />
             <div className="flex w-36 shrink-0 flex-col gap-2">
               {(combatHere ? resolveTurnMutation : generateMutation).isError && (
-                <p className="text-3xs text-rose-300">
-                  {errorMessageOf(
+                <ErrorAlert
+                  message={errorMessageOf(
                     (combatHere ? resolveTurnMutation : generateMutation).error,
                     combatHere ? "The referee faltered." : "The sages faltered.",
                   )}
-                </p>
+                />
               )}
               {!combatHere && suggestMutation.isError && (
-                <p className="text-3xs text-rose-300">
-                  {errorMessageOf(suggestMutation.error, "The suggestion failed.")}
-                </p>
+                <ErrorAlert
+                  message={errorMessageOf(suggestMutation.error, "The suggestion failed.")}
+                />
               )}
               {!combatHere && quickResolveMutation.isError && (
-                <p className="text-3xs text-rose-300">
-                  {errorMessageOf(quickResolveMutation.error, "The resolution failed.")}
-                </p>
+                <ErrorAlert
+                  message={errorMessageOf(quickResolveMutation.error, "The resolution failed.")}
+                />
               )}
               {!combatHere && (
                 <Button
@@ -546,7 +546,7 @@ export function DndGameScreen({ campaign, party }: Props) {
           </div>
         ) : (
           // Reserved tray on other screens — kept at the unified fan height.
-          <div style={{ height: 190 }} aria-hidden="true" />
+          <div className="h-fan" aria-hidden="true" />
         )
       }
     >
@@ -684,7 +684,7 @@ export function DndGameScreen({ campaign, party }: Props) {
                       <span className="font-fantasy min-w-0 flex-1 truncate text-base font-bold text-amber-100">
                         {book.label}
                       </span>
-                      <span className="shrink-0 rounded-full bg-white/[0.04] px-2 py-0.5 text-3xs font-semibold uppercase tracking-label text-fg-secondary ring-1 ring-white/10">
+                      <span className="shrink-0 rounded-full bg-fill-soft px-2 py-0.5 text-3xs font-semibold uppercase tracking-label text-fg-secondary ring-1 ring-line">
                         Core rules
                       </span>
                     </DndPanel>

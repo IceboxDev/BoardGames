@@ -95,7 +95,7 @@ export function UserRow({
             // This label OVERRIDES the inner "NN%" text for assistive tech, so
             // it has to carry the coverage data itself (see coverageSpeech).
             aria-label={`View ${user.name || user.email}'s availability calendar — ${coverageSpeech(coverage)}`}
-            className="-mx-1 cursor-pointer rounded-md px-1 py-0.5 transition-colors hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+            className="-mx-1 cursor-pointer rounded-ui-md px-1 py-0.5 transition-colors hover:bg-fill focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
           >
             <CoverageCell coverage={coverage} />
           </button>
@@ -107,7 +107,7 @@ export function UserRow({
               type="button"
               onClick={onOpenActivity}
               aria-label={`View ${user.name || user.email}'s activity`}
-              className="-mx-1 cursor-pointer rounded-md px-1 py-0.5 text-left font-medium transition-colors hover:bg-white/5 hover:text-accent-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+              className="-mx-1 cursor-pointer rounded-ui-md px-1 py-0.5 text-left font-medium transition-colors hover:bg-fill hover:text-accent-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
             >
               {user.name || "—"}
             </button>
@@ -186,7 +186,7 @@ function RoleBadge({ role }: { role: string | null }) {
   return (
     <span
       className={`rounded-full px-2 py-0.5 text-xs ${
-        isAdmin ? "bg-accent-500/20 text-accent-300" : "bg-white/5 text-fg-secondary"
+        isAdmin ? "bg-accent-500/20 text-accent-300" : "bg-fill text-fg-secondary"
       }`}
     >
       {role ?? "user"}
@@ -230,7 +230,7 @@ function DeleteOrOnlineCell({
       {deleteMode ? (
         isSelf ? (
           <span
-            className="inline-flex h-6 items-center rounded-md border border-white/5 bg-white/5 px-2.5 text-xs italic text-fg-muted"
+            className="inline-flex h-6 items-center rounded-card-md border border-line-soft bg-fill px-2.5 text-xs italic text-fg-muted"
             title="You cannot delete yourself"
           >
             you

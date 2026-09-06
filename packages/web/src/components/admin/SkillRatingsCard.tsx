@@ -64,7 +64,7 @@ function CandidateRow({
 }) {
   const name = nameOf(state, candidate.subjectUserId);
   return (
-    <li className="flex items-center justify-between gap-3 rounded-lg bg-white/[0.03] px-3 py-2">
+    <li className="flex items-center justify-between gap-3 rounded-card-lg bg-fill-soft px-3 py-2">
       <span className="min-w-0 truncate text-xs text-fg-secondary">
         {spotlightLine(candidate.event, { voice: "them", firstName: name.split(" ")[0] })}
       </span>

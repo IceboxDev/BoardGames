@@ -147,9 +147,9 @@ export default function LoginPage() {
         {googleEnabled && (
           <>
             <div className="flex items-center gap-3">
-              <div className="h-px flex-1 bg-white/10" />
-              <span className="text-xs uppercase tracking-wider text-fg-muted">or</span>
-              <div className="h-px flex-1 bg-white/10" />
+              <div className="h-px flex-1 bg-fill-strong" />
+              <span className="text-xs uppercase tracking-label text-fg-muted">or</span>
+              <div className="h-px flex-1 bg-fill-strong" />
             </div>
             <Button type="button" variant="secondary" size="lg" onClick={handleGoogle} block>
               <GoogleIcon />

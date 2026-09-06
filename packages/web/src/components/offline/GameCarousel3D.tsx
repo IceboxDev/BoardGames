@@ -303,7 +303,7 @@ export default function GameCarousel3D({
   // backdrop-filter re-samples the animating cards behind the button every
   // frame, which is disproportionately expensive on phones.
   const navBtnCls =
-    "absolute top-1/2 z-30 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-white/15 bg-surface-900/90 text-white transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:h-12 sm:w-12";
+    "absolute top-1/2 z-raised-3 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-line-strong bg-surface-900/90 text-fg-strong transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:h-12 sm:w-12";
 
   // Render only the units within the cull window. Everything further out is
   // invisible behind the edge fade anyway, and every mounted card is a
@@ -442,7 +442,7 @@ export default function GameCarousel3D({
           return (
             <div
               key={`chips:${unit.family.id}`}
-              className="carousel-pose pointer-events-none absolute z-30 origin-center"
+              className="carousel-pose pointer-events-none absolute z-raised-3 origin-center"
               style={
                 {
                   width: cardW,

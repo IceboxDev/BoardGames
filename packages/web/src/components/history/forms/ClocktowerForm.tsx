@@ -250,7 +250,7 @@ function StorytellerPicker({
                 </optgroup>
               ))}
             </Select>
-            <span className="text-3xs uppercase tracking-wider text-fg-muted">
+            <span className="text-3xs uppercase tracking-label text-fg-muted">
               Runs the game · not a team
             </span>
           </>

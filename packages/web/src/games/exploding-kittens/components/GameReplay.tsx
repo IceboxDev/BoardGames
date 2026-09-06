@@ -62,7 +62,7 @@ export default function GameReplay({ game }: GameReplayProps) {
         <GameBoard state={boardStateWithLog} replayMode stepDescription={currentStep.description} />
       </div>
 
-      <div className="shrink-0 border-t border-white/10 bg-surface-900/80 px-4 py-3">
+      <div className="shrink-0 border-t border-line bg-surface-900/80 px-4 py-3">
         <ReplayControls playback={playback} description={currentStep.description} />
       </div>
     </div>

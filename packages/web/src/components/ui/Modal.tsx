@@ -7,6 +7,7 @@ import { DialogBackdrop } from "./DialogBackdrop";
 import { useBodyScrollLock, useDialogEscape, useFocusTrap } from "./dialog-a11y";
 import { IconButton } from "./IconButton";
 import { Eyebrow } from "./Label";
+import { RADIUS_CARD_3XL } from "./radii";
 
 // Single dialog primitive. Owns: portal, backdrop, panel chrome, close X,
 // focus trap, body-scroll lock, escape, role=dialog, aria-modal,
@@ -40,6 +41,17 @@ import { Eyebrow } from "./Label";
 
 export type ModalSize = "xs" | "sm" | "md" | "lg" | "xl" | "full";
 
+// Panel padding + inner rhythm. `compact` is the canvas dialogs' phone
+// treatment (RSVP, purchase vote): every wrapped pixel of header is carousel
+// height lost, so the panel tightens on phones and relaxes at `sm`. Three
+// call sites used to copy the same `panelClassName` string for this.
+export type ModalDensity = "comfortable" | "compact";
+
+const DENSITIES: Record<ModalDensity, string> = {
+  comfortable: "gap-4 p-6",
+  compact: "gap-2 p-4 sm:gap-4 sm:p-7",
+};
+
 const SIZES: Record<ModalSize, string> = {
   xs: "max-w-md max-h-[90dvh]",
   sm: "max-w-lg max-h-[90dvh]",
@@ -48,13 +60,15 @@ const SIZES: Record<ModalSize, string> = {
   xl: "max-w-5xl max-h-[90dvh]",
   // The RSVP canvas: fills the viewport height and keeps widening on very
   // large displays instead of stranding the game carousel in a 42rem column.
-  full: "h-full max-w-[80rem] xl:max-w-[92rem] 2xl:max-w-[110rem]",
+  full: "h-full max-w-modal-full xl:max-w-modal-full-xl 2xl:max-w-modal-full-2xl",
 };
 
 type ModalProps = {
   onClose: () => void;
   /** Panel width + max-height. Omit only for legacy `panelClassName` callers. */
   size?: ModalSize;
+  /** Panel padding + inner gap. Default `comfortable`. */
+  density?: ModalDensity;
   /** Pre-title eyebrow text (uppercase tracked). */
   eyebrow?: ReactNode;
   /** Color-class override for the eyebrow (e.g. `text-[var(--accent)]`).
@@ -85,16 +99,16 @@ type ModalProps = {
   closeOnEscape?: boolean;
 };
 
-const PANEL_BASE =
-  "relative z-10 flex w-full flex-col gap-4 rounded-3xl border border-white/10 bg-surface-900/95 p-6 shadow-2xl shadow-black/60 outline-none";
+const PANEL_BASE = `relative z-raised flex w-full flex-col gap-4 ${RADIUS_CARD_3XL} border border-line bg-surface-900/95 p-6 shadow-2xl shadow-black/60 outline-none`;
 
 export function Modal({
   onClose,
   size,
+  density = "comfortable",
   eyebrow,
   eyebrowClassName = "text-amber-300",
   title,
-  titleClassName = "text-xl font-bold tracking-tight text-white sm:text-2xl",
+  titleClassName = "text-xl font-bold tracking-tight text-fg-strong sm:text-2xl",
   ariaLabel,
   subheader,
   panelClassName,
@@ -139,7 +153,7 @@ export function Modal({
           aria-labelledby={labelledBy}
           aria-label={labelledBy ? undefined : ariaLabel}
           tabIndex={-1}
-          className={cn(PANEL_BASE, sizeCls, panelClassName)}
+          className={cn(PANEL_BASE, DENSITIES[density], sizeCls, panelClassName)}
           style={style}
           initial={{ y: 16, scale: 0.96, opacity: 0 }}
           animate={{ y: 0, scale: 1, opacity: 1 }}
@@ -147,7 +161,7 @@ export function Modal({
           transition={{ type: "spring", stiffness: 220, damping: 26 }}
         >
           {(headerExtra || !hideCloseButton) && (
-            <div className="absolute right-4 top-4 z-20 flex items-center gap-1">
+            <div className="absolute right-4 top-4 z-raised-2 flex items-center gap-1">
               {headerExtra}
               {!hideCloseButton && (
                 // IconButton (not a raw <button>) so the close-X carries the
@@ -252,7 +266,7 @@ type ModalFooterProps = {
 
 export function ModalFooter({ start, children, className = "" }: ModalFooterProps) {
   const cls = cn(
-    "flex shrink-0 items-center justify-between gap-2 border-t border-white/10 pt-3",
+    "flex shrink-0 items-center justify-between gap-2 border-t border-line pt-3",
     className,
   );
   return (

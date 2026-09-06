@@ -94,7 +94,7 @@ export default function HighScores({ history, onClear, onBack }: HighScoresProps
   return (
     <div className="mx-auto max-w-4xl py-8">
       <div className="mb-6 flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-white">High Scores</h2>
+        <h2 className="text-2xl font-bold text-fg-strong">High Scores</h2>
         <div className="flex gap-3">
           <Button variant="danger" size="md" onClick={handleClear}>
             {confirmClear ? "Confirm Clear?" : "Clear History"}
@@ -128,13 +128,13 @@ export default function HighScores({ history, onClear, onBack }: HighScoresProps
         <div className="overflow-x-auto">
           <table className="w-full text-sm text-left">
             <thead>
-              <tr className="border-b border-white/10">
+              <tr className="border-b border-line">
                 <th className="px-3 py-2 text-fg-muted">#</th>
                 {COLUMNS.map((col) => (
                   <th
                     key={col.key}
                     onClick={() => setSortBy(col.key)}
-                    className={`cursor-pointer px-3 py-2 transition hover:text-white ${
+                    className={`cursor-pointer px-3 py-2 transition hover:text-fg-strong ${
                       sortBy === col.key ? "text-accent-400" : "text-fg-muted"
                     }`}
                   >
@@ -159,10 +159,10 @@ export default function HighScores({ history, onClear, onBack }: HighScoresProps
                   <tr
                     key={rec.id}
                     onClick={() => setSelectedGame(rec)}
-                    className={`border-b border-white/10 hover:bg-surface-800/40 cursor-pointer transition ${rowBg}`}
+                    className={`border-b border-line hover:bg-surface-800/40 cursor-pointer transition ${rowBg}`}
                   >
                     <td className="px-3 py-2 text-fg-disabled">{i + 1}</td>
-                    <td className="px-3 py-2 font-bold text-white">
+                    <td className="px-3 py-2 font-bold text-fg-strong">
                       {rec.rating}
                       {pbs?.has("rating") && <PBBadge />}
                     </td>

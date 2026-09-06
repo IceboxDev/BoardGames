@@ -55,7 +55,7 @@ type Props = {
 };
 
 const BASE =
-  "inline-flex items-center justify-center gap-1 font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 disabled:cursor-not-allowed disabled:opacity-40";
+  "inline-flex items-center justify-center gap-1 font-medium transition focus:outline-none focus-visible:ring-2 focus-visible:ring-fg-strong/40 disabled:cursor-not-allowed disabled:opacity-40";
 
 const SIZES: Record<Size, string> = {
   xs: "px-2 py-0.5 text-2xs",
@@ -87,7 +87,7 @@ const INACTIVE_FILLED =
   "bg-surface-800 text-fg-secondary hover:bg-surface-700 hover:text-fg-primary";
 
 const INACTIVE_OUTLINED =
-  "border border-white/10 bg-surface-900 text-fg-secondary hover:border-white/25 hover:text-fg-primary";
+  "border border-line bg-surface-900 text-fg-secondary hover:border-fg-strong/25 hover:text-fg-primary";
 
 export function Chip({
   pressed,

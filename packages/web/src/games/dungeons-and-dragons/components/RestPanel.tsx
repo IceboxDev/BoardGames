@@ -65,7 +65,7 @@ export function RestPanel({ party, onLog, logPending, onStateUpdates }: Props) {
   };
 
   return (
-    <div className="shrink-0 rounded-2xl border border-emerald-400/25 bg-gradient-to-br from-dnd-rest/70 via-surface-900/85 to-black/80 p-4">
+    <div className="shrink-0 rounded-card-2xl border border-emerald-400/25 bg-gradient-to-br from-dnd-rest/70 via-surface-900/85 to-black/80 p-4">
       <div className="flex items-center justify-between gap-2">
         <p className="font-serif-body text-3xs font-bold uppercase tracking-eyebrow text-emerald-300/80">
           Short rest — one hour
@@ -105,10 +105,10 @@ export function RestPanel({ party, onLog, logPending, onStateUpdates }: Props) {
           return (
             <li
               key={ch.id}
-              className={`flex flex-wrap items-center gap-2 rounded-xl border px-3 py-2 ${
+              className={`flex flex-wrap items-center gap-2 rounded-card-xl border px-3 py-2 ${
                 row.resting
                   ? "border-emerald-400/20 bg-black/25"
-                  : "border-white/10 bg-black/15 opacity-90"
+                  : "border-line bg-black/15 opacity-90"
               }`}
             >
               <label className="flex min-w-0 flex-1 cursor-pointer items-center gap-2">

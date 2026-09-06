@@ -1,6 +1,6 @@
 import { Button } from "../ui/Button";
 import { CopyField } from "../ui/CopyField";
-import { Modal } from "../ui/Modal";
+import { Modal, ModalBody, ModalFooter } from "../ui/Modal";
 import type { AdminUser } from "./types";
 
 type Props = {
@@ -18,7 +18,7 @@ type Props = {
 export function ResetLinkModal({ user, url, expiresInMinutes, onClose }: Props) {
   return (
     <Modal onClose={onClose} size="sm" eyebrow="Password reset" title="One-time reset link">
-      <div className="space-y-4">
+      <ModalBody gap="md">
         <p className="text-sm text-fg-secondary">
           Send this link to{" "}
           <span className="font-medium text-fg-primary">{user.name || user.email}</span>. It works
@@ -29,12 +29,12 @@ export function ResetLinkModal({ user, url, expiresInMinutes, onClose }: Props) 
           No email is sent — share it however you normally reach them. They open it to set a new
           password.
         </p>
-        <div className="flex justify-end">
-          <Button size="sm" onClick={onClose}>
-            Done
-          </Button>
-        </div>
-      </div>
+      </ModalBody>
+      <ModalFooter>
+        <Button size="sm" onClick={onClose}>
+          Done
+        </Button>
+      </ModalFooter>
     </Modal>
   );
 }

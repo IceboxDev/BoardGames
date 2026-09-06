@@ -154,7 +154,7 @@ export default function PortToHistoryModal({
             ))}
             {/* Always shown — even when nobody was marked DM during setup,
                 the Storyteller can still be attached to the match here. */}
-            <div className="flex min-h-11 items-center gap-2 border-t border-white/10 pt-1.5">
+            <div className="flex min-h-11 items-center gap-2 border-t border-line pt-1.5">
               <span className="min-w-0 flex-1 truncate text-sm">
                 {state.storyteller ? (
                   <>

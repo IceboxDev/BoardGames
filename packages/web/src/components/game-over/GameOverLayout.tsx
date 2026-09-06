@@ -28,7 +28,7 @@ const HEADLINE_COLORS = {
   win: "text-emerald-400",
   lose: "text-rose-400",
   draw: "text-fg-secondary",
-  neutral: "text-white",
+  neutral: "text-fg-strong",
 } as const;
 
 export function GameOverLayout({

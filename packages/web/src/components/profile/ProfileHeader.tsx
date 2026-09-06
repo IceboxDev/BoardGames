@@ -6,8 +6,8 @@ import { CameraIcon, EditIcon, PinIcon, SparkleIcon } from "../icons";
 import { Avatar } from "../ui/Avatar.tsx";
 import { Badge } from "../ui/Badge.tsx";
 import { Button, ButtonLink } from "../ui/Button.tsx";
+import { StatTile } from "../ui/StatTile";
 import { Surface } from "../ui/Surface.tsx";
-import { StatTile } from "./StatTile.tsx";
 
 // Profile hero: accent-gradient banner, overlapping avatar, identity block,
 // quick-stat tiles, and derived badges. The banner accent comes from the
@@ -68,7 +68,7 @@ export function ProfileHeader({
       className="relative overflow-hidden"
     >
       {/* Banner is a plain (non-positioned) background block; the content below
-          uses `relative z-10` so the overlapping avatar + name paint ON TOP of
+          uses `relative z-raised` so the overlapping avatar + name paint ON TOP of
           it. A positioned banner paints over static content per CSS stacking
           rules — that was the bug (banner covered the avatar/name). */}
       <div className="h-24 bg-gradient-to-br from-[var(--accent)]/45 via-[var(--accent)]/15 to-surface-900 sm:h-32" />
@@ -86,7 +86,7 @@ export function ProfileHeader({
         // PRIVATE theme — the latter used to be a card on the home dashboard,
         // a screen away from everything it pairs with. Labels collapse to
         // their glyphs on phones so the pair never crowds the avatar.
-        <div className="absolute right-3 top-3 z-20 flex items-center gap-2">
+        <div className="absolute right-3 top-3 z-raised-2 flex items-center gap-2">
           <Button variant="secondary" size="sm" onClick={onAppearance} className="gap-1.5">
             <SparkleIcon className="h-4 w-4" />
             <span className="hidden sm:inline">Appearance</span>
@@ -100,7 +100,7 @@ export function ProfileHeader({
         </div>
       )}
 
-      <div className="relative z-10 px-4 pb-5 sm:px-6">
+      <div className="relative z-raised px-4 pb-5 sm:px-6">
         <div className="-mt-10 flex flex-wrap items-end gap-4 sm:-mt-12">
           {canChangeAvatar ? (
             // biome-ignore lint/correctness/noRestrictedElements: avatar doubles as the change-photo trigger
@@ -120,7 +120,7 @@ export function ProfileHeader({
           )}
           <div className="min-w-0 flex-1 pb-1">
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-              <h1 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+              <h1 className="text-2xl font-bold tracking-tight text-fg-strong sm:text-3xl">
                 {user.name}
               </h1>
               {profile.pronouns && (

@@ -90,7 +90,7 @@ export default function ExitNightPanel({ date, attendees, partyCount, previewSta
   return (
     <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col gap-4 overflow-y-auto px-1 py-2">
       {/* Hero */}
-      <div className="relative shrink-0 overflow-hidden rounded-3xl border border-cyan-400/30 bg-gradient-to-br from-cyan-950 via-surface-950 to-black p-6 text-center">
+      <div className="relative shrink-0 overflow-hidden rounded-card-3xl border border-cyan-400/30 bg-gradient-to-br from-cyan-950 via-surface-950 to-black p-6 text-center">
         <span
           aria-hidden="true"
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_55%_60%_at_50%_28%,color-mix(in_srgb,var(--color-neon-cyan,#22d3ee)_28%,transparent),transparent_72%)]"
@@ -196,7 +196,7 @@ function BoxVoteRow({
     >
       <div className="min-w-0 flex-1">
         <div className="flex min-w-0 items-baseline gap-2">
-          <h3 className="truncate text-sm font-semibold text-white">{exitGameTitle(game)}</h3>
+          <h3 className="truncate text-sm font-semibold text-fg-strong">{exitGameTitle(game)}</h3>
           <span className="shrink-0 text-3xs text-fg-muted">{game.year}</span>
           {game.difficulty && (
             <span

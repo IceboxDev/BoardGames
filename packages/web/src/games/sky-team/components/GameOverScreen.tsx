@@ -70,11 +70,11 @@ export default function GameOverScreen({ result, onPlayAgain, onBackToMenu }: Pr
   ];
 
   return (
-    // `relative z-10` lifts this screen above the fixed `def.backgroundImage`
+    // `relative z-raised` lifts this screen above the fixed `def.backgroundImage`
     // at `z-0` in `GameShellLayoutInner` (same painting-order issue that hides
     // `GameScreen` without a stacking context). GameOverLayout owns the
     // emoji / headline / actions; only the Sky-Team-specific stats are local.
-    <div className="relative z-10">
+    <div className="relative z-raised">
       <GameOverLayout
         emoji={meta.tone === "win" ? "🛬" : "💥"}
         headline={meta.headline}
@@ -87,7 +87,7 @@ export default function GameOverScreen({ result, onPlayAgain, onBackToMenu }: Pr
             headline already explains which of them failed. Scenario / rounds /
             final approach tile / brakes deployed are the only fields that
             genuinely vary across successful landings. */}
-        <div className="grid w-full grid-cols-2 gap-2 rounded-md border border-white/10 bg-surface-900/60 p-4 text-left text-xs">
+        <div className="grid w-full grid-cols-2 gap-2 rounded-md border border-line bg-surface-900/60 p-4 text-left text-xs">
           <div>
             <div className="text-fg-muted">Scenario</div>
             <div className="font-mono">{result.scenarioId}</div>

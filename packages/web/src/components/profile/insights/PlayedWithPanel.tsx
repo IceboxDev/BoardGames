@@ -35,7 +35,7 @@ export function PlayedWithPanel({
           <li key={companion.userId}>
             <Link
               to={`/u/${companion.userId}`}
-              className="flex items-center gap-2.5 rounded-lg px-2 py-1.5 transition hover:bg-white/[0.04]"
+              className="flex items-center gap-2.5 rounded-card-lg px-2 py-1.5 transition hover:bg-fill-soft"
             >
               <Avatar name={info?.name ?? "Unknown player"} image={info?.image ?? null} size="sm" />
               <span className="min-w-0 flex-1">

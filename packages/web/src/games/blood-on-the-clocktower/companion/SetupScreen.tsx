@@ -89,7 +89,7 @@ function RosterRow({
       dragListener={false}
       dragControls={controls}
       whileDrag={{ scale: 1.02, zIndex: 10, boxShadow: "0 8px 24px rgba(0,0,0,0.55)" }}
-      className="relative flex min-h-11 items-center gap-1 rounded-lg border border-white/10 bg-surface-950/60 pr-1"
+      className="relative flex min-h-11 items-center gap-1 rounded-lg border border-line bg-surface-950/60 pr-1"
     >
       {/* Pointer-only affordance; keyboard users reorder via the sheet's
           move buttons. touch-none so a touch drag doesn't scroll the page. */}
@@ -279,7 +279,7 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
   return (
     <Screen>
       <header className="flex flex-col gap-1">
-        <h1 className="text-xl font-bold text-white">Storyteller Companion</h1>
+        <h1 className="text-xl font-bold text-fg-strong">Storyteller Companion</h1>
         <p className="text-sm text-fg-secondary">
           {EDITION_NAME[edition]} · add {MIN_PLAYERS}–{MAX_PLAYERS} players <b>in seating order</b>,
           clockwise around the circle.

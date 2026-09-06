@@ -54,7 +54,7 @@ function FullCard({
 
   return (
     <div
-      className={`relative flex flex-shrink-0 flex-col overflow-hidden ${active ? "ring-2 ring-white/80 ring-offset-2 ring-offset-surface-900" : ""}`}
+      className={`relative flex flex-shrink-0 flex-col overflow-hidden ${active ? "ring-2 ring-fg-strong/80 ring-offset-2 ring-offset-surface-900" : ""}`}
       style={{
         width,
         height,
@@ -181,7 +181,7 @@ function CompactCard({
 
   return (
     <div
-      className={`relative flex-shrink-0 overflow-hidden ${active ? "ring-2 ring-white/80 ring-offset-2 ring-offset-surface-900" : ""}`}
+      className={`relative flex-shrink-0 overflow-hidden ${active ? "ring-2 ring-fg-strong/80 ring-offset-2 ring-offset-surface-900" : ""}`}
       style={{
         width,
         height,

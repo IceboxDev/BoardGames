@@ -18,7 +18,7 @@ type VitalProps = {
 export function Vital({ label, value, tone, padded = false }: VitalProps) {
   return (
     <span
-      className={`flex min-w-0 flex-col items-center rounded-lg border py-1 ${
+      className={`flex min-w-0 flex-col items-center rounded-card-lg border py-1 ${
         padded ? "px-2" : ""
       } ${tone}`}
     >

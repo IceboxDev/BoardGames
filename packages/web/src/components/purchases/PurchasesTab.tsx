@@ -1,17 +1,14 @@
 import { type PurchasesResponse, PurchasesResponseSchema } from "@boardgames/core/protocol";
 import { useQuery } from "@tanstack/react-query";
 import { type ReactNode, useMemo, useState } from "react";
-import { ApiError } from "../../lib/api-fetch.ts";
 import { qk } from "../../lib/query-keys.ts";
 import { jsonQuery } from "../../lib/typed-query.ts";
 import { StackIcon } from "../icons";
-import { Button } from "../ui/Button.tsx";
+import { PlayerQueryBoundary } from "../profile/PlayerPageFrame.tsx";
 import { EmptyState } from "../ui/EmptyState.tsx";
 import { MicroLabel } from "../ui/Label.tsx";
-import { LoadingState } from "../ui/LoadingState.tsx";
 import { PageHeader } from "../ui/PageHeader.tsx";
 import { PageMain } from "../ui/PageShell.tsx";
-import { QueryBoundary } from "../ui/QueryBoundary.tsx";
 import { Stack } from "../ui/Stack.tsx";
 import { PurchaseCard } from "./PurchaseCard.tsx";
 import { PurchaseFilters } from "./PurchaseFilters.tsx";
@@ -52,37 +49,13 @@ export function PurchasesTab({
   const todayKey = localTodayKey();
 
   return (
-    <QueryBoundary
+    <PlayerQueryBoundary
       query={query}
-      loading={
-        <PageMain width="7xl" padding="spacious" fillHeight>
-          <Stack gap="lg">
-            {tabBar}
-            <LoadingState fillHeight label="Loading purchases…" />
-          </Stack>
-        </PageMain>
-      }
-      errorFallback={(error) => {
-        const notFound = error instanceof ApiError && error.status === 404;
-        return (
-          <PageMain width="7xl" padding="spacious">
-            <EmptyState
-              tone="rose"
-              title={notFound ? "Player not found" : "Couldn't load the purchases"}
-              description={
-                notFound
-                  ? "This player doesn't exist or has been removed."
-                  : "Something went wrong fetching the purchases. Try again."
-              }
-              action={
-                <Button variant="secondary" onClick={() => query.refetch()}>
-                  Retry
-                </Button>
-              }
-            />
-          </PageMain>
-        );
-      }}
+      width="7xl"
+      loadingLabel="Loading purchases…"
+      loadingExtra={tabBar}
+      errorTitle="Couldn't load the purchases"
+      errorDescription="Something went wrong fetching the purchases. Try again."
     >
       {(data) => {
         const rows = buildPurchaseRows(data.purchases, todayKey);
@@ -109,7 +82,7 @@ export function PurchasesTab({
           </PageMain>
         );
       }}
-    </QueryBoundary>
+    </PlayerQueryBoundary>
   );
 }
 

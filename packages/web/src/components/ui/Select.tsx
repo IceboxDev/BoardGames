@@ -5,7 +5,7 @@ import { RADIUS_UI_LG, RADIUS_UI_MD } from "./radii";
 
 // `<select>` sibling of `Input` — same surface-token chrome, focus ring, and
 // `invalid` state. Use instead of hand-styling `<select className="rounded-md
-// border border-white/10 bg-surface-900 …">` at every form site.
+// border border-line bg-surface-900 …">` at every form site.
 //
 //   block   stretch to fill the parent (default). Set false for inline,
 //           auto-width selects (e.g. the match-history storyteller picker).
@@ -49,7 +49,7 @@ export function Select({
     ? "border-rose-500/50 focus:ring-rose-500/40"
     : active
       ? "border-accent-400/50 text-accent-100 focus:ring-accent-400/30"
-      : "border-white/10 text-fg-primary focus:border-accent-400/60 focus:ring-accent-400/30";
+      : "border-line text-fg-primary focus:border-accent-400/60 focus:ring-accent-400/30";
   const cls = cn(
     "border bg-surface-900 focus:outline-none focus:ring-2",
     block && "w-full",

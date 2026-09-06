@@ -14,12 +14,13 @@ import {
   fetchAdminPurchaseVote,
 } from "../../lib/purchase-vote";
 import { qk } from "../../lib/query-keys";
-import { CheckIcon, SearchIcon } from "../icons";
+import { CheckIcon } from "../icons";
 import { Avatar } from "../ui/Avatar";
 import { Button } from "../ui/Button";
 import { ErrorAlert } from "../ui/ErrorAlert";
 import { Input } from "../ui/Input";
 import { QueryBoundary } from "../ui/QueryBoundary";
+import { SearchInput } from "../ui/SearchInput";
 import { useConfirm } from "../ui/useConfirm";
 import { AdminSection } from "./AdminSection";
 
@@ -123,14 +124,11 @@ function TallyRows({ poll }: { poll: AdminPoll }) {
         return (
           <li
             key={entry.slug}
-            className="relative flex items-center gap-2 overflow-hidden rounded-md bg-surface-900/70 px-2 py-1.5"
+            className="relative flex items-center gap-2 overflow-hidden rounded-card-md bg-surface-900/70 px-2 py-1.5"
           >
             <span
               aria-hidden="true"
-              className={cn(
-                "absolute inset-y-0 left-0",
-                isWinner ? "bg-accent-500/20" : "bg-white/5",
-              )}
+              className={cn("absolute inset-y-0 left-0", isWinner ? "bg-accent-500/20" : "bg-fill")}
               style={{ width: `${(entry.votes / maxVotes) * 100}%` }}
             />
             {game && (
@@ -143,7 +141,7 @@ function TallyRows({ poll }: { poll: AdminPoll }) {
             <span
               className={cn(
                 "relative min-w-0 flex-1 truncate text-xs",
-                isWinner ? "font-semibold text-white" : "text-fg-secondary",
+                isWinner ? "font-semibold text-fg-strong" : "text-fg-secondary",
               )}
             >
               {game?.title ?? entry.slug}
@@ -165,7 +163,7 @@ function TallyRows({ poll }: { poll: AdminPoll }) {
                 );
               })}
               {overflow > 0 && (
-                <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-white/10 text-3xs font-semibold tabular-nums text-fg-secondary ring-2 ring-surface-900">
+                <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-fill-strong text-3xs font-semibold tabular-nums text-fg-secondary ring-2 ring-surface-900">
                   +{overflow}
                 </span>
               )}
@@ -193,7 +191,7 @@ function OpenPollPanel({
   return (
     <>
       <p className="text-xs text-fg-secondary">
-        Auto-closes when <span className="font-semibold text-white">{poll.requiredVoters}</span>{" "}
+        Auto-closes when <span className="font-semibold text-fg-strong">{poll.requiredVoters}</span>{" "}
         players have voted.{" "}
         {poll.voters.length > 0 ? (
           <>
@@ -222,7 +220,7 @@ function LastResult({ poll }: { poll: AdminPoll }) {
     <div className="space-y-2">
       <p className="text-xs text-fg-secondary">
         Last vote closed with{" "}
-        <span className="font-semibold text-white">
+        <span className="font-semibold text-fg-strong">
           {(poll.winnerSlug && resolveGame(poll.winnerSlug)?.title) ??
             poll.winnerSlug ??
             "no votes cast"}
@@ -260,16 +258,13 @@ function PollBuilder({
         Pick at least two candidate games. Every player spends up to 3 votes on distinct games; the
         vote closes itself when the required number of players have voted.
       </p>
-      <div className="relative">
-        <SearchIcon className="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-fg-muted" />
-        <Input
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-          placeholder="Search the catalog…"
-          className="pl-8"
-        />
-      </div>
-      <ul className="max-h-64 overflow-y-auto rounded-md border border-white/10">
+      <SearchInput
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        placeholder="Search the catalog…"
+        aria-label="Search the catalog"
+      />
+      <ul className="max-h-64 overflow-y-auto rounded-card-md border border-line">
         {options.map((g) => {
           const picked = selected.includes(g.slug);
           return (
@@ -287,7 +282,7 @@ function PollBuilder({
                 <span
                   className={cn(
                     "min-w-0 flex-1 truncate text-xs",
-                    picked ? "font-semibold text-white" : "text-fg-secondary",
+                    picked ? "font-semibold text-fg-strong" : "text-fg-secondary",
                   )}
                 >
                   {g.title}

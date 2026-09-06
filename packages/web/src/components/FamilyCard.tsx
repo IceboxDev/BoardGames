@@ -77,8 +77,8 @@ export default function FamilyCard({
             return (
               <span
                 key={m.slug}
-                className={`relative h-8 w-8 shrink-0 overflow-hidden rounded-md bg-surface-800 ${
-                  isCanonical ? "ring-2" : "ring-1 ring-white/10"
+                className={`relative h-8 w-8 shrink-0 overflow-hidden rounded-card-md bg-surface-800 ${
+                  isCanonical ? "ring-2" : "ring-1 ring-line"
                 }`}
               >
                 <img
@@ -92,7 +92,7 @@ export default function FamilyCard({
                 {isCanonical && (
                   <span
                     aria-hidden="true"
-                    className="absolute inset-0 rounded-md ring-2"
+                    className="absolute inset-0 rounded-card-md ring-2"
                     style={{ boxShadow: `inset 0 0 0 2px var(--accent, ${canonical.accentHex})` }}
                   />
                 )}
@@ -123,7 +123,7 @@ function FamilyGhostBackdrop({ visibleMembers }: { visibleMembers: GameDefinitio
         className="pointer-events-none absolute inset-0 origin-bottom-left"
         style={{ transform: "translate(12px, -8px) rotate(2deg) scale(0.86)", opacity: 0.25 }}
       >
-        <span className="block h-full w-full overflow-hidden rounded-2xl border border-white/10 bg-surface-800">
+        <span className="block h-full w-full overflow-hidden rounded-card-2xl border border-line bg-surface-800">
           {visibleMembers[2] && (
             <img
               src={visibleMembers[2].thumbnail}
@@ -141,7 +141,7 @@ function FamilyGhostBackdrop({ visibleMembers }: { visibleMembers: GameDefinitio
         className="pointer-events-none absolute inset-0 origin-bottom-left"
         style={{ transform: "translate(6px, -4px) rotate(-1deg) scale(0.92)", opacity: 0.45 }}
       >
-        <span className="block h-full w-full overflow-hidden rounded-2xl border border-white/10 bg-surface-800">
+        <span className="block h-full w-full overflow-hidden rounded-card-2xl border border-line bg-surface-800">
           {visibleMembers[1] && (
             <img
               src={visibleMembers[1].thumbnail}

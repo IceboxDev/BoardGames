@@ -3,12 +3,12 @@ import type { ReactNode } from "react";
 // The single results-table kit shared by solo Match History and the tournament
 // game list. The two screens used to be ~95% copy-pasted files (container,
 // heading, W/L/D tally, `<table>` chrome, and every cell class chain) that had
-// already drifted — one had the `relative z-10` stacking fix for the fixed
+// already drifted — one had the `relative z-raised` stacking fix for the fixed
 // game background, the other didn't. Columns are data; chrome lives here once.
 
 // ── MatchResultsLayout ───────────────────────────────────────────────────
 //
-// Outer container + centered heading. `relative z-10` is load-bearing: these
+// Outer container + centered heading. `relative z-raised` is load-bearing: these
 // screens render inside `GameShellLayoutInner`, which paints a fixed
 // `def.backgroundImage` at z-0 over the whole main area — without a stacking
 // context the background covers this static content.
@@ -27,9 +27,9 @@ export function MatchResultsLayout({
   children: ReactNode;
 }) {
   return (
-    <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center gap-6 px-4 py-8">
+    <div className="relative z-raised mx-auto flex w-full max-w-4xl flex-col items-center gap-6 px-4 py-8">
       <div className="text-center">
-        <h2 className="text-2xl font-extrabold text-white">{title}</h2>
+        <h2 className="text-2xl font-extrabold text-fg-strong">{title}</h2>
         {tally}
       </div>
       {children}
@@ -129,7 +129,7 @@ export function MatchResultsTable<Row>({
     <div className="w-full overflow-x-auto">
       <table className="w-full border-collapse text-sm">
         <thead>
-          <tr className="border-b border-white/10 text-xs font-medium uppercase tracking-wider text-fg-muted">
+          <tr className="border-b border-line text-xs font-medium uppercase tracking-label text-fg-muted">
             {columns.map((c) => (
               <th key={c.id} className={`p-2.5 ${ALIGN_CLASSES[c.align ?? "left"]}`}>
                 {c.header}
@@ -142,7 +142,7 @@ export function MatchResultsTable<Row>({
             <tr
               key={rowKey(row, i)}
               onClick={onSelectRow ? () => onSelectRow(row, i) : undefined}
-              className={`border-b border-white/10 transition-colors ${
+              className={`border-b border-line transition-colors ${
                 onSelectRow ? "cursor-pointer hover:bg-surface-800/50" : ""
               }`}
             >

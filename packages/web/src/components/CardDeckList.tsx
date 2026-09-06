@@ -1,8 +1,7 @@
 import { CARD_DECKS, type CardDeck } from "@boardgames/core/games/card-decks";
 import { useMemo } from "react";
-import { cn } from "../lib/cn";
 import { resolveGame } from "../lib/games-by-slug";
-import { CheckIcon } from "./icons";
+import { CheckRow } from "./ui/CheckRow";
 
 type Props = {
   /** Currently-checked slugs (may contain non-deck slugs; they're ignored). */
@@ -51,24 +50,16 @@ function DeckCell({
 }) {
   const unlocks = deck.games.map((slug) => resolveGame(slug)?.title ?? slug).join(", ");
   return (
-    <label
-      className={cn(
-        "flex cursor-pointer items-center gap-3 rounded-lg border p-2.5 transition",
-        checked
-          ? "border-accent-400/50 bg-accent-500/10"
-          : "border-white/10 bg-surface-800/50 hover:border-white/20",
-      )}
-    >
-      {/* biome-ignore lint/correctness/noRestrictedElements: sr-only checkbox behind a custom row surface — no visible chrome to drift */}
-      <input type="checkbox" checked={checked} onChange={onToggle} className="sr-only" />
-      <span className="min-w-0 flex-1 text-xs">
+    <CheckRow
+      checked={checked}
+      onChange={onToggle}
+      title={
         <span className="flex items-baseline gap-2">
-          <span className="truncate font-semibold text-fg-primary">{deck.label}</span>
-          <span className="shrink-0 text-3xs text-fg-muted">{deck.suits}</span>
+          <span className="truncate">{deck.label}</span>
+          <span className="shrink-0 font-normal text-3xs text-fg-muted">{deck.suits}</span>
         </span>
-        <span className="block truncate text-3xs text-fg-muted">Unlocks {unlocks}</span>
-      </span>
-      {checked && <CheckIcon className="h-4 w-4 shrink-0 text-accent-300" />}
-    </label>
+      }
+      description={`Unlocks ${unlocks}`}
+    />
   );
 }

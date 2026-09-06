@@ -40,7 +40,7 @@ export function PurchaseVoteBanner() {
       >
         <MegaphoneIcon className="h-4 w-4 shrink-0 text-accent-300" />
         <div className="min-w-0 flex-1">
-          <p className="truncate text-xs font-semibold text-white">{headline}</p>
+          <p className="truncate text-xs font-semibold text-fg-strong">{headline}</p>
           <p className="truncate text-2xs text-fg-secondary">
             {poll.voterCount} of {poll.requiredVoters} players have voted — the winner is bought
             when everyone weighs in.

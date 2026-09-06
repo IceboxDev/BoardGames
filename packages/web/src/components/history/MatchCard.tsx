@@ -42,7 +42,7 @@ export function MatchCard({ match, isAdmin, currentUserId, onEdit, onDelete }: P
   const thumb = match.gameSlug ? THUMB_BY_SLUG.get(match.gameSlug) : undefined;
   const subtitle = deriveTitleSubtitle(match.outcome, match.gameSlug);
   return (
-    <article className="group relative flex flex-col gap-1.5 rounded-lg bg-surface-900/40 px-2.5 py-1.5 text-sm transition hover:bg-surface-900/70 sm:flex-row sm:items-center sm:gap-3">
+    <article className="group relative flex flex-col gap-1.5 rounded-card-lg bg-surface-900/40 px-2.5 py-1.5 text-sm transition hover:bg-surface-900/70 sm:flex-row sm:items-center sm:gap-3">
       {/* Thumb + title share one row on phone; `sm:contents` dissolves this
           wrapper at sm+ so they rejoin the article's single-row flow. */}
       <div className="flex min-w-0 items-center gap-3 sm:contents">
@@ -52,10 +52,10 @@ export function MatchCard({ match, isAdmin, currentUserId, onEdit, onDelete }: P
             alt=""
             loading="lazy"
             decoding="async"
-            className="h-10 w-10 shrink-0 rounded-md object-cover"
+            className="h-10 w-10 shrink-0 rounded-card-md object-cover"
           />
         ) : (
-          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-surface-800 text-3xs font-semibold uppercase tracking-wider text-fg-muted">
+          <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-card-md bg-surface-800 text-3xs font-semibold uppercase tracking-label text-fg-muted">
             {match.gameTitle.slice(0, 2)}
           </div>
         )}
@@ -448,7 +448,7 @@ function Storyteller({
     ? `${moderator.displayName} — Storyteller (${moderator.role})`
     : `${moderator.displayName} — Storyteller`;
   return (
-    <span className="inline-flex items-center gap-1 border-l border-white/5 pl-2" title={title}>
+    <span className="inline-flex items-center gap-1 border-l border-line-soft pl-2" title={title}>
       <span className="relative inline-flex">
         <AvatarBubble
           name={moderator.displayName}
@@ -461,7 +461,7 @@ function Storyteller({
             the avatar with a small ring matching the row background. */}
         <span
           aria-hidden="true"
-          className="absolute -bottom-1 -right-1 inline-grid h-3.5 w-3.5 place-items-center rounded-full bg-surface-900 text-accent-300 ring-1 ring-white/10"
+          className="absolute -bottom-1 -right-1 inline-grid h-3.5 w-3.5 place-items-center rounded-full bg-surface-900 text-accent-300 ring-1 ring-line"
         >
           <BookIcon className="h-2.5 w-2.5" />
         </span>
@@ -719,7 +719,7 @@ function DungeonMaster({
 }) {
   const title = `${moderator.displayName} — Dungeon Master`;
   return (
-    <span className="inline-flex items-center gap-1 border-l border-white/5 pl-2" title={title}>
+    <span className="inline-flex items-center gap-1 border-l border-line-soft pl-2" title={title}>
       <span className="relative inline-flex">
         <AvatarBubble
           name={moderator.displayName}
@@ -729,7 +729,7 @@ function DungeonMaster({
         />
         <span
           aria-hidden="true"
-          className="absolute -right-1 -bottom-1 inline-grid h-3.5 w-3.5 place-items-center rounded-full bg-surface-900 text-accent-300 ring-1 ring-white/10"
+          className="absolute -right-1 -bottom-1 inline-grid h-3.5 w-3.5 place-items-center rounded-full bg-surface-900 text-accent-300 ring-1 ring-line"
         >
           <BookIcon className="h-2.5 w-2.5" />
         </span>

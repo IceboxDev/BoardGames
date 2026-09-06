@@ -1,11 +1,9 @@
 import type { ProfileMatchSummaryItem } from "@boardgames/core/protocol";
-import type { ReactNode } from "react";
 import { resolveGame } from "../../../lib/games-by-slug.ts";
 import { TrophyIcon } from "../../icons";
 import { DonutChart, perfColor, Sparkline } from "../../ui/charts";
 import { FlameArt } from "../../ui/FlameArt.tsx";
-import { MicroLabel } from "../../ui/Label.tsx";
-import { Surface } from "../../ui/Surface.tsx";
+import { StatTile } from "../../ui/StatTile.tsx";
 import {
   gamesByPlays,
   meanPerformance,
@@ -19,15 +17,6 @@ import {
 // trend, streaks, most played). Always unfiltered — the filters below the
 // strip slice the chart + timeline, not the headline numbers.
 
-function HeroCard({ label, children }: { label: string; children: ReactNode }) {
-  return (
-    <Surface variant="raised" padding="none" className="flex min-w-0 flex-col gap-2 p-4">
-      <MicroLabel className="font-semibold">{label}</MicroLabel>
-      {children}
-    </Surface>
-  );
-}
-
 export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummaryItem[] }) {
   const counts = recordCounts(items);
   const perf = meanPerformance(items);
@@ -40,7 +29,7 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
 
   return (
     <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-      <HeroCard label="Record">
+      <StatTile align="start" padding="lg" label="Record">
         <div className="flex items-center gap-4">
           <DonutChart
             size={84}
@@ -52,7 +41,7 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
               { value: counts.other, tone: "neutral", label: "Other" },
             ]}
           >
-            <span className="text-lg font-bold tabular-nums text-white">{counts.total}</span>
+            <span className="text-lg font-bold tabular-nums text-fg-strong">{counts.total}</span>
           </DonutChart>
           <div className="space-y-0.5 text-2xs">
             <p className="text-emerald-300">
@@ -73,9 +62,9 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
             )}
           </div>
         </div>
-      </HeroCard>
+      </StatTile>
 
-      <HeroCard label="Performance">
+      <StatTile align="start" padding="lg" label="Performance">
         <div className="flex flex-1 flex-col justify-between gap-1">
           <span className="text-2xl font-bold tabular-nums" style={{ color: perfColor(perf) }}>
             {perf === null ? "—" : `${Math.round(perf * 100)}%`}
@@ -87,9 +76,9 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
           )}
           <span className="text-3xs text-fg-muted">Placement-weighted, rolling 5</span>
         </div>
-      </HeroCard>
+      </StatTile>
 
-      <HeroCard label="Streaks">
+      <StatTile align="start" padding="lg" label="Streaks">
         <div className="flex flex-1 flex-col justify-between gap-1">
           <div className="flex items-baseline gap-2">
             {streak.current ? (
@@ -130,7 +119,7 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
                           ? "bg-amber-400/20 text-amber-300"
                           : result === "loss"
                             ? "bg-rose-500/20 text-rose-300"
-                            : "bg-white/[0.08] text-fg-secondary"
+                            : "bg-fill-strong text-fg-secondary"
                     }`}
                   >
                     {result === "win"
@@ -151,9 +140,9 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
               : "No wins yet — the streak starts tonight"}
           </span>
         </div>
-      </HeroCard>
+      </StatTile>
 
-      <HeroCard label="Most played">
+      <StatTile align="start" padding="lg" label="Most played">
         {favorite ? (
           <div className="flex flex-1 flex-col justify-between gap-2">
             <div className="flex items-center gap-2.5">
@@ -161,10 +150,10 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
                 <img
                   src={favoriteGame.thumbnail}
                   alt=""
-                  className="h-10 w-[4.5rem] shrink-0 rounded-md object-cover"
+                  className="h-10 w-[4.5rem] shrink-0 rounded-card-md object-cover"
                 />
               ) : (
-                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-md bg-surface-800 text-fg-muted">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-card-md bg-surface-800 text-fg-muted">
                   <TrophyIcon className="h-4 w-4" />
                 </span>
               )}
@@ -186,7 +175,7 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
         ) : (
           <span className="text-3xs text-fg-muted">No games recorded yet</span>
         )}
-      </HeroCard>
+      </StatTile>
     </div>
   );
 }

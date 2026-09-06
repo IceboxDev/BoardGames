@@ -85,7 +85,7 @@ export function JoinRoom({
               }}
               placeholder="ABCDEF"
               maxLength={ROOM_CODE_LENGTH}
-              className="bg-surface-800/60 px-4 py-3 text-center text-2xl font-bold uppercase tracking-code text-white placeholder:text-fg-disabled"
+              className="bg-surface-800/60 px-4 py-3 text-center text-2xl font-bold uppercase tracking-code text-fg-strong placeholder:text-fg-disabled"
             />
           </Field>
           <Button variant="primary" size="lg" disabled={!canJoin} onClick={handleJoin}>

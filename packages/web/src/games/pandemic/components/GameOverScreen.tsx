@@ -68,7 +68,7 @@ export default function GameOverScreen({ state, onRestart, onMenu }: GameOverScr
                   className="mx-auto mb-2 h-6 w-6 rounded-full"
                   style={{ backgroundColor: DISEASE_CSS[color] }}
                 />
-                <div className="text-xs font-medium capitalize text-white">{color}</div>
+                <div className="text-xs font-medium capitalize text-fg-strong">{color}</div>
                 <div
                   className={`text-xs ${
                     status === "eradicated"
@@ -88,15 +88,15 @@ export default function GameOverScreen({ state, onRestart, onMenu }: GameOverScr
         {/* Stats */}
         <div className="grid grid-cols-3 gap-3 text-center">
           <div className="rounded-lg bg-surface-800 p-3">
-            <div className="text-2xl font-bold text-white">{state.turnNumber}</div>
+            <div className="text-2xl font-bold text-fg-strong">{state.turnNumber}</div>
             <div className="text-xs text-fg-muted">Turns</div>
           </div>
           <div className="rounded-lg bg-surface-800 p-3">
-            <div className="text-2xl font-bold text-white">{state.outbreakCount}</div>
+            <div className="text-2xl font-bold text-fg-strong">{state.outbreakCount}</div>
             <div className="text-xs text-fg-muted">Outbreaks</div>
           </div>
           <div className="rounded-lg bg-surface-800 p-3">
-            <div className="text-2xl font-bold text-white">{totalCubesOnBoard}</div>
+            <div className="text-2xl font-bold text-fg-strong">{totalCubesOnBoard}</div>
             <div className="text-xs text-fg-muted">Cubes Left</div>
           </div>
         </div>

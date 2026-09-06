@@ -41,7 +41,7 @@ interface PlayerAreaProps {
 function ResourcePill({ r, count }: { r: ResourceType; count: number }) {
   return (
     <div
-      className={`flex items-center gap-1 rounded-full border border-white/10 px-2 py-0.5 text-2xs font-bold text-white ${count === 0 ? "opacity-30" : ""}`}
+      className={`flex items-center gap-1 rounded-full border border-line px-2 py-0.5 text-2xs font-bold text-fg-strong ${count === 0 ? "opacity-30" : ""}`}
       style={{ backgroundColor: `${RESOURCE_COLORS[r]}33` }}
       title={`${count} × ${RESOURCE_LABELS[r]}`}
     >

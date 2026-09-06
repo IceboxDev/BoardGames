@@ -136,7 +136,7 @@ export default function LockInModal({
           {hostUserId && (
             <label
               htmlFor={hostAtHomeId}
-              className="flex cursor-pointer items-start gap-3 rounded-xl border border-white/10 bg-surface-900 px-3 py-2.5 text-sm text-white"
+              className="flex cursor-pointer items-start gap-3 rounded-card-xl border border-line bg-surface-900 px-3 py-2.5 text-sm text-fg-strong"
             >
               <Checkbox
                 id={hostAtHomeId}

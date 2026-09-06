@@ -2,7 +2,7 @@ import type { CSSProperties, ReactNode } from "react";
 import { Link } from "react-router-dom";
 
 // Shared chrome for catalog-style game cards in `GameCard`, `OnlineFamilyCard`,
-// and `FamilyCard`. Owns the rounded-2xl border, the surface-900 background,
+// and `FamilyCard`. Owns the rounded-card-2xl border, the surface-900 background,
 // the accent-aware hover treatment, and the staggered fade-in entry animation
 // driven by `index` (each card delays its entry by index * 80ms).
 //
@@ -45,7 +45,7 @@ type Props = {
 };
 
 const CHROME_BASE =
-  "group relative flex flex-col overflow-hidden rounded-2xl border bg-surface-900 transition-all duration-300";
+  "group relative flex flex-col overflow-hidden rounded-card-2xl border bg-surface-900 transition-all duration-300";
 
 /**
  * Hover color treatment used by the three catalog card variants. The
@@ -55,7 +55,7 @@ const CHROME_BASE =
 const HOVER_BASE =
   "hover:border-[var(--accent)]/40 hover:bg-[color-mix(in_srgb,var(--accent)_8%,var(--color-surface-900))]";
 
-const BORDER_BASE = "border-white/[0.08]";
+const BORDER_BASE = "border-line";
 
 export function GameCardChrome({ accentHex, index = 0, as, children, overlay }: Props) {
   const style: CSSProperties = {

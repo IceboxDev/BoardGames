@@ -41,7 +41,7 @@ export function BoardOverlay({
   showLabel,
   showIcon,
   backdropClassName = "bg-surface-950/70",
-  toggleClassName = "border-white/20 bg-surface-800 hover:bg-surface-700",
+  toggleClassName = "border-line-strong bg-surface-800 hover:bg-surface-700",
   children,
 }: BoardOverlayProps) {
   const [hidden, setHidden] = useState(false);
@@ -84,7 +84,7 @@ export function BoardOverlay({
         type="button"
         onClick={() => setHidden((h) => !h)}
         title={hidden ? showLabel : hideLabel}
-        className={`absolute right-4 top-4 z-10 flex items-center gap-2 rounded-full border-2 px-4 py-2 text-xs font-bold text-white shadow-lg transition hover:scale-105 ${toggleClassName}`}
+        className={`absolute right-4 top-4 z-raised flex items-center gap-2 rounded-full border-2 px-4 py-2 text-xs font-bold text-fg-strong shadow-lg transition hover:scale-105 ${toggleClassName}`}
       >
         <span className="text-base leading-none">{hidden ? showIcon : hideIcon}</span>
         <span>{hidden ? showLabel : hideLabel}</span>

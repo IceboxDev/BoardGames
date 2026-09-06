@@ -61,7 +61,7 @@ export function PurchaseTimeline({ events }: { events: Purchase["events"] }) {
                 >
                   <span
                     className={cn(
-                      "mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md",
+                      "mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-card-md",
                       TONE_BUBBLE[meta.tone],
                     )}
                   >

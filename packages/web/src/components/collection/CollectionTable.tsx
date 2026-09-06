@@ -190,7 +190,7 @@ export function CollectionTable({
     <div className="w-full overflow-x-auto">
       <table className="w-full border-collapse text-sm">
         <thead>
-          <tr className="border-b border-white/10">
+          <tr className="border-b border-line">
             {editable && <th className="w-8 p-2.5" aria-label="Select" />}
             {header("Title", "title")}
             {header("Status", "status")}
@@ -221,8 +221,8 @@ export function CollectionTable({
                 <Fragment key={row.key}>
                   <tr
                     className={cn(
-                      "border-b border-white/[0.04] transition hover:bg-white/[0.03]",
-                      expanded && "bg-white/[0.03]",
+                      "border-b border-line-soft transition hover:bg-fill-soft",
+                      expanded && "bg-fill-soft",
                       row.playedThrough && "opacity-60",
                     )}
                   >
@@ -245,7 +245,7 @@ export function CollectionTable({
                         onClick={() => setExpandedKey(expanded ? null : row.key)}
                         aria-expanded={expanded}
                         aria-label={`${expanded ? "Collapse" : "Expand"} details for ${row.title}`}
-                        className="-mx-1 flex w-full cursor-pointer items-center gap-2.5 rounded-md px-1 py-0.5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
+                        className="-mx-1 flex w-full cursor-pointer items-center gap-2.5 rounded-ui-md px-1 py-0.5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
                       >
                         {row.thumbnail ? (
                           <img

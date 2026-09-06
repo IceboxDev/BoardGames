@@ -68,7 +68,7 @@ export default function GameOverScreen({
           </thead>
           <tbody>
             {categories.map(({ key, label }) => (
-              <tr key={key} className="border-t border-white/5 text-fg-primary">
+              <tr key={key} className="border-t border-line-soft text-fg-primary">
                 <td className="px-3 py-1 text-left text-fg-secondary">{label}</td>
                 {columns.map((col) => (
                   <td key={col.label} className="px-3 py-1 text-right tabular-nums">
@@ -77,7 +77,7 @@ export default function GameOverScreen({
                 ))}
               </tr>
             ))}
-            <tr className="border-t border-white/20 font-bold text-fg-primary">
+            <tr className="border-t border-line-strong font-bold text-fg-primary">
               <td className="px-3 py-1 text-left">Total</td>
               {columns.map((col) => (
                 <td

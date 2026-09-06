@@ -99,7 +99,7 @@ function RankedRow({ game, aggregate, date, rank }: RowProps) {
     // 360px screen). On sm+ everything fits on one line and the wrap never
     // engages.
     <div
-      className="flex flex-wrap items-center gap-x-2 gap-y-1 rounded-2xl border bg-surface-900/80 p-2 transition sm:gap-x-3 sm:pr-3"
+      className="flex flex-wrap items-center gap-x-2 gap-y-1 rounded-card-2xl border bg-surface-900/80 p-2 transition sm:gap-x-3 sm:pr-3"
       style={{
         borderColor: isTop ? game.accentHex : DIM_CHROME,
         boxShadow: isTop
@@ -107,7 +107,7 @@ function RankedRow({ game, aggregate, date, rank }: RowProps) {
           : undefined,
       }}
     >
-      <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-xl sm:h-16 sm:w-16">
+      <div className="relative h-12 w-12 shrink-0 overflow-hidden rounded-card-xl sm:h-16 sm:w-16">
         <img
           src={game.thumbnail}
           alt=""
@@ -134,7 +134,7 @@ function RankedRow({ game, aggregate, date, rank }: RowProps) {
           {/* No "Top pick" chip — the #1 row already reads as the winner via
               its accent border, glow, and colored rank badge, and on phone
               widths the chip stole the room the title needs. */}
-          <h3 className="truncate text-sm font-semibold text-white">{game.title}</h3>
+          <h3 className="truncate text-sm font-semibold text-fg-strong">{game.title}</h3>
         </div>
         {meta && <p className="truncate text-2xs text-fg-secondary">{meta}</p>}
       </div>

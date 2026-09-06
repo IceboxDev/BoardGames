@@ -16,7 +16,7 @@ import { TYPE_TEXT, trueCharacterLabel } from "./labels";
 /** Scroll container + backdrop, following the D&D tool's screen-owns-scroll pattern. */
 export function Screen({ children }: { children: ReactNode }) {
   return (
-    <div className="relative z-10 h-full overflow-y-auto bg-gradient-to-b from-rose-950/25 via-surface-950 to-black">
+    <div className="relative z-raised h-full overflow-y-auto bg-gradient-to-b from-rose-950/25 via-surface-950 to-black">
       <div className="mx-auto flex w-full max-w-2xl flex-col gap-3 px-3 py-4 pb-24 sm:px-4 sm:py-6">
         {children}
       </div>
@@ -36,7 +36,7 @@ export function Panel({
   className?: string;
 }) {
   const toneClass = {
-    neutral: "border-white/10 bg-surface-900/70",
+    neutral: "border-line bg-surface-900/70",
     night: "border-accent-400/25 bg-accent-500/10",
     day: "border-amber-300/25 bg-amber-950/25",
     danger: "border-rose-400/35 bg-rose-950/40",
@@ -145,11 +145,11 @@ export function SeatPicker({
 export function StatusChips({ p }: { p: CompanionPlayer }) {
   const chips: { label: string; cls: string }[] = [];
   if (p.left) {
-    chips.push({ label: "Left town", cls: "bg-white/10 text-fg-muted" });
+    chips.push({ label: "Left town", cls: "bg-fill-strong text-fg-muted" });
   } else if (!p.alive) {
     chips.push({
       label: p.ghostVote ? "Dead · ghost vote" : "Dead · no vote",
-      cls: "bg-white/10 text-fg-secondary",
+      cls: "bg-fill-strong text-fg-secondary",
     });
   }
   if (p.tripleVote) chips.push({ label: "×3 vote", cls: "bg-purple-400/15 text-purple-300" });

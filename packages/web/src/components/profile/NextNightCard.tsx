@@ -31,11 +31,11 @@ export function NextNightCard({ nextNight, firstName, isSelf }: NextNightCardPro
   }
 
   return (
-    <div className="rounded-2xl border border-accent-400/25 bg-accent-500/[0.07] p-4 sm:p-5">
+    <div className="rounded-card-2xl border border-accent-400/25 bg-accent-500/[0.07] p-4 sm:p-5">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
           <Eyebrow className="text-accent-300">Next game night</Eyebrow>
-          <p className="mt-1 text-lg font-bold text-white">{formatDayKey(nextNight.dateKey)}</p>
+          <p className="mt-1 text-lg font-bold text-fg-strong">{formatDayKey(nextNight.dateKey)}</p>
         </div>
         <Badge tone={nextNight.status === "definite" ? "emerald" : "amber"} size="sm">
           {nextNight.status === "definite" ? "Going" : "Maybe"}

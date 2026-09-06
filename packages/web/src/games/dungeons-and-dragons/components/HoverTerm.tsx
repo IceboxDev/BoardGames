@@ -32,7 +32,7 @@ export function HoverTerm({ term }: Props) {
       </button>
       {open && (
         <span className="absolute bottom-full left-1/2 z-overlay w-64 -translate-x-1/2 pb-1.5">
-          <span className="block rounded-xl border border-amber-400/30 bg-dnd-ink p-3 shadow-2xl shadow-black/70">
+          <span className="block rounded-card-xl border border-amber-400/30 bg-dnd-ink p-3 shadow-2xl shadow-black/70">
             {entry ? (
               <>
                 <span className="font-fantasy block text-sm font-bold text-amber-100">

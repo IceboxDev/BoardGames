@@ -86,7 +86,7 @@ export default function NightPanel({
           never cover the last row of a tall step: at scroll end it sits in
           normal flow below the card. The step counter rides along, so
           progress is always visible without a duplicate label up top. */}
-      <div className="sticky bottom-[max(0.5rem,env(safe-area-inset-bottom))] z-20 flex items-center justify-between gap-2 rounded-xl border border-white/10 bg-surface-900/95 px-2 py-1.5 shadow-lg shadow-black/40">
+      <div className="sticky bottom-[max(0.5rem,env(safe-area-inset-bottom))] z-raised-2 flex items-center justify-between gap-2 rounded-xl border border-line bg-surface-900/95 px-2 py-1.5 shadow-lg shadow-black/40">
         <Button
           variant="secondary"
           size="md"
@@ -172,7 +172,8 @@ function WakeHeader({
       <CharacterIcon character={step.character} size="lg" />
       <div className="flex min-w-0 flex-col gap-1">
         <p className="text-sm text-fg-secondary">
-          Wake <b className="text-white">{p.name}</b> — <CharacterTag character={step.character} />
+          Wake <b className="text-fg-strong">{p.name}</b> —{" "}
+          <CharacterTag character={step.character} />
           {step.isDrunk && (
             <span className="text-amber-300"> (really the {bmr ? "Lunatic" : "Drunk"})</span>
           )}
@@ -296,7 +297,7 @@ function DemonInfo({ state }: { state: CompanionState }) {
         {state.demonBluffs.map((id) => (
           <span
             key={id}
-            className="flex items-center gap-1.5 rounded-lg border border-white/15 bg-surface-950/60 px-2 py-1 text-sm"
+            className="flex items-center gap-1.5 rounded-lg border border-line-strong bg-surface-950/60 px-2 py-1 text-sm"
           >
             <CharacterIcon character={id} size="sm" />
             <CharacterTag character={id} />
@@ -318,7 +319,7 @@ function Dawn({ state, update }: { state: CompanionState; update: UpdateState })
           : "Announce who died — but never how or as what."}
       </p>
       {died.length > 0 && (
-        <p className="mt-2 text-lg font-bold text-white">
+        <p className="mt-2 text-lg font-bold text-fg-strong">
           Died tonight: {died.map((p) => p.name).join(", ")}
         </p>
       )}
@@ -620,7 +621,7 @@ function TrueNumber({
   return (
     <div className="flex flex-col items-center gap-1 py-2">
       <p className="text-xs font-bold uppercase tracking-pill text-fg-secondary">{label}</p>
-      <p className="text-5xl font-bold text-white">{value}</p>
+      <p className="text-5xl font-bold text-fg-strong">{value}</p>
       {voided && (
         <p className="text-xs font-semibold text-amber-300">
           True answer shown — their ability is void, so show any number you like instead.
@@ -799,7 +800,7 @@ function ImpStep({
         }}
       />
       {targetPlayer && !isSelf && targetDead && (
-        <div className="flex flex-col gap-2 rounded-lg border border-white/10 bg-surface-950/60 p-2">
+        <div className="flex flex-col gap-2 rounded-lg border border-line bg-surface-950/60 p-2">
           <p className="text-xs font-semibold text-sky-300">
             {targetPlayer.name} is already dead — nobody dies tonight.
           </p>
@@ -817,7 +818,7 @@ function ImpStep({
         </div>
       )}
       {targetPlayer && !isSelf && !targetDead && (
-        <div className="flex flex-col gap-2 rounded-lg border border-white/10 bg-surface-950/60 p-2">
+        <div className="flex flex-col gap-2 rounded-lg border border-line bg-surface-950/60 p-2">
           {guarded && (
             <p className="text-xs font-semibold text-sky-300">
               {targetPlayer.name} is {guardReason} — recommend: nobody dies.
@@ -1121,7 +1122,7 @@ function KillButtons({
   const target = playerAt(state, targetSeat);
   const hints = killHints(state, targetSeat);
   return (
-    <div className="flex flex-col gap-2 rounded-lg border border-white/10 bg-surface-950/60 p-2">
+    <div className="flex flex-col gap-2 rounded-lg border border-line bg-surface-950/60 p-2">
       {hints.map((h) => (
         <p key={h} className="text-xs font-semibold text-sky-300">
           {h}
@@ -1580,7 +1581,7 @@ function GodfatherStep({
           {outsiders.map((p) => (
             <span
               key={p.seat}
-              className="flex items-center gap-1.5 rounded-lg border border-white/15 bg-surface-950/60 px-2 py-1 text-sm font-semibold"
+              className="flex items-center gap-1.5 rounded-lg border border-line-strong bg-surface-950/60 px-2 py-1 text-sm font-semibold"
             >
               <CharacterIcon character={p.character} size="sm" />
               <CharacterTag character={p.character} />
@@ -1793,7 +1794,7 @@ function ChambermaidStep({
             />
           ))}
           <div className="flex flex-col items-center gap-1 py-1">
-            <p className="text-5xl font-bold text-white">{chambermaidNumber(state, picked)}</p>
+            <p className="text-5xl font-bold text-fg-strong">{chambermaidNumber(state, picked)}</p>
             {voided && (
               <p className="text-xs font-semibold text-amber-300">
                 True answer shown — their ability is void, so show any number you like instead.

@@ -9,11 +9,11 @@ import { RADIUS_CARD_2XL, RADIUS_CARD_LG, RADIUS_CARD_MD, RADIUS_CARD_XL } from 
 // app (profile cards, match-history forms, game-over panels). Three treatments
 // capture the observed clusters:
 //
-//   tile   — dense, subtle inset (rounded-md, border-white/5, surface-900/40).
+//   tile   — dense, subtle inset (rounded-md, border-line-soft, surface-900/40).
 //            Per-player rows/cards inside forms.
-//   panel  — standard solid panel (rounded-lg, border-white/10, surface-900).
+//   panel  — standard solid panel (rounded-lg, border-line, surface-900).
 //            The default; most chrome.
-//   raised — prominent card (rounded-2xl, border-white/[0.06], surface-900/60).
+//   raised — prominent card (rounded-2xl, border-line-soft, surface-900/60).
 //            Profile cards / hero surfaces.
 //
 // Deliberately SLOT-LESS: it owns chrome (radius/border/background/padding),
@@ -40,9 +40,9 @@ type SurfaceProps = HTMLAttributes<HTMLElement> & {
 
 // Corners route through the card-radius theme hook — see radii.ts.
 const VARIANTS: Record<SurfaceVariant, string> = {
-  tile: `${RADIUS_CARD_MD} border border-white/5 bg-surface-900/40`,
-  panel: `${RADIUS_CARD_LG} border border-white/10 bg-surface-900`,
-  raised: `${RADIUS_CARD_2XL} border border-white/[0.06] bg-surface-900/60`,
+  tile: `${RADIUS_CARD_MD} border border-line-soft bg-surface-900/40`,
+  panel: `${RADIUS_CARD_LG} border border-line bg-surface-900`,
+  raised: `${RADIUS_CARD_2XL} border border-line-soft bg-surface-900/60`,
 };
 
 const RADII: Record<SurfaceRadius, string> = {

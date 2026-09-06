@@ -68,7 +68,7 @@ export default function GrimoirePanel({
                 variant="plain"
                 bleed
                 onClick={() => setOpenSeat(p.seat)}
-                className="flex min-h-11 w-full flex-col gap-0.5 rounded-lg border border-white/5 bg-surface-950/50 px-2 py-1.5 text-left transition hover:border-white/20"
+                className="flex min-h-11 w-full flex-col gap-0.5 rounded-lg border border-line-soft bg-surface-950/50 px-2 py-1.5 text-left transition hover:border-line-strong"
               >
                 <span className="flex w-full items-center justify-between gap-2">
                   <span

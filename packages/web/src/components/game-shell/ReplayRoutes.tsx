@@ -3,7 +3,9 @@ import { Suspense } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useGameShell } from "../../hooks/useGameShell";
 import { apiClient } from "../../lib/api-client";
+import { BoardFallback } from "../RouteFallback";
 import { Button } from "../ui/Button";
+import { ErrorAlert } from "../ui/ErrorAlert";
 
 // ── Shared rendering ─────────────────────────────────────────────────────
 //
@@ -29,20 +31,14 @@ function ReplayShell({
   const { def } = useGameShell();
   const navigate = useNavigate();
 
-  if (loading) {
-    return (
-      <div className="flex min-h-0 flex-1 items-center justify-center text-sm text-fg-muted">
-        Loading replay…
-      </div>
-    );
-  }
+  if (loading) return <BoardFallback label="Loading replay…" />;
 
   if (error || !log) {
     return (
       <div className="mx-auto flex min-h-0 flex-1 flex-col items-center justify-center gap-4 px-6 text-center">
-        <p className="text-sm text-rose-300">
-          {error instanceof Error ? error.message : "Replay could not be loaded."}
-        </p>
+        <ErrorAlert
+          message={error instanceof Error ? error.message : "Replay could not be loaded."}
+        />
         <Button variant="secondary" size="sm" onClick={() => navigate(backHref)}>
           {backLabel}
         </Button>
@@ -58,7 +54,7 @@ function ReplayShell({
   }
 
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<BoardFallback />}>
       <Replay game={log} onBack={() => navigate(backHref)} />
     </Suspense>
   );

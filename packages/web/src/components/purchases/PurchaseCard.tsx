@@ -70,7 +70,7 @@ function WaveDetail({ row }: { row: PurchaseRow }) {
   const facts = [etaFragment(row), slipText(row)].filter(Boolean).join(" · ");
   const money = ownerMoneyLine(row);
   return (
-    <div className="space-y-2 border-t border-white/[0.06] pt-2.5 first:border-t-0 first:pt-0">
+    <div className="space-y-2 border-t border-line-soft pt-2.5 first:border-t-0 first:pt-0">
       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
         <span className="text-xs font-semibold text-fg-primary">{displayPurchaseTitle(p)}</span>
         {facts && <span className="text-2xs text-fg-muted">{facts}</span>}
@@ -149,9 +149,9 @@ export function PurchaseCard({
         className="flex w-full cursor-pointer items-center gap-3 rounded-t-xl px-3 pb-2 pt-2.5 text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
       >
         {thumb ? (
-          <img src={thumb} alt="" className="h-9 w-16 shrink-0 rounded-md object-cover" />
+          <img src={thumb} alt="" className="h-9 w-16 shrink-0 rounded-card-md object-cover" />
         ) : (
-          <span className="flex h-9 w-16 shrink-0 items-center justify-center rounded-md bg-surface-800 text-sm font-bold text-fg-muted">
+          <span className="flex h-9 w-16 shrink-0 items-center justify-center rounded-card-md bg-surface-800 text-sm font-bold text-fg-muted">
             {card.title.slice(0, 1).toUpperCase()}
           </span>
         )}
@@ -232,7 +232,7 @@ export function PurchaseCard({
       </div>
 
       {expanded && (
-        <div className="space-y-3 border-t border-white/[0.06] px-3 py-3">
+        <div className="space-y-3 border-t border-line-soft px-3 py-3">
           {!multiWave && p.title !== card.title && (
             <p className="text-2xs leading-snug text-fg-muted">{p.title}</p>
           )}

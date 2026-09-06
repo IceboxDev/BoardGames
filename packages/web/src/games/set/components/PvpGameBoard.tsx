@@ -52,7 +52,7 @@ export default function PvpGameBoard({ view, playerIndex, opponentName, send }: 
           <StatRow label="Deck" value={String(view.deckRemaining)} color="text-fg-muted" />
 
           {iAmSelecting && (
-            <div className="border-t border-white/10 pt-3">
+            <div className="border-t border-line pt-3">
               <p className="text-xs font-semibold leading-snug text-yellow-300">Select 3 cards</p>
             </div>
           )}

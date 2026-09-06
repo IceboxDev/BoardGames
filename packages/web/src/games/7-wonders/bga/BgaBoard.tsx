@@ -92,7 +92,7 @@ function PlayerCard({ player, cardImg }: { player: BgaPlayerView; cardImg: ImgMa
   const order = ["raw", "man", "civ", "com", "mil", "sci", "gui", ""];
 
   return (
-    <div className="flex min-w-56 flex-1 flex-col gap-1.5 rounded-lg border border-white/10 bg-surface-900/70 p-2.5">
+    <div className="flex min-w-56 flex-1 flex-col gap-1.5 rounded-lg border border-line bg-surface-900/70 p-2.5">
       <div className="flex items-baseline justify-between gap-2">
         <span className="truncate text-sm font-semibold text-fg-primary">{player.name}</span>
         <span className="shrink-0 text-2xs text-fg-secondary">
@@ -124,7 +124,7 @@ function PlayerCard({ player, cardImg }: { player: BgaPlayerView; cardImg: ImgMa
             className={`flex-1 rounded border px-1 py-0.5 text-5xs leading-tight ${
               stage.built
                 ? "border-amber-400/60 bg-amber-400/10 text-amber-100"
-                : "border-white/10 text-fg-disabled"
+                : "border-line text-fg-disabled"
             }`}
             title={`${stage.cost} → ${stage.effect}`}
           >

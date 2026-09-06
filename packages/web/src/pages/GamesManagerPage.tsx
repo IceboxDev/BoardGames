@@ -15,18 +15,16 @@ import { buildCollectionRows } from "../components/collection/collection-rows.ts
 import { PendingAnnouncements } from "../components/collection/PendingAnnouncements.tsx";
 import { VocabManagerModal } from "../components/collection/VocabManagerModal.tsx";
 import { GalleryIcon } from "../components/icons";
+import { PlayerQueryBoundary } from "../components/profile/PlayerPageFrame.tsx";
 import { PurchasesTab } from "../components/purchases/PurchasesTab.tsx";
 import { TopNav, TopNavBackButton } from "../components/TopNav";
 import { Button } from "../components/ui/Button.tsx";
 import { EmptyState } from "../components/ui/EmptyState.tsx";
-import { LoadingState } from "../components/ui/LoadingState.tsx";
 import { PageHeader } from "../components/ui/PageHeader.tsx";
 import { PageMain, PageShell } from "../components/ui/PageShell.tsx";
-import { QueryBoundary } from "../components/ui/QueryBoundary.tsx";
 import { SegmentedControl } from "../components/ui/SegmentedControl.tsx";
 import { Select } from "../components/ui/Select.tsx";
 import { Stack } from "../components/ui/Stack.tsx";
-import { ApiError } from "../lib/api-fetch.ts";
 import { fetchCollection, upsertCollectionItem } from "../lib/collection.ts";
 import { fetchProfile } from "../lib/profile.ts";
 import { qk } from "../lib/query-keys.ts";
@@ -121,37 +119,15 @@ export default function GamesManagerPage() {
 
   return (
     <PageShell topNav={topNav}>
-      <QueryBoundary
+      <PlayerQueryBoundary
         query={collectionQuery}
-        loading={
-          <PageMain width="7xl" padding="spacious" fillHeight>
-            <LoadingState fillHeight label="Loading collection…" />
-          </PageMain>
-        }
-        errorFallback={(error) => {
-          const notFound = error instanceof ApiError && error.status === 404;
-          return (
-            <PageMain width="7xl" padding="spacious">
-              <EmptyState
-                tone="rose"
-                title={notFound ? "Player not found" : "Couldn't load the collection"}
-                description={
-                  notFound
-                    ? "This player doesn't exist or has been removed."
-                    : "Something went wrong fetching the collection. Try again."
-                }
-                action={
-                  <Button variant="secondary" onClick={() => collectionQuery.refetch()}>
-                    Retry
-                  </Button>
-                }
-              />
-            </PageMain>
-          );
-        }}
+        width="7xl"
+        loadingLabel="Loading collection…"
+        errorTitle="Couldn't load the collection"
+        errorDescription="Something went wrong fetching the collection. Try again."
       >
         {(collection) => renderBody(collection)}
-      </QueryBoundary>
+      </PlayerQueryBoundary>
     </PageShell>
   );
 
@@ -239,7 +215,7 @@ export default function GamesManagerPage() {
               />
 
               {editable && selection.size > 0 && (
-                <div className="flex flex-wrap items-center gap-2 rounded-xl border border-accent-400/30 bg-accent-500/[0.06] px-3 py-2">
+                <div className="flex flex-wrap items-center gap-2 rounded-card-xl border border-accent-400/30 bg-accent-500/[0.06] px-3 py-2">
                   <span className="text-xs text-fg-secondary">
                     {selection.size} selected — pack them into one game's box:
                   </span>

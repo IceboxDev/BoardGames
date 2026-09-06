@@ -4,7 +4,7 @@ import type { BeamerEvent, DndSession } from "@boardgames/core/protocol";
 import { BeamerEventSchema } from "@boardgames/core/protocol";
 import { useEffect, useState } from "react";
 import { D20Die } from "../../components/offline/D20Die";
-import { Button, Input } from "../../components/ui";
+import { Button, ErrorAlert, Input } from "../../components/ui";
 import { sessionByCode, streamDndSession } from "../../lib/dnd-campaigns";
 import { errorMessageOf } from "../../lib/error-message";
 
@@ -117,7 +117,7 @@ export default function BeamerScreen() {
   }
 
   return (
-    <div className="relative z-10 flex h-full flex-col items-center justify-center gap-6 bg-gradient-to-b from-dnd-ink via-surface-950 to-black px-6 text-center">
+    <div className="relative z-raised flex h-full flex-col items-center justify-center gap-6 bg-gradient-to-b from-dnd-ink via-surface-950 to-black px-6 text-center">
       <span aria-hidden="true">
         <D20Die count={20} className="dnd-die h-24 w-24 opacity-70 sm:h-32 sm:w-32" />
       </span>
@@ -152,7 +152,7 @@ export default function BeamerScreen() {
           Join
         </Button>
       </form>
-      {joinError && <p className="text-xs text-rose-300">{joinError}</p>}
+      {joinError && <ErrorAlert message={joinError} />}
     </div>
   );
 }

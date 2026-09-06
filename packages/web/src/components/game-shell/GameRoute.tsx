@@ -2,6 +2,7 @@ import { Suspense, useEffect } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import { type GameSource, useGameShell } from "../../hooks/useGameShell";
+import { BoardFallback } from "../RouteFallback";
 
 const PLAYER_NAME_KEY = "boardgames-player-name";
 
@@ -31,7 +32,7 @@ export function SoloGameRoute() {
     return <Navigate to="/games" replace />;
   }
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<BoardFallback />}>
       <Game source="solo" />
     </Suspense>
   );
@@ -85,7 +86,7 @@ export function MpGameRoute() {
     return <Navigate to="/games" replace />;
   }
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<BoardFallback />}>
       <Game source="mp" />
     </Suspense>
   );
@@ -104,7 +105,7 @@ export function CompanionRoute() {
     return <Navigate to={`/play/${def.slug}`} replace />;
   }
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<BoardFallback />}>
       <Companion />
     </Suspense>
   );
@@ -121,7 +122,7 @@ export function BgaRoute() {
     return <Navigate to={`/play/${def.slug}`} replace />;
   }
   return (
-    <Suspense fallback={null}>
+    <Suspense fallback={<BoardFallback />}>
       <BgaScreen />
     </Suspense>
   );

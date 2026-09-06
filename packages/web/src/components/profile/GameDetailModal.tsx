@@ -45,7 +45,7 @@ export function GameDetailModal({ game, onClose }: GameDetailModalProps) {
       subheader={summary ? <MicroLabel as="p">{summary}</MicroLabel> : undefined}
     >
       <ModalBody>
-        <div className="shrink-0 overflow-hidden rounded-2xl ring-1 ring-[var(--accent)]/30">
+        <div className="shrink-0 overflow-hidden rounded-card-2xl ring-1 ring-[var(--accent)]/30">
           <img
             src={game.thumbnail}
             alt={game.title}

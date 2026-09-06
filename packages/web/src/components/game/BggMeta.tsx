@@ -1,6 +1,7 @@
 import type { BggGame } from "../../games/types";
 import { formatCount, weightColor, weightLabel } from "../../lib/bgg-format";
 import { StarIcon } from "../icons";
+import { ProgressBar } from "../ui/ProgressBar";
 
 // Full catalog-card footer: rating row (star + value) over a complexity
 // row (label + bar + numeric + bucket). Sits at the bottom of `GameCard`
@@ -18,7 +19,7 @@ export function BggMeta({ bgg }: { bgg: BggGame }) {
   if (!hasRating && !hasWeight) return null;
 
   return (
-    <div className="mt-3 flex flex-col gap-2 border-t border-white/[0.05] pt-3 text-2xs text-fg-secondary">
+    <div className="mt-3 flex flex-col gap-2 border-t border-line-soft pt-3 text-2xs text-fg-secondary">
       {hasRating && bgg.averageRating !== null && (
         <div className="flex items-center justify-between gap-3">
           <span className="flex items-center gap-1.5">
@@ -36,17 +37,14 @@ export function BggMeta({ bgg }: { bgg: BggGame }) {
           <span className="shrink-0 text-3xs uppercase tracking-pill text-fg-muted">
             Complexity
           </span>
-          <div className="relative h-1.5 flex-1 overflow-hidden rounded-full bg-white/[0.06]">
-            {/* Color = difficulty (green→red across the catalog's range),
-                not the game's accent — the accent made the bar misleading. */}
-            <div
-              className="absolute inset-y-0 left-0 rounded-full transition-[width] duration-500"
-              style={{
-                width: `${Math.min(100, (bgg.averageWeight / 5) * 100)}%`,
-                backgroundColor: weightColor(bgg.averageWeight),
-              }}
-            />
-          </div>
+          {/* Color = difficulty (green→red across the catalog's range),
+              not the game's accent — the accent made the bar misleading. */}
+          <ProgressBar
+            className="flex-1"
+            label="Complexity"
+            value={bgg.averageWeight / 5}
+            color={weightColor(bgg.averageWeight)}
+          />
           <span className="shrink-0 font-semibold text-fg-primary tabular-nums">
             {bgg.averageWeight.toFixed(1)}
           </span>

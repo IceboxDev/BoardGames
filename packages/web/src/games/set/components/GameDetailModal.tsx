@@ -114,7 +114,7 @@ export default function GameDetailModal({ record, history, onClose }: GameDetail
         <p className="text-xs text-fg-muted uppercase tracking-widest">
           {new Date(record.timestamp).toLocaleDateString()} &middot; {formatTime(record.durationMs)}
         </p>
-        <p className="text-4xl font-extrabold text-white mt-1">{record.rating}</p>
+        <p className="text-4xl font-extrabold text-fg-strong mt-1">{record.rating}</p>
         <p className="text-sm text-fg-secondary">Rating</p>
       </div>
 
@@ -150,7 +150,7 @@ export default function GameDetailModal({ record, history, onClose }: GameDetail
               title={STAT_TIPS[m.label]}
             >
               <p className="text-xs text-fg-muted cursor-help">{m.label}</p>
-              <p className="text-lg font-bold text-white">{m.value}</p>
+              <p className="text-lg font-bold text-fg-strong">{m.value}</p>
               <div className="flex items-center justify-center gap-2 mt-0.5">
                 <span className={`text-xs font-semibold ${percentileColor(pct)}`}>
                   {percentileLabel(pct)}
@@ -237,32 +237,32 @@ export default function GameDetailModal({ record, history, onClose }: GameDetail
       <div className="grid grid-cols-3 gap-2 text-center text-sm mb-4">
         <div className="rounded-lg bg-surface-800 p-2" title={STAT_TIPS["SETs Found"]}>
           <p className="text-xs text-fg-muted cursor-help">SETs Found</p>
-          <p className="font-bold text-white">{record.setsFound}</p>
+          <p className="font-bold text-fg-strong">{record.setsFound}</p>
         </div>
         <div className="rounded-lg bg-surface-800 p-2" title={STAT_TIPS.Penalties}>
           <p className="text-xs text-fg-muted cursor-help">Penalties</p>
-          <p className="font-bold text-white">{record.incorrectCalls}</p>
+          <p className="font-bold text-fg-strong">{record.incorrectCalls}</p>
         </div>
         <div className="rounded-lg bg-surface-800 p-2" title={STAT_TIPS["+3 Requests"]}>
           <p className="text-xs text-fg-muted cursor-help">+3 Requests</p>
-          <p className="font-bold text-white">{record.plusThreeRequests}</p>
+          <p className="font-bold text-fg-strong">{record.plusThreeRequests}</p>
         </div>
         <div className="rounded-lg bg-surface-800 p-2" title={STAT_TIPS["Early Calls"]}>
           <p className="text-xs text-fg-muted cursor-help">Early Calls</p>
-          <p className="font-bold text-white">
+          <p className="font-bold text-fg-strong">
             {record.earlyCallCount} ({Math.round(record.earlyCallRate * 100)}%)
           </p>
         </div>
         <div className="rounded-lg bg-surface-800 p-2" title={STAT_TIPS.Fatigue}>
           <p className="text-xs text-fg-muted cursor-help">Fatigue</p>
-          <p className="font-bold text-white">
+          <p className="font-bold text-fg-strong">
             {record.fatigueSlopeMs > 0 ? "+" : ""}
             {(record.fatigueSlopeMs / 1000).toFixed(1)}s
           </p>
         </div>
         <div className="rounded-lg bg-surface-800 p-2" title={STAT_TIPS["Cards Left"]}>
           <p className="text-xs text-fg-muted cursor-help">Cards Left</p>
-          <p className="font-bold text-white">{record.cardsRemaining}</p>
+          <p className="font-bold text-fg-strong">{record.cardsRemaining}</p>
         </div>
       </div>
 

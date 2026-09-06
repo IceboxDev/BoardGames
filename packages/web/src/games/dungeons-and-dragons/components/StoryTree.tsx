@@ -191,7 +191,7 @@ export function StoryTree({
         </ReadAloudPanel>
       ) : (
         waypoint && (
-          <div className="shrink-0 rounded-2xl border border-amber-400/15 bg-black/25 px-4 py-3">
+          <div className="shrink-0 rounded-card-2xl border border-amber-400/15 bg-black/25 px-4 py-3">
             <p className="font-serif-body text-sm leading-relaxed text-amber-200/70">
               {waypoint.description}
             </p>

@@ -78,7 +78,7 @@ export function PageHeader({
           </Eyebrow>
         )}
         <div className={`flex items-center gap-3 ${center ? "justify-center" : ""}`}>
-          <h1 className={`${TITLE_SIZE[size]} tracking-tight text-white`}>{title}</h1>
+          <h1 className={`${TITLE_SIZE[size]} tracking-tight text-fg-strong`}>{title}</h1>
           {badge}
         </div>
         {subtitle && <p className="mt-1 text-sm text-fg-muted">{subtitle}</p>}

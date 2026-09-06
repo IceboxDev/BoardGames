@@ -77,8 +77,8 @@ type SegmentedControlProps<T extends string | number> = {
 // below the track's, so the nested curve remains concentric at any scale.
 // Pills stay pills.
 const TRACK_SHAPE: Record<Shape, string> = {
-  pill: "rounded-full border border-white/10 bg-surface-950/60 p-0.5 gap-0.5",
-  rounded: `${RADIUS_UI_LG} border border-white/10 bg-surface-800 p-1`,
+  pill: "rounded-full border border-line bg-surface-950/60 p-0.5 gap-0.5",
+  rounded: `${RADIUS_UI_LG} border border-line bg-surface-800 p-1`,
 };
 
 const OPTION_SHAPE: Record<Shape, string> = {
@@ -99,7 +99,7 @@ const OPTION_SIZE: Record<"xs" | "sm" | "md", string> = {
   md: "px-3 py-1.5 text-sm font-medium",
 };
 
-const INACTIVE = "text-fg-secondary hover:text-white";
+const INACTIVE = "text-fg-secondary hover:text-fg-strong";
 
 export function SegmentedControl<T extends string | number>({
   options,
@@ -146,7 +146,7 @@ export function SegmentedControl<T extends string | number>({
           : INACTIVE;
         const optionCls = cn(
           "inline-flex items-center justify-center gap-1 transition",
-          "focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40",
+          "focus:outline-none focus-visible:ring-2 focus-visible:ring-fg-strong/40",
           "disabled:cursor-not-allowed disabled:opacity-50",
           OPTION_SHAPE[shape],
           OPTION_SIZE[size],

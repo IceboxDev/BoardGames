@@ -20,7 +20,7 @@ const TONE_DOT: Record<Tone, string> = {
   purple: "bg-purple-400",
   orange: "bg-orange-400",
   cyan: "bg-cyan-400",
-  neutral: "bg-white/30",
+  neutral: "bg-fg-strong/30",
 };
 
 export function PurchasePipelineRail({
@@ -34,7 +34,7 @@ export function PurchasePipelineRail({
   if (rail === null) {
     return (
       <div role="img" aria-label="Cancelled" className="flex items-center gap-2">
-        <span className="h-px flex-1 bg-white/10" />
+        <span className="h-px flex-1 bg-fill-strong" />
         <span className="text-3xs font-medium text-rose-300">× Cancelled</span>
       </div>
     );
@@ -52,7 +52,7 @@ export function PurchasePipelineRail({
             <span
               className={cn(
                 "mt-[3px] h-px flex-1",
-                i <= rail.activeIndex ? cn(TONE_DOT[tone], "opacity-40") : "bg-white/10",
+                i <= rail.activeIndex ? cn(TONE_DOT[tone], "opacity-40") : "bg-fill-strong",
               )}
             />
           )}
@@ -62,7 +62,7 @@ export function PurchasePipelineRail({
                 "h-[7px] w-[7px] rounded-full",
                 i < rail.activeIndex && cn(TONE_DOT[tone], "opacity-60"),
                 i === rail.activeIndex && cn(TONE_DOT[tone], TONE_RING[tone]),
-                i > rail.activeIndex && "bg-white/10",
+                i > rail.activeIndex && "bg-fill-strong",
               )}
             />
             <span

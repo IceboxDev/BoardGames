@@ -57,10 +57,7 @@ export function GameRankings({
         return (
           <div
             key={slug}
-            className={cn(
-              "rounded-xl transition",
-              isOpen && "bg-white/[0.04] ring-1 ring-white/10",
-            )}
+            className={cn("rounded-card-xl transition", isOpen && "bg-fill-soft ring-1 ring-line")}
           >
             {/* biome-ignore lint/correctness/noRestrictedElements: full-row accordion toggle — Button chrome doesn't fit */}
             <button
@@ -70,14 +67,14 @@ export function GameRankings({
                 if (!isOpen) reportPageView("skill-board", slug);
                 setOpen(isOpen ? null : slug);
               }}
-              className="flex w-full items-center gap-2.5 rounded-xl px-2.5 py-2 text-left transition hover:bg-white/5"
+              className="flex w-full items-center gap-2.5 rounded-card-xl px-2.5 py-2 text-left transition hover:bg-fill"
             >
               {game && (
                 <img
                   src={game.thumbnail}
                   alt=""
                   loading="lazy"
-                  className="h-8 w-8 shrink-0 rounded-md object-cover"
+                  className="h-8 w-8 shrink-0 rounded-card-md object-cover"
                 />
               )}
               <span className="min-w-0 flex-1">

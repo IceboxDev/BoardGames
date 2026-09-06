@@ -74,7 +74,7 @@ export default function BriefingOverlay({ view, onReady, chat }: Props) {
           <span className="text-2xs font-bold uppercase tracking-[0.3em] text-amber-300">
             Briefing
           </span>
-          <h2 className="text-2xl font-black text-white">
+          <h2 className="text-2xl font-black text-fg-strong">
             {view.isFinalRound ? (
               "Final Approach"
             ) : (
@@ -140,7 +140,7 @@ function ChatPanel({
   };
 
   return (
-    <div className="flex w-full flex-col gap-2 rounded-xl border border-white/10 bg-surface-950/40 p-3 text-left">
+    <div className="flex w-full flex-col gap-2 rounded-xl border border-line bg-surface-950/40 p-3 text-left">
       <span className="text-3xs font-bold uppercase tracking-eyebrow text-fg-secondary">
         Crew Chat
       </span>
@@ -167,7 +167,7 @@ function ChatPanel({
                   className={`max-w-[90%] break-words rounded-lg px-2 py-1 text-2xs leading-snug ${
                     isMine
                       ? "bg-amber-500/15 text-amber-100 ring-1 ring-inset ring-amber-400/30"
-                      : "bg-surface-800/80 text-fg-primary ring-1 ring-inset ring-white/10"
+                      : "bg-surface-800/80 text-fg-primary ring-1 ring-inset ring-line"
                   }`}
                 >
                   {m.text}
@@ -191,7 +191,7 @@ function ChatPanel({
           }}
           placeholder="Discuss your plan…"
           maxLength={500}
-          className="flex-1 rounded-md border border-white/10 bg-surface-900 px-2.5 py-1.5 text-xs text-white placeholder-slate-500 outline-none focus:border-amber-400/60 focus:ring-1 focus:ring-amber-400/30"
+          className="flex-1 rounded-md border border-line bg-surface-900 px-2.5 py-1.5 text-xs text-fg-strong placeholder-slate-500 outline-none focus:border-amber-400/60 focus:ring-1 focus:ring-amber-400/30"
         />
         <Button variant="secondary" size="xs" onClick={send} disabled={!draft.trim()}>
           Send

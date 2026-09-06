@@ -143,7 +143,7 @@ const TONE: Record<BadgeTone, { bubble: string; card: string; name: string }> = 
   },
 };
 
-const LOCKED_CARD = "border-white/[0.06] bg-surface-900/40";
+const LOCKED_CARD = "border-line-soft bg-surface-900/40";
 const LOCKED_BUBBLE = "bg-surface-800 text-fg-disabled";
 
 type ProfileBadgesProps = {
@@ -175,7 +175,7 @@ export function ProfileBadges({ stats, firstName }: ProfileBadgesProps) {
           return (
             <li
               key={badge.key}
-              className={`relative flex flex-col items-center gap-1.5 rounded-xl border px-2.5 py-3 text-center transition ${
+              className={`relative flex flex-col items-center gap-1.5 rounded-card-xl border px-2.5 py-3 text-center transition ${
                 earned ? tone.card : LOCKED_CARD
               }`}
             >

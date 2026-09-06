@@ -36,7 +36,7 @@ export default function WonderBoard({ player, size = "md" }: WonderBoardProps) {
             <div
               key={stageKey}
               className={`flex-1 rounded border px-1 py-0.5 ${
-                built ? "border-amber-400/60 bg-amber-400/10" : "border-white/10 bg-surface-800/60"
+                built ? "border-amber-400/60 bg-amber-400/10" : "border-line bg-surface-800/60"
               }`}
               title={stage.effects.map(effectLabel).join(", ")}
             >

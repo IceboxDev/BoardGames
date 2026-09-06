@@ -55,7 +55,7 @@ export function HeroBanner({
       : "font-serif-body mt-2 text-sm italic leading-relaxed text-amber-200/70";
   return (
     <div
-      className={`dnd-hero-glow relative shrink-0 overflow-hidden rounded-3xl border border-amber-400/30 bg-gradient-to-br from-dnd-blood via-dnd-ink to-black text-center ${pad} ${className}`}
+      className={`dnd-hero-glow relative shrink-0 overflow-hidden rounded-card-3xl border border-amber-400/30 bg-gradient-to-br from-dnd-blood via-dnd-ink to-black text-center ${pad} ${className}`}
     >
       <span
         aria-hidden="true"

@@ -8,6 +8,7 @@ import {
   relativeLuminance,
   SEMANTIC_TOKENS,
   SEMANTIC_VAR_NAMES,
+  strongInk,
 } from "./semantic";
 
 const REFERENCE_ACCENT = "#6366f1";
@@ -270,5 +271,29 @@ describe("ink on an accent fill", () => {
     expect(relativeLuminance("#ffffff")).toBeCloseTo(1, 5);
     expect(relativeLuminance("#000000")).toBeCloseTo(0, 5);
     expect(relativeLuminance("#00ff88")).toBeGreaterThan(relativeLuminance("#6366f1"));
+  });
+});
+
+describe("strongest ink on the surface (--color-fg-strong)", () => {
+  // Every shipped ramp is dark-on-light-ink, so `fg-strong` must be the exact
+  // white the `text-white` headings used before the token existed — Classic
+  // stays byte-identical.
+  it("is pure white for the stock and every dark preset's primary ink", () => {
+    for (const fgPrimary of ["#e2e6ee", "#f2ede4", "#d8dee9", "#c0f0d0"]) {
+      expect(strongInk(fgPrimary), fgPrimary).toBe("#ffffff");
+    }
+  });
+
+  it("flips to pure black for a light ramp's dark primary ink", () => {
+    for (const fgPrimary of ["#1a1a1a", "#0b0d12", "#333333"]) {
+      expect(strongInk(fgPrimary), fgPrimary).toBe("#000000");
+    }
+  });
+
+  // index.css must ship the stock value the Classic path falls back to.
+  it("matches the stock declaration in index.css", () => {
+    const css = readIndexCss();
+    const declared = css.match(/--color-fg-strong:\s*([^;]+);/)?.[1]?.trim();
+    expect(declared).toBe(strongInk("#e2e6ee"));
   });
 });

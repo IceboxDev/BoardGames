@@ -49,7 +49,7 @@ export function ProfileMatchList({ matches, userId, firstName, footer }: Profile
               style={{ "--accent": game?.accentHex ?? DEFAULT_ACCENT } as CSSProperties}
               className="flex items-center gap-3 p-2.5"
             >
-              <div className="h-11 w-11 shrink-0 overflow-hidden rounded-lg bg-surface-800 ring-1 ring-[var(--accent)]/30">
+              <div className="h-11 w-11 shrink-0 overflow-hidden rounded-card-lg bg-surface-800 ring-1 ring-[var(--accent)]/30">
                 {game ? (
                   <img
                     src={game.thumbnail}

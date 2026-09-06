@@ -34,7 +34,7 @@ export default function GameOverScreen({
   return (
     // `my-auto` (not items-center) so a card taller than a phone viewport
     // scrolls from the top instead of clipping both ends.
-    <div className="relative z-10 flex min-h-0 flex-1 justify-center overflow-y-auto p-3 sm:p-4">
+    <div className="relative z-raised flex min-h-0 flex-1 justify-center overflow-y-auto p-3 sm:p-4">
       <Surface variant="raised" padding="lg" className="my-auto h-fit w-full max-w-2xl">
         <div className="mb-4 text-center">
           <h1
@@ -77,7 +77,9 @@ export default function GameOverScreen({
                     {keywords.map((word, i) => (
                       <li key={word} className="flex items-baseline gap-1.5">
                         <span className="text-2xs font-black text-accent-300">{i + 1}</span>
-                        <span className="text-xs font-semibold uppercase text-white">{word}</span>
+                        <span className="text-xs font-semibold uppercase text-fg-strong">
+                          {word}
+                        </span>
                       </li>
                     ))}
                   </ol>

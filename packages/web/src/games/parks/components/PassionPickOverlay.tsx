@@ -33,7 +33,7 @@ function PassionCard({ id, onPick }: { id: PassionId; onPick: (id: PassionId) =>
         </div>
       )}
       <div className="absolute inset-x-0 bottom-0 flex flex-col gap-1 bg-gradient-to-t from-stone-950/95 via-stone-950/80 to-transparent p-4 pt-12">
-        <span className="text-xl font-bold text-white drop-shadow">{PASSION_LABELS[id]}</span>
+        <span className="text-xl font-bold text-fg-strong drop-shadow">{PASSION_LABELS[id]}</span>
         <span className="text-xs leading-snug text-stone-200/90">{PASSION_DESCRIPTIONS[id]}</span>
       </div>
     </motion.button>

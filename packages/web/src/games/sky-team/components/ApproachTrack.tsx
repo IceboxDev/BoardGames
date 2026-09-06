@@ -62,7 +62,7 @@ export default function ApproachTrack({ view }: Props) {
                   ? "border-amber-300/90 ring-2 ring-amber-300/60"
                   : isAirport
                     ? "border-lime-400/70"
-                    : "border-white/10",
+                    : "border-line",
                 passed ? "opacity-40 saturate-50" : "",
               ].join(" ")}
               aria-label={isAirport ? "YUL airport" : undefined}

@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { type FamilyInfo, groupForPresentation } from "../games/families";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
-import { CheckIcon } from "./icons";
+import { CheckRow } from "./ui/CheckRow";
 
 type Props = {
   /** Currently-checked slugs. */
@@ -92,27 +92,20 @@ function InventoryCell({
   onToggle: () => void;
 }) {
   return (
-    <label
-      className={`flex cursor-pointer items-center gap-3 rounded-lg border p-2 transition ${
-        checked
-          ? "border-accent-400/50 bg-accent-500/10"
-          : "border-white/10 bg-surface-800/50 hover:border-white/20"
-      }`}
-    >
-      {/* biome-ignore lint/correctness/noRestrictedElements: sr-only checkbox behind a custom swatch surface — no visible chrome to drift */}
-      <input type="checkbox" checked={checked} onChange={onToggle} className="sr-only" />
-      <img
-        src={game.thumbnail}
-        alt=""
-        loading="lazy"
-        decoding="async"
-        className="h-10 w-10 shrink-0 rounded object-cover"
-      />
-      <span className="min-w-0 flex-1 text-xs">
-        <span className="block truncate font-semibold text-fg-primary">{game.title}</span>
-        <span className="block truncate text-3xs text-fg-muted">{game.slug}</span>
-      </span>
-      {checked && <CheckIcon className="h-4 w-4 shrink-0 text-accent-300" />}
-    </label>
+    <CheckRow
+      checked={checked}
+      onChange={onToggle}
+      leading={
+        <img
+          src={game.thumbnail}
+          alt=""
+          loading="lazy"
+          decoding="async"
+          className="h-10 w-10 shrink-0 rounded object-cover"
+        />
+      }
+      title={game.title}
+      description={game.slug}
+    />
   );
 }

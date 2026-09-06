@@ -34,11 +34,11 @@ export default function CardFace({
         selected,
         disabled,
         hover: onClick ? "scale" : "none",
-        className: `flex h-full w-full flex-col border border-white/15 bg-surface-800 text-left ${className ?? ""}`,
+        className: `flex h-full w-full flex-col border border-line-strong bg-surface-800 text-left ${className ?? ""}`,
       })}
     >
       <div
-        className="px-1.5 py-1 text-3xs font-bold leading-tight text-white"
+        className="px-1.5 py-1 text-3xs font-bold leading-tight text-fg-strong"
         style={{ backgroundColor: hex }}
       >
         {def.name}
@@ -70,7 +70,7 @@ export function CardFaceHand({
   disabled,
 }: Omit<CardFaceProps, "onClick" | "className">) {
   return (
-    <div className="aspect-[2/3] w-full">
+    <div className="aspect-card w-full">
       <CardFace cardId={cardId} selected={selected} disabled={disabled} />
     </div>
   );

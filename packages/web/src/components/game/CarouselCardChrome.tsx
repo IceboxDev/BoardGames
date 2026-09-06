@@ -7,7 +7,7 @@ import { carouselPose } from "./carousel-3d-constants";
 // single-game cards (`GameCarousel3D`) and family cards
 // (`FamilyCarouselCard`). Owns:
 //   - absolute centering inside the parent's 3D stack
-//   - cardW × cardH dimensioning + the rounded-2xl frame
+//   - cardW × cardH dimensioning + the rounded-card-2xl frame
 //   - `isBestForHeadcount` amber-glow border state
 //   - keyboard-clickable role="button" (with Enter / Space handlers)
 //   - the CSS-transitioned transform path (x, z, rotateY, scale, opacity)
@@ -110,7 +110,7 @@ export function CarouselCardChrome({
 }
 
 /**
- * Inner visible card body — the rounded-2xl frame with surface-900
+ * Inner visible card body — the rounded-card-2xl frame with surface-900
  * background, border, and the amber best-for-headcount glow. Split from
  * the pose wrapper so consumers can render absolutely-positioned widgets
  * (variant chip strip) at the wrapper level without sitting inside the
@@ -142,13 +142,13 @@ export function CarouselCardFrame({
     ? "border-2 card-frame-new"
     : isBestForHeadcount
       ? "border-2 border-amber-400/80 shadow-2xl shadow-amber-500/40"
-      : "border border-white/10 shadow-2xl shadow-black/40";
+      : "border border-line shadow-2xl shadow-black/40";
   // `isCenter` reserved for future per-state chrome — currently unused
   // because the accent inner-glow lives on the thumb, not the frame.
   void isCenter;
   return (
     <div
-      className={`relative h-full w-full overflow-hidden rounded-2xl bg-surface-900 transition-shadow ${cls}`}
+      className={`relative h-full w-full overflow-hidden rounded-card-2xl bg-surface-900 transition-shadow ${cls}`}
     >
       {children}
     </div>

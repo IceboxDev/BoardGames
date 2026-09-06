@@ -34,8 +34,8 @@ type TopNavProps = {
 
 export function TopNav({ homeHref = "/", back, children }: TopNavProps) {
   return (
-    <nav className="sticky top-0 z-nav shrink-0 border-b nav-border bg-surface-950/90 backdrop-blur-xl">
-      <div className="flex w-full items-center justify-between px-6 py-3">
+    <nav className="sticky top-0 z-nav h-nav shrink-0 border-b nav-border bg-surface-950/90 backdrop-blur-xl">
+      <div className="flex h-full w-full items-center justify-between px-6">
         <Link to={homeHref} className="group flex items-center gap-2.5">
           <svg
             aria-hidden="true"
@@ -49,7 +49,7 @@ export function TopNav({ homeHref = "/", back, children }: TopNavProps) {
           >
             <path d="M4.5 12.75l6 6 9-13.5" />
           </svg>
-          <span className="text-sm font-semibold tracking-wide text-fg-secondary transition group-hover:text-white">
+          <span className="text-sm font-semibold tracking-wide text-fg-secondary transition group-hover:text-fg-strong">
             Board Game Lab
           </span>
         </Link>
@@ -67,7 +67,7 @@ export function TopNav({ homeHref = "/", back, children }: TopNavProps) {
 // Shared chrome for the right-cluster controls — one string, consumed by both
 // the Link and Button renderings so they cannot drift apart.
 const NAV_ACTION_CLS =
-  "flex items-center gap-1.5 rounded-md px-3 py-1.5 text-xs font-medium text-fg-muted transition hover:bg-surface-800 hover:text-fg-secondary";
+  "flex items-center gap-1.5 rounded-ui-md px-3 py-1.5 text-xs font-medium text-fg-muted transition hover:bg-surface-800 hover:text-fg-secondary";
 
 type BackButtonProps = {
   to: string;

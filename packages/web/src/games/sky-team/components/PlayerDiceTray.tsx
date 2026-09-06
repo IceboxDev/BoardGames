@@ -40,7 +40,7 @@ export default function PlayerDiceTray({
     selectedDie != null ? Math.max(1, Math.min(6, selectedDie.value + coffeeAdjust)) : null;
 
   return (
-    <div className="flex h-40 items-stretch gap-3 rounded-md border-2 border-white/10 bg-surface-950/80 p-3">
+    <div className="flex h-40 items-stretch gap-3 rounded-md border-2 border-line bg-surface-950/80 p-3">
       {/* LEFT: opponent dice — small + hidden. Stack of indicators showing
           how many of the opponent's dice are still unplaced. */}
       <aside className="flex w-28 shrink-0 flex-col items-center justify-center gap-2 rounded bg-surface-900/40 p-2">
@@ -134,7 +134,7 @@ export default function PlayerDiceTray({
             <>
               <button
                 type="button"
-                className="h-6 w-6 rounded bg-surface-700 text-white disabled:opacity-30"
+                className="h-6 w-6 rounded bg-surface-700 text-fg-strong disabled:opacity-30"
                 disabled={coffeeAdjust <= -view.coffeeTokens || (adjustedValue ?? 1) <= 1}
                 onClick={() => onAdjustCoffee(coffeeAdjust - 1)}
               >
@@ -151,7 +151,7 @@ export default function PlayerDiceTray({
               </span>
               <button
                 type="button"
-                className="h-6 w-6 rounded bg-surface-700 text-white disabled:opacity-30"
+                className="h-6 w-6 rounded bg-surface-700 text-fg-strong disabled:opacity-30"
                 disabled={coffeeAdjust >= view.coffeeTokens || (adjustedValue ?? 6) >= 6}
                 onClick={() => onAdjustCoffee(coffeeAdjust + 1)}
               >

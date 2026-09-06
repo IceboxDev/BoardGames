@@ -105,7 +105,7 @@ export function SidePanel({
     <div className="flex h-full min-h-0 flex-col gap-2">
       <div className="flex items-baseline justify-between">
         <span className="text-2xs font-semibold uppercase tracking-label text-fg-muted">Round</span>
-        <span className="text-sm font-bold text-white">
+        <span className="text-sm font-bold text-fg-strong">
           {Math.max(view.round, 1)} / {view.maxRounds}
         </span>
       </div>
@@ -122,7 +122,7 @@ export function SidePanel({
             {view.myKeywords.map((word, i) => (
               <li key={word} className="flex items-baseline gap-1.5">
                 <span className="text-2xs font-black text-accent-300">{i + 1}</span>
-                <span className="text-xs font-semibold uppercase tracking-tight text-white">
+                <span className="text-xs font-semibold uppercase tracking-tight text-fg-strong">
                   {word}
                 </span>
               </li>

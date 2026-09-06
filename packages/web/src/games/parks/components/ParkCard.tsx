@@ -18,7 +18,7 @@ function CostPills({ park }: { park: Park }) {
       {pills.map(({ r, count }) => (
         <span
           key={r}
-          className="inline-flex items-center gap-0.5 rounded-full px-1 py-0.5 text-4xs font-bold text-white ring-1 ring-white/10"
+          className="inline-flex items-center gap-0.5 rounded-full px-1 py-0.5 text-4xs font-bold text-fg-strong ring-1 ring-line"
           style={{ backgroundColor: `${RESOURCE_COLORS[r]}33` }}
           title={`${count} × ${r}`}
         >
@@ -42,7 +42,7 @@ function RefundPills({ park }: { park: Park }) {
       {pills.map(({ r, count }) => (
         <span
           key={r}
-          className="inline-flex items-center gap-0.5 rounded-full px-1 py-0.5 text-4xs font-bold text-white ring-1 ring-white/10"
+          className="inline-flex items-center gap-0.5 rounded-full px-1 py-0.5 text-4xs font-bold text-fg-strong ring-1 ring-line"
           style={{ backgroundColor: `${RESOURCE_COLORS[r]}33` }}
         >
           <span>{RESOURCE_EMOJI[r]}</span>
@@ -78,7 +78,7 @@ export default function ParkCard({ park, affordable, onClick, compact }: ParkCar
     >
       <div className="flex items-start justify-between gap-2">
         <div
-          className={`text-2xs font-bold leading-tight ${compact ? "" : "line-clamp-2"} text-white`}
+          className={`text-2xs font-bold leading-tight ${compact ? "" : "line-clamp-2"} text-fg-strong`}
         >
           {park.name}
         </div>

@@ -38,7 +38,7 @@ export default function RoundEndOverlay({
       onClose={onContinue}
       ariaLabel={`Round ${entry.round} complete`}
       title={`Round ${entry.round} Complete`}
-      titleClassName="text-lg font-bold text-white"
+      titleClassName="text-lg font-bold text-fg-strong"
       panelClassName="max-w-md"
       hideCloseButton
       closeOnBackdrop={false}
@@ -46,7 +46,7 @@ export default function RoundEndOverlay({
     >
       <table className="w-full text-xs">
         <thead>
-          <tr className="border-b border-white/10 text-fg-muted">
+          <tr className="border-b border-line text-fg-muted">
             <th className="pb-1.5 text-left font-medium" />
             {CATEGORIES.map((c) => (
               <th key={c.key} className="pb-1.5 text-center font-medium" title={c.label}>

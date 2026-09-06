@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useGameShell } from "../../hooks/useGameShell";
 import { MatchHistory } from "../match-history";
+import { BoardFallback } from "../RouteFallback";
 
 /**
  * Route element at `/play/:slug/match-history`. Renders the generic
@@ -29,7 +30,7 @@ export default function MatchHistoryRoute() {
   if (def.matchHistoryComponent) {
     const Custom = def.matchHistoryComponent;
     return (
-      <Suspense fallback={null}>
+      <Suspense fallback={<BoardFallback />}>
         <Custom onBack={() => navigate(`/play/${def.slug}`)} />
       </Suspense>
     );

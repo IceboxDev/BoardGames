@@ -69,7 +69,7 @@ export function RevealCard({ view, tx }: { view: DecryptoPlayerView; tx: Transmi
       )}
     >
       <p className="mb-3 text-center text-2xs font-semibold uppercase tracking-label text-fg-muted">
-        {who}'s code revealed: <span className="text-white">{resolved.code.join("-")}</span>
+        {who}'s code revealed: <span className="text-fg-strong">{resolved.code.join("-")}</span>
       </p>
 
       {tx.skipped || tx.clues === null ? (
@@ -94,7 +94,7 @@ export function RevealCard({ view, tx }: { view: DecryptoPlayerView; tx: Transmi
                 return (
                   <tr key={`${slot}-${clue}`}>
                     <td
-                      className="max-w-24 truncate pr-2 text-sm font-semibold text-white sm:max-w-40 sm:pr-3"
+                      className="max-w-24 truncate pr-2 text-sm font-semibold text-fg-strong sm:max-w-40 sm:pr-3"
                       title={clue}
                     >
                       “{clue}”

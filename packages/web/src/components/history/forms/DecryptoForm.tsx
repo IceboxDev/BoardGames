@@ -5,6 +5,7 @@ import {
   deriveDecryptoOutcome,
 } from "@boardgames/core/history/decrypto-tokens";
 import type { MatchOutcomeTeams, Participant } from "@boardgames/core/history/types";
+import { ErrorAlert } from "../../../components/ui/ErrorAlert";
 import { Button } from "../../ui/Button";
 import { Chip } from "../../ui/Chip";
 import { ParticipantPicker } from "../ParticipantPicker";
@@ -167,7 +168,7 @@ export function DecryptoForm({ users, value, onChange }: Props) {
           <div
             // biome-ignore lint/suspicious/noArrayIndexKey: rounds are positional
             key={i}
-            className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-lg bg-surface-800/40 px-2 py-1.5"
+            className="flex flex-wrap items-center gap-x-3 gap-y-1 rounded-card-lg bg-surface-800/40 px-2 py-1.5"
           >
             <span className="w-7 shrink-0 text-2xs font-bold text-fg-secondary">R{i + 1}</span>
             {([0, 1] as const).map((side) => (
@@ -280,7 +281,7 @@ function ResultLine({ derived }: { derived: ReturnType<typeof deriveDecryptoOutc
     );
   }
   if (derived.status === "invalid") {
-    return <p className="text-xs font-semibold text-rose-300">{derived.reason}</p>;
+    return <ErrorAlert message={derived.reason} />;
   }
   if (derived.status === "needs-tiebreak") {
     return (

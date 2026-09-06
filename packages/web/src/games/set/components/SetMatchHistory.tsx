@@ -25,7 +25,7 @@ export default function SetMatchHistory({ onBack }: { onBack: () => void }) {
   return (
     <div className="mx-auto max-w-4xl px-6 py-8">
       <div className="mb-6 flex items-center justify-between">
-        <h2 className="text-2xl font-bold text-white">Match History</h2>
+        <h2 className="text-2xl font-bold text-fg-strong">Match History</h2>
         <Button variant="secondary" size="md" onClick={onBack}>
           Back
         </Button>

@@ -300,7 +300,7 @@ export default function GameBoard({
           ))}
         </div>
         {myBoard && (
-          <div className="mt-auto rounded-lg border border-white/10 bg-surface-900/70 p-3">
+          <div className="mt-auto rounded-lg border border-line bg-surface-900/70 p-3">
             <div className="mb-2 flex items-center justify-between">
               <span className="text-sm font-semibold text-fg-primary">Your city</span>
               {view.phase === "selecting" && me?.hasSelected && (

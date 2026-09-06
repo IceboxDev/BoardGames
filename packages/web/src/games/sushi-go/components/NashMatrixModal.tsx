@@ -15,7 +15,7 @@ export default function NashMatrixModal({ matrix, turn, onClose }: NashMatrixMod
     <Modal
       onClose={onClose}
       title="Nash Equilibrium Matrix"
-      titleClassName="text-base font-semibold text-white"
+      titleClassName="text-base font-semibold text-fg-strong"
       subheader={
         <p className="text-xs text-fg-muted">
           Turn {turn} &middot; {p1Actions.length}&times;{p2Actions.length} game &middot; Value:{" "}
@@ -40,13 +40,13 @@ export default function NashMatrixModal({ matrix, turn, onClose }: NashMatrixMod
           <thead>
             <tr>
               {/* Top-left corner: labels */}
-              <th className="border border-white/10 bg-surface-800/50 px-2 py-1.5 text-left text-3xs text-fg-muted">
+              <th className="border border-line bg-surface-800/50 px-2 py-1.5 text-left text-3xs text-fg-muted">
                 <div>AI &darr; / Opp &rarr;</div>
               </th>
               {p2Actions.map((action, j) => (
                 <th
                   key={action.label}
-                  className="border border-white/10 bg-surface-800/50 px-2 py-1.5 text-center font-normal"
+                  className="border border-line bg-surface-800/50 px-2 py-1.5 text-center font-normal"
                 >
                   <ActionCell action={action} prob={p2Strategy[j]} />
                 </th>
@@ -56,13 +56,13 @@ export default function NashMatrixModal({ matrix, turn, onClose }: NashMatrixMod
           <tbody>
             {p1Actions.map((action, i) => (
               <tr key={action.label}>
-                <td className="border border-white/10 bg-surface-800/50 px-2 py-1.5">
+                <td className="border border-line bg-surface-800/50 px-2 py-1.5">
                   <ActionCell action={action} prob={p1Strategy[i]} />
                 </td>
                 {payoffs[i].map((value, j) => (
                   <td
                     key={p2Actions[j].label}
-                    className={`border border-white/10 px-2 py-1.5 text-center tabular-nums ${cellBgClass(p1Strategy[i], p2Strategy[j])}`}
+                    className={`border border-line px-2 py-1.5 text-center tabular-nums ${cellBgClass(p1Strategy[i], p2Strategy[j])}`}
                   >
                     <span
                       className={
@@ -85,7 +85,7 @@ export default function NashMatrixModal({ matrix, turn, onClose }: NashMatrixMod
       </div>
 
       {/* Legend */}
-      <div className="border-t border-white/10 pt-3">
+      <div className="border-t border-line pt-3">
         <div className="flex flex-wrap gap-x-6 gap-y-1 text-3xs text-fg-muted">
           <span>Cell values = expected score advantage for AI (positive = AI leads)</span>
           <span>

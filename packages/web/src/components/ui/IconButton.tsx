@@ -1,5 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode, Ref } from "react";
 import { cn } from "../../lib/cn";
+import { RADIUS_UI_MD } from "./radii";
 import type { CoreTone } from "./tones";
 
 // Icon-only button primitive. Requires an `aria-label` at the type level
@@ -45,7 +46,7 @@ const BASE =
 // Ghost text + hover treatment per tone. Full literals — Tailwind cannot see
 // runtime-assembled class names.
 const GHOST_TONE: Record<IconTone, string> = {
-  neutral: "text-fg-secondary hover:bg-white/5 hover:text-white",
+  neutral: "text-fg-secondary hover:bg-fill hover:text-fg-strong",
   accent: "text-accent-300 hover:bg-accent-500/10 hover:text-accent-200",
   amber: "text-amber-300 hover:bg-amber-400/10 hover:text-amber-100",
   sky: "text-sky-300 hover:bg-sky-400/10 hover:text-sky-100",
@@ -61,7 +62,7 @@ const STRUCTURAL: Record<Exclude<Variant, "ghost">, string> = {
   // floating action buttons (admin toggle, lock-in toggle) where the
   // button needs to read independently of any surrounding container.
   bordered:
-    "border border-white/15 text-fg-secondary hover:border-white/30 hover:bg-white/5 hover:text-white",
+    "border border-line-strong text-fg-secondary hover:border-fg-strong/30 hover:bg-fill hover:text-fg-strong",
 };
 
 // Square padding so the icon stays centered. The size scale matches Button's
@@ -74,7 +75,7 @@ const SIZES: Record<Size, string> = {
 };
 
 const SHAPES: Record<Shape, string> = {
-  rounded: "rounded-md",
+  rounded: RADIUS_UI_MD,
   pill: "rounded-full",
 };
 
@@ -82,7 +83,7 @@ const SHAPES: Record<Shape, string> = {
 // used in the segmented control / chip primitives so a toggle IconButton
 // reads consistent with its labeled siblings.
 const GHOST_PRESSED: Record<IconTone, string> = {
-  neutral: "bg-white/10 text-white",
+  neutral: "bg-fill-strong text-fg-strong",
   accent: "bg-accent-500/20 text-accent-100",
   amber: "bg-amber-400/20 text-amber-100",
   sky: "bg-sky-400/20 text-sky-100",

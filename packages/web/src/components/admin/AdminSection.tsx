@@ -39,7 +39,7 @@ export function AdminSection({ tone, eyebrow, summary, children }: AdminSectionP
         <p className="mt-1 text-sm text-fg-secondary">{summary}</p>
       </div>
       {children != null && (
-        <div className="space-y-3 border-t border-white/5 bg-surface-950/40 px-4 py-4">
+        <div className="space-y-3 border-t border-line-soft bg-surface-950/40 px-4 py-4">
           {children}
         </div>
       )}

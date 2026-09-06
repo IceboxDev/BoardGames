@@ -72,7 +72,7 @@ export function HexSkillChart({ skill, accentHex, axisDetails }: HexSkillChartPr
             d={ringPath(count, factor)}
             fill="none"
             stroke="currentColor"
-            className="text-white/10"
+            className="text-fg-strong/10"
             strokeWidth={1}
           />
         ))}
@@ -89,7 +89,7 @@ export function HexSkillChart({ skill, accentHex, axisDetails }: HexSkillChartPr
               x2={tip.x}
               y2={tip.y}
               stroke="currentColor"
-              className="text-white/10"
+              className="text-fg-strong/10"
               strokeWidth={1}
             />
           );
@@ -174,7 +174,7 @@ export function HexSkillChart({ skill, accentHex, axisDetails }: HexSkillChartPr
           // Solid background (readable over the chart) and a width cap so
           // long "sharpened by" game titles wrap instead of blowing the
           // bubble past the card.
-          className="pointer-events-none absolute z-10 w-max max-w-52 -translate-x-1/2 -translate-y-full bg-surface-900 px-2.5 py-1.5 text-center shadow-xl shadow-black/40"
+          className="pointer-events-none absolute z-raised w-max max-w-52 -translate-x-1/2 -translate-y-full bg-surface-900 px-2.5 py-1.5 text-center shadow-xl shadow-black/40"
           style={{
             left: `${(valuePoints[hovered].x / SIZE) * 100}%`,
             top: `${(valuePoints[hovered].y / SIZE) * 100 - 3}%`,

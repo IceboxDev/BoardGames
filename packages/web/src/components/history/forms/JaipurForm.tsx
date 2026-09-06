@@ -174,7 +174,7 @@ function JaipurRoundsForm({ users, value, onChange }: Props) {
         return (
           <div
             key={tb.round}
-            className="flex flex-col gap-2 rounded-xl border border-amber-500/30 bg-amber-500/5 p-3"
+            className="flex flex-col gap-2 rounded-card-xl border border-amber-500/30 bg-amber-500/5 p-3"
           >
             <div className="flex flex-col gap-0.5">
               <span className="text-xs font-medium text-amber-200">

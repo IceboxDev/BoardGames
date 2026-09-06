@@ -30,7 +30,7 @@ export function PdfDropField({ file, onFileSelected, emptyTitle, emptyHint }: Pr
       }}
       onDragLeave={() => setDragging(false)}
       onDrop={handleDrop}
-      className={`flex cursor-pointer flex-col items-center gap-3 rounded-2xl border border-dashed px-4 py-8 text-center transition ${
+      className={`flex cursor-pointer flex-col items-center gap-3 rounded-card-2xl border border-dashed px-4 py-8 text-center transition ${
         dragging
           ? "border-amber-300/80 bg-amber-400/10"
           : "border-amber-400/30 bg-dnd-ink/60 hover:border-amber-300/60 hover:bg-amber-400/[0.06]"

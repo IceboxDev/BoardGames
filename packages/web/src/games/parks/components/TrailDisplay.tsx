@@ -88,7 +88,7 @@ function HikerToken({
   const color = isMe ? "bg-cyan-500 ring-cyan-300" : "bg-amber-500 ring-amber-300";
   return (
     <div
-      className={`flex h-5 w-5 items-center justify-center rounded-full ring-1 text-3xs font-bold text-white ${color}`}
+      className={`flex h-5 w-5 items-center justify-center rounded-full ring-1 text-3xs font-bold text-fg-strong ${color}`}
       title={`${isMe ? "You" : "Opponent"} hiker ${hikerId + 1}`}
     >
       {hikerId + 1}
@@ -187,7 +187,7 @@ export default function TrailDisplay({
         const isLegalTarget = selectedHikerId !== null && legalMoveTargets.has(pos);
         const weather = isSite ? view.weatherTokens[pos] : null;
 
-        const baseClass = isSite && site ? SITE_BG[site] : "bg-surface-800/40 border-white/10";
+        const baseClass = isSite && site ? SITE_BG[site] : "bg-surface-800/40 border-line";
 
         const interactive = isLegalTarget
           ? "cursor-pointer hover:scale-105 ring-2 ring-emerald-400 animate-pulse"

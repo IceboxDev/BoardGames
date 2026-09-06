@@ -7,6 +7,7 @@ import { useState } from "react";
 import { cn } from "../../../lib/cn.ts";
 import { reportPageView } from "../../../lib/page-views.ts";
 import { ChevronDownIcon } from "../../icons";
+import { ProgressBar } from "../../ui/ProgressBar.tsx";
 import { toBoardRows } from "./board-rows.ts";
 import { LeaderboardList, type LeaderboardRow } from "./LeaderboardList.tsx";
 import { TraitIcon } from "./TraitIcon.tsx";
@@ -46,10 +47,7 @@ export function TraitBreakdown({
         return (
           <div
             key={t.trait}
-            className={cn(
-              "rounded-xl transition",
-              isOpen && "bg-white/[0.04] ring-1 ring-white/10",
-            )}
+            className={cn("rounded-card-xl transition", isOpen && "bg-fill-soft ring-1 ring-line")}
           >
             {/* biome-ignore lint/correctness/noRestrictedElements: full-row accordion toggle — Button chrome doesn't fit */}
             <button
@@ -61,14 +59,14 @@ export function TraitBreakdown({
                 setOpen(isOpen ? null : t.trait);
               }}
               className={cn(
-                "flex w-full items-center gap-3 rounded-xl px-2.5 py-2 text-left",
-                expandable && "transition hover:bg-white/5",
+                "flex w-full items-center gap-3 rounded-card-xl px-2.5 py-2 text-left",
+                expandable && "transition hover:bg-fill",
                 t.provisional && "opacity-55",
               )}
             >
               <span
                 className={cn(
-                  "flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-surface-800",
+                  "flex h-8 w-8 shrink-0 items-center justify-center rounded-card-lg bg-surface-800",
                   t.provisional ? "text-fg-muted" : "text-[var(--accent)]",
                 )}
               >
@@ -77,20 +75,20 @@ export function TraitBreakdown({
               <span className="min-w-0 flex-1">
                 <span className="flex items-baseline justify-between gap-2">
                   <span className="text-sm font-semibold text-fg-primary">{copy.label}</span>
-                  <span className="shrink-0 tabular-nums text-sm font-black text-white">
+                  <span className="shrink-0 tabular-nums text-sm font-black text-fg-strong">
                     {t.provisional ? "—" : score}
                   </span>
                 </span>
                 <span className="mt-0.5 block text-2xs leading-snug text-fg-muted">
                   {copy.blurb}
                 </span>
-                <span className="mt-1.5 block h-1.5 overflow-hidden rounded bg-surface-800">
-                  {/* Provisional = not computed yet → an EMPTY bar, not mid-pack. */}
-                  <span
-                    className="block h-full rounded bg-[var(--accent)] opacity-90"
-                    style={{ width: t.provisional ? 0 : `${Math.max(3, score)}%` }}
-                  />
-                </span>
+                {/* Provisional = not computed yet → an EMPTY bar, not mid-pack. */}
+                <ProgressBar
+                  className="mt-1.5"
+                  label={`${copy.label} score`}
+                  value={t.provisional ? 0 : Math.max(3, score) / 100}
+                  color="var(--accent)"
+                />
               </span>
               <ChevronDownIcon
                 className={cn(

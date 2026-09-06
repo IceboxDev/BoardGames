@@ -112,7 +112,7 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
                   {/* Text */}
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2">
-                      <span className="text-sm font-bold text-white">{d.label}</span>
+                      <span className="text-sm font-bold text-fg-strong">{d.label}</span>
                       <div className="flex gap-0.5">
                         {[1, 2, 3].map((n) => (
                           <svg

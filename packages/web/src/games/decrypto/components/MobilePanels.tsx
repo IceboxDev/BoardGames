@@ -7,7 +7,7 @@ import { teamShortLabel } from "../logic/labels";
 import { mapDecryptoLog } from "../logic/log-mapper";
 import { TeamChat } from "./TeamChat";
 
-// Phone-only surfaces (`lg:hidden`). GameScreen's collapsibleSidebars mode
+// Phone-only surfaces (`lg:hidden`). GameScreen (`mobileRails="none"`)
 // hides both sidebars below `lg`, so everything they carried — score, the
 // viewer's keywords, team chat, and the history log — re-surfaces here in a
 // compact form designed to hold together down to 360px.
@@ -79,7 +79,7 @@ export function MobileScoreStrip({ view }: { view: DecryptoPlayerView }) {
   return (
     <div className="flex flex-col gap-1 lg:hidden">
       <div className="flex flex-wrap items-center justify-center gap-1.5">
-        <span className="rounded-lg bg-surface-800/50 px-2 py-1 text-3xs font-bold text-white">
+        <span className="rounded-lg bg-surface-800/50 px-2 py-1 text-3xs font-bold text-fg-strong">
           R {Math.max(view.round, 1)}/{view.maxRounds}
         </span>
         <TeamMini view={view} team={0} />
@@ -105,7 +105,9 @@ export function MobileKeywords({ view }: { view: DecryptoPlayerView }) {
           className="inline-flex items-baseline gap-1 rounded-md bg-surface-800/50 px-1.5 py-0.5"
         >
           <span className="text-3xs font-black text-accent-300">{i + 1}</span>
-          <span className="text-2xs font-semibold uppercase tracking-tight text-white">{word}</span>
+          <span className="text-2xs font-semibold uppercase tracking-tight text-fg-strong">
+            {word}
+          </span>
         </span>
       ))}
     </div>
