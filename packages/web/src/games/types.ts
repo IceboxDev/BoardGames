@@ -138,7 +138,7 @@ interface GameBase {
   bggId: number;
   /**
    * BGG metadata. Hydrated by the registry from `@boardgames/core/bgg`'s
-   * bundled snapshot and shallow-merged with the catalog's `bggOverrides`.
+   * bundled snapshot, already merged with the catalog's `bggOverrides` by core.
    */
   bgg: BggGame;
   /** Three-length description set. Hydrated by the registry. */
@@ -222,6 +222,12 @@ export interface PlayableGame extends GameBase {
   tournamentStrategies?: { id: string; label: string }[];
   /** Whether to show average score diff in tournament grid cells (default true). */
   tournamentShowScoreDiff?: boolean;
+  /**
+   * Table sizes the tournament grid can run a matchup at (multi-seat games).
+   * Seats alternate between the two strategies per game so both hold every
+   * seat equally often. Omit for head-to-head-only games.
+   */
+  tournamentPlayerCounts?: number[];
   /**
    * Rules document(s) shown from the mode-picker. A plain string is a single
    * PDF; an array opens the viewer with a tab bar (one tab per booklet). Used
@@ -344,9 +350,10 @@ export type CatalogEntry = {
   displayTitle?: string;
   /**
    * Per-field overrides on top of the BGG snapshot. Use this to fix BGG
-   * inaccuracies or fill in missing data. The registry shallow-merges these
-   * over `bggSnapshot[slug]` at registry-build time so consumers always see
-   * the patched values via `game.bgg.*`.
+   * inaccuracies or fill in missing data. `@boardgames/core/bgg` shallow-merges
+   * these over the raw snapshot at module load, so EVERY consumer — this
+   * registry via `game.bgg.*`, and the server's "playable tonight" maths —
+   * sees the patched values.
    *
    * `bggOverrides.description` is special-cased downstream: when set, it
    * replaces all three `GameDescriptions` variants uniformly.

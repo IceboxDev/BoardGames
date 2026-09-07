@@ -2,12 +2,16 @@ import { computeElo } from "@boardgames/core/tournament/elo";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { apiClient } from "../../lib/api-client";
 import { Button } from "../ui/Button";
+import { MicroLabel } from "../ui/Label";
 import { ProgressBar } from "../ui/ProgressBar";
+import { SegmentedControl } from "../ui/SegmentedControl";
 
 interface TournamentResult {
   id: string;
   strategyA: string;
   strategyB: string;
+  /** Table size the matchup ran at (multi-seat games); 2 when absent. */
+  playerCount?: number;
   gamesPlayed: number;
   aWins: number;
   bWins: number;
@@ -30,6 +34,8 @@ interface TournamentGridProps {
   strategies: { id: string; label: string }[];
   gamesPerMatchup?: number;
   showScoreDiff?: boolean;
+  /** Table sizes on offer (multi-seat games); absent = head-to-head only. */
+  playerCounts?: number[];
   onViewMatchHistory?: (strategyAId: string, strategyBId: string, tournamentId: string) => void;
 }
 
@@ -48,6 +54,7 @@ function serverResultToLocal(t: {
     id: t.id,
     strategyA: (r.strategyA as string) ?? (t.config.strategyAId as string) ?? "",
     strategyB: (r.strategyB as string) ?? (t.config.strategyBId as string) ?? "",
+    playerCount: typeof t.config.playerCount === "number" ? t.config.playerCount : 2,
     gamesPlayed,
     aWins: (r.aWins as number) ?? 0,
     bWins: (r.bWins as number) ?? 0,
@@ -63,9 +70,11 @@ export default function TournamentGrid({
   strategies,
   gamesPerMatchup = 100,
   showScoreDiff = true,
+  playerCounts,
   onViewMatchHistory,
 }: TournamentGridProps) {
   const [results, setResults] = useState<TournamentResult[]>([]);
+  const [playerCount, setPlayerCount] = useState<number>(playerCounts?.[0] ?? 2);
   const [running, setRunning] = useState<RunState | null>(null);
   const esRef = useRef<EventSource | null>(null);
 
@@ -116,7 +125,8 @@ export default function TournamentGrid({
     apiClient.listTournaments(gameSlug, "running").then((tournaments) => {
       if (tournaments.length > 0) {
         const t = tournaments[0];
-        const cfg = t.config as { strategyAId: string; strategyBId: string };
+        const cfg = t.config as { strategyAId: string; strategyBId: string; playerCount?: number };
+        if (typeof cfg.playerCount === "number") setPlayerCount(cfg.playerCount);
         setRunning({
           tournamentId: t.id,
           aId: cfg.strategyAId,
@@ -135,8 +145,14 @@ export default function TournamentGrid({
   }, [gameSlug, reloadResults, subscribeToProgress]);
 
   const getResult = useCallback(
-    (aId: string, bId: string) => results.find((r) => r.strategyA === aId && r.strategyB === bId),
-    [results],
+    (aId: string, bId: string) =>
+      results.find(
+        (r) =>
+          r.strategyA === aId &&
+          r.strategyB === bId &&
+          (playerCounts ? (r.playerCount ?? 2) === playerCount : true),
+      ),
+    [results, playerCounts, playerCount],
   );
 
   const runPair = useCallback(
@@ -147,12 +163,13 @@ export default function TournamentGrid({
         strategyAId: aId,
         strategyBId: bId,
         numGames: gamesPerMatchup,
+        ...(playerCounts ? { playerCount } : {}),
       });
 
       setRunning({ tournamentId: id, aId, bId, completed: 0, total: gamesPerMatchup });
       subscribeToProgress(id);
     },
-    [gameSlug, gamesPerMatchup, running, subscribeToProgress],
+    [gameSlug, gamesPerMatchup, running, subscribeToProgress, playerCounts, playerCount],
   );
 
   const runAll = useCallback(async () => {
@@ -178,6 +195,7 @@ export default function TournamentGrid({
         strategyAId: aId,
         strategyBId: bId,
         numGames: gamesPerMatchup,
+        ...(playerCounts ? { playerCount } : {}),
       });
 
       setRunning({ tournamentId: id, aId, bId, completed: 0, total: gamesPerMatchup });
@@ -214,7 +232,16 @@ export default function TournamentGrid({
     };
 
     await runNext(0);
-  }, [gameSlug, gamesPerMatchup, running, strategies, getResult, reloadResults]);
+  }, [
+    gameSlug,
+    gamesPerMatchup,
+    running,
+    strategies,
+    getResult,
+    reloadResults,
+    playerCounts,
+    playerCount,
+  ]);
 
   const handleClear = useCallback(async () => {
     const tournaments = await apiClient.listTournaments(gameSlug, "completed");
@@ -243,8 +270,21 @@ export default function TournamentGrid({
       <div className="shrink-0 text-center">
         <h2 className="text-3xl font-extrabold text-fg-strong">AI Tournament</h2>
         <p className="mt-2 text-sm text-fg-secondary">
-          {gamesPerMatchup} games per matchup &middot; alternating first player
+          {gamesPerMatchup} games per matchup &middot;{" "}
+          {playerCounts ? "seats alternate between the two strategies" : "alternating first player"}
         </p>
+        {playerCounts && playerCounts.length > 1 && (
+          <div className="mt-3 flex items-center justify-center gap-2">
+            <MicroLabel>Seats</MicroLabel>
+            <SegmentedControl
+              options={playerCounts.map((n) => ({ value: n, label: `${n}` }))}
+              value={playerCount}
+              onChange={setPlayerCount}
+              size="xs"
+              aria-label="Players per game"
+            />
+          </div>
+        )}
       </div>
 
       {/* Progress bar (when running) */}

@@ -13,6 +13,7 @@ describe("registry — shape invariants", () => {
       "durak",
       "parks",
       "sushi-go",
+      "senso-battle-for-japan",
     ]) {
       expect(slugs, `expected registry to include ${required}`).toContain(required);
     }

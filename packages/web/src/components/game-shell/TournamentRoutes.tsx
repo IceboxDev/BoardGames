@@ -29,6 +29,7 @@ export function TournamentRoute() {
       gameSlug={def.slug}
       strategies={def.tournamentStrategies}
       showScoreDiff={def.tournamentShowScoreDiff}
+      playerCounts={def.tournamentPlayerCounts}
       onViewMatchHistory={(aId, bId, tournamentId) => {
         navigate(
           `/play/${def.slug}/tournament/${encodeURIComponent(aId)}/${encodeURIComponent(bId)}/${encodeURIComponent(

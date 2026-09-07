@@ -9,6 +9,7 @@ describe("ServerMessageSchema", () => {
         sessionId: "s-1",
         playerView: { hand: [] },
         legalActions: [],
+        activePlayer: 0,
         phase: "active",
       }),
     ).not.toThrow();

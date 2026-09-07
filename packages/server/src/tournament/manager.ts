@@ -81,6 +81,12 @@ function distributeGameIndices(numGames: number, workerCount: number): number[][
   return batches;
 }
 
+/** Sensō: a strategy pair at a table size; wins are tallied per strategy id. */
+function sensoPair(config: Record<string, unknown>): { a: string; b: string; playerCount: number } {
+  const c = config as { strategyAId?: string; strategyBId?: string; playerCount?: number };
+  return { a: c.strategyAId ?? "", b: c.strategyBId ?? "", playerCount: c.playerCount ?? 2 };
+}
+
 function buildPartial(entry: TournamentEntry): Record<string, unknown> {
   if (entry.gameSlug === "lost-cities") {
     const cfg = entry.config as { strategyAId: string; strategyBId: string };
@@ -123,6 +129,24 @@ function buildPartial(entry: TournamentEntry): Record<string, unknown> {
       strategies: (entry.config as { strategies: string[] }).strategies,
       gamesPlayed: entry.gamesCompleted,
       losses: { ...entry.ekWins },
+    };
+  }
+
+  if (entry.gameSlug === "senso-battle-for-japan") {
+    const { a, b, playerCount } = sensoPair(entry.config);
+    const aWins = entry.ekWins[a] ?? 0;
+    const bWins = entry.ekWins[b] ?? 0;
+    return {
+      strategyA: a,
+      strategyB: b,
+      playerCount,
+      gamesPlayed: entry.gamesCompleted,
+      aWins,
+      bWins,
+      draws: Math.max(0, entry.gamesCompleted - aWins - bWins),
+      totalScoreA: 0,
+      totalScoreB: 0,
+      wins: { ...entry.ekWins },
     };
   }
 
@@ -171,6 +195,24 @@ function buildFinalResult(entry: TournamentEntry): Record<string, unknown> {
       strategies: (entry.config as { strategies: string[] }).strategies,
       gamesPlayed: entry.gamesCompleted,
       losses: { ...entry.ekWins },
+    };
+  }
+
+  if (entry.gameSlug === "senso-battle-for-japan") {
+    const { a, b, playerCount } = sensoPair(entry.config);
+    const aWins = entry.ekWins[a] ?? 0;
+    const bWins = entry.ekWins[b] ?? 0;
+    return {
+      strategyA: a,
+      strategyB: b,
+      playerCount,
+      gamesPlayed: entry.gamesCompleted,
+      aWins,
+      bWins,
+      draws: Math.max(0, entry.gamesCompleted - aWins - bWins),
+      totalScoreA: 0,
+      totalScoreB: 0,
+      wins: { ...entry.ekWins },
     };
   }
 
@@ -342,6 +384,11 @@ async function handleWorkerMessage(
       const durak = msg.durak as number;
       if (durak >= 0 && durak < strategies.length) {
         const sid = strategies[durak];
+        entry.ekWins[sid] = (entry.ekWins[sid] ?? 0) + 1;
+      }
+    } else if (gameSlug === "senso-battle-for-japan") {
+      const sid = msg.winnerStrategy;
+      if (typeof sid === "string" && sid.length > 0) {
         entry.ekWins[sid] = (entry.ekWins[sid] ?? 0) + 1;
       }
     }

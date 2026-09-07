@@ -1,4 +1,5 @@
 import { DECRYPTO_AI_MODELS } from "../games/decrypto/ai/models";
+import { ALL_STRATEGIES as SENSO_STRATEGIES } from "../games/senso-battle-for-japan/ai-strategies";
 
 export interface GameRoomConfig {
   minPlayers: number;
@@ -41,4 +42,10 @@ export const gameRoomConfigs: Record<string, GameRoomConfig> = {
   "sushi-go": { minPlayers: 2, maxPlayers: 5, supportsAI: false },
   parks: { minPlayers: 2, maxPlayers: 2, supportsAI: true },
   "sky-team": { minPlayers: 2, maxPlayers: 2, supportsAI: true, seatNames: ["Pilot", "Co-Pilot"] },
+  "senso-battle-for-japan": {
+    minPlayers: 2,
+    maxPlayers: 5,
+    supportsAI: true,
+    botStrategies: SENSO_STRATEGIES.map((s) => ({ id: s.id, label: s.label })),
+  },
 };

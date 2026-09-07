@@ -329,6 +329,11 @@ export function useGameSession<
             setGameRoomCode(null);
             setPlayerView(msg.playerView as TPlayerView);
             setLegalActions(msg.legalActions as TAction[]);
+            // A new solo game on a socket that already played one: without
+            // this the previous game's last active seat lingers and "Play
+            // Again" waits for a turn the server already handed to us.
+            setActivePlayer(msg.activePlayer);
+            setPlayerIndex(0);
             setAiThinking(false);
             setResult(null);
             setError(null);

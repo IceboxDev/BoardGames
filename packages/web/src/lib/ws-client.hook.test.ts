@@ -63,6 +63,7 @@ describe("useGameSession — message dispatch", () => {
               sessionId: "sess-1",
               playerView: { hand: ["A"] },
               legalActions: [{ kind: "play" }],
+              activePlayer: 0,
               phase: "active",
             }),
           );
@@ -73,6 +74,64 @@ describe("useGameSession — message dispatch", () => {
       expect(result.current.playerView).toEqual({ hand: ["A"] });
       expect(result.current.legalActions).toEqual([{ kind: "play" }]);
       expect(result.current.aiThinking).toBe(false);
+    } finally {
+      server.close();
+    }
+  });
+
+  it("a second session-created on the same socket adopts the new game's active seat", async () => {
+    // "Play Again": the socket already saw a game whose last state-update
+    // named seat 1 as active. The new game starts with seat 0 to act; the
+    // stale seat used to survive and the board waited forever.
+    const server = new Server(WS_URL);
+    try {
+      const { result } = renderHook(() => useGameSession());
+      await tick();
+      const send = (payload: Record<string, unknown>) =>
+        act(() => {
+          for (const socket of server.clients()) socket.send(JSON.stringify(payload));
+        });
+      send({
+        type: "session-created",
+        sessionId: "s-1",
+        playerView: {},
+        legalActions: [],
+        activePlayer: 0,
+        phase: "active",
+      });
+      await tick();
+      send({
+        type: "state-update",
+        sessionId: "s-1",
+        playerView: {},
+        legalActions: [],
+        activePlayer: 1,
+        phase: "active",
+      });
+      await tick();
+      send({
+        type: "game-over",
+        sessionId: "s-1",
+        playerView: {},
+        result: { winner: 1 },
+        playerIndex: 0,
+      });
+      await tick();
+      expect(result.current.activePlayer).toBe(1);
+      expect(result.current.result).toEqual({ winner: 1 });
+      send({
+        type: "session-created",
+        sessionId: "s-2",
+        playerView: {},
+        legalActions: [{ kind: "play" }],
+        activePlayer: 0,
+        phase: "active",
+      });
+      await tick();
+      expect(result.current.sessionId).toBe("s-2");
+      expect(result.current.activePlayer).toBe(0);
+      expect(result.current.result).toBeNull();
+      expect(result.current.legalActions).toEqual([{ kind: "play" }]);
     } finally {
       server.close();
     }
@@ -396,6 +455,7 @@ describe("useGameSession — sendAction", () => {
               sessionId: "sess-1",
               playerView: {},
               legalActions: [],
+              activePlayer: 0,
               phase: "active",
             }),
           );

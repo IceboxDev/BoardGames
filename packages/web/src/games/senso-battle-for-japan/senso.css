@@ -1,0 +1,17 @@
+/* The clan kanji (武田 上杉 織田 毛利, 忍 木 玉, 帝, 戦) are the one thing this
+   board draws that the app's Inter stack cannot: a 2.8 KB Noto Sans JP subset
+   (OFL) covers exactly those twelve code points, so every other glyph still
+   falls through to the body font. Scoped to `.senso-kanji`; nothing global. */
+@font-face {
+  font-family: "Senso Kanji";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("./assets/kanji-subset.woff2") format("woff2");
+  unicode-range:
+    U+4e0a, U+5229, U+5e1d, U+5fcd, U+6226, U+6728, U+6749, U+6b66, U+6bdb, U+7389, U+7530, U+7e54;
+}
+
+.senso-kanji {
+  font-family: "Senso Kanji", var(--font-body);
+}

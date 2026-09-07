@@ -63,6 +63,10 @@ importers:
       zod:
         specifier: ^4
         version: 4.3.6
+    devDependencies:
+      '@types/node':
+        specifier: ^22.19.15
+        version: 22.19.15
 
   packages/server:
     dependencies:
@@ -5077,6 +5081,7 @@ snapshots:
   '@types/node@25.5.0':
     dependencies:
       undici-types: 7.18.2
+    optional: true
 
   '@types/react-dom@19.2.3(@types/react@19.2.14)':
     dependencies:
@@ -5948,7 +5953,7 @@ snapshots:
 
   happy-dom@20.9.0:
     dependencies:
-      '@types/node': 25.5.0
+      '@types/node': 22.19.15
       '@types/whatwg-mimetype': 3.0.2
       '@types/ws': 8.18.1
       entities: 7.0.1
@@ -7141,7 +7146,8 @@ snapshots:
 
   undici-types@6.21.0: {}
 
-  undici-types@7.18.2: {}
+  undici-types@7.18.2:
+    optional: true
 
   undici@7.11.0: {}
 

@@ -5,6 +5,7 @@ import { explodingKittensSpec } from "@boardgames/core/games/exploding-kittens/m
 import { lostCitiesSpec } from "@boardgames/core/games/lost-cities/machine";
 import { pandemicSpec } from "@boardgames/core/games/pandemic/machine";
 import { parksSpec } from "@boardgames/core/games/parks/machine";
+import { sensoSpec } from "@boardgames/core/games/senso-battle-for-japan/machine";
 import { setPvpSpec } from "@boardgames/core/games/set/pvp-machine";
 import { skyTeamSpec } from "@boardgames/core/games/sky-team/machine";
 import { sushiGoSpec } from "@boardgames/core/games/sushi-go/machine";
@@ -22,6 +23,7 @@ registry.set("set", setPvpSpec);
 registry.set("sushi-go", sushiGoSpec);
 registry.set("parks", parksSpec);
 registry.set("sky-team", skyTeamSpec);
+registry.set("senso-battle-for-japan", sensoSpec);
 
 export function getMachineSpec(
   slug: string,

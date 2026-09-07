@@ -126,6 +126,7 @@ All 8 playable games are **server-authoritative** (`mode: "remote"`, registered 
 | Sky Team | heuristic (co-op) |
 | Pandemic | — (co-op; solo controls all roles) |
 | Set | — (PvP / trainer) |
+| Sensō: Battle for Japan | Tenka = paired PIMC over deals weighted by a learned opponent model, playouts by a net distilled from search (default, `mcts/`); Shōgun = determinized Monte Carlo + one-reward lookahead; Daimyō / Warlord one-ply heuristics; random. Bench: `pnpm --filter @boardgames/core bench -- tenka shogun`. |
 
 > Note: ISMCTS searches currently run on the server's **main thread**, so a heavy search blocks the Node event loop for all sessions. A worker-thread AI pool is a known scaling improvement.
 

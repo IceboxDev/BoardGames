@@ -89,6 +89,36 @@ if (gameSlug === "lost-cities") {
       durak,
     });
   }
+} else if (gameSlug === "senso-battle-for-japan") {
+  const { seatPattern, simulateGame } = await import(
+    "@boardgames/core/games/senso-battle-for-japan/tournament-runner"
+  );
+  type AIStrategyId = import("@boardgames/core/games/senso-battle-for-japan/types").AIStrategyId;
+
+  // The grid posts a pair plus a table size; seats alternate A,B,A,B… and
+  // B,A,B,A… per game so both strategies hold every seat equally often.
+  const cfg = config.config as {
+    strategyAId?: AIStrategyId;
+    strategyBId?: AIStrategyId;
+    playerCount?: number;
+  };
+  const a = cfg.strategyAId;
+  const b = cfg.strategyBId;
+  const playerCount = Math.min(5, Math.max(2, Math.trunc(cfg.playerCount ?? 2)));
+  if (!a || !b) {
+    send({ kind: "error", message: "senso-battle-for-japan needs two strategies" });
+  } else {
+    for (const i of gameIndices) {
+      const seats = seatPattern(a, b, playerCount, i);
+      const winner = simulateGame(seats, i);
+      send({
+        kind: "game",
+        gameIndex: i,
+        winner,
+        winnerStrategy: winner < 0 ? null : seats[winner],
+      });
+    }
+  }
 } else {
   send({ kind: "error", message: `Unknown game: ${gameSlug}` });
 }

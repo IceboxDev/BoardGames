@@ -130,6 +130,11 @@ function buildDefinition(entry: CatalogEntry): GameDefinition {
     );
   }
 
+  // `bggSnapshot` already carries the catalog's `bggOverrides` — the merge
+  // happens ONCE in `@boardgames/core/bgg` so the server's "playable tonight"
+  // maths and this registry can never disagree about a player count.
+  const bgg = snapshotEntry;
+
   // Three-length description resolution. Precedence (highest wins):
   //   1. `bggOverrides.description` — per-entry manual escape hatch.
   //      Applies to all three variants uniformly (the human edit is
@@ -138,7 +143,6 @@ function buildDefinition(entry: CatalogEntry): GameDefinition {
   //      pipeline; each variant char-budgeted to its target surface.
   //   3. `bgg.description` — raw BGG fallback, repeated. Ensures every
   //      game ships *something* even without a generated file.
-  const bgg = { ...snapshotEntry, ...(entry.bggOverrides ?? {}) };
   const manualOverride = entry.bggOverrides?.description;
   const descriptions: GameDescriptions = manualOverride
     ? { tight: manualOverride, default: manualOverride, loose: manualOverride }

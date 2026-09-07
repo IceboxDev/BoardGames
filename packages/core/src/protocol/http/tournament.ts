@@ -92,6 +92,8 @@ export const TournamentByMatchupQuerySchema = z.object({
   gameSlug: z.string(),
   strategyA: z.string(),
   strategyB: z.string(),
+  /** Multi-seat games (Sensō) key a matchup by table size too; absent = 2. */
+  playerCount: z.coerce.number().int().min(2).max(7).optional(),
 });
 export type TournamentByMatchupQuery = z.input<typeof TournamentByMatchupQuerySchema>;
 

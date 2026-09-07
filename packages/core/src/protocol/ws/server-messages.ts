@@ -13,6 +13,11 @@ const SessionCreatedSchema = z.object({
   sessionId: z.string(),
   playerView: z.unknown(),
   legalActions: z.array(z.unknown()),
+  // Same sentinel as state-update. Load-bearing: the client's `activePlayer`
+  // survives across solo sessions on one socket, so a "Play Again" that did
+  // not carry the new game's active seat left the old one in place and the
+  // board waited for a turn that had already come.
+  activePlayer: z.number().int().min(-1),
   phase: z.string(),
 });
 

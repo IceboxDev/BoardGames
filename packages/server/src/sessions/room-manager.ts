@@ -551,6 +551,19 @@ function buildGameConfig(room: Room, extra: Record<string, unknown>): Record<str
       };
     }
 
+    case "senso-battle-for-japan": {
+      // Same shape as durak: one strategy id per filled seat, null for humans.
+      // Factions are dealt by the engine, so seat order carries no meaning.
+      const strategies = room.slots
+        .filter((s) => s.kind !== "open")
+        .map((s) => (s.kind === "ai" ? (s.aiStrategy ?? "tenka") : null));
+      return {
+        playerCount: strategies.length,
+        strategies,
+        ...extra,
+      };
+    }
+
     case "sushi-go": {
       const humanCount = room.slots.filter((s) => s.kind === "human").length;
       return { playerCount: humanCount, ...extra };

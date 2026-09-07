@@ -48,6 +48,7 @@ const TournamentResultSchema = z.record(z.string(), z.unknown());
 const MatchupConfigShapeSchema = z.object({
   strategyAId: z.string().optional(),
   strategyBId: z.string().optional(),
+  playerCount: z.number().int().optional(),
 });
 
 const TournamentFullRowSchema = z.object({
@@ -150,7 +151,7 @@ tournamentRoutes.get("/", zQuery(TournamentListQuerySchema), async (c) => {
 });
 
 tournamentRoutes.get("/by-matchup", zQuery(TournamentByMatchupQuerySchema), async (c) => {
-  const { gameSlug, strategyA, strategyB } = c.req.valid("query");
+  const { gameSlug, strategyA, strategyB, playerCount } = c.req.valid("query");
 
   const db = getDb();
   const { rows } = await db.execute({
@@ -166,6 +167,7 @@ tournamentRoutes.get("/by-matchup", zQuery(TournamentByMatchupQuerySchema), asyn
     const cfg = MatchupConfigShapeSchema.safeParse(r.config_json);
     if (!cfg.success) return false;
     const { strategyAId, strategyBId } = cfg.data;
+    if (playerCount !== undefined && (cfg.data.playerCount ?? 2) !== playerCount) return false;
     return (
       (strategyAId === strategyA && strategyBId === strategyB) ||
       (strategyAId === strategyB && strategyBId === strategyA)

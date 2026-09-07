@@ -9,6 +9,7 @@ describe("parseServerMessage", () => {
       sessionId: "sess-1",
       playerView: { foo: "bar" },
       legalActions: [],
+      activePlayer: 0,
       phase: "active",
     });
     const msg = parseServerMessage(raw);

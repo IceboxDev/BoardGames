@@ -1,5 +1,44 @@
 import { describe, expect, it } from "vitest";
-import { bggSnapshot, getBggByBggId, getBggBySlug } from "./snapshot";
+import {
+  applyCatalogOverrides,
+  bggSnapshot,
+  getBggByBggId,
+  getBggBySlug,
+  rawBggSnapshot,
+} from "./snapshot";
+
+describe("catalog bggOverrides", () => {
+  it("are applied to the snapshot every consumer reads", () => {
+    // catalog.json marks these party games as scaling to any headcount.
+    for (const slug of ["codenames", "decrypto", "exploding-kittens", "wavelength"]) {
+      expect(getBggBySlug(slug)?.maxPlayers, slug).toBe("infinity");
+      expect(bggSnapshot[slug]?.maxPlayers, slug).toBe("infinity");
+    }
+  });
+
+  it("are visible through the id lookup too", () => {
+    const codenames = getBggBySlug("codenames");
+    expect(codenames).not.toBeNull();
+    expect(getBggByBggId(codenames?.id ?? -1)?.maxPlayers).toBe("infinity");
+  });
+
+  it("leave the raw snapshot untouched and every other field intact", () => {
+    expect(typeof rawBggSnapshot.codenames?.maxPlayers).toBe("number");
+    expect(getBggBySlug("codenames")?.minPlayers).toBe(rawBggSnapshot.codenames?.minPlayers);
+    expect(getBggBySlug("codenames")?.name).toBe(rawBggSnapshot.codenames?.name);
+  });
+
+  it("merge shallowly and only where an override exists", () => {
+    const raw = {
+      a: { ...rawBggSnapshot.codenames, maxPlayers: 8 },
+      b: { ...rawBggSnapshot.codenames, maxPlayers: 4 },
+    } as typeof rawBggSnapshot;
+    const merged = applyCatalogOverrides(raw, new Map([["a", { maxPlayers: "infinity" }]]));
+    expect(merged.a?.maxPlayers).toBe("infinity");
+    expect(merged.b?.maxPlayers).toBe(4);
+    expect(merged.a?.name).toBe(raw.a?.name);
+  });
+});
 
 describe("bggSnapshot", () => {
   it("contains at least one entry", () => {

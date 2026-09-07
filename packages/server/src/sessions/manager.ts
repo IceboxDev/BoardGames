@@ -127,10 +127,10 @@ async function persistReplay(
   let winner: string;
   if (log.durak !== undefined && log.durak !== null) {
     winner = `p${log.durak}`;
-  } else if (result?.winner === 0) {
-    winner = "p0";
-  } else if (result?.winner === 1) {
-    winner = "p1";
+  } else if (typeof result?.winner === "number" && Number.isInteger(result.winner)) {
+    // Any seat index, not just 0/1 — Sensō and other N-player games crown
+    // seats 2–4 too; those rows used to be swallowed as "draw".
+    winner = result.winner >= 0 ? `p${result.winner}` : "draw";
   } else if (typeof result?.outcome === "string") {
     // Cooperative games (Sky Team, Pandemic) report a single outcome string
     // instead of a winning player index — "win" means the team landed, anything
@@ -259,6 +259,7 @@ function subscribeSession(active: ActiveSession): void {
           sessionId: active.id,
           playerView: active.spec.getPlayerView(snapshot, p.playerIndex),
           legalActions: active.spec.getLegalActions(snapshot, p.playerIndex),
+          activePlayer,
           phase,
         }));
       } else {
