@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { GameSlugSchema } from "../common.ts";
+import { DateKeyStringSchema } from "./collection.ts";
 import { AdminPurchaseTallyEntrySchema } from "./purchase-vote.ts";
 import { SkillPlayerRefSchema } from "./skills.ts";
 
@@ -101,6 +102,10 @@ const ArrivalGameInputSchema = z.object({
  * purchaser eligibility are route-level checks. */
 export const PublishArrivalBodySchema = z.object({
   pollId: z.number().int().positive(),
+  /** The day the boxes arrived — stamped as `acquiredOn` on each game's
+   *  collection item (only where the purchaser hasn't set one), which is
+   *  what makes the copy read as New in their library. Omitted = today. */
+  acquiredOn: DateKeyStringSchema.optional(),
   games: z
     .array(ArrivalGameInputSchema)
     .min(1)

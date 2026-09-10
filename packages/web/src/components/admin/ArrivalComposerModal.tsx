@@ -11,6 +11,7 @@ import { formatShortDate, parseUtcStamp } from "../../lib/date-format";
 import { fileToArrivalPhoto } from "../../lib/downscale-image";
 import { errorMessageOf } from "../../lib/error-message";
 import { resolveGame } from "../../lib/games-by-slug";
+import { dateKey } from "../../lib/offline-availability";
 import { ArrivalTakeoverView } from "../arrivals/ArrivalTakeoverView";
 import { UPLOAD_GUIDANCE } from "../arrivals/arrival-copy";
 import type { ArrivalTotals } from "../arrivals/arrival-view-model";
@@ -20,6 +21,7 @@ import { CheckRow } from "../ui/CheckRow";
 import { Chip } from "../ui/Chip";
 import { ErrorAlert } from "../ui/ErrorAlert";
 import { FieldGroup } from "../ui/Field";
+import { Input } from "../ui/Input";
 import { Modal, ModalBody, ModalFooter } from "../ui/Modal";
 import { Surface } from "../ui/Surface";
 import { useConfirm } from "../ui/useConfirm";
@@ -81,6 +83,10 @@ export function ArrivalComposerModal({
   const poll = polls.find((p) => p.id === pollId) ?? polls[0];
   const [games, setGames] = useState<DraftGame[]>(() => initialGames(polls[0]));
   const [lastPurchaserId, setLastPurchaserId] = useState<string | null>(null);
+  // The day the boxes arrived: stamped as each copy's acquisition date, which
+  // is what makes it read as New in the purchaser's library. Today by default —
+  // arrivals are usually composed the day the parcel lands.
+  const [acquiredOn, setAcquiredOn] = useState(() => dateKey(new Date()));
   const [previewOpen, setPreviewOpen] = useState(false);
 
   const voterById = useMemo(
@@ -91,7 +97,7 @@ export function ArrivalComposerModal({
   if (!poll) return null;
 
   const hasPhotos = games.some((g) => g.photo !== null || g.photoStatus === "processing");
-  const unmet = firstUnmetRequirement(games, titleOf);
+  const unmet = firstUnmetRequirement(games, titleOf, acquiredOn);
   const valid = unmet === null;
   const announced = new Set(poll.arrivedSlugs);
 
@@ -160,7 +166,7 @@ export function ArrivalComposerModal({
   };
 
   const publish = () => {
-    const body = draftToBody(poll.id, games);
+    const body = draftToBody(poll.id, games, acquiredOn);
     if (!body) return;
     publishMutation.mutate(body, { onSuccess: (res) => onPublished(res.arrivalId) });
   };
@@ -233,6 +239,19 @@ export function ArrivalComposerModal({
                 </Chip>
               ))}
             </div>
+          </FieldGroup>
+
+          <FieldGroup
+            label="Arrived on"
+            hint="Becomes each copy's acquisition date — it reads as New until its owner plays it"
+          >
+            <Input
+              type="date"
+              aria-label="Arrived on"
+              value={acquiredOn}
+              onChange={(e) => setAcquiredOn(e.target.value)}
+              className="max-w-48"
+            />
           </FieldGroup>
 
           <FieldGroup label="Games" hint={`1–${ARRIVAL_GAMES_MAX} games · sorted by votes`}>

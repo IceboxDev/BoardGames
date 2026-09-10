@@ -202,6 +202,7 @@ adminArrivalRoutes.post("/", zJsonBody(PublishArrivalBodySchema), async (c) => {
   }
 
   const arrivalId = randomUUID();
+  const acquiredOn = body.acquiredOn ?? new Date().toISOString().slice(0, 10);
   const slugPlaceholders = slugs.map(() => "?").join(",");
   /** Poll still closed, and none of these slugs announced for it yet. */
   const announceGuard: SqlGuard = {
@@ -253,6 +254,21 @@ adminArrivalRoutes.post("/", zJsonBody(PublishArrivalBodySchema), async (c) => {
           ],
         } satisfies InStatement;
       }),
+      // Each copy's metadata row, dated to the arrival — that date is what
+      // makes it read as New in the purchaser's library. A date the owner
+      // already entered wins: only a missing one is filled. Guarded on the
+      // arrival row, so a lost publish race writes nothing here either.
+      ...body.games.map(
+        (game) =>
+          ({
+            sql: `INSERT INTO collection_items (id, user_id, slug, acquired_on)
+                  SELECT ?, ?, ?, ? WHERE EXISTS (SELECT 1 FROM purchase_arrivals WHERE id = ?)
+                  ON CONFLICT(user_id, slug) WHERE slug IS NOT NULL DO UPDATE SET
+                    acquired_on = excluded.acquired_on, updated_at = datetime('now')
+                  WHERE collection_items.acquired_on IS NULL`,
+            args: [randomUUID(), game.purchaserUserId, game.slug, acquiredOn, arrivalId],
+          }) satisfies InStatement,
+      ),
     ];
     const results = await db.batch(statements, "write");
     if ((results[plans.length]?.rowsAffected ?? 0) > 0) break;

@@ -100,6 +100,23 @@ describe("PublishArrivalBodySchema", () => {
     ).not.toThrow();
   });
 
+  it("accepts an arrival date and rejects one that is not a date key", () => {
+    expect(() =>
+      PublishArrivalBodySchema.parse({
+        pollId: 1,
+        acquiredOn: "2026-09-06",
+        games: [entry("arcs")],
+      }),
+    ).not.toThrow();
+    const r = PublishArrivalBodySchema.safeParse({
+      pollId: 1,
+      acquiredOn: "06/09/2026",
+      games: [entry("arcs")],
+    });
+    expect(r.success).toBe(false);
+    if (!r.success) expect(r.error.issues[0]?.path).toEqual(["acquiredOn"]);
+  });
+
   it("rejects zero and four games", () => {
     expect(PublishArrivalBodySchema.safeParse({ pollId: 1, games: [] }).success).toBe(false);
     const r = PublishArrivalBodySchema.safeParse({

@@ -38,8 +38,10 @@ export function newDraftGame(slug: string, purchaserUserId: string | null): Draf
   return { slug, purchaserUserId, photo: null, photoStatus: "idle", photoError: null };
 }
 
-export function isDraftValid(games: readonly DraftGame[]): boolean {
-  return firstUnmetRequirement(games, (slug) => slug) === null;
+const DATE_KEY = /^\d{4}-\d{2}-\d{2}$/;
+
+export function isDraftValid(games: readonly DraftGame[], acquiredOn?: string): boolean {
+  return firstUnmetRequirement(games, (slug) => slug, acquiredOn) === null;
 }
 
 /**
@@ -50,6 +52,8 @@ export function isDraftValid(games: readonly DraftGame[]): boolean {
 export function firstUnmetRequirement(
   games: readonly DraftGame[],
   titleOf: (slug: string) => string,
+  /** The "Arrived on" field; omitted by callers that don't show one. */
+  acquiredOn?: string,
 ): string | null {
   if (games.length === 0) return `Pick 1–${ARRIVAL_GAMES_MAX} games`;
   if (games.length > ARRIVAL_GAMES_MAX) return `Pick at most ${ARRIVAL_GAMES_MAX} games`;
@@ -62,6 +66,7 @@ export function firstUnmetRequirement(
     if (game.photoStatus === "processing") return `Preparing ${title}'s photo…`;
     if (game.photo === null) return `Add a photo of ${title}`;
   }
+  if (acquiredOn !== undefined && !DATE_KEY.test(acquiredOn)) return "Pick the arrival date";
   return null;
 }
 
@@ -76,14 +81,15 @@ export function readySummary(games: readonly DraftGame[]): string {
 export function draftToBody(
   pollId: number,
   games: readonly DraftGame[],
+  acquiredOn: string,
 ): PublishArrivalBody | null {
-  if (!isDraftValid(games)) return null;
+  if (!isDraftValid(games, acquiredOn)) return null;
   const out: PublishArrivalBody["games"] = [];
   for (const game of games) {
     if (game.purchaserUserId === null || game.photo === null) return null;
     out.push({ slug: game.slug, purchaserUserId: game.purchaserUserId, photo: game.photo.dataUri });
   }
-  return { pollId, games: out };
+  return { pollId, acquiredOn, games: out };
 }
 
 /** What members will see, built from the draft — photos straight from the

@@ -1,6 +1,6 @@
 import type { AdminArrivalPoll, AdminUser } from "@boardgames/core/protocol";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { render, screen, waitFor, within } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { resolveGame } from "../../lib/games-by-slug";
@@ -23,6 +23,7 @@ vi.mock("../../lib/downscale-image", () => ({
   fileToArrivalPhoto: (file: File) => photoMock(file),
 }));
 
+import { dateKey } from "../../lib/offline-availability";
 import { ArrivalComposerModal } from "./ArrivalComposerModal";
 
 const title = (slug: string) => resolveGame(slug)?.title ?? slug;
@@ -172,8 +173,33 @@ describe("ArrivalComposerModal — gates", () => {
     await waitFor(() =>
       expect(publishMock).toHaveBeenCalledWith({
         pollId: 3,
+        acquiredOn: dateKey(new Date()),
         games: [{ slug: "wingspan", purchaserUserId: "u1", photo: "data:image/jpeg;base64,x" }],
       }),
+    );
+  });
+
+  it("lets the arrival be backdated, and holds Publish while the date is blank", async () => {
+    renderModal();
+    const user = userEvent.setup();
+
+    await user.click(screen.getByRole("button", { name: "Mantas" }));
+    await user.upload(photoInput(WINGSPAN), jpeg());
+    await waitFor(() => expect(publishButton()).toBeEnabled());
+
+    const date = screen.getByLabelText("Arrived on");
+    fireEvent.change(date, { target: { value: "" } });
+    expect(publishButton()).toBeDisabled();
+    expect(footer()).toHaveTextContent("Pick the arrival date");
+
+    fireEvent.change(date, { target: { value: "2026-09-06" } });
+    await waitFor(() => expect(publishButton()).toBeEnabled());
+    await user.click(publishButton());
+
+    await waitFor(() =>
+      expect(publishMock).toHaveBeenCalledWith(
+        expect.objectContaining({ acquiredOn: "2026-09-06" }),
+      ),
     );
   });
 

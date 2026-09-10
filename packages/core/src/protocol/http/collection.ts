@@ -14,7 +14,7 @@ import { OwnableSlugSchema, SlugListSchema } from "./inventory.ts";
 // slugs (a retired slug must not make a stored row unreadable); write bodies
 // use `OwnableSlugSchema`.
 
-const DateKeyStringSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Expected YYYY-MM-DD");
+export const DateKeyStringSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Expected YYYY-MM-DD");
 
 // ── Vocabulary (per-user) ──────────────────────────────────────────────
 

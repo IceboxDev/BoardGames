@@ -78,6 +78,15 @@ describe("/api/admin/arrivals", () => {
     return rows[0] ? (JSON.parse(String(rows[0].game_slugs_json)) as string[]) : [];
   }
 
+  async function acquiredOn(userId: string, slug: string): Promise<string | null> {
+    const { rows } = await client.execute({
+      sql: "SELECT acquired_on FROM collection_items WHERE user_id = ? AND slug = ?",
+      args: [userId, slug],
+    });
+    const value = rows[0]?.acquired_on;
+    return value == null ? null : String(value);
+  }
+
   async function count(table: string, where = "1", args: (string | number)[] = []) {
     const { rows } = await client.execute({
       sql: `SELECT COUNT(*) AS n FROM ${table} WHERE ${where}`,
@@ -134,6 +143,7 @@ describe("/api/admin/arrivals", () => {
   it("publishes games to their purchasers' collections with processed photos", async () => {
     const res = await publish(app(), {
       pollId,
+      acquiredOn: "2026-09-06",
       games: [game("azul", M1), game("catan", M2)],
     });
     expect(res.status).toBe(200);
@@ -142,6 +152,9 @@ describe("/api/admin/arrivals", () => {
 
     expect(await inventory(M1)).toEqual(["azul"]);
     expect(await inventory(M2)).toEqual(["catan"]);
+    // Dated copies — what makes them read as New in each library.
+    expect(await acquiredOn(M1, "azul")).toBe("2026-09-06");
+    expect(await acquiredOn(M2, "catan")).toBe("2026-09-06");
 
     const { rows } = await client.execute({
       sql: `SELECT slug, position, purchaser_user_id, photo, photo_placeholder, photo_w, photo_h
@@ -182,6 +195,26 @@ describe("/api/admin/arrivals", () => {
     });
     expect((await publish(app(), { pollId, games: [game("azul", M1)] })).status).toBe(200);
     expect(await inventory(M1)).toEqual(["catan", "azul"]);
+  });
+
+  it("dates the copy to today when no arrival date is given", async () => {
+    expect((await publish(app(), { pollId, games: [game("azul", M1)] })).status).toBe(200);
+    expect(await acquiredOn(M1, "azul")).toBe(new Date().toISOString().slice(0, 10));
+  });
+
+  it("keeps an acquired-on date the purchaser already entered", async () => {
+    await client.execute({
+      sql: `INSERT INTO collection_items (id, user_id, slug, acquired_on)
+            VALUES ('ci-owner', ?, 'azul', '2020-05-05')`,
+      args: [M1],
+    });
+    const res = await publish(app(), {
+      pollId,
+      acquiredOn: "2026-09-06",
+      games: [game("azul", M1)],
+    });
+    expect(res.status).toBe(200);
+    expect(await acquiredOn(M1, "azul")).toBe("2020-05-05");
   });
 
   it("refuses an open or unknown poll, a non-candidate, and a non-member purchaser", async () => {
