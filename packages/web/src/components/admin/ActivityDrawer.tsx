@@ -12,6 +12,7 @@ import { Drawer } from "../ui/Drawer";
 import { EmptyState } from "../ui/EmptyState";
 import { LoadingState } from "../ui/LoadingState";
 import { QueryBoundary } from "../ui/QueryBoundary";
+import { collapseEntries, ctaDestinationLabel } from "./activity-collapse";
 import type { AdminUser } from "./types";
 
 type Props = {
@@ -282,7 +283,7 @@ function ActivityList({
   entries: ActivityEntry[];
   nameById: Map<string, string>;
 }) {
-  const groups = useMemo(() => groupByLocalDay(entries), [entries]);
+  const groups = useMemo(() => groupByLocalDay(collapseEntries(entries)), [entries]);
   return (
     <div className="space-y-4">
       {groups.map((group) => (
@@ -531,8 +532,13 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
     case "greeting-retracted":
       return "Retracted the group spotlight";
     case "greeting-response": {
-      const label = greetingLabel(str(meta.kind));
-      return str(meta.action) === "cta" ? `Followed ${label}` : `Clicked away ${label}`;
+      const kind = str(meta.kind);
+      const label = greetingLabel(kind);
+      if (str(meta.action) !== "cta") return `Clicked away ${label}`;
+      // The page view of the screen the button opened is folded into this
+      // line (see activity-collapse.ts), so say where the button led.
+      const opened = ctaDestinationLabel(kind);
+      return `Followed ${label}${opened ? ` to ${opened}` : ""}`;
     }
     case "purchase-vote": {
       const slugs = Array.isArray(meta.slugs)
@@ -585,7 +591,7 @@ function describePageView(meta: Record<string, unknown>, nameById: Map<string, s
   const owner = whose ? `${whose}'s` : "a member's";
   switch (page) {
     case "home":
-      return "Viewed their dashboard";
+      return "Opened the home page";
     case "calendar":
       return "Viewed the calendar";
     case "night":
