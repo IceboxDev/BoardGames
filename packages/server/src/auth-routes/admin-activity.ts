@@ -101,7 +101,8 @@ adminActivityRoutes.get("/:id/devices", async (c) => {
 // Per-member count of activity rows newer than the calling admin's marker
 // (migration 0038) — the bubble next to each name in the users table. A
 // member this admin has never opened has no marker, so every row counts;
-// members with nothing new are simply absent from the map. A static segment,
+// members with nothing new are simply absent from the map. The caller's own
+// trail is left out — it would read as "unseen" forever. A static segment,
 // so the `/:id/…` routes above can never shadow it.
 
 const UnseenRowSchema = z.object({ user_id: z.string(), n: z.number() });
@@ -112,9 +113,9 @@ adminActivityRoutes.get("/unseen-activity", async (c) => {
     sql: `SELECT a.user_id, COUNT(*) AS n
           FROM activity_log a
           LEFT JOIN admin_activity_seen s ON s.user_id = a.user_id AND s.admin_id = ?
-          WHERE a.id > COALESCE(s.last_seen_id, 0)
+          WHERE a.user_id <> ? AND a.id > COALESCE(s.last_seen_id, 0)
           GROUP BY a.user_id`,
-    args: [admin.id],
+    args: [admin.id, admin.id],
   });
   const counts: Record<string, number> = {};
   for (const r of parseRows(UnseenRowSchema, rows, "activity_log")) counts[r.user_id] = r.n;

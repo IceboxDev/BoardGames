@@ -112,6 +112,14 @@ describe("unseen activity marker", () => {
     expect(await unseen(a)).toEqual({ [MEMBER_1]: 20 });
   });
 
+  it("never counts the admin's own trail", async () => {
+    await log(ADMIN_A, 7);
+    await log(MEMBER_1, 2);
+    expect(await unseen(app(ADMIN_A))).toEqual({ [MEMBER_1]: 2 });
+    // Another admin does see it — it is only ever hidden from its owner.
+    expect(await unseen(app(ADMIN_B))).toEqual({ [ADMIN_A]: 7, [MEMBER_1]: 2 });
+  });
+
   it("keeps a separate marker per admin", async () => {
     const ids = await log(MEMBER_1, 4);
     await markSeen(app(ADMIN_A), MEMBER_1, newest(ids));

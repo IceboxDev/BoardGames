@@ -24,7 +24,8 @@ export type UserRowProps = {
    *  (their freshness already shows through the sort order). */
   zeroForDays?: number;
   /** Activity entries logged since this admin last opened the member's trail
-   *  (accent bubble on the name). Clears once the activity drawer is opened. */
+   *  (accent bubble on the name). Clears once the activity drawer is opened;
+   *  never shown on the admin's own row (`isSelf`). */
   unseenActivity?: number;
   /** Inventory expansion (renders a second `<tr>` with the editor). */
   expanded: boolean;
@@ -112,7 +113,7 @@ export function UserRow({
             >
               {user.name || "—"}
             </button>
-            {unseenActivity > 0 && (
+            {unseenActivity > 0 && !isSelf && (
               <span
                 className="inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-accent-500/20 px-1 text-3xs font-bold tabular-nums text-accent-300"
                 title={`${unseenActivity} new activity ${unseenActivity === 1 ? "entry" : "entries"} since you last opened this trail`}

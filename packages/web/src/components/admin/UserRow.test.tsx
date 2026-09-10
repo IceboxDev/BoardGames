@@ -100,6 +100,11 @@ describe("UserRow — main row", () => {
     expect(screen.queryByTitle(/new activity/)).not.toBeInTheDocument();
   });
 
+  it("never shows the bubble on your own row", () => {
+    renderRow({ unseenActivity: 20, isSelf: true });
+    expect(screen.queryByTitle(/new activity/)).not.toBeInTheDocument();
+  });
+
   it("caps the bubble at 999+ for a never-opened trail", () => {
     renderRow({ unseenActivity: 1234 });
     expect(screen.getByTitle(/1234 new activity entries/)).toHaveTextContent("999+");
