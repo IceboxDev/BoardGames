@@ -43,6 +43,9 @@ import { OneVsManyForm } from "./forms/OneVsManyForm";
 import { QuiztopiaForm } from "./forms/QuiztopiaForm";
 import { ResistanceForm } from "./forms/ResistanceForm";
 import { ScoredCoopForm } from "./forms/ScoredCoopForm";
+import { SensoForm } from "./forms/SensoForm";
+import { SensoTeamsForm } from "./forms/SensoTeamsForm";
+import { isSensoSlug } from "./forms/senso-standings";
 import { TeamsForm } from "./forms/TeamsForm";
 import { VillainousForm } from "./forms/VillainousForm";
 import { WerewolfForm } from "./forms/WerewolfForm";
@@ -353,6 +356,12 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
                 value={outcome as MatchOutcomeFreeForAll}
                 onChange={setOutcome}
               />
+            ) : isSensoSlug(gameSlug) ? (
+              <SensoForm
+                users={allUsers}
+                value={outcome as MatchOutcomeFreeForAll}
+                onChange={setOutcome}
+              />
             ) : (
               <FreeForAllForm
                 users={allUsers}
@@ -382,6 +391,12 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
               />
             ) : gameSlug === "decrypto" ? (
               <DecryptoForm
+                users={allUsers}
+                value={outcome as MatchOutcomeTeams}
+                onChange={setOutcome}
+              />
+            ) : isSensoSlug(gameSlug) ? (
+              <SensoTeamsForm
                 users={allUsers}
                 value={outcome as MatchOutcomeTeams}
                 onChange={setOutcome}

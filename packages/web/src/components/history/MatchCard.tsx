@@ -1,3 +1,4 @@
+import type { SensoTiebreak } from "@boardgames/core/games/senso-battle-for-japan/standings";
 import { awardLabel } from "@boardgames/core/history/awards";
 import { roundWinnerIndex } from "@boardgames/core/history/round-scores";
 import type {
@@ -26,6 +27,12 @@ import { IconButton } from "../ui/IconButton";
 import { MicroLabel } from "../ui/Label";
 import { AvatarBubble } from "./AvatarBubble";
 import { conditionMeta, isDndSlug, resolutionOf } from "./dnd";
+import {
+  describeSensoTiebreak,
+  isSensoSlug,
+  sensoFfaStandings,
+  sensoTeamsStandings,
+} from "./forms/senso-standings";
 
 type Props = {
   match: MatchRecord;
@@ -272,6 +279,7 @@ function FreeForAllInline({
           ) : (
             <span className="text-xs tabular-nums text-fg-muted">{p.score}</span>
           )}
+          {p.role && <MicroLabel>{p.role}</MicroLabel>}
           {p.awards && p.awards.length > 0 && (
             // Table-voted award bonuses (Publish or Perish) — already inside
             // the score; the trophy names them on hover.
@@ -284,7 +292,23 @@ function FreeForAllInline({
           )}
         </span>
       ))}
+      {isSensoSlug(gameSlug) && (
+        <SensoRung tiebreak={sensoFfaStandings(outcome.players).tiebreak} />
+      )}
     </div>
+  );
+}
+
+// Sensō: name the rung of the ladder that decided it — cubes, the Emperor's
+// tied throne, or an unbreakable tie — so a winner below the top score reads
+// as a rule, not a typo.
+function SensoRung({ tiebreak }: { tiebreak: SensoTiebreak }) {
+  const label = describeSensoTiebreak(tiebreak);
+  if (!label) return null;
+  return (
+    <MicroLabel className="text-fg-muted" inheritColor>
+      {label}
+    </MicroLabel>
   );
 }
 
@@ -436,6 +460,9 @@ function TeamsInline({
       })}
       {outcome.moderator && (
         <Storyteller moderator={outcome.moderator} currentUserId={currentUserId} />
+      )}
+      {isSensoSlug(gameSlug) && hasScore && (
+        <SensoRung tiebreak={sensoTeamsStandings(outcome.teams).tiebreak} />
       )}
     </div>
   );

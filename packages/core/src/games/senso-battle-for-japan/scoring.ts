@@ -1,6 +1,7 @@
 import { countClan, cubesOnMap, cubeVp, isEmpty } from "./board";
 import { EMPEROR_ZERO_REGIONS } from "./map";
 import { RULINGS } from "./rulings";
+import { resolveStandings, type StandingEntry } from "./standings";
 import type { Board, Clan, GameState, SeatBreakdown, SensoResult } from "./types";
 import { CLANS } from "./types";
 
@@ -46,47 +47,27 @@ export function cubesPerSeat(state: GameState): number[] {
   return state.players.map((p) => (p.clan === null ? 0 : cubesOnMap(state.board, p.clan)));
 }
 
+/** One ladder entry per seat — the shape `standings.ts` ranks. */
+function standingEntries(state: GameState, scores: number[]): StandingEntry[] {
+  const cubes = cubesPerSeat(state);
+  return state.players.map((_, seat) => ({
+    score: scores[seat] ?? 0,
+    cubes: cubes[seat] ?? 0,
+    emperor: seat === state.emperorSeat,
+  }));
+}
+
 export function resolveWinners(
   state: GameState,
   scores: number[],
 ): { winners: number[]; tiebreak: SensoResult["tiebreak"] } {
-  const max = Math.max(...scores);
-  let tied = scores.map((s, seat) => (s === max ? seat : -1)).filter((seat) => seat >= 0);
-  if (tied.length === 1) return { winners: tied, tiebreak: "score" };
-
-  const cubes = cubesPerSeat(state);
-  const maxCubes = Math.max(...tied.map((seat) => cubes[seat]));
-  tied = tied.filter((seat) => cubes[seat] === maxCubes);
-  if (tied.length === 1) return { winners: tied, tiebreak: "cubes" };
-
-  const emperor = state.emperorSeat;
-  if (emperor !== null && (tied.includes(emperor) || !RULINGS.emperorWinsTiesOnlyIfTied)) {
-    return { winners: [emperor], tiebreak: "emperor" };
-  }
-  return { winners: tied, tiebreak: "draw" };
+  const { winners, tiebreak } = resolveStandings(standingEntries(state, scores));
+  return { winners, tiebreak };
 }
 
-/** 1-based standard-competition ranks by (score, cubes, Emperor). */
+/** 1-based standard-competition ranks — winners first, then (score, cubes, Emperor). */
 export function placementsFrom(state: GameState, scores: number[]): number[] {
-  const cubes = cubesPerSeat(state);
-  const key = (seat: number) => [scores[seat], cubes[seat], seat === state.emperorSeat ? 1 : 0];
-  const order = state.players
-    .map((p) => p.index)
-    .sort((a, b) => {
-      const ka = key(a);
-      const kb = key(b);
-      for (let i = 0; i < ka.length; i++) if (ka[i] !== kb[i]) return kb[i] - ka[i];
-      return a - b;
-    });
-  const placements: number[] = new Array(scores.length).fill(0);
-  let rank = 0;
-  order.forEach((seat, i) => {
-    const prev = order[i - 1];
-    const sameAsPrev = prev !== undefined && key(prev).every((value, k) => value === key(seat)[k]);
-    if (!sameAsPrev) rank = i + 1;
-    placements[seat] = rank;
-  });
-  return placements;
+  return resolveStandings(standingEntries(state, scores)).placements;
 }
 
 export function buildResult(state: GameState): SensoResult {

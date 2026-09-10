@@ -60,6 +60,11 @@ const FreeForAllPlayerSchema = ParticipantSchema.extend({
   // Reviewer, …). Ties put the same id on several players. The award points
   // are already folded into `score` — see history/awards.ts.
   awards: z.array(z.string().min(1).max(64)).max(8).optional(),
+  // Secondary count that settles a tied `score` — Sensō's cubes on the map at
+  // game end. The recording form derives `rank` from score, then this, then
+  // the Emperor's throne (core `senso-battle-for-japan/standings`), so the
+  // winner is never free-picked; the card names the rung that decided it.
+  tiebreak: z.number().int().min(0).max(1000).optional(),
 });
 
 // Jaipur-only: one rupee-tied round settled the rulebook's way — the most
@@ -109,6 +114,9 @@ const TeamSchema = z.object({
   members: z.array(TeamMemberSchema).min(1),
   score: z.number().finite().optional(),
   rank: z.number().int().optional(),
+  // The same secondary count at team level (Sensō 2v2: the partners' combined
+  // cubes on the map) — see `FreeForAllPlayerSchema.tiebreak`.
+  tiebreak: z.number().int().min(0).max(1000).optional(),
 });
 
 // Optional non-competing slot — Blood on the Clocktower's Storyteller is the

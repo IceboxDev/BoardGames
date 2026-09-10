@@ -6,6 +6,9 @@ import type { MatchKind } from "@boardgames/core/history/types";
  * entries here as the actual game kinds get clarified.
  */
 export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
+  // Sensō: standard play is a scored free-for-all; the 2v2 variant is
+  // recorded by switching the kind to Teams (SensoTeamsForm).
+  "senso-battle-for-japan": "free-for-all",
   // Point-less free-for-all with a custom form — listed explicitly (rather than
   // relying on the free-for-all fallback) so switching to it from a non-FFA game
   // resets the kind and surfaces the Villainous villain/winner form.

@@ -94,6 +94,43 @@ describe("MatchOutcomeSchema", () => {
 
   // ── Win/draw/loss duels (chess, Connect 4) ────────────────────────────
 
+  it("keeps the secondary tiebreak count — a Sensō Emperor ranked 1 below the top score", () => {
+    const parsed = MatchOutcomeSchema.parse({
+      kind: "free-for-all",
+      scenario: "Standard",
+      players: [
+        { userId: "a", displayName: "A", score: 12, tiebreak: 4, role: "Takeda", rank: 2 },
+        { userId: "b", displayName: "B", score: 12, tiebreak: 4, role: "Uesugi", rank: 2 },
+        { userId: "c", displayName: "C", score: 8, tiebreak: 0, role: "Emperor", rank: 1 },
+      ],
+    });
+    expect(parsed.kind === "free-for-all" && parsed.players[2]?.tiebreak).toBe(0);
+    const team = MatchOutcomeSchema.parse({
+      kind: "teams",
+      scenario: "2v2",
+      teams: [
+        { members: [{ userId: "a", displayName: "A" }], score: 20, tiebreak: 9 },
+        { members: [{ userId: "b", displayName: "B" }], score: 20, tiebreak: 7 },
+      ],
+      winnerTeamIndices: [0],
+    });
+    expect(team.kind === "teams" && team.teams[0]?.tiebreak).toBe(9);
+  });
+
+  it("rejects a negative or fractional tiebreak count", () => {
+    for (const tiebreak of [-1, 1.5]) {
+      const result = MatchOutcomeSchema.safeParse({
+        kind: "free-for-all",
+        players: [
+          { userId: "a", displayName: "A", score: 1, tiebreak },
+          { userId: "b", displayName: "B", score: 1 },
+        ],
+      });
+      expect(result.success).toBe(false);
+      if (!result.success) expect(result.error.issues[0]?.path).toEqual(["players", 0, "tiebreak"]);
+    }
+  });
+
   it("accepts a drawn duel — draw: true, no ranks, zero scores", () => {
     const parsed = MatchOutcomeSchema.parse({
       kind: "free-for-all",

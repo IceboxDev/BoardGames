@@ -26,6 +26,11 @@ import { JAIPUR_BEST_OF_ONE } from "../../games/match-variants";
 import { coopMaxScoreForSlug, isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
 import { isDndSlug } from "./dnd";
+import {
+  describeSensoFfaError,
+  describeSensoTeamsError,
+  isSensoSlug,
+} from "./forms/senso-standings";
 
 /** Current timestamp as an ISO string. Wrapped so tests can stub it. */
 export function isoNow(): string {
@@ -153,9 +158,11 @@ export function describeOutcomeError(
       if (gameSlug === "lovecraft-letter") return describeLovecraftLetterError(outcome);
       if (isWinDrawLossFfa(gameSlug)) return describeWinDrawLossError(outcome);
       if (gameSlug === "jaipur") return describeJaipurError(outcome);
+      if (isSensoSlug(gameSlug)) return describeSensoFfaError(outcome);
       if (outcome.players.length < 2) return "Add at least two players";
       return null;
     case "teams":
+      if (isSensoSlug(gameSlug)) return describeSensoTeamsError(outcome);
       if (gameSlug === "blood-on-the-clocktower") return describeClocktowerError(outcome);
       if (gameSlug === "one-night-ultimate-werewolf") return describeWerewolfError(outcome);
       if (gameSlug === "the-resistance") return describeResistanceError(outcome);
