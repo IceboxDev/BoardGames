@@ -1287,6 +1287,51 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
     ],
   },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "bomb-busters",
+    title: "Pegasus Spiele Bomb Busters (Multi-Colour)",
+    shortTitle: "Bomb Busters",
+    orderGroup: null,
+    slug: "bomb-busters",
+    kind: "retail",
+    status: "delivered",
+    platform: "Amazon.de",
+    campaignUrl: null, // marketplace listing link not recorded
+    pledgeManagerUrl: null, // order page link not recorded
+    originalEtaMonth: null, // in-stock marketplace order — no stated ETA
+    currentEtaMonth: null,
+    pledgedOn: "2026-09-06",
+    deliveredOn: "2026-09-09",
+    currency: "EUR",
+    pledgeCents: 3044, // €30.44, paid with the order
+    shippingCents: 0, // free postage & packing
+    note:
+      "Amazon.de order 305-4023752-0938758, sold by Handelskontor Dinkels: €30.44 with free " +
+      "postage & packing. Return or replacement eligible until 25 September 2026.",
+    events: [
+      {
+        id: "bomb-busters-e01",
+        occurredOn: "2026-09-06",
+        type: "note",
+        title: "Order placed on Amazon.de",
+        details:
+          "Order 305-4023752-0938758, sold by Handelskontor Dinkels: €30.44 item subtotal, " +
+          "€0.00 postage & packing, €30.44 total.",
+        sourceUrl: null,
+      },
+      {
+        id: "bomb-busters-e02",
+        occurredOn: "2026-09-09",
+        type: "status-change",
+        title: "Delivered",
+        details:
+          "Delivered on 9 September. Return, replacement or withdrawal eligible until " +
+          "25 September 2026.",
+        sourceUrl: null,
+      },
+    ],
+  },
 ] satisfies readonly PurchaseRecord[];
 
 export function purchasesForUser(userId: string): PurchaseRecord[] {
