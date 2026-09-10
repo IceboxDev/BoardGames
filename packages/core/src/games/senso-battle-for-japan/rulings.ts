@@ -10,6 +10,15 @@
  *     irrelevant and seat 0 is the host).
  *   - The Emperor plays a normal hand and competes for tricks; it is special
  *     only in rewards (`as`) and scoring.
+ *   - The Emperor owns no cubes, so every cube on the map is "an opponent's
+ *     Faction cube" to it (`rules.isOpponentCube`): controlling a Takeda cube
+ *     for a Balance it may push out a Takeda cube, and its Aggression strikes
+ *     any cube. Having no cube of its own to place, its strike always ends in
+ *     the rulebook's N.B. — the region closes up by gravity
+ *     (`game-engine.applyAggression`). Aggression therefore never carries `as`.
+ *   - Determination is the one reward where the Emperor does place a cube: it
+ *     "controls any Faction cube", supply included, and places from that
+ *     clan's supply as that clan.
  */
 export const RULINGS = {
   /** `rules.legalPlays`: a held Ninja may not be played while you hold the lead suit. */

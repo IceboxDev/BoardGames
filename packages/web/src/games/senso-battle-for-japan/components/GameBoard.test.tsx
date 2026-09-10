@@ -86,18 +86,59 @@ describe("GameBoard — rewards", () => {
     expect(onAction.mock.calls[0][0]).toMatchObject({ type: "aggression" });
   });
 
-  it("offers the Emperor a clan step before the reward kinds", () => {
+  it("lets the player hop from cube to cube while choosing a Balance destination", () => {
+    const onAction = vi.fn();
+    const props = boardProps(createInitialState(2, [null, "random"], 5), 0, 1, onAction);
+    render(<GameBoard {...props} />);
+    fireEvent.click(screen.getByRole("button", { name: /Balance/ }));
+    const sources = screen.getAllByRole("button", { name: /Your cube in/ });
+    expect(sources.length).toBeGreaterThan(1);
+    const [first, second] = sources.map((el) => el.getAttribute("aria-label"));
+    fireEvent.click(sources[0]);
+    // The first cube is now the selected one; every other cube is still a target.
+    expect(screen.getByRole("button", { name: /Selected cube in/ })).toBeInTheDocument();
+    expect(screen.getAllByRole("button", { name: /Your cube in/ })).toHaveLength(
+      sources.length - 1,
+    );
+    fireEvent.click(screen.getByRole("button", { name: second ?? "" }));
+    expect(screen.getByRole("button", { name: first ?? "" })).toBeInTheDocument();
+    expect(onAction).not.toHaveBeenCalled();
+    const destination = screen.getAllByRole("button", { name: /March into|Swap up|Push out/ })[0];
+    fireEvent.click(destination);
+    expect(onAction).toHaveBeenCalledTimes(1);
+    const sent = onAction.mock.calls[0][0];
+    expect(props.legalActions.some((a) => canonicalEquals(a, sent))).toBe(true);
+    const source = screen.queryByRole("button", { name: /Selected cube in/ });
+    expect(source).toBeNull();
+  });
+
+  it("lets the Emperor pick a reward first, name a clan for a cube move, and strike any cube as nobody", () => {
     let state: GameState | null = null;
     for (let seed = 1; seed < 100 && !state; seed++) {
       const s = createInitialState(5, [null, "random", "random", "random", "random"], seed);
       if (s.players[0].clan === null) state = s;
     }
     if (!state) throw new Error("no Emperor seed");
-    render(<GameBoard {...boardProps(state, 0, 5)} />);
+    const onAction = vi.fn();
+    render(<GameBoard {...boardProps(state, 0, 5, onAction)} />);
     expect(screen.getByText("Emperor")).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: /Takeda/ })).toBeNull();
+    fireEvent.click(screen.getByRole("button", { name: /Determination/ }));
+    expect(screen.getByText("Whose cube will you place?")).toBeInTheDocument();
     fireEvent.click(screen.getByRole("button", { name: /Takeda/ }));
     expect(screen.getByRole("button", { name: /as 武田/ })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /Aggression/ })).toBeEnabled();
+    expect(screen.getAllByRole("button", { name: /Reinforce region/ }).length).toBeGreaterThan(0);
+
+    fireEvent.click(screen.getByRole("button", { name: /Aggression/ }));
+    expect(screen.queryByRole("button", { name: /as 武田/ })).toBeNull();
+    const strikes = screen.getAllByRole("button", { name: /Strike the cube/ });
+    // Every cube on the setup map, its own controlled colours included.
+    expect(strikes).toHaveLength(state.board.flat().filter((c) => c !== null).length);
+    fireEvent.click(strikes[0]);
+    expect(onAction).toHaveBeenCalledTimes(1);
+    const sent = onAction.mock.calls[0][0];
+    expect(sent).toMatchObject({ type: "aggression" });
+    expect("as" in sent).toBe(false);
   });
 });
 

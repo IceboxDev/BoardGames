@@ -4,7 +4,11 @@ import type {
   CardId,
   SensoPlayerView,
 } from "@boardgames/core/games/senso-battle-for-japan/types";
-import { CLAN_KANJI, regionLabel } from "@boardgames/core/games/senso-battle-for-japan/types";
+import {
+  CLAN_KANJI,
+  CLAN_LABELS,
+  regionLabel,
+} from "@boardgames/core/games/senso-battle-for-japan/types";
 import { useCallback, useEffect, useMemo, useReducer, useState } from "react";
 import { ActionLog } from "../../../components/action-log";
 import { GameScreen, PromptRow } from "../../../components/game-layout";
@@ -107,28 +111,24 @@ export default function GameBoard({
   const targets = useMemo((): MapTargetSpec[] => {
     const squareLabel = (region: number, square: number) =>
       `region ${regionLabel(region)}, square ${square + 1}`;
+    const whose = as === undefined ? "Your" : CLAN_LABELS[as];
+    const sourceSpec = (region: number, square: number, selected = false): MapTargetSpec => ({
+      id: `src:${squareKey(region, square)}`,
+      kind: "source",
+      region,
+      square,
+      label: selected
+        ? `Selected cube in ${squareLabel(region, square)} — click to deselect`
+        : `${whose} cube in ${squareLabel(region, square)}`,
+      selected,
+    });
     switch (picker.step) {
       case "balance-source":
-        return [...sources.values()].map(({ region, square }) => ({
-          id: `src:${squareKey(region, square)}`,
-          kind: "source",
-          region,
-          square,
-          label: `Your cube in ${squareLabel(region, square)}`,
-        }));
+        return [...sources.values()].map(({ region, square }) => sourceSpec(region, square));
       case "balance-dest": {
         const { from } = picker;
         const t = balanceTargets(legalActions, from, as);
-        const out: MapTargetSpec[] = [
-          {
-            id: `src:${squareKey(from.region, from.square)}`,
-            kind: "source",
-            region: from.region,
-            square: from.square,
-            label: `Selected cube in ${squareLabel(from.region, from.square)} — choose again`,
-            selected: true,
-          },
-        ];
+        const out: MapTargetSpec[] = [];
         if (t.swap) {
           out.push({
             id: "swap",
@@ -146,8 +146,10 @@ export default function GameBoard({
             label: `March into region ${regionLabel(to)}`,
           });
         }
+        const struck = new Set<string>();
         for (const to of t.replaces.keys()) {
           const square = lowestOccupied(view.board[to]);
+          struck.add(squareKey(to, square));
           out.push({
             id: `replace:${to}`,
             kind: "strike",
@@ -155,6 +157,15 @@ export default function GameBoard({
             square,
             label: `Push out the lowest cube of region ${regionLabel(to)}`,
           });
+        }
+        // Every source stays clickable so the player can hop from cube to cube
+        // without leaving the reward. Drawn last: a cube inside a march-target
+        // region takes the click, the region around it still marches. A cube
+        // that is itself the push-out victim (the Emperor pushing out the
+        // colour it moves) yields to the strike.
+        for (const { region, square } of sources.values()) {
+          if (struck.has(squareKey(region, square))) continue;
+          out.push(sourceSpec(region, square, region === from.region && square === from.square));
         }
         return out;
       }
@@ -209,7 +220,9 @@ export default function GameBoard({
       const rest = colon === -1 ? undefined : id.slice(colon + 1);
       if (kind === "src" && rest) {
         const [r, s] = rest.split(":").map(Number);
-        dispatch({ type: "pick-source", region: r, square: s });
+        const reselect =
+          picker.step === "balance-dest" && picker.from.region === r && picker.from.square === s;
+        dispatch(reselect ? { type: "back" } : { type: "pick-source", region: r, square: s });
         return;
       }
       if (picker.step === "balance-dest") {

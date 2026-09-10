@@ -3,6 +3,7 @@ import {
   isSensoReplay,
   type ReplayStep,
   replaySteps,
+  type SensoReplay,
 } from "@boardgames/core/games/senso-battle-for-japan/replay";
 import type { LogEntry } from "@boardgames/core/games/senso-battle-for-japan/types";
 import {
@@ -68,9 +69,19 @@ function rewardLabel(entry: Extract<LogEntry, { kind: "reward" }>): string {
   }
 }
 
+/** Re-simulate the record; a game played under an earlier ruleset no longer replays. */
+function stepsOf(replay: SensoReplay | null): { steps: ReplayStep[]; stale: boolean } {
+  if (!replay) return { steps: [], stale: false };
+  try {
+    return { steps: replaySteps(replay), stale: false };
+  } catch {
+    return { steps: [], stale: true };
+  }
+}
+
 export default function GameReplay({ game }: ReplayProps) {
   const replay = isSensoReplay(game) ? game : null;
-  const steps = useMemo(() => (replay ? replaySteps(replay) : []), [replay]);
+  const { steps, stale } = useMemo(() => stepsOf(replay), [replay]);
   const playback = useReplayPlayback(steps.length);
   const names = useMemo(
     () => (replay ? replay.strategies.map((s, i) => seatName(s, replay.clans[i] ?? null)) : []),
@@ -82,6 +93,13 @@ export default function GameReplay({ game }: ReplayProps) {
       ? `Replay · ${replay.playerCount} players · ${replay.scores.join("–")} · Sensō`
       : "Replay · Sensō",
   );
+  if (stale) {
+    return (
+      <p className="p-4 text-sm text-fg-muted">
+        This game was recorded under an earlier ruleset and can no longer be re-simulated.
+      </p>
+    );
+  }
   if (!replay || steps.length === 0) {
     return <p className="p-4 text-sm text-fg-muted">This replay cannot be shown.</p>;
   }

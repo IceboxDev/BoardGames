@@ -25,21 +25,31 @@ export function passAction(legal: readonly Action[]): Action | undefined {
   return legal.find((a) => a.type === "pass");
 }
 
+/**
+ * The reward actions taken as one clan: a clan seat's own (they carry no `as`)
+ * or the Emperor's tagged with `as`. With `as` undefined only untagged actions
+ * match — for the Emperor that is its Aggression, which strikes as nobody.
+ */
 function rewards(legal: readonly Action[], as: Clan | undefined): RewardAction[] {
   return legal.filter((a): a is RewardAction => isRewardAction(a) && a.as === as);
 }
 
-/** Clans an Emperor may act as right now (distinct `as` values on offer). */
-export function emperorClans(legal: readonly Action[]): Clan[] {
+/** Clans an Emperor may act as right now (distinct `as` values on offer), for one kind or any. */
+export function emperorClans(legal: readonly Action[], kind?: RewardKind): Clan[] {
   const out: Clan[] = [];
   for (const a of legal) {
-    if (isRewardAction(a) && a.as !== undefined && !out.includes(a.as)) out.push(a.as);
+    if (!isRewardAction(a) || a.as === undefined || out.includes(a.as)) continue;
+    if (kind !== undefined && rewardKindOf(a) !== kind) continue;
+    out.push(a.as);
   }
   return out;
 }
 
+/** Whether `kind` is on offer — as `as` when given, otherwise as anyone. */
 export function kindAvailable(legal: readonly Action[], kind: RewardKind, as?: Clan): boolean {
-  return rewards(legal, as).some((a) => rewardKindOf(a) === kind);
+  return legal.some(
+    (a) => isRewardAction(a) && rewardKindOf(a) === kind && (as === undefined || a.as === as),
+  );
 }
 
 /** Own cubes that can start a Balance reward, keyed `region:square`. */

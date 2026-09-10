@@ -310,6 +310,59 @@ describe("reward effects", () => {
     });
   });
 
+  it("the Emperor's Aggression removes the cube and closes the gap — it has no cube to put down", () => {
+    const state = setFactions(baseState(5, 8), [null, "takeda", "uesugi", "oda", "mori"]);
+    setBoard(state, ["uto", "..", "..", ".", "...", "..", "...", ".", "...", "..."]);
+    state.round = 2;
+    state.phase = "rewards";
+    state.rewardQueue = [{ player: 0, tier: 5, picksLeft: 1, used: [] }];
+    const takeda = state.supply.takeda;
+    const supplyTotal = Object.values(state.supply).reduce((a, b) => a + b, 0);
+    applyAction(state, { type: "aggression", region: 0, square: 1 });
+    expect(lettersFromBoard(state.board)[0]).toBe("uo.");
+    expect(state.supply.takeda).toBe(takeda + 1);
+    expect(Object.values(state.supply).reduce((a, b) => a + b, 0)).toBe(supplyTotal + 1);
+    const entry = state.log.find((e) => e.kind === "reward");
+    expect(entry).toMatchObject({
+      kind: "reward",
+      player: 0,
+      action: { type: "aggression", region: 0, square: 1 },
+      effects: [{ kind: "removed", clan: "takeda", region: 0, square: 1 }],
+    });
+    if (entry?.kind === "reward") expect(entry.action.as).toBeUndefined();
+  });
+
+  it("rejects an Emperor strike that names a clan, and a clan seat's `as`", () => {
+    const state = setFactions(baseState(5, 8), [null, "takeda", "uesugi", "oda", "mori"]);
+    setBoard(state, ["uto", "..", "..", ".", "...", "..", "...", ".", "...", "..."]);
+    state.phase = "rewards";
+    state.rewardQueue = [{ player: 0, tier: 5, picksLeft: 1, used: [] }];
+    expect(() =>
+      applyAction(state, { type: "aggression", region: 0, square: 1, as: "oda" }),
+    ).toThrow(/Illegal action/);
+    state.rewardQueue = [{ player: 1, tier: 5, picksLeft: 1, used: [] }];
+    expect(() => applyAction(state, { type: "determination", region: 1, as: "oda" })).toThrow(
+      /Illegal action/,
+    );
+  });
+
+  it("the Emperor pushes out a cube of the colour it is marching", () => {
+    const state = setFactions(baseState(5, 8), [null, "takeda", "uesugi", "oda", "mori"]);
+    setBoard(state, ["t..", "ut", "..", ".", "...", "..", "...", ".", "...", "..."]);
+    state.phase = "rewards";
+    state.rewardQueue = [{ player: 0, tier: 1, picksLeft: 1, used: [] }];
+    const takeda = state.supply.takeda;
+    applyAction(state, { type: "balance-replace", region: 0, square: 0, to: 1, as: "takeda" });
+    expect(lettersFromBoard(state.board).slice(0, 2)).toEqual(["...", "ut"]);
+    expect(state.supply.takeda).toBe(takeda + 1);
+    expect(state.log.find((e) => e.kind === "reward")).toMatchObject({
+      effects: [
+        { kind: "removed", clan: "takeda", region: 1, square: 1 },
+        { kind: "moved", clan: "takeda", region: 0, square: 0, toRegion: 1, toSquare: 1 },
+      ],
+    });
+  });
+
   it("applyActionPure leaves the input untouched", () => {
     const state = rewards(["ut.", "..", "..", ".", "...", "..", "...", ".", "...", "..."]);
     const snapshot = JSON.stringify(state);
@@ -359,7 +412,11 @@ describe("full games", () => {
         (e) => e.kind === "reward" && e.player === state.emperorSeat,
       );
       for (const e of emperorRewards) {
-        if (e.kind === "reward") expect(e.action.as).toBeDefined();
+        if (e.kind !== "reward") continue;
+        if (e.action.type === "aggression") {
+          expect(e.action.as).toBeUndefined();
+          expect(e.effects.map((x) => x.kind)).toEqual(["removed"]);
+        } else expect(e.action.as).toBeDefined();
       }
     }
   });

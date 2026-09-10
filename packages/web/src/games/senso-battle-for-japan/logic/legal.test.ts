@@ -20,7 +20,7 @@ const LEGAL: Action[] = [
   { type: "determination", region: 3 },
   { type: "aggression", region: 0, square: 0 },
   { type: "determination", region: 1, as: "oda" },
-  { type: "aggression", region: 4, square: 0, as: "mori" },
+  { type: "balance-move", region: 4, square: 0, to: 5, as: "mori" },
   { type: "pass" },
 ];
 
@@ -31,16 +31,22 @@ describe("legal-action indexers", () => {
     );
     expect(passAction(LEGAL)).toEqual({ type: "pass" });
     expect(emperorClans(LEGAL)).toEqual(["oda", "mori"]);
+    expect(emperorClans(LEGAL, "determination")).toEqual(["oda"]);
+    expect(emperorClans(LEGAL, "balance")).toEqual(["mori"]);
+    expect(emperorClans(LEGAL, "aggression")).toEqual([]);
   });
 
-  it("filters by the acting clan (`as`) so a clan seat never sees Emperor actions", () => {
+  it("filters by the acting clan (`as`); a kind is available when anyone offers it", () => {
     expect(kindAvailable(LEGAL, "determination")).toBe(true);
     expect(kindAvailable(LEGAL, "determination", "oda")).toBe(true);
     expect(kindAvailable(LEGAL, "determination", "mori")).toBe(false);
+    expect(kindAvailable(LEGAL, "balance", "mori")).toBe(true);
     expect([...determinationRegions(LEGAL).keys()]).toEqual([3]);
     expect([...determinationRegions(LEGAL, "oda").keys()]).toEqual([1]);
+    // Strikes are never tagged: the Emperor's own show up without an `as`.
     expect([...aggressionSquares(LEGAL).keys()]).toEqual(["0:0"]);
-    expect([...aggressionSquares(LEGAL, "mori").keys()]).toEqual(["4:0"]);
+    expect([...aggressionSquares(LEGAL, "mori").keys()]).toEqual([]);
+    expect([...balanceSources(LEGAL, "mori").keys()]).toEqual(["4:0"]);
   });
 
   it("indexes Balance by source cube and destination", () => {

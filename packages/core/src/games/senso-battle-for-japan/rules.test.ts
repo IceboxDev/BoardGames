@@ -184,10 +184,40 @@ describe("reward enumerators", () => {
 
   it("aggression targets every non-own cube, neutrals included", () => {
     const state = twoSeats(["tm.", "..", "..", ".", "...", "..", "...", ".", "...", "u.."]);
-    expect(aggressionActions(state, "takeda", 0)).toEqual([
+    expect(aggressionActions(state, 0)).toEqual([
       { type: "aggression", region: 0, square: 1 },
       { type: "aggression", region: 9, square: 0 },
     ]);
+  });
+
+  it("the Emperor may push out the very colour it is moving — every cube is an opponent's to it", () => {
+    // Region 0's only neighbour (region 1) is full with Takeda at the bottom.
+    const state = setFactions(baseState(5), ["takeda", null, "uesugi", "oda", "mori"]);
+    setBoard(state, ["t..", "ut", "..", ".", "...", "..", "...", ".", "...", "..."]);
+    expect(balanceReplaceActions(state, "takeda", 0)).toEqual([]);
+    expect(balanceReplaceActions(state, "takeda", 1, "takeda")).toEqual([
+      { type: "balance-replace", region: 0, square: 0, to: 1, as: "takeda" },
+    ]);
+    // A like-for-like swap is still nothing: Takeda under Takeda cannot "climb".
+    state.board[1] = ["takeda", "takeda"];
+    expect(balanceSwapActions(state, "takeda", 1, "takeda")).toEqual([]);
+  });
+
+  it("the Emperor's Aggression targets every cube on the map and names no clan", () => {
+    const state = setFactions(baseState(5), ["takeda", null, "uesugi", "oda", "mori"]);
+    setBoard(state, ["tu.", "..", "m.", ".", "...", "..", "...", ".", "...", "o.."]);
+    expect(aggressionActions(state, 1)).toEqual([
+      { type: "aggression", region: 0, square: 0 },
+      { type: "aggression", region: 0, square: 1 },
+      { type: "aggression", region: 2, square: 0 },
+      { type: "aggression", region: 9, square: 0 },
+    ]);
+    // A clan seat still spares its own cubes.
+    expect(
+      aggressionActions(state, 0).some(
+        (a) => a.type === "aggression" && a.region === 0 && a.square === 0,
+      ),
+    ).toBe(false);
   });
 
   it("a region touched by another seat is locked; the toucher may revisit it", () => {
@@ -195,7 +225,7 @@ describe("reward enumerators", () => {
     state.affected = [{ region: 1, by: 1 }];
     expect(balanceMoveActions(state, "takeda", 0)).toEqual([]);
     expect(determinationActions(state, "takeda", 0).some((a) => a.region === 1)).toBe(false);
-    expect(aggressionActions(state, "takeda", 0)).toEqual([]);
+    expect(aggressionActions(state, 0)).toEqual([]);
     expect(determinationActions(state, "uesugi", 1).some((a) => a.region === 1)).toBe(true);
   });
 });
@@ -227,13 +257,19 @@ describe("getLegalActions", () => {
     expect(types).toEqual(new Set(["determination", "aggression", "pass"]));
   });
 
-  it("the Emperor enumerates every seated clan with an explicit `as`; clan seats carry no `as` key", () => {
+  it("the Emperor moves and places as every seated clan (`as`) but strikes as nobody; clan seats carry no `as` key", () => {
     const state = setFactions(baseState(5), ["takeda", null, "uesugi", "oda", "mori"]);
     rewardsFor(state, 1, 5);
     const actions = getLegalActions(state).filter((a) => a.type !== "pass");
-    expect(actions.length).toBeGreaterThan(0);
-    const asClans = new Set(actions.map((a) => ("as" in a ? a.as : undefined)));
-    expect(asClans).toEqual(new Set(["takeda", "uesugi", "oda", "mori"]));
+    const cubeMoves = actions.filter((a) => a.type !== "aggression");
+    const strikes = actions.filter((a) => a.type === "aggression");
+    expect(cubeMoves.length).toBeGreaterThan(0);
+    expect(new Set(cubeMoves.map((a) => ("as" in a ? a.as : undefined)))).toEqual(
+      new Set(["takeda", "uesugi", "oda", "mori"]),
+    );
+    // One strike per cube on the setup map, none tagged with a clan.
+    expect(strikes).toHaveLength(state.board.flat().filter((c) => c !== null).length);
+    for (const a of strikes) expect("as" in a).toBe(false);
 
     rewardsFor(state, 0, 5);
     for (const a of getLegalActions(state)) expect("as" in a).toBe(false);

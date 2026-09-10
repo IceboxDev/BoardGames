@@ -78,7 +78,7 @@ describe("sensoMachine — all-AI games", () => {
     actor.stop();
   }, 30_000);
 
-  it("plays a 5-player game with an Emperor seat whose rewards name a clan", async () => {
+  it("plays a 5-player game with an Emperor seat that moves as a clan and strikes as nobody", async () => {
     const actor = start(["heuristic-v1", "aggressive", "random", "random", "heuristic-v1"], 8);
     await runToEnd(actor);
     const snapshot = actor.getSnapshot();
@@ -86,7 +86,11 @@ describe("sensoMachine — all-AI games", () => {
     const gs = snapshot.context.gameState;
     expect(gs.emperorSeat).not.toBeNull();
     const emperorRewards = gs.log.filter((e) => e.kind === "reward" && e.player === gs.emperorSeat);
-    for (const e of emperorRewards) if (e.kind === "reward") expect(e.action.as).toBeDefined();
+    for (const e of emperorRewards) {
+      if (e.kind !== "reward") continue;
+      if (e.action.type === "aggression") expect(e.action.as).toBeUndefined();
+      else expect(e.action.as).toBeDefined();
+    }
     expect(sensoSpec.getResult(snapshot)?.scores).toHaveLength(5);
     actor.stop();
   }, 30_000);

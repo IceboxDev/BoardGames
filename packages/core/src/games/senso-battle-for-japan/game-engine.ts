@@ -279,13 +279,65 @@ function applyReward(state: GameState, action: RewardAction): void {
   if (!slot) throw new Error("No reward slot");
   const seat = slot.player;
   const player = state.players[seat];
-  const clan = action.as ?? player.clan;
-  if (clan === null) throw new Error("The Emperor must name the clan it acts as");
   if (player.clan !== null && action.as !== undefined) {
     throw new Error("Only the Emperor may act as another clan");
   }
+  const acting = action.as ?? player.clan;
 
   const effects: CubeEffect[] = [];
+  if (action.type === "aggression") {
+    applyAggression(state, action, acting, effects);
+  } else {
+    if (acting === null) throw new Error("The Emperor must name the clan it acts as");
+    applyCubeReward(state, action, acting, effects);
+  }
+
+  for (const region of affectedRegionsOf(action)) state.affected.push({ region, by: seat });
+  pushLog(state, {
+    kind: "reward",
+    round: state.round,
+    player: seat,
+    tier: slot.tier,
+    action,
+    effects,
+  });
+
+  slot.used.push(rewardKindOf(action));
+  if (slot.picksLeft === 2) slot.picksLeft = 1;
+  else state.rewardQueue.shift();
+  if (state.rewardQueue.length === 0) endRewardsPhase(state);
+}
+
+/**
+ * "The player removes 1 Faction cube of any opponent's colour from a Region
+ * square and replaces it with 1 of their own. N.B: If the player does not have
+ * a Faction cube to place after removing their opponent's cube, all Faction
+ * cubes within that Region move upwards to fill the gap created." The Emperor
+ * never has a cube of its own to place, so its strike always closes the gap.
+ */
+function applyAggression(
+  state: GameState,
+  action: Extract<RewardAction, { type: "aggression" }>,
+  acting: Clan | null,
+  effects: CubeEffect[],
+): void {
+  if (acting !== null && state.supply[acting] > 0) {
+    const victim = replaceCube(state, action.region, action.square, acting);
+    effects.push({ kind: "removed", clan: victim, region: action.region, square: action.square });
+    effects.push({ kind: "placed", clan: acting, region: action.region, square: action.square });
+  } else {
+    const victim = removeCube(state, action.region, action.square);
+    effects.push({ kind: "removed", clan: victim, region: action.region, square: action.square });
+  }
+}
+
+/** Balance and Determination: move or place a cube of `clan` (the Emperor's `as`). */
+function applyCubeReward(
+  state: GameState,
+  action: Exclude<RewardAction, { type: "aggression" }>,
+  clan: Clan,
+  effects: CubeEffect[],
+): void {
   const { board } = state;
   switch (action.type) {
     case "balance-swap": {
@@ -337,45 +389,7 @@ function applyReward(state: GameState, action: RewardAction): void {
       effects.push({ kind: "placed", clan, region: action.region, square });
       break;
     }
-    case "aggression": {
-      if (state.supply[clan] > 0) {
-        const victim = replaceCube(state, action.region, action.square, clan);
-        effects.push({
-          kind: "removed",
-          clan: victim,
-          region: action.region,
-          square: action.square,
-        });
-        effects.push({ kind: "placed", clan, region: action.region, square: action.square });
-      } else {
-        // "If the player does not have a Faction cube to place ... all Faction
-        // cubes within that Region move upwards to fill the gap created."
-        const victim = removeCube(state, action.region, action.square);
-        effects.push({
-          kind: "removed",
-          clan: victim,
-          region: action.region,
-          square: action.square,
-        });
-      }
-      break;
-    }
   }
-
-  for (const region of affectedRegionsOf(action)) state.affected.push({ region, by: seat });
-  pushLog(state, {
-    kind: "reward",
-    round: state.round,
-    player: seat,
-    tier: slot.tier,
-    action,
-    effects,
-  });
-
-  slot.used.push(rewardKindOf(action));
-  if (slot.picksLeft === 2) slot.picksLeft = 1;
-  else state.rewardQueue.shift();
-  if (state.rewardQueue.length === 0) endRewardsPhase(state);
 }
 
 function applyRewardPass(state: GameState): void {

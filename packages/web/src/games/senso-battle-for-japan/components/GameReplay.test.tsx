@@ -60,6 +60,17 @@ describe("Sensō GameReplay", () => {
     expect(screen.getByText("Round 1 · cards dealt")).toBeInTheDocument();
   });
 
+  it("explains a game whose recorded moves the current rules no longer allow", () => {
+    const replay = recordedGame();
+    // An Emperor strike tagged with a clan: legal when it was recorded, not any more.
+    const log = replay.log.map((e) =>
+      e.kind === "reward" ? { ...e, action: { ...e.action, as: "oda" as const } } : e,
+    );
+    render(<GameReplay game={{ ...replay, log }} />);
+    expect(screen.getByText(/recorded under an earlier ruleset/)).toBeInTheDocument();
+    expect(screen.queryByRole("slider")).toBeNull();
+  });
+
   it("refuses a payload that is not a Sensō replay", () => {
     render(<GameReplay game={{ nope: true }} />);
     expect(screen.getByText("This replay cannot be shown.")).toBeInTheDocument();

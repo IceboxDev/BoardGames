@@ -128,16 +128,26 @@ export function affectedRegionsOf(action: RewardAction): number[] {
   }
 }
 
-/** A cube that is not `clan`'s. Neutral (unseated) cubes count as opponents by ruling. */
+/**
+ * A cube that `owner` may push out or strike: any cube that is not its own.
+ * Neutral (unseated) cubes count as opponents by ruling. The Emperor (`owner`
+ * null) owns no cubes, so to it EVERY cube is an opponent's — including the
+ * colour it happens to be controlling for a Balance.
+ */
 export function isOpponentCube(
   state: GameState,
-  clan: Clan,
+  owner: Clan | null,
   cube: Clan | null | undefined,
 ): cube is Clan {
   if (cube === null || cube === undefined) return false;
-  if (cube === clan) return false;
+  if (cube === owner) return false;
   if (!RULINGS.neutralCubesAreOpponents && !state.seatedClans.includes(cube)) return false;
   return true;
+}
+
+/** The seat's own clan — `null` for the Emperor. */
+function ownerOf(state: GameState, seat: number): Clan | null {
+  return state.players[seat]?.clan ?? null;
 }
 
 // ---------------------------------------------------------------------------
@@ -148,6 +158,7 @@ function withAs<T extends RewardAction>(action: T, as: Clan | undefined): T {
   return as === undefined ? action : { ...action, as };
 }
 
+/** Swap up: the cube above must be another colour than the one climbing (a like-for-like swap changes nothing). */
 export function balanceSwapActions(
   state: GameState,
   clan: Clan,
@@ -191,6 +202,11 @@ export function canBalanceReplaceFrom(state: GameState, region: number): boolean
   return REGIONS[region].adjacent.every((to) => isFull(state.board[to]));
 }
 
+/**
+ * Push out: the victim is judged against the SEAT's own clan, so the Emperor
+ * moving a Takeda cube may push out a Takeda cube — to the Emperor that is an
+ * opponent's Faction cube like any other.
+ */
 export function balanceReplaceActions(
   state: GameState,
   clan: Clan,
@@ -198,6 +214,7 @@ export function balanceReplaceActions(
   as?: Clan,
 ): RewardAction[] {
   const out: RewardAction[] = [];
+  const owner = ownerOf(state, seat);
   state.board.forEach((squares, region) => {
     if (!canBalanceReplaceFrom(state, region)) return;
     squares.forEach((cube, square) => {
@@ -205,7 +222,7 @@ export function balanceReplaceActions(
       for (const to of REGIONS[region].adjacent) {
         if (isLocked(state, to, seat)) continue;
         const last = lowestOccupied(state.board[to]);
-        if (last === -1 || !isOpponentCube(state, clan, state.board[to][last])) continue;
+        if (last === -1 || !isOpponentCube(state, owner, state.board[to][last])) continue;
         out.push(withAs({ type: "balance-replace", region, square, to }, as));
       }
     });
@@ -229,27 +246,27 @@ export function determinationActions(
   return out;
 }
 
-export function aggressionActions(
-  state: GameState,
-  clan: Clan,
-  seat: number,
-  as?: Clan,
-): RewardAction[] {
+/**
+ * Strike: every opponent cube in an unlocked region. Aggression never carries
+ * `as` — the Emperor strikes as nobody (it has no cube to put down, so the
+ * engine closes the gap), and to it every cube on the map is a target.
+ */
+export function aggressionActions(state: GameState, seat: number): RewardAction[] {
   const out: RewardAction[] = [];
+  const owner = ownerOf(state, seat);
   state.board.forEach((squares, region) => {
     if (isLocked(state, region, seat)) return;
     squares.forEach((cube, square) => {
-      if (isOpponentCube(state, clan, cube)) {
-        out.push(withAs({ type: "aggression", region, square }, as));
-      }
+      if (isOpponentCube(state, owner, cube)) out.push({ type: "aggression", region, square });
     });
   });
   return out;
 }
 
-function actionsOfKind(
+/** Balance and Determination move or place a cube of `clan` (`as` = the Emperor controlling it). */
+function cubeActionsOfKind(
   state: GameState,
-  kind: RewardKind,
+  kind: Exclude<RewardKind, "aggression">,
   clan: Clan,
   seat: number,
   as?: Clan,
@@ -263,8 +280,6 @@ function actionsOfKind(
       ];
     case "determination":
       return determinationActions(state, clan, seat, as);
-    case "aggression":
-      return aggressionActions(state, clan, seat, as);
   }
 }
 
@@ -272,15 +287,18 @@ function actionsOfKind(
 export function rewardActionsForSlot(state: GameState, slot: RewardSlot): RewardAction[] {
   const player = state.players[slot.player];
   if (!player) return [];
-  // The Emperor "can control any Faction cube": it acts AS a seated clan.
-  const acting: { clan: Clan; as?: Clan }[] =
-    player.clan === null
-      ? state.seatedClans.map((clan) => ({ clan, as: clan }))
-      : [{ clan: player.clan }];
   const out: RewardAction[] = [];
   for (const kind of kindsAvailable(slot)) {
-    for (const { clan, as } of acting)
-      out.push(...actionsOfKind(state, kind, clan, slot.player, as));
+    if (kind === "aggression") {
+      out.push(...aggressionActions(state, slot.player));
+    } else if (player.clan === null) {
+      // The Emperor "can control any Faction cube": it moves or places AS a seated clan.
+      for (const clan of state.seatedClans) {
+        out.push(...cubeActionsOfKind(state, kind, clan, slot.player, clan));
+      }
+    } else {
+      out.push(...cubeActionsOfKind(state, kind, player.clan, slot.player));
+    }
   }
   return out;
 }

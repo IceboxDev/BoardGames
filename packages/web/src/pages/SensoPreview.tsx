@@ -20,7 +20,7 @@ import type { PickerState } from "../games/senso-battle-for-japan/logic/reward-p
 // deterministic mid-game state driven through the actual core engine and AI,
 // no auth / WS. Exists so laptop + phone layouts can be captured headlessly
 // (the DecryptoPreview pattern): /dev/senso-preview?scene=<name>&frame=WxH
-// Scenes: trick | settle | rewards | rewards-balance | rewards-emperor |
+// Scenes: trick | settle | rewards | rewards-balance | rewards-emperor | rewards-emperor-clan |
 //         rewards-spectate | bonus | gameover | replay (advances one reward
 //         every 700 ms — exercises cube animation; the engine board is printed)
 
@@ -90,6 +90,13 @@ const SCENES: Record<string, () => Scene> = {
       emperorGame(),
       (s) => s.phase === "rewards" && s.rewardQueue[0]?.player === 0,
     ),
+  }),
+  "rewards-emperor-clan": () => ({
+    state: driveUntil(
+      emperorGame(),
+      (s) => s.phase === "rewards" && s.rewardQueue[0]?.player === 0,
+    ),
+    picker: { step: "clan", kind: "balance" },
   }),
   "rewards-spectate": () => ({
     state: driveUntil(
