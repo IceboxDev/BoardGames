@@ -34,18 +34,37 @@ const VoteRowSchema = z.object({
 });
 export type VoteRow = z.infer<typeof VoteRowSchema>;
 
+// `result_seen_at` (0036) is dormant: the winner reveal it made one-shot is
+// gone — arrivals (lib/arrivals.ts) carry the celebration now.
 const SeenRowSchema = z.object({
   first_seen_at: z.string().nullable(),
-  result_seen_at: z.string().nullable(),
 });
 export type SeenRow = z.infer<typeof SeenRowSchema>;
 
-/** The most recent poll, open or closed — the only one any surface shows. */
+/** The most recent poll, open or closed — the only one the vote surfaces show. */
 export async function latestPoll(): Promise<PollRow | null> {
   const { rows } = await getDb().execute(
     `SELECT ${POLL_COLUMNS} FROM purchase_polls ORDER BY id DESC LIMIT 1`,
   );
   return rows.length > 0 ? parseRow(PollRowSchema, rows[0], "purchase_polls.latest") : null;
+}
+
+export async function pollById(id: number): Promise<PollRow | null> {
+  const { rows } = await getDb().execute({
+    sql: `SELECT ${POLL_COLUMNS} FROM purchase_polls WHERE id = ? LIMIT 1`,
+    args: [id],
+  });
+  return rows.length > 0 ? parseRow(PollRowSchema, rows[0], "purchase_polls.by-id") : null;
+}
+
+/** Sealed polls, newest first — what an arrival can be announced from. */
+export async function closedPolls(limit: number): Promise<PollRow[]> {
+  const { rows } = await getDb().execute({
+    sql: `SELECT ${POLL_COLUMNS} FROM purchase_polls
+           WHERE closed_at IS NOT NULL ORDER BY id DESC LIMIT ?`,
+    args: [limit],
+  });
+  return parseRows(PollRowSchema, rows, "purchase_polls.closed");
 }
 
 /** All votes on a poll, oldest first. `rowid` breaks ties — `datetime('now')`
@@ -102,25 +121,22 @@ export async function closePoll(poll: PollRow): Promise<boolean> {
 
 export async function pollSeen(pollId: number, userId: string): Promise<SeenRow> {
   const { rows } = await getDb().execute({
-    sql: "SELECT first_seen_at, result_seen_at FROM purchase_poll_seen WHERE poll_id = ? AND user_id = ? LIMIT 1",
+    sql: "SELECT first_seen_at FROM purchase_poll_seen WHERE poll_id = ? AND user_id = ? LIMIT 1",
     args: [pollId, userId],
   });
   return rows.length > 0
     ? parseRow(SeenRowSchema, rows[0], "purchase_poll_seen")
-    : { first_seen_at: null, result_seen_at: null };
+    : { first_seen_at: null };
 }
 
-/** Idempotent first-write-wins timestamp, same shape as the skill-intro ack. */
-export async function markPollSeen(
-  pollId: number,
-  userId: string,
-  field: "first_seen_at" | "result_seen_at",
-): Promise<void> {
+/** Idempotent first-write-wins timestamp, same shape as the skill-intro ack:
+ * the announce card has been seen, so from here on it is the reminder. */
+export async function markPollSeen(pollId: number, userId: string): Promise<void> {
   await getDb().execute({
-    sql: `INSERT INTO purchase_poll_seen (poll_id, user_id, ${field})
+    sql: `INSERT INTO purchase_poll_seen (poll_id, user_id, first_seen_at)
           VALUES (?, ?, datetime('now'))
           ON CONFLICT(poll_id, user_id) DO UPDATE SET
-            ${field} = COALESCE(purchase_poll_seen.${field}, excluded.${field})`,
+            first_seen_at = COALESCE(purchase_poll_seen.first_seen_at, excluded.first_seen_at)`,
     args: [pollId, userId],
   });
 }

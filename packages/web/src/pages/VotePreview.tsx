@@ -4,15 +4,15 @@ import {
   PurchaseVoteReminderModal,
 } from "../components/purchase-vote/PurchaseVoteGreetingCards";
 import { PurchaseVoteModalView } from "../components/purchase-vote/PurchaseVoteModal";
-import { PurchaseVoteResultModal } from "../components/purchase-vote/PurchaseVoteResultModal";
 import { SegmentedControl } from "../components/ui/SegmentedControl";
 import { games } from "../games/registry";
 
 // Dev-only visual preview of every purchase-vote surface — the announce and
-// reminder greeting cards, the voting screen (with live local pick state),
-// the saved confirmation, and the winner reveal — with static data and no
-// auth/queries, so phone-size regressions can be reproduced headlessly at
-// any viewport. Mirrors RsvpPreview (incl. the ?frame=WxH iframe trick).
+// reminder greeting cards, the voting screen (with live local pick state) and
+// the saved confirmation — with static data and no auth/queries, so
+// phone-size regressions can be reproduced headlessly at any viewport.
+// Mirrors RsvpPreview (incl. the ?frame=WxH iframe trick). The arrivals
+// takeover that follows a closed vote has its own page: /dev/arrival-preview.
 // Route: /dev/vote-preview.
 
 const CANDIDATE_SLUGS = [
@@ -28,20 +28,7 @@ const CANDIDATE_SLUGS = [
   "spirit-island",
 ];
 
-const RESULT_TALLY = [
-  { slug: "wingspan", votes: 6 },
-  { slug: "arcs", votes: 5 },
-  { slug: "spirit-island", votes: 4 },
-  { slug: "dune-imperium-uprising", votes: 3 },
-  { slug: "bomb-busters", votes: 2 },
-  { slug: "heat-pedal-to-the-metal", votes: 1 },
-  { slug: "hegemony-lead-your-class-to-victory", votes: 0 },
-  { slug: "container", votes: 0 },
-  { slug: "vantage", votes: 0 },
-  { slug: "concordia-special-edition", votes: 0 },
-];
-
-const VIEWS = ["announce", "reminder", "voting", "saved", "reveal"] as const;
+const VIEWS = ["announce", "reminder", "voting", "saved"] as const;
 type View = (typeof VIEWS)[number];
 
 export default function VotePreview() {
@@ -85,7 +72,6 @@ export default function VotePreview() {
             { value: "reminder", label: "Reminder" },
             { value: "voting", label: "Voting" },
             { value: "saved", label: "Saved" },
-            { value: "reveal", label: "Reveal" },
           ]}
         />
       </div>
@@ -133,14 +119,6 @@ export default function VotePreview() {
           }
           onSubmit={noop}
           onClose={noop}
-        />
-      )}
-      {view === "reveal" && (
-        <PurchaseVoteResultModal
-          winnerSlug="wingspan"
-          tally={RESULT_TALLY}
-          onDismiss={noop}
-          onCta={noop}
         />
       )}
     </>

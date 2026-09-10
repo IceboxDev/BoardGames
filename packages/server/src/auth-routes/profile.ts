@@ -47,6 +47,7 @@ import {
   todayDateKey,
 } from "../lib/next-night.ts";
 import { countNightsAttended } from "../lib/nights-attended.ts";
+import { safeAccent } from "../lib/user-refs.ts";
 import { fetchNameMap, MatchResultRowSchema, rowToMatchRecord } from "./match-history.ts";
 
 export const profileRoutes = authedApp();
@@ -135,11 +136,6 @@ function toIso(value: string | null): string {
 function clampLimit(raw: string | undefined): number {
   const n = Number.parseInt(raw ?? "", 10);
   return Number.isFinite(n) && n > 0 ? Math.min(n, MAX_MATCH_LIMIT) : DEFAULT_MATCH_LIMIT;
-}
-
-/** `accent_hex` is validated on write; coerce anything unexpected to null. */
-function safeAccent(value: string | null): string | null {
-  return value && /^#[0-9a-fA-F]{6}$/.test(value) ? value : null;
 }
 
 function readEditableRow(row: z.infer<typeof ProfileRowSchema>): {

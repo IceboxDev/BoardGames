@@ -1,11 +1,13 @@
 import type { ActivityEntry } from "@boardgames/core/protocol";
 
-/** Greeting kind → the page its call-to-action opens (and how to say it). */
-const CTA_DESTINATION: Record<string, { page: string; label: string }> = {
-  "purchase-vote-announce": { page: "purchase-vote", label: "the vote screen" },
-  "purchase-vote-reminder": { page: "purchase-vote", label: "the vote screen" },
-  "purchase-vote-result": { page: "games", label: "the games catalog" },
-  spotlight: { page: "profile-skill", label: "their skill page" },
+/** Greeting kind → the page(s) its call-to-action can open, and how to say it.
+ * A kind lists several pages when its button lands on different screens for
+ * different viewers (the arrival CTA opens a collection, or the catalog). */
+const CTA_DESTINATION: Record<string, { pages: readonly string[]; label: string }> = {
+  "purchase-vote-announce": { pages: ["purchase-vote"], label: "the vote screen" },
+  "purchase-vote-reminder": { pages: ["purchase-vote"], label: "the vote screen" },
+  arrival: { pages: ["profile-collection", "games"], label: "the collection" },
+  spotlight: { pages: ["profile-skill"], label: "their skill page" },
 };
 
 /** Where a greeting's button leads, in words; undefined for kinds without a destination. */
@@ -41,7 +43,8 @@ export function collapseEntries(entries: ActivityEntry[]): ActivityEntry[] {
         near &&
         !drop.has(near.id) &&
         near.type === "page-view" &&
-        near.meta.page === destination.page &&
+        typeof near.meta.page === "string" &&
+        destination.pages.includes(near.meta.page) &&
         Math.abs(stamp(near) - stamp(entry)) <= PAIR_WINDOW_MS
       ) {
         drop.add(near.id);

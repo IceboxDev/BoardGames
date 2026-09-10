@@ -17,7 +17,7 @@ import { extendTailwindMerge } from "tailwind-merge";
 //   - shadow:         shadow-glow-*
 //   - z-index:        z-nav / z-overlay / z-modal / z-tooltip / z-takeover / z-raised(-2/-3)
 //   - rounded:        rounded-card-* / rounded-ui-*   (index.css radius roles)
-//   - aspect:         aspect-card
+//   - aspect:         aspect-card, aspect-photo
 //   - width/height:   the layout constants (w-board-rail, h-fan, …)
 //   - max-width:      max-w-modal-full*
 //
@@ -48,7 +48,7 @@ const twMerge = extendTailwindMerge({
         { rounded: ["card-md", "card-lg", "card-xl", "card-2xl", "card-3xl", "ui-md", "ui-lg"] },
       ],
       "rounded-t": [{ "rounded-t": ["card-3xl"] }],
-      aspect: [{ aspect: ["card"] }],
+      aspect: [{ aspect: ["card", "photo"] }],
       w: [{ w: ["board-rail", "history-rail"] }],
       h: [{ h: ["nav", "fan"] }],
       "min-h": [{ "min-h": ["below-nav"] }],

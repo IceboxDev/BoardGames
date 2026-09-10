@@ -34,6 +34,28 @@ export const ActivityLogResponseSchema = z.object({
 });
 export type ActivityLogResponse = z.infer<typeof ActivityLogResponseSchema>;
 
+// ── Unseen activity (admin users-table bubble) ─────────────────────────
+//
+// Each admin keeps their own "seen up to id N" marker per member, so the
+// bubble next to a name answers "what happened since I last looked" for
+// THIS admin — two admins looking at different times see different counts.
+
+// `GET /api/admin/users/unseen-activity` — activity rows newer than the
+// calling admin's marker, per member id. Members with nothing new are
+// absent (read as 0); a member this admin has never opened counts every row.
+export const UnseenActivityResponseSchema = z.object({
+  counts: z.record(z.string(), z.number().int().nonnegative()),
+});
+export type UnseenActivityResponse = z.infer<typeof UnseenActivityResponseSchema>;
+
+// `POST /api/admin/users/:userId/activity/seen` — the newest entry id the
+// admin has just been shown. The server keeps the marker monotonic, so a
+// stale tab can never move it backwards.
+export const ActivitySeenBodySchema = z.object({
+  lastSeenId: z.number().int().positive(),
+});
+export type ActivitySeenBody = z.input<typeof ActivitySeenBodySchema>;
+
 // `POST /api/activity/view` — client-side page-view beacon. `page` is a
 // client-owned vocabulary ("calendar", "night", "games", "players", "play",
 // …); `detail` optionally narrows it (a date key for "night", a game slug

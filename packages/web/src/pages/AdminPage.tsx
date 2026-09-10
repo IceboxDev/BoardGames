@@ -6,6 +6,7 @@ import {
   ActivityDrawer,
   type AdminUser,
   AnnouncementsCard,
+  ArrivalsCard,
   AvailabilityDrawer,
   coverageRatio,
   GuestPlayersCard,
@@ -28,9 +29,8 @@ import {
 } from "../components/ui";
 import { useAdminUsers } from "../hooks/useAdminUsers.ts";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
-import { adminGenerateResetLink, adminSetOnlineMode } from "../lib/admin";
+import { adminFetchUnseenActivity, adminGenerateResetLink, adminSetOnlineMode } from "../lib/admin";
 import { authClient } from "../lib/auth-client";
-import { adminFetchAnnouncements } from "../lib/collection.ts";
 import { errorMessageOf } from "../lib/error-message";
 import { adminFetchLastPlayed } from "../lib/match-history";
 import {
@@ -107,19 +107,14 @@ export default function AdminPage() {
     queryFn: ({ signal }) => adminFetchAllAvailability(signal),
   });
 
-  // Shared with AnnouncementsCard via the cache key; here it feeds the
-  // per-user pending badge in the users table.
-  const announcementsQuery = useQuery({
-    queryKey: qk.adminAnnouncements(),
-    queryFn: ({ signal }) => adminFetchAnnouncements(signal),
+  // What each member has done since THIS admin last opened their activity
+  // drawer — the bubble next to the name. The drawer moves the marker and
+  // invalidates this key, so the bubble clears as soon as the trail is read.
+  const unseenActivityQuery = useQuery({
+    queryKey: qk.adminUnseenActivity(),
+    queryFn: ({ signal }) => adminFetchUnseenActivity(signal),
   });
-  const pendingAnnouncementsByUser = useMemo(() => {
-    const counts = new Map<string, number>();
-    for (const a of announcementsQuery.data?.announcements ?? []) {
-      counts.set(a.userId, (counts.get(a.userId) ?? 0) + 1);
-    }
-    return counts;
-  }, [announcementsQuery.data]);
+  const unseenActivity: Record<string, number> = unseenActivityQuery.data?.counts ?? {};
 
   // Editable window = the 42-day grid the dashboard exposes, minus past days.
   const editableDateKeys = useMemo(() => {
@@ -262,7 +257,7 @@ export default function AdminPage() {
         user={u}
         coverage={coverage}
         zeroForDays={inactive ? zeroDays : undefined}
-        pendingAnnouncements={pendingAnnouncementsByUser.get(u.id) ?? 0}
+        unseenActivity={unseenActivity[u.id] ?? 0}
         expanded={expandedUserId === u.id}
         onToggleInventory={() => setExpandedUserId((prev) => (prev === u.id ? null : u.id))}
         onSetOnlineMode={(mode) => setOnlineModeMutation.mutate({ userId: u.id, mode })}
@@ -363,7 +358,12 @@ export default function AdminPage() {
           </>
         )}
 
-        {tab === "vote" && <PurchaseVoteCard />}
+        {tab === "vote" && (
+          <div className="space-y-6">
+            <PurchaseVoteCard />
+            <ArrivalsCard />
+          </div>
+        )}
         {tab === "pre-register" && <PreRegisterCard />}
         {tab === "skills" && <SkillRatingsCard />}
         {tab === "guests" && (

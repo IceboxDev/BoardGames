@@ -37,14 +37,37 @@ describe("AppGreetingSchema", () => {
     expect(r.success).toBe(false);
   });
 
-  it("parses a purchase-vote result greeting", () => {
+  it("parses an arrival greeting (union composition with arrivals.ts)", () => {
     const parsed = AppGreetingSchema.parse({
+      kind: "arrival",
+      arrivalId: "a1",
+      pollId: 1,
+      publishedAt: "2026-09-10 12:00:00",
+      games: [
+        {
+          slug: "wingspan",
+          purchaser: { id: "u1", name: "Mantas", image: null, accentHex: null },
+          votes: 5,
+          voters: [{ image: null, accentHex: "#d36830" }],
+          photoUrl: "/api/arrivals/a1/photos/wingspan",
+          placeholder: "data:image/webp;base64,UklGRiIAAABXRUJQVlA4",
+          width: 1280,
+          height: 1600,
+        },
+      ],
+      totals: { voterCount: 5, votesCast: 9 },
+    });
+    expect(parsed.kind).toBe("arrival");
+  });
+
+  it("no longer accepts the retired purchase-vote result kind", () => {
+    const r = AppGreetingSchema.safeParse({
       kind: "purchase-vote-result",
       pollId: 1,
       winnerSlug: "wingspan",
       tally: [{ slug: "wingspan", votes: 5 }],
     });
-    expect(parsed.kind).toBe("purchase-vote-result");
+    expect(r.success).toBe(false);
   });
 
   it("still parses the existing skill-intro kind (union composition)", () => {
@@ -73,7 +96,7 @@ describe("AppGreetingAckBodySchema", () => {
     for (const body of [
       { kind: "purchase-vote-announce", pollId: 2, action: "cta" },
       { kind: "purchase-vote-reminder", pollId: 2, action: "later" },
-      { kind: "purchase-vote-result", pollId: 2, action: "later" },
+      { kind: "arrival", arrivalId: "a1", action: "later" },
       { kind: "skill-intro", action: "cta" },
       { kind: "spotlight", id: 4, action: "later" },
     ]) {
@@ -85,6 +108,12 @@ describe("AppGreetingAckBodySchema", () => {
     const r = AppGreetingAckBodySchema.safeParse({ kind: "skill-intro" });
     expect(r.success).toBe(false);
     if (!r.success) expect(r.error.issues[0]?.path).toEqual(["action"]);
+  });
+
+  it("rejects an arrival ack without an arrival id", () => {
+    const r = AppGreetingAckBodySchema.safeParse({ kind: "arrival", action: "cta" });
+    expect(r.success).toBe(false);
+    if (!r.success) expect(r.error.issues[0]?.path).toEqual(["arrivalId"]);
   });
 
   it("rejects a vote ack without a poll id", () => {

@@ -131,6 +131,21 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       { value: "Armada", label: "Armada" },
     ],
   },
+  // Publish or Perish's three expansion packs (the group owns the All-in
+  // Bundle). Recorded like 7 Wonders: the base game is always in play, so it is
+  // pre-checked; expansions stay opt-in. Values are kept short because the
+  // joined scenario string is capped at 64 characters on the wire.
+  "publish-or-perish": {
+    label: "Edition",
+    mode: "multi",
+    default: "Base",
+    options: [
+      { value: "Base", label: "Base game" },
+      { value: "Reviewer 2", label: "The Revenge of Reviewer 2" },
+      { value: "Academic Sh*tpost", label: "Academic Sh*tpost" },
+      { value: "Midterm Grading", label: "Midterm Grading Extravaganza" },
+    ],
+  },
   // Villainous: the two boxes are separate catalog games (different party
   // sizes), but the group mixes villains across them, so either slug records
   // WHICH boxes were on the table (multi-select, like Dungeon Mayhem's sets).
@@ -271,6 +286,11 @@ const VARIANTS: Record<string, GameVariantConfig> = {
     ],
   },
 };
+
+/** Every slug with a variant config — for invariant tests over the whole table. */
+export function variantSlugs(): string[] {
+  return Object.keys(VARIANTS);
+}
 
 export function variantConfigForSlug(slug: string | null): GameVariantConfig | null {
   if (!slug) return null;

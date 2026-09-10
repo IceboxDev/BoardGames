@@ -6,8 +6,9 @@ import "./select-styles.css";
 
 export { AiThinkingIndicator, WaitingIndicator } from "./AiThinkingIndicator";
 export { AuthCard } from "./AuthCard";
-export { Avatar, type AvatarSize } from "./Avatar";
+export { Avatar, type AvatarFallback, type AvatarSize } from "./Avatar";
 export { Badge, type BadgeTone } from "./Badge";
+export { BlurUpImage } from "./BlurUpImage";
 export { BoardOverlay } from "./BoardOverlay";
 export { Button, ButtonLink } from "./Button";
 export { Checkbox } from "./Checkbox";

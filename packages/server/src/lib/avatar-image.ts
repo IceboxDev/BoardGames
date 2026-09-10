@@ -2,6 +2,10 @@ import OpenAI, { type ClientOptions } from "openai";
 import sharp from "sharp";
 import { AiConfigError, generateGatewayAvatarImage, resolveModel } from "./ai";
 import { AI_SUSPENDED_MESSAGE, aiSuspended } from "./ai-suspend";
+import { dataUriToBuffer, toWebpDataUri } from "./data-uri.ts";
+
+// Re-exported for the callers that grew up importing the codec from here.
+export { dataUriToBuffer };
 
 // AI image generation + sharp processing for avatars.
 //
@@ -45,12 +49,6 @@ function getClient(): OpenAI {
   return new OpenAI({ apiKey, fetch: globalThis.fetch as unknown as ClientOptions["fetch"] });
 }
 
-export function dataUriToBuffer(dataUri: string): Buffer {
-  const comma = dataUri.indexOf(",");
-  if (comma === -1) throw new Error("malformed data URI");
-  return Buffer.from(dataUri.slice(comma + 1), "base64");
-}
-
 /** Downscale a reference photo to ≤1024px PNG (cheaper + within model limits). */
 export async function prepareReference(dataUri: string): Promise<Buffer> {
   return sharp(dataUriToBuffer(dataUri))
@@ -66,7 +64,7 @@ export async function toAvatarDataUri(input: Buffer): Promise<string> {
     .resize(AVATAR_SIZE, AVATAR_SIZE, { fit: "cover" })
     .webp({ quality: 82 })
     .toBuffer();
-  return `data:image/webp;base64,${webp.toString("base64")}`;
+  return toWebpDataUri(webp);
 }
 
 /** Generate the avatar image bytes on whichever path AI_MODEL_AVATAR selects. */

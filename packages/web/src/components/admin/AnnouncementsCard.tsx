@@ -15,9 +15,13 @@ import { useConfirm } from "../ui/useConfirm.tsx";
 import { AdminSection } from "./AdminSection.tsx";
 
 // Pending ownership announcements — the admin side of "Announce a game".
-// Approve stamps the (possibly re-mapped) slug onto the announcer's
-// inventory; approve-custom turns a free-text name into a custom collection
-// item; dismiss just closes it. Lives at the top of the Users tab (it's a
+// An announcement that names a catalog game approves in ONE click from the
+// row: the announcer already picked the game, so the admin only confirms it.
+// The picker modal is reserved for the two cases where the admin has to
+// choose: a free-text announcement ("Approve" must map the words to a slug)
+// and the rare mismatch on a named game ("Change" re-maps before stamping).
+// Approve-custom turns a free-text name into a custom collection item;
+// dismiss just closes it. Lives at the top of the Users tab (it's a
 // per-user queue) and only exists while something is pending.
 
 function announcedTitle(a: Announcement): string {
@@ -28,8 +32,8 @@ function announcedTitle(a: Announcement): string {
 export function AnnouncementsCard() {
   const queryClient = useQueryClient();
   const { confirm, confirmDialog } = useConfirm();
-  /** Announcement currently in the approve-with-picker flow. */
-  const [approving, setApproving] = useState<Announcement | null>(null);
+  /** Announcement open in the picker modal (free-text approve, or "Change"). */
+  const [picking, setPicking] = useState<Announcement | null>(null);
   const [pickedSlug, setPickedSlug] = useState<string | null>(null);
 
   const query = useQuery({
@@ -50,10 +54,25 @@ export function AnnouncementsCard() {
         void queryClient.invalidateQueries({ queryKey: qk.profile(a.userId) });
         void queryClient.invalidateQueries({ queryKey: qk.players() });
       }
-      setApproving(null);
-      setPickedSlug(null);
+      closePicker();
     },
   });
+
+  // Only the button that fired the in-flight resolve spins; the queue holds
+  // several announcements and a shared `isPending` lit every row at once.
+  const busy = (a: Announcement, action: ResolveAnnouncementBody["action"]) =>
+    resolveMutation.isPending &&
+    resolveMutation.variables?.a.id === a.id &&
+    resolveMutation.variables.body.action === action;
+
+  function openPicker(a: Announcement) {
+    setPicking(a);
+    setPickedSlug(a.slug);
+  }
+  function closePicker() {
+    setPicking(null);
+    setPickedSlug(null);
+  }
 
   const announcements = query.data?.announcements ?? [];
   const error =
@@ -71,78 +90,91 @@ export function AnnouncementsCard() {
       <AdminSection tone="amber" eyebrow="Ownership announcements" summary={summary}>
         {error && <ErrorAlert message={error} />}
         <ul className="space-y-2">
-          {announcements.map((a) => (
-            <Surface
-              as="li"
-              key={a.id}
-              variant="tile"
-              padding="none"
-              className="flex flex-wrap items-center gap-2 px-3 py-2"
-            >
-              <span className="min-w-0 flex-1 text-sm">
-                <span className="font-semibold text-fg-primary">{a.userName ?? a.userId}</span>
-                <span className="text-fg-secondary"> announced acquiring </span>
-                <span className="font-semibold text-fg-primary">{announcedTitle(a)}</span>
-                {a.note && <span className="block text-2xs text-fg-muted">{a.note}</span>}
-                <span className="block text-3xs text-fg-muted">
-                  {formatRelativeTime(a.createdAt)}
+          {announcements.map((a) => {
+            // Bound to a const so the narrowing survives into the click handler.
+            const slug = a.slug;
+            return (
+              <Surface
+                as="li"
+                key={a.id}
+                variant="tile"
+                padding="none"
+                className="flex flex-wrap items-center gap-2 px-3 py-2"
+              >
+                <span className="min-w-0 flex-1 text-sm">
+                  <span className="font-semibold text-fg-primary">{a.userName ?? a.userId}</span>
+                  <span className="text-fg-secondary"> announced acquiring </span>
+                  <span className="font-semibold text-fg-primary">{announcedTitle(a)}</span>
+                  {a.note && <span className="block text-2xs text-fg-muted">{a.note}</span>}
+                  <span className="block text-3xs text-fg-muted">
+                    {formatRelativeTime(a.createdAt)}
+                  </span>
                 </span>
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Button
-                  variant="primary"
-                  size="xs"
-                  onClick={() => {
-                    setApproving(a);
-                    setPickedSlug(a.slug);
-                  }}
-                >
-                  Approve
-                </Button>
-                {a.freeTextName !== null && (
+                <span className="flex items-center gap-1.5">
+                  {slug !== null ? (
+                    <>
+                      <Button
+                        variant="primary"
+                        size="xs"
+                        loading={busy(a, "approve")}
+                        onClick={() =>
+                          resolveMutation.mutate({ a, body: { action: "approve", slug } })
+                        }
+                      >
+                        Approve
+                      </Button>
+                      <Button variant="ghost" size="xs" onClick={() => openPicker(a)}>
+                        Change
+                      </Button>
+                    </>
+                  ) : (
+                    <>
+                      <Button variant="primary" size="xs" onClick={() => openPicker(a)}>
+                        Approve
+                      </Button>
+                      <Button
+                        variant="secondary"
+                        size="xs"
+                        loading={busy(a, "approve-custom")}
+                        onClick={() =>
+                          resolveMutation.mutate({ a, body: { action: "approve-custom" } })
+                        }
+                      >
+                        As custom
+                      </Button>
+                    </>
+                  )}
                   <Button
-                    variant="secondary"
+                    variant="ghost"
                     size="xs"
-                    loading={resolveMutation.isPending}
-                    onClick={() =>
-                      resolveMutation.mutate({ a, body: { action: "approve-custom" } })
-                    }
+                    loading={busy(a, "dismiss")}
+                    onClick={async () => {
+                      const ok = await confirm({
+                        title: "Dismiss this announcement?",
+                        description: `${announcedTitle(a)} will not be added to ${a.userName ?? "the user"}'s collection.`,
+                        confirmLabel: "Dismiss",
+                      });
+                      if (ok) resolveMutation.mutate({ a, body: { action: "dismiss" } });
+                    }}
                   >
-                    As custom
+                    Dismiss
                   </Button>
-                )}
-                <Button
-                  variant="ghost"
-                  size="xs"
-                  onClick={async () => {
-                    const ok = await confirm({
-                      title: "Dismiss this announcement?",
-                      description: `${announcedTitle(a)} will not be added to ${a.userName ?? "the user"}'s collection.`,
-                      confirmLabel: "Dismiss",
-                    });
-                    if (ok) resolveMutation.mutate({ a, body: { action: "dismiss" } });
-                  }}
-                >
-                  Dismiss
-                </Button>
-              </span>
-            </Surface>
-          ))}
-          {announcements.length === 0 && !query.isPending && (
-            <li className="py-2 text-center text-xs text-fg-muted">Queue is empty.</li>
-          )}
+                </span>
+              </Surface>
+            );
+          })}
         </ul>
       </AdminSection>
 
-      {approving && (
+      {picking && (
         <Modal
-          onClose={() => setApproving(null)}
+          onClose={closePicker}
           eyebrow="Ownership announcements"
-          title={`Approve for ${approving.userName ?? "user"}`}
+          title={`Approve for ${picking.userName ?? "user"}`}
           subheader={
-            approving.freeTextName
-              ? `They wrote: “${approving.freeTextName}” — pick the matching game.`
-              : undefined
+            picking.freeTextName
+              ? `They wrote: “${picking.freeTextName}” — pick the matching game.`
+              : `They announced ${announcedTitle(picking)} — pick the game to stamp instead.`
           }
           size="md"
         >
@@ -150,17 +182,17 @@ export function AnnouncementsCard() {
             <GamePicker pickedSlug={pickedSlug} onPick={setPickedSlug} />
           </ModalBody>
           <ModalFooter>
-            <Button variant="ghost" onClick={() => setApproving(null)}>
+            <Button variant="ghost" onClick={closePicker}>
               Cancel
             </Button>
             <Button
               variant="primary"
               disabled={!pickedSlug}
-              loading={resolveMutation.isPending}
+              loading={busy(picking, "approve")}
               onClick={() =>
                 pickedSlug &&
                 resolveMutation.mutate({
-                  a: approving,
+                  a: picking,
                   body: { action: "approve", slug: pickedSlug },
                 })
               }

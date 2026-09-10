@@ -1,9 +1,11 @@
+import { MatchOutcomeSchema } from "@boardgames/core/protocol";
 import { describe, expect, it } from "vitest";
 import {
   defaultVariantValue,
   joinMultiVariant,
   parseMultiVariant,
   variantConfigForSlug,
+  variantSlugs,
 } from "./match-variants";
 
 describe("variantConfigForSlug", () => {
@@ -23,6 +25,44 @@ describe("variantConfigForSlug", () => {
     const config = variantConfigForSlug("7-wonders");
     expect(config?.mode).toBe("multi");
     expect(config?.options.length).toBeGreaterThanOrEqual(2);
+  });
+
+  // Publish or Perish: base game plus three expansion packs, recorded like
+  // 7 Wonders — the base is pre-checked, expansions are opt-in.
+  it("returns the Publish or Perish edition config (multi, Base pre-checked)", () => {
+    const config = variantConfigForSlug("publish-or-perish");
+    expect(config?.label).toBe("Edition");
+    expect(config?.mode).toBe("multi");
+    expect(config?.default).toBe("Base");
+    expect(config?.options.map((o) => o.value)).toEqual([
+      "Base",
+      "Reviewer 2",
+      "Academic Sh*tpost",
+      "Midterm Grading",
+    ]);
+  });
+
+  // The stored scenario is one string capped at 64 characters on the wire
+  // (`MatchOutcomeSchema`), so a multi-select must fit even when every option
+  // is ticked — otherwise the record modal would reject a full selection.
+  it("every multi-select's full selection fits the wire's scenario limit", () => {
+    for (const slug of variantSlugs()) {
+      const config = variantConfigForSlug(slug);
+      if (config?.mode !== "multi") continue;
+      const scenario = joinMultiVariant(
+        config.options.map((o) => o.value),
+        config.options,
+      );
+      const parsed = MatchOutcomeSchema.safeParse({
+        kind: "free-for-all",
+        players: [
+          { userId: "u1", displayName: "A", score: 1 },
+          { userId: "u2", displayName: "B", score: 0 },
+        ],
+        scenario,
+      });
+      expect(parsed.success, `${slug}: "${scenario}"`).toBe(true);
+    }
   });
 
   it("returns the Phase 10 ruleset config (single, five variants)", () => {
@@ -125,6 +165,7 @@ describe("defaultVariantValue", () => {
 
   it("multi-select games default only to a declared base, else undefined", () => {
     expect(defaultVariantValue("7-wonders")).toBe("Base");
+    expect(defaultVariantValue("publish-or-perish")).toBe("Base");
     expect(defaultVariantValue("dungeon-mayhem")).toBe("Standard");
     expect(defaultVariantValue("exploding-kittens")).toBeUndefined();
     expect(defaultVariantValue("not-enough-mana")).toBeUndefined();

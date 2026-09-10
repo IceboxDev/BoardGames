@@ -1,18 +1,21 @@
 import { z } from "zod";
-import { PurchaseTallyEntrySchema, VOTES_PER_PLAYER } from "./purchase-vote.ts";
+import { ArrivalGreetingSchema } from "./arrivals.ts";
+import { VOTES_PER_PLAYER } from "./purchase-vote.ts";
 import { GreetingSchema, SkillPlayerRefSchema } from "./skills.ts";
 
 // ── App-wide greeting queue: GET /api/greetings + POST /api/greetings/ack
 //
 // The generalization of the skill greeting queue (`skills.ts`): one
 // server-arbitrated popup for the whole app, so exactly one can be pending
-// and the client never has to arbitrate. The purchase-vote ladder outranks
+// and the client never has to arbitrate. The purchase ladder outranks
 // everything: a one-time ANNOUNCE card ("game purchase voting is live" — the
-// same treatment the skill-intro launch got), then a REMINDER card on every
-// later visit while the viewer still has votes to spend, then the one-time
-// winner reveal once the poll closes. The greetings are cards ABOUT the vote;
-// the voting screen itself is a separate modal they open — so casting a vote
-// can never unmount the surface the player is standing on.
+// same treatment the skill-intro launch got), then the one-time ARRIVAL
+// takeover once the bought games are physically here (arrivals.ts), then a
+// REMINDER card on every later visit while the viewer still has votes to
+// spend. A poll CLOSING is silent — the celebration waits for the boxes. The
+// greetings are cards ABOUT the vote; the voting screen itself is a separate
+// modal they open — so casting a vote can never unmount the surface the
+// player is standing on.
 
 export const PurchaseVoteAnnounceGreetingSchema = z.object({
   kind: z.literal("purchase-vote-announce"),
@@ -33,19 +36,11 @@ export const PurchaseVoteReminderGreetingSchema = z.object({
 });
 export type PurchaseVoteReminderGreeting = z.infer<typeof PurchaseVoteReminderGreetingSchema>;
 
-export const PurchaseVoteResultGreetingSchema = z.object({
-  kind: z.literal("purchase-vote-result"),
-  pollId: z.number().int().positive(),
-  winnerSlug: z.string().min(1),
-  tally: z.array(PurchaseTallyEntrySchema),
-});
-export type PurchaseVoteResultGreeting = z.infer<typeof PurchaseVoteResultGreetingSchema>;
-
 export const AppGreetingSchema = z.discriminatedUnion("kind", [
   ...GreetingSchema.options,
   PurchaseVoteAnnounceGreetingSchema,
   PurchaseVoteReminderGreetingSchema,
-  PurchaseVoteResultGreetingSchema,
+  ArrivalGreetingSchema,
 ]);
 export type AppGreeting = z.infer<typeof AppGreetingSchema>;
 
@@ -53,7 +48,7 @@ export const AppGreetingResponseSchema = z.object({
   /** Null when the viewer has nothing pending. */
   greeting: AppGreetingSchema.nullable(),
   /** Side-car name/image map for every userId the greeting references.
-   * Empty for the vote kinds. */
+   * Empty for the vote and arrival kinds. */
   players: z.record(z.string(), SkillPlayerRefSchema),
 });
 export type AppGreetingResponse = z.infer<typeof AppGreetingResponseSchema>;
@@ -77,7 +72,11 @@ export const AppGreetingAckBodySchema = z.discriminatedUnion("kind", [
   }),
   z.object({ kind: z.literal("purchase-vote-announce"), pollId, action: GreetingAckActionSchema }),
   z.object({ kind: z.literal("purchase-vote-reminder"), pollId, action: GreetingAckActionSchema }),
-  z.object({ kind: z.literal("purchase-vote-result"), pollId, action: GreetingAckActionSchema }),
+  z.object({
+    kind: z.literal("arrival"),
+    arrivalId: z.string().min(1),
+    action: GreetingAckActionSchema,
+  }),
 ]);
 export type AppGreetingAckBody = z.infer<typeof AppGreetingAckBodySchema>;
 

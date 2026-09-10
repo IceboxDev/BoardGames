@@ -41,9 +41,9 @@ const MatchOutcomeRowSchema = z.object({
 //      never overwritten) and its participant index resynced under the same
 //      guard;
 //   2. every user-keyed row a guest can hold is re-pointed at the target —
-//      RSVPs, game reactions, EXIT votes, availability, poll votes, hosted
-//      nights, spotlight subject — with the target's own explicit answer
-//      winning on conflict;
+//      RSVPs, game reactions, EXIT votes, availability, poll votes, arrival
+//      purchases and seen-marks, hosted nights, spotlight subject — with the
+//      target's own explicit answer winning on conflict;
 //   3. the guest id is substituted for the target's in every sealed guest
 //      list (`expected_user_ids_json` on nights and their tombstones), which
 //      have no FK and would otherwise dangle forever;
@@ -72,6 +72,8 @@ export const GUEST_MERGE_COVERAGE = {
     "user_availability_days.user_id",
     "purchase_poll_votes.user_id",
     "purchase_poll_seen.user_id",
+    "purchase_arrival_games.purchaser_user_id",
+    "purchase_arrival_seen.user_id",
     "locked_dates.host_user_id",
     "skill_greetings.subject_user_id",
     "match_participants.user_id",
@@ -85,12 +87,18 @@ export const GUEST_MERGE_COVERAGE = {
     "user_profiles.user_id",
     "activity_log.user_id",
     "user_devices.user_id",
+    // An admin's "seen up to here" marker on a trail; the guest's trail is
+    // dropped above, and a guest is never the admin holding one.
+    "admin_activity_seen.admin_id",
+    "admin_activity_seen.user_id",
     "collection_items.user_id",
     "storage_boxes.user_id",
     "sleeve_types.user_id",
     "collection_statuses.user_id",
     "ownership_announcements.user_id",
     "ownership_announcements.resolved_by",
+    // Only an admin publishes an arrival; SET NULL like resolved_by.
+    "purchase_arrivals.published_by",
     "dnd_campaigns.user_id",
     "dnd_parties.user_id",
     "dnd_files.user_id",
@@ -108,6 +116,7 @@ const MOVE_OR_IGNORE: readonly { table: string; columns: readonly string[] }[] =
   { table: "user_availability_days", columns: ["date_key", "status", "updated_at"] },
   { table: "purchase_poll_votes", columns: ["poll_id", "slug", "created_at"] },
   { table: "purchase_poll_seen", columns: ["poll_id", "first_seen_at", "result_seen_at"] },
+  { table: "purchase_arrival_seen", columns: ["arrival_id", "seen_at"] },
 ];
 
 /** Statements re-pointing every transferable row from `guestId` to `targetId`. */
@@ -136,6 +145,12 @@ function transferStatements(guestId: string, targetId: string): InStatement[] {
     },
     {
       sql: "UPDATE skill_greetings SET subject_user_id = ? WHERE subject_user_id = ?",
+      args: [targetId, guestId],
+    },
+    // A guest cannot be picked as a purchaser (the route refuses), but the
+    // merge stays defensive — exactly like poll votes a guest cannot cast.
+    {
+      sql: "UPDATE purchase_arrival_games SET purchaser_user_id = ? WHERE purchaser_user_id = ?",
       args: [targetId, guestId],
     },
   ];

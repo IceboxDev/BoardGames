@@ -1,14 +1,17 @@
 import {
   ActivityLogQuerySchema,
   ActivityLogResponseSchema,
+  ActivitySeenBodySchema,
   AdminDevicesResponseSchema,
   DeviceInfoSchema,
+  OkResponseSchema,
+  UnseenActivityResponseSchema,
 } from "@boardgames/core/protocol";
 import { z } from "zod";
 import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { parseRows } from "../lib/db-rows.ts";
-import { zQuery } from "../lib/error-response.ts";
+import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 
 export const adminActivityRoutes = adminApp();
 
@@ -91,4 +94,56 @@ adminActivityRoutes.get("/:id/devices", async (c) => {
     ];
   });
   return c.json(AdminDevicesResponseSchema.parse({ devices }));
+});
+
+// ── GET /api/admin/users/unseen-activity ──────────────────────────────
+//
+// Per-member count of activity rows newer than the calling admin's marker
+// (migration 0038) — the bubble next to each name in the users table. A
+// member this admin has never opened has no marker, so every row counts;
+// members with nothing new are simply absent from the map. A static segment,
+// so the `/:id/…` routes above can never shadow it.
+
+const UnseenRowSchema = z.object({ user_id: z.string(), n: z.number() });
+
+adminActivityRoutes.get("/unseen-activity", async (c) => {
+  const admin = c.get("user");
+  const { rows } = await getDb().execute({
+    sql: `SELECT a.user_id, COUNT(*) AS n
+          FROM activity_log a
+          LEFT JOIN admin_activity_seen s ON s.user_id = a.user_id AND s.admin_id = ?
+          WHERE a.id > COALESCE(s.last_seen_id, 0)
+          GROUP BY a.user_id`,
+    args: [admin.id],
+  });
+  const counts: Record<string, number> = {};
+  for (const r of parseRows(UnseenRowSchema, rows, "activity_log")) counts[r.user_id] = r.n;
+  return c.json(UnseenActivityResponseSchema.parse({ counts }));
+});
+
+// ── POST /api/admin/users/:id/activity/seen ───────────────────────────
+//
+// The drawer reports the newest id it rendered. MAX() keeps the marker
+// monotonic: a second tab that loaded an older page can't un-see anything.
+// The existence check makes a stale drawer for a deleted member a clean 404
+// instead of whatever the connection's foreign-key setting turns it into.
+
+adminActivityRoutes.post("/:id/activity/seen", zJsonBody(ActivitySeenBodySchema), async (c) => {
+  const admin = c.get("user");
+  const userId = c.req.param("id");
+  const { lastSeenId } = c.req.valid("json");
+
+  const db = getDb();
+  const exists = await db.execute({ sql: `SELECT 1 FROM "user" WHERE id = ?`, args: [userId] });
+  if (exists.rows.length === 0) return errorResponse(c, 404, "User not found");
+
+  await db.execute({
+    sql: `INSERT INTO admin_activity_seen (admin_id, user_id, last_seen_id)
+          VALUES (?, ?, ?)
+          ON CONFLICT(admin_id, user_id) DO UPDATE SET
+            last_seen_id = MAX(last_seen_id, excluded.last_seen_id),
+            seen_at = datetime('now')`,
+    args: [admin.id, userId, lastSeenId],
+  });
+  return c.json(OkResponseSchema.parse({ ok: true }));
 });

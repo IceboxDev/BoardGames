@@ -140,3 +140,29 @@ describe("ResolveAnnouncementBodySchema", () => {
     expect(ResolveAnnouncementBodySchema.safeParse({ action: "approve" }).success).toBe(false);
   });
 });
+
+describe("CollectionItemSchema.isNew", () => {
+  const response = {
+    ownerId: "u1",
+    editable: true,
+    slugs: ["lost-cities"],
+    items: [item],
+    sleeveTypes: [],
+    statuses: [],
+    playStats: [],
+    announcements: [],
+  };
+
+  it("keeps a server-derived new flag", () => {
+    const parsed = CollectionResponseSchema.parse({
+      ...response,
+      items: [{ ...item, isNew: true }],
+    });
+    expect(parsed.items[0]?.isNew).toBe(true);
+  });
+
+  it("defaults to false for payloads cached before the flag existed", () => {
+    const parsed = CollectionResponseSchema.parse(response);
+    expect(parsed.items[0]?.isNew).toBe(false);
+  });
+});

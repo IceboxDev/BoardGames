@@ -26,6 +26,9 @@ export interface CollectionRow {
   lastPlayedAt: string | null;
   /** Destroyed by playthrough — no longer counted as owned. */
   playedThrough: boolean;
+  /** Acquired and not yet played since (server-derived, public), and not
+   *  played through — the New badge. */
+  isNew: boolean;
 }
 
 export function buildCollectionRows(data: CollectionResponse): CollectionRow[] {
@@ -52,6 +55,7 @@ export function buildCollectionRows(data: CollectionResponse): CollectionRow[] {
       playCount: plays?.playCount ?? 0,
       lastPlayedAt: plays?.lastPlayedAt ?? null,
       playedThrough: item?.playedThroughAt != null,
+      isNew: (item?.isNew ?? false) && item?.playedThroughAt == null,
     };
   };
 
@@ -71,11 +75,12 @@ export function buildCollectionRows(data: CollectionResponse): CollectionRow[] {
         playCount: 0,
         lastPlayedAt: null,
         playedThrough: item.playedThroughAt != null,
+        isNew: item.isNew && item.playedThroughAt == null,
       });
     } else if (!owned.has(item.slug)) {
       // Historical record: the slug left the inventory (played-through, or an
       // admin removal that kept the row). Rendered struck-through.
-      rows.push({ ...slugRow(item.slug, item), playedThrough: true });
+      rows.push({ ...slugRow(item.slug, item), playedThrough: true, isNew: false });
     }
   }
   return rows;

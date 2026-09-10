@@ -253,6 +253,10 @@
   /* A playing card's face. Six games each declared `aspect-[2/3]` for
      themselves. */
   --aspect-card: 2 / 3;
+  /* A real-world photo of a game box, as the arrivals takeover frames it:
+     portrait 4:5, the crop the server bakes (`lib/arrival-photo.ts`) and the
+     admin composer previews. */
+  --aspect-photo: 4 / 5;
   /* The RSVP canvas dialog: fills the viewport height and keeps widening on
      very large displays instead of stranding the game carousel in a 42rem
      column. `--container-*` drives `max-w-*`, so these are `max-w-modal-full`

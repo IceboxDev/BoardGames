@@ -42,6 +42,9 @@ export type ActivityType =
   | "purchase-vote"
   | "purchase-vote-sealed"
   | "purchase-vote-admin"
+  | "arrival-published"
+  | "arrival-received"
+  | "arrival-retracted"
   | "greeting-response";
 
 /** Insert one activity row. Never throws; never awaited by callers. */

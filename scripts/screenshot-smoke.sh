@@ -45,6 +45,10 @@ ROUTES=(
   "rsvp-preview-phone360:/dev/rsvp-preview?frame=360x644"
   "senso-preview:/dev/senso-preview?scene=rewards-balance"
   "senso-preview-phone411:/dev/senso-preview?scene=rewards-balance&frame=411x915"
+  "arrival-preview:/dev/arrival-preview?scene=three"
+  "arrival-preview-one:/dev/arrival-preview?scene=one"
+  "arrival-preview-phone411:/dev/arrival-preview?scene=three&frame=411x915"
+  "arrival-preview-phone360:/dev/arrival-preview?scene=two&frame=360x644"
   "dashboard:/"
   "history:/history"
   "games:/games"
@@ -211,6 +215,10 @@ NAV_EXEMPT=(
   "rsvp-preview-phone360"
   "senso-preview"
   "senso-preview-phone411"
+  "arrival-preview"
+  "arrival-preview-one"
+  "arrival-preview-phone411"
+  "arrival-preview-phone360"
   "theme-preview"
 )
 

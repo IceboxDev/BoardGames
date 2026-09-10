@@ -28,6 +28,7 @@ function defaultProps() {
     user: user(),
     coverage: { can: 3, maybe: 1, total: 10 },
     zeroForDays: undefined as number | undefined,
+    unseenActivity: 0,
     expanded: false,
     onToggleInventory: vi.fn(),
     onSetOnlineMode: vi.fn(),
@@ -89,6 +90,19 @@ describe("UserRow — main row", () => {
     unmount();
     renderRow();
     expect(screen.queryByText(/at 0%/)).not.toBeInTheDocument();
+  });
+
+  it("shows the unseen-activity bubble only when something is new", () => {
+    const { unmount } = renderRow({ unseenActivity: 20 });
+    expect(screen.getByTitle(/20 new activity entries/)).toHaveTextContent("20");
+    unmount();
+    renderRow({ unseenActivity: 0 });
+    expect(screen.queryByTitle(/new activity/)).not.toBeInTheDocument();
+  });
+
+  it("caps the bubble at 999+ for a never-opened trail", () => {
+    renderRow({ unseenActivity: 1234 });
+    expect(screen.getByTitle(/1234 new activity entries/)).toHaveTextContent("999+");
   });
 
   it("invokes onOpenCalendar when the coverage pie is clicked", async () => {

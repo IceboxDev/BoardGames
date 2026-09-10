@@ -60,9 +60,30 @@ describe("collapseEntries", () => {
     expect(collapseEntries(entries)).toHaveLength(4);
   });
 
+  it("folds an arrival's CTA with whichever screen it opened — a collection or the catalog", () => {
+    const toCollection = [
+      entry("page-view", { page: "profile-collection" }, "2026-09-10 12:00:02"),
+      entry("greeting-response", { kind: "arrival", action: "cta" }, "2026-09-10 12:00:01"),
+    ];
+    expect(collapseEntries(toCollection).map((e) => e.type)).toEqual(["greeting-response"]);
+    const toCatalog = [
+      entry("page-view", { page: "games" }, "2026-09-10 12:00:02"),
+      entry("greeting-response", { kind: "arrival", action: "cta" }, "2026-09-10 12:00:01"),
+    ];
+    expect(collapseEntries(toCatalog).map((e) => e.type)).toEqual(["greeting-response"]);
+    // The popup's own view row is not its destination.
+    const shown = [
+      entry("greeting-response", { kind: "arrival", action: "cta" }, "2026-09-10 12:00:01"),
+      entry("page-view", { page: "arrival" }, "2026-09-10 12:00:00"),
+    ];
+    expect(collapseEntries(shown)).toHaveLength(2);
+  });
+
   it("names where each button leads", () => {
     expect(ctaDestinationLabel("purchase-vote-announce")).toBe("the vote screen");
     expect(ctaDestinationLabel("spotlight")).toBe("their skill page");
+    expect(ctaDestinationLabel("arrival")).toBe("the collection");
+    expect(ctaDestinationLabel("purchase-vote-result")).toBeUndefined();
     expect(ctaDestinationLabel("skill-intro")).toBeUndefined();
   });
 });

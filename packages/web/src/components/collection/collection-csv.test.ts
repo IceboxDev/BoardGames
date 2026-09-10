@@ -20,6 +20,7 @@ function row(overrides: Partial<CollectionRow>): CollectionRow {
     playCount: 12,
     lastPlayedAt: null,
     playedThrough: false,
+    isNew: false,
     ...overrides,
   };
 }
@@ -48,6 +49,7 @@ describe("collectionToCsv", () => {
             pricePaidCents: 2499,
             note: null,
             playedThroughAt: null,
+            isNew: false,
             updatedAt: "2026-08-15 10:00:00",
           },
         }),

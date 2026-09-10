@@ -23,20 +23,18 @@ import {
   ResolveAnnouncementBodySchema,
   ResolveAnnouncementResponseSchema,
 } from "@boardgames/core/protocol";
-import type { InStatement, InValue } from "@libsql/client";
+import type { InStatement } from "@libsql/client";
 import { z } from "zod";
 import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { logActivity } from "../lib/activity-log.ts";
 import { parseRow, parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
-import { withSlugAdded } from "../lib/inventory-slugs.ts";
 import {
   AnnouncementRowSchema,
-  fetchInventorySlugs,
-  inventorySlugsJson,
-  inventoryWriteStatement,
+  inventoryAddPlan,
   rowToAnnouncement,
+  type SqlGuard,
 } from "./collection.ts";
 
 /** Attempts before giving up on an inventory row that keeps changing underneath. */
@@ -93,10 +91,7 @@ adminAnnouncementRoutes.post(
     const closeStatement = (
       status: "approved" | "dismissed",
       resolutionSlug: string | null,
-      extraGuard: { readonly sql: string; readonly args: readonly InValue[] } = {
-        sql: "1",
-        args: [],
-      },
+      extraGuard: SqlGuard = { sql: "1", args: [] },
     ) =>
       ({
         sql: `UPDATE ownership_announcements
@@ -113,20 +108,25 @@ adminAnnouncementRoutes.post(
 
     if (body.action === "approve") {
       for (let attempt = 1; ; attempt++) {
-        const owned = await fetchInventorySlugs(db, announcement.user_id);
-        const before = inventorySlugsJson(owned);
-        const after = inventorySlugsJson(withSlugAdded(owned, body.slug));
         // The inventory CAS lands first; the close then requires the inventory
         // to hold the rewritten list, so the two cannot diverge: a lost
         // inventory race leaves the announcement pending for the retry.
+        const plan = await inventoryAddPlan(db, announcement.user_id, [body.slug]);
         const claimed = await claim([
-          inventoryWriteStatement(announcement.user_id, withSlugAdded(owned, body.slug), {
-            expect: before,
-          }),
-          closeStatement("approved", body.slug, {
-            sql: "EXISTS (SELECT 1 FROM user_inventory WHERE user_id = ? AND game_slugs_json = ?)",
-            args: [announcement.user_id, after],
-          }),
+          plan.statement,
+          // The copy's metadata row, dated from the announcement (closer to
+          // the purchase than the approval) — that date is what makes it
+          // "new" in the library. An owner-entered date wins: only a missing
+          // one is filled, so the upsert is idempotent across the CAS retries.
+          {
+            sql: `INSERT INTO collection_items (id, user_id, slug, acquired_on)
+                  SELECT ?, user_id, ?, date(created_at) FROM ownership_announcements WHERE id = ?
+                  ON CONFLICT(user_id, slug) WHERE slug IS NOT NULL DO UPDATE SET
+                    acquired_on = excluded.acquired_on, updated_at = datetime('now')
+                  WHERE collection_items.acquired_on IS NULL`,
+            args: [randomUUID(), body.slug, id],
+          },
+          closeStatement("approved", body.slug, plan.guard),
         ]);
         if (claimed) break;
         // Either someone else resolved it, or the inventory moved underneath.

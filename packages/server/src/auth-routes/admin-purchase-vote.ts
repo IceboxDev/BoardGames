@@ -4,7 +4,7 @@
 // and the voter list. Exactly one poll may be open at a time; a new one can
 // only be created once the previous is closed. Deleting is limited to an
 // OPEN poll (mistake recovery) — closed polls are history and feed the
-// winner-reveal greeting.
+// arrivals composer (admin-arrivals.ts).
 
 import {
   AdminCreatePollBodySchema,

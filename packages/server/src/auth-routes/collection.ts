@@ -36,7 +36,7 @@ import {
   UpsertItemBodySchema,
   UpsertItemResponseSchema,
 } from "@boardgames/core/protocol";
-import type { Client, InStatement } from "@libsql/client";
+import type { Client, InStatement, InValue } from "@libsql/client";
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import type { AuthUser } from "../auth/types.ts";
@@ -45,6 +45,7 @@ import { logActivity } from "../lib/activity-log.ts";
 import { jsonColumn, parseRow, parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 import { withSlugAdded, withSlugRemoved } from "../lib/inventory-slugs.ts";
+import { isNewAcquisition } from "../lib/new-acquisition.ts";
 
 export const collectionRoutes = authedApp();
 
@@ -117,7 +118,30 @@ export function canEditCollection(viewer: AuthUser, ownerId: string): boolean {
   return viewer.id === ownerId || viewer.role === "admin";
 }
 
-export function rowToItem(row: CollectionItemRow): CollectionItem {
+/** Newest recorded match of one game the member took part in — feeds `isNew`. */
+async function fetchLastPlayedAt(db: Client, userId: string, slug: string): Promise<string | null> {
+  const { rows } = await db.execute({
+    sql: `SELECT MAX(m.played_at) AS last_played_at
+            FROM match_results m
+            JOIN match_participants p ON p.match_id = m.id
+           WHERE p.user_id = ? AND m.game_slug = ?`,
+    args: [userId, slug],
+  });
+  const value = rows[0]?.last_played_at;
+  return value == null ? null : String(value);
+}
+
+/** `rowToItem` for one freshly saved row, looking up the play history it needs. */
+async function rowToItemWithPlays(
+  db: Client,
+  userId: string,
+  row: CollectionItemRow,
+): Promise<CollectionItem> {
+  const lastPlayedAt = row.slug === null ? null : await fetchLastPlayedAt(db, userId, row.slug);
+  return rowToItem(row, lastPlayedAt);
+}
+
+export function rowToItem(row: CollectionItemRow, lastPlayedAt: string | null): CollectionItem {
   return {
     id: row.id,
     slug: row.slug,
@@ -136,6 +160,7 @@ export function rowToItem(row: CollectionItemRow): CollectionItem {
     pricePaidCents: row.price_paid_cents,
     note: row.note,
     playedThroughAt: row.played_through_at,
+    isNew: isNewAcquisition(row.acquired_on, lastPlayedAt),
     updatedAt: row.updated_at,
   };
 }
@@ -184,7 +209,7 @@ export function inventorySlugsJson(slugs: readonly string[]): string {
 export function inventoryWriteStatement(
   userId: string,
   slugs: readonly string[],
-  options: { readonly expect?: string } = {},
+  options: { readonly expect?: string; readonly guard?: SqlGuard } = {},
 ): InStatement {
   const next = inventorySlugsJson(slugs);
   if (options.expect === undefined) {
@@ -200,16 +225,61 @@ export function inventoryWriteStatement(
   // A fresh INSERT can only happen when the caller read "no row" (`[]`); any
   // row that appeared since is a conflict, and the CAS in the DO UPDATE then
   // decides. The SELECT-with-WHERE form is what lets an upsert be conditional.
+  // `guard` lets a caller tie the write to a condition of its own batch
+  // (the arrival publish: "and this slug has not been announced already").
+  const guard = options.guard ?? { sql: "1", args: [] };
   return {
     sql: `INSERT INTO user_inventory (user_id, game_slugs_json, updated_at)
           SELECT ?, ?, datetime('now')
-           WHERE NOT EXISTS (SELECT 1 FROM user_inventory WHERE user_id = ?)
-              OR EXISTS (SELECT 1 FROM user_inventory WHERE user_id = ? AND game_slugs_json = ?)
+           WHERE (NOT EXISTS (SELECT 1 FROM user_inventory WHERE user_id = ?)
+              OR EXISTS (SELECT 1 FROM user_inventory WHERE user_id = ? AND game_slugs_json = ?))
+             AND (${guard.sql})
           ON CONFLICT(user_id) DO UPDATE SET
             game_slugs_json = excluded.game_slugs_json,
             updated_at = excluded.updated_at
-          WHERE user_inventory.game_slugs_json = ?`,
-    args: [userId, next, userId, userId, options.expect, options.expect],
+          WHERE user_inventory.game_slugs_json = ? AND (${guard.sql})`,
+    args: [
+      userId,
+      next,
+      userId,
+      userId,
+      options.expect,
+      ...guard.args,
+      options.expect,
+      ...guard.args,
+    ],
+  };
+}
+
+/** A SQL boolean fragment with its bound args, AND-able into a WHERE clause. */
+export type SqlGuard = { readonly sql: string; readonly args: readonly InValue[] };
+
+/**
+ * Plan a compare-and-set "add these slugs" for one member.
+ *
+ * `statement` is the CAS write (a set-add, so an already-owned slug is a
+ * no-op that still matches); `guard` is the fragment a LATER statement in the
+ * same batch uses to require that write to have landed — the two together
+ * make "inventory updated" and "the thing that needed it" one atomic claim
+ * (see admin-announcements.ts and admin-arrivals.ts).
+ */
+export async function inventoryAddPlan(
+  db: Client,
+  userId: string,
+  slugs: readonly string[],
+  guard?: SqlGuard,
+): Promise<{ statement: InStatement; guard: SqlGuard }> {
+  const owned = await fetchInventorySlugs(db, userId);
+  const after = slugs.reduce<string[]>((list, slug) => withSlugAdded(list, slug), owned);
+  return {
+    statement: inventoryWriteStatement(userId, after, {
+      expect: inventorySlugsJson(owned),
+      guard,
+    }),
+    guard: {
+      sql: "EXISTS (SELECT 1 FROM user_inventory WHERE user_id = ? AND game_slugs_json = ?)",
+      args: [userId, inventorySlugsJson(after)],
+    },
   };
 }
 
@@ -342,10 +412,18 @@ collectionRoutes.get("/users/:userId", async (c) => {
     );
   }
 
+  const lastPlayedBySlug = new Map(
+    parseRows(PlayStatRowSchema, playsResult.rows, "match_results.plays").map((r) => [
+      r.slug,
+      r.last_played_at,
+    ]),
+  );
   const items = parseRows(CollectionItemRowSchema, itemsResult.rows, "collection_items").map(
     (row) => {
-      const item = rowToItem(row);
-      // Private collection-keeping details stay between the owner and admins.
+      const lastPlayedAt = row.slug === null ? null : (lastPlayedBySlug.get(row.slug) ?? null);
+      const item = rowToItem(row, lastPlayedAt);
+      // Private collection-keeping details stay between the owner and admins;
+      // `isNew` survives — it is the coarse, shareable reading of the date.
       return editable ? item : { ...item, acquiredOn: null, pricePaidCents: null, note: null };
     },
   );
@@ -517,7 +595,9 @@ collectionRoutes.put("/users/:userId/item", zJsonBody(UpsertItemBodySchema), asy
 
   const saved = await fetchItemRow(db, userId, { itemId: id });
   if (!saved) return errorResponse(c, 500, "item write failed", "WRITE_FAILED");
-  return c.json(UpsertItemResponseSchema.parse({ ok: true, item: rowToItem(saved) }));
+  return c.json(
+    UpsertItemResponseSchema.parse({ ok: true, item: await rowToItemWithPlays(db, userId, saved) }),
+  );
 });
 
 // ── POST /users/:userId/played-through ─────────────────────────────────
@@ -569,7 +649,11 @@ collectionRoutes.post(
     const saved = await fetchItemRow(db, userId, { itemId });
     if (!saved) return errorResponse(c, 500, "item write failed", "WRITE_FAILED");
     return c.json(
-      SetPlayedThroughResponseSchema.parse({ ok: true, slugs: newSlugs, item: rowToItem(saved) }),
+      SetPlayedThroughResponseSchema.parse({
+        ok: true,
+        slugs: newSlugs,
+        item: await rowToItemWithPlays(db, userId, saved),
+      }),
     );
   },
 );
@@ -631,7 +715,12 @@ collectionRoutes.post(
     });
     const saved = await fetchItemRow(db, userId, { itemId: id });
     if (!saved) return errorResponse(c, 500, "item write failed", "WRITE_FAILED");
-    return c.json(CreateCustomItemResponseSchema.parse({ ok: true, item: rowToItem(saved) }));
+    return c.json(
+      CreateCustomItemResponseSchema.parse({
+        ok: true,
+        item: await rowToItemWithPlays(db, userId, saved),
+      }),
+    );
   },
 );
 

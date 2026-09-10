@@ -15,6 +15,7 @@ import {
 import { activityRoutes } from "./auth-routes/activity.ts";
 import { adminActivityRoutes } from "./auth-routes/admin-activity.ts";
 import { adminAnnouncementRoutes } from "./auth-routes/admin-announcements.ts";
+import { adminArrivalRoutes } from "./auth-routes/admin-arrivals.ts";
 import {
   adminAvailabilityAllRoutes,
   adminAvailabilityRoutes,
@@ -29,6 +30,7 @@ import { adminPurchaseVoteRoutes } from "./auth-routes/admin-purchase-vote.ts";
 import { adminSkillsRoutes } from "./auth-routes/admin-skills.ts";
 import { agentRoutes } from "./auth-routes/agent.ts";
 import { announcementRoutes } from "./auth-routes/announcements.ts";
+import { arrivalRoutes } from "./auth-routes/arrivals.ts";
 import { availabilityCountsRoutes } from "./auth-routes/availability-counts.ts";
 import { avatarRoutes } from "./auth-routes/avatar.ts";
 import { bgaIngestRoutes } from "./auth-routes/bga-ingest.ts";
@@ -215,6 +217,16 @@ app.route("/api/admin/calendar", adminCalendarLocksRoutes);
 app.route("/api/admin/history", adminMatchHistoryRoutes);
 app.route("/api/admin/skills", adminSkillsRoutes);
 app.route("/api/admin/purchase-vote", adminPurchaseVoteRoutes);
+// Arrivals: a publish carries up to three photos as JSON data URIs, so the
+// prefix gets its own body bound (Hono has no default limit).
+app.use(
+  "/api/admin/arrivals/*",
+  bodyLimit({
+    maxSize: 20 * 1024 * 1024,
+    onError: (c) => errorResponse(c, 413, "Body too large", "PAYLOAD_TOO_LARGE"),
+  }),
+);
+app.route("/api/admin/arrivals", adminArrivalRoutes);
 
 // --- Protected: any logged-in user ---
 app.use("/api/user/*", requireAuth);
@@ -258,6 +270,10 @@ app.route("/api/skills", skillsRoutes);
 // null to online-only accounts (its kinds all point at offline features).
 app.use("/api/greetings/*", requireAuth);
 app.route("/api/greetings", greetingsRoutes);
+
+// Arrival photos: plain requireAuth like the greeting that links to them.
+app.use("/api/arrivals/*", requireAuth);
+app.route("/api/arrivals", arrivalRoutes);
 
 // Purchase vote: an offline-group feature like skills. Write-capped — a
 // player toggling votes is bursty but small.

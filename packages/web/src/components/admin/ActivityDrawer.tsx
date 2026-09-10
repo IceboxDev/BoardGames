@@ -1,9 +1,9 @@
 import type { ActivityEntry, AdminDevice } from "@boardgames/core/protocol";
-import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
-import { useMemo, useState } from "react";
+import { useInfiniteQuery, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { games } from "../../games/registry";
 import { useAdminUsers } from "../../hooks/useAdminUsers";
-import { adminFetchActivity, adminFetchDevices } from "../../lib/admin";
+import { adminFetchActivity, adminFetchDevices, adminMarkActivitySeen } from "../../lib/admin";
 import { formatDayKey, formatRelativeTime, parseUtcStamp } from "../../lib/date-format";
 import { qk } from "../../lib/query-keys";
 import { ChevronDownIcon } from "../icons";
@@ -47,6 +47,26 @@ export function ActivityDrawer({ user, onClose }: Props) {
     () => activityQuery.data?.pages.flatMap((p) => p.entries) ?? undefined,
     [activityQuery.data],
   );
+
+  // Reading the trail is what "seen" means: once the first page is on screen,
+  // move this admin's marker to the newest id shown and drop the users-table
+  // bubble. Guarded by the last id reported, so a refetch of the same page
+  // doesn't post again — but a newer entry arriving on refetch does.
+  const queryClient = useQueryClient();
+  const { mutate: reportSeen } = useMutation({
+    mutationFn: ({ lastSeenId }: { lastSeenId: number }) =>
+      adminMarkActivitySeen(user.id, lastSeenId),
+    onSuccess: () => {
+      void queryClient.invalidateQueries({ queryKey: qk.adminUnseenActivity() });
+    },
+  });
+  const reportedRef = useRef(0);
+  const newestId = flat?.[0]?.id;
+  useEffect(() => {
+    if (newestId === undefined || newestId <= reportedRef.current) return;
+    reportedRef.current = newestId;
+    reportSeen({ lastSeenId: newestId });
+  }, [newestId, reportSeen]);
 
   return (
     <Drawer
@@ -402,6 +422,8 @@ function greetingLabel(kind: string | undefined): string {
       return "the purchase-vote reminder";
     case "purchase-vote-result":
       return "the purchase-vote results";
+    case "arrival":
+      return "the arrivals announcement";
     default:
       return "a greeting";
   }
@@ -531,6 +553,20 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
       return `Published a spotlight${targetName ? ` about ${targetName}` : ""}`;
     case "greeting-retracted":
       return "Retracted the group spotlight";
+    case "arrival-published": {
+      const games = Array.isArray(meta.games) ? meta.games : [];
+      const titles = games.flatMap((g) => {
+        const slug = typeof g === "object" && g !== null && "slug" in g ? str(g.slug) : undefined;
+        return slug ? [gameTitle(slug) ?? slug] : [];
+      });
+      return titles.length === 0
+        ? "Announced an arrival"
+        : `Announced the arrival of ${titles.join(", ")}`;
+    }
+    case "arrival-received":
+      return `Received ${gameTitle(str(meta.slug)) ?? "a game"} from the purchase vote`;
+    case "arrival-retracted":
+      return "Retracted an arrival announcement";
     case "greeting-response": {
       const kind = str(meta.kind);
       const label = greetingLabel(kind);
@@ -629,6 +665,8 @@ function describePageView(meta: Record<string, unknown>, nameById: Map<string, s
       return "Was reminded about unspent purchase votes";
     case "purchase-vote-result":
       return "Was shown the purchase-vote results";
+    case "arrival":
+      return "Was shown the arrivals announcement";
     case "profile-purchases":
       return `Viewed ${owner} purchases page`;
     case "skill-board": {
@@ -683,6 +721,9 @@ function dotClass(type: string): string {
     case "greeting-published":
     case "greeting-retracted":
     case "greeting-response":
+    case "arrival-published":
+    case "arrival-received":
+    case "arrival-retracted":
       return "bg-cyan-400/70";
     case "ownership-announced":
     case "ownership-resolved":

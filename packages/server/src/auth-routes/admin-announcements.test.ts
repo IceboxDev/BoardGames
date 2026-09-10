@@ -128,6 +128,32 @@ describe("POST /api/admin/announcements/:id/resolve", () => {
     expect(await status(second)).toBe("approved");
   });
 
+  async function acquiredOn(slug: string): Promise<string | null> {
+    const { rows } = await client.execute({
+      sql: "SELECT acquired_on FROM collection_items WHERE user_id = ? AND slug = ?",
+      args: [MEMBER, slug],
+    });
+    const value = rows[0]?.acquired_on;
+    return value == null ? null : String(value);
+  }
+
+  it("dates the approved copy from the announcement so it reads as new", async () => {
+    const id = await announce({ slug: "wingspan" });
+    expect((await resolve(app(), id, { action: "approve", slug: "wingspan" })).status).toBe(200);
+    expect(await acquiredOn("wingspan")).toBe(new Date().toISOString().slice(0, 10));
+  });
+
+  it("keeps an acquired-on date the owner already entered", async () => {
+    await client.execute({
+      sql: `INSERT INTO collection_items (id, user_id, slug, acquired_on)
+            VALUES ('ci-owner', ?, 'wingspan', '2020-05-05')`,
+      args: [MEMBER],
+    });
+    const id = await announce({ slug: "wingspan" });
+    expect((await resolve(app(), id, { action: "approve", slug: "wingspan" })).status).toBe(200);
+    expect(await acquiredOn("wingspan")).toBe("2020-05-05");
+  });
+
   it("refuses to resolve a row twice, whichever action comes second", async () => {
     const id = await announce({ slug: "7-wonders" });
     const a = app();

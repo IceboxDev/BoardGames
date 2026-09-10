@@ -6,6 +6,7 @@ import {
   AuthCard,
   Avatar,
   Badge,
+  BlurUpImage,
   Button,
   ButtonLink,
   Checkbox,
@@ -107,6 +108,15 @@ function ThemePresetToolbar() {
     </div>
   );
 }
+
+// Inline SVG stand-ins so the gallery ships no binary (every image extension
+// is LFS-tracked): a flat tint as the "placeholder", a gradient as the "photo".
+const GALLERY_PLACEHOLDER = `data:image/svg+xml;utf8,${encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><rect width="4" height="5" fill="#6366f1"/></svg>',
+)}`;
+const GALLERY_PHOTO = `data:image/svg+xml;utf8,${encodeURIComponent(
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6366f1"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs><rect width="4" height="5" fill="url(#g)"/></svg>',
+)}`;
 
 function Swatch({ label, children }: { label: string; children: React.ReactNode }) {
   return (
@@ -364,11 +374,31 @@ export default function UiGalleryPage() {
           </Section>
 
           <Section title="Avatar">
-            <Swatch label="sizes / ring">
-              <Avatar name="Ada Lovelace" size="xs" />
-              <Avatar name="Ada Lovelace" size="sm" />
-              <Avatar name="Ada Lovelace" size="md" />
-              <Avatar name="Grace Hopper" size="lg" ring accentHex="#22d3ee" />
+            <Stack gap="sm">
+              <Swatch label="sizes / ring">
+                <Avatar name="Ada Lovelace" size="xs" />
+                <Avatar name="Ada Lovelace" size="sm" />
+                <Avatar name="Ada Lovelace" size="md" />
+                <Avatar name="Grace Hopper" size="lg" ring accentHex="#22d3ee" />
+              </Swatch>
+              <Swatch label="fallback: initials vs silhouette (unnamed faces)">
+                <Avatar name="Ada Lovelace" size="sm" accentHex="#d36830" />
+                <Avatar name="" fallback="silhouette" size="sm" accentHex="#d36830" />
+                <Avatar name="" fallback="silhouette" size="md" />
+              </Swatch>
+            </Stack>
+          </Section>
+
+          <Section title="BlurUpImage">
+            <Swatch label="blurred stand-in → photo fades in (aspect-photo frame)">
+              <BlurUpImage
+                src={GALLERY_PHOTO}
+                placeholder={GALLERY_PLACEHOLDER}
+                width={4}
+                height={5}
+                alt="A gallery placeholder photo"
+                className="aspect-photo w-32 rounded-card-lg"
+              />
             </Swatch>
           </Section>
 

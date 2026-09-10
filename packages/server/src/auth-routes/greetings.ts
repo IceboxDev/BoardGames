@@ -5,10 +5,12 @@
 //
 //   1. purchase-vote announce — one-time "voting is live" card (the same
 //      launch treatment the skill intro got). Ack flips it off forever.
-//   2. purchase-vote reminder — every later visit while the viewer still has
+//   2. arrival — one-time takeover once the games bought after a vote are
+//      physically here (an admin publishes it; see lib/arrivals.ts). A poll
+//      CLOSING is silent — there is no "winner" card any more.
+//   3. purchase-vote reminder — every later visit while the viewer still has
 //      votes to spend (admins exempt — they run the vote). Its ack is
 //      log-only, so it returns next app open.
-//   3. purchase-vote result — one-time winner reveal after a poll closes.
 //   4. The skill queue (intro, then spotlights) exactly as before.
 //
 // The greetings are CARDS about the vote; the voting screen is a separate
@@ -30,10 +32,10 @@ import {
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { logActivity } from "../lib/activity-log.ts";
+import { buildArrivalGreeting, markArrivalSeen, nextUnseenArrival } from "../lib/arrivals.ts";
 import { zJsonBody } from "../lib/error-response.ts";
 import { ackSkillIntro, ackSpotlight, nextGreetingFor } from "../lib/greetings.ts";
 import {
-  computeTally,
   distinctVoterCount,
   latestPoll,
   markPollSeen,
@@ -62,27 +64,45 @@ greetingsRoutes.get("/", async (c) => {
   const isAdmin = gate.data.role === "admin";
 
   const poll = await latestPoll();
-  if (poll) {
-    const [votes, seen] = await Promise.all([pollVotes(poll.id), pollSeen(poll.id, viewer.id)]);
+  const [votes, seen] = poll
+    ? await Promise.all([pollVotes(poll.id), pollSeen(poll.id, viewer.id)])
+    : [[], { first_seen_at: null }];
+
+  // 1. The one-time "voting is live" card.
+  if (poll && poll.closed_at === null && seen.first_seen_at === null) {
+    return c.json(
+      AppGreetingResponseSchema.parse({
+        greeting: {
+          kind: "purchase-vote-announce",
+          pollId: poll.id,
+          candidates: poll.candidate_slugs_json,
+          voterCount: distinctVoterCount(votes),
+          requiredVoters: poll.required_voters,
+        },
+        players: {},
+      }),
+    );
+  }
+
+  // 2. The one-time arrival takeover. Above the reminder on purpose: the
+  // reminder recurs every visit while votes are left, so anything ranked
+  // below it would be starved for a member who never spends theirs.
+  const arrival = await nextUnseenArrival(viewer.id);
+  if (arrival) {
+    return c.json(
+      AppGreetingResponseSchema.parse({
+        greeting: await buildArrivalGreeting(arrival.arrival, arrival.games),
+        players: {},
+      }),
+    );
+  }
+
+  // 3. The recurring nag. Admins run the vote — never nag the person who
+  // opened it. (The announce card still serves; only the reminder is skipped.)
+  if (poll && poll.closed_at === null && !isAdmin) {
     const myVotes = votes.filter((v) => v.user_id === viewer.id).length;
     const votesLeft = Math.max(0, VOTES_PER_PLAYER - myVotes);
-    if (poll.closed_at === null && seen.first_seen_at === null) {
-      return c.json(
-        AppGreetingResponseSchema.parse({
-          greeting: {
-            kind: "purchase-vote-announce",
-            pollId: poll.id,
-            candidates: poll.candidate_slugs_json,
-            voterCount: distinctVoterCount(votes),
-            requiredVoters: poll.required_voters,
-          },
-          players: {},
-        }),
-      );
-    }
-    // Admins run the vote — never nag the person who opened it. (The announce
-    // and result cards still serve; only the recurring reminder is skipped.)
-    if (poll.closed_at === null && votesLeft > 0 && !isAdmin) {
+    if (votesLeft > 0) {
       return c.json(
         AppGreetingResponseSchema.parse({
           greeting: {
@@ -96,21 +116,9 @@ greetingsRoutes.get("/", async (c) => {
         }),
       );
     }
-    if (poll.closed_at !== null && poll.winner_slug !== null && seen.result_seen_at === null) {
-      return c.json(
-        AppGreetingResponseSchema.parse({
-          greeting: {
-            kind: "purchase-vote-result",
-            pollId: poll.id,
-            winnerSlug: poll.winner_slug,
-            tally: computeTally(poll.candidate_slugs_json, votes),
-          },
-          players: {},
-        }),
-      );
-    }
   }
 
+  // 4. The skill queue.
   const greeting = await nextGreetingFor(viewer.id, (await ensureSkillState())?.state ?? null);
   return c.json(
     AppGreetingResponseSchema.parse({
@@ -122,8 +130,8 @@ greetingsRoutes.get("/", async (c) => {
 
 // ── POST /api/greetings/ack ────────────────────────────────────────────
 //
-// Every arm is idempotent; the vote arms are first-write-wins timestamps so
-// the announce card and the reveal each show exactly once. The reminder ack
+// Every arm is idempotent; the announce and arrival arms are first-write-wins
+// seen marks so each card shows exactly once. The reminder ack
 // writes NO seen-state on purpose — it comes back every visit until the
 // votes are spent. Every ack also lands in the activity trail with the
 // viewer's response ("later" = clicked away, "cta" = followed the button).
@@ -133,12 +141,12 @@ greetingsRoutes.post("/ack", zJsonBody(AppGreetingAckBodySchema), async (c) => {
   const body = c.req.valid("json");
   switch (body.kind) {
     case "purchase-vote-announce":
-      await markPollSeen(body.pollId, viewer.id, "first_seen_at");
+      await markPollSeen(body.pollId, viewer.id);
       break;
     case "purchase-vote-reminder":
       break; // log-only
-    case "purchase-vote-result":
-      await markPollSeen(body.pollId, viewer.id, "result_seen_at");
+    case "arrival":
+      await markArrivalSeen(body.arrivalId, viewer.id);
       break;
     case "skill-intro":
       await ackSkillIntro(viewer.id);
@@ -151,6 +159,7 @@ greetingsRoutes.post("/ack", zJsonBody(AppGreetingAckBodySchema), async (c) => {
     kind: body.kind,
     action: body.action,
     ...("pollId" in body ? { pollId: body.pollId } : {}),
+    ...("arrivalId" in body ? { arrivalId: body.arrivalId } : {}),
     ...("id" in body ? { greetingId: body.id } : {}),
   });
   return c.json(AppGreetingAckResponseSchema.parse({ ok: true }));

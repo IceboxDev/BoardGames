@@ -3,9 +3,11 @@ import {
   ActivityEntrySchema,
   ActivityLogQuerySchema,
   ActivityLogResponseSchema,
+  ActivitySeenBodySchema,
   AdminDevicesResponseSchema,
   DeviceInfoSchema,
   PageViewBodySchema,
+  UnseenActivityResponseSchema,
 } from "./activity.ts";
 
 const validEntry = {
@@ -149,6 +151,54 @@ describe("ActivityLogResponseSchema", () => {
     expect(result.success).toBe(false);
     if (!result.success) {
       expect(result.error.issues[0]?.path).toEqual(["nextBefore"]);
+    }
+  });
+});
+
+describe("UnseenActivityResponseSchema", () => {
+  it("accepts a per-member count map", () => {
+    expect(() => UnseenActivityResponseSchema.parse({ counts: { u1: 20, u2: 0 } })).not.toThrow();
+  });
+
+  it("accepts an empty map (nothing new anywhere)", () => {
+    expect(() => UnseenActivityResponseSchema.parse({ counts: {} })).not.toThrow();
+  });
+
+  it("rejects a negative count", () => {
+    const result = UnseenActivityResponseSchema.safeParse({ counts: { u1: -1 } });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.issues[0]?.path).toEqual(["counts", "u1"]);
+    }
+  });
+
+  it("rejects a fractional count", () => {
+    const result = UnseenActivityResponseSchema.safeParse({ counts: { u1: 1.5 } });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.issues[0]?.path).toEqual(["counts", "u1"]);
+    }
+  });
+});
+
+describe("ActivitySeenBodySchema", () => {
+  it("accepts a positive entry id", () => {
+    expect(() => ActivitySeenBodySchema.parse({ lastSeenId: 42 })).not.toThrow();
+  });
+
+  it("rejects a zero id", () => {
+    const result = ActivitySeenBodySchema.safeParse({ lastSeenId: 0 });
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.issues[0]?.path).toEqual(["lastSeenId"]);
+    }
+  });
+
+  it("rejects a missing id", () => {
+    const result = ActivitySeenBodySchema.safeParse({});
+    expect(result.success).toBe(false);
+    if (!result.success) {
+      expect(result.error.issues[0]?.path).toEqual(["lastSeenId"]);
     }
   });
 });

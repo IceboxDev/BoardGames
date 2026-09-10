@@ -79,7 +79,8 @@ export const PurchaseVoterSchema = z.object({
 
 /** Admin-only tally row: voter ids in vote-time order, so the card can show
  * WHO voted. Deliberately not on the shared entry — the player-facing reveal
- * and the result greeting must never carry voter identity. */
+ * never carries voter identity, and the arrival greeting (arrivals.ts) shows
+ * voters as FACES only: image and accent, never an id or a name. */
 export const AdminPurchaseTallyEntrySchema = PurchaseTallyEntrySchema.extend({
   voterIds: z.array(z.string().min(1)),
 });

@@ -15,7 +15,6 @@ import {
 } from "../../lib/purchase-vote";
 import { qk } from "../../lib/query-keys";
 import { CheckIcon } from "../icons";
-import { Avatar } from "../ui/Avatar";
 import { Button } from "../ui/Button";
 import { ErrorAlert } from "../ui/ErrorAlert";
 import { Input } from "../ui/Input";
@@ -23,6 +22,7 @@ import { QueryBoundary } from "../ui/QueryBoundary";
 import { SearchInput } from "../ui/SearchInput";
 import { useConfirm } from "../ui/useConfirm";
 import { AdminSection } from "./AdminSection";
+import { TallyRows, voterMapOf } from "./TallyRows";
 
 export function PurchaseVoteCard() {
   const queryClient = useQueryClient();
@@ -73,8 +73,8 @@ export function PurchaseVoteCard() {
                   const ok = await confirm({
                     title: "Close the vote now?",
                     description:
-                      "The winner is computed from the current tally and revealed to everyone. Players can no longer vote.",
-                    confirmLabel: "Close & reveal",
+                      "The winner is computed from the current tally and players can no longer vote. Members aren't told — announce it from the Arrivals card when the games are here.",
+                    confirmLabel: "Close the vote",
                     variant: "primary",
                   });
                   if (ok) closeMutation.mutate();
@@ -109,72 +109,6 @@ export function PurchaseVoteCard() {
 
 type AdminPoll = NonNullable<Awaited<ReturnType<typeof fetchAdminPurchaseVote>>["poll"]>;
 
-/** Beyond this many voters on one game, the stack ends in a "+N" disc. */
-const TALLY_AVATAR_CAP = 8;
-
-function TallyRows({ poll }: { poll: AdminPoll }) {
-  const maxVotes = Math.max(1, ...poll.tally.map((t) => t.votes));
-  const voterById = new Map(poll.voters.map((v) => [v.id, v]));
-  return (
-    <ul className="flex flex-col gap-1">
-      {poll.tally.map((entry) => {
-        const game = resolveGame(entry.slug);
-        const isWinner = poll.winnerSlug === entry.slug;
-        const overflow = entry.voterIds.length - TALLY_AVATAR_CAP;
-        return (
-          <li
-            key={entry.slug}
-            className="relative flex items-center gap-2 overflow-hidden rounded-card-md bg-surface-900/70 px-2 py-1.5"
-          >
-            <span
-              aria-hidden="true"
-              className={cn("absolute inset-y-0 left-0", isWinner ? "bg-accent-500/20" : "bg-fill")}
-              style={{ width: `${(entry.votes / maxVotes) * 100}%` }}
-            />
-            {game && (
-              <img
-                src={game.thumbnail}
-                alt=""
-                className="relative h-6 w-10 shrink-0 rounded object-cover"
-              />
-            )}
-            <span
-              className={cn(
-                "relative min-w-0 flex-1 truncate text-xs",
-                isWinner ? "font-semibold text-fg-strong" : "text-fg-secondary",
-              )}
-            >
-              {game?.title ?? entry.slug}
-            </span>
-            {/* The voters themselves, oldest vote first, instead of a bare
-                count — the ring separates overlapping faces from the bar. */}
-            <span className="relative inline-flex shrink-0 -space-x-1.5">
-              {entry.voterIds.slice(0, TALLY_AVATAR_CAP).map((id) => {
-                const voter = voterById.get(id);
-                return (
-                  <span key={id} title={voter?.name ?? "Unknown member"}>
-                    <Avatar
-                      name={voter?.name ?? "?"}
-                      image={voter?.image}
-                      size="xs"
-                      className="h-6 w-6 text-3xs ring-2 ring-surface-900"
-                    />
-                  </span>
-                );
-              })}
-              {overflow > 0 && (
-                <span className="inline-flex h-6 w-6 items-center justify-center rounded-full bg-fill-strong text-3xs font-semibold tabular-nums text-fg-secondary ring-2 ring-surface-900">
-                  +{overflow}
-                </span>
-              )}
-            </span>
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
-
 function OpenPollPanel({
   poll,
   closing,
@@ -202,7 +136,11 @@ function OpenPollPanel({
           "Nobody has voted yet."
         )}
       </p>
-      <TallyRows poll={poll} />
+      <TallyRows
+        tally={poll.tally}
+        winnerSlug={poll.winnerSlug}
+        voterById={voterMapOf(poll.voters)}
+      />
       <div className="flex items-center justify-end gap-2">
         <Button variant="ghost" size="sm" disabled={deleting || closing} onClick={onDelete}>
           Delete vote
@@ -227,7 +165,11 @@ function LastResult({ poll }: { poll: AdminPoll }) {
         </span>{" "}
         as the winner ({poll.voterCount} voters). Opening a new vote replaces it on every surface.
       </p>
-      <TallyRows poll={poll} />
+      <TallyRows
+        tally={poll.tally}
+        winnerSlug={poll.winnerSlug}
+        voterById={voterMapOf(poll.voters)}
+      />
     </div>
   );
 }

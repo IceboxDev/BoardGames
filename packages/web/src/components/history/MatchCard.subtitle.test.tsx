@@ -41,6 +41,25 @@ const connect4: MatchRecord = {
   },
 };
 
+// Prod row id=96: the first Publish or Perish night, recorded before the game
+// had an edition picker — no scenario stored. Its config declares "Base" as the
+// always-present default, so the card reads "Base" retroactively (7 Wonders
+// works the same way).
+const publishOrPerish = (scenario?: string): MatchRecord => ({
+  ...intarsia,
+  id: 96,
+  gameSlug: "publish-or-perish",
+  gameTitle: "Publish or Perish",
+  outcome: {
+    kind: "free-for-all",
+    players: [
+      { userId: "u1", displayName: "Mantas", score: 12 },
+      { userId: "u2", displayName: "Jaqueline", score: 9 },
+    ],
+    ...(scenario === undefined ? {} : { scenario }),
+  },
+});
+
 const decryptoTeams = (sizes: number[]): MatchRecord => ({
   ...intarsia,
   id: 85,
@@ -67,6 +86,22 @@ describe("MatchCard subtitle", () => {
   it("fixed-variant games subtitle legacy records with no stored scenario", () => {
     render(<MatchCard match={connect4} isAdmin={false} currentUserId={null} />);
     expect(screen.getByText("Standard")).toBeInTheDocument();
+  });
+
+  it("multi-select games with a declared base subtitle legacy records with that base", () => {
+    render(<MatchCard match={publishOrPerish()} isAdmin={false} currentUserId={null} />);
+    expect(screen.getByText("Base")).toBeInTheDocument();
+  });
+
+  it("shows the stored edition set as-is when expansions were picked", () => {
+    render(
+      <MatchCard
+        match={publishOrPerish("Base + Reviewer 2")}
+        isAdmin={false}
+        currentUserId={null}
+      />,
+    );
+    expect(screen.getByText("Base + Reviewer 2")).toBeInTheDocument();
   });
 
   it("derives Decrypto's variant from the table shape", () => {

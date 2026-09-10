@@ -82,6 +82,11 @@ export const CollectionItemSchema = z.object({
   pricePaidCents: z.number().int().nonnegative().nullable(),
   note: z.string().nullable(),
   playedThroughAt: z.string().nullable(),
+  /** Acquired (dated) and not yet played since — cleared by the owner's next
+   *  recorded match of it. Derived server-side from `acquiredOn` and match
+   *  history, so it stays public where `acquiredOn` itself is private.
+   *  Defaulted so payloads cached before the field existed still parse. */
+  isNew: z.boolean().default(false),
   updatedAt: z.string(),
 });
 export type CollectionItem = z.infer<typeof CollectionItemSchema>;

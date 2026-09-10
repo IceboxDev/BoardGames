@@ -2,6 +2,7 @@ import type { CSSProperties } from "react";
 import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { cn } from "../../lib/cn";
 import { initialsFromName } from "../../lib/names.ts";
+import { UserIcon } from "../icons";
 
 // Avatar primitive: renders the user's `image` when present, otherwise an
 // initials monogram (first + last initial, via the shared `initialsFromName`).
@@ -21,8 +22,13 @@ import { initialsFromName } from "../../lib/names.ts";
 // so a squircle/square theme sliced the corners off real faces — the theme
 // engine used to drive this via `--avatar-radius` and no longer does. Every
 // other corner in the app still themes through radii.ts.
+//
+// `fallback="silhouette"` is for surfaces that show a person WITHOUT naming
+// them (the arrivals takeover's ring of voter faces): a generic figure tinted
+// by the accent instead of initials, which would spell out who it is.
 
 export type AvatarSize = "xs" | "sm" | "md" | "lg" | "xl";
+export type AvatarFallback = "initials" | "silhouette";
 
 type AvatarProps = {
   name: string;
@@ -31,6 +37,9 @@ type AvatarProps = {
   size?: AvatarSize;
   /** Add an accent ring around the avatar. */
   ring?: boolean;
+  /** What stands in when there is no image: initials (default) or an
+   * anonymous silhouette. */
+  fallback?: AvatarFallback;
   className?: string;
 };
 
@@ -48,6 +57,7 @@ export function Avatar({
   accentHex,
   size = "md",
   ring = false,
+  fallback = "initials",
   className = "",
 }: AvatarProps) {
   const sizeCls = SIZE[size];
@@ -66,6 +76,25 @@ export function Avatar({
         style={style}
         className={cn(sizeCls, ringCls, "shrink-0 rounded-full object-cover", className)}
       />
+    );
+  }
+
+  if (fallback === "silhouette") {
+    return (
+      <span
+        role="img"
+        aria-label={name || "Player"}
+        data-fallback="silhouette"
+        style={style}
+        className={cn(
+          sizeCls,
+          ringCls,
+          "inline-flex shrink-0 items-center justify-center overflow-hidden rounded-full bg-[var(--avatar-accent)]/20 text-[var(--avatar-accent)]/80",
+          className,
+        )}
+      >
+        <UserIcon className="h-[60%] w-[60%]" />
+      </span>
     );
   }
 

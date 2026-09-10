@@ -246,6 +246,39 @@ describe("POST /api/admin/users/merge-guest", () => {
     expect(await rsvps(TARGET)).toHaveLength(2);
   });
 
+  it("re-points an arrival the guest bought, and its seen-mark, at the target", async () => {
+    const { rows } = await client.execute(
+      `INSERT INTO purchase_polls (candidate_slugs_json, required_voters, closed_at, winner_slug)
+       VALUES ('["azul"]', 1, datetime('now'), 'azul') RETURNING id`,
+    );
+    const pollId = Number(rows[0]?.id);
+    await client.execute({
+      sql: "INSERT INTO purchase_arrivals (id, poll_id, published_by) VALUES ('arr-1', ?, ?)",
+      args: [pollId, ADMIN],
+    });
+    await client.execute({
+      sql: `INSERT INTO purchase_arrival_games
+              (arrival_id, slug, position, purchaser_user_id, photo, photo_placeholder,
+               photo_w, photo_h, photo_bytes)
+            VALUES ('arr-1', 'azul', 0, ?, 'data:image/webp;base64,AA==', 'data:image/webp;base64,AA==', 1280, 1600, 1)`,
+      args: [GUEST],
+    });
+    await client.execute({
+      sql: "INSERT INTO purchase_arrival_seen (arrival_id, user_id) VALUES ('arr-1', ?)",
+      args: [GUEST],
+    });
+
+    expect((await merge(app(), GUEST, TARGET)).status).toBe(200);
+    const { rows: games } = await client.execute(
+      "SELECT purchaser_user_id FROM purchase_arrival_games WHERE arrival_id = 'arr-1'",
+    );
+    expect(games.map((g) => g.purchaser_user_id)).toEqual([TARGET]);
+    const { rows: seen } = await client.execute(
+      "SELECT user_id FROM purchase_arrival_seen WHERE arrival_id = 'arr-1'",
+    );
+    expect(seen.map((s) => s.user_id)).toEqual([TARGET]);
+  });
+
   it("classifies every foreign key onto user in the live schema", async () => {
     const { rows: tables } = await client.execute(
       "SELECT name FROM sqlite_master WHERE type = 'table' AND name NOT LIKE 'sqlite_%'",

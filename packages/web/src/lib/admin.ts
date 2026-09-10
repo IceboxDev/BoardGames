@@ -1,6 +1,7 @@
 import {
   type ActivityLogResponse,
   ActivityLogResponseSchema,
+  ActivitySeenBodySchema,
   type AdminDevicesResponse,
   AdminDevicesResponseSchema,
   AdminNightGuestBodySchema,
@@ -15,6 +16,8 @@ import {
   type OnlineMode,
   PublishGreetingBodySchema,
   SetOnlineModeBodySchema,
+  type UnseenActivityResponse,
+  UnseenActivityResponseSchema,
 } from "@boardgames/core/protocol";
 import { apiFetch } from "./api-fetch.ts";
 
@@ -89,6 +92,26 @@ export async function adminFetchActivity(
   return apiFetch(`/api/admin/users/${userId}/activity${query}`, {
     response: ActivityLogResponseSchema,
     signal,
+  });
+}
+
+/** Per-member count of activity newer than the calling admin's marker (users-table bubble). */
+export async function adminFetchUnseenActivity(
+  signal?: AbortSignal,
+): Promise<UnseenActivityResponse> {
+  return apiFetch("/api/admin/users/unseen-activity", {
+    response: UnseenActivityResponseSchema,
+    signal,
+  });
+}
+
+/** Move the calling admin's marker for this member up to `lastSeenId` (never back). */
+export async function adminMarkActivitySeen(userId: string, lastSeenId: number): Promise<void> {
+  await apiFetch(`/api/admin/users/${userId}/activity/seen`, {
+    method: "POST",
+    body: { lastSeenId },
+    request: ActivitySeenBodySchema,
+    response: OkResponseSchema,
   });
 }
 

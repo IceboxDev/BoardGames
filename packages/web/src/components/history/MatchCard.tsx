@@ -137,6 +137,10 @@ function deriveTitleSubtitle(outcome: MatchOutcome, gameSlug: string | null): st
     if (!edition) return null;
     return CLOCKTOWER_EDITIONS.find((e) => e.id === edition)?.label ?? null;
   }
+  // A multi-select whose declared default is an always-present base (7 Wonders
+  // and Publish or Perish "Base") reads as that base when nothing was stored —
+  // records made before the game had a picker.
+  if (variant?.mode === "multi" && variant.default !== undefined) return variant.default;
   return null;
 }
 

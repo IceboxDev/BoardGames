@@ -23,8 +23,9 @@ export type UserRowProps = {
    *  revealed by the show-inactive expander — active 0% players stay untagged
    *  (their freshness already shows through the sort order). */
   zeroForDays?: number;
-  /** Pending ownership announcements from this user (amber badge on the name). */
-  pendingAnnouncements?: number;
+  /** Activity entries logged since this admin last opened the member's trail
+   *  (accent bubble on the name). Clears once the activity drawer is opened. */
+  unseenActivity?: number;
   /** Inventory expansion (renders a second `<tr>` with the editor). */
   expanded: boolean;
   onToggleInventory: () => void;
@@ -65,7 +66,7 @@ export function UserRow({
   user,
   coverage,
   zeroForDays,
-  pendingAnnouncements = 0,
+  unseenActivity = 0,
   expanded,
   onToggleInventory,
   onSetOnlineMode,
@@ -111,12 +112,12 @@ export function UserRow({
             >
               {user.name || "—"}
             </button>
-            {pendingAnnouncements > 0 && (
+            {unseenActivity > 0 && (
               <span
-                className="inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-amber-400/20 px-1 text-3xs font-bold tabular-nums text-amber-200"
-                title={`${pendingAnnouncements} pending ownership announcement${pendingAnnouncements === 1 ? "" : "s"}`}
+                className="inline-flex h-4 min-w-4 items-center justify-center rounded-full bg-accent-500/20 px-1 text-3xs font-bold tabular-nums text-accent-300"
+                title={`${unseenActivity} new activity ${unseenActivity === 1 ? "entry" : "entries"} since you last opened this trail`}
               >
-                {pendingAnnouncements}
+                {unseenActivity > 999 ? "999+" : unseenActivity}
               </span>
             )}
             {zeroForDays !== undefined && (

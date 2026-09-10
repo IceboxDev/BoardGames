@@ -268,6 +268,11 @@ export function CollectionTable({
                             {row.title}
                           </span>
                           <span className="flex items-center gap-1">
+                            {row.isNew && (
+                              <Badge tone="accent" size="xs">
+                                New
+                              </Badge>
+                            )}
                             {row.kind === "exit" && (
                               <Badge tone="purple" size="xs">
                                 EXIT box

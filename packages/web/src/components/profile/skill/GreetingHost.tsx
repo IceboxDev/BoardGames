@@ -12,7 +12,7 @@
 // cards open it via local state, so submitting votes can't unmount the
 // screen the player is standing on.
 
-import type { AppGreeting, AppGreetingAckBody, GreetingAckAction } from "@boardgames/core/protocol";
+import type { GreetingAckAction } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -22,32 +22,18 @@ import { reportPageView } from "../../../lib/page-views.ts";
 import { fetchProfile } from "../../../lib/profile.ts";
 import { qk } from "../../../lib/query-keys.ts";
 import { fetchPlayerSkill, fetchSkillLeaderboards } from "../../../lib/skills.ts";
+import { ArrivalTakeoverView } from "../../arrivals/ArrivalTakeoverView.tsx";
+import { ctaDestination } from "../../arrivals/arrival-copy.ts";
+import { toArrivalCards } from "../../arrivals/arrival-view-model.ts";
 import {
   PurchaseVoteAnnounceModal,
   PurchaseVoteReminderModal,
 } from "../../purchase-vote/PurchaseVoteGreetingCards.tsx";
 import { PurchaseVoteModal } from "../../purchase-vote/PurchaseVoteModal.tsx";
-import { PurchaseVoteResultModal } from "../../purchase-vote/PurchaseVoteResultModal.tsx";
 import { Select } from "../../ui/Select.tsx";
+import { ackBody, greetingKey } from "./greeting-ack.ts";
 import { SkillIntroModalView } from "./SkillIntroModal.tsx";
 import { SpotlightModalView } from "./SpotlightModal.tsx";
-
-/** Stable identity per greeting, so dismissing one never hides a LATER,
- * different greeting that arrives in the same session. */
-function greetingKey(g: AppGreeting): string {
-  switch (g.kind) {
-    case "skill-intro":
-      return "skill-intro";
-    case "spotlight":
-      return `spotlight:${g.id}`;
-    case "purchase-vote-announce":
-      return `pv-announce:${g.pollId}`;
-    case "purchase-vote-reminder":
-      return `pv-reminder:${g.pollId}`;
-    case "purchase-vote-result":
-      return `pv-result:${g.pollId}`;
-  }
-}
 
 export default function GreetingHost({ userId }: { userId: string }) {
   const navigate = useNavigate();
@@ -128,23 +114,9 @@ export default function GreetingHost({ userId }: { userId: string }) {
   // Every ack carries the response ("later" = clicked away, "cta" = followed
   // the button) so the admin activity trail shows outcomes, not just views.
   // The reminder's ack is log-only server-side — it still returns next visit.
-  const ackBody = (action: GreetingAckAction): AppGreetingAckBody => {
-    switch (greeting.kind) {
-      case "spotlight":
-        return { kind: "spotlight", id: greeting.id, action };
-      case "skill-intro":
-        return { kind: "skill-intro", action };
-      case "purchase-vote-announce":
-        return { kind: "purchase-vote-announce", pollId: greeting.pollId, action };
-      case "purchase-vote-reminder":
-        return { kind: "purchase-vote-reminder", pollId: greeting.pollId, action };
-      case "purchase-vote-result":
-        return { kind: "purchase-vote-result", pollId: greeting.pollId, action };
-    }
-  };
   const close = (action: GreetingAckAction, then?: () => void) => () => {
     setDismissedKey(greetingKey(greeting));
-    ackMutation.mutate(ackBody(action));
+    ackMutation.mutate(ackBody(greeting, action));
     then?.();
   };
 
@@ -168,13 +140,17 @@ export default function GreetingHost({ userId }: { userId: string }) {
     );
   }
 
-  if (greeting.kind === "purchase-vote-result") {
+  if (greeting.kind === "arrival") {
+    // The takeover is about the purchasers and the games, not the viewer;
+    // it resolves titles, accents and photo URLs from the wire greeting.
+    const cards = toArrivalCards(greeting);
     return (
-      <PurchaseVoteResultModal
-        winnerSlug={greeting.winnerSlug}
-        tally={greeting.tally}
+      <ArrivalTakeoverView
+        cards={cards}
+        totals={greeting.totals}
+        viewerId={userId}
         onDismiss={close("later")}
-        onCta={close("cta", () => navigate("/games"))}
+        onCta={close("cta", () => navigate(ctaDestination(cards, userId)))}
       />
     );
   }
