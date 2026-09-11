@@ -5,7 +5,9 @@ import {
   describeSensoTeamsError,
   normalizeSensoFfa,
   normalizeSensoTeams,
+  sensoFfaAwaitingCubes,
   sensoFfaStandings,
+  sensoTeamsAwaitingCubes,
 } from "./senso-standings";
 
 // The recorder never lets the winner be picked by hand: ranks and the winning
@@ -65,6 +67,43 @@ describe("normalizeSensoFfa", () => {
     );
     expect(out.players.map((p) => p.rank)).toEqual([1, 1, 3]);
     expect(sensoFfaStandings(out.players).tiebreak).toBe("draw");
+  });
+});
+
+describe("awaiting cubes", () => {
+  it("is true only while a tied leader's count is untyped — the Emperor's implicit 0 counts", () => {
+    const tied = normalizeSensoFfa(
+      ffa(player("a", 12, { role: "Takeda" }), player("b", 12, { role: "Emperor" })),
+    );
+    expect(sensoFfaAwaitingCubes(tied.players)).toBe(true);
+    const settled = normalizeSensoFfa(
+      ffa(player("a", 12, { role: "Takeda", tiebreak: 3 }), player("b", 12, { role: "Emperor" })),
+    );
+    expect(sensoFfaAwaitingCubes(settled.players)).toBe(false);
+    // The clan's cubes beat the Emperor's none — the throne is not tied.
+    expect(sensoFfaStandings(settled.players)).toMatchObject({ winners: [0], tiebreak: "cubes" });
+    expect(sensoFfaAwaitingCubes([player("a", 12), player("b", 9)])).toBe(false);
+  });
+
+  it("mirrors that for two tied pairs", () => {
+    expect(
+      sensoTeamsAwaitingCubes([
+        { members: [], score: 15 },
+        { members: [], score: 15, tiebreak: 4 },
+      ]),
+    ).toBe(true);
+    expect(
+      sensoTeamsAwaitingCubes([
+        { members: [], score: 15, tiebreak: 4 },
+        { members: [], score: 15, tiebreak: 4 },
+      ]),
+    ).toBe(false);
+    expect(
+      sensoTeamsAwaitingCubes([
+        { members: [], score: 15 },
+        { members: [], score: 12 },
+      ]),
+    ).toBe(false);
   });
 });
 

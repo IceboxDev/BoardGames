@@ -57,6 +57,31 @@ describe("SensoForm", () => {
     );
   });
 
+  it("holds the verdict until the tied clan's cubes are typed, then settles on cubes", async () => {
+    render(<Harness seats={5} />);
+    const user = userEvent.setup();
+    await user.click(chips("Emperor")[1] as HTMLElement); // Paul is the Emperor
+
+    fireEvent.change(points("Mantas"), { target: { value: "12" } });
+    fireEvent.change(points("Paul"), { target: { value: "12" } });
+    // The Emperor's cubes are known (none); Mantas's are not typed yet — no verdict.
+    expect(screen.getByTestId("senso-result")).toHaveTextContent("the cube count settles it");
+    expect(screen.queryByText(/takes a tied throne/)).not.toBeInTheDocument();
+
+    fireEvent.change(screen.getByLabelText("Mantas — cubes on the map"), {
+      target: { value: "3" },
+    });
+    expect(screen.getByTestId("senso-result")).toHaveTextContent("Winner: Mantas — won on cubes");
+
+    // An explicit 0 for the clan is a real, persisting tie — now the throne is the Emperor's.
+    fireEvent.change(screen.getByLabelText("Mantas — cubes on the map"), {
+      target: { value: "0" },
+    });
+    expect(screen.getByTestId("senso-result")).toHaveTextContent(
+      "Winner: Paul — the Emperor takes a tied throne",
+    );
+  });
+
   it("names a straight points win without a rung", () => {
     render(<Harness seats={2} />);
     fireEvent.change(points("Mantas"), { target: { value: "9" } });

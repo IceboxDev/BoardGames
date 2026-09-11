@@ -9,6 +9,7 @@ import {
   factionsForTable,
   normalizeSensoFfa,
   SENSO_MAX_PLAYERS,
+  sensoFfaAwaitingCubes,
   sensoFfaEqual,
   sensoFfaStandings,
   sensoScoresEntered,
@@ -88,7 +89,10 @@ export function SensoForm({ users, value, onChange }: Props) {
   const entered = sensoScoresEntered(value.players);
   const leaders = sensoTiedLeaders(value.players);
   const tie = entered && leaders.length > 1;
-  const standings = entered ? sensoFfaStandings(value.players) : null;
+  // No verdict while the tie is waiting on a cube count — an untyped count
+  // would read as 0 and hand the Emperor a throne it hasn't earned yet.
+  const awaitingCubes = sensoFfaAwaitingCubes(value.players);
+  const standings = entered && !awaitingCubes ? sensoFfaStandings(value.players) : null;
   const topScore = leaders.length > 0 ? (value.players[leaders[0] ?? 0]?.score ?? 0) : 0;
 
   return (
@@ -172,7 +176,16 @@ export function SensoForm({ users, value, onChange }: Props) {
       {standings && (
         <ResultLine standings={standings} names={value.players.map((p) => p.displayName)} />
       )}
+      {entered && awaitingCubes && <AwaitingCubes />}
     </OutcomeFormShell>
+  );
+}
+
+export function AwaitingCubes() {
+  return (
+    <span className="text-xs text-fg-muted" data-testid="senso-result">
+      Tied on points — the cube count settles it.
+    </span>
   );
 }
 

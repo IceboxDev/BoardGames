@@ -4,12 +4,13 @@ import { Input } from "../../ui/Input";
 import { Surface } from "../../ui/Surface";
 import { ParticipantPicker } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
-import { ResultLine } from "./SensoForm";
+import { AwaitingCubes, ResultLine } from "./SensoForm";
 import {
   CLAN_FACTIONS,
   normalizeSensoTeams,
   SENSO_TEAM_SIZE,
   sensoScoresEntered,
+  sensoTeamsAwaitingCubes,
   sensoTeamsEqual,
   sensoTeamsStandings,
 } from "./senso-standings";
@@ -81,7 +82,8 @@ export function SensoTeamsForm({ users, value, onChange }: Props) {
   const entered = sensoScoresEntered(value.teams);
   const [a, b] = value.teams;
   const tie = entered && a !== undefined && b !== undefined && (a.score ?? 0) === (b.score ?? 0);
-  const standings = entered ? sensoTeamsStandings(value.teams) : null;
+  const awaitingCubes = sensoTeamsAwaitingCubes(value.teams);
+  const standings = entered && !awaitingCubes ? sensoTeamsStandings(value.teams) : null;
 
   return (
     <OutcomeFormShell>
@@ -176,6 +178,7 @@ export function SensoTeamsForm({ users, value, onChange }: Props) {
         </div>
       )}
 
+      {entered && awaitingCubes && <AwaitingCubes />}
       {standings && (
         <ResultLine
           standings={standings}

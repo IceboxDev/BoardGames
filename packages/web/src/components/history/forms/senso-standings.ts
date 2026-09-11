@@ -61,6 +61,17 @@ export function sensoTiedLeaders(players: readonly Player[]): number[] {
 }
 
 /**
+ * Whether a points tie is still waiting on a cube count. A cube count nobody
+ * has typed yet is NOT zero: treating it as zero would make every tie look
+ * persistent and hand the Emperor a throne it hasn't earned yet. The result
+ * line waits on this; the save-time validator says the same thing in words.
+ */
+export function sensoFfaAwaitingCubes(players: readonly Player[]): boolean {
+  const leaders = sensoTiedLeaders(players);
+  return leaders.length > 1 && leaders.some((i) => players[i]?.tiebreak === undefined);
+}
+
+/**
  * Converge a standard record: the subtitle reads "Standard"; the Emperor,
  * who owns no cubes, carries an explicit 0 so a tie never waits on that
  * input; ranks follow the ladder once any points are entered and clear while
@@ -114,14 +125,20 @@ export function describeSensoFfaError(outcome: MatchOutcomeFreeForAll): string |
     return "Five players means one of them is the Emperor — pick who";
   }
   if (!sensoScoresEntered(players)) return "Enter each player's points";
-  const leaders = sensoTiedLeaders(players);
-  if (leaders.length > 1 && leaders.some((i) => players[i]?.tiebreak === undefined)) {
+  if (sensoFfaAwaitingCubes(players)) {
     return "Tied on points — enter each tied player's cubes on the map";
   }
   return null;
 }
 
 // ── 2v2 (teams) ────────────────────────────────────────────────────────
+
+/** The 2v2 counterpart of `sensoFfaAwaitingCubes`: tied on points, a pair's cubes not yet typed. */
+export function sensoTeamsAwaitingCubes(teams: readonly Team[]): boolean {
+  const [a, b] = teams;
+  if (!a || !b || (a.score ?? 0) !== (b.score ?? 0)) return false;
+  return a.tiebreak === undefined || b.tiebreak === undefined;
+}
 
 export function sensoTeamsStandings(teams: readonly Team[]): SensoStandings {
   return resolveStandings(
@@ -169,11 +186,8 @@ export function describeSensoTeamsError(outcome: MatchOutcomeTeams): string | nu
   const factionError = describeFactionError(roles);
   if (factionError) return factionError;
   if (!sensoScoresEntered(outcome.teams)) return "Enter each team's points";
-  const [a, b] = outcome.teams;
-  if (a && b && (a.score ?? 0) === (b.score ?? 0)) {
-    if (a.tiebreak === undefined || b.tiebreak === undefined) {
-      return "Tied on points — enter each team's cubes on the map";
-    }
+  if (sensoTeamsAwaitingCubes(outcome.teams)) {
+    return "Tied on points — enter each team's cubes on the map";
   }
   return null;
 }
