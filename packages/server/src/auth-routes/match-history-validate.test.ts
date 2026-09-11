@@ -34,6 +34,56 @@ describe("parseOutcome — free-for-all role round-trip", () => {
   });
 });
 
+describe("parseOutcome — secondary tiebreak count (Sensō cubes)", () => {
+  it("round-trips each player's cube count, an explicit 0 included, and omits it when absent", () => {
+    const result = parseOutcome({
+      kind: "free-for-all",
+      scenario: "Standard",
+      players: [
+        { userId: "u1", displayName: "Mantas", score: 14, rank: 1, role: "Oda", tiebreak: 5 },
+        { userId: "u2", displayName: "Victor", score: 14, rank: 2, role: "Emperor", tiebreak: 0 },
+        { userId: "u3", displayName: "Luca", score: 8, rank: 3, role: "Mōri" },
+      ],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "free-for-all") {
+      expect(result.value.players.map((p) => p.tiebreak)).toEqual([5, 0, undefined]);
+      expect("tiebreak" in result.value.players[2]).toBe(false);
+    }
+  });
+
+  it("rejects a negative, fractional, or oversized count", () => {
+    for (const tiebreak of [-1, 1.5, 1001, "4"]) {
+      const result = parseOutcome({
+        kind: "free-for-all",
+        players: [
+          { userId: "u1", displayName: "A", score: 1, tiebreak },
+          { userId: "u2", displayName: "B", score: 1 },
+        ],
+      });
+      expect(result.ok).toBe(false);
+      if (!result.ok)
+        expect(result.error).toBe("players[0]: tiebreak must be an integer in 0..1000");
+    }
+  });
+
+  it("round-trips a team's combined count (2v2)", () => {
+    const result = parseOutcome({
+      kind: "teams",
+      scenario: "2v2",
+      teams: [
+        { members: [{ userId: "u1", displayName: "A" }], score: 20, tiebreak: 9 },
+        { members: [{ userId: "u2", displayName: "B" }], score: 20, tiebreak: 7 },
+      ],
+      winnerTeamIndices: [0],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "teams") {
+      expect(result.value.teams.map((t) => t.tiebreak)).toEqual([9, 7]);
+    }
+  });
+});
+
 describe("parseOutcome — free-for-all drawn duel (chess / Connect 4)", () => {
   it("preserves draw: true on a drawn duel", () => {
     const result = parseOutcome({

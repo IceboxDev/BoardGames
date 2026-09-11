@@ -48,6 +48,14 @@ function asInteger(v: unknown): number | null {
   return v;
 }
 
+/** `undefined` when absent, the integer when valid (0..1000), `null` when malformed. */
+function parseTiebreak(v: unknown): number | undefined | null {
+  if (v === undefined || v === null) return undefined;
+  const n = asInteger(v);
+  if (n === null || n < 0 || n > 1000) return null;
+  return n;
+}
+
 function parseParticipant(v: unknown, ctx: string): ParseResult<Participant> {
   if (!isPlainObject(v)) return { ok: false, error: `${ctx}: not an object` };
   const userId = asTrimmedString(v.userId, 100);
@@ -117,6 +125,13 @@ function parseFreeForAll(v: Record<string, unknown>): ParseResult<MatchOutcomeFr
       }
       awards = parsedAwards;
     }
+    // Optional secondary tiebreak count (Sensō: cubes on the map) — kept
+    // exactly as entered, an explicit 0 included, so a recorded tie stays
+    // settled. Mirrors FreeForAllPlayerSchema.tiebreak.
+    const tiebreak = parseTiebreak(raw.tiebreak);
+    if (tiebreak === null) {
+      return { ok: false, error: `players[${i}]: tiebreak must be an integer in 0..1000` };
+    }
     players.push({
       ...p.value,
       score,
@@ -124,6 +139,7 @@ function parseFreeForAll(v: Record<string, unknown>): ParseResult<MatchOutcomeFr
       ...(role !== undefined ? { role } : {}),
       ...(roundScores !== undefined ? { roundScores } : {}),
       ...(awards !== undefined ? { awards } : {}),
+      ...(tiebreak !== undefined ? { tiebreak } : {}),
     });
   }
   // No explicit winnerUserIds — the player(s) with the highest score are
@@ -226,10 +242,16 @@ function parseTeams(v: Record<string, unknown>): ParseResult<MatchOutcomeTeams> 
     }
     const rank = t.rank === undefined ? undefined : asInteger(t.rank);
     if (rank === null) return { ok: false, error: `teams[${i}]: invalid rank` };
+    // Team-level secondary count (Sensō 2v2: the pair's combined cubes).
+    const tiebreak = parseTiebreak(t.tiebreak);
+    if (tiebreak === null) {
+      return { ok: false, error: `teams[${i}]: tiebreak must be an integer in 0..1000` };
+    }
     teams.push({
       members,
       ...(score !== undefined ? { score } : {}),
       ...(rank !== undefined ? { rank } : {}),
+      ...(tiebreak !== undefined ? { tiebreak } : {}),
     });
   }
   if (!Array.isArray(v.winnerTeamIndices) || v.winnerTeamIndices.length === 0) {
