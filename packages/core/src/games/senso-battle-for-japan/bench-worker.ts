@@ -2,7 +2,7 @@
 // message per game. Runs under `tsx` (dev) — this file is never bundled.
 import { configureSearch, DEFAULT_SEARCH } from "./ai-search";
 import { HEURISTIC_V1, RANDOM, registerStrategy, SHOGUN, searchStrategy } from "./ai-strategies";
-import { configureTenka, DEFAULT_TENKA, tenkaStrategy } from "./mcts";
+import { configureKami, configureTenka, DEFAULT_KAMI, DEFAULT_TENKA, tenkaStrategy } from "./mcts";
 import { seatPattern, seedForGame, simulateGameDetailed } from "./tournament-runner";
 import type { AIStrategy, AIStrategyId } from "./types";
 
@@ -20,6 +20,8 @@ interface Job {
   tenka?: Record<string, unknown>;
   /** Options applied to the `tenka-prev` snapshot (a shared baseline for both arms). */
   tenkaPrev?: Record<string, unknown>;
+  /** Kami options applied to the live `kami` (`kami-prev` keeps the defaults). */
+  kami?: Record<string, unknown>;
 }
 
 const job = JSON.parse(process.argv[2] ?? "{}") as Job;
@@ -31,6 +33,9 @@ if (job.cfg) configureSearch(job.cfg as Parameters<typeof configureSearch>[0]);
 const TENKA_PREV = { ...DEFAULT_TENKA, ...(job.tenkaPrev ?? {}) };
 registerStrategy(tenkaStrategy("tenka-prev" as AIStrategyId, () => TENKA_PREV));
 if (job.tenka) configureTenka(job.tenka as Parameters<typeof configureTenka>[0]);
+const KAMI_PREV = { ...DEFAULT_KAMI };
+registerStrategy(tenkaStrategy("kami-prev" as AIStrategyId, () => KAMI_PREV));
+if (job.kami) configureKami(job.kami as Parameters<typeof configureKami>[0]);
 
 // Phase hybrids — which phase does an engine earn its strength in? `tricks`
 // plays the trick phase, `rest` the rewards and bonus phases. Bench-only ids.

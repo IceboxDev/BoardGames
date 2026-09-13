@@ -37,6 +37,12 @@ const STRATEGIES: StrategyOption[] = [
     description: AI_STRATEGY_DESCRIPTIONS.tenka,
     difficulty: "Expert",
   },
+  {
+    id: "kami",
+    label: AI_STRATEGY_LABELS.kami,
+    description: AI_STRATEGY_DESCRIPTIONS.kami,
+    difficulty: "Master",
+  },
 ];
 
 interface SetupScreenProps {
@@ -50,7 +56,7 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
       playerCounts={[2, 3, 4, 5]}
       defaultPlayerCount={3}
       strategies={STRATEGIES}
-      defaultStrategy="tenka"
+      defaultStrategy="kami"
       onStart={(pc, id) => onStart(pc, id as AIStrategyId)}
     />
   );

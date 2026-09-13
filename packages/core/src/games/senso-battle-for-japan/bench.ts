@@ -31,6 +31,7 @@ interface Args {
   tenka?: Record<string, unknown>;
   /** Patch applied to the `tenka-prev` snapshot too (a shared baseline for both arms). */
   tenkaPrev?: Record<string, unknown>;
+  kami?: Record<string, unknown>;
   out: string;
 }
 
@@ -94,6 +95,7 @@ function parseArgs(argv: string[]): Args {
     else if (arg === "--cfg") args.cfg = JSON.parse(next());
     else if (arg === "--tenka") args.tenka = JSON.parse(next());
     else if (arg === "--tenka-prev") args.tenkaPrev = JSON.parse(next());
+    else if (arg === "--kami") args.kami = JSON.parse(next());
     else if (arg === "--out") args.out = next();
     else positional.push(arg);
   }
@@ -164,6 +166,7 @@ async function runTable(args: Args, table: Table): Promise<Record<string, unknow
                 cfg: args.cfg,
                 tenka: args.tenka,
                 tenkaPrev: args.tenkaPrev,
+                kami: args.kami,
               }),
             ],
             {
@@ -296,7 +299,7 @@ async function main(): Promise<void> {
   const args = parseArgs(process.argv.slice(2));
   const tables = PROTOCOLS[args.protocol];
   console.log(
-    `bench ${args.a} vs ${args.b} · protocol ${args.protocol} · budget ${args.budgetMs} ms · ${args.workers} workers${args.mirror ? " · mirrored" : ""}${args.cfg ? ` · cfg ${JSON.stringify(args.cfg)}` : ""}${args.tenka ? ` · tenka ${JSON.stringify(args.tenka)}` : ""}${args.tenkaPrev ? ` · tenka-prev ${JSON.stringify(args.tenkaPrev)}` : ""}`,
+    `bench ${args.a} vs ${args.b} · protocol ${args.protocol} · budget ${args.budgetMs} ms · ${args.workers} workers${args.mirror ? " · mirrored" : ""}${args.cfg ? ` · cfg ${JSON.stringify(args.cfg)}` : ""}${args.tenka ? ` · tenka ${JSON.stringify(args.tenka)}` : ""}${args.tenkaPrev ? ` · tenka-prev ${JSON.stringify(args.tenkaPrev)}` : ""}${args.kami ? ` · kami ${JSON.stringify(args.kami)}` : ""}`,
   );
   const perTable: Record<string, unknown>[] = [];
   for (const table of tables) perTable.push(await runTable(args, table));
@@ -323,6 +326,7 @@ async function main(): Promise<void> {
         mirror: args.mirror,
         cfg: args.cfg ?? null,
         tenkaPrev: args.tenkaPrev ?? null,
+        kami: args.kami ?? null,
         tenka: args.tenka ?? null,
         node: process.version,
         git,

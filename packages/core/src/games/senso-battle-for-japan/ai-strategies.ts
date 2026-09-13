@@ -10,7 +10,7 @@ import {
   takeSearchStats,
 } from "./ai-search";
 import { type Mode, pickPlay } from "./ai-tricks";
-import { TENKA } from "./mcts";
+import { KAMI, TENKA } from "./mcts";
 import { getLegalActions } from "./rules";
 import type { Action, AIStrategy, AIStrategyId, AiBudget, GameState } from "./types";
 
@@ -24,7 +24,7 @@ export function registerStrategy(strategy: AIStrategy): void {
   REGISTRY[strategy.id] = strategy;
 }
 
-export const DEFAULT_STRATEGY: AIStrategyId = "tenka";
+export const DEFAULT_STRATEGY: AIStrategyId = "kami";
 
 /** Unknown ids fall back to the default so a stale lobby id cannot wedge a seat. */
 export function getStrategy(id: string | undefined): AIStrategy {
@@ -158,6 +158,7 @@ export function searchStrategy(id: AIStrategy["id"], opts: () => SearchOptions):
 
 export const SHOGUN: AIStrategy = searchStrategy("shogun", () => DEFAULT_SEARCH);
 
+registerStrategy(KAMI);
 registerStrategy(TENKA);
 registerStrategy(SHOGUN);
 registerStrategy(HEURISTIC_V1);

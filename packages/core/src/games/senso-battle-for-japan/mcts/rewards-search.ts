@@ -12,6 +12,9 @@ import { getActivePlayer, getLegalActions } from "../rules";
 import { computeScores, cubesPerSeat } from "../scoring";
 import type { Action, GameState } from "../types";
 import type { TenkaConfig } from "./config";
+import { MLP_MAX_WIDTH, type MlpModel, mlpForward } from "./mlp";
+import { boardViewFromState, VBOARD_FEATURES, vboardFeatures } from "./vboard-features";
+import { vboardModelFor } from "./vboard-models";
 
 /** The engine's own cube credit inside `evalPosition` (ai-rewards.ts). */
 const ENGINE_CUBE_WEIGHT = 0.02;
@@ -27,6 +30,40 @@ interface Ctx {
   nodes: number;
   /** VP-equivalent credited per cube on the map (see `TenkaConfig.rewardsCubeWeight`). */
   cubeWeight: number;
+  /** Board value blend (see `TenkaConfig.rewardsBoardValue`); null when off. */
+  board: BoardBlend | null;
+}
+
+interface BoardBlend {
+  model: MlpModel;
+  lambda: number;
+  head: 0 | 1;
+  feats: Float32Array;
+  out: Float32Array;
+  scratch: Float32Array;
+}
+
+function boardBlendFor(state: GameState, cfg: TenkaConfig): BoardBlend | null {
+  if (cfg.rewardsBoardValue === 0) return null;
+  const model = vboardModelFor(state.players.length);
+  if (!model) return null;
+  return {
+    model,
+    lambda: cfg.rewardsBoardValue,
+    head: cfg.rewardsBoardHead === "win" ? 1 : 0,
+    feats: new Float32Array(VBOARD_FEATURES),
+    out: new Float32Array(2),
+    scratch: new Float32Array(2 * MLP_MAX_WIDTH),
+  };
+}
+
+/** The board net's chosen head for `seat` on `state` (gap head in VP, win head as a probability). */
+function boardValue(state: GameState, seat: number, blend: BoardBlend): number {
+  const view = boardViewFromState(state);
+  vboardFeatures(view, seat, blend.feats);
+  mlpForward(blend.model, blend.feats, blend.out, blend.scratch);
+  const raw = blend.out[blend.head];
+  return blend.head === 0 ? raw * 10 : 1 / (1 + Math.exp(-raw));
 }
 
 /**
@@ -34,7 +71,17 @@ interface Ctx {
  * score + cubeWeight · (cubes − that rival's cubes). At the engine's 0.02 this
  * is exactly `evaluate(state, seat, NO_WEIGHTS)`.
  */
-function standing(state: GameState, seat: number, cubeWeight: number): number {
+function standing(
+  state: GameState,
+  seat: number,
+  cubeWeight: number,
+  board: BoardBlend | null = null,
+): number {
+  const base = standingOf(state, seat, cubeWeight);
+  return board ? base + board.lambda * boardValue(state, seat, board) : base;
+}
+
+function standingOf(state: GameState, seat: number, cubeWeight: number): number {
   if (cubeWeight === ENGINE_CUBE_WEIGHT) return evaluate(state, seat, NO_WEIGHTS);
   const scores = computeScores(state);
   let rival = -1;
@@ -67,9 +114,14 @@ function inPhase(state: GameState): boolean {
   return state.phase === "rewards" || state.phase === "bonus";
 }
 
-function leafVector(state: GameState, n: number, cubeWeight: number): Float64Array {
+function leafVector(
+  state: GameState,
+  n: number,
+  cubeWeight: number,
+  board: BoardBlend | null,
+): Float64Array {
   const v = new Float64Array(n);
-  for (let s = 0; s < n; s++) v[s] = standing(state, s, cubeWeight);
+  for (let s = 0; s < n; s++) v[s] = standing(state, s, cubeWeight, board);
   return v;
 }
 
@@ -80,16 +132,17 @@ function candidatesFor(
   seat: number,
   width: number,
   cubeWeight: number,
+  board: BoardBlend | null,
 ): Action[] {
   const pass = legal.find((a) => a.type === "pass");
   const moves = legal.filter((a): a is Exclude<Action, { type: "pass" }> => a.type !== "pass");
   if (moves.length === 0) return pass ? [pass] : [];
-  const base = standing(state, seat, cubeWeight);
+  const base = standing(state, seat, cubeWeight, board);
   const ranked = moves
     .map((action) => ({
       action,
       value:
-        standing(applyLight(state, action), seat, cubeWeight) -
+        standing(applyLight(state, action), seat, cubeWeight, board) -
         base +
         (action.type === "play" || action.type === "bonus-place" ? 0 : kindBias(action)) -
         ("region" in action ? action.region * 1e-4 : 0),
@@ -102,21 +155,21 @@ function candidatesFor(
 }
 
 function maxn(state: GameState, ctx: Ctx): Float64Array {
-  if (!inPhase(state)) return leafVector(state, ctx.n, ctx.cubeWeight);
+  if (!inPhase(state)) return leafVector(state, ctx.n, ctx.cubeWeight, ctx.board);
   if (ctx.nodes++ % 32 === 31 && performance.now() > ctx.deadline) throw DEADLINE;
   const key = stateKey(state);
   const hit = ctx.tt.get(key);
   if (hit) return hit;
   const seat = getActivePlayer(state);
   const legal = getLegalActions(state);
-  const candidates = candidatesFor(state, legal, seat, ctx.width, ctx.cubeWeight);
-  if (candidates.length === 0) return leafVector(state, ctx.n, ctx.cubeWeight);
+  const candidates = candidatesFor(state, legal, seat, ctx.width, ctx.cubeWeight, ctx.board);
+  if (candidates.length === 0) return leafVector(state, ctx.n, ctx.cubeWeight, ctx.board);
   let best: Float64Array | null = null;
   for (const action of candidates) {
     const v = maxn(applyLight(state, action), ctx);
     if (best === null || v[seat] > best[seat] + 1e-9) best = v;
   }
-  const result = best ?? leafVector(state, ctx.n, ctx.cubeWeight);
+  const result = best ?? leafVector(state, ctx.n, ctx.cubeWeight, ctx.board);
   ctx.tt.set(key, result);
   return result;
 }
@@ -136,6 +189,7 @@ function searchRoot(
   if (widths.length === 0) widths.push(cfg.rewardWidth);
   let chosen: { action: Action; width: number; nodes: number } | null = null;
   let totalNodes = 0;
+  const board = boardBlendFor(state, cfg);
   for (const width of widths) {
     const ctx: Ctx = {
       n,
@@ -144,8 +198,9 @@ function searchRoot(
       tt: new Map(),
       nodes: 0,
       cubeWeight: cfg.rewardsCubeWeight,
+      board,
     };
-    const candidates = candidatesFor(state, legal, seat, width, cfg.rewardsCubeWeight);
+    const candidates = candidatesFor(state, legal, seat, width, cfg.rewardsCubeWeight, board);
     if (candidates.length === 0) break;
     if (candidates.length === 1) {
       chosen = { action: candidates[0], width, nodes: 0 };
@@ -182,7 +237,7 @@ export function pickRewardTenka(
   const result = searchRoot(state, legal, seat, cfg);
   return (
     result?.action ??
-    candidatesFor(state, legal, seat, 1, cfg.rewardsCubeWeight)[0] ??
+    candidatesFor(state, legal, seat, 1, cfg.rewardsCubeWeight, null)[0] ??
     pass ??
     legal[0]
   );
@@ -197,6 +252,8 @@ export function pickBonusTenka(
   if (legal.length === 1) return legal[0];
   const result = searchRoot(state, legal, seat, cfg);
   return (
-    result?.action ?? candidatesFor(state, legal, seat, 1, cfg.rewardsCubeWeight)[0] ?? legal[0]
+    result?.action ??
+    candidatesFor(state, legal, seat, 1, cfg.rewardsCubeWeight, null)[0] ??
+    legal[0]
   );
 }

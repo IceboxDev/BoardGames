@@ -556,7 +556,7 @@ function buildGameConfig(room: Room, extra: Record<string, unknown>): Record<str
       // Factions are dealt by the engine, so seat order carries no meaning.
       const strategies = room.slots
         .filter((s) => s.kind !== "open")
-        .map((s) => (s.kind === "ai" ? (s.aiStrategy ?? "tenka") : null));
+        .map((s) => (s.kind === "ai" ? (s.aiStrategy ?? "kami") : null));
       return {
         playerCount: strategies.length,
         strategies,

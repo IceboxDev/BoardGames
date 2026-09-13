@@ -16,7 +16,13 @@ import {
   registerStrategy,
 } from "./ai-strategies";
 import { applyAction, createInitialState, settleTrick } from "./game-engine";
-import { configureTenka, DEFAULT_TENKA, pickRewardTenka } from "./mcts";
+import {
+  configureKami,
+  configureTenka,
+  DEFAULT_KAMI,
+  DEFAULT_TENKA,
+  pickRewardTenka,
+} from "./mcts";
 import { getActivePlayer, getLegalActions } from "./rules";
 import { baseState, setBoard, setFactions } from "./test-helpers";
 import type { Action, AIStrategy, GameState } from "./types";
@@ -32,7 +38,9 @@ describe("strategies", () => {
     const live = { ...DEFAULT_SEARCH };
     configureSearch({ determinizations: 1, rewardCandidates: 2, opponentSearch: 0 });
     const liveTenka = { ...DEFAULT_TENKA };
+    const liveKami = { ...DEFAULT_KAMI };
     configureTenka({ timeMs: 0, iterations: 20, rootSolveDets: 2 });
+    configureKami({ timeMs: 0, iterations: 20, rootSolveDets: 2, rewardTimeMs: 0, rewardWidth: 2 });
     const state = createInitialState(4, ["random", "random", "random", "random"], 31);
     let decisions = 0;
     while (state.phase !== "game-over") {
@@ -55,6 +63,7 @@ describe("strategies", () => {
     expect(decisions).toBeGreaterThan(300);
     configureSearch(live);
     configureTenka(liveTenka);
+    configureKami(liveKami);
   }, 60_000);
 
   it("falls back to a legal action when a strategy throws or returns garbage", () => {
@@ -156,7 +165,7 @@ describe("the Emperor's rewards under the live ruleset", () => {
         expect(legal.some((a) => canonicalEquals(a, picked))).toBe(true);
         if (picked.type === "aggression") expect("as" in picked).toBe(false);
       }
-      for (const id of ["heuristic-v1", "aggressive", "shogun", "tenka"] as const) {
+      for (const id of ["heuristic-v1", "aggressive", "shogun", "tenka", "kami"] as const) {
         expect(pickAiAction(state, 0, id)).toEqual(strike);
       }
       expect(pickReward(state, legal, 0, "careful")).toEqual(strike);

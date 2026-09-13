@@ -1,11 +1,17 @@
 import { pickBonus } from "../ai-rewards";
 import { DEFAULT_SEARCH, pickRewardSearch } from "../ai-search";
 import type { AIStrategy } from "../types";
-import { DEFAULT_TENKA, type TenkaConfig } from "./config";
+import { DEFAULT_KAMI, DEFAULT_TENKA, type TenkaConfig } from "./config";
 import { pickPlayTenka } from "./ismcts";
 import { pickBonusTenka, pickRewardTenka } from "./rewards-search";
 
-export { configureTenka, DEFAULT_TENKA, type TenkaConfig } from "./config";
+export {
+  configureKami,
+  configureTenka,
+  DEFAULT_KAMI,
+  DEFAULT_TENKA,
+  type TenkaConfig,
+} from "./config";
 export { pickPlayTenka, type TenkaStats } from "./ismcts";
 export { pickBonusTenka, pickRewardTenka } from "./rewards-search";
 
@@ -34,3 +40,4 @@ export function tenkaStrategy(id: AIStrategy["id"], cfg: () => TenkaConfig): AIS
 }
 
 export const TENKA: AIStrategy = tenkaStrategy("tenka", () => DEFAULT_TENKA);
+export const KAMI: AIStrategy = tenkaStrategy("kami", () => DEFAULT_KAMI);

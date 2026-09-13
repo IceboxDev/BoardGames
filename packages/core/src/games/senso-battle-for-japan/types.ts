@@ -256,7 +256,7 @@ export interface SensoPlayerView {
 // AI
 // ---------------------------------------------------------------------------
 
-export type AIStrategyId = "random" | "heuristic-v1" | "aggressive" | "shogun" | "tenka";
+export type AIStrategyId = "random" | "heuristic-v1" | "aggressive" | "shogun" | "tenka" | "kami";
 
 /** Wall-clock budget for a search strategy. `timeMs: 0` = iteration-capped (deterministic). */
 export interface AiBudget {
@@ -274,6 +274,7 @@ export const AI_STRATEGY_LABELS: Record<AIStrategyId, string> = {
   aggressive: "Warlord",
   shogun: "Shōgun",
   tenka: "Tenka",
+  kami: "Kami",
 };
 
 export const AI_STRATEGY_DESCRIPTIONS: Record<AIStrategyId, string> = {
@@ -285,6 +286,7 @@ export const AI_STRATEGY_DESCRIPTIONS: Record<AIStrategyId, string> = {
     "Samples what the other hands could be, plays the round out before every card, and looks one reward ahead of the table.",
   tenka:
     "Weighs every possible deal by how the other hands have actually been played, then plays each card out with a policy learned from search.",
+  kami: "Tenka's card play, then searches the whole rewards phase — every seat's reward and the locks it leaves — before spending its own.",
 };
 
 /**
@@ -293,7 +295,7 @@ export const AI_STRATEGY_DESCRIPTIONS: Record<AIStrategyId, string> = {
  * engine (`ai-strategies.ts` pulls in the whole search and its weight tables).
  */
 export const ALL_STRATEGIES: { id: AIStrategyId; label: string }[] = (
-  ["tenka", "shogun", "heuristic-v1", "aggressive", "random"] as const
+  ["kami", "tenka", "shogun", "heuristic-v1", "aggressive", "random"] as const
 ).map((id) => ({ id, label: AI_STRATEGY_LABELS[id] }));
 
 // ---------------------------------------------------------------------------

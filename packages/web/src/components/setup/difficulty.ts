@@ -10,7 +10,7 @@
 // The hexes are raw because they feed SVG fills and `style` stripes — not
 // Tailwind classes — and are difficulty semantics, not theme surface tokens.
 
-export type DifficultyTier = "Easy" | "Medium" | "Hard" | "Hard+" | "Expert";
+export type DifficultyTier = "Easy" | "Medium" | "Hard" | "Hard+" | "Expert" | "Master";
 
 type DifficultyStyle = {
   /** Stripe/star color for the option card. */
@@ -41,5 +41,10 @@ export const DIFFICULTY: Record<DifficultyTier, DifficultyStyle> = {
   Expert: {
     accentColor: "#a855f7",
     badgeClass: "bg-violet-500/15 text-violet-300 ring-violet-500/30",
+  },
+  Master: {
+    // The rung above Expert (Sensō's Kami): gold, so it reads as the top of the ladder.
+    accentColor: "#eab308",
+    badgeClass: "bg-yellow-500/15 text-yellow-300 ring-yellow-500/30",
   },
 };

@@ -76,6 +76,14 @@ export interface TenkaConfig {
    */
   rewardsCubeWeight: number;
   /**
+   * Blend the board value net (vboard-features.ts, trained on final outcomes)
+   * into the rewards max^n leaf: standing + λ · head(board). 0 = off; tables
+   * without a trained net (vboard-models.ts) behave as 0.
+   */
+  rewardsBoardValue: number;
+  /** Which head of the board net the blend uses: the predicted final gap (VP) or P(win). */
+  rewardsBoardHead: "gap" | "win";
+  /**
    * Weight sampled deals by the likelihood of the opponents' plays so far under
    * the learned policy at this softmax temperature (0 = off). Paired root only.
    */
@@ -211,6 +219,8 @@ export const DEFAULT_TENKA: TenkaConfig = {
   rewardWidth: 6,
   rewardTimeMs: 150,
   rewardsCubeWeight: 0.02,
+  rewardsBoardValue: 0,
+  rewardsBoardHead: "gap",
   inference: 3,
   inferencePerOpponent: false,
   inferenceFloor: 0.1,
@@ -236,4 +246,25 @@ export const DEFAULT_TENKA: TenkaConfig = {
 export function configureTenka(patch: Partial<TenkaConfig>): TenkaConfig {
   Object.assign(DEFAULT_TENKA, patch);
   return DEFAULT_TENKA;
+}
+
+/**
+ * Kami = the rung above Tenka (plan "Kami", 2026-09-13): Tenka's card play
+ * with the rewards phase searched by max^n over every seat's picks instead of
+ * Shōgun's one-reward lookahead. Measured at 5p, 800 mirrored games each:
+ * 56.8 % then 54.3 % vs Shōgun (paired +8.5 ± 6.7), 53.9 % vs Tenka (paired
+ * +7.8 ± 6.6) — the first 5p gain since Tenka; null at 3p (50.5/39.8 vs
+ * Shōgun, identical to Tenka's). Both engines had played the rewards phase
+ * with the same code until now, which is why no trick-phase change ever
+ * moved 5p. `configureTenka` does not touch this object.
+ */
+export const DEFAULT_KAMI: TenkaConfig = {
+  ...DEFAULT_TENKA,
+  rewardsSearch: true,
+};
+
+/** Tune Kami's live defaults (bench and tests). */
+export function configureKami(patch: Partial<TenkaConfig>): TenkaConfig {
+  Object.assign(DEFAULT_KAMI, patch);
+  return DEFAULT_KAMI;
 }
