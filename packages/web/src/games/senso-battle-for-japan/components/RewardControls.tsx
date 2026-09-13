@@ -26,39 +26,9 @@ interface Props {
   slot: RewardSlot | null;
   onPass: () => void;
   /** Contextual explanation of what the map is NOT offering (locked neighbours). */
-  note?: string | null;
 }
 
 const KINDS: RewardKind[] = ["balance", "determination", "aggression"];
-
-function hintFor(picker: PickerState): string {
-  switch (picker.step) {
-    case "kind":
-      return "Choose a reward";
-    case "clan":
-      return picker.kind === "balance" ? "Whose cube will you move?" : "Whose cube will you place?";
-    case "balance-source":
-      return picker.as === undefined
-        ? "Pick one of your cubes"
-        : `Pick a ${CLAN_LABELS[picker.as]} cube to move`;
-    case "balance-dest":
-      return "Swap up, march to a neighbour or push out its lowest cube — or pick another cube";
-    case "target":
-      switch (picker.kind) {
-        case "determination":
-          return "Pick a region to reinforce";
-        case "aggression":
-          return picker.emperor
-            ? "Pick any cube to strike — it leaves the map"
-            : "Pick an enemy cube to strike";
-        case "bonus":
-          return "Place your bonus cube in any region";
-      }
-      return "";
-    default:
-      return "";
-  }
-}
 
 /** The reward the picker is working on, or null at the kind step. */
 function armedKindOf(picker: PickerState): RewardKind | null {
@@ -75,22 +45,29 @@ function armedKindOf(picker: PickerState): RewardKind | null {
   }
 }
 
-/** The acting player's reward chooser — lives in the fan-actions row. */
-export default function RewardControls({ legal, picker, dispatch, slot, onPass, note }: Props) {
+/**
+ * The acting player's reward chooser — ONE row in the fan-actions bar, never
+ * a caption: the map's highlights say what to click. At the Emperor's clan
+ * step the three kind chips give way to the armed kind plus the clan chips,
+ * so the row never wraps.
+ */
+export default function RewardControls({ legal, picker, dispatch, slot, onPass }: Props) {
   const as = pickerAs(picker);
   const pass = passAction(legal);
   const emperor = isEmperorPicker(picker);
   const isBonus = picker.step === "target" && picker.kind === "bonus";
   const armedKind = armedKindOf(picker);
+  const choosingClan = picker.step === "clan";
 
   return (
-    <div className="flex flex-wrap items-center justify-center gap-2">
+    <div className="flex flex-nowrap items-center justify-center gap-2">
       {emperor && (
         <Badge tone="amber" size="xs">
           Emperor
         </Badge>
       )}
       {!isBonus &&
+        !choosingClan &&
         KINDS.map((kind) => {
           const available = kindAvailable(legal, kind);
           return (
@@ -146,8 +123,11 @@ export default function RewardControls({ legal, picker, dispatch, slot, onPass, 
           Cancel
         </Button>
       )}
-      {picker.step === "clan" && (
-        <div className="flex w-full flex-wrap items-center justify-center gap-2">
+      {choosingClan && (
+        <>
+          <Chip pressed tone="amber" size="sm">
+            {REWARD_LABELS[picker.kind]}
+          </Chip>
           {emperorClans(legal, picker.kind).map((clan) => (
             <Chip
               key={clan}
@@ -163,10 +143,8 @@ export default function RewardControls({ legal, picker, dispatch, slot, onPass, 
               {CLAN_KANJI[clan]} {CLAN_LABELS[clan]}
             </Chip>
           ))}
-        </div>
+        </>
       )}
-      <span className="w-full text-center text-2xs text-fg-muted">{hintFor(picker)}</span>
-      {note && <span className="w-full text-center text-2xs text-amber-300">{note}</span>}
     </div>
   );
 }

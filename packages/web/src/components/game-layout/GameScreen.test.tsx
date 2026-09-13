@@ -124,3 +124,33 @@ describe("GameScreen — rails", () => {
     expect(screen.queryByRole("complementary")).toBeNull();
   });
 });
+
+describe("GameScreen — fan tray", () => {
+  let restore: () => void = () => {};
+  afterEach(() => restore());
+
+  it("reserves the same fixed rows for actions and fan whatever they contain", () => {
+    restore = setViewport(true);
+    const { rerender } = render(<Board fanActions={<span>Pass</span>} />);
+    const actions = screen.getByTestId("fan-actions");
+    const slot = screen.getByTestId("fan-slot");
+    expect(actions.className).toContain("h-actions");
+    expect(actions.className).not.toMatch(/min-h-/);
+    expect(slot.className).toContain("h-fan");
+    expect(slot.className).not.toMatch(/min-h-/);
+
+    // A different control and an empty action row leave the rows' classes
+    // alone — the heights are tokens, not functions of the content.
+    rerender(<Board fanActions={<span>Play card</span>} fan={<div>tray</div>} />);
+    expect(screen.getByTestId("fan-actions").className).toContain("h-actions");
+    rerender(<Board fanActions={undefined} />);
+    expect(screen.getByTestId("fan-actions").className).toContain("h-actions");
+    expect(screen.getByTestId("fan-slot").className).toContain("h-fan");
+  });
+
+  it("renders no tray at all when the game has no fan", () => {
+    restore = setViewport(true);
+    render(<Board fan={undefined} fanActions={<div>ignored</div>} />);
+    expect(screen.queryByTestId("fan-tray")).toBeNull();
+  });
+});

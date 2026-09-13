@@ -36,15 +36,26 @@ describe("SensoMap", () => {
     const { container } = render(
       <SensoMap view={view} orientation="landscape" affectedLabel={(seat) => `seat ${seat}`} />,
     );
-    expect(container.querySelectorAll('rect[width="38"]')).toHaveLength(13);
+    expect(container.querySelectorAll('[data-layer="cubes"] rect')).toHaveLength(13);
     expect(container.querySelector("title")?.textContent).toContain("affected by seat 1");
     expect(screen.queryAllByRole("button")).toHaveLength(0);
   });
 
-  it("switches the frozen viewBox with the orientation", () => {
+  it("switches the frozen viewBox with the orientation and turns the painting with it", () => {
     const { container, rerender } = render(<SensoMap view={view} orientation="landscape" />);
-    expect(container.querySelector("svg")?.getAttribute("viewBox")).toBe("0 0 790 500");
+    expect(container.querySelector("svg")?.getAttribute("viewBox")).toBe("0 0 790 445");
+    const landscape = container.querySelector<HTMLImageElement>('img[data-layer="map"]');
+    expect(landscape?.getAttribute("src")).toMatch(/map\.webp$/);
+    // Painted as an HTML image under the SVG, never as an SVG <image>.
+    expect(container.querySelector("svg image")).toBeNull();
     rerender(<SensoMap view={view} orientation="portrait" />);
-    expect(container.querySelector("svg")?.getAttribute("viewBox")).toBe("0 0 600 900");
+    expect(container.querySelector("svg")?.getAttribute("viewBox")).toBe("0 0 445 790");
+    const portrait = container.querySelector<HTMLImageElement>('img[data-layer="map"]');
+    expect(portrait?.getAttribute("src")).toMatch(/map-portrait\.webp$/);
+  });
+
+  it("does not mount the adjust tooling without ?adjust in the URL", () => {
+    const { container } = render(<SensoMap view={view} orientation="landscape" />);
+    expect(container.querySelector('[data-layer="adjust"]')).toBeNull();
   });
 });

@@ -2,7 +2,7 @@ import { CLAN_SHORT } from "@boardgames/core/games/senso-battle-for-japan/types"
 import { useReducedMotion } from "framer-motion";
 import { CLAN_FILL, CLAN_INK, CLAN_STROKE } from "../../colors";
 import type { CubeMap, CubePosition } from "../../logic/cube-identity";
-import { CUBE, CUBE_RADIUS, cubeCenter, type MapLayout } from "./geometry";
+import { CUBE, CUBE_RADIUS, cubeCenter, cubeSize, type MapLayout } from "./geometry";
 
 interface Props {
   cubes: CubeMap;
@@ -14,25 +14,35 @@ interface Props {
 /** Matches the board-primitive spring in feel; CSS so it works on SVG groups. */
 const GLIDE = "transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1)";
 
-function CubeFace({ clan, ghost = false }: { clan: CubePosition["clan"]; ghost?: boolean }) {
+function CubeFace({
+  clan,
+  size,
+  ghost = false,
+}: {
+  clan: CubePosition["clan"];
+  /** Edge length; the face scales with the card it sits on. */
+  size: number;
+  ghost?: boolean;
+}) {
+  const k = size / CUBE;
   return (
     <>
       <rect
-        x={-CUBE / 2}
-        y={-CUBE / 2}
-        width={CUBE}
-        height={CUBE}
-        rx={CUBE_RADIUS}
+        x={-size / 2}
+        y={-size / 2}
+        width={size}
+        height={size}
+        rx={CUBE_RADIUS * k}
         fill={CLAN_FILL[clan]}
         stroke={CLAN_STROKE[clan]}
-        strokeWidth={2}
+        strokeWidth={2 * k}
         strokeDasharray={ghost ? "4 3" : undefined}
         opacity={ghost ? 0.45 : 1}
       />
       <text
         x={0}
-        y={1}
-        fontSize={17}
+        y={1 * k}
+        fontSize={17 * k}
         fontWeight={700}
         fill={CLAN_INK[clan]}
         textAnchor="middle"
@@ -59,12 +69,12 @@ export default function CubeLayer({ cubes, layout, ghost }: Props) {
   const reduceMotion = useReducedMotion();
   const transition = reduceMotion ? undefined : GLIDE;
   return (
-    <g aria-hidden style={{ pointerEvents: "none" }}>
+    <g aria-hidden data-layer="cubes" style={{ pointerEvents: "none" }}>
       {[...cubes].map(([id, cube]) => {
         const at = cubeCenter(layout, cube.region, cube.square);
         return (
           <g key={id} style={{ transform: `translate(${at.x}px, ${at.y}px)`, transition }}>
-            <CubeFace clan={cube.clan} />
+            <CubeFace clan={cube.clan} size={cubeSize(layout, cube.region, cube.square)} />
           </g>
         );
       })}
@@ -74,7 +84,7 @@ export default function CubeLayer({ cubes, layout, ghost }: Props) {
             transform: `translate(${cubeCenter(layout, ghost.region, ghost.square).x}px, ${cubeCenter(layout, ghost.region, ghost.square).y}px)`,
           }}
         >
-          <CubeFace clan={ghost.clan} ghost />
+          <CubeFace clan={ghost.clan} size={cubeSize(layout, ghost.region, ghost.square)} ghost />
         </g>
       )}
     </g>

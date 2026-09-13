@@ -12,6 +12,14 @@ interface Props {
   /** Children inside the <svg> (purely geometric content). */
   children: ReactNode;
   /**
+   * Optional HTML painted BEHIND the <svg> — the board's artwork as a plain
+   * <img>, absolutely positioned to fill the wrapper. Keep imagery out of the
+   * SVG: an SVG <image> is re-rasterised with every vector repaint (each cube
+   * glide, each hover), while an HTML image is decoded once and composited.
+   * Size it with `object-contain` so it lines up with the `meet` viewBox.
+   */
+  underlay?: ReactNode;
+  /**
    * Optional HTML overlay siblings of the <svg>. Rendered inside the coords
    * provider so <BoardOverlay> reads `surfaceSize` / `toScreen` correctly.
    * Use this for text-heavy widgets (HUD readouts, dropdowns, panels).
@@ -40,6 +48,7 @@ export default function BoardSurface({
   "aria-label": ariaLabel,
   className,
   children,
+  underlay,
   overlays,
   svgProps,
 }: Props) {
@@ -70,13 +79,20 @@ export default function BoardSurface({
   return (
     <div ref={wrapperRef} className={className} style={{ position: "relative" }}>
       <BoardCoordsProvider viewBox={viewBox} surfaceSize={size} slotFillIds={slotFillIds}>
+        {underlay}
         <svg
           {...svgProps}
           viewBox={`${viewBox.x} ${viewBox.y} ${viewBox.width} ${viewBox.height}`}
           preserveAspectRatio="xMidYMid meet"
           role="application"
           aria-label={ariaLabel}
-          style={{ display: "block", width: "100%", height: "100%", ...(svgProps?.style ?? {}) }}
+          style={{
+            display: "block",
+            position: "relative",
+            width: "100%",
+            height: "100%",
+            ...(svgProps?.style ?? {}),
+          }}
         >
           <defs>
             <linearGradient id={pilotId} x1="0" y1="0" x2="0" y2="1">

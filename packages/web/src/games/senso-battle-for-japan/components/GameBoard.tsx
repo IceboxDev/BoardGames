@@ -1,4 +1,3 @@
-import { REGIONS } from "@boardgames/core/games/senso-battle-for-japan/map";
 import type {
   Action,
   CardId,
@@ -28,7 +27,6 @@ import {
 } from "../logic/legal";
 import { IDLE, type PickerState, pickerAs, reducePicker } from "../logic/reward-picker";
 import { seatLabel, seatShortLabel } from "../logic/seat-labels";
-import AdvantageStrip from "./AdvantageStrip";
 import { LAYOUTS } from "./board/geometry";
 import { useMapOrientation } from "./board/orientation";
 import SensoMap, { type MapTargetSpec } from "./board/SensoMap";
@@ -36,7 +34,7 @@ import ClanRail from "./ClanRail";
 import PlayerHand from "./PlayerHand";
 import RewardControls from "./RewardControls";
 import TricksTray from "./TricksTray";
-import TrickTable from "./TrickTable";
+import TrickTable from "./table/TrickTable";
 
 interface GameBoardProps {
   view: SensoPlayerView;
@@ -54,6 +52,18 @@ function lowestOccupied(squares: readonly (string | null)[]): number {
   return -1;
 }
 
+/**
+ * The board has two faces and the phase picks one. The TABLE is for the
+ * conflict: the advantage row and the cards played this trick, big, with
+ * nothing competing. The MAP is for the rewards: the painting fills every
+ * pixel the content area has. No manual switch — the game turns the board.
+ */
+type BoardFace = "table" | "map";
+
+function faceForPhase(phase: SensoPlayerView["phase"]): BoardFace {
+  return phase === "trick" || phase === "trick-settle" ? "table" : "map";
+}
+
 export default function GameBoard({
   view,
   legalActions,
@@ -67,6 +77,8 @@ export default function GameBoard({
   const [picker, dispatch] = useReducer(reducePicker, initialPickerState ?? IDLE);
   const wide = useMediaQuery(WIDE_BOARD_QUERY);
   const orientation = useMapOrientation();
+
+  const face = faceForPhase(view.phase);
 
   const me = view.players[view.me];
   const activeSeat = activeSeatOf(view);
@@ -248,25 +260,6 @@ export default function GameBoard({
 
   const pass = useCallback(() => send(passAction(legalActions)), [legalActions, send]);
 
-  // Say in words what the Affected marker is hiding: a neighbour another seat
-  // touched this phase cannot be a destination, and a full neighbour has no
-  // square to march into.
-  const balanceNote = useMemo(() => {
-    if (picker.step !== "balance-dest") return null;
-    const parts: string[] = [];
-    for (const to of REGIONS[picker.from.region].adjacent) {
-      const lock = view.affected.find((a) => a.region === to && a.by !== view.me);
-      if (lock) {
-        parts.push(
-          `Region ${regionLabel(to)} is locked — ${seatShortLabel(view, lock.by, names)} acted there this phase`,
-        );
-      } else if (view.board[to].every((c) => c !== null)) {
-        parts.push(`Region ${regionLabel(to)} is full`);
-      }
-    }
-    return parts.length > 0 ? parts.join(" · ") : null;
-  }, [picker, view, names]);
-
   const activeLabel = activeSeat >= 0 ? seatLabel(view, activeSeat, names) : "";
   const trumpLabel = `${CLAN_KANJI[view.trumpSuit]}`;
 
@@ -308,13 +301,8 @@ export default function GameBoard({
           />
         );
       case "trick-settle":
-        return (
-          <PromptRow
-            title="Conflict"
-            tone="waiting"
-            message={`${view.completedTrick ? seatShortLabel(view, view.completedTrick.winner, names) : ""} wins the conflict`}
-          />
-        );
+        // The winner is announced once, on the table's live status line.
+        return <PromptRow title="Conflict" tone="waiting" pulse message="settling…" />;
       case "rewards":
       case "bonus":
         if (myRewardTurn || myBonusTurn) {
@@ -325,7 +313,6 @@ export default function GameBoard({
               dispatch={dispatch}
               slot={slot}
               onPass={pass}
-              note={balanceNote}
             />
           );
         }
@@ -344,7 +331,6 @@ export default function GameBoard({
     }
   }
 
-  const activeIndex = (view.round - 1) % 4;
   const myTricks = me?.tricksWon ?? 0;
 
   return (
@@ -369,20 +355,16 @@ export default function GameBoard({
       }
       fanActions={fanActions()}
     >
-      <div className="flex min-h-0 flex-1 flex-col gap-3 lg:flex-row">
-        <div className="flex shrink-0 flex-col gap-3 lg:order-last lg:w-64">
-          <AdvantageStrip
-            row={view.advantageRow}
-            active={activeIndex}
-            round={view.round}
-            compact={!wide}
-          />
-          <TrickTable view={view} names={names} className="lg:flex-1" />
-        </div>
-        <div className="flex min-h-0 min-w-0 flex-1 items-center justify-center">
+      <div className="flex min-h-0 flex-1 flex-col">
+        {face === "table" ? (
+          <TrickTable view={view} names={names} fit={wide ? "box" : "width"} />
+        ) : (
+          // Wide: the map is the largest 16:9 box the content area can hold —
+          // the surface fills the area and the painting letterboxes inside it.
+          // Narrow: the map is as wide as the screen and the page scrolls.
           <div
-            className="w-full max-w-4xl"
-            style={{ aspectRatio: LAYOUTS[orientation].aspect, maxHeight: "100%" }}
+            className={wide ? "min-h-0 flex-1" : "w-full"}
+            style={wide ? undefined : { aspectRatio: LAYOUTS[orientation].aspect }}
           >
             <SensoMap
               view={view}
@@ -392,7 +374,7 @@ export default function GameBoard({
               orientation={orientation}
             />
           </div>
-        </div>
+        )}
       </div>
     </GameScreen>
   );

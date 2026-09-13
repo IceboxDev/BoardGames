@@ -249,7 +249,14 @@
   --layout-nav-h: 3rem;
   --layout-board-rail-w: 16rem;
   --layout-history-rail-w: 18rem;
-  --layout-fan-h: 11.875rem;
+  /* The fan tray is the SAME height in every game and every phase: the
+     card fan's 160×240 cards set it (parks' player grid and the D&D tray
+     match). Content that is shorter centres inside it; nothing grows it. */
+  --layout-fan-h: 15rem;
+  /* The action bar above the fan: ONE row of xs buttons / sm chips / a
+     prompt line. Fixed so the board and the fan never move when a control
+     appears or changes; a control must fit the row, never wrap. */
+  --layout-actions-h: 2.25rem;
   /* A playing card's face. Six games each declared `aspect-[2/3]` for
      themselves. */
   --aspect-card: 2 / 3;
@@ -328,6 +335,9 @@
 }
 @utility h-fan {
   height: var(--layout-fan-h);
+}
+@utility h-actions {
+  height: var(--layout-actions-h);
 }
 
 /* Theme-engine fallbacks that are NOT Tailwind theme tokens (no utility

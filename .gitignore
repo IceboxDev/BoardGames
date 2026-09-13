@@ -15,6 +15,9 @@ packages/web/bundle-baseline.html
 packages/web/bundle-after-*.html
 scripts/bgg-new-games.json
 
+# Raw generated card art (multi-MB PNGs); only the optimised webp is committed
+packages/web/art-src/
+
 # BGA bridge dev capture logs
 bga-ingest-debug.jsonl
 bga-capture.jsonl

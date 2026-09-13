@@ -3,7 +3,7 @@ import { buildPlayerView } from "@boardgames/core/games/senso-battle-for-japan/p
 import { getLegalActions } from "@boardgames/core/games/senso-battle-for-japan/rules";
 import type { GameState } from "@boardgames/core/games/senso-battle-for-japan/types";
 import { canonicalEquals } from "@boardgames/core/machines/action-validation";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, render, screen, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import GameBoard from "./GameBoard";
 
@@ -124,7 +124,9 @@ describe("GameBoard — rewards", () => {
     expect(screen.getByText("Emperor")).toBeInTheDocument();
     expect(screen.queryByRole("button", { name: /Takeda/ })).toBeNull();
     fireEvent.click(screen.getByRole("button", { name: /Determination/ }));
-    expect(screen.getByText("Whose cube will you place?")).toBeInTheDocument();
+    // The clan step replaces the kind chips with the armed kind + the clans:
+    // one row, no caption.
+    expect(screen.queryByRole("button", { name: /Balance/ })).toBeNull();
     fireEvent.click(screen.getByRole("button", { name: /Takeda/ }));
     expect(screen.getByRole("button", { name: /as 武田/ })).toBeInTheDocument();
     expect(screen.getAllByRole("button", { name: /Reinforce region/ }).length).toBeGreaterThan(0);
@@ -159,10 +161,37 @@ describe("GameBoard — tricks", () => {
     );
     expect(screen.getByText("Your turn")).toBeInTheDocument();
     expect(screen.getByText(/Lead a card/)).toBeInTheDocument();
-    const [first] = screen.getAllByRole("img", { name: /of (Takeda|Uesugi|Oda|Mōri)|Ninja/ });
+    // The table's own cards sit earlier in the DOM: pick from the hand only.
+    const hand = within(screen.getByTestId("fan-slot"));
+    const [first] = hand.getAllByRole("img", { name: /of (Takeda|Uesugi|Oda|Mōri)|Ninja/ });
     fireEvent.click(first);
     fireEvent.click(screen.getByRole("button", { name: /^Play / }));
     expect(onAction).toHaveBeenCalledTimes(1);
     expect(onAction.mock.calls[0][0]).toMatchObject({ type: "play" });
+  });
+
+  it("announces the conflict winner once, on the table, while the action row says settling", () => {
+    const state = createInitialState(4, [null, "random", "random", "random"], 7);
+    state.phase = "trick-settle";
+    state.completedTrick = {
+      round: 1,
+      trick: 1,
+      plays: state.players.map((p, seat) => ({ seat, card: p.hand[0] })),
+      winner: 2,
+    };
+    const view = buildPlayerView(state, 0);
+    render(
+      <GameBoard
+        view={view}
+        legalActions={[]}
+        isMyTurn={false}
+        isAiThinking={false}
+        playerNames={["Mantas", null, "Aydan", null]}
+        onAction={vi.fn()}
+      />,
+    );
+    expect(screen.getAllByText(/wins the conflict/)).toHaveLength(1);
+    expect(screen.getByText("Aydan wins the conflict")).toHaveAttribute("aria-live", "polite");
+    expect(screen.getByText("settling…")).toBeInTheDocument();
   });
 });

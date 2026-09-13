@@ -1,27 +1,14 @@
 import { isNinja, suitOf } from "@boardgames/core/games/senso-battle-for-japan/deck";
 import type { CardId, Clan } from "@boardgames/core/games/senso-battle-for-japan/types";
-import {
-  CLAN_KANJI,
-  CLAN_LABELS,
-  CLAN_SHORT,
-} from "@boardgames/core/games/senso-battle-for-japan/types";
+import { CLAN_LABELS } from "@boardgames/core/games/senso-battle-for-japan/types";
+import type { CSSProperties } from "react";
 import { cardChrome } from "../../../components/card-fan/card-chrome";
 import { cn } from "../../../lib/cn";
-import {
-  CARD_BACK,
-  CARD_BACK_MON,
-  CARD_PAPER,
-  CARD_PAPER_EDGE,
-  CLAN_ACCENT,
-  CLAN_FILL,
-  CLAN_INK,
-  CLAN_STROKE,
-  NINJA_FILL,
-  NINJA_INK,
-} from "../colors";
-import { cardSpokenLabel, rankGlyph } from "../logic/cards";
-
-export type SensoCardSize = "hand" | "table" | "mini";
+import { CARD_BACK, CARD_BACK_MON, CARD_PAPER, CARD_PAPER_EDGE, CLAN_STROKE } from "../colors";
+import { cardSpokenLabel } from "../logic/cards";
+import CardBack from "./card/CardBack";
+import CardFace from "./card/CardFace";
+import type { SensoCardSize } from "./card/card-layout";
 
 interface SensoCardProps {
   card: CardId;
@@ -29,30 +16,25 @@ interface SensoCardProps {
   selected?: boolean;
   glowing?: boolean;
   disabled?: boolean;
-  /** Mark the advantage suit with the amber corner tab. */
+  /** Mark the advantage suit with the seal and the gold bar under the rank. */
   trump?: Clan | null;
-  /** Advantage-row mini card: the clan only, no rank. */
+  /** Advantage-row card: the clan only, no rank. */
   clanOnly?: boolean;
+  /** Replace the spoken label (e.g. "…, played 2nd by Aydan" on the table). */
+  ariaLabel?: string;
   onClick?: () => void;
   className?: string;
 }
 
+// The face is drawn on the card's own grid (`card/card-layout.ts`) and sized
+// by the card's width, so a size here only decides the box and the level of
+// detail: `hand` and `play` fill whatever box they are given (the fan's 160 px,
+// the table's 120 canvas px), `table` and `mini` are fixed widths.
 const SIZE_CLASSES: Record<SensoCardSize, string> = {
   hand: "w-full aspect-card",
+  play: "w-full aspect-card",
   table: "w-14 sm:w-16 aspect-card",
   mini: "w-9 aspect-card",
-};
-
-const BAND_TEXT: Record<SensoCardSize, string> = {
-  hand: "text-base",
-  table: "text-xs",
-  mini: "text-4xs",
-};
-
-const BODY_TEXT: Record<SensoCardSize, string> = {
-  hand: "text-4xl",
-  table: "text-xl",
-  mini: "text-sm",
 };
 
 export default function SensoCard({
@@ -63,71 +45,35 @@ export default function SensoCard({
   disabled = false,
   trump,
   clanOnly = false,
+  ariaLabel,
   onClick,
   className,
 }: SensoCardProps) {
-  const ninja = isNinja(card);
   const suit = suitOf(card);
-  const band = ninja ? NINJA_FILL[card] : suit ? CLAN_FILL[suit] : CARD_PAPER_EDGE;
-  const ink = ninja ? NINJA_INK : suit ? CLAN_INK[suit] : "#000";
-  const body = ninja ? NINJA_FILL[card] : suit ? CLAN_STROKE[suit] : "#000";
-  const accent = ninja ? NINJA_FILL[card] : suit ? CLAN_ACCENT[suit] : "#000";
-  const kanji = ninja ? "忍" : suit ? CLAN_KANJI[suit] : "";
-  const rank = rankGlyph(card);
-  const isTrump = !ninja && trump != null && suit === trump;
-  const label = clanOnly && suit ? `${CLAN_LABELS[suit]} clan` : cardSpokenLabel(card);
+  const isTrump = !isNinja(card) && trump != null && suit === trump;
+  const label =
+    ariaLabel ?? (clanOnly && suit ? `${CLAN_LABELS[suit]} clan` : cardSpokenLabel(card));
 
-  const inner = (
-    <>
-      <div
-        className={cn(
-          "flex shrink-0 items-center justify-between px-[8%] py-[3%] font-black leading-none",
-          BAND_TEXT[size],
-        )}
-        style={{ background: band, color: ink }}
-      >
-        <span>{clanOnly ? "" : rank}</span>
-        <span className="font-semibold">
-          {ninja ? (card === "ninja-jade" ? "玉" : "木") : suit ? CLAN_SHORT[suit] : ""}
-        </span>
-      </div>
-      <div className="flex min-h-0 flex-1 items-center justify-center">
-        <span
-          className={cn("font-bold leading-none", BODY_TEXT[size], ninja && "tracking-tight")}
-          style={{ color: body }}
-        >
-          {ninja ? "忍" : kanji}
-        </span>
-      </div>
-      {!clanOnly && (
-        <div
-          className={cn(
-            "shrink-0 self-end rotate-180 px-[8%] pb-[3%] font-black leading-none",
-            BAND_TEXT[size],
-          )}
-          style={{ color: accent === "#f5f5f4" ? body : band }}
-        >
-          {rank}
-        </div>
-      )}
-      {isTrump && (
-        <div className="absolute -right-1 -top-1 flex h-4 w-4 items-center justify-center rounded-full bg-amber-400 text-5xs font-bold text-amber-900 shadow">
-          T
-        </div>
-      )}
-    </>
+  // The caller's className is merged last so a `w-full` beats the size's `w-9`
+  // (the advantage row sizes its minis in canvas px).
+  const chrome = cn(
+    cardChrome({
+      size: SIZE_CLASSES[size],
+      rounded: size === "mini" ? "lg" : "xl",
+      selected,
+      glowClass: glowing ? "ring-2 ring-amber-400/80 shadow-glow-amber" : "",
+      disabled,
+      hover: onClick ? "lift" : "none",
+      className: "border text-left",
+    }),
+    className,
   );
-
-  const chrome = cardChrome({
-    size: SIZE_CLASSES[size],
-    rounded: size === "mini" ? "lg" : "xl",
-    selected,
-    glowClass: glowing ? "ring-2 ring-amber-400/80 shadow-glow-amber" : "",
-    disabled,
-    hover: onClick ? "lift" : "none",
-    className: cn("flex flex-col border text-left", className),
-  });
-  const style = { background: CARD_PAPER, borderColor: CARD_PAPER_EDGE };
+  // A clan-only mini has no ribbon or index, so its edge carries the clan.
+  const style: CSSProperties = {
+    background: CARD_PAPER,
+    borderColor: clanOnly && size === "mini" && suit ? CLAN_STROKE[suit] : CARD_PAPER_EDGE,
+  };
+  const face = <CardFace card={card} size={size} clanOnly={clanOnly} trump={isTrump} />;
 
   if (onClick) {
     return (
@@ -141,13 +87,13 @@ export default function SensoCard({
         className={chrome}
         style={style}
       >
-        {inner}
+        {face}
       </button>
     );
   }
   return (
     <div className={chrome} style={style} aria-label={label} role="img">
-      {inner}
+      {face}
     </div>
   );
 }
@@ -159,34 +105,25 @@ export default function SensoCard({
 export function SensoCardBack({
   size = "table",
   className,
+  style,
 }: {
   size?: SensoCardSize;
   className?: string;
+  /** Extra inline sizing — the trick table sizes backs in canvas px. */
+  style?: CSSProperties;
 }) {
   return (
     <div
       aria-hidden
       className={cn(
         SIZE_CLASSES[size],
-        "flex items-center justify-center border shadow-md",
+        "relative overflow-hidden border shadow-md",
         size === "mini" ? "rounded-card-lg" : "rounded-card-xl",
         className,
       )}
-      style={{ background: CARD_BACK, borderColor: CARD_BACK_MON }}
+      style={{ background: CARD_BACK, borderColor: CARD_BACK_MON, ...style }}
     >
-      <span
-        className={cn(
-          "flex items-center justify-center rounded-full border font-bold",
-          size === "hand"
-            ? "h-12 w-12 text-2xl"
-            : size === "table"
-              ? "h-7 w-7 text-sm"
-              : "h-4 w-4 text-4xs",
-        )}
-        style={{ borderColor: CARD_BACK_MON, color: CARD_BACK_MON }}
-      >
-        戦
-      </span>
+      <CardBack size={size} />
     </div>
   );
 }

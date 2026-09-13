@@ -65,9 +65,9 @@ export const ORBIT_SPIN: Transition = {
  * the OS so the dev preview can show the choreography on demand.
  */
 export function useArrivalReducedMotion(): boolean {
+  // `MotionConfigContext` DEFAULTS to "never", so "never" cannot mean "ignore
+  // the OS": only an explicit "always" overrides the user's preference.
   const { reducedMotion } = useContext(MotionConfigContext);
   const os = useReducedMotion() ?? false;
-  if (reducedMotion === "always") return true;
-  if (reducedMotion === "never") return false;
-  return os;
+  return reducedMotion === "always" || os;
 }

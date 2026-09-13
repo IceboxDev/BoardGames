@@ -30,6 +30,15 @@ import { Eyebrow } from "../ui/Label";
 //
 // Rail widths are the `--layout-board-rail-w` / `--layout-history-rail-w`
 // constants (index.css), consumed as `w-board-rail` / `w-history-rail`.
+//
+// ONE GUTTER. Every block — the two rails, the board, the action row, the
+// fan — is separated from its neighbours and from the screen edge by the
+// same `gap-2` / `p-2` (8px), spelled once on the containers, never as
+// per-block margins or paddings. That is what makes the rails' top and
+// bottom edges line up with the board's and the fan's, and the gap beside
+// History equal the gap above the action row. A block's INTERNAL padding
+// (`p-4` inside a rail) is its own business; its distance to anything else
+// is the gutter.
 
 export type GameScreenMobileRails = "sheet" | "none";
 
@@ -51,9 +60,11 @@ interface GameScreenProps {
    *  carry no heading (a panel that draws its own). Defaults to
    *  `leftSidebarTitle`, then "Score". */
   leftSidebarLabel?: string;
-  /** Card hand component (CardFan, PlayerHand, etc.). Pinned to bottom of content area. */
+  /** Card hand component (CardFan, PlayerHand, etc.). Pinned to the bottom
+   *  in a row of fixed height (`--layout-fan-h`); shorter content centres. */
   fan?: ReactNode;
-  /** Controls above the card fan (Confirm button, Pass/Take, status, etc.). */
+  /** Controls above the card fan (Confirm button, Pass/Take, status, etc.).
+   *  ONE row of fixed height (`--layout-actions-h`); never wrap. */
   fanActions?: ReactNode;
   /** Main game board content. */
   children: ReactNode;
@@ -106,16 +117,17 @@ export default function GameScreen({
     // — i.e. the image covers them. Raising GameScreen puts its whole subtree
     // above the image's stacking context so the `bg-surface-950` actually
     // covers the image and the rails / history / fan become visible.
-    <div className={cn("relative z-raised flex min-h-0 flex-1", background)}>
+    <div className={cn("relative z-raised flex min-h-0 flex-1 gap-2 p-2", background)}>
       {/* PC-first layout: the left rail + board sit on top; the fan / controls
           span the full width underneath (from the screen edge to the History
-          rail). History itself spans the complete height on the right. */}
-      <div className="flex min-h-0 min-w-0 flex-1 flex-col">
-        <div className="flex min-h-0 flex-1 px-1 sm:px-4">
+          rail). History itself spans the complete height on the right, so its
+          top and bottom edges are the board's top and the fan's bottom. */}
+      <div className="flex min-h-0 min-w-0 flex-1 flex-col gap-2">
+        <div className="flex min-h-0 flex-1 gap-2">
           {railsInRow && leftSidebar && (
             <aside
               className={cn(
-                "flex w-board-rail shrink-0 flex-col overflow-y-auto bg-surface-900/60 p-4",
+                "flex w-board-rail shrink-0 flex-col overflow-y-auto rounded-card-xl bg-surface-900/60 p-4",
                 DEBUG_LAYOUT && "border-2 border-fuchsia-400 bg-fuchsia-400/10",
               )}
             >
@@ -132,10 +144,11 @@ export default function GameScreen({
           ) : (
             // Phone boards are taller than the viewport, so the content column
             // scrolls below `lg`; desktop boards are built to fit and keep the
-            // overflow visible so nothing inside them gets clipped.
+            // overflow visible so nothing inside them gets clipped. No padding
+            // of its own: the gutter is its distance to everything.
             <div
               className={cn(
-                "flex min-h-0 min-w-0 flex-1 flex-col gap-2 overflow-y-auto px-2 pt-3 sm:px-4 sm:pt-4 lg:overflow-visible",
+                "flex min-h-0 min-w-0 flex-1 flex-col gap-2 overflow-y-auto lg:overflow-visible",
                 contentClassName,
               )}
             >
@@ -151,19 +164,30 @@ export default function GameScreen({
           />
         )}
         {fan != null && (
-          <div className="flex shrink-0 flex-col gap-2 px-4 pb-4 pt-2">
-            {/* min-h (not h) — reserves one button-row of height so the board
-                doesn't jump when actions appear/disappear, but never clips a
-                taller control a game passes in. */}
+          // The tray is a FIXED-height region — the same in every game and
+          // every phase. Both rows are hard heights (`h-actions`, `h-fan`,
+          // the layout tokens in index.css), never min-heights: a control
+          // that appears, a caption that wraps, a hand that empties into a
+          // tray must fit the space it is given, not move the board above
+          // it. Content centres inside each row; a card fan lifting on hover
+          // may paint over the action row (overflow stays visible).
+          <div data-testid="fan-tray" className="flex shrink-0 flex-col gap-2">
             <div
+              data-testid="fan-actions"
               className={cn(
-                "flex min-h-9 items-center justify-center",
+                "flex h-actions shrink-0 items-center justify-center",
                 DEBUG_LAYOUT && "border-2 border-yellow-400 bg-yellow-400/10",
               )}
             >
               {fanActions}
             </div>
-            <div className={cn(DEBUG_LAYOUT && "border-2 border-pink-400 bg-pink-400/10")}>
+            <div
+              data-testid="fan-slot"
+              className={cn(
+                "flex h-fan shrink-0 items-center justify-center",
+                DEBUG_LAYOUT && "border-2 border-pink-400 bg-pink-400/10",
+              )}
+            >
               {fan}
             </div>
           </div>
@@ -172,7 +196,7 @@ export default function GameScreen({
       {railsInRow && sidebar && (
         <aside
           className={cn(
-            "my-2 mr-2 flex w-history-rail shrink-0 flex-col overflow-y-auto rounded-card-xl bg-surface-900/60 p-4",
+            "flex w-history-rail shrink-0 flex-col overflow-y-auto rounded-card-xl bg-surface-900/60 p-4",
             DEBUG_LAYOUT && "border-2 border-cyan-400 bg-cyan-400/10",
           )}
         >
@@ -210,7 +234,7 @@ function RailBar({
   return (
     <div
       data-testid="rail-bar"
-      className="flex shrink-0 items-center justify-center gap-2 border-t border-line px-2 py-1.5"
+      className="flex shrink-0 items-center justify-center gap-2 border-t border-line py-1.5"
     >
       {leftLabel && (
         <Button

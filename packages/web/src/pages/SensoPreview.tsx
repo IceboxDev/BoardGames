@@ -9,7 +9,7 @@ import {
   getActivePlayer,
   getLegalActions,
 } from "@boardgames/core/games/senso-battle-for-japan/rules";
-import type { GameState } from "@boardgames/core/games/senso-battle-for-japan/types";
+import type { AIStrategyId, GameState } from "@boardgames/core/games/senso-battle-for-japan/types";
 import { useEffect, useMemo, useState } from "react";
 import "../games/senso-battle-for-japan/senso.css";
 import GameBoard from "../games/senso-battle-for-japan/components/GameBoard";
@@ -20,7 +20,8 @@ import type { PickerState } from "../games/senso-battle-for-japan/logic/reward-p
 // deterministic mid-game state driven through the actual core engine and AI,
 // no auth / WS. Exists so laptop + phone layouts can be captured headlessly
 // (the DecryptoPreview pattern): /dev/senso-preview?scene=<name>&frame=WxH
-// Scenes: trick | settle | rewards | rewards-balance | rewards-emperor | rewards-emperor-clan |
+// Scenes: trick | trick-2p | trick-3p | trick-5p | trick-lead-ninja | trick-spectate | trick-live |
+//         settle | settle-5p | rewards | rewards-balance | rewards-emperor | rewards-emperor-clan |
 //         rewards-spectate | bonus | gameover | replay (advances one reward
 //         every 700 ms — exercises cube animation; the engine board is printed)
 
@@ -62,6 +63,29 @@ interface Scene {
   picker?: PickerState;
 }
 
+function nPlayer(n: number, seed: number): GameState {
+  const pool: (AIStrategyId | null)[] = [
+    null,
+    "heuristic-v1",
+    "aggressive",
+    "random",
+    "heuristic-v1",
+  ];
+  return createInitialState(n, pool.slice(0, n), seed);
+}
+
+/** A 4-player trick where a Ninja was led (no lead suit). */
+function ninjaLedGame(): GameState {
+  for (let seed = 1; seed < 400; seed++) {
+    const s = driveUntil(
+      fourPlayer(seed),
+      (st) => st.phase === "trick" && st.table.length >= 1 && st.leadSuit === null,
+    );
+    if (s.phase === "trick" && s.leadSuit === null && s.table.length >= 1) return s;
+  }
+  throw new Error("no Ninja-led seed found");
+}
+
 const SCENES: Record<string, () => Scene> = {
   trick: () => ({
     state: driveUntil(
@@ -69,8 +93,30 @@ const SCENES: Record<string, () => Scene> = {
       (s) => s.round >= 2 && s.phase === "trick" && s.turn === 0 && s.table.length >= 2,
     ),
   }),
+  "trick-2p": () => ({
+    state: driveUntil(
+      nPlayer(2, 11),
+      (s) => s.phase === "trick" && s.turn === 0 && s.table.length === 1,
+    ),
+  }),
+  "trick-3p": () => ({
+    state: driveUntil(
+      nPlayer(3, 5),
+      (s) => s.phase === "trick" && s.turn === 0 && s.table.length === 2,
+    ),
+  }),
+  "trick-5p": () => ({
+    state: driveUntil(
+      nPlayer(5, 3),
+      (s) => s.round >= 2 && s.phase === "trick" && s.turn === 0 && s.table.length >= 3,
+    ),
+  }),
+  "trick-lead-ninja": () => ({ state: ninjaLedGame() }),
   settle: () => ({
     state: driveUntil(fourPlayer(7), (s) => s.round >= 2 && s.phase === "trick-settle"),
+  }),
+  "settle-5p": () => ({
+    state: driveUntil(nPlayer(5, 3), (s) => s.round >= 2 && s.phase === "trick-settle"),
   }),
   rewards: () => ({
     state: driveUntil(
@@ -148,6 +194,51 @@ function ReplayScene() {
   );
 }
 
+/**
+ * A live 4-player trick: one engine step every 900 ms, the settle beat held
+ * for 1200 ms like the server's — flight, order chips, the winner's ring, the
+ * sweep into the pile and the pile ticking up, all without a session.
+ */
+function LiveTrickScene() {
+  const [state, setState] = useState(() =>
+    driveUntil(fourPlayer(7), (s) => s.round >= 2 && s.phase === "trick" && s.table.length === 0),
+  );
+  useEffect(() => {
+    const delay = state.phase === "trick-settle" ? 1200 : 900;
+    const id = setTimeout(() => {
+      setState((prev) => {
+        const next = structuredClone(prev);
+        if (next.phase === "game-over") return prev;
+        if (next.phase === "trick-settle") {
+          settleTrick(next);
+          return next;
+        }
+        if (next.phase !== "trick") return prev;
+        const seat = getActivePlayer(next);
+        applyAction(
+          next,
+          pickAiAction(next, seat, next.players[seat].aiStrategy ?? "heuristic-v1"),
+        );
+        return next;
+      });
+    }, delay);
+    return () => clearTimeout(id);
+  }, [state]);
+  const view = buildPlayerView(state, 0);
+  return (
+    <div className="flex h-screen flex-col bg-surface-950">
+      <GameBoard
+        view={view}
+        legalActions={[]}
+        isMyTurn={false}
+        isAiThinking={false}
+        playerNames={NAMES}
+        onAction={() => {}}
+      />
+    </div>
+  );
+}
+
 export default function SensoPreview() {
   const params = new URLSearchParams(window.location.search);
   // ?frame=WxH — render inside an iframe of that CSS size so a headless
@@ -166,10 +257,13 @@ export default function SensoPreview() {
 
   const sceneName = params.get("scene") ?? "rewards";
   if (sceneName === "replay") return <ReplayScene />;
-  const build = SCENES[sceneName] ?? SCENES.rewards;
+  if (sceneName === "trick-live") return <LiveTrickScene />;
+  // A spectator (seat -1) watches the same table from seat 0's side.
+  const spectate = sceneName === "trick-spectate";
+  const build = SCENES[spectate ? "trick" : sceneName] ?? SCENES.rewards;
   const { state, picker } = build();
-  const view = buildPlayerView(state, 0);
-  const legal = getActivePlayer(state) === 0 ? getLegalActions(state) : [];
+  const view = buildPlayerView(state, spectate ? -1 : 0);
+  const legal = !spectate && getActivePlayer(state) === 0 ? getLegalActions(state) : [];
 
   return (
     <div className="flex h-screen flex-col bg-surface-950">
@@ -179,7 +273,7 @@ export default function SensoPreview() {
         <GameBoard
           view={view}
           legalActions={legal}
-          isMyTurn={getActivePlayer(state) === 0}
+          isMyTurn={!spectate && getActivePlayer(state) === 0}
           isAiThinking={false}
           playerNames={NAMES}
           onAction={() => {}}

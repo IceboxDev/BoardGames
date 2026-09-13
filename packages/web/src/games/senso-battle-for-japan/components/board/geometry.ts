@@ -1,12 +1,34 @@
-// Every numeric coordinate of the Sensō map lives here. Two frozen layouts:
-// landscape (rails beside the board) and portrait (phones), each with its own
-// viewBox. Components import from this file and never inline a number.
+// Every numeric coordinate of the Sensō map lives here.
+//
+// The board is the painted map of Japan (`assets/map.webp`, a 16:9 frame).
+// Two frozen layouts share it: landscape (rails beside the board) shows the
+// painting as is; portrait (phones) turns it a quarter turn clockwise so the
+// west→east chain of regions runs top→bottom. Each region is a paper card
+// placed on the painting by a `NodePlacement` — a top-left corner, a uniform
+// scale, and whether its squares stack (column) or sit side by side (row).
+// The placements below were fixed by hand in the dev adjust mode
+// (`/dev/senso-preview?adjust`): drag, resize, copy, paste here.
+//
+// Components import from this file and never inline a number.
 
 import { EDGES, REGIONS } from "@boardgames/core/games/senso-battle-for-japan/map";
 import type { BoardPoint, BoardRect, BoardViewBox } from "../../../../components/board";
 
 export type MapOrientation = "landscape" | "portrait";
+export type NodeArrangement = "column" | "row";
 
+export interface NodePlacement {
+  /** Top-left corner of the card, in viewBox units. */
+  x: number;
+  y: number;
+  /** Uniform scale of the card and everything on it (1 = the stock size). */
+  scale: number;
+  /** Squares stacked top-down with the VP gutter on the left (column), or
+   * side by side under a VP row (row). */
+  arrangement: NodeArrangement;
+}
+
+/** The stock (scale 1) sizes. */
 export const SQUARE = 48;
 export const SQUARE_GAP = 6;
 export const CUBE = 38;
@@ -15,42 +37,73 @@ export const NODE_RADIUS = 10;
 export const BADGE_RADIUS = 12;
 export const HIT_INSET = -3;
 
-/** Landscape node: number badge band, squares stacked top-down, VP gutter on the left. */
-const L_HEAD = 28;
-const L_GUTTER = 14;
-const L_PAD = 8;
-const L_NODE_W = L_GUTTER + L_PAD + SQUARE + L_PAD;
+/** Column card: number badge band, squares stacked top-down, VP gutter on the left. */
+const C_HEAD = 28;
+const C_GUTTER = 14;
+const C_PAD = 8;
+const C_NODE_W = C_GUTTER + C_PAD + SQUARE + C_PAD;
 
-/** Portrait node: badge band + a VP label row, squares side by side. */
-const P_HEAD = 22;
-const P_VP_ROW = 12;
-const P_PAD = 8;
+/** Row card: badge band + a VP label row, squares side by side. */
+const R_HEAD = 22;
+const R_VP_ROW = 12;
+const R_PAD = 8;
 
-const LANDSCAPE_VIEWBOX: BoardViewBox = { x: 0, y: 0, width: 790, height: 500 };
-const PORTRAIT_VIEWBOX: BoardViewBox = { x: 0, y: 0, width: 600, height: 900 };
+/** The painting's frame. The landscape viewBox keeps the painting's aspect
+ * (3344 × 1882 px source); portrait is the same frame turned on its side. */
+export const MAP_IMAGE_ASPECT = 3344 / 1882;
+const LANDSCAPE_VIEWBOX: BoardViewBox = { x: 0, y: 0, width: 790, height: 445 };
+const PORTRAIT_VIEWBOX: BoardViewBox = { x: 0, y: 0, width: 445, height: 790 };
 
-/** Column (landscape) / row (portrait) index per region, and the band. */
-const REGION_SLOT: readonly { col: number; band: "top" | "mid" | "bottom" }[] = [
-  { col: 0, band: "mid" }, // 1
-  { col: 1, band: "mid" }, // 2
-  { col: 2, band: "mid" }, // 3
-  { col: 3, band: "top" }, // 4
-  { col: 3, band: "bottom" }, // 5
-  { col: 4, band: "mid" }, // 6
-  { col: 5, band: "top" }, // 7
-  { col: 5, band: "bottom" }, // 8
-  { col: 6, band: "top" }, // 9
-  { col: 6, band: "bottom" }, // 10
+export const MIN_NODE_SCALE = 0.4;
+export const MAX_NODE_SCALE = 2;
+
+// ── Placements ────────────────────────────────────────────────────────────
+//
+// Index = region (0-based; the rulebook's 1–10). West to east: 1 Kyūshū,
+// 2 Chūgoku, 3 the Kansai hub, 4 north / 5 south of it, 6 Chūbu, 7 north /
+// 8 south, 9 north / 10 south in the east.
+
+export const LANDSCAPE_PLACEMENTS: readonly NodePlacement[] = [
+  { x: 96, y: 239, scale: 0.73, arrangement: "column" }, // 1
+  { x: 182, y: 158, scale: 0.73, arrangement: "column" }, // 2
+  { x: 248, y: 283, scale: 0.73, arrangement: "column" }, // 3
+  { x: 277, y: 201, scale: 0.73, arrangement: "column" }, // 4
+  { x: 365, y: 173, scale: 0.73, arrangement: "column" }, // 5
+  { x: 444, y: 199, scale: 0.73, arrangement: "column" }, // 6
+  { x: 527, y: 225, scale: 0.73, arrangement: "column" }, // 7
+  { x: 520, y: 107, scale: 0.73, arrangement: "column" }, // 8
+  { x: 609, y: 152, scale: 0.73, arrangement: "column" }, // 9
+  { x: 695, y: 30, scale: 0.73, arrangement: "column" }, // 10
 ];
 
-const L_COL_X = [30, 138, 246, 354, 462, 570, 678];
-const L_BAND_Y = { top: 130, mid: 250, bottom: 370 };
+// Derived from the landscape cards above: each centre turned a quarter turn
+// clockwise onto the portrait painting, squares laid in a row. Refine on a
+// phone (or `?frame=411x915`) with the adjust mode when needed.
+export const PORTRAIT_PLACEMENTS: readonly NodePlacement[] = [
+  { x: 73, y: 92, scale: 0.73, arrangement: "row" }, // 1
+  { x: 194, y: 178, scale: 0.73, arrangement: "row" }, // 2
+  { x: 69, y: 244, scale: 0.73, arrangement: "row" }, // 3
+  { x: 190, y: 273, scale: 0.73, arrangement: "row" }, // 4
+  { x: 139, y: 361, scale: 0.73, arrangement: "row" }, // 5
+  { x: 153, y: 440, scale: 0.73, arrangement: "row" }, // 6
+  { x: 87, y: 523, scale: 0.73, arrangement: "row" }, // 7
+  { x: 284, y: 516, scale: 0.73, arrangement: "row" }, // 8
+  { x: 160, y: 605, scale: 0.73, arrangement: "row" }, // 9
+  { x: 282, y: 691, scale: 0.73, arrangement: "row" }, // 10
+];
 
-const P_ROW_Y = [40, 165, 290, 415, 540, 665, 790];
-const P_BAND_X = { top: 110, mid: 300, bottom: 490 };
+export const DEFAULT_PLACEMENTS: Record<MapOrientation, readonly NodePlacement[]> = {
+  landscape: LANDSCAPE_PLACEMENTS,
+  portrait: PORTRAIT_PLACEMENTS,
+};
+
+// ── Layout ────────────────────────────────────────────────────────────────
 
 export interface NodeLayout {
   region: number;
+  placement: NodePlacement;
+  /** The placement's scale, for anything drawn in stock units (text, radii). */
+  scale: number;
   bounds: BoardRect;
   badge: BoardPoint;
   lock: BoardPoint;
@@ -68,59 +121,57 @@ export interface MapLayout {
   edges: { a: BoardPoint; b: BoardPoint; key: string }[];
 }
 
-function landscapeNode(region: number): NodeLayout {
-  const n = REGIONS[region].squares.length;
-  const { col, band } = REGION_SLOT[region];
-  const h = L_HEAD + n * SQUARE + (n - 1) * SQUARE_GAP + L_PAD;
-  const x = L_COL_X[col];
-  const y = Math.round(L_BAND_Y[band] - h / 2);
-  const squares: BoardRect[] = [];
-  const vpLabels: BoardPoint[] = [];
-  for (let i = 0; i < n; i++) {
-    const sy = y + L_HEAD + i * (SQUARE + SQUARE_GAP);
-    squares.push({ x: x + L_GUTTER + L_PAD, y: sy, w: SQUARE, h: SQUARE });
-    vpLabels.push({ x: x + L_GUTTER / 2 + 2, y: sy + SQUARE / 2 });
+/** Stock (scale 1) size of a card with `n` squares. */
+export function stockNodeSize(n: number, arrangement: NodeArrangement): { w: number; h: number } {
+  if (arrangement === "column") {
+    return { w: C_NODE_W, h: C_HEAD + n * SQUARE + (n - 1) * SQUARE_GAP + C_PAD };
   }
   return {
-    region,
-    bounds: { x, y, w: L_NODE_W, h },
-    badge: { x: x + 16, y: y + 14 },
-    lock: { x: x + L_NODE_W - 14, y: y + 14 },
-    squares,
-    vpLabels,
-    center: { x: x + L_NODE_W / 2, y: y + h / 2 },
+    w: R_PAD + n * SQUARE + (n - 1) * SQUARE_GAP + R_PAD,
+    h: R_HEAD + R_VP_ROW + SQUARE + R_PAD,
   };
 }
 
-function portraitNode(region: number): NodeLayout {
+export function buildNode(region: number, placement: NodePlacement): NodeLayout {
   const n = REGIONS[region].squares.length;
-  const { col, band } = REGION_SLOT[region];
-  const w = P_PAD + n * SQUARE + (n - 1) * SQUARE_GAP + P_PAD;
-  const h = P_HEAD + P_VP_ROW + SQUARE + P_PAD;
-  const x = Math.round(P_BAND_X[band] - w / 2);
-  const y = P_ROW_Y[col];
+  const { x, y, scale: s, arrangement } = placement;
+  const stock = stockNodeSize(n, arrangement);
+  const w = stock.w * s;
+  const h = stock.h * s;
   const squares: BoardRect[] = [];
   const vpLabels: BoardPoint[] = [];
-  for (let i = 0; i < n; i++) {
-    const sx = x + P_PAD + i * (SQUARE + SQUARE_GAP);
-    squares.push({ x: sx, y: y + P_HEAD + P_VP_ROW, w: SQUARE, h: SQUARE });
-    vpLabels.push({ x: sx + SQUARE / 2, y: y + P_HEAD + P_VP_ROW / 2 + 1 });
+  if (arrangement === "column") {
+    for (let i = 0; i < n; i++) {
+      const sy = y + (C_HEAD + i * (SQUARE + SQUARE_GAP)) * s;
+      squares.push({ x: x + (C_GUTTER + C_PAD) * s, y: sy, w: SQUARE * s, h: SQUARE * s });
+      vpLabels.push({ x: x + (C_GUTTER / 2 + 2) * s, y: sy + (SQUARE / 2) * s });
+    }
+  } else {
+    for (let i = 0; i < n; i++) {
+      const sx = x + (R_PAD + i * (SQUARE + SQUARE_GAP)) * s;
+      squares.push({ x: sx, y: y + (R_HEAD + R_VP_ROW) * s, w: SQUARE * s, h: SQUARE * s });
+      vpLabels.push({ x: sx + (SQUARE / 2) * s, y: y + (R_HEAD + R_VP_ROW / 2 + 1) * s });
+    }
   }
+  const badgeY = arrangement === "column" ? 14 : 12;
   return {
     region,
+    placement,
+    scale: s,
     bounds: { x, y, w, h },
-    badge: { x: x + 16, y: y + 12 },
-    lock: { x: x + w - 14, y: y + 12 },
+    badge: { x: x + 16 * s, y: y + badgeY * s },
+    lock: { x: x + w - 14 * s, y: y + badgeY * s },
     squares,
     vpLabels,
     center: { x: x + w / 2, y: y + h / 2 },
   };
 }
 
-function build(orientation: MapOrientation): MapLayout {
-  const nodes = REGIONS.map((r) =>
-    orientation === "landscape" ? landscapeNode(r.id) : portraitNode(r.id),
-  );
+export function buildLayout(
+  orientation: MapOrientation,
+  placements: readonly NodePlacement[] = DEFAULT_PLACEMENTS[orientation],
+): MapLayout {
+  const nodes = REGIONS.map((r) => buildNode(r.id, placements[r.id] ?? placements[0]));
   const viewBox = orientation === "landscape" ? LANDSCAPE_VIEWBOX : PORTRAIT_VIEWBOX;
   return {
     orientation,
@@ -132,8 +183,8 @@ function build(orientation: MapOrientation): MapLayout {
 }
 
 export const LAYOUTS: Record<MapOrientation, MapLayout> = {
-  landscape: build("landscape"),
-  portrait: build("portrait"),
+  landscape: buildLayout("landscape"),
+  portrait: buildLayout("portrait"),
 };
 
 export function squareRect(layout: MapLayout, region: number, square: number): BoardRect {
@@ -145,6 +196,24 @@ export function cubeCenter(layout: MapLayout, region: number, square: number): B
   return { x: r.x + r.w / 2, y: r.y + r.h / 2 };
 }
 
+/** A cube fills its square at the stock ratio, whatever the card's scale. */
+export function cubeSize(layout: MapLayout, region: number, square: number): number {
+  return (squareRect(layout, region, square).w * CUBE) / SQUARE;
+}
+
 export function inflate(rect: BoardRect, by: number): BoardRect {
   return { x: rect.x - by, y: rect.y - by, w: rect.w + by * 2, h: rect.h + by * 2 };
+}
+
+/** The placements as a TypeScript literal, ready to paste above. */
+export function placementsToSource(
+  orientation: MapOrientation,
+  placements: readonly NodePlacement[],
+): string {
+  const name = orientation === "landscape" ? "LANDSCAPE_PLACEMENTS" : "PORTRAIT_PLACEMENTS";
+  const rows = placements.map(
+    (p, i) =>
+      `  { x: ${p.x}, y: ${p.y}, scale: ${p.scale}, arrangement: "${p.arrangement}" }, // ${i + 1}`,
+  );
+  return `export const ${name}: readonly NodePlacement[] = [\n${rows.join("\n")}\n];`;
 }

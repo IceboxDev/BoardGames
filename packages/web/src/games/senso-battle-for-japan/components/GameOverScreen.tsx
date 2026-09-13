@@ -2,14 +2,14 @@ import type {
   SensoPlayerView,
   SensoResult,
 } from "@boardgames/core/games/senso-battle-for-japan/types";
-import { CLAN_SHORT, factionLabel } from "@boardgames/core/games/senso-battle-for-japan/types";
+import { factionLabel } from "@boardgames/core/games/senso-battle-for-japan/types";
 import { GameOverLayout, GameOverStats, StatItem } from "../../../components/game-over";
 import { Surface } from "../../../components/ui";
 import { cn } from "../../../lib/cn";
-import { CLAN_FILL, CLAN_INK, EMPEROR_GOLD } from "../colors";
 import { seatLabel } from "../logic/seat-labels";
 import { LAYOUTS } from "./board/geometry";
 import SensoMap from "./board/SensoMap";
+import { SeatMon } from "./SeatMon";
 
 interface Props {
   view: SensoPlayerView;
@@ -92,15 +92,7 @@ export default function GameOverScreen({ view, result, names, onMenu, onPlayAgai
                       <td className="py-1.5 text-fg-muted">{result.placements[seat]}</td>
                       <td className="py-1.5">
                         <span className="inline-flex items-center gap-2">
-                          <span
-                            className="flex h-5 w-5 items-center justify-center rounded-ui-md text-3xs font-bold"
-                            style={{
-                              background: clan === null ? EMPEROR_GOLD : CLAN_FILL[clan],
-                              color: clan === null ? "#2b2200" : CLAN_INK[clan],
-                            }}
-                          >
-                            {clan === null ? "帝" : CLAN_SHORT[clan]}
-                          </span>
+                          <SeatMon clan={clan} size={20} />
                           <span>
                             {seatLabel(view, seat, names)}
                             <span className="ml-1 text-2xs text-fg-muted">

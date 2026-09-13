@@ -38,7 +38,7 @@ Tailwind v4; every color utility compiles to a `var(--color-*)` that `lib/theme/
 - **Lines / fills:** `border-line-soft` / `border-line` / `border-line-strong` (5/10/20%), `ring-line`, `divide-line`; `bg-fill-soft` / `bg-fill` / `bg-fill-strong` (4/6/10%). Never `border-white/10` or `bg-white/5` — those alphas cannot be themed. A stronger white alpha is `fg-strong/NN`.
 - **Radius roles:** `rounded-card-md…3xl` (panels, thumbs, dialogs; scale with `--radius-card-scale`) and `rounded-ui-md/lg` (controls; `--radius-ui-scale`). Never a static `rounded-lg`; `rounded-full` stays literal. Constants in `components/ui/radii.ts`.
 - **Stacking:** `z-lift` (5) / `z-raised` / `z-raised-2` / `z-raised-3` for local ordering inside one component; `z-nav` / `z-overlay` / `z-modal` / `z-tooltip` / `z-takeover` for portaled layers. Never a numeric `z-*` (strict lint).
-- **Layout constants:** `--layout-nav-h` (`h-nav`, `pt-nav`, `top-below-nav`, `min-h-below-nav`), `--layout-board-rail-w` / `--layout-history-rail-w` (`w-board-rail`, `w-history-rail`), `--layout-fan-h` (`h-fan`), `--aspect-card` (`aspect-card`), `max-w-modal-full(-xl/-2xl)`. Add a `@utility` pair rather than a `h-[3rem]` at a call site.
+- **Layout constants:** `--layout-nav-h` (`h-nav`, `pt-nav`, `top-below-nav`, `min-h-below-nav`), `--layout-board-rail-w` / `--layout-history-rail-w` (`w-board-rail`, `w-history-rail`), `--layout-fan-h` (`h-fan`) / `--layout-actions-h` (`h-actions`), `--aspect-card` (`aspect-card`), `max-w-modal-full(-xl/-2xl)`. Add a `@utility` pair rather than a `h-[3rem]` at a call site.
 - **Captions:** `tracking-label` / `tracking-pill` / `tracking-eyebrow` via `<MicroLabel>` / `<Eyebrow>` / `<Badge>`; never `tracking-wider`.
 - New tokens/scales are registered in `lib/cn.ts` (twMerge groups) so `cn()` resolves conflicts.
 
@@ -157,26 +157,26 @@ Every game board uses `GameScreen` from `web/src/components/game-layout/`. This 
 - `sidebar` — history log content (right rail). GameScreen provides the rail chrome (aside, "History" heading, scroll).
 - `leftSidebar` / `leftSidebarTitle` / `leftSidebarLabel` — left rail spanning the board height (score, player list, status track). `leftSidebarTitle` is the wide-screen heading; `leftSidebarLabel` names the phone sheet when the rail draws its own header (durak/exploding-kittens "Players", sky-team "Approach"). Used by lost-cities, durak, exploding-kittens, 7-wonders, sky-team, set, dnd.
 - `fan` — card hand component (CardFan, PlayerHand). Pinned to bottom.
-- `fanActions` — controls above the card fan (Confirm, Pass/Take, status). The row reserves `min-h-9` so the board doesn't jump when actions appear.
+- `fanActions` — controls above the card fan (Confirm, Pass/Take, status). The row is a FIXED one-line `h-actions` and the fan slot a FIXED `h-fan`, identical in every game and phase: content fits the space, the board never moves. A game whose hand empties (Sensō's rewards phase) fills the slot with something else (`TricksTray`) rather than dropping `fan`.
 - `noPadding` — skip padding and flex-col (for edge-to-edge SVG boards)
 - `mobileRails` — `"sheet"` (default) or `"none"`. See "Phone layout" below.
 - `pinSidebars` — legacy escape hatch: rails stay in the row at every width. No game uses it.
 
 **Phone layout (default, no per-game work):** below `lg` (64rem) both rails leave the board row and re-surface in a bottom sheet (`Drawer side="bottom"`) behind a rail bar of pill buttons ("Score"/"History") rendered between the board and the fan tray. The rail content is mounted in exactly one place at a time — the row OR the sheet, decided by `useMediaQuery(WIDE_BOARD_QUERY)` in JS — so stateful rail content is never double-mounted. A game that re-surfaces its rail content inside the board itself (decrypto's `MobilePanels`) passes `mobileRails="none"`. Rail widths are the layout tokens `w-board-rail` / `w-history-rail` (`--layout-board-rail-w`, `--layout-history-rail-w` in `index.css`).
 
-**DOM structure (enforced by GameScreen, wide viewport):**
+**DOM structure (enforced by GameScreen, wide viewport).** ONE gutter: every block is `gap-2` / `p-2` (8px) from its neighbours and the screen edge, spelled on the containers only — no block carries its own margin or outer padding, so the rails' top and bottom edges line up with the board's top and the fan's bottom, and the gap beside History equals the gap above the action row. A rail's `p-4` is internal.
 ```
-GameScreen outer        relative z-raised flex min-h-0 flex-1 [+ background]
-├── Column              flex min-h-0 min-w-0 flex-1 flex-col
-│   ├── Board row       flex min-h-0 flex-1 px-1 sm:px-4
-│   │   ├── <aside>     w-board-rail shrink-0 bg-surface-900/60 p-4     ← only when leftSidebar is set
-│   │   └── Content     flex min-h-0 min-w-0 flex-1 flex-col gap-2 px-2 pt-3 sm:px-4 sm:pt-4 overflow-y-auto lg:overflow-visible [+ contentClassName]
+GameScreen outer        relative z-raised flex min-h-0 flex-1 gap-2 p-2 [+ background]
+├── Column              flex min-h-0 min-w-0 flex-1 flex-col gap-2
+│   ├── Board row       flex min-h-0 flex-1 gap-2
+│   │   ├── <aside>     w-board-rail shrink-0 rounded-card-xl bg-surface-900/60 p-4     ← only when leftSidebar is set
+│   │   └── Content     flex min-h-0 min-w-0 flex-1 flex-col gap-2 overflow-y-auto lg:overflow-visible [+ contentClassName]
 │   │       └── {children}
-│   ├── Rail bar        (narrow only) flex shrink-0 gap-2 border-t border-line px-2 py-1.5
-│   └── Fan area        shrink-0 flex flex-col gap-2 px-4 pb-4 pt-2   ← only when fan is set
-│       ├── {fanActions}   flex min-h-9 items-center justify-center
-│       └── {fan}
-└── <aside>             w-history-rail shrink-0 rounded-card-xl my-2 mr-2 bg-surface-900/60   ← only when sidebar is set
+│   ├── Rail bar        (narrow only) flex shrink-0 gap-2 border-t border-line py-1.5
+│   └── Fan area        shrink-0 flex flex-col gap-2   ← only when fan is set
+│       ├── {fanActions}   flex h-actions shrink-0 items-center justify-center
+│       └── {fan}          flex h-fan shrink-0 items-center justify-center
+└── <aside>             w-history-rail shrink-0 rounded-card-xl bg-surface-900/60 p-4   ← only when sidebar is set
 ```
 
 **Rules:**

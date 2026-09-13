@@ -1,9 +1,9 @@
 import type { SensoPlayerView } from "@boardgames/core/games/senso-battle-for-japan/types";
-import { CLAN_SHORT } from "@boardgames/core/games/senso-battle-for-japan/types";
 import { MicroLabel } from "../../../components/ui";
 import { cn } from "../../../lib/cn";
 import { CLAN_FILL, CLAN_INK, EMPEROR_GOLD } from "../colors";
 import { seatLabel } from "../logic/seat-labels";
+import { SeatMon, TrickPips } from "./SeatMon";
 
 interface Props {
   view: SensoPlayerView;
@@ -18,30 +18,6 @@ const PHASE_LABEL: Record<SensoPlayerView["phase"], string> = {
   bonus: "Bonus cube",
   "game-over": "Final",
 };
-
-/** Seven pips per seat with the 1 / 3 / 5 / 7 reward thresholds ringed. */
-export function TrickPips({ won }: { won: number }) {
-  return (
-    <div className="flex items-center gap-0.5" role="img" aria-label={`${won} conflicts won`}>
-      {Array.from({ length: 7 }, (_, i) => {
-        const n = i + 1;
-        const filled = n <= won;
-        const threshold = n % 2 === 1;
-        return (
-          <span
-            key={n}
-            className={cn(
-              "h-1.5 w-1.5 rounded-full",
-              filled ? "bg-amber-400" : "bg-fill-strong",
-              threshold && !filled && "ring-1 ring-amber-400/50",
-            )}
-          />
-        );
-      })}
-      {won > 7 && <span className="text-4xs text-fg-muted">+{won - 7}</span>}
-    </div>
-  );
-}
 
 export default function ClanRail({ view, names, activeSeat }: Props) {
   return (
@@ -66,15 +42,7 @@ export default function ClanRail({ view, names, activeSeat }: Props) {
                   : "bg-surface-800/60 text-fg-secondary",
               )}
             >
-              <span
-                className="flex h-6 w-6 shrink-0 items-center justify-center rounded-ui-md text-2xs font-bold"
-                style={{
-                  background: p.clan === null ? EMPEROR_GOLD : CLAN_FILL[p.clan],
-                  color: p.clan === null ? "#2b2200" : CLAN_INK[p.clan],
-                }}
-              >
-                {p.clan === null ? "帝" : CLAN_SHORT[p.clan]}
-              </span>
+              <SeatMon clan={p.clan} size={24} />
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-1 truncate font-medium">
                   <span className="truncate">{seatLabel(view, p.index, names)}</span>

@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import CardPreview from "./CardPreview";
 import type { CardFanProps } from "./types";
 import { useFanLayout } from "./use-fan-layout";
+import { PREVIEW_DELAY_MS, useHoverPreview } from "./use-hover-preview";
 
 const SPRING = { type: "spring" as const, stiffness: 300, damping: 25 };
 
@@ -15,14 +16,18 @@ export default function CardFan<T>({
   onCardDragEnd,
   disabled = false,
   maxRotation = 15,
-  previewDelay = 1400,
+  previewDelay = PREVIEW_DELAY_MS,
 }: CardFanProps<T>) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setContainerWidth] = useState(600);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [draggingIndex, setDraggingIndex] = useState<number | null>(null);
-  const [previewCard, setPreviewCard] = useState<T | null>(null);
-  const previewTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const {
+    preview: previewCard,
+    arm: armPreview,
+    cancel: clearPreviewTimer,
+    close: dismissPreview,
+  } = useHoverPreview<T>(previewDelay);
   const didDragRef = useRef(false);
 
   useEffect(() => {
@@ -42,25 +47,14 @@ export default function CardFan<T>({
     containerWidth,
   );
 
-  const clearPreviewTimer = useCallback(() => {
-    if (previewTimerRef.current) {
-      clearTimeout(previewTimerRef.current);
-      previewTimerRef.current = null;
-    }
-  }, []);
-
   const handlePointerEnter = useCallback(
     (index: number) => {
       if (disabled || draggingIndex !== null) return;
       setHoveredIndex(index);
       clearPreviewTimer();
-      if (renderPreview) {
-        previewTimerRef.current = setTimeout(() => {
-          setPreviewCard(cards[index]);
-        }, previewDelay);
-      }
+      if (renderPreview) armPreview(cards[index]);
     },
-    [disabled, draggingIndex, clearPreviewTimer, renderPreview, cards, previewDelay],
+    [disabled, draggingIndex, clearPreviewTimer, armPreview, renderPreview, cards],
   );
 
   const handlePointerLeave = useCallback(() => {
@@ -69,10 +63,9 @@ export default function CardFan<T>({
   }, [clearPreviewTimer]);
 
   const closePreview = useCallback(() => {
-    setPreviewCard(null);
+    dismissPreview();
     setHoveredIndex(null);
-    clearPreviewTimer();
-  }, [clearPreviewTimer]);
+  }, [dismissPreview]);
 
   const handlePointerDown = useCallback(() => {
     didDragRef.current = false;
@@ -81,10 +74,9 @@ export default function CardFan<T>({
   const handleDragStart = useCallback(
     (index: number) => {
       setDraggingIndex(index);
-      clearPreviewTimer();
-      setPreviewCard(null);
+      dismissPreview();
     },
-    [clearPreviewTimer],
+    [dismissPreview],
   );
 
   const handleDrag = useCallback(() => {

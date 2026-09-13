@@ -5,12 +5,13 @@ import { SensoCardBack } from "./SensoCard";
  * Fills the fan slot while the hand is empty (rewards / bonus): the conflicts
  * this seat won, face down, like the physical pile in front of a player.
  * `GameScreen` renders `fanActions` only when `fan` is set, so this keeps the
- * reward controls on screen.
+ * reward controls on screen. The slot's height is GameScreen's fixed fan
+ * height; this centres in it.
  */
 export default function TricksTray({ count }: { count: number }) {
   const shown = Math.min(count, 7);
   return (
-    <div className="flex h-24 items-center justify-center gap-4">
+    <div className="flex h-full items-center justify-center gap-4">
       <MicroLabel>Conflicts won</MicroLabel>
       <div className="flex items-end">
         {Array.from({ length: shown }, (_, i) => (
