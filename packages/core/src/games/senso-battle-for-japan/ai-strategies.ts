@@ -13,7 +13,6 @@ import { type Mode, pickPlay } from "./ai-tricks";
 import { TENKA } from "./mcts";
 import { getLegalActions } from "./rules";
 import type { Action, AIStrategy, AIStrategyId, AiBudget, GameState } from "./types";
-import { AI_STRATEGY_LABELS } from "./types";
 
 // ---------------------------------------------------------------------------
 // Registry
@@ -32,14 +31,8 @@ export function getStrategy(id: string | undefined): AIStrategy {
   return REGISTRY[id ?? DEFAULT_STRATEGY] ?? REGISTRY[DEFAULT_STRATEGY];
 }
 
-/** Strongest first — the lobby and the tournament grid list them in this order. */
-export const ALL_STRATEGIES: { id: AIStrategyId; label: string }[] = [
-  { id: "tenka", label: AI_STRATEGY_LABELS.tenka },
-  { id: "shogun", label: AI_STRATEGY_LABELS.shogun },
-  { id: "heuristic-v1", label: AI_STRATEGY_LABELS["heuristic-v1"] },
-  { id: "aggressive", label: AI_STRATEGY_LABELS.aggressive },
-  { id: "random", label: AI_STRATEGY_LABELS.random },
-];
+/** The ordered id/label list lives in types.ts (bundle hygiene); re-exported for engine-side callers. */
+export { ALL_STRATEGIES } from "./types";
 
 /**
  * Pick the active AI seat's action, guaranteeing a member of the engine's own

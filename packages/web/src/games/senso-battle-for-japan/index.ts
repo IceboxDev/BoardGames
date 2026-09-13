@@ -1,5 +1,7 @@
-import { ALL_STRATEGIES } from "@boardgames/core/games/senso-battle-for-japan/ai-strategies";
-import { AI_STRATEGY_LABELS } from "@boardgames/core/games/senso-battle-for-japan/types";
+import {
+  AI_STRATEGY_LABELS,
+  ALL_STRATEGIES,
+} from "@boardgames/core/games/senso-battle-for-japan/types";
 import { type ComponentType, type LazyExoticComponent, lazy } from "react";
 import type { PlayableModule, ReplayProps } from "../types";
 

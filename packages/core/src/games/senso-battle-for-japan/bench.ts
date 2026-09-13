@@ -1,13 +1,18 @@
 // Local, zero-server strength benchmark — the acceptance tool for AI work.
 //
 //   pnpm --filter @boardgames/core bench -- <A> <B> [--budget-ms 100] [--workers N]
-//        [--protocol quick|full|2p|3p|5p] [--games N] [--cfg '{"determinizations":48}'] [--tenka '{"solvePlies":8}'] [--out scratch/bench]
+//        [--protocol quick|full|2p|3p|5p] [--games N] [--mirror] [--cfg '{"determinizations":48}']
+//        [--tenka '{"solvePlies":8}'] [--out scratch/bench]
 //
 // Seats alternate A,B,A,B… / B,A,B,A… per game so both strategies hold every
 // seat equally often; seeds are a pure function of the game index, so an
-// iteration-capped run (--budget-ms 0) is bit-reproducible. Reports win rates
-// with Wilson 95 % intervals, seat fairness, seat share (3p+), mean score
-// delta and per-decision latency, and writes JSON under scratch/bench/.
+// iteration-capped run (--budget-ms 0) is bit-reproducible. `--mirror` makes
+// games 2k and 2k+1 replay the SAME deal with the seats swapped: the deal's
+// luck cancels inside each pair, and the summary adds the paired A−B win
+// difference with its own standard error (about half the noise of the
+// unpaired rates at the same game count). Reports win rates with Wilson 95 %
+// intervals, seat fairness, seat share (3p+), mean score delta and
+// per-decision latency, and writes JSON under scratch/bench/.
 import { execSync, fork } from "node:child_process";
 import { existsSync, mkdirSync, writeFileSync } from "node:fs";
 import { availableParallelism } from "node:os";
@@ -21,8 +26,11 @@ interface Args {
   workers: number;
   protocol: string;
   games: number | null;
+  mirror: boolean;
   cfg?: Record<string, unknown>;
   tenka?: Record<string, unknown>;
+  /** Patch applied to the `tenka-prev` snapshot too (a shared baseline for both arms). */
+  tenkaPrev?: Record<string, unknown>;
   out: string;
 }
 
@@ -71,6 +79,7 @@ function parseArgs(argv: string[]): Args {
     workers: Math.max(1, availableParallelism() - 1),
     protocol: "quick",
     games: null,
+    mirror: false,
     out: "scratch/bench",
   };
   for (let i = 0; i < argv.length; i++) {
@@ -81,8 +90,10 @@ function parseArgs(argv: string[]): Args {
     else if (arg === "--workers") args.workers = Number(next());
     else if (arg === "--protocol") args.protocol = next();
     else if (arg === "--games") args.games = Number(next());
+    else if (arg === "--mirror") args.mirror = true;
     else if (arg === "--cfg") args.cfg = JSON.parse(next());
     else if (arg === "--tenka") args.tenka = JSON.parse(next());
+    else if (arg === "--tenka-prev") args.tenkaPrev = JSON.parse(next());
     else if (arg === "--out") args.out = next();
     else positional.push(arg);
   }
@@ -111,10 +122,16 @@ const pct = (x: number) => `${(x * 100).toFixed(1)}%`;
 const REPO_ROOT = fileURLToPath(new URL("../../../../..", import.meta.url));
 
 async function runTable(args: Args, table: Table): Promise<Record<string, unknown>> {
-  const games = args.games ?? table.games;
+  let games = args.games ?? table.games;
+  if (args.mirror && games % 2 === 1) games++;
   const workers = Math.max(1, Math.min(args.workers, games));
   const blocks: number[][] = Array.from({ length: workers }, () => []);
   for (let i = 0; i < games; i++) blocks[i % workers].push(i);
+  // Mirror pairs: per pair, A's wins minus B's wins (−2..2).
+  const pairWins: { a: number; b: number }[] = Array.from({ length: games >> 1 }, () => ({
+    a: 0,
+    b: 0,
+  }));
 
   const wins: Record<string, number> = { [args.a]: 0, [args.b]: 0 };
   let draws = 0;
@@ -143,8 +160,10 @@ async function runTable(args: Args, table: Table): Promise<Record<string, unknow
                 players: table.players,
                 indices,
                 budgetMs: args.budgetMs,
+                mirror: args.mirror,
                 cfg: args.cfg,
                 tenka: args.tenka,
+                tenkaPrev: args.tenkaPrev,
               }),
             ],
             {
@@ -161,6 +180,11 @@ async function runTable(args: Args, table: Table): Promise<Record<string, unknow
             seatShareA += aSeats / msg.seats.length;
             if (msg.winnerStrategy === null) draws++;
             else wins[msg.winnerStrategy] = (wins[msg.winnerStrategy] ?? 0) + 1;
+            if (args.mirror) {
+              const pair = pairWins[msg.i >> 1];
+              if (msg.winnerStrategy === args.a) pair.a++;
+              else if (msg.winnerStrategy === args.b) pair.b++;
+            }
             const par = msg.i % 2 === 0 ? parity.even : parity.odd;
             par.games++;
             if (msg.winnerStrategy === args.a) par.wins++;
@@ -210,6 +234,17 @@ async function runTable(args: Args, table: Table): Promise<Record<string, unknow
     return { p50: percentile(sorted, 0.5), p95: percentile(sorted, 0.95), n: sorted.length };
   };
   const wallMs = performance.now() - t0;
+  // Paired statistic: mean over pairs of (A wins − B wins) / 2 = A rate − B rate
+  // per game, with the standard error taken over pairs (the deal is shared).
+  let paired: { delta: number; se: number; pairs: number } | null = null;
+  if (args.mirror) {
+    const d = pairWins.map((p) => (p.a - p.b) / 2);
+    const k = d.length;
+    const mean = d.reduce((x, y) => x + y, 0) / Math.max(1, k);
+    const varSum = d.reduce((x, y) => x + (y - mean) * (y - mean), 0);
+    const se = k > 1 ? Math.sqrt(varSum / (k - 1) / k) : 0;
+    paired = { delta: mean, se, pairs: k };
+  }
   const result = {
     players: table.players,
     games: n,
@@ -239,12 +274,17 @@ async function runTable(args: Args, table: Table): Promise<Record<string, unknow
       sigma: paritySigma,
       flagged: table.players === 2 && parityGap > 2 * paritySigma,
     },
+    mirror: args.mirror,
+    paired,
     wallMs,
   };
   const share =
     table.players > 2 ? ` · A seat-share ${pct(result.seatShareA)} → win-share ${pct(wA / n)}` : "";
+  const pairedText = paired
+    ? ` · paired A−B ${(paired.delta * 100).toFixed(1)} ± ${(1.96 * paired.se * 100).toFixed(1)} pts (${paired.pairs} pairs)`
+    : "";
   console.log(
-    `${table.players}p ${n} games: ${args.a} ${pct(wA / n)} [${pct(loA)}, ${pct(hiA)}] · ${args.b} ${pct(wB / n)} [${pct(loB)}, ${pct(hiB)}] · draws ${draws} · Δscore A−B ${result.scoreDeltaA.toFixed(2)}${share}`,
+    `${table.players}p ${n} games: ${args.a} ${pct(wA / n)} [${pct(loA)}, ${pct(hiA)}] · ${args.b} ${pct(wB / n)} [${pct(loB)}, ${pct(hiB)}] · draws ${draws} · Δscore A−B ${result.scoreDeltaA.toFixed(2)}${share}${pairedText}`,
   );
   console.log(
     `    latency ms p50/p95: ${args.a} ${result.a.latency.p50.toFixed(1)}/${result.a.latency.p95.toFixed(1)} · ${args.b} ${result.b.latency.p50.toFixed(1)}/${result.b.latency.p95.toFixed(1)} · parity gap ${pct(parityGap)}${result.parity.flagged ? " ⚠ seat bias" : ""} · ${(wallMs / 1000).toFixed(0)} s wall`,
@@ -256,7 +296,7 @@ async function main(): Promise<void> {
   const args = parseArgs(process.argv.slice(2));
   const tables = PROTOCOLS[args.protocol];
   console.log(
-    `bench ${args.a} vs ${args.b} · protocol ${args.protocol} · budget ${args.budgetMs} ms · ${args.workers} workers${args.cfg ? ` · cfg ${JSON.stringify(args.cfg)}` : ""}${args.tenka ? ` · tenka ${JSON.stringify(args.tenka)}` : ""}`,
+    `bench ${args.a} vs ${args.b} · protocol ${args.protocol} · budget ${args.budgetMs} ms · ${args.workers} workers${args.mirror ? " · mirrored" : ""}${args.cfg ? ` · cfg ${JSON.stringify(args.cfg)}` : ""}${args.tenka ? ` · tenka ${JSON.stringify(args.tenka)}` : ""}${args.tenkaPrev ? ` · tenka-prev ${JSON.stringify(args.tenkaPrev)}` : ""}`,
   );
   const perTable: Record<string, unknown>[] = [];
   for (const table of tables) perTable.push(await runTable(args, table));
@@ -280,7 +320,9 @@ async function main(): Promise<void> {
         b: args.b,
         protocol: args.protocol,
         budgetMs: args.budgetMs,
+        mirror: args.mirror,
         cfg: args.cfg ?? null,
+        tenkaPrev: args.tenkaPrev ?? null,
         tenka: args.tenka ?? null,
         node: process.version,
         git,

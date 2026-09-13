@@ -287,6 +287,15 @@ export const AI_STRATEGY_DESCRIPTIONS: Record<AIStrategyId, string> = {
     "Weighs every possible deal by how the other hands have actually been played, then plays each card out with a policy learned from search.",
 };
 
+/**
+ * Strongest first — the lobby, the room config and the tournament grid list
+ * them in this order. Pure data here so the browser bundle never imports the
+ * engine (`ai-strategies.ts` pulls in the whole search and its weight tables).
+ */
+export const ALL_STRATEGIES: { id: AIStrategyId; label: string }[] = (
+  ["tenka", "shogun", "heuristic-v1", "aggressive", "random"] as const
+).map((id) => ({ id, label: AI_STRATEGY_LABELS[id] }));
+
 // ---------------------------------------------------------------------------
 // Display constants
 // ---------------------------------------------------------------------------

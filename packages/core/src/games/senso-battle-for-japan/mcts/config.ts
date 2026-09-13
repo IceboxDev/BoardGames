@@ -1,3 +1,5 @@
+import type { LeafMode } from "./leaf-value";
+
 export interface TenkaConfig {
   /** Wall-clock budget per card decision; 0 = run exactly `iterations` (deterministic). */
   timeMs: number;
@@ -30,10 +32,12 @@ export interface TenkaConfig {
   rootSolveDets: number;
   /**
    * Leaf valuation: simulate the rewards phase greedily and score the current
-   * gap (exact), the additive tier table, or the exact simulation scored by the
-   * learned predictor of the FINAL gap (learned; eval-weights.ts).
+   * gap (exact), the additive tier table, the exact simulation scored by the
+   * learned predictor of the FINAL gap (learned; eval-weights.ts), or the tier
+   * table with each cell corrected by the learned round-end net (vround;
+   * vround-features.ts, falls back to tier where no net is trained).
    */
-  leaf: "exact" | "tier" | "learned";
+  leaf: LeafMode;
   /** Collapse indistinguishable opponent cards into one child. */
   opponentBuckets: boolean;
   /**
@@ -50,12 +54,27 @@ export interface TenkaConfig {
   heuristicFirst: boolean;
   /** Probability of a random legal card in playouts. */
   epsilon: number;
+  /**
+   * Softmax temperature for SAMPLING playout cards from the learned policy
+   * (0 = argmax, with `epsilon` uniform noise on top). A stochastic honest
+   * opponent model: the deal average then also averages over the modelled
+   * reply distribution instead of one argmax line per deal.
+   */
+  playoutTemperature: number;
   /** Search the rewards phase by max^n (false = Shōgun's one-reward lookahead). */
   rewardsSearch: boolean;
   /** Rewards-phase max^n: max candidates per pick (iterative deepening up to this). */
   rewardWidth: number;
   /** Wall-clock budget for one reward decision. */
   rewardTimeMs: number;
+  /**
+   * VP-equivalent the rewards max^n credits per cube on the map (leaf and
+   * candidate ranking). 0.02 = the engine's `evalPosition` tie-break; a
+   * logistic fit of P(win) on 500 5p games (2026-09-13) weighed a cube edge
+   * ~6× a point of score, i.e. cubes are future scoring the myopic objective
+   * ignores. Measured as a knob; see NOTES in scratch/bench/kami.
+   */
+  rewardsCubeWeight: number;
   /**
    * Weight sampled deals by the likelihood of the opponents' plays so far under
    * the learned policy at this softmax temperature (0 = off). Paired root only.
@@ -144,6 +163,16 @@ export interface TenkaConfig {
    * comparisons.
    */
   strengthTiebreak: number;
+  /**
+   * Replace the playout's judgement of the round with a learned one: after
+   * `truncatePlies` plies of playout, the expected-tier net (vtrick-features.ts)
+   * predicts each seat's final tier from the dealt world and the leaf becomes
+   * Σ_p Σ_t P_p(t)·cell[s][p][t]. "none" = play every deal to the round end.
+   * Tables without a trained net (vtrick-models.ts) behave as "none".
+   */
+  valueNet: "none" | "expected-tier";
+  /** Playout plies before the value net is asked (0 = right after the root candidate). */
+  truncatePlies: number;
   /** Tree node cap per decision. */
   maxNodes: number;
   /**
@@ -177,9 +206,11 @@ export const DEFAULT_TENKA: TenkaConfig = {
   playout: "learned",
   heuristicFirst: true,
   epsilon: 0.3,
+  playoutTemperature: 0,
   rewardsSearch: false,
   rewardWidth: 6,
   rewardTimeMs: 150,
+  rewardsCubeWeight: 0.02,
   inference: 3,
   inferencePerOpponent: false,
   inferenceFloor: 0.1,
@@ -195,6 +226,8 @@ export const DEFAULT_TENKA: TenkaConfig = {
   playoutModel: "shared",
   opponentModel: "shared",
   strengthTiebreak: 1e-4,
+  valueNet: "none",
+  truncatePlies: 0,
   maxNodes: 1,
   cheat: false,
 };

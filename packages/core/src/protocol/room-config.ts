@@ -1,5 +1,5 @@
 import { DECRYPTO_AI_MODELS } from "../games/decrypto/ai/models";
-import { ALL_STRATEGIES as SENSO_STRATEGIES } from "../games/senso-battle-for-japan/ai-strategies";
+import { ALL_STRATEGIES as SENSO_STRATEGIES } from "../games/senso-battle-for-japan/types";
 
 export interface GameRoomConfig {
   minPlayers: number;

@@ -30,6 +30,8 @@ export interface DetailedGame {
 export interface SimulateOptions {
   budget?: AiBudget;
   keepSamples?: boolean;
+  /** Deal seed override (default `seedForGame(gameIndex)`) — mirrored benches replay a seed with the seats swapped. */
+  seed?: number;
   /** Called after every AI decision (the bench aggregates per phase). */
   onDecision?: (
     seat: number,
@@ -49,7 +51,7 @@ export function simulateGameDetailed(
   gameIndex: number,
   opts: SimulateOptions = {},
 ): DetailedGame {
-  const seed = seedForGame(gameIndex);
+  const seed = opts.seed ?? seedForGame(gameIndex);
   const state = createInitialState(strategies.length, strategies, seed, { log: false });
   const ms: Record<string, DecisionTiming> = {};
   let decisions = 0;

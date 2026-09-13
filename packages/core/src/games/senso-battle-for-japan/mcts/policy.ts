@@ -213,6 +213,43 @@ export function scoreCards(
 
 export const MAX_HIDDEN = 64;
 
+/**
+ * Draw a card from the policy's softmax at temperature `tau` (1 = as fitted;
+ * higher = flatter). `scratch` must hold `count * FEATURES` floats. A stochastic
+ * honest opponent: the playout averages over the modelled reply distribution
+ * instead of committing to the argmax line.
+ */
+export function learnedSamplePlay(
+  f: FastRound,
+  seat: number,
+  buf: Int8Array,
+  count: number,
+  voidMask: Uint8Array,
+  model: PolicyModel,
+  scratch: Float32Array,
+  scores: Float32Array,
+  hidden: Float32Array,
+  rng: () => number,
+  tau: number,
+): number {
+  if (count === 1) return buf[0];
+  policyFeatures(f, seat, buf, count, voidMask, scratch);
+  scoreCards(scratch, count, model, scores, hidden);
+  let max = Number.NEGATIVE_INFINITY;
+  for (let i = 0; i < count; i++) if (scores[i] > max) max = scores[i];
+  let sum = 0;
+  for (let i = 0; i < count; i++) {
+    scores[i] = Math.exp((scores[i] - max) / tau);
+    sum += scores[i];
+  }
+  let u = rng() * sum;
+  for (let i = 0; i < count; i++) {
+    u -= scores[i];
+    if (u <= 0) return buf[i];
+  }
+  return buf[count - 1];
+}
+
 /** argmax of the policy scores; `scratch` must hold `count * FEATURES` floats. */
 export function learnedPickPlay(
   f: FastRound,

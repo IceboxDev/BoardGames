@@ -9,8 +9,12 @@
 import { applyLight, evaluate, kindBias, NO_WEIGHTS } from "../ai-rewards";
 import { addSearchWork } from "../ai-search";
 import { getActivePlayer, getLegalActions } from "../rules";
+import { computeScores, cubesPerSeat } from "../scoring";
 import type { Action, GameState } from "../types";
 import type { TenkaConfig } from "./config";
+
+/** The engine's own cube credit inside `evalPosition` (ai-rewards.ts). */
+const ENGINE_CUBE_WEIGHT = 0.02;
 
 const WIDTHS = [2, 3, 4, 6, 8, 10];
 const DEADLINE = Symbol("deadline");
@@ -21,6 +25,26 @@ interface Ctx {
   deadline: number;
   tt: Map<string, Float64Array>;
   nodes: number;
+  /** VP-equivalent credited per cube on the map (see `TenkaConfig.rewardsCubeWeight`). */
+  cubeWeight: number;
+}
+
+/**
+ * A seat's standing with a configurable cube credit: score − best rival's
+ * score + cubeWeight · (cubes − that rival's cubes). At the engine's 0.02 this
+ * is exactly `evaluate(state, seat, NO_WEIGHTS)`.
+ */
+function standing(state: GameState, seat: number, cubeWeight: number): number {
+  if (cubeWeight === ENGINE_CUBE_WEIGHT) return evaluate(state, seat, NO_WEIGHTS);
+  const scores = computeScores(state);
+  let rival = -1;
+  for (let i = 0; i < scores.length; i++) {
+    if (i === seat) continue;
+    if (rival === -1 || scores[i] > scores[rival]) rival = i;
+  }
+  if (rival === -1) return scores[seat];
+  const cubes = cubesPerSeat(state);
+  return scores[seat] - scores[rival] + cubeWeight * (cubes[seat] - cubes[rival]);
 }
 
 function stateKey(state: GameState): string {
@@ -43,23 +67,29 @@ function inPhase(state: GameState): boolean {
   return state.phase === "rewards" || state.phase === "bonus";
 }
 
-function leafVector(state: GameState, n: number): Float64Array {
+function leafVector(state: GameState, n: number, cubeWeight: number): Float64Array {
   const v = new Float64Array(n);
-  for (let s = 0; s < n; s++) v[s] = evaluate(state, s, NO_WEIGHTS);
+  for (let s = 0; s < n; s++) v[s] = standing(state, s, cubeWeight);
   return v;
 }
 
 /** Candidates for `seat`, best one-ply first: top-`width` rewards, then `pass` when legal. */
-function candidatesFor(state: GameState, legal: Action[], seat: number, width: number): Action[] {
+function candidatesFor(
+  state: GameState,
+  legal: Action[],
+  seat: number,
+  width: number,
+  cubeWeight: number,
+): Action[] {
   const pass = legal.find((a) => a.type === "pass");
   const moves = legal.filter((a): a is Exclude<Action, { type: "pass" }> => a.type !== "pass");
   if (moves.length === 0) return pass ? [pass] : [];
-  const base = evaluate(state, seat, NO_WEIGHTS);
+  const base = standing(state, seat, cubeWeight);
   const ranked = moves
     .map((action) => ({
       action,
       value:
-        evaluate(applyLight(state, action), seat, NO_WEIGHTS) -
+        standing(applyLight(state, action), seat, cubeWeight) -
         base +
         (action.type === "play" || action.type === "bonus-place" ? 0 : kindBias(action)) -
         ("region" in action ? action.region * 1e-4 : 0),
@@ -72,21 +102,21 @@ function candidatesFor(state: GameState, legal: Action[], seat: number, width: n
 }
 
 function maxn(state: GameState, ctx: Ctx): Float64Array {
-  if (!inPhase(state)) return leafVector(state, ctx.n);
+  if (!inPhase(state)) return leafVector(state, ctx.n, ctx.cubeWeight);
   if (ctx.nodes++ % 32 === 31 && performance.now() > ctx.deadline) throw DEADLINE;
   const key = stateKey(state);
   const hit = ctx.tt.get(key);
   if (hit) return hit;
   const seat = getActivePlayer(state);
   const legal = getLegalActions(state);
-  const candidates = candidatesFor(state, legal, seat, ctx.width);
-  if (candidates.length === 0) return leafVector(state, ctx.n);
+  const candidates = candidatesFor(state, legal, seat, ctx.width, ctx.cubeWeight);
+  if (candidates.length === 0) return leafVector(state, ctx.n, ctx.cubeWeight);
   let best: Float64Array | null = null;
   for (const action of candidates) {
     const v = maxn(applyLight(state, action), ctx);
     if (best === null || v[seat] > best[seat] + 1e-9) best = v;
   }
-  const result = best ?? leafVector(state, ctx.n);
+  const result = best ?? leafVector(state, ctx.n, ctx.cubeWeight);
   ctx.tt.set(key, result);
   return result;
 }
@@ -107,8 +137,15 @@ function searchRoot(
   let chosen: { action: Action; width: number; nodes: number } | null = null;
   let totalNodes = 0;
   for (const width of widths) {
-    const ctx: Ctx = { n, width, deadline, tt: new Map(), nodes: 0 };
-    const candidates = candidatesFor(state, legal, seat, width);
+    const ctx: Ctx = {
+      n,
+      width,
+      deadline,
+      tt: new Map(),
+      nodes: 0,
+      cubeWeight: cfg.rewardsCubeWeight,
+    };
+    const candidates = candidatesFor(state, legal, seat, width, cfg.rewardsCubeWeight);
     if (candidates.length === 0) break;
     if (candidates.length === 1) {
       chosen = { action: candidates[0], width, nodes: 0 };
@@ -143,7 +180,12 @@ export function pickRewardTenka(
   const pass = legal.find((a) => a.type === "pass");
   if (legal.length === 1) return legal[0];
   const result = searchRoot(state, legal, seat, cfg);
-  return result?.action ?? candidatesFor(state, legal, seat, 1)[0] ?? pass ?? legal[0];
+  return (
+    result?.action ??
+    candidatesFor(state, legal, seat, 1, cfg.rewardsCubeWeight)[0] ??
+    pass ??
+    legal[0]
+  );
 }
 
 export function pickBonusTenka(
@@ -154,5 +196,7 @@ export function pickBonusTenka(
 ): Action {
   if (legal.length === 1) return legal[0];
   const result = searchRoot(state, legal, seat, cfg);
-  return result?.action ?? candidatesFor(state, legal, seat, 1)[0] ?? legal[0];
+  return (
+    result?.action ?? candidatesFor(state, legal, seat, 1, cfg.rewardsCubeWeight)[0] ?? legal[0]
+  );
 }

@@ -29,9 +29,12 @@ import {
 } from "./fast-round";
 import { createLikelihoodScratch, roundHistory, worldLogWeight } from "./inference";
 import { LeafValuer } from "./leaf-value";
-import { FEATURES, learnedPickPlay, MAX_HIDDEN } from "./policy";
+import { MLP_MAX_WIDTH, mlpForward } from "./mlp";
+import { FEATURES, learnedPickPlay, learnedSamplePlay, MAX_HIDDEN } from "./policy";
 import { opponentModelFor, playoutModelFor } from "./policy-models";
 import { backup, createNode, type TenkaNode, uct } from "./tree";
+import { tierProbabilities, VTRICK_FEATURES, vtrickFeatures } from "./vtrick-features";
+import { vtrickModelFor } from "./vtrick-models";
 
 export interface TenkaStats {
   mode: "forced" | "exact" | "tree";
@@ -117,6 +120,11 @@ export function pickPlayTenka(
   const tau = cfg.inference * (cfg.inferencePerOpponent ? Math.max(1, n - 1) : 1);
   const playoutModel = playoutModelFor(n, cfg.playoutModel);
   const opponentModel = opponentModelFor(n, cfg.opponentModel, cfg.playoutModel);
+  const valueNet = cfg.valueNet === "expected-tier" ? vtrickModelFor(n) : null;
+  const vtFeats = valueNet ? new Float32Array(VTRICK_FEATURES) : null;
+  const vtLogits = new Float32Array(25);
+  const vtProbs = new Float32Array(25);
+  const vtScratch = valueNet ? new Float32Array(2 * MLP_MAX_WIDTH) : null;
   const fixedVoids = cfg.inferenceVoids === "root" ? root.voidMask : null;
 
   // Own candidates: one representative per equivalence class.
@@ -227,19 +235,34 @@ export function pickPlayTenka(
   const seenDeals = new Set<number>();
   const scoreScratch = new Float32Array(13);
   const hiddenScratch = new Float32Array(MAX_HIDDEN);
+  const sampleTau = cfg.playoutTemperature;
   const policy = (s: number, buf: Int8Array, count: number): number =>
     learned
-      ? learnedPickPlay(
-          f,
-          s,
-          buf,
-          count,
-          root.voidMask,
-          playoutModel,
-          featScratch,
-          scoreScratch,
-          hiddenScratch,
-        )
+      ? sampleTau > 0
+        ? learnedSamplePlay(
+            f,
+            s,
+            buf,
+            count,
+            root.voidMask,
+            playoutModel,
+            featScratch,
+            scoreScratch,
+            hiddenScratch,
+            rng,
+            sampleTau,
+          )
+        : learnedPickPlay(
+            f,
+            s,
+            buf,
+            count,
+            root.voidMask,
+            playoutModel,
+            featScratch,
+            scoreScratch,
+            hiddenScratch,
+          )
       : fastPickPlay(f, s, buf, count, cfg.playoutHonest);
   let iterations = 0;
 
@@ -326,8 +349,10 @@ export function pickPlayTenka(
       depth++;
     }
 
-    // Playout with the heuristic policy, then the exact tail.
-    while (f.cardsLeft > cfg.solvePlies) {
+    // Playout with the heuristic policy, then the exact tail — or, with a value
+    // net, `truncatePlies` plies and then the net's expected tiers.
+    let played = 0;
+    while (f.cardsLeft > cfg.solvePlies && (!valueNet || played < cfg.truncatePlies)) {
       const s = f.turn;
       const buf = LEGAL_BUFS[depth];
       const count = legalInto(f, s, buf);
@@ -337,9 +362,17 @@ export function pickPlayTenka(
           : policy(s, buf, count);
       applyFast(f, card);
       depth++;
+      played++;
     }
     if (tt.size > TT_MAX) tt.clear();
-    const v = f.cardsLeft > 0 ? solveExact(f, leaf, tt, depth) : leaf.value(f.tricksWon);
+    let v: Float64Array;
+    if (f.cardsLeft === 0) v = leaf.value(f.tricksWon);
+    else if (valueNet && vtFeats && vtScratch) {
+      vtrickFeatures(f, root.voidMask, state.round, vtFeats);
+      mlpForward(valueNet, vtFeats, vtLogits, vtScratch);
+      tierProbabilities(vtLogits, f, vtProbs);
+      v = leaf.expected(vtProbs, f.tricksWon);
+    } else v = solveExact(f, leaf, tt, depth);
     backup(path, v);
     lastValue = v[seat];
     iterations++;
