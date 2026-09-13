@@ -9,6 +9,7 @@ import { addSearchWork, voidsOf } from "../ai-search";
 import type { Action, GameState } from "../types";
 import { buildKeyTable } from "./action-keys";
 import type { TenkaConfig } from "./config";
+import { PosteriorDealSampler } from "./deal-sampler";
 import { solveExact, solveRootPimc } from "./endgame-solver";
 import {
   applyFast,
@@ -21,15 +22,15 @@ import {
   fastPickPlay,
   legalInto,
   N_CARDS,
+  needOf,
   redeterminize,
   resetFrom,
   strengthOf,
 } from "./fast-round";
-import { roundHistory, worldLogWeight } from "./inference";
+import { createLikelihoodScratch, roundHistory, worldLogWeight } from "./inference";
 import { LeafValuer } from "./leaf-value";
-import { OPPONENT_MODEL } from "./opponent-weights";
 import { FEATURES, learnedPickPlay, MAX_HIDDEN } from "./policy";
-import { POLICY_MODEL } from "./policy-weights";
+import { opponentModelFor, playoutModelFor } from "./policy-models";
 import { backup, createNode, type TenkaNode, uct } from "./tree";
 
 export interface TenkaStats {
@@ -39,6 +40,38 @@ export interface TenkaStats {
   /** Root children: key → [visits, mean value for the root seat]. */
   root: Record<string, [number, number]>;
   ms: number;
+  /** How the deals were drawn ("none" = forced move or cheat). */
+  sampler: "none" | "uniform" | "weighted" | "mcmc";
+  /** Sampled deals the root comparison averaged over. */
+  deals: number;
+  /**
+   * Effective sample size of the deal weights, (Σw)² / Σw² — equals `deals`
+   * when unweighted; collapses towards 1 when a few deals carry all the weight.
+   */
+  ess: number;
+  /** Largest share of the total weight held by one deal. */
+  maxShare: number;
+  /** Distinct deals among `deals` (a chain stuck on one world shows 1). */
+  distinctDeals: number;
+  /** Posterior sampler: Metropolis acceptance rate (1 when not used). */
+  accept: number;
+  /** Posterior sampler: wall-clock spent seeding and burning in. */
+  samplerMs: number;
+}
+
+const NO_SAMPLING: Pick<
+  TenkaStats,
+  "sampler" | "deals" | "ess" | "maxShare" | "distinctDeals" | "accept" | "samplerMs"
+> = { sampler: "none", deals: 0, ess: 0, maxShare: 0, distinctDeals: 0, accept: 1, samplerMs: 0 };
+
+/** Order-independent hash of where the unseen cards landed (distinct-deal counting). */
+function dealHash(f: FastRound, unseen: Int8Array): number {
+  let h = 0x811c9dc5;
+  for (let i = 0; i < unseen.length; i++) {
+    h ^= (f.owner[unseen[i]] + 4) & 0xff;
+    h = Math.imul(h, 0x01000193);
+  }
+  return h >>> 0;
 }
 
 type PlayAction = Extract<Action, { type: "play" }>;
@@ -65,10 +98,10 @@ export function pickPlayTenka(
     action,
     stats: { ...stats, ms: performance.now() - t0 },
   });
-  if (plays.length === 0)
-    return done(legal[0], { mode: "forced", iterations: 0, nodes: 0, root: {} });
-  if (plays.length === 1)
-    return done(plays[0], { mode: "forced", iterations: 0, nodes: 0, root: {} });
+  const forced = (action: Action) =>
+    done(action, { mode: "forced", iterations: 0, nodes: 0, root: {}, ...NO_SAMPLING });
+  if (plays.length === 0) return forced(legal[0]);
+  if (plays.length === 1) return forced(plays[0]);
 
   const n = state.players.length;
   const root = buildRoot(state, seat, voidsOf(state));
@@ -76,11 +109,15 @@ export function pickPlayTenka(
     // Bench diagnostic: every hand known, only the undealt cards stay OUT.
     root.base = fastFromState(state, -1);
     root.unseen = new Int8Array(0);
+    root.need = needOf(root.base, seat);
   }
   const keys = buildKeyTable(root.base, seat, cfg.opponentBuckets);
   const leaf = new LeafValuer(state, cfg.leaf);
   const rng = decisionRng(state, 11);
   const tau = cfg.inference * (cfg.inferencePerOpponent ? Math.max(1, n - 1) : 1);
+  const playoutModel = playoutModelFor(n, cfg.playoutModel);
+  const opponentModel = opponentModelFor(n, cfg.opponentModel, cfg.playoutModel);
+  const fixedVoids = cfg.inferenceVoids === "root" ? root.voidMask : null;
 
   // Own candidates: one representative per equivalence class.
   const candidates: number[] = [];
@@ -98,14 +135,7 @@ export function pickPlayTenka(
     const exact = plays.find((p) => CARD_INDEX[p.card] === rep);
     if (exact) candidateAction.set(rep, exact);
   }
-  if (candidates.length === 1) {
-    return done(candidateAction.get(candidates[0]) as Action, {
-      mode: "forced",
-      iterations: 0,
-      nodes: 0,
-      root: {},
-    });
-  }
+  if (candidates.length === 1) return forced(candidateAction.get(candidates[0]) as Action);
 
   // Short rounds: exact PIMC over sampled worlds (as many as the budget allows).
   const deadline = cfg.timeMs > 0 ? t0 + cfg.timeMs : Number.POSITIVE_INFINITY;
@@ -113,28 +143,11 @@ export function pickPlayTenka(
     let logWeight: ((f: FastRound) => number) | undefined;
     if (cfg.inference > 0 && !cfg.cheat) {
       const hist = roundHistory(state);
-      const h = cloneFast(root.base);
-      const buf = new Int8Array(13);
-      const feats = new Float32Array(13 * FEATURES);
-      const scores = new Float32Array(13);
-      const hidden = new Float32Array(MAX_HIDDEN);
+      const scratch = createLikelihoodScratch(root.base, fixedVoids);
       logWeight = (f) =>
-        worldLogWeight(
-          f,
-          seat,
-          hist,
-          root.voidMask,
-          OPPONENT_MODEL,
-          tau,
-          cfg.inferenceFloor,
-          h,
-          buf,
-          feats,
-          scores,
-          hidden,
-        );
+        worldLogWeight(f, seat, hist, opponentModel, tau, cfg.inferenceFloor, scratch);
     }
-    const { card, totals, dets } = solveRootPimc(
+    const { card, totals, dets, ess, maxShare } = solveRootPimc(
       root,
       candidates,
       cfg.rootSolveDets,
@@ -143,6 +156,7 @@ export function pickPlayTenka(
       deadline,
       4,
       logWeight,
+      cfg.strengthTiebreak,
     );
     addSearchWork(dets);
     const stats: Record<string, [number, number]> = {};
@@ -152,6 +166,13 @@ export function pickPlayTenka(
       iterations: dets,
       nodes: 0,
       root: stats,
+      sampler: cfg.cheat ? "none" : logWeight ? "weighted" : "uniform",
+      deals: dets,
+      ess,
+      maxShare,
+      distinctDeals: dets,
+      accept: 1,
+      samplerMs: 0,
     });
   }
 
@@ -170,11 +191,40 @@ export function pickPlayTenka(
   // Likelihood weighting (paired root only): running log-sum-exp accumulators.
   const inference = cfg.rootPaired && cfg.inference > 0 && !cfg.cheat;
   const hist = inference ? roundHistory(state) : null;
-  const hScratch = inference ? cloneFast(root.base) : null;
+  // The posterior sampler replaces weighting: its deals already follow the
+  // likelihood, so every deal counts once. Pointless before any opponent has
+  // played (the posterior is uniform) — the greedy dealer is cheaper then.
+  const sampler =
+    hist && cfg.sampler === "mcmc" && n >= cfg.samplerMinPlayers && hist.count > 0
+      ? new PosteriorDealSampler(
+          root,
+          hist,
+          opponentModel,
+          {
+            chains: cfg.mcmcChains,
+            burnIn: cfg.mcmcBurnIn,
+            thin: cfg.mcmcThin,
+            cycleMax: cfg.mcmcCycleMax,
+            pairProb: cfg.mcmcPairProb,
+            seedDraws: cfg.mcmcSeedDraws,
+            tau,
+            floor: cfg.inferenceFloor,
+            fixedVoids,
+          },
+          rng,
+        )
+      : null;
+  const weighted = hist !== null && sampler === null;
+  const lScratch = weighted ? createLikelihoodScratch(root.base, fixedVoids) : null;
   const rootW = new Float64Array(candidates.length);
   const rootWV = new Float64Array(candidates.length);
   let maxLog = Number.NEGATIVE_INFINITY;
   let lastValue = 0;
+  // Effective sample size of the deal weights: (Σw)² / Σw², rescaled with maxLog.
+  let sumW = 0;
+  let sumW2 = 0;
+  let deals = 0;
+  const seenDeals = new Set<number>();
   const scoreScratch = new Float32Array(13);
   const hiddenScratch = new Float32Array(MAX_HIDDEN);
   const policy = (s: number, buf: Int8Array, count: number): number =>
@@ -185,7 +235,7 @@ export function pickPlayTenka(
           buf,
           count,
           root.voidMask,
-          POLICY_MODEL,
+          playoutModel,
           featScratch,
           scoreScratch,
           hiddenScratch,
@@ -298,7 +348,27 @@ export function pickPlayTenka(
   while (iterations < cfg.iterations) {
     if (performance.now() > deadline) break;
     resetFrom(f, root.base);
-    if (!cfg.cheat) redeterminize(f, root, rng, scratch);
+    if (sampler) sampler.next(f);
+    else if (!cfg.cheat) redeterminize(f, root, rng, scratch);
+    deals++;
+    seenDeals.add(dealHash(f, root.unseen));
+    let w = 1;
+    if (hist && lScratch) {
+      const logw = worldLogWeight(f, seat, hist, opponentModel, tau, cfg.inferenceFloor, lScratch);
+      if (logw > maxLog) {
+        const scale = Number.isFinite(maxLog) ? Math.exp(maxLog - logw) : 0;
+        for (let k = 0; k < candidates.length; k++) {
+          rootW[k] *= scale;
+          rootWV[k] *= scale;
+        }
+        sumW *= scale;
+        sumW2 *= scale * scale;
+        maxLog = logw;
+      }
+      w = Math.exp(logw - maxLog);
+    }
+    sumW += w;
+    sumW2 += w * w;
     if (!cfg.rootPaired) {
       path.length = 0;
       path.push(tree);
@@ -307,32 +377,6 @@ export function pickPlayTenka(
     }
     // Paired: every root candidate sees this same deal.
     dealt.set(f.owner);
-    let w = 1;
-    if (hist && hScratch) {
-      const logw = worldLogWeight(
-        f,
-        seat,
-        hist,
-        root.voidMask,
-        OPPONENT_MODEL,
-        tau,
-        cfg.inferenceFloor,
-        hScratch,
-        LEGAL_BUFS[0],
-        featScratch,
-        scoreScratch,
-        hiddenScratch,
-      );
-      if (logw > maxLog) {
-        const scale = Number.isFinite(maxLog) ? Math.exp(maxLog - logw) : 0;
-        for (let k = 0; k < candidates.length; k++) {
-          rootW[k] *= scale;
-          rootWV[k] *= scale;
-        }
-        maxLog = logw;
-      }
-      w = Math.exp(logw - maxLog);
-    }
     for (let k = 0; k < candidates.length; k++) {
       if (k > 0) {
         resetFrom(f, root.base);
@@ -370,9 +414,8 @@ export function pickPlayTenka(
     if (inference && rootW[k] > 0) mean = rootWV[k] / rootW[k];
     rootStats[CARD_ID[card]] = [visits, mean];
     // Shōgun's rule: a cheaper card wins unless the dearer one's mean is
-    // clearly better (1e-4 VP per strength unit), so near-tie noise never
-    // spends a high card.
-    const ranked = mean - strengthOf(card, f.trump) * 1e-4;
+    // clearly better, so near-tie noise never spends a high card.
+    const ranked = mean - strengthOf(card, f.trump) * cfg.strengthTiebreak;
     const [primary, secondary, bestPrimary, bestSecondary] = cfg.rootPaired
       ? [ranked, visits, bestMean, bestVisits]
       : [visits, ranked, bestVisits, bestMean];
@@ -393,5 +436,12 @@ export function pickPlayTenka(
     iterations,
     nodes,
     root: rootStats,
+    sampler: cfg.cheat ? "none" : sampler ? "mcmc" : weighted ? "weighted" : "uniform",
+    deals,
+    ess: sumW2 > 0 ? (sumW * sumW) / sumW2 : 0,
+    maxShare: sumW > 0 ? 1 / sumW : 0,
+    distinctDeals: seenDeals.size,
+    accept: sampler ? sampler.acceptRate : 1,
+    samplerMs: sampler ? sampler.stats.seedMs : 0,
   });
 }

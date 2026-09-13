@@ -57,6 +57,79 @@ describe("Tenka", () => {
     expect(b.stats.mode).toBe("tree");
   });
 
+  it("samples deals from the posterior chain when configured, legally and deterministically", () => {
+    const cfg: TenkaConfig = { ...FAST, iterations: 120, sampler: "mcmc", samplerMinPlayers: 2 };
+    for (const players of [2, 3, 5]) {
+      const state = createInitialState(players, Array(players).fill("tenka"), 31);
+      let sampled = 0;
+      let weighted = 0;
+      while (phaseOf(state) !== "game-over" && state.round <= 2) {
+        if (phaseOf(state) === "trick-settle") {
+          settleTrick(state);
+          continue;
+        }
+        const seat = getActivePlayer(state);
+        const legal = getLegalActions(state);
+        let picked: Action;
+        if (phaseOf(state) === "trick") {
+          const a = pickPlayTenka(state, legal, seat, cfg);
+          const b = pickPlayTenka(state, legal, seat, cfg);
+          expect(b.action).toEqual(a.action);
+          expect(b.stats.root).toEqual(a.stats.root);
+          if (a.stats.mode === "tree") {
+            // Paired root: every deal is descended once per candidate.
+            expect(a.stats.deals).toBeGreaterThan(0);
+            expect(a.stats.iterations % a.stats.deals).toBe(0);
+            if (a.stats.sampler === "mcmc") {
+              sampled++;
+              // Unweighted samples: every deal counts once.
+              expect(a.stats.ess).toBeCloseTo(a.stats.deals, 6);
+              expect(a.stats.accept).toBeGreaterThan(0);
+              expect(a.stats.accept).toBeLessThanOrEqual(1);
+            } else {
+              // Before any opponent play the posterior is uniform: the greedy dealer is used.
+              expect(a.stats.sampler).toBe("weighted");
+              expect(a.stats.ess).toBeLessThanOrEqual(a.stats.deals + 1e-9);
+              weighted++;
+            }
+          }
+          picked = a.action;
+        } else {
+          picked = TENKA.pickAction(state, legal, seat);
+        }
+        expect(legal.some((a) => canonicalEquals(a, picked))).toBe(true);
+        applyAction(state, picked);
+      }
+      expect(sampled).toBeGreaterThan(5);
+      expect(weighted).toBeGreaterThan(0);
+    }
+  }, 60_000);
+
+  it("reports the effective sample size of weighted deals", () => {
+    const state = createInitialState(3, ["tenka", "tenka", "tenka"], 31);
+    // Advance into the round so the likelihood has something to weigh.
+    let plies = 0;
+    while (plies < 7) {
+      if (phaseOf(state) === "trick-settle") {
+        settleTrick(state);
+        continue;
+      }
+      applyAction(state, getLegalActions(state)[0]);
+      plies++;
+    }
+    if (phaseOf(state) === "trick-settle") settleTrick(state);
+    const legal = getLegalActions(state);
+    const r = pickPlayTenka(state, legal, state.turn, { ...FAST, iterations: 150 });
+    if (r.stats.mode === "tree") {
+      expect(r.stats.sampler).toBe("weighted");
+      expect(r.stats.iterations % r.stats.deals).toBe(0);
+      expect(r.stats.ess).toBeGreaterThan(1);
+      expect(r.stats.ess).toBeLessThan(r.stats.deals);
+      expect(r.stats.maxShare).toBeGreaterThan(1 / r.stats.deals);
+      expect(r.stats.maxShare).toBeLessThanOrEqual(1);
+    }
+  });
+
   it("collapses to a forced move when every legal card is equivalent", () => {
     const state = createInitialState(2, ["tenka", "tenka"], 4);
     const legal = getLegalActions(state);

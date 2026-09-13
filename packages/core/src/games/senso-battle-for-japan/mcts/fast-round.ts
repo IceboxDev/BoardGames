@@ -350,6 +350,11 @@ export interface RootInfo {
   voidMask: Uint8Array;
   /** Seats to deal, most constrained first. */
   dealOrder: Int8Array;
+  /**
+   * Per seat: unseen cards it must receive — its hand size less the cards
+   * `base` already shows in it (none at a live root; tests reveal some).
+   */
+  need: Uint8Array;
 }
 
 export function buildRoot(state: GameState, me: number, voids: ReadonlySet<string>): RootInfo {
@@ -365,7 +370,25 @@ export function buildRoot(state: GameState, me: number, voids: ReadonlySet<strin
   const others: number[] = [];
   for (let seat = 0; seat < base.n; seat++) if (seat !== me) others.push(seat);
   others.sort((a, b) => popcount(voidMask[b]) - popcount(voidMask[a]));
-  return { me, base, unseen: Int8Array.from(unseen), voidMask, dealOrder: Int8Array.from(others) };
+  return {
+    me,
+    base,
+    unseen: Int8Array.from(unseen),
+    voidMask,
+    dealOrder: Int8Array.from(others),
+    need: needOf(base, me),
+  };
+}
+
+/** Unseen cards each seat other than `me` must be dealt in `base`. */
+export function needOf(base: FastRound, me: number): Uint8Array {
+  const need = new Uint8Array(base.n);
+  for (let seat = 0; seat < base.n; seat++) if (seat !== me) need[seat] = base.handSize[seat];
+  for (let c = 0; c < N_CARDS; c++) {
+    const o = base.owner[c];
+    if (o >= 0 && o !== me) need[o]--;
+  }
+  return need;
 }
 
 function popcount(x: number): number {
@@ -374,43 +397,115 @@ function popcount(x: number): number {
   return n;
 }
 
-function allowed(root: RootInfo, seat: number, card: number): boolean {
+/** May `seat` hold `card` given the voids it has revealed? (A Ninja has no suit.) */
+export function allowed(root: RootInfo, seat: number, card: number): boolean {
   const suit = CARD_SUIT[card];
   return suit < 0 || (root.voidMask[seat] & (1 << suit)) === 0;
 }
 
+/** Does the dealt world respect every revealed void? */
+export function dealRespectsVoids(f: { owner: Int8Array }, root: RootInfo): boolean {
+  for (let i = 0; i < root.unseen.length; i++) {
+    const card = root.unseen[i];
+    const seat = f.owner[card];
+    if (seat >= 0 && !allowed(root, seat, card)) return false;
+  }
+  return true;
+}
+
 /**
  * Deal the unseen cards to the other seats in place, respecting hand sizes
- * and revealed voids (≤ 12 attempts, then unconstrained). `f` must be a copy
- * of `root.base` (call `resetFrom` first).
+ * and revealed voids: 12 greedy attempts (most constrained seat first), then
+ * an exact bipartite matching, so the result is always consistent — the true
+ * deal is, so a consistent one exists. `f` must be a copy of `root.base`
+ * (call `resetFrom` first).
  */
 export function redeterminize(f: FastRound, root: RootInfo, rng: Rng, scratch: Int8Array): void {
   const m = root.unseen.length;
-  for (let attempt = 0; attempt < 13; attempt++) {
-    const constrained = attempt < 12;
-    // Fisher–Yates into the scratch buffer.
-    scratch.set(root.unseen);
-    for (let i = m - 1; i > 0; i--) {
-      const j = Math.floor(rng() * (i + 1));
-      const t = scratch[i];
-      scratch[i] = scratch[j];
-      scratch[j] = t;
-    }
+  for (let attempt = 0; attempt < 12; attempt++) {
+    shuffleUnseen(root, rng, scratch);
     // Mark all unseen as OUT again (a previous attempt may have assigned some).
     for (let i = 0; i < m; i++) f.owner[root.unseen[i]] = OUT;
     let ok = true;
     for (let k = 0; k < root.dealOrder.length && ok; k++) {
       const seat = root.dealOrder[k];
-      let need = f.handSize[seat];
+      let need = root.need[seat];
       for (let i = 0; i < m && need > 0; i++) {
         const card = scratch[i];
         if (f.owner[card] !== OUT) continue;
-        if (constrained && !allowed(root, seat, card)) continue;
+        if (!allowed(root, seat, card)) continue;
         f.owner[card] = seat;
         need--;
       }
       if (need > 0) ok = false;
     }
     if (ok) return;
+  }
+  dealByMatching(f, root, rng, scratch);
+}
+
+function shuffleUnseen(root: RootInfo, rng: Rng, scratch: Int8Array): void {
+  const m = root.unseen.length;
+  scratch.set(root.unseen);
+  for (let i = m - 1; i > 0; i--) {
+    const j = Math.floor(rng() * (i + 1));
+    const t = scratch[i];
+    scratch[i] = scratch[j];
+    scratch[j] = t;
+  }
+}
+
+/**
+ * Exact fallback: assign the unseen cards to the seats by augmenting paths
+ * (Kuhn's algorithm with seat capacities), in a random card order so the
+ * result still varies between calls. The undealt remainder stays OUT.
+ */
+export function dealByMatching(f: FastRound, root: RootInfo, rng: Rng, scratch: Int8Array): void {
+  const m = root.unseen.length;
+  shuffleUnseen(root, rng, scratch);
+  for (let i = 0; i < m; i++) f.owner[root.unseen[i]] = OUT;
+  const seats = root.dealOrder;
+  const fill = new Uint8Array(f.n);
+  const visited = new Uint8Array(f.n);
+  // Can `card` be placed on some seat, evicting and re-placing another card if needed?
+  const place = (card: number): boolean => {
+    for (let k = 0; k < seats.length; k++) {
+      const seat = seats[k];
+      if (visited[seat] || !allowed(root, seat, card)) continue;
+      visited[seat] = 1;
+      if (fill[seat] < root.need[seat]) {
+        f.owner[card] = seat;
+        fill[seat]++;
+        return true;
+      }
+      for (let i = 0; i < m; i++) {
+        const other = scratch[i];
+        if (f.owner[other] !== seat) continue;
+        if (place(other)) {
+          f.owner[card] = seat;
+          return true;
+        }
+      }
+    }
+    return false;
+  };
+  let placed = 0;
+  let need = 0;
+  for (let k = 0; k < seats.length; k++) need += root.need[seats[k]];
+  for (let i = 0; i < m && placed < need; i++) {
+    visited.fill(0);
+    if (place(scratch[i])) placed++;
+  }
+  if (placed < need) {
+    // Cannot happen with truthful voids; fill unconstrained rather than leave a short hand.
+    for (let k = 0; k < seats.length; k++) {
+      const seat = seats[k];
+      for (let i = 0; i < m && fill[seat] < root.need[seat]; i++) {
+        const card = scratch[i];
+        if (f.owner[card] !== OUT) continue;
+        f.owner[card] = seat;
+        fill[seat]++;
+      }
+    }
   }
 }

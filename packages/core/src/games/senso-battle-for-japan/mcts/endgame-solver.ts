@@ -163,7 +163,9 @@ export function solveRootPimc(
   minDets = 4,
   /** Optional deal weight (log scale) — likelihood-weighted PIMC. */
   logWeight?: (f: FastRound) => number,
-): { card: number; totals: Map<number, number>; dets: number } {
+  /** Cheap-card tie-break per strength unit on the mean value (config.strengthTiebreak). */
+  strengthTiebreak = 1e-4,
+): { card: number; totals: Map<number, number>; dets: number; ess: number; maxShare: number } {
   const f = cloneFast(root.base);
   const scratch = new Int8Array(N_CARDS);
   const totals = new Map<number, number>();
@@ -171,6 +173,7 @@ export function solveRootPimc(
   let d = 0;
   let maxLog = Number.NEGATIVE_INFINITY;
   let sumW = 0;
+  let sumW2 = 0;
   for (; d < dets; d++) {
     if (d >= minDets && performance.now() > deadline) break;
     resetFrom(f, root.base);
@@ -182,11 +185,13 @@ export function solveRootPimc(
         const scale = Number.isFinite(maxLog) ? Math.exp(maxLog - logw) : 0;
         for (const c of candidates) totals.set(c, (totals.get(c) ?? 0) * scale);
         sumW *= scale;
+        sumW2 *= scale * scale;
         maxLog = logw;
       }
       w = Math.exp(logw - maxLog);
     }
     sumW += w;
+    sumW2 += w * w;
     const tt = new Map<string, Float64Array>();
     for (const card of candidates) {
       applyFast(f, card);
@@ -199,11 +204,17 @@ export function solveRootPimc(
   let best = candidates[0];
   let bestValue = Number.NEGATIVE_INFINITY;
   for (const card of candidates) {
-    const value = (totals.get(card) ?? 0) - strengthOf(card, f.trump) * 1e-4;
+    const value = (totals.get(card) ?? 0) - strengthOf(card, f.trump) * strengthTiebreak;
     if (value > bestValue) {
       bestValue = value;
       best = card;
     }
   }
-  return { card: best, totals, dets: d };
+  return {
+    card: best,
+    totals,
+    dets: d,
+    ess: sumW2 > 0 ? (sumW * sumW) / sumW2 : 0,
+    maxShare: sumW > 0 ? 1 / sumW : 0,
+  };
 }

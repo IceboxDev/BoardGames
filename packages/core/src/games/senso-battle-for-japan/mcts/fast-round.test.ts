@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import { createRng } from "../../../lib/rng";
 import { lightClone } from "../ai-rewards";
 import { voidsOf } from "../ai-search";
+import { pickPlay } from "../ai-tricks";
 import { applyAction, applyActionTrusted, createInitialState, settleTrick } from "../game-engine";
 import { getLegalActions } from "../rules";
 import { midRound } from "../test-helpers";
@@ -100,6 +101,42 @@ function playRound(players: number, seed: number): void {
 describe("FastRound parity with the engine", () => {
   it.each([2, 3, 4, 5])("plays seeded rounds identically at %i players", (players) => {
     for (let seed = 1; seed <= 40; seed++) playRound(players, seed);
+  });
+
+  it.each([
+    2, 3, 4, 5,
+  ])("the honest fast policy picks Daimyō's card at every decision of %i-player games", (players) => {
+    // Shōgun's rollouts use the engine's Daimyō; Tenka's use this port. Any
+    // divergence would silently change what the search evaluates.
+    let decisions = 0;
+    const buf = new Int8Array(13);
+    for (let seed = 1; seed <= 12; seed++) {
+      const state = createInitialState(players, Array(players).fill(null), seed);
+      const rng = createRng(seed);
+      let guard = 0;
+      while (phaseOf(state) !== "game-over" && guard++ < 3000) {
+        if (phaseOf(state) === "trick-settle") {
+          settleTrick(state);
+          continue;
+        }
+        const legal = getLegalActions(state);
+        if (phaseOf(state) === "trick") {
+          const seat = state.turn;
+          const f = fastFromState(state, -1);
+          const count = legalInto(f, seat, buf);
+          if (count > 1) {
+            const engine = pickPlay(state, legal, seat, "careful");
+            expect(engine.type).toBe("play");
+            if (engine.type === "play") {
+              expect(CARD_ID[fastPickPlay(f, seat, buf, count, true)]).toBe(engine.card);
+            }
+            decisions++;
+          }
+        }
+        applyAction(state, legal[Math.floor(rng() * legal.length)]);
+      }
+    }
+    expect(decisions).toBeGreaterThan(500);
   });
 
   it("undo restores a fully played round to its start", () => {

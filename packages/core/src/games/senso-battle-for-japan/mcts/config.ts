@@ -68,11 +68,82 @@ export interface TenkaConfig {
    */
   inferencePerOpponent: boolean;
   /**
+   * Which voids each replayed opponent decision sees when its likelihood is
+   * scored: "revealed" = the voids public at that moment (what the nets were
+   * fitted on); "root" = the root's final mask at every decision (the
+   * behaviour until 2026-09-13, kept for A/B runs). Measured "root" vs
+   * "revealed" (200 ms): 5p 44.2/55.8, 2p 47.8/50.0, 3p 44.5/45.0 — the
+   * faithful replay is never worse.
+   */
+  inferenceVoids: "revealed" | "root";
+  /**
    * Robustness floor: each observed play's probability is mixed with uniform
    * (p' = (1 − floor)·p + floor / legal), so an opponent whose style the model
    * does not capture cannot zero out every plausible deal.
    */
   inferenceFloor: number;
+  /**
+   * How the paired root obtains its deals. "weighted": uniform deals weighted
+   * by the play likelihood (self-normalised importance sampling). "mcmc": the
+   * posterior deal sampler (deal-sampler.ts) — a Metropolis chain over
+   * consistent deals whose unweighted samples already follow the likelihood,
+   * so the weights cannot collapse onto a handful of deals when several
+   * opponents' plays multiply. Both use `inference`/`inferenceFloor`.
+   *
+   * Measured 2026-09-13 (diag-ess.ts, 200 ms): at the live likelihood the
+   * weighted estimator does NOT collapse — median ESS 981/1543 deals at 2p,
+   * 522/1186 at 3p, 365/990 at 5p (p10 ≥ 134 everywhere) — so the chain
+   * changes nothing there (vs weighted: 3p 46.0/45.0, 5p 52.5/47.5 then
+   * 45.4/54.6, 2p 49.0/48.3). It only pays where the likelihood is sharp
+   * enough to degenerate the weights (τ 1, floor 0.02: 5p median ESS 74,
+   * p10 14): there it recovers ~8 of the 13–15 points such a likelihood costs
+   * the weighted estimator (3p 44.0 vs weighted 39.5; 5p 46.7 vs 42.5) —
+   * but that sharpness is itself a net loss at 3p/5p with the current
+   * opponent nets, so the default stays "weighted". Seeding costs ~6 ms
+   * (p90 13 ms) at 5p and the deal count drops ≤ 20 %; acceptance ≈ 0.7.
+   */
+  sampler: "weighted" | "mcmc";
+  /** Use the "mcmc" sampler only at tables with at least this many seats. */
+  samplerMinPlayers: number;
+  /** Posterior sampler: independent chains, emitted round-robin. */
+  mcmcChains: number;
+  /** Posterior sampler: proposals per chain before the first emission. */
+  mcmcBurnIn: number;
+  /** Posterior sampler: proposals between two emissions of one chain. */
+  mcmcThin: number;
+  /** Posterior sampler: longest card rotation proposed (2 = swaps only). */
+  mcmcCycleMax: number;
+  /** Posterior sampler: probability of proposing a swap rather than a longer rotation. */
+  mcmcPairProb: number;
+  /** Posterior sampler: greedy deals scored and resampled into the chains' starting points. */
+  mcmcSeedDraws: number;
+  /**
+   * Playout net: the shared one or the per-table refit where one exists
+   * (policy-models.ts). The 3p/5p refits (32 hidden units, Shōgun self-play
+   * at that table size) predict Shōgun's card better on fresh games — 3p
+   * 63.0 → 64.8 % top-1, 5p 67.7 → 69.3 % — but measured no strength gain
+   * (2026-09-13, vs the shared net: 3p 44.0/43.5, 5p 51.7/48.3).
+   */
+  playoutModel: "shared" | "per-table";
+  /**
+   * Opponent (deal-likelihood) net: the shared or per-table population net, or
+   * "playout" = the playout net itself (Shōgun-distilled; sharper on Shōgun's
+   * play, blind to other styles) — policy-models.ts. Measured 2026-09-13 vs
+   * the shared net: per-table population 3p 45.5/46.5, 5p 44.6/55.4 (the 5p
+   * refit leans on the Daimyō/Warlord rows and predicts Shōgun worse);
+   * "playout" per-table 3p 49.0/41.5 then 46.0/47.5, 5p 47.5/52.5 — nothing
+   * that survives replication.
+   */
+  opponentModel: "shared" | "per-table" | "playout";
+  /**
+   * Root tie-break: a candidate's mean value is reduced by this much per unit
+   * of card strength, so a cheaper card wins a near-tie and strength stays in
+   * hand. Shōgun subtracts 1e-4 per unit from a SUM over 24 deals, i.e. ~4e-6
+   * per unit on the mean; 1e-4 on the mean (the value used until 2026-09-13)
+   * overrode the ±0.001-per-trick leaf tie-break that decides most 5p
+   * comparisons.
+   */
+  strengthTiebreak: number;
   /** Tree node cap per decision. */
   maxNodes: number;
   /**
@@ -112,6 +183,18 @@ export const DEFAULT_TENKA: TenkaConfig = {
   inference: 3,
   inferencePerOpponent: false,
   inferenceFloor: 0.1,
+  inferenceVoids: "revealed",
+  sampler: "weighted",
+  samplerMinPlayers: 3,
+  mcmcChains: 4,
+  mcmcBurnIn: 48,
+  mcmcThin: 4,
+  mcmcCycleMax: 5,
+  mcmcPairProb: 0.7,
+  mcmcSeedDraws: 32,
+  playoutModel: "shared",
+  opponentModel: "shared",
+  strengthTiebreak: 1e-4,
   maxNodes: 1,
   cheat: false,
 };
