@@ -972,6 +972,54 @@ Every prompt includes the same style directive so the four images form a visuall
 
 ---
 
+## 122. The Hunger
+
+**File:** `packages/web/src/games/the-hunger/assets/thumbnail.png`
+
+> A top-down view of a moonlit hunting-ground board unrolling from the gates of a gothic castle, a spiral track of cobbled paths winding outward through graveyards, sleeping villages, and a walled rose garden toward a distant ruin. Cloaked vampire miniatures in rival colors stalk the track, one already far from home and clutching a plucked crimson rose. Beside the board, a hand of cards fans out — pale human victims with a single red droplet each, snarling familiar bats and wolves, and a stack of face-down deck cards thickening with prey. Scattered around them: a brass pocket watch with its hands creeping toward six, a tarnished goblet, and a guttering candle that has burned nearly to the wick. At the far top edge of the frame, the first cold blush of dawn bleeds over the horizon while the castle doors stand open and waiting. The mood is gluttonous dread — feast fast, and get home before sunrise. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 123. Carcassonne
+
+**File:** `packages/web/src/games/carcassonne/assets/thumbnail.png`
+
+> A top-down view of a rustic oak table at night, lit by a single hanging iron lantern casting a pool of amber light. A medieval landscape grows tile by tile across the wood — square land tiles interlocking into a patchwork of walled cities with red-tiled roofs, winding dirt roads between summer-green hedgerows, a cloister with its little garden, and wide green farmland dotted with haystacks, running off the frame's edges. Tiny wooden meeples in blue, red, yellow, green, and black stand planted on the landscape as knights atop city walls, monks beside the cloister, highwaymen on the roads, and farmers lying flat in the grass. One hand hovers mid-placement, fitting a fresh tile against a half-finished city while a cloth draw bag spills more face-down tiles at one corner. Scattered around: a small scoring track with colored markers, a pewter tankard, a few crumbs of bread, and a couple of unplayed tiles face-down at the periphery. The background fades into the dim blur of a stone hearth and a shuttered window. The mood is pastoral, unhurried, and quietly cutthroat — a countryside claimed one square at a time. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 124. The Castles of Burgundy
+
+**File:** `packages/web/src/games/the-castles-of-burgundy/assets/thumbnail.png`
+
+> A top-down view of a duke's estate board in the Loire valley, a honeycomb of hexagonal spaces slowly filling with painted tiles — dark-green castles with pointed turrets, yellow-ochre knowledge scrolls, grey mines, slate-blue river ships moored along a winding waterway, beige townhouses and watchtowers, and pale-green pastures crowded with pigs, sheep, cattle, and chickens. Two ivory dice showing a three and a five sit beside a small stack of silverling coins and a row of goods tiles in six colors waiting to be shipped. Beyond the estate, a central market board fans out with numbered depots of tiles still up for grabs, a worker-token pile, and a curling scoring track. A quill, a wax-sealed ledger, and a goblet of red wine rest at the corners while late-afternoon light rakes across the vineyard-green tabletop. The mood is patient, prosperous stewardship — a duchy assembled one lucky roll at a time. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 125. Unstable Unicorns
+
+**File:** `packages/web/src/games/unstable-unicorns/assets/thumbnail.png`
+
+> A top-down view of a pastel card table where a player's stable of unicorn cards spreads in a proud row — a chubby baby unicorn, a rainbow-maned unicorn mid-prance, a narwhal in a unicorn disguise, and one deceptively cute unicorn with a sinister little grin and something sharp behind its back. Rainbow sparkles and candy-colored confetti drift across a lavender tablecloth, but a scorched card with a cartoon lightning bolt has just been slapped down in the center, and a bright red interruption card hovers above it, halting the play. A face-down draw pile, a small discard heap, and a hand of glittery cards fanned at the bottom edge frame the scene, while a spilled cup of pink lemonade and a fallen cupcake hint at the chaos of the last turn. The mood is sugary sabotage — adorable on the surface, ruthless underneath. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 126. Spot It! Super Mario
+
+**File:** `packages/web/src/games/spot-it-super-mario/assets/thumbnail.png`
+
+> A top-down view of a bright round card-game tin on a cheerful red tabletop, its lid tossed aside and a stack of circular cards spilling out. Each round card carries a ring of eight small cartoon icons drawn in a chunky retro-arcade style with flat, glossy colors — a gold coin, a smiling white cloud, a red cherry pair, a blue lightning bolt, a pixel heart, a green cactus, a brass key, and a little grinning ghost — arranged at different sizes and angles so no two cards look alike, with other cards showing a treasure chest, a striped beach ball, a rocket, and a cheerful cartoon turtle. Two cards lie face-up in the center with a single shared symbol glowing between them, and two hands race in from opposite edges, one fingertip a hair from slapping the match. Scattered around the tin: a few more circular cards, a handful of chocolate coins as spare change, and a scatter of pixel-square confetti in primary red, blue, and yellow. The mood is fast, loud, and joyful — a split-second reflex race with an old-school video-game glow. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 127. Carcassonne: Winter Edition
+
+**File:** `packages/web/src/games/carcassonne-winter-edition/assets/thumbnail.png`
+
+> A top-down view of a rustic oak table at night, lit by a single hanging iron lantern casting a pool of amber light. A medieval landscape grows tile by tile across the wood — square land tiles interlocking into a patchwork of walled cities with snow-capped red-tiled roofs, frozen dirt roads between bare black hedgerows, a cloister with its little garden under snow, and wide white fields where deer, foxes, and hares wander across the extra winter tiles, running off the frame's edges. Tiny wooden meeples in blue, red, yellow, green, and black stand planted on the landscape as knights atop city walls, monks beside the cloister, highwaymen on the roads, and farmers lying flat in the snow. One hand hovers mid-placement, fitting a fresh tile against a half-finished city while a cloth draw bag spills more face-down tiles at one corner. Scattered around: a small scoring track with colored markers, a pewter tankard, a few crumbs of bread, and a couple of unplayed tiles face-down at the periphery. The background fades into the dim blur of a stone hearth and a shuttered window. The mood is hushed, festive, and quietly cutthroat — the same countryside claimed one square at a time, under fresh snow. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
 # Background Image Prompts
 
 All backgrounds were generated with **ChatGPT (image generation)** on March 18, 2026.
