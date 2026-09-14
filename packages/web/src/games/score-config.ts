@@ -7,6 +7,7 @@ import { JUST_ONE_MAX_SCORE } from "./just-one/scoring";
 // call sites (forms, read-side cards, result badges) keep importing from one place.
 export {
   isPointlessFreeForAll,
+  isSingleWinnerFfa,
   isWinDrawLossFfa,
   lowScoreWinsForSlug,
 } from "@boardgames/core/history/score-config";

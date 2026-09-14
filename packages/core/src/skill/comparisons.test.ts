@@ -51,6 +51,26 @@ describe("matchEvidence — free-for-all", () => {
     expect(ev?.comparisons.every((c) => c.a[0] === "a" && c.score === 1)).toBe(true);
   });
 
+  it("keeps only winner-vs-loser pairs for a plain single-winner game", () => {
+    const outcome: MatchOutcome = {
+      kind: "free-for-all",
+      players: [
+        { ...p("a"), score: 0 },
+        { ...p("b"), score: 0, rank: 1 },
+        { ...p("c"), score: 0 },
+        { ...p("d"), score: 0 },
+      ],
+    };
+    const ev = matchEvidence("unstable-unicorns", outcome);
+    expect(ev?.comparisons).toHaveLength(3);
+    // Pairs are index-ordered, so the crowned player sits on either side;
+    // whichever side, the pair says "b beat the other".
+    for (const c of ev?.comparisons ?? []) {
+      const bWins = c.a[0] === "b" ? c.score : c.b?.[0] === "b" ? 1 - c.score : null;
+      expect(bWins).toBe(1);
+    }
+  });
+
   it("treats a drawn duel as a 0.5 pair", () => {
     const outcome: MatchOutcome = {
       kind: "free-for-all",

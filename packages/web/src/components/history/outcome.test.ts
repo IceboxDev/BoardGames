@@ -17,6 +17,7 @@ import {
   describeJaipurError,
   describeOutcomeError,
   describeResistanceError,
+  describeSingleWinnerError,
   describeVillainousError,
   describeWerewolfError,
   describeWinDrawLossError,
@@ -460,6 +461,25 @@ describe("describeOutcomeError", () => {
       ],
     };
     expect(describeWinDrawLossError(twoCrowns)).toBe("Only one player can win");
+  });
+
+  it("single-winner game (Unstable Unicorns): exactly one crown, no draw", () => {
+    const nobody = ffa({ id: "a", score: 0 }, { id: "b", score: 0 }, { id: "c", score: 0 });
+    expect(describeOutcomeError(nobody, "unstable-unicorns")).toBe("Crown the player who won");
+    expect(
+      describeOutcomeError(
+        villainousFfa({ id: "a", winner: true }, { id: "b" }, { id: "c" }),
+        "unstable-unicorns",
+      ),
+    ).toBeNull();
+    expect(describeSingleWinnerError(villainousFfa({ id: "a", winner: true }))).toBe(
+      "Add at least two players",
+    );
+    expect(
+      describeSingleWinnerError(
+        villainousFfa({ id: "a", winner: true }, { id: "b", winner: true }),
+      ),
+    ).toBe("Only one player can win");
   });
 
   it("last-standing needs ≥2 players and at least one survivor", () => {

@@ -13,7 +13,7 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { defaultKindForSlug } from "../../games/match-kinds";
 import { defaultVariantValue, variantConfigForSlug } from "../../games/match-variants";
-import { coopMaxScoreForSlug, isWinDrawLossFfa } from "../../games/score-config";
+import { coopMaxScoreForSlug, isSingleWinnerFfa, isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
 import { useAdminUsers } from "../../hooks/useAdminUsers.ts";
 import { fetchCalendarLocks } from "../../lib/calendar-locks";
@@ -45,6 +45,7 @@ import { ResistanceForm } from "./forms/ResistanceForm";
 import { ScoredCoopForm } from "./forms/ScoredCoopForm";
 import { SensoForm } from "./forms/SensoForm";
 import { SensoTeamsForm } from "./forms/SensoTeamsForm";
+import { SingleWinnerForm } from "./forms/SingleWinnerForm";
 import { isSensoSlug } from "./forms/senso-standings";
 import { TeamsForm } from "./forms/TeamsForm";
 import { VillainousForm } from "./forms/VillainousForm";
@@ -346,6 +347,12 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
               />
             ) : isWinDrawLossFfa(gameSlug) ? (
               <WinDrawLossForm
+                users={allUsers}
+                value={outcome as MatchOutcomeFreeForAll}
+                onChange={setOutcome}
+              />
+            ) : isSingleWinnerFfa(gameSlug) ? (
+              <SingleWinnerForm
                 users={allUsers}
                 value={outcome as MatchOutcomeFreeForAll}
                 onChange={setOutcome}

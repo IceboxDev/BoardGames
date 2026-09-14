@@ -24,6 +24,10 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   // outcome, not two co-survivors.
   chess: "free-for-all",
   "connect-4": "free-for-all",
+  // Plain single-winner, no points (see isSingleWinnerFfa in core's
+  // score-config) — the generic SingleWinnerForm; listed explicitly for the
+  // same reason as villainous.
+  "unstable-unicorns": "free-for-all",
   // Best-of-three duel with the dedicated round-by-round JaipurForm — listed
   // explicitly (like villainous) so switching to it from a non-FFA game resets
   // the kind and surfaces that form.

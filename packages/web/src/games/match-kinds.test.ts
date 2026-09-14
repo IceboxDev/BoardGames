@@ -19,6 +19,7 @@ describe("defaultKindForSlug", () => {
     ["codenames", "teams"],
     ["chess", "free-for-all"],
     ["connect-4", "free-for-all"],
+    ["unstable-unicorns", "free-for-all"],
     ["chess-for-three", "last-standing"],
     ["dungeon-mayhem", "last-standing"],
     ["exploding-kittens", "last-standing"],

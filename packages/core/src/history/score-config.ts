@@ -17,6 +17,12 @@ const LOW_SCORE_WINS = new Set<string>(["phase-10", "bandit"]);
 const WIN_DRAW_LOSS_FFA_SLUGS = ["chess", "connect-4"] as const;
 const WIN_DRAW_LOSS_FFA = new Set<string>(WIN_DRAW_LOSS_FFA_SLUGS);
 
+// Plain single-winner games: one player is crowned, everyone else lost, no
+// scores, no draw, no role/win-condition to record (unlike Villainous or
+// Lovecraft Letter). The web's generic SingleWinnerForm serves every slug here.
+const SINGLE_WINNER_FFA_SLUGS = ["unstable-unicorns"] as const;
+const SINGLE_WINNER_FFA = new Set<string>(SINGLE_WINNER_FFA_SLUGS);
+
 export function lowScoreWinsForSlug(slug: string | null | undefined): boolean {
   return !!slug && LOW_SCORE_WINS.has(slug);
 }
@@ -32,6 +38,7 @@ const POINTLESS_FFA = new Set<string>([
   "villainous-introduction-to-evil",
   "lovecraft-letter",
   ...WIN_DRAW_LOSS_FFA_SLUGS,
+  ...SINGLE_WINNER_FFA_SLUGS,
 ]);
 
 export function isPointlessFreeForAll(slug: string | null | undefined): boolean {
@@ -47,4 +54,13 @@ export function isPointlessFreeForAll(slug: string | null | undefined): boolean 
  */
 export function isWinDrawLossFfa(slug: string | null | undefined): boolean {
   return !!slug && WIN_DRAW_LOSS_FFA.has(slug);
+}
+
+/**
+ * Plain single-winner games (Unstable Unicorns): a point-less free-for-all
+ * whose only outcome is one crowned winner (`rank: 1`) — no draw, no role.
+ * Drives the web's generic single-winner form and validator.
+ */
+export function isSingleWinnerFfa(slug: string | null | undefined): boolean {
+  return !!slug && SINGLE_WINNER_FFA.has(slug);
 }

@@ -23,7 +23,7 @@ import type {
   Participant,
 } from "@boardgames/core/history/types";
 import { JAIPUR_BEST_OF_ONE } from "../../games/match-variants";
-import { coopMaxScoreForSlug, isWinDrawLossFfa } from "../../games/score-config";
+import { coopMaxScoreForSlug, isSingleWinnerFfa, isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
 import { isDndSlug } from "./dnd";
 import {
@@ -157,6 +157,7 @@ export function describeOutcomeError(
       if (isVillainousSlug(gameSlug)) return describeVillainousError(outcome);
       if (gameSlug === "lovecraft-letter") return describeLovecraftLetterError(outcome);
       if (isWinDrawLossFfa(gameSlug)) return describeWinDrawLossError(outcome);
+      if (isSingleWinnerFfa(gameSlug)) return describeSingleWinnerError(outcome);
       if (gameSlug === "jaipur") return describeJaipurError(outcome);
       if (isSensoSlug(gameSlug)) return describeSensoFfaError(outcome);
       if (outcome.players.length < 2) return "Add at least two players";
@@ -283,6 +284,18 @@ export function describeWinDrawLossError(outcome: MatchOutcomeFreeForAll): strin
   if (outcome.draw) return null;
   const winners = outcome.players.filter((p) => p.rank === 1);
   if (winners.length === 0) return "Crown the winner — or call it a draw";
+  if (winners.length > 1) return "Only one player can win";
+  return null;
+}
+
+/**
+ * Plain single-winner games (Unstable Unicorns): a point-less free-for-all
+ * with exactly one crowned player (`rank: 1`) and no draw.
+ */
+export function describeSingleWinnerError(outcome: MatchOutcomeFreeForAll): string | null {
+  if (outcome.players.length < 2) return "Add at least two players";
+  const winners = outcome.players.filter((p) => p.rank === 1);
+  if (winners.length === 0) return "Crown the player who won";
   if (winners.length > 1) return "Only one player can win";
   return null;
 }
