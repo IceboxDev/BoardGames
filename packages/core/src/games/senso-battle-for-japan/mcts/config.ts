@@ -261,6 +261,10 @@ export function configureTenka(patch: Partial<TenkaConfig>): TenkaConfig {
 export const DEFAULT_KAMI: TenkaConfig = {
   ...DEFAULT_TENKA,
   rewardsSearch: true,
+  // Width/time sweep vs Tenka, 5p mirrored 800 games: width 4 +4.3, width 6 @150 ms
+  // +7.8, width 8 @300 ms +12.8 ± 6.5 — the rewards phase rewards more search.
+  rewardWidth: 8,
+  rewardTimeMs: 300,
 };
 
 /** Tune Kami's live defaults (bench and tests). */
