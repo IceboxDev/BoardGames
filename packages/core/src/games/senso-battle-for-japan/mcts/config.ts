@@ -249,14 +249,18 @@ export function configureTenka(patch: Partial<TenkaConfig>): TenkaConfig {
 }
 
 /**
- * Kami = the rung above Tenka (plan "Kami", 2026-09-13): Tenka's card play
- * with the rewards phase searched by max^n over every seat's picks instead of
- * Shōgun's one-reward lookahead. Measured at 5p, 800 mirrored games each:
- * 56.8 % then 54.3 % vs Shōgun (paired +8.5 ± 6.7), 53.9 % vs Tenka (paired
- * +7.8 ± 6.6) — the first 5p gain since Tenka; null at 3p (50.5/39.8 vs
- * Shōgun, identical to Tenka's). Both engines had played the rewards phase
- * with the same code until now, which is why no trick-phase change ever
- * moved 5p. `configureTenka` does not touch this object.
+ * Kami = the rung above Tenka (plan "Kami", 2026-09-13/14): Tenka's card play
+ * with the rewards phase searched by max^n over every seat's picks (width 8,
+ * 300 ms) instead of Shōgun's one-reward lookahead. Both engines had played
+ * the rewards phase with the same code until now, which is why no trick-phase
+ * change ever moved 5p. Ship gates, mirrored pairs: 5p 55.0 % vs Shōgun
+ * (paired +10.0 ± 6.4) and +7.8 ± 6.3 vs Tenka; 3p +17.8 vs Shōgun and
+ * +6.0 vs Tenka; 2p 61.0 % vs Shōgun, 91.0 % vs Daimyō, +1.5 vs Tenka;
+ * latency p95 200.6 ms. Everything else the plan tried on top was null or
+ * worse against this baseline (learned tier cells +0.5 stacked, sampled
+ * playouts, cube credit, the expected-tier net −4..−7, the board value net
+ * unlearnable) — see scratch/bench/kami/NOTES.md. `configureTenka` does not
+ * touch this object.
  */
 export const DEFAULT_KAMI: TenkaConfig = {
   ...DEFAULT_TENKA,

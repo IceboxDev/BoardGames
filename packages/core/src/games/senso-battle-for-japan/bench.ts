@@ -1,7 +1,7 @@
 // Local, zero-server strength benchmark — the acceptance tool for AI work.
 //
 //   pnpm --filter @boardgames/core bench -- <A> <B> [--budget-ms 100] [--workers N]
-//        [--protocol quick|full|2p|3p|5p] [--games N] [--mirror] [--cfg '{"determinizations":48}']
+//        [--protocol quick|full|2p|3p|5p] [--games N] [--offset N] [--mirror] [--cfg '{"determinizations":48}']
 //        [--tenka '{"solvePlies":8}'] [--out scratch/bench]
 //
 // Seats alternate A,B,A,B… / B,A,B,A… per game so both strategies hold every
@@ -26,6 +26,8 @@ interface Args {
   workers: number;
   protocol: string;
   games: number | null;
+  /** First game index (a replication on fresh deals uses a different even offset). */
+  offset: number;
   mirror: boolean;
   cfg?: Record<string, unknown>;
   tenka?: Record<string, unknown>;
@@ -80,6 +82,7 @@ function parseArgs(argv: string[]): Args {
     workers: Math.max(1, availableParallelism() - 1),
     protocol: "quick",
     games: null,
+    offset: 0,
     mirror: false,
     out: "scratch/bench",
   };
@@ -91,6 +94,7 @@ function parseArgs(argv: string[]): Args {
     else if (arg === "--workers") args.workers = Number(next());
     else if (arg === "--protocol") args.protocol = next();
     else if (arg === "--games") args.games = Number(next());
+    else if (arg === "--offset") args.offset = Number(next());
     else if (arg === "--mirror") args.mirror = true;
     else if (arg === "--cfg") args.cfg = JSON.parse(next());
     else if (arg === "--tenka") args.tenka = JSON.parse(next());
@@ -126,9 +130,10 @@ const REPO_ROOT = fileURLToPath(new URL("../../../../..", import.meta.url));
 async function runTable(args: Args, table: Table): Promise<Record<string, unknown>> {
   let games = args.games ?? table.games;
   if (args.mirror && games % 2 === 1) games++;
+  const offset = args.mirror ? args.offset & ~1 : args.offset;
   const workers = Math.max(1, Math.min(args.workers, games));
   const blocks: number[][] = Array.from({ length: workers }, () => []);
-  for (let i = 0; i < games; i++) blocks[i % workers].push(i);
+  for (let i = 0; i < games; i++) blocks[i % workers].push(offset + i);
   // Mirror pairs: per pair, A's wins minus B's wins (−2..2).
   const pairWins: { a: number; b: number }[] = Array.from({ length: games >> 1 }, () => ({
     a: 0,
@@ -184,7 +189,7 @@ async function runTable(args: Args, table: Table): Promise<Record<string, unknow
             if (msg.winnerStrategy === null) draws++;
             else wins[msg.winnerStrategy] = (wins[msg.winnerStrategy] ?? 0) + 1;
             if (args.mirror) {
-              const pair = pairWins[msg.i >> 1];
+              const pair = pairWins[(msg.i - offset) >> 1];
               if (msg.winnerStrategy === args.a) pair.a++;
               else if (msg.winnerStrategy === args.b) pair.b++;
             }
@@ -278,6 +283,7 @@ async function runTable(args: Args, table: Table): Promise<Record<string, unknow
       flagged: table.players === 2 && parityGap > 2 * paritySigma,
     },
     mirror: args.mirror,
+    offset,
     paired,
     wallMs,
   };
@@ -299,7 +305,7 @@ async function main(): Promise<void> {
   const args = parseArgs(process.argv.slice(2));
   const tables = PROTOCOLS[args.protocol];
   console.log(
-    `bench ${args.a} vs ${args.b} · protocol ${args.protocol} · budget ${args.budgetMs} ms · ${args.workers} workers${args.mirror ? " · mirrored" : ""}${args.cfg ? ` · cfg ${JSON.stringify(args.cfg)}` : ""}${args.tenka ? ` · tenka ${JSON.stringify(args.tenka)}` : ""}${args.tenkaPrev ? ` · tenka-prev ${JSON.stringify(args.tenkaPrev)}` : ""}${args.kami ? ` · kami ${JSON.stringify(args.kami)}` : ""}`,
+    `bench ${args.a} vs ${args.b} · protocol ${args.protocol} · budget ${args.budgetMs} ms · ${args.workers} workers${args.mirror ? " · mirrored" : ""}${args.offset ? ` · offset ${args.offset}` : ""}${args.cfg ? ` · cfg ${JSON.stringify(args.cfg)}` : ""}${args.tenka ? ` · tenka ${JSON.stringify(args.tenka)}` : ""}${args.tenkaPrev ? ` · tenka-prev ${JSON.stringify(args.tenkaPrev)}` : ""}${args.kami ? ` · kami ${JSON.stringify(args.kami)}` : ""}`,
   );
   const perTable: Record<string, unknown>[] = [];
   for (const table of tables) perTable.push(await runTable(args, table));
