@@ -2,12 +2,15 @@ export const qk = {
   inventory: (userId: string | null | undefined) => ["inventory", userId] as const,
   adminUsers: () => ["admin", "users"] as const,
   adminUserInventory: (targetUserId: string) => ["admin", "user-inventory", targetUserId] as const,
+  adminUserNewSlugs: (targetUserId: string) => ["admin", "user-new-slugs", targetUserId] as const,
   adminPendingInventory: () => ["admin", "pending-inventory"] as const,
   availability: (userId: string | null | undefined) => ["availability", userId] as const,
   availabilityCounts: () => ["availability", "counts"] as const,
   calendarLocks: () => ["calendar", "locks"] as const,
   hostStats: () => ["calendar", "host-stats"] as const,
   availableGames: (date: string | null) => ["calendar", "games", date] as const,
+  /** Prefix of every night's picker payload — for invalidating them all. */
+  availableGamesAll: () => ["calendar", "games"] as const,
   exitNight: (date: string | null) => ["calendar", "exit", date] as const,
   adminUserAvailability: (targetUserId: string) =>
     ["admin", "user-availability", targetUserId] as const,

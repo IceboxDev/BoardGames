@@ -4,12 +4,12 @@ import { games } from "../../games/registry";
 import { GameSlugGrid } from "./GameSlugGrid";
 
 // The library grid carries the same cyan→blue "New" highlighter the game-night
-// carousel uses, so a freshly-added game reads identically wherever it shows —
-// and the profile answers "who actually bought the new game".
+// carousel uses. "New" is per member — the profile's `newSlugs`, a dated copy
+// the member hasn't played yet — never a catalog property, so the grid is told
+// which slugs to frame.
 
-/** A slug the catalog currently flags `isNew`, and one it does not. */
-const newSlug = games.find((g) => g.isNew === true)?.slug;
-const plainSlug = games.find((g) => g.isNew !== true)?.slug as string;
+const game = games[0];
+const other = games[1];
 
 function tile(title: string): HTMLElement {
   const button = screen.getByText(title).closest("button");
@@ -19,7 +19,7 @@ function tile(title: string): HTMLElement {
 
 describe("GameSlugGrid", () => {
   it("renders a tile per resolvable slug", () => {
-    render(<GameSlugGrid slugs={[plainSlug]} emptyTitle="none" />);
+    render(<GameSlugGrid slugs={[game.slug]} emptyTitle="none" />);
     expect(screen.getAllByRole("button")).toHaveLength(1);
   });
 
@@ -28,31 +28,26 @@ describe("GameSlugGrid", () => {
     expect(screen.getByText("No games in the library")).toBeInTheDocument();
   });
 
-  it.runIf(newSlug)("frames a New game in the library and badges it", () => {
-    const game = games.find((g) => g.slug === newSlug);
-    if (!game) throw new Error("expected a New game in the catalog");
-    render(<GameSlugGrid slugs={[game.slug]} highlightNew emptyTitle="none" />);
+  it("frames a member's new game and badges it, leaving the rest plain", () => {
+    render(
+      <GameSlugGrid
+        slugs={[game.slug, other.slug]}
+        newSlugs={new Set([game.slug])}
+        emptyTitle="none"
+      />,
+    );
 
     expect(tile(game.title).className).toContain("card-frame-new");
-    expect(screen.getByText(/^New$/)).toBeInTheDocument();
+    expect(tile(other.title).className).not.toContain("card-frame-new");
+    expect(screen.getAllByText(/^New$/)).toHaveLength(1);
   });
 
-  it.runIf(newSlug)("leaves the New frame off when highlightNew is not set", () => {
-    // Wishlist / favorites: a New game there is explicitly NOT owned, so the
-    // "someone bought this" signal must not fire.
-    const game = games.find((g) => g.slug === newSlug);
-    if (!game) throw new Error("expected a New game in the catalog");
+  it("leaves the New frame off when no set is given", () => {
+    // Wishlist / favorites: a game there is explicitly NOT owned, so the
+    // "this member bought it" signal must not fire even for a new slug.
     render(<GameSlugGrid slugs={[game.slug]} emptyTitle="none" />);
 
     expect(tile(game.title).className).not.toContain("card-frame-new");
     expect(screen.queryByText(/^New$/)).not.toBeInTheDocument();
-  });
-
-  it("never frames a game the catalog does not flag", () => {
-    const game = games.find((g) => g.slug === plainSlug);
-    if (!game) throw new Error("expected a non-New game in the catalog");
-    render(<GameSlugGrid slugs={[game.slug]} highlightNew emptyTitle="none" />);
-
-    expect(tile(game.title).className).not.toContain("card-frame-new");
   });
 });

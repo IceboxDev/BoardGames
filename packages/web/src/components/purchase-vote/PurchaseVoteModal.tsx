@@ -103,7 +103,6 @@ export function PurchaseVoteModalView({
               maxPlayers={0}
               date=""
               reactions={{}}
-              highlightNew={false}
               renderThumbOverlay={(game, isCenter, compact) => {
                 const picked = selected.includes(game.slug);
                 return (

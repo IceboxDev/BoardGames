@@ -217,6 +217,13 @@ export const PublicProfileSchema = z.object({
   profile: ProfileEditableSchema,
   /** Owned-games library (slugs) from `user_inventory`. */
   library: z.array(GameSlugSchema),
+  /**
+   * The subset of `library` that is NEW to this member: acquired (dated
+   * `collection_items` row), not played through, and not yet played since —
+   * the per-user New frame on the profile grid. Defaulted so a persisted
+   * profile from before the field parses.
+   */
+  newSlugs: z.array(GameSlugSchema).default([]),
   skill: SkillChartSchema,
   stats: ProfileStatsSchema,
   recentMatches: z.array(MatchRecordSchema),

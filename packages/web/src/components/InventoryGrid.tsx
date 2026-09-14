@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { type ReactNode, useMemo } from "react";
 import { type FamilyInfo, groupForPresentation } from "../games/families";
 import { games } from "../games/registry";
 import type { GameDefinition } from "../games/types";
@@ -12,6 +12,8 @@ type Props = {
   /** Optional: restrict to a subset of games (e.g. only those a particular
    * user can choose from). Defaults to the full registry. */
   games?: GameDefinition[];
+  /** Optional per-cell control in the row's trailing slot (the admin's New toggle). */
+  renderTrailing?: (game: GameDefinition) => ReactNode;
 };
 
 /**
@@ -21,7 +23,12 @@ type Props = {
  * for checked state — family identity is communicated by the section
  * header, not by per-cell color.
  */
-export default function InventoryGrid({ selected, onToggle, games: input = games }: Props) {
+export default function InventoryGrid({
+  selected,
+  onToggle,
+  games: input = games,
+  renderTrailing,
+}: Props) {
   const selectedSet = useMemo(() => new Set(selected), [selected]);
 
   const { familyGroups, singletons } = useMemo(() => {
@@ -57,6 +64,7 @@ export default function InventoryGrid({ selected, onToggle, games: input = games
                   game={g}
                   checked={selectedSet.has(g.slug)}
                   onToggle={() => onToggle(g.slug)}
+                  trailing={renderTrailing?.(g)}
                 />
               ))}
             </div>
@@ -73,6 +81,7 @@ export default function InventoryGrid({ selected, onToggle, games: input = games
                 game={g}
                 checked={selectedSet.has(g.slug)}
                 onToggle={() => onToggle(g.slug)}
+                trailing={renderTrailing?.(g)}
               />
             ))}
           </div>
@@ -86,15 +95,18 @@ function InventoryCell({
   game,
   checked,
   onToggle,
+  trailing,
 }: {
   game: GameDefinition;
   checked: boolean;
   onToggle: () => void;
+  trailing?: ReactNode;
 }) {
   return (
     <CheckRow
       checked={checked}
       onChange={onToggle}
+      trailing={trailing}
       leading={
         <img
           src={game.thumbnail}

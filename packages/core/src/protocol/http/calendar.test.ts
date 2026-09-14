@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   AdminNightGuestBodySchema,
+  AvailableGamesSchema,
   CalendarLocksSchema,
   HostStatsMapSchema,
   KickRsvpBodySchema,
@@ -254,5 +255,27 @@ describe("mkOptimisticLock", () => {
     const form = LockInFormSchema.parse({ eventTime: "20:00" });
     const lock = mkOptimisticLock(form, existing, "self");
     expect(lock.hostAtHome).toBe(false);
+  });
+});
+
+describe("AvailableGamesSchema", () => {
+  const base = {
+    ownedSlugs: ["catan"],
+    definiteCount: 3,
+    tentativeCount: 0,
+    participantIds: ["u1"],
+    reactions: {},
+    topSlugs: [],
+    attendees: [],
+  };
+
+  it("defaults newSlugs to none for a payload persisted before the field", () => {
+    expect(AvailableGamesSchema.parse(base).newSlugs).toEqual([]);
+  });
+
+  it("carries the attending owners' new copies", () => {
+    expect(AvailableGamesSchema.parse({ ...base, newSlugs: ["catan"] }).newSlugs).toEqual([
+      "catan",
+    ]);
   });
 });

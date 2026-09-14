@@ -26,13 +26,13 @@ type GameSlugGridProps = {
    */
   sort?: boolean;
   /**
-   * Give freshly-added games (catalog `isNew`) the cyan→blue "new" frame the
-   * game-night carousel uses. On for the LIBRARY only: there the border says
-   * "this member owns a new arrival", which is exactly the signal worth
-   * carrying. A wishlisted new game is the opposite of owned, so the
-   * highlight would misread there.
+   * Slugs that get the cyan→blue "new" frame the game-night carousel uses:
+   * the member's own new acquisitions (profile `newSlugs`). Passed for the
+   * LIBRARY only — there the border says "this member owns a new arrival",
+   * which is exactly the signal worth carrying; a wishlisted game is the
+   * opposite of owned, so the frame would misread there.
    */
-  highlightNew?: boolean;
+  newSlugs?: ReadonlySet<string>;
 };
 
 export function GameSlugGrid({
@@ -41,7 +41,7 @@ export function GameSlugGrid({
   emptyTitle,
   emptyDescription,
   sort = false,
-  highlightNew = false,
+  newSlugs,
 }: GameSlugGridProps) {
   const [selected, setSelected] = useState<GameDefinition | null>(null);
   const resolved = slugs
@@ -57,7 +57,7 @@ export function GameSlugGrid({
     <>
       <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5">
         {resolved.map((game) => {
-          const isNew = highlightNew && game.isNew === true;
+          const isNew = newSlugs?.has(game.slug) === true;
           return (
             <li key={game.slug} style={{ "--accent": game.accentHex } as CSSProperties}>
               {/* biome-ignore lint/correctness/noRestrictedElements: card-shaped clickable game tile */}

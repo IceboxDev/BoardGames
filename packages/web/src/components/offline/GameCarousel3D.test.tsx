@@ -15,21 +15,22 @@ import GameCarousel3D from "./GameCarousel3D";
 // to `family.canonical` would leave every families test green.
 
 /** Mirrors `useRsvpAvailability`: keep games covering the window, then rank. */
-function rankedFor(lo: number, hi: number, slugs: string[]) {
+function rankedFor(lo: number, hi: number, slugs: string[], newSlugs?: ReadonlySet<string>) {
   const owned = new Set(slugs);
   return games
     .filter((g) => owned.has(g.slug) && coversWindow(g, lo, hi))
-    .sort((a, b) => compareForHeadcount(a, b, lo));
+    .sort((a, b) => compareForHeadcount(a, b, lo, newSlugs));
 }
 
-function renderAt(lo: number, hi: number, slugs: string[]) {
+function renderAt(lo: number, hi: number, slugs: string[], newSlugs?: ReadonlySet<string>) {
   render(
     <GameCarousel3D
-      games={rankedFor(lo, hi, slugs)}
+      games={rankedFor(lo, hi, slugs, newSlugs)}
       minPlayers={lo}
       maxPlayers={hi}
       date=""
       reactions={{}}
+      newSlugs={newSlugs}
     />,
   );
 }
@@ -56,14 +57,21 @@ describe("GameCarousel3D — family card opens on the member that won the sort",
   });
 
   it("opens a family on its `New` member over a better-fitting sibling", () => {
-    // Parks Europe carries the catalog's New flag; base Parks is the better
-    // fit at 3 (BGG best-at-3) — New still wins. Kept catalog-driven on
-    // purpose: if the flag moves, this fails loudly rather than passing for
-    // the wrong reason. The rule has fixture coverage in bgg-format.test.ts.
-    renderAt(3, 3, ["parks", "parks-europe"]);
+    // An attending owner's copy of Parks Europe is new (the night payload's
+    // `newSlugs`); base Parks is the better fit at 3 (BGG best-at-3) — New
+    // still wins the anchor, and the card carries the badge.
+    renderAt(3, 3, ["parks", "parks-europe"], new Set(["parks-europe"]));
 
     expect(screen.getByText("Parks Europe")).toBeInTheDocument();
     expect(screen.getByText(/^New$/i)).toBeInTheDocument();
+  });
+
+  it("shows no New treatment without the night's new set", () => {
+    renderAt(3, 3, ["parks", "parks-europe"]);
+
+    // Base Parks (best at 3) wins the anchor once nothing is new.
+    expect(screen.getByText("Parks (Second Edition)")).toBeInTheDocument();
+    expect(screen.queryByText(/^New$/i)).not.toBeInTheDocument();
   });
 
   it("still opens a family on its canonical when no sibling outranks it", () => {

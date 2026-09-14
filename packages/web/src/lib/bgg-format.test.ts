@@ -233,21 +233,24 @@ describe("stripBggHtml", () => {
 });
 
 describe("compareForHeadcount", () => {
-  // Minimal GameDefinition-shaped stubs — the comparator only reads
-  // `isNew`, `bgg.bestPlayerCount`, `bgg.averageRating` and `title`.
-  const game = (title: string, over: { isNew?: boolean; best?: number; rating?: number } = {}) =>
+  // Minimal GameDefinition-shaped stubs — the comparator only reads `slug`
+  // (against the night's `newSlugs`), `bgg.bestPlayerCount`,
+  // `bgg.averageRating` and `title`.
+  const game = (title: string, over: { best?: number; rating?: number } = {}) =>
     ({
       slug: title.toLowerCase(),
       title,
-      ...(over.isNew ? { isNew: true } : {}),
       bgg: bgg({ bestPlayerCount: over.best ?? null, averageRating: over.rating ?? 7 }),
     }) as unknown as Parameters<typeof compareForHeadcount>[0];
 
   it("ranks a New game above one that is a better fit for the headcount", () => {
-    const fresh = game("Fresh", { isNew: true });
+    const fresh = game("Fresh");
     const bestAtTwo = game("BestAtTwo", { best: 2, rating: 9 });
-    expect(compareForHeadcount(fresh, bestAtTwo, 2)).toBeLessThan(0);
-    expect(compareForHeadcount(bestAtTwo, fresh, 2)).toBeGreaterThan(0);
+    const newSlugs = new Set(["fresh"]);
+    expect(compareForHeadcount(fresh, bestAtTwo, 2, newSlugs)).toBeLessThan(0);
+    expect(compareForHeadcount(bestAtTwo, fresh, 2, newSlugs)).toBeGreaterThan(0);
+    // Without the night's set the same game is just another game.
+    expect(compareForHeadcount(fresh, bestAtTwo, 2)).toBeGreaterThan(0);
   });
 
   it("falls through to best-at-N when neither game is New", () => {
@@ -257,9 +260,9 @@ describe("compareForHeadcount", () => {
   });
 
   it("falls through to rating when both are New", () => {
-    const strong = game("Strong", { isNew: true, rating: 8 });
-    const weak = game("Weak", { isNew: true, rating: 6 });
-    expect(compareForHeadcount(strong, weak, 3)).toBeLessThan(0);
+    const strong = game("Strong", { rating: 8 });
+    const weak = game("Weak", { rating: 6 });
+    expect(compareForHeadcount(strong, weak, 3, new Set(["strong", "weak"]))).toBeLessThan(0);
   });
 
   it("breaks exact ties alphabetically", () => {

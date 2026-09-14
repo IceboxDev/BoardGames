@@ -161,7 +161,6 @@ function buildDefinition(entry: CatalogEntry): GameDefinition {
     thumbnail: thumbnailBySlug[entry.slug] ?? placeholderThumbnail,
     title: entry.displayTitle ?? bgg.name,
     ...(entry.family ? { family: entry.family } : {}),
-    ...(entry.isNew ? { isNew: true } : {}),
   };
 
   const playable = playableBySlug.get(entry.slug);

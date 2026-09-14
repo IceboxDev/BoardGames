@@ -1,9 +1,11 @@
 import {
+  InventoryNewSlugsSchema,
   InventoryWriteResponseSchema,
   type PendingInventory,
   PendingInventorySchema,
   PendingInventoryWriteResponseSchema,
   SetInventoryBodySchema,
+  SetInventoryNewBodySchema,
   SetPendingInventoryBodySchema,
   SlugListSchema,
 } from "@boardgames/core/protocol";
@@ -30,6 +32,29 @@ export async function adminSaveInventory(userId: string, slugs: string[]) {
     request: SetInventoryBodySchema,
     response: InventoryWriteResponseSchema,
   });
+}
+
+/** The member's currently-new games (dated, unplayed copies still owned). */
+export async function adminFetchNewSlugs(userId: string, signal?: AbortSignal) {
+  const { newSlugs } = await apiFetch(`/api/admin/users/${userId}/inventory/new`, {
+    response: InventoryNewSlugsSchema,
+    signal,
+  });
+  return newSlugs;
+}
+
+/** Mark (`true`, dates the copy today) or unmark (`false`, clears the date) one owned game. */
+export async function adminSetInventoryNew(userId: string, slug: string, value: boolean) {
+  const { newSlugs } = await apiFetch(
+    `/api/admin/users/${userId}/inventory/${encodeURIComponent(slug)}/new`,
+    {
+      method: "PUT",
+      body: { new: value },
+      request: SetInventoryNewBodySchema,
+      response: InventoryNewSlugsSchema,
+    },
+  );
+  return newSlugs;
 }
 
 export async function adminFetchPendingInventory(signal?: AbortSignal) {

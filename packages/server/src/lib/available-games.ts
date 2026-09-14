@@ -17,6 +17,7 @@ import { type AvailableGames, SlugListSchema } from "@boardgames/core/protocol";
 import type { Client } from "@libsql/client";
 import { z } from "zod";
 import { jsonColumn, parseRow, parseRows, RowParseError } from "./db-rows.ts";
+import { fetchNewSlugsByUser } from "./new-acquisitions.ts";
 
 // ── Row projections ───────────────────────────────────────────────────
 //
@@ -343,6 +344,19 @@ export async function computeAvailableGamesPayload(opts: {
   }
   const ownedSlugs = [...ownedUnion].sort();
 
+  // New for the table: a copy that is new to ONE of the attending owners is
+  // shown as new to everyone in the picker. Only owners who are coming count
+  // — a member's new game stays their own until they bring it.
+  const newUnion = new Set<string>();
+  if (inventoryByUser.size > 0) {
+    const newByUser = await fetchNewSlugsByUser(db, [...inventoryByUser.keys()]);
+    for (const [userId, slugs] of newByUser) {
+      const owned = inventoryByUser.get(userId);
+      for (const slug of slugs) if (owned?.has(slug)) newUnion.add(slug);
+    }
+  }
+  const newSlugs = [...newUnion].sort();
+
   // "Playable" = owned AND fits the [definite, definite+tentative] window.
   const lo = definiteIds.length;
   const hi = definiteIds.length + tentativeIds.length;
@@ -524,6 +538,7 @@ export async function computeAvailableGamesPayload(opts: {
   return {
     wire: {
       ownedSlugs,
+      newSlugs,
       definiteCount: definiteIds.length,
       tentativeCount: tentativeIds.length,
       participantIds: definiteIds,

@@ -12,7 +12,10 @@ import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persist
 //     admin vote tab on `voterIds.length`.
 // v5: persisted profile snapshots gained `profile.theme` (site theming).
 // v6: collection items gained `isNew` (the new-acquisition badge).
-const BUSTER = "v6";
+// v7: profiles and AvailableGames gained `newSlugs` (the per-member New
+//     frame replaced the catalog flag) — defaulted, but a rehydrated pre-v7
+//     snapshot would show no frames until refetch.
+const BUSTER = "v7";
 
 export const queryPersister =
   typeof window === "undefined"

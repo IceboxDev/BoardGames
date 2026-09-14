@@ -53,6 +53,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
     topSlugs,
     attendees,
     ownedSlugs,
+    newSlugs,
     availableGames,
     hypedCount,
   } = useRsvpAvailability({ date, enabled: !!lock });
@@ -289,6 +290,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
               maxPlayers={definiteCount + tentativeCount}
               date={date}
               reactions={reactions}
+              newSlugs={newSlugs}
             />
           )}
         </div>

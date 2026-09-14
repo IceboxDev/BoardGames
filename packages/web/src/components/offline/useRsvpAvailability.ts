@@ -47,6 +47,8 @@ type UseRsvpAvailabilityResult = {
   topSlugs: string[];
   attendees: Attendee[];
   ownedSlugs: string[];
+  /** Copies new to an attending owner — the picker's New frame. */
+  newSlugs: ReadonlySet<string>;
   availableGames: GameDefinition[];
   hypedCount: number;
 };
@@ -94,6 +96,9 @@ export function useRsvpAvailability({
   const topSlugs = gamesQuery.data?.topSlugs ?? [];
   const attendees = gamesQuery.data?.attendees ?? [];
   const ownedSlugs = gamesQuery.data?.ownedSlugs ?? [];
+  // Copies new to an attending owner — the picker's New frame, and the
+  // cohort `compareForHeadcount` ranks first.
+  const newSlugs = useMemo(() => new Set(gamesQuery.data?.newSlugs ?? []), [gamesQuery.data]);
 
   const availableGames = useMemo(() => {
     const data = gamesQuery.data;
@@ -111,8 +116,8 @@ export function useRsvpAvailability({
     // compete separately here, so a family's position is won by its single
     // best-ranked sibling; `groupForPresentation` records that sibling as the
     // unit's anchor and the carousel opens the card on it.
-    return filtered.sort((a, b) => compareForHeadcount(a, b, lo));
-  }, [gamesQuery.data]);
+    return filtered.sort((a, b) => compareForHeadcount(a, b, lo, newSlugs));
+  }, [gamesQuery.data, newSlugs]);
 
   const hypedCount = useMemo(
     () => availableGames.filter((g) => (reactions[g.slug]?.hype ?? 0) > 0).length,
@@ -130,6 +135,7 @@ export function useRsvpAvailability({
     topSlugs,
     attendees,
     ownedSlugs,
+    newSlugs,
     availableGames,
     hypedCount,
   };

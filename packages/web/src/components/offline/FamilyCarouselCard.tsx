@@ -41,8 +41,8 @@ type Props = {
   reactions: Record<string, ReactionAggregate>;
   /** Overrides the reactions widget in the thumb overlay slot (see GameCarousel3D). */
   renderThumbOverlay?: (game: GameDefinition, isCenter: boolean, compact: boolean) => ReactNode;
-  /** Paint the freshly-added treatment (see GameCarousel3D). */
-  highlightNew: boolean;
+  /** Slugs with the "New" treatment (see GameCarousel3D). */
+  newSlugs?: ReadonlySet<string>;
   onClick: () => void;
 
   cardW: number;
@@ -65,7 +65,7 @@ export default function FamilyCarouselCard({
   date,
   reactions,
   renderThumbOverlay,
-  highlightNew,
+  newSlugs,
   onClick,
   cardW,
   cardH,
@@ -85,7 +85,7 @@ export default function FamilyCarouselCard({
   // the freshly-added one — "The Worst Takes it All" is new, its sibling
   // "Introduction to Evil" is not, so the badge follows the chip you're on.
   // Takes precedence over best-for-headcount.
-  const isNew = highlightNew && active.isNew === true;
+  const isNew = newSlugs?.has(active.slug) === true;
   const aggregate = reactions[active.slug];
 
   return (

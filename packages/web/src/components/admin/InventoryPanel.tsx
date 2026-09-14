@@ -4,12 +4,17 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { games } from "../../games/registry";
 import { useEditableList } from "../../hooks/useEditableList";
 import { errorMessageOf } from "../../lib/error-message";
-import { adminFetchInventory, adminSaveInventory } from "../../lib/inventory";
+import {
+  adminFetchInventory,
+  adminFetchNewSlugs,
+  adminSaveInventory,
+  adminSetInventoryNew,
+} from "../../lib/inventory";
 import { qk } from "../../lib/query-keys";
 import CardDeckList from "../CardDeckList";
 import ExitBoxList from "../ExitBoxList";
 import InventoryGrid from "../InventoryGrid";
-import { Button, ErrorAlert, LoadingState } from "../ui";
+import { Button, Chip, ErrorAlert, LoadingState } from "../ui";
 
 type Props = { userId: string };
 
@@ -35,6 +40,28 @@ export function InventoryPanel({ userId }: Props) {
 
   const list = useEditableList<string>(inventoryQuery.data);
 
+  // "New in the library" per owned game — derived server-side from the copy's
+  // acquisition date and the member's plays (see admin-inventory.ts), so the
+  // toggle is immediate and separate from the drafted slug list: only a SAVED
+  // game can be marked, and the frame it drives lives on the member's profile
+  // and the night picker, whose caches are invalidated here.
+  const newSlugsQuery = useQuery({
+    queryKey: qk.adminUserNewSlugs(userId),
+    queryFn: ({ signal }) => adminFetchNewSlugs(userId, signal),
+  });
+  const newMutation = useMutation({
+    mutationFn: ({ slug, value }: { slug: string; value: boolean }) =>
+      adminSetInventoryNew(userId, slug, value),
+    onSuccess: (newSlugs) => {
+      queryClient.setQueryData(qk.adminUserNewSlugs(userId), newSlugs);
+      void queryClient.invalidateQueries({ queryKey: qk.collection(userId) });
+      void queryClient.invalidateQueries({ queryKey: qk.profile(userId) });
+      void queryClient.invalidateQueries({ queryKey: qk.availableGamesAll() });
+    },
+  });
+  const saved = new Set(inventoryQuery.data ?? []);
+  const newSet = new Set(newSlugsQuery.data ?? []);
+
   const saveMutation = useMutation({
     mutationFn: (slugs: string[]) => adminSaveInventory(userId, slugs),
     onSuccess: (_data, slugs) => {
@@ -47,12 +74,15 @@ export function InventoryPanel({ userId }: Props) {
       // the profile until the cache expires or the tab is hard-reloaded.
       void queryClient.invalidateQueries({ queryKey: qk.profile(userId) });
       void queryClient.invalidateQueries({ queryKey: qk.players() });
+      // A removed game stops being new; the toggles re-read what is owned.
+      void queryClient.invalidateQueries({ queryKey: qk.adminUserNewSlugs(userId) });
     },
   });
 
   const error =
     errorMessageOf(inventoryQuery.error, "Failed to load") ??
-    errorMessageOf(saveMutation.error, "Save failed");
+    errorMessageOf(saveMutation.error, "Save failed") ??
+    errorMessageOf(newMutation.error, "Could not update the New marker");
 
   if (inventoryQuery.isPending || !list.isReady || list.draft === null) {
     return <LoadingState label="Loading inventory…" className="justify-start py-3" />;
@@ -61,7 +91,31 @@ export function InventoryPanel({ userId }: Props) {
   return (
     <div className="space-y-3">
       {error && <ErrorAlert message={error} />}
-      <InventoryGrid selected={list.draft} onToggle={list.toggle} games={ownableGames} />
+      <InventoryGrid
+        selected={list.draft}
+        onToggle={list.toggle}
+        games={ownableGames}
+        renderTrailing={(game) =>
+          saved.has(game.slug) ? (
+            <Chip
+              pressed={newSet.has(game.slug)}
+              tone="sky"
+              size="xs"
+              shape="pill"
+              disabled={newMutation.isPending}
+              title={
+                newSet.has(game.slug)
+                  ? "Marked new — clears the acquisition date"
+                  : "Mark as new in the library (dates the copy today)"
+              }
+              aria-label={`${newSet.has(game.slug) ? "Unmark" : "Mark"} ${game.title} as new`}
+              onClick={() => newMutation.mutate({ slug: game.slug, value: !newSet.has(game.slug) })}
+            >
+              New
+            </Chip>
+          ) : null
+        }
+      />
       <CardDeckList selected={list.draft} onToggle={list.toggle} />
       <ExitBoxList selected={list.draft} onToggle={list.toggle} />
       <div className="flex items-center justify-end gap-2">

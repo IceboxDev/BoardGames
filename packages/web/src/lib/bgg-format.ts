@@ -99,9 +99,15 @@ export function isBestForHeadcount(game: GameDefinition, lo: number): boolean {
  * that member — not the family's canonical — is the one the card must open on.
  * `groupForPresentation` records it as the unit's `anchor`.
  */
-export function compareForHeadcount(a: GameDefinition, b: GameDefinition, lo: number): number {
-  const aNew = a.isNew === true ? 0 : 1;
-  const bNew = b.isNew === true ? 0 : 1;
+export function compareForHeadcount(
+  a: GameDefinition,
+  b: GameDefinition,
+  lo: number,
+  /** Slugs new to an attending owner (the payload's `newSlugs`); none when omitted. */
+  newSlugs?: ReadonlySet<string>,
+): number {
+  const aNew = newSlugs?.has(a.slug) ? 0 : 1;
+  const bNew = newSlugs?.has(b.slug) ? 0 : 1;
   if (aNew !== bNew) return aNew - bNew;
   const aBest = isBestForHeadcount(a, lo) ? 0 : 1;
   const bBest = isBestForHeadcount(b, lo) ? 0 : 1;

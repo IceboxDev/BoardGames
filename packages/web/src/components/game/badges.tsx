@@ -84,7 +84,7 @@ export function FitsBadge({ label }: { label: string }) {
 
 /**
  * "New" cyan→blue gradient pill — surfaced by carousel cards for
- * freshly-added games (catalog `isNew`). Takes precedence over the
+ * a member's new acquisitions (the payload's `newSlugs`). Takes precedence over the
  * "Best at N" badge, matching the card's cyan-fiery-blue border.
  */
 export function NewBadge() {

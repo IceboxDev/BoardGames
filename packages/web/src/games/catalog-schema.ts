@@ -31,7 +31,6 @@ export const CatalogEntrySchema = z
     family: GameFamilySchema.optional(),
     displayTitle: z.string().min(1).optional(),
     bggOverrides: BggGameSchema.partial().optional(),
-    isNew: z.boolean().optional(),
   })
   // Reject unknown fields rather than silently dropping them — catches
   // typos like `tournamentStrategies: [...]` accidentally landing in

@@ -83,6 +83,24 @@ export const InventoryWriteResponseSchema = z.object({
 });
 export type InventoryWriteResponse = z.infer<typeof InventoryWriteResponseSchema>;
 
+// ── New-in-library marker (admin) ───────────────────────────────────────
+// "New" is derived per member from the copy's `acquired_on` date and their
+// last recorded match of the game (see server `lib/new-acquisition.ts`); the
+// admin toggle sets or clears that date on the member's `collection_items` row.
+
+/** `GET /api/admin/users/:id/inventory/new` — the member's currently-new slugs. */
+export const InventoryNewSlugsSchema = z.object({
+  newSlugs: SlugListSchema,
+});
+export type InventoryNewSlugs = z.infer<typeof InventoryNewSlugsSchema>;
+
+/** `PUT /api/admin/users/:id/inventory/:slug/new` body. */
+export const SetInventoryNewBodySchema = z.object({
+  /** `true` dates the copy today (marking it new); `false` clears the date. */
+  new: z.boolean(),
+});
+export type SetInventoryNewBody = z.infer<typeof SetInventoryNewBodySchema>;
+
 // ── Pending inventory (admin pre-register queue) ────────────────────────
 // Carries both the queued slugs and the queued `onlineMode` that get stamped
 // onto the next signup. Empty slugs + `offline` mode is the "cleared" state

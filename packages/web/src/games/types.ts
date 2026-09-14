@@ -152,13 +152,6 @@ interface GameBase {
   accentHex: string;
   /** Optional family membership for visual grouping in browse views. */
   family?: GameFamily;
-  /**
-   * Recently-added flag. Drives the "New" highlighter (cyan-fiery-blue
-   * border + badge) on the game-night carousel, which takes precedence
-   * over the "Best at N" headcount treatment. Set per-entry in
-   * `catalog.json`; clear it once the game stops being a fresh arrival.
-   */
-  isNew?: boolean;
 }
 
 /** A browse-only catalog entry — no playable surface. */
@@ -336,12 +329,6 @@ export type CatalogEntry = {
   skills: SkillWeights;
   /** Optional family membership for visual grouping in browse views. */
   family?: GameFamily;
-  /**
-   * Recently-added flag. When true the game-night carousel renders the
-   * "New" highlighter (cyan-fiery-blue border + badge) and it takes
-   * precedence over the "Best at N" headcount treatment.
-   */
-  isNew?: boolean;
   /**
    * Optional title override. Set this when BGG's name is wrong, awkward, or
    * too verbose for the UI (e.g. "7 Wonders" instead of

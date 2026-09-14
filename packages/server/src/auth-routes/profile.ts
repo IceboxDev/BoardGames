@@ -41,6 +41,7 @@ import { jsonColumn, parseRow, parseRows, RowParseError } from "../lib/db-rows.t
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 import { userMatchesQuery } from "../lib/match-participants.ts";
 import { groupMatchUnits, unitResult } from "../lib/match-units.ts";
+import { fetchNewSlugs } from "../lib/new-acquisitions.ts";
 import {
   findNextNightDateKeysForUsers,
   findNextNightForUser,
@@ -343,6 +344,8 @@ profileRoutes.get("/:userId", async (c) => {
         ),
       ].sort()
     : [];
+  // The per-user New frame: dated, unplayed copies still on the shelf.
+  const newSlugs = library.length > 0 ? await fetchNewSlugs(db, userId, new Set(library)) : [];
 
   const matchRows = parseRows(MatchResultRowSchema, matchResult.rows, "match_results");
 
@@ -523,6 +526,7 @@ profileRoutes.get("/:userId", async (c) => {
       },
       profile: editable,
       library,
+      newSlugs,
       skill,
       stats,
       recentMatches,

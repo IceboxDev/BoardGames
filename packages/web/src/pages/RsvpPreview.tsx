@@ -26,6 +26,8 @@ const PREVIEW_SLUGS = new Set([
   "7-wonders",
   "cascadia",
 ]);
+// One copy new to an attending owner — keeps the New frame in the fixture.
+const PREVIEW_NEW_SLUGS = new Set(["cascadia"]);
 
 // Reaction fixtures for the results view — counts high enough to render the
 // per-button count bubbles that crowd the ranked rows on phone widths.
@@ -146,6 +148,7 @@ export default function RsvpPreview() {
             maxPlayers={7}
             date="2026-08-16"
             reactions={PREVIEW_REACTIONS}
+            newSlugs={PREVIEW_NEW_SLUGS}
           />
         )}
       </div>

@@ -181,7 +181,7 @@ export default function PlayerProfilePage() {
             <GameSlugGrid
               slugs={profile.library}
               sort
-              highlightNew
+              newSlugs={new Set(profile.newSlugs)}
               emptyIcon={<GalleryIcon className="h-4 w-4" />}
               emptyTitle="No games in the library"
               emptyDescription={`${firstName}'s owned games will appear here.`}

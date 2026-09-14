@@ -1,9 +1,11 @@
 import { describe, expect, it } from "vitest";
 import {
   CatalogSlugListSchema,
+  InventoryNewSlugsSchema,
   InventoryWriteResponseSchema,
   PendingInventorySchema,
   SetInventoryBodySchema,
+  SetInventoryNewBodySchema,
   SetPendingInventoryBodySchema,
   SlugListSchema,
 } from "./inventory.ts";
@@ -84,6 +86,19 @@ describe("SetInventoryBodySchema", () => {
 
   it("rejects an unknown slug on the write path", () => {
     expect(() => SetInventoryBodySchema.parse({ slugs: ["not-a-real-game"] })).toThrow();
+  });
+});
+
+describe("new-in-library marker (admin)", () => {
+  it("reads the member's new slugs", () => {
+    expect(InventoryNewSlugsSchema.parse({ newSlugs: ["catan"] }).newSlugs).toEqual(["catan"]);
+    expect(() => InventoryNewSlugsSchema.parse({})).toThrow();
+  });
+
+  it("the toggle body is a bare boolean", () => {
+    expect(SetInventoryNewBodySchema.parse({ new: true })).toEqual({ new: true });
+    expect(() => SetInventoryNewBodySchema.parse({ new: "yes" })).toThrow();
+    expect(() => SetInventoryNewBodySchema.parse({})).toThrow();
   });
 });
 

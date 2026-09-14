@@ -197,6 +197,12 @@ describe("PublicProfileSchema", () => {
       },
     };
     expect(PublicProfileSchema.parse(payload).user.name).toBe("Ada");
+    // A persisted profile from before the per-user New marker parses to none.
+    expect(PublicProfileSchema.parse(payload).newSlugs).toEqual([]);
+    expect(PublicProfileSchema.parse({ ...payload, newSlugs: ["lost-cities"] }).newSlugs).toEqual([
+      "lost-cities",
+    ]);
+    expect(() => PublicProfileSchema.parse({ ...payload, newSlugs: ["Not A Slug"] })).toThrow();
   });
 });
 

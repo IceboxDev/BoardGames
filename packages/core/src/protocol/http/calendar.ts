@@ -212,6 +212,12 @@ export type Attendee = z.infer<typeof AttendeeSchema>;
 
 export const AvailableGamesSchema = z.object({
   ownedSlugs: z.array(z.string()),
+  /**
+   * The subset of `ownedSlugs` that is new to at least one attending owner
+   * (a dated, unplayed copy on the table) — the picker's New frame. Defaulted
+   * so a persisted payload from before the field parses.
+   */
+  newSlugs: z.array(z.string()).default([]),
   /** Confirmed attendees: (availability:can ∪ rsvp:yes) − rsvp:no. */
   definiteCount: z.number().int().min(0),
   /** Maybes who haven't RSVP'd — widen the player-count upper bound only. */

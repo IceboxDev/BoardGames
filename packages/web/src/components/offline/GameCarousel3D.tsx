@@ -47,11 +47,13 @@ type Props = {
    */
   renderThumbOverlay?: (game: GameDefinition, isCenter: boolean, compact: boolean) => ReactNode;
   /**
-   * Paint the freshly-added treatment (green ring + NEW badge). On by
-   * default; the purchase-vote carousel turns it off — every candidate is
-   * equally "on the ballot" and the highlight would read as an endorsement.
+   * Slugs that get the "New" treatment (cyan frame + badge): copies new to
+   * an attending owner, from the night's payload. Per member, never a
+   * catalog property. Omitted by the purchase-vote carousel — every
+   * candidate is equally "on the ballot" and the frame would read as an
+   * endorsement.
    */
-  highlightNew?: boolean;
+  newSlugs?: ReadonlySet<string>;
 };
 
 // Swipe thresholds — distance OR flick velocity advances the carousel.
@@ -67,7 +69,7 @@ export default function GameCarousel3D({
   date,
   reactions,
   renderThumbOverlay,
-  highlightNew = true,
+  newSlugs,
 }: Props) {
   // Project games into presentation units — families collapse to one
   // card, singletons stay as-is. The carousel navigates over UNITS, not
@@ -384,7 +386,7 @@ export default function GameCarousel3D({
                   date={date}
                   aggregate={reactions[unit.game.slug]}
                   renderThumbOverlay={renderThumbOverlay}
-                  highlightNew={highlightNew}
+                  isNew={newSlugs?.has(unit.game.slug) === true}
                   onClick={() => setCenter(i)}
                   cardW={cardW}
                   cardH={cardH}
@@ -409,7 +411,7 @@ export default function GameCarousel3D({
                 date={date}
                 reactions={reactions}
                 renderThumbOverlay={renderThumbOverlay}
-                highlightNew={highlightNew}
+                newSlugs={newSlugs}
                 onClick={() => setCenter(i)}
                 cardW={cardW}
                 cardH={cardH}
@@ -498,7 +500,8 @@ type SingleCardProps = {
   date: string;
   aggregate: ReactionAggregate | undefined;
   renderThumbOverlay?: (game: GameDefinition, isCenter: boolean, compact: boolean) => ReactNode;
-  highlightNew: boolean;
+  /** New to an attending owner — takes precedence over the headcount treatment. */
+  isNew: boolean;
   onClick: () => void;
   cardW: number;
   cardH: number;
@@ -517,7 +520,7 @@ function SingleCarouselCard({
   date,
   aggregate,
   renderThumbOverlay,
-  highlightNew,
+  isNew,
   onClick,
   cardW,
   cardH,
@@ -530,8 +533,6 @@ function SingleCarouselCard({
   const isCenter = offset === 0;
   const fits = fitsRange(game, minPlayers, maxPlayers);
   const isBest = isBestForHeadcount(game, minPlayers);
-  // Freshly-added games take precedence over the headcount treatment.
-  const isNew = highlightNew && game.isNew === true;
 
   return (
     <CarouselCardChrome

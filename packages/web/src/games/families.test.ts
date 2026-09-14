@@ -172,17 +172,19 @@ describe("two-player night (RSVP carousel ordering)", () => {
     expect(unit.anchor.bgg.bestPlayerCount).toBe(LO);
   });
 
-  it("anchors every family that owns a `New` member on that member", () => {
-    // Subject comes from the catalog's CURRENT `isNew` flags rather than a
-    // pinned game: flags are editorial and get cleared once a game stops
-    // being a fresh arrival, which must never break this test. The rule
-    // itself (New outranks best-at-N) is pinned with fixtures in
-    // `lib/bgg-format.test.ts:compareForHeadcount`.
-    for (const unit of rank()) {
-      if (unit.kind !== "family") continue;
-      if (!unit.visibleMembers.some((m) => m.isNew === true)) continue;
-      expect(unit.anchor.isNew).toBe(true);
-    }
+  it("anchors a family on its `New` member even when a sibling fits better", () => {
+    // "New" is per member (the night payload's `newSlugs`), never a catalog
+    // property — so the subject is a set handed to the comparator. Parks
+    // Europe is not the best-at-2 sibling; new, it still wins the anchor.
+    const newSlugs = new Set(["parks-europe"]);
+    const eligible = games
+      .filter((g) => coversWindow(g, LO, HI))
+      .sort((a, b) => compareForHeadcount(a, b, LO, newSlugs));
+    const parks = groupForPresentation(eligible).find(
+      (u) => u.kind === "family" && u.family.id === "parks",
+    );
+    if (!parks || parks.kind !== "family") throw new Error("expected the Parks family");
+    expect(parks.anchor.slug).toBe("parks-europe");
   });
 
   it("every family unit anchors on its best-ranked visible member", () => {
