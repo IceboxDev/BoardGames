@@ -9,7 +9,13 @@
 
 export type ClocktowerEdition = "trouble-brewing" | "bad-moon-rising" | "sects-and-violets";
 
-export type ClocktowerCategory = "townsfolk" | "outsider" | "minion" | "demon";
+/**
+ * The four resident categories, plus Travellers: late arrivals / early
+ * leavers whose alignment is assigned by the Storyteller rather than implied
+ * by the character — so a Traveller's team is picked on the form, not
+ * derived (see `clocktowerAlignment`).
+ */
+export type ClocktowerCategory = "townsfolk" | "outsider" | "minion" | "demon" | "traveller";
 
 export type ClocktowerCharacter = {
   name: string;
@@ -28,6 +34,7 @@ export const CLOCKTOWER_CATEGORY_LABELS: Record<ClocktowerCategory, string> = {
   outsider: "Outsiders",
   minion: "Minions",
   demon: "Demons",
+  traveller: "Travellers",
 };
 
 const TROUBLE_BREWING: Record<ClocktowerCategory, string[]> = {
@@ -49,6 +56,7 @@ const TROUBLE_BREWING: Record<ClocktowerCategory, string[]> = {
   outsider: ["Butler", "Saint", "Recluse", "Drunk"],
   minion: ["Poisoner", "Spy", "Baron", "Scarlet Woman"],
   demon: ["Imp"],
+  traveller: ["Scapegoat", "Gunslinger", "Beggar", "Bureaucrat", "Thief"],
 };
 
 const BAD_MOON_RISING: Record<ClocktowerCategory, string[]> = {
@@ -70,6 +78,7 @@ const BAD_MOON_RISING: Record<ClocktowerCategory, string[]> = {
   outsider: ["Goon", "Lunatic", "Tinker", "Moonchild"],
   minion: ["Godfather", "Devil's Advocate", "Assassin", "Mastermind"],
   demon: ["Zombuul", "Pukka", "Shabaloth", "Po"],
+  traveller: ["Apprentice", "Matron", "Judge", "Bishop", "Voudon"],
 };
 
 const SECTS_AND_VIOLETS: Record<ClocktowerCategory, string[]> = {
@@ -91,6 +100,7 @@ const SECTS_AND_VIOLETS: Record<ClocktowerCategory, string[]> = {
   outsider: ["Mutant", "Sweetheart", "Barber", "Klutz"],
   minion: ["Evil Twin", "Witch", "Cerenovus", "Pit-Hag"],
   demon: ["Fang Gu", "Vigormortis", "No Dashii", "Vortox"],
+  traveller: ["Barista", "Harlot", "Butcher", "Bone Collector", "Deviant"],
 };
 
 const EDITION_TABLE: Record<ClocktowerEdition, Record<ClocktowerCategory, string[]>> = {
@@ -116,8 +126,18 @@ export function findClocktowerCharacter(
   return BY_NAME.get(name) ?? null;
 }
 
-export function clocktowerAlignment(category: ClocktowerCategory): "good" | "evil" {
+/**
+ * The alignment a category implies — `null` for Travellers, whose alignment
+ * the Storyteller assigns at the table (recorded by which team they sit in).
+ */
+export function clocktowerAlignment(category: ClocktowerCategory): "good" | "evil" | null {
+  if (category === "traveller") return null;
   return category === "townsfolk" || category === "outsider" ? "good" : "evil";
+}
+
+/** Whether a stored role names a Traveller (any edition). */
+export function isClocktowerTraveller(role: string | undefined | null): boolean {
+  return findClocktowerCharacter(role)?.category === "traveller";
 }
 
 /**
@@ -145,7 +165,7 @@ export function detectClocktowerEdition(
 export function charactersByCategory(
   edition: ClocktowerEdition,
 ): ReadonlyArray<{ category: ClocktowerCategory; label: string; names: ReadonlyArray<string> }> {
-  const order: ClocktowerCategory[] = ["townsfolk", "outsider", "minion", "demon"];
+  const order: ClocktowerCategory[] = ["townsfolk", "outsider", "minion", "demon", "traveller"];
   return order.map((category) => ({
     category,
     label: CLOCKTOWER_CATEGORY_LABELS[category],

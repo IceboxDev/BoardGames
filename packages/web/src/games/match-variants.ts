@@ -146,6 +146,27 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       { value: "Midterm Grading", label: "Midterm Grading Extravaganza" },
     ],
   },
+  // Unstable Unicorns: one base deck (the White / Black / GameStop / retail
+  // boxes differ only in card backs) plus the expansion boxes shuffled in.
+  // Recorded like 7 Wonders: the base is always in play, so it is pre-checked;
+  // expansions stay opt-in. Values are one word each because the joined
+  // scenario string is capped at 64 characters on the wire and the full
+  // selection must fit (63). The 5-card Kickstarter promo pack is not a box
+  // and is left out for the same reason.
+  "unstable-unicorns": {
+    label: "Boxes in play",
+    mode: "multi",
+    default: "Base",
+    options: [
+      { value: "Base", label: "Base game" },
+      { value: "NSFW", label: "NSFW (Uncut Unicorns)" },
+      { value: "Dragons", label: "Dragons" },
+      { value: "Apocalypse", label: "Rainbow Apocalypse" },
+      { value: "Sprinkles", label: "Rainbow Sprinkles" },
+      { value: "Chaos", label: "Control and Chaos" },
+      { value: "Legend", label: "Unicorns of Legend" },
+    ],
+  },
   // Villainous: the two boxes are separate catalog games (different party
   // sizes), but the group mixes villains across them, so either slug records
   // WHICH boxes were on the table (multi-select, like Dungeon Mayhem's sets).

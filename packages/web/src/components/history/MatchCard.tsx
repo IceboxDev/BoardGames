@@ -13,6 +13,7 @@ import type {
 import {
   CLOCKTOWER_EDITIONS,
   detectClocktowerEdition,
+  isClocktowerTraveller,
 } from "../../games/blood-on-the-clocktower/characters";
 import { variantConfigForSlug } from "../../games/match-variants";
 import { games } from "../../games/registry";
@@ -438,7 +439,11 @@ function TeamsInline({
                   tone={isWinner ? "winner" : "loser"}
                   accent={accent}
                   isMe={m.userId === currentUserId}
-                  title={m.role ? `${m.displayName} — ${m.role}` : m.displayName}
+                  title={
+                    m.role
+                      ? `${m.displayName} — ${m.role}${isClocktowerTraveller(m.role) ? " (Traveller)" : ""}`
+                      : m.displayName
+                  }
                 />
               ))}
             </span>

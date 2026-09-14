@@ -65,6 +65,21 @@ describe("variantConfigForSlug", () => {
     }
   });
 
+  it("returns the Unstable Unicorns boxes config (multi, Base pre-checked)", () => {
+    const config = variantConfigForSlug("unstable-unicorns");
+    expect(config?.mode).toBe("multi");
+    expect(config?.default).toBe("Base");
+    expect(config?.options.map((o) => o.value)).toEqual([
+      "Base",
+      "NSFW",
+      "Dragons",
+      "Apocalypse",
+      "Sprinkles",
+      "Chaos",
+      "Legend",
+    ]);
+  });
+
   it("returns the Phase 10 ruleset config (single, five variants)", () => {
     const config = variantConfigForSlug("phase-10");
     expect(config?.mode).toBe("single");

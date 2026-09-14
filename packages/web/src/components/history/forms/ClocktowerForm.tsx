@@ -8,6 +8,7 @@ import {
   detectClocktowerEdition,
   fabledByGroup,
   findClocktowerCharacter,
+  isClocktowerTraveller,
 } from "../../../games/blood-on-the-clocktower/characters";
 import { Badge } from "../../ui/Badge";
 import { Chip } from "../../ui/Chip";
@@ -24,14 +25,22 @@ type Props = {
   onChange: (next: MatchOutcomeTeams) => void;
 };
 
-type Slot = { userId: string; displayName: string; role?: string };
+type Alignment = "good" | "evil";
+
+/**
+ * `alignment` is only meaningful for Travellers — the Storyteller assigns
+ * it, so the form asks; every other character implies it. On the wire it is
+ * simply which team the member sits in.
+ */
+type Slot = { userId: string; displayName: string; role?: string; alignment?: Alignment };
 
 /**
  * Match-history form for Blood on the Clocktower. Players get assigned a
  * character from one of the three base-set editions; the Good / Evil teams
- * fall out automatically from the character's category. The wire shape is
- * still the generic `MatchOutcomeTeams` so the rest of the history pipeline
- * (storage, MatchCard rendering, edit/delete) works unchanged.
+ * fall out automatically from the character's category — except for
+ * Travellers, whose side is picked on their row. The wire shape is still the
+ * generic `MatchOutcomeTeams` so the rest of the history pipeline (storage,
+ * MatchCard rendering, edit/delete) works unchanged.
  */
 export function ClocktowerForm({ users, value, onChange }: Props) {
   // Flatten the wire shape into a single roster the UI works with. Order is
@@ -67,17 +76,34 @@ export function ClocktowerForm({ users, value, onChange }: Props) {
   }
 
   function setPlayers(participants: Participant[]) {
-    const roleById = new Map(roster.map((s) => [s.userId, s.role] as const));
-    const next: Slot[] = participants.map((p) => ({
-      userId: p.userId,
-      displayName: p.displayName,
-      role: roleById.get(p.userId),
-    }));
+    const slotById = new Map(roster.map((s) => [s.userId, s] as const));
+    const next: Slot[] = participants.map((p) => {
+      const prev = slotById.get(p.userId);
+      return {
+        userId: p.userId,
+        displayName: p.displayName,
+        role: prev?.role,
+        ...(prev?.alignment ? { alignment: prev.alignment } : {}),
+      };
+    });
     commitRoster(next);
   }
 
   function setRole(userId: string, role: string | undefined) {
-    const next = roster.map((s) => (s.userId === userId ? { ...s, role } : s));
+    const next = roster.map((s) => {
+      if (s.userId !== userId) return s;
+      // A Traveller starts Good until the Storyteller's call is recorded; a
+      // resident character's side is implied, so any earlier pick is dropped.
+      const { alignment: _alignment, ...bare } = s;
+      return isClocktowerTraveller(role)
+        ? { ...bare, role, alignment: "good" as const }
+        : { ...bare, role };
+    });
+    commitRoster(next);
+  }
+
+  function setTravellerAlignment(userId: string, alignment: Alignment) {
+    const next = roster.map((s) => (s.userId === userId ? { ...s, alignment } : s));
     commitRoster(next);
   }
 
@@ -121,8 +147,10 @@ export function ClocktowerForm({ users, value, onChange }: Props) {
   }
 
   const groups = charactersByCategory(edition);
-  const goodCount = roster.filter((s) => alignmentOf(s.role) === "good").length;
-  const evilCount = roster.filter((s) => alignmentOf(s.role) === "evil").length;
+  const residents = roster.filter((s) => !isClocktowerTraveller(s.role));
+  const goodCount = residents.filter((s) => alignmentOf(s) === "good").length;
+  const evilCount = residents.filter((s) => alignmentOf(s) === "evil").length;
+  const travellerCount = roster.length - residents.length;
   const unassignedCount = roster.filter((s) => !findClocktowerCharacter(s.role)).length;
 
   const playerUsers = value.moderator
@@ -153,6 +181,14 @@ export function ClocktowerForm({ users, value, onChange }: Props) {
               <span className="text-emerald-300">Good {goodCount}</span>
               <span className="px-1 text-fg-disabled">·</span>
               <span className="text-rose-300">Evil {evilCount}</span>
+              {travellerCount > 0 && (
+                <>
+                  <span className="px-1 text-fg-disabled">·</span>
+                  <span className="text-sky-300">
+                    {travellerCount} {travellerCount === 1 ? "traveller" : "travellers"}
+                  </span>
+                </>
+              )}
               {unassignedCount > 0 && (
                 <>
                   <span className="px-1 text-fg-disabled">·</span>
@@ -168,6 +204,7 @@ export function ClocktowerForm({ users, value, onChange }: Props) {
                 slot={slot}
                 groups={groups}
                 onRoleChange={(role) => setRole(slot.userId, role)}
+                onAlignmentChange={(alignment) => setTravellerAlignment(slot.userId, alignment)}
               />
             ))}
           </div>
@@ -292,25 +329,35 @@ function CharacterRow({
   slot,
   groups,
   onRoleChange,
+  onAlignmentChange,
 }: {
   slot: Slot;
   groups: ReadonlyArray<{ label: string; names: ReadonlyArray<string> }>;
   onRoleChange: (role: string | undefined) => void;
+  onAlignmentChange: (alignment: Alignment) => void;
 }) {
   const id = useId();
-  const character = findClocktowerCharacter(slot.role);
-  const align = character ? clocktowerAlignment(character.category) : null;
+  const traveller = isClocktowerTraveller(slot.role);
   return (
     <PlayerRow
       name={slot.displayName}
       right={
         <>
-          <AlignmentBadge align={align} />
+          {traveller ? (
+            <TravellerSidePicker
+              name={slot.displayName}
+              alignment={slot.alignment ?? "good"}
+              onChange={onAlignmentChange}
+            />
+          ) : (
+            <AlignmentBadge align={alignmentOf(slot)} />
+          )}
           <Select
             size="sm"
             block={false}
             className="w-44"
             id={id}
+            aria-label={`${slot.displayName} — character`}
             value={slot.role ?? ""}
             onChange={(e) => onRoleChange(e.target.value || undefined)}
           >
@@ -328,6 +375,48 @@ function CharacterRow({
         </>
       }
     />
+  );
+}
+
+/**
+ * A Traveller's side is the Storyteller's call, so it is a choice on the row
+ * rather than a derived badge. The pair is labelled per player so the two
+ * chips stay distinguishable to assistive tech across a long roster.
+ */
+function TravellerSidePicker({
+  name,
+  alignment,
+  onChange,
+}: {
+  name: string;
+  alignment: Alignment;
+  onChange: (next: Alignment) => void;
+}) {
+  return (
+    <span
+      className="inline-flex items-center gap-1"
+      title="Traveller — side assigned by the Storyteller"
+    >
+      <Badge tone="sky">traveller</Badge>
+      <Chip
+        pressed={alignment === "good"}
+        tone="emerald"
+        size="xs"
+        aria-label={`${name} travels as good`}
+        onClick={() => onChange("good")}
+      >
+        good
+      </Chip>
+      <Chip
+        pressed={alignment === "evil"}
+        tone="rose"
+        size="xs"
+        aria-label={`${name} travels as evil`}
+        onClick={() => onChange("evil")}
+      >
+        evil
+      </Chip>
+    </span>
   );
 }
 
@@ -372,18 +461,23 @@ function WinnerButton({
 const GOOD_INDEX = 0;
 const EVIL_INDEX = 1;
 
-function alignmentOf(role: string | undefined): "good" | "evil" | null {
-  const c = findClocktowerCharacter(role);
-  return c ? clocktowerAlignment(c.category) : null;
+/** The side a slot sits on: implied by a resident character, chosen for a Traveller. */
+function alignmentOf(slot: Slot): Alignment | null {
+  const c = findClocktowerCharacter(slot.role);
+  if (!c) return null;
+  return c.category === "traveller" ? (slot.alignment ?? "good") : clocktowerAlignment(c.category);
 }
 
 function flattenRoster(value: MatchOutcomeTeams): Slot[] {
   const flat: Slot[] = [];
-  for (const team of value.teams) {
+  value.teams.forEach((team, i) => {
     for (const m of team.members) {
-      flat.push({ userId: m.userId, displayName: m.displayName, role: m.role });
+      const slot: Slot = { userId: m.userId, displayName: m.displayName, role: m.role };
+      // A Traveller's side is exactly the team they were stored in.
+      if (isClocktowerTraveller(m.role)) slot.alignment = i === EVIL_INDEX ? "evil" : "good";
+      flat.push(slot);
     }
-  }
+  });
   flat.sort((a, b) => a.displayName.localeCompare(b.displayName));
   return flat;
 }
@@ -396,8 +490,7 @@ function projectToOutcome(
   const good: MatchOutcomeTeams["teams"][number]["members"] = [];
   const evil: MatchOutcomeTeams["teams"][number]["members"] = [];
   for (const s of roster) {
-    const character = findClocktowerCharacter(s.role);
-    const bucket = character && clocktowerAlignment(character.category) === "evil" ? evil : good;
+    const bucket = alignmentOf(s) === "evil" ? evil : good;
     bucket.push(
       s.role
         ? { userId: s.userId, displayName: s.displayName, role: s.role }

@@ -22,6 +22,7 @@ import type {
   MatchOutcomeTeams,
   Participant,
 } from "@boardgames/core/history/types";
+import { isClocktowerTraveller } from "../../games/blood-on-the-clocktower/characters";
 import { JAIPUR_BEST_OF_ONE } from "../../games/match-variants";
 import { coopMaxScoreForSlug, isSingleWinnerFfa, isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
@@ -72,6 +73,9 @@ export function emptyOutcome(kind: MatchKind, prefill: Participant[]): MatchOutc
       };
   }
 }
+
+/** The wire cap on `scenario` (`z.string().max(64)` on every kind in history.ts). */
+export const SCENARIO_MAX_LENGTH = 64;
 
 /**
  * Read the per-game variant tag (`scenario`) off an outcome. one-vs-many is the
@@ -152,6 +156,13 @@ export function describeOutcomeError(
   outcome: MatchOutcome,
   gameSlug: string | null,
 ): string | null {
+  // Multi-select variants join into one `scenario` string capped at 64 on the
+  // wire (history.ts); a long expansion list would otherwise fail at save
+  // time with an unreadable schema error.
+  const scenario = getScenario(outcome);
+  if (scenario && scenario.length > SCENARIO_MAX_LENGTH) {
+    return "Too many expansions for one match — untick a few";
+  }
   switch (outcome.kind) {
     case "free-for-all":
       if (isVillainousSlug(gameSlug)) return describeVillainousError(outcome);
@@ -354,9 +365,13 @@ export function describeClocktowerError(outcome: MatchOutcomeTeams): string | nu
   if (allMembers.length === 0) return "Add players";
   const unassigned = allMembers.find((m) => !m.role);
   if (unassigned) return `Pick a character for ${unassigned.displayName}`;
+  // Travellers sit on the side the Storyteller gave them, but a town still
+  // needs a resident on each side — a Demon and someone to hunt it.
   const [good, evil] = outcome.teams;
-  if (!good || good.members.length === 0) return "At least one good player is required";
-  if (!evil || evil.members.length === 0) return "At least one evil player is required";
+  const residents = (t: MatchOutcomeTeams["teams"][number] | undefined) =>
+    (t?.members ?? []).filter((m) => !isClocktowerTraveller(m.role));
+  if (residents(good).length === 0) return "At least one good player is required";
+  if (residents(evil).length === 0) return "At least one evil player is required";
   if (outcome.winnerTeamIndices.length === 0) return "Pick the winning side";
   return null;
 }

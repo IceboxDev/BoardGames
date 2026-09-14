@@ -743,6 +743,52 @@ describe("describeClocktowerError", () => {
       }),
     ).toBe("At least one evil player is required");
   });
+
+  it("a Traveller on a side does not stand in for that side's residents", () => {
+    // The Gunslinger travels as evil here, but the town still has no Demon.
+    expect(
+      describeClocktowerError({
+        kind: "teams",
+        teams: [
+          { members: [{ ...p("a"), role: "Empath" }] },
+          { members: [{ ...p("b"), role: "Gunslinger" }] },
+        ],
+        winnerTeamIndices: [0],
+      }),
+    ).toBe("At least one evil player is required");
+    expect(
+      describeClocktowerError({
+        kind: "teams",
+        teams: [
+          { members: [{ ...p("a"), role: "Empath" }] },
+          {
+            members: [
+              { ...p("b"), role: "Gunslinger" },
+              { ...p("c"), role: "Imp" },
+            ],
+          },
+        ],
+        winnerTeamIndices: [1],
+      }),
+    ).toBeNull();
+  });
+});
+
+describe("describeOutcomeError — scenario length", () => {
+  it("refuses a joined expansion list longer than the wire cap", () => {
+    const outcome: MatchOutcomeFreeForAll = {
+      kind: "free-for-all",
+      scenario: "x".repeat(65),
+      players: [
+        { ...p("a"), score: 1 },
+        { ...p("b"), score: 0 },
+      ],
+    };
+    expect(describeOutcomeError(outcome, "7-wonders")).toBe(
+      "Too many expansions for one match — untick a few",
+    );
+    expect(describeOutcomeError({ ...outcome, scenario: "x".repeat(64) }, "7-wonders")).toBeNull();
+  });
 });
 
 describe("describeResistanceError", () => {
