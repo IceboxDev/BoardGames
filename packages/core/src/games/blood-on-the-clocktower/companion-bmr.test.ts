@@ -16,6 +16,7 @@ import {
   isDrunkPlayer,
   isEvilPlayer,
   kill,
+  lunaticAttacksWanted,
   mastermindVerdict,
   minstrelActive,
   nightQueue,
@@ -33,6 +34,7 @@ import {
   resolvePukkaVictim,
   setDrunk,
   setGrandchild,
+  setLunaticChoices,
   swapSeats,
   teaLadyProtectedSeats,
   votesRequired,
@@ -227,6 +229,57 @@ describe("BMR night queue", () => {
     const ids = stepIds(state);
     expect(ids.indexOf("lunatic-info")).toBeGreaterThan(ids.indexOf("minion-info"));
     expect(ids.indexOf("lunatic-info")).toBeLessThan(ids.indexOf("demon-info"));
+  });
+
+  describe("the Lunatic acts as the Demon they believe they are", () => {
+    // Seat 6 is the Lunatic; the real demon is the Zombuul at seat 0.
+    function lunaticGame(believed: CharacterId) {
+      const setup = bmrSetup({ 6: "lunatic" });
+      const seats = setup.seats.map((s) =>
+        s.character === "lunatic" ? { ...s, believedCharacter: believed } : s,
+      );
+      // Night 2 after a deathless day.
+      return endDay(dawn(beginNight(createGame({ ...setup, seats }))));
+    }
+    const lunaticWakes = (state: ReturnType<typeof lunaticGame>) =>
+      nightQueue(state).some((s) => s.kind === "wake" && s.seat === 6);
+
+    it("points at two players as the Shabaloth, one as the Zombuul or Pukka", () => {
+      expect(lunaticAttacksWanted(lunaticGame("shabaloth"))).toBe(2);
+      expect(lunaticAttacksWanted(lunaticGame("zombuul"))).toBe(1);
+      expect(lunaticAttacksWanted(lunaticGame("pukka"))).toBe(1);
+    });
+
+    it("as the Po: one pick, or none tonight and three the next time they wake", () => {
+      let state = lunaticGame("po");
+      expect(lunaticAttacksWanted(state)).toBe(1);
+      state = setLunaticChoices(state, []);
+      expect(state.log.at(-1)?.text).toBe("Gwen (Lunatic, as the Po) chose no one.");
+      expect(state.lunaticChoices).toEqual([]);
+      expect(lunaticAttacksWanted(state)).toBe(1); // the charge is for NEXT time
+      state = endDay(dawn(state));
+      expect(lunaticAttacksWanted(state)).toBe(3);
+      state = setLunaticChoices(state, [1, 2, 3]);
+      expect(state.log.at(-1)?.text).toBe(
+        "Gwen (Lunatic, as the Po) chose Bob, Cara, Dan — nothing happens.",
+      );
+      expect(state.players.filter((p) => p.alive)).toHaveLength(8); // fake
+      state = endDay(dawn(state));
+      expect(lunaticAttacksWanted(state)).toBe(1); // the charge was spent
+      expect(state.lunaticChoices).toBeUndefined();
+    });
+
+    it("as the Zombuul, wakes only after a deathless day — like the real one", () => {
+      let state = lunaticGame("zombuul");
+      expect(lunaticWakes(state)).toBe(true);
+      state = dawn(state);
+      state = kill(state, 3, "storyteller"); // someone died today
+      state = endDay(state);
+      expect(lunaticWakes(state)).toBe(false);
+      expect(lunaticWakes(endDay(kill(dawn(lunaticGame("shabaloth")), 3, "storyteller")))).toBe(
+        true,
+      );
+    });
   });
 
   it("the Exorcist choosing the Demon blocks the demon's wake", () => {

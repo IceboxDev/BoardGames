@@ -237,6 +237,8 @@ export const CompanionStateSchema = z.object({
   mastermindExtraDay: z.boolean().optional(),
   /** Who the Lunatic "attacked" tonight — shown to the real Demon (cleared at dawn). */
   lunaticChoices: z.array(SeatSchema).optional(),
+  /** Night a Lunatic who believes they are the Po "chose no one" — three picks next time. */
+  lunaticPoChargedNight: z.number().int().optional(),
   log: z.array(LogEntrySchema),
   nextLogId: z.number().int(),
 });

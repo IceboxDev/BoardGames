@@ -10,6 +10,8 @@ import {
   demonAttackStatus,
   infoGivenTonight,
   isEvilPlayer,
+  lunaticAttacksWanted,
+  lunaticPoChargeActive,
   nameAt,
   playerAt,
   poChargeActive,
@@ -619,36 +621,66 @@ export function ChambermaidStep({ state, update, step, voided }: StepProps) {
   );
 }
 
-/** The Lunatic acting out their fake Demon attacks (other nights). */
+const COUNT_WORDS = ["no one", "one player", "two players", "three players"] as const;
+
+/**
+ * The Lunatic acting out their fake Demon attacks (other nights). They point
+ * at as many players as the Demon they believe they are would — two as the
+ * Shabaloth, one (or three after "charging") as the Po, one otherwise — and
+ * a mis-tap swaps the oldest pick out rather than adding a third.
+ */
 export function LunaticActStep({ state, update, step }: StepProps) {
   const [picked, setPicked] = useState<number[]>([]);
   const believed = CHARACTERS[step.character];
+  const wanted = lunaticAttacksWanted(state);
+  const asPo = step.character === "po";
+  const charged = asPo && lunaticPoChargeActive(state);
+  const recorded = state.lunaticChoices;
+  // The Lunatic may hold the phone: nothing here may call them the Lunatic.
   const handOver = useHandOver();
   const toggle = (seat: number) =>
     setPicked((prev) =>
-      prev.includes(seat) ? prev.filter((s) => s !== seat) : [...prev, seat].slice(-3),
+      prev.includes(seat) ? prev.filter((s) => s !== seat) : [...prev, seat].slice(-wanted),
     );
   return (
     <div className="flex flex-col gap-2">
       {!handOver && (
         <p className="text-sm text-fg-primary">
-          They believe they are the <b>{believed.name}</b> — let them make that Demon's choices.
-          <b> Nothing actually happens.</b> Record the picks so you can show them to the real Demon.
+          They believe they are the <b>{believed.name}</b> — let them point at {COUNT_WORDS[wanted]}
+          , as that Demon would. <b>Nothing actually happens.</b> Record the picks so you can show
+          them to the real Demon.
+        </p>
+      )}
+      {charged && (
+        <Callout tone="rose">
+          They chose no one last night — tonight they point at THREE players, as the Po would.
+        </Callout>
+      )}
+      {asPo && !charged && !handOver && (
+        <p className="text-xs text-fg-muted">
+          As the Po they shake their head no (three picks next time), or point at one player.
         </p>
       )}
       <SeatPicker state={state} selected={picked} deadSelectable onToggle={toggle} />
+      {asPo && !charged && picked.length === 0 && recorded === undefined && (
+        <Button variant="secondary" block onClick={() => update((s) => setLunaticChoices(s, []))}>
+          They choose NO ONE — charge up
+        </Button>
+      )}
       <Button
         variant="secondary"
         block
-        disabled={picked.length === 0}
+        disabled={picked.length !== wanted}
         onClick={() => update((s) => setLunaticChoices(s, picked))}
       >
-        Record the Lunatic's picks
+        {handOver ? "Record the picks" : "Record the Lunatic's picks"} ({picked.length}/{wanted})
       </Button>
-      {state.lunaticChoices && state.lunaticChoices.length > 0 && (
+      {recorded !== undefined && !handOver && (
         <StepDone>
-          Recorded ({state.lunaticChoices.map((s) => nameAt(state, s)).join(", ")}) — the Demon's
-          step will show them.
+          {recorded.length === 0
+            ? "Recorded — they chose no one"
+            : `Recorded (${recorded.map((s) => nameAt(state, s)).join(", ")})`}{" "}
+          — the Demon's step will show them.
         </StepDone>
       )}
     </div>
@@ -1004,11 +1036,14 @@ export function PukkaVictimStep({
 // ── The four Bad Moon Rising demons ───────────────────────────────────
 
 function LunaticNote({ state }: { state: CompanionState }) {
-  if (!state.lunaticChoices || state.lunaticChoices.length === 0) return null;
+  const chose = state.lunaticChoices;
+  if (!chose) return null;
   return (
     <Callout tone="purple">
-      First: point at the Lunatic, show the Lunatic token, and point at the players the Lunatic
-      chose — {state.lunaticChoices.map((s) => nameAt(state, s)).join(", ")}.
+      First: point at the Lunatic, show the Lunatic token, and{" "}
+      {chose.length === 0
+        ? "shake your head — the Lunatic chose no one tonight."
+        : `point at the players the Lunatic chose — ${chose.map((s) => nameAt(state, s)).join(", ")}.`}
     </Callout>
   );
 }

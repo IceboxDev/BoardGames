@@ -602,7 +602,11 @@ function bmrNightQueue(state: CompanionState): NightStep[] {
           }
           break;
         case "lunatic":
-          if (lunatic) push(lunatic);
+          // Woken as the Demon they believe they are — so a "Zombuul" only
+          // after a deathless day, like the real one.
+          if (lunatic && (lunatic.believedCharacter !== "zombuul" || state.nightZombuulActs)) {
+            push(lunatic);
+          }
           break;
         case "zombuul":
           // Wakes only after a deathless day, and not while exorcised.
@@ -762,6 +766,10 @@ export function dawn(state: CompanionState): CompanionState {
     outsiderDiedToday: undefined,
     nightZombuulActs: undefined,
     lunaticChoices: undefined,
+    lunaticPoChargedNight:
+      state.lunaticChoices && state.lunaticChoices.length > 0
+        ? undefined
+        : state.lunaticPoChargedNight,
     shabalothVictims: demon?.character === "shabaloth" && choices.length > 0 ? choices : undefined,
     poChargedNight: choices.length === 0 ? state.poChargedNight : undefined,
     day: EMPTY_DAY,
@@ -1735,11 +1743,46 @@ export function setApprenticeAbility(
   );
 }
 
-/** What the Lunatic "did" tonight — shown to the real Demon at their step. */
+/** The Lunatic (believing they are the Po) chose no one on an earlier night. */
+export function lunaticPoChargeActive(state: CompanionState): boolean {
+  const charged = state.lunaticPoChargedNight;
+  if (charged === undefined) return false;
+  return state.phase.kind !== "night" || state.phase.night > charged;
+}
+
+/**
+ * How many players the Lunatic points at tonight — what the Demon they
+ * believe they are would choose: two as the Shabaloth, one or (after a
+ * "charge") three as the Po, one as the Zombuul or Pukka.
+ */
+export function lunaticAttacksWanted(state: CompanionState): number {
+  const lunatic = state.players.find((p) => p.alive && p.character === "lunatic");
+  if (lunatic?.believedCharacter === "shabaloth") return 2;
+  if (lunatic?.believedCharacter === "po") return lunaticPoChargeActive(state) ? 3 : 1;
+  return 1;
+}
+
+/**
+ * What the Lunatic "did" tonight — shown to the real Demon at their step.
+ * An empty pick is a "Po" choosing no one: they point at three next time.
+ */
 export function setLunaticChoices(state: CompanionState, seats: number[]): CompanionState {
   const lunatic = state.players.find((p) => p.alive && p.character === "lunatic");
-  const next: CompanionState = { ...state, lunaticChoices: seats };
-  return lunatic ? resolveWake(next, lunatic.seat) : next;
+  let next: CompanionState = { ...state, lunaticChoices: seats };
+  if (!lunatic) return next;
+  const believed = CHARACTERS[lunatic.believedCharacter ?? "lunatic"].name;
+  if (seats.length === 0) {
+    if (lunatic.believedCharacter === "po" && state.phase.kind === "night") {
+      next = { ...next, lunaticPoChargedNight: state.phase.night };
+    }
+    next = logNow(next, `${lunatic.name} (Lunatic, as the ${believed}) chose no one.`);
+  } else {
+    next = logNow(
+      next,
+      `${lunatic.name} (Lunatic, as the ${believed}) chose ${seats.map((s) => nameAt(state, s)).join(", ")} — nothing happens.`,
+    );
+  }
+  return resolveWake(next, lunatic.seat);
 }
 
 // ── Storyteller kill reminders (BMR night steps that don't wake anyone) ──
