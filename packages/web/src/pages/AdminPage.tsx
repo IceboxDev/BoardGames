@@ -32,7 +32,7 @@ import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { adminFetchUnseenActivity, adminGenerateResetLink, adminSetOnlineMode } from "../lib/admin";
 import { authClient } from "../lib/auth-client";
 import { errorMessageOf } from "../lib/error-message";
-import { adminFetchLastPlayed } from "../lib/match-history";
+import { adminFetchLastAttended } from "../lib/match-history";
 import {
   type AggregateAvailabilityMap,
   adminFetchAllAvailability,
@@ -134,36 +134,39 @@ export default function AdminPage() {
   // everywhere.
   const guests = useMemo(() => rawUsers.filter((u) => u.guest && !u.internal), [rawUsers]);
 
-  // Date of each member's most recent recorded match — one of the two signals
+  // The latest locked night each member was at — one of the two signals
   // (with marked days) behind the inactivity clock in admin-coverage.ts.
-  const lastPlayedQuery = useQuery({
-    queryKey: qk.adminLastPlayed(),
-    queryFn: ({ signal }) => adminFetchLastPlayed(signal),
+  // Matches with no night attached don't count: they are games an admin
+  // played with them elsewhere, not a sign of life in the app.
+  const lastAttendedQuery = useQuery({
+    queryKey: qk.adminLastAttended(),
+    queryFn: ({ signal }) => adminFetchLastAttended(signal),
   });
 
   // Visible members: hide internal + guest accounts, sort admins first, then
   // by coverage % descending; within the 0% group the freshest lapse sorts
   // first, so the stalest players sink toward the bottom. Members at 0% for
   // INACTIVE_AFTER_DAYS+ hide behind the show-inactive expander at the foot
-  // of the table — except admins, and only once last-played has loaded
-  // (before that, a player whose only signal is a recorded match would flash
+  // of the table — except admins, and only once last-attended has loaded
+  // (before that, a player whose only signal is an attended night would flash
   // behind the expander and back out). Both partitions keep the ONE sorted
   // order, so expanding simply continues the list (stalest last).
   const { allMembers, activeRows, inactiveRows } = useMemo(() => {
     const visible = rawUsers.filter((u) => !u.internal && !u.guest);
     const latestMarked = latestMarkedDayByUser(aggregate);
-    const lastPlayed = lastPlayedQuery.data;
+    const lastAttended = lastAttendedQuery.data;
     const todayKey = dateKey(new Date());
     const rows: MemberRow[] = visible.map((user) => {
       const coverage = computeCoverage(aggregate, user.id, editableDateKeys);
       const zeroDays = daysAtZeroCoverage({
         coverage,
         latestMarkedDay: latestMarked.get(user.id),
-        lastPlayedDay: lastPlayed?.[user.id],
+        lastAttendedNight: lastAttended?.[user.id],
         createdAt: user.createdAt,
         todayKey,
       });
-      const inactive = lastPlayed !== undefined && isInactiveMember(user.role, coverage, zeroDays);
+      const inactive =
+        lastAttended !== undefined && isInactiveMember(user.role, coverage, zeroDays);
       return { user, coverage, zeroDays, inactive };
     });
     rows.sort((a, b) => {
@@ -183,7 +186,7 @@ export default function AdminPage() {
       activeRows: rows.filter((r) => !r.inactive),
       inactiveRows: rows.filter((r) => r.inactive),
     };
-  }, [rawUsers, aggregate, editableDateKeys, lastPlayedQuery.data]);
+  }, [rawUsers, aggregate, editableDateKeys, lastAttendedQuery.data]);
 
   const setOnlineModeMutation = useMutation({
     mutationFn: ({ userId, mode }: { userId: string; mode: OnlineMode }) =>

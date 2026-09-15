@@ -25,7 +25,7 @@ export function InactiveToggleRow({ count, expanded, onToggle }: Props) {
         <button
           type="button"
           onClick={onToggle}
-          title={`At 0% availability for ${INACTIVE_AFTER_DAYS}+ days — they return on any new mark, RSVP, or recorded match`}
+          title={`At 0% availability for ${INACTIVE_AFTER_DAYS}+ days — they return on any new mark, RSVP, or attended game night`}
           className="-mx-1 flex cursor-pointer items-center gap-1 rounded-ui-md px-1 py-0.5 text-2xs text-fg-muted transition-colors hover:text-fg-secondary focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400"
         >
           <ChevronDownIcon

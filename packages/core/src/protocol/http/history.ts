@@ -407,16 +407,18 @@ export type DndOpenCampaignsResponse = z.infer<typeof DndOpenCampaignsResponseSc
 export const DeleteMatchResponseSchema = z.object({ ok: z.literal(true) });
 export type DeleteMatchResponse = z.infer<typeof DeleteMatchResponseSchema>;
 
-// ── Last played (admin) ───────────────────────────────────────────────
-// Date of each user's most recent recorded match (any slot — playing counts),
-// keyed by userId; users with no recorded match are absent. Feeds the admin
-// page's inactivity clock: a played match resets "days at 0% availability"
-// exactly like a marked calendar day, so people who show up and play but
-// never plan ahead in the app don't read as gone.
-export const AdminLastPlayedResponseSchema = z.object({
-  lastPlayedByUser: z.record(z.string(), DateKeyStringSchema),
+// ── Last attended night (admin) ───────────────────────────────────────
+// The latest locked game night each user was at — the date key of the most
+// recent match recorded AGAINST A NIGHT with them in it (any slot, moderators
+// included); users with none are absent. Feeds the admin page's inactivity
+// clock: being at a night resets "days at 0% availability" exactly like a
+// marked calendar day, so people who show up and play but never plan ahead
+// in the app don't read as gone. A match with no night attached (a game
+// played elsewhere, entered by an admin) is deliberately not counted.
+export const AdminLastAttendedResponseSchema = z.object({
+  lastAttendedNightByUser: z.record(z.string(), DateKeyStringSchema),
 });
-export type AdminLastPlayedResponse = z.infer<typeof AdminLastPlayedResponseSchema>;
+export type AdminLastAttendedResponse = z.infer<typeof AdminLastAttendedResponseSchema>;
 
 // ── Reorder (admin) ───────────────────────────────────────────────────
 // Re-sort the matches inside one board game night. `orderedIds` is the full

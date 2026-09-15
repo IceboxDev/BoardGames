@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import {
-  AdminLastPlayedResponseSchema,
+  AdminLastAttendedResponseSchema,
   HistoryListQuerySchema,
   HistoryListResponseSchema,
   MatchCreateInputSchema,
@@ -699,21 +699,25 @@ describe("MatchCreateInputSchema", () => {
   });
 });
 
-describe("AdminLastPlayedResponseSchema", () => {
+describe("AdminLastAttendedResponseSchema", () => {
   it("accepts a userId → dateKey map, empty included", () => {
     expect(() =>
-      AdminLastPlayedResponseSchema.parse({
-        lastPlayedByUser: { u1: "2026-08-20", u2: "2026-05-15" },
+      AdminLastAttendedResponseSchema.parse({
+        lastAttendedNightByUser: { u1: "2026-08-20", u2: "2026-05-15" },
       }),
     ).not.toThrow();
-    expect(() => AdminLastPlayedResponseSchema.parse({ lastPlayedByUser: {} })).not.toThrow();
+    expect(() =>
+      AdminLastAttendedResponseSchema.parse({ lastAttendedNightByUser: {} }),
+    ).not.toThrow();
   });
 
   it("rejects a non-dateKey value and a missing map", () => {
     expect(() =>
-      AdminLastPlayedResponseSchema.parse({ lastPlayedByUser: { u1: "2026-08-20T19:00:00Z" } }),
+      AdminLastAttendedResponseSchema.parse({
+        lastAttendedNightByUser: { u1: "2026-08-20T19:00:00Z" },
+      }),
     ).toThrow();
-    expect(() => AdminLastPlayedResponseSchema.parse({})).toThrow();
+    expect(() => AdminLastAttendedResponseSchema.parse({})).toThrow();
   });
 });
 

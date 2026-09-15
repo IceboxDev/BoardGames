@@ -18,7 +18,7 @@ describe("AgentInactivityResponseSchema", () => {
     role: "user",
     coverage: { can: 0, maybe: 0, total: 41 },
     latestMarkedDay: null,
-    lastPlayedDay: "2026-05-15",
+    lastAttendedNight: "2026-05-15",
     zeroDays: 119,
     inactive: true,
   };

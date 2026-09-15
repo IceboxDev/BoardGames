@@ -1,6 +1,6 @@
 import type { MatchOutcome, MatchRecord } from "@boardgames/core/history/types";
 import {
-  AdminLastPlayedResponseSchema,
+  AdminLastAttendedResponseSchema,
   MatchReorderInputSchema,
   MatchReorderResponseSchema,
 } from "@boardgames/core/protocol";
@@ -415,26 +415,28 @@ adminMatchHistoryRoutes.post("/reorder", zJsonBody(MatchReorderInputSchema), asy
   return c.json(MatchReorderResponseSchema.parse({ ok: true }));
 });
 
-// Date of each user's most recent recorded match, for the admin page's
-// inactivity clock — being at a night (any slot, moderators included via
+// The latest locked night each user was at, for the admin page's inactivity
+// clock — being at a night (any slot, moderators included via
 // match_participants) resets "days at 0% availability" like a marked calendar
-// day. `MAX(played_at)` over the mixed ISO formats is lexicographic, which is
-// day-accurate — good enough for a days-scale clock.
-const LastPlayedRowSchema = z.object({
+// day. Only matches recorded AGAINST A NIGHT (`date_key` set) count: a game
+// entered with no night is one an admin played with them elsewhere and says
+// nothing about their use of the app.
+const LastAttendedRowSchema = z.object({
   user_id: z.string(),
-  last_played: z.string(),
+  last_attended: z.string(),
 });
 
-adminMatchHistoryRoutes.get("/last-played", async (c) => {
+adminMatchHistoryRoutes.get("/last-attended", async (c) => {
   const { rows } = await getDb().execute(
-    `SELECT mp.user_id AS user_id, substr(MAX(mr.played_at), 1, 10) AS last_played
+    `SELECT mp.user_id AS user_id, MAX(mr.date_key) AS last_attended
      FROM match_participants mp
      JOIN match_results mr ON mr.id = mp.match_id
+     WHERE mr.date_key IS NOT NULL
      GROUP BY mp.user_id`,
   );
-  const lastPlayedByUser: Record<string, string> = {};
-  for (const r of parseRows(LastPlayedRowSchema, rows, "match_participants.last-played")) {
-    lastPlayedByUser[r.user_id] = r.last_played;
+  const lastAttendedNightByUser: Record<string, string> = {};
+  for (const r of parseRows(LastAttendedRowSchema, rows, "match_participants.last-attended")) {
+    lastAttendedNightByUser[r.user_id] = r.last_attended;
   }
-  return c.json(AdminLastPlayedResponseSchema.parse({ lastPlayedByUser }));
+  return c.json(AdminLastAttendedResponseSchema.parse({ lastAttendedNightByUser }));
 });

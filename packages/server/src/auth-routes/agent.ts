@@ -37,7 +37,7 @@ const MemberRowSchema = z.object({
   createdAt: z.string(),
 });
 
-const LastPlayedRowSchema = z.object({ user_id: z.string(), last_played: z.string() });
+const LastAttendedRowSchema = z.object({ user_id: z.string(), last_attended: z.string() });
 
 const dateKeyUtc = (d: Date) => d.toISOString().slice(0, 10);
 
@@ -51,7 +51,7 @@ const dateKeyUtc = (d: Date) => d.toISOString().slice(0, 10);
  */
 agentRoutes.get("/admin/inactivity", async (c) => {
   const db = getDb();
-  const [availabilityByUser, rsvpYesByUser, rsvpNoByUser, usersRes, lastPlayedRes] =
+  const [availabilityByUser, rsvpYesByUser, rsvpNoByUser, usersRes, lastAttendedRes] =
     await Promise.all([
       fetchAllAvailabilityDays(db),
       fetchAllRsvpYesByUser(db),
@@ -60,17 +60,20 @@ agentRoutes.get("/admin/inactivity", async (c) => {
         `SELECT id, name, role, createdAt FROM "user"
          WHERE (internal IS NULL OR internal = 0) AND (guest IS NULL OR guest = 0)`,
       ),
+      // Latest locked night each member was at — only matches recorded
+      // against a night count (see admin-match-history.ts /last-attended).
       db.execute(
-        `SELECT mp.user_id AS user_id, substr(MAX(mr.played_at), 1, 10) AS last_played
+        `SELECT mp.user_id AS user_id, MAX(mr.date_key) AS last_attended
          FROM match_participants mp
          JOIN match_results mr ON mr.id = mp.match_id
+         WHERE mr.date_key IS NOT NULL
          GROUP BY mp.user_id`,
       ),
     ]);
 
-  const lastPlayedByUser = new Map<string, string>();
-  for (const r of parseRows(LastPlayedRowSchema, lastPlayedRes.rows, "agent.last-played")) {
-    lastPlayedByUser.set(r.user_id, r.last_played);
+  const lastAttendedByUser = new Map<string, string>();
+  for (const r of parseRows(LastAttendedRowSchema, lastAttendedRes.rows, "agent.last-attended")) {
+    lastAttendedByUser.set(r.user_id, r.last_attended);
   }
 
   // Editable window, UTC flavour of the admin page's: today → end of the
@@ -108,11 +111,11 @@ agentRoutes.get("/admin/inactivity", async (c) => {
     }
 
     const coverage = { can, maybe, total: windowDays };
-    const lastPlayedDay = lastPlayedByUser.get(u.id) ?? null;
+    const lastAttendedNight = lastAttendedByUser.get(u.id) ?? null;
     const zeroDays = daysAtZeroCoverage({
       coverage,
       latestMarkedDay: latestMarkedDay ?? undefined,
-      lastPlayedDay: lastPlayedDay ?? undefined,
+      lastAttendedNight: lastAttendedNight ?? undefined,
       createdAt: u.createdAt,
       todayKey,
     });
@@ -122,7 +125,7 @@ agentRoutes.get("/admin/inactivity", async (c) => {
       role: u.role,
       coverage,
       latestMarkedDay,
-      lastPlayedDay,
+      lastAttendedNight,
       zeroDays,
       inactive: isInactiveMember(u.role, coverage, zeroDays),
     };

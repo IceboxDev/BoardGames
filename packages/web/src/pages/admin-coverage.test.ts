@@ -111,7 +111,7 @@ describe("daysAtZeroCoverage", () => {
       daysAtZeroCoverage({
         coverage: { can: 1, maybe: 0, total: 41 },
         latestMarkedDay: "2026-05-01",
-        lastPlayedDay: undefined,
+        lastAttendedNight: undefined,
         createdAt: "2026-04-29T10:00:00.000Z",
         todayKey,
       }),
@@ -125,7 +125,7 @@ describe("daysAtZeroCoverage", () => {
       daysAtZeroCoverage({
         coverage: zero,
         latestMarkedDay: "2026-08-19",
-        lastPlayedDay: undefined,
+        lastAttendedNight: undefined,
         createdAt: "2026-04-29T10:00:00.000Z",
         todayKey,
       }),
@@ -137,7 +137,7 @@ describe("daysAtZeroCoverage", () => {
       daysAtZeroCoverage({
         coverage: zero,
         latestMarkedDay: "2026-08-02",
-        lastPlayedDay: "2026-08-20",
+        lastAttendedNight: "2026-08-20",
         createdAt: "2026-04-29T10:00:00.000Z",
         todayKey,
       }),
@@ -149,7 +149,7 @@ describe("daysAtZeroCoverage", () => {
       daysAtZeroCoverage({
         coverage: zero,
         latestMarkedDay: undefined,
-        lastPlayedDay: undefined,
+        lastAttendedNight: undefined,
         createdAt: "2026-07-16T08:00:00.000Z",
         todayKey,
       }),
@@ -159,7 +159,7 @@ describe("daysAtZeroCoverage", () => {
       daysAtZeroCoverage({
         coverage: zero,
         latestMarkedDay: undefined,
-        lastPlayedDay: undefined,
+        lastAttendedNight: undefined,
         createdAt: new Date("2026-07-16T08:00:00.000Z"),
         todayKey,
       }),
@@ -172,7 +172,7 @@ describe("daysAtZeroCoverage", () => {
       daysAtZeroCoverage({
         coverage: zero,
         latestMarkedDay: "2026-12-24",
-        lastPlayedDay: undefined,
+        lastAttendedNight: undefined,
         createdAt: "2026-04-29T10:00:00.000Z",
         todayKey,
       }),

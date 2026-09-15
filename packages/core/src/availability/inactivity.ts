@@ -3,9 +3,12 @@
 // coverage for INACTIVE_AFTER_DAYS moves out of the main admin table into the
 // collapsed "Inactive players" card — computed, never stored, so any new
 // signal revives them instantly. Signals that reset the clock: a marked
-// can/maybe day (RSVP-yes nights are merged into availability upstream) and a
-// recorded match (being at a night counts, even for players who never open
-// the app). Admins are never archived.
+// can/maybe day (RSVP-yes nights are merged into availability upstream) and an
+// ATTENDED GAME NIGHT — a match recorded against a locked night with them in
+// it (being at a night counts, even for players who never open the app). A
+// match entered with no night attached (a game played elsewhere) is NOT a
+// signal: it says nothing about their use of the app. Admins are never
+// archived.
 //
 // Lives in core for the same reason history/score-config does: the server's
 // /api/agent/admin/inactivity snapshot must answer exactly like the admin
@@ -26,19 +29,20 @@ export function daysBetweenDateKeys(fromKey: string, toKey: string): number {
 /**
  * How many days this user has been sitting at 0% coverage. Zero whenever any
  * coverage exists (a single future mark keeps the clock parked); otherwise
- * days since their latest signal — last marked day or last recorded match —
+ * days since their latest signal — last marked day or last attended night —
  * and for players with no signal at all, days since the account was created.
  * A future-dated signal (a mark beyond the coverage window) clamps to 0.
  */
 export function daysAtZeroCoverage(opts: {
   coverage: CoverageCounts;
   latestMarkedDay: string | undefined;
-  lastPlayedDay: string | undefined;
+  /** The latest locked night a recorded match places them at (its date key). */
+  lastAttendedNight: string | undefined;
   createdAt: string | Date;
   todayKey: string;
 }): number {
   if (opts.coverage.can + opts.coverage.maybe > 0) return 0;
-  const signals = [opts.latestMarkedDay, opts.lastPlayedDay].filter(
+  const signals = [opts.latestMarkedDay, opts.lastAttendedNight].filter(
     (s): s is string => s !== undefined,
   );
   const latest =

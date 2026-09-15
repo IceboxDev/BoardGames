@@ -124,7 +124,7 @@ export function UserRow({
             {zeroForDays !== undefined && (
               <span
                 className="shrink-0 text-3xs tabular-nums text-fg-muted"
-                title="Days since this player's last availability mark, RSVP, or recorded match"
+                title="Days since this player's last availability mark, RSVP, or attended game night"
               >
                 {zeroForDays}d at 0%
               </span>

@@ -1,5 +1,5 @@
 import {
-  AdminLastPlayedResponseSchema,
+  AdminLastAttendedResponseSchema,
   DeleteMatchResponseSchema,
   DndOpenCampaignsResponseSchema,
   type HistoryListResponse,
@@ -37,15 +37,17 @@ export async function fetchHistory(
 }
 
 /**
- * Date of each user's most recent recorded match (userId → dateKey), for the
- * admin page's inactivity clock. Users with no recorded match are absent.
+ * The latest locked night each user was at (userId → dateKey), for the admin
+ * page's inactivity clock. Users with no night-attached match are absent.
  */
-export async function adminFetchLastPlayed(signal?: AbortSignal): Promise<Record<string, string>> {
-  const res = await apiFetch("/api/admin/history/last-played", {
-    response: AdminLastPlayedResponseSchema,
+export async function adminFetchLastAttended(
+  signal?: AbortSignal,
+): Promise<Record<string, string>> {
+  const res = await apiFetch("/api/admin/history/last-attended", {
+    response: AdminLastAttendedResponseSchema,
     signal,
   });
-  return res.lastPlayedByUser;
+  return res.lastAttendedNightByUser;
 }
 
 export async function recordMatch(input: MatchCreateInput): Promise<MatchRecord> {

@@ -31,7 +31,8 @@ export const AgentInactivityMemberSchema = z.object({
     total: z.number().int().min(0),
   }),
   latestMarkedDay: DateKeyStringSchema.nullable(),
-  lastPlayedDay: DateKeyStringSchema.nullable(),
+  /** Latest locked night a recorded match places them at; casual matches don't count. */
+  lastAttendedNight: DateKeyStringSchema.nullable(),
   zeroDays: z.number().int().min(0),
   inactive: z.boolean(),
 });
