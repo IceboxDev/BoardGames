@@ -204,6 +204,10 @@ const router = createBrowserRouter(
           <Route path="dev/deck-preview" lazy={page(() => import("./pages/DeckPreview"))} />
           <Route path="dev/dnd-preview" lazy={page(() => import("./pages/DndNightPreview"))} />
           <Route path="dev/exit-preview" lazy={page(() => import("./pages/ExitNightPreview"))} />
+          <Route
+            path="dev/private-preview"
+            lazy={page(() => import("./pages/PrivateNightPreview"))}
+          />
           <Route path="dev/dnd-tool-preview" lazy={page(() => import("./pages/DndToolPreview"))} />
           <Route path="dev/rsvp-preview" lazy={page(() => import("./pages/RsvpPreview"))} />
           <Route path="dev/vote-preview" lazy={page(() => import("./pages/VotePreview"))} />

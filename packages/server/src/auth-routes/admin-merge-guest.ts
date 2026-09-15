@@ -92,6 +92,8 @@ export const GUEST_MERGE_COVERAGE = {
     // dropped above, and a guest is never the admin holding one.
     "admin_activity_seen.admin_id",
     "admin_activity_seen.user_id",
+    // A dismissed "you're invited" card; a guest never opens the app to see one.
+    "night_invite_seen.user_id",
     "collection_items.user_id",
     "storage_boxes.user_id",
     "sleeve_types.user_id",

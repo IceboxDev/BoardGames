@@ -5,6 +5,7 @@ import { useSearchParams } from "react-router-dom";
 import { AvailabilityActionBar } from "../components/offline/AvailabilityActionBar";
 import Calendar from "../components/offline/Calendar";
 import LockInModal from "../components/offline/LockInModal";
+import PrivateNightPeek from "../components/offline/PrivateNightPeek";
 import RsvpModal from "../components/offline/RsvpModal";
 import { PurchaseVoteBanner } from "../components/purchase-vote/PurchaseVoteBanner";
 import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
@@ -31,6 +32,7 @@ import {
   pushAvailability,
 } from "../lib/offline-availability";
 import { startOfWeekMonday } from "../lib/offline-week";
+import { fetchPlayers } from "../lib/profile";
 import { qk } from "../lib/query-keys";
 
 type Mode = "view" | "edit" | "lock";
@@ -72,6 +74,13 @@ export default function OfflineDashboard() {
   const hostStatsQuery = useQuery({
     queryKey: qk.hostStats(),
     queryFn: ({ signal }) => fetchHostStats(signal),
+    enabled: isAdmin,
+  });
+  // The member directory: a private night's host and guest list are picked
+  // from everyone, not just from whoever marked that day.
+  const playersQuery = useQuery({
+    queryKey: qk.players(),
+    queryFn: ({ signal }) => fetchPlayers(signal),
     enabled: isAdmin,
   });
 
@@ -286,6 +295,9 @@ export default function OfflineDashboard() {
       out.push({ userId: user.id, name: user.name });
       seen.add(user.id);
     }
+    // Whoever marked the day comes first — the likeliest hosts — then the
+    // rest of the directory, so a private night can be hosted by someone
+    // who never touched the calendar.
     const entries = allAvailability?.[lockingDate];
     if (entries) {
       for (const e of entries) {
@@ -294,8 +306,20 @@ export default function OfflineDashboard() {
         out.push({ userId: e.userId, name: e.name });
       }
     }
+    for (const p of playersQuery.data?.players ?? []) {
+      if (seen.has(p.id)) continue;
+      seen.add(p.id);
+      out.push({ userId: p.id, name: p.name });
+    }
     return out;
-  }, [lockingDate, user, allAvailability]);
+  }, [lockingDate, user, allAvailability, playersQuery.data]);
+
+  // Ids of everyone who marked can/maybe on the day being locked — the
+  // suggested (pre-checked) guest list of a private night.
+  const freeOnLockingDate = useMemo(() => {
+    const entries = lockingDate ? allAvailability?.[lockingDate] : undefined;
+    return new Set((entries ?? []).map((e) => e.userId));
+  }, [lockingDate, allAvailability]);
 
   const visible = mode === "edit" ? draft : committed;
   // Only count today + future marks. Past dates linger in the availability
@@ -370,6 +394,7 @@ export default function OfflineDashboard() {
           onLockToggle={handleLockToggle}
           onLockedClick={mode === "lock" ? undefined : (date) => setRsvpDate(date)}
           viewerRsvpByDate={viewerRsvpByDate}
+          viewer={{ id: userId, isAdmin }}
         />
 
         <AvailabilityActionBar
@@ -389,13 +414,26 @@ export default function OfflineDashboard() {
         />
       </PageMain>
 
-      {rsvpDate && <RsvpModal date={rsvpDate} locks={locks} onClose={() => setRsvpDate(null)} />}
+      {/* A private night the viewer isn't on arrives redacted: they get the
+          peek (host + seats), never the RSVP modal. */}
+      {rsvpDate &&
+        (locks?.[rsvpDate]?.redacted ? (
+          <PrivateNightPeek
+            date={rsvpDate}
+            lock={locks[rsvpDate]}
+            onClose={() => setRsvpDate(null)}
+          />
+        ) : (
+          <RsvpModal date={rsvpDate} locks={locks} onClose={() => setRsvpDate(null)} />
+        ))}
 
       {lockingDate && (
         <LockInModal
           date={lockingDate}
           initialLock={locks?.[lockingDate] ?? null}
           candidates={hostCandidates}
+          members={playersQuery.data?.players ?? []}
+          suggestedInviteeIds={freeOnLockingDate}
           hostStats={hostStatsQuery.data ?? null}
           busy={lockMutation.isPending || unlockMutation.isPending}
           error={lockMutationError ?? unlockMutationError}

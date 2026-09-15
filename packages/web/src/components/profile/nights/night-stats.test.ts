@@ -15,6 +15,7 @@ function night(overrides: Partial<ProfileNightItem>): ProfileNightItem {
     host: { userId: "h1", name: "Mantas" },
     address: "Musterstraße 1, Munich",
     eventTime: "19:00",
+    isPrivate: false,
     attended: true,
     attendedVia: "played",
     rsvp: "yes",

@@ -17,6 +17,8 @@ export function greetingKey(g: AppGreeting): string {
       return `pv-reminder:${g.pollId}`;
     case "arrival":
       return `arrival:${g.arrivalId}`;
+    case "night-invite":
+      return `night-invite:${g.date}`;
   }
 }
 
@@ -33,5 +35,7 @@ export function ackBody(g: AppGreeting, action: GreetingAckAction): AppGreetingA
       return { kind: "purchase-vote-reminder", pollId: g.pollId, action };
     case "arrival":
       return { kind: "arrival", arrivalId: g.arrivalId, action };
+    case "night-invite":
+      return { kind: "night-invite", date: g.date, action };
   }
 }

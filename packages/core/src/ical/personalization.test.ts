@@ -130,4 +130,29 @@ describe("buildSummary", () => {
     expect(buildSummary("", "Alice")).toBe("Game Night — Host Alice");
     expect(buildSummary("", null)).toBe("Game Night");
   });
+
+  it("names a private night, with its title when it has one", () => {
+    expect(buildSummary("", "Alice", { isPrivate: true })).toBe("Private night — Host Alice");
+    expect(buildSummary("[RSVP!]", "Alice", { isPrivate: true, title: "TI4 marathon" })).toBe(
+      "[RSVP!] Private night: TI4 marathon — Host Alice",
+    );
+  });
+});
+
+describe("deriveSummaryPrefix on private nights", () => {
+  it("flags a waitlisted viewer, after the RSVP nudge but before the vote nudge", () => {
+    expect(deriveSummaryPrefix(base({ viewerSeat: "waitlisted", viewerHyped: false }))).toBe(
+      "[Waitlist]",
+    );
+    expect(
+      deriveSummaryPrefix(
+        base({ viewerSeat: "waitlisted", viewerRsvp: undefined, viewerManuallyRsvped: false }),
+      ),
+    ).toBe("[RSVP!]");
+  });
+
+  it("never asks a guest to vote on a host-curated night", () => {
+    expect(deriveSummaryPrefix(base({ viewerHyped: false, viewerCanVote: false }))).toBe("");
+    expect(deriveSummaryPrefix(base({ viewerHyped: false, viewerCanVote: true }))).toBe("[Vote?]");
+  });
 });

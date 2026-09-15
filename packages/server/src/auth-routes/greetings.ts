@@ -5,13 +5,16 @@
 //
 //   1. purchase-vote announce — one-time "voting is live" card (the same
 //      launch treatment the skill intro got). Ack flips it off forever.
-//   2. arrival — one-time takeover once the games bought after a vote are
+//   2. night invite — "you're invited" to a private night the viewer hasn't
+//      answered (lib/night-invites.ts). Seats go first-come, so it outranks
+//      the celebration below; an RSVP or the ack retires it.
+//   3. arrival — one-time takeover once the games bought after a vote are
 //      physically here (an admin publishes it; see lib/arrivals.ts). A poll
 //      CLOSING is silent — there is no "winner" card any more.
-//   3. purchase-vote reminder — every later visit while the viewer still has
+//   4. purchase-vote reminder — every later visit while the viewer still has
 //      votes to spend (admins exempt — they run the vote). Its ack is
 //      log-only, so it returns next app open.
-//   4. The skill queue (intro, then spotlights) exactly as before.
+//   5. The skill queue (intro, then spotlights) exactly as before.
 //
 // The greetings are CARDS about the vote; the voting screen is a separate
 // modal they open — submitting votes can't unmount the card the player came
@@ -31,10 +34,12 @@ import {
 } from "@boardgames/core/protocol";
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
+import { getDb } from "../db.ts";
 import { logActivity } from "../lib/activity-log.ts";
 import { buildArrivalGreeting, markArrivalSeen, nextUnseenArrival } from "../lib/arrivals.ts";
 import { zJsonBody } from "../lib/error-response.ts";
 import { ackSkillIntro, ackSpotlight, nextGreetingFor } from "../lib/greetings.ts";
+import { markInviteSeen, nextPendingInvite } from "../lib/night-invites.ts";
 import {
   distinctVoterCount,
   latestPoll,
@@ -84,7 +89,19 @@ greetingsRoutes.get("/", async (c) => {
     );
   }
 
-  // 2. The one-time arrival takeover. Above the reminder on purpose: the
+  // 2. An unanswered invitation to a private night. Seats are first come,
+  // first served — nothing else pending is that time-sensitive.
+  const invite = await nextPendingInvite(getDb(), viewer.id);
+  if (invite) {
+    return c.json(
+      AppGreetingResponseSchema.parse({
+        greeting: invite,
+        players: await playerRefs(new Set([invite.hostUserId])),
+      }),
+    );
+  }
+
+  // 3. The one-time arrival takeover. Above the reminder on purpose: the
   // reminder recurs every visit while votes are left, so anything ranked
   // below it would be starved for a member who never spends theirs.
   const arrival = await nextUnseenArrival(viewer.id);
@@ -97,7 +114,7 @@ greetingsRoutes.get("/", async (c) => {
     );
   }
 
-  // 3. The recurring nag. Admins run the vote — never nag the person who
+  // 4. The recurring nag. Admins run the vote — never nag the person who
   // opened it. (The announce card still serves; only the reminder is skipped.)
   if (poll && poll.closed_at === null && !isAdmin) {
     const myVotes = votes.filter((v) => v.user_id === viewer.id).length;
@@ -118,7 +135,7 @@ greetingsRoutes.get("/", async (c) => {
     }
   }
 
-  // 4. The skill queue.
+  // 5. The skill queue.
   const greeting = await nextGreetingFor(viewer.id, (await ensureSkillState())?.state ?? null);
   return c.json(
     AppGreetingResponseSchema.parse({
@@ -148,6 +165,9 @@ greetingsRoutes.post("/ack", zJsonBody(AppGreetingAckBodySchema), async (c) => {
     case "arrival":
       await markArrivalSeen(body.arrivalId, viewer.id);
       break;
+    case "night-invite":
+      await markInviteSeen(getDb(), body.date, viewer.id);
+      break;
     case "skill-intro":
       await ackSkillIntro(viewer.id);
       break;
@@ -160,6 +180,7 @@ greetingsRoutes.post("/ack", zJsonBody(AppGreetingAckBodySchema), async (c) => {
     action: body.action,
     ...("pollId" in body ? { pollId: body.pollId } : {}),
     ...("arrivalId" in body ? { arrivalId: body.arrivalId } : {}),
+    ...("date" in body ? { date: body.date } : {}),
     ...("id" in body ? { greetingId: body.id } : {}),
   });
   return c.json(AppGreetingAckResponseSchema.parse({ ok: true }));

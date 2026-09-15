@@ -51,6 +51,10 @@ type UseRsvpAvailabilityResult = {
   newSlugs: ReadonlySet<string>;
   availableGames: GameDefinition[];
   hypedCount: number;
+  /** The headcount window games must cover: `[lo, hi]`. */
+  playerWindow: { lo: number; hi: number };
+  /** Whether the viewer's reactions count on this night (see AvailableGames). */
+  viewerCanReact: boolean;
 };
 
 export function useRsvpAvailability({
@@ -100,12 +104,24 @@ export function useRsvpAvailability({
   // cohort `compareForHeadcount` ranks first.
   const newSlugs = useMemo(() => new Set(gamesQuery.data?.newSlugs ?? []), [gamesQuery.data]);
 
+  // The window the server planned for: an open night widens from the
+  // definite headcount to the maybes; a private night is its seat count both
+  // ways (the host plans for the table they set).
+  const playerWindow = useMemo(
+    () =>
+      gamesQuery.data?.playerWindow ?? {
+        lo: definiteCount,
+        hi: definiteCount + tentativeCount,
+      },
+    [gamesQuery.data, definiteCount, tentativeCount],
+  );
+  const viewerCanReact = gamesQuery.data?.viewerCanReact ?? true;
+
   const availableGames = useMemo(() => {
     const data = gamesQuery.data;
     if (!data || data.ownedSlugs.length === 0) return [];
     const ownedSet = new Set(data.ownedSlugs);
-    const lo = data.definiteCount;
-    const hi = data.definiteCount + data.tentativeCount;
+    const { lo, hi } = playerWindow;
     // Only suggest games that fit *every* headcount in the [definite,
     // definite+tentative] window — see `coversWindow` doc. A max-4 game
     // on a 4-going/3-maybe night would lock out the maybes if it became
@@ -117,7 +133,7 @@ export function useRsvpAvailability({
     // best-ranked sibling; `groupForPresentation` records that sibling as the
     // unit's anchor and the carousel opens the card on it.
     return filtered.sort((a, b) => compareForHeadcount(a, b, lo, newSlugs));
-  }, [gamesQuery.data, newSlugs]);
+  }, [gamesQuery.data, newSlugs, playerWindow]);
 
   const hypedCount = useMemo(
     () => availableGames.filter((g) => (reactions[g.slug]?.hype ?? 0) > 0).length,
@@ -138,5 +154,7 @@ export function useRsvpAvailability({
     newSlugs,
     availableGames,
     hypedCount,
+    playerWindow,
+    viewerCanReact,
   };
 }

@@ -170,9 +170,14 @@ async function buildEventForLockedDate(
       viewerManuallyRsvped: view.viewer.rsvpManual,
       viewerHyped: view.viewer.hyped,
       viewerBringing: bringingTitles,
+      viewerSeat: view.viewer.seat,
+      viewerCanVote: view.wire.viewerCanReact,
     });
-    summary = buildSummary(prefix, view.lock.hostName);
-    description = buildDescription({ view, topPickTitles, bringingTitles, dateKey });
+    summary = buildSummary(prefix, view.lock.hostName, {
+      isPrivate: view.lock.isPrivate,
+      title: view.lock.title,
+    });
+    description = buildDescription({ view, viewerId, topPickTitles, bringingTitles, dateKey });
   }
 
   const { start, end } = buildEventTimes(dateKey, view.lock.eventTime);
@@ -200,7 +205,10 @@ async function buildEventForTombstone(viewerId: string, dateKey: string): Promis
   // unlock time, plus a single line explaining the state. DTSTAMP/LAST-
   // MODIFIED both come from `unlocked_at` so polls don't churn.
   const stamp = formatUtcFromSqlite(maxSqliteDatetime([t.unlockedAt]));
-  const summary = buildSummary("[Cancelled]", t.hostName);
+  const summary = buildSummary("[Cancelled]", t.hostName, {
+    isPrivate: t.isPrivate,
+    title: t.title,
+  });
   const description = "This game night was unlocked by the host.\nIt's no longer happening.";
   const { start, end } = buildEventTimes(dateKey, t.eventTime);
   // Tombstones don't have view state to digest; we synthesize one that
@@ -278,11 +286,12 @@ function dndPersonalNudge(view: AvailableGamesView): string | null {
 
 function buildDescription(opts: {
   view: AvailableGamesView;
+  viewerId: string;
   topPickTitles: string[];
   bringingTitles: string[];
   dateKey: string;
 }): string {
-  const { view, topPickTitles, bringingTitles, dateKey } = opts;
+  const { view, viewerId, topPickTitles, bringingTitles, dateKey } = opts;
   // Address and time are intentionally NOT repeated here — they already ride
   // on dedicated ICS properties (LOCATION and DTSTART;TZID), which every
   // calendar client renders in its own UI slots. Repeating them in the body
@@ -293,7 +302,10 @@ function buildDescription(opts: {
   if (topPickTitles.length > 0) {
     const head = topPickTitles.slice(0, 3).join(", ");
     const more = topPickTitles.length > 3 ? ` (${topPickTitles.length - 3} more)` : "";
-    lines.push(`Top picks: ${head}${more}`);
+    // A host-curated private night has a lineup, not a vote result.
+    const label =
+      view.lock.isPrivate && view.lock.pickMode === "host" ? "Host's lineup" : "Top picks";
+    lines.push(`${label}: ${head}${more}`);
   }
   if (bringingTitles.length > 0) {
     lines.push(`You're bringing: ${bringingTitles.join(", ")}`);
@@ -310,16 +322,54 @@ function buildDescription(opts: {
     lines.push("You declined this one.");
   } else if (isViewerExpected && view.viewer.rsvp !== "yes" && !view.viewer.rsvpManual) {
     lines.push("You still need to RSVP — open the planner.");
-  } else if (isViewerDefinite && view.lock.picksLockedAt === null && !view.viewer.hyped) {
+  } else if (view.viewer.seat === "waitlisted") {
+    const position = view.lock.waitlistUserIds.indexOf(viewerId) + 1;
+    lines.push(
+      position > 0
+        ? `You're #${position} on the waitlist — a freed seat is yours automatically.`
+        : "You're on the waitlist — a freed seat is yours automatically.",
+    );
+  } else if (
+    isViewerDefinite &&
+    view.lock.picksLockedAt === null &&
+    !view.viewer.hyped &&
+    view.wire.viewerCanReact
+  ) {
     lines.push("You still need to vote on games — open the planner.");
   }
 
   if (lines.length > 0) lines.push("");
 
   const attendees = view.wire.attendees;
-  const definiteCount = attendees.filter((a) => a.status === "definite").length;
-  const tentativeCount = attendees.length - definiteCount;
-  if (attendees.length > 0) {
+  if (view.lock.isPrivate && view.lock.seats) {
+    // Seat groups instead of confirmed/maybe: the waitlist and the
+    // unanswered are not "maybe" headcount, they are the queue.
+    const seats = view.lock.seats;
+    const group = (seat: string) => attendees.filter((a) => a.seat === seat);
+    const seated = attendees.filter((a) => a.seat === "host" || a.seat === "seated");
+    lines.push(`Seated (${seats.taken}/${seats.total}):`);
+    for (const a of seated) {
+      lines.push(
+        truncate(
+          formatAttendeeLine({
+            name: a.name,
+            isHost: a.isHost,
+            status: "definite",
+            bringing: resolveSlugTitles(a.bringing),
+          }),
+          80,
+        ),
+      );
+    }
+    const waiting = group("waitlisted");
+    if (waiting.length > 0) lines.push(`Waitlist: ${waiting.map((a) => a.name).join(", ")}`);
+    const pending = group("invited");
+    if (pending.length > 0) {
+      lines.push(`Invited, no reply yet: ${pending.map((a) => a.name).join(", ")}`);
+    }
+  } else if (attendees.length > 0) {
+    const definiteCount = attendees.filter((a) => a.status === "definite").length;
+    const tentativeCount = attendees.length - definiteCount;
     const parts = [`${definiteCount} confirmed`];
     if (tentativeCount > 0) parts.push(`${tentativeCount} maybe`);
     lines.push(`Attendees (${parts.join(", ")}):`);

@@ -29,6 +29,11 @@ export type ActivityType =
   | "picks-locked"
   | "night-locked"
   | "night-unlocked"
+  // Private nights: the host (or admin) managing the guest list and seats.
+  | "night-invited"
+  | "night-uninvited"
+  | "night-seats"
+  | "night-pick-mode"
   | "match-recorded"
   | "match-deleted"
   | "guest-merged"

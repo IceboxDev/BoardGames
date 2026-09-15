@@ -31,6 +31,17 @@ export type SummaryPrefixInput = {
   viewerHyped: boolean;
   /** Already-resolved display titles, in the order the server assigned. */
   viewerBringing: readonly string[];
+  /**
+   * Private nights: the viewer's place on the seat list. A waitlisted viewer
+   * gets a `[Waitlist]` title so the seat state is visible at a glance.
+   */
+  viewerSeat?: "host" | "seated" | "waitlisted" | "invited" | "declined" | null;
+  /**
+   * False when the viewer's reactions don't count on this night (an invitee
+   * on a host-curated private night) — `[Vote?]` is then never suggested.
+   * Defaults to true.
+   */
+  viewerCanVote?: boolean;
 };
 
 export function deriveSummaryPrefix(input: SummaryPrefixInput): string {
@@ -55,9 +66,17 @@ export function deriveSummaryPrefix(input: SummaryPrefixInput): string {
     return "[RSVP!]";
   }
 
+  // 2b. On the waitlist of a private night — nothing to do but wait; says so.
+  if (input.viewerSeat === "waitlisted") return "[Waitlist]";
+
   // 3. Needs to vote — picks aren't locked, viewer is a definite attendee,
   // they haven't hyped anything yet. The host is still gathering signal.
-  if (isDefinite && input.picksLockedAt === null && !input.viewerHyped) {
+  if (
+    isDefinite &&
+    input.picksLockedAt === null &&
+    !input.viewerHyped &&
+    (input.viewerCanVote ?? true)
+  ) {
     return "[Vote?]";
   }
 
@@ -73,7 +92,17 @@ export function deriveSummaryPrefix(input: SummaryPrefixInput): string {
   return "";
 }
 
-export function buildSummary(prefix: string, hostName: string | null): string {
-  const base = hostName ? `Game Night — Host ${hostName}` : "Game Night";
+export function buildSummary(
+  prefix: string,
+  hostName: string | null,
+  night: { isPrivate?: boolean; title?: string | null } = {},
+): string {
+  // A private night names itself: "Private night: TI4 marathon — Host Alice".
+  const kind = night.isPrivate
+    ? night.title
+      ? `Private night: ${night.title}`
+      : "Private night"
+    : "Game Night";
+  const base = hostName ? `${kind} — Host ${hostName}` : kind;
   return prefix ? `${prefix} ${base}` : base;
 }

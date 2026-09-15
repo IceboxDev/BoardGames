@@ -20,6 +20,12 @@ type Props = {
    * shows via icon color. Used in the carousel to prevent meta-voting —
    * users shouldn't see how many others voted while they're still picking. */
   hideCount?: boolean;
+  /**
+   * `vote` (default): hype / teach / learn. `pick`: a host curating a private
+   * night's lineup — one toggle, "In the lineup", backed by the hype row so
+   * the server's ranking needs no second concept.
+   */
+  mode?: "vote" | "pick";
 };
 
 type IconProps = { filled: boolean };
@@ -28,6 +34,13 @@ type Kind = {
   label: string;
   description: string;
   Icon: (p: IconProps) => React.ReactElement;
+};
+
+const PICK_KIND: Kind = {
+  kind: "hype",
+  label: "Lineup",
+  description: "Put this on tonight's lineup",
+  Icon: HeartIcon,
 };
 
 const KINDS: Kind[] = [
@@ -59,8 +72,10 @@ export default function GameReactions({
   size = "md",
   disabled = false,
   hideCount = false,
+  mode = "vote",
 }: Props) {
   const queryClient = useQueryClient();
+  const kinds = mode === "pick" ? [PICK_KIND] : KINDS;
 
   const mutation = useMutation({
     mutationFn: ({ kind, on }: { kind: ReactionKind; on: boolean }) =>
@@ -121,9 +136,9 @@ export default function GameReactions({
 
   return (
     <div className={`flex items-center ${gap}`}>
-      {KINDS.map(({ kind, label, description, Icon }) => {
+      {kinds.map(({ kind, label, description, Icon }) => {
         const active = viewerSet.has(kind);
-        const count = aggregate[kind];
+        const count = mode === "pick" ? 0 : aggregate[kind];
         const activeStyle = active
           ? // The text color rides the `text-fg-strong` class below, not this
             // object, so a future per-accent contrast tweak has one home.

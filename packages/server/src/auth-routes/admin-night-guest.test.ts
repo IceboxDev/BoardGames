@@ -9,11 +9,13 @@ import { type Client, createClient } from "@libsql/client";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { runMigrations } from "../migrations/migrator.ts";
 
+// The stamp only moves when the answer changes: on a private night it is the
+// guest's place in the seat queue (see calendar-rsvps.ts `RSVP_NOW`).
 const UPSERT_YES = `INSERT INTO rsvps (date_key, user_id, status, rsvped_at, auto)
-      VALUES (?, ?, 'yes', datetime('now'), 0)
+      VALUES (?, ?, 'yes', strftime('%Y-%m-%d %H:%M:%f', 'now'), 0)
       ON CONFLICT(date_key, user_id) DO UPDATE SET
         status = 'yes',
-        rsvped_at = excluded.rsvped_at,
+        rsvped_at = CASE WHEN rsvps.status = 'yes' THEN rsvps.rsvped_at ELSE excluded.rsvped_at END,
         auto = 0`;
 
 const DELETE_RSVP = "DELETE FROM rsvps WHERE date_key = ? AND user_id = ?";
@@ -64,6 +66,19 @@ describe("admin night-guest SQL contract", () => {
     });
     await db.execute({ sql: UPSERT_YES, args: [DATE, GUEST] });
     expect(await rsvpRow()).toMatchObject({ status: "yes", auto: 0 });
+  });
+
+  it("re-adding a guest who is already 'yes' keeps their seat-queue stamp", async () => {
+    await db.execute({
+      sql: "INSERT INTO rsvps (date_key, user_id, status, rsvped_at, auto) VALUES (?, ?, 'yes', '2020-01-01 10:00:00', 0)",
+      args: [DATE, GUEST],
+    });
+    await db.execute({ sql: UPSERT_YES, args: [DATE, GUEST] });
+    const { rows } = await db.execute({
+      sql: "SELECT rsvped_at FROM rsvps WHERE date_key = ? AND user_id = ?",
+      args: [DATE, GUEST],
+    });
+    expect(rows[0]?.rsvped_at).toBe("2020-01-01 10:00:00");
   });
 
   it("removal deletes the row instead of leaving a tombstone 'no'", async () => {

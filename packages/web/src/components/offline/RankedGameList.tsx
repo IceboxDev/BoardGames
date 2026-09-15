@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import type { GameDefinition } from "../../games/types";
-import type { ReactionAggregate } from "../../lib/calendar-games";
+import type { Attendee, ReactionAggregate } from "../../lib/calendar-games";
+import { Avatar } from "../ui/Avatar";
 import { Eyebrow } from "../ui/Label";
 import GameReactions from "./GameReactions";
 
@@ -14,6 +15,14 @@ type Props = {
    * component stays usable for any future caller that doesn't have the
    * server payload yet). */
   topSlugs?: string[];
+  /**
+   * Private night in host-pick mode: the list is the host's lineup in pick
+   * order, not a vote result — no counts, one "in the lineup" toggle, and the
+   * bringer's face on each row (from `attendees[].bringing`).
+   */
+  lineup?: { hostName: string | null; attendees: Attendee[]; viewerCanPick: boolean };
+  /** The viewer's reactions don't count on this night — render read-only. */
+  reactionsDisabled?: boolean;
 };
 
 const EMPTY: ReactionAggregate = { hype: 0, teach: 0, learn: 0, viewer: [] };
@@ -30,7 +39,20 @@ const RANK_TEXT_DIM = "#d1d5db";
 // purpose: white never rethemes, so it takes no var() indirection.
 const DIM_CHROME = "color-mix(in srgb, white 8%, transparent)";
 
-export default function RankedGameList({ date, games, reactions, topSlugs }: Props) {
+export default function RankedGameList({
+  date,
+  games,
+  reactions,
+  topSlugs,
+  lineup,
+  reactionsDisabled = false,
+}: Props) {
+  // Who brings which lineup game — the bringing assignment is per attendee.
+  const bringerBySlug = useMemo(() => {
+    const out = new Map<string, Attendee>();
+    for (const a of lineup?.attendees ?? []) for (const slug of a.bringing) out.set(slug, a);
+    return out;
+  }, [lineup]);
   const ranked = useMemo(() => {
     if (topSlugs && topSlugs.length > 0) {
       const bySlug = new Map(games.map((g) => [g.slug, g]));
@@ -68,12 +90,22 @@ export default function RankedGameList({ date, games, reactions, topSlugs }: Pro
   return (
     <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col gap-2 overflow-y-auto px-1 py-2">
       <Eyebrow tone="amber" className="px-2">
-        Tonight's picks
+        {lineup
+          ? `${lineup.hostName ? `${lineup.hostName}'s` : "Host's"} lineup`
+          : "Tonight's picks"}
       </Eyebrow>
       <ul className="flex flex-col gap-2">
         {ranked.map(({ game, agg }, i) => (
           <li key={game.slug}>
-            <RankedRow game={game} aggregate={agg} date={date} rank={i + 1} />
+            <RankedRow
+              game={game}
+              aggregate={agg}
+              date={date}
+              rank={i + 1}
+              mode={lineup ? "pick" : "vote"}
+              disabled={reactionsDisabled || (lineup ? !lineup.viewerCanPick : false)}
+              bringer={lineup ? (bringerBySlug.get(game.slug) ?? null) : null}
+            />
           </li>
         ))}
       </ul>
@@ -86,9 +118,13 @@ type RowProps = {
   aggregate: ReactionAggregate;
   date: string;
   rank: number;
+  mode: "vote" | "pick";
+  disabled: boolean;
+  /** Who brings it (host-pick lineup rows only). */
+  bringer: Attendee | null;
 };
 
-function RankedRow({ game, aggregate, date, rank }: RowProps) {
+function RankedRow({ game, aggregate, date, rank, mode, disabled, bringer }: RowProps) {
   const isTop = rank === 1;
   const meta = formatMeta(game);
   return (
@@ -139,13 +175,26 @@ function RankedRow({ game, aggregate, date, rank }: RowProps) {
         {meta && <p className="truncate text-2xs text-fg-secondary">{meta}</p>}
       </div>
 
-      <div className="ml-auto shrink-0">
+      <div className="ml-auto flex shrink-0 items-center gap-2">
+        {bringer && (
+          <span
+            className="inline-flex items-center gap-1.5 text-3xs text-fg-secondary"
+            title={`${bringer.name} brings it`}
+          >
+            <Avatar name={bringer.name} image={bringer.image ?? null} size="xs" />
+            <span className="hidden sm:inline">
+              {bringer.isHost ? "at the host's" : "brings it"}
+            </span>
+          </span>
+        )}
         <GameReactions
           date={date}
           slug={game.slug}
           accentHex={game.accentHex}
           aggregate={aggregate}
           size="sm"
+          mode={mode}
+          disabled={disabled}
         />
       </div>
     </div>

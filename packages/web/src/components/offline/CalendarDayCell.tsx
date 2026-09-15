@@ -1,7 +1,17 @@
 import "./calendar-fire.css";
+import type { NightSeats } from "../../lib/calendar-locks";
 import type { RsvpStatus } from "../../lib/calendar-rsvps";
+import type { ViewerSeat } from "../../lib/night-access";
 import type { Availability, AvailabilityEntry } from "../../lib/offline-availability";
 import { D20Die } from "./D20Die";
+
+/** What a private night's cell needs beyond the lock: the tally and the viewer's own place. */
+export type PrivateNightCell = {
+  seats: NightSeats;
+  viewerSeat: ViewerSeat | null;
+  /** Index of the viewer's own seat in the seated list (host = 0); null when not seated. */
+  viewerSeatIndex: number | null;
+};
 
 export type Heat =
   | { kind: "neutral" }
@@ -26,6 +36,8 @@ export type DayCellProps = {
   attendance: { definite: number; tentative: number } | null;
   /** Sealed night whose vote winner is D&D — swaps in the crimson/d20 treatment. */
   dndNight: boolean;
+  /** Private (invitation-only) night — swaps in the frosted graphite treatment. */
+  privateNight: PrivateNightCell | null;
   lockMode: boolean;
   /** Admin "away" note: the owner is known to be unavailable (never with a `value`). */
   away?: boolean;
@@ -50,6 +62,7 @@ export function DayCell({
   picksLocked,
   attendance,
   dndNight,
+  privateNight,
   lockMode,
   away = false,
   viewerRsvp,
@@ -63,6 +76,10 @@ export function DayCell({
   // D&D night: a sealed night whose vote winner is D&D. Takes over the locked
   // cell entirely — crimson frame, dungeon background, a d20 headcount.
   const showDnd = dndNight && picksLocked && !!attendance;
+  // Private night: frosted graphite, a seat tally instead of a headcount, and
+  // the viewer's own place on the pill. A finalized D&D lineup still wins.
+  const showPrivate = locked && !showDnd && privateNight !== null;
+  const invitedPending = showPrivate && !isPast && privateNight?.viewerSeat === "invited";
 
   // Personal-mark gradient layer — render only when no aggregate heat or lock overrides it.
   // "maybe" stays in the warn tones so it never reads as the heat of warming or fire.
@@ -98,23 +115,24 @@ export function DayCell({
         ? "bg-gradient-to-br from-warn-strong/35 via-warn-soft/22 to-warn-soft/10"
         : "";
 
-  const borderClass = showDnd
-    ? "" // `.dnd-night-cell` owns the animated crimson↔gold border + glow.
-    : locked
-      ? "border-warn-gold/40"
-      : heat.kind === "fire"
-        ? "border-heat-ember/80"
-        : heat.kind === "warming"
-          ? "border-heat-bright/65"
-          : value === "can"
-            ? "border-accent-400/70"
-            : value === "maybe"
-              ? "border-warn-strong/60"
-              : away
-                ? "border-dashed border-fg-muted/50"
-                : lockMode
-                  ? "border-warn-gold/30 hover:border-warn-gold/60"
-                  : "border-line hover:border-fg-strong/25";
+  const borderClass =
+    showDnd || showPrivate
+      ? "" // `.dnd-night-cell` / `.private-night-cell` own their rim + glow.
+      : locked
+        ? "border-warn-gold/40"
+        : heat.kind === "fire"
+          ? "border-heat-ember/80"
+          : heat.kind === "warming"
+            ? "border-heat-bright/65"
+            : value === "can"
+              ? "border-accent-400/70"
+              : value === "maybe"
+                ? "border-warn-strong/60"
+                : away
+                  ? "border-dashed border-fg-muted/50"
+                  : lockMode
+                    ? "border-warn-gold/30 hover:border-warn-gold/60"
+                    : "border-line hover:border-fg-strong/25";
 
   const baseBgClass = !value && !heated && !locked ? "bg-surface-800/55" : "";
   const baseHover = !value && !heated && !locked && interactive ? "hover:bg-surface-800/80" : "";
@@ -161,10 +179,18 @@ export function DayCell({
         !locked && heat.kind === "warming" ? ` — warming up, ${heat.can} confirmed` : ""
       }${!locked && heat.kind === "fire" ? ` — on fire, ${heat.can} confirmed` : ""}${
         showDnd ? " — Dungeons & Dragons night" : ""
+      }${
+        showPrivate && privateNight
+          ? ` — private night, ${privateNight.seats.taken} of ${privateNight.seats.total} seats${
+              privateNight.viewerSeat && privateNight.viewerSeat !== "outsider"
+                ? `, you: ${privateNight.viewerSeat}`
+                : ""
+            }`
+          : ""
       }`}
       aria-pressed={value !== undefined || away}
       title={away ? "Marked away — not counted in coverage" : undefined}
-      className={`group relative flex flex-col overflow-hidden rounded-card-xl border transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${layoutClass} ${aspectClass} ${padding} ${baseBgClass} ${borderClass} ${showDnd ? "dnd-night-cell" : ""} ${baseHover} ${lockedDisplayClass} ${heatAnim}`}
+      className={`group relative flex flex-col overflow-hidden rounded-card-xl border transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${layoutClass} ${aspectClass} ${padding} ${baseBgClass} ${borderClass} ${showDnd ? "dnd-night-cell" : ""} ${showPrivate ? "private-night-cell" : ""} ${invitedPending ? "private-night-cell-invited" : ""} ${baseHover} ${lockedDisplayClass} ${heatAnim}`}
     >
       <span
         className={`pointer-events-none absolute inset-0 ${monthTintClass(monthBucket)}`}
@@ -182,6 +208,8 @@ export function DayCell({
       {locked &&
         (showDnd ? (
           <DndNightLayer compact={compact} viewerRsvp={viewerRsvp} />
+        ) : showPrivate && privateNight ? (
+          <PrivateNightLayer compact={compact} viewerSeat={privateNight.viewerSeat} />
         ) : (
           <LockedLayer compact={compact} viewerRsvp={viewerRsvp} showMedallion={picksLocked} />
         ))}
@@ -234,6 +262,8 @@ export function DayCell({
             }`}
           />
         </span>
+      ) : showPrivate && privateNight ? (
+        <SeatTally compact={compact} night={privateNight} />
       ) : picksLocked && attendance ? (
         // Picks-locked cell: the day number is dropped — the cell's position
         // in the calendar grid already tells you which date it is. The big
@@ -553,26 +583,219 @@ function DndNightLayer({ compact, viewerRsvp }: { compact: boolean; viewerRsvp?:
   );
 }
 
+// Phone cells are ~50px wide. The pill sits at the bottom with a small
+// horizontal inset; the inline-flex BG would otherwise be capped at that
+// width and the wider tracking would push the label out of the green
+// outline. Tighter tracking + smaller mobile font keeps "GOING" / "PASS"
+// / "RSVP" inside the pill on every device.
+//
+// `min-h-3 sm:min-h-5` matches the heights of PersonalMarkChip and
+// HeatBadge, so locked vs. unlocked cells render at the same vertical
+// mass — otherwise the chips' default leading + ring made them taller
+// than the locked pill and adjacent cells looked staggered.
+//
+// The bracketed letter-spacing below is a deliberate hold-out from the
+// tracking-label/pill/eyebrow token scale (pinned in scripts/style-baseline.json).
+// These glyphs are 7px (`text-6xs`) inside a pill only a few px wider: the
+// spacing is per-breakpoint optical tuning to stop "RSVP" overflowing its own
+// pill, not the label-typography role the tokens describe. Applying the pill
+// token (0.18em) at the phone size overflows the cell.
+const pillBase =
+  "pointer-events-none absolute inset-x-1 bottom-1 z-raised inline-flex min-h-3 items-center justify-center gap-0.5 rounded-card-md px-0.5 py-0 text-6xs font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:min-h-5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-5xs sm:tracking-pill";
+
+/**
+ * Background treatment for a private night — frosted graphite under a
+ * platinum hairline. Deliberately the ONLY cool, unsaturated tile in the
+ * grid: the gold seal, the crimson tome and the orange fire all read as
+ * "something is on"; this one reads as "a door is closed". The diagonal
+ * hatch (`.private-night-hatch`) is the frost — you can tell the room is
+ * taken, not who is in it.
+ */
+function PrivateNightLayer({
+  compact,
+  viewerSeat,
+}: {
+  compact: boolean;
+  viewerSeat: ViewerSeat | null;
+}) {
+  return (
+    <>
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 bg-gradient-to-br from-private-base via-private-mid to-private-edge"
+      />
+      <span
+        aria-hidden="true"
+        className="private-night-hatch pointer-events-none absolute inset-0"
+      />
+      {/* Platinum inner hairline. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 rounded-card-xl ring-1 ring-private-ink/25"
+      />
+      {/* The same slow shimmer the sealed cell has, in cold light. */}
+      <span
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-y-0 -left-1/4 w-1/3 bg-gradient-to-r from-transparent via-private-ink/15 to-transparent motion-safe:animate-seal-shimmer"
+      />
+      {/* A small key at the top edge — the invitation-only mark. */}
+      <span
+        aria-hidden="true"
+        className={`pointer-events-none absolute left-1/2 z-raised flex -translate-x-1/2 items-center justify-center rounded-full bg-private-ink/90 shadow-[0_1px_3px_rgba(0,0,0,0.6)] ${
+          compact ? "top-0.5 h-3 w-3" : "top-1.5 h-5 w-5"
+        }`}
+      >
+        <KeyGlyph small={compact} />
+      </span>
+      {!compact && <PrivateSeatPill viewerSeat={viewerSeat} />}
+    </>
+  );
+}
+
+/** The private night's centre: seats taken over seats total, plus a pip per seat. */
+function SeatTally({ compact, night }: { compact: boolean; night: PrivateNightCell }) {
+  const { seats, viewerSeatIndex } = night;
+  const full = seats.taken >= seats.total;
+  // Pips only fit up to eight seats; bigger tables keep the numerals alone.
+  // Phone cells (~50px) take five pips at most — beyond that the row waits
+  // for the `sm` breakpoint.
+  const showPips = !compact && seats.total <= 8;
+  const pipsVisibility = seats.total > 5 ? "hidden sm:flex" : "flex";
+  // Two-digit tallies squeeze the compact (side-drawer) cell.
+  const wide = seats.total >= 10 || seats.taken >= 10;
+  const compactSize = wide ? "text-2xs sm:text-xs" : "text-sm sm:text-base";
+  return (
+    // The key medallion sits above and the seat pill below: pad for both so
+    // the numerals never run into either, then let the numerals and pips
+    // share whatever height is left.
+    <span
+      className={`relative z-lift flex min-h-0 flex-1 flex-col items-center justify-center ${
+        compact ? "gap-0 pt-2" : "gap-0.5 pt-4 pb-4 sm:gap-1 sm:pt-5 sm:pb-6"
+      }`}
+    >
+      <span
+        className={`flex items-baseline gap-0.5 font-extrabold leading-none drop-shadow ${
+          full ? "text-ok" : "text-private-ink"
+        } ${compact ? compactSize : "text-base sm:text-xl md:text-2xl lg:text-3xl 2xl:text-4xl"}`}
+      >
+        <span className="tabular-nums">{seats.taken}</span>
+        <span className={full ? "text-ok/60" : "text-private-ink/50"}>/</span>
+        <span className="tabular-nums">{seats.total}</span>
+        {seats.waitlisted > 0 && !compact && (
+          <span
+            className={`ml-0.5 self-center font-semibold tabular-nums text-private-ink/60 ${
+              compact ? "text-5xs" : "text-4xs sm:text-3xs md:text-xs"
+            }`}
+          >
+            +{seats.waitlisted}
+          </span>
+        )}
+      </span>
+      {showPips && (
+        <span aria-hidden="true" className={`${pipsVisibility} shrink-0 items-center gap-1`}>
+          {Array.from({ length: seats.total }, (_, i) => i + 1).map((seatNo) => {
+            const taken = seatNo <= seats.taken;
+            const mine = viewerSeatIndex !== null && viewerSeatIndex + 1 === seatNo;
+            return (
+              <span
+                key={seatNo}
+                className={`h-1.5 w-1.5 rounded-full sm:h-2 sm:w-2 ${
+                  taken
+                    ? full
+                      ? "bg-ok shadow-[0_0_6px] shadow-ok/60"
+                      : "bg-private-ink"
+                    : "border border-private-ink/40 bg-transparent"
+                } ${mine ? "ring-2 ring-accent-400 ring-offset-1 ring-offset-private-mid" : ""}`}
+              />
+            );
+          })}
+        </span>
+      )}
+    </span>
+  );
+}
+
+/** The private cell's bottom pill: the viewer's own place on the guest list. */
+function PrivateSeatPill({ viewerSeat }: { viewerSeat: ViewerSeat | null }) {
+  switch (viewerSeat) {
+    case "host":
+      return (
+        <span
+          aria-hidden="true"
+          className={`${pillBase} border border-private-ink/40 bg-private-ink/15 text-private-ink`}
+        >
+          Hosting
+        </span>
+      );
+    case "seated":
+      return (
+        <span
+          aria-hidden="true"
+          className={`${pillBase} border border-ok/45 bg-ok-strong/15 text-ok`}
+        >
+          <CheckGlyphSmall />
+          Seated
+        </span>
+      );
+    case "waitlisted":
+      return (
+        <span
+          aria-hidden="true"
+          className={`${pillBase} border border-warn-gold/45 bg-warn-gold/10 text-warn-gold`}
+        >
+          Waitlist
+        </span>
+      );
+    case "invited":
+      return (
+        <span
+          aria-hidden="true"
+          className={`${pillBase} border border-accent-400/60 bg-accent-500/20 text-accent-200 motion-safe:animate-pulse-soft`}
+        >
+          Invited
+        </span>
+      );
+    case "declined":
+      return (
+        <span
+          aria-hidden="true"
+          className={`${pillBase} border border-line bg-fill-soft text-fg-secondary`}
+        >
+          <CrossGlyphSmall />
+          Pass
+        </span>
+      );
+    default:
+      return (
+        <span
+          aria-hidden="true"
+          className={`${pillBase} border border-private-ink/20 bg-private-base/60 text-private-ink/60`}
+        >
+          Private
+        </span>
+      );
+  }
+}
+
+function KeyGlyph({ small = false }: { small?: boolean }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={`text-private-base ${small ? "h-2 w-2" : "h-3 w-3"}`}
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={small ? 3 : 2.5}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <circle cx="8" cy="14" r="4" />
+      <path d="M11 11l9-9M16 6l3 3M13 9l3 3" />
+    </svg>
+  );
+}
+
 function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
-  // Phone cells are ~50px wide. The pill sits at the bottom with a small
-  // horizontal inset; the inline-flex BG would otherwise be capped at that
-  // width and the wider tracking would push the label out of the green
-  // outline. Tighter tracking + smaller mobile font keeps "GOING" / "PASS"
-  // / "RSVP" inside the pill on every device.
-  //
-  // `min-h-3 sm:min-h-5` matches the heights of PersonalMarkChip and
-  // HeatBadge, so locked vs. unlocked cells render at the same vertical
-  // mass — otherwise the chips' default leading + ring made them taller
-  // than the locked pill and adjacent cells looked staggered.
-  //
-  // The bracketed letter-spacing below is a deliberate hold-out from the
-  // tracking-label/pill/eyebrow token scale (pinned in scripts/style-baseline.json).
-  // These glyphs are 7px (`text-6xs`) inside a pill only a few px wider: the
-  // spacing is per-breakpoint optical tuning to stop "RSVP" overflowing its own
-  // pill, not the label-typography role the tokens describe. Applying the pill
-  // token (0.18em) at the phone size overflows the cell.
-  const pillBase =
-    "pointer-events-none absolute inset-x-1 bottom-1 z-raised inline-flex min-h-3 items-center justify-center gap-0.5 rounded-card-md px-0.5 py-0 text-6xs font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:min-h-5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-5xs sm:tracking-pill";
   if (viewerRsvp === "yes") {
     return (
       <span

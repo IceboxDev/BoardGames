@@ -11,6 +11,8 @@ import {
   LockInResponseSchema,
   OkResponseSchema,
   PicksLockBodySchema,
+  type PrivateNightUpdateBody,
+  PrivateNightUpdateBodySchema,
   UnlockBodySchema,
 } from "@boardgames/core/protocol";
 import { apiFetch } from "./api-fetch.ts";
@@ -25,6 +27,10 @@ export type {
   LockedDate,
   LockHost,
   LockInForm,
+  NightSeats,
+  PickMode,
+  PrivateNightUpdateBody,
+  SeatState,
 } from "@boardgames/core/protocol";
 
 export async function fetchCalendarLocks(signal?: AbortSignal) {
@@ -70,6 +76,22 @@ export async function togglePicksLock(date: string, on: boolean) {
     method: "POST",
     body: { date, on },
     request: PicksLockBodySchema,
+    response: OkResponseSchema,
+  });
+}
+
+/**
+ * Host or admin: adjust a private night after lock-in — seats, pick mode,
+ * title, invitees. Any subset of fields; the server applies them in one batch.
+ */
+export async function updatePrivateNight(
+  date: string,
+  patch: Omit<PrivateNightUpdateBody, "date">,
+) {
+  return apiFetch("/api/calendar/private-night", {
+    method: "POST",
+    body: { date, ...patch },
+    request: PrivateNightUpdateBodySchema,
     response: OkResponseSchema,
   });
 }

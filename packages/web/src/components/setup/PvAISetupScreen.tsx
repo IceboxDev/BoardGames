@@ -1,8 +1,7 @@
 import { type ReactNode, useCallback, useMemo, useState } from "react";
-import { MinusIcon, PlusIcon } from "../icons";
 import { Button } from "../ui/Button";
-import { IconButton } from "../ui/IconButton";
 import { SelectableCard } from "../ui/SelectableCard";
+import { Stepper } from "../ui/Stepper";
 import { DIFFICULTY, type DifficultyTier } from "./difficulty";
 import { SectionLabel } from "./SectionLabel";
 import { SetupHeader } from "./SetupHeader";
@@ -53,63 +52,6 @@ function gridColsClass(count: number): string {
 }
 
 // ---------------------------------------------------------------------------
-// Player count stepper
-// ---------------------------------------------------------------------------
-
-function PlayerCountStepper({
-  min,
-  max,
-  value,
-  onChange,
-}: {
-  min: number;
-  max: number;
-  value: number;
-  onChange: (v: number) => void;
-}) {
-  const canDecrement = value > min;
-  const canIncrement = value < max;
-
-  return (
-    <div className="flex flex-col items-center gap-3">
-      <div className="flex items-center gap-1">
-        <IconButton
-          variant="bordered"
-          shape="pill"
-          size="md"
-          aria-label="Decrease player count"
-          disabled={!canDecrement}
-          onClick={() => onChange(value - 1)}
-          icon={<MinusIcon className="h-4 w-4" />}
-          className="h-10 w-10"
-        />
-
-        <div className="flex w-20 flex-col items-center justify-center">
-          <span className="text-3xl font-extrabold tabular-nums tracking-tight text-fg-strong">
-            {value}
-          </span>
-        </div>
-
-        <IconButton
-          variant="bordered"
-          shape="pill"
-          size="md"
-          aria-label="Increase player count"
-          disabled={!canIncrement}
-          onClick={() => onChange(value + 1)}
-          icon={<PlusIcon className="h-4 w-4" />}
-          className="h-10 w-10"
-        />
-      </div>
-
-      <p className="text-xs text-fg-muted">
-        You + {value - 1} bot{value > 2 ? "s" : ""}
-      </p>
-    </div>
-  );
-}
-
-// ---------------------------------------------------------------------------
 // Component
 // ---------------------------------------------------------------------------
 
@@ -152,7 +94,9 @@ export function PvAISetupScreen({
       {showPlayerCount && (
         <div className="mb-8">
           <SectionLabel>Number of players</SectionLabel>
-          <PlayerCountStepper
+          <Stepper
+            label="Player count"
+            caption={`You + ${playerCount - 1} bot${playerCount > 2 ? "s" : ""}`}
             min={playerCounts[0]}
             max={playerCounts[playerCounts.length - 1]}
             value={playerCount}

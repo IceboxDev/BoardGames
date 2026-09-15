@@ -175,6 +175,80 @@ describe("GET /api/greetings ladder", () => {
     expect((await greeting(a)).greeting?.kind).toBe("purchase-vote-reminder");
   });
 
+  async function privateNight(date: string, host: string, invitees: string[], seatCount = 4) {
+    await client.execute({
+      sql: `INSERT INTO locked_dates
+              (date_key, locked_by, expected_user_ids_json, host_user_id, host_name,
+               event_time, private, seat_count, pick_mode, title)
+            VALUES (?, ?, ?, ?, ?, '19:30', 1, ?, 'host', 'TI4 marathon')`,
+      args: [date, ADMIN, JSON.stringify([host, ...invitees]), host, `Name ${host}`, seatCount],
+    });
+    await client.execute({
+      sql: "INSERT INTO rsvps (date_key, user_id, status, auto) VALUES (?, ?, 'yes', 1)",
+      args: [date, host],
+    });
+  }
+
+  it("serves an unanswered private-night invitation above the arrival, with the host in the side-car", async () => {
+    const closed = await poll({ closed: true });
+    await arrival(closed, [{ slug: "azul", purchaser: M1 }]);
+    await privateNight("2999-01-10", M1, [M2]);
+    const a = app({ id: M2, onlineMode: "both" });
+
+    const served = await greeting(a);
+    expect(served.greeting?.kind).toBe("night-invite");
+    if (served.greeting?.kind !== "night-invite") throw new Error("expected night-invite");
+    expect(served.greeting.date).toBe("2999-01-10");
+    expect(served.greeting.hostUserId).toBe(M1);
+    expect(served.greeting.title).toBe("TI4 marathon");
+    expect(served.greeting.eventTime).toBe("19:30");
+    expect(served.greeting.seats).toEqual({ total: 4, taken: 1, waitlisted: 0 });
+    expect(served.greeting.pickMode).toBe("host");
+    expect(Object.keys(served.players)).toEqual([M1]);
+
+    // Dismissed → the arrival is next; the invite never returns.
+    expect(
+      (await ack(a, { kind: "night-invite", date: "2999-01-10", action: "later" })).status,
+    ).toBe(200);
+    expect((await greeting(a)).greeting?.kind).toBe("arrival");
+    const { rows } = await client.execute({
+      sql: "SELECT type, meta_json FROM activity_log WHERE user_id = ? AND type = 'greeting-response'",
+      args: [M2],
+    });
+    expect(JSON.parse(String(rows[0]?.meta_json))).toMatchObject({
+      kind: "night-invite",
+      action: "later",
+      date: "2999-01-10",
+    });
+  });
+
+  it("does not invite the host, an outsider, someone who already answered, or to a past night", async () => {
+    await privateNight("2999-01-10", M1, [M2]);
+    expect((await greeting(app({ id: M1, onlineMode: "both" }))).greeting).toBeNull();
+    expect(
+      (await greeting(app({ id: ADMIN, role: "admin", onlineMode: "both" }))).greeting,
+    ).toBeNull();
+
+    await client.execute({
+      sql: "INSERT INTO rsvps (date_key, user_id, status, auto) VALUES ('2999-01-10', ?, 'no', 0)",
+      args: [M2],
+    });
+    expect((await greeting(app({ id: M2, onlineMode: "both" }))).greeting).toBeNull();
+
+    await privateNight("2000-01-10", M1, [ADMIN]);
+    expect(
+      (await greeting(app({ id: ADMIN, role: "admin", onlineMode: "both" }))).greeting,
+    ).toBeNull();
+  });
+
+  it("serves the earliest of two pending invitations first", async () => {
+    await privateNight("2999-03-01", M1, [M2]);
+    await privateNight("2999-02-01", ADMIN, [M2]);
+    const served = await greeting(app({ id: M2, onlineMode: "both" }));
+    if (served.greeting?.kind !== "night-invite") throw new Error("expected night-invite");
+    expect(served.greeting.date).toBe("2999-02-01");
+  });
+
   it("skips the reminder for an admin but still serves the arrival", async () => {
     const closed = await poll({ closed: true });
     await poll();

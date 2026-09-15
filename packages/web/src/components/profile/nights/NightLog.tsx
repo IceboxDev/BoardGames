@@ -96,9 +96,18 @@ export function NightLog({
                           Hosted
                         </Badge>
                       )}
+                      {night.isPrivate && (
+                        <Badge tone="neutral" size="xs" title="Invitation-only night">
+                          Private
+                        </Badge>
+                      )}
                     </p>
                     <p className="truncate text-3xs text-fg-muted">
-                      {night.host ? `at ${night.host.name}'s` : "no host recorded"}
+                      {night.host
+                        ? `at ${night.host.name}'s`
+                        : night.isPrivate
+                          ? "a private night"
+                          : "no host recorded"}
                       {night.address && ` · ${compactAddress(night.address)}`}
                     </p>
                   </div>

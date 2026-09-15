@@ -78,6 +78,30 @@ describe("AppGreetingSchema", () => {
     expect(parsed.kind).toBe("skill-intro");
   });
 
+  it("parses a night-invite greeting and rejects one without seats", () => {
+    const parsed = AppGreetingSchema.parse({
+      kind: "night-invite",
+      date: "2026-10-03",
+      hostUserId: "u-host",
+      title: "TI4 marathon",
+      eventTime: "19:00",
+      seats: { total: 5, taken: 2, waitlisted: 0 },
+      pickMode: "host",
+    });
+    expect(parsed.kind).toBe("night-invite");
+    if (parsed.kind === "night-invite") expect(parsed.seats.total).toBe(5);
+    const r = AppGreetingSchema.safeParse({
+      kind: "night-invite",
+      date: "2026-10-03",
+      hostUserId: "u-host",
+      title: null,
+      eventTime: null,
+      pickMode: "group",
+    });
+    expect(r.success).toBe(false);
+    if (!r.success) expect(r.error.issues[0]?.path).toEqual(["seats"]);
+  });
+
   it("rejects an unknown kind", () => {
     const r = AppGreetingSchema.safeParse({ kind: "confetti-cannon" });
     expect(r.success).toBe(false);
@@ -99,9 +123,20 @@ describe("AppGreetingAckBodySchema", () => {
       { kind: "arrival", arrivalId: "a1", action: "later" },
       { kind: "skill-intro", action: "cta" },
       { kind: "spotlight", id: 4, action: "later" },
+      { kind: "night-invite", date: "2026-10-03", action: "cta" },
     ]) {
       expect(() => AppGreetingAckBodySchema.parse(body)).not.toThrow();
     }
+  });
+
+  it("rejects a night-invite ack without a well-formed date", () => {
+    const r = AppGreetingAckBodySchema.safeParse({ kind: "night-invite", action: "later" });
+    expect(r.success).toBe(false);
+    if (!r.success) expect(r.error.issues[0]?.path).toEqual(["date"]);
+    expect(
+      AppGreetingAckBodySchema.safeParse({ kind: "night-invite", date: "Oct 3", action: "later" })
+        .success,
+    ).toBe(false);
   });
 
   it("rejects an ack without a response action", () => {

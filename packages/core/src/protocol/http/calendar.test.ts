@@ -10,6 +10,7 @@ import {
   LockInRequestBodySchema,
   mkOptimisticLock,
   PicksLockBodySchema,
+  PrivateNightUpdateBodySchema,
   SetRsvpBodySchema,
 } from "./calendar.ts";
 
@@ -75,6 +76,53 @@ describe("LockedDateSchema", () => {
     });
     expect(parsed.topGameSlug).toBe("dungeons-and-dragons");
   });
+
+  it("defaults every private-night field for a pre-feature payload", () => {
+    const parsed = LockedDateSchema.parse(sampleLocked);
+    expect(parsed.isPrivate).toBe(false);
+    expect(parsed.title).toBeNull();
+    expect(parsed.pickMode).toBe("group");
+    expect(parsed.seats).toBeNull();
+    expect(parsed.seatedUserIds).toEqual([]);
+    expect(parsed.waitlistUserIds).toEqual([]);
+    expect(parsed.redacted).toBe(false);
+  });
+
+  it("accepts a private night with seats and seat lists", () => {
+    const parsed = LockedDateSchema.parse({
+      ...sampleLocked,
+      isPrivate: true,
+      title: "TI4 marathon",
+      pickMode: "host",
+      seats: { total: 5, taken: 3, waitlisted: 1 },
+      seatedUserIds: ["user-1", "user-2", "user-3"],
+      waitlistUserIds: ["user-4"],
+    });
+    expect(parsed.seats?.total).toBe(5);
+    expect(parsed.pickMode).toBe("host");
+  });
+
+  it("accepts the redacted outsider shape", () => {
+    const parsed = LockedDateSchema.parse({
+      ...sampleLocked,
+      expectedUserIds: [],
+      rsvps: {},
+      eventTime: null,
+      address: null,
+      isPrivate: true,
+      seats: { total: 5, taken: 3, waitlisted: 0 },
+      redacted: true,
+    });
+    expect(parsed.redacted).toBe(true);
+    expect(parsed.host?.name).toBe("Alice");
+  });
+
+  it("rejects a zero-seat night and an unknown pick mode", () => {
+    expect(() =>
+      LockedDateSchema.parse({ ...sampleLocked, seats: { total: 0, taken: 0, waitlisted: 0 } }),
+    ).toThrow();
+    expect(() => LockedDateSchema.parse({ ...sampleLocked, pickMode: "vote" })).toThrow();
+  });
 });
 
 describe("CalendarLocksSchema", () => {
@@ -133,6 +181,67 @@ describe("LockInRequestBodySchema", () => {
 
   it("rejects malformed date", () => {
     expect(() => LockInRequestBodySchema.parse({ date: "May 5" })).toThrow();
+  });
+
+  it("accepts a private night with host, seats and invitees", () => {
+    expect(() =>
+      LockInRequestBodySchema.parse({
+        date: "2026-05-05",
+        hostUserId: "user-1",
+        hostName: "Alice",
+        isPrivate: true,
+        seatCount: 5,
+        inviteeIds: ["user-2", "user-3"],
+        pickMode: "host",
+        title: "TI4 marathon",
+      }),
+    ).not.toThrow();
+  });
+
+  it("requires a host and a seat count once isPrivate is set — on the body AND the form", () => {
+    const noHost = { date: "2026-05-05", isPrivate: true, seatCount: 5 };
+    expect(LockInRequestBodySchema.safeParse(noHost).success).toBe(false);
+    expect(LockInFormSchema.safeParse({ isPrivate: true, seatCount: 5 }).success).toBe(false);
+    const noSeats = { date: "2026-05-05", isPrivate: true, hostUserId: "user-1" };
+    expect(LockInRequestBodySchema.safeParse(noSeats).success).toBe(false);
+    expect(LockInFormSchema.safeParse({ isPrivate: true, hostUserId: "user-1" }).success).toBe(
+      false,
+    );
+  });
+
+  it("bounds the seat count and the title length", () => {
+    const base = { date: "2026-05-05", hostUserId: "user-1", isPrivate: true };
+    expect(LockInRequestBodySchema.safeParse({ ...base, seatCount: 1 }).success).toBe(false);
+    expect(LockInRequestBodySchema.safeParse({ ...base, seatCount: 21 }).success).toBe(false);
+    expect(
+      LockInRequestBodySchema.safeParse({ ...base, seatCount: 4, title: "x".repeat(81) }).success,
+    ).toBe(false);
+  });
+});
+
+describe("PrivateNightUpdateBodySchema", () => {
+  it("accepts a partial update", () => {
+    expect(() =>
+      PrivateNightUpdateBodySchema.parse({
+        date: "2026-05-05",
+        seatCount: 6,
+        addInviteeIds: ["user-9"],
+      }),
+    ).not.toThrow();
+    expect(() =>
+      PrivateNightUpdateBodySchema.parse({ date: "2026-05-05", pickMode: "group", title: null }),
+    ).not.toThrow();
+  });
+
+  it("rejects an empty invitee id, an out-of-range seat count and a bad date", () => {
+    expect(
+      PrivateNightUpdateBodySchema.safeParse({ date: "2026-05-05", removeInviteeIds: [""] })
+        .success,
+    ).toBe(false);
+    expect(
+      PrivateNightUpdateBodySchema.safeParse({ date: "2026-05-05", seatCount: 1 }).success,
+    ).toBe(false);
+    expect(PrivateNightUpdateBodySchema.safeParse({ date: "May 5" }).success).toBe(false);
   });
 });
 
@@ -255,6 +364,62 @@ describe("mkOptimisticLock", () => {
     const form = LockInFormSchema.parse({ eventTime: "20:00" });
     const lock = mkOptimisticLock(form, existing, "self");
     expect(lock.hostAtHome).toBe(false);
+  });
+
+  it("paints a fresh private night: host seated, invitees expected, seats from the form", () => {
+    const form = LockInFormSchema.parse({
+      hostUserId: "user-1",
+      hostName: "Alice",
+      isPrivate: true,
+      seatCount: 5,
+      inviteeIds: ["user-2", "user-3"],
+      pickMode: "host",
+      title: "TI4 marathon",
+    });
+    const lock = mkOptimisticLock(form, undefined, "admin");
+    expect(lock.isPrivate).toBe(true);
+    expect(lock.expectedUserIds).toEqual(["user-1", "user-2", "user-3"]);
+    expect(lock.seatedUserIds).toEqual(["user-1"]);
+    expect(lock.seats).toEqual({ total: 5, taken: 1, waitlisted: 0 });
+    expect(lock.pickMode).toBe("host");
+    expect(lock.title).toBe("TI4 marathon");
+    expect(lock.redacted).toBe(false);
+  });
+
+  it("keeps the existing guest list on a private edit that omits inviteeIds", () => {
+    const existing = LockedDateSchema.parse({
+      ...sampleLocked,
+      isPrivate: true,
+      seats: { total: 5, taken: 2, waitlisted: 0 },
+      seatedUserIds: ["user-1", "user-2"],
+    });
+    const form = LockInFormSchema.parse({
+      hostUserId: "user-1",
+      hostName: "Alice",
+      isPrivate: true,
+      seatCount: 6,
+    });
+    const lock = mkOptimisticLock(form, existing, "admin");
+    expect(lock.expectedUserIds).toEqual(sampleLocked.expectedUserIds);
+    expect(lock.seats).toEqual({ total: 6, taken: 2, waitlisted: 0 });
+  });
+
+  it("clears the seat tally when a night is switched back to open", () => {
+    const existing = LockedDateSchema.parse({
+      ...sampleLocked,
+      isPrivate: true,
+      seats: { total: 5, taken: 2, waitlisted: 0 },
+      seatedUserIds: ["user-1", "user-2"],
+    });
+    const form = LockInFormSchema.parse({
+      hostUserId: "user-1",
+      hostName: "Alice",
+      isPrivate: false,
+    });
+    const lock = mkOptimisticLock(form, existing, "admin");
+    expect(lock.isPrivate).toBe(false);
+    expect(lock.seats).toBeNull();
+    expect(lock.seatedUserIds).toEqual([]);
   });
 });
 

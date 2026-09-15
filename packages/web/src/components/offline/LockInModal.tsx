@@ -1,3 +1,8 @@
+import {
+  MAX_SEAT_COUNT,
+  MIN_SEAT_COUNT,
+  type ProfileDirectoryEntry,
+} from "@boardgames/core/protocol";
 import { useId, useMemo, useState } from "react";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type {
@@ -6,21 +11,42 @@ import type {
   LockedDate,
   LockHost,
   LockInForm,
+  PickMode,
 } from "../../lib/calendar-locks";
 import { formatDayKey } from "../../lib/date-format.ts";
 import { Button } from "../ui/Button";
 import { Checkbox } from "../ui/Checkbox";
 import { ErrorAlert } from "../ui/ErrorAlert";
-import { Field } from "../ui/Field";
+import { Field, FieldGroup } from "../ui/Field";
 import { Input } from "../ui/Input";
+import { MemberPicker } from "../ui/MemberPicker";
 import { Modal, ModalBody, ModalFooter } from "../ui/Modal";
+import { SegmentedControl, type SegmentedOption } from "../ui/SegmentedControl";
 import { Select } from "../ui/Select";
+import { Stepper } from "../ui/Stepper";
 import AddressAutocomplete from "./AddressAutocomplete";
+import { PICK_MODE_OPTIONS, pickModeHint } from "./private-night-copy";
+
+type NightKind = "open" | "private";
+const KIND_OPTIONS: SegmentedOption<NightKind>[] = [
+  { value: "open", label: "Open night", tone: "amber", title: "Anyone who's free can come" },
+  {
+    value: "private",
+    label: "Private night",
+    tone: "accent",
+    title: "Invitation only, seat-capped",
+  },
+];
+const DEFAULT_SEATS = 5;
 
 type Props = {
   date: string;
   initialLock: LockedDate | null;
   candidates: LockHost[];
+  /** The member directory — a private night's guest list is picked from it. */
+  members?: readonly ProfileDirectoryEntry[];
+  /** Members who marked can/maybe that day: listed first and pre-checked. */
+  suggestedInviteeIds?: ReadonlySet<string>;
   /** Per-user hosting history (total + last date), keyed by userId. */
   hostStats?: HostStatsMap | null;
   busy?: boolean;
@@ -34,6 +60,8 @@ export default function LockInModal({
   date,
   initialLock,
   candidates,
+  members = [],
+  suggestedInviteeIds,
   hostStats = null,
   busy = false,
   error = null,
@@ -56,6 +84,34 @@ export default function LockInModal({
   // a holiday rental, etc).
   const [hostAtHome, setHostAtHome] = useState<boolean>(initialLock?.hostAtHome ?? true);
   const hostAtHomeId = useId();
+  const titleId = useId();
+
+  // Private night: a seat count (host included), how games get picked, an
+  // optional title, and the guest list. A fresh private night pre-checks
+  // whoever marked the day free — the likeliest guests, one glance away.
+  const [kind, setKind] = useState<NightKind>(initialLock?.isPrivate ? "private" : "open");
+  const isPrivate = kind === "private";
+  const [seatCount, setSeatCount] = useState<number>(initialLock?.seats?.total ?? DEFAULT_SEATS);
+  const [pickMode, setPickMode] = useState<PickMode>(
+    initialLock?.isPrivate ? initialLock.pickMode : "host",
+  );
+  const [title, setTitle] = useState<string>(initialLock?.title ?? "");
+  const [invitees, setInvitees] = useState<ReadonlySet<string>>(
+    () =>
+      new Set(
+        initialLock?.isPrivate
+          ? initialLock.expectedUserIds.filter((id) => id !== initialLock.host?.userId)
+          : [...(suggestedInviteeIds ?? [])],
+      ),
+  );
+  const memberRows = useMemo(
+    () =>
+      members
+        .filter((m) => m.id !== hostUserId)
+        .map((m) => ({ id: m.id, name: m.name, image: m.image, accentHex: m.accentHex })),
+    [members, hostUserId],
+  );
+  const inviteeCount = [...invitees].filter((id) => id !== hostUserId).length;
 
   // Dedupe candidates by userId; preserve the first occurrence so the admin
   // appears in the list with the label they were given by the caller.
@@ -76,6 +132,7 @@ export default function LockInModal({
     e.preventDefault();
     if (busy) return;
     const host = uniqueCandidates.find((c) => c.userId === hostUserId);
+    if (isPrivate && !host) return;
     onSubmit({
       hostUserId: host ? host.userId : null,
       hostName: host ? host.name : null,
@@ -84,26 +141,58 @@ export default function LockInModal({
       // Only persist the flag when there's actually a host — without one, the
       // bringing rules don't branch on it anyway.
       hostAtHome: host ? hostAtHome : null,
+      isPrivate,
+      ...(isPrivate
+        ? {
+            seatCount,
+            pickMode,
+            title: title.trim() || null,
+            inviteeIds: [...invitees].filter((id) => id !== host?.userId),
+          }
+        : {}),
     });
   }
+
+  const hostChanged =
+    isEditing &&
+    initialLock?.isPrivate &&
+    initialLock.host &&
+    hostUserId !== "" &&
+    hostUserId !== initialLock.host.userId;
 
   return (
     <Modal
       onClose={onClose}
-      size="xs"
+      size={isPrivate ? "sm" : "xs"}
       eyebrow={isEditing ? "Edit lock-in" : "Lock in date"}
       title={headingDate}
     >
       <form onSubmit={handleSubmit} className="flex min-h-0 flex-1 flex-col gap-4">
         <ModalBody>
-          <Field label="Host" htmlFor={hostId}>
+          <SegmentedControl
+            shape="pill"
+            size="sm"
+            fullWidth
+            aria-label="Night kind"
+            value={kind}
+            onChange={setKind}
+            options={KIND_OPTIONS}
+            disabled={busy}
+          />
+
+          <Field
+            label={isPrivate ? "Host (required)" : "Host"}
+            htmlFor={hostId}
+            hint={hostChanged ? "The previous host keeps their seat as a guest." : undefined}
+          >
             <Select
               id={hostId}
               value={hostUserId}
               onChange={(e) => setHostUserId(e.target.value)}
               disabled={busy}
+              required={isPrivate}
             >
-              <option value="">No host yet</option>
+              <option value="">{isPrivate ? "Pick a host…" : "No host yet"}</option>
               {uniqueCandidates.map((c) => (
                 <option key={c.userId} value={c.userId}>
                   {hostOptionLabel(c, hostStats?.[c.userId], c.userId === viewer?.id)}
@@ -157,6 +246,72 @@ export default function LockInModal({
             </label>
           )}
 
+          {isPrivate && (
+            <>
+              <FieldGroup label="Seats" hint={`${seatCount} seats, host included`}>
+                <Stepper
+                  size="sm"
+                  label="Seats"
+                  value={seatCount}
+                  min={MIN_SEAT_COUNT}
+                  max={MAX_SEAT_COUNT}
+                  onChange={setSeatCount}
+                  disabled={busy}
+                />
+              </FieldGroup>
+
+              <FieldGroup label="Games" hint={pickModeHint(pickMode)}>
+                <SegmentedControl
+                  shape="pill"
+                  size="sm"
+                  fullWidth
+                  aria-label="How games get picked"
+                  value={pickMode}
+                  onChange={setPickMode}
+                  options={PICK_MODE_OPTIONS}
+                  disabled={busy}
+                />
+              </FieldGroup>
+
+              <Field label="Title (optional)" htmlFor={titleId}>
+                <Input
+                  id={titleId}
+                  value={title}
+                  maxLength={80}
+                  placeholder="TI4 marathon, Cthulhu night…"
+                  onChange={(e) => setTitle(e.target.value)}
+                  disabled={busy}
+                />
+              </Field>
+
+              <FieldGroup
+                label="Guest list"
+                hint={
+                  inviteeCount === 0
+                    ? "Nobody invited yet — the host can add people later."
+                    : `${inviteeCount} invited · seats go first come, first served.`
+                }
+              >
+                <MemberPicker
+                  members={memberRows}
+                  selectedIds={invitees}
+                  onToggle={(id) =>
+                    setInvitees((prev) => {
+                      const next = new Set(prev);
+                      if (next.has(id)) next.delete(id);
+                      else next.add(id);
+                      return next;
+                    })
+                  }
+                  suggestedIds={suggestedInviteeIds}
+                  suggestionHint="Free that day"
+                  selectedNoun="invited"
+                  disabled={busy}
+                />
+              </FieldGroup>
+            </>
+          )}
+
           {error && <ErrorAlert message={error} className="text-center" />}
         </ModalBody>
 
@@ -172,8 +327,14 @@ export default function LockInModal({
           <Button variant="ghost" size="sm" onClick={onClose} disabled={busy}>
             Cancel
           </Button>
-          <Button variant="primary" size="sm" type="submit" loading={busy}>
-            {isEditing ? "Save changes" : "Lock in"}
+          <Button
+            variant="primary"
+            size="sm"
+            type="submit"
+            loading={busy}
+            disabled={isPrivate && !hostUserId}
+          >
+            {isEditing ? "Save changes" : isPrivate ? "Lock in private night" : "Lock in"}
           </Button>
         </ModalFooter>
       </form>

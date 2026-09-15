@@ -53,7 +53,8 @@ type Shape = "pill" | "rounded";
 
 type SegmentedControlProps<T extends string | number> = {
   options: ReadonlyArray<SegmentedOption<T>>;
-  value: T;
+  /** `null` = nothing selected yet (a toggle awaiting its first answer). */
+  value: T | null;
   onChange: (next: T) => void;
 
   shape?: Shape;

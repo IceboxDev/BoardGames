@@ -199,6 +199,7 @@ function normalizeEditable(input: ProfileEditable): ProfileEditable {
 // ── GET /api/profiles  (directory) ─────────────────────────────────────
 
 profileRoutes.get("/", async (c) => {
+  const viewer = c.get("user");
   const db = getDb();
   const userResult = await db.execute(
     `SELECT id, name, image FROM "user"
@@ -211,7 +212,12 @@ profileRoutes.get("/", async (c) => {
   const [profileResult, inventoryResult, nextByUser] = await Promise.all([
     db.execute("SELECT user_id, tagline, accent_hex FROM user_profiles"),
     db.execute("SELECT user_id, game_slugs_json FROM user_inventory"),
-    findNextNightDateKeysForUsers(db, ids),
+    // A private night only shows up for members who are on its guest list
+    // (or the admin) — even a bare date would give away who is attending.
+    findNextNightDateKeysForUsers(db, ids, {
+      viewerId: viewer.id,
+      viewerIsAdmin: viewer.role === "admin",
+    }),
   ]);
 
   const profileByUser = new Map<string, { tagline: string | null; accent: string | null }>();
@@ -313,15 +319,26 @@ profileRoutes.get("/:userId", async (c) => {
               WHERE r.user_id = ? AND r.status = 'yes' AND r.date_key < ?`,
       args: [userId, today],
     }),
+    // The denominator of "nights attended": every past night this member
+    // could have been at. A private night they were never invited to is not
+    // one of those.
     db.execute({
-      sql: "SELECT date_key FROM locked_dates WHERE date_key < ? AND unlocked_at IS NULL",
-      args: [today],
+      sql: `SELECT date_key FROM locked_dates
+              WHERE date_key < ? AND unlocked_at IS NULL
+                AND (private = 0 OR host_user_id = ?
+                     OR EXISTS (SELECT 1 FROM json_each(expected_user_ids_json) WHERE value = ?))`,
+      args: [today, userId, userId],
     }),
     db.execute({
       sql: "SELECT DISTINCT date_key FROM match_results WHERE date_key IS NOT NULL",
       args: [],
     }),
-    findNextNightForUser(db, userId, today),
+    findNextNightForUser(
+      db,
+      userId,
+      { viewerId: viewer.id, viewerIsAdmin: viewer.role === "admin" },
+      today,
+    ),
   ]);
 
   if (userResult.rows.length === 0) {
@@ -494,6 +511,7 @@ profileRoutes.get("/:userId", async (c) => {
       hostName: view?.lock.hostName ?? null,
       status: nextRef.status,
       attendeeCount: view ? view.wire.definiteCount + view.wire.tentativeCount : 0,
+      isPrivate: view?.lock.isPrivate ?? false,
     };
   }
 

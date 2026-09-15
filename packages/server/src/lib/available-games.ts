@@ -13,11 +13,17 @@
 
 import { getBggBySlug, maxPlayersAsNumber } from "@boardgames/core/bgg";
 import { expandOwnedSlugs } from "@boardgames/core/games/ownership";
-import { type AvailableGames, SlugListSchema } from "@boardgames/core/protocol";
+import {
+  type AvailableGames,
+  type PickMode,
+  type SeatState,
+  SlugListSchema,
+} from "@boardgames/core/protocol";
 import type { Client } from "@libsql/client";
 import { z } from "zod";
 import { jsonColumn, parseRow, parseRows, RowParseError } from "./db-rows.ts";
 import { fetchNewSlugsByUser } from "./new-acquisitions.ts";
+import { deriveNightParticipants, loadNightLock } from "./night-participants.ts";
 
 // ── Row projections ───────────────────────────────────────────────────
 //
@@ -25,21 +31,6 @@ import { fetchNewSlugsByUser } from "./new-acquisitions.ts";
 // rename in db.ts surfaces as a diff in this file's PR.
 
 const ExpectedUserIdsSchema = z.array(z.string());
-
-/**
- * `SELECT host_user_id, host_name, event_time, address, picks_locked_at,
- *  expected_user_ids_json, locked_at, host_at_home FROM locked_dates`.
- */
-const LockedDateFullRowSchema = z.object({
-  host_user_id: z.string().nullable(),
-  host_name: z.string().nullable(),
-  event_time: z.string().nullable(),
-  address: z.string().nullable(),
-  picks_locked_at: z.string().nullable(),
-  expected_user_ids_json: jsonColumn(ExpectedUserIdsSchema),
-  locked_at: z.string().nullable(),
-  host_at_home: z.number().nullable(),
-});
 
 /** `SELECT user_id, status FROM user_availability_days WHERE date_key = ?`.
  *  Normalized per-date rows (migration 0010) — an indexed seek instead of the
@@ -49,18 +40,20 @@ const AvailabilityDayRowSchema = z.object({
   status: z.enum(["can", "maybe"]),
 });
 
-/** `SELECT user_id, status, auto FROM rsvps WHERE date_key = ?`. */
+/** `SELECT user_id, status, auto, rsvped_at FROM rsvps WHERE date_key = ?`. */
 const RsvpForDateRowSchema = z.object({
   user_id: z.string(),
   status: z.enum(["yes", "no"]),
   auto: z.number().nullable(),
+  rsvped_at: z.string(),
 });
 
-/** `SELECT user_id, game_slug, reaction FROM game_requests WHERE date_key = ?`. */
+/** `SELECT user_id, game_slug, reaction, created_at FROM game_requests WHERE date_key = ?`. */
 const ReactionRowSchema = z.object({
   user_id: z.string(),
   game_slug: z.string(),
   reaction: z.enum(["hype", "teach", "learn"]),
+  created_at: z.string(),
 });
 
 /**
@@ -109,6 +102,8 @@ const TombstoneFullRowSchema = z.object({
   address: z.string().nullable(),
   expected_user_ids_json: jsonColumn(ExpectedUserIdsSchema),
   unlocked_at: z.string(),
+  private: z.union([z.number(), z.boolean()]),
+  title: z.string().nullable(),
 });
 
 // ── Types ─────────────────────────────────────────────────────────────
@@ -125,6 +120,14 @@ export type AvailableGamesViewerExtras = {
   /** Viewer's bring assignment (subset of topSlugs). Same algorithm the
    *  Attendees view uses; the host's assignment is "every top-5 they own". */
   bringing: string[];
+  /** Private nights: the viewer's place on the seat list; null on open nights. */
+  seat: SeatState | null;
+  /**
+   * False when the night is private and the viewer is neither invited nor
+   * admin. The HTTP route answers 403; the feed never asks (its date list is
+   * already relationship-scoped).
+   */
+  allowed: boolean;
 };
 
 export type AvailableGamesLockMeta = {
@@ -142,6 +145,12 @@ export type AvailableGamesLockMeta = {
    * bringing behavior. New nights store an explicit 0/1.
    */
   hostAtHome: boolean;
+  isPrivate: boolean;
+  title: string | null;
+  pickMode: PickMode;
+  seats: { total: number; taken: number; waitlisted: number } | null;
+  /** Waitlisted user ids in queue order (private nights). */
+  waitlistUserIds: string[];
 };
 
 export type AvailableGamesView = {
@@ -213,6 +222,71 @@ export function rankTopSlugs(
     .map(([slug]) => slug);
 }
 
+type LineupReactionRow = {
+  user_id: string;
+  game_slug: string;
+  reaction: "hype" | "teach" | "learn";
+  /** SQLite datetime — pick order in host mode. */
+  created_at: string;
+};
+
+/**
+ * The night's lineup from raw reaction rows. Only `voters` count (see
+ * `deriveNightParticipants`). Host-pick mode ignores the popularity ranking:
+ * the lineup is the host's hyped games in the order they were picked.
+ * Everything else — open nights and group-pick private nights — ranks with
+ * `rankTopSlugs`. Shared by `/locks` (`topGameSlug`) and the per-date payload
+ * (`topSlugs`) so the two can never disagree.
+ */
+export function rankNightLineup(
+  opts: {
+    pickMode: PickMode;
+    isPrivate: boolean;
+    hostUserId: string | null;
+    voters: ReadonlySet<string>;
+    playableSlugs: Set<string>;
+  },
+  reactions: readonly LineupReactionRow[],
+  limit = 5,
+): { aggregate: Record<string, RankableReaction>; topSlugs: string[] } {
+  const aggregate: Record<string, RankableReaction> = {};
+  for (const r of reactions) {
+    if (!opts.voters.has(r.user_id)) continue;
+    let agg = aggregate[r.game_slug];
+    if (!agg) {
+      agg = { hype: 0, teach: 0, learn: 0 };
+      aggregate[r.game_slug] = agg;
+    }
+    agg[r.reaction] += 1;
+  }
+  if (opts.isPrivate && opts.pickMode === "host") {
+    const picks = reactions
+      .filter(
+        (r) =>
+          r.user_id === opts.hostUserId &&
+          r.reaction === "hype" &&
+          opts.playableSlugs.has(r.game_slug),
+      )
+      .sort((a, b) =>
+        a.created_at < b.created_at
+          ? -1
+          : a.created_at > b.created_at
+            ? 1
+            : a.game_slug.localeCompare(b.game_slug),
+      );
+    const seen = new Set<string>();
+    const topSlugs: string[] = [];
+    for (const p of picks) {
+      if (seen.has(p.game_slug)) continue;
+      seen.add(p.game_slug);
+      topSlugs.push(p.game_slug);
+      if (topSlugs.length >= limit) break;
+    }
+    return { aggregate, topSlugs };
+  }
+  return { aggregate, topSlugs: rankTopSlugs(aggregate, opts.playableSlugs, limit) };
+}
+
 /**
  * Compute the full view of a locked game night from the viewer's perspective.
  * Returns null when the date isn't currently locked — the HTTP route turns
@@ -222,26 +296,16 @@ export async function computeAvailableGamesPayload(opts: {
   db: Client;
   date: string;
   viewerId: string;
+  /** Admins see every private night in full. */
+  viewerIsAdmin?: boolean;
 }): Promise<AvailableGamesView | null> {
-  const { db, date, viewerId } = opts;
+  const { db, date, viewerId, viewerIsAdmin = false } = opts;
 
-  const lockedRow = await db.execute({
-    sql: `SELECT host_user_id, host_name, event_time, address, picks_locked_at,
-                 expected_user_ids_json, locked_at, host_at_home
-          FROM locked_dates WHERE date_key = ? AND unlocked_at IS NULL LIMIT 1`,
-    args: [date],
-  });
-  if (lockedRow.rows.length === 0) return null;
-  const lock = parseRow(LockedDateFullRowSchema, lockedRow.rows[0], "locked_dates");
-  const hostUserId = lock.host_user_id;
-  const hostName = lock.host_name;
-  const eventTime = lock.event_time;
-  const address = lock.address;
-  const picksLockedAt = lock.picks_locked_at;
-  const expectedUserIds = lock.expected_user_ids_json;
-  const lockedAt = lock.locked_at ?? "1970-01-01 00:00:00";
-  // NULL → legacy → treat as at-home (uncapped host bring list, current behavior).
-  const hostAtHome = lock.host_at_home === null ? true : lock.host_at_home !== 0;
+  const lock = await loadNightLock(db, date);
+  if (!lock) return null;
+  const { hostUserId, hostName, eventTime, address, picksLockedAt, expectedUserIds, hostAtHome } =
+    lock;
+  const lockedAt = lock.lockedAt ?? "1970-01-01 00:00:00";
 
   // Pull every input the headcount math needs in parallel. We also fetch the
   // MAX(rsvped_at) and MAX(created_at) for this date so the ICS feed can
@@ -252,11 +316,11 @@ export async function computeAvailableGamesPayload(opts: {
       args: [date],
     }),
     db.execute({
-      sql: "SELECT user_id, status, auto FROM rsvps WHERE date_key = ?",
+      sql: "SELECT user_id, status, auto, rsvped_at FROM rsvps WHERE date_key = ?",
       args: [date],
     }),
     db.execute({
-      sql: "SELECT user_id, game_slug, reaction FROM game_requests WHERE date_key = ?",
+      sql: "SELECT user_id, game_slug, reaction, created_at FROM game_requests WHERE date_key = ?",
       args: [date],
     }),
     db.execute({
@@ -276,47 +340,40 @@ export async function computeAvailableGamesPayload(opts: {
     freshness.latest_reaction,
   ]);
 
-  const canSet = new Set<string>();
-  const maybeSet = new Set<string>();
-  for (const row of parseRows(
+  const availabilityRows = parseRows(
     AvailabilityDayRowSchema,
     availabilityResult.rows,
     "user_availability_days",
-  )) {
-    if (row.status === "can") canSet.add(row.user_id);
-    else if (row.status === "maybe") maybeSet.add(row.user_id);
-  }
+  );
+  const maybeSet = new Set<string>();
+  for (const row of availabilityRows) if (row.status === "maybe") maybeSet.add(row.user_id);
 
-  const rsvpYes = new Set<string>();
-  const rsvpNo = new Set<string>();
-  // Subset of rsvpYes that are real button clicks (auto=0), used to derive
+  const rsvpRows = parseRows(RsvpForDateRowSchema, rsvpResult.rows, "rsvps");
+  // Subset of rsvp-yes that are real button clicks (auto=0), used to derive
   // the "Hasn't RSVP'd yet" pill and the `[RSVP!]` calendar title prefix.
   const manuallyRsvpedYes = new Set<string>();
   let viewerRsvp: "yes" | "no" | undefined;
   let viewerRsvpManual = false;
-  for (const r of parseRows(RsvpForDateRowSchema, rsvpResult.rows, "rsvps")) {
+  for (const r of rsvpRows) {
     if (r.status === "yes") {
-      rsvpYes.add(r.user_id);
       if (!r.auto) manuallyRsvpedYes.add(r.user_id);
       if (r.user_id === viewerId) {
         viewerRsvp = "yes";
         viewerRsvpManual = !r.auto;
       }
-    } else {
-      rsvpNo.add(r.user_id);
-      if (r.user_id === viewerId) {
-        viewerRsvp = "no";
-        viewerRsvpManual = true; // a "no" is always a deliberate click
-      }
+    } else if (r.user_id === viewerId) {
+      viewerRsvp = "no";
+      viewerRsvpManual = true; // a "no" is always a deliberate click
     }
   }
 
-  // Explicit "no" wins over everything else.
-  const comingIds = new Set<string>();
-  for (const id of canSet) if (!rsvpNo.has(id)) comingIds.add(id);
-  for (const id of rsvpYes) if (!rsvpNo.has(id)) comingIds.add(id);
-  const definiteIds = [...comingIds];
-  const tentativeIds = [...maybeSet].filter((id) => !comingIds.has(id) && !rsvpNo.has(id));
+  // Who is on the night — the one shared rule (open: can ∪ yes − no; private:
+  // the host plus first-come "yes" answers up to the seat count).
+  const participants = deriveNightParticipants(lock, rsvpRows, availabilityRows);
+  const comingIds = new Set(participants.definite);
+  const definiteIds = participants.definite;
+  const tentativeIds = participants.tentative;
+  const allowed = participants.canView(viewerId, viewerIsAdmin);
 
   // Per-user inventory map for definite attendees.
   const inventoryByUser = new Map<string, Set<string>>();
@@ -357,9 +414,9 @@ export async function computeAvailableGamesPayload(opts: {
   }
   const newSlugs = [...newUnion].sort();
 
-  // "Playable" = owned AND fits the [definite, definite+tentative] window.
-  const lo = definiteIds.length;
-  const hi = definiteIds.length + tentativeIds.length;
+  // "Playable" = owned AND fits the night's headcount window (open: [definite,
+  // definite+tentative]; private: the seat count both ways).
+  const { lo, hi } = participants.window;
   const playableSlugs = computePlayableSlugs(ownedUnion, lo, hi);
 
   type ReactionAggregate = {
@@ -368,21 +425,38 @@ export async function computeAvailableGamesPayload(opts: {
     learn: number;
     viewer: ("hype" | "teach" | "learn")[];
   };
+  const reactionRows = parseRows(ReactionRowSchema, reactionResult.rows, "game_requests");
+  const lineup = rankNightLineup(
+    {
+      pickMode: lock.pickMode,
+      isPrivate: lock.isPrivate,
+      hostUserId,
+      voters: participants.voters,
+      playableSlugs,
+    },
+    reactionRows,
+    5,
+  );
   const reactions: Record<string, ReactionAggregate> = {};
+  for (const [slug, agg] of Object.entries(lineup.aggregate)) {
+    reactions[slug] = { ...agg, viewer: [] };
+  }
   const votesByUser = new Map<string, { hype: number; teach: number; learn: number }>();
+  // Whose per-person vote chips are worth showing: everyone listed on the
+  // roster (open: coming + maybe; private: seated + waitlisted).
+  const rosterVoters = new Set([...comingIds, ...maybeSet, ...participants.waitlisted]);
   let viewerHyped = false;
-  for (const r of parseRows(ReactionRowSchema, reactionResult.rows, "game_requests")) {
-    let agg = reactions[r.game_slug];
-    if (!agg) {
-      agg = { hype: 0, teach: 0, learn: 0, viewer: [] };
-      reactions[r.game_slug] = agg;
-    }
-    if (comingIds.has(r.user_id)) agg[r.reaction] += 1;
+  for (const r of reactionRows) {
     if (r.user_id === viewerId) {
+      let agg = reactions[r.game_slug];
+      if (!agg) {
+        agg = { hype: 0, teach: 0, learn: 0, viewer: [] };
+        reactions[r.game_slug] = agg;
+      }
       agg.viewer.push(r.reaction);
       if (r.reaction === "hype") viewerHyped = true;
     }
-    if ((comingIds.has(r.user_id) || maybeSet.has(r.user_id)) && playableSlugs.has(r.game_slug)) {
+    if (rosterVoters.has(r.user_id) && playableSlugs.has(r.game_slug)) {
       let v = votesByUser.get(r.user_id);
       if (!v) {
         v = { hype: 0, teach: 0, learn: 0 };
@@ -391,27 +465,35 @@ export async function computeAvailableGamesPayload(opts: {
       v[r.reaction] += 1;
     }
   }
+  const topSlugs = lineup.topSlugs;
 
-  // Top-5 selection — shared ranking (hype → support → slug). See `rankTopSlugs`.
-  const topSlugs = rankTopSlugs(reactions, playableSlugs, 5);
-
-  // Resolve display names.
-  const allAttendeeIds = [...new Set([...definiteIds, ...tentativeIds])];
+  // Resolve display names. Private nights list everyone invited so the host
+  // can see who still owes an answer; the declined are the host's (and the
+  // admin's) business only.
+  const viewerManages = viewerIsAdmin || viewerId === hostUserId;
+  const rosterIds: string[] = lock.isPrivate
+    ? [
+        ...participants.seated,
+        ...participants.waitlisted,
+        ...participants.invitedNoAnswer,
+        ...(viewerManages ? participants.declined : []),
+      ]
+    : [...new Set([...definiteIds, ...tentativeIds])];
   const userNames = new Map<string, string>();
   const adminIds = new Set<string>();
   const guestIds = new Set<string>();
   const userImages = new Map<string, string | null>();
   const userAccents = new Map<string, string | null>();
-  if (allAttendeeIds.length > 0) {
-    const placeholders = allAttendeeIds.map(() => "?").join(",");
+  if (rosterIds.length > 0) {
+    const placeholders = rosterIds.map(() => "?").join(",");
     const [userResult, accentResult] = await Promise.all([
       db.execute({
         sql: `SELECT id, name, email, role, guest, image FROM user WHERE id IN (${placeholders})`,
-        args: allAttendeeIds,
+        args: rosterIds,
       }),
       db.execute({
         sql: `SELECT user_id, accent_hex FROM user_profiles WHERE user_id IN (${placeholders})`,
-        args: allAttendeeIds,
+        args: rosterIds,
       }),
     ]);
     for (const p of parseRows(ProfileAccentRowSchema, accentResult.rows, "user_profiles")) {
@@ -479,52 +561,55 @@ export async function computeAvailableGamesPayload(opts: {
     accentHex: string | null;
     votes: { hype: number; teach: number; learn: number };
     bringing: string[];
+    seat: SeatState | null;
   };
-  const attendees: AttendeeOut[] = [];
-  for (const id of definiteIds) {
+  const attendeeFor = (id: string, status: "definite" | "tentative"): AttendeeOut => {
     const isHost = id === hostUserId;
     const inv = inventoryByUser.get(id);
     // External-host nights bypass the "host shows up with everything" shortcut
     // — they get whatever the capped greedy pass assigned them.
     const list =
-      isHost && hostAtHome ? topSlugs.filter((s) => inv?.has(s)) : (bringing.get(id) ?? []);
-    attendees.push({
+      status === "definite"
+        ? isHost && hostAtHome
+          ? topSlugs.filter((s) => inv?.has(s))
+          : (bringing.get(id) ?? [])
+        : [];
+    return {
       userId: id,
       name: userNames.get(id) ?? "—",
       isHost,
       isAdmin: adminIds.has(id),
-      status: "definite",
+      status,
       hasRsvped: manuallyRsvpedYes.has(id),
       isGuest: guestIds.has(id),
       image: userImages.get(id) ?? null,
       accentHex: userAccents.get(id) ?? null,
       votes: votesByUser.get(id) ?? { hype: 0, teach: 0, learn: 0 },
       bringing: list,
+      seat: participants.seatOf(id),
+    };
+  };
+  const attendees: AttendeeOut[] = [];
+  for (const id of definiteIds) attendees.push(attendeeFor(id, "definite"));
+  for (const id of rosterIds) {
+    if (comingIds.has(id)) continue;
+    attendees.push(attendeeFor(id, "tentative"));
+  }
+  if (lock.isPrivate) {
+    // Seat order IS the roster order on a private night: host, seated in
+    // arrival order, then the waitlist, the unanswered, the declined.
+    const rank = new Map(rosterIds.map((id, i) => [id, i] as const));
+    attendees.sort((a, b) => (rank.get(a.userId) ?? 0) - (rank.get(b.userId) ?? 0));
+  } else {
+    attendees.sort((a, b) => {
+      if (a.isHost !== b.isHost) return a.isHost ? -1 : 1;
+      if (a.status !== b.status) return a.status === "definite" ? -1 : 1;
+      const aTotal = a.votes.hype + a.votes.teach + a.votes.learn;
+      const bTotal = b.votes.hype + b.votes.teach + b.votes.learn;
+      if (bTotal !== aTotal) return bTotal - aTotal;
+      return a.name.localeCompare(b.name);
     });
   }
-  for (const id of tentativeIds) {
-    attendees.push({
-      userId: id,
-      name: userNames.get(id) ?? "—",
-      isHost: id === hostUserId,
-      isAdmin: adminIds.has(id),
-      status: "tentative",
-      hasRsvped: manuallyRsvpedYes.has(id),
-      isGuest: guestIds.has(id),
-      image: userImages.get(id) ?? null,
-      accentHex: userAccents.get(id) ?? null,
-      votes: votesByUser.get(id) ?? { hype: 0, teach: 0, learn: 0 },
-      bringing: [],
-    });
-  }
-  attendees.sort((a, b) => {
-    if (a.isHost !== b.isHost) return a.isHost ? -1 : 1;
-    if (a.status !== b.status) return a.status === "definite" ? -1 : 1;
-    const aTotal = a.votes.hype + a.votes.teach + a.votes.learn;
-    const bTotal = b.votes.hype + b.votes.teach + b.votes.learn;
-    if (bTotal !== aTotal) return bTotal - aTotal;
-    return a.name.localeCompare(b.name);
-  });
 
   // Viewer's own bring list (for the [Bring: …] title prefix).
   const viewerBringingSlugs: string[] = (() => {
@@ -540,12 +625,19 @@ export async function computeAvailableGamesPayload(opts: {
       ownedSlugs,
       newSlugs,
       definiteCount: definiteIds.length,
-      tentativeCount: tentativeIds.length,
+      // A private night's waitlist is not "maybe": it must never widen the
+      // player window or read as tentative headcount.
+      tentativeCount: lock.isPrivate ? 0 : tentativeIds.length,
       participantIds: definiteIds,
       reactions,
       topSlugs,
       attendees,
       picksLockedAt,
+      isPrivate: lock.isPrivate,
+      pickMode: lock.pickMode,
+      seatCount: lock.isPrivate ? (participants.seats?.total ?? null) : null,
+      playerWindow: lock.isPrivate ? participants.window : null,
+      viewerCanReact: participants.canReact(viewerId, viewerIsAdmin),
     },
     viewer: {
       inExpectedSet: expectedUserIds.includes(viewerId),
@@ -553,6 +645,8 @@ export async function computeAvailableGamesPayload(opts: {
       rsvpManual: viewerRsvpManual,
       hyped: viewerHyped,
       bringing: viewerBringingSlugs,
+      seat: participants.seatOf(viewerId),
+      allowed,
     },
     lock: {
       hostUserId,
@@ -563,6 +657,11 @@ export async function computeAvailableGamesPayload(opts: {
       expectedUserIds,
       lockedAt,
       hostAtHome,
+      isPrivate: lock.isPrivate,
+      title: lock.title,
+      pickMode: lock.pickMode,
+      seats: participants.seats,
+      waitlistUserIds: participants.waitlisted,
     },
     latestActivityAt,
   };
@@ -579,7 +678,12 @@ export type ViewerDateRef = { dateKey: string; source: ViewerDateSource };
  * "Relationship" = the viewer is in `expected_user_ids_json`, OR they have
  * any `rsvps` row for the date, OR they have any `game_requests` row.
  * Filtering down to these dates keeps the feed small and avoids leaking
- * unrelated nights into a stranger's calendar.
+ * unrelated nights into a stranger's calendar. A PRIVATE night only ever
+ * qualifies through the guest list: a stale "yes" or vote from before the
+ * night went private is not an invitation.
+ *
+ * Membership is tested with `json_each`, not `instr` — a substring match
+ * would let one id qualify for another id it happens to be a prefix of.
  */
 export async function listLockedDatesForViewer(opts: {
   db: Client;
@@ -596,11 +700,12 @@ export async function listLockedDatesForViewer(opts: {
           FROM locked_dates ld
           WHERE ld.date_key >= ? AND ld.date_key < ? AND ld.unlocked_at IS NULL
             AND (
-                 EXISTS (SELECT 1 FROM rsvps r
-                         WHERE r.date_key = ld.date_key AND r.user_id = ?)
-              OR EXISTS (SELECT 1 FROM game_requests gr
-                         WHERE gr.date_key = ld.date_key AND gr.user_id = ?)
-              OR instr(ld.expected_user_ids_json, ?) > 0
+                 EXISTS (SELECT 1 FROM json_each(ld.expected_user_ids_json) WHERE value = ?)
+              OR (ld.private = 0 AND (
+                   EXISTS (SELECT 1 FROM rsvps r
+                           WHERE r.date_key = ld.date_key AND r.user_id = ?)
+                OR EXISTS (SELECT 1 FROM game_requests gr
+                           WHERE gr.date_key = ld.date_key AND gr.user_id = ?)))
             )`,
     args: [fromInclusive, toExclusive, viewerId, viewerId, viewerId],
   });
@@ -611,7 +716,7 @@ export async function listLockedDatesForViewer(opts: {
           FROM calendar_unlocked_tombstones
           WHERE date_key >= ? AND date_key < ?
             AND unlocked_at > ?
-            AND instr(expected_user_ids_json, ?) > 0`,
+            AND EXISTS (SELECT 1 FROM json_each(expected_user_ids_json) WHERE value = ?)`,
     args: [fromInclusive, toExclusive, tombstoneCutoff, viewerId],
   });
 
@@ -637,13 +742,15 @@ export type TombstoneRow = {
   address: string | null;
   expectedUserIds: string[];
   unlockedAt: string;
+  isPrivate: boolean;
+  title: string | null;
 };
 
 /** Fetch a tombstone row for emitting a STATUS:CANCELLED event. */
 export async function getTombstone(db: Client, dateKey: string): Promise<TombstoneRow | null> {
   const { rows } = await db.execute({
     sql: `SELECT date_key, host_user_id, host_name, event_time, address,
-                 expected_user_ids_json, unlocked_at
+                 expected_user_ids_json, unlocked_at, private, title
           FROM calendar_unlocked_tombstones WHERE date_key = ? LIMIT 1`,
     args: [dateKey],
   });
@@ -658,6 +765,8 @@ export async function getTombstone(db: Client, dateKey: string): Promise<Tombsto
     address: t.address,
     expectedUserIds: t.expected_user_ids_json,
     unlockedAt: t.unlocked_at,
+    isPrivate: t.private === true || t.private === 1,
+    title: t.title,
   };
 }
 

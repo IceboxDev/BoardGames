@@ -122,6 +122,13 @@
   --color-sealed-base: #1e1b4b;
   --color-sealed-mid: #4c1d95;
   --color-sealed-edge: #312e81;
+  /* Private night — frosted graphite with platinum ink. Neutral on purpose:
+     it must stay legible beside the gold seal, the crimson D&D tome and the
+     orange fire under every accent (lib/theme/semantic.ts, group "private"). */
+  --color-private-base: #111827;
+  --color-private-mid: #1f2937;
+  --color-private-edge: #374151;
+  --color-private-ink: #e5e7eb;
   /* Glow shadows. Each is DERIVED from its palette token rather than carrying
      a hand-copied rgb triplet, so `shadow-glow-accent` follows a themed accent
      for free. That indirection is load-bearing: Tailwind compiles a shadow

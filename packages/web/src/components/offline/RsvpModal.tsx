@@ -6,9 +6,11 @@ import { compactAddress } from "../../lib/compact-address.ts";
 import { formatDayKey } from "../../lib/date-format.ts";
 import { DND_SLUG } from "../../lib/dnd-night";
 import { EXIT_CATALOG_SLUG } from "../../lib/exit-night";
+import { canManageNight, seatsLeft, viewerSeat, waitlistPosition } from "../../lib/night-access";
 import { reportPageView } from "../../lib/page-views";
-import { ClockIcon, HostIcon, PadlockIcon, PinIcon } from "../icons";
+import { ClockIcon, HostIcon, PadlockIcon, PinIcon, UsersIcon } from "../icons";
 import {
+  Badge,
   EmptyState,
   ErrorAlert,
   IconButton,
@@ -16,11 +18,14 @@ import {
   Modal,
   SegmentedControl,
   type SegmentedOption,
+  useConfirm,
 } from "../ui";
 import AttendeesView from "./AttendeesView";
 import DndNightPanel from "./DndNightPanel";
 import ExitNightPanel from "./ExitNightPanel";
 import GameCarousel3D from "./GameCarousel3D";
+import GameReactions from "./GameReactions";
+import PrivateNightManageSheet from "./PrivateNightManageSheet";
 import RankedGameList from "./RankedGameList";
 import { useRsvpAvailability } from "./useRsvpAvailability.ts";
 
@@ -29,6 +34,8 @@ type Props = {
   locks: CalendarLocks | undefined;
   onClose: () => void;
 };
+
+type View = "pick" | "results" | "attendees";
 
 export default function RsvpModal({ date, locks, onClose }: Props) {
   const { user, isAdmin } = useCurrentUser();
@@ -41,6 +48,14 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
 
   const lock = locks?.[date];
   const viewerRsvp: RsvpStatus | undefined = userId ? lock?.rsvps[userId] : undefined;
+  // Private night: invitation only, seat-capped, host-curated. The server
+  // already redacted the lock for outsiders — the dashboard sends them to the
+  // peek instead of here — so inside this modal the viewer is on the list.
+  const isPrivate = !!lock?.isPrivate;
+  const seat = viewerSeat(lock, userId, isAdmin);
+  const canManage = isPrivate && canManageNight(lock, userId, isAdmin);
+  const [manageOpen, setManageOpen] = useState(false);
+  const { confirm, confirmDialog } = useConfirm();
 
   const {
     gamesQuery,
@@ -56,11 +71,15 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
     newSlugs,
     availableGames,
     hypedCount,
-  } = useRsvpAvailability({ date, enabled: !!lock });
+    playerWindow,
+    viewerCanReact,
+  } = useRsvpAvailability({ date, enabled: !!lock && !lock.redacted });
 
   const isHost = !!lock?.host && lock.host.userId === userId;
   const canTogglePicksLock = !!lock && (isAdmin || isHost);
   const picksLocked = !!lock?.picksLockedAt;
+  const pickMode = gamesQuery.data?.pickMode ?? lock?.pickMode ?? "group";
+  const hostPicks = isPrivate && pickMode === "host";
 
   // Opening the card is the physical interaction we care about (the user
   // has now seen the location, time, and game picks), so we promote the
@@ -68,9 +87,12 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   // for users who were lock-batch auto-yes'd (auto=1 row → re-write as
   // auto=0 to clear the "Hasn't RSVP'd yet" pill). Explicit "no" survives
   // — we don't override a deliberate decline.
+  //
+  // NEVER on a private night: a seat is claimed by a deliberate "I'm in",
+  // first come first served, and opening the card must not take one.
   const autoRsvpRef = useRef(false);
   useEffect(() => {
-    if (!lock || !userId) return;
+    if (!lock || !userId || isPrivate) return;
     if (viewerRsvp === "no") return;
     if (autoRsvpRef.current) return;
     // If the guest list is sealed and the viewer wasn't on it, never
@@ -78,7 +100,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
     if (picksLocked && !lock.expectedUserIds.includes(userId) && !isAdmin && !isHost) return;
     autoRsvpRef.current = true;
     setRsvpMutation.mutate({ status: "yes" });
-  }, [lock, userId, viewerRsvp, setRsvpMutation.mutate, picksLocked, isAdmin, isHost]);
+  }, [lock, userId, viewerRsvp, setRsvpMutation.mutate, picksLocked, isAdmin, isHost, isPrivate]);
 
   const headingDate = formatDayKey(date, "weekday");
 
@@ -98,7 +120,9 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   // A viewer holding their own "yes" is a committed guest and is NEVER locked
   // out, even if they've fallen out of the expected snapshot (e.g. a re-lock
   // that re-derived the list) — their RSVP is the authoritative commitment.
+  // A private night's guest list is the invitation: everyone in here is on it.
   const lockedOut =
+    !isPrivate &&
     picksLocked &&
     !!lock &&
     !!userId &&
@@ -108,24 +132,37 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
     !lock.expectedUserIds.includes(userId);
 
   // Default to "pick games"; the user switches via the toggle below or by
-  // navigating past the rightmost card.
-  const [view, setView] = useState<"pick" | "results" | "attendees">("pick");
+  // navigating past the rightmost card. A guest who can't pick (an invitee on
+  // a host-curated night) starts on the lineup, or the seats before there is one.
+  const [view, setView] = useState<View>(() =>
+    viewerCanReact ? "pick" : hypedCount > 0 ? "results" : "attendees",
+  );
+  const canShowPick = viewerCanReact;
   const canShowResults = hypedCount > 0;
   const canShowAttendees = attendees.length > 0;
-  const showViewToggle = canShowResults || canShowAttendees;
+  const showViewToggle = canShowPick ? canShowResults || canShowAttendees : true;
   // Guard against a stale view selection if the underlying availability
   // disappeared (e.g. the only hyped game was un-hyped and we're still on
   // the results tab). Fall back to "pick" silently.
-  const effectiveView: "pick" | "results" | "attendees" =
+  const effectiveView: View =
     view === "results" && !canShowResults
-      ? "pick"
-      : view === "attendees" && !canShowAttendees
+      ? canShowPick
         ? "pick"
-        : view;
+        : "attendees"
+      : view === "attendees" && !canShowAttendees
+        ? canShowPick
+          ? "pick"
+          : "results"
+        : view === "pick" && !canShowPick
+          ? canShowResults
+            ? "results"
+            : "attendees"
+          : view;
 
   // While the auto-yes mutation is in flight on first open, render "Going"
   // optimistically so the header doesn't flicker through an empty state.
-  const effectiveRsvp: RsvpStatus = viewerRsvp ?? "yes";
+  // A private night has no auto-yes: no answer is exactly that.
+  const effectiveRsvp: RsvpStatus | undefined = isPrivate ? viewerRsvp : (viewerRsvp ?? "yes");
 
   const error = setRsvpMutation.error ? "Couldn't update RSVP. Try again." : null;
   const busy = setRsvpMutation.isPending;
@@ -135,54 +172,157 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
       tone={picksLocked ? "amber" : "neutral"}
       size="sm"
       pressed={picksLocked}
-      aria-label={picksLocked ? "Unlock guest list" : "Lock guest list"}
+      aria-label={
+        isPrivate
+          ? picksLocked
+            ? "Reopen the lineup"
+            : "Finalize the lineup"
+          : picksLocked
+            ? "Unlock guest list"
+            : "Lock guest list"
+      }
       title={
-        picksLocked
-          ? "Guest list is sealed — click to unlock"
-          : "Lock the guest list — no more last-second RSVPs"
+        isPrivate
+          ? picksLocked
+            ? "Lineup is final — click to reopen"
+            : "Finalize the lineup — the night's games are set"
+          : picksLocked
+            ? "Guest list is sealed — click to unlock"
+            : "Lock the guest list — no more last-second RSVPs"
       }
       disabled={togglePicksLockMutation.isPending}
       onClick={() => togglePicksLockMutation.mutate({ on: !picksLocked })}
       icon={<PadlockIcon closed={picksLocked} />}
     />
   ) : null;
+  const headerExtra =
+    canManage || picksLockToggle ? (
+      <div className="flex items-center gap-1.5">
+        {canManage && (
+          <IconButton
+            tone="neutral"
+            size="sm"
+            aria-label="Manage the night"
+            title="Seats, guest list, how games get picked"
+            onClick={() => setManageOpen(true)}
+            icon={<UsersIcon className="h-4 w-4" />}
+          />
+        )}
+        {picksLockToggle}
+      </div>
+    ) : null;
 
   // Collapse what used to be its own "X going · Y maybe" row into the
   // eyebrow strip — saves a full line of header height on every device.
   // The numeric counts use `normal-case` + reset tracking so they don't
   // inherit the eyebrow's uppercase / wide-letter-spacing rules.
+  const seats = lock?.seats ?? null;
   const eyebrow = (
     <span className="inline-flex flex-wrap items-baseline gap-x-2">
-      <span>{isDnd ? "D&D night" : isExit ? "EXIT night" : "Game night"}</span>
-      {(definiteCount > 0 || tentativeCount > 0) && (
+      <span>
+        {isDnd ? "D&D night" : isExit ? "EXIT night" : isPrivate ? "Private night" : "Game night"}
+      </span>
+      {isPrivate && lock?.title && (
+        <span className="max-w-56 truncate font-semibold tracking-normal normal-case text-fg-strong">
+          {lock.title}
+        </span>
+      )}
+      {isPrivate && seats ? (
         <span className="inline-flex items-baseline gap-1 tracking-normal normal-case">
           <span aria-hidden="true" className="text-fg-strong/30">
             ·
           </span>
-          <span className="font-bold text-emerald-300 tabular-nums">{definiteCount}</span>
-          <span className="text-fg-secondary">going</span>
-          {tentativeCount > 0 && (
+          <span
+            className={`font-bold tabular-nums ${seats.taken >= seats.total ? "text-emerald-300" : "text-fg-strong"}`}
+          >
+            {seats.taken}/{seats.total}
+          </span>
+          <span className="text-fg-secondary">seats</span>
+          {seats.waitlisted > 0 && (
             <>
               <span aria-hidden="true" className="text-fg-strong/30">
                 +
               </span>
-              <span className="font-bold text-amber-300 tabular-nums">{tentativeCount}</span>
-              <span className="text-fg-secondary">maybe</span>
+              <span className="font-bold text-amber-300 tabular-nums">{seats.waitlisted}</span>
+              <span className="text-fg-secondary">waiting</span>
             </>
           )}
         </span>
+      ) : (
+        (definiteCount > 0 || tentativeCount > 0) && (
+          <span className="inline-flex items-baseline gap-1 tracking-normal normal-case">
+            <span aria-hidden="true" className="text-fg-strong/30">
+              ·
+            </span>
+            <span className="font-bold text-emerald-300 tabular-nums">{definiteCount}</span>
+            <span className="text-fg-secondary">going</span>
+            {tentativeCount > 0 && (
+              <>
+                <span aria-hidden="true" className="text-fg-strong/30">
+                  +
+                </span>
+                <span className="font-bold text-amber-300 tabular-nums">{tentativeCount}</span>
+                <span className="text-fg-secondary">maybe</span>
+              </>
+            )}
+          </span>
+        )
       )}
     </span>
   );
 
+  const left = seatsLeft(lock);
+  const position = waitlistPosition(lock, userId);
   const subheader =
-    lock && (lock.host || lock.eventTime || lock.address) ? (
+    lock && (lock.host || lock.eventTime || lock.address || isPrivate) ? (
       <div className="flex max-w-full flex-wrap items-center gap-x-3 gap-y-1 text-xs text-fg-secondary">
         {lock.host && <HostLine name={lock.host.name} />}
         {lock.eventTime && <TimeLine value={lock.eventTime} />}
         {lock.address && <AddressLink address={lock.address} />}
+        {isPrivate && seat === "invited" && (
+          <span className="font-semibold text-accent-200">
+            You're invited
+            {left !== null && (
+              <span className="font-normal text-fg-secondary">
+                {" "}
+                ·{" "}
+                {left === 0
+                  ? "the table is full — you'd join the waitlist"
+                  : `${left} ${left === 1 ? "seat" : "seats"} left`}
+              </span>
+            )}
+          </span>
+        )}
+        {isPrivate && hostPicks && lock.host && (
+          <span className="text-fg-muted">{lock.host.name} picks the games</span>
+        )}
       </div>
     ) : null;
+
+  // Leaving a seat frees it for the next in line; coming back queues again.
+  async function answer(status: RsvpStatus) {
+    if (status === effectiveRsvp) return;
+    if (isPrivate && status === "no" && (seat === "seated" || seat === "waitlisted")) {
+      const ok = await confirm({
+        title: seat === "seated" ? "Give up your seat?" : "Leave the waitlist?",
+        description:
+          seat === "seated"
+            ? "Your seat goes to the next person in line. If you come back later, you join the end of the queue."
+            : "You can rejoin later — at the end of the queue.",
+        confirmLabel: seat === "seated" ? "Give up seat" : "Leave",
+      });
+      if (!ok) return;
+    }
+    setRsvpMutation.mutate({ status });
+  }
+
+  const viewOptions = buildViewOptions({
+    canShowPick,
+    canShowResults,
+    canShowAttendees,
+    resultsLabel: hostPicks ? "Lineup" : "Results",
+    attendeesLabel: isPrivate ? "Seats" : "Attendees",
+  });
 
   return (
     <Modal
@@ -193,7 +333,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
       title={headingDate}
       titleClassName="text-xl font-bold tracking-tight text-fg-strong xs2:text-2xl sm:text-3xl"
       subheader={subheader}
-      headerExtra={picksLockToggle}
+      headerExtra={headerExtra}
     >
       {error && <ErrorAlert message={error} className="text-center" />}
 
@@ -222,22 +362,35 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
               aria-label="View mode"
               value={effectiveView}
               onChange={setView}
-              options={buildViewOptions(canShowResults, canShowAttendees)}
+              options={viewOptions}
               className="min-w-0"
             />
           ) : (
             <span aria-hidden="true" />
           )}
-          <RsvpSwitch
-            value={effectiveRsvp}
-            busy={busy}
-            onChange={(status) => {
-              if (status !== effectiveRsvp) {
-                setRsvpMutation.mutate({ status });
-              }
-            }}
-          />
+          {isPrivate && seat === "host" ? (
+            <Badge tone="amber" shape="pill" size="sm">
+              Hosting
+            </Badge>
+          ) : isPrivate ? (
+            <SeatSwitch
+              value={effectiveRsvp}
+              seat={seat}
+              position={position}
+              busy={busy}
+              onChange={answer}
+            />
+          ) : (
+            <RsvpSwitch value={effectiveRsvp ?? "yes"} busy={busy} onChange={answer} />
+          )}
         </div>
+      )}
+
+      {!lockedOut && isPrivate && seat === "waitlisted" && (
+        <p className="rounded-card-md border border-amber-400/30 bg-amber-400/[0.06] px-3 py-1.5 text-center text-xs text-amber-100">
+          You're {position !== null ? `#${position}` : ""} on the waitlist — a freed seat is yours
+          automatically.
+        </p>
       )}
 
       {!lockedOut && (
@@ -252,7 +405,11 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
                 </span>
               }
               title="You're sitting this one out"
-              description="Skipping the picks and votes since you're not coming. Flip the switch back to Going if you change your mind."
+              description={
+                isPrivate
+                  ? "Flip the switch back to I'm in if you change your mind — you'd join the end of the queue."
+                  : "Skipping the picks and votes since you're not coming. Flip the switch back to Going if you change your mind."
+              }
             />
           ) : gamesQuery.isPending ? (
             <LoadingState label="Finding games…" />
@@ -270,11 +427,17 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
               kickingUserId={
                 kickMutation.isPending ? (kickMutation.variables?.userId ?? null) : null
               }
+              seats={isPrivate ? seats : null}
+              showVotes={!hostPicks}
             />
           ) : availableGames.length === 0 ? (
             <EmptyState
               title="No games match"
-              description="Either nobody owns the same game, or no game fits the group size."
+              description={
+                isPrivate
+                  ? "Nobody seated owns a game that fits the table size yet."
+                  : "Either nobody owns the same game, or no game fits the group size."
+              }
             />
           ) : effectiveView === "results" ? (
             <RankedGameList
@@ -282,20 +445,111 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
               games={availableGames}
               reactions={reactions}
               topSlugs={topSlugs}
+              lineup={
+                hostPicks
+                  ? { hostName: lock?.host?.name ?? null, attendees, viewerCanPick: viewerCanReact }
+                  : undefined
+              }
+              reactionsDisabled={!viewerCanReact}
             />
           ) : (
             <GameCarousel3D
               games={availableGames}
-              minPlayers={definiteCount}
-              maxPlayers={definiteCount + tentativeCount}
+              minPlayers={playerWindow.lo}
+              maxPlayers={playerWindow.hi}
               date={date}
               reactions={reactions}
               newSlugs={newSlugs}
+              renderThumbOverlay={
+                hostPicks
+                  ? (game, isCenter, compact) => (
+                      <GameReactions
+                        date={date}
+                        slug={game.slug}
+                        accentHex={game.accentHex}
+                        aggregate={
+                          reactions[game.slug] ?? { hype: 0, teach: 0, learn: 0, viewer: [] }
+                        }
+                        size={compact ? "sm" : "md"}
+                        disabled={!isCenter || !viewerCanReact}
+                        mode="pick"
+                        hideCount
+                      />
+                    )
+                  : undefined
+              }
             />
           )}
         </div>
       )}
+
+      {manageOpen && lock && (
+        <PrivateNightManageSheet date={date} lock={lock} onClose={() => setManageOpen(false)} />
+      )}
+      {confirmDialog}
     </Modal>
+  );
+}
+
+// A private night's answer: "I'm in" claims a seat (or a place in line),
+// "Can't make it" gives it up. Once in, the yes side names the outcome —
+// Seated, or Waitlist #n — so the switch doubles as the status.
+function SeatSwitch({
+  value,
+  seat,
+  position,
+  busy,
+  onChange,
+}: {
+  value: RsvpStatus | undefined;
+  seat: ReturnType<typeof viewerSeat>;
+  position: number | null;
+  busy: boolean;
+  onChange: (next: RsvpStatus) => void;
+}) {
+  const yesLabel =
+    seat === "seated"
+      ? "Seated"
+      : seat === "waitlisted"
+        ? `Waitlist${position ? ` #${position}` : ""}`
+        : "I'm in";
+  const options: SegmentedOption<RsvpStatus>[] = [
+    {
+      value: "yes",
+      label: (
+        <>
+          <span aria-hidden="true">✓</span>
+          <span className="sr-only xs2:not-sr-only xs2:ml-1">{yesLabel}</span>
+        </>
+      ),
+      tone: seat === "waitlisted" ? "amber" : "emerald",
+      title: yesLabel,
+    },
+    {
+      value: "no",
+      label: (
+        <>
+          <span aria-hidden="true">✗</span>
+          <span className="sr-only xs2:not-sr-only xs2:ml-1">Can't make it</span>
+        </>
+      ),
+      tone: "rose",
+      title: "Can't make it",
+    },
+  ];
+  return (
+    <SegmentedControl
+      shape="pill"
+      size="sm"
+      selectionMode="toggle"
+      emphasizeActive
+      aria-label="Your answer"
+      value={value ?? null}
+      onChange={onChange}
+      disabled={busy}
+      options={options}
+      className="shrink-0"
+    />
   );
 }
 
@@ -362,29 +616,19 @@ function RsvpSwitch({
   );
 }
 
-const VIEW_OPTION_PICK: SegmentedOption<"pick" | "results" | "attendees"> = {
-  value: "pick",
-  label: "Pick",
-  tone: "accent",
-};
-const VIEW_OPTION_RESULTS: SegmentedOption<"pick" | "results" | "attendees"> = {
-  value: "results",
-  label: "Results",
-  tone: "amber",
-};
-const VIEW_OPTION_ATTENDEES: SegmentedOption<"pick" | "results" | "attendees"> = {
-  value: "attendees",
-  label: "Attendees",
-  tone: "sky",
-};
-
-function buildViewOptions(
-  canShowResults: boolean,
-  canShowAttendees: boolean,
-): SegmentedOption<"pick" | "results" | "attendees">[] {
-  const out: SegmentedOption<"pick" | "results" | "attendees">[] = [VIEW_OPTION_PICK];
-  if (canShowResults) out.push(VIEW_OPTION_RESULTS);
-  if (canShowAttendees) out.push(VIEW_OPTION_ATTENDEES);
+function buildViewOptions(opts: {
+  canShowPick: boolean;
+  canShowResults: boolean;
+  canShowAttendees: boolean;
+  resultsLabel: string;
+  attendeesLabel: string;
+}): SegmentedOption<View>[] {
+  const out: SegmentedOption<View>[] = [];
+  if (opts.canShowPick) out.push({ value: "pick", label: "Pick", tone: "accent" });
+  if (opts.canShowResults) out.push({ value: "results", label: opts.resultsLabel, tone: "amber" });
+  if (opts.canShowAttendees) {
+    out.push({ value: "attendees", label: opts.attendeesLabel, tone: "sky" });
+  }
   return out;
 }
 

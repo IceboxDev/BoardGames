@@ -6,7 +6,8 @@
 //   definite  = availability `can`  OR rsvp `yes`   (and not rsvp `no`)
 //   tentative = availability `maybe`                (and not coming/`no`)
 // The "next night" is the earliest future locked date (today inclusive) where
-// the user is definite or tentative.
+// the user is definite or tentative. Private nights follow their seat list
+// instead, and are invisible to a viewer who is not on it (§ NextNightViewer).
 
 import type { Client } from "@libsql/client";
 import { z } from "zod";
@@ -16,6 +17,13 @@ import {
   fetchAvailabilityDaysForUser,
 } from "./availability-merge.ts";
 import { parseRows } from "./db-rows.ts";
+import {
+  deriveNightParticipants,
+  NIGHT_LOCK_COLUMNS,
+  type NightLock,
+  NightLockRowSchema,
+  nightLockFromRow,
+} from "./night-participants.ts";
 
 export type NextNightStatus = "definite" | "tentative";
 export interface NextNightRef {
@@ -46,25 +54,54 @@ export function todayDateKey(now: Date = new Date()): string {
   return dateKeyFormat.format(now);
 }
 
-const DateKeyOnlyRowSchema = z.object({ date_key: z.string() });
 const RsvpRowSchema = z.object({
   date_key: z.string(),
   user_id: z.string(),
   status: z.enum(["yes", "no"]),
+  rsvped_at: z.string(),
 });
-const ViewerRsvpRowSchema = z.object({
-  date_key: z.string(),
-  status: z.enum(["yes", "no"]),
-});
+type RsvpRow = z.infer<typeof RsvpRowSchema>;
 
-/** First date in `futureDates` (ascending) the user is attending, or null. */
+/**
+ * Whose eyes the answer is for. A private night exists, for a viewer, only
+ * if they are on its guest list (or an admin): the date itself would give
+ * away that the profile's owner is attending something invitation-only.
+ */
+export interface NextNightViewer {
+  viewerId: string;
+  viewerIsAdmin: boolean;
+}
+
+function visibleTo(night: NightLock, viewer: NextNightViewer): boolean {
+  if (!night.isPrivate) return true;
+  return (
+    viewer.viewerIsAdmin ||
+    viewer.viewerId === night.hostUserId ||
+    night.expectedUserIds.includes(viewer.viewerId)
+  );
+}
+
+/** First night in `futureNights` (ascending) the user is attending, or null. */
 function computeNextNight(
-  futureDates: readonly string[],
+  futureNights: readonly NightLock[],
+  userId: string,
   availability: AvailabilityRecord | undefined,
-  rsvpByDate: Map<string, "yes" | "no"> | undefined,
+  rsvpsByDate: Map<string, RsvpRow[]>,
+  viewer: NextNightViewer,
 ): NextNightRef | null {
-  for (const dateKey of futureDates) {
-    const rsvp = rsvpByDate?.get(dateKey);
+  for (const night of futureNights) {
+    if (!visibleTo(night, viewer)) continue;
+    const dateKey = night.dateKey;
+    const rows = rsvpsByDate.get(dateKey) ?? [];
+    if (night.isPrivate) {
+      // Availability marks mean nothing on a private night; only the seat
+      // list does. Waiting or unanswered still counts as "might be there".
+      const seat = deriveNightParticipants(night, rows, []).seatOf(userId);
+      if (seat === "host" || seat === "seated") return { dateKey, status: "definite" };
+      if (seat === "waitlisted" || seat === "invited") return { dateKey, status: "tentative" };
+      continue;
+    }
+    const rsvp = rows.find((r) => r.user_id === userId)?.status;
     if (rsvp === "no") continue;
     const avail = availability?.[dateKey];
     if (avail === "can" || rsvp === "yes") return { dateKey, status: "definite" };
@@ -73,73 +110,77 @@ function computeNextNight(
   return null;
 }
 
-async function loadFutureLockedDates(db: Client, today: string): Promise<string[]> {
+async function loadFutureLockedNights(db: Client, today: string): Promise<NightLock[]> {
   const { rows } = await db.execute({
-    sql: "SELECT date_key FROM locked_dates WHERE date_key >= ? AND unlocked_at IS NULL ORDER BY date_key ASC",
+    sql: `SELECT ${NIGHT_LOCK_COLUMNS} FROM locked_dates
+          WHERE date_key >= ? AND unlocked_at IS NULL ORDER BY date_key ASC`,
     args: [today],
   });
-  return parseRows(DateKeyOnlyRowSchema, rows, "locked_dates").map((r) => r.date_key);
+  return parseRows(NightLockRowSchema, rows, "locked_dates").map(nightLockFromRow);
+}
+
+/** Every RSVP on a future date, grouped by date. Bounded by `today`. */
+async function loadFutureRsvps(db: Client, today: string): Promise<Map<string, RsvpRow[]>> {
+  const { rows } = await db.execute({
+    sql: "SELECT date_key, user_id, status, rsvped_at FROM rsvps WHERE date_key >= ?",
+    args: [today],
+  });
+  const out = new Map<string, RsvpRow[]>();
+  for (const r of parseRows(RsvpRowSchema, rows, "rsvps")) {
+    let list = out.get(r.date_key);
+    if (!list) {
+      list = [];
+      out.set(r.date_key, list);
+    }
+    list.push(r);
+  }
+  return out;
 }
 
 /** The single user's next night, with their own definite/tentative status. */
 export async function findNextNightForUser(
   db: Client,
   userId: string,
+  viewer: NextNightViewer,
   today: string = todayDateKey(),
 ): Promise<NextNightRef | null> {
-  const futureDates = await loadFutureLockedDates(db, today);
-  if (futureDates.length === 0) return null;
+  const futureNights = await loadFutureLockedNights(db, today);
+  if (futureNights.length === 0) return null;
 
-  const [availability, rsvpResult] = await Promise.all([
+  const [availability, rsvpsByDate] = await Promise.all([
     fetchAvailabilityDaysForUser(db, userId),
-    db.execute({
-      sql: "SELECT date_key, status FROM rsvps WHERE user_id = ? AND date_key >= ?",
-      args: [userId, today],
-    }),
+    loadFutureRsvps(db, today),
   ]);
-
-  const rsvpByDate = new Map<string, "yes" | "no">();
-  for (const r of parseRows(ViewerRsvpRowSchema, rsvpResult.rows, "rsvps")) {
-    rsvpByDate.set(r.date_key, r.status);
-  }
-  return computeNextNight(futureDates, availability, rsvpByDate);
+  return computeNextNight(futureNights, userId, availability, rsvpsByDate, viewer);
 }
 
 /** Next-night date key for many users at once (directory). Date only. */
 export async function findNextNightDateKeysForUsers(
   db: Client,
   userIds: readonly string[],
+  viewer: NextNightViewer,
   today: string = todayDateKey(),
 ): Promise<Map<string, string>> {
   const out = new Map<string, string>();
   if (userIds.length === 0) return out;
-  const futureDates = await loadFutureLockedDates(db, today);
-  if (futureDates.length === 0) return out;
-
-  const wanted = new Set(userIds);
-  const rsvpByUser = new Map<string, Map<string, "yes" | "no">>();
+  const futureNights = await loadFutureLockedNights(db, today);
+  if (futureNights.length === 0) return out;
 
   // Only future days can decide a "next night", so the scan is bounded by
   // `today` rather than reading every day anyone has ever marked.
-  const [availByUser, rsvpResult] = await Promise.all([
+  const [availByUser, rsvpsByDate] = await Promise.all([
     fetchAllAvailabilityDays(db, { fromDateKey: today }),
-    db.execute({
-      sql: "SELECT date_key, user_id, status FROM rsvps WHERE date_key >= ?",
-      args: [today],
-    }),
+    loadFutureRsvps(db, today),
   ]);
 
-  for (const r of parseRows(RsvpRowSchema, rsvpResult.rows, "rsvps")) {
-    if (!wanted.has(r.user_id)) continue;
-    let m = rsvpByUser.get(r.user_id);
-    if (!m) {
-      m = new Map();
-      rsvpByUser.set(r.user_id, m);
-    }
-    m.set(r.date_key, r.status);
-  }
   for (const userId of userIds) {
-    const ref = computeNextNight(futureDates, availByUser.get(userId), rsvpByUser.get(userId));
+    const ref = computeNextNight(
+      futureNights,
+      userId,
+      availByUser.get(userId),
+      rsvpsByDate,
+      viewer,
+    );
     if (ref) out.set(userId, ref.dateKey);
   }
   return out;

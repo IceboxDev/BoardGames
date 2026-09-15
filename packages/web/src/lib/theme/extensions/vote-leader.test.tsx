@@ -51,6 +51,13 @@ function mkLock(overrides: Partial<LockedDate> = {}): LockedDate {
     hostAtHome: true,
     attendance: { definite: 0, tentative: 0 },
     topGameSlug: null,
+    isPrivate: false,
+    title: null,
+    pickMode: "group",
+    seats: null,
+    seatedUserIds: [],
+    waitlistUserIds: [],
+    redacted: false,
     ...overrides,
   };
 }

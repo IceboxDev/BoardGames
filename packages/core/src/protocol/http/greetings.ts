@@ -1,5 +1,7 @@
 import { z } from "zod";
+import { DateKeySchema, TimeOfDaySchema } from "../common.ts";
 import { ArrivalGreetingSchema } from "./arrivals.ts";
+import { NightSeatsSchema, PickModeSchema } from "./calendar.ts";
 import { VOTES_PER_PLAYER } from "./purchase-vote.ts";
 import { GreetingSchema, SkillPlayerRefSchema } from "./skills.ts";
 
@@ -36,9 +38,28 @@ export const PurchaseVoteReminderGreetingSchema = z.object({
 });
 export type PurchaseVoteReminderGreeting = z.infer<typeof PurchaseVoteReminderGreetingSchema>;
 
+/**
+ * "You're invited": the viewer is on a private night's guest list and has not
+ * answered yet. Shown once per (night, viewer) — an RSVP either way, or the
+ * ack, retires it. The host is in the `players` side-car. Outranks the
+ * arrival takeover: a seat is first-come-first-served, so the card is
+ * time-sensitive in a way the celebration is not.
+ */
+export const NightInviteGreetingSchema = z.object({
+  kind: z.literal("night-invite"),
+  date: DateKeySchema,
+  hostUserId: z.string().min(1),
+  title: z.string().nullable(),
+  eventTime: TimeOfDaySchema.nullable(),
+  seats: NightSeatsSchema,
+  pickMode: PickModeSchema,
+});
+export type NightInviteGreeting = z.infer<typeof NightInviteGreetingSchema>;
+
 export const AppGreetingSchema = z.discriminatedUnion("kind", [
   ...GreetingSchema.options,
   PurchaseVoteAnnounceGreetingSchema,
+  NightInviteGreetingSchema,
   PurchaseVoteReminderGreetingSchema,
   ArrivalGreetingSchema,
 ]);
@@ -75,6 +96,11 @@ export const AppGreetingAckBodySchema = z.discriminatedUnion("kind", [
   z.object({
     kind: z.literal("arrival"),
     arrivalId: z.string().min(1),
+    action: GreetingAckActionSchema,
+  }),
+  z.object({
+    kind: z.literal("night-invite"),
+    date: DateKeySchema,
     action: GreetingAckActionSchema,
   }),
 ]);

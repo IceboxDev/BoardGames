@@ -28,6 +28,13 @@ function mkLock(over: Partial<LockedDate>): LockedDate {
     hostAtHome: true,
     attendance: { definite: 5, tentative: 2 },
     topGameSlug: null,
+    isPrivate: false,
+    title: null,
+    pickMode: "group",
+    seats: null,
+    seatedUserIds: [],
+    waitlistUserIds: [],
+    redacted: false,
     ...over,
   };
 }
@@ -44,6 +51,7 @@ const ATTENDEES: Attendee[] = [
     isGuest: false,
     votes: { hype: 1, teach: 1, learn: 0 },
     bringing: [],
+    seat: null,
   },
   {
     userId: "u2",
@@ -55,6 +63,7 @@ const ATTENDEES: Attendee[] = [
     isGuest: false,
     votes: { hype: 1, teach: 0, learn: 1 },
     bringing: [],
+    seat: null,
   },
   {
     userId: "u3",
@@ -66,6 +75,7 @@ const ATTENDEES: Attendee[] = [
     isGuest: false,
     votes: { hype: 1, teach: 0, learn: 0 },
     bringing: [],
+    seat: null,
   },
   {
     userId: "u4",
@@ -77,6 +87,7 @@ const ATTENDEES: Attendee[] = [
     isGuest: false,
     votes: { hype: 0, teach: 0, learn: 0 },
     bringing: [],
+    seat: null,
   },
   {
     userId: "u5",
@@ -88,6 +99,7 @@ const ATTENDEES: Attendee[] = [
     isGuest: false,
     votes: { hype: 0, teach: 0, learn: 0 },
     bringing: [],
+    seat: null,
   },
 ];
 

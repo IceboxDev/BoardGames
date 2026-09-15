@@ -25,6 +25,7 @@ export { Input } from "./Input";
 export { InteractiveCard, type InteractiveCardPadding } from "./InteractiveCard";
 export { Eyebrow, type EyebrowSize, type EyebrowTone, MicroLabel } from "./Label";
 export { LoadingState } from "./LoadingState";
+export { MemberPicker, type MemberPickerMember } from "./MemberPicker";
 export { Modal, ModalBody, type ModalDensity, ModalFooter, type ModalSize } from "./Modal";
 export { Overlay } from "./Overlay";
 export type { PageHeaderAlign, PageHeaderSize } from "./PageHeader";
@@ -47,6 +48,7 @@ export { SelectableCard, type SelectableCardPadding } from "./SelectableCard";
 export { Spinner } from "./Spinner";
 export { Stack, type StackGap } from "./Stack";
 export { StatTile, type StatTileSize, type StatTileTone, type StatTileVariant } from "./StatTile";
+export { Stepper } from "./Stepper";
 export {
   Surface,
   type SurfacePadding,

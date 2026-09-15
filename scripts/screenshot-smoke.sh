@@ -40,6 +40,7 @@ ROUTES=(
   "ui-gallery:/dev/ui"
   "deck-preview:/dev/deck-preview"
   "dnd-preview:/dev/dnd-preview"
+  "private-preview:/dev/private-preview"
   "dnd-tool-preview:/dev/dnd-tool-preview"
   "rsvp-preview:/dev/rsvp-preview"
   "rsvp-preview-phone360:/dev/rsvp-preview?frame=360x644"
@@ -220,6 +221,7 @@ diff_runs() {
 NAV_EXEMPT=(
   "deck-preview"
   "dnd-preview"
+  "private-preview"
   "dnd-tool-preview"
   "rsvp-preview"
   "rsvp-preview-phone360"

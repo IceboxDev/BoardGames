@@ -30,7 +30,25 @@ type Props = {
   onKick?: (userId: string) => void;
   /** While a kick mutation is in flight, the targeted row shows a spinner instead of the X. */
   kickingUserId?: string | null;
+  /**
+   * Private night: the roster is grouped by seat — seated, waiting, invited
+   * without an answer, declined — instead of the confirmed/maybe flat list,
+   * and vote chips only mean something when the group is voting.
+   */
+  seats?: { total: number; taken: number; waitlisted: number } | null;
+  showVotes?: boolean;
 };
+
+const SEAT_GROUPS: readonly {
+  seats: readonly Attendee["seat"][];
+  title: (s: NonNullable<Props["seats"]>) => string;
+  tone: "emerald" | "amber" | "sky" | "neutral";
+}[] = [
+  { seats: ["host", "seated"], title: (s) => `Seated ${s.taken}/${s.total}`, tone: "emerald" },
+  { seats: ["waitlisted"], title: () => "Waitlist", tone: "amber" },
+  { seats: ["invited"], title: () => "Invited — no reply yet", tone: "sky" },
+  { seats: ["declined"], title: () => "Can't make it", tone: "neutral" },
+];
 
 export default function AttendeesView({
   attendees,
@@ -39,6 +57,8 @@ export default function AttendeesView({
   canKick = false,
   onKick,
   kickingUserId = null,
+  seats = null,
+  showVotes = true,
 }: Props) {
   const { user } = useCurrentUser();
   const viewerId = user?.id ?? null;
@@ -82,25 +102,44 @@ export default function AttendeesView({
     );
   }
 
+  const row = (a: Attendee) => (
+    <li key={a.userId}>
+      <AttendeeRow
+        attendee={a}
+        slugToGame={slugToGame}
+        isViewer={a.userId === viewerId}
+        // The host holds seat 1: on a private night they are never kicked.
+        canKick={canKick && a.userId !== viewerId && !(seats && a.isHost)}
+        onKick={onKick}
+        isKicking={kickingUserId === a.userId}
+        showVotes={showVotes}
+      />
+    </li>
+  );
+
   return (
     <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col gap-2 overflow-y-auto px-1 py-2">
-      <Eyebrow tone="sky" className="px-2">
-        Who's coming
-      </Eyebrow>
-      <ul className="flex flex-col gap-2">
-        {attendees.map((a) => (
-          <li key={a.userId}>
-            <AttendeeRow
-              attendee={a}
-              slugToGame={slugToGame}
-              isViewer={a.userId === viewerId}
-              canKick={canKick && a.userId !== viewerId}
-              onKick={onKick}
-              isKicking={kickingUserId === a.userId}
-            />
-          </li>
-        ))}
-      </ul>
+      {seats ? (
+        SEAT_GROUPS.map((group) => {
+          const members = attendees.filter((a) => group.seats.includes(a.seat));
+          if (members.length === 0) return null;
+          return (
+            <div key={group.title(seats)} className="flex flex-col gap-2">
+              <Eyebrow tone={group.tone} className="px-2">
+                {group.title(seats)}
+              </Eyebrow>
+              <ul className="flex flex-col gap-2">{members.map(row)}</ul>
+            </div>
+          );
+        })
+      ) : (
+        <>
+          <Eyebrow tone="sky" className="px-2">
+            Who's coming
+          </Eyebrow>
+          <ul className="flex flex-col gap-2">{attendees.map(row)}</ul>
+        </>
+      )}
       {topSlugs.length > 0 && (
         <CoverageFooter
           covered={topSlugs.length - unowned.length - capLimited.length}
@@ -121,6 +160,7 @@ function AttendeeRow({
   canKick,
   onKick,
   isKicking,
+  showVotes,
 }: {
   attendee: Attendee;
   slugToGame: Map<string, GameDefinition>;
@@ -128,8 +168,12 @@ function AttendeeRow({
   canKick: boolean;
   onKick?: (userId: string) => void;
   isKicking: boolean;
+  showVotes: boolean;
 }) {
   const { confirm, confirmDialog } = useConfirm();
+  // On a private night the seat state replaces the open night's maybe /
+  // hasn't-RSVP'd pills — it already says exactly where the person stands.
+  const onSeatList = attendee.seat !== null;
 
   const handleKick = async () => {
     if (!onKick || isKicking) return;
@@ -168,12 +212,27 @@ function AttendeeRow({
               Guest
             </Badge>
           )}
-          {attendee.status === "tentative" && (
+          {attendee.seat === "waitlisted" && (
+            <Badge tone="amber" shape="pill" size="xs">
+              Waiting
+            </Badge>
+          )}
+          {attendee.seat === "invited" && (
+            <Badge tone="sky" shape="pill" size="xs" ring>
+              No reply yet
+            </Badge>
+          )}
+          {attendee.seat === "declined" && (
+            <Badge tone="neutral" shape="pill" size="xs">
+              Can't make it
+            </Badge>
+          )}
+          {!onSeatList && attendee.status === "tentative" && (
             <Badge tone="neutral" shape="pill" size="xs">
               Maybe
             </Badge>
           )}
-          {!attendee.hasRsvped && !isViewer && (
+          {!onSeatList && !attendee.hasRsvped && !isViewer && (
             // Don't pin the badge on the viewer themselves: they're literally
             // looking at the modal right now, so they obviously opened the
             // card. Server data may take a moment to refresh after the
@@ -190,13 +249,17 @@ function AttendeeRow({
           )}
         </div>
 
-        <div className="flex flex-wrap items-center gap-1.5 text-2xs text-fg-secondary">
-          <VoteChip kind="hype" count={attendee.votes.hype} />
-          <VoteChip kind="teach" count={attendee.votes.teach} />
-          <VoteChip kind="learn" count={attendee.votes.learn} />
-        </div>
+        {showVotes && (
+          <div className="flex flex-wrap items-center gap-1.5 text-2xs text-fg-secondary">
+            <VoteChip kind="hype" count={attendee.votes.hype} />
+            <VoteChip kind="teach" count={attendee.votes.teach} />
+            <VoteChip kind="learn" count={attendee.votes.learn} />
+          </div>
+        )}
 
-        <BringingList attendee={attendee} slugToGame={slugToGame} />
+        {(attendee.seat === null || attendee.seat === "host" || attendee.seat === "seated") && (
+          <BringingList attendee={attendee} slugToGame={slugToGame} />
+        )}
       </div>
 
       {/* Kick button: `sm` box with `xs` padding — the old spelling was

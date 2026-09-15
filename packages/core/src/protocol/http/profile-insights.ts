@@ -70,6 +70,11 @@ export const ProfileNightItemSchema = z.object({
   host: z.object({ userId: z.string().nullable(), name: z.string() }).nullable(),
   address: z.string().nullable(),
   eventTime: z.string().nullable(),
+  /**
+   * Invitation-only night. Host, address and time are null for a viewer who
+   * was not on its guest list. Defaulted for older payloads.
+   */
+  isPrivate: z.boolean().default(false),
   attended: z.boolean(),
   /** How credit was earned; null when not attended. */
   attendedVia: z.enum(["played", "rsvp"]).nullable(),

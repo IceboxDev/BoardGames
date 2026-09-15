@@ -1,6 +1,7 @@
 import type { CalendarLocks } from "../../lib/calendar-locks";
 import type { RsvpStatus } from "../../lib/calendar-rsvps";
 import { isDndNight } from "../../lib/dnd-night";
+import { viewerSeat } from "../../lib/night-access";
 import type {
   AggregateAvailabilityMap,
   Availability,
@@ -9,7 +10,7 @@ import type {
 } from "../../lib/offline-availability";
 import { dateKey } from "../../lib/offline-availability";
 import { build42Days } from "../../lib/offline-week";
-import { DayCell, type Heat } from "./CalendarDayCell";
+import { DayCell, type Heat, type PrivateNightCell } from "./CalendarDayCell";
 
 const DAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
@@ -47,6 +48,12 @@ type Props = {
    */
   awayMode?: boolean;
   onAwayToggle?: (key: string, currentlyAway: boolean) => void;
+  /**
+   * Who is looking — decides the private-night cell's pill ("Invited",
+   * "Seated", …) and which seat pip is theirs. Omit for anonymous surfaces
+   * (previews, admin drawers): private cells then show the tally alone.
+   */
+  viewer?: { id: string | null; isAdmin: boolean };
 };
 
 export default function Calendar({
@@ -66,6 +73,7 @@ export default function Calendar({
   awayDays,
   awayMode = false,
   onAwayToggle,
+  viewer,
 }: Props) {
   const todayKey = dateKey(new Date());
   const cutoffKey = readonlyBefore ? dateKey(readonlyBefore) : null;
@@ -124,6 +132,17 @@ export default function Calendar({
           const picksLocked = !!lock?.picksLockedAt;
           const attendance = lock?.attendance ?? null;
           const dndNight = isDndNight(lock);
+          const privateNight: PrivateNightCell | null =
+            lock?.isPrivate && lock.seats
+              ? {
+                  seats: lock.seats,
+                  viewerSeat: viewer ? viewerSeat(lock, viewer.id, viewer.isAdmin) : null,
+                  viewerSeatIndex:
+                    viewer?.id && lock.seatedUserIds.includes(viewer.id)
+                      ? lock.seatedUserIds.indexOf(viewer.id)
+                      : null,
+                }
+              : null;
           return (
             <DayCell
               key={key}
@@ -144,6 +163,7 @@ export default function Calendar({
               picksLocked={picksLocked}
               attendance={attendance}
               dndNight={dndNight}
+              privateNight={privateNight}
               lockMode={lockMode}
               away={away}
               viewerRsvp={viewerRsvp}

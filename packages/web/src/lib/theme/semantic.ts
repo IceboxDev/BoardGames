@@ -70,13 +70,18 @@ const HEAT: Follow = { hue: 0.12, sat: 0.4, light: 0.25, driftSat: 0.28, driftLi
 // "puke green" this was meant to cure. Depth comes from `driftLight` and the
 // spread collapse instead, which lands it on a dark bronze-gold.
 const SEALED: Follow = { hue: 1, sat: 0.3, light: 0.3, minSpread: 0.2, driftLight: 0.08 };
+// A private night is frosted graphite: near-grey by design, so it stays
+// distinguishable from the (saturated) sealed cell under every accent. It
+// takes only a whisper of the palette's tint so a warm theme doesn't leave
+// one cold grey tile in the grid.
+const PRIVATE: Follow = { hue: 1, sat: 0.08, light: 0.1 };
 
 /**
  * Groups exist for the separation guard below: a group rotates as one unit, so
  * nudging "maybe" away from a yellow accent can't leave its own family split
  * across the color wheel.
  */
-type Group = "ok" | "warn" | "heat" | "sealed";
+type Group = "ok" | "warn" | "heat" | "sealed" | "private";
 
 interface TokenSpec {
   /** Today's value — what Classic must keep rendering, byte for byte. */
@@ -110,6 +115,11 @@ export const SEMANTIC_TOKENS: Record<string, TokenSpec> = {
   "--color-sealed-base": { stock: "#1e1b4b", group: "sealed", follow: SEALED },
   "--color-sealed-mid": { stock: "#4c1d95", group: "sealed", follow: SEALED },
   "--color-sealed-edge": { stock: "#312e81", group: "sealed", follow: SEALED },
+  // Private night — the invitation-only cell's graphite and its platinum ink.
+  "--color-private-base": { stock: "#111827", group: "private", follow: PRIVATE },
+  "--color-private-mid": { stock: "#1f2937", group: "private", follow: PRIVATE },
+  "--color-private-edge": { stock: "#374151", group: "private", follow: PRIVATE },
+  "--color-private-ink": { stock: "#e5e7eb", group: "private", follow: PRIVATE },
 };
 
 export const SEMANTIC_VAR_NAMES = Object.keys(SEMANTIC_TOKENS);
@@ -199,6 +209,7 @@ const GROUP_ANCHOR: Record<Group, string> = {
   warn: "--color-warn",
   heat: "--color-heat",
   sealed: "--color-sealed-base",
+  private: "--color-private-base",
 };
 
 function hslOf(hex: string): Hsl {
@@ -251,7 +262,7 @@ function separationNudge(group: Group, accent: Hsl): number {
 export function deriveSemanticTokens(accentHex: string): Record<string, string> {
   const accent = hslOf(accentHex);
   const nudges = {} as Record<Group, number>;
-  for (const group of ["ok", "warn", "heat", "sealed"] as const) {
+  for (const group of ["ok", "warn", "heat", "sealed", "private"] as const) {
     const band = GROUP_BANDS[group];
     // A banded group's rotation already folds in the separation guard.
     nudges[group] = band ? bandedRotation(group, band, accent) : separationNudge(group, accent);

@@ -34,11 +34,19 @@ export function NextNightCard({ nextNight, firstName, isSelf }: NextNightCardPro
     <div className="rounded-card-2xl border border-accent-400/25 bg-accent-500/[0.07] p-4 sm:p-5">
       <div className="flex items-start justify-between gap-3">
         <div className="min-w-0">
-          <Eyebrow className="text-accent-300">Next game night</Eyebrow>
+          <Eyebrow className="text-accent-300">
+            {nextNight.isPrivate ? "Next private night" : "Next game night"}
+          </Eyebrow>
           <p className="mt-1 text-lg font-bold text-fg-strong">{formatDayKey(nextNight.dateKey)}</p>
         </div>
         <Badge tone={nextNight.status === "definite" ? "emerald" : "amber"} size="sm">
-          {nextNight.status === "definite" ? "Going" : "Maybe"}
+          {nextNight.status === "definite"
+            ? nextNight.isPrivate
+              ? "Seated"
+              : "Going"
+            : nextNight.isPrivate
+              ? "Invited"
+              : "Maybe"}
         </Badge>
       </div>
 
@@ -65,7 +73,7 @@ export function NextNightCard({ nextNight, firstName, isSelf }: NextNightCardPro
           <UsersIcon className="h-3.5 w-3.5 text-fg-muted" />
           <span>
             {nextNight.attendeeCount} {nextNight.attendeeCount === 1 ? "player" : "players"}{" "}
-            expected
+            {nextNight.isPrivate ? "seated" : "expected"}
           </span>
         </div>
       </dl>

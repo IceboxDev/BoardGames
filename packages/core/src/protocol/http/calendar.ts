@@ -12,6 +12,37 @@ export const LockHostSchema = z.object({
 });
 export type LockHost = z.infer<typeof LockHostSchema>;
 
+// ── Private nights ─────────────────────────────────────────────────────
+//
+// A private night is locked FOR a host with a fixed number of seats and a
+// hand-picked invitee list (stored as the lock's expected set). Invitees fill
+// the seats first-come-first-served; the overflow is a waitlist that promotes
+// automatically. Outsiders get a redacted lock (see `LockedDateSchema`).
+
+/** Who decides the games: the host alone, or the seated group voting as usual. */
+export const PickModeSchema = z.enum(["group", "host"]);
+export type PickMode = z.infer<typeof PickModeSchema>;
+
+/** Seat tally of a private night. `total` includes the host's own seat. */
+export const NightSeatsSchema = z.object({
+  total: z.number().int().min(1),
+  taken: z.number().int().min(0),
+  waitlisted: z.number().int().min(0),
+});
+export type NightSeats = z.infer<typeof NightSeatsSchema>;
+
+/** A participant's relationship to a private night's seats. */
+export const SeatStateSchema = z.enum(["host", "seated", "waitlisted", "invited", "declined"]);
+export type SeatState = z.infer<typeof SeatStateSchema>;
+
+/** Hard bounds for a private night's seat count (host included). */
+export const MIN_SEAT_COUNT = 2;
+export const MAX_SEAT_COUNT = 20;
+/** Upper bound for a lock-in / update invitee list. */
+export const MAX_INVITEES = 50;
+/** Max length of a private night's optional title. */
+export const MAX_NIGHT_TITLE = 80;
+
 // `lockedAt` and `picksLockedAt` are server-side SQLite datetime strings
 // ("YYYY-MM-DD HH:MM:SS") — NOT branded as IsoTimestamp because the
 // optimistic client builder uses `new Date().toISOString()` and the formats
@@ -48,6 +79,28 @@ export const LockedDateSchema = z.object({
    * Defaults to null so older cached lock payloads parse cleanly.
    */
   topGameSlug: z.string().nullable().default(null),
+  /**
+   * Private night: invitation-only, seat-capped, host-curated. Every field
+   * below is defaulted so lock payloads from before private nights parse.
+   */
+  isPrivate: z.boolean().default(false),
+  /** Optional label the host gives the night ("TI4 marathon"). Participants only. */
+  title: z.string().nullable().default(null),
+  pickMode: PickModeSchema.default("group"),
+  /** Seat tally — null on open nights. Visible to outsiders too. */
+  seats: NightSeatsSchema.nullable().default(null),
+  /** Seated participants, host first, in seating order. Participants only. */
+  seatedUserIds: z.array(z.string()).default([]),
+  /** Overflow "yes" RSVPs in queue order. Participants only. */
+  waitlistUserIds: z.array(z.string()).default([]),
+  /**
+   * True when the server stripped this lock for a viewer who is neither
+   * invited nor admin: `rsvps`, `expectedUserIds`, `seatedUserIds`,
+   * `waitlistUserIds` are empty, `title`/`eventTime`/`address`/`topGameSlug`
+   * are null, and only the host + seat tally remain. The client renders the
+   * peek panel instead of the RSVP modal.
+   */
+  redacted: z.boolean().default(false),
 });
 export type LockedDate = z.infer<typeof LockedDateSchema>;
 
@@ -68,10 +121,11 @@ export type CalendarLocks = z.infer<typeof CalendarLocksSchema>;
 // ── Request bodies ─────────────────────────────────────────────────────
 
 /**
- * Wire body for `POST /api/admin/calendar/lock`. Includes the date.
+ * Fields shared by the wire body and the modal form. Kept as a plain shape so
+ * both schemas can carry the same `superRefine` — refinements do not survive
+ * `.omit()`, which is how the form schema used to be derived.
  */
-export const LockInRequestBodySchema = z.object({
-  date: DateKeySchema,
+const lockInFields = {
   hostUserId: z.string().nullable().optional(),
   hostName: z.string().nullable().optional(),
   eventTime: TimeOfDaySchema.nullable().optional(),
@@ -83,7 +137,41 @@ export const LockInRequestBodySchema = z.object({
    * locked before this flag existed.
    */
   hostAtHome: z.boolean().nullable().optional(),
-});
+  /**
+   * Private night. Requires a host and a seat count; `inviteeIds` is the
+   * guest list (the host is added implicitly). On an edit, an omitted
+   * `inviteeIds` keeps the current list and a present one replaces it.
+   */
+  isPrivate: z.boolean().optional(),
+  seatCount: z.number().int().min(MIN_SEAT_COUNT).max(MAX_SEAT_COUNT).nullable().optional(),
+  inviteeIds: z.array(z.string().min(1)).max(MAX_INVITEES).optional(),
+  pickMode: PickModeSchema.optional(),
+  title: z.string().trim().max(MAX_NIGHT_TITLE).nullable().optional(),
+};
+
+function refinePrivateLockIn(
+  val: { isPrivate?: boolean; hostUserId?: string | null; seatCount?: number | null },
+  ctx: z.RefinementCtx,
+): void {
+  if (!val.isPrivate) return;
+  if (!val.hostUserId) {
+    ctx.addIssue({ code: "custom", path: ["hostUserId"], message: "A private night needs a host" });
+  }
+  if (val.seatCount === null || val.seatCount === undefined) {
+    ctx.addIssue({
+      code: "custom",
+      path: ["seatCount"],
+      message: "A private night needs a seat count",
+    });
+  }
+}
+
+/**
+ * Wire body for `POST /api/admin/calendar/lock`. Includes the date.
+ */
+export const LockInRequestBodySchema = z
+  .object({ date: DateKeySchema, ...lockInFields })
+  .superRefine(refinePrivateLockIn);
 export type LockInRequestBody = z.input<typeof LockInRequestBodySchema>;
 
 /**
@@ -92,8 +180,23 @@ export type LockInRequestBody = z.input<typeof LockInRequestBodySchema>;
  * `z.input` shape so React form callers can pass raw strings for branded
  * fields (the schema brands them on the way to the wire).
  */
-export const LockInFormSchema = LockInRequestBodySchema.omit({ date: true });
+export const LockInFormSchema = z.object(lockInFields).superRefine(refinePrivateLockIn);
 export type LockInForm = z.input<typeof LockInFormSchema>;
+
+/**
+ * `POST /api/calendar/private-night` — host or admin adjusts a private night
+ * after lock-in. Every field is optional; the server applies what is present
+ * in one batch. Removing an invitee also drops their RSVP and votes.
+ */
+export const PrivateNightUpdateBodySchema = z.object({
+  date: DateKeySchema,
+  seatCount: z.number().int().min(MIN_SEAT_COUNT).max(MAX_SEAT_COUNT).optional(),
+  pickMode: PickModeSchema.optional(),
+  title: z.string().trim().max(MAX_NIGHT_TITLE).nullable().optional(),
+  addInviteeIds: z.array(z.string().min(1)).max(MAX_INVITEES).optional(),
+  removeInviteeIds: z.array(z.string().min(1)).max(MAX_INVITEES).optional(),
+});
+export type PrivateNightUpdateBody = z.input<typeof PrivateNightUpdateBodySchema>;
 
 export const UnlockBodySchema = z.object({ date: DateKeySchema });
 export type UnlockBody = z.infer<typeof UnlockBodySchema>;
@@ -207,6 +310,11 @@ export const AttendeeSchema = z.object({
    * (no per-user limit). Non-host: at most 3 from the top-5 set.
    */
   bringing: z.array(z.string()),
+  /**
+   * Private nights only: where this person stands on the seat list. Null on
+   * open nights (and on payloads from before private nights existed).
+   */
+  seat: SeatStateSchema.nullable().default(null),
 });
 export type Attendee = z.infer<typeof AttendeeSchema>;
 
@@ -232,6 +340,26 @@ export const AvailableGamesSchema = z.object({
   attendees: z.array(AttendeeSchema),
   /** Mirror of the lock's picks_locked_at — present here for the modal too. */
   picksLockedAt: z.string().nullable().optional(),
+  /** Private-night mirror of the lock — defaulted for pre-feature payloads. */
+  isPrivate: z.boolean().default(false),
+  pickMode: PickModeSchema.default("group"),
+  seatCount: z.number().int().min(1).nullable().default(null),
+  /**
+   * The headcount window games must cover. Open nights: [definite,
+   * definite + tentative] — derivable from the counts above, so null. Private
+   * nights: [seatCount, seatCount] — the host plans for the table they set,
+   * not for whoever has answered so far.
+   */
+  playerWindow: z
+    .object({ lo: z.number().int().min(0), hi: z.number().int().min(0) })
+    .nullable()
+    .default(null),
+  /**
+   * Whether the viewer's reactions count on this night: everyone on an open
+   * night, the host alone in host-pick mode, seated players in group mode.
+   * Admins always can. Defaulted true for pre-feature payloads.
+   */
+  viewerCanReact: z.boolean().default(true),
 });
 export type AvailableGames = z.infer<typeof AvailableGamesSchema>;
 
@@ -281,10 +409,28 @@ export function mkOptimisticLock(
     form.hostAtHome === true || form.hostAtHome === false
       ? form.hostAtHome
       : (existing?.hostAtHome ?? true);
+  // Private night: the form's flag wins, then the existing row. The guest
+  // list is host + invitees when the form carries one, else whatever the
+  // row already had; the host holds seat 1 from the first paint.
+  const isPrivate = form.isPrivate ?? existing?.isPrivate ?? false;
+  const hostUserId = form.hostUserId ?? null;
+  const expectedUserIds =
+    isPrivate && form.inviteeIds
+      ? [...new Set([...(hostUserId ? [hostUserId] : []), ...form.inviteeIds])]
+      : (existing?.expectedUserIds ?? []);
+  const seatTotal = isPrivate ? (form.seatCount ?? existing?.seats?.total ?? MIN_SEAT_COUNT) : null;
+  const seatedUserIds = isPrivate
+    ? (existing?.seatedUserIds ?? (hostUserId ? [hostUserId] : []))
+    : [];
+  const waitlistUserIds = isPrivate ? (existing?.waitlistUserIds ?? []) : [];
+  const seats =
+    seatTotal === null
+      ? null
+      : { total: seatTotal, taken: seatedUserIds.length, waitlisted: waitlistUserIds.length };
   return {
     lockedBy: existing?.lockedBy ?? fallbackLockedBy,
     lockedAt: new Date().toISOString(),
-    expectedUserIds: existing?.expectedUserIds ?? [],
+    expectedUserIds,
     rsvps: existing?.rsvps ?? {},
     host: form.hostUserId ? { userId: form.hostUserId, name: form.hostName ?? "" } : null,
     eventTime: eventTime ? TimeOfDaySchema.parse(eventTime) : null,
@@ -295,5 +441,13 @@ export function mkOptimisticLock(
     // Locking a date doesn't change the vote winner — carry the existing
     // value (a fresh lock has none yet; the server recomputes on next read).
     topGameSlug: existing?.topGameSlug ?? null,
+    isPrivate,
+    title: isPrivate ? (form.title ?? existing?.title ?? null) : null,
+    pickMode: form.pickMode ?? existing?.pickMode ?? "group",
+    seats,
+    seatedUserIds,
+    waitlistUserIds,
+    // The admin locking the night is never an outsider to it.
+    redacted: false,
   };
 }

@@ -11,6 +11,7 @@ import { getDb } from "../db.ts";
 import { logActivity } from "../lib/activity-log.ts";
 import { jsonColumn, parseRow, parseRows, RowParseError } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
+import { deriveNightParticipants, loadNightLock } from "../lib/night-participants.ts";
 
 // ── EXIT night narrowing vote ─────────────────────────────────────────
 //
@@ -21,11 +22,6 @@ import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 export const calendarExitRoutes = authedApp();
 
 // ── Row projections ───────────────────────────────────────────────────
-
-/** `SELECT expected_user_ids_json FROM locked_dates WHERE date_key = ?`. */
-const ExpectedUserIdsRowSchema = z.object({
-  expected_user_ids_json: jsonColumn(z.array(z.string())),
-});
 
 /** `SELECT user_id, game_slugs_json FROM user_inventory WHERE user_id IN (...)`. */
 const InventoryRowSchema = z.object({
@@ -39,10 +35,11 @@ const ExitVoteRowSchema = z.object({
   exit_slug: z.string(),
 });
 
-/** `SELECT user_id, status FROM rsvps WHERE date_key = ?`. */
+/** `SELECT user_id, status, rsvped_at FROM rsvps WHERE date_key = ?`. */
 const RsvpForDateRowSchema = z.object({
   user_id: z.string(),
   status: z.enum(["yes", "no"]),
+  rsvped_at: z.string(),
 });
 
 /** `SELECT user_id FROM user_availability_days WHERE date_key = ? AND status = 'can'`. */
@@ -51,29 +48,24 @@ const AvailabilityCanRowSchema = z.object({ user_id: z.string() });
 // ── Routes ────────────────────────────────────────────────────────────
 
 calendarExitRoutes.get("/exit", zQuery(ExitNightQuerySchema), async (c) => {
+  const user = c.get("user");
   const { date } = c.req.valid("query");
 
-  const lockedRow = await getDb().execute({
-    sql: "SELECT expected_user_ids_json FROM locked_dates WHERE date_key = ? AND unlocked_at IS NULL LIMIT 1",
-    args: [date],
-  });
-  if (lockedRow.rows.length === 0) {
+  const lock = await loadNightLock(getDb(), date);
+  if (!lock) {
     return errorResponse(c, 400, "date is not locked");
   }
-  const { expected_user_ids_json: expectedIds } = parseRow(
-    ExpectedUserIdsRowSchema,
-    lockedRow.rows[0],
-    "locked_dates",
-  );
+  const expectedIds = lock.expectedUserIds;
 
   // Whose shelves count: the same population whose inventories made "exit"
   // win the night, i.e. the definite attendees (availability `can` ∪ RSVP yes,
   // minus RSVP no — mirrors GET /locks), unioned with the sealed guest-list
   // snapshot. Anything narrower can show "nobody owns a box" for a night the
-  // winner computation decided was playable.
+  // winner computation decided was playable. A private night narrows to its
+  // seated players — the only shelves that will be in the room.
   const [rsvpsResult, cansResult] = await Promise.all([
     getDb().execute({
-      sql: "SELECT user_id, status FROM rsvps WHERE date_key = ?",
+      sql: "SELECT user_id, status, rsvped_at FROM rsvps WHERE date_key = ?",
       args: [date],
     }),
     getDb().execute({
@@ -81,16 +73,27 @@ calendarExitRoutes.get("/exit", zQuery(ExitNightQuerySchema), async (c) => {
       args: [date],
     }),
   ]);
+  const rsvpRows = parseRows(RsvpForDateRowSchema, rsvpsResult.rows, "rsvps");
+  const participants = deriveNightParticipants(lock, rsvpRows, []);
+  if (!participants.canView(user.id, user.role === "admin")) {
+    return errorResponse(c, 403, "this night is invitation only", "PRIVATE_NIGHT");
+  }
   const rsvpNo = new Set<string>();
-  const attendeeIds = new Set<string>(expectedIds);
-  for (const r of parseRows(RsvpForDateRowSchema, rsvpsResult.rows, "rsvps")) {
-    if (r.status === "yes") attendeeIds.add(r.user_id);
-    else rsvpNo.add(r.user_id);
+  const attendeeIds = new Set<string>(lock.isPrivate ? participants.seated : expectedIds);
+  if (!lock.isPrivate) {
+    for (const r of rsvpRows) {
+      if (r.status === "yes") attendeeIds.add(r.user_id);
+      else rsvpNo.add(r.user_id);
+    }
+    for (const r of parseRows(
+      AvailabilityCanRowSchema,
+      cansResult.rows,
+      "user_availability_days",
+    )) {
+      attendeeIds.add(r.user_id);
+    }
+    for (const id of rsvpNo) attendeeIds.delete(id);
   }
-  for (const r of parseRows(AvailabilityCanRowSchema, cansResult.rows, "user_availability_days")) {
-    attendeeIds.add(r.user_id);
-  }
-  for (const id of rsvpNo) attendeeIds.delete(id);
 
   // Box slug → attendees who own it.
   const owners: Record<string, string[]> = {};
@@ -127,6 +130,9 @@ calendarExitRoutes.get("/exit", zQuery(ExitNightQuerySchema), async (c) => {
   });
   const votes: Record<string, string[]> = {};
   for (const row of parseRows(ExitVoteRowSchema, votesResult.rows, "exit_game_votes")) {
+    // On a private night only the lineup's voters have a say (the host alone
+    // in host-pick mode, the seated players otherwise).
+    if (lock.isPrivate && !participants.voters.has(row.user_id)) continue;
     const list = votes[row.exit_slug] ?? [];
     list.push(row.user_id);
     votes[row.exit_slug] = list;
@@ -139,12 +145,23 @@ calendarExitRoutes.post("/exit/vote", zJsonBody(ExitVoteBodySchema), async (c) =
   const user = c.get("user");
   const { date, slug, on } = c.req.valid("json");
 
-  const lockedRow = await getDb().execute({
-    sql: "SELECT 1 FROM locked_dates WHERE date_key = ? AND unlocked_at IS NULL LIMIT 1",
-    args: [date],
-  });
-  if (lockedRow.rows.length === 0) {
+  const lock = await loadNightLock(getDb(), date);
+  if (!lock) {
     return errorResponse(c, 400, "date is not locked");
+  }
+  if (lock.isPrivate) {
+    const { rows } = await getDb().execute({
+      sql: "SELECT user_id, status, rsvped_at FROM rsvps WHERE date_key = ?",
+      args: [date],
+    });
+    const participants = deriveNightParticipants(
+      lock,
+      parseRows(RsvpForDateRowSchema, rows, "rsvps"),
+      [],
+    );
+    if (!participants.canReact(user.id, user.role === "admin")) {
+      return errorResponse(c, 403, "only the night's pickers vote on the box", "CANNOT_REACT");
+    }
   }
 
   if (on) {

@@ -23,6 +23,7 @@ import {
   Input,
   InteractiveCard,
   LoadingState,
+  MemberPicker,
   MicroLabel,
   Modal,
   ModalBody,
@@ -41,6 +42,7 @@ import {
   Spinner,
   Stack,
   StatTile,
+  Stepper,
   Surface,
   Textarea,
   type Tone,
@@ -134,6 +136,8 @@ export default function UiGalleryPage() {
   const [checked, setChecked] = useState(true);
   const [search, setSearch] = useState("");
   const [rowChecked, setRowChecked] = useState(true);
+  const [seatCount, setSeatCount] = useState(5);
+  const [pickedMembers, setPickedMembers] = useState<ReadonlySet<string>>(new Set(["m2"]));
   const [rowPicked, setRowPicked] = useState(false);
   const [dialog, setDialog] = useState<
     "modal" | "modal-compact" | "drawer" | "sheet" | "overlay" | null
@@ -511,6 +515,45 @@ export default function UiGalleryPage() {
                 title="EXIT: The Abandoned Cabin"
                 description="2016"
               />
+            </div>
+          </Section>
+
+          <Section title="Stepper / MemberPicker">
+            <div className="grid max-w-2xl gap-4 sm:grid-cols-2">
+              <Swatch label="Stepper (sm) — bounded 2..8">
+                <Stepper
+                  size="sm"
+                  label="Seats"
+                  value={seatCount}
+                  min={2}
+                  max={8}
+                  onChange={setSeatCount}
+                  caption={`${seatCount} seats, host included`}
+                />
+              </Swatch>
+              <Swatch label="MemberPicker — suggested first, host locked">
+                <MemberPicker
+                  members={[
+                    { id: "m1", name: "Mara" },
+                    { id: "m2", name: "Borin" },
+                    { id: "m3", name: "Sylvi" },
+                    { id: "m4", name: "Tomasz" },
+                  ]}
+                  selectedIds={pickedMembers}
+                  onToggle={(id) =>
+                    setPickedMembers((prev) => {
+                      const next = new Set(prev);
+                      if (next.has(id)) next.delete(id);
+                      else next.add(id);
+                      return next;
+                    })
+                  }
+                  suggestedIds={new Set(["m3"])}
+                  suggestionHint="Free that day"
+                  lockedIds={new Set(["m1"])}
+                  selectedNoun="invited"
+                />
+              </Swatch>
             </div>
           </Section>
 

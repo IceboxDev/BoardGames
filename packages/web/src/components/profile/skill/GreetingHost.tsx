@@ -25,6 +25,7 @@ import { fetchPlayerSkill, fetchSkillLeaderboards } from "../../../lib/skills.ts
 import { ArrivalTakeoverView } from "../../arrivals/ArrivalTakeoverView.tsx";
 import { ctaDestination } from "../../arrivals/arrival-copy.ts";
 import { toArrivalCards } from "../../arrivals/arrival-view-model.ts";
+import { NightInviteCard } from "../../offline/NightInviteCard.tsx";
 import {
   PurchaseVoteAnnounceModal,
   PurchaseVoteReminderModal,
@@ -151,6 +152,20 @@ export default function GreetingHost({ userId }: { userId: string }) {
         viewerId={userId}
         onDismiss={close("later")}
         onCta={close("cta", () => navigate(ctaDestination(cards, userId)))}
+      />
+    );
+  }
+
+  if (greeting.kind === "night-invite") {
+    const date = greeting.date;
+    return (
+      <NightInviteCard
+        greeting={greeting}
+        host={greetingQuery.data?.players[greeting.hostUserId]}
+        onDismiss={close("later")}
+        // The calendar opens the night's card itself from the `date` param
+        // (and lands a since-uninvited viewer on the peek instead).
+        onCta={close("cta", () => navigate(`/offline?date=${date}`))}
       />
     );
   }

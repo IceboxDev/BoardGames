@@ -424,6 +424,8 @@ function greetingLabel(kind: string | undefined): string {
       return "the purchase-vote results";
     case "arrival":
       return "the arrivals announcement";
+    case "night-invite":
+      return "a private-night invitation";
     default:
       return "a greeting";
   }
@@ -500,10 +502,28 @@ function describeEntry(entry: ActivityEntry, nameById: Map<string, string>): str
         : `Locked game picks${forDay ? ` for ${forDay}` : ""}`;
     case "night-locked": {
       const host = str(meta.hostName);
-      return `Locked game night${forDay ? ` ${forDay}` : ""}${host ? ` (host: ${host})` : ""}`;
+      const seats = num(meta.seatCount);
+      const kind =
+        meta.private === true ? `private night${seats ? ` (${seats} seats)` : ""}` : "game night";
+      return `Locked ${kind}${forDay ? ` ${forDay}` : ""}${host ? ` (host: ${host})` : ""}`;
     }
     case "night-unlocked":
       return `Unlocked game night${forDay ? ` ${forDay}` : ""}`;
+    case "night-invited":
+    case "night-uninvited": {
+      const ids = Array.isArray(meta.userIds)
+        ? meta.userIds.filter((v): v is string => typeof v === "string")
+        : [];
+      const names = ids.map((id) => nameById.get(id) ?? "a member").join(", ") || "a member";
+      const verb = type === "night-invited" ? "Invited" : "Uninvited";
+      return `${verb} ${names} ${type === "night-invited" ? "to" : "from"} ${forDay ?? "a private night"}`;
+    }
+    case "night-seats":
+      return `Set the seats to ${num(meta.seatCount) ?? "?"}${forDay ? ` for ${forDay}` : ""}`;
+    case "night-pick-mode":
+      return str(meta.pickMode) === "host"
+        ? `Switched ${forDay ?? "a private night"} to host picks`
+        : `Switched ${forDay ?? "a private night"} to group voting`;
     case "match-recorded": {
       const title = str(meta.gameTitle) ?? "a match";
       return `Recorded ${title}${forDay ? ` for ${forDay}` : ""}`;
@@ -667,6 +687,8 @@ function describePageView(meta: Record<string, unknown>, nameById: Map<string, s
       return "Was shown the purchase-vote results";
     case "arrival":
       return "Was shown the arrivals announcement";
+    case "night-invite":
+      return "Was invited to a private night";
     case "profile-purchases":
       return `Viewed ${owner} purchases page`;
     case "skill-board": {
@@ -713,6 +735,10 @@ function dotClass(type: string): string {
     case "night-locked":
     case "night-unlocked":
     case "picks-locked":
+    case "night-invited":
+    case "night-uninvited":
+    case "night-seats":
+    case "night-pick-mode":
       return "bg-rose-400/70";
     case "match-recorded":
     case "match-deleted":

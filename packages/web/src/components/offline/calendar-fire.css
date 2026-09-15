@@ -241,3 +241,57 @@
       inset 0 0 26px -10px rgba(0, 0, 0, 0.7);
   }
 }
+
+/* Private night — frosted glass over graphite. The diagonal hatch is what
+   says "you can't see in": a low-alpha stripe field on the platinum ink,
+   over the graphite gradient the cell paints beneath it. Static on purpose;
+   the seal shimmer above it is the only motion. */
+.private-night-hatch {
+  background-image: repeating-linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-private-ink) 7%, transparent) 0 2px,
+    transparent 2px 9px
+  );
+}
+
+/* The cell's rim: a platinum hairline with a soft inner frost. */
+.private-night-cell {
+  border-color: color-mix(in srgb, var(--color-private-ink) 32%, transparent);
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--color-private-ink) 10%, transparent),
+    0 0 20px -8px color-mix(in srgb, var(--color-private-ink) 35%, transparent),
+    inset 0 0 22px -10px rgba(0, 0, 0, 0.7);
+}
+.private-night-cell:hover {
+  border-color: color-mix(in srgb, var(--color-private-ink) 55%, transparent);
+}
+
+/* An invitation that still wants an answer: a slow platinum breath on the
+   rim. Reduced motion keeps the brighter of the two rims instead. */
+@keyframes private-invite-breathe {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--color-private-ink) 10%, transparent),
+      0 0 20px -8px color-mix(in srgb, var(--color-private-ink) 35%, transparent),
+      inset 0 0 22px -10px rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--color-accent-400) 55%, transparent),
+      0 0 26px -4px color-mix(in srgb, var(--color-accent-400) 60%, transparent),
+      inset 0 0 22px -10px rgba(0, 0, 0, 0.7);
+  }
+}
+.private-night-cell-invited {
+  animation: private-invite-breathe 3.2s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .private-night-cell-invited {
+    animation: none;
+    box-shadow:
+      0 0 0 1px color-mix(in srgb, var(--color-accent-400) 55%, transparent),
+      0 0 26px -4px color-mix(in srgb, var(--color-accent-400) 50%, transparent),
+      inset 0 0 22px -10px rgba(0, 0, 0, 0.7);
+  }
+}

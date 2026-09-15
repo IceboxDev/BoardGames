@@ -8,6 +8,7 @@ const CTA_DESTINATION: Record<string, { pages: readonly string[]; label: string 
   "purchase-vote-reminder": { pages: ["purchase-vote"], label: "the vote screen" },
   arrival: { pages: ["profile-collection", "games"], label: "the collection" },
   spotlight: { pages: ["profile-skill"], label: "their skill page" },
+  "night-invite": { pages: ["calendar", "night"], label: "the night" },
 };
 
 /** Where a greeting's button leads, in words; undefined for kinds without a destination. */

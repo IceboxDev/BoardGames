@@ -25,7 +25,7 @@ import type { Client } from "@libsql/client";
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
-import { parseRows } from "../lib/db-rows.ts";
+import { jsonColumn, parseRows } from "../lib/db-rows.ts";
 import { errorResponse } from "../lib/error-response.ts";
 import { userMatchesQuery } from "../lib/match-participants.ts";
 import { groupMatchUnits, unitResult } from "../lib/match-units.ts";
@@ -51,6 +51,8 @@ const PastNightRowSchema = z.object({
   host_name: z.string().nullable(),
   event_time: z.string().nullable(),
   address: z.string().nullable(),
+  private: z.union([z.number(), z.boolean()]),
+  expected_user_ids_json: jsonColumn(z.array(z.string())),
 });
 
 /** `SELECT date_key, status, auto FROM rsvps WHERE user_id = ?`. */
@@ -168,16 +170,23 @@ profileInsightsRoutes.get("/:userId/match-summary", async (c) => {
 
 profileInsightsRoutes.get("/:userId/nights", async (c) => {
   const userId = c.req.param("userId");
+  const viewer = c.get("user");
+  const viewerIsAdmin = viewer.role === "admin";
   const db = getDb();
   const today = todayDateKey();
 
   const [exists, nightsResult, rsvpResult, totalsResult, playedResult] = await Promise.all([
     userExists(db, userId),
+    // A private night this member was never invited to is not part of their
+    // record at all — it would only pad the denominator.
     db.execute({
-      sql: `SELECT date_key, host_user_id, host_name, event_time, address
+      sql: `SELECT date_key, host_user_id, host_name, event_time, address, private,
+                   expected_user_ids_json
               FROM locked_dates WHERE date_key < ? AND unlocked_at IS NULL
+               AND (private = 0 OR host_user_id = ?
+                    OR EXISTS (SELECT 1 FROM json_each(expected_user_ids_json) WHERE value = ?))
              ORDER BY date_key DESC`,
-      args: [today],
+      args: [today, userId, userId],
     }),
     db.execute({
       sql: "SELECT date_key, status, auto FROM rsvps WHERE user_id = ?",
@@ -236,11 +245,18 @@ profileInsightsRoutes.get("/:userId/nights", async (c) => {
     const via = attribution.get(n.date_key) ?? null;
     const rsvp = rsvpByNight.get(n.date_key);
     const hostName = n.host_name ?? (n.host_user_id ? hostInfo.get(n.host_user_id)?.name : null);
+    const isPrivate = n.private === true || n.private === 1;
+    // A private night's where/when/who stays with its guest list: a viewer
+    // who wasn't on it sees only that the member was at a private night.
+    const viewerWasThere =
+      viewerIsAdmin || viewer.id === n.host_user_id || n.expected_user_ids_json.includes(viewer.id);
+    const hidden = isPrivate && !viewerWasThere;
     return {
       dateKey: n.date_key,
-      host: hostName ? { userId: n.host_user_id, name: hostName } : null,
-      address: n.address,
-      eventTime: n.event_time,
+      host: hostName && !hidden ? { userId: n.host_user_id, name: hostName } : null,
+      address: hidden ? null : n.address,
+      eventTime: hidden ? null : n.event_time,
+      isPrivate,
       attended: via !== null,
       attendedVia: via,
       rsvp: rsvp?.status ?? null,

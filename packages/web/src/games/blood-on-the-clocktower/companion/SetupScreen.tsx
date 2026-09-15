@@ -182,7 +182,10 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
     queryKey: qk.calendarLocks(),
     queryFn: ({ signal }) => fetchCalendarLocks(signal),
   });
-  const nightTonight = Boolean(locksQuery.data?.[todayKey]);
+  // A private night the Storyteller isn't on arrives redacted — its roster
+  // is not ours to pull.
+  const tonight = locksQuery.data?.[todayKey];
+  const nightTonight = Boolean(tonight) && !tonight?.redacted;
   const gamesQuery = useQuery({
     queryKey: qk.availableGames(todayKey),
     queryFn: ({ signal }) => fetchAvailableGames(todayKey, signal),

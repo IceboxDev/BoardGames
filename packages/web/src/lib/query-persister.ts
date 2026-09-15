@@ -15,7 +15,11 @@ import { createSyncStoragePersister } from "@tanstack/query-sync-storage-persist
 // v7: profiles and AvailableGames gained `newSlugs` (the per-member New
 //     frame replaced the catalog flag) — defaulted, but a rehydrated pre-v7
 //     snapshot would show no frames until refetch.
-const BUSTER = "v7";
+// v8: private nights — LockedDate gained `seats`/`seatedUserIds`/`redacted`
+//     (and friends), AvailableGames `playerWindow`/`viewerCanReact`, profile
+//     `nextNight.isPrivate`; a rehydrated pre-v8 lock has no `seats` object
+//     for the cell to read.
+const BUSTER = "v8";
 
 export const queryPersister =
   typeof window === "undefined"

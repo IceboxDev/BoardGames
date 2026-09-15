@@ -208,6 +208,8 @@ export const NextNightSchema = z
     hostName: z.string().nullable(),
     status: z.enum(["definite", "tentative"]),
     attendeeCount: z.number().int().nonnegative(),
+    /** Private (invitation-only) night — the card badges it. Defaulted for older payloads. */
+    isPrivate: z.boolean().default(false),
   })
   .nullable();
 export type NextNight = z.infer<typeof NextNightSchema>;
