@@ -177,14 +177,16 @@ function RankedRow({ game, aggregate, date, rank, mode, disabled, bringer }: Row
 
       <div className="ml-auto flex shrink-0 items-center gap-2">
         {bringer && (
+          // Label BEFORE the face: the two labels differ in width, so the
+          // avatar sits against the toggle and every row's face lines up.
           <span
             className="inline-flex items-center gap-1.5 text-3xs text-fg-secondary"
             title={`${bringer.name} brings it`}
           >
-            <Avatar name={bringer.name} image={bringer.image ?? null} size="xs" />
             <span className="hidden sm:inline">
               {bringer.isHost ? "at the host's" : "brings it"}
             </span>
+            <Avatar name={bringer.name} image={bringer.image ?? null} size="xs" />
           </span>
         )}
         <GameReactions
