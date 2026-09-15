@@ -34,6 +34,19 @@ type Props = {
   onLockedClick?: (key: string) => void;
   /** Map of date → current viewer's RSVP status, for the locked-cell pill. */
   viewerRsvpByDate?: Record<string, RsvpStatus | undefined>;
+  /**
+   * Admin "away" notes for the calendar's owner — days they are known to be
+   * unavailable on. Painted only where the owner has no mark of their own
+   * (their mark wins). Admin surfaces only.
+   */
+  awayDays?: ReadonlySet<string>;
+  /**
+   * When true, a future unmarked cell routes its click to `onAwayToggle`
+   * instead of cycling availability; marked cells are not clickable.
+   * Admin-only (the per-member drawer).
+   */
+  awayMode?: boolean;
+  onAwayToggle?: (key: string, currentlyAway: boolean) => void;
 };
 
 export default function Calendar({
@@ -50,6 +63,9 @@ export default function Calendar({
   onLockToggle,
   onLockedClick,
   viewerRsvpByDate,
+  awayDays,
+  awayMode = false,
+  onAwayToggle,
 }: Props) {
   const todayKey = dateKey(new Date());
   const cutoffKey = readonlyBefore ? dateKey(readonlyBefore) : null;
@@ -89,14 +105,21 @@ export default function Calendar({
           const heat = deriveHeat(dayCounts);
           const lock = locks?.[key];
           const lockedAndClickable = !!lock && !isPast && !!onLockedClick;
-          const cellInteractive = lockMode
-            ? !isPast
-            : !isPast && (lock ? lockedAndClickable : interactive);
-          const handleClick = lockMode
-            ? () => onLockToggle?.(key, !!lock)
-            : lock
-              ? () => onLockedClick?.(key)
-              : () => onChange?.(key, cycle(value));
+          // An away note only shows (and only toggles) where the owner has no
+          // mark: their own can/maybe always wins over the admin's reminder.
+          const away = value === undefined && !!awayDays?.has(key);
+          const cellInteractive = awayMode
+            ? !isPast && value === undefined
+            : lockMode
+              ? !isPast
+              : !isPast && (lock ? lockedAndClickable : interactive);
+          const handleClick = awayMode
+            ? () => onAwayToggle?.(key, away)
+            : lockMode
+              ? () => onLockToggle?.(key, !!lock)
+              : lock
+                ? () => onLockedClick?.(key)
+                : () => onChange?.(key, cycle(value));
           const viewerRsvp = lock ? viewerRsvpByDate?.[key] : undefined;
           const picksLocked = !!lock?.picksLockedAt;
           const attendance = lock?.attendance ?? null;
@@ -122,6 +145,7 @@ export default function Calendar({
               attendance={attendance}
               dndNight={dndNight}
               lockMode={lockMode}
+              away={away}
               viewerRsvp={viewerRsvp}
               cellSeed={i}
               onClick={handleClick}

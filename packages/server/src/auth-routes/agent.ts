@@ -15,6 +15,7 @@ import {
   fetchAllRsvpNoByUser,
   fetchAllRsvpYesByUser,
 } from "../lib/availability-merge.ts";
+import { fetchAwayDaysByUser } from "../lib/away-days.ts";
 import { parseRows } from "../lib/db-rows.ts";
 
 // Read-only, agent-authenticated endpoints (see auth/agent-auth.ts for the
@@ -51,7 +52,7 @@ const dateKeyUtc = (d: Date) => d.toISOString().slice(0, 10);
  */
 agentRoutes.get("/admin/inactivity", async (c) => {
   const db = getDb();
-  const [availabilityByUser, rsvpYesByUser, rsvpNoByUser, usersRes, lastAttendedRes] =
+  const [availabilityByUser, rsvpYesByUser, rsvpNoByUser, usersRes, lastAttendedRes, awayByUser] =
     await Promise.all([
       fetchAllAvailabilityDays(db),
       fetchAllRsvpYesByUser(db),
@@ -69,6 +70,10 @@ agentRoutes.get("/admin/inactivity", async (c) => {
          WHERE mr.date_key IS NOT NULL
          GROUP BY mp.user_id`,
       ),
+      // Admin "away" notes shrink the coverage denominator exactly as on the
+      // admin page (lib/away-days.ts) — a noted day the member has NOT marked
+      // is not an editable day for them.
+      fetchAwayDaysByUser(db, dateKeyUtc(new Date())),
     ]);
 
   const lastAttendedByUser = new Map<string, string>();
@@ -110,7 +115,12 @@ agentRoutes.get("/admin/inactivity", async (c) => {
       else maybe += 1;
     }
 
-    const coverage = { can, maybe, total: windowDays };
+    let awayUnmarked = 0;
+    for (const date of awayByUser.get(u.id) ?? []) {
+      if (date < todayKey || date > windowEndKey) continue;
+      if (!marked.has(date)) awayUnmarked += 1;
+    }
+    const coverage = { can, maybe, total: Math.max(0, windowDays - awayUnmarked) };
     const lastAttendedNight = lastAttendedByUser.get(u.id) ?? null;
     const zeroDays = daysAtZeroCoverage({
       coverage,

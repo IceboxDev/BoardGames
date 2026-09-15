@@ -35,10 +35,11 @@ export function coveragePercent({ can, maybe, total }: Coverage): number {
   return Math.min(100, Math.max(0, Math.round(((can + maybe) * 100) / total)));
 }
 
-/** The pie's tooltip — the full three-bucket breakdown. */
-export function coverageBreakdown({ can, maybe, total }: Coverage): string {
-  if (total <= 0) return NO_EDITABLE_DAYS;
-  return `${can} can · ${maybe} maybe · ${total - can - maybe} unmarked of ${total} editable days`;
+/** The pie's tooltip — the full three-bucket breakdown, plus the away days set aside. */
+export function coverageBreakdown({ can, maybe, total, away = 0 }: Coverage): string {
+  const awayNote = away > 0 ? ` · ${away} away` : "";
+  if (total <= 0) return `${NO_EDITABLE_DAYS}${awayNote}`;
+  return `${can} can · ${maybe} maybe · ${total - can - maybe} unmarked of ${total} editable days${awayNote}`;
 }
 
 /**
@@ -48,7 +49,8 @@ export function coverageBreakdown({ can, maybe, total }: Coverage): string {
  * without knowing whether the window is 10 days or 42.
  */
 export function coverageSpeech(coverage: Coverage): string {
-  const { can, maybe, total } = coverage;
-  if (total <= 0) return NO_EDITABLE_DAYS;
-  return `${coveragePercent(coverage)}% covered (${can} can, ${maybe} maybe of ${total} editable days)`;
+  const { can, maybe, total, away = 0 } = coverage;
+  const awayNote = away > 0 ? `, ${away} away` : "";
+  if (total <= 0) return `${NO_EDITABLE_DAYS}${awayNote}`;
+  return `${coveragePercent(coverage)}% covered (${can} can, ${maybe} maybe of ${total} editable days${awayNote})`;
 }

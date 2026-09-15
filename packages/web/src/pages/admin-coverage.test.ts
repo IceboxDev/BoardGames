@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { coverageRatio } from "../components/admin/coverage-summary";
 import type { AggregateAvailabilityMap, AvailabilityMap } from "../lib/offline-availability";
 import {
   computeCoverage,
@@ -68,19 +69,59 @@ describe("computeCoverage", () => {
       "2026-05-23": [{ userId: "u2", status: "can", name: "U2" }],
       // 2026-05-24 has no entries → counts as unmarked for u1.
     } as AggregateAvailabilityMap;
-    expect(computeCoverage(aggregate, "u1", dates)).toEqual({ can: 1, maybe: 1, total: 4 });
-    expect(computeCoverage(aggregate, "u2", dates)).toEqual({ can: 2, maybe: 0, total: 4 });
+    expect(computeCoverage(aggregate, "u1", dates)).toEqual({
+      can: 1,
+      maybe: 1,
+      total: 4,
+      away: 0,
+    });
+    expect(computeCoverage(aggregate, "u2", dates)).toEqual({
+      can: 2,
+      maybe: 0,
+      total: 4,
+      away: 0,
+    });
   });
 
   it("returns total=0 when no editable dates are provided", () => {
-    expect(computeCoverage({}, "u1", [])).toEqual({ can: 0, maybe: 0, total: 0 });
+    expect(computeCoverage({}, "u1", [])).toEqual({ can: 0, maybe: 0, total: 0, away: 0 });
+  });
+
+  it("drops admin-noted away days from the denominator, unless the member marked them", () => {
+    const aggregate: AggregateAvailabilityMap = {
+      "2026-05-21": [{ userId: "u1", status: "can", name: "U1" }],
+      "2026-05-22": [{ userId: "u1", status: "can", name: "U1" }],
+      // 23 + 24: the month away. 22 is noted too, but the member's own mark wins.
+    } as AggregateAvailabilityMap;
+    const away = new Set(["2026-05-22", "2026-05-23", "2026-05-24"]);
+    expect(computeCoverage(aggregate, "u1", dates, away)).toEqual({
+      can: 2,
+      maybe: 0,
+      total: 2,
+      away: 2,
+    });
+    // Half the days covered before going away reads as full coverage of the
+    // days they could have covered.
+    expect(coverageRatio(computeCoverage(aggregate, "u1", dates, away))).toBe(1);
+    // Another member's note never touches this one's pie.
+    expect(computeCoverage(aggregate, "u2", dates, new Set())).toEqual({
+      can: 0,
+      maybe: 0,
+      total: 4,
+      away: 0,
+    });
   });
 
   it("ignores users not present in the aggregate", () => {
     const aggregate: AggregateAvailabilityMap = {
       "2026-05-21": [{ userId: "u2", status: "can", name: "U2" }],
     } as AggregateAvailabilityMap;
-    expect(computeCoverage(aggregate, "ghost", dates)).toEqual({ can: 0, maybe: 0, total: 4 });
+    expect(computeCoverage(aggregate, "ghost", dates)).toEqual({
+      can: 0,
+      maybe: 0,
+      total: 4,
+      away: 0,
+    });
   });
 });
 

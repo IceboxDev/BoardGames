@@ -1,4 +1,10 @@
-import { AggregateAvailabilityMapSchema, AvailabilityMapSchema } from "@boardgames/core/protocol";
+import {
+  AdminAwayDaysResponseSchema,
+  AggregateAvailabilityMapSchema,
+  AvailabilityMapSchema,
+  AwayDaysResponseSchema,
+  SetAwayDayBodySchema,
+} from "@boardgames/core/protocol";
 import { z } from "zod";
 import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
@@ -12,7 +18,9 @@ import {
   fetchRsvpYesDatesForUser,
   mergeRsvpYesIntoAvailability,
 } from "../lib/availability-merge.ts";
+import { fetchAwayDays, fetchAwayDaysByUser, todayKeyUtc } from "../lib/away-days.ts";
 import { parseRows } from "../lib/db-rows.ts";
+import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 
 export const adminAvailabilityRoutes = adminApp();
 
@@ -50,7 +58,42 @@ adminAvailabilityRoutes.get("/:id/availability", async (c) => {
   return c.json(AvailabilityMapSchema.parse(merged));
 });
 
+// ── Away notes ────────────────────────────────────────────────────────
+// An admin's reminder that a member is known to be unavailable on a day
+// (migration 0040). Never merged into the member's availability above —
+// the only reader that changes an answer is the coverage pie, which drops
+// the day from its denominator. A note on a past day is history; the
+// write path refuses one, the read paths skip them.
+
+adminAvailabilityRoutes.put("/:id/away", zJsonBody(SetAwayDayBodySchema), async (c) => {
+  const userId = c.req.param("id");
+  const { dateKey, away } = c.req.valid("json");
+  const today = todayKeyUtc();
+  if (dateKey < today) return errorResponse(c, 400, "the day is already past", "PAST_DAY");
+  const db = getDb();
+  const member = await db.execute({ sql: `SELECT 1 FROM "user" WHERE id = ?`, args: [userId] });
+  if (member.rows.length === 0) return errorResponse(c, 404, "user not found", "NOT_FOUND");
+  if (away) {
+    await db.execute({
+      sql: `INSERT OR IGNORE INTO admin_away_days (user_id, date_key, marked_by) VALUES (?, ?, ?)`,
+      args: [userId, dateKey, c.get("user").id],
+    });
+  } else {
+    await db.execute({
+      sql: "DELETE FROM admin_away_days WHERE user_id = ? AND date_key = ?",
+      args: [userId, dateKey],
+    });
+  }
+  const days = await fetchAwayDays(db, userId, today);
+  return c.json(AwayDaysResponseSchema.parse({ days }));
+});
+
 export const adminAvailabilityAllRoutes = adminApp();
+
+adminAvailabilityAllRoutes.get("/availability/away", async (c) => {
+  const byUser = await fetchAwayDaysByUser(getDb(), todayKeyUtc());
+  return c.json(AdminAwayDaysResponseSchema.parse({ awayByUser: Object.fromEntries(byUser) }));
+});
 
 adminAvailabilityAllRoutes.get("/availability/all", async (c) => {
   const db = getDb();

@@ -36,6 +36,7 @@ import { adminFetchLastAttended } from "../lib/match-history";
 import {
   type AggregateAvailabilityMap,
   adminFetchAllAvailability,
+  adminFetchAwayDays,
   dateKey,
 } from "../lib/offline-availability";
 import { build42Days, startOfWeekMonday } from "../lib/offline-week";
@@ -107,6 +108,15 @@ export default function AdminPage() {
     queryFn: ({ signal }) => adminFetchAllAvailability(signal),
   });
 
+  // Admin "away" notes per member (the drawer writes them): a noted day the
+  // member hasn't marked leaves their coverage denominator, so someone who
+  // covered half the days before a month away reads 50%, not 25%.
+  const awayQuery = useQuery({
+    queryKey: qk.adminAwayDays(),
+    queryFn: ({ signal }) => adminFetchAwayDays(signal),
+  });
+  const awayByUser: Record<string, string[]> = awayQuery.data ?? {};
+
   // What each member has done since THIS admin last opened their activity
   // drawer — the bubble next to the name. The drawer moves the marker and
   // invalidates this key, so the bubble clears as soon as the trail is read.
@@ -157,7 +167,12 @@ export default function AdminPage() {
     const lastAttended = lastAttendedQuery.data;
     const todayKey = dateKey(new Date());
     const rows: MemberRow[] = visible.map((user) => {
-      const coverage = computeCoverage(aggregate, user.id, editableDateKeys);
+      const coverage = computeCoverage(
+        aggregate,
+        user.id,
+        editableDateKeys,
+        new Set(awayByUser[user.id] ?? []),
+      );
       const zeroDays = daysAtZeroCoverage({
         coverage,
         latestMarkedDay: latestMarked.get(user.id),
@@ -186,7 +201,7 @@ export default function AdminPage() {
       activeRows: rows.filter((r) => !r.inactive),
       inactiveRows: rows.filter((r) => r.inactive),
     };
-  }, [rawUsers, aggregate, editableDateKeys, lastAttendedQuery.data]);
+  }, [rawUsers, aggregate, editableDateKeys, lastAttendedQuery.data, awayByUser]);
 
   const setOnlineModeMutation = useMutation({
     mutationFn: ({ userId, mode }: { userId: string; mode: OnlineMode }) =>
@@ -206,6 +221,7 @@ export default function AdminPage() {
       queryClient.removeQueries({ queryKey: qk.availability(userId) });
       queryClient.removeQueries({ queryKey: qk.adminUserInventory(userId) });
       queryClient.removeQueries({ queryKey: qk.adminUserAvailability(userId) });
+      void queryClient.invalidateQueries({ queryKey: qk.adminAwayDays() });
       void queryClient.invalidateQueries({ queryKey: qk.adminUsers() });
       setConfirmDeleteUserId(null);
       setConfirmEmail("");
@@ -389,7 +405,11 @@ export default function AdminPage() {
 
       {activityUser && <ActivityDrawer user={activityUser} onClose={() => setActivityUser(null)} />}
       {calendarUser && (
-        <AvailabilityDrawer user={calendarUser} onClose={() => setCalendarUser(null)} />
+        <AvailabilityDrawer
+          user={calendarUser}
+          awayDays={awayByUser[calendarUser.id] ?? []}
+          onClose={() => setCalendarUser(null)}
+        />
       )}
 
       {resetResult && (

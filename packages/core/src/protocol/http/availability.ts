@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { DateKeyStringSchema } from "./collection.ts";
 
 // ── Domain ─────────────────────────────────────────────────────────────
 
@@ -40,3 +41,30 @@ export const AggregateAvailabilityMapSchema = z.record(
   z.array(AvailabilityEntrySchema),
 );
 export type AggregateAvailabilityMap = z.infer<typeof AggregateAvailabilityMapSchema>;
+
+// ── Away days (admin note on another member's calendar) ────────────────
+// An admin's own reminder that a member is known to be unavailable on a day
+// ("they saw the calendar and can't"). Never merged into availability and
+// never shown to the member; its only computed effect is that such a day
+// leaves the denominator of that member's coverage pie. A member's own
+// can/maybe mark on the day wins over the note at read time.
+
+/** `GET /api/admin/availability/away` — every member's away days from today on. */
+export const AdminAwayDaysResponseSchema = z.object({
+  awayByUser: z.record(z.string(), z.array(DateKeyStringSchema)),
+});
+export type AdminAwayDaysResponse = z.infer<typeof AdminAwayDaysResponseSchema>;
+
+/** `PUT /api/admin/users/:id/away` body. */
+export const SetAwayDayBodySchema = z.object({
+  dateKey: DateKeyStringSchema,
+  /** `true` notes the day as away; `false` clears the note. */
+  away: z.boolean(),
+});
+export type SetAwayDayBody = z.infer<typeof SetAwayDayBodySchema>;
+
+/** That member's remaining away days (today on) after the write. */
+export const AwayDaysResponseSchema = z.object({
+  days: z.array(DateKeyStringSchema),
+});
+export type AwayDaysResponse = z.infer<typeof AwayDaysResponseSchema>;

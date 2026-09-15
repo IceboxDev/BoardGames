@@ -18,6 +18,8 @@ export const qk = {
   adminUserDevices: (targetUserId: string) => ["admin", "user-devices", targetUserId] as const,
   adminUnseenActivity: () => ["admin", "unseen-activity"] as const,
   adminAggregateAvailability: () => ["admin", "availability", "all"] as const,
+  /** Every member's admin-noted away days (userId → date keys), today on. */
+  adminAwayDays: () => ["admin", "away-days"] as const,
   history: () => ["history"] as const,
   historyByNight: (dateKey: string) => ["history", "by-night", dateKey] as const,
   dndOpenCampaigns: () => ["history", "dnd-campaigns"] as const,

@@ -6,7 +6,12 @@ import type { AggregateAvailabilityMap, AvailabilityMap } from "../lib/offline-a
 import { dateKey } from "../lib/offline-availability";
 import { build42Days } from "../lib/offline-week";
 
-export type Coverage = { can: number; maybe: number; total: number };
+/**
+ * `total` is the editable window MINUS the admin-noted "away" days the member
+ * has not marked themselves (`away`) — a day the member is known to be
+ * unavailable on is not a day they could have covered.
+ */
+export type Coverage = { can: number; maybe: number; total: number; away?: number };
 
 /**
  * Count availability marks (can / maybe) for a single user across the
@@ -34,24 +39,27 @@ export function countMarkedInWindow(
 
 /**
  * Compute one user's coverage of an editable date window. `total` is the
- * window size; `can` and `maybe` are how many of those days the user has
- * actually marked.
+ * window size less the admin-noted away days (`awayDays`) the user has not
+ * marked; `can` and `maybe` are how many of the remaining days the user has
+ * actually marked. The user's own mark on an away day wins: that day stays
+ * in the window and counts.
  */
 export function computeCoverage(
   aggregate: AggregateAvailabilityMap,
   userId: string,
   editableDateKeys: string[],
+  awayDays?: ReadonlySet<string>,
 ): Coverage {
   let can = 0;
   let maybe = 0;
+  let away = 0;
   for (const key of editableDateKeys) {
-    const entries = aggregate[key];
-    if (!entries) continue;
-    const entry = entries.find((e) => e.userId === userId);
+    const entry = aggregate[key]?.find((e) => e.userId === userId);
     if (entry?.status === "can") can += 1;
     else if (entry?.status === "maybe") maybe += 1;
+    else if (awayDays?.has(key)) away += 1;
   }
-  return { can, maybe, total: editableDateKeys.length };
+  return { can, maybe, total: editableDateKeys.length - away, away };
 }
 
 // ── Inactivity (archived players) ─────────────────────────────────────

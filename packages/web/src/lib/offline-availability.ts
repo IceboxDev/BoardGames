@@ -2,11 +2,14 @@
 // blocks this file used to host have been replaced by `apiFetch(..., { response: SomeSchema })`.
 
 import {
+  AdminAwayDaysResponseSchema,
   AggregateAvailabilityMapSchema,
   AvailabilityCountsSchema,
   AvailabilityMapSchema,
+  AwayDaysResponseSchema,
   OkResponseSchema,
   PushAvailabilityBodySchema,
+  SetAwayDayBodySchema,
 } from "@boardgames/core/protocol";
 import { apiFetch } from "./api-fetch.ts";
 
@@ -74,4 +77,28 @@ export async function adminFetchAllAvailability(signal?: AbortSignal) {
     response: AggregateAvailabilityMapSchema,
     signal,
   });
+}
+
+/** Every member's admin-noted away days from today on (userId → date keys). */
+export async function adminFetchAwayDays(signal?: AbortSignal): Promise<Record<string, string[]>> {
+  const res = await apiFetch("/api/admin/availability/away", {
+    response: AdminAwayDaysResponseSchema,
+    signal,
+  });
+  return res.awayByUser;
+}
+
+/** Note (or clear) one member's away day; resolves to their remaining away days. */
+export async function adminSetAwayDay(
+  userId: string,
+  dateKey: string,
+  away: boolean,
+): Promise<string[]> {
+  const res = await apiFetch(`/api/admin/users/${userId}/away`, {
+    method: "PUT",
+    body: { dateKey, away },
+    request: SetAwayDayBodySchema,
+    response: AwayDaysResponseSchema,
+  });
+  return res.days;
 }

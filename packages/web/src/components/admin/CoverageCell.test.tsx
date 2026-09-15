@@ -1,7 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import { CoverageCell } from "./CoverageCell";
-import { coveragePercent, coverageRatio } from "./coverage-summary";
+import {
+  coverageBreakdown,
+  coveragePercent,
+  coverageRatio,
+  coverageSpeech,
+} from "./coverage-summary";
 
 describe("coveragePercent", () => {
   it("rounds can + maybe over the total", () => {
@@ -60,4 +65,22 @@ describe("CoverageCell", () => {
   // doesn't recognize `conic-gradient()` and drops the value when the inline
   // style attribute is normalized. The slice math is covered by the percent
   // + title assertions above; the gradient color itself is a visual concern.
+});
+
+describe("coverage copy with away days", () => {
+  it("mentions the days set aside, and still reads sensibly when nothing is editable", () => {
+    expect(coverageBreakdown({ can: 2, maybe: 0, total: 2, away: 2 })).toBe(
+      "2 can · 0 maybe · 0 unmarked of 2 editable days · 2 away",
+    );
+    expect(coverageSpeech({ can: 2, maybe: 0, total: 2, away: 2 })).toBe(
+      "100% covered (2 can, 0 maybe of 2 editable days, 2 away)",
+    );
+    expect(coverageBreakdown({ can: 0, maybe: 0, total: 0, away: 4 })).toBe(
+      "No editable days · 4 away",
+    );
+    // No note, no mention — the old copy byte for byte.
+    expect(coverageBreakdown({ can: 3, maybe: 1, total: 10 })).toBe(
+      "3 can · 1 maybe · 6 unmarked of 10 editable days",
+    );
+  });
 });

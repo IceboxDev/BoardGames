@@ -25,6 +25,11 @@ export const AgentInactivityMemberSchema = z.object({
   userId: z.string(),
   name: z.string(),
   role: z.string().nullable(),
+  /**
+   * Marked days over the editable window. `total` is the window minus the
+   * admin-noted "away" days the member has not marked themselves — the same
+   * denominator the admin page's pie uses.
+   */
   coverage: z.object({
     can: z.number().int().min(0),
     maybe: z.number().int().min(0),

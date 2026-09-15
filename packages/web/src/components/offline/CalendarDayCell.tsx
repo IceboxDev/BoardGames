@@ -27,6 +27,8 @@ export type DayCellProps = {
   /** Sealed night whose vote winner is D&D — swaps in the crimson/d20 treatment. */
   dndNight: boolean;
   lockMode: boolean;
+  /** Admin "away" note: the owner is known to be unavailable (never with a `value`). */
+  away?: boolean;
   viewerRsvp?: RsvpStatus;
   cellSeed: number;
   onClick: () => void;
@@ -49,6 +51,7 @@ export function DayCell({
   attendance,
   dndNight,
   lockMode,
+  away = false,
   viewerRsvp,
   cellSeed,
   onClick,
@@ -107,9 +110,11 @@ export function DayCell({
             ? "border-accent-400/70"
             : value === "maybe"
               ? "border-warn-strong/60"
-              : lockMode
-                ? "border-warn-gold/30 hover:border-warn-gold/60"
-                : "border-line hover:border-fg-strong/25";
+              : away
+                ? "border-dashed border-fg-muted/50"
+                : lockMode
+                  ? "border-warn-gold/30 hover:border-warn-gold/60"
+                  : "border-line hover:border-fg-strong/25";
 
   const baseBgClass = !value && !heated && !locked ? "bg-surface-800/55" : "";
   const baseHover = !value && !heated && !locked && interactive ? "hover:bg-surface-800/80" : "";
@@ -152,12 +157,13 @@ export function DayCell({
       type="button"
       onClick={onClick}
       disabled={!interactive || isPast}
-      aria-label={`${day}${value ? ` — ${value}` : ""}${locked ? " — locked in" : ""}${
+      aria-label={`${day}${value ? ` — ${value}` : ""}${away ? " — away (admin note)" : ""}${locked ? " — locked in" : ""}${
         !locked && heat.kind === "warming" ? ` — warming up, ${heat.can} confirmed` : ""
       }${!locked && heat.kind === "fire" ? ` — on fire, ${heat.can} confirmed` : ""}${
         showDnd ? " — Dungeons & Dragons night" : ""
       }`}
-      aria-pressed={value !== undefined}
+      aria-pressed={value !== undefined || away}
+      title={away ? "Marked away — not counted in coverage" : undefined}
       className={`group relative flex flex-col overflow-hidden rounded-card-xl border transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${layoutClass} ${aspectClass} ${padding} ${baseBgClass} ${borderClass} ${showDnd ? "dnd-night-cell" : ""} ${baseHover} ${lockedDisplayClass} ${heatAnim}`}
     >
       <span
@@ -170,6 +176,7 @@ export function DayCell({
           aria-hidden="true"
         />
       )}
+      {away && <AwayLayer />}
       {showHeatLayer && heat.kind === "warming" && <WarmingLayer compact={compact} />}
       {showHeatLayer && heat.kind === "fire" && <FireLayer compact={compact} cellSeed={cellSeed} />}
       {locked &&
@@ -246,7 +253,11 @@ export function DayCell({
       ) : (
         <span
           className={`relative font-bold leading-none ${dayTextSize} ${dayNumberClass} ${
-            value || heated ? "text-fg-strong" : "text-fg-primary"
+            value || heated
+              ? "text-fg-strong"
+              : away
+                ? "text-fg-muted line-through"
+                : "text-fg-primary"
           }`}
         >
           {day}
@@ -762,4 +773,20 @@ function monthTintClass(bucket: 0 | 1 | 2): string {
   if (bucket === 0) return "bg-accent-500/[0.06]";
   if (bucket === 1) return "bg-neon-cyan/[0.06]";
   return "bg-neon-purple/[0.06]";
+}
+
+// Admin "away" note (the per-member drawer only): a hatched blank, so a day
+// the member is known to be unavailable on reads apart from "hasn't opened
+// the calendar". Drawn with the strong-ink token so it survives every theme.
+function AwayLayer() {
+  return (
+    <span
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 opacity-70"
+      style={{
+        backgroundImage:
+          "repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-fg-strong) 9%, transparent) 0 3px, transparent 3px 9px)",
+      }}
+    />
+  );
 }

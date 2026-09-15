@@ -70,6 +70,7 @@ export const GUEST_MERGE_COVERAGE = {
     "game_requests.user_id",
     "exit_game_votes.user_id",
     "user_availability_days.user_id",
+    "admin_away_days.user_id",
     "purchase_poll_votes.user_id",
     "purchase_poll_seen.user_id",
     "purchase_arrival_games.purchaser_user_id",
@@ -99,6 +100,8 @@ export const GUEST_MERGE_COVERAGE = {
     "ownership_announcements.resolved_by",
     // Only an admin publishes an arrival; SET NULL like resolved_by.
     "purchase_arrivals.published_by",
+    // Only an admin notes a member as away; SET NULL like resolved_by.
+    "admin_away_days.marked_by",
     "dnd_campaigns.user_id",
     "dnd_parties.user_id",
     "dnd_files.user_id",
@@ -114,6 +117,7 @@ const MOVE_OR_IGNORE: readonly { table: string; columns: readonly string[] }[] =
   { table: "game_requests", columns: ["date_key", "game_slug", "reaction", "created_at"] },
   { table: "exit_game_votes", columns: ["date_key", "exit_slug", "created_at"] },
   { table: "user_availability_days", columns: ["date_key", "status", "updated_at"] },
+  { table: "admin_away_days", columns: ["date_key", "marked_by", "created_at"] },
   { table: "purchase_poll_votes", columns: ["poll_id", "slug", "created_at"] },
   { table: "purchase_poll_seen", columns: ["poll_id", "first_seen_at", "result_seen_at"] },
   { table: "purchase_arrival_seen", columns: ["arrival_id", "seen_at"] },
