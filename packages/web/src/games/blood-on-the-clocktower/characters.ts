@@ -3,11 +3,23 @@
  * The match-history form uses these to assign characters to players and to
  * auto-derive their alignment (Good = Townsfolk + Outsider; Evil = Minion +
  * Demon). Character names are stored verbatim on `TeamMember.role`, so the
- * spelling here is the wire-stable identifier — adjust with care if the
- * official wiki ever renames a character.
+ * spelling here is the wire-stable identifier.
+ *
+ * Trouble Brewing and Bad Moon Rising are DERIVED from core's `CHARACTERS`
+ * (the companion's catalog, which also carries abilities and night order) so
+ * the name the companion writes into match history is, by construction, the
+ * name this form reads back. Sects & Violets has no companion support yet
+ * and stays hand-written until it lands in core; `characters.test.ts` pins
+ * the round-trip for every core character.
  */
 
-export type ClocktowerEdition = "trouble-brewing" | "bad-moon-rising" | "sects-and-violets";
+import type {
+  CharacterType,
+  Edition,
+} from "@boardgames/core/games/blood-on-the-clocktower/characters";
+import { charactersOfType } from "@boardgames/core/games/blood-on-the-clocktower/characters";
+
+export type ClocktowerEdition = Edition | "sects-and-violets";
 
 /**
  * The four resident categories, plus Travellers: late arrivals / early
@@ -15,7 +27,7 @@ export type ClocktowerEdition = "trouble-brewing" | "bad-moon-rising" | "sects-a
  * by the character — so a Traveller's team is picked on the form, not
  * derived (see `clocktowerAlignment`).
  */
-export type ClocktowerCategory = "townsfolk" | "outsider" | "minion" | "demon" | "traveller";
+export type ClocktowerCategory = CharacterType;
 
 export type ClocktowerCharacter = {
   name: string;
@@ -37,49 +49,25 @@ export const CLOCKTOWER_CATEGORY_LABELS: Record<ClocktowerCategory, string> = {
   traveller: "Travellers",
 };
 
-const TROUBLE_BREWING: Record<ClocktowerCategory, string[]> = {
-  townsfolk: [
-    "Washerwoman",
-    "Librarian",
-    "Investigator",
-    "Chef",
-    "Empath",
-    "Fortune Teller",
-    "Undertaker",
-    "Monk",
-    "Ravenkeeper",
-    "Virgin",
-    "Slayer",
-    "Soldier",
-    "Mayor",
-  ],
-  outsider: ["Butler", "Saint", "Recluse", "Drunk"],
-  minion: ["Poisoner", "Spy", "Baron", "Scarlet Woman"],
-  demon: ["Imp"],
-  traveller: ["Scapegoat", "Gunslinger", "Beggar", "Bureaucrat", "Thief"],
-};
+const CATEGORY_ORDER: ClocktowerCategory[] = [
+  "townsfolk",
+  "outsider",
+  "minion",
+  "demon",
+  "traveller",
+];
 
-const BAD_MOON_RISING: Record<ClocktowerCategory, string[]> = {
-  townsfolk: [
-    "Grandmother",
-    "Sailor",
-    "Chambermaid",
-    "Exorcist",
-    "Innkeeper",
-    "Gambler",
-    "Gossip",
-    "Courtier",
-    "Professor",
-    "Minstrel",
-    "Tea Lady",
-    "Pacifist",
-    "Fool",
-  ],
-  outsider: ["Goon", "Lunatic", "Tinker", "Moonchild"],
-  minion: ["Godfather", "Devil's Advocate", "Assassin", "Mastermind"],
-  demon: ["Zombuul", "Pukka", "Shabaloth", "Po"],
-  traveller: ["Apprentice", "Matron", "Judge", "Bishop", "Voudon"],
-};
+/** An edition's table, in the companion's sheet order, from core's catalog. */
+function fromCore(edition: Edition): Record<ClocktowerCategory, string[]> {
+  const table = {} as Record<ClocktowerCategory, string[]>;
+  for (const category of CATEGORY_ORDER) {
+    table[category] = charactersOfType(category, edition).map((c) => c.name);
+  }
+  return table;
+}
+
+const TROUBLE_BREWING = fromCore("trouble-brewing");
+const BAD_MOON_RISING = fromCore("bad-moon-rising");
 
 const SECTS_AND_VIOLETS: Record<ClocktowerCategory, string[]> = {
   townsfolk: [
@@ -165,8 +153,7 @@ export function detectClocktowerEdition(
 export function charactersByCategory(
   edition: ClocktowerEdition,
 ): ReadonlyArray<{ category: ClocktowerCategory; label: string; names: ReadonlyArray<string> }> {
-  const order: ClocktowerCategory[] = ["townsfolk", "outsider", "minion", "demon", "traveller"];
-  return order.map((category) => ({
+  return CATEGORY_ORDER.map((category) => ({
     category,
     label: CLOCKTOWER_CATEGORY_LABELS[category],
     names: EDITION_TABLE[edition][category],

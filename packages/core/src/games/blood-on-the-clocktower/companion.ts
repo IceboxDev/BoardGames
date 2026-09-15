@@ -14,7 +14,7 @@
 // itself so a hurried tap can't corrupt the Grimoire. Everything is pure and
 // serializable so the web client can persist state to localStorage as-is.
 
-import type { CharacterId, Edition } from "./characters.ts";
+import type { CharacterId } from "./characters.ts";
 import {
   BMR_FIRST_NIGHT_ORDER,
   BMR_OTHER_NIGHTS_ORDER,
@@ -23,160 +23,38 @@ import {
   isEvil,
   OTHER_NIGHTS_ORDER,
 } from "./characters.ts";
+// The persisted state is defined ONCE as a Zod schema (schema.ts) and the
+// types below are inferred from it, so the reducer, the localStorage loader
+// and the migration chain can never disagree about the shape. Re-exported so
+// every consumer keeps importing from this module.
+import type {
+  Alignment,
+  CompanionPlayer,
+  CompanionState,
+  DayState,
+  DeathCause,
+  NightProgress,
+  NightStepId,
+  Nomination,
+  Phase,
+  VoteResult,
+} from "./schema.ts";
+import { COMPANION_STATE_VERSION } from "./schema.ts";
 import type { GameSetup } from "./setup.ts";
 
-export type Alignment = "good" | "evil";
-
-export type DeathCause =
-  | "execution"
-  | "demon"
-  | "slayer"
-  | "virgin"
-  | "gunslinger"
-  | "exile"
-  | "storyteller"
-  // Bad Moon Rising causes
-  | "assassin"
-  | "godfather"
-  | "gambler"
-  | "moonchild"
-  | "gossip"
-  | "tinker"
-  | "grandmother";
-
-export type CompanionPlayer = {
-  seat: number;
-  name: string;
-  character: CharacterId;
-  /** TB Drunk: the Townsfolk they believe they are. BMR Lunatic: the Demon they believe they are. */
-  believedCharacter?: CharacterId;
-  alive: boolean;
-  /** Dead players keep one ghost vote for the rest of the game. */
-  ghostVote: boolean;
-  /** TB: Poisoner target (cleared at next dusk). BMR: Pukka venom (until death/cure). */
-  poisoned: boolean;
-  /** Monk target — safe from the Demon tonight (cleared at dawn). */
-  protectedTonight: boolean;
-  /** Registers as a Demon to the Fortune Teller. */
-  redHerring: boolean;
-  /** Butler only: the master they may only vote alongside. */
-  butlerMaster?: number;
-  /** Once-per-game ability spent (Slayer, Virgin, Courtier, Assassin, Professor, Fool, Judge…). */
-  usedAbility: boolean;
-  /** Died during the current night; announced and cleared at dawn. */
-  diedTonight: boolean;
-  /** Travellers (and the BMR Goon): their current assigned alignment. */
-  alignment?: Alignment;
-  /** Bureaucrat's mark — this player's vote counts as 3 today. */
-  tripleVote?: boolean;
-  /** Thief's mark — this player's vote counts as −1 today. */
-  negativeVote?: boolean;
-  /** Beggar only: donated vote tokens currently held. */
-  beggarTokens?: number;
-  /** Traveller left town entirely (not dead — gone; no ghost vote). */
-  left?: boolean;
-  // ── Bad Moon Rising statuses ────────────────────────────────────────
-  /** Drunk for this many more dusks (1 = until the next dusk; Courtier sets 3). */
-  drunkNights?: number;
-  /** Which character's ability caused the drunkenness (ends if that character dies). */
-  drunkSource?: CharacterId;
-  /** Grandmother only: their grandchild's seat. */
-  grandchild?: number;
-  /** Exorcist / Devil's Advocate: last night's pick (may not repeat it). */
-  lastChoice?: number;
-  /** Innkeeper mark — cannot die tonight (cleared at dawn). */
-  safeTonight?: boolean;
-  /** Devil's Advocate mark — survives execution today (cleared at dusk). */
-  survivesExecution?: boolean;
-  /** Zombuul after their first death: shown as dead, secretly alive. */
-  registersDead?: boolean;
-  /** Killed by the Demon tonight (Grandmother's grandchild check; cleared at dawn). */
-  diedByDemonTonight?: boolean;
-  /** Apprentice only: the Townsfolk/Minion ability they gained. */
-  apprenticeAbility?: CharacterId;
-  note?: string;
-};
-
-export type Phase =
-  | { kind: "reveal" }
-  | { kind: "night"; night: number }
-  | { kind: "day"; day: number }
-  | { kind: "ended"; winner: Alignment; reason: string };
-
-export type VoteResult = "about-to-die" | "failed" | "tied";
-
-export type Nomination = {
-  nominator: number;
-  nominee: number;
-  votes: number;
-  required: number;
-  result: VoteResult;
-};
-
-export type DayState = {
-  nominatorsUsed: number[];
-  nomineesUsed: number[];
-  nominations: Nomination[];
-  aboutToDie?: { seat: number; votes: number };
-  /**
-   * Highest successful tally today. Survives a tie (which clears
-   * `aboutToDie`): a later nominee still has to EXCEED the tied number.
-   */
-  highestVotes: number;
-  executed?: number;
-  /** The Gunslinger may kill only once per day. */
-  gunslingerUsed?: boolean;
-  /** Deaths that happened during THIS day (any cause) — the Zombuul only wakes after a deathless day. */
-  deaths: number;
-};
-
-export type LogEntry = { id: number; when: string; text: string };
-
-export type CompanionState = {
-  version: 1;
-  script: Edition;
-  players: CompanionPlayer[];
-  demonBluffs: CharacterId[];
-  phase: Phase;
-  /** Cursor into nightQueue() for the current night. */
-  nightStep: number;
-  day: DayState;
-  /** Most recent execution — feeds the Undertaker the following night. */
-  lastExecution?: { day: number; seat: number; character: CharacterId };
-  /** Seat that became the Imp today (Scarlet Woman / star pass) — gets a "you are" step tonight. */
-  pendingImpInfo?: number;
-  /** The non-playing Storyteller running the game (match-history moderator). */
-  storyteller?: string;
-  /** Set once the finished game is ported to match history (blocks double-posts). */
-  historyMatchId?: number;
-  // ── Bad Moon Rising game-level state ────────────────────────────────
-  /** The Exorcist chose the Demon tonight — the Demon doesn't wake (cleared at dawn). */
-  exorcisedDemon?: boolean;
-  /** Seat currently carrying the Pukka's venom — they die after the Pukka's next pick. */
-  pukkaVictim?: number;
-  /** The Po chose no-one last night — three attacks tonight. */
-  poCharged?: boolean;
-  /** The Shabaloth's picks last night — one may be regurgitated tonight. */
-  shabalothVictims?: number[];
-  /** The Gossip made a TRUE public statement today — a player dies tonight (cleared at dawn). */
-  gossipTrue?: boolean;
-  /** A dead Moonchild who must still publicly choose a player. */
-  moonchildPending?: number;
-  /** The Moonchild's chosen player — dies tonight if good (cleared at dawn). */
-  moonchildTarget?: number;
-  /** An Outsider died during the day — the Godfather kills tonight (cleared at dawn). */
-  outsiderDiedToday?: boolean;
-  /** Snapshot at dusk: nobody died during the preceding day, so the Zombuul acts. */
-  nightZombuulActs?: boolean;
-  /** Day a Minion was executed with a sober Minstrel — everyone drunk until dusk tomorrow. */
-  minstrelDrunkDay?: number;
-  /** Mastermind: the Demon is secretly dead; one final day decides the game. */
-  mastermindExtraDay?: boolean;
-  /** Who the Lunatic "attacked" tonight — shown to the real Demon (cleared at dawn). */
-  lunaticChoices?: number[];
-  log: LogEntry[];
-  nextLogId: number;
-};
+export type {
+  Alignment,
+  CompanionPlayer,
+  CompanionState,
+  DayState,
+  DeathCause,
+  LogEntry,
+  NightProgress,
+  NightStepId,
+  Nomination,
+  Phase,
+  VoteResult,
+} from "./schema.ts";
 
 const EMPTY_DAY: DayState = {
   nominatorsUsed: [],
@@ -185,6 +63,8 @@ const EMPTY_DAY: DayState = {
   highestVotes: 0,
   deaths: 0,
 };
+
+const EMPTY_NIGHT: NightProgress = { resolved: [], demonChoices: [] };
 
 // ── Construction ──────────────────────────────────────────────────────
 
@@ -205,12 +85,12 @@ export function createGame(setup: GameSetup, opts?: { storyteller?: string }): C
     diedTonight: false,
   }));
   const state: CompanionState = {
-    version: 1,
+    version: COMPANION_STATE_VERSION,
     script: setup.edition ?? "trouble-brewing",
     players,
     demonBluffs: setup.demonBluffs,
     phase: { kind: "reveal" },
-    nightStep: 0,
+    nightProgress: EMPTY_NIGHT,
     day: EMPTY_DAY,
     ...(opts?.storyteller ? { storyteller: opts.storyteller } : {}),
     log: [],
@@ -371,6 +251,10 @@ export type NightStep =
   | { kind: "you-are-imp"; seat: number }
   | {
       kind: "wake";
+      /**
+       * The ability this player wakes for: their believed character for the
+       * Drunk/Lunatic, the gained ability for an Apprentice, else their own.
+       */
       character: CharacterId;
       seat: number;
       /** Waking player is secretly the Drunk/Lunatic — their ability is void. */
@@ -397,10 +281,42 @@ export type NightStep =
   | { kind: "pukka-victim"; target: number }
   | { kind: "dawn" };
 
+/**
+ * A step's stable identity — `<kind>` or `<kind>:<seat>`. A player wakes at
+ * most once per night for their own ability, so a wake step is identified by
+ * its SEAT alone: reducers can mark "this seat's step ran tonight" without
+ * knowing which character the step was displayed as.
+ */
+export function nightStepId(step: NightStep): NightStepId {
+  switch (step.kind) {
+    case "wake":
+    case "you-are-imp":
+    case "lunatic-info":
+    case "apprentice":
+    case "tinker":
+      return `${step.kind}:${step.seat}`;
+    case "moonchild-kill":
+    case "pukka-victim":
+      return `${step.kind}:${step.target}`;
+    case "grandmother-dies":
+      return `${step.kind}:${step.grandmotherSeat}`;
+    default:
+      return step.kind;
+  }
+}
+
+const wakeId = (seat: number): NightStepId => `wake:${seat}`;
+
+/** The character a player wakes AS: believed (Drunk/Lunatic), gained (Apprentice), or own. */
+export function wakeCharacter(p: CompanionPlayer): CharacterId {
+  if (p.character === "apprentice" && p.apprenticeAbility) return p.apprenticeAbility;
+  return apparentCharacter(p);
+}
+
 function wakeStep(state: CompanionState, p: CompanionPlayer): NightStep {
   return {
     kind: "wake",
-    character: apparentCharacter(p),
+    character: wakeCharacter(p),
     seat: p.seat,
     isDrunk: p.believedCharacter !== undefined,
     poisoned: p.poisoned,
@@ -409,23 +325,185 @@ function wakeStep(state: CompanionState, p: CompanionPlayer): NightStep {
 }
 
 /**
- * The full step list for the current night, following the boxed Trouble
- * Brewing night sheet with its skip rules (dead players don't wake; the
- * Ravenkeeper wakes only on the night they die; the Undertaker only after an
- * execution day; Minion/Demon info only on the first night with 7+ players).
- * Recompute after every action — recording an Imp kill can add the
- * Ravenkeeper's step later in the same night.
+ * Rebuild a step from its id. Only the steps whose trigger can VANISH after
+ * they run need this (a Gambler who died on their guess, a spent Assassin, a
+ * resolved Moonchild curse…); the info steps and dawn are always present.
+ */
+function stepFromId(state: CompanionState, id: NightStepId): NightStep | undefined {
+  const [kind, seatText] = id.split(":");
+  const seat = seatText === undefined ? undefined : Number(seatText);
+  const player = seat === undefined ? undefined : state.players.find((p) => p.seat === seat);
+  switch (kind) {
+    case "minion-info":
+    case "demon-info":
+    case "gossip-kill":
+    case "dawn":
+      return { kind };
+    case "wake":
+      return player ? wakeStep(state, player) : undefined;
+    case "you-are-imp":
+    case "lunatic-info":
+    case "apprentice":
+    case "tinker":
+      return player ? { kind, seat: player.seat } : undefined;
+    case "moonchild-kill":
+    case "pukka-victim":
+      return player ? { kind, target: player.seat } : undefined;
+    case "grandmother-dies":
+      return player?.grandchild !== undefined
+        ? { kind, grandmotherSeat: player.seat, grandchildSeat: player.grandchild }
+        : undefined;
+    default:
+      return undefined;
+  }
+}
+
+/** Has this step already booked its effect tonight? */
+export function isStepResolved(state: CompanionState, step: NightStep): boolean {
+  return state.nightProgress.resolved.includes(nightStepId(step));
+}
+
+/** Book a step as done for tonight. No-op outside the night. */
+function markResolved(state: CompanionState, id: NightStepId): CompanionState {
+  if (state.phase.kind !== "night" || state.nightProgress.resolved.includes(id)) return state;
+  return {
+    ...state,
+    nightProgress: { ...state.nightProgress, resolved: [...state.nightProgress.resolved, id] },
+  };
+}
+
+/** Book the wake step of the player in `seat` as done for tonight. */
+function resolveWake(state: CompanionState, seat: number): CompanionState {
+  return markResolved(state, wakeId(seat));
+}
+
+/**
+ * Where a step sits on tonight's sheet — the position a resolved step is put
+ * back at when the state change it caused would otherwise drop it from the
+ * rebuilt queue. Negative ranks are the dusk/info block; dawn is last.
+ */
+function stepRank(state: CompanionState, step: NightStep): number {
+  const night = state.phase.kind === "night" ? state.phase.night : 0;
+  const bmr = state.script === "bad-moon-rising";
+  const order = bmr
+    ? night === 1
+      ? BMR_FIRST_NIGHT_ORDER
+      : BMR_OTHER_NIGHTS_ORDER
+    : night === 1
+      ? FIRST_NIGHT_ORDER
+      : OTHER_NIGHTS_ORDER;
+  const slot = (id: CharacterId) => {
+    const i = order.indexOf(id);
+    // TB travellers (Thief, Bureaucrat) wake at dusk, before the sheet.
+    return i === -1 ? -10 : i;
+  };
+  switch (step.kind) {
+    case "apprentice":
+      return -20;
+    case "minion-info":
+      return -3;
+    case "lunatic-info":
+      return -2;
+    case "demon-info":
+      return -1;
+    case "wake":
+      return slot(step.character);
+    case "you-are-imp":
+      return slot("scarlet-woman");
+    case "gossip-kill":
+      return slot("gossip");
+    case "tinker":
+      return slot("tinker");
+    case "moonchild-kill":
+      return slot("moonchild");
+    case "grandmother-dies":
+      return slot("grandmother");
+    case "pukka-victim":
+      return slot("pukka");
+    case "dawn":
+      return Number.POSITIVE_INFINITY;
+  }
+}
+
+/**
+ * The full step list for the current night, following the boxed night sheet
+ * with its skip rules (dead players don't wake; the Ravenkeeper wakes only
+ * on the night they die; the Undertaker only after an execution day;
+ * Minion/Demon info only on the first night with 7+ players). Recomputed
+ * after every action — recording an Imp kill can add the Ravenkeeper's step
+ * later in the same night.
+ *
+ * Steps that already RAN tonight always stay in the list: the Gambler who
+ * died on their guess and the Assassin who just spent their strike no longer
+ * satisfy the sheet's wake rules, but dropping them would yank the wizard to
+ * the next step under the Storyteller's thumb.
  */
 export function nightQueue(state: CompanionState): NightStep[] {
   if (state.phase.kind !== "night") return [];
-  return state.script === "bad-moon-rising" ? bmrNightQueue(state) : tbNightQueue(state);
+  const natural = state.script === "bad-moon-rising" ? bmrNightQueue(state) : tbNightQueue(state);
+  const present = new Set(natural.map(nightStepId));
+  let queue = natural;
+  for (const id of state.nightProgress.resolved) {
+    if (present.has(id)) continue;
+    const step = stepFromId(state, id);
+    if (!step) continue;
+    const rank = stepRank(state, step);
+    // After the last natural step of the same or an earlier slot.
+    let at = queue.length;
+    for (let i = queue.length - 1; i >= 0; i--) {
+      if (stepRank(state, queue[i]) <= rank) {
+        at = i + 1;
+        break;
+      }
+      at = i;
+    }
+    queue = [...queue.slice(0, at), step, ...queue.slice(at)];
+    present.add(id);
+  }
+  return queue;
+}
+
+/**
+ * The index of the step the Storyteller is on. A cursor that points at a
+ * step which vanished unresolved (the Storyteller marked that player dead
+ * from the Grimoire mid-night) lands on the next step of the sheet.
+ */
+export function nightCursorIndex(state: CompanionState, queue = nightQueue(state)): number {
+  if (queue.length === 0) return 0;
+  const cursor = state.nightProgress.cursor;
+  if (cursor === undefined) return 0;
+  const found = queue.findIndex((s) => nightStepId(s) === cursor);
+  if (found !== -1) return found;
+  const gone = stepFromId(state, cursor);
+  if (!gone) return 0;
+  const rank = stepRank(state, gone);
+  const next = queue.findIndex((s) => stepRank(state, s) >= rank);
+  return next === -1 ? queue.length - 1 : next;
+}
+
+/** The step under the Storyteller's thumb (undefined outside the night). */
+export function currentNightStep(state: CompanionState): NightStep | undefined {
+  const queue = nightQueue(state);
+  return queue[nightCursorIndex(state, queue)];
+}
+
+/** Move to the step `delta` places away on tonight's sheet (clamped). */
+export function moveNightCursor(state: CompanionState, delta: number): CompanionState {
+  if (state.phase.kind !== "night") return state;
+  const queue = nightQueue(state);
+  if (queue.length === 0) return state;
+  const at = Math.max(0, Math.min(queue.length - 1, nightCursorIndex(state, queue) + delta));
+  return {
+    ...state,
+    nightProgress: { ...state.nightProgress, cursor: nightStepId(queue[at]) },
+  };
 }
 
 function tbNightQueue(state: CompanionState): NightStep[] {
   const night = state.phase.kind === "night" ? state.phase.night : 0;
   const steps: NightStep[] = [];
   const wakers = (id: CharacterId) =>
-    state.players.filter((p) => p.alive && apparentCharacter(p) === id);
+    state.players.filter((p) => p.alive && wakeCharacter(p) === id);
 
   // Travellers that act (Thief, Bureaucrat) wake at DUSK, before everything
   // else on the sheet — every night, including the first.
@@ -452,7 +530,7 @@ function tbNightQueue(state: CompanionState): NightStep[] {
       if (id === "ravenkeeper") {
         // Wakes only on the night they die.
         for (const p of state.players) {
-          if (p.diedTonight && apparentCharacter(p) === "ravenkeeper") {
+          if (p.diedTonight && wakeCharacter(p) === "ravenkeeper") {
             steps.push(wakeStep(state, p));
           }
         }
@@ -475,9 +553,10 @@ function tbNightQueue(state: CompanionState): NightStep[] {
 /**
  * Bad Moon Rising night queue (official night-sheet ordering). Wakers match
  * TRUE characters — the Lunatic (who believes they're the Demon) gets their
- * own step at the Lunatic's sheet position, never the Demon's. Non-waking
- * Storyteller kills (Gossip, Tinker, Moonchild, Grandmother) surface as
- * reminder steps at their sheet positions.
+ * own step at the Lunatic's sheet position, never the Demon's. An Apprentice
+ * who gained an ability wakes at that ability's slot. Non-waking Storyteller
+ * kills (Gossip, Tinker, Moonchild, Grandmother) surface as reminder steps at
+ * their sheet positions.
  */
 function bmrNightQueue(state: CompanionState): NightStep[] {
   const night = state.phase.kind === "night" ? state.phase.night : 0;
@@ -637,7 +716,7 @@ export function beginNight(state: CompanionState): CompanionState {
       survivesExecution: undefined,
     })),
     phase: { kind: "night", night },
-    nightStep: 0,
+    nightProgress: EMPTY_NIGHT,
     // The Zombuul only wakes after a day with no deaths at all.
     nightZombuulActs: state.phase.kind === "day" ? state.day.deaths === 0 : false,
     day: EMPTY_DAY,
@@ -650,15 +729,19 @@ export function beginNight(state: CompanionState): CompanionState {
   return next;
 }
 
-export function setNightStep(state: CompanionState, step: number): CompanionState {
-  return { ...state, nightStep: Math.max(0, step) };
-}
-
-/** Dawn: announce deaths, clear night-scoped statuses, move to day. */
+/**
+ * Dawn: announce deaths, clear night-scoped statuses, move to day. The
+ * night's toll is kept on `lastNight` for the day's recap; the Demon's
+ * choices become the Shabaloth's regurgitation menu and consume the Po's
+ * charge (it chose SOMEONE tonight, so its "last choice" is no longer
+ * no-one).
+ */
 export function dawn(state: CompanionState): CompanionState {
   if (state.phase.kind !== "night") return state;
   const died = state.players.filter((p) => p.diedTonight);
   const day = state.phase.night;
+  const demon = demonPlayer(state);
+  const choices = state.nightProgress.demonChoices;
   let next: CompanionState = {
     ...state,
     players: state.players.map((p) => ({
@@ -669,14 +752,18 @@ export function dawn(state: CompanionState): CompanionState {
       diedByDemonTonight: undefined,
     })),
     phase: { kind: "day", day },
-    nightStep: 0,
+    nightProgress: EMPTY_NIGHT,
+    lastNight: { night: state.phase.night, died: died.map((p) => p.seat) },
     pendingImpInfo: undefined,
     exorcisedDemon: undefined,
     gossipTrue: undefined,
     moonchildTarget: undefined,
+    moonchildCurseVoid: undefined,
     outsiderDiedToday: undefined,
     nightZombuulActs: undefined,
     lunaticChoices: undefined,
+    shabalothVictims: demon?.character === "shabaloth" && choices.length > 0 ? choices : undefined,
+    poChargedNight: choices.length === 0 ? state.poChargedNight : undefined,
     day: EMPTY_DAY,
   };
   next = logNow(
@@ -731,24 +818,63 @@ export function survivedExecution(
 }
 
 /**
- * The rules-fixed protections `kill` resolves on its own. The Assassin
- * pierces every one of them, and the Storyteller's boss button ("Mark dead"
- * in the Grimoire) does too.
+ * A rule-fixed reason a death does not happen. `kill` enforces every one of
+ * these on its own (the Assassin pierces them all, and so does the
+ * Storyteller's boss button — "Mark dead" in the Grimoire); the wizard shows
+ * them as hints BEFORE the tap so the Storyteller knows what to announce.
  */
+export type Protection =
+  | "monk"
+  | "soldier"
+  | "innkeeper"
+  | "sober-sailor"
+  | "tea-lady"
+  | "devils-advocate"
+  | "fool";
+
+export const PROTECTION_TEXT: Record<Protection, string> = {
+  monk: "protected by the Monk",
+  soldier: "the Soldier is safe from the Demon",
+  innkeeper: "protected by the Innkeeper",
+  "sober-sailor": "the sober Sailor cannot die",
+  "tea-lady": "protected by the Tea Lady",
+  "devils-advocate": "the Devil's Advocate's client",
+  fool: "the Fool's first death",
+};
+
+/**
+ * Every protection that applies to `p` dying of `cause` right now, in the
+ * order the engine consults them. Trouble Brewing's Monk and Soldier only
+ * ward off the Demon; Bad Moon Rising's shields stop any non-piercing cause.
+ */
+export function deathProtections(
+  state: CompanionState,
+  p: CompanionPlayer,
+  cause: DeathCause,
+): Protection[] {
+  const out: Protection[] = [];
+  const atNight = state.phase.kind === "night";
+  const sober = !abilityVoid(state, p);
+  if (state.script === "trouble-brewing") {
+    if (cause !== "demon") return out;
+    if (p.protectedTonight && atNight) out.push("monk");
+    if (p.character === "soldier" && sober) out.push("soldier");
+    return out;
+  }
+  if (p.safeTonight && atNight) out.push("innkeeper");
+  if (p.character === "sailor" && sober) out.push("sober-sailor");
+  if (teaLadyProtectedSeats(state).includes(p.seat)) out.push("tea-lady");
+  if (cause === "execution" && p.survivesExecution) out.push("devils-advocate");
+  if (p.character === "fool" && !p.usedAbility && sober) out.push("fool");
+  return out;
+}
+
 function deathProtection(
   state: CompanionState,
   p: CompanionPlayer,
   cause: DeathCause,
-): string | undefined {
-  if (state.script !== "bad-moon-rising") return undefined;
-  const atNight = state.phase.kind === "night";
-  const sober = !abilityVoid(state, p);
-  if (p.safeTonight && atNight) return "protected by the Innkeeper";
-  if (p.character === "sailor" && sober) return "the sober Sailor cannot die";
-  if (teaLadyProtectedSeats(state).includes(p.seat)) return "protected by the Tea Lady";
-  if (cause === "execution" && p.survivesExecution) return "the Devil's Advocate's client";
-  if (p.character === "fool" && !p.usedAbility && sober) return "the Fool's first death";
-  return undefined;
+): Protection | undefined {
+  return deathProtections(state, p, cause)[0];
 }
 
 export function kill(state: CompanionState, seat: number, cause: DeathCause): CompanionState {
@@ -763,12 +889,13 @@ export function kill(state: CompanionState, seat: number, cause: DeathCause): Co
     if (protection) {
       // The Fool spends their once-per-game escape; other saves are free.
       const next =
-        protection === "the Fool's first death"
+        protection === "fool"
           ? mapPlayer(state, seat, (x) => ({ ...x, usedAbility: true }))
           : state;
+      const reason = PROTECTION_TEXT[protection];
       return cause === "execution"
-        ? survivedExecution(next, seat, protection)
-        : logNow(next, `${p.name} would die — but doesn't (${protection}).`);
+        ? survivedExecution(next, seat, reason)
+        : logNow(next, `${p.name} would die — but doesn't (${reason}).`);
     }
     // The Zombuul's first death is fake: they register as dead but live on.
     if (p.character === "zombuul" && !p.registersDead && !abilityVoid(state, p)) {
@@ -967,6 +1094,10 @@ export function addTraveller(
   name: string,
   character: CharacterId,
   alignment: Alignment,
+  opts: {
+    /** The chair they take is right after this seat (clockwise); null = the first chair. Default: last. */
+    afterSeat?: number | null;
+  } = {},
 ): CompanionState {
   if (CHARACTERS[character].type !== "traveller") {
     throw new Error(`${character} is not a traveller`);
@@ -988,12 +1119,18 @@ export function addTraveller(
     diedTonight: false,
     alignment,
   };
-  const next: CompanionState = { ...state, players: [...state.players, player] };
+  let next: CompanionState = { ...state, players: [...state.players, player] };
+  if (opts.afterSeat !== undefined) {
+    const order = orderMoving(next, player.seat, opts.afterSeat);
+    if (order) next = reorderSeats(next, order);
+  }
+  const seat = next.players.findIndex((p) => p.name === name && p.character === character);
+  const n = next.players.length;
+  const left = next.players[(seat - 1 + n) % n];
+  const right = next.players[(seat + 1) % n];
   return logNow(
     next,
-    `${name} joins town as the ${CHARACTERS[character].name} (${alignment}) — seated between ${
-      state.players[state.players.length - 1].name
-    } and ${state.players[0].name}.`,
+    `${name} joins town as the ${CHARACTERS[character].name} (${alignment}) — seated between ${left.name} and ${right.name}.`,
   );
 }
 
@@ -1090,7 +1227,7 @@ export function executeScapegoatInstead(state: CompanionState, savedSeat: number
   if (!scapegoat) return state;
   let next = logNow(state, `The Scapegoat is executed in place of ${nameAt(state, savedSeat)}.`);
   next = kill(next, scapegoat.seat, "execution");
-  return next;
+  return settleExecution(state, next, scapegoat.seat);
 }
 
 export function spendGhostVote(state: CompanionState, seat: number): CompanionState {
@@ -1105,12 +1242,70 @@ export function restoreGhostVote(state: CompanionState, seat: number): Companion
   return mapPlayer(state, seat, (x) => ({ ...x, ghostVote: true }));
 }
 
+/**
+ * The tokens a tallied vote consumes: each dead voter's ghost vote, and one
+ * of the Beggar's donated tokens per Beggar vote. Under the Voudon the dead
+ * vote freely and spend nothing.
+ */
+export function spendVoteTokens(state: CompanionState, voters: readonly number[]): CompanionState {
+  if (voudonActive(state)) return state;
+  const spent: string[] = [];
+  let next: CompanionState = {
+    ...state,
+    players: state.players.map((p) => {
+      if (!voters.includes(p.seat)) return p;
+      if (!p.alive && p.ghostVote) {
+        spent.push(`${p.name} (ghost vote)`);
+        return { ...p, ghostVote: false };
+      }
+      if (p.alive && p.character === "beggar" && (p.beggarTokens ?? 0) > 0) {
+        spent.push(`${p.name} (Beggar token)`);
+        return { ...p, beggarTokens: (p.beggarTokens ?? 0) - 1 };
+      }
+      return p;
+    }),
+  };
+  if (spent.length > 0) next = logNow(next, `Vote tokens spent: ${spent.join(", ")}.`);
+  return next;
+}
+
 export function markAbilityUsed(state: CompanionState, seat: number): CompanionState {
   return mapPlayer(state, seat, (x) => ({ ...x, usedAbility: true }));
 }
 
 export function setNote(state: CompanionState, seat: number, note: string): CompanionState {
   return mapPlayer(state, seat, (x) => ({ ...x, note: note || undefined }));
+}
+
+/**
+ * Book what the Storyteller told a player tonight (next to the truth). One
+ * entry per night: recording again tonight corrects the earlier one.
+ */
+export function recordInfoGiven(
+  state: CompanionState,
+  seat: number,
+  told: string,
+  truth?: string,
+): CompanionState {
+  if (state.phase.kind !== "night") return state;
+  const night = state.phase.night;
+  const p = playerAt(state, seat);
+  const entry = { night, told, ...(truth !== undefined ? { truth } : {}) };
+  const kept = (p.infoGiven ?? []).filter((e) => e.night !== night);
+  const next = mapPlayer(state, seat, (x) => ({ ...x, infoGiven: [...kept, entry] }));
+  const as = CHARACTERS[wakeCharacter(p)].name;
+  const truthNote = truth !== undefined && truth !== told ? ` (true: ${truth})` : "";
+  return logNow(next, `Told ${p.name} (${as}): ${told}${truthNote}.`);
+}
+
+/** What this player was told tonight, if recorded. */
+export function infoGivenTonight(
+  state: CompanionState,
+  seat: number,
+): { told: string; truth?: string } | undefined {
+  if (state.phase.kind !== "night") return undefined;
+  const night = state.phase.night;
+  return playerAt(state, seat).infoGiven?.find((e) => e.night === night);
 }
 
 /**
@@ -1152,17 +1347,72 @@ export function recordDemonKill(
   outcome: "dies" | "safe",
   note?: string,
 ): CompanionState {
-  const demonName = CHARACTERS[demonPlayer(state)?.character ?? "imp"].name;
+  const demon = demonPlayer(state);
+  const demonName = CHARACTERS[demon?.character ?? "imp"].name;
   const targetName = nameAt(state, target);
+  let next = state;
   if (outcome === "safe") {
-    return logNow(
-      state,
+    next = logNow(
+      next,
       `The ${demonName} chose ${targetName} — no one died${note ? ` (${note})` : ""}.`,
     );
+  } else {
+    next = kill(next, target, "demon");
+    if (note) next = logNow(next, note);
   }
-  let next = kill(state, target, "demon");
-  if (note) next = logNow(next, note);
+  return recordDemonChoice(next, demon, target);
+}
+
+/**
+ * Book one of the Demon's picks tonight. The Demon's wake step is done once
+ * it has made every pick its ability grants (Shabaloth two, a charged Po
+ * three, everyone else one) — the wizard reads that here, never from React
+ * state, so a tab switch or a refresh can't re-offer the attack.
+ */
+function recordDemonChoice(
+  state: CompanionState,
+  demon: CompanionPlayer | undefined,
+  target: number,
+): CompanionState {
+  if (state.phase.kind !== "night") return state;
+  const demonChoices = [...state.nightProgress.demonChoices, target];
+  let next: CompanionState = {
+    ...state,
+    nightProgress: { ...state.nightProgress, demonChoices },
+  };
+  if (demon && demonChoices.length >= demonAttacksWanted(state)) {
+    next = resolveWake(next, demon.seat);
+  }
   return next;
+}
+
+/** The Po chose no-one on an earlier night and hasn't attacked since. */
+export function poChargeActive(state: CompanionState): boolean {
+  const charged = state.poChargedNight;
+  if (charged === undefined) return false;
+  return state.phase.kind !== "night" || state.phase.night > charged;
+}
+
+/** How many players the Demon points at tonight. */
+export function demonAttacksWanted(state: CompanionState): number {
+  const demon = demonPlayer(state);
+  if (demon?.character === "shabaloth") return 2;
+  if (demon?.character === "po") return poChargeActive(state) ? 3 : 1;
+  return 1;
+}
+
+/** The Demon's attack progress tonight, for the wizard's demon step. */
+export function demonAttackStatus(state: CompanionState): {
+  wanted: number;
+  choices: number[];
+  done: boolean;
+} {
+  const wanted = demonAttacksWanted(state);
+  const choices = state.nightProgress.demonChoices;
+  // A Po that charged up chose no one — the step is done with zero picks.
+  const demon = demonPlayer(state);
+  const acted = demon !== undefined && state.nightProgress.resolved.includes(wakeId(demon.seat));
+  return { wanted, choices, done: acted || choices.length >= wanted };
 }
 
 // ── Bad Moon Rising night actions ─────────────────────────────────────
@@ -1199,13 +1449,15 @@ export function recordSailorChoice(
   targetSeat: number,
   whoIsDrunk: "sailor" | "target",
 ): CompanionState {
-  const next = logNow(state, `The Sailor went drinking with ${nameAt(state, targetSeat)}.`);
-  return setDrunk(next, whoIsDrunk === "sailor" ? sailorSeat : targetSeat, 1, "sailor");
+  let next = logNow(state, `The Sailor went drinking with ${nameAt(state, targetSeat)}.`);
+  next = setDrunk(next, whoIsDrunk === "sailor" ? sailorSeat : targetSeat, 1, "sailor");
+  return resolveWake(next, sailorSeat);
 }
 
 /** Innkeeper's nightly pick: two guests safe tonight, one of them drunk. */
 export function recordInnkeeperChoice(
   state: CompanionState,
+  innkeeperSeat: number,
   guests: [number, number],
   drunkSeat: number,
 ): CompanionState {
@@ -1220,7 +1472,8 @@ export function recordInnkeeperChoice(
     next,
     `The Innkeeper hosts ${guests.map((s) => nameAt(state, s)).join(" and ")} — safe tonight.`,
   );
-  return setDrunk(next, drunkSeat, 1, "innkeeper");
+  next = setDrunk(next, drunkSeat, 1, "innkeeper");
+  return resolveWake(next, innkeeperSeat);
 }
 
 /** Courtier's once-per-game pick: a CHARACTER is drunk for 3 nights & days. */
@@ -1229,7 +1482,7 @@ export function recordCourtierChoice(
   courtierSeat: number,
   character: CharacterId,
 ): CompanionState {
-  let next = markAbilityUsed(state, courtierSeat);
+  let next = resolveWake(markAbilityUsed(state, courtierSeat), courtierSeat);
   next = logNow(next, `The Courtier wines and dines the ${CHARACTERS[character].name}.`);
   if (abilityVoid(state, playerAt(state, courtierSeat))) {
     return logNow(next, "The Courtier's ability is void — nothing happens (and it is spent).");
@@ -1251,7 +1504,7 @@ export function recordGamblerGuess(
   const target = playerAt(state, targetSeat);
   const correct = target.character === guess;
   let next = logNow(
-    state,
+    resolveWake(state, gamblerSeat),
     `The Gambler guessed ${target.name} is the ${CHARACTERS[guess].name} — ${
       correct ? "correct" : "WRONG"
     }.`,
@@ -1271,6 +1524,7 @@ export function recordExorcistChoice(
   const target = playerAt(state, targetSeat);
   const exorcist = playerAt(state, exorcistSeat);
   let next = mapPlayer(state, exorcistSeat, (x) => ({ ...x, lastChoice: targetSeat }));
+  next = resolveWake(next, exorcistSeat);
   next = logNow(next, `The Exorcist chose ${target.name}.`);
   const isDemon =
     CHARACTERS[target.character].type === "demon" && (target.alive || target.registersDead);
@@ -1296,7 +1550,7 @@ export function recordAdvocateChoice(
   if (abilityVoid(state, advocate)) {
     const next = mapPlayer(state, advocateSeat, (x) => ({ ...x, lastChoice: targetSeat }));
     return logNow(
-      next,
+      resolveWake(next, advocateSeat),
       `The Devil's Advocate chose ${nameAt(state, targetSeat)} — no protection (ability void).`,
     );
   }
@@ -1309,7 +1563,7 @@ export function recordAdvocateChoice(
   };
   next = mapPlayer(next, advocateSeat, (x) => ({ ...x, lastChoice: targetSeat }));
   return logNow(
-    next,
+    resolveWake(next, advocateSeat),
     `The Devil's Advocate protects ${nameAt(state, targetSeat)} — they survive execution tomorrow.`,
   );
 }
@@ -1320,7 +1574,7 @@ export function recordAssassinKill(
   assassinSeat: number,
   targetSeat: number,
 ): CompanionState {
-  let next = markAbilityUsed(state, assassinSeat);
+  let next = resolveWake(markAbilityUsed(state, assassinSeat), assassinSeat);
   const assassin = playerAt(state, assassinSeat);
   if (abilityVoid(state, assassin)) {
     next = logNow(next, "The Assassin strikes — but their ability is void. Nothing happens.");
@@ -1331,8 +1585,12 @@ export function recordAssassinKill(
 }
 
 /** Godfather's revenge kill the night after an Outsider died. */
-export function recordGodfatherKill(state: CompanionState, targetSeat: number): CompanionState {
-  return kill(state, targetSeat, "godfather");
+export function recordGodfatherKill(
+  state: CompanionState,
+  godfatherSeat: number,
+  targetSeat: number,
+): CompanionState {
+  return kill(resolveWake(state, godfatherSeat), targetSeat, "godfather");
 }
 
 /** Professor's once-per-game resurrection: dead Townsfolk only. */
@@ -1341,7 +1599,7 @@ export function recordProfessorChoice(
   professorSeat: number,
   targetSeat: number,
 ): CompanionState {
-  let next = markAbilityUsed(state, professorSeat);
+  let next = resolveWake(markAbilityUsed(state, professorSeat), professorSeat);
   const target = playerAt(state, targetSeat);
   const professor = playerAt(state, professorSeat);
   next = logNow(next, `The Professor works on ${target.name}…`);
@@ -1363,21 +1621,47 @@ export function setGrandchild(
   const next = mapPlayer(state, grandmotherSeat, (x) => ({ ...x, grandchild: childSeat }));
   const child = playerAt(state, childSeat);
   return logNow(
-    next,
+    resolveWake(next, grandmotherSeat),
     `The Grandmother learns their grandchild: ${child.name} (${CHARACTERS[child.character].name}).`,
   );
 }
 
-/** The Pukka's venom: the newly chosen player is poisoned. */
+/**
+ * The Pukka's nightly pick, in the order the ability text fixes: "choose a
+ * player: they are poisoned. The previously poisoned player dies, then
+ * becomes healthy." Last night's victim dies FIRST (the edition's protections
+ * — Innkeeper, sober Sailor, Tea Lady, Fool — bounce the kill inside `kill`
+ * and the venom is purged either way), then the new target is poisoned. A
+ * voided Pukka goes through `recordDemonKill(…, "safe")` instead: it poisons
+ * no one and last night's victim keeps carrying the venom.
+ */
 export function recordPukkaPoison(state: CompanionState, targetSeat: number): CompanionState {
-  let next = mapPlayer(state, targetSeat, (x) => ({ ...x, poisoned: true }));
-  next = { ...next, pukkaVictim: targetSeat };
-  return logNow(next, `The Pukka poisons ${nameAt(state, targetSeat)}.`);
+  const demon = demonPlayer(state);
+  let next = state;
+  const previous = state.pukkaVictim;
+  if (previous !== undefined) {
+    next = kill(next, previous, "demon");
+    if (playerAt(next, previous).alive) {
+      next = mapPlayer(next, previous, (x) => ({ ...x, poisoned: false }));
+      next = logNow(next, `${nameAt(state, previous)} shakes off the Pukka's venom.`);
+    }
+  }
+  const target = playerAt(next, targetSeat);
+  if (target.alive) {
+    next = mapPlayer(next, targetSeat, (x) => ({ ...x, poisoned: true }));
+    next = { ...next, pukkaVictim: targetSeat };
+    next = logNow(next, `The Pukka poisons ${target.name}.`);
+  } else {
+    next = { ...next, pukkaVictim: undefined };
+    next = logNow(next, `The Pukka chose ${target.name} — already dead, no venom.`);
+  }
+  return recordDemonChoice(next, demon, targetSeat);
 }
 
 /**
- * Resolve last night's Pukka victim: they die (then become healthy), or they
- * were protected — in which case the venom is purged and they stay alive.
+ * The exorcised Pukka's leftover: it doesn't wake, but last night's victim
+ * still dies (then becomes healthy) — or was protected, in which case the
+ * venom is purged and they stay alive. The Storyteller's call either way.
  */
 export function resolvePukkaVictim(
   state: CompanionState,
@@ -1396,29 +1680,29 @@ export function resolvePukkaVictim(
     next = logNow(next, `${nameAt(state, victimSeat)} shakes off the Pukka's venom — no death.`);
   }
   if (next.pukkaVictim === victimSeat) next = { ...next, pukkaVictim: undefined };
-  return next;
+  return markResolved(next, `pukka-victim:${victimSeat}`);
 }
 
-/** Remember the Shabaloth's picks tonight — one may be regurgitated tomorrow. */
-export function setShabalothVictims(state: CompanionState, seats: number[]): CompanionState {
-  return { ...state, shabalothVictims: seats };
-}
-
-/** The Shabaloth vomits a previously chosen player back to life. */
+/**
+ * The Shabaloth vomits one of last night's picks back to life. Once per
+ * night: the menu (`shabalothVictims`) is consumed by the choice.
+ */
 export function regurgitate(state: CompanionState, seat: number): CompanionState {
   let next = revive(state, seat);
   next = logNow(next, `${nameAt(state, seat)} was regurgitated by the Shabaloth.`);
-  return next;
+  return { ...next, shabalothVictims: undefined };
 }
 
-/** The Po holds back tonight — three attacks tomorrow. */
+/**
+ * The Po holds back tonight — three attacks the next time it wakes. The
+ * charge is consumed at the dawn after a night the Po pointed at someone.
+ */
 export function recordPoCharge(state: CompanionState): CompanionState {
-  const next: CompanionState = { ...state, poCharged: true };
-  return logNow(next, "The Po chose no one — it will make THREE attacks next time it wakes.");
-}
-
-export function clearPoCharge(state: CompanionState): CompanionState {
-  return { ...state, poCharged: undefined };
+  if (state.phase.kind !== "night") return state;
+  const demon = demonPlayer(state);
+  let next: CompanionState = { ...state, poChargedNight: state.phase.night };
+  next = logNow(next, "The Po chose no one — it will make THREE attacks next time it wakes.");
+  return demon ? resolveWake(next, demon.seat) : next;
 }
 
 /**
@@ -1446,14 +1730,50 @@ export function setApprenticeAbility(
 ): CompanionState {
   const next = mapPlayer(state, seat, (x) => ({ ...x, apprenticeAbility: character }));
   return logNow(
-    next,
+    markResolved(next, `apprentice:${seat}`),
     `${nameAt(state, seat)} (Apprentice) gains the ${CHARACTERS[character].name}'s ability.`,
   );
 }
 
 /** What the Lunatic "did" tonight — shown to the real Demon at their step. */
 export function setLunaticChoices(state: CompanionState, seats: number[]): CompanionState {
-  return { ...state, lunaticChoices: seats };
+  const lunatic = state.players.find((p) => p.alive && p.character === "lunatic");
+  const next: CompanionState = { ...state, lunaticChoices: seats };
+  return lunatic ? resolveWake(next, lunatic.seat) : next;
+}
+
+// ── Storyteller kill reminders (BMR night steps that don't wake anyone) ──
+
+/** The Gossip spoke true today — the Storyteller's chosen player dies. */
+export function recordGossipKill(state: CompanionState, targetSeat: number): CompanionState {
+  return markResolved(kill(state, targetSeat, "gossip"), "gossip-kill");
+}
+
+/** The Tinker's random death, at the Storyteller's whim. */
+export function recordTinkerDeath(state: CompanionState, tinkerSeat: number): CompanionState {
+  return markResolved(kill(state, tinkerSeat, "tinker"), `tinker:${tinkerSeat}`);
+}
+
+/** The Moonchild's curse resolves: the cursed player dies (if good), or nothing happens. */
+export function resolveMoonchildCurse(state: CompanionState, dies: boolean): CompanionState {
+  const target = state.moonchildTarget;
+  if (target === undefined) return state;
+  let next = dies
+    ? kill(state, target, "moonchild")
+    : logNow(state, `The Moonchild's curse on ${nameAt(state, target)} does nothing.`);
+  next = { ...next, moonchildTarget: undefined, moonchildCurseVoid: undefined };
+  return markResolved(next, `moonchild-kill:${target}`);
+}
+
+/** The Demon killed the grandchild — the Grandmother dies of grief. */
+export function recordGrandmotherDeath(
+  state: CompanionState,
+  grandmotherSeat: number,
+): CompanionState {
+  return markResolved(
+    kill(state, grandmotherSeat, "grandmother"),
+    `grandmother-dies:${grandmotherSeat}`,
+  );
 }
 
 // ── Bad Moon Rising day actions ───────────────────────────────────────
@@ -1471,10 +1791,13 @@ export function recordGossipStatement(state: CompanionState, wasTrue: boolean): 
 
 /** The dead Moonchild publicly curses an alive player. */
 export function recordMoonchildChoice(state: CompanionState, targetSeat: number): CompanionState {
+  const moonchild =
+    state.moonchildPending !== undefined ? playerAt(state, state.moonchildPending) : undefined;
   const next: CompanionState = {
     ...state,
     moonchildPending: undefined,
     moonchildTarget: targetSeat,
+    moonchildCurseVoid: moonchild && abilityVoid(state, moonchild) ? true : undefined,
   };
   return logNow(
     next,
@@ -1507,7 +1830,7 @@ export function recordJudgeRuling(
     next,
     `The Judge rules: ${nameAt(state, nomineeSeat)}'s execution ${passes ? "SUCCEEDS" : "fails"}.`,
   );
-  if (passes) return kill(next, nomineeSeat, "execution");
+  if (passes) return settleExecution(state, kill(next, nomineeSeat, "execution"), nomineeSeat);
   const kept = next.day.nominations.filter((n) => n.nominee !== nomineeSeat);
   const highest = Math.max(0, ...kept.filter((n) => n.votes >= n.required).map((n) => n.votes));
   return {
@@ -1521,35 +1844,50 @@ export function recordJudgeRuling(
 }
 
 /**
- * The Matron swaps two players' chairs. Players keep their seat NUMBERS (the
- * app's stable identity) but exchange positions in the circle, so all
- * neighbour-based abilities follow the physical table.
+ * Re-seat the whole circle. `order[i]` is the CURRENT seat number of the
+ * player who will sit at index `i` afterwards — a permutation of every seat.
+ * Players keep their identity and their own state; seat numbers follow the
+ * chairs, and every stored seat reference (grandchild, Butler's master, the
+ * night's progress, today's nominations…) is remapped, so neighbour-based
+ * abilities follow the physical table.
  */
-export function swapSeats(state: CompanionState, a: number, b: number): CompanionState {
-  if (a === b) return state;
-  const players = [...state.players];
-  const ia = players.findIndex((p) => p.seat === a);
-  const ib = players.findIndex((p) => p.seat === b);
-  if (ia === -1 || ib === -1) return state;
-  const nameA = players[ia].name;
-  const nameB = players[ib].name;
-  // Swap positions AND seat numbers, then remap every stored seat reference,
-  // so each player's own state travels with them to the new chair.
-  const remap = (s: number | undefined) => (s === a ? b : s === b ? a : s);
-  const swapped = players.map((p, i) => {
-    const moved = i === ia ? players[ib] : i === ib ? players[ia] : p;
+export function reorderSeats(state: CompanionState, order: readonly number[]): CompanionState {
+  const seats = state.players.map((p) => p.seat);
+  if (order.length !== seats.length || new Set(order).size !== seats.length) {
+    throw new Error("reorderSeats needs a permutation of every seat");
+  }
+  if (order.every((seat, i) => seat === seats[i])) return state;
+  const byOld = new Map(state.players.map((p) => [p.seat, p] as const));
+  const newIndex = new Map(order.map((seat, i) => [seat, i] as const));
+  const remap = (s: number | undefined) => (s === undefined ? undefined : newIndex.get(s));
+  const at = (s: number) => remap(s) as number;
+  const remapAll = (xs: number[]) => xs.map(at);
+  const remapId = (id: NightStepId): NightStepId => {
+    const [kind, seat] = id.split(":");
+    return seat === undefined ? id : `${kind}:${at(Number(seat))}`;
+  };
+  const players = order.map((oldSeat, i) => {
+    const p = byOld.get(oldSeat);
+    if (!p) throw new Error(`no player in seat ${oldSeat}`);
     return {
-      ...moved,
-      seat: state.players[i].seat,
-      grandchild: remap(moved.grandchild),
-      butlerMaster: remap(moved.butlerMaster),
-      lastChoice: remap(moved.lastChoice),
+      ...p,
+      seat: i,
+      grandchild: remap(p.grandchild),
+      butlerMaster: remap(p.butlerMaster),
+      lastChoice: remap(p.lastChoice),
     };
   });
-  const remapAll = (xs: number[]) => xs.map((s) => remap(s) as number);
-  let next: CompanionState = {
+  return {
     ...state,
-    players: swapped,
+    players,
+    nightProgress: {
+      cursor: state.nightProgress.cursor && remapId(state.nightProgress.cursor),
+      resolved: state.nightProgress.resolved.map(remapId),
+      demonChoices: remapAll(state.nightProgress.demonChoices),
+    },
+    lastNight: state.lastNight
+      ? { ...state.lastNight, died: remapAll(state.lastNight.died) }
+      : undefined,
     pukkaVictim: remap(state.pukkaVictim),
     moonchildPending: remap(state.moonchildPending),
     moonchildTarget: remap(state.moonchildTarget),
@@ -1557,7 +1895,7 @@ export function swapSeats(state: CompanionState, a: number, b: number): Companio
     shabalothVictims: state.shabalothVictims ? remapAll(state.shabalothVictims) : undefined,
     lunaticChoices: state.lunaticChoices ? remapAll(state.lunaticChoices) : undefined,
     lastExecution: state.lastExecution
-      ? { ...state.lastExecution, seat: remap(state.lastExecution.seat) as number }
+      ? { ...state.lastExecution, seat: at(state.lastExecution.seat) }
       : undefined,
     day: {
       ...state.day,
@@ -1565,17 +1903,66 @@ export function swapSeats(state: CompanionState, a: number, b: number): Companio
       nomineesUsed: remapAll(state.day.nomineesUsed),
       nominations: state.day.nominations.map((n) => ({
         ...n,
-        nominator: remap(n.nominator) as number,
-        nominee: remap(n.nominee) as number,
+        nominator: at(n.nominator),
+        nominee: at(n.nominee),
+        ...(n.voters ? { voters: remapAll(n.voters) } : {}),
       })),
       aboutToDie: state.day.aboutToDie
-        ? { ...state.day.aboutToDie, seat: remap(state.day.aboutToDie.seat) as number }
+        ? { ...state.day.aboutToDie, seat: at(state.day.aboutToDie.seat) }
         : undefined,
       executed: remap(state.day.executed),
     },
   };
-  next = logNow(next, `${nameA} and ${nameB} swap seats.`);
-  return next;
+}
+
+/**
+ * The Matron swaps two players' chairs (or the Storyteller fixes a
+ * mis-entered seating order).
+ */
+export function swapSeats(state: CompanionState, a: number, b: number): CompanionState {
+  if (a === b) return state;
+  const seats = state.players.map((p) => p.seat);
+  if (!seats.includes(a) || !seats.includes(b)) return state;
+  const order = seats.map((s) => (s === a ? b : s === b ? a : s));
+  const next = reorderSeats(state, order);
+  return logNow(next, `${nameAt(state, a)} and ${nameAt(state, b)} swap seats.`);
+}
+
+/**
+ * Move one player to the chair right after `afterSeat` (clockwise), or to
+ * the first chair when `afterSeat` is null. Everyone else shuffles round.
+ */
+export function moveSeat(
+  state: CompanionState,
+  seat: number,
+  afterSeat: number | null,
+): CompanionState {
+  const order = orderMoving(state, seat, afterSeat);
+  if (!order) return state;
+  const next = reorderSeats(state, order);
+  const at = order.indexOf(seat);
+  const n = order.length;
+  return logNow(
+    next,
+    `${nameAt(state, seat)} moves to sit between ${nameAt(state, order[(at - 1 + n) % n])} and ${nameAt(
+      state,
+      order[(at + 1) % n],
+    )}.`,
+  );
+}
+
+/** The seat order with `seat` moved right after `afterSeat`; undefined when that is a no-op. */
+function orderMoving(
+  state: CompanionState,
+  seat: number,
+  afterSeat: number | null,
+): number[] | undefined {
+  if (seat === afterSeat) return undefined;
+  const rest = state.players.map((p) => p.seat).filter((s) => s !== seat);
+  const at = afterSeat === null ? 0 : rest.indexOf(afterSeat) + 1;
+  if (afterSeat !== null && at === 0) return undefined;
+  const order = [...rest.slice(0, at), seat, ...rest.slice(at)];
+  return order.every((s, i) => s === state.players[i].seat) ? undefined : order;
 }
 
 // ── Day phase: nominations & voting ───────────────────────────────────
@@ -1679,7 +2066,7 @@ export function recordVirginTrigger(
       nomineesUsed: [...next.day.nomineesUsed, virginSeat],
     },
   };
-  return kill(next, nominator, "virgin");
+  return settleExecution(state, kill(next, nominator, "virgin"), nominator);
 }
 
 /**
@@ -1706,17 +2093,61 @@ export function recordSlayerShot(
   return next;
 }
 
-/** Execute whoever is currently about to die. */
+/**
+ * What follows from WHO was executed today, whether or not they died of it:
+ * a sober Saint dying by execution loses the game for good (TB), and on the
+ * Mastermind's final day the executed player's team loses. `before` is the
+ * state the execution was booked from (poison is cleared by death, so the
+ * Saint's sobriety is read there).
+ */
+function settleExecution(
+  before: CompanionState,
+  after: CompanionState,
+  executedSeat: number,
+): CompanionState {
+  if (after.phase.kind === "ended") return after;
+  if (saintExecuted(before, executedSeat) && !playerAt(after, executedSeat).alive) {
+    return endGame(after, "evil", "the Saint was executed");
+  }
+  if (before.mastermindExtraDay) {
+    const winner = mastermindVerdict(before, executedSeat);
+    return endGame(
+      after,
+      winner,
+      winner === "good"
+        ? "an evil player was executed on the Mastermind's final day"
+        : "a good player was executed on the Mastermind's final day",
+    );
+  }
+  return after;
+}
+
+/** Execute whoever is currently about to die (and settle what hangs on it). */
 export function executeAboutToDie(state: CompanionState): CompanionState {
   const target = state.day.aboutToDie;
   if (!target) return state;
-  return kill(state, target.seat, "execution");
+  return settleExecution(state, kill(state, target.seat, "execution"), target.seat);
 }
 
-/** End the day without (or after) an execution and head into night. */
+/**
+ * The Pacifist's mercy: the player about to die is executed but lives. Still
+ * today's one execution — and on the Mastermind's day their team still
+ * answers for it.
+ */
+export function spareByPacifist(state: CompanionState, seat: number): CompanionState {
+  return settleExecution(state, survivedExecution(state, seat, "the Pacifist spares them"), seat);
+}
+
+/**
+ * End the day and head into night. On the Mastermind's final day a day
+ * WITHOUT an execution means good wins — the Demon was already dead.
+ */
 export function endDay(state: CompanionState): CompanionState {
   if (state.phase.kind !== "day") return state;
   const executed = state.day.executed !== undefined;
+  if (!executed && state.mastermindExtraDay) {
+    return endGame(state, "good", "no one was executed on the Mastermind's final day");
+  }
   let next = state;
   if (!executed) next = logNow(next, "The day ends without an execution.");
   return beginNight(next);

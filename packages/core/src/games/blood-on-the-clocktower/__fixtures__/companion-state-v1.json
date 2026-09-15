@@ -1,0 +1,443 @@
+{
+  "tbNight": {
+    "version": 1,
+    "script": "trouble-brewing",
+    "players": [
+      {
+        "seat": 0,
+        "name": "Alice",
+        "character": "imp",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 1,
+        "name": "Bob",
+        "character": "poisoner",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 2,
+        "name": "Cara",
+        "character": "empath",
+        "alive": false,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": true,
+        "diedByDemonTonight": true
+      },
+      {
+        "seat": 3,
+        "name": "Dan",
+        "character": "fortune-teller",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": true,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 4,
+        "name": "Eve",
+        "character": "monk",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 5,
+        "name": "Finn",
+        "character": "undertaker",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 6,
+        "name": "Gwen",
+        "character": "soldier",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      }
+    ],
+    "demonBluffs": ["chef", "slayer", "saint"],
+    "phase": {
+      "kind": "night",
+      "night": 2
+    },
+    "nightStep": 2,
+    "day": {
+      "nominatorsUsed": [],
+      "nomineesUsed": [],
+      "nominations": [],
+      "highestVotes": 0,
+      "deaths": 0
+    },
+    "storyteller": "Zed",
+    "log": [
+      {
+        "id": 1,
+        "when": "Setup",
+        "text": "Characters dealt. Zed runs the game as the Storyteller."
+      },
+      {
+        "id": 2,
+        "when": "Night 1",
+        "text": "The first night begins."
+      },
+      {
+        "id": 3,
+        "when": "Day 1",
+        "text": "Dawn breaks — nobody died tonight."
+      },
+      {
+        "id": 4,
+        "when": "Day 1",
+        "text": "The day ends without an execution."
+      },
+      {
+        "id": 5,
+        "when": "Night 2",
+        "text": "Night falls."
+      },
+      {
+        "id": 6,
+        "when": "Night 2",
+        "text": "Dan is poisoned tonight and tomorrow day."
+      },
+      {
+        "id": 7,
+        "when": "Night 2",
+        "text": "Cara killed by the Demon."
+      }
+    ],
+    "nextLogId": 8,
+    "nightZombuulActs": true
+  },
+  "bmrDay": {
+    "version": 1,
+    "script": "bad-moon-rising",
+    "players": [
+      {
+        "seat": 0,
+        "name": "Alice",
+        "character": "po",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 1,
+        "name": "Bob",
+        "character": "godfather",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 2,
+        "name": "Cara",
+        "character": "sailor",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 3,
+        "name": "Dan",
+        "character": "chambermaid",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 4,
+        "name": "Eve",
+        "character": "innkeeper",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 5,
+        "name": "Finn",
+        "character": "tea-lady",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 6,
+        "name": "Gwen",
+        "character": "fool",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 7,
+        "name": "Hana",
+        "character": "gossip",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      }
+    ],
+    "demonBluffs": ["innkeeper", "courtier", "gossip"],
+    "phase": {
+      "kind": "day",
+      "day": 2
+    },
+    "nightStep": 0,
+    "day": {
+      "nominatorsUsed": [],
+      "nomineesUsed": [],
+      "nominations": [],
+      "highestVotes": 0,
+      "deaths": 0
+    },
+    "log": [
+      {
+        "id": 1,
+        "when": "Setup",
+        "text": "Characters dealt."
+      },
+      {
+        "id": 2,
+        "when": "Night 1",
+        "text": "The first night begins."
+      },
+      {
+        "id": 3,
+        "when": "Day 1",
+        "text": "Dawn breaks — nobody died tonight."
+      },
+      {
+        "id": 4,
+        "when": "Day 1",
+        "text": "The day ends without an execution."
+      },
+      {
+        "id": 5,
+        "when": "Night 2",
+        "text": "Night falls."
+      },
+      {
+        "id": 6,
+        "when": "Night 2",
+        "text": "The Po chose no one — it will make THREE attacks next time it wakes."
+      },
+      {
+        "id": 7,
+        "when": "Day 2",
+        "text": "Dawn breaks — nobody died tonight."
+      }
+    ],
+    "nextLogId": 8,
+    "poCharged": true
+  },
+  "preBmr": {
+    "version": 1,
+    "players": [
+      {
+        "seat": 0,
+        "name": "Alice",
+        "character": "imp",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 1,
+        "name": "Bob",
+        "character": "poisoner",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 2,
+        "name": "Cara",
+        "character": "empath",
+        "alive": false,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": true,
+        "diedByDemonTonight": true
+      },
+      {
+        "seat": 3,
+        "name": "Dan",
+        "character": "fortune-teller",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": true,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 4,
+        "name": "Eve",
+        "character": "monk",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 5,
+        "name": "Finn",
+        "character": "undertaker",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      },
+      {
+        "seat": 6,
+        "name": "Gwen",
+        "character": "soldier",
+        "alive": true,
+        "ghostVote": true,
+        "poisoned": false,
+        "protectedTonight": false,
+        "redHerring": false,
+        "usedAbility": false,
+        "diedTonight": false
+      }
+    ],
+    "demonBluffs": ["chef", "slayer", "saint"],
+    "phase": {
+      "kind": "night",
+      "night": 2
+    },
+    "nightStep": 2,
+    "day": {
+      "nominatorsUsed": [],
+      "nomineesUsed": [],
+      "nominations": [],
+      "highestVotes": 0,
+      "deaths": 0
+    },
+    "storyteller": "Zed",
+    "log": [
+      {
+        "id": 1,
+        "when": "Setup",
+        "text": "Characters dealt. Zed runs the game as the Storyteller."
+      },
+      {
+        "id": 2,
+        "when": "Night 1",
+        "text": "The first night begins."
+      },
+      {
+        "id": 3,
+        "when": "Day 1",
+        "text": "Dawn breaks — nobody died tonight."
+      },
+      {
+        "id": 4,
+        "when": "Day 1",
+        "text": "The day ends without an execution."
+      },
+      {
+        "id": 5,
+        "when": "Night 2",
+        "text": "Night falls."
+      },
+      {
+        "id": 6,
+        "when": "Night 2",
+        "text": "Dan is poisoned tonight and tomorrow day."
+      },
+      {
+        "id": 7,
+        "when": "Night 2",
+        "text": "Cara killed by the Demon."
+      }
+    ],
+    "nextLogId": 8,
+    "nightZombuulActs": true
+  }
+}

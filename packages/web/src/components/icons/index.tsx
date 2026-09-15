@@ -510,3 +510,53 @@ export function CameraIcon({ className = "h-4 w-4" }: IconProps) {
     </svg>
   );
 }
+
+/** Eye with a slash — "hidden" / hand-over mode. Pairs with EyeIcon. */
+export function EyeOffIcon({ className = "h-3.5 w-3.5" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={2.2}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M3 3l18 18" />
+      <path d="M10.6 5.3A10.8 10.8 0 0 1 12 5c6.5 0 10 7 10 7a17.6 17.6 0 0 1-3.2 4.1" />
+      <path d="M6.6 6.6A16.9 16.9 0 0 0 2 12s3.5 7 10 7a10 10 0 0 0 4.4-1" />
+      <path d="M9.9 9.9a3 3 0 0 0 4.2 4.2" />
+    </svg>
+  );
+}
+
+/** Counter-clockwise arrow — Undo. */
+export function UndoIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={2.2}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M9 14 4 9l5-5" />
+      <path d="M4 9h9a6 6 0 0 1 0 12h-3" />
+    </svg>
+  );
+}
+
+/** Clockwise arrow — Redo. */
+export function RedoIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={2.2}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="m15 14 5-5-5-5" />
+      <path d="M20 9h-9a6 6 0 0 0 0 12h3" />
+    </svg>
+  );
+}

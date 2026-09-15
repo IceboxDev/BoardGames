@@ -17,8 +17,11 @@ import {
   exileVotesRequired,
   isTraveller,
   kill,
+  moveSeat,
   nameAt,
+  playerAt,
   removeTraveller,
+  reorderSeats,
   restoreGhostVote,
   revive,
   setApprenticeAbility,
@@ -29,20 +32,26 @@ import {
   spendGhostVote,
   swapSeats,
 } from "@boardgames/core/games/blood-on-the-clocktower/companion";
-import { useId, useState } from "react";
+import { Reorder, useDragControls } from "framer-motion";
+import { useEffect, useId, useRef, useState } from "react";
+import { GripVerticalIcon } from "../../../components/icons";
 import {
   Button,
   Chip,
   Field,
   Input,
+  MicroLabel,
   Modal,
   ModalBody,
   Select,
   Textarea,
 } from "../../../components/ui";
-import type { UpdateState } from "./Companion";
+import { RADIUS_CARD_MD } from "../../../components/ui/radii";
+import { cn } from "../../../lib/cn";
 import { CharacterIcon, Panel, StatusChips } from "./common";
 import { TYPE_TEXT, trueCharacterLabel } from "./labels";
+import type { UpdateState } from "./store";
+import { Callout, SeatAfterSelect } from "./ui";
 
 /**
  * The Grimoire: every seat's true character and states, Storyteller's eyes
@@ -57,62 +66,42 @@ export default function GrimoirePanel({
   update: UpdateState;
 }) {
   const [openSeat, setOpenSeat] = useState<number | undefined>();
+  // The list follows the drag live (Reorder needs the intermediate order);
+  // the circle itself is re-seated once, when the handle is released.
+  const [order, setOrder] = useState(state.players);
+  const orderRef = useRef(order);
+  orderRef.current = order;
+  useEffect(() => setOrder(state.players), [state.players]);
+  const commitOrder = () => {
+    const seats = orderRef.current.map((p) => p.seat);
+    if (seats.some((seat, i) => seat !== state.players[i].seat)) {
+      update((s) => reorderSeats(s, seats));
+    }
+  };
 
   return (
     <>
       <Panel tone="danger" title="Storyteller's eyes only">
-        <ul className="flex flex-col gap-1">
-          {state.players.map((p) => (
-            <li key={p.seat}>
-              <Button
-                variant="plain"
-                bleed
-                onClick={() => setOpenSeat(p.seat)}
-                className="flex min-h-11 w-full flex-col gap-0.5 rounded-lg border border-line-soft bg-surface-950/50 px-2 py-1.5 text-left transition hover:border-line-strong"
-              >
-                <span className="flex w-full items-center justify-between gap-2">
-                  <span
-                    className={`min-w-0 truncate text-sm font-semibold ${
-                      p.alive ? "text-fg-primary" : "text-fg-muted line-through"
-                    }`}
-                  >
-                    {p.seat + 1}. {p.name}
-                  </span>
-                  <span className="flex shrink-0 items-center gap-1.5">
-                    <CharacterIcon
-                      character={p.character}
-                      size="sm"
-                      className={p.alive ? "" : "opacity-40 saturate-50"}
-                    />
-                    <span
-                      className={`text-sm font-semibold ${TYPE_TEXT[CHARACTERS[p.character].type]}`}
-                    >
-                      {trueCharacterLabel(p)}
-                    </span>
-                  </span>
-                </span>
-                <span className="flex w-full items-center justify-between gap-2">
-                  <StatusChips p={p} />
-                  {p.butlerMaster !== undefined && (
-                    <span className="text-3xs text-fg-muted">
-                      master: {nameAt(state, p.butlerMaster)}
-                    </span>
-                  )}
-                  {p.grandchild !== undefined && (
-                    <span className="text-3xs text-fg-muted">
-                      grandchild: {nameAt(state, p.grandchild)}
-                    </span>
-                  )}
-                  {p.note && (
-                    <span className="min-w-0 truncate text-3xs text-fg-muted">📝 {p.note}</span>
-                  )}
-                </span>
-              </Button>
-            </li>
+        <Reorder.Group
+          as="ul"
+          axis="y"
+          values={order}
+          onReorder={setOrder}
+          className="flex flex-col gap-1"
+        >
+          {order.map((p) => (
+            <GrimoireRow
+              key={p.seat}
+              state={state}
+              player={p}
+              onOpen={() => setOpenSeat(p.seat)}
+              onDrop={commitOrder}
+            />
           ))}
-        </ul>
+        </Reorder.Group>
         <p className="mt-2 text-xs text-fg-muted">
-          Seats are the table's clockwise order. Tap a player for manual overrides.
+          Seats are the table's clockwise order — drag the handle to match the chairs. Tap a player
+          for manual overrides.
         </p>
       </Panel>
       <TravellersPanel state={state} update={update} />
@@ -129,10 +118,86 @@ export default function GrimoirePanel({
   );
 }
 
+/** One Grimoire row: drag handle → seat → name, character, status marks. */
+function GrimoireRow({
+  state,
+  player: p,
+  onOpen,
+  onDrop,
+}: {
+  state: CompanionState;
+  player: CompanionPlayer;
+  onOpen: () => void;
+  onDrop: () => void;
+}) {
+  const controls = useDragControls();
+  return (
+    <Reorder.Item
+      value={p}
+      as="li"
+      dragListener={false}
+      dragControls={controls}
+      onDragEnd={onDrop}
+      whileDrag={{ scale: 1.02, zIndex: 10, boxShadow: "0 8px 24px rgba(0,0,0,0.55)" }}
+      className={cn(
+        RADIUS_CARD_MD,
+        "relative flex min-h-11 items-stretch border border-line-soft bg-surface-950/50 transition hover:border-line-strong",
+      )}
+    >
+      {/* Pointer-only affordance; touch-none so a touch drag doesn't scroll. */}
+      <div
+        aria-hidden="true"
+        onPointerDown={(e) => controls.start(e)}
+        className="flex w-7 shrink-0 cursor-grab touch-none select-none items-center justify-center text-fg-muted active:cursor-grabbing"
+      >
+        <GripVerticalIcon className="h-4 w-4" />
+      </div>
+      <Button
+        variant="plain"
+        bleed
+        onClick={onOpen}
+        className="flex min-h-11 min-w-0 flex-1 flex-col gap-0.5 py-1.5 pr-2 text-left"
+      >
+        <span className="flex w-full items-center justify-between gap-2">
+          <span
+            className={`min-w-0 truncate text-sm font-semibold ${
+              p.alive ? "text-fg-primary" : "text-fg-muted line-through"
+            }`}
+          >
+            {p.seat + 1}. {p.name}
+          </span>
+          <span className="flex shrink-0 items-center gap-1.5">
+            <CharacterIcon
+              character={p.character}
+              size="sm"
+              className={p.alive ? "" : "opacity-40 saturate-50"}
+            />
+            <span className={`text-sm font-semibold ${TYPE_TEXT[CHARACTERS[p.character].type]}`}>
+              {trueCharacterLabel(p)}
+            </span>
+          </span>
+        </span>
+        <span className="flex w-full items-center justify-between gap-2">
+          <StatusChips p={p} />
+          {p.butlerMaster !== undefined && (
+            <span className="text-3xs text-fg-muted">master: {nameAt(state, p.butlerMaster)}</span>
+          )}
+          {p.grandchild !== undefined && (
+            <span className="text-3xs text-fg-muted">
+              grandchild: {nameAt(state, p.grandchild)}
+            </span>
+          )}
+          {p.note && <span className="min-w-0 truncate text-3xs text-fg-muted">📝 {p.note}</span>}
+        </span>
+      </Button>
+    </Reorder.Item>
+  );
+}
+
 /**
  * Travellers join and leave mid-game (any day — or right at the start). The
  * character is rolled at random (rerollable, overridable); the alignment is
- * the Storyteller's secret pick.
+ * the Storyteller's secret pick, and the chair is picked as "after whom".
  */
 function TravellersPanel({ state, update }: { state: CompanionState; update: UpdateState }) {
   const inPlay = new Set(state.players.filter((p) => !p.left).map((p) => p.character));
@@ -140,6 +205,8 @@ function TravellersPanel({ state, update }: { state: CompanionState; update: Upd
   const [name, setName] = useState("");
   const [alignment, setAlignment] = useState<"good" | "evil">("good");
   const [rolled, setRolled] = useState<CharacterId | undefined>();
+  const [afterSeat, setAfterSeat] = useState<number | null>(state.players.at(-1)?.seat ?? null);
+  const fieldId = useId();
   const character = rolled && available.includes(rolled) ? rolled : available[0];
 
   function roll() {
@@ -153,7 +220,7 @@ function TravellersPanel({ state, update }: { state: CompanionState; update: Upd
     if (state.players.some((p) => !p.left && p.name.toLowerCase() === trimmed.toLowerCase())) {
       return;
     }
-    update((s) => addTraveller(s, trimmed, character, alignment));
+    update((s) => addTraveller(s, trimmed, character, alignment, { afterSeat }));
     setName("");
     setRolled(undefined);
   }
@@ -162,8 +229,8 @@ function TravellersPanel({ state, update }: { state: CompanionState; update: Upd
     <Panel title="Travellers" tone="neutral">
       <p className="text-xs text-fg-muted">
         A latecomer can join any time as a Traveller: their character is public, their alignment is
-        your secret call. Seat them between {state.players.at(-1)?.name} and{" "}
-        {state.players[0]?.name} — or wherever they physically sit.
+        your secret call. Pick the chair they physically take — everyone else's seat number shifts
+        round.
       </p>
       {available.length === 0 ? (
         <p className="mt-2 text-sm text-fg-muted">All five travellers are in play.</p>
@@ -208,6 +275,14 @@ function TravellersPanel({ state, update }: { state: CompanionState; update: Upd
           {character && (
             <p className="text-xs leading-relaxed text-fg-muted">{CHARACTERS[character].ability}</p>
           )}
+          <Field label="Where do they sit?" htmlFor={`${fieldId}-after`}>
+            <SeatAfterSelect
+              id={`${fieldId}-after`}
+              players={state.players.filter((p) => !p.left)}
+              value={afterSeat}
+              onChange={setAfterSeat}
+            />
+          </Field>
           <div className="flex items-center gap-2">
             <Chip
               pressed={alignment === "good"}
@@ -317,9 +392,11 @@ function PlayerSheet({
   seat: number;
   onClose: () => void;
 }) {
-  const p: CompanionPlayer = state.players[seat];
+  const p: CompanionPlayer = playerAt(state, seat);
   const character = CHARACTERS[p.character];
   const fieldId = useId();
+  // The chair picker starts on the current position (a no-op move).
+  const [moveAfter, setMoveAfter] = useState<number | null>(seat === 0 ? null : seat - 1);
 
   return (
     <Modal
@@ -336,6 +413,21 @@ function PlayerSheet({
             <p className="text-sm leading-relaxed text-fg-secondary">{character.ability}</p>
           </div>
           <StatusChips p={p} />
+          {p.infoGiven && p.infoGiven.length > 0 && (
+            <div className="flex flex-col gap-0.5">
+              <MicroLabel>Told at night</MicroLabel>
+              <ul className="flex flex-col gap-0.5 text-xs text-fg-secondary">
+                {p.infoGiven.map((e) => (
+                  <li key={e.night}>
+                    <span className="font-semibold text-fg-muted">N{e.night}</span> {e.told}
+                    {e.truth !== undefined && e.truth !== e.told && (
+                      <span className="text-amber-300"> (true: {e.truth})</span>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
 
           <div className="grid grid-cols-2 gap-2">
             {p.alive ? (
@@ -380,7 +472,7 @@ function PlayerSheet({
           </div>
 
           {(isTraveller(p) || p.character === "goon") && !p.left && (
-            <div className="flex flex-col gap-2 rounded-lg border border-purple-400/25 bg-purple-400/5 p-2">
+            <Callout tone="purple" className="font-normal text-fg-primary">
               <div className="flex items-center gap-2">
                 <span className="text-xs font-semibold text-fg-secondary">
                   Alignment{p.character === "goon" && " (the Goon flips at night)"}
@@ -430,7 +522,7 @@ function PlayerSheet({
                   entirely.
                 </p>
               )}
-            </div>
+            </Callout>
           )}
 
           {p.character === "apprentice" && !p.left && (
@@ -452,6 +544,30 @@ function PlayerSheet({
                   </option>
                 ))}
               </Select>
+            </Field>
+          )}
+
+          {!p.left && (
+            <Field label="Change chair" htmlFor={`${fieldId}-chair`}>
+              <div className="flex items-center gap-2">
+                <SeatAfterSelect
+                  id={`${fieldId}-chair`}
+                  players={state.players.filter((x) => !x.left)}
+                  exclude={seat}
+                  value={moveAfter}
+                  onChange={setMoveAfter}
+                />
+                <Button
+                  variant="secondary"
+                  disabled={moveAfter === (seat === 0 ? null : seat - 1)}
+                  onClick={() => {
+                    update((s) => moveSeat(s, seat, moveAfter));
+                    onClose();
+                  }}
+                >
+                  Move
+                </Button>
+              </div>
             </Field>
           )}
 

@@ -1,9 +1,11 @@
-import { CHARACTERS } from "@boardgames/core/games/blood-on-the-clocktower/characters";
-import type { CompanionState } from "@boardgames/core/games/blood-on-the-clocktower/companion";
+import type {
+  CompanionPlayer,
+  CompanionState,
+  Protection,
+} from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import {
   abilityVoid,
   aliveCount,
-  aliveResidents,
   canBeNominated,
   canNominate,
   endDay,
@@ -12,7 +14,6 @@ import {
   executeScapegoatInstead,
   giveBeggarToken,
   isEvilPlayer,
-  mastermindVerdict,
   minstrelActive,
   nameAt,
   playerAt,
@@ -23,29 +24,41 @@ import {
   recordNomination,
   recordSlayerShot,
   recordVirginTrigger,
-  saintExecuted,
-  survivedExecution,
-  teaLadyProtectedSeats,
+  spareByPacifist,
   votesRequired,
   voudonActive,
   winPrompts,
 } from "@boardgames/core/games/blood-on-the-clocktower/companion";
+import {
+  executionOutcome,
+  mayorWin,
+  slayerShot,
+  virginNomination,
+} from "@boardgames/core/games/blood-on-the-clocktower/decisions";
+import { recordVote, tallyVotes } from "@boardgames/core/games/blood-on-the-clocktower/voting";
 import { useState } from "react";
 import { Button } from "../../../components/ui";
-import type { UpdateState } from "./Companion";
-import { Panel, SeatPicker } from "./common";
+import type { HistoryActions } from "./Companion";
+import { CharacterIcon, Panel, SeatPicker } from "./common";
+import { useHandOver } from "./privacy-context";
+import type { UpdateState } from "./store";
+import { Callout, Hint, Inset, useSeatPick } from "./ui";
+import { VoteTally } from "./VoteTally";
 
 /**
  * Day tracker: dawn recap, nomination + vote referee (threshold, about-to-die,
  * ties), Virgin and Slayer interceptions, execution, and end-of-day checks
- * (Saint loss, Mayor three-alive win).
+ * (Saint loss, Mayor three-alive win). Every rule verdict comes from core's
+ * `decisions.ts`; the panels only word them.
  */
 export default function DayPanel({
   state,
   update,
+  history,
 }: {
   state: CompanionState;
   update: UpdateState;
+  history?: HistoryActions;
 }) {
   const required = votesRequired(state);
   const alive = aliveCount(state);
@@ -53,12 +66,21 @@ export default function DayPanel({
   const tb = state.script === "trouble-brewing";
   const voudon = voudonActive(state);
   const bishop = state.players.find((p) => p.alive && !p.left && p.character === "bishop");
+  // Panels that name a secret role stay off the screen while the phone is
+  // in a player's hands.
+  const handOver = useHandOver();
 
   return (
     <>
-      <DawnRecap state={state} />
-      {state.mastermindExtraDay && <MastermindBanner />}
-      {minstrelActive(state) && (
+      <DawnRecap state={state} history={history} />
+      {state.mastermindExtraDay && (
+        <Callout tone="rose">
+          MASTERMIND DAY (say nothing!): the Demon is secretly dead. If a GOOD player is executed
+          today — even surviving it — evil wins. If an EVIL player is executed, or nobody is, good
+          wins at dusk.
+        </Callout>
+      )}
+      {minstrelActive(state) && !handOver && (
         <Panel tone="gold">
           <p className="text-sm font-semibold text-fg-primary">
             The Minstrel plays on: EVERYONE except Travellers (and the Minstrel) is drunk until dusk
@@ -95,19 +117,19 @@ export default function DayPanel({
           </p>
         )}
         {bishop && (
-          <p className="mt-1 text-xs font-semibold text-purple-300">
+          <Hint tone="purple" className="mt-1">
             The BISHOP presides: only YOU (the Storyteller) may nominate — and you must nominate at
             least one player of the {isEvilPlayer(bishop) ? "GOOD" : "EVIL"} team today (the
             opposite of the Bishop's alignment).
-          </p>
+          </Hint>
         )}
         {state.players
           .filter((p) => p.tripleVote || p.negativeVote)
           .map((p) => (
-            <p key={p.seat} className="mt-1 text-xs font-semibold text-purple-300">
+            <Hint key={p.seat} tone="purple" className="mt-1">
               {p.name}'s vote counts {p.tripleVote ? "as 3 votes" : "NEGATIVELY (−1)"} today — count
               it aloud accordingly.
-            </p>
+            </Hint>
           ))}
       </Panel>
 
@@ -124,8 +146,8 @@ export default function DayPanel({
         </Panel>
       )}
 
-      <JudgePanel state={state} update={update} />
-      <GossipPanel state={state} update={update} />
+      {!handOver && <JudgePanel state={state} update={update} />}
+      {!handOver && <GossipPanel state={state} update={update} />}
       <GunslingerPanel state={state} update={update} />
       <BeggarPanel state={state} update={update} />
       {tb && <SlayerPanel state={state} update={update} />}
@@ -134,13 +156,31 @@ export default function DayPanel({
   );
 }
 
-function MastermindBanner() {
+/**
+ * Last night's toll, straight from state — never reconstructed from the log.
+ * "Back to the night" takes back every change since the last night step, so
+ * a dawn announced one tap too early (or a mis-recorded kill) can be fixed
+ * in the wizard instead of the Grimoire.
+ */
+function DawnRecap({ state, history }: { state: CompanionState; history?: HistoryActions }) {
+  const last = state.lastNight;
+  if (!last) return null;
   return (
-    <Panel tone="danger">
-      <p className="text-sm font-semibold text-rose-200">
-        MASTERMIND DAY (say nothing!): the Demon is secretly dead. If a GOOD player is executed
-        today — even surviving it — evil wins. If an EVIL player is executed, or nobody is, good
-        wins at dusk.
+    <Panel tone="gold">
+      <div className="flex items-start justify-between gap-2">
+        <p className="text-sm font-semibold text-fg-primary">
+          {last.died.length === 0
+            ? "Dawn breaks — nobody died tonight."
+            : `Dawn breaks — died tonight: ${last.died.map((s) => nameAt(state, s)).join(", ")}.`}
+        </p>
+        {history?.canBackToNight && (
+          <Button variant="ghost" size="xs" className="shrink-0" onClick={history.backToNight}>
+            ← Back to the night
+          </Button>
+        )}
+      </div>
+      <p className="mt-1 text-xs text-fg-muted">
+        Never reveal how anyone died, or what character they were.
       </p>
     </Panel>
   );
@@ -149,7 +189,7 @@ function MastermindBanner() {
 /** A dead Moonchild must publicly curse an alive player, right now. */
 function MoonchildPanel({ state, update }: { state: CompanionState; update: UpdateState }) {
   const pending = state.moonchildPending;
-  const [target, setTarget] = useState<number | undefined>();
+  const pick = useSeatPick();
   if (pending === undefined) return null;
   const moonchild = playerAt(state, pending);
   return (
@@ -161,22 +201,21 @@ function MoonchildPanel({ state, update }: { state: CompanionState; update: Upda
           " (The Moonchild is drunk/poisoned — the curse will do nothing, but let them choose.)"}
       </p>
       <div className="mt-2 flex flex-col gap-2">
-        <SeatPicker
-          state={state}
-          selected={target !== undefined ? [target] : []}
-          onToggle={(seat) => setTarget(seat === target ? undefined : seat)}
-        />
+        <SeatPicker state={state} selected={pick.selected} onToggle={pick.toggle} />
         <Button
           variant="danger"
           block
-          disabled={target === undefined}
+          disabled={pick.seat === undefined}
           onClick={() => {
+            const target = pick.seat;
             if (target === undefined) return;
             update((s) => recordMoonchildChoice(s, target));
-            setTarget(undefined);
+            pick.clear();
           }}
         >
-          {target !== undefined ? `${nameAt(state, target)} is cursed` : "Record their choice"}
+          {pick.seat !== undefined
+            ? `${nameAt(state, pick.seat)} is cursed`
+            : "Record their choice"}
         </Button>
       </div>
     </Panel>
@@ -271,20 +310,7 @@ function JudgePanel({ state, update }: { state: CompanionState; update: UpdateSt
               variant="danger"
               block
               onClick={() => {
-                update((s) => {
-                  let next = recordJudgeRuling(s, judge.seat, nominee, true);
-                  if (s.mastermindExtraDay && next.phase.kind !== "ended") {
-                    const winner = mastermindVerdict(s, nominee);
-                    next = endGame(
-                      next,
-                      winner,
-                      winner === "good"
-                        ? "an evil player was executed on the Mastermind's final day"
-                        : "a good player was executed on the Mastermind's final day",
-                    );
-                  }
-                  return next;
-                });
+                update((s) => recordJudgeRuling(s, judge.seat, nominee, true));
                 setOpen(false);
               }}
             >
@@ -313,7 +339,7 @@ function JudgePanel({ state, update }: { state: CompanionState; update: UpdateSt
 /** The Gunslinger may kill one voter per day, after the first vote is tallied. */
 function GunslingerPanel({ state, update }: { state: CompanionState; update: UpdateState }) {
   const gunslinger = state.players.find((p) => p.alive && p.character === "gunslinger");
-  const [target, setTarget] = useState<number | undefined>();
+  const pick = useSeatPick();
   if (!gunslinger) return null;
   if (state.day.gunslingerUsed) {
     return (
@@ -334,21 +360,22 @@ function GunslingerPanel({ state, update }: { state: CompanionState; update: Upd
       <div className="mt-2 flex flex-col gap-2">
         <SeatPicker
           state={state}
-          selected={target !== undefined ? [target] : []}
+          selected={pick.selected}
           disabledSeats={[gunslinger.seat]}
-          onToggle={(seat) => setTarget(seat === target ? undefined : seat)}
+          onToggle={pick.toggle}
         />
         <Button
           variant="danger"
           block
-          disabled={target === undefined}
+          disabled={pick.seat === undefined}
           onClick={() => {
+            const target = pick.seat;
             if (target === undefined) return;
             update((s) => recordGunslingerShot(s, target));
-            setTarget(undefined);
+            pick.clear();
           }}
         >
-          {target !== undefined ? `${nameAt(state, target)} is shot` : "Pick who they shoot"}
+          {pick.seat !== undefined ? `${nameAt(state, pick.seat)} is shot` : "Pick who they shoot"}
         </Button>
       </div>
     </Panel>
@@ -358,11 +385,11 @@ function GunslingerPanel({ state, update }: { state: CompanionState; update: Upd
 /** A dead player hands the Beggar their ghost-vote token. */
 function BeggarPanel({ state, update }: { state: CompanionState; update: UpdateState }) {
   const beggar = state.players.find((p) => p.alive && p.character === "beggar");
-  const [donor, setDonor] = useState<number | undefined>();
+  const pick = useSeatPick();
   if (!beggar) return null;
   const donors = state.players.filter((p) => !p.left && !p.alive && p.ghostVote);
   if (donors.length === 0) return null;
-  const donorPlayer = donor !== undefined ? playerAt(state, donor) : undefined;
+  const donor = pick.seat !== undefined ? playerAt(state, pick.seat) : undefined;
   return (
     <Panel title="Beggar" tone="day">
       <p className="text-xs text-fg-muted">
@@ -372,42 +399,30 @@ function BeggarPanel({ state, update }: { state: CompanionState; update: UpdateS
       <div className="mt-2 flex flex-col gap-2">
         <SeatPicker
           state={state}
-          selected={donor !== undefined ? [donor] : []}
+          selected={pick.selected}
           disabledSeats={state.players.filter((p) => p.alive || !p.ghostVote).map((p) => p.seat)}
           deadSelectable
-          onToggle={(seat) => setDonor(seat === donor ? undefined : seat)}
+          onToggle={pick.toggle}
         />
-        {donorPlayer && (
-          <p className="text-xs font-semibold text-purple-300">
-            Tell the Beggar: {donorPlayer.name} is {isEvilPlayer(donorPlayer) ? "EVIL" : "GOOD"}.
-          </p>
+        {donor && (
+          <Hint tone="purple">
+            Tell the Beggar: {donor.name} is {isEvilPlayer(donor) ? "EVIL" : "GOOD"}.
+          </Hint>
         )}
         <Button
           variant="secondary"
           block
-          disabled={donor === undefined}
+          disabled={pick.seat === undefined}
           onClick={() => {
-            if (donor === undefined) return;
-            update((s) => giveBeggarToken(s, donor));
-            setDonor(undefined);
+            const seat = pick.seat;
+            if (seat === undefined) return;
+            update((s) => giveBeggarToken(s, seat));
+            pick.clear();
           }}
         >
           Record the token hand-over
         </Button>
       </div>
-    </Panel>
-  );
-}
-
-function DawnRecap({ state }: { state: CompanionState }) {
-  const lastDawn = [...state.log].reverse().find((e) => e.text.startsWith("Dawn breaks"));
-  if (!lastDawn) return null;
-  return (
-    <Panel tone="gold">
-      <p className="text-sm font-semibold text-fg-primary">{lastDawn.text}</p>
-      <p className="mt-1 text-xs text-fg-muted">
-        Never reveal how anyone died, or what character they were.
-      </p>
     </Panel>
   );
 }
@@ -418,23 +433,27 @@ function DawnRecap({ state }: { state: CompanionState }) {
  */
 function ChosenRow({
   label,
-  name,
+  player,
   onChange,
 }: {
   label: string;
-  name: string;
+  player: CompanionPlayer;
   onChange: () => void;
 }) {
+  const handOver = useHandOver();
   return (
-    <div className="flex min-h-11 items-center gap-2 rounded-lg border border-line bg-surface-950/60 px-2">
+    <Inset className="flex min-h-11 items-center gap-2 py-0">
       <span className="w-20 shrink-0 text-3xs font-bold uppercase tracking-pill text-fg-muted">
         {label}
       </span>
-      <span className="min-w-0 flex-1 truncate text-sm font-semibold text-fg-primary">{name}</span>
+      {!handOver && <CharacterIcon character={player.character} size="sm" decorative />}
+      <span className="min-w-0 flex-1 truncate text-sm font-semibold text-fg-primary">
+        {player.name}
+      </span>
       <Button variant="ghost" size="xs" onClick={onChange}>
         Change
       </Button>
-    </div>
+    </Inset>
   );
 }
 
@@ -448,22 +467,25 @@ function ChosenRow({
 function NominationComposer({ state, update }: { state: CompanionState; update: UpdateState }) {
   const [nominator, setNominator] = useState<number | undefined>();
   const [nominee, setNominee] = useState<number | undefined>();
-  const [votes, setVotes] = useState(0);
+  // The raised hands (the assistant's tally) — or a hand-counted number when
+  // the Storyteller switches to counting by themselves.
+  const [voters, setVoters] = useState<number[]>([]);
+  const [manual, setManual] = useState<number | undefined>();
   const required = votesRequired(state);
   const aboutToDie = state.day.aboutToDie;
+  const tally = tallyVotes(state, voters).total;
+  const votes = manual ?? tally;
 
-  const nomineePlayer = nominee !== undefined ? playerAt(state, nominee) : undefined;
-  const virginCase =
-    nomineePlayer !== undefined &&
-    nominator !== undefined &&
-    (nomineePlayer.believedCharacter ?? nomineePlayer.character) === "virgin" &&
-    nomineePlayer.alive &&
-    !nomineePlayer.usedAbility;
+  const virgin =
+    nominator !== undefined && nominee !== undefined
+      ? virginNomination(state, nominator, nominee)
+      : undefined;
 
   function reset() {
     setNominator(undefined);
     setNominee(undefined);
-    setVotes(0);
+    setVoters([]);
+    setManual(undefined);
   }
 
   const nominatorDisabled = state.players
@@ -505,10 +527,11 @@ function NominationComposer({ state, update }: { state: CompanionState; update: 
         ) : (
           <ChosenRow
             label="Nominator"
-            name={nameAt(state, nominator)}
+            player={playerAt(state, nominator)}
             onChange={() => {
               setNominator(undefined);
-              setVotes(0);
+              setVoters([]);
+              setManual(undefined);
             }}
           />
         )}
@@ -530,54 +553,100 @@ function NominationComposer({ state, update }: { state: CompanionState; update: 
           ) : (
             <ChosenRow
               label="Nominee"
-              name={nameAt(state, nominee)}
+              player={playerAt(state, nominee)}
               onChange={() => {
                 setNominee(undefined);
-                setVotes(0);
+                setVoters([]);
+                setManual(undefined);
               }}
             />
           ))}
 
-        {virginCase && nominator !== undefined && nominee !== undefined && (
+        {virgin && nominator !== undefined && nominee !== undefined && (
           <VirginIntercept
             state={state}
             update={update}
             nominator={nominator}
             virginSeat={nominee}
+            outcome={virgin}
             onDone={reset}
           />
         )}
 
-        {!virginCase && nominator !== undefined && nominee !== undefined && (
+        {!virgin && nominator !== undefined && nominee !== undefined && (
           <div className="flex flex-col gap-2">
-            <p className="text-xs font-semibold text-fg-secondary">
-              Count hands (clockwise from the nominee). {required}+ needed.
-            </p>
-            <div className="flex items-center justify-center gap-3">
+            <div className="flex items-center justify-between gap-2">
+              <p className="text-xs font-semibold text-fg-secondary">
+                {manual === undefined
+                  ? "Tap each raised hand, clockwise from the nominee."
+                  : "Hand-counted total."}{" "}
+                {required}+ needed.
+              </p>
               <Button
-                variant="secondary"
-                size="lg"
-                onClick={() => setVotes(Math.max(0, votes - 1))}
+                variant="ghost"
+                size="xs"
+                onClick={() => (manual === undefined ? setManual(tally) : setManual(undefined))}
               >
-                −
-              </Button>
-              <span
-                className={`w-16 text-center text-4xl font-bold tabular-nums ${
-                  votes >= required ? "text-rose-300" : "text-fg-strong"
-                }`}
-              >
-                {votes}
-              </span>
-              <Button variant="secondary" size="lg" onClick={() => setVotes(votes + 1)}>
-                +
+                {manual === undefined ? "Count by hand" : "Tap hands instead"}
               </Button>
             </div>
+            {manual === undefined ? (
+              <VoteTally
+                state={state}
+                nominee={nominee}
+                voters={voters}
+                onToggle={(seat) =>
+                  setVoters((prev) =>
+                    prev.includes(seat) ? prev.filter((v) => v !== seat) : [...prev, seat],
+                  )
+                }
+              />
+            ) : (
+              <div className="flex items-center justify-center gap-3">
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  aria-label="One vote fewer"
+                  onClick={() => setManual(Math.max(0, manual - 1))}
+                >
+                  −
+                </Button>
+                <span
+                  className={`w-16 text-center text-4xl font-bold tabular-nums ${
+                    manual >= required ? "text-rose-300" : "text-fg-strong"
+                  }`}
+                >
+                  {manual}
+                </span>
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  aria-label="One vote more"
+                  onClick={() => setManual(manual + 1)}
+                >
+                  +
+                </Button>
+              </div>
+            )}
+            {manual === undefined && (
+              <p
+                className={`text-center text-4xl font-bold tabular-nums ${
+                  tally >= required ? "text-rose-300" : "text-fg-strong"
+                }`}
+              >
+                {tally}
+              </p>
+            )}
             <Button
               variant="primary"
               size="lg"
               block
               onClick={() => {
-                update((s) => recordNomination(s, nominator, nominee, votes));
+                update((s) =>
+                  manual === undefined
+                    ? recordVote(s, nominator, nominee, voters)
+                    : recordNomination(s, nominator, nominee, manual),
+                );
                 reset();
               }}
             >
@@ -595,47 +664,43 @@ function VirginIntercept({
   update,
   nominator,
   virginSeat,
+  outcome,
   onDone,
 }: {
   state: CompanionState;
   update: UpdateState;
   nominator: number;
   virginSeat: number;
+  outcome: NonNullable<ReturnType<typeof virginNomination>>;
   onDone: () => void;
 }) {
-  const virgin = playerAt(state, virginSeat);
-  const nominatorPlayer = playerAt(state, nominator);
-  // The trigger needs a REAL sober Virgin and a REAL Townsfolk nominator —
-  // except the Spy, who MAY register as a Townsfolk (Storyteller's choice).
-  const virginReal = virgin.character === "virgin" && !virgin.poisoned;
-  const nominatorTownsfolk = CHARACTERS[nominatorPlayer.character].type === "townsfolk";
-  const nominatorSpy = nominatorPlayer.character === "spy";
-  const shouldTrigger = virginReal && nominatorTownsfolk;
-
+  const who = nameAt(state, nominator);
+  const verdict =
+    outcome.kind === "executes"
+      ? `${who} really is a Townsfolk — they are executed immediately.`
+      : outcome.kind === "spy-may-register"
+        ? `${who} is the SPY — they MAY register as a Townsfolk. Your call: execute them, or nothing happens.`
+        : outcome.reason === "nominator-not-townsfolk"
+          ? `${who} is NOT a Townsfolk (the Drunk is an Outsider too) — nothing happens; proceed to the vote.`
+          : "The Virgin's ability is void (drunk/poisoned) — nothing happens; proceed to the vote.";
   return (
-    <div className="flex flex-col gap-2 rounded-lg border border-amber-300/40 bg-amber-400/10 p-2">
-      <p className="text-sm font-semibold text-amber-200">
-        First nomination of the Virgin!{" "}
-        {shouldTrigger
-          ? `${nominatorPlayer.name} really is a Townsfolk — they are executed immediately.`
-          : virginReal && nominatorSpy
-            ? `${nominatorPlayer.name} is the SPY — they MAY register as a Townsfolk. Your call: execute them, or nothing happens.`
-            : virginReal
-              ? `${nominatorPlayer.name} is NOT a Townsfolk (the Drunk is an Outsider too) — nothing happens; proceed to the vote.`
-              : "The Virgin's ability is void (drunk/poisoned) — nothing happens; proceed to the vote."}{" "}
-        Either way the ability is spent.
+    <Callout tone="amber">
+      <p className="text-sm">
+        First nomination of the Virgin! {verdict} Either way the ability is spent.
       </p>
       <div className="flex flex-col gap-2 sm:flex-row">
-        <Button
-          variant="danger"
-          block
-          onClick={() => {
-            update((s) => recordVirginTrigger(s, nominator, virginSeat, true));
-            onDone();
-          }}
-        >
-          Execute {nominatorPlayer.name} now
-        </Button>
+        {outcome.kind !== "nothing" && (
+          <Button
+            variant="danger"
+            block
+            onClick={() => {
+              update((s) => recordVirginTrigger(s, nominator, virginSeat, true));
+              onDone();
+            }}
+          >
+            Execute {who} now
+          </Button>
+        )}
         <Button
           variant="secondary"
           block
@@ -648,9 +713,21 @@ function VirginIntercept({
           No trigger — vote normally
         </Button>
       </div>
-    </div>
+    </Callout>
   );
 }
+
+/** How an execution that does not kill is announced (BMR shields only). */
+const EXECUTION_HINT: Record<Protection, string> = {
+  "devils-advocate": "The Devil's Advocate protects them — executed but LIVES.",
+  "sober-sailor": "The sober Sailor cannot die — executed but LIVES.",
+  "tea-lady": "The Tea Lady protects them — executed but LIVES.",
+  fool: "The Fool's first death — executed but LIVES (ability spent).",
+  innkeeper: "The Innkeeper protects them — executed but LIVES.",
+  // Trouble Brewing's wards only stop the Demon; never an execution.
+  monk: "",
+  soldier: "",
+};
 
 /**
  * The about-to-die resolution. Renders as a danger inset INSIDE the
@@ -669,133 +746,71 @@ function ExecuteBlock({
   seat: number;
   votes: number;
 }) {
-  const bmr = state.script === "bad-moon-rising";
-  const saintLoss = !bmr && saintExecuted(state, seat);
-  const nominee = playerAt(state, seat);
-  // Scapegoat redirect: an alive Scapegoat of the nominee's alignment may be
-  // executed instead — the Storyteller's call.
-  const scapegoat = state.players.find(
-    (p) =>
-      p.alive && p.character === "scapegoat" && (p.alignment === "evil") === isEvilPlayer(nominee),
-  );
-
-  // BMR: reasons the execution will succeed but not kill (the engine enforces
-  // these on its own — the hints tell the Storyteller what to announce).
-  const hints: string[] = [];
-  if (bmr) {
-    const sober = !abilityVoid(state, nominee);
-    if (nominee.survivesExecution) {
-      hints.push("The Devil's Advocate protects them — executed but LIVES.");
-    }
-    if (nominee.character === "sailor" && sober) {
-      hints.push("The sober Sailor cannot die — executed but LIVES.");
-    }
-    if (teaLadyProtectedSeats(state).includes(seat)) {
-      hints.push("The Tea Lady protects them — executed but LIVES.");
-    }
-    if (nominee.character === "fool" && !nominee.usedAbility && sober) {
-      hints.push("The Fool's first death — executed but LIVES (ability spent).");
-    }
-    if (nominee.character === "zombuul" && !nominee.registersDead && sober) {
-      hints.push("The Zombuul will only APPEAR to die — announce a normal death.");
-    }
+  const name = nameAt(state, seat);
+  const outcome = executionOutcome(state, seat);
+  const hints: string[] = outcome.protections.map((p) => EXECUTION_HINT[p]).filter(Boolean);
+  if (outcome.zombuulFakeDeath) {
+    hints.push("The Zombuul will only APPEAR to die — announce a normal death.");
   }
-  const pacifist = bmr
-    ? state.players.find((p) => p.alive && p.character === "pacifist" && !abilityVoid(state, p))
-    : undefined;
-  const pacifistOption = pacifist !== undefined && !isEvilPlayer(nominee) && hints.length === 0;
-
-  // On the Mastermind's final day the executed player's TEAM decides the game
-  // — whether or not they survive the execution itself.
-  const settleMastermind = (s: CompanionState, next: CompanionState): CompanionState => {
-    if (!s.mastermindExtraDay || next.phase.kind === "ended") return next;
-    const winner = mastermindVerdict(s, seat);
-    return endGame(
-      next,
-      winner,
-      winner === "good"
-        ? "an evil player was executed on the Mastermind's final day"
-        : "a good player was executed on the Mastermind's final day",
-    );
-  };
+  const scapegoat =
+    outcome.scapegoatSeat !== undefined ? nameAt(state, outcome.scapegoatSeat) : undefined;
+  const pacifist =
+    outcome.pacifistSeat !== undefined ? nameAt(state, outcome.pacifistSeat) : undefined;
 
   return (
-    <div className="rounded-lg border border-rose-400/35 bg-rose-950/40 p-2">
-      <p className="text-3xs font-bold uppercase tracking-pill text-rose-300">About to die</p>
-      <p className="mt-1 text-sm text-fg-primary">
-        <b>{nameAt(state, seat)}</b> is about to die with {votes} votes. Call a last round of
-        nominations first — a later nominee can still overtake.
+    <Callout tone="rose">
+      <p className="text-3xs uppercase tracking-pill text-rose-300">About to die</p>
+      <p className="text-sm font-normal text-fg-primary">
+        <b>{name}</b> is about to die with {votes} votes. Call a last round of nominations first — a
+        later nominee can still overtake.
       </p>
-      {saintLoss && (
-        <p className="mt-1 text-xs font-bold text-rose-300">
+      {outcome.saintLoss && (
+        <Hint tone="rose">
           They are the SAINT — executing them loses the game for good. (Their team, that is.)
-        </p>
+        </Hint>
       )}
       {hints.map((h) => (
-        <p key={h} className="mt-1 text-xs font-semibold text-sky-300">
+        <Hint key={h} tone="sky">
           {h}
-        </p>
+        </Hint>
       ))}
-      <Button
-        className="mt-2"
-        variant="danger"
-        size="lg"
-        block
-        onClick={() =>
-          update((s) => {
-            let next = executeAboutToDie(s);
-            if (saintLoss) next = endGame(next, "evil", "the Saint was executed");
-            return settleMastermind(s, next);
-          })
-        }
-      >
-        Execute {nameAt(state, seat)}
+      <Button variant="danger" size="lg" block onClick={() => update(executeAboutToDie)}>
+        Execute {name}
       </Button>
-      {pacifistOption && (
+      {pacifist && (
         <>
-          <Button
-            className="mt-2"
-            variant="warning"
-            block
-            onClick={() =>
-              update((s) =>
-                settleMastermind(s, survivedExecution(s, seat, "the Pacifist spares them")),
-              )
-            }
-          >
-            Executed but LIVES ({pacifist?.name} — Pacifist)
+          <Button variant="warning" block onClick={() => update((s) => spareByPacifist(s, seat))}>
+            Executed but LIVES ({pacifist} — Pacifist)
           </Button>
-          <p className="mt-1 text-xs text-fg-muted">
-            A sober Pacifist is in play and {nameAt(state, seat)} is good — you MAY spare them. Once
-            per game is about right.
+          <p className="font-normal text-fg-muted">
+            A sober Pacifist is in play and {name} is good — you MAY spare them. Once per game is
+            about right.
           </p>
         </>
       )}
       {scapegoat && (
         <>
           <Button
-            className="mt-2"
             variant="warning"
             block
             onClick={() => update((s) => executeScapegoatInstead(s, seat))}
           >
-            Execute {scapegoat.name} (Scapegoat) instead
+            Execute {scapegoat} (Scapegoat) instead
           </Button>
-          <p className="mt-1 text-xs text-fg-muted">
-            {scapegoat.name} shares {nameAt(state, seat)}'s alignment — you MAY execute the
-            Scapegoat in their place. It still counts as today's execution; the Undertaker sees a
-            Scapegoat.
+          <p className="font-normal text-fg-muted">
+            {scapegoat} shares {name}'s alignment — you MAY execute the Scapegoat in their place. It
+            still counts as today's execution; the Undertaker sees a Scapegoat.
           </p>
         </>
       )}
-    </div>
+    </Callout>
   );
 }
 
 function SlayerPanel({ state, update }: { state: CompanionState; update: UpdateState }) {
   const [open, setOpen] = useState(false);
-  const [shooter, setShooter] = useState<number | undefined>();
-  const [target, setTarget] = useState<number | undefined>();
+  const shooter = useSeatPick();
+  const target = useSeatPick();
 
   if (!open) {
     return (
@@ -805,65 +820,69 @@ function SlayerPanel({ state, update }: { state: CompanionState; update: UpdateS
     );
   }
 
-  const shooterPlayer = shooter !== undefined ? playerAt(state, shooter) : undefined;
-  const targetPlayer = target !== undefined ? playerAt(state, target) : undefined;
-  const realShot =
-    shooterPlayer !== undefined &&
-    shooterPlayer.character === "slayer" &&
-    !shooterPlayer.poisoned &&
-    !shooterPlayer.usedAbility;
-  const targetIsDemon =
-    targetPlayer !== undefined && CHARACTERS[targetPlayer.character].type === "demon";
-  const targetIsRecluse = targetPlayer?.character === "recluse";
-  const wouldDie = realShot && targetIsDemon;
+  const outcome =
+    shooter.seat !== undefined && target.seat !== undefined
+      ? slayerShot(state, shooter.seat, target.seat)
+      : undefined;
+  const shooterName = shooter.seat !== undefined ? nameAt(state, shooter.seat) : "";
+  const targetName = target.seat !== undefined ? nameAt(state, target.seat) : "";
+  const verdict = outcome
+    ? outcome.kind === "dies"
+      ? `${shooterName} really is the Slayer and ${targetName} really is the Demon — they die.`
+      : outcome.kind === "recluse-may-register"
+        ? `${targetName} is the Recluse — you MAY let them register as the Demon and die.`
+        : outcome.reason === "not-demon"
+          ? `${targetName} is not the Demon — nothing happens. The Slayer's ability is spent.`
+          : `${shooterName} is not a working Slayer (${
+              outcome.reason === "spent"
+                ? "spent"
+                : outcome.reason === "slayer-void"
+                  ? "drunk/poisoned"
+                  : "bluff"
+            }) — nothing happens.`
+    : undefined;
 
   return (
     <Panel title="Slayer shot (public, once per game)" tone="day">
       <div className="flex flex-col gap-2">
         <p className="text-xs font-semibold text-fg-secondary">Who claims the shot?</p>
-        <SeatPicker
-          state={state}
-          selected={shooter !== undefined ? [shooter] : []}
-          onToggle={(seat) => setShooter(seat === shooter ? undefined : seat)}
-        />
-        {shooter !== undefined && (
+        <SeatPicker state={state} selected={shooter.selected} onToggle={shooter.toggle} />
+        {shooter.seat !== undefined && (
           <>
             <p className="text-xs font-semibold text-fg-secondary">Target?</p>
             <SeatPicker
               state={state}
-              selected={target !== undefined ? [target] : []}
-              disabledSeats={[shooter]}
-              onToggle={(seat) => setTarget(seat === target ? undefined : seat)}
+              selected={target.selected}
+              disabledSeats={[shooter.seat]}
+              onToggle={target.toggle}
             />
           </>
         )}
-        {shooterPlayer && targetPlayer && (
+        {outcome && shooter.seat !== undefined && target.seat !== undefined && (
           <div className="flex flex-col gap-2">
-            <p className="text-xs text-fg-primary">
-              {wouldDie
-                ? `${shooterPlayer.name} really is the Slayer and ${targetPlayer.name} really is the Demon — they die.`
-                : realShot && targetIsRecluse
-                  ? `${targetPlayer.name} is the Recluse — you MAY let them register as the Demon and die.`
-                  : realShot
-                    ? `${targetPlayer.name} is not the Demon — nothing happens. The Slayer's ability is spent.`
-                    : `${shooterPlayer.name} is not a working Slayer (bluff, drunk, poisoned or spent) — nothing happens.`}
-            </p>
+            <Hint tone={outcome.kind === "dies" ? "rose" : "amber"}>{verdict}</Hint>
             <div className="flex flex-col gap-2 sm:flex-row">
-              <Button
-                variant="danger"
-                block
-                onClick={() => {
-                  update((s) => recordSlayerShot(s, shooterPlayer.seat, targetPlayer.seat, true));
-                  setOpen(false);
-                }}
-              >
-                {targetPlayer.name} dies
-              </Button>
+              {outcome.kind !== "nothing" && (
+                <Button
+                  variant="danger"
+                  block
+                  onClick={() => {
+                    const [s, t] = [shooter.seat, target.seat];
+                    if (s === undefined || t === undefined) return;
+                    update((st) => recordSlayerShot(st, s, t, true));
+                    setOpen(false);
+                  }}
+                >
+                  {targetName} dies
+                </Button>
+              )}
               <Button
                 variant="secondary"
                 block
                 onClick={() => {
-                  update((s) => recordSlayerShot(s, shooterPlayer.seat, targetPlayer.seat, false));
+                  const [s, t] = [shooter.seat, target.seat];
+                  if (s === undefined || t === undefined) return;
+                  update((st) => recordSlayerShot(st, s, t, false));
                   setOpen(false);
                 }}
               >
@@ -890,40 +909,27 @@ function EndDayPanel({ state, update }: { state: CompanionState; update: UpdateS
           Mastermind's final day with NO execution — when the day ends, <b>good wins</b> (the Demon
           is already dead).
         </p>
-        <Button
-          className="mt-2"
-          variant="primary"
-          size="lg"
-          block
-          onClick={() =>
-            update((s) => endGame(s, "good", "no one was executed on the Mastermind's final day"))
-          }
-        >
+        <Button className="mt-2" variant="primary" size="lg" block onClick={() => update(endDay)}>
           Day ends — good wins
         </Button>
       </Panel>
     );
   }
-  const mayor = state.players.find((p) => p.alive && p.character === "mayor" && !p.poisoned);
-  // "Only 3 players live" — travellers DO count as players for the Mayor's
-  // win, so they must be exiled before the day ends for the three to line up.
-  const alive = aliveCount(state);
-  const mayorWin = noExecution && alive === 3 && mayor !== undefined;
-  const mayorBlockedByTravellers =
-    noExecution && mayor !== undefined && alive > 3 && aliveResidents(state) <= 3;
+  const mayor = mayorWin(state);
+  const mayorName = state.players.find((p) => p.alive && p.character === "mayor")?.name;
 
   return (
     <Panel tone="night" title="End the day">
-      {mayorBlockedByTravellers && (
-        <p className="mb-2 rounded-lg border border-amber-300/40 bg-amber-400/10 p-2 text-xs font-semibold text-amber-200">
-          {mayor?.name} is the sober Mayor, but {alive} players live — travellers count for the
+      {mayor?.kind === "blocked-by-travellers" && (
+        <Callout tone="amber" className="mb-2">
+          {mayorName} is the sober Mayor, but {mayor.alive} players live — travellers count for the
           Mayor's three-alive win, so they must be exiled before the day ends for it to trigger.
-        </p>
+        </Callout>
       )}
-      {mayorWin && (
-        <div className="mb-2 flex flex-col gap-2 rounded-lg border border-amber-300/40 bg-amber-400/10 p-2">
-          <p className="text-sm font-semibold text-amber-200">
-            Three players live, no execution, and {mayor.name} is the sober Mayor — if the day ends
+      {mayor?.kind === "available" && (
+        <Callout tone="amber" className="mb-2">
+          <p className="text-sm">
+            Three players live, no execution, and {mayorName} is the sober Mayor — if the day ends
             now, <b>good wins</b>.
           </p>
           <Button
@@ -935,7 +941,7 @@ function EndDayPanel({ state, update }: { state: CompanionState; update: UpdateS
           >
             Declare good victory (Mayor)
           </Button>
-        </div>
+        </Callout>
       )}
       <p className="text-xs text-fg-muted">
         Take thirty seconds to think about the coming night, then send everyone to sleep.

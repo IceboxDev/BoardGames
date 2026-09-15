@@ -161,8 +161,17 @@ const DND_TOOL = /^games\/dungeons-and-dragons\//;
 const DND_TOOL_PRIMITIVES = /^games\/dungeons-and-dragons\/components\/ui\//;
 const inDndTool = (rel) => DND_TOOL.test(rel) && !DND_TOOL_PRIMITIVES.test(rel);
 
-/** App-shell rules that now also cover the DM tool. */
-const inTokenScope = (rel) => inAppShell(rel) || inDndTool(rel);
+// The Blood on the Clocktower Storyteller companion is the same kind of thing
+// — a second application of screens, forms and modals, not a board — and was
+// drifting the same way (26 static corners, ~95 raw palette inks) under the
+// `games/` exemption. Its `companion/ui/` defines the tool's chrome and is
+// exempt like the global primitives.
+const BOTC_TOOL = /^games\/blood-on-the-clocktower\/companion\//;
+const BOTC_TOOL_PRIMITIVES = /^games\/blood-on-the-clocktower\/companion\/ui\//;
+const inBotcTool = (rel) => BOTC_TOOL.test(rel) && !BOTC_TOOL_PRIMITIVES.test(rel);
+
+/** App-shell rules that now also cover the DM tools. */
+const inTokenScope = (rel) => inAppShell(rel) || inDndTool(rel) || inBotcTool(rel);
 
 const RATCHET_RULES = [
   {

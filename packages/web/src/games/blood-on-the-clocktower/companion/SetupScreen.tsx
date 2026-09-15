@@ -1,5 +1,6 @@
 import type { Edition } from "@boardgames/core/games/blood-on-the-clocktower/characters";
 import { EDITION_NAME } from "@boardgames/core/games/blood-on-the-clocktower/characters";
+import { BAG_DRAFT_VERSION } from "@boardgames/core/games/blood-on-the-clocktower/schema";
 import {
   baseDistribution,
   dealBag,
@@ -12,6 +13,7 @@ import { Reorder, useDragControls } from "framer-motion";
 import { useMemo, useState } from "react";
 import { GripVerticalIcon, TrashIcon } from "../../../components/icons";
 import {
+  Badge,
   Button,
   IconButton,
   Input,
@@ -19,8 +21,10 @@ import {
   ModalBody,
   SegmentedControl,
 } from "../../../components/ui";
+import { RADIUS_CARD_MD } from "../../../components/ui/radii";
 import { fetchAvailableGames } from "../../../lib/calendar-games";
 import { fetchCalendarLocks } from "../../../lib/calendar-locks";
+import { cn } from "../../../lib/cn";
 import { dateKey } from "../../../lib/offline-availability";
 import { fetchPlayers } from "../../../lib/profile";
 import { qk } from "../../../lib/query-keys";
@@ -89,7 +93,10 @@ function RosterRow({
       dragListener={false}
       dragControls={controls}
       whileDrag={{ scale: 1.02, zIndex: 10, boxShadow: "0 8px 24px rgba(0,0,0,0.55)" }}
-      className="relative flex min-h-11 items-center gap-1 rounded-lg border border-line bg-surface-950/60 pr-1"
+      className={cn(
+        RADIUS_CARD_MD,
+        "relative flex min-h-11 items-center gap-1 border border-line bg-surface-950/60 pr-1",
+      )}
     >
       {/* Pointer-only affordance; keyboard users reorder via the sheet's
           move buttons. touch-none so a touch drag doesn't scroll the page. */}
@@ -117,11 +124,7 @@ function RosterRow({
         >
           {entry.name}
         </span>
-        {entry.traveller && (
-          <span className="shrink-0 rounded bg-purple-400/15 px-1 py-0.5 text-3xs font-bold uppercase tracking-pill text-purple-300">
-            Traveller
-          </span>
-        )}
+        {entry.traveller && <Badge tone="purple">Traveller</Badge>}
       </Button>
       <Button
         variant="ghost"
@@ -265,6 +268,7 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
     if (!countOk) return;
     saveRoster(names);
     onDeal({
+      version: BAG_DRAFT_VERSION,
       edition,
       seats: entries.map((e) => ({
         name: e.name,

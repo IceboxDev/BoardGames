@@ -23,7 +23,9 @@ import { useId, useState } from "react";
 import {
   Button,
   Chip,
+  Field,
   Input,
+  MicroLabel,
   Modal,
   ModalBody,
   SegmentedControl,
@@ -32,7 +34,8 @@ import {
 } from "../../../components/ui";
 import { CharacterIcon, Panel, Screen } from "./common";
 import { TYPE_LABEL, TYPE_TEXT } from "./labels";
-import type { BagDraft } from "./persistence";
+import type { BagDraft, BagDraftSeat } from "./persistence";
+import { Callout, CharacterChip, Hint, SeatAfterSelect } from "./ui";
 
 /** Tappable candidate list shared by both halves of the token-change modal. */
 function CandidateGrid({
@@ -93,9 +96,7 @@ function TokenChangeModal({
       <ModalBody>
         <div className="flex flex-col gap-3">
           {drawnBy && (
-            <p className="text-xs font-semibold text-amber-200">
-              {drawnBy} already drew this token — their recorded draw follows the change.
-            </p>
+            <Hint>{drawnBy} already drew this token — their recorded draw follows the change.</Hint>
           )}
           {isStandIn ? (
             <>
@@ -103,16 +104,12 @@ function TokenChangeModal({
                 This token is the Drunk's stand-in — whoever draws it is secretly the Drunk.
               </p>
               <div className="flex flex-col gap-1.5">
-                <p className="text-3xs font-bold uppercase tracking-pill text-fg-muted">
-                  Different stand-in (the Drunk stays)
-                </p>
+                <MicroLabel>Different stand-in (the Drunk stays)</MicroLabel>
                 <CandidateGrid options={standIns} onPick={onPickStandIn} />
               </div>
               {replacements.length > 0 && (
                 <div className="flex flex-col gap-1.5">
-                  <p className="text-3xs font-bold uppercase tracking-pill text-fg-muted">
-                    Or replace the Drunk with another Outsider
-                  </p>
+                  <MicroLabel>Or replace the Drunk with another Outsider</MicroLabel>
                   <CandidateGrid options={replacements} onPick={onPickCharacter} />
                 </div>
               )}
@@ -129,9 +126,7 @@ function TokenChangeModal({
             </p>
           ) : (
             <div className="flex flex-col gap-1.5">
-              <p className="text-3xs font-bold uppercase tracking-pill text-fg-muted">
-                Swap for a not-in-play {TYPE_LABEL[CHARACTERS[char].type]}
-              </p>
+              <MicroLabel>Swap for a not-in-play {TYPE_LABEL[CHARACTERS[char].type]}</MicroLabel>
               <CandidateGrid options={replacements} onPick={onPickCharacter} />
             </div>
           )}
@@ -159,6 +154,7 @@ type ReshapeResult = {
  * exactly which physical tokens to add and fish back out).
  */
 function AddLatePlayerModal({
+  seats,
   takenNames,
   travellerFull,
   residentCount,
@@ -166,15 +162,19 @@ function AddLatePlayerModal({
   onAddResident,
   onClose,
 }: {
+  /** The circle so far, for the chair picker. */
+  seats: ReadonlyArray<{ seat: number; name: string }>;
   takenNames: string[];
   travellerFull: boolean;
   residentCount: number;
-  onAddTraveller: (name: string) => void;
-  onAddResident: (name: string) => ReshapeResult;
+  onAddTraveller: (name: string, afterSeat: number | null) => void;
+  onAddResident: (name: string, afterSeat: number | null) => ReshapeResult;
   onClose: () => void;
 }) {
   const [name, setName] = useState("");
+  const [afterSeat, setAfterSeat] = useState<number | null>(seats.at(-1)?.seat ?? null);
   const [result, setResult] = useState<ReshapeResult | null>(null);
+  const fieldId = useId();
   const trimmed = name.trim();
   const duplicate = takenNames.some((n) => n.toLowerCase() === trimmed.toLowerCase());
   const ready = trimmed.length > 0 && !duplicate;
@@ -189,49 +189,33 @@ function AddLatePlayerModal({
               The bag is now the {result.newCount}-player setup. Update the physical tokens:
             </p>
             <div className="flex flex-col gap-1.5">
-              <p className="text-3xs font-bold uppercase tracking-pill text-emerald-300">
-                Add to the bag
-              </p>
+              <MicroLabel className="text-emerald-300">Add to the bag</MicroLabel>
               <div className="flex flex-wrap gap-1.5">
                 {result.addTokens.map((t) => (
-                  <span
-                    key={t}
-                    className={`flex items-center gap-1.5 rounded-lg border border-line-strong bg-surface-950/60 px-2 py-1 text-sm font-semibold ${TYPE_TEXT[CHARACTERS[t].type]}`}
-                  >
-                    <CharacterIcon character={t} size="sm" />
-                    {CHARACTERS[t].name}
-                  </span>
+                  <CharacterChip key={t} character={t} />
                 ))}
               </div>
             </div>
             {result.removeTokens.length > 0 && (
               <div className="flex flex-col gap-1.5">
-                <p className="text-3xs font-bold uppercase tracking-pill text-rose-300">
-                  Fish out of the bag
-                </p>
+                <MicroLabel className="text-rose-300">Fish out of the bag</MicroLabel>
                 <div className="flex flex-wrap gap-1.5">
                   {result.removeTokens.map((t) => (
-                    <span
-                      key={t}
-                      className={`flex items-center gap-1.5 rounded-lg border border-line-strong bg-surface-950/60 px-2 py-1 text-sm font-semibold ${TYPE_TEXT[CHARACTERS[t].type]}`}
-                    >
-                      <CharacterIcon character={t} size="sm" />
-                      {CHARACTERS[t].name}
-                    </span>
+                    <CharacterChip key={t} character={t} />
                   ))}
                 </div>
               </div>
             )}
             {result.clearedDraws.length > 0 && (
-              <p className="text-xs font-semibold text-amber-200">
+              <Hint>
                 {result.clearedDraws.join(", ")} had drawn a removed token — record their new draw
                 below.
-              </p>
+              </Hint>
             )}
             {result.droppedGodfather && (
-              <p className="text-xs font-semibold text-amber-200">
+              <Hint>
                 The Godfather's ±1 Outsider no longer fits this player count and was dropped.
-              </p>
+              </Hint>
             )}
             <Button variant="primary" block onClick={onClose}>
               Done
@@ -253,11 +237,15 @@ function AddLatePlayerModal({
             aria-label="Late player's name"
             autoComplete="off"
           />
-          {duplicate && (
-            <p className="text-xs font-semibold text-rose-300">
-              Someone at the table already has that name.
-            </p>
-          )}
+          {duplicate && <Hint tone="rose">Someone at the table already has that name.</Hint>}
+          <Field label="Where do they sit?" htmlFor={`${fieldId}-after`}>
+            <SeatAfterSelect
+              id={`${fieldId}-after`}
+              players={seats}
+              value={afterSeat}
+              onChange={setAfterSeat}
+            />
+          </Field>
           <div className="flex flex-col gap-1">
             <Button
               variant="primary"
@@ -265,7 +253,7 @@ function AddLatePlayerModal({
               className="min-h-11"
               disabled={!ready || travellerFull}
               onClick={() => {
-                onAddTraveller(trimmed);
+                onAddTraveller(trimmed, afterSeat);
                 onClose();
               }}
             >
@@ -283,7 +271,7 @@ function AddLatePlayerModal({
               block
               className="min-h-11"
               disabled={!ready || residentFull}
-              onClick={() => setResult(onAddResident(trimmed))}
+              onClick={() => setResult(onAddResident(trimmed, afterSeat))}
             >
               Join as a resident — reshape the bag
             </Button>
@@ -320,7 +308,7 @@ export default function BagScreen({
   onBegin: () => void;
 }) {
   const { seats, bag, draws, storyteller } = draft;
-  const edition = draft.edition ?? "trouble-brewing";
+  const edition = draft.edition;
   const travellerPool = travellersOf(edition);
   const demonSkill = draft.demonSkill ?? "new";
   const { confirm, confirmDialog } = useConfirm();
@@ -427,16 +415,28 @@ export default function BagScreen({
     setChanging(null);
   }
 
-  function addTraveller(name: string) {
+  /** Insert a seat (and its empty draw) right after `afterSeat`; null = first. */
+  function insertSeat(
+    entry: BagDraftSeat,
+    afterSeat: number | null,
+    nextDraws: (CharacterId | null)[] = draft.draws,
+  ) {
+    const at = afterSeat === null ? 0 : afterSeat + 1;
+    return {
+      seats: [...seats.slice(0, at), entry, ...seats.slice(at)],
+      draws: [...nextDraws.slice(0, at), null, ...nextDraws.slice(at)],
+    };
+  }
+
+  function addTraveller(name: string, afterSeat: number | null) {
     onChange({
       ...draft,
-      seats: [...seats, { name, traveller: { character: null, alignment: "good" } }],
-      draws: [...draft.draws, null],
+      ...insertSeat({ name, traveller: { character: null, alignment: "good" } }, afterSeat),
       undo: snapshotUndo(`seating ${name}`),
     });
   }
 
-  function addResident(name: string) {
+  function addResident(name: string, afterSeat: number | null) {
     // Characters whose tokens are already in players' hands — the reshape
     // avoids removing those so recorded draws survive where possible.
     const drawnCharacters = draft.draws
@@ -460,9 +460,8 @@ export default function BagScreen({
     });
     onChange({
       ...draft,
-      seats: [...seats, { name }],
+      ...insertSeat({ name }, afterSeat, draws),
       bag: result.bag,
-      draws: [...draws, null],
       undo: snapshotUndo(`seating ${name}`),
     });
     return {
@@ -516,22 +515,16 @@ export default function BagScreen({
         <div className="flex flex-col gap-2">
           {groups.map((g) => (
             <div key={g.type} className="flex flex-wrap items-center gap-1.5">
-              <span className="w-20 shrink-0 text-3xs font-bold uppercase tracking-pill text-fg-muted">
+              <MicroLabel as="span" className="w-20 shrink-0">
                 {TYPE_LABEL[g.type]}
-              </span>
+              </MicroLabel>
               {g.tokens.map((t) => (
-                <Button
+                <CharacterChip
                   key={t}
-                  variant="plain"
-                  size="xs"
+                  character={t}
                   title={`Change the ${CHARACTERS[t].name} token`}
-                  aria-label={`Change the ${CHARACTERS[t].name} token`}
                   onClick={() => setChanging(t)}
-                  className={`gap-1.5 border border-line-strong bg-surface-950/60 text-sm font-semibold transition-colors hover:border-fg-strong/40 hover:bg-surface-900 ${TYPE_TEXT[CHARACTERS[t].type]}`}
-                >
-                  <CharacterIcon character={t} size="sm" />
-                  {CHARACTERS[t].name}
-                </Button>
+                />
               ))}
             </div>
           ))}
@@ -587,13 +580,7 @@ export default function BagScreen({
       <Panel tone="night" title="Demon bluffs (shown on night 1)">
         <div className="flex flex-wrap gap-1.5">
           {bag.demonBluffs.map((id) => (
-            <span
-              key={id}
-              className={`flex items-center gap-1.5 rounded-lg border border-line-strong bg-surface-950/60 px-2 py-1 text-sm font-semibold ${TYPE_TEXT[CHARACTERS[id].type]}`}
-            >
-              <CharacterIcon character={id} size="sm" />
-              {CHARACTERS[id].name}
-            </span>
+            <CharacterChip key={id} character={id} />
           ))}
         </div>
         <div className="mt-2">
@@ -619,11 +606,11 @@ export default function BagScreen({
           claims your game would expose are never offered. Toggling re-rolls them.
         </p>
         {residentCount <= 6 && (
-          <p className="mt-2 text-xs font-semibold text-amber-200">
+          <Hint className="mt-2">
             Teensyville ({residentCount} players): there is no Minion/Demon info step at night — the
             Demon never learns these bluffs (nor who their Minion is). Keep them for your own
             reference only.
-          </p>
+          </Hint>
         )}
       </Panel>
 
@@ -641,9 +628,10 @@ export default function BagScreen({
               );
               return (
                 // Names are unique (setup dedupes on add/import) → stable keys.
-                <div
+                <Callout
                   key={name}
-                  className="flex flex-col gap-1.5 rounded-lg border border-purple-400/25 bg-purple-400/5 p-1.5"
+                  tone="purple"
+                  className="gap-1.5 p-1.5 font-normal text-fg-primary"
                 >
                   <div className="flex min-h-9 items-center gap-2">
                     <span className="w-6 shrink-0 text-center text-xs font-bold text-fg-muted">
@@ -700,7 +688,7 @@ export default function BagScreen({
                       character public · alignment secret
                     </span>
                   </div>
-                </div>
+                </Callout>
               );
             }
             const current = draws[seat];
@@ -711,6 +699,7 @@ export default function BagScreen({
                   {seat + 1}
                 </span>
                 <span className="min-w-0 flex-1 truncate text-sm text-fg-primary">{name}</span>
+                {current && <CharacterIcon character={current} size="sm" decorative />}
                 <Select
                   id={`${fieldId}-seat-${seat}`}
                   aria-label={`Token drawn by ${name}`}
@@ -770,6 +759,7 @@ export default function BagScreen({
       )}
       {addingPlayer && (
         <AddLatePlayerModal
+          seats={seats.map((s, i) => ({ seat: i, name: s.name }))}
           takenNames={[...seats.map((s) => s.name), ...(storyteller ? [storyteller] : [])]}
           travellerFull={seats.filter((s) => s.traveller).length >= travellerPool.length}
           residentCount={residentCount}

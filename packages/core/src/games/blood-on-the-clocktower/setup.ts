@@ -9,16 +9,15 @@
 
 import type { CharacterId, CharacterType, Edition } from "./characters.ts";
 import { CHARACTERS, charactersOfType } from "./characters.ts";
+import type { BagSetup, DemonSkill, Distribution } from "./schema.ts";
+
+// The persisted shapes (what the Bag screen stores between dealing and the
+// first night) are defined once, as Zod schemas, in schema.ts. Re-exported so
+// setup callers keep a single import.
+export type { BagSetup, DemonSkill, Distribution } from "./schema.ts";
 
 export const MIN_PLAYERS = 5;
 export const MAX_PLAYERS = 15;
-
-export type Distribution = {
-  townsfolk: number;
-  outsiders: number;
-  minions: number;
-  demons: number;
-};
 
 /** The setup-sheet table for 5–15 players. */
 const DISTRIBUTIONS: Record<number, Distribution> = {
@@ -103,9 +102,6 @@ function weightedDraw<T>(
 }
 
 // ── Demon bluffs ──────────────────────────────────────────────────────
-
-/** How practised the demon player is at sustaining a bluff. */
-export type DemonSkill = "new" | "experienced";
 
 /**
  * How playable each character is AS A DEMON BLUFF, per skill level.
@@ -276,35 +272,6 @@ export function chooseDemonBluffs(
   }
   return bluffs.slice(0, 3);
 }
-
-/**
- * The bag the Storyteller physically prepares. The phone never leaves the
- * ST's hands: the app names the tokens to drop in the bag, players draw them
- * at the table, and the draw is recorded afterwards via `setupFromDraws`.
- */
-export type BagSetup = {
-  edition: Edition;
-  /** The actual characters in play — includes "drunk"/"lunatic" when dealt. */
-  charactersInPlay: CharacterId[];
-  /**
-   * The physical tokens for the bag: identical to `charactersInPlay` except
-   * the TB Drunk is replaced by their believed Townsfolk token. Whoever draws
-   * that token IS the Drunk — they never learn it. In BMR the Lunatic and the
-   * Demon token both go in as-is, and the DRAWS are swapped: whoever draws
-   * the Demon token is secretly the Lunatic, and whoever draws the Lunatic
-   * token is the real Demon (they learn so on the first night).
-   */
-  bagTokens: CharacterId[];
-  /** TB: set when the Drunk is in play — the not-in-play Townsfolk token they drew. */
-  believedCharacter?: CharacterId;
-  /** BMR: set when the Lunatic is in play — the Demon they believe they are. */
-  lunaticDemon?: CharacterId;
-  /** BMR: the Godfather's setup swap that was applied. */
-  godfatherAdjustment?: 1 | -1;
-  distribution: Distribution;
-  /** Three not-in-play good characters to show the Demon as safe bluffs. */
-  demonBluffs: CharacterId[];
-};
 
 /**
  * Roll the bag composition for a player count (rulebook SETUP steps 6–8):

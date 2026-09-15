@@ -13,10 +13,11 @@ import { fetchCalendarLocks } from "../../../lib/calendar-locks";
 import { recordMatch } from "../../../lib/match-history";
 import { dateKey } from "../../../lib/offline-availability";
 import { qk } from "../../../lib/query-keys";
-import type { UpdateState } from "./Companion";
 import { CharacterIcon } from "./common";
 import { TYPE_TEXT } from "./labels";
 import { hasDuplicateAccounts, NOBODY } from "./port-helpers";
+import type { UpdateState } from "./store";
+import { Hint } from "./ui";
 
 /**
  * Ports a finished companion game into match history (admin-only — the write
@@ -184,17 +185,17 @@ export default function PortToHistoryModal({
           </div>
 
           {resolvedStoryteller === NOBODY && (
-            <p className="text-xs font-semibold text-amber-200">
+            <Hint>
               {state.storyteller
                 ? `${state.storyteller} ran this game but isn't matched to an account — the match will record no Storyteller.`
                 : "No Storyteller picked — the match will record nobody as running the game."}
-            </p>
+            </Hint>
           )}
 
           {hasDuplicates && (
-            <p className="text-xs font-semibold text-rose-300">
+            <Hint tone="rose">
               Two players are mapped to the same account — fix before recording.
-            </p>
+            </Hint>
           )}
           {mutation.isError && (
             <ErrorAlert

@@ -321,7 +321,7 @@ describe("BMR protections in kill()", () => {
     let state = freshBmr();
     state = dawn(state);
     state = endDay(state); // night 2
-    state = recordInnkeeperChoice(state, [7, 3], 3);
+    state = recordInnkeeperChoice(state, 4, [7, 3], 3);
     expect(state.players[7].safeTonight).toBe(true);
     expect(isDrunkPlayer(state, state.players[3])).toBe(true);
     state = kill(state, 7, "demon");
@@ -531,7 +531,7 @@ describe("Po & seat swaps", () => {
     state = dawn(state);
     state = endDay(state);
     state = recordPoCharge(state);
-    expect(state.poCharged).toBe(true);
+    expect(state.poChargedNight).toBe(2);
   });
 
   it("swapSeats exchanges chairs and remaps seat references", () => {
