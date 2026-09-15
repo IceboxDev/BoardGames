@@ -1,7 +1,11 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { errorMessageOf } from "../../lib/error-message";
-import { adminFetchAvailability, adminSetAwayDay } from "../../lib/offline-availability";
+import {
+  adminFetchAvailability,
+  adminSetAwayDay,
+  toggleAwayDay,
+} from "../../lib/offline-availability";
 import { startOfWeekMonday } from "../../lib/offline-week";
 import { qk } from "../../lib/query-keys";
 import { countMarkedInWindow } from "../../pages/admin-coverage";
@@ -11,6 +15,11 @@ import { ErrorAlert } from "../ui/ErrorAlert";
 import { LoadingState } from "../ui/LoadingState";
 import { QueryBoundary } from "../ui/QueryBoundary";
 import type { AdminUser } from "./types";
+
+type AwayByUser = Record<string, string[]>;
+
+/** Keyed so a reply can tell whether it is the last away write in flight. */
+const AWAY_MUTATION_KEY = ["admin", "away-day"] as const;
 
 type Props = {
   user: AdminUser;
@@ -42,15 +51,44 @@ export function AvailabilityDrawer({ user, awayDays, onClose }: Props) {
   });
 
   const awaySet = useMemo(() => new Set(awayDays), [awayDays]);
+
+  // The page's away map feeds both this drawer and the pie behind it, so the
+  // tap is written there FIRST (the round trip to the server is a good half
+  // second — a tap that waited for it read as a dead cell) and the server's
+  // reply is reconciled afterwards.
+  const setUserDays = (update: (days: readonly string[]) => string[]) =>
+    queryClient.setQueryData<AwayByUser>(qk.adminAwayDays(), (prev) => ({
+      ...(prev ?? {}),
+      [user.id]: update(prev?.[user.id] ?? []),
+    }));
+  // Inside a mutation's callbacks the mutation itself still counts as in
+  // flight, so "1" means no other tap is waiting on the server.
+  const isLastInFlight = () => queryClient.isMutating({ mutationKey: AWAY_MUTATION_KEY }) === 1;
+  // Kept apart from the mutation's own `error`, which only ever reflects the
+  // LATEST tap — a refused earlier one would revert its cell without a word.
+  const [saveError, setSaveError] = useState<unknown>(null);
   const awayMutation = useMutation({
+    mutationKey: AWAY_MUTATION_KEY,
     mutationFn: ({ dateKey, away }: { dateKey: string; away: boolean }) =>
       adminSetAwayDay(user.id, dateKey, away),
+    onMutate: async ({ dateKey, away }) => {
+      await queryClient.cancelQueries({ queryKey: qk.adminAwayDays() });
+      setUserDays((days) => toggleAwayDay(days, dateKey, away));
+      setSaveError(null);
+    },
     onSuccess: (days) => {
-      // The page's map feeds both this drawer and the pie behind it.
-      queryClient.setQueryData<Record<string, string[]>>(qk.adminAwayDays(), (prev) => ({
-        ...(prev ?? {}),
-        [user.id]: days,
-      }));
+      // Authoritative for this member — unless a later tap is still on its
+      // way, whose day this (older) reply would take back until it lands.
+      if (isLastInFlight()) setUserDays(() => days);
+    },
+    onError: (error, { dateKey, away }) => {
+      // Undo this tap alone: a snapshot restore would also undo any other
+      // taps still in flight.
+      setUserDays((days) => toggleAwayDay(days, dateKey, !away));
+      setSaveError(error);
+    },
+    onSettled: () => {
+      if (isLastInFlight()) void queryClient.invalidateQueries({ queryKey: qk.adminAwayDays() });
     },
   });
 
@@ -74,8 +112,8 @@ export function AvailabilityDrawer({ user, awayDays, onClose }: Props) {
         Tap a blank day to note them as away — it leaves their coverage pie.
       </p>
 
-      {awayMutation.error && (
-        <ErrorAlert message={errorMessageOf(awayMutation.error, "Could not save the note") ?? ""} />
+      {saveError != null && (
+        <ErrorAlert message={errorMessageOf(saveError, "Could not save the note") ?? ""} />
       )}
 
       <QueryBoundary

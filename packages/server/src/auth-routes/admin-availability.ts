@@ -18,7 +18,12 @@ import {
   fetchRsvpYesDatesForUser,
   mergeRsvpYesIntoAvailability,
 } from "../lib/availability-merge.ts";
-import { fetchAwayDays, fetchAwayDaysByUser, todayKeyUtc } from "../lib/away-days.ts";
+import {
+  awayDaysFromRows,
+  awayDaysStatement,
+  fetchAwayDaysByUser,
+  todayKeyUtc,
+} from "../lib/away-days.ts";
 import { parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 
@@ -70,22 +75,28 @@ adminAvailabilityRoutes.put("/:id/away", zJsonBody(SetAwayDayBodySchema), async 
   const { dateKey, away } = c.req.valid("json");
   const today = todayKeyUtc();
   if (dateKey < today) return errorResponse(c, 400, "the day is already past", "PAST_DAY");
-  const db = getDb();
-  const member = await db.execute({ sql: `SELECT 1 FROM "user" WHERE id = ?`, args: [userId] });
+  // One round trip to the (remote) database: the member check, the write
+  // guarded by it, and the read-back the drawer reconciles with. The tap has
+  // already shown optimistically; this is what confirms it.
+  const [member, , readBack] = await getDb().batch(
+    [
+      { sql: `SELECT 1 FROM "user" WHERE id = ?`, args: [userId] },
+      away
+        ? {
+            sql: `INSERT OR IGNORE INTO admin_away_days (user_id, date_key, marked_by)
+                  SELECT ?, ?, ? WHERE EXISTS (SELECT 1 FROM "user" WHERE id = ?)`,
+            args: [userId, dateKey, c.get("user").id, userId],
+          }
+        : {
+            sql: "DELETE FROM admin_away_days WHERE user_id = ? AND date_key = ?",
+            args: [userId, dateKey],
+          },
+      awayDaysStatement(userId, today),
+    ],
+    "write",
+  );
   if (member.rows.length === 0) return errorResponse(c, 404, "user not found", "NOT_FOUND");
-  if (away) {
-    await db.execute({
-      sql: `INSERT OR IGNORE INTO admin_away_days (user_id, date_key, marked_by) VALUES (?, ?, ?)`,
-      args: [userId, dateKey, c.get("user").id],
-    });
-  } else {
-    await db.execute({
-      sql: "DELETE FROM admin_away_days WHERE user_id = ? AND date_key = ?",
-      args: [userId, dateKey],
-    });
-  }
-  const days = await fetchAwayDays(db, userId, today);
-  return c.json(AwayDaysResponseSchema.parse({ days }));
+  return c.json(AwayDaysResponseSchema.parse({ days: awayDaysFromRows(readBack.rows) }));
 });
 
 export const adminAvailabilityAllRoutes = adminApp();

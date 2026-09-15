@@ -88,6 +88,17 @@ export async function adminFetchAwayDays(signal?: AbortSignal): Promise<Record<s
   return res.awayByUser;
 }
 
+/**
+ * One member's away list with `dateKey` noted or cleared — the optimistic
+ * shape of `adminSetAwayDay`'s reply, so a tap shows before the round trip.
+ * Sorted like the server's list, and a no-op when the day is already there.
+ */
+export function toggleAwayDay(days: readonly string[], dateKey: string, away: boolean): string[] {
+  const has = days.includes(dateKey);
+  if (away === has) return [...days];
+  return away ? [...days, dateKey].sort() : days.filter((d) => d !== dateKey);
+}
+
 /** Note (or clear) one member's away day; resolves to their remaining away days. */
 export async function adminSetAwayDay(
   userId: string,

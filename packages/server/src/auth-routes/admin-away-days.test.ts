@@ -93,6 +93,10 @@ describe("admin away notes", () => {
     expect(past.status).toBe(400);
     expect(((await past.json()) as { code: string }).code).toBe("PAST_DAY");
     expect((await setAway("nobody", plusDays(1), true)).status).toBe(404);
+    // The write is guarded by the member check in the same batch, not by the
+    // foreign key (which the remote database may not enforce).
+    const rows = await client.execute("SELECT count(*) AS n FROM admin_away_days");
+    expect(rows.rows[0]?.n).toBe(0);
   });
 
   it("the everyone-map groups by member and skips past notes", async () => {

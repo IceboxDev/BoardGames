@@ -4,7 +4,7 @@
 // answer the same. A note is only ever consulted from today on; past notes
 // are history and never returned.
 
-import type { Client } from "@libsql/client";
+import type { Client, InStatement, ResultSet } from "@libsql/client";
 import { z } from "zod";
 import { parseRows } from "./db-rows.ts";
 
@@ -31,16 +31,20 @@ export async function fetchAwayDaysByUser(
   return byUser;
 }
 
-/** One member's away date keys (sorted) from `fromDateKey` on. */
-export async function fetchAwayDays(
-  db: Client,
-  userId: string,
-  fromDateKey: string,
-): Promise<string[]> {
-  const { rows } = await db.execute({
+/**
+ * One member's away date keys from `fromDateKey` on, as a statement so the
+ * write route can read back in the same batch as its write; decode the rows
+ * with `awayDaysFromRows`.
+ */
+export function awayDaysStatement(userId: string, fromDateKey: string): InStatement {
+  return {
     sql: "SELECT user_id, date_key FROM admin_away_days WHERE user_id = ? AND date_key >= ? ORDER BY date_key",
     args: [userId, fromDateKey],
-  });
+  };
+}
+
+/** `awayDaysStatement`'s rows as sorted date keys. */
+export function awayDaysFromRows(rows: ResultSet["rows"]): string[] {
   return parseRows(AwayRowSchema, rows, "admin_away_days").map((r) => r.date_key);
 }
 

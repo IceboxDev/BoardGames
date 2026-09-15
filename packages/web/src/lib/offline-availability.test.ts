@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { cycleAvailability, dateKey, mapsEqual } from "./offline-availability";
+import { cycleAvailability, dateKey, mapsEqual, toggleAwayDay } from "./offline-availability";
 
 describe("dateKey", () => {
   it("formats single-digit months and days with zero padding", () => {
@@ -41,6 +41,24 @@ describe("cycleAvailability", () => {
     state = cycleAvailability(state);
     state = cycleAvailability(state);
     expect(state).toBeUndefined();
+  });
+});
+
+describe("toggleAwayDay", () => {
+  it("notes a day in date order and clears it again, never touching the input", () => {
+    const days = ["2026-09-20", "2026-09-30"];
+    expect(toggleAwayDay(days, "2026-09-25", true)).toEqual([
+      "2026-09-20",
+      "2026-09-25",
+      "2026-09-30",
+    ]);
+    expect(toggleAwayDay(days, "2026-09-20", false)).toEqual(["2026-09-30"]);
+    expect(days).toEqual(["2026-09-20", "2026-09-30"]);
+  });
+
+  it("is a no-op when the day is already in that state", () => {
+    expect(toggleAwayDay(["2026-09-20"], "2026-09-20", true)).toEqual(["2026-09-20"]);
+    expect(toggleAwayDay([], "2026-09-20", false)).toEqual([]);
   });
 });
 

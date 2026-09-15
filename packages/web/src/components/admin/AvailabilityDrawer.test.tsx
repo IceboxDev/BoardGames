@@ -1,4 +1,4 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { QueryClient, QueryClientProvider, useQuery } from "@tanstack/react-query";
 import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
@@ -35,15 +35,55 @@ const dayKey = (offset: number) => {
 };
 const dayNumber = (key: string) => String(Number(key.slice(8, 10)));
 
+/** A promise the test resolves by hand — the server reply, held back. */
+function deferred<T>() {
+  let resolve!: (value: T) => void;
+  let reject!: (reason: unknown) => void;
+  const promise = new Promise<T>((res, rej) => {
+    resolve = res;
+    reject = rej;
+  });
+  return { promise, resolve, reject };
+}
+
+/** What the server holds — the everyone-map refetched once the last tap settles. */
+const server: { awayByUser: Record<string, string[]> } = { awayByUser: {} };
+
+/**
+ * The page owns the away map and hands the drawer its member's slice, so the
+ * drawer here reads it from the same cache the mutation writes — as on the
+ * admin page, where the query behind the prop re-renders on every write.
+ */
+function DrawerHost() {
+  const days = useQuery({
+    queryKey: qk.adminAwayDays(),
+    queryFn: () => Promise.resolve(server.awayByUser),
+  }).data?.[USER.id];
+  return <AvailabilityDrawer user={USER} awayDays={days ?? []} onClose={() => {}} />;
+}
+
 function renderDrawer(awayDays: string[]) {
-  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
-  qc.setQueryData(qk.adminAwayDays(), { [USER.id]: awayDays });
+  const qc = new QueryClient({
+    defaultOptions: { queries: { retry: false, staleTime: Number.POSITIVE_INFINITY } },
+  });
+  server.awayByUser = { [USER.id]: awayDays };
+  qc.setQueryData(qk.adminAwayDays(), server.awayByUser);
   render(
     <QueryClientProvider client={qc}>
-      <AvailabilityDrawer user={USER} awayDays={awayDays} onClose={() => {}} />
+      <DrawerHost />
     </QueryClientProvider>,
   );
   return qc;
+}
+
+/** The enabled (future) cell for a day — the 42-day grid can show a day number twice. */
+async function futureCell(key: string) {
+  const cells = await screen.findAllByRole("button", {
+    name: new RegExp(`^${dayNumber(key)}( — away \\(admin note\\))?$`),
+  });
+  const cell = cells.find((c) => !(c as HTMLButtonElement).disabled);
+  if (!cell) throw new Error(`no enabled cell for ${key}`);
+  return cell;
 }
 
 beforeEach(() => {
@@ -51,26 +91,78 @@ beforeEach(() => {
 });
 
 describe("AvailabilityDrawer — away notes", () => {
-  it("notes a blank future day as away and writes the member's list into the page map", async () => {
+  it("shows the note the moment it is tapped, before the server has answered", async () => {
     const target = dayKey(3);
     fetchAvailabilityMock.mockResolvedValue({});
-    setAwayMock.mockResolvedValue([target]);
+    const reply = deferred<string[]>();
+    setAwayMock.mockReturnValue(reply.promise);
     const qc = renderDrawer([]);
 
-    // The 42-day grid can show the same day number twice (this month and
-    // next); cells render in date order and past ones are disabled, so the
-    // first enabled match is the nearer, future one.
-    const cells = await screen.findAllByRole("button", {
-      name: new RegExp(`^${dayNumber(target)}$`),
-    });
-    const cell = cells.find((c) => !(c as HTMLButtonElement).disabled);
-    if (!cell) throw new Error("no enabled cell for the target day");
-    await userEvent.click(cell);
+    await userEvent.click(await futureCell(target));
 
-    await waitFor(() => expect(setAwayMock).toHaveBeenCalledWith(USER.id, target, true));
+    // The tap is in the page map (and so on the cell) while the request is
+    // still out; the answer only confirms it.
+    expect(setAwayMock).toHaveBeenCalledWith(USER.id, target, true);
+    expect(qc.getQueryData(qk.adminAwayDays())).toEqual({ [USER.id]: [target] });
+    expect(
+      screen.getByRole("button", { name: `${dayNumber(target)} — away (admin note)` }),
+    ).toHaveAttribute("aria-pressed", "true");
+    server.awayByUser = { [USER.id]: [target] };
+    reply.resolve([target]);
+    await waitFor(() => expect(qc.isMutating()).toBe(0));
+    await waitFor(() => expect(qc.isFetching()).toBe(0));
+    expect(qc.getQueryData(qk.adminAwayDays())).toEqual({ [USER.id]: [target] });
+  });
+
+  it("a tap the server refuses is taken back — and only that tap", async () => {
+    const first = dayKey(3);
+    const second = dayKey(4);
+    fetchAvailabilityMock.mockResolvedValue({});
+    const firstReply = deferred<string[]>();
+    const secondReply = deferred<string[]>();
+    setAwayMock.mockReturnValueOnce(firstReply.promise).mockReturnValueOnce(secondReply.promise);
+    const qc = renderDrawer([]);
+
+    await userEvent.click(await futureCell(first));
+    await userEvent.click(await futureCell(second));
+    expect(qc.getQueryData(qk.adminAwayDays())).toEqual({ [USER.id]: [first, second] });
+
+    firstReply.reject(new Error("the day is already past"));
     await waitFor(() =>
-      expect(qc.getQueryData(qk.adminAwayDays())).toEqual({ [USER.id]: [target] }),
+      expect(qc.getQueryData(qk.adminAwayDays())).toEqual({ [USER.id]: [second] }),
     );
+    expect(screen.getByText("the day is already past")).toBeInTheDocument();
+    server.awayByUser = { [USER.id]: [second] };
+    secondReply.resolve([second]);
+    await waitFor(() => expect(qc.isMutating()).toBe(0));
+    await waitFor(() => expect(qc.isFetching()).toBe(0));
+    expect(qc.getQueryData(qk.adminAwayDays())).toEqual({ [USER.id]: [second] });
+  });
+
+  it("an older reply never takes back a newer tap still on its way", async () => {
+    const first = dayKey(3);
+    const second = dayKey(4);
+    fetchAvailabilityMock.mockResolvedValue({});
+    const firstReply = deferred<string[]>();
+    const secondReply = deferred<string[]>();
+    setAwayMock.mockReturnValueOnce(firstReply.promise).mockReturnValueOnce(secondReply.promise);
+    const qc = renderDrawer([]);
+
+    await userEvent.click(await futureCell(first));
+    await userEvent.click(await futureCell(second));
+
+    // The first reply knows nothing of the second tap; adopting it would blank
+    // that cell until the second reply lands.
+    server.awayByUser = { [USER.id]: [first] };
+    firstReply.resolve([first]);
+    await waitFor(() => expect(qc.isMutating()).toBe(1));
+    expect(qc.isFetching()).toBe(0); // nor is the map refetched from under it
+    expect(qc.getQueryData(qk.adminAwayDays())).toEqual({ [USER.id]: [first, second] });
+    server.awayByUser = { [USER.id]: [first, second] };
+    secondReply.resolve([first, second]);
+    await waitFor(() => expect(qc.isMutating()).toBe(0));
+    await waitFor(() => expect(qc.isFetching()).toBe(0));
+    expect(qc.getQueryData(qk.adminAwayDays())).toEqual({ [USER.id]: [first, second] });
   });
 
   it("shows a noted day as away, clears it on the next tap, and counts it in the summary", async () => {
