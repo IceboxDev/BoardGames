@@ -16,6 +16,15 @@ import {
 
 const FAST: TenkaConfig = { ...DEFAULT_TENKA, timeMs: 0, iterations: 30, rootSolveDets: 2 };
 
+// The wall-clock guards below are perf tripwires, not benchmarks: they exist to
+// catch a search that stops honouring its deadline, which overshoots by orders
+// of magnitude, not by a factor of two. A loaded machine (the pre-commit hook
+// runs three packages' suites and a typecheck at once; the CI runner is slower
+// still) has measured 200–400 ms for a 15 ms budget on the SAME code that runs
+// in 30 ms idle. So the bounds are either calibrated against an untimed search
+// measured in the same loop, or relaxed by this factor where no baseline exists.
+const LOAD_FACTOR = process.env.CI || process.env.LEFTHOOK ? 4 : 1;
+
 function phaseOf(state: GameState): GameState["phase"] {
   return state.phase;
 }
@@ -180,7 +189,7 @@ describe("Tenka", () => {
       applyAction(state, action);
     }
     expect(searched).toBeGreaterThan(20);
-    expect(worst).toBeLessThan(150);
+    expect(worst).toBeLessThan(150 * LOAD_FACTOR);
   }, 30_000);
 
   it("searches the rewards phase deterministically and legally at every width", () => {
@@ -198,10 +207,12 @@ describe("Tenka", () => {
         picked = getLegalActions(state)[0];
       } else {
         const cfg = { ...FAST, rewardTimeMs: 0, rewardWidth: 3 };
+        const u0 = performance.now();
         picked =
           phaseOf(state) === "bonus"
             ? pickBonusTenka(state, legal, seat, cfg)
             : pickRewardTenka(state, legal, seat, cfg);
+        const untimedMs = performance.now() - u0;
         const again =
           phaseOf(state) === "bonus"
             ? pickBonusTenka(state, legal, seat, cfg)
@@ -211,10 +222,14 @@ describe("Tenka", () => {
           legal.some((a) => canonicalEquals(a, picked)),
           `in ${phaseOf(state)}`,
         ).toBe(true);
-        // The timed path honours its deadline and stays legal too.
+        // The timed path honours its deadline and stays legal too. The bound
+        // is calibrated on this machine's own untimed width-3 search: a 15 ms
+        // deadline that is honoured stops long before the full-width search
+        // the timed path would otherwise run, so on an idle box this is the
+        // old 120 ms and on a loaded one it scales with everything else.
         const t0 = performance.now();
         const timed = pickRewardTenka(state, legal, seat, { ...FAST, rewardTimeMs: 15 });
-        expect(performance.now() - t0).toBeLessThan(120);
+        expect(performance.now() - t0).toBeLessThan(Math.max(120, untimedMs) * LOAD_FACTOR);
         expect(legal.some((a) => canonicalEquals(a, timed))).toBe(true);
         rewardDecisions++;
       }

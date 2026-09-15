@@ -224,12 +224,17 @@ async function stampMigration(db: Client, migration: Migration): Promise<void> {
  * Bring the database up to the latest migration. Safe to call repeatedly and
  * concurrently; a no-op when already current.
  */
+const SILENT_LOGGER: MigrationLogger = { info() {}, warn() {} };
+
 export async function runMigrations(
   db: Client,
   options: RunMigrationsOptions = {},
 ): Promise<RunMigrationsResult> {
   const migrations = options.migrations ?? registryMigrations;
-  const logger = options.logger ?? console;
+  // Under vitest every in-memory database replays the whole chain, so the
+  // per-version lines are pure noise in a test log; a test that wants them
+  // passes its own logger.
+  const logger = options.logger ?? (process.env.VITEST ? SILENT_LOGGER : console);
   const lockTimeoutMs = options.lockTimeoutMs ?? DEFAULT_LOCK_TIMEOUT_MS;
   const owner = `${hostname()}:${process.pid}:${randomUUID().slice(0, 8)}`;
   const latest = migrations.length;

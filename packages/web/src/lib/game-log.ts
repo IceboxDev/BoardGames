@@ -6,7 +6,8 @@
 // client's view (actions sent, messages received) and the server terminal for
 // the authoritative view (snapshots, AI, errors).
 
-const ENABLED = import.meta.env.DEV;
+// Vitest runs with DEV on; the trace is for a browser console, not a test log.
+const ENABLED = import.meta.env.DEV && !import.meta.env.VITEST;
 
 export function gameLog(event: string, data?: unknown): void {
   if (!ENABLED) return;
