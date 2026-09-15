@@ -137,10 +137,6 @@ export default function Calendar({
               ? {
                   seats: lock.seats,
                   viewerSeat: viewer ? viewerSeat(lock, viewer.id, viewer.isAdmin) : null,
-                  viewerSeatIndex:
-                    viewer?.id && lock.seatedUserIds.includes(viewer.id)
-                      ? lock.seatedUserIds.indexOf(viewer.id)
-                      : null,
                 }
               : null;
           return (

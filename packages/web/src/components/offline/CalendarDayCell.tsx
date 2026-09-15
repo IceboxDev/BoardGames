@@ -9,8 +9,6 @@ import { D20Die } from "./D20Die";
 export type PrivateNightCell = {
   seats: NightSeats;
   viewerSeat: ViewerSeat | null;
-  /** Index of the viewer's own seat in the seated list (host = 0); null when not seated. */
-  viewerSeatIndex: number | null;
 };
 
 export type Heat =
@@ -498,25 +496,34 @@ function LockedLayer({
           locked, communicating "guest list is sealed" rather than the date
           itself being chosen. Centered along the top edge so the medallion
           sits symmetrically above the headcount on both phone and desktop. */}
-      {showMedallion && !compact && (
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-1.5 z-raised flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-700 shadow-[0_2px_8px_rgba(0,0,0,0.5),inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3)]"
-        >
-          <LockGlyph />
-        </span>
-      )}
-      {showMedallion && compact && (
-        <span
-          aria-hidden="true"
-          className="pointer-events-none absolute left-1/2 top-0.5 z-raised flex h-3 w-3 -translate-x-1/2 items-center justify-center rounded-full bg-amber-400 shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
-        >
-          <LockGlyph small />
-        </span>
-      )}
+      {showMedallion && <SealMedallion compact={compact} />}
       {/* RSVP-aware pill: invitation by default; flips to GOING / PASS once viewer commits. */}
       {!compact && <LockedPill viewerRsvp={viewerRsvp} />}
     </>
+  );
+}
+
+/**
+ * The wax-seal lock medallion, centered on the top edge. On an open night it
+ * means "guest list sealed"; a private night's guest list is sealed by
+ * construction, so it wears the same seal from day one — one lock, one
+ * meaning.
+ */
+function SealMedallion({ compact }: { compact: boolean }) {
+  return compact ? (
+    <span
+      aria-hidden="true"
+      className="pointer-events-none absolute left-1/2 top-0.5 z-raised flex h-3 w-3 -translate-x-1/2 items-center justify-center rounded-full bg-amber-400 shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
+    >
+      <LockGlyph small />
+    </span>
+  ) : (
+    <span
+      aria-hidden="true"
+      className="pointer-events-none absolute left-1/2 top-1.5 z-raised flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-700 shadow-[0_2px_8px_rgba(0,0,0,0.5),inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3)]"
+    >
+      <LockGlyph />
+    </span>
   );
 }
 
@@ -638,79 +645,36 @@ function PrivateNightLayer({
         aria-hidden="true"
         className="pointer-events-none absolute inset-y-0 -left-1/4 w-1/3 bg-gradient-to-r from-transparent via-private-ink/15 to-transparent motion-safe:animate-seal-shimmer"
       />
-      {/* A small key at the top edge — the invitation-only mark. */}
-      <span
-        aria-hidden="true"
-        className={`pointer-events-none absolute left-1/2 z-raised flex -translate-x-1/2 items-center justify-center rounded-full bg-private-ink/90 shadow-[0_1px_3px_rgba(0,0,0,0.6)] ${
-          compact ? "top-0.5 h-3 w-3" : "top-1.5 h-5 w-5"
-        }`}
-      >
-        <KeyGlyph small={compact} />
-      </span>
+      <SealMedallion compact={compact} />
       {!compact && <PrivateSeatPill viewerSeat={viewerSeat} />}
     </>
   );
 }
 
-/** The private night's centre: seats taken over seats total, plus a pip per seat. */
+/**
+ * The private night's centre: seats taken over seats total, set exactly like
+ * the sealed cell's headcount (same scale, same cream ink) so a locked-in
+ * night reads the same way whether it is open or private. The waitlist rides
+ * along as a small "+n" — the only thing an open night doesn't have.
+ */
 function SeatTally({ compact, night }: { compact: boolean; night: PrivateNightCell }) {
-  const { seats, viewerSeatIndex } = night;
-  const full = seats.taken >= seats.total;
-  // Pips only fit up to eight seats; bigger tables keep the numerals alone.
-  // Phone cells (~50px) take five pips at most — beyond that the row waits
-  // for the `sm` breakpoint.
-  const showPips = !compact && seats.total <= 8;
-  const pipsVisibility = seats.total > 5 ? "hidden sm:flex" : "flex";
-  // Two-digit tallies squeeze the compact (side-drawer) cell.
-  const wide = seats.total >= 10 || seats.taken >= 10;
-  const compactSize = wide ? "text-2xs sm:text-xs" : "text-sm sm:text-base";
+  const { seats } = night;
   return (
-    // The key medallion sits above and the seat pill below: pad for both so
-    // the numerals never run into either, then let the numerals and pips
-    // share whatever height is left.
-    <span
-      className={`relative z-lift flex min-h-0 flex-1 flex-col items-center justify-center ${
-        compact ? "gap-0 pt-2" : "gap-0.5 pt-4 pb-4 sm:gap-1 sm:pt-5 sm:pb-6"
-      }`}
-    >
+    <span className="relative z-lift flex flex-1 items-center justify-center">
       <span
-        className={`flex items-baseline gap-0.5 font-extrabold leading-none drop-shadow ${
-          full ? "text-ok" : "text-private-ink"
-        } ${compact ? compactSize : "text-base sm:text-xl md:text-2xl lg:text-3xl 2xl:text-4xl"}`}
+        className={`flex items-baseline gap-1 font-extrabold leading-none text-warn-pale drop-shadow ${
+          compact ? "text-base" : "text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
+        }`}
       >
         <span className="tabular-nums">{seats.taken}</span>
-        <span className={full ? "text-ok/60" : "text-private-ink/50"}>/</span>
+        <span className="text-warn-pale/60">/</span>
         <span className="tabular-nums">{seats.total}</span>
         {seats.waitlisted > 0 && !compact && (
-          <span
-            className={`ml-0.5 self-center font-semibold tabular-nums text-private-ink/60 ${
-              compact ? "text-5xs" : "text-4xs sm:text-3xs md:text-xs"
-            }`}
-          >
+          <span className="ml-0.5 self-center text-4xs font-semibold tabular-nums text-warn-pale/60 sm:text-3xs md:text-xs">
             +{seats.waitlisted}
           </span>
         )}
       </span>
-      {showPips && (
-        <span aria-hidden="true" className={`${pipsVisibility} shrink-0 items-center gap-1`}>
-          {Array.from({ length: seats.total }, (_, i) => i + 1).map((seatNo) => {
-            const taken = seatNo <= seats.taken;
-            const mine = viewerSeatIndex !== null && viewerSeatIndex + 1 === seatNo;
-            return (
-              <span
-                key={seatNo}
-                className={`h-1.5 w-1.5 rounded-full sm:h-2 sm:w-2 ${
-                  taken
-                    ? full
-                      ? "bg-ok shadow-[0_0_6px] shadow-ok/60"
-                      : "bg-private-ink"
-                    : "border border-private-ink/40 bg-transparent"
-                } ${mine ? "ring-2 ring-accent-400 ring-offset-1 ring-offset-private-mid" : ""}`}
-              />
-            );
-          })}
-        </span>
-      )}
     </span>
   );
 }
@@ -775,24 +739,6 @@ function PrivateSeatPill({ viewerSeat }: { viewerSeat: ViewerSeat | null }) {
         </span>
       );
   }
-}
-
-function KeyGlyph({ small = false }: { small?: boolean }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className={`text-private-base ${small ? "h-2 w-2" : "h-3 w-3"}`}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={small ? 3 : 2.5}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <circle cx="8" cy="14" r="4" />
-      <path d="M11 11l9-9M16 6l3 3M13 9l3 3" />
-    </svg>
-  );
 }
 
 function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
