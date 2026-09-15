@@ -23,7 +23,7 @@ import type { Client } from "@libsql/client";
 import { z } from "zod";
 import { jsonColumn, parseRow, parseRows, RowParseError } from "./db-rows.ts";
 import { fetchNewSlugsByUser } from "./new-acquisitions.ts";
-import { deriveNightParticipants, loadNightLock } from "./night-participants.ts";
+import { deriveNightParticipants, loadNightLock, sealedAt } from "./night-participants.ts";
 
 // ── Row projections ───────────────────────────────────────────────────
 //
@@ -303,9 +303,10 @@ export async function computeAvailableGamesPayload(opts: {
 
   const lock = await loadNightLock(db, date);
   if (!lock) return null;
-  const { hostUserId, hostName, eventTime, address, picksLockedAt, expectedUserIds, hostAtHome } =
-    lock;
+  const { hostUserId, hostName, eventTime, address, expectedUserIds, hostAtHome } = lock;
   const lockedAt = lock.lockedAt ?? "1970-01-01 00:00:00";
+  // A private night is sealed from lock-in (see `sealedAt`).
+  const picksLockedAt = sealedAt(lock);
 
   // Pull every input the headcount math needs in parallel. We also fetch the
   // MAX(rsvped_at) and MAX(created_at) for this date so the ICS feed can

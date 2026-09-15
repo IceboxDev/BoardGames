@@ -408,17 +408,17 @@ describe("private nights", () => {
     expect(body?.topSlugs).toHaveLength(3);
   });
 
-  it("finalizing the lineup never grows a private guest list from stale rows", async () => {
+  it("has no second lock: a private night is sealed from lock-in and the padlock is refused", async () => {
     await lockPrivate();
-    await client.execute({
-      sql: "INSERT INTO rsvps (date_key, user_id, status, auto) VALUES (?, ?, 'yes', 0)",
-      args: [DATE, OUT],
-    });
     const res = await post(as(HOST), "/api/calendar/lock-picks", { date: DATE, on: true });
-    expect(res.status).toBe(200);
-    const row = await lockRow();
-    expect(row.picks_locked_at).not.toBeNull();
-    expect(row.expected).toEqual([HOST, A, B, C]);
+    expect(res.status).toBe(400);
+    expect(await code(res)).toBe("NOT_APPLICABLE");
+    expect((await lockRow()).picks_locked_at).toBeNull();
+    // …yet every reader sees it sealed — from the moment it was locked.
+    const lock = (await locks(as(A)))[DATE];
+    expect(lock?.picksLockedAt).not.toBeNull();
+    expect((await games(as(A))).body?.picksLockedAt).toBe(lock?.picksLockedAt);
+    expect((await locks(as(OUT)))[DATE]?.picksLockedAt).not.toBeNull();
   });
 
   // ── Managing ───────────────────────────────────────────────────────────

@@ -62,6 +62,19 @@ export type NightLock = {
   title: string | null;
 };
 
+/**
+ * When the night's picks count as sealed. An open night seals when the host
+ * toggles the padlock; a private night's guest list IS the invitation, so it
+ * is sealed from the moment it is locked in — there is no second lock to
+ * turn, and every "sealed" consumer (the D&D / EXIT takeovers, the feed's
+ * bring-list prefix) sees it that way.
+ */
+export function sealedAt(
+  lock: Pick<NightLock, "isPrivate" | "picksLockedAt" | "lockedAt">,
+): string | null {
+  return lock.isPrivate ? (lock.picksLockedAt ?? lock.lockedAt) : lock.picksLockedAt;
+}
+
 export function nightLockFromRow(row: z.infer<typeof NightLockRowSchema>): NightLock {
   return {
     dateKey: row.date_key,

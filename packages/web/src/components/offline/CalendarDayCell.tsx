@@ -75,7 +75,8 @@ export function DayCell({
   // cell entirely — crimson frame, dungeon background, a d20 headcount.
   const showDnd = dndNight && picksLocked && !!attendance;
   // Private night: frosted graphite, a seat tally instead of a headcount, and
-  // the viewer's own place on the pill. A finalized D&D lineup still wins.
+  // the viewer's own place on the pill. A D&D lineup still wins (a private
+  // night arrives sealed from lock-in, so `picksLocked` is already true).
   const showPrivate = locked && !showDnd && privateNight !== null;
   const invitedPending = showPrivate && !isPast && privateNight?.viewerSeat === "invited";
 

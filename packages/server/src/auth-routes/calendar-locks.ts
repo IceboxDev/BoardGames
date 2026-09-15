@@ -30,6 +30,7 @@ import {
   deriveNightParticipants,
   loadActiveNightLocks,
   loadNightLock,
+  sealedAt,
 } from "../lib/night-participants.ts";
 import { RSVP_NOW } from "./calendar-rsvps.ts";
 
@@ -142,8 +143,13 @@ calendarLocksRoutes.post("/lock-picks", zJsonBody(PicksLockBodySchema), async (c
   if (!isAdmin && !isHost) {
     return errorResponse(c, 403, "only admin or host can toggle picks-lock", "FORBIDDEN");
   }
+  // A private night's guest list is the invitation: it is sealed from lock-in
+  // and there is no second lock to turn (see `sealedAt`).
+  if (lock.isPrivate) {
+    return errorResponse(c, 400, "a private night is sealed from lock-in", "NOT_APPLICABLE");
+  }
 
-  if (on && !lock.isPrivate) {
+  if (on) {
     // Snapshot the guest list at picks-lock time. The date-lock snapshot was
     // taken when the host first locked the date and only sees users who had
     // marked availability by then — anyone who RSVPed yes later (e.g. via
@@ -151,10 +157,6 @@ calendarLocksRoutes.post("/lock-picks", zJsonBody(PicksLockBodySchema), async (c
     // shut out of the modal once picks were locked. Union the original
     // snapshot with every current `yes` RSVP so the guest list at picks-lock
     // time actually reflects who has committed to the night.
-    //
-    // A private night's guest list is the invitation itself and is managed
-    // explicitly (`/private-night`), so finalizing its lineup never touches
-    // it — a stale outsider "yes" must not become an invitation.
     const { rows: yesRows } = await getDb().execute({
       sql: "SELECT user_id FROM rsvps WHERE date_key = ? AND status = 'yes'",
       args: [date],
@@ -168,11 +170,6 @@ calendarLocksRoutes.post("/lock-picks", zJsonBody(PicksLockBodySchema), async (c
                   expected_user_ids_json = ?
             WHERE date_key = ? AND unlocked_at IS NULL`,
       args: [JSON.stringify([...expected]), date],
-    });
-  } else if (on) {
-    await getDb().execute({
-      sql: "UPDATE locked_dates SET picks_locked_at = datetime('now') WHERE date_key = ? AND unlocked_at IS NULL",
-      args: [date],
     });
   } else {
     await getDb().execute({
@@ -445,7 +442,7 @@ calendarLocksRoutes.get("/locks", async (c) => {
         host,
         eventTime: null,
         address: null,
-        picksLockedAt: lock.picksLockedAt,
+        picksLockedAt: sealedAt(lock),
         hostAtHome: lock.hostAtHome,
         attendance: { definite: seats?.taken ?? 0, tentative: 0 },
         topGameSlug: null,
@@ -480,7 +477,7 @@ calendarLocksRoutes.get("/locks", async (c) => {
       expectedUserIds: lock.expectedUserIds,
       rsvps: rsvpMap,
       host,
-      picksLockedAt: lock.picksLockedAt,
+      picksLockedAt: sealedAt(lock),
       hostAtHome: lock.hostAtHome,
       eventTime: lock.eventTime,
       address: lock.address,

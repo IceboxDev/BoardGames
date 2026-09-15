@@ -76,7 +76,9 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   } = useRsvpAvailability({ date, enabled: !!lock && !lock.redacted });
 
   const isHost = !!lock?.host && lock.host.userId === userId;
-  const canTogglePicksLock = !!lock && (isAdmin || isHost);
+  // A private night's guest list is the invitation: the server reports it
+  // sealed from lock-in and refuses the padlock, so the toggle is not shown.
+  const canTogglePicksLock = !!lock && !isPrivate && (isAdmin || isHost);
   const picksLocked = !!lock?.picksLockedAt;
   const pickMode = gamesQuery.data?.pickMode ?? lock?.pickMode ?? "group";
   const hostPicks = isPrivate && pickMode === "host";
@@ -172,23 +174,11 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
       tone={picksLocked ? "amber" : "neutral"}
       size="sm"
       pressed={picksLocked}
-      aria-label={
-        isPrivate
-          ? picksLocked
-            ? "Reopen the lineup"
-            : "Finalize the lineup"
-          : picksLocked
-            ? "Unlock guest list"
-            : "Lock guest list"
-      }
+      aria-label={picksLocked ? "Unlock guest list" : "Lock guest list"}
       title={
-        isPrivate
-          ? picksLocked
-            ? "Lineup is final — click to reopen"
-            : "Finalize the lineup — the night's games are set"
-          : picksLocked
-            ? "Guest list is sealed — click to unlock"
-            : "Lock the guest list — no more last-second RSVPs"
+        picksLocked
+          ? "Guest list is sealed — click to unlock"
+          : "Lock the guest list — no more last-second RSVPs"
       }
       disabled={togglePicksLockMutation.isPending}
       onClick={() => togglePicksLockMutation.mutate({ on: !picksLocked })}
