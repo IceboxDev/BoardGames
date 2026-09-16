@@ -10,4 +10,8 @@ pre-commit:
     typecheck:
       run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" pnpm -r typecheck
     test:
-      run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" pnpm test
+      # LEFTHOOK=1 is read by the vitest configs (a 30 s per-test timeout) and
+      # the timing-sensitive AI tests (a load factor): the hook runs the three
+      # suites and a typecheck at once, on a machine that may be busy besides.
+      # Lefthook itself does not export it.
+      run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" LEFTHOOK=1 pnpm test

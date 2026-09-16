@@ -114,17 +114,23 @@ export default function LockInModal({
   const inviteeCount = [...invitees].filter((id) => id !== hostUserId).length;
 
   // Dedupe candidates by userId; preserve the first occurrence so the admin
-  // appears in the list with the label they were given by the caller.
+  // appears in the list with the label they were given by the caller. An
+  // open night is hosted by someone who marked the day (the candidates); a
+  // private night may be hosted by anyone, so there the rest of the
+  // directory follows. The lock's current host always stays pickable.
   const uniqueCandidates = useMemo(() => {
     const seen = new Set<string>();
     const out: LockHost[] = [];
-    for (const c of candidates) {
-      if (seen.has(c.userId)) continue;
+    const push = (c: LockHost) => {
+      if (seen.has(c.userId)) return;
       seen.add(c.userId);
       out.push(c);
-    }
+    };
+    for (const c of candidates) push(c);
+    if (initialLock?.host) push(initialLock.host);
+    if (isPrivate) for (const m of members) push({ userId: m.id, name: m.name });
     return out;
-  }, [candidates]);
+  }, [candidates, initialLock, isPrivate, members]);
 
   const headingDate = formatDayKey(date, "weekday");
 

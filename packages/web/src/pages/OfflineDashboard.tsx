@@ -295,9 +295,9 @@ export default function OfflineDashboard() {
       out.push({ userId: user.id, name: user.name });
       seen.add(user.id);
     }
-    // Whoever marked the day comes first — the likeliest hosts — then the
-    // rest of the directory, so a private night can be hosted by someone
-    // who never touched the calendar.
+    // Whoever marked the day free — the only people who can host an open
+    // night. (A private night may be hosted by someone who never touched the
+    // calendar; LockInModal widens the list to the directory in that mode.)
     // Marks are per day: a second night on the date reads the same ones.
     const entries = allAvailability?.[nightDate(lockingDate)];
     if (entries) {
@@ -307,13 +307,8 @@ export default function OfflineDashboard() {
         out.push({ userId: e.userId, name: e.name });
       }
     }
-    for (const p of playersQuery.data?.players ?? []) {
-      if (seen.has(p.id)) continue;
-      seen.add(p.id);
-      out.push({ userId: p.id, name: p.name });
-    }
     return out;
-  }, [lockingDate, user, allAvailability, playersQuery.data]);
+  }, [lockingDate, user, allAvailability]);
 
   // Ids of everyone who marked can/maybe on the day being locked — the
   // suggested (pre-checked) guest list of a private night.
