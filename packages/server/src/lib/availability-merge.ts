@@ -169,13 +169,29 @@ export function applyRsvpNoToAvailability(
 
 // ── Row projections ───────────────────────────────────────────────────
 
-/** `SELECT date_key FROM rsvps WHERE user_id = ? AND status = ?`. */
+/** `SELECT substr(date_key, 1, 10) AS date_key FROM rsvps WHERE user_id = ? AND status = ?`. */
 const DateKeyRowSchema = z.object({ date_key: z.string() });
 
-/** `SELECT user_id, date_key FROM rsvps WHERE status = ?`. */
+/** `SELECT user_id, substr(date_key, 1, 10) AS date_key FROM rsvps WHERE status = ?`. */
 const UserDateRowSchema = z.object({ user_id: z.string(), date_key: z.string() });
 
 // ── Queries ───────────────────────────────────────────────────────────
+//
+// Every date these return is a CALENDAR DAY, not a night key: a second night
+// on a date (`…_2`) folds into its day, because the availability map these
+// feed is marked per day. A `no` counts only when the user has no `yes` on
+// another night of the same day — saying no to one table while sitting at
+// the other still means they are around that evening.
+
+/** `r` must be the rsvps alias in scope; `?` binds the status being fetched. */
+const ON_LOCKED_NIGHT =
+  "EXISTS (SELECT 1 FROM locked_dates l WHERE l.date_key = r.date_key AND l.unlocked_at IS NULL)";
+const NO_YES_ON_SAME_DAY = `(? = 'yes' OR NOT EXISTS (
+              SELECT 1 FROM rsvps y
+              WHERE y.user_id = r.user_id AND y.status = 'yes'
+                AND substr(y.date_key, 1, 10) = substr(r.date_key, 1, 10)
+                AND EXISTS (SELECT 1 FROM locked_dates ly
+                            WHERE ly.date_key = y.date_key AND ly.unlocked_at IS NULL)))`;
 
 export async function fetchRsvpYesDatesForUser(db: Client, userId: string): Promise<string[]> {
   return fetchRsvpDatesForUser(db, userId, "yes");
@@ -191,11 +207,11 @@ async function fetchRsvpDatesForUser(
   status: "yes" | "no",
 ): Promise<string[]> {
   const { rows } = await db.execute({
-    sql: `SELECT r.date_key FROM rsvps r
+    sql: `SELECT DISTINCT substr(r.date_key, 1, 10) AS date_key FROM rsvps r
           WHERE r.user_id = ? AND r.status = ?
-            AND EXISTS (SELECT 1 FROM locked_dates l
-                        WHERE l.date_key = r.date_key AND l.unlocked_at IS NULL)`,
-    args: [userId, status],
+            AND ${ON_LOCKED_NIGHT}
+            AND ${NO_YES_ON_SAME_DAY}`,
+    args: [userId, status, status],
   });
   return parseRows(DateKeyRowSchema, rows, "rsvps").map((r) => r.date_key);
 }
@@ -219,11 +235,11 @@ async function fetchAllRsvpByUser(
   status: "yes" | "no",
 ): Promise<Map<string, Set<string>>> {
   const { rows } = await db.execute({
-    sql: `SELECT r.user_id, r.date_key FROM rsvps r
+    sql: `SELECT DISTINCT r.user_id, substr(r.date_key, 1, 10) AS date_key FROM rsvps r
           WHERE r.status = ?
-            AND EXISTS (SELECT 1 FROM locked_dates l
-                        WHERE l.date_key = r.date_key AND l.unlocked_at IS NULL)`,
-    args: [status],
+            AND ${ON_LOCKED_NIGHT}
+            AND ${NO_YES_ON_SAME_DAY}`,
+    args: [status, status],
   });
   const out = new Map<string, Set<string>>();
   for (const r of parseRows(UserDateRowSchema, rows, "rsvps")) {

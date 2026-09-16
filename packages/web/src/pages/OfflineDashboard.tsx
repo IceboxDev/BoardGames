@@ -1,4 +1,4 @@
-import { mkOptimisticLock } from "@boardgames/core/protocol";
+import { mkOptimisticLock, nightDate } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
@@ -298,7 +298,8 @@ export default function OfflineDashboard() {
     // Whoever marked the day comes first — the likeliest hosts — then the
     // rest of the directory, so a private night can be hosted by someone
     // who never touched the calendar.
-    const entries = allAvailability?.[lockingDate];
+    // Marks are per day: a second night on the date reads the same ones.
+    const entries = allAvailability?.[nightDate(lockingDate)];
     if (entries) {
       for (const e of entries) {
         if (seen.has(e.userId)) continue;
@@ -317,7 +318,7 @@ export default function OfflineDashboard() {
   // Ids of everyone who marked can/maybe on the day being locked — the
   // suggested (pre-checked) guest list of a private night.
   const freeOnLockingDate = useMemo(() => {
-    const entries = lockingDate ? allAvailability?.[lockingDate] : undefined;
+    const entries = lockingDate ? allAvailability?.[nightDate(lockingDate)] : undefined;
     return new Set((entries ?? []).map((e) => e.userId));
   }, [lockingDate, allAvailability]);
 

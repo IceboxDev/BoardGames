@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { DateKeySchema, TimeOfDaySchema } from "../common.ts";
+import { NightKeySchema, TimeOfDaySchema } from "../common.ts";
 import { ArrivalGreetingSchema } from "./arrivals.ts";
 import { NightSeatsSchema, PickModeSchema } from "./calendar.ts";
 import { VOTES_PER_PLAYER } from "./purchase-vote.ts";
@@ -47,7 +47,7 @@ export type PurchaseVoteReminderGreeting = z.infer<typeof PurchaseVoteReminderGr
  */
 export const NightInviteGreetingSchema = z.object({
   kind: z.literal("night-invite"),
-  date: DateKeySchema,
+  date: NightKeySchema,
   hostUserId: z.string().min(1),
   title: z.string().nullable(),
   eventTime: TimeOfDaySchema.nullable(),
@@ -100,7 +100,7 @@ export const AppGreetingAckBodySchema = z.discriminatedUnion("kind", [
   }),
   z.object({
     kind: z.literal("night-invite"),
-    date: DateKeySchema,
+    date: NightKeySchema,
     action: GreetingAckActionSchema,
   }),
 ]);

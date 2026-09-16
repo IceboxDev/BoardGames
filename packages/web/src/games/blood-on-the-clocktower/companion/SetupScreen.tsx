@@ -23,7 +23,7 @@ import {
 } from "../../../components/ui";
 import { RADIUS_CARD_MD } from "../../../components/ui/radii";
 import { fetchAvailableGames } from "../../../lib/calendar-games";
-import { fetchCalendarLocks } from "../../../lib/calendar-locks";
+import { fetchCalendarLocks, nightsForDate } from "../../../lib/calendar-locks";
 import { cn } from "../../../lib/cn";
 import { dateKey } from "../../../lib/offline-availability";
 import { fetchPlayers } from "../../../lib/profile";
@@ -183,12 +183,15 @@ export default function SetupScreen({ onDeal }: { onDeal: (draft: BagDraft) => v
     queryFn: ({ signal }) => fetchCalendarLocks(signal),
   });
   // A private night the Storyteller isn't on arrives redacted — its roster
-  // is not ours to pull.
-  const tonight = locksQuery.data?.[todayKey];
+  // is not ours to pull. A date can carry two nights; the first one is
+  // tonight's table.
+  const tonightRef = nightsForDate(locksQuery.data, todayKey)[0] ?? null;
+  const tonightKey = tonightRef?.key ?? todayKey;
+  const tonight = tonightRef?.lock;
   const nightTonight = Boolean(tonight) && !tonight?.redacted;
   const gamesQuery = useQuery({
-    queryKey: qk.availableGames(todayKey),
-    queryFn: ({ signal }) => fetchAvailableGames(todayKey, signal),
+    queryKey: qk.availableGames(tonightKey),
+    queryFn: ({ signal }) => fetchAvailableGames(tonightKey, signal),
     enabled: nightTonight,
   });
   const attendees = gamesQuery.data?.attendees ?? [];

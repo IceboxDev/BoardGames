@@ -27,6 +27,21 @@ const sampleLocked = {
   attendance: { definite: 1, tentative: 0 },
 };
 
+describe("night keys on request bodies", () => {
+  it("accepts a second night's key wherever a night is named", () => {
+    expect(LockInRequestBodySchema.parse({ date: "2026-05-05_2" }).date).toBe("2026-05-05_2");
+    expect(SetRsvpBodySchema.parse({ date: "2026-05-05_2", status: "yes" }).date).toBe(
+      "2026-05-05_2",
+    );
+    expect(PicksLockBodySchema.parse({ date: "2026-05-05_2", on: true }).date).toBe("2026-05-05_2");
+  });
+
+  it("rejects a third slot", () => {
+    expect(() => LockInRequestBodySchema.parse({ date: "2026-05-05_3" })).toThrow();
+    expect(() => SetRsvpBodySchema.parse({ date: "2026-05-05_3", status: "yes" })).toThrow();
+  });
+});
+
 describe("LockedDateSchema", () => {
   it("accepts a fully-populated lock", () => {
     expect(() => LockedDateSchema.parse(sampleLocked)).not.toThrow();

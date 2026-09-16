@@ -295,3 +295,111 @@
       inset 0 0 22px -10px rgba(0, 0, 0, 0.7);
   }
 }
+
+/* ── Two nights on one date ─────────────────────────────────────────── */
+/* The cell becomes a frame holding two panes, one per night, each painted
+   with that night's own art (gold seal / crimson tome / frosted graphite)
+   and its own headcount. Everything about the split is decided by the
+   CELL'S ACTUAL SHAPE, not a viewport breakpoint: a wide cell (desktop)
+   splits left / right, a tall cell (phone) splits top / bottom, and each
+   pane sizes its own numerals, medallion and pill from its own box — so a
+   cramped pane sheds the pill for a status edge and shrinks the numerals
+   instead of overflowing. Size containers need a definite box: the split
+   wrapper is `absolute inset-*` inside the cell, and each pane is a
+   `flex: 1 1 0` item of it. */
+.night-split {
+  container-type: size;
+}
+.night-split-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1875rem;
+  width: 100%;
+  height: 100%;
+}
+@container (min-aspect-ratio: 1 / 1) {
+  .night-split-inner {
+    flex-direction: row;
+  }
+}
+.night-pane {
+  container-type: size;
+  flex: 1 1 0%;
+  min-width: 0;
+  min-height: 0;
+}
+
+/* The headcount: as large as the pane allows. Width is the usual limit
+   ("12/14" is five glyphs wide), height the limit on a phone's stacked
+   panes; `--count-chars` is set per render. */
+.night-pane-count {
+  font-size: clamp(0.5rem, min(calc(150cqw / var(--count-chars, 3)), 36cqh), 3.75rem);
+}
+.night-pane-extra {
+  font-size: clamp(0.4rem, 9cqw, 0.8rem);
+}
+.night-pane-medallion {
+  display: none;
+  width: 0.75rem;
+  height: 0.75rem;
+  top: 0.125rem;
+  left: 0.125rem;
+}
+/* A pane narrower than the medallion itself (the side-drawer calendar) keeps
+   the numerals and drops the seal. */
+@container (min-height: 28px) and (min-width: 28px) {
+  .night-pane-medallion {
+    display: flex;
+  }
+}
+.night-pane-medallion > svg {
+  width: 0.5rem;
+  height: 0.5rem;
+}
+@container (min-height: 88px) and (min-width: 60px) {
+  .night-pane-medallion {
+    width: 1.125rem;
+    height: 1.125rem;
+    top: 0.25rem;
+    left: 0.25rem;
+  }
+  .night-pane-medallion > svg {
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+}
+/* The bottom pill needs room; below it, a status edge along the bottom of
+   the pane carries the same colour. */
+.night-pane-pill {
+  display: none;
+}
+.night-pane-edge {
+  display: block;
+}
+@container (min-height: 60px) and (min-width: 46px) {
+  .night-pane-pill {
+    display: inline-flex;
+  }
+  .night-pane-edge {
+    display: none;
+  }
+}
+@container (min-width: 72px) {
+  .night-pane-pill {
+    min-height: 1rem;
+    font-size: var(--text-5xs);
+  }
+}
+/* The D&D die and the "+ 2nd night" label follow the same idea. */
+.night-pane-die {
+  max-width: min(78cqw, 5.5rem);
+  max-height: min(70cqh, 5.5rem);
+}
+.night-pane-label {
+  display: none;
+}
+@container (min-height: 44px) and (min-width: 56px) {
+  .night-pane-label {
+    display: block;
+  }
+}

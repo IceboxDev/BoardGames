@@ -1,4 +1,5 @@
 import "./calendar-fire.css";
+import { nightSlot } from "@boardgames/core/protocol";
 import type { NightSeats } from "../../lib/calendar-locks";
 import type { RsvpStatus } from "../../lib/calendar-rsvps";
 import type { ViewerSeat } from "../../lib/night-access";
@@ -16,6 +17,26 @@ export type Heat =
   | { kind: "warming"; can: 3; maybe: number }
   | { kind: "fire"; can: number; maybe: number };
 
+/**
+ * One locked night as the cell paints it. A date carries up to two of these
+ * (its second night is keyed `date_2`); two — or one beside the free slot an
+ * admin may fill — split the cell into panes, one per night.
+ */
+export type NightCell = {
+  /** The night's key: its date, or `date_2` for the second night on it. */
+  key: string;
+  picksLocked: boolean;
+  attendance: { definite: number; tentative: number } | null;
+  /** Sealed night whose vote winner is D&D — swaps in the crimson/d20 treatment. */
+  dndNight: boolean;
+  /** Private (invitation-only) night — swaps in the frosted graphite treatment. */
+  privateNight: PrivateNightCell | null;
+  viewerRsvp?: RsvpStatus;
+  /** Whether tapping the night does anything (RSVP modal, lock-mode edit). */
+  interactive: boolean;
+  onClick: () => void;
+};
+
 export type DayCellProps = {
   day: number;
   monthBucket: 0 | 1 | 2;
@@ -23,28 +44,36 @@ export type DayCellProps = {
   value: Availability | undefined;
   isToday: boolean;
   isPast: boolean;
+  /** Whether an UNLOCKED cell responds to `onClick`; a night's own clickability rides in `nights`. */
   interactive: boolean;
   compact: boolean;
   labels?: AvailabilityEntry[];
   /** True when admin overlay is active for the whole calendar (drives label vs personal-status priority). */
   isAdminView: boolean;
   heat: Heat;
-  locked: boolean;
-  picksLocked: boolean;
-  attendance: { definite: number; tentative: number } | null;
-  /** Sealed night whose vote winner is D&D — swaps in the crimson/d20 treatment. */
-  dndNight: boolean;
-  /** Private (invitation-only) night — swaps in the frosted graphite treatment. */
-  privateNight: PrivateNightCell | null;
+  /** The date's locked nights, first slot first — none, one, or two. */
+  nights: NightCell[];
+  /** Lock mode, one night on the date: tapping the free slot's pane locks a second. */
+  addNight?: (() => void) | null;
   lockMode: boolean;
   /** Admin "away" note: the owner is known to be unavailable (never with a `value`). */
   away?: boolean;
-  viewerRsvp?: RsvpStatus;
   cellSeed: number;
+  /** Click on an UNLOCKED cell (cycle availability, toggle away, lock in). */
   onClick: () => void;
 };
 
-export function DayCell({
+export function DayCell(props: DayCellProps) {
+  const { nights, addNight } = props;
+  // Two nights — or one beside the slot an admin may still fill — share the
+  // cell as panes. Everything else is the one-night cell it always was.
+  if (nights.length >= 2 || (nights.length === 1 && addNight)) {
+    return <SplitDayCell {...props} />;
+  }
+  return <SingleDayCell {...props} night={nights[0] ?? null} />;
+}
+
+function SingleDayCell({
   day,
   monthBucket,
   monthLabel,
@@ -56,17 +85,20 @@ export function DayCell({
   labels,
   isAdminView,
   heat,
-  locked,
-  picksLocked,
-  attendance,
-  dndNight,
-  privateNight,
+  night,
   lockMode,
   away = false,
-  viewerRsvp,
   cellSeed,
   onClick,
-}: DayCellProps) {
+}: DayCellProps & { night: NightCell | null }) {
+  const locked = night !== null;
+  const picksLocked = !!night?.picksLocked;
+  const attendance = night?.attendance ?? null;
+  const dndNight = !!night?.dndNight;
+  const privateNight = night?.privateNight ?? null;
+  const viewerRsvp = night?.viewerRsvp;
+  // A locked night decides its own clickability; an unlocked cell the caller's.
+  const clickable = night ? night.interactive : interactive;
   const heated = heat.kind !== "neutral";
   // Lock visually overrides heat (and personal mark gradient).
   const showHeatLayer = !locked && heated;
@@ -134,10 +166,10 @@ export function DayCell({
                     : "border-line hover:border-fg-strong/25";
 
   const baseBgClass = !value && !heated && !locked ? "bg-surface-800/55" : "";
-  const baseHover = !value && !heated && !locked && interactive ? "hover:bg-surface-800/80" : "";
+  const baseHover = !value && !heated && !locked && clickable ? "hover:bg-surface-800/80" : "";
   const lockedDisplayClass = isPast
     ? "pointer-events-none opacity-30"
-    : interactive
+    : clickable
       ? "hover:scale-[1.015] active:scale-[0.985]"
       : "pointer-events-none";
 
@@ -172,8 +204,8 @@ export function DayCell({
   return (
     <button
       type="button"
-      onClick={onClick}
-      disabled={!interactive || isPast}
+      onClick={night ? night.onClick : onClick}
+      disabled={!clickable || isPast}
       aria-label={`${day}${value ? ` — ${value}` : ""}${away ? " — away (admin note)" : ""}${locked ? " — locked in" : ""}${
         !locked && heat.kind === "warming" ? ` — warming up, ${heat.can} confirmed` : ""
       }${!locked && heat.kind === "fire" ? ` — on fire, ${heat.can} confirmed` : ""}${
@@ -237,12 +269,7 @@ export function DayCell({
           {monthLabel}
         </span>
       )}
-      {isToday && (
-        <span
-          className={`pointer-events-none absolute h-1.5 w-1.5 animate-pulse rounded-full bg-neon-cyan shadow-[0_0_10px_2px] shadow-neon-cyan/70 ${todayDotPos}`}
-          aria-hidden="true"
-        />
-      )}
+      {isToday && <TodayDot className={todayDotPos} />}
       {showDnd && attendance ? (
         // D&D night: a glowing d20 replaces the headcount, the party size
         // rolled onto its face. The grid position still tells you the date.
@@ -469,12 +496,15 @@ function LockedLayer({
   compact,
   viewerRsvp,
   showMedallion,
+  pane = false,
 }: {
   compact: boolean;
   viewerRsvp?: RsvpStatus;
   /** Wax-seal medallion now signals "guest list is sealed" specifically —
    * shown only when picks are locked, not just when the date is locked-in. */
   showMedallion: boolean;
+  /** Painting one pane of a split cell: corner medallion, container-sized pill. */
+  pane?: boolean;
 }) {
   return (
     <>
@@ -486,7 +516,7 @@ function LockedLayer({
       {/* Faint gold ring for the "sealed" feel. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 rounded-card-xl ring-1 ring-warn-gold/35"
+        className={`pointer-events-none absolute inset-0 ring-1 ring-warn-gold/35 ${pane ? "rounded-card-md" : "rounded-card-xl"}`}
       />
       {/* Slow diagonal shimmer — light catching the seal. Idle most of cycle. */}
       <span
@@ -497,11 +527,22 @@ function LockedLayer({
           locked, communicating "guest list is sealed" rather than the date
           itself being chosen. Centered along the top edge so the medallion
           sits symmetrically above the headcount on both phone and desktop. */}
-      {showMedallion && <SealMedallion compact={compact} />}
+      {showMedallion && <SealMedallion variant={medallionVariant(compact, pane)} />}
       {/* RSVP-aware pill: invitation by default; flips to GOING / PASS once viewer commits. */}
-      {!compact && <LockedPill viewerRsvp={viewerRsvp} />}
+      {pane ? (
+        <>
+          <LockedPill viewerRsvp={viewerRsvp} pane />
+          <PaneStatusEdge tone={rsvpTone(viewerRsvp)} />
+        </>
+      ) : (
+        !compact && <LockedPill viewerRsvp={viewerRsvp} />
+      )}
     </>
   );
+}
+
+function medallionVariant(compact: boolean, pane: boolean): MedallionVariant {
+  return pane ? "pane" : compact ? "compact" : "full";
 }
 
 /**
@@ -510,8 +551,22 @@ function LockedLayer({
  * construction, so it wears the same seal from day one — one lock, one
  * meaning.
  */
-function SealMedallion({ compact }: { compact: boolean }) {
-  return compact ? (
+type MedallionVariant = "full" | "compact" | "pane";
+
+function SealMedallion({ variant }: { variant: MedallionVariant }) {
+  if (variant === "pane") {
+    // A split cell's pane: in the corner, sized by the pane itself (see
+    // `.night-pane-medallion`), so the numerals keep the centre.
+    return (
+      <span
+        aria-hidden="true"
+        className="night-pane-medallion pointer-events-none absolute z-raised flex items-center justify-center rounded-full bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-700 shadow-sm"
+      >
+        <LockGlyph small />
+      </span>
+    );
+  }
+  return variant === "compact" ? (
     <span
       aria-hidden="true"
       className="pointer-events-none absolute left-1/2 top-0.5 z-raised flex h-3 w-3 -translate-x-1/2 items-center justify-center rounded-full bg-amber-400 shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
@@ -535,7 +590,15 @@ function SealMedallion({ compact }: { compact: boolean }) {
  * (painted by the cell itself) carry the identity — no explicit "D&D" label
  * needed. This layer is everything behind them.
  */
-function DndNightLayer({ compact, viewerRsvp }: { compact: boolean; viewerRsvp?: RsvpStatus }) {
+function DndNightLayer({
+  compact,
+  viewerRsvp,
+  pane = false,
+}: {
+  compact: boolean;
+  viewerRsvp?: RsvpStatus;
+  pane?: boolean;
+}) {
   return (
     <>
       {/* Deep dungeon base — blood-crimson fading to obsidian. */}
@@ -551,7 +614,7 @@ function DndNightLayer({ compact, viewerRsvp }: { compact: boolean; viewerRsvp?:
       {/* Gold inner hairline — the gilt edge of a sealed tome. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 rounded-card-xl ring-1 ring-amber-300/30"
+        className={`pointer-events-none absolute inset-0 ring-1 ring-amber-300/30 ${pane ? "rounded-card-md" : "rounded-card-xl"}`}
       />
       {/* Slow gold shimmer sweep (shared with the locked wax-seal cell). */}
       <span
@@ -586,7 +649,14 @@ function DndNightLayer({ compact, viewerRsvp }: { compact: boolean; viewerRsvp?:
         </>
       )}
       {/* RSVP-aware pill: invitation by default; flips to GOING / PASS. */}
-      {!compact && <LockedPill viewerRsvp={viewerRsvp} />}
+      {pane ? (
+        <>
+          <LockedPill viewerRsvp={viewerRsvp} pane />
+          <PaneStatusEdge tone={rsvpTone(viewerRsvp)} />
+        </>
+      ) : (
+        !compact && <LockedPill viewerRsvp={viewerRsvp} />
+      )}
     </>
   );
 }
@@ -608,8 +678,14 @@ function DndNightLayer({ compact, viewerRsvp }: { compact: boolean; viewerRsvp?:
 // spacing is per-breakpoint optical tuning to stop "RSVP" overflowing its own
 // pill, not the label-typography role the tokens describe. Applying the pill
 // token (0.18em) at the phone size overflows the cell.
-const pillBase =
+const cellPillBase =
   "pointer-events-none absolute inset-x-1 bottom-1 z-raised inline-flex min-h-3 items-center justify-center gap-0.5 rounded-card-md px-0.5 py-0 text-6xs font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:min-h-5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-5xs sm:tracking-pill";
+
+// A split cell's pane sizes its pill from ITS OWN box, not the viewport:
+// `.night-pane-pill` hides it below a workable pane size (the status edge
+// takes over) and grows it once the pane is wide (calendar-fire.css).
+const panePillBase =
+  "night-pane-pill pointer-events-none absolute inset-x-0.5 bottom-0.5 z-raised min-h-3 items-center justify-center gap-0.5 rounded-card-md px-0.5 py-0 text-6xs font-bold uppercase leading-none tracking-label backdrop-blur-sm";
 
 /**
  * Background treatment for a private night — frosted graphite under a
@@ -622,9 +698,11 @@ const pillBase =
 function PrivateNightLayer({
   compact,
   viewerSeat,
+  pane = false,
 }: {
   compact: boolean;
   viewerSeat: ViewerSeat | null;
+  pane?: boolean;
 }) {
   return (
     <>
@@ -639,15 +717,22 @@ function PrivateNightLayer({
       {/* Platinum inner hairline. */}
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 rounded-card-xl ring-1 ring-private-ink/25"
+        className={`pointer-events-none absolute inset-0 ring-1 ring-private-ink/25 ${pane ? "rounded-card-md" : "rounded-card-xl"}`}
       />
       {/* The same slow shimmer the sealed cell has, in cold light. */}
       <span
         aria-hidden="true"
         className="pointer-events-none absolute inset-y-0 -left-1/4 w-1/3 bg-gradient-to-r from-transparent via-private-ink/15 to-transparent motion-safe:animate-seal-shimmer"
       />
-      <SealMedallion compact={compact} />
-      {!compact && <PrivateSeatPill viewerSeat={viewerSeat} />}
+      <SealMedallion variant={medallionVariant(compact, pane)} />
+      {pane ? (
+        <>
+          <PrivateSeatPill viewerSeat={viewerSeat} pane />
+          <PaneStatusEdge tone={seatTone(viewerSeat)} />
+        </>
+      ) : (
+        !compact && <PrivateSeatPill viewerSeat={viewerSeat} />
+      )}
     </>
   );
 }
@@ -658,8 +743,17 @@ function PrivateNightLayer({
  * night reads the same way whether it is open or private. The waitlist rides
  * along as a small "+n" — the only thing an open night doesn't have.
  */
-function SeatTally({ compact, night }: { compact: boolean; night: PrivateNightCell }) {
+function SeatTally({
+  compact,
+  night,
+  pane = false,
+}: {
+  compact: boolean;
+  night: PrivateNightCell;
+  pane?: boolean;
+}) {
   const { seats } = night;
+  if (pane) return <PaneHeadcount a={seats.taken} b={seats.total} extra={seats.waitlisted} />;
   return (
     <span className="relative z-lift flex flex-1 items-center justify-center">
       <span
@@ -681,7 +775,14 @@ function SeatTally({ compact, night }: { compact: boolean; night: PrivateNightCe
 }
 
 /** The private cell's bottom pill: the viewer's own place on the guest list. */
-function PrivateSeatPill({ viewerSeat }: { viewerSeat: ViewerSeat | null }) {
+function PrivateSeatPill({
+  viewerSeat,
+  pane = false,
+}: {
+  viewerSeat: ViewerSeat | null;
+  pane?: boolean;
+}) {
+  const pillBase = pane ? panePillBase : cellPillBase;
   switch (viewerSeat) {
     case "host":
       return (
@@ -742,7 +843,8 @@ function PrivateSeatPill({ viewerSeat }: { viewerSeat: ViewerSeat | null }) {
   }
 }
 
-function LockedPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
+function LockedPill({ viewerRsvp, pane = false }: { viewerRsvp?: RsvpStatus; pane?: boolean }) {
+  const pillBase = pane ? panePillBase : cellPillBase;
   if (viewerRsvp === "yes") {
     return (
       <span
@@ -958,5 +1060,250 @@ function AwayLayer() {
           "repeating-linear-gradient(135deg, color-mix(in srgb, var(--color-fg-strong) 9%, transparent) 0 3px, transparent 3px 9px)",
       }}
     />
+  );
+}
+
+// ── Two nights on one date ─────────────────────────────────────────────
+//
+// The cell becomes a frame around two panes, one per night, each painted
+// with that night's own treatment (gold seal / crimson tome / frosted
+// graphite), its own headcount, its own pill and its own click. Which way
+// the panes stack is decided by the CELL'S SHAPE, not the viewport — a wide
+// desktop cell splits left / right, a tall phone cell top / bottom — and
+// each pane sizes its numerals, medallion and pill from its own box, so a
+// cramped pane sheds the pill for a status edge instead of overflowing. The
+// container queries doing that live in calendar-fire.css (`.night-*`).
+
+function SplitDayCell({
+  day,
+  monthBucket,
+  monthLabel,
+  isToday,
+  isPast,
+  compact,
+  nights,
+  addNight,
+  lockMode,
+}: DayCellProps) {
+  const inset = compact ? "inset-0.5" : "inset-0.5 sm:inset-1";
+  const two = nights.length >= 2;
+  return (
+    // A fieldset (the semantic "group"): preflight zeroes its margin, padding
+    // and border, so it lays out exactly like the one-night cell's button.
+    <fieldset
+      aria-label={`${day} — ${two ? "two nights" : "one night, one free slot"}`}
+      className={`group relative min-w-0 overflow-hidden rounded-card-xl border transition-all duration-200 ease-out ${
+        compact ? "aspect-square" : ""
+      } ${lockMode ? "border-warn-gold/30" : "border-warn-gold/25"} ${
+        isPast ? "pointer-events-none opacity-30" : ""
+      }`}
+    >
+      <span
+        className={`pointer-events-none absolute inset-0 ${monthTintClass(monthBucket)}`}
+        aria-hidden="true"
+      />
+      <div className={`night-split absolute ${inset}`}>
+        <div className="night-split-inner">
+          {nights.slice(0, 2).map((night) => (
+            <NightPane key={night.key} night={night} compact={compact} isPast={isPast} />
+          ))}
+          {!two && addNight && <AddNightPane onClick={addNight} />}
+        </div>
+      </div>
+      {monthLabel && (
+        <span
+          className={`pointer-events-none absolute z-raised-2 rounded-ui-md bg-surface-950/80 px-0.5 font-bold uppercase tracking-pill text-fg-strong/60 ${
+            compact ? "left-0.5 top-0.5 text-6xs" : "left-1 top-1 text-6xs sm:text-5xs"
+          }`}
+          aria-hidden="true"
+        >
+          {monthLabel}
+        </span>
+      )}
+      {isToday && <TodayDot className={compact ? "right-1 top-1" : "right-1.5 top-1.5"} />}
+    </fieldset>
+  );
+}
+
+/** One night's pane: its treatment, its headcount, its pill — and its click. */
+function NightPane({
+  night,
+  compact,
+  isPast,
+}: {
+  night: NightCell;
+  compact: boolean;
+  isPast: boolean;
+}) {
+  const { picksLocked, attendance, dndNight, privateNight, viewerRsvp } = night;
+  const showDnd = dndNight && picksLocked && !!attendance;
+  const showPrivate = !showDnd && privateNight !== null;
+  const invitedPending = showPrivate && !isPast && privateNight?.viewerSeat === "invited";
+  const chrome = showDnd
+    ? "dnd-night-cell"
+    : showPrivate
+      ? `private-night-cell ${invitedPending ? "private-night-cell-invited" : ""}`
+      : "border-warn-gold/40";
+  const clickable = night.interactive && !isPast;
+  return (
+    <button
+      type="button"
+      onClick={night.onClick}
+      disabled={!clickable}
+      aria-label={paneLabel(night, showDnd, showPrivate)}
+      className={`night-pane relative flex overflow-hidden rounded-card-md border transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${chrome} ${
+        clickable ? "hover:brightness-110 active:brightness-95" : "pointer-events-none"
+      }`}
+    >
+      {showDnd ? (
+        <DndNightLayer compact={compact} viewerRsvp={viewerRsvp} pane />
+      ) : showPrivate && privateNight ? (
+        <PrivateNightLayer compact={compact} viewerSeat={privateNight.viewerSeat} pane />
+      ) : (
+        <LockedLayer compact={compact} viewerRsvp={viewerRsvp} showMedallion={picksLocked} pane />
+      )}
+      {showDnd && attendance ? (
+        <span className="relative z-lift flex min-w-0 flex-1 items-center justify-center p-0.5">
+          <D20Die
+            count={attendance.definite}
+            className="dnd-die dnd-die-animated night-pane-die h-full w-full"
+          />
+        </span>
+      ) : showPrivate && privateNight ? (
+        <SeatTally compact={compact} night={privateNight} pane />
+      ) : attendance ? (
+        // A pane always shows its headcount — the grid position already
+        // says which date this is, and two day numbers would say nothing.
+        <PaneHeadcount a={attendance.definite} b={attendance.definite + attendance.tentative} />
+      ) : null}
+    </button>
+  );
+}
+
+/** Lock mode: the date's free slot, one tap from a second night. */
+function AddNightPane({ onClick }: { onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      aria-label="Lock in a second night on this date"
+      className="night-pane relative flex flex-col items-center justify-center gap-0.5 overflow-hidden rounded-card-md border border-dashed border-warn-gold/40 text-warn-gold/70 transition-all duration-200 ease-out hover:border-warn-gold/80 hover:bg-warn-gold/10 hover:text-warn-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 active:brightness-95"
+    >
+      <PlusGlyph />
+      <span className="night-pane-label text-6xs font-bold uppercase leading-none tracking-pill sm:text-5xs">
+        2nd night
+      </span>
+    </button>
+  );
+}
+
+/**
+ * A pane's headcount (`a/b`, plus an optional small `+n`), sized by the pane
+ * itself: `--count-chars` lets the stylesheet fit "12/14" as well as "3/5".
+ */
+function PaneHeadcount({ a, b, extra = 0 }: { a: number; b: number; extra?: number }) {
+  // The small `+n` rides beside the numerals, so it takes a glyph's width too.
+  const chars = `${a}/${b}`.length + (extra > 0 ? 1 : 0);
+  return (
+    <span className="relative z-lift flex min-w-0 flex-1 items-center justify-center">
+      <span
+        className="night-pane-count flex items-baseline gap-px font-extrabold leading-none text-warn-pale tabular-nums drop-shadow"
+        style={{ "--count-chars": String(chars) } as React.CSSProperties}
+      >
+        <span>{a}</span>
+        <span className="text-warn-pale/60">/</span>
+        <span>{b}</span>
+        {extra > 0 && (
+          <span className="night-pane-extra ml-0.5 self-center font-semibold text-warn-pale/60">
+            +{extra}
+          </span>
+        )}
+      </span>
+    </span>
+  );
+}
+
+// What a pane's pill would say, as a colour — shown along the pane's bottom
+// edge when the pane is too small for the pill itself.
+type EdgeTone = "ok" | "muted" | "gold" | "accent" | "ink" | null;
+
+function rsvpTone(viewerRsvp: RsvpStatus | undefined): EdgeTone {
+  return viewerRsvp === "yes" ? "ok" : viewerRsvp === "no" ? "muted" : "gold";
+}
+
+function seatTone(viewerSeat: ViewerSeat | null): EdgeTone {
+  switch (viewerSeat) {
+    case "host":
+      return "ink";
+    case "seated":
+      return "ok";
+    case "waitlisted":
+      return "gold";
+    case "invited":
+      return "accent";
+    case "declined":
+      return "muted";
+    default:
+      return null;
+  }
+}
+
+function PaneStatusEdge({ tone }: { tone: EdgeTone }) {
+  if (!tone) return null;
+  const color =
+    tone === "ok"
+      ? "bg-ok"
+      : tone === "muted"
+        ? "bg-fg-muted/60"
+        : tone === "gold"
+          ? "bg-warn-gold motion-safe:animate-pulse-soft"
+          : tone === "accent"
+            ? "bg-accent-400 motion-safe:animate-pulse-soft"
+            : "bg-private-ink/70";
+  return (
+    <span
+      aria-hidden="true"
+      className={`night-pane-edge pointer-events-none absolute inset-x-1 bottom-0.5 z-raised h-0.5 rounded-full ${color}`}
+    />
+  );
+}
+
+function paneLabel(night: NightCell, showDnd: boolean, showPrivate: boolean): string {
+  const slot = nightSlot(night.key) === 2 ? "Second night" : "First night";
+  let label = `${slot} — locked in`;
+  if (showDnd) label += " — Dungeons & Dragons night";
+  if (showPrivate && night.privateNight) {
+    const { seats, viewerSeat } = night.privateNight;
+    label += ` — private night, ${seats.taken} of ${seats.total} seats`;
+    if (viewerSeat && viewerSeat !== "outsider") label += `, you: ${viewerSeat}`;
+  } else if (night.attendance) {
+    label += `, ${night.attendance.definite} going`;
+    if (night.attendance.tentative > 0) label += `, ${night.attendance.tentative} maybe`;
+  }
+  return label;
+}
+
+function TodayDot({ className }: { className: string }) {
+  return (
+    <span
+      className={`pointer-events-none absolute h-1.5 w-1.5 animate-pulse rounded-full bg-neon-cyan shadow-[0_0_10px_2px] shadow-neon-cyan/70 ${className}`}
+      aria-hidden="true"
+    />
+  );
+}
+
+function PlusGlyph() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-3 w-3 sm:h-4 sm:w-4"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2.5}
+      strokeLinecap="round"
+      aria-hidden="true"
+    >
+      <path d="M12 5v14M5 12h14" />
+    </svg>
   );
 }

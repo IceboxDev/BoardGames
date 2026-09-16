@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { DateKeySchema, TimeOfDaySchema } from "../common.ts";
+import { NightKeySchema, TimeOfDaySchema } from "../common.ts";
 
 // ── Domain schemas ─────────────────────────────────────────────────────
 
@@ -170,7 +170,7 @@ function refinePrivateLockIn(
  * Wire body for `POST /api/admin/calendar/lock`. Includes the date.
  */
 export const LockInRequestBodySchema = z
-  .object({ date: DateKeySchema, ...lockInFields })
+  .object({ date: NightKeySchema, ...lockInFields })
   .superRefine(refinePrivateLockIn);
 export type LockInRequestBody = z.input<typeof LockInRequestBodySchema>;
 
@@ -189,7 +189,7 @@ export type LockInForm = z.input<typeof LockInFormSchema>;
  * in one batch. Removing an invitee also drops their RSVP and votes.
  */
 export const PrivateNightUpdateBodySchema = z.object({
-  date: DateKeySchema,
+  date: NightKeySchema,
   seatCount: z.number().int().min(MIN_SEAT_COUNT).max(MAX_SEAT_COUNT).optional(),
   pickMode: PickModeSchema.optional(),
   title: z.string().trim().max(MAX_NIGHT_TITLE).nullable().optional(),
@@ -198,17 +198,17 @@ export const PrivateNightUpdateBodySchema = z.object({
 });
 export type PrivateNightUpdateBody = z.input<typeof PrivateNightUpdateBodySchema>;
 
-export const UnlockBodySchema = z.object({ date: DateKeySchema });
+export const UnlockBodySchema = z.object({ date: NightKeySchema });
 export type UnlockBody = z.infer<typeof UnlockBodySchema>;
 
 export const PicksLockBodySchema = z.object({
-  date: DateKeySchema,
+  date: NightKeySchema,
   on: z.boolean(),
 });
 export type PicksLockBody = z.infer<typeof PicksLockBodySchema>;
 
 export const SetRsvpBodySchema = z.object({
-  date: DateKeySchema,
+  date: NightKeySchema,
   status: RsvpStatusSchema,
   /**
    * True when the call originates from an automated mechanism (lock-time
@@ -220,7 +220,7 @@ export const SetRsvpBodySchema = z.object({
 });
 export type SetRsvpBody = z.input<typeof SetRsvpBodySchema>;
 
-export const ClearRsvpBodySchema = z.object({ date: DateKeySchema });
+export const ClearRsvpBodySchema = z.object({ date: NightKeySchema });
 export type ClearRsvpBody = z.infer<typeof ClearRsvpBodySchema>;
 
 /**
@@ -229,7 +229,7 @@ export type ClearRsvpBody = z.infer<typeof ClearRsvpBodySchema>;
  * back out by text/voice rather than touching the app themselves.
  */
 export const KickRsvpBodySchema = z.object({
-  date: DateKeySchema,
+  date: NightKeySchema,
   userId: z.string().min(1),
 });
 export type KickRsvpBody = z.infer<typeof KickRsvpBodySchema>;
@@ -243,7 +243,7 @@ export type KickRsvpBody = z.infer<typeof KickRsvpBodySchema>;
  * guest flag — real members manage their own RSVPs.
  */
 export const AdminNightGuestBodySchema = z.object({
-  date: DateKeySchema,
+  date: NightKeySchema,
   guestUserId: z.string().min(1),
   on: z.boolean(),
 });
@@ -363,11 +363,11 @@ export const AvailableGamesSchema = z.object({
 });
 export type AvailableGames = z.infer<typeof AvailableGamesSchema>;
 
-export const AvailableGamesQuerySchema = z.object({ date: DateKeySchema });
+export const AvailableGamesQuerySchema = z.object({ date: NightKeySchema });
 export type AvailableGamesQuery = z.infer<typeof AvailableGamesQuerySchema>;
 
 export const GameReactionBodySchema = z.object({
-  date: DateKeySchema,
+  date: NightKeySchema,
   slug: z.string().min(1),
   reaction: ReactionKindSchema,
   on: z.boolean(),

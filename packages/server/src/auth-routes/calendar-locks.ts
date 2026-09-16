@@ -9,6 +9,7 @@ import {
   type LockedDateSchema,
   LockInRequestBodySchema,
   LockInResponseSchema,
+  nightDate,
   OkResponseSchema,
   PicksLockBodySchema,
   PrivateNightUpdateBodySchema,
@@ -348,8 +349,11 @@ calendarLocksRoutes.get("/locks", async (c) => {
     await Promise.all([
       loadActiveNightLocks(getDb()),
       getDb().execute("SELECT date_key, user_id, status, rsvped_at FROM rsvps"),
+      // Availability is marked per DAY; a second night on a date (`…_2`)
+      // reads the same marks as the first, so the join goes through the
+      // calendar date, not the night key.
       getDb().execute(
-        "SELECT user_id, date_key, status FROM user_availability_days WHERE date_key IN (SELECT date_key FROM locked_dates WHERE unlocked_at IS NULL)",
+        "SELECT user_id, date_key, status FROM user_availability_days WHERE date_key IN (SELECT substr(date_key, 1, 10) FROM locked_dates WHERE unlocked_at IS NULL)",
       ),
       // Reactions for locked nights only — feeds each night's vote-winner.
       // Scoped to locked dates so the scan grows with game nights, not with
@@ -401,7 +405,7 @@ calendarLocksRoutes.get("/locks", async (c) => {
     const participants = deriveNightParticipants(
       lock,
       rsvps,
-      availabilityByDate.get(lock.dateKey) ?? [],
+      availabilityByDate.get(nightDate(lock.dateKey)) ?? [],
     );
 
     // Vote winner for this night, using the same lineup rule as the per-date
@@ -544,9 +548,10 @@ adminCalendarLocksRoutes.post("/lock", zJsonBody(LockInRequestBodySchema), async
   // decide "fully RSVPed" against a frozen baseline. Track cans separately
   // so we can auto-confirm them as RSVP "yes".
   const [{ rows }, lockRow, { rows: yesRows }] = await Promise.all([
+    // Marks are per day: a second night on the date snapshots the same ones.
     getDb().execute({
       sql: "SELECT user_id, status FROM user_availability_days WHERE date_key = ?",
-      args: [date],
+      args: [nightDate(date)],
     }),
     // DELIBERATELY NOT filtered on `unlocked_at IS NULL`, unlike every other
     // read of this table. This is the revive path: re-locking a night that was

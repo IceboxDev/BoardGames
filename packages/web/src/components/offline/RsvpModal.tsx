@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
-import type { CalendarLocks } from "../../lib/calendar-locks";
+import { type CalendarLocks, nightLabel } from "../../lib/calendar-locks";
 import type { RsvpStatus } from "../../lib/calendar-rsvps";
 import { compactAddress } from "../../lib/compact-address.ts";
 import { formatDayKey } from "../../lib/date-format.ts";
@@ -207,11 +207,20 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
   // The numeric counts use `normal-case` + reset tracking so they don't
   // inherit the eyebrow's uppercase / wide-letter-spacing rules.
   const seats = lock?.seats ?? null;
+  const slotLabel = nightLabel(date);
   const eyebrow = (
     <span className="inline-flex flex-wrap items-baseline gap-x-2">
       <span>
         {isDnd ? "D&D night" : isExit ? "EXIT night" : isPrivate ? "Private night" : "Game night"}
       </span>
+      {slotLabel && (
+        <span className="inline-flex items-baseline gap-x-2">
+          <span aria-hidden="true" className="text-fg-strong/30">
+            ·
+          </span>
+          <span className="text-warn-gold">{slotLabel}</span>
+        </span>
+      )}
       {isPrivate && lock?.title && (
         <span className="max-w-56 truncate font-semibold tracking-normal normal-case text-fg-strong">
           {lock.title}

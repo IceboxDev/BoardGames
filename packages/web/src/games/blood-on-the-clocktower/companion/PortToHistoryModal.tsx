@@ -9,7 +9,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { Button, ErrorAlert, Modal, ModalBody, ModalFooter, Select } from "../../../components/ui";
 import { useAdminUsers } from "../../../hooks/useAdminUsers";
-import { fetchCalendarLocks } from "../../../lib/calendar-locks";
+import { fetchCalendarLocks, nightsForDate } from "../../../lib/calendar-locks";
 import { recordMatch } from "../../../lib/match-history";
 import { dateKey } from "../../../lib/offline-availability";
 import { qk } from "../../../lib/query-keys";
@@ -46,7 +46,8 @@ export default function PortToHistoryModal({
     queryFn: ({ signal }) => fetchCalendarLocks(signal),
   });
   const todayKey = dateKey(new Date());
-  const nightKey = locksQuery.data?.[todayKey] ? todayKey : null;
+  // Tonight's first night, when the date is locked (it may carry two).
+  const nightKey = nightsForDate(locksQuery.data, todayKey)[0]?.key ?? null;
 
   const byLowerName = useMemo(
     () => new Map(users.map((u) => [u.name.toLowerCase(), u.id] as const)),

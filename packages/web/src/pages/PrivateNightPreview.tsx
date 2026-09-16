@@ -9,6 +9,7 @@ import { PageMain, PageShell } from "../components/ui/PageShell";
 import { Section } from "../components/ui/Section";
 import { Surface } from "../components/ui/Surface";
 import type { LockedDate } from "../lib/calendar-locks";
+import { DND_SLUG } from "../lib/dnd-night";
 import type { AvailabilityCounts, AvailabilityMap } from "../lib/offline-availability";
 import { dateKey } from "../lib/offline-availability";
 import { build42Days } from "../lib/offline-week";
@@ -123,6 +124,55 @@ export default function PrivateNightPreview() {
       picksLockedAt: "2026-09-10 13:00:00",
       attendance: { definite: 4, tentative: 2 },
     }),
+    // ── Two nights on one date: the cell splits ───────────────────────
+    // A sealed open night the viewer is going to, beside a private table
+    // they are seated at.
+    [at(31)]: mkLock({
+      isPrivate: false,
+      seats: null,
+      seatedUserIds: [],
+      rsvps: { [ME]: "yes" },
+      picksLockedAt: "2026-09-10 13:00:00",
+      attendance: { definite: 6, tentative: 2 },
+    }),
+    [`${at(31)}_2`]: mkLock({
+      seats: { total: 4, taken: 3, waitlisted: 1 },
+      seatedUserIds: [HOST, "u-a", ME],
+      waitlistUserIds: ["u-b"],
+      rsvps: { [HOST]: "yes", "u-a": "yes", [ME]: "yes", "u-b": "yes" },
+      attendance: { definite: 3, tentative: 0 },
+    }),
+    // An unsealed open night still wanting an RSVP, beside a D&D night.
+    [at(33)]: mkLock({
+      isPrivate: false,
+      seats: null,
+      seatedUserIds: [],
+      attendance: { definite: 3, tentative: 1 },
+    }),
+    [`${at(33)}_2`]: mkLock({
+      isPrivate: false,
+      seats: null,
+      seatedUserIds: [],
+      rsvps: { [ME]: "yes" },
+      picksLockedAt: "2026-09-10 13:00:00",
+      topGameSlug: DND_SLUG,
+      attendance: { definite: 5, tentative: 0 },
+    }),
+    // Two big tables — the numerals have to fit "12/14".
+    [at(35)]: mkLock({
+      isPrivate: false,
+      seats: null,
+      seatedUserIds: [],
+      rsvps: { [ME]: "no" },
+      picksLockedAt: "2026-09-10 13:00:00",
+      attendance: { definite: 12, tentative: 2 },
+    }),
+    [`${at(35)}_2`]: mkLock({
+      seats: { total: 12, taken: 11, waitlisted: 0 },
+      seatedUserIds: [HOST],
+      rsvps: { [HOST]: "yes" },
+      attendance: { definite: 11, tentative: 0 },
+    }),
   };
 
   const availability: AvailabilityMap = { [at(3)]: "can", [at(4)]: "maybe" };
@@ -138,7 +188,8 @@ export default function PrivateNightPreview() {
         <h1 className="text-2xl font-bold text-fg-strong">Private night — visual preview</h1>
         <p className="mt-1 text-sm text-fg-secondary">
           Left to right: outsider (redacted), invited, seated, waitlisted, hosting, declined, a
-          12-seat table, and an open sealed night for contrast.
+          12-seat table, an open sealed night for contrast — then three dates carrying TWO nights
+          (open + private, open + D&D, two big tables), which split the cell.
         </p>
         <div className="mt-3 flex flex-wrap gap-2">
           <Button variant="secondary" size="sm" onClick={() => setPeekOpen(true)}>
@@ -151,7 +202,7 @@ export default function PrivateNightPreview() {
       </header>
 
       <Section title="Calendar grid (full)">
-        <Surface variant="tile" padding="md" className="h-[680px]">
+        <Surface variant="tile" padding="md" className="flex h-[680px] flex-col">
           <Calendar
             weekStart={weekStart}
             availability={availability}
@@ -159,6 +210,20 @@ export default function PrivateNightPreview() {
             locks={locks}
             viewer={viewer}
             onLockedClick={() => {}}
+          />
+        </Surface>
+      </Section>
+
+      <Section title="Calendar grid (lock mode, admin)">
+        <Surface variant="tile" padding="md" className="flex h-[680px] flex-col">
+          <Calendar
+            weekStart={weekStart}
+            availability={availability}
+            counts={counts}
+            locks={locks}
+            viewer={viewer}
+            lockMode
+            onLockToggle={() => {}}
           />
         </Surface>
       </Section>

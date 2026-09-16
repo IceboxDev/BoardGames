@@ -4,6 +4,12 @@ import {
   ErrorResponseSchema,
   GameSlugSchema,
   IsoTimestampSchema,
+  NightKeySchema,
+  NightKeyStringSchema,
+  nightDate,
+  nightKeyFor,
+  nightKeysOf,
+  nightSlot,
   TimeOfDaySchema,
 } from "./common.ts";
 
@@ -16,6 +22,37 @@ describe("DateKeySchema", () => {
     expect(() => DateKeySchema.parse("2026-5-5")).toThrow();
     expect(() => DateKeySchema.parse("not-a-date")).toThrow();
     expect(() => DateKeySchema.parse("")).toThrow();
+  });
+});
+
+describe("NightKeySchema", () => {
+  it("accepts a plain date and a second-night key", () => {
+    expect(NightKeySchema.parse("2026-05-05")).toBe("2026-05-05");
+    expect(NightKeySchema.parse("2026-05-05_2")).toBe("2026-05-05_2");
+    expect(NightKeyStringSchema.parse("2026-05-05_2")).toBe("2026-05-05_2");
+  });
+
+  it("rejects anything but the two slots", () => {
+    expect(() => NightKeySchema.parse("2026-05-05_1")).toThrow();
+    expect(() => NightKeySchema.parse("2026-05-05_3")).toThrow();
+    expect(() => NightKeySchema.parse("2026-05-05_")).toThrow();
+    expect(() => NightKeySchema.parse("2026-5-5_2")).toThrow();
+    expect(() => DateKeySchema.parse("2026-05-05_2")).toThrow();
+  });
+
+  it("splits a key into its date and slot", () => {
+    expect(nightDate("2026-05-05_2")).toBe("2026-05-05");
+    expect(nightDate("2026-05-05")).toBe("2026-05-05");
+    expect(nightSlot("2026-05-05_2")).toBe(2);
+    expect(nightSlot("2026-05-05")).toBe(1);
+    expect(nightKeyFor("2026-05-05", 2)).toBe("2026-05-05_2");
+    expect(nightKeyFor("2026-05-05", 1)).toBe("2026-05-05");
+    expect(nightKeysOf("2026-05-05")).toEqual(["2026-05-05", "2026-05-05_2"]);
+  });
+
+  it("sorts a second night after its date and before the next one", () => {
+    const keys = ["2026-05-06", "2026-05-05_2", "2026-05-05"].sort();
+    expect(keys).toEqual(["2026-05-05", "2026-05-05_2", "2026-05-06"]);
   });
 });
 

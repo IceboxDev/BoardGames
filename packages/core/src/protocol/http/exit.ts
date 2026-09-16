@@ -1,6 +1,6 @@
 import { z } from "zod";
 import { isExitGameSlug } from "../../games/exit-games.ts";
-import { DateKeySchema } from "../common.ts";
+import { NightKeySchema } from "../common.ts";
 
 // ── EXIT night narrowing vote ──────────────────────────────────────────
 //
@@ -10,8 +10,8 @@ import { DateKeySchema } from "../common.ts";
 // `game_requests` reactions: box slugs must never leak into the night's
 // hype/teach/learn ranking.
 
-/** `GET /api/calendar/exit?date=YYYY-MM-DD` query. */
-export const ExitNightQuerySchema = z.object({ date: DateKeySchema });
+/** `GET /api/calendar/exit?date=<night key>` query. */
+export const ExitNightQuerySchema = z.object({ date: NightKeySchema });
 export type ExitNightQuery = z.infer<typeof ExitNightQuerySchema>;
 
 /**
@@ -30,7 +30,7 @@ export type ExitNightState = z.infer<typeof ExitNightStateSchema>;
 
 /** `POST /api/calendar/exit/vote` body. The slug must name a real EXIT box. */
 export const ExitVoteBodySchema = z.object({
-  date: DateKeySchema,
+  date: NightKeySchema,
   slug: z.string().refine(isExitGameSlug, { message: "Unknown EXIT box slug" }),
   on: z.boolean(),
 });

@@ -608,7 +608,9 @@ export function refreshDisplayNames(
 
 const ISO_DATETIME_RE =
   /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2}(?:\.\d{1,3})?)?(?:Z|[+-]\d{2}:?\d{2})?$/;
-const DATE_KEY_RE = /^\d{4}-\d{2}-\d{2}$/;
+// A match is recorded against a NIGHT: its date, or `date_2` for a second
+// night on the same date (see `NightKeySchema` in core).
+const DATE_KEY_RE = /^\d{4}-\d{2}-\d{2}(?:_2)?$/;
 
 export function isValidIsoDateTime(v: unknown): v is string {
   return typeof v === "string" && ISO_DATETIME_RE.test(v);

@@ -22,9 +22,15 @@ const DAY_KEY_OPTIONS: Record<DayKeyStyle, Intl.DateTimeFormatOptions> = {
   compact: { day: "numeric", month: "short", year: "numeric" },
 };
 
-/** Parse a "YYYY-MM-DD" date key as local midnight, or null if malformed. */
+/**
+ * Parse a "YYYY-MM-DD" date key as local midnight, or null if malformed. A
+ * night key ("YYYY-MM-DD_2", the second night on a date) parses to its day.
+ */
 export function parseDateKey(dateKey: string): Date | null {
-  const [y, m, d] = dateKey.split("-").map((s) => Number.parseInt(s, 10));
+  const [y, m, d] = dateKey
+    .slice(0, 10)
+    .split("-")
+    .map((s) => Number.parseInt(s, 10));
   if (!y || !m || !d) return null;
   return new Date(y, m - 1, d);
 }

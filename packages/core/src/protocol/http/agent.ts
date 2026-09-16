@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { NightKeyStringSchema } from "../common.ts";
 
 // ── Agent surface (/api/agent) ────────────────────────────────────────
 //
@@ -37,7 +38,7 @@ export const AgentInactivityMemberSchema = z.object({
   }),
   latestMarkedDay: DateKeyStringSchema.nullable(),
   /** Latest locked night a recorded match places them at; casual matches don't count. */
-  lastAttendedNight: DateKeyStringSchema.nullable(),
+  lastAttendedNight: NightKeyStringSchema.nullable(),
   zeroDays: z.number().int().min(0),
   inactive: z.boolean(),
 });

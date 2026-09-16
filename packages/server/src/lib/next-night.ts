@@ -9,6 +9,7 @@
 // the user is definite or tentative. Private nights follow their seat list
 // instead, and are invisible to a viewer who is not on it (§ NextNightViewer).
 
+import { nightDate } from "@boardgames/core/protocol";
 import type { Client } from "@libsql/client";
 import { z } from "zod";
 import {
@@ -103,7 +104,8 @@ function computeNextNight(
     }
     const rsvp = rows.find((r) => r.user_id === userId)?.status;
     if (rsvp === "no") continue;
-    const avail = availability?.[dateKey];
+    // Marks are per day; a second night on the date shares them.
+    const avail = availability?.[nightDate(dateKey)];
     if (avail === "can" || rsvp === "yes") return { dateKey, status: "definite" };
     if (avail === "maybe") return { dateKey, status: "tentative" };
   }

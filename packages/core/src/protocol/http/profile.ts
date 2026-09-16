@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { GameSlugSchema } from "../common.ts";
+import { GameSlugSchema, NightKeyStringSchema } from "../common.ts";
 import { MatchRecordSchema } from "./history.ts";
 
 // User profiles aggregate data that already lives in other tables (inventory,
@@ -17,7 +17,6 @@ export const PROFILE_WISHLIST_MAX = 50;
 export const PROFILE_LINKS_MAX = 6;
 
 // ── Primitives ─────────────────────────────────────────────────────────
-const DateKeyStringSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Expected YYYY-MM-DD");
 
 /** `#rrggbb` hex used for the profile's accent (banner gradient + chart fill). */
 export const HexColorSchema = z.string().regex(/^#[0-9a-fA-F]{6}$/, "Expected #rrggbb hex color");
@@ -202,7 +201,7 @@ export type ProfileStats = z.infer<typeof ProfileStatsSchema>;
 
 export const NextNightSchema = z
   .object({
-    dateKey: DateKeyStringSchema,
+    dateKey: NightKeyStringSchema,
     eventTime: z.string().nullable(),
     address: z.string().nullable(),
     hostName: z.string().nullable(),
@@ -241,7 +240,7 @@ export const ProfileDirectoryEntrySchema = z.object({
   tagline: z.string().nullable(),
   accentHex: HexColorSchema.nullable(),
   gamesOwned: z.number().int().nonnegative(),
-  nextNightDateKey: DateKeyStringSchema.nullable(),
+  nextNightDateKey: NightKeyStringSchema.nullable(),
 });
 export type ProfileDirectoryEntry = z.infer<typeof ProfileDirectoryEntrySchema>;
 

@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { NightKeyStringSchema } from "../common.ts";
 import { MATCH_KINDS } from "./history.ts";
 
 // Profile insight endpoints — the data behind the per-player match-history
@@ -12,7 +13,6 @@ import { MATCH_KINDS } from "./history.ts";
 
 // Inline (unbranded) primitives, same idiom as `history.ts`: inferred types
 // stay plain `string` so they interop with existing history declarations.
-const DateKeyStringSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Expected YYYY-MM-DD");
 const GameSlugStringSchema = z
   .string()
   .regex(/^[a-z0-9][a-z0-9-]{0,63}$/, "Expected kebab-case slug, max 64 chars");
@@ -26,7 +26,7 @@ const GameSlugStringSchema = z
 export const ProfileMatchSummaryItemSchema = z.object({
   /** id of the unit's representative session in `match_results`. */
   matchId: z.number().int(),
-  dateKey: DateKeyStringSchema.nullable(),
+  dateKey: NightKeyStringSchema.nullable(),
   /** Wall-clock sort key, same loose ISO format as `MatchRecord.playedAt`. */
   playedAt: z.string(),
   gameSlug: GameSlugStringSchema.nullable(),
@@ -65,7 +65,7 @@ export type ProfileMatchSummaryResponse = z.infer<typeof ProfileMatchSummaryResp
  * calendar's forward-looking definite/tentative headcount — don't mix them.
  */
 export const ProfileNightItemSchema = z.object({
-  dateKey: DateKeyStringSchema,
+  dateKey: NightKeyStringSchema,
   /** Night host; `userId` null when only a free-text host name was recorded. */
   host: z.object({ userId: z.string().nullable(), name: z.string() }).nullable(),
   address: z.string().nullable(),

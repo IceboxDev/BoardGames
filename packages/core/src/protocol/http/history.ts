@@ -8,6 +8,7 @@ import {
   MAX_ROUND_SCORES,
   MIN_ROUND_SCORES,
 } from "../../history/round-scores";
+import { NightKeyStringSchema } from "../common.ts";
 
 // ── Primitives ─────────────────────────────────────────────────────────
 // `playedAt` is the user-supplied wall-clock time the match happened.
@@ -21,11 +22,12 @@ const PlayedAtSchema = z
     "Expected ISO-8601 datetime",
   );
 
-// `dateKey` and `gameSlug` validated inline (not via the branded
-// `DateKeySchema` / `GameSlugSchema` from common.ts) so that the inferred
-// types stay plain `string` and remain interchangeable with the existing
-// declarations in `@boardgames/core/history/types`.
-const DateKeyStringSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Expected YYYY-MM-DD");
+// `dateKey` and `gameSlug` validated UNBRANDED (`NightKeyStringSchema` from
+// common.ts, an inline slug regex — not the branded `NightKeySchema` /
+// `GameSlugSchema`) so that the inferred types stay plain `string` and remain
+// interchangeable with the existing declarations in
+// `@boardgames/core/history/types`. A match's `dateKey` names a NIGHT: the
+// date, or `date_2` for a second night on the same date.
 const GameSlugStringSchema = z
   .string()
   .regex(/^[a-z0-9][a-z0-9-]{0,63}$/, "Expected kebab-case slug, max 64 chars");
@@ -338,7 +340,7 @@ export const MATCH_KINDS = [
 
 export const MatchRecordSchema = z.object({
   id: z.number().int(),
-  dateKey: DateKeyStringSchema.nullable(),
+  dateKey: NightKeyStringSchema.nullable(),
   playedAt: PlayedAtSchema,
   gameSlug: GameSlugStringSchema.nullable(),
   gameTitle: z.string().min(1).max(200),
@@ -358,7 +360,7 @@ export const MatchRecordSchema = z.object({
 export type MatchRecord = z.infer<typeof MatchRecordSchema>;
 
 export const MatchCreateInputSchema = z.object({
-  dateKey: DateKeyStringSchema.nullable(),
+  dateKey: NightKeyStringSchema.nullable(),
   playedAt: PlayedAtSchema,
   gameSlug: GameSlugStringSchema.nullable(),
   gameTitle: z.string().min(1).max(200),
@@ -416,7 +418,7 @@ export type DeleteMatchResponse = z.infer<typeof DeleteMatchResponseSchema>;
 // in the app don't read as gone. A match with no night attached (a game
 // played elsewhere, entered by an admin) is deliberately not counted.
 export const AdminLastAttendedResponseSchema = z.object({
-  lastAttendedNightByUser: z.record(z.string(), DateKeyStringSchema),
+  lastAttendedNightByUser: z.record(z.string(), NightKeyStringSchema),
 });
 export type AdminLastAttendedResponse = z.infer<typeof AdminLastAttendedResponseSchema>;
 
@@ -427,7 +429,7 @@ export type AdminLastAttendedResponse = z.infer<typeof AdminLastAttendedResponse
 export const MatchReorderInputSchema = z.object({
   // The lock night's dateKey, or null to reorder a standalone day-bucket — those
   // matches have no dateKey, so the server scopes them by `date_key IS NULL`.
-  dateKey: DateKeyStringSchema.nullable(),
+  dateKey: NightKeyStringSchema.nullable(),
   orderedIds: z.array(z.number().int().positive()).min(1),
 });
 export type MatchReorderInput = z.infer<typeof MatchReorderInputSchema>;

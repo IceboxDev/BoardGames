@@ -9,6 +9,7 @@ import type {
   MatchRecord,
   Participant,
 } from "@boardgames/core/history/types";
+import { nightDate } from "@boardgames/core/protocol";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { defaultKindForSlug } from "../../games/match-kinds";
@@ -16,7 +17,7 @@ import { defaultVariantValue, variantConfigForSlug } from "../../games/match-var
 import { coopMaxScoreForSlug, isSingleWinnerFfa, isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
 import { useAdminUsers } from "../../hooks/useAdminUsers.ts";
-import { fetchCalendarLocks } from "../../lib/calendar-locks";
+import { fetchCalendarLocks, nightLabel } from "../../lib/calendar-locks";
 import { fetchDndOpenCampaigns, recordMatch, updateMatch } from "../../lib/match-history";
 import { qk } from "../../lib/query-keys";
 import { Button } from "../ui/Button";
@@ -290,7 +291,8 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
             <option value="">Standalone (no calendar lock)</option>
             {sortLockKeys(Object.keys(locksQuery.data ?? {})).map((d) => (
               <option key={d} value={d}>
-                {d}
+                {nightDate(d)}
+                {nightLabel(d) ? ` · ${nightLabel(d)}` : ""}
                 {locksQuery.data?.[d]?.host?.name ? ` — ${locksQuery.data[d].host?.name}` : ""}
               </option>
             ))}

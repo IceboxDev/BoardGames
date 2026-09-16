@@ -17,6 +17,7 @@ import {
 } from "@boardgames/core/ical/dnd";
 import { buildSummary, deriveSummaryPrefix } from "@boardgames/core/ical/personalization";
 import { redactToken } from "@boardgames/core/ical/token";
+import { nightDate } from "@boardgames/core/protocol";
 import { Hono } from "hono";
 import { z } from "zod";
 import { requireFeedToken } from "../auth/feed-token.ts";
@@ -516,16 +517,18 @@ function buildUid(dateKey: string, viewerId: string): string {
   return `${dateKey}-${shortId}@${UID_DOMAIN}`;
 }
 
+// `dateKey` is a NIGHT key — a second night on a date carries a `_2` suffix
+// that must not reach the DTSTART; the UID keeps the full key.
 function buildEventTimes(
   dateKey: string,
   eventTime: string | null,
 ): { start: IcsEvent["start"]; end?: IcsEvent["end"] } {
   if (!eventTime) {
     // All-day: emit a DATE-typed DTSTART, no DTEND, no TZID.
-    return { start: { date: dateKey.replace(/-/g, "") } };
+    return { start: { date: nightDate(dateKey).replace(/-/g, "") } };
   }
   const [hh, mm] = eventTime.split(":");
-  const startStamp = `${dateKey.replace(/-/g, "")}T${hh}${mm}00`;
+  const startStamp = `${nightDate(dateKey).replace(/-/g, "")}T${hh}${mm}00`;
   // Default DEFAULT_DURATION_HOURS-hour game night.
   const endStamp = addHoursToLocalStamp(startStamp, DEFAULT_DURATION_HOURS);
   return {

@@ -15,6 +15,7 @@ import { getBggBySlug, maxPlayersAsNumber } from "@boardgames/core/bgg";
 import { expandOwnedSlugs } from "@boardgames/core/games/ownership";
 import {
   type AvailableGames,
+  nightDate,
   type PickMode,
   type SeatState,
   SlugListSchema,
@@ -312,9 +313,11 @@ export async function computeAvailableGamesPayload(opts: {
   // MAX(rsvped_at) and MAX(created_at) for this date so the ICS feed can
   // derive a stable DTSTAMP/LAST-MODIFIED without re-scanning these tables.
   const [availabilityResult, rsvpResult, reactionResult, freshnessResult] = await Promise.all([
+    // Availability is per day — a second night on the date (`…_2`) reads
+    // the same marks as the first.
     db.execute({
       sql: "SELECT user_id, status FROM user_availability_days WHERE date_key = ?",
-      args: [date],
+      args: [nightDate(date)],
     }),
     db.execute({
       sql: "SELECT user_id, status, auto, rsvped_at FROM rsvps WHERE date_key = ?",

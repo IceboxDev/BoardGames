@@ -2,7 +2,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useId, useState } from "react";
 import { adminSetNightGuest } from "../../lib/admin";
 import { fetchAvailableGames } from "../../lib/calendar-games";
-import { fetchCalendarLocks } from "../../lib/calendar-locks";
+import { fetchCalendarLocks, nightLabel } from "../../lib/calendar-locks";
 import { formatDayKey } from "../../lib/date-format";
 import { dateKey } from "../../lib/offline-availability";
 import { qk } from "../../lib/query-keys";
@@ -108,6 +108,7 @@ export function NightGuestsPanel({ guests }: Props) {
               {nights.map(([d, lock]) => (
                 <option key={d} value={d}>
                   {formatDayKey(d)}
+                  {nightLabel(d) ? ` (${nightLabel(d)})` : ""}
                   {lock.host ? ` — at ${lock.host.name}'s` : ""}
                 </option>
               ))}

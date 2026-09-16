@@ -16,6 +16,14 @@ describe("parseDateKey", () => {
     expect(d?.getDate()).toBe(11);
   });
 
+  it("parses a second-night key to its day", () => {
+    const d = parseDateKey("2026-07-11_2");
+    expect(d?.getFullYear()).toBe(2026);
+    expect(d?.getMonth()).toBe(6);
+    expect(d?.getDate()).toBe(11);
+    expect(formatDayKey("2026-07-11_2", "compact")).toBe(formatDayKey("2026-07-11", "compact"));
+  });
+
   it("returns null for a malformed key", () => {
     expect(parseDateKey("garbage")).toBeNull();
     expect(parseDateKey("2026-00-11")).toBeNull(); // month 0 is invalid

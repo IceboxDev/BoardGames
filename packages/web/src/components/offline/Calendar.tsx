@@ -1,4 +1,5 @@
 import type { CalendarLocks } from "../../lib/calendar-locks";
+import { freeNightKey, nightsForDate } from "../../lib/calendar-locks";
 import type { RsvpStatus } from "../../lib/calendar-rsvps";
 import { isDndNight } from "../../lib/dnd-night";
 import { viewerSeat } from "../../lib/night-access";
@@ -10,7 +11,7 @@ import type {
 } from "../../lib/offline-availability";
 import { dateKey } from "../../lib/offline-availability";
 import { build42Days } from "../../lib/offline-week";
-import { DayCell, type Heat, type PrivateNightCell } from "./CalendarDayCell";
+import { DayCell, type Heat, type NightCell } from "./CalendarDayCell";
 
 const DAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
@@ -26,14 +27,23 @@ type Props = {
   dayLabels?: AggregateAvailabilityMap;
   /** Per-date can/maybe counts — drives "warming up" / "on fire" visuals for everyone. */
   counts?: AvailabilityCounts;
-  /** Per-date lock state set by admin. Renders the wax-seal "locked" visual. */
+  /**
+   * Locked nights, keyed by NIGHT key — a date, or `date_2` for a second
+   * night on the same date. A date carrying two nights renders as a split
+   * cell, one pane per night.
+   */
   locks?: CalendarLocks;
   /** When true, cells route clicks to onLockToggle instead of cycling availability. Admin-only. */
   lockMode?: boolean;
+  /**
+   * Lock-mode click. `key` is the NIGHT key to create or edit: a locked
+   * night's own key, or — from the "+ 2nd night" pane beside a date's only
+   * night — the date's free slot.
+   */
   onLockToggle?: (key: string, currentlyLocked: boolean) => void;
-  /** Click handler for locked cells (in non-lock mode). Routes user to RSVP modal. */
+  /** Click handler for locked nights (in non-lock mode). Routes user to the RSVP modal. */
   onLockedClick?: (key: string) => void;
-  /** Map of date → current viewer's RSVP status, for the locked-cell pill. */
+  /** Map of night key → current viewer's RSVP status, for the locked-cell pill. */
   viewerRsvpByDate?: Record<string, RsvpStatus | undefined>;
   /**
    * Admin "away" notes for the calendar's owner — days they are known to be
@@ -111,34 +121,51 @@ export default function Calendar({
           const showMonthLabel = i === 0 || date.getDate() === 1;
           const dayCounts = counts?.[key];
           const heat = deriveHeat(dayCounts);
-          const lock = locks?.[key];
-          const lockedAndClickable = !!lock && !isPast && !!onLockedClick;
+
+          // The date's nights (0, 1 or 2), each carrying its own art, tally
+          // and click. In lock mode a night's click edits it; otherwise it
+          // opens the RSVP modal.
+          const nightClickable = !isPast && (lockMode || !!onLockedClick);
+          const nights: NightCell[] = nightsForDate(locks, key).map(({ key: nightKey, lock }) => ({
+            key: nightKey,
+            picksLocked: !!lock.picksLockedAt,
+            attendance: lock.attendance ?? null,
+            dndNight: isDndNight(lock),
+            privateNight:
+              lock.isPrivate && lock.seats
+                ? {
+                    seats: lock.seats,
+                    viewerSeat: viewer ? viewerSeat(lock, viewer.id, viewer.isAdmin) : null,
+                  }
+                : null,
+            viewerRsvp: viewerRsvpByDate?.[nightKey],
+            interactive: nightClickable,
+            onClick: lockMode
+              ? () => onLockToggle?.(nightKey, true)
+              : () => onLockedClick?.(nightKey),
+          }));
+          // Lock mode shows the free slot beside a date's only night, so a
+          // second night is one tap away and never hides behind the first.
+          const freeKey =
+            lockMode && !isPast && nights.length === 1 ? freeNightKey(locks, key) : null;
+          const addNight = freeKey ? () => onLockToggle?.(freeKey, false) : null;
+          const anyLocked = nights.length > 0;
+
           // An away note only shows (and only toggles) where the owner has no
           // mark: their own can/maybe always wins over the admin's reminder.
           const away = value === undefined && !!awayDays?.has(key);
+          // Cell-level interaction is for UNLOCKED cells; a locked night's
+          // own click and clickability travel with it in `nights`.
           const cellInteractive = awayMode
             ? !isPast && value === undefined
             : lockMode
               ? !isPast
-              : !isPast && (lock ? lockedAndClickable : interactive);
+              : !isPast && !anyLocked && interactive;
           const handleClick = awayMode
             ? () => onAwayToggle?.(key, away)
             : lockMode
-              ? () => onLockToggle?.(key, !!lock)
-              : lock
-                ? () => onLockedClick?.(key)
-                : () => onChange?.(key, cycle(value));
-          const viewerRsvp = lock ? viewerRsvpByDate?.[key] : undefined;
-          const picksLocked = !!lock?.picksLockedAt;
-          const attendance = lock?.attendance ?? null;
-          const dndNight = isDndNight(lock);
-          const privateNight: PrivateNightCell | null =
-            lock?.isPrivate && lock.seats
-              ? {
-                  seats: lock.seats,
-                  viewerSeat: viewer ? viewerSeat(lock, viewer.id, viewer.isAdmin) : null,
-                }
-              : null;
+              ? () => onLockToggle?.(key, false)
+              : () => onChange?.(key, cycle(value));
           return (
             <DayCell
               key={key}
@@ -155,14 +182,10 @@ export default function Calendar({
               labels={dayLabels?.[key]}
               isAdminView={!!dayLabels}
               heat={heat}
-              locked={!!lock}
-              picksLocked={picksLocked}
-              attendance={attendance}
-              dndNight={dndNight}
-              privateNight={privateNight}
+              nights={nights}
+              addNight={addNight}
               lockMode={lockMode}
               away={away}
-              viewerRsvp={viewerRsvp}
               cellSeed={i}
               onClick={handleClick}
             />
