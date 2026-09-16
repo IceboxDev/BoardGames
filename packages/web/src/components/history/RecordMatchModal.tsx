@@ -17,7 +17,7 @@ import { defaultVariantValue, variantConfigForSlug } from "../../games/match-var
 import { coopMaxScoreForSlug, isSingleWinnerFfa, isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
 import { useAdminUsers } from "../../hooks/useAdminUsers.ts";
-import { fetchCalendarLocks, nightLabel } from "../../lib/calendar-locks";
+import { fetchCalendarLocks, nightsForDate } from "../../lib/calendar-locks";
 import { fetchDndOpenCampaigns, recordMatch, updateMatch } from "../../lib/match-history";
 import { qk } from "../../lib/query-keys";
 import { Button } from "../ui/Button";
@@ -292,7 +292,10 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
             {sortLockKeys(Object.keys(locksQuery.data ?? {})).map((d) => (
               <option key={d} value={d}>
                 {nightDate(d)}
-                {nightLabel(d) ? ` · ${nightLabel(d)}` : ""}
+                {nightsForDate(locksQuery.data, nightDate(d)).length > 1 &&
+                locksQuery.data?.[d]?.eventTime
+                  ? ` · ${locksQuery.data[d].eventTime}`
+                  : ""}
                 {locksQuery.data?.[d]?.host?.name ? ` — ${locksQuery.data[d].host?.name}` : ""}
               </option>
             ))}

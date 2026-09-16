@@ -555,8 +555,8 @@ type MedallionVariant = "full" | "compact" | "pane";
 
 function SealMedallion({ variant }: { variant: MedallionVariant }) {
   if (variant === "pane") {
-    // A split cell's pane: in the corner, sized by the pane itself (see
-    // `.night-pane-medallion`), so the numerals keep the centre.
+    // A split cell's pane: centred on the top edge like the cell's own seal,
+    // sized by the pane itself (see `.night-pane-medallion`).
     return (
       <span
         aria-hidden="true"

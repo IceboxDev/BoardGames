@@ -2,7 +2,7 @@
 // taken, by whom, and how full the table is. Nothing else — the server sent a
 // redacted lock, so there is nothing else to show even by accident.
 
-import { type LockedDate, nightLabel } from "../../lib/calendar-locks";
+import type { LockedDate } from "../../lib/calendar-locks";
 import { formatDayKey } from "../../lib/date-format";
 import { Modal, ModalBody, ProgressBar } from "../ui";
 import { HostLine } from "./RsvpModal";
@@ -23,7 +23,7 @@ export default function PrivateNightPeek({
     <Modal
       onClose={onClose}
       size="xs"
-      eyebrow={nightLabel(date) ? `Private night · ${nightLabel(date)}` : "Private night"}
+      eyebrow="Private night"
       eyebrowClassName="text-private-ink/70"
       title={formatDayKey(date, "weekday")}
       subheader={hostName ? <HostLine name={hostName} /> : undefined}

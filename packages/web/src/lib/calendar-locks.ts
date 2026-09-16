@@ -63,11 +63,6 @@ export function freeNightKey(locks: CalendarLocks | undefined, date: string): st
   return null;
 }
 
-/** "2nd night" for a second-slot key, null for a date's first night. */
-export function nightLabel(key: string): string | null {
-  return nightSlot(key) === 2 ? "2nd night" : null;
-}
-
 export async function fetchCalendarLocks(signal?: AbortSignal) {
   return apiFetch("/api/calendar/locks", {
     response: CalendarLocksSchema,

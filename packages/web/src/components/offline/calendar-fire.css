@@ -343,7 +343,8 @@
   width: 0.75rem;
   height: 0.75rem;
   top: 0.125rem;
-  left: 0.125rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 /* A pane narrower than the medallion itself (the side-drawer calendar) keeps
    the numerals and drops the seal. */
@@ -361,7 +362,6 @@
     width: 1.125rem;
     height: 1.125rem;
     top: 0.25rem;
-    left: 0.25rem;
   }
   .night-pane-medallion > svg {
     width: 0.625rem;

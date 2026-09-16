@@ -1,6 +1,6 @@
 import { LockedDateSchema } from "@boardgames/core/protocol";
 import { describe, expect, it } from "vitest";
-import { freeNightKey, nightLabel, nightsForDate } from "./calendar-locks";
+import { freeNightKey, nightsForDate } from "./calendar-locks";
 
 const lock = LockedDateSchema.parse({
   lockedBy: "u-admin",
@@ -36,12 +36,5 @@ describe("freeNightKey", () => {
     expect(freeNightKey({ "2026-09-20": lock }, "2026-09-20")).toBe("2026-09-20_2");
     expect(freeNightKey({ "2026-09-20_2": lock }, "2026-09-20")).toBe("2026-09-20");
     expect(freeNightKey({ "2026-09-20": lock, "2026-09-20_2": lock }, "2026-09-20")).toBeNull();
-  });
-});
-
-describe("nightLabel", () => {
-  it("names only the second night", () => {
-    expect(nightLabel("2026-09-20")).toBeNull();
-    expect(nightLabel("2026-09-20_2")).toBe("2nd night");
   });
 });

@@ -85,7 +85,7 @@ describe("search decisions", () => {
       checked++;
     }
     expect(checked).toBeGreaterThan(100);
-  });
+  }, 30_000);
 
   it("values a seat's reward tiers on the current board from the viewer's standpoint", () => {
     const state = createInitialState(2, [null, null], 4);

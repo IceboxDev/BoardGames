@@ -1,7 +1,6 @@
 import {
   MAX_SEAT_COUNT,
   MIN_SEAT_COUNT,
-  nightSlot,
   type ProfileDirectoryEntry,
 } from "@boardgames/core/protocol";
 import { useId, useMemo, useState } from "react";
@@ -128,15 +127,6 @@ export default function LockInModal({
   }, [candidates]);
 
   const headingDate = formatDayKey(date, "weekday");
-  // The date's second night has its own lock: same form, named as such.
-  const secondNight = nightSlot(date) === 2;
-  const eyebrow = isEditing
-    ? secondNight
-      ? "Edit 2nd night"
-      : "Edit lock-in"
-    : secondNight
-      ? "Lock in a 2nd night"
-      : "Lock in date";
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -171,7 +161,12 @@ export default function LockInModal({
     hostUserId !== initialLock.host.userId;
 
   return (
-    <Modal onClose={onClose} size={isPrivate ? "sm" : "xs"} eyebrow={eyebrow} title={headingDate}>
+    <Modal
+      onClose={onClose}
+      size={isPrivate ? "sm" : "xs"}
+      eyebrow={isEditing ? "Edit lock-in" : "Lock in date"}
+      title={headingDate}
+    >
       <form onSubmit={handleSubmit} className="flex min-h-0 flex-1 flex-col gap-4">
         <ModalBody>
           <SegmentedControl
