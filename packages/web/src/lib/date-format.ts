@@ -13,13 +13,16 @@ export type DayKeyStyle =
   /** "Saturday, July 12" — weekday heading without year. */
   | "weekday"
   /** "12 Jul 2026" — numeric-day-first, with year. */
-  | "compact";
+  | "compact"
+  /** "12 Jul" — day and month only, for dates whose year is obvious. */
+  | "monthDay";
 
 const DAY_KEY_OPTIONS: Record<DayKeyStyle, Intl.DateTimeFormatOptions> = {
   short: { weekday: "short", month: "short", day: "numeric" },
   full: { weekday: "long", year: "numeric", month: "long", day: "numeric" },
   weekday: { weekday: "long", month: "long", day: "numeric" },
   compact: { day: "numeric", month: "short", year: "numeric" },
+  monthDay: { day: "numeric", month: "short" },
 };
 
 /**

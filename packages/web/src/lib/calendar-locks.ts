@@ -6,8 +6,10 @@
 import {
   type CalendarLocks,
   CalendarLocksSchema,
+  type HostStatsMap,
   HostStatsMapSchema,
   type LockedDate,
+  type LockHost,
   type LockInForm,
   LockInRequestBodySchema,
   LockInResponseSchema,
@@ -61,6 +63,24 @@ export function nightsForDate(locks: CalendarLocks | undefined, date: string): N
 export function freeNightKey(locks: CalendarLocks | undefined, date: string): string | null {
   for (const key of nightKeysOf(date)) if (!locks?.[key]) return key;
   return null;
+}
+
+// ── Host picker ────────────────────────────────────────────────────────
+
+/**
+ * Order host candidates so hosting spreads around: fewest nights hosted
+ * first; among equals the most recent host first; then by name. People with
+ * no stats count as never having hosted. Returns a new array.
+ */
+export function sortHostCandidates(
+  candidates: readonly LockHost[],
+  stats: HostStatsMap | null | undefined,
+): LockHost[] {
+  const total = (c: LockHost) => stats?.[c.userId]?.totalHosts ?? 0;
+  const last = (c: LockHost) => stats?.[c.userId]?.lastHostedDate ?? "";
+  return [...candidates].sort(
+    (a, b) => total(a) - total(b) || last(b).localeCompare(last(a)) || a.name.localeCompare(b.name),
+  );
 }
 
 export async function fetchCalendarLocks(signal?: AbortSignal) {

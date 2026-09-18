@@ -48,6 +48,8 @@ describe("formatDayKey", () => {
     expect(formatDayKey("2026-07-11", "compact")).toContain("2026");
     expect(formatDayKey("2026-07-11", "short")).not.toContain("2026");
     expect(formatDayKey("2026-07-11", "weekday")).not.toContain("2026");
+    expect(formatDayKey("2026-07-11", "monthDay")).not.toContain("2026");
+    expect(formatDayKey("2026-07-11", "monthDay")).toContain("11");
   });
 });
 

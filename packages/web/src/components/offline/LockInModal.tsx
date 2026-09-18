@@ -5,13 +5,14 @@ import {
 } from "@boardgames/core/protocol";
 import { useId, useMemo, useState } from "react";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
-import type {
-  HostStats,
-  HostStatsMap,
-  LockedDate,
-  LockHost,
-  LockInForm,
-  PickMode,
+import {
+  type HostStats,
+  type HostStatsMap,
+  type LockedDate,
+  type LockHost,
+  type LockInForm,
+  type PickMode,
+  sortHostCandidates,
 } from "../../lib/calendar-locks";
 import { formatDayKey } from "../../lib/date-format.ts";
 import { Button } from "../ui/Button";
@@ -117,7 +118,8 @@ export default function LockInModal({
   // appears in the list with the label they were given by the caller. An
   // open night is hosted by someone who marked the day (the candidates); a
   // private night may be hosted by anyone, so there the rest of the
-  // directory follows. The lock's current host always stays pickable.
+  // directory follows. The lock's current host always stays pickable. The
+  // list is ordered to spread hosting around: fewest nights hosted first.
   const uniqueCandidates = useMemo(() => {
     const seen = new Set<string>();
     const out: LockHost[] = [];
@@ -129,8 +131,8 @@ export default function LockInModal({
     for (const c of candidates) push(c);
     if (initialLock?.host) push(initialLock.host);
     if (isPrivate) for (const m of members) push({ userId: m.id, name: m.name });
-    return out;
-  }, [candidates, initialLock, isPrivate, members]);
+    return sortHostCandidates(out, hostStats);
+  }, [candidates, initialLock, isPrivate, members, hostStats]);
 
   const headingDate = formatDayKey(date, "weekday");
 
@@ -349,12 +351,16 @@ export default function LockInModal({
 }
 
 // Build the host <option> label: name (+ "you"), how many nights they've hosted
-// and when they last did — so the admin can spread hosting around.
+// and when they last did — so the admin can spread hosting around. Kept terse
+// because a native <select> popup grows to its widest option, and the popup
+// must not outgrow the control it drops from: the year is spelled only when
+// it is not the current one.
 function hostOptionLabel(c: LockHost, stats: HostStats | undefined, isYou: boolean): string {
   const base = isYou ? `${c.name} (you)` : c.name;
   if (!stats || stats.totalHosts === 0) return `${base} — never hosted`;
-  const last = stats.lastHostedDate ? formatDayKey(stats.lastHostedDate, "compact") : null;
-  return last
-    ? `${base} — hosted ${stats.totalHosts}×, last ${last}`
-    : `${base} — hosted ${stats.totalHosts}×`;
+  const count = `${stats.totalHosts}×`;
+  if (!stats.lastHostedDate) return `${base} — ${count}`;
+  const thisYear = stats.lastHostedDate.slice(0, 4) === String(new Date().getFullYear());
+  const last = formatDayKey(stats.lastHostedDate, thisYear ? "monthDay" : "compact");
+  return `${base} — ${count}, last ${last}`;
 }
