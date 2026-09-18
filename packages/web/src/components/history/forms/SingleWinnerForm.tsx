@@ -1,9 +1,10 @@
 import type { MatchOutcomeFreeForAll, Participant } from "@boardgames/core/history/types";
 import { Chip } from "../../ui/Chip";
+import type { PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
 import { GroupLabel, mergeParticipants, OutcomeFormShell } from "./shared";
 
-type User = { id: string; name: string };
+type User = PickerUser;
 type FfaPlayer = MatchOutcomeFreeForAll["players"][number];
 
 type Props = {

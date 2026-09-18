@@ -3,9 +3,10 @@ import { useEffect, useId, useState } from "react";
 import { Field } from "../../ui/Field";
 import { Input } from "../../ui/Input";
 import { Surface } from "../../ui/Surface";
+import type { PickerUser } from "../ParticipantPicker";
 import { OutcomeFormShell } from "./shared";
 
-type User = { id: string; name: string };
+type User = PickerUser;
 
 type Props = {
   users: User[];

@@ -1,9 +1,10 @@
 import type { MatchOutcomeLastStanding, Participant } from "@boardgames/core/history/types";
 import { Button } from "../../ui/Button";
+import type { PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
 import { GroupLabel, nextEliminationOrder, OutcomeFormShell, SurvivalBadge } from "./shared";
 
-type User = { id: string; name: string };
+type User = PickerUser;
 
 type LastStandingPlayer = MatchOutcomeLastStanding["players"][number];
 

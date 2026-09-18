@@ -1,10 +1,10 @@
 import type { MatchOutcomeTeams, Participant } from "@boardgames/core/history/types";
 import { Chip } from "../../ui/Chip";
-import { ParticipantPicker } from "../ParticipantPicker";
+import { ParticipantPicker, type PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
 import { GroupLabel, OutcomeFormShell } from "./shared";
 
-type User = { id: string; name: string };
+type User = PickerUser;
 type Side = "resistance" | "spy";
 type Slot = { userId: string; displayName: string; side: Side };
 

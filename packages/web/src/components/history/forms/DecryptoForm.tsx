@@ -8,11 +8,11 @@ import type { MatchOutcomeTeams, Participant } from "@boardgames/core/history/ty
 import { ErrorAlert } from "../../../components/ui/ErrorAlert";
 import { Button } from "../../ui/Button";
 import { Chip } from "../../ui/Chip";
-import { ParticipantPicker } from "../ParticipantPicker";
+import { ParticipantPicker, type PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
 import { GroupLabel, OutcomeFormShell } from "./shared";
 
-type User = { id: string; name: string };
+type User = PickerUser;
 type Side = 0 | 1; // 0 = White, 1 = Black
 type Slot = { userId: string; displayName: string; side: Side };
 

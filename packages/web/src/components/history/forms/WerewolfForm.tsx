@@ -13,11 +13,11 @@ import {
 import { Chip } from "../../ui/Chip";
 import { IconButton } from "../../ui/IconButton";
 import { Select } from "../../ui/Select";
-import { ParticipantPicker } from "../ParticipantPicker";
+import { ParticipantPicker, type PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
 import { GroupLabel, OutcomeFormShell } from "./shared";
 
-type User = { id: string; name: string };
+type User = PickerUser;
 
 type Props = {
   users: User[];

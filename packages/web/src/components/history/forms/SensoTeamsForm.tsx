@@ -2,7 +2,7 @@ import type { MatchOutcomeTeams, Participant } from "@boardgames/core/history/ty
 import { useEffect } from "react";
 import { Input } from "../../ui/Input";
 import { Surface } from "../../ui/Surface";
-import { ParticipantPicker } from "../ParticipantPicker";
+import { ParticipantPicker, type PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
 import { AwaitingCubes, ResultLine } from "./SensoForm";
 import {
@@ -21,7 +21,7 @@ import { GroupLabel, OutcomeFormShell, RoleChipRow, withOptional } from "./share
 // opens the pair's combined cube count; a tie that survives that is shared.
 // The winning side is derived by `senso-standings.ts`, never toggled.
 
-type User = { id: string; name: string };
+type User = PickerUser;
 type Team = MatchOutcomeTeams["teams"][number];
 type Member = Team["members"][number];
 

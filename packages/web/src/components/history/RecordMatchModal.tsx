@@ -67,8 +67,9 @@ import {
   sortLockKeys,
   toCreateInput,
 } from "./outcome";
+import type { PickerUser } from "./ParticipantPicker";
 
-type User = { id: string; name: string };
+type User = PickerUser;
 
 const KIND_OPTIONS: { kind: MatchKind; label: string; hint: string }[] = [
   { kind: "free-for-all", label: "Free-for-all", hint: "Each player has a score; highest wins." },
@@ -100,7 +101,7 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
   });
 
   const allUsers: User[] = useMemo(
-    () => (usersQuery.data ?? []).map((u) => ({ id: u.id, name: u.name })),
+    () => (usersQuery.data ?? []).map((u) => ({ id: u.id, name: u.name, guest: u.guest === true })),
     [usersQuery.data],
   );
 

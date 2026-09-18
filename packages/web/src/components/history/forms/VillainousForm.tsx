@@ -4,6 +4,7 @@ import { parseMultiVariant } from "../../../games/match-variants";
 import { villainsForBoxes } from "../../../games/villainous/villains";
 import { Chip } from "../../ui/Chip";
 import { Surface } from "../../ui/Surface";
+import type { PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
 import {
   GroupLabel,
@@ -13,7 +14,7 @@ import {
   withOptional,
 } from "./shared";
 
-type User = { id: string; name: string };
+type User = PickerUser;
 
 type Props = {
   users: User[];

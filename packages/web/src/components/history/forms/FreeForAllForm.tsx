@@ -7,6 +7,7 @@ import { ChevronDownIcon } from "../../icons";
 import { Chip } from "../../ui/Chip";
 import { IconButton } from "../../ui/IconButton";
 import { Input } from "../../ui/Input";
+import type { PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
 import {
   breakTie,
@@ -17,7 +18,7 @@ import {
 } from "./free-for-all-placement";
 import { GroupLabel, OutcomeFormShell } from "./shared";
 
-type User = { id: string; name: string };
+type User = PickerUser;
 
 type Player = MatchOutcomeFreeForAll["players"][number];
 

@@ -3,10 +3,10 @@ import { useId } from "react";
 import { Chip } from "../../ui/Chip";
 import { Field } from "../../ui/Field";
 import { Input } from "../../ui/Input";
-import { ParticipantPicker } from "../ParticipantPicker";
+import { ParticipantPicker, type PickerUser } from "../ParticipantPicker";
 import { OutcomeFormShell } from "./shared";
 
-type User = { id: string; name: string };
+type User = PickerUser;
 
 type Props = {
   users: User[];

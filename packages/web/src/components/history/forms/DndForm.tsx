@@ -6,10 +6,11 @@ import { Input } from "../../ui/Input";
 import { Select } from "../../ui/Select";
 import { Surface } from "../../ui/Surface";
 import { DND_CONDITIONS, type DndCondition, resolutionOf } from "../dnd";
+import type { PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
 import { mergeParticipants, OutcomeFormShell, withOptional } from "./shared";
 
-type User = { id: string; name: string };
+type User = PickerUser;
 
 type Props = {
   users: User[];

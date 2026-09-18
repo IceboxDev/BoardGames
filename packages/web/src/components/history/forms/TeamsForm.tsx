@@ -10,11 +10,11 @@ import { Chip } from "../../ui/Chip";
 import { IconButton } from "../../ui/IconButton";
 import { Input } from "../../ui/Input";
 import { Surface } from "../../ui/Surface";
-import { ParticipantPicker } from "../ParticipantPicker";
+import { ParticipantPicker, type PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
 import { GroupLabel, OutcomeFormShell } from "./shared";
 
-type User = { id: string; name: string };
+type User = PickerUser;
 type TeamMember = MatchOutcomeTeams["teams"][number]["members"][number];
 
 type Props = {

@@ -46,6 +46,9 @@ type Props = {
   disabled?: boolean;
   /** Optional aria-label override (use when `children` is a glyph alone). */
   "aria-label"?: string;
+  /** For a chip that folds/unfolds a group of siblings (the ParticipantPicker guests chip). */
+  "aria-expanded"?: boolean;
+  "aria-controls"?: string;
   onClick?: () => void;
   /** When set, renders as `<span aria-disabled>` instead of `<button>` — used by status pills that look like chips but aren't actionable. */
   asStatic?: boolean;
@@ -151,6 +154,8 @@ export function Chip({
       title={title}
       aria-pressed={pressed}
       aria-label={aria["aria-label"]}
+      aria-expanded={aria["aria-expanded"]}
+      aria-controls={aria["aria-controls"]}
       className={cls}
     >
       {icon}

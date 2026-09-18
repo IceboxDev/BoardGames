@@ -3,7 +3,7 @@ import type { ReactNode } from "react";
 import { Badge } from "../../ui/Badge";
 import { Chip } from "../../ui/Chip";
 import { FieldGroup, LABEL_CLS } from "../../ui/Field";
-import { ParticipantPicker } from "../ParticipantPicker";
+import { ParticipantPicker, type PickerUser } from "../ParticipantPicker";
 
 // Shared building blocks for the match-outcome forms. Every form used to
 // re-type the same root layout, the same "Players" field, the same
@@ -23,7 +23,7 @@ import { ParticipantPicker } from "../ParticipantPicker";
 // shell is just the standard column.
 
 type OutcomeFormShellProps = {
-  users?: { id: string; name: string }[];
+  users?: PickerUser[];
   selectedIds?: string[];
   onParticipants?: (participants: Participant[]) => void;
   children: ReactNode;

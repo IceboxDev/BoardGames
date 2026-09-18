@@ -8,6 +8,7 @@ import type { MatchOutcomeFreeForAll, Participant } from "@boardgames/core/histo
 import { useEffect } from "react";
 import { JAIPUR_BEST_OF_ONE } from "../../../games/match-variants";
 import { Input } from "../../ui/Input";
+import type { PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
 import { FreeForAllForm } from "./FreeForAllForm";
 import { jaipurOutcomesEqual, normalizeJaipurOutcome } from "./jaipur-rounds";
@@ -22,7 +23,7 @@ import { GroupLabel, mergeParticipants, OutcomeFormShell } from "./shared";
 // tokens — recorded in `roundTiebreaks`, so the seal is always derived, never
 // picked by hand. The "Best of 1" format collapses to the plain score form.
 
-type User = { id: string; name: string };
+type User = PickerUser;
 
 type Props = {
   users: User[];

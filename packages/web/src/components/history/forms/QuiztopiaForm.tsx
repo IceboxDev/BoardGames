@@ -12,6 +12,7 @@ import { useId } from "react";
 import { Chip } from "../../ui/Chip";
 import { Field } from "../../ui/Field";
 import { Input } from "../../ui/Input";
+import type { PickerUser } from "../ParticipantPicker";
 import { OutcomeFormShell } from "./shared";
 
 // Quiztopia: co-op quiz over 12 buildings. Only three things are ENTERED —
@@ -21,7 +22,7 @@ import { OutcomeFormShell } from "./shared";
 // game's variant picker (match-variants.ts → `scenario`); the counts double
 // as the rating engine's win margin.
 
-type User = { id: string; name: string };
+type User = PickerUser;
 
 type Props = {
   users: User[];

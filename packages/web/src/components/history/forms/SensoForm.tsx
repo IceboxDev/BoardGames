@@ -2,6 +2,7 @@ import type { MatchOutcomeFreeForAll, Participant } from "@boardgames/core/histo
 import { useEffect } from "react";
 import { Input } from "../../ui/Input";
 import { Surface } from "../../ui/Surface";
+import type { PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
 import {
   describeSensoTiebreak,
@@ -29,7 +30,7 @@ import {
 // the Emperor — even from outside the tie — and is otherwise shared. Ranks
 // are derived by `senso-standings.ts` on every edit, never picked by hand.
 
-type User = { id: string; name: string };
+type User = PickerUser;
 type Player = MatchOutcomeFreeForAll["players"][number];
 
 type Props = {
