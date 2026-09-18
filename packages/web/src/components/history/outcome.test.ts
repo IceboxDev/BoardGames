@@ -154,6 +154,16 @@ describe("sortLockKeys", () => {
     const keys = ["2026-05-15", "2026-05-20", "2026-05-21", "2026-05-10"];
     expect(sortLockKeys(keys)).toEqual(["2026-05-21", "2026-05-20", "2026-05-15", "2026-05-10"]);
   });
+
+  it("keeps a second night on today's date and lists it after the first", () => {
+    const keys = ["2026-05-21_2", "2026-05-20", "2026-05-21", "2026-05-22_2", "2026-05-20_2"];
+    expect(sortLockKeys(keys)).toEqual([
+      "2026-05-21",
+      "2026-05-21_2",
+      "2026-05-20",
+      "2026-05-20_2",
+    ]);
+  });
 });
 
 // ── emptyOutcome ─────────────────────────────────────────────────────────

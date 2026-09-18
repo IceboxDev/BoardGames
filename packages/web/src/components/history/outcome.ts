@@ -22,10 +22,12 @@ import type {
   MatchOutcomeTeams,
   Participant,
 } from "@boardgames/core/history/types";
+import { nightDate } from "@boardgames/core/protocol";
 import { isClocktowerTraveller } from "../../games/blood-on-the-clocktower/characters";
 import { JAIPUR_BEST_OF_ONE } from "../../games/match-variants";
 import { coopMaxScoreForSlug, isSingleWinnerFfa, isWinDrawLossFfa } from "../../games/score-config";
 import { isVillainousSlug } from "../../games/villainous/villains";
+import { dateKey } from "../../lib/offline-availability";
 import { isDndSlug } from "./dnd";
 import {
   describeSensoFfaError,
@@ -120,13 +122,17 @@ export function toCreateInput(state: {
 }
 
 /**
- * Sort the game-night dropdown: today and past nights only (newest → oldest).
- * Future-dated locks are filtered out — you can't record a match for a game
- * night that hasn't happened yet.
+ * Sort the game-night dropdown: today and past nights only (newest → oldest,
+ * a date's first night before its second). Future-dated locks are filtered
+ * out — you can't record a match for a game night that hasn't happened yet.
+ * Keys are NIGHT keys (`date` or `date_2`), so the cut-off compares the
+ * night's date, and "today" is the local calendar day like the calendar's.
  */
 export function sortLockKeys(keys: string[]): string[] {
-  const today = new Date().toISOString().slice(0, 10);
-  return keys.filter((k) => k <= today).sort((a, b) => b.localeCompare(a));
+  const today = dateKey(new Date());
+  return keys
+    .filter((k) => nightDate(k) <= today)
+    .sort((a, b) => nightDate(b).localeCompare(nightDate(a)) || a.localeCompare(b));
 }
 
 /** Convert an ISO timestamp to the local-tz string `<input type="datetime-local">` expects. */
