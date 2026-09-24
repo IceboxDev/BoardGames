@@ -409,6 +409,7 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
             <ExitNightPanel date={date} attendees={attendees} partyCount={definiteCount} />
           ) : effectiveView === "attendees" ? (
             <AttendeesView
+              date={date}
               attendees={attendees}
               topSlugs={topSlugs}
               ownedSlugs={ownedSlugs}

@@ -1,12 +1,14 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { games as gameRegistry } from "../../games/registry";
 import type { GameDefinition } from "../../games/types";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import type { Attendee } from "../../lib/calendar-games";
-import { XIcon } from "../icons";
+import { isTeamCandidate, loadTeams } from "../../lib/teams";
+import { ShuffleIcon, XIcon } from "../icons";
 import {
   Avatar,
   Badge,
+  Button,
   EmptyState,
   Eyebrow,
   IconButton,
@@ -14,8 +16,11 @@ import {
   Surface,
   useConfirm,
 } from "../ui";
+import { TeamsPanel } from "./TeamsPanel";
 
 type Props = {
+  /** Night key — the team generator keeps its split per night. */
+  date: string;
   attendees: Attendee[];
   topSlugs: string[];
   /**
@@ -51,6 +56,7 @@ const SEAT_GROUPS: readonly {
 ];
 
 export default function AttendeesView({
+  date,
   attendees,
   topSlugs,
   ownedSlugs = [],
@@ -62,6 +68,11 @@ export default function AttendeesView({
 }: Props) {
   const { user } = useCurrentUser();
   const viewerId = user?.id ?? null;
+  const [mode, setMode] = useState<"list" | "teams">("list");
+  // Re-read on the way back from the teams panel so the button shows the new split.
+  // biome-ignore lint/correctness/useExhaustiveDependencies: `mode` is the refresh trigger
+  const savedTeamCount = useMemo(() => loadTeams(date).teams?.length ?? 0, [date, mode]);
+  const teamCandidates = attendees.filter(isTeamCandidate).length;
 
   const slugToGame = useMemo(() => {
     const m = new Map<string, GameDefinition>();
@@ -102,6 +113,14 @@ export default function AttendeesView({
     );
   }
 
+  if (mode === "teams") {
+    return (
+      <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col overflow-y-auto px-1 py-2">
+        <TeamsPanel date={date} attendees={attendees} onBack={() => setMode("list")} />
+      </div>
+    );
+  }
+
   const row = (a: Attendee) => (
     <li key={a.userId}>
       <AttendeeRow
@@ -119,6 +138,22 @@ export default function AttendeesView({
 
   return (
     <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col gap-2 overflow-y-auto px-1 py-2">
+      <div className="flex items-center justify-between gap-2 px-2">
+        <Eyebrow tone="sky">Who's coming</Eyebrow>
+        {teamCandidates >= 2 && (
+          <Button
+            variant="tinted"
+            tone="sky"
+            size="sm"
+            shape="pill"
+            onClick={() => setMode("teams")}
+            className="gap-1.5"
+          >
+            <ShuffleIcon className="h-3.5 w-3.5" />
+            {savedTeamCount > 0 ? `Teams (${savedTeamCount})` : "Make teams"}
+          </Button>
+        )}
+      </div>
       {seats ? (
         SEAT_GROUPS.map((group) => {
           const members = attendees.filter((a) => group.seats.includes(a.seat));
@@ -133,12 +168,7 @@ export default function AttendeesView({
           );
         })
       ) : (
-        <>
-          <Eyebrow tone="sky" className="px-2">
-            Who's coming
-          </Eyebrow>
-          <ul className="flex flex-col gap-2">{attendees.map(row)}</ul>
-        </>
+        <ul className="flex flex-col gap-2">{attendees.map(row)}</ul>
       )}
       {topSlugs.length > 0 && (
         <CoverageFooter

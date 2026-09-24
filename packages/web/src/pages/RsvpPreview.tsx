@@ -1,11 +1,13 @@
 import { useState } from "react";
+import AttendeesView from "../components/offline/AttendeesView";
 import GameCarousel3D from "../components/offline/GameCarousel3D";
 import RankedGameList from "../components/offline/RankedGameList";
 import { AddressLink, HostLine, RSVP_OPTIONS, TimeLine } from "../components/offline/RsvpModal";
+import { TeamsPanel } from "../components/offline/TeamsPanel";
 import { Modal } from "../components/ui/Modal";
 import { SegmentedControl } from "../components/ui/SegmentedControl";
 import { games } from "../games/registry";
-import type { ReactionAggregate } from "../lib/calendar-games";
+import type { Attendee, ReactionAggregate } from "../lib/calendar-games";
 
 // Dev-only visual preview of the RSVP modal shell + game carousel — the
 // exact surface behind /offline's day cards, but with static data and no
@@ -40,11 +42,38 @@ const PREVIEW_REACTIONS: Record<string, ReactionAggregate> = {
 };
 const PREVIEW_TOP = ["captain-sonar", "codenames", "wavelength", "sushi-go", "7-wonders"];
 
+// Attendees fixture for ?view=attendees / ?view=teams: a host, a guest, a
+// maybe and a long name, so the pool chips and team cards wrap on a phone.
+const PREVIEW_ATTENDEES: Attendee[] = [
+  ["Victor", { isHost: true }],
+  ["Ana"],
+  ["Benedikt Hohenzollern"],
+  ["Chloé"],
+  ["Dmitri"],
+  ["Eve", { status: "tentative" as const }],
+  ["Farah"],
+  ["Gus", { isGuest: true }],
+  ["Hana"],
+].map(([name, over]) => ({
+  userId: String(name).toLowerCase(),
+  name: String(name),
+  isHost: false,
+  isAdmin: false,
+  status: "definite" as const,
+  hasRsvped: true,
+  isGuest: false,
+  votes: { hype: 0, teach: 0, learn: 0 },
+  bringing: [],
+  seat: null,
+  ...(typeof over === "object" ? over : {}),
+}));
+
 export default function RsvpPreview() {
   const [rsvp, setRsvp] = useState<"yes" | "no">("yes");
-  const [view, setView] = useState<"pick" | "results" | "attendees">(() =>
-    new URLSearchParams(window.location.search).get("view") === "results" ? "results" : "pick",
-  );
+  const [view, setView] = useState<"pick" | "results" | "attendees" | "teams">(() => {
+    const v = new URLSearchParams(window.location.search).get("view");
+    return v === "results" || v === "attendees" || v === "teams" ? v : "pick";
+  });
   const previewGames = games
     .filter((g) => PREVIEW_SLUGS.has(g.slug))
     // Captain Sonar first — the long-title regression case sits centered.
@@ -134,7 +163,17 @@ export default function RsvpPreview() {
       </div>
 
       <div className="flex min-h-0 flex-1 items-center justify-center">
-        {view === "results" ? (
+        {view === "attendees" ? (
+          <AttendeesView date="preview" attendees={PREVIEW_ATTENDEES} topSlugs={[]} />
+        ) : view === "teams" ? (
+          <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col overflow-y-auto px-1 py-2">
+            <TeamsPanel
+              date="preview"
+              attendees={PREVIEW_ATTENDEES}
+              onBack={() => setView("attendees")}
+            />
+          </div>
+        ) : view === "results" ? (
           <RankedGameList
             date="2026-08-16"
             games={previewGames}
