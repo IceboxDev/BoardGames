@@ -67,11 +67,10 @@ export function CategoryTile({
                 { value: 100 - pct, color: "transparent" },
               ]}
             >
-              {/* The number sits dead centre; the % hangs off its right edge
-                  so the pair doesn't read as pushed left. */}
-              <span className="relative text-3xs font-semibold tabular-nums text-fg-secondary">
-                {pct}
-                <span className="absolute left-full text-fg-muted">%</span>
+              {/* pl-px / pb-px: half-pixel optical nudge — the % glyph's right
+                  bearing and the digits' baseline put the ink left and low. */}
+              <span className="pb-px pl-px text-3xs font-semibold tabular-nums text-fg-secondary">
+                {pct}%
               </span>
             </DonutChart>
           )}

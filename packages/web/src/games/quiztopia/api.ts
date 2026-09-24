@@ -17,7 +17,6 @@ import {
   WikiReadBodySchema,
   WikiReadsResponseSchema,
 } from "@boardgames/core/protocol";
-import { z } from "zod";
 import { dateKey } from "../../lib/offline-availability";
 import { jsonMutation, jsonQuery } from "../../lib/typed-query";
 
@@ -87,7 +86,8 @@ export const putSettings = jsonMutation(
   { method: "PUT" },
 );
 
+/** Answers with the caller's full read list (idempotent per set). */
 export const postWikiRead = jsonMutation(`${BASE}/wiki/reads`, {
   request: WikiReadBodySchema,
-  response: z.object({ ok: z.literal(true) }),
+  response: WikiReadsResponseSchema,
 });

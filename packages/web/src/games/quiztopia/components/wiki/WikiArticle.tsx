@@ -92,13 +92,7 @@ function ArticleScreen({ district: d, cardId, cardIndex }: ScreenProps) {
   const isRead = (reads.data?.reads ?? []).some((r) => r.setId === sid);
   const markRead = useMutation({
     mutationFn: postWikiRead,
-    onSuccess: (_res, body) => {
-      qc.setQueryData<WikiReads>(qk.quiztopiaWikiReads(), (prev) => {
-        const list = prev?.reads ?? [];
-        if (list.some((r) => r.setId === body.setId)) return prev;
-        return { reads: [...list, { setId: body.setId, readAt: new Date().toISOString() }] };
-      });
-    },
+    onSuccess: (res) => qc.setQueryData<WikiReads>(qk.quiztopiaWikiReads(), res),
   });
   const { mutate: mutateRead, isPending: marking } = markRead;
   const requestRead = useCallback(() => {
@@ -167,10 +161,15 @@ function ArticleScreen({ district: d, cardId, cardIndex }: ScreenProps) {
   // the article — and with it the sentinel — appears.
   const [sentinel, setSentinel] = useState<HTMLDivElement | null>(null);
   const sentinelAfter = Math.max(0, Math.ceil(paragraphs.length * READ_SENTINEL_SHARE) - 1);
+  // Fires at most once per visit: a failed request must not turn into a
+  // retry loop while the sentinel stays on screen (the chip still retries).
+  const autoMarked = useRef(false);
   useEffect(() => {
     if (!sentinel || isRead || typeof IntersectionObserver === "undefined") return;
     const io = new IntersectionObserver((entries) => {
-      if (entries.some((en) => en.isIntersecting)) requestRead();
+      if (autoMarked.current || !entries.some((en) => en.isIntersecting)) return;
+      autoMarked.current = true;
+      requestRead();
     });
     io.observe(sentinel);
     return () => io.disconnect();

@@ -133,7 +133,10 @@ function renderArticle(path = "/play/quiztopia/solo/wiki/politics/c002") {
 
 beforeEach(() => {
   postWikiReadMock.mockReset();
-  postWikiReadMock.mockResolvedValue({ ok: true });
+  // The server's real answer: the caller's whole read list.
+  postWikiReadMock.mockImplementation(async (body: { setId: string }) => ({
+    reads: [{ setId: body.setId, readAt: "2026-09-24T12:00:00.000Z" }],
+  }));
   Element.prototype.scrollIntoView = vi.fn();
 });
 
@@ -218,6 +221,8 @@ describe("WikiArticle", () => {
     await user.click(await screen.findByRole("button", { name: /Mark read/ }));
     expect(postWikiReadMock).toHaveBeenCalledWith({ setId: "c002-s07" });
     expect(await screen.findByText("Read", { selector: "span" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /Read/ })).toBeDisabled();
+    expect(postWikiReadMock).toHaveBeenCalledTimes(1);
   });
 
   it("bounces an unknown card to the district list", () => {
