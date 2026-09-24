@@ -20,7 +20,8 @@
     "lint:fix": "biome check --write packages/",
     "format": "biome format --write packages/",
     "typecheck": "pnpm -r typecheck",
-    "test": "pnpm -r --parallel --filter './packages/*' test"
+    "test": "pnpm -r --parallel --filter './packages/*' test",
+    "quiztopia-import": "tsx scripts/quiztopia-import.ts"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.8",

@@ -1,12 +1,8 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
 import { Document, Page, pdfjs } from "react-pdf";
-import { XIcon } from "../icons";
-import { DialogBackdrop } from "../ui/DialogBackdrop";
-import { useBodyScrollLock, useDialogEscape, useFocusTrap } from "../ui/dialog-a11y";
 import { ErrorAlert } from "../ui/ErrorAlert";
-import { IconButton } from "../ui/IconButton";
 import { LoadingState } from "../ui/LoadingState";
+import { RulesShell } from "./RulesShell";
 
 pdfjs.GlobalWorkerOptions.workerSrc = `https://unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.mjs`;
 
@@ -18,13 +14,10 @@ interface RulesViewerProps {
   onClose: () => void;
 }
 
-// Full-screen viewer rendered at the `/play/:slug/rules` route (see RulesRoute).
-// Living at its own URL is what makes Back close it: the browser/OS Back button
-// and the in-app top-nav Back arrow both return to `/play/:slug` (mode select),
-// and the in-view affordances (X, Escape, backdrop) call `onClose`, which pops
-// that entry too. Because `onClose` navigates (Back), it must fire at most once
-// — `closingRef` guards against a double dismiss (e.g. Escape pressed twice
-// during the 200ms fade-out), which would otherwise pop past the menu.
+// Full-screen PDF viewer rendered at the `/play/:slug/rules` route (see
+// RulesRoute). The chrome — header, tabs, close, the dialog contract and the
+// once-only Back navigation — is `RulesShell`; this component only owns the
+// PDF state (which booklet, how many pages, how wide).
 
 export function RulesViewer({ url, onClose }: RulesViewerProps) {
   // Normalize: a plain string becomes a single-tab list. The tab bar is only
@@ -34,14 +27,6 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
   const [numPages, setNumPages] = useState<number>(0);
   const [pageWidth, setPageWidth] = useState(600);
   const containerRef = useRef<HTMLDivElement>(null);
-  const dialogRef = useRef<HTMLDivElement>(null);
-  const [closing, setClosing] = useState(false);
-
-  // Full dialog contract, same hooks as Modal: scroll lock, focus trap,
-  // Escape. `handleClose` is idempotent (closingRef), so a double Escape
-  // during the fade can never pop navigation twice.
-  useBodyScrollLock();
-  useFocusTrap(dialogRef);
 
   // Switching tab: clear page count so stale pages don't render against the
   // new document, and scroll the new PDF to the top. Optional-call on
@@ -69,135 +54,50 @@ export function RulesViewer({ url, onClose }: RulesViewerProps) {
     return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
-  const closingRef = useRef(false);
-  const handleClose = useCallback(() => {
-    if (closingRef.current) return;
-    closingRef.current = true;
-    setClosing(true);
-    setTimeout(onClose, 200);
-  }, [onClose]);
-
-  useDialogEscape(handleClose);
-
   const onDocumentLoadSuccess = useCallback(({ numPages: n }: { numPages: number }) => {
     setNumPages(n);
   }, []);
 
-  const overlay = (
-    <div
-      className={`fixed inset-0 z-modal flex flex-col transition-opacity duration-200 ${closing ? "opacity-0" : "opacity-100"}`}
+  return (
+    <RulesShell
+      meta={numPages > 0 ? `${numPages} ${numPages === 1 ? "page" : "pages"}` : undefined}
+      tabs={tabs}
+      activeTab={activeTab}
+      onTabChange={switchTab}
+      scrollRef={containerRef}
+      onClose={onClose}
     >
-      <DialogBackdrop onDismiss={handleClose} label="Dismiss rules" />
-
-      {/* Content */}
-      <div
-        ref={dialogRef}
-        role="dialog"
-        aria-modal="true"
-        aria-label="Game rules"
-        tabIndex={-1}
-        className="relative z-raised flex min-h-0 flex-1 flex-col outline-none"
-      >
-        {/* Header bar — three zones (title • tabs • close). The middle is a
-            flex-1 spacer when there's only one booklet, so the title and X
-            still anchor to opposite ends; when there are multiple booklets,
-            the tab pills live in that same slot, horizontally centered. */}
-        <div className="flex shrink-0 items-center border-b border-line-soft bg-surface-950/80 px-6 py-3 backdrop-blur-md">
-          <div className="flex shrink-0 items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-card-lg bg-amber-500/10 text-amber-400">
-              <svg viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4" aria-hidden="true">
-                <path d="M10.75 16.82A7.462 7.462 0 0115 15.5c.71 0 1.396.098 2.046.282A.75.75 0 0018 15.06V3.56a.75.75 0 00-.546-.722A9.006 9.006 0 0015 2.5a9.006 9.006 0 00-4.25 1.065v13.255zM9.25 4.565A9.006 9.006 0 005 2.5a9.006 9.006 0 00-2.454.338A.75.75 0 002 3.56v11.5a.75.75 0 00.954.722A7.462 7.462 0 015 15.5a7.462 7.462 0 014.25 1.32V4.565z" />
-              </svg>
-            </div>
-            <span className="text-sm font-semibold text-fg-strong">Game Rules</span>
-            {numPages > 0 && (
-              <span className="text-xs tabular-nums text-fg-muted">
-                {numPages} {numPages === 1 ? "page" : "pages"}
-              </span>
-            )}
-          </div>
-
-          {tabs.length > 1 ? (
-            <div
-              role="tablist"
-              aria-label="Rules booklets"
-              className="flex flex-1 items-center justify-center gap-1 px-4"
-            >
-              {tabs.map((t, i) => {
-                const active = i === activeTab;
-                return (
-                  // biome-ignore lint/correctness/noRestrictedElements: tab control needs role/aria-selected semantics and a bespoke pill style that <Button> doesn't expose
-                  <button
-                    key={t.label}
-                    type="button"
-                    role="tab"
-                    aria-selected={active}
-                    onClick={() => switchTab(i)}
-                    className={
-                      active
-                        ? "rounded-full bg-amber-500/15 px-3 py-1 text-xs font-medium text-amber-300 ring-1 ring-amber-400/30 transition-colors"
-                        : "rounded-full px-3 py-1 text-xs text-fg-secondary transition-colors hover:bg-fill-soft hover:text-fg-primary"
-                    }
-                  >
-                    {t.label}
-                  </button>
-                );
-              })}
-            </div>
-          ) : (
-            <div className="flex-1" aria-hidden="true" />
-          )}
-
-          <IconButton
-            variant="ghost"
-            size="sm"
-            aria-label="Close rules"
-            onClick={handleClose}
-            icon={<XIcon className="h-5 w-5" />}
-          />
-        </div>
-
-        {/* Scrollable PDF area */}
-        <div
-          ref={containerRef}
-          className="min-h-0 flex-1 overflow-y-auto px-6 py-8 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      <div className="mx-auto flex max-w-[832px] flex-col items-center gap-3">
+        <Document
+          // Force remount on tab change so react-pdf cleanly reloads the
+          // new file instead of incrementally diffing against the old one.
+          key={activeTab}
+          file={tabs[activeTab].url}
+          onLoadSuccess={onDocumentLoadSuccess}
+          loading={<LoadingState label="Loading rules…" className="py-20" />}
+          error={
+            <ErrorAlert
+              message="Failed to load PDF. Please try again."
+              className="mx-auto my-20 max-w-md"
+            />
+          }
         >
-          <div className="mx-auto flex max-w-[832px] flex-col items-center gap-3">
-            <Document
-              // Force remount on tab change so react-pdf cleanly reloads the
-              // new file instead of incrementally diffing against the old one.
-              key={activeTab}
-              file={tabs[activeTab].url}
-              onLoadSuccess={onDocumentLoadSuccess}
-              loading={<LoadingState label="Loading rules…" className="py-20" />}
-              error={
-                <ErrorAlert
-                  message="Failed to load PDF. Please try again."
-                  className="mx-auto my-20 max-w-md"
-                />
-              }
+          {Array.from({ length: numPages }, (_, i) => (
+            <div
+              // biome-ignore lint/suspicious/noArrayIndexKey: PDF pages are positional
+              key={i}
+              className="mb-3 last:mb-0 overflow-hidden rounded-card-lg shadow-2xl shadow-black/40 ring-1 ring-line-soft"
             >
-              {Array.from({ length: numPages }, (_, i) => (
-                <div
-                  // biome-ignore lint/suspicious/noArrayIndexKey: PDF pages are positional
-                  key={i}
-                  className="mb-3 last:mb-0 overflow-hidden rounded-card-lg shadow-2xl shadow-black/40 ring-1 ring-line-soft"
-                >
-                  <Page
-                    pageNumber={i + 1}
-                    width={pageWidth}
-                    renderAnnotationLayer={false}
-                    renderTextLayer={false}
-                  />
-                </div>
-              ))}
-            </Document>
-          </div>
-        </div>
+              <Page
+                pageNumber={i + 1}
+                width={pageWidth}
+                renderAnnotationLayer={false}
+                renderTextLayer={false}
+              />
+            </div>
+          ))}
+        </Document>
       </div>
-    </div>
+    </RulesShell>
   );
-
-  if (typeof document === "undefined") return null;
-  return createPortal(overlay, document.body);
 }

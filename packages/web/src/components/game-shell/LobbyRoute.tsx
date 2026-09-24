@@ -112,6 +112,9 @@ export default function LobbyRoute() {
   }
 
   const LobbyConfigComponent = def.lobbyConfigComponent ?? NoLobbyConfig;
+  // Human seats only — an AI slot is not a player at a co-op table, and an
+  // open slot is nobody yet.
+  const playerCount = mp.roomState.slots.filter((s) => s.kind === "human").length;
 
   return (
     <Lobby
@@ -143,7 +146,12 @@ export default function LobbyRoute() {
           picker). Falls through to `<NoLobbyConfig />` for games without
           one — no Suspense fallback because the chunk is tiny. */}
       <Suspense fallback={null}>
-        <LobbyConfigComponent value={config} onChange={setConfig} isHost={mp.isHost} />
+        <LobbyConfigComponent
+          value={config}
+          onChange={setConfig}
+          isHost={mp.isHost}
+          playerCount={playerCount}
+        />
       </Suspense>
     </Lobby>
   );

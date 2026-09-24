@@ -8,11 +8,13 @@ import "./env.ts";
 // watched file to force a rebuild (this comment has served that duty:
 // 2026-08-17, skills deploy).
 
+import { setQuestionSource } from "@boardgames/core/games/quiztopia/question-source";
 import { serve } from "@hono/node-server";
 import { initDb } from "./db.ts";
 import { markStaleProcessingCampaigns } from "./lib/dnd-campaigns-db.ts";
 import { markStaleProcessingCharacters } from "./lib/dnd-characters-db.ts";
 import { installProcessGuards } from "./lib/process-guards.ts";
+import { getContentStore } from "./lib/quiztopia/content-store.ts";
 import { triggerSkillRecompute } from "./lib/skill-ratings.ts";
 import { app, injectWebSocket } from "./server.ts";
 import { markStaleRunning } from "./tournament/manager.ts";
@@ -41,6 +43,12 @@ try {
   // hex charts never render numbers this build's maths disowns. A history
   // change does not: that waits for the admin's Recompute button.
   triggerSkillRecompute();
+  // Quiztopia content ships in code and is read from disk once: the trainer
+  // routes and the game machine both draw from this store. A missing or
+  // malformed content dir is a broken build, so it fails the boot.
+  const quiztopia = getContentStore();
+  setQuestionSource(quiztopia);
+  console.log(`[quiztopia] content v${quiztopia.version} (${quiztopia.cardIds.length} cards)`);
 } catch (err) {
   console.error("[boot] initialisation failed — refusing to start:", err);
   process.exit(1);

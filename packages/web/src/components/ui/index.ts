@@ -23,6 +23,7 @@ export { Field, FieldGroup } from "./Field";
 export { IconButton } from "./IconButton";
 export { Input } from "./Input";
 export { InteractiveCard, type InteractiveCardPadding } from "./InteractiveCard";
+export { Kbd } from "./Kbd";
 export { Eyebrow, type EyebrowSize, type EyebrowTone, MicroLabel } from "./Label";
 export { LoadingState } from "./LoadingState";
 export { MemberPicker, type MemberPickerMember } from "./MemberPicker";

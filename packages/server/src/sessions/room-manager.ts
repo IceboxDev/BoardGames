@@ -46,7 +46,7 @@ function generateRoomCode(): string {
 // Room data
 // ---------------------------------------------------------------------------
 
-interface Room {
+export interface Room {
   code: string;
   gameSlug: string;
   hostWs: WSContext;
@@ -502,7 +502,11 @@ export function handleStartRoom(ws: WSContext, msg: { roomCode: string; config: 
   room.sessionId = sessionId;
 }
 
-function buildGameConfig(room: Room, extra: Record<string, unknown>): Record<string, unknown> {
+/** Exported for tests: the START config a room's slots + lobby extras produce. */
+export function buildGameConfig(
+  room: Room,
+  extra: Record<string, unknown>,
+): Record<string, unknown> {
   switch (room.gameSlug) {
     case "lost-cities": {
       // 2 players — if both human, pass humanPlayers: [0, 1]. Seats map
@@ -614,6 +618,17 @@ function buildGameConfig(room: Room, extra: Record<string, unknown>): Record<str
         aiStrategy: aiSlot?.aiStrategy ?? "heuristic-v1",
         ...extra,
       };
+    }
+
+    case "quiztopia": {
+      // Co-op with no AI: the human SEATS in table order, mapped through
+      // seatOrder. Spread `extra` first so the lobby config can never
+      // override the count or the seating.
+      const seats = room.slots
+        .map((s, i) => (s.kind === "human" ? (room.seatOrder[i] ?? i) : -1))
+        .filter((i) => i >= 0)
+        .sort((a, b) => a - b);
+      return { ...extra, playerCount: seats.length, seats };
     }
 
     default:

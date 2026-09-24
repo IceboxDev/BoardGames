@@ -42,6 +42,12 @@ export type LobbyConfigProps = {
    * else, since the value never syncs across seats.
    */
   isHost?: boolean;
+  /**
+   * Number of human seats currently in the room. Games whose rules change
+   * with the table size (Quiztopia's solo rules switch Expert mode off at
+   * one player) read it to disable or relabel options live.
+   */
+  playerCount?: number;
 };
 
 /**
@@ -228,6 +234,12 @@ export interface PlayableGame extends GameBase {
    * separate Rules and Flight Log.
    */
   rulesUrl?: string | { label: string; url: string }[];
+  /**
+   * Copy under the mode-picker's Multiplayer card. Defaults to the generic
+   * "Create a room and play online with friends"; co-op games that also
+   * make sense as a one-seat room say so here.
+   */
+  multiplayerDescription?: string;
   /**
    * Optional game-specific replay component, used by the match-history
    * and tournament-detail routes to render a single game log inline.

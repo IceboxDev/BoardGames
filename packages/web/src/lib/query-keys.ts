@@ -55,4 +55,18 @@ export const qk = {
   dndNpcs: (campaignId: string) => ["dnd", "npcs", campaignId] as const,
   dndFiles: () => ["dnd", "files"] as const,
   dndActiveSession: () => ["dnd", "session", "active"] as const,
+  // Quiztopia trainer + wiki. Root key "quiztopia" is excluded from the
+  // persister (App.tsx): queues are date-bound and content chunks are big.
+  quiztopiaOverview: (today: string) => ["quiztopia", "overview", today] as const,
+  quiztopiaQueue: (category: number | null, today: string) =>
+    ["quiztopia", "queue", category, today] as const,
+  quiztopiaStates: (ids: readonly string[]) => ["quiztopia", "states", ids.join(",")] as const,
+  quiztopiaHistory: (days: number, today: string) => ["quiztopia", "history", days, today] as const,
+  quiztopiaSettings: () => ["quiztopia", "settings"] as const,
+  quiztopiaSearch: (q: string, lang: string, category: number | null) =>
+    ["quiztopia", "search", q, lang, category] as const,
+  quiztopiaWikiReads: () => ["quiztopia", "wiki-reads"] as const,
+  quiztopiaRecentMisses: () => ["quiztopia", "recent-misses"] as const,
+  quiztopiaContent: (kind: "questions" | "articles" | "titles", cardId: string) =>
+    ["quiztopia", "content", kind, cardId] as const,
 } as const;

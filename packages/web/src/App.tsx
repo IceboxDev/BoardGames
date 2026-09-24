@@ -215,6 +215,10 @@ const router = createBrowserRouter(
           <Route path="dev/decrypto-preview" lazy={page(() => import("./pages/DecryptoPreview"))} />
           <Route path="dev/senso-preview" lazy={page(() => import("./pages/SensoPreview"))} />
           <Route path="dev/senso-cards" lazy={page(() => import("./pages/SensoCardsPreview"))} />
+          <Route
+            path="dev/quiztopia-preview"
+            lazy={page(() => import("./pages/QuiztopiaPreview"))}
+          />
           <Route path="dev/skill-preview" lazy={page(() => import("./pages/SkillPreview"))} />
           <Route
             path="dev/jaipur-preview"
@@ -254,10 +258,14 @@ export default function App() {
         maxAge: 24 * 60 * 60 * 1000,
         buster: queryPersistBuster,
         // The greeting queue must never hydrate from disk: a nag popup has to
-        // re-evaluate against the server on every app open.
+        // re-evaluate against the server on every app open. The Quiztopia
+        // trainer is date-keyed and its content chunks are already cached by
+        // the browser, so persisting it would only replay a stale "today".
         dehydrateOptions: {
           shouldDehydrateQuery: (q) =>
-            defaultShouldDehydrateQuery(q) && q.queryKey[0] !== "greetings",
+            defaultShouldDehydrateQuery(q) &&
+            q.queryKey[0] !== "greetings" &&
+            q.queryKey[0] !== "quiztopia",
         },
       }}
     >

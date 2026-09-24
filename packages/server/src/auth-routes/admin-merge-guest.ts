@@ -111,6 +111,11 @@ export const GUEST_MERGE_COVERAGE = {
     "dnd_node_templates.user_id",
     "dnd_history.user_id",
     "dnd_combats.user_id",
+    // Quiztopia trainer: a personal study programme a guest stub never starts.
+    "quiztopia_srs.user_id",
+    "quiztopia_reviews.user_id",
+    "quiztopia_settings.user_id",
+    "quiztopia_wiki_reads.user_id",
   ],
 } as const;
 

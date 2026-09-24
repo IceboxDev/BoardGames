@@ -28,6 +28,7 @@ export default function ModeSelectRoute() {
       onSolo={() => navigate(`/play/${slug}/solo`)}
       onMultiplayer={() => navigate(`/play/${slug}/mp/join`)}
       multiplayerComingSoon={def.multiplayerComingSoon}
+      multiplayerDescription={def.multiplayerDescription}
       companion={
         def.companion
           ? {

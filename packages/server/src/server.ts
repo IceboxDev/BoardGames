@@ -50,6 +50,7 @@ import { profileRoutes } from "./auth-routes/profile.ts";
 import { profileInsightsRoutes } from "./auth-routes/profile-insights.ts";
 import { purchaseVoteRoutes } from "./auth-routes/purchase-vote.ts";
 import { purchaseRoutes } from "./auth-routes/purchases.ts";
+import { quiztopiaRoutes } from "./auth-routes/quiztopia.ts";
 import { skillsRoutes } from "./auth-routes/skills.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
@@ -58,6 +59,7 @@ import { probeAi } from "./lib/ai/index.ts";
 import { requireTrustedOrigin } from "./lib/csrf.ts";
 import { errorResponse } from "./lib/error-response.ts";
 import { allowedOrigins } from "./lib/origins.ts";
+import { peekContentStore } from "./lib/quiztopia/content-store.ts";
 import { clientIp, rateLimit } from "./lib/rate-limit.ts";
 import { LATEST_VERSION } from "./migrations/registry.ts";
 import { persistenceRoutes } from "./persistence/routes.ts";
@@ -170,6 +172,10 @@ app.get("/api/health", async (c) => {
     commit: process.env.RAILWAY_GIT_COMMIT_SHA?.slice(0, 7) ?? "dev",
     schemaVersion: LATEST_VERSION,
     games: getRegisteredSlugs(),
+    // The Quiztopia content version this build loaded at boot (null before
+    // boot finishes), so a stale trainer client can be told apart from a
+    // stale deploy.
+    quiztopiaContent: peekContentStore()?.version ?? null,
     db,
   };
   return c.json(body, db.ok ? 200 : 503);
@@ -326,6 +332,22 @@ app.use(
   }),
 );
 app.route("/api/dnd", dndCampaignRoutes);
+
+// Quiztopia trainer + wiki + search. A play-area feature, gated like the
+// games. A study session posts one small review every few seconds and the
+// offline queue flushes in bulk, so writes are metered generously; reads
+// (queue, overview, search) are unmetered.
+app.use(
+  "/api/quiztopia/*",
+  requireAuth,
+  requireOnline,
+  bodyLimit({
+    maxSize: 256 * 1024,
+    onError: (c) => errorResponse(c, 413, "Body too large", "PAYLOAD_TOO_LARGE"),
+  }),
+  rateLimit({ name: "quiztopia-write", windowMs: 60_000, max: 120, skipSafeMethods: true }),
+);
+app.route("/api/quiztopia", quiztopiaRoutes);
 
 // BGA bridge sessions (create / join-by-code / SSE spectate). Play-area
 // feature, gated like the games it mirrors.

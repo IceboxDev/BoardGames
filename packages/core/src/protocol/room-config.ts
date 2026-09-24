@@ -48,4 +48,6 @@ export const gameRoomConfigs: Record<string, GameRoomConfig> = {
     supportsAI: true,
     botStrategies: SENSO_STRATEGIES.map((s) => ({ id: s.id, label: s.label })),
   },
+  // Co-op quiz; seat index = table order, so lobby seat swaps double as seating.
+  quiztopia: { minPlayers: 1, maxPlayers: 6, supportsAI: false },
 };

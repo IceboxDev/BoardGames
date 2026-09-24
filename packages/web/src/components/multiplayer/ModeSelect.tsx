@@ -21,6 +21,8 @@ interface ModeSelectProps {
   onMultiplayer: () => void;
   /** Render the Multiplayer card inert with a "coming soon" note. */
   multiplayerComingSoon?: boolean;
+  /** Copy under the Multiplayer card; defaults to the generic room line. */
+  multiplayerDescription?: string;
   /** Companion-device card (e.g. beamer display) shown INSTEAD of Multiplayer. */
   companion?: { label: string; description: string; onClick: () => void };
   onMatchHistory?: () => void;
@@ -74,6 +76,7 @@ export function ModeSelect({
   onSolo,
   onMultiplayer,
   multiplayerComingSoon = false,
+  multiplayerDescription = "Create a room and play online with friends",
   companion,
   onMatchHistory,
   onTournament,
@@ -134,7 +137,7 @@ export function ModeSelect({
             tone="emerald"
             icon={<UsersIcon className="h-7 w-7" />}
             title="Multiplayer"
-            description="Create a room and play online with friends"
+            description={multiplayerDescription}
             onClick={onMultiplayer}
             animationDelay={60}
           />

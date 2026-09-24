@@ -22,6 +22,7 @@ import {
   IconButton,
   Input,
   InteractiveCard,
+  Kbd,
   LoadingState,
   MemberPicker,
   MicroLabel,
@@ -319,6 +320,11 @@ export default function UiGalleryPage() {
               </Swatch>
               <Swatch label="MicroLabel">
                 <MicroLabel>stat caption</MicroLabel>
+              </Swatch>
+              <Swatch label="Kbd">
+                <Kbd>Space</Kbd>
+                <Kbd>←</Kbd>
+                <Kbd size="sm">Esc</Kbd>
               </Swatch>
             </Stack>
           </Section>
