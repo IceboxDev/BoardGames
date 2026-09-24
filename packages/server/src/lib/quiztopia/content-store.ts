@@ -65,8 +65,9 @@ export interface StoredQuestion {
   de: string;
   answerEn: string;
   answerDe: string;
-  /** Editor's note for the set ("" when none). */
-  notes: string;
+  /** Player-facing editor's notes for the set, per language ("" when none). */
+  notesEn: string;
+  notesDe: string;
 }
 
 export interface SearchOptions {
@@ -166,7 +167,8 @@ export function loadContentStore(dir: string = resolveContentDir()): ContentStor
           de: q.de,
           answerEn: q.answerEn,
           answerDe: q.answerDe,
-          notes: set.notes,
+          notesEn: set.notesEn ?? "",
+          notesDe: set.notesDe ?? "",
         });
         docs.push({
           questionId: q.id,
@@ -226,7 +228,8 @@ export function loadContentStore(dir: string = resolveContentDir()): ContentStor
         de: q.de,
         answerEn: q.answerEn,
         answerDe: q.answerDe,
-        notes: set.notes,
+        notesEn: set.notesEn ?? "",
+        notesDe: set.notesDe ?? "",
       };
     });
     return { ref, cardId: parsed.cardId, sets };

@@ -15,8 +15,9 @@ export interface QuestionSet {
   de: string;
   answerEn: string;
   answerDe: string;
-  /** Editor's note for the set ("" when none). */
-  notes: string;
+  /** Player-facing editor's notes for the set, per language ("" when none). */
+  notesEn: string;
+  notesDe: string;
 }
 
 export interface QuestionCard {
@@ -76,7 +77,8 @@ export function createFixtureQuestionSource(cardCount = 30): QuestionSource {
           de: `Frage ${cardId}-${cat}${suffix} (DE)?`,
           answerEn: `Answer ${cardId}-${cat}${suffix}`,
           answerDe: `Antwort ${cardId}-${cat}${suffix}`,
-          notes: "",
+          notesEn: "",
+          notesDe: "",
         });
       }
       return { ref, cardId, sets };

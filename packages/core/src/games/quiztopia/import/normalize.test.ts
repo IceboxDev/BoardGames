@@ -7,7 +7,34 @@ import {
   TitlesSchema,
 } from "../content-types.ts";
 import { QUESTIONS_PER_SET, SETS_PER_CARD } from "../ids.ts";
-import { contentVersion, locateAnswerSpan, normalizeCards, type RawCard } from "./normalize.ts";
+import {
+  contentVersion,
+  locateAnswerSpan,
+  normalizeCards,
+  type RawCard,
+  type RawSource,
+  type RawTimeline,
+} from "./normalize.ts";
+
+const SOURCE: RawSource = {
+  url: "https://en.wikipedia.org/wiki/Hanns_Eisler",
+  title: "Hanns Eisler – Wikipedia",
+  lang: "en",
+};
+
+/** Every question of the corpus carries an event; the fixture's is a plain year. */
+function defaultEvent(year: number, tag: string): RawTimeline {
+  return {
+    kind: "event",
+    start: String(year),
+    end: null,
+    precision: "year",
+    approx: false,
+    ongoing: false,
+    label_en: `Event ${tag}`,
+    label_de: `Ereignis ${tag}`,
+  };
+}
 
 /**
  * A synthetic card: 12 sets × 5 questions whose answers appear verbatim in
@@ -25,6 +52,8 @@ function rawCard(image: string, tag: string, opts: { lowercaseFirst?: boolean } 
         de: `Frage ${tag} ${n} ${qi}?`,
         answer_en: `Answer ${tag}-${n}-${qi}`,
         answer_de: `Antwort ${tag}-${n}-${qi}`,
+        timeline: defaultEvent(1900 + n * 5 + qi, `${tag} ${n} ${qi}`),
+        source: { ...SOURCE },
       }));
       const inProse = (answer: string, qi: number) =>
         opts.lowercaseFirst && n === 1 && qi === 0 ? answer.toLowerCase() : answer;
@@ -37,13 +66,49 @@ function rawCard(image: string, tag: string, opts: { lowercaseFirst?: boolean } 
         article_en: `Prose about ${questions.map((q, qi) => inProse(q.answer_en, qi)).join(", then ")}. End.`,
         article_title_de: `Titel ${tag} ${n}`,
         article_de: `Prosa über ${questions.map((q, qi) => inProse(q.answer_de, qi)).join(", dann ")}. Ende.`,
-        notes: n === 2 ? " Misprint on the card. " : undefined,
+        enriched: true,
+        notes: n === 2 ? " Misprint on the card. Kept by position. " : undefined,
+        ...(n === 2
+          ? {
+              notes_en: " Misprint on the card. ",
+              notes_de: "Fehldruck auf der Karte.",
+              notes_internal: "Kept by position.",
+            }
+          : {}),
       };
     }),
   };
 }
 
 const AT = "2026-09-19T00:00:00.000Z";
+
+const EISLER: RawTimeline = {
+  kind: "lifespan",
+  start: "1898-07-06",
+  end: "1962-09-06",
+  precision: "day",
+  approx: false,
+  ongoing: false,
+  label_en: " Hanns Eisler, composer ",
+  label_de: "Hanns Eisler, Komponist",
+};
+/** Give set `n` (1-based) of a raw card distinctive events (set 1 a lifespan, the rest BC years). */
+function enrich(card: RawCard, n: number, timeline: RawTimeline = EISLER): RawCard {
+  const set = card.sets[n - 1];
+  set.enriched = true;
+  set.questions = set.questions.map((q, qi) => ({
+    ...q,
+    timeline: {
+      ...timeline,
+      start: qi === 0 ? timeline.start : `-${44 + qi}`,
+      precision: qi === 0 ? timeline.precision : "year",
+      end: qi === 0 ? timeline.end : null,
+      kind: qi === 0 ? timeline.kind : "event",
+    },
+    source: { ...SOURCE },
+  }));
+  return card;
+}
 
 describe("normalizeCards", () => {
   it("hands out ids in ascending stem order and validates every output file", () => {
@@ -70,17 +135,115 @@ describe("normalizeCards", () => {
     for (const a of out.articles) expect(CardArticlesSchema.safeParse(a).success).toBe(true);
 
     expect(out.questions[0].sets).toHaveLength(SETS_PER_CARD);
-    expect(out.questions[0].sets[0].questions[0]).toEqual({
+    expect(out.questions[0].sets[0].questions[0]).toMatchObject({
       id: "c001-s01-q0",
       en: "Question A 1 0?",
       de: "Frage A 1 0?",
       answerEn: "Answer A-1-0",
       answerDe: "Antwort A-1-0",
+      source: SOURCE,
     });
-    expect(out.questions[0].sets[1].notes).toBe("Misprint on the card.");
-    expect(out.questions[0].sets[0].notes).toBe("");
+    // Player notes per language; the provenance and internal notes never leave the importer.
+    expect(out.questions[0].sets[1].notesEn).toBe("Misprint on the card.");
+    expect(out.questions[0].sets[1].notesDe).toBe("Fehldruck auf der Karte.");
+    expect(out.questions[0].sets[0].notesEn).toBe("");
+    expect(out.questions[0].sets[0].notesDe).toBe("");
+    expect(JSON.stringify(out.questions)).not.toMatch(/Kept by position|"notes"/);
+    // Every question lands in the timeline index.
+    expect(out.questions[0].sets[0].questions[0].timeline?.labelEn).toBe("Event A 1 0");
+    expect(Object.keys(out.timeline)).toHaveLength(120);
     expect(out.titles["c002-s12"]).toEqual(["Title B 12", "Titel B 12"]);
     expect(Object.keys(out.titles)).toHaveLength(24);
+  });
+
+  it("carries timeline events and sources from enriched sets into questions and the index", () => {
+    const card = enrich(rawCard("IMG_A.jpg", "A"), 6);
+    const out = normalizeCards({
+      cards: [{ stem: "IMG_A", card }],
+      previousIndex: null,
+      generatedAt: AT,
+    });
+    const set = out.questions[0].sets[5];
+    expect(set.questions[0].timeline).toEqual({
+      kind: "lifespan",
+      start: "1898-07-06",
+      end: "1962-09-06",
+      precision: "day",
+      approx: false,
+      ongoing: false,
+      labelEn: "Hanns Eisler, composer",
+      labelDe: "Hanns Eisler, Komponist",
+    });
+    expect(set.questions[0].source).toEqual(SOURCE);
+    expect(set.questions[2].timeline?.start).toBe("-46");
+    // The other sets keep their own events.
+    expect(out.questions[0].sets[0].questions[0].timeline?.start).toBe("1905");
+    expect(Object.keys(out.timeline)).toHaveLength(60);
+    expect(out.timeline["c001-s06-q0"]).toEqual({
+      n: 6,
+      k: "lifespan",
+      s: "1898-07-06",
+      e: "1962-09-06",
+      p: "day",
+      en: "Hanns Eisler, composer",
+      de: "Hanns Eisler, Komponist",
+    });
+    expect(out.timeline["c001-s06-q1"]).toEqual({
+      n: 6,
+      k: "event",
+      s: "-45",
+      p: "year",
+      en: "Hanns Eisler, composer",
+      de: "Hanns Eisler, Komponist",
+    });
+  });
+
+  it("rejects a malformed event or source, a question without one, and an un-enriched set", () => {
+    const bad = (mutate: (card: RawCard) => void) => {
+      const card = enrich(rawCard("IMG_A.jpg", "A"), 1);
+      mutate(card);
+      return () => normalizeCards({ cards: [{ stem: "IMG_A", card }], previousIndex: null });
+    };
+    expect(
+      bad((c) => {
+        const t = c.sets[0].questions[0].timeline;
+        if (t) t.start = "0";
+      }),
+    ).toThrow(/c001-s01-q0 timeline\.start/);
+    expect(
+      bad((c) => {
+        const t = c.sets[0].questions[0].timeline;
+        if (t) t.end = "1890";
+      }),
+    ).toThrow(/c001-s01-q0 timeline\.end: end is not after start/);
+    expect(
+      bad((c) => {
+        const t = c.sets[0].questions[0].timeline;
+        if (t) t.precision = "year";
+      }),
+    ).toThrow(/timeline\.precision/);
+    expect(
+      bad((c) => {
+        const t = c.sets[0].questions[0].timeline;
+        if (t) t.kind = "birthday";
+      }),
+    ).toThrow(/timeline\.kind/);
+    expect(
+      bad((c) => {
+        const s = c.sets[0].questions[1].source;
+        if (s) s.url = "not a url";
+      }),
+    ).toThrow(/c001-s01-q1 source\.url/);
+    expect(
+      bad((c) => {
+        delete c.sets[0].questions[4].source;
+      }),
+    ).toThrow(/c001-s01-q4: every question needs a timeline event and a source/);
+    expect(
+      bad((c) => {
+        c.sets[0].enriched = false;
+      }),
+    ).toThrow(/c001-s01-q0: every question needs/);
   });
 
   it("stamps the version as the recomputed content hash, sensitive to the content", () => {

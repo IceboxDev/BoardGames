@@ -33,7 +33,8 @@ describe("createFixtureQuestionSource", () => {
     card.sets.forEach((set, i) => {
       expect(set.categoryIndex).toBe(i);
       expect(set.questionId).toBe(`f007-s${String(i + 1).padStart(2, "0")}-q0`);
-      expect(set.notes).toBe("");
+      expect(set.notesEn).toBe("");
+      expect(set.notesDe).toBe("");
     });
     expect(card.sets[4]).toMatchObject({
       en: "Question f007-05 (EN)?",

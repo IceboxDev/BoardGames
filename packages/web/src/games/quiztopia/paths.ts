@@ -25,6 +25,8 @@ export interface TrainerPaths {
   /** `q` (0-based) deep-links to that question's passage via `#q<n>`. */
   wikiArticle: (slug: string, cardId: string, q?: number) => string;
   search: (q?: string) => string;
+  /** The personal timeline; `q` focuses one pinned question. */
+  timeline: (q?: string) => string;
 }
 
 export function trainerPaths(base: string): TrainerPaths {
@@ -44,6 +46,7 @@ export function trainerPaths(base: string): TrainerPaths {
     wikiArticle: (slug, cardId, q) =>
       `${base}/wiki/${slug}/${cardId}${q === undefined ? "" : `#q${q + 1}`}`,
     search: (q) => `${base}/wiki/search${q ? `?q=${encodeURIComponent(q)}` : ""}`,
+    timeline: (q) => `${base}/timeline${q ? `?q=${encodeURIComponent(q)}` : ""}`,
   };
 }
 

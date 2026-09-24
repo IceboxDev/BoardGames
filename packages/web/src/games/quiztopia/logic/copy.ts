@@ -53,6 +53,33 @@ export function pickTexts(lang: BoardLanguage, en: string, de: string): string[]
   return en === de ? [en] : [en, de];
 }
 
+/**
+ * The editor's notes a reader sees: the language's own note, or — showing
+ * both languages — both, deduplicated (a neutral note is carried in both
+ * fields as faithful translations, so an identical pair collapses to one).
+ */
+export function pickNotes(
+  lang: BoardLanguage,
+  notesEn: string | undefined,
+  notesDe: string | undefined,
+): { lang: "en" | "de"; text: string }[] {
+  const en = (notesEn ?? "").trim();
+  const de = (notesDe ?? "").trim();
+  const out: { lang: "en" | "de"; text: string }[] = [];
+  if (lang !== "de" && en) out.push({ lang: "en", text: en });
+  if (lang !== "en" && de && !(lang === "both" && de === en)) out.push({ lang: "de", text: de });
+  return out;
+}
+
+/** "de.wikipedia.org" for a source URL (the URL itself when it does not parse). */
+export function sourceDomain(url: string): string {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return url;
+  }
+}
+
 /** "c042 · Q3" for the original card, "c042-v2 · Q3" for a virtual one. */
 export function cardRefLabel(cardRef: string, categoryIndex: number): string {
   return `${cardRef} · Q${categoryIndex + 1}`;

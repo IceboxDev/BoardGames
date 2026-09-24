@@ -10,6 +10,7 @@ import type {
   CardQuestions,
   ContentIndex,
   ContentSetArticle,
+  TimelineIndex,
   Titles,
 } from "@boardgames/core/games/quiztopia/content-types";
 import { parseQuestionId, parseSetId } from "@boardgames/core/games/quiztopia/ids";
@@ -72,6 +73,26 @@ export function loadTitles(): Promise<Titles> {
     titlesPromise = loader().then((m) => m.default);
   }
   return titlesPromise;
+}
+
+// Every question's timeline event in one lazy chunk (≈ 2 MB of JSON, only
+// fetched by the timeline, the hub teaser and the pin chips). Content from
+// before the enrichment pass has no `timeline.json`: the glob is then empty
+// and the index resolves to `{}`, so every screen degrades to "no dates".
+const timelineChunk = import.meta.glob<{ default: TimelineIndex }>(
+  "../../../../core/src/games/quiztopia/content/timeline.json",
+);
+let timelinePromise: Promise<TimelineIndex> | null = null;
+
+export function loadTimeline(): Promise<TimelineIndex> {
+  if (!timelinePromise) {
+    const loader = Object.values(timelineChunk)[0];
+    timelinePromise = loader ? loader().then((m) => m.default) : Promise.resolve({});
+    timelinePromise.catch(() => {
+      timelinePromise = null;
+    });
+  }
+  return timelinePromise;
 }
 
 /** Fire-and-forget warm-up for the next card in a session. */

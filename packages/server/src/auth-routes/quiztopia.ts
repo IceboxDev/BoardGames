@@ -6,6 +6,7 @@
 //   POST /trainer/reviews                grade one question (201; 200 on replay)
 //   POST /trainer/reviews/bulk           offline replay / game-over posting
 //   GET  /trainer/history?today=&days=   per-day counts for the heatmap
+//   GET  /trainer/pins                   every studied question (the personal timeline)
 //   GET  /settings, PUT /settings
 //   GET  /search?q=&lang=&category=
 //   POST /wiki/reads, GET /wiki/reads
@@ -26,13 +27,17 @@ import {
   ReviewResponseSchema,
   SearchQuerySchema,
   SearchResponseSchema,
+  SrsStateKindSchema,
   type SrsStateWire,
+  TimelinePinsResponseSchema,
   TrainerHistoryQuerySchema,
   TrainerHistoryResponseSchema,
   TrainerOverviewQuerySchema,
   TrainerOverviewResponseSchema,
   TrainerQueueQuerySchema,
   TrainerQueueResponseSchema,
+  TrainerResetBodySchema,
+  TrainerResetResponseSchema,
   TrainerStatesQuerySchema,
   TrainerStatesResponseSchema,
   WikiReadBodySchema,
@@ -52,6 +57,7 @@ import {
   readSettings,
   readStates,
   recordReview,
+  resetProgress,
   toWireState,
   writeSettings,
 } from "../lib/quiztopia/srs-db.ts";
@@ -62,6 +68,11 @@ export const quiztopiaRoutes = authedApp();
 const RECENT_MISS_DAYS = 60;
 
 const WikiReadRowSchema = z.object({ set_id: z.string(), read_at: z.string() });
+const PinRowSchema = z.object({
+  question_id: z.string(),
+  state: SrsStateKindSchema,
+  last_reviewed_at: z.string().nullable(),
+});
 const MissRowSchema = z.object({
   question_id: z.string(),
   reviewed_at: z.string(),
@@ -185,6 +196,28 @@ quiztopiaRoutes.get("/trainer/history", zQuery(TrainerHistoryQuerySchema), async
   return c.json(TrainerHistoryResponseSchema.parse(history));
 });
 
+// Every schedule row is a pin: a question enters `quiztopia_srs` the first
+// time it is graded. Ids the current content no longer knows are dropped.
+quiztopiaRoutes.get("/trainer/pins", async (c) => {
+  const user = c.get("user");
+  const store = getContentStore();
+  const { rows } = await getDb().execute({
+    sql: `SELECT question_id, state, last_reviewed_at FROM quiztopia_srs
+           WHERE user_id = ? AND reps > 0
+           ORDER BY question_id`,
+    args: [user.id],
+  });
+  const pins = parseRows(PinRowSchema, rows, "quiztopia_srs.pins")
+    .filter((r) => store.hasQuestion(r.question_id))
+    .map((r) => ({
+      questionId: r.question_id,
+      state: r.state,
+      known: r.state === "review",
+      lastReviewedAt: r.last_reviewed_at,
+    }));
+  return c.json(TimelinePinsResponseSchema.parse({ pins }));
+});
+
 // ── Settings ───────────────────────────────────────────────────────────
 
 quiztopiaRoutes.get("/settings", async (c) => {
@@ -199,9 +232,19 @@ quiztopiaRoutes.put("/settings", zJsonBody(QuiztopiaSettingsSchema), async (c) =
   logActivity(user.id, "quiztopia-settings", {
     language: settings.language,
     newPerDay: settings.newPerDay,
+    newSetsPerDay: settings.newSetsPerDay,
     gameReviewsAffectSrs: settings.gameReviewsAffectSrs,
   });
   return c.json(QuiztopiaSettingsSchema.parse(settings));
+});
+
+// ── Reset ──────────────────────────────────────────────────────────────
+
+quiztopiaRoutes.post("/trainer/reset", zJsonBody(TrainerResetBodySchema), async (c) => {
+  const user = c.get("user");
+  const deleted = await resetProgress(getDb(), user.id);
+  logActivity(user.id, "quiztopia-reset", deleted);
+  return c.json(TrainerResetResponseSchema.parse({ ok: true, deleted }));
 });
 
 // ── Search ─────────────────────────────────────────────────────────────

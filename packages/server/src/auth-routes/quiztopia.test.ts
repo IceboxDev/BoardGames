@@ -10,9 +10,11 @@ import type {
   ReviewBody,
   ReviewResponse,
   SearchResponse,
+  TimelinePins,
   TrainerHistory,
   TrainerOverview,
   TrainerQueue,
+  TrainerReset,
   WikiReads,
 } from "@boardgames/core/protocol";
 import { type Client, createClient } from "@libsql/client";
@@ -482,23 +484,44 @@ describe("/api/quiztopia", () => {
       expect(limited.body.counts.new).toBe(24);
     });
 
-    it("in set mode, introduces and reviews whole sets together", async () => {
-      await call("PUT", "/settings", { language: "en", newPerDay: 3 });
+    it("in set mode, budgets whole articles and shuffles new and due into one mix", async () => {
+      await call("PUT", "/settings", { language: "en", newPerDay: 10, newSetsPerDay: 1 });
+      await seedState(client, "c001-s02-q0", {
+        state: "review",
+        intervalDays: 3,
+        dueDate: YESTERDAY,
+      });
       const first = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&category=1`);
-      // A cap of 3 still brings the whole set: five siblings, original first.
-      const ids = first.body.items.map((it) => it.questionId);
-      expect(ids).toHaveLength(5);
-      expect(new Set(first.body.items.map((it) => it.setId)).size).toBe(1);
-      expect(ids.map((id) => id.slice(-2))).toEqual(["q0", "q1", "q2", "q3", "q4"]);
+      const news = first.body.items.filter((it) => it.tier === "new");
+      // One article a day = its five questions, all of them.
+      expect(news).toHaveLength(5);
+      expect(new Set(news.map((it) => it.setId)).size).toBe(1);
+      expect(news.map((it) => it.questionId.slice(-2)).sort()).toEqual([
+        "q0",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+      ]);
+      // Stable for the day: the same request gives the same order.
+      const again = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&category=1`);
+      expect(again.body.items.map((it) => it.questionId)).toEqual(
+        first.body.items.map((it) => it.questionId),
+      );
 
       const mixed = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&limit=200`);
-      expect(mixed.body.items).toHaveLength(60);
-      // Round-robin takes a whole set per district turn.
-      for (let i = 0; i < 60; i += 5) {
-        const run = mixed.body.items.slice(i, i + 5);
-        expect(new Set(run.map((it) => it.setId)).size).toBe(1);
-        expect(run[0].category).toBe(i / 5 + 1);
-      }
+      const mixedNew = mixed.body.items.filter((it) => it.tier === "new");
+      // District 2 first finishes the article its due card started (4 left),
+      // then takes a whole new one: 11 × 5 + 4 + 5.
+      expect(mixedNew).toHaveLength(64);
+      const perSet = new Map<string, number>();
+      for (const it of mixedNew) perSet.set(it.setId, (perSet.get(it.setId) ?? 0) + 1);
+      expect(perSet.get("c001-s02")).toBe(4);
+      perSet.delete("c001-s02");
+      expect([...perSet.values()].every((n) => n === 5)).toBe(true);
+      expect(new Set(mixedNew.map((it) => it.category)).size).toBe(12);
+      const firstFive = mixed.body.items.slice(0, 5).map((it) => it.setId);
+      expect(new Set(firstFive).size).toBeGreaterThan(1);
     });
 
     it("hides leeches unless asked for them", async () => {
@@ -514,8 +537,9 @@ describe("/api/quiztopia", () => {
         "GET",
         `/trainer/queue?today=${TODAY}&category=1&includeLeeches=true`,
       );
-      expect(shown.body.items[0]).toMatchObject({ questionId: "c001-s01-q0", tier: "review" });
-      expect(shown.body.items[0].state?.leech).toBe(true);
+      const leech = shown.body.items.find((it) => it.questionId === "c001-s01-q0");
+      expect(leech).toMatchObject({ tier: "review" });
+      expect(leech?.state?.leech).toBe(true);
     });
 
     it("validates its query", async () => {
@@ -669,6 +693,7 @@ describe("/api/quiztopia", () => {
         includeLeeches: false,
         gameReviewsAffectSrs: false,
         newCardOrder: "sets",
+        newSetsPerDay: 3,
       });
       const saved = await call("PUT", "/settings", {
         language: "de",
@@ -677,6 +702,7 @@ describe("/api/quiztopia", () => {
         includeLeeches: true,
         gameReviewsAffectSrs: true,
         newCardOrder: "originals",
+        newSetsPerDay: 2,
       });
       expect(saved.status).toBe(200);
       expect(await call("GET", "/settings")).toEqual({ status: 200, body: saved.body });
@@ -687,13 +713,19 @@ describe("/api/quiztopia", () => {
         includeLeeches: true,
         gameReviewsAffectSrs: true,
         newCardOrder: "originals",
+        newSetsPerDay: 2,
       });
       const partial = await call("PUT", "/settings", { language: "both", newPerDay: 0 });
       expect(partial.body).toMatchObject({
         newPerDayByCategory: {},
         includeLeeches: false,
         newCardOrder: "sets",
+        newSetsPerDay: 3,
       });
+      expect(
+        (await call("PUT", "/settings", { language: "en", newPerDay: 5, newSetsPerDay: 11 }))
+          .status,
+      ).toBe(400);
       expect((await call("PUT", "/settings", { language: "fr", newPerDay: 5 })).status).toBe(400);
       expect((await call("PUT", "/settings", { language: "en", newPerDay: 99 })).status).toBe(400);
       await vi.waitFor(async () => {
@@ -716,15 +748,79 @@ describe("/api/quiztopia", () => {
       const { body } = await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`);
       expect(body.categories[0].newRemainingToday).toBe(4);
       expect(body.categories[1].newRemainingToday).toBe(1);
-      // Set mode rounds each cap up to whole sets of five.
+      // Set mode budgets articles (five questions each) for every district alike.
       await call("PUT", "/settings", {
         language: "en",
         newPerDay: 4,
         newPerDayByCategory: { "2": 1 },
+        newSetsPerDay: 1,
       });
       const sets = await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`);
       expect(sets.body.categories[0].newRemainingToday).toBe(5);
       expect(sets.body.categories[1].newRemainingToday).toBe(5);
+    });
+  });
+
+  describe("POST /trainer/reset", () => {
+    it("wipes the caller's schedule, history and reads, keeps settings and other users", async () => {
+      await call("PUT", "/settings", { language: "de", newPerDay: 10, newSetsPerDay: 2 });
+      await post(review({ questionId: "c001-s01-q0", grade: "good" }));
+      await post(review({ questionId: "c001-s01-q1", grade: "again" }));
+      await call("POST", "/wiki/reads", { setId: "c001-s01" });
+      await post(review({ questionId: "c001-s01-q2" }), OTHER);
+
+      expect((await call("POST", "/trainer/reset", {})).status).toBe(400);
+      const res = await call<TrainerReset>("POST", "/trainer/reset", { confirm: true });
+      expect(res.status).toBe(200);
+      expect(res.body).toEqual({ ok: true, deleted: { states: 2, reviews: 2, reads: 1 } });
+
+      const overview = await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`);
+      expect(overview.body.categories[0].seen).toBe(0);
+      expect(overview.body.streak.current).toBe(0);
+      expect((await call<WikiReads>("GET", "/wiki/reads")).body.reads).toEqual([]);
+      expect((await call("GET", "/settings")).body).toMatchObject({
+        language: "de",
+        newSetsPerDay: 2,
+      });
+      // Someone else's progress is untouched.
+      expect(
+        await count(client, `SELECT COUNT(*) n FROM quiztopia_srs WHERE user_id = '${OTHER}'`),
+      ).toBe(1);
+    });
+  });
+
+  describe("GET /trainer/pins", () => {
+    it("lists every studied question as a pin, known once it graduated", async () => {
+      expect((await call<TimelinePins>("GET", "/trainer/pins")).body).toEqual({ pins: [] });
+
+      await post(review({ questionId: "c001-s01-q1", grade: "again" }));
+      await seedState(client, "c002-s06-q0", {
+        state: "review",
+        intervalDays: 12,
+        dueDate: TOMORROW,
+        lastReviewedAt: "2026-09-01T08:00:00.000Z",
+      });
+      // A row for a question the content no longer has is not a pin.
+      await seedState(client, "c009-s01-q0", { state: "review", dueDate: TOMORROW });
+
+      const res = await call<TimelinePins>("GET", "/trainer/pins");
+      expect(res.status).toBe(200);
+      expect(res.body.pins.map((p) => p.questionId)).toEqual(["c001-s01-q1", "c002-s06-q0"]);
+      const [learning, known] = res.body.pins;
+      expect(learning.known).toBe(false);
+      expect(learning.state).not.toBe("review");
+      expect(learning.lastReviewedAt).toMatch(/^\d{4}-\d{2}-\d{2}T/);
+      expect(known).toEqual({
+        questionId: "c002-s06-q0",
+        state: "review",
+        known: true,
+        lastReviewedAt: "2026-09-01T08:00:00.000Z",
+      });
+
+      // Pins are per member.
+      expect(
+        (await call<TimelinePins>("GET", "/trainer/pins", undefined, OTHER)).body.pins,
+      ).toEqual([]);
     });
   });
 

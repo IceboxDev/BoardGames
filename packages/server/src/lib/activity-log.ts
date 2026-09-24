@@ -53,7 +53,8 @@ export type ActivityType =
   | "greeting-response"
   // Quiztopia trainer: first trainer review of a local date; settings saved.
   | "quiztopia-train"
-  | "quiztopia-settings";
+  | "quiztopia-settings"
+  | "quiztopia-reset";
 
 /** Insert one activity row. Never throws; never awaited by callers. */
 export function logActivity(

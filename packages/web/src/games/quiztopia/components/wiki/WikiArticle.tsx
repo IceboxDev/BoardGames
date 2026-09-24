@@ -26,11 +26,15 @@ import { postWikiRead, wikiReadsQuery } from "../../api";
 import { type District, districtBySlug, TONE_LIT, TONE_STRIP } from "../../bands";
 import { CARD_IDS, findArticle } from "../../content";
 import { useCardArticles, useCardQuestions } from "../../hooks/useContent";
+import { usePinnedIds } from "../../hooks/usePinnedTimeline";
 import { useQuestionLanguage } from "../../hooks/useQuestionLanguage";
 import { isPlainKey, isTypingTarget } from "../../keys";
 import { useTrainerPaths } from "../../paths";
 import { BuildingGlyph } from "../common/BuildingGlyph";
 import { LanguageToggle } from "../common/LanguageToggle";
+import { SourceLink } from "../common/SourceLink";
+import { TextLink } from "../common/TextLink";
+import { TimelineChip } from "../timeline/TimelineChip";
 import { TrainerScreen } from "../trainer/TrainerScreen";
 import { ArticleBody } from "./ArticleBody";
 import { type ArticleBlock, markedQuestions, segmentArticle } from "./article-segments";
@@ -40,7 +44,9 @@ import { QuestionDots } from "./QuestionDots";
 // One set's article with its five answers highlighted in place — the thing
 // the wiki exists for. Each mark is a button carrying its question number;
 // clicking it opens the matching question row below, and each row can jump
-// back to its passage. Reading 80 % of the article marks it read.
+// back to its passage. Each row carries its moment in time (the label only
+// once the answer is shown — it often names it) and its source; the foot of
+// the article lists all the sources. Reading 80 % of the article marks it read.
 
 const READ_SENTINEL_SHARE = 0.8;
 
@@ -69,6 +75,8 @@ function ArticleScreen({ district: d, cardId, cardIndex }: ScreenProps) {
   const location = useLocation();
   const qc = useQueryClient();
   const fiveId = useId();
+  const sourcesId = useId();
+  const pinned = usePinnedIds();
   const sid = setId(cardId, d.n);
   const questionIds = useMemo(
     () => Array.from({ length: QUESTIONS_PER_SET }, (_, q) => questionId(sid, q)),
@@ -239,7 +247,7 @@ function ArticleScreen({ district: d, cardId, cardIndex }: ScreenProps) {
               </p>
             </Surface>
 
-            {qset.notes && <EditorNote>{qset.notes}</EditorNote>}
+            <EditorNote language={language} notesEn={qset.notesEn} notesDe={qset.notesDe} />
 
             <article
               lang={language}
@@ -289,6 +297,32 @@ function ArticleScreen({ district: d, cardId, cardIndex }: ScreenProps) {
                               {answerText(q)}
                             </p>
                           )}
+                          {(question.timeline || question.source) && (
+                            <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-1.5">
+                              {question.timeline && (
+                                <TimelineChip
+                                  event={question.timeline}
+                                  lang={language}
+                                  tone={d.tone}
+                                  withLabel={shown[q]}
+                                />
+                              )}
+                              {question.source && (
+                                <SourceLink
+                                  source={question.source}
+                                  titleTooltip={shown[q]}
+                                  label={language === "de" ? "Quelle" : "Source"}
+                                />
+                              )}
+                              {question.timeline && pinned.has(question.id) && (
+                                <TextLink to={paths.timeline(question.id)}>
+                                  {language === "de"
+                                    ? "Auf der Zeitleiste →"
+                                    : "Show on timeline →"}
+                                </TextLink>
+                              )}
+                            </div>
+                          )}
                           <div className="mt-2 flex flex-wrap items-center gap-2">
                             <Button
                               size="xs"
@@ -320,6 +354,8 @@ function ArticleScreen({ district: d, cardId, cardIndex }: ScreenProps) {
                 ))}
               </ol>
             </section>
+
+            <ArticleSources id={sourcesId} questions={qset.questions} language={language} />
           </>
         )}
       </PageMain>
@@ -377,5 +413,51 @@ function CardNavLink({
     >
       {children}
     </Link>
+  );
+}
+
+/** The article foot: every question's source once, with the questions it backs. */
+function ArticleSources({
+  id,
+  questions,
+  language,
+}: {
+  id: string;
+  questions: ContentSetQuestions["questions"];
+  language: "en" | "de";
+}) {
+  const sources = useMemo(() => {
+    const byUrl = new Map<
+      string,
+      { source: NonNullable<(typeof questions)[number]["source"]>; qs: number[] }
+    >();
+    questions.forEach((question, q) => {
+      if (!question.source) return;
+      const entry = byUrl.get(question.source.url);
+      if (entry) entry.qs.push(q);
+      else byUrl.set(question.source.url, { source: question.source, qs: [q] });
+    });
+    return [...byUrl.values()];
+  }, [questions]);
+  if (sources.length === 0) return null;
+  return (
+    <section aria-labelledby={id} className="flex flex-col gap-2">
+      <h2 id={id} className="text-sm font-semibold text-fg-strong">
+        {language === "de" ? "Quellen" : "Sources"}
+      </h2>
+      <ol className="flex flex-col divide-y divide-line-soft">
+        {sources.map(({ source, qs }) => (
+          <li key={source.url} className="flex items-center gap-3 py-2">
+            <MicroLabel className="w-16 shrink-0 tabular-nums">
+              {qs.map((q) => `Q${q + 1}`).join(" · ")}
+            </MicroLabel>
+            <SourceLink source={source} variant="full" className="min-w-0 flex-1" />
+            <MicroLabel className="hidden shrink-0 sm:block">
+              {source.lang.toUpperCase()}
+            </MicroLabel>
+          </li>
+        ))}
+      </ol>
+    </section>
   );
 }

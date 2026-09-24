@@ -214,7 +214,9 @@ export interface QuestionView {
   /** null until the answer is visible to this seat. */
   answerEn: string | null;
   answerDe: string | null;
-  notes: string;
+  /** Player-facing editor's notes, per language ("" when none). */
+  notesEn: string;
+  notesDe: string;
 }
 
 export interface TurnView {

@@ -22,13 +22,25 @@ function card(cardId: string): CardQuestions {
       return {
         id: sid,
         n,
-        notes: "",
+        notesEn: "",
+        notesDe: "",
         questions: Array.from({ length: 5 }, (_, q) => ({
           id: `${sid}-q${q}`,
           en: `Q ${sid} ${q} en`,
           de: `Q ${sid} ${q} de`,
           answerEn: `A ${q} en`,
           answerDe: `A ${q} de`,
+          timeline: {
+            kind: "event" as const,
+            start: "1900",
+            end: null,
+            precision: "year" as const,
+            approx: false,
+            ongoing: false,
+            labelEn: `Event ${q}`,
+            labelDe: `Ereignis ${q}`,
+          },
+          source: { url: `https://example.org/${sid}/${q}`, title: `Source ${q}`, lang: "en" },
         })),
       };
     }),

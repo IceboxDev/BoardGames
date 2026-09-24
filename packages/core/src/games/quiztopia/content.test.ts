@@ -8,12 +8,14 @@ import { fileURLToPath } from "node:url";
 import { beforeAll, describe, expect, it } from "vitest";
 import { QUIZTOPIA_CATEGORIES } from "./categories.ts";
 import {
+  buildTimelineIndex,
   type CardArticles,
   CardArticlesSchema,
   type CardQuestions,
   CardQuestionsSchema,
   type ContentIndex,
   ContentIndexSchema,
+  TimelineIndexSchema,
   type Titles,
   TitlesSchema,
 } from "./content-types.ts";
@@ -122,5 +124,13 @@ describe("quiztopia content", () => {
       });
     });
     expect(mismatches).toEqual([]);
+  });
+
+  // The timeline index is derived from the question files and must match them exactly.
+  it("ships a timeline index that mirrors the questions' events", () => {
+    const expected = buildTimelineIndex(questions);
+    expect(Object.keys(expected)).toHaveLength(10620);
+    const timeline = TimelineIndexSchema.parse(readJson("timeline.json"));
+    expect(timeline).toEqual(expected);
   });
 });

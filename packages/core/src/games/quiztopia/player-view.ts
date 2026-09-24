@@ -71,7 +71,8 @@ export function buildPlayerView(gs: QuiztopiaGameState, seat: number): Quiztopia
             de: q.de,
             answerEn: answerVisible ? q.answerEn : null,
             answerDe: answerVisible ? q.answerDe : null,
-            notes: q.notes,
+            notesEn: q.notesEn,
+            notesDe: q.notesDe,
           }
         : null,
       revealed: t.revealed,

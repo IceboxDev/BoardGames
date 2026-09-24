@@ -44,6 +44,10 @@ export const QuiztopiaSettingsSchema = z.object({
    * siblings are studied together; "originals": every original card question
    * first, the invented siblings later and spread apart. */
   newCardOrder: z.enum(["sets", "originals"]).default("sets"),
+  /** Whole-set mode's daily budget: new ARTICLES per district per day (five
+   * questions each, shuffled together). `newPerDay` (questions) applies to
+   * originals-first mode only. */
+  newSetsPerDay: z.number().int().min(0).max(10).default(3),
 });
 export type QuiztopiaSettings = z.infer<typeof QuiztopiaSettingsSchema>;
 
@@ -54,6 +58,7 @@ export const DEFAULT_QUIZTOPIA_SETTINGS: QuiztopiaSettings = {
   includeLeeches: false,
   gameReviewsAffectSrs: false,
   newCardOrder: "sets",
+  newSetsPerDay: 3,
 };
 
 // ── Overview ────────────────────────────────────────────────────────────
@@ -138,6 +143,25 @@ export const TrainerStatesQuerySchema = z.object({
 });
 export const TrainerStatesResponseSchema = z.object({ states: z.array(SrsStateSchema) });
 
+// ── Timeline pins ───────────────────────────────────────────────────────
+
+/**
+ * Every question the member has studied pins its timeline event to their
+ * personal timeline — one `quiztopia_srs` row = one pin. The client joins
+ * these ids with the content's `timeline.json`.
+ */
+export const TimelinePinSchema = z.object({
+  questionId: QuiztopiaQuestionIdSchema,
+  state: SrsStateKindSchema,
+  /** Graduated to review — the answer is known, not still being learned. */
+  known: z.boolean(),
+  lastReviewedAt: z.string().nullable(),
+});
+export type TimelinePin = z.infer<typeof TimelinePinSchema>;
+
+export const TimelinePinsResponseSchema = z.object({ pins: z.array(TimelinePinSchema) });
+export type TimelinePins = z.infer<typeof TimelinePinsResponseSchema>;
+
 // ── Reviews ─────────────────────────────────────────────────────────────
 
 export const ReviewSourceSchema = z.enum(["trainer", "game"]);
@@ -220,6 +244,20 @@ export const WikiReadsResponseSchema = z.object({
   reads: z.array(z.object({ setId: QuiztopiaSetIdSchema, readAt: z.string() })),
 });
 export type WikiReads = z.infer<typeof WikiReadsResponseSchema>;
+
+// ── Reset ───────────────────────────────────────────────────────────────
+
+/** Wipes the caller's schedule, review history and wiki reads; settings stay. */
+export const TrainerResetBodySchema = z.object({ confirm: z.literal(true) });
+export const TrainerResetResponseSchema = z.object({
+  ok: z.literal(true),
+  deleted: z.object({
+    states: z.number().int().nonnegative(),
+    reviews: z.number().int().nonnegative(),
+    reads: z.number().int().nonnegative(),
+  }),
+});
+export type TrainerReset = z.infer<typeof TrainerResetResponseSchema>;
 
 // ── Game misses ─────────────────────────────────────────────────────────
 

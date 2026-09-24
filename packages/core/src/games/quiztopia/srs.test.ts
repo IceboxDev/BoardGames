@@ -271,6 +271,19 @@ describe("buildDailyQueue", () => {
       ]);
     });
 
+    it("shuffles the new sets' questions and the due ones together when seeded", () => {
+      const due = [review({ questionId: "c009-s01-q0", dueDate: "2025-12-20" })];
+      const base = { due, seenIds: new Set(["c009-s01-q0"]), newRemaining: 15 };
+      const a = ids({ ...base, shuffleSeed: 7 });
+      const plain = ["c009-s01-q0", ...sets("c001"), ...sets("c002"), ...sets("c003")];
+      // Three whole sets plus the due card, all there, no longer in order.
+      expect([...a].sort()).toEqual([...plain].sort());
+      expect(a).not.toEqual(plain);
+      // Same seed, same order; another seed, another order.
+      expect(ids({ ...base, shuffleSeed: 7 })).toEqual(a);
+      expect(ids({ ...base, shuffleSeed: 8 })).not.toEqual(a);
+    });
+
     it("gathers due siblings next to each other", () => {
       const due = [
         review({ questionId: "c001-s01-q0", dueDate: "2025-12-20" }),

@@ -4,7 +4,7 @@
 //
 // Reads every *.json in the directory, normalises it (stable ids, validated
 // shapes, precomputed answer spans) and writes
-//   packages/core/src/games/quiztopia/content/{index,titles}.json
+//   packages/core/src/games/quiztopia/content/{index,titles,timeline}.json
 //   packages/core/src/games/quiztopia/content/questions/<card>.json
 //   packages/core/src/games/quiztopia/content/articles/<card>.json
 // The previous index.json (if any) pins card ids across re-imports.
@@ -51,9 +51,10 @@ mkdirSync(join(outDir, "articles"), { recursive: true });
 
 writeFileSync(indexPath, `${JSON.stringify(out.index, null, 2)}\n`);
 writeFileSync(join(outDir, "titles.json"), `${JSON.stringify(out.titles)}\n`);
+writeFileSync(join(outDir, "timeline.json"), `${JSON.stringify(out.timeline)}\n`);
 for (const q of out.questions) writeFileSync(join(outDir, "questions", `${q.id}.json`), `${JSON.stringify(q)}\n`);
 for (const a of out.articles) writeFileSync(join(outDir, "articles", `${a.id}.json`), `${JSON.stringify(a)}\n`);
 
 console.log(
-  `quiztopia content v${out.index.version}: ${out.index.counts.cards} cards, ${out.index.counts.sets} sets, ${out.index.counts.questions} questions → ${outDir}`,
+  `quiztopia content v${out.index.version}: ${out.index.counts.cards} cards, ${out.index.counts.sets} sets, ${out.index.counts.questions} questions (${Object.keys(out.timeline).length} dated) → ${outDir}`,
 );

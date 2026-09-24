@@ -10,9 +10,12 @@ import {
   ReviewBodySchema,
   ReviewResponseSchema,
   SearchResponseSchema,
+  TimelinePinsResponseSchema,
   TrainerHistoryResponseSchema,
   TrainerOverviewResponseSchema,
   TrainerQueueResponseSchema,
+  TrainerResetBodySchema,
+  TrainerResetResponseSchema,
   TrainerStatesResponseSchema,
   WikiReadBodySchema,
   WikiReadsResponseSchema,
@@ -50,6 +53,9 @@ export const statesQuery = (ids: readonly string[]) =>
 export const historyQuery = (today: string, days = 90) =>
   jsonQuery(`${BASE}/trainer/history${qs({ today, days })}`, TrainerHistoryResponseSchema);
 
+/** Every question the caller has studied — the pins of their personal timeline. */
+export const pinsQuery = () => jsonQuery(`${BASE}/trainer/pins`, TimelinePinsResponseSchema);
+
 export const settingsQuery = () => jsonQuery(`${BASE}/settings`, QuiztopiaSettingsSchema);
 
 export const searchQuery = (opts: {
@@ -85,6 +91,12 @@ export const putSettings = jsonMutation(
   { request: QuiztopiaSettingsSchema, response: QuiztopiaSettingsSchema },
   { method: "PUT" },
 );
+
+/** Wipes the caller's schedule, review history and wiki reads (settings stay). */
+export const resetProgress = jsonMutation(`${BASE}/trainer/reset`, {
+  request: TrainerResetBodySchema,
+  response: TrainerResetResponseSchema,
+});
 
 /** Answers with the caller's full read list (idempotent per set). */
 export const postWikiRead = jsonMutation(`${BASE}/wiki/reads`, {

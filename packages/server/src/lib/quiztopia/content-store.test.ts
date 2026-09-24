@@ -88,7 +88,8 @@ describe("loadContentStore (fixture)", () => {
     card.sets.forEach((set, i) => {
       expect(set.categoryIndex).toBe(i);
       expect(set.questionId).toBe(`c001-s${String(i + 1).padStart(2, "0")}-q0`);
-      expect(typeof set.notes).toBe("string");
+      expect(typeof set.notesEn).toBe("string");
+      expect(typeof set.notesDe).toBe("string");
       expect(set.en.length).toBeGreaterThan(0);
       expect(set.answerDe.length).toBeGreaterThan(0);
     });
@@ -128,7 +129,8 @@ describe("loadContentStore (fixture)", () => {
       q: 0,
       answerEn: "Bertolt Brecht",
       answerDe: "Bertolt Brecht",
-      notes: "",
+      notesEn: "",
+      notesDe: "",
     });
     expect(store.getQuestion("c002-s12-q4")?.q).toBe(4);
     expect(store.getQuestion("c003-s01-q0")).toBeNull();

@@ -5,44 +5,120 @@
     {
       "id": "c001-s01",
       "n": 1,
-      "notes": "",
       "questions": [
         {
           "id": "c001-s01-q0",
           "en": "Who wrote the poem „Die Kinderhymne“ (Children's Hymn) in response to the adoption of the „Lied der Deutschen“ as the national anthem of the Federal Republic of Germany?",
           "de": "Wer schrieb das Gedicht „Die Kinderhymne“ als Reaktion auf die Einführung des „Liedes der Deutschen“ als Nationalhymne der Bundesrepublik Deutschland?",
           "answerEn": "Bertolt Brecht",
-          "answerDe": "Bertolt Brecht"
+          "answerDe": "Bertolt Brecht",
+          "timeline": {
+            "kind": "creation",
+            "start": "1950",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Brecht writes the „Kinderhymne“",
+            "labelDe": "Brecht schreibt die „Kinderhymne“"
+          },
+          "source": {
+            "url": "https://de.wikipedia.org/wiki/Kinderhymne",
+            "title": "Kinderhymne – Wikipedia",
+            "lang": "de"
+          }
         },
         {
           "id": "c001-s01-q1",
           "en": "Who wrote the lyrics of the „Lied der Deutschen“ on Heligoland in 1841?",
           "de": "Wer schrieb 1841 auf Helgoland den Text des „Liedes der Deutschen“?",
           "answerEn": "August Heinrich Hoffmann von Fallersleben",
-          "answerDe": "August Heinrich Hoffmann von Fallersleben"
+          "answerDe": "August Heinrich Hoffmann von Fallersleben",
+          "timeline": {
+            "kind": "creation",
+            "start": "1841-08-26",
+            "end": null,
+            "precision": "day",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Hoffmann von Fallersleben writes the „Lied der Deutschen“ on Heligoland",
+            "labelDe": "Hoffmann von Fallersleben dichtet auf Helgoland das „Lied der Deutschen“"
+          },
+          "source": {
+            "url": "https://de.wikipedia.org/wiki/Das_Lied_der_Deutschen",
+            "title": "Das Lied der Deutschen – Wikipedia",
+            "lang": "de"
+          }
         },
         {
           "id": "c001-s01-q2",
           "en": "Who composed in 1797 the melody of the imperial hymn „Gott erhalte Franz den Kaiser“, to which the German national anthem is sung today?",
           "de": "Wer komponierte 1797 die Melodie der Kaiserhymne „Gott erhalte Franz den Kaiser“, auf die heute die deutsche Nationalhymne gesungen wird?",
           "answerEn": "Joseph Haydn",
-          "answerDe": "Joseph Haydn"
+          "answerDe": "Joseph Haydn",
+          "timeline": {
+            "kind": "event",
+            "start": "1797-02-12",
+            "end": null,
+            "precision": "day",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Haydn's imperial hymn premieres in Vienna",
+            "labelDe": "Haydns Kaiserhymne wird in Wien uraufgeführt"
+          },
+          "source": {
+            "url": "https://en.wikipedia.org/wiki/Gott_erhalte_Franz_den_Kaiser",
+            "title": "Gott erhalte Franz den Kaiser – Wikipedia",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s01-q3",
           "en": "Who composed the music for Brecht's „Kinderhymne“?",
           "de": "Wer komponierte die Musik zu Brechts „Kinderhymne“?",
           "answerEn": "Hanns Eisler",
-          "answerDe": "Hanns Eisler"
+          "answerDe": "Hanns Eisler",
+          "timeline": {
+            "kind": "lifespan",
+            "start": "1898-07-06",
+            "end": "1962-09-06",
+            "precision": "day",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Hanns Eisler, composer",
+            "labelDe": "Hanns Eisler, Komponist"
+          },
+          "source": {
+            "url": "https://en.wikipedia.org/wiki/Hanns_Eisler",
+            "title": "Hanns Eisler – Wikipedia",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s01-q4",
           "en": "Who wrote the lyrics of the East German national anthem „Auferstanden aus Ruinen“?",
           "de": "Wer schrieb den Text der DDR-Nationalhymne „Auferstanden aus Ruinen“?",
           "answerEn": "Johannes R. Becher",
-          "answerDe": "Johannes R. Becher"
+          "answerDe": "Johannes R. Becher",
+          "timeline": {
+            "kind": "creation",
+            "start": "1949-11-06",
+            "end": null,
+            "precision": "day",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "„Auferstanden aus Ruinen“ is first published",
+            "labelDe": "„Auferstanden aus Ruinen“ erscheint erstmals im Druck"
+          },
+          "source": {
+            "url": "https://de.wikipedia.org/wiki/Auferstanden_aus_Ruinen",
+            "title": "Auferstanden aus Ruinen – Wikipedia",
+            "lang": "de"
+          }
         }
-      ]
+      ],
+      "notesEn": "",
+      "notesDe": ""
     },
     {
       "id": "c001-s02",
@@ -54,37 +130,114 @@
           "en": "What is the answer to the question of life, the universe and everything?",
           "de": "Was ist die Antwort auf die Frage nach dem Leben, dem Universum und dem ganzen Rest?",
           "answerEn": "42",
-          "answerDe": "42"
+          "answerDe": "42",
+          "timeline": {
+            "kind": "event",
+            "start": "1910",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s02-q0",
+            "labelDe": "Fixture-Ereignis c001-s02-q0"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s02-q0",
+            "title": "Fixture source c001-s02-q0",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s02-q1",
           "en": "What is the name of the supercomputer in Douglas Adams' „The Hitchhiker's Guide to the Galaxy“ that spends seven and a half million years computing the answer?",
           "de": "Wie heißt der Supercomputer, der in Douglas Adams' „Per Anhalter durch die Galaxis“ siebeneinhalb Millionen Jahre lang an der Antwort rechnet?",
           "answerEn": "Deep Thought",
-          "answerDe": "Deep Thought"
+          "answerDe": "Deep Thought",
+          "timeline": {
+            "kind": "event",
+            "start": "1911",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s02-q1",
+            "labelDe": "Fixture-Ereignis c001-s02-q1"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s02-q1",
+            "title": "Fixture source c001-s02-q1",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s02-q2",
           "en": "What is the name of the Englishman whose house and home planet are demolished at the beginning of „The Hitchhiker's Guide to the Galaxy“?",
           "de": "Wie heißt der Engländer, dessen Haus und Heimatplanet zu Beginn von „Per Anhalter durch die Galaxis“ abgerissen werden?",
           "answerEn": "Arthur Dent",
-          "answerDe": "Arthur Dent"
+          "answerDe": "Arthur Dent",
+          "timeline": {
+            "kind": "event",
+            "start": "1912",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s02-q2",
+            "labelDe": "Fixture-Ereignis c001-s02-q2"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s02-q2",
+            "title": "Fixture source c001-s02-q2",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s02-q3",
           "en": "What should a hitchhiker always carry, according to the guidebook „The Hitchhiker's Guide to the Galaxy“?",
           "de": "Was sollte ein Anhalter laut dem Reiseführer „Per Anhalter durch die Galaxis“ immer bei sich haben?",
           "answerEn": "a towel",
-          "answerDe": "ein Handtuch"
+          "answerDe": "ein Handtuch",
+          "timeline": {
+            "kind": "event",
+            "start": "1913",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s02-q3",
+            "labelDe": "Fixture-Ereignis c001-s02-q3"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s02-q3",
+            "title": "Fixture source c001-s02-q3",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s02-q4",
           "en": "What is the name of the British author who first wrote „The Hitchhiker's Guide to the Galaxy“ as a BBC radio series in 1978?",
           "de": "Wie heißt der britische Autor, der „Per Anhalter durch die Galaxis“ 1978 zunächst als Hörspielserie für die BBC schrieb?",
           "answerEn": "Douglas Adams",
-          "answerDe": "Douglas Adams"
+          "answerDe": "Douglas Adams",
+          "timeline": {
+            "kind": "event",
+            "start": "1914",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s02-q4",
+            "labelDe": "Fixture-Ereignis c001-s02-q4"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s02-q4",
+            "title": "Fixture source c001-s02-q4",
+            "lang": "en"
+          }
         }
-      ]
+      ],
+      "notesEn": "",
+      "notesDe": ""
     },
     {
       "id": "c001-s03",
@@ -96,37 +249,114 @@
           "en": "The park of which Viennese palace is home to the oldest zoo in the world still in existence?",
           "de": "Der Park welchen Wiener Schlosses beherbergt den ältesten noch bestehenden Zoo der Welt?",
           "answerEn": "Schönbrunn Palace",
-          "answerDe": "Schloss Schönbrunn"
+          "answerDe": "Schloss Schönbrunn",
+          "timeline": {
+            "kind": "event",
+            "start": "1915",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s03-q0",
+            "labelDe": "Fixture-Ereignis c001-s03-q0"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s03-q0",
+            "title": "Fixture source c001-s03-q0",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s03-q1",
           "en": "In which Viennese palace, once the summer residence of Prince Eugene, does Gustav Klimt's painting „The Kiss“ hang?",
           "de": "In welchem Wiener Schloss, einst Sommerresidenz des Prinzen Eugen, hängt Gustav Klimts Gemälde „Der Kuss“?",
           "answerEn": "Belvedere Palace",
-          "answerDe": "Schloss Belvedere"
+          "answerDe": "Schloss Belvedere",
+          "timeline": {
+            "kind": "event",
+            "start": "1916",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s03-q1",
+            "labelDe": "Fixture-Ereignis c001-s03-q1"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s03-q1",
+            "title": "Fixture source c001-s03-q1",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s03-q2",
           "en": "Which Viennese palace was the winter residence of the Habsburgs until 1918 and today houses the office of the Austrian Federal President?",
           "de": "Welches Wiener Schloss war bis 1918 Winterresidenz der Habsburger und ist heute Amtssitz des österreichischen Bundespräsidenten?",
           "answerEn": "the Hofburg",
-          "answerDe": "die Hofburg"
+          "answerDe": "die Hofburg",
+          "timeline": {
+            "kind": "event",
+            "start": "1917",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s03-q2",
+            "labelDe": "Fixture-Ereignis c001-s03-q2"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s03-q2",
+            "title": "Fixture source c001-s03-q2",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s03-q3",
           "en": "Which palace did Frederick the Great have built as his summer residence in Potsdam between 1745 and 1747?",
           "de": "Welches Schloss ließ Friedrich der Große 1745 bis 1747 als Sommerresidenz in Potsdam errichten?",
           "answerEn": "Sanssouci Palace",
-          "answerDe": "Schloss Sanssouci"
+          "answerDe": "Schloss Sanssouci",
+          "timeline": {
+            "kind": "event",
+            "start": "1918",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s03-q3",
+            "labelDe": "Fixture-Ereignis c001-s03-q3"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s03-q3",
+            "title": "Fixture source c001-s03-q3",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s03-q4",
           "en": "Which palace near Paris did Louis XIV expand into the largest residence in Europe, making it the model for Schönbrunn?",
           "de": "Welches Schloss bei Paris ließ Ludwig XIV. zur größten Residenz Europas ausbauen und diente damit als Vorbild für Schönbrunn?",
           "answerEn": "Palace of Versailles",
-          "answerDe": "Schloss Versailles"
+          "answerDe": "Schloss Versailles",
+          "timeline": {
+            "kind": "event",
+            "start": "1919",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s03-q4",
+            "labelDe": "Fixture-Ereignis c001-s03-q4"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s03-q4",
+            "title": "Fixture source c001-s03-q4",
+            "lang": "en"
+          }
         }
-      ]
+      ],
+      "notesEn": "",
+      "notesDe": ""
     },
     {
       "id": "c001-s04",
@@ -138,37 +368,114 @@
           "en": "The scripts of the first two seasons of which German series are loosely based on Volker Kutscher's crime novel „Der nasse Fisch“, set in the Berlin of the Weimar Republic?",
           "de": "Die Drehbücher der ersten beiden Staffeln welcher deutschen Serie basieren frei auf Volker Kutschers Kriminalroman „Der nasse Fisch“, der im Berlin der Weimarer Republik spielt?",
           "answerEn": "Babylon Berlin",
-          "answerDe": "Babylon Berlin"
+          "answerDe": "Babylon Berlin",
+          "timeline": {
+            "kind": "event",
+            "start": "1920",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s04-q0",
+            "labelDe": "Fixture-Ereignis c001-s04-q0"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s04-q0",
+            "title": "Fixture source c001-s04-q0",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s04-q1",
           "en": "Which German Netflix series by Baran bo Odar and Jantje Friese is set in the fictional small town of Winden, where children disappear and time travel is possible?",
           "de": "Welche deutsche Netflix-Serie von Baran bo Odar und Jantje Friese spielt in der fiktiven Kleinstadt Winden, in der Kinder verschwinden und Zeitreisen möglich sind?",
           "answerEn": "Dark",
-          "answerDe": "Dark"
+          "answerDe": "Dark",
+          "timeline": {
+            "kind": "event",
+            "start": "1921",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s04-q1",
+            "labelDe": "Fixture-Ereignis c001-s04-q1"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s04-q1",
+            "title": "Fixture source c001-s04-q1",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s04-q2",
           "en": "Which ZDF series about the Galant dance school and the Schöllack family is set in the West Berlin of the 1950s?",
           "de": "Welche ZDF-Serie um die Tanzschule Galant und die Familie Schöllack spielt im West-Berlin der 1950er Jahre?",
           "answerEn": "Ku'damm 56",
-          "answerDe": "Ku'damm 56"
+          "answerDe": "Ku'damm 56",
+          "timeline": {
+            "kind": "event",
+            "start": "1922",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s04-q2",
+            "labelDe": "Fixture-Ereignis c001-s04-q2"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s04-q2",
+            "title": "Fixture source c001-s04-q2",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s04-q3",
           "en": "Which international ZDF television series from 2023 is based on Frank Schätzing's novel of the same name about an intelligence from the deep sea?",
           "de": "Welche internationale Fernsehserie des ZDF von 2023 basiert auf Frank Schätzings gleichnamigem Roman über eine Intelligenz aus der Tiefsee?",
           "answerEn": "Der Schwarm",
-          "answerDe": "Der Schwarm"
+          "answerDe": "Der Schwarm",
+          "timeline": {
+            "kind": "event",
+            "start": "1923",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s04-q3",
+            "labelDe": "Fixture-Ereignis c001-s04-q3"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s04-q3",
+            "title": "Fixture source c001-s04-q3",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s04-q4",
           "en": "Which film chronicle by Edgar Reitz, begun in 1984, tells the story of the Simon family in the fictional Hunsrück village of Schabbach?",
           "de": "Welche Filmchronik von Edgar Reitz erzählt ab 1984 die Geschichte der Familie Simon im fiktiven Hunsrück-Dorf Schabbach?",
           "answerEn": "Heimat",
-          "answerDe": "Heimat"
+          "answerDe": "Heimat",
+          "timeline": {
+            "kind": "event",
+            "start": "1924",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s04-q4",
+            "labelDe": "Fixture-Ereignis c001-s04-q4"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s04-q4",
+            "title": "Fixture source c001-s04-q4",
+            "lang": "en"
+          }
         }
-      ]
+      ],
+      "notesEn": "",
+      "notesDe": ""
     },
     {
       "id": "c001-s05",
@@ -180,37 +487,114 @@
           "en": "What are board games called that change permanently from one play session to the next?",
           "de": "Wie werden Brettspiele genannt, die sich von Spielrunde zu Spielrunde permanent verändern?",
           "answerEn": "legacy games",
-          "answerDe": "Legacy-Spiele"
+          "answerDe": "Legacy-Spiele",
+          "timeline": {
+            "kind": "event",
+            "start": "1925",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s05-q0",
+            "labelDe": "Fixture-Ereignis c001-s05-q0"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s05-q0",
+            "title": "Fixture source c001-s05-q0",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s05-q1",
           "en": "What are board games called in which all players work together against the game itself, such as „Pandemic“?",
           "de": "Wie werden Brettspiele genannt, bei denen alle Spieler gemeinsam gegen das Spiel selbst antreten, wie etwa „Pandemic“?",
           "answerEn": "cooperative games",
-          "answerDe": "kooperative Spiele"
+          "answerDe": "kooperative Spiele",
+          "timeline": {
+            "kind": "event",
+            "start": "1926",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s05-q1",
+            "labelDe": "Fixture-Ereignis c001-s05-q1"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s05-q1",
+            "title": "Fixture source c001-s05-q1",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s05-q2",
           "en": "What are games called in which players take turns placing worker pieces on action spaces, such as „Agricola“?",
           "de": "Wie werden Spiele genannt, bei denen die Spieler reihum Arbeiterfiguren auf Aktionsfelder setzen, wie etwa „Agricola“?",
           "answerEn": "worker placement games",
-          "answerDe": "Worker-Placement-Spiele"
+          "answerDe": "Worker-Placement-Spiele",
+          "timeline": {
+            "kind": "event",
+            "start": "1927",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s05-q2",
+            "labelDe": "Fixture-Ereignis c001-s05-q2"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s05-q2",
+            "title": "Fixture source c001-s05-q2",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s05-q3",
           "en": "What are games called in which each player builds up their own deck of cards from a shared supply during play, such as „Dominion“?",
           "de": "Wie werden Spiele genannt, bei denen jeder Spieler im Laufe der Partie sein eigenes Kartendeck aus einem gemeinsamen Angebot aufbaut, wie etwa „Dominion“?",
           "answerEn": "deck-building games",
-          "answerDe": "Deckbau-Spiele"
+          "answerDe": "Deckbau-Spiele",
+          "timeline": {
+            "kind": "event",
+            "start": "1928",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s05-q3",
+            "labelDe": "Fixture-Ereignis c001-s05-q3"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s05-q3",
+            "title": "Fixture source c001-s05-q3",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s05-q4",
           "en": "What are strategy board games called that feature indirect interaction, little luck and victory-point scoring and were developed mainly in Germany, such as „The Settlers of Catan“?",
           "de": "Wie werden Strategiebrettspiele mit indirekter Interaktion, geringem Glücksanteil und Siegpunktwertung genannt, die vor allem in Deutschland entwickelt wurden, wie etwa „Die Siedler von Catan“?",
           "answerEn": "Eurogames",
-          "answerDe": "Eurogames"
+          "answerDe": "Eurogames",
+          "timeline": {
+            "kind": "event",
+            "start": "1929",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s05-q4",
+            "labelDe": "Fixture-Ereignis c001-s05-q4"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s05-q4",
+            "title": "Fixture source c001-s05-q4",
+            "lang": "en"
+          }
         }
-      ]
+      ],
+      "notesEn": "",
+      "notesDe": ""
     },
     {
       "id": "c001-s06",
@@ -222,37 +606,114 @@
           "en": "Between which two countries did the Hundred Years' War rage on and off between 1337 and 1453?",
           "de": "Zwischen welchen beiden Ländern tobte zwischen 1337 und 1453 immer wieder der Hundertjährige Krieg?",
           "answerEn": "England and France",
-          "answerDe": "England und Frankreich"
+          "answerDe": "England und Frankreich",
+          "timeline": {
+            "kind": "event",
+            "start": "1930",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s06-q0",
+            "labelDe": "Fixture-Ereignis c001-s06-q0"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s06-q0",
+            "title": "Fixture source c001-s06-q0",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s06-q1",
           "en": "Between which two powers were the three Punic Wars fought between 264 and 146 BC?",
           "de": "Zwischen welchen beiden Mächten wurden zwischen 264 und 146 v. Chr. die drei Punischen Kriege ausgetragen?",
           "answerEn": "Rome and Carthage",
-          "answerDe": "Rom und Karthago"
+          "answerDe": "Rom und Karthago",
+          "timeline": {
+            "kind": "event",
+            "start": "1931",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s06-q1",
+            "labelDe": "Fixture-Ereignis c001-s06-q1"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s06-q1",
+            "title": "Fixture source c001-s06-q1",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s06-q2",
           "en": "Between which two countries were three naval wars for supremacy in world trade fought between 1652 and 1674?",
           "de": "Zwischen welchen beiden Ländern wurden zwischen 1652 und 1674 drei Seekriege um die Vorherrschaft im Welthandel geführt?",
           "answerEn": "England and the Netherlands",
-          "answerDe": "England und die Niederlande"
+          "answerDe": "England und die Niederlande",
+          "timeline": {
+            "kind": "event",
+            "start": "1932",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s06-q2",
+            "labelDe": "Fixture-Ereignis c001-s06-q2"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s06-q2",
+            "title": "Fixture source c001-s06-q2",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s06-q3",
           "en": "Between which two countries was a war for control of Manchuria and Korea fought in 1904–05?",
           "de": "Zwischen welchen beiden Ländern wurde 1904/05 ein Krieg um die Vorherrschaft in der Mandschurei und Korea geführt?",
           "answerEn": "Russia and Japan",
-          "answerDe": "Russland und Japan"
+          "answerDe": "Russland und Japan",
+          "timeline": {
+            "kind": "event",
+            "start": "1933",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s06-q3",
+            "labelDe": "Fixture-Ereignis c001-s06-q3"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s06-q3",
+            "title": "Fixture source c001-s06-q3",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s06-q4",
           "en": "Between which two countries was the Falklands War over an island group in the South Atlantic fought in 1982?",
           "de": "Zwischen welchen beiden Ländern wurde 1982 der Falklandkrieg um eine Inselgruppe im Südatlantik geführt?",
           "answerEn": "the United Kingdom and Argentina",
-          "answerDe": "Großbritannien und Argentinien"
+          "answerDe": "Großbritannien und Argentinien",
+          "timeline": {
+            "kind": "event",
+            "start": "1934",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s06-q4",
+            "labelDe": "Fixture-Ereignis c001-s06-q4"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s06-q4",
+            "title": "Fixture source c001-s06-q4",
+            "lang": "en"
+          }
         }
-      ]
+      ],
+      "notesEn": "",
+      "notesDe": ""
     },
     {
       "id": "c001-s07",
@@ -264,37 +725,114 @@
           "en": "Which car failed the so-called „moose test“ in 1997?",
           "de": "Welches Auto bestand 1997 den sogenannten „Elchtest“ nicht?",
           "answerEn": "Mercedes-Benz A-Class",
-          "answerDe": "Mercedes-Benz A-Klasse"
+          "answerDe": "Mercedes-Benz A-Klasse",
+          "timeline": {
+            "kind": "event",
+            "start": "1935",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s07-q0",
+            "labelDe": "Fixture-Ereignis c001-s07-q0"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s07-q0",
+            "title": "Fixture source c001-s07-q0",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s07-q1",
           "en": "Which car was launched in Japan in 1997 as the world's first mass-produced hybrid car?",
           "de": "Welches Auto kam 1997 in Japan als erstes in Großserie gebautes Hybridauto der Welt auf den Markt?",
           "answerEn": "Toyota Prius",
-          "answerDe": "Toyota Prius"
+          "answerDe": "Toyota Prius",
+          "timeline": {
+            "kind": "event",
+            "start": "1936",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s07-q1",
+            "labelDe": "Fixture-Ereignis c001-s07-q1"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s07-q1",
+            "title": "Fixture source c001-s07-q1",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s07-q2",
           "en": "Which car was built more than 21 million times between 1938 and 2003 and was for a long time the best-selling car in the world?",
           "de": "Welches Auto wurde von 1938 bis 2003 mehr als 21 Millionen Mal gebaut und war lange das meistverkaufte Auto der Welt?",
           "answerEn": "Volkswagen Beetle",
-          "answerDe": "VW Käfer"
+          "answerDe": "VW Käfer",
+          "timeline": {
+            "kind": "event",
+            "start": "1937",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s07-q2",
+            "labelDe": "Fixture-Ereignis c001-s07-q2"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s07-q2",
+            "title": "Fixture source c001-s07-q2",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s07-q3",
           "en": "Which car did Volkswagen launch in 1974 as the successor to the Beetle?",
           "de": "Welches Auto brachte Volkswagen 1974 als Nachfolger des Käfers auf den Markt?",
           "answerEn": "Volkswagen Golf",
-          "answerDe": "VW Golf"
+          "answerDe": "VW Golf",
+          "timeline": {
+            "kind": "event",
+            "start": "1938",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s07-q3",
+            "labelDe": "Fixture-Ereignis c001-s07-q3"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s07-q3",
+            "title": "Fixture source c001-s07-q3",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s07-q4",
           "en": "Which car was the first to be built on a moving assembly line from 1913 and turned the automobile into a mass product in the USA?",
           "de": "Welches Auto wurde ab 1913 als erstes am Fließband gefertigt und machte das Automobil in den USA zum Massenprodukt?",
           "answerEn": "Ford Model T",
-          "answerDe": "Ford Modell T"
+          "answerDe": "Ford Modell T",
+          "timeline": {
+            "kind": "event",
+            "start": "1939",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s07-q4",
+            "labelDe": "Fixture-Ereignis c001-s07-q4"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s07-q4",
+            "title": "Fixture source c001-s07-q4",
+            "lang": "en"
+          }
         }
-      ]
+      ],
+      "notesEn": "",
+      "notesDe": ""
     },
     {
       "id": "c001-s08",
@@ -306,37 +844,114 @@
           "en": "What is the name for the idea that all natural phenomena are animated by souls, which was widespread in the indigenous religions of the Americas, among others?",
           "de": "Wie nennt man die Vorstellung einer Allbeseeltheit der Naturerscheinungen, die u. a. in den ethnischen Religionen Amerikas verbreitet war?",
           "answerEn": "animism",
-          "answerDe": "Animismus"
+          "answerDe": "Animismus",
+          "timeline": {
+            "kind": "event",
+            "start": "1940",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s08-q0",
+            "labelDe": "Fixture-Ereignis c001-s08-q0"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s08-q0",
+            "title": "Fixture source c001-s08-q0",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s08-q1",
           "en": "What is the name for the belief in a single god, as it characterises Judaism, Christianity and Islam?",
           "de": "Wie nennt man den Glauben an einen einzigen Gott, wie er Judentum, Christentum und Islam kennzeichnet?",
           "answerEn": "monotheism",
-          "answerDe": "Monotheismus"
+          "answerDe": "Monotheismus",
+          "timeline": {
+            "kind": "event",
+            "start": "1941",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s08-q1",
+            "labelDe": "Fixture-Ereignis c001-s08-q1"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s08-q1",
+            "title": "Fixture source c001-s08-q1",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s08-q2",
           "en": "What is the name for the worship of many gods, as was customary in ancient Greece and Rome?",
           "de": "Wie nennt man die Verehrung vieler Götter, wie sie im antiken Griechenland und Rom üblich war?",
           "answerEn": "polytheism",
-          "answerDe": "Polytheismus"
+          "answerDe": "Polytheismus",
+          "timeline": {
+            "kind": "event",
+            "start": "1942",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s08-q2",
+            "labelDe": "Fixture-Ereignis c001-s08-q2"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s08-q2",
+            "title": "Fixture source c001-s08-q2",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s08-q3",
           "en": "What is the name for the doctrine that God and the world are one, as held by the philosopher Baruch de Spinoza?",
           "de": "Wie nennt man die Lehre, dass Gott und die Welt eins sind, wie sie der Philosoph Baruch de Spinoza vertrat?",
           "answerEn": "pantheism",
-          "answerDe": "Pantheismus"
+          "answerDe": "Pantheismus",
+          "timeline": {
+            "kind": "event",
+            "start": "1943",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s08-q3",
+            "labelDe": "Fixture-Ereignis c001-s08-q3"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s08-q3",
+            "title": "Fixture source c001-s08-q3",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s08-q4",
           "en": "What is the name for the belief in a kinship between a human group and an animal or plant species that serves as its symbol and guardian?",
           "de": "Wie nennt man den Glauben an eine verwandtschaftliche Verbindung zwischen einer Menschengruppe und einer Tier- oder Pflanzenart, die ihr als Symbol und Schutzwesen dient?",
           "answerEn": "totemism",
-          "answerDe": "Totemismus"
+          "answerDe": "Totemismus",
+          "timeline": {
+            "kind": "event",
+            "start": "1944",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s08-q4",
+            "labelDe": "Fixture-Ereignis c001-s08-q4"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s08-q4",
+            "title": "Fixture source c001-s08-q4",
+            "lang": "en"
+          }
         }
-      ]
+      ],
+      "notesEn": "",
+      "notesDe": ""
     },
     {
       "id": "c001-s09",
@@ -348,37 +963,114 @@
           "en": "How is herd immunity established?",
           "de": "Wodurch wird eine Herdenimmunität hergestellt?",
           "answerEn": "vaccination of a large part of the population",
-          "answerDe": "Impfung eines Großteils der Bevölkerung"
+          "answerDe": "Impfung eines Großteils der Bevölkerung",
+          "timeline": {
+            "kind": "event",
+            "start": "1945",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s09-q0",
+            "labelDe": "Fixture-Ereignis c001-s09-q0"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s09-q0",
+            "title": "Fixture source c001-s09-q0",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s09-q1",
           "en": "What temporarily protects an infant against many infections in the first months of life (so-called passive maternal immunity)?",
           "de": "Wodurch ist ein Säugling in den ersten Lebensmonaten vorübergehend gegen viele Infektionen geschützt (sogenannter Nestschutz)?",
           "answerEn": "maternal antibodies",
-          "answerDe": "mütterliche Antikörper"
+          "answerDe": "mütterliche Antikörper",
+          "timeline": {
+            "kind": "event",
+            "start": "1946",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s09-q1",
+            "labelDe": "Fixture-Ereignis c001-s09-q1"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s09-q1",
+            "title": "Fixture source c001-s09-q1",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s09-q2",
           "en": "By what means does the immune system remember a pathogen after an infection or vaccination, so that it reacts faster on the next contact?",
           "de": "Wodurch merkt sich das Immunsystem einen Erreger nach einer überstandenen Infektion oder Impfung, sodass es beim nächsten Kontakt schneller reagiert?",
           "answerEn": "memory cells",
-          "answerDe": "Gedächtniszellen"
+          "answerDe": "Gedächtniszellen",
+          "timeline": {
+            "kind": "event",
+            "start": "1947",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s09-q2",
+            "labelDe": "Fixture-Ereignis c001-s09-q2"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s09-q2",
+            "title": "Fixture source c001-s09-q2",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s09-q3",
           "en": "With what did Edward Jenner immunise a boy against smallpox in 1796, thereby founding vaccination?",
           "de": "Wodurch immunisierte Edward Jenner 1796 einen Jungen gegen die Pocken und begründete damit die Schutzimpfung?",
           "answerEn": "cowpox",
-          "answerDe": "Kuhpocken"
+          "answerDe": "Kuhpocken",
+          "timeline": {
+            "kind": "event",
+            "start": "1948",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s09-q3",
+            "labelDe": "Fixture-Ereignis c001-s09-q3"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s09-q3",
+            "title": "Fixture source c001-s09-q3",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s09-q4",
           "en": "What triggers the immune response in a live vaccine such as the one against measles?",
           "de": "Wodurch wird bei einem Lebendimpfstoff wie dem gegen Masern die Immunantwort ausgelöst?",
           "answerEn": "attenuated pathogens",
-          "answerDe": "abgeschwächte Erreger"
+          "answerDe": "abgeschwächte Erreger",
+          "timeline": {
+            "kind": "event",
+            "start": "1949",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s09-q4",
+            "labelDe": "Fixture-Ereignis c001-s09-q4"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s09-q4",
+            "title": "Fixture source c001-s09-q4",
+            "lang": "en"
+          }
         }
-      ]
+      ],
+      "notesEn": "",
+      "notesDe": ""
     },
     {
       "id": "c001-s10",
@@ -390,37 +1082,114 @@
           "en": "Which high mountain range in Eurasia runs between the Black Sea and the Caspian Sea?",
           "de": "Welches Hochgebirge in Eurasien verläuft zwischen dem Schwarzen und dem Kaspischen Meer?",
           "answerEn": "Caucasus",
-          "answerDe": "Kaukasus"
+          "answerDe": "Kaukasus",
+          "timeline": {
+            "kind": "event",
+            "start": "1950",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s10-q0",
+            "labelDe": "Fixture-Ereignis c001-s10-q0"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s10-q0",
+            "title": "Fixture source c001-s10-q0",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s10-q1",
           "en": "Which mountain range runs from north to south through Russia and is regarded as the traditional border between Europe and Asia?",
           "de": "Welches Gebirge verläuft von Nord nach Süd durch Russland und gilt als traditionelle Grenze zwischen Europa und Asien?",
           "answerEn": "Ural Mountains",
-          "answerDe": "Ural"
+          "answerDe": "Ural",
+          "timeline": {
+            "kind": "event",
+            "start": "1951",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s10-q1",
+            "labelDe": "Fixture-Ereignis c001-s10-q1"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s10-q1",
+            "title": "Fixture source c001-s10-q1",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s10-q2",
           "en": "Which high mountain range separates the Iberian Peninsula from the rest of Europe and forms the border between Spain and France?",
           "de": "Welches Hochgebirge trennt die Iberische Halbinsel vom übrigen Europa und bildet die Grenze zwischen Spanien und Frankreich?",
           "answerEn": "Pyrenees",
-          "answerDe": "Pyrenäen"
+          "answerDe": "Pyrenäen",
+          "timeline": {
+            "kind": "event",
+            "start": "1952",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s10-q2",
+            "labelDe": "Fixture-Ereignis c001-s10-q2"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s10-q2",
+            "title": "Fixture source c001-s10-q2",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s10-q3",
           "en": "Which high mountain range in Asia contains Mount Everest, the highest mountain on Earth?",
           "de": "Welches Hochgebirge in Asien enthält mit dem Mount Everest den höchsten Berg der Erde?",
           "answerEn": "Himalayas",
-          "answerDe": "Himalaya"
+          "answerDe": "Himalaya",
+          "timeline": {
+            "kind": "event",
+            "start": "1953",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s10-q3",
+            "labelDe": "Fixture-Ereignis c001-s10-q3"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s10-q3",
+            "title": "Fixture source c001-s10-q3",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s10-q4",
           "en": "Which mountain range sweeps in a great arc through Poland, Slovakia, Ukraine and Romania?",
           "de": "Welches Gebirge zieht sich in einem großen Bogen durch Polen, die Slowakei, die Ukraine und Rumänien?",
           "answerEn": "Carpathians",
-          "answerDe": "Karpaten"
+          "answerDe": "Karpaten",
+          "timeline": {
+            "kind": "event",
+            "start": "1954",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s10-q4",
+            "labelDe": "Fixture-Ereignis c001-s10-q4"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s10-q4",
+            "title": "Fixture source c001-s10-q4",
+            "lang": "en"
+          }
         }
-      ]
+      ],
+      "notesEn": "",
+      "notesDe": ""
     },
     {
       "id": "c001-s11",
@@ -432,37 +1201,114 @@
           "en": "What are the trapping hairs of carnivorous plants, and likewise the grasping arms of invertebrate aquatic animals, called?",
           "de": "Wie werden die Fanghaare bei fleischfressenden Pflanzen wie auch die Fangarme von wirbellosen Wassertieren genannt?",
           "answerEn": "tentacles",
-          "answerDe": "Tentakel"
+          "answerDe": "Tentakel",
+          "timeline": {
+            "kind": "event",
+            "start": "1955",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s11-q0",
+            "labelDe": "Fixture-Ereignis c001-s11-q0"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s11-q0",
+            "title": "Fixture source c001-s11-q0",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s11-q1",
           "en": "What are plants called that grow on other plants without taking water or nutrients from them, like many tropical orchids?",
           "de": "Wie werden Pflanzen genannt, die auf anderen Pflanzen wachsen, ohne ihnen Wasser oder Nährstoffe zu entziehen, wie viele tropische Orchideen?",
           "answerEn": "epiphytes",
-          "answerDe": "Epiphyten"
+          "answerDe": "Epiphyten",
+          "timeline": {
+            "kind": "event",
+            "start": "1956",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s11-q1",
+            "labelDe": "Fixture-Ereignis c001-s11-q1"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s11-q1",
+            "title": "Fixture source c001-s11-q1",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s11-q2",
           "en": "What is the ability of organisms such as fireflies and deep-sea fish to produce their own light called?",
           "de": "Wie wird die Fähigkeit von Lebewesen wie Glühwürmchen und Tiefseefischen genannt, selbst Licht zu erzeugen?",
           "answerEn": "bioluminescence",
-          "answerDe": "Biolumineszenz"
+          "answerDe": "Biolumineszenz",
+          "timeline": {
+            "kind": "event",
+            "start": "1957",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s11-q2",
+            "labelDe": "Fixture-Ereignis c001-s11-q2"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s11-q2",
+            "title": "Fixture source c001-s11-q2",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s11-q3",
           "en": "What is the lasting association of two species for mutual benefit called, such as that of the clownfish and the sea anemone?",
           "de": "Wie wird das dauerhafte Zusammenleben zweier Arten zum beiderseitigen Nutzen genannt, wie das von Clownfisch und Seeanemone?",
           "answerEn": "symbiosis",
-          "answerDe": "Symbiose"
+          "answerDe": "Symbiose",
+          "timeline": {
+            "kind": "event",
+            "start": "1958",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s11-q3",
+            "labelDe": "Fixture-Ereignis c001-s11-q3"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s11-q3",
+            "title": "Fixture source c001-s11-q3",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s11-q4",
           "en": "What are animals without a backbone, such as insects, snails, jellyfish and squid, collectively called?",
           "de": "Wie werden Tiere ohne Wirbelsäule wie Insekten, Schnecken, Quallen und Tintenfische zusammenfassend genannt?",
           "answerEn": "invertebrates",
-          "answerDe": "Wirbellose"
+          "answerDe": "Wirbellose",
+          "timeline": {
+            "kind": "event",
+            "start": "1959",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s11-q4",
+            "labelDe": "Fixture-Ereignis c001-s11-q4"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s11-q4",
+            "title": "Fixture source c001-s11-q4",
+            "lang": "en"
+          }
         }
-      ]
+      ],
+      "notesEn": "",
+      "notesDe": ""
     },
     {
       "id": "c001-s12",
@@ -474,37 +1320,114 @@
           "en": "Which alternative to shoelaces did Whitcomb L. Judson present at the 1893 World's Fair in Chicago?",
           "de": "Welche Alternative zu Schnürsenkeln stellte Whitcomb L. Judson 1893 auf der Weltausstellung in Chicago vor?",
           "answerEn": "zipper",
-          "answerDe": "Reißverschluss"
+          "answerDe": "Reißverschluss",
+          "timeline": {
+            "kind": "event",
+            "start": "1960",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s12-q0",
+            "labelDe": "Fixture-Ereignis c001-s12-q0"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s12-q0",
+            "title": "Fixture source c001-s12-q0",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s12-q1",
           "en": "Which fastener did the Swiss engineer Georges de Mestral invent in the 1940s, modelled on the burrs he found stuck in his dog's fur?",
           "de": "Welchen Verschluss erfand der Schweizer Ingenieur Georges de Mestral in den 1940er Jahren nach dem Vorbild von Kletten, die in seinem Hundefell hingen?",
           "answerEn": "Velcro",
-          "answerDe": "Klettverschluss"
+          "answerDe": "Klettverschluss",
+          "timeline": {
+            "kind": "event",
+            "start": "1961",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s12-q1",
+            "labelDe": "Fixture-Ereignis c001-s12-q1"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s12-q1",
+            "title": "Fixture source c001-s12-q1",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s12-q2",
           "en": "Which fastener did the American mechanic Walter Hunt patent in 1849 in order to settle a debt of 15 dollars?",
           "de": "Welchen Verschluss ließ sich der amerikanische Mechaniker Walter Hunt 1849 patentieren, um eine Schuld von 15 Dollar zu begleichen?",
           "answerEn": "safety pin",
-          "answerDe": "Sicherheitsnadel"
+          "answerDe": "Sicherheitsnadel",
+          "timeline": {
+            "kind": "event",
+            "start": "1962",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s12-q2",
+            "labelDe": "Fixture-Ereignis c001-s12-q2"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s12-q2",
+            "title": "Fixture source c001-s12-q2",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s12-q3",
           "en": "Which amusement ride did George Washington Gale Ferris present at the 1893 World's Fair in Chicago as an answer to the Eiffel Tower?",
           "de": "Welches Fahrgeschäft stellte George Washington Gale Ferris 1893 auf der Weltausstellung in Chicago als Antwort auf den Eiffelturm vor?",
           "answerEn": "Ferris wheel",
-          "answerDe": "Riesenrad"
+          "answerDe": "Riesenrad",
+          "timeline": {
+            "kind": "event",
+            "start": "1963",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s12-q3",
+            "labelDe": "Fixture-Ereignis c001-s12-q3"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s12-q3",
+            "title": "Fixture source c001-s12-q3",
+            "lang": "en"
+          }
         },
         {
           "id": "c001-s12-q4",
           "en": "Which device did Alexander Graham Bell demonstrate publicly for the first time at the 1876 World's Fair in Philadelphia?",
           "de": "Welches Gerät führte Alexander Graham Bell 1876 auf der Weltausstellung in Philadelphia erstmals öffentlich vor?",
           "answerEn": "telephone",
-          "answerDe": "Telefon"
+          "answerDe": "Telefon",
+          "timeline": {
+            "kind": "event",
+            "start": "1964",
+            "end": null,
+            "precision": "year",
+            "approx": false,
+            "ongoing": false,
+            "labelEn": "Fixture event c001-s12-q4",
+            "labelDe": "Fixture-Ereignis c001-s12-q4"
+          },
+          "source": {
+            "url": "https://example.org/quiztopia/c001-s12-q4",
+            "title": "Fixture source c001-s12-q4",
+            "lang": "en"
+          }
         }
-      ]
+      ],
+      "notesEn": "",
+      "notesDe": ""
     }
   ]
 }

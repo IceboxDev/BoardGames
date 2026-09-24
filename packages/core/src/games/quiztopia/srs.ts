@@ -4,6 +4,8 @@
 // same next state. The client is the clock: it passes its local `YYYY-MM-DD`
 // with every read and write, because the app is timezone-naive.
 
+import { createRng, shuffle } from "../../lib/rng.ts";
+
 export type SrsGrade = "again" | "good";
 export type SrsStateKind = "new" | "learning" | "review" | "relearning";
 
@@ -172,6 +174,13 @@ export interface QueueInput {
    * are gathered by set, so a topic is studied in one sitting.
    */
   grouping?: "spread" | "sets";
+  /**
+   * Set mode only: after the day's new articles have been read, their
+   * questions and everything due are studied in one shuffled mix (seed it
+   * per user and day so a reload keeps the order). Without it the new sets
+   * stay back to back and due siblings are gathered.
+   */
+  shuffleSeed?: number;
 }
 
 /**
@@ -210,8 +219,16 @@ export function buildDailyQueue(input: QueueInput): QueueItem[] {
     ...fresh.map((id) => ({ questionId: id, tier: "new" as const, state: null })),
   ];
   const keyOf = (it: QueueItem) => input.setIdOf(it.questionId);
-  const ordered = bySet ? groupSiblings(items, keyOf) : interleaveSiblings(items, keyOf);
+  let ordered: QueueItem[];
+  if (!bySet) ordered = interleaveSiblings(items, keyOf);
+  else if (input.shuffleSeed === undefined) ordered = groupSiblings(items, keyOf);
+  else ordered = shuffle(items, createRng(input.shuffleSeed));
   return ordered.slice(0, Math.max(0, input.limit));
+}
+
+/** A deterministic shuffle (same seed, same order) for the day's study mix. */
+export function seededShuffle<T>(items: readonly T[], seed: number): T[] {
+  return shuffle(items, createRng(seed));
 }
 
 /**

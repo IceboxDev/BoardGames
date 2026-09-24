@@ -8,6 +8,7 @@ import { answerHints, type BoardLanguage, cardRefLabel, pickTexts } from "../../
 import { AnswerMark } from "../common/AnswerMark";
 import { BuildingGlyph } from "../common/BuildingGlyph";
 import { LanguageToggle } from "../common/LanguageToggle";
+import { EditorNote } from "../wiki/EditorNote";
 import { useArticleSnippet } from "./use-article-snippet";
 
 // This turn's question card: band strip, category, card ref, the question in
@@ -153,14 +154,7 @@ export default function QuestionPanel({
                   ))}
                 </ul>
               )}
-              {q.notes && (
-                <div className="rounded-card-md border border-amber-500/20 bg-amber-500/5 px-2.5 py-1.5">
-                  <Eyebrow tone="amber" size="sm">
-                    Editor's note
-                  </Eyebrow>
-                  <p className="mt-0.5 text-2xs text-fg-secondary">{q.notes}</p>
-                </div>
-              )}
+              <EditorNote language={lang} notesEn={q.notesEn} notesDe={q.notesDe} size="xs" />
             </motion.div>
           )}
         </AnimatePresence>

@@ -9,18 +9,42 @@
 // that trainer rows already reference.
 
 import { createHash } from "node:crypto";
+import type { z } from "zod";
 import { QUIZTOPIA_CATEGORIES } from "../categories.ts";
 import {
+  buildTimelineIndex,
   type CardArticles,
   CardArticlesSchema,
   type CardQuestions,
   CardQuestionsSchema,
   type ContentIndex,
   ContentIndexSchema,
+  type ContentQuestion,
+  SourceSchema,
+  TimelineEventSchema,
+  type TimelineIndex,
+  TimelineIndexSchema,
   type Titles,
   TitlesSchema,
 } from "../content-types.ts";
 import { cardId, QUESTIONS_PER_SET, questionId, SETS_PER_CARD, setId } from "../ids.ts";
+
+export interface RawTimeline {
+  kind: string;
+  start: string;
+  end: string | null;
+  precision: string;
+  approx: boolean;
+  ongoing: boolean;
+  label_en: string;
+  label_de: string;
+}
+
+export interface RawSource {
+  url: string;
+  title: string;
+  lang: string;
+}
 
 export interface RawQuestion {
   original: boolean;
@@ -28,6 +52,9 @@ export interface RawQuestion {
   en: string;
   answer_de: string;
   answer_en: string;
+  /** Added by the enrichment pass; absent on sets not enriched yet. */
+  timeline?: RawTimeline;
+  source?: RawSource;
 }
 
 export interface RawSet {
@@ -39,7 +66,15 @@ export interface RawSet {
   article_en: string;
   article_title_de: string;
   article_de: string;
+  /** Transcription provenance — mixed internal/player notes; never exported. */
   notes?: string;
+  /** Player-facing editor's notes per language (enrichment pass). */
+  notes_en?: string;
+  notes_de?: string;
+  /** About the transcription itself; never exported. */
+  notes_internal?: string;
+  /** Set by the enrichment pass once every question has a timeline and a source. */
+  enriched?: boolean;
 }
 
 export interface RawCard {
@@ -61,6 +96,17 @@ export interface NormalizeOutput {
   titles: Titles;
   questions: CardQuestions[];
   articles: CardArticles[];
+  /** questionId → compact event, for `content/timeline.json`. */
+  timeline: TimelineIndex;
+}
+
+/** Parse one raw field, naming the question in the error. */
+function parseOrThrow<T>(schema: z.ZodType<T>, where: string, value: unknown): T {
+  const res = schema.safeParse(value);
+  if (res.success) return res.data;
+  const issue = res.error.issues[0];
+  const path = issue?.path.length ? `.${issue.path.join(".")}` : "";
+  throw new Error(`${where}${path}: ${issue?.message ?? "invalid"}`);
 }
 
 function escapeRegExp(s: string): string {
@@ -162,13 +208,34 @@ export function normalizeCards(input: NormalizeInput): NormalizeOutput {
         if (q.original !== (qi === 0)) {
           throw new Error(`${stem} set ${n}: question ${qi} original flag mismatch`);
         }
-        return {
-          id: questionId(sid, qi),
+        const qid = questionId(sid, qi);
+        if (!set.enriched || !q.timeline || !q.source) {
+          throw new Error(`${qid}: every question needs a timeline event and a source`);
+        }
+        const t = q.timeline;
+        const out: ContentQuestion = {
+          id: qid,
           en: q.en.trim(),
           de: q.de.trim(),
           answerEn: q.answer_en.trim(),
           answerDe: q.answer_de.trim(),
+          timeline: parseOrThrow(TimelineEventSchema, `${qid} timeline`, {
+            kind: t.kind,
+            start: t.start.trim(),
+            end: t.end === null ? null : t.end.trim(),
+            precision: t.precision,
+            approx: t.approx,
+            ongoing: t.ongoing,
+            labelEn: t.label_en.trim(),
+            labelDe: t.label_de.trim(),
+          }),
+          source: parseOrThrow(SourceSchema, `${qid} source`, {
+            url: q.source.url.trim(),
+            title: q.source.title.trim(),
+            lang: q.source.lang.trim(),
+          }),
         };
+        return out;
       });
       const articleEn = set.article_en.normalize("NFC");
       const articleDe = set.article_de.normalize("NFC");
@@ -182,7 +249,13 @@ export function normalizeCards(input: NormalizeInput): NormalizeOutput {
         if (!span) throw new Error(`${q.id}: answer "${q.answerDe}" not found in article_de`);
         return span;
       });
-      qSets.push({ id: sid, n, notes: (set.notes ?? "").trim(), questions: qs });
+      qSets.push({
+        id: sid,
+        n,
+        notesEn: (set.notes_en ?? "").trim(),
+        notesDe: (set.notes_de ?? "").trim(),
+        questions: qs,
+      });
       aSets.push({
         id: sid,
         titleEn: set.article_title_en.trim(),
@@ -212,10 +285,21 @@ export function normalizeCards(input: NormalizeInput): NormalizeOutput {
     cards,
   };
 
+  const parsedQuestions = questions.map((q) => {
+    const res = CardQuestionsSchema.safeParse(q);
+    if (!res.success) {
+      const issue = res.error.issues[0];
+      throw new Error(
+        `${q.id} (${q.sourceImage}): ${issue?.path.join(".")}: ${issue?.message ?? "invalid"}`,
+      );
+    }
+    return res.data;
+  });
   return {
     index: ContentIndexSchema.parse(index),
     titles: TitlesSchema.parse(titles),
-    questions: questions.map((q) => CardQuestionsSchema.parse(q)),
+    questions: parsedQuestions,
     articles: articles.map((a) => CardArticlesSchema.parse(a)),
+    timeline: TimelineIndexSchema.parse(buildTimelineIndex(parsedQuestions)),
   };
 }

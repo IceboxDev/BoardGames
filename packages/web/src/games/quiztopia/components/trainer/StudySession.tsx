@@ -1,4 +1,4 @@
-import { type ReactNode, useEffect, useMemo } from "react";
+import { type ReactNode, useEffect, useMemo, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { XIcon } from "../../../../components/icons";
 import {
@@ -16,6 +16,7 @@ import { errorMessageOf } from "../../../../lib/error-message";
 import { type District, districtByN } from "../../bands";
 import { useTitles } from "../../hooks/useContent";
 import { useQuestionLanguage } from "../../hooks/useQuestionLanguage";
+import { useQuiztopiaSettings } from "../../hooks/useQuiztopiaSettings";
 import { useTrainerSession } from "../../hooks/useTrainerSession";
 import { isPlainKey, isTypingTarget } from "../../keys";
 import { useTrainerPaths } from "../../paths";
@@ -23,6 +24,7 @@ import { BuildingGlyph } from "../common/BuildingGlyph";
 import { LanguageToggle } from "../common/LanguageToggle";
 import { FlashCard } from "./FlashCard";
 import { GradeBar } from "./GradeBar";
+import { NewArticlesIntro } from "./NewArticlesIntro";
 import { SessionSummary } from "./SessionSummary";
 import { specFromSearch } from "./session-spec";
 import { TrainerScreen } from "./TrainerScreen";
@@ -62,10 +64,31 @@ export default function StudySession() {
   }, [spec, titles.data, language, scopeDistrict]);
   useDocumentTitle(`${title} · Quiztopia`);
 
+  // Whole-set days start by reading the day's new articles; their questions
+  // are then shuffled in with everything due (the server already mixed them).
+  const { settings } = useQuiztopiaSettings();
+  const newSets = useMemo(() => {
+    if (spec.kind !== "due" || settings.newCardOrder !== "sets" || session.status !== "ready") {
+      return [];
+    }
+    const seen = new Map<string, { setId: string; cardId: string; category: number }>();
+    for (const it of session.items) {
+      if (it.tier === "new" && !seen.has(it.setId)) {
+        seen.set(it.setId, { setId: it.setId, cardId: it.cardId, category: it.category });
+      }
+    }
+    return [...seen.values()];
+  }, [spec.kind, settings.newCardOrder, session.status, session.items]);
+  const [readIndex, setReadIndex] = useState(0);
+  const [readingDone, setReadingDone] = useState(false);
+  const reading =
+    newSets.length > 0 && !readingDone && readIndex < newSets.length && session.progress.done === 0;
+
   const { revealed, reveal, grade, undo, canUndo, complete, status } = session;
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (!isPlainKey(e) || isTypingTarget(e.target)) return;
+      if (reading && e.key !== "Escape") return;
       if (e.key === "Escape") {
         e.preventDefault();
         navigate(paths.hub);
@@ -105,7 +128,7 @@ export default function StudySession() {
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [revealed, reveal, grade, undo, canUndo, complete, status, navigate, paths.hub]);
+  }, [reading, revealed, reveal, grade, undo, canUndo, complete, status, navigate, paths.hub]);
 
   const loadError = errorMessageOf(session.loadError, "Couldn't load the queue.");
 
@@ -141,6 +164,20 @@ export default function StudySession() {
         }
       />
     );
+  } else if (reading) {
+    body = (
+      <NewArticlesIntro
+        sets={newSets}
+        index={readIndex}
+        language={language}
+        cardCount={session.progress.total}
+        onNext={() => {
+          if (readIndex + 1 >= newSets.length) setReadingDone(true);
+          else setReadIndex(readIndex + 1);
+        }}
+        onSkip={() => setReadingDone(true)}
+      />
+    );
   } else if (complete) {
     body = <SessionSummary session={session} title={title} language={language} paths={paths} />;
   } else if (!session.current || !district) {
@@ -157,12 +194,13 @@ export default function StudySession() {
         snippet={revealed ? session.snippetFor(language) : null}
         snippetPending={session.articlePending}
         articleHref={paths.wikiArticle(district.slug, session.current.item.cardId, q)}
+        timelineHref={paths.timeline(session.current.item.questionId)}
         onReveal={reveal}
       />
     );
   }
 
-  const showGradeBar = !loadError && status === "ready" && !session.empty && !complete;
+  const showGradeBar = !loadError && status === "ready" && !session.empty && !complete && !reading;
 
   return (
     <TrainerScreen className="flex flex-col">

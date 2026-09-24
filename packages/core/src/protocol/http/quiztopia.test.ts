@@ -4,7 +4,10 @@ import {
   QuiztopiaSettingsSchema,
   ReviewBodySchema,
   SearchQuerySchema,
+  TimelinePinsResponseSchema,
   TrainerQueueQuerySchema,
+  TrainerResetBodySchema,
+  TrainerResetResponseSchema,
   TrainerStatesQuerySchema,
 } from "./quiztopia.ts";
 
@@ -84,9 +87,47 @@ describe("quiztopia protocol", () => {
       includeLeeches: false,
       gameReviewsAffectSrs: false,
       newCardOrder: "sets",
+      newSetsPerDay: 3,
     });
     expect(() =>
+      QuiztopiaSettingsSchema.parse({ language: "de", newPerDay: 5, newSetsPerDay: 11 }),
+    ).toThrow();
+    expect(() =>
       QuiztopiaSettingsSchema.parse({ language: "de", newPerDay: 5, newCardOrder: "random" }),
+    ).toThrow();
+  });
+
+  it("parses timeline pins and rejects a bad id, state or missing flag", () => {
+    const pin = {
+      questionId: "c001-s01-q3",
+      state: "review",
+      known: true,
+      lastReviewedAt: "2026-09-20T10:00:00.000Z",
+    };
+    expect(TimelinePinsResponseSchema.parse({ pins: [pin] }).pins[0]).toEqual(pin);
+    expect(TimelinePinsResponseSchema.parse({ pins: [] }).pins).toEqual([]);
+    const badId = TimelinePinsResponseSchema.safeParse({ pins: [{ ...pin, questionId: "c1" }] });
+    expect(badId.success).toBe(false);
+    if (!badId.success) expect(badId.error.issues[0]?.path).toEqual(["pins", 0, "questionId"]);
+    const badState = TimelinePinsResponseSchema.safeParse({ pins: [{ ...pin, state: "known" }] });
+    expect(badState.success).toBe(false);
+    if (!badState.success) expect(badState.error.issues[0]?.path).toEqual(["pins", 0, "state"]);
+    const { known: _known, ...noKnown } = pin;
+    const missing = TimelinePinsResponseSchema.safeParse({ pins: [noKnown] });
+    expect(missing.success).toBe(false);
+    if (!missing.success) expect(missing.error.issues[0]?.path).toEqual(["pins", 0, "known"]);
+  });
+});
+
+describe("trainer reset", () => {
+  it("requires an explicit confirm and reports what was deleted", () => {
+    expect(TrainerResetBodySchema.parse({ confirm: true })).toEqual({ confirm: true });
+    expect(() => TrainerResetBodySchema.parse({})).toThrow();
+    expect(() => TrainerResetBodySchema.parse({ confirm: "yes" })).toThrow();
+    const ok = { ok: true, deleted: { states: 3, reviews: 5, reads: 1 } };
+    expect(TrainerResetResponseSchema.parse(ok)).toEqual(ok);
+    expect(() =>
+      TrainerResetResponseSchema.parse({ ok: true, deleted: { states: -1, reviews: 0, reads: 0 } }),
     ).toThrow();
   });
 });

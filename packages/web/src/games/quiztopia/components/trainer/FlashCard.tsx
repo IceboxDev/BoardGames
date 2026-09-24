@@ -18,12 +18,15 @@ import type { CurrentCard } from "../../hooks/useTrainerSession";
 import { pickTexts } from "../../logic/copy";
 import { AnswerMark } from "../common/AnswerMark";
 import { BuildingGlyph } from "../common/BuildingGlyph";
+import { SourceLink } from "../common/SourceLink";
 import { TextLink } from "../common/TextLink";
+import { TimelineChip } from "../timeline/TimelineChip";
 import { EditorNote } from "../wiki/EditorNote";
 
 // The study card. Front: the question, in the chosen language(s). Back: the
 // answer in the district's ink, the article sentence that gives it away,
-// and the editor's note when the card has one. The reveal is a real flip
+// the question's moment on the member's timeline and its source, and the
+// editor's note when the card has one. The reveal is a real flip
 // (rotateY on a preserve-3d stack); with reduced motion the faces crossfade
 // instead. Both faces share one grid cell, so the card's height is the
 // taller face and the grade bar never jumps.
@@ -37,6 +40,8 @@ type Props = {
   snippet: Snippet | null;
   snippetPending: boolean;
   articleHref: string;
+  /** The timeline focused on this question. */
+  timelineHref: string;
   onReveal: () => void;
   className?: string;
 };
@@ -63,6 +68,7 @@ export function FlashCard({
   snippet,
   snippetPending,
   articleHref,
+  timelineHref,
   onReveal,
   className,
 }: Props) {
@@ -194,7 +200,38 @@ export function FlashCard({
               <div>
                 <TextLink to={articleHref}>Read full article →</TextLink>
               </div>
-              {card.set.notes && <EditorNote>{card.set.notes}</EditorNote>}
+              {(card.question.timeline || card.question.source) && (
+                <div className="flex flex-col items-start gap-1.5">
+                  {card.question.timeline && (
+                    <TimelineChip
+                      event={card.question.timeline}
+                      lang={primary}
+                      tone={d.tone}
+                      caption={
+                        primary === "de"
+                          ? state
+                            ? "Auf deiner Zeitleiste"
+                            : "Kommt auf deine Zeitleiste"
+                          : state
+                            ? "Pinned to your timeline"
+                            : "Pins to your timeline"
+                      }
+                      to={timelineHref}
+                    />
+                  )}
+                  {card.question.source && (
+                    <SourceLink
+                      source={card.question.source}
+                      label={primary === "de" ? "Quelle" : "Source"}
+                    />
+                  )}
+                </div>
+              )}
+              <EditorNote
+                language={language}
+                notesEn={card.set.notesEn}
+                notesDe={card.set.notesDe}
+              />
             </div>
           </Surface>
         </motion.div>

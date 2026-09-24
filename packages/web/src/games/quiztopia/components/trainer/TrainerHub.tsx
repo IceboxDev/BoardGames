@@ -1,9 +1,10 @@
+import { formatSpan, timelineSpanYears } from "@boardgames/core/games/quiztopia/timeline";
 import type { TrainerOverview } from "@boardgames/core/protocol";
 import { useQuery } from "@tanstack/react-query";
 import { useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BookIcon, FlameIcon } from "../../../../components/icons";
+import { BookIcon, FlameIcon, PinIcon } from "../../../../components/icons";
 import {
   Badge,
   Button,
@@ -12,12 +13,14 @@ import {
   PageMain,
   QueryBoundary,
   StatTile,
+  Surface,
 } from "../../../../components/ui";
 import useDocumentTitle from "../../../../hooks/useDocumentTitle";
 import { qk } from "../../../../lib/query-keys";
 import { historyQuery, overviewQuery, recentMissesQuery, todayKey } from "../../api";
 import { DISTRICTS, districtByN } from "../../bands";
 import { CARD_IDS } from "../../content";
+import { usePinnedTimeline } from "../../hooks/usePinnedTimeline";
 import { useQuiztopiaSettings } from "../../hooks/useQuiztopiaSettings";
 import { weekdayName } from "../../keys";
 import { useTrainerPaths } from "../../paths";
@@ -156,6 +159,15 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
             <Button
               variant="secondary"
               size="sm"
+              onClick={() => navigate(paths.timeline())}
+              title="Your timeline: every studied question's moment in history"
+            >
+              <PinIcon className="h-3.5 w-3.5" />
+              Timeline
+            </Button>
+            <Button
+              variant="secondary"
+              size="sm"
               onClick={() => navigate(paths.wiki)}
               title="The archive: every article, answers highlighted"
             >
@@ -272,6 +284,8 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
         </div>
       </section>
 
+      <TimelineTeaser onOpen={() => navigate(paths.timeline())} />
+
       <section aria-label="Districts" className="flex flex-col gap-3">
         <h2 className="text-sm font-semibold text-fg-strong">The city</h2>
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
@@ -322,5 +336,36 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
 
       {settingsOpen && <SettingsDrawer onClose={() => setSettingsOpen(false)} />}
     </>
+  );
+}
+
+/** One line on the hub: how much history the member has pinned so far. */
+function TimelineTeaser({ onOpen }: { onOpen: () => void }) {
+  const { pins, index, items } = usePinnedTimeline();
+  const total = pins.data?.pins.length ?? 0;
+  // Wait for the event index too (it only loads once there are pins), or a
+  // member with dated pins would briefly read "dates arrive later".
+  if (!pins.data || (total > 0 && !index.data)) return null;
+  const span = timelineSpanYears(items.map((it) => it.parsed));
+  const line =
+    total === 0
+      ? "Your timeline is empty — every question you study pins its moment in history."
+      : items.length === 0
+        ? `${total} ${total === 1 ? "question" : "questions"} studied — their dates arrive with the next content update.`
+        : `${items.length} ${items.length === 1 ? "moment" : "moments"} pinned across ${formatSpan(span, "en")}`;
+  return (
+    <Surface variant="tile" padding="none">
+      <Button
+        variant="plain"
+        bleed
+        align="start"
+        onClick={onOpen}
+        className="flex w-full items-center gap-3 px-4 py-3 text-left hover:bg-fill-soft"
+      >
+        <PinIcon className="h-4 w-4 shrink-0 text-accent-300" />
+        <span className="min-w-0 flex-1 text-sm text-fg-primary">{line}</span>
+        <span className="shrink-0 text-xs font-medium text-accent-300">Your timeline →</span>
+      </Button>
+    </Surface>
   );
 }

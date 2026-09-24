@@ -39,15 +39,19 @@ export function CategoryTile({
 }: Props) {
   const pct = ring === undefined ? null : Math.round(ring * 100);
   return (
-    <div className={cn("relative", className)}>
+    // The lift lives on the wrapper so the corner link (a sibling — links
+    // cannot nest) rises with the card instead of staying behind.
+    <div
+      className={cn(
+        "relative transition-transform duration-150 hover:-translate-y-0.5 motion-reduce:transition-none motion-reduce:hover:translate-y-0",
+        className,
+      )}
+    >
       <InteractiveCard
         as={Link}
         to={to}
         padding="sm"
-        className={cn(
-          "flex h-full flex-col gap-3 hover:-translate-y-0.5",
-          lit && cn("border", TONE_LIT[d.tone]),
-        )}
+        className={cn("flex h-full flex-col gap-3", lit && cn("border", TONE_LIT[d.tone]))}
       >
         <div className="flex items-start justify-between gap-2">
           <span

@@ -1,6 +1,8 @@
 import type { QuiztopiaSettings } from "@boardgames/core/protocol";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useId, useRef, useState } from "react";
 import {
+  Button,
   Checkbox,
   Drawer,
   ErrorAlert,
@@ -8,8 +10,11 @@ import {
   MicroLabel,
   SegmentedControl,
   Stepper,
+  useConfirm,
 } from "../../../../components/ui";
 import { errorMessageOf } from "../../../../lib/error-message";
+import { resetProgress } from "../../api";
+import { PENDING_REVIEWS_KEY } from "../../hooks/useOfflineReviewQueue";
 import { useQuiztopiaSettings } from "../../hooks/useQuiztopiaSettings";
 import { LanguageToggle } from "../common/LanguageToggle";
 
@@ -17,8 +22,8 @@ import { LanguageToggle } from "../common/LanguageToggle";
 // new cards arrive (whole sets or originals first), the daily budget of new
 // cards per district, and the two schedule switches.
 // Every change saves on its own (one PUT of the whole object); the stepper
-// waits a beat so a run of taps becomes one request. There is no "reset
-// progress" here — the API has no endpoint for it yet.
+// waits a beat so a run of taps becomes one request. "Reset progress" wipes
+// the server-side schedule after a confirm.
 
 type Props = {
   onClose: () => void;
@@ -48,20 +53,52 @@ export function SettingsDrawer({ onClose }: Props) {
   const { settings, loaded, save, saving, saveError } = useQuiztopiaSettings();
   const ids = { game: useId(), leech: useId() };
 
-  // The stepper edits a local copy and commits after a pause.
-  const [newPerDay, setNewPerDay] = useState(settings.newPerDay);
+  // The stepper edits a local copy and commits after a pause. Whole-set mode
+  // budgets articles (`newSetsPerDay`), originals-first mode questions.
+  const bySet = settings.newCardOrder === "sets";
+  const budgetField = bySet ? "newSetsPerDay" : "newPerDay";
+  const stored = settings[budgetField];
+  const [budget, setBudget] = useState(stored);
   const dirty = useRef(false);
   useEffect(() => {
-    if (!dirty.current) setNewPerDay(settings.newPerDay);
-  }, [settings.newPerDay]);
+    if (!dirty.current) setBudget(stored);
+  }, [stored]);
   useEffect(() => {
     if (!dirty.current) return;
     const t = window.setTimeout(() => {
       dirty.current = false;
-      save({ newPerDay });
+      save({ [budgetField]: budget });
     }, STEPPER_DEBOUNCE_MS);
     return () => window.clearTimeout(t);
-  }, [newPerDay, save]);
+  }, [budget, budgetField, save]);
+
+  // Reset: wipe schedule, history and reads on the server, drop any reviews
+  // still queued offline (they would re-create the progress), refetch.
+  const qc = useQueryClient();
+  const { confirm, confirmDialog } = useConfirm();
+  const reset = useMutation({
+    mutationFn: () => resetProgress({ confirm: true }),
+    onSuccess: () => {
+      try {
+        window.localStorage.removeItem(PENDING_REVIEWS_KEY);
+      } catch {
+        // storage blocked — nothing queued there either
+      }
+      void qc.invalidateQueries({
+        queryKey: ["quiztopia"],
+        predicate: (q) => q.queryKey[1] !== "content" && q.queryKey[1] !== "settings",
+      });
+    },
+  });
+  const onReset = async () => {
+    const ok = await confirm({
+      title: "Reset all Quiztopia progress?",
+      description:
+        "Every card goes back to new, your streak and study history are cleared, and all articles become unread. Your settings stay. This cannot be undone.",
+      confirmLabel: "Reset progress",
+    });
+    if (ok) reset.mutate();
+  };
 
   const patch = (p: Partial<QuiztopiaSettings>) => save(p);
   const errorMessage = errorMessageOf(saveError, "The change was not saved.");
@@ -115,25 +152,29 @@ export function SettingsDrawer({ onClose }: Props) {
       </FieldGroup>
 
       <FieldGroup
-        label="New cards per district, per day"
-        hint="Reviews are never capped — this only paces how fast the city grows."
+        label={bySet ? "New articles per district, per day" : "New cards per district, per day"}
+        hint={
+          bySet
+            ? "You read the new articles first, then their questions are shuffled in with everything due. Reviews are never capped."
+            : "Reviews are never capped — this only paces how fast the city grows."
+        }
       >
         <Stepper
-          value={newPerDay}
+          value={budget}
           min={0}
-          max={50}
+          max={bySet ? 10 : 50}
           size="sm"
-          label="New cards per district per day"
+          label={bySet ? "New articles per district per day" : "New cards per district per day"}
           caption={
-            newPerDay === 0
-              ? "No new cards — reviews only"
-              : settings.newCardOrder === "sets"
-                ? `${Math.ceil(newPerDay / 5)} ${Math.ceil(newPerDay / 5) === 1 ? "set" : "sets"} (${Math.ceil(newPerDay / 5) * 5} cards) per district — rounded up to whole sets`
-                : `Up to ${newPerDay * 12} new cards a day across the city`
+            budget === 0
+              ? "Nothing new — reviews only"
+              : bySet
+                ? `${budget} ${budget === 1 ? "article" : "articles"} · ${budget * 5} questions per district`
+                : `Up to ${budget * 12} new cards a day across the city`
           }
           onChange={(next) => {
             dirty.current = true;
-            setNewPerDay(next);
+            setBudget(next);
           }}
           disabled={!loaded}
         />
@@ -172,13 +213,27 @@ export function SettingsDrawer({ onClose }: Props) {
         </div>
       </FieldGroup>
 
-      <div className="mt-auto border-t border-line-soft pt-3">
+      <div className="mt-auto flex flex-col gap-2 border-t border-line-soft pt-3">
         <MicroLabel>Progress</MicroLabel>
-        <p className="mt-1 text-xs text-fg-muted">
-          Your schedule lives on the server. There is no reset yet — ask an admin if you need a
-          fresh start.
+        <p className="text-xs text-fg-muted">
+          Start over: every card back to new, streak and history cleared, articles unread. Settings
+          stay.
         </p>
+        {reset.isSuccess && (
+          <p className="text-xs text-emerald-300" role="status">
+            Progress reset — the city is dark again.
+          </p>
+        )}
+        {reset.isError && (
+          <ErrorAlert message={errorMessageOf(reset.error, "The reset did not go through.")} />
+        )}
+        <div>
+          <Button variant="danger" size="sm" onClick={onReset} loading={reset.isPending}>
+            Reset progress
+          </Button>
+        </div>
       </div>
+      {confirmDialog}
     </Drawer>
   );
 }

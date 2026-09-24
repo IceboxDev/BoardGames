@@ -565,6 +565,8 @@ export function useTrainerSession(spec: SessionSpec) {
     loadError: source.error,
     /** The queue came back empty — nothing to do today. */
     empty: s.status === "ready" && s.items.length === 0,
+    /** The whole queue in session order (re-inserted "again" cards included). */
+    items: s.items,
     item,
     current,
     cardPending: cardQuery.isPending,

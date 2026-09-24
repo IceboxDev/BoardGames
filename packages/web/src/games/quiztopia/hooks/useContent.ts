@@ -1,11 +1,12 @@
 import type {
   CardArticles,
   CardQuestions,
+  TimelineIndex,
   Titles,
 } from "@boardgames/core/games/quiztopia/content-types";
 import { useQuery } from "@tanstack/react-query";
 import { qk } from "../../../lib/query-keys";
-import { loadArticles, loadQuestions, loadTitles } from "../content";
+import { loadArticles, loadQuestions, loadTimeline, loadTitles } from "../content";
 
 // Content chunks as React Query data. The chunk loaders already memoise
 // their promises, so the cache here mostly buys the screens a uniform
@@ -36,6 +37,16 @@ export function useTitles(enabled = true) {
   return useQuery<Titles>({
     queryKey: qk.quiztopiaContent("titles", "all"),
     queryFn: () => loadTitles(),
+    enabled,
+    ...IMMUTABLE,
+  });
+}
+
+/** questionId → event for every dated question (empty before the enrichment lands). */
+export function useTimelineIndex(enabled = true) {
+  return useQuery<TimelineIndex>({
+    queryKey: qk.quiztopiaContent("timeline", "all"),
+    queryFn: () => loadTimeline(),
     enabled,
     ...IMMUTABLE,
   });

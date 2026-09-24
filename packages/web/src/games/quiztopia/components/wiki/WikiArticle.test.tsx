@@ -42,13 +42,29 @@ function questionSet(cardId: string, n: number): ContentSetQuestions {
   return {
     id: sid,
     n,
-    notes: n === 7 ? "The card misprints the year." : "",
+    notesEn: n === 7 ? "The card misprints the year." : "",
+    notesDe: n === 7 ? "Die Karte nennt das falsche Jahr." : "",
     questions: ANSWERS_EN.map((a, q) => ({
       id: `${sid}-q${q}`,
       en: `Question ${q + 1} (en)?`,
       de: `Frage ${q + 1} (de)?`,
       answerEn: a,
       answerDe: ANSWERS_DE[q],
+      timeline: {
+        kind: "event" as const,
+        start: ["1841-08-26", "1900", "-44", "1950", "2001"][q],
+        end: null,
+        precision: q === 0 ? ("day" as const) : ("year" as const),
+        approx: false,
+        ongoing: false,
+        labelEn: `Label ${a}`,
+        labelDe: `Etikett ${ANSWERS_DE[q]}`,
+      },
+      source: {
+        url: `https://en.wikipedia.org/wiki/Source_${q}`,
+        title: `Source ${q} – Wikipedia`,
+        lang: "en",
+      },
     })),
   };
 }
@@ -112,6 +128,16 @@ const postWikiReadMock = vi.fn();
 vi.mock("../../api", () => ({
   statesQuery: () => async () => ({ states: [] }),
   wikiReadsQuery: () => async () => ({ reads: [] }),
+  pinsQuery: () => async () => ({
+    pins: [
+      {
+        questionId: "c002-s07-q0",
+        state: "review",
+        known: true,
+        lastReviewedAt: "2026-09-20T10:00:00.000Z",
+      },
+    ],
+  }),
   postWikiRead: (body: unknown) => postWikiReadMock(body),
 }));
 
@@ -205,6 +231,7 @@ describe("WikiArticle", () => {
 
   it("has no previous link on the first card and shows the editor's note", async () => {
     renderArticle("/play/quiztopia/solo/wiki/politics/c001");
+    // (the same district's set on the first card)
     await screen.findByRole("article");
     expect(screen.queryByRole("link", { name: "Previous card" })).toBeNull();
     expect(screen.getByRole("link", { name: "Next card" })).toHaveAttribute(
@@ -212,6 +239,56 @@ describe("WikiArticle", () => {
       "/play/quiztopia/solo/wiki/politics/c002",
     );
     expect(screen.getByText("The card misprints the year.")).toBeInTheDocument();
+  });
+
+  it("shows each question's date and source, links pinned ones to the timeline, and lists sources", async () => {
+    const user = userEvent.setup();
+    renderArticle();
+    await screen.findByRole("article");
+    const rows = screen
+      .getAllByRole("listitem")
+      .filter((li) => within(li).queryByText(/^Question/));
+    // Date only until the answer is shown — the label often names it.
+    expect(within(rows[0]).getByText("26 August 1841")).toBeInTheDocument();
+    expect(within(rows[0]).queryByText(/Label one/)).toBeNull();
+    await user.click(within(rows[0]).getByRole("button", { name: /Show answer/ }));
+    expect(within(rows[0]).getByText(/Label one/)).toBeInTheDocument();
+    expect(within(rows[2]).getByText("44 BC")).toBeInTheDocument();
+    // Every question carries its own source.
+    expect(within(rows[1]).getByRole("link", { name: /en\.wikipedia\.org/ })).toHaveAttribute(
+      "href",
+      "https://en.wikipedia.org/wiki/Source_1",
+    );
+    // The source link opens in a new tab and names the domain.
+    const source = within(rows[0]).getByRole("link", { name: /en\.wikipedia\.org/ });
+    expect(source).toHaveAttribute("href", "https://en.wikipedia.org/wiki/Source_0");
+    expect(source).toHaveAttribute("target", "_blank");
+    // Only the pinned question links to the timeline.
+    expect(await within(rows[0]).findByRole("link", { name: /Show on timeline/ })).toHaveAttribute(
+      "href",
+      "/play/quiztopia/solo/timeline?q=c002-s07-q0",
+    );
+    expect(within(rows[2]).queryByRole("link", { name: /Show on timeline/ })).toBeNull();
+    // The article foot lists each source once.
+    const sources = screen.getByRole("heading", { name: "Sources" }).closest("section");
+    expect(sources).not.toBeNull();
+    if (!sources) return;
+    expect(
+      within(sources)
+        .getAllByRole("link")
+        .map((a) => a.getAttribute("href")),
+    ).toEqual([0, 1, 2, 3, 4].map((q) => `https://en.wikipedia.org/wiki/Source_${q}`));
+  });
+
+  it("shows only the reading language's editor's note", async () => {
+    const user = userEvent.setup();
+    renderArticle();
+    await screen.findByRole("article");
+    expect(screen.getByText("The card misprints the year.")).toBeInTheDocument();
+    expect(screen.queryByText("Die Karte nennt das falsche Jahr.")).toBeNull();
+    await user.keyboard("l"); // L cycles EN → DE
+    expect(await screen.findByText("Die Karte nennt das falsche Jahr.")).toBeInTheDocument();
+    expect(screen.queryByText("The card misprints the year.")).toBeNull();
   });
 
   it("marks the article read from the chip and updates the badge", async () => {

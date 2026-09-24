@@ -21,6 +21,7 @@ import {
   type QueueTier,
   SRS,
   type SrsState,
+  seededShuffle,
 } from "@boardgames/core/games/quiztopia/srs";
 import type {
   QuiztopiaSettings,
@@ -279,12 +280,8 @@ function setIdOf(questionId: string): string {
   return parseQuestionId(questionId)?.setId ?? questionId;
 }
 
-/**
- * Round-robin the categories' items tier by tier, keeping each list's own
- * order. With `bySet`, a turn takes a whole run of one set rather than one
- * item, so set mode's siblings stay together in the mixed queue too.
- */
-function mergeRoundRobin(lists: readonly QueueItem[][], bySet: boolean): QueueItem[] {
+/** Round-robin the categories' items tier by tier, keeping each list's own order. */
+function mergeRoundRobin(lists: readonly QueueItem[][]): QueueItem[] {
   const out: QueueItem[] = [];
   for (const tier of ["learning", "review", "new"] as const satisfies readonly QueueTier[]) {
     const cursors = lists.map((items) => items.filter((it) => it.tier === tier));
@@ -296,14 +293,6 @@ function mergeRoundRobin(lists: readonly QueueItem[][], bySet: boolean): QueueIt
       if (next) {
         out.push(next);
         remaining--;
-        while (
-          bySet &&
-          items.length > 0 &&
-          setIdOf(items[0].questionId) === setIdOf(next.questionId)
-        ) {
-          out.push(items.shift() as QueueItem);
-          remaining--;
-        }
       }
       i++;
     }
@@ -375,9 +364,18 @@ export async function trainerQueue(
       includeLeeches,
       setIdOf,
       grouping: bySet ? "sets" : "spread",
+      // The day's new questions mixed across their articles — stable for the day.
+      shuffleSeed: bySet ? hashSeed(`${userId}:${opts.today}:${n}`) : undefined,
     });
   });
-  const merged = perCategory.length === 1 ? perCategory[0] : mergeRoundRobin(perCategory, bySet);
+  // Several districts: round-robin tier by tier — except in whole-set mode,
+  // where the day is one shuffled mix of new and due across every district.
+  const merged =
+    perCategory.length === 1
+      ? perCategory[0]
+      : bySet
+        ? seededShuffle(perCategory.flat(), hashSeed(`${userId}:${opts.today}:all`))
+        : mergeRoundRobin(perCategory);
   const counts = { learning: 0, review: 0, new: 0 };
   for (const it of merged) counts[it.tier]++;
 

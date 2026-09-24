@@ -14,6 +14,7 @@ import {
 import { createRng } from "@boardgames/core/lib/rng";
 import QuiztopiaBoard from "../games/quiztopia/components/board/QuiztopiaBoard";
 import QuiztopiaGameOver from "../games/quiztopia/components/game-over/QuiztopiaGameOver";
+import TimelinePreview from "../games/quiztopia/components/timeline/TimelinePreview";
 
 // Dev-only Quiztopia preview — the real board / game-over screen fed a
 // state built by walking the actual engine through a scripted game (the
@@ -21,7 +22,8 @@ import QuiztopiaGameOver from "../games/quiztopia/components/game-over/Quiztopia
 // regressions can be reproduced headlessly (the DecryptoPreview pattern):
 //   /dev/quiztopia-preview?scene=<name>&seat=<n>&frame=WxH
 // Scenes: board | reader | judge | expert | plenum | bakery | besetzung |
-//         gameover | gameover-loss
+//         gameover | gameover-loss | timeline (the trainer's personal
+//         timeline over a 40-moment fixture; `&q=<id>` focuses, `&empty=1`)
 
 const NAMES = ["Mantas", "Anna", "Lena"];
 const SOURCE = createFixtureQuestionSource(30);
@@ -172,6 +174,7 @@ export default function QuiztopiaPreview() {
   }
 
   const sceneName = params.get("scene") ?? "board";
+  if (sceneName === "timeline") return <TimelinePreview />;
   const scene = SCENES[sceneName] ?? (SCENES.board as Scene);
   const gs = scene.build();
   const seatParam = params.get("seat");

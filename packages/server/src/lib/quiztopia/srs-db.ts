@@ -16,6 +16,7 @@
 // arrived after a newer one), and a table-game answer while the member has
 // not opted into `gameReviewsAffectSrs`.
 
+import { QUESTIONS_PER_SET } from "@boardgames/core/games/quiztopia/ids";
 import {
   applyReview,
   daysBetween,
@@ -354,6 +355,7 @@ const SettingsJsonSchema = QuiztopiaSettingsSchema.pick({
   includeLeeches: true,
   gameReviewsAffectSrs: true,
   newCardOrder: true,
+  newSetsPerDay: true,
 });
 
 const SettingsRowSchema = z.object({
@@ -387,6 +389,7 @@ export async function writeSettings(
       includeLeeches: settings.includeLeeches,
       gameReviewsAffectSrs: settings.gameReviewsAffectSrs,
       newCardOrder: settings.newCardOrder,
+      newSetsPerDay: settings.newSetsPerDay,
     }),
   );
   await db.execute({
@@ -401,7 +404,32 @@ export async function writeSettings(
   });
 }
 
-/** The daily new-card cap for category `n`: the per-category override or the default. */
+/**
+ * The daily new-QUESTION cap for category `n`. Whole-set mode budgets in
+ * articles (`newSetsPerDay` × five questions); originals-first mode in
+ * questions (the per-category override, else `newPerDay`).
+ */
 export function newPerDayFor(settings: QuiztopiaSettings, n: number): number {
+  if (settings.newCardOrder === "sets") return settings.newSetsPerDay * QUESTIONS_PER_SET;
   return settings.newPerDayByCategory[String(n)] ?? settings.newPerDay;
+}
+
+/** Wipes the user's schedule, review history and wiki reads; settings stay. */
+export async function resetProgress(
+  db: Client,
+  userId: string,
+): Promise<{ states: number; reviews: number; reads: number }> {
+  const [states, reviews, reads] = await db.batch(
+    [
+      { sql: "DELETE FROM quiztopia_srs WHERE user_id = ?", args: [userId] },
+      { sql: "DELETE FROM quiztopia_reviews WHERE user_id = ?", args: [userId] },
+      { sql: "DELETE FROM quiztopia_wiki_reads WHERE user_id = ?", args: [userId] },
+    ],
+    "write",
+  );
+  return {
+    states: states.rowsAffected,
+    reviews: reviews.rowsAffected,
+    reads: reads.rowsAffected,
+  };
 }
