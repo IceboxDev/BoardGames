@@ -280,6 +280,19 @@ export const PURCHASES: readonly PurchaseRecord[] = [
         sourceUrl:
           "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown/updates/23",
       },
+      {
+        id: "old-kings-crown-all-in-e05",
+        occurredOn: "2026-09-18",
+        type: "campaign-update",
+        title: "Songs of Home development continues — first new Kingdom Cards revealed",
+        details:
+          "Four new Songs of Home Kingdom Cards (Lord of Relics, Dust-Drowned Hall, House of " +
+          "the Hidden Eaves, Restless Cartographers) and a Council of Secrets were previewed, " +
+          "all still subject to change; a public Tabletop Simulator build is on Discord. A " +
+          '"BIG" Annulet update is next; no change to the 2027 add-on wave.',
+        sourceUrl:
+          "https://gamefound.com/en/projects/eerie-idol-games/the-old-kings-crown/updates/24",
+      },
     ],
   },
   {
