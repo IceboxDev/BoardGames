@@ -54,7 +54,11 @@ export type ActivityType =
   // Quiztopia trainer: first trainer review of a local date; settings saved.
   | "quiztopia-train"
   | "quiztopia-settings"
-  | "quiztopia-reset";
+  | "quiztopia-reset"
+  // World Geography trainer: the same three.
+  | "geography-train"
+  | "geography-settings"
+  | "geography-reset";
 
 /** Insert one activity row. Never throws; never awaited by callers. */
 export function logActivity(

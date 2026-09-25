@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { groupForPresentation } from "../games/families";
 import { games } from "../games/registry";
 import { isPlayable } from "../games/types";
@@ -17,6 +18,7 @@ const EAGER_ROW = 4;
 
 export default function GameMenu() {
   const { isAdmin } = useCurrentUser();
+  const navigate = useNavigate();
   const [filters, setFilters] = useState<GameFilters>(EMPTY_FILTERS);
 
   // Admins browse the full catalog (incl. coming-soon entries); everyone
@@ -38,6 +40,15 @@ export default function GameMenu() {
 
   return (
     <div className="flex h-full flex-col bg-grid">
+      {/* Solo trainers that aren't a board game's own practice mode. */}
+      <div className="flex shrink-0 flex-wrap items-center gap-2 px-4 pt-3 sm:px-8 lg:px-12">
+        <span className="text-2xs font-semibold uppercase tracking-label text-fg-muted">
+          Trainers
+        </span>
+        <Button variant="secondary" size="sm" onClick={() => navigate("/trainer/geography")}>
+          World Geography
+        </Button>
+      </div>
       {base.length > 0 && (
         <div className="shrink-0 px-4 py-3 sm:px-8 lg:px-12">
           <GameLibraryFilters

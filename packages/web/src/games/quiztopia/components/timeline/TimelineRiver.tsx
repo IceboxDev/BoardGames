@@ -126,27 +126,27 @@ function TimelineRiverImpl({ layout, wide, lang, cardHeight, focusId, onSelect }
       })}
 
       {/* Pins */}
-      {layout.items.map(({ item, y, side }) => {
+      {layout.items.map(({ item, y, cardY, side }) => {
         const d = districtByN(item.n);
         const focused = item.questionId === focusId;
         const label = lang === "de" ? item.event.labelDe : item.event.labelEn;
         const date = formatTimelineDate(item.event, lang);
         return (
           <div key={item.questionId}>
-            <span
-              aria-hidden="true"
-              className="absolute h-px bg-line transition-[top] duration-300 motion-reduce:transition-none"
+            <Connector
+              y={y}
+              cardY={cardY}
               style={
                 wide
                   ? side === "left"
                     ? {
-                        top: y,
                         left: `calc(50% - ${gutter / 2 + CARD_GAP}px)`,
                         width: CARD_GAP + gutter / 2,
                       }
-                    : { top: y, left: "50%", width: CARD_GAP + gutter / 2 }
-                  : { top: y, left: axis, width: CARD_GAP }
+                    : { left: "50%", width: CARD_GAP + gutter / 2 }
+                  : { left: axis, width: CARD_GAP }
               }
+              fromRight={wide && side === "left"}
             />
             <span
               aria-hidden="true"
@@ -183,7 +183,7 @@ function TimelineRiverImpl({ layout, wide, lang, cardHeight, focusId, onSelect }
                   : "border-dashed border-line-strong bg-surface-950/80 hover:bg-surface-900",
                 focused && "ring-2 ring-accent-400/70 shadow-glow-accent",
               )}
-              style={{ top: y - DOT_OFFSET, height: cardHeight - 8, ...cardBox(side) }}
+              style={{ top: cardY - DOT_OFFSET, height: cardHeight - 8, ...cardBox(side) }}
             >
               <span className="flex min-w-0 items-center gap-1.5">
                 <BuildingGlyph name={d.building} lit={item.known} size={11} />
@@ -215,3 +215,44 @@ function TimelineRiverImpl({ layout, wide, lang, cardHeight, focusId, onSelect }
 }
 
 export const TimelineRiver = memo(TimelineRiverImpl);
+
+/**
+ * The line from a dot on the axis to its card: straight when the card sits
+ * level with its dot, an S-curve when neighbours pushed the card away.
+ */
+function Connector({
+  y,
+  cardY,
+  style,
+  fromRight,
+}: {
+  y: number;
+  cardY: number;
+  style: CSSProperties;
+  /** The axis is on the box's right (a left-hand card). */
+  fromRight: boolean;
+}) {
+  const top = Math.min(y, cardY) - 1;
+  const h = Math.abs(cardY - y) + 2;
+  // viewBox units: x 0..100 across the box, y 0..h px.
+  const [x0, x1] = fromRight ? [100, 0] : [0, 100];
+  const y0 = y - top;
+  const y1 = cardY - top;
+  return (
+    <svg
+      aria-hidden="true"
+      className="pointer-events-none absolute overflow-visible text-line-strong transition-[top,height] duration-300 motion-reduce:transition-none"
+      style={{ ...style, top, height: h }}
+      viewBox={`0 0 100 ${h}`}
+      preserveAspectRatio="none"
+    >
+      <path
+        d={`M ${x0} ${y0} C 50 ${y0} 50 ${y1} ${x1} ${y1}`}
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={1}
+        vectorEffect="non-scaling-stroke"
+      />
+    </svg>
+  );
+}

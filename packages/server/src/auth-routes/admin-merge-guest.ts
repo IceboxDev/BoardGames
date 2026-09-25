@@ -116,6 +116,10 @@ export const GUEST_MERGE_COVERAGE = {
     "quiztopia_reviews.user_id",
     "quiztopia_settings.user_id",
     "quiztopia_wiki_reads.user_id",
+    // Trainer decks (World Geography, …): same reasoning.
+    "trainer_srs.user_id",
+    "trainer_reviews.user_id",
+    "trainer_settings.user_id",
   ],
 } as const;
 

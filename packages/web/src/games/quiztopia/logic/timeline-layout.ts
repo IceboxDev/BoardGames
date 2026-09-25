@@ -22,13 +22,13 @@ import type { TimelinePin } from "@boardgames/core/protocol";
 // The personal timeline as data: pins (what the member has studied) joined
 // with the content's event index, then laid out down a vertical river.
 //
-// The layout starts from the piecewise display scale (`timelineScale`:
-// deep time compressed, recent centuries stretched) and then pushes things
-// apart where they would collide — a card never overlaps the one above it on
-// its side, two dots never sit closer than `minStep`, and an era header gets
-// its own row. Era boundaries and dots are both anchors of one monotonic
-// key → y map (`yOf`), so an interval's bar ends exactly where its end date
-// sits among the stretched pins. Pure, so it is tested without a DOM.
+// The layout gives every era a share of the piecewise display scale
+// (`timelineScale`: deep time compressed, recent centuries stretched),
+// collapses eras without pins, and grows an era until its cards fit. Inside
+// an era the dots sit where their dates fall, so near events look near;
+// the cards are then placed beside their dots as closely as the cards
+// around them allow, joined by a connector when pushed. Pure, so it is
+// tested without a DOM.
 
 export interface TimelineText {
   en: string;
@@ -142,7 +142,7 @@ export const DEFAULT_LAYOUT: LayoutOptions = {
   columns: 2,
   cardHeight: 68,
   gap: 10,
-  minStep: 26,
+  minStep: 12,
   eraHeader: 44,
   baseHeight: 1400,
   maxLanes: 5,
@@ -151,8 +151,10 @@ export const DEFAULT_LAYOUT: LayoutOptions = {
 
 export interface LaidOutItem {
   item: TimelineItem;
-  /** The dot's (and the card's top-centre) y. */
+  /** The dot's y: where the date sits on the axis. */
   y: number;
+  /** The card's anchor y (its connector end); equals `y` unless neighbours pushed it. */
+  cardY: number;
   side: Side;
 }
 
@@ -177,39 +179,41 @@ export interface TimelineLayout {
   spans: LaidOutSpan[];
   lanes: number;
   height: number;
-  /** Monotonic key → y through every anchor. */
+  /** Monotonic key → y (the dots' scale). */
   yOf: (key: number) => number;
 }
 
-interface Anchor {
-  key: number;
-  y: number;
-}
-
-/** Piecewise-linear through sorted anchors; beyond the ends the bare scale continues. */
-function interpolator(anchors: readonly Anchor[], base: (key: number) => number) {
-  return (key: number): number => {
-    if (anchors.length === 0) return base(key);
-    const first = anchors[0];
-    const last = anchors[anchors.length - 1];
-    if (key <= first.key) return first.y - (base(first.key) - base(key));
-    if (key >= last.key) return last.y + (base(key) - base(last.key));
-    let lo = 0;
-    let hi = anchors.length - 1;
-    while (hi - lo > 1) {
-      const mid = (lo + hi) >> 1;
-      if (anchors[mid].key <= key) lo = mid;
-      else hi = mid;
+/**
+ * Positions as close as possible (least squares) to `targets` (ascending)
+ * while keeping `step` apart and inside [lo, hi]: shift out the steps,
+ * isotonic regression (pool adjacent violators), clamp, shift back.
+ */
+export function spreadApart(
+  targets: readonly number[],
+  step: number,
+  lo: number,
+  hi: number,
+): number[] {
+  const n = targets.length;
+  const blocks: { sum: number; count: number }[] = [];
+  for (let i = 0; i < n; i++) {
+    blocks.push({ sum: targets[i] - i * step, count: 1 });
+    while (blocks.length > 1) {
+      const b = blocks[blocks.length - 1];
+      const a = blocks[blocks.length - 2];
+      if (a.sum / a.count <= b.sum / b.count) break;
+      a.sum += b.sum;
+      a.count += b.count;
+      blocks.pop();
     }
-    const a = anchors[lo];
-    const b = anchors[hi];
-    if (b.key === a.key) return a.y;
-    // Interpolate in scale space, so the stretch follows the era's shape.
-    const ta = base(a.key);
-    const tb = base(b.key);
-    const t = tb === ta ? (key - a.key) / (b.key - a.key) : (base(key) - ta) / (tb - ta);
-    return a.y + t * (b.y - a.y);
-  };
+  }
+  const top = Math.max(lo, hi - (n - 1) * step);
+  const out: number[] = [];
+  for (const b of blocks) {
+    const v = Math.min(Math.max(b.sum / b.count, lo), top);
+    for (let k = 0; k < b.count; k++) out.push(v + out.length * step);
+  }
+  return out;
 }
 
 export function layoutTimeline(
@@ -218,95 +222,130 @@ export function layoutTimeline(
 ): TimelineLayout {
   const o: LayoutOptions = { ...DEFAULT_LAYOUT, ...opts };
   const sorted = sortItems(items);
-
-  const counts = new Map<EraId, number>();
-  for (const it of sorted) counts.set(it.era, (counts.get(it.era) ?? 0) + 1);
-
-  // The bare scale, with every era that holds no pin squeezed to a short band
-  // (a sparse timeline would otherwise be mostly empty river); eras with pins
-  // keep their proportions. Stays monotonic, so bars can still cross them.
+  const pitch = o.cardHeight + o.gap;
   const bare = (key: number) => timelineScale(key) * o.baseHeight;
-  const bands = ERAS.map((era, e) => {
-    const from = bare(era.from);
-    const to = e === ERAS.length - 1 ? bare(era.to) : bare(ERAS[e + 1].from);
-    const length = counts.get(era.id) ? to - from : Math.min(to - from, o.emptyEraHeight);
-    return { from, to, length, start: 0 };
-  });
-  for (let e = 1; e < bands.length; e++) {
-    bands[e].start = bands[e - 1].start + bands[e - 1].length;
-  }
-  const base = (key: number): number => {
-    const b = bare(key);
-    let e = bands.length - 1;
-    while (e > 0 && b < bands[e].from) e--;
-    const band = bands[e];
-    const span = band.to - band.from;
-    const t = span > 0 ? (b - band.from) / span : 0;
-    return band.start + t * band.length;
-  };
+  const present = nowKey();
 
+  // Era by era down the river. An era without pins collapses to a short
+  // band; one with pins keeps its share of the bare scale, grown until its
+  // cards fit. Inside it the dots sit where their dates fall — linear in the
+  // era's own scale, so the gaps between them mean something — and only
+  // then do the cards find room beside them, as close to their dots as the
+  // cards above and below allow.
   const laid: LaidOutItem[] = [];
-  const eraYs: number[] = [];
-  const anchors: Anchor[] = [];
-  const sideBottom: Record<Side, number> = { left: 0, right: 0 };
-  let lastDot = Number.NEGATIVE_INFINITY;
-  let floor = 0; // nothing may start above this (the last era header's row)
-  let nextSide: Side = "right";
+  const eras: LaidOutEra[] = [];
+  // Per era: its keys from `from`, bare-scale range b0..b1 drawn over y0..y1.
+  const maps: { from: number; b0: number; b1: number; y0: number; y1: number }[] = [];
+  let y = 0;
   let i = 0;
-
   for (let e = 0; e < ERAS.length; e++) {
     const era = ERAS[e];
-    // The era's header row: below every card so far and below its bare-scale spot.
-    const y = Math.max(
-      e === 0 ? 0 : base(era.from),
-      floor,
-      sideBottom.left + o.gap,
-      sideBottom.right + o.gap,
-      lastDot + o.minStep,
-    );
-    eraYs.push(y);
-    anchors.push({ key: era.from, y });
-    floor = y + o.eraHeader;
     const eraEnd = ERAS[e + 1]?.from ?? Number.POSITIVE_INFINITY;
-    while (i < sorted.length && sorted[i].parsed.startKey < eraEnd) {
-      const it = sorted[i];
-      let side: Side = "right";
-      if (o.columns === 2) {
-        // The side with more room wins; a tie alternates.
-        if (sideBottom.left < sideBottom.right) side = "left";
-        else if (sideBottom.right < sideBottom.left) side = "right";
-        else side = nextSide;
-        nextSide = side === "left" ? "right" : "left";
-      }
-      const sameSide =
-        o.columns === 2 ? sideBottom[side] : Math.max(sideBottom.left, sideBottom.right);
-      const top = Math.max(
-        base(it.parsed.startKey),
-        floor,
-        sameSide + (sameSide > 0 ? o.gap : 0),
-        lastDot + o.minStep,
-      );
-      laid.push({ item: it, y: top, side });
-      sideBottom[side] = top + o.cardHeight;
-      if (o.columns === 1) sideBottom.left = sideBottom.right = top + o.cardHeight;
-      lastDot = top;
-      const prev = anchors[anchors.length - 1];
-      // Equal keys keep the first anchor so the map stays a function.
-      if (prev.key < it.parsed.startKey) anchors.push({ key: it.parsed.startKey, y: top });
-      i++;
+    const mine: TimelineItem[] = [];
+    while (i < sorted.length && sorted[i].parsed.startKey < eraEnd) mine.push(sorted[i++]);
+    const full = bare(e === ERAS.length - 1 ? era.to : eraEnd) - bare(era.from);
+
+    if (mine.length === 0) {
+      const length = Math.min(full, o.emptyEraHeight);
+      const b0 = bare(era.from);
+      maps.push({ from: era.from, b0, b1: b0 + full, y0: y, y1: y + length });
+      eras.push({ era, y, bottom: y + length, count: 0 });
+      y += length;
+      continue;
     }
+
+    // The era's scale runs over what it holds — its pins, the ends of bars
+    // that stop inside it, and today in the running era — so the gaps
+    // between its pins fill the band instead of a sliver of it.
+    const keys = mine.map((it) => it.parsed.startKey);
+    for (const it of sorted) {
+      const k = it.parsed.endKey;
+      if (it.interval && k >= era.from && k < eraEnd) keys.push(k);
+    }
+    if (present >= era.from && present < eraEnd) keys.push(present);
+    const from = bare(Math.min(...keys));
+    const span = bare(Math.max(...keys)) - from;
+    const frac = (key: number) =>
+      span > 0 ? Math.min(Math.max((bare(key) - from) / span, 0), 1) : 0;
+
+    // In the running era today is the scale's last point; the cards stay
+    // above it so the present-day marker has its own row.
+    const running = present >= era.from && present < eraEnd;
+    const todayRoom = running ? 12 : 0;
+    const perSide = Math.ceil(mine.length / o.columns);
+    const length = Math.max(
+      full,
+      o.eraHeader + perSide * pitch + todayRoom,
+      o.eraHeader + (mine.length - 1) * o.minStep + o.cardHeight + todayRoom,
+    );
+    const top = y + o.eraHeader;
+    const bottom = y + length - o.cardHeight - todayRoom;
+    const dotBottom = running ? y + length - todayRoom : bottom;
+    maps.push({ from: era.from, b0: from, b1: from + span, y0: top, y1: dotBottom });
+
+    const dots = spreadApart(
+      mine.map((it) => top + frac(it.parsed.startKey) * (dotBottom - top)),
+      o.minStep,
+      top,
+      dotBottom,
+    );
+
+    // Sides: whichever lets the card sit nearer its dot, packing forward;
+    // a tie alternates. Neither side takes more than its share, so the era
+    // is always tall enough.
+    const sides: Side[] = [];
+    if (o.columns === 1) {
+      for (let k = 0; k < mine.length; k++) sides.push("right");
+    } else {
+      const next: Record<Side, number> = { left: top, right: top };
+      const count: Record<Side, number> = { left: 0, right: 0 };
+      let alternate: Side = e % 2 === 0 ? "right" : "left";
+      for (const d of dots) {
+        const miss = (s: Side) => Math.max(0, next[s] - d);
+        let side: Side =
+          miss("left") < miss("right")
+            ? "left"
+            : miss("right") < miss("left")
+              ? "right"
+              : alternate;
+        if (count[side] >= perSide) side = side === "left" ? "right" : "left";
+        alternate = side === "left" ? "right" : "left";
+        next[side] = Math.max(next[side], d) + pitch;
+        count[side]++;
+        sides.push(side);
+      }
+    }
+    const cardYs: number[] = new Array(mine.length);
+    for (const side of ["left", "right"] as const) {
+      const idx = sides.flatMap((s, k) => (s === side ? [k] : []));
+      const placed = spreadApart(
+        idx.map((k) => dots[k]),
+        pitch,
+        top,
+        bottom,
+      );
+      idx.forEach((k, j) => {
+        cardYs[k] = placed[j];
+      });
+    }
+    mine.forEach((it, k) => {
+      laid.push({ item: it, y: dots[k], cardY: cardYs[k], side: sides[k] });
+    });
+
+    eras.push({ era, y, bottom: y + length, count: mine.length });
+    y += length;
   }
+  const height = y;
 
-  const contentBottom = Math.max(sideBottom.left, sideBottom.right, floor, lastDot) + o.gap;
-  const yOf = interpolator(anchors, base);
-  const height = Math.max(contentBottom, yOf(ERAS[ERAS.length - 1].to - 1e-6) + o.gap);
-
-  const eras: LaidOutEra[] = ERAS.map((era, e) => ({
-    era,
-    y: eraYs[e],
-    bottom: eraYs[e + 1] ?? height,
-    count: counts.get(era.id) ?? 0,
-  }));
+  // Key → y: each era's own linear map (clamped at its edges), monotonic
+  // because every era's range lies below the one before.
+  const yOf = (key: number): number => {
+    let e = maps.length - 1;
+    while (e > 0 && key < maps[e].from) e--;
+    const m = maps[e];
+    const t = m.b1 > m.b0 ? Math.min(Math.max((bare(key) - m.b0) / (m.b1 - m.b0), 0), 1) : 0;
+    return m.y0 + t * (m.y1 - m.y0);
+  };
 
   // Interval bars: greedy lanes, the first whose previous bar has ended.
   const laneEnds: number[] = [];

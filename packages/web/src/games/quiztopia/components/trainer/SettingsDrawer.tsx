@@ -31,24 +31,6 @@ type Props = {
 
 const STEPPER_DEBOUNCE_MS = 400;
 
-export function SettingsIcon({ className = "h-4 w-4" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 16 16"
-      className={className}
-      fill="none"
-      stroke="currentColor"
-      strokeWidth={1.6}
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      aria-hidden="true"
-    >
-      <circle cx="8" cy="8" r="2.2" />
-      <path d="M8 1.5v2M8 12.5v2M1.5 8h2M12.5 8h2M3.4 3.4l1.4 1.4M11.2 11.2l1.4 1.4M12.6 3.4l-1.4 1.4M4.8 11.2l-1.4 1.4" />
-    </svg>
-  );
-}
-
 export function SettingsDrawer({ onClose }: Props) {
   const { settings, loaded, save, saving, saveError } = useQuiztopiaSettings();
   const ids = { game: useId(), leech: useId() };

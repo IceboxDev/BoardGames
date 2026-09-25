@@ -127,6 +127,11 @@ const router = createBrowserRouter(
       <Route element={<AuthLayout mode="online" />}>
         <Route element={<Layout />}>
           <Route path="games" lazy={page(() => import("./components/GameMenu"))} />
+          {/* Quiz trainers beyond Quiztopia's own (reached from its hub). */}
+          <Route
+            path="trainer/geography/*"
+            lazy={page(() => import("./trainers/geography/GeographyTrainer"))}
+          />
           <Route
             path="play/:slug"
             lazy={named(() => import("./hooks/useGameShell"), "GameShellLayout")}
@@ -258,14 +263,16 @@ export default function App() {
         maxAge: 24 * 60 * 60 * 1000,
         buster: queryPersistBuster,
         // The greeting queue must never hydrate from disk: a nag popup has to
-        // re-evaluate against the server on every app open. The Quiztopia
-        // trainer is date-keyed and its content chunks are already cached by
-        // the browser, so persisting it would only replay a stale "today".
+        // re-evaluate against the server on every app open. The Quiztopia and
+        // World Geography trainers are date-keyed and their content chunks are
+        // already cached by the browser, so persisting them would only replay
+        // a stale "today".
         dehydrateOptions: {
           shouldDehydrateQuery: (q) =>
             defaultShouldDehydrateQuery(q) &&
             q.queryKey[0] !== "greetings" &&
-            q.queryKey[0] !== "quiztopia",
+            q.queryKey[0] !== "quiztopia" &&
+            q.queryKey[0] !== "geography",
         },
       }}
     >

@@ -33,7 +33,9 @@
     "./protocol": "./src/protocol/index.ts",
     "./protocol/*": "./src/protocol/*.ts",
     "./purchases/*": "./src/purchases/*.ts",
-    "./tournament/*": "./src/tournament/*.ts"
+    "./tournament/*": "./src/tournament/*.ts",
+    "./trainers/*": "./src/trainers/*.ts",
+    "./trainers/geography/*": "./src/trainers/geography/*.ts"
   },
   "scripts": {
     "typecheck": "tsc -b --noEmit",

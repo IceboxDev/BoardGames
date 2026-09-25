@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BookIcon, FlameIcon, PinIcon } from "../../../../components/icons";
+import { BookIcon, FlameIcon, GearIcon, PinIcon } from "../../../../components/icons";
 import {
   Badge,
   Button,
@@ -28,7 +28,7 @@ import { Skyline } from "../common/Skyline";
 import { CategoryTile } from "./CategoryTile";
 import { RecentMisses } from "./RecentMisses";
 import { RetentionPanel } from "./RetentionPanel";
-import { SettingsDrawer, SettingsIcon } from "./SettingsDrawer";
+import { SettingsDrawer } from "./SettingsDrawer";
 import { StudyHeatmap } from "./StudyHeatmap";
 import { TrainerScreen } from "./TrainerScreen";
 
@@ -179,7 +179,7 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
               size="sm"
               aria-label="Trainer settings"
               onClick={() => setSettingsOpen(true)}
-              icon={<SettingsIcon className="h-4 w-4" />}
+              icon={<GearIcon className="h-4 w-4" />}
             />
             <Button variant="link" onClick={() => navigate("/play/quiztopia/rules")}>
               How to play

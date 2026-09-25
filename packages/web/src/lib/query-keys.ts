@@ -68,6 +68,10 @@ export const qk = {
     ["quiztopia", "search", q, lang, category] as const,
   quiztopiaWikiReads: () => ["quiztopia", "wiki-reads"] as const,
   quiztopiaRecentMisses: () => ["quiztopia", "recent-misses"] as const,
+  // World Geography trainer. Root "geography" is excluded from the persister
+  // like "quiztopia": the overview is date-bound.
+  geographyOverview: (today: string) => ["geography", "overview", today] as const,
+  geographyHistory: (days: number, today: string) => ["geography", "history", days, today] as const,
   quiztopiaContent: (kind: "questions" | "articles" | "titles" | "timeline", cardId: string) =>
     ["quiztopia", "content", kind, cardId] as const,
 } as const;

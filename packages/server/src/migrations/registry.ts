@@ -47,6 +47,7 @@ import { purchaseArrivals } from "./0039-purchase-arrivals.ts";
 import { adminAwayDays } from "./0040-admin-away-days.ts";
 import { privateNights } from "./0041-private-nights.ts";
 import { quiztopiaTrainer } from "./0042-quiztopia-trainer.ts";
+import { trainerDecks } from "./0043-trainer-decks.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -92,6 +93,7 @@ export const migrations: readonly Migration[] = [
   adminAwayDays,
   privateNights,
   quiztopiaTrainer,
+  trainerDecks,
 ];
 
 /**

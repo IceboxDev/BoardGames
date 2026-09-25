@@ -1,7 +1,13 @@
 import type { TimelineIndex } from "@boardgames/core/games/quiztopia/content-types";
 import type { TimelineEvent } from "@boardgames/core/games/quiztopia/timeline";
 import { describe, expect, it } from "vitest";
-import { joinPins, layoutTimeline, type TimelineItem, toTimelineItem } from "./timeline-layout";
+import {
+  joinPins,
+  layoutTimeline,
+  spreadApart,
+  type TimelineItem,
+  toTimelineItem,
+} from "./timeline-layout";
 
 const NOW = { year: 2026, month: 9, day: 24 };
 
@@ -75,7 +81,7 @@ describe("layoutTimeline", () => {
     const ys = layout.items.map((l) => l.y);
     for (let i = 1; i < ys.length; i++) expect(ys[i] - ys[i - 1]).toBeGreaterThanOrEqual(20);
     for (const side of ["left", "right"] as const) {
-      const mine = layout.items.filter((l) => l.side === side).map((l) => l.y);
+      const mine = layout.items.filter((l) => l.side === side).map((l) => l.cardY);
       for (let i = 1; i < mine.length; i++)
         expect(mine[i] - mine[i - 1]).toBeGreaterThanOrEqual(68);
     }
@@ -87,7 +93,7 @@ describe("layoutTimeline", () => {
   it("stacks every card in one column on phones", () => {
     const layout = layoutTimeline(items, { columns: 1, cardHeight: 60, gap: 8 });
     expect(layout.items.every((l) => l.side === "right")).toBe(true);
-    const ys = layout.items.map((l) => l.y);
+    const ys = layout.items.map((l) => l.cardY);
     for (let i = 1; i < ys.length; i++) expect(ys[i] - ys[i - 1]).toBeGreaterThanOrEqual(68);
   });
 
@@ -130,6 +136,36 @@ describe("layoutTimeline", () => {
     const keys = [-1e9, -5000, -44, 500, 1600, 1850, 1900, 1990, 2020];
     const ys = keys.map(layout.yOf);
     for (let i = 1; i < ys.length; i++) expect(ys[i]).toBeGreaterThanOrEqual(ys[i - 1]);
+  });
+
+  it("places dots in an era by their dates, and cards as near their dots as they fit", () => {
+    const layout = layoutTimeline([
+      item("c001-s01-q0", "1876-03-07"),
+      item("c001-s01-q1", "1876-03-10"),
+      item("c001-s01-q2", "1880"),
+      item("c001-s01-q3", "1890"),
+      item("c001-s01-q4", "1899"),
+    ]);
+    const y = (qid: string) => layout.items.find((l) => l.item.questionId === qid)?.y ?? 0;
+    // Three days apart: only the minimum step; ten and nine years: far more.
+    expect(y("c001-s01-q1") - y("c001-s01-q0")).toBe(12);
+    const decade = y("c001-s01-q3") - y("c001-s01-q2");
+    expect(decade).toBeGreaterThan(40);
+    expect((y("c001-s01-q4") - y("c001-s01-q3")) / decade).toBeCloseTo(0.9, 1);
+    // A card whose neighbours leave room sits level with its dot.
+    const last = layout.items[layout.items.length - 1];
+    expect(last.cardY).toBe(last.y);
+    for (const l of layout.items) {
+      const band = layout.eras.find((e) => e.era.id === l.item.era);
+      expect(l.cardY).toBeGreaterThanOrEqual((band?.y ?? 0) + 44);
+      expect(l.cardY + 68).toBeLessThanOrEqual(band?.bottom ?? 0);
+    }
+  });
+
+  it("spreads positions apart with the least movement", () => {
+    expect(spreadApart([0, 0, 0], 10, -100, 100)).toEqual([-10, 0, 10]);
+    expect(spreadApart([0, 50, 51], 10, 0, 100)).toEqual([0, 45.5, 55.5]);
+    expect(spreadApart([95, 99], 10, 0, 100)).toEqual([90, 100]);
   });
 
   it("lays out an empty timeline as seven compact bands", () => {

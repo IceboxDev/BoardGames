@@ -378,3 +378,40 @@ describe("categoryMastery", () => {
     expect(categoryMastery([], 0)).toEqual({ seen: 0, known: 0, mature: 0, mastery: 0 });
   });
 });
+
+describe("applyReview — hard and easy", () => {
+  const at = { localDate: "2026-09-25", now: "2026-09-25T10:00:00Z" };
+  const review = (intervalDays: number, ease = 2.5) => ({
+    ...newState("x", "2026-09-01"),
+    state: "review" as const,
+    intervalDays,
+    ease,
+    reps: 5,
+  });
+
+  it("keeps a shaky new or learning card learning, due tomorrow", () => {
+    const s = applyReview(newState("x", at.localDate), "hard", at);
+    expect(s).toMatchObject({ state: "learning", intervalDays: 1, dueDate: "2026-09-26" });
+    const again = applyReview(s, "hard", at);
+    expect(again.state).toBe("learning");
+  });
+
+  it("grows a review slowly on hard and lowers the ease", () => {
+    const s = applyReview(review(10), "hard", at);
+    expect(s).toMatchObject({ state: "review", intervalDays: 12, ease: 2.35 });
+    expect(applyReview(review(1, 1.3), "hard", at)).toMatchObject({ intervalDays: 2, ease: 1.3 });
+  });
+
+  it("graduates an easy new card straight to four days", () => {
+    const s = applyReview(newState("x", at.localDate), "easy", at);
+    expect(s).toMatchObject({ state: "review", intervalDays: 4, dueDate: "2026-09-29" });
+  });
+
+  it("grows a review beyond good on easy and raises the ease", () => {
+    const good = applyReview(review(10), "good", at);
+    const easy = applyReview(review(10), "easy", at);
+    expect(easy.intervalDays).toBe(33);
+    expect(easy.intervalDays).toBeGreaterThan(good.intervalDays);
+    expect(easy.ease).toBe(2.65);
+  });
+});

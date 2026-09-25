@@ -44,6 +44,7 @@ import { calendarRsvpsRoutes } from "./auth-routes/calendar-rsvps.ts";
 import { collectionRoutes } from "./auth-routes/collection.ts";
 import { collectionVocabRoutes } from "./auth-routes/collection-vocab.ts";
 import { dndCampaignRoutes } from "./auth-routes/dnd-campaigns.ts";
+import { geographyRoutes } from "./auth-routes/geography.ts";
 import { greetingsRoutes } from "./auth-routes/greetings.ts";
 import { matchHistoryRoutes } from "./auth-routes/match-history.ts";
 import { profileRoutes } from "./auth-routes/profile.ts";
@@ -348,6 +349,20 @@ app.use(
   rateLimit({ name: "quiztopia-write", windowMs: 60_000, max: 120, skipSafeMethods: true }),
 );
 app.route("/api/quiztopia", quiztopiaRoutes);
+
+// World Geography trainer (the first of the generic trainer decks): gated
+// and metered exactly like Quiztopia's trainer.
+app.use(
+  "/api/trainers/geography/*",
+  requireAuth,
+  requireOnline,
+  bodyLimit({
+    maxSize: 256 * 1024,
+    onError: (c) => errorResponse(c, 413, "Body too large", "PAYLOAD_TOO_LARGE"),
+  }),
+  rateLimit({ name: "geography-write", windowMs: 60_000, max: 120, skipSafeMethods: true }),
+);
+app.route("/api/trainers/geography", geographyRoutes);
 
 // BGA bridge sessions (create / join-by-code / SSE spectate). Play-area
 // feature, gated like the games it mirrors.
