@@ -1020,6 +1020,78 @@ Every prompt includes the same style directive so the four images form a visuall
 
 ---
 
+## 128. Sidereal Confluence: Remastered Edition
+
+**File:** `packages/web/src/games/sidereal-confluence/assets/thumbnail.png`
+
+> A top-down view of a starship's round negotiation table under a dome of drifting nebulae, its surface crowded with glossy translucent trade cubes — small white, green, and brown cubes, larger blue, yellow, and black cubes, and a few shimmering octagonal ultratech tokens — heaped in careless piles and sliding between players mid-deal. Around the rim sit wildly different alien trading stations, each with its own row of converter cards showing arrows from input cubes to richer outputs: one station tended by a tentacled hand, one by a chitinous claw, one by a many-jointed robotic grip, one by a feathered talon. Several of those hands reach across the table at once, one offering a fistful of cubes, another sliding over a small silver ship token, a third pushing forward a face-down planet card as a promise. In the center, a ring of fresh colony and research cards waits to be bid on, surrounded by little stacks of ship tokens. The mood is bustling, galactic haggling — everyone needs something only someone else can make. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 129. Challengers! Beach Cup
+
+**File:** `packages/web/src/games/challengers-beach-cup/assets/thumbnail.png`
+
+> A top-down view of a sun-bleached beach tournament where rows of small match tables stand in the sand under striped parasols, each set with a long playmat and a tiny flag planted at its center. On the nearest table, two decks of chunky illustrated character cards face off — a sunglasses-wearing wizard, a grumpy cat on a pool float, a little green alien with a surfboard, a kraken in a lifeguard tower — and the top card of one deck has just been flipped to challenge the defender holding the flag, while beaten cards pile up on a bench area to the side. A fan of freshly drafted recruits waits beside the mat, and a shiny gold trophy cup rests on a stack of bright bracket tiles next to a bucket of seashell tokens. Around the edges, beach towels, flip-flops, a volleyball half-buried in sand, and turquoise surf foam frame the scene. The mood is sunny, cheeky tournament hype — quick matches, big upsets, and a trophy on the line. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 130. Ready Set Bet
+
+**File:** `packages/web/src/games/ready-set-bet/assets/thumbnail.png`
+
+> A top-down view of a 1920s racetrack betting hall where a long green-felt betting board stretches across the frame, its columns of wager spaces lined with gold trim and numbered by lane, running alongside a painted race track with nine narrow lanes. Colorful wooden horse tokens in nine jockey colors jostle mid-race along the track, the leaders pulling ahead toward the finish, while a pair of ivory dice tumbles across the felt beside them. From every edge, hands in suit cuffs and silk gloves slap round betting chips of different colors and values onto the board at once, some chips landing on the same space in a scramble. Stacks of paper money, a brass bell, a pair of binoculars, crumpled race programs, and a champagne coupe fill the corners. The background blurs into the warm haze of grandstands and hanging lamps. The mood is loud, gleeful, split-second gambling — bet now, before the horses cross the line. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 131. Feed the Kraken
+
+**File:** `packages/web/src/games/feed-the-kraken/assets/thumbnail.png`
+
+> A top-down view of a captain's chart table on the deck of a creaking pirate ship at night, lit by a swinging oil lantern. A weathered sea chart covers the table, a small wooden ship token sailing across its hex-marked waters between a calm blue harbor, a blood-red pirate cove, and a black whirlpool at the far edge where the sea darkens. Face-down navigation cards in blue, red, and yellow are passed in secret between gloved hands around the table, and one card is being slipped under the captain's hat as a guilty offering. Scattered around: a flintlock pistol, a coil of rope, a spyglass, a half-empty rum bottle, loyalty cards hidden under tricorne hats, and a guttering candle with strange cult symbols carved into its wax. Over the rail at one corner, a single enormous tentacle curls up out of the black water toward the table. The mood is paranoid seafaring mutiny — no one at the table knows who is steering the ship to its doom. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 132. Telestrations
+
+**File:** `packages/web/src/games/telestrations/assets/thumbnail.png`
+
+> A top-down view of a cluttered living-room coffee table during a laughing party game, where a ring of spiral-bound flip sketchbooks lies open, each page wiped slightly cloudy from dry-erase ink. The pages show a chain of drawings mutating as they pass around the table — a careful sketch of a cat on a skateboard becomes a lumpy dog on a surfboard, then a sausage on a wave, each scribble cruder and funnier than the last, with blank guessing strips between them left deliberately empty of any writing. Colored dry-erase markers with their caps chewed and scattered, a small sand timer running out, a few felt wiping cloths, and a single sketchbook mid-hand-off between two hands crossing in the center. At the edges: a bowl of popcorn, fizzing soda cups, a crumpled napkin, and a phone lying face-down. The mood is giddy, chaotic, and cheerful — the joy of a message gone wonderfully wrong. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 133. Cartographers
+
+**File:** `packages/web/src/games/cartographers/assets/thumbnail.png`
+
+> A top-down view of a royal surveyor's desk in a candlelit tower, where several parchment map sheets lie side by side, each an eleven-by-eleven grid of squares being filled in with colored pencils — clusters of green forest, red-roofed villages, golden farmland, blue lakes and rivers, and grey mountain peaks, with a few ancient ruin symbols dotted across the land. A neat stack of explore cards sits at the center, the top card showing a small polyomino terrain shape to copy, beside four sealed royal edict scrolls and a season card turning from spring toward summer. On one sheet, purple monster ambush shapes — goblin raiders and a lurking gnoll — have been scrawled in by a rival, crowding the edge of a village. Well-used colored pencils, a pencil sharpener with fresh shavings, a brass magnifying glass, a compass rose, and a small hourglass complete the scene. The mood is careful, competitive craftsmanship — every square drawn in pencil is permanent. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 134. Two Rooms and a Boom
+
+**File:** `packages/web/src/games/two-rooms-and-a-boom/assets/thumbnail.png`
+
+> A top-down cutaway view of two adjoining rooms at a crowded house party, split by a single open doorway, seen from above like a dollhouse. In each room, clusters of guests whisper in tight huddles, each holding a small role card pressed to their chest — a flash of a blue card here, a red card there, one card with a golden presidential seal, one with a lit bomb emblem kept carefully hidden. Two guests are mid-stride through the doorway, swapped as hostages, while a room leader in each space points at them with a stern look. A large vintage countdown clock ticks down on one wall, and scattered props — plastic cups, a knocked-over lamp, party streamers, an overturned chair — fill the corners. The lighting shifts from cool blue in one room to warm red in the other. The mood is frantic, whispered social chaos — someone in this house is the bomb, and the clock is running out. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 135. Bluff / Perudo
+
+**File:** `packages/web/src/games/perudo/assets/thumbnail.png`
+
+> A top-down view of a worn wooden cantina table at dusk, draped with a vivid hand-woven Andean textile in stripes of red, orange, gold, and teal. Around the table, six colorful leather dice cups sit upturned, each hiding a small hand of five dice, while one cup is lifted at the edge, a hand shielding its dice from view. In the center, one cup has just been flipped over to reveal a cluster of dice — several matching faces and a few wild star-faced aces — as the table checks a bold bid of how many sixes are out there. A few players' spare dice lie set aside after lost challenges, and one lonely cup at the edge holds its very last die. Around the table: glasses of pisco sour, a clay jug, a bowl of roasted corn kernels, a flickering oil lamp, and a folded poncho over a chair back. The mood is warm, sly, and loud — a room full of liars calling each other's bluff. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 136. One King One Crown
+
+**File:** `packages/web/src/games/one-king-one-crown/assets/thumbnail.png`
+
+> A top-down view of a torchlit royal banquet table in a medieval throne room, where a heavy golden crown rests on a crimson velvet cushion at the head of the table beside an ornate carved throne. Heaps of gold coins spill across the table in front of each seat, the biggest pile guarded by a row of face-down cards, one flipped at the corner to reveal a knight with raised shield and lance. Nobles' hands fan out ornate cards with gilded borders, while beneath the table's edge two hands secretly press their cards together in a whispered pact, a thin silver dagger engraved on the card between them. A goblet of spilled wine, a wax-sealed letter, a signet ring, and a knocked-over chess king complete the scene around the plates. The mood is opulent, conspiratorial, and double-crossing — every alliance lasts exactly as long as it pays. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
 # Background Image Prompts
 
 All backgrounds were generated with **ChatGPT (image generation)** on March 18, 2026.
