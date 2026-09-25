@@ -18,6 +18,8 @@ import { BAR, BAR_ACTIVE, CARD_EDGE, DATE_INK, DOT_FILL, DOT_RING } from "./tone
 
 const LANE_W = 6;
 const CARD_GAP = 14;
+/** Room the era header chip takes at the top of its band, px. */
+const ERA_HEADER_CLEARANCE = 48;
 
 type Props = {
   layout: TimelineLayout;
@@ -44,7 +46,13 @@ function TimelineRiverImpl({ layout, wide, lang, cardHeight, focusId, onSelect }
         : { left: `calc(50% + ${gutter / 2 + CARD_GAP}px)`, right: 0 }
       : { left: `${gutter + 6 + CARD_GAP}px`, right: 0 };
 
-  const now = layout.yOf(nowKey());
+  // Today's spot on the scale, kept clear of its era's header row (with empty
+  // eras collapsed, the 21st century is short and "now" sits right under it).
+  const nowRaw = layout.yOf(nowKey());
+  const nowBand = layout.eras.find((b) => nowRaw >= b.y && nowRaw < b.bottom);
+  const now = nowBand
+    ? Math.min(Math.max(nowRaw, nowBand.y + ERA_HEADER_CLEARANCE), nowBand.bottom - 6)
+    : nowRaw;
   const focusSpan = layout.spans.find((s) => s.item.questionId === focusId);
 
   return (
@@ -101,6 +109,8 @@ function TimelineRiverImpl({ layout, wide, lang, cardHeight, focusId, onSelect }
       {layout.spans.map((s) => {
         const d = districtByN(s.item.n);
         const active = s === focusSpan;
+        // A bar that runs to the present meets the (possibly nudged) marker.
+        const y1 = s.y1 >= nowRaw - 1 ? Math.max(s.y1, now) : s.y1;
         return (
           <div
             key={`bar-${s.item.questionId}`}
@@ -110,7 +120,7 @@ function TimelineRiverImpl({ layout, wide, lang, cardHeight, focusId, onSelect }
               active ? BAR_ACTIVE[d.tone] : BAR[d.tone],
               !s.item.known && !active && "opacity-60",
             )}
-            style={{ left: laneX(s.lane), top: s.y0, height: s.y1 - s.y0 }}
+            style={{ left: laneX(s.lane), top: s.y0, height: y1 - s.y0 }}
           />
         );
       })}
