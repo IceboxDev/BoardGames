@@ -489,6 +489,18 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "samples ordered; Lancashire and Birmingham in final proofing), manufacturing 0%.",
         sourceUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh/updates/44",
       },
+      {
+        id: "brass-pittsburgh-e06",
+        occurredOn: "2026-09-07",
+        type: "delay",
+        title: "Production start slips to September — freight and fulfilment unchanged",
+        details:
+          "The progress chart moves production from August to September 2026 (manufacturing " +
+          "still 0%) while keeping freight April 2027 and fulfilment summer 2027. Solo mode " +
+          "is in fine-tuning with a new playtest round; development 95%, art 91%, prepress " +
+          "72% with coin molds completed and a sample shipment in transit.",
+        sourceUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh/updates/45",
+      },
     ],
   },
   {
