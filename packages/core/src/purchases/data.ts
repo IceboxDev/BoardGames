@@ -1020,7 +1020,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       "free Gloomhaven Playing Cards deck ($12.99 value) added automatically at fulfilment. " +
       "In mass production since July 2026 (a different factory from the miniatures; ships " +
       "separately). Wave 4–5 shipping + taxes have NOT been charged yet — they hit when " +
-      "freight begins (~Sep/Oct 2026 per the standing timeline).",
+      "freight begins (ship loading mid/late Oct 2026 per the Sep '26 update).",
     events: [
       {
         id: "gloomhaven-festival-rpg-e01",
@@ -1048,6 +1048,17 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
       {
         id: "gloomhaven-festival-rpg-e03",
+        occurredOn: "2026-07-22",
+        type: "campaign-update",
+        title: "Mass production begins — all pre-production findings implemented",
+        details:
+          "Every pre-production sample finding was addressed, proofed and carried into mass " +
+          "production, putting the RPG in the manufacturing phase; the Core Card Set sample " +
+          "arrived. Focus shifts to the shipping plan while it is manufactured.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/48357",
+      },
+      {
+        id: "gloomhaven-festival-rpg-e04",
         occurredOn: "2026-08-11",
         type: "campaign-update",
         title: "Mass production underway — Gen Con showcase",
@@ -1057,7 +1068,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
         sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/49733",
       },
       {
-        id: "gloomhaven-festival-rpg-e04",
+        id: "gloomhaven-festival-rpg-e05",
         occurredOn: "2026-08-26",
         type: "delay",
         title: "Master proofing copies slip a couple of weeks (~Sep 15)",
@@ -1066,6 +1077,19 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "master-proofing-copy ready date to ~September 15; assembly begins after " +
           "approval, with an updated timeline promised in the next update.",
         sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/50655",
+      },
+      {
+        id: "gloomhaven-festival-rpg-e06",
+        occurredOn: "2026-09-15",
+        type: "delay",
+        title: "Production runs into October — ship loading mid/late October",
+        details:
+          "The official production sample was being built at the factory and production is " +
+          "well underway; with drying and packing, the ship loads mid to late October. The " +
+          "timeline chart moves production (was through September) and sea freight (was " +
+          "Sep–Nov) to October–November; land freight Nov–Dec and fulfilment Dec–Jan are " +
+          "unchanged.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/52120",
       },
     ],
   },
@@ -1126,6 +1150,18 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       },
       {
         id: "gloomhaven-festival-minis-e03",
+        occurredOn: "2026-07-22",
+        type: "delay",
+        title: "Heat wave pauses some production ~2 weeks",
+        details:
+          "An intense heat wave at the factory caused warping and detail loss in injection " +
+          "molding, caught by quality control; some production paused, delaying SOME work by " +
+          "about two weeks. Core Set trays arrived and final box dimensions were locked for " +
+          "packaging.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/48357",
+      },
+      {
+        id: "gloomhaven-festival-minis-e04",
         occurredOn: "2026-08-11",
         type: "delay",
         title: "Mass production paused ~2 weeks for flight-stand mold fixes",
@@ -1136,7 +1172,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
         sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/49733",
       },
       {
-        id: "gloomhaven-festival-minis-e04",
+        id: "gloomhaven-festival-minis-e05",
         occurredOn: "2026-08-26",
         type: "campaign-update",
         title: "Production ramping back up — packaging files submitted",
@@ -1145,6 +1181,18 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "asked to ramp up to recover the lost time; all packaging and tray map files " +
           "were being submitted for full-art samples.",
         sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/50655",
+      },
+      {
+        id: "gloomhaven-festival-minis-e06",
+        occurredOn: "2026-09-15",
+        type: "campaign-update",
+        title: "On track — production underway, fulfilment still Jan–Feb 2027",
+        details:
+          "With the flight-stand issues resolved, the miniatures themselves are in production " +
+          "and tray-map and packaging samples are due for approval. The timeline chart keeps " +
+          "production through October, sea freight Oct–Dec, land freight Dec–Jan and " +
+          "fulfilment Jan–Feb.",
+        sourceUrl: "https://www.backerkit.com/c/projects/cephalofair/gloomhaven/updates/52120",
       },
     ],
   },

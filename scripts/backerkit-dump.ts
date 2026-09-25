@@ -15,7 +15,10 @@
 //   project.json  — slug/creator/fetch metadata
 //   updates.json  — raw structured updates (id, title, ~date, content HTML)
 //   updates.md    — the digest to hand to Claude (text + [image ...] markers)
-//   images/       — u<N>-01.* … for every update (extension sniffed from bytes)
+//   images/       — u<updateId>-01.* … for every update (extension sniffed from
+//                   bytes). Keyed on the stable update id, NOT the list position:
+//                   the index's length changes between fetches, and positional
+//                   names made a re-run serve an older post's images.
 //
 // TRANSPORT (measured 2026-09-02): www.backerkit.com sits behind a Cloudflare
 // challenge that hard-403s curl. Headless chromium (--dump-dom) passes when
@@ -297,7 +300,7 @@ async function main() {
     const text = htmlToText(u.contentHtml, (src) => {
       if (src.startsWith("data:")) return "[inline data-URI image — not downloadable]";
       inlineIdx += 1;
-      const name = `u${u.number}-${String(inlineIdx).padStart(2, "0")}`;
+      const name = `u${u.updateId}-${String(inlineIdx).padStart(2, "0")}`;
       pending.push({ name, url: forceJpegUrl(decodeEntities(src)) });
       return `[image images/${name}.*]`;
     });
