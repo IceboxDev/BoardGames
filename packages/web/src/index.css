@@ -435,6 +435,16 @@ body {
   overflow-x: hidden;
 }
 
+/* No native drag-and-drop for links and images: nothing here is meant to be
+   dragged, and on Chromium/Wayland a click that wobbles a pixel starts a DnD
+   session that can wedge — the tab then eats every click and key while the
+   wheel still scrolls (the /players "Back freezes the site" bug). Elements
+   that opt in with draggable="true" keep it. */
+a:not([draggable="true"]),
+img:not([draggable="true"]) {
+  -webkit-user-drag: none;
+}
+
 /* Strip the native number-input spinner stepper arrows. They look out of place
    in the dark UI and add nothing — scores are typed, not stepped one at a time. */
 input[type="number"] {
