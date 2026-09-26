@@ -27,6 +27,7 @@ export const qk = {
   tournamentGames: (tournamentId: string) => ["tournament-games", tournamentId] as const,
   calendarFeed: () => ["calendar", "feed"] as const,
   players: () => ["players"] as const,
+  libraryOwners: () => ["inventory", "owners"] as const,
   profile: (userId: string | null | undefined) => ["profile", userId] as const,
   profileMatches: (userId: string) => ["profile", userId, "matches"] as const,
   profileMatchSummary: (userId: string) => ["profile", userId, "match-summary"] as const,

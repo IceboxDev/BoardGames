@@ -1,3 +1,5 @@
+import { LibraryOwnersResponseSchema } from "@boardgames/core/protocol";
+import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { groupForPresentation } from "../games/families";
@@ -5,6 +7,8 @@ import { games } from "../games/registry";
 import { isPlayable } from "../games/types";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { EMPTY_FILTERS, filterGames, type GameFilters } from "../lib/game-filters";
+import { qk } from "../lib/query-keys";
+import { jsonQuery } from "../lib/typed-query";
 import GameCard from "./GameCard";
 import GameLibraryFilters from "./GameLibraryFilters";
 import { DescriptionGrid } from "./game";
@@ -17,7 +21,7 @@ import { Button, EmptyState } from "./ui";
 const EAGER_ROW = 4;
 
 export default function GameMenu() {
-  const { isAdmin } = useCurrentUser();
+  const { isAdmin, user } = useCurrentUser();
   const navigate = useNavigate();
   const [filters, setFilters] = useState<GameFilters>(EMPTY_FILTERS);
 
@@ -26,7 +30,22 @@ export default function GameMenu() {
   // into presentation units so families collapse based on the games that
   // actually survive the filter.
   const base = useMemo(() => (isAdmin ? games : games.filter(isPlayable)), [isAdmin]);
-  const filtered = useMemo(() => filterGames(base, filters), [base, filters]);
+  // "Owned by" draws on member libraries, which (like profiles) only
+  // game-night members see — online-only accounts don't get the filter.
+  const ownersQuery = useQuery({
+    queryKey: qk.libraryOwners(),
+    queryFn: jsonQuery("/api/user/inventory/owners", LibraryOwnersResponseSchema),
+    enabled: user !== null && user.onlineMode !== "online",
+  });
+  const owners = ownersQuery.data?.owners;
+  const ownerLibraries = useMemo(
+    () => new Map((owners ?? []).map((o) => [o.id, new Set(o.slugs)])),
+    [owners],
+  );
+  const filtered = useMemo(
+    () => filterGames(base, filters, ownerLibraries),
+    [base, filters, ownerLibraries],
+  );
   const units = useMemo(() => groupForPresentation(filtered), [filtered]);
 
   // Every default description that can appear in the grid (incl. all family
@@ -57,6 +76,7 @@ export default function GameMenu() {
             resultCount={filtered.length}
             totalCount={base.length}
             showPlayableFilter={base.some((g) => !isPlayable(g))}
+            owners={owners}
           />
         </div>
       )}

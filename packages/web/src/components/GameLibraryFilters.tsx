@@ -5,8 +5,10 @@ import {
   PLAYERS_MAX_PLUS,
 } from "../lib/game-filters";
 import { XIcon } from "./icons";
+import { OwnedByFilter } from "./OwnedByFilter";
 import { Button } from "./ui/Button";
 import { Chip } from "./ui/Chip";
+import type { MemberPickerMember } from "./ui/MemberPicker";
 import { SearchInput } from "./ui/SearchInput";
 import { Select } from "./ui/Select";
 
@@ -21,7 +23,7 @@ import { Select } from "./ui/Select";
 // a fixed-width slot, and (c) the clear button is always rendered and only
 // made `invisible` when inactive so its slot is always reserved.
 
-const CONTROL_W = "w-32"; // shared fixed width for the three selects
+const CONTROL_W = "w-32"; // shared fixed width for the selects + Owned by
 
 const PLAYER_OPTIONS: ReadonlyArray<{ value: string; label: string }> = [
   { value: "", label: "Players" },
@@ -57,6 +59,8 @@ type Props = {
   /** Render the "Playable" toggle. Only useful when the list includes
    *  catalog-only (coming-soon) entries — i.e. the admin view. */
   showPlayableFilter: boolean;
+  /** Members offered by the "Owned by" control; omitted/empty hides it. */
+  owners?: readonly MemberPickerMember[];
 };
 
 export default function GameLibraryFilters({
@@ -65,6 +69,7 @@ export default function GameLibraryFilters({
   resultCount,
   totalCount,
   showPlayableFilter,
+  owners = [],
 }: Props) {
   const active = hasActiveFilters(filters);
 
@@ -97,6 +102,16 @@ export default function GameLibraryFilters({
         options={TIME_OPTIONS}
         onChange={(v) => onChange({ ...filters, time: v === "" ? null : v })}
       />
+
+      {owners.length > 0 && (
+        <div className={`shrink-0 ${CONTROL_W}`}>
+          <OwnedByFilter
+            members={owners}
+            selectedIds={filters.ownedBy}
+            onChange={(ownedBy) => onChange({ ...filters, ownedBy })}
+          />
+        </div>
+      )}
 
       {showPlayableFilter && (
         <Chip

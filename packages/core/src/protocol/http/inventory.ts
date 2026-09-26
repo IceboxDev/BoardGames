@@ -127,3 +127,21 @@ export const PendingInventoryWriteResponseSchema = z.object({
   onlineMode: OnlineModeSchema,
 });
 export type PendingInventoryWriteResponse = z.infer<typeof PendingInventoryWriteResponseSchema>;
+
+// ── Library owners (the /games "Owned by" filter) ───────────────────────
+
+/** One registered member who owns at least one catalog game. */
+export const LibraryOwnerSchema = z.object({
+  id: z.string(),
+  name: z.string(),
+  image: z.string().nullable(),
+  /** Derived catalog slugs (`ownedCatalogSlugs`): decks count as their games. */
+  slugs: z.array(GameSlugSchema),
+});
+export type LibraryOwner = z.infer<typeof LibraryOwnerSchema>;
+
+/** `GET /api/user/inventory/owners` — members with a non-empty library. */
+export const LibraryOwnersResponseSchema = z.object({
+  owners: z.array(LibraryOwnerSchema),
+});
+export type LibraryOwnersResponse = z.infer<typeof LibraryOwnersResponseSchema>;
