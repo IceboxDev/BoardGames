@@ -102,8 +102,13 @@ const REGION_RANK: Record<Region, number> = {
 };
 const PATH_RANK: Record<PathKind, number> = { road: 0, rail: 1, boat: 2 };
 
-/** Smaller plays earlier: region, then path, then closeness to the Labyrinth. */
+/**
+ * Smaller plays earlier: region, then path, then closeness to the Labyrinth.
+ * The Labyrinth itself — the furthest point from the Castle, and path-less —
+ * plays before everyone else.
+ */
 export function orderKey(g: BoardGraph, spaceId: string): [number, number, number] {
+  if (spaceId === g.labyrinth) return [-1, -1, 0];
   const s = space(g, spaceId);
   return [
     REGION_RANK[s.region],

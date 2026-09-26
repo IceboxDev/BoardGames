@@ -196,7 +196,7 @@ function spaceValue(state: GameState, p: PlayerState, spaceId: string): number {
     case "chest-open":
       return state.chests[spaceId] ? 3 : 0;
     case "crypt":
-      return (state.crypts[s.region as "mountains"]?.length ?? 0) > 0 ? 2 : 0;
+      return (state.crypts[spaceId]?.length ?? 0) > 0 ? 2 : 0;
     case "market":
     case "church":
     case "mansion":
@@ -508,7 +508,8 @@ function heuristicPick(state: GameState, seat: number, legal: readonly Action[])
       return best?.item ?? legal[0];
     }
     case "inspire": {
-      const best = argmax(by("inspire"), (a) => state.crypts[a.stack].length);
+      // The fullest pile gives the widest choice.
+      const best = argmax(by("inspire"), (a) => state.crypts[a.crypt]?.length ?? 0);
       return best?.item ?? legal[0];
     }
     case "ready": {

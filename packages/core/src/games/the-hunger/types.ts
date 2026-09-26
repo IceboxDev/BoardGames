@@ -361,7 +361,8 @@ export interface TurnState {
   readyQueue: CardId[];
   /** Mission tiles in hand during an exchange. */
   missionPick: {
-    source: CryptRegion | null;
+    /** The Crypt space the tiles came from; `null` at setup. */
+    source: string | null;
     offered: string[];
     keep: number;
   } | null;
@@ -429,7 +430,8 @@ export interface GameState {
   tavern: CardId[];
   roses: CardId[];
   chests: Record<string, string | null>;
-  crypts: Record<CryptRegion, string[]>;
+  /** Each Crypt space's own Mission pile, face down. */
+  crypts: Record<string, string[]>;
   publicMissions: string[];
   castleTiles: number[];
   castleArrivals: number;
@@ -453,7 +455,8 @@ export type Action =
   | { type: "space" }
   | { type: "digest"; card: CardId | null }
   | { type: "keep-missions"; keep: string[] }
-  | { type: "inspire"; stack: CryptRegion }
+  /** Inspiring / Gain 1 Mission: take from this Crypt's pile. */
+  | { type: "inspire"; crypt: string }
   | { type: "hunt"; row: number; col: number }
   | { type: "hunt-tavern" }
   | { type: "hunt-rose"; card: CardId }
@@ -473,7 +476,9 @@ export type Action =
   /** Hypnosis: move `pick` from its Hunt Track pile to the pile at row/col. */
   | { type: "hypnosis"; card: CardId; pick: CardId; row: number; col: number }
   | { type: "discard-permanent"; card: CardId }
-  | { type: "end-turn" };
+  | { type: "end-turn" }
+  /** Take back the last undoable action (offered by the machine, never the engine). */
+  | { type: "undo" };
 
 // ---------------------------------------------------------------------------
 // Result
@@ -545,7 +550,8 @@ export interface HungerPlayerView {
   roses: CardId[];
   /** Face-up bonus id, `"hidden"` for a face-down one, `null` for an empty chest. */
   chests: Record<string, string | null>;
-  crypts: Record<CryptRegion, number>;
+  /** Tiles left in each Crypt space's pile. */
+  crypts: Record<string, number>;
   publicMissions: string[];
   castleTiles: number[];
   log: LogEntry[];

@@ -59,6 +59,14 @@ describe("rulebook examples", () => {
     expect(s.current?.confused).toBe(false);
   });
 
+  it("a Vampire on the Labyrinth plays first, before a Forest Road", () => {
+    const s = structuredClone(afterSetup(3, 3));
+    s.players[0].pos = "road-8"; // Forest, road
+    s.players[1].pos = "labyrinth";
+    s.players[2].pos = "road-10"; // Forest, road, next to the Labyrinth
+    expect(turnOrder(s, [0, 1, 2])).toEqual([1, 2, 0]);
+  });
+
   it("orders by region, then path, then closeness to the Labyrinth", () => {
     const s = structuredClone(afterSetup(4, 3));
     s.players[0].pos = "rail-3"; // Plains, rail
@@ -246,7 +254,7 @@ describe("board spaces", () => {
     s = act(s, options[0]);
     expect(s.players[0].missions).toHaveLength(2);
     // 6 offered + 1 held − 2 kept go back.
-    expect(s.crypts.mountains).toHaveLength(5);
+    expect(s.crypts["road-2"]).toHaveLength(5);
   });
 
   it("a building Digests a Human of its type", () => {
@@ -680,5 +688,30 @@ describe("mandatory draws", () => {
     });
     // No Human: nothing to draw, so nothing holds step 1 open.
     expect(alone.current?.step).toBe("move");
+  });
+});
+
+describe("Mission piles per Crypt", () => {
+  it("Inspiring offers every non-empty Crypt pile as its own choice", () => {
+    const track = emptyTrack();
+    track[0][0] = ["wright#0"];
+    const b = structuredClone(base);
+    b.crypts["road-5"] = [];
+    let s = rigTurn(b, 0, {
+      hand: ["vampiric-speed-3#0", "vampiric-speed-3#1", "vampire-speed-2#0-0"],
+      pos: "road-4",
+      track,
+    });
+    s = act(s, { type: "stay" });
+    s = act(s, { type: "hunt", row: 0, col: 0 });
+    expect(s.current?.step).toBe("inspire");
+    expect(legal(s)).toEqual([
+      { type: "inspire", crypt: "road-2" },
+      { type: "inspire", crypt: "rail-9" },
+    ]);
+    const before = s.crypts["rail-9"].length;
+    s = act(s, { type: "inspire", crypt: "rail-9" });
+    expect(s.current?.missionPick?.source).toBe("rail-9");
+    expect(s.current?.missionPick?.offered).toHaveLength(before);
   });
 });

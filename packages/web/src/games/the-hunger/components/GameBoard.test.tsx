@@ -237,4 +237,41 @@ describe("GameBoard", () => {
     expect(within(panel).getAllByText("Theresa").length).toBeGreaterThan(0);
     expect(within(panel).getAllByText("Ivo").length).toBeGreaterThan(0);
   });
+
+  it("shows Undo when the server offers it, and sends it", () => {
+    const state = rigTurn(afterSetup(2, 7), 0, { hand: speedy, pos: "road-3" });
+    const onAction = vi.fn();
+    const base = props(state, onAction);
+    render(<GameBoard {...base} legalActions={[...base.legalActions, { type: "undo" }]} />);
+    fireEvent.click(screen.getByRole("button", { name: /Undo/ }));
+    expect(onAction).toHaveBeenCalledWith({ type: "undo" });
+  });
+
+  it("labels an open Chest on the map with its bonus", () => {
+    const b = afterSetup(2, 7);
+    b.chests["road-8"] = "parasol#0";
+    const state = rigTurn(b, 0, { hand: speedy, pos: "road-3" });
+    render(<GameBoard {...props(state)} />);
+    expect(screen.getByText("☂ Parasol")).toBeInTheDocument();
+  });
+
+  it("offers every Crypt pile, on the map and by name, when a Mission is gained", () => {
+    const track = emptyTrack();
+    track[0][0] = ["wright#0"];
+    let state = rigTurn(afterSetup(2, 7), 0, { hand: speedy, pos: "road-4", track });
+    state = act(state, { type: "stay" });
+    state = act(state, { type: "hunt", row: 0, col: 0 });
+    const onAction = vi.fn();
+    render(<GameBoard {...props(state, onAction)} />);
+    const left = state.crypts["rail-9"].length;
+    expect(
+      screen.getByRole("button", { name: `Forest Crypt (rail-9) · ${left} left` }),
+    ).toBeInTheDocument();
+    fireEvent.click(
+      screen.getByRole("button", {
+        name: new RegExp(`Take a Mission from .*\\(rail-9\\) \\(${left} left\\)`),
+      }),
+    );
+    expect(onAction).toHaveBeenCalledWith({ type: "inspire", crypt: "rail-9" });
+  });
 });

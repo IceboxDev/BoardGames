@@ -17,6 +17,31 @@ export function missionName(id: string): string {
   return missionDef(id).name;
 }
 
+/** A short label for a face-up Bonus token on the map. */
+export function bonusShort(id: string): string {
+  const b = bonusDef(id).bonus;
+  switch (b.kind) {
+    case "human":
+      return `${CATEGORY_GLYPH[b.category]} ${CATEGORY_LABEL[b.category]}`;
+    case "human-choice":
+      return "👤 Any Human";
+    case "speed":
+      return `+${b.n} Speed`;
+    case "extra-hunt":
+      return "+1 Hunt";
+    case "discard-draw":
+      return "♻ Discard/Draw";
+    case "draw-to-play":
+      return "🂠 Draw";
+    case "mission":
+      return "📜 Mission";
+    case "parasol":
+      return "☂ Parasol";
+    case "velvet":
+      return "🧥 +2 VP";
+  }
+}
+
 export function bonusName(id: string): string {
   return bonusDef(id).name;
 }

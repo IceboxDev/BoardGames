@@ -19,7 +19,6 @@ import { RULINGS } from "./rulings";
 import type {
   Action,
   CardId,
-  CryptRegion,
   GameState,
   HumanCategory,
   ManipulationEffect,
@@ -420,8 +419,7 @@ function actActions(state: GameState, p: PlayerState, turn: TurnState): Action[]
     if ((here.effect === "chest" || here.effect === "chest-open") && state.chests[here.id]) {
       out.push({ type: "space" });
     } else if (here.effect === "crypt") {
-      const stack = state.crypts[here.region as CryptRegion];
-      if (stack && stack.length > 0) out.push({ type: "space" });
+      if ((state.crypts[here.id]?.length ?? 0) > 0) out.push({ type: "space" });
     } else {
       const category = digestCategoryOf(here.effect);
       if (category && digestible(p, category).length > 0) out.push({ type: "space" });
@@ -542,9 +540,10 @@ export function getLegalActions(state: GameState, player: number): Action[] {
         (keep): Action => ({ type: "keep-missions", keep }),
       );
     case "inspire":
-      return (["mountains", "plains", "forest"] as const)
-        .filter((s) => state.crypts[s].length > 0)
-        .map((stack): Action => ({ type: "inspire", stack }));
+      // Any one Crypt's pile, each a separate choice.
+      return Object.entries(state.crypts)
+        .filter(([, pile]) => pile.length > 0)
+        .map(([crypt]): Action => ({ type: "inspire", crypt }));
     case "ready": {
       const card = turn.readyQueue[0];
       if (!card) return [];
