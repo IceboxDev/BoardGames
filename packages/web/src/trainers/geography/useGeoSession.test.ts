@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { insertFollowUp, type SessionCard } from "./useGeoSession";
+import { type Answered, insertFollowUp, type SessionCard, sessionProgress } from "./useGeoSession";
 
 const card = (placeId: string, stage: 1 | 2 | 3 | 4): SessionCard => ({
   cardId: `${placeId}:s${stage}`,
@@ -40,5 +40,38 @@ describe("insertFollowUp", () => {
         expect(items[i].placeId === items[i - 1].placeId).toBe(false);
       }
     }
+  });
+});
+
+describe("sessionProgress", () => {
+  const answered = (item: SessionCard, grade: Answered["grade"]) => ({ item, grade }) as Answered;
+
+  it("keeps its total while misses and next stages join the queue", () => {
+    const a1 = card("co:AAA", 1);
+    const b3 = card("co:BBB", 3);
+    const plan = new Map([
+      ["co:AAA", 4],
+      ["co:BBB", 2],
+    ]);
+    // A cleared stage 1 queued its stage 2; B missed and comes back.
+    const items = [a1, b3, card("co:AAA", 2), { ...b3, retry: true }];
+    const p = sessionProgress(plan, items, [answered(a1, "good"), answered(b3, "again")]);
+    expect(p).toEqual({ placesDone: 0, places: 2, fraction: 1 / 6 });
+  });
+
+  it("counts a place finished once nothing but a decoy is left for it", () => {
+    const a4 = card("co:AAA", 4);
+    const plan = new Map([["co:AAA", 1]]);
+    const items = [a4, { ...a4, decoy: true }];
+    const p = sessionProgress(plan, items, [answered(a4, "good")]);
+    expect(p).toEqual({ placesDone: 1, places: 1, fraction: 1 });
+  });
+
+  it("counts a place given up for today as finished", () => {
+    const a2 = card("co:AAA", 2);
+    const plan = new Map([["co:AAA", 3]]);
+    const p = sessionProgress(plan, [a2], [answered(a2, "again")]);
+    expect(p.placesDone).toBe(1);
+    expect(p.fraction).toBe(1);
   });
 });

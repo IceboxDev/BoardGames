@@ -99,6 +99,16 @@ interface Flight {
   ms: number;
 }
 
+/**
+ * The globe's radius at zoom 1. A tall phone screen would leave the
+ * width-bound globe floating in empty space: there it grows past the sides
+ * (a little of the far limbs cropped) to use the height.
+ */
+function baseRadius(w: number, h: number): number {
+  const fit = Math.min(w, h) / 2 - 6;
+  return h > w * 1.25 ? Math.max(fit, Math.min(w * 0.7, h / 2 - 6)) : fit;
+}
+
 const clampZoom = (z: number) => Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, z));
 const center = (c: Camera): LonLat => [-c.lambda, -c.phi];
 const ease = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
@@ -163,7 +173,7 @@ export function Globe({
       palette.current ??= readPalette(front);
       const pal = palette.current;
       const cam = camera.current;
-      const radius = (Math.min(w, h) / 2 - 6) * cam.zoom;
+      const radius = baseRadius(w, h) * cam.zoom;
       const projection = geoOrthographic()
         .rotate([cam.lambda, cam.phi])
         .scale(radius)
@@ -463,7 +473,7 @@ export function Globe({
     pinch: null,
   });
 
-  const radiusPx = () => (Math.min(size.current.w, size.current.h) / 2 - 6) * camera.current.zoom;
+  const radiusPx = () => baseRadius(size.current.w, size.current.h) * camera.current.zoom;
 
   const touched = () => {
     lastTouch.current = performance.now();

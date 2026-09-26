@@ -79,8 +79,8 @@ export function ExplorePage() {
     picked && "territory" in picked ? catalog.territoryByFeature.get(picked.territory) : null;
 
   return (
-    <div className="flex min-h-full flex-col lg:h-full lg:flex-row">
-      <div className="relative h-[62vh] min-h-72 shrink-0 lg:h-auto lg:flex-1">
+    <div className="flex h-full flex-col overflow-hidden lg:flex-row">
+      <div className="relative min-h-56 flex-1">
         <Globe
           world={world.data}
           scene={scene}
@@ -90,7 +90,7 @@ export function ExplorePage() {
           aria-label="Explore the globe — tap any land to see what it is"
         />
       </div>
-      <aside className="order-first flex flex-col gap-4 border-line-soft p-4 lg:order-none lg:w-96 lg:shrink-0 lg:border-l">
+      <aside className="flex min-h-0 flex-col gap-3 overflow-y-auto border-t border-line-soft px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 lg:w-96 lg:shrink-0 lg:gap-4 lg:border-t-0 lg:border-l lg:p-4">
         <div className="flex items-center justify-between gap-2">
           <Eyebrow tone="accent">Explore</Eyebrow>
           <Button variant="link" size="xs" onClick={() => navigate(geoPaths.hub)}>

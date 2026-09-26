@@ -58,7 +58,7 @@ function Title({ place, lang }: { place: Place; lang: Lang }) {
   const alt = placeName(place, other(lang));
   return (
     <div className="flex flex-col">
-      <h2 className="text-2xl font-bold text-fg-strong">{main}</h2>
+      <h2 className="text-xl font-bold text-fg-strong lg:text-2xl">{main}</h2>
       {alt !== main && <span className="text-sm text-fg-muted">{alt}</span>}
     </div>
   );
@@ -94,7 +94,7 @@ function HintRow({
           hint used
         </Badge>
       )}
-      <Kbd>H</Kbd>
+      <Kbd className="hidden lg:inline-flex">H</Kbd>
     </div>
   );
 }
@@ -129,11 +129,11 @@ export function LocatePanel({
         ? ["show borders"]
         : ["show borders", place.kind === "city" ? "zoom to the country" : "zoom to the region"];
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-3 lg:gap-4">
       <StagePips stage={stage} review={review} />
       <Eyebrow tone="accent">Where is it? · {promptKind(place, lang)}</Eyebrow>
       <Title place={place} lang={lang} />
-      <p className="text-xs text-fg-muted">
+      <p className="hidden text-xs text-fg-muted lg:block">
         {pinned
           ? "Happy with the pin? Confirm — or tap somewhere else to move it."
           : "Turn the globe and tap the spot."}
@@ -142,7 +142,7 @@ export function LocatePanel({
         <Button variant="primary" onClick={onConfirm} disabled={!pinned}>
           Confirm
         </Button>
-        <Kbd>Enter</Kbd>
+        <Kbd className="hidden lg:inline-flex">Enter</Kbd>
         <Button variant="link" size="xs" className="ml-auto" onClick={onSkip}>
           I don't know
         </Button>
@@ -188,7 +188,7 @@ export function NamePanel({
       : `Which ${noun} is this?`;
   return (
     <form
-      className="flex flex-col gap-4"
+      className="flex flex-col gap-3 lg:gap-4"
       onSubmit={(e) => {
         e.preventDefault();
         if (typed.trim()) onSubmit(typed);
@@ -211,7 +211,7 @@ export function NamePanel({
         <Button type="submit" variant="primary" disabled={!typed.trim()}>
           Answer
         </Button>
-        <Kbd>Enter</Kbd>
+        <Kbd className="hidden lg:inline-flex">Enter</Kbd>
         <Button type="button" variant="link" size="xs" className="ml-auto" onClick={onSkip}>
           I don't know
         </Button>
@@ -305,9 +305,9 @@ export function RevealPanel({
             : "All four stages cleared.";
   const auto = answered.grade === "good" || answered.grade === "easy";
   return (
-    <div className="flex flex-col gap-4" role="status">
+    <div className="flex flex-col gap-3 lg:gap-4" role="status">
       <Eyebrow tone={right ? "emerald" : "rose"}>{right ? "Correct" : "Not quite"}</Eyebrow>
-      <h2 className="text-2xl font-bold text-fg-strong">{headline}</h2>
+      <h2 className="text-xl font-bold text-fg-strong lg:text-2xl">{headline}</h2>
       {detail && <p className="text-sm text-fg-secondary">{detail}</p>}
       <p className="text-sm leading-relaxed text-fg-secondary">{anchor}</p>
       <p
@@ -322,7 +322,7 @@ export function RevealPanel({
         <Button variant={auto ? "secondary" : "primary"} onClick={onNext}>
           Next
         </Button>
-        <Kbd>Enter</Kbd>
+        <Kbd className="hidden lg:inline-flex">Enter</Kbd>
       </div>
     </div>
   );

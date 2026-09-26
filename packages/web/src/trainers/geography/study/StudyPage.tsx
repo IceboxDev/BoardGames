@@ -17,7 +17,7 @@ import {
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import { Button, ErrorAlert, LoadingState } from "../../../components/ui";
+import { Button, ErrorAlert, LoadingState, ProgressBar } from "../../../components/ui";
 import { useCurrentUser } from "../../../hooks/useCurrentUser";
 import useDocumentTitle from "../../../hooks/useDocumentTitle";
 import { qk } from "../../../lib/query-keys";
@@ -42,7 +42,7 @@ import {
   regionFocus,
   targetPoint,
 } from "../scenes";
-import { type Answered, type GeoSpec, useGeoSession } from "../useGeoSession";
+import { type Answered, type GeoSpec, type SessionProgress, useGeoSession } from "../useGeoSession";
 import { LocatePanel, NamePanel, RevealPanel } from "./Panels";
 import { SessionSummary } from "./SessionSummary";
 
@@ -225,8 +225,10 @@ function Session({
 
   const review = s.current?.tier === "review";
   return (
-    <div className="flex min-h-full flex-col lg:h-full lg:flex-row">
-      <div className="relative h-[58vh] min-h-72 shrink-0 lg:h-auto lg:flex-1">
+    // Phones: the globe takes every pixel the panel doesn't; the panel sits
+    // at the bottom, under the thumb. Desktop: globe left, panel right.
+    <div className="flex h-full flex-col overflow-hidden lg:flex-row">
+      <div className="relative min-h-56 flex-1">
         <Globe
           world={world}
           scene={scene}
@@ -235,13 +237,16 @@ function Session({
           onPick={s.status === "ask" && mode === "locate" ? setPin : undefined}
           aria-label="Globe — drag to turn, scroll or pinch to zoom"
         />
+        <div className="pointer-events-none absolute inset-x-0 top-0 flex items-center justify-between gap-2 px-3 py-2 lg:hidden [&>*]:pointer-events-auto">
+          <SessionMeter drill={spec.kind === "drill"} progress={s.progress} />
+          <Button variant="link" size="xs" onClick={() => navigate(geoPaths.hub)}>
+            End session
+          </Button>
+        </div>
       </div>
-      <aside className="order-first flex flex-col gap-4 border-line-soft p-4 lg:order-none lg:w-96 lg:shrink-0 lg:overflow-y-auto lg:border-l">
-        <div className="flex items-center justify-between gap-2">
-          <span className="text-2xs font-semibold uppercase tracking-label text-fg-muted">
-            {spec.kind === "drill" ? "Drill · " : ""}
-            {Math.min(s.cursor + 1, s.items.length)} / {s.items.length}
-          </span>
+      <aside className="flex min-h-0 flex-col gap-3 overflow-y-auto border-t border-line-soft px-4 pb-[max(0.75rem,env(safe-area-inset-bottom))] pt-3 lg:w-96 lg:shrink-0 lg:gap-4 lg:border-t-0 lg:border-l lg:p-4">
+        <div className="hidden items-center justify-between gap-2 lg:flex">
+          <SessionMeter drill={spec.kind === "drill"} progress={s.progress} />
           <Button variant="link" size="xs" onClick={() => navigate(geoPaths.hub)}>
             End session
           </Button>
@@ -471,4 +476,17 @@ function buildFocus(o: {
     return f;
   }
   return null;
+}
+
+/** Places finished out of the places the sitting set out with — never a growing total. */
+function SessionMeter({ drill, progress }: { drill: boolean; progress: SessionProgress }) {
+  return (
+    <div className="flex min-w-0 flex-1 items-center gap-2">
+      <span className="shrink-0 text-2xs font-semibold uppercase tracking-label text-fg-muted">
+        {drill ? "Drill · " : ""}
+        {progress.placesDone} of {progress.places} {progress.places === 1 ? "place" : "places"}
+      </span>
+      <ProgressBar value={progress.fraction} label="Session progress" className="max-w-32" />
+    </div>
+  );
 }
