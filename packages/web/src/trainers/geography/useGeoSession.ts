@@ -93,6 +93,8 @@ interface State {
   results: Answered[];
   states: Map<string, SrsState>;
   contrasted: Set<string>;
+  /** Each place the sitting set out with → the cards it needs (its stages left, or one review). */
+  plan: Map<string, number>;
 }
 
 type Action =
@@ -235,7 +237,44 @@ function initialState(
     results: [],
     states,
     contrasted: new Set(),
+    plan: new Map(shuffled.map((it) => [it.placeId, it.tier === "review" ? 1 : 5 - it.stage])),
   };
+}
+
+export interface SessionProgress {
+  placesDone: number;
+  places: number;
+  /** 0–1: stages cleared (a place finished for today counts in full). */
+  fraction: number;
+}
+
+/**
+ * How far through the sitting the learner is, against what it set out
+ * with: retries, next stages, decoys and contrasts never grow the total.
+ */
+export function sessionProgress(
+  plan: ReadonlyMap<string, number>,
+  items: readonly SessionCard[],
+  results: readonly Answered[],
+): SessionProgress {
+  const extra = (it: SessionCard) => it.decoy === true || it.contrast === true;
+  const upcoming = items.slice(results.length);
+  let placesDone = 0;
+  let steps = 0;
+  let cleared = 0;
+  for (const [placeId, need] of plan) {
+    steps += need;
+    if (!upcoming.some((it) => it.placeId === placeId && !extra(it))) {
+      placesDone++;
+      cleared += need;
+      continue;
+    }
+    const right = results.filter(
+      (r) => r.item.placeId === placeId && !extra(r.item) && r.grade !== "again",
+    ).length;
+    cleared += Math.min(need, right);
+  }
+  return { placesDone, places: plan.size, fraction: steps ? cleared / steps : 1 };
 }
 
 function shuffleRandom<T>(xs: T[]): T[] {
@@ -446,6 +485,7 @@ export function useGeoSession(opts: {
     last: s.last,
     results: s.results,
     states: s.states,
+    progress: sessionProgress(s.plan, s.items, s.results),
     answer,
     next,
     hint,
