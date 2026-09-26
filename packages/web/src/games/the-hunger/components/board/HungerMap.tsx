@@ -1,4 +1,5 @@
 import { graphFor } from "@boardgames/core/games/the-hunger/board";
+import { bonusDef } from "@boardgames/core/games/the-hunger/content/bonus-tokens";
 import type { HungerPlayerView, PathKind, SpaceDef } from "@boardgames/core/games/the-hunger/types";
 import { motion, useReducedMotion } from "framer-motion";
 import type { KeyboardEvent } from "react";
@@ -8,7 +9,14 @@ import {
   pulseRingAnimation,
   pulseRingTransition,
 } from "../../../../components/board";
-import { EFFECT_GLYPH, EFFECT_LABEL, spaceLabel, vampireColor } from "../../logic/labels";
+import {
+  bonusName,
+  bonusShort,
+  EFFECT_GLYPH,
+  EFFECT_LABEL,
+  spaceLabel,
+  vampireColor,
+} from "../../logic/labels";
 import { boardImage, PATH_STROKE, REGION_FILL, SPACE_R, scaleOf, viewBoxOf } from "./geometry";
 
 export interface MapTarget {
@@ -184,8 +192,30 @@ export default function HungerMap({ view, targets, onTarget, activeSeat }: Props
             )}
             {(s.effect === "chest" || s.effect === "chest-open") &&
               chest !== undefined &&
-              badge(chest ? "●" : "○", chest ? "#fcd34d" : "#6b6475")}
-            {s.effect === "crypt" && badge(view.crypts[s.region as "mountains"] ?? 0, "#fde68a")}
+              (chest && chest !== "hidden" ? (
+                // An open Chest shows its token — public information.
+                <g pointerEvents="none">
+                  <title>
+                    Open Chest: {bonusName(chest)} — {bonusDef(chest).text}
+                  </title>
+                  <text
+                    x={s.x}
+                    y={s.y - r - 10 * k}
+                    textAnchor="middle"
+                    fontSize={20 * k}
+                    fontWeight={700}
+                    fill="#fde68a"
+                    stroke="#140d18"
+                    strokeWidth={5 * k}
+                    paintOrder="stroke"
+                  >
+                    {bonusShort(chest)}
+                  </text>
+                </g>
+              ) : (
+                badge(chest ? "?" : "○", chest ? "#fcd34d" : "#6b6475")
+              ))}
+            {s.effect === "crypt" && badge(view.crypts[s.id] ?? 0, "#fde68a")}
             {s.effect === "tavern" && badge(view.tavernCount, "#fde68a")}
           </g>
         );

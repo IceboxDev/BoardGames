@@ -14,6 +14,7 @@ import type {
   HungerPlayerView,
   HungerResult,
 } from "./types";
+import { isUndoable } from "./undo";
 
 // ---------------------------------------------------------------------------
 // Context & events
@@ -30,7 +31,15 @@ export const DEFAULT_BEATS: HungerBeats = { ai: 450 };
 export interface HungerContext {
   gameState: GameState;
   beats: HungerBeats;
+  /**
+   * States before each undoable action the deciding player took this turn,
+   * newest last. Cleared by anything that reveals, involves luck, or passes
+   * the decision on (see undo.ts).
+   */
+  undo: { player: number; states: GameState[] } | null;
 }
+
+const UNDO_DEPTH = 50;
 
 export type HungerEvent =
   | {
@@ -91,25 +100,38 @@ export const theHungerMachine = setup({
           options: event.options,
         }),
         beats: { ...DEFAULT_BEATS, ...event.beats },
+        undo: null,
       }));
     }),
 
     applyPlayerAction: assign(({ context, event }) => {
       if (event.type !== "PLAYER_ACTION") return {};
-      return safeApply("the-hunger", () => ({
-        // The validator only admits the active seat's actions.
-        gameState: applyActionPure(
-          context.gameState,
-          getActivePlayer(context.gameState),
-          event.action,
-        ),
-      }));
+      return safeApply("the-hunger", () => {
+        // The validator only admits the active seat's actions (and its own undo).
+        const player = getActivePlayer(context.gameState);
+        if (event.action.type === "undo") {
+          const states = context.undo?.states ?? [];
+          const previous = states[states.length - 1];
+          if (!previous || context.undo?.player !== player) return {};
+          const rest = states.slice(0, -1);
+          return { gameState: previous, undo: rest.length > 0 ? { player, states: rest } : null };
+        }
+        const before = context.gameState;
+        const gameState = applyActionPure(before, player, event.action);
+        const kept = context.undo?.player === player ? context.undo.states : [];
+        return {
+          gameState,
+          undo: isUndoable(before, gameState, event.action)
+            ? { player, states: [...kept, before].slice(-UNDO_DEPTH) }
+            : null,
+        };
+      });
     }),
   },
 }).createMachine({
   id: "the-hunger",
   initial: "idle",
-  context: { gameState: PLACEHOLDER, beats: DEFAULT_BEATS },
+  context: { gameState: PLACEHOLDER, beats: DEFAULT_BEATS, undo: null },
 
   states: {
     idle: {
@@ -153,6 +175,8 @@ export const theHungerMachine = setup({
                     event.output.seat,
                     event.output.action,
                   ),
+                  // Nobody undoes past an AI move.
+                  undo: null,
                 })),
               ),
             },
@@ -187,7 +211,12 @@ function legalActionsFor(
 ): Action[] {
   const gs = snapshot.context.gameState;
   if (!gs) return [];
-  return getLegalActions(gs, player);
+  const legal = getLegalActions(gs, player);
+  const undo = snapshot.context.undo;
+  if (undo && undo.player === player && getActivePlayer(gs) === player && undo.states.length > 0) {
+    legal.push({ type: "undo" });
+  }
+  return legal;
 }
 
 export const theHungerSpec: GameMachineSpec<

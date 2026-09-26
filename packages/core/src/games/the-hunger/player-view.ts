@@ -70,11 +70,9 @@ export function buildPlayerView(state: GameState, seat: number): HungerPlayerVie
     tavernCount: state.tavern.length,
     roses: [...state.roses],
     chests,
-    crypts: {
-      mountains: state.crypts.mountains.length,
-      plains: state.crypts.plains.length,
-      forest: state.crypts.forest.length,
-    },
+    crypts: Object.fromEntries(
+      Object.entries(state.crypts).map(([crypt, pile]) => [crypt, pile.length]),
+    ),
     publicMissions: [...state.publicMissions],
     castleTiles: [...state.castleTiles],
     log: state.log,

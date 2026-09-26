@@ -67,6 +67,22 @@ export default function GameBoard({
     if (decisionKey) setPending(null);
   }, [decisionKey]);
 
+  // Ctrl/Cmd+Z takes back the last undoable action, as the Undo button does.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (!(e.ctrlKey || e.metaKey) || e.key.toLowerCase() !== "z" || e.shiftKey) return;
+      const target = e.target as HTMLElement | null;
+      if (target && ["INPUT", "SELECT", "TEXTAREA"].includes(target.tagName)) return;
+      const undoAction = legalActions.find((x) => x.type === "undo");
+      if (!undoAction) return;
+      e.preventDefault();
+      setPending(null);
+      onAction(undoAction);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [legalActions, onAction]);
+
   const send = useCallback(
     (action: Action | undefined) => {
       if (!action) return;
@@ -203,6 +219,15 @@ export default function GameBoard({
   // chests for Treasure Chest.
   const targets: MapTarget[] = useMemo(() => {
     const out = new Map<string, MapTarget>();
+    // Inspiring / Gain 1 Mission: each Crypt's pile is its own target.
+    for (const a of legalActions) {
+      if (a.type === "inspire") {
+        out.set(a.crypt, {
+          space: a.crypt,
+          label: `Take a Mission from ${spaceLabel(view.options, a.crypt)} (${view.crypts[a.crypt] ?? 0} left)`,
+        });
+      }
+    }
     for (const a of armed) {
       if (a.space)
         out.set(a.space, {
@@ -226,9 +251,14 @@ export default function GameBoard({
       }
     }
     return [...out.values()];
-  }, [legalActions, armed, view.options]);
+  }, [legalActions, armed, view.options, view.crypts]);
 
   const onTarget = (space: string) => {
+    const crypt = legalActions.find((a) => a.type === "inspire" && a.crypt === space);
+    if (crypt) {
+      send(crypt);
+      return;
+    }
     const chest = armed.find((a) => a.space === space);
     if (chest) {
       send(chest);
@@ -244,6 +274,8 @@ export default function GameBoard({
   const spicy = fanCards.some((c) => cardDef(c.id).keywords.includes("spicy"));
   const activeLabel = activeSeat >= 0 ? seatLabel(view, activeSeat, names) : "";
   const find = (type: Action["type"]) => legalActions.find((a) => a.type === type);
+  // The server offers Undo only for actions that revealed nothing (core undo.ts).
+  const undo = find("undo");
   // "Draw 1 card" (Dee, the Starting Vampire Strength) is not optional.
   const mustDraw = me && step === "manipulate" ? mandatoryDraws(me) : [];
 
@@ -462,6 +494,24 @@ export default function GameBoard({
           </PromptRow>
         );
       }
+      case "inspire":
+        return (
+          <PromptRow title="Take a Mission" message="click a Crypt on the map, or pick its pile">
+            {legalActions.map((a) =>
+              a.type === "inspire" ? (
+                <Button
+                  key={a.crypt}
+                  size="xs"
+                  variant="tinted"
+                  tone="amber"
+                  onClick={() => send(a)}
+                >
+                  {spaceLabel(view.options, a.crypt)} · {view.crypts[a.crypt] ?? 0} left
+                </Button>
+              ) : null,
+            )}
+          </PromptRow>
+        );
       default:
         return <PromptRow title="Your turn" message={stepMessage(turn.step)} />;
     }
@@ -495,8 +545,20 @@ export default function GameBoard({
         {/* No hand fan: the controls and your cards sit beside the board so the
             map keeps the full height. */}
         <div className="flex w-full flex-col gap-2 lg:w-80 lg:shrink-0 lg:overflow-y-auto">
-          <Surface variant="raised" padding="sm">
+          <Surface variant="raised" padding="sm" className="flex flex-col gap-1.5">
             {fanActions()}
+            {undo && (
+              <div className="flex justify-center">
+                <Button
+                  size="xs"
+                  variant="secondary"
+                  onClick={() => send(undo)}
+                  title="Take back your last move, push or choice that revealed nothing (Ctrl+Z)"
+                >
+                  ↶ Undo
+                </Button>
+              </div>
+            )}
           </Surface>
           <HandPanel
             title={activeSeat === view.me ? "Your playing area" : "Your next hand"}

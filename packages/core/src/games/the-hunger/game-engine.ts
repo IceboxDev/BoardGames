@@ -61,6 +61,7 @@ const CASTLE_TILES: Record<number, number[]> = {
   6: [10, 8, 6, 4, 2],
 };
 
+/** Tiles dealt to EACH Crypt, by its region (rulebook setup: 6 / 5 / 4). */
 const CRYPT_SIZES: Record<CryptRegion, number> = { mountains: 6, plains: 5, forest: 4 };
 
 // ---------------------------------------------------------------------------
@@ -122,7 +123,7 @@ export function createInitialState(input: SetupInput): GameState {
     tavern: [],
     roses: expand(ROSES),
     chests: {},
-    crypts: { mountains: [], plains: [], forest: [] },
+    crypts: {},
     publicMissions: [],
     castleTiles: [...CASTLE_TILES[n]],
     castleArrivals: 0,
@@ -169,8 +170,11 @@ export function createInitialState(input: SetupInput): GameState {
     pool.map((m) => m.id).filter((id) => !state.publicMissions.includes(id)),
   );
   for (let p = 0; p < n; p++) state.setupOffers.push(rest.splice(0, 2));
-  for (const region of ["mountains", "plains", "forest"] as const) {
-    state.crypts[region] = rest.splice(0, CRYPT_SIZES[region]);
+  // Every Crypt space gets its own pile, sized by its region.
+  for (const s of g.def.spaces) {
+    if (s.effect !== "crypt") continue;
+    const size = CRYPT_SIZES[s.region as CryptRegion] ?? 0;
+    state.crypts[s.id] = rest.splice(0, size);
   }
 
   // Vampires.
@@ -754,7 +758,7 @@ function applyInPlace(state: GameState, player: number, action: Action): void {
       if (here.effect === "chest" || here.effect === "chest-open") {
         takeBonus(state, p, here.id);
       } else if (here.effect === "crypt") {
-        openCrypt(state, p, turn, here.region as CryptRegion);
+        openCrypt(state, p, turn, here.id);
       } else {
         const category = digestCategoryOf(here.effect);
         if (!category) throw new Error("This space has no effect");
@@ -781,7 +785,7 @@ function applyInPlace(state: GameState, player: number, action: Action): void {
     }
     case "inspire": {
       turn.pendingInspire = Math.max(0, turn.pendingInspire - 1);
-      openCrypt(state, p, turn, action.stack);
+      openCrypt(state, p, turn, action.crypt);
       settle(state);
       return;
     }
@@ -1009,12 +1013,12 @@ function applyInstant(
   settle(state);
 }
 
-function openCrypt(state: GameState, p: PlayerState, turn: TurnState, region: CryptRegion): void {
-  const offered = state.crypts[region];
+function openCrypt(state: GameState, p: PlayerState, turn: TurnState, crypt: string): void {
+  const offered = state.crypts[crypt] ?? [];
   if (offered.length === 0) return;
-  state.crypts[region] = [];
+  state.crypts[crypt] = [];
   const keep = state.options.mode === "rookie" ? 1 : p.missions.length + 1;
-  turn.missionPick = { source: region, offered, keep };
+  turn.missionPick = { source: crypt, offered, keep };
 }
 
 export function applyActionPure(state: GameState, player: number, action: Action): GameState {

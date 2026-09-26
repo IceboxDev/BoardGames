@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { BOARDS } from "./content/boards";
 import { cardDef, isRookieCard } from "./content/cards";
 import { createInitialState, TURNS } from "./game-engine";
 import { getLegalActions, handSpeed } from "./rules";
@@ -37,12 +38,24 @@ describe("setup", () => {
   it("places Castle tiles by player count, Missions per crypt, 3 Tavern cards", () => {
     const s = afterSetup(3, 2);
     expect(s.castleTiles).toEqual([10, 6, 4]);
-    expect(s.crypts.mountains).toHaveLength(6);
-    expect(s.crypts.plains).toHaveLength(5);
-    expect(s.crypts.forest).toHaveLength(4);
+    // One pile per Crypt space, sized by its region (test board: one Crypt each).
+    expect(s.crypts["road-2"]).toHaveLength(6);
+    expect(s.crypts["road-5"]).toHaveLength(5);
+    expect(s.crypts["rail-9"]).toHaveLength(4);
     expect(s.tavern).toHaveLength(3);
     expect(s.publicMissions).toHaveLength(2);
     for (const p of s.players) expect(p.missions).toHaveLength(1);
+  });
+
+  it("deals every Crypt on the real board its own pile: 6 / 5 / 4 by region", () => {
+    const s = createInitialState({ playerCount: 4, strategies: Array(4).fill(null), seed: 2 });
+    const crypts = BOARDS.B.spaces.filter((sp) => sp.effect === "crypt");
+    expect(Object.keys(s.crypts).sort()).toEqual(crypts.map((c) => c.id).sort());
+    const size = { mountains: 6, plains: 5, forest: 4 } as Record<string, number>;
+    for (const c of crypts) expect(s.crypts[c.id]).toHaveLength(size[c.region]);
+    // No tile is in two places.
+    const all = [...Object.values(s.crypts).flat(), ...s.publicMissions, ...s.setupOffers.flat()];
+    expect(new Set(all).size).toBe(all.length);
   });
 
   it("offers each Vampire two Missions to keep one of", () => {

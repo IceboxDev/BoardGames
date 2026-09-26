@@ -25,7 +25,6 @@ export default function ChoiceDialogs({ view, legal, onAction }: Props) {
   if (!mine) return null;
   if (step === "nanny") return <NannyPick view={view} legal={legal} onAction={onAction} />;
   if (step === "missions") return <MissionPick view={view} legal={legal} onAction={onAction} />;
-  if (step === "inspire") return <InspirePick legal={legal} onAction={onAction} />;
   if (step === "ready") return <ReadyPick legal={legal} onAction={onAction} />;
   if (step === "digest") return <DigestPick view={view} legal={legal} onAction={onAction} />;
   return null;
@@ -91,30 +90,6 @@ function MissionPick({ view, legal, onAction }: Props) {
         <Button disabled={!match} onClick={() => match && onAction(match)}>
           Keep {chosen.length}/{size}
         </Button>
-      </ModalFooter>
-    </Modal>
-  );
-}
-
-function InspirePick({ legal, onAction }: Omit<Props, "view">) {
-  return (
-    <Modal
-      onClose={noop}
-      closeOnBackdrop={false}
-      closeOnEscape={false}
-      hideCloseButton
-      size="xs"
-      eyebrow="Inspiring"
-      title="Take a Mission from which Crypt?"
-    >
-      <ModalFooter>
-        {legal.map((a) =>
-          a.type === "inspire" ? (
-            <Button key={a.stack} variant="secondary" onClick={() => onAction(a)}>
-              {a.stack[0].toUpperCase() + a.stack.slice(1)}
-            </Button>
-          ) : null,
-        )}
       </ModalFooter>
     </Modal>
   );

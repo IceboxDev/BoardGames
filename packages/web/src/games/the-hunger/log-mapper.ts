@@ -122,7 +122,7 @@ function describe(
           who(view, e.p, names),
           e.source === "setup"
             ? " chose a starting Mission"
-            : ` visited the ${e.source} Crypt (keeps ${e.kept})`,
+            : ` looked at the Missions in ${where(e.source)} (keeps ${e.kept})`,
         ],
       };
     case "hunt":

@@ -7,7 +7,8 @@
  *     (Forest, Plains, Mountains, Cemetery), then path (Road, Railroad, Boat),
  *     then closeness to the Labyrinth, then the top of a stack
  *     (`board.orderKey`). "Furthest from the Castle plays first" is its
- *     summary. The Labyrinth ranks as Forest.
+ *     summary. A Vampire on the Labyrinth — the furthest point from the
+ *     Castle, with no path to rank by — plays first of all.
  *   - "Older player first" on a Turn-1 Speed tie becomes the lower seat.
  *   - "One general direction" is a simple path: no space twice, so paths may
  *     change at an intersection but a Vampire never doubles back
@@ -22,6 +23,10 @@
  *   - Drawn cards (Vampire Strength, Vampiric Will, Draw token) go straight
  *     into the playing area, as the hand has already been played.
  *   - The Castle's Well counts for Spicy and Form of Mist.
+ *
+ * Crypts: every Crypt space holds its own Mission pile, dealt the rulebook's
+ *   6 / 5 / 4 tiles by region (Mountains / Plains / Forest) — per Crypt, not
+ *   per region. Inspiring and "Gain 1 Mission" name one Crypt's pile.
  *
  * Missions (`scoring.ts`, `rules.instantActions`):
  *   - "Hunted" is every non-Starting card a Vampire owns, Digested ones
