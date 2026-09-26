@@ -62,6 +62,7 @@ describe("hasActiveFilters", () => {
     expect(hasActiveFilters({ ...EMPTY_FILTERS, time: "short" })).toBe(true);
     expect(hasActiveFilters({ ...EMPTY_FILTERS, query: "uno" })).toBe(true);
     expect(hasActiveFilters({ ...EMPTY_FILTERS, playableOnly: true })).toBe(true);
+    expect(hasActiveFilters({ ...EMPTY_FILTERS, ownedBy: ["u1"] })).toBe(true);
   });
 });
 
@@ -196,5 +197,17 @@ describe("filterGames", () => {
       "Built",
     ]);
     expect(filterGames(mixed, EMPTY_FILTERS)).toHaveLength(2);
+  });
+
+  it("ownedBy keeps games any selected member owns", () => {
+    const owners = new Map([
+      ["ada", new Set(["azul"])],
+      ["bob", new Set(["codenames", "azul"])],
+    ]);
+    const pick = (ownedBy: string[]) =>
+      titlesOf(filterGames(catalog, { ...EMPTY_FILTERS, ownedBy }, owners));
+    expect(pick(["ada"])).toEqual(["Azul"]);
+    expect(pick(["ada", "bob"])).toEqual(["Azul", "Codenames"]);
+    expect(pick(["unknown"])).toEqual([]);
   });
 });

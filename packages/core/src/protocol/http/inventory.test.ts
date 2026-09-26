@@ -3,6 +3,7 @@ import {
   CatalogSlugListSchema,
   InventoryNewSlugsSchema,
   InventoryWriteResponseSchema,
+  LibraryOwnersResponseSchema,
   PendingInventorySchema,
   SetInventoryBodySchema,
   SetInventoryNewBodySchema,
@@ -122,5 +123,27 @@ describe("InventoryWriteResponseSchema", () => {
   it("requires both ok and slugs", () => {
     expect(() => InventoryWriteResponseSchema.parse({ ok: true, slugs: [] })).not.toThrow();
     expect(() => InventoryWriteResponseSchema.parse({ ok: true })).toThrow();
+  });
+});
+
+describe("LibraryOwnersResponseSchema", () => {
+  const owner = { id: "u1", name: "Ada", image: null, slugs: ["lost-cities", "durak"] };
+
+  it("accepts owners with their slugs", () => {
+    expect(LibraryOwnersResponseSchema.parse({ owners: [owner] }).owners[0].slugs).toHaveLength(2);
+  });
+
+  it("rejects a missing name", () => {
+    const r = LibraryOwnersResponseSchema.safeParse({ owners: [{ ...owner, name: undefined }] });
+    expect(r.success).toBe(false);
+    expect(r.error?.issues[0].path).toEqual(["owners", 0, "name"]);
+  });
+
+  it("rejects a malformed slug", () => {
+    const r = LibraryOwnersResponseSchema.safeParse({
+      owners: [{ ...owner, slugs: ["Not A Slug"] }],
+    });
+    expect(r.success).toBe(false);
+    expect(r.error?.issues[0].path).toEqual(["owners", 0, "slugs", 0]);
   });
 });

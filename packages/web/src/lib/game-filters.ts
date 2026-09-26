@@ -17,6 +17,7 @@ export type TimeBucket = "short" | "mid" | "long" | "epic";
  * - `players`: exact headcount the game must support; the sentinel
  *   `PLAYERS_MAX_PLUS` means "supports that many or more". null = no filter.
  * - `weight` / `time`: single-select buckets; null = no filter on that axis.
+ * - `ownedBy`: multi-select members, OR-combined among themselves.
  */
 export type GameFilters = {
   query: string;
@@ -27,7 +28,12 @@ export type GameFilters = {
    *  playable component. Only meaningful in the admin view, which is the
    *  only place catalog-only entries are listed. */
   playableOnly: boolean;
+  /** Member ids; keep games at least one of them owns. Empty = no filter. */
+  ownedBy: readonly string[];
 };
+
+/** A member's owned catalog slugs, keyed by member id (the "Owned by" axis). */
+export type OwnerLibraries = ReadonlyMap<string, ReadonlySet<string>>;
 
 export const EMPTY_FILTERS: GameFilters = {
   query: "",
@@ -35,6 +41,7 @@ export const EMPTY_FILTERS: GameFilters = {
   weight: null,
   time: null,
   playableOnly: false,
+  ownedBy: [],
 };
 
 /** The largest discrete player option; selecting it means "this many or more". */
@@ -46,7 +53,8 @@ export function hasActiveFilters(f: GameFilters): boolean {
     f.players !== null ||
     f.weight !== null ||
     f.time !== null ||
-    f.playableOnly
+    f.playableOnly ||
+    f.ownedBy.length > 0
   );
 }
 
@@ -102,10 +110,18 @@ function matchesQuery(game: GameDefinition, q: string): boolean {
  * Apply the active filter set to a flat game list. Pure and order-preserving,
  * so the caller can re-group the result into presentation units afterward.
  */
-export function filterGames(games: GameDefinition[], filters: GameFilters): GameDefinition[] {
+export function filterGames(
+  games: GameDefinition[],
+  filters: GameFilters,
+  owners: OwnerLibraries = new Map(),
+): GameDefinition[] {
   const q = filters.query.trim().toLowerCase();
+  const selectedOwners = filters.ownedBy.map((id) => owners.get(id) ?? new Set<string>());
   return games.filter((game) => {
     if (filters.playableOnly && game.kind !== "playable") return false;
+    if (selectedOwners.length > 0 && !selectedOwners.some((lib) => lib.has(game.slug))) {
+      return false;
+    }
     if (q && !matchesQuery(game, q)) return false;
     if (filters.players !== null && !supportsPlayerCount(game, filters.players)) return false;
     if (filters.weight !== null && weightBucket(game.bgg.averageWeight) !== filters.weight) {
