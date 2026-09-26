@@ -1,5 +1,6 @@
 import { DECRYPTO_AI_MODELS } from "../games/decrypto/ai/models";
 import { ALL_STRATEGIES as SENSO_STRATEGIES } from "../games/senso-battle-for-japan/types";
+import { ALL_STRATEGIES as HUNGER_STRATEGIES } from "../games/the-hunger/types";
 
 export interface GameRoomConfig {
   minPlayers: number;
@@ -47,6 +48,12 @@ export const gameRoomConfigs: Record<string, GameRoomConfig> = {
     maxPlayers: 5,
     supportsAI: true,
     botStrategies: SENSO_STRATEGIES.map((s) => ({ id: s.id, label: s.label })),
+  },
+  "the-hunger": {
+    minPlayers: 2,
+    maxPlayers: 6,
+    supportsAI: true,
+    botStrategies: HUNGER_STRATEGIES.map((s) => ({ id: s.id, label: s.label })),
   },
   // Co-op quiz; seat index = table order, so lobby seat swaps double as seating.
   quiztopia: { minPlayers: 1, maxPlayers: 6, supportsAI: false },

@@ -1,0 +1,765 @@
+{
+  "side": "A",
+  "width": 1254,
+  "height": 1254,
+  "spaces": [
+    {
+      "id": "castle",
+      "region": "castle",
+      "path": null,
+      "effect": "castle",
+      "x": 598,
+      "y": 467
+    },
+    {
+      "id": "cemetery-1",
+      "region": "cemetery",
+      "path": "road",
+      "effect": "none",
+      "x": 557,
+      "y": 541
+    },
+    {
+      "id": "cemetery-2",
+      "region": "cemetery",
+      "path": "road",
+      "effect": "none",
+      "x": 644,
+      "y": 593
+    },
+    {
+      "id": "cemetery-3",
+      "region": "cemetery",
+      "path": "road",
+      "effect": "none",
+      "x": 761,
+      "y": 599
+    },
+    {
+      "id": "mountains-1",
+      "region": "mountains",
+      "path": "road",
+      "effect": "none",
+      "x": 850,
+      "y": 551
+    },
+    {
+      "id": "mountains-2",
+      "region": "mountains",
+      "path": "road",
+      "effect": "none",
+      "x": 864,
+      "y": 478
+    },
+    {
+      "id": "mountains-3",
+      "region": "mountains",
+      "path": "road",
+      "effect": "none",
+      "x": 823,
+      "y": 381
+    },
+    {
+      "id": "mountains-4",
+      "region": "mountains",
+      "path": "road",
+      "effect": "none",
+      "x": 745,
+      "y": 295
+    },
+    {
+      "id": "mountains-5",
+      "region": "mountains",
+      "path": "road",
+      "effect": "well",
+      "x": 640,
+      "y": 257
+    },
+    {
+      "id": "mountains-6",
+      "region": "mountains",
+      "path": "road",
+      "effect": "crypt",
+      "x": 508,
+      "y": 220
+    },
+    {
+      "id": "mountains-7",
+      "region": "mountains",
+      "path": "road",
+      "effect": "none",
+      "x": 385,
+      "y": 311
+    },
+    {
+      "id": "mountains-8",
+      "region": "mountains",
+      "path": "road",
+      "effect": "none",
+      "x": 378,
+      "y": 409
+    },
+    {
+      "id": "mountains-9",
+      "region": "mountains",
+      "path": "road",
+      "effect": "well",
+      "x": 445,
+      "y": 483
+    },
+    {
+      "id": "plains-1",
+      "region": "plains",
+      "path": "rail",
+      "effect": "well",
+      "x": 423,
+      "y": 591
+    },
+    {
+      "id": "plains-2",
+      "region": "plains",
+      "path": "boat",
+      "effect": "none",
+      "x": 293,
+      "y": 532
+    },
+    {
+      "id": "plains-3",
+      "region": "plains",
+      "path": "rail",
+      "effect": "none",
+      "x": 329,
+      "y": 646
+    },
+    {
+      "id": "plains-4",
+      "region": "plains",
+      "path": "boat",
+      "effect": "none",
+      "x": 201,
+      "y": 604
+    },
+    {
+      "id": "plains-5",
+      "region": "plains",
+      "path": "rail",
+      "effect": "none",
+      "x": 261,
+      "y": 718
+    },
+    {
+      "id": "plains-6",
+      "region": "plains",
+      "path": "boat",
+      "effect": "tavern",
+      "x": 89,
+      "y": 514
+    },
+    {
+      "id": "plains-7",
+      "region": "plains",
+      "path": "rail",
+      "effect": "well",
+      "x": 200,
+      "y": 789
+    },
+    {
+      "id": "plains-8",
+      "region": "plains",
+      "path": "boat",
+      "effect": "ship",
+      "x": 82,
+      "y": 668
+    },
+    {
+      "id": "plains-9",
+      "region": "plains",
+      "path": "rail",
+      "effect": "none",
+      "x": 291,
+      "y": 861
+    },
+    {
+      "id": "plains-10",
+      "region": "plains",
+      "path": "boat",
+      "effect": "well",
+      "x": 106,
+      "y": 991
+    },
+    {
+      "id": "plains-11",
+      "region": "plains",
+      "path": "rail",
+      "effect": "chest",
+      "x": 348,
+      "y": 944
+    },
+    {
+      "id": "plains-12",
+      "region": "plains",
+      "path": "road",
+      "effect": "crypt",
+      "x": 405,
+      "y": 826
+    },
+    {
+      "id": "plains-13",
+      "region": "plains",
+      "path": "boat",
+      "effect": "ship",
+      "x": 252,
+      "y": 1144
+    },
+    {
+      "id": "plains-14",
+      "region": "plains",
+      "path": "rail",
+      "effect": "crypt",
+      "x": 450,
+      "y": 932
+    },
+    {
+      "id": "plains-15",
+      "region": "plains",
+      "path": "road",
+      "effect": "none",
+      "x": 509,
+      "y": 838
+    },
+    {
+      "id": "plains-16",
+      "region": "plains",
+      "path": "rail",
+      "effect": "market",
+      "x": 535,
+      "y": 984
+    },
+    {
+      "id": "plains-17",
+      "region": "plains",
+      "path": "boat",
+      "effect": "chest",
+      "x": 576,
+      "y": 1146
+    },
+    {
+      "id": "plains-18",
+      "region": "plains",
+      "path": "road",
+      "effect": "none",
+      "x": 606,
+      "y": 863
+    },
+    {
+      "id": "plains-19",
+      "region": "plains",
+      "path": "rail",
+      "effect": "none",
+      "x": 671,
+      "y": 982
+    },
+    {
+      "id": "plains-20",
+      "region": "plains",
+      "path": "road",
+      "effect": "church",
+      "x": 741,
+      "y": 872
+    },
+    {
+      "id": "plains-21",
+      "region": "plains",
+      "path": "boat",
+      "effect": "ship",
+      "x": 824,
+      "y": 1166
+    },
+    {
+      "id": "plains-22",
+      "region": "plains",
+      "path": "rail",
+      "effect": "well",
+      "x": 746,
+      "y": 1014
+    },
+    {
+      "id": "plains-23",
+      "region": "plains",
+      "path": "road",
+      "effect": "well",
+      "x": 829,
+      "y": 879
+    },
+    {
+      "id": "plains-24",
+      "region": "plains",
+      "path": "boat",
+      "effect": "well",
+      "x": 1147,
+      "y": 1055
+    },
+    {
+      "id": "plains-25",
+      "region": "plains",
+      "path": "rail",
+      "effect": "chest-open",
+      "x": 838,
+      "y": 990
+    },
+    {
+      "id": "plains-26",
+      "region": "plains",
+      "path": "road",
+      "effect": "none",
+      "x": 954,
+      "y": 857
+    },
+    {
+      "id": "plains-27",
+      "region": "plains",
+      "path": "boat",
+      "effect": "ship",
+      "x": 1226,
+      "y": 943
+    },
+    {
+      "id": "plains-28",
+      "region": "plains",
+      "path": "rail",
+      "effect": "chest-open",
+      "x": 967,
+      "y": 980
+    },
+    {
+      "id": "plains-29",
+      "region": "plains",
+      "path": "road",
+      "effect": "crypt",
+      "x": 979,
+      "y": 762
+    },
+    {
+      "id": "plains-30",
+      "region": "plains",
+      "path": "rail",
+      "effect": "chest-open",
+      "x": 1043,
+      "y": 899
+    },
+    {
+      "id": "plains-31",
+      "region": "plains",
+      "path": "rail",
+      "effect": "chest-open",
+      "x": 1146,
+      "y": 808
+    },
+    {
+      "id": "plains-32",
+      "region": "plains",
+      "path": "rail",
+      "effect": "chest-open",
+      "x": 1160,
+      "y": 679
+    },
+    {
+      "id": "plains-33",
+      "region": "plains",
+      "path": "road",
+      "effect": "none",
+      "x": 979,
+      "y": 664
+    },
+    {
+      "id": "plains-34",
+      "region": "plains",
+      "path": "rail",
+      "effect": "chest-open",
+      "x": 1138,
+      "y": 562
+    },
+    {
+      "id": "forest-1",
+      "region": "forest",
+      "path": "road",
+      "effect": "none",
+      "x": 1020,
+      "y": 579
+    },
+    {
+      "id": "forest-2",
+      "region": "forest",
+      "path": "rail",
+      "effect": "chest",
+      "x": 1129,
+      "y": 443
+    },
+    {
+      "id": "forest-3",
+      "region": "forest",
+      "path": "road",
+      "effect": "well",
+      "x": 993,
+      "y": 470
+    },
+    {
+      "id": "forest-4",
+      "region": "forest",
+      "path": "rail",
+      "effect": "well",
+      "x": 1166,
+      "y": 358
+    },
+    {
+      "id": "forest-5",
+      "region": "forest",
+      "path": "road",
+      "effect": "barracks",
+      "x": 947,
+      "y": 352
+    },
+    {
+      "id": "forest-6",
+      "region": "forest",
+      "path": "rail",
+      "effect": "mansion",
+      "x": 1143,
+      "y": 250
+    },
+    {
+      "id": "forest-7",
+      "region": "forest",
+      "path": "road",
+      "effect": "none",
+      "x": 917,
+      "y": 219
+    },
+    {
+      "id": "forest-8",
+      "region": "forest",
+      "path": "rail",
+      "effect": "crypt",
+      "x": 1037,
+      "y": 139
+    },
+    {
+      "id": "forest-9",
+      "region": "forest",
+      "path": "road",
+      "effect": "crypt",
+      "x": 866,
+      "y": 146
+    },
+    {
+      "id": "forest-10",
+      "region": "forest",
+      "path": "rail",
+      "effect": "chest",
+      "x": 948,
+      "y": 78
+    },
+    {
+      "id": "forest-11",
+      "region": "forest",
+      "path": "road",
+      "effect": "none",
+      "x": 775,
+      "y": 88
+    },
+    {
+      "id": "forest-12",
+      "region": "forest",
+      "path": "road",
+      "effect": "well",
+      "x": 685,
+      "y": 76
+    },
+    {
+      "id": "forest-13",
+      "region": "forest",
+      "path": "road",
+      "effect": "none",
+      "x": 587,
+      "y": 74
+    },
+    {
+      "id": "forest-14",
+      "region": "forest",
+      "path": "road",
+      "effect": "chest",
+      "x": 511,
+      "y": 73
+    },
+    {
+      "id": "labyrinth",
+      "region": "forest",
+      "path": null,
+      "effect": "labyrinth",
+      "x": 454,
+      "y": 148
+    }
+  ],
+  "edges": [
+    [
+      "castle",
+      "cemetery-1"
+    ],
+    [
+      "cemetery-1",
+      "cemetery-2"
+    ],
+    [
+      "cemetery-2",
+      "cemetery-3"
+    ],
+    [
+      "cemetery-3",
+      "mountains-1"
+    ],
+    [
+      "mountains-1",
+      "mountains-2"
+    ],
+    [
+      "mountains-2",
+      "mountains-3"
+    ],
+    [
+      "mountains-3",
+      "mountains-4"
+    ],
+    [
+      "mountains-4",
+      "mountains-5"
+    ],
+    [
+      "mountains-5",
+      "mountains-6"
+    ],
+    [
+      "mountains-6",
+      "mountains-7"
+    ],
+    [
+      "mountains-7",
+      "mountains-8"
+    ],
+    [
+      "mountains-8",
+      "mountains-9"
+    ],
+    [
+      "mountains-9",
+      "plains-1"
+    ],
+    [
+      "plains-1",
+      "plains-2"
+    ],
+    [
+      "plains-1",
+      "plains-3"
+    ],
+    [
+      "plains-2",
+      "plains-4"
+    ],
+    [
+      "plains-3",
+      "plains-5"
+    ],
+    [
+      "plains-4",
+      "plains-6"
+    ],
+    [
+      "plains-5",
+      "plains-7"
+    ],
+    [
+      "plains-6",
+      "plains-8"
+    ],
+    [
+      "plains-7",
+      "plains-9"
+    ],
+    [
+      "plains-8",
+      "plains-10"
+    ],
+    [
+      "plains-9",
+      "plains-11"
+    ],
+    [
+      "plains-9",
+      "plains-12"
+    ],
+    [
+      "plains-10",
+      "plains-13"
+    ],
+    [
+      "plains-11",
+      "plains-14"
+    ],
+    [
+      "plains-12",
+      "plains-15"
+    ],
+    [
+      "plains-13",
+      "plains-17"
+    ],
+    [
+      "plains-14",
+      "plains-16"
+    ],
+    [
+      "plains-15",
+      "plains-18"
+    ],
+    [
+      "plains-16",
+      "plains-19"
+    ],
+    [
+      "plains-17",
+      "plains-21"
+    ],
+    [
+      "plains-18",
+      "plains-20"
+    ],
+    [
+      "plains-19",
+      "plains-22"
+    ],
+    [
+      "plains-20",
+      "plains-23"
+    ],
+    [
+      "plains-21",
+      "plains-24"
+    ],
+    [
+      "plains-22",
+      "plains-25"
+    ],
+    [
+      "plains-23",
+      "plains-26"
+    ],
+    [
+      "plains-24",
+      "plains-27"
+    ],
+    [
+      "plains-25",
+      "plains-28"
+    ],
+    [
+      "plains-26",
+      "plains-29"
+    ],
+    [
+      "plains-26",
+      "plains-30"
+    ],
+    [
+      "plains-27",
+      "plains-31"
+    ],
+    [
+      "plains-27",
+      "plains-32"
+    ],
+    [
+      "plains-28",
+      "plains-30"
+    ],
+    [
+      "plains-29",
+      "plains-33"
+    ],
+    [
+      "plains-30",
+      "plains-31"
+    ],
+    [
+      "plains-31",
+      "plains-32"
+    ],
+    [
+      "plains-32",
+      "plains-34"
+    ],
+    [
+      "plains-33",
+      "forest-1"
+    ],
+    [
+      "plains-34",
+      "forest-2"
+    ],
+    [
+      "forest-1",
+      "forest-3"
+    ],
+    [
+      "forest-2",
+      "forest-4"
+    ],
+    [
+      "forest-3",
+      "forest-5"
+    ],
+    [
+      "forest-4",
+      "forest-6"
+    ],
+    [
+      "forest-5",
+      "forest-7"
+    ],
+    [
+      "forest-6",
+      "forest-8"
+    ],
+    [
+      "forest-7",
+      "forest-9"
+    ],
+    [
+      "forest-8",
+      "forest-10"
+    ],
+    [
+      "forest-9",
+      "forest-11"
+    ],
+    [
+      "forest-10",
+      "forest-11"
+    ],
+    [
+      "forest-11",
+      "forest-12"
+    ],
+    [
+      "forest-12",
+      "forest-13"
+    ],
+    [
+      "forest-13",
+      "forest-14"
+    ],
+    [
+      "forest-14",
+      "labyrinth"
+    ]
+  ]
+}

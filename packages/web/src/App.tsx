@@ -220,6 +220,8 @@ const router = createBrowserRouter(
           <Route path="dev/decrypto-preview" lazy={page(() => import("./pages/DecryptoPreview"))} />
           <Route path="dev/senso-preview" lazy={page(() => import("./pages/SensoPreview"))} />
           <Route path="dev/senso-cards" lazy={page(() => import("./pages/SensoCardsPreview"))} />
+          <Route path="dev/hunger-preview" lazy={page(() => import("./pages/HungerPreview"))} />
+          <Route path="dev/hunger-board" lazy={page(() => import("./pages/HungerBoardEditor"))} />
           <Route
             path="dev/quiztopia-preview"
             lazy={page(() => import("./pages/QuiztopiaPreview"))}

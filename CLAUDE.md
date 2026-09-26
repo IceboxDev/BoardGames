@@ -128,6 +128,7 @@ All 8 playable games are **server-authoritative** (`mode: "remote"`, registered 
 | Set | — (PvP / trainer) |
 | Quiztopia | — (co-op quiz referee for 1–6 humans; solo "Trainer" = spaced-repetition flashcards + wiki over the 177 transcribed cards in `core/src/games/quiztopia/content/`, served as CDN chunks to the web and read from disk by the server) |
 | Sensō: Battle for Japan | Kami = Tenka's card play + a max^n search of the whole rewards phase (default, `mcts/`); Tenka = paired PIMC over deals weighted by a learned opponent model, playouts by a net distilled from search; Shōgun = determinized Monte Carlo + one-reward lookahead; Daimyō / Warlord one-ply heuristics; random. Bench: `pnpm --filter @boardgames/core bench -- kami tenka --mirror` (paired seeds; `scratch/bench/kami/NOTES.md` has the ladder's numbers). |
+| The Hunger | heuristic (`heuristic-v1` "Nosferatu": greedy hunting under a Speed budget for the run home; `random`). Missions (all 50), the Starting deck, the 3 Roses, the 22 Familiars, the 80 Humans, the 20 Powers and the 26 Bonus tokens are real. The board is `content/boards/board-a.json`, mapped on the board art with the dev editor at `/dev/hunger-board` (drafts autosave via a dev-only Vite endpoint in `web/dev/hunger-board-plugin.ts`; Publish writes the file the game loads, only when `boardProblems` reports no errors). Side B (Elder) is derived from it in `content/boards.ts` — the printed sides differ only in Mountain survival. Cemetery rules key off the `cemetery` region, not a space type. Rules tests run on the fixed `content/test-board.ts`. Table rulings in `rulings.ts`. |
 
 > Note: ISMCTS searches currently run on the server's **main thread**, so a heavy search blocks the Node event loop for all sessions. A worker-thread AI pool is a known scaling improvement.
 
@@ -138,7 +139,7 @@ The WS envelope types a game action as `z.unknown()`, so **the spec is what stan
 Four layers, outermost first. Adding a game means participating in the first two:
 
 1. **`GameMachineSpec.validateAction(snapshot, player, raw)`** (required) turns an untrusted payload into a machine event or rejects it with a reason. Build it with the helpers in `packages/core/src/machines/action-validation.ts`:
-   - `playerActionValidator` — **preferred**. The action must be structurally equal to one the engine enumerated via `getLegalActions`, and the event is rebuilt from the *engine's own object*, so no client bytes reach game logic. Used by durak, parks, exploding-kittens, sushi-go, 7-wonders, sky-team.
+   - `playerActionValidator` — **preferred**. The action must be structurally equal to one the engine enumerated via `getLegalActions`, and the event is rebuilt from the *engine's own object*, so no client bytes reach game logic. Used by durak, parks, exploding-kittens, sushi-go, 7-wonders, sky-team, senso, the-hunger.
    - `directEventValidator` — same guarantee for machines whose client events *are* the actions (lost-cities, set).
    - `envelopeActionValidator` — well-formedness only; the engine adjudicates. Used by **pandemic**, whose UI doesn't drive from `legalActions`.
    `player` is the authenticated seat — build any seat field in the event from it, never from `raw`.
