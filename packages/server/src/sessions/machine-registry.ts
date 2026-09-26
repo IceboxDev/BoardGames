@@ -10,6 +10,7 @@ import { sensoSpec } from "@boardgames/core/games/senso-battle-for-japan/machine
 import { setPvpSpec } from "@boardgames/core/games/set/pvp-machine";
 import { skyTeamSpec } from "@boardgames/core/games/sky-team/machine";
 import { sushiGoSpec } from "@boardgames/core/games/sushi-go/machine";
+import { theHungerSpec } from "@boardgames/core/games/the-hunger/machine";
 import type { GameMachineSpec } from "@boardgames/core/machines/types";
 import type { AnyActorLogic } from "xstate";
 
@@ -26,6 +27,7 @@ registry.set("parks", parksSpec);
 registry.set("sky-team", skyTeamSpec);
 registry.set("senso-battle-for-japan", sensoSpec);
 registry.set("quiztopia", quiztopiaSpec);
+registry.set("the-hunger", theHungerSpec);
 
 export function getMachineSpec(
   slug: string,

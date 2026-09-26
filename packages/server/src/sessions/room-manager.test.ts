@@ -87,3 +87,21 @@ describe("buildGameConfig — other slugs keep their shape", () => {
     expect(buildGameConfig(room("mystery", ["human"]), { a: 1 })).toEqual({ a: 1 });
   });
 });
+
+describe("buildGameConfig — the-hunger", () => {
+  it("maps filled seats to strategies and lobby extras to options", () => {
+    const r = room("the-hunger", ["human", "ai", "open", "human"]);
+    expect(buildGameConfig(r, { mode: "rookie", beginnerSafeMountains: true })).toEqual({
+      playerCount: 3,
+      strategies: [null, "heuristic-v1", null],
+      options: { mode: "rookie", beginnerSafeMountains: true },
+    });
+  });
+
+  it("never lets extras override the seat count", () => {
+    const r = room("the-hunger", ["human", "human"]);
+    const config = buildGameConfig(r, { playerCount: 6, strategies: ["random"] });
+    expect(config.playerCount).toBe(2);
+    expect(config.strategies).toEqual([null, null]);
+  });
+});

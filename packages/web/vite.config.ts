@@ -2,6 +2,7 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { visualizer } from "rollup-plugin-visualizer";
 import { defineConfig } from "vite";
+import { hungerBoardPlugin } from "./dev/hunger-board-plugin";
 
 export default defineConfig({
   define: {
@@ -14,6 +15,8 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    // Dev only: load/save endpoints for the Hunger board editor.
+    hungerBoardPlugin(),
     // Bundle analyzer; emits dist/stats.html on build when ANALYZE=1.
     process.env.ANALYZE
       ? visualizer({ filename: "dist/stats.html", gzipSize: true, brotliSize: true })

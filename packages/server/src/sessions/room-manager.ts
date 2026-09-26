@@ -568,6 +568,23 @@ export function buildGameConfig(
       };
     }
 
+    case "the-hunger": {
+      // One strategy id per filled seat, null for humans; seats are symmetric.
+      // Lobby extras (`mode`, `beginnerSafeMountains`) become START options;
+      // the engine ignores any value it does not know.
+      const strategies = room.slots
+        .filter((s) => s.kind !== "open")
+        .map((s) => (s.kind === "ai" ? (s.aiStrategy ?? "heuristic-v1") : null));
+      // Extras spread first so they can never override the seat count.
+      const { mode, beginnerSafeMountains, ...rest } = extra;
+      return {
+        ...rest,
+        playerCount: strategies.length,
+        strategies,
+        options: { mode, beginnerSafeMountains },
+      };
+    }
+
     case "sushi-go": {
       const humanCount = room.slots.filter((s) => s.kind === "human").length;
       return { playerCount: humanCount, ...extra };
