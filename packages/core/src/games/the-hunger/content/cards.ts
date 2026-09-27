@@ -489,11 +489,17 @@ export function passivesOf(def: CardDef): readonly PassiveEffect[] {
   return Array.isArray(p) ? p : [p as PassiveEffect];
 }
 
+/** Physical id → def. The set of physical ids is small and fixed, and search calls this millions of times. */
+const DEF_BY_PHYSICAL = new Map<string, CardDef>();
+
 export function cardDef(id: string): CardDef {
+  const cached = DEF_BY_PHYSICAL.get(id);
+  if (cached) return cached;
   const hash = id.indexOf("#");
   const defId = hash === -1 ? id : id.slice(0, hash);
   const def = CARD_DEFS.get(defId);
   if (!def) throw new Error(`Unknown card ${id}`);
+  DEF_BY_PHYSICAL.set(id, def);
   return def;
 }
 

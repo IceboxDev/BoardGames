@@ -2,7 +2,7 @@ import { assign, fromPromise, type SnapshotFrom, setup } from "xstate";
 import { randomSeed } from "../../lib/rng";
 import { playerActionValidator, safeApply } from "../../machines/action-validation";
 import type { GameMachineSpec } from "../../machines/types";
-import { pickAiAction } from "./ai-strategies";
+import { pickAiActionAsync } from "./ai-strategies";
 import { applyActionPure, createInitialState } from "./game-engine";
 import { buildPlayerView } from "./player-view";
 import { getActivePlayer, getLegalActions } from "./rules";
@@ -79,7 +79,7 @@ export const theHungerMachine = setup({
     computeAiMove: fromPromise(async ({ input }: { input: { state: GameState } }) => {
       // Yield so the session manager flushes the previous state first.
       await new Promise((resolve) => setTimeout(resolve, 0));
-      return { seat: getActivePlayer(input.state), action: pickAiAction(input.state) };
+      return { seat: getActivePlayer(input.state), action: await pickAiActionAsync(input.state) };
     }),
   },
 

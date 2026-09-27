@@ -40,6 +40,7 @@ import {
 } from "./rules";
 import { RULINGS } from "./rulings";
 import { computeResult } from "./scoring";
+import { cloneState } from "./search/clone";
 import type {
   Action,
   AIStrategyId,
@@ -1027,5 +1028,16 @@ export function applyActionPure(state: GameState, player: number, action: Action
   if (!match) throw new Error(`Illegal action ${JSON.stringify(action)}`);
   const next = structuredClone(state);
   applyInPlace(next, player, match);
+  return next;
+}
+
+/**
+ * Search's apply: `action` MUST come from `getLegalActions(state, player)`
+ * (it is not re-validated) and the result's `log` starts empty. Otherwise
+ * identical to `applyActionPure` — the same `applyInPlace` does the work.
+ */
+export function applyUnchecked(state: GameState, player: number, action: Action): GameState {
+  const next = cloneState(state);
+  applyInPlace(next, player, action);
   return next;
 }

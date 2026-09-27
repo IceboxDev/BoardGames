@@ -81,7 +81,7 @@ function distributeGameIndices(numGames: number, workerCount: number): number[][
   return batches;
 }
 
-/** Sensō: a strategy pair at a table size; wins are tallied per strategy id. */
+/** Sensō / The Hunger: a strategy pair at a table size; wins are tallied per strategy id. */
 function sensoPair(config: Record<string, unknown>): { a: string; b: string; playerCount: number } {
   const c = config as { strategyAId?: string; strategyBId?: string; playerCount?: number };
   return { a: c.strategyAId ?? "", b: c.strategyBId ?? "", playerCount: c.playerCount ?? 2 };
@@ -132,7 +132,7 @@ function buildPartial(entry: TournamentEntry): Record<string, unknown> {
     };
   }
 
-  if (entry.gameSlug === "senso-battle-for-japan") {
+  if (entry.gameSlug === "senso-battle-for-japan" || entry.gameSlug === "the-hunger") {
     const { a, b, playerCount } = sensoPair(entry.config);
     const aWins = entry.ekWins[a] ?? 0;
     const bWins = entry.ekWins[b] ?? 0;
@@ -144,8 +144,9 @@ function buildPartial(entry: TournamentEntry): Record<string, unknown> {
       aWins,
       bWins,
       draws: Math.max(0, entry.gamesCompleted - aWins - bWins),
-      totalScoreA: 0,
-      totalScoreB: 0,
+      // Sensō reports no scores, so its totals stay 0.
+      totalScoreA: entry.totalScoreA,
+      totalScoreB: entry.totalScoreB,
       wins: { ...entry.ekWins },
     };
   }
@@ -198,7 +199,7 @@ function buildFinalResult(entry: TournamentEntry): Record<string, unknown> {
     };
   }
 
-  if (entry.gameSlug === "senso-battle-for-japan") {
+  if (entry.gameSlug === "senso-battle-for-japan" || entry.gameSlug === "the-hunger") {
     const { a, b, playerCount } = sensoPair(entry.config);
     const aWins = entry.ekWins[a] ?? 0;
     const bWins = entry.ekWins[b] ?? 0;
@@ -210,8 +211,9 @@ function buildFinalResult(entry: TournamentEntry): Record<string, unknown> {
       aWins,
       bWins,
       draws: Math.max(0, entry.gamesCompleted - aWins - bWins),
-      totalScoreA: 0,
-      totalScoreB: 0,
+      // Sensō reports no scores, so its totals stay 0.
+      totalScoreA: entry.totalScoreA,
+      totalScoreB: entry.totalScoreB,
       wins: { ...entry.ekWins },
     };
   }
@@ -386,10 +388,14 @@ async function handleWorkerMessage(
         const sid = strategies[durak];
         entry.ekWins[sid] = (entry.ekWins[sid] ?? 0) + 1;
       }
-    } else if (gameSlug === "senso-battle-for-japan") {
+    } else if (gameSlug === "senso-battle-for-japan" || gameSlug === "the-hunger") {
       const sid = msg.winnerStrategy;
       if (typeof sid === "string" && sid.length > 0) {
         entry.ekWins[sid] = (entry.ekWins[sid] ?? 0) + 1;
+      }
+      if (typeof msg.scoreA === "number" && typeof msg.scoreB === "number") {
+        entry.totalScoreA += msg.scoreA;
+        entry.totalScoreB += msg.scoreB;
       }
     }
 

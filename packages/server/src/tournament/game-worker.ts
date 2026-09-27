@@ -119,6 +119,41 @@ if (gameSlug === "lost-cities") {
       });
     }
   }
+} else if (gameSlug === "the-hunger") {
+  const { meanScoreBySide, seatPattern, simulateGame } = await import(
+    "@boardgames/core/games/the-hunger/tournament-runner"
+  );
+  type AIStrategyId = import("@boardgames/core/games/the-hunger/types").AIStrategyId;
+  type Mode = import("@boardgames/core/games/the-hunger/types").Mode;
+
+  // Same pair-plus-table-size shape as Sensō; each game also reports the mean
+  // score of each side's seats so the grid can show a score difference.
+  const cfg = config.config as {
+    strategyAId?: AIStrategyId;
+    strategyBId?: AIStrategyId;
+    playerCount?: number;
+    mode?: Mode;
+  };
+  const a = cfg.strategyAId;
+  const b = cfg.strategyBId;
+  const playerCount = Math.min(6, Math.max(2, Math.trunc(cfg.playerCount ?? 2)));
+  const mode = cfg.mode === "rookie" ? "rookie" : "elder";
+  if (!a || !b) {
+    send({ kind: "error", message: "the-hunger needs two strategies" });
+  } else {
+    for (const i of gameIndices) {
+      const seats = seatPattern(a, b, playerCount, i);
+      const { winner, scores } = simulateGame(seats, i, { mode });
+      send({
+        kind: "game",
+        gameIndex: i,
+        winner,
+        winnerStrategy: winner < 0 ? null : seats[winner],
+        scoreA: meanScoreBySide(seats, scores, a),
+        scoreB: meanScoreBySide(seats, scores, b),
+      });
+    }
+  }
 } else {
   send({ kind: "error", message: `Unknown game: ${gameSlug}` });
 }
