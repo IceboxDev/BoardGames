@@ -1,10 +1,9 @@
 import type { SkyTeamResult } from "@boardgames/core/games/sky-team/types";
-import { GameOverLayout } from "../../../components/game-over/GameOverLayout";
+import { type GameOverAction, GameOverLayout } from "../../../components/game-over/GameOverLayout";
 
 interface Props {
   result: SkyTeamResult;
-  onPlayAgain?: () => void;
-  onBackToMenu: () => void;
+  actions: readonly GameOverAction[];
 }
 
 const OUTCOME_LABELS: Record<string, { headline: string; sub: string; tone: "win" | "lose" }> = {
@@ -56,18 +55,12 @@ const OUTCOME_LABELS: Record<string, { headline: string; sub: string; tone: "win
   },
 };
 
-export default function GameOverScreen({ result, onPlayAgain, onBackToMenu }: Props) {
+export default function GameOverScreen({ result, actions }: Props) {
   const meta = OUTCOME_LABELS[result.outcome] ?? {
     headline: "Game over",
     sub: result.outcome,
     tone: "lose" as const,
   };
-  const actions: { label: string; onClick: () => void; variant: "primary" | "secondary" }[] = [
-    ...(onPlayAgain
-      ? [{ label: "Play again", onClick: onPlayAgain, variant: "primary" as const }]
-      : []),
-    { label: "Back to menu", onClick: onBackToMenu, variant: "secondary" as const },
-  ];
 
   return (
     // `relative z-raised` lifts this screen above the fixed `def.backgroundImage`

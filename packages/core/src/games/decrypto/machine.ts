@@ -8,11 +8,12 @@ import {
   rejectAction,
   safeApply,
 } from "../../machines/action-validation";
+import { humanSeats, seatStrategies } from "../../machines/seats";
 import type { GameMachineSpec } from "../../machines/types";
-import type { EncryptInput, GuessInput } from "./ai/agent";
-import { getDecryptoAgent } from "./ai/agent";
-import { fallbackGuess } from "./ai/fallback";
+import type { DecryptoAiAgent, EncryptInput, GuessInput } from "./ai/agent";
+import { fallbackDecryptoAgent, fallbackGuess } from "./ai/fallback";
 import { canonicalDecryptoModel, DEFAULT_DECRYPTO_MODEL } from "./ai/models";
+import { type DecryptoConfig, decryptoManifest } from "./manifest";
 import { buildPlayerView } from "./player-view";
 import {
   allCluesDone,
@@ -40,6 +41,7 @@ import {
   playerCount,
   resolveTransmission,
   revealedCluesFor,
+  teamOf,
 } from "./rules";
 import type {
   Code,
@@ -227,6 +229,53 @@ const initialContext: DecryptoContext = {
   beats: DEFAULT_BEATS,
 };
 
+/**
+ * The machine's AI actors, bound to an agent. Every call races a deadline and
+ * is sanitised against the rules, so an agent may be slow or throw.
+ */
+function aiActors(agent: DecryptoAiAgent) {
+  return {
+    computeAiClues: fromPromise(
+      async ({ input }: { input: { ctx: DecryptoContext } }): Promise<AiClueResult[]> => {
+        // Yield a macrotask so the server flushes the pending state update
+        // (and its ai-thinking broadcast) before any synchronous agent work.
+        await new Promise((resolve) => setTimeout(resolve, 0));
+        const ctx = input.ctx;
+        return Promise.all(
+          pendingAiClueTransmissions(ctx).map(async (tx) => {
+            const encryptInput = buildEncryptInput(ctx, tx);
+            const raw = await raceOrNull(() => agent.encrypt(encryptInput), AI_ENCRYPT_DEADLINE_MS);
+            return {
+              team: tx.team,
+              clues: raw === null ? null : sanitizeCluesOrNull(ctx, tx, raw),
+            };
+          }),
+        );
+      },
+    ),
+
+    computeAiGuesses: fromPromise(
+      async ({ input }: { input: { ctx: DecryptoContext } }): Promise<AiGuessResult[]> => {
+        await new Promise((resolve) => setTimeout(resolve, 0));
+        const ctx = input.ctx;
+        const tx = currentTransmission(ctx);
+        if (!tx) return [];
+        return Promise.all(
+          pendingAiGuessPurposes(ctx).map(async (purpose) => {
+            const guessInput = buildGuessInput(ctx, tx, purpose);
+            const raw = await raceWithFallback(
+              () => agent.guess(guessInput),
+              () => fallbackGuess(guessInput),
+              AI_GUESS_DEADLINE_MS,
+            );
+            return { purpose, code: sanitizeGuess(ctx, tx, purpose, raw) };
+          }),
+        );
+      },
+    ),
+  };
+}
+
 export const decryptoMachine = setup({
   types: {} as {
     context: DecryptoContext;
@@ -251,49 +300,9 @@ export const decryptoMachine = setup({
     clueTimeout: ({ context }) => context.beats.clueTimeout,
   },
 
-  actors: {
-    computeAiClues: fromPromise(
-      async ({ input }: { input: { ctx: DecryptoContext } }): Promise<AiClueResult[]> => {
-        // Yield a macrotask so the server flushes the pending state update
-        // (and its ai-thinking broadcast) before any synchronous agent work.
-        await new Promise((resolve) => setTimeout(resolve, 0));
-        const ctx = input.ctx;
-        return Promise.all(
-          pendingAiClueTransmissions(ctx).map(async (tx) => {
-            const encryptInput = buildEncryptInput(ctx, tx);
-            const raw = await raceOrNull(
-              () => getDecryptoAgent().encrypt(encryptInput),
-              AI_ENCRYPT_DEADLINE_MS,
-            );
-            return {
-              team: tx.team,
-              clues: raw === null ? null : sanitizeCluesOrNull(ctx, tx, raw),
-            };
-          }),
-        );
-      },
-    ),
-
-    computeAiGuesses: fromPromise(
-      async ({ input }: { input: { ctx: DecryptoContext } }): Promise<AiGuessResult[]> => {
-        await new Promise((resolve) => setTimeout(resolve, 0));
-        const ctx = input.ctx;
-        const tx = currentTransmission(ctx);
-        if (!tx) return [];
-        return Promise.all(
-          pendingAiGuessPurposes(ctx).map(async (purpose) => {
-            const guessInput = buildGuessInput(ctx, tx, purpose);
-            const raw = await raceWithFallback(
-              () => getDecryptoAgent().guess(guessInput),
-              () => fallbackGuess(guessInput),
-              AI_GUESS_DEADLINE_MS,
-            );
-            return { purpose, code: sanitizeGuess(ctx, tx, purpose, raw) };
-          }),
-        );
-      },
-    ),
-  },
+  // The deterministic fallback until the server binds its model-backed agent
+  // with `withDecryptoAgent`.
+  actors: aiActors(fallbackDecryptoAgent),
 
   guards: {
     gameDecided: ({ context }) => context.result !== null,
@@ -747,6 +756,7 @@ function validateDecryptoAction(
 }
 
 interface DecryptoReplayLog {
+  formatVersion: 1;
   variant: DecryptoContext["variant"];
   seed: number;
   keywords: [string[] | null, string[] | null];
@@ -755,19 +765,33 @@ interface DecryptoReplayLog {
   result: DecryptoResult;
   playerCount: number;
   scores: [number, number];
-  /** Duplicated into scoreA/scoreB — persistReplay's summary columns read those names. */
-  scoreA: number;
-  scoreB: number;
   winner?: Team;
+}
+
+/** The machine with its AI seats bound to `agent` — how the server gives each session its model. */
+export function withDecryptoAgent(agent: DecryptoAiAgent): typeof decryptoMachine {
+  return decryptoMachine.provide({ actors: aiActors(agent) });
 }
 
 export const decryptoSpec: GameMachineSpec<
   typeof decryptoMachine,
   DecryptoPlayerView,
   DecryptoAction,
-  DecryptoResult
+  DecryptoResult,
+  DecryptoConfig
 > = {
   machine: decryptoMachine,
+  manifest: decryptoManifest,
+
+  // Three seats is the Interceptor variant (seat 2 intercepts); four is 2v2.
+  buildStart: ({ seats, config, seed }) => ({
+    type: "START",
+    variant: seats.length === 3 ? "interceptor" : "standard",
+    timerEnabled: config.timerEnabled,
+    humanPlayers: humanSeats(seats),
+    aiModels: seatStrategies(seats),
+    seed,
+  }),
 
   getPlayerView(snapshot, player) {
     return buildPlayerView(snapshot.context, phaseOf(snapshot), player);
@@ -796,11 +820,25 @@ export const decryptoSpec: GameMachineSpec<
     return snapshot.matches("gameOver");
   },
 
+  getOutcome(snapshot) {
+    const ctx = snapshot.context;
+    if (!snapshot.matches("gameOver") || ctx.result === null) return null;
+    const seats = Array.from({ length: playerCount(ctx.variant) }, (_, seat) => seat);
+    return {
+      kind: "teams",
+      teamOf: seats.map((seat) => teamOf(ctx, seat) ?? 0),
+      // No winner is a shared result — neither team came out ahead.
+      winningTeam: ctx.result.winner ?? null,
+      teamScores: [...ctx.result.points],
+    };
+  },
+
   getReplayLog(snapshot): DecryptoReplayLog | null {
     const ctx = snapshot.context;
     // Null until game over — a mid-game persist must never leak keywords.
     if (!snapshot.matches("gameOver") || ctx.result === null) return null;
     return {
+      formatVersion: 1,
       variant: ctx.variant,
       seed: ctx.seed,
       keywords: [
@@ -812,8 +850,6 @@ export const decryptoSpec: GameMachineSpec<
       result: ctx.result,
       playerCount: playerCount(ctx.variant),
       scores: ctx.result.points,
-      scoreA: ctx.result.points[0],
-      scoreB: ctx.result.points[1],
       winner: ctx.result.winner,
     };
   },

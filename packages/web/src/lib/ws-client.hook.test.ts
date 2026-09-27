@@ -61,6 +61,7 @@ describe("useGameSession — message dispatch", () => {
             JSON.stringify({
               type: "session-created",
               sessionId: "sess-1",
+              playerIndex: 0,
               playerView: { hand: ["A"] },
               legalActions: [{ kind: "play" }],
               activePlayer: 0,
@@ -94,6 +95,7 @@ describe("useGameSession — message dispatch", () => {
       send({
         type: "session-created",
         sessionId: "s-1",
+        playerIndex: 0,
         playerView: {},
         legalActions: [],
         activePlayer: 0,
@@ -112,6 +114,7 @@ describe("useGameSession — message dispatch", () => {
       send({
         type: "game-over",
         sessionId: "s-1",
+        outcome: null,
         playerView: {},
         result: { winner: 1 },
         playerIndex: 0,
@@ -122,6 +125,7 @@ describe("useGameSession — message dispatch", () => {
       send({
         type: "session-created",
         sessionId: "s-2",
+        playerIndex: 0,
         playerView: {},
         legalActions: [{ kind: "play" }],
         activePlayer: 0,
@@ -210,6 +214,7 @@ describe("useGameSession — message dispatch", () => {
             JSON.stringify({
               type: "game-over",
               sessionId: "sess-1",
+              outcome: null,
               playerView: {},
               result: { winner: 0, score: 100 },
               replayId: 42,
@@ -453,6 +458,7 @@ describe("useGameSession — sendAction", () => {
             JSON.stringify({
               type: "session-created",
               sessionId: "sess-1",
+              playerIndex: 0,
               playerView: {},
               legalActions: [],
               activePlayer: 0,
@@ -468,7 +474,7 @@ describe("useGameSession — sendAction", () => {
       expect(JSON.parse(received[0])).toEqual({
         type: "action",
         sessionId: "sess-1",
-        action: { kind: "draw" },
+        action: { type: "PLAYER_ACTION", action: { kind: "draw" } },
       });
     } finally {
       server.close();

@@ -52,7 +52,7 @@ All HTTP, WebSocket, and SSE messages exchanged between `packages/web` and `pack
 
 **Schema layout:**
 - `packages/core/src/protocol/common.ts` — `ErrorResponseSchema`, branded `DateKey`/`IsoTimestamp`/`TimeOfDay`/`GameSlug`.
-- `packages/core/src/protocol/http/*.ts` — request/response schemas grouped by feature (`calendar`, `availability`, `inventory`, `tournament`, `games`, `auth`).
+- `packages/core/src/protocol/http/*.ts` — request/response schemas grouped by feature (`calendar`, `availability`, `inventory`, `games`, `auth`).
 - `packages/core/src/protocol/ws/*.ts` — `ServerMessageSchema` and `ClientMessageSchema` (discriminated unions on `type`), `RoomStateSchema`/`RoomSlotSchema`. Per-game `playerView`/`legalActions`/`result` payloads stay `z.unknown()` at the envelope; per-game schemas are a follow-up.
 - Each schema file has an adjacent `*.test.ts` (good payload parses; bad payload throws with the expected issue path).
 - Types are derived via `z.infer` (or `z.input` for raw form shapes), never re-declared as TS interfaces.
@@ -80,17 +80,20 @@ All HTTP, WebSocket, and SSE messages exchanged between `packages/web` and `pack
 
 - **`packages/core`** — Game logic, rules, AI, and state machines. No UI dependencies. Exports via path-mapped subpaths (e.g. `@boardgames/core/games/lost-cities/types`).
 - **`packages/web`** — React + Vite + Tailwind v4 frontend. Each game lives in `src/games/<slug>/` with a `GameDefinition` export in `index.ts`. Games auto-register via `registry.ts` using `import.meta.glob`.
-- **`packages/server`** — Hono HTTP/WebSocket server persisting to **Turso/libsql** (`@libsql/client`, remote-only — there is no local SQLite file and no `better-sqlite3`). Hosts tournament runners and game sessions. Schema changes, backups and the migration workflow: [`docs/database-operations.md`](docs/database-operations.md).
+- **`packages/server`** — Hono HTTP/WebSocket server persisting to **Turso/libsql** (`@libsql/client`, remote-only — there is no local SQLite file and no `better-sqlite3`). Hosts game sessions and rooms, and stores finished matches (`matches/store.ts`: one `game_replays` row per game with its `outcome_json`, `seed` and a `replay_seats` row per seat). It runs no tournaments — see "AI tournaments" below. Schema changes, backups and the migration workflow: [`docs/database-operations.md`](docs/database-operations.md).
 
 ### Game structure pattern
 
 Each game follows a consistent split:
 
 **Core** (`packages/core/src/games/<slug>/`):
+- `manifest.ts` — `defineManifest(...)`: seat range, seat names, AI strategies (`StrategyInfo` with a difficulty tier and optional seat range), default strategy, and a zod `config` schema whose `{}` parses to the defaults. Browser-safe; listed in `core/src/games/manifests.ts` (`GAME_MANIFESTS`).
 - `types.ts` — game state types
-- `game-engine.ts` / `rules.ts` — pure functions for state transitions and legal moves
+- `game-engine.ts` / `rules.ts` — pure functions for state transitions and legal moves. Randomness comes from a seed (`lib/rng.ts`: `rngFrom` / `rngStateFromSeed`), never `Math.random`.
 - `machine.ts` — XState state machine implementing `GameMachineSpec` (defined in `core/src/machines/types.ts`)
+- `outcome.ts` — maps the game's result to the shared `GameOutcome` (helpers in `core/src/machines/outcome.ts`)
 - `scoring.ts` — scoring logic
+- `tournament-runner.ts` — optional headless `simulator` for the local tournament CLI
 - AI files (e.g. `ai-strategies.ts`, `mcts/`) where applicable
 
 **Web** (`packages/web/src/games/<slug>/`):
@@ -101,20 +104,22 @@ Each game follows a consistent split:
 
 ### Key abstractions
 
-- **Runtime model — every playable game is SERVER-AUTHORITATIVE.** The XState machine *and* its AI run on the **server** (`packages/server/src/sessions/manager.ts` creates one actor per session); the browser only renders server state over a single WebSocket per `/play/:slug`, via `useGameShell` → `useRemoteGame` (solo vs AI) / `useMultiplayerRoom` (rooms). There is **no client-side game loop** for the 8 games. (`useLocalGame` exists *only* for Set's standalone trainer mini-mode — it is not how the 8 game sessions run.)
-- **`GameMachineSpec`** (`core/src/machines/types.ts`) — generic interface every game machine implements (player views, legal actions, active player, result, game-over). The server's session manager drives this uniformly for all games.
+- **Runtime model — every playable game is SERVER-AUTHORITATIVE.** The XState machine *and* its AI run on the **server** (`packages/server/src/sessions/manager.ts` creates one actor per session); the browser only renders server state over a single WebSocket per `/play/:slug`, via `useGameShell` → `useRemoteGame` (solo vs AI) / `useMultiplayerRoom` (rooms). There is **no client-side game loop** for any game. (`useLocalGame` exists *only* for Set's standalone trainer mini-mode.)
+- **`GameMachineSpec`** (`core/src/machines/types.ts`) — generic interface every game machine implements: `manifest`, `buildStart({seats, config, seed})` (the ONLY way a START event is made — server-side, in `sessions/start.ts:prepareStart`, which checks seating against the manifest, strict-parses the config and draws the seed), player views, legal actions, active player, `validateAction`, `getOutcome` (shared `GameOutcome`: ranked / coop / teams) and `getReplayLog` (`{ formatVersion, … }`). The server's session manager drives this uniformly for all games; `AnyGameMachineSpec` is the erased form the registry holds.
+- **`useSessionFlow`** (`web/src/hooks/useSessionFlow.ts`) — every game component's session state: `phase` (setup / waiting / playing / finished), `view` (kept after game over), `seat`, `seats` / `seatNames` (room seat order respected), `start`, `endActions` (the shared game-over buttons) and `sendAction`. Games render per phase and never touch the transport, seat mapping or navigation. Solo seats are `againstAi(n, strategy)` or an explicit `SeatRequest[]`.
+- **One wire envelope** — every game action travels as `{ type: "PLAYER_ACTION", action, player? }` (`PlayerActionEnvelopeSchema`); `player` only claims one of the sender's own human seats (Pandemic solo).
 - **`GameDefinition` / `PlayableModule`** (`web/src/games/types.ts`) — registry entry for each game (metadata + lazy component). The `mode` field is `"remote"` for all games today and is **not branched on at runtime** — it's vestigial, kept only for a hypothetical future client-only game. Don't infer "client-side" from it.
 - **Dev logging** — `packages/server/src/lib/game-log.ts` (server: session/action/snapshot/AI/game-over) and `packages/web/src/lib/game-log.ts` (client: WS send/recv, dropped sends) emit a unified, dev-only `[game:<slug>]` trace for every game. Use these to debug a stuck/hung session: a gap after `ai-thinking` = slow/blocking AI, a `send DROPPED` = the socket wasn't open.
 - **Game registry** (`web/src/games/registry.ts`) — merges three sources:
   1. `core/src/games/catalog.json` — Zod-validated browse-only metadata for *every* game (slug, bggId, accentHex, family, displayTitle, bggOverrides).
-  2. `import.meta.glob("./*/index.ts")` — playable extras (component, mode, tournament strategies, …). Only playable games have an `index.ts`; catalog-only games live entirely in `catalog.json`.
+  2. `import.meta.glob("./*/index.ts")` — playable extras (component, mode, replay viewer, `tournamentResults`, …); the registry attaches the core manifest as `def.manifest`. Only playable games have an `index.ts`; catalog-only games live entirely in `catalog.json`.
   3. The bundled BGG snapshot + per-game `descriptions.generated.ts` + thumbnail webp.
 
   Resolved entries are discriminated on `kind: "catalog" | "playable"` — TS narrows playable fields automatically inside `def.kind === "playable"` branches.
 
 ### Current games
 
-All 8 playable games are **server-authoritative** (`mode: "remote"`, registered in `machine-registry.ts`, multiplayer config in `room-config.ts`). The AI runs server-side inside each game's machine via a `fromPromise` actor.
+All 13 playable games are **server-authoritative** (registered in `packages/server/src/games/registry.ts`; seats, strategies and options in each game's `manifest.ts`). The AI runs server-side inside each game's machine via a `fromPromise` actor; external agents (7 Wonders' C++ search, Decrypto's LLM) are injected per session with `machine.provide` (`withSevenWondersAgent`, `withDecryptoAgent`), never through module globals. Also playable but not in the table: 7 Wonders (random / C++ search) and Decrypto (LLM agent).
 
 | Game | AI |
 |------|----|
@@ -139,8 +144,7 @@ The WS envelope types a game action as `z.unknown()`, so **the spec is what stan
 Four layers, outermost first. Adding a game means participating in the first two:
 
 1. **`GameMachineSpec.validateAction(snapshot, player, raw)`** (required) turns an untrusted payload into a machine event or rejects it with a reason. Build it with the helpers in `packages/core/src/machines/action-validation.ts`:
-   - `playerActionValidator` — **preferred**. The action must be structurally equal to one the engine enumerated via `getLegalActions`, and the event is rebuilt from the *engine's own object*, so no client bytes reach game logic. Used by durak, parks, exploding-kittens, sushi-go, 7-wonders, sky-team, senso, the-hunger.
-   - `directEventValidator` — same guarantee for machines whose client events *are* the actions (lost-cities, set).
+   - `playerActionValidator` — **preferred**. The action must be structurally equal to one the engine enumerated via `getLegalActions`, and the event is rebuilt from the *engine's own object*, so no client bytes reach game logic. Used by every game except pandemic.
    - `envelopeActionValidator` — well-formedness only; the engine adjudicates. Used by **pandemic**, whose UI doesn't drive from `legalActions`.
    `player` is the authenticated seat — build any seat field in the event from it, never from `raw`.
 2. **`safeApply(label, fn)`** wraps every engine call inside an `assign`, so an engine throw becomes "move rejected, state unchanged" instead of a dead actor.
@@ -160,6 +164,7 @@ Every game board uses `GameScreen` from `web/src/components/game-layout/`. This 
 - `leftSidebar` / `leftSidebarTitle` / `leftSidebarLabel` — left rail spanning the board height (score, player list, status track). `leftSidebarTitle` is the wide-screen heading; `leftSidebarLabel` names the phone sheet when the rail draws its own header (durak/exploding-kittens "Players", sky-team "Approach"). Used by lost-cities, durak, exploding-kittens, 7-wonders, sky-team, set, dnd.
 - `fan` — card hand component (CardFan, PlayerHand). Pinned to bottom.
 - `fanActions` — controls above the card fan (Confirm, Pass/Take, status). The row is a FIXED one-line `h-actions` and the fan slot a FIXED `h-fan`, identical in every game and phase: content fits the space, the board never moves. A game whose hand empties (Sensō's rewards phase) fills the slot with something else (`TricksTray`) rather than dropping `fan`.
+- `actionBar` — a game-wide control bar pinned to the very bottom of the column (screen edge to the History rail, below the fan tray), on every view, fan or not. For games whose controls outgrow the one-line `fanActions` row or that show no hand most of the time (The Hunger).
 - `noPadding` — skip padding and flex-col (for edge-to-edge SVG boards)
 - `mobileRails` — `"sheet"` (default) or `"none"`. See "Phone layout" below.
 - `pinSidebars` — legacy escape hatch: rails stay in the row at every width. No game uses it.
@@ -178,6 +183,7 @@ GameScreen outer        relative z-raised flex min-h-0 flex-1 gap-2 p-2 [+ backg
 │   └── Fan area        shrink-0 flex flex-col gap-2   ← only when fan is set
 │       ├── {fanActions}   flex h-actions shrink-0 items-center justify-center
 │       └── {fan}          flex h-fan shrink-0 items-center justify-center
+│   └── Action bar      shrink-0   ← only when actionBar is set
 └── <aside>             w-history-rail shrink-0 rounded-card-xl bg-surface-900/60 p-4   ← only when sidebar is set
 ```
 
@@ -204,8 +210,19 @@ Steps 2 and 3 are not optional: `catalog-completeness.test.ts` fails the build f
 
 **For a playable game**: do the catalog-entry steps above, then:
 
-1. Create `packages/web/src/games/<slug>/index.ts` exporting `satisfies PlayableModule` (component, mode, tournament strategies, etc. — see `types.ts` for the full shape). No base fields (`slug`, `bggId`, `accentHex`, `family`, `displayTitle`, `bggOverrides`) here — those live in `catalog.json` only.
-2. If the game has non-trivial logic, put it in `packages/core/src/games/<slug>/` and add exports to core's `package.json`.
-3. Register the server-side state machine in `packages/server/src/sessions/machine-registry.ts` (REQUIRED — the server runs every game's machine, including solo-vs-AI) and add the room config in `packages/core/src/protocol/room-config.ts` (for multiplayer rooms / AI seating).
-   Registering means your `GameMachineSpec` must implement **`validateAction`** — see "Untrusted actions" below. It is a required member, so this is enforced at compile time; `packages/server/src/sessions/action-validation.test.ts` then fuzzes your game automatically.
-4. Use `GameScreen` for the board layout — see "Game board layout structure" above.
+1. Put the game in `packages/core/src/games/<slug>/` (see "Game structure pattern") and add exports to core's `package.json`. Write `manifest.ts` first and add it to `GAME_MANIFESTS` in `core/src/games/manifests.ts`.
+2. Implement the full `GameMachineSpec` in `machine.ts`: `manifest`, `buildStart`, `validateAction` (with `playerActionValidator` — see "Untrusted actions"), `getOutcome`, `getReplayLog`. All are required, so a gap fails the compile. The START event takes a `seed`; the engine must not use `Math.random`.
+3. Register it in `packages/server/src/games/registry.ts` (REQUIRED — the server runs every game, solo-vs-AI included). Rooms and solo starts then work from the manifest with no further server code. `registry.test.ts` checks the manifest; `sessions/game-contract.test.ts` plays the game to the end at its min and max seat counts (add a move finder there if the first legal action can't finish a game); `sessions/action-validation.test.ts` fuzzes `validateAction`.
+4. Create `packages/web/src/games/<slug>/index.ts` exporting `satisfies PlayableModule` (component, mode, replay viewer, `tournamentResults` loader — see `types.ts`). No base fields (`slug`, `bggId`, `accentHex`, `family`, `displayTitle`, `bggOverrides`) here — those live in `catalog.json` only.
+5. The game component drives everything through `useSessionFlow`; the setup screen reads seats and strategies from `def.manifest` (`PvAISetupScreen`), the game-over screen renders `flow.endActions`. Match history and replays need nothing game-specific beyond a replay viewer.
+6. Use `GameScreen` for the board layout — see "Game board layout structure" above.
+
+### AI tournaments
+
+Tournaments are **run locally, never on the server**. The site only shows their committed results. To run one, export a `simulator` from the game's `tournament-runner.ts`, list it in `core/src/tournament/simulators.ts`, then:
+
+```bash
+pnpm --filter @boardgames/core tournament <slug> [--games N] [--players N]
+```
+
+The CLI plays paired seeds with seats alternated, fanned over worker processes, and merges into `packages/web/src/games/<slug>/tournament-results.generated.ts` (validated by `TournamentResultsSchema`). It writes nothing if any game failed. Point the game's `index.ts` `tournamentResults` at that file; `TournamentResultsView` renders it.

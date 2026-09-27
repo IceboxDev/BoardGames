@@ -4,9 +4,11 @@ import { CARD_LABELS } from "@boardgames/core/games/exploding-kittens/types";
 import { GameDialogPanel } from "../../../components/game-layout";
 import { Button } from "../../../components/ui/Button";
 import { getCardImageUrl, getSkinsForType } from "../assets/card-art";
+import type { SeatNaming } from "../log-mapper";
 
 interface NopeWindowProps {
   state: GameState;
+  naming: SeatNaming;
   onAction: (action: Action) => void;
 }
 
@@ -35,7 +37,7 @@ function PendingCardPreview({ cardType }: { cardType: CardType }) {
   );
 }
 
-export default function NopeWindow({ state, onAction }: NopeWindowProps) {
+export default function NopeWindow({ state, naming, onAction }: NopeWindowProps) {
   const nw = state.nopeWindow;
   if (!nw) return null;
 
@@ -43,8 +45,7 @@ export default function NopeWindow({ state, onAction }: NopeWindowProps) {
   const canNope = legalActions.some((a) => a.type === "nope");
   const nopeAction = legalActions.find((a) => a.type === "nope");
 
-  const sourcePlayer = state.players[nw.sourcePlayerIndex];
-  const sourceName = sourcePlayer.type === "human" ? "You" : `AI ${nw.sourcePlayerIndex}`;
+  const sourceName = naming.nameOf(nw.sourcePlayerIndex);
 
   let effectLabel: string;
   if (nw.effectType === "pair") effectLabel = "Pair Combo (steal)";

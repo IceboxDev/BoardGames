@@ -1,10 +1,20 @@
 import { assign, fromPromise, type SnapshotFrom, setup } from "xstate";
 import { playerActionValidator, safeApply } from "../../machines/action-validation";
+import { strategyGuard, typedSeatStrategies } from "../../machines/seats";
 import type { GameMachineSpec } from "../../machines/types";
 import { getStrategy } from "./ai-strategies";
 import { applyActionPure, createInitialState } from "./game-engine";
+import { durakManifest } from "./manifest";
+import { durakOutcome } from "./outcome";
 import { getActivePlayer, getLegalActions } from "./rules";
-import type { Action, AIStrategyId, DurakPlayerView, DurakResult, GameState } from "./types";
+import {
+  type Action,
+  AI_STRATEGY_LABELS,
+  type AIStrategyId,
+  type DurakPlayerView,
+  type DurakResult,
+  type GameState,
+} from "./types";
 
 // ---------------------------------------------------------------------------
 // Context & events
@@ -12,10 +22,12 @@ import type { Action, AIStrategyId, DurakPlayerView, DurakResult, GameState } fr
 
 export interface DurakContext {
   gameState: GameState;
+  /** The deal's seed — with the action log, it reproduces the game. */
+  seed: number;
 }
 
 export type DurakEvent =
-  | { type: "START"; playerCount: number; strategies: (AIStrategyId | null)[] }
+  | { type: "START"; playerCount: number; strategies: (AIStrategyId | null)[]; seed: number }
   | { type: "PLAYER_ACTION"; action: Action }
   | { type: "RESET" };
 
@@ -74,7 +86,8 @@ export const durakMachine = setup({
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
       return safeApply("durak", () => ({
-        gameState: createInitialState(event.playerCount, event.strategies),
+        gameState: createInitialState(event.playerCount, event.strategies, event.seed),
+        seed: event.seed,
       }));
     }),
 
@@ -95,7 +108,7 @@ export const durakMachine = setup({
 }).createMachine({
   id: "durak",
   initial: "idle",
-  context: { gameState: PLACEHOLDER },
+  context: { gameState: PLACEHOLDER, seed: 0 },
 
   states: {
     idle: {
@@ -145,7 +158,9 @@ export const durakMachine = setup({
               target: "aiDelay",
               actions: "applyAiAction",
             },
-            onError: { target: "routing" },
+            // Back off before retrying — straight to `routing` would re-invoke
+            // a failing AI in a tight loop.
+            onError: { target: "aiDelay" },
           },
         },
 
@@ -218,9 +233,19 @@ function legalActionsFor(snapshot: SnapshotFrom<typeof durakMachine>, player: nu
 // Spec export
 // ---------------------------------------------------------------------------
 
+const toStrategy = strategyGuard("Durak", AI_STRATEGY_LABELS);
+
 export const durakSpec: GameMachineSpec<typeof durakMachine, DurakPlayerView, Action, DurakResult> =
   {
     machine: durakMachine,
+    manifest: durakManifest,
+
+    buildStart: ({ seats, seed }) => ({
+      type: "START",
+      playerCount: seats.length,
+      strategies: typedSeatStrategies(seats, toStrategy),
+      seed,
+    }),
 
     getPlayerView(snapshot, player) {
       return buildPlayerView(snapshot.context, player);
@@ -253,20 +278,14 @@ export const durakSpec: GameMachineSpec<typeof durakMachine, DurakPlayerView, Ac
       return snapshot.matches("gameOver");
     },
 
-    getReplayLog(snapshot) {
+    getOutcome(snapshot) {
       const gs = snapshot.context.gameState;
-      if (gs.phase !== "game-over") return null;
-      const durak = gs.durak;
-      const scores = gs.players.map((_, i) => (durak === i ? 1 : 0));
-      return {
-        // Legacy 2-player fields (backward compat with existing replay rows)
-        scoreA: scores[1] ?? 0,
-        scoreB: scores[0] ?? 0,
-        // N-player fields
-        scores,
-        durak,
-        turnCount: gs.turnCount,
-        playerCount: gs.players.length,
-      };
+      return gs?.phase === "game-over" ? durakOutcome(gs) : null;
+    },
+
+    getReplayLog(snapshot) {
+      const { gameState: gs, seed } = snapshot.context;
+      if (gs?.phase !== "game-over") return null;
+      return { formatVersion: 1, seed, durak: gs.durak, actionLog: gs.actionLog };
     },
   };

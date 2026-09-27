@@ -1,26 +1,31 @@
 import { assign, fromPromise, setup } from "xstate";
-import { directEventValidator, safeApply } from "../../machines/action-validation";
+import { playerActionValidator, safeApply } from "../../machines/action-validation";
+import { firstAiStrategy, humanSeats, strategyGuard } from "../../machines/seats";
 import type { GameMachineSpec } from "../../machines/types";
 import { getStrategy } from "./ai-strategies";
 import { applyDraw, applyPlay, createInitialState } from "./game-engine";
+import { lostCitiesManifest } from "./manifest";
 import type { MCTSStats } from "./mcts/ismcts";
 import { runISMCTSWithStats } from "./mcts/ismcts";
+import { lostCitiesOutcome } from "./outcome";
+import type { LostCitiesReplayLog, MCTSActionStats, ReplayStepV2 } from "./replay-log";
+import { buildGameLog, gameStateToSnapshot } from "./replay-log";
 import { getLegalDraws, getLegalPlays } from "./rules";
 import { scoreGame } from "./scoring";
-import type { MCTSActionStats, ReplayStepV2, TournamentGameLog } from "./tournament-log";
-import { buildGameLog, gameStateToSnapshot } from "./tournament-log";
-import type {
-  ActionLogEntry,
-  AIEngine,
-  Card,
-  DrawAction,
-  ExpeditionColor,
-  GameState,
-  PlayAction,
-  PlayerIndex,
-  PlayerScore,
+import {
+  type ActionLogEntry,
+  AI_ENGINE_LABELS,
+  type AIEngine,
+  type Card,
+  type DrawAction,
+  EXPEDITION_COLORS,
+  type ExpeditionColor,
+  type GamePhase,
+  type GameState,
+  type PlayAction,
+  type PlayerIndex,
+  type PlayerScore,
 } from "./types";
-import { EXPEDITION_COLORS } from "./types";
 
 // ---------------------------------------------------------------------------
 // Context & events
@@ -28,6 +33,8 @@ import { EXPEDITION_COLORS } from "./types";
 
 export interface LostCitiesContext {
   gameState: GameState;
+  /** The deal's seed — with the replay steps, it reproduces the game. */
+  seed: number;
   aiEngine: AIEngine;
   humanPlayers: number[];
   lastAiStats: MCTSStats | null;
@@ -37,7 +44,7 @@ export interface LostCitiesContext {
 }
 
 export type LostCitiesEvent =
-  | { type: "START"; aiEngine: AIEngine; humanPlayers?: number[] }
+  | { type: "START"; aiEngine: AIEngine; humanPlayers: number[]; seed: number }
   | { type: "PLAY_TO_EXPEDITION"; cardId: number }
   | { type: "DISCARD"; cardId: number }
   | { type: "DRAW_FROM_PILE" }
@@ -57,7 +64,7 @@ export interface LostCitiesPlayerView {
   opponentHandCount: number;
   currentPlayer: PlayerIndex;
   turnPhase: "play" | "draw";
-  phase: string;
+  phase: GamePhase;
   turnCount: number;
   playerScore: PlayerScore;
   opponentScore: PlayerScore;
@@ -100,7 +107,7 @@ export const lostCitiesMachine = setup({
 
   actors: {
     computeAiMove: fromPromise(
-      async ({ input }: { input: { state: GameState; engine: AIEngine } }) => {
+      async ({ input }: { input: { state: GameState; engine: AIEngine; seat: PlayerIndex } }) => {
         // This runs on the SERVER (all game machines do). Yield a macrotask
         // first so the session manager can flush its queued `ai-thinking`
         // message before the synchronous ISMCTS search blocks the Node event
@@ -108,7 +115,7 @@ export const lostCitiesMachine = setup({
         // pool would remove the blocking entirely — see CLAUDE.md.
         await new Promise((resolve) => setTimeout(resolve, 0));
         const strategy = getStrategy(input.engine);
-        return runISMCTSWithStats(input.state, 1, strategy);
+        return runISMCTSWithStats(input.state, input.seat, strategy);
       },
     ),
   },
@@ -121,23 +128,26 @@ export const lostCitiesMachine = setup({
   actions: {
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
-      const gs = createInitialState();
-      return {
-        gameState: gs,
-        aiEngine: event.aiEngine,
-        humanPlayers: event.humanPlayers ?? [0],
-        lastAiStats: null,
-        pendingAiDraw: null,
-        actionLog: [] as ActionLogEntry[],
-        replaySteps: [
-          {
-            turn: 0,
-            phase: "play" as const,
-            player: gs.currentPlayer,
-            state: gameStateToSnapshot(gs),
-          },
-        ] as ReplayStepV2[],
-      };
+      return safeApply("lost-cities", () => {
+        const gs = createInitialState(event.seed);
+        return {
+          gameState: gs,
+          seed: event.seed,
+          aiEngine: event.aiEngine,
+          humanPlayers: event.humanPlayers,
+          lastAiStats: null,
+          pendingAiDraw: null,
+          actionLog: [] as ActionLogEntry[],
+          replaySteps: [
+            {
+              turn: 0,
+              phase: "play" as const,
+              player: gs.currentPlayer,
+              state: gameStateToSnapshot(gs),
+            },
+          ] as ReplayStepV2[],
+        };
+      });
     }),
 
     applyPlayerPlay: assign(({ context, event }) => {
@@ -228,7 +238,7 @@ export const lostCitiesMachine = setup({
             : hiddenCard;
         const entry: ActionLogEntry = {
           turn: gs.turnCount,
-          player: 1,
+          player: gs.currentPlayer,
           action: draw.kind === "draw-pile" ? "draw-pile" : "draw-discard",
           card: draw.kind === "draw-pile" ? hiddenCard : discardCard,
           color: draw.kind === "discard-pile" ? draw.color : undefined,
@@ -251,7 +261,7 @@ export const lostCitiesMachine = setup({
         const step: ReplayStepV2 = {
           turn: context.replaySteps.length,
           phase: "draw",
-          player: 1,
+          player: gs.currentPlayer,
           state: gameStateToSnapshot(newGs),
           action: {
             cardId: drawnCardId,
@@ -275,7 +285,8 @@ export const lostCitiesMachine = setup({
   id: "lostCities",
   initial: "idle",
   context: () => ({
-    gameState: createInitialState(),
+    gameState: createInitialState(0),
+    seed: 0,
     aiEngine: "ismcts-v4" as AIEngine,
     humanPlayers: [0] as number[],
     lastAiStats: null as MCTSStats | null,
@@ -331,15 +342,17 @@ export const lostCitiesMachine = setup({
                 input: ({ context }) => ({
                   state: context.gameState,
                   engine: context.aiEngine,
+                  seat: context.gameState.currentPlayer,
                 }),
                 onDone: {
                   target: "playApplied",
                   actions: assign(({ context, event }) =>
                     safeApply("lost-cities", () => {
                       const { move, stats } = event.output;
+                      const seat = context.gameState.currentPlayer;
                       const entry: ActionLogEntry = {
                         turn: context.gameState.turnCount,
-                        player: 1,
+                        player: seat,
                         action:
                           move.play.kind === "expedition" ? "play-expedition" : "play-discard",
                         card: move.play.card,
@@ -356,7 +369,7 @@ export const lostCitiesMachine = setup({
                       const step: ReplayStepV2 = {
                         turn: context.replaySteps.length,
                         phase: "play",
-                        player: 1,
+                        player: seat,
                         state: gameStateToSnapshot(newGs),
                         action: {
                           cardId: move.play.card.id,
@@ -377,7 +390,9 @@ export const lostCitiesMachine = setup({
                     }),
                   ),
                 },
-                onError: { target: "#lostCities.active.routing" },
+                // Back off before retrying — straight to `routing` would
+                // re-invoke a failing search in a tight loop.
+                onError: { target: "retry" },
               },
             },
             playApplied: {
@@ -386,6 +401,11 @@ export const lostCitiesMachine = setup({
               },
             },
             drawApplied: {
+              after: {
+                aiStepDelay: { target: "#lostCities.active.routing" },
+              },
+            },
+            retry: {
               after: {
                 aiStepDelay: { target: "#lostCities.active.routing" },
               },
@@ -458,8 +478,8 @@ function buildLegalActions(ctx: LostCitiesContext, player: number): LostCitiesLe
   }));
 }
 
-/** The event a client sends for a given engine-enumerated legal action. */
-function toClientEvent(legal: LostCitiesLegalAction): LostCitiesEvent {
+/** The machine event for a validated legal action. */
+function toMachineEvent(legal: LostCitiesLegalAction): LostCitiesEvent {
   if (legal.phase === "play") {
     return legal.action.kind === "expedition"
       ? { type: "PLAY_TO_EXPEDITION", cardId: legal.action.card.id }
@@ -474,6 +494,8 @@ function toClientEvent(legal: LostCitiesLegalAction): LostCitiesEvent {
 // Spec export
 // ---------------------------------------------------------------------------
 
+const toEngine = strategyGuard("Lost Cities", AI_ENGINE_LABELS);
+
 export const lostCitiesSpec: GameMachineSpec<
   typeof lostCitiesMachine,
   LostCitiesPlayerView,
@@ -481,6 +503,15 @@ export const lostCitiesSpec: GameMachineSpec<
   LostCitiesResult
 > = {
   machine: lostCitiesMachine,
+  manifest: lostCitiesManifest,
+
+  // One AI engine drives every AI seat (there is at most one at two seats).
+  buildStart: ({ seats, seed }) => ({
+    type: "START",
+    aiEngine: toEngine(firstAiStrategy(seats) ?? lostCitiesManifest.defaultStrategy ?? "ismcts-v4"),
+    humanPlayers: humanSeats(seats),
+    seed,
+  }),
 
   getPlayerView(snapshot, player) {
     return buildPlayerView(snapshot.context, player);
@@ -490,14 +521,13 @@ export const lostCitiesSpec: GameMachineSpec<
     return buildLegalActions(snapshot.context, player);
   },
 
-  validateAction: directEventValidator<
+  validateAction: playerActionValidator<
     typeof lostCitiesMachine,
     LostCitiesLegalAction,
     LostCitiesEvent
   >({
     legalActions: (snapshot, player) => buildLegalActions(snapshot.context, player),
-    toCandidate: (legal) => toClientEvent(legal),
-    toEvent: (legal) => toClientEvent(legal),
+    toEvent: toMachineEvent,
   }),
 
   getActivePlayer(snapshot) {
@@ -519,13 +549,19 @@ export const lostCitiesSpec: GameMachineSpec<
     return snapshot.matches("gameOver");
   },
 
-  getReplayLog(snapshot): TournamentGameLog | null {
+  getOutcome(snapshot) {
+    const gs = snapshot.context.gameState;
+    return gs.phase === "game-over" ? lostCitiesOutcome(gs) : null;
+  },
+
+  getReplayLog(snapshot): LostCitiesReplayLog | null {
     const ctx = snapshot.context;
     if (ctx.gameState.phase !== "game-over") return null;
     const scores = scoreGame(ctx.gameState);
+    const seatLabel = (seat: number) => (ctx.humanPlayers.includes(seat) ? "human" : ctx.aiEngine);
     return buildGameLog({
-      strategyA: "human",
-      strategyB: ctx.aiEngine,
+      strategyA: seatLabel(0),
+      strategyB: seatLabel(1),
       aPlaysFirst: true,
       steps: ctx.replaySteps,
       scoreA: scores[0].total,

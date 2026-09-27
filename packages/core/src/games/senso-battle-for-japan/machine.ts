@@ -1,12 +1,22 @@
 import { assign, fromPromise, type SnapshotFrom, setup } from "xstate";
 import { randomSeed } from "../../lib/rng";
 import { playerActionValidator, safeApply } from "../../machines/action-validation";
+import { strategyGuard, typedSeatStrategies } from "../../machines/seats";
 import type { GameMachineSpec } from "../../machines/types";
 import { pickAiAction } from "./ai-strategies";
 import { applyActionPure, createInitialState, settleTrickPure } from "./game-engine";
+import { sensoManifest } from "./manifest";
+import { sensoOutcome } from "./outcome";
 import { buildPlayerView } from "./player-view";
 import { getActivePlayer, getLegalActions } from "./rules";
-import type { Action, AIStrategyId, GameState, SensoPlayerView, SensoResult } from "./types";
+import {
+  type Action,
+  AI_STRATEGY_LABELS,
+  type AIStrategyId,
+  type GameState,
+  type SensoPlayerView,
+  type SensoResult,
+} from "./types";
 
 // ---------------------------------------------------------------------------
 // Context & events
@@ -216,9 +226,19 @@ function legalActionsFor(snapshot: SnapshotFrom<typeof sensoMachine>, player: nu
 // Spec export
 // ---------------------------------------------------------------------------
 
+const toStrategy = strategyGuard("Sensō", AI_STRATEGY_LABELS);
+
 export const sensoSpec: GameMachineSpec<typeof sensoMachine, SensoPlayerView, Action, SensoResult> =
   {
     machine: sensoMachine,
+    manifest: sensoManifest,
+
+    buildStart: ({ seats, seed }) => ({
+      type: "START",
+      playerCount: seats.length,
+      strategies: typedSeatStrategies(seats, toStrategy),
+      seed,
+    }),
 
     getPlayerView(snapshot, player) {
       const gs = snapshot.context.gameState;
@@ -251,27 +271,28 @@ export const sensoSpec: GameMachineSpec<typeof sensoMachine, SensoPlayerView, Ac
       return snapshot.matches("gameOver");
     },
 
+    getOutcome(snapshot) {
+      const gs = snapshot.context.gameState;
+      return gs?.phase === "game-over" && gs.result ? sensoOutcome(gs.result) : null;
+    },
+
     getReplayLog(snapshot) {
       const gs = snapshot.context.gameState;
       if (!gs || gs.phase !== "game-over" || !gs.result) return null;
-      const n = gs.players.length;
       const { scores, winner, winners, placements, finalBoard } = gs.result;
-      // No `durak` key: persistReplay treats any `durak` value as the winner.
       return {
+        formatVersion: 1,
         scores,
         winner,
         winners,
         placements,
-        playerCount: n,
+        playerCount: gs.players.length,
         seed: gs.seed,
         strategies: gs.players.map((p) => p.aiStrategy ?? null),
         clans: gs.players.map((p) => p.clan),
         emperorSeat: gs.emperorSeat,
         finalBoard,
         log: gs.log,
-        // Legacy 2-player columns for the match-history table.
-        scoreA: n === 2 ? scores[0] : undefined,
-        scoreB: n === 2 ? scores[1] : undefined,
       };
     },
   };

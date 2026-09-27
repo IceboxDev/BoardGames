@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 import { Button } from "../ui/Button";
 import { PageHeader } from "../ui/PageHeader";
 
-interface GameOverAction {
+export interface GameOverAction {
   label: string;
   onClick: () => void;
   variant: "primary" | "secondary";
@@ -19,7 +19,7 @@ interface GameOverLayoutProps {
   /** Game-specific content (stats tables, breakdowns, charts) */
   children?: ReactNode;
   /** Ordered: first item with variant="primary" renders as primary. */
-  actions: GameOverAction[];
+  actions: readonly GameOverAction[];
   /** Vertically center in viewport (for canvas/cooperative games like Pandemic). */
   centered?: boolean;
 }

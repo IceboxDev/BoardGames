@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { GameOutcomeSchema } from "../../machines/outcome.ts";
 import { GameSlugSchema } from "../common.ts";
 import { RoomSlotSchema, RoomStateSchema } from "./room.ts";
 
@@ -11,6 +12,8 @@ import { RoomSlotSchema, RoomStateSchema } from "./room.ts";
 const SessionCreatedSchema = z.object({
   type: z.literal("session-created"),
   sessionId: z.string(),
+  /** The seat this socket plays — its first human seat (not always 0). */
+  playerIndex: z.number().int().min(0),
   playerView: z.unknown(),
   legalActions: z.array(z.unknown()),
   // Same sentinel as state-update. Load-bearing: the client's `activePlayer`
@@ -42,6 +45,8 @@ const GameOverSchema = z.object({
   type: z.literal("game-over"),
   sessionId: z.string(),
   result: z.unknown(),
+  /** How the game ended, in the shape every game shares. */
+  outcome: GameOutcomeSchema.nullable(),
   playerView: z.unknown(),
   playerIndex: z.number().int().min(0).optional(),
   replayId: z.number().int().optional(),

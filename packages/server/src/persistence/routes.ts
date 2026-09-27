@@ -3,46 +3,30 @@ import {
   BulkSaveResultsResponseSchema,
   GameResultListSchema,
   GameResultsQuerySchema,
+  MatchSummaryListSchema,
   OkResponseSchema,
   ReplayListQuerySchema,
   ReplayLogSchema,
-  ReplaySummaryListSchema,
   SaveResultBodySchema,
   SaveResultResponseSchema,
 } from "@boardgames/core/protocol";
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
-import { jsonColumn, parseRow, parseRows } from "../lib/db-rows.ts";
+import { jsonColumn, parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
+import { getMatchLog, listMatches } from "../matches/store.ts";
 
 export const persistenceRoutes = authedApp();
 
 // ── Row projections ───────────────────────────────────────────────────
 //
-// `game_results.result_json` and `session_replays.replay_json` /
-// `scores_json` are per-game shapes. `ReplayLogSchema` is intentionally
-// `z.unknown()` and the per-game shape lives client-side, so we mirror
-// that with loose record/array schemas here.
+// `game_results.result_json` is a per-game shape (the Set trainer's history),
+// so it stays a loose record here. Online matches live in `matches/store.ts`.
 
 const GameResultRowSchema = z.object({
   result_json: jsonColumn(z.record(z.string(), z.unknown())),
   created_at: z.string(),
-});
-
-const ReplaySummaryRowSchema = z.object({
-  id: z.number(),
-  ai_engine: z.string().nullable(),
-  score_p0: z.number().nullable(),
-  score_p1: z.number().nullable(),
-  winner: z.string().nullable(),
-  created_at: z.string(),
-  scores_json: jsonColumn(z.array(z.number())).nullable(),
-  player_count: z.number().nullable(),
-});
-
-const ReplayLogRowSchema = z.object({
-  replay_json: jsonColumn(z.unknown()),
 });
 
 // ── Routes ────────────────────────────────────────────────────────────
@@ -129,44 +113,13 @@ persistenceRoutes.delete("/:slug/results", async (c) => {
 });
 
 persistenceRoutes.get("/:slug/replays", zQuery(ReplayListQuerySchema), async (c) => {
-  const slug = c.req.param("slug");
-  const db = getDb();
   const { limit } = c.req.valid("query");
-
-  const { rows } = await db.execute({
-    sql: "SELECT id, ai_engine, score_p0, score_p1, winner, created_at, scores_json, player_count FROM session_replays WHERE game_slug = ? ORDER BY created_at DESC LIMIT ?",
-    args: [slug, limit],
-  });
-  const parsed = parseRows(ReplaySummaryRowSchema, rows, "session_replays");
-
-  return c.json(
-    ReplaySummaryListSchema.parse(
-      parsed.map((r) => ({
-        id: r.id,
-        aiEngine: r.ai_engine,
-        scoreP0: r.score_p0,
-        scoreP1: r.score_p1,
-        winner: r.winner,
-        createdAt: r.created_at,
-        scores: r.scores_json,
-        playerCount: r.player_count,
-      })),
-    ),
-  );
+  const matches = await listMatches(c.req.param("slug"), c.get("user").id, limit);
+  return c.json(MatchSummaryListSchema.parse(matches));
 });
 
-persistenceRoutes.get("/:slug/replays/:id", async (c) => {
-  const slug = c.req.param("slug");
-  const id = Number(c.req.param("id"));
-  const db = getDb();
-  // Scope the lookup by slug too — the id alone would return any game's replay
-  // regardless of the path, which is both an integrity and an access surprise.
-  const { rows } = await db.execute({
-    sql: "SELECT replay_json FROM session_replays WHERE id = ? AND game_slug = ?",
-    args: [id, slug],
-  });
-
-  if (rows.length === 0) return errorResponse(c, 404, "Not found");
-  const { replay_json } = parseRow(ReplayLogRowSchema, rows[0], "session_replays");
-  return c.json(ReplayLogSchema.parse(replay_json));
+persistenceRoutes.get("/:slug/replays/:id{[0-9]+}", async (c) => {
+  const log = await getMatchLog(c.req.param("slug"), Number(c.req.param("id")));
+  if (log === null) return errorResponse(c, 404, "Not found");
+  return c.json(ReplayLogSchema.parse(log));
 });

@@ -1,10 +1,8 @@
 import { deckCardRefs } from "@boardgames/core/games/quiztopia/ids";
-import {
-  BUILDING_COUNT,
-  QUIZTOPIA_DECKS,
-  type QuiztopiaDeck,
-} from "@boardgames/core/games/quiztopia/types";
+import { type QuiztopiaConfig, quiztopiaManifest } from "@boardgames/core/games/quiztopia/manifest";
+import { BUILDING_COUNT } from "@boardgames/core/games/quiztopia/types";
 import { QUIZTOPIA_DIFFICULTIES } from "@boardgames/core/history/coop-challenge";
+import { configOrDefaults } from "@boardgames/core/machines/manifest";
 import type { QuiztopiaLanguage } from "@boardgames/core/protocol";
 import { Badge, FieldGroup, SegmentedControl, Surface } from "../../components/ui";
 import type { LobbyConfigProps } from "../types";
@@ -12,25 +10,11 @@ import { Skyline } from "./components/common/Skyline";
 import { CARD_IDS } from "./content";
 import { DIFFICULTY_SHORT, tierFacts } from "./logic/copy";
 
-// The four table options a host sets before Start. The emitted object is
-// exactly `QuiztopiaStartConfigInput` minus playerCount/seats (the room
-// manager supplies those): `{ difficulty, expert, deck, language }`, where
-// "Both" as the room language is the absence of a default (`language`
-// omitted) — the START schema only knows "en" | "de".
+// The four table options a host sets before Start — the manifest's config:
+// `{ difficulty, expert, deck, language }`, where "Both" as the room language
+// is the absence of a default (`language` omitted).
 
-export interface QuiztopiaLobbyValue {
-  difficulty: number;
-  expert: boolean;
-  deck: QuiztopiaDeck;
-  language?: "en" | "de";
-}
-
-const DEFAULT_VALUE: QuiztopiaLobbyValue = {
-  difficulty: 0,
-  expert: false,
-  deck: "original",
-  language: "en",
-};
+export type QuiztopiaLobbyValue = QuiztopiaConfig;
 
 const ORIGINAL_COUNT = CARD_IDS.length;
 const EXTENDED_COUNT = deckCardRefs(CARD_IDS, "extended").length;
@@ -40,20 +24,7 @@ const EXTENDED_COUNT = deckCardRefs(CARD_IDS, "extended").length;
 const PREVIEW_DARK_ORDER = [3, 7, 0, 10, 5, 1, 8, 11];
 
 export function readLobbyValue(value: unknown): QuiztopiaLobbyValue {
-  if (!value || typeof value !== "object") return DEFAULT_VALUE;
-  const v = value as Record<string, unknown>;
-  const difficulty =
-    typeof v.difficulty === "number" &&
-    Number.isInteger(v.difficulty) &&
-    v.difficulty >= 0 &&
-    v.difficulty < QUIZTOPIA_DIFFICULTIES.length
-      ? v.difficulty
-      : DEFAULT_VALUE.difficulty;
-  const deck = QUIZTOPIA_DECKS.includes(v.deck as QuiztopiaDeck)
-    ? (v.deck as QuiztopiaDeck)
-    : DEFAULT_VALUE.deck;
-  const language = v.language === "en" || v.language === "de" ? v.language : undefined;
-  return { difficulty, expert: v.expert === true, deck, language };
+  return configOrDefaults(quiztopiaManifest, value);
 }
 
 /** The wire object for a room language choice ("both" = no default). */

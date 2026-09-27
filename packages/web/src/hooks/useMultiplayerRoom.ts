@@ -1,3 +1,4 @@
+import type { GameOutcome } from "@boardgames/core/machines/outcome";
 import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
 import { useCallback, useMemo } from "react";
 import type {
@@ -7,7 +8,7 @@ import type {
   PeerConnectionState,
 } from "../lib/ws-client";
 
-export interface MultiplayerRoomState<TView, TAction, TResult, TLegal = TAction> {
+export interface MultiplayerRoomState<TView, TAction, TResult> {
   // Connection
   /** Full transport status — distinguishes connecting / reconnecting / error
    *  from a plain connected/disconnected boolean. */
@@ -45,14 +46,17 @@ export interface MultiplayerRoomState<TView, TAction, TResult, TLegal = TAction>
 
   // Game state (available after game starts)
   view: TView | null;
-  /** Server-provided legal moves — see {@link RemoteGameState.legalActions}. */
-  legalActions: TLegal[];
+  /** The moves the server says this player may make now. */
+  legalActions: TAction[];
   activePlayer: number;
   playerIndex: number;
   isMyTurn: boolean;
   isAiThinking: boolean;
   result: TResult | null;
+  /** How the finished game ended, in the shape every game shares. */
+  outcome: GameOutcome | null;
   replayId: number | null;
+  /** Play one of `legalActions` for this player's seat. */
   send: (action: TAction) => void;
   reset: () => void;
 }
@@ -122,6 +126,7 @@ export function useMultiplayerRoom<TView = unknown, TAction = unknown, TResult =
     isMyTurn: session.activePlayer === session.playerIndex,
     isAiThinking: isRoomGame && session.aiThinking,
     result: isRoomGame ? session.result : null,
+    outcome: isRoomGame ? session.outcome : null,
     replayId: session.replayId,
     send: session.sendAction,
     reset,

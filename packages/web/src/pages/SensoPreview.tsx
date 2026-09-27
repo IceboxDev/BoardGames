@@ -268,7 +268,7 @@ export default function SensoPreview() {
   return (
     <div className="flex h-screen flex-col bg-surface-950">
       {state.phase === "game-over" && state.result ? (
-        <GameOverScreen view={view} result={state.result} names={NAMES} onMenu={() => {}} />
+        <GameOverScreen view={view} result={state.result} names={NAMES} actions={[]} />
       ) : (
         <GameBoard
           view={view}

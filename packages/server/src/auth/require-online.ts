@@ -10,7 +10,7 @@ import type { AppEnv } from "./types.ts";
 const OnlineUserSchema = z.object({ onlineMode: OnlineModeSchema });
 
 /**
- * Gate for online-only features (tournaments today). MUST be mounted AFTER
+ * Gate for online-only features (the D&D tool, BGA bridge). MUST be mounted AFTER
  * `requireAuth`, which populates `c.get("user")`. Mirrors the web `AuthGuard`
  * `mode="online"` rule: `offline` users get 403; `online` and `both` pass.
  *

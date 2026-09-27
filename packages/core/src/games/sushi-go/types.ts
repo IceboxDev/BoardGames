@@ -174,6 +174,8 @@ export interface GameState {
   roundScores: number[][];
   totalScores: number[];
   actionLog: ActionLogEntry[];
+  /** Seeded generator for each round's deal — see `RngCarrier`. Never sent to clients. */
+  rngState: number;
 }
 
 // ── Actions ────────────────────────────────────────────────────────────────

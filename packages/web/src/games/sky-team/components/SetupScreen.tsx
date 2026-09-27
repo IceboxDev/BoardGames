@@ -1,22 +1,20 @@
+import { skyTeamManifest } from "@boardgames/core/games/sky-team/manifest";
+import type { StrategyInfo } from "@boardgames/core/machines/manifest";
 import { useMemo, useState } from "react";
-import {
-  ControlGroup,
-  DIFFICULTY,
-  type DifficultyTier,
-  SectionHeading,
-} from "../../../components/setup";
+import { ControlGroup, DIFFICULTY, SectionHeading } from "../../../components/setup";
 import { Button } from "../../../components/ui/Button";
 import { SCENARIO_CARDS } from "../scenarios";
 import ScenarioPicker from "./ScenarioPicker";
 
-export interface SkyTeamStartConfig {
+/** A solo flight: the scenario, the seat you fly and your AI partner. */
+export interface SkyTeamSoloSetup {
   scenarioId: string;
-  humanPlayers: number[];
-  aiStrategy: string;
+  seat: 0 | 1;
+  strategy: string;
 }
 
 interface Props {
-  onStart: (config: SkyTeamStartConfig) => void;
+  onStart: (setup: SkyTeamSoloSetup) => void;
 }
 
 interface SeatOption {
@@ -24,14 +22,6 @@ interface SeatOption {
   label: string;
   description: string;
   accentColor: string;
-}
-
-interface StrategyOption {
-  id: string;
-  label: string;
-  description: string;
-  /** Shared tier — colors derive from `DIFFICULTY` (components/setup). */
-  difficulty: DifficultyTier;
 }
 
 const SEATS: SeatOption[] = [
@@ -49,15 +39,7 @@ const SEATS: SeatOption[] = [
   },
 ];
 
-const STRATEGIES: StrategyOption[] = [
-  {
-    id: "heuristic-v1",
-    label: "Heuristic",
-    description:
-      "Rule-based AI: safe placements, advances under pressure, spends coffee sparingly.",
-    difficulty: "Medium",
-  },
-];
+const STRATEGIES = skyTeamManifest.strategies;
 
 const DEFAULT_SCENARIO_SLUG = SCENARIO_CARDS.find((s) => s.backendId != null)?.slug ?? "yul-green";
 
@@ -82,7 +64,7 @@ const DEFAULT_SCENARIO_SLUG = SCENARIO_CARDS.find((s) => s.backendId != null)?.s
 export default function SetupScreen({ onStart }: Props) {
   const [scenarioSlug, setScenarioSlug] = useState(DEFAULT_SCENARIO_SLUG);
   const [seat, setSeat] = useState<0 | 1>(0);
-  const [strategyId, setStrategyId] = useState(STRATEGIES[0].id);
+  const [strategyId, setStrategyId] = useState(STRATEGIES[0]?.id ?? "");
 
   const selectedCard = useMemo(
     () => SCENARIO_CARDS.find((s) => s.slug === scenarioSlug),
@@ -91,7 +73,7 @@ export default function SetupScreen({ onStart }: Props) {
 
   const start = () => {
     const backendId = selectedCard?.backendId ?? "yul-montreal";
-    onStart({ scenarioId: backendId, humanPlayers: [seat], aiStrategy: strategyId });
+    onStart({ scenarioId: backendId, seat, strategy: strategyId });
   };
 
   const seatLabel = seat === 0 ? "Pilot" : "Co-Pilot";
@@ -189,7 +171,7 @@ function StrategyCard({
   selected,
   onSelect,
 }: {
-  option: StrategyOption;
+  option: StrategyInfo;
   selected: boolean;
   onSelect: () => void;
 }) {

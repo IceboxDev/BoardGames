@@ -1,8 +1,9 @@
 import { z } from "zod";
+import { GameOutcomeSchema } from "../../machines/outcome.ts";
 
-// Game-result and replay payloads are per-game JSON blobs. Until per-game
-// schemas land, the shape is `unknown` at the boundary; consumers (UIs,
-// tournaments) handle game-specific fields.
+// Game results (the Set trainer's local history) are per-game JSON blobs,
+// opaque at this layer. Online matches are summarised in the shared shape —
+// the outcome and who sat where — and their replay logs stay per-game.
 
 // ── Results ────────────────────────────────────────────────────────────
 
@@ -77,21 +78,36 @@ export const BulkSaveResultsResponseSchema = z.object({
 });
 export type BulkSaveResultsResponse = z.infer<typeof BulkSaveResultsResponseSchema>;
 
-// ── Replays ────────────────────────────────────────────────────────────
+// ── Online matches ─────────────────────────────────────────────────────
 
-export const ReplaySummarySchema = z.object({
-  id: z.number().int(),
-  aiEngine: z.string().nullable(),
-  scoreP0: z.number().nullable(),
-  scoreP1: z.number().nullable(),
-  winner: z.string().nullable(),
-  createdAt: z.string(),
-  scores: z.unknown().nullable().optional(),
-  playerCount: z.number().int().nullable().optional(),
+export const MatchSeatSchema = z.object({
+  seat: z.number().int().min(0),
+  kind: z.enum(["human", "ai"]),
+  /** The AI's strategy id; `null` for people. */
+  strategy: z.string().nullable(),
+  /** A person's display name; `null` for AI seats and unknown accounts. */
+  name: z.string().nullable(),
+  /** This seat is the account asking. */
+  isViewer: z.boolean(),
 });
-export type ReplaySummary = z.infer<typeof ReplaySummarySchema>;
+export type MatchSeat = z.infer<typeof MatchSeatSchema>;
 
-export const ReplaySummaryListSchema = z.array(ReplaySummarySchema);
+/**
+ * One finished online game, from the asking account's point of view. Games
+ * saved before seats were recorded carry no `seats`; their `viewerSeat` is 0,
+ * the seat a solo player always held then.
+ */
+export const MatchSummarySchema = z.object({
+  id: z.number().int(),
+  createdAt: z.string(),
+  playerCount: z.number().int().min(1),
+  outcome: GameOutcomeSchema,
+  seats: z.array(MatchSeatSchema),
+  viewerSeat: z.number().int().min(0).nullable(),
+});
+export type MatchSummary = z.infer<typeof MatchSummarySchema>;
+
+export const MatchSummaryListSchema = z.array(MatchSummarySchema);
 
 /** Full replay log — a per-game JSON blob; opaque at this layer. */
 export const ReplayLogSchema = z.unknown();

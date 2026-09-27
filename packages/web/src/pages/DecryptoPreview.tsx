@@ -232,7 +232,7 @@ export default function DecryptoPreview() {
   return (
     <div className="flex h-screen flex-col bg-surface-950">
       {scene.phase === "gameOver" ? (
-        <GameOverScreen view={view} onMenu={() => {}} />
+        <GameOverScreen view={view} actions={[]} />
       ) : (
         <GameBoard view={view} playerNames={PLAYER_NAMES} onAction={() => {}} error={null} />
       )}

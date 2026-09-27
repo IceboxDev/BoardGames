@@ -1,5 +1,7 @@
 import type { BggGame } from "@boardgames/core/bgg";
+import type { GameManifest } from "@boardgames/core/machines/manifest";
 import type { SkillWeights } from "@boardgames/core/protocol";
+import type { TournamentResults } from "@boardgames/core/tournament/results";
 import type { ComponentType, LazyExoticComponent } from "react";
 
 export type { BggGame };
@@ -23,8 +25,9 @@ export type GameComponentProps = { source: GameSource };
  * when the game declares a `lobbyConfigComponent`. The component owns
  * its own UI state and reports the current config via `onChange`; the
  * lobby route holds that value and passes it to `mp.startRoom(config)`
- * when the host hits Start. Initial value comes from `defaultMpConfig`
- * on the same `PlayableGame`.
+ * when the host hits Start. The initial value is the game's manifest
+ * config schema parsed from `{}` (its defaults); the server parses the
+ * final value with the same schema.
  *
  * Example — Pandemic's difficulty picker is a `LobbyConfigProps`
  * component that renders three Chip buttons and calls
@@ -51,10 +54,10 @@ export type LobbyConfigProps = {
 };
 
 /**
- * Replay viewer component shared by the match-history and tournament
- * routes. Each game's log shape is distinct (TournamentGameLog,
- * EKGameReplayLog, …) so we type-erase to `unknown` at the boundary
- * and let the component cast internally to its concrete type.
+ * Replay viewer component for the match-history replay route. Each game's
+ * log shape is distinct (LostCitiesReplayLog, EKGameReplayLog, …) so we
+ * type-erase to `unknown` at the boundary and let the component cast
+ * internally to its concrete type.
  *
  * `onBack` is the route-supplied "exit replay" hook — used by games
  * that want an in-component "back" affordance. Replays opened via the
@@ -172,6 +175,13 @@ export interface CatalogGame extends GameBase {
  */
 export interface PlayableGame extends GameBase {
   kind: "playable";
+  /**
+   * The server-run game's manifest — seats, AI strategies, option schema —
+   * hydrated by the registry from `@boardgames/core/games/manifests`. Absent
+   * for the table-companion tools (D&D, Blood on the Clocktower), which have
+   * no server game, no rooms and no match history.
+   */
+  manifest?: GameManifest;
   /** Online-playable component. */
   component: LazyExoticComponent<ComponentType<GameComponentProps>>;
   /**
@@ -213,20 +223,12 @@ export interface PlayableGame extends GameBase {
    * inert with a "coming soon" note instead of routing to `mp/join`.
    */
   multiplayerComingSoon?: boolean;
-  /** Whether the game has a match history screen accessible from the mode-picker. */
-  hasMatchHistory?: boolean;
-  /** Whether the game has a tournament screen accessible from the mode-picker. */
-  hasTournament?: boolean;
-  /** AI strategies for the tournament grid. Required when `hasTournament` is true. */
-  tournamentStrategies?: { id: string; label: string }[];
-  /** Whether to show average score diff in tournament grid cells (default true). */
-  tournamentShowScoreDiff?: boolean;
   /**
-   * Table sizes the tournament grid can run a matchup at (multi-seat games).
-   * Seats alternate between the two strategies per game so both hold every
-   * seat equally often. Omit for head-to-head-only games.
+   * Results of the game's locally run AI tournament — the generated
+   * `tournament-results.generated.ts` (see `pnpm --filter @boardgames/core
+   * tournament`). Present ⇒ the mode picker shows the Tournament page.
    */
-  tournamentPlayerCounts?: number[];
+  tournamentResults?: () => Promise<{ default: TournamentResults }>;
   /**
    * Rules document(s) shown from the mode-picker. A plain string is a single
    * PDF; an array opens the viewer with a tab bar (one tab per booklet). Used
@@ -242,25 +244,11 @@ export interface PlayableGame extends GameBase {
   multiplayerDescription?: string;
   /**
    * Optional game-specific replay component, used by the match-history
-   * and tournament-detail routes to render a single game log inline.
+   * route to render a single game log inline.
    * The log shape is typed `unknown` at the boundary; each game's
    * component casts to its concrete log type internally.
    */
   replayComponent?: LazyExoticComponent<ComponentType<ReplayProps>>;
-  /**
-   * Maps an AI strategy / engine id (the strings recorded in match logs)
-   * to a human label for the match-history table. Defaults to the
-   * identity function when omitted.
-   */
-  matchHistoryLabelResolver?: (engineId: string) => string;
-  /**
-   * Column header used in the match-history table for the AI-engine /
-   * second-seat column. Defaults to "Opponent". Co-op games override
-   * this to something accurate — Sky Team uses "AI Co-pilot" because
-   * "Opponent" implies a versus dynamic that doesn't exist when the
-   * team wins or loses together.
-   */
-  matchHistoryOpponentLabel?: string;
   /**
    * Game-specific lobby-config UI rendered inside the lobby route.
    * Pandemic's difficulty picker is the canonical example. Omit for
@@ -277,25 +265,12 @@ export interface PlayableGame extends GameBase {
    */
   lobbyLayout?: "wide";
   /**
-   * Initial mp config sent to `mp.startRoom` when the host starts the
-   * game. Set when the game has constant config (Sky Team's scenarioId)
-   * or when `lobbyConfigComponent` needs an initial value.
-   */
-  defaultMpConfig?: unknown;
-  /**
-   * Convert a single tournament game log into its human-readable form
-   * for the "Download all logs (ZIP)" button on `<TournamentMatchHistory>`.
-   * Most games leave this undefined; Lost Cities supplies one because
-   * the raw protocol log is unreadable to humans.
-   */
-  tournamentExportLogFn?: (game: unknown) => unknown;
-  /**
    * Optional override for the `/play/:slug/match-history` route. Set
    * games with non-standard history surfaces — e.g. Set has both a
    * client-side trainer history AND a server PvP history and renders
    * them as tabs. Receives an `onBack` callback wired to the parent
    * route navigation. When omitted, the route renders the generic
-   * `<MatchHistory>` component plus the game's `matchHistoryLabelResolver`.
+   * `<MatchHistory>` for the game's online matches.
    */
   matchHistoryComponent?: LazyExoticComponent<ComponentType<{ onBack: () => void }>>;
 }
@@ -369,4 +344,4 @@ export type CatalogEntry = {
  * The folder name *is* the slug; no need to repeat it here. Registry
  * looks up the matching catalog entry by folder path.
  */
-export type PlayableModule = Omit<PlayableGame, "kind" | keyof GameBase>;
+export type PlayableModule = Omit<PlayableGame, "kind" | "manifest" | keyof GameBase>;

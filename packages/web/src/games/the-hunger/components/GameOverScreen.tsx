@@ -4,18 +4,24 @@ import type {
   HungerResult,
   SeatBreakdown,
 } from "@boardgames/core/games/the-hunger/types";
-import { GameOverLayout, GameOverStats, StatItem } from "../../../components/game-over";
+import {
+  type GameOverAction,
+  GameOverLayout,
+  GameOverStats,
+  StatItem,
+} from "../../../components/game-over";
 import { MicroLabel, Surface } from "../../../components/ui";
 import { cn } from "../../../lib/cn";
+import { artUrl } from "../logic/art";
 import { seatLabel, vampireColor } from "../logic/labels";
 import CardLine from "./CardLine";
+import VampireAvatar from "./VampireAvatar";
 
 interface Props {
   view: HungerPlayerView;
   result: HungerResult;
   names: readonly (string | null)[];
-  onMenu: () => void;
-  onPlayAgain?: () => void;
+  actions: readonly GameOverAction[];
 }
 
 const FATE = {
@@ -25,20 +31,13 @@ const FATE = {
   ashes: "Ashes",
 } as const;
 
-export default function GameOverScreen({ view, result, names, onMenu, onPlayAgain }: Props) {
+export default function GameOverScreen({ view, result, names, actions }: Props) {
   const mine = view.me >= 0;
   const iWon = mine && result.winners.includes(view.me);
   const winnerLabel = result.winner === null ? null : seatLabel(view, result.winner, names);
   const order = [...result.placements.keys()].sort(
     (a, b) => result.placements[a] - result.placements[b] || a - b,
   );
-  const actions: { label: string; variant: "primary" | "secondary"; onClick: () => void }[] = [];
-  if (onPlayAgain) actions.push({ label: "Play Again", variant: "primary", onClick: onPlayAgain });
-  actions.push({
-    label: "Back to Menu",
-    variant: onPlayAgain ? "secondary" : "primary",
-    onClick: onMenu,
-  });
   const my = mine ? result.breakdown[view.me] : undefined;
 
   return (
@@ -54,6 +53,14 @@ export default function GameOverScreen({ view, result, names, onMenu, onPlayAgai
       actions={actions}
     >
       <div className="space-y-6">
+        {artUrl("sunrise-backdrop") && (
+          <img
+            src={artUrl("sunrise-backdrop")}
+            alt="Dawn breaks over the Castle"
+            draggable={false}
+            className="aspect-video w-full rounded-card-xl object-cover shadow-2xl"
+          />
+        )}
         {my && (
           <GameOverStats columns={4}>
             <StatItem label="Your score" value={my.total} highlight={iWon} />
@@ -92,10 +99,13 @@ export default function GameOverScreen({ view, result, names, onMenu, onPlayAgai
                     <td className="py-1.5 text-fg-muted">{result.placements[seat]}</td>
                     <td className="py-1.5">
                       <span className="inline-flex items-center gap-2">
-                        <span
-                          className="h-3 w-3 rounded-full"
-                          style={{ backgroundColor: p ? vampireColor(p.vampire) : undefined }}
-                        />
+                        {p && (
+                          <VampireAvatar
+                            vampire={p.vampire}
+                            dim={b.fate === "ashes"}
+                            className="h-7 w-7 text-xs"
+                          />
+                        )}
                         {seatLabel(view, seat, names)}
                         {winner && " 👑"}
                       </span>

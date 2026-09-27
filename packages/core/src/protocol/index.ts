@@ -27,7 +27,6 @@ export * from "./http/purchase-vote.ts";
 export * from "./http/purchases.ts";
 export * from "./http/quiztopia.ts";
 export * from "./http/skills.ts";
-export * from "./http/tournament.ts";
 export * from "./http/trainer-geography.ts";
 export * from "./ws/client-messages.ts";
 export * from "./ws/room.ts";

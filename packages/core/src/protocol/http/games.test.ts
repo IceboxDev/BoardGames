@@ -5,8 +5,8 @@ import {
   GameResultListSchema,
   GameResultsQuerySchema,
   MAX_BULK_RESULT_RECORDS,
+  MatchSummaryListSchema,
   ReplayListQuerySchema,
-  ReplaySummaryListSchema,
   SaveResultResponseSchema,
 } from "./games.ts";
 
@@ -46,35 +46,37 @@ describe("BulkSaveResults", () => {
   });
 });
 
-describe("ReplaySummaryListSchema", () => {
-  it("accepts a list of replay summaries", () => {
-    expect(() =>
-      ReplaySummaryListSchema.parse([
-        {
-          id: 1,
-          aiEngine: "mcts",
-          scoreP0: 12,
-          scoreP1: 8,
-          winner: "p0",
-          createdAt: "2026-05-05",
-        },
-      ]),
-    ).not.toThrow();
+describe("MatchSummaryListSchema", () => {
+  const match = {
+    id: 1,
+    createdAt: "2026-09-27 10:00:00",
+    playerCount: 2,
+    outcome: { kind: "ranked", placements: [1, 2], scores: [40, 12] },
+    seats: [
+      { seat: 0, kind: "human", strategy: null, name: "Ana", isViewer: true },
+      { seat: 1, kind: "ai", strategy: "ismcts-v4", name: null, isViewer: false },
+    ],
+    viewerSeat: 0,
+  };
+
+  it("accepts a match with its seats", () => {
+    expect(() => MatchSummaryListSchema.parse([match])).not.toThrow();
   });
 
-  it("accepts nulls in optional score fields", () => {
+  it("accepts a legacy match with no recorded seats", () => {
+    expect(() => MatchSummaryListSchema.parse([{ ...match, seats: [] }])).not.toThrow();
+  });
+
+  it("rejects an outcome of an unknown kind", () => {
     expect(() =>
-      ReplaySummaryListSchema.parse([
-        {
-          id: 2,
-          aiEngine: null,
-          scoreP0: null,
-          scoreP1: null,
-          winner: null,
-          createdAt: "2026-05-05",
-        },
-      ]),
-    ).not.toThrow();
+      MatchSummaryListSchema.parse([{ ...match, outcome: { kind: "p0-won" } }]),
+    ).toThrow();
+  });
+
+  it("rejects a seat kind other than human or ai", () => {
+    expect(() =>
+      MatchSummaryListSchema.parse([{ ...match, seats: [{ ...match.seats[0], kind: "open" }] }]),
+    ).toThrow();
   });
 });
 

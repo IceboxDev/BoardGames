@@ -1,20 +1,21 @@
 import { sortHand } from "@boardgames/core/games/exploding-kittens/deck";
 import type { Action, GameState } from "@boardgames/core/games/exploding-kittens/types";
 import { GameDialogPanel } from "../../../components/game-layout";
+import type { SeatNaming } from "../log-mapper";
 import Card from "./Card";
 
 interface FavorDialogProps {
   state: GameState;
+  naming: SeatNaming;
   onAction: (action: Action) => void;
 }
 
-export default function FavorDialog({ state, onAction }: FavorDialogProps) {
+export default function FavorDialog({ state, naming, onAction }: FavorDialogProps) {
   const fc = state.favorContext;
   if (!fc) return null;
 
   const target = state.players[fc.targetPlayer];
-  const fromPlayer = state.players[fc.fromPlayer];
-  const fromName = fromPlayer.type === "human" ? "You" : `AI ${fc.fromPlayer}`;
+  const fromName = naming.nameOf(fc.fromPlayer);
   const hand = sortHand(target.hand);
 
   return (

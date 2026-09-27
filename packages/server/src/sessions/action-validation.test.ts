@@ -20,7 +20,7 @@
 
 import { describe, expect, it } from "vitest";
 import { createActor } from "xstate";
-import { getMachineSpec, getRegisteredSlugs } from "./machine-registry.ts";
+import { getRegisteredSlugs, getServerGame } from "../games/registry.ts";
 
 const slugs = getRegisteredSlugs();
 
@@ -49,6 +49,7 @@ const MALFORMED: ReadonlyArray<readonly [string, unknown]> = [
 const WELL_FORMED_NONSENSE: ReadonlyArray<readonly [string, unknown]> = [
   ["an invented action kind", { type: "PLAYER_ACTION", action: { kind: "__hack__", n: 1 } }],
   ["a deeply nested payload", { type: "PLAYER_ACTION", action: { a: { b: { c: [1, 2, 3] } } } }],
+  ["a START wrapped as an action", { type: "PLAYER_ACTION", action: { type: "START" } }],
   [
     "a prototype-pollution attempt",
     { type: "PLAYER_ACTION", action: { ["__proto__"]: { admin: true } } },
@@ -58,7 +59,7 @@ const WELL_FORMED_NONSENSE: ReadonlyArray<readonly [string, unknown]> = [
 const SEATS = [0, 1, 2, 3, -1, 999];
 
 describe.each(slugs)("%s", (slug) => {
-  const spec = getMachineSpec(slug);
+  const spec = getServerGame(slug)?.spec;
   if (!spec) throw new Error(`no spec registered for ${slug}`);
 
   /**
@@ -114,13 +115,5 @@ describe.each(slugs)("%s", (slug) => {
       expect(actor.getSnapshot().status).not.toBe("error");
       actor.stop();
     }
-  });
-});
-
-describe("registry", () => {
-  it("registers every game exactly once and none are missing a spec", () => {
-    expect(slugs.length).toBeGreaterThan(0);
-    expect(new Set(slugs).size).toBe(slugs.length);
-    for (const slug of slugs) expect(getMachineSpec(slug)).toBeDefined();
   });
 });

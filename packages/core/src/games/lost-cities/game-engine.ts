@@ -1,9 +1,11 @@
+import { createRng, randomSeed } from "../../lib/rng";
 import { buildDeck, dealHands, shuffle } from "./deck";
 import type { Card, DrawAction, Expeditions, GameState, PlayAction } from "./types";
 import { emptyDiscardPiles, emptyExpeditions, opponent } from "./types";
 
-export function createInitialState(): GameState {
-  const deck = shuffle(buildDeck());
+/** The deal is the only random step, so `seed` alone reproduces a game. */
+export function createInitialState(seed: number = randomSeed()): GameState {
+  const deck = shuffle(buildDeck(), createRng(seed));
   const { hands, drawPile } = dealHands(deck);
 
   return {

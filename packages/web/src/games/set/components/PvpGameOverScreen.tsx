@@ -1,19 +1,19 @@
 import { formatTime } from "@boardgames/core/games/set/metrics";
 import type { PvpGameResult, PvpPlayerRecordEntry } from "@boardgames/core/games/set/pvp-types";
-import { GameOverLayout } from "../../../components/game-over";
+import { type GameOverAction, GameOverLayout } from "../../../components/game-over";
 
 interface PvpGameOverScreenProps {
   result: PvpGameResult;
   playerIndex: number;
   opponentName: string;
-  onBackToMenu: () => void;
+  actions: readonly GameOverAction[];
 }
 
 export default function PvpGameOverScreen({
   result,
   playerIndex,
   opponentName,
-  onBackToMenu,
+  actions,
 }: PvpGameOverScreenProps) {
   const myStats = result.players[playerIndex];
   const oppStats = result.players[1 - playerIndex];
@@ -26,7 +26,7 @@ export default function PvpGameOverScreen({
       headline={isDraw ? "Draw!" : iWon ? "You Win!" : "You Lose!"}
       headlineColor={isDraw ? "draw" : iWon ? "win" : "lose"}
       subtitle={formatTime(result.durationMs)}
-      actions={[{ label: "Back to Menu", variant: "primary", onClick: onBackToMenu }]}
+      actions={actions}
     >
       {/* Side-by-side comparison */}
       <div className="grid grid-cols-2 gap-4">

@@ -275,8 +275,6 @@ export interface SetupConfig {
   seed?: number;
 }
 
-export type MetaAction = { kind: "start_game"; config: SetupConfig } | { kind: "reset" };
-
 // ---------------------------------------------------------------------------
 // City data (used by city-graph)
 // ---------------------------------------------------------------------------

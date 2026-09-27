@@ -1,22 +1,23 @@
 import type { ParksPlayerView, ParksResult } from "@boardgames/core/games/parks/types";
 import { PASSION_LABELS } from "@boardgames/core/games/parks/types";
-import { GameOverLayout } from "../../../components/game-over";
+import { type GameOverAction, GameOverLayout } from "../../../components/game-over";
 import { LabelValueRow } from "../../../components/game-over/GameOverStats";
 
 interface GameOverScreenProps {
   view: ParksPlayerView;
   result: ParksResult;
   playerIndex: number;
-  onPlayAgain: () => void;
-  onBackToMenu: () => void;
+  /** Who sat at each seat ("You", a room name, the AI's label). */
+  seatNames: readonly string[];
+  actions: readonly GameOverAction[];
 }
 
 export default function GameOverScreen({
   view,
   result,
   playerIndex,
-  onPlayAgain,
-  onBackToMenu,
+  seatNames,
+  actions,
 }: GameOverScreenProps) {
   const isWinner = result.winner === playerIndex && !result.isDraw;
   const headline = result.isDraw ? "Draw!" : isWinner ? "You Win!" : "You Lose";
@@ -28,10 +29,7 @@ export default function GameOverScreen({
       headline={headline}
       headlineColor={headlineColor}
       subtitle={`Final scores: ${result.scores.join(" vs ")}`}
-      actions={[
-        { label: "Play Again", variant: "primary", onClick: onPlayAgain },
-        { label: "Back to Menu", variant: "secondary", onClick: onBackToMenu },
-      ]}
+      actions={actions}
     >
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {view.players.map((p, i) => {
@@ -49,7 +47,7 @@ export default function GameOverScreen({
             >
               <div className="mb-2 flex items-center justify-between">
                 <h3 className={`text-sm font-bold ${isMe ? "text-cyan-300" : "text-amber-300"}`}>
-                  {isMe ? "You" : "Opponent"}
+                  {isMe ? "You" : (seatNames[i] ?? "Opponent")}
                 </h3>
                 <span className="text-2xl font-bold text-yellow-400">{breakdown.total}</span>
               </div>

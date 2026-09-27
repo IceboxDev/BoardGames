@@ -1,6 +1,6 @@
+import { type Rng, shuffleInPlace } from "../../lib/rng";
 import type { Card } from "./types";
 import { EXPEDITION_COLORS } from "./types";
-import { shuffleInPlace } from "./utils";
 
 export function buildDeck(): Card[] {
   const cards: Card[] = [];
@@ -18,9 +18,9 @@ export function buildDeck(): Card[] {
   return cards;
 }
 
-export function shuffle<T>(arr: T[]): T[] {
+export function shuffle<T>(arr: T[], rng?: Rng): T[] {
   const copy = [...arr];
-  shuffleInPlace(copy);
+  shuffleInPlace(copy, rng);
   return copy;
 }
 

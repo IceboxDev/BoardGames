@@ -4,10 +4,19 @@ import { ClientMessageSchema } from "./client-messages.ts";
 describe("ClientMessageSchema", () => {
   it("accepts create-session and action", () => {
     expect(() =>
-      ClientMessageSchema.parse({ type: "create-session", gameSlug: "lost-cities", config: {} }),
+      ClientMessageSchema.parse({
+        type: "create-session",
+        gameSlug: "lost-cities",
+        seats: [{ kind: "human" }, { kind: "ai", strategy: "ismcts-v4" }],
+        config: {},
+      }),
     ).not.toThrow();
     expect(() =>
-      ClientMessageSchema.parse({ type: "action", sessionId: "s-1", action: { kind: "draw" } }),
+      ClientMessageSchema.parse({
+        type: "action",
+        sessionId: "s-1",
+        action: { type: "PLAYER_ACTION", action: { kind: "draw" } },
+      }),
     ).not.toThrow();
   });
 
@@ -59,7 +68,32 @@ describe("ClientMessageSchema", () => {
 
   it("rejects malformed gameSlug", () => {
     expect(() =>
-      ClientMessageSchema.parse({ type: "create-session", gameSlug: "Lost Cities", config: {} }),
+      ClientMessageSchema.parse({
+        type: "create-session",
+        gameSlug: "Lost Cities",
+        seats: [{ kind: "human" }],
+        config: {},
+      }),
     ).toThrow();
+  });
+
+  it("rejects an action outside the PLAYER_ACTION envelope", () => {
+    expect(() =>
+      ClientMessageSchema.parse({ type: "action", sessionId: "s-1", action: { kind: "draw" } }),
+    ).toThrow();
+    expect(() =>
+      ClientMessageSchema.parse({
+        type: "action",
+        sessionId: "s-1",
+        action: { type: "PLAYER_ACTION", action: {}, player: -1 },
+      }),
+    ).toThrow();
+  });
+
+  it("rejects a solo session with no seats, or an AI seat without a strategy", () => {
+    const base = { type: "create-session", gameSlug: "durak", config: {} };
+    expect(() => ClientMessageSchema.parse({ ...base, seats: [] })).toThrow();
+    expect(() => ClientMessageSchema.parse({ ...base, seats: [{ kind: "ai" }] })).toThrow();
+    expect(() => ClientMessageSchema.parse({ ...base })).toThrow();
   });
 });

@@ -50,6 +50,8 @@ export function makeAutomatedStep(
 }
 
 export interface SkyTeamReplayLog {
+  /** Absent on logs saved before versioning; treat those as version 1. */
+  formatVersion?: 1;
   scenarioId: string;
   seed: number;
   outcome: SkyTeamGameState["outcome"];
@@ -62,6 +64,7 @@ export function buildGameLog(args: {
   steps: SkyTeamReplayStep[];
 }): SkyTeamReplayLog {
   return {
+    formatVersion: 1,
     scenarioId: args.finalState.scenario.id,
     seed: args.finalState.seed,
     outcome: args.finalState.outcome,

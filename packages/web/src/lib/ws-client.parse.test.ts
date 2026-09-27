@@ -7,6 +7,7 @@ describe("parseServerMessage", () => {
     const raw = JSON.stringify({
       type: "session-created",
       sessionId: "sess-1",
+      playerIndex: 0,
       playerView: { foo: "bar" },
       legalActions: [],
       activePlayer: 0,

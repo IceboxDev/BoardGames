@@ -1,16 +1,17 @@
-import type { SkyTeamMachineEvent } from "@boardgames/core/games/sky-team/machine";
+import type { SkyTeamConfig } from "@boardgames/core/games/sky-team/manifest";
 import type {
-  PlayerIndex,
   SkyTeamAction,
   SkyTeamPlayerView,
   SkyTeamResult,
   SlotId,
 } from "@boardgames/core/games/sky-team/types";
+import type { SeatRequest } from "@boardgames/core/machines/seats";
 import { useCallback, useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { ActionLog } from "../../components/action-log";
 import GameScreen from "../../components/game-layout/GameScreen";
+import { BoardFallback } from "../../components/RouteFallback";
 import { useGameShell } from "../../hooks/useGameShell";
+import { type SoloStart, useSessionFlow } from "../../hooks/useSessionFlow";
 import type { GameComponentProps } from "../types";
 import ApproachTrack from "./components/ApproachTrack";
 import BriefingOverlay from "./components/BriefingOverlay";
@@ -18,51 +19,42 @@ import Cockpit from "./components/board/Cockpit";
 import GameOverScreen from "./components/GameOverScreen";
 import PhaseBanner from "./components/PhaseBanner";
 import PlayerDiceTray from "./components/PlayerDiceTray";
-import SetupScreen, { type SkyTeamStartConfig } from "./components/SetupScreen";
+import SetupScreen, { type SkyTeamSoloSetup } from "./components/SetupScreen";
 import { mapSkyTeamLog } from "./log-mapper";
 
+/** You fly the chosen seat; the AI partner takes the other. */
+function toSoloStart({ scenarioId, seat, strategy }: SkyTeamSoloSetup): SoloStart {
+  const ai: SeatRequest = { kind: "ai", strategy };
+  const config: SkyTeamConfig = { scenarioId };
+  return { seats: seat === 0 ? [{ kind: "human" }, ai] : [ai, { kind: "human" }], config };
+}
+
 export default function SkyTeam({ source }: GameComponentProps) {
-  const navigate = useNavigate();
-  const { def, game, mp } = useGameShell<SkyTeamPlayerView, SkyTeamMachineEvent, SkyTeamResult>();
+  const flow = useSessionFlow<SkyTeamPlayerView, SkyTeamAction, SkyTeamResult, SkyTeamSoloSetup>(
+    source,
+    { toSoloStart },
+  );
+  // Room chat for the briefing lives on the room projection.
+  const { mp } = useGameShell();
 
   const [selectedDieId, setSelectedDieId] = useState<number | null>(null);
   const [coffeeAdjust, setCoffeeAdjust] = useState(0);
   const [rerollMode, setRerollMode] = useState(false);
   const [rerollSelection, setRerollSelection] = useState<Set<number>>(new Set());
-  const [lastConfig, setLastConfig] = useState<SkyTeamStartConfig | null>(null);
-
-  const backToMenu = useCallback(() => {
-    if (source === "mp") mp.reset();
-    else game.reset();
-    navigate(`/play/${def.slug}`);
-  }, [source, mp.reset, game.reset, def.slug, navigate]);
 
   const startSolo = useCallback(
-    (config: SkyTeamStartConfig) => {
-      setLastConfig(config);
+    (setup: SkyTeamSoloSetup) => {
       setSelectedDieId(null);
       setCoffeeAdjust(0);
       setRerollMode(false);
       setRerollSelection(new Set());
-      game.start(config);
+      flow.start(setup);
     },
-    [game.start],
+    [flow.start],
   );
 
-  const active = source === "mp" ? mp : game;
-  const view = active.view;
-
-  const sendAction = useCallback(
-    (action: SkyTeamAction) => {
-      if (!view) return;
-      active.send({
-        type: "PLAYER_ACTION",
-        player: view.viewerIndex as PlayerIndex,
-        action,
-      });
-    },
-    [active.send, view],
-  );
+  const view = flow.view;
+  const { sendAction } = flow;
 
   const handleSelectSlot = useCallback(
     (slot: SlotId) => {
@@ -103,8 +95,7 @@ export default function SkyTeam({ source }: GameComponentProps) {
   // The briefing phase exists so two humans can discuss strategy before the
   // dice roll. With an AI partner there's no one to discuss with — skip the
   // overlay and auto-confirm ready-to-roll so the round flows straight into
-  // placement. (We still render *no* overlay below for solo, so this is
-  // belt-and-braces against a stale render.)
+  // placement.
   useEffect(() => {
     if (source !== "solo") return;
     if (!view) return;
@@ -116,11 +107,10 @@ export default function SkyTeam({ source }: GameComponentProps) {
   const handleSpendReroll = useCallback(
     (ids: number[]) => {
       if (!view) return;
-      const myIdx = view.viewerIndex as PlayerIndex;
       sendAction({
         kind: "spend-reroll",
-        pilotDieIds: myIdx === 0 ? ids : [],
-        copilotDieIds: myIdx === 1 ? ids : [],
+        pilotDieIds: view.viewerIndex === 0 ? ids : [],
+        copilotDieIds: view.viewerIndex === 1 ? ids : [],
       });
       setRerollMode(false);
       setRerollSelection(new Set());
@@ -144,37 +134,17 @@ export default function SkyTeam({ source }: GameComponentProps) {
     });
   }, []);
 
-  if (source === "solo" && !game.view && !game.result) {
-    return <SetupScreen onStart={startSolo} />;
+  if (flow.phase === "setup") return <SetupScreen onStart={startSolo} />;
+
+  if (flow.phase === "finished" && flow.result) {
+    return <GameOverScreen result={flow.result} actions={flow.endActions} />;
   }
 
-  if (source === "solo" && game.result) {
-    return (
-      <GameOverScreen
-        result={game.result}
-        onPlayAgain={lastConfig ? () => startSolo(lastConfig) : undefined}
-        onBackToMenu={backToMenu}
-      />
-    );
-  }
+  if (!view) return <BoardFallback />;
 
-  if (source === "mp" && mp.result) {
-    // Same rich screen as solo (outcome headline + explanation + flight
-    // stats) — the generic MpGameOverScreen previously showed the raw
-    // outcome code ("loss-mandatory") as its only context, which read as
-    // a bug. There is no "Play again" in mp; rooms are torn down on exit.
-    return <GameOverScreen result={mp.result} onBackToMenu={backToMenu} />;
-  }
-
-  if (!view) return null;
-
+  // Seat names follow the room's seat order, so swapped roles are named right.
   const playerNames: [string, string] | undefined =
-    source === "mp" && mp.roomState
-      ? [
-          mp.roomState.slots[0]?.playerName ?? "Pilot",
-          mp.roomState.slots[1]?.playerName ?? "Co-Pilot",
-        ]
-      : undefined;
+    source === "mp" ? [flow.seatNames[0] ?? "Pilot", flow.seatNames[1] ?? "Co-Pilot"] : undefined;
 
   return (
     <GameScreen
@@ -204,7 +174,7 @@ export default function SkyTeam({ source }: GameComponentProps) {
       fanActions={
         <PhaseBanner
           view={view}
-          isAiThinking={active.isAiThinking}
+          isAiThinking={flow.isAiThinking}
           onEndRound={view.canEndRound ? handleEndRound : undefined}
           onAcknowledgeGameOver={
             view.canAcknowledgeGameOver ? handleAcknowledgeGameOver : undefined

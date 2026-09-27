@@ -1,13 +1,10 @@
 import { ALL_STRATEGIES } from "@boardgames/core/games/lost-cities/ai-strategies";
 import { CARD_INFO } from "@boardgames/core/games/lost-cities/mcts/types";
 import type {
+  LostCitiesReplayLog,
   MCTSActionStats,
-  TournamentGameLog,
-} from "@boardgames/core/games/lost-cities/tournament-log";
-import {
-  getReplaySteps,
-  stepToReplayState,
-} from "@boardgames/core/games/lost-cities/tournament-log";
+} from "@boardgames/core/games/lost-cities/replay-log";
+import { getReplaySteps, stepToReplayState } from "@boardgames/core/games/lost-cities/replay-log";
 import type {
   Card,
   DiscardPiles,
@@ -42,7 +39,7 @@ function discardPilesFromArrays(piles: Card[][]): DiscardPiles {
 }
 
 interface GameReplayProps {
-  game: TournamentGameLog;
+  game: LostCitiesReplayLog;
 }
 
 function formatPlayActionLabel(a: MCTSActionStats): string {

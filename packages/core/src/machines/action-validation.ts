@@ -12,7 +12,9 @@
  * The contract here closes that hole at the source: a spec must be able to
  * turn an UNTRUSTED payload into a machine event, or reject it with a reason.
  *
- * Two validator strategies are provided. Prefer `playerActionValidator`.
+ * Every game accepts one wire shape — `{ type: "PLAYER_ACTION", action }`,
+ * where `action` is one of the actions `getLegalActions` listed — through one
+ * of two validators. Prefer `playerActionValidator`.
  *
  *   - `playerActionValidator` — the action must be structurally equal to one
  *     the engine itself enumerated via `getLegalActions`. The event handed to
@@ -207,31 +209,6 @@ export function envelopeActionValidator<TMachine extends AnyActorLogic, TEvent>(
       return acceptAction(options.toEvent(parsed.value, player));
     }
     return acceptAction(options.toEvent(raw.action, player));
-  };
-}
-
-/**
- * For machines whose client events are the legal actions themselves (no
- * `PLAYER_ACTION` envelope). `toEvent` rebuilds the event from the engine's
- * matched entry so seat fields come from the authenticated `player`.
- */
-export function directEventValidator<TMachine extends AnyActorLogic, TAction, TEvent>(options: {
-  legalActions: (snapshot: SnapshotFrom<TMachine>, player: number) => readonly TAction[];
-  /** Project an engine legal action into the event a client would send. */
-  toCandidate: (action: TAction, player: number) => unknown;
-  toEvent: (action: TAction, player: number) => TEvent;
-}): ActionValidator<TMachine, TEvent> {
-  return (snapshot, player, raw) => {
-    if (!isRecord(raw)) return rejectAction("action must be an object");
-    if (typeof raw.type !== "string") return rejectAction("action is missing a `type`");
-
-    const legal = options.legalActions(snapshot, player);
-    if (legal.length === 0) return rejectAction("you have no legal actions right now");
-
-    const match = legal.find((action) => canonicalEquals(options.toCandidate(action, player), raw));
-    if (match === undefined) return rejectAction("that action is not legal in the current state");
-
-    return acceptAction(options.toEvent(match, player));
   };
 }
 

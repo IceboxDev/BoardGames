@@ -1,3 +1,3 @@
-export { GameOverLayout } from "./GameOverLayout";
+export { type GameOverAction, GameOverLayout } from "./GameOverLayout";
 export { GameOverStats, StatItem } from "./GameOverStats";
-export { MpGameOverScreen } from "./MpGameOverScreen";
+export { type OutcomeHeadline, outcomeHeadline } from "./outcome-headline";

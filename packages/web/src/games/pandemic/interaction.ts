@@ -16,18 +16,11 @@ import type {
   GameAction,
   GameState,
   LegalAction,
-  MetaAction,
 } from "@boardgames/core/games/pandemic/types";
 import { DISEASE_COLORS } from "@boardgames/core/games/pandemic/types";
 
-/**
- * Action handler the board passes to children. Accepts both regular game
- * actions (move, treat, cure, …) and the two meta actions that bookend a
- * session (`start_game`, `reset`) — the Pandemic top-level component
- * intercepts the meta variants and routes them to `useGameShell` rather
- * than the in-game machine.
- */
-export type GameDispatch = (action: GameAction | MetaAction) => void;
+/** Action handler the board passes to children: one game action (move, treat, cure, …). */
+export type GameDispatch = (action: GameAction) => void;
 
 /** Open-action modes the UI puts the board into while the user picks a city. */
 export type InteractionMode =

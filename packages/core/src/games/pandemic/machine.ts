@@ -9,6 +9,7 @@ import {
   InvalidActionError,
   resolveEpidemic,
 } from "./game-engine";
+import { type PandemicConfig, pandemicManifest } from "./manifest";
 import { getPublicView } from "./player-view";
 import {
   buildGameLog,
@@ -293,13 +294,27 @@ export const pandemicMachine = setup({
 // Spec export
 // ---------------------------------------------------------------------------
 
+/** Seat count as the engine's role count; the manifest bounds seats to 2–4. */
+function roleCount(seats: number): SetupConfig["numPlayers"] {
+  if (seats === 2 || seats === 3 || seats === 4) return seats;
+  throw new Error(`Pandemic plays 2–4 roles, not ${seats}`);
+}
+
 export const pandemicSpec: GameMachineSpec<
   typeof pandemicMachine,
   GameState,
   LegalAction,
-  GameResult | null
+  GameResult | null,
+  PandemicConfig
 > = {
   machine: pandemicMachine,
+  manifest: pandemicManifest,
+
+  // Every seat is a role a person plays; solo is one person holding them all.
+  buildStart: ({ seats, config, seed }) => ({
+    type: "START",
+    config: { numPlayers: roleCount(seats.length), difficulty: config.difficulty, seed },
+  }),
 
   getPlayerView(snapshot, player) {
     const gs = snapshot.context.gameState;
@@ -333,6 +348,13 @@ export const pandemicSpec: GameMachineSpec<
 
   isGameOver(snapshot) {
     return snapshot.matches("gameOver");
+  },
+
+  // Co-operative: the team cures all four diseases together or loses together.
+  getOutcome(snapshot) {
+    const result = snapshot.context.gameState?.result ?? null;
+    if (result === null) return null;
+    return { kind: "coop", won: result === "win", detail: result };
   },
 
   getReplayLog(snapshot): PandemicGameReplayLog | null {

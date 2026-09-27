@@ -7,6 +7,7 @@ describe("ServerMessageSchema", () => {
       ServerMessageSchema.parse({
         type: "session-created",
         sessionId: "s-1",
+        playerIndex: 0,
         playerView: { hand: [] },
         legalActions: [],
         activePlayer: 0,
@@ -71,8 +72,19 @@ describe("ServerMessageSchema", () => {
     const sample = (type: string, extra: object) => ServerMessageSchema.parse({ type, ...extra });
     expect(() => sample("ai-thinking", { sessionId: "s-1" })).not.toThrow();
     expect(() =>
-      sample("game-over", { sessionId: "s-1", result: {}, playerView: {} }),
+      sample("game-over", {
+        sessionId: "s-1",
+        result: {},
+        outcome: { kind: "coop", won: true },
+        playerView: {},
+      }),
     ).not.toThrow();
+    expect(() =>
+      sample("game-over", { sessionId: "s-1", result: {}, outcome: null, playerView: {} }),
+    ).not.toThrow();
+    expect(() =>
+      sample("game-over", { sessionId: "s-1", result: {}, outcome: { kind: "?" }, playerView: {} }),
+    ).toThrow();
     expect(() => sample("error", { message: "boom" })).not.toThrow();
     expect(() =>
       sample("room-created", {

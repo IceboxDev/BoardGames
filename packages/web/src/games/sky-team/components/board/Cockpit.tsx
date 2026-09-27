@@ -3,7 +3,7 @@ import {
   BRAKES_ORDER,
   FLAPS_ORDER,
 } from "@boardgames/core/games/sky-team/scenarios";
-import type { PlayerIndex, SkyTeamPlayerView, SlotId } from "@boardgames/core/games/sky-team/types";
+import type { SkyTeamPlayerView, SlotId } from "@boardgames/core/games/sky-team/types";
 import { BoardSurface } from "../../../../components/board";
 import ArtificialHorizon from "./ArtificialHorizon";
 import AxisArc from "./AxisArc";
@@ -41,7 +41,7 @@ export default function Cockpit({ view, selectedDieId, coffeeAdjust, onSelectSlo
     if (view.phase !== "placement") return false;
     if (view.toPlace !== view.viewerIndex) return false;
     const def = BASE_SLOT_DEFS[slot];
-    const myIdx = view.viewerIndex as PlayerIndex;
+    const myIdx = view.viewerIndex;
     if (def.eligibility === "pilot" && myIdx !== 0) return false;
     if (def.eligibility === "copilot" && myIdx !== 1) return false;
     if (view.slots[slot].die != null) return false;

@@ -1,16 +1,24 @@
+import type { GameOutcome } from "@boardgames/core/machines/outcome";
+import type { SeatRequest } from "@boardgames/core/machines/seats";
 import { useCallback, useState } from "react";
 import type { ConnectionStatus, GameSession } from "../lib/ws-client";
 
-export interface RemoteGameState<TView, TAction, TResult, TLegal = TAction> {
+/**
+ * `TAction` is the game's legal-action type: the server lists them in
+ * `legalActions`, and `send` plays one back (wrapped in the shared
+ * `PLAYER_ACTION` envelope by the session).
+ */
+export interface RemoteGameState<TView, TAction, TResult> {
   view: TView | null;
-  /** Server-provided legal moves. Games whose send-event type differs from
-   *  their action type name it via the fourth `useGameShell` generic. */
-  legalActions: TLegal[];
+  /** The moves the server says this player may make now. */
+  legalActions: TAction[];
   phase: string;
   activePlayer: number;
   playerIndex: number;
   isMyTurn: boolean;
   result: TResult | null;
+  /** How the finished game ended, in the shape every game shares. */
+  outcome: GameOutcome | null;
   replayId: number | null;
   /** Full transport status. Prefer this over `isConnected` when the UI needs
    *  to distinguish "connecting" / "reconnecting" from a hard failure. */
@@ -22,8 +30,10 @@ export interface RemoteGameState<TView, TAction, TResult, TLegal = TAction> {
   error: string | null;
   /** Transport-level error (socket down / send dropped). */
   connectionError: string | null;
-  send: (action: TAction) => void;
-  start: (config: unknown) => void;
+  /** Play one of `legalActions`; `seat` claims a human seat when one person holds several. */
+  send: (action: TAction, seat?: number) => void;
+  /** Start a game: who sits where (this player holds every human seat) and the options. */
+  start: (seats: readonly SeatRequest[], config?: unknown) => void;
   reset: () => void;
 }
 
@@ -39,8 +49,8 @@ export function useRemoteGame<TView = unknown, TAction = unknown, TResult = unkn
   const [started, setStarted] = useState(false);
 
   const start = useCallback(
-    (config: unknown) => {
-      session.createSession(gameSlug, config);
+    (seats: readonly SeatRequest[], config: unknown = {}) => {
+      session.createSession(gameSlug, seats, config);
       setStarted(true);
     },
     [session.createSession, gameSlug],
@@ -64,6 +74,7 @@ export function useRemoteGame<TView = unknown, TAction = unknown, TResult = unkn
     playerIndex: session.playerIndex,
     isMyTurn: session.activePlayer === session.playerIndex,
     result: isSoloGame ? session.result : null,
+    outcome: isSoloGame ? session.outcome : null,
     replayId: session.replayId,
     status: session.status,
     isConnected: session.status === "connected",

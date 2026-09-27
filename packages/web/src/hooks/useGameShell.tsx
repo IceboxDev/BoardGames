@@ -28,25 +28,26 @@ export type GameSource = "solo" | "mp";
 // race for state and there is never more than one connection per slug.
 //
 // Per-game payload types are generic at the call site: callers do
-// `useGameShell<MyView, MyAction, MyResult>()` and receive a typed
+// `useGameShell<MyView, MyLegalAction, MyResult>()` and receive a typed
 // projection. The context itself stores `unknown`; the hook does a
-// single cast at the boundary.
+// single cast at the boundary. Games normally reach this through
+// `useSessionFlow`, which adds the solo/room flow on top.
 
-export interface GameShellValue<TView, TAction, TResult, TLegal = TAction> {
+export interface GameShellValue<TView, TAction, TResult> {
   /**
    * Game registry entry. Always defined inside a layout — and always a
    * `PlayableGame` because `<GameShellLayout>` redirects to `/games`
    * when the slug resolves to a catalog-only entry. Children can read
-   * `def.component`, `def.tournamentStrategies`, etc. without further
+   * `def.component`, `def.tournamentResults`, etc. without further
    * narrowing.
    */
   def: PlayableGame;
   /** Shared raw session (WebSocket + state). Prefer `game` / `mp` projections. */
   session: GameSession<TView, TAction, TResult>;
   /** Solo (vs-AI) projection. */
-  game: RemoteGameState<TView, TAction, TResult, TLegal>;
+  game: RemoteGameState<TView, TAction, TResult>;
   /** Multiplayer-room projection. */
-  mp: MultiplayerRoomState<TView, TAction, TResult, TLegal>;
+  mp: MultiplayerRoomState<TView, TAction, TResult>;
 }
 
 const GameShellContext = createContext<GameShellValue<unknown, unknown, unknown> | null>(null);
@@ -69,15 +70,14 @@ export function useGameShell<
   TView = unknown,
   TAction = unknown,
   TResult = unknown,
-  TLegal = TAction,
->(): GameShellValue<TView, TAction, TResult, TLegal> {
+>(): GameShellValue<TView, TAction, TResult> {
   const ctx = useContext(GameShellContext);
   if (!ctx) {
     throw new Error(
       "useGameShell must be used inside <GameShellLayout> (mounted at /play/:slug/*)",
     );
   }
-  return ctx as unknown as GameShellValue<TView, TAction, TResult, TLegal>;
+  return ctx as unknown as GameShellValue<TView, TAction, TResult>;
 }
 
 // ── Layout (route element) ────────────────────────────────────────────────

@@ -1,13 +1,19 @@
 import { randomBytes } from "node:crypto";
-import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
-import { gameRoomConfigs } from "@boardgames/core/protocol/room-config";
-import type { WSContext } from "hono/ws";
-import { getMachineSpec } from "./machine-registry.ts";
+import { getManifest } from "@boardgames/core/games/manifests";
 import {
-  createMultiClientSession,
+  defaultStrategyFor,
+  type GameManifest,
+  strategiesFor,
+} from "@boardgames/core/machines/manifest";
+import { type RoomSlot, type RoomState, roomSeating } from "@boardgames/core/protocol";
+import type { WSContext } from "hono/ws";
+import {
+  endSession,
   endSoloSessionsForWs,
   type PlayerConnection,
   reconnectPlayer,
+  type SessionSeat,
+  startRoomSession,
   wsAuth,
 } from "./manager.ts";
 
@@ -18,6 +24,13 @@ import {
 // Exclude ambiguous characters: O, I, L
 const CODE_CHARS = "ABCDEFGHJKMNPQRSTUVWXYZ";
 const CODE_LENGTH = 6;
+
+/**
+ * How long a started room waits for anyone to come back once every person in
+ * it has disconnected — a refresh, a phone locking, a flaky connection —
+ * before the game is ended and the room closed.
+ */
+export const ROOM_RECONNECT_GRACE_MS = 120_000;
 
 /**
  * Room codes are a capability — possessing one lets you take a seat — so they
@@ -50,6 +63,7 @@ export interface Room {
   code: string;
   gameSlug: string;
   hostWs: WSContext;
+  /** One slot per possible seat (`manifest.seats.max`); the count never changes. */
   slots: RoomSlot[];
   clients: Map<WSContext, number>; // ws → slotIndex
   /** slotIndex → authenticated userId that owns the seat (server-side only,
@@ -58,11 +72,14 @@ export interface Room {
    *  code + a player's display name could hijack their seat and read their
    *  private hand. `undefined` for open/AI slots. */
   slotUserIds: (string | undefined)[];
-  /** slotIndex → in-game seat (PlayerIndex). Identity until the host swaps
-   *  roles (Sky Team: seat 0 = Pilot, seat 1 = Co-Pilot). Slots and host
-   *  identity never move — only the role assignment does. */
+  /** Seat rank per slot. Identity until the host swaps roles (Sky Team:
+   *  seat 0 = Pilot, seat 1 = Co-Pilot); see `roomSeating`. */
   seatOrder: number[];
   sessionId: string | null; // set once game starts
+  /** slotIndex → in-game seat, fixed when the game starts. */
+  seatOfSlot: (number | undefined)[];
+  /** Ends the game if nobody has come back — armed while no person is connected. */
+  graceTimer: ReturnType<typeof setTimeout> | null;
 }
 
 const rooms = new Map<string, Room>();
@@ -73,7 +90,12 @@ const wsToRoom = new Map<WSContext, string>();
 // ---------------------------------------------------------------------------
 
 function send(ws: WSContext, msg: unknown): void {
-  ws.send(JSON.stringify(msg));
+  if (ws.readyState !== 1 /* OPEN */) return;
+  try {
+    ws.send(JSON.stringify(msg));
+  } catch (err) {
+    console.error("[room] send failed:", err);
+  }
 }
 
 function broadcastRoomUpdate(room: Room): void {
@@ -96,6 +118,34 @@ function sendError(ws: WSContext, message: string): void {
   send(ws, { type: "error", message });
 }
 
+/**
+ * The seats a room starts with, in in-game order (`roomSeating`), and the slot
+ * each seat came from. An AI slot with no strategy, or one not offered at this
+ * table size, takes the manifest's default for the size. Exported for tests.
+ */
+export function seatRoom(
+  room: Pick<Room, "slots" | "seatOrder" | "slotUserIds">,
+  manifest: GameManifest,
+): { seats: SessionSeat[]; slotOfSeat: number[] } {
+  const slotOfSeat = roomSeating(room.slots, room.seatOrder);
+  const offered = new Set(strategiesFor(manifest, slotOfSeat.length).map((s) => s.id));
+  const fallback = defaultStrategyFor(manifest, slotOfSeat.length);
+  const seats = slotOfSeat.map((slotIndex): SessionSeat => {
+    const slot = room.slots[slotIndex];
+    if (slot?.kind === "ai") {
+      const strategy =
+        slot.aiStrategy && offered.has(slot.aiStrategy) ? slot.aiStrategy : (fallback ?? "");
+      return { kind: "ai", strategy, userId: null, name: null };
+    }
+    return {
+      kind: "human",
+      userId: room.slotUserIds[slotIndex] ?? null,
+      name: slot?.playerName ?? null,
+    };
+  });
+  return { seats, slotOfSeat };
+}
+
 // ---------------------------------------------------------------------------
 // Handlers
 // ---------------------------------------------------------------------------
@@ -113,16 +163,9 @@ export function handleCreateRoom(
     return;
   }
 
-  // Validate game exists
-  const spec = getMachineSpec(msg.gameSlug);
-  if (!spec) {
+  const manifest = getManifest(msg.gameSlug);
+  if (!manifest) {
     sendError(ws, `Unknown game: ${msg.gameSlug}`);
-    return;
-  }
-
-  const config = gameRoomConfigs[msg.gameSlug];
-  if (!config) {
-    sendError(ws, `Game ${msg.gameSlug} does not support multiplayer`);
     return;
   }
 
@@ -138,22 +181,20 @@ export function handleCreateRoom(
   endSoloSessionsForWs(ws);
 
   const code = generateRoomCode();
-  const slots: RoomSlot[] = [];
-
-  // Host is slot 0
-  slots.push({
-    kind: "human",
-    playerName: msg.playerName,
-    ready: true, // host is always ready
-    connected: true,
-  });
-
-  // Fill remaining slots as open
-  for (let i = 1; i < config.maxPlayers; i++) {
-    slots.push({ kind: "open", ready: false, connected: false });
-  }
-
-  const slotUserIds: (string | undefined)[] = new Array(config.maxPlayers).fill(undefined);
+  const size = manifest.seats.max;
+  const slots: RoomSlot[] = [
+    // Host is slot 0 and always ready.
+    { kind: "human", playerName: msg.playerName, ready: true, connected: true },
+    ...Array.from(
+      { length: size - 1 },
+      (): RoomSlot => ({
+        kind: "open",
+        ready: false,
+        connected: false,
+      }),
+    ),
+  ];
+  const slotUserIds: (string | undefined)[] = new Array(size).fill(undefined);
   slotUserIds[0] = userId;
 
   const room: Room = {
@@ -163,8 +204,10 @@ export function handleCreateRoom(
     slots,
     clients: new Map([[ws, 0]]),
     slotUserIds,
-    seatOrder: Array.from({ length: config.maxPlayers }, (_, i) => i),
+    seatOrder: Array.from({ length: size }, (_, i) => i),
     sessionId: null,
+    seatOfSlot: [],
+    graceTimer: null,
   };
 
   rooms.set(code, room);
@@ -212,7 +255,6 @@ export function handleJoinRoom(ws: WSContext, msg: { roomCode: string; playerNam
   // Same solo-session cleanup as create-room (see comment there).
   endSoloSessionsForWs(ws);
 
-  // Find first open slot
   const slotIndex = room.slots.findIndex((s) => s.kind === "open");
   if (slotIndex === -1) {
     sendError(ws, "Room is full");
@@ -229,15 +271,12 @@ export function handleJoinRoom(ws: WSContext, msg: { roomCode: string; playerNam
   room.clients.set(ws, slotIndex);
   wsToRoom.set(ws, room.code);
 
-  // Send join confirmation to the joining player
   send(ws, {
     type: "room-joined",
     roomCode: room.code,
     roomState: buildRoomState(room),
     yourSlot: slotIndex,
   });
-
-  // Broadcast update to all players
   broadcastRoomUpdate(room);
 }
 
@@ -249,7 +288,8 @@ function handleReconnect(ws: WSContext, room: Room, userId: string): void {
   const slotIndex = room.slots.findIndex(
     (s, i) => s.kind === "human" && !s.connected && room.slotUserIds[i] === userId,
   );
-  if (slotIndex === -1) {
+  const seat = room.seatOfSlot[slotIndex];
+  if (slotIndex === -1 || seat === undefined) {
     sendError(ws, "Cannot reconnect: no seat in this game belongs to you");
     return;
   }
@@ -258,16 +298,13 @@ function handleReconnect(ws: WSContext, room: Room, userId: string): void {
   if (slot.kind === "human") slot.connected = true;
   room.clients.set(ws, slotIndex);
   wsToRoom.set(ws, room.code);
+  cancelGrace(room);
 
   broadcastRoomUpdate(room);
-
-  // Signal the session manager to send current game state to this player.
-  // The session is keyed by in-game seat, not slot index.
-  if (room.sessionId) {
-    reconnectPlayer(room.sessionId, ws, room.seatOrder[slotIndex] ?? slotIndex);
-  }
+  if (room.sessionId) reconnectPlayer(room.sessionId, ws, seat);
 }
 
+/** A player leaves. Before the game their slot opens; during it, they may come back. */
 export function handleLeaveRoom(ws: WSContext, msg: { roomCode: string }): void {
   const room = rooms.get(msg.roomCode);
   if (!room) return;
@@ -278,18 +315,28 @@ export function handleLeaveRoom(ws: WSContext, msg: { roomCode: string }): void 
   room.clients.delete(ws);
   wsToRoom.delete(ws);
 
-  // If host left, close the room
+  if (room.sessionId) {
+    // Mid-game the seat stays theirs (they can rejoin with the code); the room
+    // lives on while anyone is still at the table.
+    markDisconnected(room, slotIndex);
+    return;
+  }
+
   if (slotIndex === 0) {
     closeRoom(room, "Host left the room");
     return;
   }
 
-  // Free the slot
   room.slots[slotIndex] = { kind: "open", ready: false, connected: false };
   room.slotUserIds[slotIndex] = undefined;
   broadcastRoomUpdate(room);
 }
 
+/**
+ * Host-only: set which slots are open or AI (and each AI's strategy). The
+ * table size is the manifest's and never changes; people only arrive by
+ * joining, so a slot can become human only by already being one.
+ */
 export function handleConfigureRoom(
   ws: WSContext,
   msg: { roomCode: string; slots: RoomSlot[] },
@@ -299,59 +346,49 @@ export function handleConfigureRoom(
     sendError(ws, `Room ${msg.roomCode} not found`);
     return;
   }
-
-  // Only host can configure
   if (room.hostWs !== ws) {
     sendError(ws, "Only the host can configure the room");
     return;
   }
-
   if (room.sessionId) {
     sendError(ws, "Cannot configure after game has started");
     return;
   }
+  if (msg.slots.length !== room.slots.length) {
+    sendError(ws, `This room has ${room.slots.length} seats`);
+    return;
+  }
 
-  // Preserve connected human players — only update slots that match
-  for (let i = 0; i < msg.slots.length && i < room.slots.length; i++) {
+  for (let i = 1; i < room.slots.length; i++) {
     const current = room.slots[i];
     const incoming = msg.slots[i];
+    if (!current || !incoming) continue;
 
-    if (current.kind === "human" && current.connected && incoming.kind !== "human") {
-      // Kick the connected player from this slot
+    if (current.kind === "human") {
+      if (incoming.kind === "human") continue; // people keep their own slot state
+      // The host turned a person's slot into AI/open: remove them.
       for (const [clientWs, idx] of room.clients) {
-        if (idx === i && clientWs !== room.hostWs) {
-          send(clientWs, {
-            type: "room-closed",
-            roomCode: room.code,
-            reason: "You were removed from the room",
-          });
-          room.clients.delete(clientWs);
-          wsToRoom.delete(clientWs);
-          break;
-        }
+        if (idx !== i) continue;
+        send(clientWs, {
+          type: "room-closed",
+          roomCode: room.code,
+          reason: "You were removed from the room",
+        });
+        room.clients.delete(clientWs);
+        wsToRoom.delete(clientWs);
       }
     }
 
-    room.slots[i] = incoming;
-  }
-
-  // Resize if needed
-  if (msg.slots.length !== room.slots.length) {
-    room.slots.length = msg.slots.length;
-    for (let i = room.slots.length; i < msg.slots.length; i++) {
-      room.slots.push(msg.slots[i]);
-    }
-  }
-
-  // Keep seat ownership aligned with the reconfigured slots: an owned userId is
-  // only valid for a slot that stayed a connected human. Anything that became
-  // open/AI or lost its connection loses its owner.
-  room.slotUserIds.length = room.slots.length;
-  for (let i = 0; i < room.slots.length; i++) {
-    const slot = room.slots[i];
-    if (slot.kind !== "human" || !slot.connected) {
-      room.slotUserIds[i] = undefined;
-    }
+    room.slotUserIds[i] = undefined;
+    room.slots[i] =
+      incoming.kind === "ai"
+        ? {
+            kind: "ai",
+            ...(incoming.aiStrategy ? { aiStrategy: incoming.aiStrategy } : {}),
+            ready: true,
+            connected: false,
+          }
+        : { kind: "open", ready: false, connected: false };
   }
 
   broadcastRoomUpdate(room);
@@ -399,6 +436,10 @@ export function handleKickPlayer(
     sendError(ws, "Only the host can kick players");
     return;
   }
+  if (room.sessionId) {
+    sendError(ws, "Cannot kick after the game has started");
+    return;
+  }
   if (msg.slotIndex === 0) {
     sendError(ws, "Cannot kick yourself");
     return;
@@ -407,7 +448,6 @@ export function handleKickPlayer(
   const slot = room.slots[msg.slotIndex];
   if (!slot || slot.kind !== "human") return;
 
-  // Find and disconnect the kicked player
   for (const [clientWs, idx] of room.clients) {
     if (idx === msg.slotIndex) {
       send(clientWs, {
@@ -440,217 +480,47 @@ export function handleStartRoom(ws: WSContext, msg: { roomCode: string; config: 
     sendError(ws, "Game already started");
     return;
   }
-
-  const roomConfig = gameRoomConfigs[room.gameSlug];
-  if (!roomConfig) {
-    sendError(ws, "Game does not support multiplayer");
+  const manifest = getManifest(room.gameSlug);
+  if (!manifest) {
+    sendError(ws, `Unknown game: ${room.gameSlug}`);
     return;
   }
 
-  // Count human players and check readiness
-  const humanSlots = room.slots.filter((s) => s.kind === "human");
-  if (humanSlots.length < roomConfig.minPlayers) {
-    sendError(ws, `Need at least ${roomConfig.minPlayers} players`);
+  const humans = room.slots.flatMap((s, i) => (s.kind === "human" ? [i] : []));
+  if (humans.some((i) => !room.slots[i]?.connected)) {
+    sendError(ws, "A player has disconnected — wait for them or free their seat");
     return;
   }
-
-  const unready = room.slots.find((s) => s.kind === "human" && !s.ready && s.connected);
-  if (unready) {
+  if (humans.some((i) => !room.slots[i]?.ready)) {
     sendError(ws, "Not all players are ready");
     return;
   }
 
-  // Decrypto's seats carry team meaning (0-1 White, 2-3 Black; seats 0-2 with
-  // the last left open = the 3-player Interceptor variant), so only those two
-  // fill shapes are startable.
-  if (room.gameSlug === "decrypto") {
-    const filled = room.slots.map((s) => s.kind !== "open");
-    const standard = filled.every(Boolean);
-    const interceptor = filled[0] && filled[1] && filled[2] && !filled[3];
-    if (!standard && !interceptor) {
-      sendError(
-        ws,
-        "Decrypto needs all 4 seats filled (2v2), or just the first 3 for the Interceptor variant",
-      );
-      return;
-    }
-  }
-
-  // Build player connections for the session. The in-game seat comes from
-  // `seatOrder`, not the slot index — the host may have swapped roles.
+  // Seats count humans AND AI against the manifest; the host's options are
+  // parsed by the game's own schema inside `startRoomSession`.
+  const { seats, slotOfSeat } = seatRoom(room, manifest);
   const players: PlayerConnection[] = [];
-  for (let i = 0; i < room.slots.length; i++) {
-    const slot = room.slots[i];
-    if (slot.kind === "human") {
-      // Find the ws for this slot
-      for (const [clientWs, idx] of room.clients) {
-        if (idx === i) {
-          players.push({ ws: clientWs, playerIndex: room.seatOrder[i] ?? i, connected: true });
-          break;
-        }
-      }
-    }
-    // AI slots don't have a ws connection — handled by the machine
+  for (const [clientWs, slotIndex] of room.clients) {
+    const seat = slotOfSeat.indexOf(slotIndex);
+    if (seat >= 0) players.push({ ws: clientWs, playerIndex: seat, connected: true });
   }
 
-  // Build game-specific config from room state
-  const gameConfig = buildGameConfig(room, msg.config as Record<string, unknown>);
-
-  // Create the multi-client session
-  const sessionId = createMultiClientSession(room.gameSlug, players, gameConfig, room.code);
-
-  room.sessionId = sessionId;
-}
-
-/** Exported for tests: the START config a room's slots + lobby extras produce. */
-export function buildGameConfig(
-  room: Room,
-  extra: Record<string, unknown>,
-): Record<string, unknown> {
-  switch (room.gameSlug) {
-    case "lost-cities": {
-      // 2 players — if both human, pass humanPlayers: [0, 1]. Seats map
-      // through seatOrder (identity unless a future UI exposes swapping).
-      const humanIndices = room.slots
-        .map((s, i) => (s.kind === "human" ? (room.seatOrder[i] ?? i) : -1))
-        .filter((i) => i >= 0);
-      const aiSlot = room.slots.find((s) => s.kind === "ai");
-      return {
-        aiEngine: aiSlot?.aiStrategy ?? "ismcts-v4",
-        humanPlayers: humanIndices,
-        ...extra,
-      };
-    }
-
-    case "exploding-kittens": {
-      // Map slots to strategies array: null for human, strategy ID for AI
-      const strategies = room.slots
-        .filter((s) => s.kind !== "open")
-        .map((s) => (s.kind === "ai" ? (s.aiStrategy ?? "heuristic-v1") : null));
-      return {
-        playerCount: strategies.length,
-        strategies,
-        ...extra,
-      };
-    }
-
-    case "pandemic": {
-      const humanCount = room.slots.filter((s) => s.kind === "human").length;
-      return {
-        config: {
-          numPlayers: humanCount,
-          difficulty: (extra.difficulty as number) ?? 4,
-        },
-      };
-    }
-
-    case "durak": {
-      const strategies = room.slots
-        .filter((s) => s.kind !== "open")
-        .map((s) => (s.kind === "ai" ? (s.aiStrategy ?? "heuristic-v1") : null));
-      return {
-        playerCount: strategies.length,
-        strategies,
-        ...extra,
-      };
-    }
-
-    case "senso-battle-for-japan": {
-      // Same shape as durak: one strategy id per filled seat, null for humans.
-      // Factions are dealt by the engine, so seat order carries no meaning.
-      const strategies = room.slots
-        .filter((s) => s.kind !== "open")
-        .map((s) => (s.kind === "ai" ? (s.aiStrategy ?? "kami") : null));
-      return {
-        playerCount: strategies.length,
-        strategies,
-        ...extra,
-      };
-    }
-
-    case "the-hunger": {
-      // One strategy id per filled seat, null for humans; seats are symmetric.
-      // Lobby extras (`mode`, `beginnerSafeMountains`) become START options;
-      // the engine ignores any value it does not know.
-      const strategies = room.slots
-        .filter((s) => s.kind !== "open")
-        .map((s) => (s.kind === "ai" ? (s.aiStrategy ?? "heuristic-v1") : null));
-      // Extras spread first so they can never override the seat count.
-      const { mode, beginnerSafeMountains, ...rest } = extra;
-      return {
-        ...rest,
-        playerCount: strategies.length,
-        strategies,
-        options: { mode, beginnerSafeMountains },
-      };
-    }
-
-    case "sushi-go": {
-      const humanCount = room.slots.filter((s) => s.kind === "human").length;
-      return { playerCount: humanCount, ...extra };
-    }
-
-    case "7-wonders": {
-      // AI fills every non-human seat; seats map through seatOrder.
-      const humanIndices = room.slots
-        .map((s, i) => (s.kind === "human" ? (room.seatOrder[i] ?? i) : -1))
-        .filter((i) => i >= 0);
-      const playerCount = room.slots.filter((s) => s.kind !== "open").length;
-      return { playerCount, humanPlayers: humanIndices, ...extra };
-    }
-
-    case "decrypto": {
-      // Seat convention: 0-1 White, 2-3 Black; 3 filled seats = the
-      // Interceptor variant (seat 2 is the solo interceptor). AI slots carry
-      // a GPT model id in `aiStrategy`.
-      const humanIndices = room.slots
-        .map((s, i) => (s.kind === "human" ? (room.seatOrder[i] ?? i) : -1))
-        .filter((i) => i >= 0);
-      const filledCount = room.slots.filter((s) => s.kind !== "open").length;
-      const aiModels: (string | null)[] = [];
-      room.slots.forEach((s, i) => {
-        const seat = room.seatOrder[i] ?? i;
-        aiModels[seat] = s.kind === "ai" ? (s.aiStrategy ?? null) : null;
-      });
-      return {
-        variant: filledCount === 3 ? "interceptor" : "standard",
-        humanPlayers: humanIndices,
-        aiModels,
-        // persistReplay sniffs `aiEngine` for the match-history AI column.
-        aiEngine: aiModels.find((m) => m !== null) ?? undefined,
-        ...extra,
-      };
-    }
-
-    case "sky-team": {
-      // Human SEATS (PlayerIndex), mapped through seatOrder — the host may
-      // have swapped who flies as Pilot vs Co-Pilot.
-      const humanIndices = room.slots
-        .map((s, i) => (s.kind === "human" ? (room.seatOrder[i] ?? i) : -1))
-        .filter((i) => i >= 0);
-      const aiSlot = room.slots.find((s) => s.kind === "ai");
-      return {
-        scenarioId: (extra.scenarioId as string | undefined) ?? "yul-montreal",
-        humanPlayers: humanIndices,
-        aiStrategy: aiSlot?.aiStrategy ?? "heuristic-v1",
-        ...extra,
-      };
-    }
-
-    case "quiztopia": {
-      // Co-op with no AI: the human SEATS in table order, mapped through
-      // seatOrder. Spread `extra` first so the lobby config can never
-      // override the count or the seating.
-      const seats = room.slots
-        .map((s, i) => (s.kind === "human" ? (room.seatOrder[i] ?? i) : -1))
-        .filter((i) => i >= 0)
-        .sort((a, b) => a - b);
-      return { ...extra, playerCount: seats.length, seats };
-    }
-
-    default:
-      return extra;
+  const started = startRoomSession({
+    gameSlug: room.gameSlug,
+    seats,
+    players,
+    rawConfig: msg.config,
+    roomCode: room.code,
+  });
+  if (!started.ok) {
+    sendError(ws, started.reason);
+    return;
   }
+  room.sessionId = started.sessionId;
+  room.seatOfSlot = [];
+  slotOfSeat.forEach((slotIndex, seat) => {
+    room.seatOfSlot[slotIndex] = seat;
+  });
 }
 
 // ---------------------------------------------------------------------------
@@ -705,47 +575,64 @@ export function handleChat(ws: WSContext, msg: { roomCode: string; text: string 
 }
 
 // ---------------------------------------------------------------------------
-// Cleanup
+// Lifetime
 // ---------------------------------------------------------------------------
 
 function closeRoom(room: Room, reason: string): void {
+  cancelGrace(room);
   for (const clientWs of room.clients.keys()) {
     send(clientWs, { type: "room-closed", roomCode: room.code, reason });
     wsToRoom.delete(clientWs);
   }
   rooms.delete(room.code);
+  if (room.sessionId) endSession(room.sessionId);
+}
+
+function cancelGrace(room: Room): void {
+  if (room.graceTimer) clearTimeout(room.graceTimer);
+  room.graceTimer = null;
+}
+
+/** A seated player dropped out of a started game; arm the grace timer if nobody is left. */
+function markDisconnected(room: Room, slotIndex: number): void {
+  const slot = room.slots[slotIndex];
+  if (slot) slot.connected = false;
+  broadcastRoomUpdate(room);
+
+  const anyoneConnected = room.slots.some((s) => s.kind === "human" && s.connected);
+  if (anyoneConnected || room.graceTimer) return;
+  room.graceTimer = setTimeout(() => {
+    room.graceTimer = null;
+    closeRoom(room, "Everyone left the game");
+  }, ROOM_RECONNECT_GRACE_MS);
+  room.graceTimer.unref?.();
 }
 
 export function handleRoomWsClose(ws: WSContext): void {
   const roomCode = wsToRoom.get(ws);
   if (!roomCode) return;
-
   const room = rooms.get(roomCode);
   if (!room) {
     wsToRoom.delete(ws);
     return;
   }
 
-  const slotIndex = room.clients.get(ws);
-  if (slotIndex === undefined) {
-    wsToRoom.delete(ws);
+  // In the lobby a dropped connection is a leave: the slot frees up (or the
+  // room closes if it was the host's).
+  if (!room.sessionId) {
+    handleLeaveRoom(ws, { roomCode });
     return;
   }
 
-  if (room.sessionId) {
-    // Game is in progress — mark disconnected, don't destroy
-    room.slots[slotIndex].connected = false;
-    room.clients.delete(ws);
-    wsToRoom.delete(ws);
-    broadcastRoomUpdate(room);
+  const slotIndex = room.clients.get(ws);
+  room.clients.delete(ws);
+  wsToRoom.delete(ws);
+  if (slotIndex !== undefined) markDisconnected(room, slotIndex);
+}
 
-    // Check if all players disconnected
-    const anyConnected = room.slots.some((s) => s.kind === "human" && s.connected);
-    if (!anyConnected) {
-      rooms.delete(room.code);
-    }
-  } else {
-    // Still in lobby
-    handleLeaveRoom(ws, { roomCode });
-  }
+/** Test hook: forget every room. */
+export function resetRoomsForTests(): void {
+  for (const room of rooms.values()) cancelGrace(room);
+  rooms.clear();
+  wsToRoom.clear();
 }

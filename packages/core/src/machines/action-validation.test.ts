@@ -1,7 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import {
   canonicalEquals,
-  directEventValidator,
   envelopeActionValidator,
   matchLegalAction,
   playerActionValidator,
@@ -146,40 +145,6 @@ describe("envelopeActionValidator", () => {
     ["a foreign type", { type: "RESET" }],
   ])("rejects %s", (_label, payload) => {
     expect(validate(SNAPSHOT, 0, payload).ok).toBe(false);
-  });
-});
-
-describe("directEventValidator", () => {
-  const legal = [
-    { phase: "play", action: { kind: "discard", card: { id: "c1" } } },
-    { phase: "draw", action: { kind: "draw-pile" } },
-  ] as const;
-
-  const validate = directEventValidator<never, (typeof legal)[number], unknown>({
-    legalActions: () => legal,
-    toCandidate: (entry) =>
-      entry.phase === "play"
-        ? { type: "DISCARD", cardId: entry.action.card.id }
-        : { type: "DRAW_FROM_PILE" },
-    toEvent: (entry) =>
-      entry.phase === "play"
-        ? { type: "DISCARD", cardId: entry.action.card.id }
-        : { type: "DRAW_FROM_PILE" },
-  });
-
-  it("accepts an event that projects from a legal entry", () => {
-    expect(validate(SNAPSHOT, 0, { type: "DISCARD", cardId: "c1" })).toEqual({
-      ok: true,
-      event: { type: "DISCARD", cardId: "c1" },
-    });
-  });
-
-  it("rejects an event for a card that isn't legal", () => {
-    expect(validate(SNAPSHOT, 0, { type: "DISCARD", cardId: "c9" }).ok).toBe(false);
-  });
-
-  it("rejects a control event the enumeration never offers", () => {
-    expect(validate(SNAPSHOT, 0, { type: "START" }).ok).toBe(false);
   });
 });
 

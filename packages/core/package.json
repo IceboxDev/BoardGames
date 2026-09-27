@@ -10,6 +10,7 @@
     "./games/decrypto/*": "./src/games/decrypto/*.ts",
     "./games/exit-games": "./src/games/exit-games.ts",
     "./games/legacy-games": "./src/games/legacy-games.ts",
+    "./games/manifests": "./src/games/manifests.ts",
     "./games/ownership": "./src/games/ownership.ts",
     "./games/skill-profiles": "./src/games/skill-profiles.ts",
     "./skill/*": "./src/skill/*.ts",
@@ -42,7 +43,8 @@
   "scripts": {
     "typecheck": "tsc -b --noEmit",
     "test": "vitest run",
-    "bench": "tsx src/games/senso-battle-for-japan/bench.ts"
+    "bench": "tsx src/games/senso-battle-for-japan/bench.ts",
+    "tournament": "tsx src/tournament/cli.ts"
   },
   "dependencies": {
     "@standard-schema/spec": "^1.1.0",

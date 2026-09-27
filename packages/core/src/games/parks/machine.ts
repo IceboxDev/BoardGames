@@ -1,17 +1,21 @@
 import { assign, fromPromise, type SnapshotFrom, setup } from "xstate";
 import { playerActionValidator, safeApply } from "../../machines/action-validation";
+import { strategyGuard, typedSeatStrategies } from "../../machines/seats";
 import type { GameMachineSpec } from "../../machines/types";
 import { getAILegalActions, getStrategy } from "./ai-strategies";
 import { applyActionPure, createInitialState } from "./game-engine";
+import { parksManifest } from "./manifest";
+import { parksOutcome } from "./outcome";
 import { getActivePlayer, getLegalActions } from "./rules";
 import { scorePlayer } from "./scoring";
-import type {
-  Action,
-  AIStrategyId,
-  GameState,
-  ParksPlayerView,
-  ParksResult,
-  ScoreBreakdown,
+import {
+  type Action,
+  AI_STRATEGY_LABELS,
+  type AIStrategyId,
+  type GameState,
+  type ParksPlayerView,
+  type ParksResult,
+  type ScoreBreakdown,
 } from "./types";
 
 // ---------------------------------------------------------------------------
@@ -20,10 +24,12 @@ import type {
 
 export interface ParksContext {
   gameState: GameState;
+  /** The setup seed — with the action log, it reproduces the game. */
+  seed: number;
 }
 
 export type ParksEvent =
-  | { type: "START"; strategies: (AIStrategyId | null)[] }
+  | { type: "START"; strategies: (AIStrategyId | null)[]; seed: number }
   | { type: "PLAYER_ACTION"; action: Action }
   | { type: "RESET" };
 
@@ -76,7 +82,10 @@ export const parksMachine = setup({
   actions: {
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
-      return safeApply("parks", () => ({ gameState: createInitialState(event.strategies) }));
+      return safeApply("parks", () => ({
+        gameState: createInitialState(event.strategies, event.seed),
+        seed: event.seed,
+      }));
     }),
 
     applyPlayerAction: assign(({ context, event }) => {
@@ -96,7 +105,7 @@ export const parksMachine = setup({
 }).createMachine({
   id: "parks",
   initial: "idle",
-  context: { gameState: PLACEHOLDER },
+  context: { gameState: PLACEHOLDER, seed: 0 },
 
   states: {
     idle: {
@@ -132,7 +141,9 @@ export const parksMachine = setup({
               target: "aiDelay",
               actions: "applyAiAction",
             },
-            onError: { target: "routing" },
+            // Back off before retrying — straight to `routing` would re-invoke
+            // a failing AI in a tight loop.
+            onError: { target: "aiDelay" },
           },
         },
 
@@ -256,9 +267,18 @@ function legalActionsFor(snapshot: SnapshotFrom<typeof parksMachine>, player: nu
 // Spec export
 // ---------------------------------------------------------------------------
 
+const toStrategy = strategyGuard("Parks", AI_STRATEGY_LABELS);
+
 export const parksSpec: GameMachineSpec<typeof parksMachine, ParksPlayerView, Action, ParksResult> =
   {
     machine: parksMachine,
+    manifest: parksManifest,
+
+    buildStart: ({ seats, seed }) => ({
+      type: "START",
+      strategies: typedSeatStrategies(seats, toStrategy),
+      seed,
+    }),
 
     getPlayerView(snapshot, player) {
       return buildPlayerView(snapshot.context, player);
@@ -283,5 +303,16 @@ export const parksSpec: GameMachineSpec<typeof parksMachine, ParksPlayerView, Ac
 
     isGameOver(snapshot) {
       return snapshot.matches("gameOver");
+    },
+
+    getOutcome(snapshot) {
+      const gs = snapshot.context.gameState;
+      return gs?.phase === "game-over" ? parksOutcome(gs) : null;
+    },
+
+    getReplayLog(snapshot) {
+      const { gameState: gs, seed } = snapshot.context;
+      if (gs?.phase !== "game-over") return null;
+      return { formatVersion: 1, seed, actionLog: gs.actionLog };
     },
   };

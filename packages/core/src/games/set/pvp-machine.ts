@@ -1,5 +1,7 @@
 import { and, assign, fromCallback, not, type SnapshotFrom, setup } from "xstate";
-import { directEventValidator, safeApply } from "../../machines/action-validation";
+import { createRng } from "../../lib/rng";
+import { playerActionValidator, safeApply } from "../../machines/action-validation";
+import { rankedByWinners } from "../../machines/outcome";
 import type { GameMachineSpec } from "../../machines/types";
 import {
   buildFullDeck,
@@ -9,6 +11,7 @@ import {
   shuffle,
   tableHasSet,
 } from "./deck";
+import { setManifest } from "./manifest";
 import type { PlayerId, PvpGameResult, PvpPlayerRecordEntry, PvpPlayerState } from "./pvp-types";
 import type { DealEntry, PerSetRecord, SetCardData } from "./types";
 
@@ -20,6 +23,8 @@ export const SELECTION_TIMEOUT_MS = 10_000;
 // ---------------------------------------------------------------------------
 
 export interface PvpGameContext {
+  /** The deal seed — with the players' records, it reproduces the game. */
+  seed: number;
   deck: SetCardData[];
   slots: (SetCardData | null)[];
   players: [PvpPlayerState, PvpPlayerState];
@@ -42,7 +47,7 @@ export interface PvpGameContext {
 // ---------------------------------------------------------------------------
 
 export type PvpGameEvent =
-  | { type: "START" }
+  | { type: "START"; seed: number }
   | { type: "DEAL_NEXT" }
   | { type: "CALL_SET"; playerIndex: PlayerId }
   | { type: "SELECT_CARD"; cardId: number; playerIndex: PlayerId }
@@ -101,6 +106,7 @@ function buildPlayerRecord(p: PvpPlayerState): PvpPlayerRecordEntry {
 }
 
 const INITIAL_CONTEXT: PvpGameContext = {
+  seed: 0,
   deck: [],
   slots: [],
   players: [emptyPlayerState(), emptyPlayerState()],
@@ -168,8 +174,9 @@ export const setPvpMachine = setup({
   },
 
   actions: {
-    initializePvpGame: assign(() => {
-      const d = shuffle(buildFullDeck());
+    initializePvpGame: assign(({ event }) => {
+      const seed = event.type === "START" ? event.seed : 0;
+      const d = shuffle(buildFullDeck(), createRng(seed));
       const initialCards = d.slice(0, 12);
       const remainingDeck = d.slice(12);
       const dealQueue: DealEntry[] = initialCards.map((card, i) => ({
@@ -178,6 +185,7 @@ export const setPvpMachine = setup({
       }));
 
       return {
+        seed,
         deck: remainingDeck,
         slots: Array(12).fill(null) as (SetCardData | null)[],
         players: [emptyPlayerState(), emptyPlayerState()] as [PvpPlayerState, PvpPlayerState],
@@ -549,7 +557,8 @@ export const setPvpMachine = setup({
 
 export interface SetPvpPlayerView {
   slots: (SetCardData | null)[];
-  selected: Set<number>;
+  /** Selected card ids — an array, since a `Set` does not survive JSON. */
+  selected: number[];
   players: [PvpPlayerState, PvpPlayerState];
   activePlayer: PlayerId | null;
   selectionDeadline: number;
@@ -562,44 +571,53 @@ export interface SetPvpPlayerView {
 // Spec export
 // ---------------------------------------------------------------------------
 
-/**
- * Every entry carries `playerIndex` built from the authenticated `player`, so
- * a payload naming another seat can never match.
- */
+/** A move a Set player makes. The seat is never part of it — it comes from the socket. */
+export type SetPvpAction = { type: "CALL_SET" } | { type: "SELECT_CARD"; cardId: number };
+
 function buildPvpLegalActions(
   snapshot: SnapshotFrom<typeof setPvpMachine>,
   player: number,
-): PvpGameEvent[] {
-  const events: PvpGameEvent[] = [];
+): SetPvpAction[] {
+  const actions: SetPvpAction[] = [];
   const ctx = snapshot.context;
 
   if (snapshot.matches({ dealing: "active" }) || snapshot.matches("playing")) {
-    events.push({ type: "CALL_SET", playerIndex: player as PlayerId });
+    actions.push({ type: "CALL_SET" });
   }
 
   if (snapshot.matches("selecting") && ctx.activePlayer === player) {
-    const visible = visibleCards(ctx.slots);
-    for (const card of visible) {
-      events.push({ type: "SELECT_CARD", cardId: card.id, playerIndex: player as PlayerId });
+    for (const card of visibleCards(ctx.slots)) {
+      actions.push({ type: "SELECT_CARD", cardId: card.id });
     }
   }
 
-  return events;
+  return actions;
+}
+
+/** The machine event for a validated move, seated from the authenticated player. */
+function toPvpEvent(action: SetPvpAction, player: number): PvpGameEvent {
+  const playerIndex = player as PlayerId;
+  return action.type === "CALL_SET"
+    ? { type: "CALL_SET", playerIndex }
+    : { type: "SELECT_CARD", cardId: action.cardId, playerIndex };
 }
 
 export const setPvpSpec: GameMachineSpec<
   typeof setPvpMachine,
   SetPvpPlayerView,
-  PvpGameEvent,
+  SetPvpAction,
   PvpGameResult | null
 > = {
   machine: setPvpMachine,
+  manifest: setManifest,
+
+  buildStart: ({ seed }) => ({ type: "START", seed }),
 
   getPlayerView(snapshot, _player) {
     const ctx = snapshot.context;
     return {
       slots: ctx.slots,
-      selected: ctx.selected,
+      selected: [...ctx.selected],
       players: ctx.players,
       activePlayer: ctx.activePlayer,
       selectionDeadline: ctx.selectionDeadline,
@@ -613,10 +631,9 @@ export const setPvpSpec: GameMachineSpec<
     return buildPvpLegalActions(snapshot, player);
   },
 
-  validateAction: directEventValidator<typeof setPvpMachine, PvpGameEvent, PvpGameEvent>({
+  validateAction: playerActionValidator<typeof setPvpMachine, SetPvpAction, PvpGameEvent>({
     legalActions: buildPvpLegalActions,
-    toCandidate: (event) => event,
-    toEvent: (event) => event,
+    toEvent: toPvpEvent,
   }),
 
   getActivePlayer(snapshot) {
@@ -632,9 +649,15 @@ export const setPvpSpec: GameMachineSpec<
     return snapshot.matches("gameOver");
   },
 
-  getReplayLog(snapshot) {
+  getOutcome(snapshot) {
     const r = snapshot.context.gameResult;
     if (!r) return null;
-    return { scoreA: r.scoreA, scoreB: r.scoreB };
+    return rankedByWinners(2, r.winner === "draw" ? [] : [r.winner], [r.scoreA, r.scoreB]);
+  },
+
+  getReplayLog(snapshot) {
+    const { gameResult, seed } = snapshot.context;
+    if (!gameResult) return null;
+    return { formatVersion: 1, seed, result: gameResult };
   },
 };

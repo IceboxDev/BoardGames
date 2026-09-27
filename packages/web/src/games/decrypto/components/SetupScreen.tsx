@@ -1,16 +1,10 @@
-import { DECRYPTO_AI_MODELS } from "@boardgames/core/games/decrypto/ai/models";
+import { decryptoManifest } from "@boardgames/core/games/decrypto/manifest";
 import { useState } from "react";
-import { PvAISetupScreen, type StrategyOption } from "../../../components/setup";
+import { PvAISetupScreen } from "../../../components/setup";
 import { Checkbox, SegmentedControl } from "../../../components/ui";
 
 // The strategy axis is the AI difficulty tier driving every AI seat — the
 // server maps the tier id to a concrete provider model (env-configurable).
-const MODEL_STRATEGIES: StrategyOption[] = DECRYPTO_AI_MODELS.map((m) => ({
-  id: m.id,
-  label: m.label,
-  description: m.description,
-  difficulty: m.difficulty,
-}));
 
 export type SoloMode = "standard" | "interceptor";
 
@@ -25,8 +19,9 @@ export default function SetupScreen({
   return (
     <PvAISetupScreen
       title="Decrypto"
-      strategies={MODEL_STRATEGIES}
-      defaultStrategy={DECRYPTO_AI_MODELS[DECRYPTO_AI_MODELS.length - 1]?.id}
+      manifest={decryptoManifest}
+      // The table size follows the mode below, not a stepper.
+      playerCounts={[mode === "interceptor" ? 3 : 4]}
       onStart={(_playerCount, modelId) => onStart(mode, modelId, timerEnabled)}
       extraControls={
         <div className="flex flex-col items-center gap-4">

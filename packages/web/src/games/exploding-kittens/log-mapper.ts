@@ -2,7 +2,6 @@ import type {
   ActionLogAction,
   ActionLogEntry,
   CardType,
-  GameState,
 } from "@boardgames/core/games/exploding-kittens/types";
 import { CARD_COLORS, CARD_LABELS } from "@boardgames/core/games/exploding-kittens/types";
 import type {
@@ -57,29 +56,18 @@ const ICON_MAP: Record<ActionLogAction, string> = {
 // Helpers
 // ---------------------------------------------------------------------------
 
-function playerName(players: GameState["players"], index: number): string {
-  const p = players[index];
-  if (!p) return `Player ${index}`;
-  if (p.type === "human") return "You";
-  const opponents = players.filter((pl) => pl.type !== "human");
-  if (opponents.length === 1) return "Opponent";
-  let num = 0;
-  for (const pl of players) {
-    if (pl.type !== "human") {
-      num++;
-      if (pl === p) return `Opponent ${num}`;
-    }
-  }
-  return "Opponent";
+/** How the log names seats: "You" for the viewer, everyone else by name. */
+export interface SeatNaming {
+  nameOf(seat: number): string;
+  isMe(seat: number): boolean;
 }
 
-function isHumanPlayer(players: GameState["players"], index: number): boolean {
-  return players[index]?.type === "human";
-}
-
-function playerSpan(players: GameState["players"], index: number): LogTextSpan {
-  const isHuman = isHumanPlayer(players, index);
-  return { text: playerName(players, index), bold: true, color: isHuman ? "#7dd3fc" : "#fdba74" };
+function playerSpan(naming: SeatNaming, index: number): LogTextSpan {
+  return {
+    text: naming.nameOf(index),
+    bold: true,
+    color: naming.isMe(index) ? "#7dd3fc" : "#fdba74",
+  };
 }
 
 function cardImageForType(cardType: CardType): string | undefined {
@@ -96,9 +84,9 @@ function cardRef(cardType: CardType): LogCardRef {
   };
 }
 
-function buildSpans(entry: ActionLogEntry, players: GameState["players"]): LogSpan[] {
-  const actor = playerSpan(players, entry.playerIndex);
-  const actorIsHuman = isHumanPlayer(players, entry.playerIndex);
+function buildSpans(entry: ActionLogEntry, naming: SeatNaming): LogSpan[] {
+  const actor = playerSpan(naming, entry.playerIndex);
+  const actorIsMe = naming.isMe(entry.playerIndex);
 
   switch (entry.action) {
     case "play-card":
@@ -126,7 +114,7 @@ function buildSpans(entry: ActionLogEntry, players: GameState["players"]): LogSp
       ];
     }
     case "draw": {
-      if (actorIsHuman && entry.cardType) {
+      if (actorIsMe && entry.cardType) {
         return [actor, " drew ", cardRef(entry.cardType)];
       }
       return [actor, " drew a card"];
@@ -140,7 +128,7 @@ function buildSpans(entry: ActionLogEntry, players: GameState["players"]): LogSp
     case "reinsert":
       return [actor, " reinserted ", cardRef("exploding-kitten"), " into the deck"];
     case "favor-give": {
-      const target = playerSpan(players, entry.targetPlayerIndex ?? 0);
+      const target = playerSpan(naming, entry.targetPlayerIndex ?? 0);
       return [
         actor,
         " forced ",
@@ -150,7 +138,7 @@ function buildSpans(entry: ActionLogEntry, players: GameState["players"]): LogSp
       ];
     }
     case "steal": {
-      const target = playerSpan(players, entry.targetPlayerIndex ?? 0);
+      const target = playerSpan(naming, entry.targetPlayerIndex ?? 0);
       if (entry.detail === "random") {
         return [
           actor,
@@ -187,9 +175,9 @@ function buildSpans(entry: ActionLogEntry, players: GameState["players"]): LogSp
     case "peek":
       return [actor, " peeked at the top of the deck"];
     case "skip-turn":
-      return [actor, actorIsHuman ? " skipped your turn" : " skipped their turn"];
+      return [actor, actorIsMe ? " skipped your turn" : " skipped their turn"];
     case "attack": {
-      const target = playerSpan(players, entry.targetPlayerIndex ?? 0);
+      const target = playerSpan(naming, entry.targetPlayerIndex ?? 0);
       return [actor, " attacked ", target, " \u2014 double turn!"];
     }
     case "shuffle":
@@ -210,7 +198,7 @@ function buildSpans(entry: ActionLogEntry, players: GameState["players"]): LogSp
 // Public mapper
 // ---------------------------------------------------------------------------
 
-export function mapEKLog(entries: ActionLogEntry[], players: GameState["players"]): LogBlock[] {
+export function mapEKLog(entries: ActionLogEntry[], naming: SeatNaming): LogBlock[] {
   const grouped = new Map<number, ActionLogEntry[]>();
   for (const entry of entries) {
     const list = grouped.get(entry.turn);
@@ -222,12 +210,12 @@ export function mapEKLog(entries: ActionLogEntry[], players: GameState["players"
   for (const [turn, turnEntries] of grouped) {
     // Determine the main actor for this turn (first non-nope entry, or first entry)
     const mainEntry = turnEntries.find((e) => e.action !== "nope") ?? turnEntries[0];
-    const label = `Turn ${turn} \u00b7 ${playerName(players, mainEntry.playerIndex)}`;
+    const label = `Turn ${turn} \u00b7 ${naming.nameOf(mainEntry.playerIndex)}`;
 
     const actions: LogAction[] = turnEntries.map((entry, i) => ({
       key: `${turn}-${i}`,
       icon: ICON_MAP[entry.action],
-      spans: buildSpans(entry, players),
+      spans: buildSpans(entry, naming),
       variant: VARIANT_MAP[entry.action],
     }));
     blocks.push({ key: turn, label, actions });

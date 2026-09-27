@@ -1,9 +1,12 @@
 import { assign, fromPromise, type SnapshotFrom, setup } from "xstate";
 import { playerActionValidator, safeApply } from "../../machines/action-validation";
+import { strategyGuard, typedSeatStrategies } from "../../machines/seats";
 import type { GameMachineSpec } from "../../machines/types";
 import { getStrategy } from "./ai-strategies";
 import { applyActionPure, createInitialState } from "./game-engine";
+import { explodingKittensManifest } from "./manifest";
 import { runISMCTS } from "./mcts/ismcts";
+import { explodingKittensOutcome } from "./outcome";
 import type { EKGameReplayLog, EKReplayStep } from "./replay-log";
 import {
   actionToReplayAction,
@@ -12,9 +15,17 @@ import {
   gameStateToSnapshot,
 } from "./replay-log";
 import type { Rng } from "./rng";
-import { createRng, randomSeed } from "./rng";
+import { createRng } from "./rng";
 import { getActiveDecider, getLegalActions } from "./rules";
-import type { Action, ActionLogEntry, AIStrategyId, Card, GamePhase, GameState } from "./types";
+import {
+  type Action,
+  type ActionLogEntry,
+  AI_STRATEGY_LABELS,
+  type AIStrategyId,
+  type Card,
+  type GamePhase,
+  type GameState,
+} from "./types";
 
 // ---------------------------------------------------------------------------
 // Context & events
@@ -28,7 +39,7 @@ export interface EKContext {
 }
 
 export type EKEvent =
-  | { type: "START"; playerCount: number; strategies: (AIStrategyId | null)[] }
+  | { type: "START"; playerCount: number; strategies: (AIStrategyId | null)[]; seed: number }
   | { type: "PLAYER_ACTION"; action: Action }
   | { type: "RESET" };
 
@@ -106,8 +117,8 @@ export const explodingKittensMachine = setup({
   },
 
   delays: {
+    // Pause after each AI move so a run of AI turns is followable.
     aiActionDelay: 500,
-    aiNopeDelay: 300,
   },
 
   actors: {
@@ -135,7 +146,7 @@ export const explodingKittensMachine = setup({
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
       return safeApply("exploding-kittens", () => {
-        const seed = randomSeed();
+        const seed = event.seed;
         const rng = createRng(seed);
         const gs = createInitialState(event.playerCount, event.strategies, rng);
         const step0: EKReplayStep = {
@@ -291,9 +302,15 @@ export const explodingKittensMachine = setup({
             id: "computeAiMove",
             src: "computeAiMove",
             input: ({ context }) => ({ state: context.gameState }),
-            onDone: { target: "routing", actions: "applyAiAction" },
-            onError: { target: "routing" },
+            onDone: { target: "aiDelay", actions: "applyAiAction" },
+            // Back off before retrying — straight to `routing` would re-invoke
+            // a failing AI in a tight loop.
+            onError: { target: "aiDelay" },
           },
+        },
+
+        aiDelay: {
+          after: { aiActionDelay: "routing" },
         },
       },
 
@@ -365,6 +382,8 @@ function legalActionsFor(
 // Spec export
 // ---------------------------------------------------------------------------
 
+const toStrategy = strategyGuard("Exploding Kittens", AI_STRATEGY_LABELS);
+
 export const explodingKittensSpec: GameMachineSpec<
   typeof explodingKittensMachine,
   EKPlayerView,
@@ -372,6 +391,14 @@ export const explodingKittensSpec: GameMachineSpec<
   EKResult
 > = {
   machine: explodingKittensMachine,
+  manifest: explodingKittensManifest,
+
+  buildStart: ({ seats, seed }) => ({
+    type: "START",
+    playerCount: seats.length,
+    strategies: typedSeatStrategies(seats, toStrategy),
+    seed,
+  }),
 
   getPlayerView(snapshot, player) {
     return buildPlayerView(snapshot.context, player);
@@ -403,6 +430,11 @@ export const explodingKittensSpec: GameMachineSpec<
 
   isGameOver(snapshot) {
     return snapshot.matches("gameOver");
+  },
+
+  getOutcome(snapshot) {
+    const gs = snapshot.context.gameState;
+    return gs?.phase === "game-over" ? explodingKittensOutcome(gs) : null;
   },
 
   getReplayLog(snapshot): EKGameReplayLog | null {

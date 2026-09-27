@@ -1,8 +1,7 @@
 import { afterEach, describe, expect, it } from "vitest";
 import { type ActorRefFrom, createActor, waitFor } from "xstate";
 import type { DecryptoAiAgent } from "./ai/agent";
-import { setDecryptoAgent } from "./ai/agent";
-import { decryptoMachine, decryptoSpec, phaseOf } from "./machine";
+import { decryptoMachine, decryptoSpec, phaseOf, withDecryptoAgent } from "./machine";
 import { codesEqual } from "./rules";
 import type { Code, DecryptoBeats, DecryptoMachineEvent } from "./types";
 
@@ -18,8 +17,14 @@ const FAST: Partial<DecryptoBeats> = {
 
 type Actor = ActorRefFrom<typeof decryptoMachine>;
 
+/** The agent the next `startActor` binds; `null` keeps the built-in fallback. */
+let agent: DecryptoAiAgent | null = null;
+function useAgent(next: DecryptoAiAgent): void {
+  agent = next;
+}
+
 function startActor(event: Omit<DecryptoMachineEvent & { type: "START" }, "type">): Actor {
-  const actor = createActor(decryptoMachine);
+  const actor = createActor(agent ? withDecryptoAgent(agent) : decryptoMachine);
   actor.start();
   actor.send({ type: "START", beats: FAST, seed: 1234, ...event });
   return actor;
@@ -67,7 +72,7 @@ async function waitForGameOver(actor: Actor): Promise<void> {
 }
 
 afterEach(() => {
-  setDecryptoAgent(null);
+  agent = null;
 });
 
 describe("decrypto machine — AI-vs-AI soaks", () => {
@@ -82,14 +87,14 @@ describe("decrypto machine — AI-vs-AI soaks", () => {
     expect(result?.rounds).toBe(2);
     expect(snapshot.context.teams[0].miscommunications).toBe(2);
     expect(snapshot.context.teams[1].miscommunications).toBe(2);
-    const log = decryptoSpec.getReplayLog?.(snapshot) as { keywords: unknown[] } | null;
+    const log = decryptoSpec.getReplayLog(snapshot) as { keywords: unknown[] } | null;
     expect(log).not.toBeNull();
     expect(log?.keywords).toHaveLength(2);
     actor.stop();
   });
 
   it("perfect play on both sides: mutual interceptions, shared victory in round 3", async () => {
-    setDecryptoAgent(scriptedAgent);
+    useAgent(scriptedAgent);
     const actor = startActor({
       humanPlayers: [],
       aiModels: ["smart", "smart", "smart", "smart"],
@@ -108,7 +113,7 @@ describe("decrypto machine — AI-vs-AI soaks", () => {
   });
 
   it("interceptor variant: a blind interceptor loses to a team that survives 5 rounds", async () => {
-    setDecryptoAgent(scriptedAgent);
+    useAgent(scriptedAgent);
     const actor = startActor({
       variant: "interceptor",
       humanPlayers: [],
@@ -121,7 +126,7 @@ describe("decrypto machine — AI-vs-AI soaks", () => {
   });
 
   it("interceptor variant: a sharp interceptor wins with 2 tokens by round 3", async () => {
-    setDecryptoAgent(scriptedAgent);
+    useAgent(scriptedAgent);
     const actor = startActor({
       variant: "interceptor",
       humanPlayers: [],
@@ -230,7 +235,7 @@ describe("decrypto machine — human flow", () => {
 
     // No result leaks before game over, and the replay log stays null.
     expect(teammateView.result).toBeNull();
-    expect(decryptoSpec.getReplayLog?.(actor.getSnapshot())).toBeNull();
+    expect(decryptoSpec.getReplayLog(actor.getSnapshot())).toBeNull();
     actor.stop();
   });
 
@@ -291,7 +296,7 @@ describe("decrypto machine — human flow", () => {
 
 describe("decrypto machine — AI encrypt failure", () => {
   it("skips the transmission (honest miscommunication) when the agent throws", async () => {
-    setDecryptoAgent({
+    useAgent({
       encrypt: () => Promise.reject(new Error("model exploded")),
       guess: (input) => scriptedAgent.guess(input),
     });
@@ -311,7 +316,7 @@ describe("decrypto machine — AI encrypt failure", () => {
   });
 
   it("skips when the agent returns illegal clues (contains a keyword)", async () => {
-    setDecryptoAgent({
+    useAgent({
       encrypt: (input) => Promise.resolve([input.keywords[0], "beta", "gamma"]),
       guess: (input) => scriptedAgent.guess(input),
     });
@@ -361,7 +366,7 @@ describe("decrypto machine — clue timer", () => {
 
 describe("decrypto machine — sanity", () => {
   it("keeps activePlayer at -1 in-game and enumerates 24 codes for a guesser", async () => {
-    setDecryptoAgent(scriptedAgent);
+    useAgent(scriptedAgent);
     const actor = startActor({ humanPlayers: [1], aiModels: ["smart", null, "smart", "smart"] });
     await waitForPhase(actor, "guessing");
     const snapshot = actor.getSnapshot();

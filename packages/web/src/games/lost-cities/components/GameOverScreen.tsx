@@ -1,49 +1,36 @@
-import type { AIEngine, PlayerScore } from "@boardgames/core/games/lost-cities/types";
+import type { PlayerScore } from "@boardgames/core/games/lost-cities/types";
 import {
-  AI_ENGINE_LABELS,
   COLOR_HEX,
   COLOR_LABELS,
   EXPEDITION_COLORS,
 } from "@boardgames/core/games/lost-cities/types";
-import { GameOverLayout } from "../../../components/game-over";
+import { type GameOverAction, GameOverLayout } from "../../../components/game-over";
 
 interface GameOverScreenProps {
-  scores: [PlayerScore, PlayerScore];
-  aiEngine: AIEngine;
-  onPlayAgain: () => void;
-  onChangeAI: () => void;
-  onDownloadLog?: () => void;
-  onViewReplay?: () => void;
+  /** Both seats' scores, by seat. */
+  scores: readonly [PlayerScore, PlayerScore];
+  /** This player's seat — the table reads from their side. */
+  myIndex: number;
+  /** The other seat's name (a room name, or the AI's label). */
+  opponentName: string;
+  actions: readonly GameOverAction[];
 }
 
 export default function GameOverScreen({
   scores,
-  aiEngine,
-  onPlayAgain,
-  onChangeAI,
-  onDownloadLog,
-  onViewReplay,
+  myIndex,
+  opponentName,
+  actions,
 }: GameOverScreenProps) {
-  const playerScore = scores[0];
-  const aiScore = scores[1];
+  const playerScore = scores[myIndex === 1 ? 1 : 0];
+  const aiScore = scores[myIndex === 1 ? 0 : 1];
   const diff = playerScore.total - aiScore.total;
   const won = diff > 0;
   const tied = diff === 0;
 
-  const actions: { label: string; variant: "primary" | "secondary"; onClick: () => void }[] = [
-    { label: "Play Again", variant: "primary", onClick: onPlayAgain },
-    { label: "Change AI", variant: "secondary", onClick: onChangeAI },
-  ];
-  if (onViewReplay) {
-    actions.push({ label: "View Replay", variant: "secondary", onClick: onViewReplay });
-  }
-  if (onDownloadLog) {
-    actions.push({ label: "Download Game Log", variant: "secondary", onClick: onDownloadLog });
-  }
-
   return (
     <GameOverLayout
-      headline={won ? "You Win!" : tied ? "It's a Tie!" : "AI Wins!"}
+      headline={won ? "You Win!" : tied ? "It's a Tie!" : `${opponentName} Wins!`}
       headlineColor={won ? "win" : tied ? "draw" : "lose"}
       actions={actions}
     >
@@ -66,7 +53,7 @@ export default function GameOverScreen({
             </span>
           </div>
           <div>
-            <div className="text-sm text-fg-secondary">AI Score</div>
+            <div className="text-sm text-fg-secondary">{opponentName}</div>
             <div className="text-3xl font-bold text-fg-strong">{aiScore.total}</div>
           </div>
         </div>
@@ -79,7 +66,7 @@ export default function GameOverScreen({
                 <th className="py-1 text-left font-medium">Expedition</th>
                 <th className="py-1 text-right font-medium">You</th>
                 <th className="w-12 py-1 text-center font-medium" />
-                <th className="py-1 text-right font-medium">AI</th>
+                <th className="py-1 text-right font-medium">Them</th>
               </tr>
             </thead>
             <tbody>
@@ -162,11 +149,6 @@ export default function GameOverScreen({
             </tbody>
           </table>
         </div>
-
-        <p className="text-center text-xs text-fg-muted">
-          Opponent:{" "}
-          <span className="font-medium text-fg-secondary">{AI_ENGINE_LABELS[aiEngine]}</span>
-        </p>
       </div>
     </GameOverLayout>
   );

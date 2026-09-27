@@ -1,6 +1,6 @@
 // The seam between the content-agnostic engine and the question content.
-// The server installs its content store here at boot (the same module-level
-// pattern as `setDecryptoAgent`); tests install a deterministic fixture.
+// The server installs its content store here once at boot (content ships in
+// code and never varies per session); tests install a deterministic fixture.
 // Everything is synchronous because the engine runs inside XState `assign`.
 
 import { SETS_PER_CARD } from "./ids.ts";

@@ -1,3 +1,4 @@
+import { setManifest } from "@boardgames/core/games/set/manifest";
 import { useState } from "react";
 import { MatchHistory } from "../../../components/match-history";
 import { Button } from "../../../components/ui/Button";
@@ -46,7 +47,7 @@ export default function SetMatchHistory({ onBack }: { onBack: () => void }) {
       {tab === "trainer" ? (
         <HighScores history={trainerHistory} onClear={clearTrainer} onBack={onBack} />
       ) : (
-        <MatchHistory gameSlug="set" labelResolver={() => "Human"} onBack={onBack} />
+        <MatchHistory gameSlug="set" manifest={setManifest} onBack={onBack} />
       )}
     </div>
   );

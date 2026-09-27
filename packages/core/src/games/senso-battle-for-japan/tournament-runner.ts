@@ -1,7 +1,16 @@
+import { strategyGuard } from "../../machines/seats";
+import type { TournamentSimulator } from "../../tournament/simulator";
 import { pickAiActionTimed } from "./ai-strategies";
 import { applyAction, createInitialState, settleTrick } from "./game-engine";
+import { sensoOutcome } from "./outcome";
 import { getActivePlayer } from "./rules";
-import type { AIStrategyId, AiBudget, Phase } from "./types";
+import {
+  AI_STRATEGY_LABELS,
+  type AIStrategyId,
+  type AiBudget,
+  type Phase,
+  type SensoResult,
+} from "./types";
 
 // 8 rounds × ≤13 tricks × ≤5 plays + settles + rewards — a few thousand steps at most.
 const MAX_GAME_STEPS = 5000;
@@ -22,6 +31,8 @@ export interface DecisionTiming {
 export interface DetailedGame {
   winner: number;
   scores: number[];
+  /** The engine's final result; `null` only if the step cap cut the game short. */
+  result: SensoResult | null;
   decisions: number;
   /** Per strategy id. */
   ms: Record<string, DecisionTiming>;
@@ -78,7 +89,13 @@ export function simulateGameDetailed(
     }
     steps++;
   }
-  return { winner: state.result?.winner ?? -1, scores: state.result?.scores ?? [], decisions, ms };
+  return {
+    winner: state.result?.winner ?? -1,
+    scores: state.result?.scores ?? [],
+    result: state.result,
+    decisions,
+    ms,
+  };
 }
 
 /** Winning seat, or -1 for an unbreakable draw. */
@@ -95,35 +112,14 @@ export function seatPattern<T>(a: T, b: T, playerCount: number, gameIndex: numbe
   return Array.from({ length: playerCount }, (_, i) => ((i + gameIndex) % 2 === 0 ? a : b));
 }
 
-export interface TournamentResult {
-  strategies: AIStrategyId[];
-  gamesPlayed: number;
-  wins: Record<string, number>;
-  draws: number;
-}
+const toStrategy = strategyGuard("Sensō", AI_STRATEGY_LABELS);
 
-export interface RunTournamentOptions {
-  onProgress?: (completed: number, total: number) => void;
-}
+export const sensoSimulator: TournamentSimulator = {
+  playerCounts: [2, 3, 4, 5],
 
-export function runTournament(
-  strategies: AIStrategyId[],
-  numGames: number,
-  options?: RunTournamentOptions,
-): TournamentResult {
-  const wins: Record<string, number> = {};
-  for (const s of strategies) wins[s] = 0;
-  let draws = 0;
-
-  for (let i = 0; i < numGames; i++) {
-    const winner = simulateGame(strategies, i);
-    if (winner >= 0 && winner < strategies.length) {
-      wins[strategies[winner]] = (wins[strategies[winner]] ?? 0) + 1;
-    } else {
-      draws++;
-    }
-    options?.onProgress?.(i + 1, numGames);
-  }
-
-  return { strategies, gamesPlayed: numGames, wins, draws };
-}
+  simulate({ strategies, seed }) {
+    const { result } = simulateGameDetailed(strategies.map(toStrategy), 0, { seed });
+    if (!result) throw new Error(`Sensō did not finish in ${MAX_GAME_STEPS} steps`);
+    return sensoOutcome(result);
+  },
+};

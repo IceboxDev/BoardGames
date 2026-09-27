@@ -1,18 +1,7 @@
-import type {
-  EKEvent,
-  EKPlayerView,
-  EKResult,
-} from "@boardgames/core/games/exploding-kittens/machine";
-import type {
-  Action,
-  AIStrategyId,
-  Card,
-  GameState,
-} from "@boardgames/core/games/exploding-kittens/types";
-import { useCallback, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { MpGameOverScreen } from "../../components/game-over";
-import { useGameShell } from "../../hooks/useGameShell";
+import type { EKPlayerView, EKResult } from "@boardgames/core/games/exploding-kittens/machine";
+import type { Action, Card, GameState } from "@boardgames/core/games/exploding-kittens/types";
+import { BoardFallback } from "../../components/RouteFallback";
+import { againstAi, type SoloStart, useSessionFlow } from "../../hooks/useSessionFlow";
 import type { GameComponentProps } from "../types";
 import GameBoard from "./components/GameBoard";
 import GameOverScreen from "./components/GameOverScreen";
@@ -53,90 +42,44 @@ function viewToGameState(view: EKPlayerView, myPlayerIndex: number): GameState {
   };
 }
 
+interface EKSetup {
+  playerCount: number;
+  strategy: string;
+}
+
+const toSoloStart = ({ playerCount, strategy }: EKSetup): SoloStart => ({
+  seats: againstAi(playerCount, strategy),
+});
+
 export default function ExplodingKittens({ source }: GameComponentProps) {
-  const navigate = useNavigate();
-  const { def, game, mp } = useGameShell<EKPlayerView, EKEvent, EKResult>();
+  const flow = useSessionFlow<EKPlayerView, Action, EKResult, EKSetup>(source, { toSoloStart });
 
-  const [lastSetup, setLastSetup] = useState<{
-    playerCount: number;
-    strategies: (AIStrategyId | null)[];
-  } | null>(null);
-
-  const startGame = useCallback(
-    (playerCount: number, strategies: (AIStrategyId | null)[]) => {
-      setLastSetup({ playerCount, strategies });
-      game.start({ playerCount, strategies });
-    },
-    [game.start],
-  );
-
-  const handleAction = useCallback(
-    (action: Action) => {
-      if (source === "mp") {
-        mp.send({ type: "PLAYER_ACTION", action } as EKEvent);
-      } else {
-        game.send({ type: "PLAYER_ACTION", action } as EKEvent);
-      }
-    },
-    [source, game.send, mp.send],
-  );
-
-  const handlePlayAgain = useCallback(() => {
-    if (lastSetup) {
-      game.start({
-        playerCount: lastSetup.playerCount,
-        strategies: lastSetup.strategies,
-      });
-    }
-  }, [lastSetup, game.start]);
-
-  const backToMenu = useCallback(() => {
-    if (source === "mp") mp.reset();
-    else game.reset();
-    navigate(`/play/${def.slug}`);
-  }, [source, mp.reset, game.reset, def.slug, navigate]);
-
-  // Solo setup
-  if (source === "solo" && !game.view) {
-    return <SetupScreen onStart={startGame} />;
+  if (flow.phase === "setup") {
+    return (
+      <SetupScreen onStart={(playerCount, strategy) => flow.start({ playerCount, strategy })} />
+    );
   }
+  if (!flow.view) return <BoardFallback />;
 
-  // Game playing
-  const active = source === "mp" ? mp : game;
-  const activeView = active.view;
-  const activeResult = active.result;
-  const activePlayerIndex = active.playerIndex;
+  const displayState = viewToGameState(flow.view, flow.seat);
 
-  if (!activeView) return null;
-
-  const displayState = viewToGameState(activeView, activePlayerIndex);
-
-  if (activeResult) {
-    if (source === "mp") {
-      const isWinner = activeResult.winner === activePlayerIndex;
-      return (
-        <MpGameOverScreen
-          headline={isWinner ? "You Win!" : "You Lose!"}
-          headlineColor={isWinner ? "win" : "lose"}
-          subtitle={`Game lasted ${activeResult.turnCount} turns`}
-          onBackToMenu={backToMenu}
-        />
-      );
-    }
-
+  if (flow.phase === "finished") {
     return (
       <GameOverScreen
         state={displayState}
-        onPlayAgain={handlePlayAgain}
-        onChangeSetup={() => game.reset()}
-        onViewReplay={
-          game.replayId
-            ? () => navigate(`/play/${def.slug}/match-history/${game.replayId}`)
-            : undefined
-        }
+        myIndex={flow.seat}
+        seatNames={flow.seatNames}
+        actions={flow.endActions}
       />
     );
   }
 
-  return <GameBoard state={displayState} onAction={handleAction} />;
+  return (
+    <GameBoard
+      state={displayState}
+      myIndex={flow.seat}
+      seatNames={flow.seatNames}
+      onAction={flow.sendAction}
+    />
+  );
 }

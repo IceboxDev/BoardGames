@@ -1,4 +1,4 @@
-import { shuffleInPlace } from "../../lib/rng";
+import { type Rng, randomSeed, rngFrom, rngStateFromSeed, shuffleInPlace } from "../../lib/rng";
 import { buildGearDeck } from "./gear-data";
 import { ALL_PARKS, getParkExtras } from "./parks-data";
 import {
@@ -84,19 +84,23 @@ const CANTEEN_POOL_COUNTS: Record<CanteenEffect, number> = {
 // RNG
 // ---------------------------------------------------------------------------
 
-function randomChoice<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)];
+// Every random step draws from the game's own seeded generator: setup from a
+// carrier seeded by START, mid-game from `rngFrom(state)`. A game is therefore
+// reproducible from its seed and the actions played.
+
+function randomChoice<T>(arr: readonly T[], rng: Rng): T {
+  return arr[Math.floor(rng() * arr.length)];
 }
 
 // ---------------------------------------------------------------------------
 // Build trail
 // ---------------------------------------------------------------------------
 
-function buildTrail(): SiteType[] {
+function buildTrail(rng: Rng): SiteType[] {
   // 8 non-Park slots + 1 Parks slot at index 4. NON_PARK_SITE_TYPES has exactly
   // 8 entries, so each appears once with no duplicates.
   const sites: SiteType[] = [...NON_PARK_SITE_TYPES];
-  shuffleInPlace(sites);
+  shuffleInPlace(sites, rng);
   const trail: SiteType[] = [];
   let pool = 0;
   for (let i = 0; i < TRAIL_LENGTH; i++) {
@@ -129,22 +133,22 @@ function buildWeatherTokens(): (WeatherToken | null)[] {
  * Pick a random trail position whose site is one of the six trail-die-faced
  * sites. Returns null if (somehow) no eligible site exists.
  */
-function pickShutterbugPosition(trail: SiteType[]): number | null {
+function pickShutterbugPosition(trail: SiteType[], rng: Rng): number | null {
   const candidates: number[] = [];
   for (let i = 0; i < trail.length; i++) {
     if (SHUTTERBUG_ELIGIBLE_SITES.includes(trail[i])) candidates.push(i);
   }
   if (candidates.length === 0) return null;
-  return randomChoice(candidates);
+  return randomChoice(candidates, rng);
 }
 
-function buildCanteenPool(): CanteenEffect[] {
+function buildCanteenPool(rng: Rng): CanteenEffect[] {
   const pool: CanteenEffect[] = [];
   for (const eff of CANTEEN_EFFECTS) {
     const count = CANTEEN_POOL_COUNTS[eff] ?? 0;
     for (let i = 0; i < count; i++) pool.push(eff);
   }
-  shuffleInPlace(pool);
+  shuffleInPlace(pool, rng);
   return pool;
 }
 
@@ -155,13 +159,13 @@ function refillCanteenDisplay(state: GameState): void {
   }
 }
 
-function buildParksDeck(): Park[] {
+function buildParksDeck(rng: Rng): Park[] {
   const deck = ALL_PARKS.map((p) => ({
     ...p,
     cost: { ...p.cost },
     refund: { ...p.refund },
   }));
-  shuffleInPlace(deck);
+  shuffleInPlace(deck, rng);
   return deck;
 }
 
@@ -248,7 +252,7 @@ function refillGearMarket(state: GameState): void {
     if (state.gearMarket.deck.length === 0) {
       if (state.gearMarket.discard.length === 0) return;
       state.gearMarket.deck = [...state.gearMarket.discard];
-      shuffleInPlace(state.gearMarket.deck);
+      shuffleInPlace(state.gearMarket.deck, rngFrom(state));
       state.gearMarket.discard = [];
     }
     const top = state.gearMarket.deck.shift();
@@ -283,12 +287,17 @@ function maybeEndTurn(state: GameState): void {
 // Initial state
 // ---------------------------------------------------------------------------
 
-export function createInitialState(strategies: (AIStrategyId | null)[]): GameState {
+export function createInitialState(
+  strategies: (AIStrategyId | null)[],
+  seed: number = randomSeed(),
+): GameState {
   if (strategies.length !== 2) throw new Error("Parks requires exactly 2 players");
 
-  const trail = buildTrail();
-  const canteenPool = buildCanteenPool();
-  const parksDeck = buildParksDeck();
+  const carrier = { rngState: rngStateFromSeed(seed) };
+  const rng = rngFrom(carrier);
+  const trail = buildTrail(rng);
+  const canteenPool = buildCanteenPool(rng);
+  const parksDeck = buildParksDeck(rng);
   const parksDisplay: Park[] = [];
   for (let i = 0; i < PARKS_DISPLAY_SIZE; i++) {
     const p = parksDeck.shift();
@@ -297,7 +306,7 @@ export function createInitialState(strategies: (AIStrategyId | null)[]): GameSta
 
   // Deal 2 distinct passion cards to each player (4 unique total)
   const passionPool = [...PASSION_IDS];
-  shuffleInPlace(passionPool);
+  shuffleInPlace(passionPool, rng);
   const passionsA: PassionId[] = [passionPool[0], passionPool[1]];
   const passionsB: PassionId[] = [passionPool[2], passionPool[3]];
 
@@ -334,14 +343,14 @@ export function createInitialState(strategies: (AIStrategyId | null)[]): GameSta
 
   // Pick one season mission per season for this game.
   const selectedSeasonMissions: Record<Season, SeasonMission> = {
-    spring: randomChoice(SEASON_MISSIONS.spring),
-    summer: randomChoice(SEASON_MISSIONS.summer),
-    fall: randomChoice(SEASON_MISSIONS.fall),
+    spring: randomChoice(SEASON_MISSIONS.spring, rng),
+    summer: randomChoice(SEASON_MISSIONS.summer, rng),
+    fall: randomChoice(SEASON_MISSIONS.fall, rng),
   };
 
   // Build & shuffle the gear deck, then deal GEAR_DISPLAY_SIZE to the visible row.
   const { cards: gearCards, nextId: nextGearId } = buildGearDeck(0);
-  shuffleInPlace(gearCards);
+  shuffleInPlace(gearCards, rng);
   const gearVisible: GearCard[] = [];
   for (let i = 0; i < GEAR_DISPLAY_SIZE; i++) {
     const top = gearCards.shift();
@@ -369,14 +378,16 @@ export function createInitialState(strategies: (AIStrategyId | null)[]): GameSta
     pendingWeatherClaim: null,
     pendingWaterPlacements: 0,
     pendingCanteenEffect: null,
-    shutterbugTilePosition: pickShutterbugPosition(trail),
+    shutterbugTilePosition: pickShutterbugPosition(trail, rng),
     shutterbugHolder: null,
-    firstPlayerToken: Math.random() < 0.5 ? 0 : 1,
+    firstPlayerToken: rng() < 0.5 ? 0 : 1,
     trailEndRowFirstOccupier: [null, null, null],
     selectedSeasonMissions,
     seasonMissionResults: [],
     actionLog: [],
     turnCount: 0,
+    // Last on purpose: read after every setup draw above has advanced it.
+    rngState: carrier.rngState,
   };
   state.activePlayer = state.firstPlayerToken;
   state.actionLog.push({
@@ -1043,7 +1054,7 @@ function resolveSite(state: GameState, site: SiteType): void {
       maybeEndTurn(state);
       return;
     case "trail-die": {
-      const face = randomChoice(TRAIL_DIE_FACES);
+      const face = randomChoice(TRAIL_DIE_FACES, rngFrom(state));
       applyTrailDie(state, face);
       // applyTrailDie may set awaiting-canteen-draw (face "1C"); only end turn here if it didn't.
       if (state.phase === "playing") maybeEndTurn(state);
@@ -1266,7 +1277,7 @@ function handlePlaceOrKeepWater(state: GameState, placement: WaterGapIndex | "ke
 
   // Swimming gear: roll the trail die when filling a canteen row (not when keeping).
   if (placedOnGap && player.passionMode === "gear" && player.passion === "swimming") {
-    const face = randomChoice(TRAIL_DIE_FACES);
+    const face = randomChoice(TRAIL_DIE_FACES, rngFrom(state));
     applyTrailDie(state, face);
     // Trail die may open awaiting-canteen-draw; if so, leave that to resolve first.
     if (state.phase === "awaiting-canteen-draw") return;
@@ -1476,7 +1487,7 @@ function handleBuyPark(
     player.passion === "adventure" &&
     parkHasInstantReward(park)
   ) {
-    const face = randomChoice(TRAIL_DIE_FACES);
+    const face = randomChoice(TRAIL_DIE_FACES, rngFrom(state));
     applyTrailDie(state, face);
   }
 
@@ -1511,7 +1522,7 @@ function handleBuyGear(state: GameState, source: "display" | "deck-blind", index
     if (state.gearMarket.deck.length === 0) {
       if (state.gearMarket.discard.length === 0) throw new Error("Gear deck empty");
       state.gearMarket.deck = [...state.gearMarket.discard];
-      shuffleInPlace(state.gearMarket.deck);
+      shuffleInPlace(state.gearMarket.deck, rngFrom(state));
       state.gearMarket.discard = [];
     }
     cost = GEAR_BLIND_COST;
@@ -1642,7 +1653,7 @@ function handleActivateGear(state: GameState, gearId: number): void {
       return;
     }
     case "mystery-cache": {
-      const face = randomChoice(TRAIL_DIE_FACES);
+      const face = randomChoice(TRAIL_DIE_FACES, rngFrom(state));
       applyTrailDie(state, face);
       // applyTrailDie may set awaiting-canteen-draw (face "1C"); if it did, defer end-turn.
       if (state.phase === "playing") {
@@ -2026,11 +2037,11 @@ function advanceSeason(state: GameState): void {
   }
   state.pendingGearActivation = null;
   // Generate a fresh trail and weather tokens for the new season
-  state.trail = buildTrail();
+  state.trail = buildTrail(rngFrom(state));
   state.weatherTokens = buildWeatherTokens();
   // Re-place the Shutterbug token (cleared from any prior holder).
   state.shutterbugHolder = null;
-  state.shutterbugTilePosition = pickShutterbugPosition(state.trail);
+  state.shutterbugTilePosition = pickShutterbugPosition(state.trail, rngFrom(state));
   if (state.shutterbugTilePosition !== null) {
     state.actionLog.push({
       turn: state.turnCount,
@@ -2173,13 +2184,13 @@ function applyMissionReward(state: GameState, mission: SeasonMission, winnerIdx:
     case "summer-most-a":
     case "summer-most-canteens": {
       // Roll the trail die ×2 — applied immediately. Both rolls go to the winner.
-      const f1 = randomChoice(TRAIL_DIE_FACES);
+      const f1 = randomChoice(TRAIL_DIE_FACES, rngFrom(state));
       applyTrailDie(state, f1);
       // applyTrailDie may queue canteen draws or water placements; auto-resolve
       // both before continuing — we cannot stop and ask in the middle of season-end.
       autoCompleteCanteenDrawIfPending(state);
       autoResolveWaterPlacementsIfPending(state);
-      const f2 = randomChoice(TRAIL_DIE_FACES);
+      const f2 = randomChoice(TRAIL_DIE_FACES, rngFrom(state));
       applyTrailDie(state, f2);
       autoCompleteCanteenDrawIfPending(state);
       autoResolveWaterPlacementsIfPending(state);

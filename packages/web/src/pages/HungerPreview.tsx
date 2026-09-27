@@ -10,7 +10,7 @@ import GameOverScreen from "../games/the-hunger/components/GameOverScreen";
 // Dev-only The Hunger lab — the real GameBoard / GameOverScreen driven by the
 // core engine and AI in the browser, no auth / WS, so the board can be played
 // and captured headlessly: /dev/hunger-preview?players=4&mode=rookie&seed=7
-// Seat 0 is you; `&auto=1` lets the AI play your seat too.
+// Seat 0 is you; `&auto=1` lets the AI play your seat too; `&view=shop` opens a view.
 
 function params() {
   const q = new URLSearchParams(window.location.search);
@@ -22,6 +22,8 @@ function params() {
     auto: q.get("auto") === "1",
     /** Fast-forward: let the AI play every seat until this turn. */
     skipTo: Number(q.get("turn") ?? 0),
+    /** Open on this view: map | player | shop | overview. */
+    view: q.get("view") ?? undefined,
   };
 }
 
@@ -64,8 +66,7 @@ export default function HungerPreview() {
         view={view}
         result={state.result}
         names={[]}
-        onMenu={() => setState(start())}
-        onPlayAgain={() => setState(start())}
+        actions={[{ label: "Play Again", variant: "primary", onClick: () => setState(start()) }]}
       />
     );
   }
@@ -78,6 +79,7 @@ export default function HungerPreview() {
         isAiThinking={aiTurn}
         playerNames={[]}
         onAction={(action: Action) => setState((s) => applyActionPure(s, 0, action))}
+        initialView={params().view as "map" | "player" | "shop" | "overview" | undefined}
       />
     </div>
   );

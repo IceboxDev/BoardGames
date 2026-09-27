@@ -56,8 +56,9 @@ export interface EKGameReplayLog {
   strategies: (string | null)[];
   steps: EKReplayStep[];
   actionLog: ActionLogEntry[];
-  scoreA: number;
-  scoreB: number;
+  /** Written by logs saved before the shared outcome existed; ignore. */
+  scoreA?: number;
+  scoreB?: number;
   winner: number | null;
   turnCount: number;
 }
@@ -234,8 +235,6 @@ export function buildGameLog(opts: {
     strategies: opts.strategies,
     steps: opts.steps,
     actionLog: opts.actionLog,
-    scoreA: opts.winner === 0 ? 1 : 0,
-    scoreB: opts.winner === 1 ? 1 : 0,
     winner: opts.winner,
     turnCount: opts.turnCount,
   };

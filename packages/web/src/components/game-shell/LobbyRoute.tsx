@@ -1,4 +1,3 @@
-import { gameRoomConfigs } from "@boardgames/core/protocol/room-config";
 import { Suspense, useEffect, useState } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
@@ -71,7 +70,9 @@ export default function LobbyRoute() {
   const { def, mp } = useGameShell();
   const { user } = useCurrentUser();
 
-  const [config, setConfig] = useState<unknown>(def.defaultMpConfig ?? {});
+  // The game's options start at its schema defaults; the server re-parses
+  // whatever the lobby component sends.
+  const [config, setConfig] = useState<unknown>(() => def.manifest?.config.parse({}) ?? {});
 
   // Rejoin path — covers refresh and direct-URL entry. Gated on
   // `isConnected` because firing `joinRoom` before the socket is open
@@ -96,6 +97,9 @@ export default function LobbyRoute() {
     }
   }, [mp.phase, def.slug, urlRoomCode, navigate]);
 
+  if (!def.manifest) {
+    return <Navigate to={`/play/${def.slug}`} replace />;
+  }
   if (!urlRoomCode) {
     return <Navigate to={`/play/${def.slug}/mp/join`} replace />;
   }
@@ -122,7 +126,7 @@ export default function LobbyRoute() {
       roomState={mp.roomState}
       mySlot={mp.mySlot ?? 0}
       isHost={mp.isHost}
-      roomConfig={gameRoomConfigs[def.slug]}
+      manifest={def.manifest}
       layout={def.lobbyLayout}
       title={def.title}
       onStart={() => mp.startRoom(config)}

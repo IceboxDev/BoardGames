@@ -1,15 +1,14 @@
 import type { SushiGoResult } from "@boardgames/core/games/sushi-go/machine";
 import type { ActionLogEntry } from "@boardgames/core/games/sushi-go/types";
 import { useState } from "react";
-import { GameOverLayout } from "../../../components/game-over";
+import { type GameOverAction, GameOverLayout } from "../../../components/game-over";
 import { Surface } from "../../../components/ui/Surface";
 
 interface GameOverScreenProps {
   result: SushiGoResult;
   myIndex: number;
   actionLog: ActionLogEntry[];
-  onMenu: () => void;
-  onPlayAgain?: () => void;
+  actions: readonly GameOverAction[];
 }
 
 const CATEGORIES = [
@@ -36,8 +35,7 @@ export default function GameOverScreen({
   result,
   myIndex,
   actionLog,
-  onMenu,
-  onPlayAgain,
+  actions,
 }: GameOverScreenProps) {
   const isWinner = result.winner === myIndex;
   const maxScore = Math.max(...result.totalScores);
@@ -55,17 +53,6 @@ export default function GameOverScreen({
     .map((total, i) => ({ total, i }))
     .sort((a, b) => b.total - a.total)
     .map((x) => x.i);
-
-  const actions: Array<{ label: string; variant: "primary" | "secondary"; onClick: () => void }> =
-    [];
-  if (onPlayAgain) {
-    actions.push({ label: "Play Again", variant: "primary", onClick: onPlayAgain });
-  }
-  actions.push({
-    label: "Menu",
-    variant: onPlayAgain ? "secondary" : "primary",
-    onClick: onMenu,
-  });
 
   return (
     <GameOverLayout
