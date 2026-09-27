@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Turn the generated Sensō card-art PNGs into the small webp blocks the
+// Turn generated card-art PNGs (Sensō, The Hunger) into the small webp blocks the
 // compositor draws. Re-run after dropping new PNGs into art-src. Idempotent:
 // skips blocks whose webp is newer than the source, the manifest and this
 // script.
@@ -8,6 +8,7 @@
 //   pnpm --filter @boardgames/web card-art --force    # convert everything
 //   pnpm --filter @boardgames/web card-art --only=crest-oda
 //   pnpm --filter @boardgames/web card-art --strict   # exit 1 on orphans / budget
+//   pnpm --filter @boardgames/web card-art --game=hunger   # The Hunger's blocks instead
 //
 // Why: the raw PNGs are 1–3 MB each and never enter git (`packages/web/art-src`
 // is gitignored; *.png is LFS-tracked and LFS bandwidth has already blocked a
@@ -26,19 +27,31 @@ import { fileURLToPath } from "node:url";
 import sharp from "sharp";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const SRC_DIR = path.resolve(__dirname, "..", "art-src", "senso-cards");
-const OUT_DIR = path.resolve(
-  __dirname,
-  "..",
-  "src",
-  "games",
-  "senso-battle-for-japan",
-  "assets",
-  "cards",
-);
-const MANIFEST = path.join(OUT_DIR, "manifest.json");
 const SELF = fileURLToPath(import.meta.url);
-const BUDGET_BYTES = 1024 * 1024;
+
+// One target per game that composes its faces from generated art. The Hunger
+// has far more blocks (every Human, Familiar, Vampire and icon) and loads them
+// per face, so its budget is larger.
+const GAMES = {
+  senso: { src: "senso-cards", out: "senso-battle-for-japan", budgetKb: 1024 },
+  hunger: { src: "hunger-cards", out: "the-hunger", budgetKb: 12 * 1024 },
+};
+
+const args = process.argv.slice(2);
+const force = args.includes("--force");
+const strict = args.includes("--strict");
+const only = args.find((a) => a.startsWith("--only="))?.slice("--only=".length);
+const gameId = args.find((a) => a.startsWith("--game="))?.slice("--game=".length) ?? "senso";
+const GAME = GAMES[gameId];
+if (!GAME) {
+  console.error(`Unknown --game=${gameId}; expected one of ${Object.keys(GAMES).join(", ")}`);
+  process.exit(1);
+}
+
+const SRC_DIR = path.resolve(__dirname, "..", "art-src", GAME.src);
+const OUT_DIR = path.resolve(__dirname, "..", "src", "games", GAME.out, "assets", "cards");
+const MANIFEST = path.join(OUT_DIR, "manifest.json");
+const BUDGET_BYTES = GAME.budgetKb * 1024;
 
 const ENCODE = {
   crest: { quality: 80, alphaQuality: 75, smartSubsample: true, effort: 6 },
@@ -49,12 +62,11 @@ const ENCODE = {
   halo: { quality: 70, alphaQuality: 60, effort: 6 },
   tile: { quality: 55, alphaQuality: 55, effort: 6 },
   ornament: { quality: 80, alphaQuality: 75, effort: 6 },
+  // The Hunger's kinds.
+  portrait: { quality: 78, alphaQuality: 72, smartSubsample: true, effort: 6 },
+  icon: { quality: 82, alphaQuality: 80, effort: 6 },
+  scene: { quality: 72, effort: 6 },
 };
-
-const args = process.argv.slice(2);
-const force = args.includes("--force");
-const strict = args.includes("--strict");
-const only = args.find((a) => a.startsWith("--only="))?.slice("--only=".length);
 
 async function mtime(file) {
   try {
@@ -85,17 +97,36 @@ async function convert(name, entry) {
   let image = sharp(src).ensureAlpha();
   if (entry.trim !== false) image = image.trim({ threshold: 8 });
   const encode = ENCODE[entry.kind] ?? ENCODE.figure;
-  const info = await image
-    .resize({
-      width: entry.maxPx,
-      height: entry.maxPx,
-      fit: "inside",
-      withoutEnlargement: true,
-      kernel: "lanczos3",
-    })
-    .webp(encode)
-    .toFile(dest);
+  image = image.resize({
+    width: entry.maxPx,
+    height: entry.maxPx,
+    fit: "inside",
+    withoutEnlargement: true,
+    kernel: "lanczos3",
+  });
+  if (entry.ink) image = await inkOnly(image);
+  const info = await image.webp(encode).toFile(dest);
   return { name, status: "written", bytes: info.size, width: info.width, height: info.height };
+}
+
+/**
+ * Keep only the dark ink of a stamp-style icon, baked white: paper-coloured
+ * fills some icons came back with drop out, so every icon is one flat colour
+ * the UI can draw as is on its dark surfaces or recolour as a CSS mask.
+ */
+async function inkOnly(image) {
+  const { data, info } = await image.raw().toBuffer({ resolveWithObject: true });
+  const INK = 70; // luminance at or below: solid ink
+  const PAPER = 160; // at or above: paper, dropped
+  for (let i = 0; i < data.length; i += 4) {
+    const lum = 0.299 * data[i] + 0.587 * data[i + 1] + 0.114 * data[i + 2];
+    const ink = Math.min(1, Math.max(0, (PAPER - lum) / (PAPER - INK)));
+    data[i] = 255;
+    data[i + 1] = 255;
+    data[i + 2] = 255;
+    data[i + 3] = Math.round(data[i + 3] * ink);
+  }
+  return sharp(data, { raw: { width: info.width, height: info.height, channels: 4 } });
 }
 
 async function main() {
@@ -115,7 +146,7 @@ async function main() {
     const size = r.width ? `${r.width}×${r.height}` : "";
     const kb = r.bytes != null ? `${(r.bytes / 1024).toFixed(1)} KB` : "";
     console.log(
-      `${pad(r.name, 22)} ${pad(manifest[r.name].kind, 7)} ${pad(r.status, 11)} ${pad(size, 9)} ${kb}`,
+      `${pad(r.name, 30)} ${pad(manifest[r.name].kind, 7)} ${pad(r.status, 11)} ${pad(size, 9)} ${kb}`,
     );
   }
   const missing = results.filter((r) => r.status === "no-source").map((r) => r.name);

@@ -1,6 +1,8 @@
 import { graphFor } from "./board";
+import { cardDef } from "./content/cards";
+import { cardSpeed } from "./rules";
 import { tally } from "./scoring";
-import type { GameState, HungerPlayerView } from "./types";
+import type { CardId, GameState, HungerPlayerView } from "./types";
 
 /**
  * Project the state for one seat. Hidden: every draw deck's order, other
@@ -8,6 +10,39 @@ import type { GameState, HungerPlayerView } from "./types";
  * Tavern's face-down cards, the Hunt deck, face-down Chest tokens, and the
  * seed. Hunt Track piles may always be inspected. Seat -1 is a spectator.
  */
+const KIND_ORDER = ["starting", "power", "familiar", "item", "human"];
+
+/** A pile as an unordered list: by kind, then name, then copy. */
+function sortedPile(cards: readonly CardId[]): CardId[] {
+  return [...cards].sort((a, b) => {
+    const da = cardDef(a);
+    const db = cardDef(b);
+    return (
+      KIND_ORDER.indexOf(da.type) - KIND_ORDER.indexOf(db.type) ||
+      da.name.localeCompare(db.name) ||
+      a.localeCompare(b)
+    );
+  });
+}
+
+function publicCounts(p: GameState["players"][number]) {
+  const t = tally(p);
+  const owned = [...p.deck, ...p.hand, ...p.playArea.map((c) => c.id), ...p.discard];
+  const permanent = owned.filter((id) => cardDef(id).keywords.includes("permanent"));
+  const cycling = owned.filter((id) => !cardDef(id).keywords.includes("permanent"));
+  const speedOf = (id: CardId) => cardSpeed(id, false);
+  const mean =
+    cycling.length > 0 ? cycling.reduce((s, id) => s + speedOf(id), 0) / cycling.length : 0;
+  return {
+    humans: t.humans,
+    familiars: t.familiars,
+    powers: t.powers,
+    hasRose: t.hasRose,
+    expectedSpeed:
+      Math.round((3 * mean + permanent.reduce((s, id) => s + speedOf(id), 0)) * 10) / 10,
+  };
+}
+
 export function buildPlayerView(state: GameState, seat: number): HungerPlayerView {
   const me = state.players[seat];
   const open = new Set(
@@ -50,6 +85,9 @@ export function buildPlayerView(state: GameState, seat: number): HungerPlayerVie
       vp: p.vp,
       castleTile: p.castleTile,
       deckCount: p.deck.length,
+      // Everything a Vampire owns is known, so its draw pile's contents are
+      // too — but never their order.
+      drawPile: sortedPile(p.deck),
       handCount: p.hand.length,
       discard: [...p.discard],
       digested: [...p.digested],
@@ -58,7 +96,7 @@ export function buildPlayerView(state: GameState, seat: number): HungerPlayerVie
       usedMissions: [...p.usedMissions],
       bonus: p.bonus.map((b) => ({ ...b })),
       hunted: p.hunted,
-      humans: tally(p).humans,
+      ...publicCounts(p),
     })),
     order: [...state.order],
     current,

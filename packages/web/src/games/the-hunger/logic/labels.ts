@@ -54,6 +54,27 @@ export function vampireName(vampire: number): string {
   return VAMPIRES[vampire]?.name ?? `Vampire ${vampire + 1}`;
 }
 
+/** A Vampire's first name alone: "Rajesh", "Beatrice", "Gervasi". */
+export function vampireShortName(vampire: number): string {
+  return VAMPIRES[vampire]?.short ?? `Vampire ${vampire + 1}`;
+}
+
+/**
+ * The short form of `seatLabel` for running text (History): "You", a room
+ * player's first name, or the Vampire's first name.
+ */
+export function seatShortLabel(
+  view: Pick<HungerPlayerView, "me" | "players">,
+  seat: number,
+  names: readonly (string | null)[],
+): string {
+  if (seat === view.me) return "You";
+  const name = names[seat];
+  if (name) return name.trim().split(/\s+/)[0] ?? name;
+  const p = view.players[seat];
+  return p ? vampireShortName(p.vampire) : `Seat ${seat + 1}`;
+}
+
 /** "You", a room player's name, or the seat's Vampire. */
 export function seatLabel(
   view: Pick<HungerPlayerView, "me" | "players">,
@@ -115,12 +136,19 @@ export const CATEGORY_GLYPH: Record<HumanCategory, string> = {
   noble: "👑",
 };
 
-/** "Plains Chest (plains-7)": region, what is there, and the space's id to tell twins apart. */
+const PATH_NAME = { road: "Road", rail: "Railroad", boat: "Boat" } as const;
+
+/**
+ * A space as a player names it: the region and what is there ("Forest
+ * Well", "Plains Crypt"), or the region and its path for a plain space
+ * ("Plains Railroad"). Space ids are internal and never shown.
+ */
 export function spaceLabel(options: Pick<GameOptions, "board">, id: string): string {
   const s = graphFor(options).spaces.get(id);
-  if (!s) return id;
+  if (!s) return "a space";
   if (s.effect === "castle" || s.effect === "labyrinth") return EFFECT_LABEL[s.effect];
+  if (s.region === "cemetery") return "Cemetery";
   const region = s.region[0].toUpperCase() + s.region.slice(1);
-  const effect = s.effect === "none" || s.effect === "cemetery" ? "" : ` ${EFFECT_LABEL[s.effect]}`;
-  return `${region}${effect} (${id})`;
+  if (s.effect !== "none" && s.effect !== "cemetery") return `${region} ${EFFECT_LABEL[s.effect]}`;
+  return s.path ? `${region} ${PATH_NAME[s.path]}` : region;
 }

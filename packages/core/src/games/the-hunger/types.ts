@@ -391,8 +391,11 @@ export type LogEntry =
       p: number;
       source: "track" | "tavern" | "rose" | "gregarious" | "familiar";
       cards: string[];
+      /** VP from these cards alone; a Gregarious companion has its own entry. */
       vp: number;
       col?: number;
+      /** Gregarious: the Human whose company came along. */
+      by?: string;
     }
   | { t: "instant"; p: number; mission: string; vp: number }
   | { t: "familiar"; p: number; card: string; vp: number; target?: string }
@@ -521,6 +524,8 @@ export interface PlayerSummary {
   vp: number;
   castleTile: number | null;
   deckCount: number;
+  /** The draw pile's cards, sorted — never in deck order. Its contents are public. */
+  drawPile: CardId[];
   handCount: number;
   discard: CardId[];
   digested: CardId[];
@@ -531,6 +536,12 @@ export interface PlayerSummary {
   hunted: number;
   /** Cards owned by category — Hunt-track cards only, plus Human tokens. */
   humans: Record<HumanCategory, number>;
+  /** Everything hunted is public (everyone saw it): Familiars, Powers, a Rose. */
+  familiars: number;
+  powers: number;
+  hasRose: boolean;
+  /** Expected Speed of the next hand: 3 × the mean Speed of the non-Permanent cards, plus Permanents. */
+  expectedSpeed: number;
 }
 
 export interface HungerPlayerView {

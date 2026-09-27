@@ -57,12 +57,17 @@ export function BoardOverlay({
   }, []);
 
   // Portal into <main> (not body) so the overlay sits below the sticky nav and
-  // fills exactly the content area (#app-main is position:relative).
-  const target = typeof document !== "undefined" ? document.getElementById("app-main") : null;
-  if (!target) return null;
+  // fills exactly the content area (#app-main is position:relative). Outside
+  // the app layout (dev previews, tests) it covers the viewport instead —
+  // never nothing, since the player must be able to answer.
+  if (typeof document === "undefined") return null;
+  const main = document.getElementById("app-main");
+  const target = main ?? document.body;
 
   return createPortal(
-    <div className="absolute inset-0 z-overlay">
+    // The layer lets clicks through: while peeking, the player can use the board
+    // (switch views, read a card) with only the toggle floating above it.
+    <div className={`pointer-events-none inset-0 z-overlay ${main ? "absolute" : "fixed"}`}>
       <AnimatePresence>
         {!hidden && (
           <motion.div
@@ -70,7 +75,7 @@ export function BoardOverlay({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className={`absolute inset-0 flex items-center justify-center px-4 backdrop-blur-md ${backdropClassName}`}
+            className={`pointer-events-auto absolute inset-0 flex items-center justify-center px-4 backdrop-blur-md ${backdropClassName}`}
           >
             {children}
           </motion.div>
@@ -84,7 +89,7 @@ export function BoardOverlay({
         type="button"
         onClick={() => setHidden((h) => !h)}
         title={hidden ? showLabel : hideLabel}
-        className={`absolute right-4 top-4 z-raised flex items-center gap-2 rounded-full border-2 px-4 py-2 text-xs font-bold text-fg-strong shadow-lg transition hover:scale-105 ${toggleClassName}`}
+        className={`pointer-events-auto absolute right-4 top-4 z-raised flex items-center gap-2 rounded-full border-2 px-4 py-2 text-xs font-bold text-fg-strong shadow-lg transition hover:scale-105 ${toggleClassName}`}
       >
         <span className="text-base leading-none">{hidden ? showIcon : hideIcon}</span>
         <span>{hidden ? showLabel : hideLabel}</span>

@@ -9,6 +9,7 @@ import {
   pulseRingAnimation,
   pulseRingTransition,
 } from "../../../../components/board";
+import { artUrl, EFFECT_ICON, vampireArt } from "../../logic/art";
 import {
   bonusName,
   bonusShort,
@@ -36,6 +37,17 @@ interface Props {
  * the SVG only marks spaces, targets and Vampires; on a provisional or test
  * layout the SVG draws the whole board itself.
  */
+/** Each space's place icon, white ink (undefined until generated). */
+const effectIcons: Partial<Record<string, string>> = Object.fromEntries(
+  Object.entries(EFFECT_ICON).map(([effect, name]) => [effect, name ? artUrl(name) : undefined]),
+);
+
+/** The back of a Bonus token, on every face-down Chest. */
+const tokenBack = artUrl("bonus-token-back");
+
+/** Each seat's crest, the Vampire's token on the map (undefined until generated). */
+const sigils = [0, 1, 2, 3, 4, 5].map((v) => vampireArt(v, "sigil"));
+
 export default function HungerMap({ view, targets, onTarget, activeSeat }: Props) {
   const g = graphFor(view.options);
   const def = g.def;
@@ -150,17 +162,29 @@ export default function HungerMap({ view, targets, onTarget, activeSeat }: Props
                   stroke={s.effect === "well" ? "#7dd3fc" : "#e8dff5"}
                   strokeWidth={(s.effect === "well" ? 5 : 2.5) * k}
                 />
-                {EFFECT_GLYPH[s.effect] && (
-                  <text
-                    x={s.x}
-                    y={s.y + r / 3}
-                    textAnchor="middle"
-                    fontSize={r}
+                {effectIcons[s.effect] ? (
+                  <image
+                    href={effectIcons[s.effect]}
+                    x={s.x - r * 0.62}
+                    y={s.y - r * 0.62}
+                    width={r * 1.24}
+                    height={r * 1.24}
                     pointerEvents="none"
                     aria-hidden
-                  >
-                    {EFFECT_GLYPH[s.effect]}
-                  </text>
+                  />
+                ) : (
+                  EFFECT_GLYPH[s.effect] && (
+                    <text
+                      x={s.x}
+                      y={s.y + r / 3}
+                      textAnchor="middle"
+                      fontSize={r}
+                      pointerEvents="none"
+                      aria-hidden
+                    >
+                      {EFFECT_GLYPH[s.effect]}
+                    </text>
+                  )
                 )}
                 {s.mountainPenalty ? (
                   <text
@@ -212,6 +236,17 @@ export default function HungerMap({ view, targets, onTarget, activeSeat }: Props
                     {bonusShort(chest)}
                   </text>
                 </g>
+              ) : chest && tokenBack ? (
+                // A face-down Chest: the back of its Bonus token.
+                <image
+                  href={tokenBack}
+                  x={s.x + r * 0.35}
+                  y={s.y - r * 1.45}
+                  width={30 * k}
+                  height={30 * k}
+                  pointerEvents="none"
+                  aria-hidden
+                />
               ) : (
                 badge(chest ? "?" : "○", chest ? "#fcd34d" : "#6b6475")
               ))}
@@ -230,6 +265,7 @@ export default function HungerMap({ view, targets, onTarget, activeSeat }: Props
             // biome-ignore lint/a11y/useSemanticElements: <g role="button"> is the standard ARIA pattern for an interactive SVG region — an HTML <button> can't host SVG children
             <g
               key={`target-${t.space}`}
+              data-space={t.space}
               role="button"
               tabIndex={0}
               aria-label={t.label}
@@ -272,9 +308,20 @@ export default function HungerMap({ view, targets, onTarget, activeSeat }: Props
                 strokeWidth={(p.index === activeSeat ? 5 : 3) * k}
                 opacity={p.resting ? 0.55 : 1}
               />
-              <text y={6 * k} textAnchor="middle" fontSize={17 * k} fill="#fff" fontWeight={700}>
-                {p.resting ? "z" : "🦇"}
-              </text>
+              {sigils[p.vampire] ? (
+                <image
+                  href={sigils[p.vampire]}
+                  x={-16 * k}
+                  y={-16 * k}
+                  width={32 * k}
+                  height={32 * k}
+                  opacity={p.resting ? 0.55 : 1}
+                />
+              ) : (
+                <text y={6 * k} textAnchor="middle" fontSize={17 * k} fill="#fff" fontWeight={700}>
+                  {p.resting ? "z" : "🦇"}
+                </text>
+              )}
             </motion.g>
           ));
         })}
