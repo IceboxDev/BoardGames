@@ -4,7 +4,7 @@
  * Adding a game means adding one entry here (and its manifest to
  * `@boardgames/core/games/manifests`); `registry.test.ts` keeps the two lists
  * identical. Games whose AI needs something only the server has — a native
- * binary, a model gateway — bind it into the machine per session through
+ * binary, a model gateway, a worker pool — bind it into the machine per session through
  * XState's `provide`, so there is no module-global AI state anywhere.
  */
 
@@ -20,11 +20,12 @@ import { sensoSpec } from "@boardgames/core/games/senso-battle-for-japan/machine
 import { setPvpSpec } from "@boardgames/core/games/set/pvp-machine";
 import { skyTeamSpec } from "@boardgames/core/games/sky-team/machine";
 import { sushiGoSpec } from "@boardgames/core/games/sushi-go/machine";
-import { theHungerSpec } from "@boardgames/core/games/the-hunger/machine";
+import { theHungerSpec, withHungerAiOffload } from "@boardgames/core/games/the-hunger/machine";
 import type { AnyGameMachineSpec } from "@boardgames/core/machines/types";
 import type { AnyActorLogic } from "xstate";
 import { aiAvailable } from "../lib/ai";
 import { openAiDecryptoAgent } from "./decrypto-agent.ts";
+import { hungerAiOffload } from "./hunger-ai-pool.ts";
 import { sevenWondersSearchAgent } from "./seven-wonders-agent.ts";
 
 export interface ServerGame {
@@ -62,7 +63,14 @@ const SERVER_GAMES: readonly ServerGame[] = [
   plain(setPvpSpec),
   plain(skyTeamSpec),
   plain(sushiGoSpec),
-  plain(theHungerSpec),
+  {
+    spec: theHungerSpec,
+    // Search seats (Strigoi, Dracula) think on the shared worker pool.
+    createMachine: () => {
+      const offload = hungerAiOffload();
+      return offload ? withHungerAiOffload(offload) : theHungerSpec.machine;
+    },
+  },
 ];
 
 const bySlug = new Map(SERVER_GAMES.map((game) => [game.spec.manifest.slug, game]));

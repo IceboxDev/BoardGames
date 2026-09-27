@@ -262,16 +262,38 @@ export interface BoardDef {
 /** A physical card: `${defId}#${n}`. */
 export type CardId = string;
 
-export type AIStrategyId = "random" | "heuristic-v1";
+export type AIStrategyId = "random" | "heuristic-v1" | "strigoi" | "dracula";
 
 /** AI seats, lightweight so the room config can list them without the engine. */
-export const ALL_STRATEGIES: readonly { id: AIStrategyId; label: string; description: string }[] = [
+export const ALL_STRATEGIES: readonly {
+  id: AIStrategyId;
+  label: string;
+  description: string;
+  /**
+   * A search bot: it thinks for about a second per decision, so live rooms
+   * run it off the main thread (`withHungerAiOffload`) and fall back to
+   * Nosferatu's move when no offload is bound.
+   */
+  search?: true;
+}[] = [
   {
     id: "heuristic-v1",
     label: "Nosferatu",
     description: "Greedy hunter that budgets its Speed for the run home before sunrise.",
   },
   { id: "random", label: "Fledgling", description: "Picks any legal action at random." },
+  {
+    id: "strigoi",
+    label: "Strigoi",
+    description: "Plays every option out to sunrise in sampled worlds and keeps the best.",
+    search: true,
+  },
+  {
+    id: "dracula",
+    label: "Dracula",
+    description: "Plans whole turns and plays each plan out thousands of times in sampled worlds.",
+    search: true,
+  },
 ];
 
 export interface PlayCard {

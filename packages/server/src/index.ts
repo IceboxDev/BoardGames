@@ -2,7 +2,7 @@
 // (including auth.ts) evaluates. See env.ts for the full reasoning.
 import "./env.ts";
 
-// Railway watch paths live in railway.json (server + core + lockfiles) —
+// Railway watch paths live in .railway/railway.ts (server + core + lockfiles) —
 // core-only protocol changes must rebuild this server too. Note: an empty
 // commit does NOT re-trigger Railway (no watched file changes) — touch a
 // watched file to force a rebuild (this comment has served that duty:
@@ -17,7 +17,6 @@ import { installProcessGuards } from "./lib/process-guards.ts";
 import { getContentStore } from "./lib/quiztopia/content-store.ts";
 import { triggerSkillRecompute } from "./lib/skill-ratings.ts";
 import { app, injectWebSocket } from "./server.ts";
-
 import { shutdownAllSessions } from "./sessions/manager.ts";
 
 const PORT = Number(process.env.PORT ?? 3001);

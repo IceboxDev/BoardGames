@@ -44,7 +44,8 @@
     "typecheck": "tsc -b --noEmit",
     "test": "vitest run",
     "bench": "tsx src/games/senso-battle-for-japan/bench.ts",
-    "tournament": "tsx src/tournament/cli.ts"
+    "tournament": "tsx src/tournament/cli.ts",
+    "bench:hunger": "tsx src/games/the-hunger/bench.ts"
   },
   "dependencies": {
     "@standard-schema/spec": "^1.1.0",
