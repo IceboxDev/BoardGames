@@ -108,6 +108,11 @@ jobs:
             echo "::error::Generated C++ is stale. Run 'pnpm gen-cpp-7wonders' and commit the result."
             exit 1
           fi
+          pnpm gen-cpp-hunger
+          if ! git diff --exit-code --stat -- cpp/the-hunger/src; then
+            echo "::error::Generated C++ is stale. Run 'pnpm gen-cpp-hunger' (then 'pnpm build-hunger-wasm') and commit the result."
+            exit 1
+          fi
 
   cpp:
     name: C++ engine tests
@@ -125,4 +130,10 @@ jobs:
       # target uses that), so the binary is portable across runners.
       - name: Build and run parity tests
         working-directory: cpp/seven-wonders
+        run: make test
+
+      # The Hunger's C++ engine must replay the TS fixtures with zero
+      # divergence — it is what the live Dracula bot runs (as WebAssembly).
+      - name: The Hunger parity tests
+        working-directory: cpp/the-hunger
         run: make test

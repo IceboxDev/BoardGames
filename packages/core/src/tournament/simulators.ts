@@ -14,4 +14,6 @@ export const TOURNAMENT_SIMULATORS: Readonly<Record<string, () => Promise<Tourna
   "senso-battle-for-japan": async () =>
     (await import("../games/senso-battle-for-japan/tournament-runner")).sensoSimulator,
   "sushi-go": async () => (await import("../games/sushi-go/tournament-runner")).sushiGoSimulator,
+  "the-hunger": async () =>
+    (await import("../games/the-hunger/tournament-runner")).theHungerSimulator,
 };

@@ -3,7 +3,7 @@ import { randomSeed } from "../../lib/rng";
 import { playerActionValidator, safeApply } from "../../machines/action-validation";
 import { strategyGuard, typedSeatStrategies } from "../../machines/seats";
 import type { GameMachineSpec } from "../../machines/types";
-import { pickAiAction } from "./ai-strategies";
+import { type AiOffload, pickAiActionAsync } from "./ai-strategies";
 import { applyActionPure, createInitialState } from "./game-engine";
 import { type HungerConfig, theHungerManifest } from "./manifest";
 import { hungerOutcome } from "./outcome";
@@ -65,6 +65,20 @@ function isAiTurn(gs: GameState | null): boolean {
   return gs.players[active]?.type === "ai";
 }
 
+/** The AI actor, with search seats' decisions sent to `offload` when there is one. */
+function aiActors(offload: AiOffload | null) {
+  return {
+    computeAiMove: fromPromise(async ({ input }: { input: { state: GameState } }) => {
+      // Yield so the session manager flushes the previous state first.
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      return {
+        seat: getActivePlayer(input.state),
+        action: await pickAiActionAsync(input.state, offload),
+      };
+    }),
+  };
+}
+
 // ---------------------------------------------------------------------------
 // Machine
 // ---------------------------------------------------------------------------
@@ -79,13 +93,9 @@ export const theHungerMachine = setup({
     aiDelay: ({ context }) => context.beats.ai,
   },
 
-  actors: {
-    computeAiMove: fromPromise(async ({ input }: { input: { state: GameState } }) => {
-      // Yield so the session manager flushes the previous state first.
-      await new Promise((resolve) => setTimeout(resolve, 0));
-      return { seat: getActivePlayer(input.state), action: pickAiAction(input.state) };
-    }),
-  },
+  // No offload by default: search seats play Nosferatu's move until the
+  // server binds a worker pool with `withHungerAiOffload`.
+  actors: aiActors(null),
 
   guards: {
     noGame: ({ context }) => !context.gameState,
@@ -204,6 +214,15 @@ export const theHungerMachine = setup({
     },
   },
 });
+
+/**
+ * The machine with search seats (Strigoi, Dracula) thinking through `offload`
+ * — how the server gives each session its worker pool without module-global
+ * state.
+ */
+export function withHungerAiOffload(offload: AiOffload): typeof theHungerMachine {
+  return theHungerMachine.provide({ actors: aiActors(offload) });
+}
 
 // ---------------------------------------------------------------------------
 // Spec
