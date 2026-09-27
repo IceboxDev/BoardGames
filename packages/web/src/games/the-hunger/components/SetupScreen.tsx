@@ -10,9 +10,18 @@ import { Checkbox, SegmentedControl } from "../../../components/ui";
 const DIFFICULTY: Record<AIStrategyId, StrategyOption["difficulty"]> = {
   random: "Easy",
   "heuristic-v1": "Medium",
+  strigoi: "Hard",
+  dracula: "Expert",
 };
 
-const STRATEGIES: StrategyOption[] = [...ALL_STRATEGIES].reverse().map((s) => ({
+// Easiest first.
+const ORDER: readonly AIStrategyId[] = ["random", "heuristic-v1", "strigoi", "dracula"];
+
+const STRATEGIES: StrategyOption[] = ORDER.map((id) => {
+  const s = ALL_STRATEGIES.find((x) => x.id === id);
+  if (!s) throw new Error(`Unknown strategy ${id}`);
+  return s;
+}).map((s) => ({
   id: s.id,
   label: s.label,
   description: s.description,

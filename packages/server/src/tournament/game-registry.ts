@@ -3,6 +3,7 @@ import { ALL_STRATEGIES as EK_STRATEGIES } from "@boardgames/core/games/explodin
 import { ALL_STRATEGIES as LC_STRATEGIES } from "@boardgames/core/games/lost-cities/ai-strategies";
 import { ALL_STRATEGIES as SENSO_STRATEGIES } from "@boardgames/core/games/senso-battle-for-japan/types";
 import { ALL_STRATEGIES as SG_STRATEGIES } from "@boardgames/core/games/sushi-go/ai/strategy";
+import { ALL_STRATEGIES as HUNGER_STRATEGIES } from "@boardgames/core/games/the-hunger/types";
 
 export interface GameTournamentEntry {
   strategies: { id: string; label: string }[];
@@ -23,5 +24,8 @@ export const tournamentRegistry: Record<string, GameTournamentEntry> = {
   },
   "senso-battle-for-japan": {
     strategies: SENSO_STRATEGIES.map((s) => ({ id: s.id, label: s.label })),
+  },
+  "the-hunger": {
+    strategies: HUNGER_STRATEGIES.map((s) => ({ id: s.id, label: s.label })),
   },
 };
