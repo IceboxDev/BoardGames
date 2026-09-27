@@ -22,7 +22,9 @@
  *     (`board.pushDestinations`).
  *   - Drawn cards (Vampire Strength, Vampiric Will, Draw token) go straight
  *     into the playing area, as the hand has already been played.
- *   - The Castle's Well counts for Spicy and Form of Mist.
+ *   - The Castle is a Well in every respect: Spicy and Form of Mist head for
+ *     it, and arriving there earns the Well's extra column-1 Hunt
+ *     (`RULINGS.castleIsWell`).
  *
  * Crypts: every Crypt space holds its own Mission pile, dealt the rulebook's
  *   6 / 5 / 4 tiles by region (Mountains / Plains / Forest) — per Crypt, not
@@ -105,6 +107,12 @@ export const RULINGS = {
    * its turn (cards cycled, end-of-turn Rose VP) resolves automatically.
    */
   castleTurnsAutoResolve: true,
+  /**
+   * `rules.huntBlocked`: the Castle is a Well, so a Vampire may still hunt on
+   * the turn it arrives — the Well's extra column-1 Hunt included. Its later
+   * turns resolve on their own (`castleTurnsAutoResolve`).
+   */
+  castleIsWell: true,
   /** `game-engine.applyConfuse`: Confuse has no effect in the Castle. */
   castleIgnoresConfuse: true,
 } as const;

@@ -8,13 +8,19 @@ import {
   rigTurn,
 } from "@boardgames/core/games/the-hunger/test-helpers";
 import type { GameState } from "@boardgames/core/games/the-hunger/types";
-import { fireEvent, render, screen, within } from "@testing-library/react";
+import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import type { ViewId } from "../logic/attention";
 import GameBoard from "./GameBoard";
 
 let restore: (() => void) | null = null;
 
 beforeEach(() => {
+  sessionStorage.clear();
+  // The choice overlays portal into the app's content area, as in the real layout.
+  const main = document.createElement("main");
+  main.id = "app-main";
+  document.body.appendChild(main);
   const original = window.matchMedia;
   Object.defineProperty(window, "matchMedia", {
     configurable: true,
@@ -36,12 +42,14 @@ beforeEach(() => {
 
 afterEach(() => {
   restore?.();
+  document.getElementById("app-main")?.remove();
   vi.restoreAllMocks();
 });
 
-function props(state: GameState, onAction = vi.fn()) {
+function props(state: GameState, onAction = vi.fn(), initialView: ViewId = "map") {
   const seat = state.current?.player ?? 0;
   return {
+    initialView,
     view: buildPlayerView(state, seat),
     legalActions: getLegalActions(state, seat),
     isMyTurn: true,
@@ -49,6 +57,13 @@ function props(state: GameState, onAction = vi.fn()) {
     playerNames: [],
     onAction,
   };
+}
+
+/** A map target by its space — `data-space` is an internal test hook, never shown. */
+function mapTarget(space: string): Element {
+  const el = document.querySelector(`[data-space="${space}"]`);
+  if (!el) throw new Error(`no map target for ${space}`);
+  return el;
 }
 
 const speedy = ["vampiric-speed-3#0", "vampiric-speed-3#1", "vampire-speed-2#0-0"];
@@ -70,7 +85,9 @@ describe("GameBoard", () => {
     const state = rigTurn(afterSetup(2, 7), 0, { hand: speedy, pos: "road-3" });
     const onAction = vi.fn();
     render(<GameBoard {...props(state, onAction)} />);
-    fireEvent.click(screen.getByRole("button", { name: /Move to .*\(road-4\) for 1 Speed/ }));
+    const target = mapTarget("road-4");
+    expect(target.getAttribute("aria-label")).toBe("Move to Plains Chest for 1 Speed");
+    fireEvent.click(target);
     expect(onAction).toHaveBeenCalledWith({ type: "move", to: "road-4", spent: 1 });
   });
 
@@ -80,7 +97,7 @@ describe("GameBoard", () => {
     let state = rigTurn(afterSetup(2, 7), 0, { hand: speedy, pos: "road-4", track });
     state = act(state, { type: "stay" });
     const onAction = vi.fn();
-    render(<GameBoard {...props(state, onAction)} />);
+    render(<GameBoard {...props(state, onAction, "shop")} />);
     fireEvent.click(screen.getByRole("button", { name: /Hunt Mindy for 1 Speed/ }));
     expect(onAction).toHaveBeenCalledWith({ type: "hunt", row: 0, col: 0 });
   });
@@ -91,10 +108,11 @@ describe("GameBoard", () => {
       pos: "road-4",
     });
     const onAction = vi.fn();
-    render(<GameBoard {...props(state, onAction)} />);
-    expect(screen.getByText(/resolve draw \/ discard effects/)).toBeInTheDocument();
+    render(<GameBoard {...props(state, onAction, "player")} />);
+    // The action bar holds buttons only: Done to finish step 1, Cancel once a card is armed.
+    expect(screen.getByRole("button", { name: "Done" })).toBeEnabled();
     fireEvent.click(screen.getByRole("button", { name: /^Vampiric Will/ }));
-    expect(screen.getByText("pick the card to discard")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Cancel" })).toBeInTheDocument();
     fireEvent.click(screen.getByRole("button", { name: /^Theresa/ }));
     expect(onAction).toHaveBeenCalledWith({
       type: "resolve",
@@ -111,8 +129,10 @@ describe("GameBoard", () => {
     const onAction = vi.fn();
     render(<GameBoard {...props(state, onAction)} />);
     fireEvent.click(screen.getByRole("button", { name: /^Treasure Chest/ }));
-    expect(screen.getByText(/click a chest on the map/)).toBeInTheDocument();
-    fireEvent.click(screen.getByRole("button", { name: /Take the Bonus token at .*\(boat-10\)/ }));
+    expect(screen.getByRole("button", { name: "Cancel" })).toBeInTheDocument();
+    const target = mapTarget("boat-10");
+    expect(target.getAttribute("aria-label")).toBe("Take the Bonus token at Forest Chest");
+    fireEvent.click(target);
     expect(onAction).toHaveBeenCalledWith({
       type: "instant",
       mission: "treasure-chest",
@@ -153,7 +173,7 @@ describe("GameBoard", () => {
         onAction={onAction}
       />,
     );
-    expect(screen.getByText("Discard one of your Permanent cards")).toBeInTheDocument();
+    expect(screen.getByText("Give up one Permanent card")).toBeInTheDocument();
     fireEvent.click(screen.getByRole("button", { name: "Discard Chop" }));
     expect(onAction).toHaveBeenCalledWith({ type: "discard-permanent", card: "chop#0" });
   });
@@ -165,9 +185,9 @@ describe("GameBoard", () => {
       permanent: ["wiggles#0"],
     });
     const onAction = vi.fn();
-    render(<GameBoard {...props(state, onAction)} />);
+    render(<GameBoard {...props(state, onAction, "player")} />);
     fireEvent.click(screen.getByRole("button", { name: /^Wiggles/ }));
-    expect(screen.getByText(/Wiggles: pick a card to digest with it/)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Cancel" })).toBeInTheDocument();
     fireEvent.click(screen.getByRole("button", { name: /^Theresa/ }));
     expect(onAction).toHaveBeenCalledWith({
       type: "familiar",
@@ -176,7 +196,7 @@ describe("GameBoard", () => {
     });
   });
 
-  it("Hypnosis: click the card, a Hunt Track card, then its direction", () => {
+  it("Hypnosis: the card on your board, then a Hunt card and its direction in the Hunt view", () => {
     const track = emptyTrack();
     track[0][1] = ["o-nel#0"];
     const state = rigTurn(afterSetup(2, 7), 0, {
@@ -185,9 +205,13 @@ describe("GameBoard", () => {
       track,
     });
     const onAction = vi.fn();
-    render(<GameBoard {...props(state, onAction)} />);
+    render(<GameBoard {...props(state, onAction, "player")} />);
     fireEvent.click(screen.getByRole("button", { name: /^Hypnosis/ }));
-    expect(screen.getByText(/click a card on the Hunt Track/)).toBeInTheDocument();
+    // Off the Hunt view, the bar offers the way there.
+    expect(screen.getByRole("button", { name: /Hypnosis: pick a card/ })).toBeInTheDocument();
+    // The pick survives switching views.
+    const nav = screen.getByRole("navigation", { name: "Game views" });
+    fireEvent.click(within(nav).getByRole("button", { name: /Hunt/ }));
     fireEvent.click(screen.getByRole("button", { name: "Hypnotise O'Nel" }));
     fireEvent.click(screen.getByRole("button", { name: "→ column 1" }));
     expect(onAction).toHaveBeenCalledWith({
@@ -199,17 +223,17 @@ describe("GameBoard", () => {
     });
   });
 
-  it("hovering a Hunt Track card shows the full card with its rules text", async () => {
+  it("hovering a Hunt Track card shows the big card, its kind spelled out", async () => {
     const track = emptyTrack();
     track[0][0] = ["zephania#0"];
     const state = rigTurn(afterSetup(2, 7), 0, { hand: speedy, pos: "road-4", track });
-    render(<GameBoard {...props(state)} />);
-    const row = screen.getAllByText("Zephania")[0];
-    fireEvent.mouseEnter(row.closest("[class*='border-l-4']") as Element);
-    // The preview is the full face, carrying the card's own text.
-    expect(
-      await screen.findByTitle(/^Zephania — Religious: When you hunt this card/),
-    ).toBeInTheDocument();
+    render(<GameBoard {...props(state, vi.fn(), "shop")} />);
+    const title = /^Zephania — Religious: When you hunt this card/;
+    expect(screen.getAllByTitle(title)).toHaveLength(1);
+    fireEvent.mouseEnter(screen.getAllByText("Zephania")[0].closest("[class='h-full']") as Element);
+    // The preview is the showcase face: the kind is spelled out only there.
+    expect(screen.queryByText("religious Human")).toBeNull();
+    await waitFor(() => expect(screen.getByText("religious Human")).toBeInTheDocument());
   });
 
   it("keeps Done disabled until a mandatory draw has been resolved", () => {
@@ -218,9 +242,12 @@ describe("GameBoard", () => {
       pos: "road-4",
     });
     const onAction = vi.fn();
-    render(<GameBoard {...props(state, onAction)} />);
+    render(<GameBoard {...props(state, onAction, "player")} />);
     expect(screen.getByRole("button", { name: "Done" })).toBeDisabled();
-    expect(screen.getByText(/Dee must draw first/)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Done" })).toHaveAttribute(
+      "title",
+      expect.stringMatching(/Dee must draw first/),
+    );
     fireEvent.click(screen.getByRole("button", { name: /^Dee/ }));
     expect(onAction).toHaveBeenCalledWith({ type: "resolve", card: "dee#0" });
   });
@@ -229,13 +256,24 @@ describe("GameBoard", () => {
     const base = afterSetup(2, 7);
     base.players[0].discard = ["theresa#0", "ivo#0"];
     const state = rigTurn(base, 0, { hand: speedy, pos: "road-4" });
-    render(<GameBoard {...props(state)} />);
-    const toggle = screen.getByRole("button", { name: /Your discard pile \(2\)/ });
-    const panel = toggle.parentElement as HTMLElement;
-    expect(within(panel).queryAllByText("Theresa")).toHaveLength(0);
-    fireEvent.click(toggle);
-    expect(within(panel).getAllByText("Theresa").length).toBeGreaterThan(0);
-    expect(within(panel).getAllByText("Ivo").length).toBeGreaterThan(0);
+    render(<GameBoard {...props(state, vi.fn(), "player")} />);
+    expect(screen.queryByRole("dialog")).toBeNull();
+    fireEvent.click(screen.getByRole("button", { name: /^Discard pile: 2 cards/ }));
+    const dialog = screen.getByRole("dialog");
+    expect(within(dialog).getAllByText("Theresa").length).toBeGreaterThan(0);
+    expect(within(dialog).getAllByText("Ivo").length).toBeGreaterThan(0);
+  });
+
+  it("opens your draw pile face up, sorted, never in deck order", () => {
+    const base = afterSetup(2, 7);
+    base.players[0].deck = ["theresa#0", "chop#0", "ivo#0"];
+    const state = rigTurn(base, 0, { hand: speedy, pos: "road-4" });
+    render(<GameBoard {...props(state, vi.fn(), "player")} />);
+    fireEvent.click(screen.getByRole("button", { name: /^Draw pile: 3 cards/ }));
+    const dialog = screen.getByRole("dialog");
+    for (const name of ["Theresa", "Chop", "Ivo"]) {
+      expect(within(dialog).getAllByText(name).length).toBeGreaterThan(0);
+    }
   });
 
   it("shows Undo when the server offers it, and sends it", () => {
@@ -264,14 +302,64 @@ describe("GameBoard", () => {
     const onAction = vi.fn();
     render(<GameBoard {...props(state, onAction)} />);
     const left = state.crypts["rail-9"].length;
-    expect(
-      screen.getByRole("button", { name: `Forest Crypt (rail-9) · ${left} left` }),
-    ).toBeInTheDocument();
-    fireEvent.click(
-      screen.getByRole("button", {
-        name: new RegExp(`Take a Mission from .*\\(rail-9\\) \\(${left} left\\)`),
-      }),
+    expect(screen.getByRole("button", { name: `Forest Crypt · ${left} left` })).toBeInTheDocument();
+    const crypt = mapTarget("rail-9");
+    expect(crypt.getAttribute("aria-label")).toBe(
+      `Take a Mission from Forest Crypt (${left} left)`,
     );
+    fireEvent.click(crypt);
     expect(onAction).toHaveBeenCalledWith({ type: "inspire", crypt: "rail-9" });
+  });
+
+  it.each<ViewId>([
+    "map",
+    "player",
+    "shop",
+    "overview",
+  ])("never shows a space id in the %s view: no text, label or tooltip names one", (initial) => {
+    const b = afterSetup(2, 7);
+    b.players[1].pos = "road-5";
+    let state = rigTurn(b, 0, { hand: speedy, pos: "road-3" });
+    state = act(state, { type: "move", to: "road-4", spent: 1 });
+    render(<GameBoard {...props(state, vi.fn(), initial)} />);
+    const id = /\b(road|rail|boat|castle|cemetery|labyrinth|mountains|plains|forest)-\d+\b/;
+    const shown = [
+      document.body.textContent ?? "",
+      ...[...document.querySelectorAll("[aria-label], [title]")].flatMap((el) => [
+        el.getAttribute("aria-label") ?? "",
+        el.getAttribute("title") ?? "",
+      ]),
+    ];
+    expect(shown.filter((t) => id.test(t))).toEqual([]);
+  });
+
+  it("pulses the view that needs you, and switches views with the number keys", () => {
+    const track = emptyTrack();
+    track[0][0] = ["mindy#0"];
+    let state = rigTurn(afterSetup(2, 7), 0, { hand: speedy, pos: "road-4", track });
+    state = act(state, { type: "stay" });
+    render(<GameBoard {...props(state)} />);
+    const nav = screen.getByRole("navigation", { name: "Game views" });
+    const hunt = within(nav).getByRole("button", { name: /Hunt/ });
+    expect(within(hunt).getByLabelText("needs your attention")).toBeInTheDocument();
+    fireEvent.keyDown(window, { key: "2" });
+    expect(within(nav).getByRole("button", { name: /Hunt/ })).toHaveAttribute(
+      "aria-current",
+      "page",
+    );
+    expect(screen.getByRole("button", { name: /Hunt Mindy for 1 Speed/ })).toBeInTheDocument();
+  });
+
+  it("compares every Vampire on the Overview", () => {
+    const state = rigTurn(afterSetup(3, 7), 0, { hand: speedy, pos: "road-4" });
+    render(<GameBoard {...props(state, vi.fn(), "overview")} />);
+    for (const row of [
+      "Victory Points",
+      "Steps to the Castle",
+      "Expected Speed",
+      "Missions held",
+    ]) {
+      expect(screen.getByText(row)).toBeInTheDocument();
+    }
   });
 });

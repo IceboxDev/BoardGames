@@ -129,7 +129,7 @@ describe("speed and movement", () => {
     expect(t.players[0].playArea.find((c) => c.id === "bernard#0")?.carried).toBe(true);
   });
 
-  it("returning to the Castle takes the best tile and locks the Vampire in", () => {
+  it("returning to the Castle takes the best tile; its Well still grants the extra Hunt", () => {
     let s = rigTurn(base, 0, {
       hand: ["vampiric-speed-3#0", "vampire-speed-2#0-0", "vampire-thirst#0-0"],
       pos: "rail-2",
@@ -138,7 +138,11 @@ describe("speed and movement", () => {
     s = act(s, { type: "move", to: "castle", spent: 3 });
     expect(s.players[0].castleTile).toBe(10);
     expect(s.players[0].vp - vp).toBe(10);
-    expect(legal(s).map((a) => a.type)).toEqual(["end-turn"]);
+    // The Castle is a Well: hunting is open on arrival, with a column-1 Hunt on top.
+    expect(s.current?.col1Hunts).toBe(1);
+    expect(legal(s).some((a) => a.type === "hunt")).toBe(true);
+    // Once home, its later turns resolve on their own.
+    expect(s.players[0].pos).toBe("castle");
   });
 
   it("pushes a Vampire off the landing space", () => {
@@ -217,6 +221,23 @@ describe("hunting", () => {
     s = act(s, { type: "hunt", row: 0, col: 0 });
     const owned = [...s.players[0].discard, ...(s.current?.readyQueue ?? [])];
     expect(owned).toContain(top);
+  });
+
+  it("logs a Gregarious companion's VP on its own line, never twice", () => {
+    const track = emptyTrack();
+    track[0][0] = ["wilma#0"];
+    let s = rigTurn(base, 0, { hand: speedy, pos: "road-4", track });
+    s = act(s, { type: "stay" });
+    const before = s.players[0].vp;
+    const logged = s.log.length;
+    s = act(s, { type: "hunt", row: 0, col: 0 });
+    const hunts = s.log.slice(logged).filter((e) => e.t === "hunt");
+    const main = hunts.find((e) => e.t === "hunt" && e.source === "track");
+    const extra = hunts.find((e) => e.t === "hunt" && e.source === "gregarious");
+    expect(main?.t === "hunt" && main.cards).toEqual(["wilma#0"]);
+    expect(extra?.t === "hunt" && extra.by).toBe("wilma#0");
+    const sum = hunts.reduce((n, e) => n + (e.t === "hunt" ? e.vp : 0), 0);
+    expect(s.players[0].vp - before).toBe(sum);
   });
 
   it("the Cemetery refuses piles with Humans", () => {

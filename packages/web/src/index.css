@@ -192,6 +192,10 @@
   --font-display: "Inter Variable", "Inter", sans-serif;
   --font-body: "Inter Variable", "Inter", sans-serif;
   --font-mono: "JetBrains Mono", monospace;
+  /* The Hunger's card faces: names, numbers and labels. Outfit is loaded by
+     that game's lazy chunk (games/the-hunger/components/card/parts.tsx), so
+     anything outside it falls back to Inter. */
+  --font-card: "Outfit Variable", "Inter Variable", "Inter", sans-serif;
   /* Fantasy display face for the D&D DM tool only. Loaded by that lazy
      chunk (see games/dungeons-and-dragons/DndTool.tsx), so anything outside
      it falls back to the serif stack. */

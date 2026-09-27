@@ -66,6 +66,11 @@ interface GameScreenProps {
   /** Controls above the card fan (Confirm button, Pass/Take, status, etc.).
    *  ONE row of fixed height (`--layout-actions-h`); never wrap. */
   fanActions?: ReactNode;
+  /** A game-wide control bar pinned to the very bottom of the column — from
+   *  the screen edge (under the left rail) to the History rail — on every
+   *  view, fan or no fan. For games whose controls outgrow one fixed
+   *  `fanActions` row or that show no hand most of the time (The Hunger). */
+  actionBar?: ReactNode;
   /** Main game board content. */
   children: ReactNode;
   /** Skip content-area padding and flex-col (for edge-to-edge canvas games). */
@@ -90,6 +95,7 @@ export default function GameScreen({
   leftSidebarLabel,
   fan,
   fanActions,
+  actionBar,
   children,
   noPadding,
   mobileRails = "sheet",
@@ -190,6 +196,11 @@ export default function GameScreen({
             >
               {fan}
             </div>
+          </div>
+        )}
+        {actionBar != null && (
+          <div data-testid="action-bar" className="shrink-0">
+            {actionBar}
           </div>
         )}
       </div>

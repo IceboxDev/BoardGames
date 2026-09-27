@@ -22,6 +22,7 @@ import {
   passivesIn,
   playAreaSpeed,
 } from "./rules";
+import { RULINGS } from "./rulings";
 import { missionContext, missionScore } from "./scoring";
 import {
   type Action,
@@ -172,7 +173,11 @@ function bestHuntFrom(
   const s = space(g, spaceId);
   const turn = state.current;
   if (!turn || turn.extraTurn || speedLeft <= 0) return 0;
-  if (s.effect === "castle" || s.effect === "ship" || hasKeyword(p.playArea, "holy-water"))
+  if (
+    (s.effect === "castle" && !RULINGS.castleIsWell) ||
+    s.effect === "ship" ||
+    hasKeyword(p.playArea, "holy-water")
+  )
     return 0;
   let best = 0;
   for (const row of state.track) {

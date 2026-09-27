@@ -1,20 +1,9 @@
 import { cardDef } from "@boardgames/core/games/the-hunger/content/cards";
 import { cn } from "../../../lib/cn";
+import { KEYWORD_ICON, kindIcon } from "../logic/art";
 import { ROW_TONE, toneOf } from "../logic/card-colors";
-import { CATEGORY_GLYPH } from "../logic/labels";
 import CardPreview from "./CardPreview";
-
-const KEYWORD_GLYPH: Record<string, string> = {
-  fast: "⚡",
-  slow: "🐢",
-  spicy: "🌶",
-  confuse: "😵",
-  "holy-water": "💧",
-  gregarious: "👥",
-  ready: "↥",
-  permanent: "∞",
-  inspiring: "📜",
-};
+import HungerIcon from "./HungerIcon";
 
 /**
  * One card as a compact row, edged in its kind's colour: Speed · glyph ·
@@ -32,8 +21,6 @@ export default function CardLine({
   const def = cardDef(card);
   const speed = typeof def.speed === "number" ? def.speed : def.speed.base;
   const conditional = typeof def.speed !== "number";
-  const glyph = def.category ? CATEGORY_GLYPH[def.category] : def.family === "rose" ? "🌹" : "🦇";
-  const keywords = def.keywords.map((k) => KEYWORD_GLYPH[k] ?? "").join("");
   return (
     <CardPreview
       card={card}
@@ -57,9 +44,11 @@ export default function CardLine({
           {speed > 0 ? `+${speed}` : speed}
           {conditional ? "*" : ""}
         </span>
-        <span aria-hidden>{glyph}</span>
+        <HungerIcon name={kindIcon(card)} className="h-3 w-3 text-fg-secondary" />
         <span className="min-w-0 flex-1 truncate text-fg-primary">{def.name}</span>
-        {keywords && <span aria-hidden>{keywords}</span>}
+        {def.keywords.map((k) => (
+          <HungerIcon key={k} name={KEYWORD_ICON[k]} className="h-3 w-3 text-fg-secondary" />
+        ))}
         {def.vp > 0 && <span className="font-bold text-amber-300 tabular-nums">{def.vp}</span>}
       </div>
       {detail && (def.text || def.keywords.length > 0) && (

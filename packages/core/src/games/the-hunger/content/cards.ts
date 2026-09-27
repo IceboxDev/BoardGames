@@ -529,11 +529,12 @@ export function expand(defs: readonly { id: string; copies: number }[], prefix =
   return out;
 }
 
-export const VAMPIRES: readonly { id: string; name: string; color: string }[] = [
-  { id: "crimson", name: "Crimson", color: "#c0392b" },
-  { id: "violet", name: "Violet", color: "#8e44ad" },
-  { id: "emerald", name: "Emerald", color: "#27ae60" },
-  { id: "sapphire", name: "Sapphire", color: "#2e86de" },
-  { id: "amber", name: "Amber", color: "#e67e22" },
-  { id: "silver", name: "Silver", color: "#95a5a6" },
+/** The six playable Vampires, in seat order; `id` names their art (`vampire-<id>-*`). */
+export const VAMPIRES: readonly { id: string; name: string; short: string; color: string }[] = [
+  { id: "rajesh", name: "Rajesh Amara", short: "Rajesh", color: "#27ae60" },
+  { id: "boris", name: "Boris Pouchkine", short: "Boris", color: "#2e86de" },
+  { id: "josephine", name: "Josephine Lafayette", short: "Josephine", color: "#f1c40f" },
+  { id: "beatrice", name: "Lady Beatrice", short: "Beatrice", color: "#8e44ad" },
+  { id: "yoko", name: "Yoko Chiyako", short: "Yoko", color: "#c0392b" },
+  { id: "gervasi", name: "Don Gervasi", short: "Gervasi", color: "#e67e22" },
 ];

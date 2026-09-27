@@ -201,7 +201,7 @@ export function huntBlocked(state: GameState, p: PlayerState, turn: TurnState): 
   if (turn.speed <= 0) return "no Speed";
   if (hasKeyword(p.playArea, "holy-water")) return "Holy Water";
   const effect = currentSpace(state, p).effect;
-  if (effect === "castle") return "in the Castle";
+  if (effect === "castle" && !RULINGS.castleIsWell) return "in the Castle";
   if (effect === "ship") return "on a Ship";
   return null;
 }

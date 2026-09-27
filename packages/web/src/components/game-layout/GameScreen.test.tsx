@@ -148,6 +148,20 @@ describe("GameScreen — fan tray", () => {
     expect(screen.getByTestId("fan-slot").className).toContain("h-fan");
   });
 
+  it("pins the action bar below the tray, left of History", () => {
+    restore = setViewport(true);
+    render(
+      <GameScreen sidebar={<div>log</div>} fan={<div>hand</div>} actionBar={<div>controls</div>}>
+        <div>board</div>
+      </GameScreen>,
+    );
+    const bar = screen.getByTestId("action-bar");
+    // Last in the board column, which the History rail sits beside.
+    expect(bar.parentElement?.lastElementChild).toBe(bar);
+    expect(bar.parentElement?.contains(screen.getByTestId("fan-tray"))).toBe(true);
+    expect(bar.parentElement?.contains(screen.getByRole("complementary"))).toBe(false);
+  });
+
   it("renders no tray at all when the game has no fan", () => {
     restore = setViewport(true);
     render(<Board fan={undefined} fanActions={<div>ignored</div>} />);

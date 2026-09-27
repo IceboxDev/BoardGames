@@ -14,7 +14,7 @@ import {
   bonusName,
   cardName,
   missionName,
-  seatLabel,
+  seatShortLabel,
   spaceLabel,
   vampireColor,
 } from "./logic/labels";
@@ -40,7 +40,7 @@ function cardRef(id: string): LogCardRef {
 function who(view: View, seat: number, names: readonly (string | null)[]): LogTextSpan {
   const p = view.players[seat];
   return {
-    text: seatLabel(view, seat, names),
+    text: seatShortLabel(view, seat, names),
     bold: true,
     color: p ? vampireColor(p.vampire) : undefined,
   };
@@ -130,9 +130,13 @@ function describe(
         icon: e.source === "rose" ? "🌹" : "🩸",
         variant: "action",
         spans: [
-          who(view, e.p, names),
+          ...(e.source === "gregarious"
+            ? e.by
+              ? [cardRef(e.by), " is Gregarious and brought "]
+              : ["A Gregarious Human brought "]
+            : [who(view, e.p, names)]),
           e.source === "gregarious"
-            ? " — a Gregarious Human brought "
+            ? ""
             : e.source === "familiar"
               ? " tamed "
               : e.source === "tavern"
@@ -141,7 +145,9 @@ function describe(
                   ? ` hunted column ${e.col}: `
                   : " took ",
           ...e.cards.flatMap((c, i): LogSpan[] => [i > 0 ? ", " : "", cardRef(c)]),
-          ` (+${e.vp} VP)`,
+          ...(e.source === "gregarious"
+            ? [" along for ", who(view, e.p, names), ` (+${e.vp} VP)`]
+            : [` (+${e.vp} VP)`]),
         ],
       };
     case "instant":

@@ -577,7 +577,9 @@ function huntCards(
   const turn = state.current;
   if (!turn) return;
   const p = state.players[turn.player];
+  // The hunt's own VP; a Gregarious Human's companion is logged (and counted) on its own line.
   let vp = 0;
+  let extrasVp = 0;
   const gained = [...cards];
   for (const card of cards) {
     vp += scoreCard(state, p, turn, card);
@@ -587,7 +589,7 @@ function huntCards(
       const extra = state.huntDeck.pop();
       if (extra) {
         const extraVp = scoreCard(state, p, turn, extra);
-        vp += extraVp;
+        extrasVp += extraVp;
         gain(p, turn, extra);
         gained.push(extra);
         state.log.push({
@@ -596,11 +598,12 @@ function huntCards(
           source: "gregarious",
           cards: [extra],
           vp: extraVp,
+          by: card,
         });
       }
     }
   }
-  p.vp += vp;
+  p.vp += vp + extrasVp;
   if (source === "track" && col !== undefined) {
     turn.trackHunts.push({
       col: col - 1,
