@@ -1,27 +1,12 @@
-import {
-  type AIStrategyId,
-  ALL_STRATEGIES,
-  type Mode,
-} from "@boardgames/core/games/the-hunger/types";
+import { theHungerManifest } from "@boardgames/core/games/the-hunger/manifest";
+import type { Mode } from "@boardgames/core/games/the-hunger/types";
 import { useState } from "react";
-import { ControlGroup, PvAISetupScreen, type StrategyOption } from "../../../components/setup";
+import { ControlGroup, PvAISetupScreen } from "../../../components/setup";
 import { Checkbox, SegmentedControl } from "../../../components/ui";
-
-const DIFFICULTY: Record<AIStrategyId, StrategyOption["difficulty"]> = {
-  random: "Easy",
-  "heuristic-v1": "Medium",
-};
-
-const STRATEGIES: StrategyOption[] = [...ALL_STRATEGIES].reverse().map((s) => ({
-  id: s.id,
-  label: s.label,
-  description: s.description,
-  difficulty: DIFFICULTY[s.id],
-}));
 
 export interface SoloSetup {
   playerCount: number;
-  strategy: AIStrategyId;
+  strategy: string;
   mode: Mode;
   beginnerSafeMountains: boolean;
 }
@@ -36,12 +21,10 @@ export default function SetupScreen({ onStart }: Props) {
   return (
     <PvAISetupScreen
       title="The Hunger"
-      playerCounts={[2, 3, 4, 5, 6]}
+      manifest={theHungerManifest}
       defaultPlayerCount={3}
-      strategies={STRATEGIES}
-      defaultStrategy="heuristic-v1"
-      onStart={(playerCount, id) =>
-        onStart({ playerCount, strategy: id as AIStrategyId, mode, beginnerSafeMountains: safe })
+      onStart={(playerCount, strategy) =>
+        onStart({ playerCount, strategy, mode, beginnerSafeMountains: safe })
       }
       extraControls={<ModeControls mode={mode} onMode={setMode} safe={safe} onSafe={setSafe} />}
     />

@@ -1,4 +1,4 @@
-import { shuffle } from "../../lib/rng";
+import { type Rng, shuffle } from "../../lib/rng";
 import type { Card } from "./types";
 import { DECK_COMPOSITION, HAND_SIZES } from "./types";
 
@@ -13,8 +13,8 @@ export function createDeck(): Card[] {
   return cards;
 }
 
-export function shuffleDeck(deck: Card[]): Card[] {
-  return shuffle(deck);
+export function shuffleDeck(deck: Card[], rng?: Rng): Card[] {
+  return shuffle(deck, rng);
 }
 
 export function dealHands(

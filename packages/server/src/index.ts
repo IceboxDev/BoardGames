@@ -17,15 +17,8 @@ import { installProcessGuards } from "./lib/process-guards.ts";
 import { getContentStore } from "./lib/quiztopia/content-store.ts";
 import { triggerSkillRecompute } from "./lib/skill-ratings.ts";
 import { app, injectWebSocket } from "./server.ts";
-import { markStaleRunning } from "./tournament/manager.ts";
 
-import "./sessions/machine-registry.ts";
-import { maybeEnableCppAgent } from "./sessions/cpp-agent.ts";
-import { maybeEnableDecryptoAgent } from "./sessions/decrypto-agent.ts";
 import { shutdownAllSessions } from "./sessions/manager.ts";
-
-maybeEnableCppAgent(); // opt-in via SW7_ENABLE=1; otherwise the random stub stays
-maybeEnableDecryptoAgent(); // needs AI_GATEWAY_API_KEY; otherwise the deterministic fallback stays
 
 const PORT = Number(process.env.PORT ?? 3001);
 const SHUTDOWN_GRACE_MS = 10_000;
@@ -35,7 +28,6 @@ const SHUTDOWN_GRACE_MS = 10_000;
 // defaults — not something a healthcheck can reason about.
 try {
   await initDb();
-  await markStaleRunning();
   await markStaleProcessingCampaigns();
   await markStaleProcessingCharacters();
   // Skill ratings self-heal at boot when the ENGINE moved — a deploy that

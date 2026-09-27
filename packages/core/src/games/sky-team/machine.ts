@@ -7,6 +7,7 @@ import {
   rejectAction,
   safeApply,
 } from "../../machines/action-validation";
+import { firstAiStrategy, humanSeats } from "../../machines/seats";
 import type { GameMachineSpec } from "../../machines/types";
 import { getStrategy } from "./ai-strategies";
 import {
@@ -16,6 +17,7 @@ import {
   rollDice,
   shouldRollDice,
 } from "./game-engine";
+import { type SkyTeamConfig, skyTeamManifest } from "./manifest";
 import { buildPlayerView } from "./player-view";
 import {
   buildGameLog,
@@ -449,9 +451,22 @@ export const skyTeamSpec: GameMachineSpec<
   typeof skyTeamMachine,
   SkyTeamPlayerView,
   SkyTeamAction,
-  SkyTeamResult
+  SkyTeamResult,
+  SkyTeamConfig
 > = {
   machine: skyTeamMachine,
+  manifest: skyTeamManifest,
+
+  buildStart: ({ seats, config, seed }) => {
+    const aiStrategy = firstAiStrategy(seats);
+    return {
+      type: "START",
+      scenarioId: config.scenarioId,
+      humanPlayers: humanSeats(seats),
+      ...(aiStrategy ? { aiStrategy } : {}),
+      seed,
+    };
+  },
 
   getPlayerView(snapshot, player) {
     const gs = snapshot.context.gameState;
@@ -490,6 +505,13 @@ export const skyTeamSpec: GameMachineSpec<
 
   isGameOver(snapshot) {
     return snapshot.matches("gameOver");
+  },
+
+  // Co-operative: the crew lands together or not at all.
+  getOutcome(snapshot) {
+    const gs = snapshot.context.gameState;
+    if (!gs || gs.outcome == null) return null;
+    return { kind: "coop", won: gs.outcome === "win", detail: gs.outcome };
   },
 
   getReplayLog(snapshot): SkyTeamReplayLog | null {

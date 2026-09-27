@@ -88,13 +88,6 @@ describe("backTarget", () => {
       });
     });
 
-    it("/play/:slug/tournament/:a/:b/:t → /play/:slug", () => {
-      expect(backTarget("/play/lost-cities/tournament/ismcts-v4/ismcts-v1/tid")).toEqual({
-        href: "/play/lost-cities",
-        label: "Back",
-      });
-    });
-
     it("/play/:slug/match-history → /play/:slug", () => {
       expect(backTarget("/play/set/match-history")).toEqual({
         href: "/play/set",

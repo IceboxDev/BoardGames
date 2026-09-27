@@ -10,7 +10,9 @@
 // The hexes are raw because they feed SVG fills and `style` stripes — not
 // Tailwind classes — and are difficulty semantics, not theme surface tokens.
 
-export type DifficultyTier = "Easy" | "Medium" | "Hard" | "Hard+" | "Expert" | "Master";
+import type { DifficultyTier } from "@boardgames/core/machines/manifest";
+
+export type { DifficultyTier };
 
 type DifficultyStyle = {
   /** Stripe/star color for the option card. */

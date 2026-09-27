@@ -1,8 +1,13 @@
+import {
+  type GameManifest,
+  type StrategyInfo,
+  strategiesFor,
+} from "@boardgames/core/machines/manifest";
 import { type ReactNode, useCallback, useMemo, useState } from "react";
 import { Button } from "../ui/Button";
 import { SelectableCard } from "../ui/SelectableCard";
 import { Stepper } from "../ui/Stepper";
-import { DIFFICULTY, type DifficultyTier } from "./difficulty";
+import { DIFFICULTY } from "./difficulty";
 import { SectionLabel } from "./SectionLabel";
 import { SetupHeader } from "./SetupHeader";
 import { SetupLayout } from "./SetupLayout";
@@ -11,26 +16,18 @@ import { SetupLayout } from "./SetupLayout";
 // Types
 // ---------------------------------------------------------------------------
 
-export interface StrategyOption {
-  id: string;
-  label: string;
-  description: string;
-  /** Names a shared tier — stripe color + badge classes derive from
-   *  `DIFFICULTY`, so games never re-declare the color table. */
-  difficulty: DifficultyTier;
-}
+/** An AI option on the setup screen — the manifest's own description of it. */
+export type StrategyOption = StrategyInfo;
 
 export interface PvAISetupScreenProps {
   title: string;
-  /** Player count options. Omit for 2-player-only games. */
+  /** The game's AIs (easiest first, each with its difficulty tier) and table sizes. */
+  manifest: GameManifest;
+  /** Table sizes on offer; defaults to every size the manifest allows. */
   playerCounts?: number[];
-  /** Default player count (defaults to first in playerCounts, or 2). */
+  /** Default player count (defaults to the smallest on offer). */
   defaultPlayerCount?: number;
-  /** Strategy list, or a function returning strategies for the given player count. Ordered easiest to hardest. */
-  strategies: StrategyOption[] | ((playerCount: number) => StrategyOption[]);
-  /** Default selected strategy ID (defaults to first strategy). */
-  defaultStrategy?: string;
-  /** Called when user clicks Start. */
+  /** Called when user clicks Start, with an AI the game offers at that size. */
   onStart: (playerCount: number, strategyId: string) => void;
   /** Optional extra controls (e.g. an expansion toggle) shown above Start. */
   extraControls?: ReactNode;
@@ -57,22 +54,32 @@ function gridColsClass(count: number): string {
 
 export function PvAISetupScreen({
   title,
-  playerCounts,
+  manifest,
+  playerCounts: playerCountsProp,
   defaultPlayerCount,
-  strategies: strategiesProp,
-  defaultStrategy,
   onStart,
   extraControls,
 }: PvAISetupScreenProps) {
-  const initialPlayerCount = defaultPlayerCount ?? playerCounts?.[0] ?? 2;
+  const playerCounts = useMemo(
+    () =>
+      playerCountsProp ??
+      Array.from(
+        { length: manifest.seats.max - manifest.seats.min + 1 },
+        (_, i) => manifest.seats.min + i,
+      ),
+    [playerCountsProp, manifest.seats],
+  );
+  const initialPlayerCount = defaultPlayerCount ?? playerCounts[0] ?? manifest.seats.min;
   const [playerCount, setPlayerCount] = useState(initialPlayerCount);
 
   const currentStrategies = useMemo(
-    () => (typeof strategiesProp === "function" ? strategiesProp(playerCount) : strategiesProp),
-    [strategiesProp, playerCount],
+    () => strategiesFor(manifest, playerCount),
+    [manifest, playerCount],
   );
 
-  const [selectedId, setSelectedId] = useState(defaultStrategy ?? currentStrategies[0]?.id ?? "");
+  const [selectedId, setSelectedId] = useState(
+    manifest.defaultStrategy ?? currentStrategies[0]?.id ?? "",
+  );
 
   // Reset selection when strategy list changes and current selection is no longer valid
   const validSelection = currentStrategies.some((s) => s.id === selectedId);
@@ -82,7 +89,7 @@ export function PvAISetupScreen({
     onStart(playerCount, effectiveId);
   }, [onStart, playerCount, effectiveId]);
 
-  const showPlayerCount = playerCounts && playerCounts.length > 1;
+  const showPlayerCount = playerCounts.length > 1;
   const subtitle = showPlayerCount
     ? "Choose how many players and your AI opponent"
     : "Choose your AI opponent";

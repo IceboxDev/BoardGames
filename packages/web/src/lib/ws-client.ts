@@ -1,4 +1,7 @@
+import type { GameOutcome } from "@boardgames/core/machines/outcome";
+import type { SeatRequest } from "@boardgames/core/machines/seats";
 import {
+  type PlayerActionEnvelope,
   type RoomSlot,
   type RoomState,
   type ServerMessage,
@@ -82,6 +85,8 @@ export interface GameSession<TPlayerView, TAction, TResult> {
   playerIndex: number;
   aiThinking: boolean;
   result: TResult | null;
+  /** How the finished game ended, in the shape every game shares. */
+  outcome: GameOutcome | null;
   replayId: number | null;
   /** Which room the active game session belongs to — `null` for a solo
    *  session. The solo (`useRemoteGame`) and room (`useMultiplayerRoom`)
@@ -96,8 +101,13 @@ export interface GameSession<TPlayerView, TAction, TResult> {
   mySlot: number | null;
 
   // Solo session actions
-  createSession: (gameSlug: string, config: unknown) => void;
-  sendAction: (action: TAction) => void;
+  /** Start a solo game: who sits where (this socket holds every human seat) and the options. */
+  createSession: (gameSlug: string, seats: readonly SeatRequest[], config: unknown) => void;
+  /**
+   * Play one of the listed legal actions. `seat` claims a human seat in a solo
+   * game where one person holds several (Pandemic's roles); rooms ignore it.
+   */
+  sendAction: (action: TAction, seat?: number) => void;
   leaveSession: () => void;
 
   // Room actions
@@ -215,6 +225,7 @@ export function useGameSession<
   const [playerIndex, setPlayerIndex] = useState(0);
   const [aiThinking, setAiThinking] = useState(false);
   const [result, setResult] = useState<TResult | null>(null);
+  const [outcome, setOutcome] = useState<GameOutcome | null>(null);
   const [replayId, setReplayId] = useState<number | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [gameRoomCode, setGameRoomCode] = useState<string | null>(null);
@@ -333,9 +344,10 @@ export function useGameSession<
             // this the previous game's last active seat lingers and "Play
             // Again" waits for a turn the server already handed to us.
             setActivePlayer(msg.activePlayer);
-            setPlayerIndex(0);
+            setPlayerIndex(msg.playerIndex);
             setAiThinking(false);
             setResult(null);
+            setOutcome(null);
             setError(null);
             break;
 
@@ -371,6 +383,7 @@ export function useGameSession<
             }
             setPlayerView(msg.playerView as TPlayerView);
             setResult(msg.result as TResult);
+            setOutcome(msg.outcome);
             setReplayId(msg.replayId ?? null);
             if (msg.playerIndex !== undefined) setPlayerIndex(msg.playerIndex);
             setLegalActions([]);
@@ -437,6 +450,7 @@ export function useGameSession<
             setPlayerView(msg.playerView as TPlayerView);
             setLegalActions(msg.legalActions as TAction[]);
             setResult(null);
+            setOutcome(null);
             setAiThinking(false);
             setError(null);
             setPeers([]);
@@ -537,16 +551,21 @@ export function useGameSession<
   // --- Solo session actions ---
 
   const createSession = useCallback(
-    (gameSlug: string, config: unknown) => {
-      sendMessage({ type: "create-session", gameSlug, config });
+    (gameSlug: string, seats: readonly SeatRequest[], config: unknown) => {
+      sendMessage({ type: "create-session", gameSlug, seats: [...seats], config });
     },
     [sendMessage],
   );
 
   const sendAction = useCallback(
-    (action: TAction) => {
+    (action: TAction, seat?: number) => {
       if (!sessionId) return;
-      sendMessage({ type: "action", sessionId, action });
+      const envelope: PlayerActionEnvelope = {
+        type: "PLAYER_ACTION",
+        action,
+        ...(seat === undefined ? {} : { player: seat }),
+      };
+      sendMessage({ type: "action", sessionId, action: envelope });
     },
     [sendMessage, sessionId],
   );
@@ -559,6 +578,7 @@ export function useGameSession<
     setPlayerView(null);
     setLegalActions([]);
     setResult(null);
+    setOutcome(null);
     setReplayId(null);
     setPlayerIndex(0);
     setRoomCode(null);
@@ -662,6 +682,7 @@ export function useGameSession<
     playerIndex,
     aiThinking,
     result,
+    outcome,
     replayId,
     gameRoomCode,
     error,

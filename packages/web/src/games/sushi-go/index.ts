@@ -7,12 +7,6 @@ export default {
   backgroundImage,
   component: lazy(() => import("./SushiGo")),
   mode: "remote",
-  hasMatchHistory: true,
-  hasTournament: true,
-  tournamentStrategies: [
-    { id: "nash", label: "Nash Equilibrium" },
-    { id: "minimax", label: "Minimax" },
-    { id: "random", label: "Random" },
-  ],
   rulesUrl,
+  tournamentResults: () => import("./tournament-results.generated"),
 } satisfies PlayableModule;

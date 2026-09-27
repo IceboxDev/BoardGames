@@ -8,7 +8,6 @@ export default {
   component: lazy(() => import("./SetGame")),
   mode: "remote",
   soloLabel: "Trainer",
-  hasMatchHistory: true,
   rulesUrl,
   // Custom dual-tab (Trainer + PvP) match-history view — generic
   // `<MatchHistory>` only knows about server-stored matches; trainer

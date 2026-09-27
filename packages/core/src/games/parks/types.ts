@@ -839,6 +839,8 @@ export interface GameState {
   actionLog: ActionLogEntry[];
   /** Total turn counter (across seasons). */
   turnCount: number;
+  /** Seeded generator for dice rolls and reshuffles — see `RngCarrier`. Never sent to clients. */
+  rngState: number;
 }
 
 /**

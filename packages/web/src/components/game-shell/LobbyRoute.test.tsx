@@ -1,3 +1,4 @@
+import { lostCitiesManifest } from "@boardgames/core/games/lost-cities/manifest";
 import type { RoomState, SessionUser } from "@boardgames/core/protocol";
 import { render, screen } from "@testing-library/react";
 import type { ReactNode } from "react";
@@ -68,7 +69,7 @@ function setupContext(mp: Partial<MpStub>) {
     def: {
       slug: "lost-cities",
       title: "Lost Cities",
-      defaultMpConfig: {},
+      manifest: lostCitiesManifest,
     },
     session: {},
     game: {},

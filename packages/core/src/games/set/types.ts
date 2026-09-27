@@ -1,3 +1,5 @@
+import { z } from "zod";
+
 export type Shape = "diamond" | "oval" | "squiggle";
 export type CardColor = "red" | "green" | "purple";
 export type Fill = "solid" | "striped" | "empty";
@@ -18,38 +20,44 @@ export interface DealEntry {
   card: SetCardData;
 }
 
-export interface PerSetRecord {
-  reactionTimeMs: number;
-  selectionTimeMs: number;
-  totalFindTimeMs: number;
-  boardSize: number;
-  calledDuringDeal: boolean;
-  cardsDealtWhenCalled: number;
-}
+export const PerSetRecordSchema = z.object({
+  reactionTimeMs: z.number(),
+  selectionTimeMs: z.number(),
+  totalFindTimeMs: z.number(),
+  boardSize: z.number(),
+  calledDuringDeal: z.boolean(),
+  cardsDealtWhenCalled: z.number(),
+});
+export type PerSetRecord = z.infer<typeof PerSetRecordSchema>;
 
-export interface GameRecord {
-  id: string;
-  timestamp: number;
-  durationMs: number;
-  setsFound: number;
-  incorrectCalls: number;
-  accuracy: number;
-  netScore: number;
-  avgFindTimeMs: number;
-  medianFindTimeMs: number;
-  fastestSetMs: number;
-  slowestSetMs: number;
-  consistencyMs: number;
-  timeToFirstSetMs: number;
-  earlyCallCount: number;
-  earlyCallRate: number;
-  avgBoardSize: number;
-  plusThreeRequests: number;
-  hintCount: number;
-  longestStreak: number;
-  fatigueSlopeMs: number;
-  cardsRemaining: number;
-  throughput: number;
-  rating: number;
-  perSetDetails: PerSetRecord[];
-}
+/**
+ * One trainer run. Kept in the browser and mirrored to the server's game
+ * results, so both read paths parse it with this schema.
+ */
+export const GameRecordSchema = z.object({
+  id: z.string(),
+  timestamp: z.number(),
+  durationMs: z.number(),
+  setsFound: z.number(),
+  incorrectCalls: z.number(),
+  accuracy: z.number(),
+  netScore: z.number(),
+  avgFindTimeMs: z.number(),
+  medianFindTimeMs: z.number(),
+  fastestSetMs: z.number(),
+  slowestSetMs: z.number(),
+  consistencyMs: z.number(),
+  timeToFirstSetMs: z.number(),
+  earlyCallCount: z.number(),
+  earlyCallRate: z.number(),
+  avgBoardSize: z.number(),
+  plusThreeRequests: z.number(),
+  hintCount: z.number(),
+  longestStreak: z.number(),
+  fatigueSlopeMs: z.number(),
+  cardsRemaining: z.number(),
+  throughput: z.number(),
+  rating: z.number(),
+  perSetDetails: z.array(PerSetRecordSchema),
+});
+export type GameRecord = z.infer<typeof GameRecordSchema>;

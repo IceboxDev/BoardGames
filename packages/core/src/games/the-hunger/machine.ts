@@ -1,18 +1,22 @@
 import { assign, fromPromise, type SnapshotFrom, setup } from "xstate";
 import { randomSeed } from "../../lib/rng";
 import { playerActionValidator, safeApply } from "../../machines/action-validation";
+import { strategyGuard, typedSeatStrategies } from "../../machines/seats";
 import type { GameMachineSpec } from "../../machines/types";
 import { pickAiAction } from "./ai-strategies";
 import { applyActionPure, createInitialState } from "./game-engine";
+import { type HungerConfig, theHungerManifest } from "./manifest";
+import { hungerOutcome } from "./outcome";
 import { buildPlayerView } from "./player-view";
 import { getActivePlayer, getLegalActions } from "./rules";
-import type {
-  Action,
-  AIStrategyId,
-  GameOptions,
-  GameState,
-  HungerPlayerView,
-  HungerResult,
+import {
+  type Action,
+  type AIStrategyId,
+  ALL_STRATEGIES,
+  type GameOptions,
+  type GameState,
+  type HungerPlayerView,
+  type HungerResult,
 } from "./types";
 import { isUndoable } from "./undo";
 
@@ -219,13 +223,25 @@ function legalActionsFor(
   return legal;
 }
 
+const toStrategy = strategyGuard("The Hunger", ALL_STRATEGIES);
+
 export const theHungerSpec: GameMachineSpec<
   typeof theHungerMachine,
   HungerPlayerView,
   Action,
-  HungerResult
+  HungerResult,
+  HungerConfig
 > = {
   machine: theHungerMachine,
+  manifest: theHungerManifest,
+
+  buildStart: ({ seats, config, seed }) => ({
+    type: "START",
+    playerCount: seats.length,
+    strategies: typedSeatStrategies(seats, toStrategy),
+    options: { mode: config.mode, beginnerSafeMountains: config.beginnerSafeMountains },
+    seed,
+  }),
 
   getPlayerView(snapshot, player) {
     const gs = snapshot.context.gameState;
@@ -258,24 +274,27 @@ export const theHungerSpec: GameMachineSpec<
     return snapshot.matches("gameOver");
   },
 
+  getOutcome(snapshot) {
+    const gs = snapshot.context.gameState;
+    return gs?.phase === "game-over" && gs.result ? hungerOutcome(gs.result) : null;
+  },
+
   getReplayLog(snapshot) {
     const gs = snapshot.context.gameState;
     if (!gs || gs.phase !== "game-over" || !gs.result) return null;
-    const n = gs.players.length;
     const { scores, winner, winners, placements, breakdown } = gs.result;
     return {
+      formatVersion: 1,
       scores,
       winner,
       winners,
       placements,
       breakdown,
-      playerCount: n,
+      playerCount: gs.players.length,
       seed: gs.seed,
       options: gs.options,
       strategies: gs.players.map((p) => p.aiStrategy ?? null),
       log: gs.log,
-      scoreA: n === 2 ? scores[0] : undefined,
-      scoreB: n === 2 ? scores[1] : undefined,
     };
   },
 };

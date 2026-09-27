@@ -11,22 +11,33 @@ import {
 } from "./persistence";
 
 function record(overrides: Partial<GameRecord> = {}): GameRecord {
-  // The local-history path stores everything it gets back; we don't need to
-  // construct a fully-faithful GameRecord — only the fields the pure
-  // computations under test actually touch.
   return {
     id: "g1",
     timestamp: 1_700_000_000_000,
-    rating: 1500,
+    durationMs: 0,
+    setsFound: 0,
+    incorrectCalls: 0,
+    accuracy: 0,
     netScore: 0,
     avgFindTimeMs: 0,
+    medianFindTimeMs: 0,
     fastestSetMs: 0,
-    accuracy: 0,
-    throughput: 0,
+    slowestSetMs: 0,
+    consistencyMs: 0,
+    timeToFirstSetMs: 0,
+    earlyCallCount: 0,
+    earlyCallRate: 0,
+    avgBoardSize: 12,
+    plusThreeRequests: 0,
+    hintCount: 0,
     longestStreak: 0,
-    durationMs: 0,
+    fatigueSlopeMs: 0,
+    cardsRemaining: 0,
+    throughput: 0,
+    rating: 1500,
+    perSetDetails: [],
     ...overrides,
-  } as GameRecord;
+  };
 }
 
 describe("mergeHistories", () => {

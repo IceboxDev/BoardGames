@@ -1,143 +1,85 @@
 import type {
-  SevenWondersEvent,
   SevenWondersPlayerView,
   SevenWondersResult,
 } from "@boardgames/core/games/7-wonders/machine";
+import type { SevenWondersConfig } from "@boardgames/core/games/7-wonders/manifest";
 import type { SevenWondersAction } from "@boardgames/core/games/7-wonders/types";
-import { useCallback, useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useGameShell } from "../../hooks/useGameShell";
+import { useState } from "react";
+import { BoardFallback } from "../../components/RouteFallback";
+import { againstAi, type SoloStart, useSessionFlow } from "../../hooks/useSessionFlow";
 import type { GameComponentProps } from "../types";
 import GameBoard from "./components/GameBoard";
 import GameOverScreen from "./components/GameOverScreen";
 import SetupScreen from "./components/SetupScreen";
 
+interface SevenWondersSetup {
+  playerCount: number;
+  strategy: string;
+  edifice: boolean;
+}
+
+const toSoloStart = ({ playerCount, strategy, edifice }: SevenWondersSetup): SoloStart => {
+  const config: Partial<SevenWondersConfig> = { edifice };
+  return { seats: againstAi(playerCount, strategy), config };
+};
+
 export default function SevenWonders({ source }: GameComponentProps) {
-  const navigate = useNavigate();
-  const { def, game, mp } = useGameShell<
+  const flow = useSessionFlow<
     SevenWondersPlayerView,
-    SevenWondersEvent,
+    SevenWondersAction,
     SevenWondersResult,
-    SevenWondersAction
-  >();
-
-  const [lastPlayerCount, setLastPlayerCount] = useState(3);
-  const [lastEdifice, setLastEdifice] = useState(false);
+    SevenWondersSetup
+  >(source, { toSoloStart });
+  // The final board stays up until the player asks for the results.
   const [showResults, setShowResults] = useState(false);
-  const lastViewRef = useRef<SevenWondersPlayerView | null>(null);
 
-  if (game.view) lastViewRef.current = game.view;
-  if (mp.view) lastViewRef.current = mp.view;
-
-  const backToMenu = useCallback(() => {
-    setShowResults(false);
-    if (source === "mp") mp.reset();
-    else game.reset();
-    navigate(`/play/${def.slug}`);
-  }, [source, mp.reset, game.reset, def.slug, navigate]);
-
-  const handleSoloStart = useCallback(
-    (playerCount: number, edifice: boolean) => {
-      setLastPlayerCount(playerCount);
-      setLastEdifice(edifice);
-      game.start({ playerCount, humanPlayers: [0], edifice });
-    },
-    [game.start],
-  );
-
-  const handleSoloAction = useCallback(
-    (action: SevenWondersAction) => {
-      game.send({ type: "PLAYER_ACTION", playerIndex: 0, action });
-    },
-    [game.send],
-  );
-
-  const handleMpAction = useCallback(
-    (action: SevenWondersAction) => {
-      // The server injects playerIndex for simultaneous play; send a
-      // placeholder so the event parses as a SevenWondersEvent.
-      mp.send({ type: "PLAYER_ACTION", playerIndex: -1, action });
-    },
-    [mp.send],
-  );
-
-  // --- Solo ---
-
-  if (source === "solo" && !game.view && !game.result) {
-    return <SetupScreen onStart={handleSoloStart} />;
+  if (flow.phase === "setup") {
+    return (
+      <SetupScreen
+        onStart={(setup) => {
+          setShowResults(false);
+          flow.start(setup);
+        }}
+      />
+    );
   }
+  if (!flow.view) return <BoardFallback />;
 
-  if (source === "solo" && game.result) {
+  if (flow.phase === "finished" && flow.result) {
     if (showResults) {
       return (
         <GameOverScreen
-          result={game.result}
-          myIndex={0}
-          onMenu={backToMenu}
-          onPlayAgain={() => {
-            setShowResults(false);
-            handleSoloStart(lastPlayerCount, lastEdifice);
-          }}
+          result={flow.result}
+          myIndex={flow.seat}
+          seatNames={flow.seatNames}
+          actions={flow.endActions.map((a) => ({
+            ...a,
+            onClick: () => {
+              setShowResults(false);
+              a.onClick();
+            },
+          }))}
         />
       );
     }
-    const view = game.view ?? lastViewRef.current;
-    if (view) {
-      return (
-        <GameBoard
-          view={view}
-          myIndex={0}
-          legalActions={[]}
-          onAction={handleSoloAction}
-          isGameOver
-          onShowResults={() => setShowResults(true)}
-        />
-      );
-    }
-  }
-
-  if (source === "solo" && game.view) {
     return (
       <GameBoard
-        view={game.view}
-        myIndex={0}
-        legalActions={game.legalActions}
-        onAction={handleSoloAction}
+        view={flow.view}
+        myIndex={flow.seat}
+        legalActions={[]}
+        onAction={flow.sendAction}
+        isGameOver
+        onShowResults={() => setShowResults(true)}
       />
     );
   }
 
-  // --- Multiplayer ---
-
-  if (source === "mp" && mp.result) {
-    if (showResults) {
-      return <GameOverScreen result={mp.result} myIndex={mp.playerIndex} onMenu={backToMenu} />;
-    }
-    const view = mp.view ?? lastViewRef.current;
-    if (view) {
-      return (
-        <GameBoard
-          view={view}
-          myIndex={mp.playerIndex}
-          legalActions={[]}
-          onAction={handleMpAction}
-          isGameOver
-          onShowResults={() => setShowResults(true)}
-        />
-      );
-    }
-  }
-
-  if (source === "mp" && mp.view) {
-    return (
-      <GameBoard
-        view={mp.view}
-        myIndex={mp.playerIndex}
-        legalActions={mp.legalActions}
-        onAction={handleMpAction}
-      />
-    );
-  }
-
-  return null;
+  return (
+    <GameBoard
+      view={flow.view}
+      myIndex={flow.seat}
+      legalActions={flow.legalActions}
+      onAction={flow.sendAction}
+    />
+  );
 }

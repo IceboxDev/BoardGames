@@ -1,10 +1,18 @@
 import { assign, fromPromise, type SnapshotFrom, setup } from "xstate";
 import { randomSeed } from "../../lib/rng";
 import { playerActionValidator, safeApply } from "../../machines/action-validation";
+import { rankedByKeys } from "../../machines/outcome";
+import { strategyGuard, typedSeatStrategies } from "../../machines/seats";
 import type { GameMachineSpec } from "../../machines/types";
-import { chooseAiAction } from "./ai/agent";
+import {
+  chooseAiAction,
+  SEVEN_WONDERS_STRATEGY_IDS,
+  type SevenWondersAgent,
+  type SevenWondersStrategyId,
+} from "./ai/agent";
 import { countShields, scienceProfile } from "./board";
 import { applyPendingAction, applyReveal, applySelection, createInitialState } from "./game-engine";
+import { type SevenWondersConfig, sevenWondersManifest } from "./manifest";
 import { getActivePlayer, getLegalActions } from "./rules";
 import type { ScoreBreakdown } from "./scoring";
 import { determineWinner, scoreFinal } from "./scoring";
@@ -29,6 +37,9 @@ import type {
 
 export interface SevenWondersContext {
   gameState: GameState;
+  /** Per seat: the AI strategy, or `null` for a person. */
+  strategies: (SevenWondersStrategyId | null)[];
+  /** Seats with `null` strategy — kept alongside for the guards. */
   humanPlayers: number[];
   /** AI selections computed in parallel with human input — applied when all humans have selected. */
   pendingAiSelections: (Selection | null)[] | null;
@@ -37,8 +48,8 @@ export interface SevenWondersContext {
 export type SevenWondersEvent =
   | {
       type: "START";
-      playerCount: number;
-      humanPlayers?: number[];
+      /** Per seat: an AI strategy, or `null` for a person. Its length is the player count. */
+      strategies: (SevenWondersStrategyId | null)[];
       seed?: number;
       sideMode?: "A" | "B" | "random";
       edifice?: boolean;
@@ -105,16 +116,52 @@ export interface SevenWondersResult {
 /**
  * Compute selections for every unselected AI seat WITHOUT mutating state.
  * Safe to run in parallel with human input: the draft is simultaneous, so an
- * AI's legal actions depend only on the shared start-of-turn state.
+ * AI's legal actions depend only on the shared start-of-turn state — and the
+ * seats decide concurrently (the search agent runs out of process).
  */
-function computeAiSelectionsPure(gs: GameState, humanPlayers: number[]): (Selection | null)[] {
-  const selections: (Selection | null)[] = new Array(gs.playerCount).fill(null);
-  for (let i = 0; i < gs.playerCount; i++) {
-    if (!humanPlayers.includes(i) && gs.selections[i] === null && gs.hands[i].length > 0) {
-      selections[i] = chooseAiAction(gs, i);
-    }
-  }
-  return selections;
+async function computeAiSelections(
+  gs: GameState,
+  strategies: readonly (SevenWondersStrategyId | null)[],
+  agent: SevenWondersAgent | null,
+): Promise<(Selection | null)[]> {
+  return Promise.all(
+    strategies.map((strategy, i) =>
+      strategy !== null && gs.selections[i] === null && gs.hands[i].length > 0
+        ? chooseAiAction(gs, i, strategy, agent)
+        : Promise.resolve(null),
+    ),
+  );
+}
+
+interface AiSelectionsInput {
+  gameState: GameState;
+  strategies: (SevenWondersStrategyId | null)[];
+}
+
+interface PendingActionInput {
+  gameState: GameState;
+  playerIndex: number;
+  strategy: SevenWondersStrategyId;
+}
+
+/**
+ * The machine's AI actors, bound to a search agent (or none). Run on the
+ * server; each first yields a macrotask so the session manager can flush
+ * state to clients before any work.
+ */
+function aiActors(agent: SevenWondersAgent | null) {
+  return {
+    computeAiSelections: fromPromise(async ({ input }: { input: AiSelectionsInput }) => {
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      return { selections: await computeAiSelections(input.gameState, input.strategies, agent) };
+    }),
+    computePendingAction: fromPromise(async ({ input }: { input: PendingActionInput }) => {
+      await new Promise((resolve) => setTimeout(resolve, 0));
+      return {
+        action: await chooseAiAction(input.gameState, input.playerIndex, input.strategy, agent),
+      };
+    }),
+  };
 }
 
 // ---------------------------------------------------------------------------
@@ -133,23 +180,9 @@ export const sevenWondersMachine = setup({
     revealDelay: 1400,
   },
 
-  actors: {
-    computeAiSelections: fromPromise(
-      async ({ input }: { input: { gameState: GameState; humanPlayers: number[] } }) => {
-        // Runs on the SERVER. Yield a macrotask so the session manager can
-        // flush state to clients before any synchronous work.
-        await new Promise((resolve) => setTimeout(resolve, 0));
-        return { selections: computeAiSelectionsPure(input.gameState, input.humanPlayers) };
-      },
-    ),
-
-    computePendingAction: fromPromise(
-      async ({ input }: { input: { gameState: GameState; playerIndex: number } }) => {
-        await new Promise((resolve) => setTimeout(resolve, 0));
-        return { action: chooseAiAction(input.gameState, input.playerIndex) };
-      },
-    ),
-  },
+  // No search agent by default: `search` seats play randomly until the server
+  // binds one with `withSevenWondersAgent`.
+  actors: aiActors(null),
 
   guards: {
     isGameOver: ({ context }) => context.gameState.phase === "game-over",
@@ -183,14 +216,18 @@ export const sevenWondersMachine = setup({
       if (event.type !== "START") return {};
       return safeApply("7-wonders", () => {
         const gs = createInitialState({
-          playerCount: event.playerCount,
+          playerCount: event.strategies.length,
           seed: event.seed ?? randomSeed(),
           sideMode: event.sideMode ?? "random",
           edifice: event.edifice,
         });
-        const humanPlayers =
-          event.humanPlayers ?? Array.from({ length: event.playerCount }, (_, i) => i);
-        return { gameState: gs, humanPlayers, pendingAiSelections: null };
+        const humanPlayers = event.strategies.flatMap((s, i) => (s === null ? [i] : []));
+        return {
+          gameState: gs,
+          strategies: event.strategies,
+          humanPlayers,
+          pendingAiSelections: null,
+        };
       });
     }),
 
@@ -232,6 +269,7 @@ export const sevenWondersMachine = setup({
   initial: "idle",
   context: {
     gameState: PLACEHOLDER,
+    strategies: [],
     humanPlayers: [0],
     pendingAiSelections: null,
   },
@@ -277,7 +315,7 @@ export const sevenWondersMachine = setup({
                     src: "computeAiSelections",
                     input: ({ context }) => ({
                       gameState: context.gameState,
-                      humanPlayers: context.humanPlayers,
+                      strategies: context.strategies,
                     }),
                     onDone: {
                       target: "done",
@@ -329,10 +367,14 @@ export const sevenWondersMachine = setup({
               invoke: {
                 id: "computePendingAction",
                 src: "computePendingAction",
-                input: ({ context }) => ({
-                  gameState: context.gameState,
-                  playerIndex: context.gameState.pendingQueue[0]?.playerIndex ?? 0,
-                }),
+                input: ({ context }) => {
+                  const playerIndex = context.gameState.pendingQueue[0]?.playerIndex ?? 0;
+                  return {
+                    gameState: context.gameState,
+                    playerIndex,
+                    strategy: context.strategies[playerIndex] ?? "random",
+                  };
+                },
                 onDone: {
                   target: "#sevenWonders.active.routing",
                   actions: assign(({ context, event }) => {
@@ -344,8 +386,12 @@ export const sevenWondersMachine = setup({
                     }));
                   }),
                 },
-                onError: { target: "#sevenWonders.active.routing" },
+                // A failed pick is retried after the reveal beat, not in a tight loop.
+                onError: { target: "retry" },
               },
+            },
+            retry: {
+              after: { revealDelay: "#sevenWonders.active.routing" },
             },
             waiting: {
               on: {
@@ -481,13 +527,33 @@ const validateSevenWondersAction = playerActionValidator<
 // Spec export
 // ---------------------------------------------------------------------------
 
+/**
+ * The machine with `search` seats bound to `agent` — how the server gives
+ * each session the C++ search without any module-global state.
+ */
+export function withSevenWondersAgent(agent: SevenWondersAgent): typeof sevenWondersMachine {
+  return sevenWondersMachine.provide({ actors: aiActors(agent) });
+}
+
+const toStrategy = strategyGuard("7 Wonders", SEVEN_WONDERS_STRATEGY_IDS);
+
 export const sevenWondersSpec: GameMachineSpec<
   typeof sevenWondersMachine,
   SevenWondersPlayerView,
   SevenWondersAction,
-  SevenWondersResult
+  SevenWondersResult,
+  SevenWondersConfig
 > = {
   machine: sevenWondersMachine,
+  manifest: sevenWondersManifest,
+
+  buildStart: ({ seats, config, seed }) => ({
+    type: "START",
+    strategies: typedSeatStrategies(seats, toStrategy),
+    seed,
+    sideMode: config.sideMode,
+    edifice: config.edifice,
+  }),
 
   getPlayerView(snapshot, player) {
     return buildPlayerView(snapshot.context, player);
@@ -518,5 +584,24 @@ export const sevenWondersSpec: GameMachineSpec<
 
   isGameOver(snapshot) {
     return snapshot.matches("gameOver");
+  },
+
+  // Most points wins; a tie goes to the most coins, and seats level on both share.
+  getOutcome(snapshot) {
+    const gs = snapshot.context.gameState;
+    if (gs?.phase !== "game-over") return null;
+    const totals = scoreFinal(gs).map((b) => b.total);
+    return rankedByKeys(totals.map((total, i) => [total, gs.players[i]?.coins ?? 0]));
+  },
+
+  getReplayLog(snapshot) {
+    const gs = snapshot.context.gameState;
+    if (gs?.phase !== "game-over") return null;
+    return {
+      formatVersion: 1,
+      seed: gs.seed,
+      strategies: snapshot.context.strategies,
+      actionLog: gs.actionLog,
+    };
   },
 };

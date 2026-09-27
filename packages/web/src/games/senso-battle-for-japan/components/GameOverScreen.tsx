@@ -3,7 +3,12 @@ import type {
   SensoResult,
 } from "@boardgames/core/games/senso-battle-for-japan/types";
 import { factionLabel } from "@boardgames/core/games/senso-battle-for-japan/types";
-import { GameOverLayout, GameOverStats, StatItem } from "../../../components/game-over";
+import {
+  type GameOverAction,
+  GameOverLayout,
+  GameOverStats,
+  StatItem,
+} from "../../../components/game-over";
 import { Surface } from "../../../components/ui";
 import { cn } from "../../../lib/cn";
 import { seatLabel } from "../logic/seat-labels";
@@ -15,8 +20,7 @@ interface Props {
   view: SensoPlayerView;
   result: SensoResult;
   names: readonly (string | null)[];
-  onMenu: () => void;
-  onPlayAgain?: () => void;
+  actions: readonly GameOverAction[];
 }
 
 const TIEBREAK_NOTE: Record<SensoResult["tiebreak"], string | null> = {
@@ -26,7 +30,7 @@ const TIEBREAK_NOTE: Record<SensoResult["tiebreak"], string | null> = {
   draw: "Tied on points and cubes with no Emperor seated — nobody claims the throne.",
 };
 
-export default function GameOverScreen({ view, result, names, onMenu, onPlayAgain }: Props) {
+export default function GameOverScreen({ view, result, names, actions }: Props) {
   const mine = view.me >= 0;
   const iWon = mine && result.winner === view.me;
   const winnerLabel = result.winner === null ? null : seatLabel(view, result.winner, names);
@@ -34,13 +38,6 @@ export default function GameOverScreen({ view, result, names, onMenu, onPlayAgai
   const order = [...result.placements.keys()].sort(
     (a, b) => result.placements[a] - result.placements[b] || a - b,
   );
-  const actions: { label: string; variant: "primary" | "secondary"; onClick: () => void }[] = [];
-  if (onPlayAgain) actions.push({ label: "Play Again", variant: "primary", onClick: onPlayAgain });
-  actions.push({
-    label: "Back to Menu",
-    variant: onPlayAgain ? "secondary" : "primary",
-    onClick: onMenu,
-  });
   const note = TIEBREAK_NOTE[result.tiebreak];
 
   return (

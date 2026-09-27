@@ -1,17 +1,18 @@
 import { randomUUID } from "node:crypto";
-import type { GameMachineSpec } from "@boardgames/core/machines/types";
+import type { StartSeat } from "@boardgames/core/machines/seats";
+import type { AnyGameMachineSpec } from "@boardgames/core/machines/types";
 import type { WSContext } from "hono/ws";
-import type { AnyActorLogic, AnyActorRef } from "xstate";
+import type { AnyActorRef } from "xstate";
 import { createActor } from "xstate";
-import { getDb } from "../db.ts";
+import { getServerGame } from "../games/registry.ts";
 import { gameLog } from "../lib/game-log.ts";
-import { getMachineSpec } from "./machine-registry.ts";
+import { saveMatch } from "../matches/store.ts";
 import { handleRoomWsClose } from "./room-manager.ts";
+import { prepareStart } from "./start.ts";
 import type { ClientToServerMessage, ServerToClientMessage } from "./types.ts";
 
-// Side-table populated at WS upgrade time after requireAuth runs.
-// Future work (e.g. reconnection by user id, per-session ownership checks)
-// reads from here. Today nothing in the protocol layer consumes it yet.
+// Side-table populated at WS upgrade time after requireAuth runs: the account
+// behind every socket. Seat ownership, reconnection and match history key off it.
 const wsUserIds = new Map<WSContext, string>();
 export const wsAuth = {
   set(ws: WSContext, userId: string): void {
@@ -53,12 +54,21 @@ export interface PlayerConnection {
   connected: boolean;
 }
 
+/** A seat as this session knows it — the game's `StartSeat` plus who holds it. */
+export type SessionSeat = StartSeat & {
+  /** The account in a human seat; `null` for AI seats. */
+  readonly userId: string | null;
+  /** Display name for disconnect notices (rooms); `null` when unknown. */
+  readonly name: string | null;
+};
+
 interface ActiveSession {
   id: string;
   actor: AnyActorRef;
-  spec: GameMachineSpec<AnyActorLogic, unknown, unknown, unknown>;
+  spec: AnyGameMachineSpec;
   gameSlug: string;
-  config: Record<string, unknown>;
+  seats: readonly SessionSeat[];
+  seed: number;
   players: PlayerConnection[];
   roomCode?: string;
 }
@@ -92,79 +102,42 @@ function sendToAllPlayers(
   }
 }
 
+function phaseOf(snapshot: ReturnType<AnyActorRef["getSnapshot"]>): string {
+  return typeof snapshot.value === "string" ? snapshot.value : JSON.stringify(snapshot.value);
+}
+
 // ---------------------------------------------------------------------------
-// Replay persistence
+// Match persistence
 // ---------------------------------------------------------------------------
 
-async function persistReplay(
+/**
+ * Save the finished game — its outcome, seed, log and who sat where. A game
+ * that reports no outcome or log is a spec bug; it is logged, not saved.
+ */
+async function persistMatch(
   active: ActiveSession,
-  snapshot: ReturnType<ActiveSession["actor"]["getSnapshot"]>,
+  snapshot: ReturnType<AnyActorRef["getSnapshot"]>,
 ): Promise<number | undefined> {
-  if (!active.spec.getReplayLog) {
-    console.warn(`[persistReplay] ${active.gameSlug}: spec has no getReplayLog — replay NOT saved`);
-    return undefined;
-  }
-  const log = active.spec.getReplayLog(snapshot) as {
-    scoreA?: number;
-    scoreB?: number;
-    scores?: number[];
-    playerCount?: number;
-    durak?: number | null;
-  } | null;
-  if (!log) {
-    console.warn(
-      `[persistReplay] ${active.gameSlug}: getReplayLog returned null — replay NOT saved`,
+  const outcome = active.spec.getOutcome(snapshot);
+  const log = active.spec.getReplayLog(snapshot);
+  if (!outcome || log === null) {
+    console.error(
+      `[persistMatch] ${active.gameSlug}: game over without an outcome or replay log — NOT saved`,
     );
     return undefined;
   }
-
-  const result = active.spec.getResult(snapshot) as {
-    winner?: unknown;
-    durak?: unknown;
-    outcome?: unknown;
-  } | null;
-
-  let winner: string;
-  if (log.durak !== undefined && log.durak !== null) {
-    winner = `p${log.durak}`;
-  } else if (typeof result?.winner === "number" && Number.isInteger(result.winner)) {
-    // Any seat index, not just 0/1 — Sensō and other N-player games crown
-    // seats 2–4 too; those rows used to be swallowed as "draw".
-    winner = result.winner >= 0 ? `p${result.winner}` : "draw";
-  } else if (typeof result?.outcome === "string") {
-    // Cooperative games (Sky Team, Pandemic) report a single outcome string
-    // instead of a winning player index — "win" means the team landed, anything
-    // starting with "loss-" means the team didn't. Map both onto the same
-    // p0/p1 buckets the match-history table already understands so the row
-    // shows up as Win/Loss rather than getting swallowed as a draw nobody
-    // bothered to display.
-    winner = result.outcome === "win" ? "p0" : "p1";
-  } else {
-    winner = "draw";
-  }
-
-  const aiEngine =
-    (active.config.aiEngine as string | undefined) ??
-    (active.config.strategies as (string | null)[] | undefined)?.find((s) => s !== null) ??
-    null;
-
-  const info = await getDb().execute({
-    sql: "INSERT INTO session_replays (game_slug, ai_engine, replay_json, score_p0, score_p1, winner, scores_json, player_count) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-    args: [
-      active.gameSlug,
-      aiEngine,
-      JSON.stringify(log),
-      log.scoreA ?? null,
-      log.scoreB ?? null,
-      winner,
-      log.scores ? JSON.stringify(log.scores) : null,
-      log.playerCount ?? null,
-    ],
+  const id = await saveMatch({
+    gameSlug: active.gameSlug,
+    seed: active.seed,
+    outcome,
+    log,
+    seats: active.seats.map((seat) => ({
+      kind: seat.kind,
+      userId: seat.kind === "human" ? seat.userId : null,
+      strategy: seat.kind === "ai" ? seat.strategy : null,
+    })),
   });
-  const id = Number(info.lastInsertRowid);
-  console.log(
-    `[persistReplay] ${active.gameSlug} id=${id} winner=${winner} ai=${aiEngine ?? "human"}`,
-  );
+  gameLog(active.gameSlug, active.id, "match saved", { id, outcome });
   return id;
 }
 
@@ -175,8 +148,9 @@ async function persistReplay(
 /**
  * Tear a session down and tell whoever is still connected why.
  *
- * Used both for an explicit `leave-session` and for the error path below,
- * so a dying actor can never leave orphaned entries in `sessions`.
+ * Used for an explicit `leave-session`, the error path below, the end of a
+ * room's reconnect grace and server shutdown, so a dying actor can never leave
+ * orphaned entries in `sessions`.
  */
 function destroySession(active: ActiveSession, reason?: string): void {
   if (reason) {
@@ -192,17 +166,18 @@ function destroySession(active: ActiveSession, reason?: string): void {
     console.error(`[session ${active.id}] actor.stop() threw during teardown:`, err);
   }
   sessions.delete(active.id);
-  for (const ids of wsSessions.values()) ids.delete(active.id);
+  for (const p of active.players) wsSessions.get(p.ws)?.delete(active.id);
+}
+
+/** End a session by id — the room manager's hook when a room is finally closed. */
+export function endSession(sessionId: string, reason?: string): void {
+  const active = sessions.get(sessionId);
+  if (active) destroySession(active, reason);
 }
 
 function subscribeSession(active: ActiveSession): void {
   let isFirstGameUpdate = true;
 
-  // An OBSERVER OBJECT, not a bare function. With no `error` handler XState
-  // re-raises a failed transition on a macrotask (`setTimeout(() => { throw
-  // err })`), which is an uncaught exception — one bad action used to kill the
-  // process and every concurrent game with it. Supplying `error` keeps the
-  // blast radius at this one session.
   const fail = (err: unknown, what: string): void => {
     console.error(`[session ${active.id}] ${active.gameSlug} ${what}:`, err);
     gameLog(active.gameSlug, active.id, "machine error", {
@@ -212,34 +187,30 @@ function subscribeSession(active: ActiveSession): void {
   };
 
   const emit = (snapshot: ReturnType<ActiveSession["actor"]["getSnapshot"]>): void => {
-    const phase =
-      typeof snapshot.value === "string" ? snapshot.value : JSON.stringify(snapshot.value);
-
+    const phase = phaseOf(snapshot);
     if (phase === "idle") return;
 
     const activePlayer = active.spec.getActivePlayer(snapshot);
     gameLog(active.gameSlug, active.id, `→ ${phase}`, { activePlayer });
 
     if (active.spec.isGameOver(snapshot)) {
-      gameLog(active.gameSlug, active.id, "game over", { result: active.spec.getResult(snapshot) });
+      const outcome = active.spec.getOutcome(snapshot);
+      gameLog(active.gameSlug, active.id, "game over", { outcome });
       void (async () => {
         let replayId: number | undefined;
-        if (active.spec.getReplayLog) {
-          try {
-            replayId = await persistReplay(active, snapshot);
-          } catch (err) {
-            console.error("Failed to persist replay:", err);
-          }
+        try {
+          replayId = await persistMatch(active, snapshot);
+        } catch (err) {
+          console.error(`[persistMatch] ${active.gameSlug} failed:`, err);
         }
-        // Persisting the replay is a round trip to Turso. Everyone can have
-        // disconnected in the meantime, in which case `handleWsClose` already
-        // stopped the actor and dropped the session — sending here would be a
-        // write to closed sockets.
+        // Saving is a round trip to Turso. Everyone can have left meanwhile,
+        // in which case the session is already gone — nothing to send.
         if (!sessions.has(active.id)) return;
         sendToAllPlayers(active, (p) => ({
           type: "game-over",
           sessionId: active.id,
           result: active.spec.getResult(snapshot),
+          outcome,
           playerView: active.spec.getPlayerView(snapshot, p.playerIndex),
           playerIndex: p.playerIndex,
           replayId,
@@ -250,26 +221,23 @@ function subscribeSession(active: ActiveSession): void {
 
     if (isFirstGameUpdate) {
       isFirstGameUpdate = false;
-
-      // For room-based games, game-started is sent by room-manager
-      // For solo sessions, send session-created
       if (!active.roomCode) {
         sendToAllPlayers(active, (p) => ({
           type: "session-created",
           sessionId: active.id,
+          playerIndex: p.playerIndex,
           playerView: active.spec.getPlayerView(snapshot, p.playerIndex),
           legalActions: active.spec.getLegalActions(snapshot, p.playerIndex),
           activePlayer,
           phase,
         }));
       } else {
-        // For room-based games, send game-started to each player
         sendToAllPlayers(active, (p) => ({
           type: "game-started",
           roomCode: active.roomCode ?? "",
           sessionId: active.id,
           playerIndex: p.playerIndex,
-          activePlayer: active.spec.getActivePlayer(snapshot),
+          activePlayer,
           playerView: active.spec.getPlayerView(snapshot, p.playerIndex),
           legalActions: active.spec.getLegalActions(snapshot, p.playerIndex),
           phase,
@@ -278,14 +246,9 @@ function subscribeSession(active: ActiveSession): void {
       return;
     }
 
-    // Check if the active player is an AI (no ws connection for that index)
-    const activeHasWs = active.players.some((p) => p.playerIndex === activePlayer);
-    if (!activeHasWs) {
+    if (active.seats[activePlayer]?.kind === "ai") {
       gameLog(active.gameSlug, active.id, "ai-thinking", { activePlayer });
-      sendToAllPlayers(active, (_p) => ({
-        type: "ai-thinking",
-        sessionId: active.id,
-      }));
+      sendToAllPlayers(active, () => ({ type: "ai-thinking", sessionId: active.id }));
     }
 
     sendToAllPlayers(active, (p) => ({
@@ -318,90 +281,91 @@ function subscribeSession(active: ActiveSession): void {
 }
 
 // ---------------------------------------------------------------------------
-// Solo session creation (backwards-compatible)
+// Starting sessions
 // ---------------------------------------------------------------------------
+
+type StartResult =
+  | { readonly ok: true; readonly sessionId: string }
+  | { readonly ok: false; readonly reason: string };
+
+/**
+ * Validate, build and start a game. Every session — solo or room — starts
+ * here; the START event comes only from the game's `buildStart`.
+ */
+function startSession(params: {
+  gameSlug: string;
+  seats: readonly SessionSeat[];
+  rawConfig: unknown;
+  players: PlayerConnection[];
+  roomCode?: string;
+}): StartResult {
+  const game = getServerGame(params.gameSlug);
+  if (!game) return { ok: false, reason: `Unknown game: ${params.gameSlug}` };
+
+  const prepared = prepareStart(game.spec, params.seats, params.rawConfig);
+  if (!prepared.ok) return prepared;
+
+  const active: ActiveSession = {
+    id: generateId(),
+    actor: createActor(game.createMachine()),
+    spec: game.spec,
+    gameSlug: params.gameSlug,
+    seats: params.seats,
+    seed: prepared.seed,
+    players: params.players,
+    ...(params.roomCode ? { roomCode: params.roomCode } : {}),
+  };
+  sessions.set(active.id, active);
+  for (const p of active.players) {
+    const set = wsSessions.get(p.ws) ?? new Set();
+    set.add(active.id);
+    wsSessions.set(p.ws, set);
+  }
+
+  gameLog(params.gameSlug, active.id, `session created (${params.roomCode ? "room" : "solo"})`, {
+    seats: params.seats.map((s) => (s.kind === "ai" ? s.strategy : "human")),
+    seed: prepared.seed,
+  });
+  subscribeSession(active);
+  active.actor.start();
+  active.actor.send(prepared.event);
+  return { ok: true, sessionId: active.id };
+}
 
 function handleCreateSession(
   ws: WSContext,
   msg: Extract<ClientToServerMessage, { type: "create-session" }>,
 ): void {
-  const spec = getMachineSpec(msg.gameSlug);
-  if (!spec) {
-    send(ws, { type: "error", message: `Unknown game: ${msg.gameSlug}` });
-    return;
-  }
-
-  const existing = wsSessions.get(ws)?.size ?? 0;
-  if (existing >= MAX_SESSIONS_PER_SOCKET) {
+  if ((wsSessions.get(ws)?.size ?? 0) >= MAX_SESSIONS_PER_SOCKET) {
     send(ws, { type: "error", message: "Too many open sessions on this connection" });
     return;
   }
-
-  const id = generateId();
-  const actor = createActor(spec.machine);
-  const config = msg.config as Record<string, unknown>;
-
-  const active: ActiveSession = {
-    id,
-    actor,
-    spec,
+  // The requesting socket holds every human seat of a solo game.
+  const userId = wsAuth.get(ws) ?? null;
+  const seats: SessionSeat[] = msg.seats.map((seat) =>
+    seat.kind === "ai"
+      ? { kind: "ai", strategy: seat.strategy, userId: null, name: null }
+      : { kind: "human", userId, name: null },
+  );
+  const firstHuman = seats.findIndex((s) => s.kind === "human");
+  const started = startSession({
     gameSlug: msg.gameSlug,
-    config,
-    players: [{ ws, playerIndex: 0, connected: true }],
-  };
-  sessions.set(id, active);
-
-  const wsSet = wsSessions.get(ws) ?? new Set();
-  wsSet.add(id);
-  wsSessions.set(ws, wsSet);
-
-  gameLog(msg.gameSlug, id, "session created (solo)", { config });
-  subscribeSession(active);
-
-  actor.start();
-  actor.send({ type: "START", ...config });
+    seats,
+    rawConfig: msg.config,
+    players: [{ ws, playerIndex: Math.max(0, firstHuman), connected: true }],
+  });
+  if (!started.ok) send(ws, { type: "error", message: started.reason });
 }
 
-// ---------------------------------------------------------------------------
-// Multi-client session creation (called by room-manager)
-// ---------------------------------------------------------------------------
-
-export function createMultiClientSession(
-  gameSlug: string,
-  players: PlayerConnection[],
-  config: Record<string, unknown>,
-  roomCode: string,
-): string {
-  const spec = getMachineSpec(gameSlug);
-  if (!spec) throw new Error(`Unknown game: ${gameSlug}`);
-
-  const id = generateId();
-  const actor = createActor(spec.machine);
-
-  const active: ActiveSession = {
-    id,
-    actor,
-    spec,
-    gameSlug,
-    config,
-    players,
-    roomCode,
-  };
-  sessions.set(id, active);
-
-  // Track ws → session for all players
-  for (const p of players) {
-    const wsSet = wsSessions.get(p.ws) ?? new Set();
-    wsSet.add(id);
-    wsSessions.set(p.ws, wsSet);
-  }
-
-  subscribeSession(active);
-
-  actor.start();
-  actor.send({ type: "START", ...config });
-
-  return id;
+/** Start a room's game (called by the room manager with the seated room). */
+export function startRoomSession(params: {
+  gameSlug: string;
+  seats: readonly SessionSeat[];
+  players: PlayerConnection[];
+  rawConfig: unknown;
+  roomCode: string;
+}): StartResult {
+  return startSession(params);
 }
 
 // ---------------------------------------------------------------------------
@@ -412,7 +376,6 @@ export function reconnectPlayer(sessionId: string, ws: WSContext, playerIndex: n
   const active = sessions.get(sessionId);
   if (!active) return;
 
-  // Update or add the player connection
   const existing = active.players.find((p) => p.playerIndex === playerIndex);
   if (existing) {
     existing.ws = ws;
@@ -427,14 +390,12 @@ export function reconnectPlayer(sessionId: string, ws: WSContext, playerIndex: n
 
   // Send current state to the reconnecting player
   const snapshot = active.actor.getSnapshot();
-  const phase =
-    typeof snapshot.value === "string" ? snapshot.value : JSON.stringify(snapshot.value);
-
   if (active.spec.isGameOver(snapshot)) {
     send(ws, {
       type: "game-over",
       sessionId,
       result: active.spec.getResult(snapshot),
+      outcome: active.spec.getOutcome(snapshot),
       playerView: active.spec.getPlayerView(snapshot, playerIndex),
       playerIndex,
     });
@@ -446,18 +407,17 @@ export function reconnectPlayer(sessionId: string, ws: WSContext, playerIndex: n
       legalActions: active.spec.getLegalActions(snapshot, playerIndex),
       activePlayer: active.spec.getActivePlayer(snapshot),
       playerIndex,
-      phase,
+      phase: phaseOf(snapshot),
     });
   }
 
-  // Notify other players
   for (const p of active.players) {
     if (p.playerIndex !== playerIndex && p.connected) {
       send(p.ws, {
         type: "player-reconnected",
         sessionId,
         playerIndex,
-        playerName: "",
+        playerName: active.seats[playerIndex]?.name ?? "",
       });
     }
   }
@@ -477,7 +437,6 @@ function handleAction(
     return;
   }
 
-  // Find this player
   const player = active.players.find((p) => p.ws === ws);
   if (!player) {
     send(ws, { type: "error", sessionId: msg.sessionId, message: "Not your session" });
@@ -490,7 +449,7 @@ function handleAction(
   });
 
   const snapshot = active.actor.getSnapshot();
-  const seat = resolveSeat(active, player, msg.action);
+  const seat = resolveSeat(active, player, msg.action.player);
 
   // Turn validation for multi-client sessions. `-1` means simultaneous play,
   // where every seat may act at once.
@@ -513,25 +472,29 @@ function handleAction(
     return;
   }
 
-  active.actor.send(validated.event as Parameters<typeof active.actor.send>[0]);
+  active.actor.send(validated.event);
+  // A machine mid-beat (an AI's pause, a reveal) does not take moves; say so
+  // rather than let the click vanish.
+  if (active.actor.getSnapshot() === snapshot) {
+    send(ws, { type: "error", sessionId: active.id, message: "Not yet — try that move again" });
+  }
 }
 
 /**
  * Which seat is this action played for?
  *
- * Multiplayer: always the authenticated seat — a client cannot name another.
- * Solo: the socket owns the entire table (co-op games such as Sky Team drive
- * several seats from one client, and Pandemic solo plays every role), so an
- * explicitly requested seat is honoured. There is no one to impersonate.
+ * Rooms: always the authenticated seat — a client cannot name another.
+ * Solo: the socket holds every human seat (Pandemic solo plays all roles, Sky
+ * Team solo can fly both seats), so an explicitly claimed seat is honoured —
+ * but only a human one; the AI seats are the machine's.
  */
-function resolveSeat(active: ActiveSession, player: PlayerConnection, raw: unknown): number {
-  if (active.players.length > 1) return player.playerIndex;
-  if (typeof raw !== "object" || raw === null) return player.playerIndex;
-  const claimed =
-    (raw as Record<string, unknown>).player ?? (raw as Record<string, unknown>).playerIndex;
-  return typeof claimed === "number" && Number.isInteger(claimed) && claimed >= 0
-    ? claimed
-    : player.playerIndex;
+function resolveSeat(
+  active: ActiveSession,
+  player: PlayerConnection,
+  claimed: number | undefined,
+): number {
+  if (active.roomCode || claimed === undefined) return player.playerIndex;
+  return active.seats[claimed]?.kind === "human" ? claimed : player.playerIndex;
 }
 
 // ---------------------------------------------------------------------------
@@ -572,9 +535,7 @@ export function endSoloSessionsForWs(ws: WSContext): void {
     const active = sessions.get(id);
     if (!active || active.roomCode) continue;
     gameLog(active.gameSlug, active.id, "solo session ended (socket entered a room)");
-    active.actor.stop();
-    sessions.delete(id);
-    ids.delete(id);
+    destroySession(active);
   }
 }
 
@@ -614,47 +575,35 @@ export function shutdownAllSessions(reason: string): number {
   return count;
 }
 
+/**
+ * A socket went away. A solo game ends with it. A room game only marks the
+ * seat disconnected: the room manager owns the room's lifetime, keeps it open
+ * through a reconnect grace period and ends the session with `endSession`.
+ */
 export function handleWsClose(ws: WSContext): void {
-  // Handle room disconnection
   handleRoomWsClose(ws);
 
   const sessionIds = wsSessions.get(ws);
-  if (sessionIds) {
-    for (const id of sessionIds) {
-      const active = sessions.get(id);
-      if (!active) continue;
-
-      if (active.roomCode) {
-        // Multi-client: mark player as disconnected
-        const player = active.players.find((p) => p.ws === ws);
-        if (player) {
-          player.connected = false;
-
-          // Notify remaining players
-          for (const p of active.players) {
-            if (p.connected) {
-              send(p.ws, {
-                type: "player-disconnected",
-                sessionId: id,
-                playerIndex: player.playerIndex,
-                playerName: "",
-              });
-            }
-          }
-
-          // Destroy only if all players disconnected
-          const anyConnected = active.players.some((p) => p.connected);
-          if (!anyConnected) {
-            active.actor.stop();
-            sessions.delete(id);
-          }
-        }
-      } else {
-        // Solo session: destroy immediately
-        active.actor.stop();
-        sessions.delete(id);
-      }
+  if (!sessionIds) return;
+  for (const id of [...sessionIds]) {
+    const active = sessions.get(id);
+    if (!active) continue;
+    if (!active.roomCode) {
+      destroySession(active);
+      continue;
     }
-    wsSessions.delete(ws);
+    const player = active.players.find((p) => p.ws === ws);
+    if (!player) continue;
+    player.connected = false;
+    for (const p of active.players) {
+      if (!p.connected) continue;
+      send(p.ws, {
+        type: "player-disconnected",
+        sessionId: id,
+        playerIndex: player.playerIndex,
+        playerName: active.seats[player.playerIndex]?.name ?? "",
+      });
+    }
   }
+  wsSessions.delete(ws);
 }

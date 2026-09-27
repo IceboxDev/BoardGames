@@ -39,9 +39,11 @@ export default function ModeSelectRoute() {
           : undefined
       }
       onMatchHistory={
-        def.hasMatchHistory ? () => navigate(`/play/${slug}/match-history`) : undefined
+        def.manifest || def.matchHistoryComponent
+          ? () => navigate(`/play/${slug}/match-history`)
+          : undefined
       }
-      onTournament={def.hasTournament ? () => navigate(`/play/${slug}/tournament`) : undefined}
+      onTournament={def.tournamentResults ? () => navigate(`/play/${slug}/tournament`) : undefined}
     />
   );
 }

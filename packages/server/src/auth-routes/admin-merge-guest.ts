@@ -120,6 +120,9 @@ export const GUEST_MERGE_COVERAGE = {
     "trainer_srs.user_id",
     "trainer_reviews.user_id",
     "trainer_settings.user_id",
+    // An online game's seat: a guest never signs in, so never sits at one
+    // (SET NULL would keep the game if it somehow had).
+    "replay_seats.user_id",
   ],
 } as const;
 

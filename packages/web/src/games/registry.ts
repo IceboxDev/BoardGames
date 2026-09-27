@@ -4,7 +4,7 @@
 // authority for slug, BGG id, accent hex, family membership, and any
 // per-entry editorial overrides (`displayTitle`, `bggOverrides`). Playable
 // games additionally export a `PlayableModule` from `<slug>/index.ts`
-// holding the React component, mode, tournament strategies, etc. — the
+// holding the React component, mode, tournament results, etc. — the
 // presence of that file flips a slug from `kind: "catalog"` to
 // `kind: "playable"`.
 //
@@ -28,6 +28,7 @@
 
 import { bggSnapshot } from "@boardgames/core/bgg";
 import { CATALOG as catalogRaw } from "@boardgames/core/games/catalog";
+import { getManifest } from "@boardgames/core/games/manifests";
 import placeholderThumbnail from "./_placeholder-thumbnail.svg?url";
 import { CatalogSchema } from "./catalog-schema";
 import type {
@@ -165,7 +166,13 @@ function buildDefinition(entry: CatalogEntry): GameDefinition {
 
   const playable = playableBySlug.get(entry.slug);
   if (playable) {
-    const def: PlayableGame = { ...base, ...playable, kind: "playable" };
+    const manifest = getManifest(entry.slug);
+    const def: PlayableGame = {
+      ...base,
+      ...playable,
+      kind: "playable",
+      ...(manifest ? { manifest } : {}),
+    };
     return def;
   }
   const def: CatalogGame = { ...base, kind: "catalog" };

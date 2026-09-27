@@ -1,3 +1,4 @@
+import { createRng, randomSeed } from "../../lib/rng";
 import { buildDeck, findFirstAttacker, shuffleInPlace } from "./deck";
 import { canBeat, getMaxBoutCards, getTableRanks } from "./rules";
 import type { Action, AIStrategyId, Card, GameState, Player } from "./types";
@@ -7,12 +8,14 @@ import { HAND_SIZE } from "./types";
 // Initial state
 // ---------------------------------------------------------------------------
 
+/** The deal is the only random step, so `seed` alone reproduces a game. */
 export function createInitialState(
   playerCount: number,
   strategies: (AIStrategyId | null)[],
+  seed: number = randomSeed(),
 ): GameState {
   const deck = buildDeck();
-  shuffleInPlace(deck);
+  shuffleInPlace(deck, createRng(seed));
 
   const players: Player[] = [];
   for (let i = 0; i < playerCount; i++) {
@@ -323,17 +326,15 @@ function resolveBout(state: GameState, successfulDefense: boolean): void {
   }
 
   // Advance attacker/defender
-  if (successfulDefense) {
+  if (successfulDefense && !state.players[state.defenderIndex].isOut) {
     // Defender becomes the new attacker
     state.attackerIndex = state.defenderIndex;
   } else {
-    // Player after defender becomes the new attacker (defender loses their turn)
+    // Player after defender becomes the new attacker — the defender either
+    // lost the bout (and their turn) or beat it with their last card and is out.
     state.attackerIndex = nextActivePlayer(state.players, state.defenderIndex);
   }
   state.defenderIndex = nextActivePlayer(state.players, state.attackerIndex);
-
-  // Edge case: if the new attacker or defender is out, keep advancing
-  // (nextActivePlayer already handles this)
 
   state.defenderStartHandSize = state.players[state.defenderIndex].hand.length;
   state.phase = "attacking";

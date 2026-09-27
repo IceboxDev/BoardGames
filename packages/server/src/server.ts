@@ -56,6 +56,7 @@ import { skillsRoutes } from "./auth-routes/skills.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
 import { probeDb } from "./db.ts";
+import { getRegisteredSlugs } from "./games/registry.ts";
 import { probeAi } from "./lib/ai/index.ts";
 import { requireTrustedOrigin } from "./lib/csrf.ts";
 import { errorResponse } from "./lib/error-response.ts";
@@ -64,7 +65,6 @@ import { peekContentStore } from "./lib/quiztopia/content-store.ts";
 import { clientIp, rateLimit } from "./lib/rate-limit.ts";
 import { LATEST_VERSION } from "./migrations/registry.ts";
 import { persistenceRoutes } from "./persistence/routes.ts";
-import { getRegisteredSlugs } from "./sessions/machine-registry.ts";
 import { handleWsClose, handleWsMessage, wsAuth } from "./sessions/manager.ts";
 import { ClientMessageParseError, parseClientMessage } from "./sessions/parse-client-message.ts";
 import {
@@ -80,7 +80,6 @@ import {
 } from "./sessions/room-manager.ts";
 import type { ClientToServerMessage } from "./sessions/types.ts";
 import { signWsTicket } from "./sessions/ws-ticket.ts";
-import { tournamentRoutes } from "./tournament/routes.ts";
 
 const app = new Hono();
 
@@ -308,12 +307,6 @@ app.route("/api/purchases", purchaseRoutes);
 
 app.use("/api/bgg/*", requireAuth);
 app.route("/api/bgg", bggRoutes);
-
-// Tournaments fork one CPU worker per core, so they're gated to online-mode
-// users (not just any logged-in account); the route handler additionally caps
-// each user to one running tournament at a time (see tournament/manager.ts).
-app.use("/api/tournaments/*", requireAuth, requireOnline);
-app.route("/api/tournaments", tournamentRoutes);
 
 // D&D DM tool (campaign hall). Lives in the play area, so gated like it.
 // Nearly every mutating route here triggers an OpenAI call, and several

@@ -25,7 +25,7 @@ import { Button } from "../../../components/ui/Button";
 import { DEBUG_LAYOUT } from "../../../lib/debug";
 import { getCardImageUrl, getCardSkin } from "../assets/card-art";
 import cardBackUrl from "../assets/card-back.png";
-import { mapEKLog } from "../log-mapper";
+import { mapEKLog, type SeatNaming } from "../log-mapper";
 import Card from "./Card";
 import DefuseDialog, { ReinsertDialog } from "./DefuseDialog";
 import DiscardPile from "./DiscardPile";
@@ -37,6 +37,10 @@ import StealDialog from "./StealDialog";
 
 interface GameBoardProps {
   state: GameState;
+  /** This player's seat. A replay views from seat 0. */
+  myIndex?: number;
+  /** Who sits at each seat ("You", room names, AI labels). */
+  seatNames?: readonly string[];
   onAction?: (action: Action) => void;
   replayMode?: boolean;
   stepDescription?: string;
@@ -44,36 +48,45 @@ interface GameBoardProps {
 
 export default function GameBoard({
   state,
+  myIndex = 0,
+  seatNames,
   onAction,
   replayMode = false,
   stepDescription,
 }: GameBoardProps) {
-  const humanIndex = state.players.findIndex((p) => p.type === "human");
-  const viewerIndex = replayMode ? 0 : humanIndex;
+  const viewerIndex = replayMode ? 0 : myIndex;
+  const naming: SeatNaming = {
+    isMe: (seat) => !replayMode && seat === viewerIndex,
+    nameOf: (seat) =>
+      !replayMode && seat === viewerIndex
+        ? "You"
+        : (seatNames?.[seat] ??
+          (state.players[seat]?.type === "human" ? `Player ${seat + 1}` : `AI ${seat}`)),
+  };
   const activeDecider = getActiveDecider(state);
-  const isHumanTurn = !replayMode && activeDecider === humanIndex && state.phase !== "game-over";
+  const isHumanTurn = !replayMode && activeDecider === viewerIndex && state.phase !== "game-over";
 
   const showNopeWindow =
-    !replayMode && state.phase === "nope-window" && activeDecider === humanIndex;
+    !replayMode && state.phase === "nope-window" && activeDecider === viewerIndex;
 
-  const showExploding = !replayMode && state.phase === "exploding" && activeDecider === humanIndex;
+  const showExploding = !replayMode && state.phase === "exploding" && activeDecider === viewerIndex;
 
   const showReinserting =
-    !replayMode && state.phase === "reinserting" && activeDecider === humanIndex;
+    !replayMode && state.phase === "reinserting" && activeDecider === viewerIndex;
 
   const showFavor =
-    !replayMode && state.phase === "resolving-favor" && activeDecider === humanIndex;
+    !replayMode && state.phase === "resolving-favor" && activeDecider === viewerIndex;
 
   const showChoosingTarget =
-    !replayMode && state.phase === "choosing-target" && activeDecider === humanIndex;
+    !replayMode && state.phase === "choosing-target" && activeDecider === viewerIndex;
 
   const showChoosingCardName =
-    !replayMode && state.phase === "choosing-card-name" && activeDecider === humanIndex;
+    !replayMode && state.phase === "choosing-card-name" && activeDecider === viewerIndex;
 
-  const showPeek = !replayMode && state.phase === "peeking" && activeDecider === humanIndex;
+  const showPeek = !replayMode && state.phase === "peeking" && activeDecider === viewerIndex;
 
   const showDiscardPick =
-    !replayMode && state.phase === "choosing-discard" && activeDecider === humanIndex;
+    !replayMode && state.phase === "choosing-discard" && activeDecider === viewerIndex;
 
   const isActionPhaseForHuman = !replayMode && state.phase === "action-phase" && isHumanTurn;
 
@@ -144,7 +157,7 @@ export default function GameBoard({
 
   return (
     <GameScreen
-      sidebar={<ActionLog blocks={mapEKLog(state.actionLog ?? [], state.players)} />}
+      sidebar={<ActionLog blocks={mapEKLog(state.actionLog ?? [], naming)} />}
       leftSidebarLabel="Players"
       leftSidebar={
         <PlayerListPanel
@@ -152,7 +165,7 @@ export default function GameBoard({
           players={state.players.map(
             (p): PlayerEntry => ({
               index: p.index,
-              label: p.type === "human" ? "You" : `AI ${p.index}`,
+              label: naming.nameOf(p.index),
               handCount: p.hand.length,
               alive: p.alive,
               isActive: p.index === state.currentPlayerIndex && p.alive,
@@ -231,7 +244,7 @@ export default function GameBoard({
                 p.alive ? (
                   <div key={p.index}>
                     <p className="mb-1 text-xs text-fg-secondary">
-                      {p.type === "human" ? "You" : `Player ${p.index}`}
+                      {naming.nameOf(p.index)}
                       {p.index === state.currentPlayerIndex && (
                         <span className="ml-1 text-emerald-400">(active)</span>
                       )}
@@ -249,16 +262,16 @@ export default function GameBoard({
             </div>
           )}
 
-          {showNopeWindow && <NopeWindow state={state} onAction={dispatch} />}
+          {showNopeWindow && <NopeWindow state={state} naming={naming} onAction={dispatch} />}
 
           {showExploding && <DefuseDialog state={state} onAction={dispatch} />}
 
           {showReinserting && <ReinsertDialog state={state} onAction={dispatch} />}
 
-          {showFavor && <FavorDialog state={state} onAction={dispatch} />}
+          {showFavor && <FavorDialog state={state} naming={naming} onAction={dispatch} />}
 
           {(showChoosingTarget || showChoosingCardName) && (
-            <StealDialog state={state} onAction={dispatch} />
+            <StealDialog state={state} naming={naming} onAction={dispatch} />
           )}
 
           {showPeek && <PeekOverlay state={state} onAction={dispatch} />}

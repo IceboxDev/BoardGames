@@ -13,7 +13,7 @@ describe("sevenWondersMachine", () => {
     actor.start();
     expect(actor.getSnapshot().matches("idle")).toBe(true);
 
-    actor.send({ type: "START", playerCount: 3, seed: 42, sideMode: "A" });
+    actor.send({ type: "START", strategies: [null, null, null], seed: 42, sideMode: "A" });
     const snapshot = actor.getSnapshot();
     expect(snapshot.matches("idle")).toBe(false);
     const view = sevenWondersSpec.getPlayerView(snapshot, 0);
@@ -27,8 +27,8 @@ describe("sevenWondersMachine", () => {
     const b = createActor(sevenWondersMachine);
     a.start();
     b.start();
-    a.send({ type: "START", playerCount: 4, seed: 7, sideMode: "A" });
-    b.send({ type: "START", playerCount: 4, seed: 7, sideMode: "A" });
+    a.send({ type: "START", strategies: [null, null, null, null], seed: 7, sideMode: "A" });
+    b.send({ type: "START", strategies: [null, null, null, null], seed: 7, sideMode: "A" });
     expect(a.getSnapshot().context.gameState.hands).toEqual(
       b.getSnapshot().context.gameState.hands,
     );
@@ -39,7 +39,7 @@ describe("sevenWondersMachine", () => {
   it("hides other players' hands but exposes all public board state", () => {
     const actor = createActor(sevenWondersMachine);
     actor.start();
-    actor.send({ type: "START", playerCount: 3, seed: 1, sideMode: "A" });
+    actor.send({ type: "START", strategies: [null, null, null], seed: 1, sideMode: "A" });
     const ctx = actor.getSnapshot().context;
 
     const view = buildPlayerView(ctx, 0);
@@ -62,7 +62,7 @@ describe("sevenWondersMachine", () => {
   it("reports simultaneous play while selecting", () => {
     const actor = createActor(sevenWondersMachine);
     actor.start();
-    actor.send({ type: "START", playerCount: 3, seed: 1, sideMode: "A" });
+    actor.send({ type: "START", strategies: [null, null, null], seed: 1, sideMode: "A" });
     const snapshot = actor.getSnapshot();
     expect(sevenWondersSpec.getActivePlayer(snapshot)).toBe(-1);
     expect(getActivePlayer(snapshot.context.gameState)).toBe(-1);
@@ -74,7 +74,7 @@ describe("sevenWondersMachine", () => {
   it("advances a turn when all humans have selected", async () => {
     const actor = createActor(fastMachine);
     actor.start();
-    actor.send({ type: "START", playerCount: 3, seed: 5, sideMode: "A", humanPlayers: [0, 1, 2] });
+    actor.send({ type: "START", strategies: [null, null, null], seed: 5, sideMode: "A" });
     const gs = actor.getSnapshot().context.gameState;
     for (let i = 0; i < 3; i++) {
       actor.send({
@@ -92,7 +92,7 @@ describe("sevenWondersMachine", () => {
   it("plays a full all-AI game to completion with a valid result", async () => {
     const actor = createActor(fastMachine);
     actor.start();
-    actor.send({ type: "START", playerCount: 3, seed: 99, humanPlayers: [] });
+    actor.send({ type: "START", strategies: ["random", "random", "random"], seed: 99 });
 
     await waitFor(actor, (s) => s.matches("gameOver"), { timeout: 30000 });
 
@@ -117,7 +117,11 @@ describe("sevenWondersMachine", () => {
   it("plays a 7-player all-AI game to completion", async () => {
     const actor = createActor(fastMachine);
     actor.start();
-    actor.send({ type: "START", playerCount: 7, seed: 123, humanPlayers: [] });
+    actor.send({
+      type: "START",
+      strategies: ["random", "random", "random", "random", "random", "random", "random"],
+      seed: 123,
+    });
     await waitFor(actor, (s) => s.matches("gameOver"), { timeout: 30000 });
     const result = sevenWondersSpec.getResult(actor.getSnapshot());
     expect(result?.totals).toHaveLength(7);

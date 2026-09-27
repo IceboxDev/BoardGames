@@ -11,6 +11,7 @@ import { createRng, randomSeed } from "../../lib/rng.ts";
 import { playerActionValidator, safeApply } from "../../machines/action-validation.ts";
 import type { GameMachineSpec } from "../../machines/types.ts";
 import { applyAction } from "./engine.ts";
+import { type QuiztopiaConfig, quiztopiaManifest } from "./manifest.ts";
 import { buildPlayerView } from "./player-view.ts";
 import { getQuestionSource, type QuestionSource } from "./question-source.ts";
 import { buildReplayLog, toResult } from "./replay-log.ts";
@@ -158,9 +159,22 @@ export const quiztopiaSpec: GameMachineSpec<
   typeof quiztopiaMachine,
   QuiztopiaPlayerView,
   QuiztopiaAction,
-  QuiztopiaResult
+  QuiztopiaResult,
+  QuiztopiaConfig
 > = {
   machine: quiztopiaMachine,
+  manifest: quiztopiaManifest,
+
+  // Seats are the table order; every seat is a person (no AI).
+  buildStart: ({ seats, config, seed }) => ({
+    type: "START",
+    playerCount: seats.length,
+    difficulty: config.difficulty,
+    expert: config.expert,
+    deck: config.deck,
+    ...(config.language ? { language: config.language } : {}),
+    seed,
+  }),
 
   getPlayerView(snapshot, player) {
     const gs = snapshot.context.gameState;
@@ -196,6 +210,19 @@ export const quiztopiaSpec: GameMachineSpec<
 
   isGameOver(snapshot) {
     return snapshot.matches("gameOver");
+  },
+
+  // Co-operative: the table builds the city together or loses it together.
+  getOutcome(snapshot) {
+    const gs = snapshot.context.gameState;
+    if (!gs || gs.outcome === null) return null;
+    const result = toResult(gs);
+    return {
+      kind: "coop",
+      won: result.outcome === "win",
+      score: result.won,
+      detail: result.outcome,
+    };
   },
 
   getReplayLog(snapshot): QuiztopiaReplayLog | null {

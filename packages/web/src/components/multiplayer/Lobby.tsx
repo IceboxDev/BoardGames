@@ -1,5 +1,10 @@
-import type { RoomSlot, RoomState } from "@boardgames/core/protocol";
-import type { GameRoomConfig } from "@boardgames/core/protocol/room-config";
+import {
+  defaultStrategyFor,
+  type GameManifest,
+  type StrategyInfo,
+  strategiesFor,
+} from "@boardgames/core/machines/manifest";
+import { type RoomSlot, type RoomState, roomSeating } from "@boardgames/core/protocol";
 import { ControlGroup, SetupLayout } from "../setup";
 import { Badge, Button, Chip, ErrorAlert, Select } from "../ui";
 
@@ -8,13 +13,14 @@ interface LobbyProps {
   roomState: RoomState;
   mySlot: number;
   isHost: boolean;
-  roomConfig: GameRoomConfig;
+  /** Seat range, role names and the AIs on offer. */
+  manifest: GameManifest;
   onStart: () => void;
   onLeave: () => void;
   onKick: (slotIndex: number) => void;
   onToggleReady: () => void;
   onConfigureSlot?: (slotIndex: number, slot: RoomSlot) => void;
-  /** Host-only role swap (see `GameRoomConfig.seatNames` / `RoomState.seatOrder`). */
+  /** Host-only role swap (see the manifest's `seatNames` / `RoomState.seatOrder`). */
   onSwapSeats?: (a: number, b: number) => void;
   error?: string | null;
   children?: React.ReactNode;
@@ -36,7 +42,7 @@ export function Lobby({
   roomState,
   mySlot,
   isHost,
-  roomConfig,
+  manifest,
   onStart,
   onLeave,
   onKick,
@@ -49,8 +55,12 @@ export function Lobby({
   title,
 }: LobbyProps) {
   const allHumansReady = roomState.slots.every((s) => s.kind !== "human" || s.ready);
-  const humanCount = roomState.slots.filter((s) => s.kind === "human" && s.connected).length;
-  const canStart = isHost && allHumansReady && humanCount >= roomConfig.minPlayers;
+  // People and AI both fill seats; the game needs `manifest.seats.min` of them.
+  const seating = roomSeating(roomState.slots, roomState.seatOrder);
+  const filled = seating.length;
+  const minSeats = manifest.seats.min;
+  const canStart = isHost && allHumansReady && filled >= minSeats;
+  const aiOffered = strategiesFor(manifest, filled);
 
   const slotRows = roomState.slots.map((slot, i) => (
     <SlotRow
@@ -59,17 +69,18 @@ export function Lobby({
       slot={slot}
       index={i}
       isMe={i === mySlot}
-      seatName={roomConfig.seatNames?.[roomState.seatOrder?.[i] ?? i]}
+      seatName={seating.includes(i) ? manifest.seatNames?.[seating.indexOf(i)] : undefined}
       canKick={isHost && i !== 0 && slot.kind === "human"}
-      canToggle={isHost && i !== 0 && roomConfig.supportsAI}
-      botStrategies={roomConfig.botStrategies}
+      canToggle={isHost && i !== 0 && manifest.strategies.length > 0}
+      botStrategies={aiOffered}
       onKick={() => onKick(i)}
       onToggle={() => {
         if (!onConfigureSlot) return;
         if (slot.kind === "open") {
+          const strategy = defaultStrategyFor(manifest, filled + 1);
           onConfigureSlot(i, {
             kind: "ai",
-            aiStrategy: roomConfig.botStrategies?.[0]?.id ?? "heuristic-v1",
+            ...(strategy ? { aiStrategy: strategy } : {}),
             ready: false,
             connected: false,
           });
@@ -88,7 +99,7 @@ export function Lobby({
   // (Sky Team: Pilot / Co-Pilot). Two-seat rooms only; players keep their
   // slots, just the role assignment flips.
   const swapRolesButton =
-    isHost && onSwapSeats && roomConfig.seatNames && roomState.slots.length === 2 ? (
+    isHost && onSwapSeats && manifest.seatNames && roomState.slots.length === 2 ? (
       <Button
         variant="secondary"
         size="xs"
@@ -102,9 +113,7 @@ export function Lobby({
   const startOrReadyButton = isHost ? (
     <Button variant="primary" size="lg" block disabled={!canStart} onClick={onStart}>
       Start Game
-      {!canStart && humanCount < roomConfig.minPlayers
-        ? ` (need ${roomConfig.minPlayers} players)`
-        : ""}
+      {!canStart && filled < minSeats ? ` (need ${minSeats} players)` : ""}
     </Button>
   ) : (
     <Button
@@ -119,8 +128,8 @@ export function Lobby({
 
   if (layout === "wide") {
     const launchStatus = isHost
-      ? humanCount < roomConfig.minPlayers
-        ? `Waiting for players (${humanCount}/${roomConfig.minPlayers} aboard)`
+      ? filled < minSeats
+        ? `Waiting for players (${filled}/${minSeats} aboard)`
         : allHumansReady
           ? "All crew aboard and ready."
           : "Waiting for the crew to ready up."
@@ -245,12 +254,12 @@ function SlotRow({
   slot: RoomSlot;
   index: number;
   isMe: boolean;
-  /** Role attached to this seat index (e.g. "Pilot"), from `GameRoomConfig.seatNames`. */
+  /** Role this slot plays (e.g. "Pilot"), from the manifest's `seatNames`. */
   seatName?: string;
   canKick: boolean;
   canToggle: boolean;
-  /** Selectable AI engines (see `GameRoomConfig.botStrategies`). */
-  botStrategies?: GameRoomConfig["botStrategies"];
+  /** The AIs on offer at the current table size. */
+  botStrategies: readonly StrategyInfo[];
   onKick: () => void;
   onToggle: () => void;
   onSetStrategy: (id: string) => void;
@@ -292,7 +301,7 @@ function SlotRow({
             {isMe && !isSlotHost && <Badge tone="emerald">You</Badge>}
           </div>
         ) : slot.kind === "ai" ? (
-          botStrategies && canToggle ? (
+          botStrategies.length > 0 && canToggle ? (
             <div className="flex items-center gap-2">
               <span className="shrink-0 text-sm text-sky-400">AI</span>
               <Select
@@ -310,7 +319,7 @@ function SlotRow({
             </div>
           ) : (
             <span className="text-sm text-sky-400">
-              AI ({botStrategies?.find((s) => s.id === slot.aiStrategy)?.label ?? slot.aiStrategy})
+              AI ({botStrategies.find((s) => s.id === slot.aiStrategy)?.label ?? slot.aiStrategy})
             </span>
           )
         ) : (

@@ -1,25 +1,20 @@
+import { skyTeamManifest } from "@boardgames/core/games/sky-team/manifest";
+import { configOrDefaults } from "@boardgames/core/machines/manifest";
 import { SectionHeading } from "../../components/setup";
 import type { LobbyConfigProps } from "../types";
 import ScenarioPicker from "./components/ScenarioPicker";
 import { SCENARIO_CARDS } from "./scenarios";
 
 /**
- * Resolve the current MP config (`{ scenarioId: "..." }`) to a scenario
- * card slug for the picker. The route seeds config from
- * `def.defaultMpConfig`, so on first render this matches whatever
- * `yul-green` (the only wired-up card today) points at; subsequent
- * picker changes flow back through `onChange`.
+ * The scenario card for the lobby's current config. The route seeds the
+ * config from the manifest's defaults; picker changes flow back through
+ * `onChange`.
  */
 function readSlug(value: unknown): string {
-  if (value && typeof value === "object" && "scenarioId" in value) {
-    const id = (value as { scenarioId?: unknown }).scenarioId;
-    if (typeof id === "string") {
-      const match = SCENARIO_CARDS.find((c) => c.backendId === id);
-      if (match) return match.slug;
-    }
-  }
+  const { scenarioId } = configOrDefaults(skyTeamManifest, value);
+  const match = SCENARIO_CARDS.find((c) => c.backendId === scenarioId);
   // Fall back to the first card with a wired backend id.
-  return SCENARIO_CARDS.find((c) => c.backendId != null)?.slug ?? "yul-green";
+  return match?.slug ?? SCENARIO_CARDS.find((c) => c.backendId != null)?.slug ?? "yul-green";
 }
 
 /**

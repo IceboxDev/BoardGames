@@ -1,9 +1,8 @@
 /**
- * Injectable async AI seam for Decrypto — the GPT-agent counterpart of the
- * 7 Wonders `setAiAgent` pattern. Core stays pure (no network/SDK deps): the
- * machine calls `getDecryptoAgent()`, which defaults to the deterministic
- * fallback; the server installs an OpenAI-backed implementation at boot via
- * `setDecryptoAgent`.
+ * The async AI seam for Decrypto. Core stays pure (no network/SDK deps): the
+ * machine's AI actors default to the deterministic fallback, and the server
+ * binds its model-backed agent per session with `withDecryptoAgent` (XState
+ * `provide`) — no module-global state.
  *
  * SAFETY CONTRACT: the machine wraps every call in a deadline race against the
  * fallback and a `.catch(fallback)`, then sanitizes the output against the
@@ -11,7 +10,6 @@
  * must be synchronous-fast, throw-free, and always legal.
  */
 import type { Code, DecodeMistake, Digit } from "../types";
-import { fallbackDecryptoAgent } from "./fallback";
 
 export interface RevealedClue {
   round: number;
@@ -69,15 +67,4 @@ export interface GuessInput {
 export interface DecryptoAiAgent {
   encrypt(input: EncryptInput): Promise<[string, string, string]>;
   guess(input: GuessInput): Promise<Code>;
-}
-
-let agent: DecryptoAiAgent = fallbackDecryptoAgent;
-
-/** Install (or reset, with null) the agent driving all Decrypto AI seats. */
-export function setDecryptoAgent(next: DecryptoAiAgent | null): void {
-  agent = next ?? fallbackDecryptoAgent;
-}
-
-export function getDecryptoAgent(): DecryptoAiAgent {
-  return agent;
 }

@@ -9,11 +9,8 @@ import { ErrorAlert } from "../ui/ErrorAlert";
 
 // ── Shared rendering ─────────────────────────────────────────────────────
 //
-// The two replay routes below both fetch a single game log and hand it
-// to `def.replayComponent`. The fetching surface differs (a stored
-// replay-id vs. a tournament-id + game-index), but the post-fetch UI is
-// identical: loading state, error state, optional "back" anchor. Kept in
-// one helper so the two routes diverge only on the fetch.
+// Fetches a stored game log and hands it to `def.replayComponent`, with the
+// shared loading / error / "back" chrome around it.
 
 function ReplayShell({
   loading,
@@ -80,7 +77,7 @@ export function MatchHistoryReplayRoute() {
     enabled: valid,
   });
 
-  if (!def.hasMatchHistory || !def.replayComponent) {
+  if (!def.manifest || !def.replayComponent) {
     return <Navigate to={`/play/${def.slug}`} replace />;
   }
   if (!valid) {
@@ -94,57 +91,6 @@ export function MatchHistoryReplayRoute() {
       log={query.data}
       backHref={`/play/${def.slug}/match-history`}
       backLabel="Back to history"
-    />
-  );
-}
-
-// ── Tournament replay ────────────────────────────────────────────────────
-//
-// `/play/:slug/tournament/:strategyA/:strategyB/:tournamentId/:gameIndex`.
-// Fetches the single game at `gameIndex` within the tournament via
-// `apiClient.getTournamentGame`. The TournamentMatchHistory table
-// navigates here when a row is clicked; back returns to that table.
-
-export function TournamentReplayRoute() {
-  const { def } = useGameShell();
-  const params = useParams<{
-    strategyA: string;
-    strategyB: string;
-    tournamentId: string;
-    gameIndex: string;
-  }>();
-  const gameIndex = Number.parseInt(params.gameIndex ?? "", 10);
-  const valid = Number.isFinite(gameIndex) && gameIndex >= 0 && !!params.tournamentId;
-
-  const query = useQuery({
-    queryKey: ["tournament-game", params.tournamentId, gameIndex],
-    queryFn: () => apiClient.getTournamentGame(params.tournamentId ?? "", gameIndex),
-    enabled: valid,
-  });
-
-  if (!def.hasTournament || !def.replayComponent) {
-    return <Navigate to={`/play/${def.slug}`} replace />;
-  }
-  if (!valid) {
-    return (
-      <Navigate
-        to={`/play/${def.slug}/tournament/${params.strategyA}/${params.strategyB}/${params.tournamentId}`}
-        replace
-      />
-    );
-  }
-
-  const backHref = `/play/${def.slug}/tournament/${encodeURIComponent(params.strategyA ?? "")}/${encodeURIComponent(
-    params.strategyB ?? "",
-  )}/${encodeURIComponent(params.tournamentId ?? "")}`;
-
-  return (
-    <ReplayShell
-      loading={query.isPending}
-      error={query.error}
-      log={query.data}
-      backHref={backHref}
-      backLabel="Back to match"
     />
   );
 }

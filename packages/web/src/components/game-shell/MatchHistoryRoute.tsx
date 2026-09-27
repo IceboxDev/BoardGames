@@ -6,9 +6,9 @@ import { BoardFallback } from "../RouteFallback";
 
 /**
  * Route element at `/play/:slug/match-history`. Renders the generic
- * `<MatchHistory>` table with a game-specific label resolver (engine /
- * strategy id → human label). Clicking a row navigates to the dedicated
- * replay URL — that URL is bookmarkable and survives refresh.
+ * `<MatchHistory>` of the viewer's online games — every server-run game has
+ * one. Clicking a row navigates to the dedicated replay URL — that URL is
+ * bookmarkable and survives refresh.
  *
  * The replay component itself is rendered by `<MatchHistoryReplayRoute>`,
  * which fetches the log by id and re-uses the game's
@@ -19,10 +19,6 @@ import { BoardFallback } from "../RouteFallback";
 export default function MatchHistoryRoute() {
   const navigate = useNavigate();
   const { def } = useGameShell();
-
-  if (!def.hasMatchHistory) {
-    return <Navigate to={`/play/${def.slug}`} replace />;
-  }
 
   // Game-specific override (Set has a dual trainer/PvP tabbed view).
   // The custom component owns its own internal navigation; we just pass
@@ -36,11 +32,14 @@ export default function MatchHistoryRoute() {
     );
   }
 
+  if (!def.manifest) {
+    return <Navigate to={`/play/${def.slug}`} replace />;
+  }
+
   return (
     <MatchHistory
       gameSlug={def.slug}
-      labelResolver={def.matchHistoryLabelResolver ?? ((id) => id)}
-      opponentLabel={def.matchHistoryOpponentLabel ?? "Opponent"}
+      manifest={def.manifest}
       onBack={() => navigate(`/play/${def.slug}`)}
       onSelectReplay={
         def.replayComponent ? (id) => navigate(`/play/${def.slug}/match-history/${id}`) : undefined

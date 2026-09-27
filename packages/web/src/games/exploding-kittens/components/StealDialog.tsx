@@ -8,9 +8,11 @@ import {
 import { GameDialogPanel } from "../../../components/game-layout";
 import { Button } from "../../../components/ui/Button";
 import { getCardImageUrl, getSkinsForType } from "../assets/card-art";
+import type { SeatNaming } from "../log-mapper";
 
 interface StealDialogProps {
   state: GameState;
+  naming: SeatNaming;
   onAction: (action: Action) => void;
 }
 
@@ -48,7 +50,7 @@ function CardButton({ cardType, onClick }: { cardType: CardType; onClick: () => 
   );
 }
 
-export default function StealDialog({ state, onAction }: StealDialogProps) {
+export default function StealDialog({ state, naming, onAction }: StealDialogProps) {
   const legalActions = getLegalActions(state);
 
   if (state.phase === "choosing-target") {
@@ -84,9 +86,7 @@ export default function StealDialog({ state, onAction }: StealDialogProps) {
                 onClick={() => onAction(t)}
               >
                 <span className="flex flex-col items-start">
-                  <span className="font-medium">
-                    {player.type === "human" ? "You" : `AI ${t.targetIndex}`}
-                  </span>
+                  <span className="font-medium">{naming.nameOf(t.targetIndex)}</span>
                   <span className="text-xs text-fg-secondary">{player.hand.length} cards</span>
                 </span>
               </Button>

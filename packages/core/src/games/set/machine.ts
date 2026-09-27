@@ -1,6 +1,5 @@
-import { and, assign, fromCallback, not, type SnapshotFrom, setup } from "xstate";
-import { directEventValidator, safeApply } from "../../machines/action-validation";
-import type { GameMachineSpec } from "../../machines/types";
+import { and, assign, fromCallback, not, setup } from "xstate";
+import { safeApply } from "../../machines/action-validation";
 import {
   buildFullDeck,
   isValidSet as checkValidSet,
@@ -575,84 +574,3 @@ export const setGameMachine = setup({
     },
   },
 });
-
-// ---------------------------------------------------------------------------
-// Spec export
-// ---------------------------------------------------------------------------
-
-export interface SetPlayerView {
-  slots: (SetCardData | null)[];
-  selected: Set<number>;
-  score: number;
-  penalties: number;
-  message: string;
-  deckRemaining: number;
-  gameRecord: GameRecord | null;
-  gameStartTime: number;
-  hintedCardId: number | null;
-  perSetRecords: PerSetRecord[];
-}
-
-function buildSetLegalActions(snapshot: SnapshotFrom<typeof setGameMachine>): GameEvent[] {
-  const events: GameEvent[] = [];
-  if (snapshot.matches("idle") || snapshot.matches("gameOver")) {
-    events.push({ type: "START_GAME" });
-  }
-  if (snapshot.matches({ dealing: "active" }) || snapshot.matches("playing")) {
-    events.push({ type: "CALL_SET" });
-  }
-  if (snapshot.matches("playing") && snapshot.context.deck.length >= 3) {
-    events.push({ type: "PLUS_THREE" });
-  }
-  if (snapshot.matches("playing")) {
-    events.push({ type: "USE_HINT" });
-  }
-  return events;
-}
-
-export const setSpec: GameMachineSpec<
-  typeof setGameMachine,
-  SetPlayerView,
-  GameEvent,
-  GameRecord | null
-> = {
-  machine: setGameMachine,
-
-  getPlayerView(snapshot, _player) {
-    const ctx = snapshot.context;
-    return {
-      slots: ctx.slots,
-      selected: ctx.selected,
-      score: ctx.score,
-      penalties: ctx.penalties,
-      message: ctx.message,
-      deckRemaining: ctx.deck.length,
-      gameRecord: ctx.gameRecord,
-      gameStartTime: ctx.gameStartTime,
-      hintedCardId: ctx.hintedCardId,
-      perSetRecords: ctx.perSetRecords,
-    };
-  },
-
-  getLegalActions(snapshot, _player) {
-    return buildSetLegalActions(snapshot);
-  },
-
-  validateAction: directEventValidator<typeof setGameMachine, GameEvent, GameEvent>({
-    legalActions: (snapshot) => buildSetLegalActions(snapshot),
-    toCandidate: (event) => event,
-    toEvent: (event) => event,
-  }),
-
-  getActivePlayer(_snapshot) {
-    return 0;
-  },
-
-  getResult(snapshot) {
-    return snapshot.context.gameRecord;
-  },
-
-  isGameOver(snapshot) {
-    return snapshot.matches("gameOver");
-  },
-};

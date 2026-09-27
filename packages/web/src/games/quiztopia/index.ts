@@ -11,9 +11,6 @@ export default {
   soloLabel: "Trainer",
   multiplayerDescription:
     "Co-op room for 1–6 — the app deals, hides answers and keeps score. A solo room is fine.",
-  hasMatchHistory: true,
-  matchHistoryOpponentLabel: "The dark side",
   rulesUrl: "/rules/quiztopia/spielregeln-2.0.pdf",
   lobbyConfigComponent: lazy(() => import("./QuiztopiaLobbyConfig")),
-  defaultMpConfig: { difficulty: 0, expert: false, deck: "original", language: "en" },
 } satisfies PlayableModule;

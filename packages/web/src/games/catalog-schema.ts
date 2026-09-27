@@ -33,7 +33,7 @@ export const CatalogEntrySchema = z
     bggOverrides: BggGameSchema.partial().optional(),
   })
   // Reject unknown fields rather than silently dropping them — catches
-  // typos like `tournamentStrategies: [...]` accidentally landing in
+  // typos like `lobbyConfigComponent: ...` accidentally landing in
   // catalog.json instead of a playable index.ts.
   .strict();
 

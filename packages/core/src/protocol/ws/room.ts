@@ -26,12 +26,27 @@ export const RoomStateSchema = z.object({
   hostName: z.string(),
   slots: z.array(RoomSlotSchema),
   /**
-   * Maps slot index → in-game seat (PlayerIndex). Identity when absent.
-   * Lets the host hand out roles independently of join order for games
-   * whose seats carry meaning (Sky Team: seat 0 = Pilot, seat 1 =
-   * Co-Pilot) — see `GameRoomConfig.seatNames` and the `swap-seats`
-   * client message.
+   * Seat rank per slot index; identity when absent. Lets the host hand out
+   * roles independently of join order for games whose seats carry meaning
+   * (Sky Team: seat 0 = Pilot, seat 1 = Co-Pilot) — see the manifest's
+   * `seatNames`, the `swap-seats` client message and `roomSeating`.
    */
   seatOrder: z.array(z.number().int().min(0)).optional(),
 });
 export type RoomState = z.infer<typeof RoomStateSchema>;
+
+/**
+ * The in-game seat order of a room: `result[seat]` is the slot index sitting
+ * there. Open slots are skipped, so seats are always 0…n−1 with no gaps, and
+ * the host's swaps (`seatOrder`) decide the order. The server seats a game
+ * with this and the web names players with it, so the two can never disagree.
+ */
+export function roomSeating(
+  slots: readonly RoomSlot[],
+  seatOrder: readonly number[] = [],
+): number[] {
+  const rank = (slot: number) => seatOrder[slot] ?? slot;
+  return slots
+    .flatMap((slot, i) => (slot.kind === "open" ? [] : [i]))
+    .sort((a, b) => rank(a) - rank(b) || a - b);
+}

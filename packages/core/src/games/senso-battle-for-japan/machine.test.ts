@@ -167,18 +167,19 @@ describe("sensoMachine — a human seat", () => {
 });
 
 describe("sensoSpec — replay log", () => {
-  it("is null in progress and structured (without a `durak` key) after the game", async () => {
+  it("is null in progress; after the game it is a versioned log with a matching outcome", async () => {
     const actor = start(["random", "random"], 5);
-    const getLog = sensoSpec.getReplayLog;
-    if (!getLog) throw new Error("expected getReplayLog");
-    expect(getLog(actor.getSnapshot())).toBeNull();
+    expect(sensoSpec.getReplayLog(actor.getSnapshot())).toBeNull();
+    expect(sensoSpec.getOutcome(actor.getSnapshot())).toBeNull();
     await runToEnd(actor);
-    const log = getLog(actor.getSnapshot()) as Record<string, unknown> | null;
+    const log = sensoSpec.getReplayLog(actor.getSnapshot()) as Record<string, unknown> | null;
     expect(log).not.toBeNull();
+    expect(log?.formatVersion).toBe(1);
     expect(log?.playerCount).toBe(2);
     expect((log?.scores as number[]).length).toBe(2);
-    expect(log).not.toHaveProperty("durak");
-    expect(typeof log?.scoreA).toBe("number");
+    const outcome = sensoSpec.getOutcome(actor.getSnapshot());
+    expect(outcome?.kind).toBe("ranked");
+    expect(outcome?.kind === "ranked" && outcome.placements).toEqual(log?.placements);
     actor.stop();
   }, 30_000);
 });

@@ -1,19 +1,42 @@
 import { z } from "zod";
+import { SeatRequestSchema } from "../../machines/seats.ts";
 import { GameSlugSchema } from "../common.ts";
 import { RoomSlotSchema } from "./room.ts";
 
 // ── Solo session ───────────────────────────────────────────────────────
 
+/**
+ * Start a solo game. `seats` lists who sits where — the requesting socket
+ * holds every human seat — and `config` carries the game's options. Both are
+ * checked on the server against the game's manifest before anything starts;
+ * the START event itself is built server-side, never taken from the client.
+ */
 const CreateSessionSchema = z.object({
   type: z.literal("create-session"),
   gameSlug: GameSlugSchema,
+  seats: z.array(SeatRequestSchema).min(1).max(8),
+  /** Game options; parsed by the game's `manifest.config` on the server. */
   config: z.unknown(),
 });
+
+/**
+ * One move, in the one shape every game accepts: `action` is one of the moves
+ * the game listed in `legalActions` (the game's validator matches it against
+ * its own list). `player` claims a seat — honoured only in a solo game, where
+ * one person holds several human seats (Pandemic's roles); a room seat always
+ * comes from the socket.
+ */
+export const PlayerActionEnvelopeSchema = z.object({
+  type: z.literal("PLAYER_ACTION"),
+  action: z.unknown(),
+  player: z.number().int().min(0).optional(),
+});
+export type PlayerActionEnvelope = z.infer<typeof PlayerActionEnvelopeSchema>;
 
 const ActionSchema = z.object({
   type: z.literal("action"),
   sessionId: z.string(),
-  action: z.unknown(),
+  action: PlayerActionEnvelopeSchema,
 });
 
 const LeaveSessionSchema = z.object({
@@ -49,6 +72,7 @@ const ConfigureRoomSchema = z.object({
 const StartRoomSchema = z.object({
   type: z.literal("start-room"),
   roomCode: z.string(),
+  /** Game options; parsed by the game's `manifest.config`. Seats come from the room. */
   config: z.unknown(),
 });
 

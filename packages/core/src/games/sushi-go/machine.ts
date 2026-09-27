@@ -1,11 +1,13 @@
 import { assign, fromPromise, type SnapshotFrom, setup } from "xstate";
 import { playerActionValidator, safeApply } from "../../machines/action-validation";
+import { firstAiStrategy, humanSeats, strategyGuard } from "../../machines/seats";
 import type { GameMachineSpec } from "../../machines/types";
 import type { NashAnalysis } from "./ai/nash";
 import { getLastNashAnalysis } from "./ai/nash";
-import type { StrategyFn, StrategyId } from "./ai/strategy";
-import { createStrategy } from "./ai/strategy";
+import { ALL_STRATEGIES, createStrategy, type StrategyFn, type StrategyId } from "./ai/strategy";
 import { applyRevealAndRotate, applySelection, createInitialState } from "./game-engine";
+import { sushiGoManifest } from "./manifest";
+import { sushiGoOutcome } from "./outcome";
 import { getActivePlayer, getLegalActions } from "./rules";
 import type {
   ActionLogEntry,
@@ -23,6 +25,8 @@ import type {
 
 export interface SushiGoContext {
   gameState: GameState;
+  /** The deal seed — with the action log, it reproduces the game. */
+  seed: number;
   humanPlayers: number[];
   strategy: StrategyFn;
   strategyId: string;
@@ -33,7 +37,14 @@ export interface SushiGoContext {
 }
 
 export type SushiGoEvent =
-  | { type: "START"; playerCount: number; humanPlayers?: number[]; strategyId?: string }
+  | {
+      type: "START";
+      playerCount: number;
+      humanPlayers: number[];
+      /** One engine drives every AI seat; Nash and Minimax only at two seats. */
+      strategyId: StrategyId;
+      seed: number;
+    }
   | { type: "PLAYER_ACTION"; playerIndex: number; action: SushiGoAction }
   | { type: "RESET" };
 
@@ -164,14 +175,13 @@ export const sushiGoMachine = setup({
     initGame: assign(({ event }) => {
       if (event.type !== "START") return {};
       return safeApply("sushi-go", () => {
-        const gs = createInitialState(event.playerCount);
-        const humanPlayers =
-          event.humanPlayers ?? Array.from({ length: event.playerCount }, (_, i) => i);
-        const stratId = (event.strategyId ?? "nash") as StrategyId;
+        const gs = createInitialState(event.playerCount, event.seed);
+        const stratId = event.strategyId;
         const strategy = createStrategy(stratId);
         return {
           gameState: gs,
-          humanPlayers,
+          seed: event.seed,
+          humanPlayers: event.humanPlayers,
           strategy,
           strategyId: stratId,
           nashAnalysis: null,
@@ -229,6 +239,7 @@ export const sushiGoMachine = setup({
   initial: "idle",
   context: {
     gameState: PLACEHOLDER,
+    seed: 0,
     humanPlayers: [0],
     strategy: createStrategy("nash"),
     strategyId: "nash",
@@ -421,6 +432,8 @@ const validateSushiGoAction = playerActionValidator<
 // Spec export
 // ---------------------------------------------------------------------------
 
+const toStrategy = strategyGuard("Sushi Go", ALL_STRATEGIES);
+
 export const sushiGoSpec: GameMachineSpec<
   typeof sushiGoMachine,
   SushiGoPlayerView,
@@ -428,6 +441,15 @@ export const sushiGoSpec: GameMachineSpec<
   SushiGoResult
 > = {
   machine: sushiGoMachine,
+  manifest: sushiGoManifest,
+
+  buildStart: ({ seats, seed }) => ({
+    type: "START",
+    playerCount: seats.length,
+    humanPlayers: humanSeats(seats),
+    strategyId: toStrategy(firstAiStrategy(seats) ?? "random"),
+    seed,
+  }),
 
   getPlayerView(snapshot, player) {
     return buildPlayerView(snapshot.context, player);
@@ -470,5 +492,16 @@ export const sushiGoSpec: GameMachineSpec<
 
   isGameOver(snapshot) {
     return snapshot.matches("gameOver");
+  },
+
+  getOutcome(snapshot) {
+    const gs = snapshot.context.gameState;
+    return gs?.phase === "game-over" ? sushiGoOutcome(gs) : null;
+  },
+
+  getReplayLog(snapshot) {
+    const { gameState: gs, seed } = snapshot.context;
+    if (gs?.phase !== "game-over") return null;
+    return { formatVersion: 1, seed, roundScores: gs.roundScores, actionLog: gs.actionLog };
   },
 };

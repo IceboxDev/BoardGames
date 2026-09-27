@@ -1,7 +1,6 @@
-// The result record and the replay the server persists at game over.
-// `scoreA`/`scoreB` are buildings won / lost — `persistReplay` maps them to
-// `score_p0` / `score_p1`, and `outcome` decides the p0/p1 "winner" bucket
-// the match-history table already understands for co-ops.
+// The result record and the replay the server persists at game over. How the
+// game ended for match history is the spec's `getOutcome` (a co-op outcome
+// scored by buildings won), not a field of this log.
 
 import { difficultyLabel } from "./player-view.ts";
 import { lostCount, requiredFor, wonCount } from "./rules.ts";
@@ -51,7 +50,7 @@ export function buildReplayLog(gs: QuiztopiaGameState): QuiztopiaReplayLog {
   const result = toResult(gs);
   return {
     slug: "quiztopia",
-    version: 1,
+    formatVersion: 1,
     config: {
       playerCount: gs.playerCount,
       seats: [...gs.seats],
@@ -66,7 +65,5 @@ export function buildReplayLog(gs: QuiztopiaGameState): QuiztopiaReplayLog {
     helpUsed: gs.helpDeck.filter((c) => c.used).map((c) => c.id),
     finalBuildings: [...gs.buildings],
     playerCount: gs.playerCount,
-    scoreA: result.won,
-    scoreB: result.lost,
   };
 }

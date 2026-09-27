@@ -17,6 +17,7 @@
 import { type Client, createClient } from "@libsql/client";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { BASELINE_TABLES } from "./0001-baseline.ts";
+import { RETIRED_TOURNAMENT_TABLES } from "./0045-drop-tournaments.ts";
 import { assertAtLatestVersion, runMigrations } from "./migrator.ts";
 import { LATEST_VERSION, migrations } from "./registry.ts";
 
@@ -49,14 +50,16 @@ describe("migration chain — full registry from empty", () => {
     await expect(assertAtLatestVersion(db)).resolves.toBeUndefined();
   });
 
-  it("creates every table the baseline contract declares", async () => {
+  it("creates every table the baseline contract declares, minus those later retired", async () => {
     await runMigrations(db);
+    const retired: readonly string[] = RETIRED_TOURNAMENT_TABLES;
     for (const table of Object.keys(BASELINE_TABLES)) {
       const { rows } = await db.execute({
         sql: "SELECT 1 FROM sqlite_master WHERE type = 'table' AND name = ? LIMIT 1",
         args: [table],
       });
-      expect(rows.length, `expected table "${table}" to exist after migration`).toBe(1);
+      const expected = retired.includes(table) ? 0 : 1;
+      expect(rows.length, `table "${table}" after the full chain`).toBe(expected);
     }
   });
 

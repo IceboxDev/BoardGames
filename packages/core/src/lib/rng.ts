@@ -16,14 +16,46 @@ export type Rng = () => number;
 /** Default non-deterministic RNG, backed by Math.random. */
 export const defaultRng: Rng = Math.random;
 
+/** One Mulberry32 output for an already-advanced state. */
+function mulberry32(s: number): number {
+  let t = Math.imul(s ^ (s >>> 15), 1 | s);
+  t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 0x100000000;
+}
+
+const MULBERRY32_STEP = 0x6d2b79f5;
+
 /** Mulberry32 — fast, well-distributed 32-bit PRNG. */
 export function createRng(seed: number): Rng {
   let s = seed | 0;
   return () => {
-    s = (s + 0x6d2b79f5) | 0;
-    let t = Math.imul(s ^ (s >>> 15), 1 | s);
-    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-    return ((t ^ (t >>> 14)) >>> 0) / 0x100000000;
+    s = (s + MULBERRY32_STEP) | 0;
+    return mulberry32(s);
+  };
+}
+
+/**
+ * A game state that carries its own generator. Mulberry32's whole state is one
+ * 32-bit integer, so it lives in the (serialisable) game state instead of in a
+ * closure — mid-game draws (a reshuffle, a new round's deal) stay deterministic
+ * in the START seed, and the state survives `structuredClone`/JSON.
+ *
+ * Never expose `rngState` in a player view: it predicts every future shuffle.
+ */
+export interface RngCarrier {
+  rngState: number;
+}
+
+/** The initial `rngState` for a seed — draws then match `createRng(seed)`. */
+export function rngStateFromSeed(seed: number): number {
+  return seed | 0;
+}
+
+/** An `Rng` that draws from — and advances — `carrier.rngState`. */
+export function rngFrom(carrier: RngCarrier): Rng {
+  return () => {
+    carrier.rngState = (carrier.rngState + MULBERRY32_STEP) | 0;
+    return mulberry32(carrier.rngState);
   };
 }
 

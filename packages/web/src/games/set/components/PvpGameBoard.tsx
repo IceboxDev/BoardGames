@@ -1,4 +1,4 @@
-import type { PvpGameEvent, SetPvpPlayerView } from "@boardgames/core/games/set/pvp-machine";
+import type { SetPvpAction, SetPvpPlayerView } from "@boardgames/core/games/set/pvp-machine";
 import type { PlayerId } from "@boardgames/core/games/set/pvp-types";
 import { useEffect } from "react";
 import { GameScreen } from "../../../components/game-layout";
@@ -12,7 +12,7 @@ interface PvpGameBoardProps {
   view: SetPvpPlayerView;
   playerIndex: number;
   opponentName: string;
-  send: (action: PvpGameEvent) => void;
+  send: (action: SetPvpAction) => void;
 }
 
 export default function PvpGameBoard({ view, playerIndex, opponentName, send }: PvpGameBoardProps) {
@@ -32,12 +32,12 @@ export default function PvpGameBoard({ view, playerIndex, opponentName, send }: 
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) return;
       if ((e.key === " " || e.key === "s" || e.key === "S") && canCallSet) {
         e.preventDefault();
-        send({ type: "CALL_SET", playerIndex: me });
+        send({ type: "CALL_SET" });
       }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [canCallSet, send, me]);
+  }, [canCallSet, send]);
 
   const selectionColor: SelectionColor = iAmSelecting ? "yellow" : "emerald";
 
@@ -65,7 +65,7 @@ export default function PvpGameBoard({ view, playerIndex, opponentName, send }: 
             size="lg"
             block
             disabled={!canCallSet}
-            onClick={() => send({ type: "CALL_SET", playerIndex: me })}
+            onClick={() => send({ type: "CALL_SET" })}
             className="text-lg font-extrabold tracking-wider active:scale-95"
           >
             SET!
@@ -127,8 +127,8 @@ export default function PvpGameBoard({ view, playerIndex, opponentName, send }: 
       <div className="min-h-0 flex-1">
         <CardGrid
           slots={view.slots}
-          selected={view.selected}
-          onToggle={(id) => send({ type: "SELECT_CARD", cardId: id, playerIndex: me })}
+          selected={new Set(view.selected)}
+          onToggle={(id) => send({ type: "SELECT_CARD", cardId: id })}
           disabled={!iAmSelecting}
           hintedCardId={null}
           selectionColor={selectionColor}

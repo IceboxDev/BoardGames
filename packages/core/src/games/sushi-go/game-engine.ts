@@ -1,3 +1,4 @@
+import { randomSeed, rngFrom, rngStateFromSeed } from "../../lib/rng";
 import { createDeck, dealHands, shuffleDeck } from "./deck";
 import { scorePuddings, scoreRoundDetailed } from "./scoring";
 import type {
@@ -12,8 +13,13 @@ import { HAND_SIZES, isNigiri } from "./types";
 
 // ── State Creation ─────────────────────────────────────────────────────────
 
-export function createInitialState(playerCount: number): GameState {
-  const deck = shuffleDeck(createDeck());
+/**
+ * Every round deals a fresh shuffled deck, so the generator rides in the state
+ * (`rngState`) and the whole game is reproducible from `seed`.
+ */
+export function createInitialState(playerCount: number, seed: number = randomSeed()): GameState {
+  const carrier = { rngState: rngStateFromSeed(seed) };
+  const deck = shuffleDeck(createDeck(), rngFrom(carrier));
   const { hands } = dealHands(deck, playerCount);
 
   const players: PlayerState[] = hands.map((hand) => ({
@@ -35,6 +41,7 @@ export function createInitialState(playerCount: number): GameState {
     roundScores: [],
     totalScores: new Array(playerCount).fill(0),
     actionLog: [],
+    rngState: carrier.rngState,
   };
 }
 
@@ -210,7 +217,8 @@ function endRound(
   }
 
   // Start new round — fresh deck, clear tableaux
-  const deck = shuffleDeck(createDeck());
+  const carrier = { rngState: state.rngState };
+  const deck = shuffleDeck(createDeck(), rngFrom(carrier));
   const { hands } = dealHands(deck, state.playerCount);
 
   const newPlayers: PlayerState[] = players.map((p, i) => ({
@@ -232,5 +240,6 @@ function endRound(
     roundScores,
     totalScores,
     actionLog,
+    rngState: carrier.rngState,
   };
 }

@@ -293,7 +293,7 @@ export interface QuiztopiaResult {
 
 export interface QuiztopiaReplayLog {
   slug: "quiztopia";
-  version: 1;
+  formatVersion: 1;
   config: {
     playerCount: number;
     seats: number[];
@@ -308,8 +308,4 @@ export interface QuiztopiaReplayLog {
   helpUsed: HelpCardId[];
   finalBuildings: BuildingStatus[];
   playerCount: number;
-  /** Buildings won → `session_replays.score_p0`. */
-  scoreA: number;
-  /** Buildings lost → `session_replays.score_p1`. */
-  scoreB: number;
 }

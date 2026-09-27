@@ -1,7 +1,9 @@
+import { type PandemicConfig, pandemicManifest } from "@boardgames/core/games/pandemic/manifest";
+import { configOrDefaults } from "@boardgames/core/machines/manifest";
 import { Chip } from "../../components/ui/Chip";
 import type { LobbyConfigProps } from "../types";
 
-type Difficulty = 4 | 5 | 6;
+type Difficulty = PandemicConfig["difficulty"];
 
 const OPTIONS: Difficulty[] = [4, 5, 6];
 
@@ -9,18 +11,6 @@ function label(d: Difficulty): string {
   if (d === 4) return "Intro";
   if (d === 5) return "Standard";
   return "Heroic";
-}
-
-function readDifficulty(value: unknown): Difficulty {
-  // The lobby route owns the config state and seeds it from
-  // `GameDefinition.defaultMpConfig` (`{ difficulty: 4 }`). We narrow it
-  // here so a host returning to the lobby with a previously-picked
-  // difficulty keeps the same chip pressed.
-  if (value && typeof value === "object" && "difficulty" in value) {
-    const d = (value as { difficulty?: number }).difficulty;
-    if (d === 4 || d === 5 || d === 6) return d;
-  }
-  return 4;
 }
 
 /**
@@ -31,7 +21,7 @@ function readDifficulty(value: unknown): Difficulty {
  * state, this component just renders three chips and reports clicks.
  */
 export default function PandemicLobbyConfig({ value, onChange }: LobbyConfigProps) {
-  const difficulty = readDifficulty(value);
+  const { difficulty } = configOrDefaults(pandemicManifest, value);
 
   return (
     <div className="mx-auto mb-4 w-full max-w-md">

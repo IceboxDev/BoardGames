@@ -1,34 +1,37 @@
 /**
- * Injectable AI seam. Core stays pure (no subprocess/native deps): the machine
- * calls `chooseAiAction`, which defaults to the random-legal stub. The server
- * injects a stronger agent (the C++ search via `cpp-agent.ts`) at startup with
- * `setAiAgent`. Any thrown/None result falls back to random inside the caller.
+ * How a 7 Wonders AI seat decides. Core stays pure (no subprocess or native
+ * dependencies): a seat set to `random` picks a random legal move; a seat set
+ * to `search` asks the machine's search agent, which the server supplies per
+ * session with `withSevenWondersAgent` (the C++ search in `cpp-agent.ts`).
+ * Without an agent — or when it declines — a search seat plays randomly too.
  */
 import type { Rng } from "../../../lib/rng";
 import type { GameState, SevenWondersAction } from "../types";
 import { randomLegalAction } from "./random";
 
-export type AiAgent = (
+export type SevenWondersStrategyId = "random" | "search";
+
+export const SEVEN_WONDERS_STRATEGY_IDS: readonly { readonly id: SevenWondersStrategyId }[] = [
+  { id: "random" },
+  { id: "search" },
+];
+
+/** A search engine for one seat; `null` declines (the seat then plays randomly). */
+export type SevenWondersAgent = (
   state: GameState,
   playerIndex: number,
-  rng?: Rng,
-) => SevenWondersAction | null;
+) => Promise<SevenWondersAction | null>;
 
-let override: AiAgent | null = null;
-
-/** Install (or clear, with null) the agent used for all 7 Wonders AI seats. */
-export function setAiAgent(fn: AiAgent | null): void {
-  override = fn;
-}
-
-export function chooseAiAction(
+export async function chooseAiAction(
   state: GameState,
   playerIndex: number,
+  strategy: SevenWondersStrategyId,
+  agent: SevenWondersAgent | null,
   rng?: Rng,
-): SevenWondersAction | null {
-  if (override) {
-    const a = override(state, playerIndex, rng);
-    if (a) return a; // fall back to random if the injected agent declines/fails
+): Promise<SevenWondersAction | null> {
+  if (strategy === "search" && agent) {
+    const action = await agent(state, playerIndex);
+    if (action) return action;
   }
   return randomLegalAction(state, playerIndex, rng);
 }

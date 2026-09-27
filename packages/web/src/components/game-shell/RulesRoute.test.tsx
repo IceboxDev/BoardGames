@@ -34,8 +34,6 @@ function setup() {
       title: "Lost Cities",
       soloLabel: "Play vs AI",
       rulesUrl: "/rules/lost-cities.pdf",
-      hasMatchHistory: false,
-      hasTournament: false,
     },
   });
   const router = createMemoryRouter(

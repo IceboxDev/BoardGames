@@ -1,21 +1,28 @@
 import type { DurakPlayerView } from "@boardgames/core/games/durak/types";
-import { GameOverLayout, GameOverStats, StatItem } from "../../../components/game-over";
+import {
+  type GameOverAction,
+  GameOverLayout,
+  GameOverStats,
+  StatItem,
+} from "../../../components/game-over";
 
 interface GameOverScreenProps {
   view: DurakPlayerView;
   playerIndex: number;
-  onPlayAgain: () => void;
-  onChangeSetup: () => void;
+  /** Who sat at each seat, for naming the durak. */
+  seatNames: readonly string[];
+  actions: readonly GameOverAction[];
 }
 
 export default function GameOverScreen({
   view,
   playerIndex,
-  onPlayAgain,
-  onChangeSetup,
+  seatNames,
+  actions,
 }: GameOverScreenProps) {
   const isDraw = view.durak === null;
   const isLoser = view.durak === playerIndex;
+  const durakName = view.durak === null ? null : (seatNames[view.durak] ?? "Another player");
 
   return (
     <GameOverLayout
@@ -24,15 +31,12 @@ export default function GameOverScreen({
       headlineColor={isDraw ? "draw" : isLoser ? "lose" : "win"}
       subtitle={
         isDraw
-          ? "Both players shed all their cards. No Durak today."
+          ? "Everyone shed their cards together. No Durak today."
           : isLoser
             ? "You were the last player holding cards. Better luck next time!"
-            : "The AI is the Durak. You successfully shed all your cards!"
+            : `${durakName} is the Durak. You shed all your cards in time!`
       }
-      actions={[
-        { label: "Play Again", variant: "primary", onClick: onPlayAgain },
-        { label: "Change Setup", variant: "secondary", onClick: onChangeSetup },
-      ]}
+      actions={actions}
     >
       <GameOverStats>
         <StatItem label="Rounds played" value={view.turnCount} />

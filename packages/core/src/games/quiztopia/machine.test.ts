@@ -39,7 +39,7 @@ describe("quiztopiaMachine — START", () => {
     expect(snap.context.gameState).toBeNull();
     expect(quiztopiaSpec.getActivePlayer(snap)).toBe(0);
     expect(quiztopiaSpec.getResult(snap)).toBeNull();
-    expect(quiztopiaSpec.getReplayLog?.(snap)).toBeNull();
+    expect(quiztopiaSpec.getReplayLog(snap)).toBeNull();
     expect(quiztopiaSpec.isGameOver(snap)).toBe(false);
     expect(quiztopiaSpec.getLegalActions(snap, 0)).toEqual([]);
     expect(() => quiztopiaSpec.getPlayerView(snap, 0)).toThrow(/before/);
@@ -93,7 +93,7 @@ describe("quiztopiaMachine — START", () => {
     });
     expect(quiztopiaSpec.getActivePlayer(snap)).toBe(-1);
     expect(quiztopiaSpec.getResult(snap)).toBeNull();
-    expect(quiztopiaSpec.getReplayLog?.(snap)).toBeNull();
+    expect(quiztopiaSpec.getReplayLog(snap)).toBeNull();
     expect(quiztopiaSpec.getPlayerView(snap, 2).you).toBe(2);
     expect(quiztopiaSpec.getLegalActions(snap, 0)).toHaveLength(12);
     expect(quiztopiaSpec.getLegalActions(snap, 1)).toEqual([]);
@@ -194,8 +194,9 @@ describe("quiztopiaMachine — a full game", () => {
       bakery: false,
       questionsAsked: 8,
     });
-    const replay = quiztopiaSpec.getReplayLog?.(snap);
-    expect(replay).toMatchObject({ slug: "quiztopia", scoreA: 8, scoreB: 0, playerCount: 2 });
+    const replay = quiztopiaSpec.getReplayLog(snap);
+    expect(replay).toMatchObject({ slug: "quiztopia", formatVersion: 1, playerCount: 2 });
+    expect(quiztopiaSpec.getOutcome(snap)).toMatchObject({ kind: "coop", won: true, score: 8 });
     expect(quiztopiaSpec.getLegalActions(snap, 0)).toEqual([]);
     expect(quiztopiaSpec.getPlayerView(snap, 1).outcome).toBe("win");
     actor.stop();
@@ -267,12 +268,9 @@ describe("quiztopiaMachine — random play through the validator", () => {
       }
       expect(errors).toEqual([]);
       const snap = actor.getSnapshot();
-      const replay = quiztopiaSpec.getReplayLog?.(snap) as {
-        scoreA: number;
-        scoreB: number;
-      } | null;
-      expect(replay).not.toBeNull();
-      if (replay) expect(replay.scoreA + replay.scoreB).toBeLessThanOrEqual(12);
+      expect(quiztopiaSpec.getReplayLog(snap)).not.toBeNull();
+      const result = quiztopiaSpec.getResult(snap);
+      if (result) expect(result.won + result.lost).toBeLessThanOrEqual(12);
       expect(quiztopiaSpec.getResult(snap)?.outcome).toBeTruthy();
       actor.stop();
     }

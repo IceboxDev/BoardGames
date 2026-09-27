@@ -1,13 +1,12 @@
 import { getRoleDef } from "@boardgames/core/games/pandemic/roles";
 import type { DiseaseColor, GameState } from "@boardgames/core/games/pandemic/types";
 import { DISEASE_COLORS } from "@boardgames/core/games/pandemic/types";
-import { GameOverLayout } from "../../../components/game-over";
+import { type GameOverAction, GameOverLayout } from "../../../components/game-over";
 import RoleCard from "./RoleCard";
 
 interface GameOverScreenProps {
   state: GameState;
-  onRestart: () => void;
-  onMenu: () => void;
+  actions: readonly GameOverAction[];
 }
 
 const DISEASE_CSS: Record<DiseaseColor, string> = {
@@ -36,7 +35,7 @@ const RESULT_MESSAGES: Record<string, { title: string; subtitle: string }> = {
   },
 };
 
-export default function GameOverScreen({ state, onRestart, onMenu }: GameOverScreenProps) {
+export default function GameOverScreen({ state, actions }: GameOverScreenProps) {
   const result = state.result ?? "loss_outbreaks";
   const msg = RESULT_MESSAGES[result];
   const isWin = result === "win";
@@ -52,10 +51,7 @@ export default function GameOverScreen({ state, onRestart, onMenu }: GameOverScr
       headlineColor={isWin ? "win" : "lose"}
       subtitle={msg.subtitle}
       centered
-      actions={[
-        { label: "Play Again", variant: "primary", onClick: onRestart },
-        { label: "Back to Menu", variant: "secondary", onClick: onMenu },
-      ]}
+      actions={actions}
     >
       <div className="space-y-6">
         {/* Disease status */}

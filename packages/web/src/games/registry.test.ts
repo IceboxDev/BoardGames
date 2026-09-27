@@ -92,3 +92,14 @@ describe("weightStats", () => {
     expect(weightStats.max).toBeLessThanOrEqual(5);
   });
 });
+
+describe("registry — server-run games", () => {
+  it("attaches each server-run game's manifest, and none to the table-companion tools", async () => {
+    const { GAME_MANIFESTS } = await import("@boardgames/core/games/manifests");
+    const withManifest = games
+      .filter((g) => g.kind === "playable" && g.manifest)
+      .map((g) => g.slug)
+      .sort();
+    expect(withManifest).toEqual(GAME_MANIFESTS.map((m) => m.slug).sort());
+  });
+});

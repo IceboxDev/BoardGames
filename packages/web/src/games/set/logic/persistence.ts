@@ -1,11 +1,9 @@
-import type { GameRecord } from "@boardgames/core/games/set/types";
+import { type GameRecord, GameRecordSchema } from "@boardgames/core/games/set/types";
 import { MAX_BULK_RESULT_RECORDS } from "@boardgames/core/protocol";
-import { apiUrl } from "../../../lib/api-base";
+import { apiClient } from "../../../lib/api-client";
 
 const STORAGE_KEY = "set-game-history-v3";
-const API_PATH = "/api/games/set";
-const url = (suffix: string) => apiUrl(`${API_PATH}${suffix}`);
-const credOpts: RequestInit = { credentials: "include" };
+const SLUG = "set";
 
 // ---------------------------------------------------------------------------
 // localStorage
@@ -21,11 +19,13 @@ export function saveFullHistory(history: GameRecord[]): void {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(history));
 }
 
+/** The browser's copy of the history; a record that no longer parses is dropped. */
 export function loadGameHistory(): GameRecord[] {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return [];
-    return JSON.parse(raw) as GameRecord[];
+    const stored: unknown = JSON.parse(raw);
+    return Array.isArray(stored) ? keepRecords(stored) : [];
   } catch {
     return [];
   }
@@ -35,19 +35,22 @@ export function clearHistory(): void {
   localStorage.removeItem(STORAGE_KEY);
 }
 
+/** The values that parse as trainer records. */
+function keepRecords(values: readonly unknown[]): GameRecord[] {
+  return values.flatMap((value) => {
+    const parsed = GameRecordSchema.safeParse(value);
+    return parsed.success ? [parsed.data] : [];
+  });
+}
+
 // ---------------------------------------------------------------------------
-// Server API
+// Server API — the shared game-results endpoints, through `apiClient`.
 // ---------------------------------------------------------------------------
 
 export async function postGameRecordToServer(record: GameRecord): Promise<boolean> {
   try {
-    const res = await fetch(url("/results"), {
-      ...credOpts,
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(record),
-    });
-    return res.ok;
+    await apiClient.saveGameResult(SLUG, record);
+    return true;
   } catch {
     return false;
   }
@@ -66,19 +69,13 @@ export async function postGameRecordToServer(record: GameRecord): Promise<boolea
 export async function postBulkRecordsToServer(
   records: GameRecord[],
 ): Promise<{ inserted: number; skipped: number } | null> {
-  if (records.length === 0) return { inserted: 0, skipped: 0 };
   const total = { inserted: 0, skipped: 0 };
   for (let i = 0; i < records.length; i += MAX_BULK_RESULT_RECORDS) {
-    const chunk = records.slice(i, i + MAX_BULK_RESULT_RECORDS);
     try {
-      const res = await fetch(url("/results/bulk"), {
-        ...credOpts,
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ records: chunk }),
-      });
-      if (!res.ok) return null;
-      const page = (await res.json()) as { inserted: number; skipped: number };
+      const page = await apiClient.saveGameResultsBulk(
+        SLUG,
+        records.slice(i, i + MAX_BULK_RESULT_RECORDS),
+      );
       total.inserted += page.inserted;
       total.skipped += page.skipped;
     } catch {
@@ -88,11 +85,10 @@ export async function postBulkRecordsToServer(
   return total;
 }
 
+/** The server's copy; rows that don't parse as trainer records are skipped. */
 export async function fetchServerHistory(): Promise<GameRecord[]> {
   try {
-    const res = await fetch(url("/results?limit=10000"), credOpts);
-    if (!res.ok) return [];
-    return (await res.json()) as GameRecord[];
+    return keepRecords(await apiClient.getGameResults(SLUG, 10_000));
   } catch {
     return [];
   }
@@ -100,8 +96,8 @@ export async function fetchServerHistory(): Promise<GameRecord[]> {
 
 export async function clearServerHistory(): Promise<boolean> {
   try {
-    const res = await fetch(url("/results"), { ...credOpts, method: "DELETE" });
-    return res.ok;
+    await apiClient.clearGameResults(SLUG);
+    return true;
   } catch {
     return false;
   }

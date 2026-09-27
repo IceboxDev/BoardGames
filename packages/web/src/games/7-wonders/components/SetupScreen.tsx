@@ -1,19 +1,10 @@
+import { sevenWondersManifest } from "@boardgames/core/games/7-wonders/manifest";
 import { useState } from "react";
-import type { StrategyOption } from "../../../components/setup";
 import { PvAISetupScreen } from "../../../components/setup";
 import { Chip } from "../../../components/ui";
 
-const STRATEGIES: StrategyOption[] = [
-  {
-    id: "random",
-    label: "Random",
-    description: "Bots pick a random legal move — trades, wonders and all.",
-    difficulty: "Easy",
-  },
-];
-
 interface SetupScreenProps {
-  onStart: (playerCount: number, edifice: boolean) => void;
+  onStart: (setup: { playerCount: number; strategy: string; edifice: boolean }) => void;
 }
 
 export default function SetupScreen({ onStart }: SetupScreenProps) {
@@ -22,10 +13,8 @@ export default function SetupScreen({ onStart }: SetupScreenProps) {
   return (
     <PvAISetupScreen
       title="7 Wonders"
-      playerCounts={[3, 4, 5, 6, 7]}
-      strategies={STRATEGIES}
-      defaultStrategy="random"
-      onStart={(playerCount) => onStart(playerCount, edifice)}
+      manifest={sevenWondersManifest}
+      onStart={(playerCount, strategy) => onStart({ playerCount, strategy, edifice })}
       extraControls={
         <div className="flex flex-col items-center gap-1.5">
           <Chip

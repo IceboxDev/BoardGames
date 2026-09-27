@@ -1,5 +1,5 @@
 import type { SevenWondersResult } from "@boardgames/core/games/7-wonders/machine";
-import { GameOverLayout } from "../../../components/game-over";
+import { type GameOverAction, GameOverLayout } from "../../../components/game-over";
 
 const CATEGORIES = [
   { key: "military", label: "⚔️ Military" },
@@ -15,15 +15,16 @@ const CATEGORIES = [
 interface GameOverScreenProps {
   result: SevenWondersResult;
   myIndex: number;
-  onMenu: () => void;
-  onPlayAgain?: () => void;
+  /** Who sat at each seat ("You", room names, AI labels). */
+  seatNames: readonly string[];
+  actions: readonly GameOverAction[];
 }
 
 export default function GameOverScreen({
   result,
   myIndex,
-  onMenu,
-  onPlayAgain,
+  seatNames,
+  actions,
 }: GameOverScreenProps) {
   const iWon = result.winner === myIndex;
   const playerCount = result.totals.length;
@@ -39,15 +40,12 @@ export default function GameOverScreen({
   return (
     <GameOverLayout
       emoji={iWon ? "🏆" : "🏛️"}
-      headline={iWon ? "You Win!" : `Player ${result.winner + 1} Wins`}
+      headline={
+        iWon ? "You Win!" : `${seatNames[result.winner] ?? `Player ${result.winner + 1}`} Wins`
+      }
       headlineColor={iWon ? "win" : "neutral"}
       subtitle={`${result.totals[result.winner]} points`}
-      actions={[
-        ...(onPlayAgain
-          ? [{ label: "Play Again", onClick: onPlayAgain, variant: "primary" as const }]
-          : []),
-        { label: "Back to Menu", onClick: onMenu, variant: "secondary" as const },
-      ]}
+      actions={actions}
     >
       <div className="overflow-x-auto">
         <table className="mx-auto text-sm">

@@ -1,22 +1,16 @@
-// Tournament + game-result endpoints. All `Record<string, unknown>` returns
-// from the legacy version of this file have been replaced by typed schemas
-// from `@boardgames/core/protocol`.
+// Game-result and replay endpoints, typed by the schemas in
+// `@boardgames/core/protocol`.
 
 import {
   BulkSaveResultsBodySchema,
   BulkSaveResultsResponseSchema,
   GameResultListSchema,
+  MatchSummaryListSchema,
   OkResponseSchema,
   ReplayLogSchema,
-  ReplaySummaryListSchema,
+  type SaveResultBody,
+  SaveResultBodySchema,
   SaveResultResponseSchema,
-  StartTournamentBodySchema,
-  StartTournamentResponseSchema,
-  StrategyListSchema,
-  TournamentDetailSchema,
-  TournamentGameLogListSchema,
-  TournamentGameSingleSchema,
-  TournamentSummaryListSchema,
 } from "@boardgames/core/protocol";
 import { apiUrl } from "./api-base.ts";
 import { apiFetch } from "./api-fetch.ts";
@@ -24,11 +18,7 @@ import { apiFetch } from "./api-fetch.ts";
 export type {
   BulkSaveResultsResponse,
   GameResult,
-  ReplaySummary,
-  StrategyInfo,
-  TournamentDetail,
-  TournamentGameLog,
-  TournamentSummary,
+  MatchSummary,
 } from "@boardgames/core/protocol";
 
 const BASE = "/api";
@@ -39,70 +29,11 @@ export const apiClient = {
     return res.ok;
   },
 
-  async startTournament(gameSlug: string, config: Record<string, unknown>) {
-    return apiFetch(`${BASE}/tournaments`, {
-      method: "POST",
-      body: { gameSlug, config },
-      request: StartTournamentBodySchema,
-      response: StartTournamentResponseSchema,
-    });
-  },
-
-  async getTournament(id: string) {
-    return apiFetch(`${BASE}/tournaments/${id}`, { response: TournamentDetailSchema });
-  },
-
-  async listTournaments(gameSlug?: string, status?: string) {
-    const params = new URLSearchParams();
-    if (gameSlug) params.set("gameSlug", gameSlug);
-    if (status) params.set("status", status);
-    const qs = params.toString();
-    return apiFetch(`${BASE}/tournaments${qs ? `?${qs}` : ""}`, {
-      response: TournamentSummaryListSchema,
-    });
-  },
-
-  /**
-   * EventSource — caller is responsible for parsing each event through
-   * `TournamentStreamEventSchema` from `@boardgames/core/protocol`.
-   * (Wrapping EventSource itself with schema parse lives in the consumer.)
-   */
-  streamProgress(id: string): EventSource {
-    return new EventSource(apiUrl(`${BASE}/tournaments/${id}/stream`), {
-      withCredentials: true,
-    });
-  },
-
-  async abortTournament(id: string) {
-    return apiFetch(`${BASE}/tournaments/${id}`, {
-      method: "DELETE",
-      response: OkResponseSchema,
-    });
-  },
-
-  async getTournamentGames(id: string, signal?: AbortSignal) {
-    return apiFetch(`${BASE}/tournaments/${id}/games`, {
-      response: TournamentGameLogListSchema,
-      signal,
-    });
-  },
-
-  async getTournamentGame(tournamentId: string, gameIndex: number) {
-    return apiFetch(`${BASE}/tournaments/${tournamentId}/games/${gameIndex}`, {
-      response: TournamentGameSingleSchema,
-    });
-  },
-
-  async getStrategies(gameSlug: string) {
-    return apiFetch(`${BASE}/tournaments/strategies/${gameSlug}`, {
-      response: StrategyListSchema,
-    });
-  },
-
-  async saveGameResult(gameSlug: string, result: unknown) {
+  async saveGameResult(gameSlug: string, result: SaveResultBody) {
     return apiFetch(`${BASE}/games/${gameSlug}/results`, {
       method: "POST",
-      body: result as Record<string, unknown>,
+      body: result,
+      request: SaveResultBodySchema,
       response: SaveResultResponseSchema,
     });
   },
@@ -132,7 +63,7 @@ export const apiClient = {
 
   async getGameReplays(gameSlug: string, signal?: AbortSignal) {
     return apiFetch(`${BASE}/games/${gameSlug}/replays`, {
-      response: ReplaySummaryListSchema,
+      response: MatchSummaryListSchema,
       signal,
     });
   },

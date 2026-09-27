@@ -62,22 +62,23 @@ describe("useRemoteGame", () => {
     const session = makeSession();
     const { result, rerender } = renderHook(() => useRemoteGame("uno", session));
     expect(result.current.phase).toBe("idle");
-    act(() => result.current.start({ difficulty: "hard" }));
+    act(() => result.current.start([{ kind: "human" }], { difficulty: "hard" }));
     rerender();
     expect(result.current.phase).toBe("active");
   });
 
-  it("start() forwards game slug + config to session.createSession", () => {
+  it("start() forwards game slug, seats and options to session.createSession", () => {
     const session = makeSession();
     const { result } = renderHook(() => useRemoteGame("lost-cities", session));
-    act(() => result.current.start({ engine: "ismcts-v5" }));
-    expect(session.createSession).toHaveBeenCalledWith("lost-cities", { engine: "ismcts-v5" });
+    const seats = [{ kind: "human" }, { kind: "ai", strategy: "ismcts-v5" }] as const;
+    act(() => result.current.start(seats));
+    expect(session.createSession).toHaveBeenCalledWith("lost-cities", seats, {});
   });
 
   it("reset() calls session.leaveSession and returns phase to idle", () => {
     const session = makeSession();
     const { result, rerender } = renderHook(() => useRemoteGame("uno", session));
-    act(() => result.current.start({}));
+    act(() => result.current.start([{ kind: "human" }]));
     rerender();
     expect(result.current.phase).toBe("active");
     act(() => result.current.reset());

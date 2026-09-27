@@ -625,9 +625,9 @@ describe("result and replay", () => {
 
     const replay = buildReplayLog(end);
     expect(replay.slug).toBe("quiztopia");
-    expect(replay.version).toBe(1);
-    expect(replay.scoreA).toBe(1);
-    expect(replay.scoreB).toBe(0);
+    expect(replay.formatVersion).toBe(1);
+    expect(replay.result.won).toBe(1);
+    expect(replay.result.lost).toBe(0);
     expect(replay.helpUsed).toEqual(["alternative-fakten"]);
     expect(replay.questions).toHaveLength(4);
     expect(replay.finalBuildings).toEqual(end.buildings);

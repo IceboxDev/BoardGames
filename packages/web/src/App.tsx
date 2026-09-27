@@ -177,24 +177,7 @@ const router = createBrowserRouter(
             />
             <Route
               path="tournament"
-              lazy={named(
-                () => import("./components/game-shell/TournamentRoutes"),
-                "TournamentRoute",
-              )}
-            />
-            <Route
-              path="tournament/:strategyA/:strategyB/:tournamentId"
-              lazy={named(
-                () => import("./components/game-shell/TournamentRoutes"),
-                "TournamentMatchHistoryRoute",
-              )}
-            />
-            <Route
-              path="tournament/:strategyA/:strategyB/:tournamentId/:gameIndex"
-              lazy={named(
-                () => import("./components/game-shell/ReplayRoutes"),
-                "TournamentReplayRoute",
-              )}
+              lazy={page(() => import("./components/game-shell/TournamentRoute"))}
             />
           </Route>
         </Route>
@@ -222,6 +205,7 @@ const router = createBrowserRouter(
           <Route path="dev/senso-cards" lazy={page(() => import("./pages/SensoCardsPreview"))} />
           <Route path="dev/hunger-preview" lazy={page(() => import("./pages/HungerPreview"))} />
           <Route path="dev/hunger-board" lazy={page(() => import("./pages/HungerBoardEditor"))} />
+          <Route path="dev/hunger-cards" lazy={page(() => import("./pages/HungerCards"))} />
           <Route
             path="dev/quiztopia-preview"
             lazy={page(() => import("./pages/QuiztopiaPreview"))}
