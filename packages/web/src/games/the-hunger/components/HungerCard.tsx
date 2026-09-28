@@ -2,6 +2,7 @@ import { cardDef } from "@boardgames/core/games/the-hunger/content/cards";
 import type { CardDef } from "@boardgames/core/games/the-hunger/types";
 import { cardChrome } from "../../../components/card-fan/card-chrome";
 import { cn } from "../../../lib/cn";
+import "../hunger.css";
 import { CATEGORY_LABEL } from "../logic/labels";
 import CompactFace from "./card/CompactFace";
 import ShowcaseFace from "./card/ShowcaseFace";
@@ -65,13 +66,21 @@ export default function HungerCard({
           rounded: size === "mini" ? "lg" : "xl",
           selected,
           disabled,
-          glowClass: glowing ? "ring-2 ring-amber-400/80 shadow-glow-amber" : "",
+          glowClass: "",
           hover: "none",
-          className: cn("relative isolate overflow-hidden", showcase && "rounded-card-2xl"),
+          className: cn(
+            "relative isolate overflow-hidden",
+            showcase && "rounded-card-2xl",
+            glowing && !selected && "hunger-usable",
+          ),
         }),
         className,
       )}
-      style={skin(cardHex(def), showcase ? 28 : 12)}
+      style={skin(
+        cardHex(def),
+        showcase ? 28 : 12,
+        selected ? "selected" : glowing ? "usable" : "idle",
+      )}
       title={
         showcase ? undefined : `${def.name} — ${typeLabel(def)}${def.text ? `: ${def.text}` : ""}`
       }
@@ -80,6 +89,9 @@ export default function HungerCard({
         <ShowcaseFace card={card} />
       ) : (
         <CompactFace card={card} mini={size === "mini"} dim={spent} />
+      )}
+      {glowing && !selected && (
+        <span aria-hidden className="hunger-sheen pointer-events-none absolute inset-0 z-lift" />
       )}
     </div>
   );

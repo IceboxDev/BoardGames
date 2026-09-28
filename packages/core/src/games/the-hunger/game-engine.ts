@@ -645,7 +645,7 @@ function applyInPlace(state: GameState, player: number, action: Action): void {
       turn.touched = true;
       let drew = 0;
       if (m.kind === "draw") {
-        const n = drawCount(m, human);
+        const n = action.draw ?? drawCount(m, human);
         for (let i = 0; i < n; i++) if (drawToPlay(state, p)) drew++;
       } else if (action.discard) {
         removeFromPlay(p, action.discard);
@@ -668,6 +668,28 @@ function applyInPlace(state: GameState, player: number, action: Action): void {
       token.used = true;
       turn.touched = true;
       const b = bonusDef(token.id).bonus;
+      if (turn.stage === 2 && b.kind !== "mission") {
+        // Speed is already counted: the token changes it in place and the
+        // turn carries on where it was (RULINGS: bonusTokensAnytime).
+        if (b.kind === "speed") {
+          turn.speed += b.n;
+          turn.speedLeft += b.n;
+        } else if (b.kind === "extra-hunt") {
+          turn.extraHunts += 1;
+        } else if (b.kind === "draw-to-play" || b.kind === "discard-draw") {
+          const before = playAreaSpeed(p.playArea);
+          if (b.kind === "discard-draw" && action.discard) {
+            removeFromPlay(p, action.discard);
+            p.discard.push(action.discard);
+          }
+          drawToPlay(state, p);
+          const delta = playAreaSpeed(p.playArea) - before;
+          turn.speed += delta;
+          turn.speedLeft = Math.max(0, turn.speedLeft + delta);
+        }
+        state.log.push({ t: "bonus", p: player, bonus: token.id });
+        return;
+      }
       if (b.kind === "speed") turn.bonusSpeed += b.n;
       else if (b.kind === "extra-hunt") turn.extraHunts += 1;
       else if (b.kind === "draw-to-play") drawToPlay(state, p);
@@ -794,6 +816,14 @@ function applyInPlace(state: GameState, player: number, action: Action): void {
       return;
     }
     case "keep-missions": {
+      if (state.phase === "setup" && player !== turn.player) {
+        // An early starting-Mission pick from a seat the engine hasn't asked yet.
+        const kept = [...action.keep];
+        p.missions = kept;
+        state.setupOffers[player] = [];
+        state.log.push({ t: "missions", p: player, source: "setup", kept: kept.length });
+        return;
+      }
       const pick = turn.missionPick;
       if (!pick) throw new Error("No missions to keep");
       const kept = [...action.keep];

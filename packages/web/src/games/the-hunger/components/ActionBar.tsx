@@ -1,7 +1,8 @@
 import { graphFor } from "@boardgames/core/games/the-hunger/board";
+import { bonusDef } from "@boardgames/core/games/the-hunger/content/bonus-tokens";
 import { cardDef } from "@boardgames/core/games/the-hunger/content/cards";
 import { missionDef } from "@boardgames/core/games/the-hunger/content/missions";
-import type { CardId, HungerPlayerView } from "@boardgames/core/games/the-hunger/types";
+import { drawCount, hasHuman } from "@boardgames/core/games/the-hunger/rules";
 import { Button, Surface } from "../../../components/ui";
 import type { ViewId } from "../logic/attention";
 import type { HungerInteraction } from "../logic/interaction";
@@ -71,7 +72,7 @@ function StepControls({ ix, current, onGo }: Props) {
   const { view, turn, myTurn, pending, setPending, send, find, legalActions, me } = ix;
   if (view.phase === "setup" || !myTurn || !turn) return null;
 
-  const cancel = pending && pending.kind !== "instant" && (
+  const cancel = pending && pending.kind !== "instant" && pending.kind !== "hypnosis" && (
     <Button size="xs" variant="secondary" onClick={() => setPending(null)}>
       Cancel
     </Button>
@@ -79,9 +80,11 @@ function StepControls({ ix, current, onGo }: Props) {
   const extras =
     pending?.kind === "hypnosis" ? (
       <HypnosisControls ix={ix} current={current} onGo={onGo} />
+    ) : pending?.kind === "draw" ? (
+      <DrawControls ix={ix} />
     ) : (
       <>
-        <FamiliarControls ix={ix} />
+        <TokenControls ix={ix} current={current} onGo={onGo} />
         <InstantControls ix={ix} current={current} onGo={onGo} />
       </>
     );
@@ -90,9 +93,11 @@ function StepControls({ ix, current, onGo }: Props) {
     case "manipulate":
       return (
         <>
-          <GoTo view="player" current={current} onGo={onGo}>
-            Play your cards
-          </GoTo>
+          {ix.clickableCards.size > 0 && pending?.kind !== "hypnosis" && (
+            <GoTo view="player" current={current} onGo={onGo}>
+              Play your cards
+            </GoTo>
+          )}
           {extras}
           {cancel}
           <Button
@@ -126,6 +131,8 @@ function StepControls({ ix, current, onGo }: Props) {
               Stay here
             </Button>
           )}
+          {extras}
+          {cancel}
         </>
       );
     case "push":
@@ -209,61 +216,96 @@ function StepControls({ ix, current, onGo }: Props) {
   }
 }
 
-/** Hypnosis: pick a card on the track, then an arrow for where it goes. */
+/**
+ * Hypnosis: the Hunt Track does the work — pickable cards pulse, then the
+ * piles the picked card can reach light up. The bar only offers the way to
+ * the Hunt (if you left it) and one Cancel.
+ */
 function HypnosisControls({ ix, current, onGo }: Props) {
-  const { pending, hypnoses, view, send, setPending } = ix;
+  const { pending, setPending } = ix;
   if (pending?.kind !== "hypnosis") return null;
-  const { card, pick } = pending;
-  const from = pick ? locate(view.track, pick) : null;
-  const moves = hypnoses.filter((a) => a.card === card && a.pick === pick);
   return (
     <>
-      {!pick && (
-        <GoTo view="shop" current={current} onGo={onGo}>
-          Hypnosis: pick a card
-        </GoTo>
-      )}
-      {from &&
-        moves.map((a) => (
+      <GoTo view="shop" current={current} onGo={onGo}>
+        {pending.pick ? "Hypnosis: move it" : "Hypnosis: pick a card"}
+      </GoTo>
+      <Button size="xs" variant="secondary" onClick={() => setPending(null)}>
+        Cancel Hypnosis
+      </Button>
+    </>
+  );
+}
+
+/**
+ * Bonus tokens you can spend right now, one button each, on every view:
+ * Gain 1 Mission, +Speed, Draw and +1 Hunt act at once; Discard / Draw arms a
+ * pick on your board (the cards it could discard light up).
+ */
+function TokenControls({ ix, current, onGo }: Props) {
+  const seen = new Set<string>();
+  return (
+    <>
+      {ix.legalActions.map((a) => {
+        if (a.type !== "use-bonus") return null;
+        const def = bonusDef(a.token);
+        // Two copies (or several targets) of one token read as one button.
+        if (seen.has(def.id)) return null;
+        seen.add(def.id);
+        const targeted = Boolean(a.discard);
+        return (
           <Button
-            key={`${a.row}-${a.col}`}
+            key={a.token}
             size="xs"
             variant="tinted"
-            tone="purple"
-            onClick={() => send(a)}
+            tone="amber"
+            onClick={() => {
+              if (!targeted) ix.send(a);
+              else {
+                ix.onToken(a.token);
+                if (current !== "player") onGo("player");
+              }
+            }}
+            title={def.text}
           >
-            {arrow(from, a)}
+            {def.name}
           </Button>
-        ))}
-      <Button size="xs" variant="secondary" onClick={() => setPending(null)}>
+        );
+      })}
+    </>
+  );
+}
+
+/** A "may draw" card: one button per count, most first. */
+function DrawControls({ ix }: { ix: HungerInteraction }) {
+  const most = ix.drawChoices.find((a) => a.draw === undefined);
+  const counts = ix.drawChoices
+    .map((a) => ({ a, n: a.draw ?? null }))
+    .sort((x, y) => (y.n ?? 99) - (x.n ?? 99));
+  return (
+    <>
+      {counts.map(({ a, n }) => (
+        <Button
+          key={n ?? "all"}
+          size="xs"
+          variant={a === most ? "primary" : "tinted"}
+          tone={a === most ? undefined : "emerald"}
+          onClick={() => ix.send(a)}
+        >
+          {n === null ? `Draw ${drawMax(ix, a.card)}` : `Draw ${n}`}
+        </Button>
+      ))}
+      <Button size="xs" variant="secondary" onClick={() => ix.setPending(null)}>
         Cancel
       </Button>
     </>
   );
 }
 
-/** Kutya / Ursa: Familiar abilities with no target, one button each. */
-function FamiliarControls({ ix }: { ix: HungerInteraction }) {
-  return (
-    <>
-      {ix.legalActions.map((a) =>
-        a.type === "familiar" && !a.target ? (
-          <Button
-            key={a.card}
-            size="xs"
-            variant="tinted"
-            tone="emerald"
-            onClick={() => ix.send(a)}
-            title={cardDef(a.card).text}
-          >
-            {cardDef(a.card).activated?.kind === "redraw-hand"
-              ? `${cardName(a.card)}: new hand`
-              : `${cardName(a.card)}: column-1 Hunt`}
-          </Button>
-        ) : null,
-      )}
-    </>
-  );
+/** How many a card's full draw is, from the card and what is in play. */
+function drawMax(ix: HungerInteraction, card: string): number {
+  const m = cardDef(card).manipulation;
+  if (!m || m.kind !== "draw") return 1;
+  return drawCount(m, hasHuman(ix.playArea));
 }
 
 function InstantControls({ ix, current, onGo }: Props) {
@@ -312,23 +354,4 @@ function InstantControls({ ix, current, onGo }: Props) {
       ))}
     </>
   );
-}
-
-function locate(
-  track: HungerPlayerView["track"],
-  card: CardId,
-): { row: number; col: number } | null {
-  for (let row = 0; row < track.length; row++) {
-    for (let col = 0; col < track[row].length; col++) {
-      if (track[row][col].includes(card)) return { row, col };
-    }
-  }
-  return null;
-}
-
-/** Column 3 is drawn on the left, so a lower column index is further right. */
-function arrow(from: { row: number; col: number }, to: { row: number; col: number }): string {
-  if (to.row < from.row) return `↑ row ${to.row + 1}`;
-  if (to.row > from.row) return `↓ row ${to.row + 1}`;
-  return to.col < from.col ? `→ column ${to.col + 1}` : `← column ${to.col + 1}`;
 }

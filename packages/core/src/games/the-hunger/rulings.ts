@@ -22,9 +22,8 @@
  *     (`board.pushDestinations`).
  *   - Drawn cards (Vampire Strength, Vampiric Will, Draw token) go straight
  *     into the playing area, as the hand has already been played.
- *   - The Castle is a Well in every respect: Spicy and Form of Mist head for
- *     it, and arriving there earns the Well's extra column-1 Hunt
- *     (`RULINGS.castleIsWell`).
+ *   - The Castle is a Well for Spicy and Form of Mist, but no one hunts
+ *     there (`RULINGS.huntInCastle`).
  *
  * Crypts: every Crypt space holds its own Mission pile, dealt the rulebook's
  *   6 / 5 / 4 tiles by region (Mountains / Plains / Forest) — per Crypt, not
@@ -108,11 +107,22 @@ export const RULINGS = {
    */
   castleTurnsAutoResolve: true,
   /**
-   * `rules.huntBlocked`: the Castle is a Well, so a Vampire may still hunt on
-   * the turn it arrives — the Well's extra column-1 Hunt included. Its later
-   * turns resolve on their own (`castleTurnsAutoResolve`).
+   * `rules.huntBlocked`: nobody hunts in the Castle — not even on the turn
+   * they arrive, though the Castle counts as a Well for Spicy and Form of
+   * Mist. (Mirrored in `cpp/the-hunger/src/rules.cpp`.)
    */
-  castleIsWell: true,
+  huntInCastle: false,
+  /**
+   * `rules.moveActions` / `rules.actActions`: a Bonus token with an effect is
+   * spent whenever you choose during your own turn ("when you do, flip it") —
+   * never on its own, and not only in step 1, so one opened in a Chest is
+   * usable at once. After Speed is counted the turn stays on its step: Speed
+   * adds to the Speed you have and to what is left, +1 Hunt adds a Hunt, and
+   * Draw / Discard-Draw change the cards in play and the Speed by as much as
+   * that changes the playing area's Speed. Gain 1 Mission, which opens a Crypt
+   * pick, waits until you have moved. (Mirrored in `cpp/the-hunger`.)
+   */
+  bonusTokensAnytime: true,
   /** `game-engine.applyConfuse`: Confuse has no effect in the Castle. */
   castleIgnoresConfuse: true,
 } as const;

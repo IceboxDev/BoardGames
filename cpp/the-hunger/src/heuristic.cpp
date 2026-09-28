@@ -113,8 +113,8 @@ inline double jsMax(double a, double b) { return b > a ? b : a; }
 double bestHuntFrom(const GameState& s, const PlayerState& p, int space, int speedLeft) {
   const Space& sp = spaceOf(s, space);
   if (!s.hasCurrent || s.current.extraTurn || speedLeft <= 0) return 0;
-  // The Castle is a Well (RULINGS.castleIsWell): only a Ship blocks the hunt.
-  if (sp.effect == E_SHIP || hasKeyword(p, KW_HOLY_WATER)) return 0;
+  // Nobody hunts in the Castle or on a Ship (RULINGS.huntInCastle = false).
+  if (sp.effect == E_CASTLE || sp.effect == E_SHIP || hasKeyword(p, KW_HOLY_WATER)) return 0;
   double best = 0;
   for (int r = 0; r < s.nRows; r++) {
     for (int c = 0; c < 3; c++) {

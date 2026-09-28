@@ -143,7 +143,10 @@ export function canonicalAction(a: Action): string {
   const o = (x: string | number | null | undefined) => (x == null ? "~" : String(x));
   switch (a.type) {
     case "resolve":
-      return `resolve ${a.card} ${o(a.discard)}`;
+      // The draw count only when chosen, so older recordings keep their text.
+      return a.draw == null
+        ? `resolve ${a.card} ${o(a.discard)}`
+        : `resolve ${a.card} ${o(a.discard)} ${a.draw}`;
     case "use-bonus":
       return `use-bonus ${a.token} ${o(a.discard)}`;
     case "move":

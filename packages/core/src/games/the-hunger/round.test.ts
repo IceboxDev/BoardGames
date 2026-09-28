@@ -61,9 +61,11 @@ describe("setup", () => {
   it("offers each Vampire two Missions to keep one of", () => {
     const s = createInitialState({ playerCount: 2, strategies: [null, null], seed: 5 });
     expect(s.phase).toBe("setup");
-    const options = getLegalActions(s, 0);
-    expect(options).toHaveLength(2);
-    expect(getLegalActions(s, 1)).toEqual([]);
+    // Both seats choose at once, each from its own two tiles.
+    expect(getLegalActions(s, 0)).toHaveLength(2);
+    expect(getLegalActions(s, 1)).toEqual(
+      s.setupOffers[1].map((m) => ({ type: "keep-missions", keep: [m] })),
+    );
   });
 
   it("orders Turn 1 by starting-hand Speed, lowest first, stacked first on top", () => {

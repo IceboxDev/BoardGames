@@ -79,6 +79,16 @@ interface GameScreenProps {
   mobileRails?: GameScreenMobileRails;
   /** Legacy: keep both rails in the row at every viewport width. */
   pinSidebars?: boolean;
+  /**
+   * Scale the whole wide layout to the space it is given, as one picture:
+   * the board is designed on a `width` × `height` canvas (CSS px, the area
+   * under the top nav) and `zoom`ed by min(available / canvas) — clamped to
+   * `min`..`max` so text never gets unreadably small (below `min` the layout
+   * reflows instead). Every screen then shows the same proportions: map,
+   * rails and History keep their share instead of the fixed-width rails
+   * eating a small screen. Phones (below `lg`) keep the sheet layout.
+   */
+  fitTo?: { width: number; height: number; min?: number; max?: number };
 }
 
 const HISTORY_LABEL = "History";
@@ -100,9 +110,12 @@ export default function GameScreen({
   noPadding,
   mobileRails = "sheet",
   pinSidebars = false,
+  fitTo,
 }: GameScreenProps) {
   const wide = useMediaQuery(WIDE_BOARD_QUERY);
   const railsInRow = pinSidebars || wide;
+  const [root, setRoot] = useState<HTMLDivElement | null>(null);
+  const zoom = useFitZoom(root, wide ? fitTo : undefined);
   const [openRail, setOpenRail] = useState<OpenRail>(null);
 
   // A sheet left open across a rotate/resize into the wide layout would sit
@@ -123,7 +136,12 @@ export default function GameScreen({
     // — i.e. the image covers them. Raising GameScreen puts its whole subtree
     // above the image's stacking context so the `bg-surface-950` actually
     // covers the image and the rails / history / fan become visible.
-    <div className={cn("relative z-raised flex min-h-0 flex-1 gap-2 p-2", background)}>
+    <div
+      ref={setRoot}
+      className={cn("relative z-raised flex min-h-0 flex-1 gap-2 p-2", background)}
+      style={zoom !== 1 ? { zoom } : undefined}
+      data-zoom={zoom !== 1 ? zoom.toFixed(3) : undefined}
+    >
       {/* PC-first layout: the left rail + board sit on top; the fan / controls
           span the full width underneath (from the screen edge to the History
           rail). History itself spans the complete height on the right, so its
@@ -271,4 +289,36 @@ function RailBar({
       )}
     </div>
   );
+}
+
+/**
+ * The zoom that fits a `canvas`-sized design into the element's parent.
+ * Measures the parent (the space GameScreen is given), never the zoomed
+ * element itself, so the value is stable. Rounded to 1/100 so a resize by a
+ * pixel does not re-lay the board out.
+ */
+function useFitZoom(el: HTMLElement | null, canvas: GameScreenProps["fitTo"]): number {
+  const [zoom, setZoom] = useState(1);
+  const width = canvas?.width;
+  const height = canvas?.height;
+  const min = canvas?.min ?? 0.8;
+  const max = canvas?.max ?? 1.4;
+  useEffect(() => {
+    const parent = el?.parentElement;
+    if (!parent || !width || !height || typeof ResizeObserver === "undefined") {
+      setZoom(1);
+      return;
+    }
+    const measure = () => {
+      const r = parent.getBoundingClientRect();
+      if (r.width === 0 || r.height === 0) return;
+      const fit = Math.min(r.width / width, r.height / height);
+      setZoom(Math.round(Math.min(max, Math.max(min, fit)) * 100) / 100);
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(parent);
+    return () => observer.disconnect();
+  }, [el, width, height, min, max]);
+  return zoom;
 }

@@ -12,8 +12,8 @@ import {
 } from "../../../components/game-over";
 import { MicroLabel, Surface } from "../../../components/ui";
 import { cn } from "../../../lib/cn";
-import { artUrl } from "../logic/art";
-import { seatLabel, vampireColor } from "../logic/labels";
+import { artUrl, vampireArt } from "../logic/art";
+import { seatLabel, vampireColor, vampireName } from "../logic/labels";
 import CardLine from "./CardLine";
 import VampireAvatar from "./VampireAvatar";
 
@@ -40,109 +40,162 @@ export default function GameOverScreen({ view, result, names, actions }: Props) 
   );
   const my = mine ? result.breakdown[view.me] : undefined;
 
-  return (
-    <GameOverLayout
-      emoji={my?.fate === "ashes" ? "🔥" : "🧛"}
-      headline={iWon ? "You Win!" : winnerLabel ? `${winnerLabel} wins` : "A shared crown"}
-      headlineColor={iWon ? "win" : mine ? "lose" : "neutral"}
-      subtitle={
-        my?.fate === "ashes"
-          ? "The sun found you before you found home."
-          : "The sun rises on the Castle."
-      }
-      actions={actions}
-    >
-      <div className="space-y-6">
-        {artUrl("sunrise-backdrop") && (
-          <img
-            src={artUrl("sunrise-backdrop")}
-            alt="Dawn breaks over the Castle"
-            draggable={false}
-            className="aspect-video w-full rounded-card-xl object-cover shadow-2xl"
-          />
-        )}
-        {my && (
-          <GameOverStats columns={4}>
-            <StatItem label="Your score" value={my.total} highlight={iWon} />
-            <StatItem label="During the night" value={my.duringPlay} />
-            <StatItem label="Missions" value={my.publicMissions + my.personalMissions} />
-            <StatItem label="Rank" value={`#${result.placements[view.me]}`} />
-          </GameOverStats>
-        )}
-        <Surface variant="panel" padding="lg">
-          <table className="w-full text-sm">
-            <thead>
-              <tr className="text-fg-muted">
-                <th className="pb-2 text-left font-medium">#</th>
-                <th className="pb-2 text-left font-medium">Vampire</th>
-                <th className="pb-2 text-center font-medium">Night</th>
-                <th className="pb-2 text-center font-medium">Cards</th>
-                <th className="pb-2 text-center font-medium">Missions</th>
-                <th className="pb-2 text-center font-medium">Sunrise</th>
-                <th className="pb-2 text-right font-bold">Total</th>
-              </tr>
-            </thead>
-            <tbody>
-              {order.map((seat) => {
-                const b = result.breakdown[seat];
-                const p = view.players[seat];
-                const winner = result.winners.includes(seat);
-                return (
-                  <tr
-                    key={seat}
-                    className={cn(
-                      seat === view.me ? "font-semibold text-fg-strong" : "text-fg-secondary",
-                      winner && "text-amber-300",
-                      b.fate === "ashes" && "opacity-60",
-                    )}
-                  >
-                    <td className="py-1.5 text-fg-muted">{result.placements[seat]}</td>
-                    <td className="py-1.5">
-                      <span className="inline-flex items-center gap-2">
-                        {p && (
-                          <VampireAvatar
-                            vampire={p.vampire}
-                            dim={b.fate === "ashes"}
-                            className="h-7 w-7 text-xs"
-                          />
-                        )}
-                        {seatLabel(view, seat, names)}
-                        {winner && " 👑"}
-                      </span>
-                    </td>
-                    <td className="py-1.5 text-center tabular-nums">{b.duringPlay}</td>
-                    <td className="py-1.5 text-center tabular-nums">+{b.cardBonuses}</td>
-                    <td className="py-1.5 text-center tabular-nums">
-                      +{b.publicMissions + b.personalMissions}
-                    </td>
-                    <td className="py-1.5 text-center">
-                      {FATE[b.fate]}
-                      {b.sunrise < 0 && b.fate !== "cemetery" ? ` ${b.sunrise}` : ""}
-                    </td>
-                    <td className="py-1.5 text-right font-bold tabular-nums">{b.total}</td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-          <p className="mt-3 text-xs text-fg-muted">
-            Burned Vampires keep their points for the glory of it, but rank below every survivor.
-          </p>
-        </Surface>
+  const champion = result.winners.length > 0 ? view.players[result.winners[0]] : undefined;
+  const championArt = champion ? vampireArt(champion.vampire, "full") : undefined;
 
-        {/* Where the end-of-game points came from, Vampire by Vampire. */}
-        <div className="grid gap-3 sm:grid-cols-2">
-          {order.map((seat) => (
-            <SeatDetail
-              key={seat}
-              name={seatLabel(view, seat, names)}
-              color={view.players[seat] ? vampireColor(view.players[seat].vampire) : undefined}
-              breakdown={result.breakdown[seat]}
-            />
-          ))}
+  return (
+    // The results run long (a detail card per Vampire), so the screen scrolls itself.
+    <div className="min-h-0 flex-1 overflow-y-auto">
+      <GameOverLayout
+        headline={iWon ? "You Win!" : winnerLabel ? `${winnerLabel} wins` : "A shared crown"}
+        headlineColor={iWon ? "win" : mine ? "lose" : "neutral"}
+        subtitle={
+          my?.fate === "ashes"
+            ? "The sun found you before you found home."
+            : "The sun rises on the Castle."
+        }
+        actions={actions}
+      >
+        <div className="space-y-6">
+          {artUrl("sunrise-backdrop") && (
+            <div className="relative aspect-video w-full overflow-hidden rounded-card-xl shadow-2xl">
+              <img
+                src={artUrl("sunrise-backdrop")}
+                alt="Dawn breaks over the Castle"
+                draggable={false}
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+              {/* The winner, standing in the first light. */}
+              {champion && championArt && (
+                <>
+                  <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-surface-950/80 to-transparent" />
+                  <img
+                    src={championArt}
+                    alt={vampireName(champion.vampire)}
+                    draggable={false}
+                    className="absolute bottom-0 left-[8%] h-[92%] w-auto object-contain drop-shadow-2xl"
+                  />
+                  <div className="absolute bottom-4 right-5 flex flex-col items-end text-right">
+                    <span className="text-3xs font-semibold uppercase tracking-eyebrow text-amber-200">
+                      {result.winners.length > 1 ? "Shared crown" : "Lord of the night"}
+                    </span>
+                    <span className="font-card text-2xl font-semibold text-fg-strong drop-shadow-lg">
+                      {seatLabel(view, champion.index, names)}
+                    </span>
+                    <span className="font-card text-sm tabular-nums text-fg-secondary">
+                      {result.breakdown[champion.index]?.total} VP
+                    </span>
+                  </div>
+                </>
+              )}
+            </div>
+          )}
+          {my && (
+            <GameOverStats columns={4}>
+              <StatItem label="Your score" value={my.total} highlight={iWon} />
+              <StatItem label="During the night" value={my.duringPlay} />
+              <StatItem label="Missions" value={my.publicMissions + my.personalMissions} />
+              <StatItem label="Rank" value={`#${result.placements[view.me]}`} />
+            </GameOverStats>
+          )}
+          <Surface variant="panel" padding="lg">
+            <table className="w-full border-separate border-spacing-0 text-sm">
+              <thead>
+                <tr className="text-2xs uppercase tracking-label text-fg-muted">
+                  <th className="w-12 pb-3 text-center font-medium">#</th>
+                  <th className="pb-3 text-left font-medium">Vampire</th>
+                  <th className="pb-3 text-center font-medium">Night</th>
+                  <th className="pb-3 text-center font-medium">Cards</th>
+                  <th className="pb-3 text-center font-medium">Missions</th>
+                  <th className="pb-3 text-center font-medium">Sunrise</th>
+                  <th className="pb-3 text-right font-semibold">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {order.map((seat) => {
+                  const b = result.breakdown[seat];
+                  const p = view.players[seat];
+                  const winner = result.winners.includes(seat);
+                  return (
+                    <tr
+                      key={seat}
+                      className={cn(
+                        seat === view.me ? "font-semibold text-fg-strong" : "text-fg-secondary",
+                        winner && "text-amber-300",
+                        b.fate === "ashes" && "opacity-60",
+                      )}
+                    >
+                      <td className="border-t border-line-soft py-3 align-middle">
+                        <span
+                          className={cn(
+                            "mx-auto flex h-7 w-7 items-center justify-center rounded-full font-card text-sm font-semibold tabular-nums",
+                            result.placements[seat] === 1
+                              ? "bg-amber-400/20 text-amber-200 ring-1 ring-amber-300/60"
+                              : "bg-fill text-fg-secondary ring-1 ring-line",
+                          )}
+                        >
+                          {result.placements[seat]}
+                        </span>
+                      </td>
+                      <td className="border-t border-line-soft py-3 pl-2 align-middle">
+                        <span className="flex items-center gap-3">
+                          {p && (
+                            <VampireAvatar
+                              vampire={p.vampire}
+                              dim={b.fate === "ashes"}
+                              className="h-9 w-9 text-xs"
+                            />
+                          )}
+                          <span className="flex items-center gap-1.5">
+                            {seatLabel(view, seat, names)}
+                            {winner && (
+                              <span role="img" aria-label="winner">
+                                👑
+                              </span>
+                            )}
+                          </span>
+                        </span>
+                      </td>
+                      <td className="border-t border-line-soft py-3 text-center align-middle tabular-nums">
+                        {b.duringPlay}
+                      </td>
+                      <td className="border-t border-line-soft py-3 text-center align-middle tabular-nums">
+                        +{b.cardBonuses}
+                      </td>
+                      <td className="border-t border-line-soft py-3 text-center align-middle tabular-nums">
+                        +{b.publicMissions + b.personalMissions}
+                      </td>
+                      <td className="border-t border-line-soft py-3 text-center align-middle">
+                        {FATE[b.fate]}
+                        {b.sunrise < 0 && b.fate !== "cemetery" ? ` ${b.sunrise}` : ""}
+                      </td>
+                      <td className="border-t border-line-soft py-3 text-right align-middle font-card text-base font-semibold tabular-nums">
+                        {b.total}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+            <p className="mt-3 text-xs text-fg-muted">
+              Burned Vampires keep their points for the glory of it, but rank below every survivor.
+            </p>
+          </Surface>
+
+          {/* Where the end-of-game points came from, Vampire by Vampire. */}
+          <div className="grid gap-3 sm:grid-cols-2">
+            {order.map((seat) => (
+              <SeatDetail
+                key={seat}
+                name={seatLabel(view, seat, names)}
+                color={view.players[seat] ? vampireColor(view.players[seat].vampire) : undefined}
+                breakdown={result.breakdown[seat]}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </GameOverLayout>
+      </GameOverLayout>
+    </div>
   );
 }
 

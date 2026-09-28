@@ -20,15 +20,32 @@ export function showsSpeed(def: CardDef): boolean {
 
 /**
  * The card's skin: its colour as a 1 px hairline, a faint glow and a thin
- * light along the top edge. No frame, no fill — the art is the card.
+ * light along the top edge. No frame, no fill — the art is the card. A usable
+ * card trades the hairline for amber; a selected one for a brighter, firmer
+ * amber edge. (Drawn here, not as a ring: this shadow is inline and would
+ * cover one.)
  */
-export function skin(hex: string, glow: number): CSSProperties {
+export function skin(
+  hex: string,
+  glow: number,
+  state: "idle" | "usable" | "selected" = "idle",
+): CSSProperties {
+  const edge =
+    state === "selected"
+      ? "inset 0 0 0 2px rgb(253 230 138)"
+      : state === "usable"
+        ? "inset 0 0 0 1.5px rgb(252 211 77 / 0.85)"
+        : `inset 0 0 0 1px ${hex}73`;
+  const halo =
+    state === "selected"
+      ? "0 0 26px 2px rgb(251 191 36 / 0.55)"
+      : `0 0 ${glow}px -${glow / 3}px ${hex}`;
   return {
     background: "#0b0710",
     boxShadow: [
-      `inset 0 0 0 1px ${hex}73`,
+      edge,
       "inset 0 1px 0 0 rgb(255 255 255 / 0.14)",
-      `0 0 ${glow}px -${glow / 3}px ${hex}`,
+      halo,
       "0 10px 30px -12px rgb(0 0 0 / 0.8)",
     ].join(", "),
   };

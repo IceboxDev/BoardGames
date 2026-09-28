@@ -6,7 +6,9 @@ import { cn } from "../../../lib/cn";
 import type { ArtName } from "../logic/art";
 import type { ViewId } from "../logic/attention";
 import { seatShortLabel, spaceLabel } from "../logic/labels";
+import { speedReadout } from "../logic/speed";
 import HungerIcon from "./HungerIcon";
+import SpeedGauge from "./SpeedGauge";
 import VampireAvatar from "./VampireAvatar";
 
 interface Props {
@@ -38,6 +40,7 @@ export default function ViewNavigator({
   onSelect,
   compact = false,
 }: Props) {
+  const speed = speedReadout(view);
   // Your own board first, then the table in seat order.
   const seats = view.players
     .map((p) => p.index)
@@ -45,7 +48,8 @@ export default function ViewNavigator({
 
   if (compact) {
     return (
-      <nav aria-label="Game views" className="flex w-full gap-1">
+      <nav aria-label="Game views" className="flex w-full items-center gap-1">
+        {speed && <SpeedGauge readout={speed} compact />}
         <Tab
           label="Map"
           icon="icon-road"
@@ -61,7 +65,10 @@ export default function ViewNavigator({
             onClick={() => onSelect("player", seat)}
             aria-label={`${seatShortLabel(view, seat, names)}'s board`}
             aria-current={current === "player" && boardSeat === seat ? "page" : undefined}
-            className="shrink-0 px-1"
+            className={cn(
+              "shrink-0 px-1",
+              !(current === "player" && boardSeat === seat) && "border border-transparent",
+            )}
           >
             <VampireAvatar vampire={view.players[seat].vampire} className="h-6 w-6" />
           </Button>
@@ -84,7 +91,7 @@ export default function ViewNavigator({
 
   return (
     <nav aria-label="Game views" className="flex h-full min-h-0 flex-col gap-6">
-      <Eyebrow size="sm">The Hunger</Eyebrow>
+      {speed ? <SpeedGauge readout={speed} /> : <Eyebrow size="sm">The Hunger</Eyebrow>}
 
       <Group title="The night">
         <Row
@@ -211,7 +218,7 @@ function Row({
       block
       onClick={onClick}
       aria-current={active ? "page" : undefined}
-      className="relative h-auto gap-3 py-3"
+      className={cn("relative h-auto gap-3 py-3", !active && "border border-transparent")}
     >
       <span className="flex min-w-10 shrink-0 justify-center">{icon}</span>
       <span className="flex min-w-0 flex-1 flex-col items-start gap-0.5 text-left">
@@ -230,7 +237,11 @@ function Row({
         <span className="w-full truncate text-2xs font-normal text-fg-muted">{sub}</span>
       </span>
       {shortcut && (
-        <span className="text-3xs tabular-nums text-fg-disabled" aria-hidden>
+        <span
+          className="absolute right-2 top-1.5 text-3xs tabular-nums text-fg-disabled"
+          aria-hidden
+          title={`Shortcut: ${shortcut}`}
+        >
           {shortcut}
         </span>
       )}
@@ -256,7 +267,7 @@ function Tab({
       size="xs"
       onClick={onClick}
       aria-current={active ? "page" : undefined}
-      className="flex-1"
+      className={cn("flex-1", !active && "border border-transparent")}
     >
       <HungerIcon name={icon} className="h-4 w-4" />
       <span className="sr-only sm:not-sr-only">{label}</span>

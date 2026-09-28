@@ -131,8 +131,8 @@ bool huntBlocked(const GameState& s, const PlayerState& p, const TurnState& t) {
   if (t.speed <= 0) return true;
   if (hasKeyword(p, KW_HOLY_WATER)) return true;
   int effect = spaceOf(s, p.pos).effect;
-  // The Castle is a Well (RULINGS.castleIsWell): hunting there is allowed.
-  return effect == E_SHIP;
+  // Nobody hunts in the Castle or on a Ship (RULINGS.huntInCastle = false).
+  return effect == E_CASTLE || effect == E_SHIP;
 }
 
 int closerCount(const GameState& s, int seat) {
@@ -231,10 +231,18 @@ static void manipulationActions(const PlayerState& p, Actions& out) {
     const Manipulation& m = cardDef(card.id).manip;
     if (m.kind == MK_NONE) continue;
     if (m.kind == MK_DRAW) {
-      if (!card.resolved && drawCount(m, human) > 0) {
+      int most = drawCount(m, human);
+      if (!card.resolved && most > 0) {
         Action a = act(A_RESOLVE);
         a.card = card.id;
         out.push_back(a);
+        // With a Human, the card's lower printed amount stays a choice (TS: resolve.draw).
+        if (!m.mandatory && human && m.withHuman >= 0 && m.n > 0 && m.n < most) {
+          Action b = act(A_RESOLVE);
+          b.card = card.id;
+          b.spent = int8_t(m.n);
+          out.push_back(b);
+        }
       }
     } else {
       if (card.used >= m.times) continue;
@@ -368,7 +376,7 @@ static void instantActions(const GameState& s, const PlayerState& p, const TurnS
   }
 }
 
-static void moveActions(const GameState& s, const PlayerState& p, const TurnState& t,
+static void walkActions(const GameState& s, const PlayerState& p, const TurnState& t,
                         Actions& out) {
   const Graph& g = graphOf(s);
   if (t.speed <= 0 || isReturned(p)) return;
@@ -409,6 +417,38 @@ static void moveActions(const GameState& s, const PlayerState& p, const TurnStat
       out.push_back(a);
     }
   }
+}
+
+// TS anytimeTokens: tokens spendable once Speed is counted, in token order.
+static void anytimeTokens(const PlayerState& p, const TurnState& t, bool acting, Actions& out) {
+  for (const BonusHolding& token : p.bonus) {
+    if (token.used) continue;
+    int k = BONUS_DEFS[token.id].kind;
+    if (k == BK_DISCARD_DRAW) {
+      for (const PlayCard& target : p.playArea) {
+        if (!target.resolved) {
+          Action a = act(A_USE_BONUS);
+          a.token = token.id;
+          a.other = target.id;
+          out.push_back(a);
+        }
+      }
+    } else if (k == BK_SPEED || k == BK_DRAW_TO_PLAY || (k == BK_EXTRA_HUNT && !t.extraTurn) ||
+               (k == BK_MISSION && acting)) {
+      Action a = act(A_USE_BONUS);
+      a.token = token.id;
+      out.push_back(a);
+    }
+  }
+}
+
+// TS moveActions: the walk, then the tokens (RULINGS.bonusTokensAnytime).
+static void moveActions(const GameState& s, const PlayerState& p, const TurnState& t,
+                        Actions& out) {
+  size_t before = out.size();
+  walkActions(s, p, t, out);
+  if (out.size() == before) return;
+  anytimeTokens(p, t, false, out);
 }
 
 static int digestibleCount(const PlayerState& p, int category) {
@@ -481,15 +521,8 @@ static void actActions(const GameState& s, const PlayerState& p, const TurnState
     }
   }
   instantActions(s, p, t, out);
-  if (!t.extraTurn) {
-    for (const BonusHolding& token : p.bonus) {
-      if (!token.used && BONUS_DEFS[token.id].kind == BK_EXTRA_HUNT) {
-        Action a = act(A_USE_BONUS);
-        a.token = token.id;
-        out.push_back(a);
-      }
-    }
-  }
+  // Every token with an effect, whenever you choose (TS RULINGS.bonusTokensAnytime).
+  anytimeTokens(p, t, true, out);
   out.push_back(act(A_END_TURN));
 }
 
