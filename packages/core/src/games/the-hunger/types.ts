@@ -470,7 +470,8 @@ export interface GameState {
 // ---------------------------------------------------------------------------
 
 export type Action =
-  | { type: "resolve"; card: CardId; discard?: CardId }
+  /** `draw`: fewer cards than a "may draw" card allows (default: all of them). */
+  | { type: "resolve"; card: CardId; discard?: CardId; draw?: number }
   | { type: "use-bonus"; token: string; discard?: CardId }
   | { type: "end-manipulation" }
   | { type: "move"; to: string; spent: number }

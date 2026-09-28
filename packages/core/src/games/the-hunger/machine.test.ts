@@ -98,3 +98,38 @@ describe("theHungerMachine", () => {
     actor.stop();
   });
 });
+
+describe("starting Missions", () => {
+  it("are chosen by every seat at once — a later seat may pick first", () => {
+    const actor = createActor(theHungerMachine);
+    actor.start();
+    actor.send({ type: "START", playerCount: 3, strategies: [null, null, null], seed: 5 });
+    const snap = () => actor.getSnapshot();
+    const pick = (seat: number) => {
+      const legal = theHungerSpec.getLegalActions(snap(), seat);
+      expect(legal.length).toBeGreaterThan(0);
+      const v = theHungerSpec.validateAction(snap(), seat, {
+        type: "PLAYER_ACTION",
+        action: legal[0],
+      });
+      if (!v.ok) throw new Error(v.reason);
+      actor.send(v.event);
+      return legal[0];
+    };
+    // Everyone is offered a choice from the start.
+    for (const seat of [0, 1, 2]) {
+      expect(theHungerSpec.getLegalActions(snap(), seat)[0]?.type).toBe("keep-missions");
+    }
+    // Seat 2 answers before seats 0 and 1.
+    const two = pick(2);
+    expect(snap().context.gameState.players[2].missions).toEqual(
+      two.type === "keep-missions" ? two.keep : [],
+    );
+    expect(theHungerSpec.getLegalActions(snap(), 2)).toEqual([]);
+    expect(snap().context.gameState.phase).toBe("setup");
+    pick(0);
+    pick(1);
+    // Seat 2 already chose, so the night begins.
+    expect(snap().context.gameState.phase).toBe("play");
+  });
+});

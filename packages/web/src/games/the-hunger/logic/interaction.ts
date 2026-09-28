@@ -19,6 +19,8 @@ export type Pending =
   | { kind: "instant"; mission: string }
   /** Hypnosis: pick a Hunt Track card, then where it goes. */
   | { kind: "hypnosis"; card: CardId; pick: CardId | null }
+  /** A "may draw" card: how many to draw (the bar offers each count). */
+  | { kind: "draw"; card: CardId }
   | null;
 
 export type InstantAction = Extract<Action, { type: "instant" }>;
@@ -144,23 +146,49 @@ export function useHungerInteraction({
     [legalActions],
   );
   const hypnosisCards = useMemo(() => new Set(hypnoses.map((a) => a.card)), [hypnoses]);
+  // Familiars used by a plain click (Ursa's new hand, Kutya's column-1 Hunt).
+  const plainFamiliars = useMemo(
+    () =>
+      new Map(
+        legalActions.flatMap((a) =>
+          a.type === "familiar" && !a.target ? [[a.card, a] as const] : [],
+        ),
+      ),
+    [legalActions],
+  );
   const cardsLive =
     step === "manipulate" ||
-    (step === "act" && (targetedFamiliars.size > 0 || hypnosisCards.size > 0));
+    pending?.kind === "token" ||
+    ((step === "act" || step === "move") &&
+      (targetedFamiliars.size > 0 || hypnosisCards.size > 0 || plainFamiliars.size > 0));
 
   const clickableCards = useMemo(() => {
     if (!cardsLive) return new Set<CardId>();
     if (pending?.kind === "instant" || pending?.kind === "hypnosis") return new Set<CardId>();
+    if (pending?.kind === "draw") return new Set<CardId>();
     if (pending) return new Set(discardTargets.keys());
     return new Set([
       ...resolveActions.map((a) => (a.type === "resolve" ? a.card : "")),
       ...targetedFamiliars,
       ...hypnosisCards,
+      ...plainFamiliars.keys(),
     ]);
-  }, [cardsLive, pending, discardTargets, resolveActions, targetedFamiliars, hypnosisCards]);
+  }, [
+    cardsLive,
+    pending,
+    discardTargets,
+    resolveActions,
+    targetedFamiliars,
+    hypnosisCards,
+    plainFamiliars,
+  ]);
 
   const onCard = (card: CardId) => {
     if (!cardsLive || pending?.kind === "instant" || pending?.kind === "hypnosis") return;
+    if (pending?.kind === "draw") {
+      if (pending.card === card) setPending(null);
+      return;
+    }
     if (pending) {
       if (pending.kind === "card" && pending.source === card) setPending(null);
       else send(discardTargets.get(card));
@@ -174,9 +202,16 @@ export function useHungerInteraction({
       setPending({ kind: "hypnosis", card, pick: null });
       return;
     }
+    const familiar = plainFamiliars.get(card);
+    if (familiar) {
+      send(familiar);
+      return;
+    }
     const own = resolveActions.filter((a) => a.type === "resolve" && a.card === card);
-    const plain = own.find((a) => a.type === "resolve" && !a.discard);
-    if (plain) send(plain);
+    const plain = own.filter((a) => a.type === "resolve" && !a.discard);
+    // A "may draw" card with a choice of how many: the bar asks.
+    if (plain.length > 1) setPending({ kind: "draw", card });
+    else if (plain.length === 1) send(plain[0]);
     else if (own.length > 0) setPending({ kind: "card", source: card });
   };
 
@@ -276,8 +311,30 @@ export function useHungerInteraction({
     [pending, hypnoses],
   );
   const onPick = (pick: CardId) => {
-    if (pending?.kind === "hypnosis") setPending({ ...pending, pick });
+    if (pending?.kind !== "hypnosis") return;
+    // Clicking the picked card again puts it back down.
+    setPending({ ...pending, pick: pending.pick === pick ? null : pick });
   };
+  /** The draw counts a pending "may draw" card offers, most first. */
+  const drawChoices = useMemo(
+    () =>
+      pending?.kind === "draw"
+        ? legalActions.filter(
+            (a): a is Extract<Action, { type: "resolve" }> =>
+              a.type === "resolve" && a.card === pending.card && !a.discard,
+          )
+        : [],
+    [pending, legalActions],
+  );
+  /** Hypnosis with a card picked: every pile it may move to, by `row/col`. */
+  const hypnosisTargets = useMemo(() => {
+    const out = new Map<string, HypnosisAction>();
+    if (pending?.kind !== "hypnosis" || !pending.pick) return out;
+    for (const h of hypnoses) {
+      if (h.card === pending.card && h.pick === pending.pick) out.set(`${h.row}/${h.col}`, h);
+    }
+    return out;
+  }, [pending, hypnoses]);
 
   // "Draw 1 card" (Dee, the Starting Vampire Strength) is not optional.
   const mustDraw = me && step === "manipulate" ? mandatoryDraws(me) : [];
@@ -307,6 +364,8 @@ export function useHungerInteraction({
     onInstant,
     hypnoses,
     hypnosisPickable,
+    hypnosisTargets,
+    drawChoices,
     onPick,
     targets,
     onTarget,

@@ -1,5 +1,5 @@
 import type { Action, HungerPlayerView } from "@boardgames/core/games/the-hunger/types";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { ActionLog } from "../../../components/action-log";
 import { CardFan } from "../../../components/card-fan";
 import { GameScreen } from "../../../components/game-layout";
@@ -30,6 +30,8 @@ interface Props {
 }
 
 const VIEW_KEY = "the-hunger:view";
+
+const FIT = { width: 1900, height: 1000 } as const;
 
 function rememberedView(): ViewId {
   try {
@@ -74,6 +76,29 @@ export default function GameBoard({
     },
     [view.me],
   );
+
+  // Arming a pick takes you to where it is made: clicking Hypnosis means
+  // "on the Hunt Track", a pile-targeting Instant the same, a Chest one the map.
+  const armed = ix.pending
+    ? ix.pending.kind === "hypnosis"
+      ? "shop"
+      : ix.pending.kind === "token"
+        ? "player"
+        : ix.pending.kind === "instant"
+          ? ix.armed.some((a) => a.space)
+            ? "map"
+            : ix.armed.some((a) => a.row !== undefined)
+              ? "shop"
+              : null
+          : null
+    : null;
+  const armedKey = ix.pending ? `${ix.pending.kind}:${armed}` : "";
+  const lastArmed = useRef("");
+  useEffect(() => {
+    if (armedKey === lastArmed.current) return;
+    lastArmed.current = armedKey;
+    if (armed) select(armed);
+  }, [armedKey, armed, select]);
 
   // Keys 1–3 switch views; 4 and up open the boards.
   useEffect(() => {
@@ -122,6 +147,9 @@ export default function GameBoard({
   return (
     <GameScreen
       background="bg-surface-950"
+      // Designed on a 1900 × 1000 canvas (a 1080p screen under the nav):
+      // every screen shows the same map / rails / History proportions.
+      fitTo={FIT}
       leftSidebar={wide ? navigator : undefined}
       sidebar={<ActionLog blocks={log} />}
       actionBar={<ActionBar ix={ix} current={current} onGo={select} />}

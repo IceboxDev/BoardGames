@@ -140,7 +140,7 @@ function bestHuntFrom(
   const turn = state.current;
   if (!turn || turn.extraTurn || speedLeft <= 0) return 0;
   if (
-    (s.effect === "castle" && !RULINGS.castleIsWell) ||
+    (s.effect === "castle" && !RULINGS.huntInCastle) ||
     s.effect === "ship" ||
     hasKeyword(p.playArea, "holy-water")
   )

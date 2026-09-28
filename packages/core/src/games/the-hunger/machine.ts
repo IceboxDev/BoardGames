@@ -54,7 +54,8 @@ export type HungerEvent =
       seed?: number;
       beats?: Partial<HungerBeats>;
     }
-  | { type: "PLAYER_ACTION"; action: Action }
+  /** `player`: the authenticated seat, set by `validateAction`. */
+  | { type: "PLAYER_ACTION"; action: Action; player?: number }
   | { type: "RESET" };
 
 const PLACEHOLDER = null as unknown as GameState;
@@ -121,8 +122,9 @@ export const theHungerMachine = setup({
     applyPlayerAction: assign(({ context, event }) => {
       if (event.type !== "PLAYER_ACTION") return {};
       return safeApply("the-hunger", () => {
-        // The validator only admits the active seat's actions (and its own undo).
-        const player = getActivePlayer(context.gameState);
+        // The validator admits the active seat's actions (and its own undo),
+        // plus an early starting-Mission pick from any seat still choosing.
+        const player = event.player ?? getActivePlayer(context.gameState);
         if (event.action.type === "undo") {
           const states = context.undo?.states ?? [];
           const previous = states[states.length - 1];
@@ -173,6 +175,8 @@ export const theHungerMachine = setup({
 
         aiThinking: {
           after: { aiDelay: "aiActing" },
+          // A human's starting-Mission pick may land while an AI seat thinks.
+          on: { PLAYER_ACTION: { target: "routing", actions: "applyPlayerAction" } },
         },
 
         aiActing: {
@@ -197,6 +201,7 @@ export const theHungerMachine = setup({
             // Back through the delay, so a persistent failure never hot-loops.
             onError: { target: "aiThinking" },
           },
+          on: { PLAYER_ACTION: { target: "routing", actions: "applyPlayerAction" } },
         },
       },
 
@@ -274,7 +279,7 @@ export const theHungerSpec: GameMachineSpec<
 
   validateAction: playerActionValidator({
     legalActions: legalActionsFor,
-    toEvent: (action) => ({ type: "PLAYER_ACTION", action }) as const,
+    toEvent: (action, player) => ({ type: "PLAYER_ACTION", action, player }) as const,
   }),
 
   getActivePlayer(snapshot) {

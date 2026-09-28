@@ -61,6 +61,7 @@ export default function ShopView({ ix }: { ix: HungerInteraction }) {
                   pickable={ix.hypnosisPickable}
                   picked={ix.pending?.kind === "hypnosis" ? ix.pending.pick : null}
                   onPick={ix.onPick}
+                  drop={ix.hypnosisTargets.get(`${r}/${col}`)}
                 />
               ))}
             </div>
@@ -146,6 +147,7 @@ function Pile({
   pickable,
   picked,
   onPick,
+  drop,
 }: {
   cards: readonly CardId[];
   col: number;
@@ -155,7 +157,35 @@ function Pile({
   pickable: ReadonlySet<CardId>;
   picked: CardId | null;
   onPick: (card: CardId) => void;
+  /** Hypnosis: moving the picked card here. The whole pile lights up. */
+  drop?: Action;
 }) {
+  if (drop) {
+    return (
+      <Button
+        variant="plain"
+        bleed
+        onClick={() => onHunt(drop)}
+        aria-label={`Move the Hypnotised card here${cards.length > 0 ? `, onto ${cards.map((id) => cardDef(id).name).join(", ")}` : ""}`}
+        className="hunger-target group relative h-full min-h-0 overflow-hidden rounded-card-xl"
+      >
+        {cards.length > 0 && (
+          <div className="flex h-full min-h-0 w-full justify-center p-1 opacity-60 transition-opacity group-hover:opacity-80">
+            {cards.map((id) => (
+              <div key={id} className="relative h-full min-w-6 shrink">
+                <HungerCard card={id} size="fill-height" />
+              </div>
+            ))}
+          </div>
+        )}
+        <span className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <span className="rounded-full bg-surface-950/70 px-3 py-1 font-card text-xs font-semibold text-violet-100 shadow-lg ring-1 ring-violet-300/60 backdrop-blur-sm">
+            Move here
+          </span>
+        </span>
+      </Button>
+    );
+  }
   if (cards.length === 0) {
     return <div className="h-full min-h-0 rounded-card-xl border border-dashed border-line-soft" />;
   }
@@ -173,7 +203,7 @@ function Pile({
             <HungerCard
               card={id}
               size="fill-height"
-              glowing={canPick}
+              glowing={canPick && !picked}
               selected={picked === id}
               className="shadow-lg"
             />

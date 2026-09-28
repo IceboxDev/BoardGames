@@ -168,3 +168,61 @@ describe("GameScreen — fan tray", () => {
     expect(screen.queryByTestId("fan-tray")).toBeNull();
   });
 });
+
+describe("GameScreen — fitTo", () => {
+  let restore: (() => void) | null = null;
+  afterEach(() => restore?.());
+
+  /** A parent of the given size, and a ResizeObserver that reports it once. */
+  function withParent(width: number, height: number) {
+    const RO = globalThis.ResizeObserver;
+    globalThis.ResizeObserver = class {
+      constructor(private cb: ResizeObserverCallback) {}
+      observe() {
+        this.cb([], this as unknown as ResizeObserver);
+      }
+      unobserve() {}
+      disconnect() {}
+    } as unknown as typeof ResizeObserver;
+    const rect = HTMLElement.prototype.getBoundingClientRect;
+    HTMLElement.prototype.getBoundingClientRect = function (this: HTMLElement) {
+      return this.dataset.parent ? ({ width, height } as DOMRect) : rect.call(this);
+    };
+    return () => {
+      globalThis.ResizeObserver = RO;
+      HTMLElement.prototype.getBoundingClientRect = rect;
+    };
+  }
+
+  function fitted(width: number, height: number) {
+    const undo = withParent(width, height);
+    const view = setViewport(true);
+    restore = () => {
+      undo();
+      view();
+    };
+    const { container } = render(
+      <div data-parent="1">
+        <Board fitTo={{ width: 1900, height: 1000 }} />
+      </div>,
+    );
+    return container.querySelector<HTMLElement>("[data-parent] > div");
+  }
+
+  it("scales the whole layout down to fit a small screen, keeping its proportions", () => {
+    const el = fitted(1520, 800);
+    expect(el?.style.zoom).toBe("0.8");
+  });
+
+  it("scales up on a large screen, within the maximum", () => {
+    expect(fitted(2660, 1400)?.style.zoom).toBe("1.4");
+  });
+
+  it("never goes below the readable minimum", () => {
+    expect(fitted(900, 600)?.style.zoom).toBe("0.8");
+  });
+
+  it("does nothing at the design size", () => {
+    expect(fitted(1900, 1000)?.style.zoom).toBe("");
+  });
+});

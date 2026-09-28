@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { turnOrder } from "./game-engine";
-import { getActivePlayer } from "./rules";
+import { getActivePlayer, playAreaSpeed } from "./rules";
 import { act, afterSetup, emptyTrack, legal, rigTurn } from "./test-helpers";
 
 const base = afterSetup(2, 7);
@@ -129,7 +129,7 @@ describe("speed and movement", () => {
     expect(t.players[0].playArea.find((c) => c.id === "bernard#0")?.carried).toBe(true);
   });
 
-  it("returning to the Castle takes the best tile; its Well still grants the extra Hunt", () => {
+  it("returning to the Castle takes the best tile, and no one hunts there", () => {
     let s = rigTurn(base, 0, {
       hand: ["vampiric-speed-3#0", "vampire-speed-2#0-0", "vampire-thirst#0-0"],
       pos: "rail-2",
@@ -138,11 +138,7 @@ describe("speed and movement", () => {
     s = act(s, { type: "move", to: "castle", spent: 3 });
     expect(s.players[0].castleTile).toBe(10);
     expect(s.players[0].vp - vp).toBe(10);
-    // The Castle is a Well: hunting is open on arrival, with a column-1 Hunt on top.
-    expect(s.current?.col1Hunts).toBe(1);
-    expect(legal(s).some((a) => a.type === "hunt")).toBe(true);
-    // Once home, its later turns resolve on their own.
-    expect(s.players[0].pos).toBe("castle");
+    expect(legal(s).some((a) => a.type === "hunt" || a.type === "hunt-tavern")).toBe(false);
   });
 
   it("pushes a Vampire off the landing space", () => {
@@ -221,6 +217,104 @@ describe("hunting", () => {
     s = act(s, { type: "hunt", row: 0, col: 0 });
     const owned = [...s.players[0].discard, ...(s.current?.readyQueue ?? [])];
     expect(owned).toContain(top);
+  });
+
+  it("spends a Speed token mid-turn: more Speed now, and the step carries on", () => {
+    const b = structuredClone(base);
+    b.players[0].bonus = [{ id: "speed-2#0", used: false }];
+    let s = rigTurn(b, 0, { hand: speedy, pos: "road-4" });
+    s = act(s, { type: "end-manipulation" });
+    // Before moving: it lengthens the walk.
+    expect(s.current?.step).toBe("move");
+    expect(legal(s)).toContainEqual({ type: "use-bonus", token: "speed-2#0" });
+    const speed = s.current?.speed ?? 0;
+    s = act(s, { type: "use-bonus", token: "speed-2#0" });
+    expect(s.current?.step).toBe("move");
+    expect(s.current?.speed).toBe(speed + 2);
+    expect(s.current?.speedLeft).toBe(speed + 2);
+  });
+
+  it("spends a Speed token found after moving on what is left", () => {
+    const b = structuredClone(base);
+    b.players[0].bonus = [{ id: "speed-2#0", used: false }];
+    let s = rigTurn(b, 0, { hand: speedy, pos: "road-4" });
+    s = act(s, { type: "end-manipulation" });
+    s = act(s, { type: "stay" });
+    const left = s.current?.speedLeft ?? 0;
+    s = act(s, { type: "use-bonus", token: "speed-2#0" });
+    expect(s.current?.step).toBe("act");
+    expect(s.current?.speedLeft).toBe(left + 2);
+  });
+
+  it("offers a 'may draw' card's printed amounts, and a plain 'Draw' only its one", () => {
+    const withHuman = rigTurn(structuredClone(base), 0, {
+      hand: ["vampiric-strength-great#0", "mindy#0", "vampire-speed-2#0-0"],
+      pos: "road-4",
+    });
+    // "Draw 2 cards, or 3 if you have a Human": with Mindy in play, 3 or 2.
+    const draws = legal(withHuman).filter(
+      (a) => a.type === "resolve" && a.card === "vampiric-strength-great#0",
+    );
+    expect(draws).toEqual([
+      { type: "resolve", card: "vampiric-strength-great#0" },
+      { type: "resolve", card: "vampiric-strength-great#0", draw: 2 },
+    ]);
+    const deck = withHuman.players[0].deck.length;
+    const after = act(withHuman, { type: "resolve", card: "vampiric-strength-great#0", draw: 2 });
+    expect(after.players[0].deck.length).toBe(deck - 2);
+    // Without a Human, just the 2.
+    const alone = rigTurn(structuredClone(base), 0, {
+      hand: ["vampiric-strength-great#0", "vampire-speed-2#0-0", "vampire-speed-3#0-0"],
+      pos: "road-4",
+    });
+    expect(legal(alone).filter((a) => a.type === "resolve")).toEqual([
+      { type: "resolve", card: "vampiric-strength-great#0" },
+    ]);
+    // Dee says "Draw 1 card": no choice.
+    const dee = rigTurn(structuredClone(base), 0, {
+      hand: ["dee#0", "vampire-speed-2#0-0", "vampire-speed-3#0-0"],
+      pos: "road-4",
+    });
+    expect(legal(dee).filter((a) => a.type === "resolve")).toEqual([
+      { type: "resolve", card: "dee#0" },
+    ]);
+  });
+
+  it("spends a Draw token mid-turn: the drawn card's Speed joins the turn", () => {
+    const b = structuredClone(base);
+    b.players[0].bonus = [{ id: "draw#0", used: false }];
+    let s = rigTurn(b, 0, { hand: speedy, pos: "road-4" });
+    s = act(s, { type: "end-manipulation" });
+    s = act(s, { type: "stay" });
+    const left = s.current?.speedLeft ?? 0;
+    const before = playAreaSpeed(s.players[0].playArea);
+    const inPlay = s.players[0].playArea.length;
+    s = act(s, { type: "use-bonus", token: "draw#0" });
+    expect(s.current?.step).toBe("act");
+    expect(s.players[0].playArea.length).toBe(inPlay + 1);
+    const delta = playAreaSpeed(s.players[0].playArea) - before;
+    expect(s.current?.speedLeft).toBe(Math.max(0, left + delta));
+  });
+
+  it("spends a Gain 1 Mission token after movement too, and lands back on the turn", () => {
+    const b = structuredClone(base);
+    b.players[0].bonus = [{ id: "mission#0", used: false }];
+    let s = rigTurn(b, 0, { hand: speedy, pos: "road-4" });
+    // Usable in step 1 already — skip it there.
+    s = act(s, { type: "end-manipulation" });
+    s = act(s, { type: "stay" });
+    expect(s.current?.step).toBe("act");
+    expect(legal(s)).toContainEqual({ type: "use-bonus", token: "mission#0" });
+    s = act(s, { type: "use-bonus", token: "mission#0" });
+    expect(s.current?.step).toBe("inspire");
+    const crypt = legal(s).find((a) => a.type === "inspire");
+    if (!crypt) throw new Error("no Crypt offered");
+    s = act(s, crypt);
+    // The Crypt's tiles to choose from, then back to hunting.
+    expect(s.current?.step).toBe("missions");
+    s = act(s, legal(s)[0]);
+    expect(s.current?.step).toBe("act");
+    expect(s.players[0].missions.length).toBeGreaterThan(b.players[0].missions.length);
   });
 
   it("logs a Gregarious companion's VP on its own line, never twice", () => {

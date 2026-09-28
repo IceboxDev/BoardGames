@@ -392,7 +392,9 @@ std::string canonicalAction(const GameState& s, const Action& a) {
   auto sp = [&](int x) -> std::string { return x < 0 ? "~" : b.spaces[x].id; };
   auto n = [](int x) -> std::string { return x < 0 ? "~" : std::to_string(x); };
   switch (a.type) {
-    case A_RESOLVE: return "resolve " + card(a.card) + " " + card(a.other);
+    case A_RESOLVE:
+      // The draw count only when chosen (TS canonicalAction).
+      return "resolve " + card(a.card) + " " + card(a.other) + (a.spent >= 0 ? " " + n(a.spent) : "");
     case A_USE_BONUS: return std::string("use-bonus ") + BONUS_DEFS[a.token].id + " " + card(a.other);
     case A_END_MANIPULATION: return "end-manipulation";
     case A_MOVE: return "move " + sp(a.space) + " " + std::to_string(a.spent);

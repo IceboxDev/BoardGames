@@ -26,6 +26,10 @@ interface Props {
  * server's legal actions; nothing here builds an action itself.
  */
 export default function ChoiceDialogs({ view, legal, onAction }: Props) {
+  // Starting Missions are chosen by everyone at once, whoever the engine is asking.
+  if (view.phase === "setup" && legal.some((a) => a.type === "keep-missions")) {
+    return <MissionPick view={view} legal={legal} onAction={onAction} />;
+  }
   const step = view.current?.step;
   const mine = view.current && deciderOf(view.current) === view.me && legal.length > 0;
   if (!mine) return null;

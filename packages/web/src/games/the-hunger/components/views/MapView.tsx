@@ -1,6 +1,6 @@
 import { cardDef, ROSES } from "@boardgames/core/games/the-hunger/content/cards";
 import type { HungerPlayerView } from "@boardgames/core/games/the-hunger/types";
-import type { ReactNode } from "react";
+import { type ReactNode, useEffect, useState } from "react";
 import { Button, Eyebrow, Surface } from "../../../../components/ui";
 import { useMediaQuery, WIDE_BOARD_QUERY } from "../../../../hooks/useMediaQuery";
 import { cn } from "../../../../lib/cn";
@@ -15,6 +15,9 @@ import MissionTile, { MissionsHeading } from "../MissionTile";
 import NightTrack from "../NightTrack";
 import VampireAvatar from "../VampireAvatar";
 
+/** The side panel's width (`lg:w-88`, 22rem) plus the gap beside it. */
+const PANEL_W = 22 * 16 + 12;
+
 /**
  * The map at full height, and beside it only what belongs to the map: the
  * night so far, the Labyrinth's Roses, the Tavern, the Castle tiles and the
@@ -23,108 +26,160 @@ import VampireAvatar from "../VampireAvatar";
 export default function MapView({ ix }: { ix: HungerInteraction }) {
   const { view, legalActions, send } = ix;
   const wide = useMediaQuery(WIDE_BOARD_QUERY);
+  // Map first: when the panel beside it would leave the map much narrower
+  // than it is tall, the panel folds away behind a button over the map.
+  const [box, setBox] = useState<HTMLDivElement | null>(null);
+  const [folded, setFolded] = useState(false);
+  const [open, setOpen] = useState(false);
+  useEffect(() => {
+    if (!box || typeof ResizeObserver === "undefined") return;
+    const measure = () => {
+      const { width, height } = box.getBoundingClientRect();
+      const zoom = Number(box.closest<HTMLElement>("[data-zoom]")?.dataset.zoom ?? 1);
+      // In layout px (inside GameScreen's zoom): the panel is 22rem + a gap.
+      const room = width / zoom - PANEL_W;
+      setFolded(room < (height / zoom) * 0.82);
+    };
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(box);
+    return () => observer.disconnect();
+  }, [box]);
+  useEffect(() => {
+    if (!folded) setOpen(false);
+  }, [folded]);
+  const side = wide && folded;
+
   return (
-    <div className="flex min-h-0 flex-1 flex-col gap-3 lg:flex-row">
-      <div className={wide ? "min-h-0 min-w-0 flex-1" : "aspect-square w-full"}>
+    <div ref={setBox} className="relative flex min-h-0 flex-1 flex-col gap-3 lg:flex-row">
+      <div className={wide ? "relative min-h-0 min-w-0 flex-1" : "aspect-square w-full"}>
         <HungerMap
           view={view}
           targets={ix.targets}
           onTarget={ix.onTarget}
           activeSeat={ix.activeSeat}
         />
+        {side && (
+          <Button
+            variant="secondary"
+            size="sm"
+            shape="pill"
+            onClick={() => setOpen((o) => !o)}
+            aria-expanded={open}
+            className="absolute right-3 top-3 z-raised gap-2 shadow-xl backdrop-blur-md"
+          >
+            <span className="font-card text-base font-semibold tabular-nums text-amber-100">
+              {Math.min(view.turn, 15)}
+            </span>
+            <span className="text-2xs text-fg-secondary">
+              {open ? "Hide the table" : "Night · Roses · Tavern · Missions"}
+            </span>
+          </Button>
+        )}
       </div>
-      <aside className="flex w-full flex-col gap-3 lg:w-88 lg:shrink-0 lg:overflow-y-auto">
-        <NightTrack turn={view.turn} />
+      {(!side || open) && (
+        <aside
+          className={cn(
+            "flex w-full flex-col gap-3 lg:w-88 lg:shrink-0 lg:overflow-y-auto",
+            side &&
+              "absolute bottom-0 right-0 top-14 z-raised-2 rounded-card-xl bg-surface-950/90 p-2 shadow-2xl ring-1 ring-line backdrop-blur-md",
+          )}
+        >
+          <NightTrack turn={view.turn} />
 
-        <Panel title="The Labyrinth" note="Free to take there · counts as your Hunt" ornate>
-          <div className="grid w-full grid-cols-3 gap-2">
-            {ROSES.map((def) => {
-              const rose = view.roses.find((id) => cardDef(id).id === def.id);
-              const owner = rose ? undefined : roseOwner(view, def.id);
-              if (!rose) {
-                return (
-                  <div key={def.id} className="relative">
-                    <HungerCard card={def.id} disabled className="opacity-35 grayscale" />
-                    {owner !== undefined && (
-                      <VampireAvatar
-                        vampire={view.players[owner].vampire}
-                        className="absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2"
-                      />
-                    )}
-                  </div>
+          <Panel title="The Labyrinth" note="Free to take there · counts as your Hunt" ornate>
+            <div className="grid w-full grid-cols-3 gap-2">
+              {ROSES.map((def) => {
+                const rose = view.roses.find((id) => cardDef(id).id === def.id);
+                const owner = rose ? undefined : roseOwner(view, def.id);
+                if (!rose) {
+                  return (
+                    <div key={def.id} className="relative">
+                      <HungerCard card={def.id} disabled className="opacity-35 grayscale" />
+                      {owner !== undefined && (
+                        <VampireAvatar
+                          vampire={view.players[owner].vampire}
+                          className="absolute left-1/2 top-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2"
+                        />
+                      )}
+                    </div>
+                  );
+                }
+                const take = legalActions.find((a) => a.type === "hunt-rose" && a.card === rose);
+                const face = (
+                  <CardPreview key={rose} card={rose} className="w-full">
+                    <HungerCard card={rose} glowing={Boolean(take)} />
+                  </CardPreview>
                 );
-              }
-              const take = legalActions.find((a) => a.type === "hunt-rose" && a.card === rose);
-              const face = (
-                <CardPreview key={rose} card={rose}>
-                  <HungerCard card={rose} glowing={Boolean(take)} />
-                </CardPreview>
-              );
-              return take ? (
-                <Button
-                  key={def.id}
-                  variant="plain"
-                  bleed
-                  onClick={() => send(take)}
-                  aria-label={`Take ${def.name}`}
-                >
-                  {face}
-                </Button>
-              ) : (
-                <div key={def.id}>{face}</div>
-              );
-            })}
-          </div>
-        </Panel>
-
-        <Panel title="The Tavern" note="Face down · hunt them all for 2 Speed, from the action bar">
-          <div className="flex items-center justify-center gap-6">
-            <TavernStack count={view.tavernCount} />
-            <div className="flex flex-col items-center gap-2">
-              {artUrl("tavern-sign") && (
-                <img
-                  src={artUrl("tavern-sign")}
-                  alt=""
-                  aria-hidden
-                  draggable={false}
-                  className="h-16 w-auto object-contain drop-shadow-lg"
-                />
-              )}
-              <span className="text-sm font-semibold tabular-nums text-fg-strong">
-                {view.tavernCount} card{view.tavernCount === 1 ? "" : "s"}
-              </span>
+                return take ? (
+                  <Button
+                    key={def.id}
+                    variant="plain"
+                    bleed
+                    onClick={() => send(take)}
+                    aria-label={`Take ${def.name}`}
+                  >
+                    {face}
+                  </Button>
+                ) : (
+                  <div key={def.id}>{face}</div>
+                );
+              })}
             </div>
-          </div>
-        </Panel>
+          </Panel>
 
-        <Panel title="Castle tiles" note="Taken in order by each Vampire home">
-          <div className="flex justify-center gap-2">
-            {castleTiles(view).map((t, i) => (
-              // biome-ignore lint/suspicious/noArrayIndexKey: tiles keep their order; values repeat
-              <div key={i} className="relative">
-                <CastleTile
-                  vp={t.vp}
-                  className={cn("h-16 w-14", t.owner !== undefined && "opacity-40 grayscale")}
-                />
-                {t.owner !== undefined && (
-                  <VampireAvatar
-                    vampire={view.players[t.owner].vampire}
-                    className="absolute -bottom-1 -right-1 h-6 w-6"
+          <Panel
+            title="The Tavern"
+            note="Face down · hunt them all for 2 Speed, from the action bar"
+          >
+            <div className="flex items-center justify-center gap-6">
+              <TavernStack count={view.tavernCount} />
+              <div className="flex flex-col items-center gap-2">
+                {artUrl("tavern-sign") && (
+                  <img
+                    src={artUrl("tavern-sign")}
+                    alt=""
+                    aria-hidden
+                    draggable={false}
+                    className="h-16 w-auto object-contain drop-shadow-lg"
                   />
                 )}
+                <span className="text-sm font-semibold tabular-nums text-fg-strong">
+                  {view.tavernCount} card{view.tavernCount === 1 ? "" : "s"}
+                </span>
               </div>
-            ))}
-          </div>
-        </Panel>
+            </div>
+          </Panel>
 
-        <Panel title="Public Missions" note="Everyone scores these at sunrise" missions>
-          <div className="flex w-full flex-col gap-2">
-            {view.publicMissions.map((m) => (
-              <MissionTile key={m} id={m} />
-            ))}
-          </div>
-        </Panel>
-      </aside>
+          <Panel title="Castle tiles" note="Taken in order by each Vampire home">
+            <div className="flex justify-center gap-2">
+              {castleTiles(view).map((t, i) => (
+                // biome-ignore lint/suspicious/noArrayIndexKey: tiles keep their order; values repeat
+                <div key={i} className="relative">
+                  <CastleTile
+                    vp={t.vp}
+                    className={cn("h-16 w-14", t.owner !== undefined && "opacity-40 grayscale")}
+                  />
+                  {t.owner !== undefined && (
+                    <VampireAvatar
+                      vampire={view.players[t.owner].vampire}
+                      className="absolute -bottom-1 -right-1 h-6 w-6"
+                    />
+                  )}
+                </div>
+              ))}
+            </div>
+          </Panel>
+
+          <Panel title="Public Missions" note="Everyone scores these at sunrise" missions>
+            <div className="flex w-full flex-col gap-2">
+              {view.publicMissions.map((m) => (
+                <MissionTile key={m} id={m} />
+              ))}
+            </div>
+          </Panel>
+        </aside>
+      )}
     </div>
   );
 }

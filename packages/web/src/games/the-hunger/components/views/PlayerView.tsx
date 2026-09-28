@@ -81,12 +81,14 @@ export default function PlayerView({
           style={woodBoard()}
         >
           <PanelCorners art="board-corner" className="h-12 w-12 opacity-90" />
-          <div className="flex items-baseline justify-between">
+          <div className="flex flex-col items-center gap-1 text-center">
             <Eyebrow size="sm">In play</Eyebrow>
             <span className="text-2xs text-fg-muted">
               {mine
                 ? acting
-                  ? "Click a glowing card to use it"
+                  ? ix.clickableCards.size > 0
+                    ? "Click a glowing card to use it"
+                    : "Nothing left to play on your board"
                   : "Your hand comes into play at the start of your turn"
                 : acting
                   ? "Playing their turn now"
@@ -109,7 +111,7 @@ export default function PlayerView({
             selected={selected}
             empty={acting ? "Nothing played" : "—"}
           />
-          <div className="mt-auto flex flex-wrap gap-3 border-t border-line-soft pt-3">
+          <div className="mt-auto grid grid-cols-3 gap-3 border-t border-line-soft pt-4">
             <PileStack
               zone="zone-deck"
               title="Draw pile"
@@ -256,14 +258,23 @@ function CardRow({
   empty: string;
 }) {
   return (
-    <section className="flex flex-col gap-1.5">
-      <MicroLabel>{title}</MicroLabel>
-      {cards.length === 0 && <span className="text-xs text-fg-muted">{empty}</span>}
-      <div className="flex flex-wrap gap-2">
+    <section className="flex flex-col gap-2">
+      <div className="flex items-center gap-3">
+        <span className="h-px flex-1 bg-gradient-to-r from-transparent to-fg-strong/15" />
+        <MicroLabel>{title}</MicroLabel>
+        <span className="h-px flex-1 bg-gradient-to-l from-transparent to-fg-strong/15" />
+      </div>
+      {/* One card's height is always kept, so the board never jumps as cards come and go. */}
+      <div className="flex min-h-60 flex-nowrap items-center justify-center gap-3">
+        {cards.length === 0 && (
+          <div className="flex aspect-card w-40 items-center justify-center rounded-card-xl border border-dashed border-line px-3 text-center text-xs text-fg-muted">
+            {empty}
+          </div>
+        )}
         {cards.map((c) => {
           const clickable = interactive && ix.clickableCards.has(c.id);
           const face = (
-            <CardPreview key={c.id} card={c.id} className="w-40 2xl:w-48">
+            <CardPreview key={c.id} card={c.id} className="w-full">
               <HungerCard
                 card={c.id}
                 spent={c.resolved}
@@ -279,12 +290,14 @@ function CardRow({
               bleed
               onClick={() => ix.onCard(c.id)}
               aria-label={`${cardDef(c.id).name}${cardDef(c.id).text ? ` — ${cardDef(c.id).text}` : ""}`}
-              className="w-auto"
+              className="h-auto w-40 min-w-0 shrink"
             >
               {face}
             </Button>
           ) : (
-            <div key={c.id}>{face}</div>
+            <div key={c.id} className="w-40 min-w-0 shrink">
+              {face}
+            </div>
           );
         })}
       </div>
@@ -319,9 +332,17 @@ function PileStack({
         disabled={cards.length === 0}
         onClick={() => setOpen(true)}
         aria-label={`${title}: ${cards.length} cards — browse`}
-        className="h-auto"
+        title={note ? `${title} (${note}) — click to browse` : `${title} — click to browse`}
+        block
+        className="h-auto flex-col items-center gap-2 border border-transparent py-3 hover:border-line"
       >
-        <span className="relative h-16 w-12 shrink-0" aria-hidden>
+        <span className="relative h-24 w-16 shrink-0" aria-hidden>
+          {cards.length > 2 && (
+            <span className="absolute inset-0 -rotate-6 rounded-card-md border border-line bg-fill" />
+          )}
+          {cards.length > 1 && (
+            <span className="absolute inset-0 rotate-3 rounded-card-md border border-line bg-fill-strong" />
+          )}
           {cards.length === 0 ? (
             <span className="absolute inset-0 rounded-card-md border border-dashed border-line" />
           ) : faceDown || !top ? (
@@ -331,20 +352,21 @@ function PileStack({
               <HungerCard card={top} size="mini" className="h-full w-full" />
             </span>
           )}
-          {cards.length > 1 && (
-            <span className="absolute -bottom-1 -right-1 -z-0 h-16 w-12 rounded-card-md border border-line bg-fill" />
+          {cards.length > 0 && (
+            <span className="absolute -bottom-2 -right-2 flex h-6 min-w-6 items-center justify-center rounded-full bg-surface-950 px-1.5 font-card text-xs font-semibold tabular-nums text-fg-strong ring-1 ring-line-strong">
+              {cards.length}
+            </span>
           )}
         </span>
-        <span className="flex flex-col items-start">
-          <span className="flex items-center gap-1.5 text-xs font-semibold text-fg-primary">
+        <span className="flex flex-col items-center text-center">
+          <span className="flex items-center gap-1.5 whitespace-nowrap text-xs font-semibold text-fg-primary">
             {artUrl(zone) && (
               <img src={artUrl(zone)} alt="" aria-hidden draggable={false} className="h-5 w-5" />
             )}
             {title}
           </span>
           <span className="text-2xs text-fg-muted">
-            {cards.length} card{cards.length === 1 ? "" : "s"}
-            {note ? ` · ${note}` : ""}
+            {cards.length === 0 ? "empty" : `${cards.length} card${cards.length === 1 ? "" : "s"}`}
           </span>
         </span>
       </Button>

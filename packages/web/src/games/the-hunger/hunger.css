@@ -1,0 +1,68 @@
+/* The Hunger's motion vocabulary: what "you can use this" and "you can put
+   it here" look like. One colour each — amber for a card or token you can
+   use, violet for where a Hypnotised card can go — as light, never as a fat
+   border. Everything stops under prefers-reduced-motion. */
+
+/* A card you can use: a soft amber halo breathing around it. */
+.hunger-usable {
+  animation: hunger-usable 2.4s ease-in-out infinite;
+}
+@keyframes hunger-usable {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 3px rgb(251 191 36 / 0.35)) drop-shadow(0 0 10px rgb(251 191 36 / 0.15));
+  }
+  50% {
+    filter: drop-shadow(0 0 6px rgb(252 211 77 / 0.7)) drop-shadow(0 0 22px rgb(251 191 36 / 0.35));
+  }
+}
+
+/* …and a slow sheen crossing its face, like light catching foil. */
+.hunger-sheen {
+  background: linear-gradient(115deg, transparent 38%, rgb(255 240 205 / 0.2) 50%, transparent 62%);
+  background-size: 260% 100%;
+  animation: hunger-sheen 3.4s ease-in-out infinite;
+  mix-blend-mode: screen;
+}
+@keyframes hunger-sheen {
+  0% {
+    background-position: 140% 0;
+  }
+  55%,
+  100% {
+    background-position: -140% 0;
+  }
+}
+
+/* A pile a Hypnotised card can move to: a violet glow welling up inside it. */
+.hunger-target {
+  box-shadow:
+    inset 0 0 0 1.5px rgb(196 181 253 / 0.85),
+    inset 0 0 24px rgb(167 139 250 / 0.22);
+  animation: hunger-target 1.8s ease-in-out infinite;
+}
+.hunger-target:hover {
+  box-shadow:
+    inset 0 0 0 2px rgb(221 214 254),
+    inset 0 0 36px rgb(167 139 250 / 0.4);
+}
+@keyframes hunger-target {
+  0%,
+  100% {
+    background-color: rgb(139 92 246 / 0.06);
+  }
+  50% {
+    background-color: rgb(139 92 246 / 0.16);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hunger-usable,
+  .hunger-sheen,
+  .hunger-target {
+    animation: none;
+  }
+  .hunger-usable {
+    filter: drop-shadow(0 0 6px rgb(252 211 77 / 0.6));
+  }
+}

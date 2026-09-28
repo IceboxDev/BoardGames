@@ -196,7 +196,7 @@ describe("GameBoard", () => {
     });
   });
 
-  it("Hypnosis: the card on your board, then a Hunt card and its direction in the Hunt view", () => {
+  it("Hypnosis: the card takes you to the Hunt, then a card and the pile it moves to", () => {
     const track = emptyTrack();
     track[0][1] = ["o-nel#0"];
     const state = rigTurn(afterSetup(2, 7), 0, {
@@ -207,20 +207,65 @@ describe("GameBoard", () => {
     const onAction = vi.fn();
     render(<GameBoard {...props(state, onAction, "player")} />);
     fireEvent.click(screen.getByRole("button", { name: /^Hypnosis/ }));
-    // Off the Hunt view, the bar offers the way there.
-    expect(screen.getByRole("button", { name: /Hypnosis: pick a card/ })).toBeInTheDocument();
-    // The pick survives switching views.
+    // Clicking the card is the action: the Hunt opens on its own.
     const nav = screen.getByRole("navigation", { name: "Game views" });
-    fireEvent.click(within(nav).getByRole("button", { name: /Hunt/ }));
+    expect(within(nav).getByRole("button", { name: /Hunt/ })).toHaveAttribute(
+      "aria-current",
+      "page",
+    );
+    // One Cancel, and no arrow buttons in the bar.
+    expect(screen.getAllByRole("button", { name: /^Cancel/ })).toHaveLength(1);
     fireEvent.click(screen.getByRole("button", { name: "Hypnotise O'Nel" }));
-    fireEvent.click(screen.getByRole("button", { name: "→ column 1" }));
-    expect(onAction).toHaveBeenCalledWith({
-      type: "hypnosis",
-      card: "hypnosis#0",
-      pick: "o-nel#0",
-      row: 0,
-      col: 0,
+    expect(screen.queryByRole("button", { name: /column 1/ })).toBeNull();
+    // The neighbouring piles light up; the destination is clicked on the track.
+    const targets = screen.getAllByRole("button", { name: /^Move the Hypnotised card here/ });
+    expect(targets.length).toBeGreaterThan(0);
+    fireEvent.click(targets[0]);
+    expect(onAction).toHaveBeenCalledWith(
+      expect.objectContaining({ type: "hypnosis", card: "hypnosis#0", pick: "o-nel#0" }),
+    );
+  });
+
+  it("uses Ursa by clicking the card on your board, not a bar button", () => {
+    const state = rigTurn(afterSetup(2, 7), 0, {
+      hand: ["vampire-speed-2#0-0", "vampire-speed-3#0-0", "vampire-thirst#0-0"],
+      pos: "road-4",
+      permanent: ["ursa#0"],
     });
+    const onAction = vi.fn();
+    render(<GameBoard {...props(state, onAction, "player")} />);
+    expect(screen.queryByRole("button", { name: /new hand/ })).toBeNull();
+    fireEvent.click(screen.getByRole("button", { name: /^Ursa/ }));
+    expect(onAction).toHaveBeenCalledWith({ type: "familiar", card: "ursa#0" });
+  });
+
+  it("asks how many to draw when a 'may draw' card allows more than one", () => {
+    const state = rigTurn(afterSetup(2, 7), 0, {
+      hand: ["vampiric-strength#0", "mindy#0", "vampire-speed-2#0-0"],
+      pos: "road-4",
+    });
+    const onAction = vi.fn();
+    render(<GameBoard {...props(state, onAction, "player")} />);
+    fireEvent.click(screen.getByRole("button", { name: /^Vampiric Strength/ }));
+    expect(onAction).not.toHaveBeenCalled();
+    fireEvent.click(screen.getByRole("button", { name: "Draw 1" }));
+    expect(onAction).toHaveBeenCalledWith({
+      type: "resolve",
+      card: "vampiric-strength#0",
+      draw: 1,
+    });
+  });
+
+  it("offers a Gain 1 Mission token found mid-turn as a button in the action bar", () => {
+    const b = afterSetup(2, 7);
+    b.players[0].bonus = [{ id: "mission#0", used: false }];
+    let state = rigTurn(b, 0, { hand: speedy, pos: "road-4" });
+    state = act(state, { type: "end-manipulation" });
+    state = act(state, { type: "stay" });
+    const onAction = vi.fn();
+    render(<GameBoard {...props(state, onAction)} />);
+    fireEvent.click(screen.getByRole("button", { name: "Gain 1 Mission" }));
+    expect(onAction).toHaveBeenCalledWith({ type: "use-bonus", token: "mission#0" });
   });
 
   it("hovering a Hunt Track card shows the big card, its kind spelled out", async () => {

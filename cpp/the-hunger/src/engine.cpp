@@ -612,7 +612,7 @@ void apply(GameState& s, int player, const Action& a) {
       p.playArea[i].used += 1;
       t.touched = true;
       if (m.kind == MK_DRAW) {
-        int n = human ? (m.withHuman >= 0 ? m.withHuman : m.n) : m.n;
+        int n = a.spent >= 0 ? a.spent : human ? (m.withHuman >= 0 ? m.withHuman : m.n) : m.n;
         for (int k = 0; k < n; k++) drawToPlay(s, p);
       } else if (a.other >= 0) {
         removeFromPlay(p, a.other);
@@ -633,6 +633,27 @@ void apply(GameState& s, int player, const Action& a) {
       token->used = true;
       t.touched = true;
       const BonusDef& bd = BONUS_DEFS[token->id];
+      if (t.stage == 2 && bd.kind != BK_MISSION) {
+        // Speed already counted: change it in place, stay on the step
+        // (TS RULINGS.bonusTokensAnytime).
+        if (bd.kind == BK_SPEED) {
+          t.speed += bd.n;
+          t.speedLeft += bd.n;
+        } else if (bd.kind == BK_EXTRA_HUNT) {
+          t.extraHunts += 1;
+        } else if (bd.kind == BK_DRAW_TO_PLAY || bd.kind == BK_DISCARD_DRAW) {
+          int before = playAreaSpeed(p);
+          if (bd.kind == BK_DISCARD_DRAW && a.other >= 0) {
+            removeFromPlay(p, a.other);
+            p.discard.push(Card(a.other));
+          }
+          drawToPlay(s, p);
+          int delta = playAreaSpeed(p) - before;
+          t.speed += delta;
+          t.speedLeft = std::max(0, t.speedLeft + delta);
+        }
+        return;
+      }
       if (bd.kind == BK_SPEED)
         t.bonusSpeed += bd.n;
       else if (bd.kind == BK_EXTRA_HUNT)

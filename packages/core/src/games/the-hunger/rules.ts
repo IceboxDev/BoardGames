@@ -201,7 +201,7 @@ export function huntBlocked(state: GameState, p: PlayerState, turn: TurnState): 
   if (turn.speed <= 0) return "no Speed";
   if (hasKeyword(p.playArea, "holy-water")) return "Holy Water";
   const effect = currentSpace(state, p).effect;
-  if (effect === "castle" && !RULINGS.castleIsWell) return "in the Castle";
+  if (effect === "castle" && !RULINGS.huntInCastle) return "in the Castle";
   if (effect === "ship") return "on a Ship";
   return null;
 }
@@ -363,7 +363,15 @@ function manipulationActions(p: PlayerState): Action[] {
     const m = cardDef(card.id).manipulation;
     if (!m) continue;
     if (m.kind === "draw") {
-      if (!card.resolved && drawCount(m, human) > 0) out.push({ type: "resolve", card: card.id });
+      const most = drawCount(m, human);
+      if (!card.resolved && most > 0) {
+        out.push({ type: "resolve", card: card.id });
+        // "You may draw 2 cards, or 3 if you have a Human": with a Human, the
+        // card's lower printed amount stays a choice. A plain "Draw" is exact.
+        if (!m.mandatory && human && m.withHuman !== undefined && m.n > 0 && m.n < most) {
+          out.push({ type: "resolve", card: card.id, draw: m.n });
+        }
+      }
     } else {
       // The double Vampiric Will may be used again once it has been activated.
       if ((card.used ?? 0) >= (m.times ?? 1)) continue;
@@ -389,6 +397,38 @@ function manipulationActions(p: PlayerState): Action[] {
 }
 
 function moveActions(state: GameState, p: PlayerState, turn: TurnState): Action[] {
+  const out = walkActions(state, p, turn);
+  // Bonus tokens may be spent before walking too (RULINGS: bonusTokensAnytime).
+  if (RULINGS.bonusTokensAnytime && out.length > 0) out.push(...anytimeTokens(p, turn, false));
+  return out;
+}
+
+/**
+ * Bonus tokens spendable once Speed is counted, in token order. Discard/Draw
+ * names each card in play it could discard; +1 Hunt is never offered on a
+ * Parasol turn (no hunting); Gain 1 Mission only once you have moved (`act`).
+ */
+function anytimeTokens(p: PlayerState, turn: TurnState, act: boolean): Action[] {
+  const out: Action[] = [];
+  for (const token of p.bonus) {
+    if (token.used) continue;
+    const kind = bonusDef(token.id).bonus.kind;
+    if (kind === "discard-draw") {
+      for (const target of p.playArea) {
+        if (!target.resolved) out.push({ type: "use-bonus", token: token.id, discard: target.id });
+      }
+    } else if (kind === "speed" || kind === "draw-to-play") {
+      out.push({ type: "use-bonus", token: token.id });
+    } else if (kind === "extra-hunt" && !turn.extraTurn) {
+      out.push({ type: "use-bonus", token: token.id });
+    } else if (kind === "mission" && act) {
+      out.push({ type: "use-bonus", token: token.id });
+    }
+  }
+  return out;
+}
+
+function walkActions(state: GameState, p: PlayerState, turn: TurnState): Action[] {
   const g = graph(state);
   if (turn.speed <= 0 || isReturned(p)) return [];
   if (hasKeyword(p.playArea, "spicy")) {
@@ -461,7 +501,12 @@ function actActions(state: GameState, p: PlayerState, turn: TurnState): Action[]
   out.push(...instantActions(state, p, turn));
   // +1 Hunt tokens: spent once Speed is known. Speed is lost after the last
   // Hunt, so they matter only before it.
-  if (!turn.extraTurn) {
+  if (RULINGS.bonusTokensAnytime) {
+    // Every token with an effect, whenever you choose (RULINGS: bonusTokensAnytime).
+    out.push(...anytimeTokens(p, turn, true));
+  } else if (!turn.extraTurn) {
+    // +1 Hunt tokens: spent once Speed is known. Speed is lost after the last
+    // Hunt, so they matter only before it.
     for (const token of p.bonus) {
       if (!token.used && bonusDef(token.id).bonus.kind === "extra-hunt") {
         out.push({ type: "use-bonus", token: token.id });
@@ -497,6 +542,17 @@ export function missionKeepSets(state: GameState, p: PlayerState, turn: TurnStat
 
 export function getLegalActions(state: GameState, player: number): Action[] {
   const turn = state.current;
+  // Setup: every seat chooses its starting Mission at the same time. The
+  // engine still asks one seat after another; anyone else with a pending
+  // offer may answer early, and is skipped when their turn to ask comes.
+  if (
+    state.phase === "setup" &&
+    turn &&
+    deciderOf(turn) !== player &&
+    (state.setupOffers[player]?.length ?? 0) > 0
+  ) {
+    return state.setupOffers[player].map((m): Action => ({ type: "keep-missions", keep: [m] }));
+  }
   if (!turn || deciderOf(turn) !== player || state.phase === "game-over") return [];
   const p = state.players[player];
   switch (turn.step) {

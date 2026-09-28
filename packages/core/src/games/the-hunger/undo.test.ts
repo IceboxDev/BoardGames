@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { createActor } from "xstate";
 import { theHungerMachine, theHungerSpec } from "./machine";
+import { graph } from "./rules";
 import { act, afterSetup, emptyTrack, rigTurn } from "./test-helpers";
 import type { Action } from "./types";
 import { isUndoable } from "./undo";
@@ -29,6 +30,21 @@ describe("what can be undone", () => {
     let crypt = rigTurn(base, 0, { hand: speedy, pos: "road-1" });
     crypt = act(crypt, { type: "move", to: "road-2", spent: 1 });
     expect(check(crypt, { type: "space" })).toBe(false);
+  });
+
+  it("taking a face-up Chest's token is undoable, and so is spending its Speed", () => {
+    const open = graph(base).def.spaces.find(
+      (sp) => sp.effect === "chest-open" && base.chests[sp.id],
+    );
+    if (!open) throw new Error("no face-up Chest with a token");
+    const b = structuredClone(base);
+    b.chests[open.id] = "speed-1#0";
+    let s = rigTurn(b, 0, { hand: speedy, pos: open.id });
+    s = act(s, { type: "stay" });
+    expect(check(s, { type: "space" })).toBe(true);
+    s = act(s, { type: "space" });
+    expect(s.players[0].bonus.map((t) => t.id)).toContain("speed-1#0");
+    expect(check(s, { type: "use-bonus", token: "speed-1#0" })).toBe(true);
   });
 
   it("ending the turn is never undoable", () => {

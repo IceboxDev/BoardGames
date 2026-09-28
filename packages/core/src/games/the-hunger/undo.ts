@@ -4,6 +4,7 @@
 // produced shows no sign of luck or of newly seen information.
 // ---------------------------------------------------------------------------
 
+import { graphFor } from "./board";
 import { bonusDef } from "./content/bonus-tokens";
 import { cardDef } from "./content/cards";
 import { getActivePlayer } from "./rules";
@@ -40,7 +41,8 @@ function harmlessKind(action: Action): boolean {
  * Whether `action`, which turned `before` into `after`, may be undone by the
  * player who made it. Belt and braces: besides the kind, nothing random may
  * have happened (the RNG, every deck and the Hunt deck are untouched), no
- * Chest, Crypt or Tavern changed, no Missions are being shown, and the same
+ * face-down Chest, Crypt or Tavern changed (a face-up Chest's token is public,
+ * so taking it can be taken back), no Missions are being shown, and the same
  * player is still the one deciding on the same turn.
  */
 export function isUndoable(before: GameState, after: GameState, action: Action): boolean {
@@ -51,7 +53,16 @@ export function isUndoable(before: GameState, after: GameState, action: Action):
   if (after.current.missionPick) return false;
   if (after.rng !== before.rng || after.huntDeck.length !== before.huntDeck.length) return false;
   if (after.tavern.length !== before.tavern.length) return false;
-  if (JSON.stringify(after.chests) !== JSON.stringify(before.chests)) return false;
+  // Taking a face-up Chest's token reveals nothing; a face-down one does.
+  const open = new Set(
+    graphFor(before.options)
+      .def.spaces.filter((sp) => sp.effect === "chest-open")
+      .map((sp) => sp.id),
+  );
+  const chestKeys = new Set([...Object.keys(before.chests), ...Object.keys(after.chests)]);
+  for (const id of chestKeys) {
+    if (after.chests[id] !== before.chests[id] && !open.has(id)) return false;
+  }
   if (JSON.stringify(after.crypts) !== JSON.stringify(before.crypts)) return false;
   return after.players.every(
     (p, i) =>
