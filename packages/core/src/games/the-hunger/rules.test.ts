@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { turnOrder } from "./game-engine";
-import { getActivePlayer, playAreaSpeed } from "./rules";
+import { getActivePlayer } from "./rules";
 import { act, afterSetup, emptyTrack, legal, rigTurn } from "./test-helpers";
 
 const base = afterSetup(2, 7);
@@ -280,20 +280,26 @@ describe("hunting", () => {
     ]);
   });
 
-  it("spends a Draw token mid-turn: the drawn card's Speed joins the turn", () => {
+  it("offers Draw and Discard/Draw tokens in step 1 only (discard/draw effects come first)", () => {
     const b = structuredClone(base);
-    b.players[0].bonus = [{ id: "draw#0", used: false }];
+    b.players[0].bonus = [
+      { id: "draw#0", used: false },
+      { id: "discard-draw#0", used: false },
+    ];
     let s = rigTurn(b, 0, { hand: speedy, pos: "road-4" });
+    const tokens = (st: typeof s) =>
+      legal(st)
+        .filter((a) => a.type === "use-bonus")
+        .map((a) => (a.type === "use-bonus" ? a.token : ""));
+    expect(tokens(s)).toContain("draw#0");
+    expect(tokens(s)).toContain("discard-draw#0");
     s = act(s, { type: "end-manipulation" });
+    expect(tokens(s)).not.toContain("draw#0");
+    expect(tokens(s)).not.toContain("discard-draw#0");
     s = act(s, { type: "stay" });
-    const left = s.current?.speedLeft ?? 0;
-    const before = playAreaSpeed(s.players[0].playArea);
-    const inPlay = s.players[0].playArea.length;
-    s = act(s, { type: "use-bonus", token: "draw#0" });
     expect(s.current?.step).toBe("act");
-    expect(s.players[0].playArea.length).toBe(inPlay + 1);
-    const delta = playAreaSpeed(s.players[0].playArea) - before;
-    expect(s.current?.speedLeft).toBe(Math.max(0, left + delta));
+    expect(tokens(s)).toEqual([]);
+    expect(() => act(s, { type: "use-bonus", token: "draw#0" })).toThrow();
   });
 
   it("spends a Gain 1 Mission token after movement too, and lands back on the turn", () => {
