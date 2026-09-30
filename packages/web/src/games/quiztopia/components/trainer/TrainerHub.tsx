@@ -181,9 +181,6 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
               onClick={() => setSettingsOpen(true)}
               icon={<GearIcon className="h-4 w-4" />}
             />
-            <Button variant="link" onClick={() => navigate("/play/quiztopia/rules")}>
-              How to play
-            </Button>
           </>
         }
       />

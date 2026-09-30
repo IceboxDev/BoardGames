@@ -1,4 +1,5 @@
 import type { MatchOutcomeTeams } from "@boardgames/core/history/types";
+import { artsWedgeForScenario } from "../../../games/trivial-pursuit/palette";
 import type { PickerUser } from "../ParticipantPicker";
 import { withOptional } from "./shared";
 import { TeamsForm } from "./TeamsForm";
@@ -23,6 +24,7 @@ export function TrivialPursuitTeamsForm(props: Props) {
       singleWinner
       renderTeamExtra={(team, idx, setTeam) => (
         <WedgePicker
+          arts={artsWedgeForScenario(props.value.scenario)}
           owner={`Team ${idx + 1}`}
           wedges={team.wedges ?? []}
           onChange={(wedges) =>

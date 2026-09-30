@@ -344,7 +344,7 @@ export function blockLabel(block: Block, lang: TimelineLang): string {
     const ord = n / SIZE[level] + 1;
     const word =
       level === "century" ? (de ? "Jahrhundert" : "century") : de ? "Jahrtausend" : "millennium";
-    const ad = !bcSuffix && level === "millennium" && ord <= 2 ? (de ? " n. Chr." : " AD") : "";
+    const ad = !bcSuffix && level === "millennium" ? (de ? " n. Chr." : " AD") : "";
     return de ? `${ord}. ${word}${bc}${ad}` : `${ordinalEn(ord)} ${word}${bc}${ad}`;
   }
   const year = yearOfKey(block.from);

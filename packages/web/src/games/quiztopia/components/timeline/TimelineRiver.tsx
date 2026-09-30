@@ -5,12 +5,7 @@ import { MinusIcon, PlusIcon } from "../../../../components/icons";
 import { IconButton, MicroLabel } from "../../../../components/ui";
 import { cn } from "../../../../lib/cn";
 import { districtByN } from "../../bands";
-import {
-  type LaidOutBlock,
-  type LaidOutGap,
-  nowKey,
-  type TimelineLayout,
-} from "../../logic/timeline-layout";
+import type { LaidOutBlock, LaidOutGap, TimelineLayout } from "../../logic/timeline-layout";
 import { BuildingGlyph } from "../common/BuildingGlyph";
 import { blockDomId, DOT_OFFSET, pinDomId } from "./dom-ids";
 import { chainLabel, chainTitle } from "./era-copy";
@@ -66,14 +61,6 @@ function TimelineRiverImpl({
       : { left: `${gutter + 6 + CARD_GAP}px`, right: 0 };
   const textLeft = wide ? undefined : { left: `${gutter + 6 + CARD_GAP}px` };
 
-  // Today's spot on the scale, kept clear of the header rows it may fall in.
-  const nowRaw = layout.yOf(nowKey());
-  let now = nowRaw;
-  for (const b of layout.blocks) {
-    if (b.kind === "block" && b.mode !== "folded" && now >= b.y && now < b.y + b.header) {
-      now = Math.min(b.y + b.header + 4, b.bottom - 2);
-    }
-  }
   const focusSpan = layout.spans.find((s) => s.item.questionId === focusId);
   let topIndex = 0;
 
@@ -103,24 +90,10 @@ function TimelineRiverImpl({
         style={{ left: axis }}
       />
 
-      {/* Present-day marker */}
-      {now > 0 && now < layout.height && (
-        <div
-          aria-hidden="true"
-          className="absolute flex -translate-y-1/2 items-center gap-1.5"
-          style={{ top: now, left: axis }}
-        >
-          <span className="h-px w-3 -translate-x-1/2 bg-accent-400" />
-          <MicroLabel className="text-accent-300">{lang === "de" ? "Heute" : "Today"}</MicroLabel>
-        </div>
-      )}
-
       {/* Interval bars */}
       {layout.spans.map((s) => {
         const d = districtByN(s.item.n);
         const active = s === focusSpan;
-        // A bar that runs to the present meets the (possibly nudged) marker.
-        const y1 = s.y1 >= nowRaw - 1 ? Math.max(s.y1, now) : s.y1;
         return (
           <div
             key={`bar-${s.item.questionId}`}
@@ -130,7 +103,7 @@ function TimelineRiverImpl({
               active ? BAR_ACTIVE[d.tone] : BAR[d.tone],
               !s.item.known && !active && "opacity-60",
             )}
-            style={{ left: laneX(s.lane), top: s.y0, height: y1 - s.y0 }}
+            style={{ left: laneX(s.lane), top: s.y0, height: s.y1 - s.y0 }}
           />
         );
       })}
@@ -220,6 +193,24 @@ function TimelineRiverImpl({
           </div>
         );
       })}
+
+      {/* Present-day marker: drawn over everything, usually in the river's
+          own end cap below the last card. */}
+      {layout.nowY !== null && (
+        <div
+          aria-hidden="true"
+          className={cn(
+            "pointer-events-none absolute z-raised flex -translate-y-1/2 items-center",
+            wide ? "-translate-x-1/2" : "-translate-x-3",
+          )}
+          style={{ top: layout.nowY, left: axis }}
+        >
+          <span className="flex items-center gap-1.5 rounded-full border border-accent-400/60 bg-surface-950 px-2 py-0.5 shadow-glow-accent">
+            <span className="h-1.5 w-1.5 rounded-full bg-accent-400" />
+            <MicroLabel className="text-accent-300">{lang === "de" ? "Heute" : "Today"}</MicroLabel>
+          </span>
+        </div>
+      )}
     </div>
   );
 }

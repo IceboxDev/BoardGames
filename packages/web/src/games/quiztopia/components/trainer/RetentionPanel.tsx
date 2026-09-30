@@ -24,6 +24,15 @@ const METRIC_TONE = { accuracy: "emerald", reviews: "accent", learned: "sky" } a
 const METRIC_Y = { accuracy: "knew it", reviews: "reviews", learned: "new cards" } as const;
 const percent = (v: number) => `${v}%`;
 
+/** The accuracy band with ~10 points of air, clamped to 0–100 %. */
+function accuracyDomain(points: readonly { y: number }[]): [number, number] {
+  if (points.length === 0) return [0, 100];
+  const ys = points.map((p) => p.y);
+  const lo = Math.max(0, Math.min(...ys) - 10);
+  const hi = Math.min(100, Math.max(...ys) + 10);
+  return [lo, Math.max(hi, lo + 10)];
+}
+
 function shortDate(dateKey: string): string {
   return formatHeatDate(dateKey).replace(/,?\s*\d{4}$/, "");
 }
@@ -85,9 +94,11 @@ export function RetentionPanel({ days, categories, className }: Props) {
         tone={METRIC_TONE[metric]}
         yLabel={METRIC_Y[metric]}
         height={160}
-        // Accuracy on its whole 0–100 % scale, counts from zero: a 3-point
-        // wobble must not fill the chart.
-        yDomain={metric === "accuracy" ? [0, 100] : [0, Math.max(1, ...data.map((p) => p.y))]}
+        // Accuracy zooms to its own band (padded, inside 0–100 %) so a
+        // trend is visible; counts start from zero.
+        yDomain={
+          metric === "accuracy" ? accuracyDomain(data) : [0, Math.max(1, ...data.map((p) => p.y))]
+        }
         formatY={metric === "accuracy" ? percent : undefined}
       />
       <div className="flex flex-col gap-2 border-t border-line-soft pt-3">

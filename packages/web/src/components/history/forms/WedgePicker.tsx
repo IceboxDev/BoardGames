@@ -3,14 +3,17 @@ import {
   TRIVIAL_PURSUIT_WEDGES,
   type Wedge,
 } from "@boardgames/core/history/trivial-pursuit";
+import type { ArtsWedgeColor } from "../../../games/trivial-pursuit/editions";
 import { cn } from "../../../lib/cn";
-import { WEDGE_STYLE, WedgePie } from "../WedgePie";
+import { WedgePie, wedgeStyle } from "../WedgePie";
 
 type Props = {
   wedges: readonly Wedge[];
   onChange: (next: Wedge[]) => void;
   /** Whose pie this is — names the toggles for screen readers. */
   owner: string;
+  /** The edition's Art & Literature colour. */
+  arts: ArtsWedgeColor;
 };
 
 /**
@@ -18,7 +21,7 @@ type Props = {
  * hollow ring in the wedge's colour until then. The live pie at the end reads
  * back the whole set at a glance.
  */
-export function WedgePicker({ wedges, onChange, owner }: Props) {
+export function WedgePicker({ wedges, onChange, owner, arts }: Props) {
   const held = new Set(wedges);
   function toggle(w: Wedge) {
     const next = new Set(held);
@@ -30,7 +33,7 @@ export function WedgePicker({ wedges, onChange, owner }: Props) {
     <div className="flex items-center gap-1.5">
       {TRIVIAL_PURSUIT_WEDGES.map((w) => {
         const on = held.has(w);
-        const style = WEDGE_STYLE[w];
+        const style = wedgeStyle(w, arts);
         return (
           // biome-ignore lint/correctness/noRestrictedElements: a coloured wedge token, a game piece rather than a labelled chip.
           <button
@@ -48,7 +51,7 @@ export function WedgePicker({ wedges, onChange, owner }: Props) {
           />
         );
       })}
-      <WedgePie wedges={wedges} className="ml-1 h-6 w-6" />
+      <WedgePie wedges={wedges} arts={arts} className="ml-1 h-6 w-6" />
     </div>
   );
 }
