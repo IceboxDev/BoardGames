@@ -2,10 +2,13 @@ import { describe, expect, it } from "vitest";
 import type { ProposalRecord, ResistanceRecord, Role, RoundRecord } from "../record";
 import { type Assumptions, defaultAssumptions } from "./assumptions";
 import { deductions } from "./deductions";
+import { factProof, seatStory, teamMath } from "./explain";
 import { gradeDecisions } from "./grade";
+import { gameValueCurve, Lookahead, positionAt } from "./lookahead";
+import { resistanceGameChoice } from "./optimal";
 import { analyze } from "./posterior";
-import { rankTeams } from "./recommend";
-import { recordUpTo, winProbability } from "./simulate";
+import { rankTeams, teamOdds } from "./recommend";
+import { recordUpTo } from "./simulate";
 
 const yes = (n: number) => Array(n).fill(true);
 
@@ -208,7 +211,8 @@ describe("simulation", () => {
     const rec = record(5, rounds);
     const a = analyze(rec, defaultAssumptions());
     const env = { playerCount: 5, blindSpies: false, assumptions: defaultAssumptions() };
-    expect(winProbability(rec, a, a.events.length, env).resistance).toBe(1);
+    const end = gameValueCurve(rec, a, env).at(-1);
+    expect(end?.table).toBe(1);
   });
 
   it("cuts a record back to any event", () => {
@@ -218,5 +222,173 @@ describe("simulation", () => {
     expect(cut.rounds).toHaveLength(2);
     expect(cut.rounds[1]?.proposals[0]?.votes).toBeNull();
     expect(cut.rounds[1]?.result).toBeNull();
+  });
+});
+
+describe("the table's perspective", () => {
+  it("on the last mission, a leader who knows the table's favourite has a spy picks the clean team", () => {
+    const rec = record(5, [missionRound(5, 0, 0, [0, 1], 0)]);
+    const a = analyze(rec, noAssumptions());
+    // Default rules: at Resistance match point every spy aboard plays Fail.
+    const env = { playerCount: 5, blindSpies: false, assumptions: defaultAssumptions() };
+    const look = new Lookahead(a, rec, env);
+    const idx = (spies: number[]) => a.worlds.indexOf(spies.reduce((m, s) => m | (1 << s), 0));
+    // The table leans to {0,1} being the spies; the leader (seat 2) knows it's {3,4}.
+    const table = new Float64Array(a.worlds.length);
+    table[idx([0, 1])] = 0.6;
+    table[idx([3, 4])] = 0.4;
+    const own = new Float64Array(a.worlds.length);
+    own[idx([3, 4])] = 1;
+    const position = positionAt(table, [true, true, false, false, null]);
+    const teams = [
+      [0, 1, 2],
+      [2, 3, 4],
+      [0, 2, 3],
+    ].map((team) => ({ team, mission: 4 }));
+    const choice = resistanceGameChoice(
+      look,
+      position,
+      own,
+      table,
+      teams,
+      teams[1] ?? { team: [], mission: 4 },
+    );
+    const optimal = choice.options.filter((o) => o.optimal).map((o) => o.team.join());
+    expect(optimal).toEqual(["0,1,2"]);
+    // The table's favourite wins 60% by its view, but 0% by what the leader knows.
+    expect(choice.chosen.secondary).toBeCloseTo(0.6);
+    expect(choice.chosen.primary).toBe(0);
+  });
+
+  it("doesn't flag approving a weak team when no better one existed", () => {
+    const rounds: RoundRecord[] = [missionRound(5, 0, 0, [2, 3], 0)];
+    const graded = gradeDecisions(record(5, rounds), defaultAssumptions());
+    expect(graded.filter((g) => g.kind === "vote")).toEqual([]);
+  });
+});
+
+describe("secret cards", () => {
+  it("never lets the table (or another seat) see who played a Fail", () => {
+    const cards = ["fail", "success", null, null, null] as const;
+    const rec = record(
+      5,
+      [missionRound(5, 2, 0, [0, 1], 1, [...cards])],
+      ["spy", "resistance", "resistance", "spy", "resistance"],
+    );
+    const table = last(analyze(rec, noAssumptions()).snapshots);
+    expect(table.pSpyCore[0]).toBeLessThan(1);
+    // Seat 1 knows its own Success, so the Fail was seat 0's.
+    const seat1 = last(
+      analyze(rec, noAssumptions(), {
+        kind: "seat",
+        seat: 1,
+        role: "resistance",
+        knownSpies: [],
+      }).snapshots,
+    );
+    expect(seat1.pSpyCore[0]).toBe(1);
+  });
+});
+
+describe("explanations", () => {
+  it("team math sums to the headline odds", () => {
+    const rec = record(5, [missionRound(5, 0, 0, [0, 1], 1)]);
+    const a = analyze(rec, defaultAssumptions());
+    const env = { playerCount: 5, blindSpies: false, assumptions: defaultAssumptions() };
+    const situation = { successes: 0, fails: 1, rejections: 0 };
+    const snap = last(a.snapshots);
+    const math = teamMath(a, snap, [0, 2, 3], 1, situation, env);
+    const odds = teamOdds(a, snap, [0, 2, 3], 1, situation, env);
+    expect(math.pSuccess).toBeCloseTo(odds.pSuccess);
+    expect(math.pClean).toBeCloseTo(odds.pClean);
+    expect(math.rows.reduce((t, r) => t + r.pWorlds, 0)).toBeCloseTo(1);
+  });
+
+  it("a proof accounts for every spy set that would break the fact", () => {
+    const a = analyze(record(5, [missionRound(5, 0, 0, [2, 3], 2)]), noAssumptions());
+    const fact = deductions(a, a.events.length)[0];
+    if (!fact) throw new Error("no fact");
+    const proof = factProof(a, a.events.length, fact);
+    expect(proof.breaking).toBe(9);
+    expect(proof.standing).toBe(0);
+    expect(proof.steps.reduce((t, st) => t + st.count, 0)).toBe(9);
+  });
+
+  it("a seat's story follows its odds event by event", () => {
+    const a = analyze(record(5, [missionRound(5, 0, 0, [2, 3], 2)]), noAssumptions());
+    const story = seatStory(a, 2, a.events.length);
+    expect(story.series.at(-1)?.pSpy).toBeCloseTo(1);
+    expect(story.moves[0]?.event.kind).toBe("mission");
+  });
+});
+
+describe("optimal play (roles known)", () => {
+  const roles: Role[] = ["resistance", "spy", "resistance", "spy", "resistance"];
+  const opening = (team: number[], leader = 0) =>
+    record(5, [{ proposals: [approved(5, leader, 0, team)], result: null }], roles);
+
+  it("grades nothing until roles are known", () => {
+    const rec = record(5, [{ proposals: [approved(5, 0, 0, [1, 2])], result: null }]);
+    expect(gradeDecisions(rec, defaultAssumptions())).toEqual([]);
+  });
+
+  it("values a round-one team by what the leader knew, listing every optimal team", () => {
+    // Round one: every pair is equal for the table; seat 0 knows it's clean.
+    const graded = gradeDecisions(opening([1, 2]), defaultAssumptions());
+    const p = graded.find((g) => g.kind === "proposal");
+    // Seat 0 knew it was clean: a team without it is worse by what it knew.
+    expect(p?.grade).not.toBe("best");
+    const optimal = p?.choice?.options.filter((o) => o.optimal) ?? [];
+    expect(optimal.length).toBe(4);
+    expect(optimal.every((o) => o.team.includes(0))).toBe(true);
+
+    const self = gradeDecisions(opening([0, 2]), defaultAssumptions()).find(
+      (g) => g.kind === "proposal",
+    );
+    expect(self?.grade).toBe("best");
+  });
+
+  it("a spy's optimal team surely fails and leaves the most doubt", () => {
+    const one = gradeDecisions(opening([1, 2], 1), defaultAssumptions()).find(
+      (g) => g.kind === "proposal",
+    );
+    expect(one?.choice?.metric).toBe("spy");
+    expect(one?.choice?.chosen.primary).toBeGreaterThan(0);
+
+    const both = gradeDecisions(opening([1, 3], 1), defaultAssumptions()).find(
+      (g) => g.kind === "proposal",
+    );
+    expect(both?.grade).not.toBe("best");
+    expect(both?.choice?.chosen.primary ?? 1).toBeLessThan(one?.choice?.chosen.primary ?? 0);
+
+    const clean = gradeDecisions(opening([0, 2], 1), defaultAssumptions()).find(
+      (g) => g.kind === "proposal",
+    );
+    expect(clean?.title).toBe("No spy aboard");
+  });
+});
+
+describe("game value (lookahead)", () => {
+  it("drops to zero with the real roles once the table's play can't win", () => {
+    // 5 players, spies {3,4}. Two sabotaged missions on teams with seat 3 and
+    // 4 leave the table blaming 0/1 as much as 3/4 …
+    const roles: Role[] = ["resistance", "resistance", "resistance", "spy", "spy"];
+    const rec = record(
+      5,
+      [
+        missionRound(5, 0, 0, [0, 3], 1),
+        missionRound(5, 1, 1, [0, 1, 2], 0),
+        missionRound(5, 2, 2, [1, 4], 1),
+      ],
+      roles,
+    );
+    const a = analyze(rec, defaultAssumptions());
+    const env = { playerCount: 5, blindSpies: false, assumptions: defaultAssumptions() };
+    const curve = gameValueCurve(rec, a, env);
+    for (const p of curve) {
+      expect(p.table).toBeGreaterThanOrEqual(0);
+      expect(p.table).toBeLessThanOrEqual(1);
+      expect(p.truth).not.toBeNull();
+    }
   });
 });

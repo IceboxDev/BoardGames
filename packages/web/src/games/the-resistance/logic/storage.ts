@@ -51,6 +51,11 @@ export const SavedTableSchema = z.object({
   /** Spies the entering player knew at the start (a spy's reveal). */
   knownSpies: z.array(z.number().int().min(0).max(9)),
   record: ResistanceRecordSchema,
+  /**
+   * The seating roster while it's being built — it can hold fewer than 5
+   * names; the record takes it once it seats 5–10.
+   */
+  roster: z.array(z.string().max(40)).max(10).optional(),
 });
 export type SavedTable = z.infer<typeof SavedTableSchema>;
 

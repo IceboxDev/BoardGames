@@ -69,6 +69,20 @@ export interface Contradiction {
   rules: RuleId[];
 }
 
+/** How and when a world was ruled out. */
+export interface Fate {
+  /** The event that did it; -1 = before the game (the perspective's own knowledge). */
+  event: number;
+  by: RuleId | "cards" | "perspective";
+}
+
+export interface WorldFate {
+  /** Ruled out for certain (the game's rule or the perspective). */
+  core: Fate | null;
+  /** Ruled out under the assumptions (weight fell to zero). */
+  model: Fate | null;
+}
+
 export interface Analysis {
   playerCount: number;
   worlds: number[];
@@ -78,6 +92,8 @@ export interface Analysis {
   contradictions: Contradiction[];
   /** Events the game's own rule can't explain (a data-entry slip); skipped. */
   impossible: SolverEvent[];
+  /** `fates[i]` — when and why world `i` was ruled out, if it was. */
+  fates: WorldFate[];
   /** Worlds each hard assumption eliminated ("cards" = the game's own rule). */
   eliminatedBy: Partial<Record<RuleId | "cards", number>>;
 }
@@ -239,12 +255,16 @@ function runPass(
   let weights = Float64Array.from(core);
   normalise(weights);
 
-  const events = recordEvents(record);
+  const events = recordEvents(record).map((e) => withVisibleCards(e, perspective));
   const snapshots: Snapshot[] = [snapshotOf(worlds, weights, core, n)];
   const impossible: SolverEvent[] = [];
   const eliminatedBy: Partial<Record<RuleId | "cards", number>> = {};
   /** The hard assumption that zeroed each world, if one did. */
   const killedBy: (RuleId | null)[] = worlds.map(() => null);
+  const fates: WorldFate[] = worlds.map((_, i) => {
+    const excluded: Fate | null = core[i] ? null : { event: -1, by: "perspective" };
+    return { core: excluded, model: excluded };
+  });
   const analysis = (): Analysis => ({
     playerCount: n,
     worlds,
@@ -253,6 +273,7 @@ function runPass(
     contradictions: [],
     impossible,
     eliminatedBy,
+    fates,
   });
 
   for (const event of events) {
@@ -271,12 +292,16 @@ function runPass(
       continue;
     }
     liks.forEach((lik, i) => {
+      const fate = fates[i];
+      if (fate && core[i] && !nextCore[i]) fate.core = { event: event.index, by: "cards" };
       if (weights[i] <= 0) return;
       if (!lik.feasible) {
         eliminatedBy.cards = (eliminatedBy.cards ?? 0) + 1;
+        if (fate) fate.model = { event: event.index, by: "cards" };
       } else if (lik.zeroedBy) {
         killedBy[i] = lik.zeroedBy;
         eliminatedBy[lik.zeroedBy] = (eliminatedBy[lik.zeroedBy] ?? 0) + 1;
+        if (fate) fate.model = { event: event.index, by: lik.zeroedBy };
       }
     });
     if (total(next) === 0) {
@@ -294,6 +319,18 @@ function runPass(
     snapshots.push(snapshotOf(worlds, weights, core, n));
   }
   return { analysis: analysis(), contradiction: null };
+}
+
+/**
+ * Individual mission cards are secret: the table sees only the Fail count, a
+ * seat sees its own card, and only the truth (a finished game) sees them all.
+ * A replay log carries every card, so they're filtered here.
+ */
+function withVisibleCards(event: SolverEvent, perspective: Perspective): SolverEvent {
+  if (event.kind !== "mission" || !event.cards || perspective.kind === "omniscient") return event;
+  const own = perspective.kind === "seat" ? perspective.seat : -1;
+  const cards = event.cards.map((card, seat) => (seat === own ? card : null));
+  return cards.some((c) => c !== null) ? { ...event, cards } : { ...event, cards: undefined };
 }
 
 function total(weights: Float64Array): number {

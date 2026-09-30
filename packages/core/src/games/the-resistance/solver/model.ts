@@ -50,18 +50,41 @@ export interface MissionContext {
  * they cannot coordinate at the table — so the fail count is binomial.
  * `pinnedBy` names the hard rule that forced the chance to exactly 0 or 1.
  */
+/** One step in deriving a spy's fail chance — for the Solver's explanations. */
+export interface FailChanceStep {
+  /** `null` = the base rate. */
+  rule: RuleId | null;
+  /** "×(1 − 0.5)" or "→ 0.9 + 0.1 × p" style, for display. */
+  formula: string;
+  chance: number;
+}
+
 export function spyFailChance(
   ctx: MissionContext,
   env: ModelEnv,
-): { chance: number; pinnedBy: RuleId | null } {
+): { chance: number; pinnedBy: RuleId | null; steps: FailChanceStep[] } {
   let chance = env.assumptions.baseFailRate;
   let pinnedBy: RuleId | null = null;
+  const steps: FailChanceStep[] = [{ rule: null, formula: "base rate", chance }];
   const apply = (id: RuleId, towards: 0 | 1) => {
     const s = setting(env, id);
     const w = weight(s);
     if (w === 0) return;
+    const before = chance;
     chance = towards === 0 ? chance * (1 - w) : w + (1 - w) * chance;
     if (s.mode === "hard") pinnedBy = id;
+    steps.push({
+      rule: id,
+      formula:
+        s.mode === "hard"
+          ? towards === 0
+            ? "always → 0"
+            : "always → 1"
+          : towards === 0
+            ? `${fmt(before)} × (1 − ${fmt(w)})`
+            : `${fmt(w)} + (1 − ${fmt(w)}) × ${fmt(before)}`,
+      chance,
+    });
   };
 
   const needed = failsNeeded(env.playerCount, ctx.mission);
@@ -72,7 +95,11 @@ export function spyFailChance(
   const canSwing = env.blindSpies || ctx.spiesOnTeam >= needed;
   if (canSwing && ctx.situation.successes === 2) apply("matchPointFail", 1);
   if (canSwing && ctx.situation.fails === 2) apply("winningFail", 1);
-  return { chance, pinnedBy };
+  return { chance, pinnedBy, steps };
+}
+
+function fmt(x: number): string {
+  return Number(x.toFixed(3)).toString();
 }
 
 function binomial(n: number, k: number): number {

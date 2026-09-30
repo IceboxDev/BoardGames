@@ -1,5 +1,6 @@
 import type { Deduction } from "@boardgames/core/games/the-resistance/solver/deductions";
 import { Badge } from "../../../../components/ui";
+import { ExplainRow } from "./explain/ExplainRow";
 
 const KIND_TONE = {
   "spies-exact": "rose",
@@ -11,7 +12,16 @@ const KIND_TONE = {
 } as const;
 
 /** Proven facts first, then what the assumptions add. */
-export function Deductions({ items, limit }: { items: readonly Deduction[]; limit?: number }) {
+export function Deductions({
+  items,
+  limit,
+  onExplain,
+}: {
+  items: readonly Deduction[];
+  limit?: number;
+  /** Open the proof of a fact. */
+  onExplain?: (fact: Deduction) => void;
+}) {
   const sorted = [...items].sort(
     (a, b) => Number(a.certainty !== "proven") - Number(b.certainty !== "proven"),
   );
@@ -22,18 +32,28 @@ export function Deductions({ items, limit }: { items: readonly Deduction[]; limi
     );
   }
   return (
-    <ul className="flex flex-col gap-1.5">
-      {shown.map((d) => (
-        <li
-          key={`${d.kind}-${d.text}`}
-          className="flex items-start gap-2 text-xs text-fg-secondary"
-        >
-          <Badge size="xs" tone={d.certainty === "proven" ? KIND_TONE[d.kind] : "neutral"}>
-            {d.certainty === "proven" ? "Proven" : "Likely"}
-          </Badge>
-          <span className="min-w-0">{d.text}</span>
-        </li>
-      ))}
+    <ul className="flex flex-col gap-1">
+      {shown.map((d) => {
+        const line = (
+          <span className="flex items-start gap-2 text-xs text-fg-secondary">
+            <Badge size="xs" tone={d.certainty === "proven" ? KIND_TONE[d.kind] : "neutral"}>
+              {d.certainty === "proven" ? "Proven" : "Likely"}
+            </Badge>
+            <span className="min-w-0">{d.text}</span>
+          </span>
+        );
+        return (
+          <li key={`${d.kind}-${d.text}`}>
+            {onExplain ? (
+              <ExplainRow onClick={() => onExplain(d)} label={`Explain: ${d.text}`}>
+                {line}
+              </ExplainRow>
+            ) : (
+              line
+            )}
+          </li>
+        );
+      })}
     </ul>
   );
 }

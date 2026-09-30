@@ -1,6 +1,8 @@
 import type { ResistanceRecord } from "@boardgames/core/games/the-resistance/record";
 import {
   failsNeeded,
+  MAX_PLAYERS,
+  MIN_PLAYERS,
   openProposal,
   spyCount,
   tablePosition,
@@ -16,7 +18,6 @@ import {
   Input,
   PageMain,
   SegmentedControl,
-  Stepper,
   Surface,
 } from "../../../../components/ui";
 import {
@@ -37,6 +38,7 @@ import {
   setRoles,
   undo,
 } from "../../logic/table-entry";
+import { RosterEditor } from "./RosterEditor";
 import { SolverDashboard } from "./SolverDashboard";
 
 /** `solo/table/:id` — a tabletop game entered as it's played, analysed live. */
@@ -50,7 +52,7 @@ export default function TableEntry() {
   return <TableEditor table={table} onChange={setTable} />;
 }
 
-function TableEditor({
+export function TableEditor({
   table,
   onChange,
 }: {
@@ -61,6 +63,9 @@ function TableEditor({
   const { record } = table;
   const name = useMemo(() => seatNamer(record.names), [record.names]);
   const setRecord = (next: ResistanceRecord) => onChange({ ...table, record: next });
+  const [copied, setCopied] = useState(false);
+  const rosterSize = table.roster?.length ?? record.playerCount;
+  const rosterReady = rosterSize >= MIN_PLAYERS && rosterSize <= MAX_PLAYERS;
 
   const perspectives = useMemo((): PerspectiveOption[] => {
     const options: PerspectiveOption[] = [];
@@ -76,10 +81,7 @@ function TableEditor({
       });
     }
     if (record.roles) {
-      return [
-        ...options,
-        ...finishedPerspectives(record, name).filter((o) => !o.id.startsWith("seat-")),
-      ];
+      return [...options, ...finishedPerspectives(record, name)];
     }
     return [...options, PUBLIC_PERSPECTIVE];
   }, [table.me, table.knownSpies, record, name]);
@@ -99,9 +101,23 @@ function TableEditor({
               className="max-w-xs"
             />
             <Badge size="sm" tone="neutral">
-              {record.playerCount} players · {spyCount(record.playerCount)} spies
+              {rosterReady
+                ? `${record.playerCount} players · ${spyCount(record.playerCount)} spies`
+                : `${rosterSize} seated — need ${MIN_PLAYERS}–${MAX_PLAYERS}`}
             </Badge>
             <span className="ml-auto" />
+            <Button
+              size="sm"
+              variant="ghost"
+              onClick={() => {
+                void navigator.clipboard?.writeText(JSON.stringify(table)).then(
+                  () => setCopied(true),
+                  () => setCopied(false),
+                );
+              }}
+            >
+              {copied ? "Copied" : "Copy record"}
+            </Button>
             <Button size="sm" variant="secondary" onClick={() => setRecord(undo(record))}>
               Undo
             </Button>
@@ -113,7 +129,14 @@ function TableEditor({
         entry={
           <Surface variant="raised" padding="lg" className="flex flex-col gap-4">
             {!hasStarted(record) && <SetupFields table={table} onChange={onChange} />}
-            <StepEntry record={record} onRecord={setRecord} />
+            <RolesField key={record.playerCount} record={record} onRecord={setRecord} />
+            {rosterReady ? (
+              <StepEntry record={record} onRecord={setRecord} />
+            ) : (
+              <p className="text-xs text-amber-300">
+                Seat {MIN_PLAYERS}–{MAX_PLAYERS} players to start entering the game.
+              </p>
+            )}
           </Surface>
         }
       />
@@ -131,70 +154,56 @@ function SetupFields({
   const { record } = table;
   const n = record.playerCount;
   const setRecord = (next: ResistanceRecord) => onChange({ ...table, record: next });
-  const seats = Array.from({ length: n }, (_, i) => i);
   const spiesVisible = table.me?.role === "spy" && !record.variants.blindSpies;
+  const roster = table.roster ?? (record.names ?? []).filter((x) => x.trim() !== "");
+
+  const setRoster = (names: string[]) => {
+    const fits = names.length >= MIN_PLAYERS && names.length <= MAX_PLAYERS;
+    if (!fits) {
+      onChange({ ...table, roster: names });
+      return;
+    }
+    const resized = names.length === n ? record : resize(record, names.length);
+    onChange({
+      ...table,
+      roster: names,
+      ...(names.length === n ? {} : { me: null, knownSpies: [] }),
+      record: { ...resized, names },
+    });
+  };
 
   return (
     <div className="flex flex-col gap-4">
-      <Eyebrow size="md">Table</Eyebrow>
-      <div className="flex flex-wrap items-end gap-6">
-        <Stepper
-          label="Players"
-          value={n}
-          min={5}
-          max={10}
-          size="sm"
-          onChange={(count) =>
-            onChange({ ...table, me: null, knownSpies: [], record: resize(record, count) })
-          }
-        />
-        <div className="flex flex-col gap-1.5">
-          <span className="text-xs text-fg-secondary">Variants</span>
-          <div className="flex gap-2">
-            <Chip
-              size="sm"
-              pressed={record.variants.targeting}
-              onClick={() =>
-                setRecord({
-                  ...record,
-                  variants: { ...record.variants, targeting: !record.variants.targeting },
-                })
-              }
-            >
-              Targeting
-            </Chip>
-            <Chip
-              size="sm"
-              pressed={record.variants.blindSpies}
-              onClick={() =>
-                setRecord({
-                  ...record,
-                  variants: { ...record.variants, blindSpies: !record.variants.blindSpies },
-                })
-              }
-            >
-              Blind Spies
-            </Chip>
-          </div>
-        </div>
-      </div>
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-5">
-        {seats.map((seat) => (
-          <Input
-            key={seat}
-            value={record.names?.[seat] ?? ""}
-            placeholder={`P${seat + 1}`}
-            aria-label={`Seat ${seat + 1} name`}
-            onChange={(e) =>
+      <Eyebrow size="md">Players</Eyebrow>
+      <RosterEditor names={roster} onChange={setRoster} />
+      <div className="flex flex-col gap-1.5">
+        <span className="text-xs text-fg-secondary">Variants</span>
+        <div className="flex gap-2">
+          <Chip
+            size="sm"
+            pressed={record.variants.targeting}
+            onClick={() =>
               setRecord({
                 ...record,
-                names: seats.map((i) =>
-                  i === seat ? e.target.value.slice(0, 40) : (record.names?.[i] ?? ""),
-                ),
+                variants: { ...record.variants, targeting: !record.variants.targeting },
               })
             }
-          />
-        ))}
+          >
+            Targeting
+          </Chip>
+          <Chip
+            size="sm"
+            pressed={record.variants.blindSpies}
+            onClick={() =>
+              setRecord({
+                ...record,
+                variants: { ...record.variants, blindSpies: !record.variants.blindSpies },
+              })
+            }
+          >
+            Blind Spies
+          </Chip>
+        </div>
       </div>
       <SeatChoice
         label="First leader"
@@ -204,7 +213,7 @@ function SetupFields({
         onToggle={(seat) => setRecord({ ...record, firstLeader: seat })}
       />
       <SeatChoice
-        label="I sat at (optional — analyses from your view)"
+        label="I sat at (optional — adds your own view)"
         n={n}
         name={seatNamer(record.names)}
         value={table.me ? [table.me.seat] : []}
@@ -250,6 +259,87 @@ function SetupFields({
           }
         />
       )}
+    </div>
+  );
+}
+
+/**
+ * Who the spies were — enter them at any time. With every role known the
+ * Solver grades each decision as it's entered (a post-mortem), and offers the
+ * Truth and every seat's own view.
+ */
+function RolesField({
+  record,
+  onRecord,
+}: {
+  record: ResistanceRecord;
+  onRecord: (next: ResistanceRecord) => void;
+}) {
+  const n = record.playerCount;
+  const need = spyCount(n);
+  const known = record.roles?.flatMap((r, i) => (r === "spy" ? [i] : [])) ?? [];
+  const [spies, setSpies] = useState<number[]>(known);
+  const [open, setOpen] = useState(false);
+  if (record.roles && !open) {
+    return (
+      <div className="flex flex-wrap items-center gap-2 text-xs text-fg-secondary">
+        <span>
+          Spies:{" "}
+          <span className="text-rose-300">{known.map(seatNamer(record.names)).join(", ")}</span> —
+          misplays are graded.
+        </span>
+        <Button size="xs" variant="ghost" onClick={() => setOpen(true)}>
+          Change
+        </Button>
+        <Button size="xs" variant="ghost" onClick={() => onRecord({ ...record, roles: null })}>
+          Clear
+        </Button>
+      </div>
+    );
+  }
+  if (!open) {
+    return (
+      <div className="flex flex-wrap items-center gap-2 text-xs text-fg-muted">
+        <span>Roles unknown — misplays are graded once they're entered.</span>
+        <Button size="xs" variant="secondary" onClick={() => setOpen(true)}>
+          Assign roles
+        </Button>
+      </div>
+    );
+  }
+  return (
+    <div className="flex flex-col gap-2">
+      <SeatChoice
+        label={`Who were the spies? (${spies.length}/${need})`}
+        n={n}
+        name={seatNamer(record.names)}
+        value={spies}
+        onToggle={(seat) =>
+          setSpies((cur) =>
+            cur.includes(seat)
+              ? cur.filter((s) => s !== seat)
+              : cur.length < need
+                ? [...cur, seat]
+                : cur,
+          )
+        }
+      />
+      <div className="flex gap-2">
+        <Button
+          size="sm"
+          variant="primary"
+          disabled={spies.length !== need}
+          onClick={() => {
+            onRecord(setRoles(record, spies));
+            setOpen(false);
+          }}
+        >
+          Save roles
+        </Button>
+        <Button size="sm" variant="ghost" onClick={() => setOpen(false)}>
+          Cancel
+        </Button>
+      </div>
     </div>
   );
 }
@@ -306,7 +396,6 @@ function StepEntry({
   const [mission, setMission] = useState<number | null>(null);
   const [rejecters, setRejecters] = useState<number[]>([]);
   const [fails, setFails] = useState(0);
-  const [spies, setSpies] = useState<number[]>([]);
   const chosen =
     mission !== null && pos.openMissions.includes(mission) ? mission : pos.openMissions[0];
   const size = chosen === undefined ? 0 : teamSize(n, chosen);
@@ -323,35 +412,15 @@ function StepEntry({
   };
 
   if (step === "over") {
-    const need = spyCount(n);
     return (
-      <div className="flex flex-col gap-3">
-        <p className="text-sm font-semibold text-fg-strong">
-          {pos.winner === "resistance" ? "The Resistance won." : "The Spies won."}{" "}
-          {record.roles ? "Roles entered — grading uses them." : "Who were the spies?"}
-        </p>
-        {!record.roles && (
-          <>
-            <SeatChoice
-              label={`Spies (${spies.length}/${need})`}
-              n={n}
-              name={name}
-              value={spies}
-              onToggle={(seat) => setSpies((cur) => toggle(cur, seat, need))}
-            />
-            <div>
-              <Button
-                size="sm"
-                variant="primary"
-                disabled={spies.length !== need}
-                onClick={() => onRecord(setRoles(record, spies))}
-              >
-                Reveal roles
-              </Button>
-            </div>
-          </>
-        )}
-      </div>
+      <p className="text-sm font-semibold text-fg-strong">
+        {pos.winner === "resistance" ? "The Resistance won." : "The Spies won."}{" "}
+        <span className="font-normal text-fg-secondary">
+          {record.roles
+            ? "Every decision is graded in Misplays."
+            : "Assign the roles above to grade every decision."}
+        </span>
+      </p>
     );
   }
 

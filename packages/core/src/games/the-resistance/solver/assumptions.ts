@@ -100,9 +100,9 @@ export const RULE_INFO: Record<RuleId, RuleInfo> = {
   spyVotes: {
     label: "Spies back teams with a spy",
     description:
-      "A spy approves teams carrying a spy more readily than clean ones. Weak evidence — votes are social.",
+      "A spy approves teams carrying a spy more readily than clean ones. Off by default: it treats every Resistance vote as a coin flip, so a unanimous Yes (the usual first-round vote) wrongly reads as 'the spies liked this team'.",
     source: "solver",
-    defaults: { mode: "soft", strength: 0.2 },
+    defaults: { mode: "off", strength: 0.2 },
   },
 };
 

@@ -13,12 +13,17 @@ import { useEffect, useMemo, useState } from "react";
 import { ResistanceBoard } from "../games/the-resistance/components/board/ResistanceBoard";
 import { GameOver } from "../games/the-resistance/components/GameOver";
 import { ReplayDashboard } from "../games/the-resistance/components/ResistanceReplay";
+import { TableEditor } from "../games/the-resistance/components/solver/TableEntry";
+import type { SavedTable } from "../games/the-resistance/logic/storage";
+import { emptyRecord } from "../games/the-resistance/logic/table-entry";
 
 // Dev-only Resistance lab — the real board and Solver driven by the core
 // engine and bots in the browser, no auth / WS, for headless captures:
 //   /dev/resistance-preview?players=7&seed=3            — play seat 0 vs bots
 //   /dev/resistance-preview?players=7&seed=3&steps=40   — fast-forward 40 bot moves first
 //   /dev/resistance-preview?players=7&seed=3&mode=solver — a finished bot game in the Solver
+//   /dev/resistance-preview?players=7&seed=3&mode=table  — the tabletop entry screen on it
+//   /dev/resistance-preview?mode=table&fresh=1          — a new tabletop game (roster setup)
 
 const NAMES = ["You", "Ada", "Bo", "Cy", "Dee", "Eli", "Fay", "Gus", "Hal", "Ivy"];
 
@@ -28,7 +33,12 @@ function params() {
     players: Math.min(10, Math.max(5, Number(q.get("players") ?? 7))),
     seed: Number(q.get("seed") ?? 3),
     steps: Number(q.get("steps") ?? 0),
-    mode: q.get("mode") === "solver" ? ("solver" as const) : ("board" as const),
+    mode:
+      q.get("mode") === "solver"
+        ? ("solver" as const)
+        : q.get("mode") === "table"
+          ? ("table" as const)
+          : ("board" as const),
     targeting: q.get("targeting") === "1",
   };
 }
@@ -72,6 +82,7 @@ function start(allBots: boolean): GameState {
 export default function ResistancePreview() {
   const p = params();
   if (p.mode === "solver") return <SolverLab />;
+  if (p.mode === "table") return <TableLab />;
   return <BoardLab />;
 }
 
@@ -79,6 +90,35 @@ function SolverLab() {
   const gs = useMemo(() => start(true), []);
   const log = { ...gs.record, formatVersion: 1 as const, seed: params().seed };
   return <ReplayDashboard record={log} names={NAMES.slice(0, gs.record.playerCount)} />;
+}
+
+/** The tabletop entry screen on a bot game's record, roles known from the start. */
+function TableLab() {
+  const [table, setTable] = useState<SavedTable>(() => {
+    if (new URLSearchParams(window.location.search).get("fresh") === "1") {
+      return {
+        id: "preview",
+        title: "New game",
+        updatedAt: 0,
+        me: null,
+        knownSpies: [],
+        roster: ["Ada", "Bo"],
+        record: emptyRecord(),
+      };
+    }
+    const gs = start(true);
+    const names = NAMES.slice(0, gs.record.playerCount);
+    return {
+      id: "preview",
+      title: "Preview game",
+      updatedAt: 0,
+      me: null,
+      knownSpies: [],
+      roster: names,
+      record: { ...gs.record, names },
+    };
+  });
+  return <TableEditor table={table} onChange={setTable} />;
 }
 
 function BoardLab() {

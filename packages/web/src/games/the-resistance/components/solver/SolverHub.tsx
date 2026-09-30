@@ -1,3 +1,4 @@
+import { ResistanceRecordSchema } from "@boardgames/core/games/the-resistance/record";
 import { tablePosition } from "@boardgames/core/games/the-resistance/rules";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
@@ -14,7 +15,13 @@ import {
 } from "../../../../components/ui";
 import { apiClient } from "../../../../lib/api-client";
 import { SOLVER_BASE } from "../../logic/solver";
-import { deleteTable, loadTables, newTableId, saveTable } from "../../logic/storage";
+import {
+  deleteTable,
+  loadTables,
+  newTableId,
+  SavedTableSchema,
+  saveTable,
+} from "../../logic/storage";
 import { emptyRecord } from "../../logic/table-entry";
 
 /**
@@ -29,6 +36,35 @@ export default function SolverHub() {
     queryFn: ({ signal }) => apiClient.getGameReplays("the-resistance", signal),
   });
 
+  const [importError, setImportError] = useState<string | null>(null);
+  const importTable = async () => {
+    setImportError(null);
+    try {
+      const raw: unknown = JSON.parse((await navigator.clipboard.readText()) || "null");
+      const saved = SavedTableSchema.safeParse(raw);
+      const record = ResistanceRecordSchema.safeParse(raw);
+      const id = newTableId();
+      if (saved.success) {
+        saveTable({ ...saved.data, id, updatedAt: Date.now() });
+      } else if (record.success) {
+        saveTable({
+          id,
+          title: "Imported game",
+          updatedAt: Date.now(),
+          me: null,
+          knownSpies: [],
+          record: record.data,
+        });
+      } else {
+        setImportError("The clipboard doesn't hold a Resistance record.");
+        return;
+      }
+      navigate(`${SOLVER_BASE}/table/${id}`);
+    } catch {
+      setImportError("Couldn't read a record from the clipboard.");
+    }
+  };
+
   const startTable = () => {
     const id = newTableId();
     saveTable({
@@ -37,6 +73,7 @@ export default function SolverHub() {
       updatedAt: Date.now(),
       me: null,
       knownSpies: [],
+      roster: [],
       record: emptyRecord(),
     });
     navigate(`${SOLVER_BASE}/table/${id}`);
@@ -64,6 +101,13 @@ export default function SolverHub() {
           description="Rooms for 5–10 with a live Solver rail; bots fill empty seats."
           onClick={() => navigate("/play/the-resistance/mp/join")}
         />
+      </div>
+
+      <div className="flex flex-wrap items-center gap-2">
+        <Button size="sm" variant="secondary" onClick={() => void importTable()}>
+          Import from clipboard
+        </Button>
+        {importError && <span className="text-xs text-rose-300">{importError}</span>}
       </div>
 
       <Section title="Tabletop games" count={tables.length}>

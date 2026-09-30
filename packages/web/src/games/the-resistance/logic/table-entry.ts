@@ -112,7 +112,8 @@ export function setRoles(record: ResistanceRecord, spies: readonly number[]): Re
 export function undo(record: ResistanceRecord): ResistanceRecord {
   const last = record.rounds.at(-1);
   if (!last) return record;
-  const cleared = { ...record, winner: null, winReason: null, roles: null };
+  // Roles stay: they may have been entered from the start for a post-mortem.
+  const cleared = { ...record, winner: null, winReason: null };
   if (last.result) return withLastProposal(cleared, (round) => ({ ...round, result: null }));
   const proposal = last.proposals.at(-1);
   if (!proposal) return { ...cleared, rounds: record.rounds.slice(0, -1) };
