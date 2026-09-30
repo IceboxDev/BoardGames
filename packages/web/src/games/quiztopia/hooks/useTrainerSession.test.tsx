@@ -68,6 +68,8 @@ const QUEUE = {
     },
   ],
   counts: { learning: 0, review: 0, new: 2 },
+  // Studied earlier today: the day's progress counts on from them.
+  doneToday: 3,
 };
 
 const submitReviewMock = vi.fn();
@@ -138,6 +140,7 @@ describe("sessionReducer", () => {
       type: "init",
       items: items(n),
       states: {},
+      doneBefore: 0,
       now: 1000,
     });
   const grade = (s: ReturnType<typeof ready>, g: "good" | "again", id = "x") =>
@@ -243,14 +246,14 @@ describe("useTrainerSession", () => {
       wrapper: withClient(),
     });
     await waitFor(() => expect(result.current.status).toBe("ready"));
-    expect(result.current.progress).toEqual({ done: 0, total: 2 });
+    expect(result.current.progress).toEqual({ done: 3, total: 5, inSession: 0 });
     await waitFor(() => expect(result.current.current?.question.id).toBe("c001-s01-q0"));
 
     act(() => result.current.reveal());
     expect(result.current.revealed).toBe(true);
     act(() => result.current.grade("good"));
 
-    expect(result.current.progress.done).toBe(1);
+    expect(result.current.progress).toMatchObject({ done: 4, inSession: 1 });
     expect(result.current.lastReview?.next).toMatchObject({
       state: "learning",
       dueDate: addDays(TODAY, 1),
@@ -265,12 +268,12 @@ describe("useTrainerSession", () => {
     // Second card: "again" brings it back at the end of this short queue.
     act(() => result.current.reveal());
     act(() => result.current.grade("again"));
-    expect(result.current.progress).toEqual({ done: 2, total: 3 });
+    expect(result.current.progress).toEqual({ done: 5, total: 6, inSession: 2 });
     expect(result.current.item?.questionId).toBe("c002-s05-q0");
     expect(result.current.summary.missed.map((m) => m.questionId)).toEqual(["c002-s05-q0"]);
 
     act(() => result.current.undo());
-    expect(result.current.progress).toEqual({ done: 1, total: 2 });
+    expect(result.current.progress).toEqual({ done: 4, total: 5, inSession: 1 });
     expect(result.current.revealed).toBe(true);
     expect(result.current.canUndo).toBe(true);
     expect(enqueueMock).not.toHaveBeenCalled();

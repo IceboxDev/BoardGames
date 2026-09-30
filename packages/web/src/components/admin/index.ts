@@ -1,8 +1,8 @@
-export { ActivityDrawer } from "./ActivityDrawer";
 export { AdminSection } from "./AdminSection";
 export { AnnouncementsCard } from "./AnnouncementsCard";
 export { ArrivalsCard } from "./ArrivalsCard";
 export { AvailabilityDrawer } from "./AvailabilityDrawer";
+export { ActivityDrawer } from "./activity/ActivityDrawer";
 export { CoverageCell } from "./CoverageCell";
 export { coveragePercent, coverageRatio } from "./coverage-summary";
 export { GuestPlayersCard } from "./GuestPlayersCard";

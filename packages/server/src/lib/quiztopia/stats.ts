@@ -314,7 +314,7 @@ export async function trainerQueue(
   settings: QuiztopiaSettings,
 ): Promise<TrainerQueue> {
   const includeLeeches = opts.includeLeeches || settings.includeLeeches;
-  const [seenRows, dueRows, introduced] = await Promise.all([
+  const [seenRows, dueRows, introduced, reviewedRows] = await Promise.all([
     db.execute({
       sql: `SELECT question_id, category FROM quiztopia_srs
              WHERE user_id = ?${opts.category !== undefined ? " AND category = ?" : ""}`,
@@ -322,6 +322,14 @@ export async function trainerQueue(
     }),
     readAllStates(db, userId, { category: opts.category, dueBy: opts.today }),
     newIntroducedToday(db, userId, opts.today),
+    db.execute({
+      sql: `SELECT DISTINCT question_id FROM quiztopia_reviews
+             WHERE user_id = ? AND local_date = ? AND source = 'trainer' AND applied = 1${
+               opts.category !== undefined ? " AND category = ?" : ""
+             }`,
+      args:
+        opts.category !== undefined ? [userId, opts.today, opts.category] : [userId, opts.today],
+    }),
   ]);
 
   const seenByCategory = new Map<number, Set<string>>();
@@ -392,5 +400,13 @@ export async function trainerQueue(
       state: it.state ? toWireState(it.state) : null,
     });
   }
-  return { today: opts.today, items, counts };
+  // Questions studied today that the queue no longer holds: a sitting
+  // picked up again later in the day counts on from them, not from zero.
+  const queued = new Set(merged.map((it) => it.questionId));
+  const doneToday = parseRows(
+    z.object({ question_id: z.string() }),
+    reviewedRows.rows,
+    "quiztopia_reviews.done-today",
+  ).filter((r) => !queued.has(r.question_id)).length;
+  return { today: opts.today, items, counts, doneToday };
 }

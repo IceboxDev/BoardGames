@@ -47,7 +47,7 @@ import type { Client } from "@libsql/client";
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
-import { logActivity } from "../lib/activity-log.ts";
+import { logActivity, settingsChanges } from "../lib/activity-log.ts";
 import { parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 import { getContentStore } from "../lib/quiztopia/content-store.ts";
@@ -228,13 +228,13 @@ quiztopiaRoutes.get("/settings", async (c) => {
 quiztopiaRoutes.put("/settings", zJsonBody(QuiztopiaSettingsSchema), async (c) => {
   const user = c.get("user");
   const settings = c.req.valid("json");
-  await writeSettings(getDb(), user.id, settings);
-  logActivity(user.id, "quiztopia-settings", {
-    language: settings.language,
-    newPerDay: settings.newPerDay,
-    newSetsPerDay: settings.newSetsPerDay,
-    gameReviewsAffectSrs: settings.gameReviewsAffectSrs,
-  });
+  const db = getDb();
+  const before = await readSettings(db, user.id);
+  await writeSettings(db, user.id, settings);
+  // Log what the save changed; a no-op save (the stepper settling on the
+  // stored value) is not activity.
+  const changes = settingsChanges(before, settings);
+  if (Object.keys(changes).length > 0) logActivity(user.id, "quiztopia-settings", { changes });
   return c.json(QuiztopiaSettingsSchema.parse(settings));
 });
 

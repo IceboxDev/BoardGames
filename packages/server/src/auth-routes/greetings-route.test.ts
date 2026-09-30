@@ -351,4 +351,26 @@ describe("GET /api/greetings ladder", () => {
     await client.execute({ sql: "DELETE FROM purchase_arrivals WHERE id = ?", args: [id] });
     expect((await ack(a, { kind: "arrival", arrivalId: id, action: "later" })).status).toBe(200);
   });
+
+  it("names the spotlight's subject in the ack's activity row", async () => {
+    const { lastInsertRowid } = await client.execute({
+      sql: `INSERT INTO skill_greetings (created_at, subject_user_id, payload_json)
+            VALUES (datetime('now'), ?, '{}')`,
+      args: [M1],
+    });
+    const id = Number(lastInsertRowid);
+    const a = app({ id: M2, onlineMode: "both" });
+    expect((await ack(a, { kind: "spotlight", id, action: "later" })).status).toBe(200);
+    await vi.waitFor(async () => {
+      const { rows } = await client.execute(
+        "SELECT meta_json FROM activity_log WHERE type = 'greeting-response'",
+      );
+      expect(JSON.parse(String(rows[0]?.meta_json))).toEqual({
+        kind: "spotlight",
+        action: "later",
+        greetingId: id,
+        subjectUserId: M1,
+      });
+    });
+  });
 });

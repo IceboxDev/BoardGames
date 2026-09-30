@@ -1,25 +1,35 @@
 import { formatTimelineDate } from "@boardgames/core/games/quiztopia/timeline";
+import { gapLabel } from "@boardgames/core/games/quiztopia/timeline-blocks";
 import { type CSSProperties, memo } from "react";
-import { MicroLabel } from "../../../../components/ui";
+import { MinusIcon, PlusIcon } from "../../../../components/icons";
+import { IconButton, MicroLabel } from "../../../../components/ui";
 import { cn } from "../../../../lib/cn";
 import { districtByN } from "../../bands";
-import { nowKey, type TimelineLayout } from "../../logic/timeline-layout";
+import {
+  type LaidOutBlock,
+  type LaidOutGap,
+  nowKey,
+  type TimelineLayout,
+} from "../../logic/timeline-layout";
 import { BuildingGlyph } from "../common/BuildingGlyph";
-import { DOT_OFFSET, eraDomId, pinDomId } from "./dom-ids";
-import { eraRange } from "./era-copy";
+import { blockDomId, DOT_OFFSET, pinDomId } from "./dom-ids";
+import { chainLabel, chainTitle } from "./era-copy";
 import { BAR, BAR_ACTIVE, CARD_EDGE, DATE_INK, DOT_FILL, DOT_RING } from "./tones";
 
 // The river: time flows down a central axis (≥ lg) or a left-hand one
-// (phones). Era bands stripe the background, each pin is a dot on the axis
-// with its card beside it, and lifespans / wars / reigns run as bars in a
-// narrow gutter lane along the axis — so a life visibly spans the moments
-// pinned while it lasted. Everything is absolutely positioned from the pure
-// layout; this component only turns numbers into boxes.
+// (phones), cut into the layout's blocks — millennia, and wherever pins
+// crowd, their centuries, decades, years and months. Each block has a
+// header naming it (with split / fold controls), quiet stretches shrink to
+// a one-line gap, and a folded block is one summary row. Each pin is a dot
+// on the axis with its card beside it; lifespans / wars / reigns run as bars
+// in a narrow gutter lane along the axis. Everything is absolutely
+// positioned from the pure layout; this component only turns numbers into
+// boxes.
 
 const LANE_W = 6;
 const CARD_GAP = 14;
-/** Room the era header chip takes at the top of its band, px. */
-const ERA_HEADER_CLEARANCE = 48;
+
+export type OverrideChange = (blockId: string, value: "split" | "fold" | null) => void;
 
 type Props = {
   layout: TimelineLayout;
@@ -28,9 +38,18 @@ type Props = {
   cardHeight: number;
   focusId: string | null;
   onSelect: (questionId: string) => void;
+  onOverride: OverrideChange;
 };
 
-function TimelineRiverImpl({ layout, wide, lang, cardHeight, focusId, onSelect }: Props) {
+function TimelineRiverImpl({
+  layout,
+  wide,
+  lang,
+  cardHeight,
+  focusId,
+  onSelect,
+  onOverride,
+}: Props) {
   const lanes = Math.max(1, layout.lanes);
   const gutter = lanes * LANE_W + 6;
   // Axis x as a CSS length; lanes and cards hang off it.
@@ -45,46 +64,37 @@ function TimelineRiverImpl({ layout, wide, lang, cardHeight, focusId, onSelect }
         ? { left: 0, width: `calc(50% - ${gutter / 2 + CARD_GAP}px)` }
         : { left: `calc(50% + ${gutter / 2 + CARD_GAP}px)`, right: 0 }
       : { left: `${gutter + 6 + CARD_GAP}px`, right: 0 };
+  const textLeft = wide ? undefined : { left: `${gutter + 6 + CARD_GAP}px` };
 
-  // Today's spot on the scale, kept clear of its era's header row (with empty
-  // eras collapsed, the 21st century is short and "now" sits right under it).
+  // Today's spot on the scale, kept clear of the header rows it may fall in.
   const nowRaw = layout.yOf(nowKey());
-  const nowBand = layout.eras.find((b) => nowRaw >= b.y && nowRaw < b.bottom);
-  const now = nowBand
-    ? Math.min(Math.max(nowRaw, nowBand.y + ERA_HEADER_CLEARANCE), nowBand.bottom - 6)
-    : nowRaw;
+  let now = nowRaw;
+  for (const b of layout.blocks) {
+    if (b.kind === "block" && b.mode !== "folded" && now >= b.y && now < b.y + b.header) {
+      now = Math.min(b.y + b.header + 4, b.bottom - 2);
+    }
+  }
   const focusSpan = layout.spans.find((s) => s.item.questionId === focusId);
+  let topIndex = 0;
 
   return (
     <div className="relative" style={{ height: layout.height }}>
-      {/* Era bands */}
-      {layout.eras.map((band, i) => (
-        <section
-          key={band.era.id}
-          id={eraDomId(band.era.id)}
-          aria-label={`${lang === "de" ? band.era.de : band.era.en}, ${band.count} pinned`}
-          className={cn(
-            "absolute inset-x-0 scroll-mt-24 border-t border-line-soft",
-            i % 2 === 0 ? "bg-fill-soft" : "",
-          )}
-          style={{ top: band.y, height: band.bottom - band.y }}
-        >
-          <div
-            className={cn(
-              "absolute top-2 flex items-baseline gap-2",
-              wide ? "left-1/2 -translate-x-1/2 justify-center" : "",
-            )}
-            style={wide ? undefined : { left: `${gutter + 6 + CARD_GAP}px` }}
-          >
-            <span className="whitespace-nowrap rounded-full border border-line bg-surface-950 px-2.5 py-0.5 text-2xs font-semibold text-fg-strong">
-              {lang === "de" ? band.era.de : band.era.en}
-            </span>
-            <MicroLabel className="whitespace-nowrap">
-              {eraRange(band.era, lang)} · {band.count}
-            </MicroLabel>
-          </div>
-        </section>
-      ))}
+      {/* Blocks and quiet gaps */}
+      {layout.blocks.map((b) =>
+        b.kind === "gap" ? (
+          <GapBand key={`gap-${b.gap.from}`} gap={b} lang={lang} wide={wide} textLeft={textLeft} />
+        ) : (
+          <BlockBand
+            key={b.id}
+            block={b}
+            lang={lang}
+            wide={wide}
+            textLeft={textLeft}
+            shaded={b.depth === 0 && topIndex++ % 2 === 0}
+            onOverride={onOverride}
+          />
+        ),
+      )}
 
       {/* Axis */}
       <div
@@ -254,5 +264,182 @@ function Connector({
         vectorEffect="non-scaling-stroke"
       />
     </svg>
+  );
+}
+
+/** A block's band: its header row (or, folded, its one summary row). */
+function BlockBand({
+  block: b,
+  lang,
+  wide,
+  textLeft,
+  shaded,
+  onOverride,
+}: {
+  block: LaidOutBlock;
+  lang: "en" | "de";
+  wide: boolean;
+  textLeft: CSSProperties | undefined;
+  shaded: boolean;
+  onOverride: OverrideChange;
+}) {
+  const de = lang === "de";
+  const label = chainLabel(b.chain, lang);
+  const title = chainTitle(b.chain, lang);
+  const pinned = de
+    ? `${b.count} ${b.count === 1 ? "Moment" : "Momente"}`
+    : `${b.count} ${b.count === 1 ? "moment" : "moments"}`;
+  const top = b.depth === 0;
+
+  if (b.mode === "folded") {
+    return (
+      <section
+        id={blockDomId(b.id)}
+        data-depth={b.depth}
+        aria-label={`${label}, ${pinned}`}
+        className={cn("absolute inset-x-0 scroll-mt-24", top && "border-t border-line-soft")}
+        style={{ top: b.y, height: b.bottom - b.y }}
+      >
+        {/* biome-ignore lint/correctness/noRestrictedElements: a folded band's whole row is its unfold control */}
+        <button
+          type="button"
+          onClick={() => onOverride(b.id, null)}
+          aria-expanded={false}
+          title={de ? "Aufklappen" : "Unfold"}
+          className={cn(
+            "absolute inset-y-1.5 flex items-center gap-2 rounded-card-md border border-dashed border-line-strong bg-surface-900/90 px-2.5 text-left transition-colors hover:bg-surface-800",
+            "focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/60",
+            wide ? "left-1/2 w-full max-w-lg -translate-x-1/2" : "right-0",
+          )}
+          style={textLeft}
+        >
+          <PlusIcon className="h-3 w-3 shrink-0 text-fg-muted" />
+          <span className="shrink-0 whitespace-nowrap text-2xs font-semibold text-fg-strong">
+            {label}
+          </span>
+          {title && <span className="min-w-0 truncate text-2xs text-fg-muted">{title}</span>}
+          <span aria-hidden="true" className="relative ml-auto h-2.5 w-20 shrink-0 sm:w-32">
+            <span className="absolute inset-x-0 top-1/2 h-px bg-line-strong" />
+            {b.strip.map(({ at, item }) => (
+              <span
+                key={item.questionId}
+                className={cn(
+                  "absolute top-1/2 h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full border",
+                  item.known
+                    ? DOT_FILL[districtByN(item.n).tone]
+                    : DOT_RING[districtByN(item.n).tone],
+                )}
+                style={{ left: `${at * 100}%` }}
+              />
+            ))}
+          </span>
+          <span className="shrink-0 text-3xs tabular-nums text-fg-muted">{b.count}</span>
+        </button>
+      </section>
+    );
+  }
+
+  return (
+    <section
+      id={blockDomId(b.id)}
+      data-depth={b.depth}
+      aria-label={`${label}${title ? ` — ${title}` : ""}, ${pinned}`}
+      className={cn(
+        "absolute inset-x-0 scroll-mt-24",
+        top ? "border-t border-line-soft" : "border-t border-dashed border-line-soft",
+        shaded && "bg-fill-soft",
+      )}
+      style={{ top: b.y, height: b.bottom - b.y }}
+    >
+      {!top && (
+        // The nesting bracket: one short tick per level at the band's edge.
+        <span
+          aria-hidden="true"
+          className="absolute inset-y-0 w-px bg-line"
+          style={{ left: (b.depth - 1) * 4 }}
+        />
+      )}
+      <div
+        className={cn(
+          // Opaque, so the axis and bars pass behind the words.
+          "absolute flex max-w-full min-w-0 items-center gap-1.5 rounded-full bg-surface-950 pr-1",
+          top ? "top-2" : "top-1.5",
+          wide ? "left-1/2 -translate-x-1/2 justify-center" : "right-0",
+        )}
+        style={textLeft}
+      >
+        <span
+          className={cn(
+            "min-w-0 truncate whitespace-nowrap rounded-full border bg-surface-950",
+            top
+              ? "border-line px-2.5 py-0.5 text-2xs font-semibold text-fg-strong"
+              : b.depth === 1
+                ? "border-line-soft px-2 py-px text-2xs font-semibold text-fg-primary"
+                : "border-line-soft px-1.5 py-px text-3xs font-semibold text-fg-secondary",
+          )}
+        >
+          {label}
+        </span>
+        {title && (
+          <span
+            className={cn(
+              "min-w-0 truncate whitespace-nowrap",
+              top ? "text-xs text-fg-secondary" : "text-2xs text-fg-muted",
+            )}
+          >
+            {title}
+          </span>
+        )}
+        <MicroLabel className="shrink-0 whitespace-nowrap tabular-nums">{b.count}</MicroLabel>
+        {b.mode === "leaf" && b.canSplit && (
+          <IconButton
+            icon={<PlusIcon className="h-3 w-3" />}
+            aria-label={de ? `${label} aufteilen` : `Split ${label}`}
+            title={de ? "Feiner aufteilen" : "Split into finer blocks"}
+            size="xs"
+            shape="pill"
+            onClick={() => onOverride(b.id, "split")}
+          />
+        )}
+        <IconButton
+          icon={<MinusIcon className="h-3 w-3" />}
+          aria-label={de ? `${label} zuklappen` : `Fold ${label}`}
+          aria-expanded={true}
+          title={de ? "Zuklappen" : "Fold"}
+          size="xs"
+          shape="pill"
+          onClick={() => onOverride(b.chain[0].id, "fold")}
+        />
+      </div>
+    </section>
+  );
+}
+
+/** A run of blocks without pins, shrunk to one caption. */
+function GapBand({
+  gap: g,
+  lang,
+  wide,
+  textLeft,
+}: {
+  gap: LaidOutGap;
+  lang: "en" | "de";
+  wide: boolean;
+  textLeft: CSSProperties | undefined;
+}) {
+  return (
+    <div
+      aria-hidden="true"
+      className={cn(
+        "absolute inset-x-0 flex items-center",
+        g.depth === 0 ? "border-t border-line-soft" : "",
+        wide ? "justify-center" : "",
+      )}
+      style={{ top: g.y, height: g.bottom - g.y, ...(wide ? {} : { paddingLeft: textLeft?.left }) }}
+    >
+      <span className="bg-surface-950 px-1.5 text-3xs italic text-fg-disabled">
+        {gapLabel(g.gap, lang)}
+      </span>
+    </div>
   );
 }

@@ -59,6 +59,7 @@ function renderView(props: { initial?: string | null; empty?: boolean } = {}) {
 
 beforeEach(() => {
   Element.prototype.scrollIntoView = vi.fn();
+  localStorage.clear();
 });
 
 const pinButtons = () => screen.getAllByRole("button").filter((b) => b.id.startsWith("tl-c"));
@@ -67,7 +68,7 @@ const focusedPinId = () =>
   document.querySelector('button[id^="tl-c"][aria-pressed="true"]')?.id ?? null;
 
 describe("TimelineView", () => {
-  it("renders every pin in time order under the seven eras", () => {
+  it("renders every pin in time order under named blocks", () => {
     renderView();
     const ids = pinButtons().map((b) => b.id.replace(/^tl-/, ""));
     expect(ids).toEqual(PREVIEW_TIMELINE.map((it) => it.questionId));
@@ -76,6 +77,24 @@ describe("TimelineView", () => {
     expect(screen.getByText("15 March 44 BC")).toBeInTheDocument();
     expect(screen.getByText("born 1954")).toBeInTheDocument();
     expect(screen.getByText(/moments pinned across/)).toBeInTheDocument();
+    expect(screen.getAllByRole("region", { name: /1st millennium BC/ })[0]).toBeInTheDocument();
+  });
+
+  it("folds a block away, remembers it, and unfolds it for a focused pin", async () => {
+    const user = userEvent.setup();
+    const { unmount } = renderView();
+    const caesar = PREVIEW_TIMELINE.find((it) => it.event.start === "-44-03-15");
+    if (!caesar) throw new Error("fixture lost Caesar");
+    const all = PREVIEW_TIMELINE.length;
+    await user.click(screen.getAllByRole("button", { name: /^Fold 1st millennium BC/ })[0]);
+    expect(pinButtons().length).toBeLessThan(all);
+    expect(document.getElementById(`tl-${caesar.questionId}`)).toBeNull();
+    unmount();
+
+    // The fold survives a reload, and focusing a pin inside undoes it.
+    renderView({ initial: caesar.questionId });
+    expect(pinButtons()).toHaveLength(all);
+    expect(screen.queryByRole("button", { name: "Reset blocks" })).toBeNull();
   });
 
   it("opens a focused pin's detail and walks it with the arrow keys", async () => {

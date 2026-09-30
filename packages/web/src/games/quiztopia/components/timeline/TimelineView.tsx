@@ -1,4 +1,5 @@
 import { formatSpan, timelineSpanYears } from "@boardgames/core/games/quiztopia/timeline";
+import { type BlockOverride, blockPath } from "@boardgames/core/games/quiztopia/timeline-blocks";
 import { useReducedMotion } from "framer-motion";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -21,10 +22,10 @@ import { layoutTimeline, type TimelineItem } from "../../logic/timeline-layout";
 import type { TrainerPaths } from "../../paths";
 import { BuildingGlyph } from "../common/BuildingGlyph";
 import { LanguageToggle } from "../common/LanguageToggle";
+import { BlockRail } from "./BlockRail";
 import { DOT_OFFSET, pinDomId } from "./dom-ids";
-import { EraRail } from "./EraRail";
 import { TimelineDetail } from "./TimelineDetail";
-import { TimelineRiver } from "./TimelineRiver";
+import { type OverrideChange, TimelineRiver } from "./TimelineRiver";
 import { DOT_FILL, DOT_RING } from "./tones";
 
 // "Your timeline": every question the member has studied pins its moment
@@ -32,8 +33,11 @@ import { DOT_FILL, DOT_RING } from "./tones";
 // single picture of history. This is the presentational half — the route
 // (`TimelinePage`) feeds it the joined pins, the dev preview a fixture.
 //
-//   ≥ lg   era rail │ river (cards alternate around the axis) │ detail
-//   phone  era chips (sticky) │ river (one column) │ detail in a sheet
+//   ≥ lg   block outline │ river (cards alternate around the axis) │ detail
+//   phone  block breadcrumb (sticky) │ river (one column) │ detail in a sheet
+//
+// The river cuts time into blocks that split where pins crowd; a member
+// can split a block further or fold one away, remembered per browser.
 //
 // `?q=<questionId>` focuses a pin: it scrolls into view, opens the detail,
 // and ← / → walk to the previous / next moment in time.
@@ -51,8 +55,33 @@ type Props = {
   onFocus: (questionId: string | null) => void;
 };
 
-const WIDE = { cardHeight: 68, baseHeight: 1500 };
-const NARROW = { cardHeight: 66, baseHeight: 900 };
+const WIDE = { cardHeight: 68, cardInset: DOT_OFFSET };
+const NARROW = { cardHeight: 66, cardInset: DOT_OFFSET };
+
+type Overrides = Readonly<Record<string, BlockOverride>>;
+const OVERRIDES_KEY = "quiztopia.timeline.blocks.v1";
+
+function loadOverrides(): Overrides {
+  try {
+    const raw = JSON.parse(localStorage.getItem(OVERRIDES_KEY) ?? "{}");
+    if (typeof raw !== "object" || raw === null) return {};
+    return Object.fromEntries(
+      Object.entries(raw).filter(
+        (e): e is [string, BlockOverride] => e[1] === "split" || e[1] === "fold",
+      ),
+    );
+  } catch {
+    return {};
+  }
+}
+
+function saveOverrides(o: Overrides) {
+  try {
+    localStorage.setItem(OVERRIDES_KEY, JSON.stringify(o));
+  } catch {
+    // Private windows and blocked storage: the cut just isn't remembered.
+  }
+}
 
 export function TimelineView({ items, totalPins, undated, paths, focusId, onFocus }: Props) {
   const navigate = useNavigate();
@@ -63,6 +92,16 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
 
   const [districts, setDistricts] = useState<ReadonlySet<number>>(() => new Set());
   const [status, setStatus] = useState<Status>("all");
+  const [overrides, setOverrides] = useState<Overrides>(loadOverrides);
+  const changeOverride = useCallback<OverrideChange>((id, value) => {
+    setOverrides((cur) => {
+      const next = { ...cur };
+      if (value) next[id] = value;
+      else delete next[id];
+      saveOverrides(next);
+      return next;
+    });
+  }, []);
 
   const visible = useMemo(
     () =>
@@ -75,8 +114,8 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
   );
   const dims = wide ? WIDE : NARROW;
   const layout = useMemo(
-    () => layoutTimeline(visible, { columns: wide ? 2 : 1, ...dims }),
-    [visible, wide, dims],
+    () => layoutTimeline(visible, { columns: wide ? 2 : 1, ...dims, overrides }),
+    [visible, wide, dims, overrides],
   );
 
   const focusIndex = focusId ? visible.findIndex((it) => it.questionId === focusId) : -1;
@@ -95,6 +134,20 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
     setDistricts(new Set());
     setStatus("all");
   }, [focusId]);
+
+  // A focused pin inside a folded block unfolds it (and every fold above).
+  const focusKey = focused?.parsed.startKey ?? null;
+  useEffect(() => {
+    if (focusKey === null) return;
+    setOverrides((cur) => {
+      const folds = blockPath(focusKey).filter((b) => cur[b.id] === "fold");
+      if (folds.length === 0) return cur;
+      const next = { ...cur };
+      for (const b of folds) delete next[b.id];
+      saveOverrides(next);
+      return next;
+    });
+  }, [focusKey]);
 
   // Bring the focused pin into view once it is laid out.
   useEffect(() => {
@@ -261,6 +314,18 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
             size="xs"
           />
           <Legend lang={lang} />
+          {Object.keys(overrides).length > 0 && (
+            <Button
+              variant="ghost"
+              size="xs"
+              onClick={() => {
+                setOverrides({});
+                saveOverrides({});
+              }}
+            >
+              {de ? "Automatisch einteilen" : "Reset blocks"}
+            </Button>
+          )}
           {undated > 0 && (
             <p className="text-2xs text-fg-muted">
               {de
@@ -285,7 +350,7 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
 
       {!wide && (
         <div className="sticky top-0 z-lift -mx-4 border-b border-line-soft bg-surface-950/90 px-4 py-2 backdrop-blur">
-          <EraRail eras={layout.eras} lang={lang} orientation="horizontal" />
+          <BlockRail blocks={layout.blocks} lang={lang} orientation="horizontal" />
         </div>
       )}
 
@@ -293,22 +358,20 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
         className={cn(
           "grid gap-6",
           wide &&
-            (focused
-              ? "grid-cols-[8.5rem_minmax(0,1fr)_20rem]"
-              : "grid-cols-[8.5rem_minmax(0,1fr)]"),
+            (focused ? "grid-cols-[10rem_minmax(0,1fr)_20rem]" : "grid-cols-[10rem_minmax(0,1fr)]"),
         )}
       >
         {wide && (
           <div>
-            <EraRail
-              eras={layout.eras}
+            <BlockRail
+              blocks={layout.blocks}
               lang={lang}
               orientation="vertical"
               className="sticky top-4"
             />
           </div>
         )}
-        <div style={{ paddingTop: DOT_OFFSET }}>
+        <div>
           {visible.length === 0 ? (
             <EmptyState
               title={de ? "Keine Momente in dieser Auswahl" : "No moments in this selection"}
@@ -338,6 +401,7 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
               cardHeight={dims.cardHeight}
               focusId={focused?.questionId ?? null}
               onSelect={(id) => onFocus(id === focusId ? null : id)}
+              onOverride={changeOverride}
             />
           )}
         </div>

@@ -50,16 +50,59 @@ describe("activity queue", () => {
     await expect(queueActivity(() => apiFetch("/y", {}))).resolves.toEqual({ ok: true });
   });
 
-  it("reportPageView goes through the queue and dedupes repeats", async () => {
-    const { reportPageView } = await import("./page-views");
+  it("reportPageView goes through the queue and drops a burst repeat only", async () => {
+    const { reportPageView, resetPageViewBurst } = await import("./page-views");
+    resetPageViewBurst();
     apiFetch.mockResolvedValue({ ok: true });
     reportPageView("calendar");
-    reportPageView("calendar");
+    reportPageView("calendar"); // a re-render: dropped
     reportPageView("games");
+    reportPageView("calendar"); // a genuine return: logged
     await new Promise((r) => setTimeout(r, 0));
     expect(apiFetch.mock.calls.map((c) => (c[1] as { body: { page: string } }).body.page)).toEqual([
       "calendar",
       "games",
+      "calendar",
     ]);
+  });
+
+  it("logs the same page again once the burst window has passed", async () => {
+    const { reportPageView, resetPageViewBurst } = await import("./page-views");
+    resetPageViewBurst();
+    apiFetch.mockResolvedValue({ ok: true });
+    vi.useFakeTimers({ toFake: ["Date"] });
+    try {
+      reportPageView("night", "2026-10-03");
+      vi.setSystemTime(Date.now() + 11_000);
+      reportPageView("night", "2026-10-03");
+    } finally {
+      vi.useRealTimers();
+    }
+    await new Promise((r) => setTimeout(r, 0));
+    expect(apiFetch).toHaveBeenCalledTimes(2);
+  });
+
+  it("sends the via with the beacon", async () => {
+    const { reportPageView, resetPageViewBurst } = await import("./page-views");
+    resetPageViewBurst();
+    apiFetch.mockResolvedValue({ ok: true });
+    reportPageView("profile-skill", "u1", { via: "greeting:spotlight" });
+    await new Promise((r) => setTimeout(r, 0));
+    expect(apiFetch.mock.calls[0]?.[1]).toMatchObject({
+      body: { page: "profile-skill", detail: "u1", via: "greeting:spotlight" },
+    });
+  });
+});
+
+describe("activity nav state", () => {
+  it("round-trips a via and recognises a quiet tidy-up", async () => {
+    const { activityNavState, isQuietNavState, quietNavState, viaFromNavState } = await import(
+      "./page-views"
+    );
+    expect(viaFromNavState(activityNavState("greeting:arrival"))).toBe("greeting:arrival");
+    expect(viaFromNavState(null)).toBeUndefined();
+    expect(viaFromNavState({ activityVia: 3 })).toBeUndefined();
+    expect(isQuietNavState(quietNavState())).toBe(true);
+    expect(isQuietNavState({ from: "/" })).toBe(false);
   });
 });

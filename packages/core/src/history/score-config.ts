@@ -19,8 +19,9 @@ const WIN_DRAW_LOSS_FFA = new Set<string>(WIN_DRAW_LOSS_FFA_SLUGS);
 
 // Plain single-winner games: one player is crowned, everyone else lost, no
 // scores, no draw, no role/win-condition to record (unlike Villainous or
-// Lovecraft Letter). The web's generic SingleWinnerForm serves every slug here.
-const SINGLE_WINNER_FFA_SLUGS = ["unstable-unicorns"] as const;
+// Lovecraft Letter). The web's generic SingleWinnerForm serves every slug here
+// except Trivial Pursuit, whose form also records each player's pie wedges.
+const SINGLE_WINNER_FFA_SLUGS = ["unstable-unicorns", "trivial-pursuit"] as const;
 const SINGLE_WINNER_FFA = new Set<string>(SINGLE_WINNER_FFA_SLUGS);
 
 export function lowScoreWinsForSlug(slug: string | null | undefined): boolean {

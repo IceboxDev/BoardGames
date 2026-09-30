@@ -20,39 +20,47 @@ const ActivityRowSchema = z.object({
   type: z.string(),
   meta_json: z.string(),
   created_at: z.string(),
+  sort_ms: z.number(),
 });
+const MetaObjectSchema = z.record(z.string(), z.unknown());
 
 // ── GET /api/admin/users/:id/activity ─────────────────────────────────
 //
-// Keyset-paged (id DESC) trail for one member, straight off the
-// (user_id, id DESC) index. `limit + 1` over-fetch decides whether a next
-// page exists without a COUNT.
+// One member's trail, newest first by WHEN IT HAPPENED (`sort_ms`, migration
+// 0047), `id` breaking ties inside a legacy one-second stamp. Keyset-paged:
+// `before` is the id of the last row the client has, and the page resumes
+// after that row's (sort_ms, id) — so the cursor stays a plain id and older
+// clients page correctly too. Served by idx_activity_log_user_sort; the
+// `limit + 1` over-fetch decides whether a next page exists without a COUNT.
 
 adminActivityRoutes.get("/:id/activity", zQuery(ActivityLogQuerySchema), async (c) => {
   const userId = c.req.param("id");
   const { before, limit } = c.req.valid("query");
 
   const { rows } = await getDb().execute({
-    sql: `SELECT id, type, meta_json, created_at FROM activity_log
-          WHERE user_id = ? ${before !== undefined ? "AND id < ?" : ""}
-          ORDER BY id DESC LIMIT ?`,
-    args: before !== undefined ? [userId, before, limit + 1] : [userId, limit + 1],
+    sql: `SELECT id, type, meta_json, created_at, sort_ms FROM activity_log
+          WHERE user_id = ?
+          ${
+            before !== undefined
+              ? `AND (sort_ms, id) < (SELECT sort_ms, id FROM activity_log WHERE id = ? AND user_id = ?)`
+              : ""
+          }
+          ORDER BY sort_ms DESC, id DESC LIMIT ?`,
+    args: before !== undefined ? [userId, before, userId, limit + 1] : [userId, limit + 1],
   });
 
   const parsed = parseRows(ActivityRowSchema, rows, "activity_log");
   const page = parsed.slice(0, limit);
   const entries = page.map((r) => {
     // A malformed meta cell degrades that one entry, not the whole page.
+    // Per-type narrowing is the reader's job (`parseActivityMeta`).
     let meta: Record<string, unknown> = {};
     try {
-      const raw: unknown = JSON.parse(r.meta_json);
-      if (raw !== null && typeof raw === "object" && !Array.isArray(raw)) {
-        meta = raw as Record<string, unknown>;
-      }
+      meta = MetaObjectSchema.safeParse(JSON.parse(r.meta_json)).data ?? {};
     } catch {
-      // fall through with empty meta
+      // unparseable JSON — keep the empty meta
     }
-    return { id: r.id, type: r.type, meta, createdAt: r.created_at };
+    return { id: r.id, type: r.type, meta, createdAt: r.created_at, occurredAtMs: r.sort_ms };
   });
 
   const nextBefore = parsed.length > limit ? (page[page.length - 1]?.id ?? null) : null;

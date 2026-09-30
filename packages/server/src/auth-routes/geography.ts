@@ -32,7 +32,7 @@ import { addDays, isLeech, type SrsState } from "@boardgames/core/trainers/srs";
 import type { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
-import { logActivity } from "../lib/activity-log.ts";
+import { logActivity, settingsChanges } from "../lib/activity-log.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 import { ReviewRejectedError } from "../lib/quiztopia/srs-db.ts";
 import {
@@ -173,8 +173,11 @@ geographyRoutes.get("/settings", async (c) => {
 geographyRoutes.put("/settings", zJsonBody(GeoSettingsSchema), async (c) => {
   const user = c.get("user");
   const settings = c.req.valid("json");
-  await writeDeckSettings(getDb(), user.id, DECK_ID, settings);
-  logActivity(user.id, "geography-settings", settings);
+  const db = getDb();
+  const before = await readDeckSettings(db, user.id, DECK_ID, GeoSettingsSchema);
+  await writeDeckSettings(db, user.id, DECK_ID, settings);
+  const changes = settingsChanges(before, settings);
+  if (Object.keys(changes).length > 0) logActivity(user.id, "geography-settings", { changes });
   return c.json(GeoSettingsSchema.parse(settings));
 });
 

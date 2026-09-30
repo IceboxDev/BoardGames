@@ -622,3 +622,56 @@ describe("parseOutcome — free-for-all awards (Publish or Perish)", () => {
     ).toBe(false);
   });
 });
+
+describe("parseOutcome — Trivial Pursuit pie wedges", () => {
+  it("round-trips each player's wedges next to the crowned winner", () => {
+    const result = parseOutcome({
+      kind: "free-for-all",
+      scenario: "Genus · English",
+      players: [
+        {
+          userId: "u1",
+          displayName: "Alice",
+          score: 0,
+          rank: 1,
+          wedges: ["blue", "pink", "yellow", "brown", "green", "orange"],
+        },
+        { userId: "u2", displayName: "Bob", score: 0, wedges: ["green"] },
+        { userId: "u3", displayName: "Cid", score: 0 },
+      ],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "free-for-all") {
+      expect(result.value.players[0].wedges).toHaveLength(6);
+      expect(result.value.players[1].wedges).toEqual(["green"]);
+      expect("wedges" in result.value.players[2]).toBe(false);
+    }
+  });
+
+  it("round-trips a team's wedges", () => {
+    const result = parseOutcome({
+      kind: "teams",
+      teams: [
+        { members: [{ userId: "u1", displayName: "Alice" }], wedges: ["blue", "orange"] },
+        { members: [{ userId: "u2", displayName: "Bob" }] },
+      ],
+      winnerTeamIndices: [0],
+    });
+    expect(result.ok).toBe(true);
+    if (result.ok && result.value.kind === "teams") {
+      expect(result.value.teams[0].wedges).toEqual(["blue", "orange"]);
+      expect("wedges" in result.value.teams[1]).toBe(false);
+    }
+  });
+
+  it("rejects an unknown colour and a repeated wedge", () => {
+    const players = (wedges: unknown) => [
+      { userId: "u1", displayName: "Alice", score: 0, rank: 1, wedges },
+      { userId: "u2", displayName: "Bob", score: 0 },
+    ];
+    expect(parseOutcome({ kind: "free-for-all", players: players(["purple"]) }).ok).toBe(false);
+    expect(parseOutcome({ kind: "free-for-all", players: players(["blue", "blue"]) }).ok).toBe(
+      false,
+    );
+  });
+});

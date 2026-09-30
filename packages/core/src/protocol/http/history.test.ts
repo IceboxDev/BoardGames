@@ -815,3 +815,42 @@ describe("MatchOutcomeSchema — free-for-all awards (Publish or Perish)", () =>
     expect(MatchOutcomeSchema.safeParse(bad).success).toBe(false);
   });
 });
+
+describe("MatchOutcomeSchema — Trivial Pursuit wedges", () => {
+  const players = (wedges: unknown) => [
+    { ...sampleParticipant("u1", "Alice"), score: 0, rank: 1, wedges },
+    { ...sampleParticipant("u2", "Bob"), score: 0, wedges: ["blue"] },
+  ];
+
+  it("keeps each player's and each team's wedges", () => {
+    const ffa = MatchOutcomeSchema.parse({
+      kind: "free-for-all",
+      players: players(["blue", "pink", "yellow", "brown", "green", "orange"]),
+    });
+    expect(ffa.kind === "free-for-all" && ffa.players[0].wedges).toHaveLength(6);
+    const teams = MatchOutcomeSchema.parse({
+      kind: "teams",
+      teams: [
+        { members: [sampleParticipant("u1", "Alice")], wedges: ["green"] },
+        { members: [sampleParticipant("u2", "Bob")] },
+      ],
+      winnerTeamIndices: [0],
+    });
+    expect(teams.kind === "teams" && teams.teams[0].wedges).toEqual(["green"]);
+  });
+
+  it("rejects an unknown wedge colour", () => {
+    const r = MatchOutcomeSchema.safeParse({ kind: "free-for-all", players: players(["purple"]) });
+    expect(r.success).toBe(false);
+    expect(r.error?.issues[0]?.path).toEqual(["players", 0, "wedges", 0]);
+  });
+
+  it("rejects a wedge collected twice", () => {
+    const r = MatchOutcomeSchema.safeParse({
+      kind: "free-for-all",
+      players: players(["blue", "blue"]),
+    });
+    expect(r.success).toBe(false);
+    expect(r.error?.issues[0]?.path).toEqual(["players", 0, "wedges"]);
+  });
+});

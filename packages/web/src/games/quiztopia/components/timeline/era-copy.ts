@@ -1,20 +1,26 @@
+import type { TimelineKind } from "@boardgames/core/games/quiztopia/timeline";
 import {
-  type Era,
-  formatDatePart,
-  type TimelineKind,
-} from "@boardgames/core/games/quiztopia/timeline";
+  type Block,
+  blockLabel,
+  blockTitle,
+} from "@boardgames/core/games/quiztopia/timeline-blocks";
 
-// Captions around the timeline: an era's range ("3000 BC – AD 476") and
-// the kind of an event in a reader's words.
+// Captions around the timeline: a block header's words ("20th century ›
+// 1990s", "Unity, Techno & the Web") and the kind of an event in a
+// reader's words.
 
-export function eraRange(era: Era, lang: "en" | "de"): string {
-  if (era.id === "deep-time") {
-    return lang === "de" ? "vor 13,8 Mrd. J. – 3000 v. Chr." : "13.8 bn years ago – 3000 BC";
+/** A header chain's date ranges, joined: "2nd millennium AD › 20th century". */
+export function chainLabel(chain: readonly Block[], lang: "en" | "de"): string {
+  return chain.map((b) => blockLabel(b, lang)).join(" › ");
+}
+
+/** The name the header shows: the deepest named block of the chain. */
+export function chainTitle(chain: readonly Block[], lang: "en" | "de"): string | null {
+  for (let i = chain.length - 1; i >= 0; i--) {
+    const t = blockTitle(chain[i], lang);
+    if (t) return t;
   }
-  const from = formatDatePart({ year: era.from, month: null, day: null }, "year", lang);
-  if (era.id === "c21") return lang === "de" ? `seit ${from}` : `since ${from}`;
-  const to = formatDatePart({ year: era.to, month: null, day: null }, "year", lang);
-  return `${from} – ${to}`;
+  return null;
 }
 
 const KIND: Record<TimelineKind, { en: string; de: string }> = {
