@@ -1382,8 +1382,8 @@ S 3 2 0984a92a4ae3974e 0 0 231137a371c8456e
 L space|end-turn
 D 4238089478 c36c244830520409
 S 3 2 a84b6ef30284cc62 0 0 a6c305f6015a53a2
-L use-bonus draw#1 ~|end-turn
-S 3 2 1cb89ab5bc2bf68b 1 1 d3cb32427b22c1f1
+L end-turn
+S 3 1 91f6abbf3a433d1a 0 0 d3cb32427b22c1f1
 L resolve s-vampire-strength#0-0 ~
 S 0 1 61da748ff5cd0dfd 0 0 63d91a053522f154
 L resolve vampiric-will#1 gray#0|resolve vampiric-will#1 eleanor#0|resolve vampiric-will#1 vampire-speed-3#0-0|end-manipulation
@@ -2556,24 +2556,19 @@ L space|hunt 0 1|hunt 1 1|hunt 2 0|hunt 2 1|hunt 3 0|hunt 3 1|end-turn
 S 1 8 064fde843091bd55 1 0 c86b54d84740043d
 L space|end-turn
 S 1 2 a84b6ef30284cc62 0 0 755c5b58898b272b
-L use-bonus discard-draw#1 ursa#0|use-bonus discard-draw#1 vampire-speed-2#1-0|use-bonus discard-draw#1 mycroft#0|use-bonus discard-draw#1 vampire-speed-3#1-0|end-turn
-S 1 5 c3a3f1fb2653b810 1 4 2137c7fc009c862d
 L end-turn
-D 1129502284 39a50b216d159676
-S 1 1 91f6abbf3a433d1a 0 0 b0e6b73bc3fb775b
+S 1 1 91f6abbf3a433d1a 0 0 be8f1d44990b4cec
 L resolve vampiric-will-double#0 bo#0|resolve vampiric-will-double#0 vampire-speed-4#2-0|resolve vampiric-will-double#0 isabel#0|end-manipulation
-S 2 4 ff54f00d0471050f 2 3 fbaa6434a9c19eda
-L resolve vampiric-will-double#0 bo#0|resolve vampiric-will-double#0 vampire-speed-4#2-0|resolve vampiric-will-double#0 s-vampire-strength#2-0|end-manipulation
-S 2 4 05a1edcd22a6a370 0 3 3694ccc453ad862b
-L resolve vampiric-will#1 vampire-speed-4#2-0|resolve vampiric-will#1 s-vampire-strength#2-0|end-manipulation
-S 2 3 e92bd67a727a75cf 1 2 98efc78a8da04f6b
-L stay|move mountains-3 6|move mountains-4 5|move mountains-5 4|move mountains-6 3|move mountains-7 2|move mountains-8 1|move plains-1 1|move plains-10 6|move plains-11 6|move plains-12 6|move plains-2 2|move plains-3 2|move plains-4 3|move plains-5 3|move plains-6 4|move plains-7 4|move plains-8 5|move plains-9 5|mist mountains-5|mist plains-10|mist plains-7
-S 2 22 cef3afd7ae2f078b 16 4 befb62ca1100d1b3
-L hunt 1 1|hunt 2 0|hunt 2 1|hunt 3 0|hunt 3 1|end-turn
-D 1952986681 af20eb0c88dd703e
-S 2 6 c93a6b5e91da67bb 2 3 25d2ec316e53df29
+D 1129502284 7e8e2be769b296e4
+S 2 4 ff54f00d0471050f 0 3 f001a4d757ed1e4d
+L resolve vampiric-will-double#0 vampire-speed-4#2-0|resolve vampiric-will-double#0 isabel#0|resolve vampiric-will-double#0 s-vampire-strength#2-0|resolve s-vampire-strength#2-0 ~
+S 2 4 fb18526e0d4196ea 2 3 d26dbc2e65630fba
+L resolve vampiric-will#1 vampire-speed-4#2-0|resolve vampiric-will#1 isabel#0|end-manipulation
+S 2 3 994476b1d82d59d4 0 2 b83c8545b7ac7606
+L stay|move mountains-7 2|move mountains-8 1|move plains-1 1|move plains-2 2|move plains-3 2|mist mountains-5|mist plains-10|mist plains-7
+S 2 9 da11106db4c73945 5 6 e445a42f5a581097
 L end-turn
-S 2 1 91f6abbf3a433d1a 0 0 29567df0aa1d333b
+S 2 1 91f6abbf3a433d1a 0 0 1aeda7b418b1b965
 R 53,50,19 0 1,2,3
 E
 G 7 4 r 0 4055599001 r,r,r,r
@@ -2872,146 +2867,157 @@ L space|hunt 0 0|hunt 0 1|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 2|hunt 3 0|
 S 0 14 ae651657479d8d99 2 0 b9e3efe0494fe2a0
 L space|end-turn
 S 0 2 a84b6ef30284cc62 0 0 6347fa757f6de084
-L use-bonus draw#0 ~|end-turn
+L end-turn
 D 2667228110 e9c2ef308284560a
-S 0 2 2d2e9adabd585316 0 1 eb630ea41bd509a4
-L end-turn
-S 0 1 91f6abbf3a433d1a 0 0 dac44fe23ea3ec29
+S 0 1 91f6abbf3a433d1a 0 0 3179518e1d6d8ca8
 L resolve vampiric-will#1 hypnosis#1|resolve vampiric-will#1 s-vampire-strength#1-0|hypnosis hypnosis#1 tyson#0 1 0|hypnosis hypnosis#1 tyson#0 0 1|hypnosis hypnosis#1 ozmo#0 1 0|hypnosis hypnosis#1 ozmo#0 0 1|hypnosis hypnosis#1 faith#0 1 0|hypnosis hypnosis#1 faith#0 0 1|hypnosis hypnosis#1 tania#0 1 2|hypnosis hypnosis#1 tania#0 0 1|hypnosis hypnosis#1 gray#0 0 0|hypnosis hypnosis#1 gray#0 2 0|hypnosis hypnosis#1 gray#0 1 1|hypnosis hypnosis#1 yaga#0 0 1|hypnosis hypnosis#1 yaga#0 2 1|hypnosis hypnosis#1 yaga#0 1 0|hypnosis hypnosis#1 yaga#0 1 2|hypnosis hypnosis#1 the-priestess#0 0 2|hypnosis hypnosis#1 the-priestess#0 2 2|hypnosis hypnosis#1 the-priestess#0 1 1|hypnosis hypnosis#1 jahda#0 1 2|hypnosis hypnosis#1 jahda#0 3 2|hypnosis hypnosis#1 jahda#0 2 1|hypnosis hypnosis#1 cotton#0 2 0|hypnosis hypnosis#1 cotton#0 4 0|hypnosis hypnosis#1 cotton#0 3 1|hypnosis hypnosis#1 marcel#0 2 0|hypnosis hypnosis#1 marcel#0 4 0|hypnosis hypnosis#1 marcel#0 3 1|hypnosis hypnosis#1 zephania#0 2 0|hypnosis hypnosis#1 zephania#0 4 0|hypnosis hypnosis#1 zephania#0 3 1|hypnosis hypnosis#1 nemes#0 2 0|hypnosis hypnosis#1 nemes#0 4 0|hypnosis hypnosis#1 nemes#0 3 1|hypnosis hypnosis#1 bolat#0 2 1|hypnosis hypnosis#1 bolat#0 4 1|hypnosis hypnosis#1 bolat#0 3 0|hypnosis hypnosis#1 bolat#0 3 2|hypnosis hypnosis#1 roxane#0 2 2|hypnosis hypnosis#1 roxane#0 4 2|hypnosis hypnosis#1 roxane#0 3 1|hypnosis hypnosis#1 form-of-mist#0 3 0|hypnosis hypnosis#1 form-of-mist#0 4 1|hypnosis hypnosis#1 ivo#0 3 0|hypnosis hypnosis#1 ivo#0 4 1|hypnosis hypnosis#1 angus#0 3 0|hypnosis hypnosis#1 angus#0 4 1|hypnosis hypnosis#1 caine#0 3 0|hypnosis hypnosis#1 caine#0 4 1|hypnosis hypnosis#1 cyrana#0 3 2|hypnosis hypnosis#1 cyrana#0 4 1|end-manipulation
-S 1 53 a51478c0aeebbd42 38 52 1d3b3a765020810f
+S 1 53 a51478c0aeebbd42 27 52 a94c1559e58b269e
 L resolve vampiric-will#1 s-vampire-strength#1-0|end-manipulation
-S 1 2 3d7f23c9c517e1cd 1 1 2273694362a9f375
+S 1 2 3d7f23c9c517e1cd 1 1 94a6196e6f693b10
 L stay|move mountains-8 4|move mountains-9 3|move plains-1 2|move plains-10 3|move plains-13 4|move plains-2 1|move plains-3 3|move plains-5 4|move plains-6 1|move plains-8 2
-S 1 11 67759004ce6982f8 0 2 94ccce3979ad5360
-L hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 2|hunt 3 0|hunt 3 2|hunt 4 0|hunt 4 2|end-turn
-D 2012023637 bfa749371be476bd
-S 1 11 f3f93331dfa0fd46 5 6 61d6cec198d02db2
-L ready jahda#0 deck|ready jahda#0 discard
-S 1 2 31c7c84463a2ee84 1 0 d54ac1635e917389
-L end-turn
-S 1 1 91f6abbf3a433d1a 0 0 dac4d9f041cc0aec
-L stay|move mountains-9 3|move plains-1 2|move plains-10 3|move plains-2 1|move plains-3 3|move plains-6 1|move plains-8 2
-S 3 8 6474ed585b63184d 1 2 c38b95d375d27555
-L familiar kutya#0 ~|hunt 0 0|hunt 1 0|hunt 3 0|hunt 4 0|end-turn
-S 3 6 b45d173d14c0b0e6 1 3 34974d0e15017bb7
+S 1 11 67759004ce6982f8 6 2 24c8f8865d42db0a
+L hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 0|hunt 4 2|end-turn
+S 1 12 734f55b215b6c8f5 0 9 ca5b0efa5fc5eace
 L ready tyson#0 deck|ready tyson#0 discard
-D 1825598168 3effd9e9aaba01a7
-S 3 2 e7fd5b3baeeed6e6 1 0 86d6dc27f5641f76
-L familiar kutya#0 ~|instant vampire-on-top 1 0 ~ ~|instant vampire-on-top 3 0 ~ ~|instant vampire-on-top 4 0 ~ ~|end-turn
-S 3 5 a5642c54722d8e73 4 2 6508daa0b0171d7f
-L stay|move cemetery-3 5|move mountains-1 4|move mountains-2 3|move mountains-3 2|move mountains-4 1|move mountains-6 1|move mountains-7 2|move mountains-8 3|move mountains-9 4|move plains-1 5
-S 2 11 b9338aef9a2fe237 5 0 e5bb5837456d76c5
-L hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 3 0|hunt 3 2|hunt 4 0|hunt 4 2|end-turn
-S 2 9 b905135c233eda60 7 4 40c120da213fd524
+D 2012023637 125acaec6ca52038
+S 1 2 e7fd5b3baeeed6e6 1 0 309b359e1a95d3c3
 L end-turn
-S 2 1 91f6abbf3a433d1a 0 0 fd5ec7b0df7d1e2e
-L stay|move plains-12 2|move plains-15 1|move plains-20 1|move plains-23 2
-D 1161480751 1d5e0318c53bf2a9
-S 0 5 28f6a0d21834a538 0 2 dca6403f1be370b7
-L hunt 0 1|hunt 1 0|hunt 1 1|hunt 3 0|hunt 3 1|hunt 4 0|end-turn
-S 0 7 9e231ad3a1164e2f 4 3 339e43004e140c30
-L end-turn
-S 0 1 91f6abbf3a433d1a 0 0 c3f8dba4b6995aec
-L stay|move mountains-7 5|move mountains-8 4|move mountains-9 3|move plains-1 2|move plains-10 3|move plains-13 4|move plains-17 5|move plains-2 1|move plains-3 3|move plains-5 4|move plains-6 1|move plains-7 5|move plains-8 2
-S 1 14 0468a6602277eeeb 1 2 8822e8983d843da1
-L end-turn
-S 1 1 91f6abbf3a433d1a 0 0 5c3c201ba5103765
-L stay|move mountains-4 5|move mountains-5 4|move mountains-6 3|move mountains-7 2|move mountains-8 1|move plains-1 1|move plains-2 2|move plains-3 2|move plains-4 3|move plains-5 3|move plains-6 4|move plains-7 4|move plains-8 5|move plains-9 5
-D 976038322 a6a39268c71446a8
-S 3 15 32ec91d496d91070 14 2 987bacbd589a8004
+S 1 1 91f6abbf3a433d1a 0 0 ba2ee26b723fa576
+L stay|move mountains-9 3|move plains-1 2|move plains-10 3|move plains-2 1|move plains-3 3|move plains-6 1|move plains-8 2
+S 3 8 6474ed585b63184d 6 2 fea808e2b01e170e
+L familiar kutya#0 ~|hunt 1 0|hunt 1 1|hunt 3 0|hunt 3 1|hunt 4 0|hunt-tavern|end-turn
+S 3 8 c9685c15512c47a9 1 0 3e5f658e87c919ce
+L ready gray#0 deck|ready gray#0 discard
+S 3 2 8404a83321cd6066 0 0 044808b78012779f
 L familiar kutya#0 ~|end-turn
-S 3 2 e6963d00e4eb39da 0 1 a52b4654050121e4
+D 1825598168 9663a85d8b58faf8
+S 3 2 e6963d00e4eb39da 1 1 498f9e68e7aa781e
+L stay|move cemetery-3 5|move mountains-1 4|move mountains-2 3|move mountains-3 2|move mountains-4 1|move mountains-6 1|move mountains-7 2|move mountains-8 3|move mountains-9 4|move plains-1 5
+S 2 11 b9338aef9a2fe237 10 0 be594affa3106cf1
 L end-turn
-S 3 1 91f6abbf3a433d1a 0 0 88c23e67343406c0
+S 2 1 91f6abbf3a433d1a 0 0 e8aaee6ffce36422
+L use-bonus draw#0 ~|end-manipulation
+S 0 2 7832c70989785cf0 1 0 776d638bfd7682a5
+L stay|move plains-12 2|move plains-14 1|move plains-16 2|move plains-7 2|move plains-9 1
+S 0 6 66eee1eb7aff2948 4 5 cdba1407cf090274
+L end-turn
+D 1161480751 ec7e2441d3872bb9
+S 0 1 91f6abbf3a433d1a 0 0 263f114e16341b41
 L resolve vampiric-strength-great#0 ~|resolve vampiric-strength-great#0 ~ 2|end-manipulation
-S 2 3 7f26088235d926ee 1 0 8062b2a090caedb3
+S 2 3 7f26088235d926ee 1 0 6565a8508559b166
 L resolve vampiric-will#2 bagoly#0|resolve vampiric-will#2 uwe#0|resolve vampiric-will#2 s-the-hunger#2-0|resolve vampiric-will#2 belle#0|end-manipulation
-S 2 5 a17968bf06aa3c69 0 4 68f18df410cf9969
-L stay|move cemetery-3 4|move mountains-1 3|move mountains-2 2|move mountains-3 1|move mountains-5 1|move mountains-6 2|move mountains-7 3|move mountains-8 4
-D 320309561 bf49560c1d1358e2
-S 2 9 e6bc7e0ddca64199 3 2 e013f4ecafeb78ae
-L hunt 0 1|hunt 1 0|hunt 1 1|hunt 3 0|hunt 4 0|end-turn
-S 2 6 7d0c27fcd4493322 3 3 84798ece2f8d62b4
-L digest ~|digest vampiric-strength-great#0|digest uwe#0|digest s-the-hunger#2-0|digest vampiric-will#2|digest belle#0|digest vampire-thirst#2-0|digest s-vampire-strength#2-0|digest vampiric-speed-2#0|digest vampiric-speed-3#1|digest cyrana#0|digest wright#0|digest vampire-speed-3#2-0|digest vampire-speed-2#2-0|digest bagoly#0|digest cotton#0|digest marcel#0|digest zephania#0|digest nemes#0
-S 2 19 c09ed3533448325b 13 16 793c50377aee9cfd
+S 2 5 a17968bf06aa3c69 0 4 2c400f0283c3db62
+L stay|move mountains-6 4|move mountains-7 3|move mountains-8 2|move mountains-9 1|move plains-2 1|move plains-3 1|move plains-4 2|move plains-5 2|move plains-6 3|move plains-7 3|move plains-8 4|move plains-9 4
+S 2 13 5f7c531f852ea0fc 1 2 36f5198d547a2f79
+L space|end-turn
+S 2 2 a84b6ef30284cc62 0 0 5222a6d3eadfad5f
+L keep-missions picky|keep-missions rich-get-richer|keep-missions zoologist|keep-missions common-taste|keep-missions holier-than-thou|keep-missions three-star-dinner
+D 976038322 bcfed549b3290904
+S 2 6 fb61d0db358ca53b 5 0 e4920ea22f02285a
 L end-turn
-S 2 1 91f6abbf3a433d1a 0 0 fe9979a8eb0b6d8b
-L stay|move plains-11 4|move plains-12 2|move plains-14 5|move plains-15 1|move plains-20 1|move plains-23 2|move plains-26 3|move plains-28 5|move plains-29 4|move plains-30 4|move plains-31 5|move plains-33 5|move plains-5 5|move plains-7 4|move plains-9 3
-S 0 16 72a4aa371d8191f2 12 14 d0865822673b1e48
+S 2 1 91f6abbf3a433d1a 0 0 f143c19649bae054
+L stay|move plains-10 2|move plains-2 2|move plains-4 1|move plains-8 1
+S 3 5 6749508240452489 2 3 065ae5819e13beb2
+L push ~|push plains-1|push plains-4
+S 3 3 8b8d058617d37cc4 1 2 1ed89e208af20629
+L familiar kutya#0 ~|end-turn
+S 3 2 e6963d00e4eb39da 0 1 af15fa0aa20d8041
 L end-turn
-D 142272652 e509d9001fa796f7
-S 0 1 91f6abbf3a433d1a 0 0 aadf7bf5868bf813
+D 320309561 a67927bdf707bbd8
+S 3 1 91f6abbf3a433d1a 0 0 252e200e032635a3
+L stay|move mountains-5 5|move mountains-6 4|move mountains-7 3|move mountains-8 2|move mountains-9 1|move plains-10 5|move plains-11 5|move plains-12 5|move plains-2 1|move plains-3 1|move plains-4 2|move plains-5 2|move plains-6 3|move plains-7 3|move plains-8 4|move plains-9 4
+S 1 17 092df6622d1ad6de 10 2 82eee7b127804062
+L hunt 0 1|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 1|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 0|hunt 4 1|hunt 4 2|end-turn
+S 1 14 290203016690b2a8 10 7 944a4375c7f6c01e
+L ready caine#0 deck|ready caine#0 discard
+S 1 2 158772f8e0014f98 0 0 cae42cfbe7c37d71
+L digest ~|digest vampire-speed-2#1-0|digest vampire-thirst#1-0|digest ophelia#0|digest form-of-bat#1|digest vampire-speed-4#1-0|digest s-the-hunger#1-0|digest vampire-speed-3#1-0|digest ozmo#0|digest faith#0|digest tyson#0|digest vampiric-will#1|digest hypnosis#1|digest s-vampire-strength#1-0|digest form-of-mist#0|digest ivo#0|digest angus#0|digest marcel#0
+S 1 18 e8a9acf6829e7268 14 17 2f3783b186a1bbac
+L end-turn
+D 142272652 1b793f13c897ee8d
+S 1 1 91f6abbf3a433d1a 0 0 fc32088664afa842
+L use-bonus draw#0 ~|end-manipulation
+S 0 2 7832c70989785cf0 1 0 9c14d9b02120090d
+L stay|move plains-11 4|move plains-12 2|move plains-15 1|move plains-20 1|move plains-23 2|move plains-26 3|move plains-29 4|move plains-30 4|move plains-7 4|move plains-9 3
+S 0 11 9f510171f72ca13c 5 10 b0bcc0b018d1a7b6
+L hunt 0 0|hunt 0 1|hunt 1 0|hunt 1 1|hunt 2 0|hunt 2 1|hunt 3 0|hunt 3 1|hunt 4 0|hunt 4 1|end-turn
+S 0 11 dd5df17fec339acd 10 6 e373252af91d9ab4
+L stay|move mountains-9 2|move plains-1 1|move plains-2 2|move plains-5 1|move plains-7 2
+S 1 6 cd40b909854f1d44 5 2 ad4d12bc21523c92
+L familiar caine#0 ~|hunt 0 0|hunt 1 0|hunt 2 0|hunt 3 0|hunt 4 0|end-turn
+D 3782035475 fbce13d2aeaac061
+S 1 7 f6644eb2b1a7691d 6 4 82425447ccd9d558
 L resolve dee#0 ~
-S 3 1 9dd1aec3228aa090 0 0 5d2105bdc22eff18
-L stay|move plains-11 1|move plains-12 1|move plains-14 2|move plains-15 2|move plains-16 3|move plains-18 3|move plains-3 3|move plains-5 2|move plains-7 1
-S 3 10 9110cec0962a88c0 5 7 1b0aa695ecbbe53c
-L space|end-turn
-S 3 2 a84b6ef30284cc62 1 0 50e8af428ce6ed55
-L stay|move mountains-1 6|move mountains-2 5|move mountains-3 4|move mountains-4 3|move mountains-5 2|move mountains-6 1|move mountains-8 1|move mountains-9 2|move plains-1 3|move plains-2 4|move plains-3 4|move plains-4 5|move plains-5 5|move plains-6 6|move plains-7 6
-S 1 16 0e7d5393f77c97ba 15 2 835e65eabc660150
-L end-turn
-D 3782035475 067f0875fa91f131
-S 1 1 91f6abbf3a433d1a 0 0 4bff7323dce07bce
-L end-turn
-S 2 1 91f6abbf3a433d1a 0 0 a445784809ac94c3
-L resolve vampiric-strength#2 ~|end-manipulation
-S 0 2 f0f2f1a26a8efee6 1 0 749b9414b95cee94
-L stay|move forest-1 1|move forest-3 2|move forest-5 3|move plains-23 3|move plains-26 2|move plains-29 1|move plains-30 3
-S 0 8 14dd4b9b62eaf644 7 5 d17884e806f633ce
-L space|end-turn
-S 0 2 a84b6ef30284cc62 0 0 dd97092d24a1a55a
-L end-turn
-D 3596068966 c84ee3ace77bbb25
-S 0 1 91f6abbf3a433d1a 0 0 58d407d85b08d91c
-L stay|move plains-11 2|move plains-12 4|move plains-14 1|move plains-19 1|move plains-22 2|move plains-25 3|move plains-28 4|move plains-7 4|move plains-9 3
-S 3 10 d81db242e6178626 1 9 5c6f02d5e709408b
+S 3 1 9dd1aec3228aa090 0 0 93266ec8a3a8c457
+L stay|move mountains-2 9|move mountains-3 8|move mountains-4 7|move mountains-5 6|move mountains-6 5|move mountains-7 4|move mountains-8 3|move mountains-9 2|move plains-1 1|move plains-10 4|move plains-11 6|move plains-12 6|move plains-13 5|move plains-14 7|move plains-15 7|move plains-16 8|move plains-17 6|move plains-18 8|move plains-19 9|move plains-20 9|move plains-21 7|move plains-24 8|move plains-27 9|move plains-3 2|move plains-4 1|move plains-5 3|move plains-6 2|move plains-7 4|move plains-8 3|move plains-9 5
+S 3 31 a7fe920eee29f410 15 2 0950fb08e50d9b2c
 L hunt 0 0|hunt 0 1|hunt 1 0|hunt 1 1|hunt 2 0|hunt 2 1|hunt 3 0|hunt 3 1|hunt 4 0|hunt 4 1|end-turn
-S 3 11 dd5df17fec339acd 6 2 e92855693b25dfa0
+S 3 11 dd5df17fec339acd 10 6 7799bc33382e966f
 L end-turn
-S 3 1 91f6abbf3a433d1a 0 0 d91bb881c360acab
-L resolve vampiric-will#1 jahda#0|resolve vampiric-will#1 s-vampire-strength#1-0|end-manipulation
-S 1 3 3c72481a7d79a7ea 1 2 415033dde36f7712
-L stay|move plains-1 3|move plains-11 2|move plains-12 2|move plains-14 3|move plains-15 3|move plains-3 2|move plains-5 1|move plains-9 1
-D 3468302317 2d3508cf5bac671d
-S 1 9 95431f41f874f5e3 4 6 a6c1752216487d81
-L space|end-turn
-S 1 2 a84b6ef30284cc62 0 0 dd27e5dd4176a759
-L keep-missions treasure-chest|keep-missions digestion|keep-missions tipsy
-S 1 3 fe6a3a7dcf5c4522 0 0 30cff09d94b8b064
-L instant treasure-chest ~ ~ ~ forest-10|instant treasure-chest ~ ~ ~ forest-14|instant treasure-chest ~ ~ ~ forest-2|instant treasure-chest ~ ~ ~ plains-17|instant treasure-chest ~ ~ ~ plains-25|instant treasure-chest ~ ~ ~ plains-28|instant treasure-chest ~ ~ ~ plains-31|instant treasure-chest ~ ~ ~ plains-32|instant treasure-chest ~ ~ ~ plains-34|end-turn
-S 1 10 66d5670980b1657d 3 0 61f5efbb2a4955f8
-L use-bonus discard-draw#0 jahda#0|use-bonus discard-draw#0 s-the-hunger#1-0|end-turn
-S 1 3 c016be0855a91a8b 1 2 3dac3b58fe3f0193
+S 2 1 91f6abbf3a433d1a 0 0 915a030c1e7b30aa
+L resolve vampiric-strength#2 ~|resolve vampiric-strength#2 ~ 1|use-bonus draw#0 ~|end-manipulation
+D 3596068966 a655094f2ce97a75
+S 0 4 d633cf4dfbabf60b 3 0 630e577ab3069760
+L stay|move plains-20 1|move plains-26 1
+S 0 3 c7c6eddbc5cd45e2 0 0 18377e61be7a087a
+L hunt 0 0|hunt 1 0|hunt 2 0|hunt 3 0|hunt 4 0|end-turn
+S 0 6 7b405b1fcf727091 3 3 de3ffedd24a89ce8
+L digest ~|digest baron-christien#0|digest form-of-bat#0|digest vampiric-strength#2|digest grant#0|digest simone#0|digest vampiric-stealth#0|digest s-the-hunger#0-0|digest vampiric-stealth#1|digest bippo#0|digest cotton#0|digest zephania#0|digest nemes#0|digest bolat#0|digest roxane#0|digest mycroft#0
+S 0 16 e2710b8200a59fd9 11 9 d8a79df0e8ceb683
 L end-turn
-D 2813163376 e23cc8c19c195393
-S 1 1 91f6abbf3a433d1a 0 0 746218239edbdbc4
-L stay|move castle 5|move cemetery-1 4|move cemetery-2 3|move cemetery-3 2|move mountains-1 1|move mountains-3 1|move mountains-4 2|move mountains-5 3|move mountains-6 4|move mountains-7 5
-S 2 11 85851740010cc9cf 1 1 93b70b8787560d65
+S 0 1 91f6abbf3a433d1a 0 0 52112225b21b9de1
 L end-turn
-S 2 1 91f6abbf3a433d1a 0 0 888b8c13d7c755a4
-L stay|move forest-1 4|move forest-10 8|move forest-2 4|move forest-3 5|move forest-4 5|move forest-5 6|move forest-6 6|move forest-7 7|move forest-8 7|move forest-9 8|move plains-10 7|move plains-11 7|move plains-12 6|move plains-13 6|move plains-14 6|move plains-15 5|move plains-16 5|move plains-17 5|move plains-18 4|move plains-19 4|move plains-20 3|move plains-21 4|move plains-22 3|move plains-23 2|move plains-24 3|move plains-25 2|move plains-26 1|move plains-27 2|move plains-28 1|move plains-29 2|move plains-31 1|move plains-32 2|move plains-33 3|move plains-34 3|move plains-7 8|move plains-8 8|move plains-9 7
-S 0 38 7eefb2a2e4c8005f 23 3 ce0d7628a332b194
-L hunt 0 0|hunt 0 1|hunt 1 0|hunt 1 1|hunt 2 0|hunt 2 1|hunt 3 0|hunt 3 1|hunt 4 0|hunt 4 1|end-turn
-S 0 11 dd5df17fec339acd 6 8 cd92d8e48aa44c7e
-L ready nanny#0 deck|ready nanny#0 discard
-D 2627196615 2181bf55c9f130e8
-S 0 2 b8f74450ce839bd0 1 0 72aaa49f89e1f331
-L hunt 0 0|hunt 0 1|hunt 1 0|hunt 1 1|hunt 2 0|hunt 2 1|hunt 3 1|hunt 4 0|hunt 4 1|end-turn
-S 0 10 4c349e1e7cf5fc1f 0 7 f19ee866635e2fdb
-L hunt 0 1|hunt 1 0|hunt 1 1|hunt 2 0|hunt 2 1|hunt 3 1|hunt 4 0|hunt 4 1|end-turn
-S 0 9 1a1d10b4db9533bc 2 6 d8442bdc222a0f95
+D 3468302317 6569c2b4e3fa17cd
+S 3 1 91f6abbf3a433d1a 0 0 d7f7abd8a0fd05f4
+L resolve s-vampire-strength#1-0 ~|resolve vampiric-will#1 caine#0|resolve vampiric-will#1 angus#0|resolve vampiric-will#1 s-vampire-strength#1-0
+S 1 4 6e66d8a99fa1f469 1 0 40da133bfe9e785b
+L resolve s-vampire-strength#1-0 ~|hypnosis hypnosis#1 tania#0 1 0|hypnosis hypnosis#1 tania#0 0 1|hypnosis hypnosis#1 isabel#0 1 0|hypnosis hypnosis#1 isabel#0 0 1|hypnosis hypnosis#1 form-of-mist#1 1 1|hypnosis hypnosis#1 form-of-mist#1 0 0|hypnosis hypnosis#1 form-of-mist#1 0 2|hypnosis hypnosis#1 bruce#0 1 2|hypnosis hypnosis#1 bruce#0 0 1|hypnosis hypnosis#1 yaga#0 0 0|hypnosis hypnosis#1 yaga#0 2 0|hypnosis hypnosis#1 yaga#0 1 1|hypnosis hypnosis#1 the-priestess#0 0 0|hypnosis hypnosis#1 the-priestess#0 2 0|hypnosis hypnosis#1 the-priestess#0 1 1|hypnosis hypnosis#1 brother-stewart#0 0 0|hypnosis hypnosis#1 brother-stewart#0 2 0|hypnosis hypnosis#1 brother-stewart#0 1 1|hypnosis hypnosis#1 khasar#0 0 1|hypnosis hypnosis#1 khasar#0 2 1|hypnosis hypnosis#1 khasar#0 1 0|hypnosis hypnosis#1 khasar#0 1 2|hypnosis hypnosis#1 prince-godfrey#0 0 2|hypnosis hypnosis#1 prince-godfrey#0 2 2|hypnosis hypnosis#1 prince-godfrey#0 1 1|hypnosis hypnosis#1 jahda#0 1 0|hypnosis hypnosis#1 jahda#0 3 0|hypnosis hypnosis#1 jahda#0 2 1|hypnosis hypnosis#1 juri#0 1 0|hypnosis hypnosis#1 juri#0 3 0|hypnosis hypnosis#1 juri#0 2 1|hypnosis hypnosis#1 capra#0 1 1|hypnosis hypnosis#1 capra#0 3 1|hypnosis hypnosis#1 capra#0 2 0|hypnosis hypnosis#1 capra#0 2 2|hypnosis hypnosis#1 eglantine#0 1 2|hypnosis hypnosis#1 eglantine#0 3 2|hypnosis hypnosis#1 eglantine#0 2 1|hypnosis hypnosis#1 nanny#0 2 1|hypnosis hypnosis#1 nanny#0 4 1|hypnosis hypnosis#1 nanny#0 3 0|hypnosis hypnosis#1 nanny#0 3 2|hypnosis hypnosis#1 wadsworth#0 2 2|hypnosis hypnosis#1 wadsworth#0 4 2|hypnosis hypnosis#1 wadsworth#0 3 1|hypnosis hypnosis#1 cyrana#0 3 0|hypnosis hypnosis#1 cyrana#0 4 1|hypnosis hypnosis#1 wee-vlad#0 3 0|hypnosis hypnosis#1 wee-vlad#0 4 1|hypnosis hypnosis#1 favina#0 3 1|hypnosis hypnosis#1 favina#0 4 0|hypnosis hypnosis#1 favina#0 4 2|hypnosis hypnosis#1 zara#0 3 2|hypnosis hypnosis#1 zara#0 4 1
+S 1 55 15fe54b6d9f3fb94 17 0 6750fd67b6e4feee
+L resolve s-vampire-strength#1-0 ~
+S 1 1 18e578713ebc101e 0 0 94baf03b9a94a3ee
+L stay|move mountains-5 8|move mountains-6 7|move mountains-7 6|move mountains-8 5|move mountains-9 4|move plains-1 3|move plains-10 8|move plains-11 2|move plains-12 2|move plains-14 3|move plains-15 3|move plains-16 4|move plains-18 4|move plains-19 5|move plains-2 4|move plains-20 5|move plains-22 6|move plains-23 6|move plains-25 7|move plains-26 7|move plains-28 8|move plains-29 8|move plains-3 2|move plains-30 8|move plains-4 5|move plains-5 1|move plains-6 6|move plains-8 7|move plains-9 1
+S 1 30 9287849c0aa9fd37 15 2 bbe3c75da1a6763e
+L hunt 0 0|hunt 0 1|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 0|hunt 2 1|hunt 2 2|hunt 3 1|hunt 3 2|hunt 4 0|hunt 4 1|hunt 4 2|end-turn
+D 2813163376 d73b28c3da074ac6
+S 1 15 9d6f38cc1687c9ac 14 0 66243c52c507d2ba
+L stay|move mountains-1 5|move mountains-2 4|move mountains-3 3|move mountains-4 2|move mountains-5 1|move mountains-7 1|move mountains-8 2|move mountains-9 3|move plains-1 4|move plains-2 5|move plains-3 5
+S 2 12 2896e1a9191eabe3 1 2 c69d35d420a9d1db
 L end-turn
-S 0 1 91f6abbf3a433d1a 0 0 6ac82aa6f9bb17aa
-L stay|move mountains-8 5|move mountains-9 5|move plains-1 4|move plains-11 1|move plains-12 2|move plains-15 3|move plains-16 1|move plains-18 4|move plains-19 2|move plains-2 5|move plains-20 5|move plains-22 3|move plains-25 3|move plains-28 4|move plains-3 3|move plains-30 5|move plains-5 2|move plains-7 2|move plains-9 1
-S 1 20 ce53fac5a6f52314 15 2 aa23e290096e45cf
-L hunt 0 1|hunt 1 0|hunt 2 0|hunt 2 1|hunt 3 1|hunt 4 0|hunt 4 1|end-turn
-D 1979332170 a00ef799b20999db
-S 1 8 5204a52f4183bf4d 6 1 7706b9c0b8c4a00b
+S 2 1 91f6abbf3a433d1a 0 0 e6288a8d75f59ac8
+L use-bonus draw#0 ~|end-manipulation
+S 0 2 7832c70989785cf0 1 0 4d5d916e789d415e
+L stay|move forest-1 4|move forest-2 6|move forest-3 5|move forest-5 6|move plains-11 6|move plains-12 4|move plains-15 3|move plains-18 2|move plains-19 6|move plains-20 1|move plains-21 6|move plains-22 5|move plains-24 5|move plains-25 4|move plains-26 1|move plains-27 4|move plains-28 3|move plains-29 2|move plains-30 2|move plains-31 3|move plains-32 4|move plains-33 3|move plains-34 5|move plains-7 6|move plains-9 5
+S 0 26 326f22ca16bfd344 16 3 24ef26edc544de44
 L end-turn
-S 1 1 91f6abbf3a433d1a 0 0 180812a2974e91bb
+D 2627196615 aa9f6d416bd47661
+S 0 1 91f6abbf3a433d1a 0 0 240d9d499570f5af
+L resolve s-vampire-strength#3-0 ~|familiar wiggles#0 echo#0|familiar wiggles#0 gray#0|familiar wiggles#0 s-vampire-strength#3-0|familiar wiggles#0 patricia#0
+S 3 5 654cc5921d93d161 0 0 4fa59b7db31cf154
+L familiar wiggles#0 echo#0|familiar wiggles#0 gray#0|familiar wiggles#0 s-vampire-strength#3-0|familiar wiggles#0 patricia#0|familiar wiggles#0 kutya#0|end-manipulation
+S 3 6 7ccbe2920ce8366c 1 5 0a4ef0f0460cd734
+L stay|move plains-12 1|move plains-18 1|move plains-20 2|move plains-9 2
+S 3 5 f707af9d6434e61f 2 1 4fd334d0b68bc16d
+L familiar kutya#0 ~|hunt 0 0|hunt 1 0|hunt 2 0|hunt 3 0|hunt 4 0|end-turn
+S 3 7 39559ae7726c08d1 5 1 32f6c4a472a257bf
+L ready wee-vlad#0 deck|ready wee-vlad#0 discard
+D 1979332170 51785dec7b9c3eed
+S 3 2 6e6e2c8754b8e346 1 0 6963730ec9c3df3c
+L familiar kutya#0 ~|end-turn
+S 3 2 e6963d00e4eb39da 0 1 c013789af56188f7
 L end-turn
-S 3 1 91f6abbf3a433d1a 0 0 094f8584ef4bd605
-R 44,16,56,45 2 3,4,1,2
+S 3 1 91f6abbf3a433d1a 0 0 288734279f545e9d
+L stay|move mountains-8 3|move mountains-9 2|move plains-1 1|move plains-3 2|move plains-4 1|move plains-5 3|move plains-6 2|move plains-8 3
+S 1 9 31ef369ad9aca86d 6 2 01e91feb867b5fda
+L end-turn
+S 1 1 91f6abbf3a433d1a 0 0 9305feb3fcb88585
+L resolve vampiric-will#2 sova#0|resolve vampiric-will#2 bagoly#0|resolve vampiric-will#2 vampiric-speed-3#1|resolve vampiric-will#2 vampiric-speed-2#0|end-manipulation
+D 1793889745 642446d6f5c386c6
+S 2 5 ffea5c14ddddb84f 0 4 903aff81927e169a
+L stay|move castle 4|move cemetery-1 3|move cemetery-2 2|move cemetery-3 1|move mountains-2 1|move mountains-3 2|move mountains-4 3|move mountains-5 4|move mountains-6 5|move mountains-7 6
+S 2 11 eb708beb3a6d1455 3 9 9f29a31fb220ade5
+L hunt 3 0|end-turn
+S 2 2 9c38e8ee2fc11322 1 1 96705d40d796dde7
+R 47,28,13,48 2 3,4,1,2
 E
 G 8 5 r 0 2415070504 r,r,r,r,r
 I db2739e2d8bd0537
@@ -4157,11 +4163,11 @@ L stay|move mountains-4 6|move mountains-5 5|move mountains-6 4|move mountains-7
 S 0 21 009898851693c604 8 8 19e4c2bde4feab15
 L space|hunt 0 0|hunt 2 0|end-turn
 S 0 4 4bfca721f0325e0e 0 0 bab379a520802c73
-L hunt 0 0|hunt 2 0|use-bonus discard-draw#1 vampire-speed-2#0-0|use-bonus discard-draw#1 vampire-thirst#0-0|use-bonus discard-draw#1 vampire-speed-3#0-0|end-turn
-S 0 6 b4b4a89c3c9f2a58 1 1 cbe834afa8d7a2de
-L use-bonus discard-draw#1 vampire-speed-2#0-0|use-bonus discard-draw#1 vampire-thirst#0-0|use-bonus discard-draw#1 vampire-speed-3#0-0|end-turn
+L hunt 0 0|hunt 2 0|end-turn
+S 0 3 cae6e4d7951be466 1 1 cbe834afa8d7a2de
+L end-turn
 D 1844958137 259e291392640a25
-S 0 4 e28878f8d70a89ac 3 3 52b6b0696fb990f2
+S 0 1 91f6abbf3a433d1a 0 0 52b6b0696fb990f2
 L stay|move cemetery-2 7|move cemetery-3 6|move mountains-1 5|move mountains-2 4|move mountains-3 3|move mountains-4 2|move mountains-5 1|move mountains-7 1|move mountains-8 2|move mountains-9 3|move plains-1 4|move plains-2 5|move plains-3 5|move plains-4 6|move plains-5 6|move plains-6 7|move plains-7 7
 S 1 18 3b85ef3adcb574bb 0 0 7051db2cc2c3eea9
 L space|hunt 0 0|hunt 0 1|hunt 0 2|hunt 1 2|hunt 2 2|end-turn
@@ -4175,17 +4181,17 @@ D 1959359266 c5eca0c665d3ec08
 S 1 1 91f6abbf3a433d1a 0 0 5a76559166791f9e
 L use-bonus discard-draw#1 father-eli#0|use-bonus discard-draw#1 s-the-hunger#0-0|use-bonus discard-draw#1 bridget#0|end-manipulation
 S 0 4 62bc873c0b1de52f 3 3 731d729e86525d4c
-L stay|move plains-12 2|move plains-14 1|move plains-16 2|move plains-7 2|move plains-9 1|use-bonus discard-draw#1 father-eli#0|use-bonus discard-draw#1 s-the-hunger#0-0|use-bonus discard-draw#1 bridget#0
-S 0 9 78b199331b847f07 2 2 b437531a1f02bb96
-L space|hunt 0 0|use-bonus discard-draw#1 father-eli#0|use-bonus discard-draw#1 s-the-hunger#0-0|use-bonus discard-draw#1 bridget#0|end-turn
-S 0 6 dd814d602155114c 0 0 a31bc6d471409de8
+L stay|move plains-12 2|move plains-14 1|move plains-16 2|move plains-7 2|move plains-9 1
+S 0 6 66eee1eb7aff2948 2 2 b437531a1f02bb96
+L space|hunt 0 0|end-turn
+S 0 3 0e09355f34daf0cd 0 0 a31bc6d471409de8
 L keep-missions beast-master,haute-cuisine,meh|keep-missions beast-master,haute-cuisine,romantic|keep-missions beast-master,haute-cuisine,the-devout|keep-missions beast-master,haute-cuisine,vampire-on-top|keep-missions beast-master,haute-cuisine,zoologist|keep-missions beast-master,meh,romantic|keep-missions beast-master,meh,the-devout|keep-missions beast-master,meh,vampire-on-top|keep-missions beast-master,meh,zoologist|keep-missions beast-master,romantic,the-devout|keep-missions beast-master,romantic,vampire-on-top|keep-missions beast-master,romantic,zoologist|keep-missions beast-master,the-devout,vampire-on-top|keep-missions beast-master,the-devout,zoologist|keep-missions beast-master,vampire-on-top,zoologist|keep-missions haute-cuisine,meh,romantic|keep-missions haute-cuisine,meh,the-devout|keep-missions haute-cuisine,meh,vampire-on-top|keep-missions haute-cuisine,meh,zoologist|keep-missions haute-cuisine,romantic,the-devout|keep-missions haute-cuisine,romantic,vampire-on-top|keep-missions haute-cuisine,romantic,zoologist|keep-missions haute-cuisine,the-devout,vampire-on-top|keep-missions haute-cuisine,the-devout,zoologist|keep-missions haute-cuisine,vampire-on-top,zoologist|keep-missions meh,romantic,the-devout|keep-missions meh,romantic,vampire-on-top|keep-missions meh,romantic,zoologist|keep-missions meh,the-devout,vampire-on-top|keep-missions meh,the-devout,zoologist|keep-missions meh,vampire-on-top,zoologist|keep-missions romantic,the-devout,vampire-on-top|keep-missions romantic,the-devout,zoologist|keep-missions romantic,vampire-on-top,zoologist|keep-missions the-devout,vampire-on-top,zoologist
 S 0 35 23b458fd7893564c 7 7 365dc4361f6f9567
-L hunt 0 0|use-bonus discard-draw#1 father-eli#0|use-bonus discard-draw#1 s-the-hunger#0-0|use-bonus discard-draw#1 bridget#0|end-turn
+L hunt 0 0|end-turn
 D 60953751 f3e622847e5af4aa
-S 0 5 992dd56bdc612ac4 0 0 e6007e803c0fc81b
-L use-bonus discard-draw#1 father-eli#0|use-bonus discard-draw#1 s-the-hunger#0-0|use-bonus discard-draw#1 bridget#0|end-turn
-S 0 4 e66be5ca4cdf9c69 3 3 e5d62655c5f26d6c
+S 0 2 7b6b6291f934e085 0 0 e6007e803c0fc81b
+L end-turn
+S 0 1 91f6abbf3a433d1a 0 0 e5d62655c5f26d6c
 L stay|move cemetery-2 7|move cemetery-3 6|move mountains-1 5|move mountains-2 4|move mountains-3 3|move mountains-4 2|move mountains-5 1|move mountains-7 1|move mountains-8 2|move mountains-9 3|move plains-1 4|move plains-2 5|move plains-3 5|move plains-4 6|move plains-5 6|move plains-6 7|move plains-7 7
 S 1 18 3b85ef3adcb574bb 0 0 8580274fd007c6bb
 L space|hunt 0 1|hunt 0 2|hunt 1 1|hunt 1 2|hunt 2 2|end-turn
@@ -6003,8 +6009,8 @@ L stay|move mountains-8 5|move mountains-9 4|move plains-1 3|move plains-10 2|mo
 S 3 13 e93a64ca1dc481b1 6 6 77a623763fb882bd
 L space|hunt 3 0|end-turn
 S 3 3 85665c3797ca4fea 0 0 2194fd23659b44cb
-L hunt 3 0|use-bonus draw#0 ~|end-turn
-S 3 3 b0ea6289371890be 2 2 f018f5ec5ac02212
+L hunt 3 0|end-turn
+S 3 2 9c38e8ee2fc11322 1 1 f018f5ec5ac02212
 L stay|move mountains-1 5|move mountains-2 4|move mountains-3 3|move mountains-4 2|move mountains-5 1|move mountains-7 1|move mountains-8 2|move mountains-9 3|move plains-1 4|move plains-2 5|move plains-3 5
 S 0 12 2896e1a9191eabe3 5 5 556a1da6f077525b
 L push ~|push mountains-4|push mountains-6
@@ -7347,13 +7353,13 @@ L stay|move mountains-2 8|move mountains-3 7|move mountains-4 6|move mountains-5
 S 0 29 42bd4531e47243d2 10 10 6bb047fc3cd92534
 L space|hunt 0 0|hunt 0 1|hunt 0 2|hunt 1 0|hunt 1 2|hunt 2 2|hunt 3 1|hunt 3 2|hunt 4 0|hunt 4 2|end-turn
 S 0 12 1177f720a4a87e66 0 0 a7b4a81beafc17ea
-L hunt 0 0|hunt 0 1|hunt 0 2|hunt 1 0|hunt 1 2|hunt 2 2|hunt 3 1|hunt 3 2|hunt 4 0|hunt 4 2|use-bonus discard-draw#0 s-vampire-strength#0-0|use-bonus discard-draw#0 s-the-hunger#0-0|use-bonus discard-draw#0 vampire-speed-4#0-0|end-turn
-S 0 14 018ebf8afdd1c973 5 5 ddc1e1d58c4dbef4
+L hunt 0 0|hunt 0 1|hunt 0 2|hunt 1 0|hunt 1 2|hunt 2 2|hunt 3 1|hunt 3 2|hunt 4 0|hunt 4 2|end-turn
+S 0 11 c0d5d0e92ea171fe 5 5 ddc1e1d58c4dbef4
 L digest ~|digest s-vampire-strength#0-0|digest s-the-hunger#0-0|digest vampire-speed-4#0-0|digest peter#0
 S 0 5 d356046cb3e83c06 4 4 c2c12f7ac1a96cdb
-L use-bonus discard-draw#0 s-vampire-strength#0-0|use-bonus discard-draw#0 s-the-hunger#0-0|use-bonus discard-draw#0 vampire-speed-4#0-0|end-turn
+L end-turn
 D 1857078067 4d27dd9c5fc601a1
-S 0 4 b32d468b8d90cbdf 3 3 ad0ab10ad6ec7b6a
+S 0 1 91f6abbf3a433d1a 0 0 ad0ab10ad6ec7b6a
 L familiar teddy#0 ~|end-manipulation
 S 2 2 d38d2d2e1c70a618 1 1 07f3ac0040dc72c8
 L stay|move mountains-8 5|move mountains-9 4|move plains-1 3|move plains-10 2|move plains-13 3|move plains-17 4|move plains-2 2|move plains-21 5|move plains-3 4|move plains-4 1|move plains-5 5|move plains-8 1
@@ -7387,14 +7393,14 @@ S 1 1 91f6abbf3a433d1a 0 0 d25c74847a4cf73e
 L use-bonus discard-draw#0 vampire-speed-2#0-0|use-bonus discard-draw#0 jack#0|use-bonus discard-draw#0 grant#0|end-manipulation
 D 2842750156 d4012e996d429ad2
 S 0 4 7df2e0a582611d33 3 3 814765678626b324
-L stay|move plains-12 2|move plains-14 1|move plains-16 2|move plains-7 2|move plains-9 1|use-bonus discard-draw#0 vampire-speed-2#0-0|use-bonus discard-draw#0 jack#0|use-bonus discard-draw#0 grant#0
-S 0 9 08b914aa8b8afed1 1 1 a63759107fd079a0
-L space|use-bonus discard-draw#0 vampire-speed-2#0-0|use-bonus discard-draw#0 jack#0|use-bonus discard-draw#0 grant#0|end-turn
-S 0 5 d8304813c8f227c5 0 0 add0130f61ab5028
+L stay|move plains-12 2|move plains-14 1|move plains-16 2|move plains-7 2|move plains-9 1
+S 0 6 66eee1eb7aff2948 1 1 a63759107fd079a0
+L space|end-turn
+S 0 2 a84b6ef30284cc62 0 0 add0130f61ab5028
 L keep-missions treasure-chest|keep-missions beast-master|keep-missions three-star-dinner|keep-missions eat-them-all
 S 0 4 6e6f54e7a636231b 2 2 159e0de5102e9abb
-L use-bonus discard-draw#0 vampire-speed-2#0-0|use-bonus discard-draw#0 jack#0|use-bonus discard-draw#0 grant#0|end-turn
-S 0 4 260d24b89580a05d 3 3 06ab3962fb444bff
+L end-turn
+S 0 1 91f6abbf3a433d1a 0 0 06ab3962fb444bff
 L resolve s-vampire-strength#2-0 ~|familiar teddy#0 ~
 D 3528281415 1d38918baddacd44
 S 2 2 17e5b12af118349f 0 0 7108bae73da7420e
@@ -7426,24 +7432,24 @@ L hypnosis hypnosis#0 jahda#0 1 0|hypnosis hypnosis#0 jahda#0 0 1|hypnosis hypno
 S 1 22 1fe5d2c0c218176d 21 21 efa3a50482a36e5d
 L use-bonus discard-draw#0 vampire-thirst#0-0|use-bonus discard-draw#0 marilyn#0|use-bonus discard-draw#0 zara#0|end-manipulation
 S 0 4 bf63d9875483a6e2 3 3 e2c455e59deada3b
-L stay|move plains-11 2|move plains-14 3|move plains-15 1|move plains-18 2|move plains-20 3|move plains-5 3|move plains-7 2|move plains-9 1|use-bonus discard-draw#0 vampire-thirst#0-0|use-bonus discard-draw#0 marilyn#0|use-bonus discard-draw#0 zara#0
-S 0 12 0f639d6a0f3ea020 0 0 1cf435f611c44e4a
-L space|hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 1|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 2|use-bonus discard-draw#0 vampire-thirst#0-0|use-bonus discard-draw#0 marilyn#0|use-bonus discard-draw#0 zara#0|end-turn
+L stay|move plains-11 2|move plains-14 3|move plains-15 1|move plains-18 2|move plains-20 3|move plains-5 3|move plains-7 2|move plains-9 1
+S 0 9 a8b2c0fe4ff16ba4 0 0 1cf435f611c44e4a
+L space|hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 1|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 2|end-turn
 D 218984160 ef6261b3da22f115
-S 0 16 b04385dd6d0f852e 0 0 0d486cda7bef8846
+S 0 13 6d4c445283462bfc 0 0 0d486cda7bef8846
 L keep-missions treasure-chest|keep-missions beast-master|keep-missions eat-them-all
 S 0 3 b4dd3375ecddf54e 0 0 1dc2baae29cc4053
-L hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 1|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 2|instant treasure-chest ~ ~ ~ forest-10|instant treasure-chest ~ ~ ~ forest-14|instant treasure-chest ~ ~ ~ forest-2|instant treasure-chest ~ ~ ~ plains-25|instant treasure-chest ~ ~ ~ plains-28|instant treasure-chest ~ ~ ~ plains-30|instant treasure-chest ~ ~ ~ plains-31|instant treasure-chest ~ ~ ~ plains-32|instant treasure-chest ~ ~ ~ plains-34|use-bonus discard-draw#0 vampire-thirst#0-0|use-bonus discard-draw#0 marilyn#0|use-bonus discard-draw#0 zara#0|end-turn
-S 0 24 68df89f38dcbe168 11 11 1baa93a881b270cc
-L hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 1|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 2|use-bonus discard-draw#0 vampire-thirst#0-0|use-bonus discard-draw#0 marilyn#0|use-bonus discard-draw#0 zara#0|end-turn
-S 0 15 6e2234815cf97fb6 1 1 8b86784e8259cdf5
+L hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 1|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 2|instant treasure-chest ~ ~ ~ forest-10|instant treasure-chest ~ ~ ~ forest-14|instant treasure-chest ~ ~ ~ forest-2|instant treasure-chest ~ ~ ~ plains-25|instant treasure-chest ~ ~ ~ plains-28|instant treasure-chest ~ ~ ~ plains-30|instant treasure-chest ~ ~ ~ plains-31|instant treasure-chest ~ ~ ~ plains-32|instant treasure-chest ~ ~ ~ plains-34|end-turn
+S 0 21 d2ba7d9b31dd751e 11 11 1baa93a881b270cc
+L hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 1|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 2|end-turn
+S 0 12 fe57417a3c5bb3b4 1 1 8b86784e8259cdf5
 L inspire plains-12|inspire plains-14|inspire plains-29|inspire forest-8|inspire forest-9
 S 0 5 75f673578ad5c4e9 1 1 afb8fa888cf42147
 L keep-missions dangerous-diet|keep-missions varied-diet|keep-missions a-hankering|keep-missions family-business|keep-missions haute-cuisine
 D 904384155 4a478eae1582cd76
 S 0 5 425dbc752c26f6a7 3 3 b412093e843d94c8
-L use-bonus discard-draw#0 vampire-thirst#0-0|use-bonus discard-draw#0 marilyn#0|use-bonus discard-draw#0 zara#0|end-turn
-S 0 4 906b2dd7e79f25b4 3 3 e07aecc3e224b834
+L end-turn
+S 0 1 91f6abbf3a433d1a 0 0 e07aecc3e224b834
 L stay|move mountains-6 4|move mountains-7 3|move mountains-8 2|move mountains-9 1|move plains-2 1|move plains-3 1|move plains-4 2|move plains-5 2|move plains-6 3|move plains-7 3|move plains-8 4|move plains-9 4|mist mountains-9|mist plains-10|mist plains-7
 S 1 16 6b82877b993b9cb1 14 14 3cf5e9ae06f4ec2f
 L push ~|push plains-13|push plains-8
@@ -7470,11 +7476,11 @@ L end-turn
 S 2 1 91f6abbf3a433d1a 0 0 5cf3b4f363ea8d27
 L use-bonus discard-draw#0 vampire-speed-3#0-0|use-bonus discard-draw#0 victoria#0|use-bonus discard-draw#0 zara#0|end-manipulation
 S 0 4 a25eddbc27a9d8d0 3 3 b5496262eec23af9
-L stay|move plains-11 2|move plains-14 3|move plains-15 1|move plains-18 2|move plains-20 3|move plains-5 3|move plains-7 2|move plains-9 1|use-bonus discard-draw#0 vampire-speed-3#0-0|use-bonus discard-draw#0 victoria#0|use-bonus discard-draw#0 zara#0
-S 0 12 d6c00614dd46403e 6 6 90ce9ecf1d841ef9
-L use-bonus discard-draw#0 vampire-speed-3#0-0|use-bonus discard-draw#0 victoria#0|use-bonus discard-draw#0 zara#0|end-turn
+L stay|move plains-11 2|move plains-14 3|move plains-15 1|move plains-18 2|move plains-20 3|move plains-5 3|move plains-7 2|move plains-9 1
+S 0 9 a8b2c0fe4ff16ba4 6 6 90ce9ecf1d841ef9
+L end-turn
 D 1890052148 df80dab715ddffd2
-S 0 4 c00137d2a5ec55f6 3 3 e3f7f691e42d9faf
+S 0 1 91f6abbf3a433d1a 0 0 e3f7f691e42d9faf
 L stay|move mountains-5 5|move mountains-6 4|move mountains-7 3|move mountains-8 2|move mountains-9 1|move plains-10 5|move plains-11 5|move plains-12 5|move plains-2 1|move plains-3 1|move plains-4 2|move plains-5 2|move plains-6 3|move plains-7 3|move plains-8 4|move plains-9 4
 S 3 17 092df6622d1ad6de 9 9 997b8530fb4cf999
 L hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 0|hunt 2 1|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 2|end-turn
@@ -7508,12 +7514,12 @@ S 0 4 1c3a9e230aa7b1ea 0 0 181c28d4fd819c65
 L use-bonus discard-draw#0 vampire-speed-2#0-0|use-bonus discard-draw#0 marilyn#0|use-bonus discard-draw#0 s-the-hunger#0-0|end-manipulation
 D 2875689429 5ed6de418dcf203a
 S 0 4 e7a579bf368d2668 3 3 d5e6802fa1bb6afb
-L stay|move mountains-6 6|move mountains-7 5|move mountains-8 4|move mountains-9 3|move plains-1 2|move plains-11 3|move plains-12 3|move plains-14 4|move plains-15 4|move plains-16 5|move plains-18 5|move plains-19 6|move plains-2 3|move plains-20 6|move plains-3 1|move plains-4 4|move plains-6 5|move plains-7 1|move plains-8 6|move plains-9 2|use-bonus discard-draw#0 vampire-speed-2#0-0|use-bonus discard-draw#0 marilyn#0|use-bonus discard-draw#0 s-the-hunger#0-0
-S 0 24 3d10e93da8e24368 4 4 67f417199d4efd8c
-L hunt 0 0|hunt 0 1|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 0|hunt 2 1|hunt 2 2|hunt 3 0|hunt 3 2|hunt 4 2|use-bonus discard-draw#0 vampire-speed-2#0-0|use-bonus discard-draw#0 marilyn#0|use-bonus discard-draw#0 s-the-hunger#0-0|end-turn
-S 0 16 93c3014141b5af6c 8 8 e6f749e28a7731f1
-L use-bonus discard-draw#0 vampire-speed-2#0-0|use-bonus discard-draw#0 marilyn#0|use-bonus discard-draw#0 s-the-hunger#0-0|end-turn
-S 0 4 6c384eeb19ce744e 3 3 bd97a5ade76fa1c7
+L stay|move mountains-6 6|move mountains-7 5|move mountains-8 4|move mountains-9 3|move plains-1 2|move plains-11 3|move plains-12 3|move plains-14 4|move plains-15 4|move plains-16 5|move plains-18 5|move plains-19 6|move plains-2 3|move plains-20 6|move plains-3 1|move plains-4 4|move plains-6 5|move plains-7 1|move plains-8 6|move plains-9 2
+S 0 21 66f2039234c5f7e4 4 4 67f417199d4efd8c
+L hunt 0 0|hunt 0 1|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 0|hunt 2 1|hunt 2 2|hunt 3 0|hunt 3 2|hunt 4 2|end-turn
+S 0 13 dfe226f4bcb67544 8 8 e6f749e28a7731f1
+L end-turn
+S 0 1 91f6abbf3a433d1a 0 0 bd97a5ade76fa1c7
 L stay|move plains-1 3|move plains-10 2|move plains-13 3|move plains-2 2|move plains-4 1|move plains-8 1
 S 1 7 27d7e919aabc4f00 1 1 18e88dc6b896d212
 L end-turn
@@ -7567,15 +7573,15 @@ L hunt 0 0|hunt 2 0|hunt 3 0|end-turn
 S 3 4 6dc3e3cb2f6a747e 3 3 121bc5f9580462ba
 L use-bonus discard-draw#0 jack#0|use-bonus discard-draw#0 grant#0|use-bonus discard-draw#0 vampire-speed-4#0-0|end-manipulation
 S 0 4 a0d550b03321d6ab 3 3 36ba7d7f47440a00
-L stay|move mountains-5 4|move mountains-6 3|move mountains-7 2|move mountains-8 1|move plains-1 1|move plains-2 2|move plains-3 2|move plains-4 3|move plains-5 3|move plains-6 4|move plains-7 4|use-bonus discard-draw#0 jack#0|use-bonus discard-draw#0 grant#0|use-bonus discard-draw#0 vampire-speed-4#0-0
-S 0 15 9d22f04c27b3ce63 1 1 e9d006363ae7592d
+L stay|move mountains-5 4|move mountains-6 3|move mountains-7 2|move mountains-8 1|move plains-1 1|move plains-2 2|move plains-3 2|move plains-4 3|move plains-5 3|move plains-6 4|move plains-7 4
+S 0 12 f76cc59fcf7dedb6 1 1 e9d006363ae7592d
 L push ~|push mountains-4|push mountains-6
 S 0 3 28e6009e26c2acff 0 0 12965030e63f0490
 L push ~|push mountains-4|push mountains-6
 D 552031255 333ac410bfeb0731
 S 0 3 28e6009e26c2acff 0 0 5aebf0f1e06090c9
-L use-bonus discard-draw#0 jack#0|use-bonus discard-draw#0 grant#0|use-bonus discard-draw#0 vampire-speed-4#0-0|end-turn
-S 0 4 679c47c1654f7135 3 3 1972f7d5801433d3
+L end-turn
+S 0 1 91f6abbf3a433d1a 0 0 1972f7d5801433d3
 L stay|move mountains-1 5|move mountains-2 4|move mountains-3 3|move mountains-4 2|move mountains-5 1|move mountains-7 1|move mountains-8 2|move mountains-9 3|move plains-1 4|move plains-2 5|move plains-3 5
 S 2 12 2896e1a9191eabe3 2 2 0238c89d9f49cb74
 L hunt 0 0|hunt 1 0|hunt 2 0|hunt 3 0|hunt 4 0|end-turn
@@ -7585,12 +7591,12 @@ S 2 1 91f6abbf3a433d1a 0 0 ccfc99f00821f9bc
 L use-bonus discard-draw#0 vampire-thirst#0-0|use-bonus discard-draw#0 s-vampire-strength#0-0|use-bonus discard-draw#0 s-the-hunger#0-0|end-manipulation
 D 1240478858 c03bc56638ee93cf
 S 0 4 6d8d60ec837dd52b 3 3 dc9772fd05cb1d6e
-L stay|move cemetery-3 5|move mountains-1 4|move mountains-2 3|move mountains-3 2|move mountains-4 1|move mountains-6 1|move mountains-7 2|move mountains-8 3|move mountains-9 4|move plains-1 5|use-bonus discard-draw#0 vampire-thirst#0-0|use-bonus discard-draw#0 s-vampire-strength#0-0|use-bonus discard-draw#0 s-the-hunger#0-0
-S 0 14 15df000da84726ce 4 4 d1e395486156f1dd
-L hunt 0 0|hunt 0 1|hunt 0 2|hunt 1 1|hunt 1 2|hunt 2 0|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 0|hunt 4 1|hunt 4 2|use-bonus discard-draw#0 vampire-thirst#0-0|use-bonus discard-draw#0 s-vampire-strength#0-0|use-bonus discard-draw#0 s-the-hunger#0-0|end-turn
-S 0 17 1ccc4fe329bcdf77 6 6 78b862f824e0efa2
-L use-bonus discard-draw#0 vampire-thirst#0-0|use-bonus discard-draw#0 s-vampire-strength#0-0|use-bonus discard-draw#0 s-the-hunger#0-0|end-turn
-S 0 4 109a6d8f74149fb5 3 3 04839e6d51d3f6a1
+L stay|move cemetery-3 5|move mountains-1 4|move mountains-2 3|move mountains-3 2|move mountains-4 1|move mountains-6 1|move mountains-7 2|move mountains-8 3|move mountains-9 4|move plains-1 5
+S 0 11 b9338aef9a2fe237 4 4 d1e395486156f1dd
+L hunt 0 0|hunt 0 1|hunt 0 2|hunt 1 1|hunt 1 2|hunt 2 0|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 0|hunt 4 1|hunt 4 2|end-turn
+S 0 14 8d065abb73386dbc 6 6 78b862f824e0efa2
+L end-turn
+S 0 1 91f6abbf3a433d1a 0 0 04839e6d51d3f6a1
 L stay|move cemetery-3 5|move mountains-1 4|move mountains-2 3|move mountains-3 2|move mountains-4 1|move mountains-6 1|move mountains-7 2|move mountains-8 3|move mountains-9 4|move plains-1 5
 S 3 11 b9338aef9a2fe237 4 4 3e4416511a021123
 L push ~|push mountains-2|push mountains-4
@@ -7629,12 +7635,12 @@ S 3 1 91f6abbf3a433d1a 0 0 aa75c01d0c0577de
 L use-bonus discard-draw#0 henrietta#0|use-bonus discard-draw#0 jack#0|use-bonus discard-draw#0 vampire-speed-2#0-0|end-manipulation
 D 2911549150 c2db125ff5c52e7a
 S 0 4 fe73daf2ab7f6a7d 3 3 b521237ac425f18c
-L stay|move mountains-2 2|move mountains-3 1|move mountains-5 1|move mountains-6 2|use-bonus discard-draw#0 henrietta#0|use-bonus discard-draw#0 jack#0|use-bonus discard-draw#0 vampire-speed-2#0-0
-S 0 8 194135e49e12ed61 1 1 1836932ebc3efb63
+L stay|move mountains-2 2|move mountains-3 1|move mountains-5 1|move mountains-6 2
+S 0 5 63b7c662e57d5116 1 1 1836932ebc3efb63
 L push ~|push mountains-1|push mountains-3
 S 0 3 e436213517cba2d9 2 2 4e1d10881ce5d830
-L use-bonus discard-draw#0 henrietta#0|use-bonus discard-draw#0 jack#0|use-bonus discard-draw#0 vampire-speed-2#0-0|end-turn
-S 0 4 edabcdd7672d374b 3 3 f81f3a194da09b17
+L end-turn
+S 0 1 91f6abbf3a433d1a 0 0 f81f3a194da09b17
 L familiar kaa#0 nanoosh#0|familiar kaa#0 bagoly#0|familiar kaa#0 porumbel#0|familiar kaa#0 wee-vlad#0|familiar kaa#0 wiggles#0|familiar wiggles#0 nanoosh#0|familiar wiggles#0 bagoly#0|familiar wiggles#0 porumbel#0|familiar wiggles#0 kaa#0|familiar wiggles#0 wee-vlad#0|end-manipulation
 S 1 11 c9f36f493f56c0f2 10 10 1dbe5e553e74b06c
 L familiar kaa#0 nanoosh#0|familiar kaa#0 bagoly#0|familiar kaa#0 porumbel#0|familiar kaa#0 wee-vlad#0|familiar kaa#0 wiggles#0|familiar wiggles#0 nanoosh#0|familiar wiggles#0 bagoly#0|familiar wiggles#0 porumbel#0|familiar wiggles#0 kaa#0|familiar wiggles#0 wee-vlad#0|end-turn
@@ -7666,10 +7672,10 @@ L end-turn
 S 3 1 91f6abbf3a433d1a 0 0 e92013860d155f97
 L use-bonus discard-draw#0 marilyn#0|use-bonus discard-draw#0 grant#0|use-bonus discard-draw#0 vampire-speed-4#0-0|end-manipulation
 S 0 4 9e6d20c3a99ea808 3 3 3cadb65b2df38a19
-L stay|move cemetery-1 4|move cemetery-2 3|move cemetery-3 2|move mountains-1 1|move mountains-3 1|move mountains-4 2|move mountains-5 3|move mountains-6 4|use-bonus discard-draw#0 marilyn#0|use-bonus discard-draw#0 grant#0|use-bonus discard-draw#0 vampire-speed-4#0-0
-S 0 12 6ced3c53d41c17ab 1 1 39c31caeb70ee38e
-L use-bonus discard-draw#0 marilyn#0|use-bonus discard-draw#0 grant#0|use-bonus discard-draw#0 vampire-speed-4#0-0|end-turn
-S 0 4 f02eecdb31afc9ee 3 3 f92d172c5506e2bf
+L stay|move cemetery-1 4|move cemetery-2 3|move cemetery-3 2|move mountains-1 1|move mountains-3 1|move mountains-4 2|move mountains-5 3|move mountains-6 4
+S 0 9 03ba3ced41435b67 1 1 39c31caeb70ee38e
+L end-turn
+S 0 1 91f6abbf3a433d1a 0 0 f92d172c5506e2bf
 L familiar teddy#0 ~|end-manipulation
 D 287781106 0ef1fd24703fd651
 S 2 2 d38d2d2e1c70a618 0 0 e115e589671d851d
@@ -7697,10 +7703,10 @@ D 587886872 2bbcf350c6d61feb
 S 2 1 91f6abbf3a433d1a 0 0 aa0afd5d0ef92cac
 L use-bonus discard-draw#0 zara#0|use-bonus discard-draw#0 victoria#0|use-bonus discard-draw#0 vampire-speed-3#0-0|end-manipulation
 S 0 4 458ff2d925d4090e 3 3 b8b4668e8874d33a
-L stay|move castle 1|move cemetery-2 1|move cemetery-3 2|move mountains-1 3|use-bonus discard-draw#0 zara#0|use-bonus discard-draw#0 victoria#0|use-bonus discard-draw#0 vampire-speed-3#0-0
-S 0 8 4697637afbacdc64 1 1 87422038233f72e6
-L use-bonus discard-draw#0 zara#0|use-bonus discard-draw#0 victoria#0|use-bonus discard-draw#0 vampire-speed-3#0-0|end-turn
-S 0 4 3258831ff717f220 3 3 378a8377c41a959e
+L stay|move castle 1|move cemetery-2 1|move cemetery-3 2|move mountains-1 3
+S 0 5 daa53b5255276c20 1 1 87422038233f72e6
+L end-turn
+S 0 1 91f6abbf3a433d1a 0 0 378a8377c41a959e
 L resolve s-vampire-strength#3-0 ~
 S 3 1 00b69596e17a79b4 0 0 e2243caa9f1924af
 L stay|move mountains-1 4|move mountains-2 3|move mountains-3 2|move mountains-4 1|move mountains-6 1|move mountains-7 2|move mountains-8 3|move mountains-9 4
@@ -8646,10 +8652,10 @@ D 857008018 831e0c30c32463ac
 S 5 44 55bb892eae914a28 2 2 efd0faa697c12275
 L space|hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 2|hunt 2 0|hunt 3 0|hunt 3 2|hunt 4 0|hunt 4 1|hunt 4 2|hunt 5 0|hunt 6 0|end-turn
 S 5 14 802fad936c1b9dce 0 0 888c5898aef5d01b
-L hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 2|hunt 2 0|hunt 3 0|hunt 3 2|hunt 4 0|hunt 4 1|hunt 4 2|hunt 5 0|hunt 6 0|use-bonus discard-draw#1 vampire-speed-2#5-0|use-bonus discard-draw#1 vampire-thirst#5-0|use-bonus discard-draw#1 vampire-speed-4#5-0|end-turn
-S 5 16 51cf85a01d3697f2 1 1 0ca65ea0da71ce14
-L use-bonus discard-draw#1 vampire-speed-2#5-0|use-bonus discard-draw#1 vampire-thirst#5-0|use-bonus discard-draw#1 vampire-speed-4#5-0|end-turn
-S 5 4 7d20365e71167b86 3 3 8bfc84a750397b82
+L hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 2|hunt 2 0|hunt 3 0|hunt 3 2|hunt 4 0|hunt 4 1|hunt 4 2|hunt 5 0|hunt 6 0|end-turn
+S 5 13 fb72ea35a6993ba6 1 1 0ca65ea0da71ce14
+L end-turn
+S 5 1 91f6abbf3a433d1a 0 0 8bfc84a750397b82
 L stay|move mountains-5 8|move mountains-6 7|move mountains-7 6|move mountains-8 5|move mountains-9 4|move plains-1 3|move plains-10 2|move plains-11 8|move plains-12 8|move plains-13 3|move plains-17 4|move plains-2 2|move plains-21 5|move plains-24 6|move plains-27 7|move plains-3 4|move plains-31 8|move plains-32 8|move plains-4 1|move plains-5 5|move plains-7 6|move plains-8 1|move plains-9 7
 S 1 24 c47973f911f24465 7 7 218e7289353fbc78
 L hunt 0 0|hunt 1 0|hunt 1 2|hunt 2 0|hunt 3 0|hunt 3 2|hunt 4 0|hunt 4 1|hunt 4 2|hunt 5 0|hunt 6 0|hunt 6 2|end-turn
@@ -8668,15 +8674,15 @@ D 3242075780 04b6e439f58d6134
 S 0 8 018eefea461add3e 7 7 014bb7c29e618d4c
 L use-bonus discard-draw#1 vampire-speed-4#5-0|use-bonus discard-draw#1 s-the-hunger#5-0|use-bonus discard-draw#1 vampire-speed-3#5-0|end-manipulation
 S 5 4 d47e510951b23cfd 3 3 796c5f571f223ed6
-L stay|move forest-1 8|move forest-10 4|move forest-11 5|move forest-12 6|move forest-13 7|move forest-14 8|move forest-3 9|move forest-4 1|move forest-5 8|move forest-6 2|move forest-7 7|move forest-8 3|move forest-9 6|move labyrinth 9|move plains-10 8|move plains-13 7|move plains-15 9|move plains-16 9|move plains-17 6|move plains-18 8|move plains-19 8|move plains-20 7|move plains-21 5|move plains-22 7|move plains-23 6|move plains-24 4|move plains-25 6|move plains-26 5|move plains-27 3|move plains-28 5|move plains-29 6|move plains-30 4|move plains-31 3|move plains-32 2|move plains-33 7|move plains-34 1|move plains-8 9|use-bonus discard-draw#1 vampire-speed-4#5-0|use-bonus discard-draw#1 s-the-hunger#5-0|use-bonus discard-draw#1 vampire-speed-3#5-0
-S 5 41 603f000bddc95b1a 27 27 c79fe54bb9941288
-L space|hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 0|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 0|hunt 4 1|hunt 4 2|hunt 5 0|hunt 5 2|hunt 6 0|hunt 6 2|use-bonus discard-draw#1 vampire-speed-4#5-0|use-bonus discard-draw#1 s-the-hunger#5-0|use-bonus discard-draw#1 vampire-speed-3#5-0|end-turn
-S 5 22 fc461e27b07e06bd 0 0 20c457107a869f7e
-L hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 0|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 0|hunt 4 1|hunt 4 2|hunt 5 0|hunt 5 2|hunt 6 0|hunt 6 2|use-bonus discard-draw#1 vampire-speed-4#5-0|use-bonus discard-draw#1 s-the-hunger#5-0|use-bonus discard-draw#1 vampire-speed-3#5-0|use-bonus extra-hunt#1 ~|end-turn
-S 5 22 f4de1777d49574ec 6 6 7ec3bcc2553270ba
-L use-bonus discard-draw#1 vampire-speed-4#5-0|use-bonus discard-draw#1 s-the-hunger#5-0|use-bonus discard-draw#1 vampire-speed-3#5-0|use-bonus extra-hunt#1 ~|end-turn
+L stay|move forest-1 8|move forest-10 4|move forest-11 5|move forest-12 6|move forest-13 7|move forest-14 8|move forest-3 9|move forest-4 1|move forest-5 8|move forest-6 2|move forest-7 7|move forest-8 3|move forest-9 6|move labyrinth 9|move plains-10 8|move plains-13 7|move plains-15 9|move plains-16 9|move plains-17 6|move plains-18 8|move plains-19 8|move plains-20 7|move plains-21 5|move plains-22 7|move plains-23 6|move plains-24 4|move plains-25 6|move plains-26 5|move plains-27 3|move plains-28 5|move plains-29 6|move plains-30 4|move plains-31 3|move plains-32 2|move plains-33 7|move plains-34 1|move plains-8 9
+S 5 38 47d5c786b95a4b59 27 27 c79fe54bb9941288
+L space|hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 0|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 0|hunt 4 1|hunt 4 2|hunt 5 0|hunt 5 2|hunt 6 0|hunt 6 2|end-turn
+S 5 19 70c3d47fcf46937c 0 0 20c457107a869f7e
+L hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 0|hunt 2 2|hunt 3 0|hunt 3 1|hunt 3 2|hunt 4 0|hunt 4 1|hunt 4 2|hunt 5 0|hunt 5 2|hunt 6 0|hunt 6 2|use-bonus extra-hunt#1 ~|end-turn
+S 5 19 bd6172413e3d55b3 6 6 7ec3bcc2553270ba
+L use-bonus extra-hunt#1 ~|end-turn
 D 3906242163 6ad730730b9903ea
-S 5 5 a11ee30a7ed87b9e 4 4 29f147770327168c
+S 5 2 d701e63bcada772d 1 1 29f147770327168c
 L resolve vampiric-will#2 vampire-speed-2#4-0|resolve vampiric-will#2 wentworth#0|end-manipulation
 S 4 3 c052b0077ca5fb24 2 2 30dbcb748c9fa04a
 L stay|move plains-12 2|move plains-14 1|move plains-15 3|move plains-16 2|move plains-19 3|move plains-5 3|move plains-7 2|move plains-9 1
@@ -12099,8 +12105,8 @@ L stay|move forest-11 5|move forest-3 1|move forest-5 2|move forest-7 3|move for
 S 2 14 0b44ccc06909ff1a 12 6 7f85a02ca0331821
 L space|end-turn
 S 2 2 a84b6ef30284cc62 0 0 7aa8a2cc5a38c3f3
-L use-bonus draw#0 ~|end-turn
-S 2 2 2d2e9adabd585316 1 1 7b305bd872e7c5bb
+L end-turn
+S 2 1 91f6abbf3a433d1a 0 0 7b305bd872e7c5bb
 L resolve s-vampire-strength#3-0 ~|resolve dee#0 ~
 D 1678774197 b7234e780decec3b
 S 3 2 548c75221dbec981 0 0 0d4cfadcb93c72c8
@@ -13240,10 +13246,10 @@ S 3 25 722614b035754a9a 9 9 b208323534e318c9
 L space|hunt 0 0|hunt 1 0|hunt 1 1|hunt 2 0|hunt 2 1|hunt 3 0|hunt 5 0|hunt 5 1|hunt 6 0|end-turn
 D 401335790 d0ce10da077a6cec
 S 3 11 916a1369a8d30d45 0 0 c046c49a39466247
-L hunt 0 0|hunt 1 0|hunt 1 1|hunt 2 0|hunt 2 1|hunt 3 0|hunt 5 0|hunt 5 1|hunt 6 0|use-bonus draw#0 ~|end-turn
-S 3 11 dda2d122f7b8fccf 5 5 42ce82b0e7a26a85
-L use-bonus draw#0 ~|end-turn
-S 3 2 2d2e9adabd585316 1 1 201f7e4613ade46d
+L hunt 0 0|hunt 1 0|hunt 1 1|hunt 2 0|hunt 2 1|hunt 3 0|hunt 5 0|hunt 5 1|hunt 6 0|end-turn
+S 3 10 6c7169d3445bee7d 5 5 42ce82b0e7a26a85
+L end-turn
+S 3 1 91f6abbf3a433d1a 0 0 201f7e4613ade46d
 L stay|move mountains-8 7|move mountains-9 6|move plains-1 5|move plains-13 1|move plains-17 2|move plains-2 4|move plains-21 3|move plains-24 4|move plains-27 5|move plains-3 6|move plains-30 7|move plains-31 6|move plains-32 6|move plains-34 7|move plains-4 3|move plains-5 7|move plains-6 2|move plains-8 1
 S 5 19 ec92eb069d46bf59 5 5 851b48781ecbecb7
 L space|hunt 0 0|hunt 0 2|hunt 1 0|hunt 1 1|hunt 1 2|hunt 2 0|hunt 2 1|hunt 2 2|hunt 5 0|hunt 5 1|hunt 5 2|hunt 6 0|hunt 6 2|end-turn
@@ -13728,30 +13734,21 @@ D 2698809787 08cd709dcc71edd8
 S 1 7 8383f7f263f0a469 1 0 006a0f23083db703
 S 1 2 0984a92a4ae3974e 1 0 7440b28e28fb0b12
 S 1 2 a84b6ef30284cc62 0 0 39be1f86bfad15f6
-S 1 6 01b1867634ab744c 2 5 4ad8a50c9a6218ff
-S 1 1 91f6abbf3a433d1a 0 0 12b37e957b88f31f
-D 3073850948 cc42d58ce2066645
-S 0 1 61da748ff5cd0dfd 0 0 b1877926ee4a1796
-S 0 41 d97a540c5a1c7a18 12 36 356af9e9e7291118
-S 0 7 c67abe2cb7a26f8f 0 4 7a66fe879b390681
-S 0 2 5f18110947b3bb38 1 1 66970193ba6eb95c
-S 1 31 a9e28481ea12afd1 4 30 b9e9e43db15adb54
-D 2653019857 7b96bfed3cdb6b8f
-S 1 2 5f18110947b3bb38 0 1 5aa4854734b0894c
-S 1 2 d36b5d49694fca26 1 0 75a8de873b5b2c66
-S 1 2 c4f950db9d1261ce 1 0 c5ac45c2d10c14dd
-S 1 6 7456ca5aa9dc832e 2 0 9662272668661372
-S 1 15 2143b78b0f13a60a 5 0 6ffc0d762dc56e8c
-D 3843850074 fc7e96c984fcb417
-S 1 1 91f6abbf3a433d1a 0 0 b555925563ea2061
-S 1 19 115da474ac5b2ea1 18 1 95c8064f6a28ac9a
-S 1 8 714fbf22a624c797 4 0 0b6bed8a6f88e450
-S 1 2 a84b6ef30284cc62 0 0 c673a1dcd2e8bb12
-S 1 2 e0ef4f220f808ace 1 1 dfae43d17df71e5d
-D 3430359015 c2b6315f49cd1fba
-S 0 7 986fb4e5e24dc15b 3 0 14abf95fa6f2a26e
-S 0 1 91f6abbf3a433d1a 0 0 ea42596b7ca4105a
-R 85,61 0 1,2
+S 1 1 91f6abbf3a433d1a 0 0 3cbbc0a994204890
+S 0 1 61da748ff5cd0dfd 0 0 24da570f46288f2b
+D 3073850948 bd16691ef00fc689
+S 0 41 d97a540c5a1c7a18 15 36 ab2f50131b85ae7e
+S 0 1 91f6abbf3a433d1a 0 0 5eb4af6cf8283c13
+S 1 6 29db59c0cee91f3b 0 5 41cd805e01631a24
+S 1 35 5e87a6a3fca52438 20 33 54c73a7c1d64b123
+S 1 1 91f6abbf3a433d1a 0 0 739fca5bcb8fb12b
+D 2653019857 9cf6b3c0a36c4628
+S 1 20 83489b75b35bac3e 5 14 a989d1e4fa2575df
+S 1 7 c67abe2cb7a26f8f 3 4 2d03b7b5118011d3
+S 1 1 91f6abbf3a433d1a 0 0 717844a1f9c8df34
+S 0 7 7f2acb9312e2c17e 3 1 b430eade361c0833
+S 0 1 91f6abbf3a433d1a 0 0 456141380b9783d9
+R 79,60 0 1,2
 E
 G 31 3 e 1 3337583665 r,r,r
 I e8bdc2f32a6993ec
@@ -14541,116 +14538,130 @@ S 1 23 5889a1a39ee6faa5 15 0 09b40defd61064ef
 D 2973968040 f33b47e4f3f8146c
 S 1 2 d36b5d49694fca26 1 0 6f57403a50e488d2
 S 1 2 a84b6ef30284cc62 0 0 0303cb36146d2f00
-S 1 5 103ea47d2adcad79 2 4 602b12eeafea1556
-S 1 1 91f6abbf3a433d1a 0 0 5ff49ad2da7ca69d
-S 2 16 72a4aa371d8191f2 11 14 18a1a8ae683e39d2
-D 2256127709 2d77f9b715c364ab
-S 2 4 2d5c287f4ddd40e8 1 0 bd2196c77b6dda67
-S 2 1 91f6abbf3a433d1a 0 0 63367669d1d894f7
-S 5 21 21bb920e874a1a16 13 9 68fdb13d6738ab22
-S 5 21 c6d7f348083af1a2 11 9 32ebd887a5af85fd
-S 5 2 8404a83321cd6066 1 0 efae82ea42014570
-D 2660530518 2fa858db1bdf5105
-S 5 8 018eefea461add3e 5 3 0815ceb324d55ff6
-S 5 2 a98ec72ea4fe96c6 1 0 0054263050e9c9f5
-S 5 7 fb5396d26a9320a0 1 3 c5fe0bac2d61ae81
-S 5 1 91f6abbf3a433d1a 0 0 f55d09792bc00bea
-S 4 1 9545297c9d71e0a9 0 0 10f526002b1ad9f9
-D 4152564171 f7e80e9ba191bee6
-S 4 7 4fd327cc50f3a2de 2 2 36867589d116ca97
-S 4 3 28e6009e26c2acff 0 0 3761c75b15fe52ef
-S 4 6 1c721df9d39b1652 5 2 3d6189f05bf0d9db
-S 0 1 61da748ff5cd0dfd 0 0 8bb96751df65993e
-S 0 11 f21eb87e7fb3834a 3 0 d1f2644815853eae
-D 3434723452 b5a0274b9345a890
-S 0 13 b860c89512231a1f 11 5 bf75e6e15827fa79
-S 0 1 91f6abbf3a433d1a 0 0 f580538cd4024119
-S 2 1 47d724933b0507bb 0 0 87aff2a3801dc6bc
-S 2 42 1f2083d27845f3bd 19 38 f19c46eab6d971b3
-S 2 21 0ce785d5436a6ed4 14 0 6a20aa9de8815cf3
-D 634673393 52e8adfdebb5570b
-S 2 2 a84b6ef30284cc62 1 0 ca5e1d53f8f681ff
-S 1 21 88404d5d95df79d6 3 6 a2f828375ef941e1
-S 1 1 91f6abbf3a433d1a 0 0 1a6c16c91de63b26
-S 5 3 8aaf3c0efe0e73c0 1 0 99e31d9d46f25a9e
-S 5 1 7758ac5459a7b52a 0 0 accc2614942dfe86
-D 985856874 8e91bc1d5cafcd28
-S 5 31 a7fe920eee29f410 29 5 a7d7eadf4ac52103
-S 5 1 91f6abbf3a433d1a 0 0 e3e6542c4fac90f7
-S 4 14 c7f01230bdc4ca84 4 3 77118ad767aa5c27
-S 4 19 5f027442ce64e508 11 9 adef737daa8a702a
-S 4 1 91f6abbf3a433d1a 0 0 9ded074ac5e15186
-D 335125407 139ba3b1f6e9bacd
-S 0 14 1aa7576d7bfee8b0 4 5 94d617f73ab3aa31
-S 0 8 4d46a8a3e43b5114 6 0 2681cc4a53383ae3
-S 0 1 91f6abbf3a433d1a 0 0 f5f02f01eac7f269
-S 1 18 eee462bdf3ad4987 4 16 f3e8045267a5f5d2
-S 1 7 a0ada1c729b1e16d 1 3 57bd4fe73880f24a
-D 1746156048 e3f3405147d239c9
-S 1 1 91f6abbf3a433d1a 0 0 9a48badc5bb84969
-S 2 10 d81db242e6178626 1 9 a1ad0e32e35b8f94
-S 2 14 340a2318869e526a 13 0 31a0e322dc7284dc
-S 5 1 36ce29a5192e29b2 0 0 6bec323f4535ed22
-S 5 20 0080a523ec0aacec 0 8 8e9a41cf944ace01
-D 1090706053 dc759594e146c02d
-S 5 19 417491ab382b46eb 15 7 07cc62269eeb7757
-S 5 1 91f6abbf3a433d1a 0 0 f8b33da941d48a04
-S 4 3 6783de41eefb4c3a 1 0 a0113273de03edaf
-S 4 1 91f6abbf3a433d1a 0 0 1eb040a5594ddaff
-S 0 1 91f6abbf3a433d1a 0 0 cbbdcc68ecfdd9c3
-D 1446608190 f65730269a9c78c4
-S 1 15 f449bce0667f7131 7 7 33834c34331be3f4
-S 1 8 018eefea461add3e 0 3 18b7528057f77fbe
-S 1 1 91f6abbf3a433d1a 0 0 3a7259a344067128
-S 2 15 840e8901d6ef5cbf 13 9 4d496585bc245ebd
-S 2 21 a2210e4f48c866fe 13 8 05b84d3fbdfc66aa
-D 2941525427 8f0dc1ac31481fe8
-S 2 13 9d37c3d3035ab76d 3 2 9ed86f2e9de14c4d
-S 2 7 6d61c68cf19e1935 5 2 9fd1f29505398729
-S 2 1 91f6abbf3a433d1a 0 0 ed59bfae274e52b8
-S 5 2 4428818104dbdf6f 1 1 fe09ea3120faebfa
-S 5 10 d4832e98e00ac65d 5 7 5b12e46e4378f571
-D 2218966052 208ed455aea319d3
-S 5 1 91f6abbf3a433d1a 0 0 1698ec0b20efd1c3
-S 4 7 41717ee0172b59bb 2 1 2e6a4104a1023e03
-S 4 2 2bbb60ae342a8b19 0 1 616798ac8fa8dac7
-S 4 2 158772f8e0014f98 0 0 9036f1ac49cfc91e
-S 4 1 91f6abbf3a433d1a 0 0 92280a53b38677df
-D 2641976409 10adcf9dce05c105
-S 0 9 e6bc7e0ddca64199 8 2 79e296e524f752f1
-S 0 1 91f6abbf3a433d1a 0 0 f9ce2ff52bef0521
-S 1 1 18e578713ebc101e 0 0 a37f9b4969d4ffa4
-S 1 34 da1af60c1f701021 14 16 745154a15b6e8ef6
-S 1 11 9f3de86cb580d914 10 3 32b9b996dab84e01
-D 4120378578 f8190b27c7fb9fcc
-S 2 1 91f6abbf3a433d1a 0 0 6682bb6ef6e71640
-S 5 2 4428818104dbdf6f 0 1 ea9f609a8ed6db70
-S 5 3 592be4580c0b3690 2 0 9d0a77fce7551aa6
-S 5 1 91f6abbf3a433d1a 0 0 f76fe5dbddaa77f1
-S 0 113 d955d6a649258a32 79 112 8eac976d676f5b8d
-D 3397558087 f43b517d3bd3a844
-S 0 11 a350f87da6de705e 10 2 a85f95057421508b
-S 0 1 91f6abbf3a433d1a 0 0 6cad8c4c307136c8
-S 4 5 827c61bc54087490 3 1 40736bcf03ac67ec
-S 4 4 b62dec5ffbe100b2 3 3 280f5413c10ef53b
-S 1 5 f8dcb3316fc03b24 1 4 1bc02d5c4873a28d
-D 599343096 cbf45674eb75a28c
-S 1 1 91f6abbf3a433d1a 0 0 f0362d7cfe056c63
-S 2 7 15c0074f2a4d659e 5 2 520c097bb2e346e4
-S 2 9 25c1ed6ea0a39e46 1 0 1902e743aea048d4
-S 2 2 a84b6ef30284cc62 1 0 5d1db40b073cb1b3
-S 0 20 aa42ee349bc575ca 1 5 42e50f4a44e59ec4
-D 953671277 c54d901fcf637725
-S 0 1 91f6abbf3a433d1a 0 0 4910405720baf0cc
-S 5 14 2a0d238451b0571a 1 4 3f914c4973409061
-S 5 1 91f6abbf3a433d1a 0 0 84ba505e68019ca3
-S 4 1 9545297c9d71e0a9 0 0 c56d2f9c4117975a
-S 4 9 89703a09e2d69d26 3 1 92c449042a9da074
-D 297959142 324954646089348f
-S 4 4 33961db3966a2100 1 3 8f3cdb4c27541980
-S 4 2 c28dd6e807187cde 0 1 86552c66d71a580d
-S 4 1 91f6abbf3a433d1a 0 0 0179ac1cf2d7a05b
-R 46,42,46,27,37,30 4 3,5,4,2,1,6
+S 1 1 91f6abbf3a433d1a 0 0 bfbe028279c35e6f
+S 2 16 72a4aa371d8191f2 3 14 9e25fda4f237d8dc
+S 2 2 a84b6ef30284cc62 1 0 246cb7e993a2b390
+D 2256127709 5c307f85eaf42231
+S 5 21 21bb920e874a1a16 7 9 256a3572c5b90f98
+S 5 3 57b9a2628916e02f 2 0 8116003b7edf8c17
+S 5 21 c6d7f348083af1a2 13 9 728cfb8dbe4ee894
+S 5 20 6ea586e3d8d2fbe2 11 9 1ab3b69827856f89
+S 5 2 8404a83321cd6066 1 0 4f11cf12257fae8c
+D 2660530518 92f91431b9680cd8
+S 5 1 91f6abbf3a433d1a 0 0 eee4fb0f004b0904
+S 4 1 9545297c9d71e0a9 0 0 dc6c4257e0a62689
+S 4 8 2e11c9966b2a3293 2 2 bf5367e218a63f07
+S 4 9 25c1ed6ea0a39e46 3 0 81dc24bb865ffcc2
+S 4 2 a84b6ef30284cc62 1 0 737847a490c9ffc1
+D 4152564171 3af686959be20891
+S 0 1 61da748ff5cd0dfd 0 0 2d6889c5c97a7e12
+S 0 11 f21eb87e7fb3834a 2 0 889098a4cfcea878
+S 0 7 46e8ba3caa124981 6 2 3c2eea74bfe58465
+S 1 5 ada4eb7eebdd1918 3 4 9406ef4360b1dc16
+S 1 28 e0539e49de6bea17 10 11 1c24d20092b809c4
+D 3434723452 7dc65e79049e01be
+S 1 1 91f6abbf3a433d1a 0 0 876c6c2f08205423
+S 2 22 143c0930b3821177 6 2 70d3f675043831fc
+S 2 3 63b2390ccdf570c6 2 2 5b24bb8047ac6437
+S 2 21 0ce785d5436a6ed4 9 0 16dd71d9d1aec955
+S 2 2 a84b6ef30284cc62 1 0 378e4863283f076f
+D 634673393 f457fc7f216a2493
+S 5 3 8aaf3c0efe0e73c0 1 0 9f3f30e8c1708c56
+S 5 1 7758ac5459a7b52a 0 0 e6f8ff5e0d7d4ab6
+S 5 27 f882f85cb5761bbd 13 9 51144a33182cb478
+S 5 8 018eefea461add3e 3 3 8b55aa71adb0a270
+S 5 2 3f5235327b37c370 0 0 242abaf4f2b2d492
+D 985856874 7af971c518647d1b
+S 5 2 e42135ab152c6168 1 0 2ae6899527d9c97e
+S 5 2 523a15a0b7ea2622 1 0 99b62fc2ee5b9e9d
+S 5 7 1120d5fadec7d714 2 4 d23d432f8ee47249
+S 5 6 7456ca5aa9dc832e 3 0 e1d84c2364c101f7
+S 5 5 62cc57b9543947b7 0 0 2dc06491ea817d02
+D 335125407 7151563bd0b2bb4c
+S 5 6 3ee601f162502eb9 1 0 d1971f8dd4d4bffa
+S 5 1 91f6abbf3a433d1a 0 0 f20688350d79cca6
+S 4 15 ab1243e75247f293 3 2 826cace4612583f1
+S 4 3 e436213517cba2d9 0 2 8b22975b9d432ead
+S 4 11 3b73000fbb7849b5 2 6 d4ec47e86dd485a5
+D 1746156048 0724fce0535efe64
+S 4 1 91f6abbf3a433d1a 0 0 0929369dd51a1c88
+S 0 13 2a5ff6c43f969d77 1 5 e2b7e6ae666503a3
+S 0 1 91f6abbf3a433d1a 0 0 3426e0562e5881e4
+S 1 9 e934ccbe9f35a309 5 1 68df1952248bdf3d
+S 1 13 92fa0ae7a68f3ef8 0 0 ff95870328f790c6
+D 1090706053 1e8161713dd5938e
+S 1 12 a0f002ea6af593b0 9 7 d6aa20dca7a3d70f
+S 1 1 91f6abbf3a433d1a 0 0 174bca3e7e5c3b53
+S 2 10 d81db242e6178626 6 9 362e34fac6cfcd83
+S 2 3 87ac1ac4ce180fc9 2 2 ca8288300a0e70e8
+S 2 6 b263e336fe489a41 0 4 b5fca95e86fc9e27
+D 1446608190 0738d705ac73ed6d
+S 2 1 91f6abbf3a433d1a 0 0 43f6a6fa0e8a7f18
+S 5 7 986fb4e5e24dc15b 0 4 4773298566ffd262
+S 5 18 f0edf77ce4b8467a 11 0 b2db64907e8fd6db
+S 5 6 7664954ae1db7dc6 5 4 a81a7d667460da49
+S 4 1 c63ed9fcda0f46f3 0 0 251b670243b3abe5
+D 2941525427 f7b9151243f8d8a4
+S 4 1 91f6abbf3a433d1a 0 0 da42afecd8863460
+S 1 1 18e578713ebc101e 0 0 ba1da7cef2e0c915
+S 1 42 554f8f90a9c763dc 15 37 296839fee8d23a04
+S 1 1 91f6abbf3a433d1a 0 0 101e94c13f25f8bd
+S 2 20 e01c36e19b732f74 11 5 c67151a55c62d7a3
+D 2218966052 5253b5a5994a4715
+S 2 14 eca523d0089c88f9 0 0 909e98da7d903d69
+S 2 13 d188225b3bf8d651 5 8 d952784f664de0d6
+S 2 1 91f6abbf3a433d1a 0 0 f57388fcd325be3e
+S 5 11 f6e5a8511b3e82f9 4 1 9874024409533091
+S 5 8 cdc58e6f4dc9b2d6 1 5 1558e5ab9376e9b6
+D 2641976409 fb49db7caf3e925a
+S 5 2 e6963d00e4eb39da 1 1 94de69b25718c151
+S 4 1 fa37d8fcf77f703c 0 0 dfa4290a0621b810
+S 4 18 503ca9dca2d4d4da 0 11 5cc0f9bdca82d38a
+S 4 2 9f606c3c3eafa284 0 0 04999a73d52511bf
+S 4 6 296707cd578dc56f 5 3 b91abe55344e7ee5
+D 4120378578 80319030635238b4
+S 2 4 dd26b87a4748fc5a 3 0 99ccf8c37da4bbbb
+S 2 1 47d724933b0507bb 0 0 ff23bc1343b1f975
+S 2 24 c9dbeaf6aba90957 17 8 e377e7f33584a3b4
+S 2 1 91f6abbf3a433d1a 0 0 56284cc7f61bfec2
+S 1 15 9b79499e8a26036e 10 1 28653dd0094b5b9a
+D 3397558087 dc9ba5400f32806d
+S 1 2 a84b6ef30284cc62 1 0 5923a64faeef0491
+S 5 9 31ef369ad9aca86d 5 1 178a81c939dfd130
+S 5 15 b3e78430f2a81992 9 0 61debcff94466a59
+S 5 9 17636a02d7aa5422 7 7 57c21cdd8bf7c31a
+S 5 2 e6963d00e4eb39da 0 1 951c1cc2f1584814
+D 599343096 c8f1ac26f2847376
+S 5 1 91f6abbf3a433d1a 0 0 981257ea9106acce
+S 4 3 b56db95ae484ea20 2 1 80905fb58b7e5ba9
+S 4 2 a84b6ef30284cc62 0 0 899e07b0e066bfb5
+S 4 35 e3de364a1f2420c5 27 34 8a02c4abc14ca88c
+S 4 1 91f6abbf3a433d1a 0 0 d1b6638f6f7934d7
+D 953671277 049f57570ffe25a0
+S 1 1 18e578713ebc101e 0 0 62d1647a1c24b450
+S 1 31 2988fdee27fead32 4 2 b9429a09d648b663
+S 1 14 21cd31eac1110679 5 10 323ed30a06de2eb5
+S 1 1 91f6abbf3a433d1a 0 0 97c0c2e731bd2ae9
+S 2 16 12423545e0a0de5c 6 11 0c17e73cf53f6327
+D 297959142 d50cfe2e3ed91fc8
+S 2 2 a84b6ef30284cc62 0 0 05acd9e47a8bb017
+S 2 1 91f6abbf3a433d1a 0 0 bce764e3a389f7ce
+S 5 1 7758ac5459a7b52a 0 0 9346c3e27736d06d
+S 5 17 93ddeefc2f3adf75 3 8 694407907aa50e6b
+S 5 12 8a8d6a55f93287ca 8 8 1bc1d2318be4dc24
+D 1727598875 372534cad38be916
+S 5 2 a98ec72ea4fe96c6 1 0 24339c11f9e029ea
+S 5 2 eb91ccd64baa7d42 0 0 b0c0a561e606ab66
+S 5 2 c28b0e7423024abe 1 0 9f19a96aa5d85053
+S 5 6 7456ca5aa9dc832e 5 1 ed67116e2e533fff
+S 5 3 b81d7a4570612fc7 2 1 b7aed2fe56f2268c
+D 2132259212 a166c47ed652edf4
+S 5 7 2fad53e9c4932306 5 1 9de055bbcf3f36c4
+S 5 1 91f6abbf3a433d1a 0 0 7aadfe54493fdd0c
+S 4 5 738f99f61dd6266a 2 0 f6d96f475e89847a
+S 4 6 7b405b1fcf727091 0 1 c67266691bd8457a
+S 4 1 91f6abbf3a433d1a 0 0 3fb1eaf6c494da39
+R 54,41,35,27,46,106 0 1,5,6,2,4,3
 E
 G 35 2 r 0 1070421749 r,r
 I 146e02107ec897dd
@@ -14758,7 +14769,7 @@ S 1 5 c8e73f44112437ee 0 3 17c18be3c1d01180
 S 1 1 91f6abbf3a433d1a 0 0 dbc4c082a983ad71
 S 2 25 fa41cbb7df63f8c3 15 21 674bf4ebd608d749
 S 2 2 a84b6ef30284cc62 0 0 8edcf36782441c25
-S 2 2 1cb89ab5bc2bf68b 1 1 87866688aeeacd90
+S 2 1 91f6abbf3a433d1a 0 0 87866688aeeacd90
 D 2909683405 b87c8f8e46c21551
 S 0 20 1af724c6251ca57f 14 9 235512fd8b1a03da
 S 0 7 c1919bb9e2b962af 5 2 b16f410de3033098
@@ -15449,22 +15460,22 @@ S 3 2 d38d2d2e1c70a618 0 0 51cc1425c8f9cc7e
 D 2854507554 a0bd35f58db18125
 S 3 19 0a019fb3a87aaf42 14 1 750a20973a718c1d
 S 3 5 d2c7ae79d0822ab0 0 0 9599adbd52141869
-S 3 8 5afb866fd8c54c57 1 0 248a0405bfb1c60f
-S 3 5 9862d085e87bd099 2 4 1b5276976cf0f81e
-S 3 1 91f6abbf3a433d1a 0 0 f76138efbec54ed4
-D 3709811679 49300d59025f81d4
-S 0 11 f6e5a8511b3e82f9 7 3 de17c707e380b473
-S 0 1 91f6abbf3a433d1a 0 0 d19969aeb437b394
-S 1 7 37881fd8d59e0efb 6 3 07ed36ffe268df1f
-S 1 2 a84b6ef30284cc62 0 0 fcbde2fe14e2eb9f
-S 1 4 e3b8439797f47fae 1 0 a38c38773b941ae0
-D 3304168264 559c59189f43189d
-S 1 1 91f6abbf3a433d1a 0 0 713c13d64aa15b8b
-S 2 9 081e231085a60b40 7 7 4e4e6b12a5f00e56
-S 2 2 a84b6ef30284cc62 0 0 ac8715b0a11e656d
-S 2 4 288d841a3cb362ee 1 0 b10b0359ddb3b7d2
-S 2 1 91f6abbf3a433d1a 0 0 009c747e6bc7b129
-R 54,32,78,34,40 1 3,1,2,5,4
+S 3 4 bda26b2c5319ec68 0 0 680a6eab757dd3ef
+S 3 2 158772f8e0014f98 1 0 d9fd04568f756542
+S 3 1 91f6abbf3a433d1a 0 0 53ceffe5b8689ea4
+D 3709811679 1e3631a92af46bbd
+S 0 11 f6e5a8511b3e82f9 7 3 a62f1969833c8027
+S 0 1 91f6abbf3a433d1a 0 0 b55f489bdbe24ec2
+S 1 7 37881fd8d59e0efb 6 3 5f8d55615abf0719
+S 1 2 a84b6ef30284cc62 0 0 b12be46cdacde913
+S 1 4 e3b8439797f47fae 1 0 01e8eb5160caebce
+D 3304168264 3298c18d53cc3a98
+S 1 1 91f6abbf3a433d1a 0 0 18d2abc968625dea
+S 2 9 081e231085a60b40 7 7 98f9cefaaca1b383
+S 2 2 a84b6ef30284cc62 0 0 73cbf01a2ee8c89c
+S 2 4 288d841a3cb362ee 1 0 e2cd5edb551f2463
+S 2 1 91f6abbf3a433d1a 0 0 cc873b93aff2dddd
+R 54,32,78,51,40 1 3,1,2,4,5
 E
 G 39 6 r 0 3098233273 r,r,r,r,r,r
 I 4e2a55d74e2de71e
@@ -17396,8 +17407,8 @@ S 2 1 91f6abbf3a433d1a 0 0 1c66901717c894e3
 D 1325685512 330f2f3bd84bbd74
 S 1 34 b01c31fdc4e139aa 9 9 7c262ce2cfe90348
 S 1 9 9ad57c797c4c8b60 0 0 07623ba967e009cc
-S 1 9 708fbce921635638 4 4 834cb1c1779d32a7
-S 1 2 2d2e9adabd585316 1 1 0bb57e753eb02bcb
+S 1 8 05012f3340e69918 4 4 834cb1c1779d32a7
+S 1 1 91f6abbf3a433d1a 0 0 0bb57e753eb02bcb
 S 0 5 0fa5ae936688fd25 4 4 6cf03b19af973d5d
 D 1450163125 9d2e3ada828c9490
 S 0 10 a142016e38c845fa 8 8 3d1f847f771a463d
@@ -18325,7 +18336,7 @@ S 5 1 91f6abbf3a433d1a 0 0 8420f358011f3423
 S 4 27 38500e74d0ee2bfa 17 17 8c602ee84925acf5
 S 4 2 a84b6ef30284cc62 0 0 fedc204f4d7ef7db
 D 3241779580 68a0f7afd28ad29d
-S 4 4 e025ece7b2abf247 3 3 67a825020caf607b
+S 4 1 91f6abbf3a433d1a 0 0 67a825020caf607b
 S 0 6 aff643528a96728e 4 4 2c5a8cce7af3edc5
 S 0 3 365909349cd1474f 0 0 9193ab9a6be496ab
 S 0 3 365909349cd1474f 0 0 1d681f90e8c54786

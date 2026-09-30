@@ -676,16 +676,9 @@ function applyInPlace(state: GameState, player: number, action: Action): void {
           turn.speedLeft += b.n;
         } else if (b.kind === "extra-hunt") {
           turn.extraHunts += 1;
-        } else if (b.kind === "draw-to-play" || b.kind === "discard-draw") {
-          const before = playAreaSpeed(p.playArea);
-          if (b.kind === "discard-draw" && action.discard) {
-            removeFromPlay(p, action.discard);
-            p.discard.push(action.discard);
-          }
-          drawToPlay(state, p);
-          const delta = playAreaSpeed(p.playArea) - before;
-          turn.speed += delta;
-          turn.speedLeft = Math.max(0, turn.speedLeft + delta);
+        } else {
+          // Draw and Discard/Draw are discard/draw effects: step 1 only.
+          throw new Error("A draw token is spent before Speed is counted");
         }
         state.log.push({ t: "bonus", p: player, bonus: token.id });
         return;

@@ -424,17 +424,8 @@ static void anytimeTokens(const PlayerState& p, const TurnState& t, bool acting,
   for (const BonusHolding& token : p.bonus) {
     if (token.used) continue;
     int k = BONUS_DEFS[token.id].kind;
-    if (k == BK_DISCARD_DRAW) {
-      for (const PlayCard& target : p.playArea) {
-        if (!target.resolved) {
-          Action a = act(A_USE_BONUS);
-          a.token = token.id;
-          a.other = target.id;
-          out.push_back(a);
-        }
-      }
-    } else if (k == BK_SPEED || k == BK_DRAW_TO_PLAY || (k == BK_EXTRA_HUNT && !t.extraTurn) ||
-               (k == BK_MISSION && acting)) {
+    // Draw and Discard/Draw are step-1 (discard/draw) effects: never offered here.
+    if (k == BK_SPEED || (k == BK_EXTRA_HUNT && !t.extraTurn) || (k == BK_MISSION && acting)) {
       Action a = act(A_USE_BONUS);
       a.token = token.id;
       out.push_back(a);
