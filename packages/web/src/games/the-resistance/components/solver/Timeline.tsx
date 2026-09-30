@@ -1,7 +1,7 @@
 import { isApproved } from "@boardgames/core/games/the-resistance/rules";
 import type { SeatNamer } from "@boardgames/core/games/the-resistance/solver/deductions";
 import type { SolverEvent } from "@boardgames/core/games/the-resistance/solver/posterior";
-import { Button, Eyebrow } from "../../../../components/ui";
+import { Button, Eyebrow, Kbd } from "../../../../components/ui";
 import { cn } from "../../../../lib/cn";
 
 interface TimelineProps {
@@ -65,6 +65,9 @@ export function Timeline({ events, playerCount, name, at, onSeek }: TimelineProp
           Now
         </Button>
       </div>
+      <p className="text-2xs text-fg-muted">
+        Or use the <Kbd>←</Kbd> <Kbd>→</Kbd> keys. Event {at} of {events.length}.
+      </p>
       {events.length === 0 && <p className="text-xs text-fg-muted">No events yet.</p>}
       <ol className="flex flex-col gap-3">
         {[...rounds.entries()].map(([round, list]) => (

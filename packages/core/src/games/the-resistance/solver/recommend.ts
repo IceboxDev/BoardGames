@@ -17,7 +17,7 @@ export interface TeamOdds {
 }
 
 /** P(fewer than `needed` of `spies` independent spies fail). */
-function successChance(spies: number, needed: number, chance: number): number {
+export function successChance(spies: number, needed: number, chance: number): number {
   let p = 0;
   let coeff = 1;
   for (let k = 0; k < needed && k <= spies; k++) {

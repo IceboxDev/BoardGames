@@ -10,17 +10,16 @@ import {
   type SeatNamer,
 } from "@boardgames/core/games/the-resistance/solver/deductions";
 import { gradeDecisions } from "@boardgames/core/games/the-resistance/solver/grade";
+import { gameValueCurve } from "@boardgames/core/games/the-resistance/solver/lookahead";
 import {
   analyze,
   type Perspective,
   pairMatrix,
 } from "@boardgames/core/games/the-resistance/solver/posterior";
 import { rankTeams, teamOdds } from "@boardgames/core/games/the-resistance/solver/recommend";
-import { recordUpTo, winProbability } from "@boardgames/core/games/the-resistance/solver/simulate";
+import { recordUpTo } from "@boardgames/core/games/the-resistance/solver/simulate";
 import { useMemo } from "react";
 import { envFor } from "../../logic/solver";
-
-const ROLLOUTS = 300;
 
 function situationOf(position: TablePosition) {
   return {
@@ -63,42 +62,74 @@ export function useSolverModel(
     [analysis, snapshot],
   );
 
+  // Teams are judged by the TABLE's view: a team only good in one player's
+  // private knowledge can't be argued into an approval.
+  const publicSnapshot = publicAnalysis.snapshots[at] ?? publicAnalysis.snapshots[0];
   const suggestions = useMemo(() => {
-    if (!snapshot || snapshot.alive === 0 || position.winner || onTable) return [];
+    if (!publicSnapshot || publicSnapshot.alive === 0 || position.winner || onTable) return [];
     return rankTeams(
-      analysis,
-      snapshot,
+      publicAnalysis,
+      publicSnapshot,
       position.openMissions,
       situationOf(position),
       env,
       position.leader,
     ).slice(0, 3);
-  }, [analysis, snapshot, position, onTable, env]);
+  }, [publicAnalysis, publicSnapshot, position, onTable, env]);
 
   const tableOdds = useMemo(() => {
-    if (!snapshot || !onTable || snapshot.alive === 0) return null;
+    if (!publicSnapshot || !onTable || publicSnapshot.alive === 0) return null;
+    return teamOdds(
+      publicAnalysis,
+      publicSnapshot,
+      onTable.team,
+      onTable.mission,
+      situationOf(position),
+      env,
+    );
+  }, [publicAnalysis, publicSnapshot, onTable, position, env]);
+  /** The same team through the selected perspective (private knowledge included). */
+  const myOdds = useMemo(() => {
+    if (perspective.kind === "public" || !snapshot || !onTable || snapshot.alive === 0) return null;
     return teamOdds(analysis, snapshot, onTable.team, onTable.mission, situationOf(position), env);
-  }, [analysis, snapshot, onTable, position, env]);
+  }, [perspective.kind, analysis, snapshot, onTable, position, env]);
 
   const graded = useMemo(
     () => (full ? gradeDecisions(record, assumptions, name) : []),
     [record, assumptions, name, full],
   );
 
-  // The Resistance's odds before each proposal, and at the end.
+  // The game's value before each proposal and at the end (`lookahead.ts`):
+  // the table's own estimate, and with the real roles when they're known.
   const winCurve = useMemo(() => {
     if (!full) return [];
-    const points = publicAnalysis.events.filter((e) => e.kind === "proposal").map((e) => e.index);
-    points.push(publicAnalysis.events.length);
-    return points.map((count, i) => ({
+    return gameValueCurve(record, publicAnalysis, env).map((p, i) => ({
       x: i,
-      count,
-      y: winProbability(record, publicAnalysis, count, env, ROLLOUTS, count + 1).resistance * 100,
+      count: p.count,
+      y: p.table * 100,
+      truth: p.truth === null ? null : p.truth * 100,
     }));
   }, [record, publicAnalysis, env, full]);
 
+  // Where the game was lost on information: the first point where, with the
+  // real roles, the table's best play can no longer win.
+  const informationLoss = useMemo(() => {
+    const i = winCurve.findIndex(
+      (p, k) => k > 0 && p.truth !== null && p.truth < 0.5 && (winCurve[k - 1]?.truth ?? 0) >= 0.5,
+    );
+    const before = winCurve[i - 1];
+    const after = winCurve[i];
+    return before && after
+      ? { from: before.count, to: after.count, before: before.truth ?? 0, value: after.truth ?? 0 }
+      : null;
+  }, [winCurve]);
+
   return {
+    env,
     analysis,
+    publicAnalysis,
+    publicSnapshot,
+    situation: situationOf(position),
     at,
     snapshot,
     cut,
@@ -108,8 +139,10 @@ export function useSolverModel(
     pairs,
     suggestions,
     tableOdds,
+    myOdds,
     graded,
     winCurve,
+    informationLoss,
   };
 }
 

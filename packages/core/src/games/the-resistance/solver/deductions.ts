@@ -14,7 +14,30 @@ export interface Deduction {
   kind: "spies-exact" | "spy" | "resistance" | "at-least" | "clean" | "contradiction";
   certainty: Certainty;
   seats: number[];
+  /** "At least `count` of `seats`" facts. */
+  count?: number;
+  /** The event the fact comes from, when it comes from one (a mission). */
+  event?: number;
   text: string;
+}
+
+/** Does `world` (a spy bitmask) break this fact? The worlds that do are what its proof rules out. */
+export function breaksFact(fact: Deduction, world: number): boolean {
+  const mask = maskOf(fact.seats);
+  switch (fact.kind) {
+    case "spies-exact":
+      return world !== mask;
+    case "spy":
+      return (world & mask) !== mask;
+    case "resistance":
+      return (world & mask) !== 0;
+    case "at-least":
+      return popcount(world & mask) < (fact.count ?? 1);
+    case "clean":
+      return (world & mask) !== 0;
+    case "contradiction":
+      return false;
+  }
 }
 
 export type SeatNamer = (seat: number) => string;
@@ -113,6 +136,8 @@ export function deductions(
           kind: "at-least",
           certainty: "proven",
           seats: [...team],
+          count: coreLo,
+          event: event.index,
           text: `At least ${coreLo} of ${list(team, name)} ${coreLo === 1 ? "is a spy" : "are spies"} (${label}: ${event.fails} fail${event.fails === 1 ? "" : "s"}).`,
         });
       } else if (event.success && modelHi === 0) {
@@ -120,6 +145,7 @@ export function deductions(
           kind: "clean",
           certainty: "assumed",
           seats: [...team],
+          event: event.index,
           text: `The ${label} team — ${list(team, name)} — was clean.`,
         });
       }

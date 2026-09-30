@@ -1,10 +1,12 @@
 import { failsNeeded } from "@boardgames/core/games/the-resistance/rules";
 import type { Perspective } from "@boardgames/core/games/the-resistance/solver/posterior";
 import type { ResistancePlayerView } from "@boardgames/core/games/the-resistance/types";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { Eyebrow } from "../../../../components/ui";
 import { pct, seatNamer, useAssumptions } from "../../logic/solver";
 import { Deductions } from "./Deductions";
+import { ExplainModal, type ExplainTarget } from "./explain/ExplainModal";
+import { ExplainRow } from "./explain/ExplainRow";
 import { SpyBars } from "./SpyBars";
 import { useSolverModel } from "./useSolverModel";
 
@@ -33,9 +35,21 @@ export function SolverPanel({
   const iAmSpy = view.role === "spy";
   const myLeadership = view.phase === "proposing" && view.leader === view.seat;
   const best = mine.suggestions[0];
+  const [explain, setExplain] = useState<ExplainTarget | null>(null);
+  // A spy's own view is trivial (they know the answer) — explain the table's.
+  const shown = iAmSpy ? table : mine;
 
   return (
     <div className="flex flex-col gap-4">
+      {explain && (
+        <ExplainModal
+          target={explain}
+          model={shown}
+          name={name}
+          perspectiveLabel={iAmSpy ? "Table" : "You"}
+          onClose={() => setExplain(null)}
+        />
+      )}
       <section className="flex flex-col gap-2">
         <Eyebrow size="sm">{iAmSpy ? "What the table thinks" : "Spy odds (your view)"}</Eyebrow>
         {(iAmSpy ? table.snapshot : mine.snapshot) && (
@@ -44,6 +58,7 @@ export function SolverPanel({
             name={name}
             highlight={mine.onTable?.team ?? []}
             compact
+            onExplain={(seat) => setExplain({ kind: "seat", seat })}
           />
         )}
         <p className="text-2xs text-fg-muted">
@@ -55,25 +70,53 @@ export function SolverPanel({
       {mine.tableOdds && !iAmSpy && (
         <section className="flex flex-col gap-1">
           <Eyebrow size="sm">This team</Eyebrow>
-          <p className="text-xs text-fg-secondary">
-            <span className="text-sky-400">{pct(mine.tableOdds.pSuccess)}</span> to succeed ·{" "}
+          <ExplainRow
+            onClick={() =>
+              mine.tableOdds &&
+              setExplain({
+                kind: "team",
+                team: mine.tableOdds.team,
+                mission: mine.tableOdds.mission,
+              })
+            }
+            label="Explain this team's odds"
+            className="text-xs text-fg-secondary"
+          >
+            Table: <span className="text-sky-400">{pct(mine.tableOdds.pSuccess)}</span> to succeed ·{" "}
             {pct(mine.tableOdds.pClean)} clean
             {failsNeeded(view.playerCount, mine.tableOdds.mission) > 1 && " · needs 2 fails"}
-          </p>
+            {mine.myOdds && (
+              <span className="block text-2xs text-fg-muted">
+                You privately: {pct(mine.myOdds.pSuccess)} to succeed
+              </span>
+            )}
+          </ExplainRow>
         </section>
       )}
 
       {myLeadership && best && !iAmSpy && (
         <section className="flex flex-col gap-1">
-          <Eyebrow size="sm">Best team for you</Eyebrow>
-          <p className="text-xs text-fg-primary">{best.team.map(name).join(", ")}</p>
-          <p className="text-2xs text-fg-muted">{pct(best.pSuccess)} to succeed</p>
+          <Eyebrow size="sm">Best team you can argue for</Eyebrow>
+          <ExplainRow
+            onClick={() => setExplain({ kind: "team", team: best.team, mission: best.mission })}
+            label="Explain the best team"
+          >
+            <span className="block text-xs text-fg-primary">{best.team.map(name).join(", ")}</span>
+            <span className="block text-2xs text-fg-muted">
+              {pct(best.pSuccess)} to succeed by the table's view — what you know about yourself
+              can't be proven to them
+            </span>
+          </ExplainRow>
         </section>
       )}
 
       <section className="flex flex-col gap-2">
         <Eyebrow size="sm">{iAmSpy ? "What the table can prove" : "Deductions"}</Eyebrow>
-        <Deductions items={iAmSpy ? table.facts : mine.facts} limit={6} />
+        <Deductions
+          items={shown.facts}
+          limit={6}
+          onExplain={(fact) => setExplain({ kind: "fact", fact })}
+        />
       </section>
     </div>
   );
