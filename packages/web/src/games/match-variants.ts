@@ -254,6 +254,29 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       { value: JAIPUR_BEST_OF_ONE, label: JAIPUR_BEST_OF_ONE },
     ],
   },
+  // Azul's player boards are double-sided (rulebook "Variant play"): the
+  // colored wall is the standard game; the gray wall lets a tile go on any
+  // space of its row, as long as no color repeats in a column. Standard first.
+  azul: {
+    label: "Wall",
+    mode: "single",
+    options: [
+      { value: "Standard", label: "Standard (colored wall)" },
+      { value: "Gray wall", label: "Gray wall" },
+    ],
+  },
+  // Wingspan's one ruleset choice (rulebook setup step 4): the side of the
+  // end-of-round goal board. Green — 1st/2nd/3rd place majorities — is the
+  // book's default; Blue scores 1 point per targeted item (max 5), the
+  // gentler side for new players.
+  wingspan: {
+    label: "Goal board",
+    mode: "single",
+    options: [
+      { value: "Green goals", label: "Green · majority (competitive)" },
+      { value: "Blue goals", label: "Blue · 1 point per item (friendly)" },
+    ],
+  },
   // Intarsia's player boards are double-sided — the Standard side and the
   // trickier Pro side. Standard is first so a fresh match defaults to it.
   intarsia: {
