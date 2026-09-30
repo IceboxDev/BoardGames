@@ -456,6 +456,10 @@ describe("/api/quiztopia", () => {
       expect(secondIds[0]).toBe("learning:c002-s01-q0");
       expect(secondIds[1]).toMatch(/^new:c00[12]-s01-q1$/);
       expect(second.body.counts).toEqual({ learning: 1, review: 0, new: 1 });
+      // The day's progress so far: c001-s01-q0 is done; the missed one is
+      // still queued and the game answer isn't study.
+      expect(first.body.doneToday).toBe(0);
+      expect(second.body.doneToday).toBe(1);
 
       const overview = await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`);
       expect(overview.body.categories[0]).toMatchObject({ newRemainingToday: 1, newAvailable: 8 });
@@ -736,6 +740,30 @@ describe("/api/quiztopia", () => {
           ),
         ).toBe(2);
       });
+      // Each row records only what that save changed…
+      const { rows } = await client.execute(
+        "SELECT meta_json FROM activity_log WHERE type = 'quiztopia-settings' ORDER BY sort_ms",
+      );
+      expect(JSON.parse(String(rows[1]?.meta_json))).toEqual({
+        changes: {
+          language: { from: "de", to: "both" },
+          newPerDay: { from: 5, to: 0 },
+          newPerDayByCategory: { from: { "3": 2 }, to: {} },
+          includeLeeches: { from: true, to: false },
+          gameReviewsAffectSrs: { from: true, to: false },
+          newCardOrder: { from: "originals", to: "sets" },
+          newSetsPerDay: { from: 2, to: 3 },
+        },
+      });
+      // …and a save that changes nothing is not activity.
+      expect((await call("PUT", "/settings", { language: "both", newPerDay: 0 })).status).toBe(200);
+      await new Promise((r) => setTimeout(r, 20));
+      expect(
+        await count(
+          client,
+          "SELECT COUNT(*) n FROM activity_log WHERE type = 'quiztopia-settings'",
+        ),
+      ).toBe(2);
     });
 
     it("applies a per-category new-card override to that category only", async () => {

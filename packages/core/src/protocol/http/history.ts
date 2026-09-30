@@ -8,6 +8,7 @@ import {
   MAX_ROUND_SCORES,
   MIN_ROUND_SCORES,
 } from "../../history/round-scores";
+import { describeWedgesError, FULL_PIE, WedgeSchema } from "../../history/trivial-pursuit";
 import { NightKeyStringSchema } from "../common.ts";
 
 // ── Primitives ─────────────────────────────────────────────────────────
@@ -67,6 +68,10 @@ const FreeForAllPlayerSchema = ParticipantSchema.extend({
   // the Emperor's throne (core `senso-battle-for-japan/standings`), so the
   // winner is never free-picked; the card names the rung that decided it.
   tiebreak: z.number().int().min(0).max(1000).optional(),
+  // Trivial Pursuit: the pie wedges this player held at the end. The winner is
+  // still the `rank: 1` player — several can hold a full pie (see
+  // history/trivial-pursuit.ts).
+  wedges: z.array(WedgeSchema).max(FULL_PIE).optional(),
 });
 
 // Jaipur-only: one rupee-tied round settled the rulebook's way — the most
@@ -119,6 +124,8 @@ const TeamSchema = z.object({
   // The same secondary count at team level (Sensō 2v2: the partners' combined
   // cubes on the map) — see `FreeForAllPlayerSchema.tiebreak`.
   tiebreak: z.number().int().min(0).max(1000).optional(),
+  // The same pie wedges at team level (Trivial Pursuit played in teams).
+  wedges: z.array(WedgeSchema).max(FULL_PIE).optional(),
 });
 
 // Optional non-competing slot — Blood on the Clocktower's Storyteller is the
@@ -270,6 +277,12 @@ export const MatchOutcomeSchema = z
       if (roundError) {
         ctx.addIssue({ code: "custom", path: ["players"], message: roundError });
       }
+      v.players.forEach((p, i) => {
+        const wedgeError = p.wedges && describeWedgesError(p.wedges);
+        if (wedgeError) {
+          ctx.addIssue({ code: "custom", path: ["players", i, "wedges"], message: wedgeError });
+        }
+      });
     } else if (v.kind === "teams") {
       for (const idx of v.winnerTeamIndices) {
         if (idx >= v.teams.length) {
@@ -285,6 +298,12 @@ export const MatchOutcomeSchema = z
       if (decryptoError) {
         ctx.addIssue({ code: "custom", path: ["decryptoRounds"], message: decryptoError });
       }
+      v.teams.forEach((t, i) => {
+        const wedgeError = t.wedges && describeWedgesError(t.wedges);
+        if (wedgeError) {
+          ctx.addIssue({ code: "custom", path: ["teams", i, "wedges"], message: wedgeError });
+        }
+      });
     } else if (v.kind === "last-standing") {
       if (v.players.every((p) => p.eliminationOrder !== undefined)) {
         ctx.addIssue({

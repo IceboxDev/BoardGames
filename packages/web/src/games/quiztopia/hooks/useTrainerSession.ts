@@ -81,6 +81,8 @@ export interface SessionState {
   revealed: boolean;
   /** `Date.now()` when the current card was shown — the review's duration base. */
   shownAt: number;
+  /** Questions studied earlier today, before this sitting: the day's progress starts here. */
+  doneBefore: number;
 }
 
 export type SessionAction =
@@ -88,6 +90,7 @@ export type SessionAction =
       type: "init";
       items: readonly SessionItem[];
       states: Record<string, SrsState | null>;
+      doneBefore: number;
       now: number;
     }
   | { type: "reveal" }
@@ -122,6 +125,7 @@ export function initialSessionState(today: string): SessionState {
     reviews: [],
     revealed: false,
     shownAt: 0,
+    doneBefore: 0,
   };
 }
 
@@ -137,6 +141,7 @@ export function sessionReducer(s: SessionState, a: SessionAction): SessionState 
         reviews: [],
         revealed: false,
         shownAt: a.now,
+        doneBefore: a.doneBefore,
       };
     case "reveal":
       return s.revealed ? s : { ...s, revealed: true };
@@ -233,6 +238,8 @@ export function sessionReducer(s: SessionState, a: SessionAction): SessionState 
 interface SessionSource {
   items: SessionItem[];
   states: Record<string, SrsState | null>;
+  /** Due sessions: questions already studied today and no longer queued. */
+  doneToday?: number;
 }
 
 function tierOf(state: SrsState | null): QueueTier {
@@ -288,7 +295,7 @@ async function fetchSource(
         tier: i.tier,
       };
     });
-    return { items, states };
+    return { items, states, doneToday: res.doneToday };
   }
   const ids = specQuestionIds(spec);
   if (ids.length === 0) return { items: [], states: {} };
@@ -406,6 +413,7 @@ export function useTrainerSession(spec: SessionSpec) {
         type: "init",
         items: source.data.items,
         states: source.data.states,
+        doneBefore: source.data.doneToday ?? 0,
         now: Date.now(),
       });
     }
@@ -580,7 +588,13 @@ export function useTrainerSession(spec: SessionSpec) {
     undo,
     canUndo: s.reviews.length > 0,
     lastReview,
-    progress: { done: s.cursor, total: s.items.length },
+    /** The day's progress: today's earlier sittings count, so picking up again doesn't reset it. */
+    progress: {
+      done: s.doneBefore + s.cursor,
+      total: s.doneBefore + s.items.length,
+      /** Cards answered in this sitting. */
+      inSession: s.cursor,
+    },
     complete,
     summary,
     extend,

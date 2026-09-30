@@ -216,6 +216,10 @@ const router = createBrowserRouter(
             lazy={page(() => import("./pages/JaipurHistoryPreview"))}
           />
           <Route
+            path="dev/trivial-pursuit-preview"
+            lazy={page(() => import("./pages/TrivialPursuitHistoryPreview"))}
+          />
+          <Route
             path="dev/admin-inactive-preview"
             lazy={page(() => import("./pages/AdminInactivePreview"))}
           />

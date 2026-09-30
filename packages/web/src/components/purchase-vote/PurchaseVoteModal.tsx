@@ -240,7 +240,14 @@ function SavedScreen({
  * one-shot submit. Renders nothing until the poll loads; keeps rendering the
  * saved screen even when the player's own submit just closed the poll.
  */
-export function PurchaseVoteModal({ onClose }: { onClose: () => void }) {
+export function PurchaseVoteModal({
+  onClose,
+  via,
+}: {
+  onClose: () => void;
+  /** What opened the screen, for the activity trail (a greeting's button). */
+  via?: string;
+}) {
   const queryClient = useQueryClient();
   const stateQuery = useQuery({
     queryKey: qk.purchaseVote(),
@@ -255,9 +262,11 @@ export function PurchaseVoteModal({ onClose }: { onClose: () => void }) {
   }, [poll, selected]);
 
   // Activity beacon: the voting screen is a non-route surface (opened from a
-  // greeting card or the banner) — mirrors the RsvpModal pattern.
+  // greeting card or the banner) — mirrors the RsvpModal pattern. Once per
+  // opening: `via` is fixed for the modal's lifetime.
+  // biome-ignore lint/correctness/useExhaustiveDependencies: report the opening, not prop changes
   useEffect(() => {
-    reportPageView("purchase-vote");
+    reportPageView("purchase-vote", undefined, { via });
   }, []);
 
   const submitMutation = useMutation({

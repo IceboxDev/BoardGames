@@ -1,4 +1,5 @@
 import type { MatchOutcomeTeams, Participant } from "@boardgames/core/history/types";
+import type { ReactNode } from "react";
 import {
   allowsMultipleRoles,
   joinMemberRoles,
@@ -15,7 +16,8 @@ import { PlayerRow } from "../PlayerRow";
 import { GroupLabel, OutcomeFormShell } from "./shared";
 
 type User = PickerUser;
-type TeamMember = MatchOutcomeTeams["teams"][number]["members"][number];
+type Team = MatchOutcomeTeams["teams"][number];
+type TeamMember = Team["members"][number];
 
 type Props = {
   users: User[];
@@ -23,9 +25,20 @@ type Props = {
   onChange: (next: MatchOutcomeTeams) => void;
   /** Used to look up per-game team config (scores on/off, role chips). */
   gameSlug: string | null;
+  /** Exactly one winning team: the Winner toggle moves instead of adding. */
+  singleWinner?: boolean;
+  /** Per-team game record under the member picker (Trivial Pursuit's wedges). */
+  renderTeamExtra?: (team: Team, idx: number, setTeam: (next: Team) => void) => ReactNode;
 };
 
-export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
+export function TeamsForm({
+  users,
+  value,
+  onChange,
+  gameSlug,
+  singleWinner = false,
+  renderTeamExtra,
+}: Props) {
   const config = teamConfigForSlug(gameSlug);
   const showScores = config.hasScores === true;
   const memberRoles = config.memberRoles ?? [];
@@ -48,7 +61,7 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
     onChange({ ...next, winnerTeamIndices: computeAutoWinner(next.teams, autoWinner) });
   }
 
-  function updateTeam(idx: number, patch: Partial<MatchOutcomeTeams["teams"][number]>) {
+  function updateTeam(idx: number, patch: Partial<Team>) {
     const teams = value.teams.map((t, i) => (i === idx ? { ...t, ...patch } : t));
     commit({ ...value, teams });
   }
@@ -108,6 +121,10 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
   }
 
   function toggleWinner(idx: number) {
+    if (singleWinner) {
+      onChange({ ...value, winnerTeamIndices: value.winnerTeamIndices.includes(idx) ? [] : [idx] });
+      return;
+    }
     const set = new Set(value.winnerTeamIndices);
     if (set.has(idx)) set.delete(idx);
     else set.add(idx);
@@ -175,6 +192,9 @@ export function TeamsForm({ users, value, onChange, gameSlug }: Props) {
                 selectedIds={team.members.map((m) => m.userId)}
                 onChange={(participants) => setMembers(idx, participants)}
               />
+              {renderTeamExtra?.(team, idx, (next) =>
+                commit({ ...value, teams: value.teams.map((t, i) => (i === idx ? next : t)) }),
+              )}
               {showRoles && team.members.length > 0 && (
                 <div className="flex flex-col gap-1.5 pt-1">
                   {team.members.map((m) => (

@@ -1,3 +1,4 @@
+import { TRIVIAL_PURSUIT_WEDGES } from "@boardgames/core/history/trivial-pursuit";
 import type {
   MatchOutcome,
   MatchOutcomeCoop,
@@ -926,5 +927,42 @@ describe("describeOutcomeError — Quiztopia", () => {
 
   it("leaves other co-ops untouched", () => {
     expect(describeOutcomeError(coop("a", "b"), "pandemic")).toBeNull();
+  });
+});
+
+describe("Trivial Pursuit validation", () => {
+  const ffa = (ranks: (number | undefined)[]) =>
+    describeOutcomeError(
+      {
+        kind: "free-for-all",
+        players: ranks.map((rank, i) => ({
+          ...p(`u${i}`),
+          score: 0,
+          wedges: [...TRIVIAL_PURSUIT_WEDGES],
+          ...(rank !== undefined ? { rank } : {}),
+        })),
+      },
+      "trivial-pursuit",
+    );
+
+  it("needs exactly one crowned player, even when several hold a full pie", () => {
+    expect(ffa([undefined, undefined])).toBe("Crown the player who won");
+    expect(ffa([1, undefined])).toBeNull();
+    expect(ffa([1, 1])).toBe("Only one player can win");
+  });
+
+  it("allows exactly one winning team", () => {
+    const teams = (winnerTeamIndices: number[]) =>
+      describeOutcomeError(
+        {
+          kind: "teams",
+          teams: [{ members: [p("a")], wedges: ["blue"] }, { members: [p("b")] }],
+          winnerTeamIndices,
+        },
+        "trivial-pursuit",
+      );
+    expect(teams([0])).toBeNull();
+    expect(teams([0, 1])).toBe("Only one team can win");
+    expect(teams([])).toBe("Pick at least one winning team");
   });
 });

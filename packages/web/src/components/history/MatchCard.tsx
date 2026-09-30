@@ -34,6 +34,7 @@ import {
   sensoFfaStandings,
   sensoTeamsStandings,
 } from "./forms/senso-standings";
+import { WedgePie } from "./WedgePie";
 
 type Props = {
   match: MatchRecord;
@@ -348,9 +349,10 @@ function RoundScores({
   );
 }
 
-// Point-less free-for-all (Villainous, Lovecraft Letter). No scores — show each
-// player, winner-first with the gold winner tone; a per-player role (Villainous
-// villain) shows as a small label when present. The scenario (edition / win
+// Point-less free-for-all (Villainous, Lovecraft Letter, Trivial Pursuit). No
+// scores — show each player, winner-first with the gold winner tone; a
+// per-player role (Villainous villain) shows as a small label, Trivial
+// Pursuit's collected wedges as a little pie. The scenario (edition / win
 // condition) renders as the subtitle above.
 function PointlessFfaInline({
   outcome,
@@ -403,6 +405,7 @@ function PointlessFfaInline({
             isMe={p.userId === currentUserId}
             title={p.role ? `${p.displayName} — ${p.role}` : p.displayName}
           />
+          {p.wedges && <WedgePie wedges={p.wedges} />}
           {p.role && <MicroLabel>{p.role}</MicroLabel>}
         </span>
       ))}
@@ -447,6 +450,7 @@ function TeamsInline({
                 />
               ))}
             </span>
+            {t.wedges && <WedgePie wedges={t.wedges} />}
             {outcome.decryptoRounds ? (
               <DecryptoTokens rounds={outcome.decryptoRounds} team={i} />
             ) : (

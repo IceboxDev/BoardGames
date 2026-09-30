@@ -2,25 +2,31 @@ import { z } from "zod";
 
 // ── Member activity log (admin drawer) ─────────────────────────────────
 //
-// `type` is deliberately an open string, not an enum: the vocabulary is
-// owned by the server's `lib/activity-log.ts` and grows with new features.
-// The client keeps a label map for known types and falls back to a generic
-// rendering for anything it doesn't recognize, so old clients never choke
-// on a new event kind.
+// The envelope keeps `type` an open string and `meta` an open record on
+// purpose: web and server deploy separately, so a client can meet an event
+// kind it doesn't know yet. The vocabulary — every type and its meta shape —
+// lives in `activity-events.ts`; readers narrow a row with
+// `parseActivityMeta`.
 
 export const ActivityEntrySchema = z.object({
   id: z.number().int().positive(),
   type: z.string().min(1),
-  // Per-type payload (date keys, slugs, target user ids, counts). Rendered
-  // client-side; unknown keys are ignored there.
+  // Per-type payload (date keys, slugs, target user ids, counts); see
+  // `ActivityMetaSchemas`.
   meta: z.record(z.string(), z.unknown()),
-  // SQLite `datetime('now')` — UTC, "YYYY-MM-DD HH:MM:SS".
+  // SQLite `datetime('now')` — UTC, "YYYY-MM-DD HH:MM:SS". Insertion time.
   createdAt: z.string().min(1),
+  // When the event happened, epoch ms, stamped by the server as it handled
+  // the request (before the fire-and-forget insert) — the trail's sort key.
+  // Optional only for a server that predates it; readers fall back to
+  // `createdAt`.
+  occurredAtMs: z.number().int().nonnegative().optional(),
 });
 export type ActivityEntry = z.infer<typeof ActivityEntrySchema>;
 
 // `GET /api/admin/users/:userId/activity?before=<id>&limit=<n>` — keyset
-// pagination newest-first; `before` is the smallest id of the previous page.
+// pagination newest-first by (occurredAtMs, id); `before` is the id of the
+// last entry of the previous page, and the server resumes after its sort key.
 export const ActivityLogQuerySchema = z.object({
   before: z.coerce.number().int().positive().optional(),
   limit: z.coerce.number().int().min(1).max(200).default(50),
@@ -57,12 +63,15 @@ export const ActivitySeenBodySchema = z.object({
 export type ActivitySeenBody = z.input<typeof ActivitySeenBodySchema>;
 
 // `POST /api/activity/view` — client-side page-view beacon. `page` is a
-// client-owned vocabulary ("calendar", "night", "games", "players", "play",
-// …); `detail` optionally narrows it (a date key for "night", a game slug
-// for "play"). The client deduplicates per session; the server just records.
+// `PageViewPage` (activity-events.ts) on the sending side, but a plain string
+// here so a newer web build's page is recorded, not rejected; `detail`
+// narrows it (a date key for "night", a game slug for "play"); `via` says
+// what opened it (`greeting:spotlight`). The client drops re-render repeats;
+// the server just records.
 export const PageViewBodySchema = z.object({
   page: z.string().min(1).max(64),
   detail: z.string().min(1).max(100).optional(),
+  via: z.string().min(1).max(64).optional(),
 });
 export type PageViewBody = z.input<typeof PageViewBodySchema>;
 

@@ -12,13 +12,13 @@
 // cards open it via local state, so submitting votes can't unmount the
 // screen the player is standing on.
 
-import type { GreetingAckAction } from "@boardgames/core/protocol";
+import { type GreetingAckAction, type GreetingKind, greetingVia } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCurrentUser } from "../../../hooks/useCurrentUser.ts";
 import { ackGreeting, fetchGreeting } from "../../../lib/greetings.ts";
-import { reportPageView } from "../../../lib/page-views.ts";
+import { activityNavState, reportPageView } from "../../../lib/page-views.ts";
 import { fetchProfile } from "../../../lib/profile.ts";
 import { qk } from "../../../lib/query-keys.ts";
 import { fetchPlayerSkill, fetchSkillLeaderboards } from "../../../lib/skills.ts";
@@ -32,7 +32,7 @@ import {
 } from "../../purchase-vote/PurchaseVoteGreetingCards.tsx";
 import { PurchaseVoteModal } from "../../purchase-vote/PurchaseVoteModal.tsx";
 import { Select } from "../../ui/Select.tsx";
-import { ackBody, greetingKey } from "./greeting-ack.ts";
+import { ackBody, greetingKey, greetingView } from "./greeting-ack.ts";
 import { SkillIntroModalView } from "./SkillIntroModal.tsx";
 import { SpotlightModalView } from "./SpotlightModal.tsx";
 
@@ -47,7 +47,8 @@ export default function GreetingHost({ userId }: { userId: string }) {
   const [dismissedKey, setDismissedKey] = useState<string | null>(null);
   // The voting modal, opened by the purchase-vote cards' CTAs. Owned here
   // (not by the greeting) so greeting refetches can't unmount it.
-  const [voteOpen, setVoteOpen] = useState(false);
+  const [voteOpenedBy, setVoteOpenedBy] = useState<GreetingKind | null>(null);
+  const voteOpen = voteOpenedBy !== null;
 
   const greetingQuery = useQuery({
     queryKey: qk.greetings(),
@@ -62,17 +63,15 @@ export default function GreetingHost({ userId }: { userId: string }) {
   const show = greeting !== null;
 
   // Activity beacon: a greeting actually rendering is a real "view" — mirrors
-  // the RsvpModal pattern for non-route surfaces.
+  // the RsvpModal pattern for non-route surfaces. Keyed on the greeting's
+  // identity so a refetch of the same card doesn't re-report it.
+  const shownKey = greeting ? greetingKey(greeting) : null;
+  // biome-ignore lint/correctness/useExhaustiveDependencies: one beacon per greeting identity, not per refetched object
   useEffect(() => {
     if (!greeting) return;
-    reportPageView(
-      greeting.kind === "spotlight"
-        ? "skill-spotlight"
-        : greeting.kind === "skill-intro"
-          ? "skill-intro"
-          : greeting.kind,
-    );
-  }, [greeting]);
+    const view = greetingView(greeting);
+    reportPageView(view.page, view.detail);
+  }, [shownKey]);
 
   const ackMutation = useMutation({
     mutationFn: ackGreeting,
@@ -106,8 +105,10 @@ export default function GreetingHost({ userId }: { userId: string }) {
     enabled: show && skillKind,
   });
 
-  if (voteOpen) {
-    return <PurchaseVoteModal onClose={() => setVoteOpen(false)} />;
+  if (voteOpenedBy !== null) {
+    return (
+      <PurchaseVoteModal onClose={() => setVoteOpenedBy(null)} via={greetingVia(voteOpenedBy)} />
+    );
   }
   if (!greeting) return null;
 
@@ -126,7 +127,7 @@ export default function GreetingHost({ userId }: { userId: string }) {
       <PurchaseVoteAnnounceModal
         greeting={greeting}
         onDismiss={close("later")}
-        onCta={close("cta", () => setVoteOpen(true))}
+        onCta={close("cta", () => setVoteOpenedBy("purchase-vote-announce"))}
       />
     );
   }
@@ -136,7 +137,7 @@ export default function GreetingHost({ userId }: { userId: string }) {
       <PurchaseVoteReminderModal
         greeting={greeting}
         onDismiss={close("later")}
-        onCta={close("cta", () => setVoteOpen(true))}
+        onCta={close("cta", () => setVoteOpenedBy("purchase-vote-reminder"))}
       />
     );
   }
@@ -151,7 +152,11 @@ export default function GreetingHost({ userId }: { userId: string }) {
         totals={greeting.totals}
         viewerId={userId}
         onDismiss={close("later")}
-        onCta={close("cta", () => navigate(ctaDestination(cards, userId)))}
+        onCta={close("cta", () =>
+          navigate(ctaDestination(cards, userId), {
+            state: activityNavState(greetingVia("arrival")),
+          }),
+        )}
       />
     );
   }
@@ -165,7 +170,11 @@ export default function GreetingHost({ userId }: { userId: string }) {
         onDismiss={close("later")}
         // The calendar opens the night's card itself from the `date` param
         // (and lands a since-uninvited viewer on the peek instead).
-        onCta={close("cta", () => navigate(`/offline?date=${date}`))}
+        onCta={close("cta", () =>
+          navigate(`/offline?date=${date}`, {
+            state: activityNavState(greetingVia("night-invite")),
+          }),
+        )}
       />
     );
   }
@@ -179,7 +188,11 @@ export default function GreetingHost({ userId }: { userId: string }) {
         players={greetingQuery.data?.players ?? {}}
         accentHex={accentHex}
         onDismiss={close("later")}
-        onCta={close("cta", () => navigate(`/u/${greeting.subjectUserId}/skill`))}
+        onCta={close("cta", () =>
+          navigate(`/u/${greeting.subjectUserId}/skill`, {
+            state: activityNavState(greetingVia("spotlight")),
+          }),
+        )}
       />
     );
   }
@@ -222,7 +235,9 @@ export default function GreetingHost({ userId }: { userId: string }) {
       boards={boards}
       switcher={switcher}
       onDismiss={close("later")}
-      onCta={close("cta", () => navigate(`/u/${targetId}/skill`))}
+      onCta={close("cta", () =>
+        navigate(`/u/${targetId}/skill`, { state: activityNavState(greetingVia("skill-intro")) }),
+      )}
     />
   );
 }

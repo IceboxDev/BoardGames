@@ -130,6 +130,8 @@ export const TrainerQueueResponseSchema = z.object({
     review: z.number().int().nonnegative(),
     new: z.number().int().nonnegative(),
   }),
+  /** Questions already studied today that are no longer in the queue (the day's progress so far). */
+  doneToday: z.number().int().nonnegative().default(0),
 });
 export type TrainerQueue = z.infer<typeof TrainerQueueResponseSchema>;
 

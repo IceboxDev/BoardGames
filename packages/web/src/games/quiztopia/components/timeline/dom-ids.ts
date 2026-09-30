@@ -1,5 +1,5 @@
 // Shared geometry + DOM ids of the timeline river (scroll targets for
-// `?q=`, prev / next and the era rail).
+// `?q=`, prev / next and the block rail).
 
 /** The dot sits this far below its card's top edge, px. */
 export const DOT_OFFSET = 14;
@@ -9,7 +9,7 @@ export function pinDomId(questionId: string): string {
   return `tl-${questionId}`;
 }
 
-/** DOM id of an era's band. */
-export function eraDomId(eraId: string): string {
-  return `tl-era-${eraId}`;
+/** DOM id of a block's band (`mil:1000` → `tl-block-mil-1000`). */
+export function blockDomId(blockId: string): string {
+  return `tl-block-${blockId.replace(/:/g, "-")}`;
 }

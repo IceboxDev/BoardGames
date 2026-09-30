@@ -82,7 +82,10 @@ export default function StudySession() {
   const [readIndex, setReadIndex] = useState(0);
   const [readingDone, setReadingDone] = useState(false);
   const reading =
-    newSets.length > 0 && !readingDone && readIndex < newSets.length && session.progress.done === 0;
+    newSets.length > 0 &&
+    !readingDone &&
+    readIndex < newSets.length &&
+    session.progress.inSession === 0;
 
   const { revealed, reveal, grade, undo, canUndo, complete, status } = session;
   useEffect(() => {
@@ -170,7 +173,7 @@ export default function StudySession() {
         sets={newSets}
         index={readIndex}
         language={language}
-        cardCount={session.progress.total}
+        cardCount={session.items.length}
         onNext={() => {
           if (readIndex + 1 >= newSets.length) setReadingDone(true);
           else setReadIndex(readIndex + 1);

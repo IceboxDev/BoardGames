@@ -38,7 +38,12 @@ import { getDb } from "../db.ts";
 import { logActivity } from "../lib/activity-log.ts";
 import { buildArrivalGreeting, markArrivalSeen, nextUnseenArrival } from "../lib/arrivals.ts";
 import { zJsonBody } from "../lib/error-response.ts";
-import { ackSkillIntro, ackSpotlight, nextGreetingFor } from "../lib/greetings.ts";
+import {
+  ackSkillIntro,
+  ackSpotlight,
+  nextGreetingFor,
+  spotlightSubject,
+} from "../lib/greetings.ts";
 import { markInviteSeen, nextPendingInvite } from "../lib/night-invites.ts";
 import {
   distinctVoterCount,
@@ -156,6 +161,7 @@ greetingsRoutes.get("/", async (c) => {
 greetingsRoutes.post("/ack", zJsonBody(AppGreetingAckBodySchema), async (c) => {
   const viewer = c.get("user");
   const body = c.req.valid("json");
+  let subjectUserId: string | null = null;
   switch (body.kind) {
     case "purchase-vote-announce":
       await markPollSeen(body.pollId, viewer.id);
@@ -173,6 +179,7 @@ greetingsRoutes.post("/ack", zJsonBody(AppGreetingAckBodySchema), async (c) => {
       break;
     case "spotlight":
       await ackSpotlight(viewer.id, body.id);
+      subjectUserId = await spotlightSubject(body.id);
       break;
   }
   logActivity(viewer.id, "greeting-response", {
@@ -182,6 +189,8 @@ greetingsRoutes.post("/ack", zJsonBody(AppGreetingAckBodySchema), async (c) => {
     ...("arrivalId" in body ? { arrivalId: body.arrivalId } : {}),
     ...("date" in body ? { date: body.date } : {}),
     ...("id" in body ? { greetingId: body.id } : {}),
+    // "Dismissed the group spotlight about Melanie" needs the subject.
+    ...(subjectUserId ? { subjectUserId } : {}),
   });
   return c.json(AppGreetingAckResponseSchema.parse({ ok: true }));
 });

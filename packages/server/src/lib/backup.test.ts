@@ -81,6 +81,28 @@ describe("logical backup", () => {
     expect(verification.ok).toBe(true);
   });
 
+  it("dumps stored columns only, and the restore recomputes generated ones", async () => {
+    await db.execute(`INSERT INTO activity_log (user_id, type, meta_json, created_at, logged_at_ms)
+                      VALUES ('u1', 'visit', '{}', '2026-09-28 10:00:00', 1790000000123),
+                             ('u1', 'login', '{}', '2026-09-28 09:00:00', NULL)`);
+    const sql = await dumpToString(db, META);
+    // `sort_ms` is VIRTUAL — naming it in an INSERT would abort the restore.
+    expect(sql).not.toMatch(/INSERT INTO "activity_log" \([^)]*"sort_ms"/);
+    const restored = await restoreDump(sql);
+    try {
+      const { rows } = await restored.execute(
+        "SELECT type, sort_ms FROM activity_log ORDER BY type DESC",
+      );
+      expect(rows.map((r) => [r.type, r.sort_ms])).toEqual([
+        ["visit", 1790000000123],
+        ["login", Date.parse("2026-09-28T09:00:00Z")],
+      ]);
+    } finally {
+      restored.close();
+    }
+    expect((await verifyDump(sql, db)).ok).toBe(true);
+  });
+
   it("reports a dump that does not match its source", async () => {
     const sql = await dumpToString(db, META);
     await db.execute("UPDATE rsvps SET status = 'no'");

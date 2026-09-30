@@ -1,24 +1,32 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useLocation } from "react-router-dom";
 import { useCurrentUser } from "../hooks/useCurrentUser";
 import { reportDevice } from "../lib/device-info";
-import { reportPageView } from "../lib/page-views";
+import { classifyRoute } from "../lib/page-classify";
+import { isQuietNavState, reportPageView, viaFromNavState } from "../lib/page-views";
 
 /**
  * Route-level page-view + device beacon. Mounted once in RootShell so every
- * navigation is classified centrally — individual pages stay untouched.
- * UI-level views that aren't routes (opening a night's RSVP card) report
- * from their own component instead (see RsvpModal).
+ * navigation is classified centrally (`lib/page-classify.ts`) — individual
+ * pages stay untouched. UI-level views that aren't routes (a night's RSVP
+ * card, a greeting) report from their own component instead.
  */
 export function PageViewTracker() {
   const location = useLocation();
   const { user } = useCurrentUser();
+  // The route last reported: a search-param change that classifies to the
+  // same view (a catalog filter, the calendar's `?date=`) is not a new look.
+  const lastRouteRef = useRef<string | null>(null);
 
   useEffect(() => {
     if (!user) return;
-    const view = classify(location.pathname, location.search);
-    if (view) reportPageView(view.page, view.detail);
-  }, [location.pathname, location.search, user]);
+    const view = classifyRoute(location.pathname, location.search);
+    const key = view ? `${view.page}:${view.detail ?? ""}` : null;
+    if (key === lastRouteRef.current) return;
+    lastRouteRef.current = key;
+    if (isQuietNavState(location.state)) return;
+    if (view) reportPageView(view.page, view.detail, { via: viaFromNavState(location.state) });
+  }, [location.pathname, location.search, location.state, user]);
 
   // Device/viewport telemetry: once on login/mount, again on real viewport
   // changes (rotation, window resize, zoom — all fire `resize`), debounced so
@@ -39,38 +47,5 @@ export function PageViewTracker() {
     };
   }, [user]);
 
-  return null;
-}
-
-/**
- * Map a pathname to a loggable surface. Returns null for surfaces that are
- * uninteresting or already logged elsewhere (`/u/:id` profile views are
- * logged server-side with the viewer AND target; `/login`, dev previews,
- * and deep game sub-routes below the shell add nothing).
- */
-function classify(pathname: string, search: string): { page: string; detail?: string } | null {
-  if (pathname === "/") return { page: "home" };
-  if (pathname === "/offline") return { page: "calendar" };
-  if (pathname === "/history") return { page: "history" };
-  if (pathname === "/players") return { page: "players" };
-  // Admin is tabbed (?tab=vote etc.) — log which tab, "users" being the default.
-  if (pathname === "/admin") {
-    return { page: "admin", detail: new URLSearchParams(search).get("tab") ?? "users" };
-  }
-  if (pathname === "/games") return { page: "games" };
-  if (pathname === "/settings") return { page: "appearance" };
-  const play = pathname.match(/^\/play\/([^/]+)/);
-  if (play) return { page: "play", detail: play[1] };
-  // Profile sub-pages: detail = whose page was viewed. (`/u/:id` itself is
-  // logged server-side with viewer AND target, so it stays out of this map.)
-  const sub = pathname.match(/^\/u\/([^/]+)\/(matches|collection|nights|skill)$/);
-  if (sub) {
-    // The purchases pipeline lives as a tab inside the collection page —
-    // distinguish it, or every purchases look-in logs as a collection view.
-    if (sub[2] === "collection" && new URLSearchParams(search).get("tab") === "purchases") {
-      return { page: "profile-purchases", detail: sub[1] };
-    }
-    return { page: `profile-${sub[2]}`, detail: sub[1] };
-  }
   return null;
 }

@@ -1,8 +1,10 @@
 import { MatchOutcomeSchema } from "@boardgames/core/protocol";
 import { describe, expect, it } from "vitest";
 import {
+  composeVariant,
   defaultVariantValue,
   joinMultiVariant,
+  parseComposedVariant,
   parseMultiVariant,
   variantConfigForSlug,
   variantSlugs,
@@ -226,5 +228,38 @@ describe("joinMultiVariant", () => {
     const stored = joinMultiVariant(["Base", "Leaders"], opts);
     expect(stored).toBeDefined();
     expect(parseMultiVariant(stored)).toEqual(["Base", "Leaders"]);
+  });
+});
+
+describe("two-axis variants (Trivial Pursuit edition + language)", () => {
+  const config = variantConfigForSlug("trivial-pursuit");
+  if (!config?.secondary) throw new Error("trivial-pursuit secondary axis missing");
+  const secondary = config.secondary;
+
+  it('defaults to "Classic · English"', () => {
+    expect(defaultVariantValue("trivial-pursuit")).toBe("Classic · English");
+  });
+
+  it("composes and parses back both halves, or either alone", () => {
+    expect(parseComposedVariant(composeVariant("Genus", "German"), config)).toEqual({
+      primary: "Genus",
+      secondary: "German",
+    });
+    expect(parseComposedVariant(composeVariant(undefined, "German"), config)).toEqual({
+      secondary: "German",
+    });
+    expect(parseComposedVariant(composeVariant("Disney", undefined), config)).toEqual({
+      primary: "Disney",
+    });
+    expect(composeVariant(undefined, undefined)).toBeUndefined();
+  });
+
+  it("every edition × language pair fits the wire's scenario limit", () => {
+    for (const edition of config.options) {
+      for (const language of secondary.options) {
+        const scenario = composeVariant(edition.value, language.value) ?? "";
+        expect(scenario.length, scenario).toBeLessThanOrEqual(64);
+      }
+    }
   });
 });

@@ -7,6 +7,12 @@ import {
   MAX_ROUND_SCORES,
   MIN_ROUND_SCORES,
 } from "@boardgames/core/history/round-scores";
+import {
+  describeWedgesError,
+  FULL_PIE,
+  type Wedge,
+  WedgeSchema,
+} from "@boardgames/core/history/trivial-pursuit";
 import type {
   MatchOutcome,
   MatchOutcomeCoop,
@@ -16,6 +22,7 @@ import type {
   MatchOutcomeTeams,
   Participant,
 } from "@boardgames/core/history/types";
+import { z } from "zod";
 
 export type ParseResult<T> = { ok: true; value: T } | { ok: false; error: string };
 
@@ -54,6 +61,20 @@ function parseTiebreak(v: unknown): number | undefined | null {
   const n = asInteger(v);
   if (n === null || n < 0 || n > 1000) return null;
   return n;
+}
+
+const WedgeListSchema = z.array(WedgeSchema).max(FULL_PIE);
+
+/**
+ * Trivial Pursuit pie wedges: `undefined` when absent, the list when every
+ * entry is a known wedge (no repeats, at most a full pie), `null` when
+ * malformed. Mirrors `wedges` on FreeForAllPlayerSchema / TeamSchema.
+ */
+function parseWedges(v: unknown): Wedge[] | undefined | null {
+  if (v === undefined || v === null) return undefined;
+  const parsed = WedgeListSchema.safeParse(v);
+  if (!parsed.success || describeWedgesError(parsed.data)) return null;
+  return parsed.data;
 }
 
 function parseParticipant(v: unknown, ctx: string): ParseResult<Participant> {
@@ -132,6 +153,8 @@ function parseFreeForAll(v: Record<string, unknown>): ParseResult<MatchOutcomeFr
     if (tiebreak === null) {
       return { ok: false, error: `players[${i}]: tiebreak must be an integer in 0..1000` };
     }
+    const wedges = parseWedges(raw.wedges);
+    if (wedges === null) return { ok: false, error: `players[${i}]: invalid wedges` };
     players.push({
       ...p.value,
       score,
@@ -140,6 +163,7 @@ function parseFreeForAll(v: Record<string, unknown>): ParseResult<MatchOutcomeFr
       ...(roundScores !== undefined ? { roundScores } : {}),
       ...(awards !== undefined ? { awards } : {}),
       ...(tiebreak !== undefined ? { tiebreak } : {}),
+      ...(wedges !== undefined ? { wedges } : {}),
     });
   }
   // No explicit winnerUserIds — the player(s) with the highest score are
@@ -247,11 +271,14 @@ function parseTeams(v: Record<string, unknown>): ParseResult<MatchOutcomeTeams> 
     if (tiebreak === null) {
       return { ok: false, error: `teams[${i}]: tiebreak must be an integer in 0..1000` };
     }
+    const wedges = parseWedges(t.wedges);
+    if (wedges === null) return { ok: false, error: `teams[${i}]: invalid wedges` };
     teams.push({
       members,
       ...(score !== undefined ? { score } : {}),
       ...(rank !== undefined ? { rank } : {}),
       ...(tiebreak !== undefined ? { tiebreak } : {}),
+      ...(wedges !== undefined ? { wedges } : {}),
     });
   }
   if (!Array.isArray(v.winnerTeamIndices) || v.winnerTeamIndices.length === 0) {
