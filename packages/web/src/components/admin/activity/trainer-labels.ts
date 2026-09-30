@@ -47,6 +47,7 @@ const FIELDS: Readonly<Record<TrainerDeck, Readonly<Record<string, FieldLabel>>>
       values: { sets: "whole sets", originals: "originals first" },
     },
     newSetsPerDay: { name: "new sets a day" },
+    excludeFromAll: { name: "districts left out of Study all" },
   },
   geography: {
     language: { name: "language", values: LANGUAGE },

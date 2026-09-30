@@ -95,12 +95,12 @@ export function FlashCard({
   if (revealed) held.current = live;
   const back = revealed ? live : held.current;
 
-  const face = "col-start-1 row-start-1 flex min-h-64 flex-col";
+  const face = "col-start-1 row-start-1 flex min-h-64 min-w-0 flex-col";
 
   return (
-    <div className={cn("w-full", className)} style={{ perspective: 1400 }}>
+    <div className={cn("w-full min-w-0", className)} style={{ perspective: 1400 }}>
       <motion.div
-        className="grid"
+        className="grid grid-cols-1"
         style={{ transformStyle: flip ? "preserve-3d" : undefined }}
         animate={{ rotateY: flip && revealed ? 180 : 0 }}
         transition={flip ? boardSpring : { duration: 0 }}
@@ -114,38 +114,45 @@ export function FlashCard({
           inert={revealed}
           aria-hidden={revealed}
         >
-          <Surface variant="raised" padding="none" className="flex flex-1 flex-col overflow-hidden">
+          <Surface
+            variant="raised"
+            padding="none"
+            className="relative flex min-w-0 flex-1 flex-col overflow-hidden"
+          >
             <span className={cn("block h-1 w-full", TONE_STRIP[d.tone])} aria-hidden="true" />
+            {/* The text lays out as ordinary flow; the tap target is a
+                full-card overlay, so no button's intrinsic sizing (which
+                iOS Safari lets grow past the screen) ever reaches it. */}
+            <div className="flex min-w-0 flex-1 flex-col gap-4 p-5">
+              <CardHeader card={card} district={d} state={state} primary={primary} />
+              <div className="flex min-w-0 flex-1 flex-col justify-center gap-2 py-4">
+                {questions.map((text, i) => (
+                  <p
+                    key={text}
+                    lang={i === 0 ? primary : primary === "en" ? "de" : "en"}
+                    className={cn(
+                      "hyphens-auto break-words",
+                      i === 0
+                        ? "text-lg font-semibold leading-snug text-fg-strong sm:text-xl"
+                        : "text-sm text-fg-secondary",
+                    )}
+                  >
+                    {text}
+                  </p>
+                ))}
+              </div>
+              <p className="flex items-center gap-1.5 text-2xs text-fg-muted">
+                Tap to reveal
+                <Kbd className="hidden sm:inline-flex">Space</Kbd>
+              </p>
+            </div>
             <Button
               variant="plain"
               bleed
-              align="start"
+              aria-label="Reveal the answer"
               onClick={onReveal}
-              className="cursor-pointer text-left hover:bg-fill-soft"
-            >
-              <div className="flex w-full flex-1 flex-col gap-4 p-5">
-                <CardHeader card={card} district={d} state={state} primary={primary} />
-                <div className="flex flex-1 flex-col justify-center gap-2 py-4">
-                  {questions.map((text, i) => (
-                    <p
-                      key={text}
-                      lang={i === 0 ? primary : primary === "en" ? "de" : "en"}
-                      className={
-                        i === 0
-                          ? "text-lg font-semibold leading-snug text-fg-strong sm:text-xl"
-                          : "text-sm text-fg-secondary"
-                      }
-                    >
-                      {text}
-                    </p>
-                  ))}
-                </div>
-                <p className="flex items-center gap-1.5 text-2xs text-fg-muted">
-                  Tap to reveal
-                  <Kbd className="hidden sm:inline-flex">Space</Kbd>
-                </p>
-              </div>
-            </Button>
+              className="absolute inset-0 z-lift cursor-pointer hover:bg-fill-soft"
+            />
           </Surface>
         </motion.div>
 
@@ -222,9 +229,13 @@ function BackFace({
   const questions = pickTexts(language, card.question.en, card.question.de);
   const answers = pickTexts(language, card.question.answerEn, card.question.answerDe);
   return (
-    <Surface variant="raised" padding="none" className="flex flex-1 flex-col overflow-hidden">
+    <Surface
+      variant="raised"
+      padding="none"
+      className="flex min-w-0 flex-1 flex-col overflow-hidden break-words"
+    >
       <span className={cn("block h-1 w-full", TONE_STRIP[d.tone])} aria-hidden="true" />
-      <div className="flex flex-1 flex-col gap-4 p-5">
+      <div className="flex min-w-0 flex-1 flex-col gap-4 p-5">
         <CardHeader card={card} district={d} state={state} primary={primary} />
         <p className="text-sm text-fg-secondary" lang={primary}>
           {questions[0]}
