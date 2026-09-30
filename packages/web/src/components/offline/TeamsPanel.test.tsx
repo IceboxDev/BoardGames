@@ -1,7 +1,11 @@
-import { fireEvent, render, screen, within } from "@testing-library/react";
-import { afterEach, describe, expect, it } from "vitest";
+import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import type { Attendee } from "../../lib/calendar-games";
-import { TeamsPanel } from "./TeamsPanel";
+
+const balance = vi.hoisted(() => vi.fn());
+vi.mock("../../lib/skills", () => ({ balanceTeams: balance }));
+
+const { TeamsPanel } = await import("./TeamsPanel");
 
 const person = (name: string, over: Partial<Attendee> = {}): Attendee => ({
   userId: name.toLowerCase(),
@@ -27,9 +31,13 @@ const ROSTER = [
 
 const chip = (name: string) => screen.getByRole("button", { name: new RegExp(`^${name}`) });
 const cards = () => screen.queryAllByTestId("team-card");
+const random = () => fireEvent.click(screen.getByRole("button", { name: /^random/i }));
 
 describe("TeamsPanel", () => {
-  afterEach(() => window.localStorage.clear());
+  afterEach(() => {
+    window.localStorage.clear();
+    balance.mockReset();
+  });
 
   it("starts with confirmed people in and maybes out", () => {
     render(<TeamsPanel date="2026-09-26" attendees={ROSTER} onBack={() => {}} />);
@@ -40,6 +48,7 @@ describe("TeamsPanel", () => {
 
   it("deals every pooled player into the teams, including a tapped-in maybe", () => {
     render(<TeamsPanel date="2026-09-26" attendees={ROSTER} onBack={() => {}} />);
+    random();
     fireEvent.click(chip("Eve"));
     fireEvent.click(screen.getByRole("button", { name: /shuffle teams/i }));
     expect(cards()).toHaveLength(2);
@@ -63,10 +72,56 @@ describe("TeamsPanel", () => {
     const { unmount } = render(
       <TeamsPanel date="2026-09-26" attendees={ROSTER} onBack={() => {}} />,
     );
+    random();
     fireEvent.click(screen.getByRole("button", { name: /shuffle teams/i }));
     unmount();
     render(<TeamsPanel date="2026-09-26" attendees={ROSTER} onBack={() => {}} />);
     expect(cards()).toHaveLength(2);
     expect(screen.getByRole("button", { name: /reshuffle/i })).toBeInTheDocument();
+  });
+
+  it("balances for tonight's top pick and shows the odds", async () => {
+    balance.mockResolvedValue({
+      slug: "codenames",
+      teams: [
+        { userIds: ["ana", "dee"], chance: 0.51 },
+        { userIds: ["ben", "cid"], chance: 0.49 },
+      ],
+      basis: { ana: "game", ben: "traits", cid: "unknown", dee: "game" },
+    });
+    render(
+      <TeamsPanel date="2026-09-26" attendees={ROSTER} lineup={["codenames"]} onBack={() => {}} />,
+    );
+    fireEvent.click(screen.getByRole("button", { name: /balance teams/i }));
+    await waitFor(() => expect(cards()).toHaveLength(2));
+    expect(balance).toHaveBeenCalledWith(
+      expect.objectContaining({
+        slug: "codenames",
+        teamCount: 2,
+        userIds: ["ana", "ben", "cid", "dee"],
+      }),
+    );
+    expect(screen.getByText("Dead even")).toBeInTheDocument();
+    expect(screen.getAllByText("51%").length).toBeGreaterThan(0);
+    expect(screen.getByText(/Ben hasn't played Codenames yet/)).toBeInTheDocument();
+    expect(screen.getByText(/Cid has no rated games yet/)).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /another fair split/i })).toBeInTheDocument();
+  });
+
+  it("deals at random, and says so, when the ratings can't be reached", async () => {
+    balance.mockRejectedValue(new Error("offline"));
+    render(
+      <TeamsPanel date="2026-09-26" attendees={ROSTER} lineup={["codenames"]} onBack={() => {}} />,
+    );
+    fireEvent.click(screen.getByRole("button", { name: /balance teams/i }));
+    await waitFor(() => expect(cards()).toHaveLength(2));
+    expect(screen.getByText(/dealt at random instead/)).toBeInTheDocument();
+    expect(screen.queryByText("Dead even")).toBeNull();
+  });
+
+  it("asks for a game before balancing when the night has no lineup", () => {
+    render(<TeamsPanel date="2026-09-26" attendees={ROSTER} onBack={() => {}} />);
+    expect(screen.getByText("Pick the game to balance for")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /balance teams/i })).toBeDisabled();
   });
 });

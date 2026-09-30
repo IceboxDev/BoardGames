@@ -1,6 +1,8 @@
 import type { SensoTiebreak } from "@boardgames/core/games/senso-battle-for-japan/standings";
 import { awardLabel } from "@boardgames/core/history/awards";
+import { ffaRankStanding } from "@boardgames/core/history/participant-results";
 import { roundWinnerIndex } from "@boardgames/core/history/round-scores";
+import { TRIVIAL_PURSUIT_SLUG } from "@boardgames/core/history/trivial-pursuit";
 import type {
   MatchOutcome,
   MatchOutcomeCoop,
@@ -191,7 +193,10 @@ function CompactOutcome({ outcome, gameSlug, currentUserId }: OutcomeProps) {
     case "free-for-all":
       // `outcome.draw` routes to the point-less rendering too: a drawn duel has
       // no scores worth showing regardless of how the slug is configured.
-      return isPointlessFreeForAll(gameSlug) || outcome.draw ? (
+      // Trivial Pursuit places by wedges but has no scores: the pie layout.
+      return isPointlessFreeForAll(gameSlug) ||
+        outcome.draw ||
+        gameSlug === TRIVIAL_PURSUIT_SLUG ? (
         <PointlessFfaInline outcome={outcome} currentUserId={currentUserId} />
       ) : (
         <FreeForAllInline outcome={outcome} gameSlug={gameSlug} currentUserId={currentUserId} />
@@ -350,7 +355,7 @@ function RoundScores({
   );
 }
 
-// Point-less free-for-all (Villainous, Lovecraft Letter, Trivial Pursuit). No
+// Point-less free-for-all (Villainous, Lovecraft Letter) and Trivial Pursuit. No
 // scores — show each player, winner-first with the gold winner tone; a
 // per-player role (Villainous villain) shows as a small label, Trivial
 // Pursuit's collected wedges as a little pie. The scenario (edition / win
@@ -390,11 +395,13 @@ function PointlessFfaInline({
   const isWinner = (p: MatchOutcomeFreeForAll["players"][number]) =>
     hasRank ? p.rank === 1 : p.score === topScore;
 
+  // Winner first; below it by standing (Trivial Pursuit: most wedges first).
+  const standing = ffaRankStanding(outcome);
   const sorted = [...outcome.players].sort((a, b) => {
     const aWin = isWinner(a) ? 0 : 1;
     const bWin = isWinner(b) ? 0 : 1;
     if (aWin !== bWin) return aWin - bWin;
-    return a.displayName.localeCompare(b.displayName);
+    return standing(a) - standing(b) || a.displayName.localeCompare(b.displayName);
   });
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">

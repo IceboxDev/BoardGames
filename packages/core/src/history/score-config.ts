@@ -17,10 +17,12 @@ const LOW_SCORE_WINS = new Set<string>(["phase-10", "bandit"]);
 const WIN_DRAW_LOSS_FFA_SLUGS = ["chess", "connect-4"] as const;
 const WIN_DRAW_LOSS_FFA = new Set<string>(WIN_DRAW_LOSS_FFA_SLUGS);
 
-// Plain single-winner games: one player is crowned, everyone else lost, no
-// scores, no draw, no role/win-condition to record (unlike Villainous or
-// Lovecraft Letter). The web's generic SingleWinnerForm serves every slug here
-// except Trivial Pursuit, whose form also records each player's pie wedges.
+// Plain single-winner games: one player is crowned, no scores, no draw, no
+// role/win-condition to record (unlike Villainous or Lovecraft Letter). The
+// web's generic SingleWinnerForm serves every slug here except Trivial
+// Pursuit, whose form also records each player's pie wedges — and those
+// wedges place everyone below the winner, so Trivial Pursuit is NOT
+// point-less (see `ffaRankStanding`).
 const SINGLE_WINNER_FFA_SLUGS = ["unstable-unicorns", "trivial-pursuit"] as const;
 const SINGLE_WINNER_FFA = new Set<string>(SINGLE_WINNER_FFA_SLUGS);
 
@@ -39,7 +41,7 @@ const POINTLESS_FFA = new Set<string>([
   "villainous-introduction-to-evil",
   "lovecraft-letter",
   ...WIN_DRAW_LOSS_FFA_SLUGS,
-  ...SINGLE_WINNER_FFA_SLUGS,
+  ...SINGLE_WINNER_FFA_SLUGS.filter((slug) => slug !== "trivial-pursuit"),
 ]);
 
 export function isPointlessFreeForAll(slug: string | null | undefined): boolean {

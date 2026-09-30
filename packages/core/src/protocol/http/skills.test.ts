@@ -1,5 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
+  BalanceTeamsBodySchema,
+  BalanceTeamsResponseSchema,
   GreetingAckBodySchema,
   GreetingResponseSchema,
   PlayerSkillResponseSchema,
@@ -197,5 +199,36 @@ describe("SKILL_TRAITS", () => {
     for (const trait of SKILL_TRAITS) {
       expect(trait.label.length).toBeLessThanOrEqual(24);
     }
+  });
+});
+
+describe("BalanceTeamsBodySchema", () => {
+  const ok = { slug: "codenames", userIds: ["a", "b", "c", "d"], teamCount: 2, seed: 7 };
+
+  it("parses a pool", () => {
+    expect(BalanceTeamsBodySchema.parse(ok)).toEqual(ok);
+  });
+
+  it("rejects duplicates, too many teams and a lone player", () => {
+    const issue = (body: unknown) =>
+      BalanceTeamsBodySchema.safeParse(body).error?.issues[0]?.path.join(".");
+    expect(issue({ ...ok, userIds: ["a", "a", "b"] })).toBe("userIds");
+    expect(issue({ ...ok, teamCount: 5 })).toBe("teamCount");
+    expect(issue({ ...ok, userIds: ["a"] })).toBe("userIds");
+  });
+});
+
+describe("BalanceTeamsResponseSchema", () => {
+  it("parses teams with chances and a basis per player", () => {
+    const body = {
+      slug: "codenames",
+      teams: [
+        { userIds: ["a", "b"], chance: 0.51 },
+        { userIds: ["c", "d"], chance: 0.49 },
+      ],
+      basis: { a: "game", b: "traits", c: "unknown", d: "game" },
+    };
+    expect(BalanceTeamsResponseSchema.parse(body)).toEqual(body);
+    expect(() => BalanceTeamsResponseSchema.parse({ ...body, basis: { a: "guess" } })).toThrow();
   });
 });

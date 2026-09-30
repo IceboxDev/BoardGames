@@ -304,26 +304,33 @@ function mergeRoundRobin(lists: readonly QueueItem[][]): QueueItem[] {
  * Keeps at most `budget` new units (a unit = an article's set id, or a
  * question id) across the districts' queues, in place: districts take turns
  * in a seeded order, each offering its next unit, so the day's few new
- * articles come from different districts. Due items, and new items of a
- * unit in `exempt` (an article already begun), are untouched.
+ * articles come from different districts. Due items are untouched. Units
+ * in `started` (an article already begun) are always kept — finished
+ * first — and count toward the budget.
  */
 export function capNewAcross(
   perCategory: QueueItem[][],
   budget: number,
   unitOf: (questionId: string) => string,
   seed: number,
-  exempt: ReadonlySet<string> = new Set(),
+  started: ReadonlySet<string> = new Set(),
 ): void {
   const units = perCategory.map((items) => {
     const seen: string[] = [];
     for (const it of items) {
       if (it.tier !== "new") continue;
       const u = unitOf(it.questionId);
-      if (!exempt.has(u) && !seen.includes(u)) seen.push(u);
+      if (!started.has(u) && !seen.includes(u)) seen.push(u);
     }
     return seen;
   });
   const keep = new Set<string>();
+  for (const items of perCategory) {
+    for (const it of items) {
+      const u = unitOf(it.questionId);
+      if (it.tier === "new" && started.has(u)) keep.add(u);
+    }
+  }
   const order = seededShuffle(
     perCategory.map((_, i) => i),
     seed,
@@ -340,8 +347,7 @@ export function capNewAcross(
   }
   for (let i = 0; i < perCategory.length; i++) {
     perCategory[i] = perCategory[i].filter(
-      (it) =>
-        it.tier !== "new" || keep.has(unitOf(it.questionId)) || exempt.has(unitOf(it.questionId)),
+      (it) => it.tier !== "new" || keep.has(unitOf(it.questionId)),
     );
   }
 }
@@ -429,7 +435,7 @@ export async function trainerQueue(
   // "Study all" introduces one sitting's budget in total — `newSetsPerDay`
   // articles (or `newPerDay` questions) drawn across the districts — not
   // every district's full daily budget at once.
-  // An article already begun is finished outside the budget.
+  // An article already begun is finished first, as part of the budget.
   if (opts.category === undefined) {
     const started = new Set<string>();
     if (bySet)
