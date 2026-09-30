@@ -341,6 +341,23 @@ export function TrainerIcon({ className = "h-6 w-6" }: IconProps) {
   );
 }
 
+/** A magnifier over a bar chart: the analysis / solver mode. */
+export function SolverIcon({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className={className}
+      strokeWidth={1.8}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M4 20V13M8 20V9M12 20v-5" />
+      <circle cx="16" cy="8" r="4" />
+      <path d="M19 11l3 3" />
+    </svg>
+  );
+}
+
 /** A cog: settings. */
 export function GearIcon({ className = "h-4 w-4" }: IconProps) {
   return (
