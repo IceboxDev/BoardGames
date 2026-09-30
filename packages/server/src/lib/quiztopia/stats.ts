@@ -301,10 +301,56 @@ function mergeRoundRobin(lists: readonly QueueItem[][]): QueueItem[] {
 }
 
 /**
+ * Keeps at most `budget` new units (a unit = an article's set id, or a
+ * question id) across the districts' queues, in place: districts take turns
+ * in a seeded order, each offering its next unit, so the day's few new
+ * articles come from different districts. Due items, and new items of a
+ * unit in `exempt` (an article already begun), are untouched.
+ */
+export function capNewAcross(
+  perCategory: QueueItem[][],
+  budget: number,
+  unitOf: (questionId: string) => string,
+  seed: number,
+  exempt: ReadonlySet<string> = new Set(),
+): void {
+  const units = perCategory.map((items) => {
+    const seen: string[] = [];
+    for (const it of items) {
+      if (it.tier !== "new") continue;
+      const u = unitOf(it.questionId);
+      if (!exempt.has(u) && !seen.includes(u)) seen.push(u);
+    }
+    return seen;
+  });
+  const keep = new Set<string>();
+  const order = seededShuffle(
+    perCategory.map((_, i) => i),
+    seed,
+  );
+  for (let round = 0; keep.size < budget; round++) {
+    let offered = false;
+    for (const i of order) {
+      const u = units[i][round];
+      if (u === undefined) continue;
+      offered = true;
+      if (keep.size < budget) keep.add(u);
+    }
+    if (!offered) break;
+  }
+  for (let i = 0; i < perCategory.length; i++) {
+    perCategory[i] = perCategory[i].filter(
+      (it) =>
+        it.tier !== "new" || keep.has(unitOf(it.questionId)) || exempt.has(unitOf(it.questionId)),
+    );
+  }
+}
+
+/**
  * Today's queue. With a category: that programme's learning → review →
- * new items under its daily new-card cap. Without: every category's
- * queue under the same per-category caps, round-robined tier by tier so
- * one district cannot crowd the rest out.
+ * new items under its daily new-card cap. Without ("Study all"): every
+ * due item of the districts not left out, plus one sitting's new budget
+ * drawn across them (`capNewAcross`), mixed so no district crowds the rest.
  */
 export async function trainerQueue(
   db: Client,
@@ -355,7 +401,11 @@ export async function trainerQueue(
     list.push(state);
   }
 
-  const categories = opts.category !== undefined ? [opts.category] : CATEGORIES;
+  // "Study all" skips the districts the member left out of it.
+  const categories =
+    opts.category !== undefined
+      ? [opts.category]
+      : CATEGORIES.filter((n) => !settings.excludeFromAll.includes(n));
   const bySet = settings.newCardOrder === "sets";
   const perCategory = categories.map((n) => {
     // A per-user, per-district shuffle: stable for the learner, random
@@ -376,6 +426,22 @@ export async function trainerQueue(
       shuffleSeed: bySet ? hashSeed(`${userId}:${opts.today}:${n}`) : undefined,
     });
   });
+  // "Study all" introduces one sitting's budget in total — `newSetsPerDay`
+  // articles (or `newPerDay` questions) drawn across the districts — not
+  // every district's full daily budget at once.
+  // An article already begun is finished outside the budget.
+  if (opts.category === undefined) {
+    const started = new Set<string>();
+    if (bySet)
+      for (const ids of seenByCategory.values()) for (const id of ids) started.add(setIdOf(id));
+    capNewAcross(
+      perCategory,
+      bySet ? settings.newSetsPerDay : settings.newPerDay,
+      bySet ? setIdOf : (id) => id,
+      hashSeed(`${userId}:${opts.today}:new`),
+      started,
+    );
+  }
   // Several districts: round-robin tier by tier — except in whole-set mode,
   // where the day is one shuffled mix of new and due across every district.
   const merged =
