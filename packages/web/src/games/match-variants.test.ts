@@ -23,6 +23,19 @@ describe("variantConfigForSlug", () => {
     expect(config?.options.map((o) => o.value)).toEqual(["English", "German"]);
   });
 
+  it("records Azul's wall side and Wingspan's goal-board side, book default first", () => {
+    expect(variantConfigForSlug("azul")?.options.map((o) => o.value)).toEqual([
+      "Standard",
+      "Gray wall",
+    ]);
+    expect(defaultVariantValue("azul")).toBe("Standard");
+    expect(variantConfigForSlug("wingspan")?.options.map((o) => o.value)).toEqual([
+      "Green goals",
+      "Blue goals",
+    ]);
+    expect(defaultVariantValue("wingspan")).toBe("Green goals");
+  });
+
   it("returns the 7 Wonders edition config (multi-select)", () => {
     const config = variantConfigForSlug("7-wonders");
     expect(config?.mode).toBe("multi");

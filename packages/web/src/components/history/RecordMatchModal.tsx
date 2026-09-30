@@ -167,7 +167,9 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
       return;
     }
     const eventTime = locksQuery.data?.[dateKey]?.eventTime ?? "20:00";
-    setPlayedAt(localInputToIso(`${dateKey}T${eventTime}`));
+    // A second night's key carries a suffix ("2026-09-18_2") — the day is
+    // the date part only, or the timestamp is invalid and falls back to now.
+    setPlayedAt(localInputToIso(`${nightDate(dateKey)}T${eventTime}`));
   }, [dateKey, locksQuery.data, state.mode]);
 
   // Auto-pick the match kind from the game's typical mode whenever the user
