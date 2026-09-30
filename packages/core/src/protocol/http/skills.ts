@@ -345,3 +345,50 @@ export type AdminSkillStateResponse = z.infer<typeof AdminSkillStateResponseSche
 
 export const PublishGreetingBodySchema = z.object({ candidateKey: z.string().min(1) });
 export type PublishGreetingBody = z.infer<typeof PublishGreetingBodySchema>;
+
+// ── Team balancing ─────────────────────────────────────────────────────
+//
+// The night's team mixer asks the server for the fairest split of a pool for
+// one game. Strengths stay on the server: the answer carries the teams and
+// their win chances, never a per-player number.
+
+export const BalanceTeamsBodySchema = z
+  .object({
+    /** The game the teams are for — its trait mix weighs the players. */
+    slug: z.string().min(1).max(80),
+    userIds: z.array(z.string().min(1)).min(2).max(32),
+    teamCount: z.number().int().min(2).max(8),
+    /** Picks among the equally fair splits — a new seed, a new table. */
+    seed: z
+      .number()
+      .int()
+      .min(0)
+      .max(2 ** 31 - 1),
+  })
+  .refine((b) => new Set(b.userIds).size === b.userIds.length, {
+    message: "each player once",
+    path: ["userIds"],
+  })
+  .refine((b) => b.teamCount <= b.userIds.length, {
+    message: "more teams than players",
+    path: ["teamCount"],
+  });
+export type BalanceTeamsBody = z.infer<typeof BalanceTeamsBodySchema>;
+
+export const BalanceTeamsResponseSchema = z.object({
+  slug: z.string().min(1),
+  teams: z.array(
+    z.object({
+      userIds: z.array(z.string().min(1)).min(1),
+      /** Bradley–Terry chance this team comes out on top (all teams sum to 1). */
+      chance: z.number().min(0).max(1),
+    }),
+  ),
+  /**
+   * How each player's strength was known: from their own games of this one,
+   * from their traits (never played it), or not at all (no rated games —
+   * counted as an average player).
+   */
+  basis: z.record(z.string(), z.enum(["game", "traits", "unknown"])),
+});
+export type BalanceTeamsResponse = z.infer<typeof BalanceTeamsResponseSchema>;

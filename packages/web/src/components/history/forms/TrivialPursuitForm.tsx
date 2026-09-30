@@ -18,7 +18,8 @@ type Props = {
  * Trivial Pursuit, every player for themselves: the pie wedges each player
  * held at the end, and ONE crowned winner (`rank: 1`, every score 0). Several
  * players can hold a full pie — only the one who then answered the final
- * question won — so the crown is picked, never derived from the wedges.
+ * question won — so the crown is picked, never derived from the wedges. Below
+ * the winner, the wedges place everyone (derived on read: `ffaRankStanding`).
  */
 export function TrivialPursuitForm({ users, value, onChange }: Props) {
   const selectedIds = value.players.map((p) => p.userId);
@@ -47,7 +48,10 @@ export function TrivialPursuitForm({ users, value, onChange }: Props) {
     <OutcomeFormShell users={users} selectedIds={selectedIds} onParticipants={setParticipants}>
       {value.players.length > 0 && (
         <div className="flex flex-col gap-2.5">
-          <GroupLabel>Tap the wedges each player collected, then crown the winner.</GroupLabel>
+          <GroupLabel>
+            Tap the wedges each player collected, then crown the winner — everyone else places by
+            wedges.
+          </GroupLabel>
           {value.players.map((p) => (
             <div key={p.userId} className="flex flex-col gap-1">
               <PlayerRow

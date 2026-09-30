@@ -1,3 +1,5 @@
+import type { BalanceTeamsBody, BalanceTeamsResponse } from "@boardgames/core/protocol";
+import { balanceTeams as coreBalanceTeams } from "@boardgames/core/skill/team-balance";
 import { useState } from "react";
 import AttendeesView from "../components/offline/AttendeesView";
 import GameCarousel3D from "../components/offline/GameCarousel3D";
@@ -67,6 +69,24 @@ const PREVIEW_ATTENDEES: Attendee[] = [
   seat: null,
   ...(typeof over === "object" ? over : {}),
 }));
+
+/**
+ * ?view=teams balances locally with the real core algorithm over made-up
+ * strengths (a hash of the id) — there is no server behind the preview.
+ * The first fixture player has no record at all, the second never played.
+ */
+const previewBalancer = async (body: BalanceTeamsBody): Promise<BalanceTeamsResponse> => {
+  const strength = (id: string) =>
+    ([...id].reduce((h, c) => (h * 31 + c.charCodeAt(0)) % 997, 7) / 997) * 3 - 1.5;
+  const res = coreBalanceTeams(body.userIds, body.teamCount, strength, body.seed);
+  return {
+    slug: body.slug,
+    teams: res.teams.map((userIds, i) => ({ userIds, chance: res.chances[i] })),
+    basis: Object.fromEntries(
+      body.userIds.map((id, i) => [id, i === 0 ? "unknown" : i === 1 ? "traits" : "game"]),
+    ),
+  };
+};
 
 export default function RsvpPreview() {
   const [rsvp, setRsvp] = useState<"yes" | "no">("yes");
@@ -170,6 +190,8 @@ export default function RsvpPreview() {
             <TeamsPanel
               date="preview"
               attendees={PREVIEW_ATTENDEES}
+              lineup={["codenames", "decrypto", "wavelength"]}
+              balancer={previewBalancer}
               onBack={() => setView("attendees")}
             />
           </div>

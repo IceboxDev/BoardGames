@@ -1,7 +1,9 @@
 // Trivial Pursuit's match record: the pie wedges each player (or team) had
 // collected when the game ended, plus one crowned winner. Several players can
 // hold all six wedges — only the one who then answered the final question in
-// the hub won — so the winner is picked, never derived from the wedges.
+// the hub won — so the winner is picked, never derived from the wedges. The
+// wedges DO place everyone else: most wedges 2nd, and so on, equal counts
+// sharing a place (`ffaRankStanding` in participant-results.ts).
 //
 // A wedge is keyed by its board SLOT under the classic Genus colour. Editions
 // that print the Arts & Literature slot purple instead of brown (Master

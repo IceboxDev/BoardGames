@@ -505,9 +505,9 @@ describe("/api/quiztopia", () => {
       });
       const all = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&limit=200`);
       expect(all.body.items.some((it) => it.category === 1 || it.category === 2)).toBe(false);
-      // District 3's due article (finished outside the budget) + three new ones.
+      // District 3's begun article is finished first and counts: it + two new ones.
       expect(all.body.items.some((it) => it.questionId === "c001-s03-q0")).toBe(true);
-      expect(new Set(all.body.items.map((it) => it.setId)).size).toBe(4);
+      expect(new Set(all.body.items.map((it) => it.setId)).size).toBe(3);
       const own = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&category=1`);
       expect(own.body.items.some((it) => it.questionId === "c001-s01-q0")).toBe(true);
       const settings = await call<{ excludeFromAll: number[] }>("GET", "/settings");
@@ -541,16 +541,11 @@ describe("/api/quiztopia", () => {
 
       const mixed = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&limit=200`);
       const mixedNew = mixed.body.items.filter((it) => it.tier === "new");
-      // Study all: the article the due card began is finished (4 left) on
-      // top of one sitting's budget — one new article, five questions.
-      expect(mixedNew).toHaveLength(9);
-      const perSet = new Map<string, number>();
-      for (const it of mixedNew) perSet.set(it.setId, (perSet.get(it.setId) ?? 0) + 1);
-      expect(perSet.get("c001-s02")).toBe(4);
-      perSet.delete("c001-s02");
-      expect([...perSet.values()]).toEqual([5]);
-      const firstFive = mixed.body.items.slice(0, 5).map((it) => it.setId);
-      expect(new Set(firstFive).size).toBeGreaterThan(1);
+      // Study all: the article the due card began (4 left) is finished first
+      // and uses the sitting's budget of one — no other new article.
+      expect(mixedNew).toHaveLength(4);
+      expect(new Set(mixedNew.map((it) => it.setId))).toEqual(new Set(["c001-s02"]));
+      expect(mixed.body.items.some((it) => it.questionId === "c001-s02-q0")).toBe(true);
     });
 
     it("hides leeches unless asked for them", async () => {

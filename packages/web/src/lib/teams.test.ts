@@ -83,10 +83,24 @@ describe("storage", () => {
   afterEach(() => window.localStorage.clear());
 
   it("round-trips per night", () => {
-    const state = { teamCount: 3, overrides: { u1: true }, teams: [["u1"], ["u2"], ["u3"]] };
+    const state = {
+      ...DEFAULT_TEAMS_STATE,
+      teamCount: 3,
+      overrides: { u1: true },
+      teams: [["u1"], ["u2"], ["u3"]],
+      slug: "codenames",
+      chances: [0.34, 0.33, 0.33],
+      guessed: { u2: "traits" as const },
+    };
     saveTeams("2026-09-26", state);
     expect(loadTeams("2026-09-26")).toEqual(state);
     expect(loadTeams("2026-09-27")).toEqual(DEFAULT_TEAMS_STATE);
+  });
+
+  it("reads a save from before balancing as a balanced, game-less state", () => {
+    const old = { teamCount: 2, overrides: {}, teams: [["u1"], ["u2"]] };
+    window.localStorage.setItem("bg:teams:2026-09-26", JSON.stringify(old));
+    expect(loadTeams("2026-09-26")).toEqual({ ...DEFAULT_TEAMS_STATE, teams: old.teams });
   });
 
   it("falls back to the default on a corrupt entry", () => {
