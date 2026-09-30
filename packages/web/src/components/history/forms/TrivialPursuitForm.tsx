@@ -1,4 +1,5 @@
 import type { MatchOutcomeFreeForAll, Participant } from "@boardgames/core/history/types";
+import { artsWedgeForScenario } from "../../../games/trivial-pursuit/palette";
 import { Chip } from "../../ui/Chip";
 import type { PickerUser } from "../ParticipantPicker";
 import { PlayerRow } from "../PlayerRow";
@@ -65,6 +66,7 @@ export function TrivialPursuitForm({ users, value, onChange }: Props) {
                 }
               />
               <WedgePicker
+                arts={artsWedgeForScenario(value.scenario)}
                 owner={p.displayName}
                 wedges={p.wedges ?? []}
                 onChange={(wedges) =>

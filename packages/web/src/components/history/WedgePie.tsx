@@ -1,12 +1,26 @@
 import { TRIVIAL_PURSUIT_WEDGES, type Wedge } from "@boardgames/core/history/trivial-pursuit";
+import type { ArtsWedgeColor } from "../../games/trivial-pursuit/editions";
 
 // Trivial Pursuit's pie: six 60° slots in board order, filled in the wedge's
-// colour when collected, a faint empty slot otherwise. The palette is the
-// classic Genus board — game content, not chrome, so literal palette colours.
+// colour when collected, a faint empty slot otherwise. Game content, not
+// chrome, so literal palette colours. The Art & Literature slot (keyed
+// "brown") is drawn in the edition's colour — brown on Genus boxes, purple on
+// everything since (see games/trivial-pursuit/editions.ts).
 
 type WedgeStyle = { name: string; fill: string; bg: string; border: string };
 
-export const WEDGE_STYLE: Record<Wedge, WedgeStyle> = {
+const PURPLE_ARTS: WedgeStyle = {
+  name: "Purple",
+  fill: "fill-purple-600",
+  bg: "bg-purple-600",
+  border: "border-purple-500",
+};
+
+export function wedgeStyle(w: Wedge, arts: ArtsWedgeColor): WedgeStyle {
+  return w === "brown" && arts === "purple" ? PURPLE_ARTS : GENUS_STYLE[w];
+}
+
+const GENUS_STYLE: Record<Wedge, WedgeStyle> = {
   blue: { name: "Blue", fill: "fill-sky-500", bg: "bg-sky-500", border: "border-sky-500" },
   pink: { name: "Pink", fill: "fill-pink-400", bg: "bg-pink-400", border: "border-pink-400" },
   yellow: {
@@ -40,9 +54,11 @@ const SLICES = TRIVIAL_PURSUIT_WEDGES.map((_, i) => slicePath(i));
 
 export function WedgePie({
   wedges,
+  arts,
   className = "h-4 w-4",
 }: {
   wedges: readonly Wedge[];
+  arts: ArtsWedgeColor;
   className?: string;
 }) {
   const held = new Set(wedges);
@@ -54,7 +70,7 @@ export function WedgePie({
         <path
           key={w}
           d={SLICES[i]}
-          className={`${held.has(w) ? WEDGE_STYLE[w].fill : "fill-fill-strong"} stroke-surface-900`}
+          className={`${held.has(w) ? wedgeStyle(w, arts).fill : "fill-fill-strong"} stroke-surface-900`}
           strokeWidth={1}
         />
       ))}

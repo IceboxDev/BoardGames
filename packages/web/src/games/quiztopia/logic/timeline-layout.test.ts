@@ -1,5 +1,5 @@
 import type { TimelineIndex } from "@boardgames/core/games/quiztopia/content-types";
-import type { TimelineEvent } from "@boardgames/core/games/quiztopia/timeline";
+import { type TimelineEvent, timelineSortKey } from "@boardgames/core/games/quiztopia/timeline";
 import { describe, expect, it } from "vitest";
 import {
   FOLDED_HEIGHT,
@@ -212,6 +212,23 @@ describe("layoutTimeline", () => {
     expect(spreadApart([0, 0, 0], 10, -100, 100)).toEqual([-10, 0, 10]);
     expect(spreadApart([0, 50, 51], 10, 0, 100)).toEqual([0, 45.5, 55.5]);
     expect(spreadApart([95, 99], 10, 0, 100)).toEqual([90, 100]);
+  });
+
+  it("puts Today in its own end cap below every card, where ongoing bars meet it", () => {
+    const items = [
+      item("c001-s01-q0", "2023-04-15"),
+      item("c001-s01-q1", "2020", { kind: "reign", ongoing: true }),
+    ];
+    const now = timelineSortKey(NOW);
+    const layout = layoutTimeline(items, { now });
+    const last = Math.max(...layout.items.map((l) => l.cardY + 68));
+    expect(layout.nowY).toBeGreaterThan(last);
+    expect(layout.nowY).toBeLessThan(layout.height);
+    expect(layout.spans[0].y1).toBe(layout.nowY);
+    // A pin dated after today keeps the marker on the scale instead.
+    const ahead = layoutTimeline([...items, item("c001-s01-q2", "2030")], { now });
+    expect(ahead.nowY).toBeLessThan(ahead.height);
+    expect(ahead.nowY).toBeLessThan(Math.max(...ahead.items.map((l) => l.y)));
   });
 
   it("lays out an empty timeline as nothing", () => {

@@ -25,6 +25,7 @@ import { LanguageToggle } from "../common/LanguageToggle";
 import { BlockRail } from "./BlockRail";
 import { DOT_OFFSET, pinDomId } from "./dom-ids";
 import { TimelineDetail } from "./TimelineDetail";
+import { TimelineInspector } from "./TimelineInspector";
 import { type OverrideChange, TimelineRiver } from "./TimelineRiver";
 import { DOT_FILL, DOT_RING } from "./tones";
 
@@ -33,7 +34,7 @@ import { DOT_FILL, DOT_RING } from "./tones";
 // single picture of history. This is the presentational half — the route
 // (`TimelinePage`) feeds it the joined pins, the dev preview a fixture.
 //
-//   ≥ lg   block outline │ river (cards alternate around the axis) │ detail
+//   ≥ lg   block outline │ river (cards alternate around the axis); detail docked over the right edge
 //   phone  block breadcrumb (sticky) │ river (one column) │ detail in a sheet
 //
 // The river cuts time into blocks that split where pins crowd; a member
@@ -265,7 +266,7 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
       onPrev={prev ? goPrev : null}
       onNext={next ? goNext : null}
       onClose={() => onFocus(null)}
-      embedded={!wide}
+      embedded
     />
   ) : null;
 
@@ -354,13 +355,7 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
         </div>
       )}
 
-      <div
-        className={cn(
-          "grid gap-6",
-          wide &&
-            (focused ? "grid-cols-[10rem_minmax(0,1fr)_20rem]" : "grid-cols-[10rem_minmax(0,1fr)]"),
-        )}
-      >
+      <div className={cn("grid gap-6", wide && "grid-cols-[10rem_minmax(0,1fr)]")}>
         {wide && (
           <div>
             <BlockRail
@@ -405,25 +400,31 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
             />
           )}
         </div>
-        {wide && focused && (
-          <aside aria-label={de ? "Moment" : "Moment"}>
-            <Surface variant="raised" padding="lg" className="sticky top-4">
-              {detail}
-            </Surface>
-          </aside>
-        )}
       </div>
 
-      {!wide && focused && (
-        <Drawer
-          side="bottom"
-          onClose={() => onFocus(null)}
-          eyebrow={de ? "Deine Zeitleiste" : "Your timeline"}
-          title={de ? "Moment" : "Moment"}
-        >
-          {detail}
-        </Drawer>
-      )}
+      {/* The detail opens over the river, never beside it, so a moment
+          never reflows the timeline: a docked inspector on wide screens
+          (non-modal, the river stays live), a sheet on phones. */}
+      {focused &&
+        (wide ? (
+          <TimelineInspector
+            eyebrow={de ? "Deine Zeitleiste" : "Your timeline"}
+            title="Moment"
+            label="Moment"
+            onClose={() => onFocus(null)}
+          >
+            {detail}
+          </TimelineInspector>
+        ) : (
+          <Drawer
+            side="bottom"
+            onClose={() => onFocus(null)}
+            eyebrow={de ? "Deine Zeitleiste" : "Your timeline"}
+            title="Moment"
+          >
+            {detail}
+          </Drawer>
+        ))}
     </div>
   );
 }

@@ -103,7 +103,7 @@ describe("block boundaries", () => {
     expect(blockLabel(b("cen:1900"), "en")).toBe("20th century");
     expect(blockLabel(b("cen:0bc"), "de")).toBe("1. Jahrhundert v. Chr.");
     expect(blockLabel(b("mil:1000"), "en")).toBe("2nd millennium AD");
-    expect(blockLabel(b("mil:2000"), "en")).toBe("3rd millennium");
+    expect(blockLabel(b("mil:2000"), "en")).toBe("3rd millennium AD");
     expect(blockLabel(b("yr:1994"), "en")).toBe("1994");
     expect(blockLabel(b("mo:1994-07"), "de")).toBe("Juli 1994");
     expect(blockLabel(b("dec:0"), "en")).toBe("AD 1–9");

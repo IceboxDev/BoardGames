@@ -22,6 +22,7 @@ import {
   isPointlessFreeForAll,
   lowScoreWinsForSlug,
 } from "../../games/score-config";
+import { artsWedgeForScenario } from "../../games/trivial-pursuit/palette";
 import { BookIcon, EditIcon, XIcon } from "../icons";
 import { Badge } from "../ui/Badge";
 import { IconButton } from "../ui/IconButton";
@@ -405,7 +406,7 @@ function PointlessFfaInline({
             isMe={p.userId === currentUserId}
             title={p.role ? `${p.displayName} — ${p.role}` : p.displayName}
           />
-          {p.wedges && <WedgePie wedges={p.wedges} />}
+          {p.wedges && <WedgePie wedges={p.wedges} arts={artsWedgeForScenario(outcome.scenario)} />}
           {p.role && <MicroLabel>{p.role}</MicroLabel>}
         </span>
       ))}
@@ -450,7 +451,9 @@ function TeamsInline({
                 />
               ))}
             </span>
-            {t.wedges && <WedgePie wedges={t.wedges} />}
+            {t.wedges && (
+              <WedgePie wedges={t.wedges} arts={artsWedgeForScenario(outcome.scenario)} />
+            )}
             {outcome.decryptoRounds ? (
               <DecryptoTokens rounds={outcome.decryptoRounds} team={i} />
             ) : (

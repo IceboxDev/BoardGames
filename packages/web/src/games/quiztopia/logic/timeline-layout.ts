@@ -140,6 +140,8 @@ export interface LayoutOptions {
   overrides: Readonly<Record<string, BlockOverride>>;
   /** A card's top sits this far above its anchor (the dot), px — kept clear of the header. */
   cardInset: number;
+  /** Sort key of the present, for the "Today" marker. */
+  now: number;
 }
 
 export const DEFAULT_LAYOUT: LayoutOptions = {
@@ -151,6 +153,7 @@ export const DEFAULT_LAYOUT: LayoutOptions = {
   capacity: 6,
   overrides: {},
   cardInset: 14,
+  now: Number.NaN, // nowKey() at layout time
 };
 
 /** Header row of a block by nesting depth: a top block's is tallest. */
@@ -165,6 +168,8 @@ export const FOLDED_HEIGHT = 44;
 const PUSH_LIMIT = 2;
 /** Breathing room under a block's last card, px. */
 const BLOCK_FOOT = 6;
+/** The river's end cap holding the "Today" marker, px. */
+export const NOW_FOOT = 36;
 
 export interface LaidOutItem {
   item: TimelineItem;
@@ -221,6 +226,12 @@ export interface TimelineLayout {
   height: number;
   /** Monotonic key → y (the dots' scale). */
   yOf: (key: number) => number;
+  /**
+   * The "Today" marker's y. When nothing pinned lies ahead of today (the
+   * usual case) it sits in its own end cap below the last card, so no card
+   * can cover it; otherwise on the scale, clear of header rows.
+   */
+  nowY: number | null;
 }
 
 /**
@@ -472,7 +483,7 @@ export function layoutTimeline(
     overrides: o.overrides,
     crowded,
   });
-  const height = tree.length === 0 ? 0 : walk(tree, 0, 0, null);
+  let height = tree.length === 0 ? 0 : walk(tree, 0, 0, null);
 
   // Key → y: the segment holding the key (clamped at the river's ends),
   // monotonic because segments follow time down the river.
@@ -487,6 +498,24 @@ export function layoutTimeline(
     return segmentY(seg, key);
   };
 
+  const nowK = Number.isNaN(o.now) ? nowKey() : o.now;
+  let nowY: number | null = null;
+  if (height > 0) {
+    const latest = Math.max(
+      ...sorted.map((it) => (it.interval ? it.parsed.endKey : it.parsed.startKey)),
+    );
+    if (latest <= nowK + 1e-6) {
+      nowY = height + NOW_FOOT / 2;
+      height += NOW_FOOT;
+    } else {
+      nowY = yOf(nowK);
+      for (const b of blocks) {
+        if (b.kind === "block" && b.mode !== "folded" && nowY >= b.y && nowY < b.y + b.header)
+          nowY = Math.min(b.y + b.header + 4, b.bottom - 2);
+      }
+    }
+  }
+
   // Interval bars: greedy lanes, the first whose previous bar has ended.
   const laneEnds: number[] = [];
   const spans: LaidOutSpan[] = [];
@@ -494,7 +523,11 @@ export function layoutTimeline(
   for (const l of ordered) {
     if (!l.item.interval) continue;
     const y0 = l.y;
-    const y1 = Math.min(height, Math.max(y0 + 8, yOf(l.item.parsed.endKey)));
+    // A bar that runs to the present meets the marker.
+    const toNow = nowY !== null && (l.item.event.ongoing || l.item.parsed.endKey >= nowK);
+    const y1 = toNow
+      ? Math.max(y0 + 8, nowY as number)
+      : Math.min(height, Math.max(y0 + 8, yOf(l.item.parsed.endKey)));
     let lane = laneEnds.findIndex((end) => end + 4 <= y0);
     if (lane < 0) {
       if (laneEnds.length < o.maxLanes) {
@@ -510,7 +543,7 @@ export function layoutTimeline(
     spans.push({ item: l.item, y0, y1, lane });
   }
 
-  return { items: ordered, blocks, spans, lanes: laneEnds.length, height, yOf };
+  return { items: ordered, blocks, spans, lanes: laneEnds.length, height, yOf, nowY };
 }
 
 /** Sort key of "now" for the river's present-day marker. */
