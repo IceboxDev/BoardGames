@@ -6,17 +6,11 @@
 #include <cstring>
 
 #include "hg/ai.hpp"
+#include "hg/nosferatu.hpp"
 
 namespace hg {
 
-namespace {
-
-inline int turnsAfter(const GameState& s) { return std::max(0, TURNS - int(s.turn)); }
-
-inline int regionBonus(const GameState& s, int space) {
-  int r = spaceOf(s, space).region;
-  return r == R_FOREST ? 2 : r == R_PLAINS ? 1 : 0;
-}
+namespace nos {
 
 double expectedHandSpeed(const PlayerState& p) {
   int count = 0, sum = 0;
@@ -107,8 +101,6 @@ double roseValue(const GameState& s, int rose) {
   }
   return def.vp + ongoing + cardSpeed(rose, false) * 0.8;
 }
-
-inline double jsMax(double a, double b) { return b > a ? b : a; }
 
 double bestHuntFrom(const GameState& s, const PlayerState& p, int space, int speedLeft) {
   const Space& sp = spaceOf(s, space);
@@ -205,13 +197,6 @@ double discardBadness(const GameState& s, int id) {
   return bad;
 }
 
-struct CtxCache {
-  bool ready = false;
-  Tally tallies[MAX_PLAYERS];
-  int pre[MAX_PLAYERS];
-  MissionContext ctx;
-};
-
 double missionEstimate(const GameState& s, const PlayerState& p, int seat, int id, CtxCache& cache) {
   const MissionDef& def = MISSION_DEFS[id];
   if (def.instant != IK_NONE) return def.instant == IK_DIGEST_HAND ? 1.5 : 3;
@@ -282,25 +267,11 @@ int pickInstant(const GameState& s, const PlayerState& p, int seat, const Action
   return best;
 }
 
-/** argmax over the listed indices: the FIRST strictly greatest. */
-struct Best {
-  int idx = -1;
-  double value = 0;
-  void offer(int i, double v) {
-    if (idx < 0 || v > value) {
-      idx = i;
-      value = v;
-    }
-  }
-};
-
 int firstOf(const Actions& legal, int8_t type) {
   for (int i = 0; i < int(legal.size()); i++)
     if (legal[i].type == type) return i;
   return -1;
 }
-
-using Track = Vec<Card, CAP_PILE>[MAX_ROWS][3];
 
 double bestOn(const GameState& s, const PlayerState& p, const Track& track, int here) {
   double v = 0;
@@ -314,7 +285,9 @@ double bestOn(const GameState& s, const PlayerState& p, const Track& track, int 
   return v;
 }
 
-}  // namespace
+}  // namespace nos
+
+using namespace nos;
 
 int heuristicPick(const GameState& s, int seat, const Actions& legal) {
   const PlayerState& p = s.players[seat];

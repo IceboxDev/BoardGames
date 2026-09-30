@@ -262,7 +262,7 @@ export interface BoardDef {
 /** A physical card: `${defId}#${n}`. */
 export type CardId = string;
 
-export type AIStrategyId = "random" | "heuristic-v1" | "strigoi" | "dracula";
+export type AIStrategyId = "random" | "heuristic-v1" | "strigoi" | "dracula" | "lilith";
 
 /** AI seats, lightweight so the room config can list them without the engine. */
 export const ALL_STRATEGIES: readonly {
@@ -292,6 +292,13 @@ export const ALL_STRATEGIES: readonly {
     id: "dracula",
     label: "Dracula",
     description: "Plans whole turns and plays each plan out thousands of times in sampled worlds.",
+    search: true,
+  },
+  {
+    id: "lilith",
+    label: "Lilith",
+    description:
+      "Dracula's search, but she can also picture the long game: racing out through the Chests for a Rose, hunting the Forest, and timing the run home.",
     search: true,
   },
 ];
