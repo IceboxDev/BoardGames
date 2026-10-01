@@ -6,9 +6,14 @@
 //   - "single": one of N (Codenames language, Wavelength mode).
 //   - "multi":  any subset, joined with " + " when stored as a single string
 //               (7 Wonders expansions, Exploding Kittens death/revival modes).
+//
+// A single-select may add a second single-select axis (`secondary`) — Trivial
+// Pursuit's edition + language. Both halves share the one `scenario` string,
+// joined with " · " ("Classic · German").
 
 import { QUIZTOPIA_MODES } from "@boardgames/core/history/coop-challenge";
 import { DUNGEON_MAYHEM_SET_LABELS } from "./dungeon-mayhem/characters";
+import { TRIVIAL_PURSUIT_EDITIONS } from "./trivial-pursuit/editions";
 import {
   defaultBoxLabelForGame,
   VILLAINOUS_BASE_SLUG,
@@ -43,6 +48,16 @@ export type GameVariantConfig = {
    * one safe case is a base that's always present (7 Wonders → "Base").
    */
   default?: string;
+  /**
+   * A second single-select axis stored in the same `scenario` string (see
+   * {@link composeVariant}). Only meaningful on `mode: "single"` configs. Its
+   * default follows the same rule: declared, else the first option.
+   */
+  secondary?: {
+    label: string;
+    options: readonly VariantOption[];
+    default?: string;
+  };
 };
 
 /**
@@ -52,13 +67,13 @@ export type GameVariantConfig = {
  */
 export const JAIPUR_BEST_OF_ONE = "Best of 1";
 
+const ENGLISH: VariantOption = { value: "English", label: "English", icon: "🇬🇧" };
+const GERMAN: VariantOption = { value: "German", label: "German", icon: "🇩🇪" };
+
 const CODENAMES_LANGUAGE: GameVariantConfig = {
   label: "Language",
   mode: "single",
-  options: [
-    { value: "English", label: "English", icon: "🇬🇧" },
-    { value: "German", label: "German", icon: "🇩🇪" },
-  ],
+  options: [ENGLISH, GERMAN],
 };
 
 /**
@@ -239,6 +254,29 @@ const VARIANTS: Record<string, GameVariantConfig> = {
       { value: JAIPUR_BEST_OF_ONE, label: JAIPUR_BEST_OF_ONE },
     ],
   },
+  // Azul's player boards are double-sided (rulebook "Variant play"): the
+  // colored wall is the standard game; the gray wall lets a tile go on any
+  // space of its row, as long as no color repeats in a column. Standard first.
+  azul: {
+    label: "Wall",
+    mode: "single",
+    options: [
+      { value: "Standard", label: "Standard (colored wall)" },
+      { value: "Gray wall", label: "Gray wall" },
+    ],
+  },
+  // Wingspan's one ruleset choice (rulebook setup step 4): the side of the
+  // end-of-round goal board. Green — 1st/2nd/3rd place majorities — is the
+  // book's default; Blue scores 1 point per targeted item (max 5), the
+  // gentler side for new players.
+  wingspan: {
+    label: "Goal board",
+    mode: "single",
+    options: [
+      { value: "Green goals", label: "Green · majority (competitive)" },
+      { value: "Blue goals", label: "Blue · 1 point per item (friendly)" },
+    ],
+  },
   // Intarsia's player boards are double-sided — the Standard side and the
   // trickier Pro side. Standard is first so a fresh match defaults to it.
   intarsia: {
@@ -295,6 +333,24 @@ const VARIANTS: Record<string, GameVariantConfig> = {
   // Phase 10's rulebook ships three official variations alongside the
   // standard 10-phases-in-order rules. They're mutually exclusive — pick one
   // (or leave blank for the default ruleset).
+  // Trivial Pursuit: which box (edition) and which language the cards were in.
+  // Classic + English first, so a fresh match defaults to "Classic · English".
+  "trivial-pursuit": {
+    label: "Edition",
+    mode: "single",
+    options: TRIVIAL_PURSUIT_EDITIONS,
+    secondary: {
+      label: "Language",
+      options: [
+        ENGLISH,
+        GERMAN,
+        { value: "French", label: "French", icon: "🇫🇷" },
+        { value: "Spanish", label: "Spanish", icon: "🇪🇸" },
+        { value: "Italian", label: "Italian", icon: "🇮🇹" },
+        { value: "Dutch", label: "Dutch", icon: "🇳🇱" },
+      ],
+    },
+  },
   "phase-10": {
     label: "Ruleset",
     mode: "single",
@@ -328,9 +384,45 @@ export function variantConfigForSlug(slug: string | null): GameVariantConfig | n
 export function defaultVariantValue(slug: string | null): string | undefined {
   const config = variantConfigForSlug(slug);
   if (!config) return undefined;
+  if (config.secondary) {
+    return composeVariant(
+      config.default ?? config.options[0]?.value,
+      config.secondary.default ?? config.secondary.options[0]?.value,
+    );
+  }
   if (config.default !== undefined) return config.default;
   if (config.mode === "single") return config.options[0]?.value;
   return undefined;
+}
+
+const AXIS_JOIN = " · ";
+
+/**
+ * Join a two-axis pick (edition, language) into the stored scenario. Either
+ * half may be unset; undefined when both are.
+ */
+export function composeVariant(
+  primary: string | undefined,
+  secondary: string | undefined,
+): string | undefined {
+  const parts = [primary, secondary].filter((p): p is string => !!p);
+  return parts.length === 0 ? undefined : parts.join(AXIS_JOIN);
+}
+
+/**
+ * Split a stored two-axis scenario back into its halves. A lone value is
+ * matched against the secondary options so "German" (edition unset) doesn't
+ * read as an edition.
+ */
+export function parseComposedVariant(
+  stored: string | undefined,
+  config: GameVariantConfig,
+): { primary?: string; secondary?: string } {
+  if (!stored) return {};
+  const [first, second] = stored.split(AXIS_JOIN).map((s) => s.trim());
+  if (second !== undefined) return { primary: first, secondary: second };
+  const isSecondary = config.secondary?.options.some((o) => o.value === first);
+  return isSecondary ? { secondary: first } : { primary: first };
 }
 
 const JOIN = " + ";

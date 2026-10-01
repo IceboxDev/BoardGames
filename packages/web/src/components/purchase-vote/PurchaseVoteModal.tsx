@@ -13,22 +13,47 @@
 // the confirmation shows only how many players have voted.
 
 import { VOTES_PER_PLAYER } from "@boardgames/core/protocol";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
 import type { GameDefinition } from "../../games/types";
 import { cn } from "../../lib/cn";
 import { resolveGame } from "../../lib/games-by-slug";
-import { reportPageView } from "../../lib/page-views";
-import { fetchPurchaseVote, setPurchaseVotes } from "../../lib/purchase-vote";
-import { qk } from "../../lib/query-keys";
 import { CheckIcon, PlusIcon } from "../icons";
 import GameCarousel3D from "../offline/GameCarousel3D";
 import { Button } from "../ui/Button";
 import { Chip } from "../ui/Chip";
 import { ErrorAlert } from "../ui/ErrorAlert";
 import { Modal, ModalFooter } from "../ui/Modal";
+import {
+  type PurchaseVotePaneProps,
+  usePurchaseVoteSession,
+  VOTE_TITLE_CLASS,
+  voteHeader,
+} from "./vote-session";
 
-export function PurchaseVoteModalView({
+export function PurchaseVoteModalView(props: PurchaseVotePaneProps) {
+  const header = voteHeader(props);
+  return (
+    <Modal
+      onClose={props.onClose}
+      size="full"
+      density="compact"
+      eyebrow={header.eyebrow}
+      eyebrowClassName="text-accent-300"
+      title={header.title}
+      titleClassName={VOTE_TITLE_CLASS}
+      subheader={
+        // Same reasoning: the explainer adds nothing a phone voter needs
+        // (the footer already counts picks), so it's desktop-only.
+        <p className="hidden text-xs text-fg-secondary sm:block">{header.subheader}</p>
+      }
+    >
+      <PurchaseVotePane {...props} />
+    </Modal>
+  );
+}
+
+/** Everything inside the voting dialog: the carousel and its footer, or the
+ * saved confirmation. */
+export function PurchaseVotePane({
   candidates,
   selected,
   savedVotes,
@@ -41,49 +66,14 @@ export function PurchaseVoteModalView({
   onToggle,
   onSubmit,
   onClose,
-}: {
-  candidates: GameDefinition[];
-  /** The player's local (unsaved) picks. */
-  selected: string[];
-  /** What the server currently has — drives the Submit/Update label + dirty check. */
-  savedVotes: string[];
-  voterCount: number;
-  requiredVoters: number;
-  view: "picking" | "saved";
-  /** True when this player's submit sealed the poll. */
-  pollClosed: boolean;
-  saving: boolean;
-  error: string | null;
-  onToggle: (slug: string) => void;
-  onSubmit: () => void;
-  onClose: () => void;
-}) {
+  onBack,
+}: PurchaseVotePaneProps) {
   const votesLeft = VOTES_PER_PLAYER - selected.length;
   const dirty =
     selected.length !== savedVotes.length || selected.some((s) => !savedVotes.includes(s));
-  const progress = `${voterCount} of ${requiredVoters} players have voted`;
 
   return (
-    <Modal
-      onClose={onClose}
-      size="full"
-      density="compact"
-      eyebrow="Purchase vote"
-      eyebrowClassName="text-accent-300"
-      title="Vote for the next game purchase"
-      // One line on phones — every wrapped header line is carousel height
-      // lost, and the card's size is the whole game on small screens.
-      titleClassName="text-sm font-bold tracking-tight text-fg-strong xs2:text-lg sm:text-3xl"
-      subheader={
-        // Same reasoning: the explainer adds nothing a phone voter needs
-        // (the footer already counts picks), so it's desktop-only.
-        <p className="hidden text-xs text-fg-secondary sm:block">
-          {view === "saved"
-            ? `${progress} — the winner is revealed the moment the vote closes.`
-            : `Pick up to ${VOTES_PER_PLAYER} games, then submit. You can change your picks any time until the vote closes — ${progress}.`}
-        </p>
-      }
-    >
+    <>
       {error && <ErrorAlert message={error} className="shrink-0 text-center" />}
 
       {view === "saved" ? (
@@ -135,7 +125,7 @@ export function PurchaseVoteModalView({
           </div>
 
           {/* Single row always — the pick tokens truncate before this wraps,
-              and Cancel is redundant with the header X on phones. */}
+            and Cancel is redundant with the header X on phones. */}
           <ModalFooter
             start={
               <div className="flex min-w-0 items-center gap-2">
@@ -160,13 +150,19 @@ export function PurchaseVoteModalView({
               </div>
             }
           >
-            <Button variant="ghost" size="sm" onClick={onClose} className="hidden sm:inline-flex">
-              Cancel
-            </Button>
+            {onBack ? (
+              <Button variant="ghost" size="sm" onClick={onBack}>
+                Back
+              </Button>
+            ) : (
+              <Button variant="ghost" size="sm" onClick={onClose} className="hidden sm:inline-flex">
+                Cancel
+              </Button>
+            )}
             {/* Gate only on "changed": submitting an EMPTY set is a valid
-                  action (withdrawing your votes) — the empty-selection case
-                  that must stay disabled is the pristine no-votes-yet one,
-                  which `dirty` already covers. */}
+                action (withdrawing your votes) — the empty-selection case
+                that must stay disabled is the pristine no-votes-yet one,
+                which `dirty` already covers. */}
             <Button size="sm" disabled={!dirty || saving} onClick={onSubmit}>
               {saving
                 ? "Saving…"
@@ -179,7 +175,7 @@ export function PurchaseVoteModalView({
           </ModalFooter>
         </>
       )}
-    </Modal>
+    </>
   );
 }
 
@@ -235,74 +231,8 @@ function SavedScreen({
   );
 }
 
-/**
- * Data wiring: poll state, local pick state seeded from the server, and the
- * one-shot submit. Renders nothing until the poll loads; keeps rendering the
- * saved screen even when the player's own submit just closed the poll.
- */
-export function PurchaseVoteModal({ onClose }: { onClose: () => void }) {
-  const queryClient = useQueryClient();
-  const stateQuery = useQuery({
-    queryKey: qk.purchaseVote(),
-    queryFn: ({ signal }) => fetchPurchaseVote(signal),
-  });
-  const poll = stateQuery.data?.poll ?? null;
-
-  const [selected, setSelected] = useState<string[] | null>(null);
-  const [view, setView] = useState<"picking" | "saved">("picking");
-  useEffect(() => {
-    if (poll && selected === null) setSelected(poll.myVotes);
-  }, [poll, selected]);
-
-  // Activity beacon: the voting screen is a non-route surface (opened from a
-  // greeting card or the banner) — mirrors the RsvpModal pattern.
-  useEffect(() => {
-    reportPageView("purchase-vote");
-  }, []);
-
-  const submitMutation = useMutation({
-    mutationFn: setPurchaseVotes,
-    onSuccess: () => setView("saved"),
-    onSettled: () => {
-      void queryClient.invalidateQueries({ queryKey: qk.purchaseVote() });
-      // The reminder greeting keys off votes spent; the reveal keys off close.
-      void queryClient.invalidateQueries({ queryKey: qk.greetings() });
-    },
-  });
-
-  if (!poll || selected === null) return null;
-  // A poll that closed before this session opened the modal has nothing to
-  // vote on; but when it closes DURING the session (this player's submit made
-  // quorum), keep the saved screen up until they dismiss it.
-  if (poll.closedAt !== null && view !== "saved") return null;
-
-  // Alphabetical, not the admin's click order at poll creation — every
-  // voter browses the same neutral sequence.
-  const candidates = poll.candidates
-    .map((slug) => resolveGame(slug))
-    .filter((g): g is GameDefinition => g !== undefined)
-    .sort((a, b) => a.title.localeCompare(b.title));
-  if (candidates.length === 0) return null;
-
-  return (
-    <PurchaseVoteModalView
-      candidates={candidates}
-      selected={selected}
-      savedVotes={poll.myVotes}
-      voterCount={poll.voterCount}
-      requiredVoters={poll.requiredVoters}
-      view={view}
-      pollClosed={poll.closedAt !== null}
-      saving={submitMutation.isPending}
-      error={submitMutation.error instanceof Error ? submitMutation.error.message : null}
-      onToggle={(slug) =>
-        setSelected((prev) => {
-          const cur = prev ?? [];
-          return cur.includes(slug) ? cur.filter((s) => s !== slug) : [...cur, slug];
-        })
-      }
-      onSubmit={() => submitMutation.mutate(selected)}
-      onClose={onClose}
-    />
-  );
+/** The standalone voting dialog (the banner and the reminder card open it). */
+export function PurchaseVoteModal({ onClose, via }: { onClose: () => void; via?: string }) {
+  const session = usePurchaseVoteSession({ onClose, via });
+  return session ? <PurchaseVoteModalView {...session} /> : null;
 }

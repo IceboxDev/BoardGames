@@ -1,3 +1,4 @@
+import { TRIVIAL_PURSUIT_SLUG } from "@boardgames/core/history/trivial-pursuit";
 import type {
   MatchKind,
   MatchOutcome,
@@ -49,6 +50,8 @@ import { SensoTeamsForm } from "./forms/SensoTeamsForm";
 import { SingleWinnerForm } from "./forms/SingleWinnerForm";
 import { isSensoSlug } from "./forms/senso-standings";
 import { TeamsForm } from "./forms/TeamsForm";
+import { TrivialPursuitForm } from "./forms/TrivialPursuitForm";
+import { TrivialPursuitTeamsForm } from "./forms/TrivialPursuitTeamsForm";
 import { VillainousForm } from "./forms/VillainousForm";
 import { WerewolfForm } from "./forms/WerewolfForm";
 import { WinDrawLossForm } from "./forms/WinDrawLossForm";
@@ -164,7 +167,9 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
       return;
     }
     const eventTime = locksQuery.data?.[dateKey]?.eventTime ?? "20:00";
-    setPlayedAt(localInputToIso(`${dateKey}T${eventTime}`));
+    // A second night's key carries a suffix ("2026-09-18_2") — the day is
+    // the date part only, or the timestamp is invalid and falls back to now.
+    setPlayedAt(localInputToIso(`${nightDate(dateKey)}T${eventTime}`));
   }, [dateKey, locksQuery.data, state.mode]);
 
   // Auto-pick the match kind from the game's typical mode whenever the user
@@ -353,6 +358,12 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
                 value={outcome as MatchOutcomeFreeForAll}
                 onChange={setOutcome}
               />
+            ) : gameSlug === TRIVIAL_PURSUIT_SLUG ? (
+              <TrivialPursuitForm
+                users={allUsers}
+                value={outcome as MatchOutcomeFreeForAll}
+                onChange={setOutcome}
+              />
             ) : isSingleWinnerFfa(gameSlug) ? (
               <SingleWinnerForm
                 users={allUsers}
@@ -403,6 +414,13 @@ export function RecordMatchModal({ state, onClose, onSaved }: Props) {
                 users={allUsers}
                 value={outcome as MatchOutcomeTeams}
                 onChange={setOutcome}
+              />
+            ) : gameSlug === TRIVIAL_PURSUIT_SLUG ? (
+              <TrivialPursuitTeamsForm
+                users={allUsers}
+                value={outcome as MatchOutcomeTeams}
+                onChange={setOutcome}
+                gameSlug={gameSlug}
               />
             ) : isSensoSlug(gameSlug) ? (
               <SensoTeamsForm

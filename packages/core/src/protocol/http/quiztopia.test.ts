@@ -88,9 +88,13 @@ describe("quiztopia protocol", () => {
       gameReviewsAffectSrs: false,
       newCardOrder: "sets",
       newSetsPerDay: 3,
+      excludeFromAll: [],
     });
     expect(() =>
       QuiztopiaSettingsSchema.parse({ language: "de", newPerDay: 5, newSetsPerDay: 11 }),
+    ).toThrow();
+    expect(() =>
+      QuiztopiaSettingsSchema.parse({ language: "de", newPerDay: 5, excludeFromAll: [13] }),
     ).toThrow();
     expect(() =>
       QuiztopiaSettingsSchema.parse({ language: "de", newPerDay: 5, newCardOrder: "random" }),

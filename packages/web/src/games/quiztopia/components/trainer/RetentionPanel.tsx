@@ -1,3 +1,4 @@
+import { daysBetween } from "@boardgames/core/games/quiztopia/srs";
 import type { CategoryOverview, TrainerHistory } from "@boardgames/core/protocol";
 import { useMemo, useState } from "react";
 import { MicroLabel, SegmentedControl, Surface } from "../../../../components/ui";
@@ -20,7 +21,17 @@ const METRICS: { value: Metric; label: string; title: string }[] = [
 ];
 
 const METRIC_TONE = { accuracy: "emerald", reviews: "accent", learned: "sky" } as const;
-const METRIC_Y = { accuracy: "% knew it", reviews: "reviews", learned: "new cards" } as const;
+const METRIC_Y = { accuracy: "knew it", reviews: "reviews", learned: "new cards" } as const;
+const percent = (v: number) => `${v}%`;
+
+/** The accuracy band with ~10 points of air, clamped to 0–100 %. */
+function accuracyDomain(points: readonly { y: number }[]): [number, number] {
+  if (points.length === 0) return [0, 100];
+  const ys = points.map((p) => p.y);
+  const lo = Math.max(0, Math.min(...ys) - 10);
+  const hi = Math.min(100, Math.max(...ys) + 10);
+  return [lo, Math.max(hi, lo + 10)];
+}
 
 function shortDate(dateKey: string): string {
   return formatHeatDate(dateKey).replace(/,?\s*\d{4}$/, "");
@@ -37,6 +48,7 @@ export function RetentionPanel({ days, categories, className }: Props) {
 
   const data = useMemo(() => {
     const sorted = [...days].sort((a, b) => a.date.localeCompare(b.date));
+    const first = sorted[0]?.date;
     const points: { x: number; y: number; label: string }[] = [];
     for (const d of sorted) {
       let y: number | null = null;
@@ -45,7 +57,9 @@ export function RetentionPanel({ days, categories, className }: Props) {
         y = graded > 0 ? Math.round((d.good / graded) * 100) : null;
       } else if (metric === "reviews") y = d.reviews;
       else y = d.newIntroduced;
-      if (y !== null) points.push({ x: points.length, y, label: shortDate(d.date) });
+      // x is the calendar day, so a week off reads as a gap, not a step.
+      if (y !== null && first)
+        points.push({ x: daysBetween(first, d.date), y, label: shortDate(d.date) });
     }
     return points;
   }, [days, metric]);
@@ -75,7 +89,18 @@ export function RetentionPanel({ days, categories, className }: Props) {
           aria-label="Progress metric"
         />
       </div>
-      <LineChart data={data} tone={METRIC_TONE[metric]} yLabel={METRIC_Y[metric]} height={160} />
+      <LineChart
+        data={data}
+        tone={METRIC_TONE[metric]}
+        yLabel={METRIC_Y[metric]}
+        height={160}
+        // Accuracy zooms to its own band (padded, inside 0–100 %) so a
+        // trend is visible; counts start from zero.
+        yDomain={
+          metric === "accuracy" ? accuracyDomain(data) : [0, Math.max(1, ...data.map((p) => p.y))]
+        }
+        formatY={metric === "accuracy" ? percent : undefined}
+      />
       <div className="flex flex-col gap-2 border-t border-line-soft pt-3">
         <MicroLabel>Mastery by district</MicroLabel>
         <BarChartH bars={bars} maxValue={100} formatValue={(v) => `${Math.round(v)}%`} />

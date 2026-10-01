@@ -26,6 +26,8 @@ import { extractParticipantIds } from "@boardgames/core/history/participant-resu
 import { lowScoreWinsForSlug } from "@boardgames/core/history/score-config";
 import { activeWinStreak, type StreakResult } from "@boardgames/core/history/streaks";
 import {
+  type BalanceTeamsBody,
+  type BalanceTeamsResponse,
   GameBoardSchema,
   MatchOutcomeSchema,
   type PlayerSkillResponse,
@@ -34,9 +36,18 @@ import {
   TraitBoardSchema,
 } from "@boardgames/core/protocol";
 import { SKILL_CONFIG_V1 } from "@boardgames/core/skill/config";
-import { fitSkillRatings, type SkillMatchInput } from "@boardgames/core/skill/fit";
+import {
+  fitSkillRatings,
+  type SkillFitResult,
+  type SkillMatchInput,
+} from "@boardgames/core/skill/fit";
 import { highlightsFor } from "@boardgames/core/skill/highlights";
 import { gameLeaderboards, traitStandings } from "@boardgames/core/skill/percentiles";
+import {
+  balanceTeams,
+  gameStrength,
+  type StrengthBasis,
+} from "@boardgames/core/skill/team-balance";
 import { z } from "zod";
 import { getDb } from "../db.ts";
 import { jsonColumn, parseRow, parseRows } from "./db-rows.ts";
@@ -627,3 +638,42 @@ export function triggerSkillRecompute(): void {
 // route could stamp its response, and it did that by reading the whole state
 // row a SECOND time. `ensureSkillState()` now returns the timestamp alongside
 // the state, so that read is free.
+
+// ── Live fit: team balancing ───────────────────────────────────────────
+
+/**
+ * The fit over the history as it stands NOW, cached until a match changes.
+ *
+ * Deliberately not the published state: the stored blob holds only display
+ * numbers (no θ, no per-game offsets), and it lags the history until an admin
+ * recomputes — while the team mixer wants tonight's split to know about last
+ * week's games. Nothing from this fit is ever shown as a number; it only
+ * decides who plays with whom.
+ */
+let liveFit: { key: string; fit: SkillFitResult } | null = null;
+
+export async function liveSkillFit(): Promise<SkillFitResult> {
+  const key = `${engineFingerprint()}|${dataFingerprint(await loadMatchStamps())}`;
+  if (liveFit?.key === key) return liveFit.fit;
+  const fit = fitSkillRatings(toEngineInputs(await loadMatchRows()), config);
+  liveFit = { key, fit };
+  return fit;
+}
+
+/** The fairest split of a pool for one game — teams and chances, no strengths. */
+export async function balanceTeamsFor(body: BalanceTeamsBody): Promise<BalanceTeamsResponse> {
+  const fit = await liveSkillFit();
+  const strength = new Map<string, number>();
+  const basis: Record<string, StrengthBasis> = {};
+  for (const id of body.userIds) {
+    const s = gameStrength(fit.players[id], body.slug);
+    strength.set(id, s.strength);
+    basis[id] = s.basis;
+  }
+  const res = balanceTeams(body.userIds, body.teamCount, (id) => strength.get(id) ?? 0, body.seed);
+  return {
+    slug: body.slug,
+    teams: res.teams.map((userIds, i) => ({ userIds, chance: res.chances[i] })),
+    basis,
+  };
+}

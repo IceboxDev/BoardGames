@@ -120,9 +120,10 @@ export const RULINGS = {
    * never on its own, and not only in step 1, so one opened in a Chest is
    * usable at once. After Speed is counted the turn stays on its step: Speed
    * adds to the Speed you have and to what is left, +1 Hunt adds a Hunt, and
-   * Draw / Discard-Draw change the cards in play and the Speed by as much as
-   * that changes the playing area's Speed. Gain 1 Mission, which opens a Crypt
-   * pick, waits until you have moved. (Mirrored in `cpp/the-hunger`.)
+   * Gain 1 Mission, which opens a Crypt pick, waits until you have moved.
+   * Draw and Discard/Draw are discard/draw effects, which the rulebook's step 1
+   * says come "before doing anything else": they stay in step 1.
+   * (Mirrored in `cpp/the-hunger`.)
    */
   bonusTokensAnytime: true,
   /** `game-engine.applyConfuse`: Confuse has no effect in the Castle. */

@@ -5,30 +5,36 @@ import {
 import { parseQuestionId } from "@boardgames/core/games/quiztopia/ids";
 import {
   currentDate,
-  ERAS,
-  type Era,
-  type EraId,
-  eraOf,
   isInterval,
   type ParsedEvent,
   parseEvent,
   type TimelineDate,
   type TimelineEvent,
-  timelineScale,
   timelineSortKey,
 } from "@boardgames/core/games/quiztopia/timeline";
+import {
+  type Block,
+  type BlockEntry,
+  type BlockNode,
+  type BlockOverride,
+  buildBlockTree,
+  fractionIn,
+  type Placed,
+  type QuietGap,
+} from "@boardgames/core/games/quiztopia/timeline-blocks";
 import type { TimelinePin } from "@boardgames/core/protocol";
 
 // The personal timeline as data: pins (what the member has studied) joined
 // with the content's event index, then laid out down a vertical river.
 //
-// The layout gives every era a share of the piecewise display scale
-// (`timelineScale`: deep time compressed, recent centuries stretched),
-// collapses eras without pins, and grows an era until its cards fit. Inside
-// an era the dots sit where their dates fall, so near events look near;
-// the cards are then placed beside their dots as closely as the cards
-// around them allow, joined by a connector when pushed. Pure, so it is
-// tested without a DOM.
+// The river is cut into the blocks of `timeline-blocks.ts`: millennia (or
+// deep-time ages) that split into centuries, decades, years and months
+// only where the member's pins crowd, so a swarm in the 1990s reads as its
+// years while a lone pharaoh keeps a whole millennium. Blocks stack down the
+// river, each with a header; inside a leaf block the dots sit where their
+// dates fall and the cards beside them as closely as the cards around them
+// allow, joined by a connector when pushed. Pure, so it is tested without a
+// DOM.
 
 export interface TimelineText {
   en: string;
@@ -49,7 +55,6 @@ export interface TimelineItem {
   event: TimelineEvent;
   parsed: ParsedEvent;
   interval: boolean;
-  era: EraId;
   known: boolean;
   lastReviewedAt: string | null;
   /** Inline question copy (preview fixtures); live pages load the card chunk. */
@@ -84,7 +89,6 @@ export function toTimelineItem(
     event,
     parsed,
     interval: isInterval(event),
-    era: eraOf(parsed.startKey).id,
     known: pin.known,
     lastReviewedAt: pin.lastReviewedAt,
     ...(text ? { text } : {}),
@@ -128,14 +132,16 @@ export interface LayoutOptions {
   gap: number;
   /** Minimum distance between two dots on the axis, px. */
   minStep: number;
-  /** Room an era header takes before its first card, px. */
-  eraHeader: number;
-  /** Height the bare scale spreads the whole of time over, px. */
-  baseHeight: number;
   /** Most bar lanes in the interval gutter (extra spans share the last). */
   maxLanes: number;
-  /** An era without pins collapses to this height (its header and a breath), px. */
-  emptyEraHeight: number;
+  /** Most cards per column a leaf block holds before it splits. */
+  capacity: number;
+  /** The member's own cuts, by block id. */
+  overrides: Readonly<Record<string, BlockOverride>>;
+  /** A card's top sits this far above its anchor (the dot), px — kept clear of the header. */
+  cardInset: number;
+  /** Sort key of the present, for the "Today" marker. */
+  now: number;
 }
 
 export const DEFAULT_LAYOUT: LayoutOptions = {
@@ -143,11 +149,27 @@ export const DEFAULT_LAYOUT: LayoutOptions = {
   cardHeight: 68,
   gap: 10,
   minStep: 12,
-  eraHeader: 44,
-  baseHeight: 1400,
   maxLanes: 5,
-  emptyEraHeight: 72,
+  capacity: 6,
+  overrides: {},
+  cardInset: 14,
+  now: Number.NaN, // nowKey() at layout time
 };
+
+/** Header row of a block by nesting depth: a top block's is tallest. */
+export const HEADER_HEIGHT = [44, 34, 30] as const;
+export const headerHeight = (depth: number): number =>
+  HEADER_HEIGHT[Math.min(depth, HEADER_HEIGHT.length - 1)];
+/** A quiet gap's band, px. */
+export const GAP_HEIGHT = 26;
+/** A folded block's one summary row, px. */
+export const FOLDED_HEIGHT = 44;
+/** A leaf splits when it would push a card further than this many pitches from its dot. */
+const PUSH_LIMIT = 2;
+/** Breathing room under a block's last card, px. */
+const BLOCK_FOOT = 6;
+/** The river's end cap holding the "Today" marker, px. */
+export const NOW_FOOT = 36;
 
 export interface LaidOutItem {
   item: TimelineItem;
@@ -156,14 +178,36 @@ export interface LaidOutItem {
   /** The card's anchor y (its connector end); equals `y` unless neighbours pushed it. */
   cardY: number;
   side: Side;
+  /** The block the card is shown in. */
+  blockId: string;
 }
 
-export interface LaidOutEra {
-  era: Era;
+export interface LaidOutBlock {
+  kind: "block";
+  /** The deepest block of the header chain. */
+  id: string;
+  /** The header's blocks, top first (one, or a pass-through chain). */
+  chain: Block[];
+  block: Block;
+  depth: number;
+  parent: string | null;
+  mode: "split" | "leaf" | "folded";
   y: number;
-  /** Where the next era starts (or the river ends). */
   bottom: number;
+  header: number;
   count: number;
+  canSplit: boolean;
+  /** Folded: each pin's place across the summary strip, 0..1. */
+  strip: { at: number; item: TimelineItem }[];
+}
+
+export interface LaidOutGap {
+  kind: "gap";
+  gap: QuietGap;
+  depth: number;
+  parent: string | null;
+  y: number;
+  bottom: number;
 }
 
 export interface LaidOutSpan {
@@ -175,12 +219,19 @@ export interface LaidOutSpan {
 
 export interface TimelineLayout {
   items: LaidOutItem[];
-  eras: LaidOutEra[];
+  /** Every block and gap, in drawing order (a parent before its children). */
+  blocks: (LaidOutBlock | LaidOutGap)[];
   spans: LaidOutSpan[];
   lanes: number;
   height: number;
   /** Monotonic key → y (the dots' scale). */
   yOf: (key: number) => number;
+  /**
+   * The "Today" marker's y. When nothing pinned lies ahead of today (the
+   * usual case) it sits in its own end cap below the last card, so no card
+   * can cover it; otherwise on the scale, clear of header rows.
+   */
+  nowY: number | null;
 }
 
 /**
@@ -216,90 +267,94 @@ export function spreadApart(
   return out;
 }
 
+const place = (it: TimelineItem): Placed => ({
+  key: it.parsed.startKey,
+  precision: it.event.precision,
+});
+
+/**
+ * A stretch of the key axis drawn over [y0, y1]: the block's own scale
+ * (linear, or log in deep time) between `lo` and `hi`, clamped outside.
+ */
+interface Segment {
+  block: Block;
+  lo: number;
+  hi: number;
+  y0: number;
+  y1: number;
+}
+
+function segmentY(s: Segment, key: number): number {
+  const a = fractionIn(s.block, s.lo);
+  const b = fractionIn(s.block, s.hi);
+  const t = b > a ? (fractionIn(s.block, key) - a) / (b - a) : 0;
+  return s.y0 + Math.min(Math.max(t, 0), 1) * (s.y1 - s.y0);
+}
+
 export function layoutTimeline(
   items: readonly TimelineItem[],
   opts: Partial<LayoutOptions> = {},
 ): TimelineLayout {
   const o: LayoutOptions = { ...DEFAULT_LAYOUT, ...opts };
-  const sorted = sortItems(items);
   const pitch = o.cardHeight + o.gap;
-  const bare = (key: number) => timelineScale(key) * o.baseHeight;
-  const present = nowKey();
+  const sorted = sortItems(items);
 
-  // Era by era down the river. An era without pins collapses to a short
-  // band; one with pins keeps its share of the bare scale, grown until its
-  // cards fit. Inside it the dots sit where their dates fall — linear in the
-  // era's own scale, so the gaps between them mean something — and only
-  // then do the cards find room beside them, as close to their dots as the
-  // cards above and below allow.
-  const laid: LaidOutItem[] = [];
-  const eras: LaidOutEra[] = [];
-  // Per era: its keys from `from`, bare-scale range b0..b1 drawn over y0..y1.
-  const maps: { from: number; b0: number; b1: number; y0: number; y1: number }[] = [];
-  let y = 0;
-  let i = 0;
-  for (let e = 0; e < ERAS.length; e++) {
-    const era = ERAS[e];
-    const eraEnd = ERAS[e + 1]?.from ?? Number.POSITIVE_INFINITY;
-    const mine: TimelineItem[] = [];
-    while (i < sorted.length && sorted[i].parsed.startKey < eraEnd) mine.push(sorted[i++]);
-    const full = bare(e === ERAS.length - 1 ? era.to : eraEnd) - bare(era.from);
-
-    if (mine.length === 0) {
-      const length = Math.min(full, o.emptyEraHeight);
-      const b0 = bare(era.from);
-      maps.push({ from: era.from, b0, b1: b0 + full, y0: y, y1: y + length });
-      eras.push({ era, y, bottom: y + length, count: 0 });
-      y += length;
-      continue;
-    }
-
-    // The era's scale runs over what it holds — its pins, the ends of bars
-    // that stop inside it, and today in the running era — so the gaps
-    // between its pins fill the band instead of a sliver of it.
-    const keys = mine.map((it) => it.parsed.startKey);
+  // A leaf's scale runs over what it holds — its pins, and the ends of bars
+  // that stop inside it — so the gaps between its pins fill the block
+  // instead of a sliver of a millennium.
+  const leafSegment = (run: readonly TimelineItem[], b: Block, top: number): Segment => {
+    const keys = run.map((it) => it.parsed.startKey);
     for (const it of sorted) {
       const k = it.parsed.endKey;
-      if (it.interval && k >= era.from && k < eraEnd) keys.push(k);
+      if (it.interval && k >= b.from && k < b.to) keys.push(k);
     }
-    if (present >= era.from && present < eraEnd) keys.push(present);
-    const from = bare(Math.min(...keys));
-    const span = bare(Math.max(...keys)) - from;
-    const frac = (key: number) =>
-      span > 0 ? Math.min(Math.max((bare(key) - from) / span, 0), 1) : 0;
+    return { block: b, lo: Math.min(...keys), hi: Math.max(...keys), y0: top, y1: top };
+  };
+  const leafDot = (seg: Segment) => (it: TimelineItem, top: number, bottom: number) =>
+    segmentY({ ...seg, y0: top, y1: bottom }, it.parsed.startKey);
 
-    // In the running era today is the scale's last point; the cards stay
-    // above it so the present-day marker has its own row.
-    const running = present >= era.from && present < eraEnd;
-    const todayRoom = running ? 12 : 0;
-    const perSide = Math.ceil(mine.length / o.columns);
-    const length = Math.max(
-      full,
-      o.eraHeader + perSide * pitch + todayRoom,
-      o.eraHeader + (mine.length - 1) * o.minStep + o.cardHeight + todayRoom,
-    );
-    const top = y + o.eraHeader;
-    const bottom = y + length - o.cardHeight - todayRoom;
-    const dotBottom = running ? y + length - todayRoom : bottom;
-    maps.push({ from: era.from, b0: from, b1: from + span, y0: top, y1: dotBottom });
+  // Crowded = more cards than a leaf holds, or cards the layout would have
+  // to push far from their dots (a swarm in one corner of the block).
+  const crowded = (run: readonly TimelineItem[], b: Block): boolean => {
+    if (run.length > o.capacity * o.columns) return true;
+    if (run.length <= o.columns) return false;
+    const { dots, cardYs } = arrange(run, 0, leafDot(leafSegment(run, b, 0)), false);
+    return dots.some((d, k) => Math.abs(cardYs[k] - d) > pitch * PUSH_LIMIT);
+  };
 
+  const laid: LaidOutItem[] = [];
+  const blocks: (LaidOutBlock | LaidOutGap)[] = [];
+  const segments: Segment[] = [];
+  let parity = 0;
+
+  /**
+   * Cards for one run of items from `top` down: dots at `dotAt`, spread to
+   * the minimum step, then each card on the side that lets it sit nearest
+   * its dot. Pure — the split rule dry-runs it.
+   */
+  const arrange = (
+    run: readonly TimelineItem[],
+    top: number,
+    dotAt: (it: TimelineItem, dotTop: number, dotBottom: number) => number,
+    flip: boolean,
+  ) => {
+    const n = run.length;
+    const perSide = Math.ceil(n / o.columns);
+    const body = Math.max(perSide * pitch, (n - 1) * o.minStep + o.cardHeight);
+    const bottom = top + body - o.cardHeight;
     const dots = spreadApart(
-      mine.map((it) => top + frac(it.parsed.startKey) * (dotBottom - top)),
+      run.map((it) => dotAt(it, top, bottom)),
       o.minStep,
       top,
-      dotBottom,
+      bottom,
     );
-
-    // Sides: whichever lets the card sit nearer its dot, packing forward;
-    // a tie alternates. Neither side takes more than its share, so the era
-    // is always tall enough.
     const sides: Side[] = [];
     if (o.columns === 1) {
-      for (let k = 0; k < mine.length; k++) sides.push("right");
+      for (let k = 0; k < n; k++) sides.push("right");
     } else {
       const next: Record<Side, number> = { left: top, right: top };
       const count: Record<Side, number> = { left: 0, right: 0 };
-      let alternate: Side = e % 2 === 0 ? "right" : "left";
+      let alternate: Side = flip ? "left" : "right";
       for (const d of dots) {
         const miss = (s: Side) => Math.max(0, next[s] - d);
         let side: Side =
@@ -315,7 +370,7 @@ export function layoutTimeline(
         sides.push(side);
       }
     }
-    const cardYs: number[] = new Array(mine.length);
+    const cardYs: number[] = new Array(n);
     for (const side of ["left", "right"] as const) {
       const idx = sides.flatMap((s, k) => (s === side ? [k] : []));
       const placed = spreadApart(
@@ -328,32 +383,151 @@ export function layoutTimeline(
         cardYs[k] = placed[j];
       });
     }
-    mine.forEach((it, k) => {
-      laid.push({ item: it, y: dots[k], cardY: cardYs[k], side: sides[k] });
-    });
-
-    eras.push({ era, y, bottom: y + length, count: mine.length });
-    y += length;
-  }
-  const height = y;
-
-  // Key → y: each era's own linear map (clamped at its edges), monotonic
-  // because every era's range lies below the one before.
-  const yOf = (key: number): number => {
-    let e = maps.length - 1;
-    while (e > 0 && key < maps[e].from) e--;
-    const m = maps[e];
-    const t = m.b1 > m.b0 ? Math.min(Math.max((bare(key) - m.b0) / (m.b1 - m.b0), 0), 1) : 0;
-    return m.y0 + t * (m.y1 - m.y0);
+    return { body, dots, cardYs, sides };
   };
+
+  const placeCards = (
+    run: readonly TimelineItem[],
+    blockId: string,
+    top: number,
+    dotAt: (it: TimelineItem, dotTop: number, dotBottom: number) => number,
+  ): number => {
+    const { body, dots, cardYs, sides } = arrange(run, top, dotAt, parity++ % 2 === 1);
+    run.forEach((it, k) => {
+      laid.push({ item: it, y: dots[k], cardY: cardYs[k], side: sides[k], blockId });
+    });
+    return body;
+  };
+
+  const walk = (
+    entries: readonly BlockEntry<TimelineItem>[],
+    y: number,
+    depth: number,
+    parent: string | null,
+  ): number => {
+    for (const e of entries) {
+      if (e.kind === "gap") {
+        blocks.push({ kind: "gap", gap: e, depth, parent, y, bottom: y + GAP_HEIGHT });
+        const block: Block = { id: "gap", level: "year", from: e.from, to: e.to };
+        segments.push({ block, lo: e.from, hi: e.to, y0: y, y1: y + GAP_HEIGHT });
+        y += GAP_HEIGHT;
+        continue;
+      }
+      y = walkNode(e, y, depth, parent);
+    }
+    return y;
+  };
+
+  const walkNode = (
+    node: BlockNode<TimelineItem>,
+    y: number,
+    depth: number,
+    parent: string | null,
+  ): number => {
+    const header = headerHeight(depth);
+    const entry: LaidOutBlock = {
+      kind: "block",
+      id: node.block.id,
+      chain: node.chain,
+      block: node.block,
+      depth,
+      parent,
+      mode: node.mode,
+      y,
+      bottom: y,
+      header,
+      count: node.items.length,
+      canSplit: node.canSplit,
+      strip: [],
+    };
+    blocks.push(entry);
+
+    if (node.mode === "folded") {
+      entry.header = FOLDED_HEIGHT;
+      entry.bottom = y + FOLDED_HEIGHT;
+      entry.strip = node.items.map((it) => ({
+        at: fractionIn(node.block, it.parsed.startKey),
+        item: it,
+      }));
+      segments.push({
+        block: node.block,
+        lo: node.block.from,
+        hi: node.block.to,
+        y0: y + 8,
+        y1: entry.bottom - 8,
+      });
+      return entry.bottom;
+    }
+
+    let cursor = y + header + o.cardInset;
+    if (node.mode === "leaf") {
+      const seg = leafSegment(node.items, node.block, cursor);
+      const body = placeCards(node.items, node.block.id, cursor, leafDot(seg));
+      seg.y1 = cursor + body - o.cardHeight;
+      segments.push(seg);
+      cursor += body + BLOCK_FOOT;
+    } else {
+      // Dates too coarse for the children ("the 1960s") head the block.
+      if (node.loose.length > 0) {
+        const body = placeCards(node.loose, node.block.id, cursor, (_it, top) => top);
+        cursor += body + BLOCK_FOOT;
+      }
+      cursor = walk(node.children, cursor, depth + 1, node.block.id);
+    }
+    entry.bottom = cursor;
+    return cursor;
+  };
+
+  const tree = buildBlockTree(sorted, place, {
+    capacity: o.capacity,
+    overrides: o.overrides,
+    crowded,
+  });
+  let height = tree.length === 0 ? 0 : walk(tree, 0, 0, null);
+
+  // Key → y: the segment holding the key (clamped at the river's ends),
+  // monotonic because segments follow time down the river.
+  segments.sort((a, b) => a.block.from - b.block.from || a.y0 - b.y0);
+  const yOf = (key: number): number => {
+    if (segments.length === 0) return 0;
+    let seg = segments[0];
+    for (const s of segments) {
+      if (s.block.from <= key) seg = s;
+      else break;
+    }
+    return segmentY(seg, key);
+  };
+
+  const nowK = Number.isNaN(o.now) ? nowKey() : o.now;
+  let nowY: number | null = null;
+  if (height > 0) {
+    const latest = Math.max(
+      ...sorted.map((it) => (it.interval ? it.parsed.endKey : it.parsed.startKey)),
+    );
+    if (latest <= nowK + 1e-6) {
+      nowY = height + NOW_FOOT / 2;
+      height += NOW_FOOT;
+    } else {
+      nowY = yOf(nowK);
+      for (const b of blocks) {
+        if (b.kind === "block" && b.mode !== "folded" && nowY >= b.y && nowY < b.y + b.header)
+          nowY = Math.min(b.y + b.header + 4, b.bottom - 2);
+      }
+    }
+  }
 
   // Interval bars: greedy lanes, the first whose previous bar has ended.
   const laneEnds: number[] = [];
   const spans: LaidOutSpan[] = [];
-  for (const l of laid) {
+  const ordered = [...laid].sort((a, b) => a.y - b.y);
+  for (const l of ordered) {
     if (!l.item.interval) continue;
     const y0 = l.y;
-    const y1 = Math.min(height, Math.max(y0 + 8, yOf(l.item.parsed.endKey)));
+    // A bar that runs to the present meets the marker.
+    const toNow = nowY !== null && (l.item.event.ongoing || l.item.parsed.endKey >= nowK);
+    const y1 = toNow
+      ? Math.max(y0 + 8, nowY as number)
+      : Math.min(height, Math.max(y0 + 8, yOf(l.item.parsed.endKey)));
     let lane = laneEnds.findIndex((end) => end + 4 <= y0);
     if (lane < 0) {
       if (laneEnds.length < o.maxLanes) {
@@ -369,7 +543,7 @@ export function layoutTimeline(
     spans.push({ item: l.item, y0, y1, lane });
   }
 
-  return { items: laid, eras, spans, lanes: laneEnds.length, height, yOf };
+  return { items: ordered, blocks, spans, lanes: laneEnds.length, height, yOf, nowY };
 }
 
 /** Sort key of "now" for the river's present-day marker. */

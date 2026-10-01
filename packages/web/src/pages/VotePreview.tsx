@@ -80,6 +80,8 @@ export default function VotePreview() {
           greeting={{
             kind: "purchase-vote-announce",
             pollId: 1,
+            title: null,
+            blurb: null,
             candidates: CANDIDATE_SLUGS,
             voterCount: 0,
             requiredVoters: 8,
@@ -93,6 +95,8 @@ export default function VotePreview() {
           greeting={{
             kind: "purchase-vote-reminder",
             pollId: 1,
+            title: null,
+            blurb: null,
             votesLeft: 2,
             voterCount: 4,
             requiredVoters: 8,

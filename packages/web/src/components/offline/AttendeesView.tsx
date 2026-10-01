@@ -116,7 +116,12 @@ export default function AttendeesView({
   if (mode === "teams") {
     return (
       <div className="scrollbar-thin flex h-full w-full max-w-3xl flex-col overflow-y-auto px-1 py-2">
-        <TeamsPanel date={date} attendees={attendees} onBack={() => setMode("list")} />
+        <TeamsPanel
+          date={date}
+          attendees={attendees}
+          lineup={topSlugs}
+          onBack={() => setMode("list")}
+        />
       </div>
     );
   }

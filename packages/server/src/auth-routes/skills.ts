@@ -1,4 +1,5 @@
-// Skill-rating endpoints — leaderboards and per-player detail. Mounted at
+// Skill-rating endpoints — leaderboards, per-player detail, and the team
+// mixer's balanced split (POST /balance-teams: a computation, not a write). Mounted at
 // `/api/skills` behind requireAuth + requireOffline (same gate as profiles:
 // every offline member sees every profile, and the hall of fame is
 // group-public in the same sense).
@@ -8,14 +9,16 @@
 // names. Clients must never re-derive ranks or percentiles.
 
 import {
+  BalanceTeamsBodySchema,
+  BalanceTeamsResponseSchema,
   PlayerSkillResponseSchema,
   SkillLeaderboardsResponseSchema,
 } from "@boardgames/core/protocol";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
-import { errorResponse } from "../lib/error-response.ts";
+import { errorResponse, zJsonBody } from "../lib/error-response.ts";
 import { unratedPayload } from "../lib/skill-payload.ts";
-import { ensureSkillState } from "../lib/skill-ratings.ts";
+import { balanceTeamsFor, ensureSkillState } from "../lib/skill-ratings.ts";
 import { playerRefs } from "../lib/user-refs.ts";
 
 export const skillsRoutes = authedApp();
@@ -63,3 +66,13 @@ skillsRoutes.get("/players/:userId", async (c) => {
 
 // The greeting queue moved to `/api/greetings` (auth-routes/greetings.ts) —
 // the popup is app-wide now, not a profile-page feature.
+
+// ── POST /api/skills/balance-teams ─────────────────────────────────────
+//
+// The night's team mixer: the fairest split of the pool for one game. A POST
+// because the pool rides in the body; nothing is stored or logged.
+
+skillsRoutes.post("/balance-teams", zJsonBody(BalanceTeamsBodySchema), async (c) => {
+  const body = c.req.valid("json");
+  return c.json(BalanceTeamsResponseSchema.parse(await balanceTeamsFor(body)));
+});

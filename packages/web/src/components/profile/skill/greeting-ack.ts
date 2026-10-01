@@ -1,6 +1,11 @@
-import type { AppGreeting, AppGreetingAckBody, GreetingAckAction } from "@boardgames/core/protocol";
+import type {
+  AppGreeting,
+  AppGreetingAckBody,
+  GreetingAckAction,
+  PageViewPage,
+} from "@boardgames/core/protocol";
 
-// The two pure halves of GreetingHost, exhaustive over the greeting union so
+// The pure halves of GreetingHost, exhaustive over the greeting union so
 // a new kind fails to compile here before it can be forgotten in the host.
 
 /** Stable identity per greeting, so dismissing one never hides a LATER,
@@ -37,5 +42,27 @@ export function ackBody(g: AppGreeting, action: GreetingAckAction): AppGreetingA
       return { kind: "arrival", arrivalId: g.arrivalId, action };
     case "night-invite":
       return { kind: "night-invite", date: g.date, action };
+  }
+}
+
+/**
+ * The page-view beacon for a greeting being shown: which card, and what it is
+ * about when the admin trail can name it (the spotlight's subject, the
+ * invitation's night, the poll, the arrival).
+ */
+export function greetingView(g: AppGreeting): { page: PageViewPage; detail?: string } {
+  switch (g.kind) {
+    case "skill-intro":
+      return { page: "skill-intro" };
+    case "spotlight":
+      return { page: "skill-spotlight", detail: g.subjectUserId };
+    case "purchase-vote-announce":
+      return { page: "purchase-vote-announce", detail: String(g.pollId) };
+    case "purchase-vote-reminder":
+      return { page: "purchase-vote-reminder", detail: String(g.pollId) };
+    case "arrival":
+      return { page: "arrival", detail: g.arrivalId };
+    case "night-invite":
+      return { page: "night-invite", detail: g.date };
   }
 }

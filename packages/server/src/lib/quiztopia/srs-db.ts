@@ -356,6 +356,7 @@ const SettingsJsonSchema = QuiztopiaSettingsSchema.pick({
   gameReviewsAffectSrs: true,
   newCardOrder: true,
   newSetsPerDay: true,
+  excludeFromAll: true,
 });
 
 const SettingsRowSchema = z.object({
@@ -390,6 +391,7 @@ export async function writeSettings(
       gameReviewsAffectSrs: settings.gameReviewsAffectSrs,
       newCardOrder: settings.newCardOrder,
       newSetsPerDay: settings.newSetsPerDay,
+      excludeFromAll: settings.excludeFromAll,
     }),
   );
   await db.execute({

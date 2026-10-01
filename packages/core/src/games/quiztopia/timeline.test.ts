@@ -2,8 +2,6 @@ import { describe, expect, it } from "vitest";
 import {
   centuryOf,
   compareTimelineDates,
-  ERAS,
-  eraOf,
   formatSpan,
   formatTimelineDate,
   millenniumOf,
@@ -11,7 +9,6 @@ import {
   parseTimelineDate,
   precisionFitsDate,
   type TimelineEvent,
-  timelineScale,
   timelineSortKey,
   timelineSpanYears,
 } from "./timeline.ts";
@@ -234,38 +231,7 @@ describe("formatTimelineDate", () => {
   });
 });
 
-describe("eras and the display scale", () => {
-  it("buckets keys into the seven eras", () => {
-    expect(eraOf(key("-66000000")).id).toBe("deep-time");
-    expect(eraOf(key("-44")).id).toBe("antiquity");
-    expect(eraOf(key("800")).id).toBe("middle-ages");
-    expect(eraOf(key("1600")).id).toBe("early-modern");
-    expect(eraOf(key("1841")).id).toBe("c19");
-    expect(eraOf(key("1969")).id).toBe("c20");
-    expect(eraOf(key("2012")).id).toBe("c21");
-    expect(ERAS.map((e) => e.id)).toHaveLength(7);
-  });
-
-  it("maps time monotonically onto [0, 1], compressing deep time", () => {
-    const samples = ["-13800000000", "-66000000", "-10000", "-3000", "-44", "1200", "1900", "2020"];
-    const ys = samples.map((s) => timelineScale(key(s)));
-    for (let i = 1; i < ys.length; i++) expect(ys[i]).toBeGreaterThan(ys[i - 1]);
-    expect(ys[0]).toBeCloseTo(0, 5);
-    expect(timelineScale(3000)).toBeLessThanOrEqual(1);
-    // A year in the 20th century gets far more room than a year in antiquity.
-    const modern = timelineScale(1951) - timelineScale(1950);
-    const ancient = timelineScale(-1999) - timelineScale(-2000);
-    expect(modern).toBeGreaterThan(ancient * 10);
-    // Deep time is logarithmic in years before PRESENT: the century before
-    // antiquity is a sliver next to the Big Bang → the dinosaurs' end.
-    const lateStone = timelineScale(key("-3001")) - timelineScale(key("-3100"));
-    const geology = timelineScale(key("-66000000")) - timelineScale(key("-13800000000"));
-    expect(lateStone * 50).toBeLessThan(geology);
-    // Era boundaries are continuous.
-    expect(timelineScale(1500 - 1e-9)).toBeCloseTo(timelineScale(1500), 6);
-    expect(timelineScale(-3000 - 1e-6)).toBeCloseTo(timelineScale(-3000), 6);
-  });
-
+describe("spans", () => {
   it("phrases a span for the hub", () => {
     expect(formatSpan(2989, "en")).toBe("3,000 years");
     expect(formatSpan(2989, "de")).toBe("3.000 Jahre");

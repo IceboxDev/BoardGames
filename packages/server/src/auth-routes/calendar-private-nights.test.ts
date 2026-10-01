@@ -622,4 +622,17 @@ describe("private nights", () => {
     });
     expect((await nights(OUT, as(OUT))).items).toEqual([]);
   });
+
+  it("reading another member's profile is not activity (only the client's page view is)", async () => {
+    // The profile GET serves every profile sub-page and a spotlight card's
+    // accent colour; logging it used to invent "Viewed X's profile" lines.
+    const res = await as(OUT).request(`/api/profiles/${A}`);
+    expect(res.status).toBe(200);
+    await new Promise((r) => setTimeout(r, 20));
+    const { rows } = await client.execute({
+      sql: "SELECT type FROM activity_log WHERE user_id = ?",
+      args: [OUT],
+    });
+    expect(rows.map((r) => r.type)).toEqual([]);
+  });
 });

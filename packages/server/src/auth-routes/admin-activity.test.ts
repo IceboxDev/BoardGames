@@ -50,6 +50,27 @@ function markSeen(a: Hono<AdminEnv>, userId: string, lastSeenId: number) {
   });
 }
 
+/** Real migration chain in memory, two admins and two members. */
+async function freshDb(): Promise<Client> {
+  const client = createClient({ url: ":memory:" });
+  await client.execute("PRAGMA foreign_keys = ON");
+  await runMigrations(client, { logger: QUIET });
+  db.current = client;
+  for (const [id, role] of [
+    [ADMIN_A, "admin"],
+    [ADMIN_B, "admin"],
+    [MEMBER_1, "user"],
+    [MEMBER_2, "user"],
+  ]) {
+    await client.execute({
+      sql: `INSERT INTO "user" (id, name, email, "emailVerified", "createdAt", "updatedAt", role)
+            VALUES (?, ?, ?, 0, '2020-01-01', '2020-01-01', ?)`,
+      args: [id, id, `${id}@example.com`, role],
+    });
+  }
+  return client;
+}
+
 describe("unseen activity marker", () => {
   let client: Client;
 
@@ -73,22 +94,7 @@ describe("unseen activity marker", () => {
   }
 
   beforeEach(async () => {
-    client = createClient({ url: ":memory:" });
-    await client.execute("PRAGMA foreign_keys = ON");
-    await runMigrations(client, { logger: QUIET });
-    db.current = client;
-    for (const [id, role] of [
-      [ADMIN_A, "admin"],
-      [ADMIN_B, "admin"],
-      [MEMBER_1, "user"],
-      [MEMBER_2, "user"],
-    ]) {
-      await client.execute({
-        sql: `INSERT INTO "user" (id, name, email, "emailVerified", "createdAt", "updatedAt", role)
-              VALUES (?, ?, ?, 0, '2020-01-01', '2020-01-01', ?)`,
-        args: [id, id, `${id}@example.com`, role],
-      });
-    }
+    client = await freshDb();
   });
 
   afterEach(() => {
@@ -143,5 +149,103 @@ describe("unseen activity marker", () => {
   it("rejects a non-positive marker", async () => {
     await log(MEMBER_1, 1);
     expect((await markSeen(app(ADMIN_A), MEMBER_1, 0)).status).toBe(400);
+  });
+});
+
+// The trail sorts by when each event happened (`logged_at_ms`, stamped as the
+// request is handled), not by insertion id — fire-and-forget INSERTs land in
+// whatever order the network delivers them. Rows from before migration 0047
+// have no stamp and sort by `created_at`, `id` breaking the tie.
+describe("trail order and paging", () => {
+  let client: Client;
+
+  beforeEach(async () => {
+    client = await freshDb();
+  });
+
+  afterEach(() => {
+    client.close();
+    db.current = null;
+  });
+
+  /** Insert a row; `ms` = logged_at_ms (null = a legacy row), `at` = created_at. */
+  async function row(type: string, ms: number | null, at = "2026-09-28 10:00:00"): Promise<number> {
+    const r = await client.execute({
+      sql: `INSERT INTO activity_log (user_id, type, created_at, logged_at_ms) VALUES (?, ?, ?, ?)`,
+      args: [MEMBER_1, type, at, ms],
+    });
+    return Number(r.lastInsertRowid);
+  }
+
+  async function trail(before?: number, limit = 50) {
+    const qs = new URLSearchParams({ limit: String(limit) });
+    if (before !== undefined) qs.set("before", String(before));
+    const res = await app(ADMIN_A).request(`/api/admin/users/${MEMBER_1}/activity?${qs}`);
+    expect(res.status).toBe(200);
+    return (await res.json()) as {
+      entries: { id: number; type: string; occurredAtMs: number }[];
+      nextBefore: number | null;
+    };
+  }
+
+  const T = Date.parse("2026-09-28T10:05:00Z");
+
+  it("orders by event time even when the rows were inserted out of order", async () => {
+    // The "followed" ack was handled first but its INSERT landed second.
+    await row("page-view", T + 40);
+    await row("greeting-response", T + 10);
+    await row("visit", T);
+    const { entries } = await trail();
+    expect(entries.map((e) => e.type)).toEqual(["page-view", "greeting-response", "visit"]);
+    expect(entries.map((e) => e.occurredAtMs)).toEqual([T + 40, T + 10, T]);
+  });
+
+  it("sorts legacy rows by their second, then id, below every stamped row", async () => {
+    const a = await row("login", null, "2026-09-28 09:00:00");
+    const b = await row("visit", null, "2026-09-28 09:00:00");
+    const c = await row("page-view", T);
+    const { entries } = await trail();
+    expect(entries.map((e) => e.id)).toEqual([c, b, a]);
+    expect(entries[2]?.occurredAtMs).toBe(Date.parse("2026-09-28T09:00:00Z"));
+  });
+
+  it("pages on (time, id) with a plain id cursor, across ties, without gaps or repeats", async () => {
+    // Three rows share a millisecond; ids are deliberately not in time order.
+    await row("a", T + 2);
+    await row("b", T);
+    await row("c", T);
+    await row("d", T);
+    await row("e", T + 1);
+    const seen: string[] = [];
+    let before: number | undefined;
+    for (let i = 0; i < 5; i++) {
+      const page = await trail(before, 2);
+      seen.push(...page.entries.map((e) => e.type));
+      if (page.nextBefore === null) break;
+      before = page.nextBefore;
+    }
+    expect(seen).toEqual(["a", "e", "d", "c", "b"]);
+  });
+
+  it("returns an empty page for a cursor that names another member's row", async () => {
+    await row("a", T);
+    const other = await client.execute({
+      sql: "INSERT INTO activity_log (user_id, type, logged_at_ms) VALUES (?, 'x', ?)",
+      args: [MEMBER_2, T + 5],
+    });
+    const page = await trail(Number(other.lastInsertRowid));
+    expect(page.entries).toEqual([]);
+    expect(page.nextBefore).toBeNull();
+  });
+
+  it("serves the trail from the (user_id, sort_ms, id) index without a sort step", async () => {
+    const { rows } = await client.execute({
+      sql: `EXPLAIN QUERY PLAN SELECT id FROM activity_log WHERE user_id = ?
+            ORDER BY sort_ms DESC, id DESC LIMIT 5`,
+      args: [MEMBER_1],
+    });
+    const plan = rows.map((r) => String(r.detail)).join(" | ");
+    expect(plan).toContain("idx_activity_log_user_sort");
+    expect(plan).not.toContain("TEMP B-TREE");
   });
 });

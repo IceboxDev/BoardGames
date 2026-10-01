@@ -16,6 +16,7 @@ import type { GameDefinition } from "../../games/types";
 import { resolveGame } from "../../lib/games-by-slug";
 import { MegaphoneIcon } from "../icons";
 import { GreetingShell } from "../profile/skill/GreetingShell";
+import { voteShortTitle, voteTagline } from "./vote-copy";
 
 const emblem = (
   <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-[var(--accent)]/20">
@@ -84,7 +85,7 @@ export function PurchaseVoteReminderModal({
   return (
     <GreetingShell
       accentHex={null}
-      eyebrow="Purchase vote"
+      eyebrow={greeting.title ? voteShortTitle(greeting.title) : "Purchase vote"}
       title="Votes still on the table"
       heroEyebrow="Reminder"
       heroTitle={
@@ -92,7 +93,7 @@ export function PurchaseVoteReminderModal({
           ? "Your 3 votes are waiting"
           : `${votesLeft} vote${votesLeft === 1 ? "" : "s"} left to spend`
       }
-      heroDetail={`${voterCount} of ${requiredVoters} players have voted — the winner is bought when everyone's in.`}
+      heroDetail={`${voteTagline(greeting.title) ? `${voteTagline(greeting.title)}. ` : ""}${voterCount} of ${requiredVoters} players have voted — the winner is bought when everyone's in.`}
       emblem={emblem}
       ctaLabel={votesLeft === 3 ? "Vote now" : "Spend them"}
       onCta={onCta}

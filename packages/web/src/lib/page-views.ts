@@ -1,23 +1,27 @@
 // Page-view beacon — tells the server which surfaces the user looked at
-// (calendar, a night's card, the games catalog, …) so the admin activity
-// trail can show navigation, not just mutations.
+// (calendar, a night's card, the games catalog, a greeting card, …) so the
+// admin activity trail shows navigation, not just mutations.
 //
 // Fire-and-forget by design: a failed beacon must never surface to the user
 // or retry (activity logging is best-effort, mirroring the server side).
-// Views are deduplicated per (page, detail) with a re-log window, so a
-// user bouncing between routes doesn't flood the trail.
 //
-// Every activity request from this tab goes through ONE serial queue. The
-// trail is ordered by database insertion, so two concurrent requests (a
-// greeting's "followed" ack and the page view of the screen it opened) used
-// to land in whichever order the network delivered them — and the trail
-// then showed the screen opening before the button that opened it.
+// Repeats: this module only drops a BURST — the same page+detail as the last
+// beacon, again within ten seconds: a re-render, a StrictMode double effect,
+// or two reporters of one look (the calendar's `?date=` route and the night
+// card it opens) — never a real second look. Genuine returns ("home → catalog → home") are all
+// logged; the route tracker skips re-reports of the route it is already on,
+// and the admin drawer folds runs of identical lines into one "×N" line.
+//
+// Order: every activity request from this tab goes through ONE serial queue.
+// The server stamps each event as it handles the request (migration 0047), so
+// sending them one at a time is what makes the stamps follow the order things
+// happened here — a greeting's "followed" ack before the page it opened.
 
-import { OkResponseSchema, PageViewBodySchema } from "@boardgames/core/protocol";
+import { OkResponseSchema, PageViewBodySchema, type PageViewPage } from "@boardgames/core/protocol";
 import { apiFetch } from "./api-fetch";
 
-const RELOG_WINDOW_MS = 30 * 60 * 1000;
-const lastSent = new Map<string, number>();
+const BURST_MS = 10_000;
+let last: { key: string; at: number } | null = null;
 
 let chain: Promise<unknown> = Promise.resolve();
 
@@ -32,22 +36,62 @@ export function queueActivity<T>(send: () => Promise<T>): Promise<T> {
   return next;
 }
 
-export function reportPageView(page: string, detail?: string): void {
+export interface PageViewOptions {
+  /** What opened this surface, e.g. `greetingVia("spotlight")`. */
+  via?: string;
+}
+
+export function reportPageView(
+  page: PageViewPage,
+  detail?: string,
+  options: PageViewOptions = {},
+): void {
   const key = detail ? `${page}:${detail}` : page;
   const now = Date.now();
-  const last = lastSent.get(key);
-  if (last !== undefined && now - last < RELOG_WINDOW_MS) return;
-  lastSent.set(key, now);
+  if (last !== null && last.key === key && now - last.at < BURST_MS) return;
+  last = { key, at: now };
 
+  const { via } = options;
   void queueActivity(() =>
     apiFetch("/api/activity/view", {
       method: "POST",
-      body: detail ? { page, detail } : { page },
+      body: { page, ...(detail ? { detail } : {}), ...(via ? { via } : {}) },
       request: PageViewBodySchema,
       response: OkResponseSchema,
     }),
   ).catch(() => {
-    // Best-effort: allow a retry on the next visit to this surface.
-    lastSent.delete(key);
+    // Best-effort: a lost view is not worth a retry.
   });
+}
+
+/**
+ * Router state for a navigation whose destination should carry a `via` —
+ * `navigate(to, { state: activityNavState(greetingVia("spotlight")) })`.
+ * `PageViewTracker` reads it back with `viaFromNavState`.
+ */
+export function activityNavState(via: string): { activityVia: string } {
+  return { activityVia: via };
+}
+
+export function viaFromNavState(state: unknown): string | undefined {
+  if (state === null || typeof state !== "object" || !("activityVia" in state)) return undefined;
+  return typeof state.activityVia === "string" ? state.activityVia : undefined;
+}
+
+/**
+ * Router state for a URL tidy-up that is not a new look — the calendar
+ * stripping its `?date=` deep link once the night's card is open. The route
+ * tracker skips it (and remembers the new route, so nothing is re-reported).
+ */
+export function quietNavState(): { activityQuiet: true } {
+  return { activityQuiet: true };
+}
+
+export function isQuietNavState(state: unknown): boolean {
+  return state !== null && typeof state === "object" && "activityQuiet" in state;
+}
+
+/** Forget the burst guard — tests only. */
+export function resetPageViewBurst(): void {
+  last = null;
 }

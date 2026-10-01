@@ -4,6 +4,7 @@ import {
   BookIcon,
   BotIcon,
   ClockIcon,
+  SolverIcon,
   TrainerIcon,
   TrophyIcon,
   UserIcon,
@@ -46,6 +47,12 @@ function soloMode(label: string): { icon: ReactNode; tone: SegmentedTone; descri
         icon: <TrainerIcon className="h-7 w-7" />,
         tone: "amber",
         description: "Practice and sharpen your skills",
+      };
+    case "Solver":
+      return {
+        icon: <SolverIcon className="h-7 w-7" />,
+        tone: "amber",
+        description: "Analyse a game: proofs, odds, best teams, misplays",
       };
     case "DM Screen":
       return {

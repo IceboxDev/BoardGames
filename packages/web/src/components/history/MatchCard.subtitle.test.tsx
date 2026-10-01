@@ -77,7 +77,28 @@ const decryptoTeams = (sizes: number[]): MatchRecord => ({
   },
 });
 
+const trivialPursuit: MatchRecord = {
+  ...intarsia,
+  id: 86,
+  gameSlug: "trivial-pursuit",
+  gameTitle: "Trivial Pursuit",
+  outcome: {
+    kind: "free-for-all",
+    scenario: "Classic · German",
+    players: [
+      { userId: "a", displayName: "Ana", score: 0, rank: 1, wedges: ["blue", "pink", "yellow"] },
+      { userId: "b", displayName: "Ben", score: 0 },
+    ],
+  },
+};
+
 describe("MatchCard subtitle", () => {
+  it("shows Trivial Pursuit's edition · language and each player's wedge pie", () => {
+    render(<MatchCard match={trivialPursuit} isAdmin={false} currentUserId={null} />);
+    expect(screen.getByText("Classic · German")).toBeInTheDocument();
+    expect(screen.getByRole("img", { name: "3/6 wedges" })).toBeInTheDocument();
+  });
+
   it("shows the persisted scenario under the title", () => {
     render(<MatchCard match={intarsia} isAdmin={false} currentUserId={null} />);
     expect(screen.getByText("Standard")).toBeInTheDocument();

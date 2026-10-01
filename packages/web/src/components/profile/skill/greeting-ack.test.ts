@@ -1,6 +1,6 @@
 import type { AppGreeting } from "@boardgames/core/protocol";
 import { describe, expect, it } from "vitest";
-import { ackBody, greetingKey } from "./greeting-ack";
+import { ackBody, greetingKey, greetingView } from "./greeting-ack";
 
 const arrival: AppGreeting = {
   kind: "arrival",
@@ -20,6 +20,8 @@ describe("greetingKey", () => {
       greetingKey({
         kind: "purchase-vote-announce",
         pollId: 2,
+        title: null,
+        blurb: null,
         candidates: ["arcs"],
         voterCount: 0,
         requiredVoters: 1,
@@ -29,6 +31,8 @@ describe("greetingKey", () => {
       greetingKey({
         kind: "purchase-vote-reminder",
         pollId: 2,
+        title: null,
+        blurb: null,
         votesLeft: 1,
         voterCount: 0,
         requiredVoters: 1,
@@ -73,6 +77,8 @@ describe("ackBody", () => {
         {
           kind: "purchase-vote-announce",
           pollId: 5,
+          title: null,
+          blurb: null,
           candidates: ["arcs"],
           voterCount: 0,
           requiredVoters: 1,
@@ -80,5 +86,32 @@ describe("ackBody", () => {
         "later",
       ),
     ).toEqual({ kind: "purchase-vote-announce", pollId: 5, action: "later" });
+  });
+});
+
+describe("greetingView", () => {
+  it("reports each card with what the activity trail can name", () => {
+    expect(
+      greetingView({ kind: "skill-intro", highlight: { kind: "trait-first", trait: "int" } }),
+    ).toEqual({ page: "skill-intro" });
+    expect(greetingView(invite)).toEqual({ page: "night-invite", detail: "2026-10-03" });
+    expect(greetingView(arrival)).toEqual({ page: "arrival", detail: "a7" });
+    expect(
+      greetingView({
+        kind: "purchase-vote-reminder",
+        pollId: 2,
+        title: null,
+        blurb: null,
+        votesLeft: 1,
+        voterCount: 0,
+        requiredVoters: 1,
+      }),
+    ).toEqual({ page: "purchase-vote-reminder", detail: "2" });
+    const spotlight = {
+      kind: "spotlight",
+      id: 4,
+      subjectUserId: "u-mel",
+    } as unknown as AppGreeting;
+    expect(greetingView(spotlight)).toEqual({ page: "skill-spotlight", detail: "u-mel" });
   });
 });

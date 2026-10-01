@@ -642,16 +642,8 @@ void apply(GameState& s, int player, const Action& a) {
           t.speedLeft += bd.n;
         } else if (bd.kind == BK_EXTRA_HUNT) {
           t.extraHunts += 1;
-        } else if (bd.kind == BK_DRAW_TO_PLAY || bd.kind == BK_DISCARD_DRAW) {
-          int before = playAreaSpeed(p);
-          if (bd.kind == BK_DISCARD_DRAW && a.other >= 0) {
-            removeFromPlay(p, a.other);
-            p.discard.push(Card(a.other));
-          }
-          drawToPlay(s, p);
-          int delta = playAreaSpeed(p) - before;
-          t.speed += delta;
-          t.speedLeft = std::max(0, t.speedLeft + delta);
+        } else {
+          fail("A draw token is spent before Speed is counted");
         }
         return;
       }

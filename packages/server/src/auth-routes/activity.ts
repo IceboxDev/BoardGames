@@ -14,14 +14,20 @@ export const activityRoutes = authedApp();
 // ── POST /api/activity/view ───────────────────────────────────────────
 //
 // Page-view beacon from the web client (see web/src/lib/page-views.ts).
-// The client owns the `page` vocabulary and the per-session dedupe; this
-// endpoint just stamps the row. Always 200 — a view beacon has no failure
+// The vocabulary is `PAGE_VIEW_PAGES` in core, but an unknown page is still
+// recorded — a newer web build may be talking to this server. The client
+// sends its beacons one at a time, so the stamp `logActivity` takes here
+// orders them as they happened. Always 200 — a view beacon has no failure
 // mode the client could act on.
 
 activityRoutes.post("/view", zJsonBody(PageViewBodySchema), async (c) => {
   const user = c.get("user");
-  const { page, detail } = c.req.valid("json");
-  logActivity(user.id, "page-view", { page, ...(detail ? { detail } : {}) });
+  const { page, detail, via } = c.req.valid("json");
+  logActivity(user.id, "page-view", {
+    page,
+    ...(detail ? { detail } : {}),
+    ...(via ? { via } : {}),
+  });
   return c.json(OkResponseSchema.parse({ ok: true }));
 });
 

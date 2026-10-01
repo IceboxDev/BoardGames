@@ -32,7 +32,8 @@ DIR      ?= tests/fixtures
 # fixture replay) is left out so the module needs almost no WASI imports.
 WASI_SDK ?= $(HOME)/.local/wasi-sdk-34.0-x86_64-linux
 WASM_CXX  = $(WASI_SDK)/bin/wasm32-wasip1-clang++
-WASM_SRC  = $(filter-out src/parity.cpp,$(SRC)) wasm/agent.cpp
+# Research-only sources (training data, behaviour reports, the network) stay out of the live module.
+WASM_SRC  = $(filter-out src/parity.cpp src/samples.cpp src/behave.cpp src/features.cpp src/net.cpp src/lilith.cpp src/half.cpp,$(SRC)) wasm/agent.cpp
 WASM_BIN  = $(BUILD)/hunger.wasm
 WASM_FLAGS = $(CXXSTD) -O3 -DNDEBUG $(FPFLAGS) $(WARN) $(INCLUDES) \
   -fno-exceptions -fno-rtti -msimd128 -mexec-model=reactor \
