@@ -20,6 +20,8 @@ describe("greetingKey", () => {
       greetingKey({
         kind: "purchase-vote-announce",
         pollId: 2,
+        title: null,
+        blurb: null,
         candidates: ["arcs"],
         voterCount: 0,
         requiredVoters: 1,
@@ -29,6 +31,8 @@ describe("greetingKey", () => {
       greetingKey({
         kind: "purchase-vote-reminder",
         pollId: 2,
+        title: null,
+        blurb: null,
         votesLeft: 1,
         voterCount: 0,
         requiredVoters: 1,
@@ -73,6 +77,8 @@ describe("ackBody", () => {
         {
           kind: "purchase-vote-announce",
           pollId: 5,
+          title: null,
+          blurb: null,
           candidates: ["arcs"],
           voterCount: 0,
           requiredVoters: 1,
@@ -94,6 +100,8 @@ describe("greetingView", () => {
       greetingView({
         kind: "purchase-vote-reminder",
         pollId: 2,
+        title: null,
+        blurb: null,
         votesLeft: 1,
         voterCount: 0,
         requiredVoters: 1,

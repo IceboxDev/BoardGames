@@ -21,11 +21,18 @@ export const PollRowSchema = z.object({
   required_voters: z.number(),
   closed_at: z.string().nullable(),
   winner_slug: z.string().nullable(),
+  title: z.string().nullable(),
+  blurb: z.string().nullable(),
 });
 export type PollRow = z.infer<typeof PollRowSchema>;
 
 const POLL_COLUMNS =
-  "id, created_at, candidate_slugs_json, required_voters, closed_at, winner_slug";
+  "id, created_at, candidate_slugs_json, required_voters, closed_at, winner_slug, title, blurb";
+
+/** The theme fields every poll payload carries (null when the poll has none). */
+export function pollTheme(poll: PollRow): { title: string | null; blurb: string | null } {
+  return { title: poll.title || null, blurb: poll.blurb || null };
+}
 
 const VoteRowSchema = z.object({
   user_id: z.string(),

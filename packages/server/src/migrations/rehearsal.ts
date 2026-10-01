@@ -49,9 +49,18 @@ export async function snapshotInto(
   let rows = 0;
   for (const t of tables.rows) {
     const table = String(t.name);
-    const res = await source.execute(`SELECT * FROM "${table}"`);
+    // Stored columns only: a generated column (`hidden` 2 = virtual, 3 =
+    // stored) cannot be INSERTed — the target recomputes it from the schema,
+    // exactly as a restore from `lib/backup.ts` does.
+    const stored = await source.execute({
+      sql: "SELECT name FROM pragma_table_xinfo(?) WHERE hidden = 0 ORDER BY cid",
+      args: [table],
+    });
+    const cols = stored.rows.map((c) => String(c.name));
+    const res = await source.execute(
+      `SELECT ${cols.map((c) => `"${c}"`).join(", ")} FROM "${table}"`,
+    );
     if (res.rows.length === 0) continue;
-    const cols = res.columns;
     const colList = cols.map((c) => `"${c}"`).join(", ");
     const placeholders = cols.map(() => "?").join(", ");
     const stmts = res.rows.map((row) => ({

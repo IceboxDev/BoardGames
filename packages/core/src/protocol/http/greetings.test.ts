@@ -14,7 +14,45 @@ describe("AppGreetingSchema", () => {
       voterCount: 2,
       requiredVoters: 6,
     });
-    expect(parsed.kind).toBe("purchase-vote-announce");
+    expect(parsed).toMatchObject({ kind: "purchase-vote-announce", title: null, blurb: null });
+  });
+
+  it("carries a poll theme, and an arrival can carry the new vote as its second page", () => {
+    const vote = {
+      kind: "purchase-vote-announce",
+      pollId: 2,
+      title: "The October vote: games for the whole table",
+      blurb: "Every contender seats eight or more.",
+      candidates: ["telestrations", "perudo"],
+      voterCount: 0,
+      requiredVoters: 10,
+    };
+    expect(AppGreetingSchema.parse(vote)).toMatchObject({ title: vote.title });
+    const tooLong = { ...vote, title: "x".repeat(81) };
+    expect(AppGreetingSchema.safeParse(tooLong).success).toBe(false);
+
+    const arrival = {
+      kind: "arrival",
+      arrivalId: "a1",
+      pollId: 1,
+      publishedAt: "2026-10-01 10:00:00",
+      games: [
+        {
+          slug: "wingspan",
+          purchaser: { id: "u1", name: "Mantas", image: null, accentHex: null },
+          votes: 4,
+          voters: [],
+          photoUrl: "/api/arrivals/a1/photos/wingspan",
+          placeholder: "data:image/webp;base64,AA==",
+          width: 1280,
+          height: 1600,
+        },
+      ],
+      totals: { voterCount: 10, votesCast: 30 },
+      nextVote: vote,
+    };
+    const parsed = AppGreetingSchema.parse(arrival);
+    expect(parsed.kind === "arrival" && parsed.nextVote?.pollId).toBe(2);
   });
 
   it("parses a purchase-vote reminder greeting and rejects votesLeft 0", () => {

@@ -5,6 +5,8 @@
 //
 //   1. purchase-vote announce — one-time "voting is live" card (the same
 //      launch treatment the skill intro got). Ack flips it off forever.
+//      If an arrival (3) is also unseen, it rides along: the arrival is
+//      served with the announce as `nextVote`, one two-page takeover.
 //   2. night invite — "you're invited" to a private night the viewer hasn't
 //      answered (lib/night-invites.ts). Seats go first-come, so it outranks
 //      the celebration below; an RSVP or the ack retires it.
@@ -50,6 +52,7 @@ import {
   latestPoll,
   markPollSeen,
   pollSeen,
+  pollTheme,
   pollVotes,
 } from "../lib/purchase-vote.ts";
 import { ensureSkillState } from "../lib/skill-ratings.ts";
@@ -78,17 +81,27 @@ greetingsRoutes.get("/", async (c) => {
     ? await Promise.all([pollVotes(poll.id), pollSeen(poll.id, viewer.id)])
     : [[], { first_seen_at: null }];
 
-  // 1. The one-time "voting is live" card.
+  // 1. The one-time "voting is live" card. When the last vote's games have
+  // arrived and the viewer hasn't seen them yet, the two are ONE popup: the
+  // arrival shelf first, the new vote as its second page (`nextVote`).
   if (poll && poll.closed_at === null && seen.first_seen_at === null) {
+    const announce = {
+      kind: "purchase-vote-announce" as const,
+      pollId: poll.id,
+      ...pollTheme(poll),
+      candidates: poll.candidate_slugs_json,
+      voterCount: distinctVoterCount(votes),
+      requiredVoters: poll.required_voters,
+    };
+    const arrival = await nextUnseenArrival(viewer.id);
     return c.json(
       AppGreetingResponseSchema.parse({
-        greeting: {
-          kind: "purchase-vote-announce",
-          pollId: poll.id,
-          candidates: poll.candidate_slugs_json,
-          voterCount: distinctVoterCount(votes),
-          requiredVoters: poll.required_voters,
-        },
+        greeting: arrival
+          ? {
+              ...(await buildArrivalGreeting(arrival.arrival, arrival.games)),
+              nextVote: announce,
+            }
+          : announce,
         players: {},
       }),
     );
@@ -130,6 +143,7 @@ greetingsRoutes.get("/", async (c) => {
           greeting: {
             kind: "purchase-vote-reminder",
             pollId: poll.id,
+            ...pollTheme(poll),
             votesLeft,
             voterCount: distinctVoterCount(votes),
             requiredVoters: poll.required_voters,
