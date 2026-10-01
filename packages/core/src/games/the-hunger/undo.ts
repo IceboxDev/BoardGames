@@ -22,6 +22,10 @@ function harmlessKind(action: Action): boolean {
     case "ready":
     case "end-manipulation":
     case "space": // a Chest or Crypt changes public state and is caught below
+    // Hunt Track piles and Roses are face up; a Gregarious draw, an Inspiring
+    // Mission or a Tavern are caught below (the Hunt deck or a Mission pick).
+    case "hunt":
+    case "hunt-rose":
       return true;
     case "familiar": {
       // Kutya and Wiggles discard or digest; Ursa draws.

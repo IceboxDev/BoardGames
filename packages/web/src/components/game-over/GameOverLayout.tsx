@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { cn } from "../../lib/cn";
 import { Button } from "../ui/Button";
 import { PageHeader } from "../ui/PageHeader";
 
@@ -22,6 +23,8 @@ interface GameOverLayoutProps {
   actions: readonly GameOverAction[];
   /** Vertically center in viewport (for canvas/cooperative games like Pandemic). */
   centered?: boolean;
+  /** Use the full width of a wide screen (rich results that lay out in columns). */
+  wide?: boolean;
 }
 
 const HEADLINE_COLORS = {
@@ -39,9 +42,15 @@ export function GameOverLayout({
   children,
   actions,
   centered,
+  wide = false,
 }: GameOverLayoutProps) {
   const inner = (
-    <div className="mx-auto w-full max-w-2xl animate-card-enter px-6 py-8">
+    <div
+      className={cn(
+        "mx-auto w-full animate-card-enter px-6 py-8",
+        wide ? "max-w-screen-2xl" : "max-w-2xl",
+      )}
+    >
       {/* Header — PageHeader owns the title/subtitle typography; the win/lose
           color rides in via a child <span> (it overrides PageHeader's
           text-white), and the emoji stays a sibling decoration. */}

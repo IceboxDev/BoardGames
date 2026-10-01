@@ -332,6 +332,11 @@
 @utility pt-nav {
   padding-top: var(--layout-nav-h);
 }
+/* The Hunger's sunrise podium: the Vampires standing in the dawn. */
+@utility h-podium {
+  height: 26rem;
+}
+
 @utility top-below-nav {
   top: calc(var(--layout-nav-h) + --spacing(2));
 }

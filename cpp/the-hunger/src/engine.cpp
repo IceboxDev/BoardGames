@@ -198,7 +198,8 @@ static void onArrive(GameState& s) {
   if (!s.hasCurrent) return;
   TurnState& t = s.current;
   PlayerState& p = s.players[t.player];
-  if (isWell(graphOf(s), p.pos) && t.speed > 0) {
+  // Only a Vampire who moved onto the Well gets its Hunt (TS RULINGS.stayTriggersSpace).
+  if (isWell(graphOf(s), p.pos) && t.speed > 0 && t.moved) {
     t.col1Hunts += 1;
     int bonus = 0;
     for (const PlayCard& c : p.playArea) {

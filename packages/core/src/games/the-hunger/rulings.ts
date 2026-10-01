@@ -88,11 +88,13 @@
  */
 export const RULINGS = {
   /**
-   * `rules.canUseSpace`: with positive Speed, the space you end on triggers
-   * even if you did not move this turn. The rulebook denies it only at
-   * Speed ≤ 0.
+   * `rules.canUseSpace` / `game-engine.onArrive`: a space only works for a
+   * Vampire who moved onto it this turn (a walk or Form of Mist). Staying put
+   * — or being Confused there — earns nothing from it: no Chest, Crypt,
+   * digest space, Tavern, Labyrinth Rose, nor a Well's extra column-1 Hunt.
+   * (Mirrored in `cpp/the-hunger`.)
    */
-  stayTriggersSpace: true,
+  stayTriggersSpace: false,
   /**
    * `game-engine.afterHunt`: Speed is lost after your LAST Hunt, not the
    * first — otherwise an extra Hunt (Well, Stealth, +1 Hunt token) could only

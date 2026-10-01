@@ -89,7 +89,9 @@ export function BoardOverlay({
         type="button"
         onClick={() => setHidden((h) => !h)}
         title={hidden ? showLabel : hideLabel}
-        className={`pointer-events-auto absolute right-4 top-4 z-raised flex items-center gap-2 rounded-full border-2 px-4 py-2 text-xs font-bold text-fg-strong shadow-lg transition hover:scale-105 ${toggleClassName}`}
+        // Pinned to the viewport (below the nav), not to the overlay's box: a
+        // content area wider than the window must never push it off-screen.
+        className={`pointer-events-auto fixed right-4 top-below-nav z-raised mt-4 flex max-w-[calc(100vw-2rem)] items-center gap-2 whitespace-nowrap rounded-full border-2 px-4 py-2 text-xs font-bold text-fg-strong shadow-lg transition hover:scale-105 ${toggleClassName}`}
       >
         <span className="text-base leading-none">{hidden ? showIcon : hideIcon}</span>
         <span>{hidden ? showLabel : hideLabel}</span>

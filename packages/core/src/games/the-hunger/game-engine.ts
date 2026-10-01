@@ -19,6 +19,7 @@ import {
 } from "./content/cards";
 import { MISSIONS, missionDef } from "./content/missions";
 import {
+  arrivedHere,
   cardsWith,
   closerCount,
   currentSpace,
@@ -410,7 +411,7 @@ function onArrive(state: GameState): void {
   if (!turn) return;
   const p = state.players[turn.player];
   const g = graph(state);
-  if (g.wells.has(p.pos) && turn.speed > 0) {
+  if (g.wells.has(p.pos) && turn.speed > 0 && arrivedHere(turn)) {
     turn.col1Hunts += 1;
     // Kutya: extra Speed to hunt with on a Well.
     const bonus = passivesIn(p.playArea, "well-speed").reduce((sum, e) => sum + e.n, 0);

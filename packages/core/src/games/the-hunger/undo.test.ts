@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { createActor } from "xstate";
 import { theHungerMachine, theHungerSpec } from "./machine";
 import { graph } from "./rules";
-import { act, afterSetup, emptyTrack, rigTurn } from "./test-helpers";
+import { act, afterSetup, emptyTrack, legal as legalOf, rigTurn } from "./test-helpers";
 import type { Action } from "./types";
 import { isUndoable } from "./undo";
 
@@ -17,14 +17,22 @@ describe("what can be undone", () => {
     expect(check(s, { type: "stay" })).toBe(true);
   });
 
-  it("hunting, drawing, Chests and Crypts are not", () => {
+  it("hunting face-up piles and Roses is undoable; a Gregarious draw is not", () => {
     const track = emptyTrack();
     track[0][0] = ["o-nel#0"];
-    let s = rigTurn(base, 0, { hand: speedy, pos: "road-4", track });
-    s = act(s, { type: "stay" });
-    expect(check(s, { type: "hunt", row: 0, col: 0 })).toBe(false);
+    track[1][0] = ["wilma#0"];
+    let s = rigTurn(base, 0, { hand: speedy, pos: "road-3", track });
+    s = act(s, { type: "move", to: "road-4", spent: 1 });
+    expect(check(s, { type: "hunt", row: 0, col: 0 })).toBe(true);
+    // Wilma is Gregarious: her companion comes off the Hunt deck, unseen.
+    expect(check(s, { type: "hunt", row: 1, col: 0 })).toBe(false);
+  });
+
+  it("drawing, face-down Chests and Crypts are not", () => {
     // road-4 is a Chest (face down): taking it reveals the token.
-    expect(check(s, { type: "space" })).toBe(false);
+    let chest = rigTurn(base, 0, { hand: speedy, pos: "road-3" });
+    chest = act(chest, { type: "move", to: "road-4", spent: 1 });
+    expect(check(chest, { type: "space" })).toBe(false);
     const dee = rigTurn(base, 0, { hand: ["dee#0", ...speedy.slice(1)], pos: "road-4" });
     expect(check(dee, { type: "resolve", card: "dee#0" })).toBe(false);
     let crypt = rigTurn(base, 0, { hand: speedy, pos: "road-1" });
@@ -39,8 +47,13 @@ describe("what can be undone", () => {
     if (!open) throw new Error("no face-up Chest with a token");
     const b = structuredClone(base);
     b.chests[open.id] = "speed-1#0";
-    let s = rigTurn(b, 0, { hand: speedy, pos: open.id });
-    s = act(s, { type: "stay" });
+    // Arrive on it: a space only works for a Vampire who moved there.
+    const from = graph(b).adj.get(open.id)?.[0];
+    if (!from) throw new Error("no neighbour");
+    let s = rigTurn(b, 0, { hand: speedy, pos: from });
+    const onto = legalOf(s).find((a) => a.type === "move" && a.to === open.id);
+    if (!onto) throw new Error("cannot step onto the Chest");
+    s = act(s, onto);
     expect(check(s, { type: "space" })).toBe(true);
     s = act(s, { type: "space" });
     expect(s.players[0].bonus.map((t) => t.id)).toContain("speed-1#0");

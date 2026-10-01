@@ -72,11 +72,15 @@ function StepControls({ ix, current, onGo }: Props) {
   const { view, turn, myTurn, pending, setPending, send, find, legalActions, me } = ix;
   if (view.phase === "setup" || !myTurn || !turn) return null;
 
-  const cancel = pending && pending.kind !== "instant" && pending.kind !== "hypnosis" && (
-    <Button size="xs" variant="secondary" onClick={() => setPending(null)}>
-      Cancel
-    </Button>
-  );
+  // Hypnosis, draw counts and Instants carry their own Cancel.
+  const cancel = pending &&
+    pending.kind !== "instant" &&
+    pending.kind !== "hypnosis" &&
+    pending.kind !== "draw" && (
+      <Button size="xs" variant="secondary" onClick={() => setPending(null)}>
+        Cancel
+      </Button>
+    );
   const extras =
     pending?.kind === "hypnosis" ? (
       <HypnosisControls ix={ix} current={current} onGo={onGo} />
