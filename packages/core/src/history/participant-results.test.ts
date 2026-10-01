@@ -206,6 +206,31 @@ describe("freeForAllPlacement", () => {
     expect(freeForAllPlacement(o, "p1")).toEqual({ place: 1, total: 3 });
     expect(freeForAllPlacement(o, "p2")).toEqual({ place: 3, total: 3 });
   });
+
+  it("Trivial Pursuit: the crowned winner, then the rest by wedges, equal counts sharing", () => {
+    const o: Extract<MatchOutcome, { kind: "free-for-all" }> = {
+      kind: "free-for-all",
+      players: [
+        { ...p("few"), score: 0, wedges: ["blue"] },
+        // A full pie but no final question: not the winner.
+        { ...p("full"), score: 0, wedges: ["blue", "pink", "yellow", "brown", "green", "orange"] },
+        { ...p("winner"), score: 0, rank: 1, wedges: ["blue", "pink"] },
+        { ...p("tieA"), score: 0, wedges: ["green", "orange", "pink"] },
+        { ...p("tieB"), score: 0, wedges: ["blue", "brown", "yellow"] },
+        { ...p("none"), score: 0 },
+      ],
+    };
+    const place = (id: string) => freeForAllPlacement(o, id)?.place;
+    expect(["winner", "full", "tieA", "tieB", "few", "none"].map(place)).toEqual([
+      1, 2, 3, 3, 5, 6,
+    ]);
+    expect(deriveParticipantResult(o, "full")).toBe("loss");
+    expect(participantPerformanceCredit(o, "full", "trivial-pursuit")).toBeCloseTo(0.8);
+    expect(participantPerformanceCredit(o, "none", "trivial-pursuit")).toBe(0);
+    // Without wedges, everyone below the winner shares 2nd.
+    const bare = { ...o, players: o.players.map(({ wedges: _w, ...rest }) => rest) };
+    expect(freeForAllPlacement(bare, "few")?.place).toBe(2);
+  });
 });
 
 describe("lastStandingPlacement", () => {

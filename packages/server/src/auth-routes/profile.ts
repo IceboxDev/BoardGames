@@ -276,11 +276,9 @@ profileRoutes.get("/:userId/matches", async (c) => {
 profileRoutes.get("/:userId", async (c) => {
   const userId = c.req.param("userId");
   const viewer = c.get("user");
-  // Own-profile loads are navigation noise; only cross-member views are
-  // interesting in the activity trail.
-  if (viewer.id !== userId) {
-    logActivity(viewer.id, "profile-view", { targetUserId: userId });
-  }
+  // No activity row here: this read serves every profile sub-page and a
+  // spotlight card's accent colour, so logging it invented "Viewed X's
+  // profile" lines. Visits are the client's `profile` page view.
   const db = getDb();
   const today = todayDateKey();
 

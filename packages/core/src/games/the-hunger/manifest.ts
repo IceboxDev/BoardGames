@@ -7,10 +7,11 @@ const DIFFICULTY = {
   "heuristic-v1": "Medium",
   strigoi: "Hard",
   dracula: "Expert",
+  lilith: "Master",
 } as const satisfies Record<AIStrategyId, DifficultyTier>;
 
 // Easiest first.
-const ORDER: readonly AIStrategyId[] = ["random", "heuristic-v1", "strigoi", "dracula"];
+const ORDER: readonly AIStrategyId[] = ["random", "heuristic-v1", "strigoi", "dracula", "lilith"];
 
 export const HungerConfigSchema = z.object({
   /** Elder = board side B (end in the Castle or Cemetery); Rookie = side A. */

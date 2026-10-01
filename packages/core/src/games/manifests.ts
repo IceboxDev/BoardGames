@@ -19,6 +19,7 @@ import { setManifest } from "./set/manifest";
 import { skyTeamManifest } from "./sky-team/manifest";
 import { sushiGoManifest } from "./sushi-go/manifest";
 import { theHungerManifest } from "./the-hunger/manifest";
+import { resistanceManifest } from "./the-resistance/manifest";
 
 export const GAME_MANIFESTS: readonly GameManifest[] = [
   sevenWondersManifest,
@@ -34,6 +35,7 @@ export const GAME_MANIFESTS: readonly GameManifest[] = [
   skyTeamManifest,
   sushiGoManifest,
   theHungerManifest,
+  resistanceManifest,
 ];
 
 const bySlug = new Map(GAME_MANIFESTS.map((m) => [m.slug, m]));

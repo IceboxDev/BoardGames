@@ -103,6 +103,16 @@ export async function ackSpotlight(userId: string, greetingId: number): Promise<
   });
 }
 
+/** Who a spotlight is about — for the activity line — or null if no such greeting. */
+export async function spotlightSubject(greetingId: number): Promise<string | null> {
+  const { rows } = await getDb().execute({
+    sql: "SELECT subject_user_id FROM skill_greetings WHERE id = ?",
+    args: [greetingId],
+  });
+  const subject = rows[0]?.subject_user_id;
+  return typeof subject === "string" ? subject : null;
+}
+
 /**
  * The one greeting this viewer should see next, or null.
  *

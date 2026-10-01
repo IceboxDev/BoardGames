@@ -456,6 +456,10 @@ describe("/api/quiztopia", () => {
       expect(secondIds[0]).toBe("learning:c002-s01-q0");
       expect(secondIds[1]).toMatch(/^new:c00[12]-s01-q1$/);
       expect(second.body.counts).toEqual({ learning: 1, review: 0, new: 1 });
+      // The day's progress so far: c001-s01-q0 is done; the missed one is
+      // still queued and the game answer isn't study.
+      expect(first.body.doneToday).toBe(0);
+      expect(second.body.doneToday).toBe(1);
 
       const overview = await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`);
       expect(overview.body.categories[0]).toMatchObject({ newRemainingToday: 1, newAvailable: 8 });
@@ -467,21 +471,47 @@ describe("/api/quiztopia", () => {
       });
     });
 
-    it("round-robins the categories when none is given", async () => {
-      await call("PUT", "/settings", { language: "en", newPerDay: 2, newCardOrder: "originals" });
+    it("gives Study all one sitting's new budget across the districts", async () => {
+      await call("PUT", "/settings", { language: "en", newPerDay: 4, newCardOrder: "originals" });
       const { body } = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&limit=200`);
-      expect(body.items).toHaveLength(24);
-      expect(body.items.slice(0, 12).map((it) => it.category)).toEqual(
-        Array.from({ length: 12 }, (_, i) => i + 1),
-      );
-      // Each district leads with one of its originals (whichever the shuffle put first).
-      expect(body.items.slice(0, 12).every((it) => /^c00[12]-s\d\d-q0$/.test(it.questionId))).toBe(
-        true,
-      );
-      expect(body.counts).toEqual({ learning: 0, review: 0, new: 24 });
-      const limited = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&limit=5`);
-      expect(limited.body.items).toHaveLength(5);
-      expect(limited.body.counts.new).toBe(24);
+      // Four new questions in total, not four per district — from four districts.
+      expect(body.items).toHaveLength(4);
+      expect(new Set(body.items.map((it) => it.category)).size).toBe(4);
+      expect(body.items.every((it) => /^c00[12]-s\d\d-q0$/.test(it.questionId))).toBe(true);
+      expect(body.counts).toEqual({ learning: 0, review: 0, new: 4 });
+      const limited = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&limit=2`);
+      expect(limited.body.items).toHaveLength(2);
+      // A district's own session still gets its whole daily budget.
+      const one = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&category=3`);
+      expect(one.body.items).toHaveLength(4);
+    });
+
+    it("leaves the districts excluded from Study all out of it", async () => {
+      await call("PUT", "/settings", {
+        language: "en",
+        newPerDay: 10,
+        newSetsPerDay: 3,
+        excludeFromAll: [1, 2],
+      });
+      await seedState(client, "c001-s01-q0", {
+        state: "review",
+        intervalDays: 3,
+        dueDate: YESTERDAY,
+      });
+      await seedState(client, "c001-s03-q0", {
+        state: "review",
+        intervalDays: 3,
+        dueDate: YESTERDAY,
+      });
+      const all = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&limit=200`);
+      expect(all.body.items.some((it) => it.category === 1 || it.category === 2)).toBe(false);
+      // District 3's begun article is finished first and counts: it + two new ones.
+      expect(all.body.items.some((it) => it.questionId === "c001-s03-q0")).toBe(true);
+      expect(new Set(all.body.items.map((it) => it.setId)).size).toBe(3);
+      const own = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&category=1`);
+      expect(own.body.items.some((it) => it.questionId === "c001-s01-q0")).toBe(true);
+      const settings = await call<{ excludeFromAll: number[] }>("GET", "/settings");
+      expect(settings.body.excludeFromAll).toEqual([1, 2]);
     });
 
     it("in set mode, budgets whole articles and shuffles new and due into one mix", async () => {
@@ -511,17 +541,11 @@ describe("/api/quiztopia", () => {
 
       const mixed = await call<TrainerQueue>("GET", `/trainer/queue?today=${TODAY}&limit=200`);
       const mixedNew = mixed.body.items.filter((it) => it.tier === "new");
-      // District 2 first finishes the article its due card started (4 left),
-      // then takes a whole new one: 11 × 5 + 4 + 5.
-      expect(mixedNew).toHaveLength(64);
-      const perSet = new Map<string, number>();
-      for (const it of mixedNew) perSet.set(it.setId, (perSet.get(it.setId) ?? 0) + 1);
-      expect(perSet.get("c001-s02")).toBe(4);
-      perSet.delete("c001-s02");
-      expect([...perSet.values()].every((n) => n === 5)).toBe(true);
-      expect(new Set(mixedNew.map((it) => it.category)).size).toBe(12);
-      const firstFive = mixed.body.items.slice(0, 5).map((it) => it.setId);
-      expect(new Set(firstFive).size).toBeGreaterThan(1);
+      // Study all: the article the due card began (4 left) is finished first
+      // and uses the sitting's budget of one — no other new article.
+      expect(mixedNew).toHaveLength(4);
+      expect(new Set(mixedNew.map((it) => it.setId))).toEqual(new Set(["c001-s02"]));
+      expect(mixed.body.items.some((it) => it.questionId === "c001-s02-q0")).toBe(true);
     });
 
     it("hides leeches unless asked for them", async () => {
@@ -694,6 +718,7 @@ describe("/api/quiztopia", () => {
         gameReviewsAffectSrs: false,
         newCardOrder: "sets",
         newSetsPerDay: 3,
+        excludeFromAll: [],
       });
       const saved = await call("PUT", "/settings", {
         language: "de",
@@ -714,6 +739,7 @@ describe("/api/quiztopia", () => {
         gameReviewsAffectSrs: true,
         newCardOrder: "originals",
         newSetsPerDay: 2,
+        excludeFromAll: [],
       });
       const partial = await call("PUT", "/settings", { language: "both", newPerDay: 0 });
       expect(partial.body).toMatchObject({
@@ -736,6 +762,30 @@ describe("/api/quiztopia", () => {
           ),
         ).toBe(2);
       });
+      // Each row records only what that save changed…
+      const { rows } = await client.execute(
+        "SELECT meta_json FROM activity_log WHERE type = 'quiztopia-settings' ORDER BY sort_ms",
+      );
+      expect(JSON.parse(String(rows[1]?.meta_json))).toEqual({
+        changes: {
+          language: { from: "de", to: "both" },
+          newPerDay: { from: 5, to: 0 },
+          newPerDayByCategory: { from: { "3": 2 }, to: {} },
+          includeLeeches: { from: true, to: false },
+          gameReviewsAffectSrs: { from: true, to: false },
+          newCardOrder: { from: "originals", to: "sets" },
+          newSetsPerDay: { from: 2, to: 3 },
+        },
+      });
+      // …and a save that changes nothing is not activity.
+      expect((await call("PUT", "/settings", { language: "both", newPerDay: 0 })).status).toBe(200);
+      await new Promise((r) => setTimeout(r, 20));
+      expect(
+        await count(
+          client,
+          "SELECT COUNT(*) n FROM activity_log WHERE type = 'quiztopia-settings'",
+        ),
+      ).toBe(2);
     });
 
     it("applies a per-category new-card override to that category only", async () => {

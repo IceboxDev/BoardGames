@@ -7,7 +7,7 @@ import { createRng } from "../../lib/rng";
 import { matchLegalAction } from "../../machines/action-validation";
 import { heuristicPick } from "./ai-heuristic";
 import { getActivePlayer, getLegalActions } from "./rules";
-import { DEFAULT_DRACULA, type DraculaConfig, draculaPick } from "./search/dracula";
+import { DEFAULT_DRACULA, DEFAULT_LILITH, type DraculaConfig, draculaPick } from "./search/dracula";
 import { DEFAULT_STRIGOI, type StrigoiConfig, strigoiPick } from "./search/strigoi";
 import { type Action, type AIStrategyId, ALL_STRATEGIES, type GameState } from "./types";
 
@@ -70,7 +70,24 @@ const DRACULA: HungerStrategy = {
   },
 };
 
-export const STRATEGIES: readonly HungerStrategy[] = [HEURISTIC, RANDOM, STRIGOI, DRACULA];
+/** Live Lilith settings (the worker sets her time budget via `configureLilith`). */
+const lilithConfig: DraculaConfig = { ...DEFAULT_LILITH };
+export function configureLilith(patch: Partial<DraculaConfig>): void {
+  Object.assign(lilithConfig, patch);
+}
+
+const LILITH: HungerStrategy = {
+  ...meta("lilith"),
+  pickAction: (state, seat, legal) => {
+    try {
+      return draculaPick(state, seat, legal, lilithConfig);
+    } catch {
+      return strigoiPick(state, seat, legal, strigoiConfig);
+    }
+  },
+};
+
+export const STRATEGIES: readonly HungerStrategy[] = [HEURISTIC, RANDOM, STRIGOI, DRACULA, LILITH];
 
 /** Bench-only variants (e.g. `strigoi:rollouts=384`), looked up after the shipped ones. */
 const EXTRA = new Map<string, HungerStrategy>();

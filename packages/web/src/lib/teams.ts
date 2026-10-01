@@ -1,10 +1,16 @@
 import { type Rng, shuffle } from "@boardgames/core/lib/rng";
 import { z } from "zod";
+import { defaultKindForSlug } from "../games/match-kinds";
 import type { Attendee } from "./calendar-games";
 
-// Team generator for a night's Attendees tab. Entirely client-side: whoever
-// taps "Make teams" holds their phone up to the table, and the split is kept
-// per night in localStorage so closing the modal doesn't lose it.
+// Team generator for a night's Attendees tab. Whoever taps "Make teams" holds
+// their phone up to the table, and the split is kept per night in
+// localStorage so closing the modal doesn't lose it.
+//
+// Two ways to deal: BALANCED asks the server for the fairest split for the
+// chosen game (the rating engine's strengths never leave the server — the
+// answer is teams + win chances), RANDOM shuffles right here, and is also
+// the fallback when the server can't be reached.
 
 /** Shuffle, then deal round-robin: sizes differ by at most one, no team is empty. */
 export function dealTeams(ids: readonly string[], teamCount: number, rng?: Rng): string[][] {
@@ -41,15 +47,33 @@ export function splitCaption(poolSize: number, teamCount: number): string {
   return Array.from({ length: count }, (_, i) => base + (i < extra ? 1 : 0)).join(" + ");
 }
 
+export type TeamsMode = "balanced" | "random";
+
 const TeamsStateSchema = z.object({
   teamCount: z.number().int().min(1),
   /** userId → in (true) / out (false), only where it differs from `defaultInPool`. */
   overrides: z.record(z.string(), z.boolean()),
   teams: z.array(z.array(z.string())).nullable(),
+  // Added with balancing; older saves parse with the defaults.
+  mode: z.enum(["balanced", "random"]).default("balanced"),
+  /** The game the teams are balanced for; null until one is picked. */
+  slug: z.string().nullable().default(null),
+  /** Win chance per team of a balanced deal (same order as `teams`). */
+  chances: z.array(z.number()).nullable().default(null),
+  /** Players whose strength in `slug` was a guess: "traits" (never played it) or "unknown". */
+  guessed: z.record(z.string(), z.enum(["traits", "unknown"])).default({}),
 });
 export type TeamsState = z.infer<typeof TeamsStateSchema>;
 
-export const DEFAULT_TEAMS_STATE: TeamsState = { teamCount: 2, overrides: {}, teams: null };
+export const DEFAULT_TEAMS_STATE: TeamsState = {
+  teamCount: 2,
+  overrides: {},
+  teams: null,
+  mode: "balanced",
+  slug: null,
+  chances: null,
+  guessed: {},
+};
 
 const storageKey = (date: string) => `bg:teams:${date}`;
 
@@ -70,4 +94,28 @@ export function saveTeams(date: string, state: TeamsState): void {
   } catch {
     // Private window / storage full: the teams still show, they just won't survive a reload.
   }
+}
+
+/**
+ * A game played in teams: recorded as a team match by default, or tagged a
+ * team game on BoardGameGeek. Only a hint for the picker's ordering — any
+ * game can be balanced for.
+ */
+export function isTeamGame(slug: string, mechanics: readonly string[]): boolean {
+  return defaultKindForSlug(slug) === "teams" || mechanics.includes("Team-Based Game");
+}
+
+/** A fresh seed for the server's pick among equally fair splits. */
+export function newSeed(): number {
+  return Math.floor(Math.random() * 2 ** 31);
+}
+
+/**
+ * How even a deal is, from its win chances: the gap between the likeliest
+ * and the least likely team.
+ */
+export function evenness(chances: readonly number[]): "even" | "close" | "uneven" {
+  if (chances.length < 2) return "even";
+  const gap = Math.max(...chances) - Math.min(...chances);
+  return gap < 0.05 ? "even" : gap < 0.15 ? "close" : "uneven";
 }

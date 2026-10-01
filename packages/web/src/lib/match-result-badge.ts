@@ -1,3 +1,4 @@
+import { ffaRankStanding } from "@boardgames/core/history/participant-results";
 import type { MatchOutcome, MatchOutcomeFreeForAll } from "@boardgames/core/protocol";
 import type { BadgeTone } from "../components/ui/Badge.tsx";
 import {
@@ -11,6 +12,7 @@ import {
 //   - Score-based free-for-all (7 Wonders highest-wins, Bandit lowest-wins, …):
 //     placement — 1st = "Won" (green), last = "Last" (red), middle = "2nd"/"3rd"
 //     (amber). Point-less FFA (Villainous) has no placement → Won/Lost.
+//     Trivial Pursuit: the crowned winner, then the rest by wedges held.
 //   - Scored co-op (Just One): the team score as `score / max` (e.g. "6 / 13"),
 //     green at the game's max else amber.
 //   - Last-standing with recorded `survivorRank`s (poker chip standings): the
@@ -62,11 +64,13 @@ function freeForAllBadge(
   // When players carry an explicit `rank` a tie was broken into a strict 1..n
   // order, so placement follows rank — otherwise two tied scores would both read
   // as "2nd" with nobody in "3rd".
+  // Unranked players below the ranked ones: by pie wedges when recorded
+  // (Trivial Pursuit), else tied last (`ffaRankStanding`, shared with stats).
   const rankMode = outcome.players.some((p) => p.rank !== undefined);
   const lowWins = lowScoreWinsForSlug(gameSlug);
+  const standing = ffaRankStanding(outcome);
   const better = rankMode
-    ? (a: FreeForAllPlayer, b: FreeForAllPlayer) =>
-        (a.rank ?? Number.POSITIVE_INFINITY) < (b.rank ?? Number.POSITIVE_INFINITY)
+    ? (a: FreeForAllPlayer, b: FreeForAllPlayer) => standing(a) < standing(b)
     : (a: FreeForAllPlayer, b: FreeForAllPlayer) =>
         lowWins ? a.score < b.score : a.score > b.score;
   const placement = 1 + outcome.players.filter((p) => better(p, me)).length;

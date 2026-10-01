@@ -1,6 +1,7 @@
 import { isLeech, type SrsState } from "@boardgames/core/games/quiztopia/srs";
 import type { QuiztopiaLanguage } from "@boardgames/core/protocol";
 import { motion, useReducedMotion } from "framer-motion";
+import { useRef } from "react";
 import { boardSpring } from "../../../../components/board/motion";
 import {
   Badge,
@@ -29,7 +30,9 @@ import { EditorNote } from "../wiki/EditorNote";
 // editor's note when the card has one. The reveal is a real flip
 // (rotateY on a preserve-3d stack); with reduced motion the faces crossfade
 // instead. Both faces share one grid cell, so the card's height is the
-// taller face and the grade bar never jumps.
+// taller face and the grade bar never jumps. The back holds the card it
+// was revealed on while it turns away, so grading never flashes the next
+// card's answer mid-flip.
 
 type Props = {
   card: CurrentCard;
@@ -76,33 +79,28 @@ export function FlashCard({
   const flip = !reduced;
   const primary: "en" | "de" = language === "de" ? "de" : "en";
   const questions = pickTexts(language, card.question.en, card.question.de);
-  const answers = pickTexts(language, card.question.answerEn, card.question.answerDe);
-  const tier = tierBadge(state);
-  const ref = `${card.item.cardId} · Q${card.q + 1}${card.q === 0 ? " · original" : ""}`;
 
-  const header = (
-    <div className="flex flex-wrap items-center gap-2">
-      <Badge
-        tone={d.tone}
-        size="sm"
-        icon={<BuildingGlyph name={d.building} lit size={12} />}
-        title={`${d.label} · ${d.en} / ${d.de}`}
-      >
-        {d.label} · {primary === "de" ? d.de : d.en}
-      </Badge>
-      <Badge tone={tier.tone} size="xs">
-        {tier.label}
-      </Badge>
-      <MicroLabel className="ml-auto">{ref}</MicroLabel>
-    </div>
-  );
+  // What the back shows: the live card while revealed, else the card it
+  // was last revealed on (turning away, or already turned).
+  const live: BackView = {
+    card,
+    district: d,
+    state,
+    snippet,
+    snippetPending,
+    articleHref,
+    timelineHref,
+  };
+  const held = useRef(live);
+  if (revealed) held.current = live;
+  const back = revealed ? live : held.current;
 
-  const face = "col-start-1 row-start-1 flex min-h-64 flex-col";
+  const face = "col-start-1 row-start-1 flex min-h-64 min-w-0 flex-col";
 
   return (
-    <div className={cn("w-full", className)} style={{ perspective: 1400 }}>
+    <div className={cn("w-full min-w-0", className)} style={{ perspective: 1400 }}>
       <motion.div
-        className="grid"
+        className="grid grid-cols-1"
         style={{ transformStyle: flip ? "preserve-3d" : undefined }}
         animate={{ rotateY: flip && revealed ? 180 : 0 }}
         transition={flip ? boardSpring : { duration: 0 }}
@@ -116,38 +114,45 @@ export function FlashCard({
           inert={revealed}
           aria-hidden={revealed}
         >
-          <Surface variant="raised" padding="none" className="flex flex-1 flex-col overflow-hidden">
+          <Surface
+            variant="raised"
+            padding="none"
+            className="relative flex min-w-0 flex-1 flex-col overflow-hidden"
+          >
             <span className={cn("block h-1 w-full", TONE_STRIP[d.tone])} aria-hidden="true" />
+            {/* The text lays out as ordinary flow; the tap target is a
+                full-card overlay, so no button's intrinsic sizing (which
+                iOS Safari lets grow past the screen) ever reaches it. */}
+            <div className="flex min-w-0 flex-1 flex-col gap-4 p-5">
+              <CardHeader card={card} district={d} state={state} primary={primary} />
+              <div className="flex min-w-0 flex-1 flex-col justify-center gap-2 py-4">
+                {questions.map((text, i) => (
+                  <p
+                    key={text}
+                    lang={i === 0 ? primary : primary === "en" ? "de" : "en"}
+                    className={cn(
+                      "hyphens-auto break-words",
+                      i === 0
+                        ? "text-lg font-semibold leading-snug text-fg-strong sm:text-xl"
+                        : "text-sm text-fg-secondary",
+                    )}
+                  >
+                    {text}
+                  </p>
+                ))}
+              </div>
+              <p className="flex items-center gap-1.5 text-2xs text-fg-muted">
+                Tap to reveal
+                <Kbd className="hidden sm:inline-flex">Space</Kbd>
+              </p>
+            </div>
             <Button
               variant="plain"
               bleed
-              align="start"
+              aria-label="Reveal the answer"
               onClick={onReveal}
-              className="cursor-pointer text-left hover:bg-fill-soft"
-            >
-              <div className="flex w-full flex-1 flex-col gap-4 p-5">
-                {header}
-                <div className="flex flex-1 flex-col justify-center gap-2 py-4">
-                  {questions.map((text, i) => (
-                    <p
-                      key={text}
-                      lang={i === 0 ? primary : primary === "en" ? "de" : "en"}
-                      className={
-                        i === 0
-                          ? "text-lg font-semibold leading-snug text-fg-strong sm:text-xl"
-                          : "text-sm text-fg-secondary"
-                      }
-                    >
-                      {text}
-                    </p>
-                  ))}
-                </div>
-                <p className="flex items-center gap-1.5 text-2xs text-fg-muted">
-                  Tap to reveal
-                  <Kbd className="hidden sm:inline-flex">Space</Kbd>
-                </p>
-              </div>
-            </Button>
+              className="absolute inset-0 z-lift cursor-pointer hover:bg-fill-soft"
+            />
           </Surface>
         </motion.div>
 
@@ -163,79 +168,137 @@ export function FlashCard({
           inert={!revealed}
           aria-hidden={!revealed}
         >
-          <Surface variant="raised" padding="none" className="flex flex-1 flex-col overflow-hidden">
-            <span className={cn("block h-1 w-full", TONE_STRIP[d.tone])} aria-hidden="true" />
-            <div className="flex flex-1 flex-col gap-4 p-5">
-              {header}
-              <p className="text-sm text-fg-secondary" lang={primary}>
-                {questions[0]}
-              </p>
-              <div className="flex flex-col gap-1">
-                <Eyebrow tone={d.tone} size="sm">
-                  Answer
-                </Eyebrow>
-                {answers.map((text, i) => (
-                  <p
-                    key={text}
-                    className={
-                      i === 0
-                        ? cn("text-2xl font-bold leading-tight", TONE_TEXT[d.tone])
-                        : "text-base font-medium text-fg-secondary"
-                    }
-                  >
-                    {text}
-                  </p>
-                ))}
-              </div>
-              {snippet ? (
-                <p className="text-sm leading-relaxed text-fg-secondary" lang={primary}>
-                  <span className="text-fg-muted">From the article: </span>
-                  {snippet.before}
-                  <AnswerMark tone={d.tone}>{snippet.match}</AnswerMark>
-                  {snippet.after}
-                </p>
-              ) : snippetPending ? (
-                <p className="text-sm text-fg-muted">Finding the passage…</p>
-              ) : null}
-              <div>
-                <TextLink to={articleHref}>Read full article →</TextLink>
-              </div>
-              {(card.question.timeline || card.question.source) && (
-                <div className="flex flex-col items-start gap-1.5">
-                  {card.question.timeline && (
-                    <TimelineChip
-                      event={card.question.timeline}
-                      lang={primary}
-                      tone={d.tone}
-                      caption={
-                        primary === "de"
-                          ? state
-                            ? "Auf deiner Zeitleiste"
-                            : "Kommt auf deine Zeitleiste"
-                          : state
-                            ? "Pinned to your timeline"
-                            : "Pins to your timeline"
-                      }
-                      to={timelineHref}
-                    />
-                  )}
-                  {card.question.source && (
-                    <SourceLink
-                      source={card.question.source}
-                      label={primary === "de" ? "Quelle" : "Source"}
-                    />
-                  )}
-                </div>
-              )}
-              <EditorNote
-                language={language}
-                notesEn={card.set.notesEn}
-                notesDe={card.set.notesDe}
-              />
-            </div>
-          </Surface>
+          <BackFace view={back} language={language} primary={primary} />
         </motion.div>
       </motion.div>
     </div>
+  );
+}
+
+type BackView = {
+  card: CurrentCard;
+  district: District;
+  state: SrsState | null;
+  snippet: Snippet | null;
+  snippetPending: boolean;
+  articleHref: string;
+  timelineHref: string;
+};
+
+function CardHeader({
+  card,
+  district: d,
+  state,
+  primary,
+}: {
+  card: CurrentCard;
+  district: District;
+  state: SrsState | null;
+  primary: "en" | "de";
+}) {
+  const tier = tierBadge(state);
+  const ref = `${card.item.cardId} · Q${card.q + 1}${card.q === 0 ? " · original" : ""}`;
+  return (
+    <div className="flex flex-wrap items-center gap-2">
+      <Badge
+        tone={d.tone}
+        size="sm"
+        icon={<BuildingGlyph name={d.building} lit size={12} />}
+        title={`${d.label} · ${d.en} / ${d.de}`}
+      >
+        {d.label} · {primary === "de" ? d.de : d.en}
+      </Badge>
+      <Badge tone={tier.tone} size="xs">
+        {tier.label}
+      </Badge>
+      <MicroLabel className="ml-auto">{ref}</MicroLabel>
+    </div>
+  );
+}
+
+function BackFace({
+  view,
+  language,
+  primary,
+}: {
+  view: BackView;
+  language: QuiztopiaLanguage;
+  primary: "en" | "de";
+}) {
+  const { card, district: d, state, snippet, snippetPending, articleHref, timelineHref } = view;
+  const questions = pickTexts(language, card.question.en, card.question.de);
+  const answers = pickTexts(language, card.question.answerEn, card.question.answerDe);
+  return (
+    <Surface
+      variant="raised"
+      padding="none"
+      className="flex min-w-0 flex-1 flex-col overflow-hidden break-words"
+    >
+      <span className={cn("block h-1 w-full", TONE_STRIP[d.tone])} aria-hidden="true" />
+      <div className="flex min-w-0 flex-1 flex-col gap-4 p-5">
+        <CardHeader card={card} district={d} state={state} primary={primary} />
+        <p className="text-sm text-fg-secondary" lang={primary}>
+          {questions[0]}
+        </p>
+        <div className="flex flex-col gap-1">
+          <Eyebrow tone={d.tone} size="sm">
+            Answer
+          </Eyebrow>
+          {answers.map((text, i) => (
+            <p
+              key={text}
+              className={
+                i === 0
+                  ? cn("text-2xl font-bold leading-tight", TONE_TEXT[d.tone])
+                  : "text-base font-medium text-fg-secondary"
+              }
+            >
+              {text}
+            </p>
+          ))}
+        </div>
+        {snippet ? (
+          <p className="text-sm leading-relaxed text-fg-secondary" lang={primary}>
+            <span className="text-fg-muted">From the article: </span>
+            {snippet.before}
+            <AnswerMark tone={d.tone}>{snippet.match}</AnswerMark>
+            {snippet.after}
+          </p>
+        ) : snippetPending ? (
+          <p className="text-sm text-fg-muted">Finding the passage…</p>
+        ) : null}
+        <div>
+          <TextLink to={articleHref}>Read full article →</TextLink>
+        </div>
+        {(card.question.timeline || card.question.source) && (
+          <div className="flex flex-col items-start gap-1.5">
+            {card.question.timeline && (
+              <TimelineChip
+                event={card.question.timeline}
+                lang={primary}
+                tone={d.tone}
+                caption={
+                  primary === "de"
+                    ? state
+                      ? "Auf deiner Zeitleiste"
+                      : "Kommt auf deine Zeitleiste"
+                    : state
+                      ? "Pinned to your timeline"
+                      : "Pins to your timeline"
+                }
+                to={timelineHref}
+              />
+            )}
+            {card.question.source && (
+              <SourceLink
+                source={card.question.source}
+                label={primary === "de" ? "Quelle" : "Source"}
+              />
+            )}
+          </div>
+        )}
+        <EditorNote language={language} notesEn={card.set.notesEn} notesDe={card.set.notesDe} />
+      </div>
+    </Surface>
   );
 }

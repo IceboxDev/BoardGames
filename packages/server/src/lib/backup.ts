@@ -92,11 +92,19 @@ export async function writeLogicalDump(
       const total = Number(count.rows[0]?.n ?? 0);
       if (total === 0) continue;
       sink(`-- ${table} (${total} rows)`);
+      // Only STORED columns are dumped. A generated column (`hidden` 2 =
+      // virtual, 3 = stored) is recomputed by the restore, and SQLite refuses
+      // an INSERT that names one — `SELECT *` would include it.
+      const info = await tx.execute({
+        sql: "SELECT name FROM pragma_table_xinfo(?) WHERE hidden = 0 ORDER BY cid",
+        args: [table],
+      });
+      const selected = info.rows.map((r) => `"${String(r.name)}"`).join(", ");
       // Keyset paging on rowid: stable inside the snapshot and O(n) overall.
       let lastRowid = -1;
       for (;;) {
         const page = await tx.execute({
-          sql: `SELECT rowid AS __rowid, * FROM "${table}" WHERE rowid > ? ORDER BY rowid LIMIT ?`,
+          sql: `SELECT rowid AS __rowid, ${selected} FROM "${table}" WHERE rowid > ? ORDER BY rowid LIMIT ?`,
           args: [lastRowid, PAGE_SIZE],
         });
         if (page.rows.length === 0) break;

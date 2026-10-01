@@ -12,6 +12,7 @@ import {
 } from "@boardgames/core/history/coop-challenge";
 import { describeDecryptoRecordError } from "@boardgames/core/history/decrypto-tokens";
 import { describeRoundScoresError } from "@boardgames/core/history/round-scores";
+import { TRIVIAL_PURSUIT_SLUG } from "@boardgames/core/history/trivial-pursuit";
 import type {
   MatchKind,
   MatchOutcome,
@@ -185,6 +186,7 @@ export function describeOutcomeError(
       if (gameSlug === "one-night-ultimate-werewolf") return describeWerewolfError(outcome);
       if (gameSlug === "the-resistance") return describeResistanceError(outcome);
       if (gameSlug === "decrypto") return describeDecryptoError(outcome);
+      if (gameSlug === TRIVIAL_PURSUIT_SLUG) return describeTrivialPursuitTeamsError(outcome);
       return describeGenericTeamsError(outcome);
     case "last-standing":
       if (outcome.players.length < 2) return "Add at least two players";
@@ -314,6 +316,14 @@ export function describeSingleWinnerError(outcome: MatchOutcomeFreeForAll): stri
   const winners = outcome.players.filter((p) => p.rank === 1);
   if (winners.length === 0) return "Crown the player who won";
   if (winners.length > 1) return "Only one player can win";
+  return null;
+}
+
+/** Trivial Pursuit in teams: the generic checks, and exactly ONE winning team. */
+export function describeTrivialPursuitTeamsError(outcome: MatchOutcomeTeams): string | null {
+  const generic = describeGenericTeamsError(outcome);
+  if (generic) return generic;
+  if (outcome.winnerTeamIndices.length > 1) return "Only one team can win";
   return null;
 }
 

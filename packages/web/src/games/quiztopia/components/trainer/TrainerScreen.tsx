@@ -15,7 +15,14 @@ type Props = {
 
 export function TrainerScreen({ children, className }: Props) {
   return (
-    <div className={cn("relative z-raised h-full overflow-y-auto", TRAINER_BG, className)}>
+    // overflow-x-hidden: nothing may pan the screen sideways on a phone.
+    <div
+      className={cn(
+        "relative z-raised h-full overflow-y-auto overflow-x-hidden",
+        TRAINER_BG,
+        className,
+      )}
+    >
       {children}
     </div>
   );

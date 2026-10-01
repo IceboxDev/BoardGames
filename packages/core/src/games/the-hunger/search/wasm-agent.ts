@@ -49,6 +49,10 @@ export const DRACULA_CONFIG_FIELDS = [
   "tierMargin",
   "turnPlans",
   "maxPlans",
+  "survival",
+  "rivals",
+  "goals",
+  "followPlan",
 ] as const;
 
 /**
@@ -65,7 +69,7 @@ export function configArray(
   });
 }
 
-const ABI_VERSION = 1;
+const ABI_VERSION = 2;
 const HG_ERRORS: Record<number, string> = {
   [-1]: "parse",
   [-2]: "seat",

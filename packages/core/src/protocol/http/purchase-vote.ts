@@ -23,8 +23,20 @@ export const PurchaseTallyEntrySchema = z.object({
 });
 export type PurchaseTallyEntry = z.infer<typeof PurchaseTallyEntrySchema>;
 
+/** A poll's theme, written by the admin who opens it: a headline ("The
+ * October vote: games for the whole table") and a paragraph on why these
+ * contenders. Both null on polls opened before themes existed; absent on
+ * the wire (a server older than the theme) reads as null. */
+export const POLL_TITLE_MAX = 80;
+export const POLL_BLURB_MAX = 600;
+export const PollThemeShape = {
+  title: z.string().min(1).max(POLL_TITLE_MAX).nullable().default(null),
+  blurb: z.string().min(1).max(POLL_BLURB_MAX).nullable().default(null),
+};
+
 export const PurchasePollSchema = z.object({
   id: z.number().int().positive(),
+  ...PollThemeShape,
   /** Candidate slugs, in the admin's order. Unrefined on read. */
   candidates: z.array(z.string().min(1)).min(1),
   requiredVoters: z.number().int().min(1),
@@ -88,6 +100,7 @@ export type AdminPurchaseTallyEntry = z.infer<typeof AdminPurchaseTallyEntrySche
 
 export const AdminPurchasePollSchema = z.object({
   id: z.number().int().positive(),
+  ...PollThemeShape,
   createdAt: z.string().min(1),
   candidates: z.array(z.string().min(1)).min(1),
   requiredVoters: z.number().int().min(1),
@@ -125,6 +138,9 @@ export const AdminCreatePollBodySchema = z.object({
       });
     }),
   requiredVoters: z.number().int().min(1).max(99),
+  /** Optional theme; blank strings mean "no theme". */
+  title: z.string().trim().max(POLL_TITLE_MAX).optional(),
+  blurb: z.string().trim().max(POLL_BLURB_MAX).optional(),
 });
 export type AdminCreatePollBody = z.infer<typeof AdminCreatePollBodySchema>;
 

@@ -4,6 +4,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import {
   Button,
   Checkbox,
+  Chip,
   Drawer,
   ErrorAlert,
   FieldGroup,
@@ -14,13 +15,16 @@ import {
 } from "../../../../components/ui";
 import { errorMessageOf } from "../../../../lib/error-message";
 import { resetProgress } from "../../api";
+import { DISTRICTS } from "../../bands";
 import { PENDING_REVIEWS_KEY } from "../../hooks/useOfflineReviewQueue";
 import { useQuiztopiaSettings } from "../../hooks/useQuiztopiaSettings";
+import { BuildingGlyph } from "../common/BuildingGlyph";
 import { LanguageToggle } from "../common/LanguageToggle";
 
 // The trainer's preferences in a right-hand drawer: question language, how
 // new cards arrive (whole sets or originals first), the daily budget of new
-// cards per district, and the two schedule switches.
+// cards, which districts "Study all" draws from, and the two schedule
+// switches.
 // Every change saves on its own (one PUT of the whole object); the stepper
 // waits a beat so a run of taps becomes one request. "Reset progress" wipes
 // the server-side schedule after a confirm.
@@ -134,11 +138,11 @@ export function SettingsDrawer({ onClose }: Props) {
       </FieldGroup>
 
       <FieldGroup
-        label={bySet ? "New articles per district, per day" : "New cards per district, per day"}
+        label={bySet ? "New articles per session" : "New cards per session"}
         hint={
           bySet
-            ? "You read the new articles first, then their questions are shuffled in with everything due. Reviews are never capped."
-            : "Reviews are never capped — this only paces how fast the city grows."
+            ? "“Study all” brings this many new articles from any district; a district's own session this many from it (at most that many a day per district). You read them first, then their questions are shuffled in with everything due. Reviews are never capped."
+            : "“Study all” brings this many new cards from any district; a district's own session this many from it. Reviews are never capped."
         }
       >
         <Stepper
@@ -146,13 +150,13 @@ export function SettingsDrawer({ onClose }: Props) {
           min={0}
           max={bySet ? 10 : 50}
           size="sm"
-          label={bySet ? "New articles per district per day" : "New cards per district per day"}
+          label={bySet ? "New articles per session" : "New cards per session"}
           caption={
             budget === 0
               ? "Nothing new — reviews only"
               : bySet
-                ? `${budget} ${budget === 1 ? "article" : "articles"} · ${budget * 5} questions per district`
-                : `Up to ${budget * 12} new cards a day across the city`
+                ? `${budget} ${budget === 1 ? "article" : "articles"} · ${budget * 5} questions`
+                : `${budget} new ${budget === 1 ? "card" : "cards"}`
           }
           onChange={(next) => {
             dirty.current = true;
@@ -160,6 +164,37 @@ export function SettingsDrawer({ onClose }: Props) {
           }}
           disabled={!loaded}
         />
+      </FieldGroup>
+
+      <FieldGroup
+        label="“Study all” includes"
+        hint="Tap a district to leave it out of “Study all” — due cards and new articles alike. Its own tile still studies it."
+      >
+        <div className="flex flex-wrap gap-1.5">
+          {DISTRICTS.map((d) => {
+            const included = !settings.excludeFromAll.includes(d.n);
+            return (
+              <Chip
+                key={d.slug}
+                pressed={included}
+                tone={d.tone}
+                size="xs"
+                shape="pill"
+                icon={<BuildingGlyph name={d.building} lit={included} size={11} />}
+                disabled={!loaded}
+                onClick={() =>
+                  patch({
+                    excludeFromAll: included
+                      ? [...settings.excludeFromAll, d.n].sort((a, b) => a - b)
+                      : settings.excludeFromAll.filter((n) => n !== d.n),
+                  })
+                }
+              >
+                {d.en}
+              </Chip>
+            );
+          })}
+        </div>
       </FieldGroup>
 
       <FieldGroup label="Schedule">

@@ -5,6 +5,7 @@
 
 export * from "./common.ts";
 export * from "./http/activity.ts";
+export * from "./http/activity-events.ts";
 export * from "./http/agent.ts";
 export * from "./http/arrivals.ts";
 export * from "./http/auth.ts";

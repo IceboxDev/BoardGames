@@ -207,6 +207,10 @@ const router = createBrowserRouter(
           <Route path="dev/hunger-board" lazy={page(() => import("./pages/HungerBoardEditor"))} />
           <Route path="dev/hunger-cards" lazy={page(() => import("./pages/HungerCards"))} />
           <Route
+            path="dev/resistance-preview"
+            lazy={page(() => import("./pages/ResistancePreview"))}
+          />
+          <Route
             path="dev/quiztopia-preview"
             lazy={page(() => import("./pages/QuiztopiaPreview"))}
           />
@@ -214,6 +218,10 @@ const router = createBrowserRouter(
           <Route
             path="dev/jaipur-preview"
             lazy={page(() => import("./pages/JaipurHistoryPreview"))}
+          />
+          <Route
+            path="dev/trivial-pursuit-preview"
+            lazy={page(() => import("./pages/TrivialPursuitHistoryPreview"))}
           />
           <Route
             path="dev/admin-inactive-preview"

@@ -301,10 +301,62 @@ function mergeRoundRobin(lists: readonly QueueItem[][]): QueueItem[] {
 }
 
 /**
+ * Keeps at most `budget` new units (a unit = an article's set id, or a
+ * question id) across the districts' queues, in place: districts take turns
+ * in a seeded order, each offering its next unit, so the day's few new
+ * articles come from different districts. Due items are untouched. Units
+ * in `started` (an article already begun) are always kept — finished
+ * first — and count toward the budget.
+ */
+export function capNewAcross(
+  perCategory: QueueItem[][],
+  budget: number,
+  unitOf: (questionId: string) => string,
+  seed: number,
+  started: ReadonlySet<string> = new Set(),
+): void {
+  const units = perCategory.map((items) => {
+    const seen: string[] = [];
+    for (const it of items) {
+      if (it.tier !== "new") continue;
+      const u = unitOf(it.questionId);
+      if (!started.has(u) && !seen.includes(u)) seen.push(u);
+    }
+    return seen;
+  });
+  const keep = new Set<string>();
+  for (const items of perCategory) {
+    for (const it of items) {
+      const u = unitOf(it.questionId);
+      if (it.tier === "new" && started.has(u)) keep.add(u);
+    }
+  }
+  const order = seededShuffle(
+    perCategory.map((_, i) => i),
+    seed,
+  );
+  for (let round = 0; keep.size < budget; round++) {
+    let offered = false;
+    for (const i of order) {
+      const u = units[i][round];
+      if (u === undefined) continue;
+      offered = true;
+      if (keep.size < budget) keep.add(u);
+    }
+    if (!offered) break;
+  }
+  for (let i = 0; i < perCategory.length; i++) {
+    perCategory[i] = perCategory[i].filter(
+      (it) => it.tier !== "new" || keep.has(unitOf(it.questionId)),
+    );
+  }
+}
+
+/**
  * Today's queue. With a category: that programme's learning → review →
- * new items under its daily new-card cap. Without: every category's
- * queue under the same per-category caps, round-robined tier by tier so
- * one district cannot crowd the rest out.
+ * new items under its daily new-card cap. Without ("Study all"): every
+ * due item of the districts not left out, plus one sitting's new budget
+ * drawn across them (`capNewAcross`), mixed so no district crowds the rest.
  */
 export async function trainerQueue(
   db: Client,
@@ -314,7 +366,7 @@ export async function trainerQueue(
   settings: QuiztopiaSettings,
 ): Promise<TrainerQueue> {
   const includeLeeches = opts.includeLeeches || settings.includeLeeches;
-  const [seenRows, dueRows, introduced] = await Promise.all([
+  const [seenRows, dueRows, introduced, reviewedRows] = await Promise.all([
     db.execute({
       sql: `SELECT question_id, category FROM quiztopia_srs
              WHERE user_id = ?${opts.category !== undefined ? " AND category = ?" : ""}`,
@@ -322,6 +374,14 @@ export async function trainerQueue(
     }),
     readAllStates(db, userId, { category: opts.category, dueBy: opts.today }),
     newIntroducedToday(db, userId, opts.today),
+    db.execute({
+      sql: `SELECT DISTINCT question_id FROM quiztopia_reviews
+             WHERE user_id = ? AND local_date = ? AND source = 'trainer' AND applied = 1${
+               opts.category !== undefined ? " AND category = ?" : ""
+             }`,
+      args:
+        opts.category !== undefined ? [userId, opts.today, opts.category] : [userId, opts.today],
+    }),
   ]);
 
   const seenByCategory = new Map<number, Set<string>>();
@@ -347,7 +407,11 @@ export async function trainerQueue(
     list.push(state);
   }
 
-  const categories = opts.category !== undefined ? [opts.category] : CATEGORIES;
+  // "Study all" skips the districts the member left out of it.
+  const categories =
+    opts.category !== undefined
+      ? [opts.category]
+      : CATEGORIES.filter((n) => !settings.excludeFromAll.includes(n));
   const bySet = settings.newCardOrder === "sets";
   const perCategory = categories.map((n) => {
     // A per-user, per-district shuffle: stable for the learner, random
@@ -368,6 +432,22 @@ export async function trainerQueue(
       shuffleSeed: bySet ? hashSeed(`${userId}:${opts.today}:${n}`) : undefined,
     });
   });
+  // "Study all" introduces one sitting's budget in total — `newSetsPerDay`
+  // articles (or `newPerDay` questions) drawn across the districts — not
+  // every district's full daily budget at once.
+  // An article already begun is finished first, as part of the budget.
+  if (opts.category === undefined) {
+    const started = new Set<string>();
+    if (bySet)
+      for (const ids of seenByCategory.values()) for (const id of ids) started.add(setIdOf(id));
+    capNewAcross(
+      perCategory,
+      bySet ? settings.newSetsPerDay : settings.newPerDay,
+      bySet ? setIdOf : (id) => id,
+      hashSeed(`${userId}:${opts.today}:new`),
+      started,
+    );
+  }
   // Several districts: round-robin tier by tier — except in whole-set mode,
   // where the day is one shuffled mix of new and due across every district.
   const merged =
@@ -392,5 +472,13 @@ export async function trainerQueue(
       state: it.state ? toWireState(it.state) : null,
     });
   }
-  return { today: opts.today, items, counts };
+  // Questions studied today that the queue no longer holds: a sitting
+  // picked up again later in the day counts on from them, not from zero.
+  const queued = new Set(merged.map((it) => it.questionId));
+  const doneToday = parseRows(
+    z.object({ question_id: z.string() }),
+    reviewedRows.rows,
+    "quiztopia_reviews.done-today",
+  ).filter((r) => !queued.has(r.question_id)).length;
+  return { today: opts.today, items, counts, doneToday };
 }

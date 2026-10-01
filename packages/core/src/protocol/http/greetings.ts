@@ -2,7 +2,7 @@ import { z } from "zod";
 import { NightKeySchema, TimeOfDaySchema } from "../common.ts";
 import { ArrivalGreetingSchema } from "./arrivals.ts";
 import { NightSeatsSchema, PickModeSchema } from "./calendar.ts";
-import { VOTES_PER_PLAYER } from "./purchase-vote.ts";
+import { PollThemeShape, VOTES_PER_PLAYER } from "./purchase-vote.ts";
 import { GreetingSchema, SkillPlayerRefSchema } from "./skills.ts";
 
 // ── App-wide greeting queue: GET /api/greetings + POST /api/greetings/ack
@@ -22,6 +22,7 @@ import { GreetingSchema, SkillPlayerRefSchema } from "./skills.ts";
 export const PurchaseVoteAnnounceGreetingSchema = z.object({
   kind: z.literal("purchase-vote-announce"),
   pollId: z.number().int().positive(),
+  ...PollThemeShape,
   /** Candidate slugs — the announce card shows a strip of contenders. */
   candidates: z.array(z.string().min(1)).min(1),
   voterCount: z.number().int().min(0),
@@ -32,6 +33,7 @@ export type PurchaseVoteAnnounceGreeting = z.infer<typeof PurchaseVoteAnnounceGr
 export const PurchaseVoteReminderGreetingSchema = z.object({
   kind: z.literal("purchase-vote-reminder"),
   pollId: z.number().int().positive(),
+  ...PollThemeShape,
   votesLeft: z.number().int().min(1).max(VOTES_PER_PLAYER),
   voterCount: z.number().int().min(0),
   requiredVoters: z.number().int().min(1),
@@ -56,12 +58,24 @@ export const NightInviteGreetingSchema = z.object({
 });
 export type NightInviteGreeting = z.infer<typeof NightInviteGreetingSchema>;
 
+/**
+ * The arrival takeover as the app serves it. When a new vote opens while the
+ * viewer still has the last vote's arrival to see, the two travel as ONE
+ * popup: the shelf of games the previous vote bought, then — page two of the
+ * same takeover — the new vote's announcement. `nextVote` carries that
+ * second page; the client acks both kinds when the takeover closes.
+ */
+export const AppArrivalGreetingSchema = ArrivalGreetingSchema.extend({
+  nextVote: PurchaseVoteAnnounceGreetingSchema.optional(),
+});
+export type AppArrivalGreeting = z.infer<typeof AppArrivalGreetingSchema>;
+
 export const AppGreetingSchema = z.discriminatedUnion("kind", [
   ...GreetingSchema.options,
   PurchaseVoteAnnounceGreetingSchema,
   NightInviteGreetingSchema,
   PurchaseVoteReminderGreetingSchema,
-  ArrivalGreetingSchema,
+  AppArrivalGreetingSchema,
 ]);
 export type AppGreeting = z.infer<typeof AppGreetingSchema>;
 

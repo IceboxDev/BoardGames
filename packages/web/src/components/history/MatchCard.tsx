@@ -1,6 +1,8 @@
 import type { SensoTiebreak } from "@boardgames/core/games/senso-battle-for-japan/standings";
 import { awardLabel } from "@boardgames/core/history/awards";
+import { ffaRankStanding } from "@boardgames/core/history/participant-results";
 import { roundWinnerIndex } from "@boardgames/core/history/round-scores";
+import { TRIVIAL_PURSUIT_SLUG } from "@boardgames/core/history/trivial-pursuit";
 import type {
   MatchOutcome,
   MatchOutcomeCoop,
@@ -22,6 +24,7 @@ import {
   isPointlessFreeForAll,
   lowScoreWinsForSlug,
 } from "../../games/score-config";
+import { artsWedgeForScenario } from "../../games/trivial-pursuit/palette";
 import { BookIcon, EditIcon, XIcon } from "../icons";
 import { Badge } from "../ui/Badge";
 import { IconButton } from "../ui/IconButton";
@@ -34,6 +37,7 @@ import {
   sensoFfaStandings,
   sensoTeamsStandings,
 } from "./forms/senso-standings";
+import { WedgePie } from "./WedgePie";
 
 type Props = {
   match: MatchRecord;
@@ -189,7 +193,10 @@ function CompactOutcome({ outcome, gameSlug, currentUserId }: OutcomeProps) {
     case "free-for-all":
       // `outcome.draw` routes to the point-less rendering too: a drawn duel has
       // no scores worth showing regardless of how the slug is configured.
-      return isPointlessFreeForAll(gameSlug) || outcome.draw ? (
+      // Trivial Pursuit places by wedges but has no scores: the pie layout.
+      return isPointlessFreeForAll(gameSlug) ||
+        outcome.draw ||
+        gameSlug === TRIVIAL_PURSUIT_SLUG ? (
         <PointlessFfaInline outcome={outcome} currentUserId={currentUserId} />
       ) : (
         <FreeForAllInline outcome={outcome} gameSlug={gameSlug} currentUserId={currentUserId} />
@@ -348,9 +355,10 @@ function RoundScores({
   );
 }
 
-// Point-less free-for-all (Villainous, Lovecraft Letter). No scores — show each
-// player, winner-first with the gold winner tone; a per-player role (Villainous
-// villain) shows as a small label when present. The scenario (edition / win
+// Point-less free-for-all (Villainous, Lovecraft Letter) and Trivial Pursuit. No
+// scores — show each player, winner-first with the gold winner tone; a
+// per-player role (Villainous villain) shows as a small label, Trivial
+// Pursuit's collected wedges as a little pie. The scenario (edition / win
 // condition) renders as the subtitle above.
 function PointlessFfaInline({
   outcome,
@@ -387,11 +395,13 @@ function PointlessFfaInline({
   const isWinner = (p: MatchOutcomeFreeForAll["players"][number]) =>
     hasRank ? p.rank === 1 : p.score === topScore;
 
+  // Winner first; below it by standing (Trivial Pursuit: most wedges first).
+  const standing = ffaRankStanding(outcome);
   const sorted = [...outcome.players].sort((a, b) => {
     const aWin = isWinner(a) ? 0 : 1;
     const bWin = isWinner(b) ? 0 : 1;
     if (aWin !== bWin) return aWin - bWin;
-    return a.displayName.localeCompare(b.displayName);
+    return standing(a) - standing(b) || a.displayName.localeCompare(b.displayName);
   });
   return (
     <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
@@ -403,6 +413,7 @@ function PointlessFfaInline({
             isMe={p.userId === currentUserId}
             title={p.role ? `${p.displayName} — ${p.role}` : p.displayName}
           />
+          {p.wedges && <WedgePie wedges={p.wedges} arts={artsWedgeForScenario(outcome.scenario)} />}
           {p.role && <MicroLabel>{p.role}</MicroLabel>}
         </span>
       ))}
@@ -447,6 +458,9 @@ function TeamsInline({
                 />
               ))}
             </span>
+            {t.wedges && (
+              <WedgePie wedges={t.wedges} arts={artsWedgeForScenario(outcome.scenario)} />
+            )}
             {outcome.decryptoRounds ? (
               <DecryptoTokens rounds={outcome.decryptoRounds} team={i} />
             ) : (

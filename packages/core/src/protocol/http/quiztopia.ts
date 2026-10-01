@@ -45,9 +45,14 @@ export const QuiztopiaSettingsSchema = z.object({
    * first, the invented siblings later and spread apart. */
   newCardOrder: z.enum(["sets", "originals"]).default("sets"),
   /** Whole-set mode's daily budget: new ARTICLES per district per day (five
-   * questions each, shuffled together). `newPerDay` (questions) applies to
+   * questions each, shuffled together). "Study all" introduces this many
+   * articles per sitting in total, drawn across the districts; a district's
+   * own session this many from it. `newPerDay` (questions) applies to
    * originals-first mode only. */
   newSetsPerDay: z.number().int().min(0).max(10).default(3),
+  /** Districts "Study all" leaves out (due and new); a district's own
+   * session still studies them. */
+  excludeFromAll: z.array(QuiztopiaCategorySchema).max(12).default([]),
 });
 export type QuiztopiaSettings = z.infer<typeof QuiztopiaSettingsSchema>;
 
@@ -59,6 +64,7 @@ export const DEFAULT_QUIZTOPIA_SETTINGS: QuiztopiaSettings = {
   gameReviewsAffectSrs: false,
   newCardOrder: "sets",
   newSetsPerDay: 3,
+  excludeFromAll: [],
 };
 
 // ── Overview ────────────────────────────────────────────────────────────
@@ -130,6 +136,8 @@ export const TrainerQueueResponseSchema = z.object({
     review: z.number().int().nonnegative(),
     new: z.number().int().nonnegative(),
   }),
+  /** Questions already studied today that are no longer in the queue (the day's progress so far). */
+  doneToday: z.number().int().nonnegative().default(0),
 });
 export type TrainerQueue = z.infer<typeof TrainerQueueResponseSchema>;
 

@@ -32,6 +32,7 @@ import {
   pushAvailability,
 } from "../lib/offline-availability";
 import { startOfWeekMonday } from "../lib/offline-week";
+import { quietNavState } from "../lib/page-views";
 import { fetchPlayers } from "../lib/profile";
 import { qk } from "../lib/query-keys";
 
@@ -132,10 +133,12 @@ export default function OfflineDashboard() {
     if (locks[dateParam]) {
       setRsvpDate(dateParam);
     }
-    // Strip the param either way — invalid date in URL shouldn't linger.
+    // Strip the param either way — invalid date in URL shouldn't linger. A
+    // tidy-up, not a visit to the calendar: keep it out of the activity trail
+    // (the night's card logs itself).
     const next = new URLSearchParams(searchParams);
     next.delete("date");
-    setSearchParams(next, { replace: true });
+    setSearchParams(next, { replace: true, state: quietNavState() });
   }, [locks, searchParams, setSearchParams]);
 
   const viewerRsvpByDate = useMemo<Record<string, RsvpStatus | undefined>>(() => {

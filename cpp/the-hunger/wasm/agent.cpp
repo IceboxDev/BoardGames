@@ -14,10 +14,11 @@
 //   hg_error_ptr() / hg_error_len()               // message after a negative idx
 //   hg_free(p); hg_free(c)
 //
-// Strategy 0 = Nosferatu (heuristicPick), 1 = Strigoi, 2 = Dracula. The config
+// Strategy 0 = Nosferatu (heuristicPick), 1 = Strigoi, 2 = Dracula (Lilith is Dracula
+// with `goals` set). The config
 // array is read positionally; a missing / NaN entry keeps the C++ default:
 //   Strigoi  [rollouts, minPerArm]
-//   Dracula  [rollouts, minPerArm, timeMs, tierMargin]
+//   Dracula  [rollouts, minPerArm, timeMs, tierMargin, turnPlans, maxPlans, survival, rivals, goals, followPlan]
 // A new DraculaConfig field is one more entry in draculaConfig() below (and
 // in the TS layout, wasm-agent.ts DRACULA_CONFIG_FIELDS) — append, never reorder.
 #include <cmath>
@@ -72,6 +73,10 @@ DraculaConfig draculaConfig(const double* cfg, int n) {
   set(c.tierMargin, cfg, n, 3);
   set(c.turnPlans, cfg, n, 4);
   set(c.maxPlans, cfg, n, 5);
+  set(c.survival, cfg, n, 6);
+  set(c.rivals, cfg, n, 7);
+  set(c.goals, cfg, n, 8);
+  set(c.followPlan, cfg, n, 9);
   return c;
 }
 
@@ -86,7 +91,7 @@ HG_EXPORT(hg_alloc) void* hg_alloc(size_t n) { return std::malloc(n ? n : 1); }
 HG_EXPORT(hg_free) void hg_free(void* p) { std::free(p); }
 
 /** Bumped whenever an export's meaning changes (the TS side checks it). */
-HG_EXPORT(hg_abi_version) int hg_abi_version() { return 1; }
+HG_EXPORT(hg_abi_version) int hg_abi_version() { return 2; }
 
 HG_EXPORT(hg_legal_count) int hg_legal_count() { return g_legalCount; }
 HG_EXPORT(hg_error_ptr) const char* hg_error_ptr() { return g_error.data(); }

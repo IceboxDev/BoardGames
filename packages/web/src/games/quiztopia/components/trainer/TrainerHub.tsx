@@ -80,6 +80,37 @@ function useStaggeredLit(target: readonly boolean[]): boolean[] {
   return shown;
 }
 
+const QUICK = 10;
+
+/**
+ * What "Study all" will bring: every due card of the districts it
+ * includes, plus one session's new budget drawn across them (the server's
+ * `capNewAcross`) — articles in whole-set mode, questions otherwise.
+ */
+export function studyAllPlan(
+  cats: TrainerOverview["categories"],
+  settings: TrainerOverview["settings"],
+) {
+  const bySet = settings.newCardOrder === "sets";
+  const included = cats.filter((c) => !settings.excludeFromAll.includes(c.n));
+  const due = sum(included.map((c) => c.due));
+  const available = sum(
+    included.map((c) => (bySet ? Math.ceil(c.newRemainingToday / 5) : c.newRemainingToday)),
+  );
+  const newUnits = Math.min(bySet ? settings.newSetsPerDay : settings.newPerDay, available);
+  const newQuestions = bySet ? newUnits * 5 : newUnits;
+  const unit = bySet
+    ? `new article${newUnits === 1 ? "" : "s"}`
+    : `new card${newUnits === 1 ? "" : "s"}`;
+  const parts = [
+    due > 0 ? `${due} due` : null,
+    newUnits > 0 ? `${newUnits} ${unit}${bySet ? ` (${newQuestions} questions)` : ""}` : null,
+  ].filter(Boolean);
+  const excluded = cats.length - included.length;
+  const summary = `${parts.join(" + ")}${excluded > 0 ? ` · ${excluded} district${excluded === 1 ? "" : "s"} left out` : ""}`;
+  return { bySet, due, newUnits, newQuestions, excluded, summary };
+}
+
 function sum(values: readonly number[]): number {
   return values.reduce((a, b) => a + b, 0);
 }
@@ -135,6 +166,7 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
   const due = sum(cats.map((c) => c.due));
   const learningDue = sum(cats.map((c) => c.learningDue));
   const newToday = sum(cats.map((c) => c.newRemainingToday));
+  const all = studyAllPlan(cats, overview.settings);
   // A district is lit only once you have studied it AND nothing is due there.
   // An untouched district stays dark — an empty schedule is not a clear one.
   const litTarget = useMemo(() => cats.map((c) => c.seen > 0 && c.due === 0), [cats]);
@@ -143,9 +175,9 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
   const explored = cats.filter((c) => c.seen > 0).length;
   const retention = overallRetention(cats);
   const allLit = explored === cats.length && due === 0;
-  const nothingToDo = due === 0 && newToday === 0;
+  const nothingToDo = all.due === 0 && all.newUnits === 0;
 
-  const subtitle = `${weekdayName(today)} · ${due} due · ${newToday} new`;
+  const subtitle = `${weekdayName(today)} · ${due} due`;
 
   return (
     <>
@@ -154,6 +186,7 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
         eyebrow="Trainer"
         title="Quiztopia"
         subtitle={subtitle}
+        inlineActions
         actions={
           <>
             <Button
@@ -161,18 +194,20 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
               size="sm"
               onClick={() => navigate(paths.timeline())}
               title="Your timeline: every studied question's moment in history"
+              aria-label="Timeline"
             >
               <PinIcon className="h-3.5 w-3.5" />
-              Timeline
+              <span className="hidden sm:inline">Timeline</span>
             </Button>
             <Button
               variant="secondary"
               size="sm"
               onClick={() => navigate(paths.wiki)}
               title="The archive: every article, answers highlighted"
+              aria-label="Wiki"
             >
               <BookIcon className="h-3.5 w-3.5" />
-              Wiki
+              <span className="hidden sm:inline">Wiki</span>
             </Button>
             <IconButton
               variant="bordered"
@@ -181,9 +216,6 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
               onClick={() => setSettingsOpen(true)}
               icon={<GearIcon className="h-4 w-4" />}
             />
-            <Button variant="link" onClick={() => navigate("/play/quiztopia/rules")}>
-              How to play
-            </Button>
           </>
         }
       />
@@ -235,9 +267,13 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
           <StatTile
             variant="raised"
             size="2xl"
-            label="New today"
-            value={newToday}
-            sub={`${overview.todayCounts.newIntroduced} introduced so far`}
+            label={all.bySet ? "New articles" : "New cards"}
+            value={all.newUnits}
+            sub={
+              newToday === 0
+                ? "done for today"
+                : `next session · ${overview.todayCounts.newIntroduced} learned today`
+            }
           />
           <StatTile
             variant="raised"
@@ -254,26 +290,36 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
                 Read the archive
               </Button>
               <p className="text-xs text-fg-muted">
-                Nothing due and today's new cards are done — raise the daily budget in settings to
-                keep going.
+                {all.excluded > 0
+                  ? "Nothing due and no new cards left in the districts “Study all” includes — pick a district below, or change them in settings."
+                  : "Nothing due and today's new cards are done — raise the budget in settings to keep going."}
               </p>
             </>
-          ) : allLit ? (
-            <Button variant="primary" size="lg" onClick={() => navigate(paths.study())}>
-              Learn new cards ({newToday})
-            </Button>
           ) : (
             <>
-              <Button variant="primary" size="lg" onClick={() => navigate(paths.study())}>
-                Study all due ({due})
-              </Button>
               <Button
-                variant="secondary"
+                variant="primary"
                 size="lg"
-                onClick={() => navigate(paths.study({ limit: 10 }))}
+                onClick={() => navigate(paths.study())}
+                className="flex-col gap-0 py-2 leading-tight"
               >
-                Quick 10
+                <span>{all.due > 0 ? "Study all due" : "Learn something new"}</span>
+                <span className="text-xs font-normal opacity-80">{all.summary}</span>
               </Button>
+              {/* A short bite of new cards, once the reviews are done. */}
+              {all.due === 0 && all.newQuestions > QUICK && (
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  onClick={() => navigate(paths.study({ limit: QUICK }))}
+                  className="flex-col gap-0 py-2 leading-tight"
+                >
+                  <span>Quick {QUICK}</span>
+                  <span className="text-xs font-normal text-fg-muted">
+                    just {QUICK} new questions
+                  </span>
+                </Button>
+              )}
             </>
           )}
           {overview.todayCounts.reviews > 0 && (
@@ -308,7 +354,9 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
                   </Badge>
                   {c.newRemainingToday > 0 && (
                     <Badge tone="neutral" size="xs">
-                      {c.newRemainingToday} new
+                      {all.bySet
+                        ? `${Math.ceil(c.newRemainingToday / 5)} new article${Math.ceil(c.newRemainingToday / 5) === 1 ? "" : "s"}`
+                        : `${c.newRemainingToday} new`}
                     </Badge>
                   )}
                   {c.leeches > 0 && (

@@ -4,6 +4,7 @@ import { resolveChartColor } from "./tone-hex";
 import { useThemeVersion } from "./use-theme-version";
 
 interface DataPoint {
+  /** Position on the x axis: the chart is linear in it (an index, or a day number for a date axis). */
   x: number;
   y: number;
   label?: string;
@@ -18,7 +19,32 @@ interface LineChartProps {
   /** Tone-vocabulary stroke (default `accent`). */
   tone?: Tone;
   height?: number;
+  /** Lower is better: small values plot at the top (the axis labels follow). */
   invertY?: boolean;
+  /** A fixed y range (e.g. `[0, 100]` for a percentage); otherwise it fits the data. */
+  yDomain?: readonly [number, number];
+  /** Formats y values on the axis and in the hover label. */
+  formatY?: (v: number) => string;
+}
+
+const GRID_TARGET = 4;
+
+/** Round tick values (1 / 2 / 5 × 10ⁿ) covering [min, max]. */
+function niceTicks(min: number, max: number): number[] {
+  const raw = (max - min) / GRID_TARGET;
+  const mag = 10 ** Math.floor(Math.log10(raw));
+  const step = ([1, 2, 5, 10].find((m) => m * mag >= raw) ?? 10) * mag;
+  const out: number[] = [];
+  for (let v = Math.floor(min / step) * step; v <= max + step * 1e-9; v += step) {
+    out.push(Number(v.toPrecision(12)));
+  }
+  if (out[out.length - 1] < max) out.push(out[out.length - 1] + step);
+  return out;
+}
+
+function defaultFormat(v: number): string {
+  if (Math.abs(v) >= 1000) return `${(v / 1000).toFixed(1)}k`;
+  return Number.isInteger(v) ? String(v) : v.toFixed(1);
 }
 
 /** Line chart with hover points, optional dashed rolling-average overlay. */
@@ -30,6 +56,8 @@ export function LineChart({
   tone,
   height = 200,
   invertY = false,
+  yDomain,
+  formatY = defaultFormat,
 }: LineChartProps) {
   useThemeVersion(); // re-render on themechange so the stroke re-resolves
   const [hoverIdx, setHoverIdx] = useState<number | null>(null);
@@ -49,32 +77,47 @@ export function LineChart({
   const ch = height - pad.top - pad.bottom;
 
   const allY = [...data.map((d) => d.y), ...(rollingAvgData?.map((d) => d.y) ?? [])];
-  let minY = Math.min(...allY);
-  let maxY = Math.max(...allY);
-  if (minY === maxY) {
-    minY -= 1;
-    maxY += 1;
+  let ticks: number[];
+  if (yDomain) {
+    ticks = niceTicks(yDomain[0], yDomain[1]);
+  } else {
+    let lo = Math.min(...allY);
+    let hi = Math.max(...allY);
+    if (lo === hi) {
+      lo -= 1;
+      hi += 1;
+    }
+    ticks = niceTicks(lo, hi);
   }
-  const rangeY = maxY - minY;
+  const minY = ticks[0];
+  const maxY = ticks[ticks.length - 1];
 
-  const toX = (i: number) => pad.left + (i / (data.length - 1)) * cw;
+  const xs = data.map((d) => d.x);
+  const minX = Math.min(...xs);
+  const spanX = Math.max(...xs) - minX || 1;
+  const toX = (x: number) => pad.left + ((x - minX) / spanX) * cw;
   const toY = (v: number) => {
-    let norm = (v - minY) / rangeY;
-    if (invertY) norm = 1 - norm;
-    return pad.top + (1 - norm) * ch;
+    const norm = (v - minY) / (maxY - minY);
+    return pad.top + (invertY ? norm : 1 - norm) * ch;
   };
 
-  const linePoints = data.map((d, i) => `${toX(i)},${toY(d.y)}`).join(" ");
-
+  const linePoints = data.map((d) => `${toX(d.x)},${toY(d.y)}`).join(" ");
   const rollingLine = rollingAvgData
     ? rollingAvgData.map((d) => `${toX(d.x)},${toY(d.y)}`).join(" ")
     : null;
 
-  const gridLines = 4;
-  const gridYValues = Array.from({ length: gridLines + 1 }, (_, i) => {
-    const v = minY + (rangeY * i) / gridLines;
-    return invertY ? maxY - (v - minY) : v;
-  });
+  // X labels: at most ~8, always the last one, never two crowding each other.
+  const xLabels: number[] = [];
+  const minGap = cw / 8;
+  for (let i = data.length - 1; i >= 0; i--) {
+    const px = toX(data[i].x);
+    if (xLabels.length === 0 || toX(data[xLabels[xLabels.length - 1]].x) - px >= minGap) {
+      xLabels.push(i);
+    }
+  }
+
+  const hovered = hoverIdx !== null ? data[hoverIdx] : undefined;
+  const tipY = hovered ? Math.max(0, toY(hovered.y) - 28) : 0;
 
   return (
     <svg
@@ -83,21 +126,26 @@ export function LineChart({
       className="w-full"
       style={{ maxHeight: height }}
     >
-      {gridYValues.map((v, i) => {
-        const y = pad.top + (i / gridLines) * ch;
+      {ticks.map((v) => {
+        const y = toY(v);
         return (
-          // biome-ignore lint/suspicious/noArrayIndexKey: static list / chart data points don't reorder
-          <g key={i}>
+          <g key={v}>
             <line
               x1={pad.left}
               y1={y}
               x2={width - pad.right}
               y2={y}
-              stroke="#374151"
+              className="stroke-line"
               strokeWidth={0.5}
             />
-            <text x={pad.left - 6} y={y + 3} textAnchor="end" fill="#6b7280" fontSize={9}>
-              {v >= 1000 ? `${(v / 1000).toFixed(1)}k` : Number.isInteger(v) ? v : v.toFixed(1)}
+            <text
+              x={pad.left - 6}
+              y={y + 3}
+              textAnchor="end"
+              className="fill-fg-muted"
+              fontSize={9}
+            >
+              {formatY(v)}
             </text>
           </g>
         );
@@ -108,7 +156,7 @@ export function LineChart({
           x={12}
           y={pad.top + ch / 2}
           textAnchor="middle"
-          fill="#9ca3af"
+          className="fill-fg-secondary"
           fontSize={9}
           transform={`rotate(-90, 12, ${pad.top + ch / 2})`}
         >
@@ -140,7 +188,7 @@ export function LineChart({
         <circle
           // biome-ignore lint/suspicious/noArrayIndexKey: static list / chart data points don't reorder
           key={i}
-          cx={toX(i)}
+          cx={toX(d.x)}
           cy={toY(d.y)}
           r={hoverIdx === i ? 4 : 2}
           fill={hoverIdx === i ? "#fff" : stroke}
@@ -152,48 +200,41 @@ export function LineChart({
         />
       ))}
 
-      {hoverIdx !== null && data[hoverIdx] && (
+      {hovered && hoverIdx !== null && (
         <g>
           <rect
-            x={Math.min(toX(hoverIdx) - 40, width - pad.right - 80)}
-            y={toY(data[hoverIdx].y) - 28}
-            width={80}
+            x={Math.max(pad.left, Math.min(toX(hovered.x) - 45, width - pad.right - 90))}
+            y={tipY}
+            width={90}
             height={22}
             rx={4}
-            fill="#1f2937"
-            stroke="#374151"
+            className="fill-surface-900 stroke-line-strong"
             strokeWidth={0.5}
           />
           <text
-            x={Math.min(toX(hoverIdx), width - pad.right - 40)}
-            y={toY(data[hoverIdx].y) - 14}
+            x={Math.max(pad.left + 45, Math.min(toX(hovered.x), width - pad.right - 45))}
+            y={tipY + 14}
             textAnchor="middle"
-            fill="#e5e7eb"
+            className="fill-fg-primary"
             fontSize={10}
           >
-            {data[hoverIdx].label ?? `#${hoverIdx + 1}`}:{" "}
-            {Number.isInteger(data[hoverIdx].y) ? data[hoverIdx].y : data[hoverIdx].y.toFixed(1)}
+            {hovered.label ?? `#${hoverIdx + 1}`}: {formatY(hovered.y)}
           </text>
         </g>
       )}
 
-      {data.length <= 30 &&
-        data.map((d, i) => {
-          if (i % Math.ceil(data.length / 10) !== 0 && i !== data.length - 1) return null;
-          return (
-            <text
-              // biome-ignore lint/suspicious/noArrayIndexKey: static list / chart data points don't reorder
-              key={`xl-${i}`}
-              x={toX(i)}
-              y={height - 4}
-              textAnchor="middle"
-              fill="#6b7280"
-              fontSize={8}
-            >
-              {d.label ?? `#${i + 1}`}
-            </text>
-          );
-        })}
+      {xLabels.map((i) => (
+        <text
+          key={`xl-${i}`}
+          x={toX(data[i].x)}
+          y={height - 4}
+          textAnchor={i === 0 ? "start" : i === data.length - 1 ? "end" : "middle"}
+          className="fill-fg-muted"
+          fontSize={8}
+        >
+          {data[i].label ?? `#${i + 1}`}
+        </text>
+      ))}
     </svg>
   );
 }

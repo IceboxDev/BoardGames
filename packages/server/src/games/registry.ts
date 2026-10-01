@@ -21,6 +21,7 @@ import { setPvpSpec } from "@boardgames/core/games/set/pvp-machine";
 import { skyTeamSpec } from "@boardgames/core/games/sky-team/machine";
 import { sushiGoSpec } from "@boardgames/core/games/sushi-go/machine";
 import { theHungerSpec, withHungerAiOffload } from "@boardgames/core/games/the-hunger/machine";
+import { resistanceSpec } from "@boardgames/core/games/the-resistance/machine";
 import type { AnyGameMachineSpec } from "@boardgames/core/machines/types";
 import type { AnyActorLogic } from "xstate";
 import { aiAvailable } from "../lib/ai";
@@ -71,6 +72,7 @@ const SERVER_GAMES: readonly ServerGame[] = [
       return offload ? withHungerAiOffload(offload) : theHungerSpec.machine;
     },
   },
+  plain(resistanceSpec),
 ];
 
 const bySlug = new Map(SERVER_GAMES.map((game) => [game.spec.manifest.slug, game]));

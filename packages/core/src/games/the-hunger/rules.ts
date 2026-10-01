@@ -410,19 +410,16 @@ function moveActions(state: GameState, p: PlayerState, turn: TurnState): Action[
 
 /**
  * Bonus tokens spendable once Speed is counted, in token order. Discard/Draw
- * names each card in play it could discard; +1 Hunt is never offered on a
- * Parasol turn (no hunting); Gain 1 Mission only once you have moved (`act`).
+ * and Draw are discard/draw effects — step 1 only, before anything else — so
+ * they are never offered here; +1 Hunt is never offered on a Parasol turn (no
+ * hunting); Gain 1 Mission only once you have moved (`act`).
  */
 function anytimeTokens(p: PlayerState, turn: TurnState, act: boolean): Action[] {
   const out: Action[] = [];
   for (const token of p.bonus) {
     if (token.used) continue;
     const kind = bonusDef(token.id).bonus.kind;
-    if (kind === "discard-draw") {
-      for (const target of p.playArea) {
-        if (!target.resolved) out.push({ type: "use-bonus", token: token.id, discard: target.id });
-      }
-    } else if (kind === "speed" || kind === "draw-to-play") {
+    if (kind === "speed") {
       out.push({ type: "use-bonus", token: token.id });
     } else if (kind === "extra-hunt" && !turn.extraTurn) {
       out.push({ type: "use-bonus", token: token.id });

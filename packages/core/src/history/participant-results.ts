@@ -12,6 +12,7 @@ import type {
   MatchOutcomeLastStanding,
 } from "../protocol/http/history.ts";
 import { isPointlessFreeForAll, lowScoreWinsForSlug } from "./score-config.ts";
+import { FULL_PIE } from "./trivial-pursuit.ts";
 
 /**
  * One participant's disposition in a single match.
@@ -142,10 +143,26 @@ export function deriveParticipantResult(
   }
 }
 
+type FfaPlayer = MatchOutcomeFreeForAll["players"][number];
+
+/**
+ * How one free-for-all player stands against the rest when ranks decide:
+ * lower is better. A recorded `rank` counts as is; an unranked player sits
+ * below every ranked one — ordered by pie wedges held when the record has
+ * them (Trivial Pursuit: the crowned winner first, then the most wedges;
+ * equal counts share a place), otherwise all tied last.
+ */
+export function ffaRankStanding(outcome: MatchOutcomeFreeForAll): (p: FfaPlayer) => number {
+  const total = outcome.players.length;
+  const byWedges = outcome.players.some((p) => p.wedges !== undefined);
+  return (p) => p.rank ?? (byWedges ? total + FULL_PIE - (p.wedges?.length ?? 0) : total);
+}
+
 /**
  * A player's 1-based finishing position in a free-for-all (1 = winner) plus the
  * field size. `rank`-bearing games (a tie pinned to a strict 1..n order, or a
- * point-less `rank: 1` winner) use rank; otherwise position is by score in the
+ * point-less `rank: 1` winner) use rank — below the ranked, Trivial Pursuit
+ * places by wedges (`ffaRankStanding`); otherwise position is by score in the
  * game's win direction (`lowestWins` for penalty games). Ties share a place
  * (two players on the best score are both 1st). Returns null if not present.
  */
@@ -158,8 +175,9 @@ export function freeForAllPlacement(
   if (!me) return null;
   const total = outcome.players.length;
   if (outcome.players.some((p) => p.rank !== undefined)) {
-    const myRank = me.rank ?? total;
-    const better = outcome.players.filter((p) => (p.rank ?? total) < myRank).length;
+    const standing = ffaRankStanding(outcome);
+    const mine = standing(me);
+    const better = outcome.players.filter((p) => standing(p) < mine).length;
     return { place: better + 1, total };
   }
   const better = outcome.players.filter((p) =>

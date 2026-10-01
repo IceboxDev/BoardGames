@@ -82,7 +82,10 @@ export default function StudySession() {
   const [readIndex, setReadIndex] = useState(0);
   const [readingDone, setReadingDone] = useState(false);
   const reading =
-    newSets.length > 0 && !readingDone && readIndex < newSets.length && session.progress.done === 0;
+    newSets.length > 0 &&
+    !readingDone &&
+    readIndex < newSets.length &&
+    session.progress.inSession === 0;
 
   const { revealed, reveal, grade, undo, canUndo, complete, status } = session;
   useEffect(() => {
@@ -170,7 +173,7 @@ export default function StudySession() {
         sets={newSets}
         index={readIndex}
         language={language}
-        cardCount={session.progress.total}
+        cardCount={session.items.length}
         onNext={() => {
           if (readIndex + 1 >= newSets.length) setReadingDone(true);
           else setReadIndex(readIndex + 1);
@@ -205,7 +208,7 @@ export default function StudySession() {
   return (
     <TrainerScreen className="flex flex-col">
       <header className="sticky top-0 z-lift border-b border-line bg-surface-950/80 px-4 py-2.5 backdrop-blur">
-        <div className="mx-auto flex w-full max-w-2xl items-center gap-3">
+        <div className="mx-auto flex w-full max-w-2xl items-center gap-2 sm:gap-3">
           <div className="min-w-0 flex-1">
             <Eyebrow
               tone={scopeDistrict?.tone ?? "accent"}
@@ -220,7 +223,7 @@ export default function StudySession() {
             <p className="truncate text-sm font-semibold text-fg-strong">{title}</p>
           </div>
           {status === "ready" && !session.empty && (
-            <div className="flex w-24 shrink-0 flex-col items-end gap-1 sm:w-32">
+            <div className="flex w-14 shrink-0 flex-col items-end gap-1 sm:w-32">
               <span className="text-2xs tabular-nums text-fg-muted">
                 {Math.min(session.progress.done + 1, session.progress.total)} of{" "}
                 {session.progress.total}
@@ -247,7 +250,7 @@ export default function StudySession() {
         </div>
       </header>
 
-      <main className="mx-auto flex w-full max-w-2xl flex-1 flex-col justify-center gap-3 px-4 py-6">
+      <main className="mx-auto flex w-full min-w-0 max-w-2xl flex-1 flex-col justify-center gap-3 px-4 py-6">
         {(session.notice || session.offlinePending > 0) && (
           <div className="flex flex-wrap items-center gap-2" role="status">
             {session.offlinePending > 0 && (

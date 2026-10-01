@@ -2,6 +2,11 @@
 // required voter count), watch the live tally (admins see who voted for what
 // while players don't), force-close, or delete an open poll.
 
+import {
+  type AdminCreatePollBody,
+  POLL_BLURB_MAX,
+  POLL_TITLE_MAX,
+} from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useId, useState } from "react";
 import { games } from "../../games/registry";
@@ -20,6 +25,7 @@ import { ErrorAlert } from "../ui/ErrorAlert";
 import { Input } from "../ui/Input";
 import { QueryBoundary } from "../ui/QueryBoundary";
 import { SearchInput } from "../ui/SearchInput";
+import { Textarea } from "../ui/Textarea";
 import { useConfirm } from "../ui/useConfirm";
 import { AdminSection } from "./AdminSection";
 import { TallyRows, voterMapOf } from "./TallyRows";
@@ -53,7 +59,7 @@ export function PurchaseVoteCard() {
     : stateQuery.data === undefined
       ? "Loading…"
       : isOpen
-        ? `Open — ${poll.voterCount} of ${poll.requiredVoters} players have voted`
+        ? `Open${poll.title ? ` · ${poll.title}` : ""} — ${poll.voterCount} of ${poll.requiredVoters} players have voted`
         : poll
           ? `Closed — winner: ${(poll.winnerSlug && resolveGame(poll.winnerSlug)?.title) ?? poll.winnerSlug ?? "nobody voted"}`
           : "No vote yet — pick the candidates and open one";
@@ -93,9 +99,7 @@ export function PurchaseVoteCard() {
                 {current && <LastResult poll={current} />}
                 <PollBuilder
                   creating={createMutation.isPending}
-                  onCreate={(candidates, requiredVoters) =>
-                    createMutation.mutate({ candidates, requiredVoters })
-                  }
+                  onCreate={(body) => createMutation.mutate(body)}
                 />
               </>
             )
@@ -179,9 +183,11 @@ function PollBuilder({
   onCreate,
 }: {
   creating: boolean;
-  onCreate: (candidates: string[], requiredVoters: number) => void;
+  onCreate: (body: AdminCreatePollBody) => void;
 }) {
   const [selected, setSelected] = useState<string[]>([]);
+  const [title, setTitle] = useState("");
+  const [blurb, setBlurb] = useState("");
   const [required, setRequired] = useState("6");
   const [search, setSearch] = useState("");
   const requiredId = useId();
@@ -235,6 +241,21 @@ function PollBuilder({
           );
         })}
       </ul>
+      <Input
+        value={title}
+        maxLength={POLL_TITLE_MAX}
+        onChange={(e) => setTitle(e.target.value)}
+        placeholder="Theme headline — e.g. The October vote: games for the whole table"
+        aria-label="Theme headline"
+      />
+      <Textarea
+        value={blurb}
+        maxLength={POLL_BLURB_MAX}
+        rows={3}
+        onChange={(e) => setBlurb(e.target.value)}
+        placeholder="Why these games? Shown under the headline when the vote is announced."
+        aria-label="Theme blurb"
+      />
       <div className="flex flex-wrap items-center justify-between gap-3">
         <span className="text-2xs text-fg-muted">
           {selected.length} candidate{selected.length === 1 ? "" : "s"} selected
@@ -259,7 +280,14 @@ function PollBuilder({
           <Button
             size="sm"
             disabled={!valid || creating}
-            onClick={() => onCreate(selected, requiredVoters)}
+            onClick={() =>
+              onCreate({
+                candidates: selected,
+                requiredVoters,
+                ...(title.trim() ? { title: title.trim() } : {}),
+                ...(blurb.trim() ? { blurb: blurb.trim() } : {}),
+              })
+            }
           >
             Open the vote
           </Button>

@@ -1,8 +1,11 @@
 import type { MatchOutcome } from "@boardgames/core/history/types";
 import {
+  composeVariant,
   type GameVariantConfig,
   joinMultiVariant,
+  parseComposedVariant,
   parseMultiVariant,
+  type VariantOption,
   variantConfigForSlug,
 } from "../../games/match-variants";
 import { Chip } from "../ui/Chip";
@@ -40,13 +43,44 @@ export function GameVariantPicker({ gameSlug, outcome, onChange }: Props) {
     onChange(applyScenario(outcome, next));
   }
 
+  const secondary = config.secondary;
+  if (secondary) {
+    // Two single-select axes (Trivial Pursuit's edition + language), each
+    // re-composing its half of the one stored string.
+    const { primary: first, secondary: second } = parseComposedVariant(stored, config);
+    return (
+      <div className="flex flex-col gap-2">
+        <div>
+          <div className="mb-1">
+            <GroupLabel>{config.label}</GroupLabel>
+          </div>
+          <SinglePicker
+            options={config.options}
+            value={first}
+            onChange={(next) => setScenario(composeVariant(next, second))}
+          />
+        </div>
+        <div>
+          <div className="mb-1">
+            <GroupLabel>{secondary.label}</GroupLabel>
+          </div>
+          <SinglePicker
+            options={secondary.options}
+            value={second}
+            onChange={(next) => setScenario(composeVariant(first, next))}
+          />
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div>
       <div className="mb-1">
         <GroupLabel>{config.label}</GroupLabel>
       </div>
       {config.mode === "single" ? (
-        <SinglePicker config={config} value={stored} onChange={setScenario} />
+        <SinglePicker options={config.options} value={stored} onChange={setScenario} />
       ) : (
         <MultiPicker config={config} value={stored} onChange={setScenario} />
       )}
@@ -55,17 +89,17 @@ export function GameVariantPicker({ gameSlug, outcome, onChange }: Props) {
 }
 
 function SinglePicker({
-  config,
+  options,
   value,
   onChange,
 }: {
-  config: GameVariantConfig;
+  options: readonly VariantOption[];
   value: string | undefined;
   onChange: (next: string | undefined) => void;
 }) {
   return (
     <div className="flex flex-wrap gap-1.5">
-      {config.options.map((opt) => {
+      {options.map((opt) => {
         const active = value === opt.value;
         return (
           <Chip

@@ -11,7 +11,9 @@ import { Eyebrow } from "./Label";
 //   • title    — white (the brightest emphasis tier).
 //   • subtitle — muted supporting line.
 //   • badge    — inline element after the title (e.g. a count Chip).
-//   • actions  — right-aligned controls (Buttons); wrap below on phones.
+//   • actions  — right-aligned controls (Buttons); wrap below on phones,
+//                unless `inlineActions` keeps a few compact ones (icon
+//                buttons) beside the title at every width.
 //   • align    — `left` (default, splits title/actions) or `center` (auth /
 //                hero pages: stacked, centered).
 //
@@ -36,6 +38,8 @@ type PageHeaderProps = {
   badge?: ReactNode;
   /** Right-aligned controls (Buttons). Wraps below the title on phones. */
   actions?: ReactNode;
+  /** Keep `actions` beside the title on phones too — for a few icon-sized controls. */
+  inlineActions?: boolean;
   size?: PageHeaderSize;
   align?: PageHeaderAlign;
   className?: string;
@@ -54,6 +58,7 @@ export function PageHeader({
   eyebrow,
   badge,
   actions,
+  inlineActions = false,
   size = "md",
   align = "left",
   className = "",
@@ -63,7 +68,9 @@ export function PageHeader({
   const outer = cn(
     center
       ? "flex flex-col items-center gap-3 text-center"
-      : "flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4",
+      : inlineActions
+        ? "flex items-start justify-between gap-3 sm:gap-4"
+        : "flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4",
     className,
   );
 
