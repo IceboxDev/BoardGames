@@ -191,8 +191,13 @@ export function huntsLeft(turn: TurnState): { general: number; col1: number } {
   };
 }
 
+/** Whether the space you stand on works for you this turn (RULINGS.stayTriggersSpace). */
+export function arrivedHere(turn: TurnState): boolean {
+  return RULINGS.stayTriggersSpace || turn.moved;
+}
+
 function canUseSpace(turn: TurnState): boolean {
-  return RULINGS.stayTriggersSpace ? turn.speed > 0 : turn.speed > 0 && turn.moved;
+  return turn.speed > 0 && arrivedHere(turn);
 }
 
 /** Why hunting is impossible this turn, if it is. */
@@ -482,6 +487,7 @@ function actActions(state: GameState, p: PlayerState, turn: TurnState): Action[]
     if (
       here.effect === "tavern" &&
       !turn.spaceUsed &&
+      arrivedHere(turn) &&
       anyHunt &&
       state.tavern.length > 0 &&
       turn.speedLeft >= 2
@@ -493,6 +499,7 @@ function actActions(state: GameState, p: PlayerState, turn: TurnState): Action[]
     here.effect === "labyrinth" &&
     !blocked &&
     !turn.spaceUsed &&
+    arrivedHere(turn) &&
     left.general > 0 &&
     !ownsRose(p)
   ) {

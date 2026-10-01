@@ -471,7 +471,8 @@ static void actActions(const GameState& s, const PlayerState& p, const TurnState
   bool blocked = huntBlocked(s, p, t);
   HuntsLeft left = huntsLeft(t);
 
-  if (!t.spaceUsed && t.speed > 0) {
+  // Spaces work only for a Vampire who moved onto them (TS RULINGS.stayTriggersSpace).
+  if (!t.spaceUsed && t.speed > 0 && t.moved) {
     bool chestFull = false;
     if (here.effect == E_CHEST || here.effect == E_CHEST_OPEN) {
       for (int i = 0; i < b.nChests; i++)
@@ -509,11 +510,12 @@ static void actActions(const GameState& s, const PlayerState& p, const TurnState
         out.push_back(a);
       }
     }
-    if (here.effect == E_TAVERN && !t.spaceUsed && anyHunt && !s.tavern.empty() &&
+    if (here.effect == E_TAVERN && !t.spaceUsed && t.moved && anyHunt && !s.tavern.empty() &&
         t.speedLeft >= 2)
       out.push_back(act(A_HUNT_TAVERN));
   }
-  if (here.effect == E_LABYRINTH && !blocked && !t.spaceUsed && left.general > 0 && !ownsRose(p)) {
+  if (here.effect == E_LABYRINTH && !blocked && !t.spaceUsed && t.moved && left.general > 0 &&
+      !ownsRose(p)) {
     for (Card card : s.roses) {
       Action a = act(A_HUNT_ROSE);
       a.card = card;

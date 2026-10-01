@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { turnOrder } from "./game-engine";
-import { getActivePlayer, playAreaSpeed } from "./rules";
+import { getActivePlayer, graph, playAreaSpeed } from "./rules";
 import { act, afterSetup, emptyTrack, legal, rigTurn } from "./test-helpers";
 
 const base = afterSetup(2, 7);
@@ -294,6 +294,21 @@ describe("hunting", () => {
     expect(s.players[0].playArea.length).toBe(inPlay + 1);
     const delta = playAreaSpeed(s.players[0].playArea) - before;
     expect(s.current?.speedLeft).toBe(Math.max(0, left + delta));
+  });
+
+  it("a Well's extra Hunt, like any space, needs you to move onto it", () => {
+    const well = graph(base).def.spaces.find((sp) => sp.effect === "well");
+    const from = well && graph(base).adj.get(well.id)?.[0];
+    if (!well || !from) throw new Error("no Well");
+    const stay = act(rigTurn(structuredClone(base), 0, { hand: speedy, pos: well.id }), {
+      type: "stay",
+    });
+    expect(stay.current?.col1Hunts).toBe(0);
+    let walk = rigTurn(structuredClone(base), 0, { hand: speedy, pos: from });
+    const onto = legal(walk).find((a) => a.type === "move" && a.to === well.id);
+    if (!onto) throw new Error("cannot reach the Well");
+    walk = act(walk, onto);
+    expect(walk.current?.col1Hunts).toBe(1);
   });
 
   it("spends a Gain 1 Mission token after movement too, and lands back on the turn", () => {
