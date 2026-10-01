@@ -23,6 +23,7 @@ import {
   computeTally,
   distinctVoterCount,
   latestPoll,
+  pollTheme,
   pollVotes,
 } from "../lib/purchase-vote.ts";
 
@@ -42,6 +43,7 @@ purchaseVoteRoutes.get("/", async (c) => {
     PurchaseVoteStateSchema.parse({
       poll: {
         id: poll.id,
+        ...pollTheme(poll),
         candidates: poll.candidate_slugs_json,
         requiredVoters: poll.required_voters,
         voterCount: distinctVoterCount(votes),

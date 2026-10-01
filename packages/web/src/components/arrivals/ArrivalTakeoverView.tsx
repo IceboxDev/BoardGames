@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { type CSSProperties, type ReactNode, useCallback, useRef, useState } from "react";
-import { DEFAULT_ACCENT } from "../../lib/accent.ts";
 import { cn } from "../../lib/cn";
 import { ArrowRightIcon, SparkleIcon } from "../icons";
 import { Button } from "../ui/Button.tsx";
@@ -8,14 +7,8 @@ import { Modal, ModalBody, ModalFooter } from "../ui/Modal.tsx";
 import { StatTile } from "../ui/StatTile.tsx";
 import { Surface } from "../ui/Surface.tsx";
 import { ArrivalPhotoCard } from "./ArrivalPhotoCard.tsx";
-import {
-  arrivalEyebrow,
-  arrivalSubheader,
-  arrivalTitle,
-  collectionHint,
-  ctaLabel,
-  thanksSentence,
-} from "./arrival-copy.ts";
+import { collectionHint, ctaLabel, thanksSentence } from "./arrival-copy.ts";
+import { ARRIVAL_TITLE_CLASS, arrivalHeader } from "./arrival-header.ts";
 import { stage, useArrivalReducedMotion } from "./arrival-motion.ts";
 import type { ArrivalCard, ArrivalTotals } from "./arrival-view-model.ts";
 
@@ -65,9 +58,46 @@ export function ArrivalTakeoverView({
   onCta,
   switcher,
 }: ArrivalTakeoverViewProps) {
+  const header = arrivalHeader(cards);
+  return (
+    <Modal
+      onClose={onDismiss}
+      size="full"
+      density="compact"
+      eyebrow={header.eyebrow}
+      eyebrowClassName="text-[var(--accent)]"
+      title={header.title}
+      titleClassName={ARRIVAL_TITLE_CLASS}
+      subheader={<p className="hidden text-xs text-fg-secondary sm:block">{header.subheader}</p>}
+      panelClassName="border-[var(--accent)]/30"
+      style={{ "--accent": header.accent } as CSSProperties}
+    >
+      <ArrivalShelf cards={cards} totals={totals} viewerId={viewerId} switcher={switcher} />
+      <ModalFooter>
+        <Button variant="ghost" size="sm" onClick={onDismiss}>
+          Later
+        </Button>
+        <Button size="sm" onClick={onCta}>
+          {ctaLabel(cards, viewerId)}
+          <ArrowRightIcon className="ml-1.5 h-3.5 w-3.5" />
+        </Button>
+      </ModalFooter>
+    </Modal>
+  );
+}
+
+/**
+ * The shelf itself — photo cards, phone dots and the thanks tile — as a
+ * `ModalBody`, without the dialog around it.
+ */
+export function ArrivalShelf({
+  cards,
+  totals,
+  viewerId,
+  switcher,
+}: Pick<ArrivalTakeoverViewProps, "cards" | "totals" | "viewerId" | "switcher">) {
   const reduced = useArrivalReducedMotion();
   const count = cards.length;
-  const accent = cards[0]?.accentHex ?? DEFAULT_ACCENT;
   const thanks = thanksSentence(cards, totals, viewerId);
 
   // Phone rail position → dot indicator. Measured from the DOM (card width +
@@ -86,135 +116,110 @@ export function ArrivalTakeoverView({
   }, [count]);
 
   return (
-    <Modal
-      onClose={onDismiss}
-      size="full"
-      density="compact"
-      eyebrow={arrivalEyebrow(count)}
-      eyebrowClassName="text-[var(--accent)]"
-      title={arrivalTitle(cards)}
-      titleClassName="gradient-text text-lg font-black tracking-tight xs2:text-xl sm:text-3xl"
-      subheader={
-        <p className="hidden text-xs text-fg-secondary sm:block">{arrivalSubheader(cards)}</p>
-      }
-      panelClassName="border-[var(--accent)]/30"
-      style={{ "--accent": accent } as CSSProperties}
-    >
-      <ModalBody gap="md" className="relative">
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute left-6 top-10 h-56 w-56 rounded-full bg-[var(--accent)]/15 blur-3xl"
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute bottom-12 right-6 h-56 w-56 rounded-full bg-[var(--accent)]/10 blur-3xl"
-        />
-        <SparkleIcon className="pointer-events-none absolute right-3 top-1 h-4 w-4 text-fg-strong/50" />
-        <SparkleIcon className="pointer-events-none absolute right-9 top-6 h-2.5 w-2.5 text-fg-strong/30" />
+    <ModalBody gap="md" className="relative">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute left-6 top-10 h-56 w-56 rounded-full bg-[var(--accent)]/15 blur-3xl"
+      />
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-12 right-6 h-56 w-56 rounded-full bg-[var(--accent)]/10 blur-3xl"
+      />
+      <SparkleIcon className="pointer-events-none absolute right-3 top-1 h-4 w-4 text-fg-strong/50" />
+      <SparkleIcon className="pointer-events-none absolute right-9 top-6 h-2.5 w-2.5 text-fg-strong/30" />
 
+      <motion.div
+        initial={reduced ? false : "hidden"}
+        animate="show"
+        className="relative flex flex-col gap-4 md:my-auto md:gap-6"
+      >
         <motion.div
-          initial={reduced ? false : "hidden"}
-          animate="show"
-          className="relative flex flex-col gap-4 md:my-auto md:gap-6"
-        >
-          <motion.div
-            ref={railRef}
-            onScroll={onScroll}
-            variants={stage.rail}
-            data-testid="arrival-rail"
-            className={cn(
-              "flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth pb-2 pt-1 [scrollbar-width:none]",
-              "md:snap-none md:justify-center md:gap-5 md:overflow-visible lg:gap-7",
-              count === 1 && "justify-center",
-            )}
-          >
-            {cards.map((card, i) => (
-              <div
-                key={card.slug}
-                className={cn(
-                  "shrink-0 snap-center md:min-w-0 md:flex-1",
-                  count === 1
-                    ? "w-full max-w-sm md:max-w-xs 3xl:max-w-sm"
-                    : "w-4/5 md:w-auto md:max-w-xs 3xl:max-w-sm",
-                  tilt(i, count),
-                )}
-              >
-                <ArrivalPhotoCard card={card} index={i} count={count} reduced={reduced} />
-              </div>
-            ))}
-          </motion.div>
-
-          {count > 1 && (
-            <>
-              <div
-                aria-hidden="true"
-                data-testid="arrival-dots"
-                className="flex items-center justify-center gap-1.5 md:hidden"
-              >
-                {cards.map((card, i) => (
-                  <span
-                    key={card.slug}
-                    className={cn(
-                      "h-1.5 rounded-full transition-all",
-                      i === active ? "w-4 bg-[var(--accent)]" : "w-1.5 bg-fg-strong/25",
-                    )}
-                  />
-                ))}
-              </div>
-              <p className="sr-only" aria-live="polite">
-                Game {active + 1} of {count}
-              </p>
-            </>
+          ref={railRef}
+          onScroll={onScroll}
+          variants={stage.rail}
+          data-testid="arrival-rail"
+          className={cn(
+            "flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth pb-2 pt-1 [scrollbar-width:none]",
+            "md:snap-none md:justify-center md:gap-5 md:overflow-visible lg:gap-7",
+            count === 1 && "justify-center",
           )}
-
-          <motion.div variants={stage.fadeUp}>
-            <Surface
-              variant="tile"
-              padding="md"
-              className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-6"
+        >
+          {cards.map((card, i) => (
+            <div
+              key={card.slug}
+              className={cn(
+                "shrink-0 snap-center md:min-w-0 md:flex-1",
+                count === 1
+                  ? "w-full max-w-sm md:max-w-xs 3xl:max-w-sm"
+                  : "w-4/5 md:w-auto md:max-w-xs 3xl:max-w-sm",
+                tilt(i, count),
+              )}
             >
-              <p className="flex items-start gap-2 text-sm text-fg-secondary">
-                <SparkleIcon className="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" />
-                <span>
-                  Thanks to <span className="font-semibold text-fg-strong">{thanks.names}</span>
-                  {thanks.rest}{" "}
-                  <span className="font-semibold text-fg-strong">
-                    {collectionHint(cards, viewerId)}.
-                  </span>
-                </span>
-              </p>
-              <div className="flex shrink-0 gap-6">
-                <StatTile
-                  variant="plain"
-                  padding="none"
-                  size="lg"
-                  label="votes cast"
-                  value={totals.votesCast}
-                />
-                <StatTile
-                  variant="plain"
-                  padding="none"
-                  size="lg"
-                  label="voters"
-                  value={totals.voterCount}
-                />
-              </div>
-            </Surface>
-          </motion.div>
-
-          {switcher}
+              <ArrivalPhotoCard card={card} index={i} count={count} reduced={reduced} />
+            </div>
+          ))}
         </motion.div>
-      </ModalBody>
 
-      <ModalFooter>
-        <Button variant="ghost" size="sm" onClick={onDismiss}>
-          Later
-        </Button>
-        <Button size="sm" onClick={onCta}>
-          {ctaLabel(cards, viewerId)}
-          <ArrowRightIcon className="ml-1.5 h-3.5 w-3.5" />
-        </Button>
-      </ModalFooter>
-    </Modal>
+        {count > 1 && (
+          <>
+            <div
+              aria-hidden="true"
+              data-testid="arrival-dots"
+              className="flex items-center justify-center gap-1.5 md:hidden"
+            >
+              {cards.map((card, i) => (
+                <span
+                  key={card.slug}
+                  className={cn(
+                    "h-1.5 rounded-full transition-all",
+                    i === active ? "w-4 bg-[var(--accent)]" : "w-1.5 bg-fg-strong/25",
+                  )}
+                />
+              ))}
+            </div>
+            <p className="sr-only" aria-live="polite">
+              Game {active + 1} of {count}
+            </p>
+          </>
+        )}
+
+        <motion.div variants={stage.fadeUp}>
+          <Surface
+            variant="tile"
+            padding="md"
+            className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-6"
+          >
+            <p className="flex items-start gap-2 text-sm text-fg-secondary">
+              <SparkleIcon className="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" />
+              <span>
+                Thanks to <span className="font-semibold text-fg-strong">{thanks.names}</span>
+                {thanks.rest}{" "}
+                <span className="font-semibold text-fg-strong">
+                  {collectionHint(cards, viewerId)}.
+                </span>
+              </span>
+            </p>
+            <div className="flex shrink-0 gap-6">
+              <StatTile
+                variant="plain"
+                padding="none"
+                size="lg"
+                label="votes cast"
+                value={totals.votesCast}
+              />
+              <StatTile
+                variant="plain"
+                padding="none"
+                size="lg"
+                label="voters"
+                value={totals.voterCount}
+              />
+            </div>
+          </Surface>
+        </motion.div>
+
+        {switcher}
+      </motion.div>
+    </ModalBody>
   );
 }

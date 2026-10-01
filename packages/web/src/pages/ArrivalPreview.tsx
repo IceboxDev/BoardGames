@@ -1,15 +1,21 @@
+import type { PurchaseVoteAnnounceGreeting } from "@boardgames/core/protocol";
 import { MotionConfig, MotionGlobalConfig } from "framer-motion";
 import { useState } from "react";
 import { ArrivalTakeoverView } from "../components/arrivals/ArrivalTakeoverView";
 import type { ArrivalCard } from "../components/arrivals/arrival-view-model";
 import { PreviewFrame } from "../components/dev/PreviewFrame";
+import { PurchaseTakeover } from "../components/purchase-vote/PurchaseTakeover";
 import { SegmentedControl } from "../components/ui/SegmentedControl";
+import { cn } from "../lib/cn";
 import { resolveGame } from "../lib/games-by-slug";
 
 // Dev-only preview of the arrivals takeover with static data and no
 // auth/queries, so its phone and desktop layouts can be captured headlessly.
 // Route: /dev/arrival-preview
-//   ?scene=one|two|three|no-avatars|long-titles|many-voters
+//   ?scene=october|one|two|three|no-avatars|long-titles|many-voters
+//   ?step=arrival|vote|ballot   the October takeover's page
+//   ?photos=<dir>  real photos from public/<dir>/<slug>.jpg (never committed)
+//   ?bare          no scene switcher
 //   ?frame=WxH   render inside an iframe of that CSS size (true phone width)
 //   ?motion=1    watch the real entrance + orbit instead of the frozen frame
 //   ?voice=you   the viewer is one of the purchasers
@@ -21,11 +27,21 @@ import { resolveGame } from "../lib/games-by-slug";
 
 const params = new URLSearchParams(window.location.search);
 const LIVE_MOTION = params.has("motion");
+/** `?bare`: hide the scene switcher (clean screenshots). */
+const BARE = params.has("bare");
 // Headless captures race framer's entrances (a shot at opacity 0 looks
 // broken); skip them unless motion is explicitly requested.
 MotionGlobalConfig.skipAnimations = !LIVE_MOTION;
 
-const SCENES = ["one", "two", "three", "no-avatars", "long-titles", "many-voters"] as const;
+const SCENES = [
+  "october",
+  "one",
+  "two",
+  "three",
+  "no-avatars",
+  "long-titles",
+  "many-voters",
+] as const;
 type Scene = (typeof SCENES)[number];
 
 const NAMES = [
@@ -97,7 +113,19 @@ function fixture(
   };
 }
 
+/** `?photos=<dir>`: real arrival photos served from public/<dir>/<slug>.jpg
+ * (dev only, never committed) in place of the catalog art. */
+const PHOTO_DIR = params.get("photos");
+const withPhoto = (card: ArrivalCard): ArrivalCard =>
+  PHOTO_DIR ? { ...card, photoSrc: `/${PHOTO_DIR}/${card.slug}.jpg` } : card;
+
 const CARDS: Record<Scene, ArrivalCard[]> = {
+  // September's vote as it closed: the three games bought from it.
+  october: [
+    withPhoto(fixture("bomb-busters", 0, 5, 5)),
+    withPhoto(fixture("wingspan", 0, 4, 4)),
+    withPhoto(fixture("dune-imperium-uprising", 0, 3, 3)),
+  ],
   one: [fixture("arcs", 0, 6, 6)],
   two: [fixture("arcs", 0, 6, 6), fixture("spirit-island", 1, 4, 4)],
   three: [
@@ -118,6 +146,7 @@ const CARDS: Record<Scene, ArrivalCard[]> = {
 };
 
 const TOTALS: Record<Scene, { voterCount: number; votesCast: number }> = {
+  october: { voterCount: 10, votesCast: 30 },
   one: { voterCount: 6, votesCast: 15 },
   two: { voterCount: 7, votesCast: 18 },
   three: { voterCount: 8, votesCast: 22 },
@@ -129,16 +158,17 @@ const TOTALS: Record<Scene, { voterCount: number; votesCast: number }> = {
 export default function ArrivalPreview() {
   const [scene, setScene] = useState<Scene>(() => {
     const s = params.get("scene");
-    return SCENES.includes(s as Scene) ? (s as Scene) : "three";
+    return SCENES.includes(s as Scene) ? (s as Scene) : "october";
   });
   if (params.get("frame")) return <PreviewFrame params={params} />;
 
   const viewerId = params.get("voice") === "you" ? "u1" : "u99";
   const noop = () => {};
+  const step = params.get("step");
 
   return (
     <MotionConfig reducedMotion={LIVE_MOTION ? "user" : "always"}>
-      <div className="fixed left-1/2 top-2 z-takeover -translate-x-1/2">
+      <div className={cn("fixed left-1/2 top-2 z-takeover -translate-x-1/2", BARE && "hidden")}>
         <SegmentedControl
           shape="pill"
           size="sm"
@@ -148,14 +178,91 @@ export default function ArrivalPreview() {
           options={SCENES.map((s) => ({ value: s, label: s }))}
         />
       </div>
-      <ArrivalTakeoverView
-        key={scene}
-        cards={CARDS[scene]}
-        totals={TOTALS[scene]}
-        viewerId={viewerId}
-        onDismiss={noop}
-        onCta={noop}
-      />
+      {scene === "october" ? (
+        <OctoberTakeover
+          key={step}
+          cards={CARDS.october}
+          viewerId={viewerId}
+          step={step === "vote" || step === "ballot" ? step : "arrival"}
+        />
+      ) : (
+        <ArrivalTakeoverView
+          key={scene}
+          cards={CARDS[scene]}
+          totals={TOTALS[scene]}
+          viewerId={viewerId}
+          onDismiss={noop}
+          onCta={noop}
+        />
+      )}
     </MotionConfig>
+  );
+}
+
+/** The October vote as it opens: the two-page purchase takeover over
+ * September's arrivals, with a local ballot (no server). */
+const OCTOBER_VOTE = {
+  kind: "purchase-vote-announce",
+  pollId: 2,
+  title: "The October vote: games for the whole table",
+  blurb:
+    "September's vote was about the all-time classics — and three of its games are now on the shelf. October is about the size of our table: a game night averages six players and often reaches eight or ten, but most of our games stop at four or five. Every contender here seats eight or more, so the whole group can play together instead of splitting up.",
+  candidates: [
+    "sidereal-confluence",
+    "challengers-beach-cup",
+    "ready-set-bet",
+    "feed-the-kraken",
+    "monikers",
+    "telestrations",
+    "cartographers",
+    "two-rooms-and-a-boom",
+    "perudo",
+    "one-king-one-crown",
+  ],
+  voterCount: 0,
+  requiredVoters: 10,
+} satisfies PurchaseVoteAnnounceGreeting;
+
+function OctoberTakeover({
+  cards,
+  viewerId,
+  step,
+}: {
+  cards: ArrivalCard[];
+  viewerId: string;
+  step: "arrival" | "vote" | "ballot";
+}) {
+  const [selected, setSelected] = useState<string[]>(["telestrations"]);
+  const candidates = OCTOBER_VOTE.candidates
+    .map((slug) => resolveGame(slug))
+    .filter((g) => g !== undefined)
+    .sort((a, b) => a.title.localeCompare(b.title));
+  const noop = () => {};
+  return (
+    <PurchaseTakeover
+      arrival={{ cards, totals: TOTALS.october }}
+      vote={OCTOBER_VOTE}
+      viewerId={viewerId}
+      onClose={noop}
+      onArrivalCta={noop}
+      initialStep={step}
+      ballot={{
+        candidates,
+        selected,
+        savedVotes: [],
+        voterCount: 0,
+        requiredVoters: OCTOBER_VOTE.requiredVoters,
+        view: "picking",
+        pollClosed: false,
+        saving: false,
+        error: null,
+        onToggle: (slug) =>
+          setSelected((cur) =>
+            cur.includes(slug) ? cur.filter((s) => s !== slug) : [...cur, slug],
+          ),
+        onSubmit: noop,
+        onClose: noop,
+      }}
+    />
   );
 }

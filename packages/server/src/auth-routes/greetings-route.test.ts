@@ -72,11 +72,18 @@ describe("GET /api/greetings ladder", () => {
     }
   }
 
-  async function poll(opts: { closed?: boolean } = {}): Promise<number> {
+  async function poll(
+    opts: { closed?: boolean; title?: string; blurb?: string } = {},
+  ): Promise<number> {
     const { rows } = await client.execute({
-      sql: `INSERT INTO purchase_polls (candidate_slugs_json, required_voters, closed_at, winner_slug)
-            VALUES ('["azul","catan"]', 5, ?, ?) RETURNING id`,
-      args: opts.closed ? ["2026-09-01 10:00:00", "azul"] : [null, null],
+      sql: `INSERT INTO purchase_polls
+              (candidate_slugs_json, required_voters, closed_at, winner_slug, title, blurb)
+            VALUES ('["azul","catan"]', 5, ?, ?, ?, ?) RETURNING id`,
+      args: [
+        ...(opts.closed ? ["2026-09-01 10:00:00", "azul"] : [null, null]),
+        opts.title ?? null,
+        opts.blurb ?? null,
+      ],
     });
     return Number(rows[0]?.id);
   }
@@ -147,23 +154,63 @@ describe("GET /api/greetings ladder", () => {
     expect(res.status).toBe(400);
   });
 
-  it("ranks announce first, then the arrival above the reminder, then the reminder", async () => {
+  it("serves an unseen arrival and a new vote as one takeover, then the reminder", async () => {
     // The vote surfaces look at the LATEST poll, so the open one goes last.
     const closed = await poll({ closed: true });
-    const open = await poll();
+    const open = await poll({ title: "The October vote", blurb: "Games for the whole table." });
     await arrival(closed, [{ slug: "azul", purchaser: M1 }]);
     const a = app({ id: M2, onlineMode: "both" });
 
     const first = await greeting(a);
-    expect(first.greeting?.kind).toBe("purchase-vote-announce");
+    if (first.greeting?.kind !== "arrival") throw new Error("expected arrival");
+    expect(first.greeting.pollId).toBe(closed);
+    expect(first.greeting.nextVote).toMatchObject({
+      kind: "purchase-vote-announce",
+      pollId: open,
+      title: "The October vote",
+      blurb: "Games for the whole table.",
+      candidates: ["azul", "catan"],
+    });
+
+    // The client acks both pages when the takeover closes.
+    expect(
+      (await ack(a, { kind: "arrival", arrivalId: first.greeting.arrivalId, action: "cta" }))
+        .status,
+    ).toBe(200);
+    expect(
+      (await ack(a, { kind: "purchase-vote-announce", pollId: open, action: "cta" })).status,
+    ).toBe(200);
+
+    const second = await greeting(a);
+    expect(second.greeting).toMatchObject({
+      kind: "purchase-vote-reminder",
+      title: "The October vote",
+    });
+  });
+
+  it("ranks announce first, then the arrival above the reminder, then the reminder", async () => {
+    const closed = await poll({ closed: true });
+    const open = await poll();
+    const a = app({ id: M2, onlineMode: "both" });
+
+    // No arrival yet: the announce stands alone, without a theme.
+    const first = await greeting(a);
+    expect(first.greeting).toMatchObject({
+      kind: "purchase-vote-announce",
+      title: null,
+      blurb: null,
+    });
     expect(
       (await ack(a, { kind: "purchase-vote-announce", pollId: open, action: "later" })).status,
     ).toBe(200);
 
+    // Published after the announce was seen: a plain arrival, no second page.
+    await arrival(closed, [{ slug: "azul", purchaser: M1 }]);
     const second = await greeting(a);
     expect(second.greeting?.kind).toBe("arrival");
     expect(second.players).toEqual({});
     if (second.greeting?.kind !== "arrival") throw new Error("expected arrival");
+    expect(second.greeting.nextVote).toBeUndefined();
     expect(
       (await ack(a, { kind: "arrival", arrivalId: second.greeting.arrivalId, action: "cta" }))
         .status,
@@ -251,13 +298,12 @@ describe("GET /api/greetings ladder", () => {
 
   it("skips the reminder for an admin but still serves the arrival", async () => {
     const closed = await poll({ closed: true });
-    await poll();
-    await arrival(closed, [{ slug: "azul", purchaser: M1 }]);
+    const open = await poll();
     const a = app({ id: ADMIN, role: "admin", onlineMode: "both" });
     expect((await greeting(a)).greeting?.kind).toBe("purchase-vote-announce");
     // Announce acked → the arrival, then nothing (no reminder for admins).
-    const { rows } = await client.execute("SELECT id FROM purchase_polls WHERE closed_at IS NULL");
-    await ack(a, { kind: "purchase-vote-announce", pollId: Number(rows[0]?.id), action: "later" });
+    await ack(a, { kind: "purchase-vote-announce", pollId: open, action: "later" });
+    await arrival(closed, [{ slug: "azul", purchaser: M1 }]);
     const served = await greeting(a);
     expect(served.greeting?.kind).toBe("arrival");
     if (served.greeting?.kind !== "arrival") throw new Error("expected arrival");

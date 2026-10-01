@@ -15,7 +15,7 @@ import { adminApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
 import { logActivity } from "../lib/activity-log.ts";
 import { errorResponse, zJsonBody } from "../lib/error-response.ts";
-import { closePoll, computeTally, latestPoll, pollVotes } from "../lib/purchase-vote.ts";
+import { closePoll, computeTally, latestPoll, pollTheme, pollVotes } from "../lib/purchase-vote.ts";
 import { playerRefs } from "../lib/user-refs.ts";
 
 export const adminPurchaseVoteRoutes = adminApp();
@@ -33,6 +33,7 @@ adminPurchaseVoteRoutes.get("/", async (c) => {
     AdminPurchaseVoteStateSchema.parse({
       poll: {
         id: poll.id,
+        ...pollTheme(poll),
         createdAt: poll.created_at,
         candidates: poll.candidate_slugs_json,
         requiredVoters: poll.required_voters,
@@ -54,7 +55,7 @@ adminPurchaseVoteRoutes.get("/", async (c) => {
 
 adminPurchaseVoteRoutes.post("/", zJsonBody(AdminCreatePollBodySchema), async (c) => {
   const admin = c.get("user");
-  const { candidates, requiredVoters } = c.req.valid("json");
+  const { candidates, requiredVoters, title, blurb } = c.req.valid("json");
 
   const current = await latestPoll();
   if (current && current.closed_at === null) {
@@ -62,10 +63,16 @@ adminPurchaseVoteRoutes.post("/", zJsonBody(AdminCreatePollBodySchema), async (c
   }
 
   await getDb().execute({
-    sql: "INSERT INTO purchase_polls (candidate_slugs_json, required_voters) VALUES (?, ?)",
-    args: [JSON.stringify(candidates), requiredVoters],
+    sql: `INSERT INTO purchase_polls (candidate_slugs_json, required_voters, title, blurb)
+          VALUES (?, ?, ?, ?)`,
+    args: [JSON.stringify(candidates), requiredVoters, title || null, blurb || null],
   });
-  logActivity(admin.id, "purchase-vote-admin", { action: "create", candidates, requiredVoters });
+  logActivity(admin.id, "purchase-vote-admin", {
+    action: "create",
+    candidates,
+    requiredVoters,
+    ...(title ? { title } : {}),
+  });
   return c.json(AdminPurchaseVoteWriteResponseSchema.parse({ ok: true }));
 });
 

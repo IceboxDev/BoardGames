@@ -52,6 +52,7 @@ import { dropTournamentGames } from "./0044-drop-tournament-games.ts";
 import { dropTournaments } from "./0045-drop-tournaments.ts";
 import { matchOutcomes } from "./0046-match-outcomes.ts";
 import { activityEventTime } from "./0047-activity-event-time.ts";
+import { purchasePollTheme } from "./0048-purchase-poll-theme.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -102,6 +103,7 @@ export const migrations: readonly Migration[] = [
   dropTournaments,
   matchOutcomes,
   activityEventTime,
+  purchasePollTheme,
 ];
 
 /**
