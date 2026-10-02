@@ -18,7 +18,8 @@
 // with `goals` set). The config
 // array is read positionally; a missing / NaN entry keeps the C++ default:
 //   Strigoi  [rollouts, minPerArm]
-//   Dracula  [rollouts, minPerArm, timeMs, tierMargin, turnPlans, maxPlans, survival, rivals, goals, followPlan]
+//   Dracula  [rollouts, minPerArm, timeMs, tierMargin, turnPlans, maxPlans, survival, rivals, goals, followPlan,
+//            execBias, goalArms, exec[0..13]]
 // A new DraculaConfig field is one more entry in draculaConfig() below (and
 // in the TS layout, wasm-agent.ts DRACULA_CONFIG_FIELDS) — append, never reorder.
 #include <cmath>
@@ -45,6 +46,7 @@ enum : int {
 std::string g_error;
 int g_legalCount = -1;
 GameState g_state;  // ~7 KB: kept off the wasm stack
+ExecParams g_exec;  // Lilith's 5–6p plan, from the config array
 Actions g_legal;
 
 bool has(const double* cfg, int n, int i) { return cfg && i < n && !std::isnan(cfg[i]); }
@@ -77,6 +79,16 @@ DraculaConfig draculaConfig(const double* cfg, int n) {
   set(c.rivals, cfg, n, 7);
   set(c.goals, cfg, n, 8);
   set(c.followPlan, cfg, n, 9);
+  set(c.execBias, cfg, n, 10);
+  set(c.goalArms, cfg, n, 11);
+  // [12, 12 + EXEC_PARAMS): the G_EXEC plan's numbers (all of them, or none).
+  bool all = true;
+  for (int k = 0; k < EXEC_PARAMS; k++) all = all && has(cfg, n, 12 + k);
+  if (all) {
+    for (int k = 0; k < EXEC_PARAMS; k++) g_exec.x[k] = float(cfg[12 + k]);
+    g_exec.loaded = true;
+    c.exec = &g_exec;
+  }
   return c;
 }
 

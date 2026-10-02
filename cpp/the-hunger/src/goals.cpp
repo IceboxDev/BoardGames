@@ -60,8 +60,9 @@ bool goalActive(const GameState& s, const PlayerState& p, int goal) {
 
 }  // namespace
 
-int goalPick(const GameState& s, int seat, const Actions& legal, int goal) {
+int goalPick(const GameState& s, int seat, const Actions& legal, int goal, const ExecParams* exec) {
   if (!s.hasCurrent || goal == G_NONE) return heuristicPick(s, seat, legal);
+  if (goal == G_EXEC) return exec && exec->loaded ? execPick(s, seat, legal, *exec) : heuristicPick(s, seat, legal);
   if (goal == G_RUN) return runnerPick(s, seat, legal, RunnerConfig{75, 9, 40, 30, 40, 0});
   if (goal == G_FOREST_RUN) return runnerPick(s, seat, legal, RunnerConfig{75, 9, 40, 30, 40, 1});
   const PlayerState& p = s.players[seat];

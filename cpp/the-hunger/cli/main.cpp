@@ -73,7 +73,7 @@ static int cmdParity(int argc, char** argv) {
 
 // ---------------------------------------------------------------------------
 
-enum Strategy { S_RANDOM, S_HEURISTIC, S_STRIGOI, S_DRACULA, S_CARMILLA, S_LILITH, S_POLICY, S_RUNNER };
+enum Strategy { S_RANDOM, S_HEURISTIC, S_STRIGOI, S_DRACULA, S_CARMILLA, S_LILITH, S_POLICY, S_RUNNER, S_EXEC };
 
 static Strategy parseStrategy(const std::string& s) {
   if (s == "random" || s == "fledgling") return S_RANDOM;
@@ -84,6 +84,7 @@ static Strategy parseStrategy(const std::string& s) {
   if (s == "lilith") return S_LILITH;
   if (s == "policy") return S_POLICY;
   if (s == "runner") return S_RUNNER;
+  if (s == "exec") return S_EXEC;
   std::fprintf(stderr, "unknown strategy %s\n", s.c_str());
   std::exit(2);
 }
@@ -100,7 +101,8 @@ static int pick(Strategy st, const GameState& s, int seat, const Actions& legal,
     case S_CARMILLA: return carmillaPick(s, seat, legal, ccfg);
     case S_LILITH:
     case S_POLICY:
-    case S_RUNNER: return 0;  // need extra config: pickSpec
+    case S_RUNNER:
+    case S_EXEC: return 0;  // need extra config: pickSpec
   }
   return 0;
 }
@@ -343,6 +345,7 @@ struct SeatSpec {
   int net = 0;
   int polId = 0;
   RunnerConfig rcfg;
+  int execId = 0;
   std::string name;
 };
 
@@ -351,6 +354,8 @@ static Net g_nets[4];
 // Playout policies: --pol <file> is policy 0, --pol1..--pol3 (spec key pol=N: Dracula's playouts,
 // or the `policy` strategy playing it directly).
 static RollPolicy g_pols[4];
+// Executor parameter files: --exec <file> is 0, --exec1..--exec3 (spec: `exec:e=N`, or `exec=N` on Dracula).
+static ExecParams g_execs[4];
 
 static int pickSpec(const SeatSpec& sp, const GameState& s, int seat, const Actions& legal,
                     Mulberry32& rng, std::vector<float>* rootQ = nullptr) {
@@ -364,6 +369,7 @@ static int pickSpec(const SeatSpec& sp, const GameState& s, int seat, const Acti
     return lilithPick(s, seat, legal, g_nets[sp.net], sp.lcfg, rootQ, u);
   }
   if (sp.st == S_RUNNER) return runnerPick(s, seat, legal, sp.rcfg);
+  if (sp.st == S_EXEC) return execPick(s, seat, legal, g_execs[sp.execId]);
   if (sp.st == S_POLICY) {
     int spite = spiteRule(s, seat, legal);
     return spite >= 0 ? spite : policyPick(s, seat, legal, g_pols[sp.polId]);
@@ -416,6 +422,14 @@ static SeatSpec parseSpec(const std::string& spec) {
     else if (k == "confuse") out.ccfg.confuse = v;
     else if (k == "digest") out.ccfg.digest = v;
     else if (k == "goal") out.ccfg.goal = v;
+    else if (k == "e") out.execId = v;
+    else if (k == "exec") {
+      if (!g_execs[v].loaded) {
+        std::fprintf(stderr, "exec=%d: no executor loaded\n", v);
+        std::exit(2);
+      }
+      out.dcfg.exec = &g_execs[v];
+    }
     else if (k == "rpace") out.rcfg.pace = v;
     else if (k == "lastOut") out.rcfg.lastOutTurn = v;
     else if (k == "margin") out.rcfg.margin = v;
@@ -423,6 +437,8 @@ static SeatSpec parseSpec(const std::string& spec) {
     else if (k == "rtavern") out.rcfg.tavern = v;
     else if (k == "rtarget") out.rcfg.target = v;
     else if (k == "goals") out.dcfg.goals = v;
+    else if (k == "goalArms") out.dcfg.goalArms = v != 0;
+    else if (k == "execBias") out.dcfg.execBias = v;
     else if (k == "follow") out.dcfg.followPlan = v != 0;
     else if (k == "selfPolicy") out.dcfg.selfPolicy = v;
     else if (k == "rivals") out.dcfg.rivals = v != 0;
@@ -1007,6 +1023,14 @@ int main(int argc, char** argv) {
     return 2;
   }
   std::string cmd = argv[1];
+  for (int k = 0; k < 4; k++) {
+    std::string flag = k == 0 ? "--exec" : "--exec" + std::to_string(k);
+    const char* path = flagValue(argc, argv, flag.c_str(), "");
+    if (*path && !g_execs[k].load(path)) {
+      std::fprintf(stderr, "cannot load %s %s\n", flag.c_str(), path);
+      return 2;
+    }
+  }
   for (int k = 0; k < 4; k++) {
     std::string flag = k == 0 ? "--pol" : "--pol" + std::to_string(k);
     const char* path = flagValue(argc, argv, flag.c_str(), "");

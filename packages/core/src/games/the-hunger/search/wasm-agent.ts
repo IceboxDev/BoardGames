@@ -53,6 +53,9 @@ export const DRACULA_CONFIG_FIELDS = [
   "rivals",
   "goals",
   "followPlan",
+  "execBias",
+  "goalArms",
+  ...Array.from({ length: 14 }, (_, k) => `exec${k}` as const),
 ] as const;
 
 /**
