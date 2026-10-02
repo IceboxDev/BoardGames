@@ -12,8 +12,11 @@ import type { GameState } from "@boardgames/core/games/the-hunger/types";
 const LIVE_THINK_MS = Number(process.env.HUNGER_AI_THINK_MS ?? 1200);
 configureStrigoi({ timeMs: LIVE_THINK_MS });
 configureDracula({ timeMs: LIVE_THINK_MS });
-// Lilith gets Dracula's per-decision time (she follows her chosen plan without re-searching).
-configureLilith({ timeMs: Number(process.env.HUNGER_LILITH_THINK_MS ?? LIVE_THINK_MS) });
+// Lilith thinks 1.5× Dracula's time per decision: each plan is played out twice (Nosferatu and her
+// plan), and she follows a chosen plan without re-searching, so her turns stay short.
+configureLilith({
+  timeMs: Number(process.env.HUNGER_LILITH_THINK_MS ?? Math.round(1.5 * LIVE_THINK_MS)),
+});
 
 parentPort?.on("message", (msg: { id: number; state: GameState }) => {
   try {
