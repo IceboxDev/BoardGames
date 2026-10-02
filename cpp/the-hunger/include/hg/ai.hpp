@@ -1,6 +1,7 @@
 // AI ports: Nosferatu (ai-heuristic.ts), determinize (search/determinize.ts),
 // the rollout policy (search/rollout.ts) and Strigoi (search/strigoi.ts).
 #pragma once
+#include <string>
 #include "hg/engine.hpp"
 
 namespace hg {
@@ -55,6 +56,16 @@ struct DraculaConfig {
   int goals = 0;
   /** Play the rest of the chosen whole-turn plan without re-searching while nothing is revealed. */
   bool followPlan = false;
+  /** Parameters for the G_EXEC goal (set with goals bit 64). */
+  const struct ExecParams* exec = nullptr;
+  /**
+   * Commitment: utility added to the G_EXEC line, so the search keeps executing
+   * the optimised plan unless another line is better by more than this (stops
+   * re-picking between close lines move by move). Percent of a utility point.
+   */
+  int execBias = 0;
+  /** Add each portfolio goal's own line for this turn to the candidate plans. */
+  bool goalArms = false;
   /**
    * Arms are whole own-turn PLANS (every distinct sequence of the seat's
    * remaining decisions this turn, cut at the first move that reveals hidden
@@ -90,9 +101,18 @@ bool revealed(const GameState& a, const GameState& b, int seat);
 int spiteRule(const GameState& s, int seat, const Actions& legal);
 
 /** Goals for Dracula's portfolio playouts (src/goals.cpp). */
-enum Goal { G_NONE = 0, G_FOREST = 1, G_ROSE = 2, G_TAVERN = 3, G_RUN = 4, G_FOREST_RUN = 5, NUM_GOALS = 6 };
-/** Nosferatu following `goal` while it is still worth it (G_NONE = Nosferatu). */
-int goalPick(const GameState& s, int seat, const Actions& legal, int goal);
+enum Goal { G_NONE = 0, G_FOREST = 1, G_ROSE = 2, G_TAVERN = 3, G_RUN = 4, G_FOREST_RUN = 5, G_EXEC = 6, NUM_GOALS = 7 };
+/** The parametrised plan executor (src/exec.cpp); its 14 numbers are found by train/exec_opt.py. */
+constexpr int EXEC_PARAMS = 14;
+struct ExecParams {
+  bool loaded = false;
+  float x[EXEC_PARAMS] = {};
+  bool load(const std::string& path);
+};
+int execPick(const GameState& s, int seat, const Actions& legal, const ExecParams& params);
+
+/** Nosferatu following `goal` while it is still worth it (G_NONE = Nosferatu; G_EXEC needs `exec`). */
+int goalPick(const GameState& s, int seat, const Actions& legal, int goal, const ExecParams* exec = nullptr);
 
 /** The Rose run (src/runner.cpp): race out for a Rose, hunt back under a real budget home. */
 struct RunnerConfig {

@@ -7,7 +7,13 @@ import { createRng } from "../../lib/rng";
 import { matchLegalAction } from "../../machines/action-validation";
 import { heuristicPick } from "./ai-heuristic";
 import { getActivePlayer, getLegalActions } from "./rules";
-import { DEFAULT_DRACULA, DEFAULT_LILITH, type DraculaConfig, draculaPick } from "./search/dracula";
+import {
+  DEFAULT_DRACULA,
+  DEFAULT_LILITH,
+  type DraculaConfig,
+  draculaPick,
+  lilithForTable,
+} from "./search/dracula";
 import { DEFAULT_STRIGOI, type StrigoiConfig, strigoiPick } from "./search/strigoi";
 import { type Action, type AIStrategyId, ALL_STRATEGIES, type GameState } from "./types";
 
@@ -80,7 +86,7 @@ const LILITH: HungerStrategy = {
   ...meta("lilith"),
   pickAction: (state, seat, legal) => {
     try {
-      return draculaPick(state, seat, legal, lilithConfig);
+      return draculaPick(state, seat, legal, lilithForTable(state.players.length, lilithConfig));
     } catch {
       return strigoiPick(state, seat, legal, strigoiConfig);
     }

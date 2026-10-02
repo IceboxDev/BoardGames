@@ -145,7 +145,7 @@ static void rivalPlayout(GameState& s, int self, int selfPolicy) {
 }
 
 /** Playout where the searcher follows `goal` and rivals play the rival model. */
-static void goalPlayout(GameState& s, int self, int goal, bool rivals) {
+static void goalPlayout(GameState& s, int self, int goal, bool rivals, const ExecParams* exec) {
   thread_local Actions legal;
   for (int i = 0; s.phase != PH_OVER && i < 5000; i++) {
     int seat = activePlayer(s);
@@ -153,7 +153,7 @@ static void goalPlayout(GameState& s, int self, int goal, bool rivals) {
     int idx = 0;
     if (legal.size() > 1) {
       idx = rivals ? spiteRule(s, seat, legal) : -1;
-      if (idx < 0) idx = seat == self ? goalPick(s, seat, legal, goal) : heuristicPick(s, seat, legal);
+      if (idx < 0) idx = seat == self ? goalPick(s, seat, legal, goal, exec) : heuristicPick(s, seat, legal);
     }
     Action a = legal[idx];
     apply(s, seat, a);
@@ -275,6 +275,35 @@ int draculaPick(const GameState& state, int seat, const Actions& legal, const Dr
     Mulberry32 planRand(draculaSeed(state, seat) ^ 0x9e37u);
     GameState world0 = determinize(state, seat, planRand);
     enumeratePlans(world0, state, seat, cfg.maxPlans, plans);
+    if (cfg.goalArms) {
+      // Each imagined plan also proposes its OWN line for this turn: the
+      // Nosferatu-first enumeration is capped, and at big tables the cap is hit
+      // long before the plan's preferred moves would come up.
+      Actions here;
+      for (int gl : goalList) {
+        if (gl == G_NONE) continue;
+        Plan path;
+        GameState g = world0;
+        for (int depth = 0; depth < 16 && stillMine(g, state, seat); depth++) {
+          legalActions(g, seat, here);
+          Action a = here[here.size() == 1 ? 0 : goalPick(g, seat, here, gl, cfg.exec)];
+          GameState before = g;
+          Action copy = a;
+          apply(g, seat, copy);
+          path.push_back(a);
+          if (revealed(before, g, seat)) break;
+        }
+        if (path.empty()) continue;
+        bool dup = false;
+        for (const Plan& pl : plans) {
+          if (pl.size() != path.size()) continue;
+          bool same = true;
+          for (size_t k = 0; k < pl.size() && same; k++) same = sameAction(pl[k], path[k]);
+          if (same) dup = true;
+        }
+        if (!dup) plans.push_back(path);
+      }
+    }
     if (plans.size() <= 1) plans.clear();
   }
   const int A = plans.empty() ? L : int(plans.size());
@@ -306,12 +335,13 @@ int draculaPick(const GameState& state, int seat, const Actions& legal, const Dr
           for (int gl : goalList) {
             GameState g = world;
             play(g, arm.idx);
-            goalPlayout(g, seat, gl, cfg.rivals);
+            goalPlayout(g, seat, gl, cfg.rivals, cfg.exec);
             arm.goalSum[gl] += tierUtility(g, seat, cfg.survival);
           }
           arm.goalN++;
           double bestMean = -1;
-          for (int gl : goalList) bestMean = std::max(bestMean, arm.goalSum[gl] / arm.goalN);
+          for (int gl : goalList)
+            bestMean = std::max(bestMean, arm.goalSum[gl] / arm.goalN + (gl == G_EXEC ? cfg.execBias / 100.0 : 0));
           arm.sum = bestMean * arm.goalN;
           arm.n = arm.goalN;
           continue;
