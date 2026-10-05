@@ -14,6 +14,8 @@
 // /api/agent/admin/inactivity snapshot must answer exactly like the admin
 // page, or the two would silently disagree.
 
+import { nightDate } from "../protocol/common.ts";
+
 export const INACTIVE_AFTER_DAYS = 14;
 
 /** Availability coverage of the editable window: marked-day counts + size. */
@@ -36,15 +38,17 @@ export function daysBetweenDateKeys(fromKey: string, toKey: string): number {
 export function daysAtZeroCoverage(opts: {
   coverage: CoverageCounts;
   latestMarkedDay: string | undefined;
-  /** The latest locked night a recorded match places them at (its date key). */
+  /** The latest locked night a recorded match places them at — a night key,
+   * so a date's second night arrives as `YYYY-MM-DD_2`. */
   lastAttendedNight: string | undefined;
   createdAt: string | Date;
   todayKey: string;
 }): number {
   if (opts.coverage.can + opts.coverage.maybe > 0) return 0;
-  const signals = [opts.latestMarkedDay, opts.lastAttendedNight].filter(
-    (s): s is string => s !== undefined,
-  );
+  // A second night's key (`…_2`) is not a date: counting from it yielded NaN,
+  // and a NaN clock never reaches the threshold — the player never archived.
+  const attended = opts.lastAttendedNight && nightDate(opts.lastAttendedNight);
+  const signals = [opts.latestMarkedDay, attended].filter((s): s is string => s !== undefined);
   const latest =
     signals.length > 0
       ? signals.sort().at(-1)

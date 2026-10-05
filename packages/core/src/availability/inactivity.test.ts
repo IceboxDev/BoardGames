@@ -34,6 +34,18 @@ describe("daysAtZeroCoverage", () => {
     ).toBe(13);
   });
 
+  it("counts from a date's second night by its date (a `_2` key is not a date)", () => {
+    const zeroDays = daysAtZeroCoverage({
+      coverage: zero,
+      latestMarkedDay: "2026-07-27",
+      lastAttendedNight: "2026-08-14_2",
+      createdAt: "2026-04-29T10:00:00.000Z",
+      todayKey,
+    });
+    expect(zeroDays).toBe(18);
+    expect(isInactiveMember("user", zero, zeroDays)).toBe(true);
+  });
+
   it("an attended night resets the clock like a marked day", () => {
     expect(
       daysAtZeroCoverage({
