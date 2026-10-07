@@ -37,12 +37,17 @@ const ALL_OPTIONS: PickerOption[] = [
 ].sort((a, b) => a.title.localeCompare(b.title));
 
 export function GamePicker({
-  excludeSlugs,
+  unavailable,
   onPick,
   pickedSlug,
 }: {
-  /** Slugs to hide (already owned / already announced). */
-  excludeSlugs?: ReadonlySet<string>;
+  /**
+   * Slugs that stay listed but can't be picked, each with the reason shown
+   * on its row ("In your collection"). Shown rather than hidden: a search
+   * that finds nothing reads as "the site doesn't know this game" and sends
+   * the member to the free-text box for a game they already own.
+   */
+  unavailable?: ReadonlyMap<string, string>;
   onPick: (slug: string) => void;
   /** Currently chosen slug (row gets a selected treatment). */
   pickedSlug?: string | null;
@@ -54,11 +59,10 @@ export function GamePicker({
   // full set is ~160 rows inside a scroll container — trivial to render.
   const options = useMemo(() => {
     const query = search.trim().toLowerCase();
-    return ALL_OPTIONS.filter((option) => {
-      if (excludeSlugs?.has(option.slug)) return false;
-      return query === "" || option.title.toLowerCase().includes(query);
-    });
-  }, [search, excludeSlugs]);
+    return ALL_OPTIONS.filter(
+      (option) => query === "" || option.title.toLowerCase().includes(query),
+    );
+  }, [search]);
 
   return (
     <div className="flex flex-col gap-2">
@@ -72,12 +76,14 @@ export function GamePicker({
         {options.map((option) => {
           const entry = resolveInventoryEntry(option.slug);
           const picked = pickedSlug === option.slug;
+          const reason = unavailable?.get(option.slug);
           return (
             <li key={option.slug}>
               <SelectableCard
                 variant="row"
                 padding="sm"
                 selected={picked}
+                disabled={reason !== undefined}
                 onClick={() => onPick(option.slug)}
               >
                 {entry.thumbnail ? (
@@ -93,6 +99,7 @@ export function GamePicker({
                     <span className="block text-3xs text-fg-muted">{option.detail}</span>
                   )}
                 </span>
+                {reason && <span className="shrink-0 text-3xs text-fg-muted">{reason}</span>}
               </SelectableCard>
             </li>
           );

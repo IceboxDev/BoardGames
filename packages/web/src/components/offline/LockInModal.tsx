@@ -48,6 +48,12 @@ type Props = {
   members?: readonly ProfileDirectoryEntry[];
   /** Members who marked can/maybe that day: listed first and pre-checked. */
   suggestedInviteeIds?: ReadonlySet<string>;
+  /**
+   * A fresh night's starting point when the admin came from "Find a date":
+   * private, the picked group invited, seats sized to fit. Ignored when
+   * editing an existing night.
+   */
+  prefill?: { kind: NightKind; inviteeIds: readonly string[]; seatCount: number } | null;
   /** Per-user hosting history (total + last date), keyed by userId. */
   hostStats?: HostStatsMap | null;
   busy?: boolean;
@@ -63,6 +69,7 @@ export default function LockInModal({
   candidates,
   members = [],
   suggestedInviteeIds,
+  prefill = null,
   hostStats = null,
   busy = false,
   error = null,
@@ -71,6 +78,7 @@ export default function LockInModal({
   onClose,
 }: Props) {
   const isEditing = initialLock !== null;
+  const start = isEditing ? null : prefill;
   const hostId = useId();
   const timeId = useId();
   const addressId = useId();
@@ -90,9 +98,13 @@ export default function LockInModal({
   // Private night: a seat count (host included), how games get picked, an
   // optional title, and the guest list. A fresh private night pre-checks
   // whoever marked the day free — the likeliest guests, one glance away.
-  const [kind, setKind] = useState<NightKind>(initialLock?.isPrivate ? "private" : "open");
+  const [kind, setKind] = useState<NightKind>(
+    initialLock?.isPrivate ? "private" : (start?.kind ?? "open"),
+  );
   const isPrivate = kind === "private";
-  const [seatCount, setSeatCount] = useState<number>(initialLock?.seats?.total ?? DEFAULT_SEATS);
+  const [seatCount, setSeatCount] = useState<number>(
+    initialLock?.seats?.total ?? start?.seatCount ?? DEFAULT_SEATS,
+  );
   const [pickMode, setPickMode] = useState<PickMode>(
     initialLock?.isPrivate ? initialLock.pickMode : "host",
   );
@@ -102,7 +114,7 @@ export default function LockInModal({
       new Set(
         initialLock?.isPrivate
           ? initialLock.expectedUserIds.filter((id) => id !== initialLock.host?.userId)
-          : [...(suggestedInviteeIds ?? [])],
+          : [...(start?.inviteeIds ?? suggestedInviteeIds ?? [])],
       ),
   );
   const memberRows = useMemo(

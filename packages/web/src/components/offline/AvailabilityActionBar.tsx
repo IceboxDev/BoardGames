@@ -1,4 +1,4 @@
-import { EyeIcon, PadlockIcon } from "../icons";
+import { EyeIcon, PadlockIcon, UsersIcon } from "../icons";
 import { Button } from "../ui/Button";
 import { Chip } from "../ui/Chip";
 import { ErrorAlert } from "../ui/ErrorAlert";
@@ -20,6 +20,9 @@ type Props = {
   onSave: () => void;
   onEnterLockMode: () => void;
   onExitLockMode: () => void;
+  /** Lock mode: "Find a date" — show or hide the people panel. */
+  findDateOpen?: boolean;
+  onToggleFindDate?: () => void;
 };
 
 export function AvailabilityActionBar({
@@ -36,6 +39,8 @@ export function AvailabilityActionBar({
   onSave,
   onEnterLockMode,
   onExitLockMode,
+  findDateOpen = false,
+  onToggleFindDate,
 }: Props) {
   // No fill: the bar sits below the calendar as a sibling, so nothing ever
   // scrolls under it — a frosted `surface-950/90` here only painted a solid
@@ -82,7 +87,7 @@ export function AvailabilityActionBar({
           </Button>
         </div>
       ) : (
-        <div className="flex w-full flex-col items-center gap-2 sm:max-w-md">
+        <div className="flex w-full items-center gap-2 sm:max-w-md">
           {/* `solid`+amber is the real recipe — this used to hand-paint
               `bg-amber-500` over `variant="primary"`, whose gradient
               (background-image) silently painted over the amber anyway. */}
@@ -90,10 +95,24 @@ export function AvailabilityActionBar({
             variant="solid"
             tone="amber"
             onClick={onExitLockMode}
-            className="w-full whitespace-nowrap px-4 py-2 text-sm sm:px-5 sm:py-3 sm:text-base"
+            className="flex-1 whitespace-nowrap px-4 py-2 text-sm sm:px-5 sm:py-3 sm:text-base"
           >
             Exit lock-in mode
           </Button>
+          {onToggleFindDate && (
+            <Chip
+              pressed={findDateOpen}
+              tone="accent"
+              variant="outlined"
+              size="sm"
+              onClick={onToggleFindDate}
+              aria-label={findDateOpen ? "Hide find a date" : "Find a date for a group"}
+              icon={<UsersIcon className="h-3.5 w-3.5" />}
+              className="shrink-0 uppercase tracking-label sm:absolute sm:right-3 sm:top-1/2 sm:-translate-y-1/2"
+            >
+              <span className="hidden sm:inline">Find a date</span>
+            </Chip>
+          )}
         </div>
       )}
     </div>

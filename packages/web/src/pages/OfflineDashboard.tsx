@@ -1,17 +1,32 @@
-import { mkOptimisticLock, nightDate } from "@boardgames/core/protocol";
+import {
+  MAX_SEAT_COUNT,
+  MIN_SEAT_COUNT,
+  mkOptimisticLock,
+  nightDate,
+  type ProfileDirectoryEntry,
+} from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { AvailabilityActionBar } from "../components/offline/AvailabilityActionBar";
 import Calendar from "../components/offline/Calendar";
+import { GroupDatePanel } from "../components/offline/GroupDatePanel";
+import { firstName } from "../components/offline/group-fit";
 import LockInModal from "../components/offline/LockInModal";
 import PrivateNightPeek from "../components/offline/PrivateNightPeek";
 import RsvpModal from "../components/offline/RsvpModal";
+import { useGroupMatch } from "../components/offline/use-group-match";
 import { PurchaseVoteBanner } from "../components/purchase-vote/PurchaseVoteBanner";
 import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
+import { Avatar } from "../components/ui/Avatar";
+import { Button } from "../components/ui/Button";
+import { Drawer } from "../components/ui/Drawer";
 import { ErrorAlert } from "../components/ui/ErrorAlert";
+import { Eyebrow } from "../components/ui/Label";
 import { PageMain, PageShell } from "../components/ui/PageShell";
+import { Surface } from "../components/ui/Surface";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
+import { useMediaQuery, WIDE_BOARD_QUERY } from "../hooks/useMediaQuery";
 import {
   adminSetCalendarLock,
   adminUnsetCalendarLock,
@@ -26,17 +41,20 @@ import {
   type Availability,
   type AvailabilityMap,
   adminFetchAllAvailability,
+  adminFetchAwayDays,
   dateKey,
   fetchAvailability,
   fetchAvailabilityCounts,
   pushAvailability,
 } from "../lib/offline-availability";
-import { startOfWeekMonday } from "../lib/offline-week";
+import { build42Days, startOfWeekMonday } from "../lib/offline-week";
 import { quietNavState } from "../lib/page-views";
 import { fetchPlayers } from "../lib/profile";
 import { qk } from "../lib/query-keys";
 
 type Mode = "view" | "edit" | "lock";
+
+const NO_MEMBERS: readonly ProfileDirectoryEntry[] = [];
 
 export default function OfflineDashboard() {
   const { user, isAdmin } = useCurrentUser();
@@ -85,6 +103,15 @@ export default function OfflineDashboard() {
     enabled: isAdmin,
   });
 
+  const [mode, setMode] = useState<Mode>("view");
+
+  // Admin away notes count as "not free" when finding a date for a group.
+  const awayQuery = useQuery({
+    queryKey: qk.adminAwayDays(),
+    queryFn: ({ signal }) => adminFetchAwayDays(signal),
+    enabled: isAdmin && mode === "lock",
+  });
+
   const committed: AvailabilityMap = availabilityQuery.data ?? {};
   const allAvailability = aggregateQuery.data ?? null;
   const counts = countsQuery.data ?? undefined;
@@ -112,10 +139,18 @@ export default function OfflineDashboard() {
   // this is a no-op there.
   const overlaysReady = locksQuery.data !== undefined;
 
-  const [mode, setMode] = useState<Mode>("view");
   const [draft, setDraft] = useState<AvailabilityMap>({});
   const [rsvpDate, setRsvpDate] = useState<string | null>(null);
   const [lockingDate, setLockingDate] = useState<string | null>(null);
+  // "Find a date": the people panel, and the lock dialog's starting point
+  // when a night was picked for the group.
+  const [findOpen, setFindOpen] = useState(false);
+  const [lockPrefill, setLockPrefill] = useState<{
+    kind: "private";
+    inviteeIds: string[];
+    seatCount: number;
+  } | null>(null);
+  const wide = useMediaQuery(WIDE_BOARD_QUERY);
   const [debugAsPlayer, setDebugAsPlayer] = useState(false);
   const inAdminView = isAdmin && !debugAsPlayer;
 
@@ -149,6 +184,27 @@ export default function OfflineDashboard() {
     }
     return out;
   }, [locks, userId]);
+
+  const todayKey = dateKey(today);
+  const groupDates = useMemo(
+    () =>
+      build42Days(weekStart)
+        .map(dateKey)
+        .filter((k) => k >= todayKey),
+    [weekStart, todayKey],
+  );
+  const members = playersQuery.data?.players ?? NO_MEMBERS;
+  const group = useGroupMatch({
+    dates: groupDates,
+    availability: allAvailability,
+    awayByUser: awayQuery.data,
+    locks,
+    members,
+  });
+  const groupOverlay = useMemo(
+    () => ({ ids: group.ids, byDate: group.byDate, names: group.names }),
+    [group.ids, group.byDate, group.names],
+  );
 
   const saveMutation = useMutation({
     mutationFn: (next: AvailabilityMap) => pushAvailability(next),
@@ -247,6 +303,8 @@ export default function OfflineDashboard() {
   function exitLockMode() {
     lockMutation.reset();
     unlockMutation.reset();
+    setFindOpen(false);
+    group.clear();
     setMode("view");
   }
 
@@ -262,7 +320,24 @@ export default function OfflineDashboard() {
   function handleLockToggle(date: string, _currentlyLocked: boolean) {
     lockMutation.reset();
     unlockMutation.reset();
+    // A new night picked while a group is chosen starts as their private
+    // night: the group invited, a seat each plus the host's.
+    setLockPrefill(
+      group.active && !locks?.[date]
+        ? {
+            kind: "private",
+            inviteeIds: [...group.ids],
+            seatCount: Math.min(MAX_SEAT_COUNT, Math.max(MIN_SEAT_COUNT, group.ids.size + 1)),
+          }
+        : null,
+    );
     setLockingDate(date);
+  }
+
+  /** A ranked night from the panel: on phones the sheet makes way for the dialog. */
+  function pickGroupNight(nightKey: string) {
+    if (!wide) setFindOpen(false);
+    handleLockToggle(nightKey, false);
   }
 
   async function submitLock(form: LockInForm) {
@@ -325,7 +400,6 @@ export default function OfflineDashboard() {
   // map (the user once marked them, the server kept them) but they are
   // read-only and off-screen, so counting them in the save button label
   // would surface a phantom "extra" that the user can't see or change.
-  const todayKey = dateKey(today);
   const markedCount = Object.keys(visible).filter((k) => k >= todayKey).length;
   const saveError = saveMutation.error
     ? saveMutation.error instanceof Error
@@ -377,26 +451,63 @@ export default function OfflineDashboard() {
           <span className="opacity-60">clear</span>
         </p>
 
-        <Calendar
-          weekStart={weekStart}
-          // Personal stripe + mark chip are also hidden under the locked
-          // layer, so gate the user's own marks in view mode too — otherwise
-          // a marked date that turns out to be locked flashes the stripe on
-          // and then off when locks lands. Edit mode keeps `visible` so the
-          // user always sees the draft they're typing into.
-          availability={mode === "view" && !overlaysReady ? {} : visible}
-          onChange={handleChange}
-          readonlyBefore={today}
-          interactive={mode === "edit"}
-          dayLabels={inAdminView && overlaysReady ? (allAvailability ?? undefined) : undefined}
-          counts={overlaysReady ? counts : undefined}
-          locks={locks}
-          lockMode={mode === "lock"}
-          onLockToggle={handleLockToggle}
-          onLockedClick={mode === "lock" ? undefined : (date) => setRsvpDate(date)}
-          viewerRsvpByDate={viewerRsvpByDate}
-          viewer={{ id: userId, isAdmin }}
-        />
+        {mode === "lock" && group.active && !(findOpen && wide) && (
+          <GroupSummary
+            ids={group.ids}
+            members={members}
+            allCount={group.ranked.filter((m) => m.tier === "all").length}
+            onEdit={() => setFindOpen(true)}
+            onClear={group.clear}
+          />
+        )}
+
+        <div className="flex min-h-0 flex-1 gap-2">
+          <div className="flex min-h-0 min-w-0 flex-1 flex-col">
+            <Calendar
+              weekStart={weekStart}
+              // Personal stripe + mark chip are also hidden under the locked
+              // layer, so gate the user's own marks in view mode too — otherwise
+              // a marked date that turns out to be locked flashes the stripe on
+              // and then off when locks lands. Edit mode keeps `visible` so the
+              // user always sees the draft they're typing into.
+              availability={mode === "view" && !overlaysReady ? {} : visible}
+              onChange={handleChange}
+              readonlyBefore={today}
+              interactive={mode === "edit"}
+              dayLabels={inAdminView && overlaysReady ? (allAvailability ?? undefined) : undefined}
+              counts={overlaysReady ? counts : undefined}
+              locks={locks}
+              lockMode={mode === "lock"}
+              onLockToggle={handleLockToggle}
+              onLockedClick={mode === "lock" ? undefined : (date) => setRsvpDate(date)}
+              viewerRsvpByDate={viewerRsvpByDate}
+              viewer={{ id: userId, isAdmin }}
+              group={mode === "lock" && group.active ? groupOverlay : null}
+            />
+          </div>
+          {mode === "lock" && findOpen && wide && (
+            <aside
+              aria-label="Find a date"
+              className="scrollbar-thin flex w-80 shrink-0 flex-col gap-3 overflow-y-auto rounded-card-xl bg-surface-900/60 p-4"
+            >
+              <div className="flex items-center justify-between gap-2">
+                <Eyebrow>Find a date</Eyebrow>
+                <Button variant="ghost" size="sm" onClick={() => setFindOpen(false)}>
+                  Hide
+                </Button>
+              </div>
+              <GroupDatePanel
+                members={members}
+                selectedIds={group.ids}
+                onToggle={group.toggle}
+                onClear={group.clear}
+                ranked={group.ranked}
+                names={group.names}
+                onPickNight={pickGroupNight}
+              />
+            </aside>
+          )}
+        </div>
 
         <AvailabilityActionBar
           mode={mode}
@@ -412,6 +523,8 @@ export default function OfflineDashboard() {
           onSave={save}
           onEnterLockMode={enterLockMode}
           onExitLockMode={exitLockMode}
+          findDateOpen={findOpen}
+          onToggleFindDate={inAdminView ? () => setFindOpen((open) => !open) : undefined}
         />
       </PageMain>
 
@@ -428,13 +541,33 @@ export default function OfflineDashboard() {
           <RsvpModal date={rsvpDate} locks={locks} onClose={() => setRsvpDate(null)} />
         ))}
 
+      {mode === "lock" && findOpen && !wide && (
+        <Drawer
+          side="bottom"
+          eyebrow="Lock-in"
+          title="Find a date"
+          onClose={() => setFindOpen(false)}
+        >
+          <GroupDatePanel
+            members={members}
+            selectedIds={group.ids}
+            onToggle={group.toggle}
+            onClear={group.clear}
+            ranked={group.ranked}
+            names={group.names}
+            onPickNight={pickGroupNight}
+          />
+        </Drawer>
+      )}
+
       {lockingDate && (
         <LockInModal
           date={lockingDate}
           initialLock={locks?.[lockingDate] ?? null}
           candidates={hostCandidates}
-          members={playersQuery.data?.players ?? []}
+          members={members}
           suggestedInviteeIds={freeOnLockingDate}
+          prefill={lockPrefill}
           hostStats={hostStatsQuery.data ?? null}
           busy={lockMutation.isPending || unlockMutation.isPending}
           error={lockMutationError ?? unlockMutationError}
@@ -444,5 +577,67 @@ export default function OfflineDashboard() {
         />
       )}
     </PageShell>
+  );
+}
+
+/** Lock mode, panel hidden: who the calendar is scored for, one tap from editing. */
+function GroupSummary({
+  ids,
+  members,
+  allCount,
+  onEdit,
+  onClear,
+}: {
+  ids: ReadonlySet<string>;
+  members: readonly ProfileDirectoryEntry[];
+  allCount: number;
+  onEdit: () => void;
+  onClear: () => void;
+}) {
+  const picked = members.filter((m) => ids.has(m.id));
+  return (
+    <Surface
+      variant="raised"
+      radius="lg"
+      padding="none"
+      className="flex shrink-0 items-center gap-2 px-2 py-1.5"
+    >
+      <div className="flex shrink-0 -space-x-2 sm:-space-x-1">
+        {picked.slice(0, 5).map((m) => (
+          <Avatar
+            key={m.id}
+            name={m.name}
+            image={m.image}
+            accentHex={m.accentHex}
+            size="xs"
+            className="ring-2 ring-surface-900"
+          />
+        ))}
+      </div>
+      <p className="min-w-0 flex-1 truncate text-xs text-fg-secondary">
+        {allCount === 0 ? (
+          <>
+            None suit <span className="max-sm:hidden">all of them</span>
+            <span className="sm:hidden">all</span>
+          </>
+        ) : (
+          <>
+            {allCount} {allCount === 1 ? "night" : "nights"}
+            {/* Phones keep the count; the strip is one line at 320. */}
+            <span className="max-sm:hidden">
+              {" "}
+              {allCount === 1 ? "suits" : "suit"}{" "}
+              {picked.length === 1 ? firstName(picked[0]?.name ?? "") : `all ${picked.length}`}
+            </span>
+          </>
+        )}
+      </p>
+      <Button variant="ghost" size="sm" onClick={onEdit}>
+        Edit
+      </Button>
+      <Button variant="ghost" size="sm" onClick={onClear}>
+        Clear
+      </Button>
+    </Surface>
   );
 }

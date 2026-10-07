@@ -6,6 +6,7 @@ import type { RsvpStatus } from "../../lib/calendar-rsvps";
 import type { ViewerSeat } from "../../lib/night-access";
 import type { Availability, AvailabilityEntry } from "../../lib/offline-availability";
 import { D20Die } from "./D20Die";
+import { firstName } from "./group-fit";
 
 /** What a private night's cell needs beyond the lock: the tally and the viewer's own place. */
 export type PrivateNightCell = {
@@ -38,6 +39,19 @@ export type NightCell = {
   onClick: () => void;
 };
 
+/**
+ * Lock mode's "Find a date": how this date suits the group the admin picked.
+ * `available` counts can + maybe; `maybe` how many of those are only maybes.
+ */
+export type GroupCell = {
+  tier: "all" | "most" | "none";
+  available: number;
+  total: number;
+  maybe: number;
+  /** First names of the picked members with no mark that day. */
+  missing: string[];
+};
+
 export type DayCellProps = {
   day: number;
   monthBucket: 0 | 1 | 2;
@@ -59,6 +73,8 @@ export type DayCellProps = {
   lockMode: boolean;
   /** Admin "away" note: the owner is known to be unavailable (never with a `value`). */
   away?: boolean;
+  /** "Find a date" is on: the date's fit for the picked group. */
+  group?: GroupCell | null;
   cellSeed: number;
   /** Click on an UNLOCKED cell (cycle availability, toggle away, lock in). */
   onClick: () => void;
@@ -89,6 +105,7 @@ function SingleDayCell({
   night,
   lockMode,
   away = false,
+  group = null,
   cellSeed,
   onClick,
 }: DayCellProps & { night: NightCell | null }) {
@@ -112,6 +129,9 @@ function SingleDayCell({
   // night arrives sealed from lock-in, so `picksLocked` is already true).
   const showPrivate = locked && !showDnd && privateNight !== null;
   const invitedPending = showPrivate && !isPast && privateNight?.viewerSeat === "invited";
+  // "Find a date": a free date that suits the group is ringed and tallied;
+  // one that doesn't steps back (still clickable — the admin may want it).
+  const groupFit = !locked && group ? group.tier : null;
 
   // Personal-mark gradient layer — render only when no aggregate heat or lock overrides it.
   // "maybe" stays in the warn tones so it never reads as the heat of warming or fire.
@@ -150,36 +170,40 @@ function SingleDayCell({
   const borderClass =
     showDnd || showPrivate
       ? "" // `.dnd-night-cell` / `.private-night-cell` own their rim + glow.
-      : locked
-        ? "border-warn-gold/40"
-        : heat.kind === "fire"
-          ? "border-heat-ember/80"
-          : heat.kind === "warming"
-            ? "border-heat-bright/65"
-            : value === "can"
-              ? "border-accent-400/70"
-              : value === "maybe"
-                ? "border-warn-strong/60"
-                : away
-                  ? "border-dashed border-fg-muted/50"
-                  : lockMode
-                    ? "border-warn-gold/30 hover:border-warn-gold/60"
-                    : "border-line hover:border-fg-strong/25";
+      : groupFit && groupFit !== "none"
+        ? GROUP_RING[groupFit]
+        : locked
+          ? "border-warn-gold/40"
+          : heat.kind === "fire"
+            ? "border-heat-ember/80"
+            : heat.kind === "warming"
+              ? "border-heat-bright/65"
+              : value === "can"
+                ? "border-accent-400/70"
+                : value === "maybe"
+                  ? "border-warn-strong/60"
+                  : away
+                    ? "border-dashed border-fg-muted/50"
+                    : lockMode
+                      ? "border-warn-gold/30 hover:border-warn-gold/60"
+                      : "border-line hover:border-fg-strong/25";
 
   const baseBgClass = !value && !heated && !locked ? "bg-surface-800/55" : "";
   const baseHover = !value && !heated && !locked && clickable ? "hover:bg-surface-800/80" : "";
   const lockedDisplayClass = isPast
     ? "pointer-events-none opacity-30"
-    : clickable
-      ? "hover:scale-[1.015] active:scale-[0.985]"
-      : "pointer-events-none";
+    : groupFit === "none"
+      ? "opacity-35 hover:opacity-100"
+      : clickable
+        ? "hover:scale-[1.015] active:scale-[0.985]"
+        : "pointer-events-none";
 
   // Phones (< sm) draw the cell through `PhoneCellGrid` (below), sized to
   // the cell itself; this padding only frames the admin names layout there.
   // 4px, not 8: at p-2 a ~37px cell left 19px and "20"–"29" overflowed.
   const padding = compact ? "p-1 sm:p-1.5" : "p-1 sm:p-3";
   // Every phone cell except the admin names view runs on the one grid.
-  const phoneGrid = !compact && (locked || !isAdminView);
+  const phoneGrid = !compact && (locked || !isAdminView || groupFit !== null);
   const phoneHide = phoneGrid ? "max-sm:hidden" : "";
   // Size depends on `compact` ALONE. Attendee names only ever render under the
   // admin overlay, so a size that also keyed off "this cell has names" meant
@@ -227,7 +251,13 @@ function SingleDayCell({
           : ""
       }`}
       aria-pressed={value !== undefined || away}
-      title={away ? "Marked away — not counted in coverage" : undefined}
+      title={
+        groupFit && group
+          ? groupTitle(group)
+          : away
+            ? "Marked away — not counted in coverage"
+            : undefined
+      }
       className={`group relative flex flex-col overflow-hidden rounded-card-xl border ${compact ? "" : "max-sm:rounded-card-md"} transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${layoutClass} ${aspectClass} ${padding} ${baseBgClass} ${borderClass} ${showDnd ? "dnd-night-cell" : ""} ${showPrivate ? "private-night-cell" : ""} ${invitedPending ? "private-night-cell-invited" : ""} ${baseHover} ${lockedDisplayClass} ${heatAnim}`}
     >
       <span
@@ -339,7 +369,10 @@ function SingleDayCell({
           day={day}
           monthLabel={monthLabel}
           isToday={isToday}
-          hasPills={locked || ((!!value || heated) && !isAdminView)}
+          hasPills={
+            locked ||
+            (groupFit !== null ? groupFit !== "none" : (!!value || heated) && !isAdminView)
+          }
           main={
             showDnd && attendance ? (
               <D20Die
@@ -369,6 +402,8 @@ function SingleDayCell({
               <PhoneSeatPill viewerSeat={privateNight.viewerSeat} />
             ) : locked ? (
               <PhoneRsvpPill viewerRsvp={viewerRsvp} />
+            ) : groupFit !== null && group ? (
+              <PhoneGroupPill group={group} />
             ) : (
               <>
                 {value && <PhoneMarkPill value={value} />}
@@ -379,7 +414,14 @@ function SingleDayCell({
         />
       )}
       {labels && labels.length > 0 && !compact && !locked && (
-        <DayLabels entries={labels} heated={heated} />
+        <DayLabels entries={labels} heated={heated} className={phoneHide} />
+      )}
+      {groupFit && group && groupFit !== "none" && !compact && (
+        // lg+ only, in the free top-right corner: below that a cell has no
+        // room to spare without hiding a name, and the ring says enough.
+        <span className="pointer-events-none absolute top-1.5 right-1.5 z-raised hidden lg:inline-flex">
+          <GroupBadge group={group} />
+        </span>
       )}
       {/* sm+: pinned to opposite corners, stable slots regardless of which
           badge is present. */}
@@ -1100,7 +1142,8 @@ type PhonePillTone =
   | "muted"
   | "gold"
   | "accent"
-  | "private";
+  | "private"
+  | "match";
 
 const PHONE_PILL_TONE: Record<PhonePillTone, string> = {
   can: "bg-surface-950/90 text-accent-200 ring-accent-300/55",
@@ -1112,6 +1155,7 @@ const PHONE_PILL_TONE: Record<PhonePillTone, string> = {
   gold: "bg-surface-950/80 text-warn-gold ring-warn-gold/50",
   accent: "bg-surface-950/80 text-accent-200 ring-accent-400/60",
   private: "bg-surface-950/80 text-private-ink ring-private-ink/40",
+  match: "bg-surface-950/80 text-ok ring-ok/55",
 };
 
 function PhonePill({
@@ -1222,6 +1266,52 @@ function PhoneSeatPill({ viewerSeat }: { viewerSeat: ViewerSeat | null }) {
   }
 }
 
+// ── "Find a date" ──────────────────────────────────────────────────────
+
+/** The ring a date that suits the group wears — inset, since the cell clips outer glows. */
+const GROUP_RING: Record<"all" | "most", string> = {
+  all: "border-ok/80 ring-1 ring-inset ring-ok/45",
+  most: "border-warn-gold/70 ring-1 ring-inset ring-warn-gold/30",
+};
+
+function groupTitle(group: GroupCell): string {
+  if (group.missing.length === 0) {
+    return group.maybe > 0
+      ? `All ${group.total} free (${group.maybe} maybe)`
+      : `All ${group.total} free`;
+  }
+  return `Missing: ${group.missing.join(", ")}`;
+}
+
+/** "4/4", with a gold dot when some of them are only maybes. */
+function PhoneGroupPill({ group }: { group: GroupCell }) {
+  if (group.tier === "none") return null;
+  return (
+    <PhonePill tone={group.tier === "all" ? "match" : "gold"}>
+      {`${group.available}/${group.total}`}
+      {group.maybe > 0 && (
+        <span className="size-[5cqw] shrink-0 rounded-full bg-warn-strong" aria-hidden="true" />
+      )}
+    </PhonePill>
+  );
+}
+
+function GroupBadge({ group }: { group: GroupCell }) {
+  const all = group.tier === "all";
+  // Sized like PersonalMarkChip / HeatBadge, its desktop siblings.
+  return (
+    <span
+      className={`inline-flex min-h-5 items-center gap-1 rounded-full bg-surface-950/95 px-2 py-0.5 text-3xs font-extrabold leading-none tabular-nums ring-1 md:text-xs ${
+        all ? "text-ok ring-ok/70" : "text-warn-gold ring-warn-gold/70"
+      }`}
+      aria-hidden="true"
+    >
+      {group.available}/{group.total}
+      {group.maybe > 0 && <span className="size-1.5 rounded-full bg-warn-strong" />}
+    </span>
+  );
+}
+
 function HeatBadge({ heat }: { heat: Heat }) {
   if (heat.kind === "neutral") return null;
   const isFire = heat.kind === "fire";
@@ -1270,7 +1360,15 @@ function FlameGlyph({
   );
 }
 
-function DayLabels({ entries, heated }: { entries: AvailabilityEntry[]; heated: boolean }) {
+function DayLabels({
+  entries,
+  heated,
+  className = "",
+}: {
+  entries: AvailabilityEntry[];
+  heated: boolean;
+  className?: string;
+}) {
   // Cans always come first so the can row is on top, maybes underneath.
   // No explicit cap: with the responsive font scale the cell can carry every
   // name in the friend group, and the wrapper's `overflow-hidden` is the
@@ -1280,7 +1378,9 @@ function DayLabels({ entries, heated }: { entries: AvailabilityEntry[]; heated: 
   const maybes = entries.filter((e) => e.status === "maybe");
   const textShadow = heated ? { textShadow: "0 1px 2px rgba(0,0,0,0.85)" } : undefined;
   return (
-    <div className="relative z-raised mt-0.5 flex min-h-0 flex-1 flex-col overflow-hidden tall:mt-1.5 tall:gap-1.5">
+    <div
+      className={`relative z-raised mt-0.5 flex min-h-0 flex-1 flex-col overflow-hidden tall:mt-1.5 tall:gap-1.5 ${className}`}
+    >
       {cans.length > 0 && (
         <NameRow entries={cans} dotColor="bg-accent-300" textShadow={textShadow} />
       )}
@@ -1318,13 +1418,6 @@ function NameRow({
       ))}
     </div>
   );
-}
-
-function firstName(full: string): string {
-  const trimmed = full.trim();
-  if (!trimmed) return "—";
-  const space = trimmed.indexOf(" ");
-  return space === -1 ? trimmed : trimmed.slice(0, space);
 }
 
 function monthTintClass(bucket: 0 | 1 | 2): string {
@@ -1370,7 +1463,15 @@ function SplitDayCell({
   nights,
   addNight,
   lockMode,
+  group = null,
 }: DayCellProps) {
+  // A date that already has a night: only its ring says how it suits the group.
+  const groupRing =
+    group && group.tier !== "none"
+      ? GROUP_RING[group.tier]
+      : lockMode
+        ? "border-warn-gold/30"
+        : "border-warn-gold/25";
   const inset = compact ? "inset-0.5" : "inset-0.5 sm:inset-1";
   const two = nights.length >= 2;
   return (
@@ -1380,9 +1481,14 @@ function SplitDayCell({
       aria-label={`${day} — ${two ? "two nights" : "one night, one free slot"}`}
       className={`group relative min-w-0 overflow-hidden rounded-card-xl border transition-all duration-200 ease-out ${
         compact ? "aspect-square" : ""
-      } ${lockMode ? "border-warn-gold/30" : "border-warn-gold/25"} ${
-        isPast ? "pointer-events-none opacity-30" : ""
+      } ${groupRing} ${
+        isPast
+          ? "pointer-events-none opacity-30"
+          : group?.tier === "none"
+            ? "opacity-35 hover:opacity-100"
+            : ""
       }`}
+      title={group ? groupTitle(group) : undefined}
     >
       <span
         className={`pointer-events-none absolute inset-0 ${monthTintClass(monthBucket)}`}

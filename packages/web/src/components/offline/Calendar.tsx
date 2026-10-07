@@ -1,3 +1,4 @@
+import type { GroupDayMatch } from "@boardgames/core/availability/group-match";
 import type { CalendarLocks } from "../../lib/calendar-locks";
 import { freeNightKey, nightsForDate } from "../../lib/calendar-locks";
 import type { RsvpStatus } from "../../lib/calendar-rsvps";
@@ -11,7 +12,8 @@ import type {
 } from "../../lib/offline-availability";
 import { dateKey } from "../../lib/offline-availability";
 import { build42Days } from "../../lib/offline-week";
-import { DayCell, type Heat, type NightCell } from "./CalendarDayCell";
+import { DayCell, type GroupCell, type Heat, type NightCell } from "./CalendarDayCell";
+import { firstName } from "./group-fit";
 
 const DAY_NAMES = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
 
@@ -64,6 +66,16 @@ type Props = {
    * (previews, admin drawers): private cells then show the tally alone.
    */
   viewer?: { id: string | null; isAdmin: boolean };
+  /**
+   * Lock mode's "Find a date": the picked members and every date's fit for
+   * them. While set, a day's names list only the group, heat steps aside so
+   * one signal speaks, and each free date is ringed, tallied or dimmed.
+   */
+  group?: {
+    ids: ReadonlySet<string>;
+    byDate: Readonly<Record<string, GroupDayMatch>>;
+    names: ReadonlyMap<string, string>;
+  } | null;
 };
 
 export default function Calendar({
@@ -84,6 +96,7 @@ export default function Calendar({
   awayMode = false,
   onAwayToggle,
   viewer,
+  group = null,
 }: Props) {
   const todayKey = dateKey(new Date());
   const cutoffKey = readonlyBefore ? dateKey(readonlyBefore) : null;
@@ -134,7 +147,13 @@ export default function Calendar({
           const isPast = cutoffKey ? key < cutoffKey : false;
           const showMonthLabel = i === 0 || date.getDate() === 1;
           const dayCounts = counts?.[key];
-          const heat = deriveHeat(dayCounts);
+          const heat: Heat = group ? { kind: "neutral" } : deriveHeat(dayCounts);
+          const match = group && !isPast ? group.byDate[key] : undefined;
+          const groupCell =
+            group && match && match.nightKey !== null ? toGroupCell(match, group) : null;
+          const labels = group
+            ? dayLabels?.[key]?.filter((e) => group.ids.has(e.userId))
+            : dayLabels?.[key];
 
           // The date's nights (0, 1 or 2), each carrying its own art, tally
           // and click. In lock mode a night's click edits it; otherwise it
@@ -193,13 +212,14 @@ export default function Calendar({
               isPast={isPast}
               interactive={cellInteractive}
               compact={compact}
-              labels={dayLabels?.[key]}
+              labels={labels}
               isAdminView={!!dayLabels}
               heat={heat}
               nights={nights}
               addNight={addNight}
               lockMode={lockMode}
               away={away}
+              group={groupCell}
               cellSeed={i}
               onClick={handleClick}
             />
@@ -208,6 +228,16 @@ export default function Calendar({
       </div>
     </div>
   );
+}
+
+function toGroupCell(match: GroupDayMatch, group: NonNullable<Props["group"]>): GroupCell {
+  return {
+    tier: match.tier,
+    available: match.can.length + match.maybe.length,
+    total: match.can.length + match.maybe.length + match.missing.length,
+    maybe: match.maybe.length,
+    missing: match.missing.map((id) => firstName(group.names.get(id) ?? "—")),
+  };
 }
 
 function deriveHeat(counts: { can: number; maybe: number } | undefined): Heat {

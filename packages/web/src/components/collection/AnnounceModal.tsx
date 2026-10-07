@@ -35,13 +35,14 @@ export function AnnounceModal({
   const [freeText, setFreeText] = useState("");
   const [note, setNote] = useState("");
 
-  // Hide what's already owned or already pending.
-  const excludeSlugs = useMemo(() => {
-    const set = new Set(collection.slugs);
+  // What's already owned or already pending stays listed, greyed with why.
+  const unavailable = useMemo(() => {
+    const map = new Map<string, string>();
     for (const a of collection.announcements) {
-      if (a.status === "pending" && a.slug) set.add(a.slug);
+      if (a.status === "pending" && a.slug) map.set(a.slug, "Already announced");
     }
-    return set;
+    for (const slug of collection.slugs) map.set(slug, "In your collection");
+    return map;
   }, [collection]);
 
   const mutation = useMutation({
@@ -81,7 +82,7 @@ export function AnnounceModal({
           onChange={setSource}
         />
         {source === "catalog" ? (
-          <GamePicker excludeSlugs={excludeSlugs} pickedSlug={pickedSlug} onPick={setPickedSlug} />
+          <GamePicker unavailable={unavailable} pickedSlug={pickedSlug} onPick={setPickedSlug} />
         ) : (
           <Field
             label="Game name"

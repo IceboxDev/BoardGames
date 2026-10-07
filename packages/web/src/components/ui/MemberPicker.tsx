@@ -89,7 +89,14 @@ export function MemberPicker({
                 onChange={() => onToggle(m.id)}
                 disabled={disabled || locked}
                 aria-label={m.name}
-                leading={<Avatar name={m.name} image={m.image ?? null} size="xs" />}
+                leading={
+                  <Avatar
+                    name={m.name}
+                    image={m.image ?? null}
+                    accentHex={m.accentHex ?? null}
+                    size="xs"
+                  />
+                }
                 title={m.name}
                 description={locked ? "Host" : suggested ? suggestionHint : undefined}
               />
