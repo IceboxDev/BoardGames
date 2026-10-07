@@ -1092,6 +1092,30 @@ Every prompt includes the same style directive so the four images form a visuall
 
 ---
 
+## 137. Risk
+
+**File:** `packages/web/src/games/risk/assets/thumbnail.png`
+
+> A top-down view of a general's war-room table at night, lit by a low green-shaded lamp, where a large vintage world map spreads across the frame, its six continents painted in muted parchment colors — olive North America, ochre Africa, rust Asia, sea-blue Australia — and divided into jagged territories joined across the oceans by thin dotted sea lanes. Small plastic army pieces in six bold colors crowd the borders: tiny infantry figures, cavalry horses, and cannons massed into towering stacks on contested frontlines, a red horde pouring out of Asia into a thinly held Europe while blue armies dig in across the Americas. At the center of a fierce border clash, three red attack dice and two white defense dice have just tumbled to a stop beside a toppled cannon. A small fanned stack of territory cards showing an infantryman, a horseman, and a cannon sits at the map's edge beside a brass compass, a pair of field binoculars, a pewter mug of cold coffee, and a crumpled sheet of battle plans. The mood is grand, tense, and ruthless — a world one dice roll away from changing hands. No people, players, hands, or seated figures anywhere in the scene — only the game, its components, and the setting. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 138. Carnegie
+
+**File:** `packages/web/src/games/carnegie/assets/thumbnail.png`
+
+> A top-down view of a Gilded Age industrialist's mahogany desk in a gaslit Pittsburgh office, where a large Art Nouveau map of the United States in sage green, cream, and burnished gold spreads across the frame, its regions crossed by thin red railroad lines and telegraph wires linking small city markers from the East Coast toward the western frontier. Small wooden houses and factory pieces stand in the cities, tiny glowing orange cubes of steel and coal sit at the rail depots, and a little wooden locomotive token waits mid-route. Beside the map lies a company board laid out like an ornate organizational chart — four colored department columns for Human Resources, Management, Construction, and Research — with rows of small wooden employee meeples standing at their desks, a few lying down as if resting until their next shift. A round action timeline track curls around one edge with a marker partway through its twenty steps. A brass inkwell, a pocket watch, a stack of gold coins and banknotes, a ledger, a fountain pen, and a small model of a classical library building with columns — a philanthropist's donation — complete the scene, while through a tall window beyond the desk the blurred silhouette of steel mills glows orange against a dusky sky. The mood is ambitious, orderly, and prosperous — an empire of steel built one department at a time. No people, players, hands, or seated figures anywhere in the scene — only the game, its components, and the setting. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 139. Sensu
+
+**File:** `packages/web/src/games/sensu/assets/thumbnail.png`
+
+> A top-down view of a low lacquered black table in a quiet Japanese tea room at dusk, lit by the soft glow of a paper andon lantern, its edge framed by a sliver of tatami mat and the blurred silhouette of a shoji screen. Elegant illustrated cards each showing a single painted folding-fan rib — indigo waves, vermilion maple leaves, jade bamboo, gold cranes, plum blossoms — are arranged in small radiating stacks, each pile beginning to open into the shape of a half-unfolded fan, one stack fanned out nearly complete in a perfect arc of overlapping cards. A short row of face-up cards lies in a discard line along the table's middle, and a neat face-down draw deck sits beside them. Around the edges: a real silk folding fan with a painted wave lying half-open, a small cup of matcha with a bamboo whisk, a few cherry blossom petals that have drifted onto the lacquer, and a smooth river stone. The mood is calm, graceful, and quietly calculating — beauty assembled stick by stick. No people, players, hands, or seated figures anywhere in the scene — only the game, its components, and the setting. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
 # Background Image Prompts
 
 All backgrounds were generated with **ChatGPT (image generation)** on March 18, 2026.
