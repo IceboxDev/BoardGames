@@ -2,6 +2,7 @@
 // after the first cast vote, so this banner is how players spend remaining
 // votes or change their picks. Renders nothing when no poll is open.
 
+import { VOTES_PER_PLAYER } from "@boardgames/core/protocol";
 import { useQuery } from "@tanstack/react-query";
 import { useState } from "react";
 import { useCurrentUser } from "../../hooks/useCurrentUser";
@@ -11,6 +12,7 @@ import { MegaphoneIcon } from "../icons";
 import { Button } from "../ui/Button";
 import { Surface } from "../ui/Surface";
 import { PurchaseVoteModal } from "./PurchaseVoteModal";
+import { voteShortTitle } from "./vote-copy";
 
 export function PurchaseVoteBanner() {
   const { user } = useCurrentUser();
@@ -24,30 +26,39 @@ export function PurchaseVoteBanner() {
   if (!poll || poll.closedAt !== null) return null;
 
   const cast = poll.myVotes.length;
+  // Short enough to sit whole on a 320px phone: the vote's name, then what
+  // the viewer still owes it. Wraps rather than truncating.
   const headline =
     cast === 0
-      ? "Purchase vote open — your 3 votes are waiting"
+      ? `${VOTES_PER_PLAYER} votes to spend`
       : poll.votesLeft > 0
-        ? `Purchase vote open — ${poll.votesLeft} vote${poll.votesLeft === 1 ? "" : "s"} left`
-        : "Purchase vote open — all your votes are in";
+        ? `${poll.votesLeft} vote${poll.votesLeft === 1 ? "" : "s"} left`
+        : "All your votes are in";
 
   return (
     <>
       <Surface
         variant="tile"
         padding="none"
-        className="flex shrink-0 items-center gap-3 border border-accent-400/25 bg-gradient-to-r from-accent-500/15 to-transparent px-3 py-2"
+        className="flex shrink-0 items-center gap-2.5 border border-accent-400/25 bg-gradient-to-r from-accent-500/15 to-transparent px-3 py-2"
       >
         <MegaphoneIcon className="h-4 w-4 shrink-0 text-accent-300" />
         <div className="min-w-0 flex-1">
-          <p className="truncate text-xs font-semibold text-fg-strong">{headline}</p>
-          <p className="truncate text-2xs text-fg-secondary">
-            {poll.voterCount} of {poll.requiredVoters} players have voted — the winner is bought
-            when everyone weighs in.
+          {/* Two lines on any phone: the vote, then what the viewer still
+              owes it and where it stands. */}
+          <p className="text-3xs font-semibold uppercase tracking-label text-accent-300">
+            {voteShortTitle(poll.title)}
+          </p>
+          <p className="text-xs font-semibold leading-snug text-fg-strong">
+            {headline}
+            <span className="font-normal text-fg-secondary">
+              {" "}
+              · {poll.voterCount}/{poll.requiredVoters} voted
+            </span>
           </p>
         </div>
-        <Button size="sm" onClick={() => setOpen(true)}>
-          {cast === 0 ? "Vote now" : "Change picks"}
+        <Button size="sm" className="shrink-0" onClick={() => setOpen(true)}>
+          {cast === 0 ? "Vote" : "Change"}
         </Button>
       </Surface>
       {open && <PurchaseVoteModal onClose={() => setOpen(false)} />}

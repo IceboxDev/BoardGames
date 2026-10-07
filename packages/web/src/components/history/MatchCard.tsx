@@ -441,8 +441,11 @@ function TeamsInline({
         const accent = accents[i];
         return (
           // biome-ignore lint/suspicious/noArrayIndexKey: teams have no stable id; not reorderable.
-          <span key={i} className="inline-flex items-center gap-1">
-            <span className="inline-flex -space-x-1.5">
+          <span key={i} className="inline-flex max-w-full items-center gap-1">
+            {/* A big team (Clocktower: 9 a side) wraps instead of running out
+                of the card on a phone. Every bubble overlaps its left
+                neighbour; the padding gives the first one back its edge. */}
+            <span className="flex min-w-0 flex-wrap gap-y-1 pl-1.5 [&>*]:-ml-1.5">
               {t.members.map((m) => (
                 <AvatarBubble
                   key={m.userId}

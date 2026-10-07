@@ -74,9 +74,13 @@ export default function GameLibraryFilters({
   const active = hasActiveFilters(filters);
 
   return (
-    <div className="scrollbar-hide flex w-full items-center gap-2 overflow-x-auto py-0.5">
+    // Phones: the search owns a full-width line and the filters scroll
+    // sideways beneath it (squeezed into one row, the search shrank to
+    // "Search ga"). From sm the inner row dissolves (`contents`) back into
+    // the single scrolling bar.
+    <div className="scrollbar-hide flex w-full flex-col gap-2 py-0.5 sm:flex-row sm:items-center sm:overflow-x-auto">
       <SearchInput
-        containerClassName="min-w-32 flex-1"
+        containerClassName="w-full sm:w-auto sm:min-w-32 sm:flex-1"
         value={filters.query}
         onChange={(e) => onChange({ ...filters, query: e.target.value })}
         placeholder="Search games, designers, mechanics…"
@@ -84,70 +88,72 @@ export default function GameLibraryFilters({
         className="h-9"
       />
 
-      <FilterSelect
-        label="Players"
-        value={filters.players === null ? "" : String(filters.players)}
-        options={PLAYER_OPTIONS}
-        onChange={(v) => onChange({ ...filters, players: v === "" ? null : Number(v) })}
-      />
-      <FilterSelect
-        label="Complexity"
-        value={filters.weight ?? ""}
-        options={WEIGHT_OPTIONS}
-        onChange={(v) => onChange({ ...filters, weight: v === "" ? null : v })}
-      />
-      <FilterSelect
-        label="Time"
-        value={filters.time ?? ""}
-        options={TIME_OPTIONS}
-        onChange={(v) => onChange({ ...filters, time: v === "" ? null : v })}
-      />
+      <div className="scrollbar-hide flex min-w-0 items-center gap-2 overflow-x-auto sm:contents">
+        <FilterSelect
+          label="Players"
+          value={filters.players === null ? "" : String(filters.players)}
+          options={PLAYER_OPTIONS}
+          onChange={(v) => onChange({ ...filters, players: v === "" ? null : Number(v) })}
+        />
+        <FilterSelect
+          label="Complexity"
+          value={filters.weight ?? ""}
+          options={WEIGHT_OPTIONS}
+          onChange={(v) => onChange({ ...filters, weight: v === "" ? null : v })}
+        />
+        <FilterSelect
+          label="Time"
+          value={filters.time ?? ""}
+          options={TIME_OPTIONS}
+          onChange={(v) => onChange({ ...filters, time: v === "" ? null : v })}
+        />
 
-      {owners.length > 0 && (
-        <div className={`shrink-0 ${CONTROL_W}`}>
-          <OwnedByFilter
-            members={owners}
-            selectedIds={filters.ownedBy}
-            onChange={(ownedBy) => onChange({ ...filters, ownedBy })}
-          />
-        </div>
-      )}
+        {owners.length > 0 && (
+          <div className={`shrink-0 ${CONTROL_W}`}>
+            <OwnedByFilter
+              members={owners}
+              selectedIds={filters.ownedBy}
+              onChange={(ownedBy) => onChange({ ...filters, ownedBy })}
+            />
+          </div>
+        )}
 
-      {showPlayableFilter && (
-        <Chip
-          variant="outlined"
-          shape="rounded"
-          tone="accent"
-          size="md"
-          pressed={filters.playableOnly}
-          onClick={() => onChange({ ...filters, playableOnly: !filters.playableOnly })}
-          title="Show only implemented games"
-          className="h-9 shrink-0 whitespace-nowrap rounded-card-lg"
+        {showPlayableFilter && (
+          <Chip
+            variant="outlined"
+            shape="rounded"
+            tone="accent"
+            size="md"
+            pressed={filters.playableOnly}
+            onClick={() => onChange({ ...filters, playableOnly: !filters.playableOnly })}
+            title="Show only implemented games"
+            className="h-9 shrink-0 whitespace-nowrap rounded-card-lg"
+          >
+            Playable
+          </Chip>
+        )}
+
+        <p
+          className="hidden w-24 shrink-0 whitespace-nowrap text-right text-xs tabular-nums text-fg-muted md:block"
+          aria-live="polite"
         >
-          Playable
-        </Chip>
-      )}
+          {active ? `${resultCount} / ${totalCount}` : `${totalCount} games`}
+        </p>
 
-      <p
-        className="hidden w-24 shrink-0 whitespace-nowrap text-right text-xs tabular-nums text-fg-muted md:block"
-        aria-live="polite"
-      >
-        {active ? `${resultCount} / ${totalCount}` : `${totalCount} games`}
-      </p>
-
-      <Button
-        variant="ghost"
-        size="sm"
-        onClick={() => onChange(EMPTY_FILTERS)}
-        disabled={!active}
-        aria-hidden={!active}
-        tabIndex={active ? undefined : -1}
-        title="Clear all filters"
-        className={`h-9 shrink-0 ${active ? "" : "invisible"}`}
-      >
-        <XIcon className="h-3.5 w-3.5" />
-        <span className="hidden sm:inline">Clear</span>
-      </Button>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => onChange(EMPTY_FILTERS)}
+          disabled={!active}
+          aria-hidden={!active}
+          tabIndex={active ? undefined : -1}
+          title="Clear all filters"
+          className={`h-9 shrink-0 ${active ? "" : "invisible"}`}
+        >
+          <XIcon className="h-3.5 w-3.5" />
+          <span className="hidden sm:inline">Clear</span>
+        </Button>
+      </div>
     </div>
   );
 }

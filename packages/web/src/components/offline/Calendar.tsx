@@ -96,13 +96,25 @@ export default function Calendar({
     return undefined;
   }
 
-  const gridGap = compact ? "gap-1" : "gap-1.5 sm:gap-2 md:gap-3";
+  // 4px on phones: at 320 every px of the 7 columns goes to the cells.
+  const gridGap = compact ? "gap-1" : "gap-1 sm:gap-2 md:gap-3";
   const wrapperGrowth = compact ? "" : "min-h-0 flex-1";
   const gridGrowth = compact ? "" : "min-h-0 flex-1";
+  // Phones: whole-pixel tracks. `1fr` split 296px into 38.86px columns, so
+  // every column started at a different fraction of a pixel and the browser
+  // rounded each cell's pills, text and stripe differently — the same pill
+  // looked different in every cell. Rounded tracks give every cell the same
+  // size and the same pixel phase; the few spare pixels sit at the edges.
+  const phoneCols = compact
+    ? ""
+    : "max-sm:grid-cols-[repeat(7,round(down,calc((100%_-_24px)/7),1px))] max-sm:justify-center";
+  const phoneRows = compact
+    ? ""
+    : "max-sm:grid-rows-[repeat(6,round(down,calc((100%_-_20px)/6),1px))] max-sm:content-start";
 
   return (
     <div className={`flex flex-col ${wrapperGrowth} ${compact ? "gap-1.5" : "gap-2 sm:gap-3"}`}>
-      <div className={`grid shrink-0 grid-cols-7 ${gridGap}`}>
+      <div className={`grid shrink-0 grid-cols-7 ${gridGap} ${phoneCols}`}>
         {DAY_NAMES.map((n) => (
           <div
             key={n}
@@ -112,7 +124,9 @@ export default function Calendar({
           </div>
         ))}
       </div>
-      <div className={`grid grid-cols-7 grid-rows-6 ${gridGap} ${gridGrowth}`}>
+      <div
+        className={`grid grid-cols-7 grid-rows-6 ${gridGap} ${gridGrowth} ${phoneCols} ${phoneRows}`}
+      >
         {days.map((date, i) => {
           const key = dateKey(date);
           const value = availability[key];

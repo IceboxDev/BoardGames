@@ -1,5 +1,6 @@
 import "./calendar-fire.css";
 import { nightSlot } from "@boardgames/core/protocol";
+import { Children, type ReactNode } from "react";
 import type { NightSeats } from "../../lib/calendar-locks";
 import type { RsvpStatus } from "../../lib/calendar-rsvps";
 import type { ViewerSeat } from "../../lib/night-access";
@@ -173,7 +174,13 @@ function SingleDayCell({
       ? "hover:scale-[1.015] active:scale-[0.985]"
       : "pointer-events-none";
 
-  const padding = compact ? "p-1 sm:p-1.5" : "p-2 sm:p-3";
+  // Phones (< sm) draw the cell through `PhoneCellGrid` (below), sized to
+  // the cell itself; this padding only frames the admin names layout there.
+  // 4px, not 8: at p-2 a ~37px cell left 19px and "20"–"29" overflowed.
+  const padding = compact ? "p-1 sm:p-1.5" : "p-1 sm:p-3";
+  // Every phone cell except the admin names view runs on the one grid.
+  const phoneGrid = !compact && (locked || !isAdminView);
+  const phoneHide = phoneGrid ? "max-sm:hidden" : "";
   // Size depends on `compact` ALONE. Attendee names only ever render under the
   // admin overlay, so a size that also keyed off "this cell has names" meant
   // every day number visibly resized the instant the admin eye was toggled —
@@ -184,7 +191,7 @@ function SingleDayCell({
     : "text-lg sm:text-xl md:text-2xl 3xl:text-3xl";
   const monthLabelPos = compact ? "left-1 top-1" : "left-1.5 top-1.5";
   const monthLabelSize = compact ? "text-6xs" : "text-5xs sm:text-3xs";
-  const todayDotPos = compact ? "right-1 top-1" : "right-2 top-2";
+  const todayDotPos = compact ? "right-1 top-1" : "right-1 top-1 sm:right-2 sm:top-2";
   const aspectClass = compact ? "aspect-square" : "";
   const layoutClass = compact ? "items-center justify-center" : "";
 
@@ -221,7 +228,7 @@ function SingleDayCell({
       }`}
       aria-pressed={value !== undefined || away}
       title={away ? "Marked away — not counted in coverage" : undefined}
-      className={`group relative flex flex-col overflow-hidden rounded-card-xl border transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${layoutClass} ${aspectClass} ${padding} ${baseBgClass} ${borderClass} ${showDnd ? "dnd-night-cell" : ""} ${showPrivate ? "private-night-cell" : ""} ${invitedPending ? "private-night-cell-invited" : ""} ${baseHover} ${lockedDisplayClass} ${heatAnim}`}
+      className={`group relative flex flex-col overflow-hidden rounded-card-xl border ${compact ? "" : "max-sm:rounded-card-md"} transition-all duration-200 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-400 ${layoutClass} ${aspectClass} ${padding} ${baseBgClass} ${borderClass} ${showDnd ? "dnd-night-cell" : ""} ${showPrivate ? "private-night-cell" : ""} ${invitedPending ? "private-night-cell-invited" : ""} ${baseHover} ${lockedDisplayClass} ${heatAnim}`}
     >
       <span
         className={`pointer-events-none absolute inset-0 ${monthTintClass(monthBucket)}`}
@@ -254,7 +261,7 @@ function SingleDayCell({
       {value && !locked && !isAdminView && (
         <span
           aria-hidden="true"
-          className={`pointer-events-none absolute inset-y-0 left-0 z-lift w-1 sm:w-1.5 ${
+          className={`pointer-events-none absolute inset-y-0 left-0 z-lift w-0.75 sm:w-1.5 ${
             value === "can"
               ? "bg-accent-400 shadow-[0_0_8px] shadow-accent-500/60"
               : "bg-warn-strong shadow-[0_0_8px] shadow-warn-strong/55"
@@ -263,17 +270,19 @@ function SingleDayCell({
       )}
       {monthLabel && (
         <span
-          className={`pointer-events-none absolute font-bold uppercase tracking-pill text-fg-strong/40 ${monthLabelPos} ${monthLabelSize}`}
+          className={`pointer-events-none absolute font-bold uppercase tracking-pill text-fg-strong/40 ${monthLabelPos} ${monthLabelSize} ${phoneHide}`}
           aria-hidden="true"
         >
           {monthLabel}
         </span>
       )}
-      {isToday && <TodayDot className={todayDotPos} />}
+      {isToday && <TodayDot className={`${todayDotPos} ${phoneHide}`} />}
       {showDnd && attendance ? (
         // D&D night: a glowing d20 replaces the headcount, the party size
         // rolled onto its face. The grid position still tells you the date.
-        <span className="relative z-lift flex min-h-0 flex-1 items-center justify-center p-1">
+        <span
+          className={`relative z-lift flex min-h-0 flex-1 items-center justify-center p-1 ${phoneHide}`}
+        >
           {/* The die fills whatever space the cell row gives it (rows are
               flex-sized, so they're shorter on a 1080p screen than on 4K) and
               its SVG `meet` aspect-fit keeps it centered. Caps mirror the old
@@ -289,13 +298,13 @@ function SingleDayCell({
           />
         </span>
       ) : showPrivate && privateNight ? (
-        <SeatTally compact={compact} night={privateNight} />
+        <SeatTally compact={compact} night={privateNight} className={phoneHide} />
       ) : picksLocked && attendance ? (
         // Picks-locked cell: the day number is dropped — the cell's position
         // in the calendar grid already tells you which date it is. The big
         // centered "definite / definite+tentative" headcount takes over.
         // N1 = RSVP-yes (coming for sure), N2 = N1 plus maybes.
-        <span className="relative flex flex-1 items-center justify-center">
+        <span className={`relative flex flex-1 items-center justify-center ${phoneHide}`}>
           <span
             className={`flex items-baseline gap-1 font-extrabold leading-none text-warn-pale drop-shadow ${
               compact ? "text-base" : "text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
@@ -307,8 +316,14 @@ function SingleDayCell({
           </span>
         </span>
       ) : (
+        // Admin names view on phones: the number centred (flex, so even an
+        // overflowing number spills evenly both ways).
         <span
           className={`relative font-bold leading-none ${dayTextSize} ${dayNumberClass} ${
+            compact
+              ? ""
+              : "max-sm:flex max-sm:flex-1 max-sm:flex-col max-sm:items-center max-sm:justify-center"
+          } ${phoneHide} ${
             value || heated
               ? "text-fg-strong"
               : away
@@ -319,24 +334,52 @@ function SingleDayCell({
           {day}
         </span>
       )}
+      {phoneGrid && (
+        <PhoneCellGrid
+          day={day}
+          monthLabel={monthLabel}
+          isToday={isToday}
+          hasPills={locked || ((!!value || heated) && !isAdminView)}
+          main={
+            showDnd && attendance ? (
+              <D20Die
+                count={attendance.definite}
+                className="dnd-die dnd-die-animated h-[54cqw] w-[54cqw]"
+              />
+            ) : showPrivate && privateNight ? (
+              <PhoneTally a={privateNight.seats.taken} b={privateNight.seats.total} />
+            ) : picksLocked && attendance ? (
+              <PhoneTally a={attendance.definite} b={attendance.definite + attendance.tentative} />
+            ) : (
+              <span
+                className={`${PHONE_NUMBER} font-bold leading-none ${dayNumberClass} ${
+                  value || heated
+                    ? "text-fg-strong"
+                    : away
+                      ? "text-fg-muted line-through"
+                      : "text-fg-primary"
+                }`}
+              >
+                {day}
+              </span>
+            )
+          }
+          pills={
+            showPrivate && privateNight ? (
+              <PhoneSeatPill viewerSeat={privateNight.viewerSeat} />
+            ) : locked ? (
+              <PhoneRsvpPill viewerRsvp={viewerRsvp} />
+            ) : (
+              <>
+                {value && <PhoneMarkPill value={value} />}
+                {heated && <PhoneHeatPill heat={heat} />}
+              </>
+            )
+          }
+        />
+      )}
       {labels && labels.length > 0 && !compact && !locked && (
         <DayLabels entries={labels} heated={heated} />
-      )}
-      {/* Mobile: stacked centered, conditional render means there is never
-          an empty wrapper span below the visible chip — the empty span's
-          flex-gap was previously pushing single-present chips 2px above
-          the intended bottom, so personal-only cells looked taller than
-          adjacent locked cells. With conditional render, the *only*
-          present chip lands at exactly the same y-offset as the locked
-          pill (both anchored at bottom-1). All three badges share the
-          same `min-h-3` so element heights match across cell types — the
-          chip's `ring-1` glow doesn't ride below the cell border anymore
-          because the pill chrome itself extends down to match. */}
-      {!compact && !locked && !isAdminView && (value || heated) && (
-        <div className="pointer-events-none absolute inset-x-1 bottom-1 z-raised flex flex-col items-center gap-0.5 sm:hidden">
-          {value && <PersonalMarkChip value={value} />}
-          {heated && <HeatBadge heat={heat} />}
-        </div>
       )}
       {/* sm+: pinned to opposite corners, stable slots regardless of which
           badge is present. */}
@@ -516,7 +559,7 @@ function LockedLayer({
       {/* Faint gold ring for the "sealed" feel. */}
       <span
         aria-hidden="true"
-        className={`pointer-events-none absolute inset-0 ring-1 ring-warn-gold/35 ${pane ? "rounded-card-md" : "rounded-card-xl"}`}
+        className={`pointer-events-none absolute inset-0 ring-1 ring-warn-gold/35 ${pane ? "rounded-card-md" : "rounded-card-xl max-sm:rounded-card-md"}`}
       />
       {/* Slow diagonal shimmer — light catching the seal. Idle most of cycle. */}
       <span
@@ -576,7 +619,7 @@ function SealMedallion({ variant }: { variant: MedallionVariant }) {
   ) : (
     <span
       aria-hidden="true"
-      className="pointer-events-none absolute left-1/2 top-1.5 z-raised flex h-6 w-6 -translate-x-1/2 items-center justify-center rounded-full bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-700 shadow-[0_2px_8px_rgba(0,0,0,0.5),inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3)]"
+      className="pointer-events-none absolute left-1/2 top-1.5 z-raised flex h-6 w-6 -translate-x-1/2 max-sm:hidden items-center justify-center rounded-full bg-gradient-to-br from-amber-300 via-yellow-500 to-amber-700 shadow-[0_2px_8px_rgba(0,0,0,0.5),inset_0_1px_2px_rgba(255,255,255,0.4),inset_0_-2px_3px_rgba(0,0,0,0.3)]"
     >
       <LockGlyph />
     </span>
@@ -614,7 +657,7 @@ function DndNightLayer({
       {/* Gold inner hairline — the gilt edge of a sealed tome. */}
       <span
         aria-hidden="true"
-        className={`pointer-events-none absolute inset-0 ring-1 ring-amber-300/30 ${pane ? "rounded-card-md" : "rounded-card-xl"}`}
+        className={`pointer-events-none absolute inset-0 ring-1 ring-amber-300/30 ${pane ? "rounded-card-md" : "rounded-card-xl max-sm:rounded-card-md"}`}
       />
       {/* Slow gold shimmer sweep (shared with the locked wax-seal cell). */}
       <span
@@ -678,8 +721,9 @@ function DndNightLayer({
 // spacing is per-breakpoint optical tuning to stop "RSVP" overflowing its own
 // pill, not the label-typography role the tokens describe. Applying the pill
 // token (0.18em) at the phone size overflows the cell.
+// Phones draw their own pill (PhoneCellGrid), hence `max-sm:hidden`.
 const cellPillBase =
-  "pointer-events-none absolute inset-x-1 bottom-1 z-raised inline-flex min-h-3 items-center justify-center gap-0.5 rounded-card-md px-0.5 py-0 text-6xs font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:min-h-5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-5xs sm:tracking-pill";
+  "pointer-events-none absolute max-sm:hidden inset-x-1 bottom-1 z-raised inline-flex min-h-3 items-center justify-center gap-0.5 rounded-card-md px-0.5 py-0 text-6xs font-bold uppercase leading-none tracking-[0.1em] backdrop-blur-sm sm:inset-x-2 sm:bottom-1.5 sm:min-h-5 sm:gap-1 sm:px-1 sm:py-0.5 sm:text-5xs sm:tracking-pill";
 
 // A split cell's pane sizes its pill from ITS OWN box, not the viewport:
 // `.night-pane-pill` hides it below a workable pane size (the status edge
@@ -717,7 +761,7 @@ function PrivateNightLayer({
       {/* Platinum inner hairline. */}
       <span
         aria-hidden="true"
-        className={`pointer-events-none absolute inset-0 ring-1 ring-private-ink/25 ${pane ? "rounded-card-md" : "rounded-card-xl"}`}
+        className={`pointer-events-none absolute inset-0 ring-1 ring-private-ink/25 ${pane ? "rounded-card-md" : "rounded-card-xl max-sm:rounded-card-md"}`}
       />
       {/* The same slow shimmer the sealed cell has, in cold light. */}
       <span
@@ -747,15 +791,17 @@ function SeatTally({
   compact,
   night,
   pane = false,
+  className = "",
 }: {
   compact: boolean;
   night: PrivateNightCell;
   pane?: boolean;
+  className?: string;
 }) {
   const { seats } = night;
   if (pane) return <PaneHeadcount a={seats.taken} b={seats.total} extra={seats.waitlisted} />;
   return (
-    <span className="relative z-lift flex flex-1 items-center justify-center">
+    <span className={`relative z-lift flex flex-1 items-center justify-center ${className}`}>
       <span
         className={`flex items-baseline gap-1 font-extrabold leading-none text-warn-pale drop-shadow ${
           compact ? "text-base" : "text-lg sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl"
@@ -765,8 +811,11 @@ function SeatTally({
         <span className="text-warn-pale/60">/</span>
         <span className="tabular-nums">{seats.total}</span>
         {seats.waitlisted > 0 && !compact && (
-          <span className="ml-0.5 self-center text-4xs font-semibold tabular-nums text-warn-pale/60 sm:text-3xs md:text-xs">
-            +{seats.waitlisted}
+          <span
+            title={`${seats.waitlisted} waiting for a seat`}
+            className="ml-0.5 self-center text-4xs font-semibold tabular-nums text-warn-pale/60 sm:text-3xs md:text-xs"
+          >
+            +{seats.waitlisted} waiting
           </span>
         )}
       </span>
@@ -947,6 +996,232 @@ function PersonalMarkChip({ value }: { value: Availability }) {
   );
 }
 
+// ── Phone cell grid ──────────────────────────────────────────────────────
+//
+// Below `sm` every day cell — open, marked, heated, locked, private, D&D —
+// is drawn by ONE layout sized in container units (`cqw` = 1% of the cell's
+// own width), so the whole cell scales as a single design from Simon's 320px
+// screen (~37px cells) to a 430px phone (~52px):
+//
+//   ┌──────────────┐  month tag along the top, today dot in the corner
+//   │      14      │  ← main slot: the day, or the headcount, seats or die,
+//   │              │    centred in what the band leaves
+//   │   ·MAYBE     │  ← status band, RESERVED in every cell (60cqw) so the
+//   │   🔥3·1m     │    main slot — and the numbers in a row — line up
+//   └──────────────┘
+//
+// One pill family (`PhonePill`) for every status: same height, type size
+// and padding whether it reads MAYBE, 🔥4, GOING or WAITLIST. Pills stack
+// from the bottom, so a single pill always sits on the bottom line.
+// Desktop keeps its own layout; this replaces only the phone rendering. The
+// wax seal stays desktop-only: at 320px it sat on the headcount, and the
+// headcount itself already says the guest list is sealed.
+
+function PhoneCellGrid({
+  day,
+  monthLabel,
+  isToday,
+  main,
+  pills,
+  hasPills,
+}: {
+  day: number;
+  monthLabel: string | null;
+  isToday: boolean;
+  main: ReactNode;
+  pills: ReactNode;
+  hasPills: boolean;
+}) {
+  return (
+    <span
+      aria-hidden="true"
+      data-day={day}
+      className="@container pointer-events-none absolute inset-0 z-raised flex flex-col sm:hidden"
+    >
+      {monthLabel && (
+        <span className="absolute inset-x-0 top-[6cqw] text-center text-[11cqw] font-bold uppercase leading-none tracking-label text-fg-strong/50">
+          {monthLabel}
+        </span>
+      )}
+      {isToday && (
+        <span className="absolute right-[10cqw] top-[10cqw] size-[8cqw] animate-pulse rounded-full bg-neon-cyan shadow-[0_0_6px_1px] shadow-neon-cyan/70" />
+      )}
+      <span className="flex min-h-0 flex-1 items-center justify-center pt-[6cqw]">{main}</span>
+      {/* (The band below is `relative` so it paints ABOVE this absolute
+          tray — as a plain flow box the tray dimmed every bottom pill.)
+          A soft dark tray under the pills: fire glow, gold and violet bottoms
+          otherwise changed how far the pills seemed to sit from the edge. */}
+      {hasPills && (
+        <span className="absolute inset-x-0 bottom-0 h-[70cqw] bg-gradient-to-t from-surface-950/60 via-surface-950/25 to-transparent" />
+      )}
+      {/* Two pill slots, always reserved: 2 × 22 + 8 gap + 8 below, each
+          rounded to whole pixels — and the band is the exact SUM of those
+          rounded parts (rounding the total separately came out a pixel
+          short, and flexbox squeezed stacked pills to half-pixel heights) —
+          so the upper and lower slot sit at the same pixel phase (and a pill's width stays even, so it centres exactly
+          in the even-width cell). The gap
+          clears both rings and halos (stacked pills used to touch), the 8
+          below clears the cell's corner curve. */}
+      <span className="relative flex h-[calc(2*round(22cqw,1px)+round(8cqw,1px)+round(8cqw,1px))] shrink-0 flex-col items-center justify-end gap-[round(8cqw,1px)] pb-[round(8cqw,1px)]">
+        {pills}
+      </span>
+    </span>
+  );
+}
+
+/** The phone headcount: "5/6", the day's place taken by who is coming.
+ * Set exactly like the day number (`PHONE_NUMBER`) so a row reads as one
+ * line of type; only a two-digit pair ("10/12") steps down to fit. A
+ * private night's waitlist is left to the viewer's own QUEUED pill. */
+function PhoneTally({ a, b }: { a: number; b: number }) {
+  const long = `${a}/${b}`.length > 4;
+  return (
+    <span
+      className={`flex items-baseline font-bold leading-none tabular-nums text-warn-pale ${
+        long ? "text-[28cqw]" : PHONE_NUMBER
+      }`}
+    >
+      {a}
+      <span className="mx-[1cqw] text-warn-pale/55">/</span>
+      {b}
+    </span>
+  );
+}
+
+/** The phone day number's type — shared by the headcounts. */
+const PHONE_NUMBER = "text-[38cqw]";
+
+type PhonePillTone =
+  | "can"
+  | "maybe"
+  | "fire"
+  | "warming"
+  | "ok"
+  | "muted"
+  | "gold"
+  | "accent"
+  | "private";
+
+const PHONE_PILL_TONE: Record<PhonePillTone, string> = {
+  can: "bg-surface-950/90 text-accent-200 ring-accent-300/55",
+  maybe: "bg-surface-950/90 text-warn-gold ring-warn-gold/55",
+  fire: "bg-surface-950/90 text-heat-glow ring-heat-glow/55",
+  warming: "bg-surface-950/90 text-warn-soft ring-warn-gold/55",
+  ok: "bg-surface-950/80 text-ok ring-ok/50",
+  muted: "bg-surface-950/80 text-fg-secondary ring-line-strong",
+  gold: "bg-surface-950/80 text-warn-gold ring-warn-gold/50",
+  accent: "bg-surface-950/80 text-accent-200 ring-accent-400/60",
+  private: "bg-surface-950/80 text-private-ink ring-private-ink/40",
+};
+
+function PhonePill({
+  tone,
+  pulse = false,
+  children,
+}: {
+  tone: PhonePillTone;
+  pulse?: boolean;
+  children: ReactNode;
+}) {
+  // One lean pill for every status: a hairline ring, bold (not extra-bold)
+  // caps, 74% of the cell wide — clear of the 3px mark stripe by 3px — and
+  // 22% tall. Every text run is trimmed to its capital letters (`CAP`), so
+  // flex centring centres the letters themselves.
+  return (
+    <span
+      className={`${PILL_METRICS} inline-flex h-(--pill-h) w-[round(74cqw,2px)] shrink-0 items-center justify-center rounded-full text-(length:--pill-fs) font-bold uppercase [font-kerning:normal] leading-none tabular-nums ring-1 ${
+        PHONE_PILL_TONE[tone]
+      } ${pulse ? "motion-safe:animate-pulse-soft" : ""}`}
+    >
+      <span className="inline-flex items-center gap-[2.5cqw]">
+        {Children.map(children, (child) =>
+          typeof child === "string" || typeof child === "number" ? (
+            <span className={CAP}>{child}</span>
+          ) : (
+            child
+          ),
+        )}
+      </span>
+    </span>
+  );
+}
+
+/**
+ * The pill's type metrics, all on whole pixels: height and font size are
+ * rounded, the cap height follows from Inter's (1490/2048 em).
+ *
+ * Why the baseline needs `--pill-shift`: Blink lays the text's baseline on a
+ * whole CSS pixel. Centred in the pill, the ideal baseline sits at
+ * (height + cap height) / 2 from the top — e.g. 5.82px in an 8px pill with
+ * 5px type — so the letters landed up to ½px off, high in one pill size and
+ * low in the next. Measured at seven phone widths, the drawn offset matched
+ * round(baseline) − baseline to 0.02px; the shift adds that difference back.
+ */
+const PILL_METRICS =
+  "[--pill-h:round(22cqw,1px)] [--pill-fs:round(13cqw,1px)] [--pill-base:calc((var(--pill-h)+var(--pill-fs)*0.7275)/2)] [--pill-shift:calc(var(--pill-base)-round(nearest,var(--pill-base),1px))]";
+
+/**
+ * Trim a text run to cap height so flex centring centres the letters
+ * themselves, then apply the baseline shift above. Browsers without
+ * `text-box` (Chromium < 133, Safari < 18.2) get the font-metric offset
+ * measured for them instead.
+ */
+const CAP =
+  "[text-box:trim-both_cap_alphabetic] translate-y-(--pill-shift) supports-[not(text-box:trim-both_cap_alphabetic)]:translate-y-[0.045em]";
+
+function PhoneMarkPill({ value }: { value: Availability }) {
+  return <PhonePill tone={value}>{value}</PhonePill>;
+}
+
+function PhoneHeatPill({ heat }: { heat: Heat }) {
+  if (heat.kind === "neutral") return null;
+  const isFire = heat.kind === "fire";
+  return (
+    <PhonePill tone={isFire ? "fire" : "warming"}>
+      <FlameGlyph filled={isFire} tight className="h-[12cqw] w-[8.64cqw] shrink-0" />
+      {heat.can}
+      {heat.maybe > 0 && <span className={`normal-case opacity-70 ${CAP}`}>·{heat.maybe}m</span>}
+    </PhonePill>
+  );
+}
+
+function PhoneRsvpPill({ viewerRsvp }: { viewerRsvp?: RsvpStatus }) {
+  if (viewerRsvp === "yes")
+    return (
+      <PhonePill tone="ok" pulse>
+        Going
+      </PhonePill>
+    );
+  if (viewerRsvp === "no") return <PhonePill tone="muted">Pass</PhonePill>;
+  return (
+    <PhonePill tone="gold" pulse>
+      RSVP
+    </PhonePill>
+  );
+}
+
+function PhoneSeatPill({ viewerSeat }: { viewerSeat: ViewerSeat | null }) {
+  switch (viewerSeat) {
+    case "host":
+      return <PhonePill tone="private">Host</PhonePill>;
+    case "seated":
+      return <PhonePill tone="ok">Seated</PhonePill>;
+    case "waitlisted":
+      // "Waitlist" outgrows the one pill width; same meaning, six letters.
+      return <PhonePill tone="gold">Queued</PhonePill>;
+    case "invited":
+      return (
+        <PhonePill tone="accent" pulse>
+          Invited
+        </PhonePill>
+      );
+    case "declined":
+      return <PhonePill tone="muted">Pass</PhonePill>;
+    default:
+      return <PhonePill tone="private">Private</PhonePill>;
+  }
+}
+
 function HeatBadge({ heat }: { heat: Heat }) {
   if (heat.kind === "neutral") return null;
   const isFire = heat.kind === "fire";
@@ -962,18 +1237,29 @@ function HeatBadge({ heat }: { heat: Heat }) {
       }`}
       aria-hidden="true"
     >
-      <FlameGlyph filled={isFire} />
+      <FlameGlyph filled={isFire} className="h-1.5 w-1.5" />
       {heat.can}
       {heat.maybe > 0 && <span className="opacity-70">·{heat.maybe}m</span>}
     </span>
   );
 }
 
-function FlameGlyph({ filled }: { filled: boolean }) {
+function FlameGlyph({
+  filled,
+  className = "h-2.5 w-2.5",
+  tight = false,
+}: {
+  filled: boolean;
+  className?: string;
+  /** Crop the box to the flame's ink (x 3–10.5, y 1.5–12.5, plus the outline
+   * stroke's half-width): the 16-unit box leaves 3 units free on the left and
+   * 5.5 on the right, which pushed "🔥 3" off-centre in a centred pill. */
+  tight?: boolean;
+}) {
   return (
     <svg
-      viewBox="0 0 16 16"
-      className="h-2.5 w-2.5"
+      viewBox={tight ? "2.25 0.75 9 12.5" : "0 0 16 16"}
+      className={className}
       fill={filled ? "currentColor" : "none"}
       stroke="currentColor"
       strokeWidth={filled ? 0 : 1.5}

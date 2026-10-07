@@ -101,7 +101,9 @@ export function ProfileHeader({
       )}
 
       <div className="relative z-raised px-4 pb-5 sm:px-6">
-        <div className="-mt-10 flex flex-wrap items-end gap-4 sm:-mt-12">
+        {/* Phones stack the name under the avatar: beside it, a long surname
+            ("Kandratavičius") had ~150px and ran off the card. */}
+        <div className="-mt-10 flex flex-col items-start gap-3 sm:-mt-12 sm:flex-row sm:flex-wrap sm:items-end sm:gap-4">
           {canChangeAvatar ? (
             // biome-ignore lint/correctness/noRestrictedElements: avatar doubles as the change-photo trigger
             <button
@@ -118,9 +120,9 @@ export function ProfileHeader({
           ) : (
             <Avatar name={user.name} image={user.image} accentHex={accent} size="xl" ring />
           )}
-          <div className="min-w-0 flex-1 pb-1">
+          <div className="w-full min-w-0 flex-1 pb-1 sm:w-auto">
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1">
-              <h1 className="text-2xl font-bold tracking-tight text-fg-strong sm:text-3xl">
+              <h1 className="break-words text-2xl font-bold tracking-tight text-fg-strong sm:text-3xl">
                 {user.name}
               </h1>
               {profile.pronouns && (

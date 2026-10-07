@@ -56,7 +56,15 @@ export function Sparkline({
   const lastY = pad + (1 - lastYNorm) * h;
 
   return (
-    <svg aria-hidden="true" width={width} height={height} className="block">
+    // viewBox + max-w-full: drawn at `width`, but scales down (keeping its
+    // aspect) when the tile is narrower — a 320px phone used to scroll sideways.
+    <svg
+      aria-hidden="true"
+      width={width}
+      height={height}
+      viewBox={`0 0 ${width} ${height}`}
+      className="block h-auto max-w-full"
+    >
       <defs>
         <linearGradient id={gradientId} x1="0" y1="0" x2="0" y2="1">
           <stop offset="0%" stopColor={stroke} stopOpacity={0.3} />

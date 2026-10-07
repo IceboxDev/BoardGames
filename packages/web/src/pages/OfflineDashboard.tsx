@@ -364,7 +364,9 @@ export default function OfflineDashboard() {
           />
         )}
         <p
-          className={`shrink-0 text-center text-2xs text-fg-secondary ${mode === "edit" ? "" : "invisible"}`}
+          // Desktop reserves the line so the grid never jumps; phones give it
+          // back to the calendar (six rows of ~45px cells needed it more).
+          className={`shrink-0 text-center text-2xs text-fg-secondary ${mode === "edit" ? "" : "max-sm:hidden sm:invisible"}`}
           aria-hidden={mode !== "edit"}
         >
           <span className="hidden sm:inline">Tap a day to cycle: </span>

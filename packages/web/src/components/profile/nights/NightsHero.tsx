@@ -20,7 +20,8 @@ export function NightsHero({
 
   return (
     <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-      <StatTile align="start" padding="lg" label="Attendance">
+      {/* Below xs2 the ring tile (and the odd one out) take the full row. */}
+      <StatTile align="start" padding="lg" label="Attendance" className="col-span-2 xs2:col-span-1">
         <div className="flex items-center gap-4">
           <DonutChart
             size={84}
@@ -67,7 +68,12 @@ export function NightsHero({
         </div>
       </StatTile>
 
-      <StatTile align="start" padding="lg" label="Games per night">
+      <StatTile
+        align="start"
+        padding="lg"
+        label="Games per night"
+        className="col-span-2 xs2:col-span-1"
+      >
         <div className="flex flex-1 flex-col justify-between gap-1">
           <span className="flex items-center gap-1.5 text-2xl font-bold tabular-nums text-fg-primary">
             {totals.avgGamesPerAttendedNight === null

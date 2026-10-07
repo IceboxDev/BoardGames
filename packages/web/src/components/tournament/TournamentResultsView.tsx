@@ -47,7 +47,12 @@ export function TournamentResultsView({
     month: "short",
     day: "numeric",
   });
-  const columns = { gridTemplateColumns: `3.5rem 10rem repeat(${strategies.length}, 1fr)` };
+  // Matchup columns never shrink below a readable cell: on a phone the table
+  // scrolls sideways (the wrapper is overflow-x-auto) instead of crushing
+  // every percentage into its neighbour.
+  const columns = {
+    gridTemplateColumns: `3.5rem 8rem repeat(${strategies.length}, minmax(5.5rem, 1fr))`,
+  };
 
   return (
     // `relative z-raised` lifts the page above the fixed game background image.

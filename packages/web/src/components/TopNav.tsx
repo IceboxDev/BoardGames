@@ -35,12 +35,12 @@ type TopNavProps = {
 export function TopNav({ homeHref = "/", back, children }: TopNavProps) {
   return (
     <nav className="sticky top-0 z-nav h-nav shrink-0 border-b nav-border bg-surface-950/90 backdrop-blur-xl">
-      <div className="flex h-full w-full items-center justify-between px-6">
-        <Link to={homeHref} className="group flex items-center gap-2.5">
+      <div className="flex h-full w-full items-center justify-between gap-2 px-3 sm:px-6">
+        <Link to={homeHref} className="group flex min-w-0 items-center gap-2 sm:gap-2.5">
           <svg
             aria-hidden="true"
             viewBox="0 0 24 24"
-            className="h-5 w-5 text-accent-400 transition group-hover:text-accent-300"
+            className="h-5 w-5 shrink-0 text-accent-400 transition group-hover:text-accent-300"
             fill="none"
             stroke="currentColor"
             strokeWidth="1.5"
@@ -49,12 +49,14 @@ export function TopNav({ homeHref = "/", back, children }: TopNavProps) {
           >
             <path d="M4.5 12.75l6 6 9-13.5" />
           </svg>
-          <span className="text-sm font-semibold tracking-wide text-fg-secondary transition group-hover:text-fg-strong">
+          {/* One line, always: on a 320px phone the brand gives way (truncates)
+              before the page actions do. */}
+          <span className="truncate whitespace-nowrap text-sm font-semibold tracking-wide text-fg-secondary transition group-hover:text-fg-strong">
             Board Game Lab
           </span>
         </Link>
         {(back || children) && (
-          <div className="flex items-center gap-2">
+          <div className="flex shrink-0 items-center gap-0.5 sm:gap-2">
             {back}
             {children}
           </div>
@@ -67,7 +69,7 @@ export function TopNav({ homeHref = "/", back, children }: TopNavProps) {
 // Shared chrome for the right-cluster controls — one string, consumed by both
 // the Link and Button renderings so they cannot drift apart.
 const NAV_ACTION_CLS =
-  "flex items-center gap-1.5 rounded-ui-md px-3 py-1.5 text-xs font-medium text-fg-muted transition hover:bg-surface-800 hover:text-fg-secondary";
+  "flex items-center gap-1.5 whitespace-nowrap rounded-ui-md px-2 py-1.5 text-xs font-medium text-fg-muted transition hover:bg-surface-800 hover:text-fg-secondary sm:px-3";
 
 type BackButtonProps = {
   to: string;

@@ -29,7 +29,9 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
 
   return (
     <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-      <StatTile align="start" padding="lg" label="Record">
+      {/* Below xs2 the ring-and-legend tiles take the full row: half a 320px
+          phone left the legend no room beside the ring. */}
+      <StatTile align="start" padding="lg" label="Record" className="col-span-2 xs2:col-span-1">
         <div className="flex items-center gap-4">
           <DonutChart
             size={84}
@@ -142,7 +144,12 @@ export function MatchHistoryHero({ items }: { items: readonly ProfileMatchSummar
         </div>
       </StatTile>
 
-      <StatTile align="start" padding="lg" label="Most played">
+      <StatTile
+        align="start"
+        padding="lg"
+        label="Most played"
+        className="col-span-2 xs2:col-span-1"
+      >
         {favorite ? (
           <div className="flex flex-1 flex-col justify-between gap-2">
             <div className="flex items-center gap-2.5">
