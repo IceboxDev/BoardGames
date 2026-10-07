@@ -37,7 +37,9 @@ export function PurchaseVoteModalView(props: PurchaseVotePaneProps) {
       size="full"
       density="compact"
       eyebrow={header.eyebrow}
-      eyebrowClassName="text-accent-300"
+      // One line on any phone: the theme eyebrow ("Games for the whole table")
+      // tightens its tracking below xs2 instead of wrapping.
+      eyebrowClassName="text-accent-300 whitespace-nowrap max-xs2:tracking-label"
       title={header.title}
       titleClassName={VOTE_TITLE_CLASS}
       subheader={

@@ -70,6 +70,9 @@ export const NARROW_CONTAINER_W = 640;
 // carousels (the RSVP picker) never hit this — their card already spans
 // 92% of the container at the tower aspect.
 export const NARROW_ASPECT = 1.3;
+/** The tallest a narrow, height-rich card may grow (height / width): past
+ * this the body is all description and reads as a wall of text. */
+export const NARROW_MAX_ASPECT = 2.0;
 
 /**
  * Tanh asymptote shared by every animated axis (x offset, z depth,

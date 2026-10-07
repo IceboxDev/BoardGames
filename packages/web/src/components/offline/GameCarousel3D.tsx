@@ -18,6 +18,7 @@ import {
   MIN_CARD_W,
   NARROW_ASPECT,
   NARROW_CONTAINER_W,
+  NARROW_MAX_ASPECT,
   NewBadge,
   REF_CARD_H,
   REF_CARD_W,
@@ -290,9 +291,19 @@ export default function GameCarousel3D({
     cardW = Math.max(FLOOR_CARD_W, Math.min(widthDriven, heightBudget / aspect));
     compact = true;
   }
-  const cardH = cardW * aspect;
-  const thumbH = cardH * (270 / REF_CARD_H);
-  const bodyH = cardH * (290 / REF_CARD_H);
+  let cardH = cardW * aspect;
+  let thumbH = cardH * (270 / REF_CARD_H);
+  // A narrow container with height to SPARE (the purchase-vote dialog on a
+  // tall phone) is the opposite case: at the tower ratio the card sat in a
+  // band of empty space while its body clipped the description. There the
+  // card fills the height budget (up to NARROW_MAX_ASPECT); the thumbnail
+  // keeps its proportions to the width and every extra pixel goes to the
+  // body, so the description gets the lines it needs.
+  if (narrow && cardW === widthDriven && heightBudget > cardH) {
+    cardH = Math.min(heightBudget, cardW * NARROW_MAX_ASPECT);
+    thumbH = cardW * (270 / REF_CARD_W);
+  }
+  const bodyH = cardH - thumbH;
 
   // 3D constants scale with cardW so the spread/depth stay visually
   // coherent.
@@ -304,6 +315,10 @@ export default function GameCarousel3D({
   // each button's handler / aria-label / icon differ. No backdrop-blur:
   // backdrop-filter re-samples the animating cards behind the button every
   // frame, which is disproportionately expensive on phones.
+  // On a narrow, height-rich card the vertical middle lands on the title;
+  // anchor the arrows to the middle of the thumbnail instead.
+  const navBtnStyle =
+    narrow && measured ? { top: `calc(50% - ${cardH / 2}px + ${thumbH / 2}px)` } : undefined;
   const navBtnCls =
     "absolute top-1/2 z-raised-3 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-line-strong bg-surface-900/90 text-fg-strong transition hover:bg-surface-800 disabled:cursor-not-allowed disabled:opacity-30 sm:h-12 sm:w-12";
 
@@ -328,6 +343,7 @@ export default function GameCarousel3D({
         disabled={count < 2}
         aria-label="Previous game"
         className={`${navBtnCls} left-2 sm:left-4`}
+        style={navBtnStyle}
       >
         <ChevronLeftIcon />
       </button>
@@ -483,6 +499,7 @@ export default function GameCarousel3D({
         disabled={count < 2}
         aria-label="Next game"
         className={`${navBtnCls} right-2 sm:right-4`}
+        style={navBtnStyle}
       >
         <ChevronRightIcon />
       </button>

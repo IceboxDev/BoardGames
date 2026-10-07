@@ -197,7 +197,7 @@ export function PurchaseTakeover({
       size="full"
       density="compact"
       eyebrow={header.eyebrow}
-      eyebrowClassName="text-[var(--accent)]"
+      eyebrowClassName="text-[var(--accent)] whitespace-nowrap max-xs2:tracking-label"
       title={header.title}
       titleClassName={header.cls}
       subheader={<p className="hidden text-xs text-fg-secondary sm:block">{header.subheader}</p>}

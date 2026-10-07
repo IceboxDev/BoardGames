@@ -91,7 +91,8 @@ describe("planDescription", () => {
   it("renders nothing only when the slot is under two lines", () => {
     const plan = planDescription({
       cardW: 220,
-      bodyHeight: 150,
+      // 98 fixed + a ~15px fitted title leaves ~17px: under two lines.
+      bodyHeight: 130,
       compact: true,
       title,
       descriptions,
@@ -105,9 +106,27 @@ describe("planDescription", () => {
         const bodyHeight = cardW * 1.4737 * (290 / 560);
         const plan = planDescription({ cardW, bodyHeight, compact, title, descriptions });
         // Loosest bound: the non-title fixed rows plus ONE title line.
-        const fixed = (compact ? 115 : 152) + Math.round(plan.titleFontPx * 1.15);
+        const fixed = (compact ? 98 : 152) + Math.round(plan.titleFontPx * 1.15);
         expect(plan.maxLines * plan.lineHeightPx).toBeLessThanOrEqual(bodyHeight - fixed);
       }
     }
+  });
+
+  it("steps the type down to finish a description before clamping it", () => {
+    // A short, height-bound phone card: the tight text does not fit at 12px.
+    const plan = planDescription({
+      cardW: 250,
+      bodyHeight: 175,
+      compact: true,
+      title,
+      descriptions,
+    });
+    expect(plan.text).not.toBeNull();
+    expect(plan.fontPx).toBeLessThan(12);
+    expect(plan.fontPx).toBeGreaterThanOrEqual(9);
+    const charsPerLine = ((250 - 24) / (plan.fontPx * 0.52)) * 0.9;
+    expect(Math.ceil((plan.text ?? "").length / charsPerLine)).toBeLessThanOrEqual(plan.maxLines);
+    // Shrinking is only ever spent on the shortest variant.
+    expect(plan.text).toBe(descriptions.tight);
   });
 });

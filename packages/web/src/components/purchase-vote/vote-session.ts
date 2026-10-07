@@ -6,6 +6,7 @@ import { resolveGame } from "../../lib/games-by-slug";
 import { reportPageView } from "../../lib/page-views";
 import { fetchPurchaseVote, setPurchaseVotes } from "../../lib/purchase-vote";
 import { qk } from "../../lib/query-keys";
+import { voteShortTitle, voteTagline } from "./vote-copy";
 
 // The voting screen's data and words, apart from its markup — so the
 // standalone dialog and the two-page purchase takeover run the same session.
@@ -40,9 +41,12 @@ export function voteHeader({
   title,
 }: Pick<PurchaseVotePaneProps, "view" | "voterCount" | "requiredVoters" | "title">) {
   const progress = `${voterCount} of ${requiredVoters} players have voted`;
+  // A themed poll splits its title like the announcement does: the angle as
+  // the eyebrow, the vote's name as a one-line title ("The October vote:
+  // games for the whole table" wrapped to two lines on a 384px phone).
   return {
-    eyebrow: "Purchase vote",
-    title: title ?? "Vote for the next game purchase",
+    eyebrow: voteTagline(title ?? null) ?? "Purchase vote",
+    title: title ? voteShortTitle(title) : "Vote for the next game purchase",
     subheader:
       view === "saved"
         ? `${progress} — the winner is revealed the moment the vote closes.`
