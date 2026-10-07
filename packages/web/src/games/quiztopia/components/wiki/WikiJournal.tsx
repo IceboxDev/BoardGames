@@ -44,6 +44,7 @@ import { type TrainerPaths, useTrainerPaths } from "../../paths";
 import { AnswerMark } from "../common/AnswerMark";
 import { BuildingGlyph } from "../common/BuildingGlyph";
 import { TextLink } from "../common/TextLink";
+import { ReportButton } from "../report/ReportButton";
 import { TrainerScreen } from "../trainer/TrainerScreen";
 
 // The journal: every day you studied or read, newest first. Each day lists
@@ -346,16 +347,22 @@ function JournalSetCard({
           >
             {d.label} · {language === "de" ? d.de : d.en}
           </Badge>
-          {set.readAt && (
-            <Badge
-              tone="emerald"
-              size="xs"
-              icon={<CheckIcon className="h-3 w-3" />}
-              className="ml-auto"
-            >
-              Read {readTime(set.readAt)}
-            </Badge>
-          )}
+          <span className="ml-auto flex items-center gap-2">
+            {set.readAt && (
+              <Badge tone="emerald" size="xs" icon={<CheckIcon className="h-3 w-3" />}>
+                Read {readTime(set.readAt)}
+              </Badge>
+            )}
+            <ReportButton
+              context={{
+                target: { kind: "article", id: set.setId },
+                title: titles[0] ?? set.titleEn,
+                category: set.category,
+                surface: "journal",
+                language,
+              }}
+            />
+          </span>
         </div>
         <div className="min-w-0">
           <Link
@@ -463,6 +470,16 @@ function JournalQuestionRow({
               Table game
             </Badge>
           )}
+          <ReportButton
+            context={{
+              target: { kind: "question", id: q.questionId },
+              title: questions[0] ?? q.en,
+              category: d.n,
+              surface: "journal",
+              hideSpoilers: !revealed,
+              language,
+            }}
+          />
         </div>
         {revealed ? (
           <div className="flex flex-col gap-1">

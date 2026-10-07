@@ -27,7 +27,9 @@ import TrainerPreview from "../games/quiztopia/components/trainer/TrainerPreview
 //         timeline over a 40-moment fixture; `&q=<id>` focuses, `&empty=1`) |
 //         hub (the trainer hub over fixture data; `&fresh=1`) |
 //         journal (the journal over fixture days; `&fresh=1` = empty) |
-//         card (the study card; `&revealed=1` flips it after mount)
+//         reports (your content reports; `&fresh=1` = none) |
+//         card (the study card; `&revealed=1` flips it after mount,
+//         `&report=1` opens the report form over it)
 
 const NAMES = ["Mantas", "Anna", "Lena"];
 const SOURCE = createFixtureQuestionSource(30);
@@ -179,7 +181,12 @@ export default function QuiztopiaPreview() {
 
   const sceneName = params.get("scene") ?? "board";
   if (sceneName === "timeline") return <TimelinePreview />;
-  if (sceneName === "hub" || sceneName === "card" || sceneName === "journal") {
+  if (
+    sceneName === "hub" ||
+    sceneName === "card" ||
+    sceneName === "journal" ||
+    sceneName === "reports"
+  ) {
     return <TrainerPreview scene={sceneName} />;
   }
   const scene = SCENES[sceneName] ?? (SCENES.board as Scene);

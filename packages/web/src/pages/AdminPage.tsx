@@ -13,6 +13,7 @@ import {
   InactiveToggleRow,
   PreRegisterCard,
   PurchaseVoteCard,
+  QuiztopiaReportsCard,
   ResetLinkModal,
   SkillRatingsCard,
   UserRow,
@@ -27,6 +28,7 @@ import {
   PageShell,
   SegmentedControl,
 } from "../components/ui";
+import { adminReportsQuery } from "../games/quiztopia/api";
 import { useAdminUsers } from "../hooks/useAdminUsers.ts";
 import { useCurrentUser } from "../hooks/useCurrentUser.ts";
 import { adminFetchUnseenActivity, adminGenerateResetLink, adminSetOnlineMode } from "../lib/admin";
@@ -55,7 +57,7 @@ import {
 type MemberRow = { user: AdminUser; coverage: Coverage; zeroDays: number; inactive: boolean };
 
 /** URL-backed tab set (`?tab=…`; Users is the bare default). */
-const ADMIN_TABS = ["users", "vote", "pre-register", "skills", "guests"] as const;
+const ADMIN_TABS = ["users", "vote", "pre-register", "skills", "guests", "reports"] as const;
 type AdminTab = (typeof ADMIN_TABS)[number];
 
 function isAdminTab(v: string | null): v is AdminTab {
@@ -82,6 +84,13 @@ export default function AdminPage() {
   const [searchParams, setSearchParams] = useSearchParams();
   const tabParam = searchParams.get("tab");
   const tab: AdminTab = isAdminTab(tabParam) ? tabParam : "users";
+  // The open Quiztopia reports, for the tab label — the queue itself loads in its tab.
+  const openReports =
+    useQuery({
+      queryKey: qk.adminQuiztopiaReports("open"),
+      queryFn: adminReportsQuery("open"),
+      staleTime: 60_000,
+    }).data?.counts.open ?? 0;
   function setTab(next: AdminTab) {
     const params = new URLSearchParams(searchParams);
     if (next === "users") params.delete("tab");
@@ -316,6 +325,7 @@ export default function AdminPage() {
             { value: "pre-register", label: "Pre-register" },
             { value: "skills", label: "Skill ratings" },
             { value: "guests", label: "Guests" },
+            { value: "reports", label: openReports ? `Reports (${openReports})` : "Reports" },
           ]}
           value={tab}
           onChange={setTab}
@@ -385,6 +395,7 @@ export default function AdminPage() {
         )}
         {tab === "pre-register" && <PreRegisterCard />}
         {tab === "skills" && <SkillRatingsCard />}
+        {tab === "reports" && <QuiztopiaReportsCard />}
         {tab === "guests" && (
           <GuestPlayersCard
             guests={guests}

@@ -2,6 +2,7 @@ import { parseSetId } from "@boardgames/core/games/quiztopia/ids";
 import { useQuery } from "@tanstack/react-query";
 import { type FormEvent, useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { FlagIcon } from "../../../../components/icons";
 import {
   Badge,
   Button,
@@ -18,10 +19,12 @@ import { todayKey, wikiReadsQuery } from "../../api";
 import { DISTRICTS, districtByN } from "../../bands";
 import { CARD_IDS, CONTENT_INDEX } from "../../content";
 import { useJournal } from "../../hooks/useJournal";
+import { useMyReports } from "../../hooks/useMyReports";
 import { articleLanguage } from "../../hooks/useQuestionLanguage";
 import { useQuiztopiaSettings } from "../../hooks/useQuiztopiaSettings";
 import { dayLabel } from "../../logic/time";
 import { useTrainerPaths } from "../../paths";
+import { UnreadDot } from "../report/UnreadDot";
 import { CategoryTile } from "../trainer/CategoryTile";
 import { TrainerScreen } from "../trainer/TrainerScreen";
 
@@ -37,6 +40,7 @@ export default function WikiIndex() {
   const { settings } = useQuiztopiaSettings();
   const lang = articleLanguage(settings.language);
   const [q, setQ] = useState("");
+  const { unread: reportsUnread } = useMyReports();
 
   const reads = useQuery({
     queryKey: qk.quiztopiaWikiReads(),
@@ -69,9 +73,22 @@ export default function WikiIndex() {
           title="The Archive"
           subtitle={`${CONTENT_INDEX.counts.sets.toLocaleString()} articles across ${DISTRICTS.length} districts — every answer highlighted where the text gives it away.`}
           actions={
-            <Button variant="link" onClick={() => navigate(paths.hub)}>
-              ← Trainer
-            </Button>
+            <div className="flex items-center gap-2">
+              <Button
+                variant="secondary"
+                size="sm"
+                onClick={() => navigate(paths.reports)}
+                className="relative"
+                title="Problems you've flagged, and what came of them"
+              >
+                <FlagIcon className="h-3.5 w-3.5" />
+                Your reports
+                <UnreadDot count={reportsUnread} />
+              </Button>
+              <Button variant="link" onClick={() => navigate(paths.hub)}>
+                ← Trainer
+              </Button>
+            </div>
           }
         />
 

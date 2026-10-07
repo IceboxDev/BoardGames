@@ -11,6 +11,8 @@
 //   GET  /search?q=&lang=&category=
 //   POST /wiki/reads, DELETE /wiki/reads, GET /wiki/reads
 //   GET  /journal?before=&days=&tz=      day-by-day studied questions and reads
+//   POST /reports                        report a problem with a question or article
+//   GET  /reports/mine, POST /reports/mine/seen, DELETE /reports/:id
 //   GET  /games/recent-misses
 //
 // The client is the clock: every read carries its local `today`, every
@@ -21,12 +23,17 @@ import { timelineSummary } from "@boardgames/core/games/quiztopia/timeline";
 import {
   BulkReviewsBodySchema,
   BulkReviewsResponseSchema,
+  CreateReportBodySchema,
+  CreateReportResponseSchema,
   JournalQuerySchema,
   JournalResponseSchema,
+  MarkReportsSeenBodySchema,
+  MyReportsResponseSchema,
   QuiztopiaSettingsSchema,
   type RecentMisses,
   RecentMissesQuerySchema,
   RecentMissesResponseSchema,
+  ReportIdParamSchema,
   ReviewBodySchema,
   ReviewResponseSchema,
   SearchQuerySchema,
@@ -56,6 +63,13 @@ import { parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 import { getContentStore } from "../lib/quiztopia/content-store.ts";
 import { InvalidTimeZoneError, readJournal } from "../lib/quiztopia/journal.ts";
+import {
+  createOrUpdateReport,
+  markSeen,
+  myReports,
+  ReportTargetNotFoundError,
+  withdrawReport,
+} from "../lib/quiztopia/reports.ts";
 import {
   type RecordReviewResult,
   ReviewRejectedError,
@@ -354,6 +368,50 @@ quiztopiaRoutes.get("/journal", zQuery(JournalQuerySchema), async (c) => {
       return errorResponse(c, 400, err.message, "BAD_REQUEST");
     throw err;
   }
+});
+
+// ── Content reports ────────────────────────────────────────────────────
+// A member's own reports only; the admin queue is admin-quiztopia-reports.ts.
+
+quiztopiaRoutes.post("/reports", zJsonBody(CreateReportBodySchema), async (c) => {
+  const user = c.get("user");
+  const body = c.req.valid("json");
+  try {
+    const result = await createOrUpdateReport(getDb(), getContentStore(), user.id, body);
+    if (!result.updated) {
+      logActivity(user.id, "quiztopia-report", { targetId: body.target.id, issue: body.issue });
+    }
+    return c.json(CreateReportResponseSchema.parse(result), result.updated ? 200 : 201);
+  } catch (err) {
+    if (err instanceof ReportTargetNotFoundError) {
+      return errorResponse(c, 404, "question or article not found", "NOT_FOUND");
+    }
+    throw err;
+  }
+});
+
+quiztopiaRoutes.get("/reports/mine", async (c) => {
+  const user = c.get("user");
+  return c.json(MyReportsResponseSchema.parse(await myReports(getDb(), user.id)));
+});
+
+quiztopiaRoutes.post("/reports/mine/seen", zJsonBody(MarkReportsSeenBodySchema), async (c) => {
+  const user = c.get("user");
+  const { ids } = c.req.valid("json");
+  const db = getDb();
+  await markSeen(db, user.id, ids);
+  return c.json(MyReportsResponseSchema.parse(await myReports(db, user.id)));
+});
+
+quiztopiaRoutes.delete("/reports/:id", async (c) => {
+  const user = c.get("user");
+  const parsed = ReportIdParamSchema.safeParse({ id: c.req.param("id") });
+  if (!parsed.success) return errorResponse(c, 400, "bad report id", "BAD_REQUEST");
+  const db = getDb();
+  if (!(await withdrawReport(db, user.id, parsed.data.id))) {
+    return errorResponse(c, 404, "no open report of yours with that id", "NOT_FOUND");
+  }
+  return c.json(MyReportsResponseSchema.parse(await myReports(db, user.id)));
 });
 
 // ── Game misses ────────────────────────────────────────────────────────

@@ -18,6 +18,7 @@ import type { TrainerPaths } from "../../paths";
 import { BuildingGlyph } from "../common/BuildingGlyph";
 import { SourceLink } from "../common/SourceLink";
 import { TextLink } from "../common/TextLink";
+import { ReportButton } from "../report/ReportButton";
 import { kindLabel } from "./era-copy";
 
 // One pinned moment, opened: the full date, what happened, the question it
@@ -154,6 +155,19 @@ export function TimelineDetail({
           <TextLink tone="muted" to={paths.study({ set: item.setId })}>
             {de ? "Set üben" : "Study this set"}
           </TextLink>
+          <ReportButton
+            variant="labelled"
+            label={de ? "Datum melden" : "Report wrong date"}
+            className="ml-auto"
+            context={{
+              target: { kind: "question", id: item.questionId },
+              title: text ? (de ? text.de : text.en) : item.questionId,
+              category: item.n,
+              surface: "timeline",
+              presetIssue: "wrong-date",
+              language: lang,
+            }}
+          />
         </div>
         {studied && (
           <p className="text-2xs text-fg-muted">

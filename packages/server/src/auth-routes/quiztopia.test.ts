@@ -7,6 +7,8 @@ import { fileURLToPath } from "node:url";
 import { addDays } from "@boardgames/core/games/quiztopia/srs";
 import type {
   Journal,
+  MyReport,
+  MyReports,
   RecentMisses,
   ReviewBody,
   ReviewResponse,
@@ -947,6 +949,76 @@ describe("/api/quiztopia", () => {
       expect((await call("GET", "/journal?tz=Mars%2FOlympus")).status).toBe(400);
       expect((await call("GET", "/journal?days=0")).status).toBe(400);
       expect((await call("GET", "/journal?before=yesterday")).status).toBe(400);
+    });
+  });
+
+  describe("content reports", () => {
+    const body = {
+      target: { kind: "question", id: "c001-s01-q2" },
+      issue: "wrong-answer",
+      language: "en",
+      message: "The year is off",
+      surface: "trainer",
+    };
+
+    it("files a report, updates it on a repeat, and logs the first one", async () => {
+      const first = await call<{ report: MyReport; updated: boolean }>("POST", "/reports", body);
+      expect(first.status).toBe(201);
+      expect(first.body.updated).toBe(false);
+      const again = await call<{ report: MyReport; updated: boolean }>("POST", "/reports", {
+        ...body,
+        message: "The year is off by two",
+      });
+      expect(again.status).toBe(200);
+      expect(again.body.report.id).toBe(first.body.report.id);
+      expect(
+        await count(client, "SELECT COUNT(*) n FROM activity_log WHERE type = 'quiztopia-report'"),
+      ).toBe(1);
+    });
+
+    it("refuses unknown content, an issue that doesn't fit, and 'other' without words", async () => {
+      expect(
+        (
+          await call("POST", "/reports", {
+            ...body,
+            target: { kind: "question", id: "c099-s01-q0" },
+          })
+        ).status,
+      ).toBe(404);
+      expect(
+        (await call("POST", "/reports", { ...body, target: { kind: "article", id: "c001-s01" } }))
+          .status,
+      ).toBe(400);
+      expect(
+        (await call("POST", "/reports", { ...body, issue: "other", message: "" })).status,
+      ).toBe(400);
+    });
+
+    it("lists only the caller's reports and lets them withdraw an open one", async () => {
+      const mine = await call<{ report: MyReport }>("POST", "/reports", body);
+      await call("POST", "/reports", body, OTHER);
+      const list = await call<MyReports>("GET", "/reports/mine");
+      expect(list.body.reports.map((r) => r.id)).toEqual([mine.body.report.id]);
+
+      expect(
+        (await call("DELETE", `/reports/${mine.body.report.id}`, undefined, OTHER)).status,
+      ).toBe(404);
+      const withdrawn = await call<MyReports>("DELETE", `/reports/${mine.body.report.id}`);
+      expect(withdrawn.status).toBe(200);
+      expect(withdrawn.body.reports).toEqual([]);
+      expect((await call("DELETE", "/reports/abc")).status).toBe(400);
+    });
+
+    it("marks resolutions seen", async () => {
+      const { body: filed } = await call<{ report: MyReport }>("POST", "/reports", body);
+      await client.execute({
+        sql: "UPDATE quiztopia_reports SET status = 'fixed', resolution_note = 'Done' WHERE id = ?",
+        args: [filed.report.id],
+      });
+      expect((await call<MyReports>("GET", "/reports/mine")).body.unread).toBe(1);
+      const seen = await call<MyReports>("POST", "/reports/mine/seen", { ids: [filed.report.id] });
+      expect(seen.body.unread).toBe(0);
+      expect((await call("POST", "/reports/mine/seen", { ids: [] })).status).toBe(400);
     });
   });
 

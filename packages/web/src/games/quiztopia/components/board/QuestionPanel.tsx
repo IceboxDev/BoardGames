@@ -1,3 +1,4 @@
+import { questionIdForRef } from "@boardgames/core/games/quiztopia/ids";
 import { CARDS_PER_GAME, type TurnView } from "@boardgames/core/games/quiztopia/types";
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useId } from "react";
@@ -8,6 +9,7 @@ import { answerHints, type BoardLanguage, cardRefLabel, pickTexts } from "../../
 import { AnswerMark } from "../common/AnswerMark";
 import { BuildingGlyph } from "../common/BuildingGlyph";
 import { LanguageToggle } from "../common/LanguageToggle";
+import { ReportButton } from "../report/ReportButton";
 import { EditorNote } from "../wiki/EditorNote";
 import { useArticleSnippet } from "./use-article-snippet";
 
@@ -50,6 +52,7 @@ export default function QuestionPanel({
   );
   if (!q) return null;
   const d = districtByIndex(q.categoryIndex);
+  const reportId = questionIdForRef(q.cardRef, d.n);
   const questions = pickTexts(lang, q.en, q.de);
   const answerEn = q.answerEn ?? "";
   const answerDe = q.answerDe ?? "";
@@ -79,6 +82,18 @@ export default function QuestionPanel({
             <MicroLabel className="tabular-nums">
               Q{Math.max(1, cardsUsed)} of {CARDS_PER_GAME}
             </MicroLabel>
+            {/* Only once the answer is public, and only for real cards. */}
+            {revealed && reportId && (
+              <ReportButton
+                context={{
+                  target: { kind: "question", id: reportId },
+                  title: questions[0] ?? q.en,
+                  category: d.n,
+                  surface: "game",
+                  language: lang,
+                }}
+              />
+            )}
             <LanguageToggle value={lang} onChange={onLangChange} />
           </span>
         </div>

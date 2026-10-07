@@ -17,7 +17,7 @@ import { useMediaQuery, WIDE_BOARD_QUERY } from "../../../../hooks/useMediaQuery
 import { cn } from "../../../../lib/cn";
 import { DISTRICTS } from "../../bands";
 import { useQuestionLanguage } from "../../hooks/useQuestionLanguage";
-import { isPlainKey, isTypingTarget } from "../../keys";
+import { isScreenShortcut } from "../../keys";
 import { layoutTimeline, type TimelineItem } from "../../logic/timeline-layout";
 import type { TrainerPaths } from "../../paths";
 import { BuildingGlyph } from "../common/BuildingGlyph";
@@ -168,7 +168,7 @@ export function TimelineView({ items, totalPins, undated, paths, focusId, onFocu
 
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (!isPlainKey(e) || isTypingTarget(e.target)) return;
+      if (!isScreenShortcut(e)) return;
       if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
         if (visible.length === 0) return;
         e.preventDefault();

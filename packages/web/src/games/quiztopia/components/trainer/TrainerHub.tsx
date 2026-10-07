@@ -21,11 +21,13 @@ import { qk } from "../../../../lib/query-keys";
 import { historyQuery, overviewQuery, recentMissesQuery, todayKey } from "../../api";
 import { DISTRICTS, districtByN } from "../../bands";
 import { CARD_IDS } from "../../content";
+import { useMyReports } from "../../hooks/useMyReports";
 import { usePins } from "../../hooks/usePinnedTimeline";
 import { useQuiztopiaSettings } from "../../hooks/useQuiztopiaSettings";
 import { weekdayName } from "../../keys";
 import { useTrainerPaths } from "../../paths";
 import { Skyline } from "../common/Skyline";
+import { UnreadDot } from "../report/UnreadDot";
 import { CategoryTile } from "./CategoryTile";
 import { ProgressPanel } from "./ProgressPanel";
 import { RecentMisses } from "./RecentMisses";
@@ -125,6 +127,7 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
   const paths = useTrainerPaths();
   const { settings, loaded: settingsLoaded, save } = useQuiztopiaSettings();
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const { unread: reportsUnread } = useMyReports();
 
   const history = useQuery({
     queryKey: qk.quiztopiaHistory(HISTORY_DAYS, today),
@@ -206,9 +209,11 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
               onClick={() => navigate(paths.wiki)}
               title="The archive: every article, answers highlighted"
               aria-label="Wiki"
+              className="relative"
             >
               <BookIcon className="h-3.5 w-3.5" />
               <span className="hidden sm:inline">Wiki</span>
+              <UnreadDot count={reportsUnread} />
             </Button>
             <IconButton
               variant="bordered"

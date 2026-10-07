@@ -347,6 +347,15 @@ export const EVENT_LABELS: EventLabels = {
   "quiztopia-train": trainDay("quiztopia"),
   "quiztopia-settings": trainerSettings("quiztopia"),
   "quiztopia-reset": trainerReset("quiztopia"),
+  "quiztopia-report": {
+    tone: "study",
+    describe: ({ targetId, issue }) => {
+      // Question ids carry a "-q<n>" suffix; set ids (articles) don't.
+      const what = targetId?.includes("-q") ? "question" : targetId ? "article" : "item";
+      const why = issue ? ` (${issue.replace(/-/g, " ")})` : "";
+      return `Reported a problem with a Quiztopia ${what}${targetId ? ` ${targetId}` : ""}${why}`;
+    },
+  },
   "geography-train": trainDay("geography"),
   "geography-settings": trainerSettings("geography"),
   "geography-reset": trainerReset("geography"),

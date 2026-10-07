@@ -2,11 +2,21 @@
 // the protocol schemas, and React Query keys live in `lib/query-keys.ts`.
 
 import {
+  AdminReportsResponseSchema,
   BulkReviewsBodySchema,
   BulkReviewsResponseSchema,
+  type CreateReportBody,
+  CreateReportBodySchema,
+  CreateReportResponseSchema,
   JournalResponseSchema,
+  MarkReportsSeenBodySchema,
+  MyReportsResponseSchema,
   QuiztopiaSettingsSchema,
   RecentMissesResponseSchema,
+  ReopenReportResponseSchema,
+  type ResolveReportsBody,
+  ResolveReportsBodySchema,
+  ResolveReportsResponseSchema,
   type ReviewBody,
   ReviewBodySchema,
   ReviewResponseSchema,
@@ -121,3 +131,44 @@ export const deleteWikiRead = jsonMutation(
   { request: WikiReadBodySchema, response: WikiReadsResponseSchema },
   { method: "DELETE" },
 );
+
+// ── Content reports ─────────────────────────────────────────────────────
+
+/** File a report, or update your open report of the same issue (201 / 200). */
+export const createReport = (body: CreateReportBody) =>
+  apiFetch(`${BASE}/reports`, {
+    method: "POST",
+    body: CreateReportBodySchema.parse(body),
+    request: CreateReportBodySchema,
+    response: CreateReportResponseSchema,
+  });
+
+export const myReportsQuery = () => jsonQuery(`${BASE}/reports/mine`, MyReportsResponseSchema);
+
+export const markReportsSeen = jsonMutation(`${BASE}/reports/mine/seen`, {
+  request: MarkReportsSeenBodySchema,
+  response: MyReportsResponseSchema,
+});
+
+/** Withdraw your own open report; answers with your remaining reports. */
+export const withdrawReport = (id: number) =>
+  apiFetch(`${BASE}/reports/${id}`, { method: "DELETE", response: MyReportsResponseSchema });
+
+// Admin queue (`/api/admin/quiztopia-reports`, admins only).
+
+export const adminReportsQuery = (status: "open" | "fixed" | "declined" | "all") =>
+  jsonQuery(`/api/admin/quiztopia-reports${qs({ status })}`, AdminReportsResponseSchema);
+
+export const resolveReports = (body: ResolveReportsBody) =>
+  apiFetch("/api/admin/quiztopia-reports/resolve", {
+    method: "POST",
+    body: ResolveReportsBodySchema.parse(body),
+    request: ResolveReportsBodySchema,
+    response: ResolveReportsResponseSchema,
+  });
+
+export const reopenReport = (id: number) =>
+  apiFetch(`/api/admin/quiztopia-reports/${id}/reopen`, {
+    method: "POST",
+    response: ReopenReportResponseSchema,
+  });

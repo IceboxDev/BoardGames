@@ -25,12 +25,13 @@ import { useCardArticles, useCardQuestions } from "../../hooks/useContent";
 import { usePinnedIds } from "../../hooks/usePinnedTimeline";
 import { useQuestionLanguage } from "../../hooks/useQuestionLanguage";
 import { useWikiRead } from "../../hooks/useWikiRead";
-import { isPlainKey, isTypingTarget } from "../../keys";
+import { isScreenShortcut } from "../../keys";
 import { useTrainerPaths } from "../../paths";
 import { BuildingGlyph } from "../common/BuildingGlyph";
 import { LanguageToggle } from "../common/LanguageToggle";
 import { SourceLink } from "../common/SourceLink";
 import { TextLink } from "../common/TextLink";
+import { ReportButton } from "../report/ReportButton";
 import { TimelineChip } from "../timeline/TimelineChip";
 import { TrainerScreen } from "../trainer/TrainerScreen";
 import { ArticleBody } from "./ArticleBody";
@@ -133,7 +134,7 @@ function ArticleScreen({ district: d, cardId, cardIndex }: ScreenProps) {
   const nextId = CARD_IDS[cardIndex + 1] ?? null;
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (!isPlainKey(e) || isTypingTarget(e.target)) return;
+      if (!isScreenShortcut(e)) return;
       if (e.key >= "1" && e.key <= "5") {
         e.preventDefault();
         toggle(Number(e.key) - 1);
@@ -222,7 +223,21 @@ function ArticleScreen({ district: d, cardId, cardIndex }: ScreenProps) {
                 ) : undefined
               }
               subtitle={<QuestionDots questionIds={questionIds} />}
-              actions={<LanguageToggle value={language} onChange={setLanguage} allowBoth={false} />}
+              actions={
+                <div className="flex flex-wrap items-center gap-2">
+                  <ReportButton
+                    variant="labelled"
+                    context={{
+                      target: { kind: "article", id: sid },
+                      title,
+                      category: d.n,
+                      surface: "wiki",
+                      language,
+                    }}
+                  />
+                  <LanguageToggle value={language} onChange={setLanguage} allowBoth={false} />
+                </div>
+              }
             />
 
             <Surface variant="tile" padding="md" className="flex flex-col gap-1">
@@ -331,6 +346,18 @@ function ArticleScreen({ district: d, cardId, cardIndex }: ScreenProps) {
                             >
                               Jump to passage
                             </Button>
+                            <ReportButton
+                              className="ml-auto"
+                              context={{
+                                target: { kind: "question", id: question.id },
+                                title: questionText(q),
+                                category: d.n,
+                                surface: "wiki",
+                                // A hidden answer stays hidden: no answer-giving issues yet.
+                                hideSpoilers: !shown[q],
+                                language,
+                              }}
+                            />
                           </div>
                         </div>
                       </div>

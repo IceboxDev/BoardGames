@@ -10,6 +10,7 @@ export { InactiveToggleRow } from "./InactiveToggleRow";
 export { InventoryPanel } from "./InventoryPanel";
 export { PreRegisterCard } from "./PreRegisterCard";
 export { PurchaseVoteCard } from "./PurchaseVoteCard";
+export { QuiztopiaReportsCard } from "./QuiztopiaReportsCard";
 export { ResetLinkModal } from "./ResetLinkModal";
 export { SkillRatingsCard } from "./SkillRatingsCard";
 export type { AdminUser } from "./types";

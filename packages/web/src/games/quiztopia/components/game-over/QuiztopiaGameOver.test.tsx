@@ -3,6 +3,7 @@ import type {
   QuiztopiaPlayerView,
   QuiztopiaResult,
 } from "@boardgames/core/games/quiztopia/types";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
@@ -12,6 +13,10 @@ vi.mock("react-router-dom", async (importOriginal) => {
   const actual = await importOriginal<typeof import("react-router-dom")>();
   return { ...actual, useNavigate: () => navigate };
 });
+
+vi.mock("../../api", () => ({
+  myReportsQuery: () => async () => ({ reports: [], unread: 0 }),
+}));
 
 import QuiztopiaGameOver from "./QuiztopiaGameOver";
 
@@ -141,16 +146,19 @@ const RESULT: QuiztopiaResult = {
 };
 
 function renderScreen(view: QuiztopiaPlayerView | null = VIEW) {
+  const qc = new QueryClient({ defaultOptions: { queries: { retry: false } } });
   return render(
-    <MemoryRouter>
-      <QuiztopiaGameOver
-        result={RESULT}
-        view={view}
-        seatNames={["Mantas", "Anna", "Lena"]}
-        onBackToMenu={() => {}}
-        onOpenTrainer={() => {}}
-      />
-    </MemoryRouter>,
+    <QueryClientProvider client={qc}>
+      <MemoryRouter>
+        <QuiztopiaGameOver
+          result={RESULT}
+          view={view}
+          seatNames={["Mantas", "Anna", "Lena"]}
+          onBackToMenu={() => {}}
+          onOpenTrainer={() => {}}
+        />
+      </MemoryRouter>
+    </QueryClientProvider>,
   );
 }
 

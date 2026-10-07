@@ -117,6 +117,10 @@ export const GUEST_MERGE_COVERAGE = {
     "quiztopia_settings.user_id",
     "quiztopia_wiki_reads.user_id",
     "quiztopia_wiki_read_log.user_id",
+    // Content reports: a guest stub never studies, so never reports; only an
+    // admin resolves one (SET NULL like resolved_by elsewhere).
+    "quiztopia_reports.user_id",
+    "quiztopia_reports.resolved_by",
     // Trainer decks (World Geography, …): same reasoning.
     "trainer_srs.user_id",
     "trainer_reviews.user_id",

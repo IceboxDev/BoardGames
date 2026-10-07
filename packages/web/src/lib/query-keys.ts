@@ -71,6 +71,9 @@ export const qk = {
   quiztopiaRecentMisses: () => ["quiztopia", "recent-misses"] as const,
   quiztopiaJournal: (tz: string) => ["quiztopia", "journal", tz] as const,
   quiztopiaJournalAll: () => ["quiztopia", "journal"] as const,
+  quiztopiaReports: () => ["quiztopia", "reports"] as const,
+  adminQuiztopiaReports: (status: string) => ["admin", "quiztopia-reports", status] as const,
+  adminQuiztopiaReportsAll: () => ["admin", "quiztopia-reports"] as const,
   // Prefixes for invalidation (every date / id variant of one read).
   quiztopiaAll: () => ["quiztopia"] as const,
   quiztopiaOverviewAll: () => ["quiztopia", "overview"] as const,

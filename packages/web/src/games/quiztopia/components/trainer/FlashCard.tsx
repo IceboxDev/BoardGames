@@ -21,6 +21,7 @@ import { AnswerMark } from "../common/AnswerMark";
 import { BuildingGlyph } from "../common/BuildingGlyph";
 import { SourceLink } from "../common/SourceLink";
 import { TextLink } from "../common/TextLink";
+import { ReportButton } from "../report/ReportButton";
 import { TimelineChip } from "../timeline/TimelineChip";
 import { EditorNote } from "../wiki/EditorNote";
 
@@ -138,7 +139,14 @@ export function FlashCard({
                 full-card overlay, so no button's intrinsic sizing (which
                 iOS Safari lets grow past the screen) ever reaches it. */}
             <div className="flex min-w-0 flex-1 flex-col gap-4 p-5">
-              <CardHeader card={card} district={d} state={state} primary={primary} />
+              <CardHeader
+                card={card}
+                district={d}
+                state={state}
+                primary={primary}
+                language={language}
+                revealed={false}
+              />
               <div className="flex min-w-0 flex-1 flex-col justify-center gap-2 py-4">
                 {questions.map((text, i) => (
                   <p
@@ -203,11 +211,16 @@ function CardHeader({
   district: d,
   state,
   primary,
+  language,
+  revealed,
 }: {
   card: CurrentCard;
   district: District;
   state: SrsState | null;
   primary: "en" | "de";
+  language: QuiztopiaLanguage;
+  /** The back face: every issue may be reported; the front hides answer-giving ones. */
+  revealed: boolean;
 }) {
   const tier = tierBadge(state);
   const ref = `${card.item.cardId} · Q${card.q + 1}${card.q === 0 ? " · original" : ""}`;
@@ -225,6 +238,16 @@ function CardHeader({
         {tier.label}
       </Badge>
       <MicroLabel className="ml-auto">{ref}</MicroLabel>
+      <ReportButton
+        context={{
+          target: { kind: "question", id: card.item.questionId },
+          title: primary === "de" ? card.question.de : card.question.en,
+          category: card.item.category,
+          surface: "trainer",
+          hideSpoilers: !revealed,
+          language,
+        }}
+      />
     </div>
   );
 }
@@ -249,7 +272,14 @@ function BackFace({
     >
       <span className={cn("block h-1 w-full", TONE_STRIP[d.tone])} aria-hidden="true" />
       <div className="flex min-w-0 flex-1 flex-col gap-4 p-5">
-        <CardHeader card={card} district={d} state={state} primary={primary} />
+        <CardHeader
+          card={card}
+          district={d}
+          state={state}
+          primary={primary}
+          language={language}
+          revealed
+        />
         <p className="text-sm text-fg-secondary" lang={primary}>
           {questions[0]}
         </p>

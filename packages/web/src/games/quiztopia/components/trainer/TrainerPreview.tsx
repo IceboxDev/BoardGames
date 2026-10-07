@@ -2,6 +2,7 @@ import { addDays } from "@boardgames/core/games/quiztopia/srs";
 import type {
   Journal,
   JournalQuestion,
+  MyReports,
   RecentMisses,
   TimelinePins,
   TrainerHistory,
@@ -19,7 +20,9 @@ import { findQuestion } from "../../content";
 import { useCardQuestions } from "../../hooks/useContent";
 import { viewerTimeZone } from "../../hooks/useJournal";
 import { TrainerBaseProvider } from "../../paths";
+import { ReportDialog } from "../report/ReportDialog";
 import WikiJournal from "../wiki/WikiJournal";
+import WikiReports from "../wiki/WikiReports";
 import { FlashCard } from "./FlashCard";
 import TrainerHub from "./TrainerHub";
 import { TrainerScreen } from "./TrainerScreen";
@@ -28,6 +31,8 @@ import { TrainerScreen } from "./TrainerScreen";
 //   scene=hub        — the hub over a fixture overview / history (seeded
 //                      into a private query cache; `&fresh=1` = brand-new member)
 //   scene=journal    — the journal over three fixture days
+//   scene=reports    — "Your reports" over fixture reports (one fresh outcome)
+//                      `&report=1` on scene=card opens the report form over it
 //   scene=card       — the study card on a real content card; `&revealed=1`
 //                      flips it after mount, exercising the real animation
 
@@ -111,6 +116,7 @@ function seededClient(fresh: boolean): QueryClient {
         })),
     summary: fresh ? { dated: 0, spanYears: 0 } : { dated: 105, spanYears: 1300 },
   });
+  qc.setQueryData<MyReports>(qk.quiztopiaReports(), fixtureReports(fresh));
   qc.setQueryData(qk.quiztopiaJournal(viewerTimeZone()), {
     pages: [fixtureJournal(today, fresh)],
     pageParams: [null],
@@ -232,7 +238,11 @@ function fixtureJournal(today: string, fresh: boolean): Journal {
   };
 }
 
-export default function TrainerPreview({ scene }: { scene: "hub" | "card" | "journal" }) {
+export default function TrainerPreview({
+  scene,
+}: {
+  scene: "hub" | "card" | "journal" | "reports";
+}) {
   const [params] = useSearchParams();
   const fresh = params.get("fresh") === "1";
   const client = useMemo(() => seededClient(fresh), [fresh]);
@@ -244,8 +254,13 @@ export default function TrainerPreview({ scene }: { scene: "hub" | "card" | "jou
             <TrainerHub />
           ) : scene === "journal" ? (
             <WikiJournal />
+          ) : scene === "reports" ? (
+            <WikiReports />
           ) : (
-            <CardScene flip={params.get("revealed") === "1"} />
+            <CardScene
+              flip={params.get("revealed") === "1"}
+              report={params.get("report") === "1"}
+            />
           )}
         </div>
       </QueryClientProvider>
@@ -253,7 +268,70 @@ export default function TrainerPreview({ scene }: { scene: "hub" | "card" | "jou
   );
 }
 
-function CardScene({ flip }: { flip: boolean }) {
+function fixtureReports(fresh: boolean): MyReports {
+  if (fresh) return { reports: [], unread: 0 };
+  const snapshot = {
+    kind: "question" as const,
+    en: "Which war did the Peace of Westphalia end in 1648?",
+    de: "Welchen Krieg beendete der Westfälische Friede 1648?",
+    answerEn: "The Thirty Years' War",
+    answerDe: "Den Dreißigjährigen Krieg",
+    timeline: null,
+    source: null,
+  };
+  const base = {
+    target: { kind: "question" as const, id: "c014-s06-q0" },
+    setId: "c014-s06",
+    category: 6,
+    language: "en" as const,
+    surface: "trainer" as const,
+    createdAt: "2026-10-04T10:00:00.000Z",
+    updatedAt: "2026-10-04T10:00:00.000Z",
+    snapshot,
+  };
+  return {
+    unread: 1,
+    reports: [
+      {
+        ...base,
+        id: 3,
+        issue: "wrong-date",
+        message: "The treaty was signed on 24 October 1648, the card says 1649.",
+        status: "fixed",
+        resolutionNote: "Corrected to 24 October 1648 — thanks for spotting it!",
+        resolvedAt: "2026-10-06T18:00:00.000Z",
+        unread: true,
+      },
+      {
+        ...base,
+        id: 2,
+        target: { kind: "article", id: "c001-s01" },
+        setId: "c001-s01",
+        category: 1,
+        issue: "typo",
+        message: "“Brect” in the second paragraph.",
+        status: "open",
+        resolutionNote: null,
+        resolvedAt: null,
+        unread: false,
+        snapshot: { kind: "article", titleEn: "Bertolt Brecht", titleDe: "Bertolt Brecht" },
+      },
+      {
+        ...base,
+        id: 1,
+        issue: "translation",
+        language: "de",
+        message: null,
+        status: "declined",
+        resolutionNote: "Both versions say the same thing — the German is just shorter.",
+        resolvedAt: "2026-10-05T09:00:00.000Z",
+        unread: false,
+      },
+    ],
+  };
+}
+
+function CardScene({ flip, report }: { flip: boolean; report: boolean }) {
   const cardQuery = useCardQuestions("c001");
   const [revealed, setRevealed] = useState(false);
   useEffect(() => {
@@ -288,6 +366,19 @@ function CardScene({ flip }: { flip: boolean }) {
             articleHref={`${BASE}/wiki`}
             timelineHref={`${BASE}/timeline`}
             onReveal={() => setRevealed(true)}
+          />
+        )}
+        {found && report && (
+          <ReportDialog
+            context={{
+              target: { kind: "question", id: "c001-s01-q0" },
+              title: found.question.en,
+              category: 1,
+              surface: "trainer",
+              hideSpoilers: !revealed,
+              language: "en",
+            }}
+            onClose={() => {}}
           />
         )}
       </PageMain>

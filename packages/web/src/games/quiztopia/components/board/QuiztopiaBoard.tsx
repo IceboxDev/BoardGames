@@ -10,7 +10,7 @@ import GameScreen from "../../../../components/game-layout/GameScreen";
 import { PromptRow } from "../../../../components/game-layout/PromptRow";
 import { Button, Kbd } from "../../../../components/ui";
 import { districtByIndex } from "../../bands";
-import { isPlainKey, isTypingTarget } from "../../keys";
+import { isScreenShortcut } from "../../keys";
 import { type BoardLanguage, cycleLanguage } from "../../logic/copy";
 import { findLegal, hasLegal, legalOfKind } from "../../logic/legal";
 import { type SeatNames, seatLabel, seatName } from "../../logic/seats";
@@ -199,7 +199,7 @@ export default function QuiztopiaBoard({ view, legalActions, seatNames, send }: 
 
   // ── Keyboard ────────────────────────────────────────────────────────────
   const keyHandler = (e: KeyboardEvent) => {
-    if (!isPlainKey(e) || isTypingTarget(e.target)) return;
+    if (!isScreenShortcut(e)) return;
     const key = e.key.toLowerCase();
     if (key === "escape" && helpDialog) {
       e.preventDefault();

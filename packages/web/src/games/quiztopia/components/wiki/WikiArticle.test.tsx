@@ -127,6 +127,7 @@ vi.mock("../../hooks/useContent", () => ({
 const postWikiReadMock = vi.fn();
 const deleteWikiReadMock = vi.fn(async (_body: { setId: string }) => ({ reads: [] }));
 vi.mock("../../api", () => ({
+  myReportsQuery: () => async () => ({ reports: [], unread: 0 }),
   statesQuery: () => async () => ({ states: [] }),
   wikiReadsQuery: () => async () => ({ reads: [] }),
   pinsQuery: () => async () => ({

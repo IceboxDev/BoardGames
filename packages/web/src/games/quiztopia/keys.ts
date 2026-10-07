@@ -19,6 +19,29 @@ export function isPlainKey(e: KeyboardEvent): boolean {
   return !e.metaKey && !e.ctrlKey && !e.altKey;
 }
 
+/**
+ * Marks an overlay whose keys must never reach the screen behind it — the
+ * report form: Space or Enter on its buttons, 1/2 or Esc must not reveal,
+ * grade or leave the study card underneath. Opt-in rather than "any modal",
+ * because some modal sheets (the timeline's phone inspector) belong to the
+ * screen and rely on its arrow keys.
+ */
+export const CAPTURES_KEYS_ATTR = "data-captures-keys";
+
+export function keysCaptured(): boolean {
+  return (
+    typeof document !== "undefined" && document.querySelector(`[${CAPTURES_KEYS_ATTR}]`) !== null
+  );
+}
+
+/**
+ * Should a screen-level shortcut handle this key? Only a plain press, not
+ * typed into a field, and not while an overlay captures the keys.
+ */
+export function isScreenShortcut(e: KeyboardEvent): boolean {
+  return isPlainKey(e) && !isTypingTarget(e.target) && !keysCaptured();
+}
+
 /** Weekday + short date for a `YYYY-MM-DD` key, in the viewer's locale. */
 export function weekdayName(dateKey: string, style: "long" | "short" = "long"): string {
   const [y, m, d] = dateKey.split("-").map((s) => Number.parseInt(s, 10));

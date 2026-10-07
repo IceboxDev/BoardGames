@@ -6,6 +6,7 @@ import WikiArticle from "../wiki/WikiArticle";
 import WikiCategory from "../wiki/WikiCategory";
 import WikiIndex from "../wiki/WikiIndex";
 import WikiJournal from "../wiki/WikiJournal";
+import WikiReports from "../wiki/WikiReports";
 import WikiSearch from "../wiki/WikiSearch";
 import StudySession from "./StudySession";
 import TrainerHub from "./TrainerHub";
@@ -19,6 +20,7 @@ import TrainerHub from "./TrainerHub";
 //   wiki                       — the archive's districts
 //   wiki/search?q=             — full-text search
 //   wiki/journal               — every day's studied questions and reads
+//   wiki/reports               — your content reports and their outcomes
 //   wiki/:category             — one district's articles
 //   wiki/:category/:cardId     — one article, answers highlighted
 //
@@ -36,6 +38,7 @@ export default function TrainerRoutes() {
       <Route path="wiki" element={<WikiIndex />} />
       <Route path="wiki/search" element={<WikiSearch />} />
       <Route path="wiki/journal" element={<WikiJournal />} />
+      <Route path="wiki/reports" element={<WikiReports />} />
       <Route path="wiki/:category" element={<WikiCategory />} />
       <Route path="wiki/:category/:cardId" element={<WikiArticle />} />
       <Route path="*" element={<FallbackToHub />} />

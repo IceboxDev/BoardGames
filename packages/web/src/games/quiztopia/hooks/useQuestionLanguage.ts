@@ -1,6 +1,6 @@
 import type { QuiztopiaLanguage } from "@boardgames/core/protocol";
 import { useCallback, useEffect, useState } from "react";
-import { isPlainKey, isTypingTarget } from "../keys";
+import { isScreenShortcut } from "../keys";
 import { useQuiztopiaSettings } from "./useQuiztopiaSettings";
 
 // The language a screen shows questions in: seeded from the trainer setting,
@@ -50,7 +50,7 @@ export function useQuestionLanguage<TBoth extends boolean = true>(options: Optio
   useEffect(() => {
     if (!keyboard) return;
     const onKey = (e: KeyboardEvent) => {
-      if (!isPlainKey(e) || isTypingTarget(e.target)) return;
+      if (!isScreenShortcut(e)) return;
       if (e.key === "l" || e.key === "L") {
         e.preventDefault();
         cycleLanguage();

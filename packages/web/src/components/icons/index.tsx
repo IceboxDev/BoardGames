@@ -132,6 +132,22 @@ export function PinIcon({ className = "h-3.5 w-3.5" }: IconProps) {
   );
 }
 
+/** A pennant on a pole — "report a problem". */
+export function FlagIcon({ className = "h-3.5 w-3.5" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className={className}
+      strokeWidth={1.6}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M3.5 14.5V2" />
+      <path d="M3.5 2.5h8l-1.8 3 1.8 3h-8" />
+    </svg>
+  );
+}
+
 export function HostIcon({ className = "h-3.5 w-3.5" }: IconProps) {
   return (
     <svg

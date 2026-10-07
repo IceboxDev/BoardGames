@@ -63,6 +63,7 @@ const journalMock = vi.fn();
 const navigate = vi.fn();
 
 vi.mock("../../api", () => ({
+  myReportsQuery: () => async () => ({ reports: [], unread: 0 }),
   todayKey: () => TODAY,
   settingsQuery: () => async () => DEFAULT_QUIZTOPIA_SETTINGS,
   putSettings: async () => DEFAULT_QUIZTOPIA_SETTINGS,

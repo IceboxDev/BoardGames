@@ -8,7 +8,7 @@ import { postWikiRead } from "../../api";
 import { districtByN, TONE_STRIP } from "../../bands";
 import { findArticle } from "../../content";
 import { useCardArticles, useCardQuestions } from "../../hooks/useContent";
-import { isPlainKey, isTypingTarget } from "../../keys";
+import { isScreenShortcut } from "../../keys";
 import { ArticleBody } from "../wiki/ArticleBody";
 import { segmentArticle } from "../wiki/article-segments";
 
@@ -73,7 +73,7 @@ export function NewArticlesIntro({ sets, index, language, cardCount, onNext, onS
   nextRef.current = next;
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (!isPlainKey(e) || isTypingTarget(e.target)) return;
+      if (!isScreenShortcut(e)) return;
       if (e.key === "Enter" || e.key === "ArrowRight") {
         e.preventDefault();
         nextRef.current();

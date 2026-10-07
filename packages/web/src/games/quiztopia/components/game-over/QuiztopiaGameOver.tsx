@@ -22,6 +22,7 @@ import { type BoardLanguage, deckLabel, wikiPathFor } from "../../logic/copy";
 import { type SeatNames, seatName } from "../../logic/seats";
 import { TRAINER_BASE, trainerPaths } from "../../paths";
 import { Skyline } from "../common/Skyline";
+import { ReportButton } from "../report/ReportButton";
 
 // The end of a co-op room. The city as it ended, the numbers, every question
 // that was asked (with a wiki link for the real ones), and the bridge into
@@ -265,6 +266,17 @@ export default function QuiztopiaGameOver({
                           <span className="ml-auto text-2xs text-fg-muted">
                             {seatName(seatNames, e.activeSeat)}
                           </span>
+                          {isReal(e) && (
+                            <ReportButton
+                              context={{
+                                target: { kind: "question", id: e.questionId },
+                                title: primary === "de" ? e.de : e.en,
+                                category: e.categoryIndex + 1,
+                                surface: "game",
+                                language: lang,
+                              }}
+                            />
+                          )}
                         </div>
                         <p className="text-sm text-fg-primary">{primary === "de" ? e.de : e.en}</p>
                         {e.correct !== null && (

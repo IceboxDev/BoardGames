@@ -67,6 +67,12 @@ const TrainerResetSchema = z.object({
   reads: z.number().int().nonnegative().optional(),
 });
 
+/** A content report: what was flagged and why (ids, not text — the admin queue has the rest). */
+const QuiztopiaReportSchema = z.object({
+  targetId: z.string(),
+  issue: z.string(),
+});
+
 export const ActivityMetaSchemas = {
   // ── Sessions ──
   login: z.object({}),
@@ -210,6 +216,7 @@ export const ActivityMetaSchemas = {
   "quiztopia-train": TrainDaySchema,
   "quiztopia-settings": TrainerSettingsSchema,
   "quiztopia-reset": TrainerResetSchema,
+  "quiztopia-report": QuiztopiaReportSchema,
   "geography-train": TrainDaySchema,
   "geography-settings": TrainerSettingsSchema,
   "geography-reset": TrainerResetSchema,

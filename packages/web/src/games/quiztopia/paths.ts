@@ -33,6 +33,8 @@ export interface TrainerPaths {
   search: (q?: string) => string;
   /** The journal: every day's studied questions and read articles. */
   journal: string;
+  /** The member's own content reports and their outcomes. */
+  reports: string;
   /** The personal timeline; `q` focuses one pinned question. */
   timeline: (q?: string) => string;
 }
@@ -55,6 +57,7 @@ export function trainerPaths(base: string): TrainerPaths {
       `${base}/wiki/${slug}/${cardId}${q === undefined ? "" : `#q${q + 1}`}`,
     search: (q) => `${base}/wiki/search${q ? `?q=${encodeURIComponent(q)}` : ""}`,
     journal: `${base}/wiki/journal`,
+    reports: `${base}/wiki/reports`,
     timeline: (q) => `${base}/timeline${q ? `?q=${encodeURIComponent(q)}` : ""}`,
   };
 }

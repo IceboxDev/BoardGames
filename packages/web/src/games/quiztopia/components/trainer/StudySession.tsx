@@ -18,7 +18,7 @@ import { useTitles } from "../../hooks/useContent";
 import { useQuestionLanguage } from "../../hooks/useQuestionLanguage";
 import { useQuiztopiaSettings } from "../../hooks/useQuiztopiaSettings";
 import { useTrainerSession } from "../../hooks/useTrainerSession";
-import { isPlainKey, isTypingTarget } from "../../keys";
+import { isScreenShortcut } from "../../keys";
 import { useTrainerPaths } from "../../paths";
 import { BuildingGlyph } from "../common/BuildingGlyph";
 import { LanguageToggle } from "../common/LanguageToggle";
@@ -92,7 +92,7 @@ export default function StudySession() {
   const { revealed, reveal, grade, undo, canUndo, complete, status } = session;
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
-      if (!isPlainKey(e) || isTypingTarget(e.target)) return;
+      if (!isScreenShortcut(e)) return;
       if (reading && e.key !== "Escape") return;
       if (e.key === "Escape") {
         e.preventDefault();
