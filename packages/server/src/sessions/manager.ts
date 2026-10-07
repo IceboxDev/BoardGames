@@ -141,6 +141,32 @@ async function persistMatch(
   return id;
 }
 
+/**
+ * The game's own follow-up once it is over (`ServerGame.afterGameOver`).
+ * Isolated: a failure is logged and never reaches the session or the players.
+ */
+async function runAfterGameOver(
+  active: ActiveSession,
+  snapshot: ReturnType<AnyActorRef["getSnapshot"]>,
+): Promise<void> {
+  const hook = getServerGame(active.gameSlug)?.afterGameOver;
+  if (!hook) return;
+  try {
+    await hook({
+      sessionId: active.id,
+      roomCode: active.roomCode ?? null,
+      seatUserIds: active.seats.map((seat) => (seat.kind === "human" ? seat.userId : null)),
+      replayLog: active.spec.getReplayLog(snapshot),
+      endedAt: new Date(),
+    });
+  } catch (err) {
+    console.error(`[afterGameOver] ${active.gameSlug} ${active.id} failed:`, err);
+    gameLog(active.gameSlug, active.id, "after-game-over failed", {
+      message: err instanceof Error ? err.message : String(err),
+    });
+  }
+}
+
 // ---------------------------------------------------------------------------
 // Session subscription — fan out state updates to all connected players
 // ---------------------------------------------------------------------------
@@ -204,17 +230,20 @@ function subscribeSession(active: ActiveSession): void {
           console.error(`[persistMatch] ${active.gameSlug} failed:`, err);
         }
         // Saving is a round trip to Turso. Everyone can have left meanwhile,
-        // in which case the session is already gone — nothing to send.
-        if (!sessions.has(active.id)) return;
-        sendToAllPlayers(active, (p) => ({
-          type: "game-over",
-          sessionId: active.id,
-          result: active.spec.getResult(snapshot),
-          outcome,
-          playerView: active.spec.getPlayerView(snapshot, p.playerIndex),
-          playerIndex: p.playerIndex,
-          replayId,
-        }));
+        // in which case the session is already gone — nothing to send (the
+        // game's follow-up writes still run: they don't need anyone online).
+        if (sessions.has(active.id)) {
+          sendToAllPlayers(active, (p) => ({
+            type: "game-over",
+            sessionId: active.id,
+            result: active.spec.getResult(snapshot),
+            outcome,
+            playerView: active.spec.getPlayerView(snapshot, p.playerIndex),
+            playerIndex: p.playerIndex,
+            replayId,
+          }));
+        }
+        await runAfterGameOver(active, snapshot);
       })();
       return;
     }

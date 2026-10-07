@@ -1,4 +1,5 @@
 import type { TrainerHistory } from "@boardgames/core/protocol";
+import type { ReactNode } from "react";
 import { Surface } from "../../../../components/ui";
 import { cn } from "../../../../lib/cn";
 
@@ -30,10 +31,12 @@ type Props = {
   days: TrainerHistory["days"];
   today: string;
   weeks?: number;
+  /** Facts under the grid (streak, recent totals); the legend sits beside them. */
+  footer?: ReactNode;
   className?: string;
 };
 
-export function StudyHeatmap({ days, today, weeks = HEATMAP_WEEKS, className }: Props) {
+export function StudyHeatmap({ days, today, weeks = HEATMAP_WEEKS, footer, className }: Props) {
   const columns = buildHeatmap(days, today, weeks);
   const studied = columns.reduce(
     (n, col) => n + col.cells.filter((c) => !c.future && c.count > 0).length,
@@ -48,7 +51,8 @@ export function StudyHeatmap({ days, today, weeks = HEATMAP_WEEKS, className }: 
           {studied} of the last {spanDays} days
         </span>
       </div>
-      <div className="overflow-x-auto">
+      {/* The grid centres in whatever height the row gives the card. */}
+      <div className="flex flex-1 items-center overflow-x-auto">
         <div className="inline-flex flex-col gap-1">
           <div className="flex gap-1 pl-8">
             {columns.map((col) => (
@@ -93,15 +97,15 @@ export function StudyHeatmap({ days, today, weeks = HEATMAP_WEEKS, className }: 
           </div>
         </div>
       </div>
-      <div
-        className="flex items-center justify-end gap-1 text-3xs text-fg-muted"
-        aria-hidden="true"
-      >
-        Less
-        {([0, 1, 2, 3, 4] as const).map((level) => (
-          <span key={level} className={cn("block h-2.5 w-2.5 rounded-sm", LEVEL_CLASS[level])} />
-        ))}
-        More
+      <div className="mt-auto flex flex-wrap items-end justify-between gap-3">
+        {footer}
+        <div className="ml-auto flex items-center gap-1 text-3xs text-fg-muted" aria-hidden="true">
+          Less
+          {([0, 1, 2, 3, 4] as const).map((level) => (
+            <span key={level} className={cn("block h-2.5 w-2.5 rounded-sm", LEVEL_CLASS[level])} />
+          ))}
+          More
+        </div>
       </div>
     </Surface>
   );

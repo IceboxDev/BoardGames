@@ -21,7 +21,7 @@ import {
 } from "@boardgames/core/trainers/srs";
 import { useQueryClient } from "@tanstack/react-query";
 import { useCallback, useEffect, useReducer, useRef } from "react";
-import { ApiError, SchemaError } from "../../lib/api-fetch";
+import { classifySendFailure } from "../../lib/review-outbox";
 import { submitReview } from "./api";
 import type { LonLat } from "./globe/geo";
 import { useGeoOfflineQueue } from "./offline-queue";
@@ -304,6 +304,7 @@ export function useGeoSession(opts: {
     initialState(catalog, overview, spec, today, seedKey),
   );
   const offline = useGeoOfflineQueue();
+  const { enqueue } = offline;
   const qc = useQueryClient();
   const current = s.status === "ask" || s.status === "reveal" ? s.items[s.cursor] : undefined;
   const place = current ? catalog.byId.get(current.placeId) : undefined;
@@ -448,13 +449,12 @@ export function useGeoSession(opts: {
         },
       };
       submitReview(body).catch((err: unknown) => {
-        // A 4xx means the review itself is bad (unknown card): drop it.
-        if (err instanceof ApiError && err.status >= 400 && err.status < 500) return;
-        if (err instanceof SchemaError) return;
-        offline.enqueue(body);
+        // Only a definitive rejection (unknown card, bad payload) is dropped;
+        // an expired session, a rate limit or no network waits in the outbox.
+        if (classifySendFailure(err) === "retry") void enqueue(body);
       });
     },
-    [s, current, place, spec.kind, today, offline, catalog],
+    [s, current, place, spec.kind, today, enqueue, catalog],
   );
 
   const next = useCallback(() => dispatch({ type: "next", now: Date.now() }), []);

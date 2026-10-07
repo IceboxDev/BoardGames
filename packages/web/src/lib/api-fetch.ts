@@ -49,6 +49,11 @@ export interface ApiFetchOptions<TBody, TResp> {
   /** Required: the response is parsed through this; TResp is the output. */
   response: StandardSchemaV1<unknown, TResp>;
   signal?: AbortSignal;
+  /**
+   * Let the request outlive the page (`fetch` keepalive): for a small write
+   * sent from `pagehide` / `visibilitychange`. Bodies are capped at 64 KB.
+   */
+  keepalive?: boolean;
 }
 
 /**
@@ -64,7 +69,7 @@ export async function apiFetch<TResp, TBody = void>(
   path: string,
   opts: ApiFetchOptions<TBody, TResp>,
 ): Promise<TResp> {
-  const { method = "GET", body, request, response, signal } = opts;
+  const { method = "GET", body, request, response, signal, keepalive } = opts;
 
   if (request && body !== undefined) {
     const validated = await runStandard(request, body);
@@ -72,6 +77,7 @@ export async function apiFetch<TResp, TBody = void>(
   }
 
   const init: RequestInit = { method, credentials: "include", signal };
+  if (keepalive) init.keepalive = true;
   if (body !== undefined) {
     init.headers = { "Content-Type": "application/json" };
     init.body = JSON.stringify(body);

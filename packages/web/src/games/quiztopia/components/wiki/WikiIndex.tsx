@@ -14,20 +14,21 @@ import {
 } from "../../../../components/ui";
 import useDocumentTitle from "../../../../hooks/useDocumentTitle";
 import { qk } from "../../../../lib/query-keys";
-import { wikiReadsQuery } from "../../api";
+import { todayKey, wikiReadsQuery } from "../../api";
 import { DISTRICTS, districtByN } from "../../bands";
 import { CARD_IDS, CONTENT_INDEX } from "../../content";
-import { useTitles } from "../../hooks/useContent";
+import { useJournal } from "../../hooks/useJournal";
 import { articleLanguage } from "../../hooks/useQuestionLanguage";
 import { useQuiztopiaSettings } from "../../hooks/useQuiztopiaSettings";
-import { relativeDays } from "../../logic/time";
+import { dayLabel } from "../../logic/time";
 import { useTrainerPaths } from "../../paths";
 import { CategoryTile } from "../trainer/CategoryTile";
 import { TrainerScreen } from "../trainer/TrainerScreen";
 
-// The archive's front page: search, the twelve districts with how much of
-// each has been read, and the three most recent reads to pick up again. A
-// district lights up when every one of its articles has been read.
+// The archive's front page: search, your journal's latest day (the way back
+// to what you studied or read recently), and the twelve districts with how
+// much of each has been read. A district lights up when every one of its
+// articles has been read.
 
 export default function WikiIndex() {
   useDocumentTitle("The Archive · Quiztopia");
@@ -42,17 +43,6 @@ export default function WikiIndex() {
     queryFn: wikiReadsQuery(),
     staleTime: 60_000,
   });
-  const recent = useMemo(
-    () =>
-      [...(reads.data?.reads ?? [])]
-        .sort((a, b) => b.readAt.localeCompare(a.readAt))
-        .slice(0, 3)
-        .map((r) => ({ ...r, parsed: parseSetId(r.setId) }))
-        .filter((r) => r.parsed !== null),
-    [reads.data],
-  );
-  const titles = useTitles(recent.length > 0);
-
   const readByCategory = useMemo(() => {
     const counts = new Map<number, number>();
     for (const r of reads.data?.reads ?? []) {
@@ -98,6 +88,8 @@ export default function WikiIndex() {
           </Button>
         </form>
 
+        <JournalTeaser lang={lang} />
+
         <section aria-label="Districts" className="flex flex-col gap-3">
           <div className="flex items-baseline justify-between gap-3">
             <h2 className="text-sm font-semibold text-fg-strong">Districts</h2>
@@ -132,41 +124,80 @@ export default function WikiIndex() {
             })}
           </div>
         </section>
-
-        {recent.length > 0 && (
-          <section aria-label="Continue reading" className="flex flex-col gap-3">
-            <h2 className="text-sm font-semibold text-fg-strong">Continue reading</h2>
-            <ul className="grid gap-2 sm:grid-cols-3">
-              {recent.map((r) => {
-                if (!r.parsed) return null;
-                const d = districtByN(r.parsed.n);
-                const title = titles.data?.[r.setId]?.[lang === "de" ? 1 : 0] ?? r.setId;
-                return (
-                  <li key={r.setId}>
-                    <InteractiveCard
-                      as={Link}
-                      to={paths.wikiArticle(d.slug, r.parsed.cardId)}
-                      padding="sm"
-                      className="flex h-full flex-col gap-1"
-                    >
-                      <div className="flex items-center gap-2">
-                        <Badge tone={d.tone} size="xs">
-                          {d.label}
-                        </Badge>
-                        <MicroLabel>{r.parsed.cardId}</MicroLabel>
-                      </div>
-                      <p className="line-clamp-2 text-sm font-medium text-fg-strong">{title}</p>
-                      <p className="mt-auto text-2xs text-fg-muted">
-                        read {relativeDays(r.readAt)}
-                      </p>
-                    </InteractiveCard>
-                  </li>
-                );
-              })}
-            </ul>
-          </section>
-        )}
       </PageMain>
     </TrainerScreen>
+  );
+}
+
+/** The latest day of the journal, its articles as tiles, and the way in. */
+function JournalTeaser({ lang }: { lang: "en" | "de" }) {
+  const navigate = useNavigate();
+  const paths = useTrainerPaths();
+  const journal = useJournal();
+  const today = useMemo(() => todayKey(), []);
+  const latest = journal.days[0];
+  return (
+    <section aria-label="Your journal" className="flex flex-col gap-3">
+      <div className="flex items-baseline justify-between gap-3">
+        <h2 className="text-sm font-semibold text-fg-strong">Your journal</h2>
+        <Button variant="link" size="sm" onClick={() => navigate(paths.journal)}>
+          Open your journal →
+        </Button>
+      </div>
+      {latest ? (
+        <>
+          <MicroLabel>
+            {dayLabel(latest.date, today)} · {latest.sets.length}{" "}
+            {latest.sets.length === 1 ? "article" : "articles"}
+          </MicroLabel>
+          <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-4">
+            {latest.sets.slice(0, 4).map((set) => {
+              const d = districtByN(set.category);
+              const cardId = parseSetId(set.setId)?.cardId ?? "";
+              const missed = set.questions.filter((q) => q.grades.includes("again")).length;
+              return (
+                <li key={set.setId}>
+                  <InteractiveCard
+                    as={Link}
+                    to={paths.wikiArticle(d.slug, cardId)}
+                    padding="sm"
+                    className="flex h-full flex-col gap-1"
+                  >
+                    <Badge tone={d.tone} size="xs" className="self-start">
+                      {d.label} · {lang === "de" ? d.de : d.en}
+                    </Badge>
+                    <p className="line-clamp-2 text-sm font-medium text-fg-strong">
+                      {lang === "de" ? set.titleDe : set.titleEn}
+                    </p>
+                    <p className="mt-auto text-2xs text-fg-muted">
+                      {[
+                        set.questions.length > 0
+                          ? `${set.questions.length} question${set.questions.length === 1 ? "" : "s"}`
+                          : null,
+                        missed > 0 ? `${missed} missed` : null,
+                        set.readAt ? "read" : null,
+                      ]
+                        .filter(Boolean)
+                        .join(" · ")}
+                    </p>
+                  </InteractiveCard>
+                </li>
+              );
+            })}
+          </ul>
+          {latest.sets.length > 4 && (
+            <p className="text-2xs text-fg-muted">
+              …and {latest.sets.length - 4} more — open your journal for the whole day.
+            </p>
+          )}
+        </>
+      ) : (
+        <p className="text-xs text-fg-muted">
+          {journal.isPending
+            ? "Opening your journal…"
+            : "Every question you study and article you read is kept here, day by day."}
+        </p>
+      )}
+    </section>
   );
 }

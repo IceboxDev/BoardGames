@@ -2,15 +2,14 @@ import { daysBetween } from "@boardgames/core/games/quiztopia/srs";
 import type { CategoryOverview, TrainerHistory } from "@boardgames/core/protocol";
 import { useMemo, useState } from "react";
 import { MicroLabel, SegmentedControl, Surface } from "../../../../components/ui";
-import { BarChartH, LineChart } from "../../../../components/ui/charts";
+import { LineChart } from "../../../../components/ui/charts";
 import { cn } from "../../../../lib/cn";
-import { districtByN } from "../../bands";
 import { formatHeatDate } from "./heatmap";
 
-// The hub's second chart panel: one line over the study days (accuracy,
-// review count or new cards learned — the viewer picks) and the twelve
-// districts' mastery as horizontal bars, so a weak district is visible at
-// a glance next to the city that shows only "due or not".
+// The hub's progress panel: one line over the study days (accuracy, review
+// count or new cards learned — the viewer picks) and, under it, the whole
+// city in three counts — seen, learned, mastered — as one stacked bar.
+// Per-district progress lives on the district tiles themselves.
 
 type Metric = "accuracy" | "reviews" | "learned";
 
@@ -43,7 +42,7 @@ type Props = {
   className?: string;
 };
 
-export function RetentionPanel({ days, categories, className }: Props) {
+export function ProgressPanel({ days, categories, className }: Props) {
   const [metric, setMetric] = useState<Metric>("accuracy");
 
   const data = useMemo(() => {
@@ -64,17 +63,19 @@ export function RetentionPanel({ days, categories, className }: Props) {
     return points;
   }, [days, metric]);
 
-  const bars = useMemo(
-    () =>
-      categories.map((c) => {
-        const d = districtByN(c.n);
-        return {
-          label: d.label,
-          segments: [{ value: Math.round(c.mastery * 100), tone: d.tone, label: d.en }],
-        };
-      }),
-    [categories],
-  );
+  const city = useMemo(() => {
+    let seen = 0;
+    let learned = 0;
+    let mastered = 0;
+    let total = 0;
+    for (const c of categories) {
+      seen += c.seen;
+      learned += c.known;
+      mastered += c.mature;
+      total += c.total;
+    }
+    return { seen, learned, mastered, total };
+  }, [categories]);
 
   return (
     <Surface variant="raised" padding="lg" className={cn("flex flex-col gap-4", className)}>
@@ -101,10 +102,66 @@ export function RetentionPanel({ days, categories, className }: Props) {
         }
         formatY={metric === "accuracy" ? percent : undefined}
       />
-      <div className="flex flex-col gap-2 border-t border-line-soft pt-3">
-        <MicroLabel>Mastery by district</MicroLabel>
-        <BarChartH bars={bars} maxValue={100} formatValue={(v) => `${Math.round(v)}%`} />
-      </div>
+      <CityTotals {...city} />
     </Surface>
+  );
+}
+
+const TOTALS = [
+  {
+    key: "mastered",
+    label: "Mastered",
+    title: `Known with a gap of three weeks or more`,
+    dot: "bg-emerald-400",
+  },
+  { key: "learned", label: "Learned", title: "Graduated to review", dot: "bg-emerald-400/50" },
+  { key: "seen", label: "Seen", title: "Studied at least once", dot: "bg-fg-muted/40" },
+] as const;
+
+/** The whole city in three nested counts: mastered ⊂ learned ⊂ seen, of every question. */
+function CityTotals(props: { seen: number; learned: number; mastered: number; total: number }) {
+  const { seen, learned, mastered, total } = props;
+  const pct = (n: number) => (total > 0 ? (n / total) * 100 : 0);
+  return (
+    <div className="flex flex-col gap-2 border-t border-line-soft pt-3">
+      <div className="flex items-baseline justify-between gap-3">
+        <MicroLabel>Your city so far</MicroLabel>
+        <span className="text-2xs tabular-nums text-fg-muted">
+          {total.toLocaleString()} questions
+        </span>
+      </div>
+      {/* Nested, not stacked: each layer starts at zero, so the bar reads
+          as "how far each has got" with mastered in front. */}
+      <div
+        className="relative h-2.5 w-full overflow-hidden rounded-full bg-fill"
+        aria-hidden="true"
+      >
+        <span
+          className="absolute inset-y-0 left-0 bg-fg-muted/40"
+          style={{ width: `${pct(seen)}%` }}
+        />
+        <span
+          className="absolute inset-y-0 left-0 bg-emerald-400/50"
+          style={{ width: `${pct(learned)}%` }}
+        />
+        <span
+          className="absolute inset-y-0 left-0 bg-emerald-400"
+          style={{ width: `${pct(mastered)}%` }}
+        />
+      </div>
+      <dl className="grid grid-cols-3 gap-2">
+        {TOTALS.map((t) => (
+          <div key={t.key} className="flex flex-col" title={t.title}>
+            <dt className="flex items-center gap-1.5 text-2xs text-fg-muted">
+              <span className={cn("h-2 w-2 rounded-full", t.dot)} aria-hidden="true" />
+              {t.label}
+            </dt>
+            <dd className="text-lg font-semibold tabular-nums text-fg-strong">
+              {props[t.key].toLocaleString()}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </div>
   );
 }

@@ -5,7 +5,7 @@ import {
   type QuiztopiaPlayerView,
   type QuiztopiaResult,
 } from "@boardgames/core/games/quiztopia/types";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useMemo, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { GameOverLayout, GameOverStats, StatItem } from "../../../../components/game-over";
 import {
@@ -17,32 +17,28 @@ import {
   Surface,
 } from "../../../../components/ui";
 import { cn } from "../../../../lib/cn";
-import { submitReviewsBulk, todayKey } from "../../api";
 import { districtByIndex } from "../../bands";
 import { type BoardLanguage, deckLabel, wikiPathFor } from "../../logic/copy";
 import { type SeatNames, seatName } from "../../logic/seats";
-import { trainerPaths } from "../../paths";
+import { TRAINER_BASE, trainerPaths } from "../../paths";
 import { Skyline } from "../common/Skyline";
 
 // The end of a co-op room. The city as it ended, the numbers, every question
 // that was asked (with a wiki link for the real ones), and the bridge into
-// the trainer: the misses become a practice session, and every judged
-// question is posted as a `source: "game"` review — once per client, keyed
-// by room + turn so a reconnect or a second tab can't double-count.
+// the trainer: the misses become a practice session. The judged questions
+// reach each member's trainer without this screen: the server records them
+// as `source: "game"` reviews at game over (`lib/quiztopia/game-reviews.ts`).
 
 type Props = {
   result: QuiztopiaResult;
   /** The last board view — null when only the result frame arrived. */
   view: QuiztopiaPlayerView | null;
   seatNames: SeatNames;
-  roomCode: string | null;
   onBackToMenu: () => void;
   onOpenTrainer: () => void;
   /** Release the room before an in-app navigation away from the game. */
   onLeave?: () => void;
 };
-
-const SOLO_BASE = "/play/quiztopia/solo";
 
 function headlineFor(result: QuiztopiaResult): {
   text: string;
@@ -68,7 +64,6 @@ export default function QuiztopiaGameOver({
   result,
   view,
   seatNames,
-  roomCode,
   onBackToMenu,
   onOpenTrainer,
   onLeave,
@@ -119,26 +114,6 @@ export default function QuiztopiaGameOver({
     .map((c, i) => ({ district: districtByIndex(i), ...c }))
     .filter((c) => c.asked > 0);
 
-  // Post the game's judged questions as reviews, once. Idempotent server-side
-  // on clientId, but the guard keeps a re-render from firing a second call.
-  const posted = useRef(false);
-  useEffect(() => {
-    if (posted.current || !roomCode) return;
-    const reviews = judged.filter(isReal).map((e) => ({
-      clientId: `game:${roomCode}:${e.turn}`,
-      questionId: e.questionId,
-      grade: e.correct ? ("good" as const) : ("again" as const),
-      localDate: todayKey(),
-      source: "game" as const,
-      roomCode,
-    }));
-    if (reviews.length === 0) return;
-    posted.current = true;
-    submitReviewsBulk({ reviews }).catch(() => {
-      // Best effort: the trainer will pick these up from the replay later.
-    });
-  }, [judged, roomCode]);
-
   const subtitle = `${result.difficultyLabel} · ${result.expert ? "Expert" : "Standard"} · ${result.won} won · ${result.lost} lost · ${result.questionsAsked} ${result.questionsAsked === 1 ? "question" : "questions"}`;
 
   return (
@@ -185,7 +160,7 @@ export default function QuiztopiaGameOver({
                 size="sm"
                 onClick={() => {
                   onLeave?.();
-                  navigate(trainerPaths(SOLO_BASE).study({ ids: missIds }));
+                  navigate(trainerPaths(TRAINER_BASE).study({ ids: missIds }));
                 }}
               >
                 Practice {missIds.length} {missIds.length === 1 ? "miss" : "misses"}

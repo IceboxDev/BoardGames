@@ -15,6 +15,7 @@ import { createRng } from "@boardgames/core/lib/rng";
 import QuiztopiaBoard from "../games/quiztopia/components/board/QuiztopiaBoard";
 import QuiztopiaGameOver from "../games/quiztopia/components/game-over/QuiztopiaGameOver";
 import TimelinePreview from "../games/quiztopia/components/timeline/TimelinePreview";
+import TrainerPreview from "../games/quiztopia/components/trainer/TrainerPreview";
 
 // Dev-only Quiztopia preview — the real board / game-over screen fed a
 // state built by walking the actual engine through a scripted game (the
@@ -23,7 +24,10 @@ import TimelinePreview from "../games/quiztopia/components/timeline/TimelinePrev
 //   /dev/quiztopia-preview?scene=<name>&seat=<n>&frame=WxH
 // Scenes: board | reader | judge | expert | plenum | bakery | besetzung |
 //         gameover | gameover-loss | timeline (the trainer's personal
-//         timeline over a 40-moment fixture; `&q=<id>` focuses, `&empty=1`)
+//         timeline over a 40-moment fixture; `&q=<id>` focuses, `&empty=1`) |
+//         hub (the trainer hub over fixture data; `&fresh=1`) |
+//         journal (the journal over fixture days; `&fresh=1` = empty) |
+//         card (the study card; `&revealed=1` flips it after mount)
 
 const NAMES = ["Mantas", "Anna", "Lena"];
 const SOURCE = createFixtureQuestionSource(30);
@@ -175,6 +179,9 @@ export default function QuiztopiaPreview() {
 
   const sceneName = params.get("scene") ?? "board";
   if (sceneName === "timeline") return <TimelinePreview />;
+  if (sceneName === "hub" || sceneName === "card" || sceneName === "journal") {
+    return <TrainerPreview scene={sceneName} />;
+  }
   const scene = SCENES[sceneName] ?? (SCENES.board as Scene);
   const gs = scene.build();
   const seatParam = params.get("seat");
@@ -194,7 +201,6 @@ export default function QuiztopiaPreview() {
           result={toResult(gs)}
           view={view}
           seatNames={NAMES}
-          roomCode={null}
           onBackToMenu={() => {}}
           onOpenTrainer={() => {}}
         />

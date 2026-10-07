@@ -1,10 +1,11 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import { useOfflineReviewQueue } from "../../hooks/useOfflineReviewQueue";
 import { useTrainerPaths } from "../../paths";
+import { useQuiztopiaOutbox } from "../../review-outbox";
 import TimelinePage from "../timeline/TimelinePage";
 import WikiArticle from "../wiki/WikiArticle";
 import WikiCategory from "../wiki/WikiCategory";
 import WikiIndex from "../wiki/WikiIndex";
+import WikiJournal from "../wiki/WikiJournal";
 import WikiSearch from "../wiki/WikiSearch";
 import StudySession from "./StudySession";
 import TrainerHub from "./TrainerHub";
@@ -17,14 +18,16 @@ import TrainerHub from "./TrainerHub";
 //   timeline?q=                — the personal timeline of every studied question
 //   wiki                       — the archive's districts
 //   wiki/search?q=             — full-text search
+//   wiki/journal               — every day's studied questions and reads
 //   wiki/:category             — one district's articles
 //   wiki/:category/:cardId     — one article, answers highlighted
 //
-// Reviews that failed to reach the server while studying are replayed here
-// on mount and whenever the browser comes back online.
+// Reviews that failed to reach the server while studying are replayed while
+// any trainer screen is open: on mount, on reconnect, when the tab becomes
+// visible again and on a backoff timer (`review-outbox.ts`).
 
 export default function TrainerRoutes() {
-  useOfflineReviewQueue();
+  useQuiztopiaOutbox();
   return (
     <Routes>
       <Route index element={<TrainerHub />} />
@@ -32,6 +35,7 @@ export default function TrainerRoutes() {
       <Route path="timeline" element={<TimelinePage />} />
       <Route path="wiki" element={<WikiIndex />} />
       <Route path="wiki/search" element={<WikiSearch />} />
+      <Route path="wiki/journal" element={<WikiJournal />} />
       <Route path="wiki/:category" element={<WikiCategory />} />
       <Route path="wiki/:category/:cardId" element={<WikiArticle />} />
       <Route path="*" element={<FallbackToHub />} />

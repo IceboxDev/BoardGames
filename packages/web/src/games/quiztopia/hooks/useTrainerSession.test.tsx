@@ -1,14 +1,17 @@
 import type { CardQuestions } from "@boardgames/core/games/quiztopia/content-types";
-import { addDays } from "@boardgames/core/games/quiztopia/srs";
+import { addDays, newState } from "@boardgames/core/games/quiztopia/srs";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { act, renderHook, waitFor } from "@testing-library/react";
 import type { ReactNode } from "react";
-import { beforeEach, describe, expect, it, vi } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { ApiError } from "../../../lib/api-fetch";
 
 // The session owns its queue: a grade applies `applyReview` locally at once
 // (the server's reply only reconciles), an "again" card comes back a few
-// positions later, and undo puts everything back. Offline, the review is
-// queued instead of lost.
+// positions later, and undo puts everything back. The latest grade is held
+// back until the next one (or the tab hiding / the screen closing), so undo
+// never reaches the server. A send that fails for a retryable reason is
+// queued in the outbox instead of lost.
 
 const TODAY = "2026-09-24";
 
@@ -74,33 +77,33 @@ const QUEUE = {
 
 const submitReviewMock = vi.fn();
 const enqueueMock = vi.fn();
+const loadQuestionsMock = vi.fn();
 
 vi.mock("../api", () => ({
   todayKey: () => TODAY,
   queueQuery: () => async () => QUEUE,
   statesQuery: () => async () => ({ states: [] }),
-  submitReview: (body: unknown) => submitReviewMock(body),
+  submitReview: (body: unknown, opts: unknown) => submitReviewMock(body, opts),
 }));
 
+// The real content cache (React Query) over stubbed chunk loaders: the hook
+// reads the shown card from that cache at event time.
 vi.mock("../content", async (importOriginal) => {
   const mod = await importOriginal<typeof import("../content")>();
   return {
     ...mod,
-    preloadQuestions: vi.fn(),
-    preloadArticles: vi.fn(),
+    loadQuestions: (cardId: string) => loadQuestionsMock(cardId),
+    loadArticles: () => new Promise(() => {}),
   };
 });
 
-vi.mock("./useContent", () => ({
-  useCardQuestions: (cardId: string | null) => ({
-    data: cardId ? card(cardId) : undefined,
-    isPending: !cardId,
+vi.mock("../review-outbox", () => ({
+  useQuiztopiaOutbox: () => ({
+    enqueue: enqueueMock,
+    flush: vi.fn(),
+    pendingCount: 0,
+    rejectedCount: 0,
   }),
-  useCardArticles: () => ({ data: undefined, isPending: true }),
-}));
-
-vi.mock("./useOfflineReviewQueue", () => ({
-  useOfflineReviewQueue: () => ({ enqueue: enqueueMock, flush: vi.fn(), pendingCount: 0 }),
 }));
 
 import {
@@ -132,6 +135,13 @@ beforeEach(() => {
   submitReviewMock.mockReset();
   submitReviewMock.mockResolvedValue({ ok: true, existed: false, applied: true, state: null });
   enqueueMock.mockReset();
+  enqueueMock.mockResolvedValue(undefined);
+  loadQuestionsMock.mockReset();
+  loadQuestionsMock.mockImplementation(async (cardId: string) => card(cardId));
+});
+
+afterEach(() => {
+  Reflect.deleteProperty(document, "visibilityState");
 });
 
 describe("sessionReducer", () => {
@@ -205,6 +215,13 @@ describe("sessionReducer", () => {
     expect(undone.revealed).toBe(true);
   });
 
+  it("undo refuses a grade that has already been committed", () => {
+    const graded = grade(ready(3), "good", "a");
+    const committed = sessionReducer(graded, { type: "committed", clientId: "client-a" });
+    expect(committed.reviews[0].committed).toBe(true);
+    expect(sessionReducer(committed, { type: "undo", now: 3000 })).toBe(committed);
+  });
+
   it("reconcile adopts the server state only for the latest review of the card", () => {
     const s = grade(ready(3), "good", "a");
     const prev = s.states["c001-s01-q0"];
@@ -226,7 +243,7 @@ describe("sessionReducer", () => {
     expect(stale).toBe(s);
   });
 
-  it("extend appends only cards not already ahead of the cursor", () => {
+  it("extend appends only cards not ahead of the cursor and not already graded past today", () => {
     const s = grade(ready(2), "good");
     const extended = sessionReducer(s, {
       type: "extend",
@@ -234,20 +251,39 @@ describe("sessionReducer", () => {
       states: {},
       now: 4000,
     });
-    // c002 is still pending and is skipped; c001 was graded (behind the
-    // cursor) so a fresh queue may legitimately bring it back.
-    expect(extended.items.map((i) => i.cardId)).toEqual(["c001", "c002", "c001", "c003"]);
+    // c002 is still pending; c001 was graded "good" in this sitting (due
+    // tomorrow locally) — a fresh queue that still lists it, because the
+    // grade hasn't reached the server yet, must not deal it again.
+    expect(extended.items.map((i) => i.cardId)).toEqual(["c001", "c002", "c003"]);
+  });
+
+  it("extend may bring back a card behind the cursor that is due again today", () => {
+    // c001 is behind the cursor with a schedule due today (e.g. a relearning
+    // step): a fresh queue that lists it deals it again.
+    const s = {
+      ...ready(1),
+      cursor: 1,
+      states: { "c001-s01-q0": newState("c001-s01-q0", TODAY) },
+    };
+    const extended = sessionReducer(s, { type: "extend", items: items(2), states: {}, now: 4000 });
+    expect(extended.items.map((i) => i.cardId)).toEqual(["c001", "c001", "c002"]);
   });
 });
 
 describe("useTrainerSession", () => {
-  it("loads the queue, grades optimistically and posts the review", async () => {
-    const { result } = renderHook(() => useTrainerSession({ kind: "due", category: null }), {
-      wrapper: withClient(),
-    });
-    await waitFor(() => expect(result.current.status).toBe("ready"));
+  async function started(
+    spec: Parameters<typeof useTrainerSession>[0] = { kind: "due", category: null },
+  ) {
+    const hook = renderHook(() => useTrainerSession(spec), { wrapper: withClient() });
+    await waitFor(() => expect(hook.result.current.status).toBe("ready"));
+    await waitFor(() => expect(hook.result.current.current).not.toBeNull());
+    return hook;
+  }
+
+  it("grades optimistically and holds the latest grade back until the next", async () => {
+    const { result } = await started();
     expect(result.current.progress).toEqual({ done: 3, total: 5, inSession: 0 });
-    await waitFor(() => expect(result.current.current?.question.id).toBe("c001-s01-q0"));
+    expect(result.current.current?.question.id).toBe("c001-s01-q0");
 
     act(() => result.current.reveal());
     expect(result.current.revealed).toBe(true);
@@ -258,43 +294,134 @@ describe("useTrainerSession", () => {
       state: "learning",
       dueDate: addDays(TODAY, 1),
     });
+    expect(result.current.canUndo).toBe(true);
+    expect(submitReviewMock).not.toHaveBeenCalled();
+
+    // The next grade sends the previous one.
+    await waitFor(() => expect(result.current.current?.question.id).toBe("c002-s05-q0"));
+    act(() => result.current.reveal());
+    act(() => result.current.grade("again"));
     expect(submitReviewMock).toHaveBeenCalledTimes(1);
     expect(submitReviewMock.mock.calls[0][0]).toMatchObject({
       questionId: "c001-s01-q0",
       grade: "good",
       localDate: TODAY,
+      reviewedAt: expect.any(String),
     });
+    expect(result.current.progress).toEqual({ done: 5, total: 6, inSession: 2 });
+    expect(result.current.summary.missed.map((m) => m.questionId)).toEqual(["c002-s05-q0"]);
+  });
 
-    // Second card: "again" brings it back at the end of this short queue.
+  it("undo takes back a grade the server never saw, and only that one", async () => {
+    const { result } = await started();
+    act(() => result.current.reveal());
+    act(() => result.current.grade("good"));
+    await waitFor(() => expect(result.current.current?.question.id).toBe("c002-s05-q0"));
     act(() => result.current.reveal());
     act(() => result.current.grade("again"));
-    expect(result.current.progress).toEqual({ done: 5, total: 6, inSession: 2 });
-    expect(result.current.item?.questionId).toBe("c002-s05-q0");
-    expect(result.current.summary.missed.map((m) => m.questionId)).toEqual(["c002-s05-q0"]);
 
     act(() => result.current.undo());
     expect(result.current.progress).toEqual({ done: 4, total: 5, inSession: 1 });
     expect(result.current.revealed).toBe(true);
-    expect(result.current.canUndo).toBe(true);
-    expect(enqueueMock).not.toHaveBeenCalled();
+    // c001 was already sent with the second grade: it can't be undone.
+    expect(result.current.canUndo).toBe(false);
+    act(() => result.current.undo());
+    expect(result.current.progress.inSession).toBe(1);
+
+    // Re-grade c002: the session completes and commits it — the server sees
+    // "good" for c002 and never the undone "again".
+    act(() => result.current.grade("good"));
+    await waitFor(() => expect(submitReviewMock).toHaveBeenCalledTimes(2));
+    expect(result.current.complete).toBe(true);
+    const sent = submitReviewMock.mock.calls.map(
+      ([body]) => body as { questionId: string; grade: string },
+    );
+    expect(sent.map((b) => [b.questionId, b.grade])).toEqual([
+      ["c001-s01-q0", "good"],
+      ["c002-s05-q0", "good"],
+    ]);
   });
 
-  it("queues the review offline when the network fails", async () => {
-    submitReviewMock.mockRejectedValue(new TypeError("Failed to fetch"));
+  it("grades a card once even when two key presses land in the same tick", async () => {
+    const { result } = await started();
+    act(() => result.current.reveal());
+    act(() => {
+      result.current.grade("good");
+      result.current.grade("good");
+    });
+    expect(result.current.summary.reviewed).toBe(1);
+    expect(result.current.progress.inSession).toBe(1);
+  });
+
+  it("refuses to reveal or grade a card whose text hasn't loaded", async () => {
+    loadQuestionsMock.mockImplementation(() => new Promise(() => {}));
     const { result } = renderHook(() => useTrainerSession({ kind: "due", category: null }), {
       wrapper: withClient(),
     });
     await waitFor(() => expect(result.current.status).toBe("ready"));
-    await waitFor(() => expect(result.current.current).not.toBeNull());
+    expect(result.current.cardPending).toBe(true);
+    act(() => result.current.reveal());
+    expect(result.current.revealed).toBe(false);
+    act(() => result.current.grade("good"));
+    expect(result.current.summary.reviewed).toBe(0);
+  });
+
+  it("commits the held-back grade with keepalive when the tab hides", async () => {
+    const { result } = await started();
     act(() => result.current.reveal());
     act(() => result.current.grade("good"));
+    expect(submitReviewMock).not.toHaveBeenCalled();
+
+    Object.defineProperty(document, "visibilityState", { configurable: true, value: "hidden" });
+    act(() => {
+      document.dispatchEvent(new Event("visibilitychange"));
+    });
+    expect(submitReviewMock).toHaveBeenCalledTimes(1);
+    expect(submitReviewMock.mock.calls[0][1]).toEqual({ keepalive: true });
+    expect(result.current.canUndo).toBe(false);
+  });
+
+  it("commits the held-back grade when the screen closes", async () => {
+    const { result, unmount } = await started();
+    act(() => result.current.reveal());
+    act(() => result.current.grade("good"));
+    unmount();
+    expect(submitReviewMock).toHaveBeenCalledTimes(1);
+    expect(submitReviewMock.mock.calls[0][0]).toMatchObject({ questionId: "c001-s01-q0" });
+  });
+
+  it("queues the review in the outbox when the network fails", async () => {
+    submitReviewMock.mockRejectedValue(new TypeError("Failed to fetch"));
+    const { result, unmount } = await started();
+    act(() => result.current.reveal());
+    act(() => result.current.grade("good"));
+    unmount();
     await waitFor(() => expect(enqueueMock).toHaveBeenCalledTimes(1));
     expect(enqueueMock.mock.calls[0][0]).toMatchObject({
       questionId: "c001-s01-q0",
       grade: "good",
     });
-    // The optimistic state stands regardless.
-    expect(result.current.summary.knew).toBe(1);
+  });
+
+  it("keeps a review for replay when the session has expired (401)", async () => {
+    submitReviewMock.mockRejectedValue(new ApiError(401, "Unauthorized"));
+    const { result, unmount } = await started();
+    act(() => result.current.reveal());
+    act(() => result.current.grade("good"));
+    unmount();
+    await waitFor(() => expect(enqueueMock).toHaveBeenCalledTimes(1));
+  });
+
+  it("drops a definitively rejected review with a notice", async () => {
+    submitReviewMock.mockRejectedValue(new ApiError(404, "question not found"));
+    const { result } = await started();
+    act(() => result.current.reveal());
+    act(() => result.current.grade("good"));
+    await waitFor(() => expect(result.current.current?.question.id).toBe("c002-s05-q0"));
+    act(() => result.current.reveal());
+    act(() => result.current.grade("good"));
+    await waitFor(() => expect(result.current.notice).toMatch(/not saved/));
+    expect(enqueueMock).not.toHaveBeenCalled();
   });
 
   it("reports an empty queue", async () => {

@@ -14,7 +14,7 @@ import {
 import { errorMessageOf } from "../../lib/error-message";
 import { putSettings, resetProgress } from "./api";
 import { useCatalog } from "./data";
-import { GEO_PENDING_KEY } from "./offline-queue";
+import { geoReviewOutbox } from "./offline-queue";
 
 // The geography trainer's preferences: names in English or German, an optional
 // continent to focus the new places on, leeches, and a reset.
@@ -38,13 +38,15 @@ export function GeoSettingsDrawer({ settings: initial, onClose }: Props) {
 
   const { confirm, confirmDialog } = useConfirm();
   const reset = useMutation({
-    mutationFn: () => resetProgress({ confirm: true }),
+    // Replay is paused across the wipe and the local clear, so no queued
+    // review can land in between and re-create the progress.
+    mutationFn: () =>
+      geoReviewOutbox.exclusive(async () => {
+        const res = await resetProgress({ confirm: true });
+        await geoReviewOutbox.clear();
+        return res;
+      }),
     onSuccess: () => {
-      try {
-        window.localStorage.removeItem(GEO_PENDING_KEY);
-      } catch {
-        // storage blocked — nothing queued there either
-      }
       void qc.invalidateQueries({ queryKey: ["geography", "overview"] });
       void qc.invalidateQueries({ queryKey: ["geography", "history"] });
     },

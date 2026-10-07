@@ -57,6 +57,10 @@ describe("classifyRoute", () => {
       page: "trainer-wiki",
       detail: "quiztopia",
     });
+    expect(at("/play/quiztopia/solo/wiki/journal")).toEqual({
+      page: "trainer-wiki",
+      detail: "quiztopia",
+    });
     expect(at("/play/quiztopia/solo/timeline")).toEqual({
       page: "trainer-timeline",
       detail: "quiztopia",

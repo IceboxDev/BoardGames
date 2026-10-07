@@ -1,7 +1,7 @@
 import { isLeech, type SrsState } from "@boardgames/core/games/quiztopia/srs";
 import type { QuiztopiaLanguage } from "@boardgames/core/protocol";
-import { motion, useReducedMotion } from "framer-motion";
-import { useRef } from "react";
+import { animate, motion, useMotionValue, useReducedMotion, useTransform } from "framer-motion";
+import { useEffect, useRef } from "react";
 import { boardSpring } from "../../../../components/board/motion";
 import {
   Badge,
@@ -28,8 +28,8 @@ import { EditorNote } from "../wiki/EditorNote";
 // answer in the district's ink, the article sentence that gives it away,
 // the question's moment on the member's timeline and its source, and the
 // editor's note when the card has one. The reveal is a real flip
-// (rotateY on a preserve-3d stack); with reduced motion the faces crossfade
-// instead. Both faces share one grid cell, so the card's height is the
+// (rotateY on a preserve-3d stack); with reduced motion the faces swap
+// without turning. Both faces share one grid cell, so the card's height is the
 // taller face and the grade bar never jumps. The back holds the card it
 // was revealed on while it turns away, so grading never flashes the next
 // card's answer mid-flip.
@@ -95,22 +95,36 @@ export function FlashCard({
   if (revealed) held.current = live;
   const back = revealed ? live : held.current;
 
+  // One rotation drives everything. Each face's visibility is switched from
+  // that angle (front up to 90°, back past it) rather than trusted to
+  // `backface-visibility`: Firefox still paints positioned descendants of a
+  // backface-hidden face, which showed the question mirrored through the
+  // translucent back. Reduced motion skips the turn and swaps at once.
+  const rotation = useMotionValue(revealed ? 180 : 0);
+  useEffect(() => {
+    const controls = animate(rotation, revealed ? 180 : 0, flip ? boardSpring : { duration: 0 });
+    return () => controls.stop();
+  }, [rotation, revealed, flip]);
+  const frontVisibility = useTransform(rotation, (deg) => (deg < 90 ? "visible" : "hidden"));
+  const backVisibility = useTransform(rotation, (deg) => (deg >= 90 ? "visible" : "hidden"));
+  const turn = useTransform(rotation, (deg) => (flip ? deg : 0));
+
   const face = "col-start-1 row-start-1 flex min-h-64 min-w-0 flex-col";
+  const hiddenBackface = {
+    backfaceVisibility: "hidden",
+    WebkitBackfaceVisibility: "hidden",
+  } as const;
 
   return (
     <div className={cn("w-full min-w-0", className)} style={{ perspective: 1400 }}>
       <motion.div
         className="grid grid-cols-1"
-        style={{ transformStyle: flip ? "preserve-3d" : undefined }}
-        animate={{ rotateY: flip && revealed ? 180 : 0 }}
-        transition={flip ? boardSpring : { duration: 0 }}
+        style={{ transformStyle: flip ? "preserve-3d" : undefined, rotateY: turn }}
       >
         {/* Front */}
         <motion.div
           className={face}
-          style={{ backfaceVisibility: "hidden" }}
-          animate={{ opacity: !flip && revealed ? 0 : 1 }}
-          transition={{ duration: 0.2 }}
+          style={{ ...hiddenBackface, visibility: frontVisibility }}
           inert={revealed}
           aria-hidden={revealed}
         >
@@ -160,11 +174,10 @@ export function FlashCard({
         <motion.div
           className={face}
           style={{
-            backfaceVisibility: "hidden",
+            ...hiddenBackface,
+            visibility: backVisibility,
             transform: flip ? "rotateY(180deg)" : undefined,
           }}
-          animate={{ opacity: !flip && !revealed ? 0 : 1 }}
-          transition={{ duration: 0.2 }}
           inert={!revealed}
           aria-hidden={!revealed}
         >

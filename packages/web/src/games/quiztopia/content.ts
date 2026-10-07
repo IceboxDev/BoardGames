@@ -3,6 +3,12 @@
 // `index.json` is tiny and eager, every card file is a lazy chunk fetched
 // the first time a screen needs it. The server reads the same files from
 // disk (`lib/quiztopia/content-store.ts`) — one source of truth, two paths.
+//
+// These loaders are deliberately UNCACHED: React Query (`hooks/useContent.ts`)
+// is the one cache, so a failed chunk is retried rather than remembered, and
+// a successful `import()` is memoised by the browser's module map anyway. A
+// chunk that 404s because a deploy rotated its hash is handled globally by
+// `lib/stale-chunk-reload.ts`.
 
 import type {
   AnswerSpan,
@@ -20,43 +26,44 @@ export const CONTENT_INDEX = index as ContentIndex;
 export const CONTENT_VERSION = CONTENT_INDEX.version;
 export const CARD_IDS: readonly string[] = CONTENT_INDEX.cards.map((c) => c.id);
 
-const questionChunks = import.meta.glob<{ default: CardQuestions }>(
-  "../../../../core/src/games/quiztopia/content/questions/*.json",
-);
-const articleChunks = import.meta.glob<{ default: CardArticles }>(
-  "../../../../core/src/games/quiztopia/content/articles/*.json",
-);
+type ChunkLoader<T> = () => Promise<{ default: T }>;
 
-function chunkFor<T>(
-  map: Record<string, () => Promise<{ default: T }>>,
-  cardId: string,
-): () => Promise<{ default: T }> {
-  const key = Object.keys(map).find((k) => k.endsWith(`/${cardId}.json`));
-  const loader = key ? map[key] : undefined;
-  if (!loader) throw new Error(`unknown quiztopia card: ${cardId}`);
-  return loader;
+/** `…/questions/c042.json` → `c042`, so a lookup is a map hit, not a scan. */
+function byCardId<T>(glob: Record<string, ChunkLoader<T>>): ReadonlyMap<string, ChunkLoader<T>> {
+  const out = new Map<string, ChunkLoader<T>>();
+  for (const [path, loader] of Object.entries(glob)) {
+    const file = path.slice(path.lastIndexOf("/") + 1);
+    out.set(file.replace(/\.json$/, ""), loader);
+  }
+  return out;
 }
 
-const questionCache = new Map<string, Promise<CardQuestions>>();
-const articleCache = new Map<string, Promise<CardArticles>>();
-let titlesPromise: Promise<Titles> | null = null;
+const questionChunks = byCardId(
+  import.meta.glob<{ default: CardQuestions }>(
+    "../../../../core/src/games/quiztopia/content/questions/*.json",
+  ),
+);
+const articleChunks = byCardId(
+  import.meta.glob<{ default: CardArticles }>(
+    "../../../../core/src/games/quiztopia/content/articles/*.json",
+  ),
+);
+
+async function loadCardChunk<T>(
+  chunks: ReadonlyMap<string, ChunkLoader<T>>,
+  cardId: string,
+): Promise<T> {
+  const loader = chunks.get(cardId);
+  if (!loader) throw new Error(`unknown quiztopia card: ${cardId}`);
+  return (await loader()).default;
+}
 
 export function loadQuestions(cardId: string): Promise<CardQuestions> {
-  let p = questionCache.get(cardId);
-  if (!p) {
-    p = chunkFor(questionChunks, cardId)().then((m) => m.default);
-    questionCache.set(cardId, p);
-  }
-  return p;
+  return loadCardChunk(questionChunks, cardId);
 }
 
 export function loadArticles(cardId: string): Promise<CardArticles> {
-  let p = articleCache.get(cardId);
-  if (!p) {
-    p = chunkFor(articleChunks, cardId)().then((m) => m.default);
-    articleCache.set(cardId, p);
-  }
-  return p;
+  return loadCardChunk(articleChunks, cardId);
 }
 
 // A single-file glob rather than a dynamic `import(…, { with: { type: "json" } })`:
@@ -66,42 +73,24 @@ const titlesChunk = import.meta.glob<{ default: Titles }>(
   "../../../../core/src/games/quiztopia/content/titles.json",
 );
 
-export function loadTitles(): Promise<Titles> {
-  if (!titlesPromise) {
-    const loader = Object.values(titlesChunk)[0];
-    if (!loader) throw new Error("quiztopia titles.json missing");
-    titlesPromise = loader().then((m) => m.default);
-  }
-  return titlesPromise;
+export async function loadTitles(): Promise<Titles> {
+  const loader = Object.values(titlesChunk)[0];
+  if (!loader) throw new Error("quiztopia titles.json missing");
+  return (await loader()).default;
 }
 
 // Every question's timeline event in one lazy chunk (≈ 2 MB of JSON, only
-// fetched by the timeline, the hub teaser and the pin chips). Content from
-// before the enrichment pass has no `timeline.json`: the glob is then empty
-// and the index resolves to `{}`, so every screen degrades to "no dates".
+// fetched by the timeline screen and the pin chips — the hub's teaser reads
+// the server's pin summary instead). Content from before the enrichment pass
+// has no `timeline.json`: the glob is then empty and the index resolves to
+// `{}`, so every screen degrades to "no dates".
 const timelineChunk = import.meta.glob<{ default: TimelineIndex }>(
   "../../../../core/src/games/quiztopia/content/timeline.json",
 );
-let timelinePromise: Promise<TimelineIndex> | null = null;
 
-export function loadTimeline(): Promise<TimelineIndex> {
-  if (!timelinePromise) {
-    const loader = Object.values(timelineChunk)[0];
-    timelinePromise = loader ? loader().then((m) => m.default) : Promise.resolve({});
-    timelinePromise.catch(() => {
-      timelinePromise = null;
-    });
-  }
-  return timelinePromise;
-}
-
-/** Fire-and-forget warm-up for the next card in a session. */
-export function preloadQuestions(cardId: string): void {
-  loadQuestions(cardId).catch(() => {});
-}
-
-export function preloadArticles(cardId: string): void {
-  loadArticles(cardId).catch(() => {});
+export async function loadTimeline(): Promise<TimelineIndex> {
+  const loader = Object.values(timelineChunk)[0];
+  return loader ? (await loader()).default : {};
 }
 
 /** One question with its set context, from an already-loaded card. */

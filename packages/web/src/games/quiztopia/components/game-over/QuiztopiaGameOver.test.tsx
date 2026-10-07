@@ -7,14 +7,6 @@ import { fireEvent, render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
-const submitReviewsBulk = vi.fn((_body: unknown) =>
-  Promise.resolve({ ok: true as const, applied: 0, skipped: 0, states: [] }),
-);
-vi.mock("../../api", () => ({
-  submitReviewsBulk: (body: unknown) => submitReviewsBulk(body),
-  todayKey: () => "2026-09-24",
-}));
-
 const navigate = vi.fn();
 vi.mock("react-router-dom", async (importOriginal) => {
   const actual = await importOriginal<typeof import("react-router-dom")>();
@@ -148,14 +140,13 @@ const RESULT: QuiztopiaResult = {
   ),
 };
 
-function renderScreen(view: QuiztopiaPlayerView | null = VIEW, roomCode: string | null = "ABCD") {
+function renderScreen(view: QuiztopiaPlayerView | null = VIEW) {
   return render(
     <MemoryRouter>
       <QuiztopiaGameOver
         result={RESULT}
         view={view}
         seatNames={["Mantas", "Anna", "Lena"]}
-        roomCode={roomCode}
         onBackToMenu={() => {}}
         onOpenTrainer={() => {}}
       />
@@ -164,61 +155,13 @@ function renderScreen(view: QuiztopiaPlayerView | null = VIEW, roomCode: string 
 }
 
 beforeEach(() => {
-  submitReviewsBulk.mockClear();
   navigate.mockClear();
 });
 
 describe("QuiztopiaGameOver", () => {
-  it("posts the judged, real questions as game reviews exactly once", () => {
-    const { rerender } = renderScreen();
-    expect(submitReviewsBulk).toHaveBeenCalledTimes(1);
-    expect(submitReviewsBulk).toHaveBeenCalledWith({
-      reviews: [
-        {
-          clientId: "game:ABCD:1",
-          questionId: "c001-s04-q0",
-          grade: "good",
-          localDate: "2026-09-24",
-          source: "game",
-          roomCode: "ABCD",
-        },
-        {
-          clientId: "game:ABCD:2",
-          questionId: "c002-s07-q1",
-          grade: "again",
-          localDate: "2026-09-24",
-          source: "game",
-          roomCode: "ABCD",
-        },
-        {
-          clientId: "game:ABCD:5",
-          questionId: "c002-s07-q1",
-          grade: "again",
-          localDate: "2026-09-24",
-          source: "game",
-          roomCode: "ABCD",
-        },
-      ],
-    });
-    rerender(
-      <MemoryRouter>
-        <QuiztopiaGameOver
-          result={RESULT}
-          view={{ ...VIEW }}
-          seatNames={["Mantas", "Anna", "Lena"]}
-          roomCode="ABCD"
-          onBackToMenu={() => {}}
-          onOpenTrainer={() => {}}
-        />
-      </MemoryRouter>,
-    );
-    expect(submitReviewsBulk).toHaveBeenCalledTimes(1);
-  });
-
-  it("posts nothing without a room code or a view", () => {
-    renderScreen(VIEW, null);
-    renderScreen(null, "ABCD");
-    expect(submitReviewsBulk).not.toHaveBeenCalled();
+  it("renders from the result alone when no board view arrived", () => {
+    renderScreen(null);
+    expect(screen.getByRole("heading", { name: "Out of questions" })).toBeInTheDocument();
   });
 
   it("practises only the real misses, each once", () => {

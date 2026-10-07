@@ -22,6 +22,7 @@ import {
   CardQuestionsSchema,
   type ContentIndex,
   ContentIndexSchema,
+  type ContentQuestion,
   type ContentSetArticle,
   type Titles,
   TitlesSchema,
@@ -68,6 +69,8 @@ export interface StoredQuestion {
   /** Player-facing editor's notes for the set, per language ("" when none). */
   notesEn: string;
   notesDe: string;
+  /** The event the question pins to the member's timeline. */
+  timeline: ContentQuestion["timeline"];
 }
 
 export interface SearchOptions {
@@ -169,6 +172,7 @@ export function loadContentStore(dir: string = resolveContentDir()): ContentStor
           answerDe: q.answerDe,
           notesEn: set.notesEn ?? "",
           notesDe: set.notesDe ?? "",
+          timeline: q.timeline,
         });
         docs.push({
           questionId: q.id,

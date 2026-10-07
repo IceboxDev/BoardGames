@@ -8,6 +8,7 @@ import {
   quiztopiaLossAt,
 } from "@boardgames/core/history/coop-challenge";
 import type { QuiztopiaLanguage } from "@boardgames/core/protocol";
+import { TRAINER_BASE, trainerPaths } from "../paths";
 
 // Labels and small derivations shared by the lobby, board, rules and game
 // over. Everything numeric comes from the core constants so the copy can
@@ -90,7 +91,7 @@ export function cardRefLabel(cardRef: string, categoryIndex: number): string {
 export function wikiPathFor(cardRef: string, categorySlug: string): string | null {
   const parsed = parseCardRef(cardRef);
   if (!parsed) return null;
-  return `/play/quiztopia/solo/wiki/${categorySlug}/${parsed.cardId}`;
+  return trainerPaths(TRAINER_BASE).wikiArticle(categorySlug, parsed.cardId);
 }
 
 /**

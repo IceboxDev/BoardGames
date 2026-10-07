@@ -5,7 +5,7 @@ import type {
   ContentSetQuestions,
 } from "@boardgames/core/games/quiztopia/content-types";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { render, screen, within } from "@testing-library/react";
+import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { beforeEach, describe, expect, it, vi } from "vitest";
@@ -125,6 +125,7 @@ vi.mock("../../hooks/useContent", () => ({
 }));
 
 const postWikiReadMock = vi.fn();
+const deleteWikiReadMock = vi.fn(async (_body: { setId: string }) => ({ reads: [] }));
 vi.mock("../../api", () => ({
   statesQuery: () => async () => ({ states: [] }),
   wikiReadsQuery: () => async () => ({ reads: [] }),
@@ -139,6 +140,7 @@ vi.mock("../../api", () => ({
     ],
   }),
   postWikiRead: (body: unknown) => postWikiReadMock(body),
+  deleteWikiRead: (body: { setId: string }) => deleteWikiReadMock(body),
 }));
 
 import WikiArticle from "./WikiArticle";
@@ -295,11 +297,23 @@ describe("WikiArticle", () => {
     const user = userEvent.setup();
     renderArticle();
     await screen.findByRole("article");
-    await user.click(await screen.findByRole("button", { name: /Mark read/ }));
+    await user.click(await screen.findByRole("button", { name: /Mark as read/ }));
+    await waitFor(() => expect(postWikiReadMock).toHaveBeenCalledTimes(1));
     expect(postWikiReadMock).toHaveBeenCalledWith({ setId: "c002-s07" });
     expect(await screen.findByText("Read", { selector: "span" })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /Read/ })).toBeDisabled();
     expect(postWikiReadMock).toHaveBeenCalledTimes(1);
+  });
+
+  it("unmarks a read marked by mistake", async () => {
+    const user = userEvent.setup();
+    renderArticle();
+    await screen.findByRole("article");
+    await user.click(await screen.findByRole("button", { name: /Mark as read/ }));
+    await waitFor(() => expect(postWikiReadMock).toHaveBeenCalledTimes(1));
+    await user.click(await screen.findByRole("button", { name: /Mark as unread/ }));
+    await waitFor(() => expect(deleteWikiReadMock).toHaveBeenCalledWith({ setId: "c002-s07" }));
+    expect(await screen.findByRole("button", { name: /Mark as read/ })).toBeEnabled();
+    expect(screen.queryByText("Read", { selector: "span" })).not.toBeInTheDocument();
   });
 
   it("bounces an unknown card to the district list", () => {

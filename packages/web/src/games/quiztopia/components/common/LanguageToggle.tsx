@@ -11,6 +11,7 @@ type Props<T extends QuiztopiaLanguage | "en" | "de"> = {
   allowBoth?: boolean;
   tone?: CoreTone;
   size?: "xs" | "sm";
+  disabled?: boolean;
 };
 
 export function LanguageToggle<T extends QuiztopiaLanguage>({
@@ -19,6 +20,7 @@ export function LanguageToggle<T extends QuiztopiaLanguage>({
   allowBoth = true,
   tone = "accent",
   size = "xs",
+  disabled = false,
 }: Props<T>) {
   const options = [
     { value: "en" as T, label: "EN", title: "English" },
@@ -33,6 +35,7 @@ export function LanguageToggle<T extends QuiztopiaLanguage>({
       shape="pill"
       size={size}
       tone={tone}
+      disabled={disabled}
     />
   );
 }

@@ -167,22 +167,45 @@ export const TimelinePinSchema = z.object({
 });
 export type TimelinePin = z.infer<typeof TimelinePinSchema>;
 
-export const TimelinePinsResponseSchema = z.object({ pins: z.array(TimelinePinSchema) });
+/** The pins' dated count and the years they span (the hub's one-line teaser). */
+export const TimelinePinsSummarySchema = z.object({
+  dated: z.number().int().nonnegative(),
+  spanYears: z.number().nonnegative(),
+});
+export type TimelinePinsSummary = z.infer<typeof TimelinePinsSummarySchema>;
+
+export const TimelinePinsResponseSchema = z.object({
+  pins: z.array(TimelinePinSchema),
+  /**
+   * Optional only because a server deployed before it existed omits it; the
+   * teaser then falls back to the plain pin count.
+   */
+  summary: TimelinePinsSummarySchema.optional(),
+});
 export type TimelinePins = z.infer<typeof TimelinePinsResponseSchema>;
 
 // ── Reviews ─────────────────────────────────────────────────────────────
 
+/** Where a logged review came from. Only "trainer" is accepted on the wire. */
 export const ReviewSourceSchema = z.enum(["trainer", "game"]);
+export type ReviewSource = z.infer<typeof ReviewSourceSchema>;
 
+/**
+ * One trainer grade posted by the client. Table-game answers are NOT posted
+ * by clients: the server records them itself at game over from the
+ * persisted replay (`server/src/lib/quiztopia/game-reviews.ts`), so a
+ * client can neither skip nor forge them. `source` is kept for old clients
+ * that send it explicitly; anything but "trainer" is a 400.
+ */
 export const ReviewBodySchema = z.object({
   clientId: z.string().min(8).max(64),
   questionId: QuiztopiaQuestionIdSchema,
   grade: SrsGradeSchema,
   localDate: DateKeyStringSchema,
   durationMs: z.number().int().min(0).max(600_000).nullable().optional(),
+  /** When the member graded it — a commit or an offline replay may land later. */
   reviewedAt: z.string().datetime({ offset: true }).optional(),
-  source: ReviewSourceSchema.default("trainer"),
-  roomCode: z.string().min(1).max(16).optional(),
+  source: z.literal("trainer").default("trainer"),
 });
 export type ReviewBody = z.input<typeof ReviewBodySchema>;
 
@@ -252,6 +275,69 @@ export const WikiReadsResponseSchema = z.object({
   reads: z.array(z.object({ setId: QuiztopiaSetIdSchema, readAt: z.string() })),
 });
 export type WikiReads = z.infer<typeof WikiReadsResponseSchema>;
+
+// ── Journal ─────────────────────────────────────────────────────────────
+
+/**
+ * The member's journal, newest day first, paged by ACTIVE days (a day with
+ * a review or a read): `before` is exclusive, `days` is how many active
+ * days to return. `tz` is the caller's IANA zone, so a read's timestamp
+ * lands on the same calendar day the member lived it (reviews already carry
+ * the client's local date).
+ */
+export const JournalQuerySchema = z.object({
+  before: DateKeyStringSchema.optional(),
+  days: z.coerce.number().int().min(1).max(30).default(7),
+  tz: z.string().min(1).max(64).default("UTC"),
+});
+
+export const JournalQuestionSchema = z.object({
+  questionId: QuiztopiaQuestionIdSchema,
+  /** 0 = the card's original question, 1–4 a sibling. */
+  q: z.number().int().min(0).max(4),
+  en: z.string(),
+  de: z.string(),
+  answerEn: z.string(),
+  answerDe: z.string(),
+  /** Every grade that day, in order ("again" then "good" = missed, then got it). */
+  grades: z.array(SrsGradeSchema).min(1),
+  /** Seen for the first time that day. */
+  firstSeen: z.boolean(),
+  /** Answered at a table game rather than in the trainer. */
+  fromGame: z.boolean(),
+});
+export type JournalQuestion = z.infer<typeof JournalQuestionSchema>;
+
+export const JournalSetSchema = z.object({
+  setId: QuiztopiaSetIdSchema,
+  category: QuiztopiaCategorySchema,
+  titleEn: z.string(),
+  titleDe: z.string(),
+  /** When the article was read that day (the day's latest read), else null. */
+  readAt: z.string().nullable(),
+  questions: z.array(JournalQuestionSchema),
+});
+export type JournalSet = z.infer<typeof JournalSetSchema>;
+
+export const JournalDaySchema = z.object({
+  date: DateKeyStringSchema,
+  /** Grades given that day. */
+  reviewed: z.number().int().nonnegative(),
+  /** …of which "knew it". */
+  knew: z.number().int().nonnegative(),
+  /** Questions seen for the first time. */
+  newQuestions: z.number().int().nonnegative(),
+  articlesRead: z.number().int().nonnegative(),
+  sets: z.array(JournalSetSchema),
+});
+export type JournalDay = z.infer<typeof JournalDaySchema>;
+
+export const JournalResponseSchema = z.object({
+  days: z.array(JournalDaySchema),
+  /** Pass as `before` for the next (older) page; null when there is nothing older. */
+  nextBefore: DateKeyStringSchema.nullable(),
+});
+export type Journal = z.infer<typeof JournalResponseSchema>;
 
 // ── Reset ───────────────────────────────────────────────────────────────
 

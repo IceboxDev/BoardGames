@@ -6,6 +6,7 @@
 import { fileURLToPath } from "node:url";
 import { addDays } from "@boardgames/core/games/quiztopia/srs";
 import type {
+  Journal,
   RecentMisses,
   ReviewBody,
   ReviewResponse,
@@ -21,7 +22,12 @@ import { type Client, createClient } from "@libsql/client";
 import { Hono } from "hono";
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 import type { AppEnv } from "../auth/types.ts";
-import { __setContentStore, loadContentStore } from "../lib/quiztopia/content-store.ts";
+import {
+  __setContentStore,
+  getContentStore,
+  loadContentStore,
+} from "../lib/quiztopia/content-store.ts";
+import { recordReview } from "../lib/quiztopia/srs-db.ts";
 import { runMigrations } from "../migrations/migrator.ts";
 
 const db = vi.hoisted(() => ({ current: null as Client | null }));
@@ -54,7 +60,7 @@ function app(viewerId = USER) {
 }
 
 async function call<T>(
-  method: "GET" | "POST" | "PUT",
+  method: "GET" | "POST" | "PUT" | "DELETE",
   path: string,
   body?: unknown,
   viewerId = USER,
@@ -81,6 +87,35 @@ function review(overrides: Partial<ReviewBody> = {}): ReviewBody {
 
 function post(body: ReviewBody, viewerId = USER) {
   return call<ReviewResponse>("POST", "/trainer/reviews", body, viewerId);
+}
+
+/** A table-game answer, recorded the way the server does it at game over. */
+function recordGame(
+  fields: {
+    questionId: string;
+    grade: "good" | "again";
+    roomCode: string;
+    clientId?: string;
+    localDate?: string;
+  },
+  viewerId = USER,
+) {
+  seq++;
+  const client = db.current;
+  if (!client) throw new Error("no db");
+  return recordReview(
+    client,
+    viewerId,
+    {
+      clientId: fields.clientId ?? `game:test-session:${seq}`,
+      questionId: fields.questionId,
+      grade: fields.grade,
+      localDate: fields.localDate ?? TODAY,
+      source: "game",
+      roomCode: fields.roomCode,
+    },
+    getContentStore(),
+  );
 }
 
 async function seedState(
@@ -239,17 +274,13 @@ describe("/api/quiztopia", () => {
     });
 
     it("keeps game answers out of the schedule until the member opts in", async () => {
-      const off = await post(
-        review({
-          questionId: "c001-s03-q0",
-          grade: "again",
-          source: "game",
-          roomCode: "ABCD",
-          clientId: "game:ABCD:3",
-        }),
-      );
-      expect(off.status).toBe(201);
-      expect(off.body).toMatchObject({ existed: false, applied: false, state: null });
+      const off = await recordGame({
+        questionId: "c001-s03-q0",
+        grade: "again",
+        roomCode: "ABCD",
+        clientId: "game:ABCD:3",
+      });
+      expect(off).toMatchObject({ existed: false, applied: false, state: null });
       expect(await count(client, "SELECT COUNT(*) n FROM quiztopia_srs")).toBe(0);
 
       const put = await call("PUT", "/settings", {
@@ -261,22 +292,29 @@ describe("/api/quiztopia", () => {
       });
       expect(put.status).toBe(200);
 
-      const on = await post(
-        review({
-          questionId: "c001-s03-q1",
-          grade: "good",
-          source: "game",
-          roomCode: "ABCD",
-          clientId: "game:ABCD:4",
-        }),
-      );
-      expect(on.body).toMatchObject({ applied: true });
-      expect(on.body.state).toMatchObject({ questionId: "c001-s03-q1", state: "learning" });
+      const on = await recordGame({
+        questionId: "c001-s03-q1",
+        grade: "good",
+        roomCode: "ABCD",
+        clientId: "game:ABCD:4",
+      });
+      expect(on).toMatchObject({ applied: true });
+      expect(on.state).toMatchObject({ questionId: "c001-s03-q1", state: "learning" });
 
       // Game reviews never count as a study day.
       const overview = await call<TrainerOverview>("GET", `/trainer/overview?today=${TODAY}`);
       expect(overview.body.streak).toEqual({ current: 0, longest: 0, studiedToday: false });
       expect(overview.body.todayCounts.reviews).toBe(0);
+    });
+
+    it("refuses a client-sent table-game review (the server records those itself)", async () => {
+      const res = await call("POST", "/trainer/reviews", {
+        ...review({ questionId: "c001-s01-q0" }),
+        source: "game",
+        roomCode: "ABCD",
+      });
+      expect(res.status).toBe(400);
+      expect(await count(client, "SELECT COUNT(*) n FROM quiztopia_reviews")).toBe(0);
     });
 
     it("rejects an unknown question with 404 and an out-of-window date with 400", async () => {
@@ -439,9 +477,7 @@ describe("/api/quiztopia", () => {
       await post(review({ questionId: "c001-s01-q0", grade: "good" }));
       await post(review({ questionId: "c002-s01-q0", grade: "again" }));
       // A game answer without the opt-in is logged applied = 0: not an introduction.
-      await post(
-        review({ questionId: "c001-s01-q1", grade: "again", source: "game", roomCode: "R1" }),
-      );
+      await recordGame({ questionId: "c001-s01-q1", grade: "again", roomCode: "R1" });
       // Yesterday's introductions do not eat into today's cap.
       await seedReview(client, {
         questionId: "c001-s01-q2",
@@ -684,9 +720,7 @@ describe("/api/quiztopia", () => {
       await post(review({ questionId: "c001-s01-q0", localDate: YESTERDAY }));
       await post(review({ questionId: "c001-s01-q1", grade: "again", localDate: YESTERDAY }));
       await post(review({ questionId: "c001-s01-q2", localDate: TODAY }));
-      await post(
-        review({ questionId: "c001-s01-q3", source: "game", roomCode: "R", localDate: TODAY }),
-      );
+      await recordGame({ questionId: "c001-s01-q3", grade: "good", roomCode: "R" });
       await seedReview(client, {
         questionId: "c001-s01-q4",
         grade: "good",
@@ -841,7 +875,10 @@ describe("/api/quiztopia", () => {
 
   describe("GET /trainer/pins", () => {
     it("lists every studied question as a pin, known once it graduated", async () => {
-      expect((await call<TimelinePins>("GET", "/trainer/pins")).body).toEqual({ pins: [] });
+      expect((await call<TimelinePins>("GET", "/trainer/pins")).body).toEqual({
+        pins: [],
+        summary: { dated: 0, spanYears: 0 },
+      });
 
       await post(review({ questionId: "c001-s01-q1", grade: "again" }));
       await seedState(client, "c002-s06-q0", {
@@ -867,6 +904,11 @@ describe("/api/quiztopia", () => {
         lastReviewedAt: "2026-09-01T08:00:00.000Z",
       });
 
+      // The teaser's numbers: both pins are dated, 26 Aug 1841 → 1930.
+      expect(res.body.summary?.dated).toBe(2);
+      expect(res.body.summary?.spanYears).toBeGreaterThan(88);
+      expect(res.body.summary?.spanYears).toBeLessThan(89);
+
       // Pins are per member.
       expect(
         (await call<TimelinePins>("GET", "/trainer/pins", undefined, OTHER)).body.pins,
@@ -874,7 +916,87 @@ describe("/api/quiztopia", () => {
     });
   });
 
+  describe("GET /journal", () => {
+    it("lists the day's studied questions and reads, newest day first", async () => {
+      await post(review({ questionId: "c001-s01-q0", grade: "again", localDate: YESTERDAY }));
+      await post(review({ questionId: "c001-s01-q0", grade: "good", localDate: YESTERDAY }));
+      await post(review({ questionId: "c002-s03-q1", localDate: TODAY }));
+      await call("POST", "/wiki/reads", { setId: "c001-s02" });
+
+      const res = await call<Journal>("GET", "/journal?days=7&tz=UTC");
+      expect(res.status).toBe(200);
+      expect(res.body.days.map((d) => d.date)).toEqual([TODAY, YESTERDAY]);
+      expect(res.body.days[0]?.sets.map((s) => s.setId).sort()).toEqual(["c001-s02", "c002-s03"]);
+      expect(res.body.days[1]?.sets[0]?.questions[0]).toMatchObject({
+        questionId: "c001-s01-q0",
+        grades: ["again", "good"],
+        firstSeen: true,
+      });
+      expect(res.body.nextBefore).toBeNull();
+
+      const paged = await call<Journal>("GET", "/journal?days=1&tz=UTC");
+      expect(paged.body.nextBefore).toBe(TODAY);
+      const older = await call<Journal>("GET", `/journal?days=1&tz=UTC&before=${TODAY}`);
+      expect(older.body.days.map((d) => d.date)).toEqual([YESTERDAY]);
+
+      // Per member.
+      expect((await call<Journal>("GET", "/journal", undefined, OTHER)).body.days).toEqual([]);
+    });
+
+    it("rejects a bad zone, page size or bound", async () => {
+      expect((await call("GET", "/journal?tz=Mars%2FOlympus")).status).toBe(400);
+      expect((await call("GET", "/journal?days=0")).status).toBe(400);
+      expect((await call("GET", "/journal?before=yesterday")).status).toBe(400);
+    });
+  });
+
+  describe("wiki read log", () => {
+    const logged = () => count(client, "SELECT COUNT(*) n FROM quiztopia_wiki_read_log");
+
+    it("logs a read once per sitting and unmarks only the latest read", async () => {
+      await client.execute({
+        sql: "INSERT INTO quiztopia_wiki_read_log (user_id, set_id, read_at) VALUES (?, ?, ?)",
+        args: [USER, "c001-s01", `${YESTERDAY}T08:00:00.000Z`],
+      });
+      await call("POST", "/wiki/reads", { setId: "c001-s01" });
+      await call("POST", "/wiki/reads", { setId: "c001-s01" });
+      expect(await logged()).toBe(2);
+
+      await call("DELETE", "/wiki/reads", { setId: "c001-s01" });
+      // The mistaken read is gone; yesterday's genuine one stays.
+      const { rows } = await client.execute("SELECT read_at FROM quiztopia_wiki_read_log");
+      expect(rows.map((r) => r.read_at)).toEqual([`${YESTERDAY}T08:00:00.000Z`]);
+      // Unmarking an article that isn't marked never eats older reads.
+      await call("DELETE", "/wiki/reads", { setId: "c001-s01" });
+      expect(await logged()).toBe(1);
+    });
+
+    it("is wiped by a progress reset", async () => {
+      await call("POST", "/wiki/reads", { setId: "c001-s01" });
+      await call("POST", "/trainer/reset", { confirm: true });
+      expect(await logged()).toBe(0);
+    });
+  });
+
   describe("wiki reads", () => {
+    it("unmarks a read, idempotently and only the caller's own", async () => {
+      await call("POST", "/wiki/reads", { setId: "c001-s01" });
+      await call("POST", "/wiki/reads", { setId: "c002-s12" });
+      await call("POST", "/wiki/reads", { setId: "c002-s12" }, OTHER);
+
+      const unread = await call<WikiReads>("DELETE", "/wiki/reads", { setId: "c001-s01" });
+      expect(unread.status).toBe(200);
+      expect(unread.body.reads.map((r) => r.setId)).toEqual(["c002-s12"]);
+      const again = await call<WikiReads>("DELETE", "/wiki/reads", { setId: "c001-s01" });
+      expect(again.body.reads.map((r) => r.setId)).toEqual(["c002-s12"]);
+      expect((await call("DELETE", "/wiki/reads", { setId: "c001" })).status).toBe(400);
+
+      await call("DELETE", "/wiki/reads", { setId: "c002-s12" });
+      expect((await call<WikiReads>("GET", "/wiki/reads")).body.reads).toEqual([]);
+      const others = await call<WikiReads>("GET", "/wiki/reads", undefined, OTHER);
+      expect(others.body.reads.map((r) => r.setId)).toEqual(["c002-s12"]);
+    });
+
     it("records a read once per set and lists them", async () => {
       const first = await call<WikiReads>("POST", "/wiki/reads", { setId: "c001-s01" });
       expect(first.status).toBe(200);
@@ -884,6 +1006,7 @@ describe("/api/quiztopia", () => {
       await call("POST", "/wiki/reads", { setId: "c002-s12" });
       const list = await call<WikiReads>("GET", "/wiki/reads");
       expect(list.body.reads.map((r) => r.setId).sort()).toEqual(["c001-s01", "c002-s12"]);
+
       expect(list.body.reads[0].readAt).toMatch(/^\d{4}-\d{2}-\d{2}T/);
       expect(await count(client, "SELECT COUNT(*) n FROM quiztopia_wiki_reads")).toBe(2);
       expect((await call("POST", "/wiki/reads", { setId: "c009-s01" })).status).toBe(404);
@@ -897,18 +1020,10 @@ describe("/api/quiztopia", () => {
   describe("GET /games/recent-misses", () => {
     it("groups game misses per question, newest first, ignoring trainer grades", async () => {
       await post(review({ questionId: "c001-s01-q0", grade: "again" }));
-      await post(
-        review({ questionId: "c001-s02-q0", grade: "again", source: "game", roomCode: "R1" }),
-      );
-      await post(
-        review({ questionId: "c001-s03-q0", grade: "again", source: "game", roomCode: "R1" }),
-      );
-      await post(
-        review({ questionId: "c001-s02-q0", grade: "again", source: "game", roomCode: "R2" }),
-      );
-      await post(
-        review({ questionId: "c001-s04-q0", grade: "good", source: "game", roomCode: "R2" }),
-      );
+      await recordGame({ questionId: "c001-s02-q0", grade: "again", roomCode: "R1" });
+      await recordGame({ questionId: "c001-s03-q0", grade: "again", roomCode: "R1" });
+      await recordGame({ questionId: "c001-s02-q0", grade: "again", roomCode: "R2" });
+      await recordGame({ questionId: "c001-s04-q0", grade: "good", roomCode: "R2" });
       await seedReview(client, {
         questionId: "c001-s05-q0",
         grade: "again",

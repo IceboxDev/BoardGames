@@ -11,6 +11,7 @@ import {
   type TimelineEvent,
   timelineSortKey,
   timelineSpanYears,
+  timelineSummary,
 } from "./timeline.ts";
 
 function ev(partial: Partial<TimelineEvent> & Pick<TimelineEvent, "start">): TimelineEvent {
@@ -239,5 +240,21 @@ describe("spans", () => {
     expect(formatSpan(13_800_000_000, "de")).toBe("14 Milliarden Jahre");
     expect(formatSpan(0.5, "en")).toBe("less than a year");
     expect(formatSpan(45, "en")).toBe("45 years");
+  });
+});
+
+describe("timelineSummary", () => {
+  const ev = (start: string, end: string | null = null) => ({ start, end, ongoing: false });
+
+  it("counts the dated events and the years they span", () => {
+    expect(timelineSummary([ev("1900"), ev("1950", "1960"), ev("1800")])).toEqual({
+      dated: 3,
+      spanYears: 160,
+    });
+  });
+
+  it("is zero for no events and skips malformed dates", () => {
+    expect(timelineSummary([])).toEqual({ dated: 0, spanYears: 0 });
+    expect(timelineSummary([ev("not a date"), ev("2000")])).toEqual({ dated: 1, spanYears: 0 });
   });
 });

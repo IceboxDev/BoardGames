@@ -4,6 +4,7 @@
 import {
   BulkReviewsBodySchema,
   BulkReviewsResponseSchema,
+  JournalResponseSchema,
   QuiztopiaSettingsSchema,
   RecentMissesResponseSchema,
   type ReviewBody,
@@ -20,6 +21,7 @@ import {
   WikiReadBodySchema,
   WikiReadsResponseSchema,
 } from "@boardgames/core/protocol";
+import { apiFetch } from "../../lib/api-fetch";
 import { dateKey } from "../../lib/offline-availability";
 import { jsonMutation, jsonQuery } from "../../lib/typed-query";
 
@@ -67,16 +69,25 @@ export const searchQuery = (opts: {
 
 export const wikiReadsQuery = () => jsonQuery(`${BASE}/wiki/reads`, WikiReadsResponseSchema);
 
+/** One page of the journal: `days` active days strictly before `before` (none = newest). */
+export const journalQuery = (opts: { before?: string; days?: number; tz: string }) =>
+  jsonQuery(`${BASE}/journal${qs(opts)}`, JournalResponseSchema);
+
 export const recentMissesQuery = (limit = 30) =>
   jsonQuery(`${BASE}/games/recent-misses${qs({ limit })}`, RecentMissesResponseSchema);
 
-const reviewMutation = jsonMutation(`${BASE}/trainer/reviews`, {
-  request: ReviewBodySchema,
-  response: ReviewResponseSchema,
-});
-
-/** Accepts the schema's INPUT shape (`source` may be omitted → "trainer"). */
-export const submitReview = (body: ReviewBody) => reviewMutation(ReviewBodySchema.parse(body));
+/**
+ * Grade one question. Accepts the schema's INPUT shape; `keepalive` lets the
+ * request finish after the page is gone (a grade committed on `pagehide`).
+ */
+export const submitReview = (body: ReviewBody, opts: { keepalive?: boolean } = {}) =>
+  apiFetch(`${BASE}/trainer/reviews`, {
+    method: "POST",
+    body: ReviewBodySchema.parse(body),
+    request: ReviewBodySchema,
+    response: ReviewResponseSchema,
+    keepalive: opts.keepalive,
+  });
 
 const bulkMutation = jsonMutation(`${BASE}/trainer/reviews/bulk`, {
   request: BulkReviewsBodySchema,
@@ -103,3 +114,10 @@ export const postWikiRead = jsonMutation(`${BASE}/wiki/reads`, {
   request: WikiReadBodySchema,
   response: WikiReadsResponseSchema,
 });
+
+/** Unmark a read (a mistaken tap); answers with the remaining list. Idempotent. */
+export const deleteWikiRead = jsonMutation(
+  `${BASE}/wiki/reads`,
+  { request: WikiReadBodySchema, response: WikiReadsResponseSchema },
+  { method: "DELETE" },
+);

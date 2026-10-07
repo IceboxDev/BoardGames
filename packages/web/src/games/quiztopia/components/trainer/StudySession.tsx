@@ -87,6 +87,8 @@ export default function StudySession() {
     readIndex < newSets.length &&
     session.progress.inSession === 0;
 
+  // `reveal` / `grade` refuse on their own while the card's text is still
+  // loading, so the keys need no extra gate beyond the screen's state.
   const { revealed, reveal, grade, undo, canUndo, complete, status } = session;
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
@@ -251,12 +253,18 @@ export default function StudySession() {
       </header>
 
       <main className="mx-auto flex w-full min-w-0 max-w-2xl flex-1 flex-col justify-center gap-3 px-4 py-6">
-        {(session.notice || session.offlinePending > 0) && (
+        {(session.notice || session.offlinePending > 0 || session.offlineRejected > 0) && (
           <div className="flex flex-wrap items-center gap-2" role="status">
             {session.offlinePending > 0 && (
               <Badge tone="amber" size="sm" ring>
                 {session.offlinePending} review{session.offlinePending === 1 ? "" : "s"} waiting to
                 sync
+              </Badge>
+            )}
+            {session.offlineRejected > 0 && (
+              <Badge tone="rose" size="sm" ring>
+                {session.offlineRejected} queued review
+                {session.offlineRejected === 1 ? " was" : "s were"} rejected by the server
               </Badge>
             )}
             {session.notice && <p className="text-xs text-amber-200">{session.notice}</p>}

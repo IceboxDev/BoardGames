@@ -19,26 +19,35 @@ import {
 } from "@boardgames/core/games/quiztopia/srs";
 import type { QuiztopiaLanguage, ReviewBody } from "@boardgames/core/protocol";
 import { type QueryFunctionContext, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from "react";
-import { ApiError, SchemaError } from "../../../lib/api-fetch";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { classifySendFailure } from "../../../lib/review-outbox";
 import { queueQuery, statesQuery, submitReview, todayKey } from "../api";
+import { invalidateAfterReviews } from "../cache";
+import { articleSnippet, findArticle, findQuestion, type Snippet } from "../content";
+import { useQuiztopiaOutbox } from "../review-outbox";
 import {
-  articleSnippet,
-  findArticle,
-  findQuestion,
-  preloadArticles,
-  preloadQuestions,
-  type Snippet,
-} from "../content";
-import { useCardArticles, useCardQuestions } from "./useContent";
-import { useOfflineReviewQueue } from "./useOfflineReviewQueue";
+  cardQuestionsQuery,
+  prefetchCardArticles,
+  prefetchCardQuestions,
+  useCardArticles,
+  useCardQuestions,
+} from "./useContent";
+import { articleLanguage } from "./useQuestionLanguage";
 
 // One study session, start to summary. The queue is fetched ONCE and then
 // owned locally: the server stays the source of truth for the schedule, but
 // every grade is applied optimistically with the same `applyReview` the
 // server runs, so the card's "next in 3 days" and the summary's due preview
-// are exact without a round trip. A review that can't reach the server goes
-// to the offline queue; one the server rejects is dropped with a notice.
+// are exact without a round trip.
+//
+// Commit on advance: the LATEST grade stays local — and undoable — until the
+// next grade, "keep going", the tab hiding or the screen closing; only then
+// is it sent. So "Undo" really undoes (the server never sees a grade that was
+// taken back) and a held-down key can't post a grade twice. Every earlier
+// grade is already on its way. A send that can't get through (offline, 5xx,
+// expired session, rate limit) waits in the review outbox; one the server
+// definitively rejects is dropped with a notice. The one exposure: a tab that
+// crashes outright loses its single uncommitted grade.
 
 // ── Spec ──────────────────────────────────────────────────────────────
 
@@ -69,6 +78,8 @@ export interface SessionReview {
   /** The card's text at grade time, for the summary's missed list. */
   question: ContentQuestion | null;
   item: SessionItem;
+  /** Sent to the server (or handed to the outbox) — no longer undoable. */
+  committed: boolean;
 }
 
 export interface SessionState {
@@ -103,6 +114,7 @@ export type SessionAction =
       question: ContentQuestion | null;
     }
   | { type: "undo"; now: number }
+  | { type: "committed"; clientId: string }
   | { type: "reconcile"; questionId: string; clientId: string; state: SrsState }
   | {
       type: "extend";
@@ -178,6 +190,7 @@ export function sessionReducer(s: SessionState, a: SessionAction): SessionState 
             insertedAt,
             question: a.question,
             item,
+            committed: false,
           },
         ],
         revealed: false,
@@ -185,13 +198,10 @@ export function sessionReducer(s: SessionState, a: SessionAction): SessionState 
       };
     }
     case "undo": {
-      // Local only: the review row already exists on the server (reviews are
-      // append-only, idempotent on clientId). The schedule the server holds
-      // is therefore one grade ahead until the next review of this card —
-      // acceptable for a mis-tap, and honest in the summary, which counts
-      // only what is left in `reviews`.
+      // Only the latest, still-uncommitted grade can be taken back: it has
+      // never left this tab, so undoing it is exact on both sides.
       const last = s.reviews[s.reviews.length - 1];
-      if (!last) return s;
+      if (!last || last.committed) return s;
       const items = [...s.items];
       if (last.insertedAt !== null) items.splice(last.insertedAt, 1);
       const states = { ...s.states };
@@ -206,6 +216,14 @@ export function sessionReducer(s: SessionState, a: SessionAction): SessionState 
         shownAt: a.now,
       };
     }
+    case "committed": {
+      const i = s.reviews.findIndex((r) => r.clientId === a.clientId);
+      const target = s.reviews[i];
+      if (!target || target.committed) return s;
+      const reviews = [...s.reviews];
+      reviews[i] = { ...target, committed: true };
+      return { ...s, reviews };
+    }
     case "reconcile": {
       // Adopt the server's state only while this review is still the latest
       // local word on the card — an undo or a later grade wins otherwise.
@@ -214,8 +232,15 @@ export function sessionReducer(s: SessionState, a: SessionAction): SessionState 
       return { ...s, states: { ...s.states, [a.questionId]: a.state } };
     }
     case "extend": {
+      // A fresh queue may still list a card graded in this sitting whose
+      // grade hasn't reached the server yet; its local state (due after
+      // today) is the authority, so it is not dealt again.
       const pending = new Set(s.items.slice(s.cursor).map((i) => i.questionId));
-      const fresh = a.items.filter((i) => !pending.has(i.questionId));
+      const fresh = a.items.filter((i) => {
+        if (pending.has(i.questionId)) return false;
+        const local = s.states[i.questionId];
+        return !local || daysBetween(s.today, local.dueDate) <= 0;
+      });
       if (fresh.length === 0) return s;
       const states = { ...s.states };
       for (const it of fresh) {
@@ -389,12 +414,37 @@ function newClientId(): string {
   return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 12)}`;
 }
 
+/** The latest grade, not yet sent: what `undo` can still take back. */
+interface PendingCommit {
+  clientId: string;
+  questionId: string;
+  body: ReviewBody;
+}
+
+const NOTICE_MS = 6000;
+
 export function useTrainerSession(spec: SessionSpec) {
   const today = useMemo(() => todayKey(), []);
   const qc = useQueryClient();
-  const offline = useOfflineReviewQueue();
-  const [s, dispatch] = useReducer(sessionReducer, today, initialSessionState);
+  const outbox = useQuiztopiaOutbox();
+  const { enqueue } = outbox;
   const [notice, setNotice] = useState<string | null>(null);
+
+  // The session lives in a ref as well as in React state. Handlers (keys,
+  // buttons, pagehide) read and advance the ref synchronously, so two events
+  // in one tick each see the other's effect — a held key can't grade one
+  // card twice — and React renders from the very same value.
+  const [s, setS] = useState(() => initialSessionState(today));
+  const sRef = useRef(s);
+  const apply = useCallback((action: SessionAction): SessionState => {
+    const prev = sRef.current;
+    const next = sessionReducer(prev, action);
+    if (next !== prev) {
+      sRef.current = next;
+      setS(next);
+    }
+    return next;
+  }, []);
 
   // The queue snapshot. Fetched once per session — never refetched behind
   // the user's back, since the local list is what they are working through.
@@ -408,8 +458,8 @@ export function useTrainerSession(spec: SessionSpec) {
   });
 
   useEffect(() => {
-    if (s.status === "loading" && source.data) {
-      dispatch({
+    if (sRef.current.status === "loading" && source.data) {
+      apply({
         type: "init",
         items: source.data.items,
         states: source.data.states,
@@ -417,7 +467,7 @@ export function useTrainerSession(spec: SessionSpec) {
         now: Date.now(),
       });
     }
-  }, [s.status, source.data]);
+  }, [apply, source.data]);
 
   const item = s.items[s.cursor] ?? null;
   const nextCardId = s.items[s.cursor + 1]?.cardId ?? null;
@@ -426,13 +476,13 @@ export function useTrainerSession(spec: SessionSpec) {
   // Current card's questions; the next card's chunk warms while this one is read.
   const cardQuery = useCardQuestions(currentCardId);
   useEffect(() => {
-    if (nextCardId) preloadQuestions(nextCardId);
-  }, [nextCardId]);
+    if (nextCardId) prefetchCardQuestions(qc, nextCardId);
+  }, [qc, nextCardId]);
   // The article is needed on reveal; warming it as soon as the card shows
   // keeps the flip instant without loading chunks for cards never shown.
   useEffect(() => {
-    if (currentCardId) preloadArticles(currentCardId);
-  }, [currentCardId]);
+    if (currentCardId) prefetchCardArticles(qc, currentCardId);
+  }, [qc, currentCardId]);
   const articleQuery = useCardArticles(currentCardId, s.revealed);
 
   const current: CurrentCard | null = useMemo(() => {
@@ -450,7 +500,7 @@ export function useTrainerSession(spec: SessionSpec) {
   const snippetFor = useCallback(
     (lang: QuiztopiaLanguage): Snippet | null => {
       if (!article || !current) return null;
-      const single = lang === "de" ? "de" : "en";
+      const single = articleLanguage(lang);
       const text = single === "de" ? article.articleDe : article.articleEn;
       const span = article.answerSpans[single][current.q];
       return span ? articleSnippet(text, span) : null;
@@ -458,111 +508,169 @@ export function useTrainerSession(spec: SessionSpec) {
     [article, current],
   );
 
-  const reveal = useCallback(() => dispatch({ type: "reveal" }), []);
+  /**
+   * The card's text, read from the cache at event time: a card whose chunk
+   * hasn't arrived can be neither revealed nor graded, whatever the keyboard
+   * says — the user would be grading a card they never saw.
+   */
+  const shownCard = useCallback(
+    (target: SessionItem | undefined) => {
+      if (!target) return null;
+      const card = qc.getQueryData(cardQuestionsQuery(target.cardId).queryKey);
+      return card ? findQuestion(card, target.questionId) : null;
+    },
+    [qc],
+  );
 
-  const enqueue = offline.enqueue;
+  const reveal = useCallback(() => {
+    const st = sRef.current;
+    if (st.status !== "ready" || !shownCard(st.items[st.cursor])) return;
+    apply({ type: "reveal" });
+  }, [apply, shownCard]);
+
+  // ── Commit ─────────────────────────────────────────────────────────────
+
+  const pendingRef = useRef<PendingCommit | null>(null);
+
+  const send = useCallback(
+    (commit: PendingCommit, opts: { keepalive?: boolean } = {}): Promise<void> => {
+      apply({ type: "committed", clientId: commit.clientId });
+      return submitReview(commit.body, opts).then(
+        (res) => {
+          if (!res.state) return;
+          apply({
+            type: "reconcile",
+            questionId: commit.questionId,
+            clientId: commit.clientId,
+            state: res.state,
+          });
+        },
+        async (err: unknown) => {
+          const verdict = classifySendFailure(err);
+          if (verdict === "retry") await enqueue(commit.body);
+          else if (verdict === "rejected") {
+            setNotice(
+              `A review was not saved (${err instanceof Error ? err.message : "rejected"}).`,
+            );
+          }
+        },
+      );
+    },
+    [apply, enqueue],
+  );
+
+  /** Send the held-back latest grade, if any. Resolves once it is delivered or queued. */
+  const commitPending = useCallback(
+    (opts: { keepalive?: boolean } = {}): Promise<void> => {
+      const commit = pendingRef.current;
+      if (!commit) return Promise.resolve();
+      pendingRef.current = null;
+      return send(commit, opts);
+    },
+    [send],
+  );
+
   const grade = useCallback(
     (g: SrsGrade) => {
-      const target = s.items[s.cursor];
-      if (!target || !s.revealed) return;
+      const prev = sRef.current;
+      const target = prev.items[prev.cursor];
+      const shown = shownCard(target);
+      if (!target || !prev.revealed || !shown) return;
       const now = Date.now();
       const clientId = newClientId();
-      const durationMs = Math.max(0, Math.min(MAX_DURATION_MS, now - s.shownAt));
-      dispatch({
+      const nowIso = new Date(now).toISOString();
+      const next = apply({
         type: "grade",
         grade: g,
         clientId,
         now,
-        nowIso: new Date(now).toISOString(),
-        question: current?.question ?? null,
+        nowIso,
+        question: shown.question,
       });
-      const body: ReviewBody = {
+      const review = next.reviews[next.reviews.length - 1];
+      if (next === prev || !review || review.clientId !== clientId) return;
+      const earlier = pendingRef.current;
+      pendingRef.current = {
         clientId,
         questionId: target.questionId,
-        grade: g,
-        localDate: today,
-        durationMs,
+        body: {
+          clientId,
+          questionId: target.questionId,
+          grade: g,
+          localDate: prev.today,
+          durationMs: review.durationMs,
+          // Graded now, whenever it is sent: keeps the server's ordering of
+          // grades true for a commit or an outbox replay that lands later.
+          reviewedAt: nowIso,
+        },
       };
-      submitReview(body)
-        .then((res) => {
-          if (res.state) {
-            dispatch({
-              type: "reconcile",
-              questionId: target.questionId,
-              clientId,
-              state: res.state,
-            });
-          }
-        })
-        .catch((err: unknown) => {
-          if (err instanceof ApiError && err.status >= 400 && err.status < 500) {
-            setNotice(`This review was not saved (${err.message}).`);
-            return;
-          }
-          if (err instanceof SchemaError) {
-            setNotice("Saved, but the reply looked wrong — the schedule will catch up.");
-            return;
-          }
-          // Offline or a server hiccup: keep it and replay later.
-          enqueue(body);
-        });
+      if (earlier) void send(earlier);
     },
-    [s.items, s.cursor, s.revealed, s.shownAt, current, today, enqueue],
+    [apply, shownCard, send],
   );
 
-  const undo = useCallback(() => dispatch({ type: "undo", now: Date.now() }), []);
+  const undo = useCallback(() => {
+    const commit = pendingRef.current;
+    const prev = sRef.current;
+    if (!commit || prev.reviews[prev.reviews.length - 1]?.clientId !== commit.clientId) return;
+    if (apply({ type: "undo", now: Date.now() }) !== prev) pendingRef.current = null;
+  }, [apply]);
 
   useEffect(() => {
     if (!notice) return;
-    const t = window.setTimeout(() => setNotice(null), 6000);
+    const t = window.setTimeout(() => setNotice(null), NOTICE_MS);
     return () => window.clearTimeout(t);
   }, [notice]);
 
   const complete = s.status === "ready" && s.cursor >= s.items.length;
   const summary = useMemo(() => summarize(s), [s]);
-
-  // Anything the hub shows (due counts, streak, heatmap) is stale once a
-  // grade has landed — refresh it at the end of the session and, for a
-  // session left half-way, on unmount.
   const reviewedCount = s.reviews.length;
-  const reviewedRef = useRef(0);
-  reviewedRef.current = reviewedCount;
-  const invalidate = useCallback(() => {
-    void qc.invalidateQueries({ queryKey: ["quiztopia", "overview"] });
-    void qc.invalidateQueries({ queryKey: ["quiztopia", "history"] });
-    void qc.invalidateQueries({ queryKey: ["quiztopia", "queue"] });
-  }, [qc]);
-  const invalidatedRef = useRef(false);
+
+  // The summary has no undo, so the last grade commits as the session
+  // completes; then everything the summary and hub show (due counts, the
+  // lit skyline, streak, heatmap, the wiki's dots) refetches with it in.
   useEffect(() => {
-    if (complete && reviewedCount > 0 && !invalidatedRef.current) {
-      invalidatedRef.current = true;
-      invalidate();
-    }
-    if (!complete) invalidatedRef.current = false;
-  }, [complete, reviewedCount, invalidate]);
+    if (!complete || reviewedCount === 0) return;
+    void commitPending().finally(() => invalidateAfterReviews(qc));
+  }, [complete, reviewedCount, commitPending, qc]);
+
+  // A tab that hides may never come back (mobile app switch, closed tab):
+  // commit with keepalive so the request survives the page.
+  useEffect(() => {
+    const onHide = () => void commitPending({ keepalive: true });
+    const onVisibility = () => {
+      if (document.visibilityState === "hidden") onHide();
+    };
+    document.addEventListener("visibilitychange", onVisibility);
+    window.addEventListener("pagehide", onHide);
+    return () => {
+      document.removeEventListener("visibilitychange", onVisibility);
+      window.removeEventListener("pagehide", onHide);
+    };
+  }, [commitPending]);
+
+  // Leaving half-way: commit, then refresh what the hub shows.
   useEffect(
     () => () => {
-      if (reviewedRef.current > 0) invalidate();
+      if (sRef.current.reviews.length === 0) return;
+      void commitPending({ keepalive: true }).finally(() => invalidateAfterReviews(qc));
     },
-    [invalidate],
+    [commitPending, qc],
   );
 
   /** Fetch a fresh queue and append what is not already ahead of the cursor. */
   const extend = useCallback(async (): Promise<number> => {
     if (spec.kind !== "due") return 0;
+    await commitPending();
     const data = await qc.fetchQuery({
       queryKey: sourceKey(spec, today),
       queryFn: (ctx) => fetchSource(spec, today, ctx),
       staleTime: 0,
     });
-    const pending = new Set(s.items.slice(s.cursor).map((i) => i.questionId));
-    const fresh = data.items.filter((i) => !pending.has(i.questionId));
-    if (fresh.length > 0) {
-      dispatch({ type: "extend", items: fresh, states: data.states, now: Date.now() });
-      invalidatedRef.current = false;
-    }
-    return fresh.length;
-  }, [spec, today, qc, s.items, s.cursor]);
+    const before = sRef.current.items.length;
+    const next = apply({ type: "extend", items: data.items, states: data.states, now: Date.now() });
+    return next.items.length - before;
+  }, [spec, today, qc, apply, commitPending]);
 
   const lastReview = s.reviews[s.reviews.length - 1] ?? null;
 
@@ -586,7 +694,8 @@ export function useTrainerSession(spec: SessionSpec) {
     reveal,
     grade,
     undo,
-    canUndo: s.reviews.length > 0,
+    /** Only the latest grade, while it is still held back, can be undone. */
+    canUndo: lastReview !== null && !lastReview.committed,
     lastReview,
     /** The day's progress: today's earlier sittings count, so picking up again doesn't reset it. */
     progress: {
@@ -599,7 +708,10 @@ export function useTrainerSession(spec: SessionSpec) {
     summary,
     extend,
     notice,
-    offlinePending: offline.pendingCount,
+    /** Reviews waiting in the outbox for the server. */
+    offlinePending: outbox.pendingCount,
+    /** Reviews the outbox dropped as rejected during this page's lifetime. */
+    offlineRejected: outbox.rejectedCount,
   };
 }
 

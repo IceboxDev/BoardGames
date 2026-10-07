@@ -1,7 +1,5 @@
 import type { ContentSetQuestions } from "@boardgames/core/games/quiztopia/content-types";
 import { QUESTIONS_PER_SET, questionId, setId } from "@boardgames/core/games/quiztopia/ids";
-import type { WikiReads } from "@boardgames/core/protocol";
-import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { type ReactNode, useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { Link, Navigate, useLocation, useNavigate, useParams } from "react-router-dom";
 import { CheckIcon, ChevronLeftIcon, ChevronRightIcon } from "../../../../components/icons";
@@ -21,13 +19,12 @@ import {
 } from "../../../../components/ui";
 import useDocumentTitle from "../../../../hooks/useDocumentTitle";
 import { cn } from "../../../../lib/cn";
-import { qk } from "../../../../lib/query-keys";
-import { postWikiRead, wikiReadsQuery } from "../../api";
 import { type District, districtBySlug, TONE_LIT, TONE_STRIP } from "../../bands";
 import { CARD_IDS, findArticle } from "../../content";
 import { useCardArticles, useCardQuestions } from "../../hooks/useContent";
 import { usePinnedIds } from "../../hooks/usePinnedTimeline";
 import { useQuestionLanguage } from "../../hooks/useQuestionLanguage";
+import { useWikiRead } from "../../hooks/useWikiRead";
 import { isPlainKey, isTypingTarget } from "../../keys";
 import { useTrainerPaths } from "../../paths";
 import { BuildingGlyph } from "../common/BuildingGlyph";
@@ -73,7 +70,6 @@ function ArticleScreen({ district: d, cardId, cardIndex }: ScreenProps) {
   const paths = useTrainerPaths();
   const navigate = useNavigate();
   const location = useLocation();
-  const qc = useQueryClient();
   const fiveId = useId();
   const sourcesId = useId();
   const pinned = usePinnedIds();
@@ -92,20 +88,9 @@ function ArticleScreen({ district: d, cardId, cardIndex }: ScreenProps) {
   const title = article ? (language === "de" ? article.titleDe : article.titleEn) : cardId;
   useDocumentTitle(`${title} · The Archive`);
 
-  const reads = useQuery({
-    queryKey: qk.quiztopiaWikiReads(),
-    queryFn: wikiReadsQuery(),
-    staleTime: 60_000,
-  });
-  const isRead = (reads.data?.reads ?? []).some((r) => r.setId === sid);
-  const markRead = useMutation({
-    mutationFn: postWikiRead,
-    onSuccess: (res) => qc.setQueryData<WikiReads>(qk.quiztopiaWikiReads(), res),
-  });
-  const { mutate: mutateRead, isPending: marking } = markRead;
-  const requestRead = useCallback(() => {
-    if (!isRead && !marking) mutateRead({ setId: sid });
-  }, [isRead, marking, mutateRead, sid]);
+  const wikiRead = useWikiRead(sid);
+  const { isRead, setRead } = wikiRead;
+  const requestRead = useCallback(() => setRead(true), [setRead]);
 
   // Blocks (paragraphs, tables, lists) + marks from the importer's spans.
   const paragraphs: ArticleBlock[] = useMemo(() => {
@@ -367,9 +352,10 @@ function ArticleScreen({ district: d, cardId, cardIndex }: ScreenProps) {
             tone="emerald"
             size="sm"
             icon={<CheckIcon className="h-3.5 w-3.5" />}
-            onClick={requestRead}
-            disabled={isRead || marking || !article}
-            title={isRead ? "You have read this article" : "Mark this article as read"}
+            onClick={() => setRead(!isRead)}
+            disabled={!wikiRead.loaded || !article}
+            title={isRead ? "Read — click to mark it unread" : "Mark this article as read"}
+            aria-label={isRead ? "Read. Mark as unread" : "Mark as read"}
           >
             {isRead ? "Read" : "Mark read"}
           </Chip>

@@ -69,6 +69,14 @@ export const qk = {
     ["quiztopia", "search", q, lang, category] as const,
   quiztopiaWikiReads: () => ["quiztopia", "wiki-reads"] as const,
   quiztopiaRecentMisses: () => ["quiztopia", "recent-misses"] as const,
+  quiztopiaJournal: (tz: string) => ["quiztopia", "journal", tz] as const,
+  quiztopiaJournalAll: () => ["quiztopia", "journal"] as const,
+  // Prefixes for invalidation (every date / id variant of one read).
+  quiztopiaAll: () => ["quiztopia"] as const,
+  quiztopiaOverviewAll: () => ["quiztopia", "overview"] as const,
+  quiztopiaQueueAll: () => ["quiztopia", "queue"] as const,
+  quiztopiaStatesAll: () => ["quiztopia", "states"] as const,
+  quiztopiaHistoryAll: () => ["quiztopia", "history"] as const,
   // World Geography trainer. Root "geography" is excluded from the persister
   // like "quiztopia": the overview is date-bound.
   geographyOverview: (today: string) => ["geography", "overview", today] as const,

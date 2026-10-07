@@ -17,7 +17,7 @@ export default function TimelinePage() {
   const paths = useTrainerPaths();
   const [params, setParams] = useSearchParams();
   const focusId = params.get("q");
-  const { pins, index, items, undated } = usePinnedTimeline({ eager: true });
+  const { pins, index, items, undated } = usePinnedTimeline();
 
   const onFocus = useCallback(
     (id: string | null) =>

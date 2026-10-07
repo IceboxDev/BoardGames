@@ -18,8 +18,13 @@ type Props = {
   district: District;
   to: string;
   lit: boolean;
-  /** Mastery 0..1 — the small ring in the top-right corner. */
-  ring?: number;
+  /**
+   * The district's progress — the ring in the top-right corner: learned
+   * questions in the district's colour, seen-but-still-learning in grey,
+   * the learned count in the middle. Counts, not a percentage: a district
+   * holds hundreds of questions, so a share would read 0% for weeks.
+   */
+  progress?: { seen: number; learned: number; total: number };
   /** Badge row / progress line under the name. */
   children?: ReactNode;
   cta: string;
@@ -31,13 +36,15 @@ export function CategoryTile({
   district: d,
   to,
   lit,
-  ring,
+  progress,
   children,
   cta,
   corner,
   className,
 }: Props) {
-  const pct = ring === undefined ? null : Math.round(ring * 100);
+  const progressTitle = progress
+    ? `${progress.learned} learned · ${progress.seen} seen · ${progress.total} questions`
+    : undefined;
   return (
     // The lift lives on the wrapper so the corner link (a sibling — links
     // cannot nest) rises with the card instead of staying behind.
@@ -62,21 +69,30 @@ export function CategoryTile({
           >
             <BuildingGlyph name={d.building} lit={lit} size={24} />
           </span>
-          {pct !== null && (
-            <DonutChart
-              size={40}
-              thickness={5}
-              segments={[
-                { value: pct, tone: d.tone, label: "Mastered" },
-                { value: 100 - pct, color: "transparent" },
-              ]}
-            >
-              {/* pl-px / pb-px: half-pixel optical nudge — the % glyph's right
-                  bearing and the digits' baseline put the ink left and low. */}
-              <span className="pb-px pl-px text-3xs font-semibold tabular-nums text-fg-secondary">
-                {pct}%
-              </span>
-            </DonutChart>
+          {progress && (
+            <span title={progressTitle} className="shrink-0">
+              <DonutChart
+                size={44}
+                thickness={5}
+                segments={[
+                  { value: progress.learned, tone: d.tone, label: "Learned" },
+                  {
+                    value: Math.max(0, progress.seen - progress.learned),
+                    tone: "neutral",
+                    label: "Still learning",
+                  },
+                  {
+                    value: Math.max(0, progress.total - progress.seen),
+                    color: "transparent",
+                  },
+                ]}
+              >
+                <span className="text-2xs font-semibold tabular-nums text-fg-secondary">
+                  {progress.learned}
+                </span>
+              </DonutChart>
+              <span className="sr-only">{progressTitle}</span>
+            </span>
           )}
         </div>
         <div className="min-w-0">

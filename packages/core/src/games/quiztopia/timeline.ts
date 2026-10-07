@@ -366,6 +366,23 @@ export function timelineSpanYears(events: Iterable<ParsedEvent>): number {
   return Number.isFinite(lo) ? Math.max(0, hi - lo) : 0;
 }
 
+/**
+ * The numbers behind the hub's teaser: how many events parse ("dated") and
+ * the years they span. The server computes it for the member's pins, so the
+ * hub never downloads the whole timeline index for one sentence.
+ */
+export function timelineSummary(
+  events: Iterable<Pick<TimelineEvent, "start" | "end" | "ongoing">>,
+  now: TimelineDate = currentDate(),
+): { dated: number; spanYears: number } {
+  const parsed: ParsedEvent[] = [];
+  for (const ev of events) {
+    const p = parseEvent(ev, now);
+    if (p) parsed.push(p);
+  }
+  return { dated: parsed.length, spanYears: timelineSpanYears(parsed) };
+}
+
 /** "3,000 years", "66 million years" — the hub's teaser phrase. */
 export function formatSpan(years: number, lang: TimelineLang): string {
   if (years < 1) return lang === "de" ? "weniger als ein Jahr" : "less than a year";

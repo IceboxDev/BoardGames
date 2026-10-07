@@ -12,6 +12,7 @@ import type { GameComponentProps } from "../types";
 import QuiztopiaBoard from "./components/board/QuiztopiaBoard";
 import QuiztopiaGameOver from "./components/game-over/QuiztopiaGameOver";
 import TrainerRoutes from "./components/trainer/TrainerRoutes";
+import { TRAINER_BASE } from "./paths";
 
 /**
  * Quiztopia's two surfaces:
@@ -33,12 +34,11 @@ function QuiztopiaRoom() {
   const navigate = useNavigate();
   const flow = useSessionFlow<QuiztopiaPlayerView, QuiztopiaAction, QuiztopiaResult | null>("mp");
   const { backToMenu } = flow;
-  // The room code keys the per-question reviews the game-over screen posts.
   const { mp } = useGameShell();
 
   const openTrainer = useCallback(() => {
     backToMenu();
-    navigate("/play/quiztopia/solo");
+    navigate(TRAINER_BASE);
   }, [backToMenu, navigate]);
 
   if (flow.phase === "finished" && flow.result) {
@@ -47,7 +47,6 @@ function QuiztopiaRoom() {
         result={flow.result}
         view={flow.view}
         seatNames={flow.seatNames}
-        roomCode={mp.roomCode}
         onBackToMenu={backToMenu}
         onOpenTrainer={openTrainer}
         onLeave={mp.reset}

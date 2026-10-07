@@ -5,10 +5,10 @@ import { pinsQuery } from "../api";
 import { joinPins, type TimelineItem } from "../logic/timeline-layout";
 import { useTimelineIndex } from "./useContent";
 
-// The member's pins (every question graded in the trainer) and, once any
-// exist, the content's event index joined onto them. Pins refetch on every
-// mount — a study session in between adds some — while the index is an
-// immutable content chunk.
+// The member's pins (every question graded in the trainer) and the content's
+// event index joined onto them. Pins refetch on every mount — a study session
+// in between adds some — while the index is an immutable content chunk that
+// only the timeline screen loads (the hub reads the pins' own summary).
 
 export function usePins(enabled = true) {
   return useQuery({
@@ -33,14 +33,10 @@ export interface PinnedTimeline {
   undated: number;
 }
 
-/**
- * `eager` loads the event index alongside the pins (the timeline screen);
- * otherwise it waits until there is at least one pin (the hub teaser).
- */
-export function usePinnedTimeline({ eager = false }: { eager?: boolean } = {}): PinnedTimeline {
+/** The timeline screen's data: the pins joined with the content's event index. */
+export function usePinnedTimeline(): PinnedTimeline {
   const pins = usePins();
-  const hasPins = (pins.data?.pins.length ?? 0) > 0;
-  const index = useTimelineIndex(eager || hasPins);
+  const index = useTimelineIndex();
   const joined = useMemo(
     () =>
       pins.data && index.data ? joinPins(pins.data.pins, index.data) : { items: [], undated: 0 },

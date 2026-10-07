@@ -152,6 +152,11 @@ export function SessionSummary({ session, title, language, paths }: Props) {
             Keep going
           </Button>
         )}
+        {summary.reviewed > 0 && (
+          <Button variant="ghost" size="lg" onClick={() => navigate(paths.journal)}>
+            Review today in your journal
+          </Button>
+        )}
       </div>
       {note && (
         <p role="status" className="text-center text-xs text-fg-muted">

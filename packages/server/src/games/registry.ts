@@ -24,15 +24,38 @@ import { theHungerSpec, withHungerAiOffload } from "@boardgames/core/games/the-h
 import { resistanceSpec } from "@boardgames/core/games/the-resistance/machine";
 import type { AnyGameMachineSpec } from "@boardgames/core/machines/types";
 import type { AnyActorLogic } from "xstate";
+import { getDb } from "../db.ts";
 import { aiAvailable } from "../lib/ai";
+import { getContentStore } from "../lib/quiztopia/content-store.ts";
+import { recordGameReviews } from "../lib/quiztopia/game-reviews.ts";
 import { openAiDecryptoAgent } from "./decrypto-agent.ts";
 import { hungerAiOffload } from "./hunger-ai-pool.ts";
 import { sevenWondersSearchAgent } from "./seven-wonders-agent.ts";
+
+/** A session that just ended in game over, as `afterGameOver` sees it. */
+export interface EndedGame {
+  /** The session's id (an unguessable UUID): a stable namespace for follow-up writes. */
+  readonly sessionId: string;
+  readonly roomCode: string | null;
+  /** The account in each seat, by seat index; `null` for an AI seat. */
+  readonly seatUserIds: readonly (string | null)[];
+  /** `spec.getReplayLog` of the final snapshot — erased here, so parse it, never cast it. */
+  readonly replayLog: unknown;
+  readonly endedAt: Date;
+}
 
 export interface ServerGame {
   readonly spec: AnyGameMachineSpec;
   /** The machine for a new session — the spec's own, or one with server-only AI bound in. */
   readonly createMachine: () => AnyActorLogic;
+  /**
+   * Game-specific writes once a game is over and its match saved (Quiztopia
+   * turns the table's answers into trainer reviews). Runs after the
+   * players got their game-over frame; a throw is logged by the session
+   * manager and never affects the session. Must be idempotent: a game-over
+   * snapshot can be emitted more than once.
+   */
+  readonly afterGameOver?: (ended: EndedGame) => Promise<void>;
 }
 
 /** A game whose machine runs exactly as the spec defines it. */
@@ -59,7 +82,13 @@ const SERVER_GAMES: readonly ServerGame[] = [
   plain(lostCitiesSpec),
   plain(pandemicSpec),
   plain(parksSpec),
-  plain(quiztopiaSpec),
+  {
+    ...plain(quiztopiaSpec),
+    // Every judged question becomes a review for the seats it tested.
+    afterGameOver: async (ended) => {
+      await recordGameReviews(getDb(), getContentStore(), ended);
+    },
+  },
   plain(sensoSpec),
   plain(setPvpSpec),
   plain(skyTeamSpec),

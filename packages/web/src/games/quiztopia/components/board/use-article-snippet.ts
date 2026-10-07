@@ -1,10 +1,12 @@
 import { parseCardRef } from "@boardgames/core/games/quiztopia/ids";
-import { useEffect, useState } from "react";
-import { articleSnippet, loadArticles, type Snippet } from "../../content";
+import { useMemo } from "react";
+import { articleSnippet, type Snippet } from "../../content";
+import { useCardArticles } from "../../hooks/useContent";
 
-// The article sentence around the revealed answer. Loaded lazily from the
-// card's article chunk — only for real card refs (`c042`, `c042-v2`); a
-// fixture ref has no chunk and simply yields nothing.
+// The article sentence around the revealed answer. Read from the card's
+// article chunk through the shared content cache — only for real card refs
+// (`c042`, `c042-v2`); a fixture ref has no chunk and simply yields nothing,
+// as does a chunk that failed to load (the panel then shows just the answer).
 
 export function useArticleSnippet(
   cardRef: string | null,
@@ -12,33 +14,17 @@ export function useArticleSnippet(
   lang: "en" | "de",
   enabled: boolean,
 ): Snippet | null {
-  const [snippet, setSnippet] = useState<Snippet | null>(null);
   const parsed = cardRef ? parseCardRef(cardRef) : null;
   const cardId = parsed?.cardId ?? null;
   const q = parsed?.q ?? 0;
+  const articles = useCardArticles(cardId, enabled && categoryIndex != null);
 
-  useEffect(() => {
-    setSnippet(null);
-    if (!enabled || !cardId || categoryIndex == null) return;
-    let cancelled = false;
-    loadArticles(cardId)
-      .then((card) => {
-        if (cancelled) return;
-        const set = card.sets[categoryIndex];
-        if (!set) return;
-        const article = lang === "de" ? set.articleDe : set.articleEn;
-        const span = lang === "de" ? set.answerSpans.de[q] : set.answerSpans.en[q];
-        if (!span) return;
-        setSnippet(articleSnippet(article, span, 140));
-      })
-      .catch(() => {
-        // No article for this ref (fixtures, missing chunk) — the panel just
-        // shows the answer.
-      });
-    return () => {
-      cancelled = true;
-    };
-  }, [enabled, cardId, categoryIndex, lang, q]);
-
-  return snippet;
+  return useMemo(() => {
+    if (!enabled || categoryIndex == null || !articles.data) return null;
+    const set = articles.data.sets[categoryIndex];
+    if (!set) return null;
+    const span = set.answerSpans[lang][q];
+    if (!span) return null;
+    return articleSnippet(lang === "de" ? set.articleDe : set.articleEn, span, 140);
+  }, [enabled, categoryIndex, articles.data, lang, q]);
 }

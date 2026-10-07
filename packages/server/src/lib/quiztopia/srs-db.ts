@@ -30,6 +30,7 @@ import {
   type QuiztopiaSettings,
   QuiztopiaSettingsSchema,
   type ReviewBodySchema,
+  type ReviewSource,
   SrsStateKindSchema,
   type SrsStateWire,
 } from "@boardgames/core/protocol";
@@ -216,7 +217,15 @@ export class ReviewRejectedError extends Error {
   }
 }
 
-export type ReviewInput = z.output<typeof ReviewBodySchema>;
+/**
+ * A review to record: a client's trainer grade (the wire body) or a table
+ * game's answer the server derived itself at game over (`game-reviews.ts`).
+ */
+export type ReviewInput = Omit<z.output<typeof ReviewBodySchema>, "source"> & {
+  source: ReviewSource;
+  /** The room a table game was played in (game reviews only). */
+  roomCode?: string | null;
+};
 
 export interface RecordReviewResult {
   /** The `clientId` was already logged; nothing was graded. */
@@ -416,7 +425,7 @@ export function newPerDayFor(settings: QuiztopiaSettings, n: number): number {
   return settings.newPerDayByCategory[String(n)] ?? settings.newPerDay;
 }
 
-/** Wipes the user's schedule, review history and wiki reads; settings stay. */
+/** Wipes the user's schedule, review history, wiki reads and read log; settings stay. */
 export async function resetProgress(
   db: Client,
   userId: string,
@@ -426,6 +435,7 @@ export async function resetProgress(
       { sql: "DELETE FROM quiztopia_srs WHERE user_id = ?", args: [userId] },
       { sql: "DELETE FROM quiztopia_reviews WHERE user_id = ?", args: [userId] },
       { sql: "DELETE FROM quiztopia_wiki_reads WHERE user_id = ?", args: [userId] },
+      { sql: "DELETE FROM quiztopia_wiki_read_log WHERE user_id = ?", args: [userId] },
     ],
     "write",
   );

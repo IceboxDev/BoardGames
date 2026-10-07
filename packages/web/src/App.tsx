@@ -1,4 +1,4 @@
-import { defaultShouldDehydrateQuery } from "@tanstack/react-query";
+import { defaultShouldDehydrateMutation, defaultShouldDehydrateQuery } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import { PersistQueryClientProvider } from "@tanstack/react-query-persist-client";
 import { type ComponentType, Suspense } from "react";
@@ -267,6 +267,12 @@ export default function App() {
             q.queryKey[0] !== "greetings" &&
             q.queryKey[0] !== "quiztopia" &&
             q.queryKey[0] !== "geography",
+          // A save queued behind another in its scope sits "paused"; the
+          // default would persist it, and a reload would then replay a
+          // whole-object PUT with no mutationFn bound. Trainer saves are
+          // never replayed from disk.
+          shouldDehydrateMutation: (m) =>
+            defaultShouldDehydrateMutation(m) && m.options.mutationKey?.[0] !== "quiztopia",
         },
       }}
     >

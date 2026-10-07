@@ -9,16 +9,20 @@
 //   GET  /trainer/pins                   every studied question (the personal timeline)
 //   GET  /settings, PUT /settings
 //   GET  /search?q=&lang=&category=
-//   POST /wiki/reads, GET /wiki/reads
+//   POST /wiki/reads, DELETE /wiki/reads, GET /wiki/reads
+//   GET  /journal?before=&days=&tz=      day-by-day studied questions and reads
 //   GET  /games/recent-misses
 //
 // The client is the clock: every read carries its local `today`, every
 // write its `localDate`. The content store is the authority on which
 // questions exist; the DB only ever holds ids.
 
+import { timelineSummary } from "@boardgames/core/games/quiztopia/timeline";
 import {
   BulkReviewsBodySchema,
   BulkReviewsResponseSchema,
+  JournalQuerySchema,
+  JournalResponseSchema,
   QuiztopiaSettingsSchema,
   type RecentMisses,
   RecentMissesQuerySchema,
@@ -51,6 +55,7 @@ import { logActivity, settingsChanges } from "../lib/activity-log.ts";
 import { parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
 import { getContentStore } from "../lib/quiztopia/content-store.ts";
+import { InvalidTimeZoneError, readJournal } from "../lib/quiztopia/journal.ts";
 import {
   type RecordReviewResult,
   ReviewRejectedError,
@@ -78,6 +83,9 @@ const MissRowSchema = z.object({
   reviewed_at: z.string(),
   room_code: z.string().nullable(),
 });
+
+/** Re-marking an article within this long counts as the same read in the log. */
+const READ_LOG_DEDUPE_MS = 10 * 60_000;
 
 async function wikiReads(db: Client, userId: string) {
   const { rows } = await db.execute({
@@ -215,7 +223,13 @@ quiztopiaRoutes.get("/trainer/pins", async (c) => {
       known: r.state === "review",
       lastReviewedAt: r.last_reviewed_at,
     }));
-  return c.json(TimelinePinsResponseSchema.parse({ pins }));
+  const summary = timelineSummary(
+    pins.flatMap((p) => {
+      const timeline = store.getQuestion(p.questionId)?.timeline;
+      return timeline ? [timeline] : [];
+    }),
+  );
+  return c.json(TimelinePinsResponseSchema.parse({ pins, summary }));
 });
 
 // ── Settings ───────────────────────────────────────────────────────────
@@ -264,18 +278,82 @@ quiztopiaRoutes.post("/wiki/reads", zJsonBody(WikiReadBodySchema), async (c) => 
     return errorResponse(c, 404, "article not found", "NOT_FOUND");
   }
   const db = getDb();
-  await db.execute({
-    sql: `INSERT INTO quiztopia_wiki_reads (user_id, set_id, read_at)
-          VALUES (?, ?, ?)
-          ON CONFLICT(user_id, set_id) DO UPDATE SET read_at = excluded.read_at`,
-    args: [user.id, setId, new Date().toISOString()],
-  });
+  const now = new Date();
+  const readAt = now.toISOString();
+  const dedupeSince = new Date(now.getTime() - READ_LOG_DEDUPE_MS).toISOString();
+  await db.batch(
+    [
+      {
+        sql: `INSERT INTO quiztopia_wiki_reads (user_id, set_id, read_at)
+              VALUES (?, ?, ?)
+              ON CONFLICT(user_id, set_id) DO UPDATE SET read_at = excluded.read_at`,
+        args: [user.id, setId, readAt],
+      },
+      // The journal's log of every read — one entry per sitting: a re-mark
+      // of the same article within a few minutes is the same read.
+      {
+        sql: `INSERT INTO quiztopia_wiki_read_log (user_id, set_id, read_at)
+              SELECT ?, ?, ?
+               WHERE NOT EXISTS (SELECT 1 FROM quiztopia_wiki_read_log
+                                  WHERE user_id = ? AND set_id = ? AND read_at > ?)`,
+        args: [user.id, setId, readAt, user.id, setId, dedupeSince],
+      },
+    ],
+    "write",
+  );
+  return c.json(await wikiReads(db, user.id));
+});
+
+// Unmark: a read marked by mistake (a stray tap, the auto-mark firing on a
+// skim). Idempotent — an article that isn't marked stays unmarked.
+quiztopiaRoutes.delete("/wiki/reads", zJsonBody(WikiReadBodySchema), async (c) => {
+  const user = c.get("user");
+  const { setId } = c.req.valid("json");
+  const db = getDb();
+  await db.batch(
+    [
+      // The mistaken read is the newest log entry — only while the article
+      // is still marked, so a repeated unmark never eats an earlier read.
+      {
+        sql: `DELETE FROM quiztopia_wiki_read_log
+               WHERE id = (SELECT id FROM quiztopia_wiki_read_log
+                            WHERE user_id = ? AND set_id = ?
+                            ORDER BY read_at DESC, id DESC LIMIT 1)
+                 AND EXISTS (SELECT 1 FROM quiztopia_wiki_reads WHERE user_id = ? AND set_id = ?)`,
+        args: [user.id, setId, user.id, setId],
+      },
+      {
+        sql: "DELETE FROM quiztopia_wiki_reads WHERE user_id = ? AND set_id = ?",
+        args: [user.id, setId],
+      },
+    ],
+    "write",
+  );
   return c.json(await wikiReads(db, user.id));
 });
 
 quiztopiaRoutes.get("/wiki/reads", async (c) => {
   const user = c.get("user");
   return c.json(await wikiReads(getDb(), user.id));
+});
+
+// ── Journal ────────────────────────────────────────────────────────────
+
+quiztopiaRoutes.get("/journal", zQuery(JournalQuerySchema), async (c) => {
+  const user = c.get("user");
+  const { before, days, tz } = c.req.valid("query");
+  try {
+    const journal = await readJournal(getDb(), getContentStore(), user.id, {
+      before,
+      days,
+      timeZone: tz,
+    });
+    return c.json(JournalResponseSchema.parse(journal));
+  } catch (err) {
+    if (err instanceof InvalidTimeZoneError)
+      return errorResponse(c, 400, err.message, "BAD_REQUEST");
+    throw err;
+  }
 });
 
 // ── Game misses ────────────────────────────────────────────────────────

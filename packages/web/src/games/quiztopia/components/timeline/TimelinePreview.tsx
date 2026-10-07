@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import { PageMain } from "../../../../components/ui";
 import { useTimelineIndex } from "../../hooks/useContent";
 import { joinPins, type TimelineItem } from "../../logic/timeline-layout";
-import { trainerPaths } from "../../paths";
+import { TRAINER_BASE, trainerPaths } from "../../paths";
 import { TrainerScreen } from "../trainer/TrainerScreen";
 import { PREVIEW_TIMELINE } from "./preview-fixture";
 import { TimelineView } from "./TimelineView";
@@ -15,7 +15,7 @@ import { TimelineView } from "./TimelineView";
 // events from the content (two thirds of them since 1900) to show the
 // blocks splitting down to years and months.
 
-const PATHS = trainerPaths("/play/quiztopia/solo");
+const PATHS = trainerPaths(TRAINER_BASE);
 
 /** A deterministic sample of the content's events, weighted to the busy 20th century. */
 function densePins(index: TimelineIndex): TimelineItem[] {

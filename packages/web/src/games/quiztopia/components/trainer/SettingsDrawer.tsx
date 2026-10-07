@@ -1,6 +1,6 @@
 import type { QuiztopiaSettings } from "@boardgames/core/protocol";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { useEffect, useId, useRef, useState } from "react";
+import { useCallback, useEffect, useId, useRef, useState } from "react";
 import {
   Button,
   Checkbox,
@@ -16,8 +16,9 @@ import {
 import { errorMessageOf } from "../../../../lib/error-message";
 import { resetProgress } from "../../api";
 import { DISTRICTS } from "../../bands";
-import { PENDING_REVIEWS_KEY } from "../../hooks/useOfflineReviewQueue";
+import { invalidateAfterReset } from "../../cache";
 import { useQuiztopiaSettings } from "../../hooks/useQuiztopiaSettings";
+import { quiztopiaReviewOutbox } from "../../review-outbox";
 import { BuildingGlyph } from "../common/BuildingGlyph";
 import { LanguageToggle } from "../common/LanguageToggle";
 
@@ -25,7 +26,8 @@ import { LanguageToggle } from "../common/LanguageToggle";
 // new cards arrive (whole sets or originals first), the daily budget of new
 // cards, which districts "Study all" draws from, and the two schedule
 // switches.
-// Every change saves on its own (one PUT of the whole object); the stepper
+// Every change saves on its own (one PUT of the whole object, applied to the
+// cache at once and sent in order — `useQuiztopiaSettings`); the stepper
 // waits a beat so a run of taps becomes one request. "Reset progress" wipes
 // the server-side schedule after a confirm.
 
@@ -40,41 +42,46 @@ export function SettingsDrawer({ onClose }: Props) {
   const ids = { game: useId(), leech: useId() };
 
   // The stepper edits a local copy and commits after a pause. Whole-set mode
-  // budgets articles (`newSetsPerDay`), originals-first mode questions.
+  // budgets articles (`newSetsPerDay`), originals-first mode questions. A
+  // change still waiting when the drawer closes is committed on the way out.
   const bySet = settings.newCardOrder === "sets";
   const budgetField = bySet ? "newSetsPerDay" : "newPerDay";
   const stored = settings[budgetField];
   const [budget, setBudget] = useState(stored);
-  const dirty = useRef(false);
+  const pendingBudget = useRef<{ field: typeof budgetField; value: number } | null>(null);
+  const budgetTimer = useRef<number | null>(null);
+  const commitBudget = useCallback(() => {
+    if (budgetTimer.current !== null) window.clearTimeout(budgetTimer.current);
+    budgetTimer.current = null;
+    const pending = pendingBudget.current;
+    if (!pending) return;
+    pendingBudget.current = null;
+    save({ [pending.field]: pending.value });
+  }, [save]);
+  const changeBudget = (value: number) => {
+    pendingBudget.current = { field: budgetField, value };
+    setBudget(value);
+    if (budgetTimer.current !== null) window.clearTimeout(budgetTimer.current);
+    budgetTimer.current = window.setTimeout(commitBudget, STEPPER_DEBOUNCE_MS);
+  };
   useEffect(() => {
-    if (!dirty.current) setBudget(stored);
+    if (!pendingBudget.current) setBudget(stored);
   }, [stored]);
-  useEffect(() => {
-    if (!dirty.current) return;
-    const t = window.setTimeout(() => {
-      dirty.current = false;
-      save({ [budgetField]: budget });
-    }, STEPPER_DEBOUNCE_MS);
-    return () => window.clearTimeout(t);
-  }, [budget, budgetField, save]);
+  useEffect(() => () => commitBudget(), [commitBudget]);
 
-  // Reset: wipe schedule, history and reads on the server, drop any reviews
-  // still queued offline (they would re-create the progress), refetch.
+  // Reset: wipe schedule, history and reads on the server and drop any
+  // reviews still queued offline (they would re-create the progress). Replay
+  // is paused across both steps, so no queued review can land in between.
   const qc = useQueryClient();
   const { confirm, confirmDialog } = useConfirm();
   const reset = useMutation({
-    mutationFn: () => resetProgress({ confirm: true }),
-    onSuccess: () => {
-      try {
-        window.localStorage.removeItem(PENDING_REVIEWS_KEY);
-      } catch {
-        // storage blocked — nothing queued there either
-      }
-      void qc.invalidateQueries({
-        queryKey: ["quiztopia"],
-        predicate: (q) => q.queryKey[1] !== "content" && q.queryKey[1] !== "settings",
-      });
-    },
+    mutationFn: () =>
+      quiztopiaReviewOutbox.exclusive(async () => {
+        const res = await resetProgress({ confirm: true });
+        await quiztopiaReviewOutbox.clear();
+        return res;
+      }),
+    onSuccess: () => invalidateAfterReset(qc),
   });
   const onReset = async () => {
     const ok = await confirm({
@@ -111,6 +118,7 @@ export function SettingsDrawer({ onClose }: Props) {
           value={settings.language}
           onChange={(language) => patch({ language })}
           size="sm"
+          disabled={!loaded}
         />
       </FieldGroup>
 
@@ -158,10 +166,7 @@ export function SettingsDrawer({ onClose }: Props) {
                 ? `${budget} ${budget === 1 ? "article" : "articles"} · ${budget * 5} questions`
                 : `${budget} new ${budget === 1 ? "card" : "cards"}`
           }
-          onChange={(next) => {
-            dirty.current = true;
-            setBudget(next);
-          }}
+          onChange={changeBudget}
           disabled={!loaded}
         />
       </FieldGroup>
@@ -183,11 +188,13 @@ export function SettingsDrawer({ onClose }: Props) {
                 icon={<BuildingGlyph name={d.building} lit={included} size={11} />}
                 disabled={!loaded}
                 onClick={() =>
-                  patch({
-                    excludeFromAll: included
-                      ? [...settings.excludeFromAll, d.n].sort((a, b) => a - b)
-                      : settings.excludeFromAll.filter((n) => n !== d.n),
-                  })
+                  // From the latest settings, not this render: taps faster
+                  // than a save round trip each build on the one before.
+                  save((current) => ({
+                    excludeFromAll: current.excludeFromAll.includes(d.n)
+                      ? current.excludeFromAll.filter((n) => n !== d.n)
+                      : [...current.excludeFromAll, d.n].sort((a, b) => a - b),
+                  }))
                 }
               >
                 {d.en}
