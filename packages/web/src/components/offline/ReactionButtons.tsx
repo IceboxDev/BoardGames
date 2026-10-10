@@ -1,0 +1,208 @@
+import type { ReactionAggregate, ReactionKind } from "../../lib/calendar-games";
+
+// The game-vote buttons — ♥ Hype, 🎓 Teach, 📖 Learn (or a host's single
+// "Lineup" toggle) — as pure presentation: what's pressed comes in through
+// `aggregate.viewer`, what to change goes out through `onToggle`.
+// `GameReactions` wires them to the server; the welcome tour drives them
+// with local state, so the tour shows exactly the buttons members use.
+
+type Size = "md" | "sm";
+
+export type IconProps = { filled: boolean };
+export type ReactionKindInfo = Kind;
+type Kind = {
+  kind: ReactionKind;
+  label: string;
+  description: string;
+  Icon: (p: IconProps) => React.ReactElement;
+};
+
+export const PICK_KIND: Kind = {
+  kind: "hype",
+  label: "Lineup",
+  description: "Put this on tonight's lineup",
+  Icon: HeartIcon,
+};
+
+/** The three votes, in the order every screen shows them. */
+export const REACTION_KINDS: readonly Kind[] = [
+  {
+    kind: "hype",
+    label: "Hype",
+    description: "Want to play this tonight",
+    Icon: HeartIcon,
+  },
+  {
+    kind: "teach",
+    label: "Teach",
+    description: "I'll explain the rules",
+    Icon: MortarboardIcon,
+  },
+  {
+    kind: "learn",
+    label: "Learn",
+    description: "Haven't played, want to learn",
+    Icon: BookIcon,
+  },
+];
+
+type Props = {
+  aggregate: ReactionAggregate;
+  accentHex: string;
+  size?: Size;
+  disabled?: boolean;
+  /** Hide the count badges (the carousel: no voting by what others did). */
+  hideCount?: boolean;
+  mode?: "vote" | "pick";
+  onToggle: (kind: ReactionKind, on: boolean) => void;
+};
+
+export function ReactionButtons({
+  aggregate,
+  accentHex,
+  size = "md",
+  disabled = false,
+  hideCount = false,
+  mode = "vote",
+  onToggle,
+}: Props) {
+  const kinds = mode === "pick" ? [PICK_KIND] : REACTION_KINDS;
+  const viewerSet = new Set(aggregate.viewer);
+
+  function handleClick(e: React.MouseEvent<HTMLButtonElement>, kind: ReactionKind) {
+    e.stopPropagation();
+    e.preventDefault();
+    if (disabled) return;
+    onToggle(kind, !viewerSet.has(kind));
+  }
+
+  const btnSize = size === "sm" ? "h-7 w-7" : "h-9 w-9";
+  const iconSize = size === "sm" ? "h-3.5 w-3.5" : "h-[18px] w-[18px]";
+  const badgeSize =
+    size === "sm" ? "h-3.5 min-w-[14px] text-5xs" : "h-[18px] min-w-[18px] text-3xs";
+  const gap = size === "sm" ? "gap-1.5" : "gap-2";
+
+  return (
+    <div className={`flex items-center ${gap}`}>
+      {kinds.map(({ kind, label, description, Icon }) => {
+        const active = viewerSet.has(kind);
+        const count = mode === "pick" ? 0 : aggregate[kind];
+        const activeStyle = active
+          ? // The text color rides the `text-fg-strong` class below, not this
+            // object, so a future per-accent contrast tweak has one home.
+            ({
+              "--accent": accentHex,
+              borderColor: `var(--accent, ${accentHex})`,
+              backgroundColor: `var(--accent, ${accentHex})`,
+              boxShadow: `0 6px 16px -6px color-mix(in srgb, var(--accent, ${accentHex}) 66.67%, transparent)`,
+            } as React.CSSProperties)
+          : undefined;
+        return (
+          // Bespoke reaction widget — circular icon-toggle with a count
+          // badge overlay and a per-game `accentHex` (not one of the
+          // fixed Chip/IconButton tones). Documented exemption to the
+          // <Button>/<IconButton> mandate because the dynamic accent
+          // chrome doesn't fit either primitive cleanly.
+          // biome-ignore lint/correctness/noRestrictedElements: bespoke icon-toggle with dynamic per-game accent
+          <button
+            key={kind}
+            type="button"
+            onClick={(e) => handleClick(e, kind)}
+            onMouseDown={(e) => e.stopPropagation()}
+            onPointerDown={(e) => e.stopPropagation()}
+            disabled={disabled}
+            aria-label={`${label}: ${description}${count ? ` (${count})` : ""}`}
+            aria-pressed={active}
+            title={`${label} — ${description}${count ? ` · ${count}` : ""}`}
+            style={activeStyle}
+            // The transition property list is spelled out rather than using
+            // bare `transition`: Tailwind's shorthand includes backdrop-filter,
+            // and since `backdrop-blur-md` now lives on ONE branch, toggling a
+            // reaction would animate the blur from 0 → 12px (a visible smear on
+            // the card art behind it). These four are the properties that
+            // actually change between the two branches.
+            className={`relative inline-flex shrink-0 items-center justify-center rounded-full ${btnSize} transition-[color,background-color,border-color,box-shadow] disabled:cursor-not-allowed disabled:opacity-40 ${
+              active
+                ? "border text-fg-strong"
+                : // backdrop-blur only here: the active branch paints an opaque
+                  // accentHex fill that fully hides the blur, yet would still
+                  // pay the per-frame backdrop re-sample during carousel moves.
+                  "border border-line-strong bg-black/45 text-fg-strong/85 backdrop-blur-md hover:border-fg-strong/40 hover:bg-black/65 hover:text-white"
+            }`}
+          >
+            <span className={`${iconSize} flex items-center justify-center`}>
+              <Icon filled={active} />
+            </span>
+            {!hideCount && count > 0 && (
+              <span
+                className={`pointer-events-none absolute -right-1 -top-1 inline-flex items-center justify-center rounded-full bg-white px-1 font-bold tabular-nums leading-none text-black ${badgeSize}`}
+              >
+                {count}
+              </span>
+            )}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+export function HeartIcon({ filled }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill={filled ? "currentColor" : "none"}
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinejoin="round"
+      strokeLinecap="round"
+      aria-hidden="true"
+      className="h-full w-full"
+    >
+      <path d="M12 20.5l-1.7-1.55C5.5 14.6 2 11.5 2 7.6 2 4.5 4.5 2 7.5 2c1.7 0 3.3.8 4.5 2.1C13.2 2.8 14.8 2 16.5 2 19.5 2 22 4.5 22 7.6c0 3.9-3.5 7-8.3 11.35L12 20.5z" />
+    </svg>
+  );
+}
+
+export function MortarboardIcon({ filled }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className="h-full w-full"
+    >
+      <path d="M2 9l10-5 10 5-10 5L2 9z" fill={filled ? "currentColor" : "none"} />
+      <path d="M6 11.2v4.3c0 1.2 2.7 2.5 6 2.5s6-1.3 6-2.5v-4.3" />
+      <path d="M22 9v5.5" />
+    </svg>
+  );
+}
+
+export function BookIcon({ filled }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      aria-hidden="true"
+      className="h-full w-full"
+    >
+      <path
+        d="M3 5c2.5-.5 5.5-.5 8.5 0v14.5c-3-.5-6-.5-8.5 0V5z"
+        fill={filled ? "currentColor" : "none"}
+      />
+      <path
+        d="M21 5c-2.5-.5-5.5-.5-8.5 0v14.5c3-.5 6-.5 8.5 0V5z"
+        fill={filled ? "currentColor" : "none"}
+      />
+    </svg>
+  );
+}

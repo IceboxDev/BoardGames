@@ -62,7 +62,7 @@ describe("activity vocabulary", () => {
 
   it("names the greeting kinds the ack endpoint accepts, no more, no less", () => {
     expectTypeOf<GreetingKind>().toEqualTypeOf<AppGreetingAckBody["kind"]>();
-    expect(ActivityMetaSchemas["greeting-response"].shape.kind.options).toHaveLength(6);
+    expect(ActivityMetaSchemas["greeting-response"].shape.kind.options).toHaveLength(7);
   });
 });
 

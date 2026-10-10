@@ -39,6 +39,14 @@ export interface GameMachineSpec<
   getPlayerView(snapshot: SnapshotFrom<TMachine>, player: number): TPlayerView;
   getLegalActions(snapshot: SnapshotFrom<TMachine>, player: number): TLegalAction[];
   getActivePlayer(snapshot: SnapshotFrom<TMachine>): number;
+  /**
+   * Whether `raw` is an action a seat may send while another seat is to move
+   * — resigning, answering a draw offer or a take-back request. Rooms reject
+   * every other action from a seat that isn't `getActivePlayer`
+   * (`server/src/sessions/manager.ts`). This only lifts the turn gate;
+   * `validateAction` still adjudicates the action. Absent = nothing off turn.
+   */
+  acceptsOffTurn?(snapshot: SnapshotFrom<TMachine>, player: number, raw: unknown): boolean;
   /** The game's own result, for its game-over screen. */
   getResult(snapshot: SnapshotFrom<TMachine>): TResult | null;
   isGameOver(snapshot: SnapshotFrom<TMachine>): boolean;

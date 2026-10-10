@@ -24,6 +24,7 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
   // outcome, not two co-survivors.
   chess: "free-for-all",
   "connect-4": "free-for-all",
+  go: "free-for-all",
   // Plain single-winner, no points (see isSingleWinnerFfa in core's
   // score-config) — the generic SingleWinnerForm; listed explicitly for the
   // same reason as villainous.
@@ -59,6 +60,7 @@ export const MATCH_KIND_BY_SLUG: Record<string, MatchKind> = {
 
   // Teams — two or more sides with collective scores
   "blood-on-the-clocktower": "teams",
+  "chess-bughouse": "teams",
   codenames: "teams",
   "codenames-pictures": "teams",
   decrypto: "teams",

@@ -55,63 +55,60 @@ export default function GameOverScreen({ view, result, names, actions }: Props) 
   const label = (seat: number) => seatLabel(view, seat, names);
 
   return (
-    // The results run long, so the screen scrolls itself.
-    <div className="min-h-0 flex-1 overflow-y-auto">
-      <GameOverLayout
-        wide
-        headline={iWon ? "You Win!" : winnerLabel ? `${winnerLabel} wins` : "A shared crown"}
-        headlineColor={iWon ? "win" : mine ? "lose" : "neutral"}
-        subtitle={
-          my?.fate === "ashes"
-            ? "The sun found you before you found home."
-            : "The sun rises on the Castle."
-        }
-        actions={[...actions]}
-      >
-        <div className="flex flex-col gap-6">
-          <Podium view={view} result={result} order={order} label={label} />
+    <GameOverLayout
+      wide
+      headline={iWon ? "You Win!" : winnerLabel ? `${winnerLabel} wins` : "A shared crown"}
+      headlineColor={iWon ? "win" : mine ? "lose" : "neutral"}
+      subtitle={
+        my?.fate === "ashes"
+          ? "The sun found you before you found home."
+          : "The sun rises on the Castle."
+      }
+      actions={[...actions]}
+    >
+      <div className="flex flex-col gap-6">
+        <Podium view={view} result={result} order={order} label={label} />
 
-          <div className="grid gap-6 xl:grid-cols-2">
-            <Surface variant="panel" padding="lg" className="flex flex-col gap-4">
-              <PanelHead
-                title="The night, in points"
-                note="Each Vampire's score after every night, then at sunrise"
-              />
-              <ScoreChart view={view} stories={stories} order={order} label={label} />
-            </Surface>
-            <Surface variant="panel" padding="lg" className="flex flex-col gap-4">
-              <PanelHead
-                title="Where the points came from"
-                note="Every score split by its source — hover a segment for its value"
-              />
-              <Composition view={view} stories={stories} order={order} label={label} />
-            </Surface>
-          </div>
-
-          <div
-            className="grid gap-4"
-            style={{
-              gridTemplateColumns: `repeat(${Math.min(order.length, 3)}, minmax(0, 1fr))`,
-            }}
-          >
-            {order.map((seat) => (
-              <SeatColumn
-                key={seat}
-                rank={result.placements[seat]}
-                winner={result.winners.includes(seat)}
-                vampire={view.players[seat]?.vampire ?? seat}
-                name={label(seat)}
-                b={result.breakdown[seat]}
-                story={stories[seat]}
-              />
-            ))}
-          </div>
-          <p className="text-center text-xs text-fg-muted">
-            Burned Vampires keep their points for the glory of it, but rank below every survivor.
-          </p>
+        <div className="grid gap-6 xl:grid-cols-2">
+          <Surface variant="panel" padding="lg" className="flex flex-col gap-4">
+            <PanelHead
+              title="The night, in points"
+              note="Each Vampire's score after every night, then at sunrise"
+            />
+            <ScoreChart view={view} stories={stories} order={order} label={label} />
+          </Surface>
+          <Surface variant="panel" padding="lg" className="flex flex-col gap-4">
+            <PanelHead
+              title="Where the points came from"
+              note="Every score split by its source — hover a segment for its value"
+            />
+            <Composition view={view} stories={stories} order={order} label={label} />
+          </Surface>
         </div>
-      </GameOverLayout>
-    </div>
+
+        <div
+          className="grid gap-4"
+          style={{
+            gridTemplateColumns: `repeat(${Math.min(order.length, 3)}, minmax(0, 1fr))`,
+          }}
+        >
+          {order.map((seat) => (
+            <SeatColumn
+              key={seat}
+              rank={result.placements[seat]}
+              winner={result.winners.includes(seat)}
+              vampire={view.players[seat]?.vampire ?? seat}
+              name={label(seat)}
+              b={result.breakdown[seat]}
+              story={stories[seat]}
+            />
+          ))}
+        </div>
+        <p className="text-center text-xs text-fg-muted">
+          Burned Vampires keep their points for the glory of it, but rank below every survivor.
+        </p>
+      </div>
+    </GameOverLayout>
   );
 }
 

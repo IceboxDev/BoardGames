@@ -31,6 +31,7 @@ import { ArrivalTakeoverView } from "../../arrivals/ArrivalTakeoverView.tsx";
 import { ctaDestination } from "../../arrivals/arrival-copy.ts";
 import { toArrivalCards } from "../../arrivals/arrival-view-model.ts";
 import { NightInviteCard } from "../../offline/NightInviteCard.tsx";
+import { OnboardingDeck, type TourOutcome } from "../../onboarding/OnboardingDeck.tsx";
 import {
   PurchaseTakeover,
   type PurchaseTakeoverOutcome,
@@ -45,7 +46,7 @@ import { SpotlightModalView } from "./SpotlightModal.tsx";
 export default function GreetingHost({ userId }: { userId: string }) {
   const navigate = useNavigate();
   const queryClient = useQueryClient();
-  const { isAdmin } = useCurrentUser();
+  const { isAdmin, user } = useCurrentUser();
   // Admin dev tool: preview the intro exactly as another member will see it
   // (only while it is naturally due — the intro shows ONCE per user).
   const canPreview = isAdmin && import.meta.env.DEV;
@@ -85,7 +86,12 @@ export default function GreetingHost({ userId }: { userId: string }) {
 
   const ackMutation = useMutation({
     mutationFn: ackGreeting,
-    onSettled: () => queryClient.invalidateQueries({ queryKey: qk.greetings() }),
+    onSettled: (_data, _err, body) => {
+      void queryClient.invalidateQueries({ queryKey: qk.greetings() });
+      // Answering the welcome tour is what makes the first-use hints due.
+      if (body.kind === "onboarding")
+        void queryClient.invalidateQueries({ queryKey: qk.onboarding() });
+    },
   });
 
   // The intro unveils the viewer's own hexagon and the board behind their
@@ -132,6 +138,27 @@ export default function GreetingHost({ userId }: { userId: string }) {
     ackMutation.mutate(ackBody(greeting, action));
     then?.();
   };
+
+  if (greeting.kind === "onboarding") {
+    const finish = (outcome: TourOutcome, reached: number) => {
+      dismiss(greetingKey(greeting));
+      ackMutation.mutate({
+        kind: "onboarding",
+        action: outcome === "finished" ? "cta" : "later",
+        reached,
+      });
+    };
+    return (
+      <OnboardingDeck
+        firstName={user?.name?.split(" ")[0] || null}
+        onClose={finish}
+        onStart={(reached) => {
+          finish("finished", reached);
+          navigate("/offline?edit=1", { state: activityNavState(greetingVia("onboarding")) });
+        }}
+      />
+    );
+  }
 
   if (greeting.kind === "purchase-vote-reminder") {
     return (

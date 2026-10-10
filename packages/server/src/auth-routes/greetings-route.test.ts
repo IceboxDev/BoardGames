@@ -58,12 +58,25 @@ describe("GET /api/greetings ladder", () => {
   let client: Client;
   let seq = 0;
 
-  async function addUser(id: string, role = "user", accent: string | null = null) {
+  /** A member; `newMember` = joined after onboarding shipped (the tour is due). */
+  async function addUser(
+    id: string,
+    role = "user",
+    accent: string | null = null,
+    newMember = false,
+  ) {
     await client.execute({
       sql: `INSERT INTO "user" (id, name, email, "emailVerified", "createdAt", "updatedAt", role)
             VALUES (?, ?, ?, 0, '2020-01-01', '2020-01-01', ?)`,
       args: [id, `Name ${id}`, `${id}@example.com`, role],
     });
+    if (!newMember) {
+      // What migration 0051 does for everyone who already had an account.
+      await client.execute({
+        sql: `INSERT INTO user_onboarding (user_id, state_json) VALUES (?, '{"existingMember":true,"hints":{}}')`,
+        args: [id],
+      });
+    }
     if (accent) {
       await client.execute({
         sql: "INSERT INTO user_profiles (user_id, accent_hex) VALUES (?, ?)",
@@ -416,6 +429,58 @@ describe("GET /api/greetings ladder", () => {
         action: "later",
         greetingId: id,
         subjectUserId: M1,
+      });
+    });
+  });
+
+  describe("the welcome tour", () => {
+    const NEW = "new-member";
+
+    it("comes first for a new member, above an open vote's announcement", async () => {
+      await addUser(NEW, "user", null, true);
+      await poll();
+      const a = app({ id: NEW, onlineMode: "offline" });
+      expect((await greeting(a)).greeting).toEqual({ kind: "onboarding" });
+
+      // Skipped at card 3: never served again, and the vote is next.
+      expect((await ack(a, { kind: "onboarding", action: "later", reached: 3 })).status).toBe(200);
+      expect((await greeting(a)).greeting?.kind).toBe("purchase-vote-announce");
+      const { rows } = await client.execute({
+        sql: "SELECT state_json FROM user_onboarding WHERE user_id = ?",
+        args: [NEW],
+      });
+      expect(JSON.parse(String(rows[0]?.state_json)).deck).toMatchObject({
+        outcome: "skipped",
+        reached: 3,
+      });
+      const logged = await client.execute(
+        "SELECT meta_json FROM activity_log WHERE type = 'greeting-response'",
+      );
+      expect(JSON.parse(String(logged.rows[0]?.meta_json))).toMatchObject({
+        kind: "onboarding",
+        action: "later",
+        reached: 3,
+      });
+    });
+
+    it("is never served to existing or online-only members", async () => {
+      expect((await greeting(app({ id: M2, onlineMode: "offline" }))).greeting).toBeNull();
+      await addUser(NEW, "user", null, true);
+      expect((await greeting(app({ id: NEW, onlineMode: "online" }))).greeting).toBeNull();
+    });
+
+    it("keeps the first answer", async () => {
+      await addUser(NEW, "user", null, true);
+      const a = app({ id: NEW, onlineMode: "both" });
+      await ack(a, { kind: "onboarding", action: "cta", reached: 9 });
+      await ack(a, { kind: "onboarding", action: "later", reached: 1 });
+      const { rows } = await client.execute({
+        sql: "SELECT state_json FROM user_onboarding WHERE user_id = ?",
+        args: [NEW],
+      });
+      expect(JSON.parse(String(rows[0]?.state_json)).deck).toMatchObject({
+        outcome: "finished",
+        reached: 9,
       });
     });
   });

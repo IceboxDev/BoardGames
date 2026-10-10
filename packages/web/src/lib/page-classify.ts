@@ -93,6 +93,9 @@ export function classifyRoute(pathname: string, search: string): ClassifiedView 
       return second ? playView(second, rest) : null;
     case "trainer":
       return second === "geography" ? trainerView("geography", rest) : null;
+    case "go":
+      if (second !== "review") return null;
+      return rest[0] ? { page: "go-review", detail: rest[0] } : { page: "go-review" };
     case "u": {
       if (!second) return null;
       const sub = rest[0];

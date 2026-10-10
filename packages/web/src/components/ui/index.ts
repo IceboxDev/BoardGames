@@ -14,6 +14,7 @@ export { Button, ButtonLink } from "./Button";
 export { Checkbox } from "./Checkbox";
 export { CheckRow } from "./CheckRow";
 export { Chip, type ChipTone } from "./Chip";
+export { Coachmark, type CoachmarkProps } from "./Coachmark";
 export { CopyField } from "./CopyField";
 export { DialogBackdrop } from "./DialogBackdrop";
 export { Drawer, type DrawerSide } from "./Drawer";

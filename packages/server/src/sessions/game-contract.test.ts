@@ -12,6 +12,11 @@
  * faked, so the games' pacing costs nothing.
  */
 
+import { applyMove } from "@boardgames/core/games/chess/engine/apply";
+import { parseFen } from "@boardgames/core/games/chess/engine/fen";
+import { boardState } from "@boardgames/core/games/chess/engine/status";
+import { uciToMove } from "@boardgames/core/games/chess/engine/uci";
+import type { BughousePlayerView } from "@boardgames/core/games/chess-bughouse/schemas";
 import { phaseOf as decryptoPhase } from "@boardgames/core/games/decrypto/machine";
 import { setQuestionSource } from "@boardgames/core/games/quiztopia/question-source";
 import { findAllSets } from "@boardgames/core/games/set/deck";
@@ -96,6 +101,24 @@ const decryptoMove: MoveFinder = (spec, actor, seat, rng) => {
 };
 
 /**
+ * Codenames and Duet: a person whose clue it is writes a fresh word; a guesser
+ * touches a random card (pointers and stopping are noise for finishing a game).
+ */
+const codenamesMove: MoveFinder = (spec, actor, seat, rng) => {
+  const snapshot = actor.getSnapshot();
+  const view = spec.getPlayerView(snapshot, seat) as { mustGiveClue: boolean };
+  if (view.mustGiveClue) {
+    // Clues are letters only: spell the counter in base 26.
+    const word = `quux${(++clueCounter).toString(26).replace(/./g, (d) => String.fromCharCode(97 + Number.parseInt(d, 26)))}`;
+    return { kind: "give-clue", clue: { word, count: 1 } };
+  }
+  const guesses = (spec.getLegalActions(snapshot, seat) as { kind: string }[]).filter(
+    (a) => a.kind === "guess",
+  );
+  return guesses.length > 0 ? guesses[Math.floor(rng() * guesses.length)] : null;
+};
+
+/**
  * Pandemic lists some moves as descriptors the player completes (a charter
  * flight's destination, a cure's cards) — its UI composes those, which is why
  * it validates the envelope and lets the engine adjudicate. Play the concrete ones.
@@ -121,7 +144,56 @@ const pandemicMove: MoveFinder = (spec, actor, seat, rng) => {
   return legal.length > 0 ? legal[Math.floor(rng() * legal.length)] : null;
 };
 
+/**
+ * Go never ends on uniformly random moves (filling your own eyes until you
+ * are captured goes on for ever). Play a random point that isn't an own eye,
+ * pass when none is left, and accept the score once both have passed.
+ */
+const goMove: MoveFinder = (spec, actor, seat, rng) => {
+  const snapshot = actor.getSnapshot();
+  const legal = spec.getLegalActions(snapshot, seat) as { type: string; point?: number }[];
+  const accept = legal.find((a) => a.type === "accept-score");
+  if (accept) return accept;
+  const view = spec.getPlayerView(snapshot, seat) as { size: number; board: readonly number[] };
+  const own = seat + 1;
+  const n = view.size;
+  const isOwnEye = (p: number) =>
+    [p - n, p + n, p % n > 0 ? p - 1 : -1, p % n < n - 1 ? p + 1 : -1]
+      .filter((q) => q >= 0 && q < n * n)
+      .every((q) => view.board[q] === own);
+  const plays = legal.filter((a) => a.type === "play" && !isOwnEye(a.point as number));
+  if (plays.length > 0) return plays[Math.floor(rng() * plays.length)];
+  return legal.find((a) => a.type === "pass") ?? null;
+};
+
+/**
+ * Bughouse: random moves rarely mate and random signals never end a game, so
+ * a person here mates when they can, else captures or drops, else moves.
+ */
+const bughouseMove: MoveFinder = (spec, actor, seat, rng) => {
+  const snapshot = actor.getSnapshot();
+  const moves = (spec.getLegalActions(snapshot, seat) as { kind: string; uci?: string }[]).filter(
+    (a) => a.kind === "move",
+  );
+  if (moves.length === 0) return null;
+  const view = spec.getPlayerView(snapshot, seat) as BughousePlayerView;
+  const pos = parseFen(view.boards[view.board].fen, { bughouse: true });
+  const sharp: typeof moves = [];
+  for (const m of moves) {
+    const move = uciToMove(m.uci ?? "");
+    if (!move) continue;
+    if (boardState(applyMove(pos, move)) === "checkmate") return m;
+    if (move.drop !== undefined || pos.board[move.to]) sharp.push(m);
+  }
+  const pool = sharp.length > 0 && rng() < 0.7 ? sharp : moves;
+  return pool[Math.floor(rng() * pool.length)] ?? null;
+};
+
 const MOVES: Readonly<Record<string, MoveFinder>> = {
+  "chess-bughouse": bughouseMove,
+  codenames: codenamesMove,
+  "codenames-duet": codenamesMove,
+  go: goMove,
   set: setMove,
   decrypto: decryptoMove,
   pandemic: pandemicMove,

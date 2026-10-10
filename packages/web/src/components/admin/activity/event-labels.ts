@@ -359,4 +359,11 @@ export const EVENT_LABELS: EventLabels = {
   "geography-train": trainDay("geography"),
   "geography-settings": trainerSettings("geography"),
   "geography-reset": trainerReset("geography"),
+
+  // ── Go ──
+  "go-review-requested": {
+    tone: "study",
+    describe: ({ moves }) =>
+      `Asked KataGo to review an imported Go game${moves ? ` (${moves} moves)` : ""}`,
+  },
 };

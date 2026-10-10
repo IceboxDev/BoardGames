@@ -1,9 +1,10 @@
 import flameUrl from "../../assets/flame.svg";
 
-// The group's flame artwork (replaces the old hand-drawn stroke FlameIcon on
-// display surfaces). Optionally re-hued to a profile accent: the art is a
-// red→yellow gradient around hue ~15°, so a single hue-rotate lands the whole
-// flame in the accent's family (indigo accent → blue flame, etc.).
+// The group's flame artwork — THE fire icon: use it wherever fire is meant
+// (streaks, "on fire", hot games); the old hand-drawn stroke icon is gone.
+// Optionally re-hued to a profile accent: the art is a red→yellow gradient
+// around hue ~15°, so a single hue-rotate lands the whole flame in the
+// accent's family (indigo accent → blue flame, etc.).
 
 const FLAME_BASE_HUE = 15;
 

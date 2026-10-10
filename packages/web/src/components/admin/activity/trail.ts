@@ -78,6 +78,7 @@ const LEGACY_CTA_PAGES: Readonly<Record<GreetingKind, readonly string[]>> = {
   spotlight: ["profile-skill"],
   "skill-intro": ["profile-skill"],
   "night-invite": ["calendar", "night"],
+  onboarding: ["calendar"],
 };
 
 /** Profile pages whose own data fetch used to log a `profile-view` phantom. */

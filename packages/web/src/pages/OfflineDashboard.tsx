@@ -16,6 +16,7 @@ import LockInModal from "../components/offline/LockInModal";
 import PrivateNightPeek from "../components/offline/PrivateNightPeek";
 import RsvpModal from "../components/offline/RsvpModal";
 import { useGroupMatch } from "../components/offline/use-group-match";
+import { useOnboardingHint } from "../components/onboarding/OnboardingHints";
 import { PurchaseVoteBanner } from "../components/purchase-vote/PurchaseVoteBanner";
 import { TopNav, TopNavBackButton, TopNavLink } from "../components/TopNav";
 import { Avatar } from "../components/ui/Avatar";
@@ -175,6 +176,24 @@ export default function OfflineDashboard() {
     next.delete("date");
     setSearchParams(next, { replace: true, state: quietNavState() });
   }, [locks, searchParams, setSearchParams]);
+
+  // `/offline?edit=1` — the welcome tour's "Mark my first days" — opens the
+  // calendar ready to mark. Waits for the member's saved marks: a draft
+  // started before they load would save over them.
+  const editParam = searchParams.get("edit") === "1";
+  const availabilityLoaded = availabilityQuery.data !== undefined;
+  // biome-ignore lint/correctness/useExhaustiveDependencies: fires once the marks load; enterEdit reads them
+  useEffect(() => {
+    if (!editParam || !availabilityLoaded) return;
+    if (mode === "view") enterEdit();
+    const next = new URLSearchParams(searchParams);
+    next.delete("edit");
+    setSearchParams(next, { replace: true, state: quietNavState() });
+  }, [editParam, availabilityLoaded]);
+
+  // First-use hints on the calendar (shown once each, one at a time).
+  useOnboardingHint("calendar-start", mode === "view" && rsvpDate === null);
+  useOnboardingHint("calendar-cycle", mode === "edit");
 
   const viewerRsvpByDate = useMemo<Record<string, RsvpStatus | undefined>>(() => {
     if (!locks || !userId) return {};
@@ -483,6 +502,8 @@ export default function OfflineDashboard() {
               viewerRsvpByDate={viewerRsvpByDate}
               viewer={{ id: userId, isAdmin }}
               group={mode === "lock" && group.active ? groupOverlay : null}
+              // The "this night is waiting for you" hint, only while nothing covers the calendar.
+              hintNights={mode === "view" && rsvpDate === null}
             />
           </div>
           {mode === "lock" && findOpen && wide && (

@@ -47,6 +47,13 @@ describe("ClientMessageSchema", () => {
     expect(() =>
       ClientMessageSchema.parse({ type: "swap-seats", roomCode: "ABC", a: 0, b: 1 }),
     ).not.toThrow();
+    expect(() =>
+      ClientMessageSchema.parse({ type: "shuffle-seats", roomCode: "ABC" }),
+    ).not.toThrow();
+  });
+
+  it("rejects shuffle-seats without a room code", () => {
+    expect(() => ClientMessageSchema.parse({ type: "shuffle-seats" })).toThrow();
   });
 
   it("rejects swap-seats with negative or missing slot indices", () => {

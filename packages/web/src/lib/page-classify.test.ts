@@ -78,6 +78,9 @@ describe("classifyRoute", () => {
 
   it("logs the World Geography trainer", () => {
     expect(at("/trainer/geography")).toEqual({ page: "trainer", detail: "geography" });
+    expect(at("/go/review")).toEqual({ page: "go-review" });
+    expect(at("/go/review/12")).toEqual({ page: "go-review", detail: "12" });
+    expect(at("/go/elsewhere")).toBeNull();
     expect(at("/trainer/geography/study")).toEqual({ page: "trainer-study", detail: "geography" });
     expect(at("/trainer/geography/explore")).toEqual({
       page: "trainer-explore",

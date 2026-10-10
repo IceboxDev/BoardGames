@@ -67,7 +67,7 @@ export default function GameOverScreen({ result, actions }: Props) {
     // at `z-0` in `GameShellLayoutInner` (same painting-order issue that hides
     // `GameScreen` without a stacking context). GameOverLayout owns the
     // emoji / headline / actions; only the Sky-Team-specific stats are local.
-    <div className="relative z-raised">
+    <div className="relative z-raised flex min-h-0 flex-1 flex-col">
       <GameOverLayout
         emoji={meta.tone === "win" ? "🛬" : "💥"}
         headline={meta.headline}

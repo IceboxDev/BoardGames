@@ -12,6 +12,7 @@ import { aiSuspended } from "../ai-suspend";
 // setup; hopping provider or tier later is just an env override.
 
 export type AiFeature =
+  | "codenames"
   | "decrypto"
   | "dnd"
   | "dnd-extract"
@@ -26,6 +27,7 @@ const GLOBAL_DEFAULT_MODEL = "openai/gpt-5.2";
 
 /** Per-feature fallbacks when neither the feature var nor AI_MODEL is set. */
 const DEFAULT_MODELS: Record<AiFeature, string> = {
+  codenames: GLOBAL_DEFAULT_MODEL,
   decrypto: GLOBAL_DEFAULT_MODEL,
   // Everything text runs the strongest flagship on the gateway free tier
   // (PDF-capable), like the single OPENAI_MODEL flagship pre-migration.

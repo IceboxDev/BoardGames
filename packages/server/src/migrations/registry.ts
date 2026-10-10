@@ -55,6 +55,8 @@ import { activityEventTime } from "./0047-activity-event-time.ts";
 import { purchasePollTheme } from "./0048-purchase-poll-theme.ts";
 import { quiztopiaWikiReadLog } from "./0049-quiztopia-wiki-read-log.ts";
 import { quiztopiaReports } from "./0050-quiztopia-reports.ts";
+import { onboarding } from "./0051-onboarding.ts";
+import { goReviews } from "./0052-go-reviews.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -108,6 +110,8 @@ export const migrations: readonly Migration[] = [
   purchasePollTheme,
   quiztopiaWikiReadLog,
   quiztopiaReports,
+  onboarding,
+  goReviews,
 ];
 
 /**

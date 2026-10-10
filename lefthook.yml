@@ -1,17 +1,17 @@
 pre-commit:
-  parallel: true
+  # One step at a time, stopping at the first failure: the quick checks first,
+  # then the typecheck + tests (scripts/pre-commit-checks.mjs explains why they
+  # no longer run all at once).
+  piped: true
   commands:
     biome:
+      priority: 1
       glob: "*.{ts,tsx,js,jsx,json,css}"
       run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" npx @biomejs/biome check --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
     style-guard:
+      priority: 2
       glob: "packages/web/src/**/*.{ts,tsx}"
       run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" node scripts/lint-styles.mjs
-    typecheck:
-      run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" pnpm -r typecheck
-    test:
-      # LEFTHOOK=1 is read by the vitest configs (a 30 s per-test timeout) and
-      # the timing-sensitive AI tests (a load factor): the hook runs the three
-      # suites and a typecheck at once, on a machine that may be busy besides.
-      # Lefthook itself does not export it.
-      run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" LEFTHOOK=1 pnpm test
+    typecheck-and-test:
+      priority: 3
+      run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" node scripts/pre-commit-checks.mjs {staged_files}

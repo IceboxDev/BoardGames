@@ -48,6 +48,7 @@ import { dndCampaignRoutes } from "./auth-routes/dnd-campaigns.ts";
 import { geographyRoutes } from "./auth-routes/geography.ts";
 import { greetingsRoutes } from "./auth-routes/greetings.ts";
 import { matchHistoryRoutes } from "./auth-routes/match-history.ts";
+import { onboardingRoutes } from "./auth-routes/onboarding.ts";
 import { profileRoutes } from "./auth-routes/profile.ts";
 import { profileInsightsRoutes } from "./auth-routes/profile-insights.ts";
 import { purchaseVoteRoutes } from "./auth-routes/purchase-vote.ts";
@@ -57,6 +58,7 @@ import { skillsRoutes } from "./auth-routes/skills.ts";
 import { userAvailabilityRoutes } from "./auth-routes/user-availability.ts";
 import { userInventoryRoutes } from "./auth-routes/user-inventory.ts";
 import { probeDb } from "./db.ts";
+import { goReviewRoutes } from "./games/go-review-routes.ts";
 import { getRegisteredSlugs } from "./games/registry.ts";
 import { probeAi } from "./lib/ai/index.ts";
 import { requireTrustedOrigin } from "./lib/csrf.ts";
@@ -75,6 +77,7 @@ import {
   handleJoinRoom,
   handleKickPlayer,
   handleLeaveRoom,
+  handleShuffleSeats,
   handleStartRoom,
   handleSwapSeats,
   handleToggleReady,
@@ -278,6 +281,8 @@ app.route("/api/skills", skillsRoutes);
 // null to online-only accounts (its kinds all point at offline features).
 app.use("/api/greetings/*", requireAuth);
 app.route("/api/greetings", greetingsRoutes);
+app.use("/api/onboarding/*", requireAuth);
+app.route("/api/onboarding", onboardingRoutes);
 
 // Arrival photos: plain requireAuth like the greeting that links to them.
 app.use("/api/arrivals/*", requireAuth);
@@ -380,6 +385,18 @@ app.use(
 );
 app.route("/api/games", persistenceRoutes);
 
+// Go reviews: imports are metered — each one queues minutes of KataGo time.
+app.use(
+  "/api/go/*",
+  requireAuth,
+  bodyLimit({
+    maxSize: 128 * 1024,
+    onError: (c) => errorResponse(c, 413, "Body too large", "PAYLOAD_TOO_LARGE"),
+  }),
+  rateLimit({ name: "go-review-write", windowMs: 60 * 60_000, max: 20, skipSafeMethods: true }),
+);
+app.route("/api/go", goReviewRoutes);
+
 // Issues a short-lived ticket for the cross-origin WebSocket handshake. The
 // cookie authenticates this HTTP call (same-origin via the web proxy); the
 // returned ticket then authenticates the direct `/ws` connection. See
@@ -413,6 +430,9 @@ function handleRoomMessage(ws: import("hono/ws").WSContext, msg: ClientToServerM
       return true;
     case "swap-seats":
       handleSwapSeats(ws, msg);
+      return true;
+    case "shuffle-seats":
+      handleShuffleSeats(ws, msg);
       return true;
     case "chat":
       handleChat(ws, msg);

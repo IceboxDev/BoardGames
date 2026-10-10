@@ -1,0 +1,79 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Chess — Rules</title>
+<style>
+@page { size: A4; margin: 18mm 18mm; }
+body { font-family: "Georgia", serif; color: #1d1a16; font-size: 10.5pt; line-height: 1.45; }
+h1 { font-size: 24pt; margin: 0 0 2mm; letter-spacing: .5px; }
+.sub { color: #6b5d4b; margin-bottom: 6mm; font-style: italic; }
+h2 { font-size: 13pt; border-bottom: 1.5px solid #b0835a; padding-bottom: 1mm; margin: 6mm 0 2mm; color: #5a3a1c; break-after: avoid; }
+h3 { font-size: 11pt; margin: 3mm 0 1mm; }
+table { border-collapse: collapse; width: 100%; margin: 2mm 0; font-size: 10pt; }
+td, th { border: 1px solid #d8c7a8; padding: 1.5mm 2.5mm; text-align: left; vertical-align: top; }
+th { background: #f2e8d5; }
+.cols { columns: 2; column-gap: 8mm; }
+.box { background: #f7f0e3; border-left: 3px solid #b0835a; padding: 2mm 4mm; margin: 3mm 0; break-inside: avoid; }
+ul { margin: 1mm 0; padding-left: 5mm; } li { margin: .6mm 0; }
+.small { font-size: 9pt; color: #574b3c; }
+</style></head><body>
+<h1>Chess</h1>
+<div class="sub">The rules as played here — following the FIDE Laws of Chess (2023).</div>
+
+<div class="cols">
+<h2>The goal</h2>
+<p>Two players, White and Black, move in turn — White first. You win by <b>checkmating</b> the opponent's king: attacking it so that no move removes the attack. You also win if your opponent resigns, runs out of time, or abandons the game.</p>
+
+<h2>How the pieces move</h2>
+<table>
+<tr><th>Piece</th><th>Moves</th></tr>
+<tr><td>♔ King</td><td>One square in any direction. Never onto an attacked square.</td></tr>
+<tr><td>♕ Queen</td><td>Any distance in a straight line — along ranks, files or diagonals.</td></tr>
+<tr><td>♖ Rook</td><td>Any distance along a rank or file.</td></tr>
+<tr><td>♗ Bishop</td><td>Any distance diagonally; stays on its square colour.</td></tr>
+<tr><td>♘ Knight</td><td>An "L": two squares one way and one at a right angle. Jumps over pieces.</td></tr>
+<tr><td>♙ Pawn</td><td>One square forward (two from its starting square); captures one square diagonally forward.</td></tr>
+</table>
+<p>No piece except the knight may pass over another. A piece captures by moving onto an enemy piece's square.</p>
+
+<h2>Special moves</h2>
+<h3>Castling</h3>
+<p>The king moves two squares toward a rook, and that rook jumps to the square the king crossed. Allowed only if neither piece has moved, the squares between them are empty, and the king is not in check, does not pass through an attacked square and does not land in check.</p>
+<h3>En passant</h3>
+<p>When a pawn advances two squares and lands beside an enemy pawn, that pawn may capture it as if it had moved one square — but only on the very next move.</p>
+<h3>Promotion</h3>
+<p>A pawn reaching the last rank becomes a queen, rook, bishop or knight of the same colour (a picker appears on the board).</p>
+
+<h2>Check and checkmate</h2>
+<p>A king under attack is <b>in check</b>; you must get out of check at once — move the king, block, or capture the attacker. You may never make a move that leaves your own king in check. If the side in check has no legal move, it is <b>checkmate</b>.</p>
+
+<h2>Draws</h2>
+<ul>
+<li><b>Stalemate</b> — the side to move has no legal move and is not in check.</li>
+<li><b>Insufficient material</b> — neither side can possibly mate (e.g. king against king, or king and bishop or knight against king). Automatic.</li>
+<li><b>Threefold repetition</b> — the same position for the third time: the player to move may <i>claim</i> a draw. At the fifth time it is drawn automatically.</li>
+<li><b>Fifty-move rule</b> — fifty moves by each side without a capture or pawn move: claimable. At seventy-five it is automatic.</li>
+<li><b>Agreement</b> — one player offers, the other accepts.</li>
+</ul>
+
+<h2>Playing online here</h2>
+<div class="box">
+<p><b>Clocks.</b> Choose untimed or a time control written <i>minutes + increment</i> (e.g. 3+2: three minutes each, plus two seconds added after every move). The server keeps time; your clock runs only on your turn. If your time runs out you lose — unless your opponent has only a king left, which is a draw.</p>
+</div>
+<ul>
+<li><b>Moving.</b> Click a piece then a square, or drag it. Dots show where it can go. Keyboard: arrows move a cursor, Enter picks up and drops, Esc cancels. <b>F</b> flips the board; ←/→ step through the moves.</li>
+<li><b>Premoves.</b> While your opponent thinks you can queue one move; it plays instantly if it is still legal.</li>
+<li><b>Draw offers.</b> One offer per move. Making a move declines your opponent's offer.</li>
+<li><b>Takebacks.</b> Against the AI a takeback is immediate. Against a person they must agree. The host can turn takebacks off.</li>
+<li><b>Leaving.</b> If your opponent disconnects for a minute, you may claim the win or call it a draw. The clock keeps running meanwhile.</li>
+<li><b>Colours.</b> Solo, pick White, Black or random. In a room the first seat plays White — the host swaps seats to change colours.</li>
+<li><b>After the game.</b> Copy or download the PGN, and open the replay for an engine analysis: an evaluation bar, the best move, and every inaccuracy (?!), mistake (?) and blunder (??).</li>
+</ul>
+
+<h2>The AI opponents</h2>
+<p>From <i>Wanderer</i> (random moves) and <i>Pawn</i> (sees one move ahead) through Stockfish limited to roughly 1400, 1800, 2200 and 2700 Elo, up to full-strength Stockfish. In timed games every AI manages its own clock.</p>
+</div>
+
+<h2>Credits &amp; licences</h2>
+<p class="small"><b>Stockfish 19</b> — © T. Romstad, M. Costalba, J. Kiiski, G. Linscott and contributors; WebAssembly build "Stockfish.js" by Nathan Rugg / Chess.com. GPL-3.0; source: github.com/official-stockfish/Stockfish and github.com/nmrugg/stockfish.js.<br>
+<b>Fairy-Stockfish</b> (Bughouse AI) — © Fabian Fichter and contributors. GPL-3.0; source: github.com/fairy-stockfish/Fairy-Stockfish.<br>
+<b>Piece art</b> — "cburnett" set by Colin M.L. Burnett, CC BY-SA 3.0, as distributed by lichess.org.<br>
+<b>Rules</b> — summarised from the FIDE Laws of Chess, handbook.fide.com.</p>
+</body></html>

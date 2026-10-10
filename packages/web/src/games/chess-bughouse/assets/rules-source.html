@@ -1,0 +1,55 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Chess Bughouse — Rules</title>
+<style>
+@page { size: A4; margin: 18mm 18mm; }
+body { font-family: "Georgia", serif; color: #1d1a16; font-size: 10.5pt; line-height: 1.45; }
+h1 { font-size: 24pt; margin: 0 0 2mm; letter-spacing: .5px; }
+.sub { color: #6b5d4b; margin-bottom: 6mm; font-style: italic; }
+h2 { font-size: 13pt; border-bottom: 1.5px solid #b0835a; padding-bottom: 1mm; margin: 6mm 0 2mm; color: #5a3a1c; break-after: avoid; }
+h3 { font-size: 11pt; margin: 3mm 0 1mm; }
+table { border-collapse: collapse; width: 100%; margin: 2mm 0; font-size: 10pt; }
+td, th { border: 1px solid #d8c7a8; padding: 1.5mm 2.5mm; text-align: left; vertical-align: top; }
+th { background: #f2e8d5; }
+.cols { columns: 2; column-gap: 8mm; }
+.box { background: #f7f0e3; border-left: 3px solid #b0835a; padding: 2mm 4mm; margin: 3mm 0; break-inside: avoid; }
+ul { margin: 1mm 0; padding-left: 5mm; } li { margin: .6mm 0; }
+.small { font-size: 9pt; color: #574b3c; }
+</style></head><body>
+<h1>Chess Bughouse</h1>
+<div class="sub">Four players, two boards, two teams — and every piece you take goes to your partner.</div>
+<div class="cols">
+<h2>The table</h2>
+<p>Two games of chess are played side by side, at the same time. You and your partner sit at different boards with <b>opposite colours</b>: if you are White on Board A, your partner is Black on Board B.</p>
+<table>
+<tr><th>Team 1</th><th>Team 2</th></tr>
+<tr><td>Board A · White<br>Board B · Black</td><td>Board A · Black<br>Board B · White</td></tr>
+</table>
+<p>Your team wins as soon as either of you wins: the first checkmate, flag fall or resignation on <b>either board</b> ends the whole match.</p>
+
+<h2>Passing pieces</h2>
+<p>Whenever you capture a piece, it goes straight to your partner's <b>hand</b> (pocket) — the same colour as your partner's army. A captured piece that had been promoted from a pawn goes over as a <b>pawn</b>.</p>
+
+<h2>Dropping</h2>
+<p>On your turn, instead of moving a piece, you may <b>drop</b> one from your hand onto any empty square. Click it in your pocket, then click the square.</p>
+<ul>
+<li>Pawns may not be dropped on the first or last rank.</li>
+<li>A drop may give check — and even checkmate.</li>
+<li>A drop may block a check.</li>
+<li>A dropped pawn on its second rank may still move two squares.</li>
+</ul>
+
+<h2>Everything else is chess</h2>
+<p>Pieces move as in normal chess, including castling, en passant and promotion. Checkmate is decided by the pieces <i>currently</i> in hand. There are no draws by repetition or by the fifty-move rule, and there is no stalemate: a player with no legal move simply waits for a piece to arrive — while their clock runs.</p>
+
+<h2>Clocks</h2>
+<p>Bughouse is played fast: 3 minutes each is the standard here. Each board has its own pair of clocks; yours runs only on your turn.</p>
+
+<h2>Talking to your partner</h2>
+<p>The signal buttons tell your partner what you need — <i>Need ♞</i>, <i>Need ♛</i>… — or ask them to <b>Sit!</b> (stop moving, so the opponent can't get a piece) or <b>Go!</b> (play fast). Only your team sees them.</p>
+
+<h2>Bots</h2>
+<p>Solo, you play with three bots: a bot partner and two bot opponents, from <i>Wanderer</i> (random) to <i>Shark</i> (Fairy-Stockfish at full strength). Bots play their own board well but don't plan with their partner.</p>
+</div>
+<h2>Credits &amp; licences</h2>
+<p class="small"><b>Fairy-Stockfish</b> — © Fabian Fichter and contributors. GPL-3.0; source: github.com/fairy-stockfish/Fairy-Stockfish.<br>
+<b>Piece art</b> — "cburnett" set by Colin M.L. Burnett, CC BY-SA 3.0, as distributed by lichess.org.</p>
+</body></html>

@@ -12,6 +12,7 @@ import {
   Checkbox,
   CheckRow,
   Chip,
+  Coachmark,
   CopyField,
   Drawer,
   EmptyState,
@@ -141,7 +142,7 @@ export default function UiGalleryPage() {
   const [pickedMembers, setPickedMembers] = useState<ReadonlySet<string>>(new Set(["m2"]));
   const [rowPicked, setRowPicked] = useState(false);
   const [dialog, setDialog] = useState<
-    "modal" | "modal-compact" | "drawer" | "sheet" | "overlay" | null
+    "modal" | "modal-compact" | "drawer" | "sheet" | "overlay" | "coachmark" | null
   >(null);
   const closeDialog = () => setDialog(null);
   const { confirm, confirmDialog } = useConfirm();
@@ -582,6 +583,14 @@ export default function UiGalleryPage() {
               </Button>
               <Button
                 size="sm"
+                variant="secondary"
+                data-tour="gallery-coachmark"
+                onClick={() => setDialog(dialog === "coachmark" ? null : "coachmark")}
+              >
+                Coachmark
+              </Button>
+              <Button
+                size="sm"
                 variant="danger"
                 onClick={() =>
                   void confirm({ title: "Delete this?", description: "It cannot be undone." })
@@ -620,6 +629,15 @@ export default function UiGalleryPage() {
               <Drawer side="bottom" onClose={closeDialog} title="Bottom sheet">
                 <p className="text-sm text-fg-secondary">The phone rail sheet.</p>
               </Drawer>
+            )}
+            {dialog === "coachmark" && (
+              <Coachmark
+                target='[data-tour="gallery-coachmark"]'
+                title="A first-use hint"
+                onDismiss={closeDialog}
+              >
+                Points at one real control and says what it does. Tap anywhere to dismiss.
+              </Coachmark>
             )}
             {dialog === "overlay" && (
               <Overlay onClose={closeDialog} contentClassName="w-80">

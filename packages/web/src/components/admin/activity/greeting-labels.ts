@@ -21,6 +21,7 @@ const SHORT: Readonly<Record<GreetingKind, string>> = {
   "purchase-vote-reminder": "the purchase-vote reminder",
   arrival: "the arrivals announcement",
   "night-invite": "the private-night invitation",
+  onboarding: "the welcome tour",
 };
 
 /** "the group spotlight about Melanie" — as specific as the row allows. */
@@ -69,6 +70,8 @@ export function ctaFallbackDestination(
       return "the collection";
     case "night-invite":
       return undefined;
+    case "onboarding":
+      return "the calendar";
   }
 }
 
@@ -80,6 +83,7 @@ export const GREETING_SHOWN_PAGE: Readonly<Record<GreetingKind, PageViewPage>> =
   "purchase-vote-reminder": "purchase-vote-reminder",
   arrival: "arrival",
   "night-invite": "night-invite",
+  onboarding: "onboarding",
 };
 
 /** The greeting a "shown" page view is about, if it is one. */

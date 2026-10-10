@@ -14,7 +14,7 @@ const LOW_SCORE_WINS = new Set<string>(["phase-10", "bandit"]);
 // Shared by POINTLESS_FFA (these duels are point-less) and isWinDrawLossFfa
 // (they additionally allow a drawn game). Declared first so the set literal
 // below can fold it in.
-const WIN_DRAW_LOSS_FFA_SLUGS = ["chess", "connect-4"] as const;
+const WIN_DRAW_LOSS_FFA_SLUGS = ["chess", "connect-4", "go"] as const;
 const WIN_DRAW_LOSS_FFA = new Set<string>(WIN_DRAW_LOSS_FFA_SLUGS);
 
 // Plain single-winner games: one player is crowned, no scores, no draw, no

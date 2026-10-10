@@ -44,6 +44,7 @@ export const GREETING_KINDS = [
   "purchase-vote-reminder",
   "arrival",
   "night-invite",
+  "onboarding",
 ] as const;
 export const GreetingKindSchema = z.enum(GREETING_KINDS);
 export type GreetingKind = z.infer<typeof GreetingKindSchema>;
@@ -176,6 +177,8 @@ export const ActivityMetaSchemas = {
     greetingId: z.number().int().optional(),
     /** A spotlight's subject (since 2026-09-28). */
     subjectUserId: z.string().optional(),
+    /** The welcome tour: the furthest card reached (since 2026-10-09). */
+    reached: z.number().int().optional(),
   }),
 
   // ── Collection ──
@@ -220,6 +223,10 @@ export const ActivityMetaSchemas = {
   "geography-train": TrainDaySchema,
   "geography-settings": TrainerSettingsSchema,
   "geography-reset": TrainerResetSchema,
+
+  // ── Go ──
+  /** An imported SGF sent to KataGo for review (finished matches are reviewed automatically). */
+  "go-review-requested": z.object({ reviewId: z.number().int(), moves: z.number().int() }),
 } as const;
 
 type MetaSchemas = typeof ActivityMetaSchemas;
@@ -315,6 +322,8 @@ export const PAGE_VIEW_PAGES = [
   "trainer-wiki",
   "trainer-timeline",
   "trainer-explore",
+  // Go reviews (detail: review id, absent on the list)
+  "go-review",
   // Surfaces that aren't routes
   "night", // detail: date key — a night's RSVP card
   "purchase-vote",
@@ -326,6 +335,7 @@ export const PAGE_VIEW_PAGES = [
   "purchase-vote-reminder", // detail: poll id
   "arrival", // detail: arrival id
   "night-invite", // detail: date key
+  "onboarding", // the welcome tour, shown once to a new member
   "purchase-vote-result", // LEGACY — the card was replaced by arrivals
 ] as const;
 export type PageViewPage = (typeof PAGE_VIEW_PAGES)[number];

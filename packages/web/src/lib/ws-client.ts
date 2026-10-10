@@ -118,9 +118,12 @@ export interface GameSession<TPlayerView, TAction, TResult> {
   startRoom: (config: unknown) => void;
   kickPlayer: (slotIndex: number) => void;
   toggleReady: () => void;
-  /** Host-only: swap the in-game roles assigned to two slots (pre-start).
-   *  Players stay in their slots; `RoomState.seatOrder` changes. */
+  /** Swap the in-game roles assigned to two slots (pre-start): the host any
+   *  two, a guest their own slot with an AI one. Players stay in their slots;
+   *  `RoomState.seatOrder` changes. */
   swapSeats: (a: number, b: number) => void;
+  /** Host-only: deal the filled seats out at random (pre-start). */
+  shuffleSeats: () => void;
   /** Clear the connection-level error. Used by screens that present a
    *  clean-slate entry point (e.g. JoinRoomRoute) so a stale "Host left"
    *  / "Room ABCD not found" notice from a previous session doesn't
@@ -673,6 +676,11 @@ export function useGameSession<
     [sendMessage, roomCode],
   );
 
+  const shuffleSeats = useCallback(() => {
+    if (!roomCode) return;
+    sendMessage({ type: "shuffle-seats", roomCode });
+  }, [sendMessage, roomCode]);
+
   return {
     status,
     sessionId,
@@ -703,6 +711,7 @@ export function useGameSession<
     kickPlayer,
     toggleReady,
     swapSeats,
+    shuffleSeats,
     clearError,
     chatMessages,
     sendChat,

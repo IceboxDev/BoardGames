@@ -9,6 +9,7 @@ import { EXIT_CATALOG_SLUG } from "../../lib/exit-night";
 import { canManageNight, seatsLeft, viewerSeat, waitlistPosition } from "../../lib/night-access";
 import { reportPageView } from "../../lib/page-views";
 import { ClockIcon, HostIcon, PadlockIcon, PinIcon, UsersIcon } from "../icons";
+import { useOnboardingHint } from "../onboarding/OnboardingHints";
 import {
   Badge,
   EmptyState,
@@ -160,6 +161,10 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
             ? "results"
             : "attendees"
           : view;
+
+  // First-use hints inside a night: answering it (open nights), then voting.
+  useOnboardingHint("night-rsvp", !!lock && !lockedOut && !isPrivate);
+  useOnboardingHint("night-vote", viewerCanReact && !hostPicks && effectiveView === "pick");
 
   // While the auto-yes mutation is in flight on first open, render "Going"
   // optimistically so the header doesn't flicker through an empty state.
@@ -371,7 +376,9 @@ export default function RsvpModal({ date, locks, onClose }: Props) {
               onChange={answer}
             />
           ) : (
-            <RsvpSwitch value={effectiveRsvp ?? "yes"} busy={busy} onChange={answer} />
+            <div data-tour="night-rsvp">
+              <RsvpSwitch value={effectiveRsvp ?? "yes"} busy={busy} onChange={answer} />
+            </div>
           )}
         </div>
       )}

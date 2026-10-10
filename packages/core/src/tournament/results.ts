@@ -77,7 +77,8 @@ export function tallyToMatchup(a: string, b: string, t: MatchupTally): Tournamen
 /**
  * Fold a fresh run into an earlier file: matchups the run played replace the
  * old ones (in either orientation); everything else is kept, so a heavy game
- * can be run one table size or one strategy at a time.
+ * can be run one table size or one strategy at a time — except matchups of a
+ * strategy the game no longer offers (`fresh.strategies` is the manifest's).
  */
 export function mergeResults(
   previous: TournamentResults | null,
@@ -88,13 +89,16 @@ export function mergeResults(
   const played = new Set(
     fresh.tables.flatMap((t) => t.matchups.map((m) => key(t.playerCount, m.a, m.b))),
   );
+  const offered = new Set(fresh.strategies.map((s) => s.id));
   const sizes = new Set([...previous.tables, ...fresh.tables].map((t) => t.playerCount));
   const tables = [...sizes]
     .sort((x, y) => x - y)
     .map((playerCount) => {
       const kept = (
         previous.tables.find((t) => t.playerCount === playerCount)?.matchups ?? []
-      ).filter((m) => !played.has(key(playerCount, m.a, m.b)));
+      ).filter(
+        (m) => offered.has(m.a) && offered.has(m.b) && !played.has(key(playerCount, m.a, m.b)),
+      );
       const added = fresh.tables.find((t) => t.playerCount === playerCount)?.matchups ?? [];
       return { playerCount, matchups: [...kept, ...added] };
     });

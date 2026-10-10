@@ -39,6 +39,7 @@ export interface MultiplayerRoomState<TView, TAction, TResult> {
   kickPlayer: (slotIndex: number) => void;
   toggleReady: () => void;
   swapSeats: (a: number, b: number) => void;
+  shuffleSeats: () => void;
 
   // Room chat (Sky Team briefing today; available to any game that wants it)
   chatMessages: ChatMessage[];
@@ -115,6 +116,7 @@ export function useMultiplayerRoom<TView = unknown, TAction = unknown, TResult =
     kickPlayer: session.kickPlayer,
     toggleReady: session.toggleReady,
     swapSeats: session.swapSeats,
+    shuffleSeats: session.shuffleSeats,
 
     chatMessages: session.chatMessages,
     sendChat: session.sendChat,

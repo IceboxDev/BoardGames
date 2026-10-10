@@ -224,6 +224,27 @@
   --color-dnd-arcane: #170a2a;
   --color-dnd-ember-deep: #641212;
   --color-dnd-ember: #b91c1c;
+  /* Codenames: the agent covers and the word card. Literal game colours, not
+     status accents — Red/Blue are the teams, tan the bystanders, ink the
+     assassin, green Duet's agents; `card` / `card-ink` the printed word card.
+     Ink on a cover is `text-cn-cover-ink`; on the card, `text-cn-card-ink`. */
+  --color-cn-red: #c2412d;
+  --color-cn-blue: #2f6db5;
+  --color-cn-tan: #c9b48a;
+  --color-cn-ink: #17140f;
+  --color-cn-green: #3f8f4e;
+  --color-cn-card: #e9dfc8;
+  --color-cn-card-ink: #2a2318;
+  --color-cn-cover-ink: #fbf6ea;
+  /* The word card's paper shading and its white name plate, and each
+     cover's darker end for its gradient. */
+  --color-cn-card-shade: #d3c39f;
+  --color-cn-plate: #fbf8f0;
+  --color-cn-red-deep: #842716;
+  --color-cn-blue-deep: #1b467e;
+  --color-cn-tan-deep: #9a835a;
+  --color-cn-ink-deep: #050403;
+  --color-cn-green-deep: #22602f;
   /* Stacking layers. Keep this list as the single source of truth.
      nav      — sticky app chrome (TopNav); above page content, below every
                 portaled layer.
@@ -275,6 +296,8 @@
      portrait 4:5, the crop the server bakes (`lib/arrival-photo.ts`) and the
      admin composer previews. */
   --aspect-photo: 4 / 5;
+  /* A Codenames word card: landscape, as printed. */
+  --aspect-word-card: 8 / 5;
   /* The RSVP canvas dialog: fills the viewport height and keeps widening on
      very large displays instead of stranding the game carousel in a 42rem
      column. `--container-*` drives `max-w-*`, so these are `max-w-modal-full`

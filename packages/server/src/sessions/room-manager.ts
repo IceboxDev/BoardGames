@@ -1,4 +1,4 @@
-import { randomBytes } from "node:crypto";
+import { randomBytes, randomInt } from "node:crypto";
 import { getManifest } from "@boardgames/core/games/manifests";
 import {
   defaultStrategyFor,
@@ -13,6 +13,7 @@ import {
   type PlayerConnection,
   reconnectPlayer,
   type SessionSeat,
+  seatConnectionChanged,
   startRoomSession,
   wsAuth,
 } from "./manager.ts";
@@ -301,7 +302,10 @@ function handleReconnect(ws: WSContext, room: Room, userId: string): void {
   cancelGrace(room);
 
   broadcastRoomUpdate(room);
-  if (room.sessionId) reconnectPlayer(room.sessionId, ws, seat);
+  if (room.sessionId) {
+    reconnectPlayer(room.sessionId, ws, seat);
+    seatConnectionChanged(room.sessionId, seat, true);
+  }
 }
 
 /** A player leaves. Before the game their slot opens; during it, they may come back. */
@@ -409,10 +413,6 @@ export function handleSwapSeats(
     sendError(ws, `Room ${msg.roomCode} not found`);
     return;
   }
-  if (room.hostWs !== ws) {
-    sendError(ws, "Only the host can swap seats");
-    return;
-  }
   if (room.sessionId) {
     sendError(ws, "Cannot swap seats after game has started");
     return;
@@ -422,7 +422,47 @@ export function handleSwapSeats(
     sendError(ws, "Invalid seat swap");
     return;
   }
+  if (room.hostWs !== ws) {
+    // Anyone may take a seat a bot holds: swap their own slot with an AI one.
+    const mine = room.clients.get(ws);
+    const other = mine === a ? b : mine === b ? a : null;
+    if (other === null || room.slots[other]?.kind !== "ai") {
+      sendError(ws, "Only the host can move other players");
+      return;
+    }
+  }
   [room.seatOrder[a], room.seatOrder[b]] = [room.seatOrder[b], room.seatOrder[a]];
+  broadcastRoomUpdate(room);
+}
+
+/**
+ * Deal the filled slots' seats out at random — host only, before the game
+ * starts. Only `seatOrder` changes, among the slots that hold someone (open
+ * slots keep their ranks, so they stay at the end of the seating).
+ */
+export function handleShuffleSeats(ws: WSContext, msg: { roomCode: string }): void {
+  const room = rooms.get(msg.roomCode);
+  if (!room) {
+    sendError(ws, `Room ${msg.roomCode} not found`);
+    return;
+  }
+  if (room.hostWs !== ws) {
+    sendError(ws, "Only the host can shuffle seats");
+    return;
+  }
+  if (room.sessionId) {
+    sendError(ws, "Cannot shuffle seats after game has started");
+    return;
+  }
+  const filled = room.slots.flatMap((slot, i) => (slot.kind === "open" ? [] : [i]));
+  const ranks = filled.map((i) => room.seatOrder[i] as number);
+  for (let i = ranks.length - 1; i > 0; i--) {
+    const j = randomInt(i + 1);
+    [ranks[i], ranks[j]] = [ranks[j] as number, ranks[i] as number];
+  }
+  filled.forEach((slot, k) => {
+    room.seatOrder[slot] = ranks[k] as number;
+  });
   broadcastRoomUpdate(room);
 }
 
@@ -598,6 +638,8 @@ function markDisconnected(room: Room, slotIndex: number): void {
   const slot = room.slots[slotIndex];
   if (slot) slot.connected = false;
   broadcastRoomUpdate(room);
+  const seat = room.seatOfSlot[slotIndex];
+  if (room.sessionId && seat !== undefined) seatConnectionChanged(room.sessionId, seat, false);
 
   const anyoneConnected = room.slots.some((s) => s.kind === "human" && s.connected);
   if (anyoneConnected || room.graceTimer) return;

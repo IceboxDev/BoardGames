@@ -24,6 +24,8 @@ export function greetingKey(g: AppGreeting): string {
       return `arrival:${g.arrivalId}`;
     case "night-invite":
       return `night-invite:${g.date}`;
+    case "onboarding":
+      return "onboarding";
   }
 }
 
@@ -42,6 +44,10 @@ export function ackBody(g: AppGreeting, action: GreetingAckAction): AppGreetingA
       return { kind: "arrival", arrivalId: g.arrivalId, action };
     case "night-invite":
       return { kind: "night-invite", date: g.date, action };
+    case "onboarding":
+      // The host acks the tour itself with how far it got; this is the
+      // fallback for a generic close (counted as the first card).
+      return { kind: "onboarding", action, reached: 1 };
   }
 }
 
@@ -64,5 +70,7 @@ export function greetingView(g: AppGreeting): { page: PageViewPage; detail?: str
       return { page: "arrival", detail: g.arrivalId };
     case "night-invite":
       return { page: "night-invite", detail: g.date };
+    case "onboarding":
+      return { page: "onboarding" };
   }
 }

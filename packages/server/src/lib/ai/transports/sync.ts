@@ -1,6 +1,7 @@
 import { generateText, jsonSchema, Output } from "ai";
 import type { AiTransportRequest } from "./types";
 import { toUserMessages } from "./types";
+import { readUsage } from "./usage";
 
 /**
  * Plain awaited call. Fine for local scripts and short generations; on
@@ -18,5 +19,6 @@ export async function syncTransport(req: AiTransportRequest): Promise<unknown> {
     timeout: { totalMs: req.budgetMs },
     ...(req.gatewayOptions ? { providerOptions: { gateway: req.gatewayOptions } } : {}),
   });
+  req.onUsage?.(readUsage(result.totalUsage, result.providerMetadata));
   return result.output;
 }

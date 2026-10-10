@@ -87,14 +87,22 @@ const ToggleReadySchema = z.object({
   roomCode: z.string(),
 });
 
-// Swap the in-game seats (roles) assigned to two slots — host only, before
-// the game starts. Players stay in their slots; only `RoomState.seatOrder`
-// changes (Sky Team: who flies as Pilot vs Co-Pilot).
+// Swap the in-game seats (roles) assigned to two slots before the game starts.
+// The host may swap any two; anyone else may swap only their own slot with an
+// AI-held one (taking that seat). Players stay in their slots; only
+// `RoomState.seatOrder` changes (Sky Team: Pilot vs Co-Pilot; Codenames: who
+// is a spymaster, and on which team).
 const SwapSeatsSchema = z.object({
   type: z.literal("swap-seats"),
   roomCode: z.string(),
   a: z.number().int().min(0),
   b: z.number().int().min(0),
+});
+
+// Host only, before the game starts: deal the filled seats out at random.
+const ShuffleSeatsSchema = z.object({
+  type: z.literal("shuffle-seats"),
+  roomCode: z.string(),
 });
 
 // Free-form chat between seated humans. Used during the Sky Team briefing
@@ -129,6 +137,7 @@ export const ClientMessageSchema = z.discriminatedUnion("type", [
   KickPlayerSchema,
   ToggleReadySchema,
   SwapSeatsSchema,
+  ShuffleSeatsSchema,
   ChatSchema,
   PingSchema,
 ]);
@@ -145,6 +154,7 @@ export {
   LeaveRoomSchema,
   LeaveSessionSchema,
   PingSchema,
+  ShuffleSeatsSchema,
   StartRoomSchema,
   SwapSeatsSchema,
   ToggleReadySchema,

@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import type { GameOverAction } from "../components/game-over/GameOverLayout";
 import type { GameSource } from "./useGameShell";
 import { useGameShell } from "./useGameShell";
+import { useSoloGameHistory } from "./useSoloGameHistory";
 
 /** What a game component renders right now. */
 export type SessionPhase =
@@ -122,12 +123,21 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
     [game.error, game.start],
   );
 
+  const changeSetup = useCallback(() => {
+    lastView.current = null;
+    game.reset();
+  }, [game.reset]);
+
+  // A solo game is one history entry above its setup screen: Back returns there.
+  const gameHistory = useSoloGameHistory(source === "solo" && !autoStart, changeSetup);
+
   const start = useCallback(
     (setup: TSetup) => {
       if (!toSoloStart) throw new Error(`${def.slug} has no solo game to start`);
+      gameHistory.enterGame();
       launch(toSoloStart(setup));
     },
-    [toSoloStart, def.slug, launch],
+    [toSoloStart, def.slug, launch, gameHistory.enterGame],
   );
 
   const backToMenu = useCallback(() => {
@@ -135,11 +145,6 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
     else game.reset();
     navigate(`/play/${def.slug}`);
   }, [source, mp.reset, game.reset, def.slug, navigate]);
-
-  const changeSetup = useCallback(() => {
-    lastView.current = null;
-    game.reset();
-  }, [game.reset]);
 
   const seats = useMemo((): SeatInfo[] => {
     const ai = (strategy: string | undefined): SeatInfo => {
@@ -195,7 +200,13 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
             : []),
           ...(autoStart
             ? [{ label: "Back to Menu", variant: "secondary" as const, onClick: backToMenu }]
-            : [{ label: "Change Setup", variant: "secondary" as const, onClick: changeSetup }]),
+            : [
+                {
+                  label: "Change Setup",
+                  variant: "secondary" as const,
+                  onClick: gameHistory.exitGame,
+                },
+              ]),
         ]
       : [{ label: "Back to Menu", variant: "primary" as const, onClick: backToMenu }]),
     ...(viewReplay
@@ -219,7 +230,7 @@ export function useSessionFlow<TView, TAction, TResult, TSetup = never>(
     seatNames,
     start,
     playAgain,
-    changeSetup: source === "solo" && !autoStart ? changeSetup : null,
+    changeSetup: source === "solo" && !autoStart ? gameHistory.exitGame : null,
     backToMenu,
     viewReplay,
     endActions,

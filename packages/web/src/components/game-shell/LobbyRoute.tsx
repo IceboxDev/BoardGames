@@ -144,6 +144,7 @@ export default function LobbyRoute() {
         if (slots) mp.configureRoom(slots);
       }}
       onSwapSeats={(a, b) => mp.swapSeats(a, b)}
+      onShuffleSeats={() => mp.shuffleSeats()}
       error={mp.error}
     >
       {/* Lazy game-specific lobby content (e.g. Pandemic's difficulty

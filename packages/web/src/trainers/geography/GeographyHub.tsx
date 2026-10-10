@@ -5,7 +5,7 @@ import type { SrsState } from "@boardgames/core/trainers/srs";
 import { useQuery } from "@tanstack/react-query";
 import { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FlameIcon, GearIcon } from "../../components/icons";
+import { GearIcon } from "../../components/icons";
 import {
   Button,
   IconButton,
@@ -16,6 +16,7 @@ import {
   StatTile,
   Surface,
 } from "../../components/ui";
+import { FlameArt } from "../../components/ui/FlameArt.tsx";
 import { StudyHeatmap } from "../../games/quiztopia/components/trainer/StudyHeatmap";
 import { weekdayName } from "../../games/quiztopia/keys";
 import { useCurrentUser } from "../../hooks/useCurrentUser";
@@ -159,7 +160,7 @@ function HubBody({ overview, today }: { overview: GeoOverview; today: string }) 
               variant="raised"
               size="2xl"
               label="Streak"
-              icon={<FlameIcon className="h-3 w-3" />}
+              icon={<FlameArt className="h-3 w-3" />}
               tone={overview.streak.current > 0 ? "amber" : "neutral"}
               value={overview.streak.current}
               sub={

@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { BookIcon, ClockIcon, FlameIcon, GearIcon, PinIcon } from "../../../../components/icons";
+import { BookIcon, ClockIcon, GearIcon, PinIcon } from "../../../../components/icons";
 import {
   Badge,
   Button,
@@ -16,6 +16,7 @@ import {
   StatTile,
   Surface,
 } from "../../../../components/ui";
+import { FlameArt } from "../../../../components/ui/FlameArt.tsx";
 import useDocumentTitle from "../../../../hooks/useDocumentTitle";
 import { qk } from "../../../../lib/query-keys";
 import { historyQuery, overviewQuery, recentMissesQuery, todayKey } from "../../api";
@@ -256,7 +257,7 @@ function HubBody({ overview, today }: { overview: TrainerOverview; today: string
           variant="raised"
           size="2xl"
           label="Streak"
-          icon={<FlameIcon className="h-3 w-3" />}
+          icon={<FlameArt className="h-3 w-3" />}
           tone={overview.streak.current > 0 ? "amber" : "neutral"}
           value={overview.streak.current}
           sub={

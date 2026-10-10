@@ -1,4 +1,5 @@
 import type { JSONValue, LanguageModel, ModelMessage } from "ai";
+import type { AiCallUsage } from "../ledger";
 
 export interface AiTextPart {
   type: "text";
@@ -29,6 +30,8 @@ export interface AiTransportRequest {
   reasoningEffort?: "low" | "medium" | "high";
   /** providerOptions.gateway payload (tags, fallback models). */
   gatewayOptions?: Record<string, JSONValue>;
+  /** Told the attempt's tokens and billed cost when it finishes (the ledger's source). */
+  onUsage?: (usage: AiCallUsage) => void;
 }
 
 /** Runs one structured call and returns the parsed (schema-shaped) object. */

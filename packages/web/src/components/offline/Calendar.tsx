@@ -12,6 +12,7 @@ import type {
 } from "../../lib/offline-availability";
 import { dateKey } from "../../lib/offline-availability";
 import { build42Days } from "../../lib/offline-week";
+import { useOnboardingHint } from "../onboarding/OnboardingHints";
 import { DayCell, type GroupCell, type Heat, type NightCell } from "./CalendarDayCell";
 import { firstName } from "./group-fit";
 
@@ -67,6 +68,12 @@ type Props = {
    */
   viewer?: { id: string | null; isAdmin: boolean };
   /**
+   * Point the "a night is locked in" first-use hint at the first upcoming
+   * night still waiting for the viewer's answer (only while nothing covers
+   * the calendar).
+   */
+  hintNights?: boolean;
+  /**
    * Lock mode's "Find a date": the picked members and every date's fit for
    * them. While set, a day's names list only the group, heat steps aside so
    * one signal speaks, and each free date is ringed, tallied or dimmed.
@@ -97,11 +104,33 @@ export default function Calendar({
   onAwayToggle,
   viewer,
   group = null,
+  hintNights = false,
 }: Props) {
   const todayKey = dateKey(new Date());
   const cutoffKey = readonlyBefore ? dateKey(readonlyBefore) : null;
 
   const days = build42Days(weekStart);
+
+  // The first upcoming night still waiting for the viewer's answer — an open
+  // night they haven't RSVP'd, or a private one they're invited to — is where
+  // the "a night is locked in" hint points.
+  let nightAnchorKey: string | null = null;
+  if (hintNights && locks && onLockedClick && !lockMode) {
+    for (const date of days) {
+      const key = dateKey(date);
+      if (cutoffKey && key < cutoffKey) continue;
+      const waiting = nightsForDate(locks, key).some(({ key: nightKey, lock }) =>
+        lock.isPrivate
+          ? !!viewer && viewerSeat(lock, viewer.id, viewer.isAdmin) === "invited"
+          : viewerRsvpByDate?.[nightKey] === undefined,
+      );
+      if (waiting) {
+        nightAnchorKey = key;
+        break;
+      }
+    }
+  }
+  useOnboardingHint("night-open", nightAnchorKey !== null);
 
   function cycle(current: Availability | undefined): Availability | undefined {
     if (current === undefined) return "can";
@@ -138,6 +167,8 @@ export default function Calendar({
         ))}
       </div>
       <div
+        // The "tap your days" hint points at the whole grid while marking.
+        data-tour={interactive && !compact ? "calendar-cycle" : undefined}
         className={`grid grid-cols-7 grid-rows-6 ${gridGap} ${gridGrowth} ${phoneCols} ${phoneRows}`}
       >
         {days.map((date, i) => {
@@ -222,6 +253,7 @@ export default function Calendar({
               group={groupCell}
               cellSeed={i}
               onClick={handleClick}
+              tourAnchor={key === nightAnchorKey ? "night-open" : undefined}
             />
           );
         })}

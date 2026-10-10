@@ -20,8 +20,13 @@ interface LobbyProps {
   onKick: (slotIndex: number) => void;
   onToggleReady: () => void;
   onConfigureSlot?: (slotIndex: number, slot: RoomSlot) => void;
-  /** Host-only role swap (see the manifest's `seatNames` / `RoomState.seatOrder`). */
+  /**
+   * Role swap (see the manifest's `seatNames` / `RoomState.seatOrder`): the
+   * host moves anyone; a guest may swap their own slot with an AI-held one.
+   */
   onSwapSeats?: (a: number, b: number) => void;
+  /** Host-only: deal the filled seats out at random. */
+  onShuffleSeats?: () => void;
   error?: string | null;
   children?: React.ReactNode;
   /**
@@ -49,6 +54,7 @@ export function Lobby({
   onToggleReady,
   onConfigureSlot,
   onSwapSeats,
+  onShuffleSeats,
   error,
   children,
   layout = "default",
@@ -62,38 +68,64 @@ export function Lobby({
   const canStart = isHost && allHumansReady && filled >= minSeats;
   const aiOffered = strategiesFor(manifest, filled);
 
-  const slotRows = roomState.slots.map((slot, i) => (
-    <SlotRow
-      // biome-ignore lint/suspicious/noArrayIndexKey: slots are positional, no stable ID
-      key={`slot-${i}-${slot.kind}-${slot.playerName ?? ""}`}
-      slot={slot}
-      index={i}
-      isMe={i === mySlot}
-      seatName={seating.includes(i) ? manifest.seatNames?.[seating.indexOf(i)] : undefined}
-      canKick={isHost && i !== 0 && slot.kind === "human"}
-      canToggle={isHost && i !== 0 && manifest.strategies.length > 0}
-      botStrategies={aiOffered}
-      onKick={() => onKick(i)}
-      onToggle={() => {
-        if (!onConfigureSlot) return;
-        if (slot.kind === "open") {
-          const strategy = defaultStrategyFor(manifest, filled + 1);
-          onConfigureSlot(i, {
-            kind: "ai",
-            ...(strategy ? { aiStrategy: strategy } : {}),
-            ready: false,
-            connected: false,
-          });
-        } else if (slot.kind === "ai") {
-          onConfigureSlot(i, { kind: "open", ready: false, connected: false });
-        }
-      }}
-      onSetStrategy={(id) => {
-        if (!onConfigureSlot || slot.kind !== "ai") return;
-        onConfigureSlot(i, { ...slot, aiStrategy: id });
-      }}
-    />
-  ));
+  const seatNameOf = (slot: number): string | undefined =>
+    seating.includes(slot) ? manifest.seatNames?.[seating.indexOf(slot)] : undefined;
+  // Seat picking for games whose seats are roles at tables of three or more
+  // (Codenames: team and spymaster). Two-seat games keep the one swap button.
+  const seatPicking = Boolean(onSwapSeats && manifest.seatNames && roomState.slots.length > 2);
+  const swapTargets = (i: number): SwapTarget[] => {
+    if (!seatPicking || !seating.includes(i)) return [];
+    const mayMove = isHost || i === mySlot;
+    if (!mayMove) return [];
+    return seating
+      .filter((j) => j !== i && (isHost || roomState.slots[j]?.kind === "ai"))
+      .map((j) => {
+        const other = roomState.slots[j];
+        const who = other?.kind === "human" ? other.playerName : "AI";
+        return { slot: j, label: `${seatNameOf(j) ?? `Seat ${seating.indexOf(j) + 1}`} — ${who}` };
+      });
+  };
+  // With seat picking the rows read in seat order (open slots last), so the
+  // role column runs Red Spymaster, Blue Spymaster, … down the list.
+  const rowOrder = seatPicking
+    ? [...seating, ...roomState.slots.map((_, i) => i).filter((i) => !seating.includes(i))]
+    : roomState.slots.map((_, i) => i);
+
+  const slotRows = rowOrder
+    .map((i) => ({ slot: roomState.slots[i] as RoomSlot, i }))
+    .map(({ slot, i }) => (
+      <SlotRow
+        key={`slot-${i}-${slot.kind}-${slot.playerName ?? ""}`}
+        slot={slot}
+        index={i}
+        isMe={i === mySlot}
+        seatName={seatNameOf(i)}
+        swapTargets={swapTargets(i)}
+        onSwap={(target) => onSwapSeats?.(i, target)}
+        canKick={isHost && i !== 0 && slot.kind === "human"}
+        canToggle={isHost && i !== 0 && manifest.strategies.length > 0}
+        botStrategies={aiOffered}
+        onKick={() => onKick(i)}
+        onToggle={() => {
+          if (!onConfigureSlot) return;
+          if (slot.kind === "open") {
+            const strategy = defaultStrategyFor(manifest, filled + 1);
+            onConfigureSlot(i, {
+              kind: "ai",
+              ...(strategy ? { aiStrategy: strategy } : {}),
+              ready: false,
+              connected: false,
+            });
+          } else if (slot.kind === "ai") {
+            onConfigureSlot(i, { kind: "open", ready: false, connected: false });
+          }
+        }}
+        onSetStrategy={(id) => {
+          if (!onConfigureSlot || slot.kind !== "ai") return;
+          onConfigureSlot(i, { ...slot, aiStrategy: id });
+        }}
+      />
+    ));
 
   // Host-only role swap — shown for games whose seats carry meaning
   // (Sky Team: Pilot / Co-Pilot). Two-seat rooms only; players keep their
@@ -107,6 +139,13 @@ export function Lobby({
         className="self-center"
       >
         ⇅ Swap roles
+      </Button>
+    ) : null;
+
+  const shuffleButton =
+    isHost && seatPicking && onShuffleSeats && filled > 1 ? (
+      <Button variant="secondary" size="xs" onClick={onShuffleSeats} className="self-center">
+        Shuffle seats
       </Button>
     ) : null;
 
@@ -166,6 +205,7 @@ export function Lobby({
             <div className="flex h-full flex-col justify-center gap-2">
               {slotRows}
               {swapRolesButton}
+              {shuffleButton}
             </div>
           </ControlGroup>
 
@@ -218,6 +258,7 @@ export function Lobby({
         </div>
         {slotRows}
         {swapRolesButton}
+        {shuffleButton}
       </div>
 
       {/* Game-specific config */}
@@ -239,11 +280,18 @@ export function Lobby({
 // Slot row
 // ---------------------------------------------------------------------------
 
+interface SwapTarget {
+  slot: number;
+  label: string;
+}
+
 function SlotRow({
   slot,
   index,
   isMe,
   seatName,
+  swapTargets,
+  onSwap,
   canKick,
   canToggle,
   botStrategies,
@@ -256,6 +304,9 @@ function SlotRow({
   isMe: boolean;
   /** Role this slot plays (e.g. "Pilot"), from the manifest's `seatNames`. */
   seatName?: string;
+  /** Seats this row may swap with (seat picking); empty = no control. */
+  swapTargets: readonly SwapTarget[];
+  onSwap: (targetSlot: number) => void;
   canKick: boolean;
   canToggle: boolean;
   /** The AIs on offer at the current table size. */
@@ -287,7 +338,7 @@ function SlotRow({
 
       {/* Seat role (Pilot / Co-Pilot) — fixed width so names line up. */}
       {seatName && (
-        <Badge tone="neutral" className="w-16 justify-center">
+        <Badge tone="neutral" className="min-w-16 shrink-0 justify-center whitespace-nowrap">
           {seatName}
         </Badge>
       )}
@@ -336,6 +387,26 @@ function SlotRow({
         >
           {slot.ready ? "Ready" : "Not ready"}
         </span>
+      )}
+
+      {/* Seat picking: swap this row's seat with another */}
+      {swapTargets.length > 0 && (
+        <Select
+          size="sm"
+          value=""
+          onChange={(e) => {
+            if (e.target.value !== "") onSwap(Number(e.target.value));
+          }}
+          aria-label="Swap seat"
+          className="w-28 shrink-0"
+        >
+          <option value="">Swap seat…</option>
+          {swapTargets.map((t) => (
+            <option key={t.slot} value={t.slot}>
+              {t.label}
+            </option>
+          ))}
+        </Select>
       )}
 
       {/* Toggle AI/Open (host only, non-self slots) */}

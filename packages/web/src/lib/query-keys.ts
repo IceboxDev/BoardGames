@@ -56,6 +56,10 @@ export const qk = {
   dndNpcs: (campaignId: string) => ["dnd", "npcs", campaignId] as const,
   dndFiles: () => ["dnd", "files"] as const,
   dndActiveSession: () => ["dnd", "session", "active"] as const,
+  // Go reviews (KataGo analysis of a match or an imported SGF).
+  goReviewByReplay: (replayId: number) => ["go", "review", "replay", replayId] as const,
+  goReview: (id: number) => ["go", "review", id] as const,
+  goReviews: () => ["go", "reviews"] as const,
   // Quiztopia trainer + wiki. Root key "quiztopia" is excluded from the
   // persister (App.tsx): queues are date-bound and content chunks are big.
   quiztopiaOverview: (today: string) => ["quiztopia", "overview", today] as const,
@@ -72,6 +76,7 @@ export const qk = {
   quiztopiaJournal: (tz: string) => ["quiztopia", "journal", tz] as const,
   quiztopiaJournalAll: () => ["quiztopia", "journal"] as const,
   quiztopiaReports: () => ["quiztopia", "reports"] as const,
+  onboarding: () => ["onboarding"] as const,
   adminQuiztopiaReports: (status: string) => ["admin", "quiztopia-reports", status] as const,
   adminQuiztopiaReportsAll: () => ["admin", "quiztopia-reports"] as const,
   // Prefixes for invalidation (every date / id variant of one read).

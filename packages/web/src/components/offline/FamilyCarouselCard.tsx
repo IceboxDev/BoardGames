@@ -131,15 +131,18 @@ export default function FamilyCarouselCard({
           renderThumbOverlay ? (
             renderThumbOverlay(active, isCenter, compact)
           ) : date ? (
-            <GameReactions
-              date={date}
-              slug={active.slug}
-              accentHex={active.accentHex}
-              aggregate={aggregate ?? { hype: 0, teach: 0, learn: 0, viewer: [] }}
-              size={compact ? "sm" : "md"}
-              disabled={!isCenter}
-              hideCount
-            />
+            // The centre card's buttons are where the "vote for games" hint points.
+            <div data-tour={isCenter ? "night-vote" : undefined}>
+              <GameReactions
+                date={date}
+                slug={active.slug}
+                accentHex={active.accentHex}
+                aggregate={aggregate ?? { hype: 0, teach: 0, learn: 0, viewer: [] }}
+                size={compact ? "sm" : "md"}
+                disabled={!isCenter}
+                hideCount
+              />
+            </div>
           ) : undefined
         }
       />

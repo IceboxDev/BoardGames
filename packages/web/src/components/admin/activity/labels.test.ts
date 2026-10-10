@@ -43,6 +43,7 @@ describe("every activity type has words", () => {
     "purchase-vote-announce": "3",
     "purchase-vote-reminder": "3",
     arrival: "a1",
+    "go-review": "12",
   };
 
   it.each(PAGE_VIEW_PAGES)("page %s reads as a sentence with or without its detail", (page) => {

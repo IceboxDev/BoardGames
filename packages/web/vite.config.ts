@@ -12,6 +12,10 @@ export default defineConfig({
     // "development".
     __DEPLOY_ENV__: JSON.stringify(process.env.VERCEL_ENV ?? "development"),
   },
+  // Module workers (every `new Worker(…, { type: "module" })` here), so a
+  // worker can load a chunk on demand — Connect 4's solver fetches a board's
+  // opening book only when that board is first solved.
+  worker: { format: "es" },
   plugins: [
     react(),
     tailwindcss(),

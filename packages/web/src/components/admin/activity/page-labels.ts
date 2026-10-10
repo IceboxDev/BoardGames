@@ -68,6 +68,8 @@ export const PAGE_LABELS: Readonly<Record<PageViewPage, PageLabel>> = {
   "trainer-timeline": (deck) => `Opened their ${trainerName(deck)} timeline`,
   "trainer-explore": (deck) => `Explored the ${trainerName(deck)} globe`,
 
+  "go-review": (id) => (id ? `Opened Go review #${id}` : "Opened Go game reviews"),
+
   night: (key) => (key ? `Opened the ${day(key)} game night` : "Opened a game night"),
   "purchase-vote": () => "Opened the purchase-vote screen",
   "skill-board": (detail, ctx) => {
@@ -82,6 +84,7 @@ export const PAGE_LABELS: Readonly<Record<PageViewPage, PageLabel>> = {
   "purchase-vote-reminder": shown("purchase-vote-reminder"),
   arrival: shown("arrival"),
   "night-invite": shown("night-invite"),
+  onboarding: shown("onboarding"),
   "purchase-vote-result": () => "Saw the purchase-vote results",
 };
 

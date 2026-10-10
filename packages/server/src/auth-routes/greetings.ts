@@ -47,6 +47,7 @@ import {
   spotlightSubject,
 } from "../lib/greetings.ts";
 import { markInviteSeen, nextPendingInvite } from "../lib/night-invites.ts";
+import { answerDeck, deckDue, readOnboarding } from "../lib/onboarding.ts";
 import {
   distinctVoterCount,
   latestPoll,
@@ -75,6 +76,14 @@ greetingsRoutes.get("/", async (c) => {
     return c.json(AppGreetingResponseSchema.parse({ greeting: null, players: {} }));
   }
   const isAdmin = gate.data.role === "admin";
+
+  // 0. The welcome tour for a member who just joined: nothing else they
+  // could be shown makes sense before they know how the calendar works.
+  if (deckDue(await readOnboarding(getDb(), viewer.id))) {
+    return c.json(
+      AppGreetingResponseSchema.parse({ greeting: { kind: "onboarding" }, players: {} }),
+    );
+  }
 
   const poll = await latestPoll();
   const [votes, seen] = poll
@@ -177,6 +186,14 @@ greetingsRoutes.post("/ack", zJsonBody(AppGreetingAckBodySchema), async (c) => {
   const body = c.req.valid("json");
   let subjectUserId: string | null = null;
   switch (body.kind) {
+    case "onboarding":
+      await answerDeck(
+        getDb(),
+        viewer.id,
+        body.action === "cta" ? "finished" : "skipped",
+        body.reached,
+      );
+      break;
     case "purchase-vote-announce":
       await markPollSeen(body.pollId, viewer.id);
       break;
@@ -195,6 +212,11 @@ greetingsRoutes.post("/ack", zJsonBody(AppGreetingAckBodySchema), async (c) => {
       await ackSpotlight(viewer.id, body.id);
       subjectUserId = await spotlightSubject(body.id);
       break;
+    default: {
+      // Every kind must be handled: a new kind fails the compile here.
+      const unhandled: never = body;
+      throw new Error(`unhandled greeting ack ${JSON.stringify(unhandled)}`);
+    }
   }
   logActivity(viewer.id, "greeting-response", {
     kind: body.kind,
@@ -203,6 +225,7 @@ greetingsRoutes.post("/ack", zJsonBody(AppGreetingAckBodySchema), async (c) => {
     ...("arrivalId" in body ? { arrivalId: body.arrivalId } : {}),
     ...("date" in body ? { date: body.date } : {}),
     ...("id" in body ? { greetingId: body.id } : {}),
+    ...("reached" in body ? { reached: body.reached } : {}),
     // "Dismissed the group spotlight about Melanie" needs the subject.
     ...(subjectUserId ? { subjectUserId } : {}),
   });

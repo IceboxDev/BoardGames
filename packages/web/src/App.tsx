@@ -14,6 +14,7 @@ import { AuthLayout } from "./components/AuthLayout";
 import { GreetingGate } from "./components/GreetingGate";
 import Layout from "./components/Layout";
 import { NavigationProgress } from "./components/NavigationProgress";
+import { OnboardingHintsProvider } from "./components/onboarding/OnboardingHints";
 import { PageViewTracker } from "./components/PageViewTracker";
 import { RouteErrorBoundary } from "./components/RouteErrorBoundary";
 import { RouteFallback } from "./components/RouteFallback";
@@ -61,11 +62,14 @@ function RootShell() {
       <PageViewTracker />
       <GreetingGate />
       <NavigationProgress />
-      <RouteErrorBoundary>
-        <Suspense fallback={<RouteFallback />}>
-          <Outlet />
-        </Suspense>
-      </RouteErrorBoundary>
+      {/* First-use hints: screens declare their control is up; one bubble at a time. */}
+      <OnboardingHintsProvider>
+        <RouteErrorBoundary>
+          <Suspense fallback={<RouteFallback />}>
+            <Outlet />
+          </Suspense>
+        </RouteErrorBoundary>
+      </OnboardingHintsProvider>
     </ThemeProvider>
   );
 }
@@ -132,6 +136,7 @@ const router = createBrowserRouter(
             path="trainer/geography/*"
             lazy={page(() => import("./trainers/geography/GeographyTrainer"))}
           />
+          <Route path="go/review/*" lazy={page(() => import("./games/go/review/ReviewPage"))} />
           <Route
             path="play/:slug"
             lazy={named(() => import("./hooks/useGameShell"), "GameShellLayout")}
@@ -201,6 +206,11 @@ const router = createBrowserRouter(
           <Route path="dev/vote-preview" lazy={page(() => import("./pages/VotePreview"))} />
           <Route path="dev/arrival-preview" lazy={page(() => import("./pages/ArrivalPreview"))} />
           <Route path="dev/decrypto-preview" lazy={page(() => import("./pages/DecryptoPreview"))} />
+          <Route
+            path="dev/codenames-preview"
+            lazy={page(() => import("./pages/CodenamesPreview"))}
+          />
+          <Route path="dev/go-preview" lazy={page(() => import("./pages/GoPreview"))} />
           <Route path="dev/senso-preview" lazy={page(() => import("./pages/SensoPreview"))} />
           <Route path="dev/senso-cards" lazy={page(() => import("./pages/SensoCardsPreview"))} />
           <Route path="dev/hunger-preview" lazy={page(() => import("./pages/HungerPreview"))} />
@@ -209,6 +219,10 @@ const router = createBrowserRouter(
           <Route
             path="dev/resistance-preview"
             lazy={page(() => import("./pages/ResistancePreview"))}
+          />
+          <Route
+            path="dev/onboarding-preview"
+            lazy={page(() => import("./pages/OnboardingPreview"))}
           />
           <Route
             path="dev/quiztopia-preview"
@@ -266,7 +280,10 @@ export default function App() {
             defaultShouldDehydrateQuery(q) &&
             q.queryKey[0] !== "greetings" &&
             q.queryKey[0] !== "quiztopia" &&
-            q.queryKey[0] !== "geography",
+            q.queryKey[0] !== "geography" &&
+            // Hint state must come from the server: a hint dismissed on another
+            // device must not flash back from this browser's snapshot.
+            q.queryKey[0] !== "onboarding",
           // A save queued behind another in its scope sits "paused"; the
           // default would persist it, and a reload would then replay a
           // whole-object PUT with no mutationFn bound. Trainer saves are

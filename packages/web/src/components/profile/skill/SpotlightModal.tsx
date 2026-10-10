@@ -8,8 +8,9 @@
 import type { SkillPlayerRef, SpotlightEvent, SpotlightPayload } from "@boardgames/core/protocol";
 import type { ReactNode } from "react";
 import { resolveGame } from "../../../lib/games-by-slug.ts";
-import { ArrowUpIcon, FlameIcon } from "../../icons";
+import { ArrowUpIcon } from "../../icons";
 import { Avatar } from "../../ui/Avatar.tsx";
+import { FlameArt } from "../../ui/FlameArt.tsx";
 import { MicroLabel } from "../../ui/Label.tsx";
 import { Surface } from "../../ui/Surface.tsx";
 import trophyGold from "./assets/trophy-1.svg";
@@ -53,7 +54,7 @@ function Emblem({ event }: { event: SpotlightEvent }): ReactNode {
       {event.kind === "trait-climb" ? (
         <TraitIcon trait={event.trait} className="h-7 w-7" />
       ) : event.kind === "streak-lead" ? (
-        <FlameIcon className="h-7 w-7" />
+        <FlameArt className="h-9 w-9" />
       ) : (
         <ArrowUpIcon className="h-7 w-7" />
       )}

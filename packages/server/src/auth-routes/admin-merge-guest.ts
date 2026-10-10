@@ -86,6 +86,8 @@ export const GUEST_MERGE_COVERAGE = {
     // Per-account state a stub cannot create (no login, no play area).
     "user_inventory.user_id",
     "user_profiles.user_id",
+    // Onboarding progress: a guest stub never signs in, so never sees the tour.
+    "user_onboarding.user_id",
     "activity_log.user_id",
     "user_devices.user_id",
     // An admin's "seen up to here" marker on a trail; the guest's trail is
@@ -128,6 +130,9 @@ export const GUEST_MERGE_COVERAGE = {
     // An online game's seat: a guest never signs in, so never sits at one
     // (SET NULL would keep the game if it somehow had).
     "replay_seats.user_id",
+    // A KataGo review a member imported (SGF) or queued for their own game: a
+    // guest stub never signs in to import one.
+    "go_reviews.owner_user_id",
   ],
 } as const;
 

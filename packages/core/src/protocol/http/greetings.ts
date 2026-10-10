@@ -2,6 +2,7 @@ import { z } from "zod";
 import { NightKeySchema, TimeOfDaySchema } from "../common.ts";
 import { ArrivalGreetingSchema } from "./arrivals.ts";
 import { NightSeatsSchema, PickModeSchema } from "./calendar.ts";
+import { ONBOARDING_CARDS } from "./onboarding.ts";
 import { PollThemeShape, VOTES_PER_PLAYER } from "./purchase-vote.ts";
 import { GreetingSchema, SkillPlayerRefSchema } from "./skills.ts";
 
@@ -70,7 +71,16 @@ export const AppArrivalGreetingSchema = ArrivalGreetingSchema.extend({
 });
 export type AppArrivalGreeting = z.infer<typeof AppArrivalGreetingSchema>;
 
+/**
+ * The welcome tour for a member who just joined — first in the ladder, so
+ * nothing competes with it. Answered once ("cta" = finished, "later" =
+ * skipped); it is never shown again.
+ */
+export const OnboardingGreetingSchema = z.object({ kind: z.literal("onboarding") });
+export type OnboardingGreeting = z.infer<typeof OnboardingGreetingSchema>;
+
 export const AppGreetingSchema = z.discriminatedUnion("kind", [
+  OnboardingGreetingSchema,
   ...GreetingSchema.options,
   PurchaseVoteAnnounceGreetingSchema,
   NightInviteGreetingSchema,
@@ -99,6 +109,12 @@ export type GreetingAckAction = z.infer<typeof GreetingAckActionSchema>;
 
 const pollId = z.number().int().positive();
 export const AppGreetingAckBodySchema = z.discriminatedUnion("kind", [
+  z.object({
+    kind: z.literal("onboarding"),
+    action: GreetingAckActionSchema,
+    /** The furthest card reached (1-based). */
+    reached: z.number().int().min(1).max(ONBOARDING_CARDS),
+  }),
   z.object({ kind: z.literal("skill-intro"), action: GreetingAckActionSchema }),
   z.object({
     kind: z.literal("spotlight"),

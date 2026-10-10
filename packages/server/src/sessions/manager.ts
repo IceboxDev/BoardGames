@@ -148,6 +148,7 @@ async function persistMatch(
 async function runAfterGameOver(
   active: ActiveSession,
   snapshot: ReturnType<AnyActorRef["getSnapshot"]>,
+  replayId: number | undefined,
 ): Promise<void> {
   const hook = getServerGame(active.gameSlug)?.afterGameOver;
   if (!hook) return;
@@ -157,6 +158,7 @@ async function runAfterGameOver(
       roomCode: active.roomCode ?? null,
       seatUserIds: active.seats.map((seat) => (seat.kind === "human" ? seat.userId : null)),
       replayLog: active.spec.getReplayLog(snapshot),
+      replayId: replayId ?? null,
       endedAt: new Date(),
     });
   } catch (err) {
@@ -243,7 +245,7 @@ function subscribeSession(active: ActiveSession): void {
             replayId,
           }));
         }
-        await runAfterGameOver(active, snapshot);
+        await runAfterGameOver(active, snapshot, replayId);
       })();
       return;
     }
@@ -481,10 +483,12 @@ function handleAction(
   const seat = resolveSeat(active, player, msg.action.player);
 
   // Turn validation for multi-client sessions. `-1` means simultaneous play,
-  // where every seat may act at once.
+  // where every seat may act at once; a game names the actions a seat may
+  // send while another is to move (resigning, answering an offer) with
+  // `acceptsOffTurn` — `validateAction` still adjudicates them.
   if (active.players.length > 1) {
-    const activePlayer = active.spec.getActivePlayer(snapshot);
-    if (activePlayer !== -1 && activePlayer !== player.playerIndex) {
+    const onTurn = isActiveSeat(active.spec.getActivePlayer(snapshot), player.playerIndex);
+    if (!onTurn && !active.spec.acceptsOffTurn?.(snapshot, player.playerIndex, msg.action)) {
       send(ws, { type: "error", sessionId: msg.sessionId, message: "Not your turn" });
       return;
     }
@@ -507,6 +511,24 @@ function handleAction(
   if (active.actor.getSnapshot() === snapshot) {
     send(ws, { type: "error", sessionId: active.id, message: "Not yet — try that move again" });
   }
+}
+
+function isActiveSeat(activePlayer: number, seat: number): boolean {
+  return activePlayer === -1 || activePlayer === seat;
+}
+
+/**
+ * A room seat's connection changed. Games that opt in
+ * (`ServerGame.observesConnections`) get a `SEAT_CONNECTION` event — chess
+ * lets the opponent claim a game its player has walked away from. Other games
+ * only see the `player-disconnected` notice, as before.
+ */
+export function seatConnectionChanged(sessionId: string, seat: number, connected: boolean): void {
+  const active = sessions.get(sessionId);
+  if (!active || !getServerGame(active.gameSlug)?.observesConnections) return;
+  if (active.spec.isGameOver(active.actor.getSnapshot())) return;
+  gameLog(active.gameSlug, active.id, connected ? "seat back" : "seat gone", { seat });
+  active.actor.send({ type: "SEAT_CONNECTION", seat, connected });
 }
 
 /**

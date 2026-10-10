@@ -9,9 +9,17 @@
  */
 
 import { sevenWondersSpec, withSevenWondersAgent } from "@boardgames/core/games/7-wonders/machine";
+import { chessSpec, withChessAgent } from "@boardgames/core/games/chess/machine";
+import { bughouseSpec, withBughouseAgent } from "@boardgames/core/games/chess-bughouse/machine";
+import { codenamesSpec, withCodenamesAgent } from "@boardgames/core/games/codenames/machine";
+import { CodenamesReplayLogSchema } from "@boardgames/core/games/codenames/record";
+import { duetSpec, withDuetAgent } from "@boardgames/core/games/codenames-duet/machine";
+import { DuetReplayLogSchema } from "@boardgames/core/games/codenames-duet/record";
+import { connect4Spec, withConnect4AiOffload } from "@boardgames/core/games/connect-4/machine";
 import { decryptoSpec, withDecryptoAgent } from "@boardgames/core/games/decrypto/machine";
 import { durakSpec } from "@boardgames/core/games/durak/machine";
 import { explodingKittensSpec } from "@boardgames/core/games/exploding-kittens/machine";
+import { goSpec, withGoAi } from "@boardgames/core/games/go/machine";
 import { lostCitiesSpec } from "@boardgames/core/games/lost-cities/machine";
 import { pandemicSpec } from "@boardgames/core/games/pandemic/machine";
 import { parksSpec } from "@boardgames/core/games/parks/machine";
@@ -28,7 +36,12 @@ import { getDb } from "../db.ts";
 import { aiAvailable } from "../lib/ai";
 import { getContentStore } from "../lib/quiztopia/content-store.ts";
 import { recordGameReviews } from "../lib/quiztopia/game-reviews.ts";
+import { engineAgent } from "./chess-agent.ts";
+import { llmCodenamesAgent } from "./codenames-agent.ts";
+import { connect4AiOffload } from "./connect4-ai-pool.ts";
 import { openAiDecryptoAgent } from "./decrypto-agent.ts";
+import { goServerAi } from "./go-ai.ts";
+import { goAfterGameOver } from "./go-reviews.ts";
 import { hungerAiOffload } from "./hunger-ai-pool.ts";
 import { sevenWondersSearchAgent } from "./seven-wonders-agent.ts";
 
@@ -41,6 +54,8 @@ export interface EndedGame {
   readonly seatUserIds: readonly (string | null)[];
   /** `spec.getReplayLog` of the final snapshot — erased here, so parse it, never cast it. */
   readonly replayLog: unknown;
+  /** The saved match's `session_replays` id; `null` when saving failed. */
+  readonly replayId: number | null;
   readonly endedAt: Date;
 }
 
@@ -56,6 +71,23 @@ export interface ServerGame {
    * snapshot can be emitted more than once.
    */
   readonly afterGameOver?: (ended: EndedGame) => Promise<void>;
+  /**
+   * Send the machine `{ type: "SEAT_CONNECTION", seat, connected }` when a room
+   * seat drops out or comes back (`sessions/manager.ts:seatConnectionChanged`).
+   * Chess uses it to let a player claim a game the opponent abandoned.
+   */
+  readonly observesConnections?: boolean;
+}
+
+function logAiCost(
+  slug: string,
+  ended: EndedGame,
+  cost: { calls: number; usd: number } | undefined,
+): void {
+  if (!cost || cost.calls === 0) return;
+  console.log(
+    `[${slug}] game over · AI cost $${cost.usd.toFixed(4)} over ${cost.calls} calls · session ${ended.sessionId}${ended.replayId === null ? "" : ` · replay ${ended.replayId}`}`,
+  );
 }
 
 /** A game whose machine runs exactly as the spec defines it. */
@@ -77,8 +109,64 @@ const SERVER_GAMES: readonly ServerGame[] = [
     createMachine: () =>
       aiAvailable() ? withDecryptoAgent(openAiDecryptoAgent) : decryptoSpec.machine,
   },
+  {
+    spec: chessSpec,
+    // Stockfish on the engine pool; without it the machine's built-in search plays.
+    createMachine: () => {
+      const agent = engineAgent("chess");
+      return agent ? withChessAgent(agent) : chessSpec.machine;
+    },
+    observesConnections: true,
+  },
+  {
+    spec: bughouseSpec,
+    // Fairy-Stockfish on the engine pool; without it the built-in search plays.
+    createMachine: () => {
+      const agent = engineAgent("bughouse");
+      return agent ? withBughouseAgent(agent) : bughouseSpec.machine;
+    },
+    observesConnections: true,
+  },
+  {
+    spec: connect4Spec,
+    // Deep Search and Perfect think on the worker pool; without it they run inline.
+    createMachine: () => {
+      const offload = connect4AiOffload();
+      return offload ? withConnect4AiOffload(offload) : connect4Spec.machine;
+    },
+  },
+  {
+    spec: codenamesSpec,
+    createMachine: () =>
+      aiAvailable() ? withCodenamesAgent(llmCodenamesAgent) : codenamesSpec.machine,
+    // The game's AI bill in one line; the saved replay keeps it (`aiCost`) too.
+    afterGameOver: async (ended) => {
+      logAiCost(
+        "codenames",
+        ended,
+        CodenamesReplayLogSchema.safeParse(ended.replayLog).data?.aiCost,
+      );
+    },
+  },
+  {
+    spec: duetSpec,
+    createMachine: () => (aiAvailable() ? withDuetAgent(llmCodenamesAgent) : duetSpec.machine),
+    afterGameOver: async (ended) => {
+      logAiCost(
+        "codenames-duet",
+        ended,
+        DuetReplayLogSchema.safeParse(ended.replayLog).data?.aiCost,
+      );
+    },
+  },
   plain(durakSpec),
   plain(explodingKittensSpec),
+  {
+    spec: goSpec,
+    createMachine: () => withGoAi(goServerAi()),
+    // Every finished match is queued for a KataGo review (when KataGo runs).
+    afterGameOver: (ended) => goAfterGameOver(ended.replayId),
+  },
   plain(lostCitiesSpec),
   plain(pandemicSpec),
   plain(parksSpec),

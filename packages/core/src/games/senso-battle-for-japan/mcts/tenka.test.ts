@@ -19,8 +19,7 @@ const FAST: TenkaConfig = { ...DEFAULT_TENKA, timeMs: 0, iterations: 30, rootSol
 // The wall-clock guards below are perf tripwires, not benchmarks: they exist to
 // catch a search that stops honouring its deadline, which overshoots by orders
 // of magnitude, not by a factor of two. A loaded machine (the pre-commit hook
-// runs three packages' suites and a typecheck at once; the CI runner is slower
-// still) has measured 200–400 ms for a 15 ms budget on the SAME code that runs
+// on a laptop busy besides; the CI runner is slower still) has measured 200–400 ms for a 15 ms budget on the SAME code that runs
 // in 30 ms idle. So the bounds are either calibrated against an untimed search
 // measured in the same loop, or relaxed by this factor where no baseline exists.
 const LOAD_FACTOR = process.env.CI || process.env.LEFTHOOK ? 4 : 1;

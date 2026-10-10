@@ -7,9 +7,15 @@
 
 import type { GameManifest } from "../machines/manifest";
 import { sevenWondersManifest } from "./7-wonders/manifest";
+import { chessManifest } from "./chess/manifest";
+import { bughouseManifest } from "./chess-bughouse/manifest";
+import { codenamesManifest } from "./codenames/manifest";
+import { duetManifest } from "./codenames-duet/manifest";
+import { connect4Manifest } from "./connect-4/manifest";
 import { decryptoManifest } from "./decrypto/manifest";
 import { durakManifest } from "./durak/manifest";
 import { explodingKittensManifest } from "./exploding-kittens/manifest";
+import { goManifest } from "./go/manifest";
 import { lostCitiesManifest } from "./lost-cities/manifest";
 import { pandemicManifest } from "./pandemic/manifest";
 import { parksManifest } from "./parks/manifest";
@@ -23,9 +29,15 @@ import { resistanceManifest } from "./the-resistance/manifest";
 
 export const GAME_MANIFESTS: readonly GameManifest[] = [
   sevenWondersManifest,
+  chessManifest,
+  bughouseManifest,
+  connect4Manifest,
+  codenamesManifest,
+  duetManifest,
   decryptoManifest,
   durakManifest,
   explodingKittensManifest,
+  goManifest,
   lostCitiesManifest,
   pandemicManifest,
   parksManifest,

@@ -94,14 +94,6 @@ export function StarIcon({ className = "h-3.5 w-3.5" }: IconProps) {
   );
 }
 
-export function FlameIcon({ className = "h-3.5 w-3.5" }: IconProps) {
-  return (
-    <svg viewBox="0 0 16 16" className={className} fill="currentColor" aria-hidden="true">
-      <path d="M9.4 1.6c-.3-.4-.9-.5-1.3-.2-.3.2-.5.6-.4 1 .3 1.7-.2 3-1.3 4-1.4 1.2-2.4 2.8-2.4 4.7 0 2.5 2 4.5 4 4.5s4-2 4-4.5c0-1.1-.4-2.1-1-2.9.7.3 1.5.4 2.3.2.4-.1.7-.5.7-.9 0-.3-.2-.6-.5-.7-1.7-.7-3.1-2.4-4.1-5.2zM8 12.5c-1 0-1.7-.8-1.7-1.7 0-.7.4-1.3 1-1.6.2.6.7 1 1.3 1 .4 0 .8-.2 1-.5.4.3.7.7.7 1.2 0 .9-.7 1.7-1.7 1.7z" />
-    </svg>
-  );
-}
-
 export function ClockIcon({ className = "h-3.5 w-3.5" }: IconProps) {
   return (
     <svg
@@ -609,6 +601,120 @@ export function RedoIcon({ className = "h-4 w-4" }: IconProps) {
     >
       <path d="m15 14 5-5-5-5" />
       <path d="M20 9h-9a6 6 0 0 0 0 12h3" />
+    </svg>
+  );
+}
+
+// Speaker with waves — game sounds on (the mute toggle in game action bars).
+export function SoundOnIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      className={className}
+      strokeWidth={1.6}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M3.5 7.5h3l4-3.5v12l-4-3.5h-3z" />
+      <path d="M13.5 7.2a4 4 0 0 1 0 5.6M15.8 5a7 7 0 0 1 0 10" />
+    </svg>
+  );
+}
+
+// Speaker struck through — game sounds off.
+export function SoundOffIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      className={className}
+      strokeWidth={1.6}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M3.5 7.5h3l4-3.5v12l-4-3.5h-3z" />
+      <path d="M13.5 7.5l4 5M17.5 7.5l-4 5" />
+    </svg>
+  );
+}
+
+// Light bulb — a hint (the solver's best move).
+export function LightbulbIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      className={className}
+      strokeWidth={1.6}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M7.5 14.5h5M8.3 17h3.4" />
+      <path d="M10 2.8a5 5 0 0 0-3 9c.6.5 1 1.1 1 1.9v.8h4v-.8c0-.8.4-1.4 1-1.9a5 5 0 0 0-3-9z" />
+    </svg>
+  );
+}
+
+// Gauge — an evaluation bar (who stands better).
+export function GaugeIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      className={className}
+      strokeWidth={1.6}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M3 14a7 7 0 1 1 14 0" />
+      <path d="M10 14l3.2-4.2" />
+      <circle cx="10" cy="14" r="0.9" fill="currentColor" />
+    </svg>
+  );
+}
+
+// To the first step (a replay's or an analysis board's start).
+export function ChevronsLeftIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className={className}
+      strokeWidth={2}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M8 3.5 3.5 8 8 12.5M12.5 3.5 8 8l4.5 4.5" />
+    </svg>
+  );
+}
+
+// To the last step.
+export function ChevronsRightIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      className={className}
+      strokeWidth={2}
+      aria-hidden="true"
+      {...STROKE_BASE}
+    >
+      <path d="M8 3.5 12.5 8 8 12.5M3.5 3.5 8 8l-4.5 4.5" />
+    </svg>
+  );
+}
+
+// Autoplay on.
+export function PlayIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 16 16" className={className} aria-hidden="true" fill="currentColor">
+      <path d="M5 3.2v9.6a.6.6 0 0 0 .9.5l7.6-4.8a.6.6 0 0 0 0-1L5.9 2.7a.6.6 0 0 0-.9.5z" />
+    </svg>
+  );
+}
+
+// Autoplay off.
+export function PauseIcon({ className = "h-4 w-4" }: IconProps) {
+  return (
+    <svg viewBox="0 0 16 16" className={className} aria-hidden="true" fill="currentColor">
+      <rect x="4" y="3" width="2.6" height="10" rx="0.8" />
+      <rect x="9.4" y="3" width="2.6" height="10" rx="0.8" />
     </svg>
   );
 }

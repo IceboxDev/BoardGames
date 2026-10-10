@@ -78,6 +78,8 @@ export type DayCellProps = {
   cellSeed: number;
   /** Click on an UNLOCKED cell (cycle availability, toggle away, lock in). */
   onClick: () => void;
+  /** A first-use hint points here (`data-tour`), e.g. the next night waiting for an answer. */
+  tourAnchor?: string;
 };
 
 export function DayCell(props: DayCellProps) {
@@ -108,6 +110,7 @@ function SingleDayCell({
   group = null,
   cellSeed,
   onClick,
+  tourAnchor,
 }: DayCellProps & { night: NightCell | null }) {
   const locked = night !== null;
   const picksLocked = !!night?.picksLocked;
@@ -235,6 +238,7 @@ function SingleDayCell({
   return (
     <button
       type="button"
+      data-tour={tourAnchor}
       onClick={night ? night.onClick : onClick}
       disabled={!clickable || isPast}
       aria-label={`${day}${value ? ` — ${value}` : ""}${away ? " — away (admin note)" : ""}${locked ? " — locked in" : ""}${
@@ -1454,6 +1458,7 @@ function AwayLayer() {
 // container queries doing that live in calendar-fire.css (`.night-*`).
 
 function SplitDayCell({
+  tourAnchor,
   day,
   monthBucket,
   monthLabel,
@@ -1478,6 +1483,7 @@ function SplitDayCell({
     // A fieldset (the semantic "group"): preflight zeroes its margin, padding
     // and border, so it lays out exactly like the one-night cell's button.
     <fieldset
+      data-tour={tourAnchor}
       aria-label={`${day} — ${two ? "two nights" : "one night, one free slot"}`}
       className={`group relative min-w-0 overflow-hidden rounded-card-xl border transition-all duration-200 ease-out ${
         compact ? "aspect-square" : ""

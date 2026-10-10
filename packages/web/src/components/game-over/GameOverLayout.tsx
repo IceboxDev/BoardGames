@@ -21,7 +21,7 @@ interface GameOverLayoutProps {
   children?: ReactNode;
   /** Ordered: first item with variant="primary" renders as primary. */
   actions: readonly GameOverAction[];
-  /** Vertically center in viewport (for canvas/cooperative games like Pandemic). */
+  /** Vertically center the results while they're shorter than the screen (Pandemic, Codenames). */
   centered?: boolean;
   /** Use the full width of a wide screen (rich results that lay out in columns). */
   wide?: boolean;
@@ -34,6 +34,12 @@ const HEADLINE_COLORS = {
   neutral: "text-fg-strong",
 } as const;
 
+/**
+ * The shared game-over screen. It fills the game route's fixed-height main:
+ * the headline and the game's results scroll, the actions stay pinned in a
+ * footer — a long result (a move-by-move analysis, a big score table) never
+ * pushes Play Again off the screen.
+ */
 export function GameOverLayout({
   headline,
   headlineColor = "neutral",
@@ -44,45 +50,50 @@ export function GameOverLayout({
   centered,
   wide = false,
 }: GameOverLayoutProps) {
-  const inner = (
-    <div
-      className={cn(
-        "mx-auto w-full animate-card-enter px-6 py-8",
-        wide ? "max-w-screen-2xl" : "max-w-2xl",
-      )}
-    >
-      {/* Header — PageHeader owns the title/subtitle typography; the win/lose
-          color rides in via a child <span> (it overrides PageHeader's
-          text-white), and the emoji stays a sibling decoration. */}
-      <div className="mb-8 flex flex-col items-center">
-        {emoji && <div className="mb-2 text-5xl">{emoji}</div>}
-        <PageHeader
-          align="center"
-          size="lg"
-          title={<span className={HEADLINE_COLORS[headlineColor]}>{headline}</span>}
-          subtitle={subtitle}
-        />
+  const width = wide ? "max-w-screen-2xl" : "max-w-2xl";
+  return (
+    <div className="flex min-h-0 w-full flex-1 flex-col">
+      <div className={cn("flex min-h-0 flex-1 flex-col overflow-y-auto", centered && "p-4")}>
+        <div
+          className={cn(
+            "mx-auto w-full animate-card-enter px-6 py-8",
+            width,
+            centered && "my-auto",
+          )}
+        >
+          {/* Header — PageHeader owns the title/subtitle typography; the win/lose
+              color rides in via a child <span> (it overrides PageHeader's
+              text-white), and the emoji stays a sibling decoration. */}
+          <div className="mb-8 flex flex-col items-center">
+            {emoji && <div className="mb-2 text-5xl">{emoji}</div>}
+            <PageHeader
+              align="center"
+              size="lg"
+              title={<span className={HEADLINE_COLORS[headlineColor]}>{headline}</span>}
+              subtitle={subtitle}
+            />
+          </div>
+
+          {children}
+        </div>
       </div>
 
-      {/* Game-specific content */}
-      {children && <div className="mb-8">{children}</div>}
-
-      {/* Actions */}
       {actions.length > 0 && (
-        <div className="flex flex-wrap justify-center gap-3">
-          {actions.map((action) => (
-            <Button key={action.label} variant={action.variant} size="lg" onClick={action.onClick}>
-              {action.label}
-            </Button>
-          ))}
-        </div>
+        <footer className="shrink-0 border-t border-line-soft bg-surface-950/80 px-6 py-3 backdrop-blur-md">
+          <div className={cn("mx-auto flex w-full flex-wrap justify-center gap-3", width)}>
+            {actions.map((action) => (
+              <Button
+                key={action.label}
+                variant={action.variant}
+                size="lg"
+                onClick={action.onClick}
+              >
+                {action.label}
+              </Button>
+            ))}
+          </div>
+        </footer>
       )}
     </div>
   );
-
-  if (centered) {
-    return <div className="flex min-h-0 flex-1 items-center justify-center p-4">{inner}</div>;
-  }
-
-  return inner;
 }
