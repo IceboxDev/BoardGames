@@ -190,10 +190,18 @@ export function guessSituation(input: GuessInput): GuessSituation {
   return { lines, urgency };
 }
 
+/** A later-ranked target the reader would still have found, after a harmless miss. */
+const LEFTOVER_VALUE = 0.3;
+
 /**
- * How well a keyless reader's ranking serves a clue: +1 per own agent in
- * order, stopping at the first miss — a bystander costs a little, an
- * opponent's agent more, the assassin a lot.
+ * How well a keyless reader's ranking serves a clue, within its number:
+ * +1 per own agent read in order, until the first miss. The miss is priced
+ * by what it touches: the assassin loses the game, an opponent's agent hands
+ * them a point, a bystander only ends the turn — nearly free once something
+ * was found, a little worse when it is the very first touch. Own agents the
+ * reader still ranks within reach after a harmless miss count a little too:
+ * the team knows they're out there (a leftover for a later +1), which is
+ * why an ambitious 3-word clue that lands two beats a safe single.
  */
 export function readScore(
   ranking: readonly number[],
@@ -201,15 +209,20 @@ export function readScore(
   count: ClueCount,
 ): number {
   const reach = typeof count === "number" && count > 0 ? count : ranking.length;
+  const read = ranking.slice(0, reach);
   let score = 0;
-  for (const card of ranking.slice(0, reach)) {
+  for (const [i, card] of read.entries()) {
     const kind = kindOf(card);
     if (kind === "own") {
       score += 1;
       continue;
     }
-    score -= kind === "assassin" ? 6 : kind === "opponent" ? 1 : 0.4;
-    break;
+    if (kind === "assassin") return score - 6;
+    if (kind === "opponent") return score - 1;
+    // A bystander: the turn ends here. What the reader ranked after it is
+    // still a lead for later turns.
+    const later = read.slice(i + 1).filter((c) => kindOf(c) === "own").length;
+    return score - (score === 0 ? 0.4 : 0.1) + later * LEFTOVER_VALUE;
   }
   return score;
 }

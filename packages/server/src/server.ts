@@ -14,6 +14,7 @@ import {
 } from "./auth/index.ts";
 import { activityRoutes } from "./auth-routes/activity.ts";
 import { adminActivityRoutes } from "./auth-routes/admin-activity.ts";
+import { adminAiCallRoutes } from "./auth-routes/admin-ai-calls.ts";
 import { adminAnnouncementRoutes } from "./auth-routes/admin-announcements.ts";
 import { adminArrivalRoutes } from "./auth-routes/admin-arrivals.ts";
 import {
@@ -224,6 +225,7 @@ app.route("/api/admin", adminAvailabilityAllRoutes);
 app.route("/api/admin", adminPendingInventoryRoutes);
 app.route("/api/admin", adminAnnouncementRoutes);
 app.route("/api/admin", adminQuiztopiaReportRoutes);
+app.route("/api/admin", adminAiCallRoutes);
 app.route("/api/admin/calendar", adminCalendarLocksRoutes);
 app.route("/api/admin/history", adminMatchHistoryRoutes);
 app.route("/api/admin/skills", adminSkillsRoutes);

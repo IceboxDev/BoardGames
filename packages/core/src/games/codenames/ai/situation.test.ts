@@ -89,6 +89,18 @@ describe("codenames AI situation", () => {
     const kindOf = (c: number) => kinds[c];
     expect(readScore([0, 1], kindOf, 2)).toBe(2);
     expect(readScore([0, 3], kindOf, 2)).toBe(-5);
-    expect(readScore([2, 0], kindOf, 2)).toBeCloseTo(-0.4);
+    expect(readScore([2, 0], kindOf, 2)).toBeCloseTo(-0.1); // first-touch miss, one lead left
+    expect(readScore([2], kindOf, 1)).toBeCloseTo(-0.4);
+  });
+
+  it("an ambitious clue that lands two beats a safe single", () => {
+    const kinds = ["own", "own", "bystander", "own", "opponent"] as const;
+    const kindOf = (c: number) => kinds[c];
+    const safeSingle = readScore([0], kindOf, 1);
+    const ambitious = readScore([0, 2, 1], kindOf, 3); // one, a bystander, one more in reach
+    expect(ambitious).toBeGreaterThan(safeSingle);
+    expect(readScore([0, 1, 2, 3], kindOf, 4)).toBeGreaterThan(readScore([0, 1], kindOf, 2) - 0.2);
+    // Handing the other team a point is never worth it.
+    expect(readScore([0, 4, 1], kindOf, 3)).toBeLessThan(safeSingle);
   });
 });

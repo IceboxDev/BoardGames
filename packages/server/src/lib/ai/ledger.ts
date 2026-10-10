@@ -10,7 +10,8 @@ import { isDeployedServer } from "../origins.ts";
  *   - one log line per call: feature, model, tokens, exact dollars, time, id;
  *   - running totals per feature since the process started (`aiSpendTotals`);
  *   - the last calls in full — prompt, answer, usage — in memory
- *     (`recentAiCalls`, `findAiCall`);
+ *     (`recentAiCalls`, `findAiCall`; admins read them at `/api/admin/ai-calls`,
+ *     on production too);
  *   - and, off the deployed server (or wherever `AI_TRACE_DIR` points), the
  *     same full records appended to `scratch/ai-traces/<date>.jsonl`, so a
  *     surprising move can be read back later: grep the call id a game's notes
@@ -58,7 +59,8 @@ export const EMPTY_USAGE: AiCallUsage = {
   generationId: null,
 };
 
-const RECENT_LIMIT = 200;
+/** Full records kept in memory (a few KB each) — what `/api/admin/ai-calls` serves. */
+const RECENT_LIMIT = 400;
 const recent: AiCallRecord[] = [];
 const totals = new Map<string, { calls: number; costUsd: number; failed: number }>();
 

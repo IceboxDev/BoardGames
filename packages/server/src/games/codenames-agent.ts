@@ -87,14 +87,14 @@ function reasoningEffort(): Effort {
 }
 
 /**
- * The spymaster's effort: the Mastermind thinks harder, since it must find a
- * real link for every idea size (4/3/2/1) in one answer. Env overrides.
+ * The spymaster's effort. Low for every tier: medium was tried for the
+ * Mastermind and in production ran 45–110 s a clue (vs ~20 s), tripping the
+ * deadline into hurried or stand-in clues — better clues come from the
+ * idea-per-size answer and the test reads, not from longer thinking. Env
+ * overrides.
  */
-function clueEffort(tier: CodenamesAiModel): Effort {
-  return (
-    asEffort(process.env.CODENAMES_CLUE_REASONING_EFFORT) ??
-    (tier === "codenames-expert" ? "medium" : reasoningEffort())
-  );
+function clueEffort(_tier: CodenamesAiModel): Effort {
+  return asEffort(process.env.CODENAMES_CLUE_REASONING_EFFORT) ?? reasoningEffort();
 }
 
 /** One idea per size, largest first: 4, 3, 2, 1 — never more than the agents left. */
@@ -165,6 +165,9 @@ function clueSystem(input: ClueInput): string {
   return [
     game,
     `Give ONE ${lang} word and a number.`,
+    input.language === "de"
+      ? "Spell German properly, with its umlauts and ß: SÄUGLING, not SAEUGLING; STRASSE only where it is spelled that way."
+      : null,
     "Rules: one single word (no spaces, no digits); it must not be, contain, or be part of any face-down word on the table, and must not be a form of one (plural, verb form). Covered cards no longer matter. Clues must be about meaning, not spelling or letter count.",
     input.mode === "duet" ? DUET_PLAYBOOK : SPYMASTER_PLAYBOOK,
     AMBITION[input.model],
@@ -174,7 +177,9 @@ function clueSystem(input: ClueInput): string {
       "Leftovers from your earlier clues do NOT belong in `targets`: list the ones you expect your operatives to take with the extra guess in `leftovers`. Never stretch a new clue to cover a leftover.",
       "`summary`: one plain sentence about the idea that links the targets (and, if it matters, the dangerous card you kept away from). Never mention other candidates, tests, or your thinking process.",
     ].join(" "),
-  ].join("\n\n");
+  ]
+    .filter((line) => line !== null)
+    .join("\n\n");
 }
 
 function clueUser(input: ClueInput, violation?: string): string {
@@ -584,8 +589,8 @@ async function bestByTestRead(
   pool.forEach((candidate, i) => {
     const read = reads[i];
     if (!read) return;
-    // The chosen clue wins ties: the spymaster's own judgement counts too.
-    const score = readScore(read, kindOf, candidate.clue.count) + (i === 0 ? 0.25 : 0);
+    // The spymaster's own choice only breaks ties — the reads decide.
+    const score = readScore(read, kindOf, candidate.clue.count) + (i === 0 ? 0.05 : 0);
     if (score > bestScore) {
       bestScore = score;
       best = i;
