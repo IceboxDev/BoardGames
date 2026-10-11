@@ -15,3 +15,8 @@ pre-commit:
     typecheck-and-test:
       priority: 3
       run: PATH="$HOME/.npm-global/bin:$HOME/.local/share/pnpm:$PATH" node scripts/pre-commit-checks.mjs {staged_files}
+
+commit-msg:
+  commands:
+    no-attribution:
+      run: node scripts/check-commit-msg.mjs {1}

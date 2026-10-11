@@ -1,5 +1,8 @@
 import { defineConfig } from "vitest/config";
 
+/** Pre-commit hook or CI: the machine is busy besides. */
+const busy = Boolean(process.env.CI || process.env.LEFTHOOK);
+
 // Mirror of packages/core/vitest.config.ts. Server tests are pure Node:
 // no DOM, no per-file isolation needed (the helpers under test are
 // stateless). `typecheck.enabled = false` keeps `vitest run` fast — the
@@ -7,10 +10,14 @@ import { defineConfig } from "vitest/config";
 export default defineConfig({
   test: {
     // CI runners are slow, and the pre-commit hook runs while the laptop is
-    // busy besides (a dev server, a browser): a test that takes 0.5 s alone
-    // has hit vitest's 5 s default under load. Give them room; keep the tight
-    // default for a quiet local run so a real hang still shows.
-    testTimeout: process.env.CI || process.env.LEFTHOOK ? 30_000 : 5_000,
+    // busy besides (dev servers, other sessions): a test that takes 0.5 s
+    // alone has hit vitest's 5 s default under load, and a worker per core
+    // (14) on a loaded machine pushed a 1.5 s file past 48 s. Under the hook /
+    // CI: room for tests AND their beforeEach, and a few workers, not one per
+    // core. Keep the tight defaults for a quiet local run so a real hang shows.
+    testTimeout: busy ? 30_000 : 5_000,
+    hookTimeout: busy ? 30_000 : 10_000,
+    ...(busy ? { maxWorkers: 4 } : {}),
     include: ["src/**/*.test.ts"],
     environment: "node",
     typecheck: { enabled: false },
