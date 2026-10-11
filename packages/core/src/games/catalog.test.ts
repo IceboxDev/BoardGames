@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { CATALOG, CATALOG_SLUGS, isCatalogSlug } from "./catalog.ts";
+import { CATALOG, CATALOG_SLUGS, isCatalogSlug, isNightGame } from "./catalog.ts";
 
 describe("catalog", () => {
   it("loads a non-empty catalog", () => {
@@ -26,5 +26,17 @@ describe("catalog", () => {
       "villainous",
       "villainous-introduction-to-evil",
     ]);
+  });
+});
+
+describe("catalog — what a game night may offer", () => {
+  it("keeps the Mensa IQ pack in the catalog but out of nights", () => {
+    expect(isCatalogSlug("mensa-challenge-your-iq")).toBe(true);
+    expect(isNightGame("mensa-challenge-your-iq")).toBe(false);
+  });
+
+  it("offers ordinary board games", () => {
+    expect(isNightGame("codenames")).toBe(true);
+    expect(isNightGame("the-hunger")).toBe(true);
   });
 });

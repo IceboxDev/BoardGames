@@ -1,3 +1,4 @@
+import { isNightGame } from "@boardgames/core/games/catalog";
 import { expandOwnedSlugs } from "@boardgames/core/games/ownership";
 import {
   AdminNightGuestBodySchema,
@@ -375,7 +376,10 @@ calendarLocksRoutes.get("/locks", async (c) => {
       if (!(err instanceof RowParseError)) throw err;
       continue;
     }
-    inventoryByUser.set(inv.user_id, expandOwnedSlugs(new Set(inv.game_slugs_json)));
+    inventoryByUser.set(
+      inv.user_id,
+      new Set([...expandOwnedSlugs(new Set(inv.game_slugs_json))].filter(isNightGame)),
+    );
   }
 
   // Group every per-date input so each night is derived from its own rows.

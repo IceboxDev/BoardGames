@@ -16,13 +16,31 @@ import type { SkillWeights } from "../protocol/http/skills.ts";
 import catalogRaw from "./catalog.json" with { type: "json" };
 
 /** Structural view of a catalog entry — only the fields core needs. */
-export type CatalogSlugEntry = { slug: string; skills: SkillWeights };
+export type CatalogSlugEntry = {
+  slug: string;
+  skills: SkillWeights;
+  /** In the catalog (and collections) but not something a game night plays — a puzzle/IQ pack. */
+  notABoardGame?: boolean;
+};
 
 /** The raw catalog array, as committed. Validated downstream by web. */
 export const CATALOG: readonly CatalogSlugEntry[] = catalogRaw;
 
 /** Every slug that names a real game. */
 export const CATALOG_SLUGS: ReadonlySet<string> = new Set(CATALOG.map((g) => g.slug));
+
+const NOT_BOARD_GAMES: ReadonlySet<string> = new Set(
+  CATALOG.filter((g) => g.notABoardGame === true).map((g) => g.slug),
+);
+
+/**
+ * Whether a game night may offer `slug`: everything in the catalog except
+ * entries marked `notABoardGame` (Mensa's IQ pack), which stay browsable and
+ * collectable but never reach a night's picker or lineup.
+ */
+export function isNightGame(slug: string): boolean {
+  return !NOT_BOARD_GAMES.has(slug);
+}
 
 /** True when `slug` names a game that exists in the catalog. */
 export function isCatalogSlug(slug: string): boolean {

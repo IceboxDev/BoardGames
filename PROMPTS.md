@@ -38,7 +38,7 @@ Every prompt includes the same style directive so the four images form a visuall
 
 ## 4. Pandemic
 
-**File:** `src/games/pandemic/assets/img/thumbnail.png`
+**File:** `src/games/pandemic/assets/thumbnail.png`
 
 > A top-down view of a world-map game board with interconnected city nodes glowing in four disease colors: blue, yellow, black, and red. Translucent disease cubes cluster around hotspot cities. Tiny wooden player pawns stand at key locations. Infection cards fan out from one edge while a cure vial glows with bright teal light in the foreground. The overall mood is tense and urgent, with dark oceanic blues and biohazard amber highlights. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
 
@@ -1116,9 +1116,97 @@ Every prompt includes the same style directive so the four images form a visuall
 
 ---
 
+## 140. Dixit
+
+**File:** `packages/web/src/games/dixit/assets/thumbnail.png`
+
+> A top-down view of a round wooden table in a cozy, lamp-lit parlor at night, where six oversized, tall illustrated cards lie face-up in a gentle arc at the center, each a tiny dreamlike painting in soft storybook watercolor — a lone boat sailing across a sea of open books, a snail carrying a lit lighthouse on its shell, a staircase spiraling up into the clouds, a child's shadow that is a dragon, a keyhole glowing in the trunk of an old tree, a moon being lowered on a rope into a well. Small wooden rabbit-shaped scoring pawns in six bright colors stand along a winding scoring track carved into the lid of the game box, and little numbered voting tokens lie face-down beside some of the cards, one flipped to reveal its secret vote. A face-down hand of cards waits at each empty seat. Around the edges: a teacup with curling steam, a feather, a pair of reading glasses resting on an open storybook, and a few glowing fireflies drifting over the table. The mood is whimsical, poetic, and gently mysterious — every picture could mean anything, and one of them means exactly what the storyteller hinted. No people, players, hands, or seated figures anywhere in the scene — only the game, its components, and the setting. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 141. Questline
+
+**File:** `packages/web/src/games/questline/assets/thumbnail.png`
+
+> A top-down view of a rough-hewn wooden table set right beside a roaring winter bonfire in the snowy village square of a fantasy hamlet on the night of a storytelling contest, sparks drifting up into a starry sky. Across the table, small illustrated fantasy cards are laid out in neat rows of seven, each row an ascending numbered sequence telling one hero's tale — a sword drawn from a stone, a dragon's lair, a stormy sea crossing, a crumbling tower, a triumphant homecoming — with matching gem-colored icons along their edges linking each card to the next. One row has a glaring gap where a card is missing, while another is complete and gleaming. A loose, messy face-up discard pile sprawls at the center where cards have been swapped in a hurry, and a scattering of small golden reputation-star tokens glints in the firelight. Around the edges: steaming mugs of mulled cider, a lute leaning against a barrel, a wool cloak dusted with snow, a lantern, and a few pine boughs. The mood is lively, quick, and festive — everyone racing to spin the best legend before the fire burns low. No people, players, hands, or seated figures anywhere in the scene — only the game, its components, and the setting. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 142. Tenpenny Parks
+
+**File:** `packages/web/src/games/tenpenny-parks/assets/thumbnail.png`
+
+> A top-down view of a cheerful wooden table in a small-town planning office at golden hour, where a grassy player board shaped like an undeveloped plot of land is being filled with chunky polyomino ride tiles in candy colors — a stone-age dinosaur coaster, a wild-west log flume, a fantasy castle carousel, a space-rocket drop tower, and an undersea submarine ride — packed together with little patches of trees, flower beds, and a cotton-candy treat stand. A few plots still show uncleared rocks and stumps waiting to be bulldozed. Chunky wooden worker meeples in bright colors — a banker, a builder, a contractor — stand on a nearby action board, a small stack of coins and tickets beside them, while colorful emotion tracks for thrill, awe, and joy run along the board's edge with little markers racing upward. A golden ornate key rests on a velvet cushion at the table's corner beside a groundbreaking shovel tied with a red ribbon. Around the edges: a blueprint roll, a ruler, a cup of lemonade, and a carnival balloon tied to a chair. The mood is sunny, playful, and competitive — a race to build the best theme park in town. No people, players, hands, or seated figures anywhere in the scene — only the game, its components, and the setting. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 143. FlipToons
+
+**File:** `packages/web/src/games/fliptoons/assets/thumbnail.png`
+
+> A top-down view of a casting director's desk in a bright, modern cartoon studio, lit by a warm overhead spotlight, where six cards are laid out in a neat three-by-two grid like a screen-test storyboard. Each card shows an original cartoon animal actor drawn in a chunky, rounded, modern flat-shaded style with thick soft outlines — a juggling hedgehog, a flamingo in a feather boa, a grumpy badger in a top hat, a nervous hamster clutching a script, a smug cat with sunglasses, a cheerful axolotl — some beaming at each other with on-screen chemistry, one pair scowling in a comic feud. A face-down personal deck sits beside the grid with one card mid-flip, and a row of fresh hopeful actor cards waits in a market lineup at the top of the desk. Small golden star-shaped fame tokens are stacked and scattered between the cards. Around the edges: a clapperboard, a film reel, a megaphone, a sketchbook of character doodles, a stack of headshot cards with a big red "rejected" stamp lying aside, and a director's chair leaning just out of frame. The mood is zany, upbeat, and showbiz-bright — the big audition is on, and only the best ensemble makes the cut. No people, players, hands, or seated figures anywhere in the scene — only the game, its components, and the setting. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 144. Stonespine Architects
+
+**File:** `packages/web/src/games/stonespine-architects/assets/thumbnail.png`
+
+> A top-down view of an ancient minotaur architect's drafting table carved into the rock at the foot of a mountain, lit by torches and the glow of a forge, where a growing grid of square cards forms an underground labyrinth — each card a cross-section of a dungeon chamber with stone corridors that connect across card edges into one winding path. Some chambers hold lurking monsters, spiked pit traps, glittering treasure chests, and flickering braziers; a secret passage is marked by a cracked wall with light spilling through. A small hand-drawn blueprint scroll lies open beside the grid with a target dungeon shape sketched on it, next to a small pile of gold coins and a few small cardboard monster and trap tokens waiting to be placed. Around the edges: a chisel and mallet, a brass compass, a stack of fresh chamber cards, an hourglass, a horned helmet resting on a stone ledge, and a heavy leather tome of dungeon designs. The mood is mischievous, crafty, and proud — a master work of perilous architecture taking shape one chamber at a time. No people, players, hands, or seated figures anywhere in the scene — only the game, its components, and the setting. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 145. Cabo
+
+**File:** `packages/web/src/games/cabo/assets/thumbnail.png`
+
+> A top-down view of a weathered wooden table on a seaside terrace at sunset, overlooking a calm turquoise bay with a lighthouse on a distant rocky cape. At each of four empty places, four face-down cards lie in a neat two-by-two square, their backs printed with a stylized blue-and-gold compass and waves; at one place a single card corner is lifted just enough to peek at a low number beneath. In the center, a draw pile and a face-up discard pile sit side by side, the discard showing a bold card with a spyglass icon, and beside them two cards are crossed over each other mid-swap between two places. A small brass ship's bell sits ready to be rung for the final call. Around the edges: a scorepad and pencil, a glass of iced lemonade with a lime wedge, a coiled rope, a spyglass, and a few seashells. The mood is breezy, sly, and suspenseful — everyone half-remembering their own hand and wondering who will call it first. No people, players, hands, or seated figures anywhere in the scene — only the game, its components, and the setting. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 146. Magic Labyrinth: Card Game
+
+**File:** `packages/web/src/games/magic-labyrinth-card-game/assets/thumbnail.png`
+
+> A top-down view of a children's play table in a wizard's tower nursery at twilight, lit by floating candles and a crescent moon through an arched window. At the center lies a small square game board printed as a grid of mossy stone floor squares, each square marked with a little glowing magic symbol, with four chunky wooden wizard-apprentice pawns in red, blue, green, and yellow standing on its corner squares. Small fanned hands of magic wall cards lie face-down at the empty places, one flipped to show a shimmering violet wall of light — a hidden obstacle waiting to send a pawn home — while a bright magic symbol card lies face-up beside the board as the current treasure to find, a small stack of collected symbol cards beside it — a glowing potion bottle, a spell book, a crystal ball, a star-topped wand, an owl, a mouse. A large wooden die has just rolled to a stop, its faces showing one to three dots, a question mark, and a cross. Around the edges: a pointed wizard's hat tipped on its side, a sleepy cat curled on a cushion, a jar of fireflies, and a scattering of sparkles drifting through the air. The mood is magical, gentle, and full of wonder — a children's quest through a maze that keeps changing its walls. No people, players, hands, or seated figures anywhere in the scene — only the game, its components, and the setting. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 147. Escape from the Office
+
+**File:** `packages/web/src/games/escape-from-the-office/assets/thumbnail.png`
+
+> A top-down view of a cluttered office desk late on a Friday evening, the overhead lights dimmed to a single green banker's lamp, with the city's lights glittering through a rain-streaked window behind. The desk is covered in escape-puzzle materials: a fan of illustrated riddle cards, a half-solved grid puzzle on a clipboard, a torn memo whose pieces are being fitted back together, a sealed envelope stamped with a large question mark, a decoder wheel, and a small stack of numbered answer cards. A keypad door lock with a glowing red light sits on the desk's corner beside a heavy, tantalizing ring of office keys just out of reach under a paperweight. Sticky notes with doodled symbols cover the monitor's edge, a stopwatch counts down beside a cold cup of coffee, and a coat and umbrella hang waiting on a hook by the locked glass door. Around the edges: a stapler, a paperclip chain, a calendar with Friday circled, and a potted office plant. The mood is tense, clever, and a little absurd — the weekend is so close, and the door won't open until every puzzle is solved. No people, players, hands, or seated figures anywhere in the scene — only the game, its components, and the setting. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 148. Legends of Andor
+
+**File:** `packages/web/src/games/legends-of-andor/assets/thumbnail.png`
+
+> A top-down view of a large painted fantasy map spread across a war-council table in a torchlit stone keep, showing the kingdom of Andor in rich storybook color — the walled castle of Rietburg on its hill, dense green forests, a winding river, misty marshes, and the dark mountains in the north, the land divided into irregular numbered regions. Four tall standee heroes — a warrior with a broadsword, an archer with a longbow, a dwarf with an axe, and a wizard with a staff — stand in different regions, while menacing creature standees — snarling gors, hulking skrals, and a towering wardrak — advance along the paths toward the castle. A narrow wooden time track with sunrise and moon markers runs along one side, and a narrator track with a small marker beside it counts toward the legend's end. Colored dice, a few gold coins, a wineskin, a shield token, and a face-up legend card sit at the map's edge beside the castle's shield tokens. Around the edges: a lit lantern, a sheathed sword, a rolled scroll, and a bowl of red apples. The mood is heroic, tense, and cooperative — the kingdom can only be saved if everyone moves together before the day runs out. No people, players, hands, or seated figures anywhere in the scene — only the game, its components, and the setting. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 149. World Without End
+
+**File:** `packages/web/src/games/world-without-end/assets/thumbnail.png`
+
+> A top-down view of a heavy oak table in a medieval English priory's scriptorium, lit by candlelight and a narrow lancet window, where a painted game board shows the market town of Kingsbridge in the 14th century — a great Gothic cathedral with scaffolding still clinging to its unfinished tower, a stone bridge arching over the river, a busy market square, a hospital, and rows of timber-framed houses. Small wooden houses and figures in four player colors dot the board, alongside little stacks of resource tokens — grain sacks, stone blocks, timber beams, and wool — and a pile of silver coins. An event card has just been flipped at the board's edge beside a neat deck of action cards and a small stack of plague-sick tokens marked with dark spots waiting to be healed. Around the edges: an illuminated manuscript open to a decorated page, a quill and inkwell, a wax-sealed letter, a monk's wooden rosary, a loaf of bread, and a small herbal medicine kit of glass vials. The mood is solemn, enduring, and civic — a town rebuilding faith, trade, and health in a hard century. No people, players, hands, or seated figures anywhere in the scene — only the game, its components, and the setting. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
+## 150. Mensa: Challenge Your IQ Pack
+
+**File:** `packages/web/src/games/mensa-challenge-your-iq/assets/thumbnail.png`
+
+> A top-down view of a scholar's study desk on a rainy afternoon, lit by a brass desk lamp, holding the contents of a puzzle compendium box. A thick puzzle book lies open to pages of number sequences, shape matrices, and tiled logic grids. Beside it, a long board game shows a ten-by-sixteen grid of letter tiles in a soft cream-and-navy palette, with a few small colored counters scattered across it and a single die just rolled. Several three-dimensional wooden and metal puzzles are spread across the desk — an interlocking burr cube half-disassembled, a tangle of wire rings, a wooden tangram set fanned into a half-finished shape, and a twisty sliding-tile block — next to a few loose dice, a sharpened pencil, and a scorepad. Around the edges: a sand timer, a pair of reading glasses, a chess knight, a cup of tea, and a magnifying glass resting on a folded newspaper crossword. The mood is focused, curious, and quietly competitive — every corner of the desk holds a different brain-teaser waiting to be cracked. No people, players, hands, or seated figures anywhere in the scene — only the game, its components, and the setting. Digital illustration, painterly brushwork with soft gradients. Rich saturated palette against a dark, atmospheric background. Cinematic top-down perspective with a shallow depth-of-field blur at the edges. Warm rim lighting and subtle volumetric glow. No text, no logos, no UI elements. 16:9 aspect ratio.
+
+---
+
 # Background Image Prompts
 
-All backgrounds were generated with **ChatGPT (image generation)** on March 18, 2026.
+Backgrounds are generated with **ChatGPT (image generation)**. Sections 1–8 and 10 have their image; 9 and 11–22 are prompts awaiting one — save each as the `**File:**` path and the game picks it up (the registry globs `assets/background.png`).
 
 These images are used as fixed full-viewport backgrounds behind the game UI. They are darker and more atmospheric than the thumbnails, with visual weight pushed to the edges so white UI text remains readable over the dark center.
 
@@ -1156,7 +1244,7 @@ These images are used as fixed full-viewport backgrounds behind the game UI. The
 
 ## 4. Pandemic — Background
 
-**File:** `packages/web/src/games/pandemic/assets/img/background.png`
+**File:** `packages/web/src/games/pandemic/assets/background.png`
 
 > An ominous, high-altitude view of Earth's surface at night, abstracted into a dark network of glowing city nodes connected by faint route lines. Disease outbreak hotspots pulse with colored halos — blue over Europe, yellow over Africa, black over Asia, red over North America — but the colors are muted and atmospheric, not cartoonish. The center of the frame is dominated by dark ocean with barely visible continental outlines. Biohazard amber and clinical teal accents glow faintly at the edges. The mood is tense surveillance — a mission control display seen through frosted glass. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. Soft painterly textures with film grain. Volumetric haze and cold rim lighting. No text, no logos, no UI elements. Landscape 3:2 aspect ratio (1536×1024).
 
@@ -1216,6 +1304,95 @@ These images are used as fixed full-viewport backgrounds behind the game UI. The
 **File:** `packages/web/src/games/connect-4/assets/background.png`
 
 > A low, moody view across a dim after-school rec room at dusk. In the far corners, out of focus, a classic upright blue disc-dropping frame catches the last orange sunlight through venetian blinds, its round holes glowing like portholes. Loose red and yellow plastic discs lie scattered across a worn tabletop at the periphery — a few stacked, one rolling on its edge, their glossy rims picking up warm highlights. A tray of spare discs sits half in shadow at one edge; a soft blue glow from the frame spills across the table grain. The center of the image is a broad stretch of dark, empty tabletop falling away into near-black. The mood is quiet anticipation — the room just before a rematch. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. The scene should feel like ambient environmental art — more mood than detail. Soft painterly textures with film grain. Volumetric haze and warm rim lighting from below. The center must remain dark enough (near-black) to serve as a backdrop for white UI text. No text, no logos, no UI elements. Landscape 3:2 aspect ratio (1536×1024).
+
+---
+
+## 12. 7 Wonders — Background
+
+**File:** `packages/web/src/games/7-wonders/assets/background.png`
+
+> A moody, atmospheric view across a moonlit ancient Mediterranean harbour seen from a high marble terrace. At the far edges of the frame, the great monuments of antiquity rise out of evening haze — the lit beacon of the Pharos lighthouse burning amber at one side, the stepped silhouettes of pyramids and the hanging terraces of Babylon dissolving into dusk at the other, the bronze shoulder of the Colossus catching a last glint of firelight. In the lower foreground, slightly out of focus, a carved stone ledge holds a scatter of trade goods — a coil of rope, a stack of fired clay bricks, a chunk of ore, a glass vial, a papyrus scroll, a few gold coins and a bronze laurel wreath — warm rim-lit by an unseen brazier. The center of the image is the dark, still water of the harbour and an empty night sky falling to near-black, with only faint reflections of distant torchlight. The mood is ambitious and timeless — three ages of a civilisation about to be built. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. The scene should feel like ambient environmental art — more mood than detail. Soft painterly textures with film grain. Volumetric haze and warm rim lighting from below. The center must remain dark enough (near-black) to serve as a backdrop for white UI text. No people, no hands, no figures. No text, no logos, no UI elements, no readable card faces. Landscape 3:2 aspect ratio (1536×1024).
+
+---
+
+## 13. Chess — Background
+
+**File:** `packages/web/src/games/chess/assets/background.png`
+
+> A moody, atmospheric view of a quiet wood-panelled study at midnight, seen low across the edge of a polished walnut table. At the periphery, out of focus, weighted Staunton pieces stand in shadow — a toppled ebony king, a lone ivory knight, a pawn caught in the glow of a brass desk lamp at the frame's corner. A wooden double chess clock sits at one edge with its brass buttons glinting, beside a crystal tumbler and a folded score sheet whose notation is blurred and unreadable. Bookshelf silhouettes and the faint shape of a tall window with rain on the glass dissolve into darkness behind. The center of the image is the broad dark stretch of the table and a softly suggested checkered board fading to near-black. The mood is concentrated stillness — the long think before the decisive move. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. The scene should feel like ambient environmental art — more mood than detail. Soft painterly textures with film grain. Volumetric haze and warm rim lighting from below. The center must remain dark enough (near-black) to serve as a backdrop for white UI text. No people, no hands, no figures. No text, no logos, no UI elements, no readable notation or clock numerals. Landscape 3:2 aspect ratio (1536×1024).
+
+---
+
+## 14. Chess Bughouse — Background
+
+**File:** `packages/web/src/games/chess-bughouse/assets/background.png`
+
+> A moody, atmospheric view of a late-night chess club, seen from above at a steep angle across two boards set side by side on a long scuffed table. At the frame's edges, warm pools of light from two green-shaded lamps catch rows of captured pieces lined up beside each board — pawns, knights and bishops waiting to be dropped — and two wooden chess clocks ticking in parallel. A few pieces blur in motion as if just passed from one board to the other. Beyond the table, folding chairs, a tournament banner with no lettering and coffee cups dissolve into haze. The center of the image is the dark gap between the two boards falling to near-black. The mood is frantic, team-spirited chaos held in a hush — two games, one team, no time. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. The scene should feel like ambient environmental art — more mood than detail. Soft painterly textures with film grain. Volumetric haze and warm rim lighting from below. The center must remain dark enough (near-black) to serve as a backdrop for white UI text. No people, no hands, no figures. No text, no logos, no UI elements, no readable notation or clock numerals. Landscape 3:2 aspect ratio (1536×1024).
+
+---
+
+## 15. Codenames — Background
+
+**File:** `packages/web/src/games/codenames/assets/background.png`
+
+> A moody, atmospheric view of a Cold War intelligence briefing room at night, seen from above at a steep angle. A long dark table fills the lower third; at the edges of the frame, red and blue agent cards lie blurred in neat stacks, a black-and-white key card with an unreadable grid glows under a hooded desk lamp, and a brass sand timer sits half-run beside a sealed dossier tied with red string. Rain-streaked windows with venetian blinds throw thin stripes of cold blue streetlight across the wall; a rotary telephone, a reel-to-reel tape recorder and a pinned map with string connections fade into shadow. The center of the image is the empty dark expanse of the table where the grid of words would lie, falling to near-black. The mood is tense, whispered rivalry — two spymasters, one word, a single wrong guess away from the assassin. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. The scene should feel like ambient environmental art — more mood than detail. Soft painterly textures with film grain. Volumetric haze and warm rim lighting from below. The center must remain dark enough (near-black) to serve as a backdrop for white UI text. No people, no hands, no figures. No text, no logos, no UI elements, no readable words, cards or documents. Landscape 3:2 aspect ratio (1536×1024).
+
+---
+
+## 16. Codenames: Duet — Background
+
+**File:** `packages/web/src/games/codenames-duet/assets/background.png`
+
+> A moody, atmospheric view of a tropical safehouse balcony at night, seen from above at a steep angle. A weathered wooden table fills the lower third; at its edges, green agent covers and a two-sided key card glow faintly under a single hurricane lantern, beside a pocket watch counting down, a pair of binoculars and a folded map of a harbour. Beyond the railing, palm silhouettes, a moonlit bay and the lights of a distant port town dissolve into warm humid haze; a ceiling fan blurs overhead at the top edge. The center of the image is the dark empty tabletop falling to near-black. The mood is quiet partnership under pressure — two agents, one mission, the clock ticking down. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. The scene should feel like ambient environmental art — more mood than detail. Soft painterly textures with film grain. Volumetric haze and warm rim lighting from below. The center must remain dark enough (near-black) to serve as a backdrop for white UI text. No people, no hands, no figures. No text, no logos, no UI elements, no readable words, cards or documents. Landscape 3:2 aspect ratio (1536×1024).
+
+---
+
+## 17. Decrypto — Background
+
+**File:** `packages/web/src/games/decrypto/assets/background.png`
+
+> A moody, atmospheric view of a retro-futurist radio interception room at night, seen from above at a steep angle. At the frame's edges, banks of valve radios and reel-to-reel recorders glow amber and green, oscilloscope traces pulse faintly, and headphones hang over the back of an empty chair. Two slim black code screens stand at opposite ends of a felt-covered desk, their contents hidden, with a pad of intercepted three-digit codes blurred beyond reading beside a brass Morse key. A rain-streaked porthole window shows a dark harbour with a blinking radio mast. The center of the image is the empty felt between the two screens, falling to near-black. The mood is hushed paranoia — two teams talking in code while the other side listens. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. The scene should feel like ambient environmental art — more mood than detail. Soft painterly textures with film grain. Volumetric haze and warm rim lighting from below. The center must remain dark enough (near-black) to serve as a backdrop for white UI text. No people, no hands, no figures. No text, no logos, no UI elements, no readable words, codes or numbers. Landscape 3:2 aspect ratio (1536×1024).
+
+---
+
+## 18. Go — Background
+
+**File:** `packages/web/src/games/go/assets/background.png`
+
+> A moody, atmospheric view of a traditional Japanese tea room at night, seen low across the edge of a thick kaya-wood goban resting on tatami. At the periphery, two lacquered wooden bowls of slate-black and shell-white stones catch the warm glow of a paper andon lantern; a few stones lie on the board's edge, softly blurred, and their lids rest upturned with captured prisoners. A shoji screen glows faintly behind, with the shadow of a maple branch, and a cast-iron kettle steams on a brazier at the far corner. The center of the image is the dark grid of the board receding into near-black, its fine lines barely visible. The mood is serene, deep concentration — territory quietly taking shape stone by stone. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. The scene should feel like ambient environmental art — more mood than detail. Soft painterly textures with film grain. Volumetric haze and warm rim lighting from below. The center must remain dark enough (near-black) to serve as a backdrop for white UI text. No people, no hands, no figures. No text, no logos, no UI elements, no readable characters. Landscape 3:2 aspect ratio (1536×1024).
+
+---
+
+## 19. Quiztopia — Background
+
+**File:** `packages/web/src/games/quiztopia/assets/background.png`
+
+> A moody, atmospheric view of a cosy pub quiz night after hours, seen from above at a steep angle across a wooden table. At the edges of the frame, warm string-lights and a dim chalkboard glow with blurred, unreadable scribbles; stacks of quiz cards with bright coloured category edges sit at the periphery beside a small wooden hourglass, a scatter of score tokens, pencils and half-finished drinks catching amber light. Shelves of old encyclopaedias, a globe and a dartboard fade into the haze behind. The center of the image is the empty dark tabletop falling to near-black. The mood is warm, playful and brain-teasing — friends together against the questions. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. The scene should feel like ambient environmental art — more mood than detail. Soft painterly textures with film grain. Volumetric haze and warm rim lighting from below. The center must remain dark enough (near-black) to serve as a backdrop for white UI text. No people, no hands, no figures. No text, no logos, no UI elements, no readable questions or words. Landscape 3:2 aspect ratio (1536×1024).
+
+---
+
+## 20. Sensō: Battle for Japan — Background
+
+**File:** `packages/web/src/games/senso-battle-for-japan/assets/background.png`
+
+> A moody, atmospheric view of a feudal Japanese war council chamber at night, seen from above at a steep angle. A low black-lacquered table fills the lower third; at its edges, an ink-painted map of Japan's islands is partly unrolled, lit by paper lanterns, with clan war banners in deep red, indigo and gold leaning against the wall and a katana resting on a wooden stand. Painted fusuma screens of pines and cranes dissolve into shadow behind, and a distant temple pagoda and a moonlit castle keep are glimpsed through an open shoji. Embers drift from a bronze brazier at one corner. The center of the image is the dark stretch of the table falling to near-black. The mood is solemn ambition — warlords weighing honour, gold and blood before the season's campaign. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. The scene should feel like ambient environmental art — more mood than detail. Soft painterly textures with film grain. Volumetric haze and warm rim lighting from below. The center must remain dark enough (near-black) to serve as a backdrop for white UI text. No people, no hands, no figures. No text, no logos, no UI elements, no readable kanji or map labels. Landscape 3:2 aspect ratio (1536×1024).
+
+---
+
+## 21. The Hunger — Background
+
+**File:** `packages/web/src/games/the-hunger/assets/background.png`
+
+> A menacing, atmospheric view of a gothic Transylvanian valley at the dead of night, seen from a castle parapet at a steep angle. At the frame's edges, the jagged silhouette of the vampire castle rises against a blood-red moon, its gates open and torchlit, while winding cobbled paths lead out through graveyards, sleeping villages with a few lit windows and a walled garden of dark roses. Bats wheel at the periphery, a lone wolf stands on a rocky ledge, and a tarnished pocket watch with its hands creeping toward dawn lies on the parapet stone in the foreground beside a single crimson rose. Along the far horizon at the very top edge, the first cold blush of sunrise threatens. The center of the image is the dark, fog-filled valley falling to near-black. The mood is gluttonous dread — feast fast, and make it home before the sun. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. The scene should feel like ambient environmental art — more mood than detail. Soft painterly textures with film grain. Volumetric haze and warm rim lighting from below. The center must remain dark enough (near-black) to serve as a backdrop for white UI text. No people, no hands, no figures. No text, no logos, no UI elements, no readable clock numerals. Landscape 3:2 aspect ratio (1536×1024).
+
+---
+
+## 22. The Resistance — Background
+
+**File:** `packages/web/src/games/the-resistance/assets/background.png`
+
+> A moody, atmospheric view of a clandestine resistance bunker in a dystopian city, seen from above at a steep angle. A scarred metal table fills the lower third; at its edges, face-down role cards, a scatter of vote tokens and a leader's tarnished insignia lie blurred under a single swinging bare bulb, beside a coiled radio wire, a stack of mission folders and a battered field radio blinking a red light. Beyond the table, exposed pipes, a cracked concrete wall plastered with torn propaganda posters with no readable text and a narrow grated window glowing with the cold blue searchlights of the regime fade into haze. The center of the image is the dark empty tabletop falling to near-black. The mood is paranoid and conspiratorial — everyone at the table is a friend, and someone is lying. Wide-angle digital matte painting, atmospheric and cinematic. Deep rich colors with heavy vignette darkening toward the center and top third. The scene should feel like ambient environmental art — more mood than detail. Soft painterly textures with film grain. Volumetric haze and warm rim lighting from below. The center must remain dark enough (near-black) to serve as a backdrop for white UI text. No people, no hands, no figures. No text, no logos, no UI elements, no readable cards, posters or documents. Landscape 3:2 aspect ratio (1536×1024).
+
 ---
 
 Game-specific card/role prompts live alongside each game:

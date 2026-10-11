@@ -11,7 +11,8 @@
 //   project.json  — what little metadata the feed exposes
 //   updates.json  — raw structured posts as the feed serves them
 //   updates.md    — the digest to hand to Claude (text + [image ...] markers)
-//   images/       — u<N>-01.* … for every post
+//   images/       — p<post id>-01.* … for every post (keyed by Kickstarter's
+//                   post id, so re-runs never mix up posts)
 //
 // HARD LIMIT (measured 2026-09-02): Kickstarter's Cloudflare wall 403s curl
 // AND headless chromium on the project page, individual post pages, posts.json
@@ -215,6 +216,16 @@ function parseFeed(xml: string): { feedTitle: string | null; posts: KickstarterP
   };
 }
 
+/**
+ * Image file key: Kickstarter's own post id from the post URL. The feed's
+ * 1..N position is NOT stable — each new post shifts every older one down —
+ * so position-named files from an earlier run would be "already downloaded"
+ * under a different post's name and the new images silently skipped.
+ */
+function postKey(url: string, fallback: number): string {
+  return url.match(/\/posts\/(\d+)/)?.[1] ?? `n${fallback}`;
+}
+
 // ── Main ───────────────────────────────────────────────────────────────
 
 async function main() {
@@ -234,7 +245,7 @@ async function main() {
     const text = htmlToText(p.contentHtml, (src) => {
       inlineIdx += 1;
       const url = decodeEntities(src);
-      const local = join("images", `u${p.number}-${String(inlineIdx).padStart(2, "0")}${extFromUrl(url)}`);
+      const local = join("images", `p${postKey(p.url, p.number)}-${String(inlineIdx).padStart(2, "0")}${extFromUrl(url)}`);
       images.push({ local, url });
       return `[image ${local}]`;
     });

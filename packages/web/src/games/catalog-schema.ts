@@ -31,6 +31,8 @@ export const CatalogEntrySchema = z
     family: GameFamilySchema.optional(),
     displayTitle: z.string().min(1).optional(),
     bggOverrides: BggGameSchema.partial().optional(),
+    /** Browsable and collectable, but never offered at a game night (an IQ/puzzle pack). */
+    notABoardGame: z.literal(true).optional(),
   })
   // Reject unknown fields rather than silently dropping them — catches
   // typos like `lobbyConfigComponent: ...` accidentally landing in

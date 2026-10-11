@@ -12,6 +12,7 @@
 // fields) without leaking them into the public JSON.
 
 import { getBggBySlug, maxPlayersAsNumber } from "@boardgames/core/bgg";
+import { isNightGame } from "@boardgames/core/games/catalog";
 import { expandOwnedSlugs } from "@boardgames/core/games/ownership";
 import {
   type AvailableGames,
@@ -398,7 +399,8 @@ export async function computeAvailableGamesPayload(opts: {
         if (!(err instanceof RowParseError)) throw err;
         continue;
       }
-      const set = expandOwnedSlugs(new Set(inv.game_slugs_json));
+      // Owned, and something a night plays (not an IQ pack — `isNightGame`).
+      const set = new Set([...expandOwnedSlugs(new Set(inv.game_slugs_json))].filter(isNightGame));
       for (const slug of set) ownedUnion.add(slug);
       inventoryByUser.set(inv.user_id, set);
     }

@@ -19,8 +19,9 @@
 // tell Claude: "new Gamefound dump in gamefound-dumps/<slug> — fold it in".
 
 import { execFile } from "node:child_process";
-import { existsSync } from "node:fs";
+import { existsSync, readdirSync } from "node:fs";
 import { mkdir, writeFile } from "node:fs/promises";
+import { homedir } from "node:os";
 import { join } from "node:path";
 
 const UA =
@@ -53,13 +54,18 @@ const outDir = outDirArg ?? join("gamefound-dumps", projectSlug);
 // ── Fetch helpers ──────────────────────────────────────────────────────
 
 // Gamefound's WAF 403s Node's fetch consistently, and even with curl +
-// browser headers it 403s roughly a third of requests AT RANDOM (measured
+// browser headers it 403'd roughly a third of requests AT RANDOM (measured
 // 2026-09-02: 4/12 rapid hits failed, independent of headers or URL). So:
 // curl transport, and every request retries through the 403 lottery with
 // backoff + jitter.
+//
+// Since 2026-10-11 Gamefound sits behind a Cloudflare "Just a moment…"
+// challenge that curl can never pass. When a request comes back as that
+// challenge, the run switches to a headless Chromium (playwright-core,
+// driving the browser `npx playwright install` puts in ~/.cache/ms-playwright,
+// or CHROME_PATH) that clears it once and fetches everything else.
 const CURL_ARGS = [
   "-sS",
-  "--fail",
   "--location",
   "--max-time",
   "60",
@@ -69,7 +75,11 @@ const CURL_ARGS = [
   "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
   "-H",
   "Accept-Language: en-US,en;q=0.9",
+  "--write-out",
+  "\n%{http_code}",
 ];
+
+class CloudflareChallenge extends Error {}
 
 function curlOnce(url: string): Promise<Buffer> {
   return new Promise((resolve, reject) => {
@@ -78,8 +88,18 @@ function curlOnce(url: string): Promise<Buffer> {
       [...CURL_ARGS, url],
       { encoding: "buffer", maxBuffer: 64 * 1024 * 1024 },
       (err, stdout, stderr) => {
-        if (err) reject(new Error(`GET ${url} failed: ${stderr.toString().trim() || err.message}`));
-        else resolve(stdout);
+        if (err) {
+          reject(new Error(`GET ${url} failed: ${stderr.toString().trim() || err.message}`));
+          return;
+        }
+        // --write-out appends "\n<status>"; split it back off the body.
+        const cut = stdout.lastIndexOf(0x0a);
+        const status = Number(stdout.subarray(cut + 1).toString());
+        const body = stdout.subarray(0, cut);
+        if (status >= 200 && status < 300) resolve(body);
+        else if (status === 403 && /cf-chl|Just a moment/.test(body.toString("latin1")))
+          reject(new CloudflareChallenge(`GET ${url}: Cloudflare challenge`));
+        else reject(new Error(`GET ${url} failed: HTTP ${status}`));
       },
     );
   });
@@ -93,6 +113,7 @@ async function curl(url: string): Promise<Buffer> {
     try {
       return await curlOnce(url);
     } catch (err) {
+      if (err instanceof CloudflareChallenge) throw err;
       lastError = err;
       if (attempt < MAX_ATTEMPTS) {
         const backoff = 1000 * 2 ** (attempt - 1) + Math.random() * 500;
@@ -104,11 +125,83 @@ async function curl(url: string): Promise<Buffer> {
   throw lastError;
 }
 
-async function fetchText(url: string): Promise<string> {
-  return (await curl(url)).toString("utf8");
+// ── Browser fallback ──
+
+type BrowserPage = import("playwright-core").Page;
+let browser: import("playwright-core").Browser | null = null;
+let page: BrowserPage | null = null;
+
+function chromePath(): string | undefined {
+  if (process.env.CHROME_PATH) return process.env.CHROME_PATH;
+  const cache = join(homedir(), ".cache", "ms-playwright");
+  if (!existsSync(cache)) return undefined;
+  const newest = readdirSync(cache)
+    .filter((d) => /^chromium-\d+$/.test(d))
+    .sort((a, b) => Number(b.split("-")[1]) - Number(a.split("-")[1]))[0];
+  const exe = newest && join(cache, newest, "chrome-linux64", "chrome");
+  return exe && existsSync(exe) ? exe : undefined;
 }
 
-const fetchBinary = curl;
+async function browserPage(): Promise<BrowserPage> {
+  if (page) return page;
+  process.stderr.write("  Cloudflare challenge — switching to headless Chromium\n");
+  const { chromium } = await import("playwright-core");
+  const executablePath = chromePath();
+  if (!executablePath) fail("no Chromium found — run `npx playwright install chromium` or set CHROME_PATH");
+  browser = await chromium.launch({ executablePath, args: ["--headless=new"] });
+  page = await browser.newPage({ userAgent: UA });
+  return page;
+}
+
+/** Load `url` in the browser, waiting out the challenge; null if it never clears. */
+async function browserGoto(url: string): Promise<import("playwright-core").Response | null> {
+  const p = await browserPage();
+  for (let attempt = 1; attempt <= 3; attempt++) {
+    const first = await p.goto(url, { waitUntil: "domcontentloaded", timeout: 60_000 });
+    if (first && first.status() < 400) return first;
+    // The challenge page reloads itself into the real one once it clears.
+    const real = await p
+      .waitForResponse((r) => r.url() === url && r.status() < 400, { timeout: 30_000 })
+      .catch(() => null);
+    if (real) {
+      await p.waitForLoadState("domcontentloaded");
+      return real;
+    }
+    process.stderr.write(`  browser retry ${attempt}/3 for ${url}\n`);
+  }
+  return null;
+}
+
+let useBrowser = false;
+
+async function fetchVia(url: string, kind: "text" | "binary"): Promise<Buffer> {
+  if (!useBrowser) {
+    try {
+      return await curl(url);
+    } catch (err) {
+      if (!(err instanceof CloudflareChallenge)) throw err;
+      useBrowser = true;
+    }
+  }
+  const res = await browserGoto(url);
+  if (!res) throw new Error(`GET ${url} failed: Cloudflare challenge never cleared`);
+  // A page's embedded JSON is read from the rendered document; an image's
+  // bytes from the response itself.
+  return kind === "text" ? Buffer.from(await (await browserPage()).content()) : res.body();
+}
+
+async function fetchText(url: string): Promise<string> {
+  return (await fetchVia(url, "text")).toString("utf8");
+}
+
+async function fetchBinary(url: string): Promise<Buffer> {
+  // Images live on a CDN outside the challenge; try curl even mid-browser-run.
+  try {
+    return await curl(url);
+  } catch {
+    return fetchVia(url, "binary");
+  }
+}
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -319,4 +412,6 @@ async function main() {
   console.log(`Hand it over with: "new Gamefound dump in ${outDir} — fold it in"`);
 }
 
-main().catch((err) => fail(String(err)));
+main()
+  .then(() => browser?.close())
+  .catch((err) => fail(String(err)));

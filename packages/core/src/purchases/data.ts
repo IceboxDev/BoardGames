@@ -66,9 +66,10 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     pledgeManagerUrl:
       "https://gamefound.com/en/projects/contention-games/slay-the-spire-the-board-game---downfall/yourpledge",
     // First shipping timeline stated by the campaign (Update #2): fulfillment
-    // starts April 2027 for regular pledges.
+    // starts April 2027 for regular pledges. Update #3 (Oct 8 '26) moved main
+    // fulfillment to July 2027.
     originalEtaMonth: "2027-04",
-    currentEtaMonth: "2027-04",
+    currentEtaMonth: "2027-07",
     pledgedOn: "2026-05-29",
     deliveredOn: null,
     currency: "USD",
@@ -120,6 +121,21 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "April 2027 timeline.",
         sourceUrl:
           "https://gamefound.com/en/projects/contention-games/slay-the-spire-the-board-game---downfall/updates/2",
+      },
+      {
+        id: "slay-the-spire-downfall-e04",
+        occurredOn: "2026-10-08",
+        type: "delay",
+        title: "Main fulfillment delayed three months — now July 2027",
+        details:
+          "Production is close to starting, but details like the acrylic token colour and " +
+          "syncing every card across languages need more time; with Chinese New Year adding " +
+          "a month, main fulfillment moves from April to July 2027. Sleeves for Everything " +
+          "Else joined the base-game Collector's Edition as an Early Shipping option (orders " +
+          "before Oct 15 ship the week after); exclusives stay in the main wave. A first look " +
+          "at the Hexadie was shared.",
+        sourceUrl:
+          "https://gamefound.com/en/projects/contention-games/slay-the-spire-the-board-game---downfall/updates/3",
       },
     ],
   },
@@ -326,7 +342,7 @@ export const PURCHASES: readonly PurchaseRecord[] = [
       "(€10.00 + €1.90 — the upgraded 5-building pack) and the 3D Arcade promo building & " +
       "card (€10.00 + €1.90); both get Sundrop free with a Sundrop main pledge. Total paid " +
       "€404.60. NOTE: 3Dition contains NO base game — the retail copy is required. Shipping " +
-      "is charged when the pledge manager opens (still closed as of Aug 2026).",
+      "is charged in the pledge manager, due to open right after Essen SPIEL (Oct 2026).",
     events: [
       {
         id: "ark-nova-3dition-e01",
@@ -398,6 +414,31 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "final. Every component still starts fulfilment at the end of 2026 and nothing has " +
           "entered series production.",
         sourceUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova/updates/33",
+      },
+      {
+        id: "ark-nova-3dition-e07",
+        occurredOn: "2026-09-16",
+        type: "campaign-update",
+        title: "Backer-only Ark Nova base game deal at Essen SPIEL; tiger coin sampled",
+        details:
+          "Backers can reserve the Ark Nova base game (German or English, signed on request) " +
+          "for €45 incl. tax at the Essen SPIEL booth (3N410) by emailing info@kekpop.com, " +
+          "plus a small gift for every backer who drops by. The tiger metal coin sample " +
+          "arrived (small font fixes on the 1 and 20 already addressed); playmats, the first " +
+          "finished item, still ship bundled with everything else.",
+        sourceUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova/updates/34",
+      },
+      {
+        id: "ark-nova-3dition-e08",
+        occurredOn: "2026-10-06",
+        type: "campaign-update",
+        title: "Tooling finished — final-colour samples at Essen, pledge manager after",
+        details:
+          "All tools were finished at the end of September, the hardest and slowest part. " +
+          "EASTAR promised T1 production samples in final colours for Essen SPIEL 2026 " +
+          "(hall 3, N410), shown in the post-Essen update, which is also when the pledge " +
+          "manager opens to lock in shipping addresses. No change to the fulfilment date.",
+        sourceUrl: "https://gamefound.com/en/projects/kekpop-spiele/ark-nova/updates/35",
       },
     ],
   },
@@ -501,6 +542,33 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "72% with coin molds completed and a sample shipment in transit.",
         sourceUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh/updates/45",
       },
+      {
+        id: "brass-pittsburgh-e07",
+        occurredOn: "2026-09-25",
+        type: "campaign-update",
+        title: "Scam warning; solo mode into final balancing, coin molds revised",
+        details:
+          'Someone posing as Roxley offered a "mystery box" via Telegram in the comments — ' +
+          "real Roxley accounts carry a Creator badge and never move rewards off-platform. " +
+          "Development 96% (solo mode into its final balancing round), art 93% (solo " +
+          "rulebook with playtesters), prepress 75% (translations; second coin-mold revision " +
+          "done, coin and foil-box samples awaited). Manufacturing still 0%.",
+        sourceUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh/updates/46",
+      },
+      {
+        id: "brass-pittsburgh-e08",
+        occurredOn: "2026-10-09",
+        type: "campaign-update",
+        title: "Solo expansion Wildcat V Titan revealed; prepress at 80%",
+        details:
+          "The solo mode is a full single-player expansion in every edition: 4 double-sided " +
+          "Titan cards, 20 Phase cards, 12 Headline cards and a reference leaflet; BGA " +
+          "implementation is nearly done for final balancing and the rulebook is in editing. " +
+          "Chart: development 97%, art 95%, prepress 80% (coin and clay packaging samples " +
+          "nearly all approved), manufacturing 0% — still production Sep 2026, freight " +
+          "April 2027, fulfilment summer 2027.",
+        sourceUrl: "https://gamefound.com/en/projects/roxley/brass-pittsburgh/updates/47",
+      },
     ],
   },
   {
@@ -593,8 +661,10 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     campaignUrl: "https://www.kickstarter.com/projects/smirkanddagger/hell-of-a-deal",
     pledgeManagerUrl: null, // BackerKit; closed May 15 '26, addresses locked July 18 '26
     // Kickstarter's reward estimate at pledge time: Sep 2026 (the creator's
-    // internal goal was July/August). The EU wave lands late September —
-    // vessel due in Rotterdam Sep 12, fulfilment ~1–2 weeks after.
+    // internal goal was July/August). The EU vessel was due in Rotterdam
+    // Sep 12 for a ~Sep 28 fulfilment start, but by Sep 30 the games still
+    // hadn't reached the fulfilment centre and no new date was given — the
+    // ETA stays put and reads as overdue.
     originalEtaMonth: "2026-09",
     currentEtaMonth: "2026-09",
     pledgedOn: "2026-03-25",
@@ -687,6 +757,19 @@ export const PURCHASES: readonly PurchaseRecord[] = [
         sourceUrl:
           "https://www.kickstarter.com/projects/smirkanddagger/hell-of-a-deal/posts/4771434",
       },
+      {
+        id: "hell-of-a-deal-e07",
+        occurredOn: "2026-09-30",
+        type: "delay",
+        title: "EU copies not yet at the fulfilment centre — no new date",
+        details:
+          "US and Canada shipping is complete (wave 2 and damage/parts replacements under " +
+          "way). The EU/UK wave, planned to start fulfilling ~Sep 28, hasn't reached the " +
+          "fulfilment centre after container pick-up, port and weather delays, and the " +
+          "centre can't say when it will.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/smirkanddagger/hell-of-a-deal/posts/4813237",
+      },
     ],
   },
   {
@@ -702,9 +785,11 @@ export const PURCHASES: readonly PurchaseRecord[] = [
     campaignUrl:
       "https://www.kickstarter.com/projects/elements-of-truth/elements-of-truth-by-veritasium",
     pledgeManagerUrl: null, // BackerKit survey; closed June 14 '26
-    // Kickstarter's reward estimate at pledge time: Sep 2026. Production
-    // finished Aug 31 with QC still ahead of freight, so September is tight
-    // but no later month has been stated — the recent updates name no dates.
+    // Kickstarter's reward estimate at pledge time: Sep 2026. September has
+    // passed: the Sep 25 shipping update starts US/Australia/Asia only, with
+    // EU-bound copies (this pledge ships to Germany) held for country
+    // compliance approvals — and names no new month, so the ETA stays put
+    // and reads as overdue.
     originalEtaMonth: "2026-09",
     currentEtaMonth: "2026-09",
     pledgedOn: "2025-12-08",
@@ -781,6 +866,19 @@ export const PURCHASES: readonly PurchaseRecord[] = [
           "when shipping is underway; no delivery month stated.",
         sourceUrl:
           "https://www.kickstarter.com/projects/elements-of-truth/elements-of-truth-by-veritasium/posts/4784662",
+      },
+      {
+        id: "elements-of-truth-e06",
+        occurredOn: "2026-09-25",
+        type: "delay",
+        title: "Shipping starts in US, Australia & Asia — EU held for compliance approvals",
+        details:
+          "Shipments from the regional warehouses begin very soon for US, Australian and " +
+          "Asian backers, with tracking sent on dispatch. Other regions, the EU included, " +
+          "wait on country-specific compliance approvals outside the team's control; no " +
+          "date given.",
+        sourceUrl:
+          "https://www.kickstarter.com/projects/elements-of-truth/elements-of-truth-by-veritasium/posts/4808584",
       },
     ],
   },
@@ -1401,6 +1499,204 @@ export const PURCHASES: readonly PurchaseRecord[] = [
         details:
           "Delivered on 9 September. Return, replacement or withdrawal eligible until " +
           "25 September 2026.",
+        sourceUrl: null,
+      },
+    ],
+  },
+  // One Thunderworks pledge-manager order (#KHRL825NA, Oct 11 '26): the
+  // Stonespine Architects: Invasion late pledge plus four add-ons, billed
+  // together in USD and shipped in two waves of four items from Germany. One
+  // card per game, as with every other purchase — only the two FlipToons
+  // seasons share a card (both link the FlipToons catalog entry). Which items
+  // ride which wave is inferred: the confirmation only says "4 items now,
+  // 4 items March 2027", and the Invasion bundle (new expansion + its
+  // reprints) is the part still to be manufactured. Wave-1 shipping ($8.00)
+  // is split evenly over its four items.
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "stonespine-architects-invasion",
+    title:
+      "Stonespine Architects — Invasion All-In: Invasion CE, Marauder Pack, Shrines & " +
+      "Fountains, base game (2nd printings)",
+    shortTitle: "Stonespine Architects: Invasion",
+    orderGroup: null,
+    slug: "stonespine-architects",
+    kind: "crowdfunding",
+    status: "production",
+    platform: "Kickstarter",
+    campaignUrl:
+      "https://www.kickstarter.com/projects/thunderworks/stonespine-architects-invasion-expansion",
+    pledgeManagerUrl: null, // Thunderworks pledge-manager order page link not recorded
+    // The confirmation's estimate for the second shipment.
+    originalEtaMonth: "2027-03",
+    currentEtaMonth: "2027-03",
+    pledgedOn: "2026-10-11",
+    deliveredOn: null,
+    currency: "USD",
+    pledgeCents: 12852, // $108.00 (after the $35.95 reward discount) + $20.52 VAT (19%), paid
+    shippingCents: 1500, // $15.00 for shipment 2 of 2
+    note:
+      "Thunderworks order #KHRL825NA (Stonespine Architects Invasion Pledge Manager), " +
+      "Invasion Expansion (All-In) from the EU: Invasion Collector's Edition, Marauder Pack " +
+      "mini-expansion, Shrines & Fountains mini-expansion (2nd printing, 7 dungeon cards) and " +
+      "Stonespine Architects base game (2nd printing). $143.95 less a $35.95 reward discount = " +
+      "$108.00 + 19% German VAT, VAT pre-paid; ships from Germany in shipment 2 of 2 " +
+      "(est. March 2027, $15.00). Whole order: $360.33 + $23.00 shipping = $383.33.",
+    events: [
+      {
+        id: "stonespine-architects-invasion-e01",
+        occurredOn: "2026-10-11",
+        type: "note",
+        title: "Late pledge placed in the Thunderworks pledge manager",
+        details:
+          "Order #KHRL825NA: Invasion Expansion (All-In) at $108.00 after a $35.95 reward " +
+          "discount, plus FlipToons, FlipToons: Season 2, Questline and the Tenpenny Parks " +
+          "Collector's Edition — $383.33 total incl. 19% VAT and $23.00 shipping. Two " +
+          "shipments from Germany: four items in 5–8 business days, four in March 2027.",
+        sourceUrl: null,
+      },
+    ],
+  },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "fliptoons",
+    title: "FlipToons",
+    shortTitle: "FlipToons",
+    orderGroup: { id: "fliptoons", title: "FlipToons" },
+    slug: "fliptoons",
+    kind: "retail",
+    status: "shipping",
+    platform: "Thunderworks Games",
+    campaignUrl: null,
+    pledgeManagerUrl: null, // order page link not recorded
+    // Shipment 1: "5–8 business days" from Oct 11 — about Oct 20–21.
+    originalEtaMonth: "2026-10",
+    currentEtaMonth: "2026-10",
+    pledgedOn: "2026-10-11",
+    deliveredOn: null,
+    currency: "USD",
+    pledgeCents: 2374, // $19.95 + $3.79 VAT (19%), paid
+    shippingCents: 200, // a quarter of shipment 1's $8.00
+    note:
+      "Add-on in Thunderworks order #KHRL825NA (with the Stonespine Architects: Invasion " +
+      "pledge): $19.95 + 19% German VAT, VAT pre-paid. Ships from Germany in shipment 1 of 2 " +
+      "(5–8 business days, $8.00 for its four items).",
+    events: [
+      {
+        id: "fliptoons-e01",
+        occurredOn: "2026-10-11",
+        type: "note",
+        title: "Ordered as an add-on in the Thunderworks pledge manager",
+        details:
+          "Order #KHRL825NA: $19.95 + VAT, in shipment 1 of 2 from Germany (5–8 business days).",
+        sourceUrl: null,
+      },
+    ],
+  },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "fliptoons-season-2",
+    title: "FlipToons: Season 2",
+    shortTitle: "FlipToons: Season 2",
+    orderGroup: { id: "fliptoons", title: "FlipToons" },
+    slug: "fliptoons",
+    kind: "retail",
+    status: "shipping",
+    platform: "Thunderworks Games",
+    campaignUrl: null,
+    pledgeManagerUrl: null, // order page link not recorded
+    // Shipment 1: "5–8 business days" from Oct 11 — about Oct 20–21.
+    originalEtaMonth: "2026-10",
+    currentEtaMonth: "2026-10",
+    pledgedOn: "2026-10-11",
+    deliveredOn: null,
+    currency: "USD",
+    pledgeCents: 2374, // $19.95 + $3.79 VAT (19%), paid
+    shippingCents: 200, // a quarter of shipment 1's $8.00
+    note:
+      "Add-on in Thunderworks order #KHRL825NA (with the Stonespine Architects: Invasion " +
+      "pledge): $19.95 + 19% German VAT, VAT pre-paid. Ships from Germany in shipment 1 of 2 " +
+      "(5–8 business days, $8.00 for its four items).",
+    events: [
+      {
+        id: "fliptoons-season-2-e01",
+        occurredOn: "2026-10-11",
+        type: "note",
+        title: "Ordered as an add-on in the Thunderworks pledge manager",
+        details:
+          "Order #KHRL825NA: $19.95 + VAT, in shipment 1 of 2 from Germany (5–8 business days).",
+        sourceUrl: null,
+      },
+    ],
+  },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "questline",
+    title: "Questline",
+    shortTitle: "Questline",
+    orderGroup: null,
+    slug: "questline",
+    kind: "retail",
+    status: "shipping",
+    platform: "Thunderworks Games",
+    campaignUrl: null,
+    pledgeManagerUrl: null, // order page link not recorded
+    // Shipment 1: "5–8 business days" from Oct 11 — about Oct 20–21.
+    originalEtaMonth: "2026-10",
+    currentEtaMonth: "2026-10",
+    pledgedOn: "2026-10-11",
+    deliveredOn: null,
+    currency: "USD",
+    pledgeCents: 2374, // $19.95 + $3.79 VAT (19%), paid
+    shippingCents: 200, // a quarter of shipment 1's $8.00
+    note:
+      "Add-on in Thunderworks order #KHRL825NA (with the Stonespine Architects: Invasion " +
+      "pledge): $19.95 + 19% German VAT, VAT pre-paid. Ships from Germany in shipment 1 of 2 " +
+      "(5–8 business days, $8.00 for its four items).",
+    events: [
+      {
+        id: "questline-e01",
+        occurredOn: "2026-10-11",
+        type: "note",
+        title: "Ordered as an add-on in the Thunderworks pledge manager",
+        details:
+          "Order #KHRL825NA: $19.95 + VAT, in shipment 1 of 2 from Germany (5–8 business days).",
+        sourceUrl: null,
+      },
+    ],
+  },
+  {
+    userId: "1RHEXQQBFFleqhj8CZ86aqgQKIUXv0At", // Mantas
+    id: "tenpenny-parks-collectors-edition",
+    title: "Tenpenny Parks: Collector's Edition",
+    shortTitle: "Tenpenny Parks CE",
+    orderGroup: null,
+    slug: "tenpenny-parks",
+    kind: "retail",
+    status: "shipping",
+    platform: "Thunderworks Games",
+    campaignUrl: "https://www.thunderworksgames.com/tenpennyparks.html",
+    pledgeManagerUrl: null, // order page link not recorded
+    // Shipment 1: "5–8 business days" from Oct 11 — about Oct 20–21.
+    originalEtaMonth: "2026-10",
+    currentEtaMonth: "2026-10",
+    pledgedOn: "2026-10-11",
+    deliveredOn: null,
+    currency: "USD",
+    pledgeCents: 16059, // $134.95 + $25.64 VAT (19%), paid
+    shippingCents: 200, // a quarter of shipment 1's $8.00
+    note:
+      "Add-on in Thunderworks order #KHRL825NA (with the Stonespine Architects: Invasion " +
+      "pledge): $134.95 + 19% German VAT, VAT pre-paid. Ships from Germany in shipment 1 of 2 " +
+      "(5–8 business days, $8.00 for its four items).",
+    events: [
+      {
+        id: "tenpenny-parks-collectors-edition-e01",
+        occurredOn: "2026-10-11",
+        type: "note",
+        title: "Ordered as an add-on in the Thunderworks pledge manager",
+        details:
+          "Order #KHRL825NA: $134.95 + VAT, in shipment 1 of 2 from Germany (5–8 business days).",
         sourceUrl: null,
       },
     ],
