@@ -57,6 +57,7 @@ import { quiztopiaWikiReadLog } from "./0049-quiztopia-wiki-read-log.ts";
 import { quiztopiaReports } from "./0050-quiztopia-reports.ts";
 import { onboarding } from "./0051-onboarding.ts";
 import { goReviews } from "./0052-go-reviews.ts";
+import { companionRecords } from "./0053-companion-records.ts";
 import type { Migration } from "./types.ts";
 
 export const migrations: readonly Migration[] = [
@@ -112,6 +113,7 @@ export const migrations: readonly Migration[] = [
   quiztopiaReports,
   onboarding,
   goReviews,
+  companionRecords,
 ];
 
 /**

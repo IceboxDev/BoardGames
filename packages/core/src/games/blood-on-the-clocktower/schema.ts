@@ -205,6 +205,17 @@ export const CompanionStateSchema = z.object({
   pendingImpInfo: SeatSchema.optional(),
   /** The non-playing Storyteller running the game (match-history moderator). */
   storyteller: z.string().optional(),
+  /**
+   * This game's id for the Storyteller's own Match History record (a retry
+   * or a second tab replaces that record instead of adding one). Absent on
+   * games dealt before it existed — the web stamps one when it loads them.
+   */
+  gameId: z
+    .string()
+    .regex(/^[A-Za-z0-9_-]{8,64}$/)
+    .optional(),
+  /** When the characters were dealt (ISO); absent on older games. */
+  startedAt: z.string().optional(),
   /** Set once the finished game is ported to match history (blocks double-posts). */
   historyMatchId: z.number().int().optional(),
   // ── Bad Moon Rising game-level state ────────────────────────────────

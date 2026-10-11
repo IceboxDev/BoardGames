@@ -1,11 +1,23 @@
 import type { Campaign, DndNpc, DndParty, ResolveTurnResponse } from "@boardgames/core/protocol";
-import { NODE_MESSAGE_MAX } from "@boardgames/core/protocol";
+import { CompanionRecordSchema, NODE_MESSAGE_MAX } from "@boardgames/core/protocol";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { GameScreen } from "../../components/game-layout";
 import { BookIcon } from "../../components/icons";
 import { D20Die } from "../../components/offline/D20Die";
-import { Button, EmptyState, ErrorAlert, LoadingState, Modal } from "../../components/ui";
+import {
+  Button,
+  EmptyState,
+  ErrorAlert,
+  LoadingState,
+  Modal,
+  useConfirm,
+} from "../../components/ui";
+import {
+  newCompanionRecordId,
+  recordCompanionGame,
+  useCompanionRecordOutbox,
+} from "../../lib/companion-records";
 import {
   activeCombatQueryFn,
   advanceCombat,
@@ -42,6 +54,7 @@ import { QuestProgressBar } from "./components/QuestProgressBar";
 import { StoryTree } from "./components/StoryTree";
 import { DndPanel } from "./components/ui";
 import { DND_RULEBOOKS } from "./index";
+import { buildSessionRecord, closeSession, openSession } from "./logic/session-record";
 
 // The running-session screen, laid out like every other game via GameScreen.
 // Left sidebar: the game menu. Right sidebar: the chronicle. Bottom tray:
@@ -62,9 +75,11 @@ const MENU: { id: MenuScreen; label: string; description: string }[] = [
 type Props = {
   campaign: Campaign;
   party: DndParty;
+  /** After "End session" has recorded the session to Match History. */
+  onEnd?: () => void;
 };
 
-export function DndGameScreen({ campaign, party }: Props) {
+export function DndGameScreen({ campaign, party, onEnd }: Props) {
   const queryClient = useQueryClient();
   const [screen, setScreen] = useState<MenuScreen>("main");
   const [waypointIndex, setWaypointIndex] = useState(0);
@@ -77,6 +92,11 @@ export function DndGameScreen({ campaign, party }: Props) {
   const [combatOrder, setCombatOrder] = useState<InitiativeOrder | null>(null);
   const [turnResult, setTurnResult] = useState<ResolveTurnResponse | null>(null);
   const [quickNarration, setQuickNarration] = useState<string | null>(null);
+
+  // The session Match History records when the DM ends it (survives refresh).
+  const [session] = useState(() => openSession(party.id, newCompanionRecordId));
+  const { confirm, confirmDialog } = useConfirm();
+  useCompanionRecordOutbox();
 
   // (Re-)register the live session so a beamer companion can attach.
   useEffect(() => {
@@ -304,6 +324,30 @@ export function DndGameScreen({ campaign, party }: Props) {
     if (!generateMutation.isPending) generateMutation.mutate(msg);
   };
 
+  const endSession = async () => {
+    const ok = await confirm({
+      title: "End this session?",
+      description: `It goes into your Match History with ${party.name} and where the story stands. The campaign and party stay as they are.`,
+      confirmLabel: "End session",
+    });
+    if (!ok) return;
+    const record = CompanionRecordSchema.safeParse(
+      buildSessionRecord({
+        campaign,
+        party,
+        characters,
+        history,
+        waypointIndex,
+        session,
+        endedAt: new Date(),
+      }),
+    );
+    if (record.success) await recordCompanionGame(session.clientId, record.data);
+    else console.warn("[dnd] session not recordable:", record.error.issues[0]);
+    closeSession(party.id);
+    onEnd?.();
+  };
+
   // Ultra-short recap of the LOGGED history only — newest first, enough
   // entries to fill the column (it scrolls past the fold).
   const recap = history
@@ -346,9 +390,14 @@ export function DndGameScreen({ campaign, party }: Props) {
               );
             })}
           </nav>
-          <p className="font-serif-body mt-auto text-3xs leading-relaxed text-amber-200/40">
-            {party.name} · waypoint {waypointIndex + 1} of {campaign.checkpoints.length}
-          </p>
+          <div className="mt-auto flex flex-col gap-2">
+            <Button variant="ghost" tone="rose" size="sm" block onClick={() => void endSession()}>
+              End session
+            </Button>
+            <p className="font-serif-body text-3xs leading-relaxed text-amber-200/40">
+              {party.name} · waypoint {waypointIndex + 1} of {campaign.checkpoints.length}
+            </p>
+          </div>
         </div>
       }
       sidebar={
@@ -754,6 +803,7 @@ export function DndGameScreen({ campaign, party }: Props) {
         />
       )}
       {viewingNpc && <NpcSheetModal npc={viewingNpc} onClose={() => setViewingNpc(null)} />}
+      {confirmDialog}
       {quickNarration && (
         <Modal
           eyebrow="Resolved in place — logged to the chronicle"

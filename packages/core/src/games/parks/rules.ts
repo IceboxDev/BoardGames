@@ -11,7 +11,6 @@ import {
   CANTEEN_BOARD_WATER_GAPS,
   GEAR_BLIND_COST,
   GEAR_COSTS,
-  GEAR_TRIGGERS,
   isAtTrailEnd,
   slotRow,
   TRAIL_END_LAST,
@@ -336,8 +335,8 @@ export function getLegalActions(state: GameState, playerIdx: number): Action[] {
   if (state.phase === "awaiting-gear-or-end") {
     for (const g of player.gear) {
       if (player.usedGearThisTurn.includes(g.id)) continue;
-      const triggers = GEAR_TRIGGERS[g.kind];
-      if (!triggers.some((t) => player.triggeredThisTurn.includes(t))) continue;
+      // Each card is bound to ONE trigger of its kind's list (the engine's rule).
+      if (!player.triggeredThisTurn.includes(g.trigger)) continue;
       // Wide-angle / Telephoto need a resource to spend on the photo.
       if (
         (g.kind === "wide-angle-lens" || g.kind === "telephoto-lens") &&

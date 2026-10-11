@@ -17,6 +17,7 @@ export * from "./http/bgg.ts";
 export * from "./http/calendar.ts";
 export * from "./http/calendar-feed.ts";
 export * from "./http/collection.ts";
+export * from "./http/companion-records.ts";
 export * from "./http/dnd.ts";
 export * from "./http/exit.ts";
 export * from "./http/games.ts";

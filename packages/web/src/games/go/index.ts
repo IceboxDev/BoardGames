@@ -1,5 +1,8 @@
 import { type ComponentType, type LazyExoticComponent, lazy } from "react";
 import type { PlayableModule, ReplayProps } from "../types";
+// Rules + credits (KataGo, MIT). Source: assets/rules-source.html, printed to
+// PDF with headless Chromium.
+import rulesUrl from "./assets/rules.pdf";
 
 // `GameReplay` parses the stored log itself; the registry holds every game's
 // replay component under the shared `unknown`-typed contract.
@@ -9,9 +12,8 @@ const replayComponent = lazy(() => import("./components/GameReplay")) as LazyExo
 
 export default {
   component: lazy(() => import("./Go")),
-  mode: "remote",
-  rulesUrl: [{ label: "How to play Go", url: "https://www.britgo.org/intro/intro2.html" }],
-  replayComponent,
+  rulesUrl,
   lobbyConfigComponent: lazy(() => import("./GoLobbyConfig")),
+  replayComponent,
   tournamentResults: () => import("./tournament-results.generated"),
 } satisfies PlayableModule;

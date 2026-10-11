@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate, useNavigate } from "react-router-dom";
 import { useCurrentUser } from "../../hooks/useCurrentUser.ts";
 import { useGameShell } from "../../hooks/useGameShell";
 import { JoinRoom } from "../multiplayer";
@@ -87,6 +87,13 @@ export default function JoinRoomRoute() {
   useEffect(() => {
     if (game.view && game.result != null) game.reset();
   }, [game.view, game.result, game.reset]);
+
+  // No online rooms for this game yet (its Multiplayer card is disabled):
+  // a typed or bookmarked URL goes back to the menu instead of offering a
+  // room the server can't host.
+  if (def.multiplayerComingSoon) {
+    return <Navigate to={`/play/${def.slug}`} replace />;
+  }
 
   // An in-progress solo game must be explicitly abandoned (or resumed)
   // before the player can create/join a room.

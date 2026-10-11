@@ -32,7 +32,6 @@ function setup() {
     def: {
       slug: "lost-cities",
       title: "Lost Cities",
-      soloLabel: "Play vs AI",
       rulesUrl: "/rules/lost-cities.pdf",
     },
   });
@@ -95,7 +94,7 @@ describe("rules viewer — back-button behavior", () => {
 
   it("a game with no rulebook shows no rules button", () => {
     useGameShellMock.mockReturnValue({
-      def: { slug: "set", title: "Set", soloLabel: "Trainer" },
+      def: { slug: "set", title: "Set", soloMode: "trainer" },
     });
     const router = createMemoryRouter(
       createRoutesFromElements(<Route path="/play/:slug" element={<ModeSelectRoute />} />),

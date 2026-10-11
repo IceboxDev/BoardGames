@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
   formatDayKey,
+  formatMinutes,
   formatMonthYear,
   formatShortDate,
   isoWeek,
@@ -76,5 +77,14 @@ describe("timestamp formatters", () => {
   it("formats a parseable ISO timestamp", () => {
     expect(formatMonthYear("2026-07-11T12:00:00Z")).toContain("2026");
     expect(formatShortDate("2026-07-11T12:00:00Z")).toContain("2026");
+  });
+});
+
+describe("formatMinutes", () => {
+  it("reads minutes, hours, and both", () => {
+    expect(formatMinutes(0)).toBe("0 min");
+    expect(formatMinutes(44.6)).toBe("45 min");
+    expect(formatMinutes(120)).toBe("2 h");
+    expect(formatMinutes(135)).toBe("2 h 15 min");
   });
 });

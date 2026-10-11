@@ -1,0 +1,63 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Go — Rules</title>
+<style>
+@page { size: A4; margin: 18mm 18mm; }
+body { font-family: "Georgia", serif; color: #1d1a16; font-size: 10.5pt; line-height: 1.45; }
+h1 { font-size: 24pt; margin: 0 0 2mm; letter-spacing: .5px; }
+.sub { color: #6b5d4b; margin-bottom: 6mm; font-style: italic; }
+h2 { font-size: 13pt; border-bottom: 1.5px solid #b0835a; padding-bottom: 1mm; margin: 6mm 0 2mm; color: #5a3a1c; break-after: avoid; }
+h3 { font-size: 11pt; margin: 3mm 0 1mm; }
+table { border-collapse: collapse; width: 100%; margin: 2mm 0; font-size: 10pt; }
+td, th { border: 1px solid #d8c7a8; padding: 1.5mm 2.5mm; text-align: left; vertical-align: top; }
+th { background: #f2e8d5; }
+.cols { columns: 2; column-gap: 8mm; }
+.box { background: #f7f0e3; border-left: 3px solid #b0835a; padding: 2mm 4mm; margin: 3mm 0; break-inside: avoid; }
+ul { margin: 1mm 0; padding-left: 5mm; } li { margin: .6mm 0; }
+.small { font-size: 9pt; color: #574b3c; }
+</style></head><body>
+<h1>Go</h1>
+<div class="sub">The rules as played here — Chinese area scoring with positional superko.</div>
+
+<div class="cols">
+<h2>The goal</h2>
+<p>Two players, Black and White, take turns placing stones of their colour on the empty intersections of a grid. Stones never move once placed. At the end, the player who controls more of the board — their stones plus the empty points they alone surround — wins.</p>
+
+<h2>The board</h2>
+<p>Play on a 9×9, 13×13 or 19×19 board. The board starts empty and <b>Black moves first</b>. On your turn you either place one stone or <b>pass</b>.</p>
+
+<h2>Liberties and capture</h2>
+<p>Stones of one colour that touch along the lines (not diagonally) form a <b>chain</b>. The empty points next to a chain are its <b>liberties</b>. When you fill an opponent chain's last liberty, the whole chain is <b>captured</b> and removed from the board.</p>
+<ul>
+<li><b>No suicide.</b> You may not place a stone that leaves your own chain with no liberties — unless the move captures first, which gives it liberties again.</li>
+<li><b>Superko.</b> No move may recreate any whole-board position that has occurred before in the game. This settles <i>ko</i> fights: after a single-stone capture, the stone can't be retaken at once; play elsewhere first.</li>
+<li>Passing is always legal.</li>
+</ul>
+
+<h2>Ending the game</h2>
+<p>When both players pass in a row, play stops and the <b>scoring phase</b> begins.</p>
+<div class="box">
+<p><b>Dead stones.</b> The app proposes which stones are dead (hopelessly surrounded). Either player may toggle a whole chain dead or alive, <b>accept</b> the proposal, or <b>resume</b> play to settle a dispute on the board. Any toggle clears both acceptances; when both accept, the board is counted. After three resumptions every stone counts as alive. If one player has accepted and the other does nothing for three minutes, the proposal is counted.</p>
+</div>
+<p>You can also <b>resign</b> at any time, and running out of time loses.</p>
+
+<h2>Counting</h2>
+<p>Each side scores its stones on the board plus the empty regions bordered only by its own stones, after removing the agreed dead stones. An empty region touching both colours (<i>dame</i>, or a <i>seki</i>) counts for nobody. White adds <b>komi</b> — 7.5 points by default (0.5 in a handicap game) — to make up for moving second. With a whole-number komi a tie (<i>jigo</i>) is possible.</p>
+
+<h2>Handicap</h2>
+<p>A weaker player can take 2–9 handicap stones (2–5 on 9×9), placed on the fixed star points before play. White then moves first and receives one extra point per handicap stone at the count.</p>
+
+<h2>Playing online here</h2>
+<ul>
+<li><b>Colours.</b> The first seat plays Black. In a room the host swaps seats to change colours.</li>
+<li><b>Clocks.</b> Untimed, <i>Fischer</i> (main time plus an increment after every move) or <i>byo-yomi</i> (main time, then a number of periods: a move inside a period resets it, overrunning uses it up). Clocks pause during scoring.</li>
+<li><b>Take-backs.</b> Against the AI a take-back is immediate — your move and its reply. Against a person, the player who just moved may ask and the opponent allows or refuses.</li>
+<li><b>After the game.</b> Every finished game is queued for a KataGo review, and you can import your own SGF files for review too.</li>
+</ul>
+
+<h2>The AI opponents</h2>
+<p><i>Pebble</i> captures what it can and saves what it must. <i>Brook</i> runs a Monte Carlo tree search — sharp on 9×9, thin on the big board. Then KataGo's human-style network playing like a 5 kyu, a 1 kyu and a 5 dan amateur, and finally KataGo searching at full strength. If KataGo is unavailable, Brook stands in and the board says so.</p>
+</div>
+
+<h2>Credits &amp; licences</h2>
+<p class="small"><b>KataGo</b> — © David J. Wu ("lightvector") and contributors. MIT licence; source: github.com/lightvector/KataGo. Networks from katagotraining.org.<br>
+<b>Rules</b> — area scoring with positional superko, as KataGo's <i>chinese</i> ruleset; a good illustrated introduction is the British Go Association's at britgo.org/intro.</p>
+</body></html>

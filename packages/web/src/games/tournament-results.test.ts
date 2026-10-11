@@ -1,5 +1,5 @@
 import { getManifest } from "@boardgames/core/games/manifests";
-import { TournamentResultsSchema } from "@boardgames/core/tournament/results";
+import { isBenchmark, TournamentResultsSchema } from "@boardgames/core/tournament/results";
 import { describe, expect, it } from "vitest";
 import { games } from "./registry";
 
@@ -18,6 +18,12 @@ describe("tournament results", () => {
     const manifest = getManifest(slug);
     expect(manifest, `${slug} has no manifest`).toBeDefined();
     const known = new Set(manifest?.strategies.map((s) => s.id));
+    if (isBenchmark(results)) {
+      for (const run of results.tables.flatMap((t) => t.runs)) {
+        expect(known.has(run.strategy), `${slug}: ${run.strategy}`).toBe(true);
+      }
+      return;
+    }
     for (const table of results.tables) {
       for (const m of table.matchups) {
         expect(known.has(m.a) && known.has(m.b), `${slug}: ${m.a} vs ${m.b}`).toBe(true);

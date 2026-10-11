@@ -349,6 +349,18 @@ export function TrainerIcon({ className = "h-6 w-6" }: IconProps) {
   );
 }
 
+/** A five-pip die: the table-companion mode (a tool for a physical game). */
+export function CompanionIcon({ className = "h-6 w-6" }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={className} fill="currentColor" aria-hidden="true">
+      <path
+        fillRule="evenodd"
+        d="M6 3h12a3 3 0 013 3v12a3 3 0 01-3 3H6a3 3 0 01-3-3V6a3 3 0 013-3zm2 3.5a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm8 0a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm-4 4a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm-4 4a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm8 0a1.5 1.5 0 100 3 1.5 1.5 0 000-3z"
+      />
+    </svg>
+  );
+}
+
 /** A magnifier over a bar chart: the analysis / solver mode. */
 export function SolverIcon({ className = "h-6 w-6" }: IconProps) {
   return (

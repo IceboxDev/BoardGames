@@ -20,7 +20,6 @@ const TRAINER_SOLO_GAMES: Readonly<Record<string, TrainerDeck>> = { quiztopia: "
 const PLAY_SUBROUTES: Readonly<Record<string, PageViewPage>> = {
   rules: "play-rules",
   solo: "play-solo",
-  companion: "play-companion",
   bga: "play-bga",
   tournament: "play-tournament",
 };
@@ -49,6 +48,8 @@ function playView(slug: string, rest: readonly string[]): ClassifiedView {
     if (second === "play") return { page: "play-room", detail: slug };
     return { page: "play", detail: slug };
   }
+  // The D&D beamer / TTS screen lives inside the companion tool's subtree.
+  if (first === "solo" && second === "beamer") return { page: "play-companion", detail: slug };
   if (first === "match-history") {
     return { page: rest.length > 1 ? "play-replay" : "play-replays", detail: slug };
   }

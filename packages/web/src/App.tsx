@@ -150,10 +150,6 @@ const router = createBrowserRouter(
               lazy={named(() => import("./components/game-shell/GameRoute"), "SoloGameRoute")}
             />
             <Route
-              path="companion"
-              lazy={named(() => import("./components/game-shell/GameRoute"), "CompanionRoute")}
-            />
-            <Route
               path="bga"
               lazy={named(() => import("./components/game-shell/GameRoute"), "BgaRoute")}
             />

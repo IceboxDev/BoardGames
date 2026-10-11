@@ -70,7 +70,7 @@ describe("GameCarousel3D — family card opens on the member that won the sort",
     renderAt(3, 3, ["parks", "parks-europe"]);
 
     // Base Parks (best at 3) wins the anchor once nothing is new.
-    expect(screen.getByText("Parks (Second Edition)")).toBeInTheDocument();
+    expect(screen.getByText("Parks")).toBeInTheDocument();
     expect(screen.queryByText(/^New$/i)).not.toBeInTheDocument();
   });
 

@@ -49,9 +49,9 @@ describe("backTarget", () => {
       });
     });
 
-    it("/play/:slug/companion → /play/:slug (mode select)", () => {
-      expect(backTarget("/play/dungeons-and-dragons/companion")).toEqual({
-        href: "/play/dungeons-and-dragons",
+    it("/play/:slug/solo/beamer → the companion's hall", () => {
+      expect(backTarget("/play/dungeons-and-dragons/solo/beamer")).toEqual({
+        href: "/play/dungeons-and-dragons/solo",
         label: "Back",
       });
     });

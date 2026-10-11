@@ -1,10 +1,10 @@
 import { lazy } from "react";
 import type { PlayableModule } from "../types";
+import rulesUrl from "./assets/rules.pdf";
 
 export default {
   component: lazy(() => import("./TheHunger")),
-  mode: "remote",
-  soloLabel: "Solo vs Vampires",
-  tournamentResults: () => import("./tournament-results.generated"),
+  rulesUrl,
   lobbyConfigComponent: lazy(() => import("./HungerLobbyConfig")),
+  tournamentResults: () => import("./tournament-results.generated"),
 } satisfies PlayableModule;

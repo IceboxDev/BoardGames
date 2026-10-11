@@ -4,6 +4,17 @@ import type { SkillWeights } from "@boardgames/core/protocol";
 import type { TournamentResults } from "@boardgames/core/tournament/results";
 import type { ComponentType, LazyExoticComponent } from "react";
 
+/**
+ * What the mode picker's left card opens. Every playable game is exactly one:
+ *   - `ai`        — play against (or alongside) computer players.
+ *   - `trainer`   — 1-v-0 practice, for games an AI would always win.
+ *   - `companion` — a tool that runs a physical game at the table.
+ *   - `solver`    — analysis of games played elsewhere.
+ * The card's label, icon, tone and copy come from the group alone
+ * (`ModeSelect`), so every game in a group shows the identical card.
+ */
+export type SoloMode = "ai" | "trainer" | "companion" | "solver";
+
 export type { BggGame };
 
 /**
@@ -133,7 +144,8 @@ export type GameFamily = {
 //   2. BGG snapshot bundled in `@boardgames/core/bgg`
 //   3. Per-slug `descriptions.generated.ts` when present
 //   4. Per-slug `assets/thumbnail.webp` (or placeholder)
-//   5. For playable slugs: the `<slug>/index.ts` module
+//   5. For playable slugs: the `<slug>/index.ts` module, the core manifest
+//      and `assets/background.png` when present
 
 /** Fields shared by every entry, regardless of kind. */
 interface GameBase {
@@ -179,30 +191,11 @@ export interface PlayableGame extends GameBase {
    * The server-run game's manifest — seats, AI strategies, option schema —
    * hydrated by the registry from `@boardgames/core/games/manifests`. Absent
    * for the table-companion tools (D&D, Blood on the Clocktower), which have
-   * no server game, no rooms and no match history.
+   * no server game and no rooms.
    */
   manifest?: GameManifest;
   /** Online-playable component. */
   component: LazyExoticComponent<ComponentType<GameComponentProps>>;
-  /**
-   * Vestigial. Every game is server-authoritative today, so this is `"remote"`
-   * for all of them and nothing branches on it at runtime. Kept only for a
-   * hypothetical future client-only game — do NOT infer client-side execution
-   * from `"local"`. (Game machines + AI always run on the server; see
-   * `useGameShell` / `packages/server/src/sessions/manager.ts`.)
-   */
-  mode: "remote" | "local";
-  /**
-   * Companion-device screen (e.g. the D&D beamer/TTS display). When set, the
-   * mode picker shows this instead of the Multiplayer card and routes to
-   * `/play/:slug/companion`, which renders the component full-screen. The
-   * component attaches to the primary device's session on its own.
-   */
-  companion?: {
-    label: string;
-    description: string;
-    component: LazyExoticComponent<ComponentType>;
-  };
   /**
    * "Connect to BGA" live-spectate bridge. When set, the multiplayer join
    * screen offers a third option (Create Room / Join Room / Connect to BGA)
@@ -213,14 +206,21 @@ export interface PlayableGame extends GameBase {
     description: string;
     component: LazyExoticComponent<ComponentType>;
   };
-  /** Optional full-page backdrop for the game's own screens. */
-  backgroundImage?: string;
-  /** Label for the solo/AI button on the mode-picker (e.g. "Play vs AI", "Trainer"). */
-  soloLabel?: string;
   /**
-   * The game has no online rooms yet: the mode-picker still shows the
-   * Multiplayer card (so the layout matches every other game) but renders it
-   * inert with a "coming soon" note instead of routing to `mp/join`.
+   * Full-page backdrop behind every `/play/:slug` screen. Hydrated by the
+   * registry from the game's `assets/background.png` when the file exists —
+   * never declared in `index.ts`.
+   */
+  backgroundImage?: string;
+  /**
+   * Which of the four solo groups the mode-picker's left card opens; the
+   * card's label, icon, tone and copy come from the group. Defaults to `"ai"`.
+   */
+  soloMode?: SoloMode;
+  /**
+   * The game has no online rooms yet: the mode-picker still shows the same
+   * Multiplayer card as every other game, disabled and badged "Coming soon",
+   * instead of routing to `mp/join`.
    */
   multiplayerComingSoon?: boolean;
   /**
@@ -236,12 +236,6 @@ export interface PlayableGame extends GameBase {
    * separate Rules and Flight Log.
    */
   rulesUrl?: string | { label: string; url: string }[];
-  /**
-   * Copy under the mode-picker's Multiplayer card. Defaults to the generic
-   * "Create a room and play online with friends"; co-op games that also
-   * make sense as a one-seat room say so here.
-   */
-  multiplayerDescription?: string;
   /**
    * Optional game-specific replay component, used by the match-history
    * route to render a single game log inline.
@@ -344,4 +338,7 @@ export type CatalogEntry = {
  * The folder name *is* the slug; no need to repeat it here. Registry
  * looks up the matching catalog entry by folder path.
  */
-export type PlayableModule = Omit<PlayableGame, "kind" | "manifest" | keyof GameBase>;
+export type PlayableModule = Omit<
+  PlayableGame,
+  "kind" | "manifest" | "backgroundImage" | keyof GameBase
+>;

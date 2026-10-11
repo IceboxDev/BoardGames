@@ -24,6 +24,7 @@ export const qk = {
   historyByNight: (dateKey: string) => ["history", "by-night", dateKey] as const,
   dndOpenCampaigns: () => ["history", "dnd-campaigns"] as const,
   gameReplays: (gameSlug: string) => ["game-replays", gameSlug] as const,
+  companionRecords: (gameSlug: string) => ["companion-records", gameSlug] as const,
   tournamentResults: (slug: string) => ["tournament-results", slug] as const,
   calendarFeed: () => ["calendar", "feed"] as const,
   players: () => ["players"] as const,

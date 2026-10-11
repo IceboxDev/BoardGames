@@ -1,5 +1,6 @@
 import { type ComponentType, type LazyExoticComponent, lazy } from "react";
 import type { PlayableModule, ReplayProps } from "../types";
+import rulesUrl from "./assets/rules.pdf";
 
 const replayComponent = lazy(() => import("./components/GameReplay")) as LazyExoticComponent<
   ComponentType<ReplayProps>
@@ -7,8 +8,7 @@ const replayComponent = lazy(() => import("./components/GameReplay")) as LazyExo
 
 export default {
   component: lazy(() => import("./Senso")),
-  mode: "remote",
-  soloLabel: "Solo vs clan AI",
+  rulesUrl,
   replayComponent,
   tournamentResults: () => import("./tournament-results.generated"),
 } satisfies PlayableModule;

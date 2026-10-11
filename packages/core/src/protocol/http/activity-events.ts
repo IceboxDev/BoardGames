@@ -149,6 +149,21 @@ export const ActivityMetaSchemas = {
   // ── Matches & ratings ──
   "match-recorded": z.object({ gameTitle: z.string(), date: Night.optional() }),
   "match-deleted": z.object({ matchId: z.number().int() }),
+  /**
+   * A companion's finished game saved to the member's Match History — a
+   * Clocktower game the member ran as Storyteller, or a D&D session they ran
+   * as DM. Logged on the first save only (a replace is a retry or a fix).
+   */
+  "companion-recorded": z.object({
+    slug: z.string(),
+    /** Clocktower: the winning team. */
+    winner: z.enum(["good", "evil"]).optional(),
+    /** Clocktower: seats; D&D: party members. */
+    players: z.number().int().optional(),
+    /** D&D: the campaign's title. */
+    title: z.string().optional(),
+    minutes: z.number().int().optional(),
+  }),
   "guest-merged": z.object({
     guestName: z.string(),
     targetUserId: z.string(),

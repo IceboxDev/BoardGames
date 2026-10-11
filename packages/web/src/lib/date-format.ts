@@ -105,3 +105,12 @@ export function formatRelativeTime(stamp: string): string {
   if (hr < 24) return `${hr} hour${hr === 1 ? "" : "s"} ago`;
   return `${day} day${day === 1 ? "" : "s"} ago`;
 }
+
+/** "45 min" / "2 h" / "2 h 15 min" — a game's length, rounded to the minute. */
+export function formatMinutes(minutes: number): string {
+  const total = Math.max(0, Math.round(minutes));
+  const h = Math.floor(total / 60);
+  const m = total % 60;
+  if (h === 0) return `${m} min`;
+  return m === 0 ? `${h} h` : `${h} h ${m} min`;
+}

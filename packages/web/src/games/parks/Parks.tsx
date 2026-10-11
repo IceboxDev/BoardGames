@@ -4,15 +4,16 @@ import { againstAi, type SoloStart, useSessionFlow } from "../../hooks/useSessio
 import type { GameComponentProps } from "../types";
 import GameBoard from "./components/GameBoard";
 import GameOverScreen from "./components/GameOverScreen";
+import SetupScreen from "./components/SetupScreen";
 
-// Random is the only Parks AI, so solo has no setup screen.
-const soloStart = (): SoloStart => ({ seats: againstAi(2, "random") });
+const toSoloStart = (strategy: string): SoloStart => ({ seats: againstAi(2, strategy) });
 
 export default function Parks({ source }: GameComponentProps) {
-  const flow = useSessionFlow<ParksPlayerView, Action, ParksResult>(source, {
-    autoStart: soloStart,
+  const flow = useSessionFlow<ParksPlayerView, Action, ParksResult, string>(source, {
+    toSoloStart,
   });
 
+  if (flow.phase === "setup") return <SetupScreen onStart={flow.start} />;
   if (!flow.view) return <BoardFallback />;
 
   if (flow.phase === "finished" && flow.result) {

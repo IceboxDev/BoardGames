@@ -1,17 +1,16 @@
 import { lazy } from "react";
 import type { PlayableModule } from "../types";
-import backgroundImage from "./assets/background.png";
+import rulesUrl from "./assets/rules.pdf";
 
 // Not a server-run game (yet) — the Storyteller companion is a purely
 // client-side Grimoire that runs the physical table game. The mode picker
-// shows "Companion" (the tool, under solo/*) and an inert Multiplayer card
-// until online rooms are implemented. No server-side machine exists for this
-// slug — see the D&D tool for the same pattern.
+// shows the Companion card (the tool, under solo/*) and the Multiplayer card,
+// disabled until online rooms are implemented. No server-side machine exists
+// for this slug — see the D&D tool for the same pattern.
 export default {
-  backgroundImage,
   component: lazy(() => import("./ClocktowerGame")),
-  mode: "remote",
-  soloLabel: "Companion",
+  soloMode: "companion",
   multiplayerComingSoon: true,
-  rulesUrl: "/rules/blood-on-the-clocktower/main-rulebook.pdf",
+  rulesUrl,
+  matchHistoryComponent: lazy(() => import("./ClocktowerMatchHistory")),
 } satisfies PlayableModule;

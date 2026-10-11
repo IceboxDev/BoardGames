@@ -129,6 +129,10 @@ export function SelectableCard({
   const Component = onClick ? "button" : "div";
   const isToggle = selected !== undefined;
   const animated = animationDelay !== undefined;
+  // Hover lift / tint / glow (and the `group` that drives the icon and title
+  // hover tints) only on a card you can click: an inert card that reacts to
+  // the pointer reads as clickable. A disabled button gets none either.
+  const interactive = onClick !== undefined && !disabled;
 
   // Padding lives here (not in caller `className`) so call sites keep the
   // density decision on the named scale. `sm` is orientation-aware.
@@ -225,25 +229,34 @@ export function SelectableCard({
     );
   } else if (variant === "stripe") {
     cls = cn(
-      `group relative flex overflow-hidden ${RADIUS_CARD_XL} border bg-surface-800/50 ${pad} text-left transition-all duration-200`,
+      `relative flex overflow-hidden ${RADIUS_CARD_XL} border bg-surface-800/50 ${pad} text-left transition-all duration-200`,
       orientation === "horizontal" ? "items-center gap-3" : "flex-col",
+      interactive && "group",
       isToggle && selected
         ? "border-line-strong bg-surface-800/80 shadow-lg"
-        : "border-surface-600/80 hover:-translate-y-0.5 hover:bg-surface-800/80 hover:shadow-lg hover:shadow-black/20",
+        : cn(
+            "border-surface-600/80",
+            interactive &&
+              "hover:-translate-y-0.5 hover:bg-surface-800/80 hover:shadow-lg hover:shadow-black/20",
+          ),
       sharedTail,
     );
   } else if (orientation === "horizontal") {
     cls = cn(
-      `group flex items-center gap-3 ${RADIUS_CARD_XL} border bg-surface-800/30 ${pad} text-left transition-all duration-200 hover:bg-surface-800/60`,
-      isToggle && selected ? TILE_SELECTED[tone] : `border-line ${TILE_HOVER_BORDER[tone]}`,
+      `flex items-center gap-3 ${RADIUS_CARD_XL} border bg-surface-800/30 ${pad} text-left transition-all duration-200`,
+      interactive && "group hover:bg-surface-800/60",
+      isToggle && selected
+        ? TILE_SELECTED[tone]
+        : cn("border-line", interactive && TILE_HOVER_BORDER[tone]),
       sharedTail,
     );
   } else {
     cls = cn(
-      `group flex flex-col items-center gap-4 ${RADIUS_CARD_2XL} border bg-surface-800/40 ${pad} text-center shadow-lg shadow-transparent transition-all duration-300 hover:-translate-y-1 hover:bg-surface-800/70 hover:shadow-xl`,
+      `flex flex-col items-center gap-4 ${RADIUS_CARD_2XL} border bg-surface-800/40 ${pad} text-center shadow-lg shadow-transparent transition-all duration-300`,
+      interactive && "group hover:-translate-y-1 hover:bg-surface-800/70 hover:shadow-xl",
       isToggle && selected
         ? TILE_SELECTED[tone]
-        : `border-line ${TILE_HOVER_BORDER[tone]} ${TILE_HOVER_GLOW[tone]}`,
+        : cn("border-line", interactive && `${TILE_HOVER_BORDER[tone]} ${TILE_HOVER_GLOW[tone]}`),
       sharedTail,
     );
   }

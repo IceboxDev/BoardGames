@@ -4,7 +4,7 @@
 // individual <img> / <image href> elements reference them.
 
 import type { Role } from "@boardgames/core/games/pandemic/types";
-import bgMapUrl from "./assets/img/bg.jpg";
+import bgMapUrl from "./assets/board-map.jpg";
 import contingencyPlannerUrl from "./assets/roles/contingency_planner.png";
 import dispatcherUrl from "./assets/roles/dispatcher.png";
 import medicUrl from "./assets/roles/medic.png";

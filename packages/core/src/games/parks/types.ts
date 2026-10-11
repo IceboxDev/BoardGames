@@ -645,14 +645,16 @@ export type PassionMode = "gear" | "end-bonus";
 
 export type PlayerType = "human" | "ai";
 
-export type AIStrategyId = "random";
+export type AIStrategyId = "random" | "greedy";
 
 export const AI_STRATEGY_LABELS: Record<AIStrategyId, string> = {
   random: "Random",
+  greedy: "Greedy",
 };
 
 export const AI_STRATEGY_DESCRIPTIONS: Record<AIStrategyId, string> = {
   random: "Plays random legal moves.",
+  greedy: "Takes whatever leaves it best off right now: points, then resources and canteens.",
 };
 
 export interface Hiker {

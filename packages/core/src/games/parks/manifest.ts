@@ -12,6 +12,13 @@ export const parksManifest = defineManifest({
       description: AI_STRATEGY_DESCRIPTIONS.random,
       difficulty: "Easy",
     },
+    {
+      id: "greedy",
+      label: AI_STRATEGY_LABELS.greedy,
+      description: AI_STRATEGY_DESCRIPTIONS.greedy,
+      difficulty: "Medium",
+    },
   ],
+  defaultStrategy: "greedy",
   config: z.object({}),
 });

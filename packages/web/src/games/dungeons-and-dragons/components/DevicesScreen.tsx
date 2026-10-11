@@ -77,8 +77,8 @@ export function DevicesScreen() {
                 {session.code}
               </p>
               <p className="font-serif-body mt-3 text-xs leading-relaxed text-amber-200/50">
-                On the beamer device: open this game, pick “Beamer / TTS”, and enter the code. The
-                screen becomes a fullscreen display of whatever you put below.
+                On the beamer device: open this game, pick “Companion”, then “Beamer / TTS”, and
+                enter the code. The screen becomes a fullscreen display of whatever you put below.
               </p>
             </>
           ) : (

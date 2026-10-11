@@ -37,7 +37,7 @@ describe("classifyRoute", () => {
     expect(at("/play/arcs/rules")).toEqual({ page: "play-rules", detail: "arcs" });
     expect(at("/play/arcs/solo")).toEqual({ page: "play-solo", detail: "arcs" });
     expect(at("/play/dnd/solo/hall/setup")).toEqual({ page: "play-solo", detail: "dnd" });
-    expect(at("/play/arcs/companion")).toEqual({ page: "play-companion", detail: "arcs" });
+    expect(at("/play/dnd/solo/beamer")).toEqual({ page: "play-companion", detail: "dnd" });
     expect(at("/play/7-wonders/bga")).toEqual({ page: "play-bga", detail: "7-wonders" });
     expect(at("/play/arcs/mp/join")).toEqual({ page: "play-join", detail: "arcs" });
     expect(at("/play/arcs/mp/lobby/QX4P")).toEqual({ page: "play-lobby", detail: "arcs" });

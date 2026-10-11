@@ -133,6 +133,9 @@ export const GUEST_MERGE_COVERAGE = {
     // A KataGo review a member imported (SGF) or queued for their own game: a
     // guest stub never signs in to import one.
     "go_reviews.owner_user_id",
+    // A Clocktower game / D&D session the member ran from their own device:
+    // a guest stub never signs in to run one.
+    "companion_records.user_id",
   ],
 } as const;
 

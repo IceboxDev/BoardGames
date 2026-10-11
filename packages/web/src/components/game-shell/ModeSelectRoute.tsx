@@ -3,16 +3,11 @@ import { useGameShell } from "../../hooks/useGameShell";
 import { ModeSelect } from "../multiplayer";
 
 /**
- * Route element rendered at the `/play/:slug` index. Each capability the
- * game exposes (mp, match history, tournament) becomes a navigation
- * callback; `ModeSelect` decides which buttons to show based on which
- * callbacks it receives.
- *
- * Multiplayer is shown for every remote-mode game (today: all of them).
- * If a future local-only game is added, the button can be gated on
- * `def.mode === "remote"` once `ModeSelect`'s `onMultiplayer` prop is
- * made optional. Tracking that future change here so it stays a single-
- * line edit.
+ * Route element rendered at the `/play/:slug` index — the mode picker. Every
+ * game shows the same layout: its solo-group card (`def.soloMode`), the one
+ * Multiplayer card (disabled while `def.multiplayerComingSoon`), Match
+ * History, plus How to Play and AI Tournament when the game has a rulebook /
+ * tournament results.
  */
 export default function ModeSelectRoute() {
   const navigate = useNavigate();
@@ -22,27 +17,12 @@ export default function ModeSelectRoute() {
   return (
     <ModeSelect
       title={def.title}
-      subtitle={undefined}
-      soloLabel={def.soloLabel}
-      onRules={def.rulesUrl ? () => navigate(`/play/${slug}/rules`) : undefined}
+      soloMode={def.soloMode ?? "ai"}
       onSolo={() => navigate(`/play/${slug}/solo`)}
       onMultiplayer={() => navigate(`/play/${slug}/mp/join`)}
       multiplayerComingSoon={def.multiplayerComingSoon}
-      multiplayerDescription={def.multiplayerDescription}
-      companion={
-        def.companion
-          ? {
-              label: def.companion.label,
-              description: def.companion.description,
-              onClick: () => navigate(`/play/${slug}/companion`),
-            }
-          : undefined
-      }
-      onMatchHistory={
-        def.manifest || def.matchHistoryComponent
-          ? () => navigate(`/play/${slug}/match-history`)
-          : undefined
-      }
+      onRules={def.rulesUrl ? () => navigate(`/play/${slug}/rules`) : undefined}
+      onMatchHistory={() => navigate(`/play/${slug}/match-history`)}
       onTournament={def.tournamentResults ? () => navigate(`/play/${slug}/tournament`) : undefined}
     />
   );

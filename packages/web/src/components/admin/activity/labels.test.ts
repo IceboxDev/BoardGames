@@ -65,6 +65,25 @@ describe("every activity type has words", () => {
 });
 
 describe("wording", () => {
+  it("says what a companion game recorded", () => {
+    expect(
+      line("companion-recorded", {
+        slug: "blood-on-the-clocktower",
+        winner: "evil",
+        players: 9,
+        minutes: 75,
+      }),
+    ).toMatch(/^Recorded a game of .+ they ran \(Evil won, 9 players, 1 h 15 min\)$/);
+    expect(
+      line("companion-recorded", {
+        slug: "dungeons-and-dragons",
+        title: "Lost Mine",
+        players: 4,
+        minutes: 180,
+      }),
+    ).toBe("Logged a D&D session they ran (Lost Mine, 4 adventurers, 3 h)");
+  });
+
   it("names the trainers and what their settings changed", () => {
     expect(line("geography-train", { localDate: "2026-09-28" })).toBe(
       "Started the day's World Geography training",

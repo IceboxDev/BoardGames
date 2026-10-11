@@ -1,8 +1,9 @@
 import "@fontsource/cinzel/600.css";
 import "@fontsource/cinzel/700.css";
 import { useQuery } from "@tanstack/react-query";
-import { useEffect } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { Navigate, Route, Routes, useNavigate, useParams } from "react-router-dom";
+import { BoardFallback } from "../../components/RouteFallback";
 import { LoadingState } from "../../components/ui";
 import { useGameShell } from "../../hooks/useGameShell";
 import { fetchCampaigns, partiesQueryFn } from "../../lib/dnd-campaigns";
@@ -21,8 +22,13 @@ import { PartySetup } from "./PartySetup";
 //   campaign/:campaignId                     — party picker (who's playing?)
 //   campaign/:campaignId/party/:partyId      — party setup (roster)
 //   campaign/:campaignId/party/:partyId/game — the running session
+//   beamer                                   — this device as the table's
+//                                              beamer / TTS screen
 //
 // The Cinzel display face is imported here so it rides this lazy chunk only.
+
+// The beamer screen rides its own chunk: a projector never needs the DM tool.
+const BeamerScreen = lazy(() => import("./BeamerScreen"));
 
 const BG = "bg-gradient-to-b from-dnd-ink via-surface-950 to-black";
 
@@ -30,6 +36,14 @@ export default function DndTool(_props: GameComponentProps) {
   return (
     <Routes>
       <Route index element={<HallRoute />} />
+      <Route
+        path="beamer"
+        element={
+          <Suspense fallback={<BoardFallback />}>
+            <BeamerScreen />
+          </Suspense>
+        }
+      />
       <Route path="campaign/:campaignId" element={<CampaignRoute />} />
       <Route path="campaign/:campaignId/party/:partyId" element={<PartyRoute screen="setup" />} />
       <Route
@@ -66,7 +80,10 @@ function HallRoute() {
     // The play-area Layout is fixed-height with overflow hidden, so each
     // scrolling screen owns its scroll container.
     <div className={`relative z-raised h-full overflow-y-auto ${BG}`}>
-      <CampaignHall onOpenCampaign={(campaignId) => navigate(`campaign/${campaignId}`)} />
+      <CampaignHall
+        onOpenCampaign={(campaignId) => navigate(`campaign/${campaignId}`)}
+        onOpenBeamer={() => navigate("beamer")}
+      />
     </div>
   );
 }
@@ -143,7 +160,11 @@ function PartyRoute({ screen }: { screen: "setup" | "game" }) {
 
   return (
     <div className="flex h-full min-h-0 flex-col">
-      <DndGameScreen campaign={campaign} party={party} />
+      <DndGameScreen
+        campaign={campaign}
+        party={party}
+        onEnd={() => navigate(`${hallPath}/campaign/${campaign.id}/party/${party.id}`)}
+      />
     </div>
   );
 }

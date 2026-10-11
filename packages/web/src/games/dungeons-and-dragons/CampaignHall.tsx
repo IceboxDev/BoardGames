@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { BookIcon, PlusIcon } from "../../components/icons";
+import { BookIcon, CompanionIcon, PlusIcon } from "../../components/icons";
 import { Button, EmptyState, QueryBoundary } from "../../components/ui";
 import { deleteCampaign, fetchCampaigns } from "../../lib/dnd-campaigns";
 import { qk } from "../../lib/query-keys";
@@ -14,12 +14,16 @@ import { HallHero } from "./components/HallHero";
 // while any campaign is processing it refetches every 2.5s (same cadence as
 // avatar generation), and since status lives in the DB, a closed tab or a
 // server restart resumes cleanly on the next visit.
+//
+// The hall is also where a second device becomes the beamer / TTS screen:
+// open the Companion on the projector's browser and pick "Beamer / TTS".
 
 type Props = {
   onOpenCampaign: (campaignId: string) => void;
+  onOpenBeamer: () => void;
 };
 
-export function CampaignHall({ onOpenCampaign }: Props) {
+export function CampaignHall({ onOpenCampaign, onOpenBeamer }: Props) {
   const queryClient = useQueryClient();
   const [creating, setCreating] = useState(false);
 
@@ -39,7 +43,16 @@ export function CampaignHall({ onOpenCampaign }: Props) {
     <div className="mx-auto flex w-full max-w-3xl flex-col gap-5 px-3 py-4 sm:px-6 sm:py-6">
       <HallHero />
 
-      <div className="flex items-center justify-end gap-3 px-1">
+      <div className="flex items-center justify-between gap-3 px-1">
+        <Button
+          variant="secondary"
+          size="sm"
+          onClick={onOpenBeamer}
+          title="Make this device the table's projector / voice screen"
+        >
+          <CompanionIcon className="h-4 w-4" />
+          Beamer / TTS
+        </Button>
         <Button variant="tinted" tone="amber" size="sm" onClick={() => setCreating(true)}>
           <PlusIcon className="h-4 w-4" />
           Add an adventure

@@ -108,12 +108,8 @@ function boostHex(hex) {
  * Returns null when the slug has no thumbnail.
  */
 export async function extractOne(slug) {
-  const candidates = [
-    join(GAMES_ROOT, slug, "assets/thumbnail.png"),
-    join(GAMES_ROOT, slug, "assets/img/thumbnail.png"),
-  ];
-  const thumb = candidates.find((p) => existsSync(p));
-  if (!thumb) {
+  const thumb = join(GAMES_ROOT, slug, "assets/thumbnail.png");
+  if (!existsSync(thumb)) {
     console.warn(`[extract-accents] no thumbnail for ${slug}, skipping`);
     return null;
   }

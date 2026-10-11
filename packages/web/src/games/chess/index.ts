@@ -13,10 +13,8 @@ const replayComponent = lazy(() => import("./components/GameReplay")) as LazyExo
 
 export default {
   component: lazy(() => import("./Chess")),
-  mode: "remote",
-  soloLabel: "Play vs Stockfish",
-  multiplayerDescription: "Play a friend — pick a time control, swap seats to choose colours.",
   rulesUrl,
-  replayComponent,
   lobbyConfigComponent: lazy(() => import("./ChessLobbyConfig")),
+  replayComponent,
+  tournamentResults: () => import("./tournament-results.generated"),
 } satisfies PlayableModule;

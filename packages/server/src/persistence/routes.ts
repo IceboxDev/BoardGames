@@ -1,20 +1,27 @@
 import {
   BulkSaveResultsBodySchema,
   BulkSaveResultsResponseSchema,
+  type CompanionRecord,
+  CompanionRecordListSchema,
   GameResultListSchema,
   GameResultsQuerySchema,
+  isCompanionRecordSlug,
   MatchSummaryListSchema,
   OkResponseSchema,
   ReplayListQuerySchema,
   ReplayLogSchema,
+  SaveCompanionRecordBodySchema,
+  SaveCompanionRecordResponseSchema,
   SaveResultBodySchema,
   SaveResultResponseSchema,
 } from "@boardgames/core/protocol";
 import { z } from "zod";
 import { authedApp } from "../auth/index.ts";
 import { getDb } from "../db.ts";
+import { logActivity } from "../lib/activity-log.ts";
 import { jsonColumn, parseRows } from "../lib/db-rows.ts";
 import { errorResponse, zJsonBody, zQuery } from "../lib/error-response.ts";
+import { listCompanionRecords, saveCompanionRecord } from "../matches/companion-store.ts";
 import { getMatchLog, listMatches } from "../matches/store.ts";
 
 export const persistenceRoutes = authedApp();
@@ -123,3 +130,57 @@ persistenceRoutes.get("/:slug/replays/:id{[0-9]+}", async (c) => {
   if (log === null) return errorResponse(c, 404, "Not found");
   return c.json(ReplayLogSchema.parse(log));
 });
+
+// ── Companion records ─────────────────────────────────────────────────
+//
+// The Clocktower Grimoire and the D&D DM screen run at the table, not on the
+// server; when a game ends the device that ran it saves a record here, keyed
+// by a client id it chose (a retry or a second tab replaces, never doubles).
+// Only the member's own records are ever read or written.
+
+persistenceRoutes.post(
+  "/:slug/companion-records",
+  zJsonBody(SaveCompanionRecordBodySchema),
+  async (c) => {
+    const slug = c.req.param("slug");
+    if (!isCompanionRecordSlug(slug)) return errorResponse(c, 404, "Not found");
+    const { clientId, record } = c.req.valid("json");
+    if (record.game !== slug) {
+      return errorResponse(c, 400, "record.game: does not match the game", "BAD_REQUEST");
+    }
+    const user = c.get("user");
+    const saved = await saveCompanionRecord(user.id, clientId, record);
+    if (!saved) {
+      return errorResponse(c, 409, "clientId: already used for another game", "CONFLICT");
+    }
+    if (saved.created) logActivity(user.id, "companion-recorded", activityMeta(record));
+    return c.json(
+      SaveCompanionRecordResponseSchema.parse({ ok: true, ...saved }),
+      saved.created ? 201 : 200,
+    );
+  },
+);
+
+persistenceRoutes.get("/:slug/companion-records", zQuery(ReplayListQuerySchema), async (c) => {
+  const slug = c.req.param("slug");
+  if (!isCompanionRecordSlug(slug)) return errorResponse(c, 404, "Not found");
+  const { limit } = c.req.valid("query");
+  const entries = await listCompanionRecords(c.get("user").id, slug, limit);
+  return c.json(CompanionRecordListSchema.parse(entries));
+});
+
+/** The activity trail's summary of a first save. */
+function activityMeta(record: CompanionRecord) {
+  const minutes =
+    record.startedAt === null
+      ? undefined
+      : Math.round((Date.parse(record.endedAt) - Date.parse(record.startedAt)) / 60_000);
+  return record.game === "blood-on-the-clocktower"
+    ? { slug: record.game, winner: record.winner, players: record.players.length, minutes }
+    : {
+        slug: record.game,
+        players: record.members.length,
+        minutes,
+        ...(record.campaignTitle ? { title: record.campaignTitle } : {}),
+      };
+}

@@ -10,10 +10,16 @@
  *     [--workers N]          parallel processes (default: cores − 1)
  *     [--out path]           output file (default: web/src/games/<slug>/tournament-results.generated.ts)
  *
- * Seating: A takes the even seats in even-numbered games and the odd seats in
- * odd-numbered ones. Games 2k and 2k+1 share one deal (seed), so each pair is
- * the same cards with the sides swapped — seat and deal luck cancel out.
- * A rerun replaces only the matchups it played; the rest of the file is kept.
+ * Seating: A takes side 0 in even-numbered games and side 1 in odd-numbered
+ * ones — by default the even and odd seats, or the simulator's own `sides`
+ * (partners, dealt roles). Games 2k and 2k+1 share one deal (seed), so each
+ * pair is the same cards with the sides swapped — seat and deal luck cancel out.
+ *
+ * Co-op games (`format: "benchmark"`) play each strategy in every seat on the
+ * same seeds and record how often the table won.
+ *
+ * A rerun replaces only the matchups (or benchmark runs) it played; the rest
+ * of the file is kept.
  */
 
 import { execFileSync, fork } from "node:child_process";
@@ -23,8 +29,10 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import { parseArgs } from "node:util";
 import { getManifest } from "../games/manifests";
 import { strategiesFor } from "../machines/manifest";
-import { compareSeatGroups, seatScore } from "../machines/outcome";
+import { compareSeatGroups, seatResult, seatScore } from "../machines/outcome";
 import {
+  type BenchmarkTally,
+  emptyBenchmarkTally,
   emptyTally,
   type MatchupTally,
   mergeResults,
@@ -32,7 +40,9 @@ import {
   type TournamentResults,
   TournamentResultsSchema,
   tallyToMatchup,
+  tallyToRun,
 } from "./results";
+import { alternatingSides, mirroredSeating } from "./simulator";
 import { TOURNAMENT_SIMULATORS } from "./simulators";
 import type { WorkerJob, WorkerReply } from "./worker";
 
@@ -41,12 +51,13 @@ const REPO_ROOT = fileURLToPath(new URL("../../../../", import.meta.url));
 interface Matchup {
   readonly playerCount: number;
   readonly a: string;
+  /** Equal to `a` in a benchmark: the strategy plays alone. */
   readonly b: string;
 }
 
 interface Job extends WorkerJob {
   readonly matchup: Matchup;
-  /** Seats `a` holds in this game. */
+  /** Seats `a` holds in this game (every seat, in a benchmark). */
   readonly aSeats: readonly number[];
 }
 
@@ -102,28 +113,51 @@ async function main(): Promise<void> {
     }
   }
   const only = list(values.strategies);
+  const benchmark = simulator.format === "benchmark";
 
   const matchups: Matchup[] = [];
   for (const playerCount of playerCounts) {
     const ids = strategiesFor(manifest, playerCount)
       .map((s) => s.id)
       .filter((id) => !only || only.includes(id));
+    if (benchmark) {
+      for (const id of ids) matchups.push({ playerCount, a: id, b: id });
+      continue;
+    }
     for (let i = 0; i < ids.length; i++) {
       for (let j = i + 1; j < ids.length; j++) matchups.push({ playerCount, a: ids[i], b: ids[j] });
     }
   }
-  if (matchups.length === 0) fail("Nothing to play: fewer than two strategies selected");
+  if (matchups.length === 0) {
+    fail(
+      benchmark
+        ? "Nothing to play: no strategy selected"
+        : "Nothing to play: fewer than two strategies selected",
+    );
+  }
 
   const jobs: Job[] = [];
   for (const matchup of matchups) {
     for (let g = 0; g < games; g++) {
-      const seats = Array.from({ length: matchup.playerCount }, (_, s) =>
-        (s + g) % 2 === 0 ? matchup.a : matchup.b,
-      );
+      if (benchmark) {
+        // Every strategy meets the same deals; no pairing to mirror.
+        jobs.push({
+          id: jobs.length,
+          strategies: Array.from({ length: matchup.playerCount }, () => matchup.a),
+          seed: pairSeed(2 * g),
+          matchup,
+          aSeats: Array.from({ length: matchup.playerCount }, (_, s) => s),
+        });
+        continue;
+      }
+      const seed = pairSeed(g);
+      const sides =
+        simulator.sides?.(matchup.playerCount, seed) ?? alternatingSides(matchup.playerCount);
+      const seats = mirroredSeating(sides, matchup.a, matchup.b, g);
       jobs.push({
         id: jobs.length,
         strategies: seats,
-        seed: pairSeed(g),
+        seed,
         matchup,
         aSeats: seats.flatMap((id, s) => (id === matchup.a ? [s] : [])),
       });
@@ -139,10 +173,13 @@ async function main(): Promise<void> {
     ),
   );
   console.log(
-    `${slug}: ${matchups.length} matchups × ${games} games = ${jobs.length} games on ${workerCount} workers`,
+    `${slug}: ${matchups.length} ${benchmark ? "strategies" : "matchups"} × ${games} games = ${jobs.length} games on ${workerCount} workers`,
   );
 
   const tallies = new Map<Matchup, MatchupTally>(matchups.map((m) => [m, emptyTally()]));
+  const benchTallies = new Map<Matchup, BenchmarkTally>(
+    matchups.map((m) => [m, emptyBenchmarkTally()]),
+  );
   const failures: string[] = [];
   let finished = 0;
   const startedAt = Date.now();
@@ -151,6 +188,15 @@ async function main(): Promise<void> {
     finished++;
     if (reply.kind === "failed") {
       failures.push(`game ${job.id} (${job.strategies.join(" vs ")}): ${reply.error}`);
+    } else if (reply.kind === "done" && benchmark) {
+      const tally = benchTallies.get(job.matchup) ?? emptyBenchmarkTally();
+      tally.games++;
+      if (seatResult(reply.outcome, 0) === "win") tally.wins++;
+      const score = seatScore(reply.outcome, 0);
+      if (score !== null) {
+        tally.score += score;
+        tally.scored++;
+      }
     } else if (reply.kind === "done") {
       const tally = tallies.get(job.matchup) ?? emptyTally();
       const bSeats = job.strategies.flatMap((_, s) => (job.aSeats.includes(s) ? [] : [s]));
@@ -228,18 +274,34 @@ async function main(): Promise<void> {
     process.exit(1);
   }
 
-  const fresh: TournamentResults = {
+  const header: Pick<TournamentResults, "formatVersion" | "slug" | "generatedAt" | "strategies"> = {
     formatVersion: TOURNAMENT_RESULTS_FORMAT,
     slug,
     generatedAt: new Date().toISOString(),
     strategies: manifest.strategies.map(({ id, label }) => ({ id, label })),
-    tables: playerCounts.map((playerCount) => ({
-      playerCount,
-      matchups: matchups
-        .filter((m) => m.playerCount === playerCount)
-        .map((m) => tallyToMatchup(m.a, m.b, tallies.get(m) ?? emptyTally())),
-    })),
   };
+  const atSize = (playerCount: number) => matchups.filter((m) => m.playerCount === playerCount);
+  const fresh: TournamentResults = benchmark
+    ? {
+        ...header,
+        kind: "benchmark",
+        tables: playerCounts.map((playerCount) => ({
+          playerCount,
+          runs: atSize(playerCount).map((m) =>
+            tallyToRun(m.a, benchTallies.get(m) ?? emptyBenchmarkTally()),
+          ),
+        })),
+      }
+    : {
+        ...header,
+        kind: "head-to-head",
+        tables: playerCounts.map((playerCount) => ({
+          playerCount,
+          matchups: atSize(playerCount).map((m) =>
+            tallyToMatchup(m.a, m.b, tallies.get(m) ?? emptyTally()),
+          ),
+        })),
+      };
 
   const out =
     values.out ?? `${REPO_ROOT}packages/web/src/games/${slug}/tournament-results.generated.ts`;

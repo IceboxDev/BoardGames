@@ -1,8 +1,10 @@
 import { beginNight, createGame } from "@boardgames/core/games/blood-on-the-clocktower/companion";
 import type { RecordedSeat } from "@boardgames/core/games/blood-on-the-clocktower/setup";
 import { setupFromDraws } from "@boardgames/core/games/blood-on-the-clocktower/setup";
+import { newCompanionRecordId } from "../../../lib/companion-records";
 import BagScreen from "./BagScreen";
 import CompanionGame from "./CompanionGame";
+import { useMatchHistoryRecording } from "./match-history";
 import type { BagDraft } from "./persistence";
 import SetupScreen from "./SetupScreen";
 import { companionStore, historyControls, useCompanionStore } from "./store";
@@ -35,6 +37,7 @@ const HISTORY_VERBS = {
 export default function Companion() {
   const snapshot = useCompanionStore();
   const { game, draft } = snapshot;
+  useMatchHistoryRecording(game);
 
   if (game && game.phase.kind !== "reveal") {
     return (
@@ -77,7 +80,11 @@ function beginFromDraft(d: BagDraft): void {
     }
   }
   const game = beginNight(
-    createGame(setupFromDraws(recorded, d.bag), { storyteller: d.storyteller }),
+    createGame(setupFromDraws(recorded, d.bag), {
+      storyteller: d.storyteller,
+      gameId: newCompanionRecordId(),
+      startedAt: new Date().toISOString(),
+    }),
   );
   companionStore.startGame(game);
 }

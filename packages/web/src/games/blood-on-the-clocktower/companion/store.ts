@@ -167,6 +167,22 @@ export const companionStore = {
     publish({ ...current(), draft });
   },
 
+  /**
+   * Give a game dealt before Match History records existed its record id —
+   * on the running game AND every Undo / Redo state, outside the history (it
+   * is bookkeeping, not a move), so undoing past it can't mint a second id.
+   */
+  stampGameId(gameId: string): void {
+    const prev = current();
+    if (!prev.game || prev.game.gameId) return;
+    const stamp = (s: CompanionState) => (s.gameId ? s : { ...s, gameId });
+    const game = stamp(prev.game);
+    const past = prev.past.map(stamp);
+    saveGame(game);
+    saveHistory(past);
+    publish({ ...prev, game, past, future: prev.future.map(stamp) });
+  },
+
   /** Delete everything — back to setup. */
   abandon(): void {
     saveGame(null);

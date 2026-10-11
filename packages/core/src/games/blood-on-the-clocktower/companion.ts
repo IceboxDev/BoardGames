@@ -68,7 +68,16 @@ const EMPTY_NIGHT: NightProgress = { resolved: [], demonChoices: [] };
 
 // ── Construction ──────────────────────────────────────────────────────
 
-export function createGame(setup: GameSetup, opts?: { storyteller?: string }): CompanionState {
+export function createGame(
+  setup: GameSetup,
+  opts?: {
+    storyteller?: string;
+    /** Match History record id — see `CompanionState.gameId`. */
+    gameId?: string;
+    /** ISO time the characters were dealt. */
+    startedAt?: string;
+  },
+): CompanionState {
   const players: CompanionPlayer[] = setup.seats.map((s) => ({
     seat: s.seat,
     name: s.name,
@@ -93,6 +102,8 @@ export function createGame(setup: GameSetup, opts?: { storyteller?: string }): C
     nightProgress: EMPTY_NIGHT,
     day: EMPTY_DAY,
     ...(opts?.storyteller ? { storyteller: opts.storyteller } : {}),
+    ...(opts?.gameId ? { gameId: opts.gameId } : {}),
+    ...(opts?.startedAt ? { startedAt: opts.startedAt } : {}),
     log: [],
     nextLogId: 1,
   };

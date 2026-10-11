@@ -4,6 +4,7 @@ import type {
   SettingsChanges,
   TrainerDeck,
 } from "@boardgames/core/protocol";
+import { formatMinutes } from "../../../lib/date-format";
 import { capped, count, type DescribeContext, day, forDay, game, person } from "./describe-context";
 import { ctaFallbackDestination, greetingPhrase, greetingShortPhrase } from "./greeting-labels";
 import { describePageView } from "./page-labels";
@@ -224,6 +225,28 @@ export const EVENT_LABELS: EventLabels = {
   "match-deleted": {
     tone: "match",
     describe: ({ matchId }) => `Deleted a match${matchId === undefined ? "" : ` (#${matchId})`}`,
+  },
+  "companion-recorded": {
+    tone: "match",
+    describe: ({ slug, winner, players, title, minutes }, ctx) => {
+      const details = [
+        winner ? `${winner === "good" ? "Good" : "Evil"} won` : undefined,
+        title,
+        players === undefined
+          ? undefined
+          : slug === "dungeons-and-dragons"
+            ? count(players, "adventurer")
+            : count(players, "player"),
+        minutes === undefined ? undefined : formatMinutes(minutes),
+      ].filter(Boolean);
+      const what =
+        slug === "dungeons-and-dragons"
+          ? "Logged a D&D session they ran"
+          : slug
+            ? `Recorded a game of ${game(ctx, slug)} they ran`
+            : "Recorded a game they ran";
+      return details.length > 0 ? `${what} (${details.join(", ")})` : what;
+    },
   },
   "guest-merged": {
     tone: "match",
