@@ -208,7 +208,20 @@ calendarLocksRoutes.post("/games/reaction", zJsonBody(GameReactionBodySchema), a
     }
   }
 
+  // Only a game the night can play takes a new vote. The picker shows nothing
+  // else, but its list can be stale: opening a night auto-RSVPs the viewer,
+  // which can grow the table past a game the list was built without them.
+  // Taking a vote back is always allowed.
   if (on) {
+    const view = await computeAvailableGamesPayload({
+      db: getDb(),
+      date,
+      viewerId: user.id,
+      viewerIsAdmin: (user as { role?: string }).role === "admin",
+    });
+    if (!view?.playableSlugs.has(slug)) {
+      return errorResponse(c, 409, "that game doesn't fit this night", "GAME_NOT_PLAYABLE");
+    }
     await getDb().execute({
       sql: `INSERT OR IGNORE INTO game_requests (date_key, user_id, game_slug, reaction)
             VALUES (?, ?, ?, ?)`,

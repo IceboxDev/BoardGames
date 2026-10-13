@@ -69,12 +69,21 @@ export function useRsvpAvailability({
     enabled,
   });
 
+  // Invalidating alone is not enough: while the FIRST fetch is still in
+  // flight (no data yet) React Query joins it instead of restarting it, so a
+  // change made meanwhile — the auto-RSVP fires as the modal opens — would be
+  // missing from the list until the next refetch. Cancel it, then refetch.
+  const refreshGames = async () => {
+    await queryClient.cancelQueries({ queryKey: qk.availableGames(date) });
+    await queryClient.invalidateQueries({ queryKey: qk.availableGames(date) });
+  };
+
   const setRsvpMutation = useMutation({
     mutationFn: ({ status, auto }: { status: RsvpStatus; auto?: boolean }) =>
       setRsvp(date, status, auto ?? false),
     onSettled: () => {
       void queryClient.invalidateQueries({ queryKey: qk.calendarLocks() });
-      void queryClient.invalidateQueries({ queryKey: qk.availableGames(date) });
+      void refreshGames();
     },
   });
 
@@ -82,7 +91,7 @@ export function useRsvpAvailability({
     mutationFn: ({ on }: { on: boolean }) => togglePicksLock(date, on),
     onSettled: () => {
       void queryClient.invalidateQueries({ queryKey: qk.calendarLocks() });
-      void queryClient.invalidateQueries({ queryKey: qk.availableGames(date) });
+      void refreshGames();
     },
   });
 
@@ -90,7 +99,7 @@ export function useRsvpAvailability({
     mutationFn: ({ userId }: { userId: string }) => kickRsvp(date, userId),
     onSettled: () => {
       void queryClient.invalidateQueries({ queryKey: qk.calendarLocks() });
-      void queryClient.invalidateQueries({ queryKey: qk.availableGames(date) });
+      void refreshGames();
     },
   });
 

@@ -367,6 +367,25 @@ describe("private nights", () => {
 
   // ── Lineup ─────────────────────────────────────────────────────────────
 
+  it("refuses a new vote for a game the table can't play; taking one back always works", async () => {
+    await client.execute({
+      sql: "UPDATE user_inventory SET game_slugs_json = ? WHERE user_id = ?",
+      args: [JSON.stringify(["catan", "azul", "jaipur"]), HOST],
+    });
+    await lockPrivate();
+    const react = (slug: string, on = true) =>
+      post(as(HOST), "/api/calendar/games/reaction", { date: DATE, slug, reaction: "hype", on });
+    // Three seats: Jaipur stops at two; Gloomhaven belongs to someone not invited.
+    expect(await code(await react("jaipur"))).toBe("GAME_NOT_PLAYABLE");
+    expect(await code(await react("gloomhaven"))).toBe("GAME_NOT_PLAYABLE");
+    expect((await react("azul")).status).toBe(200);
+    await client.execute({
+      sql: "INSERT INTO game_requests (date_key, user_id, game_slug, reaction) VALUES (?, ?, 'jaipur', 'hype')",
+      args: [DATE, HOST],
+    });
+    expect((await react("jaipur", false)).status).toBe(200);
+  });
+
   it("host-pick mode: only the host picks, in pick order; group mode: the seated vote", async () => {
     await lockPrivate();
     await rsvp(A, "yes", "2020-01-01 10:00:00");

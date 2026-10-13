@@ -159,6 +159,8 @@ export type AvailableGamesView = {
   wire: AvailableGames;
   viewer: AvailableGamesViewerExtras;
   lock: AvailableGamesLockMeta;
+  /** Owned games that fit the night's headcount window — what may be voted for. */
+  playableSlugs: ReadonlySet<string>;
   /**
    * Latest data-freshness timestamp across the lock, its RSVPs, its
    * reactions, and the picks-lock toggle. Drives `DTSTAMP` and
@@ -669,6 +671,7 @@ export async function computeAvailableGamesPayload(opts: {
       seats: participants.seats,
       waitlistUserIds: participants.waitlisted,
     },
+    playableSlugs,
     latestActivityAt,
   };
 }
